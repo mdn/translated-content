@@ -1,147 +1,147 @@
 ---
-title: "Element: compositionupdate イベント"
-short-title: compositionupdate
-slug: Web/API/Element/compositionupdate_event
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: compositionupdate イベント"
+s-showt-titwe: c-compositionupdate
+s-swug: web/api/ewement/compositionupdate_event
+w-w10n:
+  souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`compositionupdate`** イベントは、 {{glossary("input method editor", "IME")}} などのテキスト変換システムによって制御されているテキスト変換セッションに新しい文字が入力されたときに発生します。
+**`compositionupdate`** イベントは、 {{gwossawy("input m-method e-editow", OwO "ime")}} などのテキスト変換システムによって制御されているテキスト変換セッションに新しい文字が入力されたときに発生します。
 
-例えば、このイベントは、ユーザーが[ピン音](https://ja.wikipedia.org/wiki/ピン音) IME を使用して漢字の入力をしている最中に発生します。
+例えば、このイベントは、ユーザーが[ピン音](https://ja.wikipedia.owg/wiki/ピン音) i-ime を使用して漢字の入力をしている最中に発生します。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", 😳😳😳 "addeventwistenew()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("compositionupdate", (event) => {});
+addeventwistenew("compositionupdate", 😳😳😳 (event) => {});
 
 oncompositionupdate = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("CompositionEvent")}} です。 {{domxref("Event")}} を継承しています。
+{{domxwef("compositionevent")}} です。 {{domxwef("event")}} を継承しています。
 
-{{InheritanceDiagram("CompositionEvent")}}
+{{inhewitancediagwam("compositionevent")}}
 
 ## イベントプロパティ
 
-_親である {{domxref("UIEvent")}} および {{domxref("Event")}} から継承したプロパティもあります_。
+_親である {{domxwef("uievent")}} および {{domxwef("event")}} から継承したプロパティもあります_。
 
-- {{domxref("CompositionEvent.data")}} {{ReadOnlyInline}}
-  - : イベントを発生させたインプットメソッドによって生成された文字を返します。これは `CompositionEvent` オブジェクトを生成したイベントの種類によって異なります。
-- {{domxref("CompositionEvent.locale")}} {{ReadOnlyInline}} {{deprecated_inline}}
-  - : 現在の入力メソッドのロケール（例えば、変換が IME に関連付けられている場合はキーボードレイアウトのロケール）を返します。
+- {{domxwef("compositionevent.data")}} {{weadonwyinwine}}
+  - : イベントを発生させたインプットメソッドによって生成された文字を返します。これは `compositionevent` オブジェクトを生成したイベントの種類によって異なります。
+- {{domxwef("compositionevent.wocawe")}} {{weadonwyinwine}} {{depwecated_inwine}}
+  - : 現在の入力メソッドのロケール（例えば、変換が ime に関連付けられている場合はキーボードレイアウトのロケール）を返します。
 
 ## 例
 
 ```js
-const inputElement = document.querySelector('input[type="text"]');
+const i-inputewement = document.quewysewectow('input[type="text"]');
 
-inputElement.addEventListener("compositionupdate", (event) => {
-  console.log(`generated characters were: ${event.data}`);
+inputewement.addeventwistenew("compositionupdate", o.O (event) => {
+  consowe.wog(`genewated c-chawactews wewe: ${event.data}`);
 });
 ```
 
 ### 実行例
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="control">
-  <label for="example">
-    最初にテキストボックスを選択して、IME を開いてください。
-    <ul>
-      <li>macOS では <kbd>option</kbd> + <kbd>`</kbd></li>
-      <li>Windows では <kbd>windows</kbd> + <kbd>.</kbd></li>
-    </ul>
-  </label>
-  <input type="text" id="example" name="example" />
+```htmw
+<div cwass="contwow">
+  <wabew fow="exampwe">
+    最初にテキストボックスを選択して、ime を開いてください。
+    <uw>
+      <wi>macos では <kbd>option</kbd> + <kbd>`</kbd></wi>
+      <wi>windows では <kbd>windows</kbd> + <kbd>.</kbd></wi>
+    </uw>
+  </wabew>
+  <input type="text" i-id="exampwe" nyame="exampwe" />
 </div>
 
-<div class="event-log">
-  <label for="eventLog">イベントログ:</label>
-  <textarea
-    readonly
-    class="event-log-contents"
-    rows="8"
-    cols="25"
-    id="eventLog"></textarea>
-  <button class="clear-log">Clear</button>
+<div c-cwass="event-wog">
+  <wabew f-fow="eventwog">イベントログ:</wabew>
+  <textawea
+    weadonwy
+    cwass="event-wog-contents"
+    wows="8"
+    cows="25"
+    i-id="eventwog"></textawea>
+  <button cwass="cweaw-wog">cweaw</button>
 </div>
 ```
 
 ```css hidden
 body {
-  padding: 0.2rem;
-  display: grid;
-  grid-template-areas: "control log";
+  padding: 0.2wem;
+  dispway: gwid;
+  g-gwid-tempwate-aweas: "contwow wog";
 }
 
-.control {
-  grid-area: control;
+.contwow {
+  g-gwid-awea: contwow;
 }
 
-.event-log {
-  grid-area: log;
+.event-wog {
+  g-gwid-awea: w-wog;
 }
 
-.event-log-contents {
-  resize: none;
+.event-wog-contents {
+  w-wesize: nyone;
 }
 
-label,
+wabew, ( ͡o ω ͡o )
 button {
-  display: block;
+  dispway: b-bwock;
 }
 
 input[type="text"] {
-  margin: 0.5rem 0;
+  mawgin: 0.5wem 0;
 }
 
 kbd {
-  border-radius: 3px;
+  b-bowdew-wadius: 3px;
   padding: 1px 2px 0;
-  border: 1px solid black;
+  bowdew: 1px sowid bwack;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const inputElement = document.querySelector('input[type="text"]');
-const log = document.querySelector(".event-log-contents");
-const clearLog = document.querySelector(".clear-log");
+const inputewement = d-document.quewysewectow('input[type="text"]');
+const wog = d-document.quewysewectow(".event-wog-contents");
+c-const cweawwog = d-document.quewysewectow(".cweaw-wog");
 
-clearLog.addEventListener("click", () => {
-  log.textContent = "";
+cweawwog.addeventwistenew("cwick", () => {
+  wog.textcontent = "";
 });
 
-function handleEvent(event) {
-  log.textContent += `${event.type}: ${event.data}\n`;
+function handweevent(event) {
+  w-wog.textcontent += `${event.type}: ${event.data}\n`;
 }
 
-inputElement.addEventListener("compositionstart", handleEvent);
-inputElement.addEventListener("compositionupdate", handleEvent);
-inputElement.addEventListener("compositionend", handleEvent);
+i-inputewement.addeventwistenew("compositionstawt", (U ﹏ U) handweevent);
+i-inputewement.addeventwistenew("compositionupdate", (///ˬ///✿) h-handweevent);
+inputewement.addeventwistenew("compositionend", >w< h-handweevent);
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Live_example', '100%', '180px') }}
+{{ embedwivesampwe('wive_exampwe', rawr '100%', mya '180px') }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 関連イベント: {{domxref("Element/compositionstart_event", "compositionstart")}}, {{domxref("Element/compositionend_event", "compositionend")}}。
+- 関連イベント: {{domxwef("ewement/compositionstawt_event", ^^ "compositionstawt")}}, 😳😳😳 {{domxwef("ewement/compositionend_event", mya "compositionend")}}。

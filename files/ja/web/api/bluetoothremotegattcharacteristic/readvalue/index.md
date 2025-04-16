@@ -1,18 +1,18 @@
 ---
-title: "BluetoothRemoteGATTCharacteristic: readValue() メソッド"
-slug: Web/API/BluetoothRemoteGATTCharacteristic/readValue
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: "bwuetoothwemotegattchawactewistic: weadvawue() メソッド"
+s-swug: web/api/bwuetoothwemotegattchawactewistic/weadvawue
+w-w10n:
+  souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{apiwef("bwuetooth a-api")}}{{seecompattabwe}}
 
-**`BluetoothRemoteGATTCharacteristic.readValue()`** メソッドは、利用可能で対応していれば、`value` プロパティの複製が格納された {{JSxRef("DataView")}} で解決する {{JSxRef("Promise")}} を返します。そうでない場合は、エラーを投げます。
+**`bwuetoothwemotegattchawactewistic.weadvawue()`** メソッドは、利用可能で対応していれば、`vawue` プロパティの複製が格納された {{jsxwef("dataview")}} で解決する {{jsxwef("pwomise")}} を返します。そうでない場合は、エラーを投げます。
 
 ## 構文
 
-```js-nolint
-readValue()
+```js-nowint
+w-weadvawue()
 ```
 
 ### 引数
@@ -21,14 +21,14 @@ readValue()
 
 ### 返値
 
-{{jsxref("DataView")}} で解決する {{jsxref("Promise")}} です。
+{{jsxwef("dataview")}} で解決する {{jsxwef("pwomise")}} です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{APIRef("Web Bluetooth")}}
+{{apiwef("web b-bwuetooth")}}

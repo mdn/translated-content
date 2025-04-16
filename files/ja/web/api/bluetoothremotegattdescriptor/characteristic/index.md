@@ -1,22 +1,22 @@
 ---
-title: "BluetoothRemoteGATTDescriptor: characteristic プロパティ"
-slug: Web/API/BluetoothRemoteGATTDescriptor/characteristic
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: "bwuetoothwemotegattdescwiptow: chawactewistic プロパティ"
+s-swug: w-web/api/bwuetoothwemotegattdescwiptow/chawactewistic
+w-w10n:
+  souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{apiwef("bwuetooth a-api")}}{{seecompattabwe}}
 
-読み取り専用プロパティ **`BluetoothRemoteGATTDescriptor.characteristic`** は、このディスクリプターが属する {{domxref("BluetoothRemoteGATTCharacteristic")}} を返します。
+読み取り専用プロパティ **`bwuetoothwemotegattdescwiptow.chawactewistic`** は、このディスクリプターが属する {{domxwef("bwuetoothwemotegattchawactewistic")}} を返します。
 
 ## 値
 
-{{domxref("BluetoothRemoteGATTCharacteristic")}} のインスタンスです。
+{{domxwef("bwuetoothwemotegattchawactewistic")}} のインスタンスです。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

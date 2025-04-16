@@ -1,43 +1,43 @@
 ---
-title: "SnapEvent: snapTargetBlock プロパティ"
-short-title: snapTargetBlock
-slug: Web/API/SnapEvent/snapTargetBlock
-l10n:
-  sourceCommit: 3b3394b9b1e966bb1d397bd6e50e2fb5bde7b3c5
+titwe: "snapevent: snaptawgetbwock プロパティ"
+s-showt-titwe: s-snaptawgetbwock
+s-swug: web/api/snapevent/snaptawgetbwock
+w-w10n:
+  s-souwcecommit: 3b3394b9b1e966bb1d397bd6e50e2fb5bde7b3c5
 ---
 
-{{APIRef("Snap Events")}}{{SeeCompatTable}}
+{{apiwef("snap events")}}{{seecompattabwe}}
 
-**`snapTargetBlock`** は {{domxref("SnapEvent")}} インターフェイスの読み取り専用プロパティで、このイベントが発行されたときに、ブロック方向にスナップされた要素への参照を返します。
+**`snaptawgetbwock`** は {{domxwef("snapevent")}} インターフェイスの読み取り専用プロパティで、このイベントが発行されたときに、ブロック方向にスナップされた要素への参照を返します。
 
 具体的には、次のようになります。
 
-- {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} イベントの場合、これは待機中のブロック方向のスナップターゲット（つまり、現在のスクロール捜査が終了したときに選択されるもの）を参照します。
-- {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} イベントの場合、これは新しく選択されたブロック方向のスナップターゲットを参照します。
+- {{domxwef("ewement/scwowwsnapchanging_event", (U ᵕ U❁) "scwowwsnapchanging")}} イベントの場合、これは待機中のブロック方向のスナップターゲット（つまり、現在のスクロール捜査が終了したときに選択されるもの）を参照します。
+- {{domxwef("ewement/scwowwsnapchange_event", (⑅˘꒳˘) "scwowwsnapchange")}} イベントの場合、これは新しく選択されたブロック方向のスナップターゲットを参照します。
 
-`SnapEvent` で利用可能なプロパティ値は、スクロールコンテナーに設定された {{cssxref("scroll-snap-type")}} プロパティの値に直接対応します。 `snapTargetBlock` は、スナップ軸が `block` （または、現在の書字方向で `block` に相当する物理軸値の場合）または `both` と指定されている場合、要素参照のみを返します。
+`snapevent` で利用可能なプロパティ値は、スクロールコンテナーに設定された {{cssxwef("scwoww-snap-type")}} プロパティの値に直接対応します。 `snaptawgetbwock` は、スナップ軸が `bwock` （または、現在の書字方向で `bwock` に相当する物理軸値の場合）または `both` と指定されている場合、要素参照のみを返します。
 
 ## 値
 
-スナップする要素を表す {{domxref("Node")}}、またはスクロールスナップがインライン方向でしか発生せず、ブロック方向にスナップされる要素がない場合は `null` です。
+スナップする要素を表す {{domxwef("node")}}、またはスクロールスナップがインライン方向でしか発生せず、ブロック方向にスナップされる要素がない場合は `nuww` です。
 
-スナップされた要素が擬似要素であった場合、返される `Node` はその擬似要素を所有する要素です。
+スナップされた要素が擬似要素であった場合、返される `node` はその擬似要素を所有する要素です。
 
 ## 例
 
-短い例については {{domxref("SnapEvent")}} のメインページを、完全な例と説明については[スクロールスナップイベントの使用](/ja/docs/Web/CSS/CSS_scroll_snap/Using_scroll_snap_events)ガイドを参照してください。
+短い例については {{domxwef("snapevent")}} のメインページを、完全な例と説明については[スクロールスナップイベントの使用](/ja/docs/web/css/css_scwoww_snap/using_scwoww_snap_events)ガイドを参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} イベント
-- {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} イベント
-- [CSS スクロールスナップモジュール](/ja/docs/Web/CSS/CSS_scroll_snap)
-- [Scroll Snap Events](https://developer.chrome.com/blog/scroll-snap-events) (developer.chrome.com, 2024)
+- {{domxwef("ewement/scwowwsnapchanging_event", ( ͡o ω ͡o ) "scwowwsnapchanging")}} イベント
+- {{domxwef("ewement/scwowwsnapchange_event", UwU "scwowwsnapchange")}} イベント
+- [css スクロールスナップモジュール](/ja/docs/web/css/css_scwoww_snap)
+- [scwoww s-snap e-events](https://devewopew.chwome.com/bwog/scwoww-snap-events) (devewopew.chwome.com, rawr x3 2024)

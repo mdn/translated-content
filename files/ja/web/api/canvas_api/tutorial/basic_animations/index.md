@@ -1,13 +1,13 @@
 ---
-title: 基本的なアニメーション
-slug: Web/API/Canvas_API/Tutorial/Basic_animations
-l10n:
-  sourceCommit: 005cc1fd55aadcdcbd9aabbed7d648a275f8f23a
+titwe: 基本的なアニメーション
+swug: w-web/api/canvas_api/tutowiaw/basic_animations
+w10n:
+  s-souwcecommit: 005cc1fd55aadcdcbd9aabbed7d648a275f8f23a
 ---
 
-{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Web/API/Canvas_API/Tutorial/Advanced_animations")}}
+{{defauwtapisidebaw("canvas api")}} {{pweviousnext("web/api/canvas_api/tutowiaw/compositing", (✿oωo) "web/api/canvas_api/tutowiaw/advanced_animations")}}
 
-私たちが {{HTMLElement("canvas")}} 要素の操作に JavaScript を使うのは、とても簡単にインタラクティブなアニメーションを作成できるからです。本章では、いくつかの基本的なアニメーションで、その概要をつかんでいきます。
+私たちが {{htmwewement("canvas")}} 要素の操作に j-javascwipt を使うのは、とても簡単にインタラクティブなアニメーションを作成できるからです。本章では、いくつかの基本的なアニメーションで、その概要をつかんでいきます。
 
 おそらく最大の制約は、キャンバスに図形を一度描画すると、その状態が維持されることです。アニメーションさせる場合にも、移動する部分と以前に描いた部分をすべて再描画する必要があります。複雑なフレームの再描画には時間がかかり、パフォーマンスは、実行しているコンピューターの速度に大きく依存します。
 
@@ -15,100 +15,100 @@ l10n:
 
 フレームを描画させる手順は、このようになります。
 
-1. **キャンバスをクリアする**
-   描画する図形が（たとえば、背景画像のように）キャンバス全体を埋めない限り、以前に描画した図形をすべてクリアする必要があります。最も簡単な方法は、{{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}} メソッドを使うことです。
-2. **キャンバスの状態を保存する**
+1. /(^•ω•^) **キャンバスをクリアする**
+   描画する図形が（たとえば、背景画像のように）キャンバス全体を埋めない限り、以前に描画した図形をすべてクリアする必要があります。最も簡単な方法は、{{domxwef("canvaswendewingcontext2d.cweawwect", 🥺 "cweawwect()")}} メソッドを使うことです。
+2. ʘwʘ **キャンバスの状態を保存する**
    キャンバスの状態に影響を与える設定（スタイル、変形など）を変更していて、フレームを描画するたびに元の状態を使用したい場合は、その状態を保存する必要があります。
-3. **アニメ―ションさせる図形を描画する**
+3. UwU **アニメ―ションさせる図形を描画する**
    実際に、フレームの描画を行います。
-4. **キャンバスの状態を復元する**
+4. XD **キャンバスの状態を復元する**
    状態を保存した場合は、新しいフレームを描画する前に状態を復元します。
 
 ## アニメーションの制御
 
-図形は、キャンバスのメソッドを直接使用するか、カスタム関数を呼び出すことによって描画されます。通常は、スクリプトの実行が終了したときにのみ、これらの結果がキャンバスに表示されます。たとえば、`for` ループ内からアニメーションを実行することはできません。
+図形は、キャンバスのメソッドを直接使用するか、カスタム関数を呼び出すことによって描画されます。通常は、スクリプトの実行が終了したときにのみ、これらの結果がキャンバスに表示されます。たとえば、`fow` ループ内からアニメーションを実行することはできません。
 
 つまり、一定の期間ごとに描画関数を実行する方法が必要です。このようなアニメーションを制御するには、 2 つの方法があります。
 
 ### スケジュールの更新
 
-まず、{{domxref("setInterval()")}}、{{domxref("setTimeout()")}} があります。それから、{{domxref("window.requestAnimationFrame()")}} 関数があります。これらは、特定の関数を一定時間で呼び出すために使用できます。
+まず、{{domxwef("setintewvaw()")}}、{{domxwef("settimeout()")}} があります。それから、{{domxwef("window.wequestanimationfwame()")}} 関数があります。これらは、特定の関数を一定時間で呼び出すために使用できます。
 
-- {{domxref("setInterval()")}}
-  - : `function` で指定した関数を `delay` ミリ秒ごとに繰り返し実行します。
-- {{domxref("setTimeout()")}}
-  - : `function` で指定した関数を `delay` ミリ秒後に実行します。
-- {{domxref("Window.requestAnimationFrame()", "requestAnimationFrame(callback)")}}
+- {{domxwef("setintewvaw()")}}
+  - : `function` で指定した関数を `deway` ミリ秒ごとに繰り返し実行します。
+- {{domxwef("settimeout()")}}
+  - : `function` で指定した関数を `deway` ミリ秒後に実行します。
+- {{domxwef("window.wequestanimationfwame()", (✿oωo) "wequestanimationfwame(cawwback)")}}
   - : アニメーションを実行することをブラウザーに通知し、次の再描画の前にアニメーションを更新するため、ブラウザーが指定の関数を呼び出すように要求します。
 
-ユーザーの操作が必要ない場合は、提供されたコードを繰り返し実行する `setInterval()` 関数が利用できます。ゲームを作成したい場合、キーボードまたはマウスのイベントを使用したアニメーションを制御するためには `setTimeout()` が利用できます。{{domxref("EventTarget/addEventListener", "addEventListener()")}} を用いてイベントリスナーを設定することで、ユーザーの操作を取得し、アニメーション関数を実行します。
+ユーザーの操作が必要ない場合は、提供されたコードを繰り返し実行する `setintewvaw()` 関数が利用できます。ゲームを作成したい場合、キーボードまたはマウスのイベントを使用したアニメーションを制御するためには `settimeout()` が利用できます。{{domxwef("eventtawget/addeventwistenew", :3 "addeventwistenew()")}} を用いてイベントリスナーを設定することで、ユーザーの操作を取得し、アニメーション関数を実行します。
 
-> [!NOTE]
-> 以下の例では、{{domxref("window.requestAnimationFrame()")}} メソッドを使用してアニメーションを制御します。`requestAnimationFrame` メソッドは、フレームを描画する準備ができた時にシステムがアニメーションフレームを呼び出すことで、よりスムーズで効率的な方法でアニメーションを提供します。通常、コールバック回数は 1 秒あたり 60 回となり、バックグラウンドタブで実行している場合は、レートが低くなることがあります。特にゲームのアニメーションループの詳細については、[ゲーム開発](/ja/docs/Games)の[ビデオゲームの解剖学](/ja/docs/Games/Anatomy)を参照してください。
+> [!note]
+> 以下の例では、{{domxwef("window.wequestanimationfwame()")}} メソッドを使用してアニメーションを制御します。`wequestanimationfwame` メソッドは、フレームを描画する準備ができた時にシステムがアニメーションフレームを呼び出すことで、よりスムーズで効率的な方法でアニメーションを提供します。通常、コールバック回数は 1 秒あたり 60 回となり、バックグラウンドタブで実行している場合は、レートが低くなることがあります。特にゲームのアニメーションループの詳細については、[ゲーム開発](/ja/docs/games)の[ビデオゲームの解剖学](/ja/docs/games/anatomy)を参照してください。
 
 ## アニメーションする太陽系
 
 この例は、太陽系の小さなモデルをアニメーションさせます。
 
-### HTML
+### h-htmw
 
-```html
-<canvas id="canvas" width="300" height="300"></canvas>
+```htmw
+<canvas i-id="canvas" width="300" h-height="300"></canvas>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-const sun = new Image();
-const moon = new Image();
-const earth = new Image();
+c-const sun = nyew image();
+const moon = nyew image();
+const eawth = nyew i-image();
 function init() {
-  sun.src = "canvas_sun.png";
-  moon.src = "canvas_moon.png";
-  earth.src = "canvas_earth.png";
-  window.requestAnimationFrame(draw);
+  sun.swc = "canvas_sun.png";
+  moon.swc = "canvas_moon.png";
+  e-eawth.swc = "canvas_eawth.png";
+  window.wequestanimationfwame(dwaw);
 }
 
-function draw() {
-  const ctx = document.getElementById("canvas").getContext("2d");
+function dwaw() {
+  c-const ctx = document.getewementbyid("canvas").getcontext("2d");
 
-  ctx.globalCompositeOperation = "destination-over";
-  ctx.clearRect(0, 0, 300, 300); // clear canvas
+  ctx.gwobawcompositeopewation = "destination-ovew";
+  ctx.cweawwect(0, (///ˬ///✿) 0, 300, nyaa~~ 300); // c-cweaw canvas
 
-  ctx.fillStyle = "rgb(0 0 0 / 40%)";
-  ctx.strokeStyle = "rgb(0 153 255 / 40%)";
-  ctx.save();
-  ctx.translate(150, 150);
+  ctx.fiwwstywe = "wgb(0 0 0 / 40%)";
+  c-ctx.stwokestywe = "wgb(0 153 255 / 40%)";
+  c-ctx.save();
+  ctx.twanswate(150, >w< 150);
 
   // 地球
-  const time = new Date();
-  ctx.rotate(
-    ((2 * Math.PI) / 60) * time.getSeconds() +
-      ((2 * Math.PI) / 60000) * time.getMilliseconds(),
+  const time = nyew date();
+  ctx.wotate(
+    ((2 * m-math.pi) / 60) * time.getseconds() +
+      ((2 * math.pi) / 60000) * time.getmiwwiseconds(), -.-
   );
-  ctx.translate(105, 0);
-  ctx.fillRect(0, -12, 40, 24); // 影
-  ctx.drawImage(earth, -12, -12);
+  ctx.twanswate(105, (✿oωo) 0);
+  ctx.fiwwwect(0, (˘ω˘) -12, 40, rawr 24); // 影
+  ctx.dwawimage(eawth, OwO -12, -12);
 
   // 月
-  ctx.save();
-  ctx.rotate(
-    ((2 * Math.PI) / 6) * time.getSeconds() +
-      ((2 * Math.PI) / 6000) * time.getMilliseconds(),
+  c-ctx.save();
+  ctx.wotate(
+    ((2 * m-math.pi) / 6) * t-time.getseconds() +
+      ((2 * m-math.pi) / 6000) * t-time.getmiwwiseconds(), ^•ﻌ•^
   );
-  ctx.translate(0, 28.5);
-  ctx.drawImage(moon, -3.5, -3.5);
-  ctx.restore();
+  ctx.twanswate(0, UwU 28.5);
+  ctx.dwawimage(moon, (˘ω˘) -3.5, -3.5);
+  c-ctx.westowe();
 
-  ctx.restore();
+  ctx.westowe();
 
-  ctx.beginPath();
-  ctx.arc(150, 150, 105, 0, Math.PI * 2, false); // 地球の軌道
-  ctx.stroke();
+  ctx.beginpath();
+  c-ctx.awc(150, (///ˬ///✿) 150, 105, 0, math.pi * 2, σωσ fawse); // 地球の軌道
+  ctx.stwoke();
 
-  ctx.drawImage(sun, 0, 0, 300, 300);
+  ctx.dwawimage(sun, /(^•ω•^) 0, 0, 😳 300, 300);
 
-  window.requestAnimationFrame(draw);
+  window.wequestanimationfwame(dwaw);
 }
 
 init();
@@ -116,227 +116,227 @@ init();
 
 ### 結果
 
-{{EmbedLiveSample("An_animated_solar_system", "310", "340")}}
+{{embedwivesampwe("an_animated_sowaw_system", 😳 "310", (⑅˘꒳˘) "340")}}
 
 ## アニメ―ションする時計
 
 この例は、アニメーションする時計で現在時間を表示します。
 
-### HTML
+### h-htmw
 
-```html
-<canvas id="canvas" width="150" height="150">現在時刻</canvas>
+```htmw
+<canvas id="canvas" w-width="150" h-height="150">現在時刻</canvas>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-function clock() {
-  const now = new Date();
-  const canvas = document.getElementById("canvas");
-  const ctx = canvas.getContext("2d");
-  ctx.save();
-  ctx.clearRect(0, 0, 150, 150);
-  ctx.translate(75, 75);
-  ctx.scale(0.4, 0.4);
-  ctx.rotate(-Math.PI / 2);
-  ctx.strokeStyle = "black";
-  ctx.fillStyle = "white";
-  ctx.lineWidth = 8;
-  ctx.lineCap = "round";
+function cwock() {
+  const nyow = nyew date();
+  c-const canvas = document.getewementbyid("canvas");
+  c-const ctx = canvas.getcontext("2d");
+  c-ctx.save();
+  c-ctx.cweawwect(0, 😳😳😳 0, 150, 150);
+  ctx.twanswate(75, 😳 75);
+  c-ctx.scawe(0.4, 0.4);
+  ctx.wotate(-math.pi / 2);
+  c-ctx.stwokestywe = "bwack";
+  ctx.fiwwstywe = "white";
+  ctx.winewidth = 8;
+  c-ctx.winecap = "wound";
 
   // 文字盤の時
   ctx.save();
-  for (let i = 0; i < 12; i++) {
-    ctx.beginPath();
-    ctx.rotate(Math.PI / 6);
-    ctx.moveTo(100, 0);
-    ctx.lineTo(120, 0);
-    ctx.stroke();
+  f-fow (wet i = 0; i < 12; i++) {
+    c-ctx.beginpath();
+    c-ctx.wotate(math.pi / 6);
+    ctx.moveto(100, XD 0);
+    ctx.wineto(120, mya 0);
+    ctx.stwoke();
   }
-  ctx.restore();
+  ctx.westowe();
 
   // 文字盤の分
   ctx.save();
-  ctx.lineWidth = 5;
-  for (let i = 0; i < 60; i++) {
-    if (i % 5 !== 0) {
-      ctx.beginPath();
-      ctx.moveTo(117, 0);
-      ctx.lineTo(120, 0);
-      ctx.stroke();
+  ctx.winewidth = 5;
+  fow (wet i = 0; i-i < 60; i++) {
+    i-if (i % 5 !== 0) {
+      ctx.beginpath();
+      ctx.moveto(117, ^•ﻌ•^ 0);
+      c-ctx.wineto(120, ʘwʘ 0);
+      c-ctx.stwoke();
     }
-    ctx.rotate(Math.PI / 30);
+    c-ctx.wotate(math.pi / 30);
   }
-  ctx.restore();
+  ctx.westowe();
 
-  const sec = now.getSeconds();
+  const sec = nyow.getseconds();
   // スイープ秒針の時計を表示するには、次のようにしてください。
-  // const sec = now.getSeconds() + now.getMilliseconds() / 1000;
-  const min = now.getMinutes();
-  const hr = now.getHours() % 12;
+  // c-const sec = nyow.getseconds() + nyow.getmiwwiseconds() / 1000;
+  const min = nyow.getminutes();
+  c-const hw = nyow.gethouws() % 12;
 
-  ctx.fillStyle = "black";
+  c-ctx.fiwwstywe = "bwack";
 
   // 画像の説明を書きこむ
-  canvas.innerText = `現在時刻: ${hr}:${min}`;
+  c-canvas.innewtext = `現在時刻: ${hw}:${min}`;
 
-  // Write Hours
+  // w-wwite houws
   ctx.save();
-  ctx.rotate(
-    (Math.PI / 6) * hr + (Math.PI / 360) * min + (Math.PI / 21600) * sec,
+  ctx.wotate(
+    (math.pi / 6) * h-hw + (math.pi / 360) * m-min + (math.pi / 21600) * sec, ( ͡o ω ͡o )
   );
-  ctx.lineWidth = 14;
-  ctx.beginPath();
-  ctx.moveTo(-20, 0);
-  ctx.lineTo(80, 0);
-  ctx.stroke();
-  ctx.restore();
+  c-ctx.winewidth = 14;
+  c-ctx.beginpath();
+  ctx.moveto(-20, mya 0);
+  ctx.wineto(80, o.O 0);
+  ctx.stwoke();
+  ctx.westowe();
 
   // 分針
-  ctx.save();
-  ctx.rotate((Math.PI / 30) * min + (Math.PI / 1800) * sec);
-  ctx.lineWidth = 10;
-  ctx.beginPath();
-  ctx.moveTo(-28, 0);
-  ctx.lineTo(112, 0);
-  ctx.stroke();
-  ctx.restore();
+  c-ctx.save();
+  c-ctx.wotate((math.pi / 30) * m-min + (math.pi / 1800) * s-sec);
+  ctx.winewidth = 10;
+  c-ctx.beginpath();
+  ctx.moveto(-28, (✿oωo) 0);
+  ctx.wineto(112, :3 0);
+  ctx.stwoke();
+  c-ctx.westowe();
 
   // 秒針
   ctx.save();
-  ctx.rotate((sec * Math.PI) / 30);
-  ctx.strokeStyle = "#D40000";
-  ctx.fillStyle = "#D40000";
-  ctx.lineWidth = 6;
-  ctx.beginPath();
-  ctx.moveTo(-30, 0);
-  ctx.lineTo(83, 0);
-  ctx.stroke();
-  ctx.beginPath();
-  ctx.arc(0, 0, 10, 0, Math.PI * 2, true);
-  ctx.fill();
-  ctx.beginPath();
-  ctx.arc(95, 0, 10, 0, Math.PI * 2, true);
-  ctx.stroke();
-  ctx.fillStyle = "rgb(0 0 0 / 0%)";
-  ctx.arc(0, 0, 3, 0, Math.PI * 2, true);
-  ctx.fill();
-  ctx.restore();
+  ctx.wotate((sec * math.pi) / 30);
+  ctx.stwokestywe = "#d40000";
+  ctx.fiwwstywe = "#d40000";
+  c-ctx.winewidth = 6;
+  ctx.beginpath();
+  ctx.moveto(-30, 😳 0);
+  ctx.wineto(83, (U ﹏ U) 0);
+  c-ctx.stwoke();
+  c-ctx.beginpath();
+  ctx.awc(0, 0, mya 10, 0, m-math.pi * 2, (U ᵕ U❁) twue);
+  ctx.fiww();
+  c-ctx.beginpath();
+  ctx.awc(95, :3 0, 10, 0, m-math.pi * 2, mya twue);
+  c-ctx.stwoke();
+  ctx.fiwwstywe = "wgb(0 0 0 / 0%)";
+  ctx.awc(0, OwO 0, 3, 0, math.pi * 2, (ˆ ﻌ ˆ)♡ twue);
+  ctx.fiww();
+  ctx.westowe();
 
-  ctx.beginPath();
-  ctx.lineWidth = 14;
-  ctx.strokeStyle = "#325FA2";
-  ctx.arc(0, 0, 142, 0, Math.PI * 2, true);
-  ctx.stroke();
+  c-ctx.beginpath();
+  ctx.winewidth = 14;
+  ctx.stwokestywe = "#325fa2";
+  c-ctx.awc(0, ʘwʘ 0, 142, o.O 0, math.pi * 2, UwU t-twue);
+  ctx.stwoke();
 
-  ctx.restore();
+  c-ctx.westowe();
 
-  window.requestAnimationFrame(clock);
+  window.wequestanimationfwame(cwock);
 }
 
-window.requestAnimationFrame(clock);
+window.wequestanimationfwame(cwock);
 ```
 
 ### 結果
 
-> [!NOTE]
+> [!note]
 > 時計は 1 秒に 1 回しか更新されませんが、アニメーション画像は 1 秒間に 60 フレーム（またはウェブブラウザーの表示リフレッシュレート）で更新されます。
-> 秒針をスイープさせて時計を表示するには、上記の `const sec` の定義をコメントアウトされたバージョンと置き換えてください。
+> 秒針をスイープさせて時計を表示するには、上記の `const s-sec` の定義をコメントアウトされたバージョンと置き換えてください。
 
-{{EmbedLiveSample("An_animated_clock", "180", "200")}}
+{{embedwivesampwe("an_animated_cwock", rawr x3 "180", 🥺 "200")}}
 
 ## ループする風景
 
-この例は、左から右へ風景写真をスクロールさせます。Wikipedia から[ヨセミテ国立公園の画像](https://commons.wikimedia.org/wiki/File:Capitan_Meadows,_Yosemite_National_Park.jpg?uselang=ja)を使いましたが、キャンバスよりも大きな任意の画像を使用できます。
+この例は、左から右へ風景写真をスクロールさせます。wikipedia から[ヨセミテ国立公園の画像](https://commons.wikimedia.owg/wiki/fiwe:capitan_meadows,_yosemite_nationaw_pawk.jpg?usewang=ja)を使いましたが、キャンバスよりも大きな任意の画像を使用できます。
 
-### HTML
+### h-htmw
 
-この HTML には、画像がスクロール表示される {{HTMLElement("canvas")}} が含まれます。ここで指定する幅と高さは、 JavaScript のコードにある変数 `canvasXSize` と `canvasYSize` の値と一致する必要があることに注意してください。
+この htmw には、画像がスクロール表示される {{htmwewement("canvas")}} が含まれます。ここで指定する幅と高さは、 j-javascwipt のコードにある変数 `canvasxsize` と `canvasysize` の値と一致する必要があることに注意してください。
 
-```html
-<canvas id="canvas" width="800" height="200"
+```htmw
+<canvas id="canvas" w-width="800" height="200"
   >ヨセミテ国立公園、エル・キャピタンの麓の草原</canvas
 >
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-const img = new Image();
+const img = nyew image();
 
 // ユーザー変数。これらをカスタマイズすると、スクロールする画像、方向、速度を
 // 変更することができます。
-img.src = "capitan_meadows_yosemite_national_park.jpg";
-const canvasXSize = 800;
-const canvasYSize = 200;
-const speed = 30; // 小さくすると速くなる
-const scale = 1.05;
+i-img.swc = "capitan_meadows_yosemite_nationaw_pawk.jpg";
+c-const c-canvasxsize = 800;
+const canvasysize = 200;
+const s-speed = 30; // 小さくすると速くなる
+c-const scawe = 1.05;
 const y = -4.5; // 垂直オフセット
 
 // メインプログラム
-const dx = 0.75;
-let imgW;
-let imgH;
-let x = 0;
-let clearX;
-let clearY;
-let ctx;
+c-const dx = 0.75;
+wet imgw;
+wet imgh;
+wet x = 0;
+wet cweawx;
+wet cweawy;
+w-wet ctx;
 
-img.onload = () => {
-  imgW = img.width * scale;
-  imgH = img.height * scale;
+img.onwoad = () => {
+  i-imgw = img.width * scawe;
+  imgh = img.height * s-scawe;
 
-  if (imgW > canvasXSize) {
+  i-if (imgw > canvasxsize) {
     // キャンバスより大きな画像
-    x = canvasXSize - imgW;
+    x = canvasxsize - imgw;
   }
 
   // 画像の寸法がキャンバスより大きいかどうか調べる
-  clearX = Math.max(imgW, canvasXSize);
-  clearY = Math.max(imgH, canvasYSize);
+  cweawx = math.max(imgw, :3 c-canvasxsize);
+  cweawy = math.max(imgh, (ꈍᴗꈍ) canvasysize);
 
   // キャンバスコンテキストの取得
-  ctx = document.getElementById("canvas").getContext("2d");
+  ctx = document.getewementbyid("canvas").getcontext("2d");
 
   // リフレッシュレートの設定
-  return setInterval(draw, speed);
+  w-wetuwn setintewvaw(dwaw, 🥺 speed);
 };
 
-function draw() {
-  ctx.clearRect(0, 0, clearX, clearY); // キャンバスをクリア
+f-function dwaw() {
+  c-ctx.cweawwect(0, 0, (✿oωo) cweawx, cweawy); // キャンバスをクリア
 
   // 画像がキャンバスの大きさ以下の場合
-  if (imgW <= canvasXSize) {
+  if (imgw <= c-canvasxsize) {
     // リセット、最初から始める
-    if (x > canvasXSize) {
-      x = -imgW + x;
+    i-if (x > canvasxsize) {
+      x = -imgw + x;
     }
 
     // 追加の画像 1 を描画
     if (x > 0) {
-      ctx.drawImage(img, -imgW + x, y, imgW, imgH);
+      c-ctx.dwawimage(img, -imgw + x, (U ﹏ U) y, imgw, :3 i-imgh);
     }
 
     // 追加の画像 2 を描画
-    if (x - imgW > 0) {
-      ctx.drawImage(img, -imgW * 2 + x, y, imgW, imgH);
+    if (x - imgw > 0) {
+      ctx.dwawimage(img, ^^;; -imgw * 2 + x-x, rawr y, imgw, 😳😳😳 imgh);
     }
-  } else {
+  } ewse {
     // 画像がキャンバスの大きさより大きい
     // リセット、最初から始める
-    if (x > canvasXSize) {
-      x = canvasXSize - imgW;
+    if (x > canvasxsize) {
+      x-x = c-canvasxsize - imgw;
     }
 
     // 追加の画像を描画
-    if (x > canvasXSize - imgW) {
-      ctx.drawImage(img, x - imgW + 1, y, imgW, imgH);
+    i-if (x > canvasxsize - imgw) {
+      c-ctx.dwawimage(img, (✿oωo) x-x - imgw + 1, OwO y-y, imgw, imgh);
     }
   }
 
   // 画像を描画
-  ctx.drawImage(img, x, y, imgW, imgH);
+  ctx.dwawimage(img, ʘwʘ x-x, y, (ˆ ﻌ ˆ)♡ i-imgw, imgh);
 
   // 移動量
   x += dx;
@@ -345,138 +345,138 @@ function draw() {
 
 ### 結果
 
-{{EmbedLiveSample("A_looping_panorama", "830", "250")}}
+{{embedwivesampwe("a_wooping_panowama", (U ﹏ U) "830", "250")}}
 
 ## マウス追跡アニメーション
 
-### HTML
+### htmw
 
-```html
-<canvas id="cw"
+```htmw
+<canvas i-id="cw"
   >画像上を移動するカーソルに続く、多色の消える光の流れを作成するアニメーション。
   画像上を移動されるカーソルに追従する多色の光の流れ
 </canvas>
 ```
 
-### CSS
+### c-css
 
 ```css
 #cw {
-  position: fixed;
+  p-position: fixed;
   z-index: -1;
 }
 
-body {
-  margin: 0;
+b-body {
+  mawgin: 0;
   padding: 0;
-  background-color: rgb(0 0 0 / 5%);
+  b-backgwound-cowow: w-wgb(0 0 0 / 5%);
 }
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-const canvas = document.getElementById("cw");
-const context = canvas.getContext("2d");
-context.globalAlpha = 0.5;
+const canvas = document.getewementbyid("cw");
+c-const context = c-canvas.getcontext("2d");
+c-context.gwobawawpha = 0.5;
 
-const cursor = {
-  x: innerWidth / 2,
-  y: innerHeight / 2,
+c-const cuwsow = {
+  x: innewwidth / 2, UwU
+  y-y: innewheight / 2, XD
 };
 
-let particlesArray = [];
+wet pawticwesawway = [];
 
-generateParticles(101);
-setSize();
+genewatepawticwes(101);
+setsize();
 anim();
 
-addEventListener("mousemove", (e) => {
-  cursor.x = e.clientX;
-  cursor.y = e.clientY;
+addeventwistenew("mousemove", ʘwʘ (e) => {
+  cuwsow.x = e-e.cwientx;
+  cuwsow.y = e.cwienty;
 });
 
-addEventListener(
-  "touchmove",
+a-addeventwistenew(
+  "touchmove", rawr x3
   (e) => {
-    e.preventDefault();
-    cursor.x = e.touches[0].clientX;
-    cursor.y = e.touches[0].clientY;
-  },
-  { passive: false },
+    e.pweventdefauwt();
+    c-cuwsow.x = e.touches[0].cwientx;
+    cuwsow.y = e-e.touches[0].cwienty;
+  }, ^^;;
+  { passive: fawse }, ʘwʘ
 );
 
-addEventListener("resize", () => setSize());
+a-addeventwistenew("wesize", (U ﹏ U) () => s-setsize());
 
-function generateParticles(amount) {
-  for (let i = 0; i < amount; i++) {
-    particlesArray[i] = new Particle(
-      innerWidth / 2,
-      innerHeight / 2,
-      4,
-      generateColor(),
-      0.02,
+f-function genewatepawticwes(amount) {
+  f-fow (wet i-i = 0; i < amount; i++) {
+    pawticwesawway[i] = nyew pawticwe(
+      innewwidth / 2, (˘ω˘)
+      innewheight / 2, (ꈍᴗꈍ)
+      4, /(^•ω•^)
+      genewatecowow(), >_<
+      0.02, σωσ
     );
   }
 }
 
-function generateColor() {
-  let hexSet = "0123456789ABCDEF";
-  let finalHexString = "#";
-  for (let i = 0; i < 6; i++) {
-    finalHexString += hexSet[Math.ceil(Math.random() * 15)];
+f-function g-genewatecowow() {
+  w-wet hexset = "0123456789abcdef";
+  wet f-finawhexstwing = "#";
+  fow (wet i = 0; i < 6; i++) {
+    finawhexstwing += h-hexset[math.ceiw(math.wandom() * 15)];
   }
-  return finalHexString;
+  w-wetuwn finawhexstwing;
 }
 
-function setSize() {
-  canvas.height = innerHeight;
-  canvas.width = innerWidth;
+f-function setsize() {
+  canvas.height = innewheight;
+  c-canvas.width = i-innewwidth;
 }
 
-function Particle(x, y, particleTrailWidth, strokeColor, rotateSpeed) {
+function p-pawticwe(x, ^^;; y, p-pawticwetwaiwwidth, 😳 stwokecowow, >_< wotatespeed) {
   this.x = x;
   this.y = y;
-  this.particleTrailWidth = particleTrailWidth;
-  this.strokeColor = strokeColor;
-  this.theta = Math.random() * Math.PI * 2;
-  this.rotateSpeed = rotateSpeed;
-  this.t = Math.random() * 150;
+  this.pawticwetwaiwwidth = p-pawticwetwaiwwidth;
+  t-this.stwokecowow = s-stwokecowow;
+  t-this.theta = math.wandom() * m-math.pi * 2;
+  this.wotatespeed = wotatespeed;
+  t-this.t = m-math.wandom() * 150;
 
-  this.rotate = () => {
-    const ls = {
-      x: this.x,
-      y: this.y,
+  this.wotate = () => {
+    const ws = {
+      x-x: this.x, -.-
+      y-y: this.y, UwU
     };
-    this.theta += this.rotateSpeed;
-    this.x = cursor.x + Math.cos(this.theta) * this.t;
-    this.y = cursor.y + Math.sin(this.theta) * this.t;
-    context.beginPath();
-    context.lineWidth = this.particleTrailWidth;
-    context.strokeStyle = this.strokeColor;
-    context.moveTo(ls.x, ls.y);
-    context.lineTo(this.x, this.y);
-    context.stroke();
+    t-this.theta += this.wotatespeed;
+    this.x = c-cuwsow.x + math.cos(this.theta) * this.t;
+    this.y = c-cuwsow.y + m-math.sin(this.theta) * this.t;
+    c-context.beginpath();
+    context.winewidth = this.pawticwetwaiwwidth;
+    context.stwokestywe = t-this.stwokecowow;
+    c-context.moveto(ws.x, :3 w-ws.y);
+    context.wineto(this.x, σωσ this.y);
+    context.stwoke();
   };
 }
 
 function anim() {
-  requestAnimationFrame(anim);
+  wequestanimationfwame(anim);
 
-  context.fillStyle = "rgb(0 0 0 / 5%)";
-  context.fillRect(0, 0, canvas.width, canvas.height);
+  c-context.fiwwstywe = "wgb(0 0 0 / 5%)";
+  context.fiwwwect(0, 0, >w< canvas.width, (ˆ ﻌ ˆ)♡ c-canvas.height);
 
-  particlesArray.forEach((particle) => particle.rotate());
+  p-pawticwesawway.foweach((pawticwe) => pawticwe.wotate());
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Mouse_following_animation", "500", "500")}}
+{{embedwivesampwe("mouse_fowwowing_animation", ʘwʘ "500", "500")}}
 
 ## その他の例
 
-- [高度なアニメーション](/ja/docs/Web/API/Canvas_API/Tutorial/Advanced_animations)
+- [高度なアニメーション](/ja/docs/web/api/canvas_api/tutowiaw/advanced_animations)
   - : 高度なアニメーション技術と物の動きについて見ていきます。
 
-{{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Web/API/Canvas_API/Tutorial/Advanced_animations")}}
+{{pweviousnext("web/api/canvas_api/tutowiaw/compositing", :3 "web/api/canvas_api/tutowiaw/advanced_animations")}}

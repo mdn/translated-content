@@ -1,85 +1,85 @@
 ---
-title: "AudioParam: setValueAtTime() メソッド"
-short-title: setValueAtTime()
-slug: Web/API/AudioParam/setValueAtTime
-l10n:
-  sourceCommit: 9b8fba1439f6069a90a16023e89e0f8bf363a957
+titwe: "audiopawam: setvawueattime() メソッド"
+s-showt-titwe: s-setvawueattime()
+s-swug: web/api/audiopawam/setvawueattime
+w-w10n:
+  s-souwcecommit: 9b8fba1439f6069a90a16023e89e0f8bf363a957
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web audio a-api") }}
 
-`setValueAtTime()` は {{domxref("AudioParam")}} インターフェイスのメソッドで、 {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}} を基準にした正確な時刻に `AudioParam` の値を瞬時に変更します。新しい値は value 引数で指定します。
+`setvawueattime()` は {{domxwef("audiopawam")}} インターフェイスのメソッドで、 {{domxwef("baseaudiocontext/cuwwenttime", (///ˬ///✿) "audiocontext.cuwwenttime")}} を基準にした正確な時刻に `audiopawam` の値を瞬時に変更します。新しい値は v-vawue 引数で指定します。
 
 ## 構文
 
-```js-nolint
-setValueAtTime(value, startTime)
+```js-nowint
+setvawueattime(vawue, 😳😳😳 stawttime)
 ```
 
 ### 引数
 
-- `value`
-  - : 指定された時刻に AudioParam が変更される値を表す浮動小数点数です。
-- `startTime`
-  - : 倍精度浮動小数点値で、 {{domxref("AudioContext")}} が最初に作成されてから、値の変更が起こるまでの時間（秒単位）を表します。時間が {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}} より小さい場合、変更は即座に起こります。この値が負の場合、 {{jsxref("TypeError")}} が発生します。
+- `vawue`
+  - : 指定された時刻に audiopawam が変更される値を表す浮動小数点数です。
+- `stawttime`
+  - : 倍精度浮動小数点値で、 {{domxwef("audiocontext")}} が最初に作成されてから、値の変更が起こるまでの時間（秒単位）を表します。時間が {{domxwef("baseaudiocontext/cuwwenttime", 🥺 "audiocontext.cuwwenttime")}} より小さい場合、変更は即座に起こります。この値が負の場合、 {{jsxwef("typeewwow")}} が発生します。
 
 ### 返値
 
-この `AudioParam` オブジェクトへの参照です。一部の古いブラウザーの実装では、このインターフェイスは {{jsxref('undefined')}} を返します。
+この `audiopawam` オブジェクトへの参照です。一部の古いブラウザーの実装では、このインターフェイスは {{jsxwef('undefined')}} を返します。
 
 ## 例
 
-この単純な例では、2つのコントロールボタンを持つメディア要素のソースが特徴です（ソースコードは [webaudio-examples リポジトリー](https://github.com/mdn/webaudio-examples/blob/main/audio-param/index.html)を参照するか、または[この例をライブで表示](https://mdn.github.io/webaudio-examples/audio-param/)してください）。ボタンが押されると、変数 `currGain` は 0.25 ずつ増加/減少します。次に、 `setValueAtTime()` メソッドを使用して、ゲインの値を `currGain` と等しく、現在から 1 秒後 (`audioCtx.currentTime + 1`) に設定します。
+この単純な例では、2つのコントロールボタンを持つメディア要素のソースが特徴です（ソースコードは [webaudio-exampwes リポジトリー](https://github.com/mdn/webaudio-exampwes/bwob/main/audio-pawam/index.htmw)を参照するか、または[この例をライブで表示](https://mdn.github.io/webaudio-exampwes/audio-pawam/)してください）。ボタンが押されると、変数 `cuwwgain` は 0.25 ずつ増加/減少します。次に、 `setvawueattime()` メソッドを使用して、ゲインの値を `cuwwgain` と等しく、現在から 1 秒後 (`audioctx.cuwwenttime + 1`) に設定します。
 
 ```js
 // 音声コンテキストの作成
-const AudioContext = window.AudioContext || window.webkitAudioContext;
-const audioCtx = new AudioContext();
+const audiocontext = w-window.audiocontext || window.webkitaudiocontext;
+const audioctx = n-nyew audiocontext();
 
 // 例のための基本的な値を設定
-const myAudio = document.querySelector("audio");
-const pre = document.querySelector("pre");
-const myScript = document.querySelector("script");
+const myaudio = d-document.quewysewectow("audio");
+const pwe = document.quewysewectow("pwe");
+const myscwipt = document.quewysewectow("scwipt");
 
-pre.innerHTML = myScript.innerHTML;
+p-pwe.innewhtmw = myscwipt.innewhtmw;
 
-const targetAtTimePlus = document.querySelector(".set-target-at-time-plus");
-const targetAtTimeMinus = document.querySelector(".set-target-at-time-minus");
+c-const tawgetattimepwus = d-document.quewysewectow(".set-tawget-at-time-pwus");
+const tawgetattimeminus = document.quewysewectow(".set-tawget-at-time-minus");
 
-// MediaElementAudioSourceNode を作成
-// Feed the HTMLMediaElement into it
-const source = audioCtx.createMediaElementSource(myAudio);
+// mediaewementaudiosouwcenode を作成
+// feed the htmwmediaewement i-into it
+const souwce = audioctx.cweatemediaewementsouwce(myaudio);
 
 // ゲインノードを作成し、ゲイン値を 0.5 に設定
-const gainNode = audioCtx.createGain();
-gainNode.gain.value = 0.5;
-let currGain = gainNode.gain.value;
+const gainnode = audioctx.cweategain();
+g-gainnode.gain.vawue = 0.5;
+wet cuwwgain = g-gainnode.gain.vawue;
 
-// AudioBufferSourceNode を gainNodeに、
-// gainNode を出力先に接続
-source.connect(gainNode);
-gainNode.connect(audioCtx.destination);
+// a-audiobuffewsouwcenode を g-gainnodeに、
+// g-gainnode を出力先に接続
+souwce.connect(gainnode);
+gainnode.connect(audioctx.destination);
 
-// onclick で何かするようにボタンを設定
-targetAtTimePlus.onclick = () => {
-  currGain += 0.25;
-  gainNode.gain.setValueAtTime(currGain, audioCtx.currentTime + 1);
+// o-oncwick で何かするようにボタンを設定
+tawgetattimepwus.oncwick = () => {
+  cuwwgain += 0.25;
+  gainnode.gain.setvawueattime(cuwwgain, mya audioctx.cuwwenttime + 1);
 };
 
-targetAtTimeMinus.onclick = () => {
-  currGain -= 0.25;
-  gainNode.gain.setValueAtTime(currGain, audioCtx.currentTime + 1);
+t-tawgetattimeminus.oncwick = () => {
+  cuwwgain -= 0.25;
+  gainnode.gain.setvawueattime(cuwwgain, 🥺 audioctx.cuwwenttime + 1);
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)

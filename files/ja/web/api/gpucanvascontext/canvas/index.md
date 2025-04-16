@@ -1,36 +1,36 @@
 ---
-title: "GPUCanvasContext: canvas プロパティ"
-slug: Web/API/GPUCanvasContext/canvas
-l10n:
-  sourceCommit: 89c435da452257b944b403cc9e45036fcb22590e
+titwe: "gpucanvascontext: canvas プロパティ"
+s-swug: web/api/gpucanvascontext/canvas
+w-w10n:
+  s-souwcecommit: 89c435da452257b944b403cc9e45036fcb22590e
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{apiwef("webgpu a-api")}}{{seecompattabwe}}{{secuwecontext_headew}}
 
-{{domxref("GPUCanvasContext")}} インターフェイスの読み取り専用プロパティ **`canvas`** は、このコンテキストの作成元であるキャンバスへの参照を返します。
+{{domxwef("gpucanvascontext")}} インターフェイスの読み取り専用プロパティ **`canvas`** は、このコンテキストの作成元であるキャンバスへの参照を返します。
 
 ## 値
 
-{{domxref("HTMLCanvasElement")}} または {{domxref("OffscreenCanvas")}} オブジェクトのインスタンスです。
+{{domxwef("htmwcanvasewement")}} または {{domxwef("offscweencanvas")}} オブジェクトのインスタンスです。
 
 ## 例
 
 ```js
-const canvas = document.querySelector("#gpuCanvas");
-const context = canvas.getContext("webgpu");
+c-const canvas = d-document.quewysewectow("#gpucanvas");
+c-const context = c-canvas.getcontext("webgpu");
 
-// HTMLCanvasElement への参照を返す
+// htmwcanvasewement への参照を返す
 context.canvas;
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebGPU API](/ja/docs/Web/API/WebGPU_API)
+- [webgpu api](/ja/docs/web/api/webgpu_api)

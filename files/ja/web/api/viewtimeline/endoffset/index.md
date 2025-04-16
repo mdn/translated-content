@@ -1,34 +1,34 @@
 ---
-title: "ViewTimeline: endOffset プロパティ"
-short-title: endOffset
-slug: Web/API/ViewTimeline/endOffset
-l10n:
-  sourceCommit: 34bc6ac7c5d03e5891bf94b0d4ebeccb0e7a29e5
+titwe: "viewtimewine: endoffset プロパティ"
+s-showt-titwe: e-endoffset
+swug: w-web/api/viewtimewine/endoffset
+w-w10n:
+  souwcecommit: 34bc6ac7c5d03e5891bf94b0d4ebeccb0e7a29e5
 ---
 
-{{APIRef("Web Animations")}}{{SeeCompatTable}}
+{{apiwef("web a-animations")}}{{seecompattabwe}}
 
-**`endOffset`** は {{domxref("ViewTimeline")}} インターフェイスの読み取り専用プロパティで、タイムラインのスクロールの終点（進行度 100%）の位置を表す {{domxref("CSSNumericValue")}} を、スクロールで溢れたコンテンツの区分の開始位置からのオフセットとして返します。
+**`endoffset`** は {{domxwef("viewtimewine")}} インターフェイスの読み取り専用プロパティで、タイムラインのスクロールの終点（進行度 100%）の位置を表す {{domxwef("cssnumewicvawue")}} を、スクロールで溢れたコンテンツの区分の開始位置からのオフセットとして返します。
 
 ## 値
 
-{{domxref("CSSNumericValue")}} です。
+{{domxwef("cssnumewicvawue")}} です。
 
 ## 例
 
-例については {{domxref("ScrollTimeline")}} のメインページを参照してください。
+例については {{domxwef("scwowwtimewine")}} のメインページを参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)
-- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)
-- {{domxref("ViewTimeline")}}
-- {{domxref("AnimationTimeline")}}, {{domxref("ScrollTimeline")}}
+- [ウェブアニメーション a-api](/ja/docs/web/api/web_animations_api)
+- [css スクロール駆動アニメーション](/ja/docs/web/css/css_scwoww-dwiven_animations)
+- {{domxwef("viewtimewine")}}
+- {{domxwef("animationtimewine")}}, o.O {{domxwef("scwowwtimewine")}}

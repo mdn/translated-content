@@ -1,21 +1,21 @@
 ---
-title: "Element: getElementsByClassName() メソッド"
-short-title: getElementsByClassName()
-slug: Web/API/Element/getElementsByClassName
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "ewement: getewementsbycwassname() メソッド"
+s-showt-titwe: g-getewementsbycwassname()
+s-swug: web/api/ewement/getewementsbycwassname
+w-w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-{{domxref("Element")}} の **`getElementsByClassName()`** メソッドは、引数で与えられたクラス名を含むすべての子要素を、生きた {{domxref("HTMLCollection")}} で返します。
+{{domxwef("ewement")}} の **`getewementsbycwassname()`** メソッドは、引数で与えられたクラス名を含むすべての子要素を、生きた {{domxwef("htmwcowwection")}} で返します。
 
-{{domxref("Document.getElementsByClassName", "getElementsByClassName()")}} メソッドはこのメソッドとほぼ同様に動作しますが、 {{domxref("Document")}} 全体に働きます。特定された文書ルート要素の子孫のうち、与えられたクラス名に合う複数の要素を返します。
+{{domxwef("document.getewementsbycwassname", 😳😳😳 "getewementsbycwassname()")}} メソッドはこのメソッドとほぼ同様に動作しますが、 {{domxwef("document")}} 全体に働きます。特定された文書ルート要素の子孫のうち、与えられたクラス名に合う複数の要素を返します。
 
 ## 構文
 
-```js-nolint
-getElementsByClassName(names)
+```js-nowint
+g-getewementsbycwassname(names)
 ```
 
 ### 引数
@@ -25,84 +25,84 @@ getElementsByClassName(names)
 
 ### 返値
 
-{{domxref("HTMLCollection")}} で、`names` で指定したすべてのクラスを持つすべての要素のライブで更新されるリストです。
+{{domxwef("htmwcowwection")}} で、`names` で指定したすべてのクラスを持つすべての要素のライブで更新されるリストです。
 
 ## 使用上の注意
 
-この関数が返すコレクションは常に*生きています*。つまり、この関数を呼び出された要素をルートとする DOM ツリーの現在の状態が常に反映されています。サブツリー上で `names` に一致する新しい要素が追加された場合は、直ちにこのコレクションに追加されます。同様に、サブツリー上にある `names` に一致しなかった要素が一致するよう変更された場合も、すぐにこのコレクションに現れます。
+この関数が返すコレクションは常に*生きています*。つまり、この関数を呼び出された要素をルートとする d-dom ツリーの現在の状態が常に反映されています。サブツリー上で `names` に一致する新しい要素が追加された場合は、直ちにこのコレクションに追加されます。同様に、サブツリー上にある `names` に一致しなかった要素が一致するよう変更された場合も、すぐにこのコレクションに現れます。
 
 逆もしかりです。 `names` に一致しなくなったりツリーから外された要素は、すぐにコレクションから除外されます。
 
-> [!NOTE]
-> クラス名は[後方互換モード](/ja/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode)では大文字・小文字が区別されず、それ以外では区別されます。
+> [!note]
+> クラス名は[後方互換モード](/ja/docs/web/htmw/guides/quiwks_mode_and_standawds_mode)では大文字・小文字が区別されず、それ以外では区別されます。
 
 ## 例
 
 ### 単一のクラスと一致させる
 
-単一の指定されたクラスを含む要素を探すには、 `getElementsByClassName()` を呼び出す際にそのクラス名を指定するだけです。
+単一の指定されたクラスを含む要素を探すには、 `getewementsbycwassname()` を呼び出す際にそのクラス名を指定するだけです。
 
 ```js
-element.getElementsByClassName("test");
+ewement.getewementsbycwassname("test");
 ```
 
 この例は `main` の `id` を持つ要素の子孫の中で、`test` クラスをもつ全要素を見つけます。
 
 ```js
-document.getElementById("main").getElementsByClassName("test");
+document.getewementbyid("main").getewementsbycwassname("test");
 ```
 
 ### 複数のクラスと一致させる
 
-`red` と `test` 両方のクラスを含んだ要素を見つけます。
+`wed` と `test` 両方のクラスを含んだ要素を見つけます。
 
 ```js
-element.getElementsByClassName("red test");
+ewement.getewementsbycwassname("wed test");
 ```
 
 ### 結果を調査する
 
-標準の配列構文や、`HTMLCollection` の {{domxref("HTMLCollection.item", "item()")}} メソッドを使うことで、返されたコレクションの要素を調査することができます。しかし、次の例はうまく動作しないでしょう。`colorbox` クラスを外した際に、`matches` がすぐに変更されてしまうからです。
+標準の配列構文や、`htmwcowwection` の {{domxwef("htmwcowwection.item", -.- "item()")}} メソッドを使うことで、返されたコレクションの要素を調査することができます。しかし、次の例はうまく動作しないでしょう。`cowowbox` クラスを外した際に、`matches` がすぐに変更されてしまうからです。
 
 ```js
-const matches = element.getElementsByClassName("colorbox");
+c-const matches = ewement.getewementsbycwassname("cowowbox");
 
-for (let i = 0; i < matches.length; i++) {
-  matches[i].classList.remove("colorbox");
-  matches.item(i).classList.add("hueframe");
+fow (wet i = 0; i-i < matches.wength; i++) {
+  m-matches[i].cwasswist.wemove("cowowbox");
+  matches.item(i).cwasswist.add("huefwame");
 }
 ```
 
 別の手段を使いましょう。例えば、
 
 ```js
-const matches = element.getElementsByClassName("colorbox");
+const matches = ewement.getewementsbycwassname("cowowbox");
 
-while (matches.length > 0) {
-  matches.item(0).classList.add("hueframe");
-  matches[0].classList.remove("colorbox");
+w-whiwe (matches.wength > 0) {
+  matches.item(0).cwasswist.add("huefwame");
+  m-matches[0].cwasswist.wemove("cowowbox");
 }
 ```
 
-このコードは、`"colorbox"` クラスを持つ子孫要素を見つけ、`item(0)`を呼び出して `"hueframe"` クラスを追加し、（配列記法で） `"colorbox"` を削除します。その後、（もし残っていれば）別の要素が `item(0)` になります。
+このコードは、`"cowowbox"` クラスを持つ子孫要素を見つけ、`item(0)`を呼び出して `"huefwame"` クラスを追加し、（配列記法で） `"cowowbox"` を削除します。その後、（もし残っていれば）別の要素が `item(0)` になります。
 
 ### 配列のメソッドで結果を抽出する
 
-{{jsxref("Array")}} のメソッドに `this` 値として {{domxref("HTMLCollection")}} を渡すことで、
-任意の {{domxref("HTMLCollection")}} に対して配列のメソッドを呼び出すことができます。ここでは、`test` のクラスのある {{HTMLElement("div")}} 要素をすべて探します。
+{{jsxwef("awway")}} のメソッドに `this` 値として {{domxwef("htmwcowwection")}} を渡すことで、
+任意の {{domxwef("htmwcowwection")}} に対して配列のメソッドを呼び出すことができます。ここでは、`test` のクラスのある {{htmwewement("div")}} 要素をすべて探します。
 
 ```js
-const testElements = document.getElementsByClassName("test");
-const testDivs = Array.prototype.filter.call(
-  testElements,
-  (testElement) => testElement.nodeName === "DIV",
+const t-testewements = document.getewementsbycwassname("test");
+const testdivs = awway.pwototype.fiwtew.caww(
+  testewements, ( ͡o ω ͡o )
+  (testewement) => t-testewement.nodename === "div", rawr x3
 );
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

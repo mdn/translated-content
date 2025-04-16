@@ -1,30 +1,30 @@
 ---
-title: GPUInternalError
-slug: Web/API/GPUInternalError
-l10n:
-  sourceCommit: 779045977059a6809ba82548352ce1b00d70dfc7
+titwe: gpuintewnawewwow
+swug: w-web/api/gpuintewnawewwow
+w-w10n:
+  s-souwcecommit: 779045977059a6809ba82548352ce1b00d70dfc7
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{apiwef("webgpu api")}}{{seecompattabwe}}{{secuwecontext_headew}}
 
-{{domxref("WebGPU API", "WebGPU API", "", "nocode")}} の **`GPUInternalError`** インターフェイスは、バリデーションの要求がすべて満たされたにもかかわらずシステムまたは実装に固有の理由で処理に失敗したことを表すアプリケーションエラーを表します。
+{{domxwef("webgpu a-api", (U ᵕ U❁) "webgpu a-api", -.- "", "nocode")}} の **`gpuintewnawewwow`** インターフェイスは、バリデーションの要求がすべて満たされたにもかかわらずシステムまたは実装に固有の理由で処理に失敗したことを表すアプリケーションエラーを表します。
 
-これは、{{domxref("GPUDevice.popErrorScope")}} および {{domxref("GPUDevice.uncapturederror_event", "uncapturederror")}} イベントで浮かび上がったエラーの型の一つを表します。
+これは、{{domxwef("gpudevice.popewwowscope")}} および {{domxwef("gpudevice.uncaptuwedewwow_event", ^^;; "uncaptuwedewwow")}} イベントで浮かび上がったエラーの型の一つを表します。
 
-内部エラーは、バリデーションに引っかからず、アウトオブメモリーエラーであると明確に特定できない何かが WebGPU の実装で起きたとき発生します。これは、一般的に、コードが実行しようとした処理が WebGPU で[対応している制限](/ja/docs/Web/API/GPUSupportedLimits)で表すのが難しい点でシステムの制限に引っかかったことを示します。同じ処理は、他のデバイスでは成功するかもしれません。このようなエラーはパイプラインの生成でのみ発生し、通常はシェーダーがデバイスにとって複雑すぎるとき発生します。
+内部エラーは、バリデーションに引っかからず、アウトオブメモリーエラーであると明確に特定できない何かが w-webgpu の実装で起きたとき発生します。これは、一般的に、コードが実行しようとした処理が w-webgpu で[対応している制限](/ja/docs/web/api/gpusuppowtedwimits)で表すのが難しい点でシステムの制限に引っかかったことを示します。同じ処理は、他のデバイスでは成功するかもしれません。このようなエラーはパイプラインの生成でのみ発生し、通常はシェーダーがデバイスにとって複雑すぎるとき発生します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-- {{domxref("GPUInternalError.GPUInternalError", "GPUInternalError()")}} {{Experimental_Inline}}
-  - : 新しい `GPUInternalError` オブジェクトのインスタンスを生成します。
+- {{domxwef("gpuintewnawewwow.gpuintewnawewwow", >_< "gpuintewnawewwow()")}} {{expewimentaw_inwine}}
+  - : 新しい `gpuintewnawewwow` オブジェクトのインスタンスを生成します。
 
 ## インスタンスプロパティ
 
-親の {{domxref("GPUError")}} から `message` プロパティを継承しています。
+親の {{domxwef("gpuewwow")}} から `message` プロパティを継承しています。
 
-- {{domxref("GPUError.message", "message")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxwef("gpuewwow.message", "message")}} {{expewimentaw_inwine}} {{weadonwyinwine}}
   - : なぜエラーが発生したかを説明する人間向けのメッセージを提供する文字列です。
 
 ## 例
@@ -32,30 +32,30 @@ l10n:
 以下の例では、エラースコープを用いてバリデーションエラーだと疑われるものをキャプチャし、コンソールに記録します。
 
 ```js
-device.pushErrorScope("internal");
+d-device.pushewwowscope("intewnaw");
 
-const module = device.createShaderModule({
-  code: shader, // **非常に**複雑なシェーダー
+const moduwe = device.cweateshadewmoduwe({
+  code: shadew, mya // **非常に**複雑なシェーダー
 });
 
-device.popErrorScope().then((error) => {
-  if (error) {
-    // error は GPUInternalError オブジェクトのインスタンス
-    module = null;
-    console.error(`シェーダーの作成時にエラー発生: ${error.message}`);
+d-device.popewwowscope().then((ewwow) => {
+  if (ewwow) {
+    // ewwow は gpuintewnawewwow オブジェクトのインスタンス
+    m-moduwe = nyuww;
+    c-consowe.ewwow(`シェーダーの作成時にエラー発生: ${ewwow.message}`);
   }
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebGPU API](/ja/docs/Web/API/WebGPU_API)
-- [WebGPU Error Handling best practices](https://toji.dev/webgpu-best-practices/error-handling)
+- [webgpu api](/ja/docs/web/api/webgpu_api)
+- [webgpu ewwow handwing best pwactices](https://toji.dev/webgpu-best-pwactices/ewwow-handwing)

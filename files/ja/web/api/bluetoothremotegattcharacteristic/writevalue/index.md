@@ -1,37 +1,37 @@
 ---
-title: "BluetoothRemoteGATTCharacteristic: writeValue() メソッド"
-slug: Web/API/BluetoothRemoteGATTCharacteristic/writeValue
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: "bwuetoothwemotegattchawactewistic: wwitevawue() メソッド"
+s-swug: web/api/bwuetoothwemotegattchawactewistic/wwitevawue
+w-w10n:
+  souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef("Bluetooth API")}}{{Deprecated_header}}
+{{apiwef("bwuetooth a-api")}}{{depwecated_headew}}
 
-かわりに {{DOMxRef("BluetoothRemoteGATTCharacteristic.writeValueWithResponse()")}} や {{DOMxRef("BluetoothRemoteGATTCharacteristic.writeValueWithoutResponse()")}} を使用してください。
+かわりに {{domxwef("bwuetoothwemotegattchawactewistic.wwitevawuewithwesponse()")}} や {{domxwef("bwuetoothwemotegattchawactewistic.wwitevawuewithoutwesponse()")}} を使用してください。
 
-**`BluetoothRemoteGATTCharacteristic.writeValue()`** メソッドは、{{domxref("BluetoothRemoteGATTCharacteristic")}} オブジェクトの `value` プロパティを渡された {{JSxRef("ArrayBuffer")}} に格納されたバイト列に設定し、[`WriteCharacteristicValue`(_this_=`this`, _value=value_, _response_=`"optional"`)](https://webbluetoothcg.github.io/web-bluetooth/#writecharacteristicvalue) を呼び出し、結果の {{JSxRef("Promise")}} を返します。
+**`bwuetoothwemotegattchawactewistic.wwitevawue()`** メソッドは、{{domxwef("bwuetoothwemotegattchawactewistic")}} オブジェクトの `vawue` プロパティを渡された {{jsxwef("awwaybuffew")}} に格納されたバイト列に設定し、[`wwitechawactewisticvawue`(_this_=`this`, òωó _vawue=vawue_, o.O _wesponse_=`"optionaw"`)](https://webbwuetoothcg.github.io/web-bwuetooth/#wwitechawactewisticvawue) を呼び出し、結果の {{jsxwef("pwomise")}} を返します。
 
 ## 構文
 
-```js-nolint
-writeValue(value)
+```js-nowint
+w-wwitevawue(vawue)
 ```
 
 ### 引数
 
-- `value`
-  - : {{jsxref("ArrayBuffer")}} です。
+- `vawue`
+  - : {{jsxwef("awwaybuffew")}} です。
 
 ### 返値
 
-{{jsxref("Promise")}} です。
+{{jsxwef("pwomise")}} です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{APIRef("Web Bluetooth")}}
+{{apiwef("web b-bwuetooth")}}

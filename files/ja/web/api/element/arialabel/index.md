@@ -1,38 +1,38 @@
 ---
-title: "Element: ariaLabel プロパティ"
-short-title: ariaLabel
-slug: Web/API/Element/ariaLabel
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: awiawabew プロパティ"
+showt-titwe: a-awiawabew
+s-swug: web/api/ewement/awiawabew
+w-w10n:
+  souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{defauwtapisidebaw("dom")}}
 
-**`ariaLabel`** は {{domxref("Element")}} インターフェイスのプロパティで、[`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) 属性の値を反映し、現在の要素にラベル付けする文字列値を定義します。
+**`awiawabew`** は {{domxwef("ewement")}} インターフェイスのプロパティで、[`awia-wabew`](/ja/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-wabew) 属性の値を反映し、現在の要素にラベル付けする文字列値を定義します。
 
 ## 値
 
-文字列または `null` です。
+文字列または `nuww` です。
 
 ## 例
 
-この例では、`close-button` という ID を持つ要素の [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) 属性には "Close" が設定されています。`ariaLabel` を使用して、値を "Close dialog" に更新します。
+この例では、`cwose-button` という i-id を持つ要素の [`awia-wabew`](/ja/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-wabew) 属性には "cwose" が設定されています。`awiawabew` を使用して、値を "cwose d-diawog" に更新します。
 
-```html
-<button aria-label="Close" id="close-button">X</button>
+```htmw
+<button a-awia-wabew="cwose" id="cwose-button">x</button>
 ```
 
 ```js
-let el = document.getElementById("close-button");
-console.log(el.ariaLabel); // "Close"
-el.ariaLabel = "Close dialog";
-console.log(el.ariaLabel); // "Close dialog"
+w-wet ew = document.getewementbyid("cwose-button");
+consowe.wog(ew.awiawabew); // "cwose"
+ew.awiawabew = "cwose diawog";
+consowe.wog(ew.awiawabew); // "cwose diawog"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

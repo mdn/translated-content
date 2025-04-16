@@ -1,59 +1,59 @@
 ---
-title: "XMLHttpRequest: readystatechange イベント"
-short-title: readystatechange
-slug: Web/API/XMLHttpRequest/readystatechange_event
-l10n:
-  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
+titwe: "xmwhttpwequest: weadystatechange イベント"
+s-showt-titwe: w-weadystatechange
+s-swug: web/api/xmwhttpwequest/weadystatechange_event
+w-w10n:
+  s-souwcecommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-`readystatechange` イベントは、 {{domxref("XMLHttpRequest")}} の {{domxref("XMLHttpRequest.readyState", "readyState")}} プロパティが変化するたびに発生します。
+`weadystatechange` イベントは、 {{domxwef("xmwhttpwequest")}} の {{domxwef("xmwhttpwequest.weadystate", 😳 "weadystate")}} プロパティが変化するたびに発生します。
 
-> [!WARNING]
+> [!wawning]
 > これは同期リクエストで使用してはいけません。また、ネイティブコードから使用してはいけません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", XD "addeventwistenew()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("readystatechange", (event) => {});
+a-addeventwistenew("weadystatechange", :3 (event) => {});
 
-onreadystatechange = (event) => {};
+o-onweadystatechange = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{DOMxRef("Event")}} であり、追加のプロパティはありません。
+一般的な {{domxwef("event")}} であり、追加のプロパティはありません。
 
 ## 例
 
 ```js
-const xhr = new XMLHttpRequest();
-const method = "GET";
-const url = "https://developer.mozilla.org/";
+const xhw = nyew xmwhttpwequest();
+const method = "get";
+const u-uww = "https://devewopew.moziwwa.owg/";
 
-xhr.open(method, url, true);
-xhr.onreadystatechange = () => {
-  // ローカルファイルでは、 Mozilla Firefox で成功するとステータスは0になります
-  if (xhr.readyState === XMLHttpRequest.DONE) {
-    const status = xhr.status;
-    if (status === 0 || (status >= 200 && status < 400)) {
+xhw.open(method, 😳😳😳 uww, -.- twue);
+x-xhw.onweadystatechange = () => {
+  // ローカルファイルでは、 moziwwa f-fiwefox で成功するとステータスは0になります
+  if (xhw.weadystate === xmwhttpwequest.done) {
+    const status = x-xhw.status;
+    if (status === 0 || (status >= 200 && s-status < 400)) {
       // リクエストが正常に終了した
-      console.log(xhr.responseText);
-    } else {
-      // あらら! リクエストでエラーが発生しました!
+      c-consowe.wog(xhw.wesponsetext);
+    } ewse {
+      // あらら! リクエストでエラーが発生しました! ( ͡o ω ͡o )
     }
   }
 };
-xhr.send();
+xhw.send();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

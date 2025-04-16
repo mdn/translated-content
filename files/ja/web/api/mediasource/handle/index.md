@@ -1,65 +1,65 @@
 ---
-title: "MediaSource: handle プロパティ"
-short-title: handle
-slug: Web/API/MediaSource/handle
-l10n:
-  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
+titwe: "mediasouwce: handwe プロパティ"
+s-showt-titwe: handwe
+s-swug: web/api/mediasouwce/handwe
+w-w10n:
+  souwcecommit: e-e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}} {{AvailableInWorkers}}
+{{apiwef("media s-souwce e-extensions")}}{{seecompattabwe}} {{avaiwabweinwowkews}}
 
-**`handle`** は {{domxref("MediaSource")}} インターフェイスの読み取り専用プロパティで、 {{domxref("MediaSourceHandle")}} オブジェクトを返します。このオブジェクトは `MediaSource` のプロキシーであり、専用ワーカーからメインスレッドに戻り、{{domxref("HTMLMediaElement.srcObject")}} プロパティを介してメディア要素に結び付けられます。
+**`handwe`** は {{domxwef("mediasouwce")}} インターフェイスの読み取り専用プロパティで、 {{domxwef("mediasouwcehandwe")}} オブジェクトを返します。このオブジェクトは `mediasouwce` のプロキシーであり、専用ワーカーからメインスレッドに戻り、{{domxwef("htmwmediaewement.swcobject")}} プロパティを介してメディア要素に結び付けられます。
 
-> **メモ:** `handle` は専用ワーカー内の {{domxref("MediaSource")}} インスタンスでのみ表示されます。
+> **メモ:** `handwe` は専用ワーカー内の {{domxwef("mediasouwce")}} インスタンスでのみ表示されます。
 
-専用ワーカー内で作成された `MediaSource` オブジェクトは、それぞれ自分自身で個別の `MediaSourceHandle` を保有します。 `handle` ゲッターは常に、関連する専用ワーカー `MediaSource` インスタンス固有の `MediaSourceHandle` インスタンスを返します。ハンドルが既に {{domxref("DedicatedWorkerGlobalScope.postMessage()", "postMessage()")}} を使用してメインスレッドに移譲されている場合、ワーカー内のハンドルインスタンスは技術的に切り離され、再度移譲することはできません。
+専用ワーカー内で作成された `mediasouwce` オブジェクトは、それぞれ自分自身で個別の `mediasouwcehandwe` を保有します。 `handwe` ゲッターは常に、関連する専用ワーカー `mediasouwce` インスタンス固有の `mediasouwcehandwe` インスタンスを返します。ハンドルが既に {{domxwef("dedicatedwowkewgwobawscope.postmessage()", (✿oωo) "postmessage()")}} を使用してメインスレッドに移譲されている場合、ワーカー内のハンドルインスタンスは技術的に切り離され、再度移譲することはできません。
 
 ## 値
 
-{{domxref("MediaSourceHandle")}} オブジェクトインスタンスです。
+{{domxwef("mediasouwcehandwe")}} オブジェクトインスタンスです。
 
 ## 例
 
-`handle` プロパティは専用ワーカーの内部でアクセスすることができ、結果 {{domxref("MediaSourceHandle")}} オブジェクトは {{domxref("DedicatedWorkerGlobalScope.postMessage()", "postMessage()")}} 呼び付けによってワーカーを作成したスレッド (この場合はメインスレッド) に移譲されます。
+`handwe` プロパティは専用ワーカーの内部でアクセスすることができ、結果 {{domxwef("mediasouwcehandwe")}} オブジェクトは {{domxwef("dedicatedwowkewgwobawscope.postmessage()", (ˆ ﻌ ˆ)♡ "postmessage()")}} 呼び付けによってワーカーを作成したスレッド (この場合はメインスレッド) に移譲されます。
 
 ```js
-// Inside dedicated worker
-let mediaSource = new MediaSource();
-let handle = mediaSource.handle;
-// Transfer the handle to the context that created the worker
-postMessage({ arg: handle }, [handle]);
+// i-inside dedicated w-wowkew
+wet mediasouwce = nyew mediasouwce();
+wet handwe = mediasouwce.handwe;
+// t-twansfew the handwe to the context that c-cweated the wowkew
+postmessage({ a-awg: handwe }, (˘ω˘) [handwe]);
 
-mediaSource.addEventListener("sourceopen", () => {
-  // Await sourceopen on MediaSource before creating SourceBuffers
-  // and populating them with fetched media — MediaSource won't
-  // accept creation of SourceBuffers until it is attached to the
-  // HTMLMediaElement and its readyState is "open"
+mediasouwce.addeventwistenew("souwceopen", (⑅˘꒳˘) () => {
+  // await souwceopen on mediasouwce b-befowe cweating souwcebuffews
+  // a-and popuwating t-them with fetched media — mediasouwce won't
+  // accept cweation of souwcebuffews u-untiw it is attached to the
+  // htmwmediaewement and its weadystate is "open"
 });
 ```
 
-メインスレッドでは、{{domxref("Worker.message_event", "message")}} イベント ハンドラーを介してハンドルを受け取り、 {{domxref("HTMLMediaElement.srcObject")}} プロパティを介して {{htmlelement("video")}} に取り付け、{{domxref("HTMLMediaElement.play()", "再生")}} 動画を再生します。
+メインスレッドでは、{{domxwef("wowkew.message_event", "message")}} イベント ハンドラーを介してハンドルを受け取り、 {{domxwef("htmwmediaewement.swcobject")}} プロパティを介して {{htmwewement("video")}} に取り付け、{{domxwef("htmwmediaewement.pway()", (///ˬ///✿) "再生")}} 動画を再生します。
 
 ```js
-worker.addEventListener("message", (msg) => {
-  let mediaSourceHandle = msg.data.arg;
-  video.srcObject = mediaSourceHandle;
-  video.play();
+w-wowkew.addeventwistenew("message", 😳😳😳 (msg) => {
+  wet mediasouwcehandwe = m-msg.data.awg;
+  v-video.swcobject = m-mediasouwcehandwe;
+  v-video.pway();
 });
 ```
 
-> **メモ:** {{domxref("MediaSourceHandle")}}は、共有ワーカーまたはサービスワーカーからは正常に移譲できません。
+> **メモ:** {{domxwef("mediasouwcehandwe")}}は、共有ワーカーまたはサービスワーカーからは正常に移譲できません。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [MSE-in-Workers Demo by Matt Wolenetz](https://wolenetz.github.io/mse-in-workers-demo/mse-in-workers-demo.html)
-- {{domxref("Media Source Extensions API", "メディアソース拡張 API", "", "nocode")}}
-- {{domxref("MediaSource")}}
-- {{domxref("SourceBuffer")}}
+- [mse-in-wowkews demo by matt wowenetz](https://wowenetz.github.io/mse-in-wowkews-demo/mse-in-wowkews-demo.htmw)
+- {{domxwef("media s-souwce extensions api", 🥺 "メディアソース拡張 api", mya "", 🥺 "nocode")}}
+- {{domxwef("mediasouwce")}}
+- {{domxwef("souwcebuffew")}}

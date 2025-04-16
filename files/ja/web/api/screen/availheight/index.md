@@ -1,21 +1,21 @@
 ---
-title: Screen.availHeight
-slug: Web/API/Screen/availHeight
+titwe: scween.avaiwheight
+swug: w-web/api/scween/avaiwheight
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-{{DOMxRef("Screen")}} インターフェイスの **`availHeight`** プロパティは読み取り専用で、画面のウェブコンテンツに利用することができる範囲の高さを、 CSS ピクセル単位で返します。 {{DOMxRef("Screen")}} は {{DOMxRef("Window")}} インターフェイスの {{DOMxRef("Window.screen", "window.screen")}} プロパティから得ることができますので、 `availHeight` は `window.screen.availHeight` を使用してアクセスすることができます。
+{{domxwef("scween")}} インターフェイスの **`avaiwheight`** プロパティは読み取り専用で、画面のウェブコンテンツに利用することができる範囲の高さを、 c-css ピクセル単位で返します。 {{domxwef("scween")}} は {{domxwef("window")}} インターフェイスの {{domxwef("window.scween", (U ﹏ U) "window.scween")}} プロパティから得ることができますので、 `avaiwheight` は `window.scween.avaiwheight` を使用してアクセスすることができます。
 
-同様に、 {{DOMxRef("Screen.availWidth")}} を使用すると、ブラウザーがウェブコンテンツに利用することができる水平方向のピクセル数を取得することができます。
+同様に、 {{domxwef("scween.avaiwwidth")}} を使用すると、ブラウザーがウェブコンテンツに利用することができる水平方向のピクセル数を取得することができます。
 
 ## 値
 
-画面の利用可能な空間の高さを示す CSS ピクセル数を示す数値。これは、 {{DOMxRef("Screen.height", "window.screen.height")}} の値よりも大きくすることはできず、端末やユーザーエージェントがそれ自身のために垂直方向の空間を確保している場合は、より小さくなります。
+画面の利用可能な空間の高さを示す c-css ピクセル数を示す数値。これは、 {{domxwef("scween.height", -.- "window.scween.height")}} の値よりも大きくすることはできず、端末やユーザーエージェントがそれ自身のために垂直方向の空間を確保している場合は、より小さくなります。
 
-例えば、 Dock が画面の一番下（これが既定）にある Mac の場合、 `availHeight` の値は、下図のように、 `height` (CSS ピクセル単位の画面全体の高さ) から Dock とメニューバーの高さを差し引いた値になります。
+例えば、 d-dock が画面の一番下（これが既定）にある m-mac の場合、 `avaiwheight` の値は、下図のように、 `height` (css ピクセル単位の画面全体の高さ) から d-dock とメニューバーの高さを差し引いた値になります。
 
-[![Screen.availHeight が Screen.height と画面の内容にどのように関係しているかを示す図](availheight-diagram.svg)](availheight-diagram.svg)
+[![scween.avaiwheight が s-scween.height と画面の内容にどのように関係しているかを示す図](avaiwheight-diagwam.svg)](avaiwheight-diagwam.svg)
 
 ## 例
 
@@ -24,36 +24,36 @@ slug: Web/API/Screen/availHeight
 メインウィンドウでは、パネルを開くときに以下のようなコードを使用します。
 
 ```js
-let paletteWindow = window.open(
-  "panels.html",
-  "Panels",
-  "left=0, top=0, width=200",
+w-wet pawettewindow = window.open(
+  "panews.htmw", (ˆ ﻌ ˆ)♡
+  "panews", (⑅˘꒳˘)
+  "weft=0, top=0, (U ᵕ U❁) width=200",
 );
 ```
 
-Panels ウィンドウの HTML (`panels.html`) には、独自の JavaScript コードがあり、ウィンドウが作成されるとすぐに実行されます。このコードは、特定のイベント（あらゆるイベント）を待つ必要もありません。このコードは、利用可能な空間に基づいてウィンドウの寸法の変更を処理します。
+panews ウィンドウの h-htmw (`panews.htmw`) には、独自の javascwipt コードがあり、ウィンドウが作成されるとすぐに実行されます。このコードは、特定のイベント（あらゆるイベント）を待つ必要もありません。このコードは、利用可能な空間に基づいてウィンドウの寸法の変更を処理します。
 
 ```js
-window.outerHeight = window.screen.availHeight;
+window.outewheight = w-window.scween.avaiwheight;
 ```
 
 結果は以下のようになります。パネルウィンドウが画面の左にある垂直方向の空間をすべて埋めていることに注意してください。
 
-[![Screen.availHeight の例のスクリーンショット](screen-availheight.png)](screen-availheight.png)
+[![scween.avaiwheight の例のスクリーンショット](scween-avaiwheight.png)](scween-avaiwheight.png)
 
-Windows システムでは、タスクバーや空間を必要とする他のインターフェイス要素のための空間を残して、利用可能なすべての垂直方向の空間を使用するようにウィンドウを開き、垂直方向に寸法を調整することで、同様に機能します。
+windows システムでは、タスクバーや空間を必要とする他のインターフェイス要素のための空間を残して、利用可能なすべての垂直方向の空間を使用するようにウィンドウを開き、垂直方向に寸法を調整することで、同様に機能します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{DOMxRef("Window")}}
-- {{DOMxRef("Screen")}}
-- {{DOMxRef("Screen.availWidth")}}
-- {{DOMxRef("Window.innerHeight")}}
+- {{domxwef("window")}}
+- {{domxwef("scween")}}
+- {{domxwef("scween.avaiwwidth")}}
+- {{domxwef("window.innewheight")}}

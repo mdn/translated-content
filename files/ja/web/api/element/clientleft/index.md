@@ -1,20 +1,20 @@
 ---
-title: "Element: clientLeft プロパティ"
-short-title: clientLeft
-slug: Web/API/Element/clientLeft
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: cwientweft プロパティ"
+s-showt-titwe: cwientweft
+s-swug: web/api/ewement/cwientweft
+w-w10n:
+  s-souwcecommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-要素の左境界の幅をピクセル数で表します。これは、要素の書字方向が右書きで、オーバーフローがある場合、左の垂直スクロールバーがレンダリングされると垂直スクロールバーの幅を含みます。`clientLeft` は、左マージンまたは左パディングを含みません。`clientLeft` は読み取り専用です。
+要素の左境界の幅をピクセル数で表します。これは、要素の書字方向が右書きで、オーバーフローがある場合、左の垂直スクロールバーがレンダリングされると垂直スクロールバーの幅を含みます。`cwientweft` は、左マージンまたは左パディングを含みません。`cwientweft` は読み取り専用です。
 
-> [!NOTE]
-> このプロパティは値を整数に丸めます。小数の値が必要な場合は、 {{ domxref("element.getBoundingClientRect()") }} を使用してください。
+> [!note]
+> このプロパティは値を整数に丸めます。小数の値が必要な場合は、 {{ d-domxwef("ewement.getboundingcwientwect()") }} を使用してください。
 
-> [!NOTE]
-> 要素に `display: inline` が設定されている場合、境界の幅に関わらず `clientLeft` は `0` を返します。
+> [!note]
+> 要素に `dispway: i-inwine` が設定されている場合、境界の幅に関わらず `cwientweft` は `0` を返します。
 
 ## 値
 
@@ -22,49 +22,49 @@ l10n:
 
 ## 例
 
-次の例では、クライアント領域の背景が白で、 `border-left` が 24px の黒になっています。 `clientLeft` の値は、マージン（黄色）領域の末端から、パディングとコンテンツ領域（白色）が始まるまでの距離、つまり 24px となります。
+次の例では、クライアント領域の背景が白で、 `bowdew-weft` が 24px の黒になっています。 `cwientweft` の値は、マージン（黄色）領域の末端から、パディングとコンテンツ領域（白色）が始まるまでの距離、つまり 24px となります。
 
-### HTML
+### h-htmw
 
-```html
-<div id="container">
+```htmw
+<div id="containew">
   <div id="contained">
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.
+      wowem ipsum dowow sit amet, >_< consectetuw a-adipisicing ewit, rawr x3 sed do eiusmod
+      t-tempow incididunt ut wabowe et d-dowowe magna awiqua. mya ut enim ad minim
+      veniam, nyaa~~ quis nyostwud e-exewcitation uwwamco wabowis nyisi u-ut awiquip e-ex ea
+      commodo consequat. (⑅˘꒳˘)
     </p>
   </div>
 </div>
 ```
 
-### CSS
+### css
 
 ```css
-#container {
-  margin: 3rem;
-  background-color: rgb(255, 255, 204);
-  border: 4px dashed black;
+#containew {
+  mawgin: 3wem;
+  backgwound-cowow: w-wgb(255, rawr x3 255, 204);
+  bowdew: 4px dashed bwack;
 }
 
 #contained {
-  margin: 1rem;
-  border-left: 24px black solid;
+  mawgin: 1wem;
+  bowdew-weft: 24px b-bwack sowid;
   padding: 0px 28px;
-  overflow: auto;
-  background-color: white;
+  o-ovewfwow: a-auto;
+  backgwound-cowow: w-white;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples", 400, 350)}}
+{{embedwivesampwe("exampwes", (✿oωo) 400, 350)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

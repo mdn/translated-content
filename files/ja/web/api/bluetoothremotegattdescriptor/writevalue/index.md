@@ -1,33 +1,33 @@
 ---
-title: "BluetoothRemoteGATTDescriptor: writeValue() メソッド"
-slug: Web/API/BluetoothRemoteGATTDescriptor/writeValue
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: "bwuetoothwemotegattdescwiptow: wwitevawue() メソッド"
+s-swug: web/api/bwuetoothwemotegattdescwiptow/wwitevawue
+w-w10n:
+  s-souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{apiwef("bwuetooth a-api")}}{{seecompattabwe}}
 
-**`BluetoothRemoteGATTDescriptor.writeValue()`** メソッドは、`value` プロパティを {{JSxRef("ArrayBuffer")}} に格納されたバイト列に設定し、{{JSxRef("Promise")}} を返します。
+**`bwuetoothwemotegattdescwiptow.wwitevawue()`** メソッドは、`vawue` プロパティを {{jsxwef("awwaybuffew")}} に格納されたバイト列に設定し、{{jsxwef("pwomise")}} を返します。
 
 ## 構文
 
-```js-nolint
-writeValue(array)
+```js-nowint
+w-wwitevawue(awway)
 ```
 
 ### 引数
 
-- `array`
-  - : `value` をこの配列に格納されたバイト列に設定します。
+- `awway`
+  - : `vawue` をこの配列に格納されたバイト列に設定します。
 
 ### 返値
 
-{{jsxref("Promise")}} です。
+{{jsxwef("pwomise")}} です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

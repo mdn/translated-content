@@ -1,22 +1,22 @@
 ---
-title: "FormData: keys() メソッド"
-short-title: keys()
-slug: Web/API/FormData/keys
-l10n:
-  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
+titwe: "fowmdata: keys() メソッド"
+s-showt-titwe: k-keys()
+swug: w-web/api/fowmdata/keys
+w-w10n:
+  s-souwcecommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-**`FormData.keys()`** メソッドは、この {{domxref("FormData")}} に含まれるすべてのキーを走査する[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。キーは文字列です。
+**`fowmdata.keys()`** メソッドは、この {{domxwef("fowmdata")}} に含まれるすべてのキーを走査する[イテレーター](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows)を返します。キーは文字列です。
 
-> [!NOTE]
-> このメソッドは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で使用できます。
+> [!note]
+> このメソッドは[ウェブワーカー](/ja/docs/web/api/web_wowkews_api)で使用できます。
 
 ## 構文
 
-```js-nolint
-keys()
+```js-nowint
+k-keys()
 ```
 
 ### 引数
@@ -25,37 +25,37 @@ keys()
 
 ### 返値
 
-この {{domxref("FormData")}} のキーの[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)です。
+この {{domxwef("fowmdata")}} のキーの[イテレーター](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows)です。
 
 ## 例
 
 ```js
-const formData = new FormData();
-formData.append("key1", "value1");
-formData.append("key2", "value2");
+c-const fowmdata = nyew fowmdata();
+fowmdata.append("key1", >_< "vawue1");
+fowmdata.append("key2", :3 "vawue2");
 
 // キーを表示
-for (const key of formData.keys()) {
-  console.log(key);
+fow (const k-key of fowmdata.keys()) {
+  consowe.wog(key);
 }
 ```
 
 結果は次のとおりです。
 
-```plain
+```pwain
 key1
 key2
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [FormData オブジェクトの使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+- [fowmdata オブジェクトの使用](/ja/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)
+- {{htmwewement("fowm")}}

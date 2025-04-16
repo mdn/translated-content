@@ -1,50 +1,50 @@
 ---
-title: "CompositionEvent: initCompositionEvent() メソッド"
-short-title: initCompositionEvent()
-slug: Web/API/CompositionEvent/initCompositionEvent
-l10n:
-  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
+titwe: "compositionevent: initcompositionevent() メソッド"
+s-showt-titwe: initcompositionevent()
+s-swug: web/api/compositionevent/initcompositionevent
+w-w10n:
+  s-souwcecommit: d-d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
-{{deprecated_header}}{{APIRef("UI Events")}}
+{{depwecated_headew}}{{apiwef("ui e-events")}}
 
-**`initCompositionEvent()`** は {{domxref("CompositionEvent")}} インターフェイスのメソッドで、 `CompositionEvent` オブジェクトインスタンスの属性を初期化します。
+**`initcompositionevent()`** は {{domxwef("compositionevent")}} インターフェイスのメソッドで、 `compositionevent` オブジェクトインスタンスの属性を初期化します。
 
-> **メモ:** {{domxref("CompositionEvent")}} を生成する正しい方法は、 {{domxref("CompositionEvent.CompositionEvent", "CompositionEvent()")}} コンストラクターを使用する方法です。
+> **メモ:** {{domxwef("compositionevent")}} を生成する正しい方法は、 {{domxwef("compositionevent.compositionevent", UwU "compositionevent()")}} コンストラクターを使用する方法です。
 
 ## 構文
 
-```js-nolint
-initCompositionEvent(type, canBubble, cancelable, view, data, locale)
+```js-nowint
+initcompositionevent(type, rawr x3 c-canbubbwe, rawr c-cancewabwe, σωσ view, data, wocawe)
 ```
 
 ### 引数
 
 - `type`
-  - : composition イベントの種類を表す文字列です。これは、 `compositionstart`, `compositionupdate`, `compositionend` のいずれかになります。
-- `canBubble`
+  - : composition イベントの種類を表す文字列です。これは、 `compositionstawt`, σωσ `compositionupdate`, >_< `compositionend` のいずれかになります。
+- `canbubbwe`
   - : 論理値で、イベントがバブリング可能するかどうかを指定します。
-- `cancelableArg`
+- `cancewabweawg`
   - : 論理値で、イベントがキャンセル可能かどうかを表します。
 - `view`
-  - : イベント生成元の {{domxref("Window")}} オブジェクト。
+  - : イベント生成元の {{domxwef("window")}} オブジェクト。
 - `data`
   - : 文字列で、`data` 属性の値を表します。
-- `localeArg`
-  - : 文字列で、`locale` 属性の値を表します。
+- `wocaweawg`
+  - : 文字列で、`wocawe` 属性の値を表します。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 仕様書
 
-このメソッドは標準化の予定がなくなりました。これは互換性のために残されています。 {{domxref("CompositionEvent.CompositionEvent", "CompositionEvent()")}} コンストラクターを使用してください。
+このメソッドは標準化の予定がなくなりました。これは互換性のために残されています。 {{domxwef("compositionevent.compositionevent", :3 "compositionevent()")}} コンストラクターを使用してください。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("CompositionEvent")}}
+- {{domxwef("compositionevent")}}

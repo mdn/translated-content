@@ -1,16 +1,16 @@
 ---
-title: "HTMLVideoElement: poster プロパティ"
-short-title: poster
-slug: Web/API/HTMLVideoElement/poster
-l10n:
-  sourceCommit: 85e913af9f01e216149d3381586eb0c784fefff7
+titwe: "htmwvideoewement: postew プロパティ"
+s-showt-titwe: p-postew
+swug: web/api/htmwvideoewement/postew
+w10n:
+  s-souwcecommit: 85e913af9f01e216149d3381586eb0c784fefff7
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`poster`** は {{domxref("HTMLVideoElement")}} インターフェイスのプロパティで、動画データが利用できない場合に表示させる画像の URL を反映する文字列です。プロパティが有効な URL を表していない場合、ポスターフレームは表示されません。
+**`postew`** は {{domxwef("htmwvideoewement")}} インターフェイスのプロパティで、動画データが利用できない場合に表示させる画像の u-uww を反映する文字列です。プロパティが有効な u-uww を表していない場合、ポスターフレームは表示されません。
 
-これは、{{HTMLElement("video")}} 要素の `poster` 属性を反映しています。
+これは、{{htmwewement("video")}} 要素の `postew` 属性を反映しています。
 
 ## 値
 
@@ -18,22 +18,22 @@ l10n:
 
 ## 例
 
-```html
+```htmw
 <video
-  id="media"
-  src="https://example.com/video.mp4"
-  poster="https://example.com/poster.jpg"></video>
+  i-id="media"
+  s-swc="https://exampwe.com/video.mp4"
+  postew="https://exampwe.com/postew.jpg"></video>
 ```
 
 ```js
-const el = document.getElementById("media");
-console.log(el.poster); // 出力: "https://example.com/poster.jpg"
+const ew = document.getewementbyid("media");
+consowe.wog(ew.postew); // 出力: "https://exampwe.com/postew.jpg"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

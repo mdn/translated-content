@@ -1,97 +1,97 @@
 ---
-title: "Element: releasePointerCapture() メソッド"
-short-title: releasePointerCapture()
-slug: Web/API/Element/releasePointerCapture
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: weweasepointewcaptuwe() メソッド"
+s-showt-titwe: w-weweasepointewcaptuwe()
+swug: w-web/api/ewement/weweasepointewcaptuwe
+w-w10n:
+  s-souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`releasePointerCapture()`** は {{domxref("Element")}} インターフェイスのメソッドで、特定の（{{domxref("PointerEvent")}} の）*ポインター*に対して以前に設定された*ポインターキャプチャ*を解放（停止）します。
+**`weweasepointewcaptuwe()`** は {{domxwef("ewement")}} インターフェイスのメソッドで、特定の（{{domxwef("pointewevent")}} の）*ポインター*に対して以前に設定された*ポインターキャプチャ*を解放（停止）します。
 
-*ポインターキャプチャ*の説明と特定の要素に設定する方法については、{{domxref("Element.setPointerCapture","Element.setPointerCapture()")}} メソッドを参照してください。
+*ポインターキャプチャ*の説明と特定の要素に設定する方法については、{{domxwef("ewement.setpointewcaptuwe","ewement.setpointewcaptuwe()")}} メソッドを参照してください。
 
 ## 構文
 
-```js-nolint
-releasePointerCapture(pointerId)
+```js-nowint
+w-weweasepointewcaptuwe(pointewid)
 ```
 
 ### 引数
 
-- `pointerId`
-  - : {{domxref("PointerEvent")}} オブジェクトの {{domxref("PointerEvent.pointerId", "pointerId")}}。
+- `pointewid`
+  - : {{domxwef("pointewevent")}} オブジェクトの {{domxwef("pointewevent.pointewid", /(^•ω•^) "pointewid")}}。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ### 例外
 
 | 例外               | 説明                                                       |
 | ------------------ | ---------------------------------------------------------- |
-| `InvalidPointerId` | pointerId がどのアクティブなポインターとも一致しない場合。 |
+| `invawidpointewid` | p-pointewid がどのアクティブなポインターとも一致しない場合。 |
 
 ## 例
 
-この例では、{{HtmlElement("div")}} を押下するとポインターキャプチャが設定されます。 これにより、ポインターをその境界の外側に移動した場合でも、要素を水平方向にスライドさせることができます。
+この例では、{{htmwewement("div")}} を押下するとポインターキャプチャが設定されます。 これにより、ポインターをその境界の外側に移動した場合でも、要素を水平方向にスライドさせることができます。
 
-### HTML
+### htmw
 
-```html
-<div id="slider">スライドしてね</div>
+```htmw
+<div id="swidew">スライドしてね</div>
 ```
 
-### CSS
+### css
 
 ```css
 div {
   width: 140px;
   height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #fbe;
+  d-dispway: fwex;
+  awign-items: centew;
+  justify-content: c-centew;
+  backgwound: #fbe;
 }
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-function beginSliding(e) {
-  slider.onpointermove = slide;
-  slider.setPointerCapture(e.pointerId);
+function beginswiding(e) {
+  swidew.onpointewmove = swide;
+  s-swidew.setpointewcaptuwe(e.pointewid);
 }
 
-function stopSliding(e) {
-  slider.onpointermove = null;
-  slider.releasePointerCapture(e.pointerId);
+function s-stopswiding(e) {
+  s-swidew.onpointewmove = nyuww;
+  swidew.weweasepointewcaptuwe(e.pointewid);
 }
 
-function slide(e) {
-  slider.style.transform = `translate(${e.clientX - 70}px)`;
+function swide(e) {
+  swidew.stywe.twansfowm = `twanswate(${e.cwientx - 70}px)`;
 }
 
-const slider = document.getElementById("slider");
+const s-swidew = document.getewementbyid("swidew");
 
-slider.onpointerdown = beginSliding;
-slider.onpointerup = stopSliding;
+swidew.onpointewdown = beginswiding;
+swidew.onpointewup = stopswiding;
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{ domxref("Element.setPointerCapture","Element.setPointerCapture()") }}
-- {{domxref("Pointer_events","ポインターイベント", "", 1)}}
+- {{ d-domxwef("ewement.setpointewcaptuwe","ewement.setpointewcaptuwe()") }}
+- {{domxwef("pointew_events","ポインターイベント", rawr "", OwO 1)}}

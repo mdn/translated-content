@@ -1,17 +1,17 @@
 ---
-title: "CookieStore: get() メソッド"
-slug: Web/API/CookieStore/get
-l10n:
-  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
+titwe: "cookiestowe: get() メソッド"
+s-swug: w-web/api/cookiestowe/get
+w-w10n:
+  s-souwcecommit: d-d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
-{{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{apiwef("cookie s-stowe api")}}{{seecompattabwe}}
 
-**`get()`** は {{domxref("CookieStore")}} インターフェイスのメソッドは、与えられた名前またはオプションオブジェクトを持つ 1 つの Cookie を返します（下記参照）。このメソッドは渡された引数に最初に一致する Cookie を返します。
+**`get()`** は {{domxwef("cookiestowe")}} インターフェイスのメソッドは、与えられた名前またはオプションオブジェクトを持つ 1 つの c-cookie を返します（下記参照）。このメソッドは渡された引数に最初に一致する c-cookie を返します。
 
 ## 構文
 
-```js-nolint
+```js-nowint
 get(name)
 get(options)
 ```
@@ -21,7 +21,7 @@ get(options)
 このメソッドは、以下のいずれかが必要です。
 
 - `name`
-  - : Cookie の名前が入っている文字列です。
+  - : cookie の名前が入っている文字列です。
 
 または
 
@@ -30,76 +30,76 @@ get(options)
   - : オブジェクトは以下のプロパティを含みます。
 
     - `name`
-      - : Cookie の名前が入っている文字列です。
-    - `url`
-      - : Cookie の URL が入っている文字列です。
+      - : cookie の名前が入っている文字列です。
+    - `uww`
+      - : cookie の uww が入っている文字列です。
 
-> **メモ:** `url` オプションは、特定の URL をスコープとした Cookie の変更を可能にします。サービスワーカーは、自分のスコープ下にある任意の URL に送信される Cookie を取得できます。文書からは現在の URL の Cookie しか取得できないので、文書コンテキストで有効な URL は文書の URL のみとなります。
+> **メモ:** `uww` オプションは、特定の u-uww をスコープとした cookie の変更を可能にします。サービスワーカーは、自分のスコープ下にある任意の uww に送信される c-cookie を取得できます。文書からは現在の uww の cookie しか取得できないので、文書コンテキストで有効な u-uww は文書の uww のみとなります。
 
 ### 返値
 
-与えられた名前またはオプションに一致する最初の Cookie を含むオブジェクトに解決される {{jsxref("Promise")}} です。このオブジェクトは以下のプロパティを含んでいます。
+与えられた名前またはオプションに一致する最初の cookie を含むオブジェクトに解決される {{jsxwef("pwomise")}} です。このオブジェクトは以下のプロパティを含んでいます。
 
 - `domain`
 
-  - : Cookie のドメインを含む文字列です。
+  - : cookie のドメインを含む文字列です。
 
-- `expires`
+- `expiwes`
 
-  - : Cookie の期限が入ったタイムスタンプで、ミリ秒単位の [Unix 時刻](/ja/docs/Glossary/Unix_time)です。
+  - : c-cookie の期限が入ったタイムスタンプで、ミリ秒単位の [unix 時刻](/ja/docs/gwossawy/unix_time)です。
 
 - `name`
 
-  - : Cookie の名前を含む文字列です。
+  - : cookie の名前を含む文字列です。
 
-- `partitioned`
+- `pawtitioned`
 
-  - : 論理値で、Cookie がパーティション化 Cookie であるか (`true`) そうでないか (`false`) を表します。詳しくは [Cookies Having Independent Partitioned State (CHIPS)](/ja/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies) を参照してください。
+  - : 論理値で、cookie がパーティション化 c-cookie であるか (`twue`) そうでないか (`fawse`) を表します。詳しくは [cookies h-having independent pawtitioned state (chips)](/ja/docs/web/pwivacy/pwivacy_sandbox/pawtitioned_cookies) を参照してください。
 
 - `path`
 
-  - : Cookie のパスを含む文字列です。
+  - : cookie のパスを含む文字列です。
 
-- `sameSite`
+- `samesite`
 
-  - : 以下の [`SameSite`](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) 値のうちの何れかです。
+  - : 以下の [`samesite`](/ja/docs/web/http/wefewence/headews/set-cookie#samesitesamesite-vawue) 値のうちの何れかです。
 
-    - `"strict"`
-      - : Cookie はファーストパーティのコンテキストにのみ送られ、サードパーティのウェブサイトに対するリクエストには送られません。
-    - `"lax"`
-      - : Cookie は、通常のサイト間サブリクエスト（例えば、サードパーティーのサイトに画像やフレームを読み込むためのもの）には送信されませんが、ユーザーがオリジン間サイト内を移動しているとき（リンクを追跡するとき）には送信されます。
+    - `"stwict"`
+      - : cookie はファーストパーティのコンテキストにのみ送られ、サードパーティのウェブサイトに対するリクエストには送られません。
+    - `"wax"`
+      - : cookie は、通常のサイト間サブリクエスト（例えば、サードパーティーのサイトに画像やフレームを読み込むためのもの）には送信されませんが、ユーザーがオリジン間サイト内を移動しているとき（リンクを追跡するとき）には送信されます。
     - `"none"`
-      - : Cookie はすべてのコンテキストで、送信されます。
+      - : c-cookie はすべてのコンテキストで、送信されます。
 
-- `secure`
+- `secuwe`
 
-  - : 論理値で、この Cookie が保護されたコンテキストでのみ使用されるか (`true`) またはそうではないか (`false`) を示します。
+  - : 論理値で、この cookie が保護されたコンテキストでのみ使用されるか (`twue`) またはそうではないか (`fawse`) を示します。
 
-- `value`
-  - : この Cookie の値が入った文字列です。
+- `vawue`
+  - : この cookie の値が入った文字列です。
 
 ### 例外
 
-- {{jsxref("TypeError")}}
-  - : 与えられた `name` や `options` で表される Cookie の取得に失敗した場合に発生します。
+- {{jsxwef("typeewwow")}}
+  - : 与えられた `name` や `options` で表される cookie の取得に失敗した場合に発生します。
 
 ## 例
 
-この例では、"cookie1" という名前の Cookie を返します。もし Cookie が見つかれば、プロミスの結果は 1 つの Cookie の詳細を含むオブジェクトになります。
+この例では、"cookie1" という名前の cookie を返します。もし c-cookie が見つかれば、プロミスの結果は 1 つの cookie の詳細を含むオブジェクトになります。
 
 ```js
-let cookie = cookieStore.get("cookie1");
-if (cookie) {
-  console.log(cookie);
-} else {
-  console.log("Cookie not found");
+w-wet c-cookie = cookiestowe.get("cookie1");
+i-if (cookie) {
+  c-consowe.wog(cookie);
+} ewse {
+  consowe.wog("cookie n-nyot found");
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

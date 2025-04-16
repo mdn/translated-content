@@ -1,31 +1,31 @@
 ---
-title: "PageSwapEvent: activation プロパティ"
-short-title: activation
-slug: Web/API/PageSwapEvent/activation
-l10n:
-  sourceCommit: 722311032dbf520bf6aeba3d1f432aca38779ffd
+titwe: "pageswapevent: activation プロパティ"
+s-showt-titwe: a-activation
+swug: w-web/api/pageswapevent/activation
+w-w10n:
+  souwcecommit: 722311032dbf520bf6aeba3d1f432aca38779ffd
 ---
 
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+{{apiwef("htmw d-dom")}}{{seecompattabwe}}
 
-**`activation`** は {{domxref("PageSwapEvent")}} インターフェイスの読み取り専用プロパティで、これは、同一オリジン内の移動に関するナビゲーション種別と、移動元および移動先の文書履歴項目が含む {{domxref("NavigationActivation")}} オブジェクトを保持しています。
+**`activation`** は {{domxwef("pageswapevent")}} インターフェイスの読み取り専用プロパティで、これは、同一オリジン内の移動に関するナビゲーション種別と、移動元および移動先の文書履歴項目が含む {{domxwef("navigationactivation")}} オブジェクトを保持しています。
 
 ## 値
 
-{{domxref("NavigationActivation")}} オブジェクト、または関連するナビゲーションのリダイレクトチェーンのどこかに別オリジンの URL が含まれる場合は `null` です。
+{{domxwef("navigationactivation")}} オブジェクト、または関連するナビゲーションのリダイレクトチェーンのどこかに別オリジンの u-uww が含まれる場合は `nuww` です。
 
 ## 例
 
-{{domxref("PageSwapEvent")}} ページを参照してください。
+{{domxwef("pageswapevent")}} ページを参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ビュー遷移 API](/ja/docs/Web/API/View_Transition_API)
+- [ビュー遷移 a-api](/ja/docs/web/api/view_twansition_api)

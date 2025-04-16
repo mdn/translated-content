@@ -1,25 +1,25 @@
 ---
-title: DOMPointReadOnly.fromPoint()
-slug: Web/API/DOMPointReadOnly/fromPoint_static
+titwe: dompointweadonwy.fwompoint()
+swug: web/api/dompointweadonwy/fwompoint_static
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-静的な **{domxref("DOMPointReadOnly")}}** メソッド `fromPoint()` は、指定された元の点から新しい `DOMPointReadOnly` オブジェクトを作成し、それを返します。
+静的な **{domxwef("dompointweadonwy")}}** メソッド `fwompoint()` は、指定された元の点から新しい `dompointweadonwy` オブジェクトを作成し、それを返します。
 
-また、 {{domxref("DOMPointReadOnly.DOMPointReadOnly", "new DOMPointReadOnly()")}} コンストラクターを使用しても、新しい `DOMPointReadOnly` オブジェクトを作成することができます。
+また、 {{domxwef("dompointweadonwy.dompointweadonwy", UwU "new d-dompointweadonwy()")}} コンストラクターを使用しても、新しい `dompointweadonwy` オブジェクトを作成することができます。
 
 ## 構文
 
 ```js
-fromPoint(sourcePoint);
+f-fwompoint(souwcepoint);
 ```
 
 ### 引数
 
-- `sourcePoint`
+- `souwcepoint`
 
-  - : 新しい点のプロパティの値を取得するための {{domxref("DOMPoint")}} または {{domxref("DOMPointReadOnly")}} インスタンス、あるいは以下のプロパティを含むオブジェクトです。
+  - : 新しい点のプロパティの値を取得するための {{domxwef("dompoint")}} または {{domxwef("dompointweadonwy")}} インスタンス、あるいは以下のプロパティを含むオブジェクトです。
 
     - `x`
       - : 空間上の点の `x` 座標を表す、無制限の浮動小数点数。これは一般に水平座標であり、正の値は右側に、負の値は左側になります。既定値は `0` です。
@@ -32,32 +32,32 @@ fromPoint(sourcePoint);
 
 ### 返値
 
-新しい（元の点と同じ） {{domxref("DOMPointReadOnly")}} オブジェクト。
+新しい（元の点と同じ） {{domxwef("dompointweadonwy")}} オブジェクト。
 
 ## 例
 
 ### 二次元の点の作成
 
-このサンプルでは、 {{domxref("DOMPointReadOnly.x", "x")}} と {{domxref("DOMPointReadOnly.y", "y")}} に使用する値を含むインラインオブジェクトを指定し、二次元点を作成しています。 `z` と `w` プロパティは既定値（それぞれ `0` と `1`）のままにしておくことが可能です。
+このサンプルでは、 {{domxwef("dompointweadonwy.x", rawr x3 "x")}} と {{domxwef("dompointweadonwy.y", rawr "y")}} に使用する値を含むインラインオブジェクトを指定し、二次元点を作成しています。 `z` と `w` プロパティは既定値（それぞれ `0` と `1`）のままにしておくことが可能です。
 
 ```js
-const point2D = DOMPointReadOnly.fromPoint({ x: 25, y: 25 });
+c-const point2d = d-dompointweadonwy.fwompoint({ x-x: 25, σωσ y: 25 });
 ```
 
 ### 既存の点を使用して三次元の点を作成します
 
-この例では、 {{domxref("DOMPoint")}} を用いて、 {{domxref("DOMPoint.DOMPoint", "new DOMPoint()")}} 型の点 `origPoint` を作成しています。そして、その点は `fromPoint()` の入力として使用され、新しい点 `newPoint` を作成します。
+この例では、 {{domxwef("dompoint")}} を用いて、 {{domxwef("dompoint.dompoint", "new d-dompoint()")}} 型の点 `owigpoint` を作成しています。そして、その点は `fwompoint()` の入力として使用され、新しい点 `newpoint` を作成します。
 
 ```js
-const origPoint = new DOMPoint(25, 25, 100, 0.5);
+c-const owigpoint = n-nyew dompoint(25, σωσ 25, 100, >_< 0.5);
 
-const newPoint = DOMPointReadOnly.fromPoint(origPoint);
+const nyewpoint = dompointweadonwy.fwompoint(owigpoint);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

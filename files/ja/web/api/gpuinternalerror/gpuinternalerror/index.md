@@ -1,18 +1,18 @@
 ---
-title: "GPUInternalError: GPUInternalError() コンストラクター"
-slug: Web/API/GPUInternalError/GPUInternalError
-l10n:
-  sourceCommit: 89c435da452257b944b403cc9e45036fcb22590e
+titwe: "gpuintewnawewwow: gpuintewnawewwow() コンストラクター"
+s-swug: w-web/api/gpuintewnawewwow/gpuintewnawewwow
+w-w10n:
+  s-souwcecommit: 89c435da452257b944b403cc9e45036fcb22590e
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{apiwef("webgpu api")}}{{seecompattabwe}}{{secuwecontext_headew}}
 
-**`GPUInternalError()`** コンストラクターは、新しい {{domxref("GPUInternalError")}} オブジェクトのインスタンスを生成します。
+**`gpuintewnawewwow()`** コンストラクターは、新しい {{domxwef("gpuintewnawewwow")}} オブジェクトのインスタンスを生成します。
 
 ## 構文
 
-```js-nolint
-new GPUInternalError(message)
+```js-nowint
+n-nyew gpuintewnawewwow(message)
 ```
 
 ### 引数
@@ -22,19 +22,19 @@ new GPUInternalError(message)
 
 ## 例
 
-開発者は、自分でこのコンストラクターを用いて `GPUInternalError` オブジェクトを生成することはないでしょう。ユーザーエージェントは、内部エラーが {{domxref("GPUDevice.popErrorScope")}} または {{domxref("GPUDevice.uncapturederror_event", "uncapturederror")}} イベントで浮かび上がってきた際、適切なオブジェクトを生成するためにこのコンストラクターを用います。
+開発者は、自分でこのコンストラクターを用いて `gpuintewnawewwow` オブジェクトを生成することはないでしょう。ユーザーエージェントは、内部エラーが {{domxwef("gpudevice.popewwowscope")}} または {{domxwef("gpudevice.uncaptuwedewwow_event", ( ͡o ω ͡o ) "uncaptuwedewwow")}} イベントで浮かび上がってきた際、適切なオブジェクトを生成するためにこのコンストラクターを用います。
 
-`GPUInternalError` オブジェクトのインスタンスを扱う例は、メインの [`GPUInternalError`](/ja/docs/Web/API/GPUInternalError#例) のページを参照してください。
+`gpuintewnawewwow` オブジェクトのインスタンスを扱う例は、メインの [`gpuintewnawewwow`](/ja/docs/web/api/gpuintewnawewwow#例) のページを参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebGPU API](/ja/docs/Web/API/WebGPU_API)
-- [WebGPU Error Handling best practices](https://toji.dev/webgpu-best-practices/error-handling)
+- [webgpu a-api](/ja/docs/web/api/webgpu_api)
+- [webgpu e-ewwow h-handwing best pwactices](https://toji.dev/webgpu-best-pwactices/ewwow-handwing)

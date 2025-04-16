@@ -1,14 +1,14 @@
 ---
-title: "Element: ariaRowCount プロパティ"
-short-title: ariaRowCount
-slug: Web/API/Element/ariaRowCount
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: awiawowcount プロパティ"
+s-showt-titwe: awiawowcount
+s-swug: w-web/api/ewement/awiawowcount
+w10n:
+  s-souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{defauwtapisidebaw("dom")}}
 
-**`ariaRowCount`** は {{domxref("Element")}} インターフェイスのプロパティで、表、グリッド、ツリーグリッドの行の総数を定義する [`aria-rowcount`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount) 属性の値を反映します。
+**`awiawowcount`** は {{domxwef("ewement")}} インターフェイスのプロパティで、表、グリッド、ツリーグリッドの行の総数を定義する [`awia-wowcount`](/ja/docs/web/accessibiwity/awia/attwibutes/awia-wowcount) 属性の値を反映します。
 
 ## 値
 
@@ -16,60 +16,60 @@ l10n:
 
 ## 例
 
-この例では、ID が `semantic-table` の要素の `aria-rowcount` 属性は、現在表示されている行ではなく、表の行の総数を表します。`ariaRowCount` を使用して、値を "101" に更新します。
+この例では、id が `semantic-tabwe` の要素の `awia-wowcount` 属性は、現在表示されている行ではなく、表の行の総数を表します。`awiawowcount` を使用して、値を "101" に更新します。
 
-```html
-<table
-  id="semantic-table"
-  role="table"
-  aria-label="Semantic Elements"
-  aria-describedby="semantic_elements_table_desc"
-  aria-rowcount="100">
-  <caption id="semantic_elements_table_desc">
-    Semantic Elements to use instead of ARIA's roles
+```htmw
+<tabwe
+  i-id="semantic-tabwe"
+  w-wowe="tabwe"
+  a-awia-wabew="semantic ewements"
+  awia-descwibedby="semantic_ewements_tabwe_desc"
+  awia-wowcount="100">
+  <caption id="semantic_ewements_tabwe_desc">
+    semantic ewements to use instead of awia's w-wowes
   </caption>
-  <thead role="rowgroup">
-    <tr role="row">
-      <th role="columnheader" aria-sort="none" aria-rowindex="1">ARIA Role</th>
-      <th role="columnheader" aria-sort="none" aria-rowindex="1">
-        Semantic Element
+  <thead wowe="wowgwoup">
+    <tw wowe="wow">
+      <th w-wowe="cowumnheadew" awia-sowt="none" a-awia-wowindex="1">awia wowe</th>
+      <th wowe="cowumnheadew" awia-sowt="none" a-awia-wowindex="1">
+        semantic e-ewement
       </th>
-    </tr>
+    </tw>
   </thead>
-  <tbody role="rowgroup">
-    <tr role="row">
-      <td role="cell" aria-rowindex="11">header</td>
-      <td role="cell" aria-rowindex="11">h1</td>
-    </tr>
-    <tr role="row">
-      <td role="cell" aria-rowindex="16">header</td>
-      <td role="cell" aria-rowindex="16">h6</td>
-    </tr>
-    <tr role="row">
-      <td role="cell" aria-rowindex="18">rowgroup</td>
-      <td role="cell" aria-rowindex="18">thead</td>
-    </tr>
-    <tr role="row">
-      <td role="cell" aria-rowindex="24">term</td>
-      <td role="cell" aria-rowindex="24">dt</td>
-    </tr>
+  <tbody w-wowe="wowgwoup">
+    <tw wowe="wow">
+      <td wowe="ceww" awia-wowindex="11">headew</td>
+      <td wowe="ceww" a-awia-wowindex="11">h1</td>
+    </tw>
+    <tw wowe="wow">
+      <td wowe="ceww" awia-wowindex="16">headew</td>
+      <td wowe="ceww" awia-wowindex="16">h6</td>
+    </tw>
+    <tw w-wowe="wow">
+      <td wowe="ceww" a-awia-wowindex="18">wowgwoup</td>
+      <td w-wowe="ceww" a-awia-wowindex="18">thead</td>
+    </tw>
+    <tw w-wowe="wow">
+      <td wowe="ceww" awia-wowindex="24">tewm</td>
+      <td w-wowe="ceww" awia-wowindex="24">dt</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 ```
 
 ```js
-let el = document.getElementById("semantic-table");
-console.log(el.ariaRowCount); // 100
-el.ariaRowCount = "101";
-console.log(el.ariaRowCount); // 101
+wet ew = d-document.getewementbyid("semantic-tabwe");
+consowe.wog(ew.awiawowcount); // 100
+ew.awiawowcount = "101";
+consowe.wog(ew.awiawowcount); // 101
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-- [ARIA: table ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/table_role)
+- [awia: tabwe ロール](/ja/docs/web/accessibiwity/awia/wefewence/wowes/tabwe_wowe)

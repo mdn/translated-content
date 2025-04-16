@@ -1,19 +1,19 @@
 ---
-title: "VTTCue: getCueAsHTML() メソッド"
-short-title: getCueAsHTML()
-slug: Web/API/VTTCue/getCueAsHTML
-l10n:
-  sourceCommit: 532ecbca7b68e7defa4612bc7b00885a13163641
+titwe: "vttcue: getcueashtmw() メソッド"
+s-showt-titwe: getcueashtmw()
+s-swug: w-web/api/vttcue/getcueashtmw
+w-w10n:
+  s-souwcecommit: 532ecbca7b68e7defa4612bc7b00885a13163641
 ---
 
-{{APIRef("WebVTT")}}
+{{apiwef("webvtt")}}
 
-**`getCueAsHTML()`** は {{domxref("VTTCue")}} インターフェイスのメソッドで、このキューの内容を含んだ {{domxref("DocumentFragment")}} を返します。
+**`getcueashtmw()`** は {{domxwef("vttcue")}} インターフェイスのメソッドで、このキューの内容を含んだ {{domxwef("documentfwagment")}} を返します。
 
 ## 構文
 
-```js-nolint
-getCueAsHTML()
+```js-nowint
+g-getcueashtmw()
 ```
 
 ### 引数
@@ -22,27 +22,27 @@ getCueAsHTML()
 
 ### 返値
 
-{{domxref("DocumentFragment")}} です。
+{{domxwef("documentfwagment")}} です。
 
 ## 例
 
-次の例では、新しい {{domxref("VTTCue")}} が作成されます。そして、文書フラグメントとしての値がコンソールに出力されます。
+次の例では、新しい {{domxwef("vttcue")}} が作成されます。そして、文書フラグメントとしての値がコンソールに出力されます。
 
 ```js
-let video = document.querySelector("video");
-let track = video.addTextTrack("captions", "Captions", "en");
-track.mode = "showing";
+w-wet v-video = document.quewysewectow("video");
+wet twack = video.addtexttwack("captions", σωσ "captions", >_< "en");
+twack.mode = "showing";
 
-let cue1 = new VTTCue(0, 0.9, "Hildy!");
-console.log(cue1.getCueAsHTML());
+wet cue1 = nyew v-vttcue(0, :3 0.9, (U ﹏ U) "hiwdy!");
+consowe.wog(cue1.getcueashtmw());
 
-track.addCue(cue1);
+twack.addcue(cue1);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

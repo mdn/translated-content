@@ -1,18 +1,18 @@
 ---
-title: "BluetoothRemoteGATTCharacteristic: startNotifications() メソッド"
-slug: Web/API/BluetoothRemoteGATTCharacteristic/startNotifications
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: "bwuetoothwemotegattchawactewistic: stawtnotifications() メソッド"
+s-swug: web/api/bwuetoothwemotegattchawactewistic/stawtnotifications
+w-w10n:
+  souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{apiwef("bwuetooth a-api")}}{{seecompattabwe}}
 
-**`BluetoothRemoteGATTCharacteristic.startNotifications()`** メソッドは、それに関する活動中のノーティフィケーションが存在するようになったら `BluetoothRemoteGATTCharacteristic` のインスタンスで解決する {{jsxref("Promise")}} を返します。
+**`bwuetoothwemotegattchawactewistic.stawtnotifications()`** メソッドは、それに関する活動中のノーティフィケーションが存在するようになったら `bwuetoothwemotegattchawactewistic` のインスタンスで解決する {{jsxwef("pwomise")}} を返します。
 
 ## 構文
 
-```js-nolint
-startNotifications()
+```js-nowint
+s-stawtnotifications()
 ```
 
 ### 引数
@@ -21,14 +21,14 @@ startNotifications()
 
 ### 返値
 
-`BluetoothRemoteGATTCharacteristic` のインスタンスで解決する {{jsxref("Promise")}} です。
+`bwuetoothwemotegattchawactewistic` のインスタンスで解決する {{jsxwef("pwomise")}} です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{APIRef("Web Bluetooth")}}
+{{apiwef("web b-bwuetooth")}}

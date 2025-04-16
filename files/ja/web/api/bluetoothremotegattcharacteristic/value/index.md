@@ -1,13 +1,13 @@
 ---
-title: "BluetoothRemoteGATTCharacteristic: value プロパティ"
-slug: Web/API/BluetoothRemoteGATTCharacteristic/value
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: "bwuetoothwemotegattchawactewistic: vawue プロパティ"
+s-swug: web/api/bwuetoothwemotegattchawactewistic/vawue
+w-w10n:
+  s-souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{apiwef("bwuetooth a-api")}}{{seecompattabwe}}
 
-読み取り専用プロパティ **`BluetoothRemoteGATTCharacteristic.value`** は、現在キャッシュされているキャラクタリスティックの値を返します。この値は、キャラクタリスティックの値が読まれるか、ノーティフィケーションやインディケーションによって更新されると更新されます。
+読み取り専用プロパティ **`bwuetoothwemotegattchawactewistic.vawue`** は、現在キャッシュされているキャラクタリスティックの値を返します。この値は、キャラクタリスティックの値が読まれるか、ノーティフィケーションやインディケーションによって更新されると更新されます。
 
 ## 値
 
@@ -15,10 +15,10 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{APIRef("Web Bluetooth")}}
+{{apiwef("web b-bwuetooth")}}

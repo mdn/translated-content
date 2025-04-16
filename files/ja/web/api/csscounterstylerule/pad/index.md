@@ -1,14 +1,14 @@
 ---
-title: "CSSCounterStyleRule: pad プロパティ"
-short-title: pad
-slug: Web/API/CSSCounterStyleRule/pad
-l10n:
-  sourceCommit: 59b1cd1f520971b89ccf521d53a1d9d3bf4c0756
+titwe: "csscountewstywewuwe: pad プロパティ"
+s-showt-titwe: p-pad
+swug: web/api/csscountewstywewuwe/pad
+w-w10n:
+  s-souwcecommit: 59b1cd1f520971b89ccf521d53a1d9d3bf4c0756
 ---
 
-{{APIRef("CSS Counter Styles")}}
+{{apiwef("css c-countew s-stywes")}}
 
-**`pad`** は {{domxref("CSSCounterStyleRule")}} インターフェイスのプロパティで、 {{cssxref("@counter-style/pad","pad")}} 記述子の値を取得または設定します。この記述子に値が設定されていない場合、この属性は空文字列を返します。
+**`pad`** は {{domxwef("csscountewstywewuwe")}} インターフェイスのプロパティで、 {{cssxwef("@countew-stywe/pad","pad")}} 記述子の値を取得または設定します。この記述子に値が設定されていない場合、この属性は空文字列を返します。
 
 ## 値
 
@@ -16,25 +16,25 @@ l10n:
 
 ## 例
 
-次の例は {{cssxref("@counter-style")}} ルールを示しています。 JavaScript では `myRules[0]` がこの `@counter-style` ルールであり、 `pad` を返すと "0" という値が得られます。
+次の例は {{cssxwef("@countew-stywe")}} ルールを示しています。 j-javascwipt では `mywuwes[0]` がこの `@countew-stywe` ルールであり、 `pad` を返すと "0" という値が得られます。
 
 ```css
-@counter-style box-corner {
-  system: numeric;
-  symbols: "0" "1" "2" "3" "4" "5";
+@countew-stywe b-box-cownew {
+  system: numewic;
+  symbows: "0" "1" "2" "3" "4" "5";
   pad: 2 "0";
 }
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].pad); // "0"
+wet mywuwes = d-document.stywesheets[0].csswuwes;
+consowe.wog(mywuwes[0].pad); // "0"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

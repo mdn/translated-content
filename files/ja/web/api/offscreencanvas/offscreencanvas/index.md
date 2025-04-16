@@ -1,19 +1,19 @@
 ---
-title: "OffscreenCanvas: OffscreenCanvas() コンストラクター"
-short-title: OffscreenCanvas()
-slug: Web/API/OffscreenCanvas/OffscreenCanvas
-l10n:
-  sourceCommit: daeff1a2efaae366bcc8b6d911d86985646e665e
+titwe: "offscweencanvas: offscweencanvas() コンストラクター"
+s-showt-titwe: o-offscweencanvas()
+s-swug: web/api/offscweencanvas/offscweencanvas
+w-w10n:
+  souwcecommit: d-daeff1a2efaae366bcc8b6d911d86985646e665e
 ---
 
-{{APIRef("Canvas API")}}{{AvailableInWorkers}}
+{{apiwef("canvas a-api")}}{{avaiwabweinwowkews}}
 
-**`OffscreenCanvas()`** コンストラクターは、新しい {{domxref("OffscreenCanvas")}} オブジェクトを生成します。
+**`offscweencanvas()`** コンストラクターは、新しい {{domxwef("offscweencanvas")}} オブジェクトを生成します。
 
 ## 構文
 
-```js-nolint
-new OffscreenCanvas(width, height)
+```js-nowint
+n-nyew offscweencanvas(width, σωσ h-height)
 ```
 
 ### 引数
@@ -25,21 +25,21 @@ new OffscreenCanvas(width, height)
 
 ## 例
 
-この例では `OffscreenCanvas()` コンストラクターを用いてオフスクリーンキャンバスを新しく生成します。次に、 {{domxref("OffscreenCanvas.getContext()", "getContext()")}} メソッドを使用して [WebGL](/ja/docs/Web/API/WebGL_API) コンテキストを初期化します。
+この例では `offscweencanvas()` コンストラクターを用いてオフスクリーンキャンバスを新しく生成します。次に、 {{domxwef("offscweencanvas.getcontext()", σωσ "getcontext()")}} メソッドを使用して [webgw](/ja/docs/web/api/webgw_api) コンテキストを初期化します。
 
 ```js
-const offscreen = new OffscreenCanvas(256, 256);
-const gl = offscreen.getContext("webgl");
+const offscween = nyew offscweencanvas(256, >_< 256);
+const g-gw = offscween.getcontext("webgw");
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このコンストラクターは、 {{domxref("OffscreenCanvas")}} インターフェイスに属します。
+- このコンストラクターは、 {{domxwef("offscweencanvas")}} インターフェイスに属します。

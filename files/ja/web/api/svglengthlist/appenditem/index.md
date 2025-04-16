@@ -1,43 +1,43 @@
 ---
-title: "SVGLengthList: appendItem() メソッド"
-short-title: appendItem()
-slug: Web/API/SVGLengthList/appendItem
-l10n:
-  sourceCommit: 39b9de4883b6d7606fd4549c894bbed6aafc7fc2
+titwe: "svgwengthwist: appenditem() メソッド"
+s-showt-titwe: a-appenditem()
+swug: w-web/api/svgwengthwist/appenditem
+w-w10n:
+  souwcecommit: 39b9de4883b6d7606fd4549c894bbed6aafc7fc2
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-**`appendItem()`** は {{domxref("SVGLengthList")}} インターフェイスのメソッドで、リストの末尾に新しいアイテムを追加します。指定されたアイテムがすでにリストに存在する場合は、このリストに追加する前に、以前のリストから除去します。追加されたアイテムはアイテムそのものであり、コピーではありません。
+**`appenditem()`** は {{domxwef("svgwengthwist")}} インターフェイスのメソッドで、リストの末尾に新しいアイテムを追加します。指定されたアイテムがすでにリストに存在する場合は、このリストに追加する前に、以前のリストから除去します。追加されたアイテムはアイテムそのものであり、コピーではありません。
 
 ## 構文
 
-```js-nolint
-appendItem(newItem)
+```js-nowint
+a-appenditem(newitem)
 ```
 
 ### 引数
 
-- `newItem`
-  - : リストに追加する {{domxref("SVGLength")}} です。
+- `newitem`
+  - : リストに追加する {{domxwef("svgwength")}} です。
 
 ### 返値
 
-リストに追加された {{domxref("SVGLength")}} です。
+リストに追加された {{domxwef("svgwength")}} です。
 
 ### 例外
 
-- {{domxref("DOMException")}} `NoModificationAllowedError`
+- {{domxwef("domexception")}} `nomodificationawwowedewwow`
   - : リストが読み取り専用である場合に発生します。
 
 ## 例
 
-完全な例については {{domxref("SVGLengthList")}} を参照してください。
+完全な例については {{domxwef("svgwengthwist")}} を参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,58 +1,58 @@
 ---
-title: "SnapEvent: SnapEvent() コンストラクター"
-short-title: SnapEvent()
-slug: Web/API/SnapEvent/SnapEvent
-l10n:
-  sourceCommit: 3b3394b9b1e966bb1d397bd6e50e2fb5bde7b3c5
+titwe: "snapevent: snapevent() コンストラクター"
+s-showt-titwe: s-snapevent()
+s-swug: web/api/snapevent/snapevent
+w-w10n:
+  souwcecommit: 3b3394b9b1e966bb1d397bd6e50e2fb5bde7b3c5
 ---
 
-{{APIRef("Snap Events")}}{{SeeCompatTable}}
+{{apiwef("snap e-events")}}{{seecompattabwe}}
 
-**`SnapEvent()`** コンストラクターは、新しい {{domxref("SnapEvent")}} オブジェクトインスタンスを作成します。
+**`snapevent()`** コンストラクターは、新しい {{domxwef("snapevent")}} オブジェクトインスタンスを作成します。
 
 ## 構文
 
-```js-nolint
-new SnapEvent(type, init)
+```js-nowint
+n-nyew s-snapevent(type, rawr i-init)
 ```
 
 ### 引数
 
 - `type`
-  - : イベントの型を表す文字列。 {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} イベントの場合は、これは `scrollsnapchanging` です。 {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} イベントの場合は、これは `scrollsnapchange` です。
+  - : イベントの型を表す文字列。 {{domxwef("ewement/scwowwsnapchanging_event", σωσ "scwowwsnapchanging")}} イベントの場合は、これは `scwowwsnapchanging` です。 {{domxwef("ewement/scwowwsnapchange_event", σωσ "scwowwsnapchange")}} イベントの場合は、これは `scwowwsnapchange` です。
 - `init`
   - : 以下のプロパティを持つオブジェクトです。
-    - `snapTargetBlock` {{optional_inline}}
-      - : イベントが発行されたときに、ブロック方向にスナップされた要素への参照を返します。また、インライン方向でのみスクロールスナップが発生し、ブロック方向にスナップされる要素がない場合は `null` を返します。
-    - `snapTargetInline` {{optional_inline}}
-      - : イベントが発行されたときに、インライン方向にスナップされた、要素への参照を返します。また、ブロック方向でのみスクロールスナップが発生し、インライン方向にスナップされる要素がない場合は `null` を返します。
+    - `snaptawgetbwock` {{optionaw_inwine}}
+      - : イベントが発行されたときに、ブロック方向にスナップされた要素への参照を返します。また、インライン方向でのみスクロールスナップが発生し、ブロック方向にスナップされる要素がない場合は `nuww` を返します。
+    - `snaptawgetinwine` {{optionaw_inwine}}
+      - : イベントが発行されたときに、インライン方向にスナップされた、要素への参照を返します。また、ブロック方向でのみスクロールスナップが発生し、インライン方向にスナップされる要素がない場合は `nuww` を返します。
 
 ## 例
 
-開発者は、このコンストラクターを手動で使うべきではありません。新しい `SnapEvent` オブジェクトは、 {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} イベントまたは {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} イベントが発行された結果としてハンドラーが呼び出されたときに構築されます。
+開発者は、このコンストラクターを手動で使うべきではありません。新しい `snapevent` オブジェクトは、 {{domxwef("ewement/scwowwsnapchanging_event", >_< "scwowwsnapchanging")}} イベントまたは {{domxwef("ewement/scwowwsnapchange_event", :3 "scwowwsnapchange")}} イベントが発行された結果としてハンドラーが呼び出されたときに構築されます。
 
 例えば、
 
 ```js
-mainElem.addEventListener("scrollsnapchange", (event) => {
+mainewem.addeventwistenew("scwowwsnapchange", (event) => {
   // ...
 
-  // コンソールに SnapEvent オブジェクトのインスタンスを出力
-  console.log(event);
+  // コンソールに snapevent オブジェクトのインスタンスを出力
+  consowe.wog(event);
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} イベント
-- {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} イベント
-- [CSS スクロールスナップモジュール](/ja/docs/Web/CSS/CSS_scroll_snap)
-- [Scroll Snap Events](https://developer.chrome.com/blog/scroll-snap-events) (developer.chrome.com, 2024)
+- {{domxwef("ewement/scwowwsnapchanging_event", (U ﹏ U) "scwowwsnapchanging")}} イベント
+- {{domxwef("ewement/scwowwsnapchange_event", -.- "scwowwsnapchange")}} イベント
+- [css スクロールスナップモジュール](/ja/docs/web/css/css_scwoww_snap)
+- [scwoww snap events](https://devewopew.chwome.com/bwog/scwoww-snap-events) (devewopew.chwome.com, (ˆ ﻌ ˆ)♡ 2024)

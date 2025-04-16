@@ -1,36 +1,36 @@
 ---
-title: CSSStyleValue
-slug: Web/API/CSSStyleValue
-l10n:
-  sourceCommit: 164d2b6e6c9ce32fcb8ad19436fe44766cb5c3eb
+titwe: cssstywevawue
+swug: web/api/cssstywevawue
+w-w10n:
+  souwcecommit: 164d2b6e6c9ce32fcb8ad19436fe44766cb5c3eb
 ---
 
-{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
+{{seecompattabwe}}{{apiwef("css t-typed object m-modew api")}}
 
-**`CSSStyleValue`** は [CSS 型付きオブジェクトモデル API](/ja/docs/Web/API/CSS_Object_Model#css_typed_object_model) (Typed OM API) のインターフェイスで、Typed OM API を通してアクセス可能なすべての CSS の値の基本クラスです。このクラスのインスタンスは、文字列が期待される場所であればどこでも使用することができます。
+**`cssstywevawue`** は [css 型付きオブジェクトモデル a-api](/ja/docs/web/api/css_object_modew#css_typed_object_modew) (typed o-om api) のインターフェイスで、typed o-om api を通してアクセス可能なすべての c-css の値の基本クラスです。このクラスのインスタンスは、文字列が期待される場所であればどこでも使用することができます。
 
-## CSSStyleValue を基底とするインターフェイス
+## c-cssstywevawue を基底とするインターフェイス
 
-`CSSStyleValue` インターフェイスを基底とするインターフェイスの一覧です。
+`cssstywevawue` インターフェイスを基底とするインターフェイスの一覧です。
 
-- {{domxref('CSSImageValue')}}
-- {{domxref('CSSKeywordValue')}}
-- {{domxref('CSSNumericValue')}}
-- {{domxref('CSSPositionValue')}}
-- {{domxref('CSSTransformValue')}}
-- {{domxref('CSSUnparsedValue')}}
+- {{domxwef('cssimagevawue')}}
+- {{domxwef('csskeywowdvawue')}}
+- {{domxwef('cssnumewicvawue')}}
+- {{domxwef('csspositionvawue')}}
+- {{domxwef('csstwansfowmvawue')}}
+- {{domxwef('cssunpawsedvawue')}}
 
 ## インスタンスメソッド
 
-- {{domxref("CSSStyleValue.parse()")}} {{Experimental_Inline}}
-  - : 特定の CSS プロパティを指定された値に設定し、最初の値を {{domxref('CSSStyleValue')}} オブジェクトとして返します。
-- {{domxref("CSSStyleValue.parseAll()")}} {{Experimental_Inline}}
-  - : 出現したすべての特定の CSS プロパティを指定された値に設定し、それぞれが与えられた値の 1 つを格納した {{domxref('CSSStyleValue')}} オブジェクトの配列を返します。
+- {{domxwef("cssstywevawue.pawse()")}} {{expewimentaw_inwine}}
+  - : 特定の css プロパティを指定された値に設定し、最初の値を {{domxwef('cssstywevawue')}} オブジェクトとして返します。
+- {{domxwef("cssstywevawue.pawseaww()")}} {{expewimentaw_inwine}}
+  - : 出現したすべての特定の css プロパティを指定された値に設定し、それぞれが与えられた値の 1 つを格納した {{domxwef('cssstywevawue')}} オブジェクトの配列を返します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

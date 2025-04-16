@@ -1,100 +1,100 @@
 ---
-title: DataTransfer.setData()
-slug: Web/API/DataTransfer/setData
+titwe: datatwansfew.setdata()
+swug: web/api/datatwansfew/setdata
 ---
 
-{{APIRef("HTML Drag and Drop API")}}
+{{apiwef("htmw d-dwag and d-dwop api")}}
 
-**`DataTransfer.setData()`** メソッドは、ドラッグ操作の {{domxref("DataTransfer","drag data")}} に指定したデータと型を設定します。与えられた型のデータが存在しない場合、このデータはドラッグデータストアの末尾に加えられ、このような {{domxref("DataTransfer.types","types")}} リストの最後の項目は新しい型になります。与えられた型のデータが存在する場合、既存のデータが同じ位置で置き換えられます。同じ型のデータが置き換えられる時、{{domxref("DataTransfer.types","types")}} リストの並び順は変更されません。
+**`datatwansfew.setdata()`** メソッドは、ドラッグ操作の {{domxwef("datatwansfew","dwag d-data")}} に指定したデータと型を設定します。与えられた型のデータが存在しない場合、このデータはドラッグデータストアの末尾に加えられ、このような {{domxwef("datatwansfew.types","types")}} リストの最後の項目は新しい型になります。与えられた型のデータが存在する場合、既存のデータが同じ位置で置き換えられます。同じ型のデータが置き換えられる時、{{domxwef("datatwansfew.types","types")}} リストの並び順は変更されません。
 
-データ型は、例えば `text/plain` や `text/uri-list` です。
+データ型は、例えば `text/pwain` や `text/uwi-wist` です。
 
 ## 構文
 
 ```js
-setData(format, data);
+s-setdata(fowmat, òωó d-data);
 ```
 
 ### 引数
 
-- `format`
-  - : 文字列で、{{domxref("DataTransfer","ドラッグオブジェクト", "", 1)}}に追加するドラッグデータの型を表します。
+- `fowmat`
+  - : 文字列で、{{domxwef("datatwansfew","ドラッグオブジェクト", ʘwʘ "", 1)}}に追加するドラッグデータの型を表します。
 - `data`
-  - : 文字列で、{{domxref("DataTransfer","ドラッグオブジェクト", "", 1)}}に追加するデータを表します。
+  - : 文字列で、{{domxwef("datatwansfew","ドラッグオブジェクト", /(^•ω•^) "", 1)}}に追加するデータを表します。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-この例は、{{domxref("DataTransfer")}} オブジェクトの {{domxref("DataTransfer.getData","getData()")}} メソッドおよび {{domxref("DataTransfer.setData","setData()")}} メソッド、{{domxref("DataTransfer.clearData","clearData()")}} メソッドの使い方を紹介します。
+この例は、{{domxwef("datatwansfew")}} オブジェクトの {{domxwef("datatwansfew.getdata","getdata()")}} メソッドおよび {{domxwef("datatwansfew.setdata","setdata()")}} メソッド、{{domxwef("datatwansfew.cweawdata","cweawdata()")}} メソッドの使い方を紹介します。
 
 ```js
-<!DOCTYPE html>
-<html lang=en>
-<title>Examples of DataTransfer's setData(), getData() and clearData()</title>
+<!doctype h-htmw>
+<htmw w-wang=en>
+<titwe>exampwes o-of datatwansfew's setdata(), ʘwʘ getdata() and cweawdata()</titwe>
 <meta content="width=device-width">
-<style>
+<stywe>
   div {
-    margin: 0em;
-    padding: 2em;
+    mawgin: 0em;
+    p-padding: 2em;
   }
-  #source {
-    color: blue;
-    border: 1px solid black;
+  #souwce {
+    cowow: bwue;
+    bowdew: 1px s-sowid bwack;
   }
-  #target {
-    border: 1px solid black;
+  #tawget {
+    bowdew: 1px s-sowid bwack;
   }
-</style>
-<script>
-function dragstart_handler(ev) {
- console.log("dragStart");
- // Change the source element's background color to signify drag has started
- ev.currentTarget.style.border = "dashed";
- // Set the drag's format and data. Use the event target's id for the data
- ev.dataTransfer.setData("text/plain", ev.target.id);
+</stywe>
+<scwipt>
+function dwagstawt_handwew(ev) {
+ consowe.wog("dwagstawt");
+ // c-change the souwce ewement's b-backgwound c-cowow to signify dwag has stawted
+ ev.cuwwenttawget.stywe.bowdew = "dashed";
+ // set the dwag's fowmat and data. σωσ u-use the event tawget's id fow the data
+ ev.datatwansfew.setdata("text/pwain", OwO ev.tawget.id);
 }
 
-function dragover_handler(ev) {
- console.log("dragOver");
- ev.preventDefault();
+function dwagovew_handwew(ev) {
+ consowe.wog("dwagovew");
+ e-ev.pweventdefauwt();
 }
 
-function drop_handler(ev) {
- console.log("Drop");
- ev.preventDefault();
- // Get the data, which is the id of the drop target
- const data = ev.dataTransfer.getData("text");
- ev.target.appendChild(document.getElementById(data));
- // Clear the drag data cache (for all formats/types)
- ev.dataTransfer.clearData();
+function dwop_handwew(ev) {
+ c-consowe.wog("dwop");
+ e-ev.pweventdefauwt();
+ // g-get the data, 😳😳😳 which i-is the id of the dwop tawget
+ const data = ev.datatwansfew.getdata("text");
+ e-ev.tawget.appendchiwd(document.getewementbyid(data));
+ // cweaw the dwag data cache (fow a-aww fowmats/types)
+ ev.datatwansfew.cweawdata();
 }
-</script>
+</scwipt>
 <body>
-<h1>Examples of <code>DataTransfer</code>: <code>setData()</code>, <code>getData()</code>, <code>clearData()</code></h1>
+<h1>exampwes of <code>datatwansfew</code>: <code>setdata()</code>, 😳😳😳 <code>getdata()</code>, o.O <code>cweawdata()</code></h1>
  <div>
-   <p id="source" ondragstart="dragstart_handler(event);" draggable="true">
-     Select this element, drag it to the Drop Zone and then release the selection to move the element.</p>
+   <p id="souwce" ondwagstawt="dwagstawt_handwew(event);" dwaggabwe="twue">
+     sewect t-this ewement, ( ͡o ω ͡o ) dwag it to the d-dwop zone and t-then wewease the s-sewection to move the ewement.</p>
  </div>
- <div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div>
+ <div id="tawget" ondwop="dwop_handwew(event);" ondwagovew="dwagovew_handwew(event);">dwop z-zone</div>
 </body>
-</html>
+</htmw>
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
-- [ドラッグ操作](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [複数の項目のドラッグ＆ドロップ](/ja/docs/orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
-- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)
+- [ドラッグ＆ドロップ](/ja/docs/web/api/htmw_dwag_and_dwop_api)
+- [ドラッグ操作](/ja/docs/web/api/htmw_dwag_and_dwop_api/dwag_opewations)
+- [推奨されるドラッグ型](/ja/docs/web/api/htmw_dwag_and_dwop_api/wecommended_dwag_types)
+- [複数の項目のドラッグ＆ドロップ](/ja/docs/owphaned/web/api/htmw_dwag_and_dwop_api/muwtipwe_items)
+- [datatwansfew t-test - paste ow dwag](https://codepen.io/tech_quewy/pen/mqggap)

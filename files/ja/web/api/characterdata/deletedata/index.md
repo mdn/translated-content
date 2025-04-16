@@ -1,18 +1,18 @@
 ---
-title: "CharacterData: deleteData() メソッド"
-slug: Web/API/CharacterData/deleteData
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: "chawactewdata: dewetedata() メソッド"
+s-swug: web/api/chawactewdata/dewetedata
+w-w10n:
+  s-souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`deleteData()`** は {{domxref("CharacterData")}} インターフェイスのメソッドで、この `CharacterData` ノードからすべてまたは一部のデータを削除します。
+**`dewetedata()`** は {{domxwef("chawactewdata")}} インターフェイスのメソッドで、この `chawactewdata` ノードからすべてまたは一部のデータを削除します。
 
 ## 構文
 
-```js-nolint
-characterData.deleteData(offset, count)
+```js-nowint
+c-chawactewdata.dewetedata(offset, rawr x3 c-count)
 ```
 
 ### 引数
@@ -29,33 +29,33 @@ characterData.deleteData(offset, count)
 
 ## 例外
 
-- `IndexSizeError` {{domxref("DOMException")}}
+- `indexsizeewwow` {{domxwef("domexception")}}
   - : `offset` が中のデータの長さよりも長い場合に発生します。
 
 ## 例
 
-```html
-<span>Result: </span>A long string.
+```htmw
+<span>wesuwt: </span>a w-wong stwing. rawr
 ```
 
 ```js
-const span = document.querySelector("span");
-const textnode = span.nextSibling;
+c-const s-span = document.quewysewectow("span");
+const textnode = span.nextsibwing;
 
-textnode.deleteData(1, 5);
+textnode.dewetedata(1, σωσ 5);
 ```
 
-{{EmbedLiveSample("Example", "100%", 50)}}
+{{embedwivesampwe("exampwe", σωσ "100%", >_< 50)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("CharacterData.appendData()")}}, {{domxref("CharacterData.insertData()")}}, {{domxref("CharacterData.replaceData()")}}
-- {{domxref("CharacterData.data")}}
+- {{domxwef("chawactewdata.appenddata()")}}, :3 {{domxwef("chawactewdata.insewtdata()")}}, {{domxwef("chawactewdata.wepwacedata()")}}
+- {{domxwef("chawactewdata.data")}}

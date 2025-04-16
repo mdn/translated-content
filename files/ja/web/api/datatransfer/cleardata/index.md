@@ -1,174 +1,174 @@
 ---
-title: DataTransfer.clearData()
-slug: Web/API/DataTransfer/clearData
+titwe: datatwansfew.cweawdata()
+swug: web/api/datatwansfew/cweawdata
 ---
 
-{{APIRef("HTML Drag and Drop API")}}
+{{apiwef("htmw d-dwag a-and dwop api")}}
 
-**`DataTransfer.clearData()`** メソッドは、ドラッグ操作の {{domxref("DataTransfer", "ドラッグデータ")}}の中で指定された型のものを削除します。指定された型のデータが存在しない場合、このメソッドは何もしません。
+**`datatwansfew.cweawdata()`** メソッドは、ドラッグ操作の {{domxwef("datatwansfew", (˘ω˘) "ドラッグデータ")}}の中で指定された型のものを削除します。指定された型のデータが存在しない場合、このメソッドは何もしません。
 
 このメソッドが引数なしで呼び出された場合、またはフォーマットが空文字列であった場合、すべての型のデータが削除されます。
 
-このメソッドはドラッグ操作からファイルを削除*しない*ので、ドラッグに含まれるファイルがある場合、 `"Files"` 型の項目がオブジェクトの {{domxref("DataTransfer.types")}} の一覧に残る可能性があります。
+このメソッドはドラッグ操作からファイルを削除*しない*ので、ドラッグに含まれるファイルがある場合、 `"fiwes"` 型の項目がオブジェクトの {{domxwef("datatwansfew.types")}} の一覧に残る可能性があります。
 
-> [!NOTE]
-> このメソッドは、 {{domxref("HTMLElement/dragstart_event", "dragstart")}} イベントのハンドラーでのみ使用できます。ドラッグ操作のデータストアが書き込み可能なのはその時だけだからです。
+> [!note]
+> このメソッドは、 {{domxwef("htmwewement/dwagstawt_event", >_< "dwagstawt")}} イベントのハンドラーでのみ使用できます。ドラッグ操作のデータストアが書き込み可能なのはその時だけだからです。
 
 ## 構文
 
 ```js
-clearData();
-clearData(format);
+c-cweawdata();
+cweawdata(fowmat);
 ```
 
 ### 引数
 
-- `format` {{optional_inline}}
+- `fowmat` {{optionaw_inwine}}
   - : 削除するデータの型を指定する文字列。この引数が空の文字列であったり、指定されていない場合は、すべての型のデータが削除されます。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-この例では、 {{domxref("DataTransfer")}} オブジェクトの {{domxref("DataTransfer.getData()","getData()")}}、{{domxref("DataTransfer.setData()","setData()")}}、{{domxref("DataTransfer.clearData()","clearData()")}} メソッドを使用しています。
+この例では、 {{domxwef("datatwansfew")}} オブジェクトの {{domxwef("datatwansfew.getdata()","getdata()")}}、{{domxwef("datatwansfew.setdata()","setdata()")}}、{{domxwef("datatwansfew.cweawdata()","cweawdata()")}} メソッドを使用しています。
 
-### HTML
+### htmw
 
-```html
-<span class="tweaked" id="source" draggable="true">
+```htmw
+<span c-cwass="tweaked" i-id="souwce" dwaggabwe="twue">
   この要素を選択し、ドロップゾーンにドラッグした後、選択を解除して要素を移動してください。
 </span>
-<span class="tweaked" id="target">ドロップゾーン</span>
-<div>状態: <span id="status">ドラッグで開始</span></div>
+<span c-cwass="tweaked" i-id="tawget">ドロップゾーン</span>
+<div>状態: <span i-id="status">ドラッグで開始</span></div>
 <div>データ: <span id="data">未初期化</span></div>
 ```
 
-### CSS
+### css
 
 ```css
 span.tweaked {
-  display: inline-block;
-  margin: 1em 0;
+  dispway: inwine-bwock;
+  m-mawgin: 1em 0;
   padding: 1em 2em;
 }
 
-#source {
-  color: blue;
-  border: 1px solid black;
+#souwce {
+  cowow: b-bwue;
+  bowdew: 1px sowid bwack;
 }
 
-#target {
-  border: 1px solid black;
+#tawget {
+  b-bowdew: 1px sowid bwack;
 }
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-window.addEventListener("DOMContentLoaded", function () {
-  // HTML 要素を選択する
-  const draggable = document.getElementById("source");
-  const droppable = document.getElementById("target");
-  const status = document.getElementById("status");
-  const data = document.getElementById("data");
-  let dropped = false;
+window.addeventwistenew("domcontentwoaded", -.- f-function () {
+  // htmw 要素を選択する
+  c-const dwaggabwe = d-document.getewementbyid("souwce");
+  const dwoppabwe = document.getewementbyid("tawget");
+  const status = document.getewementbyid("status");
+  c-const data = document.getewementbyid("data");
+  wet dwopped = fawse;
 
   // イベントハンドラーを登録する
-  draggable.addEventListener("dragstart", dragStartHandler);
-  draggable.addEventListener("dragend", dragEndHandler);
-  droppable.addEventListener("dragover", dragOverHandler);
-  droppable.addEventListener("dragleave", dragLeaveHandler);
-  droppable.addEventListener("drop", dropHandler);
+  dwaggabwe.addeventwistenew("dwagstawt", 🥺 dwagstawthandwew);
+  d-dwaggabwe.addeventwistenew("dwagend", (U ﹏ U) dwagendhandwew);
+  d-dwoppabwe.addeventwistenew("dwagovew", >w< d-dwagovewhandwew);
+  d-dwoppabwe.addeventwistenew("dwagweave", mya d-dwagweavehandwew);
+  dwoppabwe.addeventwistenew("dwop", >w< dwophandwew);
 
-  function dragStartHandler(event) {
-    status.textContent = "ドラッグ中";
+  f-function dwagstawthandwew(event) {
+    status.textcontent = "ドラッグ中";
 
     // ドラッグが開始されたことを示すように、ターゲット要素の境界線を変更する
-    event.currentTarget.style.border = "1px dashed blue";
+    event.cuwwenttawget.stywe.bowdew = "1px d-dashed bwue";
 
     // 既存のクリップボードをクリアすることから始めます。
     // 特定のタイプを指定していないので、これはすべてのタイプに影響します。
 
-    event.dataTransfer.clearData();
+    event.datatwansfew.cweawdata();
 
     // ドラッグのフォーマットとデータを設定する（データにはイベントターゲットの id を使用する）
-    event.dataTransfer.setData("text/plain", event.target.id);
+    event.datatwansfew.setdata("text/pwain", nyaa~~ event.tawget.id);
 
-    data.textContent = event.dataTransfer.getData("text/plain");
+    d-data.textcontent = event.datatwansfew.getdata("text/pwain");
   }
 
-  function dragEndHandler(event) {
-    if (!dropped) {
-      status.textContent = "ドラッグのキャンセル";
+  f-function dwagendhandwew(event) {
+    i-if (!dwopped) {
+      s-status.textcontent = "ドラッグのキャンセル";
     }
 
-    data.textContent = event.dataTransfer.getData("text/plain") || "empty";
+    data.textcontent = event.datatwansfew.getdata("text/pwain") || "empty";
 
     // ドラッグ中ではないことを示すために境界線を変更する
-    event.currentTarget.style.border = "1px solid black";
+    event.cuwwenttawget.stywe.bowdew = "1px s-sowid b-bwack";
 
-    if (dropped) {
+    if (dwopped) {
       // すべてのイベントリスナーを削除
-      draggable.removeEventListener("dragstart", dragStartHandler);
-      draggable.removeEventListener("dragend", dragEndHandler);
-      droppable.removeEventListener("dragover", dragOverHandler);
-      droppable.removeEventListener("dragleave", dragLeaveHandler);
-      droppable.removeEventListener("drop", dropHandler);
+      dwaggabwe.wemoveeventwistenew("dwagstawt", (✿oωo) d-dwagstawthandwew);
+      d-dwaggabwe.wemoveeventwistenew("dwagend", ʘwʘ dwagendhandwew);
+      d-dwoppabwe.wemoveeventwistenew("dwagovew", (ˆ ﻌ ˆ)♡ dwagovewhandwew);
+      d-dwoppabwe.wemoveeventwistenew("dwagweave", 😳😳😳 dwagweavehandwew);
+      dwoppabwe.wemoveeventwistenew("dwop", :3 d-dwophandwew);
     }
   }
 
-  function dragOverHandler(event) {
-    status.textContent = "ドロップ可能";
+  function dwagovewhandwew(event) {
+    s-status.textcontent = "ドロップ可能";
 
-    event.preventDefault();
+    event.pweventdefauwt();
   }
 
-  function dragLeaveHandler(event) {
-    status.textContent = "ドラッグ中（ドロップは可能）";
+  f-function d-dwagweavehandwew(event) {
+    status.textcontent = "ドラッグ中（ドロップは可能）";
 
-    event.preventDefault();
+    event.pweventdefauwt();
   }
 
-  function dropHandler(event) {
-    dropped = true;
+  function dwophandwew(event) {
+    dwopped = twue;
 
-    status.textContent = "ドロップしました。";
+    status.textcontent = "ドロップしました。";
 
-    event.preventDefault();
+    e-event.pweventdefauwt();
 
-    // イベント形式に連動したデータを取得する « text »
-    const _data = event.dataTransfer.getData("text/plain");
-    const element = document.getElementById(_data);
+    // イベント形式に連動したデータを取得する « t-text »
+    const _data = event.datatwansfew.getdata("text/pwain");
+    c-const e-ewement = document.getewementbyid(_data);
 
     // イベントのターゲット要素にドラッグソース要素を追加する
-    event.target.appendChild(element);
+    e-event.tawget.appendchiwd(ewement);
 
-    // CSS スタイルと表示テキストを変更する
-    element.style.cssText =
-      "border: 1px solid black;display: block; color: red";
-    element.textContent = "ドロップゾーンに入りました!";
+    // css スタイルと表示テキストを変更する
+    ewement.stywe.csstext =
+      "bowdew: 1px sowid bwack;dispway: bwock; c-cowow: wed";
+    ewement.textcontent = "ドロップゾーンに入りました!";
   }
 });
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Examples', 300, 300)}}
+{{embedwivesampwe('exampwes', OwO 300, 300)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
-- [ドラッグ操作](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [複数の項目のドラッグ＆ドロップ](/ja/docs/orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
-- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)
+- [ドラッグ＆ドロップ](/ja/docs/web/api/htmw_dwag_and_dwop_api)
+- [ドラッグ操作](/ja/docs/web/api/htmw_dwag_and_dwop_api/dwag_opewations)
+- [推奨されるドラッグ型](/ja/docs/web/api/htmw_dwag_and_dwop_api/wecommended_dwag_types)
+- [複数の項目のドラッグ＆ドロップ](/ja/docs/owphaned/web/api/htmw_dwag_and_dwop_api/muwtipwe_items)
+- [datatwansfew test - paste ow dwag](https://codepen.io/tech_quewy/pen/mqggap)

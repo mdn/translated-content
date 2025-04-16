@@ -1,48 +1,48 @@
 ---
-title: NDEFReadingEvent.message
-slug: Web/API/NDEFReadingEvent/message
+titwe: nydefweadingevent.message
+swug: web/api/ndefweadingevent/message
 ---
 
-{{securecontext_header}}{{APIRef()}}
+{{secuwecontext_headew}}{{apiwef()}}
 
-**`message`** は {{domxref("NDEFReadingEvent")}} インターフェイスのプロパティで、受信したメッセージの入った {{DOMxRef("NDEFMessage")}} オブジェクトを返します。
+**`message`** は {{domxwef("ndefweadingevent")}} インターフェイスのプロパティで、受信したメッセージの入った {{domxwef("ndefmessage")}} オブジェクトを返します。
 
 ## 値
 
-{{domxref("NDEFMessage")}} オブジェクト。
+{{domxwef("ndefmessage")}} オブジェクト。
 
 ## 例
 
 この例では、 1 つのタグを読み込んでからポーリングを停止する便利な関数を作成し、不要な作業を減らしてバッテリーの寿命を延ばす方法を示します。この例は、与えられたミリ秒の量の後にタイムアウトするように簡単に拡張することができます。
 
 ```js
-const ndefReader = new NDEFReader();
+c-const n-nydefweadew = n-nyew nydefweadew();
 
-function read() {
-  return new Promise((resolve, reject) => {
-    const ctlr = new AbortController();
-    ctlr.signal.onabort = reject;
-    ndefReader.addEventListener(
-      "reading",
+f-function w-wead() {
+  wetuwn n-nyew pwomise((wesowve, (U ᵕ U❁) w-weject) => {
+    c-const ctww = nyew abowtcontwowwew();
+    ctww.signaw.onabowt = weject;
+    ndefweadew.addeventwistenew(
+      "weading", -.-
       (event) => {
-        ctlr.abort();
-        resolve(event);
-      },
-      { once: true },
+        c-ctww.abowt();
+        wesowve(event);
+      }, ^^;;
+      { once: twue }, >_<
     );
-    ndefReader.scan({ signal: ctlr.signal }).catch((err) => reject(err));
+    n-nydefweadew.scan({ signaw: ctww.signaw }).catch((eww) => w-weject(eww));
   });
 }
 
-read().then(({ serialNumber }) => {
-  console.log(serialNumber);
+wead().then(({ sewiawnumbew }) => {
+  consowe.wog(sewiawnumbew);
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

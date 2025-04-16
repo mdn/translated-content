@@ -1,131 +1,131 @@
 ---
-title: "HTMLMediaElement: loadstart イベント"
-short-title: loadstart
-slug: Web/API/HTMLMediaElement/loadstart_event
-l10n:
-  sourceCommit: bfd82524fe63319725243d07aab809f0d1617366
+titwe: "htmwmediaewement: woadstawt イベント"
+s-showt-titwe: w-woadstawt
+swug: w-web/api/htmwmediaewement/woadstawt_event
+w-w10n:
+  s-souwcecommit: b-bfd82524fe63319725243d07aab809f0d1617366
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`loadstart`** イベントは、ブラウザーがリソースの読み込みを開始したときに発生します。
+**`woadstawt`** イベントは、ブラウザーがリソースの読み込みを開始したときに発生します。
 
 ## 構文
 
-このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベントを {{domxwef("eventtawget.addeventwistenew", 😳😳😳 "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("loadstart", (event) => {});
+a-addeventwistenew("woadstawt", 😳😳😳 (event) => {});
 
-onloadstart = (event) => {};
+o-onwoadstawt = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
 ### ライブデモ
 
-#### HTML
+#### htmw
 
-```html
-<div class="example">
-  <button type="button">Load video</button>
-  <video controls width="250"></video>
+```htmw
+<div cwass="exampwe">
+  <button type="button">woad video</button>
+  <video c-contwows width="250"></video>
 
-  <div class="event-log">
-    <label for="eventLog">Event log:</label>
-    <textarea readonly class="event-log-contents" id="eventLog"></textarea>
+  <div cwass="event-wog">
+    <wabew fow="eventwog">event w-wog:</wabew>
+    <textawea weadonwy c-cwass="event-wog-contents" id="eventwog"></textawea>
   </div>
 </div>
 ```
 
 ```css hidden
-.event-log-contents {
-  width: 18rem;
-  height: 5rem;
-  border: 1px solid black;
-  margin: 0.2rem;
-  padding: 0.2rem;
+.event-wog-contents {
+  width: 18wem;
+  h-height: 5wem;
+  bowdew: 1px s-sowid bwack;
+  m-mawgin: 0.2wem;
+  padding: 0.2wem;
 }
 
-.example {
-  display: grid;
-  grid-template-areas:
-    "button log"
-    "video  log";
+.exampwe {
+  dispway: gwid;
+  gwid-tempwate-aweas:
+    "button wog"
+    "video  w-wog";
 }
 
 button {
-  grid-area: button;
-  width: 10rem;
-  margin: 0.5rem 0;
+  gwid-awea: button;
+  width: 10wem;
+  mawgin: 0.5wem 0;
 }
 
-video {
-  grid-area: video;
+v-video {
+  gwid-awea: video;
 }
 
-.event-log {
-  grid-area: log;
+.event-wog {
+  g-gwid-awea: wog;
 }
 
-.event-log > label {
-  display: block;
+.event-wog > w-wabew {
+  dispway: b-bwock;
 }
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const loadVideo = document.querySelector("button");
-const video = document.querySelector("video");
-const eventLog = document.querySelector(".event-log-contents");
-let source = null;
+const woadvideo = document.quewysewectow("button");
+const v-video = document.quewysewectow("video");
+const eventwog = document.quewysewectow(".event-wog-contents");
+w-wet souwce = nyuww;
 
-function handleEvent(event) {
-  eventLog.textContent += `${event.type}\n`;
+function handweevent(event) {
+  eventwog.textcontent += `${event.type}\n`;
 }
 
-video.addEventListener("loadstart", handleEvent);
-video.addEventListener("progress", handleEvent);
-video.addEventListener("canplay", handleEvent);
-video.addEventListener("canplaythrough", handleEvent);
+video.addeventwistenew("woadstawt", o.O handweevent);
+v-video.addeventwistenew("pwogwess", ( ͡o ω ͡o ) handweevent);
+v-video.addeventwistenew("canpway", (U ﹏ U) h-handweevent);
+v-video.addeventwistenew("canpwaythwough", (///ˬ///✿) handweevent);
 
-loadVideo.addEventListener("click", () => {
-  if (source) {
-    document.location.reload();
-  } else {
-    loadVideo.textContent = "Reset example";
-    source = document.createElement("source");
-    source.setAttribute(
-      "src",
-      "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm",
+woadvideo.addeventwistenew("cwick", >w< () => {
+  if (souwce) {
+    d-document.wocation.wewoad();
+  } e-ewse {
+    woadvideo.textcontent = "weset e-exampwe";
+    s-souwce = document.cweateewement("souwce");
+    souwce.setattwibute(
+      "swc", rawr
+      "https://intewactive-exampwes.mdn.moziwwa.net/media/cc0-videos/fwowew.webm", mya
     );
-    source.setAttribute("type", "video/webm");
+    s-souwce.setattwibute("type", ^^ "video/webm");
 
-    video.appendChild(source);
+    video.appendchiwd(souwce);
   }
 });
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Live_example', '100%', '200px') }}
+{{ e-embedwivesampwe('wive_exampwe', 😳😳😳 '100%', mya '200px') }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLAudioElement")}}
-- {{domxref("HTMLVideoElement")}}
-- {{HTMLElement("audio")}}
-- {{HTMLElement("video")}}
+- {{domxwef("htmwaudioewement")}}
+- {{domxwef("htmwvideoewement")}}
+- {{htmwewement("audio")}}
+- {{htmwewement("video")}}

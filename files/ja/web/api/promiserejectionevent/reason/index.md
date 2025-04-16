@@ -1,13 +1,13 @@
 ---
-title: PromiseRejectionEvent.reason
-slug: Web/API/PromiseRejectionEvent/reason
-l10n:
-  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
+titwe: pwomisewejectionevent.weason
+swug: web/api/pwomisewejectionevent/weason
+w-w10n:
+  souwcecommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-{{domxref("PromiseRejectionEvent")}} の **`reason`** は読み取り専用プロパティで、{{jsxref("Promise.reject()")}} に渡される理由を提供する任意の JavaScript 値、または {{jsxref("Object")}} です。理論的にはプロミスが拒否された理由についての情報を提供します。
+{{domxwef("pwomisewejectionevent")}} の **`weason`** は読み取り専用プロパティで、{{jsxwef("pwomise.weject()")}} に渡される理由を提供する任意の j-javascwipt 値、または {{jsxwef("object")}} です。理論的にはプロミスが拒否された理由についての情報を提供します。
 
 ### 値
 
@@ -16,22 +16,22 @@ l10n:
 ## 例
 
 ```js
-window.onunhandledrejection = (e) => {
-  console.log(e.reason);
+w-window.onunhandwedwejection = (e) => {
+  c-consowe.wog(e.weason);
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Promise")}}
-- {{domxref("PromiseRejectionEvent")}}
-- {{domxref("Window.rejectionhandled_event", "rejectionhandled")}}
-- {{domxref("Window.unhandledrejection_event", "unhandledrejection")}}
+- {{jsxwef("pwomise")}}
+- {{domxwef("pwomisewejectionevent")}}
+- {{domxwef("window.wejectionhandwed_event", òωó "wejectionhandwed")}}
+- {{domxwef("window.unhandwedwejection_event", o.O "unhandwedwejection")}}

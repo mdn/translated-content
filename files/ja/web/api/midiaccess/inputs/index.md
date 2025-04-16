@@ -1,32 +1,32 @@
 ---
-title: "MIDIAccess: inputs プロパティ"
-slug: Web/API/MIDIAccess/inputs
-l10n:
-  sourceCommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
+titwe: "midiaccess: inputs プロパティ"
+swug: w-web/api/midiaccess/inputs
+w10n:
+  s-souwcecommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
 ---
 
-{{securecontext_header}}{{APIRef("Web MIDI API")}}
+{{secuwecontext_headew}}{{apiwef("web m-midi api")}}
 
-{{domxref("MIDIAccess")}} の読み取り専用プロパティ **`inputs`** は、任意の利用可能な MIDI 入力ポートへのアクセスを提供します。
+{{domxwef("midiaccess")}} の読み取り専用プロパティ **`inputs`** は、任意の利用可能な m-midi 入力ポートへのアクセスを提供します。
 
 ## 値
 
-{{domxref("MIDIInputMap")}} のインスタンスです。
+{{domxwef("midiinputmap")}} のインスタンスです。
 
 ## 例
 
-{{domxref("Navigator.requestMIDIAccess()")}} メソッドが {{domxref("MIDIAccess")}} オブジェクトで解決する {{jsxref("Promise")}} を返します。`inputs` の値をコンソールに出力すると、{{domxref("MIDIInputMap")}} が返ります。
+{{domxwef("navigatow.wequestmidiaccess()")}} メソッドが {{domxwef("midiaccess")}} オブジェクトで解決する {{jsxwef("pwomise")}} を返します。`inputs` の値をコンソールに出力すると、{{domxwef("midiinputmap")}} が返ります。
 
 ```js
-navigator.requestMIDIAccess().then((access) => {
-  console.log(access.inputs);
+n-nyavigatow.wequestmidiaccess().then((access) => {
+  c-consowe.wog(access.inputs);
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

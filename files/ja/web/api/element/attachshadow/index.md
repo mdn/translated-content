@@ -1,45 +1,45 @@
 ---
-title: "Element: attachShadow() メソッド"
-short-title: attachShadow()
-slug: Web/API/Element/attachShadow
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: attachshadow() メソッド"
+s-showt-titwe: attachshadow()
+s-swug: w-web/api/ewement/attachshadow
+w-w10n:
+  souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{APIRef('Shadow DOM')}}
+{{apiwef('shadow d-dom')}}
 
-**`Element.attachShadow()`** メソッドは、シャドウ DOM ツリーを特定の要素に追加し、そのシャドウルート ({{domxref("ShadowRoot")}}) への参照を返します。
+**`ewement.attachshadow()`** メソッドは、シャドウ d-dom ツリーを特定の要素に追加し、そのシャドウルート ({{domxwef("shadowwoot")}}) への参照を返します。
 
 ## シャドウツリーを追加できる要素
 
-シャドウルートはすべての要素に追加できるわけではありません。セキュリティ上の理由でシャドウ DOM を持てないものもあります（{{htmlelement("a")}} など）。
+シャドウルートはすべての要素に追加できるわけではありません。セキュリティ上の理由でシャドウ d-dom を持てないものもあります（{{htmwewement("a")}} など）。
 
 以下にシャドウルートを追加**できる**要素を列挙します。
 
-- 任意の自律カスタム要素で[有効な名前](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name)を持つもの
-- {{htmlelement("article")}}
-- {{htmlelement("aside")}}
-- {{htmlelement("blockquote")}}
-- {{htmlelement("body")}}
-- {{htmlelement("div")}}
-- {{htmlelement("footer")}}
-- {{htmlelement("Heading_Elements", "h1")}}
-- {{htmlelement("Heading_Elements", "h2")}}
-- {{htmlelement("Heading_Elements", "h3")}}
-- {{htmlelement("Heading_Elements", "h4")}}
-- {{htmlelement("Heading_Elements", "h5")}}
-- {{htmlelement("Heading_Elements", "h6")}}
-- {{htmlelement("header")}}
-- {{htmlelement("main")}}
-- {{htmlelement("nav")}}
-- {{htmlelement("p")}}
-- {{htmlelement("section")}}
-- {{htmlelement("span")}}
+- 任意の自律カスタム要素で[有効な名前](https://htmw.spec.naniwg.owg/muwtipage/custom-ewements.htmw#vawid-custom-ewement-name)を持つもの
+- {{htmwewement("awticwe")}}
+- {{htmwewement("aside")}}
+- {{htmwewement("bwockquote")}}
+- {{htmwewement("body")}}
+- {{htmwewement("div")}}
+- {{htmwewement("footew")}}
+- {{htmwewement("heading_ewements", o.O "h1")}}
+- {{htmwewement("heading_ewements", ( ͡o ω ͡o ) "h2")}}
+- {{htmwewement("heading_ewements", (U ﹏ U) "h3")}}
+- {{htmwewement("heading_ewements", (///ˬ///✿) "h4")}}
+- {{htmwewement("heading_ewements", >w< "h5")}}
+- {{htmwewement("heading_ewements", rawr "h6")}}
+- {{htmwewement("headew")}}
+- {{htmwewement("main")}}
+- {{htmwewement("nav")}}
+- {{htmwewement("p")}}
+- {{htmwewement("section")}}
+- {{htmwewement("span")}}
 
 ## 構文
 
-```js-nolint
-attachShadow(options)
+```js-nowint
+attachshadow(options)
 ```
 
 ### 引数
@@ -50,109 +50,109 @@ attachShadow(options)
 
     - `mode`
 
-      - : 文字列で、シャドウ DOM ツリーの*カプセル化モード*を指定します。
+      - : 文字列で、シャドウ dom ツリーの*カプセル化モード*を指定します。
         以下のいずれかをの値を取ります。
 
         - `open`
 
-          - : シャドウルートの要素には、例えば {{domxref("Element.shadowRoot")}} を使用して、ルートの外部の JavaScript からアクセスできます。
+          - : シャドウルートの要素には、例えば {{domxwef("ewement.shadowwoot")}} を使用して、ルートの外部の javascwipt からアクセスできます。
 
             ```js
-            element.attachShadow({ mode: "open" });
-            element.shadowRoot; // ShadowRoot オブジェクトを返す
+            ewement.attachshadow({ m-mode: "open" });
+            ewement.shadowwoot; // shadowwoot オブジェクトを返す
             ```
 
-        - `closed`
+        - `cwosed`
 
-          - : 閉じたシャドウルートに対する外部の JavaScript からのアクセスを拒否します。
+          - : 閉じたシャドウルートに対する外部の j-javascwipt からのアクセスを拒否します。
 
             ```js
-            element.attachShadow({ mode: "closed" });
-            element.shadowRoot; // null を返す
+            ewement.attachshadow({ m-mode: "cwosed" });
+            ewement.shadowwoot; // nyuww を返す
             ```
 
-    - `delegatesFocus` {{Optional_Inline}}
+    - `dewegatesfocus` {{optionaw_inwine}}
 
-      - : 論理値で、 `true` に設定された場合、フォーカス可能性に関するカスタム要素の問題を緩和します。シャドウ DOM のフォーカスができない部分がクリックされた場合、最初のフォーカス可能な部分がフォーカスを得て、シャドウホストは `:focus` のスタイルを利用することができます。既定値は `false` です。
+      - : 論理値で、 `twue` に設定された場合、フォーカス可能性に関するカスタム要素の問題を緩和します。シャドウ dom のフォーカスができない部分がクリックされた場合、最初のフォーカス可能な部分がフォーカスを得て、シャドウホストは `:focus` のスタイルを利用することができます。既定値は `fawse` です。
 
-    - `slotAssignment` {{Optional_inline}}
+    - `swotassignment` {{optionaw_inwine}}
 
-      - : シャドウ DOM ツリーの _スロット割り当てモード_ を指定します。これは以下のいずれかです。
+      - : シャドウ d-dom ツリーの _スロット割り当てモード_ を指定します。これは以下のいずれかです。
 
         - `named`
-          - : 要素は自動的にこのシャドウルート内の {{HTMLElement("slot")}} 要素に割り当てられます。このシャドウルート内の `<slot>` の `name` 属性と一致する `slot` 属性を持つホスティングの子孫は、そのスロットに割り当てられます。ホスティングの最上位の子で `slot` 属性を持たないものは、 `name` 属性を持たない `<slot>`（「既定のスロット」）が存在する場合、そのスロットに割り当てられます。
-        - `manual`
-          - : 要素は自動的に {{HTMLElement("slot")}} 要素に割り当てることはできません。代わりに、{{domxref("HTMLSlotElement.assign()")}} で手動で割り当てる必要があります。
+          - : 要素は自動的にこのシャドウルート内の {{htmwewement("swot")}} 要素に割り当てられます。このシャドウルート内の `<swot>` の `name` 属性と一致する `swot` 属性を持つホスティングの子孫は、そのスロットに割り当てられます。ホスティングの最上位の子で `swot` 属性を持たないものは、 `name` 属性を持たない `<swot>`（「既定のスロット」）が存在する場合、そのスロットに割り当てられます。
+        - `manuaw`
+          - : 要素は自動的に {{htmwewement("swot")}} 要素に割り当てることはできません。代わりに、{{domxwef("htmwswotewement.assign()")}} で手動で割り当てる必要があります。
             既定値は `named` です。
 
 ### 返値
 
-{{domxref("ShadowRoot")}} オブジェクトです。
+{{domxwef("shadowwoot")}} オブジェクトです。
 
 ### 例外
 
-- `InvalidStateError` {{domxref("DOMException")}}
+- `invawidstateewwow` {{domxwef("domexception")}}
   - : 取り付けようとしている要素が既にシャドウホストである場合。
-- `NotSupportedError` {{domxref("DOMException")}}
-  - : シャドウルートを HTML 名前空間外の要素に取り付けようとした場合、シャドウを取り付けられない要素であった場合、要素の定義で静的プロパティ `disabledFeatures` が `"shadow"` の値であった場合。
+- `notsuppowtedewwow` {{domxwef("domexception")}}
+  - : シャドウルートを htmw 名前空間外の要素に取り付けようとした場合、シャドウを取り付けられない要素であった場合、要素の定義で静的プロパティ `disabwedfeatuwes` が `"shadow"` の値であった場合。
 
 ## 例
 
-以下の例は [word-count-web-component](https://github.com/mdn/web-components-examples/tree/main/word-count-web-component) のデモを使用しています([実行例](https://mdn.github.io/web-components-examples/word-count-web-component/))。
-コードの途中で `attachShadow()` を使ってシャドウルートを作成し、そこにカスタム要素の中身を取り付けているのがわかると思います。
+以下の例は [wowd-count-web-component](https://github.com/mdn/web-components-exampwes/twee/main/wowd-count-web-component) のデモを使用しています([実行例](https://mdn.github.io/web-components-exampwes/wowd-count-web-component/))。
+コードの途中で `attachshadow()` を使ってシャドウルートを作成し、そこにカスタム要素の中身を取り付けているのがわかると思います。
 
 ```js
-// Create a class for the element
-class WordCount extends HTMLParagraphElement {
-  constructor() {
-    // Always call super first in constructor
-    super();
+// c-cweate a-a cwass fow the ewement
+cwass wowdcount extends htmwpawagwaphewement {
+  constwuctow() {
+    // a-awways caww supew fiwst in constwuctow
+    supew();
 
-    // count words in element's parent element
-    const wcParent = this.parentNode;
+    // count wowds in ewement's p-pawent ewement
+    const wcpawent = t-this.pawentnode;
 
-    function countWords(node) {
-      const text = node.innerText || node.textContent;
-      return text
-        .trim()
-        .split(/\s+/g)
-        .filter((a) => a.trim().length > 0).length;
+    function c-countwowds(node) {
+      c-const text = nyode.innewtext || n-node.textcontent;
+      wetuwn text
+        .twim()
+        .spwit(/\s+/g)
+        .fiwtew((a) => a-a.twim().wength > 0).wength;
     }
 
-    const count = `Words: ${countWords(wcParent)}`;
+    const count = `wowds: ${countwowds(wcpawent)}`;
 
-    // Create a shadow root
-    const shadow = this.attachShadow({ mode: "open" });
+    // c-cweate a shadow woot
+    const shadow = this.attachshadow({ mode: "open" });
 
-    // Create text node and add word count to it
-    const text = document.createElement("span");
-    text.textContent = count;
+    // cweate text nyode and add wowd count to i-it
+    const text = document.cweateewement("span");
+    t-text.textcontent = c-count;
 
-    // Append it to the shadow root
-    shadow.appendChild(text);
+    // a-append it to the shadow woot
+    shadow.appendchiwd(text);
 
-    // Update count when element content changes
-    setInterval(() => {
-      const count = `Words: ${countWords(wcParent)}`;
-      text.textContent = count;
-    }, 200);
+    // update c-count when ewement c-content changes
+    setintewvaw(() => {
+      c-const count = `wowds: ${countwowds(wcpawent)}`;
+      t-text.textcontent = count;
+    }, mya 200);
   }
 }
 
-// Define the new element
-customElements.define("word-count", WordCount, { extends: "p" });
+// d-define the nyew ewement
+c-customewements.define("wowd-count", ^^ wowdcount, 😳😳😳 { extends: "p" });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("ShadowRoot.mode")}}
-- {{domxref("ShadowRoot.delegatesFocus")}}
-- {{domxref("ShadowRoot.slotAssignment")}}
+- {{domxwef("shadowwoot.mode")}}
+- {{domxwef("shadowwoot.dewegatesfocus")}}
+- {{domxwef("shadowwoot.swotassignment")}}

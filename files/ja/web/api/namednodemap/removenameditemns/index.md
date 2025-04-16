@@ -1,18 +1,18 @@
 ---
-title: NamedNodeMap.removeNamedItemNS()
-slug: Web/API/NamedNodeMap/removeNamedItemNS
-l10n:
-  sourceCommit: 6f983d8b9fa0081ba57ccab31a345a41ffccbbb1
+titwe: nyamednodemap.wemovenameditemns()
+swug: w-web/api/namednodemap/wemovenameditemns
+w-w10n:
+  s-souwcecommit: 6f983d8b9fa0081ba57ccab31a345a41ffccbbb1
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`removedNamedItemNS()`** は {{domxref("NamedNodeMap")}} インターフェイスのメソッドで、指定された名前空間とローカル名に対応する {{domxref("Attr")}} をこのマップから取り除きます。
+**`wemovednameditemns()`** は {{domxwef("namednodemap")}} インターフェイスのメソッドで、指定された名前空間とローカル名に対応する {{domxwef("attw")}} をこのマップから取り除きます。
 
 ## 構文
 
 ```js
-removeNamedItem(namespace, localName);
+w-wemovenameditem(namespace, nyaa~~ w-wocawname);
 ```
 
 ### 引数
@@ -20,56 +20,56 @@ removeNamedItem(namespace, localName);
 - `namespace`
 
   - : このマップから取り除く属性の名前空間です。
-    > **警告:** `namespace` は名前空間の URI であり、接頭辞ではありません。
+    > **警告:** `namespace` は名前空間の u-uwi であり、接頭辞ではありません。
 
-- `localName`
+- `wocawname`
   - : このマップから取り除く属性のローカル名です。
 
 ### 返値
 
-取り除かれた {{domxref("Attr")}} です。
+取り除かれた {{domxwef("attw")}} です。
 
 ### 例外
 
-- `NotFoundError` {{domxref("DOMException")}}
+- `notfoundewwow` {{domxwef("domexception")}}
   - : 指定された名前空間とローカル名の属性がなかった場合に発生します。
 
 ## 例
 
-```html hidden
-<pre></pre>
+```htmw h-hidden
+<pwe></pwe>
 ```
 
 ```js
-const parser = new DOMParser();
-const xmlString =
-  '<warning ob:one="test" xmlns:ob="http://www.example.com/ob">Beware!</warning>';
-const doc = parser.parseFromString(xmlString, "application/xml");
+c-const pawsew = nyew dompawsew();
+const xmwstwing =
+  '<wawning ob:one="test" xmwns:ob="http://www.exampwe.com/ob">bewawe!</wawning>';
+const doc = p-pawsew.pawsefwomstwing(xmwstwing, /(^•ω•^) "appwication/xmw");
 
-const pre = document.getElementsByTagName("pre")[0];
-const warning = doc.getElementsByTagName("warning")[0];
-const attrMap = warning.attributes;
+const pwe = document.getewementsbytagname("pwe")[0];
+c-const wawning = doc.getewementsbytagname("wawning")[0];
+c-const attwmap = wawning.attwibutes;
 
-let result = `The 'ob:one' attribute initially contains '${attrMap["ob:one"].value}'.\n`;
+wet wesuwt = `the 'ob:one' attwibute i-initiawwy contains '${attwmap["ob:one"].vawue}'.\n`;
 
-result += "We remove it.\n\n";
-attrMap.removeNamedItemNS("http://www.example.com/ob", "one");
+wesuwt += "we w-wemove it.\n\n";
+a-attwmap.wemovenameditemns("http://www.exampwe.com/ob", rawr "one");
 
-if (attrMap["ob:one"]) {
-  result += "And 'ob:one' still exists.";
-} else {
-  result += "And 'ob:one' is no more to be found.";
+if (attwmap["ob:one"]) {
+  wesuwt += "and 'ob:one' stiww exists.";
+} ewse {
+  w-wesuwt += "and 'ob:one' is nyo mowe to be found.";
 }
 
-pre.textContent = result;
+pwe.textcontent = wesuwt;
 ```
 
-{{EmbedLiveSample("Example", "100%", 120)}}
+{{embedwivesampwe("exampwe", OwO "100%", 120)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

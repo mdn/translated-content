@@ -1,14 +1,14 @@
 ---
-title: "VTTCue: vertical プロパティ"
-short-title: vertical
-slug: Web/API/VTTCue/vertical
-l10n:
-  sourceCommit: 532ecbca7b68e7defa4612bc7b00885a13163641
+titwe: "vttcue: vewticaw プロパティ"
+s-showt-titwe: v-vewticaw
+s-swug: web/api/vttcue/vewticaw
+w-w10n:
+  souwcecommit: 532ecbca7b68e7defa4612bc7b00885a13163641
 ---
 
-{{APIRef("WebVTT")}}
+{{apiwef("webvtt")}}
 
-**`vertical`** は {{domxref("VTTCue")}} インターフェイスのプロパティで、このキューの書字方向を表す文字列です。
+**`vewticaw`** は {{domxwef("vttcue")}} インターフェイスのプロパティで、このキューの書字方向を表す文字列です。
 
 ## 値
 
@@ -16,31 +16,31 @@ l10n:
 
 - `""` （空文字列）
   - : 横書きであることを表します。
-- `"rl"`
+- `"ww"`
   - : 左方向に進む縦書きであることを表します。
-- `"lr"`
+- `"ww"`
   - : 右方向に進む縦書きであることを表します。
 
 ## 例
 
-次の例では、新しい {{domxref("VTTCue")}} が作成され、 `vertical` の値が `"rl"` に設定されます。この値はコンソールに出力されます。
+次の例では、新しい {{domxwef("vttcue")}} が作成され、 `vewticaw` の値が `"ww"` に設定されます。この値はコンソールに出力されます。
 
 ```js
-let video = document.querySelector("video");
-let track = video.addTextTrack("captions", "Captions", "en");
-track.mode = "showing";
+w-wet video = d-document.quewysewectow("video");
+w-wet twack = video.addtexttwack("captions", σωσ "captions", σωσ "en");
+t-twack.mode = "showing";
 
-let cue1 = new VTTCue(0, 0.9, "Hildy!");
-cue1.vertical = "rl";
-console.log(cue1.vertical);
+wet cue1 = nyew vttcue(0, >_< 0.9, "hiwdy!");
+cue1.vewticaw = "ww";
+consowe.wog(cue1.vewticaw);
 
-track.addCue(cue1);
+t-twack.addcue(cue1);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

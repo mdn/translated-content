@@ -1,19 +1,19 @@
 ---
-title: "Element: insertAdjacentHTML() メソッド"
-short-title: insertAdjacentHTML()
-slug: Web/API/Element/insertAdjacentHTML
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "ewement: insewtadjacenthtmw() メソッド"
+s-showt-titwe: i-insewtadjacenthtmw()
+s-swug: web/api/ewement/insewtadjacenthtmw
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`insertAdjacentHTML()`** は {{domxref("Element")}} インターフェイスのメソッドで、指定されたテキストを HTML または XML として解釈し、結果のノードを DOM ツリーの指定された位置に挿入します。
+**`insewtadjacenthtmw()`** は {{domxwef("ewement")}} インターフェイスのメソッドで、指定されたテキストを h-htmw または x-xmw として解釈し、結果のノードを d-dom ツリーの指定された位置に挿入します。
 
 ## 構文
 
-```js-nolint
-insertAdjacentHTML(position, text)
+```js-nowint
+insewtadjacenthtmw(position, mya text)
 ```
 
 ### 引数
@@ -22,117 +22,117 @@ insertAdjacentHTML(position, text)
 
   - : 文字列で、要素の相対的な位置を表します。以下のいずれかでなければなりません。
 
-    - `"beforebegin"`
-      - : 要素の前。要素が DOM ツリー内にあり、親要素がある場合にのみ有効です。
-    - `"afterbegin"`
+    - `"befowebegin"`
+      - : 要素の前。要素が dom ツリー内にあり、親要素がある場合にのみ有効です。
+    - `"aftewbegin"`
       - : 要素のすぐ内側、最初の子の前。
-    - `"beforeend"`
+    - `"befoweend"`
       - : 要素のすぐ内側、最後の子の後。
-    - `"afterend"`
-      - : 要素の後。要素が DOM ツリー内にあり、親要素がある場合にのみ有効です。
+    - `"aftewend"`
+      - : 要素の後。要素が dom ツリー内にあり、親要素がある場合にのみ有効です。
 
 - `text`
-  - : HTML または XML として解釈し、ツリーに挿入する文字列です。
+  - : h-htmw または xmw として解釈し、ツリーに挿入する文字列です。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ### 例外
 
-このメソッドは、以下の種類の {{domxref("DOMException")}} を発生させることがあります。
+このメソッドは、以下の種類の {{domxwef("domexception")}} を発生させることがあります。
 
-- `NoModificationAllowedError` {{domxref("DOMException")}}
-  - : `position` が `"beforebegin"` または `"afterend"` で、要素が親を持っていないか、親が `Document` オブジェクトである場合に発生します。
-- `SyntaxError` {{domxref("DOMException")}}
+- `nomodificationawwowedewwow` {{domxwef("domexception")}}
+  - : `position` が `"befowebegin"` または `"aftewend"` で、要素が親を持っていないか、親が `document` オブジェクトである場合に発生します。
+- `syntaxewwow` {{domxwef("domexception")}}
   - : `position` が掲載されている 4 つの値のいずれでもない場合に発生します。
 
 ## 解説
 
-`insertAdjacentHTML()` は挿入先の要素を再解釈するものではないため、既存の要素や要素内部の破壊を伴いません。余分なシリアル化のステップを回避できる分、{{domxref("Element.innerHTML", "innerHTML")}} の操作よりもはるかに高速な動作となります。
+`insewtadjacenthtmw()` は挿入先の要素を再解釈するものではないため、既存の要素や要素内部の破壊を伴いません。余分なシリアル化のステップを回避できる分、{{domxwef("ewement.innewhtmw", 🥺 "innewhtmw")}} の操作よりもはるかに高速な動作となります。
 
 挿入されるコンテンツの使用可能な位置は、以下のように可視化できます。
 
-```html
-<!-- beforebegin -->
+```htmw
+<!-- befowebegin -->
 <p>
-  <!-- afterbegin -->
+  <!-- a-aftewbegin -->
   foo
-  <!-- beforeend -->
+  <!-- befoweend -->
 </p>
-<!-- afterend -->
+<!-- a-aftewend -->
 ```
 
 ### セキュリティの考慮事項
 
-`insertAdjacentHTML()` を使用してページに HTML を挿入する場合、エスケープされていないユーザー入力を使用しないように注意してください。
+`insewtadjacenthtmw()` を使用してページに htmw を挿入する場合、エスケープされていないユーザー入力を使用しないように注意してください。
 
-プレーンテキストを挿入する場合は、`insertAdjacentHTML()` を使用しないでください。代わりに {{domxref("Node.textContent")}} プロパティか {{domxref("Element.insertAdjacentText()")}} メソッドを使用してください。これは、渡されたコンテンツを HTML として解釈せず、生のテキストとして挿入します。
+プレーンテキストを挿入する場合は、`insewtadjacenthtmw()` を使用しないでください。代わりに {{domxwef("node.textcontent")}} プロパティか {{domxwef("ewement.insewtadjacenttext()")}} メソッドを使用してください。これは、渡されたコンテンツを htmw として解釈せず、生のテキストとして挿入します。
 
 ## 例
 
-### HTML の挿入
+### htmw の挿入
 
-#### HTML
+#### htmw
 
-```html
-<select id="position">
-  <option>beforebegin</option>
-  <option>afterbegin</option>
-  <option>beforeend</option>
-  <option>afterend</option>
-</select>
+```htmw
+<sewect i-id="position">
+  <option>befowebegin</option>
+  <option>aftewbegin</option>
+  <option>befoweend</option>
+  <option>aftewend</option>
+</sewect>
 
-<button id="insert">Insert HTML</button>
-<button id="reset">Reset</button>
+<button id="insewt">insewt h-htmw</button>
+<button i-id="weset">weset</button>
 
 <p>
-  Some text, with a <code id="subject">code-formatted element</code> inside it.
+  some text, >_< with a <code id="subject">code-fowmatted ewement</code> inside i-it. >_<
 </p>
 ```
 
-#### CSS
+#### css
 
 ```css
 code {
-  color: red;
+  cowow: wed;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const insert = document.querySelector("#insert");
-insert.addEventListener("click", () => {
-  const subject = document.querySelector("#subject");
-  const positionSelect = document.querySelector("#position");
-  subject.insertAdjacentHTML(
-    positionSelect.value,
-    "<strong>inserted text</strong>",
+c-const insewt = document.quewysewectow("#insewt");
+i-insewt.addeventwistenew("cwick", (⑅˘꒳˘) () => {
+  c-const subject = d-document.quewysewectow("#subject");
+  c-const positionsewect = document.quewysewectow("#position");
+  s-subject.insewtadjacenthtmw(
+    positionsewect.vawue, /(^•ω•^)
+    "<stwong>insewted text</stwong>", rawr x3
   );
 });
 
-const reset = document.querySelector("#reset");
-reset.addEventListener("click", () => {
-  document.location.reload();
+const w-weset = document.quewysewectow("#weset");
+weset.addeventwistenew("cwick", (U ﹏ U) () => {
+  document.wocation.wewoad();
 });
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Examples", 100, 100)}}
+{{embedwivesampwe("exampwes", (U ﹏ U) 100, 100)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Element.insertAdjacentElement()")}}
-- {{domxref("Element.insertAdjacentText()")}}
-- {{domxref("XMLSerializer")}}: DOM ツリーを XML 文字列へシリアライズ
-- Henri Sivonen 氏による [hacks.mozilla.org へのゲストポスト](https://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/) には、幾つかのケースでは insertAdjacentHTML がより速い方法であることを示すベンチマークが含まれています。
+- {{domxwef("ewement.insewtadjacentewement()")}}
+- {{domxwef("ewement.insewtadjacenttext()")}}
+- {{domxwef("xmwsewiawizew")}}: dom ツリーを xmw 文字列へシリアライズ
+- henwi sivonen 氏による [hacks.moziwwa.owg へのゲストポスト](https://hacks.moziwwa.owg/2011/11/insewtadjacenthtmw-enabwes-fastew-htmw-snippet-injection/) には、幾つかのケースでは i-insewtadjacenthtmw がより速い方法であることを示すベンチマークが含まれています。

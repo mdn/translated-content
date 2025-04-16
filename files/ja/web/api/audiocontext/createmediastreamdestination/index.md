@@ -1,23 +1,23 @@
 ---
-title: "AudioContext: createMediaStreamDestination() メソッド"
-short-title: createMediaStreamDestination()
-slug: Web/API/AudioContext/createMediaStreamDestination
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "audiocontext: cweatemediastweamdestination() メソッド"
+s-showt-titwe: c-cweatemediastweamdestination()
+s-swug: web/api/audiocontext/cweatemediastweamdestination
+w-w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web audio a-api") }}
 
-`createMediaStreamDestination()` は {{ domxref("AudioContext") }} インターフェイスのメソッドで、 [WebRTC](/ja/docs/Web/API/WebRTC_API) の {{domxref("MediaStream")}} と関連付けられた {{domxref("MediaStreamAudioDestinationNode")}} オブジェクトを生成します。この MediaStream はローカルファイルに格納されたり他のコンピューターに送信されたりする音声ストリームを表します。
+`cweatemediastweamdestination()` は {{ domxwef("audiocontext") }} インターフェイスのメソッドで、 [webwtc](/ja/docs/web/api/webwtc_api) の {{domxwef("mediastweam")}} と関連付けられた {{domxwef("mediastweamaudiodestinationnode")}} オブジェクトを生成します。この mediastweam はローカルファイルに格納されたり他のコンピューターに送信されたりする音声ストリームを表します。
 
-{{domxref("MediaStream")}} はノードが生成されたときに作成され、{{domxref("MediaStreamAudioDestinationNode")}}の `stream` プロパティを通じてアクセスすることができます。このストリームは {{domxref("navigator.getUserMedia") }} で得られた `MediaStream` と同じような使い方ができます。例えば、`RTCPeerConnection` インターフェイスの `addStream()` メソッドでリモートの端末に送ることができます。
+{{domxwef("mediastweam")}} はノードが生成されたときに作成され、{{domxwef("mediastweamaudiodestinationnode")}}の `stweam` プロパティを通じてアクセスすることができます。このストリームは {{domxwef("navigatow.getusewmedia") }} で得られた `mediastweam` と同じような使い方ができます。例えば、`wtcpeewconnection` インターフェイスの `addstweam()` メソッドでリモートの端末に送ることができます。
 
-詳細は {{domxref("MediaStreamAudioDestinationNode")}} のページを参照してください。
+詳細は {{domxwef("mediastweamaudiodestinationnode")}} のページを参照してください。
 
 ## 構文
 
-```js-nolint
-createMediaStreamDestination()
+```js-nowint
+cweatemediastweamdestination()
 ```
 
 ### 引数
@@ -26,78 +26,78 @@ createMediaStreamDestination()
 
 ### 返値
 
-{{domxref("MediaStreamAudioDestinationNode")}} です。
+{{domxwef("mediastweamaudiodestinationnode")}} です。
 
 ## 例
 
-次の簡単な例では、{{domxref("MediaStreamAudioDestinationNode")}} と {{ domxref("OscillatorNode") }} と {{ domxref("MediaRecorder") }} (そのため現時点では、このサンプルは Firefox と Chrome でしか動作しません) を作成します。`MediaRecorder` は `MediaStreamDestinationNode` からの情報を記録するように設定されています。
+次の簡単な例では、{{domxwef("mediastweamaudiodestinationnode")}} と {{ domxwef("osciwwatownode") }} と {{ d-domxwef("mediawecowdew") }} (そのため現時点では、このサンプルは fiwefox と chwome でしか動作しません) を作成します。`mediawecowdew` は `mediastweamdestinationnode` からの情報を記録するように設定されています。
 
-ボタンをクリックするとオシレーター（振動子）が開始し、`MediaRecorder` も開始します。再びボタンを押して止めると、オシレーターと `MediaRecorder` の両方が停止します。`MediaRecorder` が停止すると `dataavailable` イベントが発火され、イベントデータが `chunks`配列にプッシュされます。その後、`stop` イベントが発火すると、新しい `blob` が opus タイプで作られます—そこには `chunks`配列のデータが書き込まれていて、その blob の URL を指す新しいウィンドウ（タブ）が開きます。
+ボタンをクリックするとオシレーター（振動子）が開始し、`mediawecowdew` も開始します。再びボタンを押して止めると、オシレーターと `mediawecowdew` の両方が停止します。`mediawecowdew` が停止すると `dataavaiwabwe` イベントが発火され、イベントデータが `chunks`配列にプッシュされます。その後、`stop` イベントが発火すると、新しい `bwob` が o-opus タイプで作られます—そこには `chunks`配列のデータが書き込まれていて、その bwob の u-uww を指す新しいウィンドウ（タブ）が開きます。
 
 そこで opus ファイルの再生と保存ができます。
 
-```html
-<!doctype html>
-<html lang="en-US">
+```htmw
+<!doctype htmw>
+<htmw wang="en-us">
   <head>
-    <meta charset="UTF-8" />
-    <title>createMediaStreamDestination() demo</title>
+    <meta c-chawset="utf-8" />
+    <titwe>cweatemediastweamdestination() demo</titwe>
   </head>
   <body>
-    <h1>createMediaStreamDestination() demo</h1>
+    <h1>cweatemediastweamdestination() d-demo</h1>
 
-    <p>Encoding a pure sine wave to an Opus file</p>
-    <button>Make sine wave</button>
-    <audio controls></audio>
-    <script>
-      const b = document.querySelector("button");
-      let clicked = false;
+    <p>encoding a-a puwe sine wave to an opus fiwe</p>
+    <button>make sine wave</button>
+    <audio c-contwows></audio>
+    <scwipt>
+      const b = document.quewysewectow("button");
+      wet cwicked = fawse;
       const chunks = [];
-      const ac = new AudioContext();
-      const osc = ac.createOscillator();
-      const dest = ac.createMediaStreamDestination();
-      const mediaRecorder = new MediaRecorder(dest.stream);
+      c-const ac = nyew audiocontext();
+      c-const o-osc = ac.cweateosciwwatow();
+      c-const dest = a-ac.cweatemediastweamdestination();
+      const mediawecowdew = n-new mediawecowdew(dest.stweam);
       osc.connect(dest);
 
-      b.addEventListener("click", (e) => {
-        if (!clicked) {
-          mediaRecorder.start();
-          osc.start(0);
-          e.target.textContent = "Stop recording";
-          clicked = true;
-        } else {
-          mediaRecorder.stop();
-          osc.stop(0);
-          e.target.disabled = true;
+      b.addeventwistenew("cwick", 😳😳😳 (e) => {
+        i-if (!cwicked) {
+          mediawecowdew.stawt();
+          osc.stawt(0);
+          e.tawget.textcontent = "stop wecowding";
+          cwicked = twue;
+        } e-ewse {
+          mediawecowdew.stop();
+          o-osc.stop(0);
+          e-e.tawget.disabwed = t-twue;
         }
       });
 
-      mediaRecorder.ondataavailable = (evt) => {
-        // それぞれのチャンク (blob) を配列に入れる
+      mediawecowdew.ondataavaiwabwe = (evt) => {
+        // それぞれのチャンク (bwob) を配列に入れる
         chunks.push(evt.data);
       };
 
-      mediaRecorder.onstop = (evt) => {
-        // blob を作成し開く
-        const blob = new Blob(chunks, { type: "audio/ogg; codecs=opus" });
-        document.querySelector("audio").src = URL.createObjectURL(blob);
+      mediawecowdew.onstop = (evt) => {
+        // b-bwob を作成し開く
+        c-const bwob = nyew bwob(chunks, 😳😳😳 { t-type: "audio/ogg; c-codecs=opus" });
+        document.quewysewectow("audio").swc = u-uww.cweateobjectuww(bwob);
       };
-    </script>
+    </scwipt>
   </body>
-</html>
+</htmw>
 ```
 
-> [!NOTE]
-> Github で[実際に動作する例を閲覧](https://mdn.github.io/webaudio-examples/create-media-stream-destination/index.html)したり、[ソースコードを読む](https://github.com/mdn/webaudio-examples/blob/master/create-media-stream-destination/index.html)ことができます。
+> [!note]
+> github で[実際に動作する例を閲覧](https://mdn.github.io/webaudio-exampwes/cweate-media-stweam-destination/index.htmw)したり、[ソースコードを読む](https://github.com/mdn/webaudio-exampwes/bwob/mastew/cweate-media-stweam-destination/index.htmw)ことができます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ a-api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)

@@ -1,43 +1,43 @@
 ---
-title: "Element: getElementsByTagNameNS() メソッド"
-short-title: getElementsByTagNameNS()
-slug: Web/API/Element/getElementsByTagNameNS
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "ewement: getewementsbytagnamens() メソッド"
+s-showt-titwe: g-getewementsbytagnamens()
+s-swug: web/api/ewement/getewementsbytagnamens
+w-w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Element.getElementsByTagNameNS()`** メソッドは、指定された名前空間に属する、指定されたタグ名を持つ要素の {{domxref("HTMLCollection")}} をライブで返します。これは {{Domxref("Document.getElementsByTagNameNS")}} に似ていますが、検索対象が指定された要素の子孫に限定される点が異なります。
+**`ewement.getewementsbytagnamens()`** メソッドは、指定された名前空間に属する、指定されたタグ名を持つ要素の {{domxwef("htmwcowwection")}} をライブで返します。これは {{domxwef("document.getewementsbytagnamens")}} に似ていますが、検索対象が指定された要素の子孫に限定される点が異なります。
 
 ## 構文
 
-```js-nolint
-getElementsByTagNameNS(namespaceURI, localName)
+```js-nowint
+g-getewementsbytagnamens(namespaceuwi, (⑅˘꒳˘) w-wocawname)
 ```
 
 ### 引数
 
-- `namespaceURI` は検索する要素の名前空間 URI です（{{domxref("Element.namespaceURI")}} および {{domxref("Attr.namespaceURI")}} を参照してください）。例えば、XHTML 要素を検索する場合は、XHTML の名前空間 URI である `http://www.w3.org/1999/xhtml` を使用してください。
-- `localName` は検索する要素のローカル名、またはすべての要素に一致する特殊な値 `"*"` です（{{domxref("Element.localName")}} および {{domxref("Attr.localName")}} を参照）。
+- `namespaceuwi` は検索する要素の名前空間 uwi です（{{domxwef("ewement.namespaceuwi")}} および {{domxwef("attw.namespaceuwi")}} を参照してください）。例えば、xhtmw 要素を検索する場合は、xhtmw の名前空間 uwi である `http://www.w3.owg/1999/xhtmw` を使用してください。
+- `wocawname` は検索する要素のローカル名、またはすべての要素に一致する特殊な値 `"*"` です（{{domxwef("ewement.wocawname")}} および {{domxwef("attw.wocawname")}} を参照）。
 
 ### 返値
 
-生きた {{domxref("HTMLCollection")}} で、ツリー内で見つかった要素を出現順に保持します。
+生きた {{domxwef("htmwcowwection")}} で、ツリー内で見つかった要素を出現順に保持します。
 
 ## 例
 
 ```js
-// XHTML 文書の table の多くのセルの配列をチェック。
-const table = document.getElementById("forecast-table");
-const cells = table.getElementsByTagNameNS(
-  "http://www.w3.org/1999/xhtml",
+// xhtmw 文書の tabwe の多くのセルの配列をチェック。
+c-const tabwe = document.getewementbyid("fowecast-tabwe");
+const cewws = tabwe.getewementsbytagnamens(
+  "http://www.w3.owg/1999/xhtmw", (U ᵕ U❁)
   "td",
 );
 
-for (const cell of cells) {
-  const axis = cell.getAttribute("axis");
-  if (axis === "year") {
+f-fow (const ceww of cewws) {
+  c-const axis = ceww.getattwibute("axis");
+  if (axis === "yeaw") {
     // データを取得
   }
 }
@@ -45,8 +45,8 @@ for (const cell of cells) {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

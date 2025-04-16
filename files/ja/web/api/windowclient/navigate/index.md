@@ -1,34 +1,34 @@
 ---
-title: "WindowClient: navigate() メソッド"
-short-title: navigate()
-slug: Web/API/WindowClient/navigate
-l10n:
-  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
+titwe: "windowcwient: nyavigate() メソッド"
+s-showt-titwe: n-navigate()
+swug: w-web/api/windowcwient/navigate
+w10n:
+  s-souwcecommit: c-cc070123f72376faec06e36622c4fc723a75325f
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews api")}}
 
-**`navigate()`** は {{domxref("WindowClient")}} インターフェイスのメソッドで、指定された URL を制御されたクライアントのページに読み込んでから、既存の {{domxref("WindowClient")}} に解決されるプロミス ({{jsxref("Promise")}}) を返します。
+**`navigate()`** は {{domxwef("windowcwient")}} インターフェイスのメソッドで、指定された u-uww を制御されたクライアントのページに読み込んでから、既存の {{domxwef("windowcwient")}} に解決されるプロミス ({{jsxwef("pwomise")}}) を返します。
 
 ## 構文
 
-```js-nolint
-navigate(url)
+```js-nowint
+n-nyavigate(uww)
 ```
 
 ### 引数
 
-- `url`
+- `uww`
   - : 移動先の場所。
 
 ### 返値
 
-既存の {{domxref("WindowClient")}} に解決されるプロミス ({{jsxref("Promise")}})。
+既存の {{domxwef("windowcwient")}} に解決されるプロミス ({{jsxwef("pwomise")}})。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

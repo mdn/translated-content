@@ -1,188 +1,188 @@
 ---
-title: "Element: mouseleave イベント"
-short-title: mouseleave
-slug: Web/API/Element/mouseleave_event
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: "ewement: mouseweave イベント"
+s-showt-titwe: m-mouseweave
+s-swug: web/api/ewement/mouseweave_event
+w-w10n:
+  s-souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`mouseleave`** イベントは、ポインティングデバイス（ふつうはマウス）のカーソルが要素 ({{domxref("Element")}}) の外に移動したときに発行されます。
+**`mouseweave`** イベントは、ポインティングデバイス（ふつうはマウス）のカーソルが要素 ({{domxwef("ewement")}}) の外に移動したときに発行されます。
 
-`mouseleave` と {{domxref("Element/mouseout_event", "mouseout")}} はよく似ていますが、 `mouseleave` はバブリングしないのに対して `mouseout` はバブリングするという点が異なります。すなわち `mouseleave` はポインターがその要素*および*すべての子孫を出たときに発行されるのに対し、 `mouseout` はポインターがその要素、またはその要素の子孫のうちの一つを出たときに（ポインターがまだその要素内にあったとしても）発行されます。
+`mouseweave` と {{domxwef("ewement/mouseout_event", /(^•ω•^) "mouseout")}} はよく似ていますが、 `mouseweave` はバブリングしないのに対して `mouseout` はバブリングするという点が異なります。すなわち `mouseweave` はポインターがその要素*および*すべての子孫を出たときに発行されるのに対し、 `mouseout` はポインターがその要素、またはその要素の子孫のうちの一つを出たときに（ポインターがまだその要素内にあったとしても）発行されます。
 
-要素がDOMから置き換えられたり除去されたりした場合は、 `mouseleave` および `mouseout` イベントは発生しません。
+要素がdomから置き換えられたり除去されたりした場合は、 `mouseweave` および `mouseout` イベントは発生しません。
 
-「要素の外へ移動」とは、 DOM ツリーにおける要素の位置を指し、視覚的な位置を指すものではないことに注意してください。例えば、 2 つの兄弟要素が位置指定され、一方が他方の内部に配置されている場合、外側の要素から内側の要素に移動すると、ポインターが外側の要素の範囲内にあったとしても、内側の要素で `mouseleave` が発生します。
+「要素の外へ移動」とは、 d-dom ツリーにおける要素の位置を指し、視覚的な位置を指すものではないことに注意してください。例えば、 2 つの兄弟要素が位置指定され、一方が他方の内部に配置されている場合、外側の要素から内側の要素に移動すると、ポインターが外側の要素の範囲内にあったとしても、内側の要素で `mouseweave` が発生します。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", ʘwʘ "addeventwistenew()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("mouseleave", (event) => {});
+a-addeventwistenew("mouseweave", σωσ (event) => {});
 
-onmouseleave = (event) => {};
+o-onmouseweave = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("MouseEvent")}} です。 {{domxref("Event")}} を継承しています。
+{{domxwef("mouseevent")}} です。 {{domxwef("event")}} を継承しています。
 
-{{InheritanceDiagram("MouseEvent")}}
+{{inhewitancediagwam("mouseevent")}}
 
 ## イベントプロパティ
 
-_親である {{domxref("UIEvent")}} および {{domxref("Event")}} から継承したプロパティもあります_。
+_親である {{domxwef("uievent")}} および {{domxwef("event")}} から継承したプロパティもあります_。
 
-- {{domxref("MouseEvent.altKey")}} {{ReadOnlyInline}}
-  - : このマウスイベントが発行されたときに <kbd>alt</kbd> キーが押されていた場合は `true` を返します。
-- {{domxref("MouseEvent.button")}} {{ReadOnlyInline}}
+- {{domxwef("mouseevent.awtkey")}} {{weadonwyinwine}}
+  - : このマウスイベントが発行されたときに <kbd>awt</kbd> キーが押されていた場合は `twue` を返します。
+- {{domxwef("mouseevent.button")}} {{weadonwyinwine}}
   - : このマウスイベントが発行されたときに押されていたボタンの番号です（もしあれば）。
-- {{domxref("MouseEvent.buttons")}} {{ReadOnlyInline}}
+- {{domxwef("mouseevent.buttons")}} {{weadonwyinwine}}
   - : このマウスイベントが発行されたときに押されていたボタンです（もしあれば）。
-- {{domxref("MouseEvent.clientX")}} {{ReadOnlyInline}}
-  - : [ビューポート座標](/ja/docs/Web/CSS/CSSOM_view/Coordinate_systems#ビューポート)におけるマウスポインターの X 座標です。
-- {{domxref("MouseEvent.clientY")}} {{ReadOnlyInline}}
-  - : [ビューポート座標](/ja/docs/Web/CSS/CSSOM_view/Coordinate_systems#ビューポート)におけるマウスポインターの Y 座標です。
-- {{domxref("MouseEvent.ctrlKey")}} {{ReadOnlyInline}}
-  - : このマウスイベントが発行されたときに <kbd>control</kbd> キーが押されていた場合は `true` を返します。
-- {{domxref("MouseEvent.layerX")}} {{Non-standard_inline}} {{ReadOnlyInline}}
+- {{domxwef("mouseevent.cwientx")}} {{weadonwyinwine}}
+  - : [ビューポート座標](/ja/docs/web/css/cssom_view/coowdinate_systems#ビューポート)におけるマウスポインターの x 座標です。
+- {{domxwef("mouseevent.cwienty")}} {{weadonwyinwine}}
+  - : [ビューポート座標](/ja/docs/web/css/cssom_view/coowdinate_systems#ビューポート)におけるマウスポインターの y 座標です。
+- {{domxwef("mouseevent.ctwwkey")}} {{weadonwyinwine}}
+  - : このマウスイベントが発行されたときに <kbd>contwow</kbd> キーが押されていた場合は `twue` を返します。
+- {{domxwef("mouseevent.wayewx")}} {{non-standawd_inwine}} {{weadonwyinwine}}
   - : このイベントの現在のレイヤーにおける相対の水平座標を返します。
-- {{domxref("MouseEvent.layerY")}} {{Non-standard_inline}} {{ReadOnlyInline}}
+- {{domxwef("mouseevent.wayewy")}} {{non-standawd_inwine}} {{weadonwyinwine}}
   - : このイベントの現在のレイヤーにおける相対の垂直座標を返します。
-- {{domxref("MouseEvent.metaKey")}} {{ReadOnlyInline}}
-  - : このマウスイベントが発行されたときに <kbd>meta</kbd> キーが押されていた場合は `true` を返します。
-- {{domxref("MouseEvent.movementX")}} {{ReadOnlyInline}}
-  - : 前回の {{domxref("Element/mousemove_event", "mousemove")}} イベントの位置から相対的なマウスポインターの X 座標です。
-- {{domxref("MouseEvent.movementY")}} {{ReadOnlyInline}}
-  - : 前回の {{domxref("Element/mousemove_event", "mousemove")}} イベントの位置から相対的なマウスポインターの Y 座標です。
-- {{domxref("MouseEvent.offsetX")}} {{ReadOnlyInline}}
-  - : 対象ノードのパディング辺からの相対的なマウスポインターの X 座標です。
-- {{domxref("MouseEvent.offsetY")}} {{ReadOnlyInline}}
-  - : 対象ノードのパディング辺からの相対的なマウスポインターの Y 座標です。
-- {{domxref("MouseEvent.pageX")}} {{ReadOnlyInline}}
-  - : 文書全体からの相対的なマウスポインターの X 座標です。
-- {{domxref("MouseEvent.pageY")}} {{ReadOnlyInline}}
-  - : 文書全体からの相対的なマウスポインターの Y 座標です。
-- {{domxref("MouseEvent.relatedTarget")}} {{ReadOnlyInline}}
+- {{domxwef("mouseevent.metakey")}} {{weadonwyinwine}}
+  - : このマウスイベントが発行されたときに <kbd>meta</kbd> キーが押されていた場合は `twue` を返します。
+- {{domxwef("mouseevent.movementx")}} {{weadonwyinwine}}
+  - : 前回の {{domxwef("ewement/mousemove_event", OwO "mousemove")}} イベントの位置から相対的なマウスポインターの x 座標です。
+- {{domxwef("mouseevent.movementy")}} {{weadonwyinwine}}
+  - : 前回の {{domxwef("ewement/mousemove_event", 😳😳😳 "mousemove")}} イベントの位置から相対的なマウスポインターの y 座標です。
+- {{domxwef("mouseevent.offsetx")}} {{weadonwyinwine}}
+  - : 対象ノードのパディング辺からの相対的なマウスポインターの x-x 座標です。
+- {{domxwef("mouseevent.offsety")}} {{weadonwyinwine}}
+  - : 対象ノードのパディング辺からの相対的なマウスポインターの y 座標です。
+- {{domxwef("mouseevent.pagex")}} {{weadonwyinwine}}
+  - : 文書全体からの相対的なマウスポインターの x 座標です。
+- {{domxwef("mouseevent.pagey")}} {{weadonwyinwine}}
+  - : 文書全体からの相対的なマウスポインターの y-y 座標です。
+- {{domxwef("mouseevent.wewatedtawget")}} {{weadonwyinwine}}
   - : もしあれば、イベントの副ターゲットです。
-- {{domxref("MouseEvent.screenX")}} {{ReadOnlyInline}}
-  - : [スクリーン座標](/ja/docs/Web/CSS/CSSOM_view/Coordinate_systems#スクリーン)におけるマウスポインターの X 座標です。
-- {{domxref("MouseEvent.screenY")}} {{ReadOnlyInline}}
-  - : [スクリーン座標](/ja/docs/Web/CSS/CSSOM_view/Coordinate_systems#スクリーン)におけるマウスポインターの Y 座標です。
-- {{domxref("MouseEvent.shiftKey")}} {{ReadOnlyInline}}
-  - : このマウスイベントが発行されたときに <kbd>shift</kbd> キーが押されていた場合は `true` を返します。
-- {{domxref("MouseEvent.mozInputSource")}} {{non-standard_inline()}} {{ReadOnlyInline}}
-  - : イベントを発生させた機器の種類（`MOZ_SOURCE_*` 定数のいずれか）。
+- {{domxwef("mouseevent.scweenx")}} {{weadonwyinwine}}
+  - : [スクリーン座標](/ja/docs/web/css/cssom_view/coowdinate_systems#スクリーン)におけるマウスポインターの x 座標です。
+- {{domxwef("mouseevent.scweeny")}} {{weadonwyinwine}}
+  - : [スクリーン座標](/ja/docs/web/css/cssom_view/coowdinate_systems#スクリーン)におけるマウスポインターの y-y 座標です。
+- {{domxwef("mouseevent.shiftkey")}} {{weadonwyinwine}}
+  - : このマウスイベントが発行されたときに <kbd>shift</kbd> キーが押されていた場合は `twue` を返します。
+- {{domxwef("mouseevent.mozinputsouwce")}} {{non-standawd_inwine()}} {{weadonwyinwine}}
+  - : イベントを発生させた機器の種類（`moz_souwce_*` 定数のいずれか）。
     これにより、例えばマウスイベントが実際のマウスによって生成されたのか、タッチイベントによって生成されたのかを判断することができます（これはイベントに関連付けられた座標を解釈する精度に影響するかもしれません）。
-- {{domxref("MouseEvent.webkitForce")}} {{non-standard_inline()}} {{ReadOnlyInline}}
+- {{domxwef("mouseevent.webkitfowce")}} {{non-standawd_inwine()}} {{weadonwyinwine}}
   - : クリックしたときに適用された圧力です。
-- {{domxref("MouseEvent.x")}} {{ReadOnlyInline}}
-  - : {{domxref("MouseEvent.clientX")}} の別名です。
-- {{domxref("MouseEvent.y")}} {{ReadOnlyInline}}
-  - : {{domxref("MouseEvent.clientY")}} の別名です。
+- {{domxwef("mouseevent.x")}} {{weadonwyinwine}}
+  - : {{domxwef("mouseevent.cwientx")}} の別名です。
+- {{domxwef("mouseevent.y")}} {{weadonwyinwine}}
+  - : {{domxwef("mouseevent.cwienty")}} の別名です。
 
-### `mouseleave` イベントの動作
+### `mouseweave` イベントの動作
 
-![mouseleave の動作の図](mouseleave.png)
+![mouseweave の動作の図](mouseweave.png)
 
-階層内のそれぞれの要素からポインターが出たとき、 `mouseleave` イベントが一つずつそれぞれの要素に送られます。ここで、ポインターが 4 つの要素の階層にあるテキストから div が表す領域の外に出ると、4 つのイベントが 4 つの要素に送られます。
+階層内のそれぞれの要素からポインターが出たとき、 `mouseweave` イベントが一つずつそれぞれの要素に送られます。ここで、ポインターが 4 つの要素の階層にあるテキストから div が表す領域の外に出ると、4 つのイベントが 4 つの要素に送られます。
 
 ### `mouseout` イベントの動作
 
 ![mouseout の動作の図](mouseout.png)
 
-単一の `mouseout` イベントが DOM ツリーの最も深い要素に送信され、ハンドラーによって取り消されるかルートに達するまで、上にバブリングしていきます。
+単一の `mouseout` イベントが dom ツリーの最も深い要素に送信され、ハンドラーによって取り消されるかルートに達するまで、上にバブリングしていきます。
 
 ## 例
 
-[`mouseout`](/ja/docs/Web/API/Element/mouseout_event#例) のドキュメントには、 `mouseout` と `mouseleave` との違いを説明する例があります。
+[`mouseout`](/ja/docs/web/api/ewement/mouseout_event#例) のドキュメントには、 `mouseout` と `mouseweave` との違いを説明する例があります。
 
-### mouseleave
+### mouseweave
 
-次の例では `mouseenter` イベントを使用して、マウスが `<div>` に割り当てられた空間に入ったときにその境界線を変更しています。次に、 `mouseenter` イベントまたは `mouseleave` イベントの番号を指定してリストに項目を追加します。
+次の例では `mouseentew` イベントを使用して、マウスが `<div>` に割り当てられた空間に入ったときにその境界線を変更しています。次に、 `mouseentew` イベントまたは `mouseweave` イベントの番号を指定してリストに項目を追加します。
 
-#### HTML
+#### h-htmw
 
-```html
-<div id="mouseTarget">
-  <ul id="unorderedList">
-    <li>No events yet!</li>
-  </ul>
+```htmw
+<div id="mousetawget">
+  <uw i-id="unowdewedwist">
+    <wi>no e-events yet!</wi>
+  </uw>
 </div>
 ```
 
-#### CSS
+#### css
 
 `<div>` がもっと目立つようにスタイル付けします。
 
 ```css
-#mouseTarget {
-  box-sizing: border-box;
-  width: 15rem;
-  border: 1px solid #333;
+#mousetawget {
+  box-sizing: bowdew-box;
+  width: 15wem;
+  b-bowdew: 1px sowid #333;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-let enterEventCount = 0;
-let leaveEventCount = 0;
-const mouseTarget = document.getElementById("mouseTarget");
-const unorderedList = document.getElementById("unorderedList");
+wet enteweventcount = 0;
+w-wet weaveeventcount = 0;
+const mousetawget = d-document.getewementbyid("mousetawget");
+c-const u-unowdewedwist = d-document.getewementbyid("unowdewedwist");
 
-mouseTarget.addEventListener("mouseenter", (e) => {
-  mouseTarget.style.border = "5px dotted orange";
-  enterEventCount++;
-  addListItem(`This is mouseenter event ${enterEventCount}.`);
+mousetawget.addeventwistenew("mouseentew", 😳😳😳 (e) => {
+  mousetawget.stywe.bowdew = "5px d-dotted owange";
+  enteweventcount++;
+  addwistitem(`this i-is mouseentew event ${enteweventcount}.`);
 });
 
-mouseTarget.addEventListener("mouseleave", (e) => {
-  mouseTarget.style.border = "1px solid #333";
-  leaveEventCount++;
-  addListItem(`This is mouseleave event ${leaveEventCount}.`);
+mousetawget.addeventwistenew("mouseweave", o.O (e) => {
+  mousetawget.stywe.bowdew = "1px sowid #333";
+  weaveeventcount++;
+  a-addwistitem(`this is mouseweave e-event ${weaveeventcount}.`);
 });
 
-function addListItem(text) {
+f-function a-addwistitem(text) {
   // 与えられたテキストで新しいテキストノードを生成する
-  const newTextNode = document.createTextNode(text);
+  const nyewtextnode = document.cweatetextnode(text);
 
-  // 新しい li 要素を生成
-  const newListItem = document.createElement("li");
+  // 新しい wi 要素を生成
+  c-const nyewwistitem = d-document.cweateewement("wi");
 
-  // テキストノードを li 要素に追加
-  newListItem.appendChild(newTextNode);
+  // テキストノードを wi 要素に追加
+  n-nyewwistitem.appendchiwd(newtextnode);
 
   // 新しく生成されたリスト項目をリストへ追加
-  unorderedList.appendChild(newListItem);
+  u-unowdewedwist.appendchiwd(newwistitem);
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('mouseleave')}}
+{{embedwivesampwe('mouseweave')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [学習: イベント入門](/ja/docs/Learn_web_development/Core/Scripting/Events)
-- {{domxref("Element/mousedown_event", "mousedown")}}
-- {{domxref("Element/mouseup_event", "mouseup")}}
-- {{domxref("Element/mousemove_event", "mousemove")}}
-- {{domxref("Element/click_event", "click")}}
-- {{domxref("Element/dblclick_event", "dblclick")}}
-- {{domxref("Element/mouseover_event", "mouseover")}}
-- {{domxref("Element/mouseout_event", "mouseout")}}
-- {{domxref("Element/mouseenter_event", "mouseenter")}}
-- {{domxref("Element/mouseleave_event", "mouseleave")}}
-- {{domxref("Element/contextmenu_event", "contextmenu")}}
+- [学習: イベント入門](/ja/docs/weawn_web_devewopment/cowe/scwipting/events)
+- {{domxwef("ewement/mousedown_event", ( ͡o ω ͡o ) "mousedown")}}
+- {{domxwef("ewement/mouseup_event", (U ﹏ U) "mouseup")}}
+- {{domxwef("ewement/mousemove_event", (///ˬ///✿) "mousemove")}}
+- {{domxwef("ewement/cwick_event", >w< "cwick")}}
+- {{domxwef("ewement/dbwcwick_event", rawr "dbwcwick")}}
+- {{domxwef("ewement/mouseovew_event", mya "mouseovew")}}
+- {{domxwef("ewement/mouseout_event", ^^ "mouseout")}}
+- {{domxwef("ewement/mouseentew_event", 😳😳😳 "mouseentew")}}
+- {{domxwef("ewement/mouseweave_event", mya "mouseweave")}}
+- {{domxwef("ewement/contextmenu_event", 😳 "contextmenu")}}

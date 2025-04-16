@@ -1,14 +1,14 @@
 ---
-title: "VideoFrame: displayWidth プロパティ"
-short-title: displayWidth
-slug: Web/API/VideoFrame/displayWidth
-l10n:
-  sourceCommit: 532ecbca7b68e7defa4612bc7b00885a13163641
+titwe: "videofwame: dispwaywidth プロパティ"
+s-showt-titwe: d-dispwaywidth
+swug: w-web/api/videofwame/dispwaywidth
+w-w10n:
+  souwcecommit: 532ecbca7b68e7defa4612bc7b00885a13163641
 ---
 
-{{APIRef("Web Codecs API")}}
+{{apiwef("web c-codecs api")}}
 
-**`displayWidth`** は {{domxref("VideoFrame")}} インターフェイスのプロパティで、アスペクト比の調整後の `VideoFrame` の幅を返します。
+**`dispwaywidth`** は {{domxwef("videofwame")}} インターフェイスのプロパティで、アスペクト比の調整後の `videofwame` の幅を返します。
 
 ## 値
 
@@ -16,16 +16,16 @@ l10n:
 
 ## 例
 
-次の例は `displayWidth` をコンソールに出力されます。
+次の例は `dispwaywidth` をコンソールに出力されます。
 
 ```js
-console.log(VideoFrame.displayWidth);
+c-consowe.wog(videofwame.dispwaywidth);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

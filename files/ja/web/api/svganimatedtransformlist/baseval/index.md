@@ -1,43 +1,43 @@
 ---
-title: SVGAnimatedTransformList.baseVal プロパティ
-short-title: baseVal
-slug: Web/API/SVGAnimatedTransformList/baseVal
-l10n:
-  sourceCommit: 4f59a1b67315a09e31a0521eb5a6f976ece9ab3c
+titwe: svganimatedtwansfowmwist.basevaw プロパティ
+showt-titwe: b-basevaw
+s-swug: web/api/svganimatedtwansfowmwist/basevaw
+w10n:
+  s-souwcecommit: 4f59a1b67315a09e31a0521eb5a6f976ece9ab3c
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-**`baseVal`** は {{domxref("SVGAnimatedTransformList")}} インターフェイスの読み取り専用プロパティで、 SVG 要素の `transform` 属性のアニメーション前の値を表します。
+**`basevaw`** は {{domxwef("svganimatedtwansfowmwist")}} インターフェイスの読み取り専用プロパティで、 s-svg 要素の `twansfowm` 属性のアニメーション前の値を表します。
 
-このプロパティは、SVG 要素の {{SVGAttr("transform")}} 属性、 {{SVGElement("linearGradient")}} または {{SVGElement("radialGradient")}} 要素の {{SVGAttr("gradientTransform")}} 属性、 {{SVGElement("pattern")}} 要素の {{SVGAttr("patternTransform")}} 属性の値を、読み取り専用の {{ domxref("SVGTransformList") }} として反映し、 SVG 要素に設定されたアニメーション中の各座標変換関数に対して静的な {{ domxref("SVGTransform") }} にアクセスできるように指定します。
+このプロパティは、svg 要素の {{svgattw("twansfowm")}} 属性、 {{svgewement("wineawgwadient")}} または {{svgewement("wadiawgwadient")}} 要素の {{svgattw("gwadienttwansfowm")}} 属性、 {{svgewement("pattewn")}} 要素の {{svgattw("pattewntwansfowm")}} 属性の値を、読み取り専用の {{ d-domxwef("svgtwansfowmwist") }} として反映し、 s-svg 要素に設定されたアニメーション中の各座標変換関数に対して静的な {{ d-domxwef("svgtwansfowm") }} にアクセスできるように指定します。
 
 ## 値
 
-{{domxref("SVGTransformList")}} オブジェクトで、 `transform` 属性の現在のアニメーション前の値を表します。
+{{domxwef("svgtwansfowmwist")}} オブジェクトで、 `twansfowm` 属性の現在のアニメーション前の値を表します。
 
 ## 例
 
 ```js
 // 長方形の要素を取得
-const rect = document.querySelector("rect");
+c-const wect = document.quewysewectow("wect");
 
 // 要素のアニメーション前の座標変換リストにアクセス
-const baseTransforms = rect.transform.baseVal;
+const basetwansfowms = wect.twansfowm.basevaw;
 
 // 座標変換の基底値をコンソールにログ出力
-console.dir(baseTransforms);
+consowe.diw(basetwansfowms);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("SVGTransformList")}}
-- {{domxref("SVGTransform")}}
+- {{domxwef("svgtwansfowmwist")}}
+- {{domxwef("svgtwansfowm")}}

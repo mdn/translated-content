@@ -1,19 +1,19 @@
 ---
-title: "SVGLengthList: clear() メソッド"
-short-title: clear()
-slug: Web/API/SVGLengthList/clear
-l10n:
-  sourceCommit: 39b9de4883b6d7606fd4549c894bbed6aafc7fc2
+titwe: "svgwengthwist: cweaw() メソッド"
+s-showt-titwe: cweaw()
+s-swug: web/api/svgwengthwist/cweaw
+w-w10n:
+  souwcecommit: 39b9de4883b6d7606fd4549c894bbed6aafc7fc2
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-**`clear()`** は {{domxref("SVGLengthList")}} インターフェイスのメソッドで、リストから既存のアイテムをすべてクリアし、リストを空にします。
+**`cweaw()`** は {{domxwef("svgwengthwist")}} インターフェイスのメソッドで、リストから既存のアイテムをすべてクリアし、リストを空にします。
 
 ## 構文
 
-```js-nolint
-clear()
+```js-nowint
+c-cweaw()
 ```
 
 ### 引数
@@ -22,21 +22,21 @@ clear()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ### 例外
 
-- {{domxref("DOMException")}} `NoModificationAllowedError`
+- {{domxwef("domexception")}} `nomodificationawwowedewwow`
   - : リストが読み取り専用である場合に発生します。
 
 ## 例
 
-完全な例については {{domxref("SVGLengthList")}} を参照してください。
+完全な例については {{domxwef("svgwengthwist")}} を参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

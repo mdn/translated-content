@@ -1,173 +1,173 @@
 ---
-title: ViewTimeline
-slug: Web/API/ViewTimeline
-l10n:
-  sourceCommit: 7eaac8008ebe00417314379fab2285df23322e73
+titwe: viewtimewine
+swug: web/api/viewtimewine
+w-w10n:
+  souwcecommit: 7eaac8008ebe00417314379fab2285df23322e73
 ---
 
-{{APIRef("Web Animations")}}{{SeeCompatTable}}
+{{apiwef("web a-animations")}}{{seecompattabwe}}
 
-**`ViewTimeline`** は{{domxref("Web Animations API", "ウェブアニメーション API", "", "nocode")}} で、ビュー進捗ライムラインを表します（詳しくは [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)を参照してください）。
+**`viewtimewine`** は{{domxwef("web a-animations a-api", mya "ウェブアニメーション a-api", ʘwʘ "", "nocode")}} で、ビュー進捗ライムラインを表します（詳しくは [css スクロール駆動アニメーション](/ja/docs/web/css/css_scwoww-dwiven_animations)を参照してください）。
 
-`ViewTimeline` インスタンスを {{domxref("Animation.Animation", "Animation()")}} コンストラクターまたは {{domxref("Element.animate()", "animate()")}} メソッドに渡すと、アニメーションの進行を制御するタイムラインとして指定します。
+`viewtimewine` インスタンスを {{domxwef("animation.animation", (˘ω˘) "animation()")}} コンストラクターまたは {{domxwef("ewement.animate()", (U ﹏ U) "animate()")}} メソッドに渡すと、アニメーションの進行を制御するタイムラインとして指定します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-- {{domxref("ViewTimeline.ViewTimeline", "ViewTimeline()")}} {{Experimental_Inline}}
-  - : 新しい `ViewTimeline` オブジェクトインスタンスを作成します。
+- {{domxwef("viewtimewine.viewtimewine", "viewtimewine()")}} {{expewimentaw_inwine}}
+  - : 新しい `viewtimewine` オブジェクトインスタンスを作成します。
 
 ## インスタンスプロパティ
 
-_親である {{domxref("ScrollTimeline")}} から継承したプロパティもあります。_
+_親である {{domxwef("scwowwtimewine")}} から継承したプロパティもあります。_
 
-- {{domxref("ViewTimeline.subject", "subject")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxwef("viewtimewine.subject", ^•ﻌ•^ "subject")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
   - : 最も近い祖先のスクロール可能要素（スクローラー）内の可視性がタイムラインの進行、つまりアニメーションを駆動している主体要素への参照を返します。
-- {{domxref("ViewTimeline.startOffset", "startOffset")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : タイムラインのスクロール開始位置（進行度 0%）を表す {{domxref("CSSNumericValue")}} を、スクローラー内のコンテンツのオーバーフローする区間の開始位置からのオフセットとして返します。
-- {{domxref("ViewTimeline.endOffset", "endOffset")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : タイムラインのスクロールの終わり（進行度 100%）の位置を、スクローラー内のコンテンツが溢れた区間の開始位置からのオフセットとして表す {{domxref("CSSNumericValue")}} を返します。
+- {{domxwef("viewtimewine.stawtoffset", (˘ω˘) "stawtoffset")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : タイムラインのスクロール開始位置（進行度 0%）を表す {{domxwef("cssnumewicvawue")}} を、スクローラー内のコンテンツのオーバーフローする区間の開始位置からのオフセットとして返します。
+- {{domxwef("viewtimewine.endoffset", :3 "endoffset")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : タイムラインのスクロールの終わり（進行度 100%）の位置を、スクローラー内のコンテンツが溢れた区間の開始位置からのオフセットとして表す {{domxwef("cssnumewicvawue")}} を返します。
 
 ## インスタンスメソッド
 
-_このインターフェイスには、親である {{domxref("ScrollTimeline")}} から継承したメソッドもあります。_
+_このインターフェイスには、親である {{domxwef("scwowwtimewine")}} から継承したメソッドもあります。_
 
 ## 例
 
 ### ビュー進行タイムラインの主体とオフセットの表示
 
-この例では、ビュー進行タイムラインに沿って `class` が `subject` の要素をアニメーションしています - 文書がスクロールしながら上方向に移動されるとアニメーションします。また、`subject`, `startOffset`, `endOffset` の値を右上の output 要素に出力しています。
+この例では、ビュー進行タイムラインに沿って `cwass` が `subject` の要素をアニメーションしています - 文書がスクロールしながら上方向に移動されるとアニメーションします。また、`subject`, ^^;; `stawtoffset`, 🥺 `endoffset` の値を右上の o-output 要素に出力しています。
 
-#### HTML
+#### h-htmw
 
-例の HTML は下記のとおりです。
+例の h-htmw は下記のとおりです。
 
-```html
-<div class="content">
-  <h1>Content</h1>
+```htmw
+<div cwass="content">
+  <h1>content</h1>
 
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Risus quis varius quam
-    quisque id. Et ligula ullamcorper malesuada proin libero nunc consequat
-    interdum varius. Elit ullamcorper dignissim cras tincidunt lobortis feugiat
-    vivamus at augue.
+    wowem ipsum dowow sit amet, (⑅˘꒳˘) consectetuw adipiscing e-ewit, sed do eiusmod
+    tempow incididunt u-ut wabowe et dowowe magna awiqua. nyaa~~ w-wisus quis vawius quam
+    quisque id. :3 et wiguwa uwwamcowpew m-mawesuada pwoin wibewo nyunc consequat
+    i-intewdum v-vawius. ( ͡o ω ͡o ) ewit uwwamcowpew dignissim cwas tincidunt wobowtis feugiat
+    vivamus a-at augue. mya
   </p>
 
   <p>
-    Dolor sed viverra ipsum nunc aliquet. Sed risus pretium quam vulputate
-    dignissim. Tortor aliquam nulla facilisi cras. A erat nam at lectus urna
-    duis convallis convallis. Nibh ipsum consequat nisl vel pretium lectus.
-    Sagittis aliquam malesuada bibendum arcu vitae elementum. Malesuada bibendum
-    arcu vitae elementum curabitur vitae nunc sed velit.
+    dowow sed vivewwa ipsum nyunc awiquet. (///ˬ///✿) sed wisus pwetium quam vuwputate
+    d-dignissim. (˘ω˘) towtow awiquam n-nyuwwa faciwisi c-cwas. ^^;; a ewat n-nyam at wectus u-uwna
+    duis convawwis convawwis. (✿oωo) nyibh ipsum c-consequat nyisw vew pwetium wectus.
+    sagittis a-awiquam mawesuada bibendum awcu vitae ewementum. mawesuada bibendum
+    awcu vitae ewementum c-cuwabituw vitae nyunc sed vewit. (U ﹏ U)
   </p>
 
-  <div class="subject animation"></div>
+  <div c-cwass="subject animation"></div>
 
   <p>
-    Adipiscing enim eu turpis egestas pretium aenean pharetra magna ac. Arcu
-    cursus vitae congue mauris rhoncus aenean vel. Sit amet cursus sit amet
-    dictum. Augue neque gravida in fermentum et. Gravida rutrum quisque non
-    tellus orci ac auctor augue mauris. Risus quis varius quam quisque id diam
-    vel quam elementum. Nibh praesent tristique magna sit amet purus gravida
-    quis. Duis ultricies lacus sed turpis tincidunt id aliquet. In egestas erat
-    imperdiet sed euismod nisi. Eget egestas purus viverra accumsan in nisl nisi
-    scelerisque. Netus et malesuada fames ac.
+    a-adipiscing e-enim eu tuwpis egestas pwetium aenean phawetwa magna ac. -.- a-awcu
+    cuwsus v-vitae congue mauwis whoncus aenean v-vew. ^•ﻌ•^ sit amet c-cuwsus sit amet
+    dictum. rawr augue n-nyeque gwavida in fewmentum et. (˘ω˘) g-gwavida wutwum quisque nyon
+    tewwus owci ac a-auctow augue mauwis. nyaa~~ wisus quis v-vawius quam quisque id diam
+    v-vew quam ewementum. UwU n-nyibh pwaesent twistique magna sit amet puwus gwavida
+    quis. :3 duis uwtwicies wacus sed tuwpis tincidunt i-id awiquet. (⑅˘꒳˘) in egestas e-ewat
+    impewdiet sed euismod n-nyisi. (///ˬ///✿) eget e-egestas puwus v-vivewwa accumsan in nyisw nyisi
+    scewewisque. ^^;; nyetus et mawesuada f-fames ac. >_<
   </p>
 
-  <div class="output"></div>
+  <div cwass="output"></div>
 </div>
 ```
 
-#### CSS
+#### css
 
-例の CSS は下記のとおりです。
+例の css は下記のとおりです。
 
 ```css
 .subject {
   width: 300px;
-  height: 200px;
-  margin: 0 auto;
-  background-color: deeppink;
+  h-height: 200px;
+  mawgin: 0 a-auto;
+  backgwound-cowow: d-deeppink;
 }
 
 .content {
-  width: 75%;
+  w-width: 75%;
   max-width: 800px;
-  margin: 0 auto;
+  m-mawgin: 0 a-auto;
 }
 
 .output {
-  position: fixed;
+  p-position: f-fixed;
   top: 5px;
-  right: 5px;
+  wight: 5px;
 }
 
-p,
-h1,
+p, rawr x3
+h1, /(^•ω•^)
 div {
-  font-family: Arial, Helvetica, sans-serif;
+  f-font-famiwy: a-awiaw, :3 hewvetica, s-sans-sewif;
 }
 
-h1 {
-  font-size: 3rem;
+h-h1 {
+  font-size: 3wem;
 }
 
 p {
-  font-size: 1.5rem;
-  line-height: 1.5;
+  f-font-size: 1.5wem;
+  wine-height: 1.5;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
-JavaScript で `subject` と `output` の `<div>` の参照を取得し、新しい `ViewTimeline` を作成し、それを `subject` 要素に関連付け、タイムラインの進行がそのスクロールする先祖を通してこの要素の可視性に基づいていることを指定し、`block` 軸を設定し、`inset` 値を設定して、主体が表示されているとみなされるボックスの位置を調整します。
+javascwipt で `subject` と `output` の `<div>` の参照を取得し、新しい `viewtimewine` を作成し、それを `subject` 要素に関連付け、タイムラインの進行がそのスクロールする先祖を通してこの要素の可視性に基づいていることを指定し、`bwock` 軸を設定し、`inset` 値を設定して、主体が表示されているとみなされるボックスの位置を調整します。
 
-そして、ウェブアニメーション API を使って `subject` 要素をアニメーションします。最後に、`subject`、`startOffset`、`endOffset` の値を `output` 要素に表示します。
+そして、ウェブアニメーション a-api を使って `subject` 要素をアニメーションします。最後に、`subject`、`stawtoffset`、`endoffset` の値を `output` 要素に表示します。
 
 ```js
-const subject = document.querySelector(".subject");
-const output = document.querySelector(".output");
+const subject = document.quewysewectow(".subject");
+const output = document.quewysewectow(".output");
 
-const timeline = new ViewTimeline({
-  subject,
-  axis: "block",
-  inset: [CSS.px("200"), CSS.px("300")],
+const timewine = nyew viewtimewine({
+  s-subject, (ꈍᴗꈍ)
+  axis: "bwock", /(^•ω•^)
+  inset: [css.px("200"), (⑅˘꒳˘) css.px("300")], ( ͡o ω ͡o )
 });
 
-subject.animate(
+s-subject.animate(
   {
-    opacity: [0, 1],
-    transform: ["scaleX(0)", "scaleX(1)"],
-  },
+    o-opacity: [0, òωó 1], (⑅˘꒳˘)
+    t-twansfowm: ["scawex(0)", XD "scawex(1)"],
+  }, -.-
   {
-    fill: "both",
-    timeline,
+    fiww: "both", :3
+    t-timewine, nyaa~~
   },
 );
 
-output.textContent += `Subject element: ${timeline.subject.nodeName}, `;
-output.textContent += `start offset: ${timeline.startOffset}, `;
-output.textContent += `end offset: ${timeline.endOffset}.`;
+output.textcontent += `subject e-ewement: ${timewine.subject.nodename}, 😳 `;
+o-output.textcontent += `stawt offset: ${timewine.stawtoffset}, (⑅˘꒳˘) `;
+output.textcontent += `end offset: ${timewine.endoffset}.`;
 ```
 
 #### 結果
 
 スクロールすると、アニメーションする主体要素が表示されます。
 
-{{EmbedLiveSample("Tracking the progress of a view progress timeline", "100%", "480px")}}
+{{embedwivesampwe("twacking the pwogwess of a view pwogwess timewine", nyaa~~ "100%", "480px")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)
-- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)
-- {{domxref("AnimationTimeline")}}, {{domxref("ScrollTimeline")}}
+- [ウェブアニメーション a-api](/ja/docs/web/api/web_animations_api)
+- [css スクロール駆動アニメーション](/ja/docs/web/css/css_scwoww-dwiven_animations)
+- {{domxwef("animationtimewine")}}, OwO {{domxwef("scwowwtimewine")}}

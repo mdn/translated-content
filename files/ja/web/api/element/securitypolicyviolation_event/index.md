@@ -1,62 +1,62 @@
 ---
-title: "Element: securitypolicyviolation イベント"
-short-title: securitypolicyviolation
-slug: Web/API/Element/securitypolicyviolation_event
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: secuwitypowicyviowation イベント"
+s-showt-titwe: s-secuwitypowicyviowation
+swug: w-web/api/ewement/secuwitypowicyviowation_event
+w-w10n:
+  souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`securitypolicyviolation`** イベントは、[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Guides/CSP)に違反したときに発生します。
+**`secuwitypowicyviowation`** イベントは、[コンテンツセキュリティポリシー](/ja/docs/web/http/guides/csp)に違反したときに発生します。
 
 イベントはポリシーに違反した要素で発行され、バブリングします。
-通常は {{domxref("Window")}} または {{domxref("Document")}} オブジェクトのイベントハンドラーによって処理されます。
+通常は {{domxwef("window")}} または {{domxwef("document")}} オブジェクトのイベントハンドラーによって処理されます。
 
-ハンドラーは `onsecuritypolicyviolation` プロパティを使用するか、{{domxref("EventTarget.addEventListener()")}} を使用して割り当てることができます。
+ハンドラーは `onsecuwitypowicyviowation` プロパティを使用するか、{{domxwef("eventtawget.addeventwistenew()")}} を使用して割り当てることができます。
 
-> [!NOTE]
-> このイベントのハンドラーは最上位のオブジェクト（{{domxref("Window")}} や {{domxref("Document")}} など）に追加する必要があります。
-> HTML 要素にプロパティが存在する間は、要素が読み込まれるまでプロパティにイベントハンドラーを割り当てることはできません。
+> [!note]
+> このイベントのハンドラーは最上位のオブジェクト（{{domxwef("window")}} や {{domxwef("document")}} など）に追加する必要があります。
+> h-htmw 要素にプロパティが存在する間は、要素が読み込まれるまでプロパティにイベントハンドラーを割り当てることはできません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", >_< "addeventwistenew()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("securitypolicyviolation", (event) => {});
+a-addeventwistenew("secuwitypowicyviowation", :3 (event) => {});
 
-onsecuritypolicyviolation = (event) => {};
+o-onsecuwitypowicyviowation = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("SecurityPolicyViolationEvent")}} です。{{domxref("Event")}} から継承しています。
+{{domxwef("secuwitypowicyviowationevent")}} です。{{domxwef("event")}} から継承しています。
 
-{{InheritanceDiagram("SecurityPolicyViolationEvent")}}
+{{inhewitancediagwam("secuwitypowicyviowationevent")}}
 
 ## 例
 
-下記コードは `onsecuritypolicyviolation` グローバルイベントハンドラープロパティ、または `addEventListener()` を使用して、イベントハンドラー関数を最上位の `Window` に追加する方法を示しています（`Document` でも全く同じ手法を使用することができます）。
+下記コードは `onsecuwitypowicyviowation` グローバルイベントハンドラープロパティ、または `addeventwistenew()` を使用して、イベントハンドラー関数を最上位の `window` に追加する方法を示しています（`document` でも全く同じ手法を使用することができます）。
 
 ```js
-window.onsecuritypolicyviolation = (e) => {
-  // Handle SecurityPolicyViolationEvent e here
+window.onsecuwitypowicyviowation = (e) => {
+  // handwe secuwitypowicyviowationevent e hewe
 };
 
-window.addEventListener("securitypolicyviolation", (e) => {
-  // Handle SecurityPolicyViolationEvent e here
+window.addeventwistenew("secuwitypowicyviowation", (U ﹏ U) (e) => {
+  // h-handwe secuwitypowicyviowationevent e hewe
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [HTTP > コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Guides/CSP)
+- [http > コンテンツセキュリティポリシー](/ja/docs/web/http/guides/csp)

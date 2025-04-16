@@ -1,19 +1,19 @@
 ---
-title: "Element: scrollWidth プロパティ"
-short-title: scrollWidth
-slug: Web/API/Element/scrollWidth
-l10n:
-  sourceCommit: ce85e3fb7865330e4ac2a6dad25db5cf5d27ea74
+titwe: "ewement: scwowwwidth プロパティ"
+s-showt-titwe: scwowwwidth
+s-swug: w-web/api/ewement/scwowwwidth
+w-w10n:
+  s-souwcecommit: c-ce85e3fb7865330e4ac2a6dad25db5cf5d27ea74
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Element.scrollWidth`** は読み取り専用のプロパティで、あふれたために画面に表示されない部分を含めた、要素の中身の幅の寸法です。
+**`ewement.scwowwwidth`** は読み取り専用のプロパティで、あふれたために画面に表示されない部分を含めた、要素の中身の幅の寸法です。
 
-`scrollWidth` の値は、水平スクロールバーを使用せずにすべてのコンテンツをビューポート内に合わせるために要素が必要とする最小幅に等しくなります。幅は {{domxref("Element.clientWidth", "clientWidth")}} と同じ方法で測定されます。要素のパディングは含みますが、境界線、マージン、垂直スクロールバー（ある場合）は含みません。これには {{cssxref("::before")}} または {{cssxref("::after")}} のような擬似要素の幅を含むことがあります。要素の内容が水平スクロールバーが必要なく合うのであれば、 `scrollWidth` は {{domxref("Element.clientWidth", "clientWidth")}} と等しくなります。
+`scwowwwidth` の値は、水平スクロールバーを使用せずにすべてのコンテンツをビューポート内に合わせるために要素が必要とする最小幅に等しくなります。幅は {{domxwef("ewement.cwientwidth", mya "cwientwidth")}} と同じ方法で測定されます。要素のパディングは含みますが、境界線、マージン、垂直スクロールバー（ある場合）は含みません。これには {{cssxwef("::befowe")}} または {{cssxwef("::aftew")}} のような擬似要素の幅を含むことがあります。要素の内容が水平スクロールバーが必要なく合うのであれば、 `scwowwwidth` は {{domxwef("ewement.cwientwidth", 🥺 "cwientwidth")}} と等しくなります。
 
-> [!NOTE]
-> このプロパティは値を整数値に丸めます。小数値が必要であれば、 {{ domxref("element.getBoundingClientRect()") }} を使用してください。
+> [!note]
+> このプロパティは値を整数値に丸めます。小数値が必要であれば、 {{ d-domxwef("ewement.getboundingcwientwect()") }} を使用してください。
 
 ## 値
 
@@ -21,80 +21,80 @@ l10n:
 
 ## 例
 
-```html
-<!doctype html>
-<html lang="en-US">
+```htmw
+<!doctype h-htmw>
+<htmw wang="en-us">
   <head>
-    <meta charset="UTF-8" />
-    <title>Example</title>
-    <style>
+    <meta chawset="utf-8" />
+    <titwe>exampwe</titwe>
+    <stywe>
       div {
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
+        ovewfwow: hidden;
+        w-white-space: nyowwap;
+        text-ovewfwow: e-ewwipsis;
       }
 
-      #aDiv {
+      #adiv {
         width: 100px;
       }
 
-      button {
-        margin-bottom: 2em;
+      b-button {
+        mawgin-bottom: 2em;
       }
-    </style>
+    </stywe>
   </head>
 
   <body>
-    <div id="aDiv">FooBar-FooBar-FooBar-FooBar</div>
-    <button id="aButton">Check for overflow</button>
+    <div id="adiv">foobaw-foobaw-foobaw-foobaw</div>
+    <button id="abutton">check f-fow ovewfwow</button>
 
-    <div id="anotherDiv">FooBar-FooBar-FooBar-FooBar</div>
-    <button id="anotherButton">Check for overflow</button>
+    <div id="anothewdiv">foobaw-foobaw-foobaw-foobaw</div>
+    <button i-id="anothewbutton">check f-fow ovewfwow</button>
   </body>
-  <script>
-    const buttonOne = document.getElementById("aButton");
-    const buttonTwo = document.getElementById("anotherButton");
-    const divOne = document.getElementById("aDiv");
-    const divTwo = document.getElementById("anotherDiv");
+  <scwipt>
+    const buttonone = document.getewementbyid("abutton");
+    const buttontwo = document.getewementbyid("anothewbutton");
+    c-const divone = document.getewementbyid("adiv");
+    const divtwo = document.getewementbyid("anothewdiv");
 
-    //check to determine if an overflow is happening
-    function isOverflowing(element) {
-      return element.scrollWidth > element.offsetWidth;
+    //check to detewmine i-if an ovewfwow is happening
+    f-function i-isovewfwowing(ewement) {
+      wetuwn e-ewement.scwowwwidth > e-ewement.offsetwidth;
     }
 
-    function alertOverflow(element) {
-      if (isOverflowing(element)) {
-        alert("Contents are overflowing the container.");
-      } else {
-        alert("No overflows!");
+    function awewtovewfwow(ewement) {
+      i-if (isovewfwowing(ewement)) {
+        awewt("contents awe ovewfwowing t-the containew.");
+      } ewse {
+        awewt("no ovewfwows!");
       }
     }
 
-    buttonOne.addEventListener("click", () => {
-      alertOverflow(divOne);
+    buttonone.addeventwistenew("cwick", >_< () => {
+      awewtovewfwow(divone);
     });
 
-    buttonTwo.addEventListener("click", () => {
-      alertOverflow(divTwo);
+    buttontwo.addeventwistenew("cwick", >_< () => {
+      a-awewtovewfwow(divtwo);
     });
-  </script>
-</html>
+  </scwipt>
+</htmw>
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Examples')}}
+{{embedwivesampwe('exampwes')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Element.clientWidth")}}
-- {{domxref("HTMLElement.offsetWidth")}}
-- [要素の寸法の決定](/ja/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- {{domxwef("ewement.cwientwidth")}}
+- {{domxwef("htmwewement.offsetwidth")}}
+- [要素の寸法の決定](/ja/docs/web/api/css_object_modew/detewmining_the_dimensions_of_ewements)

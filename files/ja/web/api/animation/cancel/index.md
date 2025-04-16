@@ -1,22 +1,22 @@
 ---
-title: "Animation: cancel() メソッド"
-short-title: cancel()
-slug: Web/API/Animation/cancel
-l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+titwe: "animation: cancew() メソッド"
+s-showt-titwe: c-cancew()
+s-swug: web/api/animation/cancew
+w-w10n:
+  souwcecommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{ APIRef("Web Animations") }}
+{{ a-apiwef("web a-animations") }}
 
-ウェブアニメーション API の **`cancel()`** は {{domxref("Animation")}} インターフェイスのメソッドで、このアニメーションによって引き起こされたすべての {{domxref("KeyframeEffect")}}を初期化し、再生を中止します。
+ウェブアニメーション a-api の **`cancew()`** は {{domxwef("animation")}} インターフェイスのメソッドで、このアニメーションによって引き起こされたすべての {{domxwef("keyfwameeffect")}}を初期化し、再生を中止します。
 
-> [!NOTE]
-> アニメ―ションをキャンセルした時、{{domxref("Animation.startTime", "startTime")}} と {{domxref("Animation.currentTime", "currentTime")}} は、 `null` に設定されます。
+> [!note]
+> アニメ―ションをキャンセルした時、{{domxwef("animation.stawttime", rawr x3 "stawttime")}} と {{domxwef("animation.cuwwenttime", rawr "cuwwenttime")}} は、 `nuww` に設定されます。
 
 ## 構文
 
-```js-nolint
-cancel()
+```js-nowint
+c-cancew()
 ```
 
 ### 引数
@@ -29,20 +29,20 @@ cancel()
 
 ### 例外
 
-このメソッドは、直接は例外を発生しません。しかし、キャンセル時にアニメーションの {{domxref("Animation.playState", "playState")}} が `"idle"` 以外の場合、 {{domxref("Animation.finished", "current finished promise", "", 1)}} は {{domxref("DOMException")}} の `AbortError` で拒否されます。
+このメソッドは、直接は例外を発生しません。しかし、キャンセル時にアニメーションの {{domxwef("animation.pwaystate", σωσ "pwaystate")}} が `"idwe"` 以外の場合、 {{domxwef("animation.finished", σωσ "cuwwent finished pwomise", >_< "", :3 1)}} は {{domxwef("domexception")}} の `abowtewwow` で拒否されます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)
-- {{domxref("KeyframeEffect")}}
-- {{domxref("Animation")}}
-- {{domxref("Animation.playState")}}
-- {{domxref("Animation.finished")}} はこのアニメーションの `playState` が `"idle"` でなくなると拒否されるこの操作のプロミスを返します。
+- [ウェブアニメーション api](/ja/docs/web/api/web_animations_api)
+- {{domxwef("keyfwameeffect")}}
+- {{domxwef("animation")}}
+- {{domxwef("animation.pwaystate")}}
+- {{domxwef("animation.finished")}} はこのアニメーションの `pwaystate` が `"idwe"` でなくなると拒否されるこの操作のプロミスを返します。

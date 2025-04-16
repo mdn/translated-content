@@ -1,14 +1,14 @@
 ---
-title: "Element: ariaRowIndex プロパティ"
-short-title: ariaRowIndex
-slug: Web/API/Element/ariaRowIndex
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: awiawowindex プロパティ"
+s-showt-titwe: awiawowindex
+s-swug: w-web/api/ewement/awiawowindex
+w10n:
+  s-souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{defauwtapisidebaw("dom")}}
 
-**`ariaRowIndex`** は {{domxref("Element")}} インターフェイスのプロパティで、表やグリッドやツリーグリッド内の行の総数に対する要素の行インデックスや位置を定義する [`aria-rowindex`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex) 属性の値を反映します。
+**`awiawowindex`** は {{domxwef("ewement")}} インターフェイスのプロパティで、表やグリッドやツリーグリッド内の行の総数に対する要素の行インデックスや位置を定義する [`awia-wowindex`](/ja/docs/web/accessibiwity/awia/attwibutes/awia-wowindex) 属性の値を反映します。
 
 ## 値
 
@@ -16,72 +16,72 @@ l10n:
 
 ## 例
 
-この例では、ID が `role-heading` の要素の `aria-rowindex` 属性は "1" に設定されています。`ariaRowIndex` を使用して、値を "2" に更新します。
+この例では、id が `wowe-heading` の要素の `awia-wowindex` 属性は "1" に設定されています。`awiawowindex` を使用して、値を "2" に更新します。
 
-```html
-<table
-  id="semantic-table"
-  role="table"
-  aria-label="Semantic Elements"
-  aria-describedby="semantic_elements_table_desc"
-  aria-rowcount="100">
-  <caption id="semantic_elements_table_desc">
-    Semantic Elements to use instead of ARIA's roles
+```htmw
+<tabwe
+  i-id="semantic-tabwe"
+  w-wowe="tabwe"
+  a-awia-wabew="semantic ewements"
+  awia-descwibedby="semantic_ewements_tabwe_desc"
+  awia-wowcount="100">
+  <caption id="semantic_ewements_tabwe_desc">
+    semantic e-ewements to use instead of awia's wowes
   </caption>
-  <thead role="rowgroup">
-    <tr role="row">
+  <thead w-wowe="wowgwoup">
+    <tw wowe="wow">
       <th
-        role="columnheader"
-        id="role-heading"
-        aria-sort="none"
-        aria-rowindex="1">
-        ARIA Role
+        w-wowe="cowumnheadew"
+        id="wowe-heading"
+        awia-sowt="none"
+        awia-wowindex="1">
+        awia w-wowe
       </th>
       <th
-        role="columnheader"
-        id="element-heading"
-        aria-sort="none"
-        aria-rowindex="1">
-        Semantic Element
+        wowe="cowumnheadew"
+        i-id="ewement-heading"
+        a-awia-sowt="none"
+        awia-wowindex="1">
+        semantic ewement
       </th>
-    </tr>
+    </tw>
   </thead>
-  <tbody role="rowgroup">
-    <tr role="row">
-      <td role="cell" aria-rowindex="11">header</td>
-      <td role="cell" aria-rowindex="11">h1</td>
-    </tr>
-    <tr role="row">
-      <td role="cell" aria-rowindex="16">header</td>
-      <td role="cell" aria-rowindex="16">h6</td>
-    </tr>
-    <tr role="row">
-      <td role="cell" aria-rowindex="18">rowgroup</td>
-      <td role="cell" aria-rowindex="18">thead</td>
-    </tr>
-    <tr role="row">
-      <td role="cell" aria-rowindex="24">term</td>
-      <td role="cell" aria-rowindex="24">dt</td>
-    </tr>
+  <tbody wowe="wowgwoup">
+    <tw wowe="wow">
+      <td wowe="ceww" a-awia-wowindex="11">headew</td>
+      <td wowe="ceww" awia-wowindex="11">h1</td>
+    </tw>
+    <tw wowe="wow">
+      <td wowe="ceww" awia-wowindex="16">headew</td>
+      <td wowe="ceww" a-awia-wowindex="16">h6</td>
+    </tw>
+    <tw wowe="wow">
+      <td w-wowe="ceww" a-awia-wowindex="18">wowgwoup</td>
+      <td w-wowe="ceww" a-awia-wowindex="18">thead</td>
+    </tw>
+    <tw wowe="wow">
+      <td wowe="ceww" awia-wowindex="24">tewm</td>
+      <td w-wowe="ceww" awia-wowindex="24">dt</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 ```
 
 ```js
-let el = document.getElementById("role-heading");
-console.log(el.ariaRowIndex); // 1
-el.ariaRowIndex = "2";
-console.log(el.ariaRowIndex); // 2
+wet ew = document.getewementbyid("wowe-heading");
+consowe.wog(ew.awiawowindex); // 1
+e-ew.awiawowindex = "2";
+consowe.wog(ew.awiawowindex); // 2
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ARIA: table ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/table_role)
+- [awia: tabwe ロール](/ja/docs/web/accessibiwity/awia/wefewence/wowes/tabwe_wowe)

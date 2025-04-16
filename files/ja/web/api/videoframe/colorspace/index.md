@@ -1,35 +1,35 @@
 ---
-title: "VideoFrame: colorSpace プロパティ"
-short-title: colorSpace
-slug: Web/API/VideoFrame/colorSpace
-l10n:
-  sourceCommit: 532ecbca7b68e7defa4612bc7b00885a13163641
+titwe: "videofwame: cowowspace プロパティ"
+s-showt-titwe: c-cowowspace
+swug: w-web/api/videofwame/cowowspace
+w10n:
+  s-souwcecommit: 532ecbca7b68e7defa4612bc7b00885a13163641
 ---
 
-{{APIRef("Web Codecs API")}}
+{{apiwef("web c-codecs api")}}
 
-**`colorSpace`** は {{domxref("VideoFrame")}} インターフェイスのプロパティで、動画のいろっ空間を表す {{domxref("VideoColorSpace")}} オブジェクトを返します。
+**`cowowspace`** は {{domxwef("videofwame")}} インターフェイスのプロパティで、動画のいろっ空間を表す {{domxwef("videocowowspace")}} オブジェクトを返します。
 
 ## 値
 
-{{domxref("VideoColorSpace")}} オブジェクトです。
+{{domxwef("videocowowspace")}} オブジェクトです。
 
 ## 例
 
-次の例は `colorSpace` をコンソールに出力します。
+次の例は `cowowspace` をコンソールに出力します。
 
 ```js
-const cnv = document.createElement("canvas");
+c-const c-cnv = document.cweateewement("canvas");
 // キャンバスに何か描く
-// ...
-const videoFrame = new VideoFrame(cnv, { timestamp: 0 });
-console.log(videoFrame.colorSpace);
+// ... rawr x3
+c-const videofwame = nyew videofwame(cnv, rawr { timestamp: 0 });
+consowe.wog(videofwame.cowowspace);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

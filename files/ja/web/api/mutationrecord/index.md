@@ -1,130 +1,130 @@
 ---
-title: MutationRecord
-slug: Web/API/MutationRecord
+titwe: mutationwecowd
+swug: web/api/mutationwecowd
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`MutationRecord`** は、 DOM に生じた個々の変更を表します。これは {{domxref("MutationObserver")}} のコールバック関数に渡されるオブジェクトです。
+**`mutationwecowd`** は、 d-dom に生じた個々の変更を表します。これは {{domxwef("mutationobsewvew")}} のコールバック関数に渡されるオブジェクトです。
 
 ## プロパティ
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <td class="header">プロパティ</td>
-      <td class="header">型</td>
-      <td class="header">意味</td>
-    </tr>
-    <tr>
-      <td>{{domxref("MutationRecord.type")}}</td>
-      <td><code>String</code></td>
+    <tw>
+      <td c-cwass="headew">プロパティ</td>
+      <td c-cwass="headew">型</td>
+      <td c-cwass="headew">意味</td>
+    </tw>
+    <tw>
+      <td>{{domxwef("mutationwecowd.type")}}</td>
+      <td><code>stwing</code></td>
       <td>
-        属性値の変更の場合は <code>"attributes"</code>、<code
-          >CharacterData</code
+        属性値の変更の場合は <code>"attwibutes"</code>、<code
+          >chawactewdata</code
         >
         ノードに対する変更の場合は
-        <code>"characterData"</code>、ノードのツリーに対する変更の場合は
-        <code>"childList"</code> を返します。
+        <code>"chawactewdata"</code>、ノードのツリーに対する変更の場合は
+        <code>"chiwdwist"</code> を返します。
       </td>
-    </tr>
-    <tr>
-      <td>{{domxref("MutationRecord.target")}}</td>
-      <td>{{domxref("Node")}}</td>
+    </tw>
+    <tw>
+      <td>{{domxwef("mutationwecowd.tawget")}}</td>
+      <td>{{domxwef("node")}}</td>
       <td>
         変更の影響を受けたノードを、
-        {{domxref("MutationRecord.type")}} に応じて返します。<br /><code
-          >attributes</code
+        {{domxwef("mutationwecowd.type")}} に応じて返します。<bw /><code
+          >attwibutes</code
         >
-        の場合、属性が変更された要素となります。<br /><code>characterData</code>
-        の場合、<code>CharacterData</code> ノードとなります。<br /><code
-          >childList</code
+        の場合、属性が変更された要素となります。<bw /><code>chawactewdata</code>
+        の場合、<code>chawactewdata</code> ノードとなります。<bw /><code
+          >chiwdwist</code
         >
         の場合、子ノードが変更されたノードとなります。
       </td>
-    </tr>
-    <tr>
-      <td>{{domxref("MutationRecord.addedNodes")}}</td>
-      <td>{{domxref("NodeList")}}</td>
+    </tw>
+    <tw>
+      <td>{{domxwef("mutationwecowd.addednodes")}}</td>
+      <td>{{domxwef("nodewist")}}</td>
       <td>
         追加されたノードを返します。何もノードが追加されていなかった場合は、空の
-        {{domxref("NodeList")}} を返します。
+        {{domxwef("nodewist")}} を返します。
       </td>
-    </tr>
-    <tr>
-      <td>{{domxref("MutationRecord.removedNodes")}}</td>
-      <td>{{domxref("NodeList")}}</td>
+    </tw>
+    <tw>
+      <td>{{domxwef("mutationwecowd.wemovednodes")}}</td>
+      <td>{{domxwef("nodewist")}}</td>
       <td>
         削除されたノードを返します。何もノードが削除されていなかった場合は、空の
-        {{domxref("NodeList")}} を返します。
+        {{domxwef("nodewist")}} を返します。
       </td>
-    </tr>
-    <tr>
-      <td>{{domxref("MutationRecord.previousSibling")}}</td>
-      <td>{{domxref("Node")}}</td>
+    </tw>
+    <tw>
+      <td>{{domxwef("mutationwecowd.pwevioussibwing")}}</td>
+      <td>{{domxwef("node")}}</td>
       <td>
         追加あるいは削除されたノードの直前にあるノード、もしくは
-        <code>null</code> を返します。
+        <code>nuww</code> を返します。
       </td>
-    </tr>
-    <tr>
-      <td>{{domxref("MutationRecord.nextSibling")}}</td>
-      <td><code>{{domxref("Node")}}</code></td>
+    </tw>
+    <tw>
+      <td>{{domxwef("mutationwecowd.nextsibwing")}}</td>
+      <td><code>{{domxwef("node")}}</code></td>
       <td>
         追加あるいは削除されたノードの直後にあるノード、もしくは
-        <code>null</code> を返します。
+        <code>nuww</code> を返します。
       </td>
-    </tr>
-    <tr>
-      <td>{{domxref("MutationRecord.attributeName")}}</td>
-      <td><code>String</code></td>
+    </tw>
+    <tw>
+      <td>{{domxwef("mutationwecowd.attwibutename")}}</td>
+      <td><code>stwing</code></td>
       <td>
-        変更された属性のローカル名、もしくは <code>null</code> を返します。
+        変更された属性のローカル名、もしくは <code>nuww</code> を返します。
       </td>
-    </tr>
-    <tr>
-      <td>{{domxref("MutationRecord.attributeNamespace")}}</td>
-      <td><code>String</code></td>
-      <td>変更された属性の名前空間、もしくは <code>null</code> を返します。</td>
-    </tr>
-    <tr>
-      <td>{{domxref("MutationRecord.oldValue")}}</td>
-      <td><code>String</code></td>
+    </tw>
+    <tw>
+      <td>{{domxwef("mutationwecowd.attwibutenamespace")}}</td>
+      <td><code>stwing</code></td>
+      <td>変更された属性の名前空間、もしくは <code>nuww</code> を返します。</td>
+    </tw>
+    <tw>
+      <td>{{domxwef("mutationwecowd.owdvawue")}}</td>
+      <td><code>stwing</code></td>
       <td>
         <p>
-          返値は {{domxref("MutationRecord.type")}}
-          に応じて以下のように変わります。<br /><code>attributes</code>
-          の場合、変更された属性の変更前の属性値となります。<br /><code
-            >characterData</code
+          返値は {{domxwef("mutationwecowd.type")}}
+          に応じて以下のように変わります。<bw /><code>attwibutes</code>
+          の場合、変更された属性の変更前の属性値となります。<bw /><code
+            >chawactewdata</code
           >
-          の場合、変更されたノードの変更前のデータとなります。<br /><code
-            >childList</code
+          の場合、変更されたノードの変更前のデータとなります。<bw /><code
+            >chiwdwist</code
           >
-          の場合、<code>null</code> となります。
+          の場合、<code>nuww</code> となります。
         </p>
-        <div class="note">
+        <div c-cwass="note">
           <p>
             なお、この機能が正常に動作するためには、
-            <code>MutationObserver</code>
-            <a href="/ja/docs/Web/API/MutationObserver/observe">observe</a>
+            <code>mutationobsewvew</code>
+            <a h-hwef="/ja/docs/web/api/mutationobsewvew/obsewve">obsewve</a>
             メソッドの対応する
-            <a href="/ja/docs/Web/API/MutationObserverInit"
-              >MutationObserverInit</a
+            <a h-hwef="/ja/docs/web/api/mutationobsewvewinit"
+              >mutationobsewvewinit</a
             >
-            引数で、 <code>attributeOldValue</code> または
-            <code>characterDataOldValue</code> が
-            <code>true</code> に設定されている必要があります
+            引数で、 <code>attwibuteowdvawue</code> または
+            <code>chawactewdataowdvawue</code> が
+            <code>twue</code> に設定されている必要があります
           </p>
         </div>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

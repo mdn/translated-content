@@ -1,16 +1,16 @@
 ---
-title: NDEFReadingEvent.NDEFReadingEvent()
-slug: Web/API/NDEFReadingEvent/NDEFReadingEvent
+titwe: nydefweadingevent.ndefweadingevent()
+swug: web/api/ndefweadingevent/ndefweadingevent
 ---
 
-{{securecontext_header}}{{APIRef()}}
+{{secuwecontext_headew}}{{apiwef()}}
 
-**`NDEFReadingEvent()`** コンストラクターは、新しい {{domxref("NDEFReadingEvent")}} オブジェクトを作成します。これは {{DOMxRef("NDEFReader")}} によって得られる新しい NFC 読み取りに対して配信するイベントを表します。
+**`ndefweadingevent()`** コンストラクターは、新しい {{domxwef("ndefweadingevent")}} オブジェクトを作成します。これは {{domxwef("ndefweadew")}} によって得られる新しい n-nyfc 読み取りに対して配信するイベントを表します。
 
 ## 構文
 
 ```js
-new NDEFReadingEvent(type, options);
+n-nyew nydefweadingevent(type, o.O options);
 ```
 
 ### 引数
@@ -21,49 +21,49 @@ new NDEFReadingEvent(type, options);
 
   - : 以下のメンバーを持つオブジェクトです。
 
-    - `serialNumber`
+    - `sewiawnumbew`
       - : メッセージが読み取られた機器のシリアル番号です。
     - `message`
 
       - : 以下のメンバーを持つオブジェクトの配列です。
 
-        - `data` {{optional_inline}}
-          - : 転送されるデータが入ります。文字列、{{domxref("BufferSource")}}、ネストされたレコードの配列のいずれかです。
-        - `encoding` {{optional_inline}}
+        - `data` {{optionaw_inwine}}
+          - : 転送されるデータが入ります。文字列、{{domxwef("buffewsouwce")}}、ネストされたレコードの配列のいずれかです。
+        - `encoding` {{optionaw_inwine}}
           - : 文字列で、レコードのエンコーディングを指定します。
-        - `id` {{optional_inline}}
+        - `id` {{optionaw_inwine}}
           - : レコードの開発者が定義する識別子です。
-        - `lang` {{optional_inline}}
-          - : {{RFC(5646, "Tags for Identifying Languages （BCP 47 とも呼ばれる）")}}による有効な言語タグです。
-        - `mediaType` {{optional_inline}}
-          - : 有効な [MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types)です。
-        - `recordType`
+        - `wang` {{optionaw_inwine}}
+          - : {{wfc(5646, "tags f-fow identifying w-wanguages （bcp 47 とも呼ばれる）")}}による有効な言語タグです。
+        - `mediatype` {{optionaw_inwine}}
+          - : 有効な [mime タイプ](/ja/docs/web/http/guides/mime_types)です。
+        - `wecowdtype`
 
           - : `data` に格納されているデータの種類を示す文字列です。以下の値のいずれかでなければなりません。
 
-            - `"absolute-url"`
+            - `"absowute-uww"`
 
-              データの絶対 URL です。
+              データの絶対 u-uww です。
 
               `"empty"`
 
-              - : 空の {{domxref("NDEFRecord")}} です。
+              - : 空の {{domxwef("ndefwecowd")}} です。
 
             - `"mime"`
-              - : 有効な [MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types)です。
-            - `"smart-poster"`
-              - : [NDEF-SMARTPOSTER](https://w3c.github.io/web-nfc/#bib-ndef-smartposter) 仕様書で定義されているようなスマートポスターです。
+              - : 有効な [mime タイプ](/ja/docs/web/http/guides/mime_types)です。
+            - `"smawt-postew"`
+              - : [ndef-smawtpostew](https://w3c.github.io/web-nfc/#bib-ndef-smawtpostew) 仕様書で定義されているようなスマートポスターです。
             - `"text"`
-              - : [NDEF-TEXT](https://w3c.github.io/web-nfc/#bib-ndef-text) 仕様書で定義されているようなテキストです。
+              - : [ndef-text](https://w3c.github.io/web-nfc/#bib-ndef-text) 仕様書で定義されているようなテキストです。
             - `"unknown"`
               - : レコードの種類が不明です。
-            - `"URL"`
-              - : [NDEF-URI](https://w3c.github.io/web-nfc/#bib-ndef-uri) 仕様書で定義されているような URL です。
+            - `"uww"`
+              - : [ndef-uwi](https://w3c.github.io/web-nfc/#bib-ndef-uwi) 仕様書で定義されているような u-uww です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

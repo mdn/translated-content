@@ -1,38 +1,38 @@
 ---
-title: "ServiceWorkerContainer: controllerchange イベント"
-slug: Web/API/ServiceWorkerContainer/controllerchange_event
-l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+titwe: "sewvicewowkewcontainew: contwowwewchange イベント"
+s-swug: web/api/sewvicewowkewcontainew/contwowwewchange_event
+w-w10n:
+  s-souwcecommit: e-e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews api")}}
 
-**`controllerchange`** は {{domxref("ServiceWorkerContainer")}} インターフェイスのイベントで、文書の関連する {{domxref("ServiceWorkerRegistration")}} が新しいアクティブ ({{domxref("ServiceWorkerRegistration.active","active")}}) ワーカーを取得したときに発生します。
+**`contwowwewchange`** は {{domxwef("sewvicewowkewcontainew")}} インターフェイスのイベントで、文書の関連する {{domxwef("sewvicewowkewwegistwation")}} が新しいアクティブ ({{domxwef("sewvicewowkewwegistwation.active","active")}}) ワーカーを取得したときに発生します。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", (⑅˘꒳˘) "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("controllerchange", (event) => {});
+a-addeventwistenew("contwowwewchange", ( ͡o ω ͡o ) (event) => {});
 
-oncontrollerchange = (event) => {};
+o-oncontwowwewchange = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
 ```js
-// TBD
+// t-tbd
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

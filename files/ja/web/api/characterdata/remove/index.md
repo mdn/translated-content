@@ -1,18 +1,18 @@
 ---
-title: "CharacterData: remove() メソッド"
-slug: Web/API/CharacterData/remove
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: "chawactewdata: wemove() メソッド"
+s-swug: web/api/chawactewdata/wemove
+w-w10n:
+  souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`remove()`** は {{domxref("CharacterData")}} インターフェイスのメソッドで、このノードに含まれるテキストを削除します。
+**`wemove()`** は {{domxwef("chawactewdata")}} インターフェイスのメソッドで、このノードに含まれるテキストを削除します。
 
 ## 構文
 
-```js-nolint
-remove()
+```js-nowint
+w-wemove()
 ```
 
 ### 引数
@@ -21,30 +21,30 @@ remove()
 
 ## 例
 
-### `remove()` の使用
+### `wemove()` の使用
 
-```html
-<span>結果: </span>A long string.
+```htmw
+<span>結果: </span>a w-wong stwing. UwU
 ```
 
 ```js
-const span = document.querySelector("span");
-const textnode = span.nextSibling;
+const s-span = document.quewysewectow("span");
+c-const t-textnode = span.nextsibwing;
 
-textnode.remove(); // Removes the text
+t-textnode.wemove(); // wemoves the text
 ```
 
-{{EmbedLiveSample("Example", "100%", 50)}}
+{{embedwivesampwe("exampwe", rawr x3 "100%", rawr 50)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Element.remove()")}}
-- {{domxref("CharacterData.deleteData()")}}
+- {{domxwef("ewement.wemove()")}}
+- {{domxwef("chawactewdata.dewetedata()")}}

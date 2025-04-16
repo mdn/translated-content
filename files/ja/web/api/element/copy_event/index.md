@@ -1,87 +1,87 @@
 ---
-title: "Element: copy イベント"
-short-title: copy
-slug: Web/API/Element/copy_event
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: copy イベント"
+s-showt-titwe: c-copy
+swug: web/api/ewement/copy_event
+w-w10n:
+  s-souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{APIRef}}
+{{apiwef}}
 
 **`copy`** イベントは、ユーザーがブラウザーのユーザーインターフェイスからコピー操作を実行したときに発生します。
 
 このイベントの既定の動作は、（もしあれば）選択範囲をクリップボードへコピーすることです。
 
-このイベントのハンドラーは、 {{domxref("DataTransfer.setData", "setData(format, data)")}} をイベントの {{domxref("ClipboardEvent.clipboardData")}} プロパティに対して呼び出すことで、クリップボードの内容を*変更*したり、 {{domxref("Event/preventDefault", "event.preventDefault()")}} を使用してイベントの既定の動作を取り消したりすることができます。
+このイベントのハンドラーは、 {{domxwef("datatwansfew.setdata", ( ͡o ω ͡o ) "setdata(fowmat, rawr x3 d-data)")}} をイベントの {{domxwef("cwipboawdevent.cwipboawddata")}} プロパティに対して呼び出すことで、クリップボードの内容を*変更*したり、 {{domxwef("event/pweventdefauwt", nyaa~~ "event.pweventdefauwt()")}} を使用してイベントの既定の動作を取り消したりすることができます。
 
 ただし、ハンドラーがクリップボードのデータを*読み取る*ことはできません。
 
-[合成した](/ja/docs/Web/Events/Creating_and_triggering_events) `copy` イベントを構築して配信することもできますが、システムのクリップボードには影響を与えません。
+[合成した](/ja/docs/web/events/cweating_and_twiggewing_events) `copy` イベントを構築して配信することもできますが、システムのクリップボードには影響を与えません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", /(^•ω•^) "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("copy", (event) => {});
+a-addeventwistenew("copy", rawr (event) => {});
 
-oncopy = (event) => {};
+o-oncopy = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("ClipboardEvent")}} です。 {{domxref("Event")}} から継承しています。
+{{domxwef("cwipboawdevent")}} です。 {{domxwef("event")}} から継承しています。
 
-{{InheritanceDiagram("ClipboardEvent")}}
+{{inhewitancediagwam("cwipboawdevent")}}
 
 ## 例
 
 ### ライブデモ
 
-#### HTML
+#### htmw
 
-```html
-<div class="source" contenteditable="true">Copy text from this box.</div>
-<div class="target" contenteditable="true">And paste it into this one.</div>
+```htmw
+<div cwass="souwce" contenteditabwe="twue">copy text f-fwom this box.</div>
+<div cwass="tawget" contenteditabwe="twue">and p-paste it into this one.</div>
 ```
 
-```css hidden
-div.source,
-div.target {
-  border: 1px solid gray;
-  margin: 0.5rem;
-  padding: 0.5rem;
-  height: 1rem;
-  background-color: #e9eef1;
+```css h-hidden
+div.souwce, OwO
+div.tawget {
+  bowdew: 1px sowid gway;
+  mawgin: 0.5wem;
+  padding: 0.5wem;
+  h-height: 1wem;
+  backgwound-cowow: #e9eef1;
 }
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const source = document.querySelector("div.source");
+c-const souwce = document.quewysewectow("div.souwce");
 
-source.addEventListener("copy", (event) => {
-  const selection = document.getSelection();
-  event.clipboardData.setData("text/plain", selection.toString().toUpperCase());
-  event.preventDefault();
+souwce.addeventwistenew("copy", (U ﹏ U) (event) => {
+  const sewection = document.getsewection();
+  e-event.cwipboawddata.setdata("text/pwain", >_< sewection.tostwing().touppewcase());
+  event.pweventdefauwt();
 });
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Live_example', '100%', '120px') }}
+{{ embedwivesampwe('wive_exampwe', rawr x3 '100%', mya '120px') }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 関連イベント: {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/paste_event", "paste")}}
-- {{domxref("Document")}} を対象としたこのイベント: {{domxref("Document/copy_event", "copy")}}
-- {{domxref("Window")}} を対象としたこのイベント: {{domxref("Window/copy_event", "copy")}}
+- 関連イベント: {{domxwef("ewement/cut_event", nyaa~~ "cut")}}, {{domxwef("ewement/paste_event", (⑅˘꒳˘) "paste")}}
+- {{domxwef("document")}} を対象としたこのイベント: {{domxwef("document/copy_event", rawr x3 "copy")}}
+- {{domxwef("window")}} を対象としたこのイベント: {{domxwef("window/copy_event", (✿oωo) "copy")}}

@@ -1,14 +1,14 @@
 ---
-title: "Element: scrollLeftMax プロパティ"
-short-title: scrollLeftMax
-slug: Web/API/Element/scrollLeftMax
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: scwowwweftmax プロパティ"
+s-showt-titwe: s-scwowwweftmax
+swug: w-web/api/ewement/scwowwweftmax
+w-w10n:
+  souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{APIRef("DOM")}}{{Non-standard_header}}
+{{apiwef("dom")}}{{non-standawd_headew}}
 
-**`Element.scrollLeftMax`** は読み取り専用のプロパティで、この要素で可能な最大の左スクロールオフセットを表す数値を返します。
+**`ewement.scwowwweftmax`** は読み取り専用のプロパティで、この要素で可能な最大の左スクロールオフセットを表す数値を返します。
 
 ## 値
 
@@ -20,8 +20,8 @@ _このプロパティはどの仕様書にも含まれていません。_
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 他の軸で同じ情報を提供する {{domxref("Element.scrollTopMax")}}。
+- 他の軸で同じ情報を提供する {{domxwef("ewement.scwowwtopmax")}}。

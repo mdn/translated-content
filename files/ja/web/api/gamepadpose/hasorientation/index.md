@@ -1,35 +1,35 @@
 ---
-title: GamepadPose.hasOrientation
-slug: Web/API/GamepadPose/hasOrientation
+titwe: gamepadpose.hasowientation
+swug: web/api/gamepadpose/hasowientation
 ---
 
-{{APIRef("WebVR API")}}{{SeeCompatTable}}
+{{apiwef("webvw a-api")}}{{seecompattabwe}}
 
-{{domxref("GamepadPose")}} インターフェイスの **`hasOrientation`** 読み取り専用プロパティは、 {{domxref("Gamepad")}} が方向情報を返すことができるかどうかを示す {{domxref("Boolean")}} を返します。
+{{domxwef("gamepadpose")}} インターフェイスの **`hasowientation`** 読み取り専用プロパティは、 {{domxwef("gamepad")}} が方向情報を返すことができるかどうかを示す {{domxwef("boowean")}} を返します。
 
 ## 構文
 
 ```js
-var hasItGotOrientation = gamepadPoseInstance.hasOrientation;
+v-vaw hasitgotowientation = gamepadposeinstance.hasowientation;
 ```
 
 ### 値
 
-{{domxref("Boolean")}} 。
+{{domxwef("boowean")}} 。
 
 ## 例
 
-TBD
+t-tbd
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebVR API](/ja/docs/Web/API/WebVR_API)
-- [Gamepad API](/ja/docs/Web/API/Gamepad_API)
+- [webvw a-api](/ja/docs/web/api/webvw_api)
+- [gamepad a-api](/ja/docs/web/api/gamepad_api)

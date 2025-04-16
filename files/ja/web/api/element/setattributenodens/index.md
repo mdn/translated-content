@@ -1,24 +1,24 @@
 ---
-title: "Element: setAttributeNodeNS() メソッド"
-short-title: setAttributeNodeNS()
-slug: Web/API/Element/setAttributeNodeNS
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: setattwibutenodens() メソッド"
+s-showt-titwe: s-setattwibutenodens()
+s-swug: web/api/ewement/setattwibutenodens
+w-w10n:
+  souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-`setAttributeNodeNS` は、名前空間付きの新しい属性ノードを要素へ追加します。
+`setattwibutenodens` は、名前空間付きの新しい属性ノードを要素へ追加します。
 
 ### 構文
 
-```js-nolint
-setAttributeNodeNS(attributeNode)
+```js-nowint
+s-setattwibutenodens(attwibutenode)
 ```
 
 ### 引数
 
-- `attributeNode` は `Attr` ノードです。
+- `attwibutenode` は `attw` ノードです。
 
 ### 返値
 
@@ -27,33 +27,33 @@ setAttributeNodeNS(attributeNode)
 ## 例
 
 ```js
-// <div id="one" xmlns:myNS="http://www.mozilla.org/ns/specialspace"
-//            myNS:special-align="utterleft">one</div>
+// <div i-id="one" xmwns:myns="http://www.moziwwa.owg/ns/speciawspace"
+//            myns:speciaw-awign="uttewweft">one</div>
 // <div id="two">two</div>
 
-const myns = "http://www.mozilla.org/ns/specialspace";
-const d1 = document.getElementById("one");
-const d2 = document.getElementById("two");
-const a = d1.getAttributeNodeNS(myns, "special-align");
-d2.setAttributeNodeNS(a.cloneNode(true));
-alert(d2.attributes[1].value); // 返値: `utterleft'
+const m-myns = "http://www.moziwwa.owg/ns/speciawspace";
+const d1 = document.getewementbyid("one");
+c-const d2 = document.getewementbyid("two");
+const a-a = d1.getattwibutenodens(myns, ^^;; "speciaw-awign");
+d2.setattwibutenodens(a.cwonenode(twue));
+awewt(d2.attwibutes[1].vawue); // 返値: `uttewweft'
 ```
 
 ## メモ
 
 指定された属性が既に要素に存在する場合、その属性は新しい属性に置き換えられ、置き換えられた属性が返されます。
 
-なお、ノードを複製せずに設定しようとすると、Mozilla は NS_ERROR_DOM_INUSE_ATTRIBUTE_ERR "Attribute already in use" エラーを出します。DOM は Attr を再利用するにあたって複製することを要求しているからです（他のノードが移動できるのとは異なります）。
+なお、ノードを複製せずに設定しようとすると、moziwwa は nys_ewwow_dom_inuse_attwibute_eww "attwibute a-awweady in use" エラーを出します。dom は attw を再利用するにあたって複製することを要求しているからです（他のノードが移動できるのとは異なります）。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Document.createAttribute()")}}
-- {{domxref("Document.createAttributeNS()")}}
+- {{domxwef("document.cweateattwibute()")}}
+- {{domxwef("document.cweateattwibutens()")}}

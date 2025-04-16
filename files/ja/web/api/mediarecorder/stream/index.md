@@ -1,51 +1,51 @@
 ---
-title: MediaRecorder.stream
-slug: Web/API/MediaRecorder/stream
-l10n:
-  sourceCommit: c7aeb96dac3e0ac2864cffe45c02d214ae1a5219
+titwe: mediawecowdew.stweam
+swug: web/api/mediawecowdew/stweam
+w-w10n:
+  souwcecommit: c-c7aeb96dac3e0ac2864cffe45c02d214ae1a5219
 ---
 
-{{APIRef("MediaStream Recording")}}
+{{apiwef("mediastweam w-wecowding")}}
 
-**`MediaRecorder.stream`** は読み取り専用プロパティで、 `MediaRecorder` を作成したときに `MediaRecorder()` コンストラクターに渡したストリームを返します。
+**`mediawecowdew.stweam`** は読み取り専用プロパティで、 `mediawecowdew` を作成したときに `mediawecowdew()` コンストラクターに渡したストリームを返します。
 
 ## 値
 
-最初に `MediaRecorder` を作成したとき `MediaRecorde()` コンストラクターに渡した {{domxref("MediaStream")}} です。
+最初に `mediawecowdew` を作成したとき `mediawecowde()` コンストラクターに渡した {{domxwef("mediastweam")}} です。
 
 ## 例
 
 ```js
-if (navigator.getUserMedia) {
-  console.log("getUserMediaがサポートされています。");
-  navigator.getUserMedia(
+i-if (navigatow.getusewmedia) {
+  c-consowe.wog("getusewmediaがサポートされています。");
+  n-nyavigatow.getusewmedia(
     // 制約 - このアプリに必要なのは音声のみ
     {
-      audio: true,
+      a-audio: t-twue, (⑅˘꒳˘)
     },
 
     // 成功コールバック
-    (stream) => {
-      const mediaRecorder = new MediaRecorder(stream);
+    (stweam) => {
+      const mediawecowdew = nyew mediawecowdew(stweam);
 
-      const myStream = mediaRecorder.stream;
-      console.log(myStream);
-    },
+      const mystweam = m-mediawecowdew.stweam;
+      consowe.wog(mystweam);
+    }, (U ᵕ U❁)
   );
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [MediaStream 収録 API の使用](/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
-- [ウェブディクタフォン](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder + getUserMedia + ウェブオーディオ API 可視化デモ、[Chris Mills](https://twitter.com/chrisdavidmills) 著（[GitHub のソース](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone)）。（英語）
-- [simpl.info の MediaStream Recording のデモ](https://simpl.info/mediarecorder/)、[Sam Dutton](https://twitter.com/sw12) 著。（英語）
-- {{domxref("Navigator.getUserMedia")}}
+- [mediastweam 収録 api の使用](/ja/docs/web/api/mediastweam_wecowding_api/using_the_mediastweam_wecowding_api)
+- [ウェブディクタフォン](https://mdn.github.io/dom-exampwes/media/web-dictaphone/): m-mediawecowdew + getusewmedia + ウェブオーディオ a-api 可視化デモ、[chwis miwws](https://twittew.com/chwisdavidmiwws) 著（[github のソース](https://github.com/mdn/dom-exampwes/twee/main/media/web-dictaphone)）。（英語）
+- [simpw.info の mediastweam wecowding のデモ](https://simpw.info/mediawecowdew/)、[sam dutton](https://twittew.com/sw12) 著。（英語）
+- {{domxwef("navigatow.getusewmedia")}}

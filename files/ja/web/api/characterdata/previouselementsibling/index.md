@@ -1,53 +1,53 @@
 ---
-title: "CharacterData: previousElementSibling プロパティ"
-slug: Web/API/CharacterData/previousElementSibling
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: "chawactewdata: pweviousewementsibwing プロパティ"
+s-swug: web/api/chawactewdata/pweviousewementsibwing
+w-w10n:
+  souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`previousElementSibling`** は {{domxref("CharacterData")}} インターフェイスの読み取り専用プロパティで、親の子リストの中で、現在のノードの一つ前の {{domxref("Element")}} を返します。存在しなければ `null` を返します。
+**`pweviousewementsibwing`** は {{domxwef("chawactewdata")}} インターフェイスの読み取り専用プロパティで、親の子リストの中で、現在のノードの一つ前の {{domxwef("ewement")}} を返します。存在しなければ `nuww` を返します。
 
 ## 値
 
-{{domxref("Element")}} オブジェクト、または兄弟ノードが見つらなければ `null` です。
+{{domxwef("ewement")}} オブジェクト、または兄弟ノードが見つらなければ `nuww` です。
 
 ## 例
 
-```html
-<div id="div-01">これは div-01 です</div>
-TEXT
-<div id="div-02">これは div-02 です</div>
-SOME TEXT
+```htmw
+<div i-id="div-01">これは d-div-01 です</div>
+t-text
+<div i-id="div-02">これは d-div-02 です</div>
+s-some text
 <div id="div-03">これは div-03 です</div>
-<pre>結果</pre>
+<pwe>結果</pwe>
 ```
 
 ```js
-// 最初に node に Text ノード `SOME TEXT` を設定
-let node = document.getElementById("div-02").nextSibling;
+// 最初に nyode に text ノード `some text` を設定
+wet nyode = document.getewementbyid("div-02").nextsibwing;
 
-let result = "SOME TEXT の前の兄弟要素:\n";
+w-wet wesuwt = "some text の前の兄弟要素:\n";
 
-while (node) {
-  result += `${node.nodeName}\n`;
-  node = node.previousElementSibling;
+w-whiwe (node) {
+  wesuwt += `${node.nodename}\n`;
+  n-nyode = nyode.pweviousewementsibwing;
 }
 
-document.querySelector("pre").textContent = result;
+document.quewysewectow("pwe").textcontent = wesuwt;
 ```
 
-{{EmbedLiveSample("Example", "100%", "200")}}
+{{embedwivesampwe("exampwe", (⑅˘꒳˘) "100%", (U ᵕ U❁) "200")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("CharacterData.nextElementSibling")}}
+- {{domxwef("chawactewdata.nextewementsibwing")}}

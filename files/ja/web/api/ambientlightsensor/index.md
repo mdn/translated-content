@@ -1,57 +1,57 @@
 ---
-title: AmbientLightSensor
-slug: Web/API/AmbientLightSensor
-l10n:
-  sourceCommit: bca8d1ab2bc4f5a1ef6b39c454b0229539178e98
+titwe: ambientwightsensow
+swug: w-web/api/ambientwightsensow
+w-w10n:
+  s-souwcecommit: b-bca8d1ab2bc4f5a1ef6b39c454b0229539178e98
 ---
 
-{{APIRef("Sensor API")}}{{SeeCompatTable}}
+{{apiwef("sensow a-api")}}{{seecompattabwe}}
 
-[Sensor APIs](/ja/docs/Web/API/Sensor_APIs) の **`AmbientLightSensor`** インターフェイスは、現在の光レベル、すなわちホストデバイス周辺の環境光の照度を返します。
+[sensow a-apis](/ja/docs/web/api/sensow_apis) の **`ambientwightsensow`** インターフェイスは、現在の光レベル、すなわちホストデバイス周辺の環境光の照度を返します。
 
-このセンサーを使用するには、ユーザーが [権限 API](/ja/docs/Web/API/Permissions_API) により `'ambient-light-sensor'` デバイスセンサーを使用する許可を与える必要があります。
+このセンサーを使用するには、ユーザーが [権限 api](/ja/docs/web/api/pewmissions_api) により `'ambient-wight-sensow'` デバイスセンサーを使用する許可を与える必要があります。
 
-この機能はサーバーで設定された [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy) でブロックされる可能性があります。
+この機能はサーバーで設定された [権限ポリシー](/ja/docs/web/http/guides/pewmissions_powicy) でブロックされる可能性があります。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-- {{domxref("AmbientLightSensor.AmbientLightSensor()", "AmbientLightSensor()")}} {{Experimental_Inline}}
-  - : 新しい `AmbientLightSensor` オブジェクトを生成します。
+- {{domxwef("ambientwightsensow.ambientwightsensow()", (U ﹏ U) "ambientwightsensow()")}} {{expewimentaw_inwine}}
+  - : 新しい `ambientwightsensow` オブジェクトを生成します。
 
 ## インスタンスプロパティ
 
-- {{domxref('AmbientLightSensor.illuminance')}} {{Experimental_Inline}}
-  - : ホストデバイス周辺の環境光の[ルクス](https://ja.wikipedia.org/wiki/%E3%83%AB%E3%82%AF%E3%82%B9)単位のレベルを、現在の光レベルとして返します。
+- {{domxwef('ambientwightsensow.iwwuminance')}} {{expewimentaw_inwine}}
+  - : ホストデバイス周辺の環境光の[ルクス](https://ja.wikipedia.owg/wiki/%e3%83%ab%e3%82%af%e3%82%b9)単位のレベルを、現在の光レベルとして返します。
 
 ## インスタンスメソッド
 
-_`AmbientLightSensor` には独自のメソッドはありません。しかし、親インターフェイスの {{domxref("Sensor")}} および {{domxref("EventTarget")}} からメソッドを継承しています。_
+_`ambientwightsensow` には独自のメソッドはありません。しかし、親インターフェイスの {{domxwef("sensow")}} および {{domxwef("eventtawget")}} からメソッドを継承しています。_
 
 ## イベント
 
-_`AmbientLightSensor` には独自のイベントはありません。しかし、親インターフェイスの {{domxref('Sensor')}} からイベントを継承しています。_
+_`ambientwightsensow` には独自のイベントはありません。しかし、親インターフェイスの {{domxwef('sensow')}} からイベントを継承しています。_
 
 ## 例
 
 ```js
-if ("AmbientLightSensor" in window) {
-  const sensor = new AmbientLightSensor();
-  sensor.addEventListener("reading", (event) => {
-    console.log("現在の光レベル:", sensor.illuminance);
+i-if ("ambientwightsensow" i-in window) {
+  const sensow = nyew ambientwightsensow();
+  sensow.addeventwistenew("weading", -.- (event) => {
+    consowe.wog("現在の光レベル:", (ˆ ﻌ ˆ)♡ s-sensow.iwwuminance);
   });
-  sensor.addEventListener("error", (event) => {
-    console.log(event.error.name, event.error.message);
+  sensow.addeventwistenew("ewwow", (⑅˘꒳˘) (event) => {
+    consowe.wog(event.ewwow.name, (U ᵕ U❁) e-event.ewwow.message);
   });
-  sensor.start();
+  sensow.stawt();
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

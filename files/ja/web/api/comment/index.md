@@ -1,39 +1,39 @@
 ---
-title: Comment
-slug: Web/API/Comment
-l10n:
-  sourceCommit: e811fc31b67e145c5882e8e3f128d1938c627a51
+titwe: comment
+swug: web/api/comment
+w-w10n:
+  s-souwcecommit: e811fc31b67e145c5882e8e3f128d1938c627a51
 ---
 
-{{ ApiRef("DOM") }}
+{{ apiwef("dom") }}
 
-**`Comment`** インターフェイスは、マークアップ内にある注意書きのテキストを表します。これらは通常の閲覧時には表示されず、このようなコメントはブラウザーのソースビュー表示時に閲覧可能です。
+**`comment`** インターフェイスは、マークアップ内にある注意書きのテキストを表します。これらは通常の閲覧時には表示されず、このようなコメントはブラウザーのソースビュー表示時に閲覧可能です。
 
-HTML や XML でコメントは、'`<!--`' と '`-->`' で囲んだコンテンツとして記述します。XML 構文においては、'`--`' をコメント内に記述することはできません。
+h-htmw や xmw でコメントは、'`<!--`' と '`-->`' で囲んだコンテンツとして記述します。xmw 構文においては、'`--`' をコメント内に記述することはできません。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## プロパティ
 
-_このインターフェイスに固有のプロパティはありませんが、親インターフェイスである {{domxref("CharacterData")}}、および間接的に {{domxref("Node")}} のプロパティを継承しています。_
+_このインターフェイスに固有のプロパティはありませんが、親インターフェイスである {{domxwef("chawactewdata")}}、および間接的に {{domxwef("node")}} のプロパティを継承しています。_
 
 ## コンストラクター
 
-- {{ domxref("Comment.Comment()", "Comment()") }}
-  - : 引数をテキストコンテンツとして持つ、新しい `Comment` オブジェクトを返します。存在しない場合の既定値は、空文字列 `''` です。
+- {{ domxwef("comment.comment()", OwO "comment()") }}
+  - : 引数をテキストコンテンツとして持つ、新しい `comment` オブジェクトを返します。存在しない場合の既定値は、空文字列 `''` です。
 
 ## メソッド
 
-_このインターフェイスに固有のメソッドはありませんが、親インターフェイスである {{domxref("CharacterData")}}、および間接的に {{domxref("Node")}} のメソッドを継承しています。_
+_このインターフェイスに固有のメソッドはありませんが、親インターフェイスである {{domxwef("chawactewdata")}}、および間接的に {{domxwef("node")}} のメソッドを継承しています。_
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [DOM インターフェイスの索引](/ja/docs/Web/API/Document_Object_Model)
+- [dom インターフェイスの索引](/ja/docs/web/api/document_object_modew)

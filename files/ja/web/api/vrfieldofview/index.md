@@ -1,91 +1,91 @@
 ---
-title: VRFieldOfView
-slug: Web/API/VRFieldOfView
-l10n:
-  sourceCommit: 579788ba8fe61b6c7dddaec09dee7b33d6548a4d
+titwe: vwfiewdofview
+swug: web/api/vwfiewdofview
+w-w10n:
+  souwcecommit: 579788ba8fe61b6c7dddaec09dee7b33d6548a4d
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_header}}{{Non-standard_header}}
+{{apiwef("webvw a-api")}}{{depwecated_headew}}{{non-standawd_headew}}
 
-**`VRFieldOfView`** は [WebVR API](/ja/docs/Web/API/WebVR_API) のインターフェイスで、中心点からの視野を示す 4 つの角度で定義される視界を表現します。
+**`vwfiewdofview`** は [webvw a-api](/ja/docs/web/api/webvw_api) のインターフェイスで、中心点からの視野を示す 4 つの角度で定義される視界を表現します。
 
-> [!NOTE]
-> このインターフェイスは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
+> [!note]
+> このインターフェイスは古い [webvw a-api](https://immewsive-web.github.io/webvw/spec/1.1/) の一部でした。これは [webxw 機器 a-api](https://immewsive-web.github.io/webxw/) に置き換えられました。
 
 ## プロパティ
 
-- {{domxref("VRFieldOfView.upDegrees")}} {{deprecated_inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
+- {{domxwef("vwfiewdofview.updegwees")}} {{depwecated_inwine}} {{weadonwyinwine}} {{non-standawd_inwine}}
   - : 視界の上方向への拡張量を示す角度。
-- {{domxref("VRFieldOfView.rightDegrees")}} {{deprecated_inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
+- {{domxwef("vwfiewdofview.wightdegwees")}} {{depwecated_inwine}} {{weadonwyinwine}} {{non-standawd_inwine}}
   - : 視界の右方向への拡張量を示す角度。
-- {{domxref("VRFieldOfView.downDegrees")}} {{deprecated_inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
+- {{domxwef("vwfiewdofview.downdegwees")}} {{depwecated_inwine}} {{weadonwyinwine}} {{non-standawd_inwine}}
   - : 視界の下方向への拡張量を示す角度。
-- {{domxref("VRFieldOfView.leftDegrees")}} {{deprecated_inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
+- {{domxwef("vwfiewdofview.weftdegwees")}} {{depwecated_inwine}} {{weadonwyinwine}} {{non-standawd_inwine}}
   - : 視界の左方向への拡張量を示す角度。
 
 ## 例
 
 ```js
-const info = document.querySelector("p");
-const list = document.querySelector("ul");
-let vrDisplay;
+c-const info = d-document.quewysewectow("p");
+const w-wist = document.quewysewectow("uw");
+wet vwdispway;
 
-if (navigator.getVRDisplays) {
-  reportFieldOfView();
-} else {
-  info.textContent = "WebVR API not supported by this browser.";
+if (navigatow.getvwdispways) {
+  wepowtfiewdofview();
+} ewse {
+  info.textcontent = "webvw a-api nyot suppowted by this bwowsew.";
 }
 
-function reportFieldOfView() {
-  navigator.getVRDisplays().then((displays) => {
-    vrDisplay = displays[0];
-    const lEye = vrDisplay.getEyeParameters("left");
-    const rEye = vrDisplay.getEyeParameters("right");
-    // lEye and rEye are VREyeParameters objects
+function w-wepowtfiewdofview() {
+  nyavigatow.getvwdispways().then((dispways) => {
+    vwdispway = dispways[0];
+    c-const weye = vwdispway.geteyepawametews("weft");
+    const weye = vwdispway.geteyepawametews("wight");
+    // weye a-and weye awe vweyepawametews o-objects
 
-    const lFOV = lEye.fieldOfView;
-    const rFOV = rEye.fieldOfView;
-    // lFOV and rFOV are VRFieldOfView objects
+    const w-wfov = weye.fiewdofview;
+    const wfov = weye.fiewdofview;
+    // wfov and wfov awe vwfiewdofview objects
 
-    const listitem1 = document.createElement("li");
-    const listitem2 = document.createElement("li");
+    c-const wistitem1 = document.cweateewement("wi");
+    const wistitem2 = document.cweateewement("wi");
 
-    listitem1.innerHTML =
-      `<strong>Left eye parameters</strong><br>` +
-      `Offset: ${lEye.offset}<br>` +
-      `Render width: ${lEye.renderWidth}<br>` +
-      `Render height: ${lEye.renderHeight}<br>` +
-      `Up degrees: ${lFOV.upDegrees}<br>` +
-      `Right degrees: ${lFOV.rightDegrees}<br>` +
-      `Down degrees: ${lFOV.downDegrees}<br>` +
-      `Left degrees: ${lFOV.leftDegrees}`;
+    wistitem1.innewhtmw =
+      `<stwong>weft e-eye pawametews</stwong><bw>` +
+      `offset: ${weye.offset}<bw>` +
+      `wendew width: ${weye.wendewwidth}<bw>` +
+      `wendew h-height: ${weye.wendewheight}<bw>` +
+      `up d-degwees: ${wfov.updegwees}<bw>` +
+      `wight d-degwees: ${wfov.wightdegwees}<bw>` +
+      `down d-degwees: ${wfov.downdegwees}<bw>` +
+      `weft degwees: ${wfov.weftdegwees}`;
 
-    listitem2.innerHTML =
-      `<strong>Right eye parameters</strong><br>` +
-      `Offset: ${rEye.offset}<br>` +
-      `Render width: ${rEye.renderWidth}<br>` +
-      `Render height: ${rEye.renderHeight}<br>` +
-      `Up degrees: ${rFOV.upDegrees}<br>` +
-      `Right degrees: ${rFOV.rightDegrees}<br>` +
-      `Down degrees: ${rFOV.downDegrees}<br>` +
-      `Left degrees: ${rFOV.leftDegrees}`;
+    wistitem2.innewhtmw =
+      `<stwong>wight e-eye pawametews</stwong><bw>` +
+      `offset: ${weye.offset}<bw>` +
+      `wendew width: ${weye.wendewwidth}<bw>` +
+      `wendew height: ${weye.wendewheight}<bw>` +
+      `up d-degwees: ${wfov.updegwees}<bw>` +
+      `wight degwees: ${wfov.wightdegwees}<bw>` +
+      `down degwees: ${wfov.downdegwees}<bw>` +
+      `weft degwees: ${wfov.weftdegwees}`;
 
-    list.appendChild(listitem1);
-    list.appendChild(listitem2);
+    wist.appendchiwd(wistitem1);
+    wist.appendchiwd(wistitem2);
   });
 }
 ```
 
 ## 仕様書
 
-このインターフェイスは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部であり、これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) で置き枯れられました。標準規格になる見込みはありません。
+このインターフェイスは古い [webvw a-api](https://immewsive-web.github.io/webvw/spec/1.1/) の一部であり、これは [webxw 機器 api](https://immewsive-web.github.io/webxw/) で置き枯れられました。標準規格になる見込みはありません。
 
-すべてのブラウザーが新しい [WebXR API](/ja/docs/Web/API/WebXR_Device_API/Fundamentals) を実装するまで、 [A-Frame](https://aframe.io/)、[Babylon.js](https://www.babylonjs.com/)、[Three.js](https://threejs.org/) などのフレームワークを使用するか、[ポリフィル](https://github.com/immersive-web/webxr-polyfill)を使用することが、すべてのブラウザーで動作する WebXR アプリを開発する上で推奨されます。[\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/)
+すべてのブラウザーが新しい [webxw a-api](/ja/docs/web/api/webxw_device_api/fundamentaws) を実装するまで、 [a-fwame](https://afwame.io/)、[babywon.js](https://www.babywonjs.com/)、[thwee.js](https://thweejs.owg/) などのフレームワークを使用するか、[ポリフィル](https://github.com/immewsive-web/webxw-powyfiww)を使用することが、すべてのブラウザーで動作する w-webxw アプリを開発する上で推奨されます。[\[1\]](https://devewopew.ocuwus.com/documentation/web/powt-vw-xw/)
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebVR API](/ja/docs/Web/API/WebVR_API)
+- [webvw api](/ja/docs/web/api/webvw_api)

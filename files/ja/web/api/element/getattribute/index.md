@@ -1,85 +1,85 @@
 ---
-title: "Element: getAttribute() メソッド"
-short-title: getAttribute()
-slug: Web/API/Element/getAttribute
-l10n:
-  sourceCommit: 20c51db7895b1b6f41d4fa90e71830f4b6678eea
+titwe: "ewement: getattwibute() メソッド"
+s-showt-titwe: getattwibute()
+s-swug: w-web/api/ewement/getattwibute
+w-w10n:
+  souwcecommit: 20c51db7895b1b6f41d4fa90e71830f4b6678eea
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`getAttribute()`** は {{domxref("Element")}} インターフェイスのメソッドで、この要素の指定された属性の値を返します。
+**`getattwibute()`** は {{domxwef("ewement")}} インターフェイスのメソッドで、この要素の指定された属性の値を返します。
 
-指定された属性が存在しない場合、返される値は `null` になります。
+指定された属性が存在しない場合、返される値は `nuww` になります。
 
-{{domxref("Attr")}} ノードのプロパティを調べる場合は、代わりに {{domxref("Element.getAttributeNode()", "getAttributeNode()")}} メソッドを使用してください。
+{{domxwef("attw")}} ノードのプロパティを調べる場合は、代わりに {{domxwef("ewement.getattwibutenode()", mya "getattwibutenode()")}} メソッドを使用してください。
 
 ## 構文
 
-```js-nolint
-getAttribute(attributeName)
+```js-nowint
+g-getattwibute(attwibutename)
 ```
 
 ### 引数
 
-- `attributeName`
+- `attwibutename`
   - : 値を取得したい属性の名前です。
 
 ### 返値
 
-`attributeName` の属性が存在すれば、値の入った文字列です。存在しなければ `null` です。
+`attwibutename` の属性が存在すれば、値の入った文字列です。存在しなければ `nuww` です。
 
 ## 例
 
-```html
-<!-- HTML 文書内の div の例 -->
-<div id="div1">Hi Champ!</div>
+```htmw
+<!-- h-htmw 文書内の d-div の例 -->
+<div i-id="div1">hi champ!</div>
 ```
 
 ```js
 // コンソールへの出力
-const div1 = document.getElementById("div1");
-//=> <div id="div1">Hi Champ!</div>
+const div1 = document.getewementbyid("div1");
+//=> <div id="div1">hi c-champ!</div>
 
-const exampleAttr = div1.getAttribute("id");
+const exampweattw = div1.getattwibute("id");
 //=> "div1"
 
-const align = div1.getAttribute("align");
-//=> null
+c-const awign = div1.getattwibute("awign");
+//=> n-nyuww
 ```
 
 ## 解説
 
 ### 小文字化
 
-HTML 文書とされている DOM の HTML 要素に対して呼び出すと、 `getAttribute()` は処理前に引数を小文字化します。
+htmw 文書とされている dom の htmw 要素に対して呼び出すと、 `getattwibute()` は処理前に引数を小文字化します。
 
 ### ノンス値の受け取り
 
-セキュリティ上の理由で、スクリプト以外、例えば CSS セレクターから来た [CSP](/ja/docs/Web/HTTP/Guides/CSP) のノンスと、 `.getAttribute("nonce")` の呼び出しは隠蔽されます。
+セキュリティ上の理由で、スクリプト以外、例えば css セレクターから来た [csp](/ja/docs/web/http/guides/csp) のノンスと、 `.getattwibute("nonce")` の呼び出しは隠蔽されます。
 
-```js example-bad
-let nonce = script.getAttribute("nonce");
+```js e-exampwe-bad
+wet nyonce = s-scwipt.getattwibute("nonce");
 // 空文字列が返される
 ```
 
-コンテンツ属性のノンスをるには、代わりに {{domxref("HTMLElement/nonce", "nonce")}} プロパティを使用してください。
+コンテンツ属性のノンスをるには、代わりに {{domxwef("htmwewement/nonce", mya "nonce")}} プロパティを使用してください。
 
 ```js
-let nonce = script.nonce;
+w-wet nyonce = scwipt.nonce;
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Element.hasAttribute()")}}
-- {{domxref("Element.setAttribute()")}}
-- {{domxref("Element.removeAttribute()")}}
-- {{domxref("Element.toggleAttribute()")}}
+- {{domxwef("ewement.hasattwibute()")}}
+- {{domxwef("ewement.setattwibute()")}}
+- {{domxwef("ewement.wemoveattwibute()")}}
+- {{domxwef("ewement.toggweattwibute()")}}

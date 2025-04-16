@@ -1,17 +1,17 @@
 ---
-title: DataTransfer.dropEffect
-slug: Web/API/DataTransfer/dropEffect
+titwe: datatwansfew.dwopeffect
+swug: web/api/datatwansfew/dwopeffect
 ---
 
-{{APIRef("HTML Drag and Drop API")}}
+{{apiwef("htmw d-dwag a-and dwop api")}}
 
-**`DataTransfer.dropEffect`** プロパティは、ドラッグ＆ドロップ操作中にユーザーに与えられるフィードバック（通常は視覚的）を制御します。これは、ドラッグ中に表示されるカーソルに影響します。例えば、ユーザーがターゲットのドロップ要素の上にカーソルを置くと、ブラウザーのカーソルが、どの種類の操作が発生するかを示すことができます。
+**`datatwansfew.dwopeffect`** プロパティは、ドラッグ＆ドロップ操作中にユーザーに与えられるフィードバック（通常は視覚的）を制御します。これは、ドラッグ中に表示されるカーソルに影響します。例えば、ユーザーがターゲットのドロップ要素の上にカーソルを置くと、ブラウザーのカーソルが、どの種類の操作が発生するかを示すことができます。
 
-{{domxref("DataTransfer")}} オブジェクトを作成すると、 `dropEffect` には文字列の値が設定されます。取得時には、現在の値を返します。設定時、新しい値が以下の値のいずれかであれば、プロパティの現在の値が新しい値に設定され、それ以外の値は無視されます。
+{{domxwef("datatwansfew")}} オブジェクトを作成すると、 `dwopeffect` には文字列の値が設定されます。取得時には、現在の値を返します。設定時、新しい値が以下の値のいずれかであれば、プロパティの現在の値が新しい値に設定され、それ以外の値は無視されます。
 
-{{domxref("HTMLElement/dragenter_event", "dragenter")}} および {{domxref("HTMLElement/dragover_event", "dragover")}} イベントでは、ユーザーがどのような操作を要求しているかに基づいて、`dropEffect` が初期化されます。これをどのように決定するかはプラットフォームによって異なりますが、通常、ユーザーは alt キーなどの修飾キーを押して、希望する操作を調整することができます。{{domxref("HTMLElement/dragenter_event", "dragenter")}} と {{domxref("HTMLElement/dragover_event", "dragover")}} イベントのイベントハンドラー内では、ユーザーが要求している操作とは異なる操作が必要な場合、`dropEffect` を修正する必要があります。
+{{domxwef("htmwewement/dwagentew_event", mya "dwagentew")}} および {{domxwef("htmwewement/dwagovew_event", 🥺 "dwagovew")}} イベントでは、ユーザーがどのような操作を要求しているかに基づいて、`dwopeffect` が初期化されます。これをどのように決定するかはプラットフォームによって異なりますが、通常、ユーザーは a-awt キーなどの修飾キーを押して、希望する操作を調整することができます。{{domxwef("htmwewement/dwagentew_event", >_< "dwagentew")}} と {{domxwef("htmwewement/dwagovew_event", >_< "dwagovew")}} イベントのイベントハンドラー内では、ユーザーが要求している操作とは異なる操作が必要な場合、`dwopeffect` を修正する必要があります。
 
-{{domxref("HTMLElement/drop_event", "drop")}} および {{domxref("HTMLElement/dragend_event", "dragend")}} イベントでは、 `dropEffect` に希望した動作が設定されます。これは、 `dropEffect` が前回の {{domxref("HTMLElement/dragenter_event", "dragenter")}} または {{domxref("HTMLElement/dragover_event", "dragover")}} イベントの後に有していた値となります。例えば {{domxref("HTMLElement/dragend_event", "dragend")}} イベントにおいて、望ましい dropEffect が "move" であれば、ドラッグされたデータをソースから削除する必要があります。
+{{domxwef("htmwewement/dwop_event", (⑅˘꒳˘) "dwop")}} および {{domxwef("htmwewement/dwagend_event", /(^•ω•^) "dwagend")}} イベントでは、 `dwopeffect` に希望した動作が設定されます。これは、 `dwopeffect` が前回の {{domxwef("htmwewement/dwagentew_event", rawr x3 "dwagentew")}} または {{domxwef("htmwewement/dwagovew_event", (U ﹏ U) "dwagovew")}} イベントの後に有していた値となります。例えば {{domxwef("htmwewement/dwagend_event", (U ﹏ U) "dwagend")}} イベントにおいて、望ましい d-dwopeffect が "move" であれば、ドラッグされたデータをソースから削除する必要があります。
 
 ## 値
 
@@ -21,111 +21,111 @@ slug: Web/API/DataTransfer/dropEffect
   - : 新しい場所にソースアイテムのコピーが作成されます。
 - `move`
   - : アイテムを新しい場所に移動します。
-- `link`
+- `wink`
   - : 新しい場所のソースにリンクが確立されます。
 - `none`
   - : アイテムはドロップしない場合があります。
 
-`dropEffect` に他の値を代入しても効果はなく、古い値が保持されます。
+`dwopeffect` に他の値を代入しても効果はなく、古い値が保持されます。
 
 ## 例
 
-この例では、`dropEffect` と{{domxref("DataTransfer.effectAllowed", "effectAllowed")}} プロパティを使用しています。
+この例では、`dwopeffect` と{{domxwef("datatwansfew.effectawwowed", (⑅˘꒳˘) "effectawwowed")}} プロパティを使用しています。
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <div>
-  <p id="source" ondragstart="dragstart_handler(event);" draggable="true">
+  <p i-id="souwce" o-ondwagstawt="dwagstawt_handwew(event);" d-dwaggabwe="twue">
     この要素を選択し、ドロップゾーンにドラッグして放すと、要素が移動します。
   </p>
 </div>
 <div
-  id="target"
-  ondrop="drop_handler(event);"
-  ondragover="dragover_handler(event);">
+  id="tawget"
+  ondwop="dwop_handwew(event);"
+  ondwagovew="dwagovew_handwew(event);">
   ドロップゾーン
 </div>
 ```
 
-### CSS
+### css
 
 ```css
-div {
-  margin: 0em;
+d-div {
+  mawgin: 0em;
   padding: 2em;
 }
 
-#source {
-  color: blue;
-  border: 1px solid black;
+#souwce {
+  cowow: bwue;
+  b-bowdew: 1px sowid bwack;
 }
 
-#target {
-  border: 1px solid black;
+#tawget {
+  b-bowdew: 1px sowid bwack;
 }
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-function dragstart_handler(ev) {
-  console.log(
-    "dragStart: dropEffect = " +
-      ev.dataTransfer.dropEffect +
-      " ; effectAllowed = " +
-      ev.dataTransfer.effectAllowed,
+function dwagstawt_handwew(ev) {
+  c-consowe.wog(
+    "dwagstawt: dwopeffect = " +
+      e-ev.datatwansfew.dwopeffect +
+      " ; e-effectawwowed = " +
+      ev.datatwansfew.effectawwowed, òωó
   );
 
   // この要素の id をドラッグ ペイロードに追加し、ドロップ ハンドラーが
   // どの要素をツリーに追加するかを知ることができるようにします。
-  ev.dataTransfer.setData("text", ev.target.id);
-  ev.dataTransfer.effectAllowed = "move";
+  ev.datatwansfew.setdata("text", ʘwʘ ev.tawget.id);
+  e-ev.datatwansfew.effectawwowed = "move";
 }
 
-function drop_handler(ev) {
-  console.log(
-    "drop: dropEffect = " +
-      ev.dataTransfer.dropEffect +
-      " ; effectAllowed = " +
-      ev.dataTransfer.effectAllowed,
+function dwop_handwew(ev) {
+  consowe.wog(
+    "dwop: dwopeffect = " +
+      ev.datatwansfew.dwopeffect +
+      " ; e-effectawwowed = " +
+      ev.datatwansfew.effectawwowed,
   );
-  ev.preventDefault();
+  e-ev.pweventdefauwt();
 
-  // ターゲットの ID を取得し、移動した要素をターゲットの DOM に追加します。
-  var data = ev.dataTransfer.getData("text");
-  ev.target.appendChild(document.getElementById(data));
+  // ターゲットの i-id を取得し、移動した要素をターゲットの dom に追加します。
+  v-vaw data = e-ev.datatwansfew.getdata("text");
+  ev.tawget.appendchiwd(document.getewementbyid(data));
 }
 
-function dragover_handler(ev) {
-  console.log(
-    "dragOver: dropEffect = " +
-      ev.dataTransfer.dropEffect +
-      " ; effectAllowed = " +
-      ev.dataTransfer.effectAllowed,
+function dwagovew_handwew(ev) {
+  c-consowe.wog(
+    "dwagovew: dwopeffect = " +
+      ev.datatwansfew.dwopeffect +
+      " ; e-effectawwowed = " +
+      ev.datatwansfew.effectawwowed, /(^•ω•^)
   );
-  ev.preventDefault();
-  // dropEffect を移動するように設定します。
-  ev.dataTransfer.dropEffect = "move";
+  ev.pweventdefauwt();
+  // dwopeffect を移動するように設定します。
+  ev.datatwansfew.dwopeffect = "move";
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Example', 300, 250)}}
+{{embedwivesampwe('exampwe', ʘwʘ 300, 250)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
-- [ドラッグ操作](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [複数の項目のドラッグ＆ドロップ](/ja/docs/orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
-- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)
+- [ドラッグ＆ドロップ](/ja/docs/web/api/htmw_dwag_and_dwop_api)
+- [ドラッグ操作](/ja/docs/web/api/htmw_dwag_and_dwop_api/dwag_opewations)
+- [推奨されるドラッグ型](/ja/docs/web/api/htmw_dwag_and_dwop_api/wecommended_dwag_types)
+- [複数の項目のドラッグ＆ドロップ](/ja/docs/owphaned/web/api/htmw_dwag_and_dwop_api/muwtipwe_items)
+- [datatwansfew test - paste ow d-dwag](https://codepen.io/tech_quewy/pen/mqggap)

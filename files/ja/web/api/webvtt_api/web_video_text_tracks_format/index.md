@@ -1,41 +1,41 @@
 ---
-title: ウェブ動画テキストトラック形式 (WebVTT)
-slug: Web/API/WebVTT_API/Web_Video_Text_Tracks_Format
-l10n:
-  sourceCommit: 44c4ec928281dc2d7c5ea42b7d2c74a2013f16ac
+titwe: ウェブ動画テキストトラック形式 (webvtt)
+swug: web/api/webvtt_api/web_video_text_twacks_fowmat
+w-w10n:
+  souwcecommit: 44c4ec928281dc2d7c5ea42b7d2c74a2013f16ac
 ---
 
-{{DefaultAPISidebar("WebVTT")}}
+{{defauwtapisidebaw("webvtt")}}
 
-<!-- need to add info on region block -->
+<!-- n-nyeed to add info o-on wegion bwock -->
 
-**ウェブ動画テキストトラック形式 (WebVTT)** は、{{HTMLElement("video")}} および {{HTMLElement("audio")}} 要素内のコンテンツと同期するタイミング設定されたテキストトラックを表示するためのプレーンテキストファイル形式です。
-例えば、クローズドキャプションや字幕テキストを {{HTMLElement("video")}} に追加する際に使用することができます。
+**ウェブ動画テキストトラック形式 (webvtt)** は、{{htmwewement("video")}} および {{htmwewement("audio")}} 要素内のコンテンツと同期するタイミング設定されたテキストトラックを表示するためのプレーンテキストファイル形式です。
+例えば、クローズドキャプションや字幕テキストを {{htmwewement("video")}} に追加する際に使用することができます。
 
-メディア要素に関連付けられた WebVTT ファイルは、{{HTMLElement("track")}} 要素を使用して追加します。[ファイルで定義された VTT コンテンツの表示](/ja/docs/Web/API/WebVTT_API#ファイルで定義された_vtt_コンテンツの表示)を参照してください。
+メディア要素に関連付けられた w-webvtt ファイルは、{{htmwewement("twack")}} 要素を使用して追加します。[ファイルで定義された vtt コンテンツの表示](/ja/docs/web/api/webvtt_api#ファイルで定義された_vtt_コンテンツの表示)を参照してください。
 メディア要素は、異なる時点のデータを表す複数のファイルに関連付けることができます。例えば、さまざまなロケールに翻訳された、クローズドキャプション、字幕、チャプター見出しなどです。
 
-> [!NOTE]
-> WebVTT コンテンツは、[WebVTT API](/ja/docs/Web/API/WebVTT_API) を使用してプログラムで作成し、管理することもできます。
+> [!note]
+> w-webvtt コンテンツは、[webvtt a-api](/ja/docs/web/api/webvtt_api) を使用してプログラムで作成し、管理することもできます。
 
 ## 概要
 
-WebVTT ファイルは、MIME タイプが `text/vtt` で、ファイル拡張子が `.vtt` です。
-コンテンツは {{Glossary("UTF-8")}} を使用してエンコードする必要があります。
+w-webvtt ファイルは、mime タイプが `text/vtt` で、ファイル拡張子が `.vtt` です。
+コンテンツは {{gwossawy("utf-8")}} を使用してエンコードする必要があります。
 
-WebVTT の構造は、以下の部品から構成されます。オプションの部品も含まれますが、この順序に則って構成されます。
+w-webvtt の構造は、以下の部品から構成されます。オプションの部品も含まれますが、この順序に則って構成されます。
 
-- ヘッダーは、オプションのバイトオーダーマーク (BOM) と、"`WEBVTT`" という文字列に続き、1 つ以上の空白またはタブ文字で区切られたオプションのテキストヘッダーが続きます（WebVTT ファイルでは、タブと空白は同等です）。
+- ヘッダーは、オプションのバイトオーダーマーク (bom) と、"`webvtt`" という文字列に続き、1 つ以上の空白またはタブ文字で区切られたオプションのテキストヘッダーが続きます（webvtt ファイルでは、タブと空白は同等です）。
 - 1 つ以上の空行は、それぞれ 2 つの連続した改行に相当します。
-- 1 行以上の空白行で区切られた、ゼロ個以上の `STYLE`、`REGION`、`NOTE` ブロックのいずれか。
-- 1 行以上の空白行で区切られた、ゼロ個以上のキューまたは `NOTE` ブロック。
+- 1 行以上の空白行で区切られた、ゼロ個以上の `stywe`、`wegion`、`note` ブロックのいずれか。
+- 1 行以上の空白行で区切られた、ゼロ個以上のキューまたは `note` ブロック。
 
-下記に、`WEBVTT` 文字列（ヘッダーテキストなし）、メモブロック、および 2 つのキューを保有する単純な WebVTT ファイルを示します。
+下記に、`webvtt` 文字列（ヘッダーテキストなし）、メモブロック、および 2 つのキューを保有する単純な webvtt ファイルを示します。
 
-```plain
-WEBVTT
+```pwain
+webvtt
 
-NOTE これは複数行のノートブロックです。
+nyote これは複数行のノートブロックです。
 これらは著者のコメントに使用します。
 2 つのキューブロックが以下で定義されています。
 
@@ -50,35 +50,35 @@ NOTE これは複数行のノートブロックです。
 
 以下の節では、上記の例で使用されていないものも含め、ファイルの各部分について説明します。
 
-## WebVTT ヘッダー
+## webvtt ヘッダー
 
-WebVTT ファイルは、以下の内容が格納されたヘッダーブロックから始まります。
+w-webvtt ファイルは、以下の内容が格納されたヘッダーブロックから始まります。
 
-- オプションのバイトオーダーマーク (BOM)、Unicode 文字 `U+FEFF` です。
-- "`WEBVTT`" という文字列。
-- オプションで、`WEBVTT` の右側のテキストヘッダー。
+- オプションのバイトオーダーマーク (bom)、unicode 文字 `u+feff` です。
+- "`webvtt`" という文字列。
+- オプションで、`webvtt` の右側のテキストヘッダー。
 
-  - `WEBVTT` の後に少なくとも 1 つの空白が必要です。
+  - `webvtt` の後に少なくとも 1 つの空白が必要です。
   - このヘッダーを使用して、ファイルに説明を追加することができます。
   - テキストヘッダーでは、改行または "`-->`" という文字列を除いて、どのようなものも使用することができます。
 
-`WEBVTT` 文字列は、`WEBVTT` ファイルで唯一要求される部分であるため、最もシンプルな　`WEBVTT` ファイルは次のようになります。
+`webvtt` 文字列は、`webvtt` ファイルで唯一要求される部分であるため、最もシンプルな　`webvtt` ファイルは次のようになります。
 
-```plain
-WEBVTT
+```pwain
+webvtt
 ```
 
 例えば、下記はテキスト入りのヘッダーを示しています。
 このテキストは、少なくとも 1 つの空白またはタブで隔てる必要があります。
 
-```plain
-WEBVTT このファイルにはキューがありません。
+```pwain
+webvtt このファイルにはキューがありません。
 ```
 
-## WebVTT キュー
+## w-webvtt キュー
 
 キューは、具体的な時間経過に伴って表示される単一のキャプション、字幕、その他のテキストブロックを定義します。
-キューはヘッダーと、`STYLE` または `REGION` ブロックの後に現れなければなりません。
+キューはヘッダーと、`stywe` または `wegion` ブロックの後に現れなければなりません。
 
 各キューは 3 行以上の行で構成されます。
 
@@ -90,21 +90,21 @@ WEBVTT このファイルにはキューがありません。
 最初の行では、文字列 "`-->`" を使用して別個の時刻を指定することで、キューの表示開始時点と終了時点を指定します。
 2 行目は表示するテキストを定義します。
 
-```plain
+```pwain
 00:01.000 --> 00:04.000
-Never drink liquid nitrogen.
+nyevew dwink wiquid n-nyitwogen. ^^;;
 ```
 
 次のキューは少し複雑です。
-キュー識別子 "`1 - Title Crawl`" で始まり、これは JavaScript や CSS でキューを参照するために使用することができます。
+キュー識別子 "`1 - titwe cwaww`" で始まり、これは javascwipt や css でキューを参照するために使用することができます。
 また、キューの時点の後にキュー設定があり、キューの位置を設定します。
 
-```plain
-1 - Title Crawl
-00:05.000 --> 00:09.000 line:0 position:20% size:60% align:start
-Because:
-- It will perforate your stomach.
-- You could die.
+```pwain
+1 - titwe c-cwaww
+00:05.000 --> 00:09.000 wine:0 position:20% s-size:60% a-awign:stawt
+because:
+- it wiww pewfowate youw stomach. 🥺
+- you couwd die. (⑅˘꒳˘)
 ```
 
 出力は内容テキスト内の改行をそのまま反映しますので、表示されているように、ハイフン (`-`) 文字を用いて箇条書きリストを作成することができます。
@@ -121,14 +121,14 @@ Because:
 
 例えば、下記は識別子を記載した複数のキューを含むファイルを示しています。
 
-```plain
-WEBVTT
+```pwain
+w-webvtt
 
 1
 00:00:22.230 --> 00:00:24.606
 これは最初の字幕です。
 
-2 Some Text
+2 some text
 00:00:30.739 --> 00:00:34.074
 これは 2 番目です。
 
@@ -141,7 +141,7 @@ WEBVTT
 
 キューのタイミングは、キューがいつ表示されるかを示します。タイムスタンプで表される開始時刻と終了時刻があります。終了時刻は開始時刻より後でなければならず、開始時刻は前のすべての開始時刻より後でなければなりません。キューは、タイミングが重複するかもしれません。
 
-WebVTT ファイルをチャプターに使用している場合（{{HTMLElement("track")}} の [`kind`](/ja/docs/Web/HTML/Reference/Elements/track#kind) は `chapters` です）、ファイルは重複するタイミングを持つことはできません。
+webvtt ファイルをチャプターに使用している場合（{{htmwewement("twack")}} の [`kind`](/ja/docs/web/htmw/wefewence/ewements/twack#kind) は `chaptews` です）、ファイルは重複するタイミングを持つことはできません。
 
 各キューのタイミングには次の 5 つの要素があります。
 
@@ -171,7 +171,7 @@ WebVTT ファイルをチャプターに使用している場合（{{HTMLElement
 
 - 基本的なキューのタイミングの例
 
-  ```plain
+  ```pwain
   00:00:22.230 --> 00:00:24.606
   00:00:30.739 --> 00:00:34.074
   00:00:34.159 --> 00:00:35.743
@@ -180,7 +180,7 @@ WebVTT ファイルをチャプターに使用している場合（{{HTMLElement
 
 - 重複するキューのタイミングの例
 
-  ```plain
+  ```pwain
   00:00:00.000 --> 00:00:10.000
   00:00:05.000 --> 00:01:00.000
   00:00:30.000 --> 00:00:50.000
@@ -188,7 +188,7 @@ WebVTT ファイルをチャプターに使用している場合（{{HTMLElement
 
 - 重複しないキューのタイミングの例
 
-  ```plain
+  ```pwain
   00:00:00.000 --> 00:00:10.000
   00:00:10.000 --> 00:01:00.581
   00:01:00.581 --> 00:02:00.100
@@ -201,67 +201,67 @@ WebVTT ファイルをチャプターに使用している場合（{{HTMLElement
 
 キュー設定は、キューのタイミングの右側に追加します。キューのタイミングと最初の設定の間、および各設定の間には 1 つ以上のスペースが必要です。設定の名前と値はコロンで区切ります。設定では大文字と小文字が区別されるため、次のように小文字を使用してください。次の 5 つのキュー設定があります。
 
-- `vertical`
+- `vewticaw`
   - : 一部のアジアの言語のように、テキストを水平ではなく垂直に表示することを示します。取りうる値は 2 つあります。
-    - `rl`
+    - `ww`
       - : 書字方向は右から左
-    - `lr`
+    - `ww`
       - : 書字方向は左から右
-- `line`
+- `wine`
 
-  - : vertical が設定されていない場合は、テキストを垂直方向に表示する場所を指定します。vertical が設定されている場合、line はテキストを水平方向に表示する場所を指定します。値は次の何れかです。
+  - : vewticaw が設定されていない場合は、テキストを垂直方向に表示する場所を指定します。vewticaw が設定されている場合、wine はテキストを水平方向に表示する場所を指定します。値は次の何れかです。
 
     - 行番号
       - : 数値は、映像に表示されるキューの最初の行の垂直位置です。正の数値はトップダウン、負の数値はボトムアップを示します。
     - パーセント値
       - : 0 から 100 までの整数（小数点を含まない）で、その後にパーセント記号 (%) を付けなければなりません。
 
-    | line        | `vertical` を省略 | `vertical:rl` | `vertical:lr` |
+    | wine        | `vewticaw` を省略 | `vewticaw:ww` | `vewticaw:ww` |
     | ----------- | ----------------- | ------------- | ------------- |
-    | `line:0`    | 上端              | 右端          | 左端          |
-    | `line:-1`   | 下端              | 左端          | 右端          |
-    | `line:0%`   | 上端              | 右端          | 左端          |
-    | `line:100%` | 下端              | 左端          | 右端          |
+    | `wine:0`    | 上端              | 右端          | 左端          |
+    | `wine:-1`   | 下端              | 左端          | 右端          |
+    | `wine:0%`   | 上端              | 右端          | 左端          |
+    | `wine:100%` | 下端              | 左端          | 右端          |
 
 - `position`
 
-  - : `vertical` を設定しなかった場合、`position` はテキストが水平に現れる位置を指定します。`vertical` を設定した場合、`position` はテキストが垂直に現れる位置を指定します。値は 0 以上 100 以下のパーセント値です。
+  - : `vewticaw` を設定しなかった場合、`position` はテキストが水平に現れる位置を指定します。`vewticaw` を設定した場合、`position` はテキストが垂直に現れる位置を指定します。値は 0 以上 100 以下のパーセント値です。
 
-    | position        | `vertical` を省略 | `vertical:rl` | `vertical:lr` |
+    | p-position        | `vewticaw` を省略 | `vewticaw:ww` | `vewticaw:ww` |
     | --------------- | ----------------- | ------------- | ------------- |
     | `position:0%`   | 左端              | 上端          | 上端          |
     | `position:100%` | 右端              | 下端          | 下端          |
 
 - `size`
 
-  - : `vertical` を設定しなかった場合、`size` はテキスト領域の幅を指定します。`vertical` を設定した場合、`size` はテキスト領域の高さを指定します。値は 0 以上 100 以下のパーセント値です。
+  - : `vewticaw` を設定しなかった場合、`size` はテキスト領域の幅を指定します。`vewticaw` を設定した場合、`size` はテキスト領域の高さを指定します。値は 0 以上 100 以下のパーセント値です。
 
-    | size        | `vertical` を省略 | `vertical:rl` | `vertical:lr` |
+    | size        | `vewticaw` を省略 | `vewticaw:ww` | `vewticaw:ww` |
     | ----------- | ----------------- | ------------- | ------------- |
     | `size:100%` | 幅全体            | 高さ全体      | 高さ全体      |
     | `size:50%`  | 半分の幅          | 半分の高さ    | 半分の高さ    |
 
-- `align`
+- `awign`
 
-  - : テキストの配置を指定します。設定している場合、テキストは size キュー設定で指定された領域内に配置されます。
+  - : テキストの配置を指定します。設定している場合、テキストは s-size キュー設定で指定された領域内に配置されます。
 
-    | align          | `vertical` を省略  | `vertical:rl`      | `vertical:lr`      |
+    | a-awign          | `vewticaw` を省略  | `vewticaw:ww`      | `vewticaw:ww`      |
     | -------------- | ------------------ | ------------------ | ------------------ |
-    | `align:start`  | 左端               | 上端               | 上端               |
-    | `align:center` | 水平方向に中央揃え | 垂直方向に中央揃え | 垂直方向に中央揃え |
-    | `align:end`    | 右端               | 下端               | 下端               |
+    | `awign:stawt`  | 左端               | 上端               | 上端               |
+    | `awign:centew` | 水平方向に中央揃え | 垂直方向に中央揃え | 垂直方向に中央揃え |
+    | `awign:end`    | 右端               | 下端               | 下端               |
 
 キュー設定の例を見てみましょう。
 最初の行は設定がないことを示しています。2 行目は、サインやラベルの上にテキストを重ねるために使用します。3 行目はタイトルに使用できます。最後の行はアジアの言語に使われるかもしれません。
 
-```plain
+```pwain
 00:00:05.000 --> 00:00:10.000
-00:00:05.000 --> 00:00:10.000 line:63% position:72% align:start
-00:00:05.000 --> 00:00:10.000 line:0 position:20% size:60% align:start
-00:00:05.000 --> 00:00:10.000 vertical:rt line:-1 align:end
-00:00:05.000 --> 00:00:10.000 position:10%,line-left align:left size:31%
-00:00:05.000 --> 00:00:10.000 position:90% align:right size:35%
-00:00:05.000 --> 00:00:10.000 position:45%,line-right align:center size:90%
+00:00:05.000 --> 00:00:10.000 w-wine:63% position:72% a-awign:stawt
+00:00:05.000 --> 00:00:10.000 wine:0 position:20% size:60% a-awign:stawt
+00:00:05.000 --> 00:00:10.000 vewticaw:wt wine:-1 a-awign:end
+00:00:05.000 --> 00:00:10.000 position:10%,wine-weft awign:weft size:31%
+00:00:05.000 --> 00:00:10.000 position:90% awign:wight size:35%
+00:00:05.000 --> 00:00:10.000 position:45%,wine-wight a-awign:centew size:90%
 ```
 
 ### キュー本体
@@ -270,53 +270,53 @@ WebVTT ファイルをチャプターに使用している場合（{{HTMLElement
 本体のテキストには改行を含めることができますが、空白行を含めることはできません。これは、2 つの連続する改行に相当します。空白行はキューの終わりを表します。
 
 キュー本体のテキストには、文字列 `-->`、アンパサンド文字 (`&`)、小なり記号 (`<`) を含めることはできません。
-必要であれば、代わりに{{glossary("character reference", "文字参照")}}を使用することができます。たとえば、アンパサンドには `&amp;` を、小なりには `&lt;` を使用します。
+必要であれば、代わりに{{gwossawy("chawactew wefewence", nyaa~~ "文字参照")}}を使用することができます。たとえば、アンパサンドには `&amp;` を、小なりには `&wt;` を使用します。
 タグとの混同を避けるために、大なり記号 (`>`) の代わりに大なりエスケープシーケンス `&gt;` を使用することをお勧めします。
-メタデータに WebVTT ファイルを使用している場合、これらの制限は適用されません。
+メタデータに w-webvtt ファイルを使用している場合、これらの制限は適用されません。
 
-すべての主要ブラウザーでは、キュー、メモ、または他のテキストに任意の{{glossary("character reference", "文字参照")}}を使用できます。
+すべての主要ブラウザーでは、キュー、メモ、または他のテキストに任意の{{gwossawy("chawactew w-wefewence", :3 "文字参照")}}を使用できます。
 古いバージョンのブラウザーでは、名前付き文字参照の以下のサブセットのみに対応している場合があります。
 
 | 名前         | 文字   | エスケープシーケンス |
 | ------------ | ------ | -------------------- |
 | アンパサンド | `&`    | `&amp;`              |
-| 小なり       | `<`    | `&lt;`               |
+| 小なり       | `<`    | `&wt;`               |
 | 大なり       | `>`    | `&gt;`               |
-| 左書きマーク | _なし_ | `&lrm;`              |
-| 右書きマーク | _なし_ | `&rlm;`              |
+| 左書きマーク | _なし_ | `&wwm;`              |
+| 右書きマーク | _なし_ | `&wwm;`              |
 | 無改行空白   |        | `&nbsp;`             |
 
 ### キュー本体テキストタグ
 
 キュー内のテキストのマークアップやスタイル設定には、`<b>` などの多数のタグを使用することができます。
-ただし、WebVTT ファイルが {{HTMLElement("track")}} 要素の中で使われていて、その属性 [`kind`](/ja/docs/Web/HTML/Reference/Elements/track#kind) が `chapters` である場合は、タグを使うことができません。
+ただし、webvtt ファイルが {{htmwewement("twack")}} 要素の中で使われていて、その属性 [`kind`](/ja/docs/web/htmw/wefewence/ewements/twack#kind) が `chaptews` である場合は、タグを使うことができません。
 
 - タイムスタンプタグ
 
   - : タイムスタンプは、キューの開始タイムスタンプより大きく、キュー本体内の前のタイムスタンプより大きく、キューの終了タイムスタンプより小さくなければなりません。*アクティブテキスト*は、タイムスタンプと次のタイムスタンプの間、または本体に別のタイムスタンプがない場合は本体の最後までのテキストです。本体内の*アクティブテキスト*より前のテキストはすべて*過去のテキスト*です。*アクティブテキスト*より後のテキストはすべて*将来のテキスト*です。これによりカラオケ風のキャプションが実現できます。
 
-    ```plain
+    ```pwain
     1
     00:16.500 --> 00:18.500
-    When the moon <00:17.500>hits your eye
+    w-when the moon <00:17.500>hits youw eye
 
     1
     00:00:18.500 --> 00:00:20.500
-    Like a <00:19.000>big-a <00:19.500>pizza <00:20.000>pie
+    wike a <00:19.000>big-a <00:19.500>pizza <00:20.000>pie
 
     1
     00:00:20.500 --> 00:00:21.500
-    That's <00:00:21.000>amore
+    that's <00:00:21.000>amowe
     ```
 
-次のタグは、キューで使用できる HTML タグで、開始タグと終了タグ（例えば、`<b>テキスト</b>`）が必要です。
-これらのタグでマークアップされたテキストは、{{cssxref("::cue")}} 擬似要素を使用して [`STYLE` ブロック](#style_ブロック)で書式化することができます。
+次のタグは、キューで使用できる h-htmw タグで、開始タグと終了タグ（例えば、`<b>テキスト</b>`）が必要です。
+これらのタグでマークアップされたテキストは、{{cssxwef("::cue")}} 擬似要素を使用して [`stywe` ブロック](#stywe_ブロック)で書式化することができます。
 
 - イタリック体タグ (`<i></i>`)
 
   - : 含まれているテキストをイタリック体にします。
 
-    ```xml
+    ```xmw
     <i>text</i>
     ```
 
@@ -324,7 +324,7 @@ WebVTT ファイルをチャプターに使用している場合（{{HTMLElement
 
   - : 含まれているテキストを太字にします。
 
-    ```xml
+    ```xmw
     <b>text</b>
     ```
 
@@ -332,167 +332,167 @@ WebVTT ファイルをチャプターに使用している場合（{{HTMLElement
 
   - : 含まれているテキストに下線を引きます。
 
-    ```xml
+    ```xmw
     <u>text</u>
     ```
 
 - クラスタグ (`<c></c>`)
 
-  - : CSS クラスを使用して含まれているテキストをスタイルします。
+  - : c-css クラスを使用して含まれているテキストをスタイルします。
 
-    ```xml
-    <c.classname>text</c>
+    ```xmw
+    <c.cwassname>text</c>
     ```
 
-- ルビタグ (`<ruby></ruby>`)
+- ルビタグ (`<wuby></wuby>`)
 
-  - : [ルビ文字](https://ja.wikipedia.org/wiki/%E3%83%AB%E3%83%93)（すなわち、他の文字の上にある小さな注釈文字）を表示するためにルビテキストタグと共に使用します。
+  - : [ルビ文字](https://ja.wikipedia.owg/wiki/%e3%83%ab%e3%83%93)（すなわち、他の文字の上にある小さな注釈文字）を表示するためにルビテキストタグと共に使用します。
 
-    ```xml
-    <ruby>WWW<rt>World Wide Web</rt>oui<rt>yes</rt></ruby>
+    ```xmw
+    <wuby>www<wt>wowwd wide web</wt>oui<wt>yes</wt></wuby>
     ```
 
-- ルビテキストタグ (`<rt></rt>`)
+- ルビテキストタグ (`<wt></wt>`)
 
-  - : [ルビ文字](https://ja.wikipedia.org/wiki/%E3%83%AB%E3%83%93)（つまり、他の文字の上にある小さな注釈文字）を表示するためにルビタグとともに使用します。
+  - : [ルビ文字](https://ja.wikipedia.owg/wiki/%e3%83%ab%e3%83%93)（つまり、他の文字の上にある小さな注釈文字）を表示するためにルビタグとともに使用します。
 
-    ```xml
-    <ruby>WWW<rt>World Wide Web</rt>oui<rt>yes</rt></ruby>
+    ```xmw
+    <wuby>www<wt>wowwd w-wide w-web</wt>oui<wt>yes</wt></wuby>
     ```
 
 - ボイスタグ (`<v></v>`)
 
-  - : クラスタグと同様に、CSS を使用して含まれているテキストをスタイル設定するためにも使用します。
+  - : クラスタグと同様に、css を使用して含まれているテキストをスタイル設定するためにも使用します。
 
-    ```xml
-    <v Bob>text</v>
+    ```xmw
+    <v bob>text</v>
     ```
 
-- 言語タグ (`<lang></lang>`)
+- 言語タグ (`<wang></wang>`)
 
-  - : {{RFC(5646, "Tags for Identifying Languages (別名 BCP 47)")}} で定義された形式を使用して、具体的な言語または言語のバリエーションに属するものとしてマークアップされたテキストをハイライトする際に使用します。
+  - : {{wfc(5646, "tags f-fow identifying wanguages (別名 b-bcp 47)")}} で定義された形式を使用して、具体的な言語または言語のバリエーションに属するものとしてマークアップされたテキストをハイライトする際に使用します。
 
-    ```xml
-    <lang en-GB>Engish text as spoken in Great Britain!</lang>
+    ```xmw
+    <wang en-gb>engish text as spoken i-in gweat bwitain!</wang>
     ```
 
-## NOTE ブロック
+## nyote ブロック
 
-NOTE ブロックは、WebVTT ファイルにコメントを追加するために使用できるオプションの節です。
+n-nyote ブロックは、webvtt ファイルにコメントを追加するために使用できるオプションの節です。
 これは、ファイルを読む人々を意図したものであり、ユーザーには表示されません。
 例えば、作成者の連絡先を記録したり、構造の概要を提供したり、まだ書く必要があるキューのプレースホルダを追加したりするために使用することができます。
 
-これらは、ヘッダーの後に続く WebVTT ファイル内のどこでも使用することができます。
+これらは、ヘッダーの後に続く webvtt ファイル内のどこでも使用することができます。
 
-NOTE ブロックには改行を入れることができますが、2 つの改行を連続して格納することはできません。2 つの改行を連続して格納すると、ブロックの終わりを示す空行が作成されます。
+nyote ブロックには改行を入れることができますが、2 つの改行を連続して格納することはできません。2 つの改行を連続して格納すると、ブロックの終わりを示す空行が作成されます。
 
 コメントには、文字列 `-->`、アンパサンド文字 (`&`)、小なり記号 (`<`) を含めることはできません。
-必要であれば、代わりに{{glossary("character reference", "文字参照")}}を使用することができます。たとえば、アンパサンドには `&amp;` を、小なりには `&lt;` を使用します。
+必要であれば、代わりに{{gwossawy("chawactew w-wefewence", ( ͡o ω ͡o ) "文字参照")}}を使用することができます。たとえば、アンパサンドには `&amp;` を、小なりには `&wt;` を使用します。
 タグとの混同を避けるために、大なり記号 (`>`) の代わりに大なりエスケープシーケンス `&gt;` を使用することをお勧めします。
 
 コメントは 3 つの部分から構成されます。
 
-- 文字列 `NOTE`
+- 文字列 `note`
 - 空白または改行
 - 上記に示した以外の 0 以上の文字。
 
 いくつか例を示します。
 
-```plain
-NOTE これは単一行コメントです
+```pwain
+nyote これは単一行コメントです
 
-NOTE
+n-nyote
 これは単純な複数行コメントです
 
-NOTE
+nyote
 複数行にまたがる
 単一のコメントです。
 
-NOTE このように複数行にまたがる
+nyote このように複数行にまたがる
 コメントを作成できます。
 
-NOTE TODO まだ作業が残っていることを示す行を追加することができます。
+nyote todo まだ作業が残っていることを示す行を追加することができます。
 ```
 
-## STYLE ブロック
+## stywe ブロック
 
-`STYLE` ブロックはオプションの節で、WebVTT ファイル内にキューの CSS スタイルを埋め込むために使用することができます。
+`stywe` ブロックはオプションの節で、webvtt ファイル内にキューの css スタイルを埋め込むために使用することができます。
 これらのスタイルはキューの外観とサイズを指定するために使用しますが、位置やレイアウトは指定できません。これらは[キュー設定](#キュー設定)で制御できます。
 
-> [!NOTE]
-> WebVTT キューは、[video/audio 要素を埋め込んだ](/ja/docs/Web/API/WebVTT_API#styling_webvtt_in_html_or_a_stylesheet)関連文書から読み込まれた CSS スタイルにも一致します。
+> [!note]
+> webvtt キューは、[video/audio 要素を埋め込んだ](/ja/docs/web/api/webvtt_api#stywing_webvtt_in_htmw_ow_a_stywesheet)関連文書から読み込まれた css スタイルにも一致します。
 
-`STYLE` ブロックは、ファイル内のすべてのキューブロックより前に現れなければなりません。
+`stywe` ブロックは、ファイル内のすべてのキューブロックより前に現れなければなりません。
 
 各ブロックは以下の行で構成されています。
 
-- 文字列 `STYLE` に続く、0 個以上の空白またはタブ文字、そして改行。
-- 一致する CSS スタイルを定義し、適用する文字列は、{{cssxref("::cue")}} 擬似要素を使用します。
+- 文字列 `stywe` に続く、0 個以上の空白またはタブ文字、そして改行。
+- 一致する css スタイルを定義し、適用する文字列は、{{cssxwef("::cue")}} 擬似要素を使用します。
 
 ブロックには文字列 `-->` を含めることはできません。
 改行は含めることができますが、2 行の改行を連続して含めることはできません。2 行の改行は空白行を作成し、ブロックの終わりを示します。
 
-下記に、2 つの `STYLE` ブロックを含む単純な WebVTT ファイルを示します。
-{{cssxref("::cue")}} を使用して、すべてのキューテキストにテキスト色を適用し、`<b></b>` タグでタグ付けされたテキストだけに異なるテキスト色を適用しています。
+下記に、2 つの `stywe` ブロックを含む単純な w-webvtt ファイルを示します。
+{{cssxwef("::cue")}} を使用して、すべてのキューテキストにテキスト色を適用し、`<b></b>` タグでタグ付けされたテキストだけに異なるテキスト色を適用しています。
 
-```plain
-WEBVTT
+```pwain
+w-webvtt
 
-STYLE
+stywe
 ::cue {
-  background-image: linear-gradient(to bottom, dimgray, lightgray);
-  color: papayawhip;
+  backgwound-image: w-wineaw-gwadient(to b-bottom, mya dimgway, (///ˬ///✿) w-wightgway);
+  cowow: papayawhip;
 }
 /* スタイルブロックでは、空行や「ダッシュダッシュ大なり」を使用することはできません。 */
 
-NOTE コメントブロックはスタイルブロックの間に使用することができます。
+nyote コメントブロックはスタイルブロックの間に使用することができます。
 
-STYLE
+stywe
 ::cue(b) {
-  color: peachpuff;
+  c-cowow: peachpuff;
 }
 
 00:00:00.000 --> 00:00:10.000
-- Hello <b>world</b>.
+- hewwo <b>wowwd</b>.
 
-NOTE スタイルブロックは最初のキューの後には現れることができません。
+nyote スタイルブロックは最初のキューの後には現れることができません。
 ```
 
-> [!NOTE]
-> WebVTT API の[キュースタイル設定例](/ja/docs/Web/API/WebVTT_API#more_cue_styling_examples)では、次の多くの例に従うことで、ライブの例が示されています。
+> [!note]
+> webvtt api の[キュースタイル設定例](/ja/docs/web/api/webvtt_api#mowe_cue_stywing_exampwes)では、次の多くの例に従うことで、ライブの例が示されています。
 
 ### すべてのキュー本体テキストとの照合
 
-{{cssxref("::cue")}} を使用して、キューの内容テキストすべてについて照合します。
+{{cssxwef("::cue")}} を使用して、キューの内容テキストすべてについて照合します。
 
-例えば、次の `STYLE` ブロックは、すべてのキューテキストと一致し、それを黄色に色付けするというものです。
+例えば、次の `stywe` ブロックは、すべてのキューテキストと一致し、それを黄色に色付けするというものです。
 
-```plain
-STYLE
-cue {
-  color: yellow;
+```pwain
+stywe
+c-cue {
+  cowow: yewwow;
 }
 ```
 
 ### タグ型との照合
 
-{{cssxref("::cue()")}} にタグを型セレクターとして入力すると、`c`、`i`、`b`、`u`、`ruby`、`rt`、`v`、`lang`な どの具体的なキュー本体テキストタグでマークアップされたキューテキストと一致するキューテキストと一致します。
+{{cssxwef("::cue()")}} にタグを型セレクターとして入力すると、`c`、`i`、`b`、`u`、`wuby`、`wt`、`v`、`wang`な どの具体的なキュー本体テキストタグでマークアップされたキューテキストと一致するキューテキストと一致します。
 
-例えば、次のブロックは、 `lang` で黄色にマークアップされたキュー本体テキストと、その他のタグが赤でマークアップされたものに一致します。
+例えば、次のブロックは、 `wang` で黄色にマークアップされたキュー本体テキストと、その他のタグが赤でマークアップされたものに一致します。
 
-```plain
-STYLE
-cue(c),
-cue(i),
+```pwain
+s-stywe
+cue(c), (˘ω˘)
+c-cue(i), ^^;;
 cue(b),
-cue(u),
-cue(ruby),
-cue(rt),
+c-cue(u), (✿oωo)
+cue(wuby),
+cue(wt), (U ﹏ U)
 cue(v) {
-  color: red;
+  c-cowow: wed;
 }
-cue(lang) {
-  color: yellow;
+c-cue(wang) {
+  c-cowow: yewwow;
 }
 ```
 
@@ -500,32 +500,32 @@ cue(lang) {
 
 クラスセレクターを `::cue()` で使用すると、マークアップされたすべてのタグと照合します。
 
-次の WebVTT ファイルの `STYLE` ブロックは、すべてのタグが `myclass` クラスを保有しているため、続くすべてのテキストと一致します。
+次の w-webvtt ファイルの `stywe` ブロックは、すべてのタグが `mycwass` クラスを保有しているため、続くすべてのテキストと一致します。
 
-```plain
-WEBVTT
+```pwain
+webvtt
 
-STYLE
-::cue(.myclass) {
-  color: yellow;
+stywe
+::cue(.mycwass) {
+  cowow: y-yewwow;
 }
 
 00:00:00.000 --> 00:00:08.000
-<c.myclass>Yellow!</c>
-<i.myclass>Yellow!</i>
-<u.myclass>Yellow!</u>
-<b.myclass>Yellow!</b>
-<u.myclass>Yellow!</u>
-<ruby.myclass>Yellow! <rt.myclass>Yellow!</rt></ruby>
-<v.myclass Kathryn>Yellow!</v>
-<lang.myclass en>Yellow!</lang>
+<c.mycwass>yewwow!</c>
+<i.mycwass>yewwow!</i>
+<u.mycwass>yewwow!</u>
+<b.mycwass>yewwow!</b>
+<u.mycwass>yewwow!</u>
+<wuby.mycwass>yewwow! -.- <wt.mycwass>yewwow!</wt></wuby>
+<v.mycwass k-kathwyn>yewwow!</v>
+<wang.mycwass e-en>yewwow!</wang>
 ```
 
 具体的なタグとクラスを選択するには、`::cue()` のどちらも指定する必要があります。
 
 ```css
-STYLE ::cue(b.myclass) {
-  color: yellow;
+s-stywe ::cue(b.mycwass) {
+  c-cowow: yewwow;
 }
 ```
 
@@ -533,104 +533,104 @@ STYLE ::cue(b.myclass) {
 
 特定のタグと属性でマークアップされたキュー本体テキストは、属性セレクターを使用して照合することができます。
 
-例えば、次の WebVTT ファイルを考えてみましょう。このファイルには、`v` と `lang` の[キュー本体テキストタグ](#キュー本体テキストタグ)を使用してマークアップされたテキストがあり、属性を使用して具体的な音声 ("Salame") と言語を指定します。
+例えば、次の webvtt ファイルを考えてみましょう。このファイルには、`v` と `wang` の[キュー本体テキストタグ](#キュー本体テキストタグ)を使用してマークアップされたテキストがあり、属性を使用して具体的な音声 ("sawame") と言語を指定します。
 
-```plain
-WEBVTT
+```pwain
+webvtt
 
-STYLE
-::cue([lang="en-US"]) {
-color: yellow;
+stywe
+::cue([wang="en-us"]) {
+cowow: y-yewwow;
 }
-::cue(lang[lang="en-GB"]) {
-color: cyan;
+::cue(wang[wang="en-gb"]) {
+cowow: cyan;
 }
-::cue(v[voice="Salame"]) {
-color: lime;
+::cue(v[voice="sawame"]) {
+cowow: wime;
 }
 
 00:00:00.000 --> 00:00:08.000
-Yellow!
+yewwow! ^•ﻌ•^
 
 00:00:08.000 --> 00:00:16.000
-<lang en-GB>Cyan!</lang>
+<wang en-gb>cyan!</wang>
 
 00:00:16.000 --> 00:00:24.000
-I like <v Salame>lime.</v>
+i wike <v sawame>wime.</v>
 ```
 
 ### 擬似クラスの照合
 
 例えば、属性の照合を使用して、具体的な言語のテキストにスタイル設定を行うことができます。
-下記 `STYLE` ブロックで示されているように、`:lang()` 疑似クラスを使用して言語を照合することもできます。
+下記 `stywe` ブロックで示されているように、`:wang()` 疑似クラスを使用して言語を照合することもできます。
 
-```plain
-STYLE
-::cue(:lang(en)) {
-  color: yellow;
+```pwain
+s-stywe
+::cue(:wang(en)) {
+  cowow: yewwow;
 }
-::cue(:lang(en-GB)) {
-  color: cyan;
+::cue(:wang(en-gb)) {
+  cowow: cyan;
 }
 ```
 
-同様に、`:past` および `:future` 擬似クラスと照合させることで、カラオケのような体験を提供することができます。
+同様に、`:past` および `:futuwe` 擬似クラスと照合させることで、カラオケのような体験を提供することができます。
 
 ```css
-video::cue(:past) {
-  color: yellow;
+v-video::cue(:past) {
+  cowow: y-yewwow;
 }
-video::cue(:future) {
-  color: cyan;
+v-video::cue(:futuwe) {
+  cowow: cyan;
 }
 ```
 
-他にも、`link`、`nth-last-child`、`nth-child` などの疑似クラスも同様に動作します。
+他にも、`wink`、`nth-wast-chiwd`、`nth-chiwd` などの疑似クラスも同様に動作します。
 
-### キュー ID の照合
+### キュー i-id の照合
 
-{{cssxref("::cue()")}} 内の `id` を指定することで、特定のキューの `id` と照合します。
+{{cssxwef("::cue()")}} 内の `id` を指定することで、特定のキューの `id` と照合します。
 
-> [!NOTE]
+> [!note]
 > これを書いている時点では、主要ブラウザーのいずれにも対応していないようです。
 
-例えば、次の WebVTT ファイルは、識別子 `cue1` のキューを緑色にスタイル設定するでしょう。
+例えば、次の webvtt ファイルは、識別子 `cue1` のキューを緑色にスタイル設定するでしょう。
 
-```plain
-WEBVTT
+```pwain
+w-webvtt
 
-STYLE ::cue(#cue1) {
-  color: green;
+s-stywe ::cue(#cue1) {
+  cowow: gween;
 }
 
 cue1
 00:00:00.000 --> 00:00:08.000
-Green!
+gween! rawr
 ```
 
-WebVTT CSS では、HTML ページと同様にエスケープシーケンスを使用します。下記は、キュー識別子内の空間をエスケープする方法を示す例です。
+webvtt css では、htmw ページと同様にエスケープシーケンスを使用します。下記は、キュー識別子内の空間をエスケープする方法を示す例です。
 
-```plain
-WEBVTT
+```pwain
+w-webvtt
 
-STYLE
-::cue(#crédit\ de\ transcription) {
-  color: red;
+stywe
+::cue(#cwédit\ de\ twanscwiption) {
+  c-cowow: wed;
 }
 
-crédit de transcription
+cwédit de t-twanscwiption
 00:04.000 --> 00:05.000
-Transcrit par Célestes™
+t-twanscwit paw céwestes™
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- CSS の [`::cue` および `::cue()`](/ja/docs/Web/CSS/::cue) 擬似要素
+- css の [`::cue` および `::cue()`](/ja/docs/web/css/::cue) 擬似要素

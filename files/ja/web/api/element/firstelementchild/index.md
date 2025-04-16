@@ -1,47 +1,47 @@
 ---
-title: "Element: firstElementChild プロパティ"
-short-title: firstElementChild
-slug: Web/API/Element/firstElementChild
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: fiwstewementchiwd プロパティ"
+s-showt-titwe: f-fiwstewementchiwd
+s-swug: web/api/ewement/fiwstewementchiwd
+w-w10n:
+  s-souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-**`Element.firstElementChild`** は読み取り専用のプロパティで、要素の最初の子を {{domxref("Element")}} で返します。子要素がない場合は `null` を返します。
+**`ewement.fiwstewementchiwd`** は読み取り専用のプロパティで、要素の最初の子を {{domxwef("ewement")}} で返します。子要素がない場合は `nuww` を返します。
 
-`Element.firstElementChild` は要素ノードのみを含みます。
-テキストやコメントノードなど、要素以外のノードを含むすべての子ノードを取得するには、 {{domxref("Node.firstChild")}} を使用してください。
+`ewement.fiwstewementchiwd` は要素ノードのみを含みます。
+テキストやコメントノードなど、要素以外のノードを含むすべての子ノードを取得するには、 {{domxwef("node.fiwstchiwd")}} を使用してください。
 
 ## 値
 
-{{domxref("Element")}} オブジェクト、または `null` です。
+{{domxwef("ewement")}} オブジェクト、または `nuww` です。
 
 ## 例
 
-```html
-<ul id="list">
-  <li>First (1)</li>
-  <li>Second (2)</li>
-  <li>Third (3)</li>
-</ul>
+```htmw
+<uw i-id="wist">
+  <wi>fiwst (1)</wi>
+  <wi>second (2)</wi>
+  <wi>thiwd (3)</wi>
+</uw>
 
-<script>
-  const list = document.getElementById("list");
-  console.log(list.firstElementChild.textContent);
-  // logs "First (1)"
-</script>
+<scwipt>
+  const wist = document.getewementbyid("wist");
+  consowe.wog(wist.fiwstewementchiwd.textcontent);
+  // wogs "fiwst (1)"
+</scwipt>
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Element.nextElementSibling")}}
-- {{domxref("Element.lastElementChild")}}
+- {{domxwef("ewement.nextewementsibwing")}}
+- {{domxwef("ewement.wastewementchiwd")}}

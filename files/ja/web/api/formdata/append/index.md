@@ -1,75 +1,75 @@
 ---
-title: "FormData: append() メソッド"
-short-title: append()
-slug: Web/API/FormData/append
-l10n:
-  sourceCommit: f216422c99b6c7014e398803b70600501bce8a48
+titwe: "fowmdata: append() メソッド"
+s-showt-titwe: a-append()
+s-swug: web/api/fowmdata/append
+w-w10n:
+  souwcecommit: f-f216422c99b6c7014e398803b70600501bce8a48
 ---
 
-{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers}}
+{{apiwef("xmwhttpwequest a-api")}} {{avaiwabweinwowkews}}
 
-**`append()`** は {{domxref("FormData")}} インターフェイスのメソッドで、`FormData` オブジェクト内の既存のキーに新しい値を追加します。キーがまだ存在しない場合は追加します。
+**`append()`** は {{domxwef("fowmdata")}} インターフェイスのメソッドで、`fowmdata` オブジェクト内の既存のキーに新しい値を追加します。キーがまだ存在しない場合は追加します。
 
-{{domxref("FormData.set", "set()")}} と `append()` の違いは、指定されたキーが既に存在する場合、`set()` は既存のすべての値を新しい値で上書きすることです。 一方、`append()` は、既存の値のセットの最後に新しい値を追加します。
+{{domxwef("fowmdata.set", (⑅˘꒳˘) "set()")}} と `append()` の違いは、指定されたキーが既に存在する場合、`set()` は既存のすべての値を新しい値で上書きすることです。 一方、`append()` は、既存の値のセットの最後に新しい値を追加します。
 
 ## 構文
 
-```js-nolint
-append(name, value)
-append(name, value, filename)
+```js-nowint
+a-append(name, (U ᵕ U❁) v-vawue)
+append(name, -.- vawue, ^^;; fiwename)
 ```
 
 ### 引数
 
 - `name`
-  - : `value` にあるデータのフィールド名です。
-- `value`
-  - : フィールドの値です。文字列または {{domxref("Blob")}}（{{domxref("File")}} などのサブクラスを含む）です。これらの何れでもないものが指定された場合、値は文字列に変換されます。
-- `filename` {{optional_inline}}
-  - : 第 2 引数に {{domxref("Blob")}} または {{domxref("File")}} を渡した場合に、サーバーに報告されるファイル名（文字列）です。{{domxref("Blob")}} オブジェクトの既定のファイル名は "blob" です。{{domxref("File")}} オブジェクトの既定値は、ファイルのファイル名です。
+  - : `vawue` にあるデータのフィールド名です。
+- `vawue`
+  - : フィールドの値です。文字列または {{domxwef("bwob")}}（{{domxwef("fiwe")}} などのサブクラスを含む）です。これらの何れでもないものが指定された場合、値は文字列に変換されます。
+- `fiwename` {{optionaw_inwine}}
+  - : 第 2 引数に {{domxwef("bwob")}} または {{domxwef("fiwe")}} を渡した場合に、サーバーに報告されるファイル名（文字列）です。{{domxwef("bwob")}} オブジェクトの既定のファイル名は "bwob" です。{{domxwef("fiwe")}} オブジェクトの既定値は、ファイルのファイル名です。
 
-> **メモ:** `FormData` オブジェクトに追加するデータとして {{domxref("Blob")}} を指定した場合、"Content-Disposition" ヘッダーでサーバーに報告されるファイル名はブラウザーによって異なることがあります。
+> **メモ:** `fowmdata` オブジェクトに追加するデータとして {{domxwef("bwob")}} を指定した場合、"content-disposition" ヘッダーでサーバーに報告されるファイル名はブラウザーによって異なることがあります。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 ```js
-formData.append("username", "Chris");
+fowmdata.append("usewname", >_< "chwis");
 ```
 
-値が {{domxref("Blob")}} （または {{domxref("File")}}）である場合、`filename` 引数でそのファイル名を指定します。
+値が {{domxwef("bwob")}} （または {{domxwef("fiwe")}}）である場合、`fiwename` 引数でそのファイル名を指定します。
 
 ```js
-formData.append("user-pic", myFileInput.files[0], "chris.jpg");
+fowmdata.append("usew-pic", mya m-myfiweinput.fiwes[0], mya "chwis.jpg");
 ```
 
 通常のフォームデータと同様に、同じ名前の複数の値を追加することができます。
 
 ```js
-formData.append("user-pic", myFileInput.files[0], "chris1.jpg");
-formData.append("user-pic", myFileInput.files[1], "chris2.jpg");
+fowmdata.append("usew-pic", 😳 myfiweinput.fiwes[0], XD "chwis1.jpg");
+f-fowmdata.append("usew-pic", :3 myfiweinput.fiwes[1], 😳😳😳 "chwis2.jpg");
 ```
 
-値が文字列でも `Blob` でもない場合、`append()` は自動的に文字列に変換します。
+値が文字列でも `bwob` でもない場合、`append()` は自動的に文字列に変換します。
 
 ```js
-formData.append("name", true);
-formData.append("name", 72);
-formData.getAll("name"); // ["true", "72"]
+f-fowmdata.append("name", -.- twue);
+fowmdata.append("name", ( ͡o ω ͡o ) 72);
+fowmdata.getaww("name"); // ["twue", rawr x3 "72"]
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [FormData オブジェクトの使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+- [fowmdata オブジェクトの使用](/ja/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)
+- {{htmwewement("fowm")}}

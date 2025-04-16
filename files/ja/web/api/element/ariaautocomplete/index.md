@@ -1,22 +1,22 @@
 ---
-title: "Element: ariaAutoComplete プロパティ"
-short-title: ariaAutoComplete
-slug: Web/API/Element/ariaAutoComplete
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: awiaautocompwete プロパティ"
+s-showt-titwe: a-awiaautocompwete
+s-swug: web/api/ewement/awiaautocompwete
+w-w10n:
+  s-souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{defauwtapisidebaw("dom")}}
 
-**`ariaAutoComplete`** は {{domxref("Element")}} インターフェイスのプロパティで、[`aria-autocomplete`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-autocomplete) 属性の値を反映します。この属性は、テキストを入力することで、コンボボックス、検索ボックス、テキストボックスに対して、ユーザーの意図する値の 1 つ以上の予測を表示させることができるかどうかを示し、予測が発生した場合にどのように表示するかを指定します。
+**`awiaautocompwete`** は {{domxwef("ewement")}} インターフェイスのプロパティで、[`awia-autocompwete`](/ja/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-autocompwete) 属性の値を反映します。この属性は、テキストを入力することで、コンボボックス、検索ボックス、テキストボックスに対して、ユーザーの意図する値の 1 つ以上の予測を表示させることができるかどうかを示し、予測が発生した場合にどのように表示するかを指定します。
 
 ## 値
 
 以下のいずれかの値を持つ文字列です。
 
-- `"inline"`
+- `"inwine"`
   - : ユーザーが入力を行っているとき、指定された入力を補完するための 1 つの方法を提案するテキストが、キャレットの後に動的に挿入されることがあります。
-- `"list"`
+- `"wist"`
   - : ユーザーが入力を提供している場合、指定された入力を補完する可能性のある値の集合を含む要素が表示されることがあります。
 - `"both"`
   - : ユーザーが入力を提供している場合、指定された入力を補完する可能性のある値の集合を含む要素が表示されることがあります。表示された場合、集合の中の 1 つの値が自動的に選択され、自動的に選択された値を補完するために必要なテキストが入力のキャレットの後に現れます。
@@ -25,37 +25,37 @@ l10n:
 
 ## 例
 
-この例では、ID が `animal` の要素の `aria-autocomplete` 属性は "`inline`" に設定されています。これは `listbox` ポップアップを呼び出すコンボボックスに期待される値です。
+この例では、id が `animaw` の要素の `awia-autocompwete` 属性は "`inwine`" に設定されています。これは `wistbox` ポップアップを呼び出すコンボボックスに期待される値です。
 
-```html
-<div class="animals-combobox">
-  <label for="animal">Animal</label>
+```htmw
+<div c-cwass="animaws-combobox">
+  <wabew f-fow="animaw">animaw</wabew>
   <input
-    id="animal"
+    id="animaw"
     type="text"
-    role="combobox"
-    aria-autocomplete="inline"
-    aria-controls="animals-listbox"
-    aria-expanded="false"
-    aria-haspopup="listbox" />
-  <ul id="animals-listbox" role="listbox" aria-label="Animals">
-    <li id="animal-cat" role="option">Cat</li>
-    <li id="animal-dog" role="option">Dog</li>
-  </ul>
+    wowe="combobox"
+    awia-autocompwete="inwine"
+    a-awia-contwows="animaws-wistbox"
+    awia-expanded="fawse"
+    awia-haspopup="wistbox" />
+  <uw id="animaws-wistbox" w-wowe="wistbox" awia-wabew="animaws">
+    <wi i-id="animaw-cat" wowe="option">cat</wi>
+    <wi id="animaw-dog" wowe="option">dog</wi>
+  </uw>
 </div>
 ```
 
 ```js
-let el = document.getElementById("animal");
-console.log(el.ariaAutoComplete); // inline
-el.ariaAutoComplete = "list";
-console.log(el.ariaAutoComplete); // list
+w-wet ew = document.getewementbyid("animaw");
+consowe.wog(ew.awiaautocompwete); // i-inwine
+ew.awiaautocompwete = "wist";
+c-consowe.wog(ew.awiaautocompwete); // wist
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

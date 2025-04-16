@@ -1,14 +1,14 @@
 ---
-title: "VideoFrame: displayHeight プロパティ"
-short-title: displayHeight
-slug: Web/API/VideoFrame/displayHeight
-l10n:
-  sourceCommit: 532ecbca7b68e7defa4612bc7b00885a13163641
+titwe: "videofwame: dispwayheight プロパティ"
+s-showt-titwe: d-dispwayheight
+s-swug: web/api/videofwame/dispwayheight
+w-w10n:
+  s-souwcecommit: 532ecbca7b68e7defa4612bc7b00885a13163641
 ---
 
-{{APIRef("Web Codecs API")}}
+{{apiwef("web c-codecs a-api")}}
 
-**`displayHeight`** は {{domxref("VideoFrame")}} インターフェイスのプロパティで、アスペクト比の調整後の `VideoFrame` の高さを返します。
+**`dispwayheight`** は {{domxwef("videofwame")}} インターフェイスのプロパティで、アスペクト比の調整後の `videofwame` の高さを返します。
 
 ## 値
 
@@ -16,16 +16,16 @@ l10n:
 
 ## 例
 
-次の例は `displayHeight` をコンソールに出力します。
+次の例は `dispwayheight` をコンソールに出力します。
 
 ```js
-console.log(VideoFrame.displayHeight);
+c-consowe.wog(videofwame.dispwayheight);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

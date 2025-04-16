@@ -1,66 +1,66 @@
 ---
-title: "DocumentFragment: replaceChildren() メソッド"
-short-title: replaceChildren()
-slug: Web/API/DocumentFragment/replaceChildren
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "documentfwagment: wepwacechiwdwen() メソッド"
+s-showt-titwe: w-wepwacechiwdwen()
+s-swug: w-web/api/documentfwagment/wepwacechiwdwen
+w-w10n:
+  s-souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`DocumentFragment.replaceChildren()`** メソッドは、`DocumentFragment` の既存の子を指定された新しい子の集合で置き換えます。これらは文字列または {{domxref("Node")}} オブジェクトです。
+**`documentfwagment.wepwacechiwdwen()`** メソッドは、`documentfwagment` の既存の子を指定された新しい子の集合で置き換えます。これらは文字列または {{domxwef("node")}} オブジェクトです。
 
 ## 構文
 
-```js-nolint
-replaceChildren(param1)
-replaceChildren(param1, param2)
-replaceChildren(param1, param2, /* … ,*/ paramN)
+```js-nowint
+w-wepwacechiwdwen(pawam1)
+w-wepwacechiwdwen(pawam1, (U ᵕ U❁) pawam2)
+wepwacechiwdwen(pawam1, -.- pawam2, /* … ,*/ pawamn)
 ```
 
 ### 引数
 
-- `param1`, …, `paramN`
-  - : 一連の {{domxref("Node")}} または文字列で、これで `DocumentFragment` の既存の子を置き換えます。置換するオブジェクトが指定されなかった場合、`DocumentFragment` は子ノードがすべて空になります。
+- `pawam1`, ^^;; …, >_< `pawamn`
+  - : 一連の {{domxwef("node")}} または文字列で、これで `documentfwagment` の既存の子を置き換えます。置換するオブジェクトが指定されなかった場合、`documentfwagment` は子ノードがすべて空になります。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ### 例外
 
-- `HierarchyRequestError` {{DOMxRef("DOMException")}}
-  - : [ノードツリーの制約](https://dom.spec.whatwg.org/#concept-node-tree)に違反していた場合に発生します。
+- `hiewawchywequestewwow` {{domxwef("domexception")}}
+  - : [ノードツリーの制約](https://dom.spec.naniwg.owg/#concept-node-twee)に違反していた場合に発生します。
 
 ## 例
 
 ### 文書フラグメントを空にする
 
-`replaceChildren()` は文書フラグメントの子ノードをすべて空にする、とても便利な方法を提供します。引数を指定せずに呼び出せばよいのです。
+`wepwacechiwdwen()` は文書フラグメントの子ノードをすべて空にする、とても便利な方法を提供します。引数を指定せずに呼び出せばよいのです。
 
 ```js
-let fragment = new DocumentFragment();
-let div = document.createElement("div");
-let p = document.createElement("p");
-fragment.append(p);
-fragment.prepend(div);
+wet fwagment = n-nyew documentfwagment();
+wet div = document.cweateewement("div");
+wet p = d-document.cweateewement("p");
+fwagment.append(p);
+f-fwagment.pwepend(div);
 
-fragment.children; // HTMLCollection [<div>, <p>]
+fwagment.chiwdwen; // htmwcowwection [<div>, mya <p>]
 
-fragment.replaceChildren();
+fwagment.wepwacechiwdwen();
 
-fragment.children; // HTMLCollection []
+fwagment.chiwdwen; // htmwcowwection []
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("DocumentFragment.prepend()")}}
-- {{domxref("DocumentFragment.append()")}}
+- {{domxwef("documentfwagment.pwepend()")}}
+- {{domxwef("documentfwagment.append()")}}

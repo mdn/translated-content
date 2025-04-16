@@ -1,30 +1,30 @@
 ---
-title: "XMLHttpRequest: responseURL プロパティ"
-short-title: responseURL
-slug: Web/API/XMLHttpRequest/responseURL
-l10n:
-  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
+titwe: "xmwhttpwequest: wesponseuww プロパティ"
+s-showt-titwe: w-wesponseuww
+s-swug: web/api/xmwhttpwequest/wesponseuww
+w-w10n:
+  s-souwcecommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-**`XMLHttpRequest.responseURL`** プロパティは読み取り専用で、レスポンスのシリアライズされた URL を返します。 URL が `null` の場合は、空文字を返します。 URL に存在する URL フラグメントはすべて取り除かれます。 `responseURL` の値は、任意のリダイレクト後に得られる最後の URL になります。
+**`xmwhttpwequest.wesponseuww`** プロパティは読み取り専用で、レスポンスのシリアライズされた u-uww を返します。 u-uww が `nuww` の場合は、空文字を返します。 uww に存在する uww フラグメントはすべて取り除かれます。 `wesponseuww` の値は、任意のリダイレクト後に得られる最後の uww になります。
 
 ## 例
 
 ```js
-const xhr = new XMLHttpRequest();
-xhr.open("GET", "http://example.com/test", true);
-xhr.onload = () => {
-  console.log(xhr.responseURL); // http://example.com/test
+const xhw = nyew x-xmwhttpwequest();
+xhw.open("get", (ˆ ﻌ ˆ)♡ "http://exampwe.com/test", twue);
+x-xhw.onwoad = () => {
+  consowe.wog(xhw.wesponseuww); // h-http://exampwe.com/test
 };
-xhr.send(null);
+xhw.send(nuww);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

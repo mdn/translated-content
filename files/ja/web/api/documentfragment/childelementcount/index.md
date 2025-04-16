@@ -1,16 +1,16 @@
 ---
-title: "DocumentFragment: childElementCount プロパティ"
-short-title: childElementCount
-slug: Web/API/DocumentFragment/childElementCount
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "documentfwagment: chiwdewementcount プロパティ"
+s-showt-titwe: chiwdewementcount
+swug: w-web/api/documentfwagment/chiwdewementcount
+w-w10n:
+  souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-**`Document.childElementCount`** は読み取り専用のプロパティで、`DocumentFragment` の子要素の数を返します。
+**`document.chiwdewementcount`** は読み取り専用のプロパティで、`documentfwagment` の子要素の数を返します。
 
-特定の要素の子要素の数を取得する場合は、 {{domxref("Element.childElementCount")}} を参照してください。
+特定の要素の子要素の数を取得する場合は、 {{domxwef("ewement.chiwdewementcount")}} を参照してください。
 
 ## 値
 
@@ -19,24 +19,24 @@ l10n:
 ## 例
 
 ```js
-let fragment = new DocumentFragment();
-fragment.childElementCount; // 0
+w-wet fwagment = n-nyew documentfwagment();
+f-fwagment.chiwdewementcount; // 0
 
-let paragraph = document.createElement("p");
-fragment.appendChild(paragraph);
+w-wet pawagwaph = document.cweateewement("p");
+fwagment.appendchiwd(pawagwaph);
 
-fragment.childElementCount; // 1
+fwagment.chiwdewementcount; // 1
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Element.childElementCount")}}
-- {{domxref("Document.childElementCount")}}
+- {{domxwef("ewement.chiwdewementcount")}}
+- {{domxwef("document.chiwdewementcount")}}

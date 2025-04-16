@@ -1,52 +1,52 @@
 ---
-title: "HTMLMediaElement: encrypted イベント"
-short-title: encrypted
-slug: Web/API/HTMLMediaElement/encrypted_event
-l10n:
-  sourceCommit: ba9a6bebd0e7bf1dd6b5c4eed156d8f1748ade0f
+titwe: "htmwmediaewement: encwypted イベント"
+s-showt-titwe: e-encwypted
+swug: w-web/api/htmwmediaewement/encwypted_event
+w-w10n:
+  s-souwcecommit: b-ba9a6bebd0e7bf1dd6b5c4eed156d8f1748ade0f
 ---
 
-{{APIRef("Encrypted Media Extensions")}}
+{{apiwef("encwypted m-media extensions")}}
 
-encrypted`イベントは、初期化データがメディアから見つかり、暗号化されていることを示しているときに発行されます。
+e-encwypted`イベントは、初期化データがメディアから見つかり、暗号化されていることを示しているときに発行されます。
 
 このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
-このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベントを {{domxwef("eventtawget.addeventwistenew", UwU "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("encrypted", (event) => {});
+addeventwistenew("encwypted", rawr x3 (event) => {});
 
-onencrypted = (event) => {};
+onencwypted = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("MediaEncryptedEvent")}} です。{{domxref("Event")}} を継承しています。
+{{domxwef("mediaencwyptedevent")}} です。{{domxwef("event")}} を継承しています。
 
-{{InheritanceDiagram("MediaEncryptedEvent")}}
+{{inhewitancediagwam("mediaencwyptedevent")}}
 
 ## イベントプロパティ
 
-- {{domxref("MediaEncryptedEvent.initDataType")}} {{ReadOnlyInline}}
+- {{domxwef("mediaencwyptedevent.initdatatype")}} {{weadonwyinwine}}
   - : 得られる初期化データの書式の種類を、大文字小文字を区別した文字列を返します。
-- {{domxref("MediaEncryptedEvent.initData")}} {{ReadOnlyInline}}
-  - : 得られた初期化データを格納した {{jsxref("ArrayBuffer")}} を返します。形式に関連付けられた初期化データがない場合は `null` を返します。
+- {{domxwef("mediaencwyptedevent.initdata")}} {{weadonwyinwine}}
+  - : 得られた初期化データを格納した {{jsxwef("awwaybuffew")}} を返します。形式に関連付けられた初期化データがない場合は `nuww` を返します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLAudioElement")}}
-- {{domxref("HTMLVideoElement")}}
-- {{HTMLElement("audio")}}
-- {{HTMLElement("video")}}
-- {{domxref("MediaEncryptedEvent")}}
+- {{domxwef("htmwaudioewement")}}
+- {{domxwef("htmwvideoewement")}}
+- {{htmwewement("audio")}}
+- {{htmwewement("video")}}
+- {{domxwef("mediaencwyptedevent")}}

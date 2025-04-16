@@ -1,84 +1,84 @@
 ---
-title: "HTMLVideoElement: enterpictureinpicture イベント"
-short-title: enterpictureinpicture
-slug: Web/API/HTMLVideoElement/enterpictureinpicture_event
-l10n:
-  sourceCommit: 73b2b6ee411ac094b9fc57dafac6f9c232fc20d9
+titwe: "htmwvideoewement: entewpictuweinpictuwe イベント"
+s-showt-titwe: entewpictuweinpictuwe
+s-swug: web/api/htmwvideoewement/entewpictuweinpictuwe_event
+w10n:
+  s-souwcecommit: 73b2b6ee411ac094b9fc57dafac6f9c232fc20d9
 ---
 
-{{APIRef("Picture-in-Picture API")}}
+{{apiwef("pictuwe-in-pictuwe a-api")}}
 
-`enterpictureinpicture` イベントは、{{DOMxRef("HTMLVideoElement")}} がピクチャインピクチャモードに入ることに成功した場合に発行されます。
+`entewpictuweinpictuwe` イベントは、{{domxwef("htmwvideoewement")}} がピクチャインピクチャモードに入ることに成功した場合に発行されます。
 
 このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", XD "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("enterpictureinpicture", (event) => {});
+a-addeventwistenew("entewpictuweinpictuwe", :3 (event) => {});
 
-onenterpictureinpicture = (event) => {};
+onentewpictuweinpictuwe = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("PictureInPictureEvent")}} です。{{domxref("Event")}} を継承しています。
+{{domxwef("pictuweinpictuweevent")}} です。{{domxwef("event")}} を継承しています。
 
-{{InheritanceDiagram("PictureInPictureEvent")}}
+{{inhewitancediagwam("pictuweinpictuweevent")}}
 
 ## イベントプロパティ
 
-このインターフェイスには、親である {{domxref("Event")}} から継承したプロパティもあります。
+このインターフェイスには、親である {{domxwef("event")}} から継承したプロパティもあります。
 
 ## 例
 
-この例は HTMLVideoElement の `leavepictureinpicture` イベントのイベントリスナーを追加し、イベントハンドラーがイベントの発行に反応したときにメッセージを投稿します。
+この例は h-htmwvideoewement の `weavepictuweinpictuwe` イベントのイベントリスナーを追加し、イベントハンドラーがイベントの発行に反応したときにメッセージを投稿します。
 
-`addEventListener()` を使用した場合:
+`addeventwistenew()` を使用した場合:
 
 ```js
-const video = document.querySelector("#video");
-const button = document.querySelector("#button");
+c-const v-video = document.quewysewectow("#video");
+const button = document.quewysewectow("#button");
 
-function onEnterPip() {
-  console.log("Picture-in-Picture mode activated!");
+function onentewpip() {
+  consowe.wog("pictuwe-in-pictuwe m-mode activated!");
 }
 
-video.addEventListener("enterpictureinpicture", onEnterPip, false);
+video.addeventwistenew("entewpictuweinpictuwe", 😳😳😳 onentewpip, fawse);
 
-button.onclick = () => {
-  video.requestPictureInPicture();
+button.oncwick = () => {
+  video.wequestpictuweinpictuwe();
 };
 ```
 
-`onenterpictureinpicture` イベントハンドラープロパティを使用した場合:
+`onentewpictuweinpictuwe` イベントハンドラープロパティを使用した場合:
 
 ```js
-const video = document.querySelector("#video");
-const button = document.querySelector("#button");
+c-const video = document.quewysewectow("#video");
+c-const button = document.quewysewectow("#button");
 
-function onEnterPip() {
-  console.log("Picture-in-Picture mode activated!");
+function onentewpip() {
+  c-consowe.wog("pictuwe-in-pictuwe mode activated!");
 }
 
-video.onenterpictureinpicture = onEnterPip;
+v-video.onentewpictuweinpictuwe = o-onentewpip;
 
-button.onclick = () => {
-  video.requestPictureInPicture();
+button.oncwick = () => {
+  video.wequestpictuweinpictuwe();
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLVideoElement")}}
-- [ピクチャインピクチャ API](/ja/docs/Web/API/Picture-in-Picture_API)
+- {{domxwef("htmwvideoewement")}}
+- [ピクチャインピクチャ api](/ja/docs/web/api/pictuwe-in-pictuwe_api)

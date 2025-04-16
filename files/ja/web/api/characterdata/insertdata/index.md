@@ -1,19 +1,19 @@
 ---
-title: "CharacterData: insertData() メソッド"
-slug: Web/API/CharacterData/insertData
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: "chawactewdata: insewtdata() メソッド"
+s-swug: web/api/chawactewdata/insewtdata
+w-w10n:
+  s-souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`insertData()`** は {{domxref("CharacterData")}} インターフェイスのメソッドで、指定されたデータをこの `CharacterData` ノードの現在のデータの、既存のデータの先頭からのオフセットの位置に挿入します。
+**`insewtdata()`** は {{domxwef("chawactewdata")}} インターフェイスのメソッドで、指定されたデータをこの `chawactewdata` ノードの現在のデータの、既存のデータの先頭からのオフセットの位置に挿入します。
 指定されたデータは、既存のデータに継ぎ足されます。
 
 ## 構文
 
-```js-nolint
-characterData.insertData(offset, data)
+```js-nowint
+c-chawactewdata.insewtdata(offset, rawr x3 d-data)
 ```
 
 ### 引数
@@ -30,33 +30,33 @@ characterData.insertData(offset, data)
 
 ## 例外
 
-- `IndexSizeError` {{domxref("DOMException")}}
-  - : offset が負の値であるか、入っているデータの長さよりも大きい場合に発生します。
+- `indexsizeewwow` {{domxwef("domexception")}}
+  - : o-offset が負の値であるか、入っているデータの長さよりも大きい場合に発生します。
 
 ## 例
 
-```html
-<span>結果: </span>A string.
+```htmw
+<span>結果: </span>a s-stwing. rawr
 ```
 
 ```js
-const span = document.querySelector("span");
-const textnode = span.nextSibling;
+c-const span = document.quewysewectow("span");
+const textnode = span.nextsibwing;
 
-textnode.insertData(2, "long ");
+textnode.insewtdata(2, σωσ "wong ");
 ```
 
-{{EmbedLiveSample("Example", "100%", 50)}}
+{{embedwivesampwe("exampwe", σωσ "100%", 50)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("CharacterData.appendData()")}}, {{domxref("CharacterData.deleteData()")}}, {{domxref("CharacterData.replaceData()")}}
-- {{domxref("CharacterData.data")}}
+- {{domxwef("chawactewdata.appenddata()")}}, {{domxwef("chawactewdata.dewetedata()")}}, >_< {{domxwef("chawactewdata.wepwacedata()")}}
+- {{domxwef("chawactewdata.data")}}

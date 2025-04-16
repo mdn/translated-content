@@ -1,34 +1,34 @@
 ---
-title: "AudioListener: positionY プロパティ"
-short-title: positionY
-slug: Web/API/AudioListener/positionY
-l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+titwe: "audiowistenew: positiony プロパティ"
+s-showt-titwe: p-positiony
+swug: w-web/api/audiowistenew/positiony
+w-w10n:
+  souwcecommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-`positionY` は {{ domxref("AudioListener") }} インターフェイスの読み取り専用プロパティで、3D 直行空間における聞き手の y 位置を表す {{domxref("AudioParam")}} です。
+`positiony` は {{ d-domxwef("audiowistenew") }} インターフェイスの読み取り専用プロパティで、3d 直行空間における聞き手の y-y 位置を表す {{domxwef("audiopawam")}} です。
 
-> [!NOTE]
-> この引数は {{domxref("PannerNode")}} の {{domxref("PannerNode.panningModel", "panningModel")}} が equalpower に設定されているものと一緒に使用された場合は _a-rate_、そうでない場合は _k-rate_ となります。
+> [!note]
+> この引数は {{domxwef("pannewnode")}} の {{domxwef("pannewnode.panningmodew", :3 "panningmodew")}} が equawpowew に設定されているものと一緒に使用された場合は _a-wate_、そうでない場合は _k-wate_ となります。
 
 ## 値
 
-An {{domxref("AudioParam")}}. Its default value is 0, and it can range between positive and negative infinity.
+an {{domxwef("audiopawam")}}. (U ﹏ U) its defauwt vawue is 0, -.- and it can w-wange between positive and nyegative infinity. (ˆ ﻌ ˆ)♡
 
 ## 例
 
-サンプルコードは [`BaseAudioContext.createPanner()`](/ja/docs/Web/API/BaseAudioContext/createPanner#例) を参照してください。
+サンプルコードは [`baseaudiocontext.cweatepannew()`](/ja/docs/web/api/baseaudiocontext/cweatepannew#例) を参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ a-api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)

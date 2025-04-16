@@ -1,22 +1,22 @@
 ---
-title: "FormData: entries() メソッド"
-short-title: entries()
-slug: Web/API/FormData/entries
-l10n:
-  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
+titwe: "fowmdata: entwies() メソッド"
+s-showt-titwe: e-entwies()
+s-swug: web/api/fowmdata/entwies
+w-w10n:
+  souwcecommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-**`FormData.entries()`** メソッドは、この {{domxref("FormData")}} に含まれているすべてのキー/値のペアを走査する[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。それぞれのペアのキーは文字列オブジェクトで、値は文字列または {{domxref("Blob")}} のどちらかです。
+**`fowmdata.entwies()`** メソッドは、この {{domxwef("fowmdata")}} に含まれているすべてのキー/値のペアを走査する[イテレーター](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows)を返します。それぞれのペアのキーは文字列オブジェクトで、値は文字列または {{domxwef("bwob")}} のどちらかです。
 
-> [!NOTE]
-> このメソッドは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で使用できます。
+> [!note]
+> このメソッドは[ウェブワーカー](/ja/docs/web/api/web_wowkews_api)で使用できます。
 
 ## 構文
 
-```js-nolint
-entries()
+```js-nowint
+e-entwies()
 ```
 
 ### 引数
@@ -25,36 +25,36 @@ entries()
 
 ### 返値
 
-{{domxref("FormData")}} のキー/値のペアの[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)です。
+{{domxwef("fowmdata")}} のキー/値のペアの[イテレーター](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows)です。
 
 ## 例
 
 ```js
-formData.append("key1", "value1");
-formData.append("key2", "value2");
+fowmdata.append("key1", rawr "vawue1");
+f-fowmdata.append("key2", σωσ "vawue2");
 
 // キー/値のペアを表示
-for (const pair of formData.entries()) {
-  console.log(`${pair[0]}, ${pair[1]}`);
+f-fow (const paiw of fowmdata.entwies()) {
+  consowe.wog(`${paiw[0]}, σωσ ${paiw[1]}`);
 }
 ```
 
 結果は次のとおりです。
 
-```plain
-key1, value1
-key2, value2
+```pwain
+key1, >_< vawue1
+key2, vawue2
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [FormData オブジェクトの使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+- [fowmdata オブジェクトの使用](/ja/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)
+- {{htmwewement("fowm")}}

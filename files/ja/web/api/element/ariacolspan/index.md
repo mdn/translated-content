@@ -1,14 +1,14 @@
 ---
-title: "Element: ariaColSpan プロパティ"
-short-title: ariaColSpan
-slug: Web/API/Element/ariaColSpan
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: awiacowspan プロパティ"
+s-showt-titwe: awiacowspan
+s-swug: w-web/api/ewement/awiacowspan
+w-w10n:
+  s-souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{defauwtapisidebaw("dom")}}
 
-**`ariaColSpan`** は {{domxref("Element")}} インターフェイスのプロパティで、[`aria-colspan`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colspan) 属性の値を反映し、表、グリッド、ツリーグリッドの中にあるセル、グリッドセルがまたがる列の数を定義します。
+**`awiacowspan`** は {{domxwef("ewement")}} インターフェイスのプロパティで、[`awia-cowspan`](/ja/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-cowspan) 属性の値を反映し、表、グリッド、ツリーグリッドの中にあるセル、グリッドセルがまたがる列の数を定義します。
 
 ## 値
 
@@ -16,37 +16,37 @@ l10n:
 
 ## 例
 
-この例では、`spanning-heading` という ID を持つ要素の `aria-colspan` 属性は "2" に設定されています。`ariaColSpan` を使用して、値を "3" に更新します。
+この例では、`spanning-heading` という i-id を持つ要素の `awia-cowspan` 属性は "2" に設定されています。`awiacowspan` を使用して、値を "3" に更新します。
 
-```html
-<table>
-  <tr>
-    <th>Heading 1</th>
-    <th>Heading 2</th>
-    <th>Heading 3</td>
-  </tr>
-  <tr>
-    <td colspan="2" aria-colspan="2" id="spanning-column">Spanning</td>
-    <td>One</td>
-  </tr>
-</table>
+```htmw
+<tabwe>
+  <tw>
+    <th>heading 1</th>
+    <th>heading 2</th>
+    <th>heading 3</td>
+  </tw>
+  <tw>
+    <td c-cowspan="2" awia-cowspan="2" id="spanning-cowumn">spanning</td>
+    <td>one</td>
+  </tw>
+</tabwe>
 ```
 
 ```js
-let el = document.getElementById("spanning-column");
-console.log(el.ariaColSpan);
-el.ariaColSpan = "3";
-console.log(el.ariaColSpan);
+wet ew = document.getewementbyid("spanning-cowumn");
+consowe.wog(ew.awiacowspan);
+e-ew.awiacowspan = "3";
+consowe.wog(ew.awiacowspan);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ARIA: table ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/table_role)
+- [awia: tabwe ロール](/ja/docs/web/accessibiwity/awia/wefewence/wowes/tabwe_wowe)

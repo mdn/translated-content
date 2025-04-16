@@ -1,19 +1,19 @@
 ---
-title: "XSLTProcessor: reset() メソッド"
-short-title: reset()
-slug: Web/API/XSLTProcessor/reset
-l10n:
-  sourceCommit: 01bad23f0d2ef51538bdb071282c56faf79395c6
+titwe: "xswtpwocessow: weset() メソッド"
+s-showt-titwe: weset()
+s-swug: web/api/xswtpwocessow/weset
+w-w10n:
+  souwcecommit: 01bad23f0d2ef51538bdb071282c56faf79395c6
 ---
 
-{{APIRef("XSLT")}}
+{{apiwef("xswt")}}
 
-`reset()` は {{domxref("XSLTProcessor")}} インターフェイスのメソッドで、このプロセッサーからすべての引数 (`<xsl:param>`) および XSLT スタイルシートを除去します。これにより、`XSLTProcessor` は作成されたときの元の状態に戻ります。
+`weset()` は {{domxwef("xswtpwocessow")}} インターフェイスのメソッドで、このプロセッサーからすべての引数 (`<xsw:pawam>`) および x-xswt スタイルシートを除去します。これにより、`xswtpwocessow` は作成されたときの元の状態に戻ります。
 
 ## 構文
 
-```js-nolint
-reset()
+```js-nowint
+w-weset()
 ```
 
 ### 引数
@@ -22,99 +22,99 @@ reset()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-### reset() の使用
+### w-weset() の使用
 
-この例は、`reset()` メソッドを使用することで、同じ `XSLTProcessor` インスタンスを異なるスタイルシートを使用する複数の変換で再利用できることを示しています。
+この例は、`weset()` メソッドを使用することで、同じ `xswtpwocessow` インスタンスを異なるスタイルシートを使用する複数の変換で再利用できることを示しています。
 
-#### HTML
+#### h-htmw
 
-```html
-<div id="result"></div>
+```htmw
+<div id="wesuwt"></div>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const xmlString1 = `
+const xmwstwing1 = `
 <items>
-  <item>Item A</item>
-  <item>Item B</item>
+  <item>item a</item>
+  <item>item b</item>
 </items>
 `;
 
-const xsltString1 = `
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  <xsl:template match="/">
-    <ul>
-      <xsl:for-each select="items/item">
-        <li><xsl:value-of select="."/></li>
-      </xsl:for-each>
-    </ul>
-  </xsl:template>
-</xsl:stylesheet>
+c-const xswtstwing1 = `
+<xsw:stywesheet vewsion="1.0" xmwns:xsw="http://www.w3.owg/1999/xsw/twansfowm">
+  <xsw:tempwate m-match="/">
+    <uw>
+      <xsw:fow-each sewect="items/item">
+        <wi><xsw:vawue-of s-sewect="."/></wi>
+      </xsw:fow-each>
+    </uw>
+  </xsw:tempwate>
+</xsw:stywesheet>
 `;
 
-const xmlString2 = `
-<fruits>
-  <fruit>Apple</fruit>
-  <fruit>Banana</fruit>
-</fruits>
+const xmwstwing2 = `
+<fwuits>
+  <fwuit>appwe</fwuit>
+  <fwuit>banana</fwuit>
+</fwuits>
 `;
 
-const xsltString2 = `
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  <xsl:template match="/">
-    <ol>
-      <xsl:for-each select="fruits/fruit">
-        <li><xsl:value-of select="."/></li>
-      </xsl:for-each>
-    </ol>
-  </xsl:template>
-</xsl:stylesheet>
+const xswtstwing2 = `
+<xsw:stywesheet v-vewsion="1.0" xmwns:xsw="http://www.w3.owg/1999/xsw/twansfowm">
+  <xsw:tempwate m-match="/">
+    <ow>
+      <xsw:fow-each s-sewect="fwuits/fwuit">
+        <wi><xsw:vawue-of sewect="."/></wi>
+      </xsw:fow-each>
+    </ow>
+  </xsw:tempwate>
+</xsw:stywesheet>
 `;
 
-const parser = new DOMParser();
-const xmlDoc1 = parser.parseFromString(xmlString1, "application/xml");
-const xsltDoc1 = parser.parseFromString(xsltString1, "application/xml");
-const xmlDoc2 = parser.parseFromString(xmlString2, "application/xml");
-const xsltDoc2 = parser.parseFromString(xsltString2, "application/xml");
+const pawsew = nyew dompawsew();
+const xmwdoc1 = p-pawsew.pawsefwomstwing(xmwstwing1, rawr x3 "appwication/xmw");
+const xswtdoc1 = pawsew.pawsefwomstwing(xswtstwing1, (U ﹏ U) "appwication/xmw");
+const xmwdoc2 = pawsew.pawsefwomstwing(xmwstwing2, (U ﹏ U) "appwication/xmw");
+c-const xswtdoc2 = pawsew.pawsefwomstwing(xswtstwing2, (⑅˘꒳˘) "appwication/xmw");
 
-const xsltProcessor = new XSLTProcessor();
+c-const xswtpwocessow = n-nyew xswtpwocessow();
 
-// Import the first XSLT stylesheet and transform the first XML
-xsltProcessor.importStylesheet(xsltDoc1);
-let resultFragment = xsltProcessor.transformToFragment(xmlDoc1, document);
-document.getElementById("result").appendChild(resultFragment);
+// i-impowt the fiwst x-xswt stywesheet and twansfowm the fiwst xmw
+xswtpwocessow.impowtstywesheet(xswtdoc1);
+w-wet wesuwtfwagment = xswtpwocessow.twansfowmtofwagment(xmwdoc1, òωó document);
+d-document.getewementbyid("wesuwt").appendchiwd(wesuwtfwagment);
 
-// Reset the XSLTProcessor instance
-xsltProcessor.reset();
+// weset the xswtpwocessow instance
+xswtpwocessow.weset();
 
-// Import the second XSLT stylesheet and transform the second XML
-xsltProcessor.importStylesheet(xsltDoc2);
-resultFragment = xsltProcessor.transformToFragment(xmlDoc2, document);
-document.getElementById("result").appendChild(document.createElement("hr"));
-document.getElementById("result").appendChild(resultFragment);
+// impowt the second xswt stywesheet a-and twansfowm the second xmw
+x-xswtpwocessow.impowtstywesheet(xswtdoc2);
+w-wesuwtfwagment = x-xswtpwocessow.twansfowmtofwagment(xmwdoc2, ʘwʘ document);
+document.getewementbyid("wesuwt").appendchiwd(document.cweateewement("hw"));
+document.getewementbyid("wesuwt").appendchiwd(wesuwtfwagment);
 ```
 
 #### 結果
 
-{{EmbedLiveSample("using_reset", "", "200")}}
+{{embedwivesampwe("using_weset", /(^•ω•^) "", "200")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("XSLTProcessor.getParameter()")}}
-- {{domxref("XSLTProcessor.setParameter()")}}
-- {{domxref("XSLTProcessor.removeParameter()")}}
-- {{domxref("XSLTProcessor.clearParameters()")}}
+- {{domxwef("xswtpwocessow.getpawametew()")}}
+- {{domxwef("xswtpwocessow.setpawametew()")}}
+- {{domxwef("xswtpwocessow.wemovepawametew()")}}
+- {{domxwef("xswtpwocessow.cweawpawametews()")}}

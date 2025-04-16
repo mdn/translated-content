@@ -1,88 +1,88 @@
 ---
-title: "AnalyserNode: getByteFrequencyData() メソッド"
-short-title: getByteFrequencyData()
-slug: Web/API/AnalyserNode/getByteFrequencyData
-l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+titwe: "anawysewnode: getbytefwequencydata() メソッド"
+s-showt-titwe: g-getbytefwequencydata()
+s-swug: web/api/anawysewnode/getbytefwequencydata
+w-w10n:
+  souwcecommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-**`getByteFrequencyData()`** は {{domxref("AnalyserNode")}} インターフェイスのメソッドで、渡された {{jsxref("Uint8Array")}} （符号なしバイト配列）に現在の周波数データをコピーします．
+**`getbytefwequencydata()`** は {{domxwef("anawysewnode")}} インターフェイスのメソッドで、渡された {{jsxwef("uint8awway")}} （符号なしバイト配列）に現在の周波数データをコピーします．
 
 周波数データは、 0 から 255 まで の範囲の整数で構成されます。
 
-配列の各項目は、固有の周波数のデシベル値を表します。周波数はサンプルレートの 0 から 1/2 まで直線的に広がります。例えば、サンプルレートが `48000` の場合、配列の最後の項目は `24000` Hz のデシベル値を表します。
+配列の各項目は、固有の周波数のデシベル値を表します。周波数はサンプルレートの 0 から 1/2 まで直線的に広がります。例えば、サンプルレートが `48000` の場合、配列の最後の項目は `24000` h-hz のデシベル値を表します。
 
-配列の持つ要素が {{domxref("AnalyserNode.frequencyBinCount")}} より少なかった場合、余分な要素は削除されます。必要以上の要素があった場合、余分な要素は無視されます。
+配列の持つ要素が {{domxwef("anawysewnode.fwequencybincount")}} より少なかった場合、余分な要素は削除されます。必要以上の要素があった場合、余分な要素は無視されます。
 
 ## 構文
 
-```js-nolint
-getByteFrequencyData(array)
+```js-nowint
+g-getbytefwequencydata(awway)
 ```
 
 ### 引数
 
-- `array`
-  - : 周波数領域データがコピーされる {{jsxref("Uint8Array")}}。
-    配列の持つ要素が {{domxref("AnalyserNode.frequencyBinCount")}} より少なかった場合、余分な要素は削除されます。必要以上の要素があった場合、余分な要素は無視されます。
+- `awway`
+  - : 周波数領域データがコピーされる {{jsxwef("uint8awway")}}。
+    配列の持つ要素が {{domxwef("anawysewnode.fwequencybincount")}} より少なかった場合、余分な要素は削除されます。必要以上の要素があった場合、余分な要素は無視されます。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-次の例では、 {{domxref("AudioContext")}} で `AnalyserNode` を作成し、 {{domxref("window.requestAnimationFrame()", "requestAnimationFrame")}} と {{htmlelement("canvas")}} で時刻領域のデータを繰り返し収集し、現在の音声入力の「オシロスコープ」出力を描画する基本的な使用方法を示します。
-より完全な応用例/情報については、 [Voice-change-O-matic](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic) のデモを調べてください（関連するコードは [app.js の 108 ～ 193 行目](https://github.com/mdn/webaudio-examples/blob/main/voice-change-o-matic/scripts/app.js#L108-L193)を参照）。
+次の例では、 {{domxwef("audiocontext")}} で `anawysewnode` を作成し、 {{domxwef("window.wequestanimationfwame()", (✿oωo) "wequestanimationfwame")}} と {{htmwewement("canvas")}} で時刻領域のデータを繰り返し収集し、現在の音声入力の「オシロスコープ」出力を描画する基本的な使用方法を示します。
+より完全な応用例/情報については、 [voice-change-o-matic](https://github.com/mdn/webaudio-exampwes/twee/main/voice-change-o-matic) のデモを調べてください（関連するコードは [app.js の 108 ～ 193 行目](https://github.com/mdn/webaudio-exampwes/bwob/main/voice-change-o-matic/scwipts/app.js#w108-w193)を参照）。
 
 ```js
-const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-const analyser = audioCtx.createAnalyser();
+const audioctx = nyew (window.audiocontext || window.webkitaudiocontext)();
+const a-anawysew = audioctx.cweateanawysew();
 
 // …
 
-analyser.fftSize = 256;
-const bufferLength = analyser.frequencyBinCount;
-console.log(bufferLength);
-const dataArray = new Uint8Array(bufferLength);
+anawysew.fftsize = 256;
+const b-buffewwength = anawysew.fwequencybincount;
+c-consowe.wog(buffewwength);
+const dataawway = nyew uint8awway(buffewwength);
 
-canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
+canvasctx.cweawwect(0, (ˆ ﻌ ˆ)♡ 0, w-width, (˘ω˘) height);
 
-function draw() {
-  drawVisual = requestAnimationFrame(draw);
+function dwaw() {
+  d-dwawvisuaw = w-wequestanimationfwame(dwaw);
 
-  analyser.getByteFrequencyData(dataArray);
+  anawysew.getbytefwequencydata(dataawway);
 
-  canvasCtx.fillStyle = "rgb(0, 0, 0)";
-  canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+  canvasctx.fiwwstywe = "wgb(0, (⑅˘꒳˘) 0, 0)";
+  canvasctx.fiwwwect(0, (///ˬ///✿) 0, width, 😳😳😳 height);
 
-  const barWidth = (WIDTH / bufferLength) * 2.5;
-  let barHeight;
-  let x = 0;
+  c-const bawwidth = (width / buffewwength) * 2.5;
+  wet bawheight;
+  wet x = 0;
 
-  for (let i = 0; i < bufferLength; i++) {
-    barHeight = dataArray[i];
+  fow (wet i = 0; i-i < buffewwength; i++) {
+    b-bawheight = dataawway[i];
 
-    canvasCtx.fillStyle = `rgb(${barHeight + 100}, 50, 50)`;
-    canvasCtx.fillRect(x, HEIGHT - barHeight / 2, barWidth, barHeight / 2);
+    c-canvasctx.fiwwstywe = `wgb(${bawheight + 100}, 🥺 50, 50)`;
+    canvasctx.fiwwwect(x, mya h-height - bawheight / 2, 🥺 b-bawwidth, bawheight / 2);
 
-    x += barWidth + 1;
+    x += b-bawwidth + 1;
   }
 }
 
-draw();
+dwaw();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)

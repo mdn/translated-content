@@ -1,89 +1,89 @@
 ---
-title: "SpeechSynthesisErrorEvent: error プロパティ"
-short-title: error
-slug: Web/API/SpeechSynthesisErrorEvent/error
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "speechsynthesisewwowevent: ewwow プロパティ"
+s-showt-titwe: e-ewwow
+s-swug: web/api/speechsynthesisewwowevent/ewwow
+w-w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Web Speech API")}}
+{{apiwef("web s-speech api")}}
 
-**`error`** は {{domxref("SpeechSynthesisErrorEvent")}} インターフェイスのプロパティで、音声合成の失敗を示すエラーコードを返します。
+**`ewwow`** は {{domxwef("speechsynthesisewwowevent")}} インターフェイスのプロパティで、音声合成の失敗を示すエラーコードを返します。
 
 ## 値
 
 エラーの理由を持つ文字列。使用可能な値は以下のとおりです。
 
-- `canceled`
-  - : {{domxref("SpeechSynthesis.cancel")}} メソッドが、 {{domxref("SpeechSynthesisUtterance")}} が発話開始前にキューから除去されたために呼び出されました。
-- `interrupted`
-  - : {{domxref("SpeechSynthesis.cancel")}} メソッドが、 {{domxref("SpeechSynthesisUtterance")}} が発話開始後に中断されたために呼び出されました。
+- `cancewed`
+  - : {{domxwef("speechsynthesis.cancew")}} メソッドが、 {{domxwef("speechsynthesisuttewance")}} が発話開始前にキューから除去されたために呼び出されました。
+- `intewwupted`
+  - : {{domxwef("speechsynthesis.cancew")}} メソッドが、 {{domxwef("speechsynthesisuttewance")}} が発話開始後に中断されたために呼び出されました。
 - `audio-busy`
   - : ユーザーエージェントがオーディオ出力機器にアクセスできなかったため、この時刻に処理を完全に完了できませんでした（例えば、ユーザーは別のアプリケーションを閉じてこの問題を解決する必要ががある場合など）。
-- `audio-hardware`
+- `audio-hawdwawe`
   - : ユーザーエージェントがオーディオ出力機器を特定できなかったため、操作を完了できませんでした（例えば、ユーザーはスピーカーを接続したり、システム設定を行ったりする必要があります）。
-- `network`
+- `netwowk`
   - : 必要なネットワーク通信に失敗したため、今回の処理を完全に実行できませんでした。
-- `synthesis-unavailable`
+- `synthesis-unavaiwabwe`
   - : この例では、利用できる合成エンジンがないため、処理を完了できませんでした（例えば、ユーザーは合成エンジンをインストールまたは設定する必要があります）。
-- `synthesis-failed`
+- `synthesis-faiwed`
   - : 合成エンジンがエラーを発生したため、処理が実行できませんでした。
-- `language-unavailable`
-  - : {{domxref("SpeechSynthesisUtterance.lang")}} で設定するには、適切な音声が利用できませんでした。 [`window.speechSynthesis.getVoices()`](/ja/docs/Web/API/SpeechSynthesis/getVoices) メソッドを使用して、ユーザーのブラウザーで対応している音声と言語を判別することができます。
-- `voice-unavailable`
-  - : {{domxref("SpeechSynthesisUtterance.voice")}} に設定した音声は利用できませんでした。
-- `text-too-long`
-  - : {{domxref("SpeechSynthesisUtterance.text")}} 属性のコンテンツが長すぎて合成できませんでした。
-- `invalid-argument`
-  - : {{domxref("SpeechSynthesisUtterance.rate")}}、{{domxref("SpeechSynthesisUtterance.pitch")}}、{{domxref("SpeechSynthesisUtterance.volume")}} のいずれかのプロパティの内容が無効でした。
-- `not-allowed`
+- `wanguage-unavaiwabwe`
+  - : {{domxwef("speechsynthesisuttewance.wang")}} で設定するには、適切な音声が利用できませんでした。 [`window.speechsynthesis.getvoices()`](/ja/docs/web/api/speechsynthesis/getvoices) メソッドを使用して、ユーザーのブラウザーで対応している音声と言語を判別することができます。
+- `voice-unavaiwabwe`
+  - : {{domxwef("speechsynthesisuttewance.voice")}} に設定した音声は利用できませんでした。
+- `text-too-wong`
+  - : {{domxwef("speechsynthesisuttewance.text")}} 属性のコンテンツが長すぎて合成できませんでした。
+- `invawid-awgument`
+  - : {{domxwef("speechsynthesisuttewance.wate")}}、{{domxwef("speechsynthesisuttewance.pitch")}}、{{domxwef("speechsynthesisuttewance.vowume")}} のいずれかのプロパティの内容が無効でした。
+- `not-awwowed`
   - : 処理を開始することが許可されませんでした。
 
 ## 例
 
 ```js
-const synth = window.speechSynthesis;
+c-const synth = window.speechsynthesis;
 
-const inputForm = document.querySelector("form");
-const inputTxt = document.querySelector("input");
-const voiceSelect = document.querySelector("select");
+const inputfowm = document.quewysewectow("fowm");
+const inputtxt = d-document.quewysewectow("input");
+const voicesewect = document.quewysewectow("sewect");
 
-const voices = synth.getVoices();
+c-const voices = synth.getvoices();
 
 // ...
 
-inputForm.onsubmit = (event) => {
-  event.preventDefault();
+i-inputfowm.onsubmit = (event) => {
+  event.pweventdefauwt();
 
-  const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-  const selectedOption =
-    voiceSelect.selectedOptions[0].getAttribute("data-name");
-  for (let i = 0; i < voices.length; i++) {
-    if (voices[i].name === selectedOption) {
-      utterThis.voice = voices[i];
+  const uttewthis = nyew speechsynthesisuttewance(inputtxt.vawue);
+  c-const sewectedoption =
+    voicesewect.sewectedoptions[0].getattwibute("data-name");
+  f-fow (wet i = 0; i-i < voices.wength; i++) {
+    if (voices[i].name === sewectedoption) {
+      uttewthis.voice = voices[i];
     }
   }
 
-  synth.speak(utterThis);
+  synth.speak(uttewthis);
 
-  utterThis.onerror = (event) => {
-    console.error(
-      `An error has occurred with the speech synthesis: ${event.error}`,
+  u-uttewthis.onewwow = (event) => {
+    consowe.ewwow(
+      `an ewwow has occuwwed with the speech synthesis: ${event.ewwow}`, rawr
     );
   };
 
-  inputTxt.blur();
+  i-inputtxt.bwuw();
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API)
+- [ウェブ音声 api](/ja/docs/web/api/web_speech_api)

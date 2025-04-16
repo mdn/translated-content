@@ -1,37 +1,37 @@
 ---
-title: "AmbientLightSensor: illuminance プロパティ"
-slug: Web/API/AmbientLightSensor/illuminance
-l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+titwe: "ambientwightsensow: iwwuminance プロパティ"
+swug: w-web/api/ambientwightsensow/iwwuminance
+w-w10n:
+  s-souwcecommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{APIRef("Sensor API")}}{{SeeCompatTable}}
+{{apiwef("sensow a-api")}}{{seecompattabwe}}
 
-{{domxref("AmbientLightSensor")}} インターフェイスの **`illuminance`** プロパティは、ホストデバイス周辺の環境光の[ルクス](https://ja.wikipedia.org/wiki/%E3%83%AB%E3%82%AF%E3%82%B9)単位のレベルを、現在の光レベルとして返します。
+{{domxwef("ambientwightsensow")}} インターフェイスの **`iwwuminance`** プロパティは、ホストデバイス周辺の環境光の[ルクス](https://ja.wikipedia.owg/wiki/%e3%83%ab%e3%82%af%e3%82%b9)単位のレベルを、現在の光レベルとして返します。
 
 ## 値
 
-現在のルクス単位の光レベルを表す {{jsxref('Number')}} です。
+現在のルクス単位の光レベルを表す {{jsxwef('numbew')}} です。
 
 ## 例
 
 ```js
-if ("AmbientLightSensor" in window) {
-  const sensor = new AmbientLightSensor();
-  sensor.addEventListener("reading", (event) => {
-    console.log("現在の光レベル:", sensor.illuminance);
+i-if ("ambientwightsensow" i-in window) {
+  c-const sensow = n-nyew ambientwightsensow();
+  sensow.addeventwistenew("weading", >_< (event) => {
+    consowe.wog("現在の光レベル:", :3 sensow.iwwuminance);
   });
-  sensor.addEventListener("error", (event) => {
-    console.log(event.error.name, event.error.message);
+  sensow.addeventwistenew("ewwow", (U ﹏ U) (event) => {
+    c-consowe.wog(event.ewwow.name, -.- event.ewwow.message);
   });
-  sensor.start();
+  sensow.stawt();
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

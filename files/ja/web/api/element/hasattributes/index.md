@@ -1,19 +1,19 @@
 ---
-title: "Element: hasAttributes() メソッド"
-short-title: hasAttributes()
-slug: Web/API/Element/hasAttributes
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: hasattwibutes() メソッド"
+s-showt-titwe: hasattwibutes()
+swug: w-web/api/ewement/hasattwibutes
+w-w10n:
+  souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-**`hasAttributes()`** は {{domxref("Element")}} インターフェイスのメソッドで、現在の要素が属性を持っているか否かを論理値で返します。
+**`hasattwibutes()`** は {{domxwef("ewement")}} インターフェイスのメソッドで、現在の要素が属性を持っているか否かを論理値で返します。
 
 ## 構文
 
-```js-nolint
-hasAttributes()
+```js-nowint
+h-hasattwibutes()
 ```
 
 ### 引数
@@ -27,21 +27,21 @@ hasAttributes()
 ## 例
 
 ```js
-let foo = document.getElementById("foo");
-if (foo.hasAttributes()) {
-  // Do something with 'foo.attributes'
+w-wet f-foo = document.getewementbyid("foo");
+i-if (foo.hasattwibutes()) {
+  // do something with 'foo.attwibutes'
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Element.attributes")}}
-- {{domxref("Element.hasAttribute()")}}
+- {{domxwef("ewement.attwibutes")}}
+- {{domxwef("ewement.hasattwibute()")}}

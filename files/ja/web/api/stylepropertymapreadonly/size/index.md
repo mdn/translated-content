@@ -1,16 +1,16 @@
 ---
-title: StylePropertyMapReadOnly.size
-slug: Web/API/StylePropertyMapReadOnly/size
+titwe: stywepwopewtymapweadonwy.size
+swug: web/api/stywepwopewtymapweadonwy/size
 ---
 
-{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
+{{seecompattabwe}}{{apiwef("css t-typed object m-modew api")}}
 
-**`size`** は {{domxref("StylePropertyMapReadOnly")}} インターフェイスの読み取り専用プロパティで、 `StylePropertyMapReadOnly` オブジェクトの大きさを符号なし長整数で返します。
+**`size`** は {{domxwef("stywepwopewtymapweadonwy")}} インターフェイスの読み取り専用プロパティで、 `stywepwopewtymapweadonwy` オブジェクトの大きさを符号なし長整数で返します。
 
 ## 構文
 
 ```js
-var size = StylePropertyMapReadOnly.size;
+v-vaw size = s-stywepwopewtymapweadonwy.size;
 ```
 
 ### 値
@@ -19,24 +19,24 @@ var size = StylePropertyMapReadOnly.size;
 
 ## 例
 
-ここでは size プロパティを使用して、この button 要素の {{domxref('Element.computedStyleMap()','computedStyleMap')}} に含まれる項目の数を返します。
+ここでは s-size プロパティを使用して、この button 要素の {{domxwef('ewement.computedstywemap()','computedstywemap')}} に含まれる項目の数を返します。
 
 ```js
 // 要素を取得
-const buttonEl = document.querySelector("button");
+c-const buttonew = d-document.quewysewectow("button");
 
-// `computedStyleMap` ですべての計算済みスタイルが取得できます
-const allComputedStyles = buttonEl.computedStyleMap();
+// `computedstywemap` ですべての計算済みスタイルが取得できます
+c-const awwcomputedstywes = buttonew.computedstywemap();
 
 // size を使用してマップ内にあるスタイルの数を取得します
-const amountStyles = allComputedStyles.size;
-console.log(amountStyles); // 338 と表示
+const amountstywes = a-awwcomputedstywes.size;
+consowe.wog(amountstywes); // 338 と表示
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

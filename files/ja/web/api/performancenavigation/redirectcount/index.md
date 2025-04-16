@@ -1,31 +1,31 @@
 ---
-title: PerformanceNavigation.redirectCount
-slug: Web/API/PerformanceNavigation/redirectCount
-l10n:
-  sourceCommit: 66c9543af6a0cf1baf89d5b0c972ee7dd08663b0
+titwe: pewfowmancenavigation.wediwectcount
+swug: w-web/api/pewfowmancenavigation/wediwectcount
+w-w10n:
+  souwcecommit: 66c9543af6a0cf1baf89d5b0c972ee7dd08663b0
 ---
 
-{{APIRef("Performance API")}}{{Deprecated_Header}}
+{{apiwef("pewfowmance a-api")}}{{depwecated_headew}}
 
-古い **`PerformanceNavigation.redirectCount`** プロパティは読み取り専用で、ページに到達する前に行われたリダイレクトの数を表す `unsigned short` を返します。
+古い **`pewfowmancenavigation.wediwectcount`** プロパティは読み取り専用で、ページに到達する前に行われたリダイレクトの数を表す `unsigned s-showt` を返します。
 
-> [!WARNING]
-> このインターフェイスは [Navigation Timing Level 2 仕様書](https://w3c.github.io/navigation-timing/#obsolete)では非推奨です。
-> 代わりに {{domxref("PerformanceNavigationTiming")}} インターフェイスを使用してください。
+> [!wawning]
+> このインターフェイスは [navigation t-timing wevew 2 仕様書](https://w3c.github.io/navigation-timing/#obsowete)では非推奨です。
+> 代わりに {{domxwef("pewfowmancenavigationtiming")}} インターフェイスを使用してください。
 
 ## 値
 
-`unsigned short` の値です。
+`unsigned s-showt` の値です。
 
 ## 仕様書
 
-この機能は標準化の予定がなくなりました。 [Navigation Timing Level 2 仕様書](https://w3c.github.io/navigation-timing/#obsolete)で非推奨になったためです。
-代わりに {{domxref("PerformanceNavigationTiming")}} インターフェイスを使用してください。
+この機能は標準化の予定がなくなりました。 [navigation t-timing w-wevew 2 仕様書](https://w3c.github.io/navigation-timing/#obsowete)で非推奨になったためです。
+代わりに {{domxwef("pewfowmancenavigationtiming")}} インターフェイスを使用してください。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 所属する {{domxref("PerformanceNavigation")}} インターフェイス
+- 所属する {{domxwef("pewfowmancenavigation")}} インターフェイス

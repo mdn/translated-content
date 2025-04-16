@@ -1,80 +1,80 @@
 ---
-title: MessagePort
-slug: Web/API/MessagePort
-l10n:
-  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
+titwe: messagepowt
+swug: web/api/messagepowt
+w-w10n:
+  souwcecommit: e-e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
-{{APIRef("Channel Messaging API")}} {{AvailableInWorkers}}
+{{apiwef("channew m-messaging a-api")}} {{avaiwabweinwowkews}}
 
-**`MessagePort`** は[チャンネルメッセージング API](/ja/docs/Web/API/Channel_Messaging_API) のインターフェイスで、{{domxref("MessageChannel")}} の 2 つのポートの一方を表し、片方のポートから送信されるメッセージをもう片方のポートで受信待機できます。
+**`messagepowt`** は[チャンネルメッセージング a-api](/ja/docs/web/api/channew_messaging_api) のインターフェイスで、{{domxwef("messagechannew")}} の 2 つのポートの一方を表し、片方のポートから送信されるメッセージをもう片方のポートで受信待機できます。
 
-`MessagePort` は[移譲可能オブジェクト](/ja/docs/Web/API/Web_Workers_API/Transferable_objects)です。
+`messagepowt` は[移譲可能オブジェクト](/ja/docs/web/api/web_wowkews_api/twansfewabwe_objects)です。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスメソッド
 
-_親である {{domxref("EventTarget")}} からの継承したメソッドがあります。_
+_親である {{domxwef("eventtawget")}} からの継承したメソッドがあります。_
 
-- {{domxref("MessagePort.postMessage","postMessage()")}}
+- {{domxwef("messagepowt.postmessage","postmessage()")}}
   - : ポートからメッセージを送信します。また、任意でオブジェクトの所有権を他の閲覧コンテキストへ転送します。
-- {{domxref("MessagePort.start","start()")}}
-  - : ポート上で順番待ちのメッセージの送信を開始します。({{domxref("EventTarget.addEventListener")}} を使用する場合のみ必要です。{{domxref("MessagePort.message_event", "onmessage")}} を使用する場合は暗黙に実行されます。)
-- {{domxref("MessagePort.close","close()")}}
+- {{domxwef("messagepowt.stawt","stawt()")}}
+  - : ポート上で順番待ちのメッセージの送信を開始します。({{domxwef("eventtawget.addeventwistenew")}} を使用する場合のみ必要です。{{domxwef("messagepowt.message_event", rawr "onmessage")}} を使用する場合は暗黙に実行されます。)
+- {{domxwef("messagepowt.cwose","cwose()")}}
   - : ポートとの接続を切断し、このポートはアクティブではなくなります。
 
 ## イベント
 
-_親である {{domxref("EventTarget")}} から継承したイベントがあります。_
+_親である {{domxwef("eventtawget")}} から継承したイベントがあります。_
 
-- {{domxref("MessagePort.message_event","message")}}
-  - : `MessagePort` オブジェクトがメッセージを受信したときに発行されます。
-- {{domxref("MessagePort.messageerror_event","messageerror")}}
-  - : `MessagePort` オブジェクトがデシリアライズできないメッセージを受け取ったときに発行されます。
+- {{domxwef("messagepowt.message_event","message")}}
+  - : `messagepowt` オブジェクトがメッセージを受信したときに発行されます。
+- {{domxwef("messagepowt.messageewwow_event","messageewwow")}}
+  - : `messagepowt` オブジェクトがデシリアライズできないメッセージを受け取ったときに発行されます。
 
 ## 例
 
-次の例では、{{domxref("MessageChannel.MessageChannel","MessageChannel()")}} コンストラクターで作成された新しいチャンネルがあります。
+次の例では、{{domxwef("messagechannew.messagechannew","messagechannew()")}} コンストラクターで作成された新しいチャンネルがあります。
 
-IFrame が読み込まれると、{{domxref("MessagePort/message_event","onmessage")}} ハンドラーを {{domxref("MessageChannel.port1")}} に登録し、{{domxref("MessageChannel.port2")}} を IFrame に、メッセージと共に {{domxref("window.postMessage")}} を使用して送信します。
+i-ifwame が読み込まれると、{{domxwef("messagepowt/message_event","onmessage")}} ハンドラーを {{domxwef("messagechannew.powt1")}} に登録し、{{domxwef("messagechannew.powt2")}} を i-ifwame に、メッセージと共に {{domxwef("window.postmessage")}} を使用して送信します。
 
-IFrame からメッセージが返却されると。`onMessage` 関数でメッセージを段落に出力します。
+i-ifwame からメッセージが返却されると。`onmessage` 関数でメッセージを段落に出力します。
 
 ```js
-const channel = new MessageChannel();
-const output = document.querySelector(".output");
-const iframe = document.querySelector("iframe");
+const channew = nyew messagechannew();
+const output = document.quewysewectow(".output");
+c-const ifwame = document.quewysewectow("ifwame");
 
-// Wait for the iframe to load
-iframe.addEventListener("load", onLoad);
+// wait f-fow the ifwame to woad
+ifwame.addeventwistenew("woad", OwO o-onwoad);
 
-function onLoad() {
-  // Listen for messages on port1
-  channel.port1.onmessage = onMessage;
+function onwoad() {
+  // wisten fow messages o-on powt1
+  channew.powt1.onmessage = onmessage;
 
-  // Transfer port2 to the iframe
-  iframe.contentWindow.postMessage("Hello from the main page!", "*", [
-    channel.port2,
+  // t-twansfew p-powt2 to the ifwame
+  ifwame.contentwindow.postmessage("hewwo fwom the main page!", "*", (U ﹏ U) [
+    channew.powt2, >_<
   ]);
 }
 
-// Handle messages received on port1
-function onMessage(e) {
-  output.innerHTML = e.data;
+// handwe m-messages weceived on powt1
+function onmessage(e) {
+  output.innewhtmw = e.data;
 }
 ```
 
-完全に動作する例は、Github 上の [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/main/channel-messaging-basic) を参照してください ([実際のデモも実行できます](https://mdn.github.io/dom-examples/channel-messaging-basic/))。
+完全に動作する例は、github 上の [channew m-messaging basic demo](https://github.com/mdn/dom-exampwes/twee/main/channew-messaging-basic) を参照してください ([実際のデモも実行できます](https://mdn.github.io/dom-exampwes/channew-messaging-basic/))。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [チャンネルメッセージングの使用](/ja/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- [チャンネルメッセージングの使用](/ja/docs/web/api/channew_messaging_api/using_channew_messaging)

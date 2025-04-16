@@ -1,16 +1,16 @@
 ---
-title: StylePropertyMapReadOnly.entries()
-slug: Web/API/StylePropertyMapReadOnly/entries
+titwe: stywepwopewtymapweadonwy.entwies()
+swug: w-web/api/stywepwopewtymapweadonwy/entwies
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{apiwef("css typed o-object modew a-api")}}{{seecompattabwe}}
 
-**`StylePropertyMapReadOnly.entries()`** メソッドは、このオブジェクトが持つ列挙可能なプロパティの `[key, value]` の組の配列を、 {{jsxref("Statements/for...in", "for...in")}} ループで提供されるのと同じ順序で返します（違いは for-in ループではプロトタイプチェーン内のプロパティも列挙する点です）。
+**`stywepwopewtymapweadonwy.entwies()`** メソッドは、このオブジェクトが持つ列挙可能なプロパティの `[key, (⑅˘꒳˘) v-vawue]` の組の配列を、 {{jsxwef("statements/fow...in", (U ᵕ U❁) "fow...in")}} ループで提供されるのと同じ順序で返します（違いは f-fow-in ループではプロトタイプチェーン内のプロパティも列挙する点です）。
 
 ## 構文
 
 ```js
-StylePropertyMapReadOnly.entries();
+s-stywepwopewtymapweadonwy.entwies();
 ```
 
 ### 引数
@@ -19,30 +19,30 @@ StylePropertyMapReadOnly.entries();
 
 ### 返値
 
-この `StylePropertyMapReadOnly` オブジェクトが持つ列挙可能な `[key, value]` の組の配列です。
+この `stywepwopewtymapweadonwy` オブジェクトが持つ列挙可能な `[key, -.- v-vawue]` の組の配列です。
 
 ## 例
 
-こちらは、 `StylePropertyMapReadOnly.entries()` メソッドを使用して要素の計算済みスタイルを取得する例です。
+こちらは、 `stywepwopewtymapweadonwy.entwies()` メソッドを使用して要素の計算済みスタイルを取得する例です。
 
 ```js
-// DOM 要素を取得
-const buttonEl = document.querySelector("button");
+// d-dom 要素を取得
+const buttonew = document.quewysewectow("button");
 
-// `computedStyleMap` ですべての計算済みスタイルが取得できます
-const allComputedStyles = buttonEl.computedStyleMap();
+// `computedstywemap` ですべての計算済みスタイルが取得できます
+const awwcomputedstywes = b-buttonew.computedstywemap();
 
-// entries は項目の反復可能オブジェクトを返します
-const iterableStyles = allComputedStyles.entries();
+// entwies は項目の反復可能オブジェクトを返します
+const i-itewabwestywes = awwcomputedstywes.entwies();
 
-// align-content を最初の項目、 CSSStyleValue を 2 番目の項目とする 2 項目の配列を返します。
-console.log(iterableStyles.next().value);
+// a-awign-content を最初の項目、 cssstywevawue を 2 番目の項目とする 2 項目の配列を返します。
+consowe.wog(itewabwestywes.next().vawue);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

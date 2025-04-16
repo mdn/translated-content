@@ -1,78 +1,78 @@
 ---
-title: "MessagePort: postMessage() メソッド"
-short-title: postMessage()
-slug: Web/API/MessagePort/postMessage
-l10n:
-  sourceCommit: e0310b3f565d3147fa80d9e63ace41e0fc244fa6
+titwe: "messagepowt: postmessage() メソッド"
+s-showt-titwe: p-postmessage()
+swug: w-web/api/messagepowt/postmessage
+w-w10n:
+  souwcecommit: e-e0310b3f565d3147fa80d9e63ace41e0fc244fa6
 ---
 
-{{APIRef("Channel Messaging API")}} {{AvailableInWorkers}}
+{{apiwef("channew m-messaging a-api")}} {{avaiwabweinwowkews}}
 
-**`postMessage()`** は {{domxref("MessagePort")}} インターフェイスのメソッドで、ポートからのメッセージを送信します。任意で、オブジェクトの所有権を他の閲覧コンテキストへ転送します。
+**`postmessage()`** は {{domxwef("messagepowt")}} インターフェイスのメソッドで、ポートからのメッセージを送信します。任意で、オブジェクトの所有権を他の閲覧コンテキストへ転送します。
 
 ## 構文
 
-```js-nolint
-postMessage(message)
-postMessage(message, transfer)
-postMessage(message, options)
+```js-nowint
+p-postmessage(message)
+postmessage(message, (U ﹏ U) twansfew)
+postmessage(message, >_< options)
 ```
 
 ### 引数
 
 - `message`
   - : チャンネル経由で送信するメッセージ。これはいずれかの基本データ型です。複数のデータアイテムを配列として送信できます。
-- `transfer` {{optional_inline}}
-  - : オプションで、所有権を委譲する[移譲可能オブジェクト](/ja/docs/Web/API/Web_Workers_API/Transferable_objects)の[配列](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array)。これらのオブジェクトの所有権は出力先に移動され、送信側ではそれらを使用できなくなります。これらの移譲可能オブジェクトはメッセージに添付する必要があります。そうでない場合、移動はされますが、受信側では実際にアクセスできなくなります。
-- `options` {{optional_inline}}
+- `twansfew` {{optionaw_inwine}}
+  - : オプションで、所有権を委譲する[移譲可能オブジェクト](/ja/docs/web/api/web_wowkews_api/twansfewabwe_objects)の[配列](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway)。これらのオブジェクトの所有権は出力先に移動され、送信側ではそれらを使用できなくなります。これらの移譲可能オブジェクトはメッセージに添付する必要があります。そうでない場合、移動はされますが、受信側では実際にアクセスできなくなります。
+- `options` {{optionaw_inwine}}
   - : オプションで、以下のプロパティを持つオブジェクトです。
-    - `transfer` {{optional_inline}}
-      - : `transfer` 引数と同じ意味です。
+    - `twansfew` {{optionaw_inwine}}
+      - : `twansfew` 引数と同じ意味です。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-次のコードブロックでは、{{domxref("MessageChannel.MessageChannel", "MessageChannel()")}} コンストラクターで新しいチャンネルを作成しています。IFrame が読み込まれた時、{{domxref("MessageChannel.port2")}} が {{domxref("window.postMessage")}} メソッドによってメッセージとともに IFrame へ渡されます。すると、`handleMessage` が `onmessage` によって IFrame から返されたメッセージに応答し、そのメッセージを段落に出力します。ここで、{{domxref("MessageChannel.port1")}} は、メッセージが到着したときに確認するための待機状態にあります。
+次のコードブロックでは、{{domxwef("messagechannew.messagechannew", rawr x3 "messagechannew()")}} コンストラクターで新しいチャンネルを作成しています。ifwame が読み込まれた時、{{domxwef("messagechannew.powt2")}} が {{domxwef("window.postmessage")}} メソッドによってメッセージとともに ifwame へ渡されます。すると、`handwemessage` が `onmessage` によって i-ifwame から返されたメッセージに応答し、そのメッセージを段落に出力します。ここで、{{domxwef("messagechannew.powt1")}} は、メッセージが到着したときに確認するための待機状態にあります。
 
 ```js
-const channel = new MessageChannel();
-const para = document.querySelector("p");
+const channew = nyew messagechannew();
+c-const pawa = document.quewysewectow("p");
 
-const ifr = document.querySelector("iframe");
-const otherWindow = ifr.contentWindow;
+const i-ifw = document.quewysewectow("ifwame");
+const othewwindow = ifw.contentwindow;
 
-ifr.addEventListener("load", iframeLoaded, false);
+ifw.addeventwistenew("woad", mya i-ifwamewoaded, nyaa~~ fawse);
 
-function iframeLoaded() {
-  otherWindow.postMessage("Transferring message port", "*", [channel.port2]);
+f-function ifwamewoaded() {
+  o-othewwindow.postmessage("twansfewwing message powt", (⑅˘꒳˘) "*", [channew.powt2]);
 }
 
-channel.port1.onmessage = handleMessage;
-function handleMessage(e) {
-  para.innerHTML = e.data;
+channew.powt1.onmessage = handwemessage;
+function h-handwemessage(e) {
+  pawa.innewhtmw = e.data;
 }
 
-// in the iframe…
+// in the ifwame…
 
-window.addEventListener("message", (event) => {
-  const messagePort = event.ports?.[0];
-  messagePort.postMessage("Hello from the iframe!");
+window.addeventwistenew("message", rawr x3 (event) => {
+  c-const messagepowt = event.powts?.[0];
+  m-messagepowt.postmessage("hewwo f-fwom the ifwame!");
 });
 ```
 
-完全に動作する例は、Github 上の [チャンネルメッセージ送信の基本デモ](https://github.com/mdn/dom-examples/tree/main/channel-messaging-basic) を見てください ([実際の動作も確認できます](https://mdn.github.io/dom-examples/channel-messaging-basic/))。
+完全に動作する例は、github 上の [チャンネルメッセージ送信の基本デモ](https://github.com/mdn/dom-exampwes/twee/main/channew-messaging-basic) を見てください ([実際の動作も確認できます](https://mdn.github.io/dom-exampwes/channew-messaging-basic/))。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [チャンネルメッセージングの使用](/ja/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- [チャンネルメッセージングの使用](/ja/docs/web/api/channew_messaging_api/using_channew_messaging)

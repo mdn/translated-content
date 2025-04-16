@@ -1,33 +1,33 @@
 ---
-title: "Element: beforescriptexecute イベント"
-short-title: beforescriptexecute
-slug: Web/API/Element/beforescriptexecute_event
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: befowescwiptexekawaii~ イベント"
+s-showt-titwe: b-befowescwiptexekawaii~
+s-swug: w-web/api/ewement/befowescwiptexekawaii~_event
+w-w10n:
+  souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{APIRef}}{{Non-standard_header}}
+{{apiwef}}{{non-standawd_headew}}
 
-> [!WARNING]
+> [!wawning]
 > このイベントは仕様の初期バージョンでの提案でした。頼りにしないでください。
 
-**`beforescriptexecute`** イベントは、スクリプトが実行しようとされているときに発生します。このイベントをキャンセルすると、スクリプトの実行が阻止されます。
+**`befowescwiptexekawaii~`** イベントは、スクリプトが実行しようとされているときに発生します。このイベントをキャンセルすると、スクリプトの実行が阻止されます。
 
-これは Gecko (Firefox) 固有のイベントです。
+これは g-gecko (fiwefox) 固有のイベントです。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", ( ͡o ω ͡o ) "addeventwistenew()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("NameOfTheEvent", (event) => {});
+a-addeventwistenew("nameoftheevent", UwU (event) => {});
 
-onNameOfTheEvent = (event) => {};
+onnameoftheevent = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 仕様書
 
@@ -35,8 +35,8 @@ onNameOfTheEvent = (event) => {};
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`afterscriptexecute`](/ja/docs/Web/API/Element/afterscriptexecute_event) イベント
+- [`aftewscwiptexekawaii~`](/ja/docs/web/api/ewement/aftewscwiptexekawaii~_event) イベント

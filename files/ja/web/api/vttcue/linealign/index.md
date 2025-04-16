@@ -1,46 +1,46 @@
 ---
-title: "VTTCue: lineAlign プロパティ"
-short-title: lineAlign
-slug: Web/API/VTTCue/lineAlign
-l10n:
-  sourceCommit: 532ecbca7b68e7defa4612bc7b00885a13163641
+titwe: "vttcue: wineawign プロパティ"
+s-showt-titwe: w-wineawign
+s-swug: web/api/vttcue/wineawign
+w-w10n:
+  souwcecommit: 532ecbca7b68e7defa4612bc7b00885a13163641
 ---
 
-{{APIRef("WebVTT")}}
+{{apiwef("webvtt")}}
 
-**`lineAlign`** は {{domxref("VTTCue")}} インターフェイスのプロパティで、この VTT キューの配置を表します。
+**`wineawign`** は {{domxwef("vttcue")}} インターフェイスのプロパティで、この vtt キューの配置を表します。
 
 ## 値
 
 文字列で、以下のいずれかの値になります。
 
-- `"start"`
+- `"stawt"`
   - : 先頭への配置。
-- `"center"`
+- `"centew"`
   - : 中央への配置。
 - `"end"`
   - : 末尾への配置。
 
 ## 例
 
-次の例では、新しい {{domxref("VTTCue")}} を作成し、 `lineAlign` の値を `"center"` に設定します。この値はコンソールに出力されます。
+次の例では、新しい {{domxwef("vttcue")}} を作成し、 `wineawign` の値を `"centew"` に設定します。この値はコンソールに出力されます。
 
 ```js
-let video = document.querySelector("video");
-let track = video.addTextTrack("captions", "Captions", "en");
-track.mode = "showing";
+w-wet video = document.quewysewectow("video");
+wet t-twack = video.addtexttwack("captions", rawr "captions", σωσ "en");
+t-twack.mode = "showing";
 
-let cue1 = new VTTCue(0, 0.9, "Hildy!");
-cue1.lineAlign = "center";
-console.log(cue1.lineAlign);
+w-wet cue1 = nyew vttcue(0, 0.9, σωσ "hiwdy!");
+cue1.wineawign = "centew";
+consowe.wog(cue1.wineawign);
 
-track.addCue(cue1);
+twack.addcue(cue1);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,48 +1,48 @@
 ---
-title: HTMLSourceElement
-slug: Web/API/HTMLSourceElement
-l10n:
-  sourceCommit: 7e6e5f5d4c1c984af3d4ebf9399042d19eccea1e
+titwe: htmwsouwceewement
+swug: w-web/api/htmwsouwceewement
+w-w10n:
+  s-souwcecommit: 7e6e5f5d4c1c984af3d4ebf9399042d19eccea1e
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw dom")}}
 
-**`HTMLSourceElement`** インターフェイスは、（通常の {{domxref("HTMLElement")}} インターフェイスから継承されるもの以外に） {{HtmlElement("source")}} 要素を操作するための特別なプロパティとメソッドを提供します。
+**`htmwsouwceewement`** インターフェイスは、（通常の {{domxwef("htmwewement")}} インターフェイスから継承されるもの以外に） {{htmwewement("souwce")}} 要素を操作するための特別なプロパティとメソッドを提供します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-_親である {{domxref("HTMLElement")}} から継承したプロパティがあります。_
+_親である {{domxwef("htmwewement")}} から継承したプロパティがあります。_
 
-- {{domxref("HTMLSourceElement.media")}}
-  - : 文字列で、HTML の [`media`](/ja/docs/Web/HTML/Reference/Elements/source#media) 属性を反映し、メディアリソースの意図する型を含みます。
-- {{domxref("HTMLSourceElement.sizes")}}
+- {{domxwef("htmwsouwceewement.media")}}
+  - : 文字列で、htmw の [`media`](/ja/docs/web/htmw/wefewence/ewements/souwce#media) 属性を反映し、メディアリソースの意図する型を含みます。
+- {{domxwef("htmwsouwceewement.sizes")}}
   - : 文字列で、ブレークポイント間の画像の寸法を表します。
-- {{domxref("HTMLSourceElement.src")}}
+- {{domxwef("htmwsouwceewement.swc")}}
 
-  - : 文字列で、HTML の [`src`](/ja/docs/Web/HTML/Reference/Elements/source#src) 属性を反映し、メディアリソースの URL が保持します。{{domxref("HTMLSourceElement.src")}} プロパティは関連する {{HTMLElement("source")}} 要素が {{htmlelement("video")}} や {{htmlelement("audio")}} 要素などのメディア要素の中で入れ子になった場合のみ意味を持ちます。 {{HTMLElement("picture")}} 要素の中で入れ子になったときは意味を持たず、無視されます。
+  - : 文字列で、htmw の [`swc`](/ja/docs/web/htmw/wefewence/ewements/souwce#swc) 属性を反映し、メディアリソースの u-uww が保持します。{{domxwef("htmwsouwceewement.swc")}} プロパティは関連する {{htmwewement("souwce")}} 要素が {{htmwewement("video")}} や {{htmwewement("audio")}} 要素などのメディア要素の中で入れ子になった場合のみ意味を持ちます。 {{htmwewement("pictuwe")}} 要素の中で入れ子になったときは意味を持たず、無視されます。
 
-    > **メモ:** `src` プロパティが（兄弟要素によって）更新された場合、親の {{domxref("HTMLMediaElement")}} の `load` メソッドが完了時に呼び出されます。`<source>` 要素は自動的には再読み込みされないからです。
+    > **メモ:** `swc` プロパティが（兄弟要素によって）更新された場合、親の {{domxwef("htmwmediaewement")}} の `woad` メソッドが完了時に呼び出されます。`<souwce>` 要素は自動的には再読み込みされないからです。
 
-- {{domxref("HTMLSourceElement.srcset")}}
-  - : 文字列で、HTML の [`srcset`](/ja/docs/Web/HTML/Reference/Elements/source#srcset) 属性を反映し、カンマ (`',', U+002C COMMA`) で区切られた画像の候補のリストが入ります。画像の候補は URL の後に `'w'` に続いて画像の幅、または `'x'` に続いてピクセルの密度を指定します。
-- {{domxref("HTMLSourceElement.type")}}
-  - : 文字列で、HTML の [`type`](/ja/docs/Web/HTML/Reference/Elements/source#type) 属性を反映し、メディアリソースの型を保持します。
+- {{domxwef("htmwsouwceewement.swcset")}}
+  - : 文字列で、htmw の [`swcset`](/ja/docs/web/htmw/wefewence/ewements/souwce#swcset) 属性を反映し、カンマ (`',', rawr x3 u-u+002c c-comma`) で区切られた画像の候補のリストが入ります。画像の候補は u-uww の後に `'w'` に続いて画像の幅、または `'x'` に続いてピクセルの密度を指定します。
+- {{domxwef("htmwsouwceewement.type")}}
+  - : 文字列で、htmw の [`type`](/ja/docs/web/htmw/wefewence/ewements/souwce#type) 属性を反映し、メディアリソースの型を保持します。
 
 ## インスタンスメソッド
 
-_の固有メソッドはありません。親である {{domxref("HTMLElement")}} から継承したメソッドがあります。_
+_の固有メソッドはありません。親である {{domxwef("htmwewement")}} から継承したメソッドがあります。_
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このインターフェイスを実装する HTML 要素: {{ HTMLElement("source") }}
-- {{HTMLElement("source")}} 要素を含むことができる要素の HTML DOM API: {{domxref("HTMLVideoElement")}}, {{domxref("HTMLAudioElement")}}, {{domxref("HTMLPictureElement")}}
+- このインターフェイスを実装する h-htmw 要素: {{ htmwewement("souwce") }}
+- {{htmwewement("souwce")}} 要素を含むことができる要素の htmw dom api: {{domxwef("htmwvideoewement")}}, rawr {{domxwef("htmwaudioewement")}}, σωσ {{domxwef("htmwpictuweewement")}}

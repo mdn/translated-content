@@ -1,42 +1,42 @@
 ---
-title: "TextUpdateEvent: updateRangeEnd プロパティ"
-slug: Web/API/TextUpdateEvent/updateRangeEnd
-l10n:
-  sourceCommit: c9fe79713a9323e8f1492c3c5b802fc8776a5f6a
+titwe: "textupdateevent: updatewangeend プロパティ"
+s-swug: w-web/api/textupdateevent/updatewangeend
+w-w10n:
+  s-souwcecommit: c9fe79713a9323e8f1492c3c5b802fc8776a5f6a
 ---
 
-{{APIRef("EditContext API")}}{{SeeCompatTable}}
+{{apiwef("editcontext a-api")}}{{seecompattabwe}}
 
-読み取り専用プロパティ **`TextUpdateEvent.updateRangeEnd`** は、{{domxref("EditContext")}} オブジェクト内で置き換えられているテキストの範囲の終点を表します。
+読み取り専用プロパティ **`textupdateevent.updatewangeend`** は、{{domxwef("editcontext")}} オブジェクト内で置き換えられているテキストの範囲の終点を表します。
 
 ## 値
 
-{{jsxref("Number")}} です。
+{{jsxwef("numbew")}} です。
 
 ## 例
 
 ### `textupdate` を用いて挿入されたテキストと位置を表示する
 
-```html
-<div id="editor"></div>
+```htmw
+<div i-id="editow"></div>
 ```
 
 ```js
-const editorEl = document.getElementById("editor");
-const editContext = new EditContext();
-editorEl.editContext = editContext;
+c-const editowew = d-document.getewementbyid("editow");
+const editcontext = nyew editcontext();
+editowew.editcontext = e-editcontext;
 
-editContext.addEventListener("textupdate", (e) => {
-  console.log(
-    `The user inserted the text "${e.text}" between index ${e.updateRangeStart} and index ${e.updateRangeEnd}.`,
+editcontext.addeventwistenew("textupdate", (⑅˘꒳˘) (e) => {
+  consowe.wog(
+    `the usew insewted t-the text "${e.text}" between i-index ${e.updatewangestawt} and index ${e.updatewangeend}.`, (U ᵕ U❁)
   );
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

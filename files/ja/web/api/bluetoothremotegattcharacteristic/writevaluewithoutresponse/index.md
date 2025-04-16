@@ -1,35 +1,35 @@
 ---
-title: "BluetoothRemoteGATTCharacteristic: writeValueWithoutResponse() メソッド"
-slug: Web/API/BluetoothRemoteGATTCharacteristic/writeValueWithoutResponse
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: "bwuetoothwemotegattchawactewistic: wwitevawuewithoutwesponse() メソッド"
+s-swug: web/api/bwuetoothwemotegattchawactewistic/wwitevawuewithoutwesponse
+w-w10n:
+  souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{apiwef("bwuetooth a-api")}}{{seecompattabwe}}
 
-**`BluetoothRemoteGATTCharacteristic.writeValueWithoutResponse()`** メソッドは、{{domxref("BluetoothRemoteGATTCharacteristic")}} オブジェクトの `value` プロパティを渡された {{JSxRef("ArrayBuffer")}} に格納されたバイト列に設定し、[`WriteCharacteristicValue`(_this_=`this`, _value=value_, _response_=`"never"`)](https://webbluetoothcg.github.io/web-bluetooth/#writecharacteristicvalue) を呼び出し、結果の {{JSxRef("Promise")}} を返します。
+**`bwuetoothwemotegattchawactewistic.wwitevawuewithoutwesponse()`** メソッドは、{{domxwef("bwuetoothwemotegattchawactewistic")}} オブジェクトの `vawue` プロパティを渡された {{jsxwef("awwaybuffew")}} に格納されたバイト列に設定し、[`wwitechawactewisticvawue`(_this_=`this`, òωó _vawue=vawue_, _wesponse_=`"nevew"`)](https://webbwuetoothcg.github.io/web-bwuetooth/#wwitechawactewisticvawue) を呼び出し、結果の {{jsxwef("pwomise")}} を返します。
 
 ## 構文
 
-```js-nolint
-writeValueWithoutResponse(value)
+```js-nowint
+w-wwitevawuewithoutwesponse(vawue)
 ```
 
 ### 引数
 
-- `value`
-  - : {{jsxref("ArrayBuffer")}} です。
+- `vawue`
+  - : {{jsxwef("awwaybuffew")}} です。
 
 ### 返値
 
-{{jsxref("Promise")}} です。
+{{jsxwef("pwomise")}} です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{APIRef("Web Bluetooth")}}
+{{apiwef("web b-bwuetooth")}}

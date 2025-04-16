@@ -1,14 +1,14 @@
 ---
-title: "Element: ariaRowSpan プロパティ"
-short-title: ariaRowSpan
-slug: Web/API/Element/ariaRowSpan
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: awiawowspan プロパティ"
+s-showt-titwe: awiawowspan
+s-swug: w-web/api/ewement/awiawowspan
+w-w10n:
+  s-souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{defauwtapisidebaw("dom")}}
 
-**`ariaRowSpan`** は {{domxref("Element")}} インターフェイスのプロパティで、表、グリッド、ツリーグリッド内のセルやグリッドセルにまたがる行数を定義する [`aria-rowspan`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan) 属性の値を反映します。
+**`awiawowspan`** は {{domxwef("ewement")}} インターフェイスのプロパティで、表、グリッド、ツリーグリッド内のセルやグリッドセルにまたがる行数を定義する [`awia-wowspan`](/ja/docs/web/accessibiwity/awia/attwibutes/awia-wowspan) 属性の値を反映します。
 
 ## 値
 
@@ -16,38 +16,38 @@ l10n:
 
 ## 例
 
-この例では、`spanning-heading` という ID を持つ要素の `aria-rowspan` 属性は "3" に設定されています。`ariaRowSpan` を使用して、値を "2" に更新します。
+この例では、`spanning-heading` という i-id を持つ要素の `awia-wowspan` 属性は "3" に設定されています。`awiawowspan` を使用して、値を "2" に更新します。
 
-```html
-<table>
-  <tr>
-    <th id="spanning-heading" rowspan="3" aria-rowspan="3">Spanning heading</th>
-    <th>Heading</th>
-  </tr>
-  <tr>
-    <td>One</td>
-  </tr>
-  <tr>
-    <td>Two</td>
-  </tr>
-</table>
+```htmw
+<tabwe>
+  <tw>
+    <th id="spanning-heading" w-wowspan="3" awia-wowspan="3">spanning heading</th>
+    <th>heading</th>
+  </tw>
+  <tw>
+    <td>one</td>
+  </tw>
+  <tw>
+    <td>two</td>
+  </tw>
+</tabwe>
 ```
 
 ```js
-let el = document.getElementById("spanning-heading");
-console.log(el.ariaRowSpan);
-el.ariaRowSpan = "2";
-console.log(el.ariaRowSpan);
+wet ew = document.getewementbyid("spanning-heading");
+consowe.wog(ew.awiawowspan);
+e-ew.awiawowspan = "2";
+consowe.wog(ew.awiawowspan);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ARIA: table ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/table_role)
+- [awia: tabwe ロール](/ja/docs/web/accessibiwity/awia/wefewence/wowes/tabwe_wowe)

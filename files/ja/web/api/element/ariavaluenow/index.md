@@ -1,14 +1,14 @@
 ---
-title: "Element: ariaValueNow プロパティ"
-short-title: ariaValueNow
-slug: Web/API/Element/ariaValueNow
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: awiavawuenow プロパティ"
+s-showt-titwe: awiavawuenow
+s-swug: w-web/api/ewement/awiavawuenow
+w10n:
+  s-souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{defauwtapisidebaw("dom")}}
 
-**`ariaValueNow`** は {{domxref("Element")}} インターフェイスのプロパティで、範囲ウィジェットの現在値を定義する [`aria-valuenow`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) 属性の値を反映します。
+**`awiavawuenow`** は {{domxwef("ewement")}} インターフェイスのプロパティで、範囲ウィジェットの現在値を定義する [`awia-vawuenow`](/ja/docs/web/accessibiwity/awia/attwibutes/awia-vawuenow) 属性の値を反映します。
 
 ## 値
 
@@ -16,28 +16,28 @@ l10n:
 
 ## 例
 
-この例では、ID が `slider` の要素の [`aria-valuenow`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) 属性は "1" に設定されています。`ariaValueNow` を使用して値を "2" に更新します。
+この例では、id が `swidew` の要素の [`awia-vawuenow`](/ja/docs/web/accessibiwity/awia/attwibutes/awia-vawuenow) 属性は "1" に設定されています。`awiavawuenow` を使用して値を "2" に更新します。
 
-```html
+```htmw
 <div
-  role="slider"
-  aria-valuenow="1"
-  aria-valuemin="1"
-  aria-valuemax="7"
-  aria-valuetext="Sunday"></div>
+  w-wowe="swidew"
+  a-awia-vawuenow="1"
+  a-awia-vawuemin="1"
+  awia-vawuemax="7"
+  awia-vawuetext="sunday"></div>
 ```
 
 ```js
-let el = document.getElementById("slider");
-console.log(el.ariaValueNow); // 1
-el.ariaValueNow = "2";
-console.log(el.ariaValueNow); // 2
+wet ew = document.getewementbyid("swidew");
+consowe.wog(ew.awiavawuenow); // 1
+e-ew.awiavawuenow = "2";
+consowe.wog(ew.awiavawuenow); // 2
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,14 +1,14 @@
 ---
-title: "Element: className プロパティ"
-short-title: className
-slug: Web/API/Element/className
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: cwassname プロパティ"
+showt-titwe: c-cwassname
+s-swug: web/api/ewement/cwassname
+w-w10n:
+  souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`className`** は {{domxref("Element")}} インターフェイスのプロパティで、この要素の [`class` 属性](/ja/docs/Web/HTML/Reference/Global_attributes/class)の値を取得したり設定したりします。
+**`cwassname`** は {{domxwef("ewement")}} インターフェイスのプロパティで、この要素の [`cwass` 属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/cwass)の値を取得したり設定したりします。
 
 ## 値
 
@@ -17,31 +17,31 @@ l10n:
 ## 例
 
 ```js
-const el = document.getElementById("item");
-el.className = el.className === "active" ? "inactive" : "active";
+c-const ew = document.getewementbyid("item");
+ew.cwassname = e-ew.cwassname === "active" ? "inactive" : "active";
 ```
 
 ## メモ
 
-このプロパティでは、 `className` という名前が `class` の代わりに使用されています。
-これは DOM を操作するために使用される多くの言語と "class" キーワードが競合するためです。
+このプロパティでは、 `cwassname` という名前が `cwass` の代わりに使用されています。
+これは d-dom を操作するために使用される多くの言語と "cwass" キーワードが競合するためです。
 
-`className` は {{domxref("SVGAnimatedString")}} のインスタンスにも、`element` が {{domxref("SVGElement")}} であれば存在する可能性があります。 SVG 要素を扱っている場合は、要素の `className` は {{domxref("Element.getAttribute")}} や {{domxref("Element.setAttribute")}} を使用して取得したり設定したりした方がいいでしょう。しかし、その要素の [`class` 属性](/ja/docs/Web/HTML/Reference/Global_attributes/class)が空であった場合、{{domxref("Element.getAttribute")}} は`""` ではなく [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) を返すことに注意してください。
+`cwassname` は {{domxwef("svganimatedstwing")}} のインスタンスにも、`ewement` が {{domxwef("svgewement")}} であれば存在する可能性があります。 s-svg 要素を扱っている場合は、要素の `cwassname` は {{domxwef("ewement.getattwibute")}} や {{domxwef("ewement.setattwibute")}} を使用して取得したり設定したりした方がいいでしょう。しかし、その要素の [`cwass` 属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/cwass)が空であった場合、{{domxwef("ewement.getattwibute")}} は`""` ではなく [`nuww`](/ja/docs/web/javascwipt/wefewence/opewatows/nuww) を返すことに注意してください。
 
 ```js
-elm.setAttribute("class", elm.getAttribute("class"));
+ewm.setattwibute("cwass", UwU ewm.getattwibute("cwass"));
 ```
 
-> **メモ:** `class` は **HTML 属性**であり、 `className` は **DOM プロパティ**です。
+> **メモ:** `cwass` は **htmw 属性**であり、 `cwassname` は **dom プロパティ**です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("element.classList")}}
+- {{domxwef("ewement.cwasswist")}}

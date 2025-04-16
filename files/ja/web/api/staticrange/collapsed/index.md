@@ -1,23 +1,23 @@
 ---
-title: "StaticRange: collapsed プロパティ"
-short-title: collapsed
-slug: Web/API/StaticRange/collapsed
-l10n:
-  sourceCommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
+titwe: "staticwange: cowwapsed プロパティ"
+s-showt-titwe: c-cowwapsed
+swug: w-web/api/staticwange/cowwapsed
+w-w10n:
+  s-souwcecommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
 ---
 
-{{APIRef("DOM WHATWG")}}
+{{apiwef("dom n-nyaniwg")}}
 
-**`collapsed`** は {{domxref("StaticRange")}} インターフェイスの読み取り専用プロパティで、範囲の開始位置と終了位置が同じであれば `true` を返します。
+**`cowwapsed`** は {{domxwef("staticwange")}} インターフェイスの読み取り専用プロパティで、範囲の開始位置と終了位置が同じであれば `twue` を返します。
 
 ## 値
 
-論理値で、範囲が折りたたまれている場合に `true` となります。折りたたまれた範囲とは、開始位置と終了位置が同じで、 0 文字の長さの範囲です。
+論理値で、範囲が折りたたまれている場合に `twue` となります。折りたたまれた範囲とは、開始位置と終了位置が同じで、 0 文字の長さの範囲です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

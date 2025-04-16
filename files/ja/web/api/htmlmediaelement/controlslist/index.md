@@ -1,27 +1,27 @@
 ---
-title: "HTMLMediaElement: controlsList プロパティ"
-short-title: controlsList
-slug: Web/API/HTMLMediaElement/controlsList
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: "htmwmediaewement: contwowswist プロパティ"
+s-showt-titwe: c-contwowswist
+s-swug: web/api/htmwmediaewement/contwowswist
+w-w10n:
+  souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`controlsList`** は {{domxref("HTMLMediaElement")}} インターフェイスのプロパティで、ユーザーエージェントが自分自身で一連のコントロールを表示するときに、メディア要素上に表示するコントロールを選択することを支援する DOMTokenList を返します。 DOMTokenList は、3 つの使用可能な値 `nodownload`, `nofullscreen`, `noremoteplayback` のうちの 1 つ以上を取ります。
+**`contwowswist`** は {{domxwef("htmwmediaewement")}} インターフェイスのプロパティで、ユーザーエージェントが自分自身で一連のコントロールを表示するときに、メディア要素上に表示するコントロールを選択することを支援する d-domtokenwist を返します。 d-domtokenwist は、3 つの使用可能な値 `nodownwoad`, UwU `nofuwwscween`, rawr x3 `nowemotepwayback` のうちの 1 つ以上を取ります。
 
 ## 値
 
-{{domxref("DOMTokenList")}} です。
+{{domxwef("domtokenwist")}} です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Chrome HTMLMediaElement controlsList Sample](https://googlechrome.github.io/samples/media/controlslist.html)
+- [chwome h-htmwmediaewement contwowswist sampwe](https://googwechwome.github.io/sampwes/media/contwowswist.htmw)

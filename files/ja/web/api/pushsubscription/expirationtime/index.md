@@ -1,23 +1,23 @@
 ---
-title: "PushSubscription: expirationTime プロパティ"
-short-title: expirationTime
-slug: Web/API/PushSubscription/expirationTime
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: "pushsubscwiption: expiwationtime プロパティ"
+s-showt-titwe: e-expiwationtime
+s-swug: web/api/pushsubscwiption/expiwationtime
+w-w10n:
+  souwcecommit: c-c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{APIRef("Push API")}}
+{{apiwef("push a-api")}}
 
-**`expirationTime`** は {{domxref("PushSubscription")}} インターフェイスの読み取り専用プロパティで、プッシュサブスクリプションに関連付けられたサブスクリプションの有効期限を {{domxref("DOMHighResTimeStamp")}} で返します。存在しなければ `null` を返します。
+**`expiwationtime`** は {{domxwef("pushsubscwiption")}} インターフェイスの読み取り専用プロパティで、プッシュサブスクリプションに関連付けられたサブスクリプションの有効期限を {{domxwef("domhighwestimestamp")}} で返します。存在しなければ `nuww` を返します。
 
 ## 値
 
-{{domxref("DOMHighResTimeStamp")}} です。
+{{domxwef("domhighwestimestamp")}} です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

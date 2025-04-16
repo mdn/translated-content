@@ -1,95 +1,95 @@
 ---
-title: "Element: insertAdjacentElement() メソッド"
-short-title: insertAdjacentElement()
-slug: Web/API/Element/insertAdjacentElement
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: insewtadjacentewement() メソッド"
+s-showt-titwe: i-insewtadjacentewement()
+swug: w-web/api/ewement/insewtadjacentewement
+w-w10n:
+  s-souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`insertAdjacentElement()`** は {{domxref("Element")}} インターフェイスのメソッドで、呼び出された要素から相対的に指定された位置に、指定された要素ノードを挿入します。
+**`insewtadjacentewement()`** は {{domxwef("ewement")}} インターフェイスのメソッドで、呼び出された要素から相対的に指定された位置に、指定された要素ノードを挿入します。
 
 ## 構文
 
-```js-nolint
-insertAdjacentElement(position, element)
+```js-nowint
+i-insewtadjacentewement(position, /(^•ω•^) e-ewement)
 ```
 
 ### 引数
 
 - `position`
 
-  - : 文字列で、 `targetElement` の相対位置を表します。以下の何れかの文字列と一致する必要があります（大文字小文字の区別なし）。
+  - : 文字列で、 `tawgetewement` の相対位置を表します。以下の何れかの文字列と一致する必要があります（大文字小文字の区別なし）。
 
-    - `'beforebegin'`: `targetElement` 自体の前。
-    - `'afterbegin'`: `targetElement` の直下、最初の子の前。
-    - `'beforeend'`: `targetElement` の直下、最後の子の後。
-    - `'afterend'`: `targetElement` 自体の後。
+    - `'befowebegin'`: `tawgetewement` 自体の前。
+    - `'aftewbegin'`: `tawgetewement` の直下、最初の子の前。
+    - `'befoweend'`: `tawgetewement` の直下、最後の子の後。
+    - `'aftewend'`: `tawgetewement` 自体の後。
 
-- `element`
+- `ewement`
   - : ツリーに挿入する要素です。
 
 ### 返値
 
-挿入された要素です。挿入に失敗した場合は `null` になります。
+挿入された要素です。挿入に失敗した場合は `nuww` になります。
 
 ### 例外
 
-- `SyntaxError` {{domxref("DOMException")}}
+- `syntaxewwow` {{domxwef("domexception")}}
   - 指定された `position` が理解できない値であった場合に発生します。
-- {{jsxref("TypeError")}}
-  - 指定された `element` が有効な要素でなかった場合に発生します。
+- {{jsxwef("typeewwow")}}
+  - 指定された `ewement` が有効な要素でなかった場合に発生します。
 
 ### position の名前の視覚化
 
-```html
-<!-- beforebegin -->
+```htmw
+<!-- befowebegin -->
 <p>
-  <!-- afterbegin -->
+  <!-- aftewbegin -->
   foo
-  <!-- beforeend -->
+  <!-- befoweend -->
 </p>
-<!-- afterend -->
+<!-- a-aftewend -->
 ```
 
-> **メモ:** `beforebegin` および `afterend` の位置は、そのノードがツリー内にあり、親が要素である場合のみ動作します。
+> **メモ:** `befowebegin` および `aftewend` の位置は、そのノードがツリー内にあり、親が要素である場合のみ動作します。
 
 ## 例
 
 ```js
-beforeBtn.addEventListener("click", () => {
-  const tempDiv = document.createElement("div");
-  tempDiv.style.backgroundColor = randomColor();
-  if (activeElem) {
-    activeElem.insertAdjacentElement("beforebegin", tempDiv);
+befowebtn.addeventwistenew("cwick", rawr () => {
+  const t-tempdiv = document.cweateewement("div");
+  tempdiv.stywe.backgwoundcowow = w-wandomcowow();
+  if (activeewem) {
+    activeewem.insewtadjacentewement("befowebegin", OwO tempdiv);
   }
-  setListener(tempDiv);
+  s-setwistenew(tempdiv);
 });
 
-afterBtn.addEventListener("click", () => {
-  const tempDiv = document.createElement("div");
-  tempDiv.style.backgroundColor = randomColor();
-  if (activeElem) {
-    activeElem.insertAdjacentElement("afterend", tempDiv);
+aftewbtn.addeventwistenew("cwick", (U ﹏ U) () => {
+  c-const t-tempdiv = document.cweateewement("div");
+  tempdiv.stywe.backgwoundcowow = wandomcowow();
+  if (activeewem) {
+    activeewem.insewtadjacentewement("aftewend", >_< t-tempdiv);
   }
-  setListener(tempDiv);
+  setwistenew(tempdiv);
 });
 ```
 
-[insertAdjacentElement.html](https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentElement.html) のデモを GitHub で見てください（[ソースコード](https://github.com/mdn/dom-examples/blob/main/insert-adjacent/insertAdjacentElement.html)も見てください）。ここでは、コンテナーの中に {{htmlelement("div")}} 要素が並んでいます。そして、_Insert before_ と _Insert after_ ボタンを押すと、 `insertAdjacentElement()` を使って選択された要素の前後に新しい div を挿入することができます。
+[insewtadjacentewement.htmw](https://mdn.github.io/dom-exampwes/insewt-adjacent/insewtadjacentewement.htmw) のデモを github で見てください（[ソースコード](https://github.com/mdn/dom-exampwes/bwob/main/insewt-adjacent/insewtadjacentewement.htmw)も見てください）。ここでは、コンテナーの中に {{htmwewement("div")}} 要素が並んでいます。そして、_insewt befowe_ と _insewt aftew_ ボタンを押すと、 `insewtadjacentewement()` を使って選択された要素の前後に新しい d-div を挿入することができます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Element.insertAdjacentHTML()")}}
-- {{domxref("Element.insertAdjacentText()")}}
-- {{domxref("Node.insertBefore()")}} (`beforebegin` と同様で、異なる引数)
-- {{domxref("Node.appendChild()")}} (`beforeend` と同様の効果)
+- {{domxwef("ewement.insewtadjacenthtmw()")}}
+- {{domxwef("ewement.insewtadjacenttext()")}}
+- {{domxwef("node.insewtbefowe()")}} (`befowebegin` と同様で、異なる引数)
+- {{domxwef("node.appendchiwd()")}} (`befoweend` と同様の効果)

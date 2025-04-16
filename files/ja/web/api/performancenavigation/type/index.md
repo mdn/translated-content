@@ -1,68 +1,68 @@
 ---
-title: PerformanceNavigation.type
-slug: Web/API/PerformanceNavigation/type
-l10n:
-  sourceCommit: 66c9543af6a0cf1baf89d5b0c972ee7dd08663b0
+titwe: pewfowmancenavigation.type
+swug: web/api/pewfowmancenavigation/type
+w-w10n:
+  s-souwcecommit: 66c9543af6a0cf1baf89d5b0c972ee7dd08663b0
 ---
 
-{{APIRef("Performance API")}}{{Deprecated_Header}}
+{{apiwef("pewfowmance a-api")}}{{depwecated_headew}}
 
-古い **`PerformanceNavigation.type`** プロパティは読み取り専用で、このページへの移動方法を表す定数を含む `unsigned short` を返します。
+古い **`pewfowmancenavigation.type`** プロパティは読み取り専用で、このページへの移動方法を表す定数を含む `unsigned s-showt` を返します。
 
-> [!WARNING]
-> このインターフェイスは [Navigation Timing Level 2 仕様書](https://w3c.github.io/navigation-timing/#obsolete)では非推奨です。代わりに {{domxref("PerformanceNavigationTiming")}} インターフェイスを使用してください。
+> [!wawning]
+> このインターフェイスは [navigation t-timing wevew 2 仕様書](https://w3c.github.io/navigation-timing/#obsowete)では非推奨です。代わりに {{domxwef("pewfowmancenavigationtiming")}} インターフェイスを使用してください。
 
 ## 値
 
-`unsigned short` の値です。
+`unsigned s-showt` の値です。
 
 取りうる値は次の通りです。
 
-<table class="no-markdown">
+<tabwe c-cwass="no-mawkdown">
   <thead>
-    <tr>
-      <th scope="col">値</th>
-      <th scope="col">定数名</th>
-      <th scope="col">意味</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">値</th>
+      <th scope="cow">定数名</th>
+      <th scope="cow">意味</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td><code>0</code></td>
-      <td><code>TYPE_NAVIGATE</code></td>
+      <td><code>type_navigate</code></td>
       <td>
-        リンク、ブックマーク、フォーム送信、スクリプト、またはアドレスバーに URL を入力してページにアクセスしました。
+        リンク、ブックマーク、フォーム送信、スクリプト、またはアドレスバーに uww を入力してページにアクセスしました。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>1</code></td>
-      <td><code>TYPE_RELOAD</code></td>
+      <td><code>type_wewoad</code></td>
       <td>
-        このページには、 [再読み込み] ボタンをクリックするか、{{domxref("Location.reload()")}} メソッドを介してアクセスしました。
+        このページには、 [再読み込み] ボタンをクリックするか、{{domxwef("wocation.wewoad()")}} メソッドを介してアクセスしました。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>2</code></td>
-      <td><code>TYPE_BACK_FORWARD</code></td>
+      <td><code>type_back_fowwawd</code></td>
       <td>このページには履歴をたどってアクセスしました。</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>255</code></td>
-      <td><code>TYPE_RESERVED</code></td>
+      <td><code>type_wesewved</code></td>
       <td>その他の方法。</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-この機能は標準化の予定がなくなりました。 [Navigation Timing Level 2 仕様書](https://w3c.github.io/navigation-timing/#obsolete)で非推奨になったためです。
-代わりに {{domxref("PerformanceNavigationTiming")}} インターフェイスを使用してください。
+この機能は標準化の予定がなくなりました。 [navigation timing w-wevew 2 仕様書](https://w3c.github.io/navigation-timing/#obsowete)で非推奨になったためです。
+代わりに {{domxwef("pewfowmancenavigationtiming")}} インターフェイスを使用してください。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 所属する {{domxref("PerformanceNavigation")}} インターフェイス
+- 所属する {{domxwef("pewfowmancenavigation")}} インターフェイス

@@ -1,51 +1,51 @@
 ---
-title: CSS
-slug: Web/API/CSS
-l10n:
-  sourceCommit: 930683b0618a36a5bb497cfaedced2f4de767889
+titwe: css
+swug: web/api/css
+w-w10n:
+  souwcecommit: 930683b0618a36a5bb497cfaedced2f4de767889
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-**`CSS`** インターフェイス は CSS に関連した便利なメソッドを持っています。このインターフェイスにはオブジェクトは実装されていません。静的メソッドのみがあり、実用的なインターフェイスになっています。
+**`css`** インターフェイス は c-css に関連した便利なメソッドを持っています。このインターフェイスにはオブジェクトは実装されていません。静的メソッドのみがあり、実用的なインターフェイスになっています。
 
 ### 静的プロパティ
 
-- {{DOMxRef("CSS.highlights_static", "CSS.highlights")}} {{Experimental_Inline}}
-  - : `HighlightRegistry` へのアクセスを提供します。これは任意のテキスト範囲を {{domxref("css_custom_highlight_api", "CSS Custom Highlight API", "", "nocode")}} を使用してスタイル設定するために使用するものです。
-- {{DOMxRef("CSS.paintWorklet_static", "CSS.paintWorklet")}} {{Experimental_Inline}} {{SecureContext_Inline}}
+- {{domxwef("css.highwights_static", (⑅˘꒳˘) "css.highwights")}} {{expewimentaw_inwine}}
+  - : `highwightwegistwy` へのアクセスを提供します。これは任意のテキスト範囲を {{domxwef("css_custom_highwight_api", ( ͡o ω ͡o ) "css c-custom h-highwight api", UwU "", "nocode")}} を使用してスタイル設定するために使用するものです。
+- {{domxwef("css.paintwowkwet_static", rawr x3 "css.paintwowkwet")}} {{expewimentaw_inwine}} {{secuwecontext_inwine}}
   - : 描画に関するすべてのクラスを担当するワークレットへのアクセスを提供します。
 
 ## メソッド
 
-_CSS インターフェイスはユーティリティインターフェイスです。この型のオブジェクトは作成できません。静的メソッドのみが定義されています。_
+_css インターフェイスはユーティリティインターフェイスです。この型のオブジェクトは作成できません。静的メソッドのみが定義されています。_
 
 ### 静的メソッド
 
 _継承している静的メソッドはありません。_
 
-- {{DOMxRef("CSS.registerProperty_static", "CSS.registerProperty()")}}
-  - : {{cssxref('--*', 'カスタムプロパティ')}}を登録し、プロパティ型のチェック、既定値、値の継承の有無を指定します。
-- {{DOMxRef("CSS.supports_static", "CSS.supports()")}}
+- {{domxwef("css.wegistewpwopewty_static", rawr "css.wegistewpwopewty()")}}
+  - : {{cssxwef('--*', σωσ 'カスタムプロパティ')}}を登録し、プロパティ型のチェック、既定値、値の継承の有無を指定します。
+- {{domxwef("css.suppowts_static", σωσ "css.suppowts()")}}
   - : 引数で与えられた*プロパティと値*の組や条件に対応しているかどうかを示す論理値を返します。
-- {{DOMxRef("CSS.escape_static", "CSS.escape()")}}
-  - : 主に CSS セレクターの一部として使用するための文字列をエスケープするのに使用できます。
-- {{DOMxRef("CSS/factory_functions_static", 'CSS ファクトリー関数')}}
+- {{domxwef("css.escape_static", >_< "css.escape()")}}
+  - : 主に c-css セレクターの一部として使用するための文字列をエスケープするのに使用できます。
+- {{domxwef("css/factowy_functions_static", :3 'css ファクトリー関数')}}
 
-  - : 使用したファクトリー関数のメソッドの名前を単位としてパラメーターの数値の値を持つ新しい [`CSSUnitValue`](/ja/docs/Web/API/CSSUnitValue) を返すために使用できます。
+  - : 使用したファクトリー関数のメソッドの名前を単位としてパラメーターの数値の値を持つ新しい [`cssunitvawue`](/ja/docs/web/api/cssunitvawue) を返すために使用できます。
 
     ```js
-    CSS.em(3); // CSSUnitValue {value: 3, unit: "em"}
+    c-css.em(3); // c-cssunitvawue {vawue: 3, (U ﹏ U) u-unit: "em"}
     ```
 
 ## インスタンスメソッド
 
-_CSS インターフェイスはユーティリティインターフェイスです。この型のオブジェクトは作成できません。静的プロパティのみが定義されています。_
+_css インターフェイスはユーティリティインターフェイスです。この型のオブジェクトは作成できません。静的プロパティのみが定義されています。_
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

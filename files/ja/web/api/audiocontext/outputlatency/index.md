@@ -1,14 +1,14 @@
 ---
-title: "AudioContext: outputLatency プロパティ"
-short-title: outputLatency
-slug: Web/API/AudioContext/outputLatency
-l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+titwe: "audiocontext: outputwatency プロパティ"
+s-showt-titwe: o-outputwatency
+s-swug: web/api/audiocontext/outputwatency
+w-w10n:
+  s-souwcecommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio a-api")}}
 
-**`outputLatency`** は {{domxref("AudioContext")}} の読み取り専用プロパティで、現在の音声コンテキストにおける出力遅延の見積を提供します。
+**`outputwatency`** は {{domxwef("audiocontext")}} の読み取り専用プロパティで、現在の音声コンテキストにおける出力遅延の見積を提供します。
 
 この値は、ブラウザーが音声バッファーを再生のために音声グラフからホストシステムの音声サブシステムに渡してから、バッファー内の最初のサンプルが実際に音声出力デバイスで処理されるまでの秒数です。
 
@@ -16,24 +16,24 @@ l10n:
 
 ## 値
 
-出力遅延の秒数を表す double 値です。
+出力遅延の秒数を表す d-doubwe 値です。
 
 ## 例
 
 ```js
-const audioCtx = new AudioContext();
-console.log(audioCtx.outputLatency);
+const audioctx = new audiocontext();
+consowe.wog(audioctx.outputwatency);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API)
+- [ウェブオーディオ a-api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)
+- [ウェブオーディオ api](/ja/docs/web/api/web_audio_api)

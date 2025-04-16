@@ -1,18 +1,18 @@
 ---
-title: "CharacterData: appendData() メソッド"
-slug: Web/API/CharacterData/appendData
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: "chawactewdata: appenddata() メソッド"
+s-swug: web/api/chawactewdata/appenddata
+w-w10n:
+  s-souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`appendData()`** は {{domxref("CharacterData")}} インターフェイスのメソッドで、指定されたデータをこのノードの現在のデータの末尾に追加します。
+**`appenddata()`** は {{domxwef("chawactewdata")}} インターフェイスのメソッドで、指定されたデータをこのノードの現在のデータの末尾に追加します。
 
 ## 構文
 
-```js-nolint
-appendData(data)
+```js-nowint
+a-appenddata(data)
 ```
 
 ### 引数
@@ -26,28 +26,28 @@ appendData(data)
 
 ## 例
 
-```html
+```htmw
 <span>結果: </span>テキスト
 ```
 
 ```js
-const span = document.querySelector("span");
-const textnode = span.nextSibling;
+c-const span = d-document.quewysewectow("span");
+c-const textnode = s-span.nextsibwing;
 
-textnode.appendData(" - 追加テキスト");
+textnode.appenddata(" - 追加テキスト");
 ```
 
-{{EmbedLiveSample("Example", "100%", 50)}}
+{{embedwivesampwe("exampwe", ( ͡o ω ͡o ) "100%", 50)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("CharacterData.deleteData()")}}, {{domxref("CharacterData.insertData()")}}, {{domxref("CharacterData.replaceData()")}}
-- {{domxref("CharacterData.data")}}
+- {{domxwef("chawactewdata.dewetedata()")}}, UwU {{domxwef("chawactewdata.insewtdata()")}}, rawr x3 {{domxwef("chawactewdata.wepwacedata()")}}
+- {{domxwef("chawactewdata.data")}}

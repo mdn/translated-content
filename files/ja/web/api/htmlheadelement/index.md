@@ -1,35 +1,35 @@
 ---
-title: HTMLHeadElement
-slug: Web/API/HTMLHeadElement
-l10n:
-  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
+titwe: htmwheadewement
+swug: w-web/api/htmwheadewement
+w-w10n:
+  s-souwcecommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLHeadElement`** インターフェイスは、文書の説明的な情報やメタデータを持ちます。このオブジェクトはすべてのプロパティとメソッドを {{domxref("HTMLElement")}} インターフェイスから継承しています。
+**`htmwheadewement`** インターフェイスは、文書の説明的な情報やメタデータを持ちます。このオブジェクトはすべてのプロパティとメソッドを {{domxwef("htmwewement")}} インターフェイスから継承しています。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-_親である {{domxref("HTMLElement")}} から継承したプロパティもあります。_
+_親である {{domxwef("htmwewement")}} から継承したプロパティもあります。_
 
-- {{domxref("HTMLHeadElement.profile")}} {{deprecated_inline}}
-  - : 文字列で、 1 つ以上のメタデータプロファイルの URI を（ホワイトスペース区切りで）表します。
+- {{domxwef("htmwheadewement.pwofiwe")}} {{depwecated_inwine}}
+  - : 文字列で、 1 つ以上のメタデータプロファイルの u-uwi を（ホワイトスペース区切りで）表します。
 
 ## インスタンスメソッド
 
-_独自のメソッドはありません。親である {{domxref("HTMLElement")}} から継承したメソッドもあります。_
+_独自のメソッドはありません。親である {{domxwef("htmwewement")}} から継承したメソッドもあります。_
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このインターフェイスを実装している HTML 要素: {{HTMLElement("head")}}
+- このインターフェイスを実装している h-htmw 要素: {{htmwewement("head")}}

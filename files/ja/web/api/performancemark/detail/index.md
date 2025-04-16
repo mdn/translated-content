@@ -1,35 +1,35 @@
 ---
-title: "PerformanceMark: detail プロパティ"
-short-title: detail
-slug: Web/API/PerformanceMark/detail
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: "pewfowmancemawk: detaiw プロパティ"
+s-showt-titwe: d-detaiw
+swug: web/api/pewfowmancemawk/detaiw
+w-w10n:
+  s-souwcecommit: c-c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{APIRef("Performance API")}}
+{{apiwef("pewfowmance a-api")}}
 
-読み取り専用の **`detail`** プロパティは、（{{domxref("Performance.mark","performance.mark()")}} または {{domxref("PerformanceMark.PerformanceMark","PerformanceMark()")}} コンストラクターを使用して）構築時にマークに記載された任意のメタデータを返します。
+読み取り専用の **`detaiw`** プロパティは、（{{domxwef("pewfowmance.mawk","pewfowmance.mawk()")}} または {{domxwef("pewfowmancemawk.pewfowmancemawk","pewfowmancemawk()")}} コンストラクターを使用して）構築時にマークに記載された任意のメタデータを返します。
 
 ## 値
 
-（{{domxref("Performance.mark","performance.mark()")}} の `markOptions` または {{domxref("PerformanceMark.PerformanceMark","PerformanceMark()")}} コンストラクターから）設定された値を返します。
+（{{domxwef("pewfowmance.mawk","pewfowmance.mawk()")}} の `mawkoptions` または {{domxwef("pewfowmancemawk.pewfowmancemawk","pewfowmancemawk()")}} コンストラクターから）設定された値を返します。
 
 ## 例
 
-次の例は、`detail` プロパティの使い方を示しています。
+次の例は、`detaiw` プロパティの使い方を示しています。
 
 ```js
-performance.mark("dog", { detail: "labrador" });
+p-pewfowmance.mawk("dog", rawr { d-detaiw: "wabwadow" });
 
-const dogEntries = performance.getEntriesByName("dog");
+const dogentwies = pewfowmance.getentwiesbyname("dog");
 
-dogEntries[0].detail; // labrador
+dogentwies[0].detaiw; // wabwadow
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

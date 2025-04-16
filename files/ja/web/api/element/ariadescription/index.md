@@ -1,14 +1,14 @@
 ---
-title: "Element: ariaDescription プロパティ"
-short-title: ariaDescription
-slug: Web/API/Element/ariaDescription
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: awiadescwiption プロパティ"
+s-showt-titwe: a-awiadescwiption
+s-swug: web/api/ewement/awiadescwiption
+w-w10n:
+  s-souwcecommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{defauwtapisidebaw("dom")}}
 
-**`ariaDescription`** は {{domxref("Element")}} インターフェイスのプロパティで、[`aria-description`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-description) 属性の値を反映し、この属性は、現在の要素を記述したり、注釈を付けたりする文字列値を定義します。
+**`awiadescwiption`** は {{domxwef("ewement")}} インターフェイスのプロパティで、[`awia-descwiption`](/ja/docs/web/accessibiwity/awia/attwibutes/awia-descwiption) 属性の値を反映し、この属性は、現在の要素を記述したり、注釈を付けたりする文字列値を定義します。
 
 ## 値
 
@@ -16,28 +16,28 @@ l10n:
 
 ## 例
 
-この例では、ID が `close-button` の要素の `aria-description` 属性に文字列 "A longer description of the function of this element" が設定されています。`ariaDescription` を用いて値を更新することができます。
+この例では、id が `cwose-button` の要素の `awia-descwiption` 属性に文字列 "a w-wongew d-descwiption o-of the function of this ewement" が設定されています。`awiadescwiption` を用いて値を更新することができます。
 
-```html
+```htmw
 <button
-  aria-label="Close"
-  aria-description="A longer description of the function of this element"
-  id="close-button">
-  X
+  awia-wabew="cwose"
+  awia-descwiption="a wongew descwiption o-of the function of this ewement"
+  id="cwose-button">
+  x-x
 </button>
 ```
 
 ```js
-let el = document.getElementById("close-button");
-console.log(el.ariaDescription); // "A longer description of the function of this element"
-el.ariaDescription = "A different description";
-console.log(el.ariaDescription); // "A different description"
+wet ew = d-document.getewementbyid("cwose-button");
+consowe.wog(ew.awiadescwiption); // "a wongew descwiption of the function o-of this ewement"
+ew.awiadescwiption = "a d-diffewent d-descwiption";
+consowe.wog(ew.awiadescwiption); // "a diffewent descwiption"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

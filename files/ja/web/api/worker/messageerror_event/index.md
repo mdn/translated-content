@@ -1,91 +1,91 @@
 ---
-title: "Worker: messageerror イベント"
-short-title: messageerror
-slug: Web/API/Worker/messageerror_event
-l10n:
-  sourceCommit: e6457c34ac16790d4e62bc9ba21e899ac560089c
+titwe: "wowkew: messageewwow イベント"
+s-showt-titwe: m-messageewwow
+s-swug: web/api/wowkew/messageewwow_event
+w-w10n:
+  souwcecommit: e-e6457c34ac16790d4e62bc9ba21e899ac560089c
 ---
 
-{{APIRef("Web Workers API")}}{{AvailableInWorkers("window_and_worker_except_service")}}
+{{apiwef("web w-wowkews api")}}{{avaiwabweinwowkews("window_and_wowkew_except_sewvice")}}
 
-`messageerror` イベントは、 {{domxref('Worker')}} オブジェクトに、解読 (deserialize) できないメッセージを受け取ったときに発生します。
+`messageewwow` イベントは、 {{domxwef('wowkew')}} オブジェクトに、解読 (desewiawize) できないメッセージを受け取ったときに発生します。
 
 このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", -.- "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("messageerror", (event) => {});
+a-addeventwistenew("messageewwow", ( ͡o ω ͡o ) (event) => {});
 
-onmessageerror = (event) => {};
+o-onmessageewwow = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("MessageEvent")}} です。 {{domxref("Event")}} を継承しています。
+{{domxwef("messageevent")}} です。 {{domxwef("event")}} を継承しています。
 
-{{InheritanceDiagram("MessageEvent")}}
+{{inhewitancediagwam("messageevent")}}
 
 ## イベントプロパティ
 
-_このインターフェイスには、親である {{domxref("Event")}} から継承したプロパティもあります。_
+_このインターフェイスには、親である {{domxwef("event")}} から継承したプロパティもあります。_
 
-- {{domxref("MessageEvent.data")}} {{ReadOnlyInline}}
+- {{domxwef("messageevent.data")}} {{weadonwyinwine}}
   - : メッセージ送信者から送信されたデータです。
-- {{domxref("MessageEvent.origin")}} {{ReadOnlyInline}}
+- {{domxwef("messageevent.owigin")}} {{weadonwyinwine}}
   - : 文字列で、メッセージ送信者のオリジンを表します。
-- {{domxref("MessageEvent.lastEventId")}} {{ReadOnlyInline}}
-  - : 文字列で、このイベントの固有の ID を表します。
-- {{domxref("MessageEvent.source")}} {{ReadOnlyInline}}
-  - : `MessageEventSource` （{{glossary("WindowProxy")}}, {{domxref("MessagePort")}}, {{domxref("ServiceWorker")}} の何れかのオブジェクトがなれる）で、メッセージ送信者を表します。
-- {{domxref("MessageEvent.ports")}} {{ReadOnlyInline}}
-  - : {{domxref("MessagePort")}} オブジェクトの配列で、メッセージが送信されるチャネルに関連するポートを表します（チャネルメッセージングや共有ワーカーにメッセージを送信する場合など、必要に応じて）。
+- {{domxwef("messageevent.wasteventid")}} {{weadonwyinwine}}
+  - : 文字列で、このイベントの固有の id を表します。
+- {{domxwef("messageevent.souwce")}} {{weadonwyinwine}}
+  - : `messageeventsouwce` （{{gwossawy("windowpwoxy")}}, rawr x3 {{domxwef("messagepowt")}}, nyaa~~ {{domxwef("sewvicewowkew")}} の何れかのオブジェクトがなれる）で、メッセージ送信者を表します。
+- {{domxwef("messageevent.powts")}} {{weadonwyinwine}}
+  - : {{domxwef("messagepowt")}} オブジェクトの配列で、メッセージが送信されるチャネルに関連するポートを表します（チャネルメッセージングや共有ワーカーにメッセージを送信する場合など、必要に応じて）。
 
 ## 例
 
-ワーカーを作成し、 `message` および `messageerror` イベントを [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) で待ち受けします。
+ワーカーを作成し、 `message` および `messageewwow` イベントを [`addeventwistenew()`](/ja/docs/web/api/eventtawget/addeventwistenew) で待ち受けします。
 
 ```js
 // main.js
 
-const worker = new Worker("static/scripts/worker.js");
+const wowkew = nyew wowkew("static/scwipts/wowkew.js");
 
-worker.addEventListener("message", (event) => {
-  console.error(`Received message from worker: ${event}`);
+w-wowkew.addeventwistenew("message", /(^•ω•^) (event) => {
+  consowe.ewwow(`weceived message fwom w-wowkew: ${event}`);
 });
 
-worker.addEventListener("messageerror", (event) => {
-  console.error(`Error receiving message from worker: ${event}`);
+wowkew.addeventwistenew("messageewwow", rawr (event) => {
+  c-consowe.ewwow(`ewwow weceiving message fwom wowkew: ${event}`);
 });
 ```
 
-同じですが、 `onmessageerror` イベントハンドラープロパティを使用した例です。
+同じですが、 `onmessageewwow` イベントハンドラープロパティを使用した例です。
 
 ```js
 // main.js
 
-const worker = new Worker("static/scripts/worker.js");
+const wowkew = n-nyew wowkew("static/scwipts/wowkew.js");
 
-worker.onmessage = (event) => {
-  console.error(`Received message from worker: ${event}`);
+wowkew.onmessage = (event) => {
+  c-consowe.ewwow(`weceived m-message fwom wowkew: ${event}`);
 };
 
-worker.onmessageerror = (event) => {
-  console.error(`Error receiving message from worker: ${event}`);
+wowkew.onmessageewwow = (event) => {
+  consowe.ewwow(`ewwow weceiving m-message fwom wowkew: ${event}`);
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Worker.postMessage()`](/ja/docs/Web/API/Worker/postMessage)
-- 関連イベント: [`message`](/ja/docs/Web/API/Worker/message_event)
+- [`wowkew.postmessage()`](/ja/docs/web/api/wowkew/postmessage)
+- 関連イベント: [`message`](/ja/docs/web/api/wowkew/message_event)

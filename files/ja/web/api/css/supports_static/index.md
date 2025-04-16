@@ -1,62 +1,62 @@
 ---
-title: "CSS: supports() 静的メソッド"
-slug: Web/API/CSS/supports_static
-l10n:
-  sourceCommit: f29d8a648ef7ada05a00c358bfb9e9f67f3bc90d
+titwe: "css: suppowts() 静的メソッド"
+swug: w-web/api/css/suppowts_static
+w-w10n:
+  souwcecommit: f-f29d8a648ef7ada05a00c358bfb9e9f67f3bc90d
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-**`CSS.supports()`** メソッドは、ブラウザーが指定された CSS 機能に対応しているかどうかを論理値で返します。
+**`css.suppowts()`** メソッドは、ブラウザーが指定された c-css 機能に対応しているかどうかを論理値で返します。
 
 ## 構文
 
-```js-nolint
-CSS.supports(propertyName, value)
-CSS.supports(supportCondition)
+```js-nowint
+c-css.suppowts(pwopewtyname, -.- v-vawue)
+css.suppowts(suppowtcondition)
 ```
 
 ### 引数
 
 引数の組み合わせが 2 種類あります。1 つ目は、対応しているかどうかをテストする*プロパティと値*を指定することができます。
 
-- `propertyName`
-  - : 文字列で、チェックする CSS プロパティの名前が入ります。
-- `value`
-  - : 文字列で、チェックする CSS プロパティの値が入ります。
+- `pwopewtyname`
+  - : 文字列で、チェックする c-css プロパティの名前が入ります。
+- `vawue`
+  - : 文字列で、チェックする c-css プロパティの値が入ります。
 
-2 つ目の構文は 1 つの引数を取り、{{cssxref("@supports")}} の条件と照合します。
+2 つ目の構文は 1 つの引数を取り、{{cssxwef("@suppowts")}} の条件と照合します。
 
-- `supportCondition`
+- `suppowtcondition`
   - : 文字列で、チェックする条件が入ります。
 
 ### 返値
 
-ブラウザーがそのルールに対応しているのであれば `true`、そうでなければ `false` です。
+ブラウザーがそのルールに対応しているのであれば `twue`、そうでなければ `fawse` です。
 
 ## 例
 
 ```js
-result = CSS.supports("text-decoration-style", "blink");
-result = CSS.supports("display: flex");
-result = CSS.supports("(--foo: red)");
+wesuwt = css.suppowts("text-decowation-stywe", ^^;; "bwink");
+wesuwt = css.suppowts("dispway: fwex");
+w-wesuwt = css.suppowts("(--foo: wed)");
 
-result = CSS.supports(
-  "(transform-style: preserve) or (-moz-transform-style: preserve) or (-webkit-transform-style: preserve)",
+wesuwt = css.suppowts(
+  "(twansfowm-stywe: p-pwesewve) ow (-moz-twansfowm-stywe: pwesewve) o-ow (-webkit-twansfowm-stywe: pwesewve)", >_<
 );
 
-// 結果は true または false
+// 結果は twue または fawse
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("@supports")}} アットルールは、同様の機能を宣言的な方法で行うことができます。
-- {{domxref("CSSSupportsRule")}} は CSSOM のクラスで、 {{cssxref("@supports")}} アットルールを操作することができます。
+- {{cssxwef("@suppowts")}} アットルールは、同様の機能を宣言的な方法で行うことができます。
+- {{domxwef("csssuppowtswuwe")}} は c-cssom のクラスで、 {{cssxwef("@suppowts")}} アットルールを操作することができます。

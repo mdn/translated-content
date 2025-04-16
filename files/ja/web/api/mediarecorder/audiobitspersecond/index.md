@@ -1,24 +1,24 @@
 ---
-title: MediaRecorder.audioBitsPerSecond
-slug: Web/API/MediaRecorder/audioBitsPerSecond
-l10n:
-  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
+titwe: mediawecowdew.audiobitspewsecond
+swug: w-web/api/mediawecowdew/audiobitspewsecond
+w-w10n:
+  s-souwcecommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
 
-{{APIRef("MediaStream Recording")}}
+{{apiwef("mediastweam w-wecowding")}}
 
-**`audioBitsPerSecond`** は {{domxref("MediaRecorder")}} インターフェイスの読み取り専用のプロパティで、使用されている音声エンコーディングのビットレートを返します。
+**`audiobitspewsecond`** は {{domxwef("mediawecowdew")}} インターフェイスの読み取り専用のプロパティで、使用されている音声エンコーディングのビットレートを返します。
 
 これは、コンストラクターで指定されたビットレート（提供された場合）と異なる場合があります。
 
 ## 値
 
-数値 (unsigned long) です。
+数値 (unsigned w-wong) です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

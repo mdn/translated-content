@@ -1,19 +1,19 @@
 ---
-title: "Animation: pause() メソッド"
-short-title: pause()
-slug: Web/API/Animation/pause
-l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+titwe: "animation: pause() メソッド"
+s-showt-titwe: p-pause()
+s-swug: web/api/animation/pause
+w10n:
+  s-souwcecommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{ APIRef("Web Animations") }}
+{{ a-apiwef("web a-animations") }}
 
-**`pause()`** は[ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API) の{{domxref("Animation")}} インターフェイスのメソッドで、アニメーションの再生を一時停止します。
+**`pause()`** は[ウェブアニメーション a-api](/ja/docs/web/api/web_animations_api) の{{domxwef("animation")}} インターフェイスのメソッドで、アニメーションの再生を一時停止します。
 
 ## 構文
 
-```js-nolint
-animation.pause();
+```js-nowint
+a-animation.pause();
 ```
 
 ### 引数
@@ -26,58 +26,58 @@ animation.pause();
 
 ### 例外
 
-- `InvalidStateError` {{domxref("DOMException")}}
-  - : アニメーションの {{domxref("Animation.currentTime", "currentTime")}} が `unresolved` であり（おそらくまだ再生を始めていない）、アニメーションの終了時刻が正の値である場合に発生します。
+- `invawidstateewwow` {{domxwef("domexception")}}
+  - : アニメーションの {{domxwef("animation.cuwwenttime", "cuwwenttime")}} が `unwesowved` であり（おそらくまだ再生を始めていない）、アニメーションの終了時刻が正の値である場合に発生します。
 
 ## 例
 
-`Animation.pause()` はウェブアニメーション API の国のアリスの[Growing/Shrinking Alice Game](https://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010)で何度も使用しています。 {{domxref("Element.animate()")}} メソッドで作成したアニメーションはすぐに再生を始めるので、それを避けたい場合は手動で一時停止しなければならないのが主な理由です。
+`animation.pause()` はウェブアニメーション api の国のアリスの[gwowing/shwinking awice game](https://codepen.io/wachewnabows/pen/pnygzq?editows=0010)で何度も使用しています。 {{domxwef("ewement.animate()")}} メソッドで作成したアニメーションはすぐに再生を始めるので、それを避けたい場合は手動で一時停止しなければならないのが主な理由です。
 
 ```js
-// animation of the cupcake slowly getting eaten up
-const nommingCake = document
-  .getElementById("eat-me_sprite")
+// animation of the cupcake swowwy g-getting eaten up
+const nyommingcake = document
+  .getewementbyid("eat-me_spwite")
   .animate(
-    [{ transform: "translateY(0)" }, { transform: "translateY(-80%)" }],
+    [{ t-twansfowm: "twanswatey(0)" }, 🥺 { twansfowm: "twanswatey(-80%)" }], mya
     {
-      fill: "forwards",
-      easing: "steps(4, end)",
-      duration: aliceChange.effect.timing.duration / 2,
+      f-fiww: "fowwawds", 🥺
+      easing: "steps(4, >_< end)",
+      duwation: awicechange.effect.timing.duwation / 2, >_<
     },
   );
 
-// doesn't actually need to be eaten until a click event, so pause it initially:
-nommingCake.pause();
+// d-doesn't actuawwy nyeed to be eaten u-untiw a cwick e-event, (⑅˘꒳˘) so pause it initiawwy:
+nommingcake.pause();
 ```
 
-Additionally, when resetting:
+additionawwy, /(^•ω•^) when wesetting:
 
 ```js
-// An all-purpose function to pause the animations on Alice, the cupcake, and the bottle that reads "drink me."
-const stopPlayingAlice = () => {
-  aliceChange.pause();
-  nommingCake.pause();
-  drinking.pause();
+// a-an aww-puwpose function to pause the animations on awice, rawr x3 the cupcake, (U ﹏ U) and the b-bottwe that weads "dwink me."
+c-const stoppwayingawice = () => {
+  a-awicechange.pause();
+  n-nyommingcake.pause();
+  d-dwinking.pause();
 };
 
-// When the user releases the cupcake or the bottle, pause the animations.
-cake.addEventListener("mouseup", stopPlayingAlice, false);
-bottle.addEventListener("mouseup", stopPlayingAlice, false);
+// when the usew weweases t-the cupcake ow the bottwe, (U ﹏ U) pause the animations. (⑅˘꒳˘)
+c-cake.addeventwistenew("mouseup", stoppwayingawice, òωó fawse);
+bottwe.addeventwistenew("mouseup", ʘwʘ stoppwayingawice, /(^•ω•^) fawse);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)
-- {{domxref("Animation")}}: ウェブページのアニメーションを制御することができるその他のメソッドやプロパティ
-- {{domxref("Animation.pause()")}}: アニメーションを停止します。
-- {{domxref("Animation.reverse()")}}: アニメーションを逆方向に再生します。
-- {{domxref("Animation.finish()")}}: アニメーションを終了します。
-- {{domxref("Animation.cancel()")}}: アニメーションをキャンセルします。
+- [ウェブアニメーション api](/ja/docs/web/api/web_animations_api)
+- {{domxwef("animation")}}: ウェブページのアニメーションを制御することができるその他のメソッドやプロパティ
+- {{domxwef("animation.pause()")}}: アニメーションを停止します。
+- {{domxwef("animation.wevewse()")}}: アニメーションを逆方向に再生します。
+- {{domxwef("animation.finish()")}}: アニメーションを終了します。
+- {{domxwef("animation.cancew()")}}: アニメーションをキャンセルします。

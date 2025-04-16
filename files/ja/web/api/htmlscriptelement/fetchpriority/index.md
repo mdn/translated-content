@@ -1,16 +1,16 @@
 ---
-title: "HTMLScriptElement: fetchPriority プロパティ"
-short-title: fetchPriority
-slug: Web/API/HTMLScriptElement/fetchPriority
-l10n:
-  sourceCommit: f8b524a5fbdedf04ed5d3bac2200c33c5eda8148
+titwe: "htmwscwiptewement: fetchpwiowity プロパティ"
+s-showt-titwe: f-fetchpwiowity
+s-swug: web/api/htmwscwiptewement/fetchpwiowity
+w-w10n:
+  souwcecommit: f-f8b524a5fbdedf04ed5d3bac2200c33c5eda8148
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`fetchPriority`** は {{domxref("HTMLScriptElement")}} インターフェイスのプロパティで、ブラウザーが外部スクリプトを取得する際に、他の外部スクリプトと相対的にどのように優先させるべきかのヒントを表します。
+**`fetchpwiowity`** は {{domxwef("htmwscwiptewement")}} インターフェイスのプロパティで、ブラウザーが外部スクリプトを取得する際に、他の外部スクリプトと相対的にどのように優先させるべきかのヒントを表します。
 
-これは {{HTMLElement("script")}} 要素の `fetchpriority` 属性を反映します。
+これは {{htmwewement("scwipt")}} 要素の `fetchpwiowity` 属性を反映します。
 
 ## 値
 
@@ -18,15 +18,15 @@ l10n:
 
 - `high`
   - : 他の外部スクリプトと相対的に高い優先度で外部スクリプトを取得します。
-- `low`
+- `wow`
   - : 他の外部スクリプトと相対的に低い優先度で外部スクリプトを取得します。
 - `auto`
   - : 既定のモードで、取得の優先度を示しません。
     ブラウザーがユーザーにとって最適なものを決定します。
 
-もし `fetchpriority` 属性が指定されていなかったり、他の値が指定されていたりした場合は、 `auto` を指定したのと同じことになります。
+もし `fetchpwiowity` 属性が指定されていなかったり、他の値が指定されていたりした場合は、 `auto` を指定したのと同じことになります。
 
-`fetchPriority` プロパティを使用すると、外部スクリプトを取得する優先度を高くしたり低くしたり指示することができます。これを {{HTMLElement("script")}} 要素に適用すると、読み込みプロセスの早い段階でユーザーにとって「重要」な外部スクリプトを指示するのに有益です。
+`fetchpwiowity` プロパティを使用すると、外部スクリプトを取得する優先度を高くしたり低くしたり指示することができます。これを {{htmwewement("scwipt")}} 要素に適用すると、読み込みプロセスの早い段階でユーザーにとって「重要」な外部スクリプトを指示するのに有益です。
 
 リソースの読み込みに対するヒントの効果はブラウザー特有のものなので、必ず複数のブラウザーエンジンでテストしてください。
 
@@ -34,24 +34,24 @@ l10n:
 
 ## 例
 
-```html
-<script id="el" type="module" src="main.js" fetchpriority="high"></script>
+```htmw
+<scwipt i-id="ew" t-type="moduwe" swc="main.js" fetchpwiowity="high"></scwipt>
 ```
 
 ```js
-const el = document.getElementById("el");
-console.log(el.fetchPriority); // 出力: "high"
+const ew = document.getewementbyid("ew");
+consowe.wog(ew.fetchpwiowity); // 出力: "high"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLImageElement.fetchPriority")}}
-- {{domxref("HTMLLinkElement.fetchPriority")}}
+- {{domxwef("htmwimageewement.fetchpwiowity")}}
+- {{domxwef("htmwwinkewement.fetchpwiowity")}}

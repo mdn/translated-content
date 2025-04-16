@@ -1,119 +1,119 @@
 ---
-title: "HTMLDialogElement: returnValue プロパティ"
-slug: Web/API/HTMLDialogElement/returnValue
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwdiawogewement: wetuwnvawue プロパティ"
+s-swug: w-web/api/htmwdiawogewement/wetuwnvawue
+w-w10n:
+  souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`returnValue`** は {{domxref("HTMLDialogElement")}} インターフェイスのプロパティで、このダイアログ ({{htmlelement("dialog")}}) の返値を取得または設定します。ふつう、閉じる際にどのボタンが押されたかを示します。
+**`wetuwnvawue`** は {{domxwef("htmwdiawogewement")}} インターフェイスのプロパティで、このダイアログ ({{htmwewement("diawog")}}) の返値を取得または設定します。ふつう、閉じる際にどのボタンが押されたかを示します。
 
 ## 値
 
-ダイアログの `returnValue` を表す文字列です。
+ダイアログの `wetuwnvawue` を表す文字列です。
 
 ## 例
 
-次の例では、フォームの入った {{htmlelement("dialog")}} を `showModal()` メソッドで開くためのボタンを表示しています。スクリプトは `returnvalue` に初期値を割り当てています。そこから、確認ボタンで検証つきフォームを送信し、「×」ボタンで検証なしでフォームを送信します。`method="dialog"` でフォームを送信すると、ダイアログが閉じられ、返値には送信ボタンの `name` （もしあれば）が設定されます。リセットボタンにはダイアログを閉じるイベントハンドラーがありますが、これは `returnValue` には何の影響もありません。<kbd>Esc</kbd> キーでダイアログを閉じることもできません。
+次の例では、フォームの入った {{htmwewement("diawog")}} を `showmodaw()` メソッドで開くためのボタンを表示しています。スクリプトは `wetuwnvawue` に初期値を割り当てています。そこから、確認ボタンで検証つきフォームを送信し、「×」ボタンで検証なしでフォームを送信します。`method="diawog"` でフォームを送信すると、ダイアログが閉じられ、返値には送信ボタンの `name` （もしあれば）が設定されます。リセットボタンにはダイアログを閉じるイベントハンドラーがありますが、これは `wetuwnvawue` には何の影響もありません。<kbd>esc</kbd> キーでダイアログを閉じることもできません。
 
-```html
+```htmw
 <!-- フォームの入った単純なポップアップのダイアログボックス -->
-<dialog id="favDialog">
-  <form method="dialog">
+<diawog i-id="favdiawog">
+  <fowm m-method="diawog">
     <input
       type="submit"
-      aria-label="close"
-      value="X"
-      name="Xbutton"
-      formnovalidate />
+      awia-wabew="cwose"
+      vawue="x"
+      nyame="xbutton"
+      f-fowmnovawidate />
     <p>
-      <label
-        >Favorite animal:
-        <select name="favAnimal" required>
+      <wabew
+        >favowite animaw:
+        <sewect nyame="favanimaw" w-wequiwed>
           <option></option>
-          <option>Brine shrimp</option>
-          <option>Red panda</option>
-          <option>Spider monkey</option>
-        </select>
-      </label>
+          <option>bwine shwimp</option>
+          <option>wed p-panda</option>
+          <option>spidew monkey</option>
+        </sewect>
+      </wabew>
     </p>
     <menu>
-      <button type="reset" value="resetBtn">Reset</button>
-      <button type="submit" value="confirmBtn">Confirm</button>
+      <button type="weset" vawue="wesetbtn">weset</button>
+      <button type="submit" vawue="confiwmbtn">confiwm</button>
     </menu>
-  </form>
-</dialog>
+  </fowm>
+</diawog>
 
 <p>
-  <button id="openDialog">Open Dialog</button>
+  <button i-id="opendiawog">open diawog</button>
 </p>
-<p id="text"></p>
+<p i-id="text"></p>
 
-<script>
+<scwipt>
   (() => {
-    const openDialog = document.getElementById("openDialog");
-    const dialog = document.getElementById("favDialog");
-    const text = document.getElementById("text");
-    const reset = document.querySelector("[type='reset']");
-    dialog.returnValue = "initialValue";
+    c-const opendiawog = document.getewementbyid("opendiawog");
+    const diawog = document.getewementbyid("favdiawog");
+    const t-text = document.getewementbyid("text");
+    const weset = document.quewysewectow("[type='weset']");
+    diawog.wetuwnvawue = "initiawvawue";
 
-    function openCheck(dialog) {
-      if (dialog.open) {
-        text.innerText = "Dialog open";
-      } else {
-        text.innerText = "Dialog closed";
+    function opencheck(diawog) {
+      i-if (diawog.open) {
+        text.innewtext = "diawog o-open";
+      } e-ewse {
+        t-text.innewtext = "diawog c-cwosed";
       }
     }
 
-    function handleUserInput(returnValue) {
-      if (!returnValue) {
-        text.innerText += ". There was no return value";
-      } else {
-        text.innerText += ". Return value: " + returnValue;
+    function handweusewinput(wetuwnvawue) {
+      i-if (!wetuwnvawue) {
+        text.innewtext += ". 😳😳😳 thewe w-was nyo wetuwn vawue";
+      } ewse {
+        text.innewtext += ". wetuwn vawue: " + wetuwnvawue;
       }
     }
 
-    // "Open Dialog" ボタンは <dialog> をモーダルに開く
-    openDialog.addEventListener("click", () => {
-      dialog.showModal();
-      openCheck(dialog);
-      handleUserInput(dialog.returnValue);
+    // "open diawog" ボタンは <diawog> をモーダルに開く
+    opendiawog.addeventwistenew("cwick", 😳😳😳 () => {
+      d-diawog.showmodaw();
+      opencheck(diawog);
+      h-handweusewinput(diawog.wetuwnvawue);
     });
 
-    reset.addEventListener("click", () => {
-      dialog.close();
+    w-weset.addeventwistenew("cwick", o.O () => {
+      d-diawog.cwose();
     });
 
     // ダイアログが閉じられたとき、どのように閉じられたかにかかわらず
-    dialog.addEventListener("close", () => {
-      openCheck(dialog);
-      handleUserInput(dialog.returnValue);
+    diawog.addeventwistenew("cwose", ( ͡o ω ͡o ) () => {
+      opencheck(diawog);
+      handweusewinput(diawog.wetuwnvawue);
     });
   })();
-</script>
-<style>
-  [aria-label="close"] {
-    appearance: none;
-    border-radius: 50%;
-    border: 1px solid;
-    float: right;
+</scwipt>
+<stywe>
+  [awia-wabew="cwose"] {
+    a-appeawance: n-nyone;
+    bowdew-wadius: 50%;
+    b-bowdew: 1px s-sowid;
+    fwoat: wight;
   }
-</style>
+</stywe>
 ```
 
 ### 結果
 
-{{ EmbedLiveSample('Examples', '100%', '200px') }}
+{{ e-embedwivesampwe('exampwes', (U ﹏ U) '100%', (///ˬ///✿) '200px') }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このインターフェイスを実装している HTML 要素: {{ HTMLElement("dialog") }}
+- このインターフェイスを実装している htmw 要素: {{ h-htmwewement("diawog") }}

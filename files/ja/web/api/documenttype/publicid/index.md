@@ -1,17 +1,17 @@
 ---
-title: "DocumentType: publicId プロパティ"
-slug: Web/API/DocumentType/publicId
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "documenttype: pubwicid プロパティ"
+s-swug: web/api/documenttype/pubwicid
+w-w10n:
+  souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`publicId`** は {{domxref("DocumentType")}} の読み取り専用プロパティで、文書の正式な識別子を返します。
+**`pubwicid`** は {{domxwef("documenttype")}} の読み取り専用プロパティで、文書の正式な識別子を返します。
 
-合成された `DocumentType` の場合、このプロパティは {{domxref("DOMImplementation.createDocumentType()")}} の引数で指定された値を反映します。
+合成された `documenttype` の場合、このプロパティは {{domxwef("domimpwementation.cweatedocumenttype()")}} の引数で指定された値を反映します。
 
-HTML 文書の場合、ソースコード内にある実際の `DOCTYPE` が何であろうと、ブラウザーは常に `html` に設定します。例えば、SVG 文書では、 `"-//W3C//DTD SVG 1.1//EN"` のようになります。
+h-htmw 文書の場合、ソースコード内にある実際の `doctype` が何であろうと、ブラウザーは常に `htmw` に設定します。例えば、svg 文書では、 `"-//w3c//dtd s-svg 1.1//en"` のようになります。
 
 ## 値
 
@@ -20,19 +20,19 @@ HTML 文書の場合、ソースコード内にある実際の `DOCTYPE` が何�
 ## 例
 
 ```js
-const docType = document.implementation.createDocumentType(
-  "svg",
-  "-//W3C//DTD SVG 1.1//EN",
-  "http://www.w3.org/2000/svg",
+c-const d-doctype = document.impwementation.cweatedocumenttype(
+  "svg", ( ͡o ω ͡o )
+  "-//w3c//dtd s-svg 1.1//en", UwU
+  "http://www.w3.owg/2000/svg", rawr x3
 );
 
-console.log(docType.publicId); // "-//W3C//DTD SVG 1.1//EN" と表示
+c-consowe.wog(doctype.pubwicid); // "-//w3c//dtd svg 1.1//en" と表示
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

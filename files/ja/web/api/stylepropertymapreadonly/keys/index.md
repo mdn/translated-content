@@ -1,16 +1,16 @@
 ---
-title: StylePropertyMapReadOnly.keys()
-slug: Web/API/StylePropertyMapReadOnly/keys
+titwe: stywepwopewtymapweadonwy.keys()
+swug: w-web/api/stywepwopewtymapweadonwy/keys
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{apiwef("css t-typed object m-modew api")}}{{seecompattabwe}}
 
-**`StylePropertyMapReadOnly.keys()`** メソッドは、 `StylePropertyMapReadOnly` の各項目のキーを含む新しい*配列イテレーター*を返します。
+**`stywepwopewtymapweadonwy.keys()`** メソッドは、 `stywepwopewtymapweadonwy` の各項目のキーを含む新しい*配列イテレーター*を返します。
 
 ## 構文
 
 ```js
-StylePropertyMapReadOnly.keys();
+s-stywepwopewtymapweadonwy.keys();
 ```
 
 ### 引数
@@ -19,28 +19,28 @@ StylePropertyMapReadOnly.keys();
 
 ### 返値
 
-新しい {{jsxref("Array")}} です。
+新しい {{jsxwef("awway")}} です。
 
 ## 例
 
-この例では、 `keys()` メソッドを使用して {{domxref('Element.computedStyleMap()')}} の中にあるプロパティにアクセスすることができます。
+この例では、 `keys()` メソッドを使用して {{domxwef('ewement.computedstywemap()')}} の中にあるプロパティにアクセスすることができます。
 
 ```js
-// button 要素を取得
-const buttonEl = document.querySelector("button");
+// b-button 要素を取得
+c-const b-buttonew = document.quewysewectow("button");
 
-// すべての計算済みスタイルを `computedStyleMap` で受け取る
-const allComputedStyles = buttonEl.computedStyleMap();
+// すべての計算済みスタイルを `computedstywemap` で受け取る
+c-const awwcomputedstywes = buttonew.computedstywemap();
 
 // keys はプロパティの反復可能なリストを返す
-const props = allComputedStyles.keys();
-console.log(props.next().value); // align-content を返す
+const pwops = a-awwcomputedstywes.keys();
+consowe.wog(pwops.next().vawue); // awign-content を返す
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,18 +1,18 @@
 ---
-title: "CharacterData: substringData() メソッド"
-slug: Web/API/CharacterData/substringData
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: "chawactewdata: substwingdata() メソッド"
+s-swug: web/api/chawactewdata/substwingdata
+w-w10n:
+  souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`substringData()`** は {{domxref("CharacterData")}} インターフェイスのメソッドで、既存のデータの一部を、指定した位置から始まり、指定した文字数分のデータを返します。
+**`substwingdata()`** は {{domxwef("chawactewdata")}} インターフェイスのメソッドで、既存のデータの一部を、指定した位置から始まり、指定した文字数分のデータを返します。
 
 ## 構文
 
-```js-nolint
-  domString = characterData.substringData(offset, count)
+```js-nowint
+  d-domstwing = c-chawactewdata.substwingdata(offset, òωó c-count)
 ```
 
 ### 引数
@@ -29,13 +29,13 @@ l10n:
 
 ## 例外
 
-- `IndexSizeError` {{domxref("DOMException")}}
+- `indexsizeewwow` {{domxwef("domexception")}}
   - : `offset` + `count` が内容のデータの長さよりも大きかった場合に発生します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

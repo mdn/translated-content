@@ -1,49 +1,49 @@
 ---
-title: CompositionEvent
-slug: Web/API/CompositionEvent
-l10n:
-  sourceCommit: e811fc31b67e145c5882e8e3f128d1938c627a51
+titwe: compositionevent
+swug: w-web/api/compositionevent
+w-w10n:
+  s-souwcecommit: e-e811fc31b67e145c5882e8e3f128d1938c627a51
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-DOM の **`CompositionEvent`** は、ユーザーの間接的なテキストの入力（訳注: かな漢字変換の入力など）によって発生するイベントを表します。
+d-dom の **`compositionevent`** は、ユーザーの間接的なテキストの入力（訳注: かな漢字変換の入力など）によって発生するイベントを表します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-- {{domxref("CompositionEvent.CompositionEvent()", "CompositionEvent()")}}
-  - : 新しい `CompositionEvent` オブジェクトのインスタンスを作成します。
+- {{domxwef("compositionevent.compositionevent()", (U ᵕ U❁) "compositionevent()")}}
+  - : 新しい `compositionevent` オブジェクトのインスタンスを作成します。
 
 ## プロパティ
 
-_このインターフェイスは、親である {{domxref("UIEvent")}} および祖先である {{domxref("Event")}} から継承したプロパティもあります。_
+_このインターフェイスは、親である {{domxwef("uievent")}} および祖先である {{domxwef("event")}} から継承したプロパティもあります。_
 
-- {{domxref("CompositionEvent.data")}} {{ReadOnlyInline}}
-  - : イベントを発生させた入力システムによって生成された文字を返します。これは、`CompositionEvent` オブジェクトを生成したイベントの型に応じて変わります。
-- {{domxref("CompositionEvent.locale")}} {{ReadOnlyInline}} {{deprecated_inline}} {{Non-standard_Inline}}
-  - : 現在の入力システムのロケールです (例えば、入力システムが IME であればそれに関連したキーボードレイアウトのロケールになります)。
+- {{domxwef("compositionevent.data")}} {{weadonwyinwine}}
+  - : イベントを発生させた入力システムによって生成された文字を返します。これは、`compositionevent` オブジェクトを生成したイベントの型に応じて変わります。
+- {{domxwef("compositionevent.wocawe")}} {{weadonwyinwine}} {{depwecated_inwine}} {{non-standawd_inwine}}
+  - : 現在の入力システムのロケールです (例えば、入力システムが i-ime であればそれに関連したキーボードレイアウトのロケールになります)。
 
 ## メソッド
 
-_このインターフェイスは、親である {{domxref("UIEvent")}} および祖先である {{domxref("Event")}} から継承したメソッドもあります。_
+_このインターフェイスは、親である {{domxwef("uievent")}} および祖先である {{domxwef("event")}} から継承したメソッドもあります。_
 
-- {{domxref("CompositionEvent.initCompositionEvent()")}} {{deprecated_inline}}
-  - : `CompositionEvent` オブジェクトの属性を初期化します。
+- {{domxwef("compositionevent.initcompositionevent()")}} {{depwecated_inwine}}
+  - : `compositionevent` オブジェクトの属性を初期化します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [compositionstart](/ja/docs/Web/API/Element/compositionstart_event)
-- [compositionend](/ja/docs/Web/API/Element/compositionend_event)
-- [compositionupdate](/ja/docs/Web/API/Element/compositionupdate_event)
-- [UIEvent](/ja/docs/Web/API/UIEvent)
-- [Event](/ja/docs/Web/API/Event)
+- [compositionstawt](/ja/docs/web/api/ewement/compositionstawt_event)
+- [compositionend](/ja/docs/web/api/ewement/compositionend_event)
+- [compositionupdate](/ja/docs/web/api/ewement/compositionupdate_event)
+- [uievent](/ja/docs/web/api/uievent)
+- [event](/ja/docs/web/api/event)

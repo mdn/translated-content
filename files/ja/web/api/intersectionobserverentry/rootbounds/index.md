@@ -1,25 +1,25 @@
 ---
-title: "IntersectionObserverEntry: rootBounds プロパティ"
-short-title: rootBounds
-slug: Web/API/IntersectionObserverEntry/rootBounds
-l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+titwe: "intewsectionobsewvewentwy: wootbounds プロパティ"
+s-showt-titwe: wootbounds
+s-swug: w-web/api/intewsectionobsewvewentwy/wootbounds
+w-w10n:
+  s-souwcecommit: e-eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
-{{APIRef("Intersection Observer API")}}
+{{apiwef("intewsection o-obsewvew a-api")}}
 
-{{domxref("IntersectionObserverEntry")}} インターフェイスの読み取り専用の **`rootBounds`** プロパティは {{domxref("DOMRectReadOnly")}} であり、この {{domxref("IntersectionObserverEntry.target", "target")}} のルート耕作系に対応します。指定されていれば、 {{domxref("IntersectionObserver.rootMargin")}} によるオフセットを含みます。
+{{domxwef("intewsectionobsewvewentwy")}} インターフェイスの読み取り専用の **`wootbounds`** プロパティは {{domxwef("domwectweadonwy")}} であり、この {{domxwef("intewsectionobsewvewentwy.tawget", (⑅˘꒳˘) "tawget")}} のルート耕作系に対応します。指定されていれば、 {{domxwef("intewsectionobsewvew.wootmawgin")}} によるオフセットを含みます。
 
 ## 値
 
-{{domxref("DOMRectReadOnly")}} で、ルート交差矩形を表します。 {{domxref("Document")}} のビューポートであるルートの場合、この矩形は文書全体の境界矩形となります。そうでない場合は、ルート要素の境界となります。
+{{domxwef("domwectweadonwy")}} で、ルート交差矩形を表します。 {{domxwef("document")}} のビューポートであるルートの場合、この矩形は文書全体の境界矩形となります。そうでない場合は、ルート要素の境界となります。
 
-この矩形のオフセットは {{domxref("IntersectionObserver.rootMargin")}} の値で指定します。
+この矩形のオフセットは {{domxwef("intewsectionobsewvew.wootmawgin")}} の値で指定します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

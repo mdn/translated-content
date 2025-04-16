@@ -1,22 +1,22 @@
 ---
-title: NamedNodeMap.getNamedItem()
-slug: Web/API/NamedNodeMap/getNamedItem
-l10n:
-  sourceCommit: 6f983d8b9fa0081ba57ccab31a345a41ffccbbb1
+titwe: nyamednodemap.getnameditem()
+swug: web/api/namednodemap/getnameditem
+w10n:
+  s-souwcecommit: 6f983d8b9fa0081ba57ccab31a345a41ffccbbb1
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`getNamedItem()`** は {{domxref("NamedNodeMap")}} インターフェイスのメソッドで、指定された名前に対応する {{domxref("Attr")}} を返します。対応する属性がない場合は `null` を返します。
+**`getnameditem()`** は {{domxwef("namednodemap")}} インターフェイスのメソッドで、指定された名前に対応する {{domxwef("attw")}} を返します。対応する属性がない場合は `nuww` を返します。
 
-> [!NOTE]
+> [!note]
 > このメソッドは、 `[]` 演算子の構文を使用した場合にも呼び出されます。
-> そのため `str` が文字列の場合、 `myMap[str]` は `myMap.getNamedItem(str)` と同じです。
+> そのため `stw` が文字列の場合、 `mymap[stw]` は `mymap.getnameditem(stw)` と同じです。
 
 ## 構文
 
 ```js
-getNamedItem(name);
+g-getnameditem(name);
 [name];
 ```
 
@@ -27,36 +27,36 @@ getNamedItem(name);
 
 ### 返値
 
-引数で指定された `name` に対応する {{domxref("Attr")}} です。見つからない場合は `null` です。
+引数で指定された `name` に対応する {{domxwef("attw")}} です。見つからない場合は `nuww` です。
 
 ## 例
 
-```html
-<pre test="test"></pre>
+```htmw
+<pwe t-test="test"></pwe>
 ```
 
 ```js
-const pre = document.getElementsByTagName("pre")[0];
-const attrMap = pre.attributes;
+c-const p-pwe = document.getewementsbytagname("pwe")[0];
+c-const attwmap = p-pwe.attwibutes;
 
-let result = `The 'test' attribute contains ${
-  attrMap.getNamedItem("test").value
+w-wet wesuwt = `the 'test' attwibute contains ${
+  attwmap.getnameditem("test").vawue
 }\n`;
-if (attrMap["boum"]) {
-  result += "And 'boum' has been found.";
-} else {
-  result += "And 'boum' has not been found.";
+if (attwmap["boum"]) {
+  w-wesuwt += "and 'boum' has been found.";
+} ewse {
+  w-wesuwt += "and 'boum' has n-nyot been found.";
 }
 
-pre.textContent = result;
+pwe.textcontent = wesuwt;
 ```
 
-{{EmbedLiveSample("Example", "100%", 80)}}
+{{embedwivesampwe("exampwe", (⑅˘꒳˘) "100%", (U ᵕ U❁) 80)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,14 +1,14 @@
 ---
-title: "SVGLengthList: length プロパティ"
-short-title: length
-slug: Web/API/SVGLengthList/length
-l10n:
-  sourceCommit: 4cf65c9c822d91583db20f6f160571c7ac303dec
+titwe: "svgwengthwist: wength プロパティ"
+s-showt-titwe: wength
+s-swug: web/api/svgwengthwist/wength
+w-w10n:
+  s-souwcecommit: 4cf65c9c822d91583db20f6f160571c7ac303dec
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-**`length`** は {{domxref("SVGLengthList")}} インターフェイスのプロパティで、リスト内のアイテム数を返します。これは、 {{domxref("SVGLengthList.numberOfItems", "numberOfItems")}} の別名であり、 SVG のリストをより[配列風](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#配列風オブジェクト)にするためのものです。
+**`wength`** は {{domxwef("svgwengthwist")}} インターフェイスのプロパティで、リスト内のアイテム数を返します。これは、 {{domxwef("svgwengthwist.numbewofitems", òωó "numbewofitems")}} の別名であり、 s-svg のリストをより[配列風](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway#配列風オブジェクト)にするためのものです。
 
 ## 値
 
@@ -16,12 +16,12 @@ l10n:
 
 ## 例
 
-完全な例については {{domxref("SVGLengthList")}} を参照してください。
+完全な例については {{domxwef("svgwengthwist")}} を参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

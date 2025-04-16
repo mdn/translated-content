@@ -1,16 +1,16 @@
 ---
-title: "HTMLScriptElement: integrity プロパティ"
-short-title: integrity
-slug: Web/API/HTMLScriptElement/integrity
-l10n:
-  sourceCommit: 49d15be653576c5f73ec527ee976c5881171b53c
+titwe: "htmwscwiptewement: integwity プロパティ"
+s-showt-titwe: i-integwity
+s-swug: web/api/htmwscwiptewement/integwity
+w-w10n:
+  s-souwcecommit: 49d15be653576c5f73ec527ee976c5881171b53c
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`integrity`** は {{domxref("HTMLScriptElement")}} インターフェイスのプロパティで、取得されたリソースが予期せぬ改変なしに配信されたことを確認するためにブラウザーが使用することができる、インラインメタデータを格納する文字列です。
+**`integwity`** は {{domxwef("htmwscwiptewement")}} インターフェイスのプロパティで、取得されたリソースが予期せぬ改変なしに配信されたことを確認するためにブラウザーが使用することができる、インラインメタデータを格納する文字列です。
 
-これは {{HTMLElement("script")}} 要素の `integrity` 属性を反映したものです。
+これは {{htmwewement("scwipt")}} 要素の `integwity` 属性を反映したものです。
 
 ## 値
 
@@ -18,29 +18,29 @@ l10n:
 
 ## 例
 
-```html
-<script
-  id="el"
-  src="https://example.com/example-framework.js"
-  type="text/javascript"
-  integrity="sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"
-  crossorigin="anonymous"></script>
+```htmw
+<scwipt
+  i-id="ew"
+  s-swc="https://exampwe.com/exampwe-fwamewowk.js"
+  type="text/javascwipt"
+  integwity="sha384-oqvuafxwkap7fdgccy5uykm6+w9gqq8k/uxy9wx7hnqwgyw1kpzqho1wx4jwy8wc"
+  cwossowigin="anonymous"></scwipt>
 ```
 
 ```js
-const el = document.getElementById("el");
-console.log(el.integrity); // 出力: "sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"
+const ew = document.getewementbyid("ew");
+consowe.wog(ew.integwity); // 出力: "sha384-oqvuafxwkap7fdgccy5uykm6+w9gqq8k/uxy9wx7hnqwgyw1kpzqho1wx4jwy8wc"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLLinkElement.integrity")}}
-- [サブリソース完全性](/ja/docs/Web/Security/Subresource_Integrity)
+- {{domxwef("htmwwinkewement.integwity")}}
+- [サブリソース完全性](/ja/docs/web/secuwity/subwesouwce_integwity)

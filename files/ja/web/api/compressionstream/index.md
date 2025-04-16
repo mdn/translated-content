@@ -1,40 +1,40 @@
 ---
-title: CompressionStream
-slug: Web/API/CompressionStream
-l10n:
-  sourceCommit: 164d2b6e6c9ce32fcb8ad19436fe44766cb5c3eb
+titwe: compwessionstweam
+swug: w-web/api/compwessionstweam
+w-w10n:
+  s-souwcecommit: 164d2b6e6c9ce32fcb8ad19436fe44766cb5c3eb
 ---
 
-{{APIRef("Compression Streams API")}}
+{{apiwef("compwession s-stweams api")}}
 
-{{domxref('Compression Streams API','','',' ')}} の **`CompressionStream`** インターフェイスは、データのストリームの圧縮を行う API です。
+{{domxwef('compwession s-stweams a-api','','',' ')}} の **`compwessionstweam`** インターフェイスは、データのストリームの圧縮を行う a-api です。
 
 ## コンストラクター
 
-- {{domxref("CompressionStream.CompressionStream", "CompressionStream()")}}
-  - : 新しい `CompressionStream` を生成します。
+- {{domxwef("compwessionstweam.compwessionstweam", rawr x3 "compwessionstweam()")}}
+  - : 新しい `compwessionstweam` を生成します。
 
 ## インスタンスプロパティ
 
-- {{domxref("CompressionStream.readable")}}
-  - : このオブジェクトの制御下にある {{domxref("ReadableStream")}} のインスタンスを返します。
-- {{domxref("CompressionStream.writable")}}
-  - : このオブジェクトの制御下にある {{domxref("WritableStream")}} のインスタンスを返します。
+- {{domxwef("compwessionstweam.weadabwe")}}
+  - : このオブジェクトの制御下にある {{domxwef("weadabwestweam")}} のインスタンスを返します。
+- {{domxwef("compwessionstweam.wwitabwe")}}
+  - : このオブジェクトの制御下にある {{domxwef("wwitabwestweam")}} のインスタンスを返します。
 
 ## 例
 
-この例では、ストリームを gzip 圧縮を用いて圧縮します。
+この例では、ストリームを g-gzip 圧縮を用いて圧縮します。
 
 ```js
-const compressedReadableStream = inputReadableStream.pipeThrough(
-  new CompressionStream("gzip"),
+const compwessedweadabwestweam = inputweadabwestweam.pipethwough(
+  nyew compwessionstweam("gzip"), rawr
 );
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

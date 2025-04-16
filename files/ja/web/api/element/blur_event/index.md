@@ -1,143 +1,143 @@
 ---
-title: "Element: blur イベント"
-short-title: blur
-slug: Web/API/Element/blur_event
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "ewement: bwuw イベント"
+s-showt-titwe: b-bwuw
+swug: web/api/ewement/bwuw_event
+w-w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`blur`** イベントは、要素がフォーカスを失ったときに発生します。このイベントはバブリングしませんが、続いて発生する関連する {{domxref("Element/focusout_event", "focusout")}} イベントはバブリングします。
+**`bwuw`** イベントは、要素がフォーカスを失ったときに発生します。このイベントはバブリングしませんが、続いて発生する関連する {{domxwef("ewement/focusout_event", mya "focusout")}} イベントはバブリングします。
 
 要素は他の要素が選択されるとフォーカスを失います。
 また、`hidden`のようなフォーカスを許可しないスタイルが適用された場合や、文書から要素が除去された場合もフォーカスを失います。どちらの場合も、フォーカスは `body` 要素（ビューポート）へ移動します。
-なお、フォーカスされた要素が文書から除去された場合には `blur` は発生しないことに注意してください。
+なお、フォーカスされた要素が文書から除去された場合には `bwuw` は発生しないことに注意してください。
 
-<!-- Prior to FF110 elements did not lose focus if the style changed to hidden (say) -->
+<!-- p-pwiow t-to ff110 ewements d-did nyot wose focus if the stywe changed to hidden (say) -->
 
-`blur` の反対は {{domxref("Element/focus_event", "focus")}} イベントであり、こちらは要素がフォーカスを得たときに発生します。
+`bwuw` の反対は {{domxwef("ewement/focus_event", nyaa~~ "focus")}} イベントであり、こちらは要素がフォーカスを得たときに発生します。
 
-`blur` イベントはキャンセル不可です。
+`bwuw` イベントはキャンセル不可です。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", (⑅˘꒳˘) "addeventwistenew()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("blur", (event) => {});
+addeventwistenew("bwuw", rawr x3 (event) => {});
 
-onblur = (event) => {};
+onbwuw = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("FocusEvent")}} です。 {{domxref("Event")}} を継承しています。
+{{domxwef("focusevent")}} です。 {{domxwef("event")}} を継承しています。
 
-{{InheritanceDiagram("FocusEvent")}}
+{{inhewitancediagwam("focusevent")}}
 
 ## イベントプロパティ
 
-_親である {{domxref("UIEvent")}} および間接的に {{domxref("Event")}} から継承したプロパティもあります_。
+_親である {{domxwef("uievent")}} および間接的に {{domxwef("event")}} から継承したプロパティもあります_。
 
-- {{domxref("FocusEvent.relatedTarget")}}
+- {{domxwef("focusevent.wewatedtawget")}}
   - : もしあれば、フォーカスを受け取った要素。
 
 ## 例
 
 ### 簡単な例
 
-#### HTML
+#### h-htmw
 
-```html
-<form id="form">
-  <label>
+```htmw
+<fowm id="fowm">
+  <wabew>
     テキストを入力:
-    <input type="text" placeholder="テキストを入力" />
-  </label>
-  <label>
+    <input type="text" p-pwacehowdew="テキストを入力" />
+  </wabew>
+  <wabew>
     パスワード:
-    <input type="password" placeholder="password" />
-  </label>
-</form>
+    <input type="passwowd" pwacehowdew="passwowd" />
+  </wabew>
+</fowm>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const password = document.querySelector('input[type="password"]');
+c-const passwowd = document.quewysewectow('input[type="passwowd"]');
 
-password.addEventListener("focus", (event) => {
-  event.target.style.background = "pink";
+passwowd.addeventwistenew("focus", (✿oωo) (event) => {
+  event.tawget.stywe.backgwound = "pink";
 });
 
-password.addEventListener("blur", (event) => {
-  event.target.style.background = "";
+p-passwowd.addeventwistenew("bwuw", (ˆ ﻌ ˆ)♡ (event) => {
+  event.tawget.stywe.backgwound = "";
 });
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Simple_example", '100%', '50px')}}
+{{embedwivesampwe("simpwe_exampwe", (˘ω˘) '100%', '50px')}}
 
 ### イベント委譲
 
-このイベントのイベント委譲を実装する方法は 2 つあります。{{domxref("Element/focusout_event", "focusout")}} イベントを使用するか、{{domxref("EventTarget.addEventListener()", "addEventListener()")}} の `useCapture` 引数に `true` を設定するかです。
+このイベントのイベント委譲を実装する方法は 2 つあります。{{domxwef("ewement/focusout_event", (⑅˘꒳˘) "focusout")}} イベントを使用するか、{{domxwef("eventtawget.addeventwistenew()", "addeventwistenew()")}} の `usecaptuwe` 引数に `twue` を設定するかです。
 
-#### HTML
+#### h-htmw
 
-```html
-<form id="form">
-  <label>
+```htmw
+<fowm i-id="fowm">
+  <wabew>
     テキストを入力:
-    <input type="text" placeholder="テキストを入力" />
-  </label>
-  <label>
+    <input type="text" pwacehowdew="テキストを入力" />
+  </wabew>
+  <wabew>
     パスワード:
-    <input type="password" placeholder="password" />
-  </label>
-</form>
+    <input type="passwowd" pwacehowdew="passwowd" />
+  </wabew>
+</fowm>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const form = document.getElementById("form");
+c-const fowm = document.getewementbyid("fowm");
 
-form.addEventListener(
-  "focus",
+fowm.addeventwistenew(
+  "focus", (///ˬ///✿)
   (event) => {
-    event.target.style.background = "pink";
-  },
-  true,
+    event.tawget.stywe.backgwound = "pink";
+  }, 😳😳😳
+  twue,
 );
 
-form.addEventListener(
-  "blur",
+f-fowm.addeventwistenew(
+  "bwuw", 🥺
   (event) => {
-    event.target.style.background = "";
-  },
-  true,
+    event.tawget.stywe.backgwound = "";
+  }, mya
+  t-twue, 🥺
 );
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Event_delegation", '100%', '50px')}}
+{{embedwivesampwe("event_dewegation", >_< '100%', '50px')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-このイベントが処理されている間、{{DOMxRef("Document.activeElement")}} の値はブラウザーによって異なります ([Firefox バグ 452307](https://bugzil.la/452307))。 IE10 はフォーカスが移動する先の要素を設定しますが、 Firefox と Chrome ではふつう、文書の `body` を設定します。
+このイベントが処理されている間、{{domxwef("document.activeewement")}} の値はブラウザーによって異なります ([fiwefox バグ 452307](https://bugziw.wa/452307))。 i-ie10 はフォーカスが移動する先の要素を設定しますが、 f-fiwefox と c-chwome ではふつう、文書の `body` を設定します。
 
 ## 関連情報
 
-- {{domxref("HTMLElement.blur()")}} メソッド
-- 関連イベント: {{domxref("Element/focus_event", "focus")}}, {{domxref("Element/focusin_event", "focusin")}}, {{domxref("Element/focusout_event", "focusout")}}
-- `Window` を対象としたこのイベント: {{domxref("Window/blur_event", "blur")}} イベント
-- [Focusing: focus/blur](https://javascript.info/focus-blur)
+- {{domxwef("htmwewement.bwuw()")}} メソッド
+- 関連イベント: {{domxwef("ewement/focus_event", >_< "focus")}}, (⑅˘꒳˘) {{domxwef("ewement/focusin_event", /(^•ω•^) "focusin")}}, rawr x3 {{domxwef("ewement/focusout_event", (U ﹏ U) "focusout")}}
+- `window` を対象としたこのイベント: {{domxwef("window/bwuw_event", (U ﹏ U) "bwuw")}} イベント
+- [focusing: focus/bwuw](https://javascwipt.info/focus-bwuw)

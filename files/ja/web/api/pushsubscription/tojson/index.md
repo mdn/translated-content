@@ -1,19 +1,19 @@
 ---
-title: "PushSubscription: toJSON() メソッド"
-short-title: toJSON()
-slug: Web/API/PushSubscription/toJSON
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: "pushsubscwiption: tojson() メソッド"
+s-showt-titwe: t-tojson()
+swug: w-web/api/pushsubscwiption/tojson
+w-w10n:
+  souwcecommit: c-c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{APIRef("Push API")}}
+{{apiwef("push a-api")}}
 
-**`toJSON()`** は {{domxref("PushSubscription")}} インターフェイスの メソッドで、標準のシリアライザーです。これは、このサブスクリプションのプロパティの JSON 表現を返す、便利なショートカットを提供します。
+**`tojson()`** は {{domxwef("pushsubscwiption")}} インターフェイスの メソッドで、標準のシリアライザーです。これは、このサブスクリプションのプロパティの j-json 表現を返す、便利なショートカットを提供します。
 
 ## 構文
 
-```js-nolint
-toJSON()
+```js-nowint
+t-tojson()
 ```
 
 ### 引数
@@ -22,14 +22,14 @@ toJSON()
 
 ### 返値
 
-JSON オブジェクトです。現在は、`endpoint` メンバーとしてサブスクリプションエンドポイントのみを含みます。
+json オブジェクトです。現在は、`endpoint` メンバーとしてサブスクリプションエンドポイントのみを含みます。
 
 ## 例
 
 ```js
-navigator.serviceWorker.ready.then((reg) => {
-  reg.pushManager.getSubscription().then((subscription) => {
-    const mySubscription = subscription.toJSON();
+nyavigatow.sewvicewowkew.weady.then((weg) => {
+  weg.pushmanagew.getsubscwiption().then((subscwiption) => {
+    const mysubscwiption = s-subscwiption.tojson();
     // サブスクリプションの詳細を使用して何かを実行する
   });
 });
@@ -37,8 +37,8 @@ navigator.serviceWorker.ready.then((reg) => {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

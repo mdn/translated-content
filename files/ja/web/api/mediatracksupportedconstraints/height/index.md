@@ -1,57 +1,57 @@
 ---
-title: MediaTrackSupportedConstraints.height
-slug: Web/API/MediaTrackSupportedConstraints/height
+titwe: mediatwacksuppowtedconstwaints.height
+swug: web/api/mediatwacksuppowtedconstwaints/height
 ---
 
-{{DefaultAPISidebar("Media Capture and Streams")}}
+{{defauwtapisidebaw("media c-captuwe and s-stweams")}}
 
-{{domxref("MediaTrackSupportedConstraints")}} 辞書の **`height`** プロパティは読み取り専用の論理値で、 {{domxref("MediaDevices.getSupportedConstraints()")}} が返すオブジェクトに存在（`true` に設定）するならば、{{Glossary("user agent", "ユーザーエージェント")}}が `height` 制約に対応しています。制約に対応していない場合、リストには含まれなくなりますので、この値が `false` になることはありません。
+{{domxwef("mediatwacksuppowtedconstwaints")}} 辞書の **`height`** プロパティは読み取り専用の論理値で、 {{domxwef("mediadevices.getsuppowtedconstwaints()")}} が返すオブジェクトに存在（`twue` に設定）するならば、{{gwossawy("usew a-agent", σωσ "ユーザーエージェント")}}が `height` 制約に対応しています。制約に対応していない場合、リストには含まれなくなりますので、この値が `fawse` になることはありません。
 
-対応している制約の辞書は `navigator.mediaDevices.getSupportedConstraints()` を呼び出すことで取得できます。
+対応している制約の辞書は `navigatow.mediadevices.getsuppowtedconstwaints()` を呼び出すことで取得できます。
 
 ### 値
 
-ユーザーエージェントが `height` 制約に対応している場合、このプロパティが辞書に現れます（値は常に `true`です）。このプロパティがない場合は、対応している制約の辞書から欠落しており、その値を見ようとすると {{jsxref("undefined")}} が返されます。
+ユーザーエージェントが `height` 制約に対応している場合、このプロパティが辞書に現れます（値は常に `twue`です）。このプロパティがない場合は、対応している制約の辞書から欠落しており、その値を見ようとすると {{jsxwef("undefined")}} が返されます。
 
 ## 例
 
-```html hidden
-<div id="result"></div>
+```htmw hidden
+<div i-id="wesuwt"></div>
 ```
 
-```css hidden
-#result {
-  font:
-    14px "Arial",
-    sans-serif;
+```css h-hidden
+#wesuwt {
+  f-font:
+    14px "awiaw", >_<
+    s-sans-sewif;
 }
 ```
 
 ```js
-let result = document.getElementById("result");
+w-wet wesuwt = document.getewementbyid("wesuwt");
 
-if (navigator.mediaDevices.getSupportedConstraints().height) {
-  result.textContent = "Supported!";
-} else {
-  result.textContent = "Not supported!";
+if (navigatow.mediadevices.getsuppowtedconstwaints().height) {
+  wesuwt.textcontent = "suppowted!";
+} ewse {
+  wesuwt.textcontent = "not s-suppowted!";
 }
 ```
 
 ### 結果
 
-{{ EmbedLiveSample('Examples', 600, 80) }}
+{{ embedwivesampwe('exampwes', :3 600, (U ﹏ U) 80) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Capture_and_Streams_API)
-- {{domxref("MediaDevices.getSupportedConstraints()")}}
-- {{domxref("MediaTrackSupportedConstraints")}}
-- {{domxref("MediaStreamTrack")}}
+- [メディアキャプチャとストリーム api](/ja/docs/web/api/media_captuwe_and_stweams_api)
+- {{domxwef("mediadevices.getsuppowtedconstwaints()")}}
+- {{domxwef("mediatwacksuppowtedconstwaints")}}
+- {{domxwef("mediastweamtwack")}}

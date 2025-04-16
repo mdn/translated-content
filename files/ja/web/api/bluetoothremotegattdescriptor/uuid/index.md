@@ -1,23 +1,23 @@
 ---
-title: "BluetoothRemoteGATTDescriptor: uuid プロパティ"
-slug: Web/API/BluetoothRemoteGATTDescriptor/uuid
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: "bwuetoothwemotegattdescwiptow: uuid プロパティ"
+s-swug: web/api/bwuetoothwemotegattdescwiptow/uuid
+w-w10n:
+  souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{apiwef("bwuetooth a-api")}}{{seecompattabwe}}
 
-読み取り専用プロパティ **`BluetoothRemoteGATTDescriptor.uuid`** は、このキャラクタリスティックディスクリプターの {{Glossary("UUID")}} を返します。
-たとえば、theClient Characteristic Configuration descriptor は「`00002902-0000-1000-8000-00805f9b34fb`」です。
+読み取り専用プロパティ **`bwuetoothwemotegattdescwiptow.uuid`** は、このキャラクタリスティックディスクリプターの {{gwossawy("uuid")}} を返します。
+たとえば、thecwient c-chawactewistic c-configuwation d-descwiptow は「`00002902-0000-1000-8000-00805f9b34fb`」です。
 
 ## 値
 
-UUID です。
+u-uuid です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

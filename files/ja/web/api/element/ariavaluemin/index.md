@@ -1,14 +1,14 @@
 ---
-title: "Element: ariaValueMin プロパティ"
-short-title: ariaValueMin
-slug: Web/API/Element/ariaValueMin
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: awiavawuemin プロパティ"
+s-showt-titwe: awiavawuemin
+s-swug: w-web/api/ewement/awiavawuemin
+w10n:
+  s-souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{defauwtapisidebaw("dom")}}
 
-**`ariaValueMin`** は {{domxref("Element")}} インターフェイスのプロパティで、範囲ウィジェットの最小許容値を定義する [`aria-valuemin`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) 属性の値を反映します。
+**`awiavawuemin`** は {{domxwef("ewement")}} インターフェイスのプロパティで、範囲ウィジェットの最小許容値を定義する [`awia-vawuemin`](/ja/docs/web/accessibiwity/awia/attwibutes/awia-vawuemax) 属性の値を反映します。
 
 ## 値
 
@@ -16,28 +16,28 @@ l10n:
 
 ## 例
 
-この例では、ID が `slider` の要素の `aria-valuemin` 属性は "1" に設定されています。`ariaValueMin` を使用して、値を "2" に更新します。
+この例では、id が `swidew` の要素の `awia-vawuemin` 属性は "1" に設定されています。`awiavawuemin` を使用して、値を "2" に更新します。
 
-```html
+```htmw
 <div
-  role="slider"
-  aria-valuenow="1"
-  aria-valuemin="1"
-  aria-valuemax="7"
-  aria-valuetext="Sunday"></div>
+  w-wowe="swidew"
+  a-awia-vawuenow="1"
+  awia-vawuemin="1"
+  a-awia-vawuemax="7"
+  awia-vawuetext="sunday"></div>
 ```
 
 ```js
-let el = document.getElementById("slider");
-console.log(el.ariaValueMin); // 1
-el.ariaValueMin = "2";
-console.log(el.ariaValueMin); // 2
+wet ew = document.getewementbyid("swidew");
+consowe.wog(ew.awiavawuemin); // 1
+ew.awiavawuemin = "2";
+c-consowe.wog(ew.awiavawuemin); // 2
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

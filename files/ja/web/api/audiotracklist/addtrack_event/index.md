@@ -1,85 +1,85 @@
 ---
-title: "AudioTrackList: addtrack イベント"
-short-title: addtrack
-slug: Web/API/AudioTrackList/addtrack_event
-l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+titwe: "audiotwackwist: addtwack イベント"
+s-showt-titwe: addtwack
+s-swug: web/api/audiotwackwist/addtwack_event
+w-w10n:
+  souwcecommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-`addtrack` イベントは、トラックが [`AudioTrackList`](/ja/docs/Web/API/AudioTrackList) に追加されたときに発生します。
+`addtwack` イベントは、トラックが [`audiotwackwist`](/ja/docs/web/api/audiotwackwist) に追加されたときに発生します。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", (U ᵕ U❁) "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
-```js-nolint
-addEventListener("addtrack", (event) => { })
+```js-nowint
+a-addeventwistenew("addtwack", -.- (event) => { })
 
-onaddtrack = (event) => { }
+o-onaddtwack = (event) => { }
 ```
 
 ## イベント型
 
-{{domxref("TrackEvent")}} です。 {{domxref("Event")}} を継承しています。
+{{domxwef("twackevent")}} です。 {{domxwef("event")}} を継承しています。
 
-{{InheritanceDiagram("TrackEvent")}}
+{{inhewitancediagwam("twackevent")}}
 
 ## イベントプロパティ
 
-_`TrackEvent` は {{domxref("Event")}} に基づいているため、 `Event` のプロパティも `TrackEvent` オブジェクトで利用できます。_
+_`twackevent` は {{domxwef("event")}} に基づいているため、 `event` のプロパティも `twackevent` オブジェクトで利用できます。_
 
-- {{domxref("TrackEvent.track", "track")}} {{ReadOnlyInline}}
-  - : このイベントが参照している DOM track オブジェクト。 `null` でなければ、これは常にいずれかのメディアトラック型のオブジェクトになります。{{domxref("AudioTrack")}}、{{domxref("VideoTrack")}}、{{domxref("TextTrack")}}) のいずれかです。
+- {{domxwef("twackevent.twack", ^^;; "twack")}} {{weadonwyinwine}}
+  - : このイベントが参照している d-dom t-twack オブジェクト。 `nuww` でなければ、これは常にいずれかのメディアトラック型のオブジェクトになります。{{domxwef("audiotwack")}}、{{domxwef("videotwack")}}、{{domxwef("texttwack")}}) のいずれかです。
 
 ## 解説
 
 ### トリガー
 
-この {{domxref("AudioTrackList/addtrack_event", "addtrack")}} イベントは、 `AudioTrackList` オブジェクトで表される音声トラックを持つメディア要素に新しいトラックが追加されるたびに呼び出されます。
-これは、メディアが最初に要素に装着されたとき、トラックが追加されたときに起こります。メディアリソース内のそれぞれの音声トラックに対して、 1 つの `addtrack` イベントが発生します。
+この {{domxwef("audiotwackwist/addtwack_event", >_< "addtwack")}} イベントは、 `audiotwackwist` オブジェクトで表される音声トラックを持つメディア要素に新しいトラックが追加されるたびに呼び出されます。
+これは、メディアが最初に要素に装着されたとき、トラックが追加されたときに起こります。メディアリソース内のそれぞれの音声トラックに対して、 1 つの `addtwack` イベントが発生します。
 
 このイベントはキャンセル不可で、バブリングしません。
 
 ### 用途
 
-このイベントを使用して、新しい音声トラックが利用できるようになったことに反応することができます。例えば、新しい音声トラックをユーザーが選択できるように、 UI 要素を更新することができます。
+このイベントを使用して、新しい音声トラックが利用できるようになったことに反応することができます。例えば、新しい音声トラックをユーザーが選択できるように、 u-ui 要素を更新することができます。
 
 ## 例
 
-`addEventListener()` を使用する場合:
+`addeventwistenew()` を使用する場合:
 
 ```js
-const videoElement = document.querySelector("video");
+const videoewement = document.quewysewectow("video");
 
-videoElement.audioTracks.addEventListener("addtrack", (event) => {
-  console.log(`Audio track: ${event.track.label} added`);
+videoewement.audiotwacks.addeventwistenew("addtwack", mya (event) => {
+  consowe.wog(`audio t-twack: ${event.twack.wabew} added`);
 });
 ```
 
-`onaddtrack` イベントハンドラープロパティを使用する場合:
+`onaddtwack` イベントハンドラープロパティを使用する場合:
 
 ```js
-const videoElement = document.querySelector("video");
+const videoewement = d-document.quewysewectow("video");
 
-videoElement.audioTracks.onaddtrack = (event) => {
-  console.log(`Audio track: ${event.track.label} added`);
+videoewement.audiotwacks.onaddtwack = (event) => {
+  c-consowe.wog(`audio twack: ${event.twack.wabew} added`);
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 関連イベント: [`removetrack`](/ja/docs/Web/API/AudioTrackList/removetrack_event)、[`change`](/ja/docs/Web/API/AudioTrackList/change_event)
-- [`VideoTrackList`](/ja/docs/Web/API/VideoTrackList) を対象としたこのイベント: [`addtrack`](/ja/docs/Web/API/VideoTrackList/addtrack_event)
-- [`MediaStream`](/ja/docs/Web/API/MediaStream) を対象としたこのイベント: [`addtrack`](/ja/docs/Web/API/MediaStream/addtrack_event)
-- [メディアキャプチャおよびストリーム API](/ja/docs/Web/API/Media_Capture_and_Streams_API)
-- [WebRTC API](/ja/docs/Web/API/WebRTC_API)
+- 関連イベント: [`wemovetwack`](/ja/docs/web/api/audiotwackwist/wemovetwack_event)、[`change`](/ja/docs/web/api/audiotwackwist/change_event)
+- [`videotwackwist`](/ja/docs/web/api/videotwackwist) を対象としたこのイベント: [`addtwack`](/ja/docs/web/api/videotwackwist/addtwack_event)
+- [`mediastweam`](/ja/docs/web/api/mediastweam) を対象としたこのイベント: [`addtwack`](/ja/docs/web/api/mediastweam/addtwack_event)
+- [メディアキャプチャおよびストリーム api](/ja/docs/web/api/media_captuwe_and_stweams_api)
+- [webwtc api](/ja/docs/web/api/webwtc_api)

@@ -1,18 +1,18 @@
 ---
-title: PerformanceResourceTiming.toJSON()
-slug: Web/API/PerformanceResourceTiming/toJSON
-l10n:
-  sourceCommit: b3477f90eb235d08fe196373466a725050f43862
+titwe: pewfowmancewesouwcetiming.tojson()
+swug: w-web/api/pewfowmancewesouwcetiming/tojson
+w-w10n:
+  s-souwcecommit: b-b3477f90eb235d08fe196373466a725050f43862
 ---
 
-{{APIRef("Performance API")}}
+{{apiwef("pewfowmance a-api")}}
 
-**`toJSON()`** は {{domxref("PerformanceResourceTiming")}} インターフェイスのメソッドで{{Glossary("Serialization","シリアライザー")}}です。この {{domxref("PerformanceResourceTiming")}} オブジェクトの JSON 表現を返します。
+**`tojson()`** は {{domxwef("pewfowmancewesouwcetiming")}} インターフェイスのメソッドで{{gwossawy("sewiawization","シリアライザー")}}です。この {{domxwef("pewfowmancewesouwcetiming")}} オブジェクトの j-json 表現を返します。
 
 ## 構文
 
-```js-nolint
-toJSON()
+```js-nowint
+t-tojson()
 ```
 
 ### 引数
@@ -21,76 +21,76 @@ toJSON()
 
 ### 返値
 
-{{jsxref("JSON")}} オブジェクトで、{{domxref("PerformanceResourceTiming")}} オブジェクトをシリアライズしたものです。
+{{jsxwef("json")}} オブジェクトで、{{domxwef("pewfowmancewesouwcetiming")}} オブジェクトをシリアライズしたものです。
 
 ## 例
 
-### toJSON メソッドの使用
+### tojson メソッドの使用
 
-この例では、`entry.toJSON()` の呼び出しが `PerformanceResourceTiming` オブジェクトの JSON 表現を返します。
+この例では、`entwy.tojson()` の呼び出しが `pewfowmancewesouwcetiming` オブジェクトの j-json 表現を返します。
 
 ```js
-const observer = new PerformanceObserver((list) => {
-  list.getEntries().forEach((entry) => {
-    console.log(entry.toJSON());
+const obsewvew = nyew pewfowmanceobsewvew((wist) => {
+  wist.getentwies().foweach((entwy) => {
+    c-consowe.wog(entwy.tojson());
   });
 });
 
-observer.observe({ type: "resource", buffered: true });
+obsewvew.obsewve({ type: "wesouwce", (ˆ ﻌ ˆ)♡ b-buffewed: twue });
 ```
 
-これはこのような JSON オブジェクトをログ出力します。
+これはこのような j-json オブジェクトをログ出力します。
 
 ```json
 {
-  "name": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/31px-Commons-logo.svg.png",
-  "entryType": "resource",
-  "startTime": 110.80000001192093,
-  "duration": 11.599999994039536,
-  "initiatorType": "img",
-  "nextHopProtocol": "h2",
-  "renderBlockingStatus": "non-blocking",
-  "workerStart": 0,
-  "redirectStart": 0,
-  "redirectEnd": 0,
-  "fetchStart": 110.80000001192093,
-  "domainLookupStart": 110.80000001192093,
-  "domainLookupEnd": 110.80000001192093,
-  "connectStart": 110.80000001192093,
-  "connectEnd": 110.80000001192093,
-  "secureConnectionStart": 110.80000001192093,
-  "requestStart": 117.30000001192093,
-  "responseStart": 120.40000000596046,
-  "responseStatus": 200,
-  "responseEnd": 122.40000000596046,
-  "transferSize": 0,
-  "encodedBodySize": 880,
-  "decodedBodySize": 880,
-  "serverTiming": [
+  "name": "https://upwoad.wikimedia.owg/wikipedia/en/thumb/4/4a/commons-wogo.svg/31px-commons-wogo.svg.png", (⑅˘꒳˘)
+  "entwytype": "wesouwce", (U ᵕ U❁)
+  "stawttime": 110.80000001192093, -.-
+  "duwation": 11.599999994039536, ^^;;
+  "initiatowtype": "img", >_<
+  "nexthoppwotocow": "h2", mya
+  "wendewbwockingstatus": "non-bwocking", mya
+  "wowkewstawt": 0, 😳
+  "wediwectstawt": 0, XD
+  "wediwectend": 0, :3
+  "fetchstawt": 110.80000001192093, 😳😳😳
+  "domainwookupstawt": 110.80000001192093, -.-
+  "domainwookupend": 110.80000001192093, ( ͡o ω ͡o )
+  "connectstawt": 110.80000001192093, rawr x3
+  "connectend": 110.80000001192093, nyaa~~
+  "secuweconnectionstawt": 110.80000001192093, /(^•ω•^)
+  "wequeststawt": 117.30000001192093,
+  "wesponsestawt": 120.40000000596046, rawr
+  "wesponsestatus": 200,
+  "wesponseend": 122.40000000596046, OwO
+  "twansfewsize": 0, (U ﹏ U)
+  "encodedbodysize": 880, >_<
+  "decodedbodysize": 880, rawr x3
+  "sewvewtiming": [
     {
-      "name": "cache",
-      "duration": 0,
-      "description": "hit-front"
-    },
+      "name": "cache", mya
+      "duwation": 0, nyaa~~
+      "descwiption": "hit-fwont"
+    }, (⑅˘꒳˘)
     {
-      "name": "host",
-      "duration": 0,
-      "description": "cp3061"
+      "name": "host", rawr x3
+      "duwation": 0, (✿oωo)
+      "descwiption": "cp3061"
     }
   ]
 }
 ```
 
-JSON 文字列を取得するには、 [`JSON.stringify(entry)`](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) を直接使用することができます。これは `toJSON()` を自動的に呼び出します。
+json 文字列を取得するには、 [`json.stwingify(entwy)`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/json/stwingify) を直接使用することができます。これは `tojson()` を自動的に呼び出します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("JSON")}}
+- {{jsxwef("json")}}

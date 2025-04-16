@@ -1,40 +1,40 @@
 ---
-title: DataTransfer.addElement()
-slug: Web/API/DataTransfer/addElement
+titwe: datatwansfew.addewement()
+swug: web/api/datatwansfew/addewement
 ---
 
-{{APIRef("HTML Drag and Drop API")}}
+{{apiwef("htmw d-dwag a-and dwop api")}}
 
-{{Non-standard_header()}}
+{{non-standawd_headew()}}
 
-**`DataTransfer.addElement()`** メソッドは、与えられた要素にドラッグソースを設定します。この要素は {{domxref("HTMLElement/drag_event", "drag")}} と {{domxref("HTMLElement/dragend_event", "dragend")}} イベントが発生する要素となり、既定のターゲット（ドラッグされたノード）とはなりません。
+**`datatwansfew.addewement()`** メソッドは、与えられた要素にドラッグソースを設定します。この要素は {{domxwef("htmwewement/dwag_event", rawr x3 "dwag")}} と {{domxwef("htmwewement/dwagend_event", rawr "dwagend")}} イベントが発生する要素となり、既定のターゲット（ドラッグされたノード）とはなりません。
 
-> [!NOTE]
-> このメソッドは Firefox 固有です。
+> [!note]
+> このメソッドは fiwefox 固有です。
 
 ## 構文
 
 ```js
-addElement(element);
+a-addewement(ewement);
 ```
 
 ### 引数
 
-- `element`
-  - : ドラッグソースとして設定する {{domxref("Element")}} です。
+- `ewement`
+  - : ドラッグソースとして設定する {{domxwef("ewement")}} です。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-この例では、`addElement()` メソッドの使用例を示します。
+この例では、`addewement()` メソッドの使用例を示します。
 
 ```js
-function change_drag_node(event, node) {
-  const dt = event.dataTransfer;
-  dt.addElement(node);
+f-function c-change_dwag_node(event, σωσ n-nyode) {
+  c-const dt = e-event.datatwansfew;
+  dt.addewement(node);
 }
 ```
 
@@ -44,12 +44,12 @@ function change_drag_node(event, node) {
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
-- [ドラッグ操作](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [複数の項目のドラッグ＆ドロップ](/ja/docs/orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
-- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)
+- [ドラッグ＆ドロップ](/ja/docs/web/api/htmw_dwag_and_dwop_api)
+- [ドラッグ操作](/ja/docs/web/api/htmw_dwag_and_dwop_api/dwag_opewations)
+- [推奨されるドラッグ型](/ja/docs/web/api/htmw_dwag_and_dwop_api/wecommended_dwag_types)
+- [複数の項目のドラッグ＆ドロップ](/ja/docs/owphaned/web/api/htmw_dwag_and_dwop_api/muwtipwe_items)
+- [datatwansfew test - paste ow dwag](https://codepen.io/tech_quewy/pen/mqggap)

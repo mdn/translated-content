@@ -1,21 +1,21 @@
 ---
-title: StylePropertyMapReadOnly.has()
-slug: Web/API/StylePropertyMapReadOnly/has
+titwe: stywepwopewtymapweadonwy.has()
+swug: web/api/stywepwopewtymapweadonwy/has
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{apiwef("css t-typed object m-modew api")}}{{seecompattabwe}}
 
-**`has()`** は {{domxref("StylePropertyMapReadOnly")}} インターフェイスのメソッドで、指定されたプロパティが `StylePropertyMapReadOnly` オブジェクトにあるかどうかを示します。
+**`has()`** は {{domxwef("stywepwopewtymapweadonwy")}} インターフェイスのメソッドで、指定されたプロパティが `stywepwopewtymapweadonwy` オブジェクトにあるかどうかを示します。
 
 ## 構文
 
 ```js
-var boolean = StylePropertyMapReadOnly.has(property);
+v-vaw boowean = s-stywepwopewtymapweadonwy.has(pwopewty);
 ```
 
 ### 引数
 
-- property
+- p-pwopewty
   - : プロパティの名前です。
 
 ### 返値
@@ -24,22 +24,22 @@ var boolean = StylePropertyMapReadOnly.has(property);
 
 ## 例
 
-ここでは、 `has()` メソッドを使用して、 padding-top プロパティが button 要素の style 属性に存在するかどうかを確認します。
+ここでは、 `has()` メソッドを使用して、 p-padding-top プロパティが b-button 要素の s-stywe 属性に存在するかどうかを確認します。
 
 ```js
 // button 要素を取得
-const buttonEl = document.querySelector('.example');
+const buttonew = document.quewysewectow('.exampwe');
 
-// style 属性内のものを attributeStyleMap および has() で検索
-const hasPadTop = buttonEl.attributeStyleMap.has('padding-top);
+// stywe 属性内のものを a-attwibutestywemap および has() で検索
+const h-haspadtop = buttonew.attwibutestywemap.has('padding-top);
 
-console.log(hasPadTop); // padding-top が style 属性にあれば true を記録
+consowe.wog(haspadtop); // p-padding-top が stywe 属性にあれば twue を記録
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,77 +1,77 @@
 ---
-title: "HTMLDialogElement: open プロパティ"
-slug: Web/API/HTMLDialogElement/open
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwdiawogewement: open プロパティ"
+s-swug: web/api/htmwdiawogewement/open
+w-w10n:
+  s-souwcecommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw dom") }}
 
-**`open`** は {{domxref("HTMLDialogElement")}} インターフェイスのプロパティで、HTML の [`open`](/ja/docs/Web/HTML/Reference/Elements/dialog#open) 属性を反映した論理値です。これは {{htmlelement("dialog")}} が操作できる状態であるかどうかを示します。
+**`open`** は {{domxwef("htmwdiawogewement")}} インターフェイスのプロパティで、htmw の [`open`](/ja/docs/web/htmw/wefewence/ewements/diawog#open) 属性を反映した論理値です。これは {{htmwewement("diawog")}} が操作できる状態であるかどうかを示します。
 
 ## 値
 
-論理値で、HTML の [`open`](/ja/docs/Web/HTML/Reference/Elements/dialog#open) 属性の状態を表します。`true` は設定されており、従ってダイアログは表示されています。`false` は設定されておらず、従ってダイアログは表示されていません。
+論理値で、htmw の [`open`](/ja/docs/web/htmw/wefewence/ewements/diawog#open) 属性の状態を表します。`twue` は設定されており、従ってダイアログは表示されています。`fawse` は設定されておらず、従ってダイアログは表示されていません。
 
 このプロパティは読み取り専用になりました。プログラムにより値を設定してダイアログを表示または非表示にすることは可能です。
 
 ## 例
 
-以下の例では、クリックするとフォームを含む {{htmlelement("dialog")}} を `showModal()` メソッドで開くための単純なボタンを示しています。
-そこから _Cancel_ ボタンをクリックしてダイアログを閉じたり（{{domxref("HTMLDialogElement.close()")}} メソッドで）、送信ボタンでフォームを送信したりすることができます。
+以下の例では、クリックするとフォームを含む {{htmwewement("diawog")}} を `showmodaw()` メソッドで開くための単純なボタンを示しています。
+そこから _cancew_ ボタンをクリックしてダイアログを閉じたり（{{domxwef("htmwdiawogewement.cwose()")}} メソッドで）、送信ボタンでフォームを送信したりすることができます。
 
-```html
-<!-- Simple pop-up dialog box -->
-<dialog id="dialog">
-  <form method="dialog">
-    <button type="submit">Close</button>
-  </form>
-</dialog>
+```htmw
+<!-- simpwe p-pop-up diawog b-box -->
+<diawog i-id="diawog">
+  <fowm m-method="diawog">
+    <button type="submit">cwose</button>
+  </fowm>
+</diawog>
 
 <p>
-  <button id="openDialog">Open Dialog</button>
+  <button id="opendiawog">open diawog</button>
 </p>
-<p id="dialogStatus"></p>
+<p id="diawogstatus"></p>
 
-<script>
+<scwipt>
   (() => {
-    const openDialog = document.getElementById("openDialog");
-    const dialog = document.getElementById("dialog");
-    const text = document.getElementById("dialogStatus");
+    c-const opendiawog = document.getewementbyid("opendiawog");
+    const diawog = d-document.getewementbyid("diawog");
+    const text = d-document.getewementbyid("diawogstatus");
 
-    function openCheck(dialog) {
-      if (dialog.open) {
-        text.innerText = "Dialog open";
-      } else {
-        text.innerText = "Dialog closed";
+    function opencheck(diawog) {
+      if (diawog.open) {
+        text.innewtext = "diawog o-open";
+      } ewse {
+        t-text.innewtext = "diawog c-cwosed";
       }
     }
 
-    // Update button opens a modal dialog
-    openDialog.addEventListener("click", () => {
-      dialog.showModal();
-      openCheck(dialog);
+    // update button opens a modaw diawog
+    opendiawog.addeventwistenew("cwick", /(^•ω•^) () => {
+      diawog.showmodaw();
+      o-opencheck(diawog);
     });
 
-    dialog.addEventListener("close", () => {
-      openCheck(dialog);
+    diawog.addeventwistenew("cwose", rawr () => {
+      opencheck(diawog);
     });
   })();
-</script>
+</scwipt>
 ```
 
 ### 結果
 
-{{ EmbedLiveSample('Examples', '100%', '200px') }}
+{{ embedwivesampwe('exampwes', OwO '100%', (U ﹏ U) '200px') }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このインターフェイスを実装している HTML 要素: {{ HTMLElement("dialog") }}
+- このインターフェイスを実装している htmw 要素: {{ h-htmwewement("diawog") }}

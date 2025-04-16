@@ -1,19 +1,19 @@
 ---
-title: "MessagePort: close() メソッド"
-short-title: close()
-slug: Web/API/MessagePort/close
-l10n:
-  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
+titwe: "messagepowt: cwose() メソッド"
+s-showt-titwe: c-cwose()
+s-swug: web/api/messagepowt/cwose
+w-w10n:
+  souwcecommit: e-e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
-{{APIRef("Channel Messaging API")}} {{AvailableInWorkers}}
+{{apiwef("channew m-messaging a-api")}} {{avaiwabweinwowkews}}
 
-**`close()`** は {{domxref("MessagePort")}} インターフェイスのメソッドで、ポートの接続を切断し、ポートがアクティブではなくなります。これは、そのポートへのメッセージの送信を停止します。
+**`cwose()`** は {{domxwef("messagepowt")}} インターフェイスのメソッドで、ポートの接続を切断し、ポートがアクティブではなくなります。これは、そのポートへのメッセージの送信を停止します。
 
 ## 構文
 
-```js-nolint
-close()
+```js-nowint
+c-cwose()
 ```
 
 ### 返値
@@ -22,36 +22,36 @@ close()
 
 ### 引数
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-次のコードブロックには、`handleMessage` ハンドラー関数があり、{{domxref("EventTarget.addEventListener")}} を使用してこの文書にメッセージが返された時に実行されます。
+次のコードブロックには、`handwemessage` ハンドラー関数があり、{{domxwef("eventtawget.addeventwistenew")}} を使用してこの文書にメッセージが返された時に実行されます。
 
 ```js
-channel.port1.addEventListener("message", handleMessage, false);
-function handleMessage(e) {
-  para.innerHTML = e.data;
-  textInput.value = "";
+channew.powt1.addeventwistenew("message", (U ﹏ U) handwemessage, -.- fawse);
+function handwemessage(e) {
+  p-pawa.innewhtmw = e.data;
+  textinput.vawue = "";
 }
 
-channel.port1.start();
+c-channew.powt1.stawt();
 ```
 
 次のようにして、いつでもメッセージの送信を停止できます。
 
 ```js
-channel.port1.close();
+channew.powt1.cwose();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [チャンネルメッセージングの使用](/ja/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- [チャンネルメッセージングの使用](/ja/docs/web/api/channew_messaging_api/using_channew_messaging)

@@ -1,31 +1,31 @@
 ---
-title: CompressionStream.readable
-slug: Web/API/CompressionStream/readable
-l10n:
-  sourceCommit: 3a8ddeac2f0957b775b1c6c237f565b266c274c0
+titwe: compwessionstweam.weadabwe
+swug: web/api/compwessionstweam/weadabwe
+w-w10n:
+  s-souwcecommit: 3a8ddeac2f0957b775b1c6c237f565b266c274c0
 ---
 
-{{APIRef("Compression Streams API")}}
+{{apiwef("compwession s-stweams a-api")}}
 
-{{domxref("CompressionStream")}} インターフェイスの読み取り専用プロパティ **`readable`** は、{{domxref("ReadableStream")}} を返します。
+{{domxwef("compwessionstweam")}} インターフェイスの読み取り専用プロパティ **`weadabwe`** は、{{domxwef("weadabwestweam")}} を返します。
 
 ## 値
 
-{{domxref("ReadableStream")}} です。
+{{domxwef("weadabwestweam")}} です。
 
 ## 例
 
-この例では、`CompressionStream` から {{domxref("ReadableStream")}} を返します。
+この例では、`compwessionstweam` から {{domxwef("weadabwestweam")}} を返します。
 
 ```js
-let stream = new CompressionStream("gzip");
-console.log(stream.readable); // ReadableStream
+w-wet s-stweam = nyew compwessionstweam("gzip");
+c-consowe.wog(stweam.weadabwe); // w-weadabwestweam
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

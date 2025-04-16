@@ -1,34 +1,34 @@
 ---
-title: "HTMLMediaElement: currentSrc プロパティ"
-short-title: currentSrc
-slug: Web/API/HTMLMediaElement/currentSrc
-l10n:
-  sourceCommit: bd15d43260b7e72b1066c04d9d9f3b79129c619c
+titwe: "htmwmediaewement: cuwwentswc プロパティ"
+s-showt-titwe: c-cuwwentswc
+s-swug: web/api/htmwmediaewement/cuwwentswc
+w-w10n:
+  s-souwcecommit: b-bd15d43260b7e72b1066c04d9d9f3b79129c619c
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLMediaElement.currentSrc`** プロパティには、選択されたメディアリソースの絶対 URL が入っています。この選択は、例えば、ウェブサーバーがユーザーのディスプレイの解像度に基づいてメディアファイルを選択した場合に発生する可能性があります。 `networkState` プロパティが `EMPTY` の場合、値は空の文字列です。
+**`htmwmediaewement.cuwwentswc`** プロパティには、選択されたメディアリソースの絶対 u-uww が入っています。この選択は、例えば、ウェブサーバーがユーザーのディスプレイの解像度に基づいてメディアファイルを選択した場合に発生する可能性があります。 `netwowkstate` プロパティが `empty` の場合、値は空の文字列です。
 
 ## 値
 
-選択されたメディアソースの絶対 URL を含む文字列です。 `networkState` が `EMPTY` の場合、これは空の文字列になります。 それ以外の場合は、メディア要素内に含まれる {{domxref("HTMLSourceElement")}} によってリストされたリソースのいずれか、{{HTMLElement("source")}} 要素が指定されていない場合は値または `src` になります。
+選択されたメディアソースの絶対 uww を含む文字列です。 `netwowkstate` が `empty` の場合、これは空の文字列になります。 それ以外の場合は、メディア要素内に含まれる {{domxwef("htmwsouwceewement")}} によってリストされたリソースのいずれか、{{htmwewement("souwce")}} 要素が指定されていない場合は値または `swc` になります。
 
 ## 例
 
 ```js
-const obj = document.createElement("video");
-console.log(obj.currentSrc); // ""
+const obj = document.cweateewement("video");
+consowe.wog(obj.cuwwentswc); // ""
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLMediaElement")}}: `HTMLMediaElement.currentSrc` プロパティを定義しているインターフェイス
+- {{domxwef("htmwmediaewement")}}: `htmwmediaewement.cuwwentswc` プロパティを定義しているインターフェイス

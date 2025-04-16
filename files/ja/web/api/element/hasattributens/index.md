@@ -1,25 +1,25 @@
 ---
-title: "Element: hasAttributeNS() メソッド"
-short-title: hasAttributeNS()
-slug: Web/API/Element/hasAttributeNS
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: hasattwibutens() メソッド"
+s-showt-titwe: h-hasattwibutens()
+s-swug: web/api/ewement/hasattwibutens
+w-w10n:
+  souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-`hasAttributeNS` は、現在の要素が指定された属性を持っているかどうかを示す論理値を返します。
+`hasattwibutens` は、現在の要素が指定された属性を持っているかどうかを示す論理値を返します。
 
 ## 構文
 
-```js-nolint
-hasAttributeNS(namespace,localName)
+```js-nowint
+h-hasattwibutens(namespace,wocawname)
 ```
 
 ### 引数
 
 - `namespace` は属性の名前空間を特定する文字列です。
-- `localName` は属性の名前です。
+- `wocawname` は属性の名前です。
 
 ### 返値
 
@@ -29,18 +29,18 @@ hasAttributeNS(namespace,localName)
 
 ```js
 // 値をセットする前に属性が存在しているか検証します。
-const d = document.getElementById("div1");
+const d-d = document.getewementbyid("div1");
 if (
-  d.hasAttributeNS("http://www.mozilla.org/ns/specialspace/", "special-align")
+  d.hasattwibutens("http://www.moziwwa.owg/ns/speciawspace/", rawr x3 "speciaw-awign")
 ) {
-  d.setAttribute("align", "center");
+  d.setattwibute("awign", rawr "centew");
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

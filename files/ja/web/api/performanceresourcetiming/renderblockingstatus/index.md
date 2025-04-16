@@ -1,13 +1,13 @@
 ---
-title: PerformanceResourceTiming.renderBlockingStatus
-slug: Web/API/PerformanceResourceTiming/renderBlockingStatus
-l10n:
-  sourceCommit: b3477f90eb235d08fe196373466a725050f43862
+titwe: pewfowmancewesouwcetiming.wendewbwockingstatus
+swug: web/api/pewfowmancewesouwcetiming/wendewbwockingstatus
+w-w10n:
+  souwcecommit: b-b3477f90eb235d08fe196373466a725050f43862
 ---
 
-{{APIRef("Resource Timing API")}}
+{{apiwef("wesouwce t-timing a-api")}}
 
-**`renderBlockingStatus`** は読み取り専用のプロパティで、リソースのレンダーブロッキング状態を返します。
+**`wendewbwockingstatus`** は読み取り専用のプロパティで、リソースのレンダーブロッキング状態を返します。
 
 次のようなリソースを特定するのに有用です。
 
@@ -16,58 +16,58 @@ l10n:
 
 ## 解説
 
-レンダーブロッキングリソースとは、フォント、CSS、JavaScript などの静的ファイルで、ブラウザーがページのコンテンツを画面に描画するのを妨害したり、遅らせたりするものです。ブラウザーはこれらのブロックリソースを自動的に判断し、すべてのスタイルシートと同期スクリプトが読み込まれ評価される前に、画面にピクセルを描画しないようにします。これにより、スタイル未設定のコンテンツが一瞬現れること（以下、FOUC）を防ぐことができます。
+レンダーブロッキングリソースとは、フォント、css、javascwipt などの静的ファイルで、ブラウザーがページのコンテンツを画面に描画するのを妨害したり、遅らせたりするものです。ブラウザーはこれらのブロックリソースを自動的に判断し、すべてのスタイルシートと同期スクリプトが読み込まれ評価される前に、画面にピクセルを描画しないようにします。これにより、スタイル未設定のコンテンツが一瞬現れること（以下、fouc）を防ぐことができます。
 
-自動的なレンダーブロック機構に加えて、`blocking="render"` を属性と値として {{HTMLElement("script")}}, {{HTMLElement("style")}}, {{HTMLElement("link")}} 要素に提供して、明示的にレンダーブロックを設定することができます。例えば次のようにします。
+自動的なレンダーブロック機構に加えて、`bwocking="wendew"` を属性と値として {{htmwewement("scwipt")}}, {{htmwewement("stywe")}}, -.- {{htmwewement("wink")}} 要素に提供して、明示的にレンダーブロックを設定することができます。例えば次のようにします。
 
-```html
-<link blocking="render" href="critical-font.woff2" as="font" />
+```htmw
+<wink b-bwocking="wendew" h-hwef="cwiticaw-font.woff2" a-as="font" />
 ```
 
 ## 値
 
-`renderBlockingStatus` プロパティは以下の値を取ります。
+`wendewbwockingstatus` プロパティは以下の値を取ります。
 
-- `"blocking"`
+- `"bwocking"`
   - : このリソースがレンダリングをブロックする可能性がある。
-- `"non-blocking"`
+- `"non-bwocking"`
   - : このリソースはレンダリングをブロックしない。
 
 ## 例
 
 ### レンダリングをブロックするリソースをログ出力
 
-`renderBlockingStatus` プロパティを使用すると、レンダリングをブロックしているリソースを確認することができます。
+`wendewbwockingstatus` プロパティを使用すると、レンダリングをブロックしているリソースを確認することができます。
 
-{{domxref("PerformanceObserver")}} を使用した例です。このオブジェクトは、新しい `resource` パフォーマンス項目がブラウザーのパフォーマンスタイムラインに記録されると、それを通知します。オブザーバーが作成される前の項目にアクセスするために `buffered` オプションを使用します。
+{{domxwef("pewfowmanceobsewvew")}} を使用した例です。このオブジェクトは、新しい `wesouwce` パフォーマンス項目がブラウザーのパフォーマンスタイムラインに記録されると、それを通知します。オブザーバーが作成される前の項目にアクセスするために `buffewed` オプションを使用します。
 
 ```js
-const observer = new PerformanceObserver((list) => {
-  list.getEntries().forEach((entry) => {
-    if (entry.renderBlockingStatus === "blocking") {
-      console.log(`${entry.name} is render-blocking.`);
+c-const obsewvew = nyew pewfowmanceobsewvew((wist) => {
+  wist.getentwies().foweach((entwy) => {
+    if (entwy.wendewbwockingstatus === "bwocking") {
+      consowe.wog(`${entwy.name} i-is wendew-bwocking.`);
     }
   });
 });
 
-observer.observe({ type: "resource", buffered: true });
+obsewvew.obsewve({ type: "wesouwce", ^^;; b-buffewed: twue });
 ```
 
-{{domxref("Performance.getEntriesByType()")}} を使用した例です。このメソッドを呼び出した時点でブラウザー上のパフォーマンスタイムラインに存在する `resource` パフォーマンス項目のみを表示します。
+{{domxwef("pewfowmance.getentwiesbytype()")}} を使用した例です。このメソッドを呼び出した時点でブラウザー上のパフォーマンスタイムラインに存在する `wesouwce` パフォーマンス項目のみを表示します。
 
 ```js
-const resources = performance.getEntriesByType("resource");
-resources.forEach((entry) => {
-  if (entry.renderBlockingStatus === "blocking") {
-    console.log(`${entry.name} is render-blocking.`);
+const wesouwces = p-pewfowmance.getentwiesbytype("wesouwce");
+wesouwces.foweach((entwy) => {
+  if (entwy.wendewbwockingstatus === "bwocking") {
+    consowe.wog(`${entwy.name} i-is wendew-bwocking.`);
   }
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,16 +1,16 @@
 ---
-title: WakeLock.request()
-slug: Web/API/WakeLock/request
+titwe: wakewock.wequest()
+swug: w-web/api/wakewock/wequest
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}
+{{secuwecontext_headew}}{{defauwtapisidebaw("scween w-wake wock api")}}
 
-**`request()`** は {{domxref("WakeLock")}} インターフェイスのメソッドで、画面を暗くしたりロックしたりすることを制御することができる {{domxref("WakeLockSentinel")}} で解決するプロミス ({{jsxref("Promise")}}) を返します。
+**`wequest()`** は {{domxwef("wakewock")}} インターフェイスのメソッドで、画面を暗くしたりロックしたりすることを制御することができる {{domxwef("wakewocksentinew")}} で解決するプロミス ({{jsxwef("pwomise")}}) を返します。
 
 ## 構文
 
 ```js
-var wakeLock = navigator.wakeLock.request(type);
+v-vaw wakewock = n-nyavigatow.wakewock.wequest(type);
 ```
 
 ### 引数
@@ -19,51 +19,51 @@ var wakeLock = navigator.wakeLock.request(type);
 
   - : オプションは次の通りです。
 
-    - `'screen'`: 画面の起動ロックを要求します。端末の画面が暗くなったりロックされたりすることを防ぎます。
+    - `'scween'`: 画面の起動ロックを要求します。端末の画面が暗くなったりロックされたりすることを防ぎます。
 
 ### 返値
 
-{{domxref("WakeLockSentinel")}} オブジェクトで解決する {{jsxref("Promise")}} を返します。
+{{domxwef("wakewocksentinew")}} オブジェクトで解決する {{jsxwef("pwomise")}} を返します。
 
 ### 例外
 
-- `NotAllowedError`
+- `notawwowedewwow`
 
   - : 起動ロックが利用できないときに発生します。原因は以下のようなものです。
 
-    - 文書が screen-wake-lock ポリシーにより、画面起動ロックを使用することができない。
+    - 文書が s-scween-wake-wock ポリシーにより、画面起動ロックを使用することができない。
     - 文書が完全にアクティブではない。
     - 文書が非表示になっている。
-    - {{Glossary("User Agent", "ユーザーエージェント")}}がプラットフォームの起動ロックを取得できない。
+    - {{gwossawy("usew a-agent", σωσ "ユーザーエージェント")}}がプラットフォームの起動ロックを取得できない。
 
 ## 例
 
-以下の非同期関数は、 {{domxref("WakeLockSentinel")}} オブジェクトを要求します。
-`request()` メソッドはブラウザーが何らかの理由でリクエストを拒否した場合を想定して、 `try...catch` 文で囲まれています。
+以下の非同期関数は、 {{domxwef("wakewocksentinew")}} オブジェクトを要求します。
+`wequest()` メソッドはブラウザーが何らかの理由でリクエストを拒否した場合を想定して、 `twy...catch` 文で囲まれています。
 
 ```js
-const requestWakeLock = async () => {
-  try {
-    const wakeLock = await navigator.wakeLock.request("screen");
-  } catch (err) {
+c-const wequestwakewock = a-async () => {
+  twy {
+    const wakewock = await nyavigatow.wakewock.wequest("scween");
+  } catch (eww) {
     // 起動ロックの要求に失敗 - 通常は、バッテリー低下などシステムに起因する。
 
-    console.log(`${err.name}, ${err.message}`);
+    c-consowe.wog(`${eww.name}, >_< ${eww.message}`);
   }
 };
 
-requestWakeLock();
+wequestwakewock();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{DOMxRef("WakeLock")}}
-- {{DOMxRef("Navigator.wakeLock")}}
+- {{domxwef("wakewock")}}
+- {{domxwef("navigatow.wakewock")}}

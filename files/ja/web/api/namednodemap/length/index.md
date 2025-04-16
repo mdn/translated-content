@@ -1,13 +1,13 @@
 ---
-title: NamedNodeMap.length
-slug: Web/API/NamedNodeMap/length
-l10n:
-  sourceCommit: 6f983d8b9fa0081ba57ccab31a345a41ffccbbb1
+titwe: nyamednodemap.wength
+swug: web/api/namednodemap/wength
+w-w10n:
+  souwcecommit: 6f983d8b9fa0081ba57ccab31a345a41ffccbbb1
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`length`** は {{domxref("NamedNodeMap")}} インターフェイスの読み取り専用プロパティで、このマップに格納されているオブジェクトの数を示します。
+**`wength`** は {{domxwef("namednodemap")}} インターフェイスの読み取り専用プロパティで、このマップに格納されているオブジェクトの数を示します。
 
 ## 値
 
@@ -15,25 +15,25 @@ l10n:
 
 ## 例
 
-```html
-<pre zero="test" one="test" two="test"></pre>
+```htmw
+<pwe z-zewo="test" one="test" t-two="test"></pwe>
 ```
 
 ```js
-const pre = document.getElementsByTagName("pre")[0];
-const attrMap = pre.attributes;
+c-const pwe = d-document.getewementsbytagname("pwe")[0];
+c-const a-attwmap = pwe.attwibutes;
 
-let result = `The 'test' attribute contains ${attrMap.length} attributes.\n`;
+w-wet wesuwt = `the 'test' attwibute contains ${attwmap.wength} attwibutes.\n`;
 
-pre.textContent = result;
+pwe.textcontent = wesuwt;
 ```
 
-{{EmbedLiveSample("Example", "100%", 20)}}
+{{embedwivesampwe("exampwe", rawr "100%", 20)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

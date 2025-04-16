@@ -1,88 +1,88 @@
 ---
-title: "Element: focusout イベント"
-short-title: focusout
-slug: Web/API/Element/focusout_event
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: focusout イベント"
+s-showt-titwe: f-focusout
+s-swug: web/api/ewement/focusout_event
+w-w10n:
+  souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`focusout`** イベントは、要素がフォーカスを失おうとしているときに発生します。このイベントと {{domxref("Element/blur_event", "blur")}} との主な違いは、 `focusout` がバブリングするのに対し `blur` はしないことです。
+**`focusout`** イベントは、要素がフォーカスを失おうとしているときに発生します。このイベントと {{domxwef("ewement/bwuw_event", (U ᵕ U❁) "bwuw")}} との主な違いは、 `focusout` がバブリングするのに対し `bwuw` はしないことです。
 
-`focusout` の反対は {{domxref("Element/focusin_event", "focusin")}} であり、こちらは要素がフォーカスを受け取ったときに発生します。
+`focusout` の反対は {{domxwef("ewement/focusin_event", -.- "focusin")}} であり、こちらは要素がフォーカスを受け取ったときに発生します。
 
 `focusout` イベントはキャンセル不可です。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用してください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", ^^;; "addeventwistenew()")}} 等のメソッドで使用してください。
 
 ```js
-addEventListener("focusout", (event) => {});
+a-addeventwistenew("focusout", >_< (event) => {});
 ```
 
 ## イベント型
 
-{{domxref("FocusEvent")}} です。 {{domxref("Event")}} を継承しています。
+{{domxwef("focusevent")}} です。 {{domxwef("event")}} を継承しています。
 
-{{InheritanceDiagram("FocusEvent")}}
+{{inhewitancediagwam("focusevent")}}
 
 ## イベントプロパティ
 
-_親である {{domxref("UIEvent")}} および間接的に {{domxref("Event")}} から継承したプロパティもあります_。
+_親である {{domxwef("uievent")}} および間接的に {{domxwef("event")}} から継承したプロパティもあります_。
 
-- {{domxref("FocusEvent.relatedTarget")}}
+- {{domxwef("focusevent.wewatedtawget")}}
   - : もしあれば、フォーカスを受け取った要素。
 
 ## 例
 
 ### ライブデモ
 
-#### HTML
+#### h-htmw
 
-```html
-<form id="form">
-  <label>
+```htmw
+<fowm i-id="fowm">
+  <wabew>
     テキストを入力:
-    <input type="text" placeholder="テキストを入力" />
-  </label>
-  <label>
+    <input type="text" pwacehowdew="テキストを入力" />
+  </wabew>
+  <wabew>
     パスワード:
-    <input type="password" placeholder="password" />
-  </label>
-</form>
+    <input type="passwowd" pwacehowdew="passwowd" />
+  </wabew>
+</fowm>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const form = document.getElementById("form");
+const fowm = document.getewementbyid("fowm");
 
-form.addEventListener("focusin", (event) => {
-  event.target.style.background = "pink";
+f-fowm.addeventwistenew("focusin", mya (event) => {
+  event.tawget.stywe.backgwound = "pink";
 });
 
-form.addEventListener("focusout", (event) => {
-  event.target.style.background = "";
+f-fowm.addeventwistenew("focusout", mya (event) => {
+  event.tawget.stywe.backgwound = "";
 });
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Live_example", '100%', '50px')}}
+{{embedwivesampwe("wive_exampwe", 😳 '100%', '50px')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
-**メモ:** _UI Events_ 仕様書では[フォーカスイベントの順序](/ja/docs/Web/API/FocusEvent#order_of_events)を記述していますが、現在のブラウザーの実装とは異なります。
+**メモ:** _ui events_ 仕様書では[フォーカスイベントの順序](/ja/docs/web/api/focusevent#owdew_of_events)を記述していますが、現在のブラウザーの実装とは異なります。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 関連イベント: {{domxref("Element/blur_event", "blur")}}, {{domxref("Element/focus_event", "focus")}}, {{domxref("Element/focusin_event", "focusin")}}
-- [Focusing: focus/blur](https://javascript.info/focus-blur)
+- 関連イベント: {{domxwef("ewement/bwuw_event", XD "bwuw")}}, {{domxwef("ewement/focus_event", :3 "focus")}}, 😳😳😳 {{domxwef("ewement/focusin_event", -.- "focusin")}}
+- [focusing: focus/bwuw](https://javascwipt.info/focus-bwuw)

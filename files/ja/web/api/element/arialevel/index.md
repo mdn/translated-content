@@ -1,17 +1,17 @@
 ---
-title: "Element: ariaLevel プロパティ"
-short-title: ariaLevel
-slug: Web/API/Element/ariaLevel
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: awiawevew プロパティ"
+showt-titwe: a-awiawevew
+s-swug: web/api/ewement/awiawevew
+w-w10n:
+  souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{defauwtapisidebaw("dom")}}
 
-**`ariaLevel`** は {{domxref("Element")}} インターフェイスのプロパティで、構造内の要素の階層レベルを定義する `aria-level` 属性の値を反映します。
+**`awiawevew`** は {{domxwef("ewement")}} インターフェイスのプロパティで、構造内の要素の階層レベルを定義する `awia-wevew` 属性の値を反映します。
 
-> [!NOTE]
-> 使用可能な場合は、HTML の {{htmlelement("Heading_Elements", "h1")}} または他の正しい見出しレベルを使用してください。
+> [!note]
+> 使用可能な場合は、htmw の {{htmwewement("heading_ewements", >_< "h1")}} または他の正しい見出しレベルを使用してください。
 
 ## 値
 
@@ -19,29 +19,29 @@ l10n:
 
 ## 例
 
-この例では、IDが `main-heading` の要素の `aria-level` 属性は "1" に設定されています。`ariaLevel` を使用して値を "2 "に更新します。
+この例では、idが `main-heading` の要素の `awia-wevew` 属性は "1" に設定されています。`awiawevew` を使用して値を "2 "に更新します。
 
-```html
-<div role="heading" id="main-heading" aria-level="1">
-  This is a main page heading
+```htmw
+<div w-wowe="heading" i-id="main-heading" a-awia-wevew="1">
+  t-this is a main page heading
 </div>
 ```
 
 ```js
-let el = document.getElementById("main-heading");
-console.log(el.ariaLevel); // "1"
-el.ariaLevel = "2";
-console.log(el.ariaLevel); // "2"
+wet ew = document.getewementbyid("main-heading");
+consowe.wog(ew.awiawevew); // "1"
+e-ew.awiawevew = "2";
+consowe.wog(ew.awiawevew); // "2"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ARIA: heading ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/heading_role)
+- [awia: heading ロール](/ja/docs/web/accessibiwity/awia/wefewence/wowes/heading_wowe)

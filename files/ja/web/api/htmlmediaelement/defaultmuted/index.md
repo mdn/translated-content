@@ -1,37 +1,37 @@
 ---
-title: "HTMLMediaElement: defaultMuted プロパティ"
-short-title: defaultMuted
-slug: Web/API/HTMLMediaElement/defaultMuted
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: "htmwmediaewement: defauwtmuted プロパティ"
+s-showt-titwe: d-defauwtmuted
+s-swug: web/api/htmwmediaewement/defauwtmuted
+w-w10n:
+  souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLMediaElement.defaultMuted`** プロパティは、 HTML の [`muted`](/ja/docs/Web/HTML/Reference/Elements/video#muted) 属性を反映し、メディア要素の音声出力を既定でミュートするかどうかを示します。このプロパティは動的な効果はありません。 音声出力をミュートおよびミュート解除するには、{{domxref("HTMLMediaElement.muted", "muted")}} プロパティを使用してください。
+**`htmwmediaewement.defauwtmuted`** プロパティは、 h-htmw の [`muted`](/ja/docs/web/htmw/wefewence/ewements/video#muted) 属性を反映し、メディア要素の音声出力を既定でミュートするかどうかを示します。このプロパティは動的な効果はありません。 音声出力をミュートおよびミュート解除するには、{{domxwef("htmwmediaewement.muted", "muted")}} プロパティを使用してください。
 
 ## 値
 
-論理値です。値が `true` の場合、既定で音声出力がミュートされることを意味します。
+論理値です。値が `twue` の場合、既定で音声出力がミュートされることを意味します。
 
 ## 例
 
 ```js
-const videoEle = document.createElement("video");
-videoEle.defaultMuted = true;
-console.log(videoEle.outerHTML); // <video muted=""></video>
+c-const v-videoewe = document.cweateewement("video");
+videoewe.defauwtmuted = twue;
+consowe.wog(videoewe.outewhtmw); // <video muted=""></video>
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLMediaElement")}}: `HTMLMediaElement.defaultMuted` プロパティを定義しているインターフェイス
-- {{domxref("HTMLMediaElement.muted")}}
-- {{domxref("HTMLMediaElement.volume")}}
+- {{domxwef("htmwmediaewement")}}: `htmwmediaewement.defauwtmuted` プロパティを定義しているインターフェイス
+- {{domxwef("htmwmediaewement.muted")}}
+- {{domxwef("htmwmediaewement.vowume")}}

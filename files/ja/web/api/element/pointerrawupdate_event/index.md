@@ -1,76 +1,76 @@
 ---
-title: "Element: pointerrawupdate イベント"
-short-title: pointerrawupdate
-slug: Web/API/Element/pointerrawupdate_event
-l10n:
-  sourceCommit: ab4fde9db98cad2e7a80653723533ff1663ada2d
+titwe: "ewement: pointewwawupdate イベント"
+s-showt-titwe: p-pointewwawupdate
+s-swug: web/api/ewement/pointewwawupdate_event
+w-w10n:
+  s-souwcecommit: a-ab4fde9db98cad2e7a80653723533ff1663ada2d
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{apiwef}}{{seecompattabwe}}
 
-**`pointerrawupdate`** は {{DOMxRef('PointerEvent')}} で、ポインターに [`pointerdown`](/ja/docs/Web/API/Element/pointerdown_event) または [`pointerup`](/ja/docs/Web/API/Element/pointerup_event) イベントが発生しない変化が起きたときに発生します。
-これらのプロパティの一覧は [`pointermove`](/ja/docs/Web/API/Element/pointermove_event) を参照してください。
+**`pointewwawupdate`** は {{domxwef('pointewevent')}} で、ポインターに [`pointewdown`](/ja/docs/web/api/ewement/pointewdown_event) または [`pointewup`](/ja/docs/web/api/ewement/pointewup_event) イベントが発生しない変化が起きたときに発生します。
+これらのプロパティの一覧は [`pointewmove`](/ja/docs/web/api/ewement/pointewmove_event) を参照してください。
 
-イベントループ内で配信されていない、同じポインター ID を持つ別の `pointerrawupdate` イベントが既に存在する場合、`pointerrawupdate` イベントは併合イベントになる可能性があります。
-併合イベントの詳細については、{{domxref("PointerEvent.getCoalescedEvents")}} のドキュメントを参照してください。
+イベントループ内で配信されていない、同じポインター i-id を持つ別の `pointewwawupdate` イベントが既に存在する場合、`pointewwawupdate` イベントは併合イベントになる可能性があります。
+併合イベントの詳細については、{{domxwef("pointewevent.getcoawescedevents")}} のドキュメントを参照してください。
 
-`pointerrawupdate` イベントのリスナーは、JavaScript が高頻度のイベントを必要とし、それらが配信されると同時に素早く処理できる場合にのみ追加すべきです。
-ほとんどの用途では、`pointerrawupdate` イベント用のリスナーを追加することで、パフォーマンスに影響が出る可能性があるため、他のポインターイベント型で十分です。
+`pointewwawupdate` イベントのリスナーは、javascwipt が高頻度のイベントを必要とし、それらが配信されると同時に素早く処理できる場合にのみ追加すべきです。
+ほとんどの用途では、`pointewwawupdate` イベント用のリスナーを追加することで、パフォーマンスに影響が出る可能性があるため、他のポインターイベント型で十分です。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", (U ᵕ U❁) "addeventwistenew()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("pointerrawupdate", (event) => {});
+a-addeventwistenew("pointewwawupdate", -.- (event) => {});
 
-onpointerrawupdate = (event) => {};
+onpointewwawupdate = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("PointerEvent")}} です。 {{domxref("Event")}} を継承しています。
+{{domxwef("pointewevent")}} です。 {{domxwef("event")}} を継承しています。
 
-{{InheritanceDiagram("PointerEvent")}}
+{{inhewitancediagwam("pointewevent")}}
 
 ## イベントプロパティ
 
-このイベントは、{{domxref("PointerEvent")}} インターフェイスのプロパティを実装しています。
+このイベントは、{{domxwef("pointewevent")}} インターフェイスのプロパティを実装しています。
 
 ## 例
 
 ```js
-addEventListener("pointerrawupdate", (event) => {
-  if (event.getCoalescedEvents && event.getCoalescedEvents().length > 1) {
-    console.log("Coalesced events:", event.getCoalescedEvents().length);
-    for (let coalescedEvent of event.getCoalescedEvents()) {
+addeventwistenew("pointewwawupdate", ^^;; (event) => {
+  if (event.getcoawescedevents && event.getcoawescedevents().wength > 1) {
+    c-consowe.wog("coawesced events:", >_< event.getcoawescedevents().wength);
+    fow (wet c-coawescedevent of event.getcoawescedevents()) {
       // 併合されたイベントに対して何かをする
     }
-  } else {
+  } e-ewse {
     // イベントに対して何かをする
-    console.log("Raw event", event);
+    consowe.wog("waw event", mya event);
   }
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- Related events
+- wewated events
 
-  - [`gotpointercapture`](/ja/docs/Web/API/Element/gotpointercapture_event)
-  - [`lostpointercapture`](/ja/docs/Web/API/Element/lostpointercapture_event)
-  - [`pointerover`](/ja/docs/Web/API/Element/pointerover_event)
-  - [`pointerenter`](/ja/docs/Web/API/Element/pointerenter_event)
-  - [`pointerdown`](/ja/docs/Web/API/Element/pointerdown_event)
-  - [`pointermove`](/ja/docs/Web/API/Element/pointermove_event)
-  - [`pointerup`](/ja/docs/Web/API/Element/pointerup_event)
-  - [`pointerout`](/ja/docs/Web/API/Element/pointerout_event)
-  - [`pointerleave`](/ja/docs/Web/API/Element/pointerleave_event)
+  - [`gotpointewcaptuwe`](/ja/docs/web/api/ewement/gotpointewcaptuwe_event)
+  - [`wostpointewcaptuwe`](/ja/docs/web/api/ewement/wostpointewcaptuwe_event)
+  - [`pointewovew`](/ja/docs/web/api/ewement/pointewovew_event)
+  - [`pointewentew`](/ja/docs/web/api/ewement/pointewentew_event)
+  - [`pointewdown`](/ja/docs/web/api/ewement/pointewdown_event)
+  - [`pointewmove`](/ja/docs/web/api/ewement/pointewmove_event)
+  - [`pointewup`](/ja/docs/web/api/ewement/pointewup_event)
+  - [`pointewout`](/ja/docs/web/api/ewement/pointewout_event)
+  - [`pointewweave`](/ja/docs/web/api/ewement/pointewweave_event)

@@ -1,14 +1,14 @@
 ---
-title: "VideoFrame: codedHeight プロパティ"
-short-title: codedHeight
-slug: Web/API/VideoFrame/codedHeight
-l10n:
-  sourceCommit: 532ecbca7b68e7defa4612bc7b00885a13163641
+titwe: "videofwame: codedheight プロパティ"
+s-showt-titwe: c-codedheight
+swug: w-web/api/videofwame/codedheight
+w-w10n:
+  souwcecommit: 532ecbca7b68e7defa4612bc7b00885a13163641
 ---
 
-{{APIRef("Web Codecs API")}}
+{{apiwef("web c-codecs api")}}
 
-**`codedHeight`** は {{domxref("VideoFrame")}} インターフェイスのプロパティで、 VideoFrame の高さをピクセル単位で返すもので、目に見えないパディングも含む可能性があり、比率の調整を考慮する前のものです。
+**`codedheight`** は {{domxwef("videofwame")}} インターフェイスのプロパティで、 v-videofwame の高さをピクセル単位で返すもので、目に見えないパディングも含む可能性があり、比率の調整を考慮する前のものです。
 
 ## 値
 
@@ -16,16 +16,16 @@ l10n:
 
 ## 例
 
-次の例は `codedHeight` をコンソールに出力します。
+次の例は `codedheight` をコンソールに出力します。
 
 ```js
-console.log(VideoFrame.codedHeight);
+c-consowe.wog(videofwame.codedheight);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

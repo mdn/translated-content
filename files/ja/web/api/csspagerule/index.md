@@ -1,48 +1,48 @@
 ---
-title: CSSPageRule
-slug: Web/API/CSSPageRule
-l10n:
-  sourceCommit: 164d2b6e6c9ce32fcb8ad19436fe44766cb5c3eb
+titwe: csspagewuwe
+swug: web/api/csspagewuwe
+w-w10n:
+  souwcecommit: 164d2b6e6c9ce32fcb8ad19436fe44766cb5c3eb
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-**`CSSPageRule`** は単一の CSS {{cssxref("@page")}} ルールを表します。
+**`csspagewuwe`** は単一の c-css {{cssxwef("@page")}} ルールを表します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-_祖先である {{domxref("CSSRule")}} からプロパティを継承しています。_
+_祖先である {{domxwef("csswuwe")}} からプロパティを継承しています。_
 
-- {{domxref("CSSPageRule.selectorText")}}
+- {{domxwef("csspagewuwe.sewectowtext")}}
   - : このアットルールに関連付けられたページセレクターのテキストを表します。
-- {{domxref("CSSPageRule.style")}} {{ReadOnlyInline}}
-  - : このアットルールに関連付けられた[宣言ブロック](/ja/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block)を返します。
+- {{domxwef("csspagewuwe.stywe")}} {{weadonwyinwine}}
+  - : このアットルールに関連付けられた[宣言ブロック](/ja/docs/web/api/css_object_modew/css_decwawation_bwock)を返します。
 
 ## インスタンスメソッド
 
-_祖先である {{domxref("CSSRule")}} からメソッドを継承しています。_
+_祖先である {{domxwef("csswuwe")}} からメソッドを継承しています。_
 
 ## 例
 
-このスタイルシートには単一の {{cssxref("@page")}} ルールがあるので、最初の（そして唯一の）返されるルールは `CSSPageRule` になります。
+このスタイルシートには単一の {{cssxwef("@page")}} ルールがあるので、最初の（そして唯一の）返されるルールは `csspagewuwe` になります。
 
 ```css
 @page {
-  margin: 1cm;
+  m-mawgin: 1cm;
 }
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0]); // CSSPageRule
+w-wet mywuwes = d-document.stywesheets[0].csswuwes;
+c-consowe.wog(mywuwes[0]); // csspagewuwe
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

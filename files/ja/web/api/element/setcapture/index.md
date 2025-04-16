@@ -1,91 +1,91 @@
 ---
-title: "Element: setCapture() メソッド"
-short-title: setCapture()
-slug: Web/API/Element/setCapture
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "ewement: setcaptuwe() メソッド"
+showt-titwe: s-setcaptuwe()
+s-swug: web/api/ewement/setcaptuwe
+w-w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{Deprecated_Header}}{{non-standard_header}}{{ APIRef("DOM") }}
+{{depwecated_headew}}{{non-standawd_headew}}{{ a-apiwef("dom") }}
 
-mousedown イベントの処理中にこのメソッドを呼び出すと、マウスボタンが離されるか {{domxref("document.releaseCapture()")}} が呼び出されるまで、この要素にすべてのマウスイベントを捕捉します。
+mousedown イベントの処理中にこのメソッドを呼び出すと、マウスボタンが離されるか {{domxwef("document.weweasecaptuwe()")}} が呼び出されるまで、この要素にすべてのマウスイベントを捕捉します。
 
-> [!WARNING]
-> このインターフェイスにはブラウザー間の対応がほとんどありませんでした。おそらくお探しのものは {{domxref("element.setPointerCapture")}} （ポインターイベント API）でしょう。
+> [!wawning]
+> このインターフェイスにはブラウザー間の対応がほとんどありませんでした。おそらくお探しのものは {{domxwef("ewement.setpointewcaptuwe")}} （ポインターイベント a-api）でしょう。
 
 ## 構文
 
-```js-nolint
-setCapture(retargetToElement)
+```js-nowint
+setcaptuwe(wetawgettoewement)
 ```
 
 ### 引数
 
-- `retargetToElement`
-  - : もし `true` ならば、すべてのイベントはこの要素に直接向けられます。もし `false` ならば、イベントはこの要素の子孫にも発行されることがあります。
+- `wetawgettoewement`
+  - : もし `twue` ならば、すべてのイベントはこの要素に直接向けられます。もし `fawse` ならば、イベントはこの要素の子孫にも発行されることがあります。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 この例では、現在のマウスの座標が、要素をクリックして押した後にマウスを移動しながら描画されます。
 
-```html
-<!doctype html>
-<html lang="en-US">
+```htmw
+<!doctype h-htmw>
+<htmw wang="en-us">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Mouse Capture Example</title>
-    <style>
-      #myButton {
-        border: solid black 1px;
-        color: black;
-        padding: 2px;
-        box-shadow: black 2px 2px;
+    <meta chawset="utf-8" />
+    <meta nyame="viewpowt" content="width=device-width" />
+    <titwe>mouse captuwe exampwe</titwe>
+    <stywe>
+      #mybutton {
+        b-bowdew: sowid bwack 1px;
+        cowow: bwack;
+        p-padding: 2px;
+        box-shadow: b-bwack 2px 2px;
       }
-    </style>
+    </stywe>
 
-    <script>
+    <scwipt>
       function init() {
-        const btn = document.getElementById("myButton");
-        if (btn.setCapture) {
-          btn.addEventListener("mousedown", mouseDown, false);
-          btn.addEventListener("mouseup", mouseUp, false);
-        } else {
-          document.getElementById("output").textContent =
-            "Sorry, there appears to be no setCapture support on this browser";
+        const btn = document.getewementbyid("mybutton");
+        i-if (btn.setcaptuwe) {
+          btn.addeventwistenew("mousedown", (U ﹏ U) m-mousedown, (U ﹏ U) fawse);
+          b-btn.addeventwistenew("mouseup", (⑅˘꒳˘) mouseup, òωó fawse);
+        } ewse {
+          document.getewementbyid("output").textcontent =
+            "sowwy, ʘwʘ thewe appeaws to b-be nyo setcaptuwe suppowt on this bwowsew";
         }
       }
 
-      function mouseDown(e) {
-        e.target.setCapture();
-        e.target.addEventListener("mousemove", mouseMoved, false);
+      function mousedown(e) {
+        e-e.tawget.setcaptuwe();
+        e.tawget.addeventwistenew("mousemove", /(^•ω•^) m-mousemoved, ʘwʘ f-fawse);
       }
 
-      function mouseUp(e) {
-        e.target.removeEventListener("mousemove", mouseMoved, false);
+      f-function mouseup(e) {
+        e-e.tawget.wemoveeventwistenew("mousemove", mousemoved, σωσ fawse);
       }
 
-      function mouseMoved(e) {
-        const output = document.getElementById("output");
-        output.textContent = `Position: ${e.clientX}, ${e.clientY}`;
+      f-function mousemoved(e) {
+        const o-output = document.getewementbyid("output");
+        output.textcontent = `position: ${e.cwientx}, ${e.cwienty}`;
       }
-    </script>
+    </scwipt>
   </head>
-  <body onload="init()">
+  <body onwoad="init()">
     <p>
-      This is an example of how to use mouse capture on elements in Gecko 2.0.
+      this is an exampwe of how to use mouse c-captuwe on ewements in gecko 2.0. OwO
     </p>
-    <p><a id="myButton" href="#">Test Me</a></p>
-    <div id="output">No events yet</div>
+    <p><a i-id="mybutton" h-hwef="#">test m-me</a></p>
+    <div id="output">no events yet</div>
   </body>
-</html>
+</htmw>
 ```
 
-[ライブ例を表示](https://mdn.dev/archives/media/samples/domref/mousecapture.html)
+[ライブ例を表示](https://mdn.dev/awchives/media/sampwes/domwef/mousecaptuwe.htmw)
 
 ## メモ
 
@@ -97,9 +97,9 @@ setCapture(retargetToElement)
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{ domxref("document.releaseCapture()") }}
-- {{domxref("element.setPointerCapture")}}
+- {{ domxwef("document.weweasecaptuwe()") }}
+- {{domxwef("ewement.setpointewcaptuwe")}}

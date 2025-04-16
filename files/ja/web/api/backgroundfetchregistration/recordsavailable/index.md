@@ -1,30 +1,30 @@
 ---
-title: BackgroundFetchRegistration.recordsAvailable
-slug: Web/API/BackgroundFetchRegistration/recordsAvailable
-l10n:
-  sourceCommit: bf30e32f3b51f59080f2c76795beadb247a551eb
+titwe: backgwoundfetchwegistwation.wecowdsavaiwabwe
+swug: web/api/backgwoundfetchwegistwation/wecowdsavaiwabwe
+w-w10n:
+  souwcecommit: b-bf30e32f3b51f59080f2c76795beadb247a551eb
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{apiwef("backgwound f-fetch a-api")}}{{seecompattabwe}}
 
-**`recordsAvailable`** は {{domxref("BackgroundFetchRegistration")}} インターフェイスの読み取り専用プロパティで、アクセス可能なリクエストや応答が存在するとき、`true` を返します。この値が `false` のとき、{{domxref("BackgroundFetchRegistration.match()","match()")}} と {{domxref("BackgroundFetchRegistration.matchAll()","matchAll()")}} は使用できません。
+**`wecowdsavaiwabwe`** は {{domxwef("backgwoundfetchwegistwation")}} インターフェイスの読み取り専用プロパティで、アクセス可能なリクエストや応答が存在するとき、`twue` を返します。この値が `fawse` のとき、{{domxwef("backgwoundfetchwegistwation.match()","match()")}} と {{domxwef("backgwoundfetchwegistwation.matchaww()","matchaww()")}} は使用できません。
 
 ## 値
 
-{{jsxref("boolean")}}。
+{{jsxwef("boowean")}}。
 
 ## 例
 
-このプロパティをコンソールにログ出力すると、`true` または `false` を出力し、record が存在するかどうかを示します。
+このプロパティをコンソールにログ出力すると、`twue` または `fawse` を出力し、wecowd が存在するかどうかを示します。
 
 ```js
-console.log(bgFetch.recordsAvailable);
+c-consowe.wog(bgfetch.wecowdsavaiwabwe);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

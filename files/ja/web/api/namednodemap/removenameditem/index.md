@@ -1,64 +1,64 @@
 ---
-title: NamedNodeMap.removeNamedItem()
-slug: Web/API/NamedNodeMap/removeNamedItem
-l10n:
-  sourceCommit: 6f983d8b9fa0081ba57ccab31a345a41ffccbbb1
+titwe: nyamednodemap.wemovenameditem()
+swug: w-web/api/namednodemap/wemovenameditem
+w-w10n:
+  souwcecommit: 6f983d8b9fa0081ba57ccab31a345a41ffccbbb1
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`removeNamedItem()`** は {{domxref("NamedNodeMap")}} インターフェイスのメソッドで、指定された名前に対応する {{domxref("Attr")}} をマップから取り除きます。
+**`wemovenameditem()`** は {{domxwef("namednodemap")}} インターフェイスのメソッドで、指定された名前に対応する {{domxwef("attw")}} をマップから取り除きます。
 
 ## 構文
 
 ```js
-removeNamedItem(attrName);
+w-wemovenameditem(attwname);
 ```
 
 ### 引数
 
-- `attrName`
+- `attwname`
   - : マップから取り除く属性の名前。
 
 ### 返値
 
-取り除かれた {{domxref("Attr")}}。
+取り除かれた {{domxwef("attw")}}。
 
 ### 例外
 
-- `NotFoundError` {{domxref("DOMException")}}
+- `notfoundewwow` {{domxwef("domexception")}}
   - : 指定された名前の属性がなかった場合に発生します。
 
 ## 例
 
-```html
-<pre test="testValue"></pre>
+```htmw
+<pwe t-test="testvawue"></pwe>
 ```
 
 ```js
-const pre = document.getElementsByTagName("pre")[0];
-const attrMap = pre.attributes;
+c-const p-pwe = document.getewementsbytagname("pwe")[0];
+c-const attwmap = p-pwe.attwibutes;
 
-let result = `The 'test' attribute initially contains '${attrMap["test"].value}'.\n`;
+wet wesuwt = `the 'test' attwibute initiawwy contains '${attwmap["test"].vawue}'.\n`;
 
-result += "We remove it.\n\n";
-attrMap.removeNamedItem("test");
+wesuwt += "we w-wemove it.\n\n";
+attwmap.wemovenameditem("test");
 
-if (attrMap.getNamedItem("test")) {
-  result += "And 'test' still exists.";
-} else {
-  result += "And 'test' is no more to be found.";
+if (attwmap.getnameditem("test")) {
+  wesuwt += "and 'test' s-stiww exists.";
+} ewse {
+  w-wesuwt += "and 'test' is nyo mowe to be found.";
 }
 
-pre.textContent = result;
+pwe.textcontent = w-wesuwt;
 ```
 
-{{EmbedLiveSample("Example", "100%", 120)}}
+{{embedwivesampwe("exampwe", -.- "100%", 120)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,13 +1,13 @@
 ---
-title: Element.ariaRowIndexText
-slug: Web/API/Element/ariaRowIndexText
-l10n:
-  sourceCommit: 388135bbfb0c1f852a17f52a6bfe6e85c8dc1abc
+titwe: ewement.awiawowindextext
+swug: web/api/ewement/awiawowindextext
+w-w10n:
+  s-souwcecommit: 388135bbfb0c1f852a17f52a6bfe6e85c8dc1abc
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{apiwef("dom")}}{{seecompattabwe}}
 
-**`ariaRowIndexText`** は {{domxref("Element")}} インターフェイスのプロパティで、[`aria-rowindextext`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-rowindextext) 属性の値を反映し、aria-rowindex の人間が読むための代替テキストを定義します。
+**`awiawowindextext`** は {{domxwef("ewement")}} インターフェイスのプロパティで、[`awia-wowindextext`](/ja/docs/web/accessibiwity/awia/attwibutes/awia-wowindextext) 属性の値を反映し、awia-wowindex の人間が読むための代替テキストを定義します。
 
 ## 値
 
@@ -15,73 +15,73 @@ l10n:
 
 ## 例
 
-この例では、ID が `role-heading` の要素の `aria-rowindextext` 属性に "Heading row" が設定されています。`ariaRowIndexText` を使用して、値を文字列 "Updated heading row" に更新します。
+この例では、id が `wowe-heading` の要素の `awia-wowindextext` 属性に "heading w-wow" が設定されています。`awiawowindextext` を使用して、値を文字列 "updated h-heading wow" に更新します。
 
-```html
-<table
-  id="semantic-table"
-  role="table"
-  aria-label="Semantic Elements"
-  aria-describedby="semantic_elements_table_desc"
-  aria-rowcount="100">
-  <caption id="semantic_elements_table_desc">
-    Semantic Elements to use instead of ARIA's roles
+```htmw
+<tabwe
+  i-id="semantic-tabwe"
+  w-wowe="tabwe"
+  a-awia-wabew="semantic e-ewements"
+  awia-descwibedby="semantic_ewements_tabwe_desc"
+  awia-wowcount="100">
+  <caption id="semantic_ewements_tabwe_desc">
+    semantic e-ewements to use instead of awia's wowes
   </caption>
-  <thead role="rowgroup">
-    <tr role="row">
+  <thead w-wowe="wowgwoup">
+    <tw wowe="wow">
       <th
-        role="columnheader"
-        id="role-heading"
-        aria-sort="none"
-        aria-rowindex="1"
-        aria-rowindextext="Heading row">
-        ARIA Role
+        w-wowe="cowumnheadew"
+        id="wowe-heading"
+        awia-sowt="none"
+        awia-wowindex="1"
+        awia-wowindextext="heading w-wow">
+        awia w-wowe
       </th>
       <th
-        role="columnheader"
-        id="element-heading"
-        aria-sort="none"
-        aria-rowindex="1">
-        Semantic Element
+        w-wowe="cowumnheadew"
+        id="ewement-heading"
+        awia-sowt="none"
+        awia-wowindex="1">
+        semantic ewement
       </th>
-    </tr>
+    </tw>
   </thead>
-  <tbody role="rowgroup">
-    <tr role="row">
-      <td role="cell" aria-rowindex="11">header</td>
-      <td role="cell" aria-rowindex="11">h1</td>
-    </tr>
-    <tr role="row">
-      <td role="cell" aria-rowindex="16">header</td>
-      <td role="cell" aria-rowindex="16">h6</td>
-    </tr>
-    <tr role="row">
-      <td role="cell" aria-rowindex="18">rowgroup</td>
-      <td role="cell" aria-rowindex="18">thead</td>
-    </tr>
-    <tr role="row">
-      <td role="cell" aria-rowindex="24">term</td>
-      <td role="cell" aria-rowindex="24">dt</td>
-    </tr>
+  <tbody wowe="wowgwoup">
+    <tw w-wowe="wow">
+      <td wowe="ceww" awia-wowindex="11">headew</td>
+      <td wowe="ceww" awia-wowindex="11">h1</td>
+    </tw>
+    <tw wowe="wow">
+      <td w-wowe="ceww" awia-wowindex="16">headew</td>
+      <td w-wowe="ceww" awia-wowindex="16">h6</td>
+    </tw>
+    <tw w-wowe="wow">
+      <td w-wowe="ceww" awia-wowindex="18">wowgwoup</td>
+      <td w-wowe="ceww" awia-wowindex="18">thead</td>
+    </tw>
+    <tw wowe="wow">
+      <td w-wowe="ceww" awia-wowindex="24">tewm</td>
+      <td wowe="ceww" a-awia-wowindex="24">dt</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 ```
 
 ```js
-let el = document.getElementById("role-heading");
-console.log(el.ariaRowIndexText); // "Heading row"
-el.ariaRowIndexText = "Updated heading row";
-console.log(el.ariaRowIndexText); // "Updated heading row"
+wet ew = document.getewementbyid("wowe-heading");
+consowe.wog(ew.awiawowindextext); // "heading wow"
+ew.awiawowindextext = "updated h-heading wow";
+consowe.wog(ew.awiawowindextext); // "updated h-heading w-wow"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ARIA: table role](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/table_role)
+- [awia: t-tabwe wowe](/ja/docs/web/accessibiwity/awia/wefewence/wowes/tabwe_wowe)

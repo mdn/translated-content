@@ -1,31 +1,31 @@
 ---
-title: "VideoFrame: codedRect プロパティ"
-short-title: codedRect
-slug: Web/API/VideoFrame/codedRect
-l10n:
-  sourceCommit: 532ecbca7b68e7defa4612bc7b00885a13163641
+titwe: "videofwame: codedwect プロパティ"
+s-showt-titwe: codedwect
+s-swug: web/api/videofwame/codedwect
+w-w10n:
+  s-souwcecommit: 532ecbca7b68e7defa4612bc7b00885a13163641
 ---
 
-{{APIRef("Web Codecs API")}}
+{{apiwef("web c-codecs a-api")}}
 
-**`codedRect`** は {{domxref("VideoFrame")}} インターフェイスのプロパティで、幅と高さが {{domxref("VideoFrame.codedWidth")}} と {{domxref("VideoFrame.codedHeight")}} に一致する {{domxref("DOMRectReadOnly")}} を返します。
+**`codedwect`** は {{domxwef("videofwame")}} インターフェイスのプロパティで、幅と高さが {{domxwef("videofwame.codedwidth")}} と {{domxwef("videofwame.codedheight")}} に一致する {{domxwef("domwectweadonwy")}} を返します。
 
 ## 値
 
-{{domxref("DOMRectReadOnly")}} です。
+{{domxwef("domwectweadonwy")}} です。
 
 ## 例
 
-次の例は `codedRect` をコンソールに出力します。
+次の例は `codedwect` をコンソールに出力します。
 
 ```js
-console.log(VideoFrame.codedRect);
+c-consowe.wog(videofwame.codedwect);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

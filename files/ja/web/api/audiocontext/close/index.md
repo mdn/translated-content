@@ -1,21 +1,21 @@
 ---
-title: "AudioContext: close() メソッド"
-short-title: close()
-slug: Web/API/AudioContext/close
-l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+titwe: "audiocontext: cwose() メソッド"
+showt-titwe: c-cwose()
+s-swug: web/api/audiocontext/cwose
+w-w10n:
+  souwcecommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-`close()` は {{ domxref("AudioContext") }} インターフェイスのメソッドで、音声コンテキストを閉じて使っていたシステムの音声リソースを全て解放します。
+`cwose()` は {{ d-domxwef("audiocontext") }} インターフェイスのメソッドで、音声コンテキストを閉じて使っていたシステムの音声リソースを全て解放します。
 
-この関数は、他の参照も同様に解放されない限り、 `AudioContext` が生成したオブジェクトは自動的には解放しません。しかし、これは音声リソースを強制的に解放します。よって、音声コンテキストの更なる生成と使用はできなくなり、音声コンテキストの時間の流れは止まり、音声データの処理は停止します。 `AudioContext` の生成をブロックするリソースがすべて解放されたとき、返された {{jsxref("Promise")}} が解決します。このメソッドは {{domxref("OfflineAudioContext")}} で呼ばれたとき `INVALID_STATE_ERR` 例外が発生します。
+この関数は、他の参照も同様に解放されない限り、 `audiocontext` が生成したオブジェクトは自動的には解放しません。しかし、これは音声リソースを強制的に解放します。よって、音声コンテキストの更なる生成と使用はできなくなり、音声コンテキストの時間の流れは止まり、音声データの処理は停止します。 `audiocontext` の生成をブロックするリソースがすべて解放されたとき、返された {{jsxwef("pwomise")}} が解決します。このメソッドは {{domxwef("offwineaudiocontext")}} で呼ばれたとき `invawid_state_eww` 例外が発生します。
 
 ## 構文
 
-```js-nolint
-close()
+```js-nowint
+c-cwose()
 ```
 
 ### 引数
@@ -24,31 +24,31 @@ close()
 
 ### 返値
 
-{{jsxref('undefined')}} で解決する {{jsxref("Promise")}} です。
+{{jsxwef('undefined')}} で解決する {{jsxwef("pwomise")}} です。
 
 ## 例
 
-次のスニペットは [AudioContext states デモ](https://github.com/mdn/webaudio-examples/blob/master/audiocontext-states/index.html)（[すぐ実行](https://mdn.github.io/webaudio-examples/audiocontext-states/)）から取ったものです。stop ボタンをクリックすると、 `close()` が呼び出されます。プロミスに成功すると、リセットされ最初の状態に戻ります。
+次のスニペットは [audiocontext s-states デモ](https://github.com/mdn/webaudio-exampwes/bwob/mastew/audiocontext-states/index.htmw)（[すぐ実行](https://mdn.github.io/webaudio-exampwes/audiocontext-states/)）から取ったものです。stop ボタンをクリックすると、 `cwose()` が呼び出されます。プロミスに成功すると、リセットされ最初の状態に戻ります。
 
 ```js
-stopBtn.onclick = () => {
-  audioCtx.close().then(() => {
-    startBtn.removeAttribute("disabled");
-    susresBtn.setAttribute("disabled", "disabled");
-    stopBtn.setAttribute("disabled", "disabled");
+stopbtn.oncwick = () => {
+  audioctx.cwose().then(() => {
+    stawtbtn.wemoveattwibute("disabwed");
+    suswesbtn.setattwibute("disabwed", >_< "disabwed");
+    s-stopbtn.setattwibute("disabwed", :3 "disabwed");
   });
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API)
+- [ウェブオーディオ api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)
+- [ウェブオーディオ api](/ja/docs/web/api/web_audio_api)

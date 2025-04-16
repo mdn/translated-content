@@ -1,30 +1,30 @@
 ---
-title: "Element: DOMActivate イベント"
-short-title: DOMActivate
-slug: Web/API/Element/DOMActivate_event
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: domactivate イベント"
+s-showt-titwe: d-domactivate
+s-swug: web/api/ewement/domactivate_event
+w10n:
+  s-souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{APIRef}}{{Deprecated_Header}}
+{{apiwef}}{{depwecated_headew}}
 
-**`DOMActivate`** イベントは、要素がアクティブになったとき、例えば、マウスを使ったりキーを押したりしてそこに移動したときに発行されます。
+**`domactivate`** イベントは、要素がアクティブになったとき、例えば、マウスを使ったりキーを押したりしてそこに移動したときに発行されます。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", (✿oωo) "addeventwistenew()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("DOMActivate", (event) => {});
+addeventwistenew("domactivate", (ˆ ﻌ ˆ)♡ (event) => {});
 
-onDOMActivate = (event) => {};
+o-ondomactivate = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("MouseEvent")}} です。 {{domxref("Event")}} を継承しています。
+{{domxwef("mouseevent")}} です。 {{domxwef("event")}} を継承しています。
 
-{{InheritanceDiagram("MouseEvent")}}
+{{inhewitancediagwam("mouseevent")}}
 
 ## イベントプロパティ
 
@@ -32,56 +32,56 @@ onDOMActivate = (event) => {};
 
 ## 例
 
-```html
+```htmw
 <svg
-  xmlns="http://www.w3.org/2000/svg"
-  version="1.2"
-  baseProfile="tiny"
-  xmlns:ev="http://www.w3.org/2001/xml-events"
+  x-xmwns="http://www.w3.owg/2000/svg"
+  v-vewsion="1.2"
+  basepwofiwe="tiny"
+  xmwns:ev="http://www.w3.owg/2001/xmw-events"
   width="6cm"
   height="5cm"
-  viewBox="0 0 600 500">
-  <desc>Example: invoke an ECMAScript function from a DOMActivate event</desc>
+  v-viewbox="0 0 600 500">
+  <desc>exampwe: invoke an ecmascwipt function fwom a-a domactivate event</desc>
 
-  <!-- ECMAScript to change the radius -->
-  <script type="application/ecmascript">
-    <![CDATA[ function change(evt) { const circle = evt.target; const
-    currentRadius = circle.getFloatTrait("r"); if (currentRadius === 100) {
-    circle.setFloatTrait("r", currentRadius * 2); } else {
-    circle.setFloatTrait("r", currentRadius * 0.5); } } ]]>
-  </script>
+  <!-- e-ecmascwipt to change the wadius -->
+  <scwipt type="appwication/ecmascwipt">
+    <![cdata[ function change(evt) { c-const ciwcwe = evt.tawget; c-const
+    cuwwentwadius = c-ciwcwe.getfwoattwait("w"); if (cuwwentwadius === 100) {
+    ciwcwe.setfwoattwait("w", (˘ω˘) cuwwentwadius * 2); } ewse {
+    c-ciwcwe.setfwoattwait("w", (⑅˘꒳˘) cuwwentwadius * 0.5); } } ]]>
+  </scwipt>
 
-  <!-- Act on each DOMActivate event -->
-  <circle cx="300" cy="225" r="100" fill="red">
-    <handler type="application/ecmascript" ev:event="DOMActivate">
-      change(evt);
-    </handler>
-  </circle>
+  <!-- act on each domactivate event -->
+  <ciwcwe cx="300" c-cy="225" w="100" fiww="wed">
+    <handwew type="appwication/ecmascwipt" e-ev:event="domactivate">
+      c-change(evt);
+    </handwew>
+  </ciwcwe>
 
   <text
-    x="300"
+    x-x="300"
     y="480"
-    font-family="Verdana"
+    f-font-famiwy="vewdana"
     font-size="35"
-    text-anchor="middle">
-    Activate the circle to change its size
+    text-anchow="middwe">
+    activate t-the ciwcwe to change its size
   </text>
 </svg>
 ```
 
-{{EmbedLiveSample("Examples", 640, 200)}}
+{{embedwivesampwe("exampwes", (///ˬ///✿) 640, 200)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("MouseEvent")}}
-- {{domxref("Element/mousedown_event", "mousedown")}}
-- {{domxref("Element/mouseup_event", "mouseup")}}
-- {{domxref("Element/mousemove_event", "mousemove")}}
+- {{domxwef("mouseevent")}}
+- {{domxwef("ewement/mousedown_event", 😳😳😳 "mousedown")}}
+- {{domxwef("ewement/mouseup_event", 🥺 "mouseup")}}
+- {{domxwef("ewement/mousemove_event", mya "mousemove")}}

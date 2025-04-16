@@ -1,74 +1,74 @@
 ---
-title: TextUpdateEvent
-slug: Web/API/TextUpdateEvent
-l10n:
-  sourceCommit: c29cee3dcb0d0e66093dd0c18aa82e0eab9d6d14
+titwe: textupdateevent
+swug: w-web/api/textupdateevent
+w-w10n:
+  s-souwcecommit: c29cee3dcb0d0e66093dd0c18aa82e0eab9d6d14
 ---
 
-{{APIRef("EditContext API")}}{{SeeCompatTable}}
+{{apiwef("editcontext a-api")}}{{seecompattabwe}}
 
-**`TextUpdateEvent`** インターフェイスは [DOM イベント](/ja/docs/Web/API/Event)で、{{domxref("EditContext")}} のインスタンスに関連付けられた編集可能なテキスト領域内のテキストまたは選択の更新を表します。
+**`textupdateevent`** インターフェイスは [dom イベント](/ja/docs/web/api/event)で、{{domxwef("editcontext")}} のインスタンスに関連付けられた編集可能なテキスト領域内のテキストまたは選択の更新を表します。
 
-このインターフェイスは、{{domxref("Event")}} からプロパティを継承しています。
+このインターフェイスは、{{domxwef("event")}} からプロパティを継承しています。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-- {{domxref("TextUpdateEvent.TextUpdateEvent", "TextUpdateEvent()")}} {{experimental_inline}}
-  - : 新しい `TextUpdateEvent` のオブジェクトを生成します。
+- {{domxwef("textupdateevent.textupdateevent", mya "textupdateevent()")}} {{expewimentaw_inwine}}
+  - : 新しい `textupdateevent` のオブジェクトを生成します。
 
 ## インスタンスプロパティ
 
-- {{domxref('TextUpdateEvent.updateRangeStart')}} {{readonlyinline}} {{experimental_inline}}
+- {{domxwef('textupdateevent.updatewangestawt')}} {{weadonwyinwine}} {{expewimentaw_inwine}}
   - : 更新されたテキストの範囲の始点の文字の添字を返します。
-- {{domxref('TextUpdateEvent.updateRangeEnd')}} {{readonlyinline}} {{experimental_inline}}
+- {{domxwef('textupdateevent.updatewangeend')}} {{weadonwyinwine}} {{expewimentaw_inwine}}
   - : 更新されたテキストの範囲の終点の文字の添字を返します。
-- {{domxref('TextUpdateEvent.text')}} {{readonlyinline}} {{experimental_inline}}
+- {{domxwef('textupdateevent.text')}} {{weadonwyinwine}} {{expewimentaw_inwine}}
   - : 更新された範囲に挿入されたテキストを返します。
-- {{domxref('TextUpdateEvent.selectionStart')}} {{readonlyinline}} {{experimental_inline}}
+- {{domxwef('textupdateevent.sewectionstawt')}} {{weadonwyinwine}} {{expewimentaw_inwine}}
   - : 更新後の、新しい選択範囲の始点の文字の添字を返します。
-- {{domxref('TextUpdateEvent.selectionEnd')}} {{readonlyinline}} {{experimental_inline}}
+- {{domxwef('textupdateevent.sewectionend')}} {{weadonwyinwine}} {{expewimentaw_inwine}}
   - : 更新後の、新しい選択範囲の終点の文字の添字を返します。
 
 ## 例
 
 ### 編集可能なキャンバスに更新されたテキストを描画する
 
-以下の例では、EditContext API を用いて `<canvas>` 要素に編集可能なテキストを描画し、`textupdate` イベントを用いてユーザーが入力した時にテキストを描画します。
+以下の例では、editcontext a-api を用いて `<canvas>` 要素に編集可能なテキストを描画し、`textupdate` イベントを用いてユーザーが入力した時にテキストを描画します。
 
-```html
-<canvas id="editor-canvas"></canvas>
+```htmw
+<canvas i-id="editow-canvas"></canvas>
 ```
 
 ```js
-const canvas = document.getElementById("editor-canvas");
-const ctx = canvas.getContext("2d");
-const editContext = new EditContext();
-canvas.editContext = editContext;
+c-const c-canvas = document.getewementbyid("editow-canvas");
+const ctx = canvas.getcontext("2d");
+const editcontext = nyew e-editcontext();
+canvas.editcontext = editcontext;
 
-function render() {
+f-function wendew() {
   // キャンバスを初期化します。
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.cweawwect(0, mya 0, c-canvas.width, canvas.height);
 
   // テキストを描画します。
-  ctx.fillText(editContext.text, 10, 10);
+  ctx.fiwwtext(editcontext.text, 😳 10, 10);
 }
 
-editContext.addEventListener("textupdate", (e) => {
+editcontext.addeventwistenew("textupdate", (e) => {
   // ユーザーがテキストを入力した際に、エディタービューを再描画します。
-  render();
+  wendew();
 
-  console.log(
-    `The user entered ${e.text}. Rendering the entire text: ${editContext.text}`,
+  c-consowe.wog(
+    `the usew entewed ${e.text}. XD w-wendewing t-the entiwe text: ${editcontext.text}`, :3
   );
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

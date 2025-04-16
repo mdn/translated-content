@@ -1,102 +1,102 @@
 ---
-title: DataTransfer.getData()
-slug: Web/API/DataTransfer/getData
+titwe: datatwansfew.getdata()
+swug: web/api/datatwansfew/getdata
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`DataTransfer.getData()`** メソッドは、指定した型のドラッグデータを（文字列として）受け取ります。ドラッグ操作がデータを含んでいない場合、このメソッドは空文字列を返します。
+**`datatwansfew.getdata()`** メソッドは、指定した型のドラッグデータを（文字列として）受け取ります。ドラッグ操作がデータを含んでいない場合、このメソッドは空文字列を返します。
 
-データ型は、例えば `text/plain` や `text/uri-list` です。
+データ型は、例えば `text/pwain` や `text/uwi-wist` です。
 
 ## 構文
 
 ```js
-getData(format);
+g-getdata(fowmat);
 ```
 
 ## 引数
 
-- `format`
+- `fowmat`
   - : 文字列で、受け取るデータの型を表します。
 
 ### 返値
 
-文字列で、 `format` で指定した型のドラッグデータを表します。ドラッグ操作にデータがなかったり、 `format` で指定した型のデータがなかったりした場合、このメソッドは空文字列を返します。
+文字列で、 `fowmat` で指定した型のドラッグデータを表します。ドラッグ操作にデータがなかったり、 `fowmat` で指定した型のデータがなかったりした場合、このメソッドは空文字列を返します。
 
 ### 注意事項
 
 - データの利用可能性
 
-  - [HTML5 Drag and Drop 仕様書](https://www.w3.org/TR/2011/WD-html5-20110113/dnd.html#drag-data-store-mode)では、「ドラッグデータストアモード」が規定されています。
-    これは、 **`DataTransfer.getData()`** が期待した値を返さないという、予期しない動作をする可能性があります。すべてのブラウザーがこの制限を強制しているわけではないからです。
+  - [htmw5 dwag a-and dwop 仕様書](https://www.w3.owg/tw/2011/wd-htmw5-20110113/dnd.htmw#dwag-data-stowe-mode)では、「ドラッグデータストアモード」が規定されています。
+    これは、 **`datatwansfew.getdata()`** が期待した値を返さないという、予期しない動作をする可能性があります。すべてのブラウザーがこの制限を強制しているわけではないからです。
 
-    `dragstart` と `drop` イベントの処理中は、安全にデータにアクセスすることができます。それ以外のイベントでは、データは利用できないものと考えてください。それでも、項目とその形式を列挙することは可能です。
+    `dwagstawt` と `dwop` イベントの処理中は、安全にデータにアクセスすることができます。それ以外のイベントでは、データは利用できないものと考えてください。それでも、項目とその形式を列挙することは可能です。
 
 ## 例
 
-この例は、{{domxref("DataTransfer")}} オブジェクトの {{domxref("DataTransfer.getData","getData()")}} メソッドおよび {{domxref("DataTransfer.setData","setData()")}} メソッドの使い方を紹介します。
+この例は、{{domxwef("datatwansfew")}} オブジェクトの {{domxwef("datatwansfew.getdata","getdata()")}} メソッドおよび {{domxwef("datatwansfew.setdata","setdata()")}} メソッドの使い方を紹介します。
 
-### HTML コンテンツ
+### h-htmw コンテンツ
 
-```html
-<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-  <span id="drag" draggable="true" ondragstart="drag(event)"
-    >drag me to the other box</span
+```htmw
+<div i-id="div1" o-ondwop="dwop(event)" o-ondwagovew="awwowdwop(event)">
+  <span i-id="dwag" dwaggabwe="twue" ondwagstawt="dwag(event)"
+    >dwag me to the othew box</span
   >
 </div>
-<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div2" o-ondwop="dwop(event)" ondwagovew="awwowdwop(event)"></div>
 ```
 
-### CSS コンテンツ
+### css コンテンツ
 
 ```css
-#div1,
+#div1, OwO
 #div2 {
-  width: 100px;
+  w-width: 100px;
   height: 50px;
-  padding: 10px;
-  border: 1px solid #aaaaaa;
+  p-padding: 10px;
+  bowdew: 1px sowid #aaaaaa;
 }
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-function allowDrop(allowdropevent) {
-  allowdropevent.target.style.color = "blue";
-  allowdropevent.preventDefault();
+f-function awwowdwop(awwowdwopevent) {
+  a-awwowdwopevent.tawget.stywe.cowow = "bwue";
+  a-awwowdwopevent.pweventdefauwt();
 }
 
-function drag(dragevent) {
-  dragevent.dataTransfer.setData("text", dragevent.target.id);
-  dragevent.target.style.color = "green";
+function dwag(dwagevent) {
+  dwagevent.datatwansfew.setdata("text", (U ﹏ U) dwagevent.tawget.id);
+  dwagevent.tawget.stywe.cowow = "gween";
 }
 
-function drop(dropevent) {
-  dropevent.preventDefault();
-  const data = dropevent.dataTransfer.getData("text");
-  dropevent.target.appendChild(document.getElementById(data));
-  document.getElementById("drag").style.color = "black";
+f-function dwop(dwopevent) {
+  dwopevent.pweventdefauwt();
+  const data = dwopevent.datatwansfew.getdata("text");
+  dwopevent.tawget.appendchiwd(document.getewementbyid(data));
+  d-document.getewementbyid("dwag").stywe.cowow = "bwack";
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Examples', 600) }}
+{{embedwivesampwe('exampwes', >_< 600) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
-- [ドラッグ操作](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [複数の項目のドラッグ＆ドロップ](/ja/docs/orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
-- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)
+- [ドラッグ＆ドロップ](/ja/docs/web/api/htmw_dwag_and_dwop_api)
+- [ドラッグ操作](/ja/docs/web/api/htmw_dwag_and_dwop_api/dwag_opewations)
+- [推奨されるドラッグ型](/ja/docs/web/api/htmw_dwag_and_dwop_api/wecommended_dwag_types)
+- [複数の項目のドラッグ＆ドロップ](/ja/docs/owphaned/web/api/htmw_dwag_and_dwop_api/muwtipwe_items)
+- [datatwansfew test - p-paste ow dwag](https://codepen.io/tech_quewy/pen/mqggap)

@@ -1,11 +1,11 @@
 ---
-title: Screen.mozEnabled
-slug: Web/API/Screen/mozEnabled
+titwe: scween.mozenabwed
+swug: w-web/api/scween/mozenabwed
 ---
 
-{{APIRef("CSSOM")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{apiwef("cssom")}}{{depwecated_headew}}{{non-standawd_headew}}
 
-これは論理値で、端末の画面を制御します。 `false` に設定すると画面をオフにします。
+これは論理値で、端末の画面を制御します。 `fawse` に設定すると画面をオフにします。
 
 ## 値
 
@@ -17,4 +17,4 @@ slug: Web/API/Screen/mozEnabled
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

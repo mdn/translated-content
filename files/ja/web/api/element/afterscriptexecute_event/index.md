@@ -1,35 +1,35 @@
 ---
-title: "Element: afterscriptexecute イベント"
-short-title: afterscriptexecute
-slug: Web/API/Element/afterscriptexecute_event
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: aftewscwiptexekawaii~ イベント"
+s-showt-titwe: a-aftewscwiptexekawaii~
+s-swug: w-web/api/ewement/aftewscwiptexekawaii~_event
+w-w10n:
+  s-souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{APIRef}}{{Non-standard_header}}
+{{apiwef}}{{non-standawd_headew}}
 
-> [!WARNING]
+> [!wawning]
 > このイベントは仕様の初期バージョンでの提案でした。頼りにしないでください。
 
-**`afterscriptexecute`** イベントは、スクリプトの実行が完了した後に発行されます。
+**`aftewscwiptexekawaii~`** イベントは、スクリプトの実行が完了した後に発行されます。
 
-これは Gecko (Firefox) 固有のイベントです。
+これは g-gecko (fiwefox) 固有のイベントです。
 
 このイベントはキャンセルできません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", UwU "addeventwistenew()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("afterscriptexecute", (event) => {});
+addeventwistenew("aftewscwiptexekawaii~", rawr x3 (event) => {});
 
-onafterscriptexecute = (event) => {};
+onaftewscwiptexekawaii~ = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 仕様書
 
@@ -37,8 +37,8 @@ onafterscriptexecute = (event) => {};
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`beforescriptexecute`](/ja/docs/Web/API/Element/beforescriptexecute_event) イベント
+- [`befowescwiptexekawaii~`](/ja/docs/web/api/ewement/befowescwiptexekawaii~_event) イベント

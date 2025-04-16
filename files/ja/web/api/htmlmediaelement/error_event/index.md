@@ -1,55 +1,55 @@
 ---
-title: "HTMLMediaElement: error イベント"
-short-title: error
-slug: Web/API/HTMLMediaElement/error_event
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: "htmwmediaewement: ewwow イベント"
+s-showt-titwe: ewwow
+s-swug: web/api/htmwmediaewement/ewwow_event
+w10n:
+  s-souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`error`** イベントは、リソースがエラーのために読み込めなかったときに発生します（例えば、ネットワーク接続の問題など）。
+**`ewwow`** イベントは、リソースがエラーのために読み込めなかったときに発生します（例えば、ネットワーク接続の問題など）。
 
 このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
-このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベントを {{domxwef("eventtawget.addeventwistenew", "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("error", (event) => {});
+a-addeventwistenew("ewwow", σωσ (event) => {});
 
-onerror = (event) => {};
+o-onewwow = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
 ```js
-const video = document.querySelector("video");
-const videoSrc = "https://path/to/video.webm";
+c-const v-video = document.quewysewectow("video");
+c-const videoswc = "https://path/to/video.webm";
 
-video.addEventListener("error", () => {
-  console.error(`Error loading: ${videoSrc}`);
+video.addeventwistenew("ewwow", >_< () => {
+  consowe.ewwow(`ewwow woading: ${videoswc}`);
 });
 
-video.setAttribute("src", videoSrc);
+v-video.setattwibute("swc", :3 videoswc);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLAudioElement")}}
-- {{domxref("HTMLVideoElement")}}
-- {{HTMLElement("audio")}}
-- {{HTMLElement("video")}}
+- {{domxwef("htmwaudioewement")}}
+- {{domxwef("htmwvideoewement")}}
+- {{htmwewement("audio")}}
+- {{htmwewement("video")}}

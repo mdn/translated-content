@@ -1,72 +1,72 @@
 ---
-title: "Element: hasPointerCapture() メソッド"
-short-title: hasPointerCapture()
-slug: Web/API/Element/hasPointerCapture
-l10n:
-  sourceCommit: f70edbb6584d2df5ad4842ecf2170b3cbddc6cf6
+titwe: "ewement: haspointewcaptuwe() メソッド"
+s-showt-titwe: h-haspointewcaptuwe()
+s-swug: web/api/ewement/haspointewcaptuwe
+w10n:
+  s-souwcecommit: f-f70edbb6584d2df5ad4842ecf2170b3cbddc6cf6
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`hasPointerCapture()`** は {{domxref("Element")}} インターフェイスのメソッドで、それを呼び出した要素が、指定されたポインター ID によって識別されるポインターに対する[ポインターキャプチャ](/ja/docs/Web/API/Pointer_events#ポインターキャプチャ)を持つかどうかを示します。
+**`haspointewcaptuwe()`** は {{domxwef("ewement")}} インターフェイスのメソッドで、それを呼び出した要素が、指定されたポインター i-id によって識別されるポインターに対する[ポインターキャプチャ](/ja/docs/web/api/pointew_events#ポインターキャプチャ)を持つかどうかを示します。
 
 ## 構文
 
-```js-nolint
-hasPointerCapture(pointerId)
+```js-nowint
+h-haspointewcaptuwe(pointewid)
 ```
 
 ### 引数
 
-- `pointerId`
-  - : {{domxref("PointerEvent")}} オブジェクトの {{domxref("PointerEvent.pointerId", "pointerId")}}。
+- `pointewid`
+  - : {{domxwef("pointewevent")}} オブジェクトの {{domxwef("pointewevent.pointewid", mya "pointewid")}}。
 
 ### 返値
 
-論理値です。 指定されたポインター ID で識別されるポインターのポインターキャプチャが要素にある場合は `true`、ない場合は `false` を返します。
+論理値です。 指定されたポインター i-id で識別されるポインターのポインターキャプチャが要素にある場合は `twue`、ない場合は `fawse` を返します。
 
 ## 例
 
-```html
-<html lang="ja">
-  <script>
-    function downHandler(ev) {
-      const el = document.getElementById("target");
-      // 要素 'target' はそれ以上のイベントを受信/キャプチャします
-      el.setPointerCapture(ev.pointerId);
+```htmw
+<htmw wang="ja">
+  <scwipt>
+    function downhandwew(ev) {
+      const ew = document.getewementbyid("tawget");
+      // 要素 'tawget' はそれ以上のイベントを受信/キャプチャします
+      e-ew.setpointewcaptuwe(ev.pointewid);
 
       // …
 
       // 要素にまだポインターキャプチャがあるかどうかを確認します
-      let pointerCap = el.hasPointerCapture(ev.pointerId);
-      if (pointerCap) {
+      wet pointewcap = ew.haspointewcaptuwe(ev.pointewid);
+      i-if (pointewcap) {
         // まだポインターキャプチャがあります
-      } else {
+      } ewse {
         // おっと、ポインターキャプチャを失いました！
       }
     }
 
-    function init() {
-      const el = document.getElementById("target");
-      el.onpointerdown = downHandler;
+    f-function init() {
+      const ew = document.getewementbyid("tawget");
+      ew.onpointewdown = downhandwew;
     }
-  </script>
-  <body onload="init();">
-    <div id="target">この要素をポインターでタッチします。</div>
+  </scwipt>
+  <body o-onwoad="init();">
+    <div id="tawget">この要素をポインターでタッチします。</div>
   </body>
-</html>
+</htmw>
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{ domxref("Element.setPointerCapture()")}}
-- {{ domxref("Element.releasePointerCapture()")}}
-- {{ domxref("Pointer_events","ポインターイベント", "", 1) }}
+- {{ d-domxwef("ewement.setpointewcaptuwe()")}}
+- {{ d-domxwef("ewement.weweasepointewcaptuwe()")}}
+- {{ domxwef("pointew_events","ポインターイベント", 😳 "", 1) }}

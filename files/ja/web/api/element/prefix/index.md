@@ -1,14 +1,14 @@
 ---
-title: "Element: prefix プロパティ"
-short-title: prefix
-slug: Web/API/Element/prefix
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: pwefix プロパティ"
+s-showt-titwe: p-pwefix
+s-swug: web/api/ewement/pwefix
+w-w10n:
+  s-souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Element.prefix`** は読み取り専用プロパティで、指定された要素の名前空間の接頭辞を、接頭辞が指定されていない場合は `null` を返します。
+**`ewement.pwefix`** は読み取り専用プロパティで、指定された要素の名前空間の接頭辞を、接頭辞が指定されていない場合は `nuww` を返します。
 
 ## 値
 
@@ -18,24 +18,24 @@ l10n:
 
 次の例はコンソールに "x" を記録します。
 
-```xml
-<x:div onclick="console.log(this.prefix)"/>
+```xmw
+<x:div o-oncwick="consowe.wog(this.pwefix)"/>
 ```
 
 ## 注
 
-これは、名前空間を認識するパーサーを使用しているとき、すなわち、文書が XML の MIME タイプで送信されたときのみ動作します。HTML 文書では動作しません。
+これは、名前空間を認識するパーサーを使用しているとき、すなわち、文書が x-xmw の mime タイプで送信されたときのみ動作します。htmw 文書では動作しません。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Element.namespaceURI")}}
-- {{domxref("Element.localName")}}
-- {{domxref("Attr.prefix")}}
+- {{domxwef("ewement.namespaceuwi")}}
+- {{domxwef("ewement.wocawname")}}
+- {{domxwef("attw.pwefix")}}

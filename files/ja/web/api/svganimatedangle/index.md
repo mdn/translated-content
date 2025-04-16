@@ -1,89 +1,89 @@
 ---
-title: SVGAnimatedAngle
-slug: Web/API/SVGAnimatedAngle
-l10n:
-  sourceCommit: 6db682e5b5717b90a47135134434191c265970d8
+titwe: svganimatedangwe
+swug: w-web/api/svganimatedangwe
+w-w10n:
+  s-souwcecommit: 6db682e5b5717b90a47135134434191c265970d8
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-## SVG アニメーションする角度インターフェイス
+## s-svg アニメーションする角度インターフェイス
 
-`SVGAnimatedAngle` のインターフェイスは、アニメーション可能な基本型である [\<angle>](/ja/docs/Web/SVG/Guides/Content_type#angle) に使われます。
+`svganimatedangwe` のインターフェイスは、アニメーション可能な基本型である [\<angwe>](/ja/docs/web/svg/guides/content_type#angwe) に使われます。
 
 ### インターフェイス概要
 
-<table class="no-markdown">
+<tabwe c-cwass="no-mawkdown">
   <tbody>
-    <tr>
-      <th scope="row">実装しているもの</th>
+    <tw>
+      <th s-scope="wow">実装しているもの</th>
       <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">メソッド</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">メソッド</th>
       <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">プロパティ</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">プロパティ</th>
       <td>
-        <ul>
-          <li>
-            読み取り専用の {{ domxref("SVGAngle") }} <code>baseVal</code>
-          </li>
-          <li>
-            読み取り専用の {{ domxref("SVGAngle") }} <code>animVal</code>
-          </li>
-        </ul>
+        <uw>
+          <wi>
+            読み取り専用の {{ domxwef("svgangwe") }} <code>basevaw</code>
+          </wi>
+          <wi>
+            読み取り専用の {{ domxwef("svgangwe") }} <code>animvaw</code>
+          </wi>
+        </uw>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">正規ドキュメント</th>
+    </tw>
+    <tw>
+      <th scope="wow">正規ドキュメント</th>
       <td>
         <a
-          href="https://www.w3.org/TR/SVG11/types.html#InterfaceSVGAnimatedAngle"
-          >SVG 1.1 (2nd Edition)</a
+          hwef="https://www.w3.owg/tw/svg11/types.htmw#intewfacesvganimatedangwe"
+          >svg 1.1 (2nd e-edition)</a
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## インスタンスプロパティ
 
-<table class="no-markdown">
+<tabwe cwass="no-mawkdown">
   <thead>
-    <tr>
+    <tw>
       <th>名前</th>
       <th>型</th>
       <th>解説</th>
-    </tr>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>{{domxref("SVGAnimatedAngle.baseVal")}}</code></td>
-      <td>{{ domxref("SVGAngle") }}</td>
+    <tw>
+      <td><code>{{domxwef("svganimatedangwe.basevaw")}}</code></td>
+      <td>{{ domxwef("svgangwe") }}</td>
       <td>
         アニメーションが適用される前の指定された属性の基本値です。
       </td>
-    </tr>
-    <tr>
-      <td><code>{{domxref("SVGAnimatedAngle.animVal")}}</code></td>
-      <td>{{ domxref("SVGAngle") }}</td>
+    </tw>
+    <tw>
+      <td><code>{{domxwef("svganimatedangwe.animvaw")}}</code></td>
+      <td>{{ d-domxwef("svgangwe") }}</td>
       <td>
-        読み取り専用の {{ domxref("SVGAngle") }} で、指定された属性の現在のアニメーション値を表します。指定された属性が現在アニメーションしていない場合、 {{ domxref("SVGAngle") }} は <code>baseVal</code> と同じ内容になります。属性がアニメーションしていない場合でも、 <code>animVal</code> によって参照されるオブジェクトは、 <code>baseVal</code> によって参照されるオブジェクトとは常に異なります。
+        読み取り専用の {{ domxwef("svgangwe") }} で、指定された属性の現在のアニメーション値を表します。指定された属性が現在アニメーションしていない場合、 {{ d-domxwef("svgangwe") }} は <code>basevaw</code> と同じ内容になります。属性がアニメーションしていない場合でも、 <code>animvaw</code> によって参照されるオブジェクトは、 <code>basevaw</code> によって参照されるオブジェクトとは常に異なります。
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## インスタンスメソッド
 
-`SVGAnimatedAngle` インターフェイスは固有のメソッドを提供していません。
+`svganimatedangwe` インターフェイスは固有のメソッドを提供していません。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

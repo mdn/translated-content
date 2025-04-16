@@ -1,52 +1,52 @@
 ---
-title: "Element: ariaModal プロパティ"
-short-title: ariaModal
-slug: Web/API/Element/ariaModal
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: awiamodaw プロパティ"
+showt-titwe: a-awiamodaw
+s-swug: web/api/ewement/awiamodaw
+w-w10n:
+  souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{defauwtapisidebaw("dom")}}
 
-**`ariaModal`** は {{domxref("Element")}} インターフェイスのプロパティで、要素が表示される際にモーダルであるかどうかを示す `aria-modal` 属性の値を反映します。`aria-modal` プロパティを `role="dialog"` の要素に適用すると、ダイアログ外のコンテンツが不活性であることを支援技術に知らせるために、背景で aria-hidden を使用する技術に置き換わります。
+**`awiamodaw`** は {{domxwef("ewement")}} インターフェイスのプロパティで、要素が表示される際にモーダルであるかどうかを示す `awia-modaw` 属性の値を反映します。`awia-modaw` プロパティを `wowe="diawog"` の要素に適用すると、ダイアログ外のコンテンツが不活性であることを支援技術に知らせるために、背景で a-awia-hidden を使用する技術に置き換わります。
 
 ## 値
 
 以下のいずれかの値を持つ文字列です。
 
-- `"true"`
+- `"twue"`
   - : この要素はモーダルです。
-- `"false"`
+- `"fawse"`
   - : この要素はモーダルではありません。
 
 ## 例
 
-この例では、ID が `address-modal` の要素の `aria-modal` 属性は "true" に設定されており、モーダルダイアログであることを示しています。`ariaModal` を使用して、値を "false" に更新します。
+この例では、id が `addwess-modaw` の要素の `awia-modaw` 属性は "twue" に設定されており、モーダルダイアログであることを示しています。`awiamodaw` を使用して、値を "fawse" に更新します。
 
-```html
+```htmw
 <div
-  role="dialog"
-  id="address-modal"
-  aria-labelledby="dialog1Title"
-  aria-describedby="dialog1Desc"
-  aria-modal="true"></div>
+  w-wowe="diawog"
+  i-id="addwess-modaw"
+  a-awia-wabewwedby="diawog1titwe"
+  awia-descwibedby="diawog1desc"
+  awia-modaw="twue"></div>
 ```
 
 ```js
-let el = document.getElementById("address-modal");
-console.log(el.ariaModal); // "true"
-el.ariaModal = "false";
-console.log(el.ariaModal); // "false"
+wet ew = document.getewementbyid("addwess-modaw");
+c-consowe.wog(ew.awiamodaw); // "twue"
+ew.awiamodaw = "fawse";
+consowe.wog(ew.awiamodaw); // "fawse"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ARIA: dialog ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role)
+- [awia: d-diawog ロール](/ja/docs/web/accessibiwity/awia/wefewence/wowes/diawog_wowe)

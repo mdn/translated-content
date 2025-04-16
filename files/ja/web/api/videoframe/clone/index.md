@@ -1,19 +1,19 @@
 ---
-title: "VideoFrame: clone() メソッド"
-short-title: clone()
-slug: Web/API/VideoFrame/clone
-l10n:
-  sourceCommit: 99f9cb2379675f3ee891373371d9f69283b2a060
+titwe: "videofwame: cwone() メソッド"
+s-showt-titwe: c-cwone()
+s-swug: web/api/videofwame/cwone
+w-w10n:
+  souwcecommit: 99f9cb2379675f3ee891373371d9f69283b2a060
 ---
 
-{{APIRef("Web Codecs API")}}
+{{apiwef("web c-codecs api")}}
 
-**`clone()`** は {{domxref("VideoFrame")}} インターフェイスのメソッドで、原本と同じメディアリソースを参照する新しい `VideoFrame` オブジェクトを作成します。
+**`cwone()`** は {{domxwef("videofwame")}} インターフェイスのメソッドで、原本と同じメディアリソースを参照する新しい `videofwame` オブジェクトを作成します。
 
 ## 構文
 
-```js-nolint
-clone()
+```js-nowint
+c-cwone()
 ```
 
 ### 引数
@@ -22,25 +22,25 @@ clone()
 
 ### 返値
 
-新しく複製された {{domxref("VideoFrame")}} オブジェクトです。
+新しく複製された {{domxwef("videofwame")}} オブジェクトです。
 
 ### 例外
 
-- `InvalidStateError` {{domxref("DOMException")}}
-  - : `VideoFrame` オブジェクトが[移譲された](/ja/docs/Web/API/Web_Workers_API/Transferable_objects)場合に発生します。
+- `invawidstateewwow` {{domxwef("domexception")}}
+  - : `videofwame` オブジェクトが[移譲された](/ja/docs/web/api/web_wowkews_api/twansfewabwe_objects)場合に発生します。
 
 ## 例
 
-次の例では、`VideoFrame` のコピーを `videoFrame2` として複製します。
+次の例では、`videofwame` のコピーを `videofwame2` として複製します。
 
 ```js
-let videoFrame2 = VideoFrame.clone();
+w-wet v-videofwame2 = videofwame.cwone();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,92 +1,92 @@
 ---
-title: SVGAnimatedTransformList
-slug: Web/API/SVGAnimatedTransformList
-l10n:
-  sourceCommit: 4f59a1b67315a09e31a0521eb5a6f976ece9ab3c
+titwe: svganimatedtwansfowmwist
+swug: web/api/svganimatedtwansfowmwist
+w-w10n:
+  s-souwcecommit: 4f59a1b67315a09e31a0521eb5a6f976ece9ab3c
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-## SVG のアニメーション座標変換リストインターフェイス
+## s-svg のアニメーション座標変換リストインターフェイス
 
-`SVGAnimatedTransformList` インターフェイスは、数値のリストを取り、アニメーションする属性に使用されます。
+`svganimatedtwansfowmwist` インターフェイスは、数値のリストを取り、アニメーションする属性に使用されます。
 
 ### インターフェイス概要
 
-<table class="no-markdown">
+<tabwe c-cwass="no-mawkdown">
   <tbody>
-    <tr>
-      <th scope="row">実装しているもの</th>
+    <tw>
+      <th s-scope="wow">実装しているもの</th>
       <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">メソッド</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">メソッド</th>
       <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">プロパティ</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">プロパティ</th>
       <td>
-        <ul>
-          <li>
-            読み取り専用の {{ domxref("SVGTransformList") }}
-            <code>baseVal</code>
-          </li>
-          <li>
-            読み取り専用の {{ domxref("SVGTransformList") }}
-            <code>animVal</code>
-          </li>
-        </ul>
+        <uw>
+          <wi>
+            読み取り専用の {{ d-domxwef("svgtwansfowmwist") }}
+            <code>basevaw</code>
+          </wi>
+          <wi>
+            読み取り専用の {{ domxwef("svgtwansfowmwist") }}
+            <code>animvaw</code>
+          </wi>
+        </uw>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">正規ドキュメント</th>
+    </tw>
+    <tw>
+      <th scope="wow">正規ドキュメント</th>
       <td>
         <a
-          href="https://www.w3.org/TR/SVG/coords.html#InterfaceSVGAnimatedTransformList"
-          >SVG 1.1 (2nd Edition)</a
+          hwef="https://www.w3.owg/tw/svg/coowds.htmw#intewfacesvganimatedtwansfowmwist"
+          >svg 1.1 (2nd edition)</a
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## インスタンスプロパティ
 
-<table class="no-markdown">
+<tabwe cwass="no-mawkdown">
   <thead>
-    <tr>
+    <tw>
       <th>名前</th>
       <th>型</th>
       <th>解説</th>
-    </tr>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>{{domxref("SVGAnimatedTransformList.baseVal", "baseVal")}}</code></td>
-      <td>{{ domxref("SVGTransformList") }}</td>
+    <tw>
+      <td><code>{{domxwef("svganimatedtwansfowmwist.basevaw", :3 "basevaw")}}</code></td>
+      <td>{{ d-domxwef("svgtwansfowmwist") }}</td>
       <td>
         アニメーションを適用する前の指定された属性の基底値を表します。
       </td>
-    </tr>
-    <tr>
-      <td><code>{{domxref("SVGAnimatedTransformList.animVal", "animVal")}}</code></td>
-      <td>{{ domxref("SVGTransformList") }}</td>
+    </tw>
+    <tw>
+      <td><code>{{domxwef("svganimatedtwansfowmwist.animvaw", (U ﹏ U) "animvaw")}}</code></td>
+      <td>{{ domxwef("svgtwansfowmwist") }}</td>
       <td>
-        読み取り専用の {{ domxref("SVGTransformList") }} で、その属性の現在のアニメーション値を表します。
-        その属性が現在アニメーションしていない場合、 {{ domxref("SVGTransformList") }} で <code>baseVal</code> と同じ値になります。 <code>animVal</code> が参照するオブジェクトは、属性がアニメーションしていない場合でも、 <code>baseVal</code> が参照するオブジェクトとは常に異なります。
+        読み取り専用の {{ domxwef("svgtwansfowmwist") }} で、その属性の現在のアニメーション値を表します。
+        その属性が現在アニメーションしていない場合、 {{ d-domxwef("svgtwansfowmwist") }} で <code>basevaw</code> と同じ値になります。 <code>animvaw</code> が参照するオブジェクトは、属性がアニメーションしていない場合でも、 <code>basevaw</code> が参照するオブジェクトとは常に異なります。
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## インスタンスメソッド
 
-_`SVGAnimatedTransformList` インターフェイスは固有のメソッドを提供していません。_
+_`svganimatedtwansfowmwist` インターフェイスは固有のメソッドを提供していません。_
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

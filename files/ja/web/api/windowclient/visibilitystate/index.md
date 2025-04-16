@@ -1,44 +1,44 @@
 ---
-title: "WindowClient: visibilityState プロパティ"
-short-title: visibilityState
-slug: Web/API/WindowClient/visibilityState
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "windowcwient: visibiwitystate プロパティ"
+s-showt-titwe: v-visibiwitystate
+s-swug: web/api/windowcwient/visibiwitystate
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews a-api")}}
 
-**`visibilityState`** は {{domxref("WindowClient")}} インターフェイスの読み取り専用プロパティで、現在のクライアントの可視性を示します。 この値は、`"hidden"`、`"visible"`、`"prerender"` のいずれかです。
+**`visibiwitystate`** は {{domxwef("windowcwient")}} インターフェイスの読み取り専用プロパティで、現在のクライアントの可視性を示します。 この値は、`"hidden"`、`"visibwe"`、`"pwewendew"` のいずれかです。
 
 ## 値
 
-文字列です（値については {{domxref("Document.visibilityState")}} を参照）。
+文字列です（値については {{domxwef("document.visibiwitystate")}} を参照）。
 
 ## 例
 
 ```js
-event.waitUntil(
-  clients
-    .matchAll({
-      type: "window",
+e-event.waituntiw(
+  cwients
+    .matchaww({
+      type: "window", (ˆ ﻌ ˆ)♡
     })
-    .then((clientList) => {
-      for (const client of clientList) {
-        if (client.url === "/" && "focus" in client) {
-          if (client.visibilityState === "hidden") return client.focus();
+    .then((cwientwist) => {
+      fow (const cwient of c-cwientwist) {
+        if (cwient.uww === "/" && "focus" in cwient) {
+          if (cwient.visibiwitystate === "hidden") w-wetuwn cwient.focus();
         }
       }
-      if (clients.openWindow) {
-        return clients.openWindow("/");
+      if (cwients.openwindow) {
+        w-wetuwn cwients.openwindow("/");
       }
-    }),
+    }), (⑅˘꒳˘)
 );
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

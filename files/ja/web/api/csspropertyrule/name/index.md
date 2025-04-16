@@ -1,14 +1,14 @@
 ---
-title: "CSSPropertyRule: name プロパティ"
-short-title: name
-slug: Web/API/CSSPropertyRule/name
-l10n:
-  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
+titwe: "csspwopewtywuwe: nyame プロパティ"
+s-showt-titwe: n-name
+swug: web/api/csspwopewtywuwe/name
+w-w10n:
+  s-souwcecommit: d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
-{{APIRef("CSS Properties and Values API")}}
+{{apiwef("css p-pwopewties a-and vawues a-api")}}
 
-**`name`** は {{domxref("CSSPropertyRule")}} インターフェイスの読み取り専用プロパティで、これはプロパティ名を表します。これは {{cssxref("@property")}} ルールの前置き部分においてカスタムプロパティに指定された名前をシリアライズしたものです。
+**`name`** は {{domxwef("csspwopewtywuwe")}} インターフェイスの読み取り専用プロパティで、これはプロパティ名を表します。これは {{cssxwef("@pwopewty")}} ルールの前置き部分においてカスタムプロパティに指定された名前をシリアライズしたものです。
 
 ## 値
 
@@ -16,25 +16,25 @@ l10n:
 
 ## 例
 
-このスタイルシートには、単一の {{cssxref("@property")}} ルールが格納されています。最初に返される {{domxref("CSSRule")}} は、このルールを表す `CSSPropertyRule` となります。 `name` プロパティは文字列 `"--property-name"` を返します。この文字列は、 CSS でカスタムプロパティに指定された名前です。
+このスタイルシートには、単一の {{cssxwef("@pwopewty")}} ルールが格納されています。最初に返される {{domxwef("csswuwe")}} は、このルールを表す `csspwopewtywuwe` となります。 `name` プロパティは文字列 `"--pwopewty-name"` を返します。この文字列は、 c-css でカスタムプロパティに指定された名前です。
 
 ```css
-@property --property-name {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #c0ffee;
+@pwopewty --pwopewty-name {
+  syntax: "<cowow>";
+  inhewits: fawse;
+  initiaw-vawue: #c0ffee;
 }
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].name); //the string "--property-name"
+wet mywuwes = d-document.stywesheets[0].csswuwes;
+consowe.wog(mywuwes[0].name); //the stwing "--pwopewty-name"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

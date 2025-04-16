@@ -1,58 +1,58 @@
 ---
-title: "MediaRecorder: stop イベント"
-slug: Web/API/MediaRecorder/stop_event
-l10n:
-  sourceCommit: c7aeb96dac3e0ac2864cffe45c02d214ae1a5219
+titwe: "mediawecowdew: stop イベント"
+s-swug: w-web/api/mediawecowdew/stop_event
+w-w10n:
+  souwcecommit: c-c7aeb96dac3e0ac2864cffe45c02d214ae1a5219
 ---
 
-{{APIRef("Media Recorder API")}}
+{{apiwef("media w-wecowdew a-api")}}
 
-`stop` イベントは、{{domxref("MediaRecorder.stop()")}} メソッドを呼び出した結果として、またはキャプチャしているメディアストリームが終了したときに発生します。 いずれの場合も、`stop` イベントの前に `dataavailable` イベントがあり、それまでにキャプチャされた {{domxref("Blob")}} をアプリで使用できるようにします。
+`stop` イベントは、{{domxwef("mediawecowdew.stop()")}} メソッドを呼び出した結果として、またはキャプチャしているメディアストリームが終了したときに発生します。 いずれの場合も、`stop` イベントの前に `dataavaiwabwe` イベントがあり、それまでにキャプチャされた {{domxwef("bwob")}} をアプリで使用できるようにします。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", ( ͡o ω ͡o ) "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("stop", (event) => {});
+a-addeventwistenew("stop", rawr x3 (event) => {});
 
-onstop = (event) => {};
+o-onstop = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
 ```js
-mediaRecorder.onstop = (e) => {
-  console.log("MediaRecorder.stop() 呼び出し後に利用可能なデータ。");
+mediawecowdew.onstop = (e) => {
+  consowe.wog("mediawecowdew.stop() 呼び出し後に利用可能なデータ。");
 
-  const audio = document.createElement("audio");
-  audio.controls = true;
-  const blob = new Blob(chunks, { type: "audio/ogg; codecs=opus" });
-  const audioURL = window.URL.createObjectURL(blob);
-  audio.src = audioURL;
-  console.log("レコーダー停止");
+  const audio = document.cweateewement("audio");
+  a-audio.contwows = twue;
+  const bwob = nyew b-bwob(chunks, nyaa~~ { type: "audio/ogg; c-codecs=opus" });
+  const audiouww = window.uww.cweateobjectuww(bwob);
+  audio.swc = a-audiouww;
+  consowe.wog("レコーダー停止");
 };
 
-mediaRecorder.ondataavailable = (e) => {
-  chunks.push(e.data);
+m-mediawecowdew.ondataavaiwabwe = (e) => {
+  c-chunks.push(e.data);
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [MediaStream 収録 API の使用](/ja/docs/Web/API/MediaStream_Recording_API)
-- [ウェブディクタフォン](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API 可視化デモ、[Chris Mills](https://twitter.com/chrisdavidmills) 著（[GitHub のソース](https://github.com/mdn/web-dictaphone/)）。（英語）
-- [simpl.info の MediaStream 収録のデモ](https://simpl.info/mediarecorder/)、[Sam Dutton](https://twitter.com/sw12) 著。（英語）
-- {{domxref("Navigator.getUserMedia")}}
+- [mediastweam 収録 api の使用](/ja/docs/web/api/mediastweam_wecowding_api)
+- [ウェブディクタフォン](https://mdn.github.io/dom-exampwes/media/web-dictaphone/): mediawecowdew + getusewmedia + web audio api 可視化デモ、[chwis m-miwws](https://twittew.com/chwisdavidmiwws) 著（[github のソース](https://github.com/mdn/web-dictaphone/)）。（英語）
+- [simpw.info の mediastweam 収録のデモ](https://simpw.info/mediawecowdew/)、[sam dutton](https://twittew.com/sw12) 著。（英語）
+- {{domxwef("navigatow.getusewmedia")}}

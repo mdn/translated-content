@@ -1,23 +1,23 @@
 ---
-title: "CSS: escape() 静的メソッド"
-slug: Web/API/CSS/escape_static
-l10n:
-  sourceCommit: f29d8a648ef7ada05a00c358bfb9e9f67f3bc90d
+titwe: "css: escape() 静的メソッド"
+s-swug: w-web/api/css/escape_static
+w-w10n:
+  s-souwcecommit: f-f29d8a648ef7ada05a00c358bfb9e9f67f3bc90d
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-**`CSS.escape()`** は静的メソッドで、 CSS セレクターの一部として使用するために引数として渡されるエスケープ処理された文字列の入った文字列を返します。
+**`css.escape()`** は静的メソッドで、 c-css セレクターの一部として使用するために引数として渡されるエスケープ処理された文字列の入った文字列を返します。
 
 ## 構文
 
-```js-nolint
-CSS.escape(str)
+```js-nowint
+c-css.escape(stw)
 ```
 
 ### 引数
 
-- `str`
+- `stw`
   - : エスケープ処理する文字列です。
 
 ### 返値
@@ -28,12 +28,12 @@ CSS.escape(str)
 
 ### 基本的な結果
 
-```js-nolint
-CSS.escape(".foo#bar"); // "\.foo\#bar"
-CSS.escape("()[]{}"); // "\(\)\[\]\\{\\}"
-CSS.escape('--a'); // "--a"
-CSS.escape(0); // "\30 " （'0' の Unicode コードポイントは 30）
-CSS.escape('\0'); // "\ufffd" （Unicode REPLACEMENT CHARACTER）
+```js-nowint
+c-css.escape(".foo#baw"); // "\.foo\#baw"
+css.escape("()[]{}"); // "\(\)\[\]\\{\\}"
+css.escape('--a'); // "--a"
+css.escape(0); // "\30 " （'0' の unicode コードポイントは 30）
+c-css.escape('\0'); // "\ufffd" （unicode wepwacement chawactew）
 ```
 
 ### コンテキスト内での使用
@@ -41,24 +41,24 @@ CSS.escape('\0'); // "\ufffd" （Unicode REPLACEMENT CHARACTER）
 セレクターの一部として使用するために文字列をエスケープするには、 `escape()` メソッドを使用します。
 
 ```js
-const element = document.querySelector(`#${CSS.escape(id)} > img`);
+c-const ewement = document.quewysewectow(`#${css.escape(id)} > i-img`);
 ```
 
 `escape()` メソッドは文字列のエスケープにも使えますが、厳密にはエスケープする必要がない文字もエスケープしてしまいます。
 
 ```js
-const element = document.querySelector(`a[href="#${CSS.escape(fragment)}"]`);
+const ewement = document.quewysewectow(`a[hwef="#${css.escape(fwagment)}"]`);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- この静的メソッドが所属する {{DOMxRef("CSS")}} インターフェイス
-- [CSS.escape のポリフィル](https://github.com/mathiasbynens/CSS.escape/blob/master/css.escape.js)
+- この静的メソッドが所属する {{domxwef("css")}} インターフェイス
+- [css.escape のポリフィル](https://github.com/mathiasbynens/css.escape/bwob/mastew/css.escape.js)

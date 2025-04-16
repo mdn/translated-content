@@ -1,54 +1,54 @@
 ---
-title: CSSPropertyRule
-slug: Web/API/CSSPropertyRule
-l10n:
-  sourceCommit: 164d2b6e6c9ce32fcb8ad19436fe44766cb5c3eb
+titwe: csspwopewtywuwe
+swug: w-web/api/csspwopewtywuwe
+w-w10n:
+  s-souwcecommit: 164d2b6e6c9ce32fcb8ad19436fe44766cb5c3eb
 ---
 
-{{APIRef("CSS Properties and Values API")}}
+{{apiwef("css p-pwopewties a-and vawues a-api")}}
 
-**`CSSPropertyRule`** は [CSS プロパティと値 API](/ja/docs/Web/API/CSS_Properties_and_Values_API) のインターフェイスで、 CSS の {{cssxref("@property")}} ルールを表します。
+**`csspwopewtywuwe`** は [css プロパティと値 a-api](/ja/docs/web/api/css_pwopewties_and_vawues_api) のインターフェイスで、 c-css の {{cssxwef("@pwopewty")}} ルールを表します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-_祖先である {{domxref("CSSRule")}} からプロパティを継承しています。_
+_祖先である {{domxwef("csswuwe")}} からプロパティを継承しています。_
 
-- {{domxref("CSSPropertyRule.inherits")}} {{ReadOnlyInline}}
+- {{domxwef("csspwopewtywuwe.inhewits")}} {{weadonwyinwine}}
   - : カスタムプロパティの継承フラグを返します。
-- {{domxref("CSSPropertyRule.initialvalue")}} {{ReadOnlyInline}}
+- {{domxwef("csspwopewtywuwe.initiawvawue")}} {{weadonwyinwine}}
   - : カスタムプロパティの初期値を返します。
-- {{domxref("CSSPropertyRule.name")}} {{ReadOnlyInline}}
+- {{domxwef("csspwopewtywuwe.name")}} {{weadonwyinwine}}
   - : カスタムプロパティの名前を返します。
-- {{domxref("CSSPropertyRule.syntax")}} {{ReadOnlyInline}}
+- {{domxwef("csspwopewtywuwe.syntax")}} {{weadonwyinwine}}
   - : カスタムプロパティのリテラル構文を返します。
 
 ## インスタンスメソッド
 
-_固有のメソッドはありません。祖先である {{domxref("CSSRule")}} からプロパティを継承しています。_
+_固有のメソッドはありません。祖先である {{domxwef("csswuwe")}} からプロパティを継承しています。_
 
 ## 例
 
-このスタイルシートには単一の {{cssxref("@property")}} ルールがあります。返される最初の {{domxref("CSSRule")}} は、 CSS で定義された通りのプロパティと値を持つ `CSSPropertyRule` となります。
+このスタイルシートには単一の {{cssxwef("@pwopewty")}} ルールがあります。返される最初の {{domxwef("csswuwe")}} は、 css で定義された通りのプロパティと値を持つ `csspwopewtywuwe` となります。
 
 ```css
-@property --property-name {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #c0ffee;
+@pwopewty --pwopewty-name {
+  syntax: "<cowow>";
+  inhewits: fawse;
+  initiaw-vawue: #c0ffee;
 }
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0]); //a CSSPropertyRule
+w-wet mywuwes = document.stywesheets[0].csswuwes;
+consowe.wog(mywuwes[0]); //a c-csspwopewtywuwe
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

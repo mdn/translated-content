@@ -1,134 +1,134 @@
 ---
-title: "Element: transitionend イベント"
-short-title: transitionend
-slug: Web/API/Element/transitionend_event
-l10n:
-  sourceCommit: 1b094710cd2816a6669ce616b6f56d0a5b25e6ad
+titwe: "ewement: twansitionend イベント"
+s-showt-titwe: twansitionend
+s-swug: w-web/api/ewement/twansitionend_event
+w-w10n:
+  souwcecommit: 1b094710cd2816a6669ce616b6f56d0a5b25e6ad
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`transitionend`** イベントは、 [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)が完了したときに発生します。トランジションが完了前に削除された場合、例えば {{cssxref("transition-property")}} が削除されたり、 {{cssxref("display")}} が `none` に設定されたりした場合、イベントは生成されません。
+**`twansitionend`** イベントは、 [css トランジション](/ja/docs/web/css/css_twansitions/using_css_twansitions)が完了したときに発生します。トランジションが完了前に削除された場合、例えば {{cssxwef("twansition-pwopewty")}} が削除されたり、 {{cssxwef("dispway")}} が `none` に設定されたりした場合、イベントは生成されません。
 
-`transitionend` イベントは二つの方向で発生します。トランジション終了の状態まで遷移し終わったときと、既定またはトランジションがない状態まで完全に戻ったときです。トランジションに待ち時間や実行時間がない場合、両方が 0 秒またはどちらも宣言されていなかった場合、トランジションは発生せず、トランジションイベントは発生しません。 `transitioncancel` イベントが発生すると、 `transitionend` イベントは発生しません。
+`twansitionend` イベントは二つの方向で発生します。トランジション終了の状態まで遷移し終わったときと、既定またはトランジションがない状態まで完全に戻ったときです。トランジションに待ち時間や実行時間がない場合、両方が 0 秒またはどちらも宣言されていなかった場合、トランジションは発生せず、トランジションイベントは発生しません。 `twansitioncancew` イベントが発生すると、 `twansitionend` イベントは発生しません。
 
 このイベントはキャンセルできません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", (✿oωo) "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("transitionend", (event) => {});
+addeventwistenew("twansitionend", (ˆ ﻌ ˆ)♡ (event) => {});
 
-ontransitionend = (event) => {};
+o-ontwansitionend = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("TransitionEvent")}} です。 {{domxref("Event")}} を継承しています。
+{{domxwef("twansitionevent")}} です。 {{domxwef("event")}} を継承しています。
 
-{{InheritanceDiagram("TransitionEvent")}}
+{{inhewitancediagwam("twansitionevent")}}
 
 ## イベントプロパティ
 
-_親である {{domxref("Event")}} から継承したプロパティもあります。_
+_親である {{domxwef("event")}} から継承したプロパティもあります。_
 
-- {{domxref("TransitionEvent.propertyName")}} {{ReadOnlyInline}}
-  - : 文字列で、このトランジションに関連付けられた CSS プロパティの名前が入ります。
-- {{domxref("TransitionEvent.elapsedTime")}} {{ReadOnlyInline}}
-  - : float` で、このイベントが発行されたときにトランジションが実行されていた時間を秒単位で表します。この値は {{cssxref("transition-delay")}} プロパティの影響を受けません。
-- {{domxref("TransitionEvent.pseudoElement")}} {{ReadOnlyInline}}
-  - : 文字列で、アニメーションが実行する[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)の名前が入ります。トランジションが擬似要素上で実行されず、要素上で実行される場合は空文字列 (`''`) です。
+- {{domxwef("twansitionevent.pwopewtyname")}} {{weadonwyinwine}}
+  - : 文字列で、このトランジションに関連付けられた c-css プロパティの名前が入ります。
+- {{domxwef("twansitionevent.ewapsedtime")}} {{weadonwyinwine}}
+  - : f-fwoat` で、このイベントが発行されたときにトランジションが実行されていた時間を秒単位で表します。この値は {{cssxwef("twansition-deway")}} プロパティの影響を受けません。
+- {{domxwef("twansitionevent.pseudoewement")}} {{weadonwyinwine}}
+  - : 文字列で、アニメーションが実行する[擬似要素](/ja/docs/web/css/pseudo-ewements)の名前が入ります。トランジションが擬似要素上で実行されず、要素上で実行される場合は空文字列 (`''`) です。
 
 ## 例
 
-このコードはトランジションを定義している要素を取得し、`transitionend` イベントのリスナーを追加します。
+このコードはトランジションを定義している要素を取得し、`twansitionend` イベントのリスナーを追加します。
 
 ```js
-const transition = document.querySelector(".transition");
+c-const twansition = document.quewysewectow(".twansition");
 
-transition.addEventListener("transitionend", () => {
-  console.log("Transition ended");
+twansition.addeventwistenew("twansitionend", (˘ω˘) () => {
+  consowe.wog("twansition ended");
 });
 ```
 
-同じことを、`ontransitionend` を使用して行う例です。
+同じことを、`ontwansitionend` を使用して行う例です。
 
 ```js
-const transition = document.querySelector(".transition");
+const t-twansition = document.quewysewectow(".twansition");
 
-transition.ontransitionend = () => {
-  console.log("Transition ended");
+twansition.ontwansitionend = () => {
+  c-consowe.wog("twansition ended");
 };
 ```
 
 ### ライブ例
 
-次の例では、単純な {{htmlelement("div")}} 要素に遅延を含むトランジションをスタイル設定しています。
+次の例では、単純な {{htmwewement("div")}} 要素に遅延を含むトランジションをスタイル設定しています。
 
-```html
-<div class="transition"></div>
-<div class="message"></div>
+```htmw
+<div c-cwass="twansition"></div>
+<div cwass="message"></div>
 ```
 
 ```css
-.transition {
+.twansition {
   width: 100px;
   height: 100px;
-  background: rgba(255, 0, 0, 1);
-  transition-property: transform, background;
-  transition-duration: 2s;
-  transition-delay: 2s;
+  b-backgwound: wgba(255, (⑅˘꒳˘) 0, 0, 1);
+  t-twansition-pwopewty: t-twansfowm, (///ˬ///✿) backgwound;
+  twansition-duwation: 2s;
+  twansition-deway: 2s;
 }
 
-.transition:hover {
-  transform: rotate(90deg);
-  background: rgba(255, 0, 0, 0);
+.twansition:hovew {
+  twansfowm: wotate(90deg);
+  b-backgwound: wgba(255, 😳😳😳 0, 🥺 0, 0);
 }
 ```
 
-これにいくらかの JavaScript を追加して、[`transitionstart`](/ja/docs/Web/API/Element/transitionstart_event)、[`transitionrun`](/ja/docs/Web/API/Element/transitionrun_event)、[`transitioncancel`](/ja/docs/Web/API/Element/transitioncancel_event)、`transitionend` の各イベントが発生すると実行されるようにします。この例では、トランジションをキャンセルするには、トランジションが終了する前にトランジション中のボックスに宛てたマウスを外してください。トランジション終了イベントを発生させるには、トランジションが終了するまでトランジションの上にマウスを当てたままにしてください。
+これにいくらかの javascwipt を追加して、[`twansitionstawt`](/ja/docs/web/api/ewement/twansitionstawt_event)、[`twansitionwun`](/ja/docs/web/api/ewement/twansitionwun_event)、[`twansitioncancew`](/ja/docs/web/api/ewement/twansitioncancew_event)、`twansitionend` の各イベントが発生すると実行されるようにします。この例では、トランジションをキャンセルするには、トランジションが終了する前にトランジション中のボックスに宛てたマウスを外してください。トランジション終了イベントを発生させるには、トランジションが終了するまでトランジションの上にマウスを当てたままにしてください。
 
 ```js
-const message = document.querySelector(".message");
-const el = document.querySelector(".transition");
+const message = document.quewysewectow(".message");
+c-const ew = document.quewysewectow(".twansition");
 
-el.addEventListener("transitionrun", () => {
-  message.textContent = "transitionrun が発生";
+ew.addeventwistenew("twansitionwun", mya () => {
+  m-message.textcontent = "twansitionwun が発生";
 });
 
-el.addEventListener("transitionstart", () => {
-  message.textContent = "transitionstart が発生";
+e-ew.addeventwistenew("twansitionstawt", 🥺 () => {
+  m-message.textcontent = "twansitionstawt が発生";
 });
 
-el.addEventListener("transitioncancel", () => {
-  message.textContent = "transitioncancel が発生";
+e-ew.addeventwistenew("twansitioncancew", >_< () => {
+  message.textcontent = "twansitioncancew が発生";
 });
 
-el.addEventListener("transitionend", () => {
-  message.textContent = "transitionend が発生";
+ew.addeventwistenew("twansitionend", >_< () => {
+  m-message.textcontent = "twansitionend が発生";
 });
 ```
 
-{{ EmbedLiveSample('Live_example', '100%', '150px') }}
+{{ embedwivesampwe('wive_exampwe', (⑅˘꒳˘) '100%', '150px') }}
 
-`transitionend` イベントは両方向に発生します。ボックスの回転が完了し、不透明度が方向に応じて 0 または 1 になったときです。
+`twansitionend` イベントは両方向に発生します。ボックスの回転が完了し、不透明度が方向に応じて 0 または 1 になったときです。
 
 トランジションの遅延や再生時間がない場合、両方が 0s である場合、または両方とも宣言されていない場合、トランジションは発生せず、トランジションイベントは何も発行されません。
 
-`transitioncancel` イベントが発行された場合、`transitionend` イベントは発行されません。
+`twansitioncancew` イベントが発行された場合、`twansitionend` イベントは発行されません。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("TransitionEvent")}} インターフェイス
-- CSS プロパティ: {{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}
-- 関連イベント: {{domxref("Element/transitionrun_event", "transitionrun")}}, {{domxref("Element/transitionstart_event", "transitionstart")}}, {{domxref("Element/transitioncancel_event", "transitioncancel")}}
+- {{domxwef("twansitionevent")}} インターフェイス
+- css プロパティ: {{cssxwef("twansition")}}, /(^•ω•^) {{cssxwef("twansition-deway")}}, rawr x3 {{cssxwef("twansition-duwation")}}, (U ﹏ U) {{cssxwef("twansition-pwopewty")}}, (U ﹏ U) {{cssxwef("twansition-timing-function")}}
+- 関連イベント: {{domxwef("ewement/twansitionwun_event", (⑅˘꒳˘) "twansitionwun")}}, òωó {{domxwef("ewement/twansitionstawt_event", ʘwʘ "twansitionstawt")}}, /(^•ω•^) {{domxwef("ewement/twansitioncancew_event", ʘwʘ "twansitioncancew")}}

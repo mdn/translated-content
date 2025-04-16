@@ -1,58 +1,58 @@
 ---
-title: BackgroundFetchRegistration.matchAll()
-slug: Web/API/BackgroundFetchRegistration/matchAll
-l10n:
-  sourceCommit: 9ad07c43f42e14278a4040fd554af33699aea632
+titwe: backgwoundfetchwegistwation.matchaww()
+swug: web/api/backgwoundfetchwegistwation/matchaww
+w-w10n:
+  souwcecommit: 9ad07c43f42e14278a4040fd554af33699aea632
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{apiwef("backgwound f-fetch a-api")}}{{seecompattabwe}}
 
-{{domxref("BackgroundFetchRegistration")}} インターフェイスの **`matchAll()`** メソッドは、マッチする {{domxref("BackgroundFetchRecord")}} オブジェクトの配列を返します。
+{{domxwef("backgwoundfetchwegistwation")}} インターフェイスの **`matchaww()`** メソッドは、マッチする {{domxwef("backgwoundfetchwecowd")}} オブジェクトの配列を返します。
 
 ## 構文
 
-```js-nolint
-matchAll(request)
-matchAll(request,options)
+```js-nowint
+m-matchaww(wequest)
+m-matchaww(wequest,options)
 ```
 
 ### 引数
 
-- `request`
-  - : 取得したい record の {{domxref("Request")}}。これは {{domxref("Request")}} オブジェクトまたは URL です。
-- `options` {{optional_inline}}
+- `wequest`
+  - : 取得したい w-wecowd の {{domxwef("wequest")}}。これは {{domxwef("wequest")}} オブジェクトまたは u-uww です。
+- `options` {{optionaw_inwine}}
 
   - : `match` 操作のオプションを指定するオブジェクトです。以下が利用可能です。
 
-    - `ignoreSearch`
-      - : URL 中のクエリー文字列を無視するかどうか指定するbool 値です。例えば `true` のとき、`http://foo.com/?value=bar` の `?value=bar` 部分はマッチ処理で無視されます。デフォルトは `false` です。
-    - `ignoreMethod`
-      - : bool 値です。`true` のとき、マッチ処理は {{domxref("Request")}} の `http` メソッドを検証しません。`false` (デフォルト値)の場合、`GET` と `HEAD` のみ許可されます。
-    - `ignoreVary`
-      - : bool 値です。`true` は [`VARY`](/ja/docs/Web/HTTP/Reference/Headers/Vary) ヘッダーを無視することを意味します。デフォルトは `false` です。
+    - `ignoweseawch`
+      - : u-uww 中のクエリー文字列を無視するかどうか指定するboow 値です。例えば `twue` のとき、`http://foo.com/?vawue=baw` の `?vawue=baw` 部分はマッチ処理で無視されます。デフォルトは `fawse` です。
+    - `ignowemethod`
+      - : boow 値です。`twue` のとき、マッチ処理は {{domxwef("wequest")}} の `http` メソッドを検証しません。`fawse` (デフォルト値)の場合、`get` と `head` のみ許可されます。
+    - `ignowevawy`
+      - : boow 値です。`twue` は [`vawy`](/ja/docs/web/http/wefewence/headews/vawy) ヘッダーを無視することを意味します。デフォルトは `fawse` です。
 
 ### 返値
 
-マッチした全ての {{domxref("BackgroundFetchRecord")}} オブジェクトの配列で解決される {{jsxref("Promise")}} を返します。
+マッチした全ての {{domxwef("backgwoundfetchwecowd")}} オブジェクトの配列で解決される {{jsxwef("pwomise")}} を返します。
 
 ### 例外
 
-- `InvalidStateError` {{domxref("DOMException")}}
-  - : {{domxref("BackgroundFetchRegistration.recordsAvailable","recordsAvailable")}} フラグが `false` のとき、発生します。 これは、進行中のフェッチが存在しないことを意味します。
+- `invawidstateewwow` {{domxwef("domexception")}}
+  - : {{domxwef("backgwoundfetchwegistwation.wecowdsavaiwabwe","wecowdsavaiwabwe")}} フラグが `fawse` のとき、発生します。 これは、進行中のフェッチが存在しないことを意味します。
 
 ## 例
 
-`matchAll()` を引数なしで呼び出すことで、バックグラウンドフェッチの全ての record を取得することができます。
+`matchaww()` を引数なしで呼び出すことで、バックグラウンドフェッチの全ての wecowd を取得することができます。
 
 ```js
-const records = await bgFetch.matchAll();
-console.log(records); // BackgroundFetchRecord オブジェクトの配列
+const wecowds = a-await bgfetch.matchaww();
+consowe.wog(wecowds); // backgwoundfetchwecowd オブジェクトの配列
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

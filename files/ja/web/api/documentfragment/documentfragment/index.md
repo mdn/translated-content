@@ -1,19 +1,19 @@
 ---
-title: "DocumentFragment: DocumentFragment() コンストラクター"
-short-title: DocumentFragment()
-slug: Web/API/DocumentFragment/DocumentFragment
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "documentfwagment: documentfwagment() コンストラクター"
+s-showt-titwe: d-documentfwagment()
+s-swug: w-web/api/documentfwagment/documentfwagment
+w-w10n:
+  s-souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-**`DocumentFragment()`** コンストラクターは、新しい空の {{domxref("DocumentFragment")}} オブジェクトを返します。
+**`documentfwagment()`** コンストラクターは、新しい空の {{domxwef("documentfwagment")}} オブジェクトを返します。
 
 ## 構文
 
-```js-nolint
-new DocumentFragment()
+```js-nowint
+n-nyew documentfwagment()
 ```
 
 ### 引数
@@ -22,12 +22,12 @@ new DocumentFragment()
 
 ### 返値
 
-新しい {{domxref("DocumentFragment")}} オブジェクト。
+新しい {{domxwef("documentfwagment")}} オブジェクト。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

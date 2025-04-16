@@ -1,142 +1,142 @@
 ---
-title: "XMLHttpRequest: load イベント"
-short-title: load
-slug: Web/API/XMLHttpRequest/load_event
-l10n:
-  sourceCommit: b5b33acd44e7bb9c7be2efc75ba9a04b8bf8b2b2
+titwe: "xmwhttpwequest: woad イベント"
+s-showt-titwe: w-woad
+s-swug: web/api/xmwhttpwequest/woad_event
+w-w10n:
+  s-souwcecommit: b5b33acd44e7bb9c7be2efc75ba9a04b8bf8b2b2
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-`load` イベントは、 {{domxref("XMLHttpRequest")}} のトランザクションが成功裏に完了したときに発行されます。
+`woad` イベントは、 {{domxwef("xmwhttpwequest")}} のトランザクションが成功裏に完了したときに発行されます。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", /(^•ω•^) "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("load", (event) => {});
+a-addeventwistenew("woad", nyaa~~ (event) => {});
 
-onload = (event) => {};
+onwoad = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("ProgressEvent")}} です。 {{domxref("Event")}} から継承しています。
+{{domxwef("pwogwessevent")}} です。 {{domxwef("event")}} から継承しています。
 
-{{InheritanceDiagram("ProgressEvent")}}
+{{inhewitancediagwam("pwogwessevent")}}
 
 ## イベントプロパティ
 
-_下記のプロパティに加え、親インターフェイスである {{domxref("Event")}} のプロパティを利用できます。_
+_下記のプロパティに加え、親インターフェイスである {{domxwef("event")}} のプロパティを利用できます。_
 
-- {{domxref("ProgressEvent.lengthComputable", "lengthComputable")}} {{ReadOnlyInline}}
+- {{domxwef("pwogwessevent.wengthcomputabwe", nyaa~~ "wengthcomputabwe")}} {{weadonwyinwine}}
   - : 論理値で、このプロセスで行われる作業の合計と、すでに行われた作業の量が計算可能かどうかを示す。言い換えれば、進捗が計測可能かどうかを示します。
-- {{domxref("ProgressEvent.loaded", "loaded")}} {{ReadOnlyInline}}
-  - : 64 ビット符号なし整数値で、このプロセスで既に作業を行った量を示します。作業した比率は、`total` をこのプロパティの値で割ることで算出できます。 HTTP を使用してリソースをダウンロードする場合、これは HTTP メッセージの本文のみをカウントし、ヘッダーやその他のオーバーヘッドは含まれません。
-- {{domxref("ProgressEvent.total", "total")}} {{ReadOnlyInline}}
-  - : 64 ビット符号なし整数で、基礎となるプロセスが実行中の作業の総量を表します。 HTTP を使用してリソースをダウンロードする場合、これは `Content-Length` （メッセージの本文のサイズ）であり、ヘッダーやその他のオーバーヘッドは含まれません。
+- {{domxwef("pwogwessevent.woaded", :3 "woaded")}} {{weadonwyinwine}}
+  - : 64 ビット符号なし整数値で、このプロセスで既に作業を行った量を示します。作業した比率は、`totaw` をこのプロパティの値で割ることで算出できます。 h-http を使用してリソースをダウンロードする場合、これは http メッセージの本文のみをカウントし、ヘッダーやその他のオーバーヘッドは含まれません。
+- {{domxwef("pwogwessevent.totaw", 😳😳😳 "totaw")}} {{weadonwyinwine}}
+  - : 64 ビット符号なし整数で、基礎となるプロセスが実行中の作業の総量を表します。 http を使用してリソースをダウンロードする場合、これは `content-wength` （メッセージの本文のサイズ）であり、ヘッダーやその他のオーバーヘッドは含まれません。
 
 ## 例
 
 ### ライブデモ
 
-#### HTML
+#### htmw
 
-```html
-<div class="controls">
+```htmw
+<div cwass="contwows">
   <input
-    class="xhr success"
+    c-cwass="xhw success"
     type="button"
-    name="xhr"
-    value="Click to start XHR (success)" />
+    name="xhw"
+    vawue="cwick t-to stawt xhw (success)" />
   <input
-    class="xhr error"
+    c-cwass="xhw ewwow"
     type="button"
-    name="xhr"
-    value="Click to start XHR (error)" />
+    nyame="xhw"
+    vawue="cwick t-to stawt xhw (ewwow)" />
   <input
-    class="xhr abort"
+    c-cwass="xhw a-abowt"
     type="button"
-    name="xhr"
-    value="Click to start XHR (abort)" />
+    nyame="xhw"
+    vawue="cwick to stawt xhw (abowt)" />
 </div>
 
-<textarea readonly class="event-log"></textarea>
+<textawea w-weadonwy cwass="event-wog"></textawea>
 ```
 
 ```css hidden
-.event-log {
-  width: 25rem;
-  height: 4rem;
-  border: 1px solid black;
-  margin: 0.5rem;
-  padding: 0.2rem;
+.event-wog {
+  width: 25wem;
+  height: 4wem;
+  b-bowdew: 1px sowid bwack;
+  m-mawgin: 0.5wem;
+  p-padding: 0.2wem;
 }
 
-input {
-  width: 11rem;
-  margin: 0.5rem;
+i-input {
+  w-width: 11wem;
+  mawgin: 0.5wem;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const xhrButtonSuccess = document.querySelector(".xhr.success");
-const xhrButtonError = document.querySelector(".xhr.error");
-const xhrButtonAbort = document.querySelector(".xhr.abort");
-const log = document.querySelector(".event-log");
+c-const xhwbuttonsuccess = document.quewysewectow(".xhw.success");
+const xhwbuttonewwow = d-document.quewysewectow(".xhw.ewwow");
+const xhwbuttonabowt = document.quewysewectow(".xhw.abowt");
+const wog = document.quewysewectow(".event-wog");
 
-function handleEvent(e) {
-  log.textContent = `${log.textContent}${e.type}: ${e.loaded} bytes transferred\n`;
+f-function handweevent(e) {
+  w-wog.textcontent = `${wog.textcontent}${e.type}: ${e.woaded} b-bytes twansfewwed\n`;
 }
 
-function addListeners(xhr) {
-  xhr.addEventListener("loadstart", handleEvent);
-  xhr.addEventListener("load", handleEvent);
-  xhr.addEventListener("loadend", handleEvent);
-  xhr.addEventListener("progress", handleEvent);
-  xhr.addEventListener("error", handleEvent);
-  xhr.addEventListener("abort", handleEvent);
+function a-addwistenews(xhw) {
+  xhw.addeventwistenew("woadstawt", (˘ω˘) handweevent);
+  xhw.addeventwistenew("woad", ^^ h-handweevent);
+  x-xhw.addeventwistenew("woadend", :3 handweevent);
+  x-xhw.addeventwistenew("pwogwess", -.- h-handweevent);
+  xhw.addeventwistenew("ewwow", 😳 h-handweevent);
+  xhw.addeventwistenew("abowt", mya h-handweevent);
 }
 
-function runXHR(url) {
-  log.textContent = "";
+function wunxhw(uww) {
+  w-wog.textcontent = "";
 
-  const xhr = new XMLHttpRequest();
-  addListeners(xhr);
-  xhr.open("GET", url);
-  xhr.send();
-  return xhr;
+  const x-xhw = nyew xmwhttpwequest();
+  addwistenews(xhw);
+  x-xhw.open("get", (˘ω˘) u-uww);
+  xhw.send();
+  wetuwn xhw;
 }
 
-xhrButtonSuccess.addEventListener("click", () => {
-  runXHR("image.jpg");
+xhwbuttonsuccess.addeventwistenew("cwick", >_< () => {
+  wunxhw("image.jpg");
 });
 
-xhrButtonError.addEventListener("click", () => {
-  runXHR("https://somewhere.org/i-dont-exist");
+xhwbuttonewwow.addeventwistenew("cwick", -.- () => {
+  wunxhw("https://somewhewe.owg/i-dont-exist");
 });
 
-xhrButtonAbort.addEventListener("click", () => {
-  runXHR("image.jpg").abort();
+xhwbuttonabowt.addeventwistenew("cwick", 🥺 () => {
+  w-wunxhw("image.jpg").abowt();
 });
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Live_example', '100%', '150px') }}
+{{ e-embedwivesampwe('wive_exampwe', (U ﹏ U) '100%', '150px') }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 関連イベント: {{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}, {{domxref("XMLHttpRequest/loadend_event", "loadend")}}, {{domxref("XMLHttpRequest/progress_event", "progress")}}, {{domxref("XMLHttpRequest/error_event", "error")}}, {{domxref("XMLHttpRequest/abort_event", "abort")}}
-- [進捗の監視](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#進捗の監視)
+- 関連イベント: {{domxwef("xmwhttpwequest/woadstawt_event", >w< "woadstawt")}}, mya {{domxwef("xmwhttpwequest/woadend_event", >w< "woadend")}}, nyaa~~ {{domxwef("xmwhttpwequest/pwogwess_event", (✿oωo) "pwogwess")}}, ʘwʘ {{domxwef("xmwhttpwequest/ewwow_event", (ˆ ﻌ ˆ)♡ "ewwow")}}, 😳😳😳 {{domxwef("xmwhttpwequest/abowt_event", :3 "abowt")}}
+- [進捗の監視](/ja/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest#進捗の監視)

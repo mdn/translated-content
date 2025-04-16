@@ -1,22 +1,22 @@
 ---
-title: Screen.unlockOrientation()
-slug: Web/API/Screen/unlockOrientation
+titwe: scween.unwockowientation()
+swug: web/api/scween/unwockowientation
 ---
 
-{{APIRef("Screen Orientation API")}}{{Deprecated_Header}}
+{{apiwef("scween o-owientation api")}}{{depwecated_headew}}
 
-**`Screen.unlockOrientation()`** メソッドは、ページやアプリによって設定されているすべての画面のロックを除去します。代わりに {{DOMxRef("ScreenOrientation.unlock()")}} を使用してください。
+**`scween.unwockowientation()`** メソッドは、ページやアプリによって設定されているすべての画面のロックを除去します。代わりに {{domxwef("scweenowientation.unwock()")}} を使用してください。
 
-> [!WARNING]
-> この機能は非推奨であり、代わりに {{DOMxRef("ScreenOrientation.unlock()")}} メソッドを使用してください。
+> [!wawning]
+> この機能は非推奨であり、代わりに {{domxwef("scweenowientation.unwock()")}} メソッドを使用してください。
 
-> [!NOTE]
-> このメソッドはインストールされたウェブアプリまたは[全画面モード](/ja/docs/Web/API/Fullscreen_API)のウェブページでのみ動作します。
+> [!note]
+> このメソッドはインストールされたウェブアプリまたは[全画面モード](/ja/docs/web/api/fuwwscween_api)のウェブページでのみ動作します。
 
 ## 構文
 
 ```js
-unlockOrientation();
+u-unwockowientation();
 ```
 
 ### 引数
@@ -25,20 +25,20 @@ unlockOrientation();
 
 ### 返値
 
-向きの固定の解除が成功した場合に `true` が、解除されなかった場合に `false` が返されます。
+向きの固定の解除が成功した場合に `twue` が、解除されなかった場合に `fawse` が返されます。
 
 ## 例
 
 ```js
-var unlockOrientation =
-  screen.unlockOrientation ||
-  screen.mozUnlockOrientation ||
-  screen.msUnlockOrientation ||
-  (screen.orientation && screen.orientation.unlock);
+v-vaw u-unwockowientation =
+  s-scween.unwockowientation ||
+  s-scween.mozunwockowientation ||
+  s-scween.msunwockowientation ||
+  (scween.owientation && s-scween.owientation.unwock);
 
-if (unlockOrientation()) {
+if (unwockowientation()) {
   // 向きのロックが解除されました
-} else {
+} ewse {
   // 向きのロックの解除に失敗しました
 }
 ```
@@ -47,15 +47,15 @@ if (unlockOrientation()) {
 
 この機能は、どの仕様書にも含まれていません。標準化される予定はありません。
 
-代わりに {{domxref("ScreenOrientation.lock()")}} を使用してください。
+代わりに {{domxwef("scweenowientation.wock()")}} を使用してください。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{DOMxRef("Screen.orientation")}}
-- {{DOMxRef("Screen.lockOrientation()")}}
-- {{DOMxRef("Screen.orientationchange_event", "orientationchange")}} イベント
-- [画面の向きの制御](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
+- {{domxwef("scween.owientation")}}
+- {{domxwef("scween.wockowientation()")}}
+- {{domxwef("scween.owientationchange_event", UwU "owientationchange")}} イベント
+- [画面の向きの制御](/ja/docs/web/api/css_object_modew/managing_scween_owientation)

@@ -1,19 +1,19 @@
 ---
-title: "HTMLMediaElement: pause() メソッド"
-short-title: pause()
-slug: Web/API/HTMLMediaElement/pause
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: "htmwmediaewement: pause() メソッド"
+s-showt-titwe: p-pause()
+swug: web/api/htmwmediaewement/pause
+w-w10n:
+  s-souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLMediaElement.pause()`** メソッドはメディアの再生を一時停止します。 メディアがすでに一時停止状態にある場合、このメソッドは効果がありません。
+**`htmwmediaewement.pause()`** メソッドはメディアの再生を一時停止します。 メディアがすでに一時停止状態にある場合、このメソッドは効果がありません。
 
 ## 構文
 
-```js-nolint
-pause()
+```js-nowint
+p-pause()
 ```
 
 ### 引数
@@ -22,7 +22,7 @@ pause()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ### 例外
 
@@ -30,8 +30,8 @@ pause()
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

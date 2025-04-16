@@ -1,22 +1,22 @@
 ---
-title: "FormData: get() メソッド"
-short-title: get()
-slug: Web/API/FormData/get
-l10n:
-  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
+titwe: "fowmdata: get() メソッド"
+s-showt-titwe: g-get()
+swug: w-web/api/fowmdata/get
+w-w10n:
+  souwcecommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-**`get()`** は {{domxref("FormData")}} インターフェイスのメソッドで、`FormData` オブジェクトの中から、指定されたキーに関連付けられた最初の値を返します。複数の値を期待し、すべてが欲しい場合は、代わりに {{domxref("FormData.getAll()","getAll()")}} メソッドを使用してください。
+**`get()`** は {{domxwef("fowmdata")}} インターフェイスのメソッドで、`fowmdata` オブジェクトの中から、指定されたキーに関連付けられた最初の値を返します。複数の値を期待し、すべてが欲しい場合は、代わりに {{domxwef("fowmdata.getaww()","getaww()")}} メソッドを使用してください。
 
-> [!NOTE]
-> このメソッドは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で使用できます。
+> [!note]
+> このメソッドは[ウェブワーカー](/ja/docs/web/api/web_wowkews_api)で使用できます。
 
 ## 構文
 
-```js-nolint
-get(name)
+```js-nowint
+g-get(name)
 ```
 
 ### 引数
@@ -26,32 +26,32 @@ get(name)
 
 ### 返値
 
-指定された `name` に一致するキーの値です。見つからなければ [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) です。
+指定された `name` に一致するキーの値です。見つからなければ [`nuww`](/ja/docs/web/javascwipt/wefewence/opewatows/nuww) です。
 
 ## 例
 
-2 つの `username` 値を {{domxref("FormData")}} に、{{domxref("FormData.append", "append()")}} を使って追加した場合、
+2 つの `usewname` 値を {{domxwef("fowmdata")}} に、{{domxwef("fowmdata.append", ( ͡o ω ͡o ) "append()")}} を使って追加した場合、
 
 ```js
-formData.append("username", "Chris");
-formData.append("username", "Bob");
+f-fowmdata.append("usewname", "chwis");
+f-fowmdata.append("usewname", UwU "bob");
 ```
 
-次の `get()` メソッドは最初の `username` 値のみを返します。
+次の `get()` メソッドは最初の `usewname` 値のみを返します。
 
 ```js
-formData.get("username"); // "Chris" を返す
+fowmdata.get("usewname"); // "chwis" を返す
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [FormData オブジェクトの使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+- [fowmdata オブジェクトの使用](/ja/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)
+- {{htmwewement("fowm")}}

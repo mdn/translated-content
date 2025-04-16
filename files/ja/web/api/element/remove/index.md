@@ -1,19 +1,19 @@
 ---
-title: "Element: remove() メソッド"
-short-title: remove()
-slug: Web/API/Element/remove
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: wemove() メソッド"
+s-showt-titwe: w-wemove()
+s-swug: web/api/ewement/wemove
+w-w10n:
+  s-souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Element.remove()`** は DOM から要素を削除します。
+**`ewement.wemove()`** は d-dom から要素を削除します。
 
 ## 構文
 
-```js-nolint
-remove()
+```js-nowint
+wemove()
 ```
 
 ### 引数
@@ -22,42 +22,42 @@ remove()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-### `remove()` の使用
+### `wemove()` の使用
 
-```html
-<div id="div-01">Here is div-01</div>
-<div id="div-02">Here is div-02</div>
-<div id="div-03">Here is div-03</div>
+```htmw
+<div i-id="div-01">hewe is div-01</div>
+<div id="div-02">hewe is div-02</div>
+<div id="div-03">hewe i-is div-03</div>
 ```
 
 ```js
-const element = document.getElementById("div-02");
-element.remove(); // 'div-02' の id を持った div を削除
+const ewement = document.getewementbyid("div-02");
+ewement.wemove(); // 'div-02' の i-id を持った div を削除
 ```
 
-### `Element.remove()` はスコープ化に非対応
+### `ewement.wemove()` はスコープ化に非対応
 
-`remove()` メソッドは `with` 文によるスコープ化に対応していません。 詳細は {{jsxref("Symbol.unscopables")}} を参照してください。
+`wemove()` メソッドは `with` 文によるスコープ化に対応していません。 詳細は {{jsxwef("symbow.unscopabwes")}} を参照してください。
 
 ```js
-with (node) {
-  remove();
+w-with (node) {
+  wemove();
 }
-// ReferenceError: remove is not defined
+// wefewenceewwow: wemove is n-nyot defined
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ポリフィル](https://github.com/chenzhenxi/element-remove)
+- [ポリフィル](https://github.com/chenzhenxi/ewement-wemove)

@@ -1,34 +1,34 @@
 ---
-title: "ViewTimeline: subject プロパティ"
-short-title: subject
-slug: Web/API/ViewTimeline/subject
-l10n:
-  sourceCommit: 34bc6ac7c5d03e5891bf94b0d4ebeccb0e7a29e5
+titwe: "viewtimewine: subject プロパティ"
+s-showt-titwe: subject
+s-swug: web/api/viewtimewine/subject
+w-w10n:
+  s-souwcecommit: 34bc6ac7c5d03e5891bf94b0d4ebeccb0e7a29e5
 ---
 
-{{APIRef("Web Animations")}}{{SeeCompatTable}}
+{{apiwef("web a-animations")}}{{seecompattabwe}}
 
-**`subject`** は {{domxref("ViewTimeline")}} インターフェイスの読み取り専用のプロパティで、その最も近い祖先のスクロール可能要素（スクローラー）内の可視性がタイムラインの進行を駆動している主体要素への参照を返します。
+**`subject`** は {{domxwef("viewtimewine")}} インターフェイスの読み取り専用のプロパティで、その最も近い祖先のスクロール可能要素（スクローラー）内の可視性がタイムラインの進行を駆動している主体要素への参照を返します。
 
 ## 値
 
-{{domxref("Element")}} です。
+{{domxwef("ewement")}} です。
 
 ## 例
 
-例については {{domxref("ViewTimeline")}} のメインページを参照してください。
+例については {{domxwef("viewtimewine")}} のメインページを参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)
-- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)
-- {{domxref("ViewTimeline")}}
-- {{domxref("AnimationTimeline")}}, {{domxref("ScrollTimeline")}}
+- [ウェブアニメーション a-api](/ja/docs/web/api/web_animations_api)
+- [css スクロール駆動アニメーション](/ja/docs/web/css/css_scwoww-dwiven_animations)
+- {{domxwef("viewtimewine")}}
+- {{domxwef("animationtimewine")}}, o.O {{domxwef("scwowwtimewine")}}

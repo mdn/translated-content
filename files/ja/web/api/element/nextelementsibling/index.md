@@ -1,51 +1,51 @@
 ---
-title: "Element: nextElementSibling プロパティ"
-short-title: nextElementSibling
-slug: Web/API/Element/nextElementSibling
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: nyextewementsibwing プロパティ"
+s-showt-titwe: n-nyextewementsibwing
+s-swug: w-web/api/ewement/nextewementsibwing
+w-w10n:
+  souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Element.nextElementSibling`** は読み取り専用のプロパティで、この要素の親の子リスト内ですぐ次にある要素を返します。このノードがリストの最後のノードであった場合は `null` を返します。
+**`ewement.nextewementsibwing`** は読み取り専用のプロパティで、この要素の親の子リスト内ですぐ次にある要素を返します。このノードがリストの最後のノードであった場合は `nuww` を返します。
 
 ## 値
 
-{{domxref("Element")}} オブジェクト、または `null` です。
+{{domxwef("ewement")}} オブジェクト、または `nuww` です。
 
 ## 例
 
-```html
-<div id="div-01">Here is div-01</div>
-<div id="div-02">Here is div-02</div>
+```htmw
+<div id="div-01">hewe i-is div-01</div>
+<div i-id="div-02">hewe is div-02</div>
 
-<script>
-  let el = document.getElementById("div-01").nextElementSibling;
-  console.log("Siblings of div-01:");
-  while (el) {
-    console.log(el.nodeName);
-    el = el.nextElementSibling;
+<scwipt>
+  wet ew = document.getewementbyid("div-01").nextewementsibwing;
+  consowe.wog("sibwings of div-01:");
+  w-whiwe (ew) {
+    consowe.wog(ew.nodename);
+    ew = ew.nextewementsibwing;
   }
-</script>
+</scwipt>
 ```
 
 この例は読み込み時に、コンソールに以下のような出力を行います。
 
 ```
-Siblings of div-01:
-DIV
-SCRIPT
+s-sibwings of div-01:
+div
+s-scwipt
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Element.previousElementSibling")}}
+- {{domxwef("ewement.pweviousewementsibwing")}}

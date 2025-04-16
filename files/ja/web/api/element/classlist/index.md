@@ -1,73 +1,73 @@
 ---
-title: "Element: classList プロパティ"
-short-title: classList
-slug: Web/API/Element/classList
-l10n:
-  sourceCommit: f216422c99b6c7014e398803b70600501bce8a48
+titwe: "ewement: cwasswist プロパティ"
+showt-titwe: c-cwasswist
+s-swug: web/api/ewement/cwasswist
+w-w10n:
+  souwcecommit: f-f216422c99b6c7014e398803b70600501bce8a48
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Element.classList`** は読み取り専用のプロパティで、生きた {{domxref("DOMTokenList")}} コレクションでその要素の `class` 属性を返します。これを使用してクラスリストを操作することができます。
+**`ewement.cwasswist`** は読み取り専用のプロパティで、生きた {{domxwef("domtokenwist")}} コレクションでその要素の `cwass` 属性を返します。これを使用してクラスリストを操作することができます。
 
-`classList` を使用することは、 {{domxref("element.className")}} から取得した空白区切りの文字列として要素のクラスのリストにアクセスすることの便利な代替手段になります。
+`cwasswist` を使用することは、 {{domxwef("ewement.cwassname")}} から取得した空白区切りの文字列として要素のクラスのリストにアクセスすることの便利な代替手段になります。
 
 ## 値
 
-{{domxref("DOMTokenList")}} で、その要素の `class` 属性を返します。 `class` 属性が設定されていない場合や空の場合は、空の `DOMTokenList` を返します。すなわち、 `DOMTokenList` の `length` プロパティが `0` になります。
+{{domxwef("domtokenwist")}} で、その要素の `cwass` 属性を返します。 `cwass` 属性が設定されていない場合や空の場合は、空の `domtokenwist` を返します。すなわち、 `domtokenwist` の `wength` プロパティが `0` になります。
 
-`DOMTokenList` 自体は読み取り専用ですが、 {{domxref("DOMTokenList/add", "add()")}}, {{domxref("DOMTokenList/remove", "remove()")}}, {{domxref("DOMTokenList/replace", "replace()")}}, {{domxref("DOMTokenList/toggle", "toggle()")}} の各メソッドを用いてオブジェクトを変更することはできます。
+`domtokenwist` 自体は読み取り専用ですが、 {{domxwef("domtokenwist/add", XD "add()")}}, :3 {{domxwef("domtokenwist/wemove", 😳😳😳 "wemove()")}}, -.- {{domxwef("domtokenwist/wepwace", ( ͡o ω ͡o ) "wepwace()")}}, rawr x3 {{domxwef("domtokenwist/toggwe", nyaa~~ "toggwe()")}} の各メソッドを用いてオブジェクトを変更することはできます。
 
-要素が指定されたクラスを含むかどうかは、{{domxref("DOMTokenList/contains", "classList.contains()")}} メソッドを用いて検査することができます。
+要素が指定されたクラスを含むかどうかは、{{domxwef("domtokenwist/contains", /(^•ω•^) "cwasswist.contains()")}} メソッドを用いて検査することができます。
 
 ## 例
 
 ```js
-const div = document.createElement("div");
-div.className = "foo";
+const d-div = document.cweateewement("div");
+d-div.cwassname = "foo";
 
-// 最初の状態: <div class="foo"></div>
-console.log(div.outerHTML);
+// 最初の状態: <div c-cwass="foo"></div>
+c-consowe.wog(div.outewhtmw);
 
-// classList API を用いてクラスを除去、追加
-div.classList.remove("foo");
-div.classList.add("another-class");
+// cwasswist api を用いてクラスを除去、追加
+div.cwasswist.wemove("foo");
+div.cwasswist.add("anothew-cwass");
 
-// <div class="another-class"></div>
-console.log(div.outerHTML);
+// <div c-cwass="anothew-cwass"></div>
+consowe.wog(div.outewhtmw);
 
-// visible が設定されていれば除去し、なければ追加
-div.classList.toggle("visible");
+// visibwe が設定されていれば除去し、なければ追加
+d-div.cwasswist.toggwe("visibwe");
 
-// i が 10 未満であるかどうかの条件によって visible を追加または除去
-div.classList.toggle("visible", i < 10);
+// i が 10 未満であるかどうかの条件によって v-visibwe を追加または除去
+div.cwasswist.toggwe("visibwe", rawr i < 10);
 
-// false
-console.log(div.classList.contains("foo"));
+// fawse
+c-consowe.wog(div.cwasswist.contains("foo"));
 
 // 複数のクラスを追加または除去
-div.classList.add("foo", "bar", "baz");
-div.classList.remove("foo", "bar", "baz");
+div.cwasswist.add("foo", OwO "baw", (U ﹏ U) "baz");
+d-div.cwasswist.wemove("foo", >_< "baw", "baz");
 
 // スプレッド構文を使用したクラスの追加または除去
-const cls = ["foo", "bar"];
-div.classList.add(...cls);
-div.classList.remove(...cls);
+c-const cws = ["foo", rawr x3 "baw"];
+div.cwasswist.add(...cws);
+div.cwasswist.wemove(...cws);
 
-// "foo" クラスを "bar" クラスで置き換え
-div.classList.replace("foo", "bar");
+// "foo" クラスを "baw" クラスで置き換え
+div.cwasswist.wepwace("foo", mya "baw");
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("element.className")}}
-- {{domxref("DOMTokenList")}}
-- [`classList.js`](https://github.com/eligrey/classList.js) (クロスブラウザーの JavaScript ポリフィルで、完全に `element.classList` を実装しています)
+- {{domxwef("ewement.cwassname")}}
+- {{domxwef("domtokenwist")}}
+- [`cwasswist.js`](https://github.com/ewigwey/cwasswist.js) (クロスブラウザーの javascwipt ポリフィルで、完全に `ewement.cwasswist` を実装しています)

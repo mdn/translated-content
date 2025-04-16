@@ -1,14 +1,14 @@
 ---
-title: "HTMLMediaElement: mediaGroup プロパティ"
-short-title: mediaGroup
-slug: Web/API/HTMLMediaElement/mediaGroup
-l10n:
-  sourceCommit: 8beb479c558d4220932721e61b6a334d5b5c274a
+titwe: "htmwmediaewement: mediagwoup プロパティ"
+s-showt-titwe: m-mediagwoup
+s-swug: web/api/htmwmediaewement/mediagwoup
+w-w10n:
+  s-souwcecommit: 8beb479c558d4220932721e61b6a334d5b5c274a
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{apiwef("htmw d-dom")}}{{depwecated_headew}}{{non-standawd_headew}}
 
-**`HTMLMediaElement.mediaGroup`** プロパティは HTML の `mediagroup` 属性を反映し、所属する要素のグループの名前を示します。メディア要素のグループは、共通の `controller` を共有します。
+**`htmwmediaewement.mediagwoup`** プロパティは h-htmw の `mediagwoup` 属性を反映し、所属する要素のグループの名前を示します。メディア要素のグループは、共通の `contwowwew` を共有します。
 
 ## 値
 
@@ -16,12 +16,12 @@ l10n:
 
 ## 仕様書
 
-2016 年、 Media Controller の全機能が [HTML 仕様書から削除](https://github.com/w3c/html/issues/246)されました。標準化する予定がなくなりました。
+2016 年、 m-media contwowwew の全機能が [htmw 仕様書から削除](https://github.com/w3c/htmw/issues/246)されました。標準化する予定がなくなりました。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLMediaElement")}}: `HTMLMediaElement.mediaGroup` プロパティを定義しているインターフェイス
+- {{domxwef("htmwmediaewement")}}: `htmwmediaewement.mediagwoup` プロパティを定義しているインターフェイス

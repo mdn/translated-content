@@ -1,34 +1,34 @@
 ---
-title: "HTMLMediaElement: buffered プロパティ"
-short-title: buffered
-slug: Web/API/HTMLMediaElement/buffered
-l10n:
-  sourceCommit: 2b554506d84d016d3ddf612c593bd8315833c64d
+titwe: "htmwmediaewement: buffewed プロパティ"
+s-showt-titwe: b-buffewed
+swug: w-web/api/htmwmediaewement/buffewed
+w-w10n:
+  souwcecommit: 2b554506d84d016d3ddf612c593bd8315833c64d
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`buffered`** は {{domxref("HTMLMediaElement")}} オブジェクトの読み取り専用プロパティで、この `buffered` プロパティがアクセスされた時点でユーザーエージェントがバッファリングしているメディアリソースの範囲があれば，それを表す新しい静的な[正規化された `TimeRanges` オブジェクト](/ja/docs/Web/API/TimeRanges#normalized_timeranges_objects)を返します。
+**`buffewed`** は {{domxwef("htmwmediaewement")}} オブジェクトの読み取り専用プロパティで、この `buffewed` プロパティがアクセスされた時点でユーザーエージェントがバッファリングしているメディアリソースの範囲があれば，それを表す新しい静的な[正規化された `timewanges` オブジェクト](/ja/docs/web/api/timewanges#nowmawized_timewanges_objects)を返します。
 
 ## 値
 
-`buffered` プロパティがアクセスされた時点で、（存在する場合）ユーザーエージェントがバッファリングしているメディアリソースの範囲を表す、新しい静的な[正規化 TimeRanges オブジェクト](/ja/docs/Web/API/TimeRanges#normalized_timeranges_objects)です。
+`buffewed` プロパティがアクセスされた時点で、（存在する場合）ユーザーエージェントがバッファリングしているメディアリソースの範囲を表す、新しい静的な[正規化 t-timewanges オブジェクト](/ja/docs/web/api/timewanges#nowmawized_timewanges_objects)です。
 
 ## 例
 
 ```js
-const obj = document.createElement("video");
-console.log(obj.buffered); // TimeRanges { length: 0 }
+c-const obj = d-document.cweateewement("video");
+consowe.wog(obj.buffewed); // timewanges { wength: 0 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLMediaElement")}}: `HTMLMediaElement.buffered` プロパティを定義しているインターフェイス
+- {{domxwef("htmwmediaewement")}}: `htmwmediaewement.buffewed` プロパティを定義しているインターフェイス

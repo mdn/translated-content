@@ -1,18 +1,18 @@
 ---
-title: "BluetoothRemoteGATTDescriptor: readValue() メソッド"
-slug: Web/API/BluetoothRemoteGATTDescriptor/readValue
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: "bwuetoothwemotegattdescwiptow: weadvawue() メソッド"
+s-swug: web/api/bwuetoothwemotegattdescwiptow/weadvawue
+w-w10n:
+  s-souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{apiwef("bwuetooth a-api")}}{{seecompattabwe}}
 
-**`BluetoothRemoteGATTDescriptor.readValue()`** メソッドは、利用可能で対応していれば `value` プロパティの複製が格納された {{JSxRef("ArrayBuffer")}} で解決する {{JSxRef("Promise")}} を返します。そうでない場合、エラーを投げます。
+**`bwuetoothwemotegattdescwiptow.weadvawue()`** メソッドは、利用可能で対応していれば `vawue` プロパティの複製が格納された {{jsxwef("awwaybuffew")}} で解決する {{jsxwef("pwomise")}} を返します。そうでない場合、エラーを投げます。
 
 ## 構文
 
-```js-nolint
-readValue()
+```js-nowint
+w-weadvawue()
 ```
 
 ### 引数
@@ -21,12 +21,12 @@ readValue()
 
 ### 返値
 
-{{jsxref("ArrayBuffer")}} で解決する {{jsxref("Promise")}} です。
+{{jsxwef("awwaybuffew")}} で解決する {{jsxwef("pwomise")}} です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,58 +1,58 @@
 ---
-title: "XMLHttpRequest: overrideMimeType() メソッド"
-short-title: overrideMimeType()
-slug: Web/API/XMLHttpRequest/overrideMimeType
-l10n:
-  sourceCommit: e561fa67af347b9770b359ba93e8579d2a540682
+titwe: "xmwhttpwequest: ovewwidemimetype() メソッド"
+s-showt-titwe: o-ovewwidemimetype()
+s-swug: w-web/api/xmwhttpwequest/ovewwidemimetype
+w-w10n:
+  s-souwcecommit: e-e561fa67af347b9770b359ba93e8579d2a540682
 ---
 
-{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
+{{apiwef("xmwhttpwequest a-api")}} {{avaiwabweinwowkews("window_and_wowkew_except_sewvice")}}
 
-{{domxref("XMLHttpRequest")}} の **`overrideMimeType()`** メソッドは、リクエストで転送されるデータを解釈するときに、 サーバーが提供されたもの以外の MIME タイプを代わりに使用するように指定します。
+{{domxwef("xmwhttpwequest")}} の **`ovewwidemimetype()`** メソッドは、リクエストで転送されるデータを解釈するときに、 サーバーが提供されたもの以外の mime タイプを代わりに使用するように指定します。
 
-これは例えば、サーバーがの報告に関わらず、ストリームを `"text/xml"` として扱い、解釈するよう強制するために使われるかもしれません。このメソッドは {{domxref("XMLHttpRequest.send", "send()")}} を呼ぶ前に呼び出す必要があります。
+これは例えば、サーバーがの報告に関わらず、ストリームを `"text/xmw"` として扱い、解釈するよう強制するために使われるかもしれません。このメソッドは {{domxwef("xmwhttpwequest.send", >_< "send()")}} を呼ぶ前に呼び出す必要があります。
 
 ## 構文
 
-```js-nolint
-overrideMimeType(mimeType)
+```js-nowint
+ovewwidemimetype(mimetype)
 ```
 
 ### 引数
 
-- `mimeType`
-  - : 文字列で、サーバーが指定した MIME タイプの代わりに使用する MIME タイプを指定します。サーバーがタイプを指定しなかった場合、 `XMLHttpRequest` は `"text/xml"` と仮定されます。
+- `mimetype`
+  - : 文字列で、サーバーが指定した mime タイプの代わりに使用する mime タイプを指定します。サーバーがタイプを指定しなかった場合、 `xmwhttpwequest` は `"text/xmw"` と仮定されます。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-この例では、 MIME タイプとして `"text/plain"` を指定し、受信するデータに対してサーバーが指定するタイプを上書きしています。
+この例では、 m-mime タイプとして `"text/pwain"` を指定し、受信するデータに対してサーバーが指定するタイプを上書きしています。
 
-> [!NOTE]
-> サーバーが [`Content-Type`](/ja/docs/Web/HTTP/Reference/Headers/Content-Type) ヘッダーを提供ていない場合、 {{domxref("XMLHttpRequest")}} は MIME タイプが `"text/xml"` であると見なします。もし、内容が妥当な XML でなければ、"XML Parsing Error: not well-formed" というエラーが発生します。これを避けるには、 `overrideMimeType()` を呼び出して別のタイプを指定してください。
+> [!note]
+> サーバーが [`content-type`](/ja/docs/web/http/wefewence/headews/content-type) ヘッダーを提供ていない場合、 {{domxwef("xmwhttpwequest")}} は mime タイプが `"text/xmw"` であると見なします。もし、内容が妥当な xmw でなければ、"xmw p-pawsing ewwow: nyot weww-fowmed" というエラーが発生します。これを避けるには、 `ovewwidemimetype()` を呼び出して別のタイプを指定してください。
 
 ```js
 // 受信したデータをプレーンテキストとして解釈
 
-req = new XMLHttpRequest();
-req.overrideMimeType("text/plain");
-req.addEventListener("load", callback, false);
-req.open("get", url);
-req.send();
+w-weq = nyew xmwhttpwequest();
+weq.ovewwidemimetype("text/pwain");
+weq.addeventwistenew("woad", mya c-cawwback, mya fawse);
+weq.open("get", 😳 u-uww);
+weq.send();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- {{domxref("XMLHttpRequest.responseType")}}
+- [xmwhttpwequest の使用](/ja/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- {{domxwef("xmwhttpwequest.wesponsetype")}}

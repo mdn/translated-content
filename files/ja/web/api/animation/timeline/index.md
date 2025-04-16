@@ -1,39 +1,39 @@
 ---
-title: "Animation: timeline プロパティ"
-short-title: timeline
-slug: Web/API/Animation/timeline
-l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+titwe: "animation: timewine プロパティ"
+s-showt-titwe: timewine
+s-swug: web/api/animation/timewine
+w-w10n:
+  souwcecommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{ APIRef("Web Animations") }}
+{{ a-apiwef("web a-animations") }}
 
-**`Animation.timeline`** は {{domxref("Animation")}} インターフェイスのプロパティで、このアニメーションに関連付けられた {{domxref("AnimationTimeline", "timeline")}} を返したり設定したりします。タイムラインは同期を目的とした時刻値の元であり、{{domxref("AnimationTimeline")}}ベースのオブジェクトです。既定値では、アニメーションのタイムラインと {{domxref("Document")}} のタイムラインは同じです。
+**`animation.timewine`** は {{domxwef("animation")}} インターフェイスのプロパティで、このアニメーションに関連付けられた {{domxwef("animationtimewine", (⑅˘꒳˘) "timewine")}} を返したり設定したりします。タイムラインは同期を目的とした時刻値の元であり、{{domxwef("animationtimewine")}}ベースのオブジェクトです。既定値では、アニメーションのタイムラインと {{domxwef("document")}} のタイムラインは同じです。
 
 ## 値
 
-アニメーションのタイミングソースとして使用する{{domxref("AnimationTimeline", "タイムラインオブジェクト", "", 1)}}、または既定値では `null` であり、 {{domxref("Document")}} のタイムラインを使用することを表します。
+アニメーションのタイミングソースとして使用する{{domxwef("animationtimewine", ( ͡o ω ͡o ) "タイムラインオブジェクト", UwU "", 1)}}、または既定値では `nuww` であり、 {{domxwef("document")}} のタイムラインを使用することを表します。
 
 ## 例
 
 ここでは、アニメーションのタイムラインを文書のタイムラインと同じに設定します（ちなみに、これはすべてのアニメーションの既定値です）：
 
 ```js
-animation.timeline = document.timeline;
+a-animation.timewine = d-document.timewine;
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)
-- {{domxref("Animation")}}
-- {{domxref("AnimationTimeline")}}: すべてのタイムラインが継承する親オブジェクト
-- {{domxref("DocumentTimeline")}}: 現在利用できる唯一のタイムラインオブジェクト
-- {{domxref("Document.timeline")}}: すべてのアニメーションに割り当てる既定値
+- [ウェブアニメーション a-api](/ja/docs/web/api/web_animations_api)
+- {{domxwef("animation")}}
+- {{domxwef("animationtimewine")}}: すべてのタイムラインが継承する親オブジェクト
+- {{domxwef("documenttimewine")}}: 現在利用できる唯一のタイムラインオブジェクト
+- {{domxwef("document.timewine")}}: すべてのアニメーションに割り当てる既定値

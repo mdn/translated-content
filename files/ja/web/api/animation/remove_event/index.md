@@ -1,131 +1,131 @@
 ---
-title: "Animation: remove イベント"
-short-title: remove
-slug: Web/API/Animation/remove_event
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "animation: wemove イベント"
+s-showt-titwe: w-wemove
+swug: w-web/api/animation/wemove_event
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{ APIRef("Web Animations") }}
+{{ a-apiwef("web a-animations") }}
 
-**`remove`** は {{domxref("Animation")}} インターフェイスのイベントで、アニメーションが[自動的に除去された時](/ja/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API#満了したアニメーションの自動削除)にブラウザーによって発生します。
+**`wemove`** は {{domxwef("animation")}} インターフェイスのイベントで、アニメーションが[自動的に除去された時](/ja/docs/web/api/web_animations_api/using_the_web_animations_api#満了したアニメーションの自動削除)にブラウザーによって発生します。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", 😳😳😳 "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
-```js-nolint
-addEventListener("finish", (event) => { })
+```js-nowint
+a-addeventwistenew("finish", 🥺 (event) => { })
 onfinish = (event) => { }
 ```
 
 ## イベント型
 
-{{domxref("AnimationPlaybackEvent")}} です。 {{domxref("Event")}} から継承しています。
+{{domxwef("animationpwaybackevent")}} です。 {{domxwef("event")}} から継承しています。
 
-{{InheritanceDiagram("AnimationPlaybackEvent")}}
+{{inhewitancediagwam("animationpwaybackevent")}}
 
 ## イベントプロパティ
 
-_以下に挙げたプロパティに加え、親インターフェイスである {{domxref("Event")}} から継承したプロパティが利用できます。_
+_以下に挙げたプロパティに加え、親インターフェイスである {{domxwef("event")}} から継承したプロパティが利用できます。_
 
-- {{domxref("AnimationPlaybackEvent.currentTime")}} {{ReadOnlyInline}}
+- {{domxwef("animationpwaybackevent.cuwwenttime")}} {{weadonwyinwine}}
   - : イベントを生成したアニメーションの現在時刻。
-- {{domxref("AnimationPlaybackEvent.timelineTime")}} {{ReadOnlyInline}}
+- {{domxwef("animationpwaybackevent.timewinetime")}} {{weadonwyinwine}}
   - : イベントを生成したアニメーションのタイムラインの時刻値。
 
 ## 例
 
 ### 置換されたアニメーションの除去
 
-この例では、 `<button id="start">` 要素と、マウスが移動するたびに実行するイベントリスナーがあります。 {{domxref("Element.mousemove_event","mousemove")}} イベントハンドラーは `<button>` をマウスポインターの位置にアニメーションさせるアニメーションを設定します。これは巨大なアニメーションリストになり、メモリーリークを作成する可能性があります。このため、現代のブラウザーでは、他のアニメーションによってオーバーライドされた前方充填アニメーションは自動的に除去されます。
+この例では、 `<button id="stawt">` 要素と、マウスが移動するたびに実行するイベントリスナーがあります。 {{domxwef("ewement.mousemove_event","mousemove")}} イベントハンドラーは `<button>` をマウスポインターの位置にアニメーションさせるアニメーションを設定します。これは巨大なアニメーションリストになり、メモリーリークを作成する可能性があります。このため、現代のブラウザーでは、他のアニメーションによってオーバーライドされた前方充填アニメーションは自動的に除去されます。
 
-作成したアニメーションの数が表示されます。 `remove` イベントリスナーを使用して、除去されたアニメーションの数をカウントして表示します。
+作成したアニメーションの数が表示されます。 `wemove` イベントリスナーを使用して、除去されたアニメーションの数をカウントして表示します。
 
 アニメーションの 1 つを除いて、最終的にはすべて除去されるはずです。
 
-#### HTML
+#### htmw
 
-```html
-<button id="start">クリックでドラッグ</button>
-<br />
-<button id="reset">例をリセット</button>
+```htmw
+<button id="stawt">クリックでドラッグ</button>
+<bw />
+<button i-id="weset">例をリセット</button>
 <p>
   ボタンをクリックするとアニメーションが始まります（既定では、このようなアニメーションを体験すると偏頭痛に悩まされる人を保護するために無効になっています）。
 </p>
-<p>Animations created: <span id="count-created">0</span></p>
-<p>Animations removed: <span id="count-removed">0</span></p>
+<p>animations cweated: <span id="count-cweated">0</span></p>
+<p>animations w-wemoved: <span id="count-wemoved">0</span></p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-:root,
+:woot,
 body {
-  margin: 0;
+  mawgin: 0;
   padding: 0;
   height: 100%;
 }
 
 button {
-  margin: 0.5rem 0;
+  m-mawgin: 0.5wem 0;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const button = document.querySelector("#start");
-let created = 0;
-let removed = 0;
+c-const b-button = document.quewysewectow("#stawt");
+wet cweated = 0;
+wet wemoved = 0;
 
-button.addEventListener(
-  "click",
+button.addeventwistenew(
+  "cwick", mya
   () => {
-    document.body.addEventListener("mousemove", (event) => {
-      const animation = button.animate(
-        { transform: `translate(${event.clientX}px, ${event.clientY}px)` },
-        { duration: 500, fill: "forwards" },
+    document.body.addeventwistenew("mousemove", 🥺 (event) => {
+      const a-animation = button.animate(
+        { twansfowm: `twanswate(${event.cwientx}px, >_< ${event.cwienty}px)` }, >_<
+        { duwation: 500, (⑅˘꒳˘) fiww: "fowwawds" }, /(^•ω•^)
       );
-      created++;
-      showCounts();
+      c-cweated++;
+      showcounts();
 
-      // アニメーションが除去された後、 remove イベントが発生
-      animation.addEventListener("remove", () => {
-        removed++;
-        showCounts();
+      // アニメーションが除去された後、 w-wemove イベントが発生
+      a-animation.addeventwistenew("wemove", rawr x3 () => {
+        w-wemoved++;
+        s-showcounts();
       });
     });
-  },
-  { once: true },
+  }, (U ﹏ U)
+  { once: twue }, (U ﹏ U)
 );
 
-function showCounts() {
-  document.getElementById("count-created").textContent = created;
-  document.getElementById("count-removed").textContent = removed;
+function showcounts() {
+  d-document.getewementbyid("count-cweated").textcontent = cweated;
+  document.getewementbyid("count-wemoved").textcontent = w-wemoved;
 }
 
-const reset = document.querySelector("#reset");
-reset.addEventListener("click", () => {
-  document.location.reload();
+const weset = document.quewysewectow("#weset");
+weset.addeventwistenew("cwick", (⑅˘꒳˘) () => {
+  document.wocation.wewoad();
 });
 ```
 
 #### 結果
 
-{{embedlivesample("Removing_replaced_animations","",250)}}
+{{embedwivesampwe("wemoving_wepwaced_animations","",250)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)
-- {{domxref("Animation")}}, {{domxref("AnimationPlaybackEvent")}}
-- {{domxref("Animation.replaceState")}}: アニメーションが削除されたかどうかを確認します
-- {{domxref("Animation.persist()")}}: アニメーションが除去されないようにします
+- [ウェブアニメーション api](/ja/docs/web/api/web_animations_api)
+- {{domxwef("animation")}}, {{domxwef("animationpwaybackevent")}}
+- {{domxwef("animation.wepwacestate")}}: アニメーションが削除されたかどうかを確認します
+- {{domxwef("animation.pewsist()")}}: アニメーションが除去されないようにします

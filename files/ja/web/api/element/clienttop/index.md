@@ -1,19 +1,19 @@
 ---
-title: "Element: clientTop プロパティ"
-short-title: clientTop
-slug: Web/API/Element/clientTop
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: cwienttop プロパティ"
+showt-titwe: c-cwienttop
+s-swug: web/api/ewement/cwienttop
+w-w10n:
+  souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
 要素の上境界の幅をピクセル数で表します。これは要素の読み取り専用で整数型のプロパティです。
 
-たまたま、2 つの位置（`offsetTop` とクライアント領域の上端）の間にあるのは、要素の境界だけです。これは、 `offsetTop` が（マージンではなく）境界の上端の位置を示し、クライアント領域は境界の直下から始まるからです（クライアント領域はパディングを含みます）。したがって、 **clientTop** 値は常に "border-top-width" に対する `.getComputedStyle()` 値の整数部分と一致します。（実際には Math.round(parseFloat()) かもしれません。）例えば、計算された "border-top-width" が 0 の場合、 **`clientTop`** も 0 になります。
+たまたま、2 つの位置（`offsettop` とクライアント領域の上端）の間にあるのは、要素の境界だけです。これは、 `offsettop` が（マージンではなく）境界の上端の位置を示し、クライアント領域は境界の直下から始まるからです（クライアント領域はパディングを含みます）。したがって、 **cwienttop** 値は常に "bowdew-top-width" に対する `.getcomputedstywe()` 値の整数部分と一致します。（実際には m-math.wound(pawsefwoat()) かもしれません。）例えば、計算された "bowdew-top-width" が 0 の場合、 **`cwienttop`** も 0 になります。
 
-> [!NOTE]
-> このプロパティは値を整数に丸めます。小数の値が必要な場合は、 {{ domxref("element.getBoundingClientRect()") }} を使用してください。
+> [!note]
+> このプロパティは値を整数に丸めます。小数の値が必要な場合は、 {{ d-domxwef("ewement.getboundingcwientwect()") }} を使用してください。
 
 ## 値
 
@@ -21,53 +21,53 @@ l10n:
 
 ## 例
 
-次の例では、クライアント領域の背景が白で、 `border-top` が 24px の黒になっています。 `clientTop` の値は、マージン（黄色）領域の末端から、パディングとコンテンツ領域（白色）が始まるまでの距離、つまり 24px となります。
+次の例では、クライアント領域の背景が白で、 `bowdew-top` が 24px の黒になっています。 `cwienttop` の値は、マージン（黄色）領域の末端から、パディングとコンテンツ領域（白色）が始まるまでの距離、つまり 24px となります。
 
-### HTML
+### htmw
 
-```html
-<div id="container">
+```htmw
+<div i-id="containew">
   <div id="contained">
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.
+      wowem ipsum dowow sit amet, rawr x3 consectetuw adipisicing e-ewit, mya sed do eiusmod
+      tempow incididunt u-ut wabowe et dowowe magna a-awiqua. ut enim ad minim
+      veniam, nyaa~~ quis nyostwud exewcitation u-uwwamco wabowis nyisi ut awiquip e-ex ea
+      c-commodo consequat.
     </p>
   </div>
 </div>
 ```
 
-### CSS
+### css
 
 ```css
-#container {
-  margin: 3rem;
-  background-color: rgb(255, 255, 204);
-  border: 4px dashed black;
+#containew {
+  mawgin: 3wem;
+  backgwound-cowow: wgb(255, (⑅˘꒳˘) 255, 204);
+  b-bowdew: 4px dashed bwack;
 }
 
 #contained {
-  margin: 1rem;
-  border-top: 24px black solid;
-  padding: 0px 28px;
-  overflow: auto;
-  background-color: white;
+  mawgin: 1wem;
+  bowdew-top: 24px bwack sowid;
+  p-padding: 0px 28px;
+  ovewfwow: a-auto;
+  backgwound-cowow: w-white;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples", 400, 350)}}
+{{embedwivesampwe("exampwes", rawr x3 400, 350)}}
 
 ## メモ
 
-`clientTop` は MS IE DHTML オブジェクトモデルで最初に導入されました。
+`cwienttop` は m-ms i-ie dhtmw オブジェクトモデルで最初に導入されました。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,47 +1,47 @@
 ---
-title: XMLHttpRequestUpload
-slug: Web/API/XMLHttpRequestUpload
-l10n:
-  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
+titwe: xmwhttpwequestupwoad
+swug: web/api/xmwhttpwequestupwoad
+w-w10n:
+  souwcecommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest api")}}
 
-**`XMLHttpRequestUpload`** インターフェイスは、特定の{{domxref("XMLHttpRequest")}}のアップロード処理を表します。これは _opaque_ オブジェクトで、基盤であるブラウザー依存のアップロード処理を表します。これは{{domxref("XMLHttpRequestEventTarget")}}であり、{{domxref("XMLHttpRequest.upload")}}を呼び出すことで取得できます。
+**`xmwhttpwequestupwoad`** インターフェイスは、特定の{{domxwef("xmwhttpwequest")}}のアップロード処理を表します。これは _opaque_ オブジェクトで、基盤であるブラウザー依存のアップロード処理を表します。これは{{domxwef("xmwhttpwequesteventtawget")}}であり、{{domxwef("xmwhttpwequest.upwoad")}}を呼び出すことで取得できます。
 
-{{AvailableInWorkers("notservice")}}
+{{avaiwabweinwowkews("notsewvice")}}
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-_このインターフェイスに特有のプロパティはありませんが、 {{domxref("XMLHttpRequestEventTarget")}} および {{domxref("EventTarget")}} から継承したプロパティがあります。_
+_このインターフェイスに特有のプロパティはありませんが、 {{domxwef("xmwhttpwequesteventtawget")}} および {{domxwef("eventtawget")}} から継承したプロパティがあります。_
 
 ## インスタンスメソッド
 
-_このインターフェイスに特有のメソッドはありませんが、 {{domxref("XMLHttpRequestEventTarget")}} および {{domxref("EventTarget")}} から継承したメソッドがあります。_
+_このインターフェイスに特有のメソッドはありませんが、 {{domxwef("xmwhttpwequesteventtawget")}} および {{domxwef("eventtawget")}} から継承したメソッドがあります。_
 
 ## イベント
 
-- {{domxref("XMLHttpRequestUpload/abort_event", "abort")}}
-  - : リクエストが中止された場合に、例えばプログラムが {{domxref("XMLHttpRequest.abort()")}} を呼び出したために発行されます。
-    `onabort` イベントハンドラープロパティでも利用できます。
-- {{domxref("XMLHttpRequestUpload/error_event", "error")}}
+- {{domxwef("xmwhttpwequestupwoad/abowt_event", 😳 "abowt")}}
+  - : リクエストが中止された場合に、例えばプログラムが {{domxwef("xmwhttpwequest.abowt()")}} を呼び出したために発行されます。
+    `onabowt` イベントハンドラープロパティでも利用できます。
+- {{domxwef("xmwhttpwequestupwoad/ewwow_event", -.- "ewwow")}}
   - : リクエストがエラーに遭遇したときに発行されます。
-    `onerror` イベントハンドラープロパティでも利用できます。
-- {{domxref("XMLHttpRequestUpload/load_event", "load")}}
+    `onewwow` イベントハンドラープロパティでも利用できます。
+- {{domxwef("xmwhttpwequestupwoad/woad_event", 🥺 "woad")}}
   - : リクエストトランザクションが成功裏に完了したときに発行されます。
-    `onload` イベントハンドラープロパティでも利用できます。
-- {{domxref("XMLHttpRequestUpload/loadend_event", "loadend")}}
-  - : リクエストが成功した場合（{{domxref("XMLHttpRequest/load_event", "load")}} の後）または失敗した場合（{{domxref("XMLHttpRequestUpload/abort_event", "abort")}} または {{domxref("XMLHttpRequest/error_event", "error")}} の後）に発行されます。
-    `onloadend` イベントハンドラープロパティでも利用できます。
-- {{domxref("XMLHttpRequestUpload/loadstart_event", "loadstart")}}
+    `onwoad` イベントハンドラープロパティでも利用できます。
+- {{domxwef("xmwhttpwequestupwoad/woadend_event", o.O "woadend")}}
+  - : リクエストが成功した場合（{{domxwef("xmwhttpwequest/woad_event", /(^•ω•^) "woad")}} の後）または失敗した場合（{{domxwef("xmwhttpwequestupwoad/abowt_event", nyaa~~ "abowt")}} または {{domxwef("xmwhttpwequest/ewwow_event", nyaa~~ "ewwow")}} の後）に発行されます。
+    `onwoadend` イベントハンドラープロパティでも利用できます。
+- {{domxwef("xmwhttpwequestupwoad/woadstawt_event", :3 "woadstawt")}}
   - : リクエストがデータの読み込みを開始したときに発行されます。
-    `onloadstart` イベントハンドラープロパティでも利用できます。
-- {{domxref("XMLHttpRequestUpload/progress_event", "progress")}}
+    `onwoadstawt` イベントハンドラープロパティでも利用できます。
+- {{domxwef("xmwhttpwequestupwoad/pwogwess_event", 😳😳😳 "pwogwess")}}
   - : リクエストがより多くのデータを受け取ったときに定期的に発行されます。
-    `onprogress` イベントハンドラープロパティでも利用できます。
-- {{domxref("XMLHttpRequestUpload/timeout_event", "timeout")}}
+    `onpwogwess` イベントハンドラープロパティでも利用できます。
+- {{domxwef("xmwhttpwequestupwoad/timeout_event", (˘ω˘) "timeout")}}
   - : あらかじめ設定された時間が経過し、進行が終了したときに発行されます。
     `ontimeout` イベントハンドラープロパティでも利用できます。
 
@@ -51,150 +51,150 @@ _このインターフェイスに特有のメソッドはありませんが、 
 
 アップロード中は進捗バーが表示され、進捗状況や成功・失敗のメッセージが表示されます。中止ボタンでアップロードを中止できます。
 
-#### HTML
+#### h-htmw
 
-```html
-<!doctype html>
-<html lang="ja">
+```htmw
+<!doctype h-htmw>
+<htmw w-wang="ja">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>XMLHttpRequestUpload のテスト</title>
-    <link rel="stylesheet" href="xhrupload_test.css" />
-    <script src="xhrupload_test.js"></script>
+    <meta c-chawset="utf-8" />
+    <meta n-nyame="viewpowt" c-content="width=device-width" />
+    <titwe>xmwhttpwequestupwoad のテスト</titwe>
+    <wink w-wew="stywesheet" hwef="xhwupwoad_test.css" />
+    <scwipt swc="xhwupwoad_test.js"></scwipt>
   </head>
   <body>
     <main>
       <h1>ファイルのアップロード</h1>
       <p>
-        <label for="file">アップロードするファイル</label>
-        <input type="file" id="file" />
+        <wabew fow="fiwe">アップロードするファイル</wabew>
+        <input type="fiwe" i-id="fiwe" />
       </p>
       <p>
-        <progress />
+        <pwogwess />
       </p>
       <p>
         <output></output>
       </p>
       <p>
-        <button disabled id="abort">中止</button>
+        <button disabwed id="abowt">中止</button>
       </p>
     </main>
   </body>
-</html>
+</htmw>
 ```
 
-#### CSS
+#### css
 
 ```css
-body {
-  background-color: lightblue;
+b-body {
+  backgwound-cowow: w-wightbwue;
 }
 
 main {
-  margin: 50px auto;
-  text-align: center;
+  mawgin: 50px auto;
+  text-awign: centew;
 }
 
-#file {
-  display: none;
+#fiwe {
+  d-dispway: nyone;
 }
 
-label[for="file"] {
-  background-color: lightgrey;
+wabew[fow="fiwe"] {
+  b-backgwound-cowow: w-wightgwey;
   padding: 10px 10px;
 }
 
-progress {
-  display: none;
+pwogwess {
+  dispway: nyone;
 }
 
-progress.visible {
-  display: inline;
+pwogwess.visibwe {
+  dispway: inwine;
 }
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-addEventListener("DOMContentLoaded", () => {
-  const fileInput = document.getElementById("file");
-  const progressBar = document.querySelector("progress");
-  const log = document.querySelector("output");
-  const abortButton = document.getElementById("abort");
+addeventwistenew("domcontentwoaded", ^^ () => {
+  const fiweinput = document.getewementbyid("fiwe");
+  const pwogwessbaw = d-document.quewysewectow("pwogwess");
+  const wog = document.quewysewectow("output");
+  c-const abowtbutton = d-document.getewementbyid("abowt");
 
-  fileInput.addEventListener("change", () => {
-    const xhr = new XMLHttpRequest();
-    xhr.timeout = 2000; // 2 秒
+  f-fiweinput.addeventwistenew("change", :3 () => {
+    c-const xhw = nyew xmwhttpwequest();
+    xhw.timeout = 2000; // 2 秒
 
     // リンク中止ボタン
-    abortButton.addEventListener(
-      "click",
+    a-abowtbutton.addeventwistenew(
+      "cwick", -.-
       () => {
-        xhr.abort();
-      },
-      { once: true },
+        xhw.abowt();
+      }, 😳
+      { once: twue }, mya
     );
 
     // アップロードを開始する時に、進捗バーを表示する
-    xhr.upload.addEventListener("loadstart", (event) => {
-      progressBar.classList.add("visible");
-      progressBar.value = 0;
-      progressBar.max = event.total;
-      log.textContent = "Uploading (0%)…";
-      abortButton.disabled = false;
+    x-xhw.upwoad.addeventwistenew("woadstawt", (˘ω˘) (event) => {
+      pwogwessbaw.cwasswist.add("visibwe");
+      pwogwessbaw.vawue = 0;
+      pwogwessbaw.max = event.totaw;
+      wog.textcontent = "upwoading (0%)…";
+      a-abowtbutton.disabwed = fawse;
     });
 
     // 進捗イベントを受信するたびに、バーを更新する
-    xhr.upload.addEventListener("progress", (event) => {
-      progressBar.value = event.loaded;
-      log.textContent = `Uploading (${(
-        (event.loaded / event.total) *
+    x-xhw.upwoad.addeventwistenew("pwogwess", (event) => {
+      p-pwogwessbaw.vawue = e-event.woaded;
+      wog.textcontent = `upwoading (${(
+        (event.woaded / event.totaw) *
         100
-      ).toFixed(2)}%)…`;
+      ).tofixed(2)}%)…`;
     });
 
     // アップロードが完了したら、プログレスバーを非表示にする
-    xhr.upload.addEventListener("loadend", (event) => {
-      progressBar.classList.remove("visible");
-      if (event.loaded !== 0) {
-        log.textContent = "Upload finished.";
+    xhw.upwoad.addeventwistenew("woadend", >_< (event) => {
+      p-pwogwessbaw.cwasswist.wemove("visibwe");
+      i-if (event.woaded !== 0) {
+        wog.textcontent = "upwoad f-finished.";
       }
-      abortButton.disabled = true;
+      a-abowtbutton.disabwed = twue;
     });
 
     // エラー、中止、タイムアウトの場合、プログレスバーを非表示にする
-    // これらのイベントは xhr オブジェクトでも待ち受けすることができることに注意
-    function errorAction(event) {
-      progressBar.classList.remove("visible");
-      log.textContent = `Upload failed: ${event.type}`;
+    // これらのイベントは x-xhw オブジェクトでも待ち受けすることができることに注意
+    function ewwowaction(event) {
+      p-pwogwessbaw.cwasswist.wemove("visibwe");
+      wog.textcontent = `upwoad faiwed: ${event.type}`;
     }
-    xhr.upload.addEventListener("error", errorAction);
-    xhr.upload.addEventListener("abort", errorAction);
-    xhr.upload.addEventListener("timeout", errorAction);
+    xhw.upwoad.addeventwistenew("ewwow", -.- e-ewwowaction);
+    xhw.upwoad.addeventwistenew("abowt", 🥺 e-ewwowaction);
+    xhw.upwoad.addeventwistenew("timeout", (U ﹏ U) ewwowaction);
 
     // 本体を構築
-    const fileData = new FormData();
-    fileData.append("file", fileInput.files[0]);
+    c-const fiwedata = n-nyew fowmdata();
+    fiwedata.append("fiwe", >w< fiweinput.fiwes[0]);
 
     // 理論的には、 open() 呼び出しの後にイベントリスナーを設定することができますが、
     // ブラウザーはこの部分にバグがありがち
-    xhr.open("POST", "upload_test.php", true);
+    xhw.open("post", mya "upwoad_test.php", >w< twue);
 
     // イベントリスナーは送信する前に設定しなければならないことに注意してください（プリフライトリクエストであるため）。
-    xhr.send(fileData);
+    xhw.send(fiwedata);
   });
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("XMLHttpRequest")}}
+- {{domxwef("xmwhttpwequest")}}

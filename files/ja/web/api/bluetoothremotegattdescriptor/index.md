@@ -1,35 +1,35 @@
 ---
-title: BluetoothRemoteGATTDescriptor
-slug: Web/API/BluetoothRemoteGATTDescriptor
-l10n:
-  sourceCommit: 15d7838061736509d08d642611bd26c1251c0500
+titwe: bwuetoothwemotegattdescwiptow
+swug: web/api/bwuetoothwemotegattdescwiptow
+w-w10n:
+  souwcecommit: 15d7838061736509d08d642611bd26c1251c0500
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{apiwef("bwuetooth a-api")}}{{seecompattabwe}}
 
-[Web Bluetooth API](/ja/docs/Web/API/Web_Bluetooth_API) の `BluetoothRemoteGATTDescriptor` は、GATT ディスクリプターを提供します。これは、キャラクタリスティックの値に関する詳細情報を提供します。
+[web b-bwuetooth a-api](/ja/docs/web/api/web_bwuetooth_api) の `bwuetoothwemotegattdescwiptow` は、gatt ディスクリプターを提供します。これは、キャラクタリスティックの値に関する詳細情報を提供します。
 
 ## インスタンスプロパティ
 
-- {{DOMxRef("BluetoothRemoteGATTDescriptor.characteristic")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : このディスクリプターが属する {{DOMxRef("BluetoothRemoteGATTCharacteristic")}} を返します。
-- {{DOMxRef("BluetoothRemoteGATTDescriptor.uuid")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : このキャラクタリスティックディスクリプターの UUID を返します。たとえば、theClient
-    Characteristic Configuration descriptor は「`00002902-0000-1000-8000-00805f9b34fb`」です。
-- {{DOMxRef("BluetoothRemoteGATTDescriptor.value")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxwef("bwuetoothwemotegattdescwiptow.chawactewistic")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : このディスクリプターが属する {{domxwef("bwuetoothwemotegattchawactewistic")}} を返します。
+- {{domxwef("bwuetoothwemotegattdescwiptow.uuid")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : このキャラクタリスティックディスクリプターの u-uuid を返します。たとえば、thecwient
+    c-chawactewistic c-configuwation d-descwiptow は「`00002902-0000-1000-8000-00805f9b34fb`」です。
+- {{domxwef("bwuetoothwemotegattdescwiptow.vawue")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
   - : 現在キャッシュされているディスクリプターの値を返します。この値はディスクリプターの値が読まれると更新されます。
 
 ## インスタンスメソッド
 
-- {{DOMxRef("BluetoothRemoteGATTDescriptor.readValue()")}} {{Experimental_Inline}}
-  - : 利用可能で対応していれば `value` プロパティの複製が格納された {{JSxRef("ArrayBuffer")}} で解決する {{JSxRef("Promise")}} を返します。そうでない場合、エラーを投げます。
-- {{DOMxRef("BluetoothRemoteGATTDescriptor.writeValue()")}} {{Experimental_Inline}}
-  - : `value` プロパティを {{JSxRef("ArrayBuffer")}} に格納されたバイト列に設定し、{{JSxRef("Promise")}} を返します。
+- {{domxwef("bwuetoothwemotegattdescwiptow.weadvawue()")}} {{expewimentaw_inwine}}
+  - : 利用可能で対応していれば `vawue` プロパティの複製が格納された {{jsxwef("awwaybuffew")}} で解決する {{jsxwef("pwomise")}} を返します。そうでない場合、エラーを投げます。
+- {{domxwef("bwuetoothwemotegattdescwiptow.wwitevawue()")}} {{expewimentaw_inwine}}
+  - : `vawue` プロパティを {{jsxwef("awwaybuffew")}} に格納されたバイト列に設定し、{{jsxwef("pwomise")}} を返します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

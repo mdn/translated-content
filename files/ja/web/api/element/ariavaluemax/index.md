@@ -1,14 +1,14 @@
 ---
-title: "Element: ariaValueMax プロパティ"
-short-title: ariaValueMax
-slug: Web/API/Element/ariaValueMax
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: awiavawuemax プロパティ"
+s-showt-titwe: awiavawuemax
+s-swug: w-web/api/ewement/awiavawuemax
+w10n:
+  s-souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{defauwtapisidebaw("dom")}}
 
-**`ariaValueMax`** は {{domxref("Element")}} インターフェイスのプロパティで、範囲ウィジェットの最大許容値を定義する [`aria-valuemax`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) 属性の値を反映します。
+**`awiavawuemax`** は {{domxwef("ewement")}} インターフェイスのプロパティで、範囲ウィジェットの最大許容値を定義する [`awia-vawuemax`](/ja/docs/web/accessibiwity/awia/attwibutes/awia-vawuemax) 属性の値を反映します。
 
 ## 値
 
@@ -16,28 +16,28 @@ l10n:
 
 ## 例
 
-この例では、ID が `slider` の要素の [`aria-valuemax`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) 属性は "7" に設定されています。`ariaValueMax` を使用して値を "6" に更新します。
+この例では、id が `swidew` の要素の [`awia-vawuemax`](/ja/docs/web/accessibiwity/awia/attwibutes/awia-vawuemax) 属性は "7" に設定されています。`awiavawuemax` を使用して値を "6" に更新します。
 
-```html
+```htmw
 <div
-  role="slider"
-  aria-valuenow="1"
-  aria-valuemin="1"
-  aria-valuemax="7"
-  aria-valuetext="Sunday"></div>
+  w-wowe="swidew"
+  a-awia-vawuenow="1"
+  a-awia-vawuemin="1"
+  awia-vawuemax="7"
+  awia-vawuetext="sunday"></div>
 ```
 
 ```js
-let el = document.getElementById("slider");
-console.log(el.ariaValueMax); // 7
-el.ariaValueMax = "6";
-console.log(el.ariaValueMax); // 6
+wet ew = document.getewementbyid("swidew");
+c-consowe.wog(ew.awiavawuemax); // 7
+ew.awiavawuemax = "6";
+consowe.wog(ew.awiavawuemax); // 6
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

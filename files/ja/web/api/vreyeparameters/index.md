@@ -1,55 +1,55 @@
 ---
-title: VREyeParameters
-slug: Web/API/VREyeParameters
-l10n:
-  sourceCommit: 579788ba8fe61b6c7dddaec09dee7b33d6548a4d
+titwe: vweyepawametews
+swug: w-web/api/vweyepawametews
+w-w10n:
+  s-souwcecommit: 579788ba8fe61b6c7dddaec09dee7b33d6548a4d
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{apiwef("webvw a-api")}}{{depwecated_headew}}{{non-standawd_headew}}
 
-**`VREyeParameters`** は [WebVR API](/ja/docs/Web/API/WebVR_API) のインターフェイスで、指定した目のためにシーンを正しくレンダリングするためのすべての情報（視界の情報を含む）を表します。
+**`vweyepawametews`** は [webvw a-api](/ja/docs/web/api/webvw_api) のインターフェイスで、指定した目のためにシーンを正しくレンダリングするためのすべての情報（視界の情報を含む）を表します。
 
-> [!NOTE]
-> このインターフェイスは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
+> [!note]
+> このインターフェイスは古い [webvw a-api](https://immewsive-web.github.io/webvw/spec/1.1/) の一部でした。これは [webxw 機器 a-api](https://immewsive-web.github.io/webxw/) に置き換えられました。
 
-このインターフェイスは {{domxref("VRDisplay.getEyeParameters()")}} メソッドを通じてアクセスできます。
+このインターフェイスは {{domxwef("vwdispway.geteyepawametews()")}} メソッドを通じてアクセスできます。
 
-> [!WARNING]
-> このインターフェイスは、ビューおよび投影行列を計算するために使用すべきではありません。ハードウェアの互換性を可能な限り確保するために、{{domxref("VRFrameData")}} で指定された行列を使用してください。
+> [!wawning]
+> このインターフェイスは、ビューおよび投影行列を計算するために使用すべきではありません。ハードウェアの互換性を可能な限り確保するために、{{domxwef("vwfwamedata")}} で指定された行列を使用してください。
 
 ## インスタンスプロパティ
 
-- {{domxref("VREyeParameters.offset")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
+- {{domxwef("vweyepawametews.offset")}} {{depwecated_inwine}} {{weadonwyinwine}} {{non-standawd_inwine}}
   - : ユーザーの目と目の間の中心点から目の中心までのオフセットを、メートル単位で表します。
-- {{domxref("VREyeParameters.fieldOfView")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
-  - : ユーザーの瞳孔間距離 (IPD) の調整により変化する、目の現在の視野角を記述します。
-- {{domxref("VREyeParameters.renderWidth")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
+- {{domxwef("vweyepawametews.fiewdofview")}} {{depwecated_inwine}} {{weadonwyinwine}} {{non-standawd_inwine}}
+  - : ユーザーの瞳孔間距離 (ipd) の調整により変化する、目の現在の視野角を記述します。
+- {{domxwef("vweyepawametews.wendewwidth")}} {{depwecated_inwine}} {{weadonwyinwine}} {{non-standawd_inwine}}
   - : それぞれの目のビューポートの推奨レンダーターゲットの幅をピクセル単位で記述します。
-- {{domxref("VREyeParameters.renderHeight")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
+- {{domxwef("vweyepawametews.wendewheight")}} {{depwecated_inwine}} {{weadonwyinwine}} {{non-standawd_inwine}}
   - : それぞれの目のビューポートの推奨レンダーターゲットの高さをピクセル単位で記述します。
 
 ## 例
 
 ```js
-navigator.getVRDisplays().then((displays) => {
-  // If a display is available, use it to present the scene
-  vrDisplay = displays[0];
-  console.log("Display found");
-  // Starting the presentation when the button is clicked:
-  //   It can only be called in response to a user gesture
-  btn.addEventListener("click", () => {
-    vrDisplay.requestPresent([{ source: canvas }]).then(() => {
-      console.log("Presenting to WebVR display");
+n-nyavigatow.getvwdispways().then((dispways) => {
+  // if a dispway is avaiwabwe, (˘ω˘) use it to pwesent the scene
+  v-vwdispway = dispways[0];
+  consowe.wog("dispway found");
+  // s-stawting the pwesentation when the b-button is cwicked:
+  //   it can onwy be cawwed in wesponse to a-a usew gestuwe
+  btn.addeventwistenew("cwick", (⑅˘꒳˘) () => {
+    v-vwdispway.wequestpwesent([{ s-souwce: canvas }]).then(() => {
+      consowe.wog("pwesenting to webvw dispway");
 
-      // Set the canvas size to the size of the vrDisplay viewport
+      // set the canvas s-size to the size of the vwdispway viewpowt
 
-      const leftEye = vrDisplay.getEyeParameters("left");
-      const rightEye = vrDisplay.getEyeParameters("right");
+      const wefteye = vwdispway.geteyepawametews("weft");
+      c-const wighteye = vwdispway.geteyepawametews("wight");
 
-      canvas.width = Math.max(leftEye.renderWidth, rightEye.renderWidth) * 2;
-      canvas.height = Math.max(leftEye.renderHeight, rightEye.renderHeight);
+      c-canvas.width = m-math.max(wefteye.wendewwidth, (///ˬ///✿) w-wighteye.wendewwidth) * 2;
+      c-canvas.height = math.max(wefteye.wendewheight, 😳😳😳 wighteye.wendewheight);
 
-      drawVRScene();
+      d-dwawvwscene();
     });
   });
 });
@@ -57,14 +57,14 @@ navigator.getVRDisplays().then((displays) => {
 
 ## 仕様書
 
-このインターフェイスは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部であり、これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) で置き枯れられました。標準規格になる見込みはありません。
+このインターフェイスは古い [webvw api](https://immewsive-web.github.io/webvw/spec/1.1/) の一部であり、これは [webxw 機器 api](https://immewsive-web.github.io/webxw/) で置き枯れられました。標準規格になる見込みはありません。
 
-すべてのブラウザーが新しい [WebXR API](/ja/docs/Web/API/WebXR_Device_API/Fundamentals) を実装するまで、 [A-Frame](https://aframe.io/)、[Babylon.js](https://www.babylonjs.com/)、[Three.js](https://threejs.org/) などのフレームワークを使用するか、[ポリフィル](https://github.com/immersive-web/webxr-polyfill)を使用することが、すべてのブラウザーで動作する WebXR アプリを開発する上で推奨されます。[\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/)
+すべてのブラウザーが新しい [webxw api](/ja/docs/web/api/webxw_device_api/fundamentaws) を実装するまで、 [a-fwame](https://afwame.io/)、[babywon.js](https://www.babywonjs.com/)、[thwee.js](https://thweejs.owg/) などのフレームワークを使用するか、[ポリフィル](https://github.com/immewsive-web/webxw-powyfiww)を使用することが、すべてのブラウザーで動作する w-webxw アプリを開発する上で推奨されます。[\[1\]](https://devewopew.ocuwus.com/documentation/web/powt-vw-xw/)
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebVR API](/ja/docs/Web/API/WebVR_API)
+- [webvw api](/ja/docs/web/api/webvw_api)

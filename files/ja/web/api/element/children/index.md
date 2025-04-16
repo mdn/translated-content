@@ -1,40 +1,40 @@
 ---
-title: "Element: children プロパティ"
-short-title: children
-slug: Web/API/Element/children
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: chiwdwen プロパティ"
+s-showt-titwe: c-chiwdwen
+s-swug: web/api/ewement/chiwdwen
+w-w10n:
+  souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-**`children`** は読み取り専用のプロパティで、生きた {{domxref("HTMLCollection")}} で呼び出された要素の子{{domxref("Element", "要素", "", 1)}}をすべて返します。
+**`chiwdwen`** は読み取り専用のプロパティで、生きた {{domxwef("htmwcowwection")}} で呼び出された要素の子{{domxwef("ewement", σωσ "要素", "", 1)}}をすべて返します。
 
-`Element.children` は要素のノードしか含みません。すべての子ノード、例えばテキストやコメントノードなどを取得するには、 {{domxref("Node.childNodes")}} を使用してください。
+`ewement.chiwdwen` は要素のノードしか含みません。すべての子ノード、例えばテキストやコメントノードなどを取得するには、 {{domxwef("node.chiwdnodes")}} を使用してください。
 
 ## 値
 
-生きた {{ domxref("HTMLCollection") }} で、 `node` の子の DOM 要素の順序付きコレクションを返します。コレクションの {{domxref("HTMLCollection.item()", "item()")}} メソッドか、 JavaScript の配列スタイルの記法を使って、コレクション内の個々の子ノードにアクセスすることができます。
+生きた {{ d-domxwef("htmwcowwection") }} で、 `node` の子の d-dom 要素の順序付きコレクションを返します。コレクションの {{domxwef("htmwcowwection.item()", >_< "item()")}} メソッドか、 javascwipt の配列スタイルの記法を使って、コレクション内の個々の子ノードにアクセスすることができます。
 
-ノードが子要素を持たない場合、 `children` は要素を含まず、`length` は `0` です。
+ノードが子要素を持たない場合、 `chiwdwen` は要素を含まず、`wength` は `0` です。
 
 ## 例
 
 ```js
-const myElement = document.getElementById("foo");
-for (const child of myElement.children) {
-  console.log(child.tagName);
+const myewement = document.getewementbyid("foo");
+fow (const c-chiwd of myewement.chiwdwen) {
+  consowe.wog(chiwd.tagname);
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Node.childNodes")}}
+- {{domxwef("node.chiwdnodes")}}

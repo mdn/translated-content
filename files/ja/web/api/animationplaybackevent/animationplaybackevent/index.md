@@ -1,48 +1,48 @@
 ---
-title: "AnimationPlaybackEvent: AnimationPlaybackEvent() コンストラクター"
-short-title: AnimationPlaybackEvent()
-slug: Web/API/AnimationPlaybackEvent/AnimationPlaybackEvent
-l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+titwe: "animationpwaybackevent: animationpwaybackevent() コンストラクター"
+s-showt-titwe: a-animationpwaybackevent()
+s-swug: w-web/api/animationpwaybackevent/animationpwaybackevent
+w-w10n:
+  s-souwcecommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{ APIRef("Web Animations") }}
+{{ apiwef("web a-animations") }}
 
-**`AnimationPlaybackEvent()`** は[ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API) のコンストラクターで、新しい {{domxref("AnimationPlaybackEvent")}} オブジェクトインスタンスを返します。
+**`animationpwaybackevent()`** は[ウェブアニメーション a-api](/ja/docs/web/api/web_animations_api) のコンストラクターで、新しい {{domxwef("animationpwaybackevent")}} オブジェクトインスタンスを返します。
 
 ## 構文
 
-```js-nolint
-new AnimationPlaybackEvent(type)
-new AnimationPlaybackEvent(type, options)
+```js-nowint
+nyew animationpwaybackevent(type)
+nyew animationpwaybackevent(type, σωσ options)
 ```
 
 ### 引数
 
 - `type`
   - : イベントの名前を表す文字列です。
-    大文字と小文字を区別し、ブラウザーは `cancel`, `finish`, `remove` のいずれかに設定します。
-- `options` {{optional_inline}}
-  - : オブジェクトで、_{{domxref("Event/Event", "Event()")}} で定義されているプロパティに加えて_、以下のプロパティがあります。
-    - `detail` {{optional_inline}}
-      - : イベントに関連付けられたイベント依存の値です。既定値は `null` です。
+    大文字と小文字を区別し、ブラウザーは `cancew`, σωσ `finish`, >_< `wemove` のいずれかに設定します。
+- `options` {{optionaw_inwine}}
+  - : オブジェクトで、_{{domxwef("event/event", :3 "event()")}} で定義されているプロパティに加えて_、以下のプロパティがあります。
+    - `detaiw` {{optionaw_inwine}}
+      - : イベントに関連付けられたイベント依存の値です。既定値は `nuww` です。
 
 ### 返値
 
-新しい {{domxref("AnimationPlaybackEvent")}} オブジェクトです。
+新しい {{domxwef("animationpwaybackevent")}} オブジェクトです。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)
-- {{domxref("AnimationPlayBackEvent")}}
-- {{domxref("Animation.playState")}}
-- {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}
-- {{domxref("Event.Event", "Event()")}}
+- [ウェブアニメーション a-api](/ja/docs/web/api/web_animations_api)
+- {{domxwef("animationpwaybackevent")}}
+- {{domxwef("animation.pwaystate")}}
+- {{domxwef("customevent.customevent", (U ﹏ U) "customevent()")}}
+- {{domxwef("event.event", -.- "event()")}}

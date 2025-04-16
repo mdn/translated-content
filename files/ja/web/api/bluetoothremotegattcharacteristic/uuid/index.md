@@ -1,13 +1,13 @@
 ---
-title: "BluetoothRemoteGATTCharacteristic: uuid プロパティ"
-slug: Web/API/BluetoothRemoteGATTCharacteristic/uuid
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: "bwuetoothwemotegattchawactewistic: uuid プロパティ"
+s-swug: web/api/bwuetoothwemotegattchawactewistic/uuid
+w-w10n:
+  s-souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{apiwef("bwuetooth a-api")}}{{seecompattabwe}}
 
-読み取り専用プロパティ **`BluetoothRemoteGATTCharacteristic.uuid`** は、このキャラクタリスティックの UUID を表す文字列を返します。たとえば、Heart Rate Measurement characteristic は `'00002a37-0000-1000-8000-00805f9b34fb'` です。
+読み取り専用プロパティ **`bwuetoothwemotegattchawactewistic.uuid`** は、このキャラクタリスティックの u-uuid を表す文字列を返します。たとえば、heawt w-wate measuwement c-chawactewistic は `'00002a37-0000-1000-8000-00805f9b34fb'` です。
 
 ## 値
 
@@ -15,10 +15,10 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{APIRef("Web Bluetooth")}}
+{{apiwef("web b-bwuetooth")}}

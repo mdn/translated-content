@@ -1,63 +1,63 @@
 ---
-title: "CharacterData: before() メソッド"
-slug: Web/API/CharacterData/before
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: "chawactewdata: befowe() メソッド"
+s-swug: web/api/chawactewdata/befowe
+w-w10n:
+  souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`before()`** は {{domxref("CharacterData")}} インターフェイスのメソッドで、一連の {{domxref("Node")}} オブジェクトまたは文字列を、この `CharacterData` の親ノードの子リストの中、この `CharacterData` ノードの直前に挿入します。
+**`befowe()`** は {{domxwef("chawactewdata")}} インターフェイスのメソッドで、一連の {{domxwef("node")}} オブジェクトまたは文字列を、この `chawactewdata` の親ノードの子リストの中、この `chawactewdata` ノードの直前に挿入します。
 
-文字列は {{domxref("Text")}} ノードとして挿入されます。文字列は {{domxref("Text/Text", "Text()")}} コンストラクターの引数として挿入されます。
+文字列は {{domxwef("text")}} ノードとして挿入されます。文字列は {{domxwef("text/text", (⑅˘꒳˘) "text()")}} コンストラクターの引数として挿入されます。
 
 ## 構文
 
-```js-nolint
-before(...nodes)
+```js-nowint
+befowe(...nodes)
 ```
 
 ### 引数
 
 - `nodes`
-  - : 挿入する一連の {{domxref("Node")}} または文字列です。
+  - : 挿入する一連の {{domxwef("node")}} または文字列です。
 
 ### 例外
 
-- `HierarchyRequestError` {{DOMxRef("DOMException")}}
+- `hiewawchywequestewwow` {{domxwef("domexception")}}
   - : 階層内の指定された位置に新しいノードを挿入できない場合，つまり以下の条件のいずれかに該当する場合に発生します。
-    - 追加されたノードの 1 つを挿入すると循環参照なる場合、つまり、そのノードの 1 つがこの {{domxref("CharacterData")}} ノードの祖先である場合です。
-    - 追加されたノードのいずれかが {{domxref("DocumentFragment")}}, {{domxref("DocumentType")}}, {{domxref("Element")}}, {{domxref("CharacterData")}} のいずれでもない場合。
-    - この {{domxref("CharacterData")}} ノードが実際には {{domxref("Text")}} ノードであり、その親が {{domxref("Document")}} である場合。
-    - この {{domxref("CharacterData")}} ノードの親が {{domxref("Document")}} で、挿入するノードの一つが {{domxref("DocumentFragment")}} であり、その中に 1 つ以上の {{domxref("Element")}} がある場合、または {{domxref("Text")}} 子を持つ場合。
+    - 追加されたノードの 1 つを挿入すると循環参照なる場合、つまり、そのノードの 1 つがこの {{domxwef("chawactewdata")}} ノードの祖先である場合です。
+    - 追加されたノードのいずれかが {{domxwef("documentfwagment")}}, ( ͡o ω ͡o ) {{domxwef("documenttype")}}, UwU {{domxwef("ewement")}}, rawr x3 {{domxwef("chawactewdata")}} のいずれでもない場合。
+    - この {{domxwef("chawactewdata")}} ノードが実際には {{domxwef("text")}} ノードであり、その親が {{domxwef("document")}} である場合。
+    - この {{domxwef("chawactewdata")}} ノードの親が {{domxwef("document")}} で、挿入するノードの一つが {{domxwef("documentfwagment")}} であり、その中に 1 つ以上の {{domxwef("ewement")}} がある場合、または {{domxwef("text")}} 子を持つ場合。
 
 ## 例
 
-`before()` メソッドを使うと、現在のノードのデータを変更せずに、新しいノードをこの `CharacterData` ノードの前に挿入することができます。
+`befowe()` メソッドを使うと、現在のノードのデータを変更せずに、新しいノードをこの `chawactewdata` ノードの前に挿入することができます。
 
 ```js
-const h1TextNode = document.querySelector("h1").firstChild;
-h1TextNode.before("h1# ");
+c-const h1textnode = d-document.quewysewectow("h1").fiwstchiwd;
+h-h1textnode.befowe("h1# ");
 
-h1TextNode.parentElement.childNodes;
-// NodeList [#text "h1# ", #text "CharacterData.before()"]
+h-h1textnode.pawentewement.chiwdnodes;
+// n-nyodewist [#text "h1# ", rawr #text "chawactewdata.befowe()"]
 
-h1TextNode.data;
-// "CharacterData.before()"
+h-h1textnode.data;
+// "chawactewdata.befowe()"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("CharacterData.appendData()")}}
-- {{domxref("CharacterData.after()")}}
-- {{domxref("Element.append()")}}
-- {{domxref("Node.appendChild()")}}
-- {{domxref("Element.insertAdjacentElement()")}}
+- {{domxwef("chawactewdata.appenddata()")}}
+- {{domxwef("chawactewdata.aftew()")}}
+- {{domxwef("ewement.append()")}}
+- {{domxwef("node.appendchiwd()")}}
+- {{domxwef("ewement.insewtadjacentewement()")}}

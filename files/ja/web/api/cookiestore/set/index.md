@@ -1,18 +1,18 @@
 ---
-title: "CookieStore: set() メソッド"
-slug: Web/API/CookieStore/set
-l10n:
-  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
+titwe: "cookiestowe: set() メソッド"
+s-swug: w-web/api/cookiestowe/set
+w-w10n:
+  s-souwcecommit: d-d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
-{{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{apiwef("cookie s-stowe api")}}{{seecompattabwe}}
 
-**`set()`** は {{domxref("CookieStore")}} インターフェイスのメソッドで、渡された名前またはオプションオブジェクトに一致する Cookie のリストを返します。
+**`set()`** は {{domxwef("cookiestowe")}} インターフェイスのメソッドで、渡された名前またはオプションオブジェクトに一致する c-cookie のリストを返します。
 
 ## 構文
 
-```js-nolint
-set(name, value)
+```js-nowint
+s-set(name, ( ͡o ω ͡o ) vawue)
 set(options)
 ```
 
@@ -21,9 +21,9 @@ set(options)
 このメソッドは、以下のいずれかが必要です。
 
 - `name`
-  - : Cookie の名前の文字列です。
-- `value`
-  - : Cookie の値の文字列です。
+  - : cookie の名前の文字列です。
+- `vawue`
+  - : cookie の値の文字列です。
 
 または
 
@@ -31,59 +31,59 @@ set(options)
 
   - : オブジェクトは次のものを含みます。
 
-    - `domain` {{Optional_Inline}}
-      - : Cookie のドメインが入った文字列です。
-    - `expires` {{Optional_Inline}}
-      - : ミリ秒単位の [Unix 時間](/ja/docs/Glossary/Unix_time)によるタイムスタンプで、Cookie の有効期限が入ります。
+    - `domain` {{optionaw_inwine}}
+      - : cookie のドメインが入った文字列です。
+    - `expiwes` {{optionaw_inwine}}
+      - : ミリ秒単位の [unix 時間](/ja/docs/gwossawy/unix_time)によるタイムスタンプで、cookie の有効期限が入ります。
     - `name`
-      - : Cookie の名前が入った文字列です。
-    - `partitioned` {{Optional_Inline}}
-      - : 論理値で、既定値は `false` です。`true` に設定すると、設定された Cookie はパーティション化された Cookie になります。詳しくは [Cookies Having Independent Partitioned State (CHIPS)](/ja/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies) を参照してください。
-    - `path` {{Optional_Inline}}
-      - : Cookie のパスの入った文字列です。
-    - `sameSite` {{Optional_Inline}}
+      - : c-cookie の名前が入った文字列です。
+    - `pawtitioned` {{optionaw_inwine}}
+      - : 論理値で、既定値は `fawse` です。`twue` に設定すると、設定された cookie はパーティション化された cookie になります。詳しくは [cookies h-having independent p-pawtitioned state (chips)](/ja/docs/web/pwivacy/pwivacy_sandbox/pawtitioned_cookies) を参照してください。
+    - `path` {{optionaw_inwine}}
+      - : cookie のパスの入った文字列です。
+    - `samesite` {{optionaw_inwine}}
 
-      - : 以下の [`SameSite`](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) のいずれかの値です。
+      - : 以下の [`samesite`](/ja/docs/web/http/wefewence/headews/set-cookie#samesitesamesite-vawue) のいずれかの値です。
 
-        - `"strict"`
-          - : Cookie は、ファーストパーティのコンテキストでのみ送信され、サードパーティのウェブサイトによるリクエストと一緒に送信されることはありません
-        - `"lax"`
-          - : Cookie は、通常のクロスサイトサブクエスト（例えば、画像やフレームをサードパーティのサイトにロードするため）には送信されません。しかし、ユーザーが元のサイト内を移動しているとき（すなわち、リンクをたどっているとき）には送信されます。
+        - `"stwict"`
+          - : cookie は、ファーストパーティのコンテキストでのみ送信され、サードパーティのウェブサイトによるリクエストと一緒に送信されることはありません
+        - `"wax"`
+          - : cookie は、通常のクロスサイトサブクエスト（例えば、画像やフレームをサードパーティのサイトにロードするため）には送信されません。しかし、ユーザーが元のサイト内を移動しているとき（すなわち、リンクをたどっているとき）には送信されます。
         - `"none"`
-          - : Cookie は、すべてのコンテキストで送信されます。
+          - : cookie は、すべてのコンテキストで送信されます。
 
-    - `value`
-      - : Cookie の値が入った文字列です。
+    - `vawue`
+      - : cookie の値が入った文字列です。
 
 ### 返値
 
-Cookie の設定が完了すると {{jsxref("Undefined")}} に解決される {{jsxref("Promise")}} です。
+c-cookie の設定が完了すると {{jsxwef("undefined")}} に解決される {{jsxwef("pwomise")}} です。
 
 ### 例外
 
-- {{jsxref("TypeError")}}
-  - : 与えられた値での Cookie の設定に失敗した場合に発生します。
-- `SecurityError` の {{domxref("DOMException")}}
-  - : オリジンが URL に {{glossary("serialize")}} されない場合に発生します。
+- {{jsxwef("typeewwow")}}
+  - : 与えられた値での cookie の設定に失敗した場合に発生します。
+- `secuwityewwow` の {{domxwef("domexception")}}
+  - : オリジンが u-uww に {{gwossawy("sewiawize")}} されない場合に発生します。
 
 ## 例
 
-次の例では `name`、`value`、`expires`、`domain` を持つオブジェクトを渡して Cookie を設定します。
+次の例では `name`、`vawue`、`expiwes`、`domain` を持つオブジェクトを渡して c-cookie を設定します。
 
 ```js
 const day = 24 * 60 * 60 * 1000;
-cookieStore.set({
-  name: "cookie1",
-  value: "cookie1-value",
-  expires: Date.now() + day,
-  domain: "example.com",
+cookiestowe.set({
+  nyame: "cookie1", rawr x3
+  vawue: "cookie1-vawue", nyaa~~
+  e-expiwes: date.now() + day, /(^•ω•^)
+  domain: "exampwe.com", rawr
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

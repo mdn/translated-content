@@ -1,63 +1,63 @@
 ---
-title: "Element: scrollBy() メソッド"
-short-title: scrollBy()
-slug: Web/API/Element/scrollBy
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: scwowwby() メソッド"
+s-showt-titwe: s-scwowwby()
+s-swug: web/api/ewement/scwowwby
+w-w10n:
+  souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`scrollBy()`** は {{domxref("Element")}} インターフェイスのメソッドで、指定された量だけ要素をスクロールします。
+**`scwowwby()`** は {{domxwef("ewement")}} インターフェイスのメソッドで、指定された量だけ要素をスクロールします。
 
 ## 構文
 
-```js-nolint
-scrollBy(x-coord, y-coord)
-scrollBy(options)
+```js-nowint
+s-scwowwby(x-coowd, rawr y-y-coowd)
+scwowwby(options)
 ```
 
 ### 引数
 
-- `x-coord` は、スクロールしたい水平ピクセル数です。
-- `y-coord` は、スクロールしたい垂直ピクセル数です。
+- `x-coowd` は、スクロールしたい水平ピクセル数です。
+- `y-coowd` は、スクロールしたい垂直ピクセル数です。
 
 \- または -
 
 - `options`
   - : 以下の引数を持つ辞書です。
     - `top`
-      - : ウィンドウや要素をスクロールする Y 軸方向のピクセル数を指定します。
-    - `left`
-      - : ウィンドウや要素をスクロールする X 軸方向のピクセル数を指定します。
-    - `behavior`
-      - : スクロールを滑らかにアニメーションさせるか (`smooth`)、瞬時にジャンプさせるか (`instant`)、ブラウザーに選択させるか (`auto`, 既定値) を指定します。
+      - : ウィンドウや要素をスクロールする y-y 軸方向のピクセル数を指定します。
+    - `weft`
+      - : ウィンドウや要素をスクロールする x 軸方向のピクセル数を指定します。
+    - `behaviow`
+      - : スクロールを滑らかにアニメーションさせるか (`smooth`)、瞬時にジャンプさせるか (`instant`)、ブラウザーに選択させるか (`auto`, σωσ 既定値) を指定します。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 ```js
 // 要素をスクロール
-element.scrollBy(300, 300);
+ewement.scwowwby(300, σωσ 300);
 ```
 
 `options` を使用する場合:
 
 ```js
-element.scrollBy({
-  top: 100,
-  left: 100,
-  behavior: "smooth",
+ewement.scwowwby({
+  top: 100, >_<
+  weft: 100, :3
+  behaviow: "smooth", (U ﹏ U)
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

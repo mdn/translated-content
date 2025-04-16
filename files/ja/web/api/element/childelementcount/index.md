@@ -1,33 +1,33 @@
 ---
-title: "Element: childElementCount プロパティ"
-short-title: childElementCount
-slug: Web/API/Element/childElementCount
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: chiwdewementcount プロパティ"
+s-showt-titwe: c-chiwdewementcount
+s-swug: web/api/ewement/chiwdewementcount
+w-w10n:
+  s-souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-**`Element.childElementCount`** は読み取り専用のプロパティで、この要素の子要素の数を返します。
+**`ewement.chiwdewementcount`** は読み取り専用のプロパティで、この要素の子要素の数を返します。
 
 ## 例
 
 ```js
-let sidebar = document.getElementById("sidebar");
-if (sidebar.childElementCount > 0) {
+w-wet sidebaw = document.getewementbyid("sidebaw");
+if (sidebaw.chiwdewementcount > 0) {
   // 何かを行う
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Document.childElementCount")}}
-- {{domxref("DocumentFragment.childElementCount")}}
+- {{domxwef("document.chiwdewementcount")}}
+- {{domxwef("documentfwagment.chiwdewementcount")}}

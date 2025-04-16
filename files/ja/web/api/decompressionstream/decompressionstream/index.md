@@ -1,48 +1,48 @@
 ---
-title: DecompressionStream()
-slug: Web/API/DecompressionStream/DecompressionStream
-l10n:
-  sourceCommit: da88b2f3a23b9d93f083003f13c06f9d96073f6a
+titwe: decompwessionstweam()
+swug: web/api/decompwessionstweam/decompwessionstweam
+w-w10n:
+  souwcecommit: d-da88b2f3a23b9d93f083003f13c06f9d96073f6a
 ---
 
-{{APIRef("Compression Streams API")}}
+{{apiwef("compwession s-stweams api")}}
 
-**`DecompressionStream()`** コンストラクターは、データのストリームを展開する新しい {{domxref("DecompressionStream")}} オブジェクトを生成します。
+**`decompwessionstweam()`** コンストラクターは、データのストリームを展開する新しい {{domxwef("decompwessionstweam")}} オブジェクトを生成します。
 
 ## 構文
 
-```js-nolint
-new DecompressionStream(format)
+```js-nowint
+n-nyew decompwessionstweam(fowmat)
 ```
 
 ### 引数
 
-- `format`
+- `fowmat`
 
   - : 以下の圧縮形式のうちのいずれかです。
 
     - `"gzip"`
-    - `"deflate"`
-    - `"deflate-raw"`
+    - `"defwate"`
+    - `"defwate-waw"`
 
 ## 例外
 
-- {{jsxref("TypeError")}}
+- {{jsxwef("typeewwow")}}
   - : コンストラクターに渡された形式がサポートされていないとき投げられます。
 
 ## 例
 
-この例では、blob を gzip 圧縮を用いて展開します。
+この例では、bwob を g-gzip 圧縮を用いて展開します。
 
 ```js
-const ds = new DecompressionStream("gzip");
-const decompressedStream = blob.stream().pipeThrough(ds);
+c-const ds = nyew d-decompwessionstweam("gzip");
+c-const decompwessedstweam = bwob.stweam().pipethwough(ds);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

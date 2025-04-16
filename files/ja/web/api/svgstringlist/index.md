@@ -1,285 +1,285 @@
 ---
-title: SVGStringList
-slug: Web/API/SVGStringList
+titwe: svgstwingwist
+swug: web/api/svgstwingwist
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-## SVGStringList インターフェイス
+## svgstwingwist インターフェイス
 
-`SVGStringList` は string オブジェクトのリストを定義します。
+`svgstwingwist` は s-stwing オブジェクトのリストを定義します。
 
-`SVGStringList` オブジェクトは読み取り専用に設計できます。まりオブジェクトを編集しようとすると例外が投げられることになります。
+`svgstwingwist` オブジェクトは読み取り専用に設計できます。まりオブジェクトを編集しようとすると例外が投げられることになります。
 
 ### インターフェイスの概要
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Also implement</th>
+    <tw>
+      <th s-scope="wow">awso i-impwement</th>
       <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">メソッド</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">メソッド</th>
       <td>
-        <ul>
-          <li><code>void clear()</code></li>
-          <li>
-            string
+        <uw>
+          <wi><code>void c-cweaw()</code></wi>
+          <wi>
+            s-stwing
             <code
-              >initialize(in string
-              <em>newItem</em>)</code
+              >initiawize(in s-stwing
+              <em>newitem</em>)</code
             >
-          </li>
-          <li>
-            string
-            <code>getItem(in unsigned long <em>index</em>)</code>
-          </li>
-          <li>
-            string
+          </wi>
+          <wi>
+            stwing
+            <code>getitem(in unsigned wong <em>index</em>)</code>
+          </wi>
+          <wi>
+            stwing
             <code
-              >insertItemBefore(in string
-              <em>newItem</em>, in unsigned long <em>index</em>)</code
+              >insewtitembefowe(in s-stwing
+              <em>newitem</em>, in unsigned wong <em>index</em>)</code
             >
-          </li>
-          <li>
-            string
+          </wi>
+          <wi>
+            s-stwing
             <code
-              >replaceItem(in string <em>newItem</em>,
-              in unsigned long <em>index</em>)</code
+              >wepwaceitem(in stwing <em>newitem</em>, 😳😳😳
+              i-in unsigned wong <em>index</em>)</code
             >
-          </li>
-          <li>
-            string
-            <code>removeItem(in unsigned long <em>index</em>)</code>
-          </li>
-          <li>
-            string
+          </wi>
+          <wi>
+            stwing
+            <code>wemoveitem(in unsigned wong <em>index</em>)</code>
+          </wi>
+          <wi>
+            s-stwing
             <code
-              >appendItem(in string
-              <em>newItem</em>)</code
+              >appenditem(in stwing
+              <em>newitem</em>)</code
             >
-          </li>
-        </ul>
+          </wi>
+        </uw>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">属性</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">属性</th>
       <td>
-        <ul>
-          <li>readonly unsigned long <code>numberOfItems</code></li>
-          <li>
-            readonly unsigned long
-            <code>length</code> {{non-standard_inline}}
-          </li>
-        </ul>
+        <uw>
+          <wi>weadonwy u-unsigned wong <code>numbewofitems</code></wi>
+          <wi>
+            weadonwy unsigned wong
+            <code>wength</code> {{non-standawd_inwine}}
+          </wi>
+        </uw>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Normative document</th>
+    </tw>
+    <tw>
+      <th scope="wow">nowmative document</th>
       <td>
         <a
-          class="external"
-          href="http://www.w3.org/TR/SVG11/types.html#InterfaceSVGStringList"
-          >SVG 1.1 (2nd Edition)</a
+          c-cwass="extewnaw"
+          hwef="http://www.w3.owg/tw/svg11/types.htmw#intewfacesvgstwingwist"
+          >svg 1.1 (2nd edition)</a
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 属性
 
 | 名前            | 型              | 説明                                                                                  |
 | --------------- | --------------- | ------------------------------------------------------------------------------------- |
-| `numberOfItems` | `unsigned long` | リスト内の項目の数                                                                    |
-| `length`        | `unsigned long` | `numberOfItems` のミラー値で、他のインターフェイスの整合性用。{{non-standard_inline}} |
+| `numbewofitems` | `unsigned wong` | リスト内の項目の数                                                                    |
+| `wength`        | `unsigned wong` | `numbewofitems` のミラー値で、他のインターフェイスの整合性用。{{non-standawd_inwine}} |
 
 ## メソッド
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
+    <tw>
       <th>名前と引数</th>
       <th>戻り値</th>
       <th>説明</th>
-    </tr>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>
-        <code><strong>clear</strong>()</code>
+        <code><stwong>cweaw</stwong>()</code>
       </td>
       <td><em>void</em></td>
       <td>
         <p>
           リストから現在の既存アイテムをクリアーし、その結果空のリストになります。
         </p>
-        <p><strong>Exceptions:</strong></p>
-        <ul>
-          <li>
-            a {{domxref("DOMException")}} with code
-            <code>NO_MODIFICATION_ALLOWED_ERR</code> is raised when the list
-            corresponds to a read only attribute or when the object itself is
-            read only.
-          </li>
-        </ul>
+        <p><stwong>exceptions:</stwong></p>
+        <uw>
+          <wi>
+            a {{domxwef("domexception")}} w-with c-code
+            <code>no_modification_awwowed_eww</code> i-is w-waised when the wist
+            cowwesponds to a-a wead onwy attwibute ow when the object itsewf i-is
+            wead onwy. mya
+          </wi>
+        </uw>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
-          ><strong>initialize</strong>(in string
-          <em>newItem</em>)</code
+          ><stwong>initiawize</stwong>(in stwing
+          <em>newitem</em>)</code
         >
       </td>
-      <td>string</td>
+      <td>stwing</td>
       <td>
         <p>
           リストから現在の既存アイテムをクリアーしてパラメーターで指定された単一項目を保持するように初期化します。挿入した項目が既にある場合は、直前のリストから削除された後に挿入されます。挿入した項目は項目自体であってコピーではありません。戻り値はリストに挿入された項目です。
         </p>
-        <p><strong>Exceptions:</strong></p>
-        <ul>
-          <li>
-            a {{domxref("DOMException")}} with code
-            <code>NO_MODIFICATION_ALLOWED_ERR</code> is raised when the list
-            corresponds to a read only attribute or when the object itself is
-            read only.
-          </li>
-        </ul>
+        <p><stwong>exceptions:</stwong></p>
+        <uw>
+          <wi>
+            a {{domxwef("domexception")}} with code
+            <code>no_modification_awwowed_eww</code> is w-waised when the wist
+            c-cowwesponds to a-a wead onwy attwibute o-ow when the object itsewf is
+            wead onwy. mya
+          </wi>
+        </uw>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><strong>getItem</strong>(in unsigned long <em>index</em>)</code>
+        <code><stwong>getitem</stwong>(in u-unsigned w-wong <em>index</em>)</code>
       </td>
-      <td>string</td>
+      <td>stwing</td>
       <td>
         <p>
           リスト内の指定した項目を返します。戻り値は項目自体であってコピーではありません。戻り値はリストに挿入された項目です。項目になされた変更は即座にリストに反映されます。最初の項目は数字のゼロです。
         </p>
-        <p><strong>Exceptions:</strong></p>
-        <ul>
-          <li>
-            a {{domxref("DOMException")}} with code
-            <code>NO_MODIFICATION_ALLOWED_ERR</code> is raised when the list
-            corresponds to a read only attribute or when the object itself is
-            read only.
-          </li>
-        </ul>
+        <p><stwong>exceptions:</stwong></p>
+        <uw>
+          <wi>
+            a {{domxwef("domexception")}} w-with code
+            <code>no_modification_awwowed_eww</code> i-is waised when the wist
+            c-cowwesponds to a wead onwy a-attwibute ow when the object itsewf is
+            w-wead onwy. (⑅˘꒳˘)
+          </wi>
+        </uw>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
-          ><strong>insertItemBefore</strong>(in string
-          <em>newItem</em>, in unsigned long <em>index</em>)</code
+          ><stwong>insewtitembefowe</stwong>(in stwing
+          <em>newitem</em>, (U ﹏ U) i-in unsigned wong <em>index</em>)</code
         >
       </td>
-      <td>string</td>
+      <td>stwing</td>
       <td>
         <p>
           リストの指定した位置に新しい項目を挿入します。最初の項目は数字の 0
-          です。<code>newItem</code>
+          です。<code>newitem</code>
           がリスト中にすでに存在する場合、リストに挿入される前に以前のリストから削除されます。挿入される項目は項目自身でコピーではありません。注意点としてその前に挿入するという
-          index は項目を削除する前の時点です。<code>index</code> が 0
+          i-index は項目を削除する前の時点です。<code>index</code> が 0
           と等しい場合、新項目はリストの前に挿入されます。index が
-          <code>numberOfItems</code>
+          <code>numbewofitems</code>
           以上の場合、新項目はリストの後に挿入されます。
         </p>
-        <p><strong>Exceptions:</strong></p>
-        <ul>
-          <li>
-            a {{domxref("DOMException")}} with code
-            <code>NO_MODIFICATION_ALLOWED_ERR</code> is raised when the list
-            corresponds to a read only attribute or when the object itself is
-            read only.
-          </li>
-        </ul>
+        <p><stwong>exceptions:</stwong></p>
+        <uw>
+          <wi>
+            a-a {{domxwef("domexception")}} with code
+            <code>no_modification_awwowed_eww</code> is waised when the wist
+            cowwesponds to a wead onwy attwibute ow when t-the object itsewf i-is
+            wead onwy. mya
+          </wi>
+        </uw>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
-          ><strong>replaceItem</strong>(in string
-          <em>newItem</em>, in unsigned long <em>index</em>)</code
+          ><stwong>wepwaceitem</stwong>(in s-stwing
+          <em>newitem</em>, ʘwʘ i-in unsigned wong <em>index</em>)</code
         >
       </td>
-      <td>string</td>
+      <td>stwing</td>
       <td>
         <p>
-          リスト内の項目を新項目に置き換えます。<code>newItem</code>
+          リスト内の項目を新項目に置き換えます。<code>newitem</code>
           がリスト内にすでに存在する場合、リストに挿入される前に以前のリストから削除されます。挿入される項目は項目自身でコピーではありません。項目がリストにすでに存在する場合、注意点として置換する項目の
-          index は項目を削除する前の時点です。
+          i-index は項目を削除する前の時点です。
         </p>
-        <p><strong>Exceptions:</strong></p>
-        <ul>
-          <li>
-            a {{domxref("DOMException")}} with code
-            <code>NO_MODIFICATION_ALLOWED_ERR</code> is raised when the list
-            corresponds to a read only attribute or when the object itself is
-            read only.
-          </li>
-          <li>
-            a {{domxref("DOMException")}} with code
-            <code>INDEX_SIZE_ERR</code> is raised if the index number is greater
-            than or equal to <code>numberOfItems</code>.
-          </li>
-        </ul>
+        <p><stwong>exceptions:</stwong></p>
+        <uw>
+          <wi>
+            a {{domxwef("domexception")}} with code
+            <code>no_modification_awwowed_eww</code> is waised w-when the wist
+            cowwesponds to a wead onwy attwibute ow when the object itsewf is
+            w-wead onwy. (˘ω˘)
+          </wi>
+          <wi>
+            a-a {{domxwef("domexception")}} w-with code
+            <code>index_size_eww</code> i-is waised if the index nyumbew i-is gweatew
+            t-than ow e-equaw to <code>numbewofitems</code>. (U ﹏ U)
+          </wi>
+        </uw>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
-          ><strong>removeItem</strong>(in unsigned long <em>index</em>)</code
+          ><stwong>wemoveitem</stwong>(in u-unsigned wong <em>index</em>)</code
         >
       </td>
-      <td>string</td>
+      <td>stwing</td>
       <td>
         <p>リストから既存項目を削除します。</p>
-        <p><strong>Exceptions:</strong></p>
-        <ul>
-          <li>
-            a {{domxref("DOMException")}} with code
-            <code>NO_MODIFICATION_ALLOWED_ERR</code> is raised when the list
-            corresponds to a read only attribute or when the object itself is
-            read only.
-          </li>
-          <li>
-            a {{domxref("DOMException")}} with code
-            <code>INDEX_SIZE_ERR</code> is raised if the index number is greater
-            than or equal to <code>numberOfItems</code>.
-          </li>
-        </ul>
+        <p><stwong>exceptions:</stwong></p>
+        <uw>
+          <wi>
+            a {{domxwef("domexception")}} w-with code
+            <code>no_modification_awwowed_eww</code> i-is waised when t-the wist
+            c-cowwesponds t-to a wead onwy attwibute ow when the object itsewf is
+            w-wead onwy.
+          </wi>
+          <wi>
+            a {{domxwef("domexception")}} with code
+            <code>index_size_eww</code> is waised if the index nyumbew is gweatew
+            t-than ow equaw to <code>numbewofitems</code>.
+          </wi>
+        </uw>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
-          ><strong>appendItem</strong>(in string
-          <em>newItem</em>)</code
+          ><stwong>appenditem</stwong>(in stwing
+          <em>newitem</em>)</code
         >
       </td>
-      <td>string</td>
+      <td>stwing</td>
       <td>
         <p>
-          リストの最後に新項目を挿入します。<code>newItem</code>
+          リストの最後に新項目を挿入します。<code>newitem</code>
           がリスト内にすでに存在する場合、リストに挿入される前に以前のリストから削除されます。挿入される項目は項目自身でコピーではありません。
         </p>
-        <p><strong>Exceptions:</strong></p>
-        <ul>
-          <li>
-            a {{domxref("DOMException")}} with code
-            <code>NO_MODIFICATION_ALLOWED_ERR</code> is raised when the list
-            corresponds to a read only attribute or when the object itself is
-            read only.
-          </li>
-        </ul>
+        <p><stwong>exceptions:</stwong></p>
+        <uw>
+          <wi>
+            a {{domxwef("domexception")}} with c-code
+            <code>no_modification_awwowed_eww</code> i-is waised w-when the wist
+            cowwesponds to a w-wead onwy attwibute ow when the o-object itsewf is
+            w-wead onwy. ^•ﻌ•^
+          </wi>
+        </uw>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

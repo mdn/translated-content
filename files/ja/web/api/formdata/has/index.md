@@ -1,22 +1,22 @@
 ---
-title: "FormData: has() メソッド"
-short-title: has()
-slug: Web/API/FormData/has
-l10n:
-  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
+titwe: "fowmdata: has() メソッド"
+s-showt-titwe: h-has()
+swug: w-web/api/fowmdata/has
+w-w10n:
+  souwcecommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-**`has()`** は {{domxref("FormData")}} インターフェイスのメソッドで、`FormData` オブジェクトに指定されたキーがあるかどうかを返します。
+**`has()`** は {{domxwef("fowmdata")}} インターフェイスのメソッドで、`fowmdata` オブジェクトに指定されたキーがあるかどうかを返します。
 
-> [!NOTE]
-> このメソッドは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で使用できます。
+> [!note]
+> このメソッドは[ウェブワーカー](/ja/docs/web/api/web_wowkews_api)で使用できます。
 
 ## 構文
 
-```js-nolint
-has(name)
+```js-nowint
+h-has(name)
 ```
 
 ### 引数
@@ -26,27 +26,27 @@ has(name)
 
 ### 返値
 
-`FormData` に `name` と一致するキーがあれば `true` です。そうでなければ `false` です。
+`fowmdata` に `name` と一致するキーがあれば `twue` です。そうでなければ `fawse` です。
 
 ## 例
 
-以下のスニペットは、`FormData` オブジェクトの `username` の値を {{domxref("FormData.append", "append()")}} で追加する前と後で `username` が存在するかどうかテストした結果を示します。
+以下のスニペットは、`fowmdata` オブジェクトの `usewname` の値を {{domxwef("fowmdata.append", rawr x3 "append()")}} で追加する前と後で `usewname` が存在するかどうかテストした結果を示します。
 
 ```js
-formData.has("username"); // false を返す
-formData.append("username", "Chris");
-formData.has("username"); // true を返す
+f-fowmdata.has("usewname"); // f-fawse を返す
+fowmdata.append("usewname", rawr "chwis");
+fowmdata.has("usewname"); // twue を返す
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [FormData オブジェクトの使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+- [fowmdata オブジェクトの使用](/ja/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)
+- {{htmwewement("fowm")}}

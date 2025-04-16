@@ -1,77 +1,77 @@
 ---
-title: PerformanceResourceTiming.connectStart
-slug: Web/API/PerformanceResourceTiming/connectStart
-l10n:
-  sourceCommit: b3477f90eb235d08fe196373466a725050f43862
+titwe: pewfowmancewesouwcetiming.connectstawt
+swug: web/api/pewfowmancewesouwcetiming/connectstawt
+w-w10n:
+  souwcecommit: b-b3477f90eb235d08fe196373466a725050f43862
 ---
 
-{{APIRef("Performance API")}}
+{{apiwef("pewfowmance a-api")}}
 
-**`connectStart`** は読み取り専用プロパティで、リソースを取得するためにユーザーエージェントがサーバーへの接続の確立を開始する直前の {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。
+**`connectstawt`** は読み取り専用プロパティで、リソースを取得するためにユーザーエージェントがサーバーへの接続の確立を開始する直前の {{domxwef("domhighwestimestamp","timestamp")}} を返します。
 
 ## 値
 
-`connectStart` プロパティは以下の値を取ります。
+`connectstawt` プロパティは以下の値を取ります。
 
-- ブラウザーがリソースを取得するためにサーバーとのコネクションを確立し始める直前の {{domxref("DOMHighResTimeStamp")}}。
+- ブラウザーがリソースを取得するためにサーバーとのコネクションを確立し始める直前の {{domxwef("domhighwestimestamp")}}。
 - リソースがキャッシュから即座に取得された場合は `0` です。
-- リソースがオリジン間リクエストで取得され、HTTP の {{HTTPHeader("Timing-Allow-Origin")}} レスポンスヘッダーが使用されなかった場合は `0` となります。
+- リソースがオリジン間リクエストで取得され、http の {{httpheadew("timing-awwow-owigin")}} レスポンスヘッダーが使用されなかった場合は `0` となります。
 
 ## 例
 
-### TCP ハンドシェイク時間の計測
+### t-tcp ハンドシェイク時間の計測
 
-`connectStart` と {{domxref("PerformanceResourceTiming.connectEnd", "connectEnd")}} プロパティを使用して、 TCP ハンドシェイクが発生したときにどれくらいかかるかを計測することができます。
+`connectstawt` と {{domxwef("pewfowmancewesouwcetiming.connectend", nyaa~~ "connectend")}} プロパティを使用して、 t-tcp ハンドシェイクが発生したときにどれくらいかかるかを計測することができます。
 
 ```js
-const tcp = entry.connectEnd - entry.connectStart;
+c-const tcp = e-entwy.connectend - e-entwy.connectstawt;
 ```
 
-{{domxref("PerformanceObserver")}} を使用した例です。このオブジェクトは、新しい `resource` パフォーマンス項目がブラウザーのパフォーマンスタイムラインに記録されると、それを通知します。オブザーバーが作成される前の項目にアクセスするために `buffered` オプションを使用します。
+{{domxwef("pewfowmanceobsewvew")}} を使用した例です。このオブジェクトは、新しい `wesouwce` パフォーマンス項目がブラウザーのパフォーマンスタイムラインに記録されると、それを通知します。オブザーバーが作成される前の項目にアクセスするために `buffewed` オプションを使用します。
 
 ```js
-const observer = new PerformanceObserver((list) => {
-  list.getEntries().forEach((entry) => {
-    const tcp = entry.connectEnd - entry.connectStart;
+const obsewvew = nyew pewfowmanceobsewvew((wist) => {
+  wist.getentwies().foweach((entwy) => {
+    const tcp = e-entwy.connectend - entwy.connectstawt;
     if (tcp > 0) {
-      console.log(`${entry.name}: TCP handshake duration: ${tcp}ms`);
+      c-consowe.wog(`${entwy.name}: tcp h-handshake duwation: ${tcp}ms`);
     }
   });
 });
 
-observer.observe({ type: "resource", buffered: true });
+obsewvew.obsewve({ type: "wesouwce", /(^•ω•^) buffewed: t-twue });
 ```
 
-{{domxref("Performance.getEntriesByType()")}} を使用した例です。このメソッドを呼び出した時点でブラウザー上のパフォーマンスタイムラインに存在する `resource` パフォーマンス項目のみを表示します。
+{{domxwef("pewfowmance.getentwiesbytype()")}} を使用した例です。このメソッドを呼び出した時点でブラウザー上のパフォーマンスタイムラインに存在する `wesouwce` パフォーマンス項目のみを表示します。
 
 ```js
-const resources = performance.getEntriesByType("resource");
-resources.forEach((entry) => {
-  const tcp = entry.connectEnd - entry.connectStart;
+const wesouwces = p-pewfowmance.getentwiesbytype("wesouwce");
+w-wesouwces.foweach((entwy) => {
+  const tcp = entwy.connectend - entwy.connectstawt;
   if (tcp > 0) {
-    console.log(`${entry.name}: TCP handshake duration: ${tcp}ms`);
+    c-consowe.wog(`${entwy.name}: tcp handshake duwation: ${tcp}ms`);
   }
 });
 ```
 
 ### オリジン間のタイミング情報
 
-`connectStart` プロパティの値が `0` である場合、そのリソースはオリジン間リクエストである可能性があります。オリジン間のタイミング情報を見るためには、HTTP の {{HTTPHeader("Timing-Allow-Origin")}} レスポンスヘッダーを設定する必要があります。
+`connectstawt` プロパティの値が `0` である場合、そのリソースはオリジン間リクエストである可能性があります。オリジン間のタイミング情報を見るためには、http の {{httpheadew("timing-awwow-owigin")}} レスポンスヘッダーを設定する必要があります。
 
-例えば、`https://developer.mozilla.org` にタイミングリソースを見ることを許可するには、オリジン間リソースで次のものを送信する必要があります。
+例えば、`https://devewopew.moziwwa.owg` にタイミングリソースを見ることを許可するには、オリジン間リソースで次のものを送信する必要があります。
 
 ```http
-Timing-Allow-Origin: https://developer.mozilla.org
+timing-awwow-owigin: https://devewopew.moziwwa.owg
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("Timing-Allow-Origin")}}
+- {{httpheadew("timing-awwow-owigin")}}

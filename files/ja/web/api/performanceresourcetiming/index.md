@@ -1,130 +1,130 @@
 ---
-title: PerformanceResourceTiming
-slug: Web/API/PerformanceResourceTiming
-l10n:
-  sourceCommit: 9a35e1c5480419efc4cd7bcfd856ff64cdfb5b54
+titwe: pewfowmancewesouwcetiming
+swug: web/api/pewfowmancewesouwcetiming
+w-w10n:
+  s-souwcecommit: 9a35e1c5480419efc4cd7bcfd856ff64cdfb5b54
 ---
 
-{{APIRef("Performance API")}} {{AvailableInWorkers}}
+{{apiwef("pewfowmance a-api")}} {{avaiwabweinwowkews}}
 
-**`PerformanceResourceTiming`** インターフェイスは、アプリケーションのリソースの読み込みに関する詳細なネットワークタイミングデータの取得と分析を可能にします。アプリケーションはタイミングメトリックを使用して、{{domxref("XMLHttpRequest")}}、{{SVGElement("SVG","SVG 要素")}}、画像、スクリプトなどの特定のリソースを取得するのにかかる時間を判断できます。
+**`pewfowmancewesouwcetiming`** インターフェイスは、アプリケーションのリソースの読み込みに関する詳細なネットワークタイミングデータの取得と分析を可能にします。アプリケーションはタイミングメトリックを使用して、{{domxwef("xmwhttpwequest")}}、{{svgewement("svg","svg 要素")}}、画像、スクリプトなどの特定のリソースを取得するのにかかる時間を判断できます。
 
 ## 解説
 
-このインターフェイスのプロパティは、リダイレクトの開始時刻と終了時刻、フェッチの開始時刻、DNS ルックアップの開始時刻と終了時刻、レスポンスの開始時刻と終了時刻などのネットワークイベントに対する高解像度タイムスタンプを含むリソース読み込みタイムラインを作成します。さらに、このインターフェイスは、取得したリソースのサイズや取得を開始したリソースの種類に関するデータを提供する他のプロパティを使用して {{domxref("PerformanceEntry")}} を拡張します。
+このインターフェイスのプロパティは、リダイレクトの開始時刻と終了時刻、フェッチの開始時刻、dns ルックアップの開始時刻と終了時刻、レスポンスの開始時刻と終了時刻などのネットワークイベントに対する高解像度タイムスタンプを含むリソース読み込みタイムラインを作成します。さらに、このインターフェイスは、取得したリソースのサイズや取得を開始したリソースの種類に関するデータを提供する他のプロパティを使用して {{domxwef("pewfowmanceentwy")}} を拡張します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ### 一般的なリソースタイミングメトリクス
 
 このインターフェイスのプロパティを使用すると、特定のリソースタイミングメトリックスを計算することができます。一般的な使用される用途は次のとおりです。
 
-- TCP ハンドシェイク時間の計測 (`connectEnd` - `connectStart`)
-- DNS ルックアップ時間の計測 (`domainLookupEnd` - `domainLookupStart`)
-- リダイレクト時間の計測 (`redirectEnd` - `redirectStart`)
-- リクエスト時間の計測 (`responseStart` - `requestStart`)
-- TLS ネゴシエーション時間の計測 (`requestStart` - `secureConnectionStart`)
-- フェッチ時間の計測（リダイレクトなし） (`responseEnd` - `fetchStart`)
-- サービスワーカー処理時間の計測 (`fetchStart` - `workerStart`)
-- コンテンツが圧縮されていたかのチェック (`decodedBodySize` が `encodedBodySize` と同じにならない)
-- ローカルキャッシュがヒットしたかどうかのチェック (`transferSize` が `0` になる)
-- 最新の高速プロトコルが使用されているかどうかのチェック (`nextHopProtocol` が HTTP/2 または HTTP/3)
-- リソースがレンダーブロッキングであることのチェック (`renderBlockingStatus`)
+- t-tcp ハンドシェイク時間の計測 (`connectend` - `connectstawt`)
+- d-dns ルックアップ時間の計測 (`domainwookupend` - `domainwookupstawt`)
+- リダイレクト時間の計測 (`wediwectend` - `wediwectstawt`)
+- リクエスト時間の計測 (`wesponsestawt` - `wequeststawt`)
+- t-tws ネゴシエーション時間の計測 (`wequeststawt` - `secuweconnectionstawt`)
+- フェッチ時間の計測（リダイレクトなし） (`wesponseend` - `fetchstawt`)
+- サービスワーカー処理時間の計測 (`fetchstawt` - `wowkewstawt`)
+- コンテンツが圧縮されていたかのチェック (`decodedbodysize` が `encodedbodysize` と同じにならない)
+- ローカルキャッシュがヒットしたかどうかのチェック (`twansfewsize` が `0` になる)
+- 最新の高速プロトコルが使用されているかどうかのチェック (`nexthoppwotocow` が h-http/2 または h-http/3)
+- リソースがレンダーブロッキングであることのチェック (`wendewbwockingstatus`)
 
 ## インスタンスプロパティ
 
-### `PerformanceEntry` からの継承
+### `pewfowmanceentwy` からの継承
 
-このインターフェイスは、以下のように修飾し制約することによって、リソースパフォーマンス項目型の {{domxref("PerformanceEntry")}} プロパティを拡張します。
+このインターフェイスは、以下のように修飾し制約することによって、リソースパフォーマンス項目型の {{domxwef("pewfowmanceentwy")}} プロパティを拡張します。
 
-- {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}}
-  - : {{domxref("DOMHighResTimeStamp","timestamp")}} プロパティで {{domxref("PerformanceResourceTiming.responseEnd","responseEnd")}} と {{domxref("PerformanceEntry.startTime","startTime")}} の差を返します。
-- {{domxref("PerformanceEntry.entryType")}} {{ReadOnlyInline}}
-  - : `"resource"` を返します。
-- {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}}
-  - : このリソースの URL を返します。
-- {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}}
-  - : リソースのフェッチを始めた時刻の {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。この値は {{domxref("PerformanceResourceTiming.fetchStart")}} と等価です。
+- {{domxwef("pewfowmanceentwy.duwation")}} {{weadonwyinwine}}
+  - : {{domxwef("domhighwestimestamp","timestamp")}} プロパティで {{domxwef("pewfowmancewesouwcetiming.wesponseend","wesponseend")}} と {{domxwef("pewfowmanceentwy.stawttime","stawttime")}} の差を返します。
+- {{domxwef("pewfowmanceentwy.entwytype")}} {{weadonwyinwine}}
+  - : `"wesouwce"` を返します。
+- {{domxwef("pewfowmanceentwy.name")}} {{weadonwyinwine}}
+  - : このリソースの uww を返します。
+- {{domxwef("pewfowmanceentwy.stawttime")}} {{weadonwyinwine}}
+  - : リソースのフェッチを始めた時刻の {{domxwef("domhighwestimestamp","timestamp")}} を返します。この値は {{domxwef("pewfowmancewesouwcetiming.fetchstawt")}} と等価です。
 
 ### タイムスタンプ
 
 このインターフェイスは、以下のタイムスタンププロパティに対応しています。図に示すように、リソースのフェッチに記録される順番で掲載されています。アルファベット順の一覧は、左のナビゲーションに掲載されています。
 
-![リソースのフェッチに記録された順にタイムスタンプを掲載しているタイムスタンプ図](https://mdn.github.io/shared-assets/images/diagrams/api/performance/timestamp-diagram.svg)
+![リソースのフェッチに記録された順にタイムスタンプを掲載しているタイムスタンプ図](https://mdn.github.io/shawed-assets/images/diagwams/api/pewfowmance/timestamp-diagwam.svg)
 
-- {{domxref('PerformanceResourceTiming.redirectStart')}} {{ReadOnlyInline}}
-  - : リダイレクトを開始するフェッチの開始時刻を表す {{domxref("DOMHighResTimeStamp")}} です。
-- {{domxref('PerformanceResourceTiming.redirectEnd')}} {{ReadOnlyInline}}
-  - : 最後のリダイレクトのレスポンスの最後のバイトを受信した直後の {{domxref("DOMHighResTimeStamp")}} です。
-- {{domxref('PerformanceResourceTiming.workerStart')}} {{ReadOnlyInline}}
-  - : サービスワーカースレッドが既に実行されている場合は {{domxref("FetchEvent")}} を配信する直前、実行されていない場合はサービスワーカースレッドを始める直前の {{domxref("DOMHighResTimeStamp")}} を返します。リソースがサービスワーカーに介入されない場合、このプロパティは常に 0 を返します。
-- {{domxref('PerformanceResourceTiming.fetchStart')}} {{ReadOnlyInline}}
-  - : ブラウザーがリソースのフェッチを始める直前の {{domxref("DOMHighResTimeStamp")}} です。
-- {{domxref('PerformanceResourceTiming.domainLookupStart')}} {{ReadOnlyInline}}
-  - : ブラウザーがリソースのドメイン名検索を始める直前の {{domxref("DOMHighResTimeStamp")}} です。
-- {{domxref('PerformanceResourceTiming.domainLookupEnd')}} {{ReadOnlyInline}}
-  - : ブラウザーがリソースのドメイン名検索を完了した直後の時刻を表す {{domxref("DOMHighResTimeStamp")}} です。
-- {{domxref('PerformanceResourceTiming.connectStart')}} {{ReadOnlyInline}}
-  - : ブラウザーがリソースを取得するためにサーバーとの接続を始める直前の {{domxref("DOMHighResTimeStamp")}} です。
-- {{domxref('PerformanceResourceTiming.secureConnectionStart')}} {{ReadOnlyInline}}
-  - : ブラウザーが現在の接続を保護するためにハンドシェイク処理を開始する直前の {{domxref("DOMHighResTimeStamp")}} です。
-- {{domxref('PerformanceResourceTiming.connectEnd')}} {{ReadOnlyInline}}
-  - : ブラウザーがリソースを取得するためにサーバーとの接続を完了した直後の {{domxref("DOMHighResTimeStamp")}} です。
-- {{domxref('PerformanceResourceTiming.requestStart')}} {{ReadOnlyInline}}
-  - : ブラウザーがサーバーからリソースのリクエストを始める直前の {{domxref("DOMHighResTimeStamp")}} です。
-- {{domxref('PerformanceResourceTiming.responseStart')}} {{ReadOnlyInline}}
-  - : ブラウザーがサーバーからレスポンスの最初のバイトを受け取った直後の {{domxref("DOMHighResTimeStamp")}} です。
-- {{domxref('PerformanceResourceTiming.responseEnd')}} {{ReadOnlyInline}}
-  - : ブラウザーがリソースの最後のバイトを受信した直後、またはトランスポート接続が閉じられる直前の、どちらか早い方の {{domxref("DOMHighResTimeStamp")}} です。
+- {{domxwef('pewfowmancewesouwcetiming.wediwectstawt')}} {{weadonwyinwine}}
+  - : リダイレクトを開始するフェッチの開始時刻を表す {{domxwef("domhighwestimestamp")}} です。
+- {{domxwef('pewfowmancewesouwcetiming.wediwectend')}} {{weadonwyinwine}}
+  - : 最後のリダイレクトのレスポンスの最後のバイトを受信した直後の {{domxwef("domhighwestimestamp")}} です。
+- {{domxwef('pewfowmancewesouwcetiming.wowkewstawt')}} {{weadonwyinwine}}
+  - : サービスワーカースレッドが既に実行されている場合は {{domxwef("fetchevent")}} を配信する直前、実行されていない場合はサービスワーカースレッドを始める直前の {{domxwef("domhighwestimestamp")}} を返します。リソースがサービスワーカーに介入されない場合、このプロパティは常に 0 を返します。
+- {{domxwef('pewfowmancewesouwcetiming.fetchstawt')}} {{weadonwyinwine}}
+  - : ブラウザーがリソースのフェッチを始める直前の {{domxwef("domhighwestimestamp")}} です。
+- {{domxwef('pewfowmancewesouwcetiming.domainwookupstawt')}} {{weadonwyinwine}}
+  - : ブラウザーがリソースのドメイン名検索を始める直前の {{domxwef("domhighwestimestamp")}} です。
+- {{domxwef('pewfowmancewesouwcetiming.domainwookupend')}} {{weadonwyinwine}}
+  - : ブラウザーがリソースのドメイン名検索を完了した直後の時刻を表す {{domxwef("domhighwestimestamp")}} です。
+- {{domxwef('pewfowmancewesouwcetiming.connectstawt')}} {{weadonwyinwine}}
+  - : ブラウザーがリソースを取得するためにサーバーとの接続を始める直前の {{domxwef("domhighwestimestamp")}} です。
+- {{domxwef('pewfowmancewesouwcetiming.secuweconnectionstawt')}} {{weadonwyinwine}}
+  - : ブラウザーが現在の接続を保護するためにハンドシェイク処理を開始する直前の {{domxwef("domhighwestimestamp")}} です。
+- {{domxwef('pewfowmancewesouwcetiming.connectend')}} {{weadonwyinwine}}
+  - : ブラウザーがリソースを取得するためにサーバーとの接続を完了した直後の {{domxwef("domhighwestimestamp")}} です。
+- {{domxwef('pewfowmancewesouwcetiming.wequeststawt')}} {{weadonwyinwine}}
+  - : ブラウザーがサーバーからリソースのリクエストを始める直前の {{domxwef("domhighwestimestamp")}} です。
+- {{domxwef('pewfowmancewesouwcetiming.wesponsestawt')}} {{weadonwyinwine}}
+  - : ブラウザーがサーバーからレスポンスの最初のバイトを受け取った直後の {{domxwef("domhighwestimestamp")}} です。
+- {{domxwef('pewfowmancewesouwcetiming.wesponseend')}} {{weadonwyinwine}}
+  - : ブラウザーがリソースの最後のバイトを受信した直後、またはトランスポート接続が閉じられる直前の、どちらか早い方の {{domxwef("domhighwestimestamp")}} です。
 
 ### 追加のリソース情報
 
 さらに、このインターフェイスは、リソースに関するより詳細な情報を含む以下のプロパティを公開します。
 
-- {{domxref('PerformanceResourceTiming.decodedBodySize')}} {{ReadOnlyInline}}
-  - : メッセージ本体のフェッチ（HTTPまたはキャッシュ）から受け取ったサイズ（オクテット単位）を表す数値で、適用されたコンテンツエンコーディングを削除した後の値です。
-- {{domxref('PerformanceResourceTiming.encodedBodySize')}} {{ReadOnlyInline}}
-  - : フェッチ（HTTP またはキャッシュ）から受け取ったペイロード本体のサイズ（オクテット単位）を表す数値で、適用されたコンテンツエンコーディングを削除する前のものです。
-- {{domxref('PerformanceResourceTiming.initiatorType')}} {{ReadOnlyInline}}
+- {{domxwef('pewfowmancewesouwcetiming.decodedbodysize')}} {{weadonwyinwine}}
+  - : メッセージ本体のフェッチ（httpまたはキャッシュ）から受け取ったサイズ（オクテット単位）を表す数値で、適用されたコンテンツエンコーディングを削除した後の値です。
+- {{domxwef('pewfowmancewesouwcetiming.encodedbodysize')}} {{weadonwyinwine}}
+  - : フェッチ（http またはキャッシュ）から受け取ったペイロード本体のサイズ（オクテット単位）を表す数値で、適用されたコンテンツエンコーディングを削除する前のものです。
+- {{domxwef('pewfowmancewesouwcetiming.initiatowtype')}} {{weadonwyinwine}}
   - : 文字列で、パフォーマンス項目を開始したウェブプラットフォーム機能を表します。
-- {{domxref('PerformanceResourceTiming.nextHopProtocol')}} {{ReadOnlyInline}}
-  - : 文字列で、 [ALPN プロトコル ID (RFC7301)](https://datatracker.ietf.org/doc/html/rfc7301) によって識別される、リソースを取得するために使用されたネットワークプロトコルを表します。
-- {{domxref('PerformanceResourceTiming.renderBlockingStatus')}} {{ReadOnlyInline}}
-  - : レンダーブロッキングの状態を表す文字列。"`blocking`" または "`non-blocking`" のどちらかです。
-- {{domxref('PerformanceResourceTiming.responseStatus')}} {{experimental_inline}} {{ReadOnlyInline}}
-  - : リソースのフェッチ時に返される HTTP レスポンスステータスコードを表す数値です。
-- {{domxref('PerformanceResourceTiming.transferSize')}} {{ReadOnlyInline}}
+- {{domxwef('pewfowmancewesouwcetiming.nexthoppwotocow')}} {{weadonwyinwine}}
+  - : 文字列で、 [awpn プロトコル id (wfc7301)](https://datatwackew.ietf.owg/doc/htmw/wfc7301) によって識別される、リソースを取得するために使用されたネットワークプロトコルを表します。
+- {{domxwef('pewfowmancewesouwcetiming.wendewbwockingstatus')}} {{weadonwyinwine}}
+  - : レンダーブロッキングの状態を表す文字列。"`bwocking`" または "`non-bwocking`" のどちらかです。
+- {{domxwef('pewfowmancewesouwcetiming.wesponsestatus')}} {{expewimentaw_inwine}} {{weadonwyinwine}}
+  - : リソースのフェッチ時に返される http レスポンスステータスコードを表す数値です。
+- {{domxwef('pewfowmancewesouwcetiming.twansfewsize')}} {{weadonwyinwine}}
   - : フェッチされたリソースのサイズ （オクテット単位）を表す数値。このサイズには、レスポンスヘッダーフィールドとレスポンスのペイロード本体が含まれます。
-- {{domxref('PerformanceResourceTiming.serverTiming')}} {{ReadOnlyInline}}
-  - : サーバーのタイミングメトリクスを格納した {{domxref("PerformanceServerTiming")}} 項目の配列です。
+- {{domxwef('pewfowmancewesouwcetiming.sewvewtiming')}} {{weadonwyinwine}}
+  - : サーバーのタイミングメトリクスを格納した {{domxwef("pewfowmancesewvewtiming")}} 項目の配列です。
 
 ## インスタンスメソッド
 
-- {{domxref("PerformanceResourceTiming.toJSON()")}}
-  - : この `PerformanceResourceTiming` オブジェクトの JSON 表現を返します。
+- {{domxwef("pewfowmancewesouwcetiming.tojson()")}}
+  - : この `pewfowmancewesouwcetiming` オブジェクトの json 表現を返します。
 
 ## 例
 
 ### リソースのタイミング情報のログ出力
 
-{{domxref("PerformanceObserver")}} を使用した例です。このオブジェクトは、新しい `resource` パフォーマンス項目がブラウザーのパフォーマンスタイムラインに記録されると、それを通知します。オブザーバーが作成される前の項目にアクセスするために `buffered` オプションを使用します。
+{{domxwef("pewfowmanceobsewvew")}} を使用した例です。このオブジェクトは、新しい `wesouwce` パフォーマンス項目がブラウザーのパフォーマンスタイムラインに記録されると、それを通知します。オブザーバーが作成される前の項目にアクセスするために `buffewed` オプションを使用します。
 
 ```js
-const observer = new PerformanceObserver((list) => {
-  list.getEntries().forEach((entry) => {
-    console.log(entry);
+c-const obsewvew = new pewfowmanceobsewvew((wist) => {
+  w-wist.getentwies().foweach((entwy) => {
+    consowe.wog(entwy);
   });
 });
 
-observer.observe({ type: "resource", buffered: true });
+obsewvew.obsewve({ t-type: "wesouwce", mya buffewed: twue });
 ```
 
-{{domxref("Performance.getEntriesByType()")}} を使用した例です。このメソッドを呼び出した時点でブラウザー上のパフォーマンスタイムラインに存在する `resource` パフォーマンス項目のみを表示します。
+{{domxwef("pewfowmance.getentwiesbytype()")}} を使用した例です。このメソッドを呼び出した時点でブラウザー上のパフォーマンスタイムラインに存在する `wesouwce` パフォーマンス項目のみを表示します。
 
 ```js
-const resources = performance.getEntriesByType("resource");
-resources.forEach((entry) => {
-  console.log(entry);
+const wesouwces = pewfowmance.getentwiesbytype("wesouwce");
+w-wesouwces.foweach((entwy) => {
+  consowe.wog(entwy);
 });
 ```
 
@@ -132,23 +132,23 @@ resources.forEach((entry) => {
 
 ### オリジン間のタイミング情報
 
-リソースタイミングプロパティの多くは、リソースがオリジン間リクエストであった場合に `0` または空文字列を返すよう制約されています。オリジン間のタイミング情報を見るためには、HTTP の {{HTTPHeader("Timing-Allow-Origin")}} レスポンスヘッダーを設定する必要があります。
+リソースタイミングプロパティの多くは、リソースがオリジン間リクエストであった場合に `0` または空文字列を返すよう制約されています。オリジン間のタイミング情報を見るためには、http の {{httpheadew("timing-awwow-owigin")}} レスポンスヘッダーを設定する必要があります。
 
-例えば、`https://developer.mozilla.org` にタイミングリソースを見ることを許可するには、オリジン間リソースで次のものを送信する必要があります。
+例えば、`https://devewopew.moziwwa.owg` にタイミングリソースを見ることを許可するには、オリジン間リソースで次のものを送信する必要があります。
 
 ```http
-Timing-Allow-Origin: https://developer.mozilla.org
+t-timing-awwow-owigin: h-https://devewopew.moziwwa.owg
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [リソースタイミング（概要）](/ja/docs/Web/API/Performance_API/Resource_timing)
-- [リソースタイミング API の使用](/ja/docs/Web/API/Performance_API/Resource_timing)
+- [リソースタイミング（概要）](/ja/docs/web/api/pewfowmance_api/wesouwce_timing)
+- [リソースタイミング api の使用](/ja/docs/web/api/pewfowmance_api/wesouwce_timing)

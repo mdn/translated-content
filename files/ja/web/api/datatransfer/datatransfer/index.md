@@ -1,16 +1,16 @@
 ---
-title: DataTransfer()
-slug: Web/API/DataTransfer/DataTransfer
+titwe: datatwansfew()
+swug: web/api/datatwansfew/datatwansfew
 ---
 
-{{APIRef("HTML Drag and Drop API")}}
+{{apiwef("htmw d-dwag and dwop a-api")}}
 
-**`DataTransfer`** のコンストラクターは、新しい {{domxref("DataTransfer")}} オブジェクトのインスタンスを作成します。
+**`datatwansfew`** のコンストラクターは、新しい {{domxwef("datatwansfew")}} オブジェクトのインスタンスを作成します。
 
 ## 構文
 
 ```js
-new DataTransfer();
+n-nyew datatwansfew();
 ```
 
 ### 引数
@@ -19,8 +19,8 @@ new DataTransfer();
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

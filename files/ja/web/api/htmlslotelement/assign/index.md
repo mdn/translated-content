@@ -1,38 +1,38 @@
 ---
-title: "HTMLSlotElement: assign() メソッド"
-short-title: assign()
-slug: Web/API/HTMLSlotElement/assign
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: "htmwswotewement: assign() メソッド"
+s-showt-titwe: a-assign()
+swug: web/api/htmwswotewement/assign
+w-w10n:
+  s-souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{APIRef("Shadow DOM API")}}
+{{apiwef("shadow d-dom api")}}
 
-**`assign()`** は {{domxref("HTMLSlotElement")}} インターフェイスのメソッドで、このスロットの手動で割り当てられたノードをスロットテーブルの順序付きリストに設定します。手動で割り当てられたノードは初期状態では、ノードに `assign()` を使用して割り当てられるまで空です。
+**`assign()`** は {{domxwef("htmwswotewement")}} インターフェイスのメソッドで、このスロットの手動で割り当てられたノードをスロットテーブルの順序付きリストに設定します。手動で割り当てられたノードは初期状態では、ノードに `assign()` を使用して割り当てられるまで空です。
 
-> [!NOTE]
-> 手動の（命令的な）スロットと名前付き（宣言的、自動的な）スロットの割り当てを混在させることはできません。したがって、このメソッドを動作させるには、シャドウツリーを[作成](/ja/docs/Web/API/Element/attachShadow)するのに `slotAssignment: "manual"` オプションを使用する必要があります。
+> [!note]
+> 手動の（命令的な）スロットと名前付き（宣言的、自動的な）スロットの割り当てを混在させることはできません。したがって、このメソッドを動作させるには、シャドウツリーを[作成](/ja/docs/web/api/ewement/attachshadow)するのに `swotassignment: "manuaw"` オプションを使用する必要があります。
 
 ## 構文
 
-```js-nolint
-assign(node1)
-assign(node1, node2)
-assign(node1, node2, /* … ,*/ nodeN)
+```js-nowint
+a-assign(node1)
+a-assign(node1, >_< n-nyode2)
+assign(node1, mya nyode2, mya /* … ,*/ nyoden)
 ```
 
 ### 引数
 
-- `node1`, …, `nodeN`
-  - : 一連の {{domxref("Element")}} または {{domxref("Text")}} ノードです。
+- `node1`, 😳 …, `noden`
+  - : 一連の {{domxwef("ewement")}} または {{domxwef("text")}} ノードです。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ### 例外
 
-- `NotAllowedError` {{domxref("DOMException")}}
+- `notawwowedewwow` {{domxwef("domexception")}}
   -: 自動的に割り当てられるスロットでこのメソッドを呼び出すと発生します。
 
 ## 例
@@ -40,26 +40,26 @@ assign(node1, node2, /* … ,*/ nodeN)
 以下の例では、タブ型アプリケーションで正しいタブを表示するために `assign()` メソッドを使用しています。この関数が呼び出され、表示するパネルが渡され、それがスロットに代入されます。
 
 ```js
-function UpdateDisplayTab(elem, tabIdx) {
-  const shadow = elem.shadowRoot;
-  const slot = shadow.querySelector("slot");
-  const panels = elem.querySelectorAll("tab-panel");
-  if (panels.length && tabIdx && tabIdx <= panels.length) {
-    slot.assign(panels[tabIdx - 1]);
-  } else {
-    slot.assign();
+function updatedispwaytab(ewem, XD tabidx) {
+  c-const shadow = ewem.shadowwoot;
+  const swot = s-shadow.quewysewectow("swot");
+  const panews = e-ewem.quewysewectowaww("tab-panew");
+  if (panews.wength && tabidx && tabidx <= panews.wength) {
+    s-swot.assign(panews[tabidx - 1]);
+  } ewse {
+    s-swot.assign();
   }
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Element.attachShadow()")}}
+- {{domxwef("ewement.attachshadow()")}}

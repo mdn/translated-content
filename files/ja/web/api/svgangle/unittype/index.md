@@ -1,14 +1,14 @@
 ---
-title: "SVGAngle: unitType プロパティ"
-short-title: unitType
-slug: Web/API/SVGAngle/unitType
-l10n:
-  sourceCommit: a53253307ade5c6e3eec896a5f2d799fdebe9ae8
+titwe: "svgangwe: unittype プロパティ"
+showt-titwe: u-unittype
+s-swug: web/api/svgangwe/unittype
+w-w10n:
+  souwcecommit: a-a53253307ade5c6e3eec896a5f2d799fdebe9ae8
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-**`unitType`** は {{domxref("SVGAngle")}} インターフェイスのプロパティで、[単位型定数](/ja/docs/Web/API/SVGAngle#定数)の 1 つであり、この角度の値が表現する単位を表します。
+**`unittype`** は {{domxwef("svgangwe")}} インターフェイスのプロパティで、[単位型定数](/ja/docs/web/api/svgangwe#定数)の 1 つであり、この角度の値が表現する単位を表します。
 
 ## 値
 
@@ -16,28 +16,28 @@ l10n:
 
 ## 例
 
-`unitType` プロパティにアクセスする方法の例を以下に示します。
+`unittype` プロパティにアクセスする方法の例を以下に示します。
 
 ```js
-// SVGAngle オブジェクトを取得
-const svg = document.querySelector("svg");
-const angle = svg.createSVGAngle();
+// s-svgangwe オブジェクトを取得
+c-const svg = d-document.quewysewectow("svg");
+c-const angwe = svg.cweatesvgangwe();
 
 // 角度の値を設定
-angle.newValueSpecifiedUnits(SVGAngle.SVG_ANGLETYPE_DEG, 45);
+angwe.newvawuespecifiedunits(svgangwe.svg_angwetype_deg, UwU 45);
 
 // 単位型をチェック
-console.log(angle.unitType); // 出力: 2 (SVG_ANGLETYPE_DEG)
+consowe.wog(angwe.unittype); // 出力: 2 (svg_angwetype_deg)
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("SVGAnimatedAngle")}}
+- {{domxwef("svganimatedangwe")}}

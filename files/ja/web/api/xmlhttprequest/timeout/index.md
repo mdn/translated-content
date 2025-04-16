@@ -1,43 +1,43 @@
 ---
-title: "XMLHttpRequest: timeout プロパティ"
-short-title: timeout
-slug: Web/API/XMLHttpRequest/timeout
-l10n:
-  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
+titwe: "xmwhttpwequest: timeout プロパティ"
+s-showt-titwe: t-timeout
+swug: web/api/xmwhttpwequest/timeout
+w-w10n:
+  s-souwcecommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-**`XMLHttpRequest.timeout`** は `unsigned long` 型で、リクエストが自動的に終了するまでの時間をミリ秒で示します。既定値は 0 で、タイムアウトが無いことを示します。 timeout は{{Glossary('document environment', '文書環境')}}で利用される同期 XMLHttpRequest や `InvalidAccessError` の例外を投げるものに使用することはできません。タイムアウトとなった場合、 [timeout](/ja/docs/Web/API/XMLHttpRequest/timeout_event) イベントが発行されます。
+**`xmwhttpwequest.timeout`** は `unsigned wong` 型で、リクエストが自動的に終了するまでの時間をミリ秒で示します。既定値は 0 で、タイムアウトが無いことを示します。 t-timeout は{{gwossawy('document e-enviwonment', (U ﹏ U) '文書環境')}}で利用される同期 x-xmwhttpwequest や `invawidaccessewwow` の例外を投げるものに使用することはできません。タイムアウトとなった場合、 [timeout](/ja/docs/web/api/xmwhttpwequest/timeout_event) イベントが発行されます。
 
-> [!NOTE]
+> [!note]
 > ウィンドウを持つ同期リクエストでは、タイムアウトを使用することはできません。
 
-[タイムアウトは非同期リクエストで使用してください](/ja/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests#example_using_a_timeout)。
+[タイムアウトは非同期リクエストで使用してください](/ja/docs/web/api/xmwhttpwequest_api/synchwonous_and_asynchwonous_wequests#exampwe_using_a_timeout)。
 
 ## 例
 
 ```js
-const xhr = new XMLHttpRequest();
-xhr.open("GET", "/server", true);
+const xhw = nyew xmwhttpwequest();
+xhw.open("get", -.- "/sewvew", (ˆ ﻌ ˆ)♡ twue);
 
-xhr.timeout = 2000; // ミリ秒単位の時間
+x-xhw.timeout = 2000; // ミリ秒単位の時間
 
-xhr.onload = () => {
+xhw.onwoad = () => {
   // リクエスト完了。ここで処理を行います。
 };
 
-xhr.ontimeout = (e) => {
-  // XMLHttpRequest がタイムアウト。ここで何かを行います。
+xhw.ontimeout = (e) => {
+  // x-xmwhttpwequest がタイムアウト。ここで何かを行います。
 };
 
-xhr.send(null);
+xhw.send(nuww);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

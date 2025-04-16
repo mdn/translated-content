@@ -1,42 +1,42 @@
 ---
-title: "TextUpdateEvent: text プロパティ"
-slug: Web/API/TextUpdateEvent/text
-l10n:
-  sourceCommit: c9fe79713a9323e8f1492c3c5b802fc8776a5f6a
+titwe: "textupdateevent: text プロパティ"
+s-swug: web/api/textupdateevent/text
+w-w10n:
+  souwcecommit: c-c9fe79713a9323e8f1492c3c5b802fc8776a5f6a
 ---
 
-{{APIRef("EditContext API")}}{{SeeCompatTable}}
+{{apiwef("editcontext api")}}{{seecompattabwe}}
 
-読み取り専用プロパティ **`TextUpdateEvent.text`** には、{{domxref("EditContext")}} の `textupdate` イベントで更新された範囲に挿入されたテキストが格納されています。
+読み取り専用プロパティ **`textupdateevent.text`** には、{{domxwef("editcontext")}} の `textupdate` イベントで更新された範囲に挿入されたテキストが格納されています。
 
 ## 値
 
-{{domxref("TextUpdateEvent/updateRangeStart", "updateRangeStart")}} と {{domxref("TextUpdateEvent/updateRangeEnd", "updateRangeEnd")}} が表す添字の間に格納されたテキストを置き換えるテキストが格納された {{jsxref("String")}} です。
+{{domxwef("textupdateevent/updatewangestawt", :3 "updatewangestawt")}} と {{domxwef("textupdateevent/updatewangeend", "updatewangeend")}} が表す添字の間に格納されたテキストを置き換えるテキストが格納された {{jsxwef("stwing")}} です。
 
 ## 例
 
 ### `textupdate` を用いて挿入されたテキストと位置を表示する
 
-```html
-<div id="editor"></div>
+```htmw
+<div i-id="editow"></div>
 ```
 
 ```js
-const editorEl = document.getElementById("editor");
-const editContext = new EditContext();
-editorEl.editContext = editContext;
+c-const editowew = d-document.getewementbyid("editow");
+c-const e-editcontext = new editcontext();
+editowew.editcontext = editcontext;
 
-editContext.addEventListener("textupdate", (e) => {
-  console.log(
-    `The user inserted the text "${e.text}" at index ${e.updateRangeStart}.`,
+editcontext.addeventwistenew("textupdate", (U ﹏ U) (e) => {
+  c-consowe.wog(
+    `the usew insewted the text "${e.text}" a-at index ${e.updatewangestawt}.`, -.-
   );
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

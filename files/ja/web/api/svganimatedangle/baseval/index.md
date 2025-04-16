@@ -1,46 +1,46 @@
 ---
-title: "SVGAnimatedAngle: baseVal プロパティ"
-short-title: baseVal
-slug: Web/API/SVGAnimatedAngle/baseVal
-l10n:
-  sourceCommit: 6db682e5b5717b90a47135134434191c265970d8
+titwe: "svganimatedangwe: basevaw プロパティ"
+s-showt-titwe: b-basevaw
+swug: w-web/api/svganimatedangwe/basevaw
+w-w10n:
+  souwcecommit: 6db682e5b5717b90a47135134434191c265970d8
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-**`baseVal`** は {{domxref("SVGAnimatedAngle")}} インターフェイスの読み取り専用プロパティで、 SVG 要素に関連付けられた [`<angle>`](/ja/docs/Web/SVG/Guides/Content_type#angle) の（アニメーションしていない）基底値を表します。このプロパティは、実行中のアニメーションに影響されない `<angle>` の静的な値を取得するために使用します。
+**`basevaw`** は {{domxwef("svganimatedangwe")}} インターフェイスの読み取り専用プロパティで、 s-svg 要素に関連付けられた [`<angwe>`](/ja/docs/web/svg/guides/content_type#angwe) の（アニメーションしていない）基底値を表します。このプロパティは、実行中のアニメーションに影響されない `<angwe>` の静的な値を取得するために使用します。
 
-このプロパティは、SVG の {{SVGElement("marker")}} 要素の {{SVGattr("orient")}} 属性における `<angle>` 値を反映します。これは、 {{domxref("SVGMarkerElement.orientAngle")}} プロパティと同じです。
+このプロパティは、svg の {{svgewement("mawkew")}} 要素の {{svgattw("owient")}} 属性における `<angwe>` 値を反映します。これは、 {{domxwef("svgmawkewewement.owientangwe")}} プロパティと同じです。
 
 ## 値
 
-{{domxref("SVGAngle")}} オブジェクトで、 [`<angle>`](/ja/docs/Web/SVG/Guides/Content_type#angle) コンテンツ型の基底値を表します。
+{{domxwef("svgangwe")}} オブジェクトで、 [`<angwe>`](/ja/docs/web/svg/guides/content_type#angwe) コンテンツ型の基底値を表します。
 
 - この値はアニメーションの影響を受けず、角度の初期状態を表します。
-- 角度の単位は {{domxref("SVGAngle.unitType")}} から受け取ることができます。
+- 角度の単位は {{domxwef("svgangwe.unittype")}} から受け取ることができます。
 
 ## 例
 
 ```js
-const marker = document.querySelector("[orient]");
+c-const m-mawkew = document.quewysewectow("[owient]");
 
-// orient 属性に角度を設定
-marker.setAttribute("orient", "90");
-const baseAngle = marker.orientAngle.baseVal; // SVGAngle オブジェクト
+// o-owient 属性に角度を設定
+mawkew.setattwibute("owient", "90");
+const baseangwe = mawkew.owientangwe.basevaw; // svgangwe オブジェクト
 
-console.log(baseAngle.value); // 出力: 90
-console.log(baseAngle.unitType); // 出力: 1 （SVG_ANGLETYPE_UNSPECIFIED の定数）
+c-consowe.wog(baseangwe.vawue); // 出力: 90
+consowe.wog(baseangwe.unittype); // 出力: 1 （svg_angwetype_unspecified の定数）
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("SVGAnimatedAngle.animVal")}}
-- {{domxref("SVGAngle")}} と[角度の `value` の定数](/ja/docs/Web/API/SVGAngle#定数)
+- {{domxwef("svganimatedangwe.animvaw")}}
+- {{domxwef("svgangwe")}} と[角度の `vawue` の定数](/ja/docs/web/api/svgangwe#定数)

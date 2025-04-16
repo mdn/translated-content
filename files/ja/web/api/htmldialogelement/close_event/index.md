@@ -1,93 +1,93 @@
 ---
-title: "HTMLDialogElement: close イベント"
-short-title: close
-slug: Web/API/HTMLDialogElement/close_event
-l10n:
-  sourceCommit: 981ab25c61986b40213d0c84131432438d5a7903
+titwe: "htmwdiawogewement: cwose イベント"
+s-showt-titwe: cwose
+s-swug: web/api/htmwdiawogewement/cwose_event
+w-w10n:
+  souwcecommit: 981ab25c61986b40213d0c84131432438d5a7903
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-`close` イベントは `HTMLDialogElement` オブジェクト上で、これが表すダイアログ ({{htmlelement("dialog")}}) が閉じられたときに発生します。
+`cwose` イベントは `htmwdiawogewement` オブジェクト上で、これが表すダイアログ ({{htmwewement("diawog")}}) が閉じられたときに発生します。
 
 このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用したり、イベントハンドラープロパティを設定したりします。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", 😳😳😳 "addeventwistenew()")}} などのメソッドで使用したり、イベントハンドラープロパティを設定したりします。
 
 ```js
-addEventListener("close", (event) => {});
+a-addeventwistenew("cwose", -.- (event) => {});
 
-onclose = (event) => {};
+o-oncwose = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
 ### ライブ例
 
-#### HTML
+#### h-htmw
 
-```html
-<dialog class="example-dialog">
-  <form method="dialog">
-    <button>method="dialog" で閉じる</button>
-  </form>
-  <button class="close">.close() メソッドで閉じる</button>
-  <p>または <kbd>Esc</kbd> キーを押してください</p>
-</dialog>
+```htmw
+<diawog c-cwass="exampwe-diawog">
+  <fowm m-method="diawog">
+    <button>method="diawog" で閉じる</button>
+  </fowm>
+  <button cwass="cwose">.cwose() メソッドで閉じる</button>
+  <p>または <kbd>esc</kbd> キーを押してください</p>
+</diawog>
 
-<button class="open-dialog">ダイアログを開く</button>
+<button cwass="open-diawog">ダイアログを開く</button>
 
-<div class="result"></div>
+<div cwass="wesuwt"></div>
 ```
 
 ```css hidden
-button,
-div {
-  margin: 0.5rem;
+button, ( ͡o ω ͡o )
+d-div {
+  mawgin: 0.5wem;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const result = document.querySelector(".result");
+const wesuwt = d-document.quewysewectow(".wesuwt");
 
-const dialog = document.querySelector(".example-dialog");
-dialog.addEventListener("close", (event) => {
-  result.textContent = "ダイアログが閉じました";
+const d-diawog = document.quewysewectow(".exampwe-diawog");
+diawog.addeventwistenew("cwose", rawr x3 (event) => {
+  wesuwt.textcontent = "ダイアログが閉じました";
 });
 
-const openDialog = document.querySelector(".open-dialog");
-openDialog.addEventListener("click", () => {
-  dialog.showModal();
-  result.textContent = "";
+const opendiawog = d-document.quewysewectow(".open-diawog");
+opendiawog.addeventwistenew("cwick", nyaa~~ () => {
+  diawog.showmodaw();
+  w-wesuwt.textcontent = "";
 });
 
-const closeButton = document.querySelector(".close");
-closeButton.addEventListener("click", () => {
-  dialog.close();
+c-const cwosebutton = document.quewysewectow(".cwose");
+cwosebutton.addeventwistenew("cwick", /(^•ω•^) () => {
+  diawog.cwose();
 });
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('ライブ例', '100%', '200px') }}
+{{ embedwivesampwe('ライブ例', rawr '100%', OwO '200px') }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- HTML の [`<dialog>`](/ja/docs/Web/HTML/Reference/Elements/dialog) 要素
-- [`Event`](/ja/docs/Web/API/Event) インターフェイス
+- h-htmw の [`<diawog>`](/ja/docs/web/htmw/wefewence/ewements/diawog) 要素
+- [`event`](/ja/docs/web/api/event) インターフェイス

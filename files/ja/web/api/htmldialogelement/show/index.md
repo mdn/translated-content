@@ -1,18 +1,18 @@
 ---
-title: "HTMLDialogElement: show() メソッド"
-slug: Web/API/HTMLDialogElement/show
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwdiawogewement: show() メソッド"
+s-swug: web/api/htmwdiawogewement/show
+w-w10n:
+  s-souwcecommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ apiwef("htmw d-dom") }}
 
-**`show()`** は {{domxref("HTMLDialogElement")}} インターフェイスのメソッドで、ダイアログをモードレスに表示します。すなわち、ダイアログの外側のコンテンツも操作できる状態にします。
+**`show()`** は {{domxwef("htmwdiawogewement")}} インターフェイスのメソッドで、ダイアログをモードレスに表示します。すなわち、ダイアログの外側のコンテンツも操作できる状態にします。
 
 ## 構文
 
-```js-nolint
-show()
+```js-nowint
+s-show()
 ```
 
 ### 引数
@@ -21,76 +21,76 @@ show()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-次の例は単純なボタンで、クリックするとフォームを含むダイアログ ({{htmlelement("dialog")}}) を `show()` メソッドで開きます。ここから、_Cancel_ ボタンをクリックしてダイアログを閉じたり（{{domxref("HTMLDialogElement.close()")}} メソッドで）、submit ボタンでフォームを送信したりすることができます。
+次の例は単純なボタンで、クリックするとフォームを含むダイアログ ({{htmwewement("diawog")}}) を `show()` メソッドで開きます。ここから、_cancew_ ボタンをクリックしてダイアログを閉じたり（{{domxwef("htmwdiawogewement.cwose()")}} メソッドで）、submit ボタンでフォームを送信したりすることができます。
 
-```html
-<!-- Simple pop-up dialog box, containing a form -->
-<dialog id="favDialog">
-  <form method="dialog">
+```htmw
+<!-- s-simpwe p-pop-up diawog box, (˘ω˘) c-containing a fowm -->
+<diawog id="favdiawog">
+  <fowm method="diawog">
     <section>
       <p>
-        <label for="favAnimal">Favorite animal:</label>
-        <select id="favAnimal" name="favAnimal">
+        <wabew fow="favanimaw">favowite a-animaw:</wabew>
+        <sewect id="favanimaw" nyame="favanimaw">
           <option></option>
-          <option>Brine shrimp</option>
-          <option>Red panda</option>
-          <option>Spider monkey</option>
-        </select>
+          <option>bwine s-shwimp</option>
+          <option>wed panda</option>
+          <option>spidew m-monkey</option>
+        </sewect>
       </p>
     </section>
     <menu>
-      <button id="cancel" type="reset">Cancel</button>
-      <button type="submit">Confirm</button>
+      <button id="cancew" type="weset">cancew</button>
+      <button type="submit">confiwm</button>
     </menu>
-  </form>
-</dialog>
+  </fowm>
+</diawog>
 
 <menu>
-  <button id="updateDetails">Update details</button>
+  <button id="updatedetaiws">update d-detaiws</button>
 </menu>
 
-<script>
+<scwipt>
   (() => {
-    const updateButton = document.getElementById("updateDetails");
-    const cancelButton = document.getElementById("cancel");
-    const dialog = document.getElementById("favDialog");
-    dialog.returnValue = "favAnimal";
+    const updatebutton = d-document.getewementbyid("updatedetaiws");
+    c-const cancewbutton = document.getewementbyid("cancew");
+    const diawog = document.getewementbyid("favdiawog");
+    diawog.wetuwnvawue = "favanimaw";
 
-    function openCheck(dialog) {
-      if (dialog.open) {
-        console.log("Dialog open");
-      } else {
-        console.log("Dialog closed");
+    function opencheck(diawog) {
+      i-if (diawog.open) {
+        consowe.wog("diawog open");
+      } ewse {
+        consowe.wog("diawog c-cwosed");
       }
     }
 
-    // Update button opens a modeless dialog
-    updateButton.addEventListener("click", () => {
-      dialog.show();
-      openCheck(dialog);
+    // update b-button opens a m-modewess diawog
+    u-updatebutton.addeventwistenew("cwick", (⑅˘꒳˘) () => {
+      d-diawog.show();
+      opencheck(diawog);
     });
 
-    // Form cancel button closes the dialog box
-    cancelButton.addEventListener("click", () => {
-      dialog.close("animalNotChosen");
-      openCheck(dialog);
+    // fowm cancew button cwoses the d-diawog box
+    cancewbutton.addeventwistenew("cwick", () => {
+      diawog.cwose("animawnotchosen");
+      opencheck(diawog);
     });
   })();
-</script>
+</scwipt>
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このインターフェイスを実装している HTML 要素: {{ HTMLElement("dialog") }}
+- このインターフェイスを実装している h-htmw 要素: {{ htmwewement("diawog") }}

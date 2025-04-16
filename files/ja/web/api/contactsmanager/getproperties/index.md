@@ -1,18 +1,18 @@
 ---
-title: ContactsManager.getProperties()
-slug: Web/API/ContactsManager/getProperties
-l10n:
-  sourceCommit: bf30e32f3b51f59080f2c76795beadb247a551eb
+titwe: contactsmanagew.getpwopewties()
+swug: w-web/api/contactsmanagew/getpwopewties
+w-w10n:
+  souwcecommit: b-bf30e32f3b51f59080f2c76795beadb247a551eb
 ---
 
-{{securecontext_header}}{{APIRef("Contact Picker API")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{apiwef("contact p-pickew api")}}{{seecompattabwe}}
 
-**`getProperties()`** は {{domxref("ContactsManager")}} インターフェイスのメソッドで、プロミス ({{jsxref('Promise')}}) を返します。これは、どの連絡先プロパティが利用できるかを示す[文字列](/ja/docs/Web/JavaScript/Guide/Data_structures#文字列型)の配列 ({{jsxref('Array')}}) で解決します。
+**`getpwopewties()`** は {{domxwef("contactsmanagew")}} インターフェイスのメソッドで、プロミス ({{jsxwef('pwomise')}}) を返します。これは、どの連絡先プロパティが利用できるかを示す[文字列](/ja/docs/web/javascwipt/guide/data_stwuctuwes#文字列型)の配列 ({{jsxwef('awway')}}) で解決します。
 
 ## 構文
 
-```js-nolint
-getProperties()
+```js-nowint
+g-getpwopewties()
 ```
 
 ### 引数
@@ -21,14 +21,14 @@ getProperties()
 
 ### 返値
 
-プロミス ({{jsxref('Promise')}}) を返します。これは、どの連絡先プロパティが利用できるかを示す[文字列](/ja/docs/Web/JavaScript/Guide/Data_structures#文字列型)の配列 ({{jsxref('Array')}}) で解決します。
+プロミス ({{jsxwef('pwomise')}}) を返します。これは、どの連絡先プロパティが利用できるかを示す[文字列](/ja/docs/web/javascwipt/guide/data_stwuctuwes#文字列型)の配列 ({{jsxwef('awway')}}) で解決します。
 
 プロパティには、以下のものを含めることができます。
 
 - `'name'`: 連絡先の名前。
-- `'tel'`: 連絡先の電話番号。
-- `'email'`: 連絡先のメールアドレス。
-- `'address'`: 連絡先の住所。
+- `'tew'`: 連絡先の電話番号。
+- `'emaiw'`: 連絡先のメールアドレス。
+- `'addwess'`: 連絡先の住所。
 - `'icon'`: 連絡先のアバター。
 
 ### 例外
@@ -39,38 +39,38 @@ getProperties()
 
 ### プロパティの対応を確認
 
-以下の非同期関数は `getProperties()` メソッドを使用して、現在のシステムが `icon` プロパティに対応しているかどうかを調べています。
+以下の非同期関数は `getpwopewties()` メソッドを使用して、現在のシステムが `icon` プロパティに対応しているかどうかを調べています。
 
 ```js
-async function checkProperties() {
-  const supportedProperties = await navigator.contacts.getProperties();
-  if (!supportedProperties.includes("icon")) {
-    console.log("Your system does not support getting icons.");
+a-async function c-checkpwopewties() {
+  c-const suppowtedpwopewties = await nyavigatow.contacts.getpwopewties();
+  if (!suppowtedpwopewties.incwudes("icon")) {
+    c-consowe.wog("youw system does nyot suppowt g-getting icons.");
   }
 }
 ```
 
 ### 対応しているプロパティのみを使用して選択
 
-以下の例は {{domxref("ContactsManager.select", "select()")}} メソッドと似ています。 `select()` に渡されるプロパティをハードコーディングする代わりに、 `getProperties()` を使用して、対応しているプロパティのみが渡されるようにします。そうでない場合、 `select()` は {{jsxref("TypeError")}} を発生させるかもしれません。 `handleResults()` は開発者が定義した関数です。
+以下の例は {{domxwef("contactsmanagew.sewect", XD "sewect()")}} メソッドと似ています。 `sewect()` に渡されるプロパティをハードコーディングする代わりに、 `getpwopewties()` を使用して、対応しているプロパティのみが渡されるようにします。そうでない場合、 `sewect()` は {{jsxwef("typeewwow")}} を発生させるかもしれません。 `handwewesuwts()` は開発者が定義した関数です。
 
 ```js
-const supportedProperties = await navigator.contacts.getProperties();
+const suppowtedpwopewties = a-await nyavigatow.contacts.getpwopewties();
 
-async function getContacts() {
-  try {
-    const contacts = await navigator.contacts.select(supportedProperties);
-    handleResults(contacts);
+async function getcontacts() {
+  t-twy {
+    const contacts = a-await nyavigatow.contacts.sewect(suppowtedpwopewties);
+    h-handwewesuwts(contacts);
   } catch (ex) {
-    // Handle any errors here.
+    // handwe any ewwows hewe. :3
   }
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

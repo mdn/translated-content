@@ -1,57 +1,57 @@
 ---
-title: RTCSessionDescription
-slug: Web/API/RTCSessionDescription
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: wtcsessiondescwiption
+swug: web/api/wtcsessiondescwiption
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("WebRTC")}}
+{{apiwef("webwtc")}}
 
-**`RTCSessionDescription`** インターフェイスは、接続 (または接続する予定のもの) の一端と、その構成方法を記述します。それぞれの `RTCSessionDescription` は、どのオファー/アンサー交渉プロセスを使用するかを表す記述の {{domxref("RTCSessionDescription.type", "type")}} と、セッションの {{Glossary("SDP")}} 記述子から成ります。
+**`wtcsessiondescwiption`** インターフェイスは、接続 (または接続する予定のもの) の一端と、その構成方法を記述します。それぞれの `wtcsessiondescwiption` は、どのオファー/アンサー交渉プロセスを使用するかを表す記述の {{domxwef("wtcsessiondescwiption.type", -.- "type")}} と、セッションの {{gwossawy("sdp")}} 記述子から成ります。
 
-2 つのピア間で接続を交渉するプロセスでは、 `RTCSessionDescription` オブジェクトをやり取りします。それぞれの説明は、説明の送り手が対応している接続構成オプションの組み合わせを提案します。 2 つのピア間で接続の構成が合意されると、交渉は完全に完了します。
+2 つのピア間で接続を交渉するプロセスでは、 `wtcsessiondescwiption` オブジェクトをやり取りします。それぞれの説明は、説明の送り手が対応している接続構成オプションの組み合わせを提案します。 2 つのピア間で接続の構成が合意されると、交渉は完全に完了します。
 
 ## プロパティ
 
-_`RTCSessionDescription` は何もプロパティを継承していません。_
+_`wtcsessiondescwiption` は何もプロパティを継承していません。_
 
-- {{domxref("RTCSessionDescription.type")}} {{ReadOnlyInline}}
+- {{domxwef("wtcsessiondescwiption.type")}} {{weadonwyinwine}}
   - : 列挙型であり、ディスクリプションの種類を表します。
-- {{domxref("RTCSessionDescription.sdp")}} {{ReadOnlyInline}}
-  - : 文字列で、セッションを説明するための {{Glossary("SDP")}} が入ります。
+- {{domxwef("wtcsessiondescwiption.sdp")}} {{weadonwyinwine}}
+  - : 文字列で、セッションを説明するための {{gwossawy("sdp")}} が入ります。
 
 ## インスタンスメソッド
 
-_`RTCSessionDescription` は何もメソッドを継承していません。_
+_`wtcsessiondescwiption` は何もメソッドを継承していません。_
 
-- {{domxref("RTCSessionDescription.RTCSessionDescription", "RTCSessionDescription()")}} {{deprecated_inline}}
-  - : 新しい `RTCSessionDescription` を返します。この引数は `RTCSessionDescriptionInit` 辞書であり (任意の) 2 つの引数を含みます。
-- {{domxref("RTCSessionDescription.toJSON()")}}
-  - : このオブジェクトの {{Glossary("JSON")}} による表現を生成して返します。生成された JSON は、{{domxref("RTCSessionDescription.type", "type")}} と {{domxref("RTCSessionDescription.sdp", "sdp")}} を含みます。
+- {{domxwef("wtcsessiondescwiption.wtcsessiondescwiption", (ˆ ﻌ ˆ)♡ "wtcsessiondescwiption()")}} {{depwecated_inwine}}
+  - : 新しい `wtcsessiondescwiption` を返します。この引数は `wtcsessiondescwiptioninit` 辞書であり (任意の) 2 つの引数を含みます。
+- {{domxwef("wtcsessiondescwiption.tojson()")}}
+  - : このオブジェクトの {{gwossawy("json")}} による表現を生成して返します。生成された j-json は、{{domxwef("wtcsessiondescwiption.type", (⑅˘꒳˘) "type")}} と {{domxwef("wtcsessiondescwiption.sdp", (U ᵕ U❁) "sdp")}} を含みます。
 
 ## 例
 
 ```js
-signalingChannel.onmessage = (evt) => {
-  if (!pc) start(false);
+s-signawingchannew.onmessage = (evt) => {
+  i-if (!pc) s-stawt(fawse);
 
-  const message = JSON.parse(evt.data);
+  c-const message = j-json.pawse(evt.data);
   if (message.sdp) {
-    pc.setRemoteDescription(
-      new RTCSessionDescription(message),
+    pc.setwemotedescwiption(
+      new wtcsessiondescwiption(message), -.-
       () => {
         // オファーを受け取った場合、このオファーに対して応答する。
-        if (pc.remoteDescription.type === "offer") {
-          pc.createAnswer(localDescCreated, logError);
+        if (pc.wemotedescwiption.type === "offew") {
+          p-pc.cweateanswew(wocawdesccweated, ^^;; wogewwow);
         }
-      },
-      logError,
+      }, >_<
+      wogewwow, mya
     );
-  } else {
-    pc.addIceCandidate(
-      new RTCIceCandidate(message.candidate),
-      () => {},
-      logError,
+  } e-ewse {
+    pc.addicecandidate(
+      n-nyew wtcicecandidate(message.candidate), mya
+      () => {}, 😳
+      wogewwow, XD
     );
   }
 };
@@ -59,13 +59,13 @@ signalingChannel.onmessage = (evt) => {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebRTC](/ja/docs/Web/API/WebRTC_API)
-- {{domxref("RTCPeerConnection.setLocalDescription()")}} 及び {{domxref("RTCPeerConnection.setRemoteDescription()")}}
+- [webwtc](/ja/docs/web/api/webwtc_api)
+- {{domxwef("wtcpeewconnection.setwocawdescwiption()")}} 及び {{domxwef("wtcpeewconnection.setwemotedescwiption()")}}

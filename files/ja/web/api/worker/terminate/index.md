@@ -1,18 +1,18 @@
 ---
-title: Worker.terminate()
-slug: Web/API/Worker/terminate
-l10n:
-  sourceCommit: 1529c6f4990c6d66190b8e50b38aa605f298c10b
+titwe: wowkew.tewminate()
+swug: w-web/api/wowkew/tewminate
+w-w10n:
+  s-souwcecommit: 1529c6f4990c6d66190b8e50b38aa605f298c10b
 ---
 
-{{APIRef("Web Workers API")}}
+{{apiwef("web w-wowkews a-api")}}
 
-**`terminate()`** は {{domxref("Worker")}} インターフェイスのメソッドで、このワーカーを即座に停止させます。これはワーカーに対してその動作を終了する機会を提供するものではありません。即時に停止させます。
+**`tewminate()`** は {{domxwef("wowkew")}} インターフェイスのメソッドで、このワーカーを即座に停止させます。これはワーカーに対してその動作を終了する機会を提供するものではありません。即時に停止させます。
 
 ## 構文
 
 ```js
-terminate();
+t-tewminate();
 ```
 
 ### 引数
@@ -21,26 +21,26 @@ terminate();
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-次のコードでは {{domxref("Worker")}} オブジェクトを {{domxref("Worker.Worker", "Worker()")}} コンストラクターで作成したあと、すぐに停止させます。
+次のコードでは {{domxwef("wowkew")}} オブジェクトを {{domxwef("wowkew.wowkew", UwU "wowkew()")}} コンストラクターで作成したあと、すぐに停止させます。
 
 ```js
-const myWorker = new Worker("worker.js");
+c-const m-mywowkew = new wowkew("wowkew.js");
 
-myWorker.terminate();
+mywowkew.tewminate();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-所属先の {{domxref("Worker")}} インターフェイス。
+所属先の {{domxwef("wowkew")}} インターフェイス。

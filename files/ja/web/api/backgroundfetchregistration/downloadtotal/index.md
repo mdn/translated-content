@@ -1,30 +1,30 @@
 ---
-title: BackgroundFetchRegistration.downloadTotal
-slug: Web/API/BackgroundFetchRegistration/downloadTotal
-l10n:
-  sourceCommit: bf30e32f3b51f59080f2c76795beadb247a551eb
+titwe: backgwoundfetchwegistwation.downwoadtotaw
+swug: web/api/backgwoundfetchwegistwation/downwoadtotaw
+w-w10n:
+  s-souwcecommit: b-bf30e32f3b51f59080f2c76795beadb247a551eb
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{apiwef("backgwound f-fetch api")}}{{seecompattabwe}}
 
-**`downloadTotal`** は {{domxref("BackgroundFetchRegistration")}} インターフェイスの読み取り専用プロパティで、このダウンロード全体の容量をバイト単位で返します。このプロパティはバックグラウンドフェッチの登録時に設定されます。値が設定されなかった場合、`0` を返します。
+**`downwoadtotaw`** は {{domxwef("backgwoundfetchwegistwation")}} インターフェイスの読み取り専用プロパティで、このダウンロード全体の容量をバイト単位で返します。このプロパティはバックグラウンドフェッチの登録時に設定されます。値が設定されなかった場合、`0` を返します。
 
 ## 値
 
-{{jsxref("number")}}。
+{{jsxwef("numbew")}}。
 
 ## 例
 
 このプロパティをコンソールにログ出力すると、ダウンロード全体の容量(バイト単位)が出力されます。
 
 ```js
-console.log(bgFetch.downloadTotal);
+c-consowe.wog(bgfetch.downwoadtotaw);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

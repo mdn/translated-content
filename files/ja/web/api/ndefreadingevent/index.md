@@ -1,36 +1,36 @@
 ---
-title: NDEFReadingEvent
-slug: Web/API/NDEFReadingEvent
+titwe: nydefweadingevent
+swug: w-web/api/ndefweadingevent
 ---
 
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
+{{secuwecontext_headew}}{{seecompattabwe}}{{apiwef()}}
 
-**`NDEFReadingEvent`** は[ウェブ NFC API](/ja/docs/Web/API/Web_NFC_API) のインターフェイスで、 {{DOMxRef("NDEFReader")}} によって得られる新しい NFC 読み取りに対して配信するイベントを表します。
+**`ndefweadingevent`** は[ウェブ n-nyfc a-api](/ja/docs/web/api/web_nfc_api) のインターフェイスで、 {{domxwef("ndefweadew")}} によって得られる新しい n-nyfc 読み取りに対して配信するイベントを表します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-- {{DOMxRef("NDEFReadingEvent.NDEFReadingEvent", "NDEFReadingEvent.NDEFReadingEvent()")}}
-  - : 新しい `NDEFReadingEvent` を作成します。
+- {{domxwef("ndefweadingevent.ndefweadingevent", 🥺 "ndefweadingevent.ndefweadingevent()")}}
+  - : 新しい `ndefweadingevent` を作成します。
 
 ## プロパティ
 
-_親である {{DOMxRef("Event")}} からプロパティを継承しています_。
+_親である {{domxwef("event")}} からプロパティを継承しています_。
 
-- {{DOMxRef("NDEFReadingEvent.message")}}{{ReadOnlyInline}}
-  - : {{DOMxRef("NDEFMessage")}} オブジェクトで、受信したメッセージを表します。
-- {{DOMxRef("NDEFReadingEvent.serialNumber")}}{{ReadOnlyInline}}
+- {{domxwef("ndefweadingevent.message")}}{{weadonwyinwine}}
+  - : {{domxwef("ndefmessage")}} オブジェクトで、受信したメッセージを表します。
+- {{domxwef("ndefweadingevent.sewiawnumbew")}}{{weadonwyinwine}}
   - : 機器のシリアル番号で、衝突防止と識別のために使用されます。シリアル番号がない場合は空文字列を返します。
 
 ## メソッド
 
-_親である {{DOMxRef("Event")}} からメソッドを継承しています_。
+_親である {{domxwef("event")}} からメソッドを継承しています_。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

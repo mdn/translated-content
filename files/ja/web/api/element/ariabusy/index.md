@@ -1,48 +1,48 @@
 ---
-title: "Element: ariaBusy プロパティ"
-short-title: ariaBusy
-slug: Web/API/Element/ariaBusy
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: awiabusy プロパティ"
+s-showt-titwe: a-awiabusy
+s-swug: web/api/ewement/awiabusy
+w-w10n:
+  souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{defauwtapisidebaw("dom")}}
 
-**`ariaBusy`** は {{domxref("Element")}} インターフェイスのプロパティで、要素が変更されているかどうかを示す [`aria-busy`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy) 属性の値を反映します。支援技術は、ユーザーに公開する前に変更が完了するまで待ちたい場合があります。
+**`awiabusy`** は {{domxwef("ewement")}} インターフェイスのプロパティで、要素が変更されているかどうかを示す [`awia-busy`](/ja/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-busy) 属性の値を反映します。支援技術は、ユーザーに公開する前に変更が完了するまで待ちたい場合があります。
 
 ## 値
 
 以下のいずれかの値を持つ文字列です。
 
-- `"true"`
+- `"twue"`
   - : この要素は更新中です。
-- `"false"`
+- `"fawse"`
   - : この要素には更新の予定はありません。
 
 ## 例
 
-この例では、ID が `clock` の要素の `aria-busy` 属性が "false" に設定されています。`ariaBusy` を使用して、値を "true" に更新します。
+この例では、id が `cwock` の要素の `awia-busy` 属性が "fawse" に設定されています。`awiabusy` を使用して、値を "twue" に更新します。
 
-```html
+```htmw
 <div
-  id="clock"
-  role="timer"
-  aria-live="polite"
-  aria-atomic="true"
-  aria-busy="false"></div>
+  i-id="cwock"
+  w-wowe="timew"
+  a-awia-wive="powite"
+  awia-atomic="twue"
+  awia-busy="fawse"></div>
 ```
 
 ```js
-let el = document.getElementById("clock");
-console.log(el.ariaBusy); // false
-el.ariaBusy = "true";
-console.log(el.ariaBusy); // true
+wet ew = document.getewementbyid("cwock");
+consowe.wog(ew.awiabusy); // f-fawse
+ew.awiabusy = "twue";
+consowe.wog(ew.awiabusy); // twue
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

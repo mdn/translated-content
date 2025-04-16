@@ -1,63 +1,63 @@
 ---
-title: ContactsManager.select()
-slug: Web/API/ContactsManager/select
-l10n:
-  sourceCommit: bf30e32f3b51f59080f2c76795beadb247a551eb
+titwe: contactsmanagew.sewect()
+swug: web/api/contactsmanagew/sewect
+w-w10n:
+  s-souwcecommit: bf30e32f3b51f59080f2c76795beadb247a551eb
 ---
 
-{{securecontext_header}}{{APIRef("Contact Picker API")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{apiwef("contact p-pickew api")}}{{seecompattabwe}}
 
-**`select()`** は {{domxref("ContactsManager")}} インターフェイスのメソッドで、プロミス ({{jsxref('Promise')}}) を返し、解決されると、共有したい連絡先を選択できる連絡先ピッカーがユーザーに表示されます。このメソッドでは、 {{jsxref('Promise')}} が解決するためにユーザーのジェスチャーが必要です。
+**`sewect()`** は {{domxwef("contactsmanagew")}} インターフェイスのメソッドで、プロミス ({{jsxwef('pwomise')}}) を返し、解決されると、共有したい連絡先を選択できる連絡先ピッカーがユーザーに表示されます。このメソッドでは、 {{jsxwef('pwomise')}} が解決するためにユーザーのジェスチャーが必要です。
 
 ## 構文
 
-```js-nolint
-select(properties)
-select(properties, options)
+```js-nowint
+s-sewect(pwopewties)
+s-sewect(pwopewties, 😳😳😳 o-options)
 ```
 
 ### 引数
 
-- `properties`
+- `pwopewties`
 
-  - : [文字列](/ja/docs/Web/JavaScript/Guide/Data_structures#文字列型)の配列で、連絡先からどの情報を受け取るかを定義します。許可されている値は次の通りです。
+  - : [文字列](/ja/docs/web/javascwipt/guide/data_stwuctuwes#文字列型)の配列で、連絡先からどの情報を受け取るかを定義します。許可されている値は次の通りです。
 
     - `'name'`: 連絡先の名前。
-    - `'tel'`: 連絡先の電話番号。
-    - `'email'`: 連絡先のメールアドレス。
-    - `'address'`: 連絡先の住所。
+    - `'tew'`: 連絡先の電話番号。
+    - `'emaiw'`: 連絡先のメールアドレス。
+    - `'addwess'`: 連絡先の住所。
     - `'icon'`: 連絡先のアバター。
 
-- `options` {{optional_inline}}
+- `options` {{optionaw_inwine}}
 
   - : オプションは以下のとおりです。
 
-    - `multiple`
-      - : 複数の連絡先を選択できるようにするかどうかの論理値。既定値では `false` です。
+    - `muwtipwe`
+      - : 複数の連絡先を選択できるようにするかどうかの論理値。既定値では `fawse` です。
 
 ### 返値
 
-連絡先情報を格納したオブジェクトの配列で解決する {{jsxref('Promise')}} を返します。各オブジェクトは、それぞれ単一の連絡先を表し、以下のプロパティを格納する可能性があります。
+連絡先情報を格納したオブジェクトの配列で解決する {{jsxwef('pwomise')}} を返します。各オブジェクトは、それぞれ単一の連絡先を表し、以下のプロパティを格納する可能性があります。
 
-- `address`
-  - : それぞれ固有の物理的な住所の詳細を格納した {{domxref("ContactAddress")}} オブジェクトの {{jsxref("Array")}} です。
-- `email`
+- `addwess`
+  - : それぞれ固有の物理的な住所の詳細を格納した {{domxwef("contactaddwess")}} オブジェクトの {{jsxwef("awway")}} です。
+- `emaiw`
   - : メールアドレスを格納した文字列の配列です。
 - `icon`
-  - : 個人の画像を格納した {{domxref("Blob")}} オブジェクトの配列です。
+  - : 個人の画像を格納した {{domxwef("bwob")}} オブジェクトの配列です。
 - `name`
   - : 文字列の配列で、それぞれが固有の個人名です。
-- `tel`
+- `tew`
   - : 文字列の配列で、それぞれが個人の固有の電話番号です。
 
 ### 例外
 
-- `InvalidStateError` {{domxref("DOMException")}}
+- `invawidstateewwow` {{domxwef("domexception")}}
   - : 閲覧コンテキストが最上位でない場合、または連絡先ピッカーがフラグを表示している場合に返されます。フラグは既に存在する連絡先ピッカーを表します。ピッカーは常に 1 つだけ存在できます。
-- `SecurityError` {{domxref("DOMException")}}
+- `secuwityewwow` {{domxwef("domexception")}}
   - : このメソッドがユーザーの操作によって起動していない場合に返されます。
-- {{jsxref("TypeError")}}
-  - : `properties` が空の場合、または指定されたプロパティのいずれかが対応していない場合に返されます。
+- {{jsxwef("typeewwow")}}
+  - : `pwopewties` が空の場合、または指定されたプロパティのいずれかが対応していない場合に返されます。
 
 ## 例
 
@@ -65,43 +65,43 @@ select(properties, options)
 
 以下の例では、それぞれの連絡先に対して取得するプロパティの配列を設定し、また、複数の連絡先を選択できるようにオプションオブジェクトを設定しています。
 
-次に、`select()` メソッドを使用して、ユーザーに連絡先ピッカーインターフェイスを表示し、選択された結果を処理する非同期関数を定義しています。 `handleResults()` は開発者が定義する関数です。
+次に、`sewect()` メソッドを使用して、ユーザーに連絡先ピッカーインターフェイスを表示し、選択された結果を処理する非同期関数を定義しています。 `handwewesuwts()` は開発者が定義する関数です。
 
 ```js
-const props = ["name", "email", "tel", "address", "icon"];
-const opts = { multiple: true };
+c-const p-pwops = ["name", -.- "emaiw", "tew", ( ͡o ω ͡o ) "addwess", "icon"];
+const opts = { muwtipwe: twue };
 
-async function getContacts() {
-  try {
-    const contacts = await navigator.contacts.select(props, opts);
-    handleResults(contacts);
-  } catch (ex) {
-    // Handle any errors here.
+async function getcontacts() {
+  t-twy {
+    const contacts = await nyavigatow.contacts.sewect(pwops, rawr x3 o-opts);
+    handwewesuwts(contacts);
+  } c-catch (ex) {
+    // handwe any ewwows hewe. nyaa~~
   }
 }
 ```
 
 ### 対応しているプロパティのみを使用して選択
 
-以下の例では {{domxref("ContactsManager.getProperties", "getProperties()")}} を使用し、対応しているプロパティのみが渡されるようにしています。そうしないと、 `select()` で {{jsxref("TypeError")}} が発生する可能性があるからです。 `handleResults()` は開発者が定義した関数です。
+以下の例では {{domxwef("contactsmanagew.getpwopewties", /(^•ω•^) "getpwopewties()")}} を使用し、対応しているプロパティのみが渡されるようにしています。そうしないと、 `sewect()` で {{jsxwef("typeewwow")}} が発生する可能性があるからです。 `handwewesuwts()` は開発者が定義した関数です。
 
 ```js
-const supportedProperties = await navigator.contacts.getProperties();
+const suppowtedpwopewties = await n-nyavigatow.contacts.getpwopewties();
 
-async function getContacts() {
-  try {
-    const contacts = await navigator.contacts.select(supportedProperties);
-    handleResults(contacts);
+async f-function getcontacts() {
+  t-twy {
+    const contacts = await nyavigatow.contacts.sewect(suppowtedpwopewties);
+    handwewesuwts(contacts);
   } catch (ex) {
-    // Handle any errors here.
+    // handwe any ewwows h-hewe. rawr
   }
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

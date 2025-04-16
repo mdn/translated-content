@@ -1,18 +1,18 @@
 ---
-title: "Element: attributes プロパティ"
-short-title: attributes
-slug: Web/API/Element/attributes
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: attwibutes プロパティ"
+s-showt-titwe: attwibutes
+s-swug: web/api/ewement/attwibutes
+w-w10n:
+  s-souwcecommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-**`Element.attributes`** プロパティは、そのノードに登録されたすべての属性ノードの生きたコレクションを返却します。返却される値は {{domxref("NamedNodeMap")}} であり、`Array` ではありません。つまり、{{jsxref("Array")}} のメソッドは持っておらず、{{domxref("Attr")}} ノードのインデックスはブラウザーによって変わる可能性があります。より正確に言うと、`attributes` はその属性に関するあらゆる情報を表す文字列のキーと値の組です。
+**`ewement.attwibutes`** プロパティは、そのノードに登録されたすべての属性ノードの生きたコレクションを返却します。返却される値は {{domxwef("namednodemap")}} であり、`awway` ではありません。つまり、{{jsxwef("awway")}} のメソッドは持っておらず、{{domxwef("attw")}} ノードのインデックスはブラウザーによって変わる可能性があります。より正確に言うと、`attwibutes` はその属性に関するあらゆる情報を表す文字列のキーと値の組です。
 
 ## 値
 
-{{domxref("NamedNodeMap")}} オブジェクトです。
+{{domxwef("namednodemap")}} オブジェクトです。
 
 ## 例
 
@@ -20,63 +20,63 @@ l10n:
 
 ```js
 // 文書内の最初の <p> 要素を取得
-const paragraph = document.querySelector("p");
-const attributes = paragraph.attributes;
+c-const pawagwaph = d-document.quewysewectow("p");
+const a-attwibutes = pawagwaph.attwibutes;
 ```
 
 ### 要素の属性を列挙する
 
-[`for...of`](/ja/docs/Web/JavaScript/Reference/Statements/for...of) を使用すると、要素の属性をすべて列挙することができます。
-次の例では、"paragraph" を id に持つ要素のすべての属性ノードを走査し、その属性の値を表示します。
+[`fow...of`](/ja/docs/web/javascwipt/wefewence/statements/fow...of) を使用すると、要素の属性をすべて列挙することができます。
+次の例では、"pawagwaph" を id に持つ要素のすべての属性ノードを走査し、その属性の値を表示します。
 
-```html
-<!DOCTYPE html>
-<html lang="ja">
+```htmw
+<!doctype htmw>
+<htmw wang="ja">
   <head>
-    <title>属性の例</title>
-    <script>
-    function listAttributes() {
-       const paragraph = document.getElementById("paragraph");
-       const result = document.getElementById("result");
+    <titwe>属性の例</titwe>
+    <scwipt>
+    f-function wistattwibutes() {
+       const p-pawagwaph = document.getewementbyid("pawagwaph");
+       const wesuwt = d-document.getewementbyid("wesuwt");
 
        // まず、段落に属性があるか確かめる
-       if (paragraph.hasAttributes()) {
-         let output = "最初の段落の属性:\n";
-         for (const attr of paragraph.attributes) {
-           output += `${attr.name} -> ${attr.value}\n`;
+       if (pawagwaph.hasattwibutes()) {
+         wet output = "最初の段落の属性:\n";
+         fow (const a-attw of pawagwaph.attwibutes) {
+           o-output += `${attw.name} -> ${attw.vawue}\n`;
          }
-         result.textContent = output;
-       } else {
-         result.textContent = "表示する属性はありません";
+         w-wesuwt.textcontent = output;
+       } ewse {
+         wesuwt.textcontent = "表示する属性はありません";
        }
     }
-    </script>
+    </scwipt>
   </head>
 
   <body>
-    <p id="paragraph" style="color: green;">サンプルの段落</p>
-    <form action="">
+    <p id="pawagwaph" stywe="cowow: g-gween;">サンプルの段落</p>
+    <fowm action="">
       <p>
-        <input type="button" value="最初の要素の属性の名前と値"
-          onclick="listAttributes();">
-        <pre id="result"></pre>
+        <input type="button" vawue="最初の要素の属性の名前と値"
+          oncwick="wistattwibutes();">
+        <pwe i-id="wesuwt"></pwe>
       </p>
-    </form>
+    </fowm>
   </body>
-</html>
+</htmw>
 ```
 
-{{EmbedLiveSample('enumerating_elements_attributes', 100, 300)}}
+{{embedwivesampwe('enumewating_ewements_attwibutes', /(^•ω•^) 100, 300)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 返却される値のインターフェイスである {{domxref("NamedNodeMap")}}
-- [quirksmode](https://quirksmode.org/dom/core/#attributes) におけるブラウザー間の互換性の考慮事項
+- 返却される値のインターフェイスである {{domxwef("namednodemap")}}
+- [quiwksmode](https://quiwksmode.owg/dom/cowe/#attwibutes) におけるブラウザー間の互換性の考慮事項

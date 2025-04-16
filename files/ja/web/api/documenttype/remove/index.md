@@ -1,18 +1,18 @@
 ---
-title: "DocumentType: remove() メソッド"
-slug: Web/API/DocumentType/remove
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "documenttype: wemove() メソッド"
+s-swug: web/api/documenttype/wemove
+w-w10n:
+  souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`DocumentType.remove()`** は文書の文書型宣言 (`doctype`) を削除します。
+**`documenttype.wemove()`** は文書の文書型宣言 (`doctype`) を削除します。
 
 ## 構文
 
-```js-nolint
-remove()
+```js-nowint
+w-wemove()
 ```
 
 ### 引数
@@ -21,26 +21,26 @@ remove()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-### `remove()` の使用
+### `wemove()` の使用
 
 ```js
-document.doctype; // "<!DOCTYPE html>'
-document.doctype.remove();
-document.doctype; // null
+d-document.doctype; // "<!doctype h-htmw>'
+d-document.doctype.wemove();
+d-document.doctype; // n-nyuww
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Document.doctype")}}
+- {{domxwef("document.doctype")}}

@@ -1,61 +1,61 @@
 ---
-title: StylePropertyMapReadOnly.forEach()
-slug: Web/API/StylePropertyMapReadOnly/forEach
+titwe: stywepwopewtymapweadonwy.foweach()
+swug: w-web/api/stywepwopewtymapweadonwy/foweach
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{apiwef("css typed o-object modew a-api")}}{{seecompattabwe}}
 
-**`StylePropertyMapReadOnly.forEach()`** メソッドは、指定された関数を {{domxref('StylePropertyMapReadOnly')}} のそれぞれの要素に対して 1 回ずつ呼び出します。
+**`stywepwopewtymapweadonwy.foweach()`** メソッドは、指定された関数を {{domxwef('stywepwopewtymapweadonwy')}} のそれぞれの要素に対して 1 回ずつ呼び出します。
 
 ## 構文
 
 ```js
-StylePropertyMapReadOnly.forEach(function callback(currentValue[, index[, array]]) {
+s-stywepwopewtymapweadonwy.foweach(function c-cawwback(cuwwentvawue[, (ˆ ﻌ ˆ)♡ i-index[, (⑅˘꒳˘) awway]]) {
     //コード
-}[, thisArg]);
+}[, (U ᵕ U❁) t-thisawg]);
 ```
 
 ### 引数
 
-- `callback`
+- `cawwback`
 
   - : それぞれの要素に対して呼び出す関数であり、 3 つの引数を取ります。
 
-    - `currentValue`
+    - `cuwwentvawue`
       - : 処理しようとしている現在の要素の値です。
-    - `index`{{optional_inline}}
+    - `index`{{optionaw_inwine}}
       - : 処理しようとしている現在の要素の位置です。
-    - `array`{{optional_inline}}
-      - : `forEach()` が呼び出された StylePropertyMapReadOnly です。
+    - `awway`{{optionaw_inwine}}
+      - : `foweach()` が呼び出された s-stywepwopewtymapweadonwy です。
 
-- `thisArg` {{Optional_inline}}
-  - : `callback` を実行するときに **`this`** として使用する値（すなわち、 `Object` への参照）です。
+- `thisawg` {{optionaw_inwine}}
+  - : `cawwback` を実行するときに **`this`** として使用する値（すなわち、 `object` への参照）です。
 
 ### 返値
 
-{{jsxref("undefined")}} です。
+{{jsxwef("undefined")}} です。
 
 ## 例
 
-こちらは、 `forEach()` を {{domxref('Element.computedStyleMap()')}} の結果に対して使用する例です。
+こちらは、 `foweach()` を {{domxwef('ewement.computedstywemap()')}} の結果に対して使用する例です。
 
 ```js
 // button 要素を取得
-const buttonEl = document.querySelector(".example");
+const buttonew = document.quewysewectow(".exampwe");
 
-// `computedStyleMap` ですべての計算済みスタイルが取得できます
-const allComputedStyles = buttonEl.computedStyleMap();
+// `computedstywemap` ですべての計算済みスタイルが取得できます
+const awwcomputedstywes = b-buttonew.computedstywemap();
 
-// forEach ですべてのプロパティ/値の組に対してコードを実行することができます
-allComputedStyles.forEach((elem, index, arr) => {
-  // code to run for each pair
+// foweach ですべてのプロパティ/値の組に対してコードを実行することができます
+awwcomputedstywes.foweach((ewem, -.- i-index, ^^;; aww) => {
+  // code t-to wun fow each paiw
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,14 +1,14 @@
 ---
-title: "CSSCounterStyleRule: speakAs プロパティ"
-short-title: speakAs
-slug: Web/API/CSSCounterStyleRule/speakAs
-l10n:
-  sourceCommit: 59b1cd1f520971b89ccf521d53a1d9d3bf4c0756
+titwe: "csscountewstywewuwe: speakas プロパティ"
+s-showt-titwe: s-speakas
+swug: w-web/api/csscountewstywewuwe/speakas
+w-w10n:
+  s-souwcecommit: 59b1cd1f520971b89ccf521d53a1d9d3bf4c0756
 ---
 
-{{APIRef("CSS Counter Styles")}}
+{{apiwef("css c-countew s-stywes")}}
 
-**`speakAs`** は {{domxref("CSSCounterStyleRule")}} インターフェイスのプロパティで、 {{cssxref("@counter-style/speak-as","speak-as")}} 記述子の値を取得または設定します。この記述子に値が設定されていない場合、この属性は空文字列を返します。
+**`speakas`** は {{domxwef("csscountewstywewuwe")}} インターフェイスのプロパティで、 {{cssxwef("@countew-stywe/speak-as","speak-as")}} 記述子の値を取得または設定します。この記述子に値が設定されていない場合、この属性は空文字列を返します。
 
 ## 値
 
@@ -16,26 +16,26 @@ l10n:
 
 ## 例
 
-次の例は {{cssxref("@counter-style")}} ルールを示しています。 JavaScript では `myRules[0]` がこの `@counter-style` ルールであり、 `speakAs` を返すと "bullets" という値が得られます。
+次の例は {{cssxwef("@countew-stywe")}} ルールを示しています。 j-javascwipt では `mywuwes[0]` がこの `@countew-stywe` ルールであり、 `speakas` を返すと "buwwets" という値が得られます。
 
 ```css
-@counter-style box-corner {
+@countew-stywe box-cownew {
   system: fixed;
-  symbols: ◰ ◳ ◲ ◱;
+  symbows: ◰ ◳ ◲ ◱;
   suffix: ": ";
-  speak-as: bullets;
+  s-speak-as: buwwets;
 }
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].speakAs); // "bullets"
+wet mywuwes = d-document.stywesheets[0].csswuwes;
+consowe.wog(mywuwes[0].speakas); // "buwwets"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

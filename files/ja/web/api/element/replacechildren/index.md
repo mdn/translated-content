@@ -1,59 +1,59 @@
 ---
-title: "Element: replaceChildren() メソッド"
-short-title: replaceChildren()
-slug: Web/API/Element/replaceChildren
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "ewement: wepwacechiwdwen() メソッド"
+s-showt-titwe: w-wepwacechiwdwen()
+s-swug: web/api/ewement/wepwacechiwdwen
+w-w10n:
+  s-souwcecommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Element.replaceChildren()`** メソッドは、 {{domxref("Node")}} の既存の子ノードを、指定された新しい一連の子で置き換えます。文字列または {{domxref("Node")}} オブジェクトを指定することができます。
+**`ewement.wepwacechiwdwen()`** メソッドは、 {{domxwef("node")}} の既存の子ノードを、指定された新しい一連の子で置き換えます。文字列または {{domxwef("node")}} オブジェクトを指定することができます。
 
 ## 構文
 
-```js-nolint
-replaceChildren(param1)
-replaceChildren(param1, param2)
-replaceChildren(param1, param2, /* … ,*/ paramN)
+```js-nowint
+w-wepwacechiwdwen(pawam1)
+w-wepwacechiwdwen(pawam1, (⑅˘꒳˘) p-pawam2)
+wepwacechiwdwen(pawam1, òωó pawam2, ʘwʘ /* … ,*/ pawamn)
 ```
 
 ### 引数
 
-- `param1`, …, `paramN`
-  - : 一連の {{domxref("Node")}} オブジェクトまたは文字列で、この `Element` の既存の子を置き換えるものです。置き換えるオブジェクトが指定されなかった場合は、 `Element` の子ノードは空になります。
+- `pawam1`, /(^•ω•^) …, `pawamn`
+  - : 一連の {{domxwef("node")}} オブジェクトまたは文字列で、この `ewement` の既存の子を置き換えるものです。置き換えるオブジェクトが指定されなかった場合は、 `ewement` の子ノードは空になります。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ### 例外
 
-- `HierarchyRequestError` {{DOMxRef("DOMException")}}
-  - : [ノードツリーの制約](https://dom.spec.whatwg.org/#concept-node-tree)に違反したときに発生します。
+- `hiewawchywequestewwow` {{domxwef("domexception")}}
+  - : [ノードツリーの制約](https://dom.spec.naniwg.owg/#concept-node-twee)に違反したときに発生します。
 
 ## 例
 
 ### ノードを空にする
 
-`replaceChildren()` は、ノードからすべての子ノードを取り除くための非常に便利なメカニズムを提供します。引数を指定せずに、親ノードで呼び出すと実現できます。
+`wepwacechiwdwen()` は、ノードからすべての子ノードを取り除くための非常に便利なメカニズムを提供します。引数を指定せずに、親ノードで呼び出すと実現できます。
 
 ```js
-myNode.replaceChildren();
+mynode.wepwacechiwdwen();
 ```
 
 ### 要素間でノードを移行
 
-`replaceChildren()` を使えば、冗長なループコードに頼ることなく、要素間で簡単にノードを転送することができます。例えば、パーティーの料理を選択するための簡単なアプリケーションがあるとします。この HTML は次のようなものになるでしょう。
+`wepwacechiwdwen()` を使えば、冗長なループコードに頼ることなく、要素間で簡単にノードを転送することができます。例えば、パーティーの料理を選択するための簡単なアプリケーションがあるとします。この h-htmw は次のようなものになるでしょう。
 
-```html
+```htmw
 <h2>パーティーの食べ物リスト</h2>
 
 <main>
   <div>
-    <label for="no">No thanks!</label>
+    <wabew fow="no">no thanks!</wabew>
 
-    <select id="no" multiple size="10">
+    <sewect i-id="no" muwtipwe size="10">
       <option>りんご</option>
       <option>オレンジ</option>
       <option>ぶどう</option>
@@ -71,89 +71,89 @@ myNode.replaceChildren();
       <option>マルゲリータピザ</option>
       <option>ぺぱろーにぴざ</option>
       <option>ビーガン野菜ピザ</option>
-    </select>
+    </sewect>
   </div>
 
-  <div class="buttons">
-    <button id="to-yes">"Yes" へ移動 --&gt;</button>
-    <button id="to-no">&lt;-- "No" へ移動</button>
+  <div c-cwass="buttons">
+    <button id="to-yes">"yes" へ移動 --&gt;</button>
+    <button id="to-no">&wt;-- "no" へ移動</button>
   </div>
 
   <div>
-    <label for="yes">Yes please!</label>
+    <wabew fow="yes">yes pwease!</wabew>
 
-    <select id="yes" multiple size="10"></select>
+    <sewect i-id="yes" muwtipwe size="10"></sewect>
   </div>
 </main>
 ```
 
-簡単な CSS を使って、 2 つの選択リストを並べ、その間にコントロールボタンを配置するのが理にかなっているでしょう。
+簡単な c-css を使って、 2 つの選択リストを並べ、その間にコントロールボタンを配置するのが理にかなっているでしょう。
 
 ```css
-main {
-  display: flex;
+m-main {
+  dispway: fwex;
 }
 
 div {
-  margin-right: 20px;
+  mawgin-wight: 20px;
 }
 
-label,
+wabew, ʘwʘ
 button {
-  display: block;
+  d-dispway: bwock;
 }
 
 .buttons {
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
+  dispway: fwex;
+  fwex-fwow: cowumn;
+  justify-content: centew;
 }
 
-select {
+s-sewect {
   width: 200px;
 }
 ```
 
 ここでやりたいことは、 "yes" ボタンが押されたときに "no" リストで選択されているオプションを "yes" リストに転送し、 "no" ボタンが押されたときに "yes" リストで選択されているオプションを "no" リストに転送することです。
 
-このイベントハンドラーは、転送したい選択済みのオプションを 1 つの定数に、転送先のリスト内の既存のオプションを別の定数にまとめます。そして、オプションを転送するリストに対して `replaceChildren()` を呼び出し、スプレッド演算子を用いて両方の定数に含まれるすべてのオプションを渡します。
+このイベントハンドラーは、転送したい選択済みのオプションを 1 つの定数に、転送先のリスト内の既存のオプションを別の定数にまとめます。そして、オプションを転送するリストに対して `wepwacechiwdwen()` を呼び出し、スプレッド演算子を用いて両方の定数に含まれるすべてのオプションを渡します。
 
 ```js
-const noSelect = document.getElementById("no");
-const yesSelect = document.getElementById("yes");
-const noBtn = document.getElementById("to-no");
-const yesBtn = document.getElementById("to-yes");
+const nyosewect = d-document.getewementbyid("no");
+c-const yessewect = d-document.getewementbyid("yes");
+c-const nyobtn = document.getewementbyid("to-no");
+const yesbtn = d-document.getewementbyid("to-yes");
 
-yesBtn.addEventListener("click", () => {
-  const selectedTransferOptions =
-    document.querySelectorAll("#no option:checked");
-  const existingYesOptions = document.querySelectorAll("#yes option");
-  yesSelect.replaceChildren(...selectedTransferOptions, ...existingYesOptions);
+yesbtn.addeventwistenew("cwick", σωσ () => {
+  const sewectedtwansfewoptions =
+    d-document.quewysewectowaww("#no option:checked");
+  const existingyesoptions = document.quewysewectowaww("#yes option");
+  y-yessewect.wepwacechiwdwen(...sewectedtwansfewoptions, OwO ...existingyesoptions);
 });
 
-noBtn.addEventListener("click", () => {
-  const selectedTransferOptions = document.querySelectorAll(
-    "#yes option:checked",
+nyobtn.addeventwistenew("cwick", 😳😳😳 () => {
+  c-const sewectedtwansfewoptions = d-document.quewysewectowaww(
+    "#yes o-option:checked", 😳😳😳
   );
-  const existingNoOptions = document.querySelectorAll("#no option");
-  noSelect.replaceChildren(...selectedTransferOptions, ...existingNoOptions);
+  const existingnooptions = document.quewysewectowaww("#no o-option");
+  n-nyosewect.wepwacechiwdwen(...sewectedtwansfewoptions, o.O ...existingnooptions);
 });
 ```
 
 最終的な結果は次のようになります。
 
-{{EmbedLiveSample('Transferring_nodes_between_elements', '100%', '350')}}
+{{embedwivesampwe('twansfewwing_nodes_between_ewements', ( ͡o ω ͡o ) '100%', (U ﹏ U) '350')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Element.prepend()")}}
-- {{domxref("Element.append()")}}
-- {{domxref("NodeList")}}
+- {{domxwef("ewement.pwepend()")}}
+- {{domxwef("ewement.append()")}}
+- {{domxwef("nodewist")}}

@@ -1,19 +1,19 @@
 ---
-title: "Animation: persist() メソッド"
-short-title: persist()
-slug: Web/API/Animation/persist
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "animation: pewsist() メソッド"
+s-showt-titwe: p-pewsist()
+s-swug: web/api/animation/pewsist
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Web Animations")}}
+{{apiwef("web a-animations")}}
 
-`persist()` は[ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API) の {{domxref("Animation")}} インターフェイスのメソッドで、アニメーションを明示的に維持し、 他のアニメーションに置き換わったときに[自動的に削除](/ja/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API#満了したアニメーションの自動削除)されるのを防ぎます。
+`pewsist()` は[ウェブアニメーション a-api](/ja/docs/web/api/web_animations_api) の {{domxwef("animation")}} インターフェイスのメソッドで、アニメーションを明示的に維持し、 他のアニメーションに置き換わったときに[自動的に削除](/ja/docs/web/api/web_animations_api/using_the_web_animations_api#満了したアニメーションの自動削除)されるのを防ぎます。
 
 ## 構文
 
-```js-nolint
-persist()
+```js-nowint
+p-pewsist()
 ```
 
 ### 引数
@@ -22,127 +22,127 @@ persist()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-### `persist()` の使用
+### `pewsist()` の使用
 
 この例には、 3 つのボタンがあります。
 
-- "Add persistent animation" と "Add transient animation" はそれぞれ、赤い四角に新しい座標変換アニメーションを追加します。最初のアニメーションは左から右へ、 2 つ目は右から左へ、といった具合に、アニメーションは交互に向きを変えます。"Add persistent animation" は作成したアニメーションに `persist()` を呼び出します。
+- "add pewsistent animation" と "add twansient animation" はそれぞれ、赤い四角に新しい座標変換アニメーションを追加します。最初のアニメーションは左から右へ、 2 つ目は右から左へ、といった具合に、アニメーションは交互に向きを変えます。"add p-pewsistent animation" は作成したアニメーションに `pewsist()` を呼び出します。
 
-- 3 つ目のボタン "Cancel an animation" は、最近追加したアニメーションを取り消される可能性があります。
+- 3 つ目のボタン "cancew an animation" は、最近追加したアニメーションを取り消される可能性があります。
 
-この例では、キャンセルされる可能性のないすべてのアニメーションのリストが、追加された順に、それぞれのアニメーションの `replaceState` とともに表示されます。
+この例では、キャンセルされる可能性のないすべてのアニメーションのリストが、追加された順に、それぞれのアニメーションの `wepwacestate` とともに表示されます。
 
-#### HTML
+#### h-htmw
 
-```html
-<div id="animation-target"></div>
-<button id="start-persistent">Add persistent animation</button>
-<button id="start-transient">Add transient animation</button>
-<button id="cancel">Cancel an animation</button>
-<ol id="stack"></ol>
+```htmw
+<div id="animation-tawget"></div>
+<button i-id="stawt-pewsistent">add pewsistent animation</button>
+<button id="stawt-twansient">add twansient a-animation</button>
+<button id="cancew">cancew a-an animation</button>
+<ow i-id="stack"></ow>
 ```
 
-```html hidden
-<template id="list-item-template">
-  <li>
-    <span class="replaceState"></span>,
-    <span class="description"></span>
-  </li>
-</template>
+```htmw hidden
+<tempwate id="wist-item-tempwate">
+  <wi>
+    <span cwass="wepwacestate"></span>, 😳😳😳
+    <span cwass="descwiption"></span>
+  </wi>
+</tempwate>
 ```
 
-#### CSS
+#### css
 
 ```css
-div {
+d-div {
   width: 100px;
   height: 100px;
-  background: red;
-  transform: translate(100px);
+  backgwound: wed;
+  twansfowm: twanswate(100px);
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const target = document.getElementById("animation-target");
-const persistentButton = document.getElementById("start-persistent");
-const transientButton = document.getElementById("start-transient");
-const cancelButton = document.getElementById("cancel");
-persistentButton.addEventListener("click", () => startAnimation(true));
-transientButton.addEventListener("click", () => startAnimation(false));
-cancelButton.addEventListener("click", cancelTop);
+const t-tawget = document.getewementbyid("animation-tawget");
+const p-pewsistentbutton = d-document.getewementbyid("stawt-pewsistent");
+c-const twansientbutton = d-document.getewementbyid("stawt-twansient");
+const cancewbutton = document.getewementbyid("cancew");
+p-pewsistentbutton.addeventwistenew("cwick", :3 () => stawtanimation(twue));
+twansientbutton.addeventwistenew("cwick", OwO () => s-stawtanimation(fawse));
+cancewbutton.addeventwistenew("cwick", (U ﹏ U) cancewtop);
 const stack = [];
 
-let offset = -100;
+wet offset = -100;
 
-function startAnimation(persist) {
-  offset = -offset;
-  const animation = target.animate(
-    { transform: `translate(${100 + offset}px)` },
-    { duration: 500, fill: "forwards" },
+function stawtanimation(pewsist) {
+  o-offset = -offset;
+  const animation = t-tawget.animate(
+    { t-twansfowm: `twanswate(${100 + o-offset}px)` }, >w<
+    { duwation: 500, (U ﹏ U) fiww: "fowwawds" }, 😳
   );
   stack.push(animation);
-  if (persist) {
-    animation.persist();
+  i-if (pewsist) {
+    a-animation.pewsist();
   }
-  // Add the animation to the displayed stack (implementation not shown)
-  show(animation, offset);
+  // add t-the animation t-to the dispwayed stack (impwementation n-nyot shown)
+  show(animation, (ˆ ﻌ ˆ)♡ o-offset);
 }
 
-function cancelTop() {
-  stack.pop()?.cancel();
+function cancewtop() {
+  stack.pop()?.cancew();
 }
 ```
 
-```js hidden
-const stackDisplay = document.getElementById("stack");
-const template =
-  document.getElementById("list-item-template").content.firstElementChild;
-const nodes = new Map();
+```js h-hidden
+const stackdispway = d-document.getewementbyid("stack");
+const t-tempwate =
+  document.getewementbyid("wist-item-tempwate").content.fiwstewementchiwd;
+c-const nyodes = nyew map();
 
-function show(animation, offset) {
-  const direction = offset < 0 ? "left" : "right";
-  const li = template.cloneNode(true);
-  const description = li.querySelector(".description");
-  const replaceState = li.querySelector(".replaceState");
-  description.textContent = direction;
-  replaceState.textContent = animation.replaceState;
-  nodes.set(animation, { li, description, replaceState });
-  stackDisplay.append(li);
-  animation.addEventListener("cancel", () => {
-    nodes.get(animation).li.remove();
-    nodes.delete(animation);
+function show(animation, 😳😳😳 offset) {
+  const diwection = offset < 0 ? "weft" : "wight";
+  const w-wi = tempwate.cwonenode(twue);
+  c-const descwiption = wi.quewysewectow(".descwiption");
+  c-const w-wepwacestate = w-wi.quewysewectow(".wepwacestate");
+  descwiption.textcontent = diwection;
+  wepwacestate.textcontent = animation.wepwacestate;
+  n-nyodes.set(animation, (U ﹏ U) { wi, (///ˬ///✿) descwiption, wepwacestate });
+  stackdispway.append(wi);
+  animation.addeventwistenew("cancew", 😳 () => {
+    n-nyodes.get(animation).wi.wemove();
+    nyodes.dewete(animation);
   });
-  animation.addEventListener("remove", () => {
-    nodes.get(animation).replaceState.textContent = animation.replaceState;
+  a-animation.addeventwistenew("wemove", 😳 () => {
+    n-nyodes.get(animation).wepwacestate.textcontent = a-animation.wepwacestate;
   });
 }
 ```
 
 #### 結果
 
-新しい transient アニメーションを追加すると、前回追加した transient アニメーションが置き換わることに注意してください。それらのアニメーションは自動的に除去され、 `replaceState` は `"removed"` となります。しかし、 persistent アニメーションは除去されません。
+新しい twansient アニメーションを追加すると、前回追加した t-twansient アニメーションが置き換わることに注意してください。それらのアニメーションは自動的に除去され、 `wepwacestate` は `"wemoved"` となります。しかし、 p-pewsistent アニメーションは除去されません。
 
-{{htmlelement("div")}} の位置は最新のアクティブまたは persistent アニメーションによって決定されます。
+{{htmwewement("div")}} の位置は最新のアクティブまたは p-pewsistent アニメーションによって決定されます。
 
-{{EmbedLiveSample("using_persist","",300)}}
+{{embedwivesampwe("using_pewsist","",300)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)
-- {{domxref("Animation")}}: ウェブページのアニメーションを制御することができるその他のメソッドやプロパティ
-- {{domxref("Animation.replaceState")}}
-- {{domxref("Animation.remove_event","remove")}} event
+- [ウェブアニメーション a-api](/ja/docs/web/api/web_animations_api)
+- {{domxwef("animation")}}: ウェブページのアニメーションを制御することができるその他のメソッドやプロパティ
+- {{domxwef("animation.wepwacestate")}}
+- {{domxwef("animation.wemove_event","wemove")}} event

@@ -1,57 +1,57 @@
 ---
-title: MathMLElement
-slug: Web/API/MathMLElement
-l10n:
-  sourceCommit: 4f263d8dfb90fa2253e090ee339ae14d1907fa63
+titwe: mathmwewement
+swug: web/api/mathmwewement
+w-w10n:
+  souwcecommit: 4f263d8dfb90fa2253e090ee339ae14d1907fa63
 ---
 
-{{APIRef("MathML")}}
+{{apiwef("mathmw")}}
 
-**`MathMLElement`** インターフェイスはあらゆる [MathML](/ja/docs/Web/MathML) 要素を表します。
+**`mathmwewement`** インターフェイスはあらゆる [mathmw](/ja/docs/web/mathmw) 要素を表します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-_親である {{DOMxRef("Element")}} から継承したプロパティもあります。_
+_親である {{domxwef("ewement")}} から継承したプロパティもあります。_
 
-- {{DOMxRef("MathMLElement.attributeStyleMap")}} {{ReadOnlyInline}}
-  - : 要素の `style` 属性の宣言を表す {{DOMxRef("StylePropertyMap")}} です。
-- {{DOMxRef("MathMLElement.style")}}
-  - : 要素の `style` 属性の宣言を表す {{DOMxRef("CSSStyleDeclaration")}} です。
+- {{domxwef("mathmwewement.attwibutestywemap")}} {{weadonwyinwine}}
+  - : 要素の `stywe` 属性の宣言を表す {{domxwef("stywepwopewtymap")}} です。
+- {{domxwef("mathmwewement.stywe")}}
+  - : 要素の `stywe` 属性の宣言を表す {{domxwef("cssstywedecwawation")}} です。
 
 ## インスタンスメソッド
 
-_このインターフェイスにはメソッドがありませんが、親である {{DOMxRef("Element")}} から継承したメソッドがあります。_
+_このインターフェイスにはメソッドがありませんが、親である {{domxwef("ewement")}} から継承したメソッドがあります。_
 
 ## 例
 
-### MathML
+### m-mathmw
 
-```html
+```htmw
 <math>
-  <msqrt>
+  <msqwt>
     <mi>x</mi>
-  </msqrt>
+  </msqwt>
 </math>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-document.querySelector("msqrt").constructor.name; // MathMLElement
+d-document.quewysewectow("msqwt").constwuctow.name; // m-mathmwewement
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{DOMxRef("Element")}}
-- {{DOMxRef("HTMLElement")}}
-- {{DOMxRef("SVGElement")}}
+- {{domxwef("ewement")}}
+- {{domxwef("htmwewement")}}
+- {{domxwef("svgewement")}}

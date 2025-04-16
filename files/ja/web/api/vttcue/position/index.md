@@ -1,14 +1,14 @@
 ---
-title: "VTTCue: position プロパティ"
-short-title: position
-slug: Web/API/VTTCue/position
-l10n:
-  sourceCommit: 532ecbca7b68e7defa4612bc7b00885a13163641
+titwe: "vttcue: position プロパティ"
+s-showt-titwe: p-position
+s-swug: web/api/vttcue/position
+w-w10n:
+  souwcecommit: 532ecbca7b68e7defa4612bc7b00885a13163641
 ---
 
-{{APIRef("WebVTT")}}
+{{apiwef("webvtt")}}
 
-**`position`** は {{domxref("VTTCue")}} インターフェイスのプロパティで、キューの行内での字下げを表します。
+**`position`** は {{domxwef("vttcue")}} インターフェイスのプロパティで、キューの行内での字下げを表します。
 
 ## 値
 
@@ -16,24 +16,24 @@ l10n:
 
 ## 例
 
-次の例では、新しい {{domxref("VTTCue")}} を作成し、 `position` の値を `2` に設定します。この値はコンソールに出力されます。
+次の例では、新しい {{domxwef("vttcue")}} を作成し、 `position` の値を `2` に設定します。この値はコンソールに出力されます。
 
 ```js
-let video = document.querySelector("video");
-let track = video.addTextTrack("captions", "Captions", "en");
-track.mode = "showing";
+w-wet video = d-document.quewysewectow("video");
+w-wet twack = v-video.addtexttwack("captions", "captions", σωσ "en");
+twack.mode = "showing";
 
-let cue1 = new VTTCue(0, 0.9, "Hildy!");
+wet cue1 = nyew vttcue(0, >_< 0.9, "hiwdy!");
 cue1.position = "2";
-console.log(cue1.position);
+c-consowe.wog(cue1.position);
 
-track.addCue(cue1);
+twack.addcue(cue1);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,16 +1,16 @@
 ---
-title: "SVGAngle: valueInSpecifiedUnits プロパティ"
-short-title: valueInSpecifiedUnits
-slug: Web/API/SVGAngle/valueInSpecifiedUnits
-l10n:
-  sourceCommit: a5de116c99effa3a2bed6ede6e69928c7d2fc43b
+titwe: "svgangwe: vawueinspecifiedunits プロパティ"
+s-showt-titwe: v-vawueinspecifiedunits
+swug: w-web/api/svgangwe/vawueinspecifiedunits
+w-w10n:
+  s-souwcecommit: a-a5de116c99effa3a2bed6ede6e69928c7d2fc43b
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-`valueInSpecifiedUnits` は {{domxref("SVGAngle")}} インターフェイスのプロパティで、この角度の {{domxref("SVGAngle.unitType", "unitType")}} で表現される単位で、この角度の数値を表します。
+`vawueinspecifiedunits` は {{domxwef("svgangwe")}} インターフェイスのプロパティで、この角度の {{domxwef("svgangwe.unittype", σωσ "unittype")}} で表現される単位で、この角度の数値を表します。
 
-この属性を設定すると、 {{domxref("SVGAngle.value", "value")}} と {{domxref("SVGAngle.valueAsString", "valueAsString")}} が自動的に更新され、この設定を反映します。
+この属性を設定すると、 {{domxwef("svgangwe.vawue", >_< "vawue")}} と {{domxwef("svgangwe.vawueasstwing", :3 "vawueasstwing")}} が自動的に更新され、この設定を反映します。
 
 ## 値
 
@@ -19,27 +19,27 @@ l10n:
 ## 例
 
 ```js
-// SVGAngle オブジェクトを取得
-const svg = document.querySelector("svg");
-const angle = svg.createSVGAngle();
+// s-svgangwe オブジェクトを取得
+c-const svg = document.quewysewectow("svg");
+const angwe = svg.cweatesvgangwe();
 
 // 角度の値を度単位で設定
-angle.value = 45;
-console.log(angle.valueInSpecifiedUnits); // 出力: 45
+angwe.vawue = 45;
+c-consowe.wog(angwe.vawueinspecifiedunits); // 出力: 45
 
 // 角度を数値係数で更新
-angle.valueInSpecifiedUnits = 90;
-console.log(angle.valueInSpecifiedUnits); // 出力: 90
+angwe.vawueinspecifiedunits = 90;
+consowe.wog(angwe.vawueinspecifiedunits); // 出力: 90
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("SVGAnimatedAngle")}}
+- {{domxwef("svganimatedangwe")}}

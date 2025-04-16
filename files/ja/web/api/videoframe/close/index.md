@@ -1,19 +1,19 @@
 ---
-title: "VideoFrame: close() メソッド"
-short-title: close()
-slug: Web/API/VideoFrame/close
-l10n:
-  sourceCommit: 532ecbca7b68e7defa4612bc7b00885a13163641
+titwe: "videofwame: cwose() メソッド"
+s-showt-titwe: c-cwose()
+s-swug: web/api/videofwame/cwose
+w-w10n:
+  souwcecommit: 532ecbca7b68e7defa4612bc7b00885a13163641
 ---
 
-{{APIRef("Web Codecs API")}}
+{{apiwef("web c-codecs api")}}
 
-**`close()`** は {{domxref("VideoFrame")}} インターフェイスのメソッドで、すべての状態をクリアし、メディアリソースへの参照を解放します。
+**`cwose()`** は {{domxwef("videofwame")}} インターフェイスのメソッドで、すべての状態をクリアし、メディアリソースへの参照を解放します。
 
 ## 構文
 
-```js-nolint
-close()
+```js-nowint
+c-cwose()
 ```
 
 ### 引数
@@ -26,16 +26,16 @@ close()
 
 ## 例
 
-次の例では `VideoFrame` オブジェクトが閉じられます。
+次の例では `videofwame` オブジェクトが閉じられます。
 
 ```js
-VideoFrame.close();
+v-videofwame.cwose();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

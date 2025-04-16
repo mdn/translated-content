@@ -1,41 +1,41 @@
 ---
-title: "Element: append() メソッド"
-short-title: append()
-slug: Web/API/Element/append
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: append() メソッド"
+s-showt-titwe: a-append()
+s-swug: web/api/ewement/append
+w-w10n:
+  s-souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Element.append()`** メソッドは、一連の {{domxref("Node")}} オブジェクトまたは文字列を `Element` の最後の子の後に挿入します。文字列は、等価な {{domxref("Text")}} ノードとして挿入されます。
+**`ewement.append()`** メソッドは、一連の {{domxwef("node")}} オブジェクトまたは文字列を `ewement` の最後の子の後に挿入します。文字列は、等価な {{domxwef("text")}} ノードとして挿入されます。
 
-{{domxref("Node.appendChild()")}} との違いは次の通りです。
+{{domxwef("node.appendchiwd()")}} との違いは次の通りです。
 
-- `Element.append()` は文字列も追加することができますが、`Node.appendChild()` は{{domxref("Node")}} オブジェクトのみを受け付けます。
-- `Element.append()` には返値がありませんが、`Node.appendChild()` は追加された {{domxref("Node")}} オブジェクトを返します。
-- `Element.append()` は複数のノードや文字列を追加することができますが、`Node.appendChild()` はノードを 1 つだけしか追加することができせん。
+- `ewement.append()` は文字列も追加することができますが、`node.appendchiwd()` は{{domxwef("node")}} オブジェクトのみを受け付けます。
+- `ewement.append()` には返値がありませんが、`node.appendchiwd()` は追加された {{domxwef("node")}} オブジェクトを返します。
+- `ewement.append()` は複数のノードや文字列を追加することができますが、`node.appendchiwd()` はノードを 1 つだけしか追加することができせん。
 
 ## 構文
 
-```js-nolint
-append(param1)
-append(param1, param2)
-append(param1, param2, /* … ,*/ paramN)
+```js-nowint
+a-append(pawam1)
+a-append(pawam1, OwO pawam2)
+append(pawam1, (U ﹏ U) pawam2, /* … ,*/ pawamn)
 ```
 
 ### 引数
 
-- `param1`, …, `paramN`
-  - : 挿入する一連の {{domxref("Node")}} オブジェクトまたは文字列です。
+- `pawam1`, >_< …, `pawamn`
+  - : 挿入する一連の {{domxwef("node")}} オブジェクトまたは文字列です。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ### 例外
 
-- `HierarchyRequestError` {{DOMxRef("DOMException")}}
+- `hiewawchywequestewwow` {{domxwef("domexception")}}
   - : ノードが階層構造の中の指定された位置に挿入できなかったときに発生します。
 
 ## 例
@@ -43,57 +43,57 @@ append(param1, param2, /* … ,*/ paramN)
 ### 要素の追加
 
 ```js
-let div = document.createElement("div");
-let p = document.createElement("p");
-div.append(p);
+w-wet div = document.cweateewement("div");
+wet p = document.cweateewement("p");
+d-div.append(p);
 
-console.log(div.childNodes); // NodeList [ <p> ]
+consowe.wog(div.chiwdnodes); // n-nyodewist [ <p> ]
 ```
 
 ### テキストの追加
 
 ```js
-let div = document.createElement("div");
-div.append("Some text");
+wet div = document.cweateewement("div");
+div.append("some text");
 
-console.log(div.textContent); // "Some text"
+consowe.wog(div.textcontent); // "some t-text"
 ```
 
 ### 要素とテキストの追加
 
 ```js
-let div = document.createElement("div");
-let p = document.createElement("p");
-div.append("Some text", p);
+wet div = document.cweateewement("div");
+w-wet p-p = document.cweateewement("p");
+div.append("some text", rawr x3 p);
 
-console.log(div.childNodes); // NodeList [ #text "Some text", <p> ]
+consowe.wog(div.chiwdnodes); // nodewist [ #text "some t-text", mya <p> ]
 ```
 
 ### append メソッドはスコープが効かない
 
-`append()` メソッドは `with` 文の中ではスコープが効きません。詳しくは {{jsxref("Symbol.unscopables")}} をご覧ください。
+`append()` メソッドは `with` 文の中ではスコープが効きません。詳しくは {{jsxwef("symbow.unscopabwes")}} をご覧ください。
 
 ```js
-let div = document.createElement("div");
+wet div = document.cweateewement("div");
 
 with (div) {
   append("foo");
 }
-// ReferenceError: append is not defined
+// w-wefewenceewwow: append i-is nyot defined
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Element.prepend()")}}
-- {{domxref("Node.appendChild()")}}
-- {{domxref("Element.after()")}}
-- {{domxref("Element.insertAdjacentElement()")}}
-- {{domxref("NodeList")}}
+- {{domxwef("ewement.pwepend()")}}
+- {{domxwef("node.appendchiwd()")}}
+- {{domxwef("ewement.aftew()")}}
+- {{domxwef("ewement.insewtadjacentewement()")}}
+- {{domxwef("nodewist")}}

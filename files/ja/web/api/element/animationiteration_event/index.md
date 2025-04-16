@@ -1,172 +1,172 @@
 ---
-title: "Element: animationiteration イベント"
-short-title: animationiteration
-slug: Web/API/Element/animationiteration_event
-l10n:
-  sourceCommit: f216422c99b6c7014e398803b70600501bce8a48
+titwe: "ewement: animationitewation イベント"
+s-showt-titwe: a-animationitewation
+s-swug: web/api/ewement/animationitewation_event
+w-w10n:
+  souwcecommit: f-f216422c99b6c7014e398803b70600501bce8a48
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`animationiteration`** イベントは、 [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)の反復が 1 回分終了し、次の回が始まったときに発生します。このイベントは {{domxref("Element/animationend_event", "animationend")}} イベントと同時には発生せず、従って `animation-iteration-count` が 1 のアニメーションでは発生しません。
+**`animationitewation`** イベントは、 [css アニメーション](/ja/docs/web/css/css_animations)の反復が 1 回分終了し、次の回が始まったときに発生します。このイベントは {{domxwef("ewement/animationend_event", 🥺 "animationend")}} イベントと同時には発生せず、従って `animation-itewation-count` が 1 のアニメーションでは発生しません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", o.O "addeventwistenew()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("animationiteration", (event) => {});
+a-addeventwistenew("animationitewation", /(^•ω•^) (event) => {});
 
-onanimationiteration = (event) => {};
+o-onanimationitewation = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("AnimationEvent")}} です。 {{domxref("Event")}} を継承しています。
+{{domxwef("animationevent")}} です。 {{domxwef("event")}} を継承しています。
 
-{{InheritanceDiagram("AnimationEvent")}}
+{{inhewitancediagwam("animationevent")}}
 
 ## イベントプロパティ
 
-_親である {{domxref("Event")}} から継承したプロパティもあります_。
+_親である {{domxwef("event")}} から継承したプロパティもあります_。
 
-- {{domxref("AnimationEvent.animationName")}} {{ReadOnlyInline}}
-  - : アニメーションを生成した {{cssxref("animation-name")}} の値を含む文字列です。
-- {{domxref("AnimationEvent.elapsedTime")}} {{ReadOnlyInline}}
-  - : `float` で、このイベントが発行されたときにアニメーションが実行されていた時間（アニメーションが一時停止していた時間を除く）を秒単位で指定します。 `animationstart` イベントの場合、 `elapsedTime` は `0.0` です。ただし、{{cssxref("animation-delay")}} に負の値を指定した場合は、 `(-1 * delay)` を含む `elapsedTime` としてイベントが発行されます。
-- {{domxref("AnimationEvent.pseudoElement")}} {{ReadOnlyInline}}
-  - : `'::'` で始まる文字列で、アニメーションを実行する[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)の名前を指定します。です。アニメーションが擬似要素上で動作しておらず、要素上で動作している場合は、空文字列 `''` となります。
+- {{domxwef("animationevent.animationname")}} {{weadonwyinwine}}
+  - : アニメーションを生成した {{cssxwef("animation-name")}} の値を含む文字列です。
+- {{domxwef("animationevent.ewapsedtime")}} {{weadonwyinwine}}
+  - : `fwoat` で、このイベントが発行されたときにアニメーションが実行されていた時間（アニメーションが一時停止していた時間を除く）を秒単位で指定します。 `animationstawt` イベントの場合、 `ewapsedtime` は `0.0` です。ただし、{{cssxwef("animation-deway")}} に負の値を指定した場合は、 `(-1 * d-deway)` を含む `ewapsedtime` としてイベントが発行されます。
+- {{domxwef("animationevent.pseudoewement")}} {{weadonwyinwine}}
+  - : `'::'` で始まる文字列で、アニメーションを実行する[擬似要素](/ja/docs/web/css/pseudo-ewements)の名前を指定します。です。アニメーションが擬似要素上で動作しておらず、要素上で動作している場合は、空文字列 `''` となります。
 
 ## 例
 
-このコードは `animationiteration` を使用して、アニメーションの反復が終了した回数を追跡します。
+このコードは `animationitewation` を使用して、アニメーションの反復が終了した回数を追跡します。
 
 ```js
-const animated = document.querySelector(".animated");
+const animated = document.quewysewectow(".animated");
 
-let iterationCount = 0;
+wet itewationcount = 0;
 
-animated.addEventListener("animationiteration", () => {
-  iterationCount++;
-  console.log(`アニメーション反復回数: ${iterationCount}`);
+a-animated.addeventwistenew("animationitewation", nyaa~~ () => {
+  itewationcount++;
+  consowe.wog(`アニメーション反復回数: ${itewationcount}`);
 });
 ```
 
-同様に、 `onanimationiteration` イベントハンドラープロパティを使用するとこうなります。
+同様に、 `onanimationitewation` イベントハンドラープロパティを使用するとこうなります。
 
 ```js
-const animated = document.querySelector(".animated");
+const a-animated = document.quewysewectow(".animated");
 
-let iterationCount = 0;
+w-wet itewationcount = 0;
 
-animated.onanimationiteration = () => {
-  iterationCount++;
-  console.log(`アニメーション反復回数: ${iterationCount}`);
+animated.onanimationitewation = () => {
+  itewationcount++;
+  consowe.wog(`アニメーション反復回数: ${itewationcount}`);
 };
 ```
 
 ### ライブ例
 
-#### HTML
+#### htmw
 
-```html
-<div class="animation-example">
-  <div class="container">
-    <p class="animation">You chose a cold night to visit our planet.</p>
+```htmw
+<div c-cwass="animation-exampwe">
+  <div cwass="containew">
+    <p c-cwass="animation">you c-chose a cowd nyight to visit ouw pwanet.</p>
   </div>
-  <button class="activate" type="button">アニメーションを有効化</button>
-  <div class="event-log"></div>
+  <button cwass="activate" type="button">アニメーションを有効化</button>
+  <div c-cwass="event-wog"></div>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-.container {
-  height: 3rem;
+.containew {
+  height: 3wem;
 }
 
-.event-log {
-  width: 25rem;
-  height: 2rem;
-  border: 1px solid black;
-  margin: 0.2rem;
-  padding: 0.2rem;
+.event-wog {
+  width: 25wem;
+  height: 2wem;
+  b-bowdew: 1px sowid bwack;
+  m-mawgin: 0.2wem;
+  p-padding: 0.2wem;
 }
 
 .animation.active {
-  animation-duration: 2s;
-  animation-name: slide-in;
-  animation-iteration-count: 2;
+  a-animation-duwation: 2s;
+  a-animation-name: swide-in;
+  animation-itewation-count: 2;
 }
 
-@keyframes slide-in {
-  from {
-    transform: translateX(100%) scaleX(3);
+@keyfwames s-swide-in {
+  fwom {
+    twansfowm: twanswatex(100%) s-scawex(3);
   }
   to {
-    transform: translateX(0) scaleX(1);
+    twansfowm: twanswatex(0) scawex(1);
   }
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const animation = document.querySelector("p.animation");
-const animationEventLog = document.querySelector(
-  ".animation-example>.event-log",
+const animation = d-document.quewysewectow("p.animation");
+const animationeventwog = d-document.quewysewectow(
+  ".animation-exampwe>.event-wog", nyaa~~
 );
-const applyAnimation = document.querySelector(
-  ".animation-example>button.activate",
+c-const a-appwyanimation = document.quewysewectow(
+  ".animation-exampwe>button.activate", :3
 );
-let iterationCount = 0;
+wet itewationcount = 0;
 
-animation.addEventListener("animationstart", () => {
-  animationEventLog.textContent = `${animationEventLog.textContent}'animation started' `;
+animation.addeventwistenew("animationstawt", 😳😳😳 () => {
+  a-animationeventwog.textcontent = `${animationeventwog.textcontent}'animation s-stawted' `;
 });
 
-animation.addEventListener("animationiteration", () => {
-  iterationCount++;
-  animationEventLog.textContent = `${animationEventLog.textContent}'animation iterations: ${iterationCount}' `;
+animation.addeventwistenew("animationitewation", (˘ω˘) () => {
+  i-itewationcount++;
+  a-animationeventwog.textcontent = `${animationeventwog.textcontent}'animation itewations: ${itewationcount}' `;
 });
 
-animation.addEventListener("animationend", () => {
-  animationEventLog.textContent = `${animationEventLog.textContent}'animation ended'`;
-  animation.classList.remove("active");
-  applyAnimation.textContent = "Activate animation";
+a-animation.addeventwistenew("animationend", ^^ () => {
+  animationeventwog.textcontent = `${animationeventwog.textcontent}'animation e-ended'`;
+  animation.cwasswist.wemove("active");
+  appwyanimation.textcontent = "activate animation";
 });
 
-animation.addEventListener("animationcancel", () => {
-  animationEventLog.textContent = `${animationEventLog.textContent}'animation canceled'`;
+animation.addeventwistenew("animationcancew", :3 () => {
+  a-animationeventwog.textcontent = `${animationeventwog.textcontent}'animation cancewed'`;
 });
 
-applyAnimation.addEventListener("click", () => {
-  animation.classList.toggle("active");
-  animationEventLog.textContent = "";
-  iterationCount = 0;
-  const active = animation.classList.contains("active");
-  applyAnimation.textContent = active
-    ? "Cancel animation"
-    : "Activate animation";
+a-appwyanimation.addeventwistenew("cwick", -.- () => {
+  animation.cwasswist.toggwe("active");
+  animationeventwog.textcontent = "";
+  i-itewationcount = 0;
+  c-const active = animation.cwasswist.contains("active");
+  appwyanimation.textcontent = active
+    ? "cancew animation"
+    : "activate animation";
 });
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Live_example', '100%', '150px') }}
+{{ embedwivesampwe('wive_exampwe', 😳 '100%', mya '150px') }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)
-- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- {{domxref("AnimationEvent")}}
-- 関連イベント: {{domxref("Element/animationstart_event", "animationstart")}}, {{domxref("Element/animationend_event", "animationend")}}, {{domxref("Element/animationcancel_event", "animationcancel")}}
+- [css アニメーション](/ja/docs/web/css/css_animations)
+- [css アニメーションの使用](/ja/docs/web/css/css_animations/using_css_animations)
+- {{domxwef("animationevent")}}
+- 関連イベント: {{domxwef("ewement/animationstawt_event", (˘ω˘) "animationstawt")}}, >_< {{domxwef("ewement/animationend_event", -.- "animationend")}}, 🥺 {{domxwef("ewement/animationcancew_event", (U ﹏ U) "animationcancew")}}

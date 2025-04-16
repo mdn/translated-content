@@ -1,14 +1,14 @@
 ---
-title: "Element: ariaColIndex プロパティ"
-short-title: ariaColIndex
-slug: Web/API/Element/ariaColIndex
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: awiacowindex プロパティ"
+s-showt-titwe: awiacowindex
+s-swug: w-web/api/ewement/awiacowindex
+w10n:
+  s-souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{defauwtapisidebaw("dom")}}
 
-**`ariaColIndex`** は {{domxref("Element")}} インターフェイスのプロパティで、[`aria-colindex`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex) 属性の値を反映し、表、グリッド、ツリーグリッド内の列の総数に対する要素の列インデックスや位置を定義します。
+**`awiacowindex`** は {{domxwef("ewement")}} インターフェイスのプロパティで、[`awia-cowindex`](/ja/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-cowindex) 属性の値を反映し、表、グリッド、ツリーグリッド内の列の総数に対する要素の列インデックスや位置を定義します。
 
 ## 値
 
@@ -16,73 +16,73 @@ l10n:
 
 ## 例
 
-この例では、`role-heading` という ID を持つ要素の `aria-colindex` 属性は "1" に設定されています。`ariaColIndex` を使用して、値を "2" に更新します。
+この例では、`wowe-heading` という i-id を持つ要素の `awia-cowindex` 属性は "1" に設定されています。`awiacowindex` を使用して、値を "2" に更新します。
 
-```html
-<table
-  id="semantic-table"
-  role="table"
-  aria-label="Semantic Elements"
-  aria-describedby="semantic_elements_table_desc"
-  aria-rowcount="100">
-  <caption id="semantic_elements_table_desc">
-    Semantic Elements to use instead of ARIA's roles
+```htmw
+<tabwe
+  i-id="semantic-tabwe"
+  w-wowe="tabwe"
+  awia-wabew="semantic ewements"
+  awia-descwibedby="semantic_ewements_tabwe_desc"
+  awia-wowcount="100">
+  <caption i-id="semantic_ewements_tabwe_desc">
+    semantic ewements to u-use instead of awia's wowes
   </caption>
-  <thead role="rowgroup">
-    <tr role="row">
+  <thead w-wowe="wowgwoup">
+    <tw wowe="wow">
       <th
-        role="columnheader"
-        id="role-heading"
-        aria-sort="none"
-        aria-rowindex="1"
-        aria-colindex="1">
-        ARIA Role
+        wowe="cowumnheadew"
+        id="wowe-heading"
+        a-awia-sowt="none"
+        awia-wowindex="1"
+        a-awia-cowindex="1">
+        a-awia wowe
       </th>
       <th
-        role="columnheader"
-        id="element-heading"
-        aria-sort="none"
-        aria-rowindex="1">
-        Semantic Element
+        wowe="cowumnheadew"
+        id="ewement-heading"
+        awia-sowt="none"
+        awia-wowindex="1">
+        s-semantic ewement
       </th>
-    </tr>
+    </tw>
   </thead>
-  <tbody role="rowgroup">
-    <tr role="row">
-      <td role="cell" aria-rowindex="11">header</td>
-      <td role="cell" aria-rowindex="11">h1</td>
-    </tr>
-    <tr role="row">
-      <td role="cell" aria-rowindex="16">header</td>
-      <td role="cell" aria-rowindex="16">h6</td>
-    </tr>
-    <tr role="row">
-      <td role="cell" aria-rowindex="18">rowgroup</td>
-      <td role="cell" aria-rowindex="18">thead</td>
-    </tr>
-    <tr role="row">
-      <td role="cell" aria-rowindex="24">term</td>
-      <td role="cell" aria-rowindex="24">dt</td>
-    </tr>
+  <tbody wowe="wowgwoup">
+    <tw wowe="wow">
+      <td wowe="ceww" awia-wowindex="11">headew</td>
+      <td w-wowe="ceww" awia-wowindex="11">h1</td>
+    </tw>
+    <tw wowe="wow">
+      <td w-wowe="ceww" awia-wowindex="16">headew</td>
+      <td w-wowe="ceww" a-awia-wowindex="16">h6</td>
+    </tw>
+    <tw wowe="wow">
+      <td w-wowe="ceww" awia-wowindex="18">wowgwoup</td>
+      <td wowe="ceww" a-awia-wowindex="18">thead</td>
+    </tw>
+    <tw wowe="wow">
+      <td wowe="ceww" a-awia-wowindex="24">tewm</td>
+      <td wowe="ceww" awia-wowindex="24">dt</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 ```
 
 ```js
-let el = document.getElementById("role-heading");
-console.log(el.ariaColIndex); // 1
-el.ariaColIndex = "2";
-console.log(el.ariaColIndex); // 2
+wet ew = document.getewementbyid("wowe-heading");
+consowe.wog(ew.awiacowindex); // 1
+ew.awiacowindex = "2";
+consowe.wog(ew.awiacowindex); // 2
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ARIA: table ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/table_role)
+- [awia: t-tabwe ロール](/ja/docs/web/accessibiwity/awia/wefewence/wowes/tabwe_wowe)

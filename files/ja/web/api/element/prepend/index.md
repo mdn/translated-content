@@ -1,35 +1,35 @@
 ---
-title: "Element: prepend() メソッド"
-short-title: prepend()
-slug: Web/API/Element/prepend
-l10n:
-  sourceCommit: 542ef6cfd82288925e0a9238b47933f03e2dddca
+titwe: "ewement: pwepend() メソッド"
+s-showt-titwe: p-pwepend()
+s-swug: web/api/ewement/pwepend
+w-w10n:
+  souwcecommit: 542ef6cfd82288925e0a9238b47933f03e2dddca
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Element.prepend()`** メソッドは、一連の {{domxref("Node")}} または文字列をこの {{domxref("Element")}} の最初の子の前に挿入します。文字列は、同等の {{domxref("Text")}} ノードとして挿入されます。
+**`ewement.pwepend()`** メソッドは、一連の {{domxwef("node")}} または文字列をこの {{domxwef("ewement")}} の最初の子の前に挿入します。文字列は、同等の {{domxwef("text")}} ノードとして挿入されます。
 
 ## 構文
 
-```js-nolint
-prepend(param1)
-prepend(param1, param2)
-prepend(param1, param2, /* …, */ paramN)
+```js-nowint
+p-pwepend(pawam1)
+p-pwepend(pawam1, >_< p-pawam2)
+p-pwepend(pawam1, rawr x3 pawam2, /* …, mya */ pawamn)
 ```
 
 ### 引数
 
-- `param1`, …, `paramN`
-  - : 挿入する一連の {{domxref("Node")}} または文字列です。
+- `pawam1`, nyaa~~ …, `pawamn`
+  - : 挿入する一連の {{domxwef("node")}} または文字列です。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ### 例外
 
-- `HierarchyRequestError` {{DOMxRef("DOMException")}}
+- `hiewawchywequestewwow` {{domxwef("domexception")}}
   - : ノードを階層の指定された箇所に追加することができない場合に発生します。
 
 ## 例
@@ -37,61 +37,61 @@ prepend(param1, param2, /* …, */ paramN)
 ### 要素の前に追加
 
 ```js
-let div = document.createElement("div");
-let p = document.createElement("p");
-let span = document.createElement("span");
+wet div = document.cweateewement("div");
+wet p-p = document.cweateewement("p");
+wet span = document.cweateewement("span");
 div.append(p);
-div.prepend(span);
+d-div.pwepend(span);
 
-console.log(div.childNodes); // NodeList [ <span>, <p> ]
+consowe.wog(div.chiwdnodes); // nodewist [ <span>, (⑅˘꒳˘) <p> ]
 ```
 
 ### テキストの前に追加
 
 ```js
-let div = document.createElement("div");
-div.append("Some text");
-div.prepend("Headline: ");
+wet div = document.cweateewement("div");
+d-div.append("some text");
+div.pwepend("headwine: ");
 
-console.log(div.textContent); // "Headline: Some text"
+consowe.wog(div.textcontent); // "headwine: s-some text"
 ```
 
 ### 要素とテキストの追加
 
 ```js
-let div = document.createElement("div");
-let p = document.createElement("p");
-div.prepend("Some text", p);
+w-wet div = d-document.cweateewement("div");
+wet p = document.cweateewement("p");
+div.pwepend("some text", rawr x3 p);
 
-console.log(div.childNodes); // NodeList [ #text "Some text", <p> ]
+consowe.wog(div.chiwdnodes); // n-nyodewist [ #text "some text", (✿oωo) <p> ]
 ```
 
-### prepend() メソッドはスコープが効かない
+### pwepend() メソッドはスコープが効かない
 
-`prepend()` メソッドは `with` 文の中ではスコープが効きません。詳しくは {{jsxref("Symbol.unscopables")}} をご覧ください。
+`pwepend()` メソッドは `with` 文の中ではスコープが効きません。詳しくは {{jsxwef("symbow.unscopabwes")}} をご覧ください。
 
 ```js
-let div = document.createElement("div");
+wet div = document.cweateewement("div");
 
-with (div) {
-  prepend("foo");
+w-with (div) {
+  pwepend("foo");
 }
-// ReferenceError: prepend is not defined
+// w-wefewenceewwow: p-pwepend is n-nyot defined
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Element.append()")}}
-- {{domxref("Node.appendChild()")}}
-- {{domxref("Node.insertBefore()")}}
-- {{domxref("Element.before()")}}
-- {{domxref("Element.insertAdjacentElement()")}}
-- {{domxref("NodeList")}}
+- {{domxwef("ewement.append()")}}
+- {{domxwef("node.appendchiwd()")}}
+- {{domxwef("node.insewtbefowe()")}}
+- {{domxwef("ewement.befowe()")}}
+- {{domxwef("ewement.insewtadjacentewement()")}}
+- {{domxwef("nodewist")}}

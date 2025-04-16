@@ -1,23 +1,23 @@
 ---
-title: "FontFaceSetLoadEvent: fontfaces プロパティ"
-short-title: fontfaces
-slug: Web/API/FontFaceSetLoadEvent/fontfaces
-l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+titwe: "fontfacesetwoadevent: fontfaces プロパティ"
+s-showt-titwe: f-fontfaces
+s-swug: web/api/fontfacesetwoadevent/fontfaces
+w-w10n:
+  souwcecommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{apiwef("css f-font woading api")}}
 
-**`fontfaces`** は {{domxref("FontFaceSetLoadEvent")}} インターフェイスの読み取り専用プロパティで、 {{domxref("FontFace")}} インスタンスの配列を返します。
+**`fontfaces`** は {{domxwef("fontfacesetwoadevent")}} インターフェイスの読み取り専用プロパティで、 {{domxwef("fontface")}} インスタンスの配列を返します。
 
 ## 値
 
-{{domxref("FontFace")}} インスタンスの配列です。
+{{domxwef("fontface")}} インスタンスの配列です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

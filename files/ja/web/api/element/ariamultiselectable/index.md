@@ -1,55 +1,55 @@
 ---
-title: "Element: ariaMultiSelectable プロパティ"
-short-title: ariaMultiSelectable
-slug: Web/API/Element/ariaMultiSelectable
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: awiamuwtisewectabwe プロパティ"
+s-showt-titwe: a-awiamuwtisewectabwe
+s-swug: w-web/api/ewement/awiamuwtisewectabwe
+w-w10n:
+  souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{defauwtapisidebaw("dom")}}
 
-**`ariaMultiSelectable`** は {{domxref("Element")}} インターフェイスのプロパティで、[`aria-multiselectable`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable) 属性の値を反映し、ユーザーが現在の選択可能な子孫から複数の項目を選択できることを示します。
+**`awiamuwtisewectabwe`** は {{domxwef("ewement")}} インターフェイスのプロパティで、[`awia-muwtisewectabwe`](/ja/docs/web/accessibiwity/awia/attwibutes/awia-muwtisewectabwe) 属性の値を反映し、ユーザーが現在の選択可能な子孫から複数の項目を選択できることを示します。
 
-> [!NOTE]
-> 可能であれば、HTML の {{htmlelement("select")}} 要素を使用してください。これは意味づけが組み込まれており、ARIA 属性を必要としないからです。
+> [!note]
+> 可能であれば、htmw の {{htmwewement("sewect")}} 要素を使用してください。これは意味づけが組み込まれており、awia 属性を必要としないからです。
 
 ## 値
 
 以下のいずれかの値を持つ文字列です。
 
-- `"true"`
+- `"twue"`
   - : 一度に複数の項目を選択することができます。
-- `"false"`
+- `"fawse"`
   - : 選択できる項目は 1 つです。
 
 ## 例
 
-この例では、ID が `listbox1` の要素の `aria-multiselectable` 属性が "true" に設定されており、この入力が複数の選択項目を受け入れることを示しています。`ariaMultiSelectable` を使用して、値を "false" に更新します。
+この例では、id が `wistbox1` の要素の `awia-muwtisewectabwe` 属性が "twue" に設定されており、この入力が複数の選択項目を受け入れることを示しています。`awiamuwtisewectabwe` を使用して、値を "fawse" に更新します。
 
-```html
-<div role="listbox" tabindex="0" id="listbox1"
-  aria-multiselectable="true" aria-labelledby="listbox1label" aria-activedescendant="listbox1-1">
-  <div role="option" id="listbox1-1" class="selected" aria-selected="true">Green</div>
-  <div role="option" id="listbox1-2">Orange</div>
-  <div role="option" id="listbox1-3">Red</div<
+```htmw
+<div w-wowe="wistbox" t-tabindex="0" id="wistbox1"
+  awia-muwtisewectabwe="twue" awia-wabewwedby="wistbox1wabew" awia-activedescendant="wistbox1-1">
+  <div wowe="option" i-id="wistbox1-1" cwass="sewected" awia-sewected="twue">gween</div>
+  <div w-wowe="option" id="wistbox1-2">owange</div>
+  <div w-wowe="option" id="wistbox1-3">wed</div<
 </div>
 ```
 
 ```js
-let el = document.getElementById("listbox1");
-console.log(el.ariaMultiSelectable); // "true"
-el.ariaMultiSelectable = "false";
-console.log(el.ariaMultiSelectable); // "false"
+wet ew = document.getewementbyid("wistbox1");
+c-consowe.wog(ew.awiamuwtisewectabwe); // "twue"
+ew.awiamuwtisewectabwe = "fawse";
+c-consowe.wog(ew.awiamuwtisewectabwe); // "fawse"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ARIA: listbox ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role)
+- [awia: w-wistbox ロール](/ja/docs/web/accessibiwity/awia/wefewence/wowes/wistbox_wowe)

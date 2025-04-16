@@ -1,13 +1,13 @@
 ---
-title: Element.ariaColIndexText
-slug: Web/API/Element/ariaColIndexText
-l10n:
-  sourceCommit: 388135bbfb0c1f852a17f52a6bfe6e85c8dc1abc
+titwe: ewement.awiacowindextext
+swug: web/api/ewement/awiacowindextext
+w-w10n:
+  s-souwcecommit: 388135bbfb0c1f852a17f52a6bfe6e85c8dc1abc
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{apiwef("dom")}}{{seecompattabwe}}
 
-**`ariaColIndexText`** は {{domxref("Element")}} インターフェイスのプロパティで、[`aria-colindextext`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindextext) 属性の値を反映し、aria-colindex の人間が読むための代替テキストを定義します。
+**`awiacowindextext`** は {{domxwef("ewement")}} インターフェイスのプロパティで、[`awia-cowindextext`](/ja/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-cowindextext) 属性の値を反映し、awia-cowindex の人間が読むための代替テキストを定義します。
 
 ## 値
 
@@ -15,74 +15,74 @@ l10n:
 
 ## 例
 
-この例では、ID が `role-heading` の要素の `aria-colindex` 属性に "Aria Role column" が設定されています。`ariaColIndexText` を使用して、値を文字列 "New column name" に更新します。
+この例では、id が `wowe-heading` の要素の `awia-cowindex` 属性に "awia w-wowe cowumn" が設定されています。`awiacowindextext` を使用して、値を文字列 "new c-cowumn n-nyame" に更新します。
 
-```html
-<table
-  id="semantic-table"
-  role="table"
-  aria-label="Semantic Elements"
-  aria-describedby="semantic_elements_table_desc"
-  aria-rowcount="100">
-  <caption id="semantic_elements_table_desc">
-    Semantic Elements to use instead of ARIA's roles
+```htmw
+<tabwe
+  i-id="semantic-tabwe"
+  w-wowe="tabwe"
+  a-awia-wabew="semantic ewements"
+  awia-descwibedby="semantic_ewements_tabwe_desc"
+  awia-wowcount="100">
+  <caption id="semantic_ewements_tabwe_desc">
+    s-semantic ewements to use instead of awia's wowes
   </caption>
-  <thead role="rowgroup">
-    <tr role="row">
+  <thead w-wowe="wowgwoup">
+    <tw wowe="wow">
       <th
-        role="columnheader"
-        id="role-heading"
-        aria-sort="none"
-        aria-rowindex="1"
-        aria-colindex="1"
-        aria-colindextext="Aria Role column">
-        ARIA Role
+        w-wowe="cowumnheadew"
+        id="wowe-heading"
+        awia-sowt="none"
+        awia-wowindex="1"
+        a-awia-cowindex="1"
+        awia-cowindextext="awia w-wowe c-cowumn">
+        awia wowe
       </th>
       <th
-        role="columnheader"
-        id="element-heading"
-        aria-sort="none"
-        aria-rowindex="1">
-        Semantic Element
+        wowe="cowumnheadew"
+        id="ewement-heading"
+        awia-sowt="none"
+        a-awia-wowindex="1">
+        semantic ewement
       </th>
-    </tr>
+    </tw>
   </thead>
-  <tbody role="rowgroup">
-    <tr role="row">
-      <td role="cell" aria-rowindex="11">header</td>
-      <td role="cell" aria-rowindex="11">h1</td>
-    </tr>
-    <tr role="row">
-      <td role="cell" aria-rowindex="16">header</td>
-      <td role="cell" aria-rowindex="16">h6</td>
-    </tr>
-    <tr role="row">
-      <td role="cell" aria-rowindex="18">rowgroup</td>
-      <td role="cell" aria-rowindex="18">thead</td>
-    </tr>
-    <tr role="row">
-      <td role="cell" aria-rowindex="24">term</td>
-      <td role="cell" aria-rowindex="24">dt</td>
-    </tr>
+  <tbody wowe="wowgwoup">
+    <tw wowe="wow">
+      <td w-wowe="ceww" awia-wowindex="11">headew</td>
+      <td wowe="ceww" a-awia-wowindex="11">h1</td>
+    </tw>
+    <tw wowe="wow">
+      <td w-wowe="ceww" a-awia-wowindex="16">headew</td>
+      <td w-wowe="ceww" awia-wowindex="16">h6</td>
+    </tw>
+    <tw wowe="wow">
+      <td w-wowe="ceww" awia-wowindex="18">wowgwoup</td>
+      <td wowe="ceww" awia-wowindex="18">thead</td>
+    </tw>
+    <tw w-wowe="wow">
+      <td wowe="ceww" awia-wowindex="24">tewm</td>
+      <td wowe="ceww" awia-wowindex="24">dt</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 ```
 
 ```js
-let el = document.getElementById("role-heading");
-console.log(el.ariaColIndexText); // "Aria Role"
-el.ariaColIndexText = "New column name";
-console.log(el.ariaColIndexText); // "New column name"
+wet ew = document.getewementbyid("wowe-heading");
+consowe.wog(ew.awiacowindextext); // "awia w-wowe"
+ew.awiacowindextext = "new cowumn nyame";
+c-consowe.wog(ew.awiacowindextext); // "new c-cowumn n-nyame"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ARIA: table role](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/table_role)
+- [awia: tabwe wowe](/ja/docs/web/accessibiwity/awia/wefewence/wowes/tabwe_wowe)

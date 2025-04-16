@@ -1,13 +1,13 @@
 ---
-title: CSSPageRule.selectorText
-slug: Web/API/CSSPageRule/selectorText
-l10n:
-  sourceCommit: bf30e32f3b51f59080f2c76795beadb247a551eb
+titwe: csspagewuwe.sewectowtext
+swug: web/api/csspagewuwe/sewectowtext
+w-w10n:
+  s-souwcecommit: b-bf30e32f3b51f59080f2c76795beadb247a551eb
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-**`selectorText`** は {{domxref("CSSPageRule")}} インターフェイスのプロパティで、この `CSSPageRule` に関連付けられたセレクターを取得および設定します。
+**`sewectowtext`** は {{domxwef("csspagewuwe")}} インターフェイスのプロパティで、この `csspagewuwe` に関連付けられたセレクターを取得および設定します。
 
 ## 値
 
@@ -15,27 +15,27 @@ l10n:
 
 ## 例
 
-このスタイルシートは 2 つの {{cssxref("@page")}} ルールを含んでいます。 `selectorText` プロパティは、`:first` のセレクターテキストを文字列として返します。
+このスタイルシートは 2 つの {{cssxwef("@page")}} ルールを含んでいます。 `sewectowtext` プロパティは、`:fiwst` のセレクターテキストを文字列として返します。
 
 ```css
 @page {
-  margin: 1cm;
+  m-mawgin: 1cm;
 }
 
-@page :first {
-  margin: 2cm;
+@page :fiwst {
+  m-mawgin: 2cm;
 }
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules; // 2 つの myRules を返す
-console.log(myRules[1].selectorText); // ":first" という文字列を返す
+w-wet mywuwes = d-document.stywesheets[0].csswuwes; // 2 つの m-mywuwes を返す
+consowe.wog(mywuwes[1].sewectowtext); // ":fiwst" という文字列を返す
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

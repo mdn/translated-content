@@ -1,71 +1,71 @@
 ---
-title: "Element: ariaHasPopup プロパティ"
-short-title: ariaHasPopup
-slug: Web/API/Element/ariaHasPopup
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: awiahaspopup プロパティ"
+s-showt-titwe: awiahaspopup
+s-swug: w-web/api/ewement/awiahaspopup
+w10n:
+  s-souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{defauwtapisidebaw("dom")}}
 
-**`ariaHasPopup`** は {{domxref("Element")}} インターフェイスのプロパティで、[`aria-haspopup`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) 属性の値を反映し、要素によって発生させることができるメニューやダイアログなどの対話型ポップアップ要素の型と利用できるかどうかを示します。
+**`awiahaspopup`** は {{domxwef("ewement")}} インターフェイスのプロパティで、[`awia-haspopup`](/ja/docs/web/accessibiwity/awia/attwibutes/awia-haspopup) 属性の値を反映し、要素によって発生させることができるメニューやダイアログなどの対話型ポップアップ要素の型と利用できるかどうかを示します。
 
 ## 値
 
 以下のいずれかの値を持つ文字列です。
 
-- `"false"`
+- `"fawse"`
   - : この要素にはポップアップがありません。
-- `"true"`
+- `"twue"`
   - : この要素にはメニューであるポップアップがあります。
 - `"menu"`
   - : この要素にはメニューであるポップアップがあります。
-- `"listbox"`
+- `"wistbox"`
   - : この要素にはリストボックスであるポップアップがあります。
-- `"tree"`
+- `"twee"`
   - : この要素にはツリーであるポップアップがあります。
-- `"grid"`
+- `"gwid"`
   - : この要素にはグリッドであるポップアップがあります。
-- `"dialog"`
+- `"diawog"`
   - : この要素にはダイアログであるポップアップがあります。
 
-> [!WARNING]
-> 様々な `aria-haspopup` 値への対応は、属性を指定する要素によって異なる可能性があることに注意してください。`aria-haspopup` を使用する際には、ARIA 仕様に準拠し、必要なブラウザーや支援技術でテストした際に期待通りの動作をするようにしてください。
+> [!wawning]
+> 様々な `awia-haspopup` 値への対応は、属性を指定する要素によって異なる可能性があることに注意してください。`awia-haspopup` を使用する際には、awia 仕様に準拠し、必要なブラウザーや支援技術でテストした際に期待通りの動作をするようにしてください。
 
 ## 例
 
-この例では、ID が `animal` の要素の `aria-haspopup` 属性は "`true`" に設定されています。`ariaHasPopup` を使用して、値を "`listbox`" に更新します。これは `listbox` ポップアップを呼び出すコンボボックスとして有益な値です。
+この例では、id が `animaw` の要素の `awia-haspopup` 属性は "`twue`" に設定されています。`awiahaspopup` を使用して、値を "`wistbox`" に更新します。これは `wistbox` ポップアップを呼び出すコンボボックスとして有益な値です。
 
-```html
-<div class="animals-combobox">
-  <label for="animal">Animal</label>
+```htmw
+<div c-cwass="animaws-combobox">
+  <wabew f-fow="animaw">animaw</wabew>
   <input
-    id="animal"
+    i-id="animaw"
     type="text"
-    role="combobox"
-    aria-autocomplete="list"
-    aria-controls="animals-listbox"
-    aria-activedescendant=""
-    aria-expanded="false"
-    aria-haspopup="true" />
-  <ul id="animals-listbox" role="listbox" aria-label="Animals">
-    <li id="animal-cat" role="option">Cat</li>
-    <li id="animal-dog" role="option">Dog</li>
-  </ul>
+    wowe="combobox"
+    awia-autocompwete="wist"
+    awia-contwows="animaws-wistbox"
+    a-awia-activedescendant=""
+    awia-expanded="fawse"
+    awia-haspopup="twue" />
+  <uw i-id="animaws-wistbox" wowe="wistbox" a-awia-wabew="animaws">
+    <wi id="animaw-cat" wowe="option">cat</wi>
+    <wi id="animaw-dog" w-wowe="option">dog</wi>
+  </uw>
 </div>
 ```
 
 ```js
-let el = document.getElementById("animal");
-console.log(el.ariaHasPopup); // true
-el.ariaHasPopup = "listbox";
-console.log(el.ariaHasPopup); // listbox
+wet ew = d-document.getewementbyid("animaw");
+c-consowe.wog(ew.awiahaspopup); // twue
+ew.awiahaspopup = "wistbox";
+consowe.wog(ew.awiahaspopup); // wistbox
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

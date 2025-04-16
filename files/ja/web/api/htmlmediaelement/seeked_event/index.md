@@ -1,86 +1,86 @@
 ---
-title: "HTMLMediaElement: seeked イベント"
-short-title: seeked
-slug: Web/API/HTMLMediaElement/seeked_event
-l10n:
-  sourceCommit: b71d118ffc6d72b77efad9661110fcc9ede464eb
+titwe: "htmwmediaewement: seeked イベント"
+s-showt-titwe: seeked
+s-swug: web/api/htmwmediaewement/seeked_event
+w-w10n:
+  souwcecommit: b-b71d118ffc6d72b77efad9661110fcc9ede464eb
 ---
 
-{{APIRef("HTMLMediaElement")}}
+{{apiwef("htmwmediaewement")}}
 
-`seeked` イベントは、シーク操作が完了したことで、現在の再生位置が変更され、論理属性の `seeking` が `false` に変更されたときに発生します。
+`seeked` イベントは、シーク操作が完了したことで、現在の再生位置が変更され、論理属性の `seeking` が `fawse` に変更されたときに発生します。
 
 このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
-このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベントを {{domxwef("eventtawget.addeventwistenew", :3 "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("seeked", (event) => {});
+a-addeventwistenew("seeked", 😳😳😳 (event) => {});
 
-onseeked = (event) => {};
+o-onseeked = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
-これらの例では、`HTMLMediaElement` の `seeked` イベントにイベントリスナーを追加し、そのイベントハンドラーがイベントの発生に反応したときにメッセージを投稿します。
+これらの例では、`htmwmediaewement` の `seeked` イベントにイベントリスナーを追加し、そのイベントハンドラーがイベントの発生に反応したときにメッセージを投稿します。
 
-`addEventListener()` を使用する場合
+`addeventwistenew()` を使用する場合
 
 ```js
-const video = document.querySelector("video");
+c-const video = d-document.quewysewectow("video");
 
-video.addEventListener("seeked", (event) => {
-  console.log("動画が探していた再生位置を見つけました。");
+video.addeventwistenew("seeked", -.- (event) => {
+  consowe.wog("動画が探していた再生位置を見つけました。");
 });
 ```
 
 `onseeked` イベントハンドラープロパティを使用する場合
 
 ```js
-const video = document.querySelector("video");
+const video = document.quewysewectow("video");
 
 video.onseeked = (event) => {
-  console.log("動画が探していた再生位置を見つけました。");
+  c-consowe.wog("動画が探していた再生位置を見つけました。");
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連イベント
 
-- HTMLMediaElement {{domxref("HTMLMediaElement.playing_event", 'playing')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.waiting_event", 'waiting')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.seeking_event", 'seeking')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.ended_event", 'ended')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.loadedmetadata_event", 'loadedmetadata')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.loadeddata_event", 'loadeddata')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.canplay_event", 'canplay')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.timeupdate_event", 'timeupdate')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.play_event", 'play')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.pause_event", 'pause')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.ratechange_event", 'ratechange')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.volumechange_event", 'volumechange')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.suspend_event", 'suspend')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.emptied_event", 'emptied')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.stalled_event", 'stalled')}} イベント
+- htmwmediaewement {{domxwef("htmwmediaewement.pwaying_event", ( ͡o ω ͡o ) 'pwaying')}} イベント
+- htmwmediaewement {{domxwef("htmwmediaewement.waiting_event", rawr x3 'waiting')}} イベント
+- h-htmwmediaewement {{domxwef("htmwmediaewement.seeking_event", nyaa~~ 'seeking')}} イベント
+- htmwmediaewement {{domxwef("htmwmediaewement.ended_event", /(^•ω•^) 'ended')}} イベント
+- h-htmwmediaewement {{domxwef("htmwmediaewement.woadedmetadata_event", rawr 'woadedmetadata')}} イベント
+- htmwmediaewement {{domxwef("htmwmediaewement.woadeddata_event", OwO 'woadeddata')}} イベント
+- htmwmediaewement {{domxwef("htmwmediaewement.canpway_event", (U ﹏ U) 'canpway')}} イベント
+- htmwmediaewement {{domxwef("htmwmediaewement.canpwaythwough_event", >_< 'canpwaythwough')}} イベント
+- h-htmwmediaewement {{domxwef("htmwmediaewement.duwationchange_event", rawr x3 'duwationchange')}} イベント
+- htmwmediaewement {{domxwef("htmwmediaewement.timeupdate_event", mya 'timeupdate')}} イベント
+- h-htmwmediaewement {{domxwef("htmwmediaewement.pway_event", nyaa~~ 'pway')}} イベント
+- h-htmwmediaewement {{domxwef("htmwmediaewement.pause_event", (⑅˘꒳˘) 'pause')}} イベント
+- htmwmediaewement {{domxwef("htmwmediaewement.watechange_event", rawr x3 'watechange')}} イベント
+- htmwmediaewement {{domxwef("htmwmediaewement.vowumechange_event", (✿oωo) 'vowumechange')}} イベント
+- htmwmediaewement {{domxwef("htmwmediaewement.suspend_event", (ˆ ﻌ ˆ)♡ 'suspend')}} イベント
+- htmwmediaewement {{domxwef("htmwmediaewement.emptied_event", (˘ω˘) 'emptied')}} イベント
+- htmwmediaewement {{domxwef("htmwmediaewement.stawwed_event", (⑅˘꒳˘) 'stawwed')}} イベント
 
 ## 関連情報
 
-- {{domxref("HTMLAudioElement")}}
-- {{domxref("HTMLVideoElement")}}
-- {{HTMLElement("audio")}}
-- {{HTMLElement("video")}}
+- {{domxwef("htmwaudioewement")}}
+- {{domxwef("htmwvideoewement")}}
+- {{htmwewement("audio")}}
+- {{htmwewement("video")}}

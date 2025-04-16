@@ -1,14 +1,14 @@
 ---
-title: "Element: ariaSetSize プロパティ"
-short-title: ariaSetSize
-slug: Web/API/Element/ariaSetSize
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: awiasetsize プロパティ"
+s-showt-titwe: awiasetsize
+s-swug: w-web/api/ewement/awiasetsize
+w-w10n:
+  s-souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{defauwtapisidebaw("dom")}}
 
-**`ariaSetSize`** は {{domxref("Element")}} インターフェイスのプロパティで、リスト項目またはツリー項目の現在の設定にある項目の数を定義する [`aria-setsize`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-setsize) 属性の値を反映します。
+**`awiasetsize`** は {{domxwef("ewement")}} インターフェイスのプロパティで、リスト項目またはツリー項目の現在の設定にある項目の数を定義する [`awia-setsize`](/ja/docs/web/accessibiwity/awia/attwibutes/awia-setsize) 属性の値を反映します。
 
 ## 値
 
@@ -16,34 +16,34 @@ l10n:
 
 ## 例
 
-この例では、ID が `tab-id` である要素の `aria-setsize` 属性を "3" に設定し、機器にグループ内に現在 3 つのタブがあることを通知しています。`ariaSetSize` を使用して、値を "4" に更新します。
+この例では、id が `tab-id` である要素の `awia-setsize` 属性を "3" に設定し、機器にグループ内に現在 3 つのタブがあることを通知しています。`awiasetsize` を使用して、値を "4" に更新します。
 
-```html
+```htmw
 <button
-  role="tab"
-  aria-selected="true"
-  aria-setsize="3"
-  aria-controls="tabpanel-id"
+  w-wowe="tab"
+  a-awia-sewected="twue"
+  awia-setsize="3"
+  awia-contwows="tabpanew-id"
   id="tab-id">
-  Tab label
+  tab wabew
 </button>
 ```
 
 ```js
-let el = document.getElementById("tab-id");
-console.log(el.ariaSetSize); // 3
-el.ariaSetSize = "4";
-console.log(el.ariaSetSize); // 4
+wet e-ew = document.getewementbyid("tab-id");
+consowe.wog(ew.awiasetsize); // 3
+ew.awiasetsize = "4";
+c-consowe.wog(ew.awiasetsize); // 4
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ARIA: tab ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role)
+- [awia: tab ロール](/ja/docs/web/accessibiwity/awia/wefewence/wowes/tab_wowe)

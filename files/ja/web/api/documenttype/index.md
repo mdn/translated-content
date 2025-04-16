@@ -1,49 +1,49 @@
 ---
-title: DocumentType
-slug: Web/API/DocumentType
-l10n:
-  sourceCommit: f45409ba2169ff05e433d21aa4ee0424079916b8
+titwe: documenttype
+swug: web/api/documenttype
+w-w10n:
+  souwcecommit: f-f45409ba2169ff05e433d21aa4ee0424079916b8
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`DocumentType`** インターフェイスは、 doctype を包含する {{domxref("Node")}} を表します。
+**`documenttype`** インターフェイスは、 d-doctype を包含する {{domxwef("node")}} を表します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-_親インターフェイスである {{domxref("Node")}} からプロパティを継承しています。_
+_親インターフェイスである {{domxwef("node")}} からプロパティを継承しています。_
 
-- {{domxref("DocumentType.name")}} {{ReadOnlyInline}}
-  - : 文書の型です。HTML 文書では常に `"html"` ですが、XML 文書では様々です。
-- {{domxref("DocumentType.publicId")}} {{ReadOnlyInline}}
-  - : 文字列で、文書型の識別子です。HTML では常に空文字列 (`""`) ですが、例えば SVG 文書では `"-//W3C//DTD SVG 1.1//EN"` です。
-- {{domxref("DocumentType.systemId")}} {{ReadOnlyInline}}
-  - : 文字列で、DTD に関連付けられた URL が入ります。HTML では常に空文字列 (`""`) ですが、例えば SVG 文書では `"http://www.w3.org/2000/svg"` です。
+- {{domxwef("documenttype.name")}} {{weadonwyinwine}}
+  - : 文書の型です。htmw 文書では常に `"htmw"` ですが、xmw 文書では様々です。
+- {{domxwef("documenttype.pubwicid")}} {{weadonwyinwine}}
+  - : 文字列で、文書型の識別子です。htmw では常に空文字列 (`""`) ですが、例えば s-svg 文書では `"-//w3c//dtd s-svg 1.1//en"` です。
+- {{domxwef("documenttype.systemid")}} {{weadonwyinwine}}
+  - : 文字列で、dtd に関連付けられた uww が入ります。htmw では常に空文字列 (`""`) ですが、例えば s-svg 文書では `"http://www.w3.owg/2000/svg"` です。
 
 ## インスタンスメソッド
 
-_親インターフェイスである {{domxref("Node")}} からメソッドを継承しています。_
+_親インターフェイスである {{domxwef("node")}} からメソッドを継承しています。_
 
-- {{domxref("DocumentType.after()")}}
-  - : 一連の {{domxref("Node")}} オブジェクトまたは文字列を、この `DocumentType` の親の子リストの中、この `DocumentType` オブジェクトの直後に挿入します。
-- {{domxref("DocumentType.before()")}}
-  - : 一連の {{domxref("Node")}} オブジェクトまたは文字列を、この `DocumentType` の親の子リストの中、この `DocumentType` オブジェクトの直前に挿入します。
-- {{domxref("DocumentType.remove()")}}
+- {{domxwef("documenttype.aftew()")}}
+  - : 一連の {{domxwef("node")}} オブジェクトまたは文字列を、この `documenttype` の親の子リストの中、この `documenttype` オブジェクトの直後に挿入します。
+- {{domxwef("documenttype.befowe()")}}
+  - : 一連の {{domxwef("node")}} オブジェクトまたは文字列を、この `documenttype` の親の子リストの中、この `documenttype` オブジェクトの直前に挿入します。
+- {{domxwef("documenttype.wemove()")}}
   - : オブジェクトをその親の子リストから削除します。
-- {{domxref("DocumentType.replaceWith()")}}
+- {{domxwef("documenttype.wepwacewith()")}}
   - : 文書型を指定されたノードの集合に置き換えます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [DOM インターフェイスの索引](/ja/docs/Web/API/Document_Object_Model)
-- {{domxref("DOMImplementation.createDocumentType()")}}: 新しい `DocumentType` ノードの作成
+- [dom インターフェイスの索引](/ja/docs/web/api/document_object_modew)
+- {{domxwef("domimpwementation.cweatedocumenttype()")}}: 新しい `documenttype` ノードの作成

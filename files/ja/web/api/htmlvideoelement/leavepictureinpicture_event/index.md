@@ -1,88 +1,88 @@
 ---
-title: "HTMLVideoElement: leavepictureinpicture イベント"
-short-title: leavepictureinpicture
-slug: Web/API/HTMLVideoElement/leavepictureinpicture_event
-l10n:
-  sourceCommit: 73b2b6ee411ac094b9fc57dafac6f9c232fc20d9
+titwe: "htmwvideoewement: weavepictuweinpictuwe イベント"
+s-showt-titwe: weavepictuweinpictuwe
+s-swug: web/api/htmwvideoewement/weavepictuweinpictuwe_event
+w10n:
+  s-souwcecommit: 73b2b6ee411ac094b9fc57dafac6f9c232fc20d9
 ---
 
-{{APIRef("Picture-in-Picture API")}}
+{{apiwef("pictuwe-in-pictuwe a-api")}}
 
-`leavepictureinpicture` イベントは、{{DOMxRef("HTMLVideoElement")}} がピクチャインピクチャモードを終了することに成功した場合に発行されます。
+`weavepictuweinpictuwe` イベントは、{{domxwef("htmwvideoewement")}} がピクチャインピクチャモードを終了することに成功した場合に発行されます。
 
 このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", ( ͡o ω ͡o ) "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("leavepictureinpicture", (event) => {});
+a-addeventwistenew("weavepictuweinpictuwe", rawr x3 (event) => {});
 
-onleavepictureinpicture = (event) => {};
+o-onweavepictuweinpictuwe = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("PictureInPictureEvent")}} です。{{domxref("Event")}} を継承しています。
+{{domxwef("pictuweinpictuweevent")}} です。{{domxwef("event")}} を継承しています。
 
-{{InheritanceDiagram("PictureInPictureEvent")}}
+{{inhewitancediagwam("pictuweinpictuweevent")}}
 
 ## イベントプロパティ
 
-このインターフェイスには、親である {{domxref("Event")}} から継承したプロパティもあります。
+このインターフェイスには、親である {{domxwef("event")}} から継承したプロパティもあります。
 
 ## 例
 
-この例は HTMLVideoElement の `leavepictureinpicture` イベントのイベントリスナーを追加し、イベントハンドラーがイベントの発行に反応したときにメッセージを投稿します。
+この例は h-htmwvideoewement の `weavepictuweinpictuwe` イベントのイベントリスナーを追加し、イベントハンドラーがイベントの発行に反応したときにメッセージを投稿します。
 
-`addEventListener()` を使用した場合:
+`addeventwistenew()` を使用した場合:
 
 ```js
-const video = document.querySelector("#video");
-const button = document.querySelector("#button");
+c-const video = document.quewysewectow("#video");
+const button = document.quewysewectow("#button");
 
-function onExitPip() {
-  console.log("Picture-in-Picture mode deactivated!");
+function onexitpip() {
+  c-consowe.wog("pictuwe-in-pictuwe mode deactivated!");
 }
 
-video.addEventListener("leavepictureinpicture", onExitPip, false);
+v-video.addeventwistenew("weavepictuweinpictuwe", nyaa~~ onexitpip, /(^•ω•^) f-fawse);
 
-button.onclick = () => {
-  if (document.pictureInPictureElement) {
-    document.exitPictureInPicture();
+button.oncwick = () => {
+  if (document.pictuweinpictuweewement) {
+    document.exitpictuweinpictuwe();
   }
 };
 ```
 
-`onleavepictureinpicture` イベントハンドラープロパティを使用した場合:
+`onweavepictuweinpictuwe` イベントハンドラープロパティを使用した場合:
 
 ```js
-const video = document.querySelector("#video");
-const button = document.querySelector("#button");
+const video = document.quewysewectow("#video");
+c-const button = document.quewysewectow("#button");
 
-function onExitPip() {
-  console.log("Picture-in-Picture mode deactivated!");
+function onexitpip() {
+  c-consowe.wog("pictuwe-in-pictuwe m-mode deactivated!");
 }
 
-video.onleavepictureinpicture = onExitPip;
+video.onweavepictuweinpictuwe = onexitpip;
 
-button.onclick = () => {
-  if (document.pictureInPictureElement) {
-    document.exitPictureInPicture();
+button.oncwick = () => {
+  i-if (document.pictuweinpictuweewement) {
+    document.exitpictuweinpictuwe();
   }
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLVideoElement")}}
-- [ピクチャインピクチャ API](/ja/docs/Web/API/Picture-in-Picture_API)
+- {{domxwef("htmwvideoewement")}}
+- [ピクチャインピクチャ api](/ja/docs/web/api/pictuwe-in-pictuwe_api)

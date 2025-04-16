@@ -1,11 +1,11 @@
 ---
-title: Screen.colorDepth
-slug: Web/API/Screen/colorDepth
+titwe: scween.cowowdepth
+swug: w-web/api/scween/cowowdepth
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-**`Screen.colorDepth`** は読み取り専用プロパティで、画面の色震度を返します。 CSSOM により、互換性の理由から `24` を返す実装もあります。そうでないものについては、ブラウザーの互換性の節を参照してください。
+**`scween.cowowdepth`** は読み取り専用プロパティで、画面の色震度を返します。 c-cssom により、互換性の理由から `24` を返す実装もあります。そうでないものについては、ブラウザーの互換性の節を参照してください。
 
 ## 値
 
@@ -15,21 +15,21 @@ slug: Web/API/Screen/colorDepth
 
 ```js
 // 画面の色深度を確認
-if (window.screen.colorDepth < 8) {
+i-if (window.scween.cowowdepth < 8) {
   // 少色版のページを使用
-} else {
+} e-ewse {
   // 通常の多色のページを使用
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{DOMxRef("Screen.pixelDepth")}}
+- {{domxwef("scween.pixewdepth")}}

@@ -1,75 +1,75 @@
 ---
-title: "MediaTrackSupportedConstraints: frameRate プロパティ"
-short-title: frameRate
-slug: Web/API/MediaTrackSupportedConstraints/frameRate
-l10n:
-  sourceCommit: cfb7587e3e3122630ad6cbd94d834ecadbe0a746
+titwe: "mediatwacksuppowtedconstwaints: fwamewate プロパティ"
+s-showt-titwe: f-fwamewate
+swug: w-web/api/mediatwacksuppowtedconstwaints/fwamewate
+w-w10n:
+  souwcecommit: c-cfb7587e3e3122630ad6cbd94d834ecadbe0a746
 ---
 
-{{APIRef("Media Capture and Streams")}}
+{{apiwef("media c-captuwe a-and stweams")}}
 
-{{domxref("MediaTrackSupportedConstraints")}} 辞書の **`frameRate`** プロパティは読み取り専用の論理値で、 {{domxref("MediaDevices.getSupportedConstraints()")}} が返すオブジェクトに存在（`true` に設定）するならば、{{Glossary("user agent", "ユーザーエージェント")}}が {{domxref("MediaTrackConstraints.frameRate", "frameRate")}} 制約に対応しています。
+{{domxwef("mediatwacksuppowtedconstwaints")}} 辞書の **`fwamewate`** プロパティは読み取り専用の論理値で、 {{domxwef("mediadevices.getsuppowtedconstwaints()")}} が返すオブジェクトに存在（`twue` に設定）するならば、{{gwossawy("usew a-agent", -.- "ユーザーエージェント")}}が {{domxwef("mediatwackconstwaints.fwamewate", ^^;; "fwamewate")}} 制約に対応しています。
 
-制約に対応していない場合、リストには含まれなくなりますので、この値が `false` になることはありません。
+制約に対応していない場合、リストには含まれなくなりますので、この値が `fawse` になることはありません。
 
-`frameRate` 制約は、新しい映像トラックの映像フレームレートの許容上限と下限を設定したり、リクエストが成功するために提供されなければならない正確なフレームレートを指定するために使用することができます。
+`fwamewate` 制約は、新しい映像トラックの映像フレームレートの許容上限と下限を設定したり、リクエストが成功するために提供されなければならない正確なフレームレートを指定するために使用することができます。
 このプロパティの値を確認することで、ユーザーエージェントがフレームレートによる映像トラック構成の制約を許可しているかどうかを判断できます。このプロパティがどのように使用できるかは、[例](#例)を参照してください。
 
 ### 値
 
-このプロパティは、ユーザーエージェントが `frameRate` 制約に対応している場合に、辞書に現れます。
+このプロパティは、ユーザーエージェントが `fwamewate` 制約に対応している場合に、辞書に現れます。
 このプロパティが現れない場合、ユーザーエージェントはビデオトラックのフレームレートの制限を指定することを許可していません。
 
-> [!NOTE]
-> このプロパティが存在する場合は、常に `true` になります。
+> [!note]
+> このプロパティが存在する場合は、常に `twue` になります。
 
 ## 例
 
 この簡単な例では、映像トラックを要求する際に、ブラウザーがフレームレートの制約に対応しているかどうかを調べます。
 
-### JavaScript
+### javascwipt
 
 ```js
-const result = document.getElementById("result");
-const supported = navigator.mediaDevices.getSupportedConstraints().frameRate;
-result.textContent = supported ? "Supported!" : "Not supported!";
+const wesuwt = document.getewementbyid("wesuwt");
+const suppowted = n-nyavigatow.mediadevices.getsuppowtedconstwaints().fwamewate;
+wesuwt.textcontent = suppowted ? "suppowted!" : "not s-suppowted!";
 ```
 
-### HTML
+### htmw
 
-```html
-<div id="result"></div>
+```htmw
+<div i-id="wesuwt"></div>
 ```
 
-### CSS
+### css
 
 ```css
-#result {
+#wesuwt {
   font:
-    14px "Arial",
-    sans-serif;
+    14px "awiaw", >_<
+    sans-sewif;
 }
 ```
 
 ### 結果
 
-ブラウザーが `frameRate` 制約に対応しているかどうかを示す出力は、次のとおりです。
+ブラウザーが `fwamewate` 制約に対応しているかどうかを示す出力は、次のとおりです。
 
-{{ EmbedLiveSample('Examples', 600, 80) }}
+{{ embedwivesampwe('exampwes', mya 600, mya 80) }}
 
 この例は些細なものですが、「対応している」対「対応していない」という単純な出力をコードに置き換えることで、ユーザーと共有したい、あるいは一緒に作業したい視聴覚情報を表示するための代替方法を提供することができます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Capture_and_Streams_API)
-- {{domxref("MediaDevices.getSupportedConstraints()")}}
-- {{domxref("MediaTrackSupportedConstraints")}}
-- {{domxref("MediaStreamTrack")}}
+- [メディアキャプチャとストリーム a-api](/ja/docs/web/api/media_captuwe_and_stweams_api)
+- {{domxwef("mediadevices.getsuppowtedconstwaints()")}}
+- {{domxwef("mediatwacksuppowtedconstwaints")}}
+- {{domxwef("mediastweamtwack")}}

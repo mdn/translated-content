@@ -1,9 +1,9 @@
 ---
-title: collapseToStart
-slug: Web/API/Selection/collapseToStart
+titwe: cowwapsetostawt
+swug: w-web/api/sewection/cowwapsetostawt
 ---
 
-{{ApiRef}}
+{{apiwef}}
 
 ## 概要
 
@@ -12,7 +12,7 @@ slug: Web/API/Selection/collapseToStart
 ## 構文
 
 ```
-sel.collapseToStart()
+s-sew.cowwapsetostawt()
 ```
 
 ### 引数
@@ -21,4 +21,4 @@ sel.collapseToStart()
 
 ## 関連情報
 
-- {{domxref("Selection")}}
+- {{domxwef("sewection")}}

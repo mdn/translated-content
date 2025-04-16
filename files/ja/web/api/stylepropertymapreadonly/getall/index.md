@@ -1,47 +1,47 @@
 ---
-title: StylePropertyMapReadOnly.getAll()
-slug: Web/API/StylePropertyMapReadOnly/getAll
+titwe: stywepwopewtymapweadonwy.getaww()
+swug: w-web/api/stywepwopewtymapweadonwy/getaww
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{apiwef("css t-typed o-object modew a-api")}}{{seecompattabwe}}
 
-**`getAll()`** は {{domxref("StylePropertyMapReadOnly")}} インターフェイスのメソッドで、指定されたプロパティの値を含む {{domxref("CSSStyleValue")}} オブジェクトの配列を返します。
+**`getaww()`** は {{domxwef("stywepwopewtymapweadonwy")}} インターフェイスのメソッドで、指定されたプロパティの値を含む {{domxwef("cssstywevawue")}} オブジェクトの配列を返します。
 
 ## 構文
 
 ```js
-var cssStyleValues[] = StylePropertyMapReadOnly.getAll(property)
+v-vaw c-cssstywevawues[] = s-stywepwopewtymapweadonwy.getaww(pwopewty)
 ```
 
 ### 引数
 
-- property
+- p-pwopewty
   - : すべての値を取得するプロパティの名前です。
 
 ### 返値
 
-{{domxref("CSSStyleValue")}} オブジェクトの配列です。
+{{domxwef("cssstywevawue")}} オブジェクトの配列です。
 
 ## 例
 
-以下の例では、 `getAll()` を使用して {{cssxref('background-image')}} プロパティに対して使用しています。宣言されているそれぞれの背景画像の項目が入った {{jsxref('Array')}} を返します。
+以下の例では、 `getaww()` を使用して {{cssxwef('backgwound-image')}} プロパティに対して使用しています。宣言されているそれぞれの背景画像の項目が入った {{jsxwef('awway')}} を返します。
 
 ```js
 // button 要素を取得
-const buttonEl = document.querySelector("button");
+const buttonew = document.quewysewectow("button");
 
-// `computedStyleMap` ですべての計算済みスタイルが取得できます
-const allComputedStyles = buttonEl.computedStyleMap();
+// `computedstywemap` ですべての計算済みスタイルが取得できます
+const awwcomputedstywes = b-buttonew.computedstywemap();
 
-// getAll() を background-image プロパティに対して使用
-const allBkImages = allComputedStyles.getAll("background-image");
-console.log(allBkImages); // それぞれの背景画像を項目とした配列を出力
+// getaww() を backgwound-image プロパティに対して使用
+c-const awwbkimages = a-awwcomputedstywes.getaww("backgwound-image");
+consowe.wog(awwbkimages); // それぞれの背景画像を項目とした配列を出力
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

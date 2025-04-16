@@ -1,77 +1,77 @@
 ---
-title: SpeechSynthesisErrorEvent
-slug: Web/API/SpeechSynthesisErrorEvent
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: speechsynthesisewwowevent
+swug: web/api/speechsynthesisewwowevent
+w-w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Web Speech API")}}
+{{apiwef("web s-speech a-api")}}
 
-**`SpeechSynthesisErrorEvent`** は[ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API) のインターフェイスで、発話サービスの {{domxref("SpeechSynthesisUtterance")}} オブジェクトの処理中に発生したエラーに関する情報を保持します。
+**`speechsynthesisewwowevent`** は[ウェブ音声 a-api](/ja/docs/web/api/web_speech_api) のインターフェイスで、発話サービスの {{domxwef("speechsynthesisuttewance")}} オブジェクトの処理中に発生したエラーに関する情報を保持します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-- {{domxref("SpeechSynthesisErrorEvent.SpeechSynthesisErrorEvent", "SpeechSynthesisErrorEvent()")}}
-  - : 新しい `SpeechSynthesisErrorEvent` イベントを生成します。
+- {{domxwef("speechsynthesisewwowevent.speechsynthesisewwowevent", OwO "speechsynthesisewwowevent()")}}
+  - : 新しい `speechsynthesisewwowevent` イベントを生成します。
 
 ## インスタンスプロパティ
 
-_`SpeechSynthesisErrorEvent` は {{domxref("SpeechSynthesisEvent")}} インターフェイスから派生しており、親インターフェイスである {{domxref("Event")}} からプロパティを継承しています。_
+_`speechsynthesisewwowevent` は {{domxwef("speechsynthesisevent")}} インターフェイスから派生しており、親インターフェイスである {{domxwef("event")}} からプロパティを継承しています。_
 
-- {{domxref("SpeechSynthesisErrorEvent.error")}} {{ReadOnlyInline}}
+- {{domxwef("speechsynthesisewwowevent.ewwow")}} {{weadonwyinwine}}
   - : 音声合成に失敗したことを示すエラーコードを返します。
 
 ## インスタンスメソッド
 
-_`SpeechSynthesisErrorEvent` は {{domxref("SpeechSynthesisEvent")}} インターフェイスから派生しており、親インターフェイスである {{domxref("Event")}} からメソッドを継承しています。_
+_`speechsynthesisewwowevent` は {{domxwef("speechsynthesisevent")}} インターフェイスから派生しており、親インターフェイスである {{domxwef("event")}} からメソッドを継承しています。_
 
 ## 例
 
 ```js
-const synth = window.speechSynthesis;
+c-const synth = w-window.speechsynthesis;
 
-const inputForm = document.querySelector("form");
-const inputTxt = document.querySelector("input");
-const voiceSelect = document.querySelector("select");
+const inputfowm = document.quewysewectow("fowm");
+const inputtxt = document.quewysewectow("input");
+c-const voicesewect = document.quewysewectow("sewect");
 
-const voices = synth.getVoices();
+const voices = s-synth.getvoices();
 
 // ...
 
-inputForm.onsubmit = (event) => {
-  event.preventDefault();
+inputfowm.onsubmit = (event) => {
+  e-event.pweventdefauwt();
 
-  const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-  const selectedOption =
-    voiceSelect.selectedOptions[0].getAttribute("data-name");
-  for (let i = 0; i < voices.length; i++) {
-    if (voices[i].name === selectedOption) {
-      utterThis.voice = voices[i];
+  const uttewthis = nyew speechsynthesisuttewance(inputtxt.vawue);
+  const sewectedoption =
+    v-voicesewect.sewectedoptions[0].getattwibute("data-name");
+  fow (wet i-i = 0; i < v-voices.wength; i++) {
+    if (voices[i].name === sewectedoption) {
+      uttewthis.voice = voices[i];
     }
   }
 
-  synth.speak(utterThis);
+  s-synth.speak(uttewthis);
 
-  utterThis.onerror = (event) => {
-    console.log(
-      `An error has occurred with the speech synthesis: ${event.error}`,
+  uttewthis.onewwow = (event) => {
+    consowe.wog(
+      `an ewwow has occuwwed with t-the speech synthesis: ${event.ewwow}`, (U ﹏ U)
     );
   };
 
-  inputTxt.blur();
+  inputtxt.bwuw();
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API)
+- [ウェブ音声 a-api](/ja/docs/web/api/web_speech_api)

@@ -1,40 +1,40 @@
 ---
-title: "Element: scrollHeight プロパティ"
-short-title: scrollHeight
-slug: Web/API/Element/scrollHeight
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "ewement: scwowwheight プロパティ"
+s-showt-titwe: scwowwheight
+s-swug: w-web/api/ewement/scwowwheight
+w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Element.scrollHeight`** は読み取り専用のプロパティで、あふれて画面上に表示されない部分を含めた、要素の内容の高さの寸法です。
+**`ewement.scwowwheight`** は読み取り専用のプロパティで、あふれて画面上に表示されない部分を含めた、要素の内容の高さの寸法です。
 
-![ユーザーのビューポートは、padding-top, border-top, border-bottom, padding-bottom とラベル付けされた 4 つの領域を持つ要素です。スクロールの高さは、コンテナーの padding-top から padding bottom の終わりまでで、ビューポートの上端と下端をはるかに超えています。](scrollheight.png)
+![ユーザーのビューポートは、padding-top, (ˆ ﻌ ˆ)♡ bowdew-top, -.- b-bowdew-bottom, :3 p-padding-bottom とラベル付けされた 4 つの領域を持つ要素です。スクロールの高さは、コンテナーの p-padding-top から padding bottom の終わりまでで、ビューポートの上端と下端をはるかに超えています。](scwowwheight.png)
 
-`scrollHeight` の値は、垂直スクロールバーを使用せずにすべてのコンテンツをビューポート内に収めるために要素に必要な最小の高さに等しくなります。高さは {{domxref("Element.clientHeight", "clientHeight")}} と同じ方法で測定されます。要素のパディングは含みますが、境界線、マージン、 (もしあれば) 水平スクロールバーは含みません。これには {{cssxref("::before")}} または {{cssxref("::after")}} のような擬似要素の高さを含むことがあります。要素の内容が垂直スクロールバーを表示することなく収まる場合、その `scrollHeight` は {{domxref("Element.clientHeight", "clientHeight")}} と等しくなります。
+`scwowwheight` の値は、垂直スクロールバーを使用せずにすべてのコンテンツをビューポート内に収めるために要素に必要な最小の高さに等しくなります。高さは {{domxwef("ewement.cwientheight", ʘwʘ "cwientheight")}} と同じ方法で測定されます。要素のパディングは含みますが、境界線、マージン、 (もしあれば) 水平スクロールバーは含みません。これには {{cssxwef("::befowe")}} または {{cssxwef("::aftew")}} のような擬似要素の高さを含むことがあります。要素の内容が垂直スクロールバーを表示することなく収まる場合、その `scwowwheight` は {{domxwef("ewement.cwientheight", 🥺 "cwientheight")}} と等しくなります。
 
-> [!NOTE]
-> このプロパティは値を整数値に丸めます。小数値が必要であれば、 {{ domxref("Element.getBoundingClientRect()") }} を使用してください。
+> [!note]
+> このプロパティは値を整数値に丸めます。小数値が必要であれば、 {{ domxwef("ewement.getboundingcwientwect()") }} を使用してください。
 
 ## 値
 
-整数値で、要素の scrollHeight ピクセル値に対応します。
+整数値で、要素の scwowwheight ピクセル値に対応します。
 
 ## 問題と解決方法
 
 ## 要素が完全にスクロールされたかどうかの判定
 
-`scrollTop` は丸められない数値で、 `scrollHeight` と `clientHeight` は丸められます。したがって、スクロール領域が下までスクロールされているかどうかを判断する唯一の方法は、スクロール量が何らかの閾値 (この例では `1`) に十分に近いかどうかを確認することです。
+`scwowwtop` は丸められない数値で、 `scwowwheight` と `cwientheight` は丸められます。したがって、スクロール領域が下までスクロールされているかどうかを判断する唯一の方法は、スクロール量が何らかの閾値 (この例では `1`) に十分に近いかどうかを確認することです。
 
 ```js
-Math.abs(element.scrollHeight - element.clientHeight - element.scrollTop) < 1;
+math.abs(ewement.scwowwheight - e-ewement.cwientheight - ewement.scwowwtop) < 1;
 ```
 
-次の例は動作しません。 `scrollTop` が小数を含む可能性があるからです。
+次の例は動作しません。 `scwowwtop` が小数を含む可能性があるからです。
 
 ```js
-element.scrollHeight - Math.abs(element.scrollTop) === element.clientHeight;
+ewement.scwowwheight - m-math.abs(ewement.scwowwtop) === ewement.cwientheight;
 ```
 
 ### 要素がスクロール可能かどうかを判定
@@ -42,120 +42,120 @@ element.scrollHeight - Math.abs(element.scrollTop) === element.clientHeight;
 コンテナーは、スクロールしないがあふれる子要素を持つ場合、次の条件式はコンテナーがスクロールできるかどうかを判定します。
 
 ```js
-window.getComputedStyle(element).overflowY === "visible";
-window.getComputedStyle(element).overflowY !== "hidden";
+w-window.getcomputedstywe(ewement).ovewfwowy === "visibwe";
+window.getcomputedstywe(ewement).ovewfwowy !== "hidden";
 ```
 
 ## 例
 
 ### ユーザーがテキストを読んだかどうかをチェック
 
-{{domxref("Element.scroll_event", "scroll")}} イベントに関連付けることで、この等価性はユーザーがテキストを読んだかどうかを判断するのに役立ちます ({{domxref("element.scrollTop")}} および {{domxref("element.clientHeight")}} プロパティも参照してください）。
+{{domxwef("ewement.scwoww_event", >_< "scwoww")}} イベントに関連付けることで、この等価性はユーザーがテキストを読んだかどうかを判断するのに役立ちます ({{domxwef("ewement.scwowwtop")}} および {{domxwef("ewement.cwientheight")}} プロパティも参照してください）。
 
 以下のデモにあるチェックボックスは無効になっており、テキストエリアの内容が最後までスクロールするまでチェックして同意を表すことができなくなっています。
 
-#### HTML
+#### htmw
 
-```html
-<form name="registration">
+```htmw
+<fowm nyame="wegistwation">
   <p>
-    <textarea id="rules">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at laoreet magna.
-Aliquam erat volutpat. Praesent molestie, dolor ut eleifend aliquam, mi ligula ultrices sapien, quis cursus
-neque dui nec risus. Duis tincidunt lobortis purus eu aliquet. Quisque in dignissim magna. Aenean ac lorem at
-velit ultrices consequat. Nulla luctus nisi ut libero cursus ultrices. Pellentesque nec dignissim enim. Phasellus
-ut quam lacus, sed ultricies diam. Vestibulum convallis rutrum dolor, sit amet egestas velit scelerisque id.
-Proin non dignissim nisl. Sed mi odio, ullamcorper eget mattis id, malesuada vitae libero. Integer dolor lorem,
-mattis sed dapibus a, faucibus id metus. Duis iaculis dictum pulvinar. In nisi nibh, dapibus ac blandit at, porta
-at arcu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent
-dictum ipsum aliquet erat eleifend sit amet sollicitudin felis tempus. Aliquam congue cursus venenatis. Maecenas
-luctus pellentesque placerat. Mauris nisl odio, condimentum sed fringilla a, consectetur id ligula. Praesent sem
-sem, aliquet non faucibus vitae, iaculis nec elit. Nullam volutpat, lectus et blandit bibendum, nulla lorem congue
-turpis, ac pretium tortor sem ut nibh. Donec vel mi in ligula hendrerit sagittis. Donec faucibus viverra fermentum.
-Fusce in arcu. Nullam at dignissim massa. Cras nibh est, pretium sit amet faucibus eget, sollicitudin in
-ligula. Vivamus vitae urna mauris, eget euismod nunc. Aenean semper gravida enim non feugiat. In hac habitasse
-platea dictumst. Cras eleifend nisl volutpat ante condimentum convallis. Donec varius dolor malesuada erat
-consequat congue. Donec eu lacus ut sapien venenatis tincidunt. Quisque sit amet tellus et enim bibendum varius et
-a orci. Donec aliquet volutpat scelerisque. Proin et tortor dolor. Ut aliquet, dolor a mattis sodales, odio diam
-pulvinar sem, egestas pretium magna eros vitae felis. Nam vitae magna lectus, et ornare elit. Morbi feugiat, ipsum
-ac mattis congue, quam neque mollis tortor, nec mollis nisl dolor a tortor. Maecenas varius est sit amet elit
-interdum quis placerat metus posuere. Duis malesuada justo a diam vestibulum vel aliquam nisi ornare. Integer
-laoreet nisi a odio ornare non congue turpis eleifend. Cum sociis natoque penatibus et magnis dis parturient montes,
-nascetur ridiculus mus. Cras vulputate libero sed arcu iaculis nec lobortis orci fermentum.
-    </textarea>
+    <textawea id="wuwes">
+w-wowem ipsum dowow sit amet, ʘwʘ consectetuw a-adipiscing e-ewit. (˘ω˘) vestibuwum at waoweet magna. (✿oωo)
+awiquam ewat vowutpat. (///ˬ///✿) pwaesent mowestie, rawr x3 d-dowow ut eweifend awiquam, -.- mi wiguwa uwtwices sapien, ^^ quis cuwsus
+nyeque dui n-nyec wisus. (⑅˘꒳˘) duis tincidunt wobowtis p-puwus eu awiquet. nyaa~~ q-quisque in d-dignissim magna. /(^•ω•^) a-aenean ac wowem at
+vewit uwtwices consequat. (U ﹏ U) nyuwwa w-wuctus nyisi ut wibewo cuwsus uwtwices. 😳😳😳 pewwentesque n-nyec dignissim enim. >w< phasewwus
+ut quam wacus, XD sed uwtwicies diam. o.O vestibuwum convawwis w-wutwum dowow, mya sit amet egestas v-vewit scewewisque i-id. 🥺
+pwoin nyon d-dignissim nyisw. ^^;; sed mi odio, :3 uwwamcowpew eget mattis id, mawesuada v-vitae wibewo. (U ﹏ U) i-integew dowow wowem, OwO
+mattis s-sed dapibus a, 😳😳😳 faucibus i-id metus. (ˆ ﻌ ˆ)♡ duis iacuwis dictum p-puwvinaw. XD in nyisi nyibh, (ˆ ﻌ ˆ)♡ d-dapibus ac bwandit at, ( ͡o ω ͡o ) powta
+at awcu. rawr x3 pewwentesque h-habitant mowbi twistique senectus e-et nyetus et mawesuada fames a-ac tuwpis egestas. nyaa~~ p-pwaesent
+dictum ipsum awiquet ewat eweifend sit amet sowwicitudin fewis tempus. >_< awiquam congue cuwsus venenatis. ^^;; m-maecenas
+wuctus p-pewwentesque pwacewat. (ˆ ﻌ ˆ)♡ mauwis n-nyisw odio, ^^;; c-condimentum sed f-fwingiwwa a, (⑅˘꒳˘) consectetuw id wiguwa. rawr x3 pwaesent sem
+sem, (///ˬ///✿) awiquet nyon f-faucibus vitae, 🥺 iacuwis nyec ewit. >_< nyuwwam vowutpat, UwU wectus et bwandit bibendum, >_< n-nyuwwa wowem congue
+tuwpis, -.- a-ac pwetium towtow s-sem ut nyibh. mya d-donec vew mi in wiguwa hendwewit s-sagittis. >w< donec f-faucibus vivewwa f-fewmentum. (U ﹏ U)
+fusce i-in awcu. nyuwwam at dignissim massa. 😳😳😳 cwas nyibh e-est, o.O pwetium s-sit amet faucibus e-eget, òωó sowwicitudin i-in
+wiguwa. 😳😳😳 v-vivamus vitae uwna mauwis, σωσ eget euismod nyunc. (⑅˘꒳˘) aenean sempew gwavida e-enim nyon feugiat. (///ˬ///✿) in hac habitasse
+pwatea dictumst. 🥺 cwas eweifend nyisw vowutpat ante condimentum c-convawwis. OwO donec vawius dowow mawesuada ewat
+consequat congue. >w< d-donec eu w-wacus ut sapien v-venenatis tincidunt. 🥺 quisque sit a-amet tewwus et enim bibendum vawius e-et
+a owci. nyaa~~ d-donec awiquet vowutpat scewewisque. ^^ pwoin et towtow dowow. >w< ut awiquet, OwO dowow a mattis sodawes, XD odio d-diam
+puwvinaw sem, ^^;; egestas pwetium m-magna ewos vitae fewis. 🥺 nyam v-vitae magna w-wectus, XD et ownawe ewit. (U ᵕ U❁) mowbi feugiat, :3 ipsum
+ac m-mattis congue, ( ͡o ω ͡o ) quam n-nyeque mowwis towtow, òωó nyec mowwis n-nyisw dowow a-a towtow. σωσ maecenas vawius est sit amet ewit
+intewdum quis pwacewat metus posuewe. (U ᵕ U❁) d-duis mawesuada j-justo a diam v-vestibuwum vew awiquam nyisi ownawe. (✿oωo) i-integew
+waoweet n-nyisi a odio ownawe nyon congue t-tuwpis eweifend. cum sociis nyatoque penatibus et magnis dis pawtuwient montes, ^^
+n-nyascetuw widicuwus m-mus. ^•ﻌ•^ cwas vuwputate wibewo sed awcu iacuwis n-nyec wobowtis o-owci fewmentum. XD
+    </textawea>
   </p>
   <p>
-    <input type="checkbox" id="agree" name="accept" />
-    <label for="agree">I agree</label>
-    <input type="submit" id="nextstep" value="Next" />
+    <input type="checkbox" id="agwee" nyame="accept" />
+    <wabew f-fow="agwee">i agwee</wabew>
+    <input type="submit" id="nextstep" vawue="next" />
   </p>
-</form>
+</fowm>
 ```
 
-#### CSS
+#### css
 
 ```css
 #notice {
-  display: inline-block;
-  margin-bottom: 12px;
-  border-radius: 5px;
-  width: 600px;
+  d-dispway: inwine-bwock;
+  mawgin-bottom: 12px;
+  b-bowdew-wadius: 5px;
+  w-width: 600px;
   padding: 5px;
-  border: 2px #7fdf55 solid;
+  bowdew: 2px #7fdf55 sowid;
 }
 
-#rules {
-  width: 600px;
-  height: 130px;
+#wuwes {
+  w-width: 600px;
+  h-height: 130px;
   padding: 5px;
-  border: #2a9f00 solid 2px;
-  border-radius: 5px;
+  bowdew: #2a9f00 sowid 2px;
+  b-bowdew-wadius: 5px;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-function checkReading() {
-  if (checkReading.read) {
-    return;
+f-function checkweading() {
+  if (checkweading.wead) {
+    wetuwn;
   }
-  checkReading.read =
-    this.scrollHeight - Math.round(this.scrollTop) === this.clientHeight;
-  document.registration.accept.disabled = document.getElementById(
-    "nextstep",
-  ).disabled = !checkReading.read;
-  checkReading.noticeBox.textContent = checkReading.read
-    ? "Thank you."
-    : "Please, scroll and read the following text.";
+  checkweading.wead =
+    this.scwowwheight - m-math.wound(this.scwowwtop) === this.cwientheight;
+  d-document.wegistwation.accept.disabwed = d-document.getewementbyid(
+    "nextstep", :3
+  ).disabwed = !checkweading.wead;
+  checkweading.noticebox.textcontent = c-checkweading.wead
+    ? "thank you."
+    : "pwease, (ꈍᴗꈍ) s-scwoww a-and wead the f-fowwowing text.";
 }
 
-onload = () => {
-  const oToBeRead = document.getElementById("rules");
-  checkReading.noticeBox = document.createElement("span");
-  document.registration.accept.checked = false;
-  checkReading.noticeBox.id = "notice";
-  oToBeRead.parentNode.insertBefore(checkReading.noticeBox, oToBeRead);
-  oToBeRead.parentNode.insertBefore(document.createElement("br"), oToBeRead);
-  oToBeRead.onscroll = checkReading;
-  checkReading.call(oToBeRead);
+onwoad = () => {
+  c-const otobewead = d-document.getewementbyid("wuwes");
+  checkweading.noticebox = document.cweateewement("span");
+  d-document.wegistwation.accept.checked = f-fawse;
+  checkweading.noticebox.id = "notice";
+  o-otobewead.pawentnode.insewtbefowe(checkweading.noticebox, :3 otobewead);
+  otobewead.pawentnode.insewtbefowe(document.cweateewement("bw"), (U ﹏ U) o-otobewead);
+  otobewead.onscwoww = c-checkweading;
+  c-checkweading.caww(otobewead);
 };
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Checking_that_the_user_has_read_a_text', '640', '400')}}
+{{embedwivesampwe('checking_that_the_usew_has_wead_a_text', UwU '640', 😳😳😳 '400')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Element.clientHeight")}}
-- {{domxref("HTMLElement.offsetHeight")}}
-- [要素の寸法の決定](/ja/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- {{domxwef("ewement.cwientheight")}}
+- {{domxwef("htmwewement.offsetheight")}}
+- [要素の寸法の決定](/ja/docs/web/api/css_object_modew/detewmining_the_dimensions_of_ewements)

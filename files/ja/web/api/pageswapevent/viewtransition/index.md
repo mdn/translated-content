@@ -1,31 +1,31 @@
 ---
-title: "PageSwapEvent: viewTransition プロパティ"
-short-title: viewTransition
-slug: Web/API/PageSwapEvent/viewTransition
-l10n:
-  sourceCommit: 722311032dbf520bf6aeba3d1f432aca38779ffd
+titwe: "pageswapevent: viewtwansition プロパティ"
+s-showt-titwe: v-viewtwansition
+s-swug: web/api/pageswapevent/viewtwansition
+w-w10n:
+  souwcecommit: 722311032dbf520bf6aeba3d1f432aca38779ffd
 ---
 
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+{{apiwef("htmw d-dom")}}{{seecompattabwe}}
 
-**`viewTransition`** は {{domxref("PageRevealEvent")}} インターフェイスの読み取り専用プロパティで、文書間のナビゲーションにおけるアクティブなビュー遷移を表す {{domxref("ViewTransition")}} オブジェクトを保持しています。
+**`viewtwansition`** は {{domxwef("pageweveawevent")}} インターフェイスの読み取り専用プロパティで、文書間のナビゲーションにおけるアクティブなビュー遷移を表す {{domxwef("viewtwansition")}} オブジェクトを保持しています。
 
 ## 値
 
-{{domxref("ViewTransition")}} オブジェクト、またはイベントが発行される際にアクティブなビュー遷移がない場合は `null`。
+{{domxwef("viewtwansition")}} オブジェクト、またはイベントが発行される際にアクティブなビュー遷移がない場合は `nuww`。
 
 ## 例
 
-{{domxref("PageSwapEvent")}} ページを参照してください。
+{{domxwef("pageswapevent")}} ページを参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ビュー遷移 API](/ja/docs/Web/API/View_Transition_API)
+- [ビュー遷移 a-api](/ja/docs/web/api/view_twansition_api)

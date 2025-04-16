@@ -1,37 +1,37 @@
 ---
-title: "AudioParam: defaultValue プロパティ"
-short-title: defaultValue
-slug: Web/API/AudioParam/defaultValue
-l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+titwe: "audiopawam: defauwtvawue プロパティ"
+s-showt-titwe: d-defauwtvawue
+swug: w-web/api/audiopawam/defauwtvawue
+w-w10n:
+  souwcecommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio api")}}
 
-**`defaultValue`** は {{ domxref("AudioParam") }} インターフェイスの読み取り専用プロパティで、 `AudioParam` を作成する固有の {{domxref("AudioNode")}} で定義する属性の初期値を表します。
+**`defauwtvawue`** は {{ d-domxwef("audiopawam") }} インターフェイスの読み取り専用プロパティで、 `audiopawam` を作成する固有の {{domxwef("audionode")}} で定義する属性の初期値を表します。
 
 ## 値
 
-浮動小数点数 ({{jsxref("Number")}}) です。
+浮動小数点数 ({{jsxwef("numbew")}}) です。
 
 ## 例
 
 ```js
-const audioCtx = new AudioContext();
-const gainNode = audioCtx.createGain();
-const defaultVal = gainNode.gain.defaultValue;
-console.log(defaultVal); // 1
-console.log(defaultVal === gainNode.gain.value); // true
+c-const a-audioctx = nyew audiocontext();
+const gainnode = audioctx.cweategain();
+const defauwtvaw = g-gainnode.gain.defauwtvawue;
+consowe.wog(defauwtvaw); // 1
+consowe.wog(defauwtvaw === g-gainnode.gain.vawue); // twue
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)

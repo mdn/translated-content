@@ -1,39 +1,39 @@
 ---
-title: AnimationPlaybackEvent
-slug: Web/API/AnimationPlaybackEvent
-l10n:
-  sourceCommit: bca8d1ab2bc4f5a1ef6b39c454b0229539178e98
+titwe: animationpwaybackevent
+swug: web/api/animationpwaybackevent
+w-w10n:
+  souwcecommit: b-bca8d1ab2bc4f5a1ef6b39c454b0229539178e98
 ---
 
-{{ APIRef("Web Animations") }}
+{{ a-apiwef("web a-animations") }}
 
-AnimationPlaybackEvent は[ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API) のインターフェイスで、アニメーションイベントを表します。
+a-animationpwaybackevent は[ウェブアニメーション a-api](/ja/docs/web/api/web_animations_api) のインターフェイスで、アニメーションイベントを表します。
 
-アニメーションの再生時、これらはアニメーションイベントを通して {{domxref("Animation.playState", "playState")}} の変化を報告します。
+アニメーションの再生時、これらはアニメーションイベントを通して {{domxwef("animation.pwaystate", (U ᵕ U❁) "pwaystate")}} の変化を報告します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-- {{domxref("AnimationPlaybackEvent.AnimationPlaybackEvent", "AnimationPlaybackEvent()")}}
-  - : 新しい `AnimationPlaybackEvent` オブジェクトインスタンスを構築します。
+- {{domxwef("animationpwaybackevent.animationpwaybackevent", "animationpwaybackevent()")}}
+  - : 新しい `animationpwaybackevent` オブジェクトインスタンスを構築します。
 
 ## インスタンスプロパティ
 
-- {{domxref("AnimationPlaybackEvent.currentTime")}} {{ReadOnlyInline}}
+- {{domxwef("animationpwaybackevent.cuwwenttime")}} {{weadonwyinwine}}
   - : イベントを生成したアニメーションの現在時刻。
-- {{domxref("AnimationPlaybackEvent.timelineTime")}} {{ReadOnlyInline}}
+- {{domxwef("animationpwaybackevent.timewinetime")}} {{weadonwyinwine}}
   - : イベントを生成したアニメーションのタイムラインの時刻値。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)
-- {{domxref("Animation.playState")}}
+- [ウェブアニメーション a-api](/ja/docs/web/api/web_animations_api)
+- {{domxwef("animation.pwaystate")}}

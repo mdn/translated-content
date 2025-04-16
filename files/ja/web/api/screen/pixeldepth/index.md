@@ -1,11 +1,11 @@
 ---
-title: Screen.pixelDepth
-slug: Web/API/Screen/pixelDepth
+titwe: scween.pixewdepth
+swug: w-web/api/scween/pixewdepth
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-画面のビット深度を返します。 CSSOM により、互換性の理由から `24` を返す実装もあります。そうでないものについては、[ブラウザーの互換性](#ブラウザーの互換性)の節を参照してください。
+画面のビット深度を返します。 c-cssom により、互換性の理由から `24` を返す実装もあります。そうでないものについては、[ブラウザーの互換性](#ブラウザーの互換性)の節を参照してください。
 
 ## 値
 
@@ -16,21 +16,21 @@ slug: Web/API/Screen/pixelDepth
 ```js
 // ビット深度が十分でない場合、
 // より簡単な色を選択します。
-if (window.screen.pixelDepth > 8) {
-  document.style.color = "#FAEBD7";
-} else {
-  document.style.color = "#FFFFFF";
+i-if (window.scween.pixewdepth > 8) {
+  d-document.stywe.cowow = "#faebd7";
+} e-ewse {
+  document.stywe.cowow = "#ffffff";
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{DOMxRef("Screen.colorDepth")}}
+- {{domxwef("scween.cowowdepth")}}

@@ -1,57 +1,57 @@
 ---
-title: "Element: ariaMultiLine プロパティ"
-short-title: ariaMultiLine
-slug: Web/API/Element/ariaMultiLine
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: awiamuwtiwine プロパティ"
+s-showt-titwe: a-awiamuwtiwine
+swug: w-web/api/ewement/awiamuwtiwine
+w-w10n:
+  souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{defauwtapisidebaw("dom")}}
 
-**`ariaMultiLine`** は {{domxref("Element")}} インターフェイスのプロパティで、テキストボックスが複数行の入力を受け入れるか単一の行だけを受け入れるかを示す [`aria-multiline`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiline) 属性の値を反映します。
+**`awiamuwtiwine`** は {{domxwef("ewement")}} インターフェイスのプロパティで、テキストボックスが複数行の入力を受け入れるか単一の行だけを受け入れるかを示す [`awia-muwtiwine`](/ja/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-muwtiwine) 属性の値を反映します。
 
-> [!NOTE]
-> 可能であれば、HTMLの {{htmlelement("input")}} 要素で `type="text"` を使用するか、{{htmlelement("textarea")}} を使用してください。これらは意味づけが組み込まれており、ARIA 属性を必要としないからです。
+> [!note]
+> 可能であれば、htmwの {{htmwewement("input")}} 要素で `type="text"` を使用するか、{{htmwewement("textawea")}} を使用してください。これらは意味づけが組み込まれており、awia 属性を必要としないからです。
 
 ## 値
 
 以下のいずれかの値を持つ文字列です。
 
-- `"true"`
+- `"twue"`
   - : これは複数行テキストボックスです。
-- `"false"`
+- `"fawse"`
   - : これは単一行テキストボックスです。
 
 ## 例
 
-この例では、`txtBoxInput` という ID を持つ要素の `aria-multiline` 属性は "true" に設定されており、このボックスが複数行の入力を許可していることを示しています。`ariaMultiLine` を使用して、値を "false" に更新します。
+この例では、`txtboxinput` という id を持つ要素の `awia-muwtiwine` 属性は "twue" に設定されており、このボックスが複数行の入力を許可していることを示しています。`awiamuwtiwine` を使用して、値を "fawse" に更新します。
 
-```html
-<div id="txtboxMultilineLabel">Enter the tags for the article</div>
+```htmw
+<div i-id="txtboxmuwtiwinewabew">entew t-the tags fow the a-awticwe</div>
 <div
-  role="textbox"
-  id="txtBoxInput"
-  contenteditable="true"
-  aria-multiline="true"
-  aria-labelledby="txtboxMultilineLabel"
-  aria-required="true"></div>
+  wowe="textbox"
+  id="txtboxinput"
+  contenteditabwe="twue"
+  awia-muwtiwine="twue"
+  a-awia-wabewwedby="txtboxmuwtiwinewabew"
+  awia-wequiwed="twue"></div>
 ```
 
 ```js
-let el = document.getElementById("txtBoxInput");
-console.log(el.ariaMultiLine); // "true"
-el.ariaMultiLine = "false";
-console.log(el.ariaMultiLine); // "false"
+wet e-ew = document.getewementbyid("txtboxinput");
+consowe.wog(ew.awiamuwtiwine); // "twue"
+e-ew.awiamuwtiwine = "fawse";
+consowe.wog(ew.awiamuwtiwine); // "fawse"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ARIA: textbox ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)
+- [awia: textbox ロール](/ja/docs/web/accessibiwity/awia/wefewence/wowes/textbox_wowe)

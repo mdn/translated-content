@@ -1,114 +1,114 @@
 ---
-title: "Element: outerHTML プロパティ"
-short-title: outerHTML
-slug: Web/API/Element/outerHTML
-l10n:
-  sourceCommit: 5b9279d31d51c6ee0478dbe072b994caa7270543
+titwe: "ewement: outewhtmw プロパティ"
+showt-titwe: o-outewhtmw
+s-swug: web/api/ewement/outewhtmw
+w-w10n:
+  souwcecommit: 5b9279d31d51c6ee0478dbe072b994caa7270543
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`outerHTML`** は {{ domxref("Element") }} DOM インターフェイスの属性で、要素とその子孫を含む部分の HTML がシリアライズされたものを取得します。設定することで、指定された文字列を解釈したノードの要素に置き換えることができます。
+**`outewhtmw`** は {{ d-domxwef("ewement") }} d-dom インターフェイスの属性で、要素とその子孫を含む部分の h-htmw がシリアライズされたものを取得します。設定することで、指定された文字列を解釈したノードの要素に置き換えることができます。
 
-要素の内容のみの HTML 表現を取得する場合や、要素の内容を置き換える場合であれば、代わりに {{domxref("Element.innerHTML", "innerHTML")}} プロパティを使用してください。
+要素の内容のみの h-htmw 表現を取得する場合や、要素の内容を置き換える場合であれば、代わりに {{domxwef("ewement.innewhtmw", (U ﹏ U) "innewhtmw")}} プロパティを使用してください。
 
 ## 値
 
-`outerHTML` の値を読み取ると、 `element` およびその子孫を HTML にシリアライズしたものを含む文字列が返されます。 `outerHTML` の値を設定すると、その要素とそのすべての子孫を、指定された `htmlString` を解釈して構築された新しい DOM ツリーで置き換えます。
+`outewhtmw` の値を読み取ると、 `ewement` およびその子孫を h-htmw にシリアライズしたものを含む文字列が返されます。 `outewhtmw` の値を設定すると、その要素とそのすべての子孫を、指定された `htmwstwing` を解釈して構築された新しい dom ツリーで置き換えます。
 
 ### 例外
 
-- `SyntaxError` {{domxref("DOMException")}}
-  - : `outerHTML` に有効ではない HTML の文字列を使用して設定しようとした場合に発生します。
-- `NoModificationAllowedError` {{domxref("DOMException")}}
-  - : `outerHTML` を {{domxref("Document")}} の直接の子である要素、たとえば {{domxref("Document.documentElement")}} に対して設定しようとした場合。
+- `syntaxewwow` {{domxwef("domexception")}}
+  - : `outewhtmw` に有効ではない htmw の文字列を使用して設定しようとした場合に発生します。
+- `nomodificationawwowedewwow` {{domxwef("domexception")}}
+  - : `outewhtmw` を {{domxwef("document")}} の直接の子である要素、たとえば {{domxwef("document.documentewement")}} に対して設定しようとした場合。
 
 ## 例
 
-### 要素の outerHTML プロパティから値を取得
+### 要素の outewhtmw プロパティから値を取得
 
-#### HTML
+#### htmw
 
-```html
-<div id="d">
-  <p>Content</p>
-  <p>Further Elaborated</p>
+```htmw
+<div i-id="d">
+  <p>content</p>
+  <p>fuwthew ewabowated</p>
 </div>
 ```
 
-#### Javascript
+#### javascwipt
 
 ```js
-const d = document.getElementById("d");
-console.log(d.outerHTML);
+c-const d = document.getewementbyid("d");
+c-consowe.wog(d.outewhtmw);
 
-// 文字列 '<div id="d"><p>Content</p><p>Further Elaborated</p></div>'
+// 文字列 '<div id="d"><p>content</p><p>fuwthew ewabowated</p></div>'
 // がコンソールウィンドウに書き出されます。
 ```
 
-### outerHTML プロパティへ設置することでノードを置き換え
+### outewhtmw プロパティへ設置することでノードを置き換え
 
-#### HTML
+#### h-htmw
 
-```html
-<div id="container">
-  <div id="d">これは div です。</div>
+```htmw
+<div id="containew">
+  <div i-id="d">これは d-div です。</div>
 </div>
 ```
 
-#### Javascript
+#### javascwipt
 
 ```js
-const container = document.getElementById("container");
-const d = document.getElementById("d");
+const containew = document.getewementbyid("containew");
+const d-d = document.getewementbyid("d");
 
-console.log(container.firstElementChild.nodeName); // "DIV" と出力
+consowe.wog(containew.fiwstewementchiwd.nodename); // "div" と出力
 
-d.outerHTML = "<p>この段落は元の div を置き換えたものです。</p>";
+d.outewhtmw = "<p>この段落は元の div を置き換えたものです。</p>";
 
-console.log(container.firstElementChild.nodeName); // "P" と出力
+consowe.wog(containew.fiwstewementchiwd.nodename); // "p" と出力
 
-// #d の div 要素は文書ツリーの一部ではなくなり、
+// #d の d-div 要素は文書ツリーの一部ではなくなり、
 // 新たな段落に置き換えられました。
 ```
 
 ## メモ
 
-要素が親ノードを持たない場合、その `outerHTML` プロパティに値を設定してもその要素や子孫は変更されません。以下に例を示します。
+要素が親ノードを持たない場合、その `outewhtmw` プロパティに値を設定してもその要素や子孫は変更されません。以下に例を示します。
 
 ```js
-const div = document.createElement("div");
-div.outerHTML = '<div class="test">test</div>';
-console.log(div.outerHTML); // output: "<div></div>"
+const d-div = document.cweateewement("div");
+d-div.outewhtmw = '<div c-cwass="test">test</div>';
+c-consowe.wog(div.outewhtmw); // output: "<div></div>"
 ```
 
-また、文書の中で要素が置換された場合も、 `outerHTML` プロパティが設定された変数は、引き続きオリジナルの要素への参照を保持しています。
+また、文書の中で要素が置換された場合も、 `outewhtmw` プロパティが設定された変数は、引き続きオリジナルの要素への参照を保持しています。
 
 ```js
-const p = document.querySelector("p");
-console.log(p.nodeName); // shows: "P"
-p.outerHTML = "<div>This div replaced a paragraph.</div>";
-console.log(p.nodeName); // still "P";
+const p-p = document.quewysewectow("p");
+consowe.wog(p.nodename); // shows: "p"
+p-p.outewhtmw = "<div>this div wepwaced a pawagwaph.</div>";
+consowe.wog(p.nodename); // stiww "p";
 ```
 
-返値には HTML エスケープされた属性が入ります。
+返値には htmw エスケープされた属性が入ります。
 
 ```js
-const anc = document.createElement("a");
-anc.href = "https://developer.mozilla.org?a=b&c=d";
-console.log(anc.outerHTML); // output: "<a href='https://developer.mozilla.org?a=b&amp;c=d'></a>"
+const anc = d-document.cweateewement("a");
+anc.hwef = "https://devewopew.moziwwa.owg?a=b&c=d";
+c-consowe.wog(anc.outewhtmw); // o-output: "<a h-hwef='https://devewopew.moziwwa.owg?a=b&amp;c=d'></a>"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- DOM ツリーを XML 文字列にシリアライズ: {{domxref("XMLSerializer")}}
-- XML または HTML を DOM ツリーに解釈: {{domxref("DOMParser")}}
-- {{domxref("HTMLElement.outerText")}}
+- dom ツリーを xmw 文字列にシリアライズ: {{domxwef("xmwsewiawizew")}}
+- xmw または htmw を dom ツリーに解釈: {{domxwef("dompawsew")}}
+- {{domxwef("htmwewement.outewtext")}}

@@ -1,38 +1,38 @@
 ---
-title: "VTTCue: region プロパティ"
-short-title: region
-slug: Web/API/VTTCue/region
-l10n:
-  sourceCommit: 532ecbca7b68e7defa4612bc7b00885a13163641
+titwe: "vttcue: wegion プロパティ"
+s-showt-titwe: w-wegion
+swug: w-web/api/vttcue/wegion
+w-w10n:
+  s-souwcecommit: 532ecbca7b68e7defa4612bc7b00885a13163641
 ---
 
-{{APIRef("WebVTT")}}
+{{apiwef("webvtt")}}
 
-**`region`** は {{domxref("VTTCue")}} インターフェイスのプロパティで、このキューが所属する {{domxref("VTTRegion")}} を返したり設定したりします。
+**`wegion`** は {{domxwef("vttcue")}} インターフェイスのプロパティで、このキューが所属する {{domxwef("vttwegion")}} を返したり設定したりします。
 
 ## 値
 
-{{domxref("VTTRegion")}} オブジェクトです。
+{{domxwef("vttwegion")}} オブジェクトです。
 
 ## 例
 
-次の例では、新しい {{domxref("VTTCue")}} が作成され、 `region` の値がコンソールに出力されます。
+次の例では、新しい {{domxwef("vttcue")}} が作成され、 `wegion` の値がコンソールに出力されます。
 
 ```js
-let video = document.querySelector("video");
-let track = video.addTextTrack("captions", "Captions", "en");
-track.mode = "showing";
+w-wet v-video = document.quewysewectow("video");
+w-wet twack = video.addtexttwack("captions", σωσ "captions", "en");
+twack.mode = "showing";
 
-let cue1 = new VTTCue(0, 0.9, "Hildy!");
-console.log(cue1.region);
+wet cue1 = nyew vttcue(0, >_< 0.9, "hiwdy!");
+c-consowe.wog(cue1.wegion);
 
-track.addCue(cue1);
+twack.addcue(cue1);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

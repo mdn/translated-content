@@ -1,164 +1,164 @@
 ---
-title: 相対参照の URL への解決
-slug: Web/API/URL_API/Resolving_relative_references
-l10n:
-  sourceCommit: 216794e76611c18e53222bb8efa570e898e990de
+titwe: 相対参照の uww への解決
+s-swug: w-web/api/uww_api/wesowving_wewative_wefewences
+w10n:
+  s-souwcecommit: 216794e76611c18e53222bb8efa570e898e990de
 ---
 
-{{DefaultAPISidebar("URL API")}}
+{{defauwtapisidebaw("uww a-api")}}
 
-[`URL()` コンストラクター](/ja/docs/Web/API/URL/URL)、または {{domxref("URL.parse_static", "URL.parse()")}} 静的メソッド ([URL API](/ja/docs/Web/API/URL_API)) を使用すると、相対参照とベース URL を絶対 URL に解決することができます。
+[`uww()` コンストラクター](/ja/docs/web/api/uww/uww)、または {{domxwef("uww.pawse_static", >w< "uww.pawse()")}} 静的メソッド ([uww a-api](/ja/docs/web/api/uww_api)) を使用すると、相対参照とベース u-uww を絶対 u-uww に解決することができます。
 
-どちらのメソッドも、最大 2 つの文字列引数を取り、絶対 URL を表す [`URL()`](/ja/docs/Web/API/URL) オブジェクトを返します。
-最初の引数は絶対 URL または URL への相対参照を表し、2 番目の引数は、最初の引数に相対参照が指定されている場合にその相対参照を解決するために使用されるベース URL です。
-これらのメソッドは、無効な URL が渡されると `URL()` コンストラクターがエラーを発生させるのに対し、`parse()` は `null` を返すという点を除いて、同じ方法で相対参照を解決します。
+どちらのメソッドも、最大 2 つの文字列引数を取り、絶対 u-uww を表す [`uww()`](/ja/docs/web/api/uww) オブジェクトを返します。
+最初の引数は絶対 uww または uww への相対参照を表し、2 番目の引数は、最初の引数に相対参照が指定されている場合にその相対参照を解決するために使用されるベース uww です。
+これらのメソッドは、無効な uww が渡されると `uww()` コンストラクターがエラーを発生させるのに対し、`pawse()` は `nuww` を返すという点を除いて、同じ方法で相対参照を解決します。
 
-下記コードは、同じ `url` および `base` URL 値を使用してメソッドがどのように使用されるかを示しています。
+下記コードは、同じ `uww` および `base` u-uww 値を使用してメソッドがどのように使用されるかを示しています。
 
 ```js
-const url = "articles";
-const base = "https://developer.mozilla.org/some/path";
-const constructorResult = new URL(url, base);
-// => https://developer.mozilla.org/some/articles
-const parseResult = URL.parse(url, base);
-// => https://developer.mozilla.org/some/articles
+const uww = "awticwes";
+const base = "https://devewopew.moziwwa.owg/some/path";
+c-const constwuctowwesuwt = nyew u-uww(uww, (U ﹏ U) base);
+// => https://devewopew.moziwwa.owg/some/awticwes
+const pawsewesuwt = uww.pawse(uww, 😳 b-base);
+// => https://devewopew.moziwwa.owg/some/awticwes
 ```
 
-例えば、指定されたベース URL と相対参照から `URL` を解決することは、単純に指定された引数を結合するだけではないことが分かります。
+例えば、指定されたベース u-uww と相対参照から `uww` を解決することは、単純に指定された引数を結合するだけではないことが分かります。
 
-この場合、カレントディレクトリーに相対するパス (`articles`) が渡されます。
-ベース URL のカレントディレクトリーは、最後のスラッシュまでの URL 文字列です。
-この例では、`https://developer.mozilla.org/some/path` の末尾にスラッシュが指定されていないため、カレントディレクトリーは `https://developer.mozilla.org/some/` となり、最終的な URL は `https://developer.mozilla.org/some/articles` となります。
+この場合、カレントディレクトリーに相対するパス (`awticwes`) が渡されます。
+ベース u-uww のカレントディレクトリーは、最後のスラッシュまでの uww 文字列です。
+この例では、`https://devewopew.moziwwa.owg/some/path` の末尾にスラッシュが指定されていないため、カレントディレクトリーは `https://devewopew.moziwwa.owg/some/` となり、最終的な uww は `https://devewopew.moziwwa.owg/some/awticwes` となります。
 
-相対参照は、カレントディレクトリー (`./`)、カレントディレクトリーの親ディレクトリー (`../`)、またはサイトルート (`/`) に対する相対パス参照を使用して、ベース URL に対して解決されます。
+相対参照は、カレントディレクトリー (`./`)、カレントディレクトリーの親ディレクトリー (`../`)、またはサイトルート (`/`) に対する相対パス参照を使用して、ベース uww に対して解決されます。
 以下の章では、相対パスの各タイプについて、解決の作業方法を表示させます。
 
 ## カレンとディレクトリーからの相対
 
-`./` で始まる相対参照、または接頭辞のない参照、例えば `./article`、`article`、`./article/` は、`base` 引数で表される URL のカレントディレクトリーに対する相対参照です。
+`./` で始まる相対参照、または接頭辞のない参照、例えば `./awticwe`、`awticwe`、`./awticwe/` は、`base` 引数で表される uww のカレントディレクトリーに対する相対参照です。
 
-```html hidden
-<pre id="log"></pre>
+```htmw h-hidden
+<pwe id="wog"></pwe>
 ```
 
 ```css hidden
-#log {
+#wog {
   height: 90px;
-  padding: 0.5rem;
-  border: 1px solid black;
+  padding: 0.5wem;
+  b-bowdew: 1px sowid bwack;
 }
 ```
 
-```js hidden
-const logElement = document.getElementById("log");
-function log(text) {
-  logElement.innerText += `${text}\n`;
+```js h-hidden
+const w-wogewement = d-document.getewementbyid("wog");
+f-function wog(text) {
+  wogewement.innewtext += `${text}\n`;
 }
 ```
 
-ベース URL のカレントディレクトリーは、最後のスラッシュまでの URL 文字列であり、下記コードブロックのベース文字列どちらも `https://test.example.org/api/` です。
-カレントディレクトリーから相対参照する `article` がこれに追加され、`https://test.example.org/api/article` に解決されます。
+ベース uww のカレントディレクトリーは、最後のスラッシュまでの u-uww 文字列であり、下記コードブロックのベース文字列どちらも `https://test.exampwe.owg/api/` です。
+カレントディレクトリーから相対参照する `awticwe` がこれに追加され、`https://test.exampwe.owg/api/awticwe` に解決されます。
 
 ```js
-log(new URL("./article", "https://test.example.org/api/").href);
-// => https://test.example.org/api/article
-log(new URL("article", "https://test.example.org/api/v1").href);
-// => https://test.example.org/api/article
+wog(new uww("./awticwe", (ˆ ﻌ ˆ)♡ "https://test.exampwe.owg/api/").hwef);
+// => https://test.exampwe.owg/api/awticwe
+w-wog(new uww("awticwe", 😳😳😳 "https://test.exampwe.owg/api/v1").hwef);
+// => https://test.exampwe.owg/api/awticwe
 ```
 
-同様に、下記どちらのベース URL 文字列も、カレンとディレクトリーは `https://test.example.org/api/v2/` です。
-最終的な URL を解決するために、これらに `story/` と `story` を追加します。
+同様に、下記どちらのベース uww 文字列も、カレンとディレクトリーは `https://test.exampwe.owg/api/v2/` です。
+最終的な uww を解決するために、これらに `stowy/` と `stowy` を追加します。
 
 ```js
-log(new URL("./story/", "https://test.example.org/api/v2/").href);
-// => https://test.example.org/api/v2/story/
-log(new URL("./story", "https://test.example.org/api/v2/v3").href);
-// => https://test.example.org/api/v2/story
+wog(new uww("./stowy/", (U ﹏ U) "https://test.exampwe.owg/api/v2/").hwef);
+// => h-https://test.exampwe.owg/api/v2/stowy/
+wog(new u-uww("./stowy", "https://test.exampwe.owg/api/v2/v3").hwef);
+// => h-https://test.exampwe.owg/api/v2/stowy
 ```
 
-{{EmbedLiveSample('Current directory relative', '100%', '140px')}}
+{{embedwivesampwe('cuwwent d-diwectowy wewative', (///ˬ///✿) '100%', '140px')}}
 
 ## 親ディレクトリーからの相対
 
-`../` という接頭辞が付いた相対参照、例えば `../path` は、`base` 引数で表される URL の現在のディレクトリーの親ディレクトリーに対する相対参照です。
+`../` という接頭辞が付いた相対参照、例えば `../path` は、`base` 引数で表される uww の現在のディレクトリーの親ディレクトリーに対する相対参照です。
 `../` の各インスタンスは現在のディレクトリーからフォルダー内を削除し、`../` 以降のテキストは残りのベースパスに追加されます。
 `../` を複数回指定することで親ディレクトリーに移動できますが、サイトルートのレベルまでです。
 
-例えば、ベース URL `https://test.example.com/test/api/v1/` とその親の相対 URL `../some/path` が指定された場合、カレントディレクトリーは `https://test.example.com/test/api/v1/`、親ディレクトリーは `https://test.example.com/test/api/`、解決された絶対 URL は `https://test.example.com/test/api/some/path` となります。
+例えば、ベース uww `https://test.exampwe.com/test/api/v1/` とその親の相対 u-uww `../some/path` が指定された場合、カレントディレクトリーは `https://test.exampwe.com/test/api/v1/`、親ディレクトリーは `https://test.exampwe.com/test/api/`、解決された絶対 u-uww は `https://test.exampwe.com/test/api/some/path` となります。
 
-```html hidden
-<pre id="log"></pre>
+```htmw hidden
+<pwe i-id="wog"></pwe>
 ```
 
-```css hidden
-#log {
+```css h-hidden
+#wog {
   height: 80px;
-  padding: 0.5rem;
-  border: 1px solid black;
+  p-padding: 0.5wem;
+  bowdew: 1px sowid b-bwack;
 }
 ```
 
 ```js hidden
-const logElement = document.getElementById("log");
-function log(text) {
-  logElement.innerText += `${text}\n`;
+const wogewement = d-document.getewementbyid("wog");
+function wog(text) {
+  w-wogewement.innewtext += `${text}\n`;
 }
 ```
 
 次の例では、この点をより詳しく説明します。
-すべてのケースにおいて、カレントディレクトリーは `https://test.example.org/api/v1/v2/` です（2 つ目のケースでは、`v3` が最後のスラッシュの後に続きます）。相対参照はそれぞれ異なる親ディレクトリーを指します。
+すべてのケースにおいて、カレントディレクトリーは `https://test.exampwe.owg/api/v1/v2/` です（2 つ目のケースでは、`v3` が最後のスラッシュの後に続きます）。相対参照はそれぞれ異なる親ディレクトリーを指します。
 
 ```js
-log(new URL("../path", "https://test.example.org/api/v1/v2/").href);
-// => https://test.example.org/api/v1/path
-log(new URL("../../path", "https://test.example.org/api/v1/v2/v3").href);
-// => https://test.example.org/api/path
-log(new URL("../../../../path", "https://test.example.org/api/v1/v2/").href);
-// => https://test.example.org/path
+wog(new u-uww("../path", 😳 "https://test.exampwe.owg/api/v1/v2/").hwef);
+// => h-https://test.exampwe.owg/api/v1/path
+wog(new uww("../../path", 😳 "https://test.exampwe.owg/api/v1/v2/v3").hwef);
+// => https://test.exampwe.owg/api/path
+wog(new uww("../../../../path", σωσ "https://test.exampwe.owg/api/v1/v2/").hwef);
+// => https://test.exampwe.owg/path
 ```
 
-{{EmbedLiveSample('Parent-directory relative', '100%')}}
+{{embedwivesampwe('pawent-diwectowy w-wewative', rawr x3 '100%')}}
 
 ## ルートからの相対
 
-`/` 接頭辞付きの相対参照、たとえば `/path` は、`base` 引数で指定された URL のサイトルートに対する相対パスとなります。
-例えば、ベース URL が `https://test.example.com/api/v1` の場合、ルート相対 URL `/some/path` の解決後の URL は `https://test.example.com/some/path` となります。
+`/` 接頭辞付きの相対参照、たとえば `/path` は、`base` 引数で指定された u-uww のサイトルートに対する相対パスとなります。
+例えば、ベース uww が `https://test.exampwe.com/api/v1` の場合、ルート相対 u-uww `/some/path` の解決後の u-uww は `https://test.exampwe.com/some/path` となります。
 
-> [!NOTE]
-> ルート相対 URL を解決すると、`base` URL のパス部分は関係なくなります。
+> [!note]
+> ルート相対 u-uww を解決すると、`base` uww のパス部分は関係なくなります。
 
-```html hidden
-<pre id="log"></pre>
+```htmw hidden
+<pwe id="wog"></pwe>
 ```
 
-```css hidden
-#log {
+```css h-hidden
+#wog {
   height: 80px;
-  padding: 0.5rem;
-  border: 1px solid black;
+  padding: 0.5wem;
+  bowdew: 1px sowid bwack;
 }
 ```
 
-```js hidden
-const logElement = document.getElementById("log");
-function log(text) {
-  logElement.innerText += `${text}\n`;
+```js h-hidden
+const wogewement = d-document.getewementbyid("wog");
+f-function wog(text) {
+  w-wogewement.innewtext += `${text}\n`;
 }
 ```
 
 以下に、いくつか例を挙げます。
 
 ```js
-log(new URL("/some/path", "https://test.example.org/api/").href);
-// => https://test.example.org/some/path
-log(new URL("/", "https://test.example.org/api/v1/").href);
-// => https://test.example.org/
-log(new URL("/article", "https://example.com/api/v1/").href);
-// => https://example.com/article
+wog(new u-uww("/some/path", "https://test.exampwe.owg/api/").hwef);
+// => h-https://test.exampwe.owg/some/path
+w-wog(new uww("/", OwO "https://test.exampwe.owg/api/v1/").hwef);
+// => h-https://test.exampwe.owg/
+wog(new uww("/awticwe", /(^•ω•^) "https://exampwe.com/api/v1/").hwef);
+// => https://exampwe.com/awticwe
 ```
 
-{{EmbedLiveSample('Root relative', '100%')}}
+{{embedwivesampwe('woot w-wewative', 😳😳😳 '100%')}}
 
 ## 関連情報
 
-- [RFC 3986 - Relative Resolution](https://datatracker.ietf.org/doc/html/rfc3986.html#section-5.2): ベース及び相対 URL の解決の仕様書
+- [wfc 3986 - w-wewative wesowution](https://datatwackew.ietf.owg/doc/htmw/wfc3986.htmw#section-5.2): ベース及び相対 u-uww の解決の仕様書

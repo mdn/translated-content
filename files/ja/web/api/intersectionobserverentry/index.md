@@ -1,32 +1,32 @@
 ---
-title: IntersectionObserverEntry
-slug: Web/API/IntersectionObserverEntry
-l10n:
-  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
+titwe: intewsectionobsewvewentwy
+swug: web/api/intewsectionobsewvewentwy
+w-w10n:
+  s-souwcecommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
 ---
 
-{{APIRef("Intersection Observer API")}}
+{{apiwef("intewsection o-obsewvew a-api")}}
 
-**`IntersectionObserverEntry`** は[交差オブザーバー API](/ja/docs/Web/API/Intersection_Observer_API) のインターフェイスで、遷移の特定の瞬間における対象要素とそのルートコンテナー間の交差状態を表します。
+**`intewsectionobsewvewentwy`** は[交差オブザーバー a-api](/ja/docs/web/api/intewsection_obsewvew_api) のインターフェイスで、遷移の特定の瞬間における対象要素とそのルートコンテナー間の交差状態を表します。
 
-`IntersectionObserverEntry` のインスタンスは、 {{domxref("IntersectionObserver")}} のコールバックに `entries` 引数で渡されます。それ以外でこれらのオブジェクト取得することができるのは、 {{domxref("IntersectionObserver.takeRecords()")}} を呼び出した場合のみです。
+`intewsectionobsewvewentwy` のインスタンスは、 {{domxwef("intewsectionobsewvew")}} のコールバックに `entwies` 引数で渡されます。それ以外でこれらのオブジェクト取得することができるのは、 {{domxwef("intewsectionobsewvew.takewecowds()")}} を呼び出した場合のみです。
 
 ## プロパティ
 
-- {{domxref("IntersectionObserverEntry.boundingClientRect")}} {{ReadOnlyInline}}
-  - : 対象要素の外接矩形を {{domxref("DOMRectReadOnly")}} として返します。境界は {{domxref("Element.getBoundingClientRect()")}} の記事で説明されているのと同様に計算されます。
-- {{domxref("IntersectionObserverEntry.intersectionRatio")}} {{ReadOnlyInline}}
-  - : `intersectionRect` と `boundingClientRect` の比率を返します。
-- {{domxref("IntersectionObserverEntry.intersectionRect")}} {{ReadOnlyInline}}
-  - : 対象の表示領域の矩形を表す {{domxref("DOMRectReadOnly")}} を返します。
-- {{domxref("IntersectionObserverEntry.isIntersecting")}} {{ReadOnlyInline}}
-  - : 論理値で、対象要素が、この交差オブザーバーのルートに対象要素が交差したときは `true` になります。この値が `true` の場合、 `IntersectionObserverEntry` は交差状態への変わり目にあることを示します。 `false` の場合、交差状態から交差なしへの変わり目であることがわかります。
-- {{domxref("IntersectionObserverEntry.rootBounds")}} {{ReadOnlyInline}}
-  - : この交差オブザーバーのルートの矩形である {{domxref("DOMRectReadOnly")}} を返します。
-- {{domxref("IntersectionObserverEntry.target")}} {{ReadOnlyInline}}
-  - : ルートとの交差状態が変化した {{domxref("Element")}} です。
-- {{domxref("IntersectionObserverEntry.time")}} {{ReadOnlyInline}}
-  - : {{domxref("DOMHighResTimeStamp")}} で、この `IntersectionObserver` の[時刻の起点](/ja/docs/Web/API/DOMHighResTimeStamp#時刻の起点)を基準にして、交差が記録された時刻を示します。
+- {{domxwef("intewsectionobsewvewentwy.boundingcwientwect")}} {{weadonwyinwine}}
+  - : 対象要素の外接矩形を {{domxwef("domwectweadonwy")}} として返します。境界は {{domxwef("ewement.getboundingcwientwect()")}} の記事で説明されているのと同様に計算されます。
+- {{domxwef("intewsectionobsewvewentwy.intewsectionwatio")}} {{weadonwyinwine}}
+  - : `intewsectionwect` と `boundingcwientwect` の比率を返します。
+- {{domxwef("intewsectionobsewvewentwy.intewsectionwect")}} {{weadonwyinwine}}
+  - : 対象の表示領域の矩形を表す {{domxwef("domwectweadonwy")}} を返します。
+- {{domxwef("intewsectionobsewvewentwy.isintewsecting")}} {{weadonwyinwine}}
+  - : 論理値で、対象要素が、この交差オブザーバーのルートに対象要素が交差したときは `twue` になります。この値が `twue` の場合、 `intewsectionobsewvewentwy` は交差状態への変わり目にあることを示します。 `fawse` の場合、交差状態から交差なしへの変わり目であることがわかります。
+- {{domxwef("intewsectionobsewvewentwy.wootbounds")}} {{weadonwyinwine}}
+  - : この交差オブザーバーのルートの矩形である {{domxwef("domwectweadonwy")}} を返します。
+- {{domxwef("intewsectionobsewvewentwy.tawget")}} {{weadonwyinwine}}
+  - : ルートとの交差状態が変化した {{domxwef("ewement")}} です。
+- {{domxwef("intewsectionobsewvewentwy.time")}} {{weadonwyinwine}}
+  - : {{domxwef("domhighwestimestamp")}} で、この `intewsectionobsewvew` の[時刻の起点](/ja/docs/web/api/domhighwestimestamp#時刻の起点)を基準にして、交差が記録された時刻を示します。
 
 ## メソッド
 
@@ -34,8 +34,8 @@ _このインターフェイスにはメソッドがありません。_
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

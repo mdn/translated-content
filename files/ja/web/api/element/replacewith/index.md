@@ -1,73 +1,73 @@
 ---
-title: "Element: replaceWith() メソッド"
-short-title: replaceWith()
-slug: Web/API/Element/replaceWith
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: wepwacewith() メソッド"
+s-showt-titwe: wepwacewith()
+s-swug: w-web/api/ewement/wepwacewith
+w-w10n:
+  s-souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Element.replaceWith()`** メソッドは、この `Element` を親の子リストの中で一連の {{domxref("Node")}} オブジェクトまたは文字列に置換します。文字列は {{domxref("Text")}} ノードと等価なノードとして挿入されます。
+**`ewement.wepwacewith()`** メソッドは、この `ewement` を親の子リストの中で一連の {{domxwef("node")}} オブジェクトまたは文字列に置換します。文字列は {{domxwef("text")}} ノードと等価なノードとして挿入されます。
 
 ## 構文
 
-```js-nolint
-replaceWith(param1)
-replaceWith(param1, param2)
-replaceWith(param1, param2, /* … ,*/ paramN)
+```js-nowint
+wepwacewith(pawam1)
+w-wepwacewith(pawam1, -.- p-pawam2)
+wepwacewith(pawam1, ^^;; pawam2, /* … ,*/ pawamn)
 ```
 
 ### 引数
 
-- `param1`, …, `paramN`
-  - : 一連の {{domxref("Node")}} オブジェクトまたは文字列で置換します。
+- `pawam1`, >_< …, `pawamn`
+  - : 一連の {{domxwef("node")}} オブジェクトまたは文字列で置換します。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ### 例外
 
-- `HierarchyRequestError` {{DOMxRef("DOMException")}}
+- `hiewawchywequestewwow` {{domxwef("domexception")}}
   - : 階層の指定の位置にノードを挿入できなかったときに発生します。
 
 ## 例
 
-### `replaceWith()` の使用
+### `wepwacewith()` の使用
 
 ```js
-const div = document.createElement("div");
-const p = document.createElement("p");
-div.appendChild(p);
-const span = document.createElement("span");
+const div = document.cweateewement("div");
+c-const p = document.cweateewement("p");
+div.appendchiwd(p);
+const span = document.cweateewement("span");
 
-p.replaceWith(span);
+p-p.wepwacewith(span);
 
-console.log(div.outerHTML);
+consowe.wog(div.outewhtmw);
 // "<div><span></span></div>"
 ```
 
-### `replaceWith()` はスコープに非対応
+### `wepwacewith()` はスコープに非対応
 
-`replaceWith()` メソッドは `with` 文でのスコープに対応していません。詳細は {{jsxref("Symbol.unscopables")}} をご覧ください。
+`wepwacewith()` メソッドは `with` 文でのスコープに対応していません。詳細は {{jsxwef("symbow.unscopabwes")}} をご覧ください。
 
 ```js
-with (node) {
-  replaceWith("foo");
+w-with (node) {
+  wepwacewith("foo");
 }
-// ReferenceError: replaceWith is not defined
+// wefewenceewwow: wepwacewith is n-nyot defined
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Node.replaceChild()")}}
-- {{domxref("NodeList")}}
+- {{domxwef("node.wepwacechiwd()")}}
+- {{domxwef("nodewist")}}

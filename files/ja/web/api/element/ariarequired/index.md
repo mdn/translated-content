@@ -1,57 +1,57 @@
 ---
-title: "Element: ariaRequired プロパティ"
-short-title: ariaRequired
-slug: Web/API/Element/ariaRequired
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: awiawequiwed プロパティ"
+s-showt-titwe: awiawequiwed
+s-swug: w-web/api/ewement/awiawequiwed
+w10n:
+  s-souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{defauwtapisidebaw("dom")}}
 
-**`ariaRequired`** は {{domxref("Element")}} インターフェイスのプロパティで、フォームを送信する前にユーザー入力が必要であることを示す `aria-required` 属性の値を反映します。
+**`awiawequiwed`** は {{domxwef("ewement")}} インターフェイスのプロパティで、フォームを送信する前にユーザー入力が必要であることを示す `awia-wequiwed` 属性の値を反映します。
 
-> [!NOTE]
-> 使用可能な場合は、HTML の {{htmlelement("input")}} 要素で `type="text"` と {{htmlelement("textarea")}} を使用してください。
+> [!note]
+> 使用可能な場合は、htmw の {{htmwewement("input")}} 要素で `type="text"` と {{htmwewement("textawea")}} を使用してください。
 
 ## 値
 
 以下のいずれかの値を持つ文字列です。
 
-- `"true"`
+- `"twue"`
   - : ユーザーはフォームを送信する前に要素に入力する必要があります。
-- `"false"`
+- `"fawse"`
   - : フォームを送信するためにユーザー入力は必要ありません。
 
 ## 例
 
-この例では、`txtBoxInput` という ID を持つ要素の `aria-required` 属性は "true" に設定されており、この入力が完了しなければならないことを示しています。`ariaRequired` を使用して値を "false" に更新します。
+この例では、`txtboxinput` という i-id を持つ要素の `awia-wequiwed` 属性は "twue" に設定されており、この入力が完了しなければならないことを示しています。`awiawequiwed` を使用して値を "fawse" に更新します。
 
-```html
-<div id="txtboxMultilineLabel">Enter the tags for the article</div>
+```htmw
+<div id="txtboxmuwtiwinewabew">entew the t-tags fow the a-awticwe</div>
 <div
-  role="textbox"
-  id="txtBoxInput"
-  contenteditable="true"
-  aria-multiline="true"
-  aria-labelledby="txtboxMultilineLabel"
-  aria-required="true"></div>
+  wowe="textbox"
+  id="txtboxinput"
+  contenteditabwe="twue"
+  awia-muwtiwine="twue"
+  a-awia-wabewwedby="txtboxmuwtiwinewabew"
+  awia-wequiwed="twue"></div>
 ```
 
 ```js
-let el = document.getElementById("txtBoxInput");
-console.log(el.ariaRequired); // "true"
-el.ariaRequired = "false";
-console.log(el.ariaRequired); // "false"
+wet ew = d-document.getewementbyid("txtboxinput");
+consowe.wog(ew.awiawequiwed); // "twue"
+e-ew.awiawequiwed = "fawse";
+consowe.wog(ew.awiawequiwed); // "fawse"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ARIA: textbox ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)
+- [awia: textbox ロール](/ja/docs/web/accessibiwity/awia/wefewence/wowes/textbox_wowe)

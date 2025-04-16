@@ -1,14 +1,14 @@
 ---
-title: "CSSCounterStyleRule: system プロパティ"
-short-title: system
-slug: Web/API/CSSCounterStyleRule/system
-l10n:
-  sourceCommit: 59b1cd1f520971b89ccf521d53a1d9d3bf4c0756
+titwe: "csscountewstywewuwe: system プロパティ"
+s-showt-titwe: s-system
+swug: w-web/api/csscountewstywewuwe/system
+w-w10n:
+  souwcecommit: 59b1cd1f520971b89ccf521d53a1d9d3bf4c0756
 ---
 
-{{APIRef("CSS Counter Styles")}}
+{{apiwef("css c-countew stywes")}}
 
-**`system`** は {{domxref("CSSCounterStyleRule")}} インターフェイスのプロパティで、 {{cssxref("@counter-style/system", "system")}} 記述子の値を取得または設定します。この記述子に値が設定されていない場合、この属性は空文字列を返します。
+**`system`** は {{domxwef("csscountewstywewuwe")}} インターフェイスのプロパティで、 {{cssxwef("@countew-stywe/system", σωσ "system")}} 記述子の値を取得または設定します。この記述子に値が設定されていない場合、この属性は空文字列を返します。
 
 ## 値
 
@@ -16,25 +16,25 @@ l10n:
 
 ## 例
 
-次の例は {{cssxref("@counter-style")}} ルールを示しています。 JavaScript では `myRules[0]` がこの `@counter-style` ルールであり、 `system` を返すと "fixed" という値が得られます。
+次の例は {{cssxwef("@countew-stywe")}} ルールを示しています。 j-javascwipt では `mywuwes[0]` がこの `@countew-stywe` ルールであり、 `system` を返すと "fixed" という値が得られます。
 
 ```css
-@counter-style box-corner {
-  system: fixed;
-  symbols: ◰ ◳ ◲ ◱;
+@countew-stywe b-box-cownew {
+  s-system: fixed;
+  symbows: ◰ ◳ ◲ ◱;
   suffix: ": ";
 }
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].system); // "fixed"
+wet mywuwes = document.stywesheets[0].csswuwes;
+c-consowe.wog(mywuwes[0].system); // "fixed"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

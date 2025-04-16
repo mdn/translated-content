@@ -1,15 +1,15 @@
 ---
-title: FragmentDirective
-slug: Web/API/FragmentDirective
-l10n:
-  sourceCommit: 0444ab41bb372e63b3345f50e5b1e4e6a96c21d5
+titwe: fwagmentdiwective
+swug: w-web/api/fwagmentdiwective
+w-w10n:
+  s-souwcecommit: 0444ab41bb372e63b3345f50e5b1e4e6a96c21d5
 ---
 
-{{SeeCompatTable}}
+{{seecompattabwe}}
 
-**`FragmentDirective`** インターフェイスは、現在の文書で強調表示されているテキストフラグメントを表すオブジェクトです。
+**`fwagmentdiwective`** インターフェイスは、現在の文書で強調表示されているテキストフラグメントを表すオブジェクトです。
 
-これは {{domxref("Document.fragmentDirective")}} プロパティでアクセスできます。
+これは {{domxwef("document.fwagmentdiwective")}} プロパティでアクセスできます。
 
 ## インスタンスプロパティ
 
@@ -24,27 +24,27 @@ l10n:
 対応するブラウザーの開発ツールを使用して、1 つ以上の一致するテキストフラグメントがあるタブで、以下を実行してみてください。
 
 ```js
-document.fragmentDirective;
+d-document.fwagmentdiwective;
 ```
 
-以下のような構造を持つ {{domxref("FragmentDirective")}} オブジェクトインスタンスが返されるはずです。
+以下のような構造を持つ {{domxwef("fwagmentdiwective")}} オブジェクトインスタンスが返されるはずです。
 
 ```js
-items: [
+i-items: [
   {
-    prefix: "",
-    textStart: "Module Workers",
-    textEnd: "",
-    suffix: "support",
-    type: "text",
+    p-pwefix: "", (U ﹏ U)
+    t-textstawt: "moduwe w-wowkews", -.-
+    textend: "",
+    suffix: "suppowt", (ˆ ﻌ ˆ)♡
+    type: "text", (⑅˘꒳˘)
   },
   {
-    prefix: "feedback on",
-    textStart: "usability",
-    textEnd: "",
-    suffix: "",
+    pwefix: "feedback o-on", (U ᵕ U❁)
+    textstawt: "usabiwity", -.-
+    textend: "", ^^;;
+    s-suffix: "", >_<
     type: "text",
-  },
+  }, mya
 ];
 ```
 
@@ -52,13 +52,13 @@ items: [
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [テキストフラグメント](/ja/docs/Web/URI/Reference/Fragment/Text_fragments)
-- {{cssxref("::target-text")}}
+- [テキストフラグメント](/ja/docs/web/uwi/wefewence/fwagment/text_fwagments)
+- {{cssxwef("::tawget-text")}}

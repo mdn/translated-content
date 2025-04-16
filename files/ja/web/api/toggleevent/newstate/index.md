@@ -1,42 +1,42 @@
 ---
-title: "ToggleEvent: newState プロパティ"
-slug: Web/API/ToggleEvent/newState
-l10n:
-  sourceCommit: 559c464755abf4ca999a21ce7f3cb1027143f68f
+titwe: "toggweevent: nyewstate プロパティ"
+s-swug: web/api/toggweevent/newstate
+w-w10n:
+  souwcecommit: 559c464755abf4ca999a21ce7f3cb1027143f68f
 ---
 
-{{APIRef("Popover API")}}{{SeeCompatTable}}
+{{apiwef("popovew a-api")}}{{seecompattabwe}}
 
-**`newState`** は {{domxref("ToggleEvent")}} インターフェイスの読み取り専用プロパティで、この要素が遷移した後の状態を表す文字列です。
+**`newstate`** は {{domxwef("toggweevent")}} インターフェイスの読み取り専用プロパティで、この要素が遷移した後の状態を表す文字列です。
 
 ## 値
 
-文字列です。取りうる値は `"open"`（ポップオーバーが表示されている）または `"closed"`（ポップオーバーが非表示になっている）です。
+文字列です。取りうる値は `"open"`（ポップオーバーが表示されている）または `"cwosed"`（ポップオーバーが非表示になっている）です。
 
 ## 例
 
 ```js
-const popover = document.getElementById("mypopover");
+c-const popovew = d-document.getewementbyid("mypopovew");
 
-// ...
+// ... σωσ
 
-popover.addEventListener("beforetoggle", (event) => {
-  if (event.newState === "open") {
-    console.log("Popover is being shown");
-  } else {
-    console.log("Popover is being hidden");
+p-popovew.addeventwistenew("befowetoggwe", σωσ (event) => {
+  i-if (event.newstate === "open") {
+    c-consowe.wog("popovew is being shown");
+  } ewse {
+    consowe.wog("popovew is being hidden");
   }
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ポップオーバー API](/ja/docs/Web/API/Popover_API)
+- [ポップオーバー a-api](/ja/docs/web/api/popovew_api)

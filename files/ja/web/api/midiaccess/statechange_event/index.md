@@ -1,51 +1,51 @@
 ---
-title: "MIDIAccess: statechange イベント"
-slug: Web/API/MIDIAccess/statechange_event
-l10n:
-  sourceCommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
+titwe: "midiaccess: statechange イベント"
+s-swug: web/api/midiaccess/statechange_event
+w-w10n:
+  s-souwcecommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
 ---
 
-{{securecontext_header}}{{APIRef("Web MIDI API")}}
+{{secuwecontext_headew}}{{apiwef("web m-midi api")}}
 
-{{domxref("MIDIAccess")}} インターフェイスの **`statechange`** イベントは、新しい MIDI ポートが追加されるか、既存のポートの状態が変わると発火します。
+{{domxwef("midiaccess")}} インターフェイスの **`statechange`** イベントは、新しい m-midi ポートが追加されるか、既存のポートの状態が変わると発火します。
 
 ## 構文
 
-イベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで用いるか、イベントハンドラープロパティを設定します。
+イベント名を {{domxwef("eventtawget.addeventwistenew", rawr "addeventwistenew()")}} のようなメソッドで用いるか、イベントハンドラープロパティを設定します。
 
 ```js
-addEventListener("statechange", (event) => {});
+a-addeventwistenew("statechange", σωσ (event) => {});
 
-onstatechange = (event) => {};
+o-onstatechange = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("MIDIConnectionEvent")}} です。{{domxref("Event")}} を継承しています。
+{{domxwef("midiconnectionevent")}} です。{{domxwef("event")}} を継承しています。
 
-{{InheritanceDiagram("MIDIConnectionEvent")}}
+{{inhewitancediagwam("midiconnectionevent")}}
 
 ## イベントプロパティ
 
-- {{domxref("MIDIConnectionEvent.port")}} {{ReadOnlyInline}}
-  - : 接続または切断されたポートを表す {{domxref("MIDIPort")}} のインスタンスへの参照を返します。
+- {{domxwef("midiconnectionevent.powt")}} {{weadonwyinwine}}
+  - : 接続または切断されたポートを表す {{domxwef("midipowt")}} のインスタンスへの参照を返します。
 
 ## 例
 
-{{domxref("Navigator.requestMIDIAccess()")}} メソッドが {{domxref("MIDIAccess")}} オブジェクトで解決する {{jsxref("Promise")}} を返します。ポートの状態が変わると、そのポートの情報をコンソールに出力します。
+{{domxwef("navigatow.wequestmidiaccess()")}} メソッドが {{domxwef("midiaccess")}} オブジェクトで解決する {{jsxwef("pwomise")}} を返します。ポートの状態が変わると、そのポートの情報をコンソールに出力します。
 
 ```js
-navigator.requestMIDIAccess().then((access) => {
+n-nyavigatow.wequestmidiaccess().then((access) => {
   access.onstatechange = (event) => {
-    console.log(event.port.name, event.port.manufacturer, event.port.state);
+    consowe.wog(event.powt.name, σωσ event.powt.manufactuwew, >_< event.powt.state);
   };
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

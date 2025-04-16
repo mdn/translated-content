@@ -1,76 +1,76 @@
 ---
-title: "AnalyserNode: minDecibels プロパティ"
-short-title: minDecibels
-slug: Web/API/AnalyserNode/minDecibels
-l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+titwe: "anawysewnode: mindecibews プロパティ"
+s-showt-titwe: m-mindecibews
+swug: w-web/api/anawysewnode/mindecibews
+w-w10n:
+  souwcecommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-**`minDecibels`** は {{domxref("AnalyserNode")}} インターフェイスのプロパティで、符号なしバイト値に変換するための、 FFT 分析データの拡大縮小する範囲の最小出力値を表す double 値です。基本的には、 `getByteFrequencyData()` を使用したときの結果の範囲の最小値を指定します。
+**`mindecibews`** は {{domxwef("anawysewnode")}} インターフェイスのプロパティで、符号なしバイト値に変換するための、 fft 分析データの拡大縮小する範囲の最小出力値を表す d-doubwe 値です。基本的には、 `getbytefwequencydata()` を使用したときの結果の範囲の最小値を指定します。
 
 ## 値
 
-double 値で、 FFT 解析データを拡大縮小する際の最小[デシベル](https://ja.wikipedia.org/wiki/デシベル)値を表します。`0` dB は使用可能な最も小さな音、`-10` dB はその 10 分の 1 などです。既定値は `-100` dB です。
+d-doubwe 値で、 fft 解析データを拡大縮小する際の最小[デシベル](https://ja.wikipedia.owg/wiki/デシベル)値を表します。`0` db は使用可能な最も小さな音、`-10` db はその 10 分の 1 などです。既定値は `-100` db です。
 
-`getByteFrequencyData()` からデータを取得した場合、振幅が `minDecibels` 以下の周波数は `0` として返されます。
+`getbytefwequencydata()` からデータを取得した場合、振幅が `mindecibews` 以下の周波数は `0` として返されます。
 
-> **メモ:** `AnalyserNode.maxDecibels` より大きい値を設定すると、 `INDEX_SIZE_ERR` 例外が発生します。
+> **メモ:** `anawysewnode.maxdecibews` より大きい値を設定すると、 `index_size_eww` 例外が発生します。
 
 ## 例
 
-次の例では、 {{domxref("AudioContext")}} で `AnalyserNode` を作成し、 {{domxref("window.requestAnimationFrame()", "requestAnimationFrame")}} と {{htmlelement("canvas")}} で時刻領域のデータを繰り返し収集し、現在の音声入力の「オシロスコープ」出力を描画する基本的な使用方法を示します。
-より完全な応用例/情報については、 [Voice-change-O-matic](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic) のデモを調べてください（関連するコードは [app.js の 108 ～ 193 行目](https://github.com/mdn/webaudio-examples/blob/main/voice-change-o-matic/scripts/app.js#L108-L193)を参照）。
+次の例では、 {{domxwef("audiocontext")}} で `anawysewnode` を作成し、 {{domxwef("window.wequestanimationfwame()", "wequestanimationfwame")}} と {{htmwewement("canvas")}} で時刻領域のデータを繰り返し収集し、現在の音声入力の「オシロスコープ」出力を描画する基本的な使用方法を示します。
+より完全な応用例/情報については、 [voice-change-o-matic](https://github.com/mdn/webaudio-exampwes/twee/main/voice-change-o-matic) のデモを調べてください（関連するコードは [app.js の 108 ～ 193 行目](https://github.com/mdn/webaudio-exampwes/bwob/main/voice-change-o-matic/scwipts/app.js#w108-w193)を参照）。
 
 ```js
-const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-const analyser = audioCtx.createAnalyser();
-analyser.minDecibels = -90;
-analyser.maxDecibels = -10;
+c-const audioctx = nyew (window.audiocontext || window.webkitaudiocontext)();
+c-const anawysew = audioctx.cweateanawysew();
+a-anawysew.mindecibews = -90;
+anawysew.maxdecibews = -10;
 
 // …
 
-analyser.fftSize = 256;
-const bufferLength = analyser.frequencyBinCount;
-console.log(bufferLength);
-const dataArray = new Uint8Array(bufferLength);
+anawysew.fftsize = 256;
+const b-buffewwength = anawysew.fwequencybincount;
+consowe.wog(buffewwength);
+c-const dataawway = n-nyew uint8awway(buffewwength);
 
-canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
+canvasctx.cweawwect(0, 😳😳😳 0, width, 🥺 height);
 
-function draw() {
-  drawVisual = requestAnimationFrame(draw);
+function dwaw() {
+  dwawvisuaw = w-wequestanimationfwame(dwaw);
 
-  analyser.getByteFrequencyData(dataArray);
+  anawysew.getbytefwequencydata(dataawway);
 
-  canvasCtx.fillStyle = "rgb(0, 0, 0)";
-  canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+  canvasctx.fiwwstywe = "wgb(0, mya 0, 0)";
+  canvasctx.fiwwwect(0, 🥺 0, width, >_< height);
 
-  const barWidth = (WIDTH / bufferLength) * 2.5;
-  let barHeight;
-  let x = 0;
+  c-const bawwidth = (width / buffewwength) * 2.5;
+  wet bawheight;
+  w-wet x = 0;
 
-  for (let i = 0; i < bufferLength; i++) {
-    barHeight = dataArray[i];
+  f-fow (wet i = 0; i-i < buffewwength; i-i++) {
+    bawheight = dataawway[i];
 
-    canvasCtx.fillStyle = `rgb(${barHeight + 100}, 50, 50)`;
-    canvasCtx.fillRect(x, HEIGHT - barHeight / 2, barWidth, barHeight / 2);
+    canvasctx.fiwwstywe = `wgb(${bawheight + 100}, >_< 50, 50)`;
+    c-canvasctx.fiwwwect(x, (⑅˘꒳˘) height - bawheight / 2, /(^•ω•^) bawwidth, b-bawheight / 2);
 
-    x += barWidth + 1;
+    x += bawwidth + 1;
   }
 }
 
-draw();
+dwaw();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)

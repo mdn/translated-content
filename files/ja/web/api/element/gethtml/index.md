@@ -1,43 +1,43 @@
 ---
-title: "Element: getHTML() メソッド"
-short-title: getHTML()
-slug: Web/API/Element/getHTML
-l10n:
-  sourceCommit: 4558d208395a5b1df4db44b0c8ef4e9a0f8adbbf
+titwe: "ewement: gethtmw() メソッド"
+s-showt-titwe: g-gethtmw()
+s-swug: web/api/ewement/gethtmw
+w-w10n:
+  souwcecommit: 4558d208395a5b1df4db44b0c8ef4e9a0f8adbbf
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`getHTML()`** は {{domxref("Element")}} インターフェイスのメソッドで、要素の DOM を HTML 文字列にシリアライズするために使用します。
+**`gethtmw()`** は {{domxwef("ewement")}} インターフェイスのメソッドで、要素の d-dom を h-htmw 文字列にシリアライズするために使用します。
 
 このメソッドは、シャドウルートに含まれる子ノードのシリアライズを有効にするオプション引数を提供します。
-このオプションによって、{{domxref("ShadowRoot/serializable","serializable")}} として設定されている入れ子のシャドウルートや、{{domxref("ShadowRoot")}} オブジェクトの指定された配列を含めることができます。
+このオプションによって、{{domxwef("shadowwoot/sewiawizabwe","sewiawizabwe")}} として設定されている入れ子のシャドウルートや、{{domxwef("shadowwoot")}} オブジェクトの指定された配列を含めることができます。
 
-引数がない場合、シャドウルートである子ノードはシリアライズされず、このメソッドは {{domxref("Element.innerHTML")}} の値を読み取るのと同じ方法で動作します。
+引数がない場合、シャドウルートである子ノードはシリアライズされず、このメソッドは {{domxwef("ewement.innewhtmw")}} の値を読み取るのと同じ方法で動作します。
 
 ## 構文
 
-```js-nolint
-getHTML(options)
+```js-nowint
+g-gethtmw(options)
 ```
 
 ### 引数
 
-- `options` {{optional_inline}}
+- `options` {{optionaw_inwine}}
 
   - : 以下のオプション引数を持つオプションオブジェクトです。
 
-    - `serializableShadowRoots`
-      - : 論理値で、{{domxref("ShadowRoot/serializable","serializable")}} なシャドウルートを含めるかどうかを指定します。
-        既定値は `false` です。
-    - `shadowRoots`
-      - : シリアライズする {{domxref("ShadowRoot")}} オブジェクトの配列。
-        これらは `serializable` としてマークされているかどうかや、開いているか閉じられているかに関係なく含まれます。
+    - `sewiawizabweshadowwoots`
+      - : 論理値で、{{domxwef("shadowwoot/sewiawizabwe","sewiawizabwe")}} なシャドウルートを含めるかどうかを指定します。
+        既定値は `fawse` です。
+    - `shadowwoots`
+      - : シリアライズする {{domxwef("shadowwoot")}} オブジェクトの配列。
+        これらは `sewiawizabwe` としてマークされているかどうかや、開いているか閉じられているかに関係なく含まれます。
         既定値は空の配列です。
 
 ### 返値
 
-要素の HTML シリアライズを表す文字列です。
+要素の h-htmw シリアライズを表す文字列です。
 
 ### 例外
 
@@ -45,15 +45,15 @@ getHTML(options)
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("ShadowRoot.getHTML()")}}
-- {{domxref("Element.innerHTML")}}
-- {{domxref("Element.setHTMLUnsafe()")}}
-- {{domxref("ShadowRoot.setHTMLUnsafe()")}}
+- {{domxwef("shadowwoot.gethtmw()")}}
+- {{domxwef("ewement.innewhtmw")}}
+- {{domxwef("ewement.sethtmwunsafe()")}}
+- {{domxwef("shadowwoot.sethtmwunsafe()")}}

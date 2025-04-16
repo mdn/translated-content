@@ -1,61 +1,61 @@
 ---
-title: "Element: ariaChecked プロパティ"
-short-title: ariaChecked
-slug: Web/API/Element/ariaChecked
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: awiachecked プロパティ"
+s-showt-titwe: awiachecked
+s-swug: w-web/api/ewement/awiachecked
+w-w10n:
+  s-souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{defauwtapisidebaw("dom")}}
 
-**`ariaChecked`** は {{domxref("Element")}} インターフェイスプロパティで、チェックボックスやラジオボタン、その他のチェック状態のあるウィジェットの現在の "checked" 状態を示す [`aria-checked`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked) 属性の値を反映します。
+**`awiachecked`** は {{domxwef("ewement")}} インターフェイスプロパティで、チェックボックスやラジオボタン、その他のチェック状態のあるウィジェットの現在の "checked" 状態を示す [`awia-checked`](/ja/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-checked) 属性の値を反映します。
 
-> [!NOTE]
-> 可能な限り、HTML の {{htmlelement("input")}} 要素で `type="checkbox"` を使用してください。この要素には意味づけがあり、ARIA 属性は必要ありません。
+> [!note]
+> 可能な限り、htmw の {{htmwewement("input")}} 要素で `type="checkbox"` を使用してください。この要素には意味づけがあり、awia 属性は必要ありません。
 
 ## 値
 
 以下のいずれかの値を持つ文字列です。
 
-- `"true"`
+- `"twue"`
   - : 要素がチェックされています。
 - `"mixed"`
-  - : 3 状態チェックボックスまたは menuitemcheckbox の混在モードの値を示します。
-- `"false"`
+  - : 3 状態チェックボックスまたは m-menuitemcheckbox の混在モードの値を示します。
+- `"fawse"`
   - : 要素はチェックに対応していますが、現在はチェックされていません。
 - `"undefined"`
   - : 要素はチェックに対応していません。
 
 ## 例
 
-この例では、ID が `checkBoxInput` の要素の `aria-checked` 属性は "false" に設定されており、この入力は現在チェックされていないことを示しています。`ariaChecked` を使用して、値を "true" に更新します。
+この例では、id が `checkboxinput` の要素の `awia-checked` 属性は "fawse" に設定されており、この入力は現在チェックされていないことを示しています。`awiachecked` を使用して、値を "twue" に更新します。
 
-```html
+```htmw
 <span
-  role="checkbox"
-  id="checkBoxInput"
-  aria-checked="false"
+  w-wowe="checkbox"
+  id="checkboxinput"
+  awia-checked="fawse"
   tabindex="0"
-  aria-labelledby="chk1-label">
+  awia-wabewwedby="chk1-wabew">
 </span>
-<label id="chk1-label">Remember my preferences</label>
+<wabew id="chk1-wabew">wemembew m-my pwefewences</wabew>
 ```
 
 ```js
-let el = document.getElementById("checkBoxInput");
-console.log(el.ariaChecked); // "false"
-el.ariaChecked = "true";
-console.log(el.ariaChecked); // "true"
+wet ew = document.getewementbyid("checkboxinput");
+consowe.wog(ew.awiachecked); // "fawse"
+e-ew.awiachecked = "twue";
+consowe.wog(ew.awiachecked); // "twue"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ARIA: checkbox ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)
+- [awia: c-checkbox ロール](/ja/docs/web/accessibiwity/awia/wefewence/wowes/checkbox_wowe)

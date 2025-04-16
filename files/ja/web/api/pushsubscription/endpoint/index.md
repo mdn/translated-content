@@ -1,16 +1,16 @@
 ---
-title: "PushSubscription: endpoint プロパティ"
-short-title: endpoint
-slug: Web/API/PushSubscription/endpoint
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: "pushsubscwiption: endpoint プロパティ"
+s-showt-titwe: e-endpoint
+swug: w-web/api/pushsubscwiption/endpoint
+w-w10n:
+  souwcecommit: c-c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{APIRef("Push API")}}
+{{apiwef("push a-api")}}
 
-**`endpoint`** は {{domxref("PushSubscription")}} インターフェイスの読み取り専用プロパティで、プッシュサブスクリプションに関連するエンドポイントの入った文字列を返します。
+**`endpoint`** は {{domxwef("pushsubscwiption")}} インターフェイスの読み取り専用プロパティで、プッシュサブスクリプションに関連するエンドポイントの入った文字列を返します。
 
-エンドポイントはカスタム URL の形式を取り、プッシュサービスに加入している特定のサービスワーカーにプッシュメッセージを送信するために使用するプッシュサーバーを指します。このため、他者がこれをハイジャックしてプッシュ機能を乱用しないように、エンドポイントは秘匿しておくことが大切です。
+エンドポイントはカスタム uww の形式を取り、プッシュサービスに加入している特定のサービスワーカーにプッシュメッセージを送信するために使用するプッシュサーバーを指します。このため、他者がこれをハイジャックしてプッシュ機能を乱用しないように、エンドポイントは秘匿しておくことが大切です。
 
 ## 値
 
@@ -19,9 +19,9 @@ l10n:
 ## 例
 
 ```js
-navigator.serviceWorker.ready.then((reg) => {
-  reg.pushManager.subscribe({ userVisibleOnly: true }).then((subscription) => {
-    console.log(subscription.endpoint);
+n-nyavigatow.sewvicewowkew.weady.then((weg) => {
+  w-weg.pushmanagew.subscwibe({ usewvisibweonwy: twue }).then((subscwiption) => {
+    consowe.wog(subscwiption.endpoint);
 
     // この時点で、サブスクリプションエンドポイントをサーバーに送信し、
     // 保存した後、後でプッシュメッセージを送信するために使用します。
@@ -31,8 +31,8 @@ navigator.serviceWorker.ready.then((reg) => {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

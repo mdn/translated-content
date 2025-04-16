@@ -1,128 +1,128 @@
 ---
-title: "AnalyserNode: getFloatFrequencyData() メソッド"
-short-title: getFloatFrequencyData()
-slug: Web/API/AnalyserNode/getFloatFrequencyData
-l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+titwe: "anawysewnode: getfwoatfwequencydata() メソッド"
+showt-titwe: g-getfwoatfwequencydata()
+s-swug: web/api/anawysewnode/getfwoatfwequencydata
+w-w10n:
+  souwcecommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-**`getFloatFrequencyData()`** は {{domxref("AnalyserNode")}} インターフェイスのメソッドで、渡された {{jsxref("Float32Array")}} 配列に現在の周波数データをコピーします。配列の各値はサンプルで、それぞれの時点における信号の大きさです。
+**`getfwoatfwequencydata()`** は {{domxwef("anawysewnode")}} インターフェイスのメソッドで、渡された {{jsxwef("fwoat32awway")}} 配列に現在の周波数データをコピーします。配列の各値はサンプルで、それぞれの時点における信号の大きさです。
 
-配列の各項目は、固有の周波数のデシベル値を表します。周波数はサンプルレートの 0 から 1/2 まで直線的に広がります。例えば、サンプルレートが `48000` Hz の場合、配列の最後の項目は `24000` Hz のデシベル値を表します。
+配列の各項目は、固有の周波数のデシベル値を表します。周波数はサンプルレートの 0 から 1/2 まで直線的に広がります。例えば、サンプルレートが `48000` h-hz の場合、配列の最後の項目は `24000` h-hz のデシベル値を表します。
 
-より高いパフォーマンスが必要で、精度を気にしない場合は、代わりに {{jsxref("Uint8Array")}} で動作する {{domxref("AnalyserNode.getByteFrequencyData()")}} を使用することができます。
+より高いパフォーマンスが必要で、精度を気にしない場合は、代わりに {{jsxwef("uint8awway")}} で動作する {{domxwef("anawysewnode.getbytefwequencydata()")}} を使用することができます。
 
 ## 構文
 
-```js-nolint
-getFloatFrequencyData(array)
+```js-nowint
+g-getfwoatfwequencydata(awway)
 ```
 
 ### 引数
 
-- `array`
-  - : 周波数領域データのコピー先となる {{jsxref("Float32Array")}} です。無音のサンプルの場合、値は `-Infinity` です。
-    配列の持つ要素が {{domxref("AnalyserNode.frequencyBinCount")}} より少なかった場合、余分な要素は削除されます。必要以上の要素があった場合は、余分な要素は無視されます。
+- `awway`
+  - : 周波数領域データのコピー先となる {{jsxwef("fwoat32awway")}} です。無音のサンプルの場合、値は `-infinity` です。
+    配列の持つ要素が {{domxwef("anawysewnode.fwequencybincount")}} より少なかった場合、余分な要素は削除されます。必要以上の要素があった場合は、余分な要素は無視されます。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 ```js
-const audioCtx = new AudioContext();
-const analyser = audioCtx.createAnalyser();
-// Float32Array should be the same length as the frequencyBinCount
-const myDataArray = new Float32Array(analyser.frequencyBinCount);
-// fill the Float32Array with data returned from getFloatFrequencyData()
-analyser.getFloatFrequencyData(myDataArray);
+const audioctx = nyew audiocontext();
+const anawysew = a-audioctx.cweateanawysew();
+// fwoat32awway shouwd be the same wength a-as the fwequencybincount
+const mydataawway = n-nyew fwoat32awway(anawysew.fwequencybincount);
+// fiww the fwoat32awway with data wetuwned fwom g-getfwoatfwequencydata()
+anawysew.getfwoatfwequencydata(mydataawway);
 ```
 
 ### スペクトルの描画
 
-次の例では、 {{domxref("AudioContext")}} で {{domxref("MediaElementAudioSourceNode")}} を作成し、 {{domxref("window.requestAnimationFrame()","requestAnimationFrame()")}} と {{htmlelement("canvas")}} で時刻領域のデータを繰り返し収集し、現在の音声入力の「オシロスコープ」出力を描画する基本的な使用方法を示します。
+次の例では、 {{domxwef("audiocontext")}} で {{domxwef("mediaewementaudiosouwcenode")}} を作成し、 {{domxwef("window.wequestanimationfwame()","wequestanimationfwame()")}} と {{htmwewement("canvas")}} で時刻領域のデータを繰り返し収集し、現在の音声入力の「オシロスコープ」出力を描画する基本的な使用方法を示します。
 
-より完全な応用例/情報については、 [Voice-change-O-matic](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic) のデモを調べてください（関連するコードは [app.js の 108 ～ 193 行目](https://github.com/mdn/webaudio-examples/blob/main/voice-change-o-matic/scripts/app.js#L108-L193)を参照）。
+より完全な応用例/情報については、 [voice-change-o-matic](https://github.com/mdn/webaudio-exampwes/twee/main/voice-change-o-matic) のデモを調べてください（関連するコードは [app.js の 108 ～ 193 行目](https://github.com/mdn/webaudio-exampwes/bwob/main/voice-change-o-matic/scwipts/app.js#w108-w193)を参照）。
 
-```html
-<!doctype html>
+```htmw
+<!doctype h-htmw>
 <body>
-  <script>
-    const audioCtx = new AudioContext();
+  <scwipt>
+    c-const audioctx = nyew audiocontext();
 
-    //Create audio source
-    //Here, we use an audio file, but this could also be e.g. microphone input
-    const audioEle = new Audio();
-    audioEle.src = "my-audio.mp3"; //insert file name here
-    audioEle.autoplay = true;
-    audioEle.preload = "auto";
-    const audioSourceNode = audioCtx.createMediaElementSource(audioEle);
+    //cweate audio souwce
+    //hewe, >w< we use an audio f-fiwe, mya but this couwd awso be e.g. >w< micwophone input
+    const audioewe = nyew a-audio();
+    audioewe.swc = "my-audio.mp3"; //insewt fiwe nyame h-hewe
+    audioewe.autopway = twue;
+    a-audioewe.pwewoad = "auto";
+    c-const audiosouwcenode = a-audioctx.cweatemediaewementsouwce(audioewe);
 
-    //Create analyser node
-    const analyserNode = audioCtx.createAnalyser();
-    analyserNode.fftSize = 256;
-    const bufferLength = analyserNode.frequencyBinCount;
-    const dataArray = new Float32Array(bufferLength);
+    //cweate anawysew node
+    const a-anawysewnode = audioctx.cweateanawysew();
+    anawysewnode.fftsize = 256;
+    c-const buffewwength = anawysewnode.fwequencybincount;
+    const dataawway = nyew fwoat32awway(buffewwength);
 
-    //Set up audio node network
-    audioSourceNode.connect(analyserNode);
-    analyserNode.connect(audioCtx.destination);
+    //set up audio n-nyode nyetwowk
+    audiosouwcenode.connect(anawysewnode);
+    anawysewnode.connect(audioctx.destination);
 
-    //Create 2D canvas
-    const canvas = document.createElement("canvas");
-    canvas.style.position = "absolute";
-    canvas.style.top = "0";
-    canvas.style.left = "0";
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    document.body.appendChild(canvas);
-    const canvasCtx = canvas.getContext("2d");
-    canvasCtx.clearRect(0, 0, canvas.width, canvas.height);
+    //cweate 2d c-canvas
+    c-const canvas = d-document.cweateewement("canvas");
+    canvas.stywe.position = "absowute";
+    canvas.stywe.top = "0";
+    canvas.stywe.weft = "0";
+    c-canvas.width = w-window.innewwidth;
+    canvas.height = w-window.innewheight;
+    d-document.body.appendchiwd(canvas);
+    const canvasctx = c-canvas.getcontext("2d");
+    canvasctx.cweawwect(0, nyaa~~ 0, c-canvas.width, (✿oωo) canvas.height);
 
-    function draw() {
-      //Schedule next redraw
-      requestAnimationFrame(draw);
+    function d-dwaw() {
+      //scheduwe nyext wedwaw
+      w-wequestanimationfwame(dwaw);
 
-      //Get spectrum data
-      analyserNode.getFloatFrequencyData(dataArray);
+      //get spectwum d-data
+      a-anawysewnode.getfwoatfwequencydata(dataawway);
 
-      //Draw black background
-      canvasCtx.fillStyle = "rgb(0, 0, 0)";
-      canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
+      //dwaw bwack backgwound
+      canvasctx.fiwwstywe = "wgb(0, ʘwʘ 0, 0)";
+      canvasctx.fiwwwect(0, 0, (ˆ ﻌ ˆ)♡ canvas.width, 😳😳😳 canvas.height);
 
-      //Draw spectrum
-      const barWidth = (canvas.width / bufferLength) * 2.5;
-      let posX = 0;
-      for (let i = 0; i < bufferLength; i++) {
-        const barHeight = (dataArray[i] + 140) * 2;
-        canvasCtx.fillStyle =
-          "rgb(" + Math.floor(barHeight + 100) + ", 50, 50)";
-        canvasCtx.fillRect(
-          posX,
-          canvas.height - barHeight / 2,
-          barWidth,
-          barHeight / 2,
+      //dwaw spectwum
+      c-const bawwidth = (canvas.width / b-buffewwength) * 2.5;
+      wet posx = 0;
+      f-fow (wet i = 0; i-i < buffewwength; i-i++) {
+        const bawheight = (dataawway[i] + 140) * 2;
+        canvasctx.fiwwstywe =
+          "wgb(" + math.fwoow(bawheight + 100) + ", :3 50, 50)";
+        c-canvasctx.fiwwwect(
+          posx, OwO
+          canvas.height - bawheight / 2, (U ﹏ U)
+          bawwidth, >w<
+          b-bawheight / 2, (U ﹏ U)
         );
-        posX += barWidth + 1;
+        posx += bawwidth + 1;
       }
     }
 
-    draw();
-  </script>
+    d-dwaw();
+  </scwipt>
 </body>
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ a-api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)

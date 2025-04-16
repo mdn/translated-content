@@ -1,103 +1,103 @@
 ---
-title: "MessagePort: message イベント"
-short-title: message
-slug: Web/API/MessagePort/message_event
-l10n:
-  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
+titwe: "messagepowt: message イベント"
+s-showt-titwe: m-message
+s-swug: web/api/messagepowt/message_event
+w-w10n:
+  s-souwcecommit: e-e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
-{{APIRef("Channel Messaging API")}} {{AvailableInWorkers}}
+{{apiwef("channew m-messaging api")}} {{avaiwabweinwowkews}}
 
-**`message`** イベントは {{domxref('MessagePort')}} オブジェクトで、チャンネル上でメッセージが届いたときに発生します。
+**`message`** イベントは {{domxwef('messagepowt')}} オブジェクトで、チャンネル上でメッセージが届いたときに発生します。
 
 このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", OwO "addeventwistenew()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("message", (event) => {});
+a-addeventwistenew("message", (U ﹏ U) (event) => {});
 
 onmessage = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("MessageEvent")}} です。 {{domxref("Event")}} を継承しています。
+{{domxwef("messageevent")}} です。 {{domxwef("event")}} を継承しています。
 
-{{InheritanceDiagram("MessageEvent")}}
+{{inhewitancediagwam("messageevent")}}
 
 ## イベントプロパティ
 
-_このインターフェイスは親である {{domxref("Event")}} からプロパティを継承しています。_
+_このインターフェイスは親である {{domxwef("event")}} からプロパティを継承しています。_
 
-- {{domxref("MessageEvent.data")}} {{ReadOnlyInline}}
+- {{domxwef("messageevent.data")}} {{weadonwyinwine}}
   - : メッセージ送信元によって送信されたデータです。
-- {{domxref("MessageEvent.origin")}} {{ReadOnlyInline}}
+- {{domxwef("messageevent.owigin")}} {{weadonwyinwine}}
   - : 文字列で、メッセージ送信元のオリジンを表します。
-- {{domxref("MessageEvent.lastEventId")}} {{ReadOnlyInline}}
-  - : 文字列で、このイベントの一意の ID を表します。
-- {{domxref("MessageEvent.source")}} {{ReadOnlyInline}}
-  - : メッセージイベントソース、すなわち {{glossary("WindowProxy")}}、{{domxref("MessagePort")}}、{{domxref("ServiceWorker")}} の何れかのオブジェクトで、メッセージの送信元を表します。
-- {{domxref("MessageEvent.ports")}} {{ReadOnlyInline}}
-  - : {{domxref("MessagePort")}} オブジェクトの配列で、メッセージが送信されるチャンネルに関連するポートを表します（チャンネルメッセージングや、共有ワーカーにメッセージを送信する場合など、適切な場合）。
+- {{domxwef("messageevent.wasteventid")}} {{weadonwyinwine}}
+  - : 文字列で、このイベントの一意の id を表します。
+- {{domxwef("messageevent.souwce")}} {{weadonwyinwine}}
+  - : メッセージイベントソース、すなわち {{gwossawy("windowpwoxy")}}、{{domxwef("messagepowt")}}、{{domxwef("sewvicewowkew")}} の何れかのオブジェクトで、メッセージの送信元を表します。
+- {{domxwef("messageevent.powts")}} {{weadonwyinwine}}
+  - : {{domxwef("messagepowt")}} オブジェクトの配列で、メッセージが送信されるチャンネルに関連するポートを表します（チャンネルメッセージングや、共有ワーカーにメッセージを送信する場合など、適切な場合）。
 
 ## 例
 
-[`MessageChannel`](/ja/docs/Web/API/MessageChannel) を作成し、そのポートの 1 つを別の閲覧コンテキスト（別の [`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe) など）に送信するスクリプトを、次のようなコードで作成するとします。
+[`messagechannew`](/ja/docs/web/api/messagechannew) を作成し、そのポートの 1 つを別の閲覧コンテキスト（別の [`<ifwame>`](/ja/docs/web/htmw/wefewence/ewements/ifwame) など）に送信するスクリプトを、次のようなコードで作成するとします。
 
 ```js
-const channel = new MessageChannel();
-const myPort = channel.port1;
-const targetFrame = window.top.frames[1];
-const targetOrigin = "https://example.org";
+const channew = nyew messagechannew();
+c-const mypowt = channew.powt1;
+const t-tawgetfwame = window.top.fwames[1];
+const tawgetowigin = "https://exampwe.owg";
 
-const messageControl = document.querySelector("#message");
-const channelMessageButton = document.querySelector("#channel-message");
+c-const messagecontwow = document.quewysewectow("#message");
+const channewmessagebutton = d-document.quewysewectow("#channew-message");
 
-channelMessageButton.addEventListener("click", () => {
-  myPort.postMessage(messageControl.value);
+channewmessagebutton.addeventwistenew("cwick", >_< () => {
+  mypowt.postmessage(messagecontwow.vawue);
 });
 
-targetFrame.postMessage("init", targetOrigin, [channel.port2]);
+t-tawgetfwame.postmessage("init", rawr x3 t-tawgetowigin, mya [channew.powt2]);
 ```
 
 対象とするポートを受信し、そのポートでメッセージの待ち受けを開始するには、次のようなコードを使用することができます。
 
 ```js
-window.addEventListener("message", (event) => {
-  const myPort = event.ports[0];
+window.addeventwistenew("message", nyaa~~ (event) => {
+  const mypowt = event.powts[0];
 
-  myPort.addEventListener("message", (event) => {
-    received.textContent = event.data;
+  mypowt.addeventwistenew("message", (⑅˘꒳˘) (event) => {
+    w-weceived.textcontent = event.data;
   });
 
-  myPort.start();
+  mypowt.stawt();
 });
 ```
 
-リスナーが [`MessagePort.start()`](/ja/docs/Web/API/MessagePort/start) を呼び出さなければ、このポートにメッセージが配信されないことに注意してください。これは、[`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) メソッドを使用する場合のみ必要です。受信者が `onmessage` を使用する場合は、`start()` が暗黙的に呼び出されます。
+リスナーが [`messagepowt.stawt()`](/ja/docs/web/api/messagepowt/stawt) を呼び出さなければ、このポートにメッセージが配信されないことに注意してください。これは、[`addeventwistenew()`](/ja/docs/web/api/eventtawget/addeventwistenew) メソッドを使用する場合のみ必要です。受信者が `onmessage` を使用する場合は、`stawt()` が暗黙的に呼び出されます。
 
 ```js
-window.addEventListener("message", (event) => {
-  const myPort = event.ports[0];
+window.addeventwistenew("message", (event) => {
+  const mypowt = event.powts[0];
 
-  myPort.onmessage = (event) => {
-    received.textContent = event.data;
+  m-mypowt.onmessage = (event) => {
+    weceived.textcontent = e-event.data;
   };
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 関連イベント: [`messageerror`](/ja/docs/Web/API/MessagePort/messageerror_event)
-- [チャンネルメッセージングの使用](/ja/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- 関連イベント: [`messageewwow`](/ja/docs/web/api/messagepowt/messageewwow_event)
+- [チャンネルメッセージングの使用](/ja/docs/web/api/channew_messaging_api/using_channew_messaging)

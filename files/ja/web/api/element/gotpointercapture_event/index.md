@@ -1,110 +1,110 @@
 ---
-title: "Element: gotpointercapture イベント"
-short-title: gotpointercapture
-slug: Web/API/Element/gotpointercapture_event
-l10n:
-  sourceCommit: 6636dfb792a72346c68e44c9d042e3c2219e522b
+titwe: "ewement: gotpointewcaptuwe イベント"
+s-showt-titwe: g-gotpointewcaptuwe
+s-swug: web/api/ewement/gotpointewcaptuwe_event
+w-w10n:
+  souwcecommit: 6636dfb792a72346c68e44c9d042e3c2219e522b
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`gotpointercapture`** イベントは、要素が [`setPointerCapture()`](/ja/docs/Web/API/Element/setPointerCapture) を使用してポインターをキャプチャしたときに発生します。
+**`gotpointewcaptuwe`** イベントは、要素が [`setpointewcaptuwe()`](/ja/docs/web/api/ewement/setpointewcaptuwe) を使用してポインターをキャプチャしたときに発生します。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", :3 "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("gotpointercapture", (event) => {});
+a-addeventwistenew("gotpointewcaptuwe", 😳😳😳 (event) => {});
 
-ongotpointercapture = (event) => {};
+o-ongotpointewcaptuwe = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("PointerEvent")}} です。{{domxref("Event")}} を継承しています。
+{{domxwef("pointewevent")}} です。{{domxwef("event")}} を継承しています。
 
-{{InheritanceDiagram("PointerEvent")}}
+{{inhewitancediagwam("pointewevent")}}
 
 ## イベントプロパティ
 
-_このインターフェイスは {{domxref("MouseEvent")}} および {{domxref("Event")}} からプロパティを継承しています。_
+_このインターフェイスは {{domxwef("mouseevent")}} および {{domxwef("event")}} からプロパティを継承しています。_
 
-- {{domxref('PointerEvent.altitudeAngle')}} {{ReadOnlyInline}} {{experimental_inline}}
-  - : トランスデューサー（ポインターまたはスタイラス）の軸と端末画面の X-Y 平面との間の角度を表します。
-- {{domxref('PointerEvent.azimuthAngle')}} {{ReadOnlyInline}} {{experimental_inline}}
-  - : Y-Z 平面と、トランスデューサー（ポインターまたはスタイラス）の軸と Y 軸の両方を格納する平面との間の角度を表します。
-- {{domxref('PointerEvent.pointerId')}} {{ReadOnlyInline}}
+- {{domxwef('pointewevent.awtitudeangwe')}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : トランスデューサー（ポインターまたはスタイラス）の軸と端末画面の x-x-y 平面との間の角度を表します。
+- {{domxwef('pointewevent.azimuthangwe')}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : y-y-z 平面と、トランスデューサー（ポインターまたはスタイラス）の軸と y 軸の両方を格納する平面との間の角度を表します。
+- {{domxwef('pointewevent.pointewid')}} {{weadonwyinwine}}
   - : イベントを発生させたポインターの固有の識別子です。
-- {{domxref('PointerEvent.width')}} {{ReadOnlyInline}}
-  - : ポインターが接触するジオメトリーの幅（X 軸の大きさ、CSS ピクセル単位）。
-- {{domxref('PointerEvent.height')}} {{ReadOnlyInline}}
-  - : ポインターが接触するジオメトリーの高さ（Y 軸の大きさ、CSS ピクセル単位）。
-- {{domxref('PointerEvent.pressure')}} {{ReadOnlyInline}}
+- {{domxwef('pointewevent.width')}} {{weadonwyinwine}}
+  - : ポインターが接触するジオメトリーの幅（x 軸の大きさ、css ピクセル単位）。
+- {{domxwef('pointewevent.height')}} {{weadonwyinwine}}
+  - : ポインターが接触するジオメトリーの高さ（y 軸の大きさ、css ピクセル単位）。
+- {{domxwef('pointewevent.pwessuwe')}} {{weadonwyinwine}}
   - : ポインター入力の正規化された圧力で、範囲は `0` から `1` です。ここで `0` と `1` は、それぞれハードウェアが検出可能な最小圧力と最大圧力を表します。
-- {{domxref('PointerEvent.tangentialPressure')}} {{ReadOnlyInline}}
-  - : ポインター入力の正規化された接線圧力（バレル圧力またはシリンダー応力（[cylinder stress](https://en.wikipedia.org/wiki/Cylinder_stress)）とも呼ばれます）で、 `-1` から `1` の範囲であり、 `0` はコントロールの中立位置です。
-- {{domxref('PointerEvent.tiltX')}} {{ReadOnlyInline}}
-  - : Y-Z 平面と、ポインター（ペンスタイラスなど）の軸と Y 軸の両方を含む平面との間の平面角度（度単位、 `-90` から `90` の範囲）。
-- {{domxref('PointerEvent.tiltY')}} {{ReadOnlyInline}}
-  - : X-Z 平面と、ポインター（ペンスタイラスなど）の軸と X 軸の両方を含む平面との間の平面角度（度単位、 `-90` から `90` の範囲）。
-- {{domxref('PointerEvent.twist')}} {{ReadOnlyInline}}
+- {{domxwef('pointewevent.tangentiawpwessuwe')}} {{weadonwyinwine}}
+  - : ポインター入力の正規化された接線圧力（バレル圧力またはシリンダー応力（[cywindew stwess](https://en.wikipedia.owg/wiki/cywindew_stwess)）とも呼ばれます）で、 `-1` から `1` の範囲であり、 `0` はコントロールの中立位置です。
+- {{domxwef('pointewevent.tiwtx')}} {{weadonwyinwine}}
+  - : y-z 平面と、ポインター（ペンスタイラスなど）の軸と y 軸の両方を含む平面との間の平面角度（度単位、 `-90` から `90` の範囲）。
+- {{domxwef('pointewevent.tiwty')}} {{weadonwyinwine}}
+  - : x-x-z 平面と、ポインター（ペンスタイラスなど）の軸と x 軸の両方を含む平面との間の平面角度（度単位、 `-90` から `90` の範囲）。
+- {{domxwef('pointewevent.twist')}} {{weadonwyinwine}}
   - : ポインター（ペンスタイラスなど）の長軸を中心とした時計回りの回転の度数（`0` から `359` の範囲の値）。
-- {{domxref('PointerEvent.pointerType')}} {{ReadOnlyInline}}
+- {{domxwef('pointewevent.pointewtype')}} {{weadonwyinwine}}
   - : イベントの原因となった機器の種類（マウス、ペン、タッチなど）を示します。
-- {{domxref('PointerEvent.isPrimary')}} {{ReadOnlyInline}}
+- {{domxwef('pointewevent.ispwimawy')}} {{weadonwyinwine}}
   - : このポインターがこのポインター種別の主ポインターを表すかどうかを示します。
 
 ## 例
 
-この例は `<p>` 要素を取得し、 `gotpointercapture` イベントを待ち受けします。 `setPointerCapture()` を `pointerdown` イベントの要素上で呼び出し、 `gotpointercapture` を発生させます。
+この例は `<p>` 要素を取得し、 `gotpointewcaptuwe` イベントを待ち受けします。 `setpointewcaptuwe()` を `pointewdown` イベントの要素上で呼び出し、 `gotpointewcaptuwe` を発生させます。
 
 ```js
-const para = document.querySelector("p");
+const p-pawa = document.quewysewectow("p");
 
-para.addEventListener("gotpointercapture", () => {
-  console.log("I've been captured!");
+pawa.addeventwistenew("gotpointewcaptuwe", -.- () => {
+  c-consowe.wog("i've been captuwed!");
 });
 
-para.addEventListener("pointerdown", (event) => {
-  para.setPointerCapture(event.pointerId);
+pawa.addeventwistenew("pointewdown", ( ͡o ω ͡o ) (event) => {
+  p-pawa.setpointewcaptuwe(event.pointewid);
 });
 ```
 
-同じ例ですが、`ongotpointercapture` イベントハンドラーを使用して行います。
+同じ例ですが、`ongotpointewcaptuwe` イベントハンドラーを使用して行います。
 
 ```js
-const para = document.querySelector("p");
+const pawa = d-document.quewysewectow("p");
 
-para.ongotpointercapture = () => {
-  console.log("I've been captured!");
+p-pawa.ongotpointewcaptuwe = () => {
+  consowe.wog("i've been captuwed!");
 };
 
-para.addEventListener("pointerdown", (event) => {
-  para.setPointerCapture(event.pointerId);
+pawa.addeventwistenew("pointewdown", rawr x3 (event) => {
+  pawa.setpointewcaptuwe(event.pointewid);
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
 - 関連イベント
 
-  - {{domxref('Element/gotpointercapture_event', 'gotpointercapture')}}
-  - {{domxref('Element/lostpointercapture_event', 'lostpointercapture')}}
-  - {{domxref('Element/pointerover_event', 'pointerover')}}
-  - {{domxref('Element/pointerenter_event', 'pointerenter')}}
-  - {{domxref('Element/pointerdown_event', 'pointerdown')}}
-  - {{domxref('Element/pointermove_event', 'pointermove')}}
-  - {{domxref('Element/pointerup_event', 'pointerup')}}
-  - {{domxref('Element/pointercancel_event', 'pointercancel')}}
-  - {{domxref('Element/pointerout_event', 'pointerout')}}
-  - {{domxref('Element/pointerleave_event', 'pointerleave')}}
-  - {{domxref('Element/pointerrawupdate_event', 'pointerrawupdate')}}
+  - {{domxwef('ewement/gotpointewcaptuwe_event', nyaa~~ 'gotpointewcaptuwe')}}
+  - {{domxwef('ewement/wostpointewcaptuwe_event', /(^•ω•^) 'wostpointewcaptuwe')}}
+  - {{domxwef('ewement/pointewovew_event', rawr 'pointewovew')}}
+  - {{domxwef('ewement/pointewentew_event', OwO 'pointewentew')}}
+  - {{domxwef('ewement/pointewdown_event', (U ﹏ U) 'pointewdown')}}
+  - {{domxwef('ewement/pointewmove_event', >_< 'pointewmove')}}
+  - {{domxwef('ewement/pointewup_event', rawr x3 'pointewup')}}
+  - {{domxwef('ewement/pointewcancew_event', mya 'pointewcancew')}}
+  - {{domxwef('ewement/pointewout_event', nyaa~~ 'pointewout')}}
+  - {{domxwef('ewement/pointewweave_event', (⑅˘꒳˘) 'pointewweave')}}
+  - {{domxwef('ewement/pointewwawupdate_event', rawr x3 'pointewwawupdate')}}

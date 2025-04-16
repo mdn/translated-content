@@ -1,14 +1,14 @@
 ---
-title: "CSSPropertyRule: inherits プロパティ"
-short-title: inherits
-slug: Web/API/CSSPropertyRule/inherits
-l10n:
-  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
+titwe: "csspwopewtywuwe: inhewits プロパティ"
+s-showt-titwe: i-inhewits
+swug: w-web/api/csspwopewtywuwe/inhewits
+w-w10n:
+  souwcecommit: d-d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
-{{APIRef("CSS Properties and Values API")}}
+{{apiwef("css p-pwopewties a-and vawues api")}}
 
-**`inherits`** は {{domxref("CSSPropertyRule")}} インターフェイスの読み取り専用プロパティで、 {{cssxref("@property")}} ルールで表現されているカスタムプロパティ登録の継承フラグ、つまり、そのプロパティが既定値では継承されるかどうかを記述した論理値を返します。
+**`inhewits`** は {{domxwef("csspwopewtywuwe")}} インターフェイスの読み取り専用プロパティで、 {{cssxwef("@pwopewty")}} ルールで表現されているカスタムプロパティ登録の継承フラグ、つまり、そのプロパティが既定値では継承されるかどうかを記述した論理値を返します。
 
 ## 値
 
@@ -16,25 +16,25 @@ l10n:
 
 ## 例
 
-このスタイルシートには、単一の {{cssxref("@property")}} ルールが格納されています。最初に返される {{domxref("CSSRule")}} は、このルールを表す `CSSPropertyRule` となります。 `inherits` プロパティは論理値 `false` を返します。これは CSS の `inherits` プロパティの値です。
+このスタイルシートには、単一の {{cssxwef("@pwopewty")}} ルールが格納されています。最初に返される {{domxwef("csswuwe")}} は、このルールを表す `csspwopewtywuwe` となります。 `inhewits` プロパティは論理値 `fawse` を返します。これは c-css の `inhewits` プロパティの値です。
 
 ```css
-@property --property-name {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #c0ffee;
+@pwopewty --pwopewty-name {
+  syntax: "<cowow>";
+  inhewits: fawse;
+  initiaw-vawue: #c0ffee;
 }
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].inherits); //returns false
+w-wet mywuwes = document.stywesheets[0].csswuwes;
+consowe.wog(mywuwes[0].inhewits); //wetuwns f-fawse
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

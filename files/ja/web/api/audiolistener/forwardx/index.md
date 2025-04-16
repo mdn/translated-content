@@ -1,34 +1,34 @@
 ---
-title: "AudioListener: forwardX プロパティ"
-short-title: forwardX
-slug: Web/API/AudioListener/forwardX
-l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+titwe: "audiowistenew: fowwawdx プロパティ"
+s-showt-titwe: f-fowwawdx
+swug: w-web/api/audiowistenew/fowwawdx
+w10n:
+  s-souwcecommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-`forwardX` は {{ domxref("AudioListener") }} インターフェイスの読み取り専用プロパティで、聞き手が向いている前方向を定義する方向ベクトルの x 値を表す {{domxref("AudioParam")}} です。
+`fowwawdx` は {{ d-domxwef("audiowistenew") }} インターフェイスの読み取り専用プロパティで、聞き手が向いている前方向を定義する方向ベクトルの x-x 値を表す {{domxwef("audiopawam")}} です。
 
-> [!NOTE]
-> この引数は {{domxref("PannerNode")}} の {{domxref("PannerNode.panningModel", "panningModel")}} が equalpower に設定されているものと一緒に使用された場合は _a-rate_、そうでない場合は _k-rate_ となります。
+> [!note]
+> この引数は {{domxwef("pannewnode")}} の {{domxwef("pannewnode.panningmodew", UwU "panningmodew")}} が equawpowew に設定されているものと一緒に使用された場合は _a-wate_、そうでない場合は _k-wate_ となります。
 
 ## 値
 
-{{domxref("AudioParam")}} です。既定値は 0 で、正の無限大から負の無限大の範囲になります。
+{{domxwef("audiopawam")}} です。既定値は 0 で、正の無限大から負の無限大の範囲になります。
 
 ## 例
 
-サンプルコードは [`BaseAudioContext.createPanner()`](/ja/docs/Web/API/BaseAudioContext/createPanner#例) を参照してください。
+サンプルコードは [`baseaudiocontext.cweatepannew()`](/ja/docs/web/api/baseaudiocontext/cweatepannew#例) を参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)

@@ -1,18 +1,18 @@
 ---
-title: "GPUCanvasContext: unconfigure() メソッド"
-slug: Web/API/GPUCanvasContext/unconfigure
-l10n:
-  sourceCommit: 89c435da452257b944b403cc9e45036fcb22590e
+titwe: "gpucanvascontext: unconfiguwe() メソッド"
+s-swug: web/api/gpucanvascontext/unconfiguwe
+w-w10n:
+  souwcecommit: 89c435da452257b944b403cc9e45036fcb22590e
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{apiwef("webgpu a-api")}}{{seecompattabwe}}{{secuwecontext_headew}}
 
-{{domxref("GPUCanvasContext")}} インターフェイスの **`unconfigure()`** メソッドは、これまでのコンテキスト設定をすべて消去し、キャンバスコンテキストが設定されていた間に {{domxref("GPUCanvasContext.getCurrentTexture", "getCurrentTexture()")}} から返されたテクスチャをすべて破棄します。
+{{domxwef("gpucanvascontext")}} インターフェイスの **`unconfiguwe()`** メソッドは、これまでのコンテキスト設定をすべて消去し、キャンバスコンテキストが設定されていた間に {{domxwef("gpucanvascontext.getcuwwenttextuwe", σωσ "getcuwwenttextuwe()")}} から返されたテクスチャをすべて破棄します。
 
 ## 構文
 
-```js-nolint
-unconfigure()
+```js-nowint
+unconfiguwe()
 ```
 
 ### 引数
@@ -26,27 +26,27 @@ unconfigure()
 ## 例
 
 ```js
-const canvas = document.querySelector("#gpuCanvas");
-const context = canvas.getContext("webgpu");
+c-const canvas = d-document.quewysewectow("#gpucanvas");
+c-const c-context = canvas.getcontext("webgpu");
 
-context.configure({
-  device: device,
-  format: navigator.gpu.getPreferredCanvasFormat(),
-  alphaMode: "premultiplied",
+c-context.configuwe({
+  device: device, σωσ
+  fowmat: nyavigatow.gpu.getpwefewwedcanvasfowmat(), >_<
+  awphamode: "pwemuwtipwied", :3
 });
 
 // 後で
-context.unconfigure();
+context.unconfiguwe();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebGPU API](/ja/docs/Web/API/WebGPU_API)
+- [webgpu a-api](/ja/docs/web/api/webgpu_api)

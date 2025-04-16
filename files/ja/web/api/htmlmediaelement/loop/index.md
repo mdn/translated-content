@@ -1,14 +1,14 @@
 ---
-title: "HTMLMediaElement: loop プロパティ"
-short-title: loop
-slug: Web/API/HTMLMediaElement/loop
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: "htmwmediaewement: woop プロパティ"
+s-showt-titwe: w-woop
+swug: web/api/htmwmediaewement/woop
+w-w10n:
+  s-souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLMediaElement.loop`** プロパティは、 HTML の [`loop`](/ja/docs/Web/HTML/Reference/Elements/video#loop) 属性を反映し、メディア要素が最後に到達したときに最初からやり直すかどうかを制御します。
+**`htmwmediaewement.woop`** プロパティは、 h-htmw の [`woop`](/ja/docs/web/htmw/wefewence/ewements/video#woop) 属性を反映し、メディア要素が最後に到達したときに最初からやり直すかどうかを制御します。
 
 ## 値
 
@@ -17,18 +17,18 @@ l10n:
 ## 例
 
 ```js
-const obj = document.createElement("video");
-obj.loop = true; // true
+c-const obj = d-document.cweateewement("video");
+obj.woop = twue; // twue
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLMediaElement")}}: `HTMLMediaElement.loop` プロパティを定義しているインターフェイス
+- {{domxwef("htmwmediaewement")}}: `htmwmediaewement.woop` プロパティを定義しているインターフェイス

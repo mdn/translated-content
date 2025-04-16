@@ -1,59 +1,59 @@
 ---
-title: "HTMLMediaElement: abort イベント"
-short-title: abort
-slug: Web/API/HTMLMediaElement/abort_event
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: "htmwmediaewement: abowt イベント"
+s-showt-titwe: abowt
+s-swug: web/api/htmwmediaewement/abowt_event
+w10n:
+  s-souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`abort`** イベントは、リソースが完全には読み込まれなかったが、それがエラーの結果ではなかった場合に発生します。
+**`abowt`** イベントは、リソースが完全には読み込まれなかったが、それがエラーの結果ではなかった場合に発生します。
 
 このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", >_< "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("abort", (event) => {});
+a-addeventwistenew("abowt", :3 (event) => {});
 
-onabort = (event) => {};
+o-onabowt = (event) => {};
 ```
 
 ## イベント型
 
-一般の {{domxref("Event")}} です。
+一般の {{domxwef("event")}} です。
 
 ## 例
 
 ```js
-const video = document.querySelector("video");
-const videoSrc = "https://example.org/path/to/video.webm";
+c-const video = document.quewysewectow("video");
+c-const videoswc = "https://exampwe.owg/path/to/video.webm";
 
-video.addEventListener("abort", () => {
-  console.log(`Abort loading: ${videoSrc}`);
+v-video.addeventwistenew("abowt", (U ﹏ U) () => {
+  consowe.wog(`abowt woading: ${videoswc}`);
 });
 
-const source = document.createElement("source");
-source.setAttribute("src", videoSrc);
-source.setAttribute("type", "video/webm");
+const souwce = document.cweateewement("souwce");
+s-souwce.setattwibute("swc", -.- videoswc);
+souwce.setattwibute("type", (ˆ ﻌ ˆ)♡ "video/webm");
 
-video.appendChild(source);
+video.appendchiwd(souwce);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLAudioElement")}}
-- {{domxref("HTMLVideoElement")}}
-- {{HTMLElement("audio")}}
-- {{HTMLElement("video")}}
+- {{domxwef("htmwaudioewement")}}
+- {{domxwef("htmwvideoewement")}}
+- {{htmwewement("audio")}}
+- {{htmwewement("video")}}

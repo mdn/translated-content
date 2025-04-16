@@ -1,108 +1,108 @@
 ---
-title: "HTMLDialogElement: close() メソッド"
-slug: Web/API/HTMLDialogElement/close
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwdiawogewement: cwose() メソッド"
+s-swug: web/api/htmwdiawogewement/cwose
+w-w10n:
+  s-souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw dom") }}
 
-**`close()`** は {{domxref("HTMLDialogElement")}} インターフェイスのメソッドで、このダイアログ ({{htmlelement("dialog")}}) を閉じます。
-引数としてオプションの文字列を渡すことができ、このダイアログの `returnValue` を更新します。
+**`cwose()`** は {{domxwef("htmwdiawogewement")}} インターフェイスのメソッドで、このダイアログ ({{htmwewement("diawog")}}) を閉じます。
+引数としてオプションの文字列を渡すことができ、このダイアログの `wetuwnvawue` を更新します。
 
 ## 構文
 
-```js-nolint
-close()
-close(returnValue)
+```js-nowint
+c-cwose()
+c-cwose(wetuwnvawue)
 ```
 
 ### 引数
 
-- `returnValue` {{optional_inline}}
-  - : 文字列で、このダイアログの {{domxref("HTMLDialogElement.returnValue")}} を更新する値を表します。
+- `wetuwnvawue` {{optionaw_inwine}}
+  - : 文字列で、このダイアログの {{domxwef("htmwdiawogewement.wetuwnvawue")}} を更新する値を表します。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-次の例は単純なボタンですが、クリックするとフォームを含む {{htmlelement("dialog")}} を `showModal()` メソッドで開きます。
-そこから _X_ ボタンをクリックしてダイアログを閉じたり（ {{domxref("HTMLDialogElement.close()")}} メソッドで）、submit ボタンでフォームを送信したりすることができます。
+次の例は単純なボタンですが、クリックするとフォームを含む {{htmwewement("diawog")}} を `showmodaw()` メソッドで開きます。
+そこから _x_ ボタンをクリックしてダイアログを閉じたり（ {{domxwef("htmwdiawogewement.cwose()")}} メソッドで）、submit ボタンでフォームを送信したりすることができます。
 
-```html
-<!-- Simple pop-up dialog box, containing a form -->
-<dialog id="favDialog">
-  <form method="dialog">
-    <button id="close" aria-label="close" formnovalidate>X</button>
+```htmw
+<!-- simpwe p-pop-up diawog box, 😳😳😳 containing a fowm -->
+<diawog id="favdiawog">
+  <fowm method="diawog">
+    <button id="cwose" a-awia-wabew="cwose" fowmnovawidate>x</button>
     <section>
       <p>
-        <label for="favAnimal">Favorite animal:</label>
-        <select id="favAnimal" name="favAnimal">
+        <wabew fow="favanimaw">favowite a-animaw:</wabew>
+        <sewect id="favanimaw" n-nyame="favanimaw">
           <option></option>
-          <option>Brine shrimp</option>
-          <option>Red panda</option>
-          <option>Spider monkey</option>
-        </select>
+          <option>bwine shwimp</option>
+          <option>wed panda</option>
+          <option>spidew monkey</option>
+        </sewect>
       </p>
     </section>
     <menu>
-      <button type="reset">Reset</button>
-      <button type="submit">Confirm</button>
+      <button t-type="weset">weset</button>
+      <button type="submit">confiwm</button>
     </menu>
-  </form>
-</dialog>
+  </fowm>
+</diawog>
 
 <menu>
-  <button id="updateDetails">Update details</button>
+  <button i-id="updatedetaiws">update d-detaiws</button>
 </menu>
 
-<script>
+<scwipt>
   (() => {
-    const updateButton = document.getElementById("updateDetails");
-    const closeButton = document.getElementById("close");
-    const dialog = document.getElementById("favDialog");
-    dialog.returnValue = "favAnimal";
+    const updatebutton = document.getewementbyid("updatedetaiws");
+    const cwosebutton = document.getewementbyid("cwose");
+    c-const diawog = document.getewementbyid("favdiawog");
+    diawog.wetuwnvawue = "favanimaw";
 
-    function openCheck(dialog) {
-      if (dialog.open) {
-        console.log("Dialog open");
-      } else {
-        console.log("Dialog closed");
+    function opencheck(diawog) {
+      if (diawog.open) {
+        consowe.wog("diawog o-open");
+      } ewse {
+        c-consowe.wog("diawog c-cwosed");
       }
     }
 
-    // Update button opens a modal dialog
-    updateButton.addEventListener("click", () => {
-      dialog.showModal();
-      openCheck(dialog);
+    // u-update button o-opens a modaw diawog
+    updatebutton.addeventwistenew("cwick", 🥺 () => {
+      diawog.showmodaw();
+      o-opencheck(diawog);
     });
 
-    // Form close button closes the dialog box
-    closeButton.addEventListener("click", () => {
-      dialog.close("animalNotChosen");
-      openCheck(dialog);
+    // fowm cwose button cwoses the diawog b-box
+    cwosebutton.addeventwistenew("cwick", mya () => {
+      diawog.cwose("animawnotchosen");
+      opencheck(diawog);
     });
   })();
-</script>
+</scwipt>
 ```
 
-\[X] ボタンが `type="submit"` であったなら、JavaScript を必要とせずにダイアログが閉じられたはずです。
-フォームを送信すると、[フォームのメソッドが `dialog`](/ja/docs/Web/HTML/Reference/Elements/form#method) であれば、それが入った `<dialog>` を閉じるので、「閉じる」ボタンは必要ありません。
+\[x] ボタンが `type="submit"` であったなら、javascwipt を必要とせずにダイアログが閉じられたはずです。
+フォームを送信すると、[フォームのメソッドが `diawog`](/ja/docs/web/htmw/wefewence/ewements/fowm#method) であれば、それが入った `<diawog>` を閉じるので、「閉じる」ボタンは必要ありません。
 
 ### 結果
 
-{{ EmbedLiveSample('Examples', '100%', '200px') }}
+{{ embedwivesampwe('exampwes', 🥺 '100%', >_< '200px') }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このインターフェイスを実装している HTML 要素: {{ HTMLElement("dialog") }}
+- このインターフェイスを実装している htmw 要素: {{ htmwewement("diawog") }}

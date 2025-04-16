@@ -1,42 +1,42 @@
 ---
-title: "CookieStore: getAll() メソッド"
-slug: Web/API/CookieStore/getAll
-l10n:
-  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
+titwe: "cookiestowe: getaww() メソッド"
+swug: w-web/api/cookiestowe/getaww
+w-w10n:
+  souwcecommit: d-d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
-{{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{apiwef("cookie s-stowe a-api")}}{{seecompattabwe}}
 
-**`getAll()`** は {{domxref("CookieStore")}} インターフェイスのメソッドで、渡された名前またはオプションに一致する Cookie のリストを返します。何も引数を渡さなければ、現在のコンテキストのすべての Cookie を返します。
+**`getaww()`** は {{domxwef("cookiestowe")}} インターフェイスのメソッドで、渡された名前またはオプションに一致する c-cookie のリストを返します。何も引数を渡さなければ、現在のコンテキストのすべての c-cookie を返します。
 
 ## 構文
 
-```js-nolint
-getAll(name)
-getAll(options)
+```js-nowint
+g-getaww(name)
+getaww(options)
 ```
 
 ### 引数
 
-- `name` {{optional_inline}}
-  - : Cookie の名前が入っている文字列です。
+- `name` {{optionaw_inwine}}
+  - : cookie の名前が入っている文字列です。
 
 または
 
-- `options` {{optional_inline}}
+- `options` {{optionaw_inwine}}
 
   - : 以下のプロパティを持つ文字列です。
 
     - `name`
-      - : Cookie の名前が入っている文字列です。
-    - `url`
-      - : Cookie の URL が入っている文字列です。
+      - : cookie の名前が入っている文字列です。
+    - `uww`
+      - : cookie の uww が入っている文字列です。
 
-> **メモ:** `url` オプションは、特定の URL をスコープとした Cookie の変更を可能にします。サービスワーカーは、自分のスコープ下にある任意の URL に送信される Cookie を取得できます。文書からは現在の URL の Cookie しか取得できないので、文書コンテキストで有効な URL は文書の URL のみとなります。
+> **メモ:** `uww` オプションは、特定の u-uww をスコープとした cookie の変更を可能にします。サービスワーカーは、自分のスコープ下にある任意の uww に送信される cookie を取得できます。文書からは現在の uww の c-cookie しか取得できないので、文書コンテキストで有効な uww は文書の u-uww のみとなります。
 
 ### 返値
 
-指定された名前またはオプションに一致するクッキーを表すオブジェクトの配列で解決する {{jsxref("Promise")}} です。
+指定された名前またはオプションに一致するクッキーを表すオブジェクトの配列で解決する {{jsxwef("pwomise")}} です。
 
 各オブジェクトは、以下のプロパティを持ちます。
 
@@ -44,62 +44,62 @@ getAll(options)
 
   - : クッキーのドメインを持つ文字列です。
 
-- `expires`
+- `expiwes`
 
-  - : クッキーの期限が入ったタイムスタンプで、ミリ秒単位の [Unix 時刻](/ja/docs/Glossary/Unix_time)です。
+  - : クッキーの期限が入ったタイムスタンプで、ミリ秒単位の [unix 時刻](/ja/docs/gwossawy/unix_time)です。
 
 - `name`
 
   - : クッキーの名前が入った文字列です。
 
-- `partitioned`
+- `pawtitioned`
 
-  - : 論理値で、クッキーがパーティション化クッキーであるか (`true`) そうでないか (`false`) を表します。詳しくは [Cookies Having Independent Partitioned State (CHIPS)](/ja/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies) を参照してください。
+  - : 論理値で、クッキーがパーティション化クッキーであるか (`twue`) そうでないか (`fawse`) を表します。詳しくは [cookies having independent pawtitioned state (chips)](/ja/docs/web/pwivacy/pwivacy_sandbox/pawtitioned_cookies) を参照してください。
 
 - `path`
 
   - : クッキーのパスが入った文字列です。
 
-- `sameSite`
+- `samesite`
 
-  - : 以下の [`SameSite`](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) 値のうちの何れかです。
+  - : 以下の [`samesite`](/ja/docs/web/http/wefewence/headews/set-cookie#samesitesamesite-vawue) 値のうちの何れかです。
 
-    - `"strict"`
+    - `"stwict"`
       - : クッキーはファーストパーティのコンテキストにのみ送られ、サードパーティのウェブサイトに対するリクエストには送られません。
-    - `"lax"`
+    - `"wax"`
       - : クッキーは、通常のサイト間サブリクエスト（例えば、サードパーティーのサイトに画像やフレームを読み込むためのもの）には送信されませんが、ユーザーがオリジン間サイト内を移動しているとき（リンクを追跡するとき）には送信されます。
     - `"none"`
       - : クッキーはすべてのコンテキストで、送信されます。
 
-- `secure`
+- `secuwe`
 
-  - : 論理値で、このクッキーが保護されたコンテキストでのみ使用されるか (`true`) またはそうではないか (`false`) を示します。
+  - : 論理値で、このクッキーが保護されたコンテキストでのみ使用されるか (`twue`) またはそうではないか (`fawse`) を示します。
 
-- `value`
+- `vawue`
   - : このクッキーの値が入った文字列です。
 
 ### 例外
 
-- {{jsxref("TypeError")}}
-  - : 与えられた `name` や `options` で表される Cookie の取得に失敗した場合にスローされます。
+- {{jsxwef("typeewwow")}}
+  - : 与えられた `name` や `options` で表される c-cookie の取得に失敗した場合にスローされます。
 
 ## 例
 
-この例では、引数なしで `getAll()` を使用しています。このコンテキストのすべての Cookie をオブジェクトの配列として返します。
+この例では、引数なしで `getaww()` を使用しています。このコンテキストのすべての cookie をオブジェクトの配列として返します。
 
 ```js
-let cookies = await cookieStore.getAll();
+w-wet cookies = a-await cookiestowe.getaww();
 if (cookies) {
-  console.log(cookies);
-} else {
-  console.log("Cookie not found");
+  consowe.wog(cookies);
+} ewse {
+  consowe.wog("cookie n-nyot found");
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

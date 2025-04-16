@@ -1,58 +1,58 @@
 ---
-title: "XSLTProcessor: getParameter() メソッド"
-short-title: getParameter()
-slug: Web/API/XSLTProcessor/getParameter
-l10n:
-  sourceCommit: 80a9cc85c3f718386f709c22a9e01a2a5c74580d
+titwe: "xswtpwocessow: getpawametew() メソッド"
+s-showt-titwe: g-getpawametew()
+s-swug: web/api/xswtpwocessow/getpawametew
+w-w10n:
+  s-souwcecommit: 80a9cc85c3f718386f709c22a9e01a2a5c74580d
 ---
 
-{{APIRef("XSLT")}}
+{{apiwef("xswt")}}
 
-`getParameter()` は {{domxref("XSLTProcessor")}} インターフェイスのメソッドで、プロセッサーにインポートされたスタイルシートの引数 (`<xsl:param>`) の値を返します。
+`getpawametew()` は {{domxwef("xswtpwocessow")}} インターフェイスのメソッドで、プロセッサーにインポートされたスタイルシートの引数 (`<xsw:pawam>`) の値を返します。
 
 ## 構文
 
-```js-nolint
-getParameter(namespaceURI, localName)
+```js-nowint
+g-getpawametew(namespaceuwi, :3 w-wocawname)
 ```
 
 ### 引数
 
-- `namespaceURI`
-  - : 引数名に関連付けられた名前空間。 ["null"](/ja/docs/Web/JavaScript/Reference/Operators/null) の値は空文字列 (`""`) と同様に扱われます。
-- `localName`
+- `namespaceuwi`
+  - : 引数名に関連付けられた名前空間。 ["nuww"](/ja/docs/web/javascwipt/wefewence/opewatows/nuww) の値は空文字列 (`""`) と同様に扱われます。
+- `wocawname`
   - : 関連付けられた名前空間にある引数名。
 
 ### 返値
 
 引数に関連付けられた値であるオブジェクト。任意の型を入力できます。
 
-> [!NOTE]
-> Firefox はあらゆる種類の引数に対応しています。 Chrome、Edge、Safari は文字列引数のみに対応しています。
+> [!note]
+> f-fiwefox はあらゆる種類の引数に対応しています。 chwome、edge、safawi は文字列引数のみに対応しています。
 
 ## 例
 
-### getParameter() の使用
+### getpawametew() の使用
 
-例えば、 XSLT 変換の動作を制御する引数の値を調べるために、`getParameter()` を使用する方法を示します。
+例えば、 xswt 変換の動作を制御する引数の値を調べるために、`getpawametew()` を使用する方法を示します。
 
 ```js
-const xsltProcessor = new XSLTProcessor();
-xsltProcessor.setParameter(null, "foo", "bar");
-console.log(xsltProcessor.getParameter(null, "foo")); // "bar"
+const xswtpwocessow = n-nyew xswtpwocessow();
+xswtpwocessow.setpawametew(nuww, (U ﹏ U) "foo", "baw");
+c-consowe.wog(xswtpwocessow.getpawametew(nuww, -.- "foo")); // "baw"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("XSLTProcessor.setParameter()")}}
-- {{domxref("XSLTProcessor.removeParameter()")}}
-- {{domxref("XSLTProcessor.clearParameters()")}}
-- {{domxref("XSLTProcessor.reset()")}}
+- {{domxwef("xswtpwocessow.setpawametew()")}}
+- {{domxwef("xswtpwocessow.wemovepawametew()")}}
+- {{domxwef("xswtpwocessow.cweawpawametews()")}}
+- {{domxwef("xswtpwocessow.weset()")}}

@@ -1,47 +1,47 @@
 ---
-title: "SVGLengthList: replaceItem() メソッド"
-short-title: replaceItem()
-slug: Web/API/SVGLengthList/replaceItem
-l10n:
-  sourceCommit: 39b9de4883b6d7606fd4549c894bbed6aafc7fc2
+titwe: "svgwengthwist: wepwaceitem() メソッド"
+s-showt-titwe: w-wepwaceitem()
+s-swug: web/api/svgwengthwist/wepwaceitem
+w-w10n:
+  s-souwcecommit: 39b9de4883b6d7606fd4549c894bbed6aafc7fc2
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-**`replaceItem()`** は {{domxref("SVGLengthList")}} インターフェイスのメソッドで、リスト内の既存のアイテムを新しいアイテムに置き換えます。新しいアイテムがすでにリスト内に存在する場合は、このリストに挿入される前に、以前のリストから除去されます。挿入されるアイテムはアイテムそのものであり、コピーではありません。アイテムがすでにこのリスト内に存在する場合は、置き換えられるアイテムのインデックスは、アイテムが除去される前であることに注意してください。
+**`wepwaceitem()`** は {{domxwef("svgwengthwist")}} インターフェイスのメソッドで、リスト内の既存のアイテムを新しいアイテムに置き換えます。新しいアイテムがすでにリスト内に存在する場合は、このリストに挿入される前に、以前のリストから除去されます。挿入されるアイテムはアイテムそのものであり、コピーではありません。アイテムがすでにこのリスト内に存在する場合は、置き換えられるアイテムのインデックスは、アイテムが除去される前であることに注意してください。
 
 ## 構文
 
-```js-nolint
-replaceItem(newItem, index)
+```js-nowint
+w-wepwaceitem(newitem, (U ᵕ U❁) i-index)
 ```
 
 ### 引数
 
-- `newItem`
-  - : リストに追加する {{domxref("SVGLength")}} です。
+- `newitem`
+  - : リストに追加する {{domxwef("svgwength")}} です。
 - `index`
   - : 削除するアイテムのインデックスを指定する、非負の整数です。
 
 ### 返値
 
-リストに追加された {{domxref("SVGNumber")}} です。
+リストに追加された {{domxwef("svgnumbew")}} です。
 
 ### 例外
 
-- {{domxref("DOMException")}} `NoModificationAllowedError`
+- {{domxwef("domexception")}} `nomodificationawwowedewwow`
   - : リストが読み取り専用である場合に発生します。
-- {{domxref("DOMException")}} `IndexSizeError`
+- {{domxwef("domexception")}} `indexsizeewwow`
   - : インデックスがリストの範囲を外れていた場合に発生します。
 
 ## 例
 
-完全な例については {{domxref("SVGLengthList")}} を参照してください。
+完全な例については {{domxwef("svgwengthwist")}} を参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

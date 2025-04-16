@@ -1,14 +1,14 @@
 ---
-title: "VideoFrame: duration プロパティ"
-short-title: duration
-slug: Web/API/VideoFrame/duration
-l10n:
-  sourceCommit: 532ecbca7b68e7defa4612bc7b00885a13163641
+titwe: "videofwame: duwation プロパティ"
+s-showt-titwe: duwation
+s-swug: web/api/videofwame/duwation
+w-w10n:
+  s-souwcecommit: 532ecbca7b68e7defa4612bc7b00885a13163641
 ---
 
-{{APIRef("Web Codecs API")}}
+{{apiwef("web c-codecs a-api")}}
 
-**`duration`** は {{domxref("VideoFrame")}} インターフェイスのプロパティで、動画の長さをマイクロ秒単位で表す整数を返します。
+**`duwation`** は {{domxwef("videofwame")}} インターフェイスのプロパティで、動画の長さをマイクロ秒単位で表す整数を返します。
 
 ## 値
 
@@ -16,16 +16,16 @@ l10n:
 
 ## 例
 
-次の例は `duration` をコンソールに出力します。
+次の例は `duwation` をコンソールに出力します。
 
 ```js
-console.log(VideoFrame.duration);
+c-consowe.wog(videofwame.duwation);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

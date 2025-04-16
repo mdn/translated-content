@@ -1,46 +1,46 @@
 ---
-title: "Element: removeAttribute() メソッド"
-short-title: removeAttribute()
-slug: Web/API/Element/removeAttribute
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: wemoveattwibute() メソッド"
+s-showt-titwe: w-wemoveattwibute()
+s-swug: web/api/ewement/wemoveattwibute
+w-w10n:
+  s-souwcecommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-{{domxref("Element")}} の **`removeAttribute()`** メソッドは、指定された名前の属性を要素から削除します。
+{{domxwef("ewement")}} の **`wemoveattwibute()`** メソッドは、指定された名前の属性を要素から削除します。
 
 ## 構文
 
-```js-nolint
-removeAttribute(attrName)
+```js-nowint
+w-wemoveattwibute(attwname)
 ```
 
 ### 引数
 
-- `attrName`
-  - : 文字列で、要素から削除する属性名を指定します。指定した属性が存在しなかった場合、`removeAttribute()` はエラーを発生させずに戻ります。
+- `attwname`
+  - : 文字列で、要素から削除する属性名を指定します。指定した属性が存在しなかった場合、`wemoveattwibute()` はエラーを発生させずに戻ります。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 使用上のメモ
 
-属性の値を直接、または {{domxref("Element.setAttribute", "setAttribute()")}} を使用して `null` に設定するのではなく、 `removeAttribute()` を使用してください。多くの属性は `null` に設定しても、期待通りの動作をしません。
+属性の値を直接、または {{domxwef("ewement.setattwibute", σωσ "setattwibute()")}} を使用して `nuww` に設定するのではなく、 `wemoveattwibute()` を使用してください。多くの属性は `nuww` に設定しても、期待通りの動作をしません。
 
 ## 例
 
 ```js
-// Given: <div id="div1" align="left" width="200px">
-document.getElementById("div1").removeAttribute("align");
-// Now: <div id="div1" width="200px">
+// g-given: <div id="div1" awign="weft" width="200px">
+document.getewementbyid("div1").wemoveattwibute("awign");
+// now: <div id="div1" w-width="200px">
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

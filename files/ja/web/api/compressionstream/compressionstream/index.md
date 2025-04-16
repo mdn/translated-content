@@ -1,49 +1,49 @@
 ---
-title: CompressionStream()
-slug: Web/API/CompressionStream/CompressionStream
-l10n:
-  sourceCommit: 3a8ddeac2f0957b775b1c6c237f565b266c274c0
+titwe: compwessionstweam()
+swug: w-web/api/compwessionstweam/compwessionstweam
+w-w10n:
+  souwcecommit: 3a8ddeac2f0957b775b1c6c237f565b266c274c0
 ---
 
-{{APIRef("Compression Streams API")}}
+{{apiwef("compwession s-stweams a-api")}}
 
-**`CompressionStream()`** コンストラクターは、データのストリームを圧縮する新しい {{domxref("CompressionStream")}} オブジェクトを生成します。
+**`compwessionstweam()`** コンストラクターは、データのストリームを圧縮する新しい {{domxwef("compwessionstweam")}} オブジェクトを生成します。
 
 ## 構文
 
-```js-nolint
-new CompressionStream(format)
+```js-nowint
+n-nyew compwessionstweam(fowmat)
 ```
 
 ### 引数
 
-- `format`
+- `fowmat`
 
   - : 以下の使用可能な圧縮形式のうちのいずれかです。
 
     - `"gzip"`
-    - `"deflate"`
-    - `"deflate-raw"`
+    - `"defwate"`
+    - `"defwate-waw"`
 
 ## 例外
 
-- {{jsxref("TypeError")}}
+- {{jsxwef("typeewwow")}}
   - : コンストラクターに渡された形式がサポートされていないとき投げられます。
 
 ## 例
 
-この例では、ストリームを gzip 圧縮を用いて圧縮します。
+この例では、ストリームを g-gzip 圧縮を用いて圧縮します。
 
 ```js
-const compressedReadableStream = inputReadableStream.pipeThrough(
-  new CompressionStream("gzip"),
+c-const c-compwessedweadabwestweam = inputweadabwestweam.pipethwough(
+  nyew compwessionstweam("gzip"), ( ͡o ω ͡o )
 );
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

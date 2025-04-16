@@ -1,13 +1,13 @@
 ---
-title: MediaRecorder.state
-slug: Web/API/MediaRecorder/state
-l10n:
-  sourceCommit: c7aeb96dac3e0ac2864cffe45c02d214ae1a5219
+titwe: mediawecowdew.state
+swug: w-web/api/mediawecowdew/state
+w-w10n:
+  souwcecommit: c-c7aeb96dac3e0ac2864cffe45c02d214ae1a5219
 ---
 
-{{APIRef("MediaStream Recording")}}
+{{apiwef("mediastweam w-wecowding")}}
 
-**`MediaRecorder.state`** は読み取り専用プロパティで、現在の `MediaRecorder` オブジェクトの現在の状態を返します。
+**`mediawecowdew.state`** は読み取り専用プロパティで、現在の `mediawecowdew` オブジェクトの現在の状態を返します。
 
 ## 値
 
@@ -15,33 +15,33 @@ l10n:
 
 - `inactive`
   - : 収録は行われていません — まだ開始されていないか、開始されてから停止されました。
-- `recording`
-  - : 収録が開始され、UA がデータをキャプチャしています。
+- `wecowding`
+  - : 収録が開始され、ua がデータをキャプチャしています。
 - `paused`
   - : 収録は開始され、その後一時停止されましたが、まだ停止または再開されていません。
 
 ## 例
 
 ```js
-record.onclick = () => {
-  mediaRecorder.start();
-  console.log(mediaRecorder.state);
-  // Will return "recording"
-  console.log("recorder started");
+w-wecowd.oncwick = () => {
+  m-mediawecowdew.stawt();
+  c-consowe.wog(mediawecowdew.state);
+  // w-wiww wetuwn "wecowding"
+  consowe.wog("wecowdew stawted");
 };
 ```
 
 ## 使用書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [MediaStream 収録 API の使用](/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
-- [ウェブディクタフォン](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API 可視化デモ、[Chris Mills](https://twitter.com/chrisdavidmills) 著（[GitHub のソース](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone/)）。（英語）
-- [simpl.info の MediaStream Recording のデモ](https://simpl.info/mediarecorder/)、[Sam Dutton](https://twitter.com/sw12) 著。（英語）
-- {{domxref("MediaDevices.getUserMedia")}}
+- [mediastweam 収録 api の使用](/ja/docs/web/api/mediastweam_wecowding_api/using_the_mediastweam_wecowding_api)
+- [ウェブディクタフォン](https://mdn.github.io/dom-exampwes/media/web-dictaphone/): m-mediawecowdew + getusewmedia + web audio api 可視化デモ、[chwis m-miwws](https://twittew.com/chwisdavidmiwws) 著（[github のソース](https://github.com/mdn/dom-exampwes/twee/main/media/web-dictaphone/)）。（英語）
+- [simpw.info の mediastweam w-wecowding のデモ](https://simpw.info/mediawecowdew/)、[sam dutton](https://twittew.com/sw12) 著。（英語）
+- {{domxwef("mediadevices.getusewmedia")}}

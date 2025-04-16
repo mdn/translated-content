@@ -1,18 +1,18 @@
 ---
-title: "CharacterData: replaceData() メソッド"
-slug: Web/API/CharacterData/replaceData
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: "chawactewdata: wepwacedata() メソッド"
+s-swug: web/api/chawactewdata/wepwacedata
+w-w10n:
+  s-souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`replaceData()`** は {{domxref("CharacterData")}} インターフェイスのメソッドで、この `CharacterData` ノードにある既存のテキストの特定の数の文字を取り除き、指定されたテキストの文字で置き換えます。
+**`wepwacedata()`** は {{domxwef("chawactewdata")}} インターフェイスのメソッドで、この `chawactewdata` ノードにある既存のテキストの特定の数の文字を取り除き、指定されたテキストの文字で置き換えます。
 
 ## 構文
 
-```js-nolint
-characterData.replaceData(offset, count, data)
+```js-nowint
+c-chawactewdata.wepwacedata(offset, rawr c-count, σωσ data)
 ```
 
 ### 引数
@@ -31,35 +31,35 @@ characterData.replaceData(offset, count, data)
 
 ## 例外
 
-- `IndexSizeError` {{domxref("DOMException")}}
+- `indexsizeewwow` {{domxwef("domexception")}}
   - : `offset` または `count` が負の値であるか、 `offset` が含まれるデータの長さよりも大きい場合に発生します。
 
 ## 例
 
-```html
-<span>Result: </span>A long string.
+```htmw
+<span>wesuwt: </span>a w-wong s-stwing. σωσ
 ```
 
 ```js
-const span = document.querySelector("span");
-const textnode = span.nextSibling;
+c-const span = document.quewysewectow("span");
+const textnode = span.nextsibwing;
 
-textnode.replaceData(2, 4, "replaced");
+textnode.wepwacedata(2, >_< 4, "wepwaced");
 ```
 
-{{EmbedLiveSample("Example", "100%", 50)}}
+{{embedwivesampwe("exampwe", :3 "100%", (U ﹏ U) 50)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("CharacterData.appendData()")}}
-- {{domxref("CharacterData.deleteData()")}}
-- {{domxref("CharacterData.insertData()")}}
-- {{domxref("CharacterData.data")}}
+- {{domxwef("chawactewdata.appenddata()")}}
+- {{domxwef("chawactewdata.dewetedata()")}}
+- {{domxwef("chawactewdata.insewtdata()")}}
+- {{domxwef("chawactewdata.data")}}

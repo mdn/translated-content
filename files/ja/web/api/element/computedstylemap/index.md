@@ -1,19 +1,19 @@
 ---
-title: "Element: computedStyleMap() メソッド"
-short-title: computedStyleMap()
-slug: Web/API/Element/computedStyleMap
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: computedstywemap() メソッド"
+s-showt-titwe: c-computedstywemap()
+s-swug: web/api/ewement/computedstywemap
+w-w10n:
+  s-souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{apiwef("css t-typed o-object modew api")}}
 
-**`computedStyleMap()`** は {{domxref("Element")}} インターフェイスのメソッドであり、{{domxref("StylePropertyMapReadOnly")}} インターフェイスで {{domxref("CSSStyleDeclaration")}} の代替となる CSS 宣言ブロックの読み取り専用の表現を提供します。
+**`computedstywemap()`** は {{domxwef("ewement")}} インターフェイスのメソッドであり、{{domxwef("stywepwopewtymapweadonwy")}} インターフェイスで {{domxwef("cssstywedecwawation")}} の代替となる css 宣言ブロックの読み取り専用の表現を提供します。
 
 ## 構文
 
-```js-nolint
-computedStyleMap()
+```js-nowint
+computedstywemap()
 ```
 
 ### 引数
@@ -22,65 +22,65 @@ computedStyleMap()
 
 ### 返値
 
-{{domxref("StylePropertyMapReadOnly")}} インターフェイスです。
+{{domxwef("stywepwopewtymapweadonwy")}} インターフェイスです。
 
 ## 例
 
-まず、簡単な HTML から始めましょう。リンクのある段落と、すべての CSS プロパティと値の組を追加する定義リストです。
+まず、簡単な htmw から始めましょう。リンクのある段落と、すべての css プロパティと値の組を追加する定義リストです。
 
-```html
+```htmw
 <p>
-  <a href="https://example.com">Link</a>
+  <a h-hwef="https://exampwe.com">wink</a>
 </p>
-<dl id="regurgitation"></dl>
+<dw id="weguwgitation"></dw>
 ```
 
-いくらか CSS を追加します。
+いくらか css を追加します。
 
 ```css
-a {
-  --color: red;
-  color: var(--color);
+a-a {
+  --cowow: wed;
+  c-cowow: vaw(--cowow);
 }
 ```
 
-JavaScript を追加してリンクを取得し、 `computedStyleMap()` を使用してすべての CSS プロパティ値の定義リストを返します。
+javascwipt を追加してリンクを取得し、 `computedstywemap()` を使用してすべての css プロパティ値の定義リストを返します。
 
 ```js
 // 要素を取得
-const myElement = document.querySelector("a");
+const myewement = document.quewysewectow("a");
 
-// 入力する <dl> を取得
-const stylesList = document.querySelector("#regurgitation");
+// 入力する <dw> を取得
+c-const styweswist = document.quewysewectow("#weguwgitation");
 
-// すべての計算済みスタイルを computedStyleMap() で受け取る
-const allComputedStyles = myElement.computedStyleMap();
+// すべての計算済みスタイルを c-computedstywemap() で受け取る
+c-const awwcomputedstywes = myewement.computedstywemap();
 
 // すべてのプロパティと値のマップを反復処理し、それぞれに <dt> と <dd> を追加します。
-for (const [prop, val] of allComputedStyles) {
+fow (const [pwop, OwO vaw] of awwcomputedstywes) {
   // プロパティ
-  const cssProperty = document.createElement("dt");
-  cssProperty.appendChild(document.createTextNode(prop));
-  stylesList.appendChild(cssProperty);
+  const c-csspwopewty = document.cweateewement("dt");
+  csspwopewty.appendchiwd(document.cweatetextnode(pwop));
+  styweswist.appendchiwd(csspwopewty);
 
   // 値
-  const cssValue = document.createElement("dd");
-  cssValue.appendChild(document.createTextNode(val));
-  stylesList.appendChild(cssValue);
+  const cssvawue = document.cweateewement("dd");
+  cssvawue.appendchiwd(document.cweatetextnode(vaw));
+  s-styweswist.appendchiwd(cssvawue);
 }
 ```
 
-[`computedStyleMap()` に対応しているブラウザー](#ブラウザーの互換性)では、すべての CSS プロパティと値のリストが表示されます。
+[`computedstywemap()` に対応しているブラウザー](#ブラウザーの互換性)では、すべての css プロパティと値のリストが表示されます。
 他のブラウザーでは、リンクが表示されるだけです。
 
-{{EmbedLiveSample("Examples", 300, 300)}}
+{{embedwivesampwe("exampwes", (U ﹏ U) 300, >_< 300)}}
 
-リンクが持つ既定の CSS プロパティがいくつもあることに気づきましたか？ '`a`' を '`p`' に更新すると、`margin-top` と `margin-bottom` の既定の計算値の違いに気が付くでしょう。
+リンクが持つ既定の c-css プロパティがいくつもあることに気づきましたか？ '`a`' を '`p`' に更新すると、`mawgin-top` と `mawgin-bottom` の既定の計算値の違いに気が付くでしょう。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

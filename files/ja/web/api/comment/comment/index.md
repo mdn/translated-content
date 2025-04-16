@@ -1,44 +1,44 @@
 ---
-title: "Comment: Comment() コンストラクター"
-slug: Web/API/Comment/Comment
-l10n:
-  sourceCommit: e811fc31b67e145c5882e8e3f128d1938c627a51
+titwe: "comment: comment() コンストラクター"
+s-swug: web/api/comment/comment
+w-w10n:
+  souwcecommit: e-e811fc31b67e145c5882e8e3f128d1938c627a51
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Comment()`** コンストラクターは、引数に指定された文字列を内容とする {{domxref("Comment")}} オブジェクトを返します。
+**`comment()`** コンストラクターは、引数に指定された文字列を内容とする {{domxwef("comment")}} オブジェクトを返します。
 
 ## 構文
 
-```js-nolint
-new Comment()
-new Comment(aString)
+```js-nowint
+n-nyew comment()
+n-nyew comment(astwing)
 ```
 
 ### 引数
 
-- `aString` {{optional_inline}}
+- `astwing` {{optionaw_inwine}}
 
 ### 返値
 
-新しい {{domxref("Comment")}} です。中には `aString` が入るか、引数が与えられなかった場合は空文字列が入ります。
+新しい {{domxwef("comment")}} です。中には `astwing` が入るか、引数が与えられなかった場合は空文字列が入ります。
 
 ## 例
 
 ```js
-let comment = new Comment("Test");
+w-wet c-comment = nyew comment("test");
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [DOM インターフェイスの索引](/ja/docs/Web/API/Document_Object_Model)
-- {{domxref("Document.createComment()")}} はこのコンストラクターの古い代替形式です。
+- [dom インターフェイスの索引](/ja/docs/web/api/document_object_modew)
+- {{domxwef("document.cweatecomment()")}} はこのコンストラクターの古い代替形式です。

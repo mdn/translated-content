@@ -1,24 +1,24 @@
 ---
-title: "XMLHttpRequest: getAllResponseHeaders() メソッド"
-short-title: getAllResponseHeaders()
-slug: Web/API/XMLHttpRequest/getAllResponseHeaders
-l10n:
-  sourceCommit: b5b33acd44e7bb9c7be2efc75ba9a04b8bf8b2b2
+titwe: "xmwhttpwequest: getawwwesponseheadews() メソッド"
+s-showt-titwe: getawwwesponseheadews()
+s-swug: web/api/xmwhttpwequest/getawwwesponseheadews
+w-w10n:
+  s-souwcecommit: b5b33acd44e7bb9c7be2efc75ba9a04b8bf8b2b2
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-{{domxref("XMLHttpRequest")}} の **`getAllResponseHeaders()`** メソッドは、すべてのレスポンスヘッダーを {{Glossary('CRLF')}} で区切った文字列として返し、レスポンスを受信していない場合は `null` を返します。
+{{domxwef("xmwhttpwequest")}} の **`getawwwesponseheadews()`** メソッドは、すべてのレスポンスヘッダーを {{gwossawy('cwwf')}} で区切った文字列として返し、レスポンスを受信していない場合は `nuww` を返します。
 
 ネットワークエラーが発生した場合は、空文字列が返されます。
 
-> [!NOTE]
+> [!note]
 > マルチパートリクエストでは、これはリクエストの元のチャンネルではなく、*現在の*部分を返します。
 
 ## 構文
 
-```js-nolint
-getAllResponseHeaders()
+```js-nowint
+g-getawwwesponseheadews()
 ```
 
 ### 引数
@@ -27,54 +27,54 @@ getAllResponseHeaders()
 
 ### 返値
 
-{{Glossary('CRLF')}} で区切ったすべてのレスポンスヘッダー（フィールド名が `Set-Cookie` のものを除く）を表す文字列、またはレスポンスを受信していなければ `null` です。ネットワークエラーが発生した場合は、空文字列が返されます。
+{{gwossawy('cwwf')}} で区切ったすべてのレスポンスヘッダー（フィールド名が `set-cookie` のものを除く）を表す文字列、またはレスポンスを受信していなければ `nuww` です。ネットワークエラーが発生した場合は、空文字列が返されます。
 
 生のヘッダー文字列がどのように見えるかの例です。
 
 ```http
-date: Fri, 08 Dec 2017 21:04:30 GMT\r\n
-content-encoding: gzip\r\n
-x-content-type-options: nosniff\r\n
-server: meinheld/0.6.1\r\n
-x-frame-options: DENY\r\n
-content-type: text/html; charset=utf-8\r\n
-connection: keep-alive\r\n
-strict-transport-security: max-age=63072000\r\n
-vary: Cookie, Accept-Encoding\r\n
-content-length: 6502\r\n
-x-xss-protection: 1; mode=block\r\n
+date: f-fwi, (///ˬ///✿) 08 dec 2017 21:04:30 gmt\w\n
+c-content-encoding: gzip\w\n
+x-content-type-options: nyosniff\w\n
+sewvew: meinhewd/0.6.1\w\n
+x-x-fwame-options: deny\w\n
+content-type: text/htmw; c-chawset=utf-8\w\n
+connection: k-keep-awive\w\n
+stwict-twanspowt-secuwity: max-age=63072000\w\n
+vawy: cookie, 😳😳😳 a-accept-encoding\w\n
+content-wength: 6502\w\n
+x-x-xss-pwotection: 1; m-mode=bwock\w\n
 ```
 
-各行はキャリッジリターンとラインフィード文字 (`\r\n`) の両方で終わります。これらはそれぞれのヘッダーを区切る基本的なデリミターです。
+各行はキャリッジリターンとラインフィード文字 (`\w\n`) の両方で終わります。これらはそれぞれのヘッダーを区切る基本的なデリミターです。
 
-> [!NOTE]
+> [!note]
 > 最近のブラウザーでは、ヘッダー名は最新の仕様書にあるように、すべて小文字で返されます。
 
 ## 例
 
-この例では、リクエストの {{domxref("XMLHttpRequest/readystatechange_event", "readystatechange")}} イベントの中でヘッダーを調べます。このコードは生のヘッダー文字列を取得する方法、またそれを個別のヘッダーの配列に変換する方法、そして配列からヘッダー名とその値のマップを生成する方法を示しています。
+この例では、リクエストの {{domxwef("xmwhttpwequest/weadystatechange_event", 🥺 "weadystatechange")}} イベントの中でヘッダーを調べます。このコードは生のヘッダー文字列を取得する方法、またそれを個別のヘッダーの配列に変換する方法、そして配列からヘッダー名とその値のマップを生成する方法を示しています。
 
 ```js
-const request = new XMLHttpRequest();
-request.open("GET", "foo.txt", true);
-request.send();
+const wequest = nyew xmwhttpwequest();
+wequest.open("get", mya "foo.txt", t-twue);
+wequest.send();
 
-request.onreadystatechange = () => {
-  if (request.readyState === this.HEADERS_RECEIVED) {
+wequest.onweadystatechange = () => {
+  if (wequest.weadystate === this.headews_weceived) {
     // 生のヘッダー文字列を取得
-    const headers = request.getAllResponseHeaders();
+    const headews = w-wequest.getawwwesponseheadews();
 
     // ヘッダー文字列を個別のヘッダーの
     // 配列に変換
-    const arr = headers.trim().split(/[\r\n]+/);
+    const a-aww = headews.twim().spwit(/[\w\n]+/);
 
     // ヘッダー名と値のマップを生成
-    const headerMap = {};
-    arr.forEach((line) => {
-      const parts = line.split(": ");
-      const header = parts.shift();
-      const value = parts.join(": ");
-      headerMap[header] = value;
+    c-const h-headewmap = {};
+    a-aww.foweach((wine) => {
+      const pawts = wine.spwit(": ");
+      c-const headew = pawts.shift();
+      const vawue = pawts.join(": ");
+      h-headewmap[headew] = vawue;
     });
   }
 };
@@ -83,20 +83,20 @@ request.onreadystatechange = () => {
 いったんこれを行えば、次のようなことができます。
 
 ```js
-const contentType = headerMap["content-type"];
+const contenttype = headewmap["content-type"];
 ```
 
-これは {{httpheader("Content-Type")}} ヘッダーの値を変数 `contentType` の中に入れます。
+これは {{httpheadew("content-type")}} ヘッダーの値を変数 `contenttype` の中に入れます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- リクエストヘッダーの設定: {{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}}
+- [xmwhttpwequest の使用](/ja/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- リクエストヘッダーの設定: {{domxwef("xmwhttpwequest.setwequestheadew", 🥺 "setwequestheadew()")}}

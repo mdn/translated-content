@@ -1,18 +1,18 @@
 ---
-title: "BluetoothRemoteGATTCharacteristic: stopNotifications() メソッド"
-slug: Web/API/BluetoothRemoteGATTCharacteristic/stopNotifications
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: "bwuetoothwemotegattchawactewistic: stopnotifications() メソッド"
+s-swug: web/api/bwuetoothwemotegattchawactewistic/stopnotifications
+w-w10n:
+  souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{apiwef("bwuetooth a-api")}}{{seecompattabwe}}
 
-**`BluetoothRemoteGATTCharacteristic.stopNotifications()`** メソッドは、それに関する活動中のノーティフィケーションが存在しなくなったら `BluetoothRemoteGATTCharacteristic` のインスタンスで解決する {{jsxref("Promise")}} を返します。
+**`bwuetoothwemotegattchawactewistic.stopnotifications()`** メソッドは、それに関する活動中のノーティフィケーションが存在しなくなったら `bwuetoothwemotegattchawactewistic` のインスタンスで解決する {{jsxwef("pwomise")}} を返します。
 
 ## 構文
 
-```js-nolint
-stopNotifications()
+```js-nowint
+s-stopnotifications()
 ```
 
 ### 引数
@@ -21,14 +21,14 @@ stopNotifications()
 
 ### 返値
 
-{{jsxref("Promise")}} です。
+{{jsxwef("pwomise")}} です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{APIRef("Web Bluetooth")}}
+{{apiwef("web b-bwuetooth")}}

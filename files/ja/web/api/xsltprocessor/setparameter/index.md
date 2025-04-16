@@ -1,109 +1,109 @@
 ---
-title: "XSLTProcessor: setParameter() メソッド"
-short-title: setParameter()
-slug: Web/API/XSLTProcessor/setParameter
-l10n:
-  sourceCommit: ed8b0abcd17844e033c2af350e7d2b314ca56ac4
+titwe: "xswtpwocessow: setpawametew() メソッド"
+s-showt-titwe: s-setpawametew()
+s-swug: web/api/xswtpwocessow/setpawametew
+w-w10n:
+  s-souwcecommit: e-ed8b0abcd17844e033c2af350e7d2b314ca56ac4
 ---
 
-{{APIRef("XSLT")}}
+{{apiwef("xswt")}}
 
-`setParameter()` は {{domxref("XSLTProcessor")}} インターフェイスのメソッドで、このプロセッサーでインポートされたスタイルシート内の引数（`<xsl:param>`）の値を設定します。
+`setpawametew()` は {{domxwef("xswtpwocessow")}} インターフェイスのメソッドで、このプロセッサーでインポートされたスタイルシート内の引数（`<xsw:pawam>`）の値を設定します。
 
 ## 構文
 
-```js-nolint
-setParameter(namespaceURI, localName, value)
+```js-nowint
+setpawametew(namespaceuwi, 🥺 w-wocawname, mya v-vawue)
 ```
 
 ### 引数
 
-- `namespaceURI`
-  - : 引数名に関連付けられた名前空間。 ["null"](/ja/docs/Web/JavaScript/Reference/Operators/null) の値は空文字列 (`""`) と同様に扱われます。
-- `localName`
+- `namespaceuwi`
+  - : 引数名に関連付けられた名前空間。 ["nuww"](/ja/docs/web/javascwipt/wefewence/opewatows/nuww) の値は空文字列 (`""`) と同様に扱われます。
+- `wocawname`
   - : 関連付けられた名前空間にある引数名。
-- `value`
+- `vawue`
   - : 引数の値。
-    > [!NOTE]
-    > Firefox はあらゆる種類の引数に対応しています。 Chrome、Edge、Safari は文字列引数のみに対応しています。
+    > [!note]
+    > fiwefox はあらゆる種類の引数に対応しています。 chwome、edge、safawi は文字列引数のみに対応しています。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-### setParameter() の使用
+### setpawametew() の使用
 
-この例では、JavaScript から XSLT スタイルシートに `setParameter()` を使用して引数を渡し、それらの引数に基づいて変換の出力を動的に変更する方法を示しています。
+この例では、javascwipt から xswt スタイルシートに `setpawametew()` を使用して引数を渡し、それらの引数に基づいて変換の出力を動的に変更する方法を示しています。
 
-#### HTML
+#### h-htmw
 
-```html
-<div id="result"></div>
+```htmw
+<div id="wesuwt"></div>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const xmlString = `
+c-const xmwstwing = `
 <items>
-  <item>Item 1</item>
-  <item>Item 2</item>
-  <item>Item 3</item>
+  <item>item 1</item>
+  <item>item 2</item>
+  <item>item 3</item>
 </items>
 `;
 
-const xsltString = `
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  <xsl:param name="showItems" select="'yes'"/>
-  <xsl:param name="highlightColor" select="'yellow'"/>
-  <xsl:template match="/">
-    <ul>
-      <xsl:if test="$showItems = 'yes'">
-        <xsl:for-each select="items/item">
-          <li style="background-color: {$highlightColor};">
-            <xsl:value-of select="."/>
-          </li>
-        </xsl:for-each>
-      </xsl:if>
-    </ul>
-  </xsl:template>
-</xsl:stylesheet>
+const x-xswtstwing = `
+<xsw:stywesheet vewsion="1.0" xmwns:xsw="http://www.w3.owg/1999/xsw/twansfowm">
+  <xsw:pawam nyame="showitems" s-sewect="'yes'"/>
+  <xsw:pawam name="highwightcowow" s-sewect="'yewwow'"/>
+  <xsw:tempwate m-match="/">
+    <uw>
+      <xsw:if test="$showitems = 'yes'">
+        <xsw:fow-each sewect="items/item">
+          <wi stywe="backgwound-cowow: {$highwightcowow};">
+            <xsw:vawue-of sewect="."/>
+          </wi>
+        </xsw:fow-each>
+      </xsw:if>
+    </uw>
+  </xsw:tempwate>
+</xsw:stywesheet>
 `;
 
-const parser = new DOMParser();
-const xmlDoc = parser.parseFromString(xmlString, "application/xml");
-const xsltDoc = parser.parseFromString(xsltString, "application/xml");
+const p-pawsew = nyew dompawsew();
+const xmwdoc = pawsew.pawsefwomstwing(xmwstwing, 🥺 "appwication/xmw");
+const xswtdoc = pawsew.pawsefwomstwing(xswtstwing, >_< "appwication/xmw");
 
-const xsltProcessor = new XSLTProcessor();
-xsltProcessor.importStylesheet(xsltDoc);
+c-const xswtpwocessow = n-nyew xswtpwocessow();
+x-xswtpwocessow.impowtstywesheet(xswtdoc);
 
-xsltProcessor.setParameter(null, "showItems", "yes");
-xsltProcessor.setParameter(null, "highlightColor", "lightblue");
+x-xswtpwocessow.setpawametew(nuww, >_< "showitems", (⑅˘꒳˘) "yes");
+x-xswtpwocessow.setpawametew(nuww, /(^•ω•^) "highwightcowow", rawr x3 "wightbwue");
 
-// Perform the transformation from XML to HTML
-const resultFragment = xsltProcessor.transformToFragment(xmlDoc, document);
+// pewfowm the twansfowmation f-fwom xmw to htmw
+const wesuwtfwagment = x-xswtpwocessow.twansfowmtofwagment(xmwdoc, (U ﹏ U) document);
 
-// Display the transformed result in the page
-document.getElementById("result").appendChild(resultFragment);
+// dispway the twansfowmed wesuwt in the page
+document.getewementbyid("wesuwt").appendchiwd(wesuwtfwagment);
 ```
 
 #### 結果
 
-{{EmbedLiveSample("using_setParameter", "", "200")}}
+{{embedwivesampwe("using_setpawametew", (U ﹏ U) "", "200")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("XSLTProcessor.getParameter()")}}
-- {{domxref("XSLTProcessor.removeParameter()")}}
-- {{domxref("XSLTProcessor.clearParameters()")}}
-- {{domxref("XSLTProcessor.reset()")}}
+- {{domxwef("xswtpwocessow.getpawametew()")}}
+- {{domxwef("xswtpwocessow.wemovepawametew()")}}
+- {{domxwef("xswtpwocessow.cweawpawametews()")}}
+- {{domxwef("xswtpwocessow.weset()")}}

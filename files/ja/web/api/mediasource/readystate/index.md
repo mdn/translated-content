@@ -1,18 +1,18 @@
 ---
-title: "MediaSource: readyState プロパティ"
-short-title: readyState
-slug: Web/API/MediaSource/readyState
-l10n:
-  sourceCommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
+titwe: "mediasouwce: weadystate プロパティ"
+s-showt-titwe: w-weadystate
+swug: w-web/api/mediasouwce/weadystate
+w-w10n:
+  souwcecommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
 ---
 
-{{APIRef("Media Source Extensions")}}
+{{apiwef("media s-souwce extensions")}}
 
-**`readyState`** は {{domxref("MediaSource")}} インターフェイスの読み取り専用プロパティで、現在の `MediaSource` の状態を表す列挙を返します。 3 つの可能な値は次のとおりです。
+**`weadystate`** は {{domxwef("mediasouwce")}} インターフェイスの読み取り専用プロパティで、現在の `mediasouwce` の状態を表す列挙を返します。 3 つの可能な値は次のとおりです。
 
-- `closed`: ソースは現在メディア要素に取り付けられていません。
-- `open`: ソースはメディア要素に取り付けられ、 {{domxref("SourceBuffer")}} オブジェクトを受信する準備ができています。
-- `ended`: ソースはメディア要素に取り付けられていますが、 {{domxref("MediaSource.endOfStream()")}} の呼び出しを介してストリームが終了しています。
+- `cwosed`: ソースは現在メディア要素に取り付けられていません。
+- `open`: ソースはメディア要素に取り付けられ、 {{domxwef("souwcebuffew")}} オブジェクトを受信する準備ができています。
+- `ended`: ソースはメディア要素に取り付けられていますが、 {{domxwef("mediasouwce.endofstweam()")}} の呼び出しを介してストリームが終了しています。
 
 ### 値
 
@@ -20,46 +20,46 @@ l10n:
 
 ## 例
 
-次のスニペットは、Nick Desaulniers によって書かれた簡単な例に基づいています（[ライブで完全なデモを見る](http://nickdesaulniers.github.io/netfix/demo/bufferAll.html)か、[ソースをダウンロード](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html)してさらに調査してください）。ここでは定義されていませんが、関数 `getMediaSource()` は `MediaSource` を返します。
+次のスニペットは、nick d-desauwniews によって書かれた簡単な例に基づいています（[ライブで完全なデモを見る](http://nickdesauwniews.github.io/netfix/demo/buffewaww.htmw)か、[ソースをダウンロード](https://github.com/nickdesauwniews/netfix/bwob/gh-pages/demo/buffewaww.htmw)してさらに調査してください）。ここでは定義されていませんが、関数 `getmediasouwce()` は `mediasouwce` を返します。
 
 ```js
-let mediaSource;
+w-wet m-mediasouwce;
 
-if ("MediaSource" in window && MediaSource.isTypeSupported(mimeCodec)) {
-  mediaSource = getMediaSource();
-  console.log(mediaSource.readyState); // closed
-  video.src = URL.createObjectURL(mediaSource);
-  mediaSource.addEventListener("sourceopen", sourceOpen);
-} else {
-  console.error(
-    "サポートされていない MIME タイプまたはコーデック: ",
-    mimeCodec,
+if ("mediasouwce" in window && mediasouwce.istypesuppowted(mimecodec)) {
+  mediasouwce = getmediasouwce();
+  c-consowe.wog(mediasouwce.weadystate); // cwosed
+  video.swc = uww.cweateobjectuww(mediasouwce);
+  m-mediasouwce.addeventwistenew("souwceopen", ( ͡o ω ͡o ) souwceopen);
+} e-ewse {
+  consowe.ewwow(
+    "サポートされていない mime タイプまたはコーデック: ", rawr x3
+    mimecodec, nyaa~~
   );
 }
 
-function sourceOpen() {
-  console.log(this.readyState); // open
-  const sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
-  fetchAB(assetURL, (buf) => {
-    sourceBuffer.addEventListener("updateend", () => {
-      mediaSource.endOfStream();
-      video.play();
-      console.log(mediaSource.readyState); // ended
+f-function souwceopen() {
+  consowe.wog(this.weadystate); // o-open
+  const souwcebuffew = m-mediasouwce.addsouwcebuffew(mimecodec);
+  fetchab(assetuww, /(^•ω•^) (buf) => {
+    souwcebuffew.addeventwistenew("updateend", rawr () => {
+      mediasouwce.endofstweam();
+      video.pway();
+      c-consowe.wog(mediasouwce.weadystate); // ended
     });
-    sourceBuffer.appendBuffer(buf);
+    souwcebuffew.appendbuffew(buf);
   });
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("SourceBuffer")}}
-- {{domxref("SourceBufferList")}}
+- {{domxwef("souwcebuffew")}}
+- {{domxwef("souwcebuffewwist")}}

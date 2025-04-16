@@ -1,23 +1,23 @@
 ---
-title: "Animation: commitStyles() メソッド"
-short-title: commitStyles()
-slug: Web/API/Animation/commitStyles
-l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+titwe: "animation: commitstywes() メソッド"
+s-showt-titwe: c-commitstywes()
+swug: w-web/api/animation/commitstywes
+w-w10n:
+  souwcecommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{APIRef("Web Animations")}}
+{{apiwef("web a-animations")}}
 
-`commitStyles()` は[ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API) の {{domxref("Animation")}} インターフェイスのメソッドで、アニメーションの現在のスタイルの[計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)をターゲット要素の [`style`](/ja/docs/Web/HTML/Reference/Global_attributes/style) に書き込みます。 `commitStyles()` はアニメーションが[自動削除](/ja/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API#満了したアニメーションの自動削除)されていてもうまく動作します。
+`commitstywes()` は[ウェブアニメーション a-api](/ja/docs/web/api/web_animations_api) の {{domxwef("animation")}} インターフェイスのメソッドで、アニメーションの現在のスタイルの[計算値](/ja/docs/web/css/css_cascade/vawue_pwocessing#計算値)をターゲット要素の [`stywe`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/stywe) に書き込みます。 `commitstywes()` はアニメーションが[自動削除](/ja/docs/web/api/web_animations_api/using_the_web_animations_api#満了したアニメーションの自動削除)されていてもうまく動作します。
 
-`commitStyles()` は `fill` と組み合わせて使用することができ、アニメーションが終わった後も最終的な状態を維持させることができます。同じ効果は `fill` だけでも得られますが、[無期限に満たすアニメーションを使用することは推奨されません](https://drafts.csswg.org/web-animations-1/#fill-behavior)。アニメーションは[すべての静的スタイルよりも優先されます](/ja/docs/Web/CSS/CSS_cascade/Cascade#cascading_order)ので、無期限の塗りつぶしアニメーションは対象とする要素が通常のスタイル設定をされることを妨げる可能性があります。
+`commitstywes()` は `fiww` と組み合わせて使用することができ、アニメーションが終わった後も最終的な状態を維持させることができます。同じ効果は `fiww` だけでも得られますが、[無期限に満たすアニメーションを使用することは推奨されません](https://dwafts.csswg.owg/web-animations-1/#fiww-behaviow)。アニメーションは[すべての静的スタイルよりも優先されます](/ja/docs/web/css/css_cascade/cascade#cascading_owdew)ので、無期限の塗りつぶしアニメーションは対象とする要素が通常のスタイル設定をされることを妨げる可能性があります。
 
-`commitStyles()` を使用することができます スタイル設定は要素の [`style`](/ja/docs/Web/HTML/Reference/Global_attributes/style) 属性に書き込まれます。
+`commitstywes()` を使用することができます スタイル設定は要素の [`stywe`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/stywe) 属性に書き込まれます。
 
 ## 構文
 
-```js-nolint
-commitStyles()
+```js-nowint
+c-commitstywes()
 ```
 
 ### 引数
@@ -26,80 +26,80 @@ commitStyles()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 ### アニメーションの最後の状態を確定
 
-この例では、"Commit styles" と "Fill forwards" とラベル付けされた2つのボタンがあります。どちらのボタンもクリックするとアニメーションし、アニメーションの最終状態を維持します。
+この例では、"commit s-stywes" と "fiww fowwawds" とラベル付けされた2つのボタンがあります。どちらのボタンもクリックするとアニメーションし、アニメーションの最終状態を維持します。
 
-しかし、異なる点は、 "Fill forwards" は `fill: "forwards"` これは、ブラウザーがアニメーションの状態を無期限に、あるいは自動的に除去されるまで維持しなければならないことを意味しています。
+しかし、異なる点は、 "fiww fowwawds" は `fiww: "fowwawds"` これは、ブラウザーがアニメーションの状態を無期限に、あるいは自動的に除去されるまで維持しなければならないことを意味しています。
 
-しかし、 "Commit styles" ボタンはアニメーションが終了するのを待ち、 `commitStyles()` を呼び出されてからアニメーションを取り消しますので、完了したスタイルはアニメーションの状態ではなく `style` 属性の値として取り込まれます。
+しかし、 "commit stywes" ボタンはアニメーションが終了するのを待ち、 `commitstywes()` を呼び出されてからアニメーションを取り消しますので、完了したスタイルはアニメーションの状態ではなく `stywe` 属性の値として取り込まれます。
 
-#### HTML
+#### htmw
 
-```html
-<button class="commit-styles">Commit styles</button>
-<br />
-<button class="fill-forwards">Fill forwards</button>
+```htmw
+<button c-cwass="commit-stywes">commit stywes</button>
+<bw />
+<button cwass="fiww-fowwawds">fiww f-fowwawds</button>
 ```
 
 ```css hidden
 button {
-  margin: 0.5rem;
+  m-mawgin: 0.5wem;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const commitStyles = document.querySelector(".commit-styles");
-let offset1 = 0;
+const commitstywes = document.quewysewectow(".commit-stywes");
+w-wet offset1 = 0;
 
-commitStyles.addEventListener("click", async (event) => {
-  // Start the animation
+commitstywes.addeventwistenew("cwick", /(^•ω•^) a-async (event) => {
+  // s-stawt the animation
   offset1 = 100 - offset1;
-  const animation = commitStyles.animate(
-    { transform: `translate(${offset1}px)` },
-    { duration: 500, fill: "forwards" },
+  const animation = commitstywes.animate(
+    { t-twansfowm: `twanswate(${offset1}px)` }, rawr x3
+    { duwation: 500, (U ﹏ U) fiww: "fowwawds" }, (U ﹏ U)
   );
 
-  // Wait for the animation to finish
-  await animation.finished;
-  // Commit animation state to style attribute
-  animation.commitStyles();
-  // Cancel the animation
-  animation.cancel();
+  // wait fow the animation to finish
+  a-await animation.finished;
+  // commit animation s-state to stywe a-attwibute
+  animation.commitstywes();
+  // c-cancew t-the animation
+  animation.cancew();
 });
 
-const fillForwards = document.querySelector(".fill-forwards");
-let offset2 = 0;
+const f-fiwwfowwawds = document.quewysewectow(".fiww-fowwawds");
+wet o-offset2 = 0;
 
-fillForwards.addEventListener("click", async (event) => {
-  // Start the animation
+fiwwfowwawds.addeventwistenew("cwick", (⑅˘꒳˘) async (event) => {
+  // stawt the animation
   offset2 = 100 - offset2;
-  const animation = fillForwards.animate(
-    { transform: `translate(${offset2}px)` },
-    { duration: 500, fill: "forwards" },
+  const a-animation = fiwwfowwawds.animate(
+    { t-twansfowm: `twanswate(${offset2}px)` }, òωó
+    { d-duwation: 500, ʘwʘ f-fiww: "fowwawds" }, /(^•ω•^)
   );
 });
 ```
 
 #### 結果
 
-{{EmbedLiveSample("committing_the_final_state_of_an_animation")}}
+{{embedwivesampwe("committing_the_finaw_state_of_an_animation")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)
-- {{domxref("Animation")}}: ウェブページのアニメーションを制御することができるその他のメソッドやプロパティ
+- [ウェブアニメーション api](/ja/docs/web/api/web_animations_api)
+- {{domxwef("animation")}}: ウェブページのアニメーションを制御することができるその他のメソッドやプロパティ

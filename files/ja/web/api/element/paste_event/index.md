@@ -1,93 +1,93 @@
 ---
-title: "Element: paste イベント"
-short-title: paste
-slug: Web/API/Element/paste_event
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: paste イベント"
+s-showt-titwe: p-paste
+swug: w-web/api/ewement/paste_event
+w-w10n:
+  s-souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{APIRef}}
+{{apiwef}}
 
 **`paste`** イベントは、ユーザーがブラウザーのユーザーインターフェイスで「貼り付け」操作を行ったときに発生します。
 
-カーソルが編集可能なコンテキストにある場合（{{HTMLElement("textarea")}} や [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) 属性が `true` の要素など）、既定のアクションはクリップボードの内容を文書のカーソル位置に挿入します。
+カーソルが編集可能なコンテキストにある場合（{{htmwewement("textawea")}} や [`contenteditabwe`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/contenteditabwe) 属性が `twue` の要素など）、既定のアクションはクリップボードの内容を文書のカーソル位置に挿入します。
 
-このイベントのハンドラーは、イベントの `clipboardData` プロパティにある {{domxref("DataTransfer/getData", "getData()")}} を呼び出すことでクリップボードの中身にアクセスすることができます。
+このイベントのハンドラーは、イベントの `cwipboawddata` プロパティにある {{domxwef("datatwansfew/getdata", rawr "getdata()")}} を呼び出すことでクリップボードの中身にアクセスすることができます。
 
-既定の動作を上書きする場合（例えば、別なデータを挿入したりクリップボードの内容を変換したりする場合など）、イベントハンドラーで {{domxref("Event/preventDefault", "event.preventDefault()")}} を使用して既定のアクションをキャンセルした上で、必要なデータを手動で挿入してください。
+既定の動作を上書きする場合（例えば、別なデータを挿入したりクリップボードの内容を変換したりする場合など）、イベントハンドラーで {{domxwef("event/pweventdefauwt", OwO "event.pweventdefauwt()")}} を使用して既定のアクションをキャンセルした上で、必要なデータを手動で挿入してください。
 
-[合成した](/ja/docs/Web/Events/Creating_and_triggering_events) `paste` イベントを構築して配信することができますが、文書の内容には影響しません。
+[合成した](/ja/docs/web/events/cweating_and_twiggewing_events) `paste` イベントを構築して配信することができますが、文書の内容には影響しません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", (U ﹏ U) "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("paste", (event) => {});
+a-addeventwistenew("paste", >_< (event) => {});
 
-onpaste = (event) => {};
+o-onpaste = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("ClipboardEvent")}} です。 {{domxref("Event")}} から継承しています。
+{{domxwef("cwipboawdevent")}} です。 {{domxwef("event")}} から継承しています。
 
-{{InheritanceDiagram("ClipboardEvent")}}
+{{inhewitancediagwam("cwipboawdevent")}}
 
 ## 例
 
 ### ライブデモ
 
-#### HTML
+#### htmw
 
-```html
-<div class="source" contenteditable="true">Copy text from this box.</div>
-<div class="target" contenteditable="true">And paste it into this one.</div>
+```htmw
+<div cwass="souwce" contenteditabwe="twue">copy text fwom this box.</div>
+<div c-cwass="tawget" contenteditabwe="twue">and paste it into t-this one.</div>
 ```
 
 ```css hidden
-div.source,
-div.target {
-  border: 1px solid gray;
-  margin: 0.5rem;
-  padding: 0.5rem;
-  height: 1rem;
-  background-color: #e9eef1;
+d-div.souwce, rawr x3
+div.tawget {
+  bowdew: 1px sowid gway;
+  mawgin: 0.5wem;
+  p-padding: 0.5wem;
+  height: 1wem;
+  backgwound-cowow: #e9eef1;
 }
 ```
 
-#### JS
+#### js
 
 ```js
-const target = document.querySelector("div.target");
+c-const tawget = document.quewysewectow("div.tawget");
 
-target.addEventListener("paste", (event) => {
-  event.preventDefault();
+t-tawget.addeventwistenew("paste", mya (event) => {
+  event.pweventdefauwt();
 
-  let paste = (event.clipboardData || window.clipboardData).getData("text");
-  paste = paste.toUpperCase();
-  const selection = window.getSelection();
-  if (!selection.rangeCount) return;
-  selection.deleteFromDocument();
-  selection.getRangeAt(0).insertNode(document.createTextNode(paste));
-  selection.collapseToEnd();
+  wet paste = (event.cwipboawddata || window.cwipboawddata).getdata("text");
+  paste = p-paste.touppewcase();
+  const sewection = window.getsewection();
+  if (!sewection.wangecount) wetuwn;
+  sewection.dewetefwomdocument();
+  sewection.getwangeat(0).insewtnode(document.cweatetextnode(paste));
+  s-sewection.cowwapsetoend();
 });
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('ライブデモ', '100%', '120px') }}
+{{ embedwivesampwe('ライブデモ', nyaa~~ '100%', (⑅˘꒳˘) '120px') }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 関連イベント: {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}}
-- {{domxref("Document")}} を対象としたこのイベント: {{domxref("Document/paste_event", "paste")}}
-- {{domxref("Window")}} を対象としたこのイベント: {{domxref("Window/paste_event", "paste")}}
+- 関連イベント: {{domxwef("ewement/cut_event", rawr x3 "cut")}}, {{domxwef("ewement/copy_event", (✿oωo) "copy")}}
+- {{domxwef("document")}} を対象としたこのイベント: {{domxwef("document/paste_event", (ˆ ﻌ ˆ)♡ "paste")}}
+- {{domxwef("window")}} を対象としたこのイベント: {{domxwef("window/paste_event", (˘ω˘) "paste")}}

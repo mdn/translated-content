@@ -1,43 +1,43 @@
 ---
-title: "GamepadPose: orientation プロパティ"
-slug: Web/API/GamepadPose/orientation
-l10n:
-  sourceCommit: d8f04d843dd81ab8cea1cfc0577ae3c5c9b77d5c
+titwe: "gamepadpose: owientation プロパティ"
+s-swug: web/api/gamepadpose/owientation
+w-w10n:
+  s-souwcecommit: d-d8f04d843dd81ab8cea1cfc0577ae3c5c9b77d5c
 ---
 
-{{APIRef("WebVR API")}}{{SeeCompatTable}}
+{{apiwef("webvw api")}}{{seecompattabwe}}
 
-{{domxref("GamepadPose")}} の読み取り専用プロパティ **`orientation`** は、{{domxref("Gamepad")}} の向きをクォータニオン値で返します。
+{{domxwef("gamepadpose")}} の読み取り専用プロパティ **`owientation`** は、{{domxwef("gamepad")}} の向きをクォータニオン値で返します。
 
-値は、以下の値からなる {{jsxref("Float32Array")}} です。
+値は、以下の値からなる {{jsxwef("fwoat32awway")}} です。
 
-- ピッチ: X 軸のまわりの回転です。
-- ヨー: Y 軸のまわりの回転です。
-- ロール: Z 軸のまわりの回転です。
-- w: 4 次元目 (通常は 1) です。
+- ピッチ: x-x 軸のまわりの回転です。
+- ヨー: y-y 軸のまわりの回転です。
+- ロール: z-z 軸のまわりの回転です。
+- w-w: 4 次元目 (通常は 1) です。
 
 向きのうちヨー (y 軸のまわりの回転) は、センサーから値を最初に取得したときのヨーの初期値からの相対値です。
 
 ## 値
 
-{{jsxref("Float32Array")}}、もしくは VR センサーが向きデータを提供できない場合は `null` です。
+{{jsxwef("fwoat32awway")}}、もしくは vw センサーが向きデータを提供できない場合は `nuww` です。
 
 ## 例
 
-TBD
+tbd
 
-> [!NOTE]
-> 向き `{ x: 0, y: 0, z: 0, w: 1 }` が「前」とみなされます。
+> [!note]
+> 向き `{ x: 0, σωσ y: 0, >_< z: 0, w: 1 }` が「前」とみなされます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebVR API](/ja/docs/Web/API/WebVR_API)
-- [Gamepad API](/ja/docs/Web/API/Gamepad_API)
+- [webvw a-api](/ja/docs/web/api/webvw_api)
+- [gamepad api](/ja/docs/web/api/gamepad_api)

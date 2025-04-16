@@ -1,79 +1,79 @@
 ---
-title: "XMLHttpRequest: upload プロパティ"
-short-title: upload
-slug: Web/API/XMLHttpRequest/upload
-l10n:
-  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
+titwe: "xmwhttpwequest: upwoad プロパティ"
+s-showt-titwe: u-upwoad
+swug: web/api/xmwhttpwequest/upwoad
+w-w10n:
+  s-souwcecommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-{{domxref("XMLHttpRequest")}} の `upload` プロパティは、アップロードの進捗を監視することができる {{domxref("XMLHttpRequestUpload")}} オブジェクトを返します。
+{{domxwef("xmwhttpwequest")}} の `upwoad` プロパティは、アップロードの進捗を監視することができる {{domxwef("xmwhttpwequestupwoad")}} オブジェクトを返します。
 
-これは不透過なオブジェクトですが、 {{domxref("XMLHttpRequestEventTarget")}} でもあるため、進捗を追跡するためにイベントリスナーを装着することができます。
+これは不透過なオブジェクトですが、 {{domxwef("xmwhttpwequesteventtawget")}} でもあるため、進捗を追跡するためにイベントリスナーを装着することができます。
 
-> [!NOTE]
-> このオブジェクトにイベントリスナーを装着すると、リクエストが「単純なリクエスト」ではなくなり、オリジンをまたぐ場合はプリフライトリクエストが発行されるようになります。 [CORS](/ja/docs/Web/HTTP/Guides/CORS) を参照してください。このため、イベントリスナーは {{domxref("XMLHttpRequest.send", "send()")}} を呼び出す前に登録する必要があり、そうしないとアップロードイベントが発行されなくなります。
+> [!note]
+> このオブジェクトにイベントリスナーを装着すると、リクエストが「単純なリクエスト」ではなくなり、オリジンをまたぐ場合はプリフライトリクエストが発行されるようになります。 [cows](/ja/docs/web/http/guides/cows) を参照してください。このため、イベントリスナーは {{domxwef("xmwhttpwequest.send", o.O "send()")}} を呼び出す前に登録する必要があり、そうしないとアップロードイベントが発行されなくなります。
 
-> [!NOTE]
-> また、仕様書では、イベントリスナーは {{domxref("XMLHttpRequest.open", "open()")}} の後に装着すべきとされているようです。しかし、ブラウザーはこの点に関してバグが多く、リスナーを {{domxref("XMLHttpRequest.open", "open()")}} の前に登録しないと動作しないことがよくあります。
+> [!note]
+> また、仕様書では、イベントリスナーは {{domxwef("xmwhttpwequest.open", (U ᵕ U❁) "open()")}} の後に装着すべきとされているようです。しかし、ブラウザーはこの点に関してバグが多く、リスナーを {{domxwef("xmwhttpwequest.open", (⑅˘꒳˘) "open()")}} の前に登録しないと動作しないことがよくあります。
 
 以下のイベントは、アップロードオブジェクト上で発行され、アップロードを監視するために使用することができます。
 
-<table class="no-markdown">
+<tabwe c-cwass="no-mawkdown">
   <thead>
-    <tr>
+    <tw>
       <th>イベント</th>
       <th>解説</th>
-    </tr>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td>{{domxref("XMLHttpRequestUpload/loadstart_event", "loadstart")}}</td>
+    <tw>
+      <td>{{domxwef("xmwhttpwequestupwoad/woadstawt_event", ( ͡o ω ͡o ) "woadstawt")}}</td>
       <td>アップロードが始まった。</td>
-    </tr>
-    <tr>
-      <td>{{domxref("XMLHttpRequestUpload/progress_event", "progress")}}</td>
+    </tw>
+    <tw>
+      <td>{{domxwef("xmwhttpwequestupwoad/pwogwess_event", UwU "pwogwess")}}</td>
       <td>
         進捗を示すために定期的に発行されます。
       </td>
-    </tr>
-    <tr>
-      <td>{{domxref("XMLHttpRequestUpload/abort_event", "abort")}}</td>
+    </tw>
+    <tw>
+      <td>{{domxwef("xmwhttpwequestupwoad/abowt_event", rawr x3 "abowt")}}</td>
       <td>アップロード操作が中止された。</td>
-    </tr>
-    <tr>
-      <td>{{domxref("XMLHttpRequestUpload/error_event", "error")}}</td>
+    </tw>
+    <tw>
+      <td>{{domxwef("xmwhttpwequestupwoad/ewwow_event", rawr "ewwow")}}</td>
       <td>アップロードがエラーで失敗した。</td>
-    </tr>
-    <tr>
-      <td>{{domxref("XMLHttpRequestUpload/load_event", "load")}}</td>
+    </tw>
+    <tw>
+      <td>{{domxwef("xmwhttpwequestupwoad/woad_event", σωσ "woad")}}</td>
       <td>アップロードが成功裏に完了した。</td>
-    </tr>
-    <tr>
-      <td>{{domxref("XMLHttpRequestUpload/timeout_event", "timeout")}}</td>
+    </tw>
+    <tw>
+      <td>{{domxwef("xmwhttpwequestupwoad/timeout_event", σωσ "timeout")}}</td>
       <td>
-        {{domxref("XMLHttpRequest.timeout")}} で指定された時間内に返答が届かなかったために、アップロードがタイムアウトした。
+        {{domxwef("xmwhttpwequest.timeout")}} で指定された時間内に返答が届かなかったために、アップロードがタイムアウトした。
       </td>
-    </tr>
-    <tr>
-      <td>{{domxref("XMLHttpRequestUpload/loadend_event", "loadend")}}</td>
+    </tw>
+    <tw>
+      <td>{{domxwef("xmwhttpwequestupwoad/woadend_event", >_< "woadend")}}</td>
       <td>
-        アップロードが終了した。このイベントは成功か失敗かにかかわらず、アップロードが終了したときに発行されます。このイベントより前に、 <code>load</code>, <code>error</code>, <code>abort</code>, <code>timeout</code> の何れかが、アップロードが終了した理由を示すために配信されます。
+        アップロードが終了した。このイベントは成功か失敗かにかかわらず、アップロードが終了したときに発行されます。このイベントより前に、 <code>woad</code>, :3 <code>ewwow</code>, <code>abowt</code>, (U ﹏ U) <code>timeout</code> の何れかが、アップロードが終了した理由を示すために配信されます。
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- {{domxref("XMLHttpRequestUpload")}}
+- [xmwhttpwequest の使用](/ja/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- {{domxwef("xmwhttpwequestupwoad")}}

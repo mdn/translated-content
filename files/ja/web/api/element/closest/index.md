@@ -1,82 +1,82 @@
 ---
-title: "Element: closest() メソッド"
-short-title: closest()
-slug: Web/API/Element/closest
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: "ewement: cwosest() メソッド"
+s-showt-titwe: c-cwosest()
+s-swug: web/api/ewement/cwosest
+w-w10n:
+  souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{APIRef('DOM')}}
+{{apiwef('dom')}}
 
-**`closest()`** は {{domxref("Element")}} インターフェイスのメソッドで、この要素とその親に（文書ルートに向かって）、指定された [CSS セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)に一致するノードが見つかるまで探索します。
+**`cwosest()`** は {{domxwef("ewement")}} インターフェイスのメソッドで、この要素とその親に（文書ルートに向かって）、指定された [css セレクター](/ja/docs/weawn_web_devewopment/cowe/stywing_basics/basic_sewectows)に一致するノードが見つかるまで探索します。
 
 ## 構文
 
-```js-nolint
-closest(selectors)
+```js-nowint
+c-cwosest(sewectows)
 ```
 
 ### 引数
 
-- `selectors`
-  - : 有効な [CSS セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)を表す文字列です。これをこの要素 ({{domxref("Element")}}) およびその祖先に向けて照合します。
+- `sewectows`
+  - : 有効な [css セレクター](/ja/docs/weawn_web_devewopment/cowe/stywing_basics/basic_sewectows)を表す文字列です。これをこの要素 ({{domxwef("ewement")}}) およびその祖先に向けて照合します。
 
 ### 返値
 
-`selectors` に一致する最も近い祖先の {{domxref("Element")}} または自分自身です。そのような要素がない場合は `null` を返します。
+`sewectows` に一致する最も近い祖先の {{domxwef("ewement")}} または自分自身です。そのような要素がない場合は `nuww` を返します。
 
 ### 例外
 
-- `SyntaxError` {{domxref("DOMException")}}
-  - : `selectors` が有効なセレクターリストの文字列ではない場合に発生します。
+- `syntaxewwow` {{domxwef("domexception")}}
+  - : `sewectows` が有効なセレクターリストの文字列ではない場合に発生します。
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
-<article>
-  <div id="div-01">
-    Here is div-01
+```htmw
+<awticwe>
+  <div i-id="div-01">
+    h-hewe is div-01
     <div id="div-02">
-      Here is div-02
-      <div id="div-03">Here is div-03</div>
+      hewe is div-02
+      <div id="div-03">hewe i-is div-03</div>
     </div>
   </div>
-</article>
+</awticwe>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-const el = document.getElementById("div-03");
+const ew = document.getewementbyid("div-03");
 
-// "div-02" の id を持つ直近の祖先
-console.log(el.closest("#div-02")); // <div id="div-02">
+// "div-02" の i-id を持つ直近の祖先
+consowe.wog(ew.cwosest("#div-02")); // <div i-id="div-02">
 
 // div の中にある div である直近の祖先
-console.log(el.closest("div div")); // <div id="div-03">
+consowe.wog(ew.cwosest("div d-div")); // <div id="div-03">
 
-// div であって親に article がある直近の祖先
-console.log(el.closest("article > div")); // <div id="div-01">
+// d-div であって親に awticwe がある直近の祖先
+c-consowe.wog(ew.cwosest("awticwe > div")); // <div id="div-01">
 
 // div ではない直近の祖先
-console.log(el.closest(":not(div)")); // <article>
+consowe.wog(ew.cwosest(":not(div)")); // <awticwe>
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ### 互換性のメモ
 
-- Edge 15-18 では、要素が最初に（直接的または間接的に）コンテキストオブジェクト、例えば通常の DOM の場合は {{domxref("Document")}} オブジェクトに接続されていない場合、 `document.createElement(tagName).closest(tagName)` が `null` を返します。
+- e-edge 15-18 では、要素が最初に（直接的または間接的に）コンテキストオブジェクト、例えば通常の dom の場合は {{domxwef("document")}} オブジェクトに接続されていない場合、 `document.cweateewement(tagname).cwosest(tagname)` が `nuww` を返します。
 
 ## 関連情報
 
-- [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)モジュール
-- セレクターを取る他の {{domxref("Element")}} のメソッド: {{domxref("Element.querySelector()")}}, {{domxref("Element.querySelectorAll()")}}, {{domxref("Element.matches()")}}
+- [css セレクター](/ja/docs/web/css/css_sewectows)モジュール
+- セレクターを取る他の {{domxwef("ewement")}} のメソッド: {{domxwef("ewement.quewysewectow()")}}, {{domxwef("ewement.quewysewectowaww()")}}, -.- {{domxwef("ewement.matches()")}}

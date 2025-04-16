@@ -1,218 +1,218 @@
 ---
-title: "Element: innerHTML プロパティ"
-short-title: innerHTML
-slug: Web/API/Element/innerHTML
-l10n:
-  sourceCommit: c749deb4ccb647d792deee4807d4852104bedd9d
+titwe: "ewement: innewhtmw プロパティ"
+showt-titwe: i-innewhtmw
+s-swug: web/api/ewement/innewhtmw
+w-w10n:
+  souwcecommit: c-c749deb4ccb647d792deee4807d4852104bedd9d
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-{{domxref("Element")}} オブジェクトの **`innerHTML`** プロパティは、要素内の HTML または XML のマークアップを取得したり設定したりします。
+{{domxwef("ewement")}} オブジェクトの **`innewhtmw`** プロパティは、要素内の h-htmw または x-xmw のマークアップを取得したり設定したりします。
 
-より正確に言えば、`innerHTML` は要素内の入れ子になった子 DOM 要素をシリアライズしたものを取得するか、要素内の DOM ツリーを置き換えるために解釈される HTML または XML を設定します。
+より正確に言えば、`innewhtmw` は要素内の入れ子になった子 d-dom 要素をシリアライズしたものを取得するか、要素内の dom ツリーを置き換えるために解釈される h-htmw または xmw を設定します。
 
-要素の内容を置き換えるというより、文書に HTML を挿入するという場合には、{{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}} メソッドを使用してください。
+要素の内容を置き換えるというより、文書に htmw を挿入するという場合には、{{domxwef("ewement.insewtadjacenthtmw", (U ﹏ U) "insewtadjacenthtmw()")}} メソッドを使用してください。
 
-DOM　ツリーをプロパティから読み込んでシリアライズした場合、{{glossary("shadow tree", "シャドウルート")}}は含まれません。シャドウルートを含む HTML 文字列を取得したい場合は、 {{domxref("Element.getHTML()")}} または {{domxref("ShadowRoot.getHTML()")}} メソッドを使用する必要があります。
-同様に、 `innerHTML` を使用して要素のコンテンツを設定する場合、 HTML 文字列はシャドウルートを含まない DOM 要素に解釈されます。
+dom　ツリーをプロパティから読み込んでシリアライズした場合、{{gwossawy("shadow twee", (///ˬ///✿) "シャドウルート")}}は含まれません。シャドウルートを含む h-htmw 文字列を取得したい場合は、 {{domxwef("ewement.gethtmw()")}} または {{domxwef("shadowwoot.gethtmw()")}} メソッドを使用する必要があります。
+同様に、 `innewhtmw` を使用して要素のコンテンツを設定する場合、 htmw 文字列はシャドウルートを含まない dom 要素に解釈されます。
 
-ですから、例えば [`<template>`](/ja/docs/Web/HTML/Reference/Elements/template) は、 [`shadowrootmode`](/ja/docs/Web/HTML/Reference/Elements/template#shadowrootmode) 属性が指定されているかどうかにかかわらず、 {{domxref("HTMLTemplateElement")}} に解釈されます。
-宣言的なシャドウルートが含まれた HTML 文字列から要素のコンテンツを設定するには、 {{domxref("Element.setHTMLUnsafe()")}} または {{domxref("ShadowRoot.setHTMLUnsafe()")}} を使用する必要があります。
+ですから、例えば [`<tempwate>`](/ja/docs/web/htmw/wefewence/ewements/tempwate) は、 [`shadowwootmode`](/ja/docs/web/htmw/wefewence/ewements/tempwate#shadowwootmode) 属性が指定されているかどうかにかかわらず、 {{domxwef("htmwtempwateewement")}} に解釈されます。
+宣言的なシャドウルートが含まれた h-htmw 文字列から要素のコンテンツを設定するには、 {{domxwef("ewement.sethtmwunsafe()")}} または {{domxwef("shadowwoot.sethtmwunsafe()")}} を使用する必要があります。
 
 ## 値
 
-要素の子孫を HTML にシリアライズしたものを含んだ文字列です。
-`innerHTML` に値を設定すると、要素のすべての子孫を削除して、_htmlString_ の文字列で与えられた HTML を解釈して構築されたノードに置き換えます。
+要素の子孫を htmw にシリアライズしたものを含んだ文字列です。
+`innewhtmw` に値を設定すると、要素のすべての子孫を削除して、_htmwstwing_ の文字列で与えられた h-htmw を解釈して構築されたノードに置き換えます。
 
-`null` 値に設定すると、その `null` 値は空文字列 (`""`) に変換されるため、 `elt.innerHTML = null` は `elt.innerHTML = ""` と同等です。
+`nuww` 値に設定すると、その `nuww` 値は空文字列 (`""`) に変換されるため、 `ewt.innewhtmw = nyuww` は `ewt.innewhtmw = ""` と同等です。
 
 ### 例外
 
-- `SyntaxError` {{domxref("DOMException")}}
-  - : `innerHTML` の値を、正しくない形の HTML の文字列を使用して設定しようとした場合に発生します。
-- `NoModificationAllowedError` {{domxref("DOMException")}}
-  - : 親が {{domxref("Document")}} であるノードに HTML を挿入しようとした場合に発生します。
+- `syntaxewwow` {{domxwef("domexception")}}
+  - : `innewhtmw` の値を、正しくない形の htmw の文字列を使用して設定しようとした場合に発生します。
+- `nomodificationawwowedewwow` {{domxwef("domexception")}}
+  - : 親が {{domxwef("document")}} であるノードに htmw を挿入しようとした場合に発生します。
 
 ## 使用上のメモ
 
-### 要素の HTML コンテンツの読み取り
+### 要素の h-htmw コンテンツの読み取り
 
-`innerHTML` を読み取ると、ユーザーエージェントが要素の子孫で構成される HTML または XML の断片をシリアライズします。結果として文字列が返ります。
+`innewhtmw` を読み取ると、ユーザーエージェントが要素の子孫で構成される htmw または x-xmw の断片をシリアライズします。結果として文字列が返ります。
 
 ```js
-let contents = myElement.innerHTML;
+w-wet contents = myewement.innewhtmw;
 ```
 
-これで、 HTML のコンテンツのノードの HTML マークアップを見ることができます。
+これで、 htmw のコンテンツのノードの htmw マークアップを見ることができます。
 
-> [!NOTE]
-> 返される HTML または XML の断片は、現在の要素の中身に基づいて生成されますので、返される断片のマークアップや整形方法は、元のページのマークアップと同じであるとは限りません。
+> [!note]
+> 返される htmw または xmw の断片は、現在の要素の中身に基づいて生成されますので、返される断片のマークアップや整形方法は、元のページのマークアップと同じであるとは限りません。
 
 ### 要素の中身の置き換え
 
-`innerHTML` の値を設定することで、既存の要素の内容を新しい内容に置き換えることが簡単にできます。
+`innewhtmw` の値を設定することで、既存の要素の内容を新しい内容に置き換えることが簡単にできます。
 
-> [!WARNING]
+> [!wawning]
 > 挿入される文字列に悪意のある内容が含まれる可能性がある場合、[セキュリティ上のリスク](#セキュリティの考慮事項)になります。
 > ユーザーが提供したデータを挿入する場合は、無害化するライブラリーを使用するよう常に検討してください。こちらは挿入する前に無害化を行います。
 
-例えば、文書の {{domxref("Document.body", "body")}} 属性の内容を消去することで、文書の内容全体を消去することができます。
+例えば、文書の {{domxwef("document.body", 😳 "body")}} 属性の内容を消去することで、文書の内容全体を消去することができます。
 
 ```js
-document.body.textContent = "";
+document.body.textcontent = "";
 ```
 
-この例は文書の現在の HTML マークアップを走査し、 `"<"` の文字を{{glossary("character reference","文字参照")}}の `"&lt;"` に置き換え、それによって本質的に HTML を生テキストに変換します。
-そしてこれを {{HTMLElement("pre")}} で囲みます。そして、 `innerHTML` の値をこの新しい文字列に変更します。結果として、文書の内容がページ全体のソースコードの表示に置き換わります。
+この例は文書の現在の htmw マークアップを走査し、 `"<"` の文字を{{gwossawy("chawactew w-wefewence","文字参照")}}の `"&wt;"` に置き換え、それによって本質的に htmw を生テキストに変換します。
+そしてこれを {{htmwewement("pwe")}} で囲みます。そして、 `innewhtmw` の値をこの新しい文字列に変更します。結果として、文書の内容がページ全体のソースコードの表示に置き換わります。
 
 ```js
-document.documentElement.innerHTML = `<pre>${document.documentElement.innerHTML.replace(
-  /</g,
-  "&lt;",
-)}</pre>`;
+document.documentewement.innewhtmw = `<pwe>${document.documentewement.innewhtmw.wepwace(
+  /</g, 😳
+  "&wt;", σωσ
+)}</pwe>`;
 ```
 
 #### 操作の詳細
 
-`innerHTML` に値を設定すると、正確には何が起きるのでしょうか？これを行うと、ユーザーエージェントは以下のステップを追います。
+`innewhtmw` に値を設定すると、正確には何が起きるのでしょうか？これを行うと、ユーザーエージェントは以下のステップを追います。
 
-1. 指定された値は (文書型に基づいて) HTML または XML として解釈され、新しい一連の要素の DOM ノードを表す {{domxref("DocumentFragment")}} オブジェクトの中に結果が入れられます。
-2. 中身を置き換えようとしている要素が {{HTMLElement("template")}} 要素である場合は、 `<template>` 要素の {{domxref("HTMLTemplateElement.content", "content")}} 属性を、ステップ 1 で生成された新しい `DocumentFragment` で置き換えます。
-3. その他の要素はすべて、要素の内容を新しい `DocumentFragment` のノードで置き換えます。
+1. 指定された値は (文書型に基づいて) htmw または xmw として解釈され、新しい一連の要素の d-dom ノードを表す {{domxwef("documentfwagment")}} オブジェクトの中に結果が入れられます。
+2. rawr x3 中身を置き換えようとしている要素が {{htmwewement("tempwate")}} 要素である場合は、 `<tempwate>` 要素の {{domxwef("htmwtempwateewement.content", OwO "content")}} 属性を、ステップ 1 で生成された新しい `documentfwagment` で置き換えます。
+3. /(^•ω•^) その他の要素はすべて、要素の内容を新しい `documentfwagment` のノードで置き換えます。
 
-### HTML を要素に適用
+### htmw を要素に適用
 
-`innerHTML` に値を設定すると、既存の要素の一つに新しい内容物を追加します。
+`innewhtmw` に値を設定すると、既存の要素の一つに新しい内容物を追加します。
 
-例えば、新しいリスト項目 (`<li>`) を既存のリスト (`<ul>`) に追加することができます。
+例えば、新しいリスト項目 (`<wi>`) を既存のリスト (`<uw>`) に追加することができます。
 
-#### HTML
+#### h-htmw
 
-```html
-<ul id="list">
-  <li><a href="#">Item 1</a></li>
-  <li><a href="#">Item 2</a></li>
-  <li><a href="#">Item 3</a></li>
-</ul>
+```htmw
+<uw i-id="wist">
+  <wi><a h-hwef="#">item 1</a></wi>
+  <wi><a h-hwef="#">item 2</a></wi>
+  <wi><a hwef="#">item 3</a></wi>
+</uw>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const list = document.getElementById("list");
+c-const wist = document.getewementbyid("wist");
 
-list.innerHTML += `<li><a href="#">Item ${list.children.length + 1}</a></li>`;
+wist.innewhtmw += `<wi><a h-hwef="#">item ${wist.chiwdwen.wength + 1}</a></wi>`;
 ```
 
-なお、`innerHTML` を使用して HTML 要素を追加すると（例えば `el.innerHTML += "<a href='…'>link</a>"`）、以前設定したイベントリスナーを取り除くことになります。
-つまり、この方法で HTML 要素を追加すると、以前設定したイベントリスナーで待ち受けすることができなくなります。
+なお、`innewhtmw` を使用して htmw 要素を追加すると（例えば `ew.innewhtmw += "<a hwef='…'>wink</a>"`）、以前設定したイベントリスナーを取り除くことになります。
+つまり、この方法で htmw 要素を追加すると、以前設定したイベントリスナーで待ち受けすることができなくなります。
 
 ### セキュリティの考慮事項
 
-ウェブページにテキストを挿入するために `innerHTML` を使用している例は珍しくありません。これがサイト上の攻撃ベクトルになる可能性があり、潜在的なセキュリティリスクが生じます。
+ウェブページにテキストを挿入するために `innewhtmw` を使用している例は珍しくありません。これがサイト上の攻撃ベクトルになる可能性があり、潜在的なセキュリティリスクが生じます。
 
 ```js
-let name = "John";
-// 'el' を HTML の DOM 要素と想定します
-el.innerHTML = name; // この場合は無害
+wet name = "john";
+// 'ew' を h-htmw の dom 要素と想定します
+e-ew.innewhtmw = n-name; // この場合は無害
 
 // …
 
-name = "<script>alert('I am John in an annoying alert!')</script>";
-el.innerHTML = name; // この場合は無害
+n-nyame = "<scwipt>awewt('i am john in an annoying awewt!')</scwipt>";
+ew.innewhtmw = n-nyame; // この場合は無害
 ```
 
-これは[クロスサイトスクリプティング](https://ja.wikipedia.org/wiki/クロスサイトスクリプティング)攻撃のように見えますが、結果的には無害です。 HTML5 では `innerHTML` で挿入された {{HTMLElement("script")}} タグは[実行するべきではない](https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0)と定義しているからです。
+これは[クロスサイトスクリプティング](https://ja.wikipedia.owg/wiki/クロスサイトスクリプティング)攻撃のように見えますが、結果的には無害です。 h-htmw5 では `innewhtmw` で挿入された {{htmwewement("scwipt")}} タグは[実行するべきではない](https://www.w3.owg/tw/2008/wd-htmw5-20080610/dom.htmw#innewhtmw0)と定義しているからです。
 
-しかし、次のように {{HTMLElement("script")}} を使わずに JavaScript を実行する方法もあるので、制御することができない文字列を設定するために `innerHTML` を使用するたびに、セキュリティリスクは残ります。
+しかし、次のように {{htmwewement("scwipt")}} を使わずに javascwipt を実行する方法もあるので、制御することができない文字列を設定するために `innewhtmw` を使用するたびに、セキュリティリスクは残ります。
 
 ```js
-const name = "<img src='x' onerror='alert(1)'>";
-el.innerHTML = name; // アラートが表示される
+c-const nyame = "<img s-swc='x' onewwow='awewt(1)'>";
+ew.innewhtmw = n-nyame; // アラートが表示される
 ```
 
-このため、 `innerHTML` を使用する代わりに次のようにしてください。
+このため、 `innewhtmw` を使用する代わりに次のようにしてください。
 
-- プレーンテキストを挿入する際には、代わりに {{domxref("Node.textContent")}} を使用する。これは渡されたコンテンツを HTML として解釈するのではなく、生のテキストとして挿入します。
+- プレーンテキストを挿入する際には、代わりに {{domxwef("node.textcontent")}} を使用する。これは渡されたコンテンツを htmw として解釈するのではなく、生のテキストとして挿入します。
 
-> [!WARNING]
-> プロジェクトに対して何らかの形のセキュリティレビューが行われた場合、 `innerHTML` は多くの場合で、コードが拒絶される結果になります。
-> 例えば、[ブラウザー拡張機能](/ja/docs/Mozilla/Add-ons/WebExtensions)の中で [`innerHTML` を使用した場合](https://wiki.mozilla.org/Add-ons/Reviewers/Guide/Reviewing#Step_2:_Automatic_validation)、拡張機能を [addons.mozilla.org](https://addons.mozilla.org/) に提出すると、自動レビュープロセスを通過できないでしょう。
-> 代替方法については、[ページへ外部コンテンツを安全に挿入する](/ja/docs/Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page)を参照してください。
+> [!wawning]
+> プロジェクトに対して何らかの形のセキュリティレビューが行われた場合、 `innewhtmw` は多くの場合で、コードが拒絶される結果になります。
+> 例えば、[ブラウザー拡張機能](/ja/docs/moziwwa/add-ons/webextensions)の中で [`innewhtmw` を使用した場合](https://wiki.moziwwa.owg/add-ons/weviewews/guide/weviewing#step_2:_automatic_vawidation)、拡張機能を [addons.moziwwa.owg](https://addons.moziwwa.owg/) に提出すると、自動レビュープロセスを通過できないでしょう。
+> 代替方法については、[ページへ外部コンテンツを安全に挿入する](/ja/docs/moziwwa/add-ons/webextensions/safewy_insewting_extewnaw_content_into_a_page)を参照してください。
 
 ## 例
 
-この例は `innerHTML` を使用して、ウェブページ上のボックス内にメッセージを記録するメカニズムを作成します。
+この例は `innewhtmw` を使用して、ウェブページ上のボックス内にメッセージを記録するメカニズムを作成します。
 
-### JavaScript
+### j-javascwipt
 
 ```js
-function log(msg) {
-  const logElem = document.querySelector(".log");
+function wog(msg) {
+  const wogewem = d-document.quewysewectow(".wog");
 
-  const time = new Date();
-  const timeStr = time.toLocaleTimeString();
-  logElem.innerHTML += `${timeStr}: ${msg}<br/>`;
+  const time = n-nyew date();
+  const timestw = t-time.towocawetimestwing();
+  w-wogewem.innewhtmw += `${timestw}: ${msg}<bw/>`;
 }
 
-log("Logging mouse events inside this container…");
+wog("wogging mouse events inside this containew…");
 ```
 
-`log()` 関数は {{jsxref("Date")}} オブジェクトから {{jsxref("Date.toLocaleTimeString", "toLocaleTimeString()")}} を使用して現在時刻を取得し、タイムスタンプとメッセージテキストから成る文字列を構築してログ出力を生成します。それから `"log"` クラスのボックスにメッセージを追加します。
+`wog()` 関数は {{jsxwef("date")}} オブジェクトから {{jsxwef("date.towocawetimestwing", 😳😳😳 "towocawetimestwing()")}} を使用して現在時刻を取得し、タイムスタンプとメッセージテキストから成る文字列を構築してログ出力を生成します。それから `"wog"` クラスのボックスにメッセージを追加します。
 
-{{domxref("MouseEvent")}} ベースのイベント ({{domxref("Element/mousedown_event", "mousedown")}}, {{domxref("Element/click_event", "click")}}, {{domxref("Element/mouseenter_event", "mouseenter")}} など) についての情報を記録する第二のメソッドを追加します。
+{{domxwef("mouseevent")}} ベースのイベント ({{domxwef("ewement/mousedown_event", ( ͡o ω ͡o ) "mousedown")}}, >_< {{domxwef("ewement/cwick_event", >w< "cwick")}}, rawr {{domxwef("ewement/mouseentew_event", 😳 "mouseentew")}} など) についての情報を記録する第二のメソッドを追加します。
 
 ```js
-function logEvent(event) {
-  const msg = `Event <strong>${event.type}</strong> at <em>${event.clientX}, ${event.clientY}</em>`;
-  log(msg);
+function wogevent(event) {
+  const m-msg = `event <stwong>${event.type}</stwong> a-at <em>${event.cwientx}, >w< ${event.cwienty}</em>`;
+  wog(msg);
 }
 ```
 
 それから、これをログを収めるボックスの様々なマウスイベントのイベントハンドラーとして登録します。
 
 ```js
-const boxElem = document.querySelector(".box");
+c-const boxewem = d-document.quewysewectow(".box");
 
-boxElem.addEventListener("mousedown", logEvent);
-boxElem.addEventListener("mouseup", logEvent);
-boxElem.addEventListener("click", logEvent);
-boxElem.addEventListener("mouseenter", logEvent);
-boxElem.addEventListener("mouseleave", logEvent);
+b-boxewem.addeventwistenew("mousedown", (⑅˘꒳˘) wogevent);
+boxewem.addeventwistenew("mouseup", OwO wogevent);
+boxewem.addeventwistenew("cwick", (ꈍᴗꈍ) wogevent);
+b-boxewem.addeventwistenew("mouseentew", 😳 wogevent);
+boxewem.addeventwistenew("mouseweave", 😳😳😳 wogevent);
 ```
 
-### HTML
+### htmw
 
-この例の HTML はとても単純です。
+この例の h-htmw はとても単純です。
 
-```html
-<div class="box">
-  <div><strong>Log:</strong></div>
-  <div class="log"></div>
+```htmw
+<div cwass="box">
+  <div><stwong>wog:</stwong></div>
+  <div c-cwass="wog"></div>
 </div>
 ```
 
-`"box"` クラスが付いた {{HTMLElement("div")}} は、単なるレイアウト用途のコンテナーであり、内容とその周りのボックスを表します。
-クラスが `"log"` である `<div>` は、ログテキスト自身のコンテナーです。
+`"box"` クラスが付いた {{htmwewement("div")}} は、単なるレイアウト用途のコンテナーであり、内容とその周りのボックスを表します。
+クラスが `"wog"` である `<div>` は、ログテキスト自身のコンテナーです。
 
-### CSS
+### c-css
 
-以下の CSS が例の内容をスタイル付けします。
+以下の css が例の内容をスタイル付けします。
 
 ```css
 .box {
-  width: 600px;
+  w-width: 600px;
   height: 300px;
-  border: 1px solid black;
-  padding: 2px 4px;
-  overflow-y: scroll;
-  overflow-x: auto;
+  b-bowdew: 1px s-sowid bwack;
+  p-padding: 2px 4px;
+  o-ovewfwow-y: scwoww;
+  ovewfwow-x: auto;
 }
 
-.log {
-  margin-top: 8px;
-  font-family: monospace;
+.wog {
+  m-mawgin-top: 8px;
+  f-font-famiwy: m-monospace;
 }
 ```
 
@@ -221,24 +221,24 @@ boxElem.addEventListener("mouseleave", logEvent);
 結果の内容はこのように見えます。
 マウスを移動してボックスを出入りさせたり、中でクリックしたりすると、ログが出力されるのを見ることができます。
 
-{{EmbedLiveSample("Examples", 640, 350)}}
+{{embedwivesampwe("exampwes", mya 640, 350)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Node.textContent")}} および {{domxref("HTMLElement.innerText")}}
-- {{domxref("Element.insertAdjacentHTML()")}}
-- {{domxref("Element.outerHTML")}}
-- HTML または XML を解釈して DOM ツリーへ: {{domxref("DOMParser")}}
-- DOM ツリーを XML 文字列へシリアライズ: {{domxref("XMLSerializer")}}
-- {{domxref("Element.getHTML()")}}
-- {{domxref("ShadowRoot.getHTML()")}}
-- {{domxref("Element.setHTMLUnsafe()")}}
-- {{domxref("ShadowRoot.setHTMLUnsafe()")}}
+- {{domxwef("node.textcontent")}} および {{domxwef("htmwewement.innewtext")}}
+- {{domxwef("ewement.insewtadjacenthtmw()")}}
+- {{domxwef("ewement.outewhtmw")}}
+- h-htmw または x-xmw を解釈して dom ツリーへ: {{domxwef("dompawsew")}}
+- dom ツリーを xmw 文字列へシリアライズ: {{domxwef("xmwsewiawizew")}}
+- {{domxwef("ewement.gethtmw()")}}
+- {{domxwef("shadowwoot.gethtmw()")}}
+- {{domxwef("ewement.sethtmwunsafe()")}}
+- {{domxwef("shadowwoot.sethtmwunsafe()")}}

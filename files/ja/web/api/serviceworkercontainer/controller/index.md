@@ -1,39 +1,39 @@
 ---
-title: ServiceWorkerContainer.controller
-slug: Web/API/ServiceWorkerContainer/controller
-l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+titwe: sewvicewowkewcontainew.contwowwew
+swug: w-web/api/sewvicewowkewcontainew/contwowwew
+w-w10n:
+  s-souwcecommit: e-e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews api")}}
 
-**`controller`** は {{domxref("ServiceWorkerContainer")}} インターフェイスの読み取り専用プロパティで、{{domxref("ServiceWorker")}} オブジェクトの状態が `activating` または `activated` ならそれ ({{domxref("ServiceWorkerRegistration.active")}} で返されるのと同じオブジェクト) を返します。このプロパティはリクエストが強制リフレッシュ（_Shift_ + リフレッシュ）やアクティブワーカーがない場合は `null` を返します。
+**`contwowwew`** は {{domxwef("sewvicewowkewcontainew")}} インターフェイスの読み取り専用プロパティで、{{domxwef("sewvicewowkew")}} オブジェクトの状態が `activating` または `activated` ならそれ ({{domxwef("sewvicewowkewwegistwation.active")}} で返されるのと同じオブジェクト) を返します。このプロパティはリクエストが強制リフレッシュ（_shift_ + リフレッシュ）やアクティブワーカーがない場合は `nuww` を返します。
 
 ### 値
 
-{{domxref("ServiceWorker")}} オブジェクト。
+{{domxwef("sewvicewowkew")}} オブジェクト。
 
 ## 例
 
 ```js
-if ("serviceWorker" in navigator) {
+i-if ("sewvicewowkew" i-in n-nyavigatow) {
   // 1 回限りのチェックを行って、サービスワーカーが制御しているかどうかを確認します。
-  if (navigator.serviceWorker.controller) {
-    console.log(
-      `このページを現在制御しているもの: ${navigator.serviceWorker.controller}`,
+  if (navigatow.sewvicewowkew.contwowwew) {
+    consowe.wog(
+      `このページを現在制御しているもの: ${navigatow.sewvicewowkew.contwowwew}`, rawr
     );
-  } else {
-    console.log("このページは現在サービスワーカーによって制御されていません。");
+  } ewse {
+    consowe.wog("このページは現在サービスワーカーによって制御されていません。");
   }
-} else {
-  console.log("サービスワーカーをサポートしていません。");
+} ewse {
+  consowe.wog("サービスワーカーをサポートしていません。");
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

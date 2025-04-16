@@ -1,47 +1,47 @@
 ---
-title: "Element: removeAttributeNS() メソッド"
-short-title: removeAttributeNS()
-slug: Web/API/Element/removeAttributeNS
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: wemoveattwibutens() メソッド"
+s-showt-titwe: w-wemoveattwibutens()
+s-swug: web/api/ewement/wemoveattwibutens
+w10n:
+  s-souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-**`removeAttributeNS()`** は {{domxref("Element")}} インターフェイスのメソッドで、要素から指定された属性を取り除きます。
+**`wemoveattwibutens()`** は {{domxwef("ewement")}} インターフェイスのメソッドで、要素から指定された属性を取り除きます。
 
 ## 構文
 
-```js-nolint
-removeAttributeNS(namespace, attrName)
+```js-nowint
+w-wemoveattwibutens(namespace, -.- a-attwname)
 ```
 
 ### 引数
 
 - `namespace` は文字列で、属性の名前空間を示します。
-- `attrName` は文字列で、現在のノードから取り除く属性の名前を示します。
+- `attwname` は文字列で、現在のノードから取り除く属性の名前を示します。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ### 例
 
 ```js
-// Given:
-//   <div id="div1" xmlns:special="http://www.mozilla.org/ns/specialspace"
-//     special:specialAlign="utterleft" width="200px" />
-d = document.getElementById("div1");
-d.removeAttributeNS("http://www.mozilla.org/ns/specialspace", "specialAlign");
-// Now: <div id="div1" width="200px" />
+// given:
+//   <div id="div1" xmwns:speciaw="http://www.moziwwa.owg/ns/speciawspace"
+//     speciaw:speciawawign="uttewweft" width="200px" />
+d-d = document.getewementbyid("div1");
+d.wemoveattwibutens("http://www.moziwwa.owg/ns/speciawspace", (ˆ ﻌ ˆ)♡ "speciawawign");
+// nyow: <div i-id="div1" width="200px" />
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-Firefox 3 以降では、このメソッドは DOM 値を既定値にリセットします。
+fiwefox 3 以降では、このメソッドは d-dom 値を既定値にリセットします。

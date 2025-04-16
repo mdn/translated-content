@@ -1,19 +1,19 @@
 ---
-title: "PushSubscription: unsubscribe() メソッド"
-short-title: unsubscribe()
-slug: Web/API/PushSubscription/unsubscribe
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: "pushsubscwiption: unsubscwibe() メソッド"
+s-showt-titwe: u-unsubscwibe()
+s-swug: web/api/pushsubscwiption/unsubscwibe
+w10n:
+  s-souwcecommit: c-c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{APIRef("Push API")}}
+{{apiwef("push a-api")}}
 
-`unsubscribe()` は {{domxref("PushSubscription")}} インターフェイスのメソッドで、現在のサブスクリプションから脱退に成功したときに論理値で解決される {{jsxref("Promise")}} を返します。
+`unsubscwibe()` は {{domxwef("pushsubscwiption")}} インターフェイスのメソッドで、現在のサブスクリプションから脱退に成功したときに論理値で解決される {{jsxwef("pwomise")}} を返します。
 
 ## 構文
 
-```js-nolint
-unsubscribe()
+```js-nowint
+u-unsubscwibe()
 ```
 
 ### 引数
@@ -22,16 +22,16 @@ unsubscribe()
 
 ### 返値
 
-現在のサブスクリプションから脱退に成功したときに論理値で解決される {{jsxref("Promise")}} です。
+現在のサブスクリプションから脱退に成功したときに論理値で解決される {{jsxwef("pwomise")}} です。
 
 ## 例
 
 ```js
-navigator.serviceWorker.ready.then((reg) => {
-  reg.pushManager.getSubscription().then((subscription) => {
-    subscription
-      .unsubscribe()
-      .then((successful) => {
+n-nyavigatow.sewvicewowkew.weady.then((weg) => {
+  weg.pushmanagew.getsubscwiption().then((subscwiption) => {
+    subscwiption
+      .unsubscwibe()
+      .then((successfuw) => {
         // 登録脱退が成功
       })
       .catch((e) => {
@@ -43,12 +43,12 @@ navigator.serviceWorker.ready.then((reg) => {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連項目
 
-- {{domxref("PushManager.getSubscription")}}
+- {{domxwef("pushmanagew.getsubscwiption")}}

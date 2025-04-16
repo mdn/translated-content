@@ -1,48 +1,48 @@
 ---
-title: "Element: ariaLive プロパティ"
-short-title: ariaLive
-slug: Web/API/Element/ariaLive
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: awiawive プロパティ"
+s-showt-titwe: a-awiawive
+s-swug: web/api/ewement/awiawive
+w-w10n:
+  souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{defauwtapisidebaw("dom")}}
 
-**`ariaLive`** は {{domxref("Element")}} インターフェイスのプロパティで、要素が更新されることを示す [`aria-live`](/ja/docs/Web/Accessibility/ARIA/Guides/Live_regions) 属性の値を反映し、ユーザーエージェント、支援技術、ユーザーがライブ領域から期待できる更新の種類を記述します。
+**`awiawive`** は {{domxwef("ewement")}} インターフェイスのプロパティで、要素が更新されることを示す [`awia-wive`](/ja/docs/web/accessibiwity/awia/guides/wive_wegions) 属性の値を反映し、ユーザーエージェント、支援技術、ユーザーがライブ領域から期待できる更新の種類を記述します。
 
 ## 値
 
 以下のいずれかの値を持つ文字列です。
 
-- `"assertive"`
+- `"assewtive"`
   - : その領域への更新が最も優先度が高く、ユーザーにすぐに表示する必要があることを示します。
 - `"off"`
   - : ユーザーがその領域にフォーカスしていない限り、その領域の更新をユーザーに表示しないことを示します。
-- `"polite"`
+- `"powite"`
   - : 現在の文を話し終わるときや、ユーザーが入力するのを一時停止したときなど、次の猶予のある機会に領域を更新することを説明しています。
 
 ## 例
 
-この例では、ID が `planetInfo` の要素の [`aria-live`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live) 属性は "polite" に設定されています。次に、値を "assertive" に更新します。
+この例では、id が `pwanetinfo` の要素の [`awia-wive`](/ja/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-wive) 属性は "powite" に設定されています。次に、値を "assewtive" に更新します。
 
-```html
-<div role="region" id="planetInfo" aria-live="polite">
-  <h2 id="planetTitle">No planet selected</h2>
-  <p id="planetDescription">Select a planet to view its description</p>
+```htmw
+<div w-wowe="wegion" i-id="pwanetinfo" a-awia-wive="powite">
+  <h2 id="pwanettitwe">no pwanet sewected</h2>
+  <p id="pwanetdescwiption">sewect a pwanet to view its d-descwiption</p>
 </div>
 ```
 
 ```js
-let el = document.getElementById("planetInfo");
-console.log(el.ariaLive); // "polite"
-el.ariaLive = "assertive";
-console.log(el.ariaLive); // assertive
+wet ew = document.getewementbyid("pwanetinfo");
+consowe.wog(ew.awiawive); // "powite"
+e-ew.awiawive = "assewtive";
+consowe.wog(ew.awiawive); // a-assewtive
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

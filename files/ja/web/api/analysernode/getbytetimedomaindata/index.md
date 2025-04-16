@@ -1,92 +1,92 @@
 ---
-title: "AnalyserNode: getByteTimeDomainData() メソッド"
-short-title: getByteTimeDomainData()
-slug: Web/API/AnalyserNode/getByteTimeDomainData
-l10n:
-  sourceCommit: 7cf0e50d0acfaeba8fd2fa243f9d5612b61d408c
+titwe: "anawysewnode: getbytetimedomaindata() メソッド"
+showt-titwe: g-getbytetimedomaindata()
+s-swug: web/api/anawysewnode/getbytetimedomaindata
+w-w10n:
+  souwcecommit: 7cf0e50d0acfaeba8fd2fa243f9d5612b61d408c
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-**`getByteTimeDomainData()`** は {{ domxref("AnalyserNode") }} インターフェイスのメソッドで、渡される {{jsxref("Uint8Array")}} （符号なしバイト配列）に、現在の波形または時間領域のデータをコピーします。
+**`getbytetimedomaindata()`** は {{ d-domxwef("anawysewnode") }} インターフェイスのメソッドで、渡される {{jsxwef("uint8awway")}} （符号なしバイト配列）に、現在の波形または時間領域のデータをコピーします。
 
-配列の持つ要素が {{domxref("AnalyserNode.fftSize")}} より少なかった場合、余分な要素は削除されます。必要以上の要素があった場合、余分な要素は無視されます。
+配列の持つ要素が {{domxwef("anawysewnode.fftsize")}} より少なかった場合、余分な要素は削除されます。必要以上の要素があった場合、余分な要素は無視されます。
 
 ## 構文
 
-```js-nolint
-getByteTimeDomainData(array)
+```js-nowint
+g-getbytetimedomaindata(awway)
 ```
 
 ### 引数
 
-- `array`
-  - : 時間領域データのコピー先の {{jsxref("Uint8Array")}} です。
-    配列の持つ要素が {{domxref("AnalyserNode.fftSize")}} より少なかった場合、余分な要素は削除されます。必要以上の要素があった場合、余分な要素は無視されます。
+- `awway`
+  - : 時間領域データのコピー先の {{jsxwef("uint8awway")}} です。
+    配列の持つ要素が {{domxwef("anawysewnode.fftsize")}} より少なかった場合、余分な要素は削除されます。必要以上の要素があった場合、余分な要素は無視されます。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-次の例では、 {{domxref("AudioContext")}} で `AnalyserNode` を作成し、 {{domxref("window.requestAnimationFrame()", "requestAnimationFrame")}} と {{htmlelement("canvas")}} で時刻領域のデータを繰り返し収集し、現在の音声入力の「オシロスコープ」出力を描画する基本的な使用方法を示します。
-より完全な応用例/情報については、 [Voice-change-O-matic](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic) のデモを調べてください（関連するコードは [app.js の 108 ～ 193 行目](https://github.com/mdn/webaudio-examples/blob/main/voice-change-o-matic/scripts/app.js#L108-L193)を参照）。
+次の例では、 {{domxwef("audiocontext")}} で `anawysewnode` を作成し、 {{domxwef("window.wequestanimationfwame()", "wequestanimationfwame")}} と {{htmwewement("canvas")}} で時刻領域のデータを繰り返し収集し、現在の音声入力の「オシロスコープ」出力を描画する基本的な使用方法を示します。
+より完全な応用例/情報については、 [voice-change-o-matic](https://github.com/mdn/webaudio-exampwes/twee/main/voice-change-o-matic) のデモを調べてください（関連するコードは [app.js の 108 ～ 193 行目](https://github.com/mdn/webaudio-exampwes/bwob/main/voice-change-o-matic/scwipts/app.js#w108-w193)を参照）。
 
 ```js
-const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-const analyser = audioCtx.createAnalyser();
+c-const audioctx = nyew (window.audiocontext || window.webkitaudiocontext)();
+const anawysew = audioctx.cweateanawysew();
 
 // …
 
-analyser.fftSize = 2048;
-const bufferLength = analyser.fftSize;
-const dataArray = new Uint8Array(bufferLength);
-analyser.getByteTimeDomainData(dataArray);
+a-anawysew.fftsize = 2048;
+const buffewwength = anawysew.fftsize;
+c-const dataawway = nyew u-uint8awway(buffewwength);
+anawysew.getbytetimedomaindata(dataawway);
 
-// draw an oscilloscope of the current audio source
-function draw() {
-  drawVisual = requestAnimationFrame(draw);
-  analyser.getByteTimeDomainData(dataArray);
+// dwaw an osciwwoscope o-of the cuwwent audio souwce
+function d-dwaw() {
+  d-dwawvisuaw = wequestanimationfwame(dwaw);
+  anawysew.getbytetimedomaindata(dataawway);
 
-  canvasCtx.fillStyle = "rgb(200, 200, 200)";
-  canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+  canvasctx.fiwwstywe = "wgb(200, 🥺 200, 200)";
+  canvasctx.fiwwwect(0, >_< 0, width, >_< height);
 
-  canvasCtx.lineWidth = 2;
-  canvasCtx.strokeStyle = "rgb(0, 0, 0)";
+  c-canvasctx.winewidth = 2;
+  canvasctx.stwokestywe = "wgb(0, (⑅˘꒳˘) 0, /(^•ω•^) 0)";
 
-  const sliceWidth = (WIDTH * 1.0) / bufferLength;
-  let x = 0;
+  const swicewidth = (width * 1.0) / buffewwength;
+  w-wet x = 0;
 
-  canvasCtx.beginPath();
-  for (let i = 0; i < bufferLength; i++) {
-    const v = dataArray[i] / 128.0;
-    const y = (v * HEIGHT) / 2;
+  canvasctx.beginpath();
+  f-fow (wet i = 0; i-i < buffewwength; i-i++) {
+    c-const v = dataawway[i] / 128.0;
+    const y = (v * height) / 2;
 
-    if (i === 0) {
-      canvasCtx.moveTo(x, y);
-    } else {
-      canvasCtx.lineTo(x, y);
+    i-if (i === 0) {
+      canvasctx.moveto(x, rawr x3 y);
+    } ewse {
+      c-canvasctx.wineto(x, (U ﹏ U) y);
     }
 
-    x += sliceWidth;
+    x += swicewidth;
   }
 
-  canvasCtx.lineTo(WIDTH, HEIGHT / 2);
-  canvasCtx.stroke();
+  canvasctx.wineto(width, (U ﹏ U) height / 2);
+  canvasctx.stwoke();
 }
 
-draw();
+d-dwaw();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)

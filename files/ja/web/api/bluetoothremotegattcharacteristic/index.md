@@ -1,55 +1,55 @@
 ---
-title: BluetoothRemoteGATTCharacteristic
-slug: Web/API/BluetoothRemoteGATTCharacteristic
-l10n:
-  sourceCommit: 3923ef69d52670cc5da97056689330c495f51cc4
+titwe: bwuetoothwemotegattchawactewistic
+swug: w-web/api/bwuetoothwemotegattchawactewistic
+w-w10n:
+  s-souwcecommit: 3923ef69d52670cc5da97056689330c495f51cc4
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{apiwef("bwuetooth a-api")}}{{seecompattabwe}}
 
-[Web Bluetooth API](/ja/docs/Web/API/Web_Bluetooth_API) の `BluetoothRemoteGattCharacteristic` インターフェイスは、GATT キャラクタリスティックを表します。これは、周辺機器のサービスに関する詳細情報を提供する基本的なデータ要素です。
+[web b-bwuetooth api](/ja/docs/web/api/web_bwuetooth_api) の `bwuetoothwemotegattchawactewistic` インターフェイスは、gatt キャラクタリスティックを表します。これは、周辺機器のサービスに関する詳細情報を提供する基本的なデータ要素です。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-- {{DOMxRef("BluetoothRemoteGATTCharacteristic.service")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : このキャラクタリスティックが属する {{DOMxRef("BluetoothRemoteGATTService")}} を返します。
-- {{DOMxRef("BluetoothRemoteGATTCharacteristic.uuid")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : このキャラクタリスティックの UUID を表す文字列を返します。たとえば、Heart Rate Measurement characteristic は `'00002a37-0000-1000-8000-00805f9b34fb'` です。
-- {{DOMxRef("BluetoothRemoteGATTCharacteristic.properties")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxwef("bwuetoothwemotegattchawactewistic.sewvice")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : このキャラクタリスティックが属する {{domxwef("bwuetoothwemotegattsewvice")}} を返します。
+- {{domxwef("bwuetoothwemotegattchawactewistic.uuid")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : このキャラクタリスティックの u-uuid を表す文字列を返します。たとえば、heawt w-wate measuwement c-chawactewistic は `'00002a37-0000-1000-8000-00805f9b34fb'` です。
+- {{domxwef("bwuetoothwemotegattchawactewistic.pwopewties")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
   - : このキャラクタリスティックのプロパティを返します。
-- {{DOMxRef("BluetoothRemoteGATTCharacteristic.value")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxwef("bwuetoothwemotegattchawactewistic.vawue")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
   - : 現在キャッシュされているキャラクタリスティックの値です。この値は、キャラクタリスティックの値が読まれるか、ノーティフィケーションやインディケーションによって更新されると更新されます。
 
 ### イベント
 
-- `oncharacteristicvaluechanged` {{Experimental_Inline}}
-  - : `characteristicvaluechanged` イベント用のイベントハンドラーです。
+- `onchawactewisticvawuechanged` {{expewimentaw_inwine}}
+  - : `chawactewisticvawuechanged` イベント用のイベントハンドラーです。
 
 ## インスタンスメソッド
 
-- {{DOMxRef("BluetoothRemoteGATTCharacteristic.getDescriptor()")}} {{Experimental_Inline}}
-  - : 指定のディスクリプター UUID に対応する最初の {{DOMxRef("BluetoothRemoteGATTDescriptor")}} で解決する {{JSxRef("Promise")}} を返します。
-- {{DOMxRef("BluetoothRemoteGATTCharacteristic.getDescriptors()")}} {{Experimental_Inline}}
-  - : 指定のディスクリプター UUID に対応するすべての {{DOMxRef("BluetoothRemoteGATTDescriptor")}} オブジェクトの {{JSxRef("Array")}} で解決する {{JSxRef("Promise")}} を返します。
-- {{DOMxRef("BluetoothRemoteGATTCharacteristic.readValue()")}} {{Experimental_Inline}}
-  - : 利用可能で対応していれば、`value` プロパティの複製が格納された {{JSxRef("DataView")}} で解決する {{JSxRef("Promise")}} を返します。そうでない場合は、エラーを投げます。
-- {{DOMxRef("BluetoothRemoteGATTCharacteristic.writeValue()", "BluetoothRemoteGATTCharacteristic.writeValue(<var>value</var>)")}} {{Deprecated_Inline}}
-  - : `value` プロパティを渡された {{JSxRef("ArrayBuffer")}} に格納されたバイト列に設定し、[`WriteCharacteristicValue`(_this_=`this`, _value=value_, _response_=`"optional"`)](https://webbluetoothcg.github.io/web-bluetooth/#writecharacteristicvalue) を呼び出し、結果の {{JSxRef("Promise")}} を返します。
-- {{DOMxRef("BluetoothRemoteGATTCharacteristic.writeValueWithResponse()", "BluetoothRemoteGATTCharacteristic.writeValueWithResponse(<var>value</var>)")}} {{Experimental_Inline}}
-  - : `value` プロパティを渡された {{JSxRef("ArrayBuffer")}} に格納されたバイト列に設定し、[`WriteCharacteristicValue`(_this_=`this`, _value=value_, _response_=`"required"`)](https://webbluetoothcg.github.io/web-bluetooth/#writecharacteristicvalue) を呼び出し、結果の {{JSxRef("Promise")}} を返します。
-- {{DOMxRef("BluetoothRemoteGATTCharacteristic.writeValueWithoutResponse()", "BluetoothRemoteGATTCharacteristic.writeValueWithoutResponse(<var>value</var>)")}} {{Experimental_Inline}}
-  - : `value` プロパティを渡された {{JSxRef("ArrayBuffer")}} に格納されたバイト列に設定し、[`WriteCharacteristicValue`(_this_=`this`, _value=value_, _response_=`"never"`)](https://webbluetoothcg.github.io/web-bluetooth/#writecharacteristicvalue) を呼び出し、結果の {{JSxRef("Promise")}} を返します。
-- {{DOMxRef("BluetoothRemoteGATTCharacteristic.startNotifications()")}} {{Experimental_Inline}}
-  - : `navigator.bluetooth` が活動中のノーティフィケーションコンテキストに追加されたら解決する {{JSxRef("Promise")}} を返します。
-- {{DOMxRef("BluetoothRemoteGATTCharacteristic.stopNotifications()")}} {{Experimental_Inline}}
-  - : `navigator.bluetooth` が活動中のノーティフィケーションコンテキストから削除されたら解決する {{JSxRef("Promise")}} を返します。
+- {{domxwef("bwuetoothwemotegattchawactewistic.getdescwiptow()")}} {{expewimentaw_inwine}}
+  - : 指定のディスクリプター uuid に対応する最初の {{domxwef("bwuetoothwemotegattdescwiptow")}} で解決する {{jsxwef("pwomise")}} を返します。
+- {{domxwef("bwuetoothwemotegattchawactewistic.getdescwiptows()")}} {{expewimentaw_inwine}}
+  - : 指定のディスクリプター uuid に対応するすべての {{domxwef("bwuetoothwemotegattdescwiptow")}} オブジェクトの {{jsxwef("awway")}} で解決する {{jsxwef("pwomise")}} を返します。
+- {{domxwef("bwuetoothwemotegattchawactewistic.weadvawue()")}} {{expewimentaw_inwine}}
+  - : 利用可能で対応していれば、`vawue` プロパティの複製が格納された {{jsxwef("dataview")}} で解決する {{jsxwef("pwomise")}} を返します。そうでない場合は、エラーを投げます。
+- {{domxwef("bwuetoothwemotegattchawactewistic.wwitevawue()", UwU "bwuetoothwemotegattchawactewistic.wwitevawue(<vaw>vawue</vaw>)")}} {{depwecated_inwine}}
+  - : `vawue` プロパティを渡された {{jsxwef("awwaybuffew")}} に格納されたバイト列に設定し、[`wwitechawactewisticvawue`(_this_=`this`, rawr x3 _vawue=vawue_, rawr _wesponse_=`"optionaw"`)](https://webbwuetoothcg.github.io/web-bwuetooth/#wwitechawactewisticvawue) を呼び出し、結果の {{jsxwef("pwomise")}} を返します。
+- {{domxwef("bwuetoothwemotegattchawactewistic.wwitevawuewithwesponse()", "bwuetoothwemotegattchawactewistic.wwitevawuewithwesponse(<vaw>vawue</vaw>)")}} {{expewimentaw_inwine}}
+  - : `vawue` プロパティを渡された {{jsxwef("awwaybuffew")}} に格納されたバイト列に設定し、[`wwitechawactewisticvawue`(_this_=`this`, σωσ _vawue=vawue_, σωσ _wesponse_=`"wequiwed"`)](https://webbwuetoothcg.github.io/web-bwuetooth/#wwitechawactewisticvawue) を呼び出し、結果の {{jsxwef("pwomise")}} を返します。
+- {{domxwef("bwuetoothwemotegattchawactewistic.wwitevawuewithoutwesponse()", >_< "bwuetoothwemotegattchawactewistic.wwitevawuewithoutwesponse(<vaw>vawue</vaw>)")}} {{expewimentaw_inwine}}
+  - : `vawue` プロパティを渡された {{jsxwef("awwaybuffew")}} に格納されたバイト列に設定し、[`wwitechawactewisticvawue`(_this_=`this`, :3 _vawue=vawue_, (U ﹏ U) _wesponse_=`"nevew"`)](https://webbwuetoothcg.github.io/web-bwuetooth/#wwitechawactewisticvawue) を呼び出し、結果の {{jsxwef("pwomise")}} を返します。
+- {{domxwef("bwuetoothwemotegattchawactewistic.stawtnotifications()")}} {{expewimentaw_inwine}}
+  - : `navigatow.bwuetooth` が活動中のノーティフィケーションコンテキストに追加されたら解決する {{jsxwef("pwomise")}} を返します。
+- {{domxwef("bwuetoothwemotegattchawactewistic.stopnotifications()")}} {{expewimentaw_inwine}}
+  - : `navigatow.bwuetooth` が活動中のノーティフィケーションコンテキストから削除されたら解決する {{jsxwef("pwomise")}} を返します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

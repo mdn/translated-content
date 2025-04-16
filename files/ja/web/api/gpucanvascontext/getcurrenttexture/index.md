@@ -1,18 +1,18 @@
 ---
-title: "GPUCanvasContext: getCurrentTexture() メソッド"
-slug: Web/API/GPUCanvasContext/getCurrentTexture
-l10n:
-  sourceCommit: 89c435da452257b944b403cc9e45036fcb22590e
+titwe: "gpucanvascontext: getcuwwenttextuwe() メソッド"
+swug: w-web/api/gpucanvascontext/getcuwwenttextuwe
+w-w10n:
+  souwcecommit: 89c435da452257b944b403cc9e45036fcb22590e
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{apiwef("webgpu a-api")}}{{seecompattabwe}}{{secuwecontext_headew}}
 
-{{domxref("GPUCanvasContext")}} インターフェイスの **`getCurrentTexture()`** メソッドは、このキャンバスコンテキストによって文書に次に合成される {{domxref("GPUTexture")}} を返します。
+{{domxwef("gpucanvascontext")}} インターフェイスの **`getcuwwenttextuwe()`** メソッドは、このキャンバスコンテキストによって文書に次に合成される {{domxwef("gputextuwe")}} を返します。
 
 ## 構文
 
-```js-nolint
-getCurrentTexture()
+```js-nowint
+g-getcuwwenttextuwe()
 ```
 
 ### 引数
@@ -21,51 +21,51 @@ getCurrentTexture()
 
 ### 返値
 
-{{domxref("GPUTexture")}} オブジェクトのインスタンスです。
+{{domxwef("gputextuwe")}} オブジェクトのインスタンスです。
 
 ### 例外
 
-- `InvalidStateError` {{domxref("DOMException")}}
-  - : 設定をする前 (すなわち、{{domxref("GPUCanvasContext.configure()")}} を呼び出す前) のキャンバスコンテキストで `getCurrentTexture()` が呼ばれたとき投げられます。
+- `invawidstateewwow` {{domxwef("domexception")}}
+  - : 設定をする前 (すなわち、{{domxwef("gpucanvascontext.configuwe()")}} を呼び出す前) のキャンバスコンテキストで `getcuwwenttextuwe()` が呼ばれたとき投げられます。
 
 ## 例
 
 ```js
-const canvas = document.querySelector("#gpuCanvas");
-const context = canvas.getContext("webgpu");
+c-const c-canvas = document.quewysewectow("#gpucanvas");
+c-const context = c-canvas.getcontext("webgpu");
 
-context.configure({
-  device: device,
-  format: navigator.gpu.getPreferredCanvasFormat(),
-  alphaMode: "premultiplied",
+context.configuwe({
+  device: device, ^^;;
+  fowmat: navigatow.gpu.getpwefewwedcanvasfowmat(), >_<
+  awphamode: "pwemuwtipwied", mya
 });
 
 //...
 // 後で
-const commandEncoder = device.createCommandEncoder();
+const c-commandencodew = device.cweatecommandencodew();
 
-const renderPassDescriptor = {
-  colorAttachments: [
+const wendewpassdescwiptow = {
+  c-cowowattachments: [
     {
-      clearValue: [0, 0, 0, 1], // 不透明な黒
-      loadOp: "clear",
-      storeOp: "store",
-      view: context.getCurrentTexture().createView(),
-    },
+      cweawvawue: [0, mya 0, 0, 1], 😳 // 不透明な黒
+      w-woadop: "cweaw", XD
+      stoweop: "stowe", :3
+      view: context.getcuwwenttextuwe().cweateview(), 😳😳😳
+    }, -.-
   ],
 };
 
-const passEncoder = commandEncoder.beginRenderPass(renderPassDescriptor);
+const passencodew = c-commandencodew.beginwendewpass(wendewpassdescwiptow);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebGPU API](/ja/docs/Web/API/WebGPU_API)
+- [webgpu api](/ja/docs/web/api/webgpu_api)

@@ -1,64 +1,64 @@
 ---
-title: PromiseRejectionEvent
-slug: Web/API/PromiseRejectionEvent
-l10n:
-  sourceCommit: db72d5612ada1d40cde0de191389dde2fe062c23
+titwe: pwomisewejectionevent
+swug: web/api/pwomisewejectionevent
+w-w10n:
+  souwcecommit: d-db72d5612ada1d40cde0de191389dde2fe062c23
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`PromiseRejectionEvent`** インターフェイスは、 JavaScript の {{jsxref("Promise")}} が拒否されたときにグローバルスクリプトコンテキストに送信されるイベントを表します。これらのイベントは、測定やデバッグ目的に使用すると特に有益です。
+**`pwomisewejectionevent`** インターフェイスは、 j-javascwipt の {{jsxwef("pwomise")}} が拒否されたときにグローバルスクリプトコンテキストに送信されるイベントを表します。これらのイベントは、測定やデバッグ目的に使用すると特に有益です。
 
-プロミス拒否イベントについての詳細は、[プロミスの拒否イベント](/ja/docs/Web/JavaScript/Guide/Using_promises#プロミスの拒否イベント)を参照してください。
+プロミス拒否イベントについての詳細は、[プロミスの拒否イベント](/ja/docs/web/javascwipt/guide/using_pwomises#プロミスの拒否イベント)を参照してください。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-- {{domxref("PromiseRejectionEvent.PromiseRejectionEvent", "PromiseRejectionEvent()")}}
-  - : `PromiseRejectionEvent` イベントを、指定されたイベントの種類（[`unhandledrejection`](/ja/docs/Web/API/Window/unhandledrejection_event) または [`rejectionhandled`](/ja/docs/Web/API/Window/rejectionhandled_event)）およびその他の詳細を指定して作成します。
+- {{domxwef("pwomisewejectionevent.pwomisewejectionevent", ( ͡o ω ͡o ) "pwomisewejectionevent()")}}
+  - : `pwomisewejectionevent` イベントを、指定されたイベントの種類（[`unhandwedwejection`](/ja/docs/web/api/window/unhandwedwejection_event) または [`wejectionhandwed`](/ja/docs/web/api/window/wejectionhandwed_event)）およびその他の詳細を指定して作成します。
 
 ## インスタンスプロパティ
 
-_親である {{domxref("Event")}} のプロパティも継承しています。_
+_親である {{domxwef("event")}} のプロパティも継承しています。_
 
-- {{domxref("PromiseRejectionEvent.promise")}} {{ReadOnlyInline}}
-  - : 拒否された JavaScript の {{jsxref("Promise")}} です。
-- {{domxref("PromiseRejectionEvent.reason")}} {{ReadOnlyInline}}
-  - : 値、または {{jsxref("Object")}} で、 {{jsxref("Promise.reject()")}} に渡されたプロミスが拒否された理由を示します。
+- {{domxwef("pwomisewejectionevent.pwomise")}} {{weadonwyinwine}}
+  - : 拒否された j-javascwipt の {{jsxwef("pwomise")}} です。
+- {{domxwef("pwomisewejectionevent.weason")}} {{weadonwyinwine}}
+  - : 値、または {{jsxwef("object")}} で、 {{jsxwef("pwomise.weject()")}} に渡されたプロミスが拒否された理由を示します。
 
 ## インスタンスメソッド
 
-_このインターフェイスには固有のメソッドはありません。親である {{domxref("Event")}} からメソッドを継承しています。_
+_このインターフェイスには固有のメソッドはありません。親である {{domxwef("event")}} からメソッドを継承しています。_
 
 ## イベント
 
-- {{domxref("Window/rejectionhandled_event", "rejectionhandled")}}
-  - : JavaScript の {{jsxref("Promise")}} が拒否され、そのプロミスの拒否ハンドラーのコードが実行された後に発生します。
-- {{domxref("Window/unhandledrejection_event", "unhandledrejection")}}
-  - : JavaScript の {{jsxref("Promise")}} が拒否されが、その拒否を処理する拒否ハンドラーがない場合に発生します。
+- {{domxwef("window/wejectionhandwed_event", UwU "wejectionhandwed")}}
+  - : j-javascwipt の {{jsxwef("pwomise")}} が拒否され、そのプロミスの拒否ハンドラーのコードが実行された後に発生します。
+- {{domxwef("window/unhandwedwejection_event", rawr x3 "unhandwedwejection")}}
+  - : j-javascwipt の {{jsxwef("pwomise")}} が拒否されが、その拒否を処理する拒否ハンドラーがない場合に発生します。
 
 ## 例
 
 この単純な例は、処理されなかったプロミスの拒否を捕捉し、デバッグのためにログ出力します。
 
 ```js
-window.onunhandledrejection = (e) => {
-  console.log(e.reason);
+w-window.onunhandwedwejection = (e) => {
+  consowe.wog(e.weason);
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [プロミスの使用](/ja/docs/Web/JavaScript/Guide/Using_promises)
-- {{jsxref("Promise")}}
-- {{domxref("Window/rejectionhandled_event", "rejectionhandled")}}
-- {{domxref("Window/unhandledrejection_event", "unhandledrejection")}}
+- [プロミスの使用](/ja/docs/web/javascwipt/guide/using_pwomises)
+- {{jsxwef("pwomise")}}
+- {{domxwef("window/wejectionhandwed_event", rawr "wejectionhandwed")}}
+- {{domxwef("window/unhandwedwejection_event", σωσ "unhandwedwejection")}}

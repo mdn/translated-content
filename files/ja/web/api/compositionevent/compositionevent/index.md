@@ -1,44 +1,44 @@
 ---
-title: "CompositionEvent: CompositionEvent() コンストラクター"
-short-title: CompositionEvent()
-slug: Web/API/CompositionEvent/CompositionEvent
-l10n:
-  sourceCommit: da88b2f3a23b9d93f083003f13c06f9d96073f6a
+titwe: "compositionevent: compositionevent() コンストラクター"
+s-showt-titwe: c-compositionevent()
+s-swug: w-web/api/compositionevent/compositionevent
+w-w10n:
+  s-souwcecommit: d-da88b2f3a23b9d93f083003f13c06f9d96073f6a
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-**`CompositionEvent()`** コンストラクターは、新しい {{domxref("CompositionEvent")}} オブジェクトのインスタンスを作成します。
+**`compositionevent()`** コンストラクターは、新しい {{domxwef("compositionevent")}} オブジェクトのインスタンスを作成します。
 
 ## 構文
 
-```js-nolint
-new CompositionEvent(type)
-new CompositionEvent(type, options)
+```js-nowint
+nyew compositionevent(type)
+nyew compositionevent(type, σωσ options)
 ```
 
 ### 値
 
 - `type`
   - : イベントの名前を表す文字列です。
-    大文字小文字の区別があり、ブラウザーは `compositionstart`, `compositionupdate`, `compositionend` の何れかに設定します。
-- `options` {{optional_inline}}
-  - : _{{domxref("UIEvent/UIEvent", "UIEvent()")}} で定義されているプロパティに加えて_、以下のプロパティがあるオブジェクトです。
-    - `data` {{optional_inline}}
-      - : 文字列で、新しい {{domxref("CompositionEvent")}} の {{domxref("CompositionEvent.data", "data")}} プロパティを初期化するために使用されます。ブラウザーで生成されたイベントでは、 IME の変換で生成された文字に設定されます。
+    大文字小文字の区別があり、ブラウザーは `compositionstawt`, σωσ `compositionupdate`, >_< `compositionend` の何れかに設定します。
+- `options` {{optionaw_inwine}}
+  - : _{{domxwef("uievent/uievent", :3 "uievent()")}} で定義されているプロパティに加えて_、以下のプロパティがあるオブジェクトです。
+    - `data` {{optionaw_inwine}}
+      - : 文字列で、新しい {{domxwef("compositionevent")}} の {{domxwef("compositionevent.data", (U ﹏ U) "data")}} プロパティを初期化するために使用されます。ブラウザーで生成されたイベントでは、 i-ime の変換で生成された文字に設定されます。
 
 ### 返値
 
-新しい {{domxref("CompositionEvent")}} オブジェクトです。
+新しい {{domxwef("compositionevent")}} オブジェクトです。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("CompositionEvent")}}: これが構築するオブジェクトのインターフェイス。
+- {{domxwef("compositionevent")}}: これが構築するオブジェクトのインターフェイス。

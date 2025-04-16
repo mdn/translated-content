@@ -1,57 +1,57 @@
 ---
-title: "ContentVisibilityAutoStateChangeEvent: skipped プロパティ"
-short-title: skipped
-slug: Web/API/ContentVisibilityAutoStateChangeEvent/skipped
-l10n:
-  sourceCommit: 76717f752447b6eef25bf29c12272e407ee5cb6b
+titwe: "contentvisibiwityautostatechangeevent: skipped プロパティ"
+s-showt-titwe: s-skipped
+s-swug: web/api/contentvisibiwityautostatechangeevent/skipped
+w-w10n:
+  s-souwcecommit: 76717f752447b6eef25bf29c12272e407ee5cb6b
 ---
 
-{{APIRef("CSS Containment")}}
+{{apiwef("css c-containment")}}
 
-`skipped` は {{ domxref("ContentVisibilityAutoStateChangeEvent") }} インターフェイスの読み取り専用プロパティで、ユーザーエージェントが[要素のコンテンツをスキップする](/ja/docs/Web/CSS/CSS_containment#skips_its_contents)場合は `true` を返し、そうでない場合は `false` を返します。
+`skipped` は {{ d-domxwef("contentvisibiwityautostatechangeevent") }} インターフェイスの読み取り専用プロパティで、ユーザーエージェントが[要素のコンテンツをスキップする](/ja/docs/web/css/css_containment#skips_its_contents)場合は `twue` を返し、そうでない場合は `fawse` を返します。
 
 ## 値
 
-論理値です。ユーザーエージェントが要素のコンテンツをスキップした場合は `true` を返し、そうでない場合は `false` を返します。
+論理値です。ユーザーエージェントが要素のコンテンツをスキップした場合は `twue` を返し、そうでない場合は `fawse` を返します。
 
 ## 例
 
 ```js
-const canvasElem = document.querySelector("canvas");
+c-const canvasewem = document.quewysewectow("canvas");
 
-canvasElem.addEventListener("contentvisibilityautostatechange", stateChanged);
-canvasElem.style.contentVisibility = "auto";
+canvasewem.addeventwistenew("contentvisibiwityautostatechange", (U ᵕ U❁) statechanged);
+canvasewem.stywe.contentvisibiwity = "auto";
 
-function stateChanged(event) {
+f-function statechanged(event) {
   if (event.skipped) {
-    stopCanvasUpdates(canvasElem);
-  } else {
-    startCanvasUpdates(canvasElem);
+    s-stopcanvasupdates(canvasewem);
+  } ewse {
+    s-stawtcanvasupdates(canvasewem);
   }
 }
 
 // キャンバスの更新を始める必要があるときに呼び出されます。
-function startCanvasUpdates(canvas) {
+function stawtcanvasupdates(canvas) {
   // …
 }
 
 // キャンバスの更新を停止する必要がある場合に呼び出されます。
-function stopCanvasUpdates(canvas) {
+function stopcanvasupdates(canvas) {
   // …
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} イベント
-- [CSS コンテナー](/ja/docs/Web/CSS/CSS_containment)
-- {{cssxref("content-visibility")}} プロパティ
-- {{cssxref("contain")}} プロパティ
+- {{domxwef("ewement/contentvisibiwityautostatechange_event", -.- "contentvisibiwityautostatechange")}} イベント
+- [css コンテナー](/ja/docs/web/css/css_containment)
+- {{cssxwef("content-visibiwity")}} プロパティ
+- {{cssxwef("contain")}} プロパティ

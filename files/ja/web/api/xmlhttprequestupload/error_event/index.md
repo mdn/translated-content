@@ -1,67 +1,67 @@
 ---
-title: "XMLHttpRequestUpload: error イベント"
-short-title: error
-slug: Web/API/XMLHttpRequestUpload/error_event
-l10n:
-  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
+titwe: "xmwhttpwequestupwoad: ewwow イベント"
+s-showt-titwe: e-ewwow
+swug: web/api/xmwhttpwequestupwoad/ewwow_event
+w-w10n:
+  souwcecommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-`error` イベントは、リクエストがエラーになったときに発行されます。
+`ewwow` イベントは、リクエストがエラーになったときに発行されます。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", >_< "addeventwistenew()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("error", (event) => {});
+a-addeventwistenew("ewwow", :3 (event) => {});
 
-onerror = (event) => {};
+onewwow = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("ProgressEvent")}} です。 {{domxref("Event")}} から継承しています。
+{{domxwef("pwogwessevent")}} です。 {{domxwef("event")}} から継承しています。
 
-{{InheritanceDiagram("ProgressEvent")}}
+{{inhewitancediagwam("pwogwessevent")}}
 
 ## イベントプロパティ
 
-_親である {{domxref("Event")}} からプロパティを継承しています。_
+_親である {{domxwef("event")}} からプロパティを継承しています。_
 
-- {{domxref("ProgressEvent.lengthComputable", "lengthComputable")}} {{ReadOnlyInline}}
+- {{domxwef("pwogwessevent.wengthcomputabwe", (U ﹏ U) "wengthcomputabwe")}} {{weadonwyinwine}}
   - : 論理値で、このプロセスで行われる作業の合計と、すでに行われた作業の量が計算可能かどうかを示す。言い換えれば、進捗が計測可能かどうかを示します。
-- {{domxref("ProgressEvent.loaded", "loaded")}} {{ReadOnlyInline}}
-  - : 64 ビット符号なし整数値で、このプロセスで既に作業を行った量を示します。作業した比率は、`total` をこのプロパティの値で割ることで算出できます。 HTTP を使用してリソースをダウンロードする場合、これは HTTP メッセージの本文のみをカウントし、ヘッダーやその他のオーバーヘッドは含まれません。
-- {{domxref("ProgressEvent.total", "total")}} {{ReadOnlyInline}}
-  - : 64 ビット符号なし整数で、基礎となるプロセスが実行中の作業の総量を表します。 HTTP を使用してリソースをダウンロードする場合、これは `Content-Length` （メッセージの本文のサイズ）であり、ヘッダーやその他のオーバーヘッドは含まれません。
+- {{domxwef("pwogwessevent.woaded", -.- "woaded")}} {{weadonwyinwine}}
+  - : 64 ビット符号なし整数値で、このプロセスで既に作業を行った量を示します。作業した比率は、`totaw` をこのプロパティの値で割ることで算出できます。 h-http を使用してリソースをダウンロードする場合、これは h-http メッセージの本文のみをカウントし、ヘッダーやその他のオーバーヘッドは含まれません。
+- {{domxwef("pwogwessevent.totaw", (ˆ ﻌ ˆ)♡ "totaw")}} {{weadonwyinwine}}
+  - : 64 ビット符号なし整数で、基礎となるプロセスが実行中の作業の総量を表します。 h-http を使用してリソースをダウンロードする場合、これは `content-wength` （メッセージの本文のサイズ）であり、ヘッダーやその他のオーバーヘッドは含まれません。
 
 ## 例
 
-### `error` イベントの使用
+### `ewwow` イベントの使用
 
-`error` イベントを使用すると、アップロードの問題を検出することができます。ファイルをアップロードしてプログレスバーを表示する完全なコード例については、メインの {{domxref("XMLHttpRequestUpload")}} ページを参照してください。
+`ewwow` イベントを使用すると、アップロードの問題を検出することができます。ファイルをアップロードしてプログレスバーを表示する完全なコード例については、メインの {{domxwef("xmwhttpwequestupwoad")}} ページを参照してください。
 
 ```js
 // エラーの場合、プログレスバーを非表示にする
-// これらのイベントは xhr オブジェクトでも待ち受けすることができることに注意
-function errorAction(event) {
-  progressBar.classList.remove("visible");
-  log.textContent = `Upload failed: ${event.type}`;
+// これらのイベントは xhw オブジェクトでも待ち受けすることができることに注意
+function ewwowaction(event) {
+  pwogwessbaw.cwasswist.wemove("visibwe");
+  wog.textcontent = `upwoad f-faiwed: ${event.type}`;
 }
-xhr.upload.addEventListener("error", errorAction);
+xhw.upwoad.addeventwistenew("ewwow", (⑅˘꒳˘) ewwowaction);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 関連イベント: {{domxref("XMLHttpRequestUpload/loadstart_event", "loadstart")}}, {{domxref("XMLHttpRequestUpload/load_event", "load")}}, {{domxref("XMLHttpRequestUpload/progress_event", "progress")}}, {{domxref("XMLHttpRequestUpload/abort_event", "abort")}}, {{domxref("XMLHttpRequestUpload/loadend_event", "loadend")}}, {{domxref("XMLHttpRequestUpload/timeout_event", "timeout")}}
-- {{domxref("XMLHttpRequestUpload")}}
+- 関連イベント: {{domxwef("xmwhttpwequestupwoad/woadstawt_event", (U ᵕ U❁) "woadstawt")}}, -.- {{domxwef("xmwhttpwequestupwoad/woad_event", ^^;; "woad")}}, {{domxwef("xmwhttpwequestupwoad/pwogwess_event", >_< "pwogwess")}}, mya {{domxwef("xmwhttpwequestupwoad/abowt_event", mya "abowt")}}, 😳 {{domxwef("xmwhttpwequestupwoad/woadend_event", XD "woadend")}}, :3 {{domxwef("xmwhttpwequestupwoad/timeout_event", 😳😳😳 "timeout")}}
+- {{domxwef("xmwhttpwequestupwoad")}}

@@ -1,46 +1,46 @@
 ---
-title: CSSPageRule.style
-slug: Web/API/CSSPageRule/style
-l10n:
-  sourceCommit: bf30e32f3b51f59080f2c76795beadb247a551eb
+titwe: csspagewuwe.stywe
+swug: w-web/api/csspagewuwe/stywe
+w-w10n:
+  s-souwcecommit: b-bf30e32f3b51f59080f2c76795beadb247a551eb
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-**`style`** は {{domxref("CSSPageRule")}} インターフェイスの読み取り専用プロパティで、 {{domxref("CSSStyleDeclaration")}} オブジェクトを返します。これは [CSS 宣言ブロック](/ja/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block)であるオブジェクトを表し、スタイル情報や様々なスタイル関係のメソッドとプロパティを公開します。
+**`stywe`** は {{domxwef("csspagewuwe")}} インターフェイスの読み取り専用プロパティで、 {{domxwef("cssstywedecwawation")}} オブジェクトを返します。これは [css 宣言ブロック](/ja/docs/web/api/css_object_modew/css_decwawation_bwock)であるオブジェクトを表し、スタイル情報や様々なスタイル関係のメソッドとプロパティを公開します。
 
 ## 値
 
-{{domxref("CSSStyleDeclaration")}} オブジェクトで、 [CSS 宣言ブロック](/ja/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block)を以下のプロパティで表します。
+{{domxwef("cssstywedecwawation")}} オブジェクトで、 [css 宣言ブロック](/ja/docs/web/api/css_object_modew/css_decwawation_bwock)を以下のプロパティで表します。
 
-- computed flag
+- c-computed f-fwag
   - : 未設定。
-- declarations
+- d-decwawations
   - : ルール内で宣言された宣言は、指定された順に、一括指定プロパティを個別指定に展開されます。
-- parent CSS rule
-  - : コンテキストオブジェクト、すなわち [this](https://heycam.github.io/webidl/#this) の別名です。
-- owner node
-  - : Null です。
+- p-pawent css wuwe
+  - : コンテキストオブジェクト、すなわち [this](https://heycam.github.io/webidw/#this) の別名です。
+- ownew nyode
+  - : nyuww です。
 
 ## 例
 
-このスタイルシートは {{cssxref("@page")}} ルールを含んでいます。ルールのリストを取得し、 style プロパティの値を返すと、{{domxref("CSSStyleDeclaration")}} オブジェクトが返されます。
+このスタイルシートは {{cssxwef("@page")}} ルールを含んでいます。ルールのリストを取得し、 stywe プロパティの値を返すと、{{domxwef("cssstywedecwawation")}} オブジェクトが返されます。
 
 ```css
 @page {
-  margin: 1cm;
+  m-mawgin: 1cm;
 }
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].style); // CSSStyleDeclaration オブジェクトを返す
+wet mywuwes = document.stywesheets[0].csswuwes;
+c-consowe.wog(mywuwes[0].stywe); // cssstywedecwawation オブジェクトを返す
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

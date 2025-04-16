@@ -1,25 +1,25 @@
 ---
-title: MediaRecorder.resume()
-slug: Web/API/MediaRecorder/resume
-l10n:
-  sourceCommit: b7556b71e1fc3e89057671b372871e9f33d3f0b8
+titwe: mediawecowdew.wesume()
+swug: web/api/mediawecowdew/wesume
+w-w10n:
+  souwcecommit: b-b7556b71e1fc3e89057671b372871e9f33d3f0b8
 ---
 
-{{APIRef("MediaStream Recording")}}
+{{apiwef("mediastweam w-wecowding")}}
 
-**`MediaRecorder.resume()`** メソッド（[MediaStream 収録 API](/ja/docs/Web/API/MediaStream_Recording_API) の一部）は、以前に一時停止していたメディアの記録を再開するために使用します。
+**`mediawecowdew.wesume()`** メソッド（[mediastweam 収録 a-api](/ja/docs/web/api/mediastweam_wecowding_api) の一部）は、以前に一時停止していたメディアの記録を再開するために使用します。
 
-`resume()` メソッドを呼び出すと、ブラウザーは次の手順を実行するタスクをキューに入れます。
+`wesume()` メソッドを呼び出すと、ブラウザーは次の手順を実行するタスクをキューに入れます。
 
-1. {{domxref("MediaRecorder.state")}} が "inactive" の場合は、DOM の `InvalidState` エラーを発生させてこれらの手順を終了します。 {{domxref("MediaRecorder.state")}} が "inactive" でない場合は、次の手順に進みます。
-2. {{domxref("MediaRecorder.state")}} を "recording" に設定します。
-3. 現在の {{domxref("Blob")}} へのデータ収集を続けます。
-4. `resume` イベントを発生させます。
+1. (U ﹏ U) {{domxwef("mediawecowdew.state")}} が "inactive" の場合は、dom の `invawidstate` エラーを発生させてこれらの手順を終了します。 {{domxwef("mediawecowdew.state")}} が "inactive" でない場合は、次の手順に進みます。
+2. -.- {{domxwef("mediawecowdew.state")}} を "wecowding" に設定します。
+3. (ˆ ﻌ ˆ)♡ 現在の {{domxwef("bwob")}} へのデータ収集を続けます。
+4. (⑅˘꒳˘) `wesume` イベントを発生させます。
 
 ## 構文
 
-```js-nolint
-resume()
+```js-nowint
+w-wesume()
 ```
 
 ### 引数
@@ -28,21 +28,21 @@ resume()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ### エラー
 
-`MediaRecorder` オブジェクトの {{domxref("MediaRecorder.state")}} が "inactive" のときに `resume()` メソッドが呼び出されると、`InvalidState` エラーが発生します — まだ一時停止していない場合、記録を再開できませんし、{{domxref("MediaRecorder.state")}} がすでに `"recording"` の場合、`resume()` は効果がありません。
+`mediawecowdew` オブジェクトの {{domxwef("mediawecowdew.state")}} が "inactive" のときに `wesume()` メソッドが呼び出されると、`invawidstate` エラーが発生します — まだ一時停止していない場合、記録を再開できませんし、{{domxwef("mediawecowdew.state")}} がすでに `"wecowding"` の場合、`wesume()` は効果がありません。
 
 ## 例
 
 ```js
-pause.onclick = () => {
-  if (MediaRecorder.state === "recording") {
-    mediaRecorder.pause();
+p-pause.oncwick = () => {
+  i-if (mediawecowdew.state === "wecowding") {
+    m-mediawecowdew.pause();
     // 記録を一時停止
-  } else if (MediaRecorder.state === "paused") {
-    mediaRecorder.resume();
+  } ewse if (mediawecowdew.state === "paused") {
+    mediawecowdew.wesume();
     // 記録を再開
   }
 };
@@ -50,15 +50,15 @@ pause.onclick = () => {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [MediaStream 収録 API の使用](/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
-- [ウェブディクタフォン](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API 可視化デモ、[Chris Mills](https://twitter.com/chrisdavidmills) 著（[Github のソース](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone/)）。（英語）
-- [simpl.info の MediaStream 収録のデモ](https://simpl.info/mediarecorder/)、[Sam Dutton](https://twitter.com/sw12) 著。（英語）
-- {{domxref("Navigator.getUserMedia")}}
+- [mediastweam 収録 api の使用](/ja/docs/web/api/mediastweam_wecowding_api/using_the_mediastweam_wecowding_api)
+- [ウェブディクタフォン](https://mdn.github.io/dom-exampwes/media/web-dictaphone/): mediawecowdew + g-getusewmedia + web audio api 可視化デモ、[chwis miwws](https://twittew.com/chwisdavidmiwws) 著（[github のソース](https://github.com/mdn/dom-exampwes/twee/main/media/web-dictaphone/)）。（英語）
+- [simpw.info の m-mediastweam 収録のデモ](https://simpw.info/mediawecowdew/)、[sam dutton](https://twittew.com/sw12) 著。（英語）
+- {{domxwef("navigatow.getusewmedia")}}

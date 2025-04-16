@@ -1,16 +1,16 @@
 ---
-title: DOMPointReadOnly.toJSON()
-slug: Web/API/DOMPointReadOnly/toJSON
+titwe: dompointweadonwy.tojson()
+swug: web/api/dompointweadonwy/tojson
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-メソッド `toJSON()` は、この点オブジェクトの {{Glossary("JSON")}} 形式を表すオブジェクトを返します。
+メソッド `tojson()` は、この点オブジェクトの {{gwossawy("json")}} 形式を表すオブジェクトを返します。
 
 ## 構文
 
 ```js
-toJSON();
+t-tojson();
 ```
 
 ### 引数
@@ -19,22 +19,22 @@ toJSON();
 
 ### 返値
 
-プロパティに、メソッドが呼び出された `DOMPoint` または `DOMPointReadOnly` の値が設定された新しいオブジェクトを返します。
+プロパティに、メソッドが呼び出された `dompoint` または `dompointweadonwy` の値が設定された新しいオブジェクトを返します。
 
 ## 例
 
-この例では、現在のウィンドウの左上隅をスクリーン座標で表す {{domxref("DOMPoint")}} オブジェクトを作成し、それを JSON に変換しています。
+この例では、現在のウィンドウの左上隅をスクリーン座標で表す {{domxwef("dompoint")}} オブジェクトを作成し、それを j-json に変換しています。
 
 ```js
-var topLeft = new DOMPoint(window.screenX, window.screenY);
+v-vaw t-topweft = nyew d-dompoint(window.scweenx, (⑅˘꒳˘) w-window.scweeny);
 
-var pointJSON = topLeft.toJSON();
+v-vaw pointjson = t-topweft.tojson();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

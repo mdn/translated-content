@@ -1,54 +1,54 @@
 ---
-title: XMLHttpRequestEventTarget
-slug: Web/API/XMLHttpRequestEventTarget
-l10n:
-  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
+titwe: xmwhttpwequesteventtawget
+swug: web/api/xmwhttpwequesteventtawget
+w-w10n:
+  s-souwcecommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-`XMLHttpRequestEventTarget` インターフェイスは、 {{domxref("XMLHttpRequest")}} と {{domxref("XMLHttpRequestUpload")}} で共有されるイベントハンドラーを示します。
+`xmwhttpwequesteventtawget` インターフェイスは、 {{domxwef("xmwhttpwequest")}} と {{domxwef("xmwhttpwequestupwoad")}} で共有されるイベントハンドラーを示します。
 
-`XMLHttpRequestEventTarget` を直接使用することはありません。サブクラスで操作してください。
+`xmwhttpwequesteventtawget` を直接使用することはありません。サブクラスで操作してください。
 
-## `XMLHttpRequest` への継承
+## `xmwhttpwequest` への継承
 
-{{InheritanceDiagram("XMLHttpRequest")}}
+{{inhewitancediagwam("xmwhttpwequest")}}
 
-以下のイベントが {{domxref("XMLHttpRequest")}} で利用できます。
+以下のイベントが {{domxwef("xmwhttpwequest")}} で利用できます。
 
-- {{domxref("XMLHttpRequest/abort_event", "abort")}}
-- {{domxref("XMLHttpRequest/error_event", "error")}}
-- {{domxref("XMLHttpRequest/load_event", "load")}}
-- {{domxref("XMLHttpRequest/loadend_event", "loadend")}}
-- {{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}
-- {{domxref("XMLHttpRequest/progress_event", "progress")}}
-- {{domxref("XMLHttpRequest/readystatechange_event", "readystatechange")}}
-- {{domxref("XMLHttpRequest/timeout_event", "timeout")}}
+- {{domxwef("xmwhttpwequest/abowt_event", OwO "abowt")}}
+- {{domxwef("xmwhttpwequest/ewwow_event", 🥺 "ewwow")}}
+- {{domxwef("xmwhttpwequest/woad_event", òωó "woad")}}
+- {{domxwef("xmwhttpwequest/woadend_event", o.O "woadend")}}
+- {{domxwef("xmwhttpwequest/woadstawt_event", (U ᵕ U❁) "woadstawt")}}
+- {{domxwef("xmwhttpwequest/pwogwess_event", (⑅˘꒳˘) "pwogwess")}}
+- {{domxwef("xmwhttpwequest/weadystatechange_event", ( ͡o ω ͡o ) "weadystatechange")}}
+- {{domxwef("xmwhttpwequest/timeout_event", UwU "timeout")}}
 
-## `XMLHttpRequestUpload` への継承
+## `xmwhttpwequestupwoad` への継承
 
-{{InheritanceDiagram("XMLHttpRequestUpload")}}
+{{inhewitancediagwam("xmwhttpwequestupwoad")}}
 
-以下のイベントが {{domxref("XMLHttpRequestUpload")}} で利用できます。
+以下のイベントが {{domxwef("xmwhttpwequestupwoad")}} で利用できます。
 
-- {{domxref("XMLHttpRequestUpload/abort_event", "abort")}}
-- {{domxref("XMLHttpRequestUpload/error_event", "error")}}
-- {{domxref("XMLHttpRequestUpload/load_event", "load")}}
-- {{domxref("XMLHttpRequestUpload/loadend_event", "loadend")}}
-- {{domxref("XMLHttpRequestUpload/loadstart_event", "loadstart")}}
-- {{domxref("XMLHttpRequestUpload/progress_event", "progress")}}
-- {{domxref("XMLHttpRequestUpload/timeout_event", "timeout")}}
+- {{domxwef("xmwhttpwequestupwoad/abowt_event", rawr x3 "abowt")}}
+- {{domxwef("xmwhttpwequestupwoad/ewwow_event", rawr "ewwow")}}
+- {{domxwef("xmwhttpwequestupwoad/woad_event", σωσ "woad")}}
+- {{domxwef("xmwhttpwequestupwoad/woadend_event", σωσ "woadend")}}
+- {{domxwef("xmwhttpwequestupwoad/woadstawt_event", >_< "woadstawt")}}
+- {{domxwef("xmwhttpwequestupwoad/pwogwess_event", :3 "pwogwess")}}
+- {{domxwef("xmwhttpwequestupwoad/timeout_event", (U ﹏ U) "timeout")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("XMLHttpRequest")}}
-- {{domxref("XMLHttpRequestUpload")}}
+- {{domxwef("xmwhttpwequest")}}
+- {{domxwef("xmwhttpwequestupwoad")}}

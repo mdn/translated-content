@@ -1,82 +1,82 @@
 ---
-title: PerformanceResourceTiming.redirectStart
-slug: Web/API/PerformanceResourceTiming/redirectStart
-l10n:
-  sourceCommit: b3477f90eb235d08fe196373466a725050f43862
+titwe: pewfowmancewesouwcetiming.wediwectstawt
+swug: web/api/pewfowmancewesouwcetiming/wediwectstawt
+w-w10n:
+  s-souwcecommit: b3477f90eb235d08fe196373466a725050f43862
 ---
 
-{{APIRef("Performance API")}}
+{{apiwef("pewfowmance a-api")}}
 
-**`redirectStart`** は読み取り専用プロパティで、リダイレクトを開始するフェッチの開始時間を表す {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。
+**`wediwectstawt`** は読み取り専用プロパティで、リダイレクトを開始するフェッチの開始時間を表す {{domxwef("domhighwestimestamp","timestamp")}} を返します。
 
-リソースの取得時に HTTP リダイレクトがあり、いずれかのリダイレクトが現在の文書と同じ起点からのものではないが、タイミング許可チェックアルゴリズムがリダイレクトされた各リソースに合格した場合、このプロパティはリダイレクトを開始するフェッチの開始時間を返します。そうでなければ、ゼロが返されます。
+リソースの取得時に h-http リダイレクトがあり、いずれかのリダイレクトが現在の文書と同じ起点からのものではないが、タイミング許可チェックアルゴリズムがリダイレクトされた各リソースに合格した場合、このプロパティはリダイレクトを開始するフェッチの開始時間を返します。そうでなければ、ゼロが返されます。
 
-リダイレクトの回数を取得する場合は、 {{domxref("PerformanceNavigationTiming.redirectCount")}} も参照してください。
+リダイレクトの回数を取得する場合は、 {{domxwef("pewfowmancenavigationtiming.wediwectcount")}} も参照してください。
 
 ## 値
 
-`redirectStart` プロパティは以下の値を取ります。
+`wediwectstawt` プロパティは以下の値を取ります。
 
-- リダイレクトを開始したフェッチの開始時刻を表す {{domxref("DOMHighResTimeStamp", "timestamp")}}。
+- リダイレクトを開始したフェッチの開始時刻を表す {{domxwef("domhighwestimestamp", ( ͡o ω ͡o ) "timestamp")}}。
 - リソースがキャッシュから即座に取得された場合は `0` です。
-- リソースがオリジン間リクエストで取得され、HTTP の {{HTTPHeader("Timing-Allow-Origin")}} レスポンスヘッダーが使用されなかった場合は `0` となります。
+- リソースがオリジン間リクエストで取得され、http の {{httpheadew("timing-awwow-owigin")}} レスポンスヘッダーが使用されなかった場合は `0` となります。
 
 ## 例
 
 ### リダイレクト時間の計測
 
-`redirectStart` と {{domxref("PerformanceResourceTiming.redirectEnd", "redirectEnd")}} プロパティを使用して、リダイレクトにどれだけ時間がかかったかを測定することができます。
+`wediwectstawt` と {{domxwef("pewfowmancewesouwcetiming.wediwectend", rawr x3 "wediwectend")}} プロパティを使用して、リダイレクトにどれだけ時間がかかったかを測定することができます。
 
 ```js
-const redirect = entry.redirectEnd - entry.redirectStart;
+c-const w-wediwect = entwy.wediwectend - entwy.wediwectstawt;
 ```
 
-{{domxref("PerformanceObserver")}} を使用した例です。このオブジェクトは、新しい `resource` パフォーマンス項目がブラウザーのパフォーマンスタイムラインに記録されると、それを通知します。オブザーバーが作成される前の項目にアクセスするために `buffered` オプションを使用します。
+{{domxwef("pewfowmanceobsewvew")}} を使用した例です。このオブジェクトは、新しい `wesouwce` パフォーマンス項目がブラウザーのパフォーマンスタイムラインに記録されると、それを通知します。オブザーバーが作成される前の項目にアクセスするために `buffewed` オプションを使用します。
 
 ```js
-const observer = new PerformanceObserver((list) => {
-  list.getEntries().forEach((entry) => {
-    const redirect = entry.redirectEnd - entry.redirectStart;
-    if (redirect > 0) {
-      console.log(`${entry.name}: Redirect time: ${redirect}ms`);
+c-const o-obsewvew = nyew pewfowmanceobsewvew((wist) => {
+  wist.getentwies().foweach((entwy) => {
+    const wediwect = entwy.wediwectend - e-entwy.wediwectstawt;
+    if (wediwect > 0) {
+      consowe.wog(`${entwy.name}: w-wediwect time: ${wediwect}ms`);
     }
   });
 });
 
-observer.observe({ type: "resource", buffered: true });
+obsewvew.obsewve({ t-type: "wesouwce", nyaa~~ buffewed: twue });
 ```
 
-{{domxref("Performance.getEntriesByType()")}} を使用した例です。このメソッドを呼び出した時点でブラウザー上のパフォーマンスタイムラインに存在する `resource` パフォーマンス項目のみを表示します。
+{{domxwef("pewfowmance.getentwiesbytype()")}} を使用した例です。このメソッドを呼び出した時点でブラウザー上のパフォーマンスタイムラインに存在する `wesouwce` パフォーマンス項目のみを表示します。
 
 ```js
-const resources = performance.getEntriesByType("resource");
-resources.forEach((entry) => {
-  const redirect = entry.redirectEnd - entry.redirectStart;
-  if (redirect > 0) {
-    console.log(`${entry.name}: Redirect time: ${redirect}ms`);
+const w-wesouwces = pewfowmance.getentwiesbytype("wesouwce");
+wesouwces.foweach((entwy) => {
+  c-const wediwect = e-entwy.wediwectend - entwy.wediwectstawt;
+  if (wediwect > 0) {
+    consowe.wog(`${entwy.name}: wediwect t-time: ${wediwect}ms`);
   }
 });
 ```
 
 ### オリジン間のタイミング情報
 
-`redirectStart` プロパティの値が `0` である場合、そのリソースはオリジン間リクエストである可能性があります。オリジン間のタイミング情報を見るためには、HTTP の {{HTTPHeader("Timing-Allow-Origin")}} レスポンスヘッダーを設定する必要があります。
+`wediwectstawt` プロパティの値が `0` である場合、そのリソースはオリジン間リクエストである可能性があります。オリジン間のタイミング情報を見るためには、http の {{httpheadew("timing-awwow-owigin")}} レスポンスヘッダーを設定する必要があります。
 
-例えば、`https://developer.mozilla.org` にタイミングリソースを見ることを許可するには、オリジン間リソースで次のものを送信する必要があります。
+例えば、`https://devewopew.moziwwa.owg` にタイミングリソースを見ることを許可するには、オリジン間リソースで次のものを送信する必要があります。
 
 ```http
-Timing-Allow-Origin: https://developer.mozilla.org
+timing-awwow-owigin: https://devewopew.moziwwa.owg
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("PerformanceNavigationTiming.redirectCount")}}
-- {{HTTPHeader("Timing-Allow-Origin")}}
+- {{domxwef("pewfowmancenavigationtiming.wediwectcount")}}
+- {{httpheadew("timing-awwow-owigin")}}

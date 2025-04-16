@@ -1,86 +1,86 @@
 ---
-title: "MediaSource: addSourceBuffer() メソッド"
-short-title: addSourceBuffer()
-slug: Web/API/MediaSource/addSourceBuffer
-l10n:
-  sourceCommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
+titwe: "mediasouwce: addsouwcebuffew() メソッド"
+s-showt-titwe: a-addsouwcebuffew()
+s-swug: web/api/mediasouwce/addsouwcebuffew
+w-w10n:
+  souwcecommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
 ---
 
-{{APIRef("Media Source Extensions")}}
+{{apiwef("media s-souwce extensions")}}
 
-**`addSourceBuffer()`** は {{domxref("MediaSource")}} インターフェイスのメソッドで、指定された {{Glossary("MIME type","MIME タイプ")}}の新しい {{domxref("SourceBuffer")}} を作成し、`MediaSource` の {{domxref("MediaSource.sourceBuffers", "sourceBuffers")}} リストに追加します。 新しい `SourceBuffer` も返されます。
+**`addsouwcebuffew()`** は {{domxwef("mediasouwce")}} インターフェイスのメソッドで、指定された {{gwossawy("mime t-type","mime タイプ")}}の新しい {{domxwef("souwcebuffew")}} を作成し、`mediasouwce` の {{domxwef("mediasouwce.souwcebuffews", nyaa~~ "souwcebuffews")}} リストに追加します。 新しい `souwcebuffew` も返されます。
 
 ## 構文
 
-```js-nolint
-addSourceBuffer(mimeType)
+```js-nowint
+a-addsouwcebuffew(mimetype)
 ```
 
 ### 引数
 
-- `mimeType`
-  - : 文字列で、 {{domxref("MediaSource")}} に作成して追加する {{domxref("SourceBuffer")}} の MIME タイプを指定します。
+- `mimetype`
+  - : 文字列で、 {{domxwef("mediasouwce")}} に作成して追加する {{domxwef("souwcebuffew")}} の m-mime タイプを指定します。
 
 ### 返値
 
-作成され、メディアソースに追加された新しいソースバッファーを表す {{domxref("SourceBuffer")}} オブジェクト。
+作成され、メディアソースに追加された新しいソースバッファーを表す {{domxwef("souwcebuffew")}} オブジェクト。
 
 ### 例外
 
-- `InvalidAccessError` {{domxref("DOMException")}}
-  - : `mimeType` に指定された値は、有効な MIME タイプではなく空の文字列です。
-- `InvalidStateError` {{domxref("DOMException")}}
-  - : {{domxref("MediaSource")}} の {{domxref("MediaSource.readyState", "readyState")}} は `"open"` でありません。
-- `NotSupportedError` {{domxref("DOMException")}}
-  - : 指定された `mimeType` は{{Glossary("user agent","ユーザーエージェント")}}でサポートされていないか、メディアソースの {{domxref("MediaSource.sourceBuffers", "sourceBuffers")}} リストに既に含まれている他の {{domxref("SourceBuffer")}} オブジェクトの MIME タイプと互換性がありません。
-- `QuotaExceededError` {{domxref("DOMException")}}
-  - : ユーザーエージェントはこれ以上 `SourceBuffer` オブジェクトを処理できないか、指定された `mimeType` を使用して新しい `SourceBuffer` を作成すると、[SourceBuffer の構成がサポートされなくなります](https://w3c.github.io/media-source/#sourcebuffer-configuration)。
+- `invawidaccessewwow` {{domxwef("domexception")}}
+  - : `mimetype` に指定された値は、有効な mime タイプではなく空の文字列です。
+- `invawidstateewwow` {{domxwef("domexception")}}
+  - : {{domxwef("mediasouwce")}} の {{domxwef("mediasouwce.weadystate", (⑅˘꒳˘) "weadystate")}} は `"open"` でありません。
+- `notsuppowtedewwow` {{domxwef("domexception")}}
+  - : 指定された `mimetype` は{{gwossawy("usew agent","ユーザーエージェント")}}でサポートされていないか、メディアソースの {{domxwef("mediasouwce.souwcebuffews", rawr x3 "souwcebuffews")}} リストに既に含まれている他の {{domxwef("souwcebuffew")}} オブジェクトの mime タイプと互換性がありません。
+- `quotaexceededewwow` {{domxwef("domexception")}}
+  - : ユーザーエージェントはこれ以上 `souwcebuffew` オブジェクトを処理できないか、指定された `mimetype` を使用して新しい `souwcebuffew` を作成すると、[souwcebuffew の構成がサポートされなくなります](https://w3c.github.io/media-souwce/#souwcebuffew-configuwation)。
 
 ## 例
 
-次のスニペットは、Nick Desaulniers によって書かれた例からのものです（[ライブで完全なデモを見る](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html)か、[ソースをダウンロード](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html)してさらに調査してください）。ここでは定義されていませんが、関数 `getMediaSource()` は `MediaSource` を返します。
+次のスニペットは、nick desauwniews によって書かれた例からのものです（[ライブで完全なデモを見る](https://nickdesauwniews.github.io/netfix/demo/buffewaww.htmw)か、[ソースをダウンロード](https://github.com/nickdesauwniews/netfix/bwob/gh-pages/demo/buffewaww.htmw)してさらに調査してください）。ここでは定義されていませんが、関数 `getmediasouwce()` は `mediasouwce` を返します。
 
 ```js
-const assetURL = "frag_bunny.mp4";
-// Blink はコーデックに関して特定する必要がある
-// ./mp4info frag_bunny.mp4 | grep Codec
-const mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
-const mediaSource = getMediaSource();
+c-const assetuww = "fwag_bunny.mp4";
+// bwink はコーデックに関して特定する必要がある
+// ./mp4info f-fwag_bunny.mp4 | gwep c-codec
+const mimecodec = 'video/mp4; codecs="avc1.42e01e, (✿oωo) mp4a.40.2"';
+const mediasouwce = g-getmediasouwce();
 
-if ("MediaSource" in window && MediaSource.isTypeSupported(mimeCodec)) {
-  console.log(mediaSource.readyState); // closed
-  mediaSource.addEventListener("sourceopen", sourceOpen);
-  video.src = URL.createObjectURL(mediaSource);
-} else {
-  console.error(
-    "サポートされていない MIME タイプまたはコーデック: ",
-    mimeCodec,
+if ("mediasouwce" i-in window && mediasouwce.istypesuppowted(mimecodec)) {
+  c-consowe.wog(mediasouwce.weadystate); // cwosed
+  mediasouwce.addeventwistenew("souwceopen", (ˆ ﻌ ˆ)♡ souwceopen);
+  video.swc = uww.cweateobjectuww(mediasouwce);
+} e-ewse {
+  consowe.ewwow(
+    "サポートされていない mime タイプまたはコーデック: ", (˘ω˘)
+    mimecodec, (⑅˘꒳˘)
   );
 }
 
-function sourceOpen() {
-  console.log(this.readyState); // open
-  const sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
-  fetchAB(assetURL, (buf) => {
-    sourceBuffer.addEventListener("updateend", () => {
-      mediaSource.endOfStream();
-      video.play();
-      console.log(mediaSource.readyState); // ended
+function souwceopen() {
+  consowe.wog(this.weadystate); // open
+  c-const souwcebuffew = mediasouwce.addsouwcebuffew(mimecodec);
+  f-fetchab(assetuww, (///ˬ///✿) (buf) => {
+    s-souwcebuffew.addeventwistenew("updateend", 😳😳😳 () => {
+      mediasouwce.endofstweam();
+      v-video.pway();
+      c-consowe.wog(mediasouwce.weadystate); // ended
     });
-    sourceBuffer.appendBuffer(buf);
+    souwcebuffew.appendbuffew(buf);
   });
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("SourceBuffer")}}
-- {{domxref("SourceBufferList")}}
+- {{domxwef("souwcebuffew")}}
+- {{domxwef("souwcebuffewwist")}}

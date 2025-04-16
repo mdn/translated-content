@@ -1,17 +1,17 @@
 ---
-title: "Element: ariaPlaceholder プロパティ"
-short-title: ariaPlaceholder
-slug: Web/API/Element/ariaPlaceholder
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: awiapwacehowdew プロパティ"
+s-showt-titwe: a-awiapwacehowdew
+s-swug: web/api/ewement/awiapwacehowdew
+w-w10n:
+  s-souwcecommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{defauwtapisidebaw("dom")}}
 
-**`ariaPlaceholder`** は {{domxref("Element")}} インターフェイスのプロパティで、`aria-placeholder` 属性の値を反映します。この属性は、コントロールに値がない場合表示する、ユーザーのデータ入力を助けることを意図した短いヒントを定義します。
+**`awiapwacehowdew`** は {{domxwef("ewement")}} インターフェイスのプロパティで、`awia-pwacehowdew` 属性の値を反映します。この属性は、コントロールに値がない場合表示する、ユーザーのデータ入力を助けることを意図した短いヒントを定義します。
 
-> [!NOTE]
-> 可能であれば、HTML の {{htmlelement("input")}} 要素の `type="text"` と {{htmlelement("textarea")}} を使用してください。これらは意味づけがあり、ARIA 属性を必要としません。
+> [!note]
+> 可能であれば、htmw の {{htmwewement("input")}} 要素の `type="text"` と {{htmwewement("textawea")}} を使用してください。これらは意味づけがあり、awia 属性を必要としません。
 
 ## 値
 
@@ -19,33 +19,33 @@ l10n:
 
 ## 例
 
-この例では、IDが `txtBoxInput` の要素の `aria-placeholder` 属性には文字列が設定されています。`ariaPlaceholder`を使用して、文字列を別の値に更新します。
+この例では、idが `txtboxinput` の要素の `awia-pwacehowdew` 属性には文字列が設定されています。`awiapwacehowdew`を使用して、文字列を別の値に更新します。
 
-```html
-<div id="txtboxLabel">Enter your five-digit zipcode</div>
+```htmw
+<div i-id="txtboxwabew">entew y-youw five-digit z-zipcode</div>
 <div
-  role="textbox"
-  id="txtBoxInput"
-  contenteditable="true"
-  aria-placeholder="5-digit zipcode"
-  aria-labelledby="txtboxLabel"></div>
+  wowe="textbox"
+  id="txtboxinput"
+  contenteditabwe="twue"
+  awia-pwacehowdew="5-digit z-zipcode"
+  awia-wabewwedby="txtboxwabew"></div>
 ```
 
 ```js
-let el = document.getElementById("txtBoxInput");
-console.log(el.ariaPlaceholder); // "5-digit zipcode"
-el.ariaPlaceholder = "12345";
-console.log(el.ariaPlaceholder); // "12345"
+wet ew = d-document.getewementbyid("txtboxinput");
+consowe.wog(ew.awiapwacehowdew); // "5-digit z-zipcode"
+ew.awiapwacehowdew = "12345";
+consowe.wog(ew.awiapwacehowdew); // "12345"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ARIA: textbox ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)
+- [awia: textbox ロール](/ja/docs/web/accessibiwity/awia/wefewence/wowes/textbox_wowe)

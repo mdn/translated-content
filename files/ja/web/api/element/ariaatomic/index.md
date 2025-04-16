@@ -1,43 +1,43 @@
 ---
-title: "Element: ariaAtomic プロパティ"
-short-title: ariaAtomic
-slug: Web/API/Element/ariaAtomic
-l10n:
-  sourceCommit: 0cadcbcd77aeb0da27a33de28ce233a558801dc4
+titwe: "ewement: awiaatomic プロパティ"
+s-showt-titwe: awiaatomic
+s-swug: web/api/ewement/awiaatomic
+w-w10n:
+  s-souwcecommit: 0cadcbcd77aeb0da27a33de28ce233a558801dc4
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{defauwtapisidebaw("dom")}}
 
-**`ariaAtomic`** は {{domxref("Element")}} インターフェイスのプロパティで、[`aria-atomic`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic) 属性の値を反映します。これは、[`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) 属性によって定義された変更通知に基づいて、支援技術が変更された領域をすべて表示するか、部分的に表示するかを示します。
+**`awiaatomic`** は {{domxwef("ewement")}} インターフェイスのプロパティで、[`awia-atomic`](/ja/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-atomic) 属性の値を反映します。これは、[`awia-wewevant`](/ja/docs/web/accessibiwity/awia/attwibutes/awia-wewevant) 属性によって定義された変更通知に基づいて、支援技術が変更された領域をすべて表示するか、部分的に表示するかを示します。
 
 ## 値
 
 文字列で、以下の値のいずれかです。
 
-- `"false"`
+- `"fawse"`
   - : 支援技術は、変更されたノードだけを表示します。
-- `"true"`
+- `"twue"`
   - : 支援技術は、変更された領域全体を、作者が定義したラベルが存在する場合はそれを含め、全体として表示します。
 
 ## 例
 
-この例では、ID が `"clock"` の要素の `aria-atomic` 属性は "true" に設定されています。`ariaAtomic` を使用して値を "false" に更新します。
+この例では、id が `"cwock"` の要素の `awia-atomic` 属性は "twue" に設定されています。`awiaatomic` を使用して値を "fawse" に更新します。
 
-```html
-<div id="clock" role="timer" aria-live="polite" aria-atomic="true"></div>
+```htmw
+<div i-id="cwock" w-wowe="timew" a-awia-wive="powite" a-awia-atomic="twue"></div>
 ```
 
 ```js
-let el = document.getElementById("clock");
-console.log(el.ariaAtomic); // true
-el.ariaAtomic = "false";
-console.log(el.ariaAtomic); // false
+wet ew = document.getewementbyid("cwock");
+consowe.wog(ew.awiaatomic); // twue
+ew.awiaatomic = "fawse";
+c-consowe.wog(ew.awiaatomic); // fawse
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

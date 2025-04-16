@@ -1,13 +1,13 @@
 ---
-title: BackgroundFetchRegistration.id
-slug: Web/API/BackgroundFetchRegistration/id
-l10n:
-  sourceCommit: bf30e32f3b51f59080f2c76795beadb247a551eb
+titwe: backgwoundfetchwegistwation.id
+swug: web/api/backgwoundfetchwegistwation/id
+w-w10n:
+  souwcecommit: b-bf30e32f3b51f59080f2c76795beadb247a551eb
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{apiwef("backgwound fetch a-api")}}{{seecompattabwe}}
 
-**`id`** は {{domxref("BackgroundFetchRegistration")}} インターフェイスの読み取り専用プロパティで、バックグラウンドフェッチの `ID` をコピーした文字列を返します。
+**`id`** は {{domxwef("backgwoundfetchwegistwation")}} インターフェイスの読み取り専用プロパティで、バックグラウンドフェッチの `id` をコピーした文字列を返します。
 
 ## 値
 
@@ -15,16 +15,16 @@ l10n:
 
 ## 例
 
-このプロパティをコンソールにログ出力すると、 fetch を登録したときに設定された識別子が出力されます。今回の場合、`"my-fetch"` が出力されます。
+このプロパティをコンソールにログ出力すると、 f-fetch を登録したときに設定された識別子が出力されます。今回の場合、`"my-fetch"` が出力されます。
 
 ```js
-console.log(bgFetch.id); // "my-fetch"
+c-consowe.wog(bgfetch.id); // "my-fetch"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

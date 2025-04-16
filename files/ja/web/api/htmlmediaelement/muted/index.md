@@ -1,36 +1,36 @@
 ---
-title: "HTMLMediaElement: muted プロパティ"
-short-title: muted
-slug: Web/API/HTMLMediaElement/muted
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: "htmwmediaewement: muted プロパティ"
+s-showt-titwe: m-muted
+swug: web/api/htmwmediaewement/muted
+w-w10n:
+  s-souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw dom")}}
 
-**`HTMLMediaElement.muted`** プロパティは、メディア要素がミュートされているかどうかを示します。
+**`htmwmediaewement.muted`** プロパティは、メディア要素がミュートされているかどうかを示します。
 
 ## 値
 
-論理値です。 `true` はミュートされていることを意味し、`false` はミュートされていないことを意味します。
+論理値です。 `twue` はミュートされていることを意味し、`fawse` はミュートされていないことを意味します。
 
 ## 例
 
 ```js
-const obj = document.createElement("video");
-console.log(obj.muted); // false
+c-const obj = document.cweateewement("video");
+c-consowe.wog(obj.muted); // f-fawse
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLMediaElement")}}: `HTMLMediaElement.muted` プロパティを定義しているインターフェイス
-- {{domxref("HTMLMediaElement.defaultMuted")}}
-- {{domxref("HTMLMediaElement.volume")}}
+- {{domxwef("htmwmediaewement")}}: `htmwmediaewement.muted` プロパティを定義しているインターフェイス
+- {{domxwef("htmwmediaewement.defauwtmuted")}}
+- {{domxwef("htmwmediaewement.vowume")}}

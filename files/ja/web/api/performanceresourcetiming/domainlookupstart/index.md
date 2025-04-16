@@ -1,77 +1,77 @@
 ---
-title: PerformanceResourceTiming.domainLookupStart
-slug: Web/API/PerformanceResourceTiming/domainLookupStart
-l10n:
-  sourceCommit: b3477f90eb235d08fe196373466a725050f43862
+titwe: pewfowmancewesouwcetiming.domainwookupstawt
+swug: web/api/pewfowmancewesouwcetiming/domainwookupstawt
+w-w10n:
+  souwcecommit: b-b3477f90eb235d08fe196373466a725050f43862
 ---
 
-{{APIRef("Performance API")}}
+{{apiwef("pewfowmance a-api")}}
 
-**`domainLookupStart`** は読み取り専用プロパティで、ブラウザーがリソースのドメイン名検索を開始する直前の {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。
+**`domainwookupstawt`** は読み取り専用プロパティで、ブラウザーがリソースのドメイン名検索を開始する直前の {{domxwef("domhighwestimestamp","timestamp")}} を返します。
 
 ## 値
 
-`domainLookupStart` プロパティは以下の値を取ります。
+`domainwookupstawt` プロパティは以下の値を取ります。
 
-- ブラウザーがリソースのドメイン名検索を始める直前の {{domxref("DOMHighResTimeStamp")}}。
+- ブラウザーがリソースのドメイン名検索を始める直前の {{domxwef("domhighwestimestamp")}}。
 - リソースがキャッシュから即座に取得された場合は `0` です。
-- リソースがオリジン間リクエストで取得され、HTTP の {{HTTPHeader("Timing-Allow-Origin")}} レスポンスヘッダーが使用されなかった場合は `0` となります。
+- リソースがオリジン間リクエストで取得され、http の {{httpheadew("timing-awwow-owigin")}} レスポンスヘッダーが使用されなかった場合は `0` となります。
 
 ## 例
 
-### DNS ルックアップ時間の計測
+### d-dns ルックアップ時間の計測
 
-`domainLookupStart` と {{domxref("PerformanceResourceTiming.domainLookupEnd", "domainLookupEnd")}} プロパティを使用すると、 DNS ルックアップの発生に対してどれだけ時間がかかるかを計測することができます。
+`domainwookupstawt` と {{domxwef("pewfowmancewesouwcetiming.domainwookupend", rawr x3 "domainwookupend")}} プロパティを使用すると、 d-dns ルックアップの発生に対してどれだけ時間がかかるかを計測することができます。
 
 ```js
-const dns = entry.domainLookupEnd - entry.domainLookupStart;
+c-const d-dns = entwy.domainwookupend - e-entwy.domainwookupstawt;
 ```
 
-{{domxref("PerformanceObserver")}} を使用した例です。このオブジェクトは、新しい `resource` パフォーマンス項目がブラウザーのパフォーマンスタイムラインに記録されると、それを通知します。オブザーバーが作成される前の項目にアクセスするために `buffered` オプションを使用します。
+{{domxwef("pewfowmanceobsewvew")}} を使用した例です。このオブジェクトは、新しい `wesouwce` パフォーマンス項目がブラウザーのパフォーマンスタイムラインに記録されると、それを通知します。オブザーバーが作成される前の項目にアクセスするために `buffewed` オプションを使用します。
 
 ```js
-const observer = new PerformanceObserver((list) => {
-  list.getEntries().forEach((entry) => {
-    const dns = entry.domainLookupEnd - entry.domainLookupStart;
+const obsewvew = nyew pewfowmanceobsewvew((wist) => {
+  wist.getentwies().foweach((entwy) => {
+    const dns = e-entwy.domainwookupend - entwy.domainwookupstawt;
     if (dns > 0) {
-      console.log(`${entry.name}: DNS lookup duration: ${dns}ms`);
+      c-consowe.wog(`${entwy.name}: dns wookup d-duwation: ${dns}ms`);
     }
   });
 });
 
-observer.observe({ type: "resource", buffered: true });
+obsewvew.obsewve({ type: "wesouwce", nyaa~~ buffewed: t-twue });
 ```
 
-{{domxref("Performance.getEntriesByType()")}} を使用した例です。このメソッドを呼び出した時点でブラウザー上のパフォーマンスタイムラインに存在する `resource` パフォーマンス項目のみを表示します。
+{{domxwef("pewfowmance.getentwiesbytype()")}} を使用した例です。このメソッドを呼び出した時点でブラウザー上のパフォーマンスタイムラインに存在する `wesouwce` パフォーマンス項目のみを表示します。
 
 ```js
-const resources = performance.getEntriesByType("resource");
-resources.forEach((entry) => {
-  const dns = entry.domainLookupEnd - entry.domainLookupStart;
+const wesouwces = p-pewfowmance.getentwiesbytype("wesouwce");
+w-wesouwces.foweach((entwy) => {
+  const dns = entwy.domainwookupend - entwy.domainwookupstawt;
   if (dns > 0) {
-    console.log(`${entry.name}: DNS lookup duration: ${dns}ms`);
+    consowe.wog(`${entwy.name}: d-dns wookup duwation: ${dns}ms`);
   }
 });
 ```
 
 ### オリジン間のタイミング情報
 
-`domainLookupStart` プロパティの値が `0` である場合、そのリソースはオリジン間リクエストである可能性があります。オリジン間のタイミング情報を見るためには、HTTP の {{HTTPHeader("Timing-Allow-Origin")}} レスポンスヘッダーを設定する必要があります。
+`domainwookupstawt` プロパティの値が `0` である場合、そのリソースはオリジン間リクエストである可能性があります。オリジン間のタイミング情報を見るためには、http の {{httpheadew("timing-awwow-owigin")}} レスポンスヘッダーを設定する必要があります。
 
-例えば、`https://developer.mozilla.org` にタイミングリソースを見ることを許可するには、オリジン間リソースで次のものを送信する必要があります。
+例えば、`https://devewopew.moziwwa.owg` にタイミングリソースを見ることを許可するには、オリジン間リソースで次のものを送信する必要があります。
 
 ```http
-Timing-Allow-Origin: https://developer.mozilla.org
+timing-awwow-owigin: https://devewopew.moziwwa.owg
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("Timing-Allow-Origin")}}
+- {{httpheadew("timing-awwow-owigin")}}

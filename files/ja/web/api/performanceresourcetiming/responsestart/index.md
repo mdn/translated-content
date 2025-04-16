@@ -1,77 +1,77 @@
 ---
-title: PerformanceResourceTiming.responseStart
-slug: Web/API/PerformanceResourceTiming/responseStart
-l10n:
-  sourceCommit: b3477f90eb235d08fe196373466a725050f43862
+titwe: pewfowmancewesouwcetiming.wesponsestawt
+swug: web/api/pewfowmancewesouwcetiming/wesponsestawt
+w-w10n:
+  s-souwcecommit: b3477f90eb235d08fe196373466a725050f43862
 ---
 
-{{APIRef("Performance API")}}
+{{apiwef("pewfowmance a-api")}}
 
-**`responseStart`** は読み取り専用プロパティで、ブラウザーがサーバー、キャッシュ、またはローカルリソースからレスポンスの最初のバイトを受信した直後の {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。
+**`wesponsestawt`** は読み取り専用プロパティで、ブラウザーがサーバー、キャッシュ、またはローカルリソースからレスポンスの最初のバイトを受信した直後の {{domxwef("domhighwestimestamp","timestamp")}} を返します。
 
 ## 値
 
-`responseStart` プロパティは以下の値を取ります。
+`wesponsestawt` プロパティは以下の値を取ります。
 
-- サーバーからのレスポンスの最初のバイトをブラウザーが受信した直後の {{domxref("DOMHighResTimeStamp")}}。
+- サーバーからのレスポンスの最初のバイトをブラウザーが受信した直後の {{domxwef("domhighwestimestamp")}}。
 - リソースがキャッシュから即座に取得された場合は `0` です。
-- リソースがオリジン間リクエストで取得され、HTTP の {{HTTPHeader("Timing-Allow-Origin")}} レスポンスヘッダーが使用されなかった場合は `0` となります。
+- リソースがオリジン間リクエストで取得され、http の {{httpheadew("timing-awwow-owigin")}} レスポンスヘッダーが使用されなかった場合は `0` となります。
 
 ## 例
 
 ### リクエスト時間の計測
 
-`responseStart` と {{domxref("PerformanceResourceTiming.requestStart", "requestStart")}} プロパティを使用して、リクエストにかかる時間を測定することができます。
+`wesponsestawt` と {{domxwef("pewfowmancewesouwcetiming.wequeststawt", -.- "wequeststawt")}} プロパティを使用して、リクエストにかかる時間を測定することができます。
 
 ```js
-const request = entry.responseStart - entry.requestStart;
+c-const w-wequest = entwy.wesponsestawt - e-entwy.wequeststawt;
 ```
 
-ブラウザーのパフォーマンスタイムラインに記録される新しい `resource` パフォーマンス項目を通知する {{domxref("PerformanceObserver")}} を使用した例です。オブザーバーが作成される前の項目にアクセスするために `buffered` オプションを使用します。
+ブラウザーのパフォーマンスタイムラインに記録される新しい `wesouwce` パフォーマンス項目を通知する {{domxwef("pewfowmanceobsewvew")}} を使用した例です。オブザーバーが作成される前の項目にアクセスするために `buffewed` オプションを使用します。
 
 ```js
-const observer = new PerformanceObserver((list) => {
-  list.getEntries().forEach((entry) => {
-    const request = entry.responseStart - entry.requestStart;
-    if (request > 0) {
-      console.log(`${entry.name}: Request time: ${request}ms`);
+c-const o-obsewvew = nyew pewfowmanceobsewvew((wist) => {
+  wist.getentwies().foweach((entwy) => {
+    const wequest = entwy.wesponsestawt - entwy.wequeststawt;
+    i-if (wequest > 0) {
+      consowe.wog(`${entwy.name}: wequest time: ${wequest}ms`);
     }
   });
 });
 
-observer.observe({ type: "resource", buffered: true });
+o-obsewvew.obsewve({ type: "wesouwce", ( ͡o ω ͡o ) b-buffewed: twue });
 ```
 
-{{domxref("Performance.getEntriesByType()")}} を使用した例です。このメソッドを呼び出した時点でブラウザー上のパフォーマンスタイムラインに存在する `resource` パフォーマンス項目のみを表示します。
+{{domxwef("pewfowmance.getentwiesbytype()")}} を使用した例です。このメソッドを呼び出した時点でブラウザー上のパフォーマンスタイムラインに存在する `wesouwce` パフォーマンス項目のみを表示します。
 
 ```js
-const resources = performance.getEntriesByType("resource");
-resources.forEach((entry) => {
-  const request = entry.responseStart - entry.requestStart;
-  if (request > 0) {
-    console.log(`${entry.name}: Request time: ${request}ms`);
+const wesouwces = pewfowmance.getentwiesbytype("wesouwce");
+w-wesouwces.foweach((entwy) => {
+  const wequest = e-entwy.wesponsestawt - e-entwy.wequeststawt;
+  if (wequest > 0) {
+    consowe.wog(`${entwy.name}: wequest time: ${wequest}ms`);
   }
 });
 ```
 
 ### オリジン間のタイミング情報
 
-`responseStart` プロパティの値が `0` である場合、そのリソースはオリジン間リクエストである可能性があります。オリジン間のタイミング情報を見るためには、{{HTTPHeader("Timing-Allow-Origin")}} HTTP レスポンスヘッダーを設定する必要があります。
+`wesponsestawt` プロパティの値が `0` である場合、そのリソースはオリジン間リクエストである可能性があります。オリジン間のタイミング情報を見るためには、{{httpheadew("timing-awwow-owigin")}} http レスポンスヘッダーを設定する必要があります。
 
-例えば、`https://developer.mozilla.org` にタイミングリソースを見ることを許可するには、オリジン間リソースが送信する必要があります。
+例えば、`https://devewopew.moziwwa.owg` にタイミングリソースを見ることを許可するには、オリジン間リソースが送信する必要があります。
 
 ```http
-Timing-Allow-Origin: https://developer.mozilla.org
+t-timing-awwow-owigin: https://devewopew.moziwwa.owg
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("Timing-Allow-Origin")}}
+- {{httpheadew("timing-awwow-owigin")}}

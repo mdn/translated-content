@@ -1,62 +1,62 @@
 ---
-title: "DocumentType: before() メソッド"
-slug: Web/API/DocumentType/before
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "documenttype: befowe() メソッド"
+s-swug: web/api/documenttype/befowe
+w-w10n:
+  souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-The **`DocumentType.before()`** 一連の {{domxref("Node")}} オブジェクトまたは文字列を、この `DocumentType` の親ノードの子リストの、この `DocumentType` の直前に挿入します。文字列は等価な {{domxref("Text")}} ノードとして挿入されます。
+t-the **`documenttype.befowe()`** 一連の {{domxwef("node")}} オブジェクトまたは文字列を、この `documenttype` の親ノードの子リストの、この `documenttype` の直前に挿入します。文字列は等価な {{domxwef("text")}} ノードとして挿入されます。
 
 ## 構文
 
-```js-nolint
-before(param1)
-before(param1, param2)
-before(param1, param2, /* … ,*/ paramN)
+```js-nowint
+b-befowe(pawam1)
+b-befowe(pawam1, -.- p-pawam2)
+b-befowe(pawam1, ^^;; pawam2, >_< /* … ,*/ p-pawamn)
 ```
 
 ### 引数
 
-- `param1`, …, `paramN`
-  - : 挿入する一連の {{domxref("Node")}} オブジェクト、または文字列です。
+- `pawam1`, mya …, `pawamn`
+  - : 挿入する一連の {{domxwef("node")}} オブジェクト、または文字列です。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ### 例外
 
-- `HierarchyRequestError` {{DOMxRef("DOMException")}}
+- `hiewawchywequestewwow` {{domxwef("domexception")}}
   - : ノードが階層内の指定の位置に挿入できなかった場合に発生します。
 
 ## 例
 
 ### 条件付きコメントの追加
 
-コメントノードは doctype 宣言の前でも有効ですが、 IE で互換モードになることを考えるとお勧めできません。[条件付きコメント](/ja/docs/Learn_web_development/Extensions/Testing/HTML_and_CSS#ie_conditional_comments)は IE で有効です。
+コメントノードは doctype 宣言の前でも有効ですが、 ie で互換モードになることを考えるとお勧めできません。[条件付きコメント](/ja/docs/weawn_web_devewopment/extensions/testing/htmw_and_css#ie_conditionaw_comments)は ie で有効です。
 
 ```js
-let docType = document.implementation.createDocumentType("html", "", "");
-let myDoc = document.implementation.createDocument("", "", docType);
+wet doctype = d-document.impwementation.cweatedocumenttype("htmw", mya "", "");
+wet mydoc = document.impwementation.cweatedocument("", 😳 "", doctype);
 
-docType.before(
-  document.createComment("<!--[if !IE]> conditional comment <![endif]-->"),
+d-doctype.befowe(
+  document.cweatecomment("<!--[if !ie]> c-conditionaw comment <![endif]-->"), XD
 );
 
-myDoc.childNodes;
-// NodeList [<!--[if !IE]> conditional comment <![endif]-->, <!DOCTYPE html>]
+mydoc.chiwdnodes;
+// nyodewist [<!--[if !ie]> c-conditionaw comment <![endif]-->, :3 <!doctype htmw>]
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("DocumentType.after()")}}
+- {{domxwef("documenttype.aftew()")}}

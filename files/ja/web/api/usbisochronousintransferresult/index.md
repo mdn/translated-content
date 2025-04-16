@@ -1,30 +1,30 @@
 ---
-title: USBIsochronousInTransferResult
-slug: Web/API/USBIsochronousInTransferResult
-l10n:
-  sourceCommit: 3ca86db64959ed9dc6c8021dc3eb89e82a6628c7
+titwe: usbisochwonousintwansfewwesuwt
+swug: web/api/usbisochwonousintwansfewwesuwt
+w-w10n:
+  souwcecommit: 3ca86db64959ed9dc6c8021dc3eb89e82a6628c7
 ---
 
-{{securecontext_header}}{{APIRef("WebUSB API")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{apiwef("webusb a-api")}}{{seecompattabwe}}
 
-[WebUSB API](/ja/docs/Web/API/WebUSB_API) の `USBIsochronousInTransferResult` インターフェイスは、`USBDevice` インターフェイスの `isochronousTransferIn()` メソッドを呼び出した結果を提供します。これは、USB デバイスから USB ホストへのデータ転送の要求の結果を表します。
+[webusb a-api](/ja/docs/web/api/webusb_api) の `usbisochwonousintwansfewwesuwt` インターフェイスは、`usbdevice` インターフェイスの `isochwonoustwansfewin()` メソッドを呼び出した結果を提供します。これは、usb デバイスから u-usb ホストへのデータ転送の要求の結果を表します。
 
 ## コンストラクター
 
-- {{domxref("USBIsochronousInTransferResult.USBIsochronousInTransferResult", "USBIsochronousInTransferResult()")}} {{Experimental_Inline}}
-  - : 指定の `packets` および `data` フィールドを持つ新しい `USBIsochronousInTransferResult` オブジェクトを生成します。
+- {{domxwef("usbisochwonousintwansfewwesuwt.usbisochwonousintwansfewwesuwt", 🥺 "usbisochwonousintwansfewwesuwt()")}} {{expewimentaw_inwine}}
+  - : 指定の `packets` および `data` フィールドを持つ新しい `usbisochwonousintwansfewwesuwt` オブジェクトを生成します。
 
 ## インスタンスプロパティ
 
-- {{domxref("USBIsochronousInTransferResult.data")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : デバイスから受信したデータを格納した `DataView` オブジェクトを返します。これはすべてのパケットのデータを合わせたものです。個々のパケットで受信したこのバッファーの部分は、配列 `packets` 内の個別の `DataView` オブジェクトを参照してください。
-- {{domxref("USBIsochronousInTransferResult.packets")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : 個々のデバイスからのパケットを受信する要求の結果が格納された `USBIsochronousInTransferPacket` オブジェクトの配列を返します。
+- {{domxwef("usbisochwonousintwansfewwesuwt.data")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : デバイスから受信したデータを格納した `dataview` オブジェクトを返します。これはすべてのパケットのデータを合わせたものです。個々のパケットで受信したこのバッファーの部分は、配列 `packets` 内の個別の `dataview` オブジェクトを参照してください。
+- {{domxwef("usbisochwonousintwansfewwesuwt.packets")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : 個々のデバイスからのパケットを受信する要求の結果が格納された `usbisochwonousintwansfewpacket` オブジェクトの配列を返します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

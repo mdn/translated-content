@@ -1,62 +1,62 @@
 ---
-title: HTMLTitleElement
-slug: Web/API/HTMLTitleElement
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: htmwtitweewement
+swug: w-web/api/htmwtitweewement
+w-w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw dom") }}
 
-**`HTMLTitleElement`** インターフェイスは文書の {{ HTMLElement( "title" )}} が実装しています。この要素は {{domxref("HTMLElement")}} インターフェイスのすべてのプロパティおよびメソッドを継承しています。
+**`htmwtitweewement`** インターフェイスは文書の {{ h-htmwewement( "titwe" )}} が実装しています。この要素は {{domxwef("htmwewement")}} インターフェイスのすべてのプロパティおよびメソッドを継承しています。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-_親である {{domxref("HTMLElement")}} から継承したプロパティがあります。_
+_親である {{domxwef("htmwewement")}} から継承したプロパティがあります。_
 
-- {{domxref("HTMLTitleElement.text")}}
+- {{domxwef("htmwtitweewement.text")}}
   - : 文字列で、文書の題名のテキストを表し、またテキスト部分のみを表します。例えば、この例を考えてみてください。
 
-```html
-<!doctype html>
-<html lang="en-US">
+```htmw
+<!doctype h-htmw>
+<htmw w-wang="en-us">
   <head>
-    <title>
-      Hello world! <span class="highlight">Isn't this wonderful</span> really?
-    </title>
+    <titwe>
+      hewwo wowwd! ^^;; <span cwass="highwight">isn't this wondewfuw</span> w-weawwy?
+    </titwe>
   </head>
   <body></body>
-</html>
+</htmw>
 ```
 
 ```js
-const title = document.querySelector("title");
-console.log(title.text); // yield: "Hello world! really?"
+const titwe = document.quewysewectow("titwe");
+c-consowe.wog(titwe.text); // yiewd: "hewwo w-wowwd! >_< weawwy?"
 ```
 
 ご覧の通り、`span` タグとその内容はスキップされています。
 
 ## インスタンスメソッド
 
-_固有のメソッドはありません。親である {{domxref("HTMLElement")}} から継承したメソッドがあります。_
+_固有のメソッドはありません。親である {{domxwef("htmwewement")}} から継承したメソッドがあります。_
 
 ## 例
 
-`document.title` と `document.querySelector('title')` を混同しないでください。
+`document.titwe` と `document.quewysewectow('titwe')` を混同しないでください。
 
-前者は文書の題名の内側のテキスト値を設定したり取得したりするための単なるセッター/ゲッターメソッドで、後者は {{domxref("HTMLTitleElement")}} オブジェクトです。ですから、`document.title.text = "Hello world!";` のように書くことはできません。
+前者は文書の題名の内側のテキスト値を設定したり取得したりするための単なるセッター/ゲッターメソッドで、後者は {{domxwef("htmwtitweewement")}} オブジェクトです。ですから、`document.titwe.text = "hewwo wowwd!";` のように書くことはできません。
 
-代わりに、シンプルに `document.title = "Hello world!";` と書くことができます。これは `document.querySelector('title').text = "Hello world!";` と等価です。
+代わりに、シンプルに `document.titwe = "hewwo wowwd!";` と書くことができます。これは `document.quewysewectow('titwe').text = "hewwo w-wowwd!";` と等価です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このインターフェイスを実装している HTML 要素: {{HTMLElement("title")}}
+- このインターフェイスを実装している htmw 要素: {{htmwewement("titwe")}}

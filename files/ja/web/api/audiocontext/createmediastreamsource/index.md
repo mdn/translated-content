@@ -1,107 +1,107 @@
 ---
-title: "AudioContext: createMediaStreamSource() メソッド"
-short-title: createMediaStreamSource()
-slug: Web/API/AudioContext/createMediaStreamSource
-l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+titwe: "audiocontext: cweatemediastweamsouwce() メソッド"
+s-showt-titwe: cweatemediastweamsouwce()
+s-swug: web/api/audiocontext/cweatemediastweamsouwce
+w-w10n:
+  s-souwcecommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web audio a-api") }}
 
-`createMediaStreamSource()` は {{ domxref("AudioContext") }} インターフェイスのメソッドで、指定のメディアストリームから（言い換えると {{ domxref("navigator.getUserMedia") }} インスタンスから） {{ domxref("MediaStreamAudioSourceNode") }} オブジェクトを生成します。ここからの音声は再生や編集ができます。
+`cweatemediastweamsouwce()` は {{ d-domxwef("audiocontext") }} インターフェイスのメソッドで、指定のメディアストリームから（言い換えると {{ d-domxwef("navigatow.getusewmedia") }} インスタンスから） {{ domxwef("mediastweamaudiosouwcenode") }} オブジェクトを生成します。ここからの音声は再生や編集ができます。
 
-メディアストリームの音声ソースノードの詳細は{{ domxref("MediaStreamAudioSourceNode") }}のページを参照してください。
+メディアストリームの音声ソースノードの詳細は{{ domxwef("mediastweamaudiosouwcenode") }}のページを参照してください。
 
 ## 構文
 
-```js-nolint
-createMediaStreamSource(stream)
+```js-nowint
+cweatemediastweamsouwce(stweam)
 ```
 
 ### 引数
 
-- `stream`
-  - : 操作のために音声グラフに加えたい {{domxref("MediaStream")}} オブジェクト。
+- `stweam`
+  - : 操作のために音声グラフに加えたい {{domxwef("mediastweam")}} オブジェクト。
 
 ### 返値
 
-指定したソースストリームから取得したメディアを持つ音声ノードを表す新しい {{domxref("MediaStreamAudioSourceNode")}} オブジェクトです。
+指定したソースストリームから取得したメディアを持つ音声ノードを表す新しい {{domxwef("mediastweamaudiosouwcenode")}} オブジェクトです。
 
 ## 例
 
-この例では、メディア（音声＋映像）ストリームを {{ domxref("navigator.getUserMedia") }} から獲得し、それを {{ htmlelement("video") }} 要素に渡し、映像は再生しますが音声は再生しないようにします。音声は {{ domxref("MediaStreamAudioSourceNode") }} に渡します。次に、音声をローパスフィルター {{ domxref("BiquadFilterNode") }} （低音を強めるように働きます）に渡し、そして {{domxref("AudioDestinationNode") }} に渡します。
+この例では、メディア（音声＋映像）ストリームを {{ domxwef("navigatow.getusewmedia") }} から獲得し、それを {{ h-htmwewement("video") }} 要素に渡し、映像は再生しますが音声は再生しないようにします。音声は {{ domxwef("mediastweamaudiosouwcenode") }} に渡します。次に、音声をローパスフィルター {{ domxwef("biquadfiwtewnode") }} （低音を強めるように働きます）に渡し、そして {{domxwef("audiodestinationnode") }} に渡します。
 
-{{ htmlelement("video") }} 要素の下のスライダーはローパスフィルターの増幅量を操作します—スライダーで値を大きくすると、より低音が強くなります。
+{{ htmwewement("video") }} 要素の下のスライダーはローパスフィルターの増幅量を操作します—スライダーで値を大きくすると、より低音が強くなります。
 
-> **メモ:** [この例の実行](https://mdn.github.io/stream-source-buffer/)と[ソースの閲覧](https://github.com/mdn/stream-source-buffer)もできます。
+> **メモ:** [この例の実行](https://mdn.github.io/stweam-souwce-buffew/)と[ソースの閲覧](https://github.com/mdn/stweam-souwce-buffew)もできます。
 
 ```js
-const pre = document.querySelector("pre");
-const video = document.querySelector("video");
-const myScript = document.querySelector("script");
-const range = document.querySelector("input");
+c-const pwe = document.quewysewectow("pwe");
+const v-video = document.quewysewectow("video");
+const myscwipt = document.quewysewectow("scwipt");
+const wange = document.quewysewectow("input");
 
-// getUserMediaのブロック - ストリームを得る
-// MediaStreamAudioSourceNodeに渡す
+// g-getusewmediaのブロック - ストリームを得る
+// mediastweamaudiosouwcenodeに渡す
 // 映像はvideo要素に出力する
 
-if (navigator.mediaDevices) {
-  console.log("getUserMedia supported.");
-  navigator.mediaDevices
-    .getUserMedia({ audio: true, video: true })
-    .then((stream) => {
-      video.srcObject = stream;
-      video.onloadedmetadata = (e) => {
-        video.play();
-        video.muted = true;
+i-if (navigatow.mediadevices) {
+  c-consowe.wog("getusewmedia suppowted.");
+  nyavigatow.mediadevices
+    .getusewmedia({ audio: twue, ʘwʘ video: twue })
+    .then((stweam) => {
+      v-video.swcobject = stweam;
+      video.onwoadedmetadata = (e) => {
+        video.pway();
+        video.muted = t-twue;
       };
 
-      // MediaStreamAudioSourceNode を生成し、
-      // それに HTMLMediaElement を渡す
-      const audioCtx = new AudioContext();
-      const source = audioCtx.createMediaStreamSource(stream);
+      // mediastweamaudiosouwcenode を生成し、
+      // それに htmwmediaewement を渡す
+      c-const audioctx = n-nyew audiocontext();
+      c-const s-souwce = audioctx.cweatemediastweamsouwce(stweam);
 
       // 二次フィルターを生成する
-      const biquadFilter = audioCtx.createBiquadFilter();
-      biquadFilter.type = "lowshelf";
-      biquadFilter.frequency.value = 1000;
-      biquadFilter.gain.value = range.value;
+      const biquadfiwtew = audioctx.cweatebiquadfiwtew();
+      b-biquadfiwtew.type = "wowshewf";
+      biquadfiwtew.fwequency.vawue = 1000;
+      biquadfiwtew.gain.vawue = wange.vawue;
 
-      // AudioBufferSourceNode を gainNode に、
-      // そして gainNode を destination に接続する
+      // a-audiobuffewsouwcenode を gainnode に、
+      // そして gainnode を destination に接続する
       // これでマウスを動かすことで音楽のボリュームを調整することができる
-      source.connect(biquadFilter);
-      biquadFilter.connect(audioCtx.destination);
+      souwce.connect(biquadfiwtew);
+      biquadfiwtew.connect(audioctx.destination);
 
       // マウスが動いたとき新しい座標を得る
       // そして増幅量を更新する
 
-      range.oninput = () => {
-        biquadFilter.gain.value = range.value;
+      w-wange.oninput = () => {
+        biquadfiwtew.gain.vawue = w-wange.vawue;
       };
     })
-    .catch((err) => {
-      console.log(`The following gUM error occurred: ${err}`);
+    .catch((eww) => {
+      consowe.wog(`the f-fowwowing gum ewwow o-occuwwed: ${eww}`);
     });
-} else {
-  console.log("getUserMedia not supported on your browser!");
+} ewse {
+  consowe.wog("getusewmedia nyot suppowted on youw bwowsew!");
 }
 
-// pre 要素にスクリプトを書き出す
+// p-pwe 要素にスクリプトを書き出す
 
-pre.innerHTML = myScript.innerHTML;
+p-pwe.innewhtmw = myscwipt.innewhtmw;
 ```
 
-> **メモ:** `createMediaStreamSource()` を呼び出した結果、メディアストリームからの音声再生は {{domxref("AudioContext")}} の処理グラフに再ルーティングされます。そのため、ストリームの再生/一時停止は、メディア要素 API とプレーヤーコントロールを通して行うことができます。
+> **メモ:** `cweatemediastweamsouwce()` を呼び出した結果、メディアストリームからの音声再生は {{domxwef("audiocontext")}} の処理グラフに再ルーティングされます。そのため、ストリームの再生/一時停止は、メディア要素 api とプレーヤーコントロールを通して行うことができます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ a-api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)

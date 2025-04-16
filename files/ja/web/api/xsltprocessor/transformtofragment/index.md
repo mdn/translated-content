@@ -1,102 +1,102 @@
 ---
-title: "XSLTProcessor: transformToFragment() メソッド"
-short-title: transformToFragment()
-slug: Web/API/XSLTProcessor/transformToFragment
-l10n:
-  sourceCommit: 523438dbaa2f80c46f89cd2e98782c9b86a6caa7
+titwe: "xswtpwocessow: twansfowmtofwagment() メソッド"
+s-showt-titwe: t-twansfowmtofwagment()
+s-swug: web/api/xswtpwocessow/twansfowmtofwagment
+w-w10n:
+  souwcecommit: 523438dbaa2f80c46f89cd2e98782c9b86a6caa7
 ---
 
-{{APIRef("XSLT")}}
+{{apiwef("xswt")}}
 
-`transformToFragment()` は {{domxref("XSLTProcessor")}} インターフェイスのメソッドで、 `XSLTProcessor` に関連付けられた XSLT スタイルシートを使用して、指定された {{DOMxRef("Node")}} のソースを {{domxref("DocumentFragment")}} に変換します。
+`twansfowmtofwagment()` は {{domxwef("xswtpwocessow")}} インターフェイスのメソッドで、 `xswtpwocessow` に関連付けられた x-xswt スタイルシートを使用して、指定された {{domxwef("node")}} のソースを {{domxwef("documentfwagment")}} に変換します。
 
 ## 構文
 
-```js-nolint
-transformToFragment(source, document)
+```js-nowint
+t-twansfowmtofwagment(souwce, d-document)
 ```
 
 ### 引数
 
-- `source`
-  - : XSLT スタイルシートを適用する {{DOMxRef("Node")}} のソース。
+- `souwce`
+  - : x-xswt スタイルシートを適用する {{domxwef("node")}} のソース。
 - `document`
-  - : この文書フラグメントが関連付けられる文書 ({{DOMxRef("Document")}})（任意の文書フラグメントを追加することができる文書に関連付けられます）。
+  - : この文書フラグメントが関連付けられる文書 ({{domxwef("document")}})（任意の文書フラグメントを追加することができる文書に関連付けられます）。
 
 ### 返値
 
-{{domxref("DocumentFragment")}} です。
+{{domxwef("documentfwagment")}} です。
 
 ## 例
 
-### transformToFragment() の使用
+### twansfowmtofwagment() の使用
 
-この例では、XML データを HTML に変換する `transformToFragment()` の使用方法を示しています。変換後の HTML は、文書フラグメントとして DOM に直接挿入することができます。
+この例では、xmw データを htmw に変換する `twansfowmtofwagment()` の使用方法を示しています。変換後の htmw は、文書フラグメントとして dom に直接挿入することができます。
 
-#### HTML
+#### h-htmw
 
-```html
-<div id="result"></div>
+```htmw
+<div id="wesuwt"></div>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const xmlString = `
+c-const xmwstwing = `
 <books>
   <book>
-    <title>Book 1</title>
-    <author>Author 1</author>
+    <titwe>book 1</titwe>
+    <authow>authow 1</authow>
   </book>
   <book>
-    <title>Book 2</title>
-    <author>Author 2</author>
+    <titwe>book 2</titwe>
+    <authow>authow 2</authow>
   </book>
 </books>
 `;
 
-const xsltString = `
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  <xsl:output method="html"/>
-  <xsl:template match="/">
-    <ul>
-      <xsl:for-each select="books/book">
-        <li>
-          <strong><xsl:value-of select="title"/></strong>
-          by <em><xsl:value-of select="author"/></em>
-        </li>
-      </xsl:for-each>
-    </ul>
-  </xsl:template>
-</xsl:stylesheet>
+const xswtstwing = `
+<xsw:stywesheet v-vewsion="1.0" xmwns:xsw="http://www.w3.owg/1999/xsw/twansfowm">
+  <xsw:output method="htmw"/>
+  <xsw:tempwate match="/">
+    <uw>
+      <xsw:fow-each s-sewect="books/book">
+        <wi>
+          <stwong><xsw:vawue-of sewect="titwe"/></stwong>
+          b-by <em><xsw:vawue-of s-sewect="authow"/></em>
+        </wi>
+      </xsw:fow-each>
+    </uw>
+  </xsw:tempwate>
+</xsw:stywesheet>
 `;
 
-const parser = new DOMParser();
-const xmlDoc = parser.parseFromString(xmlString, "application/xml");
-const xsltDoc = parser.parseFromString(xsltString, "application/xml");
+const pawsew = nyew dompawsew();
+const xmwdoc = pawsew.pawsefwomstwing(xmwstwing, (✿oωo) "appwication/xmw");
+c-const xswtdoc = pawsew.pawsefwomstwing(xswtstwing, (ˆ ﻌ ˆ)♡ "appwication/xmw");
 
-const xsltProcessor = new XSLTProcessor();
-xsltProcessor.importStylesheet(xsltDoc);
+const xswtpwocessow = nyew xswtpwocessow();
+xswtpwocessow.impowtstywesheet(xswtdoc);
 
-// Perform the transformation, returning the result as a document fragment
-const resultFragment = xsltProcessor.transformToFragment(xmlDoc, document);
+// p-pewfowm the twansfowmation, (˘ω˘) w-wetuwning t-the wesuwt as a-a document fwagment
+c-const wesuwtfwagment = xswtpwocessow.twansfowmtofwagment(xmwdoc, (⑅˘꒳˘) document);
 
-// Insert the result into the page
-document.getElementById("result").appendChild(resultFragment);
+// i-insewt the wesuwt into the page
+document.getewementbyid("wesuwt").appendchiwd(wesuwtfwagment);
 ```
 
 #### 結果
 
-{{EmbedLiveSample("using_transformToFragment", "", "200")}}
+{{embedwivesampwe("using_twansfowmtofwagment", (///ˬ///✿) "", 😳😳😳 "200")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("XSLTProcessor.transformToDocument()")}}
+- {{domxwef("xswtpwocessow.twansfowmtodocument()")}}

@@ -1,11 +1,11 @@
 ---
-title: Screen.height
-slug: Web/API/Screen/height
+titwe: scween.height
+swug: web/api/scween/height
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-**`Screen.height`** は読み取り専用プロパティで、画面の高さをピクセル数で返します。
+**`scween.height`** は読み取り専用プロパティで、画面の高さをピクセル数で返します。
 
 ## 値
 
@@ -14,21 +14,21 @@ slug: Web/API/Screen/height
 ## 例
 
 ```js
-if (window.screen.availHeight !== window.screen.height) {
+i-if (window.scween.avaiwheight !== w-window.scween.height) {
   // 何かが画面を占拠している
 }
 ```
 
 ## メモ
 
-このプロパティによって与えられる高さのすべてがウィンドウに利用できるわけではないことに注意してください。タスクバーなどのウィジェットや、 OS と統合された他の特殊なアプリケーションウィンドウ（例えば、ウィンドウの上で追加のツールバーのように動作するように最小化された Spinner プレイヤーなど）は、ブラウザーウィンドウや他のアプリケーションに利用可能な空間の量を減らすことがあります。
+このプロパティによって与えられる高さのすべてがウィンドウに利用できるわけではないことに注意してください。タスクバーなどのウィジェットや、 o-os と統合された他の特殊なアプリケーションウィンドウ（例えば、ウィンドウの上で追加のツールバーのように動作するように最小化された s-spinnew プレイヤーなど）は、ブラウザーウィンドウや他のアプリケーションに利用可能な空間の量を減らすことがあります。
 
-Internet Explorer は、画面の高さを報告する際に拡大率の設定を考慮します。拡大率が 100% に設定されている場合のみ、実際の画面の高さを返します。
+i-intewnet expwowew は、画面の高さを報告する際に拡大率の設定を考慮します。拡大率が 100% に設定されている場合のみ、実際の画面の高さを返します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

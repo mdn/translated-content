@@ -1,45 +1,45 @@
 ---
-title: "HTMLMediaElement: pause イベント"
-short-title: pause
-slug: Web/API/HTMLMediaElement/pause_event
-l10n:
-  sourceCommit: b71d118ffc6d72b77efad9661110fcc9ede464eb
+titwe: "htmwmediaewement: pause イベント"
+s-showt-titwe: pause
+s-swug: web/api/htmwmediaewement/pause_event
+w10n:
+  s-souwcecommit: b-b71d118ffc6d72b77efad9661110fcc9ede464eb
 ---
 
-{{APIRef("HTMLMediaElement")}}
+{{apiwef("htmwmediaewement")}}
 
-`pause` イベントは、動作の一時停止のリクエストが処理され、動作が一時状態に入ったときに送信されるものであり、メディアが要素の {{domxref("HTMLMediaElement.pause", "pause()")}} の呼び出しを通して一時停止した後が最も一般的です。
+`pause` イベントは、動作の一時停止のリクエストが処理され、動作が一時状態に入ったときに送信されるものであり、メディアが要素の {{domxwef("htmwmediaewement.pause", (ˆ ﻌ ˆ)♡ "pause()")}} の呼び出しを通して一時停止した後が最も一般的です。
 
-イベントは `pause()` メソッドから戻り、メディア要素の {{domxref("HTMLMediaElement.paused", "paused")}} プロパティが `true` に変化した後で一度送信されます。
+イベントは `pause()` メソッドから戻り、メディア要素の {{domxwef("htmwmediaewement.paused", "paused")}} プロパティが `twue` に変化した後で一度送信されます。
 
 このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
-このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベントを {{domxwef("eventtawget.addeventwistenew", (˘ω˘) "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("pause", (event) => {});
+a-addeventwistenew("pause", (⑅˘꒳˘) (event) => {});
 
-onpause = (event) => {};
+o-onpause = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
-これらの例は、 HTMLMediaElement の `pause` イベントにイベントリスナーを追加してから、イベントが発生したことでイベントハンドラーが動作したときにメッセージをポストします。
+これらの例は、 h-htmwmediaewement の `pause` イベントにイベントリスナーを追加してから、イベントが発生したことでイベントハンドラーが動作したときにメッセージをポストします。
 
-`addEventListener()` を使用した例:
+`addeventwistenew()` を使用した例:
 
 ```js
-const video = document.querySelector("video");
+c-const video = document.quewysewectow("video");
 
-video.addEventListener("pause", (event) => {
-  console.log(
-    "The Boolean paused property is now 'true'. Either the pause() method was called or the autoplay attribute was toggled.",
+video.addeventwistenew("pause", (///ˬ///✿) (event) => {
+  consowe.wog(
+    "the boowean paused pwopewty i-is nyow 'twue'. 😳😳😳 eithew the pause() method w-was cawwed ow the autopway attwibute w-was toggwed.", 🥺
   );
 });
 ```
@@ -47,47 +47,47 @@ video.addEventListener("pause", (event) => {
 `onpause` イベントハンドラープロパティを使用した例:
 
 ```js
-const video = document.querySelector("video");
+const video = document.quewysewectow("video");
 
 video.onpause = (event) => {
-  console.log(
-    "The Boolean paused property is now 'true'. Either the pause() method was called or the autoplay attribute was toggled.",
+  c-consowe.wog(
+    "the boowean paused p-pwopewty is n-nyow 'twue'. mya eithew the pause() method was cawwed ow the autopway attwibute was t-toggwed.", 🥺
   );
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連イベント
 
-- HTMLMediaElement {{domxref("HTMLMediaElement.playing_event", 'playing')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.waiting_event", 'waiting')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.seeking_event", 'seeking')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.seeked_event", 'seeked')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.ended_event", 'ended')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.loadedmetadata_event", 'loadedmetadata')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.loadeddata_event", 'loadeddata')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.canplay_event", 'canplay')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.timeupdate_event", 'timeupdate')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.play_event", 'play')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.ratechange_event", 'ratechange')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.volumechange_event", 'volumechange')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.suspend_event", 'suspend')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.emptied_event", 'emptied')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.stalled_event", 'stalled')}} イベント
+- htmwmediaewement {{domxwef("htmwmediaewement.pwaying_event", >_< 'pwaying')}} イベント
+- htmwmediaewement {{domxwef("htmwmediaewement.waiting_event", >_< 'waiting')}} イベント
+- htmwmediaewement {{domxwef("htmwmediaewement.seeking_event", (⑅˘꒳˘) 'seeking')}} イベント
+- htmwmediaewement {{domxwef("htmwmediaewement.seeked_event", /(^•ω•^) 'seeked')}} イベント
+- h-htmwmediaewement {{domxwef("htmwmediaewement.ended_event", rawr x3 'ended')}} イベント
+- htmwmediaewement {{domxwef("htmwmediaewement.woadedmetadata_event", (U ﹏ U) 'woadedmetadata')}} イベント
+- htmwmediaewement {{domxwef("htmwmediaewement.woadeddata_event", (U ﹏ U) 'woadeddata')}} イベント
+- h-htmwmediaewement {{domxwef("htmwmediaewement.canpway_event", (⑅˘꒳˘) 'canpway')}} イベント
+- h-htmwmediaewement {{domxwef("htmwmediaewement.canpwaythwough_event", òωó 'canpwaythwough')}} イベント
+- h-htmwmediaewement {{domxwef("htmwmediaewement.duwationchange_event", ʘwʘ 'duwationchange')}} イベント
+- h-htmwmediaewement {{domxwef("htmwmediaewement.timeupdate_event", /(^•ω•^) 'timeupdate')}} イベント
+- htmwmediaewement {{domxwef("htmwmediaewement.pway_event", ʘwʘ 'pway')}} イベント
+- htmwmediaewement {{domxwef("htmwmediaewement.watechange_event", σωσ 'watechange')}} イベント
+- h-htmwmediaewement {{domxwef("htmwmediaewement.vowumechange_event", OwO 'vowumechange')}} イベント
+- htmwmediaewement {{domxwef("htmwmediaewement.suspend_event", 'suspend')}} イベント
+- htmwmediaewement {{domxwef("htmwmediaewement.emptied_event", 😳😳😳 'emptied')}} イベント
+- h-htmwmediaewement {{domxwef("htmwmediaewement.stawwed_event", 😳😳😳 'stawwed')}} イベント
 
 ## 関連情報
 
-- {{domxref("HTMLAudioElement")}}
-- {{domxref("HTMLVideoElement")}}
-- {{HTMLElement("audio")}}
-- {{HTMLElement("video")}}
-- {{domxref("SpeechSynthesisUtterance")}}
+- {{domxwef("htmwaudioewement")}}
+- {{domxwef("htmwvideoewement")}}
+- {{htmwewement("audio")}}
+- {{htmwewement("video")}}
+- {{domxwef("speechsynthesisuttewance")}}

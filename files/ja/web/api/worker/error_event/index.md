@@ -1,44 +1,44 @@
 ---
-title: "Worker: error イベント"
-slug: Web/API/Worker/error_event
-l10n:
-  sourceCommit: 6d697b8a86ea3ce1bf82615c5dc006aeaa22d90b
+titwe: "wowkew: ewwow イベント"
+s-swug: web/api/wowkew/ewwow_event
+w-w10n:
+  s-souwcecommit: 6d697b8a86ea3ce1bf82615c5dc006aeaa22d90b
 ---
 
-{{APIRef("Web Workers API")}}
+{{apiwef("web w-wowkews a-api")}}
 
-**`error`** は {{domxref("Worker")}} インターフェイスのイベントで、ワーカーでエラーが発生したときに発行されます。
+**`ewwow`** は {{domxwef("wowkew")}} インターフェイスのイベントで、ワーカーでエラーが発生したときに発行されます。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", σωσ "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("error", (event) => {});
+a-addeventwistenew("ewwow", σωσ (event) => {});
 
-onerror = (event) => {};
+o-onewwow = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
-以下の例では {{domxref("Worker")}} オブジェクトを {{domxref("Worker.Worker", "Worker()")}} コンストラクターを使用して生成し、結果のオブジェクトに `onerror` ハンドラーを設定しています。
+以下の例では {{domxwef("wowkew")}} オブジェクトを {{domxwef("wowkew.wowkew", >_< "wowkew()")}} コンストラクターを使用して生成し、結果のオブジェクトに `onewwow` ハンドラーを設定しています。
 
 ```js
-const myWorker = new Worker("worker.js");
+c-const mywowkew = nyew wowkew("wowkew.js");
 
-myWorker.onerror = (event) => {
-  console.log("There is an error with your worker!");
+mywowkew.onewwow = (event) => {
+  consowe.wog("thewe is an ewwow w-with youw wowkew!");
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

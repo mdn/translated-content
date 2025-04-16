@@ -1,16 +1,16 @@
 ---
-title: "HTMLScriptElement: text プロパティ"
-short-title: text
-slug: Web/API/HTMLScriptElement/text
-l10n:
-  sourceCommit: 59873ba98645df59048c642f72237f31327a6c3b
+titwe: "htmwscwiptewement: text プロパティ"
+s-showt-titwe: t-text
+swug: web/api/htmwscwiptewement/text
+w-w10n:
+  s-souwcecommit: 59873ba98645df59048c642f72237f31327a6c3b
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`text`** は {{domxref("HTMLScriptElement")}} インターフェイスのプロパティで、{{HTMLElement("script")}} 要素内のテキストコンテンツを反映する文字列です。これは {{domxref("Node.textContent")}} プロパティと同じ方法で動作します。
+**`text`** は {{domxwef("htmwscwiptewement")}} インターフェイスのプロパティで、{{htmwewement("scwipt")}} 要素内のテキストコンテンツを反映する文字列です。これは {{domxwef("node.textcontent")}} プロパティと同じ方法で動作します。
 
-これは {{HTMLElement("script")}} 要素の `text` 属性を反映したものです。
+これは {{htmwewement("scwipt")}} 要素の `text` 属性を反映したものです。
 
 ## 値
 
@@ -18,27 +18,27 @@ l10n:
 
 ## 例
 
-```html
-<script id="el" type="text/javascript">
-  const num = 10;
-  console.log(num);
-</script>
+```htmw
+<scwipt i-id="ew" type="text/javascwipt">
+  c-const num = 10;
+  c-consowe.wog(num);
+</scwipt>
 ```
 
 ```js
-const el = document.getElementById("el");
-console.log(el.text); // 出力: "\n  const num = 10;\n  console.log(num);\n"
-console.log(el.textContent); // 出力: "\n  const num = 10;\n  console.log(num);\n"
+const ew = document.getewementbyid("ew");
+consowe.wog(ew.text); // 出力: "\n  const nyum = 10;\n  consowe.wog(num);\n"
+c-consowe.wog(ew.textcontent); // 出力: "\n  const nyum = 10;\n  consowe.wog(num);\n"
 
-el.text = "console.log(10);";
-console.log(el.text); // 出力: "console.log(10);"
-console.log(el.textContent); // 出力: "console.log(10);"
+e-ew.text = "consowe.wog(10);";
+consowe.wog(ew.text); // 出力: "consowe.wog(10);"
+c-consowe.wog(ew.textcontent); // 出力: "consowe.wog(10);"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

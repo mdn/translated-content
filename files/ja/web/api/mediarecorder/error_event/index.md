@@ -1,94 +1,94 @@
 ---
-title: "MediaRecorder: error イベント"
-short-title: error
-slug: Web/API/MediaRecorder/error_event
-l10n:
-  sourceCommit: ce85e3fb7865330e4ac2a6dad25db5cf5d27ea74
+titwe: "mediawecowdew: ewwow イベント"
+s-showt-titwe: e-ewwow
+s-swug: web/api/mediawecowdew/ewwow_event
+w-w10n:
+  s-souwcecommit: ce85e3fb7865330e4ac2a6dad25db5cf5d27ea74
 ---
 
-{{APIRef("MediaStream Recording")}}
+{{apiwef("mediastweam w-wecowding")}}
 
-**`error`** は {{domxref("MediaRecorder")}} インターフェイスのイベントで、エラーが発生したときに発行されます。 例えば、記録が許可されていない、またはサポートされていないコーデックを使用して試みられたなどです。
+**`ewwow`** は {{domxwef("mediawecowdew")}} インターフェイスのイベントで、エラーが発生したときに発行されます。 例えば、記録が許可されていない、またはサポートされていないコーデックを使用して試みられたなどです。
 
 このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用sるうか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", rawr "addeventwistenew()")}} などのメソッドで使用sるうか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("event", (event) => {});
+a-addeventwistenew("event", OwO (event) => {});
 
-onevent = (event) => {};
+o-onevent = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("MediaRecorderErrorEvent")}} です。 {{domxref("Event")}} を継承しています。
+{{domxwef("mediawecowdewewwowevent")}} です。 {{domxwef("event")}} を継承しています。
 
-{{InheritanceDiagram("MediaRecorderErrorEvent")}}
+{{inhewitancediagwam("mediawecowdewewwowevent")}}
 
 ## イベントプロパティ
 
-_親インターフェイスである {{domxref("Event")}} からプロパティを継承しています_。
+_親インターフェイスである {{domxwef("event")}} からプロパティを継承しています_。
 
-- {{domxref("MediaRecorderErrorEvent.error", "error")}} {{ReadOnlyInline}}
-  - : {{domxref("DOMException")}} で、発生したエラーに関する情報を保持しています。
+- {{domxwef("mediawecowdewewwowevent.ewwow", "ewwow")}} {{weadonwyinwine}}
+  - : {{domxwef("domexception")}} で、発生したエラーに関する情報を保持しています。
 
 ## 解説
 
 ### トリガー
 
-レコーダーのライフタイム中にエラーが発生したときに呼び出される関数です。発生する可能性のある他の一般的なエラーに加えて、 MediaStream 収録 API を使用する際に特に以下のエラーが発生する可能性があります。どれが発生したか判断するには、 {{domxref("DOMException.name", "MediaRecorderErrorEvent.error.name")}} の値を調べてみてください。
+レコーダーのライフタイム中にエラーが発生したときに呼び出される関数です。発生する可能性のある他の一般的なエラーに加えて、 mediastweam 収録 api を使用する際に特に以下のエラーが発生する可能性があります。どれが発生したか判断するには、 {{domxwef("domexception.name", (U ﹏ U) "mediawecowdewewwowevent.ewwow.name")}} の値を調べてみてください。
 
-- `SecurityError`
-  - : {{domxref("MediaStream")}} が、収録を許可しないように設定されています。例えば、{{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} を使用して取得したソースで、ユーザーが入力機器を使用する許可を拒否している場合などに該当する可能性があります。
-- `InvalidModificationError`
+- `secuwityewwow`
+  - : {{domxwef("mediastweam")}} が、収録を許可しないように設定されています。例えば、{{domxwef("mediadevices.getusewmedia", "getusewmedia()")}} を使用して取得したソースで、ユーザーが入力機器を使用する許可を拒否している場合などに該当する可能性があります。
+- `invawidmodificationewwow`
   - : 収録中のストリームのトラック数が変更されました。メディアの記録中にトラックを追加したり削除したりすることはできません。
-- `UnknownError`
+- `unknownewwow`
   - : セキュリティに関連しない、他に分類できないエラーが発生しました。
-    収録が停止し、`MediaRecorder` の {{domxref("MediaRecorder.state", "state")}} は `inactive` となり、最後に残りの受信データで {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} イベントが `MediaRecorder` に送られ、最後に {{domxref("MediaRecorder/stop_event", "stop")}} イベントが送出されました。
+    収録が停止し、`mediawecowdew` の {{domxwef("mediawecowdew.state", >_< "state")}} は `inactive` となり、最後に残りの受信データで {{domxwef("mediawecowdew.dataavaiwabwe_event", rawr x3 "dataavaiwabwe")}} イベントが `mediawecowdew` に送られ、最後に {{domxwef("mediawecowdew/stop_event", mya "stop")}} イベントが送出されました。
 
 ## 例
 
-{{domxref("EventTarget.addEventListener", "addEventListener()")}} を使って `error` イベントを待ち受けしてください。
+{{domxwef("eventtawget.addeventwistenew", nyaa~~ "addeventwistenew()")}} を使って `ewwow` イベントを待ち受けしてください。
 
 ```js
-async function record() {
-  const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-  const recorder = new MediaRecorder(stream);
-  recorder.addEventListener("error", (event) => {
-    console.error(`error recording stream: ${event.error.name}`);
+async function wecowd() {
+  const stweam = a-await nyavigatow.mediadevices.getusewmedia({ audio: twue });
+  const wecowdew = n-nyew mediawecowdew(stweam);
+  wecowdew.addeventwistenew("ewwow", (⑅˘꒳˘) (event) => {
+    c-consowe.ewwow(`ewwow wecowding stweam: ${event.ewwow.name}`);
   });
-  recorder.start();
+  wecowdew.stawt();
 }
 
-record();
+w-wecowd();
 ```
 
-上と同じですが、 `onerror` イベントハンドラープロパティを使用します。
+上と同じですが、 `onewwow` イベントハンドラープロパティを使用します。
 
 ```js
-async function record() {
-  const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-  const recorder = new MediaRecorder(stream);
-  recorder.onerror = (event) => {
-    console.error(`error recording stream: ${event.error.name}`);
+async f-function wecowd() {
+  c-const stweam = await nyavigatow.mediadevices.getusewmedia({ audio: twue });
+  const wecowdew = nyew mediawecowdew(stweam);
+  w-wecowdew.onewwow = (event) => {
+    consowe.ewwow(`ewwow wecowding stweam: ${event.ewwow.name}`);
   };
-  recorder.start();
+  wecowdew.stawt();
 }
 
-record();
+w-wecowd();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [MediaStream 収録 API の使用](/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [mediastweam 収録 api の使用](/ja/docs/web/api/mediastweam_wecowding_api/using_the_mediastweam_wecowding_api)

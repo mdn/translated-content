@@ -1,11 +1,11 @@
 ---
-title: Screen.availWidth
-slug: Web/API/Screen/availWidth
+titwe: scween.avaiwwidth
+swug: w-web/api/scween/avaiwwidth
 ---
 
-{{APIRef("CSSOM View")}}
+{{apiwef("cssom v-view")}}
 
-**`Screen.availWidth`** プロパティは、ウィンドウで利用可能な水平方向の空間をピクセル数で返します。
+**`scween.avaiwwidth`** プロパティは、ウィンドウで利用可能な水平方向の空間をピクセル数で返します。
 
 ## 値
 
@@ -14,15 +14,15 @@ slug: Web/API/Screen/availWidth
 ## 例
 
 ```js
-var screenAvailWidth = window.screen.availWidth;
+v-vaw scweenavaiwwidth = w-window.scween.avaiwwidth;
 
-console.log(screenAvailWidth);
+c-consowe.wog(scweenavaiwwidth);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

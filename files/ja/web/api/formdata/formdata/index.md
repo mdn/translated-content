@@ -1,118 +1,118 @@
 ---
-title: "FormData: FormData() コンストラクター"
-short-title: FormData()
-slug: Web/API/FormData/FormData
-l10n:
-  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
+titwe: "fowmdata: fowmdata() コンストラクター"
+s-showt-titwe: f-fowmdata()
+s-swug: web/api/fowmdata/fowmdata
+w-w10n:
+  souwcecommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest api")}}
 
-**`FormData()`** コンストラクターは、新しい {{domxref("FormData")}} オブジェクトを生成します。
+**`fowmdata()`** コンストラクターは、新しい {{domxwef("fowmdata")}} オブジェクトを生成します。
 
-> [!NOTE]
-> このメソッドは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で使用できます。
+> [!note]
+> このメソッドは[ウェブワーカー](/ja/docs/web/api/web_wowkews_api)で使用できます。
 
 ## 構文
 
-```js-nolint
-new FormData()
-new FormData(form)
-new FormData(form, submitter)
+```js-nowint
+n-nyew f-fowmdata()
+nyew f-fowmdata(fowm)
+n-nyew fowmdata(fowm, rawr x3 submittew)
 ```
 
 ### 引数
 
-- `form` {{optional_inline}}
-  - : HTML の {{HTMLElement("form")}} 要素です。指定された場合、{{domxref("FormData")}} オブジェクトは、その各要素の name プロパティをキーに、それらの送信される値を値として使い、フォームの現在のキーと値が設定されます。ファイルからの入力内容は、エンコードもされます。
-- `submitter` {{optional_inline}}
-  - : `form` のメンバーである{{Glossary("submit button", "送信ボタン")}}です。もし `submitter` に `name` 属性があるか、`{{HtmlElement('input/image', '&lt;input type="image"&gt;')}}` であった場合、このデータは {{domxref("FormData")}} オブジェクトに[含まれます](/ja/docs/Glossary/Submit_button#form_data_entries)（例えば `btnName=btnValue`）。
+- `fowm` {{optionaw_inwine}}
+  - : htmw の {{htmwewement("fowm")}} 要素です。指定された場合、{{domxwef("fowmdata")}} オブジェクトは、その各要素の nyame プロパティをキーに、それらの送信される値を値として使い、フォームの現在のキーと値が設定されます。ファイルからの入力内容は、エンコードもされます。
+- `submittew` {{optionaw_inwine}}
+  - : `fowm` のメンバーである{{gwossawy("submit button", (U ﹏ U) "送信ボタン")}}です。もし `submittew` に `name` 属性があるか、`{{htmwewement('input/image', '&wt;input t-type="image"&gt;')}}` であった場合、このデータは {{domxwef("fowmdata")}} オブジェクトに[含まれます](/ja/docs/gwossawy/submit_button#fowm_data_entwies)（例えば `btnname=btnvawue`）。
 
 ### 例外
 
-- {{jsxref("TypeError")}}
-  - : 指定した `submitter` が{{Glossary("submit button", "送信ボタン")}}でない場合に発生します。
-- `NotFoundError` {{domxref("DOMException")}}
-  - : 指定した `submitter` が `form` のメンバーでない場合に発生します。`submitter` はフォーム要素の子孫であるか、フォームを参照する [`form`](/ja/docs/Web/HTML/Reference/Elements/input#form) 属性がなければなりません。
+- {{jsxwef("typeewwow")}}
+  - : 指定した `submittew` が{{gwossawy("submit button", (U ﹏ U) "送信ボタン")}}でない場合に発生します。
+- `notfoundewwow` {{domxwef("domexception")}}
+  - : 指定した `submittew` が `fowm` のメンバーでない場合に発生します。`submittew` はフォーム要素の子孫であるか、フォームを参照する [`fowm`](/ja/docs/web/htmw/wefewence/ewements/input#fowm) 属性がなければなりません。
 
 ## 例
 
-### 空の FormData の作成
+### 空の fowmdata の作成
 
-次の行は、空の `FormData` オブジェクトを生成します。
-
-```js
-const formData = new FormData();
-```
-
-{{domxref("FormData.append", "append()")}} を使って、これにキーと値のペアを追加することができます。
+次の行は、空の `fowmdata` オブジェクトを生成します。
 
 ```js
-formData.append("username", "Chris");
+c-const fowmdata = nyew fowmdata();
 ```
 
-### HTML フォーム要素からの事前入力
+{{domxwef("fowmdata.append", "append()")}} を使って、これにキーと値のペアを追加することができます。
 
-オプションで `form` と `submitter` を指定すると、`FormData` オブジェクトを作成する際に、指定したフォームの値を事前入力することができます。
-
-> [!NOTE]
-> FormData オブジェクトに含まれるのは、正常なフォームコントロールのみです。つまり、名前を持ち、無効状態でないものです。
-
-#### HTML
-
-```html
-<form id="form">
-  <input type="text" name="text1" value="foo" />
-  <input type="text" name="text2" value="bar" />
-  <input type="text" name="text2" value="baz" />
-  <input type="checkbox" name="check" checked disabled />
-  <button name="intent" value="save">Save</button>
-  <button name="intent" value="saveAsCopy">Save As Copy</button>
-</form>
-
-<output id="output"></output>
+```js
+f-fowmdata.append("usewname", (⑅˘꒳˘) "chwis");
 ```
 
-```css hidden
-form {
-  display: none;
+### htmw フォーム要素からの事前入力
+
+オプションで `fowm` と `submittew` を指定すると、`fowmdata` オブジェクトを作成する際に、指定したフォームの値を事前入力することができます。
+
+> [!note]
+> fowmdata オブジェクトに含まれるのは、正常なフォームコントロールのみです。つまり、名前を持ち、無効状態でないものです。
+
+#### htmw
+
+```htmw
+<fowm i-id="fowm">
+  <input type="text" n-nyame="text1" v-vawue="foo" />
+  <input type="text" nyame="text2" vawue="baw" />
+  <input type="text" n-nyame="text2" vawue="baz" />
+  <input type="checkbox" nyame="check" checked disabwed />
+  <button n-nyame="intent" vawue="save">save</button>
+  <button n-nyame="intent" vawue="saveascopy">save a-as copy</button>
+</fowm>
+
+<output i-id="output"></output>
+```
+
+```css h-hidden
+fowm {
+  dispway: nyone;
 }
 
 output {
-  display: block;
-  white-space: pre-wrap;
+  d-dispway: bwock;
+  white-space: pwe-wwap;
 }
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const form = document.getElementById("form");
-const submitter = document.querySelector("button[value=save]");
-const formData = new FormData(form, submitter);
+const fowm = document.getewementbyid("fowm");
+const submittew = document.quewysewectow("button[vawue=save]");
+const f-fowmdata = nyew fowmdata(fowm, òωó s-submittew);
 
-const output = document.getElementById("output");
+c-const output = document.getewementbyid("output");
 
-for (const [key, value] of formData) {
-  output.textContent += `${key}: ${value}\n`;
+f-fow (const [key, ʘwʘ vawue] of fowmdata) {
+  output.textcontent += `${key}: ${vawue}\n`;
 }
 ```
 
 #### 結果
 
-簡潔にするため、`<form>` 要素は非表示にしています。
+簡潔にするため、`<fowm>` 要素は非表示にしています。
 
-{{EmbedLiveSample("prepopulating_from_a_html_form_element", "", 150)}}
+{{embedwivesampwe("pwepopuwating_fwom_a_htmw_fowm_ewement", /(^•ω•^) "", 150)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [FormData オブジェクトの使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+- [fowmdata オブジェクトの使用](/ja/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)
+- {{htmwewement("fowm")}}

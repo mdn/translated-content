@@ -1,14 +1,14 @@
 ---
-title: "Element: ariaRoleDescription プロパティ"
-short-title: ariaRoleDescription
-slug: Web/API/Element/ariaRoleDescription
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: awiawowedescwiption プロパティ"
+s-showt-titwe: a-awiawowedescwiption
+s-swug: w-web/api/ewement/awiawowedescwiption
+w-w10n:
+  souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{defauwtapisidebaw("dom")}}
 
-**`ariaRoleDescription`** は {{domxref("Element")}} インターフェイスのプロパティで、要素のロールに関する人間が読み取り可能な、作者がローカライズした説明を定義する [`aria-roledescription`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription) 属性の値を反映します。
+**`awiawowedescwiption`** は {{domxwef("ewement")}} インターフェイスのプロパティで、要素のロールに関する人間が読み取り可能な、作者がローカライズした説明を定義する [`awia-wowedescwiption`](/ja/docs/web/accessibiwity/awia/attwibutes/awia-wowedescwiption) 属性の値を反映します。
 
 ## 値
 
@@ -16,30 +16,30 @@ l10n:
 
 ## 例
 
-この例では、ID が `myApplication` である要素の `aria-roledescription` 属性が設定されています。`ariaRoleDescription` を用いて値を更新することができます。
+この例では、id が `myappwication` である要素の `awia-wowedescwiption` 属性が設定されています。`awiawowedescwiption` を用いて値を更新することができます。
 
-```html
+```htmw
 <div
-  id="myApplication"
-  role="application"
-  aria-roledescription="a description of this widget">
+  i-id="myappwication"
+  w-wowe="appwication"
+  awia-wowedescwiption="a descwiption of this widget">
   …
 </div>
 ```
 
 ```js
-let el = document.getElementById("myApplication");
-console.log(el.ariaRoleDescription); // "a description of this widget"
-el.ariaRoleDescription = "an updated description of this widget";
-console.log(el.ariaRoleDescription); // "an updated description of this widget"
+wet e-ew = document.getewementbyid("myappwication");
+consowe.wog(ew.awiawowedescwiption); // "a descwiption o-of this widget"
+ew.awiawowedescwiption = "an u-updated descwiption of this widget";
+consowe.wog(ew.awiawowedescwiption); // "an updated descwiption o-of this widget"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-- [ARIA: application ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/application_role)
+- [awia: a-appwication ロール](/ja/docs/web/accessibiwity/awia/wefewence/wowes/appwication_wowe)

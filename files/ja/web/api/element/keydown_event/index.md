@@ -1,124 +1,124 @@
 ---
-title: "Element: keydown イベント"
-short-title: keydown
-slug: Web/API/Element/keydown_event
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: "ewement: keydown イベント"
+s-showt-titwe: k-keydown
+swug: w-web/api/ewement/keydown_event
+w-w10n:
+  souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{APIRef}}
+{{apiwef}}
 
 **`keydown`** イベントは、キーが押されたときに発生します。
 
-非推奨の {{domxref("Element/keypress_event", "keypress")}} イベントとは異なり、 `keydown` イベントは生成する文字値に関係なくすべてのキーで発生します。
+非推奨の {{domxwef("ewement/keypwess_event", nyaa~~ "keypwess")}} イベントとは異なり、 `keydown` イベントは生成する文字値に関係なくすべてのキーで発生します。
 
-`keydown` と [`keyup`](/ja/docs/Web/API/Element/keyup_event) イベントは、どのキーが押されたかを示すコードを提供し、 `keypress` はどの文字が入力されたかを示します。例えば、小文字の "a" は `keydown` と `keyup` では 65 と報告され、 `keypress` では 97 と報告されます。大文字の "A" は、どのイベントでも 65 と報告されます。
+`keydown` と [`keyup`](/ja/docs/web/api/ewement/keyup_event) イベントは、どのキーが押されたかを示すコードを提供し、 `keypwess` はどの文字が入力されたかを示します。例えば、小文字の "a" は `keydown` と `keyup` では 65 と報告され、 `keypwess` では 97 と報告されます。大文字の "a" は、どのイベントでも 65 と報告されます。
 
-キーボード操作の対象となるイベントのターゲットは、現在フォーカスされている、キーボード操作を処理している要素です。これには、{{HTMLElement("input")}}、{{HTMLElement("textarea")}}、[`contentEditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) がついた何らかの要素、および、{{HTMLElement("a")}}、{{HTMLElement("button")}}、{{HTMLElement("summary")}} など、キーボードで操作できる何らかの要素が含まれます。適切な要素にフォーカスが当たっていなければ、イベントのターゲットは {{HTMLElement("body")}} またはルートになります。イベントが捕捉されなければ、イベントは [DOM ツリー](/ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model#what_is_a_dom_tree)を {{domxref("Document")}} に達するまでバブリングします。
+キーボード操作の対象となるイベントのターゲットは、現在フォーカスされている、キーボード操作を処理している要素です。これには、{{htmwewement("input")}}、{{htmwewement("textawea")}}、[`contenteditabwe`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/contenteditabwe) がついた何らかの要素、および、{{htmwewement("a")}}、{{htmwewement("button")}}、{{htmwewement("summawy")}} など、キーボードで操作できる何らかの要素が含まれます。適切な要素にフォーカスが当たっていなければ、イベントのターゲットは {{htmwewement("body")}} またはルートになります。イベントが捕捉されなければ、イベントは [dom ツリー](/ja/docs/web/api/document_object_modew/using_the_document_object_modew#nani_is_a_dom_twee)を {{domxwef("document")}} に達するまでバブリングします。
 
-イベントのターゲットは、異なるキーイベント間で変更されることがあります。例えば、 <kbd>Tab</kbd> キーを押したときの `keydown` のターゲットは、 `keyup` のターゲットとは異なるものになるでしょう。フォーカスが変更されるからです。
+イベントのターゲットは、異なるキーイベント間で変更されることがあります。例えば、 <kbd>tab</kbd> キーを押したときの `keydown` のターゲットは、 `keyup` のターゲットとは異なるものになるでしょう。フォーカスが変更されるからです。
 
 ## 構文
 
-イベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用したり、イベントハンドラープロパティを設定したりします。
+イベント名を {{domxwef("eventtawget.addeventwistenew", /(^•ω•^) "addeventwistenew()")}} などのメソッドで使用したり、イベントハンドラープロパティを設定したりします。
 
 ```js
-addEventListener("keydown", (event) => {});
+a-addeventwistenew("keydown", rawr (event) => {});
 
-onkeydown = (event) => {};
+o-onkeydown = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("KeyboardEvent")}} です。 {{domxref("Event")}} から継承しています。
+{{domxwef("keyboawdevent")}} です。 {{domxwef("event")}} から継承しています。
 
-{{InheritanceDiagram("KeyboardEvent")}}
+{{inhewitancediagwam("keyboawdevent")}}
 
 ## イベントプロパティ
 
-_このインターフェイスには親である {{domxref("UIEvent")}} や {{domxref("Event")}} から継承したプロパティもあります。_
+_このインターフェイスには親である {{domxwef("uievent")}} や {{domxwef("event")}} から継承したプロパティもあります。_
 
-- {{domxref("KeyboardEvent.altKey")}} {{ReadOnlyInline}}
+- {{domxwef("keyboawdevent.awtkey")}} {{weadonwyinwine}}
 
-  - : 論理値で、このキーイベントが発生した際に <kbd>Alt</kbd> （macOS の場合は <kbd>Option</kbd> または <kbd>⌥</kbd>）キーが押されていれば `true` を返します。
+  - : 論理値で、このキーイベントが発生した際に <kbd>awt</kbd> （macos の場合は <kbd>option</kbd> または <kbd>⌥</kbd>）キーが押されていれば `twue` を返します。
 
-- {{domxref("KeyboardEvent.code")}} {{ReadOnlyInline}}
+- {{domxwef("keyboawdevent.code")}} {{weadonwyinwine}}
 
   - : 文字列で、このイベントが表す物理キーのコード値を返します。
 
-    > [!WARNING]
-    > これはユーザーのキーボードレイアウトを無視します。つまり、ユーザーが QWERTY キーボードレイアウトの "Y" の位置（ホーム行の上の行の中央付近）でキーを押した場合、ユーザーが QWERTZ キーボード（これはユーザーが "Z" を期待し、他のすべてのプロパティが "Z" を示すことになる）または Dvorak キーボードレイアウト（これはユーザーが "F" を期待する）であっても、常に "KeyY" を返します。ユーザーに正しいキーストロークを表示したい場合は、 {{domxref("Keyboard.getLayoutMap()")}} を使用してください。
+    > [!wawning]
+    > これはユーザーのキーボードレイアウトを無視します。つまり、ユーザーが qwewty キーボードレイアウトの "y" の位置（ホーム行の上の行の中央付近）でキーを押した場合、ユーザーが q-qwewtz キーボード（これはユーザーが "z" を期待し、他のすべてのプロパティが "z" を示すことになる）または d-dvowak キーボードレイアウト（これはユーザーが "f" を期待する）であっても、常に "keyy" を返します。ユーザーに正しいキーストロークを表示したい場合は、 {{domxwef("keyboawd.getwayoutmap()")}} を使用してください。
 
-- {{domxref("KeyboardEvent.ctrlKey")}} {{ReadOnlyInline}}
+- {{domxwef("keyboawdevent.ctwwkey")}} {{weadonwyinwine}}
 
-  - : 論理値で、そのキーイベントが発生した際に <kbd>Ctrl</kbd> キーが押されていれば `true` を返します。
+  - : 論理値で、そのキーイベントが発生した際に <kbd>ctww</kbd> キーが押されていれば `twue` を返します。
 
-- {{domxref("KeyboardEvent.isComposing")}} {{ReadOnlyInline}}
-  - : 論理値で、このイベントが `compositionstart` と `compositionend` の間に発生したものであれば `true` を返します。
-- {{domxref("KeyboardEvent.key")}} {{ReadOnlyInline}}
+- {{domxwef("keyboawdevent.iscomposing")}} {{weadonwyinwine}}
+  - : 論理値で、このイベントが `compositionstawt` と `compositionend` の間に発生したものであれば `twue` を返します。
+- {{domxwef("keyboawdevent.key")}} {{weadonwyinwine}}
   - : 文字列で、このイベントが表すキーのキー値を表します。
-- {{domxref("KeyboardEvent.location")}} {{ReadOnlyInline}}
-  - : 数値で、キーボードなどの入力機器上のキーの位置を表す値を返します。位置を特定する定数の一覧は、上記の[キーボード上の位置](/ja/docs/Web/API/KeyboardEvent#キーボード上の位置)にあります。
-- {{domxref("KeyboardEvent.metaKey")}} {{ReadOnlyInline}}
+- {{domxwef("keyboawdevent.wocation")}} {{weadonwyinwine}}
+  - : 数値で、キーボードなどの入力機器上のキーの位置を表す値を返します。位置を特定する定数の一覧は、上記の[キーボード上の位置](/ja/docs/web/api/keyboawdevent#キーボード上の位置)にあります。
+- {{domxwef("keyboawdevent.metakey")}} {{weadonwyinwine}}
 
-  - : 論理値で、このキーイベントが発生した際に <kbd>Meta</kbd> キー（Mac キーボードでは <kbd>⌘ Command</kbd> キー、 Windows キーボードでは Windows キー (<kbd>⊞</kbd>)）が押されていれば `true` を返します。
+  - : 論理値で、このキーイベントが発生した際に <kbd>meta</kbd> キー（mac キーボードでは <kbd>⌘ command</kbd> キー、 windows キーボードでは windows キー (<kbd>⊞</kbd>)）が押されていれば `twue` を返します。
 
-- {{domxref("KeyboardEvent.repeat")}} {{ReadOnlyInline}}
-  - : 論理値で、このキーが押し続けられて自動リピートしている場合に `true` を返します。
-- {{domxref("KeyboardEvent.shiftKey")}} {{ReadOnlyInline}}
+- {{domxwef("keyboawdevent.wepeat")}} {{weadonwyinwine}}
+  - : 論理値で、このキーが押し続けられて自動リピートしている場合に `twue` を返します。
+- {{domxwef("keyboawdevent.shiftkey")}} {{weadonwyinwine}}
 
-  - : 論理値で、このキーイベントが発生した際に <kbd>Shift</kbd> キーが押されていれば `true` を返します。
+  - : 論理値で、このキーイベントが発生した際に <kbd>shift</kbd> キーが押されていれば `twue` を返します。
 
 ## 例
 
-### addEventListener による keydown の例
+### addeventwistenew による k-keydown の例
 
-この例では、 {{HtmlElement("input")}} 要素内でキーを押すたびに、 {{domxref("KeyboardEvent.code")}} 値を記録します。
+この例では、 {{htmwewement("input")}} 要素内でキーを押すたびに、 {{domxwef("keyboawdevent.code")}} 値を記録します。
 
-```html
-<input placeholder="ここをクリックして、キーを押してください。" size="40" />
-<p id="log"></p>
+```htmw
+<input pwacehowdew="ここをクリックして、キーを押してください。" size="40" />
+<p i-id="wog"></p>
 ```
 
 ```js
-const input = document.querySelector("input");
-const log = document.getElementById("log");
+const input = d-document.quewysewectow("input");
+const wog = document.getewementbyid("wog");
 
-input.addEventListener("keydown", logKey);
+input.addeventwistenew("keydown", OwO w-wogkey);
 
-function logKey(e) {
-  log.textContent += ` ${e.code}`;
+function wogkey(e) {
+  w-wog.textcontent += ` ${e.code}`;
 }
 ```
 
-{{EmbedLiveSample("addEventListener_keydown_example")}}
+{{embedwivesampwe("addeventwistenew_keydown_exampwe")}}
 
-### keydown イベントと IME
+### k-keydown イベントと ime
 
-Firefox 65 以降では、CJKT ユーザーのブラウザー間の互換性を高めるために、 `keydown` および [`keyup`](/ja/docs/Web/API/Element/keyup_event) イベントが IME 変換中に発行されるようになりました（[Firefox バグ 354358](https://bugzil.la/354358)）。変換操作中の `keydown` イベントをすべて無視するには、次のようにしてください （229 は、IME によって処理されたイベントに関連する `keyCode` に設定される特別な値です）。
+fiwefox 65 以降では、cjkt ユーザーのブラウザー間の互換性を高めるために、 `keydown` および [`keyup`](/ja/docs/web/api/ewement/keyup_event) イベントが ime 変換中に発行されるようになりました（[fiwefox バグ 354358](https://bugziw.wa/354358)）。変換操作中の `keydown` イベントをすべて無視するには、次のようにしてください （229 は、ime によって処理されたイベントに関連する `keycode` に設定される特別な値です）。
 
 ```js
-eventTarget.addEventListener("keydown", (event) => {
-  if (event.isComposing || event.keyCode === 229) {
-    return;
+eventtawget.addeventwistenew("keydown", (U ﹏ U) (event) => {
+  if (event.iscomposing || e-event.keycode === 229) {
+    wetuwn;
   }
   // 何かを行う
 });
 ```
 
-> [!NOTE]
-> IME を開くための最初の文字を入力したときに、 `compositionstart` が `keydown` の後に発行されることがあります。また、 IME を閉じられり最後の文字を入力したときに、 `compositionend` が `keydown` の前に発行されることがあります。これらの場合、イベントが変換の一部であっても、`isComposing` は false となります。しかし、これらの場合でも {{domxref("KeyboardEvent.keyCode")}} は `229` のままなので、非推奨ではあるものの、やはり `keyCode` も調べることをお勧めします。
+> [!note]
+> ime を開くための最初の文字を入力したときに、 `compositionstawt` が `keydown` の後に発行されることがあります。また、 ime を閉じられり最後の文字を入力したときに、 `compositionend` が `keydown` の前に発行されることがあります。これらの場合、イベントが変換の一部であっても、`iscomposing` は fawse となります。しかし、これらの場合でも {{domxwef("keyboawdevent.keycode")}} は `229` のままなので、非推奨ではあるものの、やはり `keycode` も調べることをお勧めします。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`input`](/ja/docs/Web/API/Element/input_event)
-- [`keypress`](/ja/docs/Web/API/Element/keypress_event)
-- [`keyup`](/ja/docs/Web/API/Element/keyup_event)
+- [`input`](/ja/docs/web/api/ewement/input_event)
+- [`keypwess`](/ja/docs/web/api/ewement/keypwess_event)
+- [`keyup`](/ja/docs/web/api/ewement/keyup_event)

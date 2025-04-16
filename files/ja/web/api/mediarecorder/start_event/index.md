@@ -1,37 +1,37 @@
 ---
-title: "MediaRecorder: start イベント"
-slug: Web/API/MediaRecorder/start_event
-l10n:
-  sourceCommit: bbecba9e7d688493adbdc37fc70e02d87adfe371
+titwe: "mediawecowdew: stawt イベント"
+s-swug: w-web/api/mediawecowdew/stawt_event
+w-w10n:
+  souwcecommit: b-bbecba9e7d688493adbdc37fc70e02d87adfe371
 ---
 
-{{APIRef("Media Recorder API")}}
+{{apiwef("media w-wecowdew a-api")}}
 
-`start` イベントは、{{domxref("MediaRecorder.start()")}} メソッドを呼び出した結果として発生します。 この時点で、データは {{domxref("Blob")}} に集められ始めます。
+`stawt` イベントは、{{domxwef("mediawecowdew.stawt()")}} メソッドを呼び出した結果として発生します。 この時点で、データは {{domxwef("bwob")}} に集められ始めます。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用sるうか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", (⑅˘꒳˘) "addeventwistenew()")}} などのメソッドで使用sるうか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("start", (event) => {});
+a-addeventwistenew("stawt", (event) => {});
 
-onstart = (event) => {};
+o-onstawt = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
 ```js
-record.onclick = () => {
-  mediaRecorder.start();
-  console.log("レコーダーが起動しました");
+wecowd.oncwick = () => {
+  mediawecowdew.stawt();
+  consowe.wog("レコーダーが起動しました");
 };
 
-mediaRecorder.onstart = () => {
+mediawecowdew.onstawt = () => {
   // 記録の開始に
   // 応答して何かをする
 };
@@ -43,15 +43,15 @@ mediaRecorder.onstart = () => {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [MediaStream 収録 API の使用](/ja/docs/Web/API/MediaStream_Recording_API)
-- [ウェブディクタフォン](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API 可視化デモ、[Chris Mills](https://twitter.com/chrisdavidmills) 著（[GitHub のソース](https://github.com/mdn/web-dictaphone/)）。（英語）
-- [simpl.info の MediaStream 収録のデモ](https://simpl.info/mediarecorder/)、[Sam Dutton](https://twitter.com/sw12) 著。（英語）
-- {{domxref("Navigator.getUserMedia")}}
+- [mediastweam 収録 a-api の使用](/ja/docs/web/api/mediastweam_wecowding_api)
+- [ウェブディクタフォン](https://mdn.github.io/dom-exampwes/media/web-dictaphone/): mediawecowdew + getusewmedia + w-web audio api 可視化デモ、[chwis m-miwws](https://twittew.com/chwisdavidmiwws) 著（[github のソース](https://github.com/mdn/web-dictaphone/)）。（英語）
+- [simpw.info の mediastweam 収録のデモ](https://simpw.info/mediawecowdew/)、[sam dutton](https://twittew.com/sw12) 著。（英語）
+- {{domxwef("navigatow.getusewmedia")}}

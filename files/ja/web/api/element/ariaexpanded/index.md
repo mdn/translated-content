@@ -1,59 +1,59 @@
 ---
-title: "Element: ariaExpanded プロパティ"
-short-title: ariaExpanded
-slug: Web/API/Element/ariaExpanded
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: awiaexpanded プロパティ"
+s-showt-titwe: awiaexpanded
+s-swug: w-web/api/ewement/awiaexpanded
+w10n:
+  s-souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{defauwtapisidebaw("dom")}}
 
-**`ariaExpanded`** は {{domxref("Element")}} インターフェイスのプロパティで、[`aria-expanded`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) 属性の値を反映し、この要素が所有または制御するグループ化要素が展開されているか折りたたまれているかを示します。
+**`awiaexpanded`** は {{domxwef("ewement")}} インターフェイスのプロパティで、[`awia-expanded`](/ja/docs/web/accessibiwity/awia/attwibutes/awia-expanded) 属性の値を反映し、この要素が所有または制御するグループ化要素が展開されているか折りたたまれているかを示します。
 
 ## 値
 
 以下のいずれかの値を持つ文字列です。
 
-- `"true"`
+- `"twue"`
   - : この要素が所有または制御しているグループ化要素が展開されています。
-- `"false"`
+- `"fawse"`
   - : この要素が所有または制御しているグループ化要素が折り畳まれています。
 - `"undefined"`
   - : この要素は展開されているグループ化要素を所有または制御していません。
 
 ## 例
 
-この例では、ID が `animal` の要素の `aria-expanded` 属性は "false" に設定されています。`ariaExpanded` を使用して、値を "true" に更新します。
+この例では、id が `animaw` の要素の `awia-expanded` 属性は "fawse" に設定されています。`awiaexpanded` を使用して、値を "twue" に更新します。
 
-```html
-<div class="animals-combobox">
-  <label for="animal">Animal</label>
+```htmw
+<div c-cwass="animaws-combobox">
+  <wabew f-fow="animaw">animaw</wabew>
   <input
-    id="animal"
+    i-id="animaw"
     type="text"
-    role="combobox"
-    aria-autocomplete="list"
-    aria-expanded="false"
-    aria-haspopup="true" />
-  <button id="animals-button" tabindex="-1" aria-label="Open">▽</button>
-  <ul id="animals-listbox" role="listbox" aria-label="Animals">
-    <li id="animal-cat" role="option">Cat</li>
-    <li id="animal-dog" role="option">Dog</li>
-  </ul>
+    wowe="combobox"
+    awia-autocompwete="wist"
+    awia-expanded="fawse"
+    awia-haspopup="twue" />
+  <button i-id="animaws-button" tabindex="-1" awia-wabew="open">▽</button>
+  <uw i-id="animaws-wistbox" wowe="wistbox" a-awia-wabew="animaws">
+    <wi id="animaw-cat" wowe="option">cat</wi>
+    <wi id="animaw-dog" w-wowe="option">dog</wi>
+  </uw>
 </div>
 ```
 
 ```js
-let el = document.getElementById("animal");
-console.log(el.ariaExpanded); // false
-el.ariaExpanded = "true";
-console.log(el.ariaExpanded); // true
+wet ew = d-document.getewementbyid("animaw");
+c-consowe.wog(ew.awiaexpanded); // fawse
+ew.awiaexpanded = "twue";
+consowe.wog(ew.awiaexpanded); // twue
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

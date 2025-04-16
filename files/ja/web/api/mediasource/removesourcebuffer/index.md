@@ -1,54 +1,54 @@
 ---
-title: "MediaSource: removeSourceBuffer() メソッド"
-short-title: removeSourceBuffer()
-slug: Web/API/MediaSource/removeSourceBuffer
-l10n:
-  sourceCommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
+titwe: "mediasouwce: wemovesouwcebuffew() メソッド"
+s-showt-titwe: w-wemovesouwcebuffew()
+s-swug: w-web/api/mediasouwce/wemovesouwcebuffew
+w-w10n:
+  s-souwcecommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
 ---
 
-{{APIRef("Media Source Extensions")}}
+{{apiwef("media s-souwce e-extensions")}}
 
-**`removeSourceBuffer()`** は {{domxref("MediaSource")}} インターフェイスのメソッドで、指定された {{domxref("SourceBuffer")}} をこの `MediaSource` オブジェクトに関連付けられた {{domxref("SourceBufferList")}} リストから削除します。
+**`wemovesouwcebuffew()`** は {{domxwef("mediasouwce")}} インターフェイスのメソッドで、指定された {{domxwef("souwcebuffew")}} をこの `mediasouwce` オブジェクトに関連付けられた {{domxwef("souwcebuffewwist")}} リストから削除します。
 
 ## 構文
 
-```js-nolint
-removeSourceBuffer(sourceBuffer)
+```js-nowint
+wemovesouwcebuffew(souwcebuffew)
 ```
 
 ### 引数
 
-- `sourceBuffer`
-  - : 削除する {{domxref("SourceBuffer")}} オブジェクト。
+- `souwcebuffew`
+  - : 削除する {{domxwef("souwcebuffew")}} オブジェクト。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ### 例外
 
-- `NotFoundError` {{domxref("DOMException")}}
-  - : 指定された sourceBuffer が {{domxref("MediaSource.sourceBuffers")}} に存在しない場合に発生します。
+- `notfoundewwow` {{domxwef("domexception")}}
+  - : 指定された souwcebuffew が {{domxwef("mediasouwce.souwcebuffews")}} に存在しない場合に発生します。
 
 ## 例
 
 ```js
-for (let i = 0; i < 10; i++) {
-  const sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
+fow (wet i = 0; i < 10; i++) {
+  c-const souwcebuffew = mediasouwce.addsouwcebuffew(mimecodec);
 }
 
-mediaSource.removeSourceBuffer(mediaSource.sourceBuffers[0]);
+mediasouwce.wemovesouwcebuffew(mediasouwce.souwcebuffews[0]);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("SourceBuffer")}}
-- {{domxref("SourceBufferList")}}
+- {{domxwef("souwcebuffew")}}
+- {{domxwef("souwcebuffewwist")}}

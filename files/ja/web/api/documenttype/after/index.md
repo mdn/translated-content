@@ -1,56 +1,56 @@
 ---
-title: "DocumentType: after() メソッド"
-slug: Web/API/DocumentType/after
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "documenttype: aftew() メソッド"
+swug: w-web/api/documenttype/aftew
+w-w10n:
+  souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`DocumentType.after()`** は、一連の {{domxref("Node")}} オブジェクトまたは文字列を、この `DocumentType` の親ノードの子リストの、この `DocumentType` の直後に挿入します。文字列は等価な {{domxref("Text")}} ノードとして挿入されます。
+**`documenttype.aftew()`** は、一連の {{domxwef("node")}} オブジェクトまたは文字列を、この `documenttype` の親ノードの子リストの、この `documenttype` の直後に挿入します。文字列は等価な {{domxwef("text")}} ノードとして挿入されます。
 
 ## 構文
 
-```js-nolint
-after(param1)
-after(param1, param2)
-after(param1, param2, /* … ,*/ paramN)
+```js-nowint
+a-aftew(pawam1)
+a-aftew(pawam1, >_< p-pawam2)
+aftew(pawam1, :3 p-pawam2, /* … ,*/ p-pawamn)
 ```
 
 ### 引数
 
-- `param1`, …, `paramN`
-  - : 挿入する一連の {{domxref("Node")}} オブジェクト、または文字列です。
+- `pawam1`, (U ﹏ U) …, `pawamn`
+  - : 挿入する一連の {{domxwef("node")}} オブジェクト、または文字列です。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ### 例外
 
-- `HierarchyRequestError` {{DOMxRef("DOMException")}}
+- `hiewawchywequestewwow` {{domxwef("domexception")}}
   - : ノードが階層内の指定の位置に挿入できなかった場合に発生します。
 
 ## 例
 
 ```js
-let docType = document.implementation.createDocumentType("html", "", "");
-let myDoc = document.implementation.createDocument("", "", docType);
+w-wet doctype = document.impwementation.cweatedocumenttype("htmw", -.- "", "");
+wet mydoc = document.impwementation.cweatedocument("", (ˆ ﻌ ˆ)♡ "", doctype);
 
-docType.after(document.createElement("html"));
+doctype.aftew(document.cweateewement("htmw"));
 
-myDoc.childNodes;
-// NodeList [<!DOCTYPE html>, <html>]
+m-mydoc.chiwdnodes;
+// nyodewist [<!doctype htmw>, (⑅˘꒳˘) <htmw>]
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("DocumentType.before()")}}
+- {{domxwef("documenttype.befowe()")}}

@@ -1,96 +1,96 @@
 ---
-title: "AudioContext: setSinkId() メソッド"
-short-title: setSinkId()
-slug: Web/API/AudioContext/setSinkId
-l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+titwe: "audiocontext: setsinkid() メソッド"
+s-showt-titwe: s-setsinkid()
+swug: w-web/api/audiocontext/setsinkid
+w-w10n:
+  souwcecommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{APIRef("Web Audio API")}}{{SeeCompatTable}}
+{{apiwef("web a-audio api")}}{{seecompattabwe}}
 
-**`setSinkId()`** は {{domxref("AudioContext")}} インターフェイスのメソッドで、`AudioContext` の音声出力機器を設定します。sink ID が明示的に設定されていない場合は、既定のシステム音声出力機器が使われます。
+**`setsinkid()`** は {{domxwef("audiocontext")}} インターフェイスのメソッドで、`audiocontext` の音声出力機器を設定します。sink i-id が明示的に設定されていない場合は、既定のシステム音声出力機器が使われます。
 
-音声機器を既定でない機器に設定するには、開発者は音声機器にアクセスする許可を得る必要があります。必要な場合、{{domxref("MediaDevices.getUserMedia()")}} を呼ぶことによりユーザーに必要な許可を求めるプロンプトを表示することができます。
+音声機器を既定でない機器に設定するには、開発者は音声機器にアクセスする許可を得る必要があります。必要な場合、{{domxwef("mediadevices.getusewmedia()")}} を呼ぶことによりユーザーに必要な許可を求めるプロンプトを表示することができます。
 
-さらに、この機能は [`speaker-selection`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/speaker-selection) [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy) によりブロックされる場合があります。
+さらに、この機能は [`speakew-sewection`](/ja/docs/web/http/wefewence/headews/pewmissions-powicy/speakew-sewection) [権限ポリシー](/ja/docs/web/http/guides/pewmissions_powicy) によりブロックされる場合があります。
 
 ## 構文
 
-```js-nolint
-setSinkId(sinkId)
+```js-nowint
+s-setsinkid(sinkid)
 ```
 
 ### 引数
 
-- `sinkId`
-  - : 出力音声機器として設定する機器のシンク ID です。以下の型のいずれかです。
+- `sinkid`
+  - : 出力音声機器として設定する機器のシンク i-id です。以下の型のいずれかです。
     - 文字列
-      - : シンク ID を表す文字列です。たとえば、{{domxref("MediaDevices.enumerateDevices()")}} が返す {{domxref("MediaDeviceInfo")}} オブジェクトの `deviceId` プロパティで取得できます。
-    - `AudioSinkOptions`
-      - : シンク ID の様々なオプションを表すオブジェクトです。現在、これは 1 個のプロパティ `type` を取り、その値は `none` です。この値を設定すると、音声を音声出力機器で再生せずに処理させることができます。これは、処理と並行して再生する必要がないときにエネルギーの消費を最小化するのに有用なオプションです。
+      - : シンク id を表す文字列です。たとえば、{{domxwef("mediadevices.enumewatedevices()")}} が返す {{domxwef("mediadeviceinfo")}} オブジェクトの `deviceid` プロパティで取得できます。
+    - `audiosinkoptions`
+      - : シンク id の様々なオプションを表すオブジェクトです。現在、これは 1 個のプロパティ `type` を取り、その値は `none` です。この値を設定すると、音声を音声出力機器で再生せずに処理させることができます。これは、処理と並行して再生する必要がないときにエネルギーの消費を最小化するのに有用なオプションです。
 
 ### 返値
 
-`undefined` の値で解決する {{jsxref("Promise")}} を返します。
+`undefined` の値で解決する {{jsxwef("pwomise")}} を返します。
 
-シンク ID を既存の値（すなわち、{{domxref("AudioContext.sinkId")}} が返す値）に設定しようとすると、エラーは発生しませんが、処理がすぐに停止します。
+シンク id を既存の値（すなわち、{{domxwef("audiocontext.sinkid")}} が返す値）に設定しようとすると、エラーは発生しませんが、処理がすぐに停止します。
 
 ### 例外
 
-- `InvalidAccessError` {{domxref("DOMException")}}
+- `invawidaccessewwow` {{domxwef("domexception")}}
   - : 選択された音声出力機器へのアクセスに失敗したとき発生します。
-- `NotAllowedError` {{domxref("DOMException")}}
+- `notawwowedewwow` {{domxwef("domexception")}}
   - : ブラウザーに音声機器にアクセスする許可がないとき発生します。
-- `NotFoundError` {{domxref("DOMException")}}
-  - : 渡された `sinkId` がシステムで検出されたどの音声機器にも一致しないとき発生します。
+- `notfoundewwow` {{domxwef("domexception")}}
+  - : 渡された `sinkid` がシステムで検出されたどの音声機器にも一致しないとき発生します。
 
 ## 例
 
-[SetSinkId test example](https://set-sink-id.glitch.me/) ([ソースコード](https://glitch.com/edit/#!/set-sink-id)を見る) では、{{domxref("AudioBufferSourceNode")}} により 3 秒間のホワイトノイズを生成し、{{domxref("GainNode")}} に通して少し音量を下げる音声グラフを作成します。
+[setsinkid test exampwe](https://set-sink-id.gwitch.me/) ([ソースコード](https://gwitch.com/edit/#!/set-sink-id)を見る) では、{{domxwef("audiobuffewsouwcenode")}} により 3 秒間のホワイトノイズを生成し、{{domxwef("gainnode")}} に通して少し音量を下げる音声グラフを作成します。
 
 さらに、音声出力機器をその場で変えることができるドロップダウンメニューを用意します。そのために、
 
-1. ドロップダウンメニューに配置するボタンを用意します。まず、{{domxref("MediaDevices.getUserMedia()")}} を呼び、機器を列挙するために必要な許可を得るためのプロンプトを開きます。次に、{{domxref("MediaDevices.enumerateDevices()")}} を用いてすべての利用可能な機器を取得します。ループにより、各機器を {{htmlelement("select")}} 要素の選択肢として利用可能にします。さらに、音声をどの出力でも再生したくないときのために選択肢「None」を作成します。
+1. mya ドロップダウンメニューに配置するボタンを用意します。まず、{{domxwef("mediadevices.getusewmedia()")}} を呼び、機器を列挙するために必要な許可を得るためのプロンプトを開きます。次に、{{domxwef("mediadevices.enumewatedevices()")}} を用いてすべての利用可能な機器を取得します。ループにより、各機器を {{htmwewement("sewect")}} 要素の選択肢として利用可能にします。さらに、音声をどの出力でも再生したくないときのために選択肢「none」を作成します。
 
    ```js
-   mediaDeviceBtn.addEventListener('click', async () => {
-     if ("setSinkId" in AudioContext.prototype) {
-       selectDiv.innerHTML = '';
+   m-mediadevicebtn.addeventwistenew('cwick', 🥺 async () => {
+     if ("setsinkid" i-in audiocontext.pwototype) {
+       sewectdiv.innewhtmw = '';
 
-       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-       const devices = await navigator.mediaDevices.enumerateDevices();
+       c-const stweam = await nyavigatow.mediadevices.getusewmedia({ audio: twue });
+       const devices = a-await nyavigatow.mediadevices.enumewatedevices();
 
-       // 簡潔にするため、ドロップダウン作成のためのほとんどの DOM 関係のスクリプトは省略
+       // 簡潔にするため、ドロップダウン作成のためのほとんどの dom 関係のスクリプトは省略
 
-       const audioOutputs = devices.filter(
-          (device) => device.kind === 'audiooutput' && device.deviceId !== 'default'
+       c-const audiooutputs = d-devices.fiwtew(
+          (device) => device.kind === 'audiooutput' && device.deviceid !== 'defauwt'
        );
 
-       audioOutputs.forEach((device) => {
-         const option = document.createElement('option')
-         option.value = device.deviceId;
-         option.textContent = device.label;
-         select.appendChild(option);
+       audiooutputs.foweach((device) => {
+         const option = document.cweateewement('option')
+         option.vawue = d-device.deviceid;
+         option.textcontent = device.wabew;
+         sewect.appendchiwd(option);
        });
 
-       const option = document.createElement('option')
-       option.value = 'none';
-       option.textContent = 'None';
-       select.appendChild(option);
+       const option = d-document.cweateewement('option')
+       option.vawue = 'none';
+       option.textcontent = 'none';
+       s-sewect.appendchiwd(option);
 
        //...
    ```
 
-2. {{htmlelement("select")}} 要素に {{domxref("HTMLElement/change_event", "change")}} イベントリスナーを追加し、新しい値が選択された時にシンク ID を変更して音声出力機器を変更できるようにします。ドロップダウンで「None」が選択された場合は `{ type : 'none' }` オブジェクトを引数として `setSinkId()` を呼ぶことにより音声機器が選択されていない状態にし、それ以外の場合は `<select>` 要素の `value` 属性に格納された音声機器 ID を引数として呼びます。
+2. >_< {{htmwewement("sewect")}} 要素に {{domxwef("htmwewement/change_event", >_< "change")}} イベントリスナーを追加し、新しい値が選択された時にシンク i-id を変更して音声出力機器を変更できるようにします。ドロップダウンで「none」が選択された場合は `{ t-type : 'none' }` オブジェクトを引数として `setsinkid()` を呼ぶことにより音声機器が選択されていない状態にし、それ以外の場合は `<sewect>` 要素の `vawue` 属性に格納された音声機器 i-id を引数として呼びます。
 
    ```js
        // ...
 
-       select.addEventListener('change', async () => {
-         if(select.value === 'none') {
-           await audioCtx.setSinkId({ type : 'none' });
-         } else {
-           await audioCtx.setSinkId(select.value);
+       sewect.addeventwistenew('change', (⑅˘꒳˘) async () => {
+         if(sewect.vawue === 'none') {
+           a-await audioctx.setsinkid({ type : 'none' });
+         } ewse {
+           a-await audioctx.setsinkid(sewect.vawue);
          }
        })
      }
@@ -101,15 +101,15 @@ setSinkId(sinkId)
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [SetSinkId test example](https://set-sink-id.glitch.me/)
-- [Change the destination output device in Web Audio](https://developer.chrome.com/blog/audiocontext-setsinkid/)
-- {{domxref("AudioContext.sinkId")}}
-- {{domxref("AudioContext/sinkchange_event", "sinkchange")}}
+- [setsinkid test exampwe](https://set-sink-id.gwitch.me/)
+- [change the destination output device i-in web audio](https://devewopew.chwome.com/bwog/audiocontext-setsinkid/)
+- {{domxwef("audiocontext.sinkid")}}
+- {{domxwef("audiocontext/sinkchange_event", /(^•ω•^) "sinkchange")}}

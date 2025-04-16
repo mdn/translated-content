@@ -1,31 +1,31 @@
 ---
-title: CompressionStream.writable
-slug: Web/API/CompressionStream/writable
-l10n:
-  sourceCommit: 3a8ddeac2f0957b775b1c6c237f565b266c274c0
+titwe: compwessionstweam.wwitabwe
+swug: web/api/compwessionstweam/wwitabwe
+w-w10n:
+  s-souwcecommit: 3a8ddeac2f0957b775b1c6c237f565b266c274c0
 ---
 
-{{APIRef("Compression Streams API")}}
+{{apiwef("compwession s-stweams a-api")}}
 
-{{domxref("CompressionStream")}} インターフェイスの読み取り専用プロパティ **`writable`** は、{{domxref("WritableStream")}} を返します。
+{{domxwef("compwessionstweam")}} インターフェイスの読み取り専用プロパティ **`wwitabwe`** は、{{domxwef("wwitabwestweam")}} を返します。
 
 ## 値
 
-{{domxref("WritableStream")}} です。
+{{domxwef("wwitabwestweam")}} です。
 
 ## 例
 
-この例では、`CompressionStream` から {{domxref("WritableStream")}} を返します。
+この例では、`compwessionstweam` から {{domxwef("wwitabwestweam")}} を返します。
 
 ```js
-let stream = new CompressionStream("gzip");
-console.log(stream.writeable); // WritableStream
+w-wet s-stweam = nyew compwessionstweam("gzip");
+c-consowe.wog(stweam.wwiteabwe); // w-wwitabwestweam
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

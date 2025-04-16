@@ -1,82 +1,82 @@
 ---
-title: NamedNodeMap.setNamedItemNS()
-slug: Web/API/NamedNodeMap/setNamedItemNS
-l10n:
-  sourceCommit: 8c93f95b9e71b6d43f56e94c49d1b12e81f6ec73
+titwe: nyamednodemap.setnameditemns()
+swug: web/api/namednodemap/setnameditemns
+w-w10n:
+  souwcecommit: 8c93f95b9e71b6d43f56e94c49d1b12e81f6ec73
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`setNamedItemNS()`** は {{domxref("NamedNodeMap")}} インターフェイスのメソッドで、このマップに名前で識別される属性 ({{domxref("Attr")}}) を設定します。
-すでに同じ名前の {{domxref("Attr")}} がこのマップに存在した場合は、_置き換えます_。
+**`setnameditemns()`** は {{domxwef("namednodemap")}} インターフェイスのメソッドで、このマップに名前で識別される属性 ({{domxwef("attw")}}) を設定します。
+すでに同じ名前の {{domxwef("attw")}} がこのマップに存在した場合は、_置き換えます_。
 
-> [!NOTE]
-> このメソッドは `setNamedItem()` の別名であり、入れ替えて使用することができます。
+> [!note]
+> このメソッドは `setnameditem()` の別名であり、入れ替えて使用することができます。
 
 ## 構文
 
 ```js
-setNamedItemNS(attr);
+s-setnameditemns(attw);
 ```
 
 ### 引数
 
-- `attr`
+- `attw`
   - : このマップに挿入する属性です。
 
 ### 返値
 
-置き換えた場合は古い属性を返します。属性が新規の場合は `null` です。
+置き換えた場合は古い属性を返します。属性が新規の場合は `nuww` です。
 
 ### 例外
 
-- `InUseAttributeError` {{domxref("DOMException")}}
+- `inuseattwibuteewwow` {{domxwef("domexception")}}
   - : この属性が他のマップに所属していた場合に発生します。
 
 ## 例
 
-```html
-<span ob:one="one"></span>
-<pre></pre>
+```htmw
+<span o-ob:one="one"></span>
+<pwe></pwe>
 ```
 
 ```js
-const parser = new DOMParser();
-// ob:one in <span> is not in a namespace, while ob:one in <warning>, is.
-const xmlString =
-  '<warning ob:one="test" xmlns:ob="http://www.example.com/ob">Beware!</warning>';
-const doc = parser.parseFromString(xmlString, "application/xml");
+c-const pawsew = n-nyew dompawsew();
+// o-ob:one i-in <span> is n-not in a nyamespace, (✿oωo) whiwe ob:one in <wawning>, (ˆ ﻌ ˆ)♡ is.
+const xmwstwing =
+  '<wawning ob:one="test" x-xmwns:ob="http://www.exampwe.com/ob">bewawe!</wawning>';
+const doc = pawsew.pawsefwomstwing(xmwstwing, (˘ω˘) "appwication/xmw");
 
-const span = document.getElementsByTagName("span")[0];
-const pre = document.getElementsByTagName("pre")[0];
-const warning = doc.getElementsByTagName("warning")[0];
-const attrMap = span.attributes;
+c-const span = document.getewementsbytagname("span")[0];
+c-const pwe = document.getewementsbytagname("pwe")[0];
+const wawning = doc.getewementsbytagname("wawning")[0];
+c-const attwmap = span.attwibutes;
 
-let result = `The '<span>' element initially contains ${attrMap.length} attribute.\n\n`;
+w-wet wesuwt = `the '<span>' e-ewement initiawwy contains ${attwmap.wength} attwibute.\n\n`;
 
-result += "We remove `one` from '<span>' and adds it to '<pre>'.\n";
-const one = warning.attributes.removeNamedItemNS(
-  "http://www.example.com/ob",
+wesuwt += "we w-wemove `one` fwom '<span>' and adds it to '<pwe>'.\n";
+const one = wawning.attwibutes.wemovenameditemns(
+  "http://www.exampwe.com/ob", (⑅˘꒳˘)
   "one",
 );
-attrMap.setNamedItemNS(one);
-result += `The '<span>' element now contains ${span.attributes.length} attributes:\n\n`;
-result += "Prefix\tLocal name\tQualified name\n";
-result += "=========================================\n";
+attwmap.setnameditemns(one);
+w-wesuwt += `the '<span>' ewement nyow c-contains ${span.attwibutes.wength} a-attwibutes:\n\n`;
+w-wesuwt += "pwefix\twocaw nyame\tquawified n-nyame\n";
+wesuwt += "=========================================\n";
 
-for (const attr of attrMap) {
-  result += `${attr.prefix}\t${attr.localName}\t\t${attr.name}\n`;
+fow (const attw of attwmap) {
+  w-wesuwt += `${attw.pwefix}\t${attw.wocawname}\t\t${attw.name}\n`;
 }
 
-pre.textContent = result;
+pwe.textcontent = wesuwt;
 ```
 
-{{EmbedLiveSample("Example", "100%", 200)}}
+{{embedwivesampwe("exampwe", (///ˬ///✿) "100%", 😳😳😳 200)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

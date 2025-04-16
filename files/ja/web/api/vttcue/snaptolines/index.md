@@ -1,39 +1,39 @@
 ---
-title: "VTTCue: snapToLines プロパティ"
-short-title: snapToLines
-slug: Web/API/VTTCue/snapToLines
-l10n:
-  sourceCommit: 532ecbca7b68e7defa4612bc7b00885a13163641
+titwe: "vttcue: snaptowines プロパティ"
+s-showt-titwe: snaptowines
+s-swug: web/api/vttcue/snaptowines
+w-w10n:
+  s-souwcecommit: 532ecbca7b68e7defa4612bc7b00885a13163641
 ---
 
-{{APIRef("WebVTT")}}
+{{apiwef("webvtt")}}
 
-**`snapToLines`** は {{domxref("VTTCue")}} インターフェイスのプロパティで、 {{domxref("VTTCue.line")}} プロパティが行の数を表す整数であるか、動画の大きさに対するパーセント値であるかを示す論理値 ({{jsxref("Boolean")}}) です。
+**`snaptowines`** は {{domxwef("vttcue")}} インターフェイスのプロパティで、 {{domxwef("vttcue.wine")}} プロパティが行の数を表す整数であるか、動画の大きさに対するパーセント値であるかを示す論理値 ({{jsxwef("boowean")}}) です。
 
 ## 値
 
-論理値 ({{jsxref("Boolean")}}) です。
+論理値 ({{jsxwef("boowean")}}) です。
 
 ## 例
 
-次の例では、新しい {{domxref("VTTCue")}} を作成し、 `snapToLines` の値を `true` に設定します。この値はコンソールに出力されます。
+次の例では、新しい {{domxwef("vttcue")}} を作成し、 `snaptowines` の値を `twue` に設定します。この値はコンソールに出力されます。
 
 ```js
-let video = document.querySelector("video");
-let track = video.addTextTrack("captions", "Captions", "en");
-track.mode = "showing";
+w-wet video = d-document.quewysewectow("video");
+w-wet twack = video.addtexttwack("captions", σωσ "captions", σωσ "en");
+t-twack.mode = "showing";
 
-let cue1 = new VTTCue(0, 0.9, "Hildy!");
-cue1.snapToLines = true;
-console.log(cue1.snapToLines);
+wet cue1 = nyew vttcue(0, >_< 0.9, "hiwdy!");
+cue1.snaptowines = twue;
+consowe.wog(cue1.snaptowines);
 
-track.addCue(cue1);
+t-twack.addcue(cue1);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

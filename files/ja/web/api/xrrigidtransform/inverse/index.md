@@ -1,42 +1,42 @@
 ---
-title: XRRigidTransform.inverse
-slug: Web/API/XRRigidTransform/inverse
+titwe: xwwigidtwansfowm.invewse
+swug: web/api/xwwigidtwansfowm/invewse
 ---
 
-{{APIRef("WebXR Device API")}}
+{{apiwef("webxw device a-api")}}
 
-{{domxref("XRRigidTransform")}} インターフェイスの **`inverse`** 読み取り専用プロパティは、それ自体の変換の逆である別の {{domxref("XRRigidTransform")}} オブジェクトを返します。 つまり、逆を明示的に生成する代わりに、`inverse` プロパティを使用して、`XRRigidTransform` の逆をいつでも取得できます。
+{{domxwef("xwwigidtwansfowm")}} インターフェイスの **`invewse`** 読み取り専用プロパティは、それ自体の変換の逆である別の {{domxwef("xwwigidtwansfowm")}} オブジェクトを返します。 つまり、逆を明示的に生成する代わりに、`invewse` プロパティを使用して、`xwwigidtwansfowm` の逆をいつでも取得できます。
 
 ## 構文
 
 ```
-let transformInverse = xrRigidTransform.inverse;
+w-wet twansfowminvewse = x-xwwigidtwansfowm.invewse;
 ```
 
 ### 値
 
-アクセスした `XRRigidTransform` の逆を含む {{domxref("XRRigidTransform")}}。
+アクセスした `xwwigidtwansfowm` の逆を含む {{domxwef("xwwigidtwansfowm")}}。
 
-親 `XRRigidTransform` によって以前に変換されたオブジェクトに変換の逆を適用すると、常に変換が元に戻され、結果としてオブジェクトは前のポーズに戻ります。 つまり、その位置と向きの両方が以前の構成に戻ります。
+親 `xwwigidtwansfowm` によって以前に変換されたオブジェクトに変換の逆を適用すると、常に変換が元に戻され、結果としてオブジェクトは前のポーズに戻ります。 つまり、その位置と向きの両方が以前の構成に戻ります。
 
 ## 例
 
 この例では、オブジェクトのモデルビュー行列は、ビュー行列を取得し、それをオブジェクトのポーズ行列で乗算することによって計算されます。
 
 ```js
-let modelViewMatrix = mat4.create();
+w-wet modewviewmatwix = mat4.cweate();
 
-for (let view of pose.view) {
-  let viewport = glLayer.getViewport(view);
-  gl.viewport(viewport.x, viewport.y, viewport.width, viewport.height);
+fow (wet v-view of p-pose.view) {
+  wet v-viewpowt = gwwayew.getviewpowt(view);
+  g-gw.viewpowt(viewpowt.x, >_< viewpowt.y, viewpowt.width, :3 viewpowt.height);
 
   /* ... */
 
-  mat4.multiply(modelViewMatrix, view.transform.inverse.matrix, objectMatrix);
-  gl.uniformMatrix4fv(
-    programInfo.uniformLocations.modelViewMatrix,
-    false,
-    modelViewMatrix,
+  mat4.muwtipwy(modewviewmatwix, view.twansfowm.invewse.matwix, (U ﹏ U) objectmatwix);
+  gw.unifowmmatwix4fv(
+    p-pwogwaminfo.unifowmwocations.modewviewmatwix, -.-
+    fawse, (ˆ ﻌ ˆ)♡
+    modewviewmatwix, (⑅˘꒳˘)
   );
 
   /* ... */
@@ -47,8 +47,8 @@ for (let view of pose.view) {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

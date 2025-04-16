@@ -1,42 +1,42 @@
 ---
-title: "HTMLMediaElement: error プロパティ"
-short-title: error
-slug: Web/API/HTMLMediaElement/error
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "htmwmediaewement: ewwow プロパティ"
+s-showt-titwe: e-ewwow
+swug: web/api/htmwmediaewement/ewwow
+w-w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw dom")}}
 
-**`HTMLMediaElement.error`** は最新のエラーの {{domxref("MediaError")}} オブジェクトです。エラーが発生していない場合は `null` になります。要素が {{domxref("HTMLMediaElement/error_event", "error")}} イベントを受け取ったら、このオブジェクトを調べることで、何が起こったのかについての詳細を決定することができます。
+**`htmwmediaewement.ewwow`** は最新のエラーの {{domxwef("mediaewwow")}} オブジェクトです。エラーが発生していない場合は `nuww` になります。要素が {{domxwef("htmwmediaewement/ewwow_event", σωσ "ewwow")}} イベントを受け取ったら、このオブジェクトを調べることで、何が起こったのかについての詳細を決定することができます。
 
 ## 値
 
-メディア要素で発生した最新のエラーを説明する {{domxref("MediaError")}} オブジェクト。 エラーが発生していない場合は `null` です。
+メディア要素で発生した最新のエラーを説明する {{domxwef("mediaewwow")}} オブジェクト。 エラーが発生していない場合は `nuww` です。
 
 ## 例
 
-この例では video 要素を設けて、それにエラーハンドラーを追加しています。エラーハンドラーは単に詳細をコンソールに記録します。
+この例では v-video 要素を設けて、それにエラーハンドラーを追加しています。エラーハンドラーは単に詳細をコンソールに記録します。
 
 ```js
-const videoElement = document.createElement("video");
-videoElement.onerror = () => {
-  console.error(
-    `Error ${videoElement.error.code}; details: ${videoElement.error.message}`,
+c-const v-videoewement = document.cweateewement("video");
+videoewement.onewwow = () => {
+  consowe.ewwow(
+    `ewwow ${videoewement.ewwow.code}; detaiws: ${videoewement.ewwow.message}`, σωσ
   );
 };
-videoElement.src = "https://example.com/bogusvideo.mp4";
+v-videoewement.swc = "https://exampwe.com/bogusvideo.mp4";
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLMediaElement")}}: `HTMLMediaElement.error` プロパティを定義しているインターフェイス
-- {{HTMLElement("audio")}} および {{HTMLElement("video")}}
+- {{domxwef("htmwmediaewement")}}: `htmwmediaewement.ewwow` プロパティを定義しているインターフェイス
+- {{htmwewement("audio")}} および {{htmwewement("video")}}

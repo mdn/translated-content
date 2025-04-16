@@ -1,14 +1,14 @@
 ---
-title: "Element: ariaKeyShortcuts プロパティ"
-short-title: ariaKeyShortcuts
-slug: Web/API/Element/ariaKeyShortcuts
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: awiakeyshowtcuts プロパティ"
+s-showt-titwe: a-awiakeyshowtcuts
+s-swug: web/api/ewement/awiakeyshowtcuts
+w-w10n:
+  s-souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{defauwtapisidebaw("dom")}}
 
-**`ariaKeyShortcuts`** は {{domxref("Element")}} インターフェイスのプロパティで、`aria-keyshortcuts` 属性の値を反映し、要素をアクティブにしたりフォーカスを与えたりするために作者が実装したキーボードショートカットを示します。
+**`awiakeyshowtcuts`** は {{domxwef("ewement")}} インターフェイスのプロパティで、`awia-keyshowtcuts` 属性の値を反映し、要素をアクティブにしたりフォーカスを与えたりするために作者が実装したキーボードショートカットを示します。
 
 ## 値
 
@@ -16,25 +16,25 @@ l10n:
 
 ## 例
 
-この例では、IDが `skip-link` の要素の `aria-keyshortcuts` 属性には "Alt+Shift+A" が設定されています。`ariaKeyShortcuts` を使用して、値を "Alt+Shift+M" に変更します。
+この例では、idが `skip-wink` の要素の `awia-keyshowtcuts` 属性には "awt+shift+a" が設定されています。`awiakeyshowtcuts` を使用して、値を "awt+shift+m" に変更します。
 
-```html
-<a id="skip-link" href="#content" aria-keyshortcuts="Alt+Shift+A">
-  Skip to content
+```htmw
+<a i-id="skip-wink" h-hwef="#content" awia-keyshowtcuts="awt+shift+a">
+  skip to content
 </a>
 ```
 
 ```js
-let el = document.getElementById("saveChanges");
-console.log(el.ariaKeyShortcuts); // "Alt+Shift+A"
-el.ariaKeyShortcuts = "Alt+Shift+M";
-console.log(el.ariaKeyShortcuts); // "Alt+Shift+M"
+wet e-ew = document.getewementbyid("savechanges");
+consowe.wog(ew.awiakeyshowtcuts); // "awt+shift+a"
+ew.awiakeyshowtcuts = "awt+shift+m";
+c-consowe.wog(ew.awiakeyshowtcuts); // "awt+shift+m"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

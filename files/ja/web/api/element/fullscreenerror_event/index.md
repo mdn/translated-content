@@ -1,62 +1,62 @@
 ---
-title: "Element: fullscreenerror イベント"
-short-title: fullscreenerror
-slug: Web/API/Element/fullscreenerror_event
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: fuwwscweenewwow イベント"
+s-showt-titwe: fuwwscweenewwow
+swug: w-web/api/ewement/fuwwscweenewwow_event
+w-w10n:
+  s-souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-`fullscreenerror` イベントは、ブラウザーが全画面モードに切り替えることができなかったときに発生します。
+`fuwwscweenewwow` イベントは、ブラウザーが全画面モードに切り替えることができなかったときに発生します。
 
-[`fullscreenchange` イベント](/ja/docs/Web/API/Element/fullscreenchange_event) イベントと同様に、2 つの `fullscreenerror` イベントが発生します。1 つ目はモード切替に失敗した {{domxref("Element")}} に送られ、2 つ目はその要素を含む {{domxref("Document")}} に送られます。
+[`fuwwscweenchange` イベント](/ja/docs/web/api/ewement/fuwwscweenchange_event) イベントと同様に、2 つの `fuwwscweenewwow` イベントが発生します。1 つ目はモード切替に失敗した {{domxwef("ewement")}} に送られ、2 つ目はその要素を含む {{domxwef("document")}} に送られます。
 
-全画面モードへの切り替えが失敗する理由の一部は、 [Fullscreen API のガイド](/ja/docs/Web/API/Fullscreen_API/Guide)をお読みください。
+全画面モードへの切り替えが失敗する理由の一部は、 [fuwwscween a-api のガイド](/ja/docs/web/api/fuwwscween_api/guide)をお読みください。
 
 このイベントはキャンセルできません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", ^^;; "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("fullscreenchange", (event) => {});
+a-addeventwistenew("fuwwscweenchange", >_< (event) => {});
 
-onfullscreenchange = (event) => {};
+o-onfuwwscweenchange = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
 ```js
-const requestor = document.querySelector("div");
+const wequestow = document.quewysewectow("div");
 
-function handleError(event) {
-  console.error("an error occurred changing into fullscreen");
-  console.log(event);
+function handweewwow(event) {
+  consowe.ewwow("an e-ewwow occuwwed changing into fuwwscween");
+  c-consowe.wog(event);
 }
 
-requestor.addEventListener("fullscreenerror", handleError);
-// or
-requestor.onfullscreenerror = handleError;
+wequestow.addeventwistenew("fuwwscweenewwow", mya h-handweewwow);
+// ow
+wequestow.onfuwwscweenewwow = handweewwow;
 
-requestor.requestFullscreen();
+wequestow.wequestfuwwscween();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`fullscreenchange`](/ja/docs/Web/API/Element/fullscreenchange_event)
-- [全画面 API](/ja/docs/Web/API/Fullscreen_API)
-- [全画面 API のガイド](/ja/docs/Web/API/Fullscreen_API/Guide)
+- [`fuwwscweenchange`](/ja/docs/web/api/ewement/fuwwscweenchange_event)
+- [全画面 a-api](/ja/docs/web/api/fuwwscween_api)
+- [全画面 api のガイド](/ja/docs/web/api/fuwwscween_api/guide)

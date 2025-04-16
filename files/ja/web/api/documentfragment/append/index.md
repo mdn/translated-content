@@ -1,37 +1,37 @@
 ---
-title: "DocumentFragment: append() メソッド"
-short-title: append()
-slug: Web/API/DocumentFragment/append
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "documentfwagment: append() メソッド"
+s-showt-titwe: a-append()
+swug: w-web/api/documentfwagment/append
+w-w10n:
+  souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`DocumentFragment.append()`** メソッドは、この文書フラグメントの最後の子の後に、一連の {{domxref("Node")}} オブジェクトまたは文字列を挿入します。文字列は同等の {{domxref("Text")}} ノードとして挿入されます。
+**`documentfwagment.append()`** メソッドは、この文書フラグメントの最後の子の後に、一連の {{domxwef("node")}} オブジェクトまたは文字列を挿入します。文字列は同等の {{domxwef("text")}} ノードとして挿入されます。
 
-このメソッドは、`DocumentFragment` に子を追加します。ツリー内の任意の要素に追加する場合は、{{domxref("Element.append()")}} を参照してください。
+このメソッドは、`documentfwagment` に子を追加します。ツリー内の任意の要素に追加する場合は、{{domxwef("ewement.append()")}} を参照してください。
 
 ## 構文
 
-```js-nolint
-append(param1)
-append(param1, param2)
-append(param1, param2, /* … ,*/ paramN)
+```js-nowint
+a-append(pawam1)
+a-append(pawam1, σωσ p-pawam2)
+append(pawam1, >_< p-pawam2, /* … ,*/ pawamn)
 ```
 
 ### 引数
 
-- `param1`, …, `paramN`
-  - : 挿入する一連の {{domxref("Node")}} または文字列です。
+- `pawam1`, …, :3 `pawamn`
+  - : 挿入する一連の {{domxwef("node")}} または文字列です。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ### 例外
 
-- `HierarchyRequestError` {{DOMxRef("DOMException")}}
+- `hiewawchywequestewwow` {{domxwef("domexception")}}
   - : 階層内の指定された位置にノードが挿入できなかった場合に発生します。
 
 ## 例
@@ -39,22 +39,22 @@ append(param1, param2, /* … ,*/ paramN)
 ### 文書フラグメントに要素を追加
 
 ```js
-let fragment = new DocumentFragment();
-let div = document.createElement("div");
-fragment.append(div);
+wet fwagment = nyew documentfwagment();
+wet div = document.cweateewement("div");
+f-fwagment.append(div);
 
-fragment.children; // HTMLCollection [<div>]
+fwagment.chiwdwen; // htmwcowwection [<div>]
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("DocumentFragment.prepend()")}}
-- {{domxref("Element.append()")}}
+- {{domxwef("documentfwagment.pwepend()")}}
+- {{domxwef("ewement.append()")}}

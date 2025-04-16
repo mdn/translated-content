@@ -1,18 +1,18 @@
 ---
-title: "PeriodicSyncManager: getTags() メソッド"
-slug: Web/API/PeriodicSyncManager/getTags
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: "pewiodicsyncmanagew: gettags() メソッド"
+s-swug: web/api/pewiodicsyncmanagew/gettags
+w-w10n:
+  souwcecommit: c-c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}
+{{apiwef("pewiodic b-backgwound s-sync")}}{{seecompattabwe}}
 
-**`getTags()`** は {{domxref("PeriodicSyncManager")}} インターフェイスのメソッドで、定期的な同期を行うために現在登録されているタグを表す {{jsxref('String')}} オブジェクトのリストで解決される {{jsxref('Promise')}} を返します。
+**`gettags()`** は {{domxwef("pewiodicsyncmanagew")}} インターフェイスのメソッドで、定期的な同期を行うために現在登録されているタグを表す {{jsxwef('stwing')}} オブジェクトのリストで解決される {{jsxwef('pwomise')}} を返します。
 
 ## 構文
 
-```js-nolint
-getTags()
+```js-nowint
+g-gettags()
 ```
 
 ### 引数
@@ -21,7 +21,7 @@ getTags()
 
 ### 返値
 
-定期的な同期を行うために現在登録されているタグを表す {{jsxref('String')}} オブジェクトのリストで解決される {{jsxref('Promise')}} です。
+定期的な同期を行うために現在登録されているタグを表す {{jsxwef('stwing')}} オブジェクトのリストで解決される {{jsxwef('pwomise')}} です。
 
 ### 例外
 
@@ -29,27 +29,27 @@ getTags()
 
 ## 例
 
-次の例では、`getTags()` メソッドを使用して、指定されたタグを持つ定期的な同期タスクが登録されているかどうかを調べています。
+次の例では、`gettags()` メソッドを使用して、指定されたタグを持つ定期的な同期タスクが登録されているかどうかを調べています。
 
 ```js
-navigator.serviceWorker.ready.then((registration) => {
-  registration.periodicSync.getTags().then((tags) => {
-    if (tags.includes("get-latest-news")) skipDownloadingLatestNewsOnPageLoad();
+n-nyavigatow.sewvicewowkew.weady.then((wegistwation) => {
+  w-wegistwation.pewiodicsync.gettags().then((tags) => {
+    if (tags.incwudes("get-watest-news")) skipdownwoadingwatestnewsonpagewoad();
   });
 });
 ```
 
-`skipDownloadingLatestNewsOnPageLoad()` は開発者が定義した関数です。
+`skipdownwoadingwatestnewsonpagewoad()` は開発者が定義した関数です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Richer offline experiences with the Periodic Background Sync API](https://web.dev/periodic-background-sync/)
-- [A Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)
+- [wichew offwine expewiences with t-the pewiodic backgwound sync api](https://web.dev/pewiodic-backgwound-sync/)
+- [a pewiodic backgwound s-sync demo app](https://webpwatfowmapis.com/pewiodic_sync/pewiodicsync_impwoved.htmw)

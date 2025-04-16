@@ -1,19 +1,19 @@
 ---
-title: "Element: hasAttribute() メソッド"
-short-title: hasAttribute()
-slug: Web/API/Element/hasAttribute
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: hasattwibute() メソッド"
+s-showt-titwe: hasattwibute()
+s-swug: w-web/api/ewement/hasattwibute
+w-w10n:
+  souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Element.hasAttribute()`** メソッドは、指定した要素が指定した属性を持つかどうかを示す**論理値**を返します。
+**`ewement.hasattwibute()`** メソッドは、指定した要素が指定した属性を持つかどうかを示す**論理値**を返します。
 
 ## 構文
 
-```js-nolint
-hasAttribute(name)
+```js-nowint
+h-hasattwibute(name)
 ```
 
 ### 引数
@@ -28,16 +28,16 @@ hasAttribute(name)
 ## 例
 
 ```js
-const foo = document.getElementById("foo");
-if (foo.hasAttribute("bar")) {
+c-const foo = document.getewementbyid("foo");
+i-if (foo.hasattwibute("baw")) {
   // do something
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

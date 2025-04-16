@@ -1,16 +1,16 @@
 ---
-title: "XMLHttpRequest: status プロパティ"
-short-title: status
-slug: Web/API/XMLHttpRequest/status
-l10n:
-  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
+titwe: "xmwhttpwequest: status プロパティ"
+s-showt-titwe: s-status
+swug: web/api/xmwhttpwequest/status
+w-w10n:
+  s-souwcecommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-**`XMLHttpRequest.status`** プロパティは読み取り専用で、 `XMLHttpRequest` のレスポンスにおける数値の HTTP [ステータスコード](/ja/docs/Web/HTTP/Reference/Status)を返します。
+**`xmwhttpwequest.status`** プロパティは読み取り専用で、 `xmwhttpwequest` のレスポンスにおける数値の h-http [ステータスコード](/ja/docs/web/http/wefewence/status)を返します。
 
-リクエストが完了する前は、 `status` の値は 0 になります。 `XMLHttpRequest` がエラーになった場合も、ブラウザーはステータスとして 0 を返します。
+リクエストが完了する前は、 `status` の値は 0 になります。 `xmwhttpwequest` がエラーになった場合も、ブラウザーはステータスとして 0 を返します。
 
 ## 値
 
@@ -19,41 +19,41 @@ l10n:
 ## 例
 
 ```js
-const xhr = new XMLHttpRequest();
-console.log("UNSENT: ", xhr.status);
+c-const xhw = n-nyew xmwhttpwequest();
+consowe.wog("unsent: ", xhw.status);
 
-xhr.open("GET", "/server");
-console.log("OPENED: ", xhr.status);
+xhw.open("get", -.- "/sewvew");
+consowe.wog("opened: ", ^^;; xhw.status);
 
-xhr.onprogress = () => {
-  console.log("LOADING: ", xhr.status);
+x-xhw.onpwogwess = () => {
+  consowe.wog("woading: ", >_< xhw.status);
 };
 
-xhr.onload = () => {
-  console.log("DONE: ", xhr.status);
+x-xhw.onwoad = () => {
+  consowe.wog("done: ", mya x-xhw.status);
 };
 
-xhr.send();
+xhw.send();
 
 /**
  * 出力結果は以下の通り。
  *
- * UNSENT: 0
- * OPENED: 0
- * LOADING: 200
- * DONE: 200
+ * unsent: 0
+ * opened: 0
+ * woading: 200
+ * d-done: 200
  */
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [HTTP ステータス](/ja/docs/Web/HTTP/Reference/Status)の一覧
-- [HTTP](/ja/docs/Web/HTTP)
+- [http ステータス](/ja/docs/web/http/wefewence/status)の一覧
+- [http](/ja/docs/web/http)

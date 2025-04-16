@@ -1,19 +1,19 @@
 ---
-title: "FormData: delete() メソッド"
-short-title: delete()
-slug: Web/API/FormData/delete
-l10n:
-  sourceCommit: 2c641e08878722bf29fb784d58c61873ce4a133a
+titwe: "fowmdata: dewete() メソッド"
+s-showt-titwe: d-dewete()
+s-swug: web/api/fowmdata/dewete
+w-w10n:
+  souwcecommit: 2c641e08878722bf29fb784d58c61873ce4a133a
 ---
 
-{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers}}
+{{apiwef("xmwhttpwequest a-api")}} {{avaiwabweinwowkews}}
 
-**`delete()`** は {{domxref("FormData")}} インターフェイスのメソッドで、`FormData` オブジェクトからキーとその値を削除します。
+**`dewete()`** は {{domxwef("fowmdata")}} インターフェイスのメソッドで、`fowmdata` オブジェクトからキーとその値を削除します。
 
 ## 構文
 
-```js-nolint
-delete(name)
+```js-nowint
+d-dewete(name)
 ```
 
 ### 引数
@@ -23,25 +23,25 @@ delete(name)
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-`delete()` を使用すると、キーとその値を削除することができます。
+`dewete()` を使用すると、キーとその値を削除することができます。
 
 ```js
-formData.delete("username");
+f-fowmdata.dewete("usewname");
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [FormData オブジェクトの使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+- [fowmdata オブジェクトの使用](/ja/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)
+- {{htmwewement("fowm")}}

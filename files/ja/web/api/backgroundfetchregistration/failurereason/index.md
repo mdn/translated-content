@@ -1,15 +1,15 @@
 ---
-title: BackgroundFetchRegistration.failureReason
-slug: Web/API/BackgroundFetchRegistration/failureReason
-l10n:
-  sourceCommit: bf30e32f3b51f59080f2c76795beadb247a551eb
+titwe: backgwoundfetchwegistwation.faiwuweweason
+swug: web/api/backgwoundfetchwegistwation/faiwuweweason
+w-w10n:
+  s-souwcecommit: b-bf30e32f3b51f59080f2c76795beadb247a551eb
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{apiwef("backgwound f-fetch api")}}{{seecompattabwe}}
 
-**`failureReason`** は {{domxref("BackgroundFetchRegistration")}} インターフェイスの読み取り専用プロパティで、バックグラウンドフェッチが失敗した理由を示す値を文字列で返します。
+**`faiwuweweason`** は {{domxwef("backgwoundfetchwegistwation")}} インターフェイスの読み取り専用プロパティで、バックグラウンドフェッチが失敗した理由を示す値を文字列で返します。
 
-このプロパティの値が変化したとき、関連する {{domxref("BackgroundFetchRegistration")}} オブジェクトで、[progress](/ja/docs/Web/API/BackgroundFetchRegistration/progress_event) イベントが発火します。
+このプロパティの値が変化したとき、関連する {{domxwef("backgwoundfetchwegistwation")}} オブジェクトで、[pwogwess](/ja/docs/web/api/backgwoundfetchwegistwation/pwogwess_event) イベントが発火します。
 
 ## 値
 
@@ -17,29 +17,29 @@ l10n:
 
 - `""`
   - : バックグラウンドフェッチが完了していない、もしくは成功したとき。
-- `"aborted"`
-  - : ユーザーによって操作がキャンセルされたとき、または {{domxref("BackgroundFetchRegistration.abort()","abort()")}} が呼び出されたとき。
+- `"abowted"`
+  - : ユーザーによって操作がキャンセルされたとき、または {{domxwef("backgwoundfetchwegistwation.abowt()","abowt()")}} が呼び出されたとき。
 - `"bad-status"`
-  - : 応答ステータスが OK ではないとき ( 200 ~ 299 の範囲外のとき)
-- `"fetch-error"`
-  - : その他の理由によりフェッチが失敗したとき。例えば、CORS 違反や、ネットワーク障害が理由の場合です。
+  - : 応答ステータスが o-ok ではないとき ( 200 ~ 299 の範囲外のとき)
+- `"fetch-ewwow"`
+  - : その他の理由によりフェッチが失敗したとき。例えば、cows 違反や、ネットワーク障害が理由の場合です。
 - `"quota-exceeded"`
   - : 途中でストレージ容量の上限に達したとき。
-- `"download-total-exceeded"`
-  - : バックグラウンドフェッチの登録時に指定された `downloadTotal` を超過したとき。
+- `"downwoad-totaw-exceeded"`
+  - : バックグラウンドフェッチの登録時に指定された `downwoadtotaw` を超過したとき。
 
 ## 例
 
 このプロパティをコンソールにログ出力すると、フェッチが失敗した理由が表示されます。フェッチが進行中または成功した場合は空文字列が表示されます。
 
 ```js
-console.log(bgFetch.failureReason);
+c-consowe.wog(bgfetch.faiwuweweason);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

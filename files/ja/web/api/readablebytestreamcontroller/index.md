@@ -1,71 +1,71 @@
 ---
-title: ReadableByteStreamController
-slug: Web/API/ReadableByteStreamController
-l10n:
-  sourceCommit: d41c5446d4ef257280fae9b78e2298ced8954a95
+titwe: weadabwebytestweamcontwowwew
+swug: web/api/weadabwebytestweamcontwowwew
+w-w10n:
+  souwcecommit: d-d41c5446d4ef257280fae9b78e2298ced8954a95
 ---
 
-{{APIRef("Streams")}}
+{{apiwef("stweams")}}
 
-**`ReadableByteStreamController`** は[ストリーム API](/ja/docs/Web/API/Streams_API) のインターフェイスで、[読み取り可能なバイトストリーム](/ja/docs/Web/API/Streams_API/Using_readable_byte_streams)コントローラーを表します。
-これは、基礎となるバイトソースを持つ {{domxref("ReadableStream")}} の状態と内部キューを制御し、ストリームの内部キューが空の場合に、基礎となるソースからコンシューマーへの効率的なゼロコピーデータ移譲を可能にします。
+**`weadabwebytestweamcontwowwew`** は[ストリーム a-api](/ja/docs/web/api/stweams_api) のインターフェイスで、[読み取り可能なバイトストリーム](/ja/docs/web/api/stweams_api/using_weadabwe_byte_stweams)コントローラーを表します。
+これは、基礎となるバイトソースを持つ {{domxwef("weadabwestweam")}} の状態と内部キューを制御し、ストリームの内部キューが空の場合に、基礎となるソースからコンシューマーへの効率的なゼロコピーデータ移譲を可能にします。
 
-このコントローラ型のインスタンスは、 `underlyingSource` オブジェクトに `type="bytes"` プロパティを設定して [`ReadableStream()` コンストラクター](/ja/docs/Web/API/ReadableStream/ReadableStream#type)の引数として渡された場合に作成されます。
-`underlyingSource` オブジェクトは [`start()`](/ja/docs/Web/API/ReadableStream/ReadableStream#start) および [`pull()`](/ja/docs/Web/API/ReadableStream/ReadableStream#pull) コールバック関数を定義することもできます。
+このコントローラ型のインスタンスは、 `undewwyingsouwce` オブジェクトに `type="bytes"` プロパティを設定して [`weadabwestweam()` コンストラクター](/ja/docs/web/api/weadabwestweam/weadabwestweam#type)の引数として渡された場合に作成されます。
+`undewwyingsouwce` オブジェクトは [`stawt()`](/ja/docs/web/api/weadabwestweam/weadabwestweam#stawt) および [`puww()`](/ja/docs/web/api/weadabwestweam/weadabwestweam#puww) コールバック関数を定義することもできます。
 これらは、コントローラーを引数として呼び出され、 基盤となるソースを設定し、必要に応じてデータをリクエストします。
 
-基盤となるソースは、コントローラーを使用して [`byobRequest`](#readablebytestreamcontroller.byobrequest) プロパティまたは [`enqueue()`](#readablebytestreamcontroller.enqueue) メソッドでストリームにデータを供給します。
-[`byobRequest`](#readablebytestreamcontroller.byobrequest) は {{domxref("ReadableStreamBYOBRequest")}} オブジェクトで、コンシューマーから直接コンシューマーにゼロコピーでデータを移譲するための待機リクエストを表します。
-データが存在する場合は、`byobRequest` を使用してデータをコピーする必要があります（この場合は `enqueue()` を使用しないでください）。
-基盤となるソースがストリームにデータを渡す必要があり、 `byobRequest` が `null` の場合、ソースは [`enqueue()`](#readablebytestreamcontroller.enqueue) を呼び出して、ストリーム内部のキューにデータを追加することができます。
+基盤となるソースは、コントローラーを使用して [`byobwequest`](#weadabwebytestweamcontwowwew.byobwequest) プロパティまたは [`enqueue()`](#weadabwebytestweamcontwowwew.enqueue) メソッドでストリームにデータを供給します。
+[`byobwequest`](#weadabwebytestweamcontwowwew.byobwequest) は {{domxwef("weadabwestweambyobwequest")}} オブジェクトで、コンシューマーから直接コンシューマーにゼロコピーでデータを移譲するための待機リクエストを表します。
+データが存在する場合は、`byobwequest` を使用してデータをコピーする必要があります（この場合は `enqueue()` を使用しないでください）。
+基盤となるソースがストリームにデータを渡す必要があり、 `byobwequest` が `nuww` の場合、ソースは [`enqueue()`](#weadabwebytestweamcontwowwew.enqueue) を呼び出して、ストリーム内部のキューにデータを追加することができます。
 
-[`byobRequest`](#readablebytestreamcontroller.byobrequest) は、リーダーからのリクエストがあり、ストリームの内部キューが空の場合にのみ、「BYOB モード」で作成されることに注意してください。
-「BYOB モード」は、 {{domxref("ReadableStreamBYOBReader")}} （通常、 {{domxref("ReadableStream.getReader()")}} を引数 `{ mode: 'byob' }` で呼び出すことで構築されます）を使用している場合に有効になります。
-既定値でリーダーを使用し、 [`autoAllocateChunkSize`](/ja/docs/Web/API/ReadableStream/ReadableStream#autoallocatechunksize) が [`ReadableController()` コンストラクター](/ja/docs/Web/API/ReadableStream/ReadableStream#autoallocatechunksize) で指定されている場合にも有効になります。
+[`byobwequest`](#weadabwebytestweamcontwowwew.byobwequest) は、リーダーからのリクエストがあり、ストリームの内部キューが空の場合にのみ、「byob モード」で作成されることに注意してください。
+「byob モード」は、 {{domxwef("weadabwestweambyobweadew")}} （通常、 {{domxwef("weadabwestweam.getweadew()")}} を引数 `{ m-mode: 'byob' }` で呼び出すことで構築されます）を使用している場合に有効になります。
+既定値でリーダーを使用し、 [`autoawwocatechunksize`](/ja/docs/web/api/weadabwestweam/weadabwestweam#autoawwocatechunksize) が [`weadabwecontwowwew()` コンストラクター](/ja/docs/web/api/weadabwestweam/weadabwestweam#autoawwocatechunksize) で指定されている場合にも有効になります。
 
-基盤となるバイトソースは、コントローラーを使用して、すべてのデータが送信されたときにストリームを閉じたり ([`close()`](#readablebytestreamcontroller.close))、 [`error()`](#readablebytestreamcontroller.error) を使用して基盤となるソースからエラーを報告したりすることもできます。
-コントローラーの [`desiredSize`](#readablebytestreamcontroller.desiredsize) プロパティを使用して「背圧」をかけ、基盤となるソースに内部キューのサイズを通知します（値が小さいと、キューがいっぱいになっていることを示し、基盤となるソースに流入を一時停止またはスロットルすることが望ましいことを示唆します）。
+基盤となるバイトソースは、コントローラーを使用して、すべてのデータが送信されたときにストリームを閉じたり ([`cwose()`](#weadabwebytestweamcontwowwew.cwose))、 [`ewwow()`](#weadabwebytestweamcontwowwew.ewwow) を使用して基盤となるソースからエラーを報告したりすることもできます。
+コントローラーの [`desiwedsize`](#weadabwebytestweamcontwowwew.desiwedsize) プロパティを使用して「背圧」をかけ、基盤となるソースに内部キューのサイズを通知します（値が小さいと、キューがいっぱいになっていることを示し、基盤となるソースに流入を一時停止またはスロットルすることが望ましいことを示唆します）。
 
 たとえコントローラーが主に基盤となるバイトソースによって使用されるとしても、ストリームの指示のためにシステムの他の部分によって格納することができない理由はないことに注意してください。
 
 ## コンストラクター
 
-なし。 `ReadableByteStreamController` インスタンスは、 `underlyingSource` に `type="bytes"` プロパティが設定されたものが [`ReadableStream()` コンストラクター](/ja/docs/Web/API/ReadableStream/ReadableStream#type)に渡された場合、自動的に作成されます。
+なし。 `weadabwebytestweamcontwowwew` インスタンスは、 `undewwyingsouwce` に `type="bytes"` プロパティが設定されたものが [`weadabwestweam()` コンストラクター](/ja/docs/web/api/weadabwestweam/weadabwestweam#type)に渡された場合、自動的に作成されます。
 
 ## インスタンスプロパティ
 
-- {{domxref("ReadableByteStreamController.byobRequest")}} {{ReadOnlyInline}}
-  - : 現在の BYOB プルリクエストを返します。未処理のリクエストがない場合は `null` となります。
-- {{domxref("ReadableByteStreamController.desiredSize")}} {{ReadOnlyInline}}
+- {{domxwef("weadabwebytestweamcontwowwew.byobwequest")}} {{weadonwyinwine}}
+  - : 現在の b-byob プルリクエストを返します。未処理のリクエストがない場合は `nuww` となります。
+- {{domxwef("weadabwebytestweamcontwowwew.desiwedsize")}} {{weadonwyinwine}}
   - : ストリームの内部キューを満たすために必要な希望サイズを返します。
 
 ## インスタンスメソッド
 
-- {{domxref("ReadableByteStreamController.close()")}}
+- {{domxwef("weadabwebytestweamcontwowwew.cwose()")}}
   - : 関連するストリームを閉じます。
-- {{domxref("ReadableByteStreamController.enqueue()")}}
+- {{domxwef("weadabwebytestweamcontwowwew.enqueue()")}}
   - : 所与のチャンクを関連するストリームのキューに入れます。
-- {{domxref("ReadableByteStreamController.error()")}}
+- {{domxwef("weadabwebytestweamcontwowwew.ewwow()")}}
   - : 関連するストリームとの今後のやり取りでエラーが発生します。
 
 ## 例
 
-コントローラーは、データを移譲またはエンキューしたり、ストリームにデータがない（閉じられた）またはエラーとされていたことを指示するために、基盤となるソースによって使用されます。また、 {{domxref("ReadableByteStreamController.desiredSize","desiredSize")}} を使用して、希望するデータレートの「上流」から基盤ソースに指示するためにも使用します。
+コントローラーは、データを移譲またはエンキューしたり、ストリームにデータがない（閉じられた）またはエラーとされていたことを指示するために、基盤となるソースによって使用されます。また、 {{domxwef("weadabwebytestweamcontwowwew.desiwedsize","desiwedsize")}} を使用して、希望するデータレートの「上流」から基盤ソースに指示するためにも使用します。
 
-[読み取り可能なバイトストリームの使用](/ja/docs/Web/API/Streams_API/Using_readable_byte_streams)の例、特に[読み取り可能なソケットプッシュバイトストリームの作成](/ja/docs/Web/API/Streams_API/Using_readable_byte_streams#読み取り可能なソケットプッシュバイトストリームの作成)がこれらのほとんどの場合を示します。
+[読み取り可能なバイトストリームの使用](/ja/docs/web/api/stweams_api/using_weadabwe_byte_stweams)の例、特に[読み取り可能なソケットプッシュバイトストリームの作成](/ja/docs/web/api/stweams_api/using_weadabwe_byte_stweams#読み取り可能なソケットプッシュバイトストリームの作成)がこれらのほとんどの場合を示します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ストリーム API の概念](/ja/docs/Web/API/Streams_API)
-- [読み取り可能なバイトストリームの使用](/ja/docs/Web/API/Streams_API/Using_readable_byte_streams)
-- {{domxref("ReadableStream")}}
-- [WHATWG Stream Visualizer](https://whatwg-stream-visualizer.glitch.me/), for a basic visualization of readable, writable, and transform streams.
-- [Web-streams-polyfill](https://github.com/MattiasBuelens/web-streams-polyfill) or [sd-streams](https://github.com/stardazed/sd-streams) - polyfills
+- [ストリーム a-api の概念](/ja/docs/web/api/stweams_api)
+- [読み取り可能なバイトストリームの使用](/ja/docs/web/api/stweams_api/using_weadabwe_byte_stweams)
+- {{domxwef("weadabwestweam")}}
+- [naniwg s-stweam v-visuawizew](https://naniwg-stweam-visuawizew.gwitch.me/), σωσ fow a basic visuawization of weadabwe, >_< wwitabwe, and twansfowm stweams. :3
+- [web-stweams-powyfiww](https://github.com/mattiasbuewens/web-stweams-powyfiww) o-ow [sd-stweams](https://github.com/stawdazed/sd-stweams) - powyfiwws

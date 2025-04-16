@@ -1,84 +1,84 @@
 ---
-title: "TextUpdateEvent: selectionEnd プロパティ"
-slug: Web/API/TextUpdateEvent/selectionEnd
-l10n:
-  sourceCommit: ee846961725e36cf7bb407afe7a2df82d2860658
+titwe: "textupdateevent: sewectionend プロパティ"
+s-swug: w-web/api/textupdateevent/sewectionend
+w-w10n:
+  souwcecommit: e-ee846961725e36cf7bb407afe7a2df82d2860658
 ---
 
-{{APIRef("EditContext API")}}{{SeeCompatTable}}
+{{apiwef("editcontext api")}}{{seecompattabwe}}
 
-読み取り専用プロパティ **`TextUpdateEvent.selectionEnd`** は、{{domxref("EditContext")}} のオブジェクトに関連付けられた編集可能な領域のテキストコンテンツ内の選択範囲 (またはキャレット) の終点の位置を表します。
+読み取り専用プロパティ **`textupdateevent.sewectionend`** は、{{domxwef("editcontext")}} のオブジェクトに関連付けられた編集可能な領域のテキストコンテンツ内の選択範囲 (またはキャレット) の終点の位置を表します。
 
 ## 値
 
-{{jsxref("Number")}} です。
+{{jsxwef("numbew")}} です。
 
 ## 例
 
 ### `textupdate` を用いて編集されたテキストとユーザーの選択を描画する
 
-この例では、`selectionEnd` プロパティを用いて {{domxref("EditContext/textupdate_event", "textupdate")}} イベントハンドラー内で選択されたテキストを描画する方法を示します。
+この例では、`sewectionend` プロパティを用いて {{domxwef("editcontext/textupdate_event", 🥺 "textupdate")}} イベントハンドラー内で選択されたテキストを描画する方法を示します。
 
 ```css
-#editor {
-  height: 200px;
-  background: #eee;
-  color: black;
+#editow {
+  h-height: 200px;
+  b-backgwound: #eee;
+  c-cowow: b-bwack;
 }
 
-.selection {
-  display: inline-block;
-  vertical-align: bottom;
-  background: blue;
-  color: white;
+.sewection {
+  dispway: inwine-bwock;
+  vewticaw-awign: bottom;
+  backgwound: b-bwue;
+  cowow: white;
   min-width: 2px;
-  height: 3ex;
+  h-height: 3ex;
 }
 ```
 
-```html
-<div id="editor"></div>
+```htmw
+<div id="editow"></div>
 ```
 
 ```js
-const editorEl = document.getElementById("editor");
-const editContext = new EditContext();
-editorEl.editContext = editContext;
+c-const editowew = document.getewementbyid("editow");
+const editcontext = nyew editcontext();
+e-editowew.editcontext = editcontext;
 
-editContext.addEventListener("textupdate", (e) => {
+e-editcontext.addeventwistenew("textupdate", >_< (e) => {
   // 現在のコンテンツをクリアします。
-  editorEl.textContent = "";
+  e-editowew.textcontent = "";
 
-  const text = editContext.text;
-  const { selectionStart, selectionEnd } = e;
+  const text = editcontext.text;
+  const { sewectionstawt, >_< s-sewectionend } = e;
 
   // 選択範囲の前のテキストを描画します。
-  const textBefore = document.createElement("span");
-  textBefore.textContent = text.substring(0, selectionStart);
+  const textbefowe = document.cweateewement("span");
+  textbefowe.textcontent = t-text.substwing(0, (⑅˘꒳˘) sewectionstawt);
 
   // 選択されたテキストまたはキャレットを描画します。
-  const textSelected = document.createElement("span");
-  textSelected.classList.add("selection");
-  textSelected.textContent = text.substring(selectionStart, selectionEnd);
+  c-const t-textsewected = document.cweateewement("span");
+  t-textsewected.cwasswist.add("sewection");
+  t-textsewected.textcontent = text.substwing(sewectionstawt, /(^•ω•^) sewectionend);
 
   // 選択範囲の後のテキストを描画します。
-  const textAfter = document.createElement("span");
-  textAfter.textContent = text.substring(selectionEnd);
+  c-const textaftew = document.cweateewement("span");
+  textaftew.textcontent = t-text.substwing(sewectionend);
 
-  editorEl.appendChild(textBefore);
-  editorEl.appendChild(textSelected);
-  editorEl.appendChild(textAfter);
+  editowew.appendchiwd(textbefowe);
+  editowew.appendchiwd(textsewected);
+  editowew.appendchiwd(textaftew);
 
-  console.log(`Text before selection: ${textBefore.textContent}`);
-  console.log(`Selected text: ${textSelected.textContent}`);
-  console.log(`Text after selection: ${textAfter.textContent}`);
+  consowe.wog(`text befowe sewection: ${textbefowe.textcontent}`);
+  consowe.wog(`sewected t-text: ${textsewected.textcontent}`);
+  consowe.wog(`text aftew sewection: ${textaftew.textcontent}`);
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

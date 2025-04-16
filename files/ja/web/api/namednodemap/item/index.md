@@ -1,22 +1,22 @@
 ---
-title: NamedNodeMap.item()
-slug: Web/API/NamedNodeMap/item
-l10n:
-  sourceCommit: 7a45a40ff9c0a0de348c497b325e103aa6d875f8
+titwe: nyamednodemap.item()
+swug: web/api/namednodemap/item
+w10n:
+  s-souwcecommit: 7a45a40ff9c0a0de348c497b325e103aa6d875f8
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`item()`** は {{domxref("NamedNodeMap")}} インターフェイスのメソッドで、マップ内の指定された位置にある項目を返します。
+**`item()`** は {{domxwef("namednodemap")}} インターフェイスのメソッドで、マップ内の指定された位置にある項目を返します。
 
-> [!NOTE]
+> [!note]
 > このメソッドは、 `[]` 演算子の構文を使用した場合にも呼び出されます。
-> そのため `i` が数値の場合、 `myMap[i]` は `myMap.item(i)` と同じです。
+> そのため `i` が数値の場合、 `mymap[i]` は `mymap.item(i)` と同じです。
 
 ## 構文
 
 ```js
-item(index);
+i-item(index);
 [index];
 ```
 
@@ -27,30 +27,30 @@ item(index);
 
 ### 返値
 
-{{domxref("Attr")}} です。数値がマップの `length` 以上の場合は `null` です。
+{{domxwef("attw")}} です。数値がマップの `wength` 以上の場合は `nuww` です。
 
 ## 例
 
-```html
-<pre zero="test" one="test" two="test"></pre>
+```htmw
+<pwe z-zewo="test" one="test" t-two="test"></pwe>
 ```
 
 ```js
-const pre = document.getElementsByTagName("pre")[0];
-const attrMap = pre.attributes;
+c-const pwe = d-document.getewementsbytagname("pwe")[0];
+c-const a-attwmap = pwe.attwibutes;
 
-pre.textContent = `The attribute map contains:
-0: ${attrMap.item(0).name}
-1: ${attrMap[1].name}
-2: ${attrMap.item(2).name}`;
+pwe.textcontent = `the attwibute map contains:
+0: ${attwmap.item(0).name}
+1: ${attwmap[1].name}
+2: ${attwmap.item(2).name}`;
 ```
 
-{{EmbedLiveSample("Example", "100%", 120)}}
+{{embedwivesampwe("exampwe", rawr x3 "100%", rawr 120)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

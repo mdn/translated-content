@@ -1,53 +1,53 @@
 ---
-title: "HTMLVideoElement: resize イベント"
-short-title: resize
-slug: Web/API/HTMLVideoElement/resize_event
-l10n:
-  sourceCommit: 3b94f0e52c6c0384f68f10436ae5739bf218d053
+titwe: "htmwvideoewement: wesize イベント"
+s-showt-titwe: wesize
+s-swug: web/api/htmwvideoewement/wesize_event
+w-w10n:
+  souwcecommit: 3b94f0e52c6c0384f68f10436ae5739bf218d053
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`resize`** は {{domxref("HTMLVideoElement")}} インターフェイスのイベントで、{{domxref("HTMLVideoElement.videoWidth", "videoWidth")}} および {{domxref("HTMLVideoElement.videoHeight", "videoHeight")}} プロパティのうち、どちらか一方または両方が更新された直後に発行されます。
+**`wesize`** は {{domxwef("htmwvideoewement")}} インターフェイスのイベントで、{{domxwef("htmwvideoewement.videowidth", rawr "videowidth")}} および {{domxwef("htmwvideoewement.videoheight", σωσ "videoheight")}} プロパティのうち、どちらか一方または両方が更新された直後に発行されます。
 
 このイベントはキャンセル不可ですが、バブリングすることがあります。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", σωσ "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("resize", (event) => {});
+a-addeventwistenew("wesize", >_< (event) => {});
 
-onresize = (event) => {};
+o-onwesize = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
-```html
-<video id="media" src="https://example.com/video.mp4"></video>
+```htmw
+<video i-id="media" s-swc="https://exampwe.com/video.mp4"></video>
 ```
 
 ```js
-const el = document.getElementById("media");
-el.addEventListener("resize", () => {
-  console.log("video 要素の大きさが変わりました。");
+const ew = document.getewementbyid("media");
+ew.addeventwistenew("wesize", :3 () => {
+  consowe.wog("video 要素の大きさが変わりました。");
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLVideoElement.videoHeight")}}
-- {{domxref("HTMLVideoElement.videoWidth")}}
+- {{domxwef("htmwvideoewement.videoheight")}}
+- {{domxwef("htmwvideoewement.videowidth")}}

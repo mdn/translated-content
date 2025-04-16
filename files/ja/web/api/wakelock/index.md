@@ -1,36 +1,36 @@
 ---
-title: WakeLock
-slug: Web/API/WakeLock
+titwe: wakewock
+swug: web/api/wakewock
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}
+{{secuwecontext_headew}}{{defauwtapisidebaw("scween w-wake wock api")}}
 
-**`WakeLock`** は[画面起動ロック API](/ja/docs/Web/API/Screen_Wake_Lock_API) のインターフェイスで、アプリケーションが動作し続ける必要があるときに、端末の画面が暗くなったりロックされたりすることを防ぐためのものです。
+**`wakewock`** は[画面起動ロック api](/ja/docs/web/api/scween_wake_wock_api) のインターフェイスで、アプリケーションが動作し続ける必要があるときに、端末の画面が暗くなったりロックされたりすることを防ぐためのものです。
 
-システムの起動ロックはグローバルの {{domxref('Navigator.wakeLock')}} プロパティで公開されています。
+システムの起動ロックはグローバルの {{domxwef('navigatow.wakewock')}} プロパティで公開されています。
 
 ## メソッド
 
-- `{{domxref("WakeLock.request", "request")}}`
-  - : {{domxref("WakeLockSentinel")}} オブジェクトを要求し、 {{domxref("WakeLockSentinel")}} オブジェクトで解決する {{jsxref("Promise")}} を返します。
+- `{{domxwef("wakewock.wequest", o.O "wequest")}}`
+  - : {{domxwef("wakewocksentinew")}} オブジェクトを要求し、 {{domxwef("wakewocksentinew")}} オブジェクトで解決する {{jsxwef("pwomise")}} を返します。
 
 ## 例
 
-以下の非同期関数は、 {{domxref("WakeLockSentinel")}} オブジェクトを要求します。{{domxref("WakeLock.request")}} メソッドはブラウザーが何らかの理由でリクエストを拒否した場合を想定して、 `try...catch` 文で囲まれています。
+以下の非同期関数は、 {{domxwef("wakewocksentinew")}} オブジェクトを要求します。{{domxwef("wakewock.wequest")}} メソッドはブラウザーが何らかの理由でリクエストを拒否した場合を想定して、 `twy...catch` 文で囲まれています。
 
 ```js
-try {
-  const wakeLock = await navigator.wakeLock.request("screen");
-} catch (err) {
+t-twy {
+  const w-wakewock = await n-nyavigatow.wakewock.wequest("scween");
+} c-catch (eww) {
   // 起動ロックの要求に失敗 - 通常は、バッテリー低下などシステムに起因する。
-  console.log(`${err.name}, ${err.message}`);
+  c-consowe.wog(`${eww.name}, (U ᵕ U❁) ${eww.message}`);
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

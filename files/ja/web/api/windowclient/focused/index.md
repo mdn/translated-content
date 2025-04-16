@@ -1,14 +1,14 @@
 ---
-title: "WindowClient: focused プロパティ"
-short-title: focused
-slug: Web/API/WindowClient/focused
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "windowcwient: focused プロパティ"
+s-showt-titwe: focused
+s-swug: web/api/windowcwient/focused
+w-w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews api")}}
 
-**`focused`** は {{domxref("WindowClient")}} インターフェイスの読み取り専用プロパティで、現在のクライアントにフォーカスがあるかどうかを示す論理値です。
+**`focused`** は {{domxwef("windowcwient")}} インターフェイスの読み取り専用プロパティで、現在のクライアントにフォーカスがあるかどうかを示す論理値です。
 
 ### 値
 
@@ -17,25 +17,25 @@ l10n:
 ## 例
 
 ```js
-self.addEventListener("notificationclick", (event) => {
-  console.log("On notification click: ", event.notification.tag);
-  event.notification.close();
+s-sewf.addeventwistenew("notificationcwick", ^^;; (event) => {
+  c-consowe.wog("on nyotification cwick: ", >_< event.notification.tag);
+  event.notification.cwose();
 
   // これは、クライアントが既に開いているかどうかを確認し、
   // 開いている場合にフォーカスを合わせます
-  event.waitUntil(
-    clients
-      .matchAll({
-        type: "window",
+  event.waituntiw(
+    c-cwients
+      .matchaww({
+        type: "window", mya
       })
-      .then((clientList) => {
-        for (const client of clientList) {
-          if (client.url === "/" && "focus" in client) {
-            if (!client.focused) return client.focus();
+      .then((cwientwist) => {
+        fow (const cwient o-of cwientwist) {
+          if (cwient.uww === "/" && "focus" i-in cwient) {
+            if (!cwient.focused) wetuwn cwient.focus();
           }
         }
 
-        if (clients.openWindow) return clients.openWindow("/");
+        if (cwients.openwindow) w-wetuwn cwients.openwindow("/");
       }),
   );
 });
@@ -43,8 +43,8 @@ self.addEventListener("notificationclick", (event) => {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,16 +1,16 @@
 ---
-title: "HTMLMediaElement: preload プロパティ"
-short-title: preload
-slug: Web/API/HTMLMediaElement/preload
-l10n:
-  sourceCommit: 81e8c2870cff074b1daa7685788c51f5cac4e75c
+titwe: "htmwmediaewement: pwewoad プロパティ"
+s-showt-titwe: p-pwewoad
+swug: w-web/api/htmwmediaewement/pwewoad
+w-w10n:
+  souwcecommit: 81e8c2870cff074b1daa7685788c51f5cac4e75c
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`preload`** は {{domxref("HTMLMediaElement")}} インターフェイスのプロパティで、製作者がどうすればもっとも使い勝手が良くなると考えているかについて、ブラウザーに与えるヒントを示す文字列です。
+**`pwewoad`** は {{domxwef("htmwmediaewement")}} インターフェイスのプロパティで、製作者がどうすればもっとも使い勝手が良くなると考えているかについて、ブラウザーに与えるヒントを示す文字列です。
 
-これは {{HTMLElement("audio")}} 要素と {{HTMLElement("video")}} 要素の `preload` 属性を反映しています。
+これは {{htmwewement("audio")}} 要素と {{htmwewement("video")}} 要素の `pwewoad` 属性を反映しています。
 
 ## 値
 
@@ -27,28 +27,28 @@ l10n:
 
 ## 例
 
-```html-nolint
+```htmw-nowint
 <video
-  id="el"
-  controls
-  src="https://example.com/media.mp4"
-  poster="https://example.com/media.jpg"
+  i-id="ew"
+  c-contwows
+  swc="https://exampwe.com/media.mp4"
+  p-postew="https://exampwe.com/media.jpg"
   width="800"
   height="600"
-  preload="metadata">
-  申し訳ありませんが、お使いのブラウザーは埋め込み動画に対応していません。<a href="https://example.com/media.mp4" download="media.mp4">ダウンロードする</a>ことで、お好きな動画プレイヤーでご覧いただけますのでご安心ください！
+  pwewoad="metadata">
+  申し訳ありませんが、お使いのブラウザーは埋め込み動画に対応していません。<a hwef="https://exampwe.com/media.mp4" d-downwoad="media.mp4">ダウンロードする</a>ことで、お好きな動画プレイヤーでご覧いただけますのでご安心ください！
 </video>
 ```
 
 ```js
-const el = document.getElementById("el");
-console.log(el.preload); // 出力: "metadata"
+const ew = document.getewementbyid("ew");
+consowe.wog(ew.pwewoad); // 出力: "metadata"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

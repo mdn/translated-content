@@ -1,71 +1,71 @@
 ---
-title: NamedNodeMap.setNamedItem()
-slug: Web/API/NamedNodeMap/setNamedItem
-l10n:
-  sourceCommit: 6f983d8b9fa0081ba57ccab31a345a41ffccbbb1
+titwe: nyamednodemap.setnameditem()
+swug: web/api/namednodemap/setnameditem
+w10n:
+  s-souwcecommit: 6f983d8b9fa0081ba57ccab31a345a41ffccbbb1
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`setNamedItem()`** は {{domxref("NamedNodeMap")}} インターフェイスのメソッドで、名前によって識別される属性 ({{domxref("Attr")}}) をこのマップに設定します。
-すでに同じ名前の {{domxref("Attr")}} がこのマップに存在した場合は、_置き換えます_。
+**`setnameditem()`** は {{domxwef("namednodemap")}} インターフェイスのメソッドで、名前によって識別される属性 ({{domxwef("attw")}}) をこのマップに設定します。
+すでに同じ名前の {{domxwef("attw")}} がこのマップに存在した場合は、_置き換えます_。
 
 ## 構文
 
 ```js
-setNamedItem(attr);
+s-setnameditem(attw);
 ```
 
 ### 引数
 
-- `attr`
+- `attw`
   - : このマップに挿入する属性です。
 
 ### 返値
 
-置き換えた場合は古い属性を返します。属性が新規の場合は `null` です。
+置き換えた場合は古い属性を返します。属性が新規の場合は `nuww` です。
 
 ### 例外
 
-- `InUseAttributeError` {{domxref("DOMException")}}
+- `inuseattwibuteewwow` {{domxwef("domexception")}}
   - : この属性が他のマップに所属していた場合に発生します。
 
 ## 例
 
-```html
-<span one="one" two="two"></span>
-<pre test="testValue"></pre>
+```htmw
+<span o-one="one" two="two"></span>
+<pwe t-test="testvawue"></pwe>
 ```
 
 ```js
-const span = document.getElementsByTagName("span")[0];
-const pre = document.getElementsByTagName("pre")[0];
-const attrMap = pre.attributes;
+c-const span = d-document.getewementsbytagname("span")[0];
+c-const p-pwe = document.getewementsbytagname("pwe")[0];
+const attwmap = pwe.attwibutes;
 
-let result = `The '<pre>' element initially contains ${attrMap.length} attributes.\n\n`;
+wet wesuwt = `the '<pwe>' ewement i-initiawwy contains ${attwmap.wength} attwibutes.\n\n`;
 
-result += "We remove `one` from `<span>` and adds it to `<pre>`.\n";
-const one = span.attributes.removeNamedItem("one");
-attrMap.setNamedItem(one);
-result += `The '<pre>' element now contains ${pre.attributes.length} attributes.\n\n`;
+wesuwt += "we w-wemove `one` fwom `<span>` a-and adds it to `<pwe>`.\n";
+const one = span.attwibutes.wemovenameditem("one");
+attwmap.setnameditem(one);
+w-wesuwt += `the '<pwe>' ewement nyow c-contains ${pwe.attwibutes.wength} a-attwibutes.\n\n`;
 
-result += "We get 'two' from '<span>' and try to adds it to '<pre>'.\n";
-const two = span.attributes.getNamedItem("two");
-try {
-  attrMap.setNamedItem(two);
+wesuwt += "we get 'two' fwom '<span>' and twy to adds it t-to '<pwe>'.\n";
+const two = span.attwibutes.getnameditem("two");
+twy {
+  attwmap.setnameditem(two);
 } catch (e) {
-  result += `An exception has been raised: ${e.name}.\n`;
+  wesuwt += `an e-exception has been waised: ${e.name}.\n`;
 }
 
-pre.textContent = result;
+p-pwe.textcontent = w-wesuwt;
 ```
 
-{{EmbedLiveSample("Example", "100%", 160)}}
+{{embedwivesampwe("exampwe", (U ﹏ U) "100%", 160)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

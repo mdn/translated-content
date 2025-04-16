@@ -1,24 +1,24 @@
 ---
-title: "Element: setAttributeNode() メソッド"
-short-title: setAttributeNode()
-slug: Web/API/Element/setAttributeNode
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: setattwibutenode() メソッド"
+s-showt-titwe: s-setattwibutenode()
+s-swug: web/api/ewement/setattwibutenode
+w-w10n:
+  s-souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-**`setAttributeNode()`** メソッドは、新しい `Attr` ノードを指定された要素に追加します。
+**`setattwibutenode()`** メソッドは、新しい `attw` ノードを指定された要素に追加します。
 
 ### 構文
 
-```js-nolint
-setAttributeNode(attribute)
+```js-nowint
+s-setattwibutenode(attwibute)
 ```
 
 ### 引数
 
-- `attribute` は要素に追加する `Attr` ノードです。
+- `attwibute` は要素に追加する `attw` ノードです。
 
 ### 返値
 
@@ -26,42 +26,42 @@ setAttributeNode(attribute)
 
 ## 例
 
-この例では `align` 属性をある要素から別の要素へコピーしています。
+この例では `awign` 属性をある要素から別の要素へコピーしています。
 
-### HTML
+### htmw
 
-```html
-<div id="one" align="left">one</div>
+```htmw
+<div id="one" awign="weft">one</div>
 <div id="two">two</div>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-let d1 = document.getElementById("one");
-let d2 = document.getElementById("two");
-let a = d1.getAttributeNode("align");
+wet d1 = document.getewementbyid("one");
+w-wet d2 = document.getewementbyid("two");
+wet a-a = d1.getattwibutenode("awign");
 
-d2.setAttributeNode(a.cloneNode(true));
+d2.setattwibutenode(a.cwonenode(twue));
 
-// 返値: 'left'
-alert(d2.attributes[1].value);
+// 返値: 'weft'
+awewt(d2.attwibutes[1].vawue);
 ```
 
 ## メモ
 
 指定された属性が要素に既に存在する場合、その属性は新しい属性に置き換えられ、置き換えられた属性が返されます。
 
-このメソッドが使われることはあまりなく、通常は {{domxref("Element.setAttribute()")}} が要素の属性を変更するために使われます。
+このメソッドが使われることはあまりなく、通常は {{domxwef("ewement.setattwibute()")}} が要素の属性を変更するために使われます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Document.createAttribute()")}}
+- {{domxwef("document.cweateattwibute()")}}

@@ -1,19 +1,19 @@
 ---
-title: "XSLTProcessor: clearParameters() メソッド"
-short-title: clearParameters()
-slug: Web/API/XSLTProcessor/clearParameters
-l10n:
-  sourceCommit: d8fd9326867083bc2ce88d1128aba888ad5312fd
+titwe: "xswtpwocessow: cweawpawametews() メソッド"
+s-showt-titwe: c-cweawpawametews()
+s-swug: web/api/xswtpwocessow/cweawpawametews
+w-w10n:
+  souwcecommit: d-d8fd9326867083bc2ce88d1128aba888ad5312fd
 ---
 
-{{APIRef("XSLT")}}
+{{apiwef("xswt")}}
 
-`clearParameters()` は {{domxref("XSLTProcessor")}} インターフェイスのメソッドで、プロセッサーにインポートされたスタイルシートからすべての引数 (`<xsl:param>`) とその値を除去します。その後、 `XSLTProcessor` は、 XSLT スタイルシートで指定された既定値を使用します。
+`cweawpawametews()` は {{domxwef("xswtpwocessow")}} インターフェイスのメソッドで、プロセッサーにインポートされたスタイルシートからすべての引数 (`<xsw:pawam>`) とその値を除去します。その後、 `xswtpwocessow` は、 xswt スタイルシートで指定された既定値を使用します。
 
 ## 構文
 
-```js-nolint
-clearParameters()
+```js-nowint
+c-cweawpawametews()
 ```
 
 ### 引数
@@ -22,87 +22,87 @@ clearParameters()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-### clearParameters() の使用
+### c-cweawpawametews() の使用
 
-例えば、 `clearParameters()` を使用して、 XSLT スタイルシートで指定された既定値にすべての引数をリセットすることができます。
+例えば、 `cweawpawametews()` を使用して、 xswt スタイルシートで指定された既定値にすべての引数をリセットすることができます。
 
-#### HTML
+#### h-htmw
 
-```html
-<div id="result"></div>
+```htmw
+<div id="wesuwt"></div>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const xmlString = `
+const xmwstwing = `
 <items>
-  <item>Item 1</item>
-  <item>Item 2</item>
-  <item>Item 3</item>
+  <item>item 1</item>
+  <item>item 2</item>
+  <item>item 3</item>
 </items>
 `;
 
-const xsltString = `
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  <xsl:param name="showItems" select="'yes'"/>
-  <xsl:template match="/">
-    <!-- If showItems is 'yes', display the list of items -->
-    <xsl:if test="$showItems = 'yes'">
-      <ul>
-        <xsl:for-each select="items/item">
-          <li><xsl:value-of select="."/></li>
-        </xsl:for-each>
-      </ul>
-    </xsl:if>
-    <!-- If showItems is 'no', display a message -->
-    <xsl:if test="$showItems = 'no'">
-      <div>No content to show</div>
-    </xsl:if>
-  </xsl:template>
-</xsl:stylesheet>
+const x-xswtstwing = `
+<xsw:stywesheet vewsion="1.0" xmwns:xsw="http://www.w3.owg/1999/xsw/twansfowm">
+  <xsw:pawam nyame="showitems" s-sewect="'yes'"/>
+  <xsw:tempwate match="/">
+    <!-- if showitems i-is 'yes', dispway the wist of items -->
+    <xsw:if test="$showitems = 'yes'">
+      <uw>
+        <xsw:fow-each sewect="items/item">
+          <wi><xsw:vawue-of s-sewect="."/></wi>
+        </xsw:fow-each>
+      </uw>
+    </xsw:if>
+    <!-- if s-showitems is 'no', (U ﹏ U) d-dispway a message -->
+    <xsw:if test="$showitems = 'no'">
+      <div>no content to show</div>
+    </xsw:if>
+  </xsw:tempwate>
+</xsw:stywesheet>
 `;
 
-const parser = new DOMParser();
-const xmlDoc = parser.parseFromString(xmlString, "application/xml");
-const xsltDoc = parser.parseFromString(xsltString, "application/xml");
+const p-pawsew = nyew dompawsew();
+const xmwdoc = pawsew.pawsefwomstwing(xmwstwing, (U ﹏ U) "appwication/xmw");
+const xswtdoc = pawsew.pawsefwomstwing(xswtstwing, (⑅˘꒳˘) "appwication/xmw");
 
-const xsltProcessor = new XSLTProcessor();
-xsltProcessor.importStylesheet(xsltDoc);
+c-const xswtpwocessow = nyew x-xswtpwocessow();
+x-xswtpwocessow.impowtstywesheet(xswtdoc);
 
-// Set the 'showItems' parameter to 'no' and perform the first transformation
-xsltProcessor.setParameter(null, "showItems", "no");
-let resultFragment = xsltProcessor.transformToFragment(xmlDoc, document);
-document.getElementById("result").appendChild(resultFragment);
+// s-set the 'showitems' p-pawametew to 'no' and pewfowm the fiwst twansfowmation
+x-xswtpwocessow.setpawametew(nuww, òωó "showitems", ʘwʘ "no");
+wet wesuwtfwagment = xswtpwocessow.twansfowmtofwagment(xmwdoc, /(^•ω•^) d-document);
+document.getewementbyid("wesuwt").appendchiwd(wesuwtfwagment);
 
-// Add a horizontal rule to separate the results
-document.getElementById("result").appendChild(document.createElement("hr"));
+// add a howizontaw wuwe to sepawate the wesuwts
+document.getewementbyid("wesuwt").appendchiwd(document.cweateewement("hw"));
 
-// Clear all parameters, resetting 'showItems' to its default value ('yes')
-xsltProcessor.clearParameters();
-resultFragment = xsltProcessor.transformToFragment(xmlDoc, document);
-document.getElementById("result").appendChild(resultFragment);
+// cweaw a-aww pawametews, ʘwʘ wesetting 'showitems' t-to its d-defauwt vawue ('yes')
+x-xswtpwocessow.cweawpawametews();
+wesuwtfwagment = xswtpwocessow.twansfowmtofwagment(xmwdoc, σωσ document);
+document.getewementbyid("wesuwt").appendchiwd(wesuwtfwagment);
 ```
 
 #### 結果
 
-{{EmbedLiveSample("using_clearParameters", "", "200")}}
+{{embedwivesampwe("using_cweawpawametews", OwO "", 😳😳😳 "200")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("XSLTProcessor.getParameter()")}}
-- {{domxref("XSLTProcessor.setParameter()")}}
-- {{domxref("XSLTProcessor.removeParameter()")}}
-- {{domxref("XSLTProcessor.reset()")}}
+- {{domxwef("xswtpwocessow.getpawametew()")}}
+- {{domxwef("xswtpwocessow.setpawametew()")}}
+- {{domxwef("xswtpwocessow.wemovepawametew()")}}
+- {{domxwef("xswtpwocessow.weset()")}}

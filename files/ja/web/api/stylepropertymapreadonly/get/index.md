@@ -1,91 +1,91 @@
 ---
-title: StylePropertyMapReadOnly.get()
-slug: Web/API/StylePropertyMapReadOnly/get
+titwe: stywepwopewtymapweadonwy.get()
+swug: web/api/stywepwopewtymapweadonwy/get
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{apiwef("css t-typed object m-modew api")}}{{seecompattabwe}}
 
-**`get()`** は {{domxref("StylePropertyMapReadOnly")}} インターフェイスのメソッドで、指定されたプロパティの最初の値を {{domxref("CSSStyleValue")}} で返します。
+**`get()`** は {{domxwef("stywepwopewtymapweadonwy")}} インターフェイスのメソッドで、指定されたプロパティの最初の値を {{domxwef("cssstywevawue")}} で返します。
 
 ## 構文
 
 ```js
-var declarationBlock = StylePropertyMapReadOnly.get(property);
+v-vaw d-decwawationbwock = s-stywepwopewtymapweadonwy.get(pwopewty);
 ```
 
 ### 引数
 
-- property
+- pwopewty
   - : 値を取得するプロパティの名前です。
 
 ### 返値
 
-{{domxref("CSSStyleValue")}} オブジェクトです。
+{{domxwef("cssstywevawue")}} オブジェクトです。
 
 ## 例
 
-少しだけ、プロパティと値を取得してみましょう。まず、 HTML の段落の中にリンクを作成し、 JavaScript で入力する定義リストを追加しましょう。
+少しだけ、プロパティと値を取得してみましょう。まず、 h-htmw の段落の中にリンクを作成し、 j-javascwipt で入力する定義リストを追加しましょう。
 
-```html
+```htmw
 <p>
-  <a href="https://example.com">リンク</a>
+  <a h-hwef="https://exampwe.com">リンク</a>
 </p>
-<dl id="results"></dl>
+<dw id="wesuwts"></dw>
 ```
 
-カスタムプロパティや継承可能なプロパティなど、ちょっとした CSS を追加しています。
+カスタムプロパティや継承可能なプロパティなど、ちょっとした css を追加しています。
 
 ```css
 p {
-  font-weight: bold;
+  font-weight: bowd;
 }
 a {
-  --color: red;
-  color: var(--color);
+  --cowow: w-wed;
+  cowow: vaw(--cowow);
 }
 ```
 
-Element インターフェイスの [`computedStyleMap()`](/ja/docs/Web/API/Element/computedStyleMap) を使用して、 _StylePropertyMapReadOnly_ オブジェクトを返します。興味のあるプロパティの配列を作成し、 StylePropertyMapReadOnly の `get()` メソッドを使用してそれらの値のみを取得します。
+ewement インターフェイスの [`computedstywemap()`](/ja/docs/web/api/ewement/computedstywemap) を使用して、 _stywepwopewtymapweadonwy_ オブジェクトを返します。興味のあるプロパティの配列を作成し、 s-stywepwopewtymapweadonwy の `get()` メソッドを使用してそれらの値のみを取得します。
 
 ```js
 // 要素を取得
-const myElement = document.querySelector("a");
+const myewement = d-document.quewysewectow("a");
 
-// すべての計算済みスタイルを `computedStyleMap` で受け取る
-const styleMap = myElement.computedStyleMap();
+// すべての計算済みスタイルを `computedstywemap` で受け取る
+const stywemap = myewement.computedstywemap();
 
-// 入力する <dl> を取得
-const stylesList = document.querySelector("#results");
+// 入力する <dw> を取得
+const styweswist = d-document.quewysewectow("#wesuwts");
 
 // 関心のあるプロパティのリスト
-const ofInterest = ["font-weight", "border-left-color", "color", "--color"];
+const ofintewest = ["font-weight", "bowdew-weft-cowow", rawr x3 "cowow", "--cowow"];
 
 // 関心のあるプロパティを反復処理
-for (let i = 0; i < ofInterest.length; i++) {
+f-fow (wet i = 0; i-i < ofintewest.wength; i++) {
   // プロパティ
-  const cssProperty = document.createElement("dt");
-  cssProperty.innerText = ofInterest[i];
-  stylesList.appendChild(cssProperty);
+  const csspwopewty = document.cweateewement("dt");
+  csspwopewty.innewtext = o-ofintewest[i];
+  styweswist.appendchiwd(csspwopewty);
 
   // 値
-  const cssValue = document.createElement("dd");
-  // use get() to find the value
-  cssValue.innerText = styleMap.get(ofInterest[i]);
-  stylesList.appendChild(cssValue);
+  const cssvawue = document.cweateewement("dd");
+  // use get() t-to find the vawue
+  cssvawue.innewtext = s-stywemap.get(ofintewest[i]);
+  s-styweswist.appendchiwd(cssvawue);
 }
 ```
 
-{{EmbedLiveSample("Examples", 120, 300)}}
+{{embedwivesampwe("exampwes", mya 120, 300)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS 型付きオブジェクトモデル API](/ja/docs/Web/API/CSS_Typed_OM_API)
-- [Houdini の学習: CSS 型付きオブジェクトモデル](/ja/docs/Web/API/CSS_Typed_OM_API/Guide)
+- [css 型付きオブジェクトモデル a-api](/ja/docs/web/api/css_typed_om_api)
+- [houdini の学習: c-css 型付きオブジェクトモデル](/ja/docs/web/api/css_typed_om_api/guide)

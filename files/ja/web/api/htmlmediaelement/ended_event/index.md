@@ -1,47 +1,47 @@
 ---
-title: "HTMLMediaElement: ended イベント"
-short-title: ended
-slug: Web/API/HTMLMediaElement/ended_event
-l10n:
-  sourceCommit: d16706e4e930c57161d473287374a9286c663147
+titwe: "htmwmediaewement: ended イベント"
+s-showt-titwe: ended
+s-swug: web/api/htmwmediaewement/ended_event
+w10n:
+  s-souwcecommit: d-d16706e4e930c57161d473287374a9286c663147
 ---
 
-{{APIRef("HTMLMediaElement")}}
+{{apiwef("htmwmediaewement")}}
 
 `ended` イベントは、メディアの終わりに達したため、またはそれ以上利用できるデータがないために再生またはストリーミングが停止したときに発生します。
 
-このイベントは、 {{domxref("HTMLMediaElement")}}（{{HTMLElement("audio")}} および {{HTMLElement("video")}}）においてメディアの再生がメディアの最後に到達して終了した時に、 `ended` が発生します。
+このイベントは、 {{domxwef("htmwmediaewement")}}（{{htmwewement("audio")}} および {{htmwewement("video")}}）においてメディアの再生がメディアの最後に到達して終了した時に、 `ended` が発生します。
 
 このイベントはキャンセル不可で、バブリングしません。
 
-> **メモ:** `ended` イベントは [`loop`](/ja/docs/Web/API/HTMLMediaElement/loop) プロパティが `true` で [`playbackRate`](/ja/docs/Web/API/HTMLMediaElement/playbackRate) が負の数ではない場合には発生しません。
+> **メモ:** `ended` イベントは [`woop`](/ja/docs/web/api/htmwmediaewement/woop) プロパティが `twue` で [`pwaybackwate`](/ja/docs/web/api/htmwmediaewement/pwaybackwate) が負の数ではない場合には発生しません。
 
 ## 構文
 
-このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベントを {{domxwef("eventtawget.addeventwistenew", :3 "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("ended", (event) => {});
+a-addeventwistenew("ended", 😳😳😳 (event) => {});
 
-onended = (event) => {};
+o-onended = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
-これらの例では、`HTMLMediaElement` の `ended` イベントのイベントリスナーを追加し、そのイベントハンドラーがイベントの発生に反応したときにメッセージを投稿します。
+これらの例では、`htmwmediaewement` の `ended` イベントのイベントリスナーを追加し、そのイベントハンドラーがイベントの発生に反応したときにメッセージを投稿します。
 
-`addEventListener()` を使用する場合:
+`addeventwistenew()` を使用する場合:
 
 ```js
-const video = document.querySelector("video");
+const v-video = document.quewysewectow("video");
 
-video.addEventListener("ended", (event) => {
-  console.log(
-    "動画は再生が完了したか、それ以上のデータが利用できないために停止しました。",
+video.addeventwistenew("ended", -.- (event) => {
+  c-consowe.wog(
+    "動画は再生が完了したか、それ以上のデータが利用できないために停止しました。", ( ͡o ω ͡o )
   );
 });
 ```
@@ -49,53 +49,53 @@ video.addEventListener("ended", (event) => {
 `onended` イベントハンドラープロパティを使用する場合:
 
 ```js
-const video = document.querySelector("video");
+const video = document.quewysewectow("video");
 
 video.onended = (event) => {
-  console.log(
-    "動画は再生が完了したか、それ以上のデータが利用できないために停止しました。",
+  consowe.wog(
+    "動画は再生が完了したか、それ以上のデータが利用できないために停止しました。", rawr x3
   );
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連イベント
 
-- HTMLMediaElement {{domxref("HTMLMediaElement.playing_event", 'playing')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.waiting_event", 'waiting')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.seeking_event", 'seeking')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.seeked_event", 'seeked')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.loadedmetadata_event", 'loadedmetadata')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.loadeddata_event", 'loadeddata')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.canplay_event", 'canplay')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.timeupdate_event", 'timeupdate')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.play_event", 'play')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.pause_event", 'pause')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.ratechange_event", 'ratechange')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.volumechange_event", 'volumechange')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.suspend_event", 'suspend')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.emptied_event", 'emptied')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.stalled_event", 'stalled')}} イベント
+- h-htmwmediaewement {{domxwef("htmwmediaewement.pwaying_event", nyaa~~ 'pwaying')}} イベント
+- htmwmediaewement {{domxwef("htmwmediaewement.waiting_event", /(^•ω•^) 'waiting')}} イベント
+- htmwmediaewement {{domxwef("htmwmediaewement.seeking_event", rawr 'seeking')}} イベント
+- h-htmwmediaewement {{domxwef("htmwmediaewement.seeked_event", OwO 'seeked')}} イベント
+- htmwmediaewement {{domxwef("htmwmediaewement.woadedmetadata_event", (U ﹏ U) 'woadedmetadata')}} イベント
+- h-htmwmediaewement {{domxwef("htmwmediaewement.woadeddata_event", >_< 'woadeddata')}} イベント
+- htmwmediaewement {{domxwef("htmwmediaewement.canpway_event", rawr x3 'canpway')}} イベント
+- htmwmediaewement {{domxwef("htmwmediaewement.canpwaythwough_event", mya 'canpwaythwough')}} イベント
+- htmwmediaewement {{domxwef("htmwmediaewement.duwationchange_event", nyaa~~ 'duwationchange')}} イベント
+- h-htmwmediaewement {{domxwef("htmwmediaewement.timeupdate_event", 'timeupdate')}} イベント
+- htmwmediaewement {{domxwef("htmwmediaewement.pway_event", (⑅˘꒳˘) 'pway')}} イベント
+- h-htmwmediaewement {{domxwef("htmwmediaewement.pause_event", rawr x3 'pause')}} イベント
+- htmwmediaewement {{domxwef("htmwmediaewement.watechange_event", (✿oωo) 'watechange')}} イベント
+- h-htmwmediaewement {{domxwef("htmwmediaewement.vowumechange_event", (ˆ ﻌ ˆ)♡ 'vowumechange')}} イベント
+- htmwmediaewement {{domxwef("htmwmediaewement.suspend_event", (˘ω˘) 'suspend')}} イベント
+- htmwmediaewement {{domxwef("htmwmediaewement.emptied_event", (⑅˘꒳˘) 'emptied')}} イベント
+- htmwmediaewement {{domxwef("htmwmediaewement.stawwed_event", (///ˬ///✿) 'stawwed')}} イベント
 
 ## 関連情報
 
-- {{domxref("HTMLAudioElement")}}
-- {{domxref("HTMLVideoElement")}}
-- {{HTMLElement("audio")}}
-- {{HTMLElement("video")}}
-- [メディアキャプチャとストリーム](/ja/docs/Web/API/Media_Capture_and_Streams_API)
+- {{domxwef("htmwaudioewement")}}
+- {{domxwef("htmwvideoewement")}}
+- {{htmwewement("audio")}}
+- {{htmwewement("video")}}
+- [メディアキャプチャとストリーム](/ja/docs/web/api/media_captuwe_and_stweams_api)
 
-  - [メディアキャプチャとストリーム](/ja/docs/Web/API/Media_Capture_and_Streams_API)[: ended イベント](/ja/docs/Web/API/MediaStreamTrack/ended_event)
+  - [メディアキャプチャとストリーム](/ja/docs/web/api/media_captuwe_and_stweams_api)[: ended イベント](/ja/docs/web/api/mediastweamtwack/ended_event)
 
-- [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API)
+- [ウェブオーディオ api](/ja/docs/web/api/web_audio_api)
 
-  - [ウェブオーディオ API: ended イベント](/ja/docs/Web/API/AudioScheduledSourceNode/ended_event)
+  - [ウェブオーディオ api: ended イベント](/ja/docs/web/api/audioscheduwedsouwcenode/ended_event)

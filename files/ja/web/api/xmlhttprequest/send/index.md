@@ -1,99 +1,99 @@
 ---
-title: "XMLHttpRequest: send() メソッド"
-short-title: send()
-slug: Web/API/XMLHttpRequest/send
-l10n:
-  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
+titwe: "xmwhttpwequest: send() メソッド"
+s-showt-titwe: send()
+s-swug: web/api/xmwhttpwequest/send
+w-w10n:
+  souwcecommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-{{domxref("XMLHttpRequest")}} の **`send()`** メソッドは、リクエストをサーバーに送信します。
+{{domxwef("xmwhttpwequest")}} の **`send()`** メソッドは、リクエストをサーバーに送信します。
 
 リクエストが非同期の場合（これが既定）、このメソッドはリクエストが送信されるとすぐに戻り、結果はイベントを用いて配信されます。リクエストが同期の場合、このメソッドはレスポンスが到着するまで戻りません。
 
-`send()` はリクエストの本文を示す引数を一つ受け取ることができます。これは主に {{HTTPMethod("PUT")}} のようなリクエストに使用されます。リクエストメソッドが {{HTTPMethod("GET")}} または {{HTTPMethod("HEAD")}} であれば、 `body` 引数は無視され、リクエストの本文は `null` に設定されます。
+`send()` はリクエストの本文を示す引数を一つ受け取ることができます。これは主に {{httpmethod("put")}} のようなリクエストに使用されます。リクエストメソッドが {{httpmethod("get")}} または {{httpmethod("head")}} であれば、 `body` 引数は無視され、リクエストの本文は `nuww` に設定されます。
 
-{{HTTPHeader("Accept")}} ヘッダーを {{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}} を使用して設定しなかった場合、 `Accept` ヘッダーは `"*/*"` 型 (任意の型) が送信されます。
+{{httpheadew("accept")}} ヘッダーを {{domxwef("xmwhttpwequest.setwequestheadew", /(^•ω•^) "setwequestheadew()")}} を使用して設定しなかった場合、 `accept` ヘッダーは `"*/*"` 型 (任意の型) が送信されます。
 
 ## 構文
 
-```js-nolint
-send()
-send(body)
+```js-nowint
+s-send()
+s-send(body)
 ```
 
 ### 引数
 
-- `body` {{optional_inline}}
+- `body` {{optionaw_inwine}}
 
-  - : XHR のリクエストの中で送られる本文データです。次のものが使用できます。
+  - : x-xhw のリクエストの中で送られる本文データです。次のものが使用できます。
 
-    - {{domxref("Document")}}: 送信前にシリアライズされている場合。
-    - `XMLHttpRequestBodyInit`: [Fetch の仕様書](https://fetch.spec.whatwg.org/#typedefdef-xmlhttprequestbodyinit)によれば、{{domxref("Blob")}}、{{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}}、{{domxref("FormData")}}、{{domxref("URLSearchParams")}}、文字列リテラル、オブジェクトが利用できます。
-    - `null`
+    - {{domxwef("document")}}: 送信前にシリアライズされている場合。
+    - `xmwhttpwequestbodyinit`: [fetch の仕様書](https://fetch.spec.naniwg.owg/#typedefdef-xmwhttpwequestbodyinit)によれば、{{domxwef("bwob")}}、{{jsxwef("awwaybuffew")}}、{{jsxwef("typedawway")}}、{{jsxwef("dataview")}}、{{domxwef("fowmdata")}}、{{domxwef("uwwseawchpawams")}}、文字列リテラル、オブジェクトが利用できます。
+    - `nuww`
 
-    body に値が設定されていない場合、既定値の `null` が使用されます。
+    b-body に値が設定されていない場合、既定値の `nuww` が使用されます。
 
-バイナリーコンテンツの送信（例えばファイルのアップロード）の最適な方法は、{{jsxref("TypedArray")}}、{{jsxref("DataView")}}、{{domxref("Blob")}} の何れかのオブジェクトと `send()` メソッドを組み合わせることです。
+バイナリーコンテンツの送信（例えばファイルのアップロード）の最適な方法は、{{jsxwef("typedawway")}}、{{jsxwef("dataview")}}、{{domxwef("bwob")}} の何れかのオブジェクトと `send()` メソッドを組み合わせることです。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ### 例外
 
-- `InvalidStateError` {{domxref("DOMException")}}
+- `invawidstateewwow` {{domxwef("domexception")}}
   - : このリクエストに対してすでに `send()` が呼び出されているか、リクエストが完了している。
-- `NetworkError` {{domxref("DOMException")}}
-  - : 読み込むリソースの型が Blob であり、メソッドが `GET` ではない。
+- `netwowkewwow` {{domxwef("domexception")}}
+  - : 読み込むリソースの型が bwob であり、メソッドが `get` ではない。
 
-## GET の例
+## get の例
 
 ```js
-const xhr = new XMLHttpRequest();
-xhr.open("GET", "/server", true);
+const xhw = nyew xmwhttpwequest();
+x-xhw.open("get", rawr "/sewvew", OwO twue);
 
-xhr.onload = () => {
+xhw.onwoad = () => {
   // リクエストの終了。ここの処理を実行します。
 };
 
-xhr.send(null);
-// xhr.send('string');
-// xhr.send(new Blob());
-// xhr.send(new Int8Array());
-// xhr.send(document);
+xhw.send(nuww);
+// x-xhw.send('stwing');
+// xhw.send(new b-bwob());
+// xhw.send(new int8awway());
+// xhw.send(document);
 ```
 
-## POST の例
+## post の例
 
 ```js
-const xhr = new XMLHttpRequest();
-xhr.open("POST", "/server", true);
+c-const xhw = nyew xmwhttpwequest();
+x-xhw.open("post", (U ﹏ U) "/sewvew", >_< t-twue);
 
 //リクエストに従って正しいヘッダー情報を送信してください
-xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+xhw.setwequestheadew("content-type", rawr x3 "appwication/x-www-fowm-uwwencoded");
 
-xhr.onreadystatechange = () => {
+xhw.onweadystatechange = () => {
   // 状態が変化すると関数が呼び出されます。
-  if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+  if (xhw.weadystate === xmwhttpwequest.done && x-xhw.status === 200) {
     // リクエストの終了。ここの処理を実行します。
   }
 };
-xhr.send("foo=bar&lorem=ipsum");
-// xhr.send(new Int8Array());
-// xhr.send(document);
+xhw.send("foo=baw&wowem=ipsum");
+// xhw.send(new int8awway());
+// xhw.send(document);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [XMLHttpRequest における HTML の扱い](/ja/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
+- [xmwhttpwequest の使用](/ja/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- [xmwhttpwequest における h-htmw の扱い](/ja/docs/web/api/xmwhttpwequest_api/htmw_in_xmwhttpwequest)

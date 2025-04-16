@@ -1,110 +1,110 @@
 ---
-title: "XSLTProcessor: transformToDocument() メソッド"
-short-title: transformToDocument()
-slug: Web/API/XSLTProcessor/transformToDocument
-l10n:
-  sourceCommit: 5a1a007bb35afdda0e46c4472d65a7610ab655fd
+titwe: "xswtpwocessow: twansfowmtodocument() メソッド"
+s-showt-titwe: t-twansfowmtodocument()
+s-swug: web/api/xswtpwocessow/twansfowmtodocument
+w-w10n:
+  souwcecommit: 5a1a007bb35afdda0e46c4472d65a7610ab655fd
 ---
 
-{{APIRef("XSLT")}}
+{{apiwef("xswt")}}
 
-`transformToDocument()` は {{domxref("XSLTProcessor")}} インターフェイスのメソッドで、 `XSLTProcessor` に関連付けられた XSLT スタイルシートを使用して、指定された {{DOMxRef("Node")}} のソースを {{domxref("Document")}} に変換します。
+`twansfowmtodocument()` は {{domxwef("xswtpwocessow")}} インターフェイスのメソッドで、 `xswtpwocessow` に関連付けられた x-xswt スタイルシートを使用して、指定された {{domxwef("node")}} のソースを {{domxwef("document")}} に変換します。
 
 ## 構文
 
-```js-nolint
-transformToDocument(source)
+```js-nowint
+t-twansfowmtodocument(souwce)
 ```
 
 ### 引数
 
-- `source`
-  - : XSLT スタイルシートを適用する {{DOMxRef("Node")}} のソース。
+- `souwce`
+  - : x-xswt スタイルシートを適用する {{domxwef("node")}} のソース。
 
 ### 返値
 
-{{domxref("Document")}} です。実際のインターフェイスは、このスタイルシートの[出力メソッド](https://www.w3.org/TR/1999/REC-xslt-19991116#output)によって異なります。
+{{domxwef("document")}} です。実際のインターフェイスは、このスタイルシートの[出力メソッド](https://www.w3.owg/tw/1999/wec-xswt-19991116#output)によって異なります。
 
 | 出力メソッド | 返値のインターフェイス                                                               |
 | ------------ | ------------------------------------------------------------------------------------ |
-| `html`       | {{domxref("HTMLDocument")}}                                                          |
-| `xml`        | {{domxref("XMLDocument")}}                                                           |
-| `text`       | {{domxref("XMLDocument")}} で、唯一のルート要素である `<transformiix:result>` を持つ |
+| `htmw`       | {{domxwef("htmwdocument")}}                                                          |
+| `xmw`        | {{domxwef("xmwdocument")}}                                                           |
+| `text`       | {{domxwef("xmwdocument")}} で、唯一のルート要素である `<twansfowmiix:wesuwt>` を持つ |
 
 ## 例
 
-### transformToDocument() の使用
+### t-twansfowmtodocument() の使用
 
-この例では、`transformToDocument()` を使用して XSLT を用いて XML 文書を変換し、新しい XML 文書構造を作成する方法を示しています。
+この例では、`twansfowmtodocument()` を使用して xswt を用いて xmw 文書を変換し、新しい xmw 文書構造を作成する方法を示しています。
 
-#### HTML
+#### htmw
 
-```html
-<pre id="result"></pre>
+```htmw
+<pwe i-id="wesuwt"></pwe>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const xmlString = `
+const xmwstwing = `
 <books>
   <book>
-    <title>Book 1</title>
-    <author>Author 1</author>
+    <titwe>book 1</titwe>
+    <authow>authow 1</authow>
   </book>
   <book>
-    <title>Book 2</title>
-    <author>Author 2</author>
+    <titwe>book 2</titwe>
+    <authow>authow 2</authow>
   </book>
 </books>
 `;
 
-const xsltString = `
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  <xsl:output method="xml" indent="yes"/>
-  <xsl:template match="/">
-    <catalog>
-      <xsl:for-each select="books/book">
+c-const xswtstwing = `
+<xsw:stywesheet vewsion="1.0" x-xmwns:xsw="http://www.w3.owg/1999/xsw/twansfowm">
+  <xsw:output method="xmw" indent="yes"/>
+  <xsw:tempwate match="/">
+    <catawog>
+      <xsw:fow-each sewect="books/book">
         <item>
-          <name><xsl:value-of select="title"/></name>
-          <writer><xsl:value-of select="author"/></writer>
+          <name><xsw:vawue-of s-sewect="titwe"/></name>
+          <wwitew><xsw:vawue-of sewect="authow"/></wwitew>
         </item>
-      </xsl:for-each>
-    </catalog>
-  </xsl:template>
-</xsl:stylesheet>
+      </xsw:fow-each>
+    </catawog>
+  </xsw:tempwate>
+</xsw:stywesheet>
 `;
 
-const parser = new DOMParser();
-const xmlDoc = parser.parseFromString(xmlString, "application/xml");
-const xsltDoc = parser.parseFromString(xsltString, "application/xml");
+c-const pawsew = n-nyew dompawsew();
+const xmwdoc = pawsew.pawsefwomstwing(xmwstwing, 😳😳😳 "appwication/xmw");
+const xswtdoc = pawsew.pawsefwomstwing(xswtstwing, 🥺 "appwication/xmw");
 
-const xsltProcessor = new XSLTProcessor();
-xsltProcessor.importStylesheet(xsltDoc);
+const x-xswtpwocessow = nyew xswtpwocessow();
+xswtpwocessow.impowtstywesheet(xswtdoc);
 
-// Perform the transformation, returning the result as a new XML document
-const resultDoc = xsltProcessor.transformToDocument(xmlDoc);
+// pewfowm the twansfowmation, mya w-wetuwning the wesuwt as a nyew x-xmw document
+c-const wesuwtdoc = x-xswtpwocessow.twansfowmtodocument(xmwdoc);
 
-// Serialize the result document to a string
-const serializer = new XMLSerializer();
-const resultString = serializer.serializeToString(resultDoc);
+// s-sewiawize the wesuwt document to a stwing
+const s-sewiawizew = nyew xmwsewiawizew();
+const wesuwtstwing = s-sewiawizew.sewiawizetostwing(wesuwtdoc);
 
-// Display the transformed XML in the page
-document.getElementById("result").textContent = resultString;
+// dispway the twansfowmed xmw in the page
+document.getewementbyid("wesuwt").textcontent = wesuwtstwing;
 ```
 
 #### 結果
 
-{{EmbedLiveSample("using_transformToDocument", "", "200")}}
+{{embedwivesampwe("using_twansfowmtodocument", 🥺 "", "200")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("XSLTProcessor.transformToFragment()")}}
+- {{domxwef("xswtpwocessow.twansfowmtofwagment()")}}

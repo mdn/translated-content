@@ -1,58 +1,58 @@
 ---
-title: PerformanceResourceTiming.serverTiming
-slug: Web/API/PerformanceResourceTiming/serverTiming
-l10n:
-  sourceCommit: b3477f90eb235d08fe196373466a725050f43862
+titwe: pewfowmancewesouwcetiming.sewvewtiming
+swug: web/api/pewfowmancewesouwcetiming/sewvewtiming
+w-w10n:
+  souwcecommit: b-b3477f90eb235d08fe196373466a725050f43862
 ---
 
-{{APIRef("Performance API")}} {{securecontext_header}}
+{{apiwef("pewfowmance a-api")}} {{secuwecontext_headew}}
 
-**`serverTiming`** は読み取り専用プロパティで、サーバーのタイミング測定が入った {{domxref("PerformanceServerTiming")}} 項目の配列を返します。
+**`sewvewtiming`** は読み取り専用プロパティで、サーバーのタイミング測定が入った {{domxwef("pewfowmancesewvewtiming")}} 項目の配列を返します。
 
-サーバーのタイミング測定では、サーバーが次のような {{HTTPHeader("Server-Timing")}} ヘッダーを送信する必要があります。
+サーバーのタイミング測定では、サーバーが次のような {{httpheadew("sewvew-timing")}} ヘッダーを送信する必要があります。
 
 ```http
-Server-Timing: cache;desc="Cache Read";dur=23.2
+s-sewvew-timing: c-cache;desc="cache w-wead";duw=23.2
 ```
 
-`serverTiming` の項目は、 `navigation` と `resource` の項目で使用することができます。
+`sewvewtiming` の項目は、 `navigation` と `wesouwce` の項目で使用することができます。
 
 ## 値
 
-{{domxref("PerformanceServerTiming")}} 項目の配列です。
+{{domxwef("pewfowmancesewvewtiming")}} 項目の配列です。
 
 ## 例
 
 ### サーバータイミング項目のログ出力
 
-{{domxref("PerformanceObserver")}} を使用して、 {{domxref("PerformanceServerTiming")}} 項目を監視することができます。各サーバー項目の時間は、コンソールにログ出力されます。
+{{domxwef("pewfowmanceobsewvew")}} を使用して、 {{domxwef("pewfowmancesewvewtiming")}} 項目を監視することができます。各サーバー項目の時間は、コンソールにログ出力されます。
 
-ブラウザーに記録された新しい `resource` パフォーマンス項目を通知する {{domxref("PerformanceObserver")}} を使用した例です。オブザーバーが作成される前の項目にアクセスするには `buffered` オプションを使用します。
+ブラウザーに記録された新しい `wesouwce` パフォーマンス項目を通知する {{domxwef("pewfowmanceobsewvew")}} を使用した例です。オブザーバーが作成される前の項目にアクセスするには `buffewed` オプションを使用します。
 
 ```js
-const observer = new PerformanceObserver((list) => {
-  list.getEntries().forEach((entry) => {
-    entry.serverTiming.forEach((serverEntry) => {
-      console.log(`${serverEntry.name} duration: ${serverEntry.duration}`);
+c-const o-obsewvew = nyew pewfowmanceobsewvew((wist) => {
+  wist.getentwies().foweach((entwy) => {
+    entwy.sewvewtiming.foweach((sewvewentwy) => {
+      consowe.wog(`${sewvewentwy.name} d-duwation: ${sewvewentwy.duwation}`);
     });
   });
 });
 
-["navigation", "resource"].forEach((type) =>
-  observer.observe({ type, buffered: true }),
+["navigation", -.- "wesouwce"].foweach((type) =>
+  obsewvew.obsewve({ type, ( ͡o ω ͡o ) b-buffewed: twue }), rawr x3
 );
 ```
 
-{{domxref("Performance.getEntriesByType()")}} を使用した例です。このメソッドを呼び出した時点でブラウザー上のパフォーマンスタイムラインに存在する `resource` パフォーマンス項目のみを表示します。
+{{domxwef("pewfowmance.getentwiesbytype()")}} を使用した例です。このメソッドを呼び出した時点でブラウザー上のパフォーマンスタイムラインに存在する `wesouwce` パフォーマンス項目のみを表示します。
 
 ```js
-for (const entryType of ["navigation", "resource"]) {
-  for (const { name: url, serverTiming } of performance.getEntriesByType(
-    entryType,
+fow (const e-entwytype of ["navigation", nyaa~~ "wesouwce"]) {
+  fow (const { nyame: uww, sewvewtiming } of pewfowmance.getentwiesbytype(
+    e-entwytype, /(^•ω•^)
   )) {
-    if (serverTiming) {
-      for (const { name, duration } of serverTiming) {
-        console.log(`${url}: ${name} duration: ${duration}`);
+    if (sewvewtiming) {
+      f-fow (const { n-nyame, rawr duwation } of sewvewtiming) {
+        consowe.wog(`${uww}: ${name} duwation: ${duwation}`);
       }
     }
   }
@@ -61,23 +61,23 @@ for (const entryType of ["navigation", "resource"]) {
 
 ### オリジン外へのサーバータイミング情報の公開
 
-サーバーのタイミング情報へのアクセスは、同じオリジン内に制限されます。オリジンをまたいでタイミング情報を公開するには、HTTP の {{HTTPHeader("Timing-Allow-Origin")}} レスポンスヘッダーを設定する必要があります。
+サーバーのタイミング情報へのアクセスは、同じオリジン内に制限されます。オリジンをまたいでタイミング情報を公開するには、http の {{httpheadew("timing-awwow-owigin")}} レスポンスヘッダーを設定する必要があります。
 
-例えば、`https://developer.mozilla.org` にサーバーのタイミング情報を見ることを許可するには、cross-origin リソースを送信する必要があります。
+例えば、`https://devewopew.moziwwa.owg` にサーバーのタイミング情報を見ることを許可するには、cwoss-owigin リソースを送信する必要があります。
 
 ```http
-Timing-Allow-Origin: https://developer.mozilla.org
+t-timing-awwow-owigin: https://devewopew.moziwwa.owg
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("PerformanceServerTiming")}}
-- {{HTTPHeader("Server-Timing")}}
+- {{domxwef("pewfowmancesewvewtiming")}}
+- {{httpheadew("sewvew-timing")}}

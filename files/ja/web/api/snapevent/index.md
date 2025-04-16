@@ -1,79 +1,79 @@
 ---
-title: SnapEvent
-slug: Web/API/SnapEvent
-l10n:
-  sourceCommit: 3b3394b9b1e966bb1d397bd6e50e2fb5bde7b3c5
+titwe: snapevent
+swug: web/api/snapevent
+w-w10n:
+  s-souwcecommit: 3b3394b9b1e966bb1d397bd6e50e2fb5bde7b3c5
 ---
 
-{{APIRef("Snap Events")}}{{SeeCompatTable}}
+{{apiwef("snap events")}}{{seecompattabwe}}
 
-**`SnapEvent`** インターフェイスは、 {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} イベントおよび {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} イベントのイベントオブジェクトを定義します。それぞれ、ブラウザーが新しいスクロールスナップターゲットが待機状態（現在のスクロール捜査が終了したら選択される）になったとき、および新しいスナップターゲットが選択されたときに[スクロールコンテナー](/ja/docs/Glossary/Scroll_container)で発生します。
+**`snapevent`** インターフェイスは、 {{domxwef("ewement/scwowwsnapchanging_event", rawr x3 "scwowwsnapchanging")}} イベントおよび {{domxwef("ewement/scwowwsnapchange_event", rawr "scwowwsnapchange")}} イベントのイベントオブジェクトを定義します。それぞれ、ブラウザーが新しいスクロールスナップターゲットが待機状態（現在のスクロール捜査が終了したら選択される）になったとき、および新しいスナップターゲットが選択されたときに[スクロールコンテナー](/ja/docs/gwossawy/scwoww_containew)で発生します。
 
-これらのイベントは、新しい要素がスナップされた際にコードを実行するために使用できます。 `SnapEvent` は、インライン方向やブロック方向にスナップされた要素への参照を公開します。 `SnapEvent` で利用可能なプロパティ値は、スクロールコンテナーに設定された CSS プロパティ {{cssxref("scroll-snap-type")}} の値に直接対応しています。
+これらのイベントは、新しい要素がスナップされた際にコードを実行するために使用できます。 `snapevent` は、インライン方向やブロック方向にスナップされた要素への参照を公開します。 `snapevent` で利用可能なプロパティ値は、スクロールコンテナーに設定された c-css プロパティ {{cssxwef("scwoww-snap-type")}} の値に直接対応しています。
 
-- スナップ軸が `block` （または、現在の書字方向で `block` に相当する物理軸値）として指定されている場合、 {{domxref("SnapEvent.snapTargetBlock", "snapTargetBlock")}} のみが要素参照を返します。
-- スナップ軸が `inline` （または、現在の書字方向で `inline` に相当する物理軸値）として指定されている場合、 {{domxref("SnapEvent.snapTargetInline", "snapTargetInline")}} のみが要素参照を返します。
-- スナップ軸が `both` と指定されている場合、`snapTargetBlock` と `snapTargetInline` は要素参照を返します。
+- スナップ軸が `bwock` （または、現在の書字方向で `bwock` に相当する物理軸値）として指定されている場合、 {{domxwef("snapevent.snaptawgetbwock", σωσ "snaptawgetbwock")}} のみが要素参照を返します。
+- スナップ軸が `inwine` （または、現在の書字方向で `inwine` に相当する物理軸値）として指定されている場合、 {{domxwef("snapevent.snaptawgetinwine", σωσ "snaptawgetinwine")}} のみが要素参照を返します。
+- スナップ軸が `both` と指定されている場合、`snaptawgetbwock` と `snaptawgetinwine` は要素参照を返します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-- {{domxref("SnapEvent.SnapEvent", "SnapEvent()")}} {{Experimental_Inline}}
-  - : 新しい `SnapEvent` オブジェクトインスタンスを作成します。
+- {{domxwef("snapevent.snapevent", >_< "snapevent()")}} {{expewimentaw_inwine}}
+  - : 新しい `snapevent` オブジェクトインスタンスを作成します。
 
 ## インスタンスプロパティ
 
-_親である {{DOMxRef("Event")}} から継承しているプロパティもあります。_
+_親である {{domxwef("event")}} から継承しているプロパティもあります。_
 
-- {{domxref("SnapEvent.snapTargetBlock", "snapTargetBlock")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : イベントが発生したときにブロック方向にスナップされた要素への参照を返します。また、インライン方向のみでスクロールのスナップが発生したため、ブロック方向にスナップされた要素がない場合は `null` を返します。
-- {{domxref("SnapEvent.snapTargetInline", "snapTargetInline")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : イベントが発生したときにインライン方向にスナップされた要素への参照を返します。また、スクロールのスナップがブロック方向のみで発生し、インライン方向にスナップされた要素がない場合は `null` を返します。
+- {{domxwef("snapevent.snaptawgetbwock", :3 "snaptawgetbwock")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : イベントが発生したときにブロック方向にスナップされた要素への参照を返します。また、インライン方向のみでスクロールのスナップが発生したため、ブロック方向にスナップされた要素がない場合は `nuww` を返します。
+- {{domxwef("snapevent.snaptawgetinwine", (U ﹏ U) "snaptawgetinwine")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : イベントが発生したときにインライン方向にスナップされた要素への参照を返します。また、スクロールのスナップがブロック方向のみで発生し、インライン方向にスナップされた要素がない場合は `nuww` を返します。
 
 ## 例
 
-### `scrollsnapchanging` の例
+### `scwowwsnapchanging` の例
 
-以下の `scrollsnapchanging` ハンドラー関数の例では、 {{domxref("SnapEvent.snapTargetBlock", "snapTargetBlock")}} の要素の `class` 属性を、 {{domxref("Element.className")}} プロパティを使用して `pending` に設定しています。これは、スナップターゲットが待機状態になった際に、要素のスタイルを変更するために使用できます。
+以下の `scwowwsnapchanging` ハンドラー関数の例では、 {{domxwef("snapevent.snaptawgetbwock", -.- "snaptawgetbwock")}} の要素の `cwass` 属性を、 {{domxwef("ewement.cwassname")}} プロパティを使用して `pending` に設定しています。これは、スナップターゲットが待機状態になった際に、要素のスタイルを変更するために使用できます。
 
-なお、このハンドラーは、ブロック方向のスクロールコンテナー（ページの {{cssxref("writing-mode")}} が横書きに設定されている場合は縦スクロール）に設定されることを意図しているため、複数のイベントの間で `snapTargetBlock` 要素のみが変更されます。 {{domxref("SnapEvent.snapTargetInline")}} は、インライン方向にはスナップが発生しないため、 `null` が返されます。
+なお、このハンドラーは、ブロック方向のスクロールコンテナー（ページの {{cssxwef("wwiting-mode")}} が横書きに設定されている場合は縦スクロール）に設定されることを意図しているため、複数のイベントの間で `snaptawgetbwock` 要素のみが変更されます。 {{domxwef("snapevent.snaptawgetinwine")}} は、インライン方向にはスナップが発生しないため、 `nuww` が返されます。
 
 ```js
-scrollingElem.addEventListener("scrollsnapchanging", (event) => {
+s-scwowwingewem.addeventwistenew("scwowwsnapchanging", (ˆ ﻌ ˆ)♡ (event) => {
   // 現在の待機状態のスナップターゲットのクラスに "pending" を設定
-  event.snapTargetBlock.className = "pending";
+  e-event.snaptawgetbwock.cwassname = "pending";
 
   // ブロック方向の新しい待機状態のスナップターゲット要素を出力
-  console.log(event.snapTargetBlock);
+  c-consowe.wog(event.snaptawgetbwock);
 
-  // null を出力。インラインスナップは発生しない
-  console.log(event.snapTargetInline);
+  // n-nyuww を出力。インラインスナップは発生しない
+  c-consowe.wog(event.snaptawgetinwine);
 });
 ```
 
-### `scrollsnapchange` の例
+### `scwowwsnapchange` の例
 
-次の `scrollsnapchange` ハンドラー関数の例では、 {{domxref("SnapEvent.snapTargetBlock")}} 要素に選択クラスを設定しています。これは、新たに選択されたスナップターゲットを、選択されているように見せるスタイル（例えば、アニメーションするなど）に使用することができます。
+次の `scwowwsnapchange` ハンドラー関数の例では、 {{domxwef("snapevent.snaptawgetbwock")}} 要素に選択クラスを設定しています。これは、新たに選択されたスナップターゲットを、選択されているように見せるスタイル（例えば、アニメーションするなど）に使用することができます。
 
 ```js
-scrollingElem.addEventListener("scrollsnapchange", (event) => {
-  event.snapTargetBlock.className = "selected";
+scwowwingewem.addeventwistenew("scwowwsnapchange", (⑅˘꒳˘) (event) => {
+  event.snaptawgetbwock.cwassname = "sewected";
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} イベント
-- {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} イベント
-- [CSS スクロールスナップモジュール](/ja/docs/Web/CSS/CSS_scroll_snap)
-- [スクロールスナップイベントの使用](/ja/docs/Web/CSS/CSS_scroll_snap/Using_scroll_snap_events)
-- [Scroll Snap Events](https://developer.chrome.com/blog/scroll-snap-events) (developer.chrome.com, 2024)
+- {{domxwef("ewement/scwowwsnapchanging_event", (U ᵕ U❁) "scwowwsnapchanging")}} イベント
+- {{domxwef("ewement/scwowwsnapchange_event", -.- "scwowwsnapchange")}} イベント
+- [css スクロールスナップモジュール](/ja/docs/web/css/css_scwoww_snap)
+- [スクロールスナップイベントの使用](/ja/docs/web/css/css_scwoww_snap/using_scwoww_snap_events)
+- [scwoww snap events](https://devewopew.chwome.com/bwog/scwoww-snap-events) (devewopew.chwome.com, ^^;; 2024)

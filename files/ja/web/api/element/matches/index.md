@@ -1,70 +1,70 @@
 ---
-title: "Element: matches() メソッド"
-short-title: matches()
-slug: Web/API/Element/matches
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: "ewement: matches() メソッド"
+s-showt-titwe: m-matches()
+s-swug: web/api/ewement/matches
+w-w10n:
+  souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`matches()`** は {{domxref("Element")}} インターフェイスのメソッドで、この要素が指定した [CSS セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) によって選択されるかどうかを検査します。
+**`matches()`** は {{domxwef("ewement")}} インターフェイスのメソッドで、この要素が指定した [css セレクター](/ja/docs/weawn_web_devewopment/cowe/stywing_basics/basic_sewectows) によって選択されるかどうかを検査します。
 
 ## 構文
 
-```js-nolint
-matches(selectors)
+```js-nowint
+m-matches(sewectows)
 ```
 
 ### 引数
 
-- `selectors`
-  - : {{domxref("Element")}} を検査するために有効な [CSS セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)を格納した文字列です。
+- `sewectows`
+  - : {{domxwef("ewement")}} を検査するために有効な [css セレクター](/ja/docs/weawn_web_devewopment/cowe/stywing_basics/basic_sewectows)を格納した文字列です。
 
 ### 返値
 
-{{domxref("Element")}} が `selectors` に一致すれば `true` です。そうでなければ `false` です。
+{{domxwef("ewement")}} が `sewectows` に一致すれば `twue` です。そうでなければ `fawse` です。
 
 ### 例外
 
-- `SyntaxError` {{domxref("DOMException")}}
-  - : `selectors` が CSS のセレクターリストとして解釈できない場合に発生します。
+- `syntaxewwow` {{domxwef("domexception")}}
+  - : `sewectows` が c-css のセレクターリストとして解釈できない場合に発生します。
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
-<ul id="birds">
-  <li>Orange-winged parrot</li>
-  <li class="endangered">Philippine eagle</li>
-  <li>Great white pelican</li>
-</ul>
+```htmw
+<uw i-id="biwds">
+  <wi>owange-winged pawwot</wi>
+  <wi cwass="endangewed">phiwippine eagwe</wi>
+  <wi>gweat white pewican</wi>
+</uw>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-const birds = document.querySelectorAll("li");
+const biwds = document.quewysewectowaww("wi");
 
-for (const bird of birds) {
-  if (bird.matches(".endangered")) {
-    console.log(`The ${bird.textContent} is endangered!`);
+f-fow (const biwd of biwds) {
+  i-if (biwd.matches(".endangewed")) {
+    consowe.wog(`the ${biwd.textcontent} is endangewed!`);
   }
 }
 ```
 
-要素が実際に値 `endangered` 持つ `class` 属性を持つので、これは、コンソールのログに "The Philippine eagle is endangered!" と表示されます。
+要素が実際に値 `endangewed` 持つ `cwass` 属性を持つので、これは、コンソールのログに "the phiwippine eagwe i-is endangewed!" と表示されます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)モジュール
-- セレクターを使用するその他のメソッド: {{domxref("element.querySelector()")}} および {{domxref("element.closest()")}}
+- [css セレクター](/ja/docs/web/css/css_sewectows)モジュール
+- セレクターを使用するその他のメソッド: {{domxwef("ewement.quewysewectow()")}} および {{domxwef("ewement.cwosest()")}}

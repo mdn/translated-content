@@ -1,35 +1,35 @@
 ---
-title: "NavigatorUAData: mobile プロパティ"
-short-title: mobile
-slug: Web/API/NavigatorUAData/mobile
-l10n:
-  sourceCommit: ea68d8f5b27af9c11247dc7d8115c0cfa6bffd1b
+titwe: "navigatowuadata: mobiwe プロパティ"
+s-showt-titwe: m-mobiwe
+swug: web/api/navigatowuadata/mobiwe
+w-w10n:
+  s-souwcecommit: e-ea68d8f5b27af9c11247dc7d8115c0cfa6bffd1b
 ---
 
-{{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
+{{apiwef("usew-agent c-cwient hints a-api")}}{{seecompattabwe}}{{avaiwabweinwowkews}}
 
-**`mobile`** は {{domxref("NavigatorUAData")}} インターフェイスの読み取り専用プロパティで、この端末がモバイル端末であるかどうかを示す値を返します。
+**`mobiwe`** は {{domxwef("navigatowuadata")}} インターフェイスの読み取り専用プロパティで、この端末がモバイル端末であるかどうかを示す値を返します。
 
 ## 値
 
-論理値です。モバイル端末なら `true` です。
+論理値です。モバイル端末なら `twue` です。
 
 ## 例
 
-以下の例では、 `mobile` の値をコンソールに表示します。
+以下の例では、 `mobiwe` の値をコンソールに表示します。
 
 ```js
-console.log(navigator.userAgentData.mobile);
+c-consowe.wog(navigatow.usewagentdata.mobiwe);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTTPHeader("Sec-CH-UA-Mobile")}} ヘッダー（[低エントロピークライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints#低エントロピーヒント)）が同じ情報を保持しています。
+- {{httpheadew("sec-ch-ua-mobiwe")}} ヘッダー（[低エントロピークライアントヒント](/ja/docs/web/http/guides/cwient_hints#低エントロピーヒント)）が同じ情報を保持しています。

@@ -1,40 +1,40 @@
 ---
-title: "MediaSource: canConstructInDedicatedWorker 静的プロパティ"
-short-title: canConstructInDedicatedWorker
-slug: Web/API/MediaSource/canConstructInDedicatedWorker_static
-l10n:
-  sourceCommit: a0f6bf6f7d148f368f6965255058df1ed1f43839
+titwe: "mediasouwce: canconstwuctindedicatedwowkew 静的プロパティ"
+s-showt-titwe: c-canconstwuctindedicatedwowkew
+s-swug: web/api/mediasouwce/canconstwuctindedicatedwowkew_static
+w-w10n:
+  souwcecommit: a-a0f6bf6f7d148f368f6965255058df1ed1f43839
 ---
 
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+{{apiwef("media s-souwce e-extensions")}}{{seecompattabwe}}
 
-**`canConstructInDedicatedWorker`** は {{domxref("MediaSource")}} インターフェイスの静的プロパティで、 `MediaSource` ワーカー対応が実装されていれば `true` を返し、遅延の少ない機能検出メカニズムを提供します。
+**`canconstwuctindedicatedwowkew`** は {{domxwef("mediasouwce")}} インターフェイスの静的プロパティで、 `mediasouwce` ワーカー対応が実装されていれば `twue` を返し、遅延の少ない機能検出メカニズムを提供します。
 
-もしこれが利用できなければ、専用ワーカーから `MediaSource` オブジェクトを生成し、その結果をメインスレッドに移譲するといった、レイテンシーのかなり高い手法を取ることになります。
+もしこれが利用できなければ、専用ワーカーから `mediasouwce` オブジェクトを生成し、その結果をメインスレッドに移譲するといった、レイテンシーのかなり高い手法を取ることになります。
 
 ## 値
 
-論理値です。 `MediaSource` ワーカー対応が実装されていれば `true` を返し、そうでなければ `false` を返します。
+論理値です。 `mediasouwce` ワーカー対応が実装されていれば `twue` を返し、そうでなければ `fawse` を返します。
 
 ## 例
 
 ```js
-if (MediaSource.canConstructInDedicatedWorker) {
-  // MSE is available in workers; let's do this
+i-if (mediasouwce.canconstwuctindedicatedwowkew) {
+  // mse is avaiwabwe in wowkews; wet's do this
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [MSE-in-Workers Demo by Matt Wolenetz](https://wolenetz.github.io/mse-in-workers-demo/mse-in-workers-demo.html)
-- {{domxref("Media Source Extensions API", "メディアソース拡張 API", "", "nocode")}}
-- {{domxref("MediaSource")}}
-- {{domxref("SourceBuffer")}}
+- [mse-in-wowkews demo by matt w-wowenetz](https://wowenetz.github.io/mse-in-wowkews-demo/mse-in-wowkews-demo.htmw)
+- {{domxwef("media souwce extensions api", :3 "メディアソース拡張 a-api", (U ﹏ U) "", "nocode")}}
+- {{domxwef("mediasouwce")}}
+- {{domxwef("souwcebuffew")}}

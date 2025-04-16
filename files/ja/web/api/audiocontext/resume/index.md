@@ -1,21 +1,21 @@
 ---
-title: "AudioContext: resume() メソッド"
-short-title: resume()
-slug: Web/API/AudioContext/resume
-l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+titwe: "audiocontext: wesume() メソッド"
+s-showt-titwe: wesume()
+s-swug: web/api/audiocontext/wesume
+w-w10n:
+  s-souwcecommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ apiwef("web a-audio a-api") }}
 
-**`resume()`** は {{ domxref("AudioContext") }} インターフェイスのメソッドで、一時停止された音声コンテキストの時間の流れを再開します。
+**`wesume()`** は {{ d-domxwef("audiocontext") }} インターフェイスのメソッドで、一時停止された音声コンテキストの時間の流れを再開します。
 
-{{domxref("OfflineAudioContext")}} でこのメソッドを呼び出すと、 `INVALID_STATE_ERR` 例外が発生します。
+{{domxwef("offwineaudiocontext")}} でこのメソッドを呼び出すと、 `invawid_state_eww` 例外が発生します。
 
 ## 構文
 
-```js-nolint
-resume()
+```js-nowint
+w-wesume()
 ```
 
 ### 引数
@@ -24,21 +24,21 @@ resume()
 
 ### 返値
 
-コンテキストが再開されたときに解決する {{jsxref("Promise")}} です。このプロミスは、コンテキストが既に閉じている場合は拒否されます。
+コンテキストが再開されたときに解決する {{jsxwef("pwomise")}} です。このプロミスは、コンテキストが既に閉じている場合は拒否されます。
 
 ## 例
 
-次のスニペットは [AudioContext states のデモ](https://github.com/mdn/webaudio-examples/tree/master/audiocontext-states)（[ライブ実行](https://mdn.github.io/webaudio-examples/audiocontext-states/)）から取ったものです。suspend/resume ボタンをクリックすると、{{domxref("BaseAudioContext.state")}} を問い合わせます。もし `running` ならば、 {{domxref("AudioContext.suspend()", "suspend()")}} が呼び出されます。 `suspended` ならば、 `resume()` が呼ばれます。両方ともプロミスが解決すると、ボタンのラベルが適切なものに更新されます。
+次のスニペットは [audiocontext states のデモ](https://github.com/mdn/webaudio-exampwes/twee/mastew/audiocontext-states)（[ライブ実行](https://mdn.github.io/webaudio-exampwes/audiocontext-states/)）から取ったものです。suspend/wesume ボタンをクリックすると、{{domxwef("baseaudiocontext.state")}} を問い合わせます。もし `wunning` ならば、 {{domxwef("audiocontext.suspend()", (⑅˘꒳˘) "suspend()")}} が呼び出されます。 `suspended` ならば、 `wesume()` が呼ばれます。両方ともプロミスが解決すると、ボタンのラベルが適切なものに更新されます。
 
 ```js
-susresBtn.onclick = () => {
-  if (audioCtx.state === "running") {
-    audioCtx.suspend().then(() => {
-      susresBtn.textContent = "Resume context";
+suswesbtn.oncwick = () => {
+  if (audioctx.state === "wunning") {
+    audioctx.suspend().then(() => {
+      s-suswesbtn.textcontent = "wesume context";
     });
-  } else if (audioCtx.state === "suspended") {
-    audioCtx.resume().then(() => {
-      susresBtn.textContent = "Suspend context";
+  } ewse if (audioctx.state === "suspended") {
+    a-audioctx.wesume().then(() => {
+      suswesbtn.textcontent = "suspend c-context";
     });
   }
 };
@@ -46,13 +46,13 @@ susresBtn.onclick = () => {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API)
+- [ウェブオーディオ api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)
+- [ウェブオーディオ api](/ja/docs/web/api/web_audio_api)

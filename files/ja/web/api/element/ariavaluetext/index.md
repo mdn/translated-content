@@ -1,14 +1,14 @@
 ---
-title: "Element: ariaValueText プロパティ"
-short-title: ariaValueText
-slug: Web/API/Element/ariaValueText
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: awiavawuetext プロパティ"
+s-showt-titwe: a-awiavawuetext
+swug: w-web/api/ewement/awiavawuetext
+w-w10n:
+  souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{defauwtapisidebaw("dom")}}
 
-**`ariaValueText`** は {{domxref("Element")}} インターフェイスのプロパティで、範囲ウィジェットの aria-valuenow の代替となる人間が読み取り可能なテキストを定義する [`aria-valuetext`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext) 属性の値を反映します。
+**`awiavawuetext`** は {{domxwef("ewement")}} インターフェイスのプロパティで、範囲ウィジェットの awia-vawuenow の代替となる人間が読み取り可能なテキストを定義する [`awia-vawuetext`](/ja/docs/web/accessibiwity/awia/attwibutes/awia-vawuetext) 属性の値を反映します。
 
 ## 値
 
@@ -16,29 +16,29 @@ l10n:
 
 ## 例
 
-この例では、ID が `slider` の要素の `aria-valuetext` 属性に "Sunday" を設定し、人間が読み取り可能な範囲の値を与えています。`ariaValueText` を使用して、値を "Monday" に更新します。
+この例では、id が `swidew` の要素の `awia-vawuetext` 属性に "sunday" を設定し、人間が読み取り可能な範囲の値を与えています。`awiavawuetext` を使用して、値を "monday" に更新します。
 
-```html
+```htmw
 <div
-  id="slider"
-  role="slider"
-  aria-valuenow="1"
-  aria-valuemin="1"
-  aria-valuemax="7"
-  aria-valuetext="Sunday"></div>
+  i-id="swidew"
+  w-wowe="swidew"
+  a-awia-vawuenow="1"
+  awia-vawuemin="1"
+  awia-vawuemax="7"
+  awia-vawuetext="sunday"></div>
 ```
 
 ```js
-let el = document.getElementById("slider");
-console.log(el.ariaValueText); // Sunday
-el.ariaValueText = "Monday";
-console.log(el.ariaValueText); // Monday
+wet e-ew = document.getewementbyid("swidew");
+consowe.wog(ew.awiavawuetext); // sunday
+e-ew.awiavawuetext = "monday";
+consowe.wog(ew.awiavawuetext); // m-monday
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

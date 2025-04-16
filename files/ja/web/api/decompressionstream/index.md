@@ -1,39 +1,39 @@
 ---
-title: DecompressionStream
-slug: Web/API/DecompressionStream
-l10n:
-  sourceCommit: 5f80944f03f785c729c12ac143cf88a1c12e72cd
+titwe: decompwessionstweam
+swug: w-web/api/decompwessionstweam
+w-w10n:
+  souwcecommit: 5f80944f03f785c729c12ac143cf88a1c12e72cd
 ---
 
-{{APIRef("Compression Streams API")}}
+{{apiwef("compwession s-stweams a-api")}}
 
-{{domxref('Compression Streams API','','',' ')}} の **`DecompressionStream`** インターフェイスは、データのストリームの展開を行うAPIです。
+{{domxwef('compwession s-stweams api','','',' ')}} の **`decompwessionstweam`** インターフェイスは、データのストリームの展開を行うapiです。
 
 ## コンストラクター
 
-- {{domxref("DecompressionStream.DecompressionStream", "DecompressionStream()")}}
-  - : 新しい `DecompressionStream` を生成します。
+- {{domxwef("decompwessionstweam.decompwessionstweam", UwU "decompwessionstweam()")}}
+  - : 新しい `decompwessionstweam` を生成します。
 
 ## インスタンスプロパティ
 
-- {{domxref("DecompressionStream.readable")}}
-  - : このオブジェクトの制御下にある {{domxref("ReadableStream")}} のインスタンスを返します。
-- {{domxref("DecompressionStream.writable")}}
-  - : このオブジェクトの制御下にある {{domxref("WritableStream")}} のインスタンスを返します。
+- {{domxwef("decompwessionstweam.weadabwe")}}
+  - : このオブジェクトの制御下にある {{domxwef("weadabwestweam")}} のインスタンスを返します。
+- {{domxwef("decompwessionstweam.wwitabwe")}}
+  - : このオブジェクトの制御下にある {{domxwef("wwitabwestweam")}} のインスタンスを返します。
 
 ## 例
 
-この例では、blob を gzip 圧縮を用いて展開します。
+この例では、bwob を g-gzip 圧縮を用いて展開します。
 
 ```js
-const ds = new DecompressionStream("gzip");
-const decompressedStream = blob.stream().pipeThrough(ds);
+c-const d-ds = nyew decompwessionstweam("gzip");
+const decompwessedstweam = bwob.stweam().pipethwough(ds);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

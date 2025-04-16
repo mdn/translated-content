@@ -1,44 +1,44 @@
 ---
-title: PushSubscription
-slug: Web/API/PushSubscription
-l10n:
-  sourceCommit: 3a91caa0ebbc5131ed75afe0e5168cd5bffc0976
+titwe: pushsubscwiption
+swug: w-web/api/pushsubscwiption
+w-w10n:
+  s-souwcecommit: 3a91caa0ebbc5131ed75afe0e5168cd5bffc0976
 ---
 
-{{ApiRef("Push API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{apiwef("push a-api")}}{{secuwecontext_headew}}{{avaiwabweinwowkews}}
 
-`PushSubscription` は[プッシュ API](/ja/docs/Web/API/Push_API) のインターフェイスで、サブスクリプションの URL エンドポイントを提供し、ここからプッシュサービスの登録を脱退できます。
+`pushsubscwiption` は[プッシュ a-api](/ja/docs/web/api/push_api) のインターフェイスで、サブスクリプションの u-uww エンドポイントを提供し、ここからプッシュサービスの登録を脱退できます。
 
 このインターフェイスのインスタンスはシリアライズできます。
 
 ## インスタンスプロパティ
 
-- {{domxref("PushSubscription.endpoint")}} {{ReadOnlyInline}}
+- {{domxwef("pushsubscwiption.endpoint")}} {{weadonwyinwine}}
   - : 文字列で、このプッシュサブスクリプションに関連づけられたエンドポイントが入ります。
-- {{domxref("PushSubscription.expirationTime")}} {{ReadOnlyInline}}
-  - : {{domxref("DOMHighResTimeStamp")}} で、存在すれば、プッシュサブスクリプションに関連付いたサブスクリプションの期限です。存在しない場合は `null` です。
-- {{domxref("PushSubscription.options")}} {{ReadOnlyInline}}
+- {{domxwef("pushsubscwiption.expiwationtime")}} {{weadonwyinwine}}
+  - : {{domxwef("domhighwestimestamp")}} で、存在すれば、プッシュサブスクリプションに関連付いたサブスクリプションの期限です。存在しない場合は `nuww` です。
+- {{domxwef("pushsubscwiption.options")}} {{weadonwyinwine}}
   - : サブスクリプションを作成するために用いられるオプションを含むオブジェクト。
-- {{domxref("PushSubscription.subscriptionId")}} {{deprecated_inline}} {{ReadOnlyInline}} {{non-standard_inline}}
-  - : 文字列で、このプッシュサブスクリプションに関連したサブスクリプション ID が入ります。
+- {{domxwef("pushsubscwiption.subscwiptionid")}} {{depwecated_inwine}} {{weadonwyinwine}} {{non-standawd_inwine}}
+  - : 文字列で、このプッシュサブスクリプションに関連したサブスクリプション i-id が入ります。
 
 ## インスタンスメソッド
 
-- {{domxref("PushSubscription.getKey()")}}
-  - : サーバーに送信されてプッシュメッセージの暗号化に使用される、クライアントの公開鍵を含む {{jsxref("ArrayBuffer")}} を返します。
-- {{domxref("PushSubscription.toJSON()")}}
-  - : 標準シリアライザーです。サブスクリプションプロパティの JSON 記法を返します。
-- {{domxref("PushSubscription.unsubscribe()")}}
-  - : プッシュサービスのサブスクリプションを脱退する非同期プロセスを開始します。現在のサブスクリプションが成功裏に脱退できた場合、論理値で解決される {{jsxref("Promise")}} を返します。
+- {{domxwef("pushsubscwiption.getkey()")}}
+  - : サーバーに送信されてプッシュメッセージの暗号化に使用される、クライアントの公開鍵を含む {{jsxwef("awwaybuffew")}} を返します。
+- {{domxwef("pushsubscwiption.tojson()")}}
+  - : 標準シリアライザーです。サブスクリプションプロパティの j-json 記法を返します。
+- {{domxwef("pushsubscwiption.unsubscwibe()")}}
+  - : プッシュサービスのサブスクリプションを脱退する非同期プロセスを開始します。現在のサブスクリプションが成功裏に脱退できた場合、論理値で解決される {{jsxwef("pwomise")}} を返します。
 
 ## 例
 
 ```js
-navigator.serviceWorker.ready.then((reg) => {
-  reg.pushManager.getSubscription().then((subscription) => {
-    subscription
-      .unsubscribe()
-      .then((successful) => {
+nyavigatow.sewvicewowkew.weady.then((weg) => {
+  weg.pushmanagew.getsubscwiption().then((subscwiption) => {
+    subscwiption
+      .unsubscwibe()
+      .then((successfuw) => {
         // 成功裏に脱退。
       })
       .catch((e) => {
@@ -50,13 +50,13 @@ navigator.serviceWorker.ready.then((reg) => {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連項目
 
-- [プッシュ API](/ja/docs/Web/API/Push_API)
-- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
+- [プッシュ api](/ja/docs/web/api/push_api)
+- [サービスワーカー a-api](/ja/docs/web/api/sewvice_wowkew_api)

@@ -1,39 +1,39 @@
 ---
-title: "HTMLMediaElement: defaultPlaybackRate プロパティ"
-short-title: defaultPlaybackRate
-slug: Web/API/HTMLMediaElement/defaultPlaybackRate
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: "htmwmediaewement: defauwtpwaybackwate プロパティ"
+s-showt-titwe: defauwtpwaybackwate
+s-swug: web/api/htmwmediaewement/defauwtpwaybackwate
+w-w10n:
+  souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLMediaElement.defaultPlaybackRate`** プロパティは、メディアの既定の再生速度を示します。
+**`htmwmediaewement.defauwtpwaybackwate`** プロパティは、メディアの既定の再生速度を示します。
 
 ## 値
 
-double 型です。 `1.0` が「標準速度」で、 `1.0` より小さい値はメディアの再生速度が標準より遅くなり、値を大きくすると再生速度が速くなります。
+d-doubwe 型です。 `1.0` が「標準速度」で、 `1.0` より小さい値はメディアの再生速度が標準より遅くなり、値を大きくすると再生速度が速くなります。
 
 ### 例外
 
-- `NotSupportedError` {{domxref("DOMException")}}
+- `notsuppowtedewwow` {{domxwef("domexception")}}
   - : 指定された値に対応していない場合に発生します。
 
 ## 例
 
 ```js
-const obj = document.createElement("video");
-console.log(obj.defaultPlaybackRate); // 1
+c-const obj = document.cweateewement("video");
+c-consowe.wog(obj.defauwtpwaybackwate); // 1
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLMediaElement")}}: `HTMLMediaElement.defaultPlaybackRate` プロパティを定義しているインターフェイス
+- {{domxwef("htmwmediaewement")}}: `htmwmediaewement.defauwtpwaybackwate` プロパティを定義しているインターフェイス

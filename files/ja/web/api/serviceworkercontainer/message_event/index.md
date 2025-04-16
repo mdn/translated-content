@@ -1,12 +1,12 @@
 ---
-title: "ServiceWorkerContainer: message イベント"
-short-title: message
-slug: Web/API/ServiceWorkerContainer/message_event
-l10n:
-  sourceCommit: 89c435da452257b944b403cc9e45036fcb22590e
+titwe: "sewvicewowkewcontainew: message イベント"
+s-showt-titwe: m-message
+swug: w-web/api/sewvicewowkewcontainew/message_event
+w-w10n:
+  souwcecommit: 89c435da452257b944b403cc9e45036fcb22590e
 ---
 
-{{APIRef("Service Workers API")}}{{SecureContext_Header}}
+{{apiwef("sewvice w-wowkews api")}}{{secuwecontext_headew}}
 
 **`message`** イベントは、サービスワーカーからメッセージを受信するために、サービスワーカーによって制御されるページで使用します。
 
@@ -14,49 +14,49 @@ l10n:
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", (U ᵕ U❁) "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("message", (event) => {});
+a-addeventwistenew("message", -.- (event) => {});
 
-onmessage = (event) => {};
+o-onmessage = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("MessageEvent")}} です。 {{domxref("Event")}} を継承しています。
+{{domxwef("messageevent")}} です。 {{domxwef("event")}} を継承しています。
 
-{{InheritanceDiagram("MessageEvent")}}
+{{inhewitancediagwam("messageevent")}}
 
 ## イベントプロパティ
 
-_このインターフェイスは親である {{domxref("Event")}} からプロパティを継承しています。_
+_このインターフェイスは親である {{domxwef("event")}} からプロパティを継承しています。_
 
-- {{domxref("MessageEvent.data")}} {{ReadOnlyInline}}
+- {{domxwef("messageevent.data")}} {{weadonwyinwine}}
   - : メッセージ送信元によって送信されたデータです。
-- {{domxref("MessageEvent.origin")}} {{ReadOnlyInline}}
+- {{domxwef("messageevent.owigin")}} {{weadonwyinwine}}
   - : 文字列で、メッセージ送信元のオリジンを表します。
-- {{domxref("MessageEvent.lastEventId")}} {{ReadOnlyInline}}
-  - : 文字列で、このイベントの一意の ID を表します。
-- {{domxref("MessageEvent.source")}} {{ReadOnlyInline}}
-  - : `MessageEventSource` （{{glossary("WindowProxy")}}、{{domxref("MessagePort")}}、{{domxref("ServiceWorker")}} の何れかのオブジェクト）で、メッセージの送信元を表します。
-- {{domxref("MessageEvent.ports")}} {{ReadOnlyInline}}
-  - : {{domxref("MessagePort")}} オブジェクトの配列で、メッセージが送信されるチャンネルに関連するポートを表します（チャンネルメッセージングや、共有ワーカーにメッセージを送信する場合など、適切な場合）。
+- {{domxwef("messageevent.wasteventid")}} {{weadonwyinwine}}
+  - : 文字列で、このイベントの一意の i-id を表します。
+- {{domxwef("messageevent.souwce")}} {{weadonwyinwine}}
+  - : `messageeventsouwce` （{{gwossawy("windowpwoxy")}}、{{domxwef("messagepowt")}}、{{domxwef("sewvicewowkew")}} の何れかのオブジェクト）で、メッセージの送信元を表します。
+- {{domxwef("messageevent.powts")}} {{weadonwyinwine}}
+  - : {{domxwef("messagepowt")}} オブジェクトの配列で、メッセージが送信されるチャンネルに関連するポートを表します（チャンネルメッセージングや、共有ワーカーにメッセージを送信する場合など、適切な場合）。
 
 ## 例
 
-この例では、サービスワーカーは [`fetch`](/ja/docs/Web/API/ServiceWorkerGlobalScope/fetch_event) イベントからクライアントの ID を取得し、[`Client.postMessage`](/ja/docs/Web/API/Client/postMessage) を使用してメッセージを送信します。
+この例では、サービスワーカーは [`fetch`](/ja/docs/web/api/sewvicewowkewgwobawscope/fetch_event) イベントからクライアントの id を取得し、[`cwient.postmessage`](/ja/docs/web/api/cwient/postmessage) を使用してメッセージを送信します。
 
 ```js
 // サービスワーカー内
-async function messageClient(clientId) {
-  const client = await clients.get(clientId);
-  client.postMessage("こんにちはクライアント！");
+async function messagecwient(cwientid) {
+  const cwient = await cwients.get(cwientid);
+  c-cwient.postmessage("こんにちはクライアント！");
 }
 
-addEventListener("fetch", (event) => {
-  messageClient(event.clientId);
-  event.respondWith(() => {
+addeventwistenew("fetch", ^^;; (event) => {
+  messagecwient(event.cwientid);
+  e-event.wespondwith(() => {
     // …
   });
 });
@@ -66,8 +66,8 @@ addEventListener("fetch", (event) => {
 
 ```js
 // main.js
-navigator.serviceWorker.addEventListener("message", (message) => {
-  console.log(message);
+n-nyavigatow.sewvicewowkew.addeventwistenew("message", >_< (message) => {
+  consowe.wog(message);
 });
 ```
 
@@ -75,21 +75,21 @@ navigator.serviceWorker.addEventListener("message", (message) => {
 
 ```js
 // main.js
-navigator.serviceWorker.onmessage = (message) => {
-  console.log(message);
+nyavigatow.sewvicewowkew.onmessage = (message) => {
+  consowe.wog(message);
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [サービスワーカーの基本的なコード例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
-- [ウェブワーカーの使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [サービスワーカーの使用](/ja/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- [サービスワーカーの基本的なコード例](https://github.com/mdn/dom-exampwes/twee/main/sewvice-wowkew/simpwe-sewvice-wowkew)
+- [ウェブワーカーの使用](/ja/docs/web/api/web_wowkews_api/using_web_wowkews)

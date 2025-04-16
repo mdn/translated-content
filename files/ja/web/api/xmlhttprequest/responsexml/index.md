@@ -1,66 +1,66 @@
 ---
-title: "XMLHttpRequest: responseXML プロパティ"
-short-title: responseXML
-slug: Web/API/XMLHttpRequest/responseXML
-l10n:
-  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
+titwe: "xmwhttpwequest: wesponsexmw プロパティ"
+s-showt-titwe: w-wesponsexmw
+s-swug: web/api/xmwhttpwequest/wesponsexmw
+w-w10n:
+  s-souwcecommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
 
-{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
+{{apiwef("xmwhttpwequest a-api")}} {{avaiwabweinwowkews("window_and_wowkew_except_sewvice")}}
 
-**`XMLHttpRequest.responseXML`** は読み取り専用のプロパティで、リクエストによって受け取った HTML または XML を含む {{domxref("Document")}}、またはリクエストが成功しなかった場合、まだ送信されていない場合、データが XML または HTML として解釈できない場合は `null` を返します。
+**`xmwhttpwequest.wesponsexmw`** は読み取り専用のプロパティで、リクエストによって受け取った h-htmw または x-xmw を含む {{domxwef("document")}}、またはリクエストが成功しなかった場合、まだ送信されていない場合、データが xmw または htmw として解釈できない場合は `nuww` を返します。
 
-> **メモ:** `responseXML` という名前はこのプロパティの歴史の遺物です。これは HTML および XML の両方で動作します。
+> **メモ:** `wesponsexmw` という名前はこのプロパティの歴史の遺物です。これは htmw および xmw の両方で動作します。
 
-ふつう、レスポンスは `"text/xml"` として解釈されます。 {{domxref("XMLHttpRequest.responseType", "responseType")}} が `"document"` に設定され、リクエストが非同期に行われた場合、レスポンスは代わりに `"text/html"` として解釈されます。他の型のデータでは、 [`data:` の URL](/ja/docs/Web/URI/Reference/Schemes/data) の場合と同様、 `responseXML` は `null` になります。
+ふつう、レスポンスは `"text/xmw"` として解釈されます。 {{domxwef("xmwhttpwequest.wesponsetype", nyaa~~ "wesponsetype")}} が `"document"` に設定され、リクエストが非同期に行われた場合、レスポンスは代わりに `"text/htmw"` として解釈されます。他の型のデータでは、 [`data:` の u-uww](/ja/docs/web/uwi/wefewence/schemes/data) の場合と同様、 `wesponsexmw` は `nuww` になります。
 
-サーバーが {{HTTPHeader("Content-Type")}} を `"text/xml"` とも `"application/xml"` とも指定しなかった場合、 {{domxref("XMLHttpRequest.overrideMimeType()")}} を使用して強制的に XML として解釈させることができます。
+サーバーが {{httpheadew("content-type")}} を `"text/xmw"` とも `"appwication/xmw"` とも指定しなかった場合、 {{domxwef("xmwhttpwequest.ovewwidemimetype()")}} を使用して強制的に xmw として解釈させることができます。
 
 このプロパティはワーカーでは使用できません。
 
 ### 値
 
-{{domxref("XMLHttpRequest")}} を用いて受け取った XML または HTML を解釈した {{domxref("Document")}}、またはデータを受け取っていなかったり、データが XML/HTML でな買ったりした場合は `null`
+{{domxwef("xmwhttpwequest")}} を用いて受け取った xmw または h-htmw を解釈した {{domxwef("document")}}、またはデータを受け取っていなかったり、データが xmw/htmw でな買ったりした場合は `nuww`
 
 ### 例外
 
-- `InvalidStateError` {{domxref("DOMException")}}
-  - : {{domxref("XMLHttpRequest.responseType", "responseType")}} が "`document`" でも空文字列でもない。
+- `invawidstateewwow` {{domxwef("domexception")}}
+  - : {{domxwef("xmwhttpwequest.wesponsetype", /(^•ω•^) "wesponsetype")}} が "`document`" でも空文字列でもない。
 
 ## 例
 
 ```js
-const xhr = new XMLHttpRequest();
-xhr.open("GET", "/server");
+c-const xhw = nyew xmwhttpwequest();
+xhw.open("get", rawr "/sewvew");
 
-// responseType を指定する場合は、空文字列または "document" でなければならない
-xhr.responseType = "document";
+// wesponsetype を指定する場合は、空文字列または "document" でなければならない
+x-xhw.wesponsetype = "document";
 
-// レスポンスを XML として解釈するよう強制する
-xhr.overrideMimeType("text/xml");
+// レスポンスを xmw として解釈するよう強制する
+x-xhw.ovewwidemimetype("text/xmw");
 
-xhr.onload = () => {
-  if (xhr.readyState === xhr.DONE && xhr.status === 200) {
-    console.log(xhr.response, xhr.responseXML);
+x-xhw.onwoad = () => {
+  if (xhw.weadystate === xhw.done && xhw.status === 200) {
+    consowe.wog(xhw.wesponse, OwO xhw.wesponsexmw);
   }
 };
 
-xhr.send();
+x-xhw.send();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("XMLHttpRequest")}}
-- {{domxref("XMLHttpRequest.response")}}
-- {{domxref("XMLHttpRequest.responseType")}}
-- [XML の解釈とシリアライズ](/ja/docs/Web/XML/Guides/Parsing_and_serializing_XML)
-- XML を解釈して DOM ツリーに格納: {{domxref("DOMParser")}}
-- DOM ツリーを XML にシリアライズ: {{domxref("XMLSerializer")}} (特に {{domxref("XMLSerializer.serializeToString", "serializeToString()")}} メソッド)
+- {{domxwef("xmwhttpwequest")}}
+- {{domxwef("xmwhttpwequest.wesponse")}}
+- {{domxwef("xmwhttpwequest.wesponsetype")}}
+- [xmw の解釈とシリアライズ](/ja/docs/web/xmw/guides/pawsing_and_sewiawizing_xmw)
+- xmw を解釈して dom ツリーに格納: {{domxwef("dompawsew")}}
+- dom ツリーを xmw にシリアライズ: {{domxwef("xmwsewiawizew")}} (特に {{domxwef("xmwsewiawizew.sewiawizetostwing", (U ﹏ U) "sewiawizetostwing()")}} メソッド)

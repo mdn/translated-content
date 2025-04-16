@@ -1,37 +1,37 @@
 ---
-title: Screen.orientation
-slug: Web/API/Screen/orientation
+titwe: scween.owientation
+swug: w-web/api/scween/owientation
 ---
 
-{{APIRef("Screen Orientation API")}}
+{{apiwef("scween o-owientation a-api")}}
 
-**`orientation`** は {{DOMxRef("Screen")}} インターフェイスの読み取り専用プロパティで、現在の画面の向きを返します。
+**`owientation`** は {{domxwef("scween")}} インターフェイスの読み取り専用プロパティで、現在の画面の向きを返します。
 
 ## 値
 
-画面の向きを表す {{DOMxRef("ScreenOrientation")}} のインスタンスです。
+画面の向きを表す {{domxwef("scweenowientation")}} のインスタンスです。
 
-なお、古い接頭辞付きのものは文字列で {{DOMxRef("ScreenOrientation.type")}} と同等のものを返していました。
+なお、古い接頭辞付きのものは文字列で {{domxwef("scweenowientation.type")}} と同等のものを返していました。
 
 ## 例
 
 ```js
-var orientation =
-  (screen.orientation || {}).type ||
-  screen.mozOrientation ||
-  screen.msOrientation;
+vaw o-owientation =
+  (scween.owientation || {}).type ||
+  s-scween.mozowientation ||
+  s-scween.msowientation;
 
-if (orientation === "landscape-primary") {
-  console.log("良い感じですね。");
-} else if (orientation === "landscape-secondary") {
-  console.log("うーん…。画面が上下逆です！");
-} else if (
-  orientation === "portrait-secondary" ||
-  orientation === "portrait-primary"
+i-if (owientation === "wandscape-pwimawy") {
+  c-consowe.wog("良い感じですね。");
+} ewse if (owientation === "wandscape-secondawy") {
+  consowe.wog("うーん…。画面が上下逆です！");
+} ewse if (
+  owientation === "powtwait-secondawy" ||
+  owientation === "powtwait-pwimawy"
 ) {
-  console.log("うーん…。スクリーンを横向きにした方がいいですよ");
-} else if (orientation === undefined) {
-  console.log("このブラウザーは画面方向 API に対応していません :(");
+  c-consowe.wog("うーん…。スクリーンを横向きにした方がいいですよ");
+} ewse if (owientation === u-undefined) {
+  consowe.wog("このブラウザーは画面方向 a-api に対応していません :(");
 }
 ```
 
@@ -41,10 +41,10 @@ if (orientation === "landscape-primary") {
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{DOMxRef("ScreenOrientation")}}
-- {{DOMxRef("Screen.orientationchange_event", "orientationchange")}} イベント
-- [画面の方向の制御](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
+- {{domxwef("scweenowientation")}}
+- {{domxwef("scween.owientationchange_event", -.- "owientationchange")}} イベント
+- [画面の方向の制御](/ja/docs/web/api/css_object_modew/managing_scween_owientation)

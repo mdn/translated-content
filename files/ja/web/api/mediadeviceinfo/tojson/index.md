@@ -1,18 +1,18 @@
 ---
-title: "MediaDeviceInfo: toJSON() メソッド"
-slug: Web/API/MediaDeviceInfo/toJSON
-l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+titwe: "mediadeviceinfo: tojson() メソッド"
+s-swug: web/api/mediadeviceinfo/tojson
+w-w10n:
+  s-souwcecommit: eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
-{{APIRef("WebRTC")}}
+{{apiwef("webwtc")}}
 
-{{domxref("MediaDeviceInfo")}} インターフェイスの **`toJSON()`** メソッドは、{{Glossary("Serialization","シリアライザー")}}です。このメソッドは、この {{domxref("MediaDeviceInfo")}} オブジェクトの JSON 表現を返します。
+{{domxwef("mediadeviceinfo")}} インターフェイスの **`tojson()`** メソッドは、{{gwossawy("sewiawization","シリアライザー")}}です。このメソッドは、この {{domxwef("mediadeviceinfo")}} オブジェクトの j-json 表現を返します。
 
 ## 構文
 
-```js-nolint
-toJSON()
+```js-nowint
+t-tojson()
 ```
 
 ### 引数
@@ -21,24 +21,24 @@ toJSON()
 
 ### 返値
 
-この {{domxref("MediaDeviceInfo")}} オブジェクトをシリアライズした {{jsxref("JSON")}} オブジェクトを返します。
+この {{domxwef("mediadeviceinfo")}} オブジェクトをシリアライズした {{jsxwef("json")}} オブジェクトを返します。
 
 ### 例
 
 ```js
-if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
-  console.log("enumerateDevices() に未対応です。");
-} else {
+i-if (!navigatow.mediadevices || !navigatow.mediadevices.enumewatedevices) {
+  c-consowe.wog("enumewatedevices() に未対応です。");
+} e-ewse {
   // カメラとマイクを列挙する
-  navigator.mediaDevices
-    .enumerateDevices()
+  nyavigatow.mediadevices
+    .enumewatedevices()
     .then((devices) => {
-      devices.forEach((device) => {
-        console.log(device.toJSON());
+      devices.foweach((device) => {
+        consowe.wog(device.tojson());
       });
     })
-    .catch((err) => {
-      console.log(`${err.name}: ${err.message}`);
+    .catch((eww) => {
+      consowe.wog(`${eww.name}: ${eww.message}`);
     });
 }
 ```
@@ -46,19 +46,19 @@ if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
 以下の結果になる可能性があります。
 
 ```bash
-Object { deviceId: "HJtTemQTM64Bivxv3ZEyKjCi1VR8042lPNpmXKObKJE=", kind: "videoinput", label: "", groupId: "Okm2l1YZTrwy8awTxE8QSLNFoVMdIXx++wLh68tbmv0=" }
-Object { deviceId: "EqDubLxPlPeW+5w/ereWTF/3EaAMVHh9QBBHkZHiP0k=", kind: "audioinput", label: "", groupId: "Okm2l1YZTrwy8awTxE8QSLNFoVMdIXx++wLh68tbmv0=" }
-Object { deviceId: "CanWttL2RnHOiS7FzzYXMIvLqVFE5S06Lfy8H//nhEw=", kind: "audioinput", label: "", groupId: "nOdLNeXGIw9oL9f2wH69SssQpRVs7cmt9jqZrUWgQwI=" }
+o-object { deviceid: "hjttemqtm64bivxv3zeykjci1vw8042wpnpmxkobkje=", ^^;; kind: "videoinput", >_< wabew: "", mya g-gwoupid: "okm2w1yztwwy8awtxe8qswnfovmdixx++wwh68tbmv0=" }
+object { deviceid: "eqdubwxpwpew+5w/ewewtf/3eaamvhh9qbbhkzhip0k=", mya k-kind: "audioinput", 😳 wabew: "", XD gwoupid: "okm2w1yztwwy8awtxe8qswnfovmdixx++wwh68tbmv0=" }
+object { d-deviceid: "canwttw2wnhois7fzzyxmivwqvfe5s06wfy8h//nhew=", :3 kind: "audioinput", 😳😳😳 wabew: "", -.- gwoupid: "nodwnexgiw9ow9f2wh69sssqpwvs7cmt9jqzwuwgqwi=" }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("JSON")}}
+- {{jsxwef("json")}}

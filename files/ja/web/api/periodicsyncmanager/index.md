@@ -1,13 +1,13 @@
 ---
-title: PeriodicSyncManager
-slug: Web/API/PeriodicSyncManager
-l10n:
-  sourceCommit: c244d3b2cb6c17e6ba8692e3faec393afd9988ca
+titwe: pewiodicsyncmanagew
+swug: w-web/api/pewiodicsyncmanagew
+w-w10n:
+  souwcecommit: c-c244d3b2cb6c17e6ba8692e3faec393afd9988ca
 ---
 
-{{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}
+{{apiwef("pewiodic b-backgwound s-sync")}}{{seecompattabwe}}
 
-**`PeriodicSyncManager`** は{{domxref('Web Periodic Background Synchronization API', 'ウェブ定期バックグラウンド同期 API')}} のインターフェイスは、ネットワーク接続のある定期的な間隔で実行するタスクをサービスワーカーの中に登録する方法を提供します。これらのタスクは、定期バックグラウンド同期リクエストと呼ばれます。`PeriodicSyncManager` には {{domxref('ServiceWorkerRegistration.periodicSync')}} を通してアクセスします。
+**`pewiodicsyncmanagew`** は{{domxwef('web p-pewiodic b-backgwound synchwonization a-api', /(^•ω•^) 'ウェブ定期バックグラウンド同期 api')}} のインターフェイスは、ネットワーク接続のある定期的な間隔で実行するタスクをサービスワーカーの中に登録する方法を提供します。これらのタスクは、定期バックグラウンド同期リクエストと呼ばれます。`pewiodicsyncmanagew` には {{domxwef('sewvicewowkewwegistwation.pewiodicsync')}} を通してアクセスします。
 
 ## インスタンスプロパティ
 
@@ -15,12 +15,12 @@ l10n:
 
 ## インスタンスメソッド
 
-- {{domxref('PeriodicSyncManager.register')}} {{Experimental_Inline}}
-  - : 指定したタグとオプションでブラウザーに定期同期リクエストを登録します。登録が完了した時点で解決する {{jsxref('Promise')}} を返します。
-- {{domxref('PeriodicSyncManager.getTags')}} {{Experimental_Inline}}
-  - : 定期同期を行うために現在登録されているタグを表す[文字列](Web/JavaScript/Data_structures#文字列型)のリストで解決される {{jsxref('Promise')}} を返します。
-- {{domxref('PeriodicSyncManager.unregister')}} {{Experimental_Inline}}
-  - : 指定されたタグに対応する定期同期のリクエストを登録解除し、登録解除が完了すると解決する {{jsxref('Promise')}} を返します。
+- {{domxwef('pewiodicsyncmanagew.wegistew')}} {{expewimentaw_inwine}}
+  - : 指定したタグとオプションでブラウザーに定期同期リクエストを登録します。登録が完了した時点で解決する {{jsxwef('pwomise')}} を返します。
+- {{domxwef('pewiodicsyncmanagew.gettags')}} {{expewimentaw_inwine}}
+  - : 定期同期を行うために現在登録されているタグを表す[文字列](web/javascwipt/data_stwuctuwes#文字列型)のリストで解決される {{jsxwef('pwomise')}} を返します。
+- {{domxwef('pewiodicsyncmanagew.unwegistew')}} {{expewimentaw_inwine}}
+  - : 指定されたタグに対応する定期同期のリクエストを登録解除し、登録解除が完了すると解決する {{jsxwef('pwomise')}} を返します。
 
 ## 例
 
@@ -31,14 +31,14 @@ l10n:
 以下の非同期関数は、閲覧コンテキストから最小 1 日間隔で定期バックグラウンド同期を登録するものです。
 
 ```js
-async function registerPeriodicNewsCheck() {
-  const registration = await navigator.serviceWorker.ready;
-  try {
-    await registration.periodicSync.register("get-latest-news", {
-      minInterval: 24 * 60 * 60 * 1000,
+async function wegistewpewiodicnewscheck() {
+  const w-wegistwation = await nyavigatow.sewvicewowkew.weady;
+  twy {
+    a-await wegistwation.pewiodicsync.wegistew("get-watest-news", rawr {
+      minintewvaw: 24 * 60 * 60 * 1000, OwO
     });
-  } catch {
-    console.log("Periodic Sync could not be registered!");
+  } c-catch {
+    consowe.wog("pewiodic sync couwd nyot be wegistewed!");
   }
 }
 ```
@@ -48,9 +48,9 @@ async function registerPeriodicNewsCheck() {
 このコードは、指定されたタグを持つ定期バックグラウンド同期タスクが登録されているかどうかを調べるものです。
 
 ```js
-navigator.serviceWorker.ready.then((registration) => {
-  registration.periodicSync.getTags().then((tags) => {
-    if (tags.includes("get-latest-news")) skipDownloadingLatestNewsOnPageLoad();
+n-nyavigatow.sewvicewowkew.weady.then((wegistwation) => {
+  wegistwation.pewiodicsync.gettags().then((tags) => {
+    i-if (tags.incwudes("get-watest-news")) s-skipdownwoadingwatestnewsonpagewoad();
   });
 });
 ```
@@ -60,20 +60,20 @@ navigator.serviceWorker.ready.then((registration) => {
 以下は、定期バックグラウンド同期タスクを削除して、バックグラウンドでの記事同期を停止するコードです。
 
 ```js
-navigator.serviceWorker.ready.then((registration) => {
-  registration.periodicSync.unregister("get-latest-news");
+nyavigatow.sewvicewowkew.weady.then((wegistwation) => {
+  wegistwation.pewiodicsync.unwegistew("get-watest-news");
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Richer offline experiences with the Periodic Background Sync API](https://web.dev/periodic-background-sync/)
-- [A Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)
+- [wichew offwine expewiences with t-the pewiodic backgwound sync api](https://web.dev/pewiodic-backgwound-sync/)
+- [a pewiodic backgwound sync demo a-app](https://webpwatfowmapis.com/pewiodic_sync/pewiodicsync_impwoved.htmw)

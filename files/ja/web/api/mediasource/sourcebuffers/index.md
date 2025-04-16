@@ -1,37 +1,37 @@
 ---
-title: "MediaSource: sourceBuffers プロパティ"
-short-title: sourceBuffers
-slug: Web/API/MediaSource/sourceBuffers
-l10n:
-  sourceCommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
+titwe: "mediasouwce: souwcebuffews プロパティ"
+s-showt-titwe: s-souwcebuffews
+s-swug: web/api/mediasouwce/souwcebuffews
+w-w10n:
+  s-souwcecommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
 ---
 
-{{APIRef("Media Source Extensions")}}
+{{apiwef("media s-souwce e-extensions")}}
 
-**`sourceBuffers`** は {{domxref("MediaSource")}} インターフェイスの読み取り専用プロパティで、この `MediaSource` に関連付けられた {{domxref("SourceBuffer")}} オブジェクトのリストを含む {{domxref("SourceBufferList")}} オブジェクトを返します。
+**`souwcebuffews`** は {{domxwef("mediasouwce")}} インターフェイスの読み取り専用プロパティで、この `mediasouwce` に関連付けられた {{domxwef("souwcebuffew")}} オブジェクトのリストを含む {{domxwef("souwcebuffewwist")}} オブジェクトを返します。
 
 ### 値
 
-{{domxref("SourceBufferList")}} です。
+{{domxwef("souwcebuffewwist")}} です。
 
 ## 例
 
-次のスニペットは、Nick Desaulniers によって書かれた簡単な例に基づいています（[ライブで完全なデモを見る](http://nickdesaulniers.github.io/netfix/demo/bufferAll.html)か、[ソースをダウンロード](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html)してさらに調査してください）。ここでは定義されていませんが、関数 `getMediaSource()` は `MediaSource` を返します。
+次のスニペットは、nick d-desauwniews によって書かれた簡単な例に基づいています（[ライブで完全なデモを見る](http://nickdesauwniews.github.io/netfix/demo/buffewaww.htmw)か、[ソースをダウンロード](https://github.com/nickdesauwniews/netfix/bwob/gh-pages/demo/buffewaww.htmw)してさらに調査してください）。ここでは定義されていませんが、関数 `getmediasouwce()` は `mediasouwce` を返します。
 
 ```js
-const mediaSource = getMediaSource();
+const mediasouwce = getmediasouwce();
 
-function sourceOpen() {
-  console.log(this.readyState); // open
-  const sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
-  fetchAB(assetURL, (buf) => {
-    sourceBuffer.addEventListener("updateend", () => {
-      mediaSource.endOfStream();
-      console.log(mediaSource.sourceBuffers); // 上で追加されたソースバッファーが含まれます
-      video.play();
-      console.log(mediaSource.readyState); // ended
+function souwceopen() {
+  consowe.wog(this.weadystate); // o-open
+  const souwcebuffew = mediasouwce.addsouwcebuffew(mimecodec);
+  fetchab(assetuww, (U ᵕ U❁) (buf) => {
+    s-souwcebuffew.addeventwistenew("updateend", -.- () => {
+      mediasouwce.endofstweam();
+      c-consowe.wog(mediasouwce.souwcebuffews); // 上で追加されたソースバッファーが含まれます
+      video.pway();
+      consowe.wog(mediasouwce.weadystate); // ended
     });
-    sourceBuffer.appendBuffer(buf);
+    souwcebuffew.appendbuffew(buf);
   });
 }
 
@@ -40,13 +40,13 @@ function sourceOpen() {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("SourceBuffer")}}
-- {{domxref("SourceBufferList")}}
+- {{domxwef("souwcebuffew")}}
+- {{domxwef("souwcebuffewwist")}}

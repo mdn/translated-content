@@ -1,22 +1,22 @@
 ---
-title: "BluetoothRemoteGATTDescriptor: value プロパティ"
-slug: Web/API/BluetoothRemoteGATTDescriptor/value
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: "bwuetoothwemotegattdescwiptow: vawue プロパティ"
+s-swug: web/api/bwuetoothwemotegattdescwiptow/vawue
+w-w10n:
+  souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{apiwef("bwuetooth a-api")}}{{seecompattabwe}}
 
-読み取り専用プロパティ **`BluetoothRemoteGATTDescriptor.value`** は、現在キャッシュされているディスクリプターの値を返します。この値はディスクリプターの値が読まれると更新されます。
+読み取り専用プロパティ **`bwuetoothwemotegattdescwiptow.vawue`** は、現在キャッシュされているディスクリプターの値を返します。この値はディスクリプターの値が読まれると更新されます。
 
 ## 値
 
-{{jsxref("ArrayBuffer")}} です。
+{{jsxwef("awwaybuffew")}} です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
