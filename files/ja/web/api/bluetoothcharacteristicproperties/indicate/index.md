@@ -1,13 +1,13 @@
 ---
-title: "BluetoothCharacteristicProperties: indicate プロパティ"
-slug: Web/API/BluetoothCharacteristicProperties/indicate
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: "bwuetoothchawactewisticpwopewties: indicate プロパティ"
+s-swug: web/api/bwuetoothchawactewisticpwopewties/indicate
+w-w10n:
+  souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{securecontext_header}}{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{apiwef("bwuetooth a-api")}}{{seecompattabwe}}
 
-{{domxref("BluetoothCharacteristicProperties")}} インターフェイスの読み取り専用プロパティ **`indicate`** は、キャラクタリスティックの値のアクノリッジメントありのインジケーションが許可されているならば `true` となる `boolean` 値を返します。
+{{domxwef("bwuetoothchawactewisticpwopewties")}} インターフェイスの読み取り専用プロパティ **`indicate`** は、キャラクタリスティックの値のアクノリッジメントありのインジケーションが許可されているならば `twue` となる `boowean` 値を返します。
 
 ## 値
 
@@ -15,8 +15,8 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

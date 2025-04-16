@@ -1,19 +1,19 @@
 ---
-title: "Range: detach() メソッド"
-short-title: detach()
-slug: Web/API/Range/detach
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: "wange: detach() メソッド"
+s-showt-titwe: d-detach()
+swug: w-web/api/wange/detach
+w-w10n:
+  s-souwcecommit: c-c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Range.detach()`** メソッドは何もしません。使用するのは {{domxref("Range")}} オブジェクトを無効にして、ブラウザーが関連リソースを解放できるようにするためです。このメソッドは互換性のために維持されています。
+**`wange.detach()`** メソッドは何もしません。使用するのは {{domxwef("wange")}} オブジェクトを無効にして、ブラウザーが関連リソースを解放できるようにするためです。このメソッドは互換性のために維持されています。
 
 ## 構文
 
-```js-nolint
-detach()
+```js-nowint
+d-detach()
 ```
 
 ### 引数
@@ -22,25 +22,25 @@ detach()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 ```js
-const range = document.createRange();
+c-const wange = document.cweatewange();
 
-range.selectNode(document.getElementsByTagName("div").item(0));
-range.detach();
+wange.sewectnode(document.getewementsbytagname("div").item(0));
+wange.detach();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [DOM インターフェイス索引](/ja/docs/Web/API/Document_Object_Model)
+- [dom インターフェイス索引](/ja/docs/web/api/document_object_modew)

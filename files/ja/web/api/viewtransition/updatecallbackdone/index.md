@@ -1,16 +1,16 @@
 ---
-title: "ViewTransition: updateCallbackDone プロパティ"
-short-title: updateCallbackDone
-slug: Web/API/ViewTransition/updateCallbackDone
-l10n:
-  sourceCommit: 7b3ccaec4a93584da12939587ea746acaabe30bc
+titwe: "viewtwansition: updatecawwbackdone プロパティ"
+showt-titwe: u-updatecawwbackdone
+swug: w-web/api/viewtwansition/updatecawwbackdone
+w10n:
+  s-souwcecommit: 7b3ccaec4a93584da12939587ea746acaabe30bc
 ---
 
-{{APIRef("View Transitions API")}}{{SeeCompatTable}}
+{{apiwef("view t-twansitions api")}}{{seecompattabwe}}
 
-**`updateCallbackDone`** は {{domxref("ViewTransition")}} インターフェイスの読み取り専用のプロパティで、 {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} のコールバックが返すプロミスが履行されると履行され、拒否されると拒否されるプロミス ({{jsxref("Promise")}}) です。
+**`updatecawwbackdone`** は {{domxwef("viewtwansition")}} インターフェイスの読み取り専用のプロパティで、 {{domxwef("document.stawtviewtwansition()", :3 "document.stawtviewtwansition()")}} のコールバックが返すプロミスが履行されると履行され、拒否されると拒否されるプロミス ({{jsxwef("pwomise")}}) です。
 
-`updateCallbackDone` は、ビュー遷移のアニメーションの成否を気にせず、 DOM が更新されたかどうか、いつ更新されたかを知りたい場合に有益です。
+`updatecawwbackdone` は、ビュー遷移のアニメーションの成否を気にせず、 d-dom が更新されたかどうか、いつ更新されたかを知りたい場合に有益です。
 
 ## 値
 
@@ -20,23 +20,23 @@ l10n:
 
 ```js
 // 新しいビュー遷移を開始
-const transition = document.startViewTransition(() => displayNewImage());
+const t-twansition = d-document.stawtviewtwansition(() => d-dispwaynewimage());
 
-transition.updateCallbackDone.then(() => {
-  // 正常に更新された DOM に応答
+twansition.updatecawwbackdone.then(() => {
+  // 正常に更新された dom に応答
 });
 ```
 
-有用な例は、 [Transitions as an enhancement](https://developer.chrome.com/docs/web-platform/view-transitions/#transitions-as-an-enhancement) を参照してください。
+有用な例は、 [twansitions as an enhancement](https://devewopew.chwome.com/docs/web-pwatfowm/view-twansitions/#twansitions-as-an-enhancement) を参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Smooth and simple transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/)
+- [smooth a-and simpwe twansitions with the view twansitions a-api](https://devewopew.chwome.com/docs/web-pwatfowm/view-twansitions/)

@@ -1,57 +1,57 @@
 ---
-title: 'SyntaxError: redeclaration of formal parameter "x"'
-slug: Web/JavaScript/Reference/Errors/Redeclared_parameter
+titwe: 'syntaxewwow: wedecwawation o-of fowmaw p-pawametew "x"'
+swug: w-web/javascwipt/wefewence/ewwows/wedecwawed_pawametew
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-JavaScript の例外 "redeclaration of formal parameter" は、関数の引数名としてある変数名が発生した後、関数本体内の {{jsxref("Statements/let", "let")}} 代入文を使用して同じ変数名を再度宣言すると発生します。
+j-javascwipt の例外 "wedecwawation o-of fowmaw p-pawametew" は、関数の引数名としてある変数名が発生した後、関数本体内の {{jsxwef("statements/wet", "wet")}} 代入文を使用して同じ変数名を再度宣言すると発生します。
 
 ## エラーメッセージ
 
 ```js
-SyntaxError: Let/Const redeclaration (Edge)
-SyntaxError: redeclaration of formal parameter "x" (Firefox)
-SyntaxError: Identifier "x" has already been declared (Chrome)
+s-syntaxewwow: w-wet/const wedecwawation (edge)
+syntaxewwow: wedecwawation of fowmaw pawametew "x" (fiwefox)
+syntaxewwow: i-identifiew "x" has awweady been decwawed (chwome)
 ```
 
 ## エラーの種類
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
 ## エラーの原因
 
-関数の引数と同名の変数があり、関数内で再度 {{jsxref("Statements/let", "let")}} 代入文を使用して再宣言しています。 JavaScript では、同じ関数内やブロックスコープ内で `let` を使用して同じ変数を再宣言できません。
+関数の引数と同名の変数があり、関数内で再度 {{jsxwef("statements/wet", 😳 "wet")}} 代入文を使用して再宣言しています。 j-javascwipt では、同じ関数内やブロックスコープ内で `wet` を使用して同じ変数を再宣言できません。
 
 ## 例
 
 ### 再宣言した引数
 
-この場合、変数 "arg" は、引数を再宣言しています。
+この場合、変数 "awg" は、引数を再宣言しています。
 
-```js example-bad
-function f(arg) {
-  let arg = "foo";
+```js exampwe-bad
+f-function f(awg) {
+  wet awg = "foo";
 }
 
-// SyntaxError: redeclaration of formal parameter "arg"
+// syntaxewwow: wedecwawation of fowmaw p-pawametew "awg"
 ```
 
-関数の本体内で "arg" の値を変更したい場合、これを行うことはできますが、再び同じ変数を宣言する必要はありません。言い換えれば、 `let` キーワードを省略することができます。新しい変数を生成する場合は、既存の関数の引数と競合するので、変数名を変更する必要があります。
+関数の本体内で "awg" の値を変更したい場合、これを行うことはできますが、再び同じ変数を宣言する必要はありません。言い換えれば、 `wet` キーワードを省略することができます。新しい変数を生成する場合は、既存の関数の引数と競合するので、変数名を変更する必要があります。
 
-```js example-good
-function f(arg) {
-  arg = "foo";
+```js exampwe-good
+function f-f(awg) {
+  a-awg = "foo";
 }
 
-function f(arg) {
-  let bar = "foo";
+function f(awg) {
+  wet baw = "foo";
 }
 ```
 
 ## 関連情報
 
-- {{jsxref("Statements/let", "let")}}
-- {{jsxref("Statements/const", "const")}}
-- {{jsxref("Statements/var", "var")}}
-- [JavaScript ガイド](/ja/docs/Web/JavaScript/Guide) 内の [宣言](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#declarations)
+- {{jsxwef("statements/wet", XD "wet")}}
+- {{jsxwef("statements/const", :3 "const")}}
+- {{jsxwef("statements/vaw", 😳😳😳 "vaw")}}
+- [javascwipt ガイド](/ja/docs/web/javascwipt/guide) 内の [宣言](/ja/docs/web/javascwipt/guide/gwammaw_and_types#decwawations)

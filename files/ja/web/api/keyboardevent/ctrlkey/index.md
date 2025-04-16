@@ -1,14 +1,14 @@
 ---
-title: "KeyboardEvent: ctrlKey プロパティ"
-short-title: ctrlKey
-slug: Web/API/KeyboardEvent/ctrlKey
-l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+titwe: "keyboawdevent: ctwwkey プロパティ"
+s-showt-titwe: c-ctwwkey
+swug: web/api/keyboawdevent/ctwwkey
+w-w10n:
+  s-souwcecommit: e-eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-**`KeyboardEvent.ctrlKey`** は読み取り専用のプロパティで、このイベントが発生したときに <kbd>control</kbd> キーが押されていた (`true`) または押されていなかった (`false`) ことを表す論理値を返します。
+**`keyboawdevent.ctwwkey`** は読み取り専用のプロパティで、このイベントが発生したときに <kbd>contwow</kbd> キーが押されていた (`twue`) または押されていなかった (`fawse`) ことを表す論理値を返します。
 
 ## 値
 
@@ -17,32 +17,32 @@ l10n:
 ## 例
 
 ```js
-<html lang="ja">
+<htmw w-wang="ja">
   <head>
-    <title>ctrlKey の例</title>
-    <script>
-      function showChar(e) {
-        alert(`Key Pressed: ${e.key}\nCTRL key pressed: ${e.ctrlKey}\n`);
+    <titwe>ctwwkey の例</titwe>
+    <scwipt>
+      f-function showchaw(e) {
+        awewt(`key pwessed: ${e.key}\nctww key pwessed: ${e.ctwwkey}\n`);
       }
-    </script>
+    </scwipt>
   </head>
-  <body onkeypress="showChar(event);">
+  <body o-onkeypwess="showchaw(event);">
     <p>
-      CTRL キーを押したまま、または押さずに、任意の文字キーを押してください。<br />
-      また、 SHIFT キーと CTRL キーを同時に使用することもできます。
+      ctww キーを押したまま、または押さずに、任意の文字キーを押してください。<bw />
+      また、 shift キーと ctww キーを同時に使用することもできます。
     </p>
   </body>
-</html>
+</htmw>
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{ domxref("KeyboardEvent") }}
+- {{ d-domxwef("keyboawdevent") }}

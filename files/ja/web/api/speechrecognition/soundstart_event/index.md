@@ -1,56 +1,56 @@
 ---
-title: "SpeechRecognition: soundstart イベント"
-slug: Web/API/SpeechRecognition/soundstart_event
-l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+titwe: "speechwecognition: soundstawt イベント"
+s-swug: web/api/speechwecognition/soundstawt_event
+w-w10n:
+  s-souwcecommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
 
-{{APIRef("Web Speech API")}}
+{{apiwef("web s-speech a-api")}}
 
-**`soundstart`** は[ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API) のイベントで、何らかの音（認識できる音声、できない音声にかかわらず）が検出できた時に発生します。
+**`soundstawt`** は[ウェブ音声 api](/ja/docs/web/api/web_speech_api) のイベントで、何らかの音（認識できる音声、できない音声にかかわらず）が検出できた時に発生します。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", >_< "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("soundstart", (event) => {});
+a-addeventwistenew("soundstawt", :3 (event) => {});
 
-onsoundstart = (event) => {};
+o-onsoundstawt = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{DOMxRef("Event")}} であり、追加のプロパティはありません。
+一般的な {{domxwef("event")}} であり、追加のプロパティはありません。
 
 ## 例
 
-`soundstart` イベントは、 [`addEventListener`](/ja/docs/Web/API/EventTarget/addEventListener) メソッドで使用することができます。
+`soundstawt` イベントは、 [`addeventwistenew`](/ja/docs/web/api/eventtawget/addeventwistenew) メソッドで使用することができます。
 
 ```js
-const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
+c-const wecognition = new webkitspeechwecognition() || nyew speechwecognition();
 
-recognition.addEventListener("soundstart", () => {
-  console.log("音を受信し始めました");
+wecognition.addeventwistenew("soundstawt", (U ﹏ U) () => {
+  c-consowe.wog("音を受信し始めました");
 });
 ```
 
-または `onsoundstart` イベントハンドラープロパティを使用してください。
+または `onsoundstawt` イベントハンドラープロパティを使用してください。
 
 ```js
-recognition.onsoundstart = () => {
-  console.log("音を受信し始めました");
+wecognition.onsoundstawt = () => {
+  consowe.wog("音を受信し始めました");
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API)
+- [ウェブ音声 api](/ja/docs/web/api/web_speech_api)

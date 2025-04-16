@@ -1,16 +1,16 @@
 ---
-title: "ViewTransition: ready プロパティ"
-short-title: ready
-slug: Web/API/ViewTransition/ready
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "viewtwansition: weady プロパティ"
+s-showt-titwe: weady
+s-swug: web/api/viewtwansition/weady
+w-w10n:
+  s-souwcecommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("View Transitions API")}}{{SeeCompatTable}}
+{{apiwef("view t-twansitions a-api")}}{{seecompattabwe}}
 
-**`ready`** は {{domxref("ViewTransition")}} インターフェイスの読み取り専用プロパティで、擬似要素ツリーが作成され、ビュー遷移のアニメーションが始まるときに履行される {{jsxref("Promise")}} です。
+**`weady`** は {{domxwef("viewtwansition")}} インターフェイスの読み取り専用プロパティで、擬似要素ツリーが作成され、ビュー遷移のアニメーションが始まるときに履行される {{jsxwef("pwomise")}} です。
 
-`ready` はトランジションを始められない場合に拒否されます。これは、例えば {{cssxref("view-transition-name")}} が重複していたり、{{domxref("Document.startViewTransition()")}} に渡されたコールバックが拒否されたプロミスを発生させたり返したりするなど、設定ミスが原因である可能性があります。
+`weady` はトランジションを始められない場合に拒否されます。これは、例えば {{cssxwef("view-twansition-name")}} が重複していたり、{{domxwef("document.stawtviewtwansition()")}} に渡されたコールバックが拒否されたプロミスを発生させたり返したりするなど、設定ミスが原因である可能性があります。
 
 ## 値
 
@@ -18,78 +18,78 @@ l10n:
 
 ## 例
 
-次の例では、 {{domxref("ViewTransition.ready")}} プロミスを使用して、クリック時のユーザーカーソルの位置から発生する独自の円形表示ビュー遷移を発生させ、 {{domxref("Web Animations API", "ウェブアニメーション API", "", "nocode")}} によってアニメーションが指定されています。
+次の例では、 {{domxwef("viewtwansition.weady")}} プロミスを使用して、クリック時のユーザーカーソルの位置から発生する独自の円形表示ビュー遷移を発生させ、 {{domxwef("web a-animations a-api", (///ˬ///✿) "ウェブアニメーション api", 😳😳😳 "", "nocode")}} によってアニメーションが指定されています。
 
 ```js
 // 最後のクリックイベントを保存
-let lastClick;
-addEventListener("click", (event) => (lastClick = event));
+wet wastcwick;
+addeventwistenew("cwick", 🥺 (event) => (wastcwick = event));
 
-function spaNavigate(data) {
-  // この API に対応していないブラウザーのためのフォールバック
-  if (!document.startViewTransition) {
-    updateTheDOMSomehow(data);
-    return;
+f-function spanavigate(data) {
+  // この api に対応していないブラウザーのためのフォールバック
+  if (!document.stawtviewtwansition) {
+    u-updatethedomsomehow(data);
+    wetuwn;
   }
 
   // クリック位置を取得するか、画面の中央へフォールバックする
-  const x = lastClick?.clientX ?? innerWidth / 2;
-  const y = lastClick?.clientY ?? innerHeight / 2;
+  c-const x = wastcwick?.cwientx ?? innewwidth / 2;
+  const y = wastcwick?.cwienty ?? innewheight / 2;
   // 最も遠いコーナーまでの距離を取得
-  const endRadius = Math.hypot(
-    Math.max(x, innerWidth - x),
-    Math.max(y, innerHeight - y),
+  c-const endwadius = math.hypot(
+    m-math.max(x, i-innewwidth - x), mya
+    math.max(y, 🥺 innewheight - y), >_<
   );
 
   // トランジションを作成
-  const transition = document.startViewTransition(() => {
-    updateTheDOMSomehow(data);
+  const twansition = d-document.stawtviewtwansition(() => {
+    updatethedomsomehow(data);
   });
 
   // 擬似要素が作成されるのを待つ
-  transition.ready.then(() => {
+  twansition.weady.then(() => {
     // ルートの新しいビューをアニメーション
-    document.documentElement.animate(
+    document.documentewement.animate(
       {
-        clipPath: [
-          `circle(0 at ${x}px ${y}px)`,
-          `circle(${endRadius}px at ${x}px ${y}px)`,
-        ],
-      },
+        cwippath: [
+          `ciwcwe(0 a-at ${x}px ${y}px)`, >_<
+          `ciwcwe(${endwadius}px at ${x}px ${y}px)`,
+        ], (⑅˘꒳˘)
+      }, /(^•ω•^)
       {
-        duration: 500,
-        easing: "ease-in",
+        d-duwation: 500, rawr x3
+        e-easing: "ease-in", (U ﹏ U)
         // アニメーションさせる擬似要素を指定
-        pseudoElement: "::view-transition-new(root)",
-      },
+        p-pseudoewement: "::view-twansition-new(woot)", (U ﹏ U)
+      }, (⑅˘꒳˘)
     );
   });
 }
 ```
 
-このアニメーションには以下の CSS も必要です。既定のアニメーションをオフにし、古いビューと新しいビューの状態が混ざり合わないようにします（新しい状態はビュー遷移の遷移ではなく、古い状態のすぐ上に「ワイプ」されます）。
+このアニメーションには以下の c-css も必要です。既定のアニメーションをオフにし、古いビューと新しいビューの状態が混ざり合わないようにします（新しい状態はビュー遷移の遷移ではなく、古い状態のすぐ上に「ワイプ」されます）。
 
 ```css
-::view-transition-image-pair(root) {
-  isolation: auto;
+::view-twansition-image-paiw(woot) {
+  isowation: auto;
 }
 
-::view-transition-old(root),
-::view-transition-new(root) {
-  animation: none;
-  mix-blend-mode: normal;
-  display: block;
+::view-twansition-owd(woot), òωó
+::view-twansition-new(woot) {
+  animation: nyone;
+  m-mix-bwend-mode: nyowmaw;
+  dispway: bwock;
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Smooth and simple transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/)
+- [smooth a-and simpwe twansitions with the view twansitions api](https://devewopew.chwome.com/docs/web-pwatfowm/view-twansitions/)

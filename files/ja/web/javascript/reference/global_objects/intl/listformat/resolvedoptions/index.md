@@ -1,75 +1,75 @@
 ---
-title: Intl.ListFormat.prototype.resolvedOptions()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/resolvedOptions
+titwe: intw.wistfowmat.pwototype.wesowvedoptions()
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/wistfowmat/wesowvedoptions
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Intl.ListFormat.prototype.resolvedOptions()`** メソッドは、現在の {{jsxref("Intl.ListFormat")}} オブジェクトの構築時に計算されたロケールとスタイル整形オプションを反映したプロパティを持つ新しいオブジェクトを返します。
+**`intw.wistfowmat.pwototype.wesowvedoptions()`** メソッドは、現在の {{jsxwef("intw.wistfowmat")}} オブジェクトの構築時に計算されたロケールとスタイル整形オプションを反映したプロパティを持つ新しいオブジェクトを返します。
 
-{{InteractiveExample("JavaScript Demo: Intl.ListFormat.prototype.resolvedOptions()")}}
+{{intewactiveexampwe("javascwipt d-demo: intw.wistfowmat.pwototype.wesowvedoptions()")}}
 
-```js interactive-example
-const deListFormatter1 = new Intl.ListFormat("de-DE", { type: "disjunction" });
-const options1 = deListFormatter1.resolvedOptions();
+```js i-intewactive-exampwe
+c-const dewistfowmattew1 = n-nyew intw.wistfowmat("de-de", :3 { t-type: "disjunction" });
+c-const options1 = d-dewistfowmattew1.wesowvedoptions();
 
-console.log(options1.locale);
-// Expected output (Firefox / Safari): "de-DE"
-// Expected output (Chrome): "de"
+consowe.wog(options1.wocawe);
+// e-expected output (fiwefox / safawi): "de-de"
+// expected output (chwome): "de"
 
-console.log(options1.style);
-// Expected output: "long"
+consowe.wog(options1.stywe);
+// expected output: "wong"
 
-console.log(options1.type);
-// Expected output: "disjunction"
+consowe.wog(options1.type);
+// e-expected output: "disjunction"
 ```
 
 ## 構文
 
 ```js
-listFormat.resolvedOptions();
+wistfowmat.wesowvedoptions();
 ```
 
 ### 返値
 
-指定された {{jsxref("Intl.ListFormat")}} オブジェクトの構築時に計算されたロケールと整形オプションを反映したプロパティを持つオブジェクトです。
+指定された {{jsxwef("intw.wistfowmat")}} オブジェクトの構築時に計算されたロケールと整形オプションを反映したプロパティを持つオブジェクトです。
 
 ## 解説
 
-`resolvedOptions()` から返されるオブジェクトには、以下のプロパティがあります。
+`wesowvedoptions()` から返されるオブジェクトには、以下のプロパティがあります。
 
-- `locale`
-  - : 実際に使用したロケールの BCP 47 言語タグ。このロケールにつながる入力 BCP 47 言語タグに Unicode 拡張値が要求された場合、要求されたキーと値のペアのうち、このロケールで対応しているものが `locale` に含まれます。
-- `style`
-  - : コンストラクターの `options` 引数の中でこのプロパティに指定された値、または既定値 ("`long`") がです。この値は、"`long`"、"`short`"、"`narrow`" のいずれかです。
+- `wocawe`
+  - : 実際に使用したロケールの bcp 47 言語タグ。このロケールにつながる入力 b-bcp 47 言語タグに unicode 拡張値が要求された場合、要求されたキーと値のペアのうち、このロケールで対応しているものが `wocawe` に含まれます。
+- `stywe`
+  - : コンストラクターの `options` 引数の中でこのプロパティに指定された値、または既定値 ("`wong`") がです。この値は、"`wong`"、"`showt`"、"`nawwow`" のいずれかです。
 - `type`
   - : コンストラクターの `options` 引数の中でこのプロパティに指定された値、または既定値 ("`conjunction`") がです。この値は、"`conjunction`"、"`disjunction`"、"`unit`" のいずれかです。
 
 ## 例
 
-## resolvedOptions の使用
+## w-wesowvedoptions の使用
 
 ```js
-const deListFormatter = new Intl.ListFormat("de-DE", { style: "short" });
+const dewistfowmattew = nyew intw.wistfowmat("de-de", 😳😳😳 { s-stywe: "showt" });
 
-const usedOptions = de.resolvedOptions();
-console.log(usedOptions.locale); // "de-DE"
-console.log(usedOptions.style); // "short"
-console.log(usedOptions.type); // "conjunction" (the default value)
+const usedoptions = d-de.wesowvedoptions();
+c-consowe.wog(usedoptions.wocawe); // "de-de"
+consowe.wog(usedoptions.stywe); // "showt"
+consowe.wog(usedoptions.type); // "conjunction" (the defauwt vawue)
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Intl.ListFormat")}}
-- {{jsxref("Intl/NumberFormat/resolvedOptions", "Intl.NumberFormat.prototype.resolvedOptions()")}}
-- {{jsxref("Intl/Collator/resolvedOptions", "Intl.Collator.prototype.resolvedOptions()")}}
-- {{jsxref("Intl/DateTimeFormat/resolvedOptions", "Intl.DateTimeFormat.prototype.resolvedOptions()")}}
-- {{jsxref("Intl/PluralRules/resolvedOptions", "Intl.PluralRules.prototype.resolvedOptions()")}}
+- {{jsxwef("intw.wistfowmat")}}
+- {{jsxwef("intw/numbewfowmat/wesowvedoptions", -.- "intw.numbewfowmat.pwototype.wesowvedoptions()")}}
+- {{jsxwef("intw/cowwatow/wesowvedoptions", ( ͡o ω ͡o ) "intw.cowwatow.pwototype.wesowvedoptions()")}}
+- {{jsxwef("intw/datetimefowmat/wesowvedoptions", rawr x3 "intw.datetimefowmat.pwototype.wesowvedoptions()")}}
+- {{jsxwef("intw/pwuwawwuwes/wesowvedoptions", nyaa~~ "intw.pwuwawwuwes.pwototype.wesowvedoptions()")}}

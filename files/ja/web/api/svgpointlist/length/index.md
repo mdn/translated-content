@@ -1,14 +1,14 @@
 ---
-title: "SVGPointList: length プロパティ"
-short-title: length
-slug: Web/API/SVGPointList/length
-l10n:
-  sourceCommit: 45088e6e93e190ba453db2cd6e2360af48904cae
+titwe: "svgpointwist: wength プロパティ"
+s-showt-titwe: wength
+s-swug: web/api/svgpointwist/wength
+w-w10n:
+  souwcecommit: 45088e6e93e190ba453db2cd6e2360af48904cae
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-**`length`** は {{domxref("SVGPointList")}} インターフェイスのプロパティで、リスト内のアイテム数を返します。
+**`wength`** は {{domxwef("svgpointwist")}} インターフェイスのプロパティで、リスト内のアイテム数を返します。
 
 ## 値
 
@@ -16,27 +16,27 @@ l10n:
 
 ## 例
 
-次の例では、 SVG の中に 5 つの座標ペアを持つ {{SVGElement("polyline")}} があります。 `length` プロパティは `5` を返します。
+次の例では、 s-svg の中に 5 つの座標ペアを持つ {{svgewement("powywine")}} があります。 `wength` プロパティは `5` を返します。
 
-```html
-<svg id="svg" viewBox="-10 -10 120 120" xmlns="http://www.w3.org/2000/svg">
-  <polyline
-    id="example"
-    stroke="black"
-    fill="none"
+```htmw
+<svg i-id="svg" viewbox="-10 -10 120 120" x-xmwns="http://www.w3.owg/2000/svg">
+  <powywine
+    i-id="exampwe"
+    s-stwoke="bwack"
+    fiww="none"
     points="50,0 21,90 98,35 2,35 79,90" />
 </svg>
 ```
 
 ```js
-let example = document.getElementById("example");
-console.log(example.points.length); // 5
+wet exampwe = document.getewementbyid("exampwe");
+c-consowe.wog(exampwe.points.wength); // 5
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

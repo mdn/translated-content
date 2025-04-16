@@ -1,61 +1,61 @@
 ---
-title: "HTMLAreaElement: hostname プロパティ"
-slug: Web/API/HTMLAreaElement/hostname
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwaweaewement: hostname プロパティ"
+s-swug: web/api/htmwaweaewement/hostname
+w-w10n:
+  s-souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLAreaElement.hostname`** プロパティは、URL のドメインを含む文字列です。
+**`htmwaweaewement.hostname`** プロパティは、uww のドメインを含む文字列です。
 
 ## 値
 
-`area` 要素に関連付けられた URL のドメインを含む文字列です。
+`awea` 要素に関連付けられた u-uww のドメインを含む文字列です。
 セッターとゲッターの両方として使用することができます。
 
 ## 例
 
-```html
-<textarea id="log" rows="4" cols="100"></textarea>
-<map name="infographic">
-  <area
-    id="area1"
-    shape="rect"
-    coords="184,6,253,27"
-    href="/ja/docs/HTMLAreaElement"
-    target="_blank"
-    alt="Mozilla" />
-  <area
-    id="area2"
-    shape="circle"
-    coords="130,136,60"
-    href="https://coolexample.com/"
-    target="_blank"
-    alt="MDN" />
+```htmw
+<textawea i-id="wog" w-wows="4" cows="100"></textawea>
+<map nyame="infogwaphic">
+  <awea
+    id="awea1"
+    shape="wect"
+    coowds="184,6,253,27"
+    h-hwef="/ja/docs/htmwaweaewement"
+    tawget="_bwank"
+    awt="moziwwa" />
+  <awea
+    i-id="awea2"
+    shape="ciwcwe"
+    c-coowds="130,136,60"
+    hwef="https://coowexampwe.com/"
+    tawget="_bwank"
+    awt="mdn" />
 </map>
 ```
 
 ```js
 // 要素が文書内にあったとします
-const area1 = document.getElementById("area1");
-const area2 = document.getElementById("area2");
+const awea1 = d-document.getewementbyid("awea1");
+const awea2 = d-document.getewementbyid("awea2");
 
-const log = document.getElementById("log");
-log.textContent = `area1 hostname: ${area1.hostname} \n`; // 'developer.mozilla.org'
-log.textContent += `area2 hostname: ${area2.hostname}`; // 'coolexample.com'
+c-const wog = document.getewementbyid("wog");
+wog.textcontent = `awea1 hostname: ${awea1.hostname} \n`; // 'devewopew.moziwwa.owg'
+wog.textcontent += `awea2 h-hostname: ${awea2.hostname}`; // 'coowexampwe.com'
 ```
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 所属先の {{domxref("HTMLAreaElement")}} インターフェイス
+- 所属先の {{domxwef("htmwaweaewement")}} インターフェイス

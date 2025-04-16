@@ -1,37 +1,37 @@
 ---
-title: BackgroundFetchRecord.request
-slug: Web/API/BackgroundFetchRecord/request
-l10n:
-  sourceCommit: 02e1bfcad5fd0de845fb033d331c3c027afa2d6e
+titwe: backgwoundfetchwecowd.wequest
+swug: web/api/backgwoundfetchwecowd/wequest
+w-w10n:
+  souwcecommit: 02e1bfcad5fd0de845fb033d331c3c027afa2d6e
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{apiwef("backgwound f-fetch a-api")}}{{seecompattabwe}}
 
-**`request`** は {{domxref("BackgroundFetchRecord")}} インターフェイスの読み取り専用プロパティで、フェッチするリソースの詳細を返します。
+**`wequest`** は {{domxwef("backgwoundfetchwecowd")}} インターフェイスの読み取り専用プロパティで、フェッチするリソースの詳細を返します。
 
 ## 値
 
-{{domxref("Request")}} 。
+{{domxwef("wequest")}} 。
 
 ## 例
 
-以下の例では、 {{domxref("BackgroundFetchManager.fetch()","BackgroundFetchManager.fetch()")}} の使用によって生成された `BackgroundFetchRecord` から `request` の値を受け取り、コンソールにログ出力しています。
+以下の例では、 {{domxwef("backgwoundfetchmanagew.fetch()","backgwoundfetchmanagew.fetch()")}} の使用によって生成された `backgwoundfetchwecowd` から `wequest` の値を受け取り、コンソールにログ出力しています。
 
 ```js
-bgFetch.match("/ep-5.mp3").then(async (record) => {
-  if (!record) {
-    console.log("recordは見つかりませんでした");
-    return;
+b-bgfetch.match("/ep-5.mp3").then(async (wecowd) => {
+  i-if (!wecowd) {
+    c-consowe.wog("wecowdは見つかりませんでした");
+    w-wetuwn;
   }
 
-  console.log(`リクエスト：`, record.request);
+  c-consowe.wog(`リクエスト：`, ( ͡o ω ͡o ) wecowd.wequest);
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

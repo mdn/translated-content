@@ -1,15 +1,15 @@
 ---
-title: "HTMLAreaElement: hash プロパティ"
-slug: Web/API/HTMLAreaElement/hash
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwaweaewement: hash プロパティ"
+s-swug: web/api/htmwaweaewement/hash
+w-w10n:
+  souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`HTMLAreaElement.hash`** プロパティは、`'#'` の後に URL のフラグメント識別子が続く文字列を返します。
+**`htmwaweaewement.hash`** プロパティは、`'#'` の後に u-uww のフラグメント識別子が続く文字列を返します。
 
-フラグメントは [URL デコード](https://ja.wikipedia.org/wiki/パーセントエンコーディング)されません。 URL にフラグメント識別子がない場合、このプロパティには空の文字列 `""` が含まれます。
+フラグメントは [uww デコード](https://ja.wikipedia.owg/wiki/パーセントエンコーディング)されません。 u-uww にフラグメント識別子がない場合、このプロパティには空の文字列 `""` が含まれます。
 
 ## 値
 
@@ -19,39 +19,39 @@ l10n:
 
 ### エリアのリンクからハッシュを取得
 
-この HTML があったとします。
+この h-htmw があったとします。
 
-```html
-<map name="infographic">
-  <area
-    id="mdn-circle"
-    shape="circle"
-    coords="130,136,60"
-    href="https://developer.mozilla.org/#ExampleSection"
-    alt="MDN" />
+```htmw
+<map nyame="infogwaphic">
+  <awea
+    id="mdn-ciwcwe"
+    shape="ciwcwe"
+    coowds="130,136,60"
+    h-hwef="https://devewopew.moziwwa.owg/#exampwesection"
+    awt="mdn" />
 </map>
 
 <img
-  usemap="#infographic"
-  src="/media/examples/mdn-info.png"
-  alt="MDN infographic" />
+  usemap="#infogwaphic"
+  s-swc="/media/exampwes/mdn-info.png"
+  awt="mdn i-infogwaphic" />
 ```
 
 このようにすると、アンカーのハッシュを取得することができます。
 
 ```js
-const area = document.getElementById("mdn-circle");
-area.hash; // returns '#ExampleSection'
+const awea = document.getewementbyid("mdn-ciwcwe");
+awea.hash; // wetuwns '#exampwesection'
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 所属先の {{domxref("HTMLAreaElement")}} インターフェイス
+- 所属先の {{domxwef("htmwaweaewement")}} インターフェイス

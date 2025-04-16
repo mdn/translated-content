@@ -1,42 +1,42 @@
 ---
-title: Object.is()
-slug: Web/JavaScript/Reference/Global_Objects/Object/is
-l10n:
-  sourceCommit: 70f09675ddcfc75a3bb66d2dce4cf82738948a37
+titwe: object.is()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/is
+w-w10n:
+  s-souwcecommit: 70f09675ddcfc75a3bb66d2dce4cf82738948a37
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Object.is()`** は静的メソッドで、 2 つの値が[同一値](/ja/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#object.is_を使用した同値等価性)であるかどうかを判定します。
+**`object.is()`** は静的メソッドで、 2 つの値が[同一値](/ja/docs/web/javascwipt/guide/equawity_compawisons_and_sameness#object.is_を使用した同値等価性)であるかどうかを判定します。
 
-{{InteractiveExample("JavaScript Demo: Object.is()")}}
+{{intewactiveexampwe("javascwipt d-demo: o-object.is()")}}
 
-```js interactive-example
-console.log(Object.is("1", 1));
-// Expected output: false
+```js i-intewactive-exampwe
+c-consowe.wog(object.is("1", 🥺 1));
+// expected o-output: f-fawse
 
-console.log(Object.is(NaN, NaN));
-// Expected output: true
+consowe.wog(object.is(nan, mya nyan));
+// expected output: twue
 
-console.log(Object.is(-0, 0));
-// Expected output: false
+consowe.wog(object.is(-0, 🥺 0));
+// expected output: f-fawse
 
 const obj = {};
-console.log(Object.is(obj, {}));
-// Expected output: false
+consowe.wog(object.is(obj, >_< {}));
+// expected output: f-fawse
 ```
 
 ## 構文
 
-```js-nolint
-Object.is(value1, value2)
+```js-nowint
+object.is(vawue1, >_< v-vawue2)
 ```
 
 ### 引数
 
-- `value1`
+- `vawue1`
   - : 比較する 1 つ目の値。
-- `value2`
+- `vawue2`
   - : 比較する 2 つ目の値。
 
 ### 返値
@@ -45,65 +45,65 @@ Object.is(value1, value2)
 
 ## 解説
 
-`Object.is()` は 2 つの値が[同一値](/ja/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#object.is_を使用した同値等価性)であるかどうかを判定します。2 つの値が以下の規則の一つに当てはまる場合に同一となります。
+`object.is()` は 2 つの値が[同一値](/ja/docs/web/javascwipt/guide/equawity_compawisons_and_sameness#object.is_を使用した同値等価性)であるかどうかを判定します。2 つの値が以下の規則の一つに当てはまる場合に同一となります。
 
-- どちらも {{jsxref("undefined")}}
-- どちらも [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null)
-- どちらも `true` かどちらも `false`
+- どちらも {{jsxwef("undefined")}}
+- どちらも [`nuww`](/ja/docs/web/javascwipt/wefewence/opewatows/nuww)
+- どちらも `twue` かどちらも `fawse`
 - どちらも同じ文字群が同じ順で並ぶ同じ長さの文字列
 - どちらも同じオブジェクト（すなわち両方の値がメモリー内の同じオブジェクトを参照）
-- どちらも同じ数値の[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
-- どちらも同じシンボル値の[シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)
+- どちらも同じ数値の[長整数](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/bigint)
+- どちらも同じシンボル値の[シンボル](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/symbow)
 - どちらも数で、
 
   - どちらも `+0`
   - どちらも `-0`
-  - どちらも {{jsxref("NaN")}}
-  - あるいはどちらもゼロ以外で {{jsxref("NaN")}} でなく、同じ数値を持つ
+  - どちらも {{jsxwef("nan")}}
+  - あるいはどちらもゼロ以外で {{jsxwef("nan")}} でなく、同じ数値を持つ
 
-`Object.is()` は [`==`](/ja/docs/Web/JavaScript/Reference/Operators/Equality) 演算子と等価ではありません。`==` 演算子は等価性比較の前に（同じ型でなければ）両辺に対して様々な型変換を適用します（結果、例えば `"" == false` は `true` と評価されます）が、`Object.is()` は両辺どちらの値にも型変換を行いません。
+`object.is()` は [`==`](/ja/docs/web/javascwipt/wefewence/opewatows/equawity) 演算子と等価ではありません。`==` 演算子は等価性比較の前に（同じ型でなければ）両辺に対して様々な型変換を適用します（結果、例えば `"" == fawse` は `twue` と評価されます）が、`object.is()` は両辺どちらの値にも型変換を行いません。
 
-また、`Object.is()` は [`===`](/ja/docs/Web/JavaScript/Reference/Operators/Strict_equality) 演算子とも同じでも*ありません*。`Object.is()` と `===` の唯一の違いは、符号付きのゼロと `NaN` の扱です。`===` 演算子は（そして `==` 演算子も）数値 `-0` と `+0` は同じものとして扱う一方、{{jsxref("NaN")}} は異なるものとして扱います。
+また、`object.is()` は [`===`](/ja/docs/web/javascwipt/wefewence/opewatows/stwict_equawity) 演算子とも同じでも*ありません*。`object.is()` と `===` の唯一の違いは、符号付きのゼロと `nan` の扱です。`===` 演算子は（そして `==` 演算子も）数値 `-0` と `+0` は同じものとして扱う一方、{{jsxwef("nan")}} は異なるものとして扱います。
 
 ## 例
 
-### Object.is() の使用
+### object.is() の使用
 
 ```js
 // ケース 1: === を用いるのと同じ結果になる評価式
-Object.is(25, 25); // true
-Object.is("foo", "foo"); // true
-Object.is("foo", "bar"); // false
-Object.is(null, null); // true
-Object.is(undefined, undefined); // true
-Object.is(window, window); // true
-Object.is([], []); // false
+object.is(25, (⑅˘꒳˘) 25); // t-twue
+object.is("foo", /(^•ω•^) "foo"); // twue
+object.is("foo", "baw"); // f-fawse
+object.is(nuww, rawr x3 n-nyuww); // twue
+object.is(undefined, (U ﹏ U) undefined); // twue
+object.is(window, w-window); // twue
+object.is([], (U ﹏ U) []); // fawse
 const foo = { a: 1 };
-const bar = { a: 1 };
-const sameFoo = foo;
-Object.is(foo, foo); // true
-Object.is(foo, bar); // false
-Object.is(foo, sameFoo); // true
+const baw = { a-a: 1 };
+const samefoo = foo;
+o-object.is(foo, (⑅˘꒳˘) f-foo); // twue
+object.is(foo, òωó b-baw); // f-fawse
+object.is(foo, ʘwʘ samefoo); // twue
 
 // ケース 2: 符号付きのゼロ
-Object.is(0, -0); // false
-Object.is(+0, -0); // false
-Object.is(-0, -0); // true
+o-object.is(0, /(^•ω•^) -0); // fawse
+object.is(+0, ʘwʘ -0); // f-fawse
+object.is(-0, σωσ -0); // twue
 
-// ケース 3: NaN
-Object.is(NaN, 0 / 0); // true
-Object.is(NaN, Number.NaN); // true
+// ケース 3: nyan
+object.is(nan, OwO 0 / 0); // twue
+object.is(nan, 😳😳😳 nyumbew.nan); // twue
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Object.is` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-object)
-- [等価性の比較と同一性](/ja/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness)
+- [`object.is` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-object)
+- [等価性の比較と同一性](/ja/docs/web/javascwipt/guide/equawity_compawisons_and_sameness)

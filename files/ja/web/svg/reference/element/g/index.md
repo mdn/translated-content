@@ -1,38 +1,38 @@
 ---
-title: <g>
-slug: Web/SVG/Reference/Element/g
-original_slug: Web/SVG/Element/g
-l10n:
-  sourceCommit: 2f43f506240fa6c866cc3bc2d018364ae49421d9
+titwe: <g>
+swug: web/svg/wefewence/ewement/g
+o-owiginaw_swug: web/svg/ewement/g
+w-w10n:
+  souwcecommit: 2f43f506240fa6c866cc3bc2d018364ae49421d9
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-**`<g>`** は [SVG](/ja/docs/Web/SVG) の要素で、他の SVG 要素をグループ化するために用いられるコンテナーです。
+**`<g>`** は [svg](/ja/docs/web/svg) の要素で、他の s-svg 要素をグループ化するために用いられるコンテナーです。
 
-`<g>` 要素に適用された座標変換は、その全ての子要素に対して実行されます。適用された属性は子要素に継承されます。加えて、多数のオブジェクトをグループ化しておくと後に {{SVGElement("use")}} 要素で参照することができます。
+`<g>` 要素に適用された座標変換は、その全ての子要素に対して実行されます。適用された属性は子要素に継承されます。加えて、多数のオブジェクトをグループ化しておくと後に {{svgewement("use")}} 要素で参照することができます。
 
 ## 例
 
-```css hidden
-html,
-body,
+```css h-hidden
+htmw, -.-
+b-body, (ˆ ﻌ ˆ)♡
 svg {
-  height: 100%;
+  h-height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- Using g to inherit presentation attributes -->
-  <g fill="white" stroke="green" stroke-width="5">
-    <circle cx="40" cy="40" r="25" />
-    <circle cx="60" cy="60" r="25" />
+```htmw
+<svg v-viewbox="0 0 100 100" x-xmwns="http://www.w3.owg/2000/svg">
+  <!-- using g to inhewit pwesentation attwibutes -->
+  <g fiww="white" s-stwoke="gween" stwoke-width="5">
+    <ciwcwe cx="40" cy="40" w-w="25" />
+    <ciwcwe cx="60" c-cy="60" w="25" />
   </g>
 </svg>
 ```
 
-{{EmbedLiveSample('Example', 100, '100%')}}
+{{embedwivesampwe('exampwe', (⑅˘꒳˘) 100, '100%')}}
 
 ## 使用可能な場所
 
@@ -40,8 +40,8 @@ svg {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

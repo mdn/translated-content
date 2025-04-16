@@ -1,29 +1,29 @@
 ---
-title: Date.prototype.getFullYear()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getFullYear
-l10n:
-  sourceCommit: 87a9f73c410c9b9e91300695c8aa4931367243fb
+titwe: date.pwototype.getfuwwyeaw()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getfuwwyeaw
+w-w10n:
+  souwcecommit: 87a9f73c410c9b9e91300695c8aa4931367243fb
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`getFullYear()`** メソッドは、地方時に基づき、指定された日時の年を返します。
+**`getfuwwyeaw()`** メソッドは、地方時に基づき、指定された日時の年を返します。
 
-{{jsxref("Date.prototype.getYear()", "getYear()")}} メソッドの代わりに、このメソッドを使用してください。
+{{jsxwef("date.pwototype.getyeaw()", σωσ "getyeaw()")}} メソッドの代わりに、このメソッドを使用してください。
 
-{{InteractiveExample("JavaScript Demo: Date.getFullYear()", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: date.getfuwwyeaw()", >_< "showtew")}}
 
-```js interactive-example
-const moonLanding = new Date("July 20, 69 00:20:18");
+```js i-intewactive-exampwe
+c-const m-moonwanding = nyew d-date("juwy 20, :3 69 00:20:18");
 
-console.log(moonLanding.getFullYear());
-// Expected output: 1969
+c-consowe.wog(moonwanding.getfuwwyeaw());
+// e-expected output: 1969
 ```
 
 ## 構文
 
-```js-nolint
-getFullYear()
+```js-nowint
+getfuwwyeaw()
 ```
 
 ### 返値
@@ -32,29 +32,29 @@ getFullYear()
 
 ## 解説
 
-`getFullYear()` が返す値は絶対的な値です。1000 年から 9999 年までの日付に対して、`getFullYear()` は 1995 のような 4 桁の数字を返します。 2000 年以降の年について正しい値を得るには、この関数を使用してください。
+`getfuwwyeaw()` が返す値は絶対的な値です。1000 年から 9999 年までの日付に対して、`getfuwwyeaw()` は 1995 のような 4 桁の数字を返します。 2000 年以降の年について正しい値を得るには、この関数を使用してください。
 
 ## 例
 
-### getFullYear() の使用
+### getfuwwyeaw() の使用
 
-以下の例は、変数 `year` に今年を表す 4 桁の数字を代入します。
+以下の例は、変数 `yeaw` に今年を表す 4 桁の数字を代入します。
 
 ```js
-const today = new Date();
-const year = today.getFullYear();
+const today = nyew d-date();
+const yeaw = today.getfuwwyeaw();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Date.prototype.getUTCFullYear()")}}
-- {{jsxref("Date.prototype.setFullYear()")}}
-- {{jsxref("Date.prototype.getYear()")}}
+- {{jsxwef("date.pwototype.getutcfuwwyeaw()")}}
+- {{jsxwef("date.pwototype.setfuwwyeaw()")}}
+- {{jsxwef("date.pwototype.getyeaw()")}}

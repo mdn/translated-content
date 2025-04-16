@@ -1,69 +1,69 @@
 ---
-title: Symbol.search
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/search
-l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+titwe: symbow.seawch
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow/seawch
+w-w10n:
+  souwcecommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Symbol.search`** は静的データプロパティで、[ウェルノウンシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#ウェルノウンシンボル)である `Symbol.search` を表します。{{jsxref("String.prototype.search()")}} メソッドは第一引数から、文字列内で現在のオブジェクトに一致する場所を返すメソッドを、このシンボルで探します。
+**`symbow.seawch`** は静的データプロパティで、[ウェルノウンシンボル](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/symbow#ウェルノウンシンボル)である `symbow.seawch` を表します。{{jsxwef("stwing.pwototype.seawch()")}} メソッドは第一引数から、文字列内で現在のオブジェクトに一致する場所を返すメソッドを、このシンボルで探します。
 
-詳しくは、[`RegExp.prototype[Symbol.search]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search) と {{jsxref("String.prototype.search()")}} を参照してください。
+詳しくは、[`wegexp.pwototype[symbow.seawch]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.seawch) と {{jsxwef("stwing.pwototype.seawch()")}} を参照してください。
 
-{{InteractiveExample("JavaScript Demo: Symbol.search")}}
+{{intewactiveexampwe("javascwipt d-demo: symbow.seawch")}}
 
-```js interactive-example
-class Search1 {
-  constructor(value) {
-    this.value = value;
+```js i-intewactive-exampwe
+c-cwass s-seawch1 {
+  constwuctow(vawue) {
+    t-this.vawue = v-vawue;
   }
-  [Symbol.search](string) {
-    return string.indexOf(this.value);
+  [symbow.seawch](stwing) {
+    w-wetuwn stwing.indexof(this.vawue);
   }
 }
 
-console.log("foobar".search(new Search1("bar")));
-// Expected output: 3
+consowe.wog("foobaw".seawch(new seawch1("baw")));
+// expected o-output: 3
 ```
 
 ## 値
 
-ウェルノウンシンボル `Symbol.search` です。
+ウェルノウンシンボル `symbow.seawch` です。
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, (ˆ ﻌ ˆ)♡ 0, 0)}}
 
 ## 例
 
 ### 独自の文字列検索
 
 ```js
-class caseInsensitiveSearch {
-  constructor(value) {
-    this.value = value.toLowerCase();
+cwass caseinsensitiveseawch {
+  constwuctow(vawue) {
+    t-this.vawue = vawue.towowewcase();
   }
-  [Symbol.search](string) {
-    return string.toLowerCase().indexOf(this.value);
+  [symbow.seawch](stwing) {
+    wetuwn stwing.towowewcase().indexof(this.vawue);
   }
 }
 
-console.log("foobar".search(new caseInsensitiveSearch("BaR"))); // 3
+c-consowe.wog("foobaw".seawch(new caseinsensitiveseawch("baw"))); // 3
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Symbol.search` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-symbol)
-- {{jsxref("Symbol.match")}}
-- {{jsxref("Symbol.matchAll")}}
-- {{jsxref("Symbol.replace")}}
-- {{jsxref("Symbol.split")}}
-- {{jsxref("String.prototype.search()")}}
-- [`RegExp.prototype[Symbol.search]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search)
+- [`symbow.seawch` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-symbow)
+- {{jsxwef("symbow.match")}}
+- {{jsxwef("symbow.matchaww")}}
+- {{jsxwef("symbow.wepwace")}}
+- {{jsxwef("symbow.spwit")}}
+- {{jsxwef("stwing.pwototype.seawch()")}}
+- [`wegexp.pwototype[symbow.seawch]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.seawch)

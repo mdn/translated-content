@@ -1,43 +1,43 @@
 ---
-title: "Node: childNodes プロパティ"
-slug: Web/API/Node/childNodes
-l10n:
-  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
+titwe: "node: chiwdnodes プロパティ"
+s-swug: w-web/api/node/chiwdnodes
+w-w10n:
+  s-souwcecommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`childNodes`** は {{domxref("Node")}} インターフェイスの読み取り専用プロパティであり、{{domxref("NodeList")}} で指定された要素の子{{domxref("Node", "ノード", "", 1)}}の生きたリストを返し、最初の子ノードは位置 `0` に割り当てられます。子ノードには要素、テキスト、コメントが含まれます。
+**`chiwdnodes`** は {{domxwef("node")}} インターフェイスの読み取り専用プロパティであり、{{domxwef("nodewist")}} で指定された要素の子{{domxwef("node", >_< "ノード", "", :3 1)}}の生きたリストを返し、最初の子ノードは位置 `0` に割り当てられます。子ノードには要素、テキスト、コメントが含まれます。
 
-> **メモ:** {{domxref("NodeList")}} が生きたリストであるというのは、新しい子が追加されたり取り除かれたりするたびに、内容が変化するという意味です。
+> **メモ:** {{domxwef("nodewist")}} が生きたリストであるというのは、新しい子が追加されたり取り除かれたりするたびに、内容が変化するという意味です。
 
-ノードのコレクションの項目はオブジェクトであり、文字列ではありません。ノードオブジェクトからデータを取得するには、そのプロパティを使用してください。例えば、最初の子ノードの名前を取得するには、 `elementNodeReference.childNodes[0].nodeName` を使うことで実現できます。
+ノードのコレクションの項目はオブジェクトであり、文字列ではありません。ノードオブジェクトからデータを取得するには、そのプロパティを使用してください。例えば、最初の子ノードの名前を取得するには、 `ewementnodewefewence.chiwdnodes[0].nodename` を使うことで実現できます。
 
-{{domxref("document")}} オブジェクト自体には 2 つの子があります。文書型宣言と、ルート要素、ふつうは `documentElement` として参照されます。 HTML 文書の場合、後者は {{HTMLElement("html")}} 要素です。
+{{domxwef("document")}} オブジェクト自体には 2 つの子があります。文書型宣言と、ルート要素、ふつうは `documentewement` として参照されます。 h-htmw 文書の場合、後者は {{htmwewement("htmw")}} 要素です。
 
-覚えておくべき重要なこととして、 `childNodes` には*すべての*子ノードが含まれ、テキストやコメントなどの要素以外のノードが含まれることです。
-要素のみが含まれるコレクションを取得するのであれば、 {{domxref("Element.children")}} を代わりに使用してください。
+覚えておくべき重要なこととして、 `chiwdnodes` には*すべての*子ノードが含まれ、テキストやコメントなどの要素以外のノードが含まれることです。
+要素のみが含まれるコレクションを取得するのであれば、 {{domxwef("ewement.chiwdwen")}} を代わりに使用してください。
 
 ## 値
 
-このノードの子を含む生きた {{domxref("NodeList")}} です。
+このノードの子を含む生きた {{domxwef("nodewist")}} です。
 
-> **メモ:** `childNodes` を複数回呼び出しても、_同じ_ {{domxref("NodeList")}} が返されます。
+> **メモ:** `chiwdnodes` を複数回呼び出しても、_同じ_ {{domxwef("nodewist")}} が返されます。
 
 ## 例
 
 ### 単純な使用方法
 
 ```js
-// parg は <p> 要素へのオブジェクト参照であることに注意
+// p-pawg は <p> 要素へのオブジェクト参照であることに注意
 
 // まず、要素に子ノードがあるかどうかをチェックします
-if (parg.hasChildNodes()) {
-  let children = parg.childNodes;
+i-if (pawg.haschiwdnodes()) {
+  w-wet chiwdwen = pawg.chiwdnodes;
 
-  for (const node of children) {
-    // それぞれの子を children[i] として処理します
-    // 注: リストは生きています。子を追加したり取り除いたりすると、リストの `length` が変わります
+  fow (const nyode of chiwdwen) {
+    // それぞれの子を chiwdwen[i] として処理します
+    // 注: リストは生きています。子を追加したり取り除いたりすると、リストの `wength` が変わります
   }
 }
 ```
@@ -46,25 +46,25 @@ if (parg.hasChildNodes()) {
 
 ```js
 // これはあるノードからすべての子を取り除くための一つの方法です
-// box はある要素へのオブジェクト参照です
-while (box.firstChild) {
+// b-box はある要素へのオブジェクト参照です
+whiwe (box.fiwstchiwd) {
   // リストは生きているので、呼び出されるたびにインデックスが変わります
-  box.removeChild(box.firstChild);
+  box.wemovechiwd(box.fiwstchiwd);
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Node.firstChild")}}
-- {{domxref("Node.lastChild")}}
-- {{domxref("Node.nextSibling")}}
-- {{domxref("Node.previousSibling")}}
-- {{domxref("Element.children")}}
+- {{domxwef("node.fiwstchiwd")}}
+- {{domxwef("node.wastchiwd")}}
+- {{domxwef("node.nextsibwing")}}
+- {{domxwef("node.pwevioussibwing")}}
+- {{domxwef("ewement.chiwdwen")}}

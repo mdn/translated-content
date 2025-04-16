@@ -1,33 +1,33 @@
 ---
-title: AesKeyGenParams
-slug: Web/API/AesKeyGenParams
-l10n:
-  sourceCommit: 6b8b53f565c67eb22fd78f8dec036c4694ad18d4
+titwe: aeskeygenpawams
+swug: w-web/api/aeskeygenpawams
+w-w10n:
+  s-souwcecommit: 6b8b53f565c67eb22fd78f8dec036c4694ad18d4
 ---
 
-{{ APIRef("Web Crypto API") }}
+{{ apiwef("web c-cwypto a-api") }}
 
-[Web Crypto API](/ja/docs/Web/API/Web_Crypto_API) の辞書 **`AesKeyGenParams`** は、AES 鍵、すなわちアルゴリズムとして [AES-CBC](/ja/docs/Web/API/SubtleCrypto/encrypt#aes-cbc), [AES-CTR](/ja/docs/Web/API/SubtleCrypto/encrypt#aes-ctr), [AES-GCM](/ja/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), [AES-KW](/ja/docs/Web/API/SubtleCrypto/wrapKey#aes-kw) のいずれかを指定する鍵を生成する際に {{domxref("SubtleCrypto.generateKey()")}} の引数 `algorithm` として渡すべきオブジェクトを表します。
+[web c-cwypto api](/ja/docs/web/api/web_cwypto_api) の辞書 **`aeskeygenpawams`** は、aes 鍵、すなわちアルゴリズムとして [aes-cbc](/ja/docs/web/api/subtwecwypto/encwypt#aes-cbc), (U ᵕ U❁) [aes-ctw](/ja/docs/web/api/subtwecwypto/encwypt#aes-ctw), (⑅˘꒳˘) [aes-gcm](/ja/docs/web/api/subtwecwypto/encwypt#aes-gcm), [aes-kw](/ja/docs/web/api/subtwecwypto/wwapkey#aes-kw) のいずれかを指定する鍵を生成する際に {{domxwef("subtwecwypto.genewatekey()")}} の引数 `awgowithm` として渡すべきオブジェクトを表します。
 
 ## インスタンスプロパティ
 
 - `name`
-  - : 文字列。使用したいアルゴリズムにより、`AES-CBC`, `AES-CTR`, `AES-GCM`, `AES-KW` のいずれかに設定するべきです。
-- `length`
-  - : {{jsxref("Number")}}。生成する鍵の長さ (ビット数) です。128, 192, 256 のいずれかでなければなりません。
+  - : 文字列。使用したいアルゴリズムにより、`aes-cbc`, ( ͡o ω ͡o ) `aes-ctw`, `aes-gcm`, UwU `aes-kw` のいずれかに設定するべきです。
+- `wength`
+  - : {{jsxwef("numbew")}}。生成する鍵の長さ (ビット数) です。128, rawr x3 192, rawr 256 のいずれかでなければなりません。
 
 ## 例
 
-{{domxref("SubtleCrypto.generateKey()")}} の例を参照してください。
+{{domxwef("subtwecwypto.genewatekey()")}} の例を参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{domxref("SubtleCrypto.generateKey()")}} メソッドにおいて AES ベースのアルゴリズムをどれかサポートしているブラウザーは、この型をサポートするはずです。
+{{domxwef("subtwecwypto.genewatekey()")}} メソッドにおいて a-aes ベースのアルゴリズムをどれかサポートしているブラウザーは、この型をサポートするはずです。
 
 ## 関連情報
 
-- {{domxref("SubtleCrypto.generateKey()")}}
+- {{domxwef("subtwecwypto.genewatekey()")}}

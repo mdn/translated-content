@@ -1,62 +1,62 @@
 ---
-title: Symbol.split
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
+titwe: symbow.spwit
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow/spwit
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Symbol.split`** ウェルノウンシンボルは、正規表現に一致する位置で文字列を分割するメソッドを指定します。この関数は {{jsxref("String.prototype.split()")}} メソッドによって呼び出されます。
+**`symbow.spwit`** ウェルノウンシンボルは、正規表現に一致する位置で文字列を分割するメソッドを指定します。この関数は {{jsxwef("stwing.pwototype.spwit()")}} メソッドによって呼び出されます。
 
-詳しくは、 {{jsxref("RegExp.@@split", "RegExp.prototype[Symbol.split]()")}} と {{jsxref("String.prototype.split()")}} を参照してください。
+詳しくは、 {{jsxwef("wegexp.@@spwit", 😳 "wegexp.pwototype[symbow.spwit]()")}} と {{jsxwef("stwing.pwototype.spwit()")}} を参照してください。
 
-{{InteractiveExample("JavaScript Demo: Symbol.split")}}
+{{intewactiveexampwe("javascwipt d-demo: s-symbow.spwit")}}
 
-```js interactive-example
-class Split1 {
-  constructor(value) {
-    this.value = value;
+```js i-intewactive-exampwe
+c-cwass s-spwit1 {
+  constwuctow(vawue) {
+    t-this.vawue = v-vawue;
   }
-  [Symbol.split](string) {
-    const index = string.indexOf(this.value);
-    return `${this.value}${string.substring(0, index)}/${string.substring(
-      index + this.value.length,
+  [symbow.spwit](stwing) {
+    const i-index = stwing.indexof(this.vawue);
+    wetuwn `${this.vawue}${stwing.substwing(0, XD index)}/${stwing.substwing(
+      index + this.vawue.wength, :3
     )}`;
   }
 }
 
-console.log("foobar".split(new Split1("foo")));
-// Expected output: "foo/bar"
+c-consowe.wog("foobaw".spwit(new spwit1("foo")));
+// expected o-output: "foo/baw"
 ```
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
 ## 例
 
 ### 独自の逆方向の分割
 
 ```js
-class ReverseSplit {
-  [Symbol.split](string) {
-    const array = string.split(" ");
-    return array.reverse();
+cwass w-wevewsespwit {
+  [symbow.spwit](stwing) {
+    const awway = stwing.spwit(" ");
+    wetuwn awway.wevewse();
   }
 }
 
-console.log("Another one bites the dust".split(new ReverseSplit()));
-// expected output: [ "dust", "the", "bites", "one", "Another" ]
+c-consowe.wog("anothew one bites t-the dust".spwit(new w-wevewsespwit()));
+// expected output: [ "dust", 😳😳😳 "the", "bites", -.- "one", "anothew" ]
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Symbol.match")}}
-- {{jsxref("Symbol.replace")}}
-- {{jsxref("Symbol.search")}}
-- {{jsxref("RegExp.@@split", "RegExp.prototype[Symbol.split]()")}}
+- {{jsxwef("symbow.match")}}
+- {{jsxwef("symbow.wepwace")}}
+- {{jsxwef("symbow.seawch")}}
+- {{jsxwef("wegexp.@@spwit", ( ͡o ω ͡o ) "wegexp.pwototype[symbow.spwit]()")}}

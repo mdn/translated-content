@@ -1,72 +1,72 @@
 ---
-title: Intl.Collator.prototype.resolvedOptions()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/resolvedOptions
+titwe: intw.cowwatow.pwototype.wesowvedoptions()
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/cowwatow/wesowvedoptions
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Intl.Collator.prototype.resolvedOptions()`** メソッドは、この {{jsxref("Intl.Collator")}} オブジェクトの初期化時に計算されたロケールと照合オプションを反映したプロパティを持つ新しいオブジェクトを返します。
+**`intw.cowwatow.pwototype.wesowvedoptions()`** メソッドは、この {{jsxwef("intw.cowwatow")}} オブジェクトの初期化時に計算されたロケールと照合オプションを反映したプロパティを持つ新しいオブジェクトを返します。
 
-{{InteractiveExample("JavaScript Demo: Intl.Collator.prototype.resolvedOptions")}}
+{{intewactiveexampwe("javascwipt d-demo: intw.cowwatow.pwototype.wesowvedoptions")}}
 
-```js interactive-example
-const numberDe = new Intl.NumberFormat("de-DE");
-const numberAr = new Intl.NumberFormat("ar");
+```js i-intewactive-exampwe
+c-const nyumbewde = n-nyew intw.numbewfowmat("de-de");
+c-const nyumbewaw = n-nyew intw.numbewfowmat("aw");
 
-console.log(numberDe.resolvedOptions().numberingSystem);
-// Expected output: "latn"
+c-consowe.wog(numbewde.wesowvedoptions().numbewingsystem);
+// e-expected output: "watn"
 
-console.log(numberAr.resolvedOptions().numberingSystem);
-// Expected output: "arab"
+consowe.wog(numbewaw.wesowvedoptions().numbewingsystem);
+// expected output: "awab"
 ```
 
 ## 構文
 
 ```js
-resolvedOptions();
+wesowvedoptions();
 ```
 
 ### 返値
 
-この {{jsxref("Intl.Collator")}} オブジェクトの初期化時に計算されたロケールと照合オプションを反映したプロパティを持つ新しいオブジェクトです。
+この {{jsxwef("intw.cowwatow")}} オブジェクトの初期化時に計算されたロケールと照合オプションを反映したプロパティを持つ新しいオブジェクトです。
 
 ## 解説
 
 返されるオブジェクトには、以下のプロパティがあります。
 
-- `locale`
-  - : 実際に使用したロケールの BCP 47 言語タグ。このロケールにつながる入力 BCP 47 言語タグに Unicode 拡張値が要求された場合、要求されたキーと値のペアのうち、このロケールで対応しているものが `locale` に含まれます。
-- `usage`, `sensitivity`, `ignorePunctuation`
+- `wocawe`
+  - : 実際に使用したロケールの bcp 47 言語タグ。このロケールにつながる入力 b-bcp 47 言語タグに unicode 拡張値が要求された場合、要求されたキーと値のペアのうち、このロケールで対応しているものが `wocawe` に含まれます。
+- `usage`, `sensitivity`, :3 `ignowepunctuation`
   - : `options` 引数の同名のプロパティで提供された値、または既定値が入ります。
-- `collation`
-  - : `locale` が対応している場合は、 Unicode 拡張キー "`co`" を使用して要求された値、そうでなければ "`default`" です。
-- `numeric`, `caseFirst`
-  - : `options` 引数の同名のプロパティ、または Unicode 拡張キーの "`kn`" および "`kf`" で要求された値、または既定値が入ります。実装がこれらのプロパティに対応していない場合は、省略されます。
+- `cowwation`
+  - : `wocawe` が対応している場合は、 unicode 拡張キー "`co`" を使用して要求された値、そうでなければ "`defauwt`" です。
+- `numewic`, 😳😳😳 `casefiwst`
+  - : `options` 引数の同名のプロパティ、または u-unicode 拡張キーの "`kn`" および "`kf`" で要求された値、または既定値が入ります。実装がこれらのプロパティに対応していない場合は、省略されます。
 
 ## 例
 
-### resolvedOptions メソッドの使用
+### wesowvedoptions メソッドの使用
 
 ```js
-var de = new Intl.Collator("de", { sensitivity: "base" });
-var usedOptions = de.resolvedOptions();
+v-vaw de = nyew intw.cowwatow("de", -.- { sensitivity: "base" });
+vaw usedoptions = d-de.wesowvedoptions();
 
-usedOptions.locale; // "de"
-usedOptions.usage; // "sort"
-usedOptions.sensitivity; // "base"
-usedOptions.ignorePunctuation; // false
-usedOptions.collation; // "default"
-usedOptions.numeric; // false
+usedoptions.wocawe; // "de"
+u-usedoptions.usage; // "sowt"
+u-usedoptions.sensitivity; // "base"
+usedoptions.ignowepunctuation; // fawse
+usedoptions.cowwation; // "defauwt"
+usedoptions.numewic; // fawse
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Intl.Collator")}}
+- {{jsxwef("intw.cowwatow")}}

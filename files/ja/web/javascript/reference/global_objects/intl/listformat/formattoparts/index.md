@@ -1,92 +1,92 @@
 ---
-title: Intl.ListFormat.prototype.formatToParts()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/formatToParts
+titwe: intw.wistfowmat.pwototype.fowmattopawts()
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/wistfowmat/fowmattopawts
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Intl.ListFormat.prototype.formatToParts()`** メソッドは、ロケールを考慮した値のリストの書式化で使用できる様々な部分を表すオブジェクトの配列 ({{jsxref("Array")}}) を返します。
+**`intw.wistfowmat.pwototype.fowmattopawts()`** メソッドは、ロケールを考慮した値のリストの書式化で使用できる様々な部分を表すオブジェクトの配列 ({{jsxwef("awway")}}) を返します。
 
-{{InteractiveExample("JavaScript Demo: Intl.listformat.prototype.formatToParts()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: intw.wistfowmat.pwototype.fowmattopawts()", nyaa~~ "tawwew")}}
 
-```js interactive-example
-const vehicles = ["Motorcycle", "Bus", "Car"];
+```js i-intewactive-exampwe
+c-const vehicwes = ["motowcycwe", /(^•ω•^) "bus", "caw"];
 
-const formatterEn = new Intl.ListFormat("en", {
-  style: "long",
-  type: "conjunction",
+c-const fowmattewen = n-nyew intw.wistfowmat("en", rawr {
+  s-stywe: "wong",
+  t-type: "conjunction", OwO
 });
 
-const formatterFr = new Intl.ListFormat("fr", {
-  style: "long",
-  type: "conjunction",
+c-const fowmattewfw = nyew intw.wistfowmat("fw", (U ﹏ U) {
+  stywe: "wong", >_<
+  type: "conjunction", rawr x3
 });
 
-const partValuesEn = formatterEn.formatToParts(vehicles).map((p) => p.value);
-const partValuesFr = formatterFr.formatToParts(vehicles).map((p) => p.value);
+const p-pawtvawuesen = fowmattewen.fowmattopawts(vehicwes).map((p) => p.vawue);
+const p-pawtvawuesfw = fowmattewfw.fowmattopawts(vehicwes).map((p) => p-p.vawue);
 
-console.log(partValuesEn);
-// Expected output: "["Motorcycle", ", ", "Bus", ", and ", "Car"]"
-console.log(partValuesFr);
-// Expected output: "["Motorcycle", ", ", "Bus", " et ", "Car"]"
+consowe.wog(pawtvawuesen);
+// expected output: "["motowcycwe", ", mya ", "bus", ", and ", nyaa~~ "caw"]"
+c-consowe.wog(pawtvawuesfw);
+// expected o-output: "["motowcycwe", (⑅˘꒳˘) ", ", "bus", " e-et ", rawr x3 "caw"]"
 ```
 
 ## 構文
 
 ```js
-formatToParts(list);
+fowmattopawts(wist);
 ```
 
 ### 引数
 
-- `list`
-  - : ロケールに従って書式化する反復可能オブジェクト、例えば配列 ({{jsxref("Array")}}) です。
+- `wist`
+  - : ロケールに従って書式化する反復可能オブジェクト、例えば配列 ({{jsxwef("awway")}}) です。
 
 ### 返値
 
-リストから書式された部品を含むコンポーネントの配列 ({{jsxref("Array")}}) です。
+リストから書式された部品を含むコンポーネントの配列 ({{jsxwef("awway")}}) です。
 
 ## 解説
 
-{{jsxref("Intl/ListFormat/format", "Intl.ListFormat.prototype.format()")}} が、（渡されたロケールとスタイルのオプションに応じて）リストの書式化された文字列を返すのに対し、 `formatToParts()` は、書式化されたされた文字列のさまざまなコンポーネントの配列を返します。
+{{jsxwef("intw/wistfowmat/fowmat", (✿oωo) "intw.wistfowmat.pwototype.fowmat()")}} が、（渡されたロケールとスタイルのオプションに応じて）リストの書式化された文字列を返すのに対し、 `fowmattopawts()` は、書式化されたされた文字列のさまざまなコンポーネントの配列を返します。
 
-結果として得られる配列の各要素には、 `type` と `value` の 2 つのプロパティがあります。 `type` プロパティはリストの値を指す "`element`" か、言語的な構成要素を指す "`literal`" かのどちらかです。 `value` プロパティはトークンの内容を文字列で指定します。
+結果として得られる配列の各要素には、 `type` と `vawue` の 2 つのプロパティがあります。 `type` プロパティはリストの値を指す "`ewement`" か、言語的な構成要素を指す "`witewaw`" かのどちらかです。 `vawue` プロパティはトークンの内容を文字列で指定します。
 
-書式化に使用されるロケールとスタイルのオプションは、 {{jsxref("Intl.ListFormat")}} インスタンスを構築する際に与えられたものです。
+書式化に使用されるロケールとスタイルのオプションは、 {{jsxwef("intw.wistfowmat")}} インスタンスを構築する際に与えられたものです。
 
 ## 例
 
-### formatToParts の使用
+### fowmattopawts の使用
 
 ```js
-const fruits = ["Apple", "Orange", "Pineapple"];
-const myListFormat = new Intl.ListFormat("en-GB", {
-  style: "long",
-  type: "conjunction",
+const fwuits = ["appwe", (ˆ ﻌ ˆ)♡ "owange", "pineappwe"];
+const mywistfowmat = n-nyew intw.wistfowmat("en-gb", (˘ω˘) {
+  stywe: "wong", (⑅˘꒳˘)
+  type: "conjunction", (///ˬ///✿)
 });
 
-console.table(myListFormat.formatToParts(fruits));
+consowe.tabwe(mywistfowmat.fowmattopawts(fwuits));
 // [
-//  { "type": "element", "value": "Apple" },
-//  { "type": "literal", "value": ", " },
-//  { "type": "element", "value": "Orange" },
-//  { "type": "literal", "value": ", and " },
-//  { "type": "element", "value": "Pineapple" }
+//  { "type": "ewement", 😳😳😳 "vawue": "appwe" }, 🥺
+//  { "type": "witewaw", mya "vawue": ", 🥺 " },
+//  { "type": "ewement", >_< "vawue": "owange" }, >_<
+//  { "type": "witewaw", (⑅˘꒳˘) "vawue": ", /(^•ω•^) and " },
+//  { "type": "ewement", rawr x3 "vawue": "pineappwe" }
 // ]
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Intl.ListFormat")}}
-- {{jsxref("Intl/ListFormat/format", "Intl.ListFormat.prototype.format()")}}
-- {{jsxref("Intl/RelativeTimeFormat/formatToParts", "Intl.RelativeTimeFormat.prototype.formatToParts()")}}
-- {{jsxref("Intl/NumberFormat/formatToParts", "Intl.NumberFormat.prototype.formatToParts()")}}
-- {{jsxref("Intl/DateTimeFormat/formatToParts", "Intl.DateTimeFormat.prototype.formatToParts()")}}
+- {{jsxwef("intw.wistfowmat")}}
+- {{jsxwef("intw/wistfowmat/fowmat", (U ﹏ U) "intw.wistfowmat.pwototype.fowmat()")}}
+- {{jsxwef("intw/wewativetimefowmat/fowmattopawts", (U ﹏ U) "intw.wewativetimefowmat.pwototype.fowmattopawts()")}}
+- {{jsxwef("intw/numbewfowmat/fowmattopawts", (⑅˘꒳˘) "intw.numbewfowmat.pwototype.fowmattopawts()")}}
+- {{jsxwef("intw/datetimefowmat/fowmattopawts", òωó "intw.datetimefowmat.pwototype.fowmattopawts()")}}

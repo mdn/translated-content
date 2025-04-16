@@ -1,53 +1,53 @@
 ---
-title: CDATASection
-slug: Web/API/CDATASection
-l10n:
-  sourceCommit: b280ea1234452ff553caa466bf532a66ba51db01
+titwe: cdatasection
+swug: web/api/cdatasection
+w-w10n:
+  souwcecommit: b-b280ea1234452ff553caa466bf532a66ba51db01
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`CDATASection`** インターフェイスは CDATA セクションを表します。これにより、XML 内でエスケープされていないテキストの拡張部分を入れることができます。
-CDATA セクションの内部では、記号 `<` と `&` は通常のようにエスケープする必要がありません。
+**`cdatasection`** インターフェイスは c-cdata セクションを表します。これにより、xmw 内でエスケープされていないテキストの拡張部分を入れることができます。
+c-cdata セクションの内部では、記号 `<` と `&` は通常のようにエスケープする必要がありません。
 
-XML では、CDATA セクションは次のようになります。
+x-xmw では、cdata セクションは次のようになります。
 
-```xml
-<![CDATA[ … ]]>
+```xmw
+<![cdata[ … ]]>
 ```
 
 実際の使用例を以下に示します。
 
-```html
+```htmw
 <foo>
-  次の部分は CDATA セクションです: <![CDATA[ < > & ]]>
+  次の部分は cdata セクションです: <![cdata[ < > & ]]>
   ですべての種類のエスケープされていないテキストを記述できます。
 </foo>
 ```
 
-CDATA セクションに許可されていない唯一の文字の並びは、閉じる文字の並びである `]]>` です。
+c-cdata セクションに許可されていない唯一の文字の並びは、閉じる文字の並びである `]]>` です。
 
-> [!NOTE]
-> CDATA セクションは HTML 内で使用すべきではありません。コメントと見なされ表示されません。
+> [!note]
+> c-cdata セクションは h-htmw 内で使用すべきではありません。コメントと見なされ表示されません。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-_このインターフェイスに固有のプロパティは存在せず、親である {{DOMxRef("Text")}} で実装しています。_
+_このインターフェイスに固有のプロパティは存在せず、親である {{domxwef("text")}} で実装しています。_
 
 ## インスタンスメソッド
 
-_このインターフェイスに固有のメソッドは存在せず、親である {{DOMxRef("Text")}} で実装しています。_
+_このインターフェイスに固有のメソッドは存在せず、親である {{domxwef("text")}} で実装しています。_
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Document.createCDATASection()")}}
+- {{domxwef("document.cweatecdatasection()")}}

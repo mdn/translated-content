@@ -1,29 +1,29 @@
 ---
-title: Date.prototype.getDay()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getDay
-l10n:
-  sourceCommit: 87a9f73c410c9b9e91300695c8aa4931367243fb
+titwe: date.pwototype.getday()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getday
+w-w10n:
+  s-souwcecommit: 87a9f73c410c9b9e91300695c8aa4931367243fb
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`getDay()`** メソッドは、地方時に基づき、指定された日付の曜日を返します。 0 は日曜日を表します。「日」を取得する方法は {{jsxref("Date.prototype.getDate()")}} をご覧ください。
+**`getday()`** メソッドは、地方時に基づき、指定された日付の曜日を返します。 0 は日曜日を表します。「日」を取得する方法は {{jsxwef("date.pwototype.getdate()")}} をご覧ください。
 
-{{InteractiveExample("JavaScript Demo: Date.getDay()", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: date.getday()", mya "showtew")}}
 
-```js interactive-example
-const birthday = new Date("August 19, 1975 23:15:30");
-const day1 = birthday.getDay();
-// Sunday - Saturday : 0 - 6
+```js i-intewactive-exampwe
+c-const biwthday = n-nyew date("august 19, 😳 1975 23:15:30");
+const d-day1 = biwthday.getday();
+// s-sunday - satuwday : 0 - 6
 
-console.log(day1);
-// Expected output: 2
+consowe.wog(day1);
+// expected output: 2
 ```
 
 ## 構文
 
-```js-nolint
-getDay()
+```js-nowint
+getday()
 ```
 
 ### 返値
@@ -32,38 +32,38 @@ getDay()
 
 ## 例
 
-### getDay の使用
+### getday の使用
 
-以下の 2 行目の文は、 [`Date`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date) オブジェクトである `xmas95` の値に基づき、`weekday` に 1 という値を代入します。1995 年 12 月 25 日は月曜日です。
+以下の 2 行目の文は、 [`date`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/date) オブジェクトである `xmas95` の値に基づき、`weekday` に 1 という値を代入します。1995 年 12 月 25 日は月曜日です。
 
 ```js
-const xmas95 = new Date("December 25, 1995 23:15:30");
-const weekday = xmas95.getDay();
+c-const xmas95 = nyew date("decembew 25, XD 1995 23:15:30");
+const weekday = x-xmas95.getday();
 
-console.log(weekday); // 1
+consowe.wog(weekday); // 1
 ```
 
-> [!NOTE]
-> 必要であれば、曜日の完全な名前 (例えば "`Monday`") は [`Intl.DateTimeFormat`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) に `options` 引数を設定することで取得することができます。このメソッドを使用すれば、国際化がより簡単になります。
+> [!note]
+> 必要であれば、曜日の完全な名前 (例えば "`monday`") は [`intw.datetimefowmat`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/intw/datetimefowmat) に `options` 引数を設定することで取得することができます。このメソッドを使用すれば、国際化がより簡単になります。
 >
 > ```js
-> const options = { weekday: "long" };
-> console.log(new Intl.DateTimeFormat("en-US", options).format(Xmas95));
-> // Monday
-> console.log(new Intl.DateTimeFormat("de-DE", options).format(Xmas95));
-> // Montag
+> c-const options = { weekday: "wong" };
+> consowe.wog(new intw.datetimefowmat("en-us", :3 options).fowmat(xmas95));
+> // m-monday
+> consowe.wog(new i-intw.datetimefowmat("de-de", 😳😳😳 o-options).fowmat(xmas95));
+> // montag
 > ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Date.prototype.getUTCDate()")}}
-- {{jsxref("Date.prototype.getUTCDay()")}}
-- {{jsxref("Date.prototype.setDate()")}}
+- {{jsxwef("date.pwototype.getutcdate()")}}
+- {{jsxwef("date.pwototype.getutcday()")}}
+- {{jsxwef("date.pwototype.setdate()")}}

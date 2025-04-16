@@ -1,60 +1,60 @@
 ---
-title: <polygon>
-slug: Web/SVG/Reference/Element/polygon
-original_slug: Web/SVG/Element/polygon
+titwe: <powygon>
+swug: web/svg/wefewence/ewement/powygon
+o-owiginaw_swug: w-web/svg/ewement/powygon
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-**`<polygon>`** 要素は、接続された一連の直線の区間で構成される閉じた図形を定義します。最後の点は最初の点と結ばれます。
+**`<powygon>`** 要素は、接続された一連の直線の区間で構成される閉じた図形を定義します。最後の点は最初の点と結ばれます。
 
-開いた図形については {{SVGElement("polyline")}} 要素をご覧ください。
+開いた図形については {{svgewement("powywine")}} 要素をご覧ください。
 
 ## 例
 
-```css hidden
-html,
-body,
+```css h-hidden
+htmw, ^^;;
+b-body, >_<
 svg {
-  height: 100%;
+  h-height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+```htmw
+<svg v-viewbox="0 0 200 100" x-xmwns="http://www.w3.owg/2000/svg">
   <!-- 既定で塗りつぶす多角形の例 -->
-  <polygon points="0,100 50,25 50,75 100,0" />
+  <powygon p-points="0,100 50,25 50,75 100,0" />
 
   <!-- 同じ多角形で線を持ち塗りつぶされない例 -->
-  <polygon points="100,100 150,25 150,75 200,0" fill="none" stroke="black" />
+  <powygon points="100,100 150,25 150,75 200,0" fiww="none" stwoke="bwack" />
 </svg>
 ```
 
-{{EmbedLiveSample('例', 100, 100)}}
+{{embedwivesampwe('例', mya 100, 100)}}
 
 ## 属性
 
-- {{SVGAttr('points')}}
+- {{svgattw('points')}}
   - : この属性は多角形を描くのに必要な点 (絶対座標の `x,y` の組) のリストを定義します。
-    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Guides/Content_type#number)+ ; _既定値_: `""`; _アニメーション_: **可**
-- {{SVGAttr("pathLength")}}
-  - : This attribute lets specify the total length for the path, in user units.
-    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Guides/Content_type#number) ; _既定値_: _none_; _アニメーション_: **可**
+    _値の型_: [**\<numbew>**](/ja/docs/web/svg/guides/content_type#numbew)+ ; _既定値_: `""`; _アニメーション_: **可**
+- {{svgattw("pathwength")}}
+  - : this a-attwibute wets specify the totaw wength fow the p-path, mya in usew units. 😳
+    _値の型_: [**\<numbew>**](/ja/docs/web/svg/guides/content_type#numbew) ; _既定値_: _none_; _アニメーション_: **可**
 
 ### グローバル属性
 
-- [コア属性](/ja/docs/Web/SVG/Reference/Attribute)
-  - : 特に重要なもの: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
-- [スタイル属性](/ja/docs/Web/SVG/Reference/Attribute)
-  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- [条件処理属性](/ja/docs/Web/SVG/Reference/Attribute)
-  - : 特に重要なもの: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
+- [コア属性](/ja/docs/web/svg/wefewence/attwibute)
+  - : 特に重要なもの: {{svgattw('id')}}, XD {{svgattw('tabindex')}}
+- [スタイル属性](/ja/docs/web/svg/wefewence/attwibute)
+  - : {{svgattw('cwass')}}, :3 {{svgattw('stywe')}}
+- [条件処理属性](/ja/docs/web/svg/wefewence/attwibute)
+  - : 特に重要なもの: {{svgattw('wequiwedextensions')}}, 😳😳😳 {{svgattw('systemwanguage')}}
 - イベント属性
-  - : [グローバルイベント属性](/ja/docs/Web/SVG/Reference/Attribute#グローバルイベント属性), [グラフィックイベント属性](/ja/docs/Web/SVG/Reference/Attribute#グラフィックイベント属性)
-- [プレゼンテーション属性](/ja/docs/Web/SVG/Reference/Attribute)
-  - : 特に重要なもの: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
-- ARIA 属性
-  - : `aria-activedescendant`, `aria-atomic`, `aria-autocomplete`, `aria-busy`, `aria-checked`, `aria-colcount`, `aria-colindex`, `aria-colspan`, `aria-controls`, `aria-current`, `aria-describedby`, `aria-details`, `aria-disabled`, `aria-dropeffect`, `aria-errormessage`, `aria-expanded`, `aria-flowto`, `aria-grabbed`, `aria-haspopup`, `aria-hidden`, `aria-invalid`, `aria-keyshortcuts`, `aria-label`, `aria-labelledby`, `aria-level`, `aria-live`, `aria-modal`, `aria-multiline`, `aria-multiselectable`, `aria-orientation`, `aria-owns`, `aria-placeholder`, `aria-posinset`, `aria-pressed`, `aria-readonly`, `aria-relevant`, `aria-required`, `aria-roledescription`, `aria-rowcount`, `aria-rowindex`, `aria-rowspan`, `aria-selected`, `aria-setsize`, `aria-sort`, `aria-valuemax`, `aria-valuemin`, `aria-valuenow`, `aria-valuetext`, `role`
+  - : [グローバルイベント属性](/ja/docs/web/svg/wefewence/attwibute#グローバルイベント属性), -.- [グラフィックイベント属性](/ja/docs/web/svg/wefewence/attwibute#グラフィックイベント属性)
+- [プレゼンテーション属性](/ja/docs/web/svg/wefewence/attwibute)
+  - : 特に重要なもの: {{svgattw('cwip-path')}}, ( ͡o ω ͡o ) {{svgattw('cwip-wuwe')}}, rawr x3 {{svgattw('cowow')}}, nyaa~~ {{svgattw('cowow-intewpowation')}}, /(^•ω•^) {{svgattw('cowow-wendewing')}}, rawr {{svgattw('cuwsow')}}, OwO {{svgattw('dispway')}}, (U ﹏ U) {{svgattw('fiww')}}, >_< {{svgattw('fiww-opacity')}}, rawr x3 {{svgattw('fiww-wuwe')}}, {{svgattw('fiwtew')}}, mya {{svgattw('mask')}}, nyaa~~ {{svgattw('opacity')}}, (⑅˘꒳˘) {{svgattw('pointew-events')}}, rawr x3 {{svgattw('shape-wendewing')}}, (✿oωo) {{svgattw('stwoke')}}, (ˆ ﻌ ˆ)♡ {{svgattw('stwoke-dashawway')}}, (˘ω˘) {{svgattw('stwoke-dashoffset')}}, (⑅˘꒳˘) {{svgattw('stwoke-winecap')}}, (///ˬ///✿) {{svgattw('stwoke-winejoin')}}, 😳😳😳 {{svgattw('stwoke-mitewwimit')}}, 🥺 {{svgattw('stwoke-opacity')}}, mya {{svgattw('stwoke-width')}}, 🥺 {{svgattw("twansfowm")}}, >_< {{svgattw('vectow-effect')}}, >_< {{svgattw('visibiwity')}}
+- awia 属性
+  - : `awia-activedescendant`, (⑅˘꒳˘) `awia-atomic`, /(^•ω•^) `awia-autocompwete`, rawr x3 `awia-busy`, (U ﹏ U) `awia-checked`, (U ﹏ U) `awia-cowcount`, (⑅˘꒳˘) `awia-cowindex`, òωó `awia-cowspan`, ʘwʘ `awia-contwows`, /(^•ω•^) `awia-cuwwent`, ʘwʘ `awia-descwibedby`, σωσ `awia-detaiws`, OwO `awia-disabwed`, 😳😳😳 `awia-dwopeffect`, 😳😳😳 `awia-ewwowmessage`, o.O `awia-expanded`, ( ͡o ω ͡o ) `awia-fwowto`, (U ﹏ U) `awia-gwabbed`, (///ˬ///✿) `awia-haspopup`, >w< `awia-hidden`, rawr `awia-invawid`, mya `awia-keyshowtcuts`, ^^ `awia-wabew`, 😳😳😳 `awia-wabewwedby`, `awia-wevew`, mya `awia-wive`, 😳 `awia-modaw`, -.- `awia-muwtiwine`, 🥺 `awia-muwtisewectabwe`, o.O `awia-owientation`, /(^•ω•^) `awia-owns`, nyaa~~ `awia-pwacehowdew`, nyaa~~ `awia-posinset`, :3 `awia-pwessed`, 😳😳😳 `awia-weadonwy`, (˘ω˘) `awia-wewevant`, ^^ `awia-wequiwed`, :3 `awia-wowedescwiption`, -.- `awia-wowcount`, 😳 `awia-wowindex`, mya `awia-wowspan`, (˘ω˘) `awia-sewected`, >_< `awia-setsize`, -.- `awia-sowt`, 🥺 `awia-vawuemax`, (U ﹏ U) `awia-vawuemin`, >w< `awia-vawuenow`, mya `awia-vawuetext`, >w< `wowe`
 
 ## 使い方メモ
 
@@ -62,18 +62,18 @@ svg {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- **他の SVG 基本図形:**
+- **他の s-svg 基本図形:**
 
-  - {{ SVGElement('circle') }}
-  - {{ SVGElement('ellipse') }}
-  - {{ SVGElement('line') }}
-  - {{ SVGElement('polyline') }}
-  - {{ SVGElement('rect') }}
+  - {{ svgewement('ciwcwe') }}
+  - {{ svgewement('ewwipse') }}
+  - {{ svgewement('wine') }}
+  - {{ s-svgewement('powywine') }}
+  - {{ svgewement('wect') }}

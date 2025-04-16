@@ -1,36 +1,36 @@
 ---
-title: Intl.Segments
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments
+titwe: intw.segments
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/segmentew/segment/segments
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Intl.Segments`** のインスタンスは、テキスト文字列のセグメントを反復可能なコレクションとして保持します。[`Intl.Segmenter`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) オブジェクトの [`segment()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment) メソッドをコールすると、このインスタンスが返されます。
+**`intw.segments`** のインスタンスは、テキスト文字列のセグメントを反復可能なコレクションとして保持します。[`intw.segmentew`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/intw/segmentew) オブジェクトの [`segment()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/intw/segmentew/segment) メソッドをコールすると、このインスタンスが返されます。
 
-{{InteractiveExample("JavaScript Demo: Segments.prototype.containing")}}
+{{intewactiveexampwe("javascwipt d-demo: segments.pwototype.containing")}}
 
-```js interactive-example
-const segmenterFr = new Intl.Segmenter("fr", { granularity: "word" });
-const string1 = "Que ma joie demeure";
+```js intewactive-exampwe
+c-const segmentewfw = n-nyew intw.segmentew("fw", :3 { g-gwanuwawity: "wowd" });
+c-const s-stwing1 = "que m-ma joie demeuwe";
 
-const segments = segmenterFr.segment(string1);
+c-const segments = segmentewfw.segment(stwing1);
 
-console.log(segments.containing(5));
-// Expected output:
-// Object {segment: 'ma', index: 4, input: 'Que ma joie demeure', isWordLike: true}
+consowe.wog(segments.containing(5));
+// expected output:
+// object {segment: 'ma', (U ﹏ U) i-index: 4, -.- input: 'que ma joie demeuwe', iswowdwike: t-twue}
 ```
 
 ## インスタンスメソッド
 
-- [`Segments.prototype.containing()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/containing)
+- [`segments.pwototype.containing()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/intw/segmentew/segment/segments/containing)
   - : 指定されたインデックスのコードユニットを含む元の文字列のセグメントを記述したオブジェクトを返します。
-- [`Segments.prototype[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/Symbol.iterator)
+- [`segments.pwototype[symbow.itewatow]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/intw/segmentew/segment/segments/symbow.itewatow)
   - : セグメントを反復処理するためのイテレーターを返します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

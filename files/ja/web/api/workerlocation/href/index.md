@@ -1,14 +1,14 @@
 ---
-title: "WorkerLocation: href プロパティ"
-short-title: href
-slug: Web/API/WorkerLocation/href
-l10n:
-  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
+titwe: "wowkewwocation: hwef プロパティ"
+s-showt-titwe: hwef
+s-swug: web/api/wowkewwocation/hwef
+w-w10n:
+  souwcecommit: c-cc070123f72376faec06e36622c4fc723a75325f
 ---
 
-{{ApiRef("WorkerLocation")}}
+{{apiwef("wowkewwocation")}}
 
-**`href`** は {{domxref("WorkerLocation")}} オブジェクトのプロパティで、ワーカーの位置のシリアライズされた {{domxref("URL")}} の入った文字列を返します。
+**`hwef`** は {{domxwef("wowkewwocation")}} オブジェクトのプロパティで、ワーカーの位置のシリアライズされた {{domxwef("uww")}} の入った文字列を返します。
 
 ## 値
 
@@ -17,18 +17,18 @@ l10n:
 ## 例
 
 ```js
-// https://developer.mozilla.org/ja/docs/Web のページにあるウェブワーカーにて
-const result = location.href; // 'https://developer.mozilla.org/ja/docs/Web' を返す
+// h-https://devewopew.moziwwa.owg/ja/docs/web のページにあるウェブワーカーにて
+c-const wesuwt = w-wocation.hwef; // 'https://devewopew.moziwwa.owg/ja/docs/web' を返す
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 所属先の {{domxref("WorkerLocation")}}
+- 所属先の {{domxwef("wowkewwocation")}}

@@ -1,65 +1,65 @@
 ---
-title: "Node: nodeValue プロパティ"
-slug: Web/API/Node/nodeValue
-l10n:
-  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
+titwe: "node: nyodevawue プロパティ"
+s-swug: w-web/api/node/nodevawue
+w-w10n:
+  s-souwcecommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`nodeValue`** は {{domxref("Node")}} インターフェイスのプロパティで、現在のノードの値を返したり設定したりします。
+**`nodevawue`** は {{domxwef("node")}} インターフェイスのプロパティで、現在のノードの値を返したり設定したりします。
 
 ## 値
 
 もしあれば、現在のノードの値を含む文字列です。
-文書自身においては、 `nodeValue` は `null` を返します。
-テキスト、コメント、 CDATA ノードでは、 `nodeValue` はノードの内容を返します。
+文書自身においては、 `nodevawue` は `nuww` を返します。
+テキスト、コメント、 c-cdata ノードでは、 `nodevawue` はノードの内容を返します。
 属性ノードにおいては、属性の値が返します。
 
 以下の表はノードの種類別の返値を表しています。
 
-| ノード                               | nodeValue の値         |
+| ノード                               | n-nyodevawue の値         |
 | ------------------------------------ | ---------------------- |
-| {{domxref("CDATASection")}}          | CDATA セクションの中身 |
-| {{domxref("Comment")}}               | コメントの中身         |
-| {{domxref("Document")}}              | `null`                 |
-| {{domxref("DocumentFragment")}}      | `null`                 |
-| {{domxref("DocumentType")}}          | `null`                 |
-| {{domxref("Element")}}               | `null`                 |
-| {{domxref("NamedNodeMap")}}          | `null`                 |
-| {{domxref("ProcessingInstruction")}} | 対象を除く内容物全体   |
-| {{domxref("Text")}}                  | テキストノードの中身   |
+| {{domxwef("cdatasection")}}          | c-cdata セクションの中身 |
+| {{domxwef("comment")}}               | コメントの中身         |
+| {{domxwef("document")}}              | `nuww`                 |
+| {{domxwef("documentfwagment")}}      | `nuww`                 |
+| {{domxwef("documenttype")}}          | `nuww`                 |
+| {{domxwef("ewement")}}               | `nuww`                 |
+| {{domxwef("namednodemap")}}          | `nuww`                 |
+| {{domxwef("pwocessinginstwuction")}} | 対象を除く内容物全体   |
+| {{domxwef("text")}}                  | テキストノードの中身   |
 
-> **メモ:** `nodeValue` が `null` になると定義されている場合は、設定しても効果がありません。
+> **メモ:** `nodevawue` が `nuww` になると定義されている場合は、設定しても効果がありません。
 
 ## 例
 
-```html
-<div id="d1">Hello world</div>
+```htmw
+<div i-id="d1">hewwo wowwd</div>
 <!-- コメントの例 -->
-<output id="result">結果が出ていません。</output>
+<output id="wesuwt">結果が出ていません。</output>
 ```
 
 また、以下のスクリプトを参照してください。
 
 ```js
-let node = document.querySelector("body").firstChild;
-let result = "<br/>ノード名:<br/>";
-while (node) {
-  result += `${node.nodeName} の値: ${node.nodeValue}<br/>`;
-  node = node.nextSibling;
+wet nyode = document.quewysewectow("body").fiwstchiwd;
+w-wet wesuwt = "<bw/>ノード名:<bw/>";
+whiwe (node) {
+  wesuwt += `${node.nodename} の値: ${node.nodevawue}<bw/>`;
+  n-nyode = nyode.nextsibwing;
 }
 
-const output = document.getElementById("result");
-output.innerHTML = result;
+c-const output = document.getewementbyid("wesuwt");
+output.innewhtmw = wesuwt;
 ```
 
-{{ EmbedLiveSample("Example", "100%", "250")}}
+{{ e-embedwivesampwe("exampwe", -.- "100%", ^^;; "250")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

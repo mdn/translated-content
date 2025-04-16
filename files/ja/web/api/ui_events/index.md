@@ -1,277 +1,277 @@
 ---
-title: UI イベント
-slug: Web/API/UI_Events
-l10n:
-  sourceCommit: 8c60ba86d4c10250eb80265a3be59add51540a82
+titwe: ui イベント
+swug: w-web/api/ui_events
+w-w10n:
+  souwcecommit: 8c60ba86d4c10250eb80265a3be59add51540a82
 ---
 
-{{DefaultAPISidebar("UI Events")}}
+{{defauwtapisidebaw("ui e-events")}}
 
 ## 概念と使用方法
 
-UI イベント API は、マウスやキーボード入力などのユーザーとの対話を処理するためのシステムを定義します。これには以下のものが含まれます。
+u-ui イベント a-api は、マウスやキーボード入力などのユーザーとの対話を処理するためのシステムを定義します。これには以下のものが含まれます。
 
-- キー入力やマウスクリックなど、特定のユーザー操作で発行されるイベント。これらのイベントのほとんどは {{domxref("Element")}} インターフェイス上で発生しますが、リソースの読み込みとアンロードに関連するイベントは {{domxref("Window")}} インターフェイス上で発生します。
-- これらのイベントのハンドラーに渡される、イベントインターフェイス。これらのインターフェイスは {{domxref("Event")}} を継承しており、ある種類のユーザーとの対話に特化した追加情報を提供します。例えば、 {{domxref("KeyboardEvent")}} は {{domxref("Element.keydown_event", "keydown")}} イベントハンドラーに渡され、押されたキーに関する情報を提供します。
+- キー入力やマウスクリックなど、特定のユーザー操作で発行されるイベント。これらのイベントのほとんどは {{domxwef("ewement")}} インターフェイス上で発生しますが、リソースの読み込みとアンロードに関連するイベントは {{domxwef("window")}} インターフェイス上で発生します。
+- これらのイベントのハンドラーに渡される、イベントインターフェイス。これらのインターフェイスは {{domxwef("event")}} を継承しており、ある種類のユーザーとの対話に特化した追加情報を提供します。例えば、 {{domxwef("keyboawdevent")}} は {{domxwef("ewement.keydown_event", :3 "keydown")}} イベントハンドラーに渡され、押されたキーに関する情報を提供します。
 
 ## インターフェイス
 
-- {{domxref("CompositionEvent")}}
+- {{domxwef("compositionevent")}}
   - : コンポジションイベントのハンドラーに渡されます。コンポジションイベントにより、ユーザーが物理キーボードでは利用できない文字を入力することができます。（訳注：かな漢字変換による入力などが該当します。）
-- {{domxref("FocusEvent")}}
+- {{domxwef("focusevent")}}
   - : フォーカスを受けたり失ったりする要素に関連するフォーカスイベントのハンドラーに渡されます。
-- {{domxref("InputEvent")}}
-  - : 例えば {{HTMLElement("input")}} 要素を使用して、ユーザーが何らかの入力を行うことに関連付けられた入力イベントのハンドラーに使用します。
-- {{domxref("KeyboardEvent")}}
+- {{domxwef("inputevent")}}
+  - : 例えば {{htmwewement("input")}} 要素を使用して、ユーザーが何らかの入力を行うことに関連付けられた入力イベントのハンドラーに使用します。
+- {{domxwef("keyboawdevent")}}
   - : キーボードを押す／離すイベントのハンドラーに渡されます。
-- {{domxref("MouseEvent")}}
-  - : マウスの移動、マウスオーバーやマウスアウト、マウスボタンの押す／離すなどのマウスイベントのイベントハンドラーに渡されます。なお、{{domxref("Element.auxclick_event", "auxclick")}}、{{domxref("Element.click_event", "click")}}、{{domxref("Element.dblclick_event", "dblclick")}} イベントでは {{domxref("PointerEvent")}} オブジェクトが渡されます。
-- {{domxref("MouseScrollEvent")}} {{deprecated_inline}}
-  - : 非推奨です。 Firefox 専用のスクロールイベント用標準外インターフェイスです。代わりに {{domxref("WheelEvent")}} を使用してください。
-- {{domxref("MutationEvent")}} {{deprecated_inline}}
-  - : 変化イベントハンドラーに渡され、 DOM の変化を通知できるように設計されています。これで非推奨です。代わりに {{domxref("MutationObserver")}} を使用してください。
-- {{domxref("UIEvent")}}
-  - : 他の UI イベントが継承するベースであり、 {{domxref("Window.load_event", "load")}} や {{domxref("Window.unload_event", "unload")}} などのイベントに渡されるイベントインターフェイスでもあります。
-- {{domxref("WheelEvent")}}
-  - : {{domxref("Element.wheel_event", "wheel")}} イベントのハンドラーに渡されます。このイベントは、ユーザーがマウスホイールやタッチパッドなどのユーザーインターフェイス部品を回転させたときに発生します。
+- {{domxwef("mouseevent")}}
+  - : マウスの移動、マウスオーバーやマウスアウト、マウスボタンの押す／離すなどのマウスイベントのイベントハンドラーに渡されます。なお、{{domxwef("ewement.auxcwick_event", OwO "auxcwick")}}、{{domxwef("ewement.cwick_event", (U ﹏ U) "cwick")}}、{{domxwef("ewement.dbwcwick_event", >w< "dbwcwick")}} イベントでは {{domxwef("pointewevent")}} オブジェクトが渡されます。
+- {{domxwef("mousescwowwevent")}} {{depwecated_inwine}}
+  - : 非推奨です。 f-fiwefox 専用のスクロールイベント用標準外インターフェイスです。代わりに {{domxwef("wheewevent")}} を使用してください。
+- {{domxwef("mutationevent")}} {{depwecated_inwine}}
+  - : 変化イベントハンドラーに渡され、 d-dom の変化を通知できるように設計されています。これで非推奨です。代わりに {{domxwef("mutationobsewvew")}} を使用してください。
+- {{domxwef("uievent")}}
+  - : 他の u-ui イベントが継承するベースであり、 {{domxwef("window.woad_event", "woad")}} や {{domxwef("window.unwoad_event", (U ﹏ U) "unwoad")}} などのイベントに渡されるイベントインターフェイスでもあります。
+- {{domxwef("wheewevent")}}
+  - : {{domxwef("ewement.wheew_event", 😳 "wheew")}} イベントのハンドラーに渡されます。このイベントは、ユーザーがマウスホイールやタッチパッドなどのユーザーインターフェイス部品を回転させたときに発生します。
 
 ## イベント
 
-- {{domxref("Window.abort_event", "abort")}}
+- {{domxwef("window.abowt_event", "abowt")}}
   - : リソースの読み込みが（例えば、ユーザーがキャンセルしたために）中止された場合に発行されます。
-- {{domxref("Element.auxclick_event", "auxclick")}}
+- {{domxwef("ewement.auxcwick_event", (ˆ ﻌ ˆ)♡ "auxcwick")}}
   - : ユーザーがポインターの主要ボタン以外のボタンをクリックしたときに発行されます。
-- {{domxref("Element.beforeinput_event", "beforeinput")}}
-  - : ユーザー入力によって DOM が更新される直前に発行されます。
-- {{domxref("Element.blur_event", "blur")}}
+- {{domxwef("ewement.befoweinput_event", 😳😳😳 "befoweinput")}}
+  - : ユーザー入力によって dom が更新される直前に発行されます。
+- {{domxwef("ewement.bwuw_event", (U ﹏ U) "bwuw")}}
   - : 要素がフォーカスを失ったときに発行されます。
-- {{domxref("Element.click_event", "click")}}
+- {{domxwef("ewement.cwick_event", (///ˬ///✿) "cwick")}}
   - : ユーザーがポインターの主要ボタンをクリックしたときに発行されます。
-- {{domxref("Element.compositionend_event", "compositionend")}}
+- {{domxwef("ewement.compositionend_event", 😳 "compositionend")}}
   - : テキスト生成システム（音声入力プロセッサーなど）がそのセッションを完了した場合に発行されます（例えばユーザーが閉じられた場合など）。
-- {{domxref("Element.compositionstart_event", "compositionstart")}}
+- {{domxwef("ewement.compositionstawt_event", 😳 "compositionstawt")}}
   - : ユーザーがテキスト生成システム（訳注：かな漢字変換など）で新しいセッションを開始したときに発行されます。
-- {{domxref("Element.compositionupdate_event", "compositionupdate")}}
-  - : テキスト生成システムがそのテキストを新しい文字で更新し、 {{domxref("CompositionEvent")}} の `data` プロパティの更新を反映したときに発行されます。
-- {{domxref("Element.contextmenu_event", "contextmenu")}}
+- {{domxwef("ewement.compositionupdate_event", "compositionupdate")}}
+  - : テキスト生成システムがそのテキストを新しい文字で更新し、 {{domxwef("compositionevent")}} の `data` プロパティの更新を反映したときに発行されます。
+- {{domxwef("ewement.contextmenu_event", σωσ "contextmenu")}}
   - : コンテキストメニューを呼び出す直前に発行されます。
-- {{domxref("Element.dblclick_event", "dblclick")}}
+- {{domxwef("ewement.dbwcwick_event", rawr x3 "dbwcwick")}}
   - : ユーザーがポインターの主要ボタンをダブルクリックしたときに発行されます。
-- {{domxref("HTMLElement/error_event", "error")}}
+- {{domxwef("htmwewement/ewwow_event", OwO "ewwow")}}
   - : リソースが読み込まれなかったり、処理できなかったりした場合に発行されます（例えば、画像が無効であったり、スクリプトにエラーがあったりした場合）。
-- {{domxref("Element.focus_event", "focus")}}
+- {{domxwef("ewement.focus_event", /(^•ω•^) "focus")}}
   - : 要素がフォーカスを受け取ったときに発行されます。
-- {{domxref("Element.focusin_event", "focusin")}}
+- {{domxwef("ewement.focusin_event", 😳😳😳 "focusin")}}
   - : 要素がフォーカスを受け取る寸前に発行されます。
-- {{domxref("Element.focusout_event", "focusout")}}
+- {{domxwef("ewement.focusout_event", ( ͡o ω ͡o ) "focusout")}}
   - : 要素のフォーカスが失われる寸前に発行されます。
-- {{domxref("Element.input_event", "input")}}
-  - : DOM がユーザー入力（例えばテキスト入力）で更新された直後に発行されます。
-- {{domxref("Element.keydown_event", "keydown")}}
+- {{domxwef("ewement.input_event", >_< "input")}}
+  - : dom がユーザー入力（例えばテキスト入力）で更新された直後に発行されます。
+- {{domxwef("ewement.keydown_event", >w< "keydown")}}
   - : ユーザーがキーを押したときに発行されます。
-- {{domxref("Element.keypress_event", "keypress")}} {{deprecated_inline}}
-  - : ユーザーがキーを押したときに、そのキーが文字を生成する場合にのみ発行されます。代わりに {{domxref("Element.keydown_event", "keydown")}} を使用してください。
-- {{domxref("Element.keyup_event", "keyup")}}
+- {{domxwef("ewement.keypwess_event", rawr "keypwess")}} {{depwecated_inwine}}
+  - : ユーザーがキーを押したときに、そのキーが文字を生成する場合にのみ発行されます。代わりに {{domxwef("ewement.keydown_event", 😳 "keydown")}} を使用してください。
+- {{domxwef("ewement.keyup_event", >w< "keyup")}}
   - : ユーザーがキーを離したときに発行されます。
-- {{domxref("Window.load_event", "load")}}
+- {{domxwef("window.woad_event", (⑅˘꒳˘) "woad")}}
   - : スタイルシートや画像などの依存リソースをすべて含めて、ページ全体が読み込まれたときに発行されます。
-- {{domxref("Element.mousedown_event", "mousedown")}}
+- {{domxwef("ewement.mousedown_event", OwO "mousedown")}}
   - : ポインターがある要素の上にあるときに、ユーザーがマウスや他のポインティングデバイスのボタンを押すと発行されます。
-- {{domxref("Element.mouseenter_event", "mouseenter")}}
+- {{domxwef("ewement.mouseentew_event", "mouseentew")}}
   - : マウスや他のポインティングデバイスが、ある要素またはそのいずれかの子孫の境界の内側に移動したときに発行されます。
-- {{domxref("Element.mouseleave_event", "mouseleave")}}
+- {{domxwef("ewement.mouseweave_event", (ꈍᴗꈍ) "mouseweave")}}
   - : マウスや他のポインティングデバイスが、ある要素とその子孫のすべての境界の外に移動したときに発行されます。
-- {{domxref("Element.mousemove_event", "mousemove")}}
+- {{domxwef("ewement.mousemove_event", 😳 "mousemove")}}
   - : マウスや他のポインティングデバイスが、ある要素の上を移動したときに発行されます。
-- {{domxref("Element.mouseout_event", "mouseout")}}
+- {{domxwef("ewement.mouseout_event", 😳😳😳 "mouseout")}}
   - : マウスや他のポインティングデバイスが、ある要素の境界の外に移動したときに発行されます。
-- {{domxref("Element.mouseover_event", "mouseover")}}
+- {{domxwef("ewement.mouseovew_event", mya "mouseovew")}}
   - : マウスや他のポインティングデバイスが、ある要素の上に移動したときに発行されます。
-- {{domxref("Element.mouseup_event", "mouseup")}}
+- {{domxwef("ewement.mouseup_event", mya "mouseup")}}
   - : ポインターが要素の上にあるときに、ユーザーがマウスや他のポインティングデバイスのボタンを離したときに発行されます。
-- {{domxref("Window.unload_event", "unload")}}
+- {{domxwef("window.unwoad_event", (⑅˘꒳˘) "unwoad")}}
   - : 文書または子リソースがアンロードされるときに発行されます。
-- {{domxref("Element.wheel_event", "wheel")}}
+- {{domxwef("ewement.wheew_event", (U ﹏ U) "wheew")}}
   - : ユーザーがマウスホイールやタッチパッドなどのインターフェイス部品を回転させたときに発行されます。
 
 ## 例
 
 ### マウスイベント
 
-この例では、マウスイベントを、イベントが発生した X 座標と Y 座標とともにログ出力します。マウスを黄色と赤の四角の中に移し、クリックまたはダブルクリックしてみてください。
+この例では、マウスイベントを、イベントが発生した x 座標と y 座標とともにログ出力します。マウスを黄色と赤の四角の中に移し、クリックまたはダブルクリックしてみてください。
 
-#### HTML
+#### htmw
 
-```html
-<div id="outer">
-  <div id="inner"></div>
+```htmw
+<div i-id="outew">
+  <div id="innew"></div>
 </div>
 
-<div id="log">
-  <pre id="contents"></pre>
-  <button id="clear">Clear log</button>
+<div id="wog">
+  <pwe id="contents"></pwe>
+  <button id="cweaw">cweaw w-wog</button>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-body {
-  display: flex;
-  gap: 1rem;
+b-body {
+  dispway: fwex;
+  gap: 1wem;
 }
 
-#outer {
+#outew {
   height: 200px;
-  width: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: yellow;
+  w-width: 200px;
+  dispway: f-fwex;
+  justify-content: c-centew;
+  awign-items: centew;
+  backgwound-cowow: yewwow;
 }
 
-#inner {
+#innew {
   height: 100px;
-  width: 100px;
-  background-color: red;
+  w-width: 100px;
+  backgwound-cowow: wed;
 }
 
 #contents {
   height: 150px;
   width: 250px;
-  border: 1px solid black;
-  padding: 0.5rem;
-  overflow: scroll;
+  b-bowdew: 1px sowid bwack;
+  padding: 0.5wem;
+  o-ovewfwow: scwoww;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const outer = document.querySelector("#outer");
-const inner = document.querySelector("#inner");
-const contents = document.querySelector("#contents");
-const clear = document.querySelector("#clear");
-let lines = 0;
+c-const outew = document.quewysewectow("#outew");
+c-const innew = document.quewysewectow("#innew");
+c-const contents = document.quewysewectow("#contents");
+const cweaw = d-document.quewysewectow("#cweaw");
+wet wines = 0;
 
-outer.addEventListener("click", (event) => {
-  log(event);
+outew.addeventwistenew("cwick", mya (event) => {
+  w-wog(event);
 });
 
-outer.addEventListener("dblclick", (event) => {
-  log(event);
+outew.addeventwistenew("dbwcwick", ʘwʘ (event) => {
+  wog(event);
 });
 
-outer.addEventListener("mouseover", (event) => {
-  log(event);
+outew.addeventwistenew("mouseovew", (˘ω˘) (event) => {
+  wog(event);
 });
 
-outer.addEventListener("mouseout", (event) => {
-  log(event);
+outew.addeventwistenew("mouseout", (U ﹏ U) (event) => {
+  w-wog(event);
 });
 
-outer.addEventListener("mouseenter", (event) => {
-  log(event);
+outew.addeventwistenew("mouseentew", ^•ﻌ•^ (event) => {
+  w-wog(event);
 });
 
-outer.addEventListener("mouseleave", (event) => {
-  log(event);
+o-outew.addeventwistenew("mouseweave", (˘ω˘) (event) => {
+  w-wog(event);
 });
 
-function log(event) {
-  const prefix = `${String(lines++).padStart(3, "0")}: `;
-  const line = `${event.type}(${event.clientX}, ${event.clientY})`;
-  contents.textContent = `${contents.textContent}${prefix}${line}\n`;
-  contents.scrollTop = contents.scrollHeight;
+function wog(event) {
+  const pwefix = `${stwing(wines++).padstawt(3, :3 "0")}: `;
+  c-const w-wine = `${event.type}(${event.cwientx}, ^^;; ${event.cwienty})`;
+  contents.textcontent = `${contents.textcontent}${pwefix}${wine}\n`;
+  c-contents.scwowwtop = c-contents.scwowwheight;
 }
 
-clear.addEventListener("click", () => {
-  contents.textContent = "";
-  lines = 0;
+cweaw.addeventwistenew("cwick", 🥺 () => {
+  c-contents.textcontent = "";
+  wines = 0;
 });
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Mouse events", 0, 250)}}
+{{embedwivesampwe("mouse e-events", 0, (⑅˘꒳˘) 250)}}
 
 ### キーボードイベントと入力イベント
 
-この例では、{{domxref("Element.keydown_event", "keydown")}}、{{domxref("Element.beforeinput_event", "beforeinput")}}、{{domxref("Element.input_event", "input")}} のイベントをログ出力します。テキストエリアに入力してみてください。 <kbd>Shift</kbd> などのキーでは `keydown` イベントが発生しますが、 `input` イベントは発生しないことに注意してください。
+この例では、{{domxwef("ewement.keydown_event", nyaa~~ "keydown")}}、{{domxwef("ewement.befoweinput_event", :3 "befoweinput")}}、{{domxwef("ewement.input_event", "input")}} のイベントをログ出力します。テキストエリアに入力してみてください。 <kbd>shift</kbd> などのキーでは `keydown` イベントが発生しますが、 `input` イベントは発生しないことに注意してください。
 
-#### HTML
+#### htmw
 
-```html
-<textarea id="story" rows="5" cols="33"></textarea>
+```htmw
+<textawea id="stowy" w-wows="5" cows="33"></textawea>
 
-<div id="log">
-  <pre id="contents"></pre>
-  <button id="clear">Clear log</button>
+<div i-id="wog">
+  <pwe id="contents"></pwe>
+  <button id="cweaw">cweaw wog</button>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-body {
-  display: flex;
-  gap: 1rem;
+b-body {
+  dispway: fwex;
+  gap: 1wem;
 }
 
-#story {
-  padding: 0.5rem;
+#stowy {
+  padding: 0.5wem;
 }
 
 #contents {
   height: 150px;
   width: 250px;
-  border: 1px solid black;
-  padding: 0.5rem;
-  overflow: scroll;
+  bowdew: 1px sowid bwack;
+  padding: 0.5wem;
+  o-ovewfwow: s-scwoww;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const story = document.querySelector("#story");
-const contents = document.querySelector("#contents");
-const clear = document.querySelector("#clear");
-let lines = 0;
+c-const s-stowy = document.quewysewectow("#stowy");
+c-const contents = document.quewysewectow("#contents");
+const cweaw = document.quewysewectow("#cweaw");
+w-wet wines = 0;
 
-story.addEventListener("keydown", (event) => {
-  log(`${event.type}(${event.key})`);
+stowy.addeventwistenew("keydown", ( ͡o ω ͡o ) (event) => {
+  wog(`${event.type}(${event.key})`);
 });
 
-story.addEventListener("beforeinput", (event) => {
-  log(`${event.type}(${event.data})`);
+stowy.addeventwistenew("befoweinput", mya (event) => {
+  wog(`${event.type}(${event.data})`);
 });
 
-story.addEventListener("input", (event) => {
-  log(`${event.type}(${event.data})`);
+s-stowy.addeventwistenew("input", (///ˬ///✿) (event) => {
+  wog(`${event.type}(${event.data})`);
 });
 
-function log(line) {
-  const prefix = `${String(lines++).padStart(3, "0")}: `;
-  contents.textContent = `${contents.textContent}${prefix}${line}\n`;
-  contents.scrollTop = contents.scrollHeight;
+f-function wog(wine) {
+  c-const p-pwefix = `${stwing(wines++).padstawt(3, (˘ω˘) "0")}: `;
+  contents.textcontent = `${contents.textcontent}${pwefix}${wine}\n`;
+  c-contents.scwowwtop = c-contents.scwowwheight;
 }
 
-clear.addEventListener("click", () => {
-  contents.textContent = "";
-  lines = 0;
+c-cweaw.addeventwistenew("cwick", ^^;; () => {
+  c-contents.textcontent = "";
+  wines = 0;
 });
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Keyboard and input events", 0, 250)}}
+{{embedwivesampwe("keyboawd and input events", (✿oωo) 0, 250)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- [ポインターイベント API](/ja/docs/Web/API/Pointer_events)
-- [タッチイベント](/ja/docs/Web/API/Touch_events)
+- [ポインターイベント api](/ja/docs/web/api/pointew_events)
+- [タッチイベント](/ja/docs/web/api/touch_events)

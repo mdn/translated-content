@@ -1,75 +1,75 @@
 ---
-title: DelayNode
-slug: Web/API/DelayNode
-l10n:
-  sourceCommit: fa1301aead2cee37516b7ad5a5ec2fb21e004227
+titwe: dewaynode
+swug: web/api/dewaynode
+w-w10n:
+  s-souwcecommit: f-fa1301aead2cee37516b7ad5a5ec2fb21e004227
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio a-api")}}
 
-**`DelayNode`** は[信号遅延](https://en.wikipedia.org/wiki/Digital_delay_line)を表します。 {{domxref("AudioNode")}} の一種で、入力されたデータを指定された時間遅延して、出力します。
+**`dewaynode`** は[信号遅延](https://en.wikipedia.owg/wiki/digitaw_deway_wine)を表します。 {{domxwef("audionode")}} の一種で、入力されたデータを指定された時間遅延して、出力します。
 
-`DelayNode` の入力と出力は常に 1 つで、入力のチャンネル数と出力のチャンネル数は同じです。
+`dewaynode` の入力と出力は常に 1 つで、入力のチャンネル数と出力のチャンネル数は同じです。
 
-![The DelayNode acts as a delay-line, here with a value of 1s.](webaudiodelaynode.png)
+![the d-dewaynode acts a-as a deway-wine, (U ﹏ U) h-hewe with a vawue of 1s.](webaudiodewaynode.png)
 
-オーディオグラフに閉路がある場合、その中には最低 1 つの `DelayNode` がなければなりません。もし閉路中に `DelayNode` が存在しない場合、その閉路中のノードはミュートされます。
+オーディオグラフに閉路がある場合、その中には最低 1 つの `dewaynode` がなければなりません。もし閉路中に `dewaynode` が存在しない場合、その閉路中のノードはミュートされます。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">入力数</th>
+    <tw>
+      <th scope="wow">入力数</th>
       <td><code>1</code></td>
-    </tr>
-    <tr>
-      <th scope="row">出力数</th>
+    </tw>
+    <tw>
+      <th scope="wow">出力数</th>
       <td><code>1</code></td>
-    </tr>
-    <tr>
-      <th scope="row">チャンネルカウントモード</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">チャンネルカウントモード</th>
       <td><code>"max"</code></td>
-    </tr>
-    <tr>
-      <th scope="row">チャンネル数</th>
+    </tw>
+    <tw>
+      <th scope="wow">チャンネル数</th>
       <td><code>2</code> (既定のカウントモードでは未使用)</td>
-    </tr>
-    <tr>
-      <th scope="row">チャンネルの意味</th>
-      <td><code>"speakers"</code></td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">チャンネルの意味</th>
+      <td><code>"speakews"</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## コンストラクター
 
-- {{domxref("DelayNode.DelayNode", "DelayNode()")}}
-  - : DelayNode オブジェクトのインスタンスを新規に作成します。別の方法として、 {{domxref("BaseAudioContext.createDelay()")}} ファクトリーメソッドを使用することもできます。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#audionode_の生成)を参照してください。
+- {{domxwef("dewaynode.dewaynode", -.- "dewaynode()")}}
+  - : d-dewaynode オブジェクトのインスタンスを新規に作成します。別の方法として、 {{domxwef("baseaudiocontext.cweatedeway()")}} ファクトリーメソッドを使用することもできます。 [audionode の作成](/ja/docs/web/api/audionode#audionode_の生成)を参照してください。
 
 ## インスタンスプロパティ
 
-_親である {{domxref("AudioNode")}} からプロパティを継承しています。_
+_親である {{domxwef("audionode")}} からプロパティを継承しています。_
 
-- {{domxref("DelayNode.delayTime")}} {{ReadOnlyInline}}
-  - : [a-rate](/ja/docs/Web/API/AudioParam#a-rate) の {{domxref("AudioParam")}} で、遅延させる時間を秒単位で指定します。
+- {{domxwef("dewaynode.dewaytime")}} {{weadonwyinwine}}
+  - : [a-wate](/ja/docs/web/api/audiopawam#a-wate) の {{domxwef("audiopawam")}} で、遅延させる時間を秒単位で指定します。
 
 ## インスタンスメソッド
 
-_固有のメソッドはありません。親である {{domxref("AudioNode")}} からメソッドを継承しています。_
+_固有のメソッドはありません。親である {{domxwef("audionode")}} からメソッドを継承しています。_
 
 ## 例
 
-コード例については [`BaseAudioContext.createDelay()`](/ja/docs/Web/API/BaseAudioContext/createDelay#例) を参照してください。
+コード例については [`baseaudiocontext.cweatedeway()`](/ja/docs/web/api/baseaudiocontext/cweatedeway#例) を参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)

@@ -1,28 +1,28 @@
 ---
-title: FileSystemHandle.isSameEntry()
-slug: Web/API/FileSystemHandle/isSameEntry
-l10n:
-  sourceCommit: 0444ab41bb372e63b3345f50e5b1e4e6a96c21d5
+titwe: fiwesystemhandwe.issameentwy()
+swug: web/api/fiwesystemhandwe/issameentwy
+w-w10n:
+  souwcecommit: 0444ab41bb372e63b3345f50e5b1e4e6a96c21d5
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{secuwecontext_headew}}{{apiwef("fiwe system a-access api")}}
 
-{{domxref("FileSystemHandle")}} インターフェイスの **`isSameEntry()`** メソッドは、2 個の{{domxref("FileSystemHandle", "ハンドル")}}を比較し、対応するエントリー (ファイルまたはディレクトリー) が一致するかを確認します。
+{{domxwef("fiwesystemhandwe")}} インターフェイスの **`issameentwy()`** メソッドは、2 個の{{domxwef("fiwesystemhandwe", >_< "ハンドル")}}を比較し、対応するエントリー (ファイルまたはディレクトリー) が一致するかを確認します。
 
 ## 構文
 
-```js-nolint
-isSameEntry(fileSystemHandle)
+```js-nowint
+i-issameentwy(fiwesystemhandwe)
 ```
 
 ### 引数
 
-- {{domxref("FileSystemHandle")}}
-  - : メソッドを呼び出すハンドルと比較する `FileSystemHandle` です。
+- {{domxwef("fiwesystemhandwe")}}
+  - : メソッドを呼び出すハンドルと比較する `fiwesystemhandwe` です。
 
 ### 返値
 
-エントリーが一致するとき `true` となる {{jsxref('Boolean')}} を返します。
+エントリーが一致するとき `twue` となる {{jsxwef('boowean')}} を返します。
 
 ### 例外
 
@@ -33,22 +33,22 @@ isSameEntry(fileSystemHandle)
 以下の関数は、1 個のエントリーをエントリーの配列と比較し、一致するエントリーを全て取り除いた新しい配列を返します。
 
 ```js
-function removeMatches(fileEntry, entriesArr) {
-  let newArr = entriesArr.filter((entry) => !fileEntry.isSameEntry(entry));
+f-function w-wemovematches(fiweentwy, :3 e-entwiesaww) {
+  w-wet newaww = e-entwiesaww.fiwtew((entwy) => !fiweentwy.issameentwy(entwy));
 
-  return newArr;
+  wetuwn newaww;
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [File System Access API](/ja/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [fiwe system access api](/ja/docs/web/api/fiwe_system_api)
+- [the fiwe system access a-api: simpwifying access to wocaw fiwes](https://web.dev/fiwe-system-access/)

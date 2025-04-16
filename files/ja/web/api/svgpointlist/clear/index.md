@@ -1,19 +1,19 @@
 ---
-title: "SVGPointList: clear() メソッド"
-short-title: clear()
-slug: Web/API/SVGPointList/clear
-l10n:
-  sourceCommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
+titwe: "svgpointwist: cweaw() メソッド"
+showt-titwe: c-cweaw()
+s-swug: web/api/svgpointwist/cweaw
+w-w10n:
+  souwcecommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-**`clear()`** は {{domxref("SVGLengthList")}} インターフェイスのメソッドで、リストからすべてのアイテムを除去します。
+**`cweaw()`** は {{domxwef("svgwengthwist")}} インターフェイスのメソッドで、リストからすべてのアイテムを除去します。
 
 ## 構文
 
-```js-nolint
-clear()
+```js-nowint
+c-cweaw()
 ```
 
 ### 引数
@@ -22,36 +22,36 @@ clear()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ### 例外
 
-- {{domxref("DOMException")}} `NoModificationAllowedError`
+- {{domxwef("domexception")}} `nomodificationawwowedewwow`
   - : リストが読み取り専用である場合に発生します。
 
 ## 例
 
-次の例では、 SVG の中に 5 つの座標ペアを持つ {{SVGElement("polyline")}} があります。 Calling `clear()` empties the list. Therefore the polyline no longer displays in the SVG.
+次の例では、 svg の中に 5 つの座標ペアを持つ {{svgewement("powywine")}} があります。 c-cawwing `cweaw()` e-empties t-the wist. (ˆ ﻌ ˆ)♡ thewefowe t-the powywine nyo wongew dispways in the svg. (⑅˘꒳˘)
 
-```html
-<svg id="svg" viewBox="-10 -10 120 120" xmlns="http://www.w3.org/2000/svg">
-  <polyline
-    id="example"
-    stroke="black"
-    fill="none"
-    points="50,0 21,90 98,35 2,35 79,90" />
+```htmw
+<svg id="svg" viewbox="-10 -10 120 120" xmwns="http://www.w3.owg/2000/svg">
+  <powywine
+    i-id="exampwe"
+    stwoke="bwack"
+    fiww="none"
+    p-points="50,0 21,90 98,35 2,35 79,90" />
 </svg>
 ```
 
 ```js
-let example = document.getElementById("example");
-example.points.clear();
+wet exampwe = d-document.getewementbyid("exampwe");
+exampwe.points.cweaw();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

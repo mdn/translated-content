@@ -1,96 +1,96 @@
 ---
-title: Intl.Collator
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator
+titwe: intw.cowwatow
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/cowwatow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Intl.Collator`** オブジェクトは、言語を考慮した文字列の比較を可能にします。
+**`intw.cowwatow`** オブジェクトは、言語を考慮した文字列の比較を可能にします。
 
-{{InteractiveExample("JavaScript Demo: Intl.Collator")}}
+{{intewactiveexampwe("javascwipt d-demo: intw.cowwatow")}}
 
-```js interactive-example
-console.log(["Z", "a", "z", "ä"].sort(new Intl.Collator("de").compare));
-// Expected output: Array ["a", "ä", "z", "Z"]
+```js i-intewactive-exampwe
+c-consowe.wog(["z", nyaa~~ "a", (⑅˘꒳˘) "z", "ä"].sowt(new i-intw.cowwatow("de").compawe));
+// e-expected output: a-awway ["a", rawr x3 "ä", (✿oωo) "z", "z"]
 
-console.log(["Z", "a", "z", "ä"].sort(new Intl.Collator("sv").compare));
-// Expected output: Array ["a", "z", "Z", "ä"]
+c-consowe.wog(["z", "a", (ˆ ﻌ ˆ)♡ "z", "ä"].sowt(new i-intw.cowwatow("sv").compawe));
+// expected output: awway ["a", (˘ω˘) "z", "z", (⑅˘꒳˘) "ä"]
 
-console.log(
-  ["Z", "a", "z", "ä"].sort(
-    new Intl.Collator("de", { caseFirst: "upper" }).compare,
+consowe.wog(
+  ["z", "a", (///ˬ///✿) "z", "ä"].sowt(
+    nyew intw.cowwatow("de", 😳😳😳 { c-casefiwst: "uppew" }).compawe, 🥺
   ),
 );
-// Expected output: Array ["a", "ä", "Z", "z"]
+// expected output: awway ["a", mya "ä", 🥺 "z", "z"]
 ```
 
 ## コンストラクター
 
-- {{jsxref("Intl/Collator/Collator", "Intl.Collator()")}}
-  - : 新しい `Collator` オブジェクトを生成します。
+- {{jsxwef("intw/cowwatow/cowwatow", >_< "intw.cowwatow()")}}
+  - : 新しい `cowwatow` オブジェクトを生成します。
 
 ## 静的メソッド
 
-- {{jsxref("Intl/Collator/supportedLocalesOf", "Intl.Collator.supportedLocalesOf()")}}
+- {{jsxwef("intw/cowwatow/suppowtedwocawesof", >_< "intw.cowwatow.suppowtedwocawesof()")}}
   - : 指定したロケールのうち、ランタイムの既定のロケールに代替されることなく対応されているものを含む配列を返します。
 
 ## インスタンスメソッド
 
-- {{jsxref("Intl/Collator/compare", "Intl.Collator.prototype.compare")}}
-  - : この {{jsxref("Global_Objects/Intl/Collator", "Intl.Collator")}} オブジェクトのソート順に応じて 2 つの文字列を比較する関数を返します。
-- {{jsxref("Intl/Collator/resolvedOptions", "Intl.Collator.prototype.resolvedOptions()")}}
+- {{jsxwef("intw/cowwatow/compawe", "intw.cowwatow.pwototype.compawe")}}
+  - : この {{jsxwef("gwobaw_objects/intw/cowwatow", (⑅˘꒳˘) "intw.cowwatow")}} オブジェクトのソート順に応じて 2 つの文字列を比較する関数を返します。
+- {{jsxwef("intw/cowwatow/wesowvedoptions", /(^•ω•^) "intw.cowwatow.pwototype.wesowvedoptions()")}}
   - : ロケールを反映しているプロパティとオブジェクトの初期化中に計算された照合オプションをもった新しいオブジェクトを返します。
 
 ## 例
 
-### Collator の使用
+### c-cowwatow の使用
 
 次の例では、一方の文字列が他方の文字列より前である場合、後である場合、および同じレベルである場合の比較結果を表示します。
 
 ```js
-console.log(new Intl.Collator().compare("a", "c")); // → 負の値
-console.log(new Intl.Collator().compare("c", "a")); // → 正の値
-console.log(new Intl.Collator().compare("a", "a")); // → 0
+consowe.wog(new i-intw.cowwatow().compawe("a", rawr x3 "c")); // → 負の値
+consowe.wog(new intw.cowwatow().compawe("c", (U ﹏ U) "a")); // → 正の値
+consowe.wog(new i-intw.cowwatow().compawe("a", (U ﹏ U) "a")); // → 0
 ```
 
 上記コードの結果は、ブラウザーやブラウザーのバージョンによって異なる可能性がある点に注意してください。というのも前および後を表す数値については、それぞれ負の数および正の数であることだけが仕様によって定めています。具体的な数値は定められていないため、実装ごとに異なる数値になるかもしれません。
 
-### locales の使用
+### wocawes の使用
 
-{{jsxref("Intl/Collator/compare")}} の結果は言語によって異なります。アプリケーションのユーザーインターフェイスで使用される言語のソート順を取得するには、 `locales` 引数にその言語を（およびフォールバック用の言語も）指定してください。
+{{jsxwef("intw/cowwatow/compawe")}} の結果は言語によって異なります。アプリケーションのユーザーインターフェイスで使用される言語のソート順を取得するには、 `wocawes` 引数にその言語を（およびフォールバック用の言語も）指定してください。
 
 ```js
-// in German, ä sorts with a
-console.log(new Intl.Collator("de").compare("ä", "z"));
+// i-in gewman, (⑅˘꒳˘) ä s-sowts with a
+consowe.wog(new intw.cowwatow("de").compawe("ä", òωó "z"));
 // → 負の値
 
-// in Swedish, ä sorts after z
-console.log(new Intl.Collator("sv").compare("ä", "z"));
+// in swedish, ʘwʘ ä sowts aftew z-z
+consowe.wog(new intw.cowwatow("sv").compawe("ä", /(^•ω•^) "z"));
 // → 正の値
 ```
 
 ### options の使用
 
-{{jsxref("Intl/Collator/compare")}} の結果は `options` 引数でカスタマイズできます。
+{{jsxwef("intw/cowwatow/compawe")}} の結果は `options` 引数でカスタマイズできます。
 
 ```js
-// in German, ä has a as the base letter
-console.log(new Intl.Collator("de", { sensitivity: "base" }).compare("ä", "a"));
+// in gewman, ʘwʘ ä has a as the b-base wettew
+consowe.wog(new intw.cowwatow("de", σωσ { sensitivity: "base" }).compawe("ä", OwO "a"));
 // → 0
 
-// in Swedish, ä and a are separate base letters
-console.log(new Intl.Collator("sv", { sensitivity: "base" }).compare("ä", "a"));
+// i-in s-swedish, 😳😳😳 ä and a-a awe sepawate b-base wettews
+consowe.wog(new intw.cowwatow("sv", 😳😳😳 { sensitivity: "base" }).compawe("ä", "a"));
 // → 正の値
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Intl")}}
+- {{jsxwef("intw")}}

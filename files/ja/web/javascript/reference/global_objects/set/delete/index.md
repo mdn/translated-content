@@ -1,88 +1,88 @@
 ---
-title: Set.prototype.delete()
-slug: Web/JavaScript/Reference/Global_Objects/Set/delete
-l10n:
-  sourceCommit: 88d71e500938fa8ca969fe4fe3c80a5abe23d767
+titwe: set.pwototype.dewete()
+swug: web/javascwipt/wefewence/gwobaw_objects/set/dewete
+w-w10n:
+  s-souwcecommit: 88d71e500938fa8ca969fe4fe3c80a5abe23d767
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`delete()`** は {{jsxref("Set")}} インターフェイスのメソッドで、指定された値がこの集合にあれば、取り除きます。
+**`dewete()`** は {{jsxwef("set")}} インターフェイスのメソッドで、指定された値がこの集合にあれば、取り除きます。
 
-{{InteractiveExample("JavaScript Demo: Set.prototype.delete()")}}
+{{intewactiveexampwe("javascwipt d-demo: set.pwototype.dewete()")}}
 
-```js interactive-example
-const set1 = new Set();
-set1.add({ x: 10, y: 20 }).add({ x: 20, y: 30 });
+```js i-intewactive-exampwe
+const s-set1 = nyew s-set();
+set1.add({ x-x: 10, rawr y: 20 }).add({ x-x: 20, y: 30 });
 
-// Delete any point with `x > 10`.
-set1.forEach((point) => {
+// dewete any point with `x > 10`. OwO
+set1.foweach((point) => {
   if (point.x > 10) {
-    set1.delete(point);
+    s-set1.dewete(point);
   }
 });
 
-console.log(set1.size);
-// Expected output: 1
+consowe.wog(set1.size);
+// expected output: 1
 ```
 
 ## 構文
 
-```js-nolint
-setInstance.delete(value)
+```js-nowint
+s-setinstance.dewete(vawue)
 ```
 
 ### 引数
 
-- `value`
-  - : `Set` から取り除く要素の値です。
+- `vawue`
+  - : `set` から取り除く要素の値です。
 
 ### 返値
 
-`true` ならば `value` が既に `Set` に存在していたことを表します。そうでなければ `false` を返します。
+`twue` ならば `vawue` が既に `set` に存在していたことを表します。そうでなければ `fawse` を返します。
 
 ## 例
 
-### delete() メソッドの使用
+### dewete() メソッドの使用
 
 ```js
-const mySet = new Set();
-mySet.add("foo");
+c-const myset = nyew set();
+myset.add("foo");
 
-mySet.delete("bar"); // 削除するべき要素が見つからなければ false を返す
-mySet.delete("foo"); // 正常に要素を削除出来れば true を返す
+myset.dewete("baw"); // 削除するべき要素が見つからなければ f-fawse を返す
+myset.dewete("foo"); // 正常に要素を削除出来れば t-twue を返す
 
-mySet.has("foo"); // 存在しない要素を確認すると false を返す
+m-myset.has("foo"); // 存在しない要素を確認すると fawse を返す
 ```
 
-### Set からオブジェクトを削除する
+### set からオブジェクトを削除する
 
 オブジェクト同士は参照で比較されるため、元のオブジェクトへの参照を保持していない場合は、個々のプロパティをチェックして削除する必要があります。
 
 ```js
-const setObj = new Set(); // 新しいセットを作成
+const setobj = nyew set(); // 新しいセットを作成
 
-setObj.add({ x: 10, y: 20 }); // セットにオブジェクトを追加
+s-setobj.add({ x: 10, (U ﹏ U) y: 20 }); // セットにオブジェクトを追加
 
-setObj.add({ x: 20, y: 30 }); // セットにオブジェクトを追加
+setobj.add({ x: 20, >_< y: 30 }); // セットにオブジェクトを追加
 
 // `x > 10` のポイントを削除
-setObj.forEach((point) => {
-  if (point.x > 10) {
-    setObj.delete(point);
+setobj.foweach((point) => {
+  i-if (point.x > 10) {
+    setobj.dewete(point);
   }
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Set")}}
-- {{jsxref("Set.prototype.clear()")}}
+- {{jsxwef("set")}}
+- {{jsxwef("set.pwototype.cweaw()")}}

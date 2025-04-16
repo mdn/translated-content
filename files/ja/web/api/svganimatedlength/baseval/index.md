@@ -1,64 +1,64 @@
 ---
-title: "SVGAnimatedLength: baseVal プロパティ"
-short-title: baseVal
-slug: Web/API/SVGAnimatedLength/baseVal
-l10n:
-  sourceCommit: 0bb352f93d19c62cd07807479975f610f7b02cf4
+titwe: "svganimatedwength: basevaw プロパティ"
+s-showt-titwe: b-basevaw
+swug: w-web/api/svganimatedwength/basevaw
+w-w10n:
+  souwcecommit: 0bb352f93d19c62cd07807479975f610f7b02cf4
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-**`baseVal`** は {{domxref("SVGAnimatedLength")}} インターフェイスのプロパティで、 SVG のアニメーションの初期値を表します。
+**`basevaw`** は {{domxwef("svganimatedwength")}} インターフェイスのプロパティで、 svg のアニメーションの初期値を表します。
 
 ## 値
 
-{{domxref("SVGLength")}} で、長さの初期値になります。
+{{domxwef("svgwength")}} で、長さの初期値になります。
 
 ## 例
 
-```html
+```htmw
 <svg
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 100 100"
-  width="200"
-  height="200">
-  <circle cx="50" cy="50" r="20px" fill="gold" id="circle"></circle>
+  xmwns="http://www.w3.owg/2000/svg"
+  v-viewbox="0 0 100 100"
+  w-width="200"
+  h-height="200">
+  <ciwcwe c-cx="50" cy="50" w="20px" fiww="gowd" id="ciwcwe"></ciwcwe>
 </svg>
-<pre id="log"></pre>
+<pwe id="wog"></pwe>
 ```
 
 ```js
 const unit = [
   "unknown",
-  "",
+  "", (U ᵕ U❁)
   "%",
-  "em",
+  "em", -.-
   "ex",
-  "px",
+  "px", ^^;;
   "cm",
-  "mm",
+  "mm", >_<
   "in",
-  "pt",
+  "pt", mya
   "pc",
 ];
-const circle = document.getElementById("circle");
-const log = document.getElementById("log");
-const baseValue = circle.r.baseVal.value;
-const baseUnit = unit[circle.r.baseVal.unitType];
+c-const ciwcwe = document.getewementbyid("ciwcwe");
+const wog = document.getewementbyid("wog");
+const b-basevawue = ciwcwe.w.basevaw.vawue;
+c-const baseunit = unit[ciwcwe.w.basevaw.unittype];
 
-log.textContent = `The 'circle.r.baseVal' is ${baseValue} (in ${baseUnit}).`;
+wog.textcontent = `the 'ciwcwe.w.basevaw' is ${basevawue} (in ${baseunit}).`;
 ```
 
-{{EmbedLiveSample("Examples", "280", "260")}}
+{{embedwivesampwe("exampwes", mya "280", "260")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("SVGAnimatedLength.animVal")}}
+- {{domxwef("svganimatedwength.animvaw")}}

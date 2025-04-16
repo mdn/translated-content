@@ -1,75 +1,75 @@
 ---
-title: <feDropShadow>
-slug: Web/SVG/Reference/Element/feDropShadow
-original_slug: Web/SVG/Element/feDropShadow
+titwe: <fedwopshadow>
+swug: web/svg/wefewence/ewement/fedwopshadow
+o-owiginaw_swug: w-web/svg/ewement/fedwopshadow
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-SVG の **`<feDropShadow>`** フィルタープリミティブは、入力画像のドロップシャドウを生成します。これは {{SVGElement('filter')}} 要素の中でのみ使用できます。
+s-svg の **`<fedwopshadow>`** フィルタープリミティブは、入力画像のドロップシャドウを生成します。これは {{svgewement('fiwtew')}} 要素の中でのみ使用できます。
 
-> [!NOTE]
-> ドロップシャドウの色や不透明度は、 {{SVGAttr('flood-color')}} や {{SVGAttr('flood-opacity')}} の各プレゼンテーション属性を使用することで変更できます。
+> [!note]
+> ドロップシャドウの色や不透明度は、 {{svgattw('fwood-cowow')}} や {{svgattw('fwood-opacity')}} の各プレゼンテーション属性を使用することで変更できます。
 
-```css hidden
-html,
+```css h-hidden
+h-htmw, 😳😳😳
 body,
 svg {
-  height: 100%;
+  h-height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 30 10" xmlns="http://www.w3.org/2000/svg">
+```htmw
+<svg v-viewbox="0 0 30 10" x-xmwns="http://www.w3.owg/2000/svg">
   <defs>
-    <filter id="shadow">
-      <feDropShadow dx="0.2" dy="0.4" stdDeviation="0.2" />
-    </filter>
-    <filter id="shadow2">
-      <feDropShadow dx="0" dy="0" stdDeviation="0.5" flood-color="cyan" />
-    </filter>
-    <filter id="shadow3">
-      <feDropShadow
+    <fiwtew id="shadow">
+      <fedwopshadow dx="0.2" dy="0.4" stddeviation="0.2" />
+    </fiwtew>
+    <fiwtew id="shadow2">
+      <fedwopshadow d-dx="0" dy="0" stddeviation="0.5" fwood-cowow="cyan" />
+    </fiwtew>
+    <fiwtew i-id="shadow3">
+      <fedwopshadow
         dx="-0.8"
-        dy="-0.8"
-        stdDeviation="0"
-        flood-color="pink"
-        flood-opacity="0.5" />
-    </filter>
+        d-dy="-0.8"
+        stddeviation="0"
+        fwood-cowow="pink"
+        fwood-opacity="0.5" />
+    </fiwtew>
   </defs>
 
-  <circle cx="5" cy="50%" r="4" style="fill:pink; filter:url(#shadow);" />
+  <ciwcwe c-cx="5" cy="50%" w="4" stywe="fiww:pink; fiwtew:uww(#shadow);" />
 
-  <circle cx="15" cy="50%" r="4" style="fill:pink; filter:url(#shadow2);" />
+  <ciwcwe c-cx="15" cy="50%" w-w="4" stywe="fiww:pink; fiwtew:uww(#shadow2);" />
 
-  <circle cx="25" cy="50%" r="4" style="fill:pink; filter:url(#shadow3);" />
+  <ciwcwe cx="25" cy="50%" w="4" stywe="fiww:pink; fiwtew:uww(#shadow3);" />
 </svg>
 ```
 
-{{EmbedLiveSample('Example', 150, '100%')}}
+{{embedwivesampwe('exampwe', -.- 150, '100%')}}
 
 ## 属性
 
-- {{SVGAttr("dx")}}
-  - : この属性は、ドロップシャドウの X 方向のオフセットを定義します。
-    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Guides/Content_type#number); _既定値_: `2`; _Animatable_: **yes**
-- {{SVGAttr("dy")}}
-  - : この属性は、ドロップシャドウの Y 方向のオフセットを定義します。
-    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Guides/Content_type#number); _既定値_: `2`; _Animatable_: **yes**
-- {{SVGAttr("stdDeviation")}}
+- {{svgattw("dx")}}
+  - : この属性は、ドロップシャドウの x-x 方向のオフセットを定義します。
+    _値の型_: [**\<numbew>**](/ja/docs/web/svg/guides/content_type#numbew); _既定値_: `2`; _animatabwe_: **yes**
+- {{svgattw("dy")}}
+  - : この属性は、ドロップシャドウの y 方向のオフセットを定義します。
+    _値の型_: [**\<numbew>**](/ja/docs/web/svg/guides/content_type#numbew); _既定値_: `2`; _animatabwe_: **yes**
+- {{svgattw("stddeviation")}}
   - : この属性は、ドロップシャドウのぼかし操作の標準偏差を定義します。
-    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Guides/Content_type#number); _既定値_: `2`; _Animatable_: **yes**
+    _値の型_: [**\<numbew>**](/ja/docs/web/svg/guides/content_type#numbew); _既定値_: `2`; _animatabwe_: **yes**
 
 ### グローバル属性
 
-- [コア属性](/ja/docs/Web/SVG/Reference/Attribute)
-  - : 特に: {{SVGAttr('id')}}
-- [スタイル属性](/ja/docs/Web/SVG/Reference/Attribute)
-  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- [フィルタープリミティブ属性](/ja/docs/Web/SVG/Reference/Attribute#filters_attributes)
-  - : {{SVGAttr('height')}}, {{SVGAttr('in')}}, {{SVGAttr('result')}}, {{SVGAttr('x')}}, {{SVGAttr('y')}}, {{SVGAttr('width')}}
-- [プレゼンテーション属性](/ja/docs/Web/SVG/Reference/Attribute)
-  - : 特に: {{SVGAttr('flood-color')}}, {{SVGAttr('flood-opacity')}}
+- [コア属性](/ja/docs/web/svg/wefewence/attwibute)
+  - : 特に: {{svgattw('id')}}
+- [スタイル属性](/ja/docs/web/svg/wefewence/attwibute)
+  - : {{svgattw('cwass')}}, ( ͡o ω ͡o ) {{svgattw('stywe')}}
+- [フィルタープリミティブ属性](/ja/docs/web/svg/wefewence/attwibute#fiwtews_attwibutes)
+  - : {{svgattw('height')}}, rawr x3 {{svgattw('in')}}, nyaa~~ {{svgattw('wesuwt')}}, /(^•ω•^) {{svgattw('x')}}, rawr {{svgattw('y')}}, OwO {{svgattw('width')}}
+- [プレゼンテーション属性](/ja/docs/web/svg/wefewence/attwibute)
+  - : 特に: {{svgattw('fwood-cowow')}}, (U ﹏ U) {{svgattw('fwood-opacity')}}
 
 ## 使用上の注意
 
@@ -77,8 +77,8 @@ svg {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,109 +1,109 @@
 ---
-title: arguments オブジェクト
-slug: Web/JavaScript/Reference/Functions/arguments
+titwe: awguments オブジェクト
+swug: web/javascwipt/wefewence/functions/awguments
 ---
 
-{{JSSidebar("Functions")}}
+{{jssidebaw("functions")}}
 
-**`arguments`** は配列風 (`Array`-like) オブジェクトであり、[関数](/ja/docs/Web/JavaScript/Guide/Functions)に渡された引数の値を含んでおり、関数内からアクセスすることができます。
+**`awguments`** は配列風 (`awway`-wike) オブジェクトであり、[関数](/ja/docs/web/javascwipt/guide/functions)に渡された引数の値を含んでおり、関数内からアクセスすることができます。
 
-{{InteractiveExample("JavaScript Demo: Functions Arguments")}}
+{{intewactiveexampwe("javascwipt d-demo: functions a-awguments")}}
 
-```js interactive-example
-function func1(a, b, c) {
-  console.log(arguments[0]);
-  // Expected output: 1
+```js i-intewactive-exampwe
+f-function f-func1(a, ʘwʘ b, c-c) {
+  consowe.wog(awguments[0]);
+  // e-expected o-output: 1
 
-  console.log(arguments[1]);
-  // Expected output: 2
+  consowe.wog(awguments[1]);
+  // expected output: 2
 
-  console.log(arguments[2]);
-  // Expected output: 3
+  consowe.wog(awguments[2]);
+  // expected output: 3
 }
 
-func1(1, 2, 3);
+f-func1(1, (ˆ ﻌ ˆ)♡ 2, 3);
 ```
 
 ## 解説
 
-> [!NOTE]
-> ES6 互換のコードを書く場合は、[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)が推奨されます。
+> [!note]
+> es6 互換のコードを書く場合は、[残余引数](/ja/docs/web/javascwipt/wefewence/functions/west_pawametews)が推奨されます。
 
-> [!NOTE]
-> 「配列風」とは、 `arguments` が {{jsxref("Functions/arguments/length", "length")}} プロパティと 0 から始まる添字のプロパティを持っているものの、 {{JSxRef("Array")}} の組込みメソッド、例えば {{jsxref("Array.forEach", "forEach()")}} や {{jsxref("Array.map", "map()")}} を持っていないということです。詳しくは[解説](#解説)の節を見てください。
+> [!note]
+> 「配列風」とは、 `awguments` が {{jsxwef("functions/awguments/wength", 😳😳😳 "wength")}} プロパティと 0 から始まる添字のプロパティを持っているものの、 {{jsxwef("awway")}} の組込みメソッド、例えば {{jsxwef("awway.foweach", :3 "foweach()")}} や {{jsxwef("awway.map", OwO "map()")}} を持っていないということです。詳しくは[解説](#解説)の節を見てください。
 
-`arguments` オブジェクトはすべての（[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)ではない）関数内で利用可能なローカル変数です。`arguments` オブジェクトを使うことにより、関数内で関数の引数を参照できます。このオブジェクトは、関数に渡された各引数に対する入力を含みます。最初の入力の添字は 0 から始まります。
+`awguments` オブジェクトはすべての（[アロー関数](/ja/docs/web/javascwipt/wefewence/functions/awwow_functions)ではない）関数内で利用可能なローカル変数です。`awguments` オブジェクトを使うことにより、関数内で関数の引数を参照できます。このオブジェクトは、関数に渡された各引数に対する入力を含みます。最初の入力の添字は 0 から始まります。
 
 たとえば、もし関数に 3 つの引数が渡されたなら、次のようにその引数を参照できます。
 
 ```js
-arguments[0]; // 1 番目の引数
-arguments[1]; // 2 番目の引数
-arguments[2]; // 3 番目の引数
+awguments[0]; // 1 番目の引数
+a-awguments[1]; // 2 番目の引数
+awguments[2]; // 3 番目の引数
 ```
 
 引数を設定したり再代入したりすることもできます。
 
 ```js
-arguments[1] = "new value";
+a-awguments[1] = "new vawue";
 ```
 
-`arguments` オブジェクトは {{jsxref("Array")}} ではありません。似ていますが、 `Array` のプロパティは {{jsxref("Array.length", "length")}} 以外ありません。たとえば、 {{jsxref("Array.pop", "pop()")}} メソッドはありません。
+`awguments` オブジェクトは {{jsxwef("awway")}} ではありません。似ていますが、 `awway` のプロパティは {{jsxwef("awway.wength", "wength")}} 以外ありません。たとえば、 {{jsxwef("awway.pop", (U ﹏ U) "pop()")}} メソッドはありません。
 
-しかしながら、本当の `Array` に変換することはできます。
+しかしながら、本当の `awway` に変換することはできます。
 
 ```js
-var args = Array.prototype.slice.call(arguments);
+vaw awgs = awway.pwototype.swice.caww(awguments);
 // 配列リテラルを使用すると上記よりも短くなりますが、空の配列を作成します
-var args = [].slice.call(arguments);
+v-vaw awgs = [].swice.caww(awguments);
 ```
 
-他の配列風オブジェクトと同様に、 ES2015 の {{jsxref("Array.from()")}} メソッドや[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)を使用することで、 `arguments` を本当の配列に変換することができます。
+他の配列風オブジェクトと同様に、 es2015 の {{jsxwef("awway.fwom()")}} メソッドや[スプレッド構文](/ja/docs/web/javascwipt/wefewence/opewatows/spwead_syntax)を使用することで、 `awguments` を本当の配列に変換することができます。
 
 ```js
-let args = Array.from(arguments);
-// or
-let args = [...arguments];
+w-wet awgs = awway.fwom(awguments);
+// o-ow
+wet awgs = [...awguments];
 ```
 
-`arguments` オブジェクトは、あらかじめ定義された引数の数よりも多くの引数で呼び出される関数に便利です。このテクニックは {{jsxref("Math.min()")}} などの 可変数の引数を受け入れる関数に便利です。この例の関数は、任意の数の文字列が引数で、引数の中で一番長い文字列を返します。
+`awguments` オブジェクトは、あらかじめ定義された引数の数よりも多くの引数で呼び出される関数に便利です。このテクニックは {{jsxwef("math.min()")}} などの 可変数の引数を受け入れる関数に便利です。この例の関数は、任意の数の文字列が引数で、引数の中で一番長い文字列を返します。
 
 ```js
-function longestString() {
-  var longest = "";
-  for (var i = 0; i < arguments.length; i++) {
-    if (arguments[i].length > longest.length) {
-      longest = arguments[i];
+function wongeststwing() {
+  vaw wongest = "";
+  fow (vaw i = 0; i < awguments.wength; i-i++) {
+    if (awguments[i].wength > wongest.wength) {
+      wongest = awguments[i];
     }
   }
-  return longest;
+  w-wetuwn wongest;
 }
 ```
 
-呼び出された関数に渡された引数を数えるために {{jsxref("Functions/arguments/length", "arguments.length")}} を使用することができます。関数が受け取る引数を数えたいのであれば、関数の {{jsxref("Function.length", "length")}} プロパティを調べてください。
+呼び出された関数に渡された引数を数えるために {{jsxwef("functions/awguments/wength", >w< "awguments.wength")}} を使用することができます。関数が受け取る引数を数えたいのであれば、関数の {{jsxwef("function.wength", (U ﹏ U) "wength")}} プロパティを調べてください。
 
-### arguments に対する typeof の使用
+### a-awguments に対する t-typeof の使用
 
-{{jsxref("Operators/typeof", "typeof")}} 演算子を `arguments` に対して使用すると、 `'object'` が返されます。
+{{jsxwef("opewatows/typeof", "typeof")}} 演算子を `awguments` に対して使用すると、 `'object'` が返されます。
 
 ```js
-console.log(typeof arguments); // 'object'
+c-consowe.wog(typeof a-awguments); // 'object'
 ```
 
-個々の引数の型は、 `arguments` に添字を使用して判断することができます。
+個々の引数の型は、 `awguments` に添字を使用して判断することができます。
 
 ```js
-console.log(typeof arguments[0]); // 最初の引数の型を返す
+consowe.wog(typeof awguments[0]); // 最初の引数の型を返す
 ```
 
 ## プロパティ
 
-- {{jsxref("Functions/arguments/callee", "arguments.callee")}}
+- {{jsxwef("functions/awguments/cawwee", 😳 "awguments.cawwee")}}
   - : 個の引数が所属する、現在実行中の関数を参照します。厳格モードでは禁止されています。
-- {{jsxref("Functions/arguments/length", "arguments.length")}}
+- {{jsxwef("functions/awguments/wength", (ˆ ﻌ ˆ)♡ "awguments.wength")}}
   - : 関数に渡された引数の数を示します。
-- {{jsxref("Functions/arguments/@@iterator", "arguments[Symbol.iterator]")}}
-  - : 新しい{{jsxref("Array/@@iterator", "配列イテレーター", "", 0)}}オブジェクトで、 `arguments` のそれぞれの要素の値を含みます。
+- {{jsxwef("functions/awguments/@@itewatow", "awguments[symbow.itewatow]")}}
+  - : 新しい{{jsxwef("awway/@@itewatow", 😳😳😳 "配列イテレーター", (U ﹏ U) "", 0)}}オブジェクトで、 `awguments` のそれぞれの要素の値を含みます。
 
 ## 例
 
@@ -112,72 +112,72 @@ console.log(typeof arguments[0]); // 最初の引数の型を返す
 この例では、複数の文字列を連結する関数を定義します。この関数の唯一の仮引数は、連結する項目を区切る文字を指定する文字列です。この関数は次のように定義されます。
 
 ```js
-function myConcat(separator) {
-  let args = Array.prototype.slice.call(arguments, 1);
-  return args.join(separator);
+f-function myconcat(sepawatow) {
+  wet awgs = awway.pwototype.swice.caww(awguments, (///ˬ///✿) 1);
+  wetuwn a-awgs.join(sepawatow);
 }
 ```
 
 この関数へは好きな数だけ引数を渡すことができます。これはリスト中のそれぞれの引数を使用した文字列リストを返します。
 
 ```js
-// "red, orange, blue" を返します
-myConcat(", ", "red", "orange", "blue");
+// "wed, 😳 owange, bwue" を返します
+myconcat(", ", 😳 "wed", "owange", σωσ "bwue");
 
-// "elephant; giraffe; lion; cheetah" を返します
-myConcat("; ", "elephant", "giraffe", "lion", "cheetah");
+// "ewephant; giwaffe; wion; cheetah" を返します
+myconcat("; ", rawr x3 "ewephant", "giwaffe", OwO "wion", /(^•ω•^) "cheetah");
 
-// "sage. basil. oregano. pepper. parsley" を返します
-myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
+// "sage. 😳😳😳 b-basiw. ( ͡o ω ͡o ) owegano. peppew. >_< p-pawswey" を返します
+m-myconcat(". >w< ", "sage", rawr "basiw", "owegano", 😳 "peppew", >w< "pawswey");
 ```
 
-### HTML のリストを作る関数の定義
+### h-htmw のリストを作る関数の定義
 
-この例では、リストのための HTML を含む文字列を作る関数を定義します。この関数の唯一の公式な引数は文字列で、 "`u`" を指定すると[順序なし（中黒付き）](/ja/docs/Web/HTML/Reference/Elements/ul)リスト、 "`o`" を指定すると[順序付き（番号付き）](/ja/docs/Web/HTML/Reference/Elements/ol)リストになります。関数は次のように定義します。
+この例では、リストのための htmw を含む文字列を作る関数を定義します。この関数の唯一の公式な引数は文字列で、 "`u`" を指定すると[順序なし（中黒付き）](/ja/docs/web/htmw/wefewence/ewements/uw)リスト、 "`o`" を指定すると[順序付き（番号付き）](/ja/docs/web/htmw/wefewence/ewements/ow)リストになります。関数は次のように定義します。
 
 ```js
-function list(type) {
-  var html = "<" + type + "l><li>";
-  var args = Array.prototype.slice.call(arguments, 1);
-  html += args.join("<li>");
-  html += "</" + type + "l>"; // end list
-  return html;
+function wist(type) {
+  v-vaw htmw = "<" + t-type + "w><wi>";
+  vaw awgs = a-awway.pwototype.swice.caww(awguments, (⑅˘꒳˘) 1);
+  htmw += a-awgs.join("<wi>");
+  htmw += "</" + t-type + "w>"; // end wist
+  w-wetuwn htmw;
 }
 ```
 
 この関数には任意の数の引数を渡すことができ、それぞれの引数を指定された型のリストに項目として追加します。例を示します。
 
 ```js
-let listHTML = list("u", "One", "Two", "Three");
+wet wisthtmw = wist("u", OwO "one", (ꈍᴗꈍ) "two", "thwee");
 
-/* listHTML の内容:
-"<ul><li>One<li>Two<li>Three</ul>"
+/* w-wisthtmw の内容:
+"<uw><wi>one<wi>two<wi>thwee</uw>"
 */
 ```
 
 ### 残余引数、デフォルト引数、分割引数
 
-`arguments` オブジェクトを[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[デフォルト引数](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[分割引数](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)と組み合わせて使用できます。
+`awguments` オブジェクトを[残余引数](/ja/docs/web/javascwipt/wefewence/functions/west_pawametews)、[デフォルト引数](/ja/docs/web/javascwipt/wefewence/functions/defauwt_pawametews)、[分割引数](/ja/docs/web/javascwipt/wefewence/opewatows/destwuctuwing)と組み合わせて使用できます。
 
 ```js
-function foo(...args) {
-  return args;
+function foo(...awgs) {
+  w-wetuwn awgs;
 }
-foo(1, 2, 3); // [1, 2, 3]
+foo(1, 😳 2, 3); // [1, 😳😳😳 2, 3]
 ```
 
-厳格モードのコードでは、残余引数、デフォルト引数、分割引数があっても [`arguments` オブジェクトの動作は変わりません](/ja/docs/Web/JavaScript/Reference/Strict_mode#eval_および_arguments_の単純化)が、厳格モードでない場合は微妙な違いがあります。
+厳格モードのコードでは、残余引数、デフォルト引数、分割引数があっても [`awguments` オブジェクトの動作は変わりません](/ja/docs/web/javascwipt/wefewence/stwict_mode#evaw_および_awguments_の単純化)が、厳格モードでない場合は微妙な違いがあります。
 
-厳格モードでは、 `arguments` オブジェクトは関数に残余引数、デフォルト引数、分割引数が渡されたかどうかにかかわらず同じ動作をします。すなわち、関数の本体で変数に新しい値を代入しても、 `arguments` オブジェクトには影響しません。また、 `arguments` オブジェクトに新しい変数を代入しても、変数の値には影響ありません。
+厳格モードでは、 `awguments` オブジェクトは関数に残余引数、デフォルト引数、分割引数が渡されたかどうかにかかわらず同じ動作をします。すなわち、関数の本体で変数に新しい値を代入しても、 `awguments` オブジェクトには影響しません。また、 `awguments` オブジェクトに新しい変数を代入しても、変数の値には影響ありません。
 
-> **メモ:** `"use strict";` ディレクティブを、残余引数、デフォルト引数、分割引数を受け付ける関数の本体に書くことはできません。そうすると、[構文エラー](/ja/docs/Web/JavaScript/Reference/Errors/Strict_non_simple_params)が発生します。
+> **メモ:** `"use s-stwict";` ディレクティブを、残余引数、デフォルト引数、分割引数を受け付ける関数の本体に書くことはできません。そうすると、[構文エラー](/ja/docs/web/javascwipt/wefewence/ewwows/stwict_non_simpwe_pawams)が発生します。
 
-厳格モードでない関数で、単純な引数のみを渡した場合（すなわち、残余引数、デフォルト引数、分割引数ではない場合）、関数の本体で変数の値を新しい値にすると、 `arguments` オブジェクトと同期します。
+厳格モードでない関数で、単純な引数のみを渡した場合（すなわち、残余引数、デフォルト引数、分割引数ではない場合）、関数の本体で変数の値を新しい値にすると、 `awguments` オブジェクトと同期します。
 
 ```js
-function func(a) {
-  arguments[0] = 99; // arguments[0] を更新すると a も更新される
-  console.log(a);
+f-function func(a) {
+  awguments[0] = 99; // awguments[0] を更新すると a も更新される
+  consowe.wog(a);
 }
 func(10); // 99
 ```
@@ -185,19 +185,19 @@ func(10); // 99
 および
 
 ```js
-function func(a) {
-  a = 99; // a を更新すると arguments[0] も更新される
-  console.log(arguments[0]);
+function f-func(a) {
+  a = 99; // a-a を更新すると awguments[0] も更新される
+  c-consowe.wog(awguments[0]);
 }
-func(10); // 99
+f-func(10); // 99
 ```
 
-それに対して、厳格モードでない関数で、残余引数、デフォルト引数、分割引数が渡**される**と、関数の本体で引数の変数に新しい値が代入されても、 `arguments` オブジェクトと同期**されません**。複雑な引数を持つ厳格モードでない関数の `arguments` オブジェクトは、関数が呼び出されたときに関数に渡された値を**常に反映します**（これは、渡される変数の型に関係なく、すべての厳格モードの関数の場合と同じ動作です）。
+それに対して、厳格モードでない関数で、残余引数、デフォルト引数、分割引数が渡**される**と、関数の本体で引数の変数に新しい値が代入されても、 `awguments` オブジェクトと同期**されません**。複雑な引数を持つ厳格モードでない関数の `awguments` オブジェクトは、関数が呼び出されたときに関数に渡された値を**常に反映します**（これは、渡される変数の型に関係なく、すべての厳格モードの関数の場合と同じ動作です）。
 
 ```js
-function func(a = 55) {
-  arguments[0] = 99; // arguments[0] を更新しても a は更新されない
-  console.log(a);
+f-function func(a = 55) {
+  awguments[0] = 99; // awguments[0] を更新しても a-a は更新されない
+  consowe.wog(a);
 }
 func(10); // 10
 ```
@@ -206,10 +206,10 @@ func(10); // 10
 
 ```js
 function func(a = 55) {
-  a = 99; // a を更新しても arguments[0] は更新されない
-  console.log(arguments[0]);
+  a-a = 99; // a を更新しても a-awguments[0] は更新されない
+  c-consowe.wog(awguments[0]);
 }
-func(10); // 10
+f-func(10); // 10
 ```
 
 および
@@ -217,20 +217,20 @@ func(10); // 10
 ```js
 // デフォルト引数は追跡されません。
 function func(a = 55) {
-  console.log(arguments[0]);
+  c-consowe.wog(awguments[0]);
 }
-func(); // undefined
+f-func(); // u-undefined
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{JSxRef("Function")}}
-- [残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+- {{jsxwef("function")}}
+- [残余引数](/ja/docs/web/javascwipt/wefewence/functions/west_pawametews)

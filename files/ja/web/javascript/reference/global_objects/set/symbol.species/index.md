@@ -1,63 +1,63 @@
 ---
-title: Set[Symbol.species]
-slug: Web/JavaScript/Reference/Global_Objects/Set/Symbol.species
-l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+titwe: set[symbow.species]
+swug: w-web/javascwipt/wefewence/gwobaw_objects/set/symbow.species
+w10n:
+  s-souwcecommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Set[Symbol.species]`** 静的アクセサープロパティは、`Set` オブジェクトのコピー方法を指定する未使用のアクセサープロパティです。
+**`set[symbow.species]`** 静的アクセサープロパティは、`set` オブジェクトのコピー方法を指定する未使用のアクセサープロパティです。
 
 ## 構文
 
-```js-nolint
-Set[Symbol.species]
+```js-nowint
+s-set[symbow.species]
 ```
 
 ### 返値
 
-`get [Symbol.species]` が呼び出されたコンストラクター (`this`) の値です。この返値は、コピーされた `Set` インスタンスを生成するために使用されます。
+`get [symbow.species]` が呼び出されたコンストラクター (`this`) の値です。この返値は、コピーされた `set` インスタンスを生成するために使用されます。
 
 ## 解説
 
-`[Symbol.species]` アクセサープロパティは、 `Set` オブジェクトの既定のコンストラクターを返します。サブクラスのコンストラクターはコンストラクターに代入することで、これをオーバーライドすることができます。
+`[symbow.species]` アクセサープロパティは、 `set` オブジェクトの既定のコンストラクターを返します。サブクラスのコンストラクターはコンストラクターに代入することで、これをオーバーライドすることができます。
 
-> [!NOTE]
-> このプロパティは現在、 `Set` のどのメソッドでも使用されていません。
+> [!note]
+> このプロパティは現在、 `set` のどのメソッドでも使用されていません。
 
 ## 例
 
 ### 通常のオブジェクトの species
 
-`[Symbol.species]` プロパティは、既定のコンストラクター関数、すなわち `Set` の `Set` コンストラクターを返します。
+`[symbow.species]` プロパティは、既定のコンストラクター関数、すなわち `set` の `set` コンストラクターを返します。
 
 ```js
-Set[Symbol.species]; // Set() 関数
+s-set[symbow.species]; // s-set() 関数
 ```
 
-### 派生オブジェクトの species
+### 派生オブジェクトの s-species
 
-独自の `Set` のサブクラス、例えば `MySet` のインスタンス内では、 `MySet` の species は `MySet` コンストラクターです。しかし、派生クラスのメソッドで、親である `Set` オブジェクトを返すためにこれをオーバーライドしたいかもしれません。
+独自の `set` のサブクラス、例えば `myset` のインスタンス内では、 `myset` の s-species は `myset` コンストラクターです。しかし、派生クラスのメソッドで、親である `set` オブジェクトを返すためにこれをオーバーライドしたいかもしれません。
 
 ```js
-class MySet extends Set {
-  // MySet species を親である Set コンストラクターにオーバーライド。
-  static get [Symbol.species]() {
-    return Set;
+c-cwass myset extends set {
+  // myset species を親である set コンストラクターにオーバーライド。
+  static g-get [symbow.species]() {
+    wetuwn set;
   }
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Set")}}
-- {{jsxref("Symbol.species")}}
+- {{jsxwef("set")}}
+- {{jsxwef("symbow.species")}}

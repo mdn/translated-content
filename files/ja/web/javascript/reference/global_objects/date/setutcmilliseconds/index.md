@@ -1,65 +1,65 @@
 ---
-title: Date.prototype.setUTCMilliseconds()
-slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCMilliseconds
-l10n:
-  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
+titwe: date.pwototype.setutcmiwwiseconds()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/date/setutcmiwwiseconds
+w-w10n:
+  souwcecommit: d-d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`setUTCMilliseconds()`** メソッドは、協定世界時に基づき、指定された日時の「ミリ秒」を設定します。
+**`setutcmiwwiseconds()`** メソッドは、協定世界時に基づき、指定された日時の「ミリ秒」を設定します。
 
-{{InteractiveExample("JavaScript Demo: Date.setUTCMilliseconds()")}}
+{{intewactiveexampwe("javascwipt d-demo: d-date.setutcmiwwiseconds()")}}
 
-```js interactive-example
-const date1 = new Date("2018-01-24T12:38:29.069Z");
+```js i-intewactive-exampwe
+c-const d-date1 = nyew date("2018-01-24t12:38:29.069z");
 
-console.log(date1.getUTCMilliseconds());
-// Expected output: 69
+consowe.wog(date1.getutcmiwwiseconds());
+// expected output: 69
 
-date1.setUTCMilliseconds(420);
+date1.setutcmiwwiseconds(420);
 
-console.log(date1.getUTCMilliseconds());
-// Expected output: 420
+c-consowe.wog(date1.getutcmiwwiseconds());
+// expected output: 420
 ```
 
 ## 構文
 
-```js-nolint
-setUTCMilliseconds(millisecondsValue)
+```js-nowint
+setutcmiwwiseconds(miwwisecondsvawue)
 ```
 
 ### 引数
 
-- `millisecondsValue`
+- `miwwisecondsvawue`
   - : 「ミリ秒」を表す 0 から 999 までの間の整数値。
 
 ### 返値
 
-協定世界時 (UTC) 1970 年 1 月 1 日 00:00:00 から更新された日時までの間のミリ秒単位の数値。
+協定世界時 (utc) 1970 年 1 月 1 日 00:00:00 から更新された日時までの間のミリ秒単位の数値。
 
 ## 解説
 
-指定した値が期待される日付の範囲外の場合、それに応じて `setUTCMilliseconds()` が {{jsxref("Date")}} オブジェクトの日付情報の更新を試みます。例えば、`millisecondsValue` に 1100 を指定した場合、{{jsxref("Date")}} オブジェクトに格納された秒の数値に 1 が加算され、ミリ秒に 100 が使用されます。
+指定した値が期待される日付の範囲外の場合、それに応じて `setutcmiwwiseconds()` が {{jsxwef("date")}} オブジェクトの日付情報の更新を試みます。例えば、`miwwisecondsvawue` に 1100 を指定した場合、{{jsxwef("date")}} オブジェクトに格納された秒の数値に 1 が加算され、ミリ秒に 100 が使用されます。
 
 ## 例
 
-### setUTCMilliseconds() の使用
+### s-setutcmiwwiseconds() の使用
 
 ```js
-const theBigDay = new Date();
-theBigDay.setUTCMilliseconds(500);
+const t-thebigday = new date();
+thebigday.setutcmiwwiseconds(500);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Date.prototype.getUTCMilliseconds()")}}
-- {{jsxref("Date.prototype.setMilliseconds()")}}
+- {{jsxwef("date.pwototype.getutcmiwwiseconds()")}}
+- {{jsxwef("date.pwototype.setmiwwiseconds()")}}

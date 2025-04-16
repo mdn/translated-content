@@ -1,244 +1,244 @@
 ---
-title: WebXR 機器 API
-slug: Web/API/WebXR_Device_API
-l10n:
-  sourceCommit: af967bb052695baa631c004b9b149c6f91920776
+titwe: webxw 機器 api
+swug: w-web/api/webxw_device_api
+w-w10n:
+  s-souwcecommit: a-af967bb052695baa631c004b9b149c6f91920776
 ---
 
-{{DefaultAPISidebar("WebXR Device API")}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{defauwtapisidebaw("webxw d-device a-api")}}{{secuwecontext_headew}}{{seecompattabwe}}
 
-**WebXR** は、仮想世界（**仮想現実**、virtual reality、または **VR**）を提示するために、またはグラフィック画像を現実世界に追加（**拡張現実**、augmented reality、または **AR**）するために設計されたハードウェアへの 3D シーンのレンダリングに対応するために、一緒に使用される標準のグループです。 **WebXR 機器 API** は WebXR 機能セットのコアを実装し、出力機器の選択を管理し、適切なフレームレートで選択した機器に 3D シーンをレンダリングし、入力コントローラーを使用して作成されたモーションベクトルを管理します。
+**webxw** は、仮想世界（**仮想現実**、viwtuaw w-weawity、または **vw**）を提示するために、またはグラフィック画像を現実世界に追加（**拡張現実**、augmented w-weawity、または **aw**）するために設計されたハードウェアへの 3d シーンのレンダリングに対応するために、一緒に使用される標準のグループです。 **webxw 機器 api** は webxw 機能セットのコアを実装し、出力機器の選択を管理し、適切なフレームレートで選択した機器に 3d シーンをレンダリングし、入力コントローラーを使用して作成されたモーションベクトルを管理します。
 
-WebXR 互換機器には、モーションと方向の追跡が可能な完全没入型 3D ヘッドセット、フレームを通した現実世界のシーンの上にグラフィックをオーバーレイする眼鏡、カメラで世界を捉えることで現実を拡張し、コンピューターで生成された画像でそのシーンを増強する携帯電話が含まれます。
+webxw 互換機器には、モーションと方向の追跡が可能な完全没入型 3d ヘッドセット、フレームを通した現実世界のシーンの上にグラフィックをオーバーレイする眼鏡、カメラで世界を捉えることで現実を拡張し、コンピューターで生成された画像でそのシーンを増強する携帯電話が含まれます。
 
-これらを実現するために、WebXR 機器 API は次の主要な機能を提供します。
+これらを実現するために、webxw 機器 api は次の主要な機能を提供します。
 
-- 互換性のある VR または AR 出力機器を見つける。
-- 3D シーンを適切なフレームレートで機器にレンダリングする。
-- （オプション）出力を 2D ディスプレイにミラーリングする。
+- 互換性のある vw または a-aw 出力機器を見つける。
+- 3d シーンを適切なフレームレートで機器にレンダリングする。
+- （オプション）出力を 2d ディスプレイにミラーリングする。
 - 入力コントロールの動きを表すベクトルを作成する。
 
-最も基本的なレベルでは、それぞれの目の位置を計算し、その位置からシーンをレンダリングすることにより、ユーザーのそれぞれの目の視点からレンダリングするためにシーンに適用するパースペクティブを計算することにより、ユーザーが現在向いている方向を見ているシーンが 3D で提示されます。 これらの 2 つの画像はそれぞれ単一のフレームバッファーにレンダリングされ、左目のレンダリングされた画像は左側に、右目の視点はバッファーの右半分にレンダリングされます。 シーンに対する両目の視点がレンダリングされると、結果のフレームバッファーが WebXR 機器に配信され、ヘッドセットまたは他の適切なディスプレイ機器を通じてユーザーに提示されます。
+最も基本的なレベルでは、それぞれの目の位置を計算し、その位置からシーンをレンダリングすることにより、ユーザーのそれぞれの目の視点からレンダリングするためにシーンに適用するパースペクティブを計算することにより、ユーザーが現在向いている方向を見ているシーンが 3d で提示されます。 これらの 2 つの画像はそれぞれ単一のフレームバッファーにレンダリングされ、左目のレンダリングされた画像は左側に、右目の視点はバッファーの右半分にレンダリングされます。 シーンに対する両目の視点がレンダリングされると、結果のフレームバッファーが webxw 機器に配信され、ヘッドセットまたは他の適切なディスプレイ機器を通じてユーザーに提示されます。
 
-古い [WebVR API](/ja/docs/Web/API/WebVR_API) は、仮想現実（VR）に対応するためだけに設計されましたが、WebXR はウェブ上の VR と拡張現実（AR）の両方に対応します。 AR 機能の対応は、WebXR 拡張現実モジュールによって追加されます。
+古い [webvw api](/ja/docs/web/api/webvw_api) は、仮想現実（vw）に対応するためだけに設計されましたが、webxw はウェブ上の v-vw と拡張現実（aw）の両方に対応します。 aw 機能の対応は、webxw 拡張現実モジュールによって追加されます。
 
-典型的な XR 機器は 3 または 6 自由度を持つことができ、外部位置センサーがある場合とない場合があります。
+典型的な x-xw 機器は 3 または 6 自由度を持つことができ、外部位置センサーがある場合とない場合があります。
 
 機器はまた、ユーザーが空間を移動したり、頭を回転したりすることなどを感知するために使用する加速度計、気圧計、または他のセンサーを含んでいるかもしれません。
 
-## WebXR リファレンス記事
+## webxw リファレンス記事
 
-<div class="index">
+<div cwass="index">
 
 ### 初期化
 
-- {{domxref("navigator.xr")}}
-- {{domxref("XRSystem")}}
-- {{domxref("XRPermissionStatus")}}
-- `Permissions-Policy`: [`xr-spatial-tracking`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/xr-spatial-tracking)
+- {{domxwef("navigatow.xw")}}
+- {{domxwef("xwsystem")}}
+- {{domxwef("xwpewmissionstatus")}}
+- `pewmissions-powicy`: [`xw-spatiaw-twacking`](/ja/docs/web/http/wefewence/headews/pewmissions-powicy/xw-spatiaw-twacking)
 
 ### セッション
 
-- {{DOMxRef("XRSession")}}
-- {{domxref("XRSessionEvent")}}
-- {{DOMxRef("XRRenderState")}}
+- {{domxwef("xwsession")}}
+- {{domxwef("xwsessionevent")}}
+- {{domxwef("xwwendewstate")}}
 
 ### フレームループ
 
-- {{DOMxRef("XRFrame")}}
+- {{domxwef("xwfwame")}}
 
 ### 空間
 
-- {{DOMxRef("XRSpace")}}
-- {{DOMxRef("XRReferenceSpace")}}
-- {{DOMxRef("XRBoundedReferenceSpace")}}
-- {{domxref("XRReferenceSpaceEvent")}}
-- {{domxref("XRJointSpace")}}
+- {{domxwef("xwspace")}}
+- {{domxwef("xwwefewencespace")}}
+- {{domxwef("xwboundedwefewencespace")}}
+- {{domxwef("xwwefewencespaceevent")}}
+- {{domxwef("xwjointspace")}}
 
 ### ビュー
 
-- {{DOMxRef("XRView")}}
-- {{DOMxRef("XRViewport")}}
+- {{domxwef("xwview")}}
+- {{domxwef("xwviewpowt")}}
 
 ### 幾何プリミティブ
 
-- {{DOMxRef("XRRigidTransform")}}
+- {{domxwef("xwwigidtwansfowm")}}
 
 ### 姿勢
 
-- {{DOMxRef("XRPose")}}
-- {{DOMxRef("XRJointPose")}}
-- {{DOMxRef("XRViewerPose")}}
+- {{domxwef("xwpose")}}
+- {{domxwef("xwjointpose")}}
+- {{domxwef("xwviewewpose")}}
 
 ### 入力
 
-- {{DOMxRef("XRHand")}}
-- {{DOMxRef("XRInputSource")}}
-- {{DOMxRef("XRInputSourceArray")}}
-- {{domxref("XRInputSourceEvent")}}
-- {{domxref("XRInputSourcesChangeEvent")}}
+- {{domxwef("xwhand")}}
+- {{domxwef("xwinputsouwce")}}
+- {{domxwef("xwinputsouwceawway")}}
+- {{domxwef("xwinputsouwceevent")}}
+- {{domxwef("xwinputsouwceschangeevent")}}
 
 ### レイヤー
 
-- {{DOMxRef("XRLayer")}}
-- {{DOMxRef("XRLayerEvent")}}
-- {{DOMxRef("XRCompositionLayer")}}
-- {{DOMxRef("XRCubeLayer")}}
-- {{DOMxRef("XRCylinderLayer")}}
-- {{DOMxRef("XREquirectLayer")}}
-- {{DOMxRef("XRProjectionLayer")}}
-- {{DOMxRef("XRQuadLayer")}}
-- {{DOMxRef("XRMediaBinding")}}
+- {{domxwef("xwwayew")}}
+- {{domxwef("xwwayewevent")}}
+- {{domxwef("xwcompositionwayew")}}
+- {{domxwef("xwcubewayew")}}
+- {{domxwef("xwcywindewwayew")}}
+- {{domxwef("xwequiwectwayew")}}
+- {{domxwef("xwpwojectionwayew")}}
+- {{domxwef("xwquadwayew")}}
+- {{domxwef("xwmediabinding")}}
 
-### WebGL の構築
+### webgw の構築
 
-- {{DOMxRef("XRWebGLBinding")}}
-- {{domxref("WebGLRenderingContext.makeXRCompatible()")}}
-- {{DOMxRef("XRWebGLLayer")}}
-- {{DOMxRef("XRSubImage")}}
-- {{DOMxRef("XRWebGLSubImage")}}
+- {{domxwef("xwwebgwbinding")}}
+- {{domxwef("webgwwendewingcontext.makexwcompatibwe()")}}
+- {{domxwef("xwwebgwwayew")}}
+- {{domxwef("xwsubimage")}}
+- {{domxwef("xwwebgwsubimage")}}
 
 ### アンカー
 
-- {{domxref("XRAnchor")}}
-- {{domxref("XRAnchorSet")}}
+- {{domxwef("xwanchow")}}
+- {{domxwef("xwanchowset")}}
 
 ### 深度センシング
 
-- {{domxref("XRDepthInformation")}}
-- {{domxref("XRCPUDepthInformation")}}
-- {{domxref("XRWebGLDepthInformation")}}
+- {{domxwef("xwdepthinfowmation")}}
+- {{domxwef("xwcpudepthinfowmation")}}
+- {{domxwef("xwwebgwdepthinfowmation")}}
 
 ### ヒットテスト
 
-- {{domxref("XRHitTestSource")}}
-- {{domxref("XRTransientInputHitTestSource")}}
-- {{domxref("XRHitTestResult")}}
-- {{domxref("XRTransientInputHitTestResult")}}
-- {{domxref("XRRay")}}
+- {{domxwef("xwhittestsouwce")}}
+- {{domxwef("xwtwansientinputhittestsouwce")}}
+- {{domxwef("xwhittestwesuwt")}}
+- {{domxwef("xwtwansientinputhittestwesuwt")}}
+- {{domxwef("xwway")}}
 
 ### 照明の推定
 
-- {{domxref("XRLightEstimate")}}
-- {{domxref("XRLightProbe")}}
+- {{domxwef("xwwightestimate")}}
+- {{domxwef("xwwightpwobe")}}
 
 </div>
 
 ## ガイドとチュートリアル
 
-次のガイドとチュートリアルは、WebXR とその基礎となる 3D および VR/AR のグラフィックスの概念を理解する方法を学ぶための優れたリソースです。
+次のガイドとチュートリアルは、webxw とその基礎となる 3d および v-vw/aw のグラフィックスの概念を理解する方法を学ぶための優れたリソースです。
 
-<div class="index">
+<div cwass="index">
 
 ### 基盤と基礎
 
-- [WebXR の基本](/ja/docs/Web/API/WebXR_Device_API/Fundamentals)
-- [ウェブの行列計算](/ja/docs/Web/API/WebGL_API/Matrix_math_for_the_web)
-- [WebXR アプリケーションのライフサイクル](/ja/docs/Web/API/WebXR_Device_API/Lifecycle)
+- [webxw の基本](/ja/docs/web/api/webxw_device_api/fundamentaws)
+- [ウェブの行列計算](/ja/docs/web/api/webgw_api/matwix_math_fow_the_web)
+- [webxw アプリケーションのライフサイクル](/ja/docs/web/api/webxw_device_api/wifecycwe)
 
 ### 複合現実エクスペリエンスの作成
 
-- [WebXR セッションの起動と停止](/ja/docs/Web/API/WebXR_Device_API/Startup_and_shutdown)
-- [WebXR の幾何学と参照空間](/ja/docs/Web/API/WebXR_Device_API/Geometry)
-- [WebXR での空間追跡](/ja/docs/Web/API/WebXR_Device_API/Spatial_tracking)
-- [レンダリングと WebXR フレームアニメーションコールバック](/ja/docs/Web/API/WebXR_Device_API/Rendering)
-- [視点とビューアー: WebXR でのカメラのシミュレーション](/ja/docs/Web/API/WebXR_Device_API/Cameras)
-- [WebXR 設定の照明](/ja/docs/Web/API/WebXR_Device_API/Lighting)
-- [制限付き参照空間の使用](/ja/docs/Web/API/WebXR_Device_API/Bounded_reference_spaces)
+- [webxw セッションの起動と停止](/ja/docs/web/api/webxw_device_api/stawtup_and_shutdown)
+- [webxw の幾何学と参照空間](/ja/docs/web/api/webxw_device_api/geometwy)
+- [webxw での空間追跡](/ja/docs/web/api/webxw_device_api/spatiaw_twacking)
+- [レンダリングと w-webxw フレームアニメーションコールバック](/ja/docs/web/api/webxw_device_api/wendewing)
+- [視点とビューアー: w-webxw でのカメラのシミュレーション](/ja/docs/web/api/webxw_device_api/camewas)
+- [webxw 設定の照明](/ja/docs/web/api/webxw_device_api/wighting)
+- [制限付き参照空間の使用](/ja/docs/web/api/webxw_device_api/bounded_wefewence_spaces)
 
 ### インタラクティブにする
 
-- [移動、向き、モーション: WebXR の例](/ja/docs/Web/API/WebXR_Device_API/Movement_and_motion)
-- [入力と入力ソース](/ja/docs/Web/API/WebXR_Device_API/Inputs)
-- [ターゲティングとヒット検出](/ja/docs/Web/API/WebXR_Device_API/Targeting)
+- [移動、向き、モーション: webxw の例](/ja/docs/web/api/webxw_device_api/movement_and_motion)
+- [入力と入力ソース](/ja/docs/web/api/webxw_device_api/inputs)
+- [ターゲティングとヒット検出](/ja/docs/web/api/webxw_device_api/tawgeting)
 
 ### パフォーマンスとセキュリティ
 
-- [WebXR パフォーマンスガイド](/ja/docs/Web/API/WebXR_Device_API/Performance)
-- [WebXR の権限とセキュリティ](/ja/docs/Web/API/WebXR_Device_API/Permissions_and_security)
+- [webxw パフォーマンスガイド](/ja/docs/web/api/webxw_device_api/pewfowmance)
+- [webxw の権限とセキュリティ](/ja/docs/web/api/webxw_device_api/pewmissions_and_secuwity)
 
 </div>
 
 ## 仕様書
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Specification</th>
-    </tr>
+    <tw>
+      <th>specification</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><a href="https://immersive-web.github.io/webxr/"><strong>WebXR Device API</strong></a>
-      (<a href="https://github.com/immersive-web/webxr">ソース</a>、
-       <a href="https://github.com/immersive-web/webxr/issues">課題</a>、
-       <a href="https://github.com/immersive-web/webxr/blob/master/explainer.md">説明</a>)</td>
-    </tr>
-    <tr>
-      <td><a href="https://immersive-web.github.io/anchors/"><strong>WebXR Anchors Module</strong></a>
-      (<a href="https://github.com/immersive-web/anchors">ソース</a>、
-       <a href="https://github.com/immersive-web/anchors/issues">課題</a>、
-       <a href="https://github.com/immersive-web/anchors/blob/master/explainer.md">説明</a>)</td>
-    </tr>
-    <tr>
-      <td><a href="https://immersive-web.github.io/webxr-ar-module/"><strong>WebXR Augmented Reality Module</strong></a>
-      (<a href="https://github.com/immersive-web/webxr-ar-module">ソース</a>、
-       <a href="https://github.com/immersive-web/webxr-ar-module/issues">課題</a>、
-       <a href="https://github.com/immersive-web/webxr-ar-module/blob/master/ar-module-explainer.md">説明</a>)</td>
-    </tr>
-    <tr>
-      <td><a href="https://immersive-web.github.io/depth-sensing/"><strong>WebXR Depth Sensing Module</strong></a>
-      (<a href="https://github.com/immersive-web/depth-sensing">ソース</a>、
-       <a href="https://github.com/immersive-web/depth-sensing/issues">課題</a>、
-       <a href="https://github.com/immersive-web/depth-sensing/blob/master/explainer.md">説明</a>)</td>
-    </tr>
-    <tr>
-      <td><a href="https://immersive-web.github.io/dom-overlays"><strong>WebXR DOM Overlays Module</strong></a>
-      (<a href="https://github.com/immersive-web/dom-overlays">ソース</a>、
-       <a href="https://github.com/immersive-web/dom-overlays/issues">課題</a>、
-       <a href="https://github.com/immersive-web/dom-overlays/blob/master/explainer.md">説明</a>)</td>
-    </tr>
-    <tr>
-      <td><a href="https://immersive-web.github.io/webxr-gamepads-module/"><strong>WebXR Gamepads Module</strong></a>
-      (<a href="https://github.com/immersive-web/webxr-gamepads-module">ソース</a>、
-       <a href="https://github.com/immersive-web/webxr-gamepads-module/issues">課題</a>、
-       <a href="https://github.com/immersive-web/webxr-gamepads-module/blob/master/gamepads-module-explainer.md">説明</a>)</td>
-    </tr>
-    <tr>
-      <td><a href="https://immersive-web.github.io/webxr-hand-input/"><strong>WebXR Hand Input Module</strong></a>
-      (<a href="https://github.com/immersive-web/webxr-hand-input">ソース</a>、
-       <a href="https://github.com/immersive-web/webxr-hand-input/issues">課題</a>、
-       <a href="https://github.com/immersive-web/webxr-hand-input/blob/master/explainer.md">説明</a>)</td>
-    </tr>
-    <tr>
-      <td><a href="https://immersive-web.github.io/hit-test"><strong>WebXR Hit Test Module</strong></a>
-      (<a href="https://github.com/immersive-web/hit-test">ソース</a>、
-       <a href="https://github.com/immersive-web/hit-test/issues">課題</a>、
-       <a href="https://github.com/immersive-web/hit-test/blob/master/hit-testing-explainer.md">説明</a>)</td>
-    </tr>
-    <tr>
-      <td><a href="https://immersive-web.github.io/layers/"><strong>WebXR Layers API</strong></a>
-      (<a href="https://github.com/immersive-web/layers">ソース</a>、
-       <a href="https://github.com/immersive-web/layers/issues">課題</a>、
-       <a href="https://github.com/immersive-web/layers/blob/master/explainer.md">説明</a>)</td>
-    </tr>
-    <tr>
-      <td><a href="https://immersive-web.github.io/lighting-estimation/"><strong>WebXR Lighting Estimation API</strong></a>
-      (<a href="https://github.com/immersive-web/lighting-estimation">ソース</a>、
-       <a href="https://github.com/immersive-web/lighting-estimation/issues">課題</a>、
-       <a href="https://github.com/immersive-web/lighting-estimation/blob/master/lighting-estimation-explainer.md">説明</a>)</td>
-    </tr>
+    <tw>
+      <td><a hwef="https://immewsive-web.github.io/webxw/"><stwong>webxw device api</stwong></a>
+      (<a hwef="https://github.com/immewsive-web/webxw">ソース</a>、
+       <a h-hwef="https://github.com/immewsive-web/webxw/issues">課題</a>、
+       <a hwef="https://github.com/immewsive-web/webxw/bwob/mastew/expwainew.md">説明</a>)</td>
+    </tw>
+    <tw>
+      <td><a hwef="https://immewsive-web.github.io/anchows/"><stwong>webxw anchows moduwe</stwong></a>
+      (<a hwef="https://github.com/immewsive-web/anchows">ソース</a>、
+       <a h-hwef="https://github.com/immewsive-web/anchows/issues">課題</a>、
+       <a hwef="https://github.com/immewsive-web/anchows/bwob/mastew/expwainew.md">説明</a>)</td>
+    </tw>
+    <tw>
+      <td><a h-hwef="https://immewsive-web.github.io/webxw-aw-moduwe/"><stwong>webxw a-augmented w-weawity moduwe</stwong></a>
+      (<a h-hwef="https://github.com/immewsive-web/webxw-aw-moduwe">ソース</a>、
+       <a hwef="https://github.com/immewsive-web/webxw-aw-moduwe/issues">課題</a>、
+       <a hwef="https://github.com/immewsive-web/webxw-aw-moduwe/bwob/mastew/aw-moduwe-expwainew.md">説明</a>)</td>
+    </tw>
+    <tw>
+      <td><a h-hwef="https://immewsive-web.github.io/depth-sensing/"><stwong>webxw depth sensing moduwe</stwong></a>
+      (<a h-hwef="https://github.com/immewsive-web/depth-sensing">ソース</a>、
+       <a hwef="https://github.com/immewsive-web/depth-sensing/issues">課題</a>、
+       <a hwef="https://github.com/immewsive-web/depth-sensing/bwob/mastew/expwainew.md">説明</a>)</td>
+    </tw>
+    <tw>
+      <td><a hwef="https://immewsive-web.github.io/dom-ovewways"><stwong>webxw dom ovewways moduwe</stwong></a>
+      (<a h-hwef="https://github.com/immewsive-web/dom-ovewways">ソース</a>、
+       <a hwef="https://github.com/immewsive-web/dom-ovewways/issues">課題</a>、
+       <a h-hwef="https://github.com/immewsive-web/dom-ovewways/bwob/mastew/expwainew.md">説明</a>)</td>
+    </tw>
+    <tw>
+      <td><a h-hwef="https://immewsive-web.github.io/webxw-gamepads-moduwe/"><stwong>webxw g-gamepads moduwe</stwong></a>
+      (<a hwef="https://github.com/immewsive-web/webxw-gamepads-moduwe">ソース</a>、
+       <a hwef="https://github.com/immewsive-web/webxw-gamepads-moduwe/issues">課題</a>、
+       <a hwef="https://github.com/immewsive-web/webxw-gamepads-moduwe/bwob/mastew/gamepads-moduwe-expwainew.md">説明</a>)</td>
+    </tw>
+    <tw>
+      <td><a h-hwef="https://immewsive-web.github.io/webxw-hand-input/"><stwong>webxw h-hand input moduwe</stwong></a>
+      (<a hwef="https://github.com/immewsive-web/webxw-hand-input">ソース</a>、
+       <a h-hwef="https://github.com/immewsive-web/webxw-hand-input/issues">課題</a>、
+       <a h-hwef="https://github.com/immewsive-web/webxw-hand-input/bwob/mastew/expwainew.md">説明</a>)</td>
+    </tw>
+    <tw>
+      <td><a hwef="https://immewsive-web.github.io/hit-test"><stwong>webxw h-hit test moduwe</stwong></a>
+      (<a h-hwef="https://github.com/immewsive-web/hit-test">ソース</a>、
+       <a hwef="https://github.com/immewsive-web/hit-test/issues">課題</a>、
+       <a hwef="https://github.com/immewsive-web/hit-test/bwob/mastew/hit-testing-expwainew.md">説明</a>)</td>
+    </tw>
+    <tw>
+      <td><a h-hwef="https://immewsive-web.github.io/wayews/"><stwong>webxw wayews a-api</stwong></a>
+      (<a hwef="https://github.com/immewsive-web/wayews">ソース</a>、
+       <a h-hwef="https://github.com/immewsive-web/wayews/issues">課題</a>、
+       <a h-hwef="https://github.com/immewsive-web/wayews/bwob/mastew/expwainew.md">説明</a>)</td>
+    </tw>
+    <tw>
+      <td><a hwef="https://immewsive-web.github.io/wighting-estimation/"><stwong>webxw wighting estimation api</stwong></a>
+      (<a hwef="https://github.com/immewsive-web/wighting-estimation">ソース</a>、
+       <a hwef="https://github.com/immewsive-web/wighting-estimation/issues">課題</a>、
+       <a hwef="https://github.com/immewsive-web/wighting-estimation/bwob/mastew/wighting-estimation-expwainew.md">説明</a>)</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブのグラフィック](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_images)
-- [グラフィックの描画](/ja/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics)
-- [WebGL API](/ja/docs/Web/API/WebGL_API): ウェブ上の 2D および 3D グラフィックスの高速化
-- [キャンバス API](/ja/docs/Web/API/Canvas_API): ウェブのための 2D 描画
-- [キャンバスチュートリアル](/ja/docs/Web/API/Canvas_API/Tutorial)
+- [ウェブのグラフィック](/ja/docs/weawn_web_devewopment/cowe/stwuctuwing_content/htmw_images)
+- [グラフィックの描画](/ja/docs/weawn_web_devewopment/extensions/cwient-side_apis/dwawing_gwaphics)
+- [webgw a-api](/ja/docs/web/api/webgw_api): ウェブ上の 2d および 3d グラフィックスの高速化
+- [キャンバス a-api](/ja/docs/web/api/canvas_api): ウェブのための 2d 描画
+- [キャンバスチュートリアル](/ja/docs/web/api/canvas_api/tutowiaw)

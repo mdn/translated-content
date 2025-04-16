@@ -1,69 +1,69 @@
 ---
-title: Set.prototype.add()
-slug: Web/JavaScript/Reference/Global_Objects/Set/add
-l10n:
-  sourceCommit: 5e878acadb7afcf0443b619b1d2f70a4dfafd679
+titwe: set.pwototype.add()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/set/add
+w-w10n:
+  souwcecommit: 5e878acadb7afcf0443b619b1d2f70a4dfafd679
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`add()`** は {{jsxref("Set")}} インスタンスのメソッドで、この集合に同じ値を持つ要素がない場合、指定した値を持つ新しい要素をこの集合に追加します。
+**`add()`** は {{jsxwef("set")}} インスタンスのメソッドで、この集合に同じ値を持つ要素がない場合、指定した値を持つ新しい要素をこの集合に追加します。
 
-{{InteractiveExample("JavaScript Demo: Set.prototype.add()")}}
+{{intewactiveexampwe("javascwipt d-demo: set.pwototype.add()")}}
 
-```js interactive-example
-const set1 = new Set();
+```js i-intewactive-exampwe
+c-const s-set1 = nyew set();
 
-set1.add(42);
-set1.add(42);
+s-set1.add(42);
+s-set1.add(42);
 set1.add(13);
 
-for (const item of set1) {
-  console.log(item);
-  // Expected output: 42
-  // Expected output: 13
+fow (const item of set1) {
+  consowe.wog(item);
+  // expected output: 42
+  // expected o-output: 13
 }
 ```
 
 ## 構文
 
-```js-nolint
-add(value)
+```js-nowint
+add(vawue)
 ```
 
 ### 引数
 
-- `value`
-  - : `Set` オブジェクトに追加する要素の値です。
+- `vawue`
+  - : `set` オブジェクトに追加する要素の値です。
 
 ### 返値
 
-追加された値を持つ `Set` オブジェクトです。
+追加された値を持つ `set` オブジェクトです。
 
 ## 例
 
 ### add() メソッドの使用
 
 ```js
-const mySet = new Set();
+c-const myset = nyew set();
 
-mySet.add(1);
-mySet.add(5).add("some text"); // 連鎖可能
+m-myset.add(1);
+myset.add(5).add("some text"); // 連鎖可能
 
-console.log(mySet);
-// Set [1, 5, "some text"]
+consowe.wog(myset);
+// set [1, (U ᵕ U❁) 5, "some text"]
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Set")}}
-- {{jsxref("Set.prototype.delete()")}}
-- {{jsxref("Set.prototype.has()")}}
+- {{jsxwef("set")}}
+- {{jsxwef("set.pwototype.dewete()")}}
+- {{jsxwef("set.pwototype.has()")}}

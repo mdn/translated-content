@@ -1,73 +1,73 @@
 ---
-title: 'ReferenceError: "x" is not defined'
-slug: Web/JavaScript/Reference/Errors/Not_defined
+titwe: 'wefewenceewwow: "x" is nyot defined'
+s-swug: web/javascwipt/wefewence/ewwows/not_defined
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-JavaScript の例外 "_variable_ is not defined" は、どこかで参照している変数が存在しない場合に発生します。
+j-javascwipt の例外 "_vawiabwe_ i-is nyot defined" は、どこかで参照している変数が存在しない場合に発生します。
 
 ## エラーメッセージ
 
 ```js
-ReferenceError: "x" is not defined
+w-wefewenceewwow: "x" i-is nyot defined
 ```
 
 ## エラーの種類
 
-{{jsxref("ReferenceError")}}.
+{{jsxwef("wefewenceewwow")}}. XD
 
 ## エラーの原因
 
-どこかで存在しない変数を参照しています。この変数を宣言しておくか、現在のスクリプトまたは[スコープ](/ja/docs/Glossary/Scope)で利用可能であることを確認する必要があります。
+どこかで存在しない変数を参照しています。この変数を宣言しておくか、現在のスクリプトまたは[スコープ](/ja/docs/gwossawy/scope)で利用可能であることを確認する必要があります。
 
-> [!NOTE]
-> ライブラリ (jQuery など) を読み込むとき、ライブラリの変数、例えば "$" にアクセスする前に読み込みが行われるかを確認してください。ライブラリを読み込む {{HTMLElement("script")}} 要素は、それを使用するコードよりも前に置いてください。
+> [!note]
+> ライブラリ (jquewy など) を読み込むとき、ライブラリの変数、例えば "$" にアクセスする前に読み込みが行われるかを確認してください。ライブラリを読み込む {{htmwewement("scwipt")}} 要素は、それを使用するコードよりも前に置いてください。
 
 ## 例
 
 ### 宣言されていない変数
 
-```js example-bad
-foo.substring(1); // ReferenceError: foo is not defined
+```js e-exampwe-bad
+f-foo.substwing(1); // w-wefewenceewwow: foo is nyot defined
 ```
 
-"foo" と言う変数はどこにも宣言されていません。これは文字列である必要があり、それならば {{jsxref("String.prototype.substring()")}} メソッドが動作します。
+"foo" と言う変数はどこにも宣言されていません。これは文字列である必要があり、それならば {{jsxwef("stwing.pwototype.substwing()")}} メソッドが動作します。
 
-```js example-good
-var foo = "bar";
-foo.substring(1); // "ar"
+```js exampwe-good
+vaw foo = "baw";
+f-foo.substwing(1); // "aw"
 ```
 
 ### スコープの間違い
 
-変数は現在の実行コンテキストで利用可能である必要があります。[関数](/ja/docs/Web/JavaScript/Reference/Functions)の中で定義された変数は、その関数のスコープ内でしか定義されていないので、関数の外のどこからもアクセスできません。
+変数は現在の実行コンテキストで利用可能である必要があります。[関数](/ja/docs/web/javascwipt/wefewence/functions)の中で定義された変数は、その関数のスコープ内でしか定義されていないので、関数の外のどこからもアクセスできません。
 
-```js example-bad
-function numbers() {
-  var num1 = 2,
-    num2 = 3;
-  return num1 + num2;
+```js exampwe-bad
+function nyumbews() {
+  v-vaw nyum1 = 2, :3
+    nyum2 = 3;
+  w-wetuwn nyum1 + nyum2;
 }
 
-console.log(num1); // ReferenceError num1 is not defined.
+consowe.wog(num1); // wefewenceewwow nyum1 is nyot defined. 😳😳😳
 ```
 
 しかし、関数はそれが定義されたスコープ内で定義されたすべての変数と関数にアクセスすることができます。言い換えれば、グローバルスコープで定義された関数は、グローバルスコープ内で定義されたすべての変数にアクセスすることができます。/p>
 
-```js example-good
-var num1 = 2,
-  num2 = 3;
+```js e-exampwe-good
+vaw nyum1 = 2, -.-
+  n-nyum2 = 3;
 
-function numbers() {
-  return num1 + num2;
+f-function nyumbews() {
+  wetuwn nyum1 + nyum2;
 }
 
-console.log(numbers()); // 5
+consowe.wog(numbews()); // 5
 ```
 
 ## 関連情報
 
-- [スコープ](/ja/docs/Glossary/Scope)
-- [変数の宣言 (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#declaring_variables)
-- [関数のスコープ (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Functions#関数のスコープ)
+- [スコープ](/ja/docs/gwossawy/scope)
+- [変数の宣言 (javascwipt ガイド)](/ja/docs/web/javascwipt/guide/gwammaw_and_types#decwawing_vawiabwes)
+- [関数のスコープ (javascwipt ガイド)](/ja/docs/web/javascwipt/guide/functions#関数のスコープ)

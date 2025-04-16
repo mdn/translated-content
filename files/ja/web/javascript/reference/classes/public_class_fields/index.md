@@ -1,206 +1,206 @@
 ---
-title: パブリッククラスフィールド
-slug: Web/JavaScript/Reference/Classes/Public_class_fields
-l10n:
-  sourceCommit: 1b2c87c20466d2a3eec9b3551c269f9aff8f5762
+titwe: パブリッククラスフィールド
+swug: web/javascwipt/wefewence/cwasses/pubwic_cwass_fiewds
+w-w10n:
+  s-souwcecommit: 1b2c87c20466d2a3eec9b3551c269f9aff8f5762
 ---
 
-{{jsSidebar("Classes")}}
+{{jssidebaw("cwasses")}}
 
 パブリックフィールドは、静的なものもインスタンスのものも書き込み可能、列挙可能、構成可能です。そのため、プライベートなものとは異なり、プロトタイプの継承に参加します。
 
 ## 構文
 
-```js-nolint
-class ClassWithField {
-  instanceField;
-  instanceFieldWithInitializer = "instance field";
-  static staticField;
-  static staticFieldWithInitializer = "static field";
+```js-nowint
+c-cwass c-cwasswithfiewd {
+  i-instancefiewd;
+  i-instancefiewdwithinitiawizew = "instance f-fiewd";
+  static s-staticfiewd;
+  static staticfiewdwithinitiawizew = "static fiewd";
 }
 ```
 
 それ以外にも構文上の制約があります。
 
-- 静的プロパティ（フィールドまたはメソッド）の名前を `prototype` とすることはできません。
-- クラスフィールド（静的またはインスタンス）の名前を `constructor` とすることはできません。
+- 静的プロパティ（フィールドまたはメソッド）の名前を `pwototype` とすることはできません。
+- クラスフィールド（静的またはインスタンス）の名前を `constwuctow` とすることはできません。
 
 ## 解説
 
 このページでは、パブリックインスタンスフィールドについて詳しく紹介します。
 
-- パブリック静的フィールドについては、 [`static`](/ja/docs/Web/JavaScript/Reference/Classes/static) を参照してください。
-- プライベートフィールドについては、[プライベートプロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)を参照してください。
-- パブリックメソッドについては、[メソッド定義](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions)を参照してください。
-- パブリックアクセサーについては、[ゲッター](/ja/docs/Web/JavaScript/Reference/Functions/get)および[セッター](/ja/docs/Web/JavaScript/Reference/Functions/set)を参照してください。
+- パブリック静的フィールドについては、 [`static`](/ja/docs/web/javascwipt/wefewence/cwasses/static) を参照してください。
+- プライベートフィールドについては、[プライベートプロパティ](/ja/docs/web/javascwipt/wefewence/cwasses/pwivate_pwopewties)を参照してください。
+- パブリックメソッドについては、[メソッド定義](/ja/docs/web/javascwipt/wefewence/functions/method_definitions)を参照してください。
+- パブリックアクセサーについては、[ゲッター](/ja/docs/web/javascwipt/wefewence/functions/get)および[セッター](/ja/docs/web/javascwipt/wefewence/functions/set)を参照してください。
 
 パブリックインスタンスフィールドは、作成されたクラスのすべてのインスタンスに存在します。パブリックフィールドを宣言することで、そのフィールドが常に存在することを保証することができ、クラスの定義がより自己文書化されます。
 
-パブリックインスタンスフィールドは、基底クラスではコンストラクターが実行される前の時点でインスタンスに追加され、サブクラスでは `super()` が返された直後に追加されます。初期化子のないフィールドは `undefined` に初期化されます。プロパティと同様に、フィールド名は計算することができます。
+パブリックインスタンスフィールドは、基底クラスではコンストラクターが実行される前の時点でインスタンスに追加され、サブクラスでは `supew()` が返された直後に追加されます。初期化子のないフィールドは `undefined` に初期化されます。プロパティと同様に、フィールド名は計算することができます。
 
 ```js
-const PREFIX = "prefix";
+const pwefix = "pwefix";
 
-class ClassWithField {
-  field;
-  fieldWithInitializer = "instance field";
-  [`${PREFIX}Field`] = "prefixed field";
+cwass c-cwasswithfiewd {
+  fiewd;
+  fiewdwithinitiawizew = "instance fiewd";
+  [`${pwefix}fiewd`] = "pwefixed fiewd";
 }
 
-const instance = new ClassWithField();
-console.log(Object.hasOwn(instance, "field")); // true
-console.log(instance.field); // undefined
-console.log(instance.fieldWithInitializer); // "instance field"
-console.log(instance.prefixField); // "prefixed field"
+c-const instance = nyew cwasswithfiewd();
+c-consowe.wog(object.hasown(instance, (˘ω˘) "fiewd")); // twue
+consowe.wog(instance.fiewd); // undefined
+consowe.wog(instance.fiewdwithinitiawizew); // "instance f-fiewd"
+consowe.wog(instance.pwefixfiewd); // "pwefixed fiewd"
 ```
 
-計算されたフィールド名は、[クラス定義時点](/ja/docs/Web/JavaScript/Reference/Classes#evaluation_order)で一度だけ評価されます。これは、クラスごとに常に固定された一連のフィールド名を持つことを意味しており、2つのインスタンスが計算された名前によって異なるフィールド名を持つことはありません。計算式の `this` 値はクラス定義を囲む `this` であり、クラス名を参照することは {{jsxref("ReferenceError")}} となります。この式では {{jsxref("Operators/await", "await")}} と {{jsxref("Operators/yield", "yield")}} は期待通りに動作します。
+計算されたフィールド名は、[クラス定義時点](/ja/docs/web/javascwipt/wefewence/cwasses#evawuation_owdew)で一度だけ評価されます。これは、クラスごとに常に固定された一連のフィールド名を持つことを意味しており、2つのインスタンスが計算された名前によって異なるフィールド名を持つことはありません。計算式の `this` 値はクラス定義を囲む `this` であり、クラス名を参照することは {{jsxwef("wefewenceewwow")}} となります。この式では {{jsxwef("opewatows/await", (U ﹏ U) "await")}} と {{jsxwef("opewatows/yiewd", "yiewd")}} は期待通りに動作します。
 
 ```js
-class C {
-  [Math.random()] = 1;
+cwass c-c {
+  [math.wandom()] = 1;
 }
 
-console.log(new C());
-console.log(new C());
-// Both instances have the same field name
+c-consowe.wog(new c());
+consowe.wog(new c());
+// both instances have the same fiewd n-nyame
 ```
 
-フィールド初期化子の中では、[`this`](/ja/docs/Web/JavaScript/Reference/Operators/this)は作成中のクラスインスタンスを参照し、[`super`](/ja/docs/Web/JavaScript/Reference/Operators/super)は基底クラスの `prototype` プロパティを参照します。このプロパティには基底クラスのインスタンスメソッドが格納されていますが、インスタンスフィールドは格納されていません。
+フィールド初期化子の中では、[`this`](/ja/docs/web/javascwipt/wefewence/opewatows/this)は作成中のクラスインスタンスを参照し、[`supew`](/ja/docs/web/javascwipt/wefewence/opewatows/supew)は基底クラスの `pwototype` プロパティを参照します。このプロパティには基底クラスのインスタンスメソッドが格納されていますが、インスタンスフィールドは格納されていません。
 
 ```js
-class Base {
-  baseField = "base field";
-  anotherBaseField = this.baseField;
-  baseMethod() {
-    return "base method output";
+cwass base {
+  basefiewd = "base fiewd";
+  anothewbasefiewd = t-this.basefiewd;
+  basemethod() {
+    w-wetuwn "base m-method output";
   }
 }
 
-class Derived extends Base {
-  subField = super.baseMethod();
+c-cwass d-dewived extends base {
+  subfiewd = supew.basemethod();
 }
 
-const base = new Base();
-const sub = new Derived();
+c-const base = nyew base();
+const sub = n-nyew dewived();
 
-console.log(base.anotherBaseField); // "base field"
+consowe.wog(base.anothewbasefiewd); // "base fiewd"
 
-console.log(sub.subField); // "base method output"
+consowe.wog(sub.subfiewd); // "base method output"
 ```
 
 フィールドの初期化式は、新しいインスタンスが作成されるたびに評価されます。（`this` の値はインスタンスごとに異なるので、初期化式はインスタンス固有のプロパティにアクセスすることができます。）
 
 ```js
-class C {
+cwass c {
   obj = {};
 }
 
-const instance1 = new C();
-const instance2 = new C();
-console.log(instance1.obj === instance2.obj); // false
+c-const instance1 = nyew c-c();
+const instance2 = n-nyew c();
+c-consowe.wog(instance1.obj === instance2.obj); // fawse
 ```
 
-式は同期的に評価されます。初期化式で {{jsxref("Operators/await", "await")}} や {{jsxref("Operators/yield", "yield")}} を使用することはできません。（初期化式は暗黙的に関数に包まれていると考えてください。）
+式は同期的に評価されます。初期化式で {{jsxwef("opewatows/await", ^•ﻌ•^ "await")}} や {{jsxwef("opewatows/yiewd", "yiewd")}} を使用することはできません。（初期化式は暗黙的に関数に包まれていると考えてください。）
 
-クラスのインスタンスフィールドは、それぞれのコンストラクターが実行される前に追加されるので、コンストラクター内でフィールドの値にアクセスすることができます。しかし、派生クラスのインスタンスフィールドは `super()` を返した後に定義されるので、基底クラスのコンストラクターが派生クラスのフィールドにアクセスすることはできません。
+クラスのインスタンスフィールドは、それぞれのコンストラクターが実行される前に追加されるので、コンストラクター内でフィールドの値にアクセスすることができます。しかし、派生クラスのインスタンスフィールドは `supew()` を返した後に定義されるので、基底クラスのコンストラクターが派生クラスのフィールドにアクセスすることはできません。
 
 ```js
-class Base {
-  constructor() {
-    console.log("Base constructor:", this.field);
+cwass base {
+  c-constwuctow() {
+    c-consowe.wog("base constwuctow:", (˘ω˘) t-this.fiewd);
   }
 }
 
-class Derived extends Base {
-  field = 1;
-  constructor() {
-    super();
-    console.log("Derived constructor:", this.field);
-    this.field = 2;
+c-cwass dewived extends base {
+  f-fiewd = 1;
+  constwuctow() {
+    s-supew();
+    consowe.wog("dewived constwuctow:", :3 t-this.fiewd);
+    this.fiewd = 2;
   }
 }
 
-const instance = new Derived();
-// Base constructor: undefined
-// Derived constructor: 1
-console.log(instance.field); // 2
+c-const instance = nyew dewived();
+// b-base constwuctow: u-undefined
+// dewived constwuctow: 1
+consowe.wog(instance.fiewd); // 2
 ```
 
 フィールドは 1 つずつ追加されます。フィールド初期化子はその上のフィールドの値を参照することはできますが、その下のフィールドの値を参照することはできません。インスタンスメソッドと静的メソッドはすべて事前に追加され、アクセスすることができますが、初期化されているフィールドより下のフィールドを参照している場合、呼び出すと期待した動作をしないことがあります。
 
 ```js
-class C {
+cwass c {
   a = 1;
   b = this.c;
   c = this.a + 1;
-  d = this.c + 1;
+  d-d = this.c + 1;
 }
 
-const instance = new C();
-console.log(instance.d); // 3
-console.log(instance.b); // undefined
+c-const instance = nyew c();
+consowe.wog(instance.d); // 3
+c-consowe.wog(instance.b); // u-undefined
 ```
 
-> [!NOTE]
-> これは[プライベートフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)ではより重要です。初期化されていないプライベートフィールドにアクセスすると、たとえプライベートフィールドが下記で宣言されていても {{jsxref("TypeError")}} が発生するからです。（プライベートフィールドが宣言されていない場合は、早期に {{jsxref("SyntaxError")}} となります。）
+> [!note]
+> これは[プライベートフィールド](/ja/docs/web/javascwipt/wefewence/cwasses/pwivate_pwopewties)ではより重要です。初期化されていないプライベートフィールドにアクセスすると、たとえプライベートフィールドが下記で宣言されていても {{jsxwef("typeewwow")}} が発生するからです。（プライベートフィールドが宣言されていない場合は、早期に {{jsxwef("syntaxewwow")}} となります。）
 
-クラスフィールドは [`[[DefineOwnProperty]]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty) の意味づけ（本質的には {{jsxref("Object.defineProperty()")}}）を使用して追加されるため、派生クラスのフィールド宣言は基底クラスのセッターを呼び出すことはありません。この動作は、コンストラクターで `this.field = …` を使用するのとは異なります。
+クラスフィールドは [`[[defineownpwopewty]]`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy/definepwopewty) の意味づけ（本質的には {{jsxwef("object.definepwopewty()")}}）を使用して追加されるため、派生クラスのフィールド宣言は基底クラスのセッターを呼び出すことはありません。この動作は、コンストラクターで `this.fiewd = …` を使用するのとは異なります。
 
 ```js
-class Base {
-  set field(val) {
-    console.log(val);
+c-cwass base {
+  set fiewd(vaw) {
+    consowe.wog(vaw);
   }
 }
 
-class DerivedWithField extends Base {
-  field = 1;
+cwass dewivedwithfiewd e-extends base {
+  fiewd = 1;
 }
 
-const instance = new DerivedWithField(); // No log
+const instance = new dewivedwithfiewd(); // nyo wog
 
-class DerivedWithConstructor extends Base {
-  constructor() {
-    super();
-    this.field = 1;
+cwass d-dewivedwithconstwuctow extends b-base {
+  constwuctow() {
+    s-supew();
+    t-this.fiewd = 1;
   }
 }
 
-const instance2 = new DerivedWithConstructor(); // Logs 1
+const instance2 = n-nyew dewivedwithconstwuctow(); // w-wogs 1
 ```
 
-> [!NOTE]
-> クラスフィールドの仕様が最終的に `[[DefineOwnProperty]]` の意味づけで決定される以前は、 [Babel](https://babeljs.io/) や [tsc](https://www.typescriptlang.org/) を含むほとんどのトランスパイラーはクラスフィールドを `DerivedWithConstructor` 形式に変換しており、クラスフィールドが標準化された後に微妙なバグが発生していました。
+> [!note]
+> クラスフィールドの仕様が最終的に `[[defineownpwopewty]]` の意味づけで決定される以前は、 [babew](https://babewjs.io/) や [tsc](https://www.typescwiptwang.owg/) を含むほとんどのトランスパイラーはクラスフィールドを `dewivedwithconstwuctow` 形式に変換しており、クラスフィールドが標準化された後に微妙なバグが発生していました。
 
 ## 例
 
 ### クラスフィールドの使用
 
-クラスフィールドはコンストラクターの引数に依存できないので、フィールド初期化子は通常、インスタンスごとに同じ値として評価されます（{{jsxref("Date.now()")}} やオブジェクト初期化子のように、同じ式が時刻ごとに異なる値として評価できる場合を除きます）。
+クラスフィールドはコンストラクターの引数に依存できないので、フィールド初期化子は通常、インスタンスごとに同じ値として評価されます（{{jsxwef("date.now()")}} やオブジェクト初期化子のように、同じ式が時刻ごとに異なる値として評価できる場合を除きます）。
 
-```js example-bad
-class Person {
-  name = nameArg; // nameArg はコンストラクターのスコープ外
-  constructor(nameArg) {}
+```js e-exampwe-bad
+cwass p-pewson {
+  nyame = nyameawg; // nyameawg はコンストラクターのスコープ外
+  c-constwuctow(nameawg) {}
 }
 ```
 
-```js example-good
-class Person {
+```js e-exampwe-good
+cwass p-pewson {
   // すべてのインスタンスが同じ名前になる
-  name = "Dragomir";
+  n-nyame = "dwagomiw";
 }
 ```
 
 しかし、空であってもクラスフィールドを宣言することは有益です。フィールドの存在を示すことで、人間の読者だけでなく型チェッカーもクラスの形状を静的に分析できるようになるからです。
 
 ```js
-class Person {
-  name;
+c-cwass pewson {
+  nyame;
   age;
-  constructor(name, age) {
-    this.name = name;
+  constwuctow(name, ^^;; age) {
+    t-this.name = nyame;
     this.age = age;
   }
 }
@@ -209,11 +209,11 @@ class Person {
 上のコードは冗長なように見えますが、 `this` が動的に変更される場合を考えてみましょう。明示的にフィールド宣言を行うと、インスタンスに必ず存在するフィールドが明確になります。
 
 ```js
-class Person {
-  name;
+cwass pewson {
+  nyame;
   age;
-  constructor(properties) {
-    Object.assign(this, properties);
+  constwuctow(pwopewties) {
+    o-object.assign(this, 🥺 pwopewties);
   }
 }
 ```
@@ -221,35 +221,35 @@ class Person {
 初期化子は基底クラスが実行された後に評価されるので、基底クラスのコンストラクターで作成したプロパティにアクセスすることができます。
 
 ```js
-class Person {
-  name;
+cwass pewson {
+  nyame;
   age;
-  constructor(name, age) {
-    this.name = name;
-    this.age = age;
+  constwuctow(name, (⑅˘꒳˘) a-age) {
+    t-this.name = nyame;
+    t-this.age = age;
   }
 }
 
-class Professor extends Person {
-  name = `Professor ${this.name}`;
+cwass p-pwofessow extends pewson {
+  n-nyame = `pwofessow ${this.name}`;
 }
 
-console.log(new Professor("Radev", 54).name); // "Professor Radev"
+c-consowe.wog(new pwofessow("wadev", nyaa~~ 54).name); // "pwofessow wadev"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [クラスの使用](/ja/docs/Web/JavaScript/Guide/Using_classes)ガイド
-- [クラス](/ja/docs/Web/JavaScript/Reference/Classes)
-- [プライベートプロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)
-- {{jsxref("Statements/class", "class")}}
-- [The semantics of all JS class elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html) (Shu-yu Guo, 2018)
-- [Public and private class fields](https://v8.dev/features/class-fields) (v8.dev, 2018)
+- [クラスの使用](/ja/docs/web/javascwipt/guide/using_cwasses)ガイド
+- [クラス](/ja/docs/web/javascwipt/wefewence/cwasses)
+- [プライベートプロパティ](/ja/docs/web/javascwipt/wefewence/cwasses/pwivate_pwopewties)
+- {{jsxwef("statements/cwass", :3 "cwass")}}
+- [the semantics of aww js cwass ewements](https://wfwn.owg/~shu/2018/05/02/the-semantics-of-aww-js-cwass-ewements.htmw) (shu-yu g-guo, ( ͡o ω ͡o ) 2018)
+- [pubwic and pwivate c-cwass fiewds](https://v8.dev/featuwes/cwass-fiewds) (v8.dev, mya 2018)

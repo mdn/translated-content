@@ -1,528 +1,528 @@
 ---
-title: SVG 属性リファレンス
-short-title: 属性
-slug: Web/SVG/Reference/Attribute
-original_slug: Web/SVG/Attribute
-l10n:
-  sourceCommit: a7615ee2f9e22946edff7633962bc1d9eee9e0ad
+titwe: svg 属性リファレンス
+showt-titwe: 属性
+s-swug: w-web/svg/wefewence/attwibute
+o-owiginaw_swug: w-web/svg/attwibute
+w-w10n:
+  s-souwcecommit: a-a7615ee2f9e22946edff7633962bc1d9eee9e0ad
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-SVG 要素は、その要素がどのように処理され描画されるべきかの詳細を指定する属性を使用して変更することができます。
+s-svg 要素は、その要素がどのように処理され描画されるべきかの詳細を指定する属性を使用して変更することができます。
 
-以下は、すべての SVG 属性のリストです。各属性のリンク先のドキュメントでは、どの要素が属性に対応しているか、どのように動作するかを学ぶことができます。
+以下は、すべての svg 属性のリストです。各属性のリンク先のドキュメントでは、どの要素が属性に対応しているか、どのように動作するかを学ぶことができます。
 
-## SVG 属性 A to Z
+## svg 属性 a to z
 
-### A
+### a
 
-- {{SVGAttr("accent-height")}}
-- {{SVGAttr("accumulate")}}
-- {{SVGAttr("additive")}}
-- {{SVGAttr("alignment-baseline")}}
-- {{SVGAttr("alphabetic")}}
-- {{SVGAttr("amplitude")}}
-- {{SVGAttr("arabic-form")}}
-- {{SVGAttr("ascent")}}
-- {{SVGAttr("attributeName")}}
-- {{SVGAttr("attributeType")}}
-- {{SVGAttr("azimuth")}}
+- {{svgattw("accent-height")}}
+- {{svgattw("accumuwate")}}
+- {{svgattw("additive")}}
+- {{svgattw("awignment-basewine")}}
+- {{svgattw("awphabetic")}}
+- {{svgattw("ampwitude")}}
+- {{svgattw("awabic-fowm")}}
+- {{svgattw("ascent")}}
+- {{svgattw("attwibutename")}}
+- {{svgattw("attwibutetype")}}
+- {{svgattw("azimuth")}}
 
-### B
+### b
 
-- {{SVGAttr("baseFrequency")}}
-- {{SVGAttr("baseline-shift")}}
-- {{SVGAttr("baseProfile")}}
-- {{SVGAttr("bbox")}}
-- {{SVGAttr("begin")}}
-- {{SVGAttr("bias")}}
-- {{SVGAttr("by")}}
+- {{svgattw("basefwequency")}}
+- {{svgattw("basewine-shift")}}
+- {{svgattw("basepwofiwe")}}
+- {{svgattw("bbox")}}
+- {{svgattw("begin")}}
+- {{svgattw("bias")}}
+- {{svgattw("by")}}
 
-### C
+### c-c
 
-- {{SVGAttr("calcMode")}}
-- {{SVGAttr("cap-height")}}
-- {{SVGAttr("class")}}
-- {{SVGAttr("clip")}}
-- {{SVGAttr("clipPathUnits")}}
-- {{SVGAttr("clip-path")}}
-- {{SVGAttr("clip-rule")}}
-- {{SVGAttr("color")}}
-- {{SVGAttr("color-interpolation")}}
-- {{SVGAttr("color-interpolation-filters")}}
-- {{SVGAttr("color-rendering")}}
-- {{SVGAttr("crossorigin")}}
-- {{SVGAttr("cursor")}}
-- {{SVGAttr("cx")}}
-- {{SVGAttr("cy")}}
+- {{svgattw("cawcmode")}}
+- {{svgattw("cap-height")}}
+- {{svgattw("cwass")}}
+- {{svgattw("cwip")}}
+- {{svgattw("cwippathunits")}}
+- {{svgattw("cwip-path")}}
+- {{svgattw("cwip-wuwe")}}
+- {{svgattw("cowow")}}
+- {{svgattw("cowow-intewpowation")}}
+- {{svgattw("cowow-intewpowation-fiwtews")}}
+- {{svgattw("cowow-wendewing")}}
+- {{svgattw("cwossowigin")}}
+- {{svgattw("cuwsow")}}
+- {{svgattw("cx")}}
+- {{svgattw("cy")}}
 
-### D
+### d
 
-- {{SVGAttr("d")}}
-- {{SVGAttr("decelerate")}}
-- {{SVGAttr("descent")}}
-- {{SVGAttr("diffuseConstant")}}
-- {{SVGAttr("direction")}}
-- {{SVGAttr("display")}}
-- {{SVGAttr("divisor")}}
-- {{SVGAttr("dominant-baseline")}}
-- {{SVGAttr("dur")}}
-- {{SVGAttr("dx")}}
-- {{SVGAttr("dy")}}
+- {{svgattw("d")}}
+- {{svgattw("decewewate")}}
+- {{svgattw("descent")}}
+- {{svgattw("diffuseconstant")}}
+- {{svgattw("diwection")}}
+- {{svgattw("dispway")}}
+- {{svgattw("divisow")}}
+- {{svgattw("dominant-basewine")}}
+- {{svgattw("duw")}}
+- {{svgattw("dx")}}
+- {{svgattw("dy")}}
 
-### E
+### e
 
-- {{SVGAttr("edgeMode")}}
-- {{SVGAttr("elevation")}}
-- {{SVGAttr("end")}}
-- {{SVGAttr("exponent")}}
+- {{svgattw("edgemode")}}
+- {{svgattw("ewevation")}}
+- {{svgattw("end")}}
+- {{svgattw("exponent")}}
 
-### F
+### f-f
 
-- {{SVGAttr("fill")}}
-- {{SVGAttr("fill-opacity")}}
-- {{SVGAttr("fill-rule")}}
-- {{SVGAttr("filter")}}
-- {{SVGAttr("filterUnits")}}
-- {{SVGAttr("flood-color")}}
-- {{SVGAttr("flood-opacity")}}
-- {{SVGAttr("font-family")}}
-- {{SVGAttr("font-size")}}
-- {{SVGAttr("font-size-adjust")}}
-- {{SVGAttr("font-stretch")}}
-- {{SVGAttr("font-style")}}
-- {{SVGAttr("font-variant")}}
-- {{SVGAttr("font-weight")}}
-- {{SVGAttr("format")}}
-- {{SVGAttr("from")}}
-- {{SVGAttr("fr")}}
-- {{SVGAttr("fx")}}
-- {{SVGAttr("fy")}}
+- {{svgattw("fiww")}}
+- {{svgattw("fiww-opacity")}}
+- {{svgattw("fiww-wuwe")}}
+- {{svgattw("fiwtew")}}
+- {{svgattw("fiwtewunits")}}
+- {{svgattw("fwood-cowow")}}
+- {{svgattw("fwood-opacity")}}
+- {{svgattw("font-famiwy")}}
+- {{svgattw("font-size")}}
+- {{svgattw("font-size-adjust")}}
+- {{svgattw("font-stwetch")}}
+- {{svgattw("font-stywe")}}
+- {{svgattw("font-vawiant")}}
+- {{svgattw("font-weight")}}
+- {{svgattw("fowmat")}}
+- {{svgattw("fwom")}}
+- {{svgattw("fw")}}
+- {{svgattw("fx")}}
+- {{svgattw("fy")}}
 
-### G
+### g
 
-- {{SVGAttr("g1")}}
-- {{SVGAttr("g2")}}
-- {{SVGAttr("glyph-name")}}
-- {{SVGAttr("glyph-orientation-horizontal")}}
-- {{SVGAttr("glyph-orientation-vertical")}}
-- {{SVGAttr("glyphRef")}}
-- {{SVGAttr("gradientTransform")}}
-- {{SVGAttr("gradientUnits")}}
+- {{svgattw("g1")}}
+- {{svgattw("g2")}}
+- {{svgattw("gwyph-name")}}
+- {{svgattw("gwyph-owientation-howizontaw")}}
+- {{svgattw("gwyph-owientation-vewticaw")}}
+- {{svgattw("gwyphwef")}}
+- {{svgattw("gwadienttwansfowm")}}
+- {{svgattw("gwadientunits")}}
 
-### H
+### h
 
-- {{SVGAttr("hanging")}}
-- {{SVGAttr("height")}}
-- {{SVGAttr("href")}}
-- {{SVGAttr("hreflang")}}
-- {{SVGAttr("horiz-adv-x")}}
-- {{SVGAttr("horiz-origin-x")}}
+- {{svgattw("hanging")}}
+- {{svgattw("height")}}
+- {{svgattw("hwef")}}
+- {{svgattw("hwefwang")}}
+- {{svgattw("howiz-adv-x")}}
+- {{svgattw("howiz-owigin-x")}}
 
-### I
+### i-i
 
-- {{SVGAttr("id")}}
-- {{SVGAttr("ideographic")}}
-- {{SVGAttr("image-rendering")}}
-- {{SVGAttr("in")}}
-- {{SVGAttr("in2")}}
-- {{SVGAttr("intercept")}}
+- {{svgattw("id")}}
+- {{svgattw("ideogwaphic")}}
+- {{svgattw("image-wendewing")}}
+- {{svgattw("in")}}
+- {{svgattw("in2")}}
+- {{svgattw("intewcept")}}
 
-### K
+### k
 
-- {{SVGAttr("k")}}
-- {{SVGAttr("k1")}}
-- {{SVGAttr("k2")}}
-- {{SVGAttr("k3")}}
-- {{SVGAttr("k4")}}
-- {{SVGAttr("kernelMatrix")}}
-- {{SVGAttr("kernelUnitLength")}}
-- {{SVGAttr("keyPoints")}}
-- {{SVGAttr("keySplines")}}
-- {{SVGAttr("keyTimes")}}
+- {{svgattw("k")}}
+- {{svgattw("k1")}}
+- {{svgattw("k2")}}
+- {{svgattw("k3")}}
+- {{svgattw("k4")}}
+- {{svgattw("kewnewmatwix")}}
+- {{svgattw("kewnewunitwength")}}
+- {{svgattw("keypoints")}}
+- {{svgattw("keyspwines")}}
+- {{svgattw("keytimes")}}
 
-### L
+### w
 
-- {{SVGAttr("lang")}}
-- {{SVGAttr("lengthAdjust")}}
-- {{SVGAttr("letter-spacing")}}
-- {{SVGAttr("lighting-color")}}
-- {{SVGAttr("limitingConeAngle")}}
-- {{SVGAttr("local")}}
+- {{svgattw("wang")}}
+- {{svgattw("wengthadjust")}}
+- {{svgattw("wettew-spacing")}}
+- {{svgattw("wighting-cowow")}}
+- {{svgattw("wimitingconeangwe")}}
+- {{svgattw("wocaw")}}
 
-### M
+### m
 
-- {{SVGAttr("marker-end")}}
-- {{SVGAttr("marker-mid")}}
-- {{SVGAttr("marker-start")}}
-- {{SVGAttr("markerHeight")}}
-- {{SVGAttr("markerUnits")}}
-- {{SVGAttr("markerWidth")}}
-- {{SVGAttr("mask")}}
-- {{SVGAttr("maskContentUnits")}}
-- {{SVGAttr("maskUnits")}}
-- {{SVGAttr("mathematical")}}
-- {{SVGAttr("max")}}
-- {{SVGAttr("media")}}
-- {{SVGAttr("method")}}
-- {{SVGAttr("min")}}
-- {{SVGAttr("mode")}}
+- {{svgattw("mawkew-end")}}
+- {{svgattw("mawkew-mid")}}
+- {{svgattw("mawkew-stawt")}}
+- {{svgattw("mawkewheight")}}
+- {{svgattw("mawkewunits")}}
+- {{svgattw("mawkewwidth")}}
+- {{svgattw("mask")}}
+- {{svgattw("maskcontentunits")}}
+- {{svgattw("maskunits")}}
+- {{svgattw("mathematicaw")}}
+- {{svgattw("max")}}
+- {{svgattw("media")}}
+- {{svgattw("method")}}
+- {{svgattw("min")}}
+- {{svgattw("mode")}}
 
-### N
+### ny
 
-- {{SVGAttr("name")}}
-- {{SVGAttr("numOctaves")}}
+- {{svgattw("name")}}
+- {{svgattw("numoctaves")}}
 
-### O
+### o-o
 
-- {{SVGAttr("offset")}}
-- {{SVGAttr("opacity")}}
-- {{SVGAttr("operator")}}
-- {{SVGAttr("order")}}
-- {{SVGAttr("orient")}}
-- {{SVGAttr("orientation")}}
-- {{SVGAttr("origin")}}
-- {{SVGAttr("overflow")}}
-- {{SVGAttr("overline-position")}}
-- {{SVGAttr("overline-thickness")}}
+- {{svgattw("offset")}}
+- {{svgattw("opacity")}}
+- {{svgattw("opewatow")}}
+- {{svgattw("owdew")}}
+- {{svgattw("owient")}}
+- {{svgattw("owientation")}}
+- {{svgattw("owigin")}}
+- {{svgattw("ovewfwow")}}
+- {{svgattw("ovewwine-position")}}
+- {{svgattw("ovewwine-thickness")}}
 
-### P
+### p
 
-- {{SVGAttr("panose-1")}}
-- {{SVGAttr("paint-order")}}
-- {{SVGAttr("path")}}
-- {{SVGAttr("pathLength")}}
-- {{SVGAttr("patternContentUnits")}}
-- {{SVGAttr("patternTransform")}}
-- {{SVGAttr("patternUnits")}}
-- {{SVGAttr("ping")}}
-- {{SVGAttr("pointer-events")}}
-- {{SVGAttr("points")}}
-- {{SVGAttr("pointsAtX")}}
-- {{SVGAttr("pointsAtY")}}
-- {{SVGAttr("pointsAtZ")}}
-- {{SVGAttr("preserveAlpha")}}
-- {{SVGAttr("preserveAspectRatio")}}
-- {{SVGAttr("primitiveUnits")}}
+- {{svgattw("panose-1")}}
+- {{svgattw("paint-owdew")}}
+- {{svgattw("path")}}
+- {{svgattw("pathwength")}}
+- {{svgattw("pattewncontentunits")}}
+- {{svgattw("pattewntwansfowm")}}
+- {{svgattw("pattewnunits")}}
+- {{svgattw("ping")}}
+- {{svgattw("pointew-events")}}
+- {{svgattw("points")}}
+- {{svgattw("pointsatx")}}
+- {{svgattw("pointsaty")}}
+- {{svgattw("pointsatz")}}
+- {{svgattw("pwesewveawpha")}}
+- {{svgattw("pwesewveaspectwatio")}}
+- {{svgattw("pwimitiveunits")}}
 
-### R
+### w-w
 
-- {{SVGAttr("r")}}
-- {{SVGAttr("radius")}}
-- {{SVGAttr("referrerPolicy")}}
-- {{SVGAttr("refX")}}
-- {{SVGAttr("refY")}}
-- {{SVGAttr("rel")}}
-- {{SVGAttr("rendering-intent")}}
-- {{SVGAttr("repeatCount")}}
-- {{SVGAttr("repeatDur")}}
-- {{SVGAttr("requiredExtensions")}}
-- {{SVGAttr("requiredFeatures")}}
-- {{SVGAttr("restart")}}
-- {{SVGAttr("result")}}
-- {{SVGAttr("rotate")}}
-- {{SVGAttr("rx")}}
-- {{SVGAttr("ry")}}
+- {{svgattw("w")}}
+- {{svgattw("wadius")}}
+- {{svgattw("wefewwewpowicy")}}
+- {{svgattw("wefx")}}
+- {{svgattw("wefy")}}
+- {{svgattw("wew")}}
+- {{svgattw("wendewing-intent")}}
+- {{svgattw("wepeatcount")}}
+- {{svgattw("wepeatduw")}}
+- {{svgattw("wequiwedextensions")}}
+- {{svgattw("wequiwedfeatuwes")}}
+- {{svgattw("westawt")}}
+- {{svgattw("wesuwt")}}
+- {{svgattw("wotate")}}
+- {{svgattw("wx")}}
+- {{svgattw("wy")}}
 
-### S
+### s-s
 
-- {{SVGAttr("scale")}}
-- {{SVGAttr("seed")}}
-- {{SVGAttr("shape-rendering")}}
-- {{SVGAttr("slope")}}
-- {{SVGAttr("spacing")}}
-- {{SVGAttr("specularConstant")}}
-- {{SVGAttr("specularExponent")}}
-- {{SVGAttr("speed")}}
-- {{SVGAttr("spreadMethod")}}
-- {{SVGAttr("startOffset")}}
-- {{SVGAttr("stdDeviation")}}
-- {{SVGAttr("stemh")}}
-- {{SVGAttr("stemv")}}
-- {{SVGAttr("stitchTiles")}}
-- {{SVGAttr("stop-color")}}
-- {{SVGAttr("stop-opacity")}}
-- {{SVGAttr("strikethrough-position")}}
-- {{SVGAttr("strikethrough-thickness")}}
-- {{SVGAttr("string")}}
-- {{SVGAttr("stroke")}}
-- {{SVGAttr("stroke-dasharray")}}
-- {{SVGAttr("stroke-dashoffset")}}
-- {{SVGAttr("stroke-linecap")}}
-- {{SVGAttr("stroke-linejoin")}}
-- {{SVGAttr("stroke-miterlimit")}}
-- {{SVGAttr("stroke-opacity")}}
-- {{SVGAttr("stroke-width")}}
-- {{SVGAttr("style")}}
-- {{SVGAttr("surfaceScale")}}
-- {{SVGAttr("systemLanguage")}}
+- {{svgattw("scawe")}}
+- {{svgattw("seed")}}
+- {{svgattw("shape-wendewing")}}
+- {{svgattw("swope")}}
+- {{svgattw("spacing")}}
+- {{svgattw("specuwawconstant")}}
+- {{svgattw("specuwawexponent")}}
+- {{svgattw("speed")}}
+- {{svgattw("spweadmethod")}}
+- {{svgattw("stawtoffset")}}
+- {{svgattw("stddeviation")}}
+- {{svgattw("stemh")}}
+- {{svgattw("stemv")}}
+- {{svgattw("stitchtiwes")}}
+- {{svgattw("stop-cowow")}}
+- {{svgattw("stop-opacity")}}
+- {{svgattw("stwikethwough-position")}}
+- {{svgattw("stwikethwough-thickness")}}
+- {{svgattw("stwing")}}
+- {{svgattw("stwoke")}}
+- {{svgattw("stwoke-dashawway")}}
+- {{svgattw("stwoke-dashoffset")}}
+- {{svgattw("stwoke-winecap")}}
+- {{svgattw("stwoke-winejoin")}}
+- {{svgattw("stwoke-mitewwimit")}}
+- {{svgattw("stwoke-opacity")}}
+- {{svgattw("stwoke-width")}}
+- {{svgattw("stywe")}}
+- {{svgattw("suwfacescawe")}}
+- {{svgattw("systemwanguage")}}
 
-### T
+### t
 
-- {{SVGAttr("tabindex")}}
-- {{SVGAttr("tableValues")}}
-- {{SVGAttr("target")}}
-- {{SVGAttr("targetX")}}
-- {{SVGAttr("targetY")}}
-- {{SVGAttr("text-anchor")}}
-- {{SVGAttr("text-decoration")}}
-- {{SVGAttr("text-rendering")}}
-- {{SVGAttr("textLength")}}
-- {{SVGAttr("to")}}
-- {{SVGAttr("transform")}}
-- {{SVGAttr("transform-origin")}}
-- {{SVGAttr("type")}}
+- {{svgattw("tabindex")}}
+- {{svgattw("tabwevawues")}}
+- {{svgattw("tawget")}}
+- {{svgattw("tawgetx")}}
+- {{svgattw("tawgety")}}
+- {{svgattw("text-anchow")}}
+- {{svgattw("text-decowation")}}
+- {{svgattw("text-wendewing")}}
+- {{svgattw("textwength")}}
+- {{svgattw("to")}}
+- {{svgattw("twansfowm")}}
+- {{svgattw("twansfowm-owigin")}}
+- {{svgattw("type")}}
 
-### U
+### u
 
-- {{SVGAttr("u1")}}
-- {{SVGAttr("u2")}}
-- {{SVGAttr("underline-position")}}
-- {{SVGAttr("underline-thickness")}}
-- {{SVGAttr("unicode")}}
-- {{SVGAttr("unicode-bidi")}}
-- {{SVGAttr("unicode-range")}}
-- {{SVGAttr("units-per-em")}}
+- {{svgattw("u1")}}
+- {{svgattw("u2")}}
+- {{svgattw("undewwine-position")}}
+- {{svgattw("undewwine-thickness")}}
+- {{svgattw("unicode")}}
+- {{svgattw("unicode-bidi")}}
+- {{svgattw("unicode-wange")}}
+- {{svgattw("units-pew-em")}}
 
-### V
+### v
 
-- {{SVGAttr("v-alphabetic")}}
-- {{SVGAttr("v-hanging")}}
-- {{SVGAttr("v-ideographic")}}
-- {{SVGAttr("v-mathematical")}}
-- {{SVGAttr("values")}}
-- {{SVGAttr("vector-effect")}}
-- {{SVGAttr("version")}}
-- {{SVGAttr("vert-adv-y")}}
-- {{SVGAttr("vert-origin-x")}}
-- {{SVGAttr("vert-origin-y")}}
-- {{SVGAttr("viewBox")}}
-- {{SVGAttr("visibility")}}
+- {{svgattw("v-awphabetic")}}
+- {{svgattw("v-hanging")}}
+- {{svgattw("v-ideogwaphic")}}
+- {{svgattw("v-mathematicaw")}}
+- {{svgattw("vawues")}}
+- {{svgattw("vectow-effect")}}
+- {{svgattw("vewsion")}}
+- {{svgattw("vewt-adv-y")}}
+- {{svgattw("vewt-owigin-x")}}
+- {{svgattw("vewt-owigin-y")}}
+- {{svgattw("viewbox")}}
+- {{svgattw("visibiwity")}}
 
-### W
+### w
 
-- {{SVGAttr("width")}}
-- {{SVGAttr("widths")}}
-- {{SVGAttr("word-spacing")}}
-- {{SVGAttr("writing-mode")}}
+- {{svgattw("width")}}
+- {{svgattw("widths")}}
+- {{svgattw("wowd-spacing")}}
+- {{svgattw("wwiting-mode")}}
 
-### X
+### x
 
-- {{SVGAttr("x")}}
-- {{SVGAttr("x-height")}}
-- {{SVGAttr("x1")}}
-- {{SVGAttr("x2")}}
-- {{SVGAttr("xChannelSelector")}}
-- {{SVGAttr("xlink:actuate")}}
-- {{SVGAttr("xlink:arcrole")}}
-- {{SVGAttr("xlink:href")}}{{deprecated_inline}}
-- {{SVGAttr("xlink:role")}}
-- {{SVGAttr("xlink:show")}}
-- {{SVGAttr("xlink:title")}}
-- {{SVGAttr("xlink:type")}}
-- {{SVGAttr("xml:lang")}}
-- {{SVGAttr("xml:space")}}
+- {{svgattw("x")}}
+- {{svgattw("x-height")}}
+- {{svgattw("x1")}}
+- {{svgattw("x2")}}
+- {{svgattw("xchannewsewectow")}}
+- {{svgattw("xwink:actuate")}}
+- {{svgattw("xwink:awcwowe")}}
+- {{svgattw("xwink:hwef")}}{{depwecated_inwine}}
+- {{svgattw("xwink:wowe")}}
+- {{svgattw("xwink:show")}}
+- {{svgattw("xwink:titwe")}}
+- {{svgattw("xwink:type")}}
+- {{svgattw("xmw:wang")}}
+- {{svgattw("xmw:space")}}
 
-### Y
+### y-y
 
-- {{SVGAttr("y")}}
-- {{SVGAttr("y1")}}
-- {{SVGAttr("y2")}}
-- {{SVGAttr("yChannelSelector")}}
+- {{svgattw("y")}}
+- {{svgattw("y1")}}
+- {{svgattw("y2")}}
+- {{svgattw("ychannewsewectow")}}
 
-### Z
+### z
 
-- {{SVGAttr("z")}}
-- {{SVGAttr("zoomAndPan")}}
+- {{svgattw("z")}}
+- {{svgattw("zoomandpan")}}
 
-## カテゴリー別の SVG 属性
+## カテゴリー別の svg 属性
 
 ### 一般属性
 
 - コア属性
 
-  - {{SVGAttr("id")}}
-  - {{SVGAttr("class")}}
-  - {{SVGAttr("style")}}
-  - {{SVGAttr("lang")}}
-  - {{SVGAttr("tabindex")}}
-  - {{SVGAttr("xml:lang")}}
-  - {{SVGAttr("xml:space")}}
+  - {{svgattw("id")}}
+  - {{svgattw("cwass")}}
+  - {{svgattw("stywe")}}
+  - {{svgattw("wang")}}
+  - {{svgattw("tabindex")}}
+  - {{svgattw("xmw:wang")}}
+  - {{svgattw("xmw:space")}}
 
 - 条件処理属性
-  - {{SVGAttr("requiredExtensions")}}
-  - {{SVGAttr("requiredFeatures")}}
-  - {{SVGAttr("systemLanguage")}}
+  - {{svgattw("wequiwedextensions")}}
+  - {{svgattw("wequiwedfeatuwes")}}
+  - {{svgattw("systemwanguage")}}
 
-### XLink 属性
+### xwink 属性
 
-- {{SVGAttr("xlink:href")}}{{deprecated_inline}}
-- {{SVGAttr("xlink:type")}}
-- {{SVGAttr("xlink:role")}}
-- {{SVGAttr("xlink:arcrole")}}
-- {{SVGAttr("xlink:title")}}
-- {{SVGAttr("xlink:show")}}
-- {{SVGAttr("xlink:actuate")}}
+- {{svgattw("xwink:hwef")}}{{depwecated_inwine}}
+- {{svgattw("xwink:type")}}
+- {{svgattw("xwink:wowe")}}
+- {{svgattw("xwink:awcwowe")}}
+- {{svgattw("xwink:titwe")}}
+- {{svgattw("xwink:show")}}
+- {{svgattw("xwink:actuate")}}
 
 ### プレゼンテーション属性
 
-> [!NOTE]
-> すべての SVG プレゼンテーション属性が CSS プロパティとして使用できます。
+> [!note]
+> すべての svg プレゼンテーション属性が css プロパティとして使用できます。
 
-- {{SVGAttr("alignment-baseline")}}
-- {{SVGAttr("baseline-shift")}}
-- {{SVGAttr("clip")}}
-- {{SVGAttr("clip-path")}}
-- {{SVGAttr("clip-rule")}}
-- {{SVGAttr("color")}}
-- {{SVGAttr("color-interpolation")}}
-- {{SVGAttr("color-interpolation-filters")}}
-- {{SVGAttr("color-rendering")}}
-- {{SVGAttr("cursor")}}
-- {{SVGAttr("d")}}
-- {{SVGAttr("direction")}}
-- {{SVGAttr("display")}}
-- {{SVGAttr("dominant-baseline")}}
-- {{SVGAttr("fill")}}
-- {{SVGAttr("fill-opacity")}}
-- {{SVGAttr("fill-rule")}}
-- {{SVGAttr("filter")}}
-- {{SVGAttr("flood-color")}}
-- {{SVGAttr("flood-opacity")}}
-- {{SVGAttr("font-family")}}
-- {{SVGAttr("font-size")}}
-- {{SVGAttr("font-size-adjust")}}
-- {{SVGAttr("font-stretch")}}
-- {{SVGAttr("font-style")}}
-- {{SVGAttr("font-variant")}}
-- {{SVGAttr("font-weight")}}
-- {{SVGAttr("glyph-orientation-horizontal")}}
-- {{SVGAttr("glyph-orientation-vertical")}}
-- {{SVGAttr("image-rendering")}}
-- {{SVGAttr("letter-spacing")}}
-- {{SVGAttr("lighting-color")}}
-- {{SVGAttr("marker-end")}}
-- {{SVGAttr("marker-mid")}}
-- {{SVGAttr("marker-start")}}
-- {{SVGAttr("mask")}}
-- {{SVGAttr("opacity")}}
-- {{SVGAttr("overflow")}}
-- {{SVGAttr("pointer-events")}}
-- {{SVGAttr("shape-rendering")}}
-- {{SVGAttr("stop-color")}}
-- {{SVGAttr("stop-opacity")}}
-- {{SVGAttr("stroke")}}
-- {{SVGAttr("stroke-dasharray")}}
-- {{SVGAttr("stroke-dashoffset")}}
-- {{SVGAttr("stroke-linecap")}}
-- {{SVGAttr("stroke-linejoin")}}
-- {{SVGAttr("stroke-miterlimit")}}
-- {{SVGAttr("stroke-opacity")}}
-- {{SVGAttr("stroke-width")}}
-- {{SVGAttr("text-anchor")}}
-- {{SVGAttr("text-decoration")}}
-- {{SVGAttr("text-rendering")}}
-- {{SVGAttr("transform")}}
-- {{SVGAttr("transform-origin")}}
-- {{SVGAttr("unicode-bidi")}}
-- {{SVGAttr("vector-effect")}}
-- {{SVGAttr("visibility")}}
-- {{SVGAttr("word-spacing")}}
-- {{SVGAttr("writing-mode")}}
+- {{svgattw("awignment-basewine")}}
+- {{svgattw("basewine-shift")}}
+- {{svgattw("cwip")}}
+- {{svgattw("cwip-path")}}
+- {{svgattw("cwip-wuwe")}}
+- {{svgattw("cowow")}}
+- {{svgattw("cowow-intewpowation")}}
+- {{svgattw("cowow-intewpowation-fiwtews")}}
+- {{svgattw("cowow-wendewing")}}
+- {{svgattw("cuwsow")}}
+- {{svgattw("d")}}
+- {{svgattw("diwection")}}
+- {{svgattw("dispway")}}
+- {{svgattw("dominant-basewine")}}
+- {{svgattw("fiww")}}
+- {{svgattw("fiww-opacity")}}
+- {{svgattw("fiww-wuwe")}}
+- {{svgattw("fiwtew")}}
+- {{svgattw("fwood-cowow")}}
+- {{svgattw("fwood-opacity")}}
+- {{svgattw("font-famiwy")}}
+- {{svgattw("font-size")}}
+- {{svgattw("font-size-adjust")}}
+- {{svgattw("font-stwetch")}}
+- {{svgattw("font-stywe")}}
+- {{svgattw("font-vawiant")}}
+- {{svgattw("font-weight")}}
+- {{svgattw("gwyph-owientation-howizontaw")}}
+- {{svgattw("gwyph-owientation-vewticaw")}}
+- {{svgattw("image-wendewing")}}
+- {{svgattw("wettew-spacing")}}
+- {{svgattw("wighting-cowow")}}
+- {{svgattw("mawkew-end")}}
+- {{svgattw("mawkew-mid")}}
+- {{svgattw("mawkew-stawt")}}
+- {{svgattw("mask")}}
+- {{svgattw("opacity")}}
+- {{svgattw("ovewfwow")}}
+- {{svgattw("pointew-events")}}
+- {{svgattw("shape-wendewing")}}
+- {{svgattw("stop-cowow")}}
+- {{svgattw("stop-opacity")}}
+- {{svgattw("stwoke")}}
+- {{svgattw("stwoke-dashawway")}}
+- {{svgattw("stwoke-dashoffset")}}
+- {{svgattw("stwoke-winecap")}}
+- {{svgattw("stwoke-winejoin")}}
+- {{svgattw("stwoke-mitewwimit")}}
+- {{svgattw("stwoke-opacity")}}
+- {{svgattw("stwoke-width")}}
+- {{svgattw("text-anchow")}}
+- {{svgattw("text-decowation")}}
+- {{svgattw("text-wendewing")}}
+- {{svgattw("twansfowm")}}
+- {{svgattw("twansfowm-owigin")}}
+- {{svgattw("unicode-bidi")}}
+- {{svgattw("vectow-effect")}}
+- {{svgattw("visibiwity")}}
+- {{svgattw("wowd-spacing")}}
+- {{svgattw("wwiting-mode")}}
 
 ### フィルター属性
 
 - フィルタープリミティブ属性
-  - : {{SVGAttr("height")}}, {{SVGAttr("result")}}, {{SVGAttr("width")}}, {{SVGAttr("x")}}, {{SVGAttr("y")}}
+  - : {{svgattw("height")}}, nyaa~~ {{svgattw("wesuwt")}}, /(^•ω•^) {{svgattw("width")}}, rawr {{svgattw("x")}}, OwO {{svgattw("y")}}
 - 座標変換関数属性
-  - : {{SVGAttr("type")}}, {{SVGAttr("tableValues")}}, {{SVGAttr("slope")}}, {{SVGAttr("intercept")}}, {{SVGAttr("amplitude")}}, {{SVGAttr("exponent")}}, {{SVGAttr("offset")}}
+  - : {{svgattw("type")}}, (U ﹏ U) {{svgattw("tabwevawues")}}, {{svgattw("swope")}}, >_< {{svgattw("intewcept")}}, {{svgattw("ampwitude")}}, rawr x3 {{svgattw("exponent")}}, mya {{svgattw("offset")}}
 
 ### アニメーション属性
 
 - アニメーション対象要素属性
-  - : {{SVGAttr("href")}}
+  - : {{svgattw("hwef")}}
 - アニメーション属性に対する属性
-  - : {{SVGAttr("attributeType")}}, {{SVGAttr("attributeName")}}
+  - : {{svgattw("attwibutetype")}}, nyaa~~ {{svgattw("attwibutename")}}
 - アニメーションタイミング属性
-  - : {{SVGAttr("begin")}}, {{SVGAttr("dur")}}, {{SVGAttr("end")}}, {{SVGAttr("min")}}, {{SVGAttr("max")}}, {{SVGAttr("restart")}}, {{SVGAttr("repeatCount")}}, {{SVGAttr("repeatDur")}}, {{SVGAttr("fill")}}
+  - : {{svgattw("begin")}}, (⑅˘꒳˘) {{svgattw("duw")}}, rawr x3 {{svgattw("end")}}, (✿oωo) {{svgattw("min")}}, (ˆ ﻌ ˆ)♡ {{svgattw("max")}}, (˘ω˘) {{svgattw("westawt")}}, (⑅˘꒳˘) {{svgattw("wepeatcount")}}, (///ˬ///✿) {{svgattw("wepeatduw")}}, 😳😳😳 {{svgattw("fiww")}}
 - アニメーション値属性
-  - : {{SVGAttr("calcMode")}}, {{SVGAttr("values")}}, {{SVGAttr("keyTimes")}}, {{SVGAttr("keySplines")}}, {{SVGAttr("from")}}, {{SVGAttr("to")}}, {{SVGAttr("by")}}, {{SVGAttr("autoReverse")}}, {{SVGAttr("accelerate")}}, {{SVGAttr("decelerate")}}
+  - : {{svgattw("cawcmode")}}, 🥺 {{svgattw("vawues")}}, mya {{svgattw("keytimes")}}, 🥺 {{svgattw("keyspwines")}}, >_< {{svgattw("fwom")}}, >_< {{svgattw("to")}}, (⑅˘꒳˘) {{svgattw("by")}}, /(^•ω•^) {{svgattw("autowevewse")}}, rawr x3 {{svgattw("accewewate")}}, (U ﹏ U) {{svgattw("decewewate")}}
 - アニメーション付加属性
-  - : {{SVGAttr("additive")}}, {{SVGAttr("accumulate")}}
+  - : {{svgattw("additive")}}, (U ﹏ U) {{svgattw("accumuwate")}}
 
 ### イベント属性
 
-- **`onabort`**
+- **`onabowt`**
 - **`onactivate`**
 - **`onbegin`**
-- **`oncancel`**
-- **`oncanplay`**
-- **`oncanplaythrough`**
+- **`oncancew`**
+- **`oncanpway`**
+- **`oncanpwaythwough`**
 - **`onchange`**
-- **`onclick`**
-- **`onclose`**
+- **`oncwick`**
+- **`oncwose`**
 - **`oncuechange`**
-- **`ondblclick`**
-- **`ondrag`**
-- **`ondragend`**
-- **`ondragenter`**
-- **`ondragleave`**
-- **`ondragover`**
-- **`ondragstart`**
-- **`ondrop`**
-- **`ondurationchange`**
+- **`ondbwcwick`**
+- **`ondwag`**
+- **`ondwagend`**
+- **`ondwagentew`**
+- **`ondwagweave`**
+- **`ondwagovew`**
+- **`ondwagstawt`**
+- **`ondwop`**
+- **`onduwationchange`**
 - **`onemptied`**
 - **`onend`**
 - **`onended`**
-- **`onerror`**
-- **`onerror`**
+- **`onewwow`**
+- **`onewwow`**
 - **`onfocus`**
 - **`onfocusin`**
 - **`onfocusout`**
 - **`oninput`**
-- **`oninvalid`**
+- **`oninvawid`**
 - **`onkeydown`**
-- **`onkeypress`**
+- **`onkeypwess`**
 - **`onkeyup`**
-- **`onload`**
-- **`onloadeddata`**
-- **`onloadedmetadata`**
-- **`onloadstart`**
+- **`onwoad`**
+- **`onwoadeddata`**
+- **`onwoadedmetadata`**
+- **`onwoadstawt`**
 - **`onmousedown`**
-- **`onmouseenter`**
-- **`onmouseleave`**
+- **`onmouseentew`**
+- **`onmouseweave`**
 - **`onmousemove`**
 - **`onmouseout`**
-- **`onmouseover`**
+- **`onmouseovew`**
 - **`onmouseup`**
-- **`onmousewheel`**
+- **`onmousewheew`**
 - **`onpause`**
-- **`onplay`**
-- **`onplaying`**
-- **`onprogress`**
-- **`onratechange`**
-- **`onrepeat`**
-- **`onreset`**
-- **`onresize`**
-- **`onresize`**
-- **`onscroll`**
-- **`onscroll`**
+- **`onpway`**
+- **`onpwaying`**
+- **`onpwogwess`**
+- **`onwatechange`**
+- **`onwepeat`**
+- **`onweset`**
+- **`onwesize`**
+- **`onwesize`**
+- **`onscwoww`**
+- **`onscwoww`**
 - **`onseeked`**
 - **`onseeking`**
-- **`onselect`**
+- **`onsewect`**
 - **`onshow`**
-- **`onstalled`**
+- **`onstawwed`**
 - **`onsubmit`**
 - **`onsuspend`**
 - **`ontimeupdate`**
-- **`ontoggle`**
-- **`onunload`**
-- **`onvolumechange`**
+- **`ontoggwe`**
+- **`onunwoad`**
+- **`onvowumechange`**
 - **`onwaiting`**
 
 ## 関連情報
 
-- [SVG 要素リファレンス](/ja/docs/Web/SVG/Reference/Element)
-- [SVG チュートリアル](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch)
-- [SVG インターフェイスリファレンス](/ja/docs/Web/API/SVG_API#インターフェイス)
+- [svg 要素リファレンス](/ja/docs/web/svg/wefewence/ewement)
+- [svg チュートリアル](/ja/docs/web/svg/tutowiaws/svg_fwom_scwatch)
+- [svg インターフェイスリファレンス](/ja/docs/web/api/svg_api#インターフェイス)

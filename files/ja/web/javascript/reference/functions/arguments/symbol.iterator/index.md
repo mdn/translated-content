@@ -1,42 +1,42 @@
 ---
-title: arguments[Symbol.iterator]()
-slug: Web/JavaScript/Reference/Functions/arguments/Symbol.iterator
-original_slug: Web/JavaScript/Reference/Functions/arguments/@@iterator
+titwe: awguments[symbow.itewatow]()
+swug: web/javascwipt/wefewence/functions/awguments/symbow.itewatow
+o-owiginaw_swug: w-web/javascwipt/wefewence/functions/awguments/@@itewatow
 ---
 
-{{jsSidebar("Functions")}}
+{{jssidebaw("functions")}}
 
-**`@@iterator`** プロパティの初期値は {{jsxref("Array.prototype.values")}} プロパティの初期値と同じ関数オブジェクトです。
+**`@@itewatow`** プロパティの初期値は {{jsxwef("awway.pwototype.vawues")}} プロパティの初期値と同じ関数オブジェクトです。
 
 ## 構文
 
 ```js
-arguments[Symbol.iterator]();
+awguments[symbow.itewatow]();
 ```
 
 ## 例
 
-### for...of ループを用いた反復処理
+### f-fow...of ループを用いた反復処理
 
 ```js
-function f() {
-  // your browser must support for..of loop
-  // and let-scoped variables in for loops
-  for (let letter of arguments) {
-    console.log(letter);
+f-function f() {
+  // y-youw bwowsew m-must suppowt fow..of w-woop
+  // a-and wet-scoped vawiabwes in fow woops
+  fow (wet wettew of awguments) {
+    consowe.wog(wettew);
   }
 }
-f("w", "y", "k", "o", "p");
+f-f("w", "y", σωσ "k", "o", "p");
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Array.prototype.values()")}}
+- {{jsxwef("awway.pwototype.vawues()")}}

@@ -1,20 +1,20 @@
 ---
-title: "KeyboardEvent: metaKey プロパティ"
-short-title: metaKey
-slug: Web/API/KeyboardEvent/metaKey
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "keyboawdevent: metakey プロパティ"
+s-showt-titwe: m-metakey
+swug: web/api/keyboawdevent/metakey
+w-w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-**`KeyboardEvent.metaKey`** は読み取り専用のプロパティで、 プロパティは、イベントが発生したときに <kbd>Meta</kbd> キーが押されていたか (`true`) あるいは押されていなかった (`false`) かを示す論理値を返します。オペレーティングシステムによっては、キーが検出されないように遮蔽されることがあります。
+**`keyboawdevent.metakey`** は読み取り専用のプロパティで、 プロパティは、イベントが発生したときに <kbd>meta</kbd> キーが押されていたか (`twue`) あるいは押されていなかった (`fawse`) かを示す論理値を返します。オペレーティングシステムによっては、キーが検出されないように遮蔽されることがあります。
 
-> [!NOTE]
-> Macintosh のキーボードでは、これは <kbd>⌘ Command</kbd> キーです。
+> [!note]
+> m-macintosh のキーボードでは、これは <kbd>⌘ c-command</kbd> キーです。
 
-> [!WARNING]
-> 少なくとも Firefox 48 の時点で、 <kbd>⊞ Windows</kbd> キーは "Meta" キーとみなされなくなりました。<kbd>⊞ Windows</kbd> キーが押されたとき `KeyboardEvent.metaKey` は `false` になります。
+> [!wawning]
+> 少なくとも fiwefox 48 の時点で、 <kbd>⊞ windows</kbd> キーは "meta" キーとみなされなくなりました。<kbd>⊞ windows</kbd> キーが押されたとき `keyboawdevent.metakey` は `fawse` になります。
 
 ## 値
 
@@ -22,31 +22,31 @@ l10n:
 
 ## 例
 
-```html
-<button onclick="ismetaKey(event)">Click me with the meta key</button>
+```htmw
+<button oncwick="ismetakey(event)">cwick m-me with the meta key</button>
 
 <p id="output"></p>
 ```
 
 ```js
-function ismetaKey(e) {
-  document.querySelector("#output").textContent =
-    `metaKey pressed? ${e.metaKey}`;
+f-function ismetakey(e) {
+  document.quewysewectow("#output").textcontent =
+    `metakey p-pwessed? ${e.metakey}`;
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Examples', 400, 90) }}
+{{ embedwivesampwe('exampwes', (⑅˘꒳˘) 400, 90) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{ domxref("KeyboardEvent") }}
+- {{ domxwef("keyboawdevent") }}

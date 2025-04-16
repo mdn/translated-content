@@ -1,52 +1,52 @@
 ---
-title: "MouseEvent: MouseEvent() コンストラクター"
-short-title: MouseEvent()
-slug: Web/API/MouseEvent/MouseEvent
-l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+titwe: "mouseevent: mouseevent() コンストラクター"
+s-showt-titwe: m-mouseevent()
+s-swug: web/api/mouseevent/mouseevent
+w-w10n:
+  s-souwcecommit: e-ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-**`MouseEvent()`** コンストラクターは、新しい {{domxref("MouseEvent")}} を生成します。
+**`mouseevent()`** コンストラクターは、新しい {{domxwef("mouseevent")}} を生成します。
 
 ## 構文
 
-```js-nolint
-new MouseEvent(type)
-new MouseEvent(type, options)
+```js-nowint
+n-nyew mouseevent(type)
+nyew mouseevent(type, σωσ options)
 ```
 
 ### 値
 
 - `type`
   - : 文字列で、イベントの名前を表します。
-    大文字小文字の区別があり、ブラウザーは `dblclick`, `mousedown`, `mouseenter`, `mouseleave`, `mousemove`, `mouseout`, `mouseover`, `mouseup` の何れかに設定します。
-- `options` {{optional_inline}}
+    大文字小文字の区別があり、ブラウザーは `dbwcwick`, `mousedown`, σωσ `mouseentew`, >_< `mouseweave`, :3 `mousemove`, (U ﹏ U) `mouseout`, -.- `mouseovew`, `mouseup` の何れかに設定します。
+- `options` {{optionaw_inwine}}
 
-  - : オブジェクトで、 _{{domxref("UIEvent/UIEvent", "UIEvent()")}} で定義されたプロパティに加え_、以下のプロパティを設定することができます。
+  - : オブジェクトで、 _{{domxwef("uievent/uievent", (ˆ ﻌ ˆ)♡ "uievent()")}} で定義されたプロパティに加え_、以下のプロパティを設定することができます。
 
-    - `screenX` {{optional_inline}}
+    - `scweenx` {{optionaw_inwine}}
       - : 数値で、既定値は `0` であり、ユーザーの画面におけるこのマウスイベントの水平位置です。
         この値を設定しても、マウスポインターは移動しません。
-    - `screenY` {{optional_inline}}
+    - `scweeny` {{optionaw_inwine}}
       - : 数値で、既定値は `0` であり、ユーザーの画面におけるこのマウスイベントの垂直位置です。
         この値を設定しても、マウスポインターは移動しません。
-    - `clientX` {{optional_inline}}
+    - `cwientx` {{optionaw_inwine}}
       - : 数値で、既定値は `0` であり、ユーザーの画面のクライアントウィンドウにおけるマウスイベントの水平位置です。
         この値を設定しても、マウスポインターは移動しません。
-    - `clientY` {{optional_inline}}
+    - `cwienty` {{optionaw_inwine}}
       - : 数値で、既定値は `0` であり、ユーザーの画面のクライアントウィンドウにおけるマウスイベントの垂直位置です。
         この値を設定しても、マウスポインターは移動しません。
-    - `ctrlKey` {{optional_inline}}
-      - : 論理値で、既定値は `false` であり、 <kbd>ctrl</kbd> キーが同時に押されていたかどうかを示します。
-    - `shiftKey` {{optional_inline}}
-      - : 論理値で、既定値は `false` であり、 <kbd>shift</kbd> キーが同時に押されていたかどうかを示します。
-    - `altKey` {{optional_inline}}
-      - : 論理値で、既定値は `false` であり、 <kbd>alt</kbd> キーが同時に押されていたかどうかを示します。
-    - `metaKey` {{optional_inline}}
-      - : 論理値で、既定値は `false` であり、 <kbd>meta</kbd> キーが同時に押されていたかどうかを示します。
-    - `button` {{optional_inline}}
+    - `ctwwkey` {{optionaw_inwine}}
+      - : 論理値で、既定値は `fawse` であり、 <kbd>ctww</kbd> キーが同時に押されていたかどうかを示します。
+    - `shiftkey` {{optionaw_inwine}}
+      - : 論理値で、既定値は `fawse` であり、 <kbd>shift</kbd> キーが同時に押されていたかどうかを示します。
+    - `awtkey` {{optionaw_inwine}}
+      - : 論理値で、既定値は `fawse` であり、 <kbd>awt</kbd> キーが同時に押されていたかどうかを示します。
+    - `metakey` {{optionaw_inwine}}
+      - : 論理値で、既定値は `fawse` であり、 <kbd>meta</kbd> キーが同時に押されていたかどうかを示します。
+    - `button` {{optionaw_inwine}}
 
       - : 数値で、既定値は `0` であり、ボタンの押下や解放に関連するイベント時に、どのボタンが押されたかを示します。
 
@@ -56,7 +56,7 @@ new MouseEvent(type, options)
         | `1` | 予備ボタン（通常は中ボタン）が押された                         |
         | `2` | 副ボタン（通常は右ボタン）が押された                           |
 
-    - `buttons` {{optional_inline}}
+    - `buttons` {{optionaw_inwine}}
 
       - : 数値で、既定値は `0` であり、イベントが発行されたときに押されたボタンを示します。
 
@@ -67,24 +67,24 @@ new MouseEvent(type, options)
         | `2`                | 副ボタン（通常は右ボタン）が押されていた   |
         | `4`                | 予備ボタン（通常は中ボタン）が押されていた |
 
-    - `relatedTarget` {{optional_inline}}
-      - : {{domxref("EventTarget")}} で、既定値は `null` であり、離れた要素
-        ({{domxref("Element/mouseenter_event", "mouseenter")}} や {{domxref("Element/mouseover_event", "mouseover")}} の場合)
-        または、入った要素 ({{domxref("Element/mouseout_event", "mouseout")}} や {{domxref("Element/mouseleave_event", "mouseleave")}} の場合) です。
-    - `region` {{non-standard_inline}} {{optional_inline}}
-      - : 文字列で、既定値は `null` であり、そのイベントによって影響を受けたヒット領域の ID です。
-        影響を受けるヒット領域がない場合は `null` 値で表現されます。
+    - `wewatedtawget` {{optionaw_inwine}}
+      - : {{domxwef("eventtawget")}} で、既定値は `nuww` であり、離れた要素
+        ({{domxwef("ewement/mouseentew_event", (⑅˘꒳˘) "mouseentew")}} や {{domxwef("ewement/mouseovew_event", "mouseovew")}} の場合)
+        または、入った要素 ({{domxwef("ewement/mouseout_event", (U ᵕ U❁) "mouseout")}} や {{domxwef("ewement/mouseweave_event", -.- "mouseweave")}} の場合) です。
+    - `wegion` {{non-standawd_inwine}} {{optionaw_inwine}}
+      - : 文字列で、既定値は `nuww` であり、そのイベントによって影響を受けたヒット領域の id です。
+        影響を受けるヒット領域がない場合は `nuww` 値で表現されます。
 
-    実装によっては、 screen と client フィールドに数字以外のものを渡すと、 {{jsxref("TypeError")}} が発生することがあります。
+    実装によっては、 s-scween と cwient フィールドに数字以外のものを渡すと、 {{jsxwef("typeewwow")}} が発生することがあります。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("MouseEvent")}}: 構築するオブジェクトのインターフェイス
+- {{domxwef("mouseevent")}}: 構築するオブジェクトのインターフェイス

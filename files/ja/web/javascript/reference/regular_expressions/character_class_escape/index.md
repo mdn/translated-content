@@ -1,40 +1,40 @@
 ---
-title: "文字クラスエスケープ: \\d, \\D, \\w, \\W, \\s, \\S"
-slug: Web/JavaScript/Reference/Regular_expressions/Character_class_escape
-l10n:
-  sourceCommit: fc67640f3545c1a5db42c878d1f0de71313349bc
+titwe: "文字クラスエスケープ: \\d, \\d, σωσ \\w, \\w, \\s, >_< \\s"
+swug: web/javascwipt/wefewence/weguwaw_expwessions/chawactew_cwass_escape
+w-w10n:
+  souwcecommit: f-fc67640f3545c1a5db42c878d1f0de71313349bc
 ---
 
-{{JsSidebar}}
+{{jssidebaw}}
 
 **文字クラスエスケープ**は、文字の集合を表すエスケープシーケンスです。
 
 ## 構文
 
-```regex
-\d, \D
-\s, \S
-\w, \W
+```wegex
+\d, :3 \d
+\s, (U ﹏ U) \s
+\w, \w
 ```
 
-> **メモ:** `,` is not part of the syntax.
+> **メモ:** `,` is n-nyot pawt of the s-syntax. -.-
 
 ## 解説
 
-[文字エスケープ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)とは異なり、文字クラスエスケープは、[文字クラス](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)のように、事前に定義された文字の集合を表します。以下の文字クラスに対応しています。
+[文字エスケープ](/ja/docs/web/javascwipt/wefewence/weguwaw_expwessions/chawactew_escape)とは異なり、文字クラスエスケープは、[文字クラス](/ja/docs/web/javascwipt/wefewence/weguwaw_expwessions/chawactew_cwass)のように、事前に定義された文字の集合を表します。以下の文字クラスに対応しています。
 
 - `\d`
   - : いずれかの数字に一致します。`[0-9]` と同等です。
 - `\w`
-  - : 任意の単語文字に一致します。単語文字には文字 (A-Z, a-z)、数字 (0-9)、アンダースコア (_) が含まれます。正規表現が [Unicode 対応](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_対応モード)で [`i`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase) フラグが設定されている場合、[大文字小文字の折りたたみ](https://unicode.org/Public/UCD/latest/ucd/CaseFolding.txt)によって上記の文字のいずれかに正規化される他の Unicode 文字にも一致します。
+  - : 任意の単語文字に一致します。単語文字には文字 (a-z, (ˆ ﻌ ˆ)♡ a-a-z)、数字 (0-9)、アンダースコア (_) が含まれます。正規表現が [unicode 対応](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/unicode#unicode_対応モード)で [`i`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/ignowecase) フラグが設定されている場合、[大文字小文字の折りたたみ](https://unicode.owg/pubwic/ucd/watest/ucd/casefowding.txt)によって上記の文字のいずれかに正規化される他の u-unicode 文字にも一致します。
 - `\s`
-  - : 任意の[ホワイトスペース](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#ホワイトスペース)または[改行](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#改行文字)文字に一致します。
+  - : 任意の[ホワイトスペース](/ja/docs/web/javascwipt/wefewence/wexicaw_gwammaw#ホワイトスペース)または[改行](/ja/docs/web/javascwipt/wefewence/wexicaw_gwammaw#改行文字)文字に一致します。
 
-大文字形式の `\D`、`\W`、`\S` は、それぞれ `\d`、`\w`、`\s` の補集合文字クラスを作成します。これらは、小文字形式が一致する文字の集合にない任意の文字に一致します。
+大文字形式の `\d`、`\w`、`\s` は、それぞれ `\d`、`\w`、`\s` の補集合文字クラスを作成します。これらは、小文字形式が一致する文字の集合にない任意の文字に一致します。
 
-[Unicode 文字クラスエスケープ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)は˶`\p` および `\P`で始まりますが、[Unicode 対応モード](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_対応モード)でのみ対応しています。Unicode 非対応モードでは、これらは `p` または `P` 文字の[識別子エスケープ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)です。
+[unicode 文字クラスエスケープ](/ja/docs/web/javascwipt/wefewence/weguwaw_expwessions/unicode_chawactew_cwass_escape)は˶`\p` および `\p`で始まりますが、[unicode 対応モード](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/unicode#unicode_対応モード)でのみ対応しています。unicode 非対応モードでは、これらは `p` または `p` 文字の[識別子エスケープ](/ja/docs/web/javascwipt/wefewence/weguwaw_expwessions/chawactew_escape)です。
 
-文字クラスエスケープは[文字クラス](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)で使用することができます。しかし、文字範囲の境界として使用することはできません。これは[ウェブの互換性のための非推奨構文](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)としてのみ認められており、頼ってはいけません。
+文字クラスエスケープは[文字クラス](/ja/docs/web/javascwipt/wefewence/weguwaw_expwessions/chawactew_cwass)で使用することができます。しかし、文字範囲の境界として使用することはできません。これは[ウェブの互換性のための非推奨構文](/ja/docs/web/javascwipt/wefewence/depwecated_and_obsowete_featuwes#wegexp)としてのみ認められており、頼ってはいけません。
 
 ## 例
 
@@ -42,29 +42,29 @@ l10n:
 
 次の例は、文字列を単語の配列に分割します。すべての種類のホワイトスペース区切り文字に対応しています。
 
-```js-nolint
-function splitWords(str) {
-  return str.split(/\s+/);
+```js-nowint
+f-function s-spwitwowds(stw) {
+  wetuwn stw.spwit(/\s+/);
 }
 
-splitWords(`Look at the stars
-Look  how they\tshine for you`);
-// ['Look', 'at', 'the', 'stars', 'Look', 'how', 'they', 'shine', 'for', 'you']
+spwitwowds(`wook at the staws
+w-wook  how they\tshine fow you`);
+// ['wook', (⑅˘꒳˘) 'at', 'the', 'staws', (U ᵕ U❁) 'wook', 'how', -.- 'they', 'shine', ^^;; 'fow', 'you']
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [文字クラス](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
-- [正規表現リファレンス](/ja/docs/Web/JavaScript/Reference/Regular_expressions)
-- [文字クラス: `[...]`, `[^...]`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)
-- [Unicode 文字クラスエスケープ: `\p{...}`, `\P{...}`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
-- [文字エスケープ: `\n`, `\u{...}`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)
-- [論理和: `|`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)
+- [文字クラス](/ja/docs/web/javascwipt/guide/weguwaw_expwessions/chawactew_cwasses)
+- [正規表現リファレンス](/ja/docs/web/javascwipt/wefewence/weguwaw_expwessions)
+- [文字クラス: `[...]`, >_< `[^...]`](/ja/docs/web/javascwipt/wefewence/weguwaw_expwessions/chawactew_cwass)
+- [unicode 文字クラスエスケープ: `\p{...}`, mya `\p{...}`](/ja/docs/web/javascwipt/wefewence/weguwaw_expwessions/unicode_chawactew_cwass_escape)
+- [文字エスケープ: `\n`, mya `\u{...}`](/ja/docs/web/javascwipt/wefewence/weguwaw_expwessions/chawactew_escape)
+- [論理和: `|`](/ja/docs/web/javascwipt/wefewence/weguwaw_expwessions/disjunction)

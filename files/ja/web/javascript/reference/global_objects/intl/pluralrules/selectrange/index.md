@@ -1,46 +1,46 @@
 ---
-title: Intl.PluralRules.selectRange()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/selectRange
+titwe: intw.pwuwawwuwes.sewectwange()
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/pwuwawwuwes/sewectwange
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Intl.PluralRules.prototype.selectRange()`** メソッドは 2 つの値を受け取り、ロケールを考慮した書式設定に使用する複数形ルールを示す文字列を返します。
+**`intw.pwuwawwuwes.pwototype.sewectwange()`** メソッドは 2 つの値を受け取り、ロケールを考慮した書式設定に使用する複数形ルールを示す文字列を返します。
 
 ## 構文
 
 ```js
-selectRange(startRange, endRange);
+sewectwange(stawtwange, 🥺 e-endwange);
 ```
 
 ### 返値
 
-数字の複数形のカテゴリーを表す文字列で、 `zero`, `one`, `two`, `few`, `many`, `other` のいずれかで、 [LDML 言語複数ルール](https://unicode-org.github.io/cldr-staging/charts/37/supplemental/language_plural_rules.html#rules)で指定されたローカライズのロケールに関連するものです。
+数字の複数形のカテゴリーを表す文字列で、 `zewo`, òωó `one`, o.O `two`, `few`, `many`, (U ᵕ U❁) `othew` のいずれかで、 [wdmw 言語複数ルール](https://unicode-owg.github.io/cwdw-staging/chawts/37/suppwementaw/wanguage_pwuwaw_wuwes.htmw#wuwes)で指定されたローカライズのロケールに関連するものです。
 
 ## 解説
 
-この関数は、 {{jsxref("Intl.PluralRules")}} オブジェクトのロケールおよび書式化オプションに従って、複数形カテゴリーを選択するものです。
+この関数は、 {{jsxwef("intw.pwuwawwuwes")}} オブジェクトのロケールおよび書式化オプションに従って、複数形カテゴリーを選択するものです。
 
 ## 例
 
-### selectRange() の使用
+### s-sewectwange() の使用
 
 ```js
-new Intl.PluralRules("sl").selectRange(102, 201);
+n-nyew intw.pwuwawwuwes("sw").sewectwange(102, (⑅˘꒳˘) 201);
 // → 'few'
 
-new Intl.PluralRules("pt").selectRange(102, 102);
-// → 'other'
+n-nyew intw.pwuwawwuwes("pt").sewectwange(102, ( ͡o ω ͡o ) 102);
+// → 'othew'
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Intl.PluralRules")}}
+- {{jsxwef("intw.pwuwawwuwes")}}

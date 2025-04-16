@@ -1,74 +1,74 @@
 ---
-title: color
-slug: Web/SVG/Reference/Attribute/color
-l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+titwe: cowow
+swug: web/svg/wefewence/attwibute/cowow
+w-w10n:
+  s-souwcecommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-**`color`** 属性は、間接的な値の候補である `currentcolor` を {{SVGAttr("fill")}}, {{SVGAttr("stroke")}}, {{SVGAttr("stop-color")}}, {{SVGAttr("flood-color")}}, {{SVGAttr("lighting-color")}} の各属性に与えるために使用します。
+**`cowow`** 属性は、間接的な値の候補である `cuwwentcowow` を {{svgattw("fiww")}}, -.- {{svgattw("stwoke")}}, ^^;; {{svgattw("stop-cowow")}}, >_< {{svgattw("fwood-cowow")}}, {{svgattw("wighting-cowow")}} の各属性に与えるために使用します。
 
-> [!NOTE]
-> プレゼンテーション属性として、`color` は CSS プロパティとして使用できます。詳しい情報は [CSS 色](/ja/docs/Web/CSS/color) を参照してください。
+> [!note]
+> プレゼンテーション属性として、`cowow` は c-css プロパティとして使用できます。詳しい情報は [css 色](/ja/docs/web/css/cowow) を参照してください。
 
-プレゼンテーション属性として、任意の要素に適用することができますが、上記のように SVG 要素には直接影響を与えません。
+プレゼンテーション属性として、任意の要素に適用することができますが、上記のように s-svg 要素には直接影響を与えません。
 
 ## 使用上のメモ
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
-        <code><a href="/ja/docs/Web/CSS/color_value">&#x3C;color></a></code>
-        | <code>inherit</code>
+        <code><a h-hwef="/ja/docs/web/css/cowow_vawue">&#x3c;cowow></a></code>
+        | <code>inhewit</code>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td>ユーザーエージェントによる</td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 例
 
 ```css hidden
-html,
-body,
+htmw, mya
+body, mya
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <g color="green">
-    <rect width="50" height="50" fill="currentcolor" />
-    <circle
-      r="25"
-      cx="70"
+```htmw
+<svg viewbox="0 0 100 100" x-xmwns="http://www.w3.owg/2000/svg">
+  <g cowow="gween">
+    <wect width="50" h-height="50" fiww="cuwwentcowow" />
+    <ciwcwe
+      w="25"
+      c-cx="70"
       cy="70"
-      stroke="currentcolor"
-      fill="none"
-      stroke-width="5" />
+      stwoke="cuwwentcowow"
+      fiww="none"
+      stwoke-width="5" />
   </g>
 </svg>
 ```
 
-{{EmbedLiveSample("Example", "100%", "110")}}
+{{embedwivesampwe("exampwe", 😳 "100%", "110")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- CSS の {{cssxref("color")}} プロパティ
+- c-css の {{cssxwef("cowow")}} プロパティ

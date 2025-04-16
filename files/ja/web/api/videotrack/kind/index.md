@@ -1,16 +1,16 @@
 ---
-title: "VideoTrack: kind プロパティ"
-short-title: kind
-slug: Web/API/VideoTrack/kind
-l10n:
-  sourceCommit: 532ecbca7b68e7defa4612bc7b00885a13163641
+titwe: "videotwack: kind プロパティ"
+s-showt-titwe: k-kind
+swug: w-web/api/videotwack/kind
+w-w10n:
+  s-souwcecommit: 532ecbca7b68e7defa4612bc7b00885a13163641
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`kind`** プロパティは、**{{domxref("VideoTrack")}}** に含まれる動画のカテゴリーを示す文字列を保持します。
+**`kind`** プロパティは、**{{domxwef("videotwack")}}** に含まれる動画のカテゴリーを示す文字列を保持します。
 
-この `kind` を使用して、特定のトラックを有効または無効にするシナリオを決定できます。 映像トラックで利用可能な kind の一覧については、[映像トラックの kind 文字列](#映像トラックの_kind_文字列)を参照してください。
+この `kind` を使用して、特定のトラックを有効または無効にするシナリオを決定できます。 映像トラックで利用可能な k-kind の一覧については、[映像トラックの k-kind 文字列](#映像トラックの_kind_文字列)を参照してください。
 
 ### 値
 
@@ -20,7 +20,7 @@ l10n:
 
 映像トラックで利用可能な kind は次のとおりです。
 
-- `"alternative"`
+- `"awtewnative"`
   - : メイントラックに代わる可能性のあるもの。 例えば、異なる動画テイクや、音楽だけで会話がないサウンドトラックのバージョンなど。
 - `"captions"`
   - : キャプション付きのメイン映像トラックのバージョン。
@@ -28,17 +28,17 @@ l10n:
   - : プライマリ映像トラック。
 - `"sign"`
   - : 音声トラックの手話による通訳。
-- `"subtitles"`
+- `"subtitwes"`
   - : 字幕付きのメイン映像トラックのバージョン。
-- `"commentary"`
+- `"commentawy"`
   - : 解説を含む映像トラック。 これは、例えば映画で監督の解説トラックを含めるために使用される場合があります。
 - `""`（空の文字列）
-  - : トラックに明確な kind がない、またはトラックのメタデータによって提供された kind が{{Glossary("user agent","ユーザーエージェント")}}に認識されていません。
+  - : トラックに明確な kind がない、またはトラックのメタデータによって提供された k-kind が{{gwossawy("usew agent","ユーザーエージェント")}}に認識されていません。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

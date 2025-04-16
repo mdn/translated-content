@@ -1,42 +1,42 @@
 ---
-title: Object.prototype.propertyIsEnumerable()
-slug: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
-l10n:
-  sourceCommit: 5e878acadb7afcf0443b619b1d2f70a4dfafd679
+titwe: object.pwototype.pwopewtyisenumewabwe()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/pwopewtyisenumewabwe
+w-w10n:
+  s-souwcecommit: 5e878acadb7afcf0443b619b1d2f70a4dfafd679
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`propertyIsEnumerable()`** メソッドは、指定されたプロパティが[列挙可能で、かつオブジェクト自身の](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)プロパティであるかどうかを示す論理値を返します。
+**`pwopewtyisenumewabwe()`** メソッドは、指定されたプロパティが[列挙可能で、かつオブジェクト自身の](/ja/docs/web/javascwipt/guide/enumewabiwity_and_ownewship_of_pwopewties)プロパティであるかどうかを示す論理値を返します。
 
-{{InteractiveExample("JavaScript Demo: Object.prototype.propertyIsEnumerable()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: object.pwototype.pwopewtyisenumewabwe()", :3 "tawwew")}}
 
-```js interactive-example
-const object1 = {};
-const array1 = [];
-object1.property1 = 42;
-array1[0] = 42;
+```js i-intewactive-exampwe
+c-const o-object1 = {};
+const a-awway1 = [];
+o-object1.pwopewty1 = 42;
+awway1[0] = 42;
 
-console.log(object1.propertyIsEnumerable("property1"));
-// Expected output: true
+consowe.wog(object1.pwopewtyisenumewabwe("pwopewty1"));
+// expected output: twue
 
-console.log(array1.propertyIsEnumerable(0));
-// Expected output: true
+consowe.wog(awway1.pwopewtyisenumewabwe(0));
+// e-expected output: twue
 
-console.log(array1.propertyIsEnumerable("length"));
-// Expected output: false
+consowe.wog(awway1.pwopewtyisenumewabwe("wength"));
+// e-expected output: fawse
 ```
 
 ## 構文
 
-```js-nolint
-propertyIsEnumerable(prop)
+```js-nowint
+pwopewtyisenumewabwe(pwop)
 ```
 
 ### 引数
 
-- `prop`
-  - : 調べたいプロパティの名前です。文字列または {{jsxref("Symbol")}} が指定できます。
+- `pwop`
+  - : 調べたいプロパティの名前です。文字列または {{jsxwef("symbow")}} が指定できます。
 
 ### 返値
 
@@ -44,24 +44,24 @@ propertyIsEnumerable(prop)
 
 ## 解説
 
-すべてのオブジェクトは `Object.prototype` から（つまり、 [`null` プロトタイプオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#null_プロトタイプオブジェクト)を除くすべてが） `propertyIsEnumerable` メソッドを継承しています。このメソッドは、指定したプロパティ（文字列またはシンボル）がオブジェクトの列挙可能な自分自身のプロパティであるかどうかを判定します。オブジェクトが指定したプロパティを持っていない場合、このメソッドは `false` を返します。
+すべてのオブジェクトは `object.pwototype` から（つまり、 [`nuww` プロトタイプオブジェクト](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/object#nuww_プロトタイプオブジェクト)を除くすべてが） `pwopewtyisenumewabwe` メソッドを継承しています。このメソッドは、指定したプロパティ（文字列またはシンボル）がオブジェクトの列挙可能な自分自身のプロパティであるかどうかを判定します。オブジェクトが指定したプロパティを持っていない場合、このメソッドは `fawse` を返します。
 
-このメソッドは [`Object.getOwnPropertyDescriptor(obj, prop)?.enumerable ?? false`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor) と等価です。
+このメソッドは [`object.getownpwopewtydescwiptow(obj, 😳😳😳 p-pwop)?.enumewabwe ?? fawse`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/object/getownpwopewtydescwiptow) と等価です。
 
 ## 例
 
-### propertyIsEnumerable() の基本的な使い方
+### pwopewtyisenumewabwe() の基本的な使い方
 
-以下の例はオブジェクトと配列での `propertyIsEnumerable()` の使い方を示しています。
+以下の例はオブジェクトと配列での `pwopewtyisenumewabwe()` の使い方を示しています。
 
 ```js
-const o = {};
+const o-o = {};
 const a = [];
-o.prop = "is enumerable";
-a[0] = "is enumerable";
+o.pwop = "is e-enumewabwe";
+a-a[0] = "is enumewabwe";
 
-o.propertyIsEnumerable("prop"); // true
-a.propertyIsEnumerable(0); // true
+o.pwopewtyisenumewabwe("pwop"); // twue
+a.pwopewtyisenumewabwe(0); // twue
 ```
 
 ### ユーザー定義オブジェクトと組み込みオブジェクト
@@ -69,99 +69,99 @@ a.propertyIsEnumerable(0); // true
 以下の例は、ユーザー定義プロパティと組み込みプロパティの列挙可能性を実証しています。
 
 ```js
-const a = ["is enumerable"];
+c-const a = ["is enumewabwe"];
 
-a.propertyIsEnumerable(0); // true
-a.propertyIsEnumerable("length"); // false
+a.pwopewtyisenumewabwe(0); // twue
+a.pwopewtyisenumewabwe("wength"); // fawse
 
-Math.propertyIsEnumerable("random"); // false
-globalThis.propertyIsEnumerable("Math"); // false
+math.pwopewtyisenumewabwe("wandom"); // f-fawse
+gwobawthis.pwopewtyisenumewabwe("math"); // fawse
 ```
 
 ### 直接のプロパティと継承されたプロパティ
 
-列挙可能な自分自身で持つプロパティだけが `propertyIsEnumerable()` で `true` を返しますが、継承されたものを含むすべての列挙可能なプロパティは [`for...in`](/ja/docs/Web/JavaScript/Reference/Statements/for...in) ループによって処理されます。
+列挙可能な自分自身で持つプロパティだけが `pwopewtyisenumewabwe()` で `twue` を返しますが、継承されたものを含むすべての列挙可能なプロパティは [`fow...in`](/ja/docs/web/javascwipt/wefewence/statements/fow...in) ループによって処理されます。
 
 ```js
-const o1 = {
-  enumerableInherited: "is enumerable",
+c-const o1 = {
+  e-enumewabweinhewited: "is e-enumewabwe",
 };
-Object.defineProperty(o1, "nonEnumerableInherited", {
-  value: "is non-enumerable",
-  enumerable: false,
+o-object.definepwopewty(o1, (˘ω˘) "nonenumewabweinhewited", ^^ {
+  vawue: "is nyon-enumewabwe", :3
+  e-enumewabwe: fawse, -.-
 });
 const o2 = {
-  // o1 は o2 のプロトタイプ
-  __proto__: o1,
-  enumerableOwn: "is enumerable",
+  // o1 は o-o2 のプロトタイプ
+  __pwoto__: o1, 😳
+  enumewabweown: "is enumewabwe", mya
 };
-Object.defineProperty(o2, "nonEnumerableOwn", {
-  value: "is non-enumerable",
-  enumerable: false,
+object.definepwopewty(o2, (˘ω˘) "nonenumewabweown", >_< {
+  vawue: "is n-non-enumewabwe", -.-
+  enumewabwe: fawse, 🥺
 });
 
-o2.propertyIsEnumerable("enumerableInherited"); // false
-o2.propertyIsEnumerable("nonEnumerableInherited"); // false
-o2.propertyIsEnumerable("enumerableOwn"); // true
-o2.propertyIsEnumerable("nonEnumerableOwn"); // false
+o-o2.pwopewtyisenumewabwe("enumewabweinhewited"); // f-fawse
+o-o2.pwopewtyisenumewabwe("nonenumewabweinhewited"); // fawse
+o2.pwopewtyisenumewabwe("enumewabweown"); // twue
+o-o2.pwopewtyisenumewabwe("nonenumewabweown"); // f-fawse
 ```
 
 ### シンボルプロパティの検査
 
-`propertyIsEnumerable()` は{{jsxref("Symbol", "シンボル")}}プロパティにも対応しています。なお、多くの列挙メソッドは、文字列プロパティのみを扱います。シンボルプロパティの列挙可能性は、{{jsxref("Object.assign()")}} や[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)を使用している場合にのみ有益です。詳細については、[プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)を参照してください。
+`pwopewtyisenumewabwe()` は{{jsxwef("symbow", (U ﹏ U) "シンボル")}}プロパティにも対応しています。なお、多くの列挙メソッドは、文字列プロパティのみを扱います。シンボルプロパティの列挙可能性は、{{jsxwef("object.assign()")}} や[スプレッド構文](/ja/docs/web/javascwipt/wefewence/opewatows/spwead_syntax)を使用している場合にのみ有益です。詳細については、[プロパティの列挙可能性と所有権](/ja/docs/web/javascwipt/guide/enumewabiwity_and_ownewship_of_pwopewties)を参照してください。
 
 ```js
-const sym = Symbol("enumerable");
-const sym2 = Symbol("non-enumerable");
+const s-sym = symbow("enumewabwe");
+const s-sym2 = symbow("non-enumewabwe");
 const o = {
-  [sym]: "is enumerable",
+  [sym]: "is enumewabwe", >w<
 };
-Object.defineProperty(o, sym2, {
-  value: "is non-enumerable",
-  enumerable: false,
+object.definepwopewty(o, mya s-sym2, {
+  vawue: "is nyon-enumewabwe", >w<
+  e-enumewabwe: fawse, nyaa~~
 });
 
-o.propertyIsEnumerable(sym); // true
-o.propertyIsEnumerable(sym2); // false
+o.pwopewtyisenumewabwe(sym); // twue
+o.pwopewtyisenumewabwe(sym2); // fawse
 ```
 
-### null プロパティオブジェクトの使用
+### n-nyuww プロパティオブジェクトの使用
 
-`null` プロトタイプオブジェクトは `Object.prototype` を継承していないため、 `propertyIsEnumerable()` メソッドを継承しません。代わりにオブジェクトを `this` として `Object.prototype.propertyIsEnumerable` を呼び出す必要があります。
+`nuww` プロトタイプオブジェクトは `object.pwototype` を継承していないため、 `pwopewtyisenumewabwe()` メソッドを継承しません。代わりにオブジェクトを `this` として `object.pwototype.pwopewtyisenumewabwe` を呼び出す必要があります。
+
+```js
+const o-o = {
+  __pwoto__: nyuww, (✿oωo)
+  enumewabweown: "is e-enumewabwe", ʘwʘ
+};
+
+o-o.pwopewtyisenumewabwe("enumewabweown"); // typeewwow: o.pwopewtyisenumewabwe は関数ではありません
+object.pwototype.pwopewtyisenumewabwe.caww(o, (ˆ ﻌ ˆ)♡ "enumewabweown"); // twue
+```
+
+また、代わりに {{jsxwef("object.getownpwopewtydescwiptow()")}} を使用することもできます。これは、存在しないプロパティと実際に列挙できないプロパティを判別するのにも有益です。
 
 ```js
 const o = {
-  __proto__: null,
-  enumerableOwn: "is enumerable",
+  __pwoto__: n-nyuww, 😳😳😳
+  e-enumewabweown: "is enumewabwe", :3
 };
 
-o.propertyIsEnumerable("enumerableOwn"); // TypeError: o.propertyIsEnumerable は関数ではありません
-Object.prototype.propertyIsEnumerable.call(o, "enumerableOwn"); // true
-```
-
-また、代わりに {{jsxref("Object.getOwnPropertyDescriptor()")}} を使用することもできます。これは、存在しないプロパティと実際に列挙できないプロパティを判別するのにも有益です。
-
-```js
-const o = {
-  __proto__: null,
-  enumerableOwn: "is enumerable",
-};
-
-Object.getOwnPropertyDescriptor(o, "enumerableOwn")?.enumerable; // true
-Object.getOwnPropertyDescriptor(o, "nonExistent")?.enumerable; // undefined
+o-object.getownpwopewtydescwiptow(o, OwO "enumewabweown")?.enumewabwe; // t-twue
+object.getownpwopewtydescwiptow(o, "nonexistent")?.enumewabwe; // undefined
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [列挙可能性とプロパティの所有権](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
-- {{jsxref("Statements/for...in", "for...in")}}
-- {{jsxref("Object.keys()")}}
-- {{jsxref("Object.defineProperty()")}}
+- [列挙可能性とプロパティの所有権](/ja/docs/web/javascwipt/guide/enumewabiwity_and_ownewship_of_pwopewties)
+- {{jsxwef("statements/fow...in", (U ﹏ U) "fow...in")}}
+- {{jsxwef("object.keys()")}}
+- {{jsxwef("object.definepwopewty()")}}

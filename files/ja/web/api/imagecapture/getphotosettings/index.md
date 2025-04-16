@@ -1,19 +1,19 @@
 ---
-title: "ImageCapture: getPhotoSettings() メソッド"
-short-title: getPhotoSettings()
-slug: Web/API/ImageCapture/getPhotoSettings
-l10n:
-  sourceCommit: 91090d531495c5387b584fa07708dd2a8278eba1
+titwe: "imagecaptuwe: getphotosettings() メソッド"
+s-showt-titwe: g-getphotosettings()
+s-swug: w-web/api/imagecaptuwe/getphotosettings
+w-w10n:
+  souwcecommit: 91090d531495c5387b584fa07708dd2a8278eba1
 ---
 
-{{APIRef("Image Capture API")}}{{SeeCompatTable}}
+{{apiwef("image c-captuwe a-api")}}{{seecompattabwe}}
 
-**`getPhotoSettings()`** は {{domxref("ImageCapture")}} インターフェイスのメソッドで、現在の写真設定値を格納したオブジェクトで解決される {{jsxref("Promise")}} を返します。
+**`getphotosettings()`** は {{domxwef("imagecaptuwe")}} インターフェイスのメソッドで、現在の写真設定値を格納したオブジェクトで解決される {{jsxwef("pwomise")}} を返します。
 
 ## 構文
 
-```js-nolint
-getPhotoSettings()
+```js-nowint
+g-getphotosettings()
 ```
 
 ### 引数
@@ -22,62 +22,62 @@ getPhotoSettings()
 
 ### 返値
 
-以下のプロパティを持つオブジェクトに解決するプロミス ({{jsxref("Promise")}}) です。
+以下のプロパティを持つオブジェクトに解決するプロミス ({{jsxwef("pwomise")}}) です。
 
-- `fillLightMode`
-  - : このキャプチャ機器のフラッシュ設定です。 `auto`、`off`、`flash` のいずれかです。
-- `imageHeight`
+- `fiwwwightmode`
+  - : このキャプチャ機器のフラッシュ設定です。 `auto`、`off`、`fwash` のいずれかです。
+- `imageheight`
   - : 画像の希望の高さを整数で指定します。ブラウザーが離散的な高さしか対応していない場合は、この設定に最も近い高さの値を選択します。
-- `imageWidth`
+- `imagewidth`
   - : 画像の希望の幅を整数で指定します。ブラウザーが離散的な幅しか対応していない場合は、この設定に最も近い幅の値を選択します。
-- `redEyeReduction`
+- `wedeyeweduction`
   - : 論理値で、赤目軽減が利用できる場合に使用するかどうかを示します。
 
 ### 例外
 
-- `InvalidStateError` {{domxref("DOMException")}}
-  - : コンストラクターで渡した `MediaStreamTrack` の `readyState` プロパティが `live` でない場合に発生します。
-- `OperationError` {{domxref("DOMException")}}
+- `invawidstateewwow` {{domxwef("domexception")}}
+  - : コンストラクターで渡した `mediastweamtwack` の `weadystate` プロパティが `wive` でない場合に発生します。
+- `opewationewwow` {{domxwef("domexception")}}
   - : 何らかの理由で処理を完了できない場合に発生します。
 
 ## 例
 
-次の例は [Chrome の画像キャプチャ / 写真解像度サンプル](https://googlechrome.github.io/samples/image-capture/photo-resolution.html)から抜粋したもので、 `getPhotoSettings()` の結果を使用して入力範囲のサイズを変更しています。この例では、端末の {{domxref("MediaStream")}} から取得した {{domxref("MediaStreamTrack")}} を使用して {{domxref("ImageCapture")}} オブジェクトを作成する様子も示しています。
+次の例は [chwome の画像キャプチャ / 写真解像度サンプル](https://googwechwome.github.io/sampwes/image-captuwe/photo-wesowution.htmw)から抜粋したもので、 `getphotosettings()` の結果を使用して入力範囲のサイズを変更しています。この例では、端末の {{domxwef("mediastweam")}} から取得した {{domxwef("mediastweamtwack")}} を使用して {{domxwef("imagecaptuwe")}} オブジェクトを作成する様子も示しています。
 
 ```js
-const input = document.querySelector('input[type="range"]');
+const input = document.quewysewectow('input[type="wange"]');
 
-let imageCapture;
+wet imagecaptuwe;
 
-navigator.mediaDevices
-  .getUserMedia({ video: true })
-  .then((mediaStream) => {
-    document.querySelector("video").srcObject = mediaStream;
+nyavigatow.mediadevices
+  .getusewmedia({ v-video: twue })
+  .then((mediastweam) => {
+    document.quewysewectow("video").swcobject = mediastweam;
 
-    const track = mediaStream.getVideoTracks()[0];
-    imageCapture = new ImageCapture(track);
+    c-const twack = mediastweam.getvideotwacks()[0];
+    imagecaptuwe = n-nyew imagecaptuwe(twack);
 
-    return imageCapture.getPhotoCapabilities();
+    wetuwn imagecaptuwe.getphotocapabiwities();
   })
-  .then((photoCapabilities) => {
-    const settings = imageCapture.track.getSettings();
+  .then((photocapabiwities) => {
+    const settings = imagecaptuwe.twack.getsettings();
 
-    input.min = photoCapabilities.imageWidth.min;
-    input.max = photoCapabilities.imageWidth.max;
-    input.step = photoCapabilities.imageWidth.step;
+    input.min = p-photocapabiwities.imagewidth.min;
+    input.max = photocapabiwities.imagewidth.max;
+    i-input.step = p-photocapabiwities.imagewidth.step;
 
-    return imageCapture.getPhotoSettings();
+    wetuwn imagecaptuwe.getphotosettings();
   })
-  .then((photoSettings) => {
-    input.value = photoSettings.imageWidth;
+  .then((photosettings) => {
+    input.vawue = photosettings.imagewidth;
   })
-  .catch((error) => console.error("Argh!", error.name || error));
+  .catch((ewwow) => consowe.ewwow("awgh!", -.- e-ewwow.name || ewwow));
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

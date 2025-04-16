@@ -1,94 +1,94 @@
 ---
-title: イベントの扱い (概要)
-slug: Web/Events/Event_handlers
-l10n:
-  sourceCommit: 857c6f9e7f1a847e7d3466b0d047159f7b345991
+titwe: イベントの扱い (概要)
+swug: web/events/event_handwews
+w-w10n:
+  s-souwcecommit: 857c6f9e7f1a847e7d3466b0d047159f7b345991
 ---
 
-イベントとは、ブラウザーや OS の環境の変化を知らせる信号で、ブラウザーのウィンドウ内で発行されます。プログラマーは、イベントが発行されたときに実行される*イベントハンドラー*のコードを作成することで、ウェブページが変化に適切に対応できるようになります。
+イベントとは、ブラウザーや o-os の環境の変化を知らせる信号で、ブラウザーのウィンドウ内で発行されます。プログラマーは、イベントが発行されたときに実行される*イベントハンドラー*のコードを作成することで、ウェブページが変化に適切に対応できるようになります。
 
-このページでは、イベントとイベントハンドラーの扱い方について、ごく簡単な「覚え書き」を提供しています。初めての方は、[イベント入門](/ja/docs/Learn_web_development/Core/Scripting/Events)をお読みください。
+このページでは、イベントとイベントハンドラーの扱い方について、ごく簡単な「覚え書き」を提供しています。初めての方は、[イベント入門](/ja/docs/weawn_web_devewopment/cowe/scwipting/events)をお読みください。
 
 ## イベントでは何ができるのか
 
-イベントは、そのイベントを発行させる JavaScript オブジェクトのページの中や下に記述されています。例えば、ブラウザーのウィンドウや現在の文書で発生したイベントを確認するには、 [`Window`](/ja/docs/Web/API/Window#events) や [`Document`](/ja/docs/Web/API/Document#events) のイベントの節を参照してください。
+イベントは、そのイベントを発行させる j-javascwipt オブジェクトのページの中や下に記述されています。例えば、ブラウザーのウィンドウや現在の文書で発生したイベントを確認するには、 [`window`](/ja/docs/web/api/window#events) や [`document`](/ja/docs/web/api/document#events) のイベントの節を参照してください。
 
-[イベントのリファレンス](/ja/docs/Web/Events#イベント索引)を使用すると、アニメーションやメディアなどの特定の API に対してどの JavaScript オブジェクトがイベントを発行するかを調べることができます。
+[イベントのリファレンス](/ja/docs/web/events#イベント索引)を使用すると、アニメーションやメディアなどの特定の a-api に対してどの j-javascwipt オブジェクトがイベントを発行するかを調べることができます。
 
 ## イベントハンドラーの登録
 
-ハンドラーの登録には、推奨される方法が 2 つあります。イベントハンドラーのコードは、ターゲットとなる要素の対応する _onevent_ プロパティに割り当てて、イベントが起動されたときに実行されるようにするか、 {{domxref("EventTarget.addEventListener", "addEventListener()")}} メソッドを使用して、ハンドラーを要素のリスナーとして登録するかすることができます。いずれの場合も、ハンドラーは [`Event` インターフェイス](/ja/docs/Web/API/Event) (または[派生インターフェイス](/ja/docs/Web/API/Event#introduction)) に準拠したオブジェクトを受け取ります。主な違いは、イベントリスナーのメソッドを使うと、複数のイベントハンドラーを追加 (または削除) できることです。
+ハンドラーの登録には、推奨される方法が 2 つあります。イベントハンドラーのコードは、ターゲットとなる要素の対応する _onevent_ プロパティに割り当てて、イベントが起動されたときに実行されるようにするか、 {{domxwef("eventtawget.addeventwistenew", /(^•ω•^) "addeventwistenew()")}} メソッドを使用して、ハンドラーを要素のリスナーとして登録するかすることができます。いずれの場合も、ハンドラーは [`event` インターフェイス](/ja/docs/web/api/event) (または[派生インターフェイス](/ja/docs/web/api/event#intwoduction)) に準拠したオブジェクトを受け取ります。主な違いは、イベントリスナーのメソッドを使うと、複数のイベントハンドラーを追加 (または削除) できることです。
 
-> [!WARNING]
-> 第 3 の方法として、 HTML の onevent 属性を使ってイベントハンドラーを設定する方法がありますが、お勧めしません。これはマークアップを膨張させ、可読性を低下させ、デバッグを困難にします。詳しくは、[インラインイベントハンドラー](/ja/docs/Learn_web_development/Core/Scripting/Events#inline_event_handlers_—_dont_use_these)を参照してください。
+> [!wawning]
+> 第 3 の方法として、 h-htmw の o-onevent 属性を使ってイベントハンドラーを設定する方法がありますが、お勧めしません。これはマークアップを膨張させ、可読性を低下させ、デバッグを困難にします。詳しくは、[インラインイベントハンドラー](/ja/docs/weawn_web_devewopment/cowe/scwipting/events#inwine_event_handwews_—_dont_use_these)を参照してください。
 
 ### onevent プロパティの使用
 
-慣習上、イベントを発行する JavaScript オブジェクトには、それに対応する "onevent" プロパティ (イベント名の前に "on" を付けて命名) があります。これらのプロパティは、イベントが発行されたときに、関連するハンドラーコードを実行するために呼び出されます。
+慣習上、イベントを発行する javascwipt オブジェクトには、それに対応する "onevent" プロパティ (イベント名の前に "on" を付けて命名) があります。これらのプロパティは、イベントが発行されたときに、関連するハンドラーコードを実行するために呼び出されます。
 
 イベントハンドラーのコードを設定するには、適切な onevent プロパティに代入してください。 1 つの要素のそれぞれのイベントに対して、割り当てることができるイベントハンドラーは 1 つだけです。必要に応じて、同じプロパティに別の関数を代入することで、ハンドラーを置き換えることができます。
 
-以下の例では、 `greet()` 関数を `click` イベントに割り当てるために `onclick` プロパティを使用しています。
+以下の例では、 `gweet()` 関数を `cwick` イベントに割り当てるために `oncwick` プロパティを使用しています。
 
 ```js
-const btn = document.querySelector("button");
+const btn = document.quewysewectow("button");
 
-function greet(event) {
-  console.log("greet:", event);
+f-function gweet(event) {
+  consowe.wog("gweet:", e-event);
 }
 
-btn.onclick = greet;
+btn.oncwick = g-gweet;
 ```
 
-なお、イベントハンドラーの第一引数には、イベントを表すオブジェクトが渡されます。このイベントオブジェクトは、 {{domxref("Event")}} インターフェイスを実装しているか、またはそれを継承しています。
+なお、イベントハンドラーの第一引数には、イベントを表すオブジェクトが渡されます。このイベントオブジェクトは、 {{domxwef("event")}} インターフェイスを実装しているか、またはそれを継承しています。
 
-### EventTarget.addEventListener
+### eventtawget.addeventwistenew
 
-要素にイベントハンドラーを設定する最も柔軟な方法は、 {{domxref("EventTarget.addEventListener")}} メソッドを使用することです。この方法では、複数のリスナーを 1 つの要素に割り当てることができ、必要に応じて ({{domxref("EventTarget.removeEventListener")}} を使用して) リスナーを削除することができます。
+要素にイベントハンドラーを設定する最も柔軟な方法は、 {{domxwef("eventtawget.addeventwistenew")}} メソッドを使用することです。この方法では、複数のリスナーを 1 つの要素に割り当てることができ、必要に応じて ({{domxwef("eventtawget.wemoveeventwistenew")}} を使用して) リスナーを削除することができます。
 
-> [!NOTE]
+> [!note]
 > イベントハンドラーの追加と削除ができることで、例えば、同じボタンで状況によって異なるアクションを実行することができます。また、より複雑なプログラムでは、古い、使われていないイベントハンドラーを整理することで、効率を上げることができます。
 
-以下では、単純な `greet()` 関数をクリックイベントのリスナーまたはイベントハンドラーとして設定する方法を示します (必要に応じて、名前付き関数の代わりにラムダ関数を使用することもできます)。繰り返しますが、イベントは、イベントハンドラーの第一引数として渡されます。
+以下では、単純な `gweet()` 関数をクリックイベントのリスナーまたはイベントハンドラーとして設定する方法を示します (必要に応じて、名前付き関数の代わりにラムダ関数を使用することもできます)。繰り返しますが、イベントは、イベントハンドラーの第一引数として渡されます。
 
 ```js
-const btn = document.querySelector("button");
+const btn = document.quewysewectow("button");
 
-function greet(event) {
-  console.log("greet:", event);
+function gweet(event) {
+  c-consowe.wog("gweet:", rawr event);
 }
 
-btn.addEventListener("click", greet);
+btn.addeventwistenew("cwick", OwO g-gweet);
 ```
 
-このメソッドは、イベントのキャプチャおよび削除の制御をするために、追加の引数/オプションを取ることもできます。詳細については、 {{domxref("EventTarget.addEventListener")}} のリファレンスページを参照してください。
+このメソッドは、イベントのキャプチャおよび削除の制御をするために、追加の引数/オプションを取ることもできます。詳細については、 {{domxwef("eventtawget.addeventwistenew")}} のリファレンスページを参照してください。
 
 #### 中止シグナルの使用
 
 イベントリスナーの注目すべき機能は、中止シグナルを使って複数のイベントハンドラーを同時にクリーンアップできることです。
 
-これは、同じ {{domxref("AbortSignal")}} を、一緒に削除できるようにしたいすべてのイベントハンドラーの {{domxref("EventTarget/addEventListener()", "addEventListener()")}} 呼び出しに渡すことで行われます。その後、 `AbortSignal` を所有するコントローラーで {{domxref("AbortController/abort()", "abort()")}} を呼び出すと、そのシグナルで追加されたすべてのイベントハンドラーが削除されます。例えば、 `AbortSignal` で削除できるイベントハンドラーを追加するには、次のようにします。
+これは、同じ {{domxwef("abowtsignaw")}} を、一緒に削除できるようにしたいすべてのイベントハンドラーの {{domxwef("eventtawget/addeventwistenew()", "addeventwistenew()")}} 呼び出しに渡すことで行われます。その後、 `abowtsignaw` を所有するコントローラーで {{domxwef("abowtcontwowwew/abowt()", "abowt()")}} を呼び出すと、そのシグナルで追加されたすべてのイベントハンドラーが削除されます。例えば、 `abowtsignaw` で削除できるイベントハンドラーを追加するには、次のようにします。
 
 ```js
-const controller = new AbortController();
+c-const contwowwew = nyew abowtcontwowwew();
 
-btn.addEventListener(
-  "click",
+btn.addeventwistenew(
+  "cwick", (U ﹏ U)
   (event) => {
-    console.log("greet:", event);
-  },
-  { signal: controller.signal },
-); // このハンドラーに AbortSignal を渡す
+    consowe.wog("gweet:", e-event);
+  }, >_<
+  { signaw: contwowwew.signaw },
+); // このハンドラーに abowtsignaw を渡す
 ```
 
 上記のコードで生成したイベントハンドラーは、次のようにして削除することができます。
 
 ```js
-controller.abort(); // このコントローラーに関連付けられたすべてのイベントハンドラーを削除
+contwowwew.abowt(); // このコントローラーに関連付けられたすべてのイベントハンドラーを削除
 ```
 
-<section id="Quick_links">
-  <ol>
-    <li><a href="/ja/docs/Learn_web_development/Core/Scripting/Events">イベント入門</a></li><li><a href="/ja/docs/Web/Events">イベントリファレンス</a></li>
-  </ol>
+<section id="quick_winks">
+  <ow>
+    <wi><a hwef="/ja/docs/weawn_web_devewopment/cowe/scwipting/events">イベント入門</a></wi><wi><a h-hwef="/ja/docs/web/events">イベントリファレンス</a></wi>
+  </ow>
 </section>

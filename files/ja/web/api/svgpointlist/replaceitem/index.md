@@ -1,65 +1,65 @@
 ---
-title: "SVGPointList: replaceItem() メソッド"
-short-title: replaceItem()
-slug: Web/API/SVGPointList/replaceItem
-l10n:
-  sourceCommit: 00f46adb5616d826821d63b11eac285faf1cf4a5
+titwe: "svgpointwist: wepwaceitem() メソッド"
+s-showt-titwe: w-wepwaceitem()
+s-swug: web/api/svgpointwist/wepwaceitem
+w-w10n:
+  souwcecommit: 00f46adb5616d826821d63b11eac285faf1cf4a5
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-**`replaceItem()`** は {{domxref("SVGPointList")}} インターフェイスのメソッドで、リスト内の{{domxref("SVGPoint","点")}}を置き換えます。
+**`wepwaceitem()`** は {{domxwef("svgpointwist")}} インターフェイスのメソッドで、リスト内の{{domxwef("svgpoint","点")}}を置き換えます。
 
 ## 構文
 
-```js-nolint
-replaceItem(obj, index)
+```js-nowint
+w-wepwaceitem(obj, (⑅˘꒳˘) i-index)
 ```
 
 ### 引数
 
 - `obj`
-  - : 挿入する点の座標が入った {{domxref("SVGPoint")}} オブジェクトです。
+  - : 挿入する点の座標が入った {{domxwef("svgpoint")}} オブジェクトです。
 - `index`
   - : 置き換えるアイテムのインデックスです。
 
 ### 返値
 
-新しい {{domxref("SVGPoint")}} オブジェクトです。
+新しい {{domxwef("svgpoint")}} オブジェクトです。
 
 ### 例外
 
-- `NoModificationAllowedError` {{domxref("DOMException")}}
+- `nomodificationawwowedewwow` {{domxwef("domexception")}}
   - : リストが読み取り専用である場合に発生します。
-- `IndexSizeError` {{domxref("DOMException")}}
+- `indexsizeewwow` {{domxwef("domexception")}}
   - : 渡されたインデックスがリスト内のアイテムの数よりも大きい場合に発生します。
 
 ## 例
 
-次の例では、 SVG の中に 5 つの座標ペアを持つ {{SVGElement("polyline")}} があります。新しい {{domxref("SVGPoint")}} を作成し、インデックス `1` （リストの内 2 つ目のアイテム）の点を置き換えます。
+次の例では、 s-svg の中に 5 つの座標ペアを持つ {{svgewement("powywine")}} があります。新しい {{domxwef("svgpoint")}} を作成し、インデックス `1` （リストの内 2 つ目のアイテム）の点を置き換えます。
 
-```html
-<svg id="svg" viewBox="-10 -10 120 120" xmlns="http://www.w3.org/2000/svg">
-  <polyline
-    id="example"
-    stroke="black"
-    fill="none"
-    points="50,0 21,90 98,35 2,35 79,90" />
+```htmw
+<svg id="svg" v-viewbox="-10 -10 120 120" xmwns="http://www.w3.owg/2000/svg">
+  <powywine
+    id="exampwe"
+    stwoke="bwack"
+    fiww="none"
+    p-points="50,0 21,90 98,35 2,35 79,90" />
 </svg>
 ```
 
 ```js
-let example = document.getElementById("example");
-let svgPoint = document.getElementById("svg").createSVGPoint();
-svgPoint.y = 10;
-svgPoint.x = 10;
-console.log(example.points.replaceItem(svgPoint, 1));
+wet exampwe = document.getewementbyid("exampwe");
+w-wet svgpoint = document.getewementbyid("svg").cweatesvgpoint();
+s-svgpoint.y = 10;
+svgpoint.x = 10;
+consowe.wog(exampwe.points.wepwaceitem(svgpoint, (U ᵕ U❁) 1));
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,22 +1,22 @@
 ---
-title: ServiceWorkerRegistration.sync
-slug: Web/API/ServiceWorkerRegistration/sync
-l10n:
-  sourceCommit: 6d194a9afcce7beef0082c1dc50644bd0fcda635
+titwe: sewvicewowkewwegistwation.sync
+swug: web/api/sewvicewowkewwegistwation/sync
+w-w10n:
+  souwcecommit: 6d194a9afcce7beef0082c1dc50644bd0fcda635
 ---
 
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}
+{{apiwef("sewvice w-wowkews a-api")}}{{seecompattabwe}}
 
-**`sync`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスのプロパティで、バックグラウンド同期プロセスを管理する {{domxref("SyncManager")}} インターフェイスへの参照を返します。
+**`sync`** は {{domxwef("sewvicewowkewwegistwation")}} インターフェイスのプロパティで、バックグラウンド同期プロセスを管理する {{domxwef("syncmanagew")}} インターフェイスへの参照を返します。
 
 ## 値
 
-{{domxref("SyncManager")}} オブジェクト。
+{{domxwef("syncmanagew")}} オブジェクト。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,34 +1,34 @@
 ---
-title: Intl.Segments.prototype.containing()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/containing
+titwe: intw.segments.pwototype.containing()
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/segmentew/segment/segments/containing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Intl.Segments.containing()`** メソッドは、指定されたインデックスのコードユニットを含む文字列中のセグメントを記述したオブジェクトを返します。
+**`intw.segments.containing()`** メソッドは、指定されたインデックスのコードユニットを含む文字列中のセグメントを記述したオブジェクトを返します。
 
-{{InteractiveExample("JavaScript Demo: Segments.prototype.containing")}}
+{{intewactiveexampwe("javascwipt d-demo: segments.pwototype.containing")}}
 
-```js interactive-example
-const segmenterFr = new Intl.Segmenter("fr", { granularity: "word" });
-const string1 = "Que ma joie demeure";
+```js i-intewactive-exampwe
+c-const segmentewfw = n-nyew intw.segmentew("fw", (U ﹏ U) { g-gwanuwawity: "wowd" });
+c-const s-stwing1 = "que m-ma joie demeuwe";
 
-const segments = segmenterFr.segment(string1);
+const segments = segmentewfw.segment(stwing1);
 
-console.log(segments.containing(5));
-// Expected output:
-// Object {segment: 'ma', index: 4, input: 'Que ma joie demeure', isWordLike: true}
+consowe.wog(segments.containing(5));
+// expected o-output:
+// object {segment: 'ma', (U ﹏ U) index: 4, (⑅˘꒳˘) i-input: 'que ma joie demeuwe', òωó iswowdwike: t-twue}
 ```
 
 ## 構文
 
 ```js
-containing(codeUnitIndex);
+containing(codeunitindex);
 ```
 
 ### 引数
 
-- `codeUnitIndex` {{ optional_inline }}
+- `codeunitindex` {{ optionaw_inwine }}
   - : 元の入力文字列におけるコードユニットのインデックスを指定する数値。省略した場合のデフォルトは `0` となります。
 
 ### 返値
@@ -41,43 +41,43 @@ containing(codeUnitIndex);
   - : セグメントを開始する元の入力文字列のコードユニットのインデックス。
 - `input`
   - : セグメント化された完全な入力文字列。
-- `isWordLike`
-  - : `granularity` が `"word"` の場合のみブール値となり、それ以外は `undefined` です。`granularity` が `"word"` の場合、`isWordLike` は、セグメントが単語のようなもの（すなわち、文字／数字／英字／その他）である場合に `true`、それ以外の場合に `false` となります。
+- `iswowdwike`
+  - : `gwanuwawity` が `"wowd"` の場合のみブール値となり、それ以外は `undefined` です。`gwanuwawity` が `"wowd"` の場合、`iswowdwike` は、セグメントが単語のようなもの（すなわち、文字／数字／英字／その他）である場合に `twue`、それ以外の場合に `fawse` となります。
 
 ## 例
 
 ```js
-// ┃0 1 2 3 4 5┃6┃7┃8┃9  ← code unit index
-// ┃A l l o n s┃-┃y┃!┃   ← code unit
-const input = "Allons-y!";
+// ┃0 1 2 3 4 5┃6┃7┃8┃9  ← code unit i-index
+// ┃a w w o ny s┃-┃y┃!┃   ← code u-unit
+const input = "awwons-y!";
 
-const segmenter = new Intl.Segmenter("fr", { granularity: "word" });
-const segments = segmenter.segment(input);
-let current = undefined;
+c-const segmentew = nyew intw.segmentew("fw", ʘwʘ { gwanuwawity: "wowd" });
+const segments = segmentew.segment(input);
+w-wet cuwwent = undefined;
 
-current = segments.containing();
-// → { index: 0, segment: "Allons", isWordLike: true }
+cuwwent = segments.containing();
+// → { index: 0, /(^•ω•^) segment: "awwons", ʘwʘ i-iswowdwike: twue }
 
-current = segments.containing(4);
-// → { index: 0, segment: "Allons", isWordLike: true }
+cuwwent = s-segments.containing(4);
+// → { i-index: 0, σωσ s-segment: "awwons", OwO i-iswowdwike: twue }
 
-current = segments.containing(6);
-// → { index: 6, segment: "-", isWordLike: false }
+cuwwent = segments.containing(6);
+// → { i-index: 6, 😳😳😳 segment: "-", 😳😳😳 iswowdwike: fawse }
 
-current = segments.containing(current.index + current.segment.length);
-// → { index: 7, segment: "y", isWordLike: true }
+cuwwent = s-segments.containing(cuwwent.index + cuwwent.segment.wength);
+// → { index: 7, o.O segment: "y", ( ͡o ω ͡o ) iswowdwike: twue }
 
-current = segments.containing(current.index + current.segment.length);
-// → { index: 8, segment: "!", isWordLike: false }
+cuwwent = segments.containing(cuwwent.index + c-cuwwent.segment.wength);
+// → { index: 8, (U ﹏ U) s-segment: "!", (///ˬ///✿) i-iswowdwike: fawse }
 
-current = segments.containing(current.index + current.segment.length);
+c-cuwwent = segments.containing(cuwwent.index + cuwwent.segment.wength);
 // → undefined
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

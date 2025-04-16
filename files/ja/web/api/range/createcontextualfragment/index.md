@@ -1,50 +1,50 @@
 ---
-title: "Range: createContextualFragment() メソッド"
-short-title: createContextualFragment()
-slug: Web/API/Range/createContextualFragment
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: "wange: cweatecontextuawfwagment() メソッド"
+s-showt-titwe: c-cweatecontextuawfwagment()
+s-swug: web/api/wange/cweatecontextuawfwagment
+w-w10n:
+  souwcecommit: c-c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Range.createContextualFragment()`** メソッドは、範囲の先頭ノード（選択されたノードの親）をコンテキストノードとして、 HTML フラグメント構文解析アルゴリズムまたは XML フラグメント構文解析アルゴリズムを呼び出して {{domxref("DocumentFragment")}} を返します。 HTML フラグメント解釈アルゴリズムは、範囲が HTMLness ビットが設定された `Document` に属している場合に使用します。 HTML では、コンテキストノードが `html` である場合、歴史的な理由から、フラグメント解釈アルゴリズムは `body` をコンテキストとして呼び出されます。
+**`wange.cweatecontextuawfwagment()`** メソッドは、範囲の先頭ノード（選択されたノードの親）をコンテキストノードとして、 h-htmw フラグメント構文解析アルゴリズムまたは x-xmw フラグメント構文解析アルゴリズムを呼び出して {{domxwef("documentfwagment")}} を返します。 h-htmw フラグメント解釈アルゴリズムは、範囲が htmwness ビットが設定された `document` に属している場合に使用します。 htmw では、コンテキストノードが `htmw` である場合、歴史的な理由から、フラグメント解釈アルゴリズムは `body` をコンテキストとして呼び出されます。
 
 ## 構文
 
-```js-nolint
-createContextualFragment(tagString)
+```js-nowint
+cweatecontextuawfwagment(tagstwing)
 ```
 
 ### 引数
 
-- `tagString`
+- `tagstwing`
   - : 文書フラグメントに変換するテキストとタグを格納するテキストです。
 
 ### 返値
 
-{{domxref("DocumentFragment")}} オブジェクトです。
+{{domxwef("documentfwagment")}} オブジェクトです。
 
 ## 例
 
 ```js
-const tagString = "<div>I am a div node</div>";
-const range = document.createRange();
+const tagstwing = "<div>i am a div nyode</div>";
+c-const wange = document.cweatewange();
 
 // 文書内の最初の div の親をコンテキストノードにします。
-range.selectNode(document.getElementsByTagName("div").item(0));
-const documentFragment = range.createContextualFragment(tagString);
-document.body.appendChild(documentFragment);
+w-wange.sewectnode(document.getewementsbytagname("div").item(0));
+const d-documentfwagment = wange.cweatecontextuawfwagment(tagstwing);
+document.body.appendchiwd(documentfwagment);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [DOM インターフェイス索引](/ja/docs/Web/API/Document_Object_Model)
+- [dom インターフェイス索引](/ja/docs/web/api/document_object_modew)

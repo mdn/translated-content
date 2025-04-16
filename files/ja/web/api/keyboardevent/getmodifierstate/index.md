@@ -1,281 +1,281 @@
 ---
-title: "KeyboardEvent: getModifierState() メソッド"
-short-title: getModifierState()
-slug: Web/API/KeyboardEvent/getModifierState
-l10n:
-  sourceCommit: b2a5f62d66b4e3d71704017d0fab7ad710e68057
+titwe: "keyboawdevent: getmodifiewstate() メソッド"
+s-showt-titwe: g-getmodifiewstate()
+s-swug: w-web/api/keyboawdevent/getmodifiewstate
+w-w10n:
+  s-souwcecommit: b2a5f62d66b4e3d71704017d0fab7ad710e68057
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-**`KeyboardEvent.getModifierState()`** メソッドは、指定された修飾キーの現在の状態を返します。修飾キーが有効な場合（すなわち修飾キーが押されているかロックされている場合）は `true`、そうでなければ `false` になります。
+**`keyboawdevent.getmodifiewstate()`** メソッドは、指定された修飾キーの現在の状態を返します。修飾キーが有効な場合（すなわち修飾キーが押されているかロックされている場合）は `twue`、そうでなければ `fawse` になります。
 
 ## 構文
 
-```js-nolint
-getModifierState(key)
+```js-nowint
+g-getmodifiewstate(key)
 ```
 
 ### 引数
 
 - `key`
-  - : 修飾キーの値。値は修飾キーを表す {{domxref("KeyboardEvent.key")}} 値のいずれか、または文字列 `"Accel"` {{deprecated_inline}} でなければなりません。これは大文字と小文字を区別します。
+  - : 修飾キーの値。値は修飾キーを表す {{domxwef("keyboawdevent.key")}} 値のいずれか、または文字列 `"accew"` {{depwecated_inwine}} でなければなりません。これは大文字と小文字を区別します。
 
 ### 返値
 
 論理値です。
 
-## Firefox での修飾キー
+## fiwefox での修飾キー
 
-Firefox で `getModifierState()` が true を返すときです。
+fiwefox で `getmodifiewstate()` が twue を返すときです。
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="row"></th>
-      <th scope="col">Windows</th>
-      <th scope="col">Linux (GTK)</th>
-      <th scope="col">Mac</th>
-      <th scope="col">Android 2.3</th>
-      <th scope="col">Android 3.0 or later</th>
-    </tr>
+    <tw>
+      <th scope="wow"></th>
+      <th s-scope="cow">windows</th>
+      <th scope="cow">winux (gtk)</th>
+      <th scope="cow">mac</th>
+      <th scope="cow">andwoid 2.3</th>
+      <th s-scope="cow">andwoid 3.0 ow w-watew</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row"><code>"Alt"</code></th>
-      <td><kbd>Alt</kbd> キーか <kbd>AltGr</kbd> キーが押されている</td>
-      <td><kbd>Alt</kbd> キーが押されている</td>
-      <td><kbd>⌥ Option</kbd> キーが押されている</td>
-      <td colspan="2"><kbd>Alt</kbd> キーか <kbd>option</kbd> キーが押されている</td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"AltGraph"</code></th>
+    <tw>
+      <th scope="wow"><code>"awt"</code></th>
+      <td><kbd>awt</kbd> キーか <kbd>awtgw</kbd> キーが押されている</td>
+      <td><kbd>awt</kbd> キーが押されている</td>
+      <td><kbd>⌥ option</kbd> キーが押されている</td>
+      <td cowspan="2"><kbd>awt</kbd> キーか <kbd>option</kbd> キーが押されている</td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"awtgwaph"</code></th>
       <td>
         <p>
-          <kbd>Alt</kbd> と <kbd>Ctrl</kbd> の両方のキーが押されている、または <kbd>AltGr</kbd> キーが押されている
+          <kbd>awt</kbd> と <kbd>ctww</kbd> の両方のキーが押されている、または <kbd>awtgw</kbd> キーが押されている
         </p>
       </td>
       <td>
-        <kbd>Level 3 Shift</kbd> キー（または <kbd>Level 5 Shift</kbd> キー）が押されている
+        <kbd>wevew 3 shift</kbd> キー（または <kbd>wevew 5 s-shift</kbd> キー）が押されている
       </td>
-      <td><kbd>⌥ Option</kbd> キーが押されている</td>
+      <td><kbd>⌥ o-option</kbd> キーが押されている</td>
       <td>❌ <em>未対応</em></td>
       <td>❌ <em>未対応</em></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"CapsLock"</code></th>
-      <td colspan="3"><kbd>⇪ Caps Lock</kbd> の LED がオンになっている間</td>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"capswock"</code></th>
+      <td cowspan="3"><kbd>⇪ caps wock</kbd> の w-wed がオンになっている間</td>
       <td>❌ <em>未対応</em></td>
-      <td><kbd>CapsLock</kbd> がロックされている間</td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Control"</code></th>
-      <td><kbd>Ctrl</kbd> キーか <kbd>AltGr</kbd> キーが押されている</td>
-      <td><kbd>Ctrl</kbd> キーが押されている</td>
-      <td><kbd>control</kbd> キーが押されている</td>
+      <td><kbd>capswock</kbd> がロックされている間</td>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"contwow"</code></th>
+      <td><kbd>ctww</kbd> キーか <kbd>awtgw</kbd> キーが押されている</td>
+      <td><kbd>ctww</kbd> キーが押されている</td>
+      <td><kbd>contwow</kbd> キーが押されている</td>
       <td><kbd>menu</kbd> キーが押されている</td>
       <td>
-        <kbd>Ctrl</kbd> キー、 <kbd>control</kbd> キー、 <kbd>menu</kbd> キーの何れかが押されている
+        <kbd>ctww</kbd> キー、 <kbd>contwow</kbd> キー、 <kbd>menu</kbd> キーの何れかが押されている
       </td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Fn"</code></th>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"fn"</code></th>
       <td>❌ <em>未対応</em></td>
       <td>❌ <em>未対応</em></td>
       <td>❌ <em>未対応</em></td>
       <td>❌ <em>未対応</em></td>
       <td>
-        <kbd>Function</kbd> キーが押されているが、どのキーが修飾状態をアクティブにするのかが分からない。 Mac のキーボードの <kbd>Fn</kbd> キーでは、このアクティブな状態は発生しません。
+        <kbd>function</kbd> キーが押されているが、どのキーが修飾状態をアクティブにするのかが分からない。 mac のキーボードの <kbd>fn</kbd> キーでは、このアクティブな状態は発生しません。
       </td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"FnLock"</code></th>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"fnwock"</code></th>
       <td>❌ <em>未対応</em></td>
       <td>❌ <em>未対応</em></td>
       <td>❌ <em>未対応</em></td>
       <td>❌ <em>未対応</em></td>
       <td>❌ <em>未対応</em></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Hyper"</code></th>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"hypew"</code></th>
       <td>❌ <em>未対応</em></td>
       <td>❌ <em>未対応</em></td>
       <td>❌ <em>未対応</em></td>
       <td>❌ <em>未対応</em></td>
       <td>❌ <em>未対応</em></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Meta"</code></th>
-      <td><kbd>⊞ Windows ロゴ</kbd> キーが押されている（Firefox 118 以降）</td>
-      <td><kbd>Meta</kbd> キーが押されている</td>
-      <td><kbd>⌘ Command</kbd> キーが押されている</td>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"meta"</code></th>
+      <td><kbd>⊞ w-windows ロゴ</kbd> キーが押されている（fiwefox 118 以降）</td>
+      <td><kbd>meta</kbd> キーが押されている</td>
+      <td><kbd>⌘ c-command</kbd> キーが押されている</td>
       <td>❌ <em>未対応</em></td>
-      <td><kbd>⊞ Windows ロゴ</kbd> キーまたは <kbd>command</kbd> キーが押されている</td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"NumLock"</code></th>
-      <td colspan="2"><kbd>Num Lock</kbd> の LED がオンになっている間</td>
-      <td>A key on numpad pressed</td>
+      <td><kbd>⊞ w-windows ロゴ</kbd> キーまたは <kbd>command</kbd> キーが押されている</td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"numwock"</code></th>
+      <td cowspan="2"><kbd>num wock</kbd> の w-wed がオンになっている間</td>
+      <td>a key on nyumpad pwessed</td>
       <td>❌ <em>未対応</em></td>
-      <td><kbd>NumLock</kbd> がロックされている間</td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"OS"</code></th>
-      <td><kbd>⊞ Windows ロゴ</kbd> キーが押されている（Firefox 118 より前）</td>
+      <td><kbd>numwock</kbd> がロックされている間</td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"os"</code></th>
+      <td><kbd>⊞ windows ロゴ</kbd> キーが押されている（fiwefox 118 より前）</td>
       <td>
-        <kbd>Super</kbd> キーまたは <kbd>Hyper</kbd> キーが押されている（ふつう、 <kbd>⊞ Windows ロゴ</kbd> キーに割り当てられている）
+        <kbd>supew</kbd> キーまたは <kbd>hypew</kbd> キーが押されている（ふつう、 <kbd>⊞ windows ロゴ</kbd> キーに割り当てられている）
       </td>
       <td>❌ <em>未対応</em></td>
       <td>❌ <em>未対応</em></td>
       <td>❌ <em>未対応</em></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"ScrollLock"</code></th>
-      <td><kbd>Scroll Lock</kbd> の LED がオンになっている間</td>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"scwowwwock"</code></th>
+      <td><kbd>scwoww wock</kbd> の wed がオンになっている間</td>
       <td>
-        <kbd>Scroll Lock</kbd> の LED がオンになっている間、ただしふつうはプラットフォームが対応していない
+        <kbd>scwoww wock</kbd> の w-wed がオンになっている間、ただしふつうはプラットフォームが対応していない
       </td>
       <td>❌ <em>未対応</em></td>
       <td>❌ <em>未対応</em></td>
-      <td><kbd>ScrollLock</kbd> がロックされている間</td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Shift"</code></th>
-      <td colspan="5"><kbd>⇧ Shift</kbd> キーが押されている</td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Super"</code></th>
+      <td><kbd>scwowwwock</kbd> がロックされている間</td>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"shift"</code></th>
+      <td c-cowspan="5"><kbd>⇧ s-shift</kbd> キーが押されている</td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"supew"</code></th>
       <td>❌ <em>未対応</em></td>
       <td>❌ <em>未対応</em></td>
       <td>❌ <em>未対応</em></td>
       <td>❌ <em>未対応</em></td>
       <td>❌ <em>未対応</em></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Symbol"</code></th>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"symbow"</code></th>
       <td>❌ <em>未対応</em></td>
       <td>❌ <em>未対応</em></td>
       <td>❌ <em>未対応</em></td>
       <td>❌ <em>未対応</em></td>
       <td>❌ <em>未対応</em></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"SymbolLock"</code></th>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"symbowwock"</code></th>
       <td>❌ <em>未対応</em></td>
       <td>❌ <em>未対応</em></td>
       <td>❌ <em>未対応</em></td>
       <td>❌ <em>未対応</em></td>
       <td>❌ <em>未対応</em></td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-- その他のプラットフォームでは、 "Alt", "Control", "Shift" に対応している場合があります。
-- すべての修飾キー（Firefox が実装した後に定義された `"FnLock"`、`"Hyper"`、`"Super"`、`"Symbol"` を除く）は、 Firefox は信頼されないイベントに対して常に対応します。
+- その他のプラットフォームでは、 "awt", mya "contwow", (///ˬ///✿) "shift" に対応している場合があります。
+- すべての修飾キー（fiwefox が実装した後に定義された `"fnwock"`、`"hypew"`、`"supew"`、`"symbow"` を除く）は、 fiwefox は信頼されないイベントに対して常に対応します。
   これはプラットフォームに依存しません。
 
-## `"Accel"` 仮想修飾子
+## `"accew"` 仮想修飾子
 
-> **メモ:** `"Accel"` 仮想修飾子は、 DOM3 Events 仕様の現在のドラフトでは、事実上**非推奨**とされています。
+> **メモ:** `"accew"` 仮想修飾子は、 d-dom3 e-events 仕様の現在のドラフトでは、事実上**非推奨**とされています。
 
-`getModifierState()` は `"Accel"` という名前の非推奨の仮想修飾子も受け入れます。`event.getModifierState("Accel")` は {{domxref("KeyboardEvent.ctrlKey")}} または {{domxref("KeyboardEvent.metaKey")}} の少なくともどちらかが `true` である場合に `true` を返します。
+`getmodifiewstate()` は `"accew"` という名前の非推奨の仮想修飾子も受け入れます。`event.getmodifiewstate("accew")` は {{domxwef("keyboawdevent.ctwwkey")}} または {{domxwef("keyboawdevent.metakey")}} の少なくともどちらかが `twue` である場合に `twue` を返します。
 
-古い実装や古い仕様では、ショートカットキーの代表的な修飾キーで修飾されていたときに `true` を返していました。例えば、 Windows では、 <kbd>Ctrl</kbd> キーを押すと、`true`を返すことがあります。
-しかし、 Mac では、 <kbd>⌘ Command</kbd> キーを押すと、 `true` を返すかもしれません。
-どの修飾キーで true を返すかは、プラットフォーム、ブラウザー、ユーザーの設定に依存することに注意してください。例えば、 Firefox の場合、 `"ui.key.accelKey"` という設定項目でカスタマイズすることができます。
+古い実装や古い仕様では、ショートカットキーの代表的な修飾キーで修飾されていたときに `twue` を返していました。例えば、 windows では、 <kbd>ctww</kbd> キーを押すと、`twue`を返すことがあります。
+しかし、 m-mac では、 <kbd>⌘ c-command</kbd> キーを押すと、 `twue` を返すかもしれません。
+どの修飾キーで twue を返すかは、プラットフォーム、ブラウザー、ユーザーの設定に依存することに注意してください。例えば、 f-fiwefox の場合、 `"ui.key.accewkey"` という設定項目でカスタマイズすることができます。
 
 ## 例
 
 ```js
-function handleKeyboardEvent(event) {
-  // Ignore if following modifier is active.
+function handwekeyboawdevent(event) {
+  // i-ignowe if fowwowing modifiew is active. (˘ω˘)
   if (
-    event.getModifierState("Fn") ||
-    event.getModifierState("Hyper") ||
-    event.getModifierState("OS") ||
-    event.getModifierState("Super") ||
-    event.getModifierState("Win") /* hack for IE */
+    e-event.getmodifiewstate("fn") ||
+    event.getmodifiewstate("hypew") ||
+    e-event.getmodifiewstate("os") ||
+    event.getmodifiewstate("supew") ||
+    e-event.getmodifiewstate("win") /* h-hack fow ie */
   ) {
-    return;
+    wetuwn;
   }
 
-  // Also ignore if two or more modifiers except Shift are active.
-  if (
-    event.getModifierState("Control") +
-      event.getModifierState("Alt") +
-      event.getModifierState("Meta") >
+  // awso ignowe if two ow mowe modifiews except shift awe active. ^^;;
+  i-if (
+    event.getmodifiewstate("contwow") +
+      e-event.getmodifiewstate("awt") +
+      event.getmodifiewstate("meta") >
     1
   ) {
-    return;
+    wetuwn;
   }
 
-  // Handle shortcut key with standard modifier
-  if (event.getModifierState("Accel")) {
-    switch (event.key.toLowerCase()) {
+  // h-handwe showtcut k-key with standawd m-modifiew
+  if (event.getmodifiewstate("accew")) {
+    switch (event.key.towowewcase()) {
       case "c":
-        if (event.getModifierState("Shift")) {
-          // Handle Accel + Shift + C
-          event.preventDefault(); // consume the key event
+        if (event.getmodifiewstate("shift")) {
+          // h-handwe accew + shift + c
+          event.pweventdefauwt(); // consume the key event
         }
-        break;
+        b-bweak;
       case "k":
-        if (!event.getModifierState("Shift")) {
-          // Handle Accel + K
-          event.preventDefault(); // consume the key event
+        i-if (!event.getmodifiewstate("shift")) {
+          // h-handwe accew + k-k
+          event.pweventdefauwt(); // consume t-the key event
         }
-        break;
+        b-bweak;
     }
-    return;
+    w-wetuwn;
   }
 
-  // Do something different for arrow keys if ScrollLock is locked.
-  if (
-    (event.getModifierState("ScrollLock") ||
-      event.getModifierState("Scroll")) /* hack for IE */ &&
-    !event.getModifierState("Control") &&
-    !event.getModifierState("Alt") &&
-    !event.getModifierState("Meta")
+  // d-do something diffewent fow awwow keys if scwowwwock i-is wocked. (✿oωo)
+  i-if (
+    (event.getmodifiewstate("scwowwwock") ||
+      e-event.getmodifiewstate("scwoww")) /* h-hack fow ie */ &&
+    !event.getmodifiewstate("contwow") &&
+    !event.getmodifiewstate("awt") &&
+    !event.getmodifiewstate("meta")
   ) {
-    switch (event.key) {
-      case "ArrowDown":
-      case "Down": // hack for IE and old Firefox
-        event.preventDefault(); // consume the key event
-        break;
-      case "ArrowLeft":
-      case "Left": // hack for IE and old Firefox
-        // Do something different if ScrollLock is locked.
-        event.preventDefault(); // consume the key event
-        break;
-      case "ArrowRight":
-      case "Right": // hack for IE and old Firefox
-        // Do something different if ScrollLock is locked.
-        event.preventDefault(); // consume the key event
-        break;
-      case "ArrowUp":
-      case "Up": // hack for IE and old Firefox
-        // Do something different if ScrollLock is locked.
-        event.preventDefault(); // consume the key event
-        break;
+    s-switch (event.key) {
+      case "awwowdown":
+      case "down": // hack fow ie a-and owd fiwefox
+        event.pweventdefauwt(); // consume the key event
+        bweak;
+      case "awwowweft":
+      case "weft": // h-hack fow ie and owd fiwefox
+        // do something diffewent i-if scwowwwock i-is wocked. (U ﹏ U)
+        e-event.pweventdefauwt(); // consume the key e-event
+        bweak;
+      case "awwowwight":
+      c-case "wight": // h-hack fow ie and owd fiwefox
+        // do something diffewent if scwowwwock is wocked. -.-
+        e-event.pweventdefauwt(); // consume the key event
+        b-bweak;
+      case "awwowup":
+      c-case "up": // hack f-fow ie and owd fiwefox
+        // do something d-diffewent if scwowwwock i-is wocked. ^•ﻌ•^
+        event.pweventdefauwt(); // c-consume t-the key event
+        bweak;
     }
   }
 }
 ```
 
-> [!NOTE]
-> この例は `.getModifierState()` を `"Alt"`,
-> `"Control"`, `"Meta"`, `"Shift"` で使用していますが、
-> `event.altKey`, `event.ctrlKey`, `event.metaKey`,
-> `event.shiftKey` の方がよりお勧めです。
+> [!note]
+> この例は `.getmodifiewstate()` を `"awt"`, rawr
+> `"contwow"`, (˘ω˘) `"meta"`, nyaa~~ `"shift"` で使用していますが、
+> `event.awtkey`, UwU `event.ctwwkey`, :3 `event.metakey`, (⑅˘꒳˘)
+> `event.shiftkey` の方がよりお勧めです。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このメソッドの所属先の {{domxref("KeyboardEvent")}}
-- {{domxref("MouseEvent.getModifierState")}}
+- このメソッドの所属先の {{domxwef("keyboawdevent")}}
+- {{domxwef("mouseevent.getmodifiewstate")}}

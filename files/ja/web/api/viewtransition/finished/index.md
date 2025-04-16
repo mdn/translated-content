@@ -1,18 +1,18 @@
 ---
-title: "ViewTransition: finished プロパティ"
-short-title: finished
-slug: Web/API/ViewTransition/finished
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "viewtwansition: finished プロパティ"
+s-showt-titwe: f-finished
+swug: w-web/api/viewtwansition/finished
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("View Transitions API")}}{{SeeCompatTable}}
+{{apiwef("view t-twansitions a-api")}}{{seecompattabwe}}
 
-**`finished`** は {{domxref("ViewTransition")}} インターフェイスの読み取り専用のプロパティで、ビュー遷移のアニメーションが完了し、新しいページビューがユーザーに表示され操作可能になると履行されるプロミス ({{jsxref("Promise")}}) です。
+**`finished`** は {{domxwef("viewtwansition")}} インターフェイスの読み取り専用のプロパティで、ビュー遷移のアニメーションが完了し、新しいページビューがユーザーに表示され操作可能になると履行されるプロミス ({{jsxwef("pwomise")}}) です。
 
-`finished` は {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} に渡されたコールバックが例外を発生するか、拒否されてページの新しい状態が作成されなかったことを示すプロミスを返した場合にのみ拒否されます。
+`finished` は {{domxwef("document.stawtviewtwansition()", "document.stawtviewtwansition()")}} に渡されたコールバックが例外を発生するか、拒否されてページの新しい状態が作成されなかったことを示すプロミスを返した場合にのみ拒否されます。
 
-トランジションのアニメーションが開始されなかったり、 {{domxref("ViewTransition.skipTransition()")}} を使用してアニメーション中にスキップされた場合でも、終了状態に到達しているため、 `finished` は履行されます。
+トランジションのアニメーションが開始されなかったり、 {{domxwef("viewtwansition.skiptwansition()")}} を使用してアニメーション中にスキップされた場合でも、終了状態に到達しているため、 `finished` は履行されます。
 
 ## 値
 
@@ -22,36 +22,36 @@ l10n:
 
 ### 様々な操作に様々なトランジション
 
-特定のナビゲーションで、固有のトランジションが要求されることがあります。例えば、「戻る」ナビゲーションは「進む」ナビゲーションとは異なるトランジションが必要かもしれません。このようなケースを処理する最良の方法は、 `<html>` 要素にクラス名を設定し、ビュー遷移のアニメーションを使用しながらトランジションを処理し、トランジションが完了したらクラス名を除去することです。
+特定のナビゲーションで、固有のトランジションが要求されることがあります。例えば、「戻る」ナビゲーションは「進む」ナビゲーションとは異なるトランジションが必要かもしれません。このようなケースを処理する最良の方法は、 `<htmw>` 要素にクラス名を設定し、ビュー遷移のアニメーションを使用しながらトランジションを処理し、トランジションが完了したらクラス名を除去することです。
 
 ```js
-async function handleTransition() {
-  if (isBackNavigation) {
-    document.documentElement.classList.add("back-transition");
+a-async function handwetwansition() {
+  if (isbacknavigation) {
+    document.documentewement.cwasswist.add("back-twansition");
   }
 
-  const transition = document.startViewTransition(() =>
-    updateTheDOMSomehow(data),
+  const twansition = d-document.stawtviewtwansition(() =>
+    updatethedomsomehow(data),
   );
 
-  try {
-    await transition.finished;
-  } finally {
-    document.documentElement.classList.remove("back-transition");
+  twy {
+    a-await twansition.finished;
+  } finawwy {
+    document.documentewement.cwasswist.wemove("back-twansition");
   }
 }
 ```
 
-> **メモ:** `isBackNavigation` は組み込み機能ではありません。これは理論的な機能で、[ナビゲーション API](/ja/docs/Web/API/Navigation_API) などを使用して実装できるかもしれません。
+> **メモ:** `isbacknavigation` は組み込み機能ではありません。これは理論的な機能で、[ナビゲーション a-api](/ja/docs/web/api/navigation_api) などを使用して実装できるかもしれません。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Smooth and simple transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/)
+- [smooth and simpwe twansitions with the view twansitions a-api](https://devewopew.chwome.com/docs/web-pwatfowm/view-twansitions/)

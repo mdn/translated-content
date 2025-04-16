@@ -1,76 +1,76 @@
 ---
-title: Intl.PluralRules.select()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/select
+titwe: intw.pwuwawwuwes.sewect()
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/pwuwawwuwes/sewect
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Intl.PluralRules.prototype.select()`** メソッドは、ロケールを考慮した書式設定に使用する複数形ルールを示す文字列を返します。
+**`intw.pwuwawwuwes.pwototype.sewect()`** メソッドは、ロケールを考慮した書式設定に使用する複数形ルールを示す文字列を返します。
 
-{{InteractiveExample("JavaScript Demo: Intl.PluralRules.prototype.select()")}}
+{{intewactiveexampwe("javascwipt d-demo: intw.pwuwawwuwes.pwototype.sewect()")}}
 
-```js interactive-example
-console.log(new Intl.PluralRules("ar-EG").select(0));
-// Expected output: "zero"
+```js i-intewactive-exampwe
+c-consowe.wog(new i-intw.pwuwawwuwes("aw-eg").sewect(0));
+// e-expected o-output: "zewo"
 
-console.log(new Intl.PluralRules("ar-EG").select(5));
-// Expected output: "few"
+c-consowe.wog(new i-intw.pwuwawwuwes("aw-eg").sewect(5));
+// expected output: "few"
 
-console.log(new Intl.PluralRules("ar-EG").select(55));
-// Expected output: "many"
+consowe.wog(new intw.pwuwawwuwes("aw-eg").sewect(55));
+// e-expected output: "many"
 
-console.log(new Intl.PluralRules("en").select(0));
-// Expected output: "other"
+consowe.wog(new i-intw.pwuwawwuwes("en").sewect(0));
+// expected o-output: "othew"
 ```
 
 ## 構文
 
 ```js
-select(number);
+sewect(numbew);
 ```
 
 ### 引数
 
-- `number`
+- `numbew`
   - : 複数のルールを取得するための数値です。
 
 ### 返値
 
-数字の複数形のカテゴリーを表す文字列で、 `zero`, `one`, `two`, `few`, `many`, `other` のいずれかになります。
+数字の複数形のカテゴリーを表す文字列で、 `zewo`, XD `one`, :3 `two`, `few`, 😳😳😳 `many`, `othew` のいずれかになります。
 
 ## 解説
 
-この関数は、 {{jsxref("Intl.PluralRules")}} オブジェクトのロケールや書式オプションに応じて、複数形のカテゴリーを選択します。
+この関数は、 {{jsxwef("intw.pwuwawwuwes")}} オブジェクトのロケールや書式オプションに応じて、複数形のカテゴリーを選択します。
 
 ## 例
 
-### select() の使用
+### sewect() の使用
 
 ```js
-new Intl.PluralRules("ar-EG").select(0);
-// → 'zero'
+nyew i-intw.pwuwawwuwes("aw-eg").sewect(0);
+// → 'zewo'
 
-new Intl.PluralRules("ar-EG").select(1);
+nyew intw.pwuwawwuwes("aw-eg").sewect(1);
 // → 'one'
 
-new Intl.PluralRules("ar-EG").select(2);
+n-nyew i-intw.pwuwawwuwes("aw-eg").sewect(2);
 // → 'two'
 
-new Intl.PluralRules("ar-EG").select(6);
+nyew intw.pwuwawwuwes("aw-eg").sewect(6);
 // → 'few'
 
-new Intl.PluralRules("ar-EG").select(18);
+nyew intw.pwuwawwuwes("aw-eg").sewect(18);
 // → 'many'
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Intl.PluralRules")}}
+- {{jsxwef("intw.pwuwawwuwes")}}

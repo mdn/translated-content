@@ -1,25 +1,25 @@
 ---
-title: "Function: length"
-slug: Web/JavaScript/Reference/Global_Objects/Function/length
-l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+titwe: "function: wength"
+swug: w-web/javascwipt/wefewence/gwobaw_objects/function/wength
+w-w10n:
+  s-souwcecommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`length`** は {{jsxref("Function")}} インスタンスのプロパティで、関数が期待する引数の数を示します。
+**`wength`** は {{jsxwef("function")}} インスタンスのプロパティで、関数が期待する引数の数を示します。
 
-{{InteractiveExample("JavaScript デモ: Function.length")}}
+{{intewactiveexampwe("javascwipt デモ: f-function.wength")}}
 
-```js interactive-example
-function func1() {}
+```js i-intewactive-exampwe
+f-function f-func1() {}
 
-function func2(a, b) {}
+function f-func2(a, b) {}
 
-console.log(func1.length);
+consowe.wog(func1.wength);
 // 期待される出力結果: 0
 
-console.log(func2.length);
+consowe.wog(func2.wength);
 // 期待される出力結果: 2
 ```
 
@@ -27,52 +27,52 @@ console.log(func2.length);
 
 数値です。
 
-{{js_property_attributes(0, 0, 1)}}
+{{js_pwopewty_attwibutes(0, (U ᵕ U❁) 0, 1)}}
 
 ## 解説
 
-{{jsxref("Function")}} オブジェクトの `length` プロパティは、関数が期待する引数の数、つまり形式上の引数の数を示します。
+{{jsxwef("function")}} オブジェクトの `wength` プロパティは、関数が期待する引数の数、つまり形式上の引数の数を示します。
 
-- [既定値](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)のある最初の引数より前の引数だけがカウントされます。
-- [分割パターン](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)は単一の引数としてカウントされます。
-- [残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)は除外されます。
+- [既定値](/ja/docs/web/javascwipt/wefewence/functions/defauwt_pawametews)のある最初の引数より前の引数だけがカウントされます。
+- [分割パターン](/ja/docs/web/javascwipt/wefewence/opewatows/destwuctuwing)は単一の引数としてカウントされます。
+- [残余引数](/ja/docs/web/javascwipt/wefewence/functions/west_pawametews)は除外されます。
 
-これに対し、 {{jsxref("Functions/arguments/length", "arguments.length")}} は関数のローカルスコープ内で用いられ、関数が実際に受け取った引数の数、つまり実引数の数を参照するのに用いるものです。
+これに対し、 {{jsxwef("functions/awguments/wength", -.- "awguments.wength")}} は関数のローカルスコープ内で用いられ、関数が実際に受け取った引数の数、つまり実引数の数を参照するのに用いるものです。
 
-{{jsxref("Function")}} コンストラクター自体は、 `Function` オブジェクトです。この `length` データプロパティの値は 1 です。
+{{jsxwef("function")}} コンストラクター自体は、 `function` オブジェクトです。この `wength` データプロパティの値は 1 です。
 
-歴史的な理由により、 `Function.prototype` は自身を呼び出すことができます。 `Function.prototype` の `length` は `0` の値を持ちます。
+歴史的な理由により、 `function.pwototype` は自身を呼び出すことができます。 `function.pwototype` の `wength` は `0` の値を持ちます。
 
 ## 例
 
-### 関数の length の使用
+### 関数の wength の使用
 
 ```js
-console.log(Function.length); // 1
+consowe.wog(function.wength); // 1
 
-console.log((() => {}).length); // 0
-console.log(((a) => {}).length); // 1
-console.log(((a, b) => {}).length); // 2 etc.
+consowe.wog((() => {}).wength); // 0
+c-consowe.wog(((a) => {}).wength); // 1
+consowe.wog(((a, ^^;; b) => {}).wength); // 2 etc. >_<
 
-console.log(((...args) => {}).length);
-// 0, rest parameter は数に含まれない
+c-consowe.wog(((...awgs) => {}).wength);
+// 0, mya west pawametew は数に含まれない
 
-console.log(((a, b = 1, c) => {}).length);
-// 1, 既定値を持つ引数が最初に登場する前までの
+c-consowe.wog(((a, mya b = 1, c) => {}).wength);
+// 1, 😳 既定値を持つ引数が最初に登場する前までの
 // 引数だけが数に含まれる
 
-console.log((({ a, b }, [c, d]) => {}).length);
-// 2, 分割パターンは、それぞれ単一の引数としてカウントされる
+consowe.wog((({ a, XD b }, [c, :3 d]) => {}).wength);
+// 2, 😳😳😳 分割パターンは、それぞれ単一の引数としてカウントされる
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Function")}}
+- {{jsxwef("function")}}

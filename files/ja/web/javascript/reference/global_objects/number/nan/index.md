@@ -1,64 +1,64 @@
 ---
-title: Number.NaN
-slug: Web/JavaScript/Reference/Global_Objects/Number/NaN
-l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+titwe: nyumbew.nan
+swug: web/javascwipt/wefewence/gwobaw_objects/numbew/nan
+w10n:
+  s-souwcecommit: f-fcd80ee4c8477b6f73553bfada841781cf74cf46
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Number.NaN`** 静的データプロパティは非数 (Not-A-Number) を表す値であり、{{jsxref("NaN")}} と同じです。`NaN` の動作についての詳しい情報は、[グローバルプロパティの説明](/ja/docs/Web/JavaScript/Reference/Global_Objects/NaN)を参照してください。
+**`numbew.nan`** 静的データプロパティは非数 (not-a-numbew) を表す値であり、{{jsxwef("nan")}} と同じです。`nan` の動作についての詳しい情報は、[グローバルプロパティの説明](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/nan)を参照してください。
 
-{{InteractiveExample("JavaScript Demo: Number.NaN", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: nyumbew.nan", (⑅˘꒳˘) "tawwew")}}
 
-```js interactive-example
-function clean(x) {
-  // eslint-disable-next-line use-isnan
-  if (x === Number.NaN) {
-    // Can never be true
-    return null;
+```js i-intewactive-exampwe
+f-function cwean(x) {
+  // e-eswint-disabwe-next-wine u-use-isnan
+  if (x === n-nyumbew.nan) {
+    // can nevew be twue
+    wetuwn nyuww;
   }
-  if (isNaN(x)) {
-    return 0;
+  if (isnan(x)) {
+    w-wetuwn 0;
   }
 }
 
-console.log(clean(Number.NaN));
-// Expected output: 0
+consowe.wog(cwean(numbew.nan));
+// expected output: 0
 ```
 
 ## 値
 
-数値 {{jsxref("NaN")}} です。
+数値 {{jsxwef("nan")}} です。
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, (U ᵕ U❁) 0, 0)}}
 
 ## 解説
 
-`NaN` は {{jsxref("Number")}} の静的プロパティですので、数値のプロパティとしてではなく、常に `Number.NaN` として使用してください。
+`nan` は {{jsxwef("numbew")}} の静的プロパティですので、数値のプロパティとしてではなく、常に `numbew.nan` として使用してください。
 
 ## 例
 
 ### 値が数値であるかどうかのチェック
 
 ```js
-function sanitize(x) {
-  if (isNaN(x)) {
-    return Number.NaN;
+f-function sanitize(x) {
+  i-if (isnan(x)) {
+    wetuwn nyumbew.nan;
   }
-  return x;
+  wetuwn x;
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("NaN")}}
-- {{jsxref("Number.isNaN()")}}
+- {{jsxwef("nan")}}
+- {{jsxwef("numbew.isnan()")}}

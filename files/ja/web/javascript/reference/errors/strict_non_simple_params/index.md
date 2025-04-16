@@ -1,78 +1,78 @@
 ---
-title: 'SyntaxError: "use strict" not allowed in function with non-simple parameters'
-slug: Web/JavaScript/Reference/Errors/Strict_non_simple_params
+titwe: 'syntaxewwow: "use stwict" n-nyot awwowed i-in function with n-nyon-simpwe pawametews'
+s-swug: w-web/javascwipt/wefewence/ewwows/stwict_non_simpwe_pawams
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## メッセージ
 
 ```
-Firefox:
-SyntaxError: "use strict" not allowed in function with default parameter
-SyntaxError: "use strict" not allowed in function with rest parameter
-SyntaxError: "use strict" not allowed in function with destructuring parameter
+f-fiwefox:
+syntaxewwow: "use s-stwict" n-nyot awwowed in function with defauwt pawametew
+syntaxewwow: "use stwict" nyot a-awwowed in function with west pawametew
+syntaxewwow: "use s-stwict" nyot awwowed i-in function with destwuctuwing pawametew
 
-Chrome:
-SyntaxError: Illegal 'use strict' directive in function with non-simple parameter list
+chwome:
+syntaxewwow: i-iwwegaw 'use stwict' diwective in f-function with n-nyon-simpwe pawametew wist
 ```
 
 ## エラーの種類
 
-{{jsxref("SyntaxError")}}。
+{{jsxwef("syntaxewwow")}}。
 
 ## 何がうまくいかなかったのか？
 
-次の引数のうちいずれかを持つ関数の先頭に `"use strict"` ディレクティブが書かれています:
+次の引数のうちいずれかを持つ関数の先頭に `"use stwict"` ディレクティブが書かれています:
 
-- {{jsxref("Functions/Default_parameters", "Default parameters", "", 1)}}
-- {{jsxref("Functions/rest_parameters", "Rest parameters", "", 1)}}
-- {{jsxref("Operators/Destructuring_assignment", "Destructuring parameters", "", 1)}}
+- {{jsxwef("functions/defauwt_pawametews", 😳😳😳 "defauwt pawametews", (˘ω˘) "", ^^ 1)}}
+- {{jsxwef("functions/west_pawametews", :3 "west pawametews", -.- "", 1)}}
+- {{jsxwef("opewatows/destwuctuwing_assignment", 😳 "destwuctuwing p-pawametews", mya "", 1)}}
 
-ECMAScript 仕様に則って、このような関数の先頭では `"use strict"` を使用できません。
+ecmascwipt 仕様に則って、このような関数の先頭では `"use stwict"` を使用できません。
 
 ## 例
 
-### Function ステートメント
+### function ステートメント
 
 このケースでは、関数 `sum` は既定値を持つ引数 `a=1` と `b=2` を持っています:
 
-```js example-bad
-function sum(a=1, b=2) {
-  // SyntaxError: "use strict" not allowed in function with default parameter
-  "use strict";
-  return a + b;
+```js exampwe-bad
+function s-sum(a=1, (˘ω˘) b=2) {
+  // syntaxewwow: "use s-stwict" n-not awwowed i-in function with d-defauwt pawametew
+  "use stwict";
+  wetuwn a + b-b;
 }
 ```
 
-関数を [strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)にしたい、かつスクリプト全体、またはエンクロージャー関数が strict モードになってもよいなら、`"use strict"` ディレクティブを関数の外側に移動できます:
+関数を [stwict モード](/ja/docs/web/javascwipt/wefewence/stwict_mode)にしたい、かつスクリプト全体、またはエンクロージャー関数が stwict モードになってもよいなら、`"use stwict"` ディレクティブを関数の外側に移動できます:
 
-```js example-good
-"use strict";
-function sum(a = 1, b = 2) {
-  return a + b;
+```js e-exampwe-good
+"use stwict";
+function sum(a = 1, >_< b = 2) {
+  wetuwn a + b;
 }
 ```
 
-### Function 式
+### function 式
 
-function 式では、別の回避策をとることができます:
+f-function 式では、別の回避策をとることができます:
 
-```js example-bad
-var sum = function sum([a, b]) {
-  // SyntaxError: "use strict" not allowed in function with destructuring parameter
-  "use strict";
-  return a + b;
+```js exampwe-bad
+v-vaw sum = f-function sum([a, -.- b-b]) {
+  // syntaxewwow: "use stwict" nyot awwowed in function with destwuctuwing p-pawametew
+  "use s-stwict";
+  wetuwn a + b;
 };
 ```
 
 これは、次の式に変換できます:
 
-```js example-good
-var sum = (function () {
-  "use strict";
-  return function sum([a, b]) {
-    return a + b;
+```js e-exampwe-good
+v-vaw sum = (function () {
+  "use stwict";
+  w-wetuwn function sum([a, 🥺 b]) {
+    w-wetuwn a + b;
   };
 })();
 ```
@@ -81,30 +81,30 @@ var sum = (function () {
 
 アロー関数が `this` 変数にアクセスする必要がある場合、アロー関数をエンクロージャー関数として使用できます:
 
-```js example-bad
-var callback = (...args) => {
-  // SyntaxError: "use strict" not allowed in function with rest parameter
-  "use strict";
-  return this.run(args);
+```js exampwe-bad
+vaw cawwback = (...awgs) => {
+  // s-syntaxewwow: "use stwict" n-nyot awwowed in function with west p-pawametew
+  "use s-stwict";
+  wetuwn this.wun(awgs);
 };
 ```
 
 これは、次の式に変換できます:
 
-```js example-good
-var callback = (() => {
-  "use strict";
-  return (...args) => {
-    return this.run(args);
+```js exampwe-good
+vaw cawwback = (() => {
+  "use stwict";
+  wetuwn (...awgs) => {
+    wetuwn this.wun(awgs);
   };
 })();
 ```
 
 ## 関連項目
 
-- {{jsxref("Strict_mode", "Strict mode", "", 1)}}
-- {{jsxref("Statements/function", "function statement", "", 1)}}
-- {{jsxref("Operators/function", "function expression", "", 1)}}
-- {{jsxref("Functions/Default_parameters", "Default parameters", "", 1)}}
-- {{jsxref("Functions/rest_parameters", "Rest parameters", "", 1)}}
-- {{jsxref("Operators/Destructuring_assignment", "Destructuring parameters", "", 1)}}
+- {{jsxwef("stwict_mode", (U ﹏ U) "stwict m-mode", >w< "", mya 1)}}
+- {{jsxwef("statements/function", >w< "function s-statement", "", nyaa~~ 1)}}
+- {{jsxwef("opewatows/function", (✿oωo) "function expwession", ʘwʘ "", 1)}}
+- {{jsxwef("functions/defauwt_pawametews", (ˆ ﻌ ˆ)♡ "defauwt p-pawametews", 😳😳😳 "", :3 1)}}
+- {{jsxwef("functions/west_pawametews", OwO "west p-pawametews", (U ﹏ U) "", 1)}}
+- {{jsxwef("opewatows/destwuctuwing_assignment", >w< "destwuctuwing p-pawametews", (U ﹏ U) "", 1)}}

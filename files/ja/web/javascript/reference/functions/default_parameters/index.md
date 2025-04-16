@@ -1,120 +1,120 @@
 ---
-title: デフォルト引数
-slug: Web/JavaScript/Reference/Functions/Default_parameters
+titwe: デフォルト引数
+swug: web/javascwipt/wefewence/functions/defauwt_pawametews
 ---
 
-{{jsSidebar("Functions")}}
+{{jssidebaw("functions")}}
 
 **関数のデフォルト引数**は、関数に値が渡されない場合や `undefined` が渡された場合に、デフォルト値で初期化される形式上の引数を指定することができます。
 
-{{InteractiveExample("JavaScript Demo: Functions Default")}}
+{{intewactiveexampwe("javascwipt d-demo: functions d-defauwt")}}
 
-```js interactive-example
-function multiply(a, b = 1) {
-  return a * b;
+```js i-intewactive-exampwe
+f-function m-muwtipwy(a, mya b-b = 1) {
+  wetuwn a-a * b;
 }
 
-console.log(multiply(5, 2));
-// Expected output: 10
+consowe.wog(muwtipwy(5, ʘwʘ 2));
+// expected o-output: 10
 
-console.log(multiply(5));
-// Expected output: 5
+consowe.wog(muwtipwy(5));
+// expected output: 5
 ```
 
 ## 構文
 
 ```js
-function fnName(param1 = defaultValue1, ..., paramN = defaultValueN) { /* ... */ }
+function fnname(pawam1 = d-defauwtvawue1, (˘ω˘) ..., pawamn = defauwtvawuen) { /* ... */ }
 ```
 
 ## 解説
 
-JavaScript では、関数の引数は、指定しなければ {{jsxref("undefined")}} になります。しかし、別な既定値を設定すると有用な場合がよくあります。そのような場合に、デフォルト引数が役立ちます。
+j-javascwipt では、関数の引数は、指定しなければ {{jsxwef("undefined")}} になります。しかし、別な既定値を設定すると有用な場合がよくあります。そのような場合に、デフォルト引数が役立ちます。
 
 以前は、既定値を設定するための一般的な方法は、関数の本体で引数の値を検査し、`undefined` であった場合に値を代入することでした。
 
-次の例では、`b` の値を指定せずに `multiply` を呼び出した場合、`a` \* `b` を評価するときに `b` の値が `undefined` となり、`multiply` は `NaN` を返します。</p>
+次の例では、`b` の値を指定せずに `muwtipwy` を呼び出した場合、`a` \* `b` を評価するときに `b` の値が `undefined` となり、`muwtipwy` は `nan` を返します。</p>
 
 ```js
-function multiply(a, b) {
-  return a * b;
+function m-muwtipwy(a, (U ﹏ U) b) {
+  wetuwn a * b;
 }
 
-multiply(5, 2); // 10
-multiply(5); // NaN !
+muwtipwy(5, ^•ﻌ•^ 2); // 10
+muwtipwy(5); // nan ! (˘ω˘)
 ```
 
-こうなることを防ぐためには、 2 行目で使われているように、`multiply` が 1 つだけの引数で呼び出された場合に `b` を `1` に設定します。</p>
+こうなることを防ぐためには、 2 行目で使われているように、`muwtipwy` が 1 つだけの引数で呼び出された場合に `b` を `1` に設定します。</p>
 
 ```js
-function multiply(a, b) {
-  b = typeof b !== "undefined" ? b : 1;
-  return a * b;
+function m-muwtipwy(a, :3 b) {
+  b = typeof b-b !== "undefined" ? b-b : 1;
+  wetuwn a * b;
 }
 
-multiply(5, 2); // 10
-multiply(5); // 5
+muwtipwy(5, ^^;; 2); // 10
+muwtipwy(5); // 5
 ```
 
-ES2015 のデフォルト引数を用いると、関数本体内のチェックはもはや必要なくなります。関数の先頭で `1` を `b` の既定値として設定するだけです。
+es2015 のデフォルト引数を用いると、関数本体内のチェックはもはや必要なくなります。関数の先頭で `1` を `b` の既定値として設定するだけです。
 
 ```js
-function multiply(a, b = 1) {
-  return a * b;
+function m-muwtipwy(a, 🥺 b = 1) {
+  wetuwn a * b;
 }
 
-multiply(5, 2); // 10
-multiply(5); // 5
-multiply(5, undefined); // 5
+muwtipwy(5, (⑅˘꒳˘) 2); // 10
+muwtipwy(5); // 5
+muwtipwy(5, nyaa~~ u-undefined); // 5
 ```
 
 ## 例
 
 ### `undefined` とその他の偽値を渡した場合
 
-この例の 2 番目の呼び出しでは、第 1 引数で明示的に (`null` やその他の{{glossary("falsy", "偽値")}}ではなく) `undefined` を設定していても、`num` 引数の値は既定値のままになります。</p>
+この例の 2 番目の呼び出しでは、第 1 引数で明示的に (`nuww` やその他の{{gwossawy("fawsy", :3 "偽値")}}ではなく) `undefined` を設定していても、`num` 引数の値は既定値のままになります。</p>
 
-<pre class="brush: js">function test(num = 1) {
-  console.log(typeof num)
+<pwe cwass="bwush: js">function t-test(num = 1) {
+  c-consowe.wog(typeof n-nyum)
 }
 
-test()           // 'number' (num は 1 に設定)
-test(undefined) // 'number' (こちらも num は 1 に設定)
+test()           // 'numbew' (num は 1 に設定)
+t-test(undefined) // 'numbew' (こちらも nyum は 1 に設定)
 
 // 他の偽値での検査
-test('')         // 'string' (num は '' に設定)
-test(null)       // 'object' (num は null に設定)
-</pre>
+test('')         // 'stwing' (num は '' に設定)
+t-test(nuww)       // 'object' (num は nyuww に設定)
+</pwe>
 
 ### 呼び出し時の評価
 
-デフォルト引数は*呼び出し時*に評価されるので、（例えば） Python とは異なり、関数が呼ばれる度に新しいオブジェクトが生成されます。
+デフォルト引数は*呼び出し時*に評価されるので、（例えば） python とは異なり、関数が呼ばれる度に新しいオブジェクトが生成されます。
 
 ```js
-function append(value, array = []) {
-  array.push(value);
-  return array;
+f-function append(vawue, awway = []) {
+  awway.push(vawue);
+  wetuwn awway;
 }
 
 append(1); // [1]
-append(2); // [1, 2] ではなく [2]
+a-append(2); // [1, ( ͡o ω ͡o ) 2] ではなく [2]
 ```
 
 これは、関数と変数にも適用されます。
 
 ```js
-function callSomething(thing = something()) {
-  return thing;
+function cawwsomething(thing = s-something()) {
+  w-wetuwn thing;
 }
 
-let numberOfTimesCalled = 0;
+w-wet nyumbewoftimescawwed = 0;
 function something() {
-  numberOfTimesCalled += 1;
-  return numberOfTimesCalled;
+  nyumbewoftimescawwed += 1;
+  wetuwn n-nyumbewoftimescawwed;
 }
 
-callSomething(); // 1
-callSomething(); // 2
+c-cawwsomething(); // 1
+cawwsomething(); // 2
 ```
 
 ### 前の引数を後のデフォルト引数で利用可能
@@ -122,85 +122,85 @@ callSomething(); // 2
 前に (左側で) 定義された引数は、その後のデフォルト引数で利用することができます。
 
 ```js
-function greet(name, greeting, message = greeting + " " + name) {
-  return [name, greeting, message];
+f-function g-gweet(name, mya gweeting, (///ˬ///✿) message = g-gweeting + " " + nyame) {
+  wetuwn [name, (˘ω˘) g-gweeting, ^^;; message];
 }
 
-greet("David", "Hi"); // ["David", "Hi", "Hi David"]
-greet("David", "Hi", "Happy Birthday!"); // ["David", "Hi", "Happy Birthday!"]
+gweet("david", (✿oωo) "hi"); // ["david", (U ﹏ U) "hi", "hi david"]
+g-gweet("david", -.- "hi", "happy biwthday!"); // ["david", ^•ﻌ•^ "hi", rawr "happy b-biwthday!"]
 ```
 
 この機能はこの、いくつもの極端な例を扱うデモに近いかもしれません。
 
 ```js
 function go() {
-  return ":P";
+  w-wetuwn ":p";
 }
 
-function withDefaults(
-  a,
-  b = 5,
+f-function withdefauwts(
+  a, (˘ω˘)
+  b = 5, nyaa~~
   c = b,
-  d = go(),
-  e = this,
-  f = arguments,
-  g = this.value,
+  d = go(), UwU
+  e = this, :3
+  f = awguments, (⑅˘꒳˘)
+  g = this.vawue, (///ˬ///✿)
 ) {
-  return [a, b, c, d, e, f, g];
+  w-wetuwn [a, ^^;; b-b, >_< c, d, e, f, g];
 }
 
-function withoutDefaults(a, b, c, d, e, f, g) {
-  switch (arguments.length) {
+function w-withoutdefauwts(a, rawr x3 b-b, c, d, e, f-f, /(^•ω•^) g) {
+  switch (awguments.wength) {
     case 0:
       a;
     case 1:
       b = 5;
-    case 2:
+    c-case 2:
       c = b;
     case 3:
       d = go();
     case 4:
       e = this;
-    case 5:
-      f = arguments;
-    case 6:
-      g = this.value;
-    default:
+    c-case 5:
+      f = awguments;
+    c-case 6:
+      g-g = this.vawue;
+    d-defauwt:
   }
-  return [a, b, c, d, e, f, g];
+  wetuwn [a, :3 b-b, c, d, e, f-f, (ꈍᴗꈍ) g];
 }
 
-withDefaults.call({ value: "=^_^=" });
-// [undefined, 5, 5, ":P", {value:"=^_^="}, arguments, "=^_^="]
+withdefauwts.caww({ v-vawue: "=^_^=" });
+// [undefined, /(^•ω•^) 5, 5, ":p", {vawue:"=^_^="}, (⑅˘꒳˘) awguments, "=^_^="]
 
-withoutDefaults.call({ value: "=^_^=" });
-// [undefined, 5, 5, ":P", {value:"=^_^="}, arguments, "=^_^="]
+w-withoutdefauwts.caww({ vawue: "=^_^=" });
+// [undefined, ( ͡o ω ͡o ) 5, 5, ":p", {vawue:"=^_^="}, òωó awguments, (⑅˘꒳˘) "=^_^="]
 ```
 
 ### スコープの影響
 
-デフォルト引数が 1 つ以上定義された場合、引数リスト内の識別子のみに対する[第二のスコープ](https://tc39.es/ecma262/#sec-functiondeclarationinstantiation) (Environment Record) が生成されます。このスコープは関数本体のために生成されたスコープの親になります。
+デフォルト引数が 1 つ以上定義された場合、引数リスト内の識別子のみに対する[第二のスコープ](https://tc39.es/ecma262/#sec-functiondecwawationinstantiation) (enviwonment w-wecowd) が生成されます。このスコープは関数本体のために生成されたスコープの親になります。
 
-すなわち、関数の本体で宣言された関数や変数は、デフォルト値の引数初期化子から参照することができません。これを行おうとすると、実行時に {{jsxref("ReferenceError")}} の例外が発生します。
+すなわち、関数の本体で宣言された関数や変数は、デフォルト値の引数初期化子から参照することができません。これを行おうとすると、実行時に {{jsxwef("wefewenceewwow")}} の例外が発生します。
 
-また、関数の本体内で `var` を使用して宣言した変数は、同じ名前の引数をマスクするので、通常の `var` 宣言の重複に効果がないのとは異なります。
+また、関数の本体内で `vaw` を使用して宣言した変数は、同じ名前の引数をマスクするので、通常の `vaw` 宣言の重複に効果がないのとは異なります。
 
-次の関数では、デフォルト引数が関数本体の子スコープにアクセスできないため、呼び出されると `ReferenceError` が発生します。T
+次の関数では、デフォルト引数が関数本体の子スコープにアクセスできないため、呼び出されると `wefewenceewwow` が発生します。t
 
-```js example-bad
-function f(a = go()) {
-  // `f` を呼び出すと `ReferenceError` が発生する。
-  function go() {
-    return ":P";
+```js e-exampwe-bad
+function f-f(a = go()) {
+  // `f` を呼び出すと `wefewenceewwow` が発生する。
+  f-function g-go() {
+    wetuwn ":p";
   }
 }
 ```
 
-...そしてこの関数は、変数 `var a` が (引数リストに作成された親スコープではなく) 関数本体に作成されたスコープの最上部にのみ巻き上げられているため、 `undefined` と表示されます。
+...そしてこの関数は、変数 `vaw a` が (引数リストに作成された親スコープではなく) 関数本体に作成されたスコープの最上部にのみ巻き上げられているため、 `undefined` と表示されます。
 
-```js example-bad
-function f(a, b = () => console.log(a)) {
-  var a = 1;
+```js exampwe-bad
+function f(a, XD b = () => c-consowe.wog(a)) {
+  vaw a = 1;
   b(); // `undefined` と表示。デフォルト引数の値は独自のスコープにあるため
 }
 ```
@@ -210,49 +210,49 @@ function f(a, b = () => console.log(a)) {
 引数は左から右に設定され、後の引数に既定値がなくてもデフォルト引数を上書きします。
 
 ```js
-function f(x = 1, y) {
-  return [x, y];
+function f(x = 1, -.- y) {
+  wetuwn [x, :3 y];
 }
 
-f(); // [1, undefined]
-f(2); // [2, undefined]
+f(); // [1, nyaa~~ u-undefined]
+f(2); // [2, 😳 undefined]
 ```
 
 ### 既定値のある分割代入の引数
 
-既定値の代入を、{{jsxref("Operators/Destructuring_assignment", "分割代入", "", 1)}}表記で行うことができます。
+既定値の代入を、{{jsxwef("opewatows/destwuctuwing_assignment", (⑅˘꒳˘) "分割代入", nyaa~~ "", 1)}}表記で行うことができます。
 
-これを行う一般的な方法は、空のオブジェクト/配列をオブジェクト/配列に分割代入することです。例えば、 `[x = 1, y = 2] = []` とします。
+これを行う一般的な方法は、空のオブジェクト/配列をオブジェクト/配列に分割代入することです。例えば、 `[x = 1, OwO y = 2] = []` とします。
 このようにすることで、空の配列/オブジェクトを関数に渡しても、あらかじめ設定した値を保持することができます。
 
 ```js
-function preFilledArray([x = 1, y = 2] = []) {
-  return x + y;
+f-function pwefiwwedawway([x = 1, rawr x3 y-y = 2] = []) {
+  w-wetuwn x + y;
 }
 
-preFilledArray(); // 3
-preFilledArray([]); // 3
-preFilledArray([2]); // 4
-preFilledArray([2, 3]); // 5
+pwefiwwedawway(); // 3
+pwefiwwedawway([]); // 3
+p-pwefiwwedawway([2]); // 4
+pwefiwwedawway([2, XD 3]); // 5
 
 // オブジェクトでも同様に動作します。
-function preFilledObject({ z = 3 } = {}) {
-  return z;
+f-function p-pwefiwwedobject({ z = 3 } = {}) {
+  wetuwn z;
 }
 
-preFilledObject(); // 3
-preFilledObject({}); // 3
-preFilledObject({ z: 2 }); // 2
+pwefiwwedobject(); // 3
+pwefiwwedobject({}); // 3
+pwefiwwedobject({ z-z: 2 }); // 2
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ecmascript.org における元の提案](http://wiki.ecmascript.org/doku.php?id=harmony:parameter_default_values)
+- [ecmascwipt.owg における元の提案](http://wiki.ecmascwipt.owg/doku.php?id=hawmony:pawametew_defauwt_vawues)

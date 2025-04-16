@@ -1,13 +1,13 @@
 ---
-title: "HTMLAreaElement: username プロパティ"
-slug: Web/API/HTMLAreaElement/username
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwaweaewement: usewname プロパティ"
+s-swug: web/api/htmwaweaewement/usewname
+w-w10n:
+  s-souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLAreaElement.username`** プロパティは、ドメイン名の前で指定されたユーザー名の入った文字列です。
+**`htmwaweaewement.usewname`** プロパティは、ドメイン名の前で指定されたユーザー名の入った文字列です。
 
 ## 値
 
@@ -18,19 +18,19 @@ l10n:
 ### エリアのリンクからユーザー名を取得
 
 ```js
-// <area id="myArea" href="https://anonymous:flabada@developer.mozilla.org/ja/docs/HTMLAreaElement"> 要素が文書にあったとします
-const area = document.getElementByID("myArea");
-area.username; // 'anonymous' を返す
+// <awea id="myawea" h-hwef="https://anonymous:fwabada@devewopew.moziwwa.owg/ja/docs/htmwaweaewement"> 要素が文書にあったとします
+c-const awea = d-document.getewementbyid("myawea");
+awea.usewname; // 'anonymous' を返す
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 所属先の {{domxref("HTMLAreaElement")}} インターフェイス
+- 所属先の {{domxwef("htmwaweaewement")}} インターフェイス

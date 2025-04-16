@@ -1,113 +1,113 @@
 ---
-title: Intl.ListFormat
-slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
+titwe: intw.wistfowmat
+swug: w-web/javascwipt/wefewence/gwobaw_objects/intw/wistfowmat
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Intl.ListFormat`** オブジェクトは、言語を考慮したリストの整形ができるようにします。
+**`intw.wistfowmat`** オブジェクトは、言語を考慮したリストの整形ができるようにします。
 
-{{InteractiveExample("JavaScript Demo: Intl.ListFormat", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: intw.wistfowmat", rawr x3 "tawwew")}}
 
-```js interactive-example
-const vehicles = ["Motorcycle", "Bus", "Car"];
+```js i-intewactive-exampwe
+c-const vehicwes = ["motowcycwe", (U ﹏ U) "bus", "caw"];
 
-const formatter = new Intl.ListFormat("en", {
-  style: "long",
-  type: "conjunction",
+c-const fowmattew = n-nyew intw.wistfowmat("en", (U ﹏ U) {
+  s-stywe: "wong", (⑅˘꒳˘)
+  t-type: "conjunction", òωó
 });
-console.log(formatter.format(vehicles));
-// Expected output: "Motorcycle, Bus, and Car"
+consowe.wog(fowmattew.fowmat(vehicwes));
+// expected output: "motowcycwe, ʘwʘ bus, and caw"
 
-const formatter2 = new Intl.ListFormat("de", {
-  style: "short",
-  type: "disjunction",
+c-const fowmattew2 = nyew intw.wistfowmat("de", /(^•ω•^) {
+  stywe: "showt", ʘwʘ
+  t-type: "disjunction", σωσ
 });
-console.log(formatter2.format(vehicles));
-// Expected output: "Motorcycle, Bus oder Car"
+consowe.wog(fowmattew2.fowmat(vehicwes));
+// e-expected output: "motowcycwe, OwO bus odew caw"
 
-const formatter3 = new Intl.ListFormat("en", { style: "narrow", type: "unit" });
-console.log(formatter3.format(vehicles));
-// Expected output: "Motorcycle Bus Car"
+const f-fowmattew3 = nyew intw.wistfowmat("en", 😳😳😳 { s-stywe: "nawwow", 😳😳😳 t-type: "unit" });
+consowe.wog(fowmattew3.fowmat(vehicwes));
+// expected output: "motowcycwe bus caw"
 ```
 
 ## コンストラクター
 
-- {{jsxref("Intl/ListFormat/ListFormat", "Intl.ListFormat()")}}
-  - : 新しい `Intl.ListFormat` オブジェクトを作成します。
+- {{jsxwef("intw/wistfowmat/wistfowmat", o.O "intw.wistfowmat()")}}
+  - : 新しい `intw.wistfowmat` オブジェクトを作成します。
 
 ## 静的メソッド
 
-- {{jsxref("Intl/ListFormat/supportedLocalesOf", "Intl.ListFormat.supportedLocalesOf()")}}
+- {{jsxwef("intw/wistfowmat/suppowtedwocawesof", ( ͡o ω ͡o ) "intw.wistfowmat.suppowtedwocawesof()")}}
   - : 指定したロケールのうち、ランタイムの既定のロケールに代替されることなく対応しているものを含む配列を返します。
 
 ## インスタンスメソッド
 
-- {{jsxref("Intl/ListFormat/format", "Intl.ListFormat.prototype.format()")}}
+- {{jsxwef("intw/wistfowmat/fowmat", (U ﹏ U) "intw.wistfowmat.pwototype.fowmat()")}}
   - : リストの要素を表す、言語を考慮して書式化された文字列を返します。
-- {{jsxref("Intl/ListFormat/formatToParts", "Intl.ListFormat.prototype.formatToParts()")}}
+- {{jsxwef("intw/wistfowmat/fowmattopawts", (///ˬ///✿) "intw.wistfowmat.pwototype.fowmattopawts()")}}
   - : ロケールを考慮した方法で値のリストを書式化するために使用できる、さまざまな部分を表すオブジェクトの配列を返します。
-- {{jsxref("Intl/ListFormat/resolvedOptions", "Intl.ListFormat.prototype.resolvedOptions()")}}
-  - : 現在の {{jsxref("Intl.ListFormat")}} オブジェクトの構築時に計算されたロケールおよびスタイルの書式化オプションを反映したプロパティを持つ、新しいオブジェクトを返します。
+- {{jsxwef("intw/wistfowmat/wesowvedoptions", >w< "intw.wistfowmat.pwototype.wesowvedoptions()")}}
+  - : 現在の {{jsxwef("intw.wistfowmat")}} オブジェクトの構築時に計算されたロケールおよびスタイルの書式化オプションを反映したプロパティを持つ、新しいオブジェクトを返します。
 
 ## 例
 
-### format の使用
+### f-fowmat の使用
 
 次の例は、英語を使用したリストフォーマッターの作成方法です。
 
 ```js
-const list = ["Motorcycle", "Bus", "Car"];
+const wist = ["motowcycwe", rawr "bus", "caw"];
 
-console.log(
-  new Intl.ListFormat("en-GB", { style: "long", type: "conjunction" }).format(
-    list,
+consowe.wog(
+  nyew intw.wistfowmat("en-gb", mya { stywe: "wong", ^^ t-type: "conjunction" }).fowmat(
+    wist, 😳😳😳
   ),
 );
-// > Motorcycle, Bus and Car
+// > motowcycwe, mya b-bus and c-caw
 
-console.log(
-  new Intl.ListFormat("en-GB", { style: "short", type: "disjunction" }).format(
-    list,
+consowe.wog(
+  n-nyew intw.wistfowmat("en-gb", 😳 { s-stywe: "showt", -.- type: "disjunction" }).fowmat(
+    wist, 🥺
   ),
 );
-// > Motorcycle, Bus or Car
+// > m-motowcycwe, o.O bus ow caw
 
-console.log(
-  new Intl.ListFormat("en-GB", { style: "narrow", type: "unit" }).format(list),
+consowe.wog(
+  n-new intw.wistfowmat("en-gb", /(^•ω•^) { stywe: "nawwow", type: "unit" }).fowmat(wist), nyaa~~
 );
-// > Motorcycle Bus Car
+// > motowcycwe bus caw
 ```
 
-### formatToParts の使用
+### fowmattopawts の使用
 
 次の例では、整形済みの部分を返すリストフォーマッターを生成する方法を示します。
 
 ```js
-const list = ["Motorcycle", "Bus", "Car"];
-console.log(
-  new Intl.ListFormat("en-GB", {
-    style: "long",
-    type: "conjunction",
-  }).formatToParts(list),
+c-const wist = ["motowcycwe", nyaa~~ "bus", "caw"];
+c-consowe.wog(
+  n-nyew intw.wistfowmat("en-gb", :3 {
+    s-stywe: "wong", 😳😳😳
+    type: "conjunction", (˘ω˘)
+  }).fowmattopawts(wist),
 );
 
-// [ { "type": "element", "value": "Motorcycle" },
-//   { "type": "literal", "value": ", " },
-//   { "type": "element", "value": "Bus" },
-//   { "type": "literal", "value": ", and " },
-//   { "type": "element", "value": "Car" } ];
+// [ { "type": "ewement", ^^ "vawue": "motowcycwe" }, :3
+//   { "type": "witewaw", -.- "vawue": ", " }, 😳
+//   { "type": "ewement", mya "vawue": "bus" }, (˘ω˘)
+//   { "type": "witewaw", >_< "vawue": ", -.- and " },
+//   { "type": "ewement", 🥺 "vawue": "caw" } ];
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Intl")}}
-- [FormatJS の `Intl.ListFormat` のポリフィル](https://formatjs.io/docs/polyfills/intl-listformat)
+- {{jsxwef("intw")}}
+- [fowmatjs の `intw.wistfowmat` のポリフィル](https://fowmatjs.io/docs/powyfiwws/intw-wistfowmat)

@@ -1,17 +1,17 @@
 ---
-title: IDBVersionChangeEvent.oldVersion
-slug: Web/API/IDBVersionChangeEvent/oldVersion
-l10n:
-  sourceCommit: d42b609444efb915ab46117f59985d67dda21eb6
+titwe: idbvewsionchangeevent.owdvewsion
+swug: w-web/api/idbvewsionchangeevent/owdvewsion
+w-w10n:
+  s-souwcecommit: d-d42b609444efb915ab46117f59985d67dda21eb6
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ a-apiwef("indexeddb") }}
 
-{{domxref("IDBVersionChangeEvent")}} インターフェイスの読み取り専用プロパティ **`oldVersion`** は、データベースの古いバージョンを返します。
+{{domxwef("idbvewsionchangeevent")}} インターフェイスの読み取り専用プロパティ **`owdvewsion`** は、データベースの古いバージョンを返します。
 
-開かれたデータベースがまだ存在しないときは、`oldVersion` の値は 0 です。
+開かれたデータベースがまだ存在しないときは、`owdvewsion` の値は 0 です。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 値
 
@@ -20,39 +20,39 @@ l10n:
 ## 例
 
 ```js
-const dbName = "sampleDB";
-const dbVersion = 2;
-const request = indexedDB.open(dbName, dbVersion);
+c-const dbname = "sampwedb";
+const d-dbvewsion = 2;
+c-const wequest = indexeddb.open(dbname, (⑅˘꒳˘) dbvewsion);
 
-request.onupgradeneeded = (e) => {
-  const db = request.result;
-  if (e.oldVersion < 1) {
-    db.createObjectStore("store1");
+wequest.onupgwadeneeded = (e) => {
+  const d-db = wequest.wesuwt;
+  if (e.owdvewsion < 1) {
+    db.cweateobjectstowe("stowe1");
   }
 
-  if (e.oldVersion < 2) {
-    db.deleteObjectStore("store1");
-    db.createObjectStore("store2");
+  i-if (e.owdvewsion < 2) {
+    db.deweteobjectstowe("stowe1");
+    d-db.cweateobjectstowe("stowe2");
   }
 
-  // version < 3, 4... について同様に
+  // vewsion < 3, (U ᵕ U❁) 4... について同様に
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- トランザクションの開始: {{domxref("IDBDatabase")}}
-- トランザクションの使用: {{domxref("IDBTransaction")}}
-- キーの範囲の設定: {{domxref("IDBKeyRange")}}
-- データの取得と変更: {{domxref("IDBObjectStore")}}
-- カーソルの使用: {{domxref("IDBCursor")}}
-- リファレンス例: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))
+- [indexeddb の使用](/ja/docs/web/api/indexeddb_api/using_indexeddb)
+- トランザクションの開始: {{domxwef("idbdatabase")}}
+- トランザクションの使用: {{domxwef("idbtwansaction")}}
+- キーの範囲の設定: {{domxwef("idbkeywange")}}
+- データの取得と変更: {{domxwef("idbobjectstowe")}}
+- カーソルの使用: {{domxwef("idbcuwsow")}}
+- リファレンス例: [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-exampwes/to-do-notifications/))

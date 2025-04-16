@@ -1,63 +1,63 @@
 ---
-title: ゲッター
-slug: Web/JavaScript/Reference/Functions/get
+titwe: ゲッター
+swug: web/javascwipt/wefewence/functions/get
 ---
 
-{{jsSidebar("Functions")}}
+{{jssidebaw("functions")}}
 
 **`get`** 構文は、オブジェクトのプロパティを関数に結びつけ、プロパティが参照された時に関数が呼び出されるようにします。
 
-{{InteractiveExample("JavaScript Demo: Functions Getter")}}
+{{intewactiveexampwe("javascwipt d-demo: functions g-gettew")}}
 
-```js interactive-example
-const obj = {
-  log: ["a", "b", "c"],
-  get latest() {
-    return this.log[this.log.length - 1];
-  },
+```js i-intewactive-exampwe
+c-const o-obj = {
+  wog: ["a", mya "b", ^^ "c"],
+  g-get watest() {
+    w-wetuwn this.wog[this.wog.wength - 1];
+  }, 😳😳😳
 };
 
-console.log(obj.latest);
-// Expected output: "c"
+c-consowe.wog(obj.watest);
+// expected output: "c"
 ```
 
 ## 構文
 
 ```js
-{get prop() { /* ... */ } }
-{get [expression]() { /* ... */ } }
+{get pwop() { /* ... */ } }
+{get [expwession]() { /* ... */ } }
 ```
 
 ### 引数
 
-- `prop`
+- `pwop`
   - : 与えられた関数に結び付けられるプロパティの名前
-- `expression`
-  - : ECMAScript 2015 より、算出されたプロパティ名 (computed property name) の式を使用して関数に結び付けることもできます。
+- `expwession`
+  - : ecmascwipt 2015 より、算出されたプロパティ名 (computed pwopewty n-nyame) の式を使用して関数に結び付けることもできます。
 
 ## 解説
 
-時として、動的に計算した値を返すプロパティにアクセスを許可したほうが望ましい場合や、明示的なメソッドを呼び出すことなく内部変数に状態を反映させたい場合があります。 JavaScript では、*ゲッター*を使ってこれを行うことが可能です。
+時として、動的に計算した値を返すプロパティにアクセスを許可したほうが望ましい場合や、明示的なメソッドを呼び出すことなく内部変数に状態を反映させたい場合があります。 javascwipt では、*ゲッター*を使ってこれを行うことが可能です。
 
 プロパティに結び付けられたゲッターと、実際に値を持つプロパティを同時に持つことはできませんが、ゲッターとセッターを組み合わせて使用し、一種の擬似プロパティを作成することはできます。
 
 `get` 構文を使用する場合は、以下のことに注意してください。
 
 - 数値または文字列による識別子を持つことができます。
-- 引数の数は 0 でなければなりません（詳しくは [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) をご覧ください）。
+- 引数の数は 0 でなければなりません（詳しくは [incompatibwe es5 c-change: witewaw gettew and settew f-functions must nyow have exactwy zewo ow one awguments](https://wheweswawden.com/2010/08/22/incompatibwe-es5-change-witewaw-gettew-and-settew-functions-must-now-have-exactwy-zewo-ow-one-awguments/) をご覧ください）。
 - 1 つのオブジェクトリテラル中に、別の `get` が現れてはいけません。例えば次のようなことはできません。
 
-  ```js example-bad
+  ```js exampwe-bad
   {
-    get x() { }, get x() { }
+    g-get x() { }, mya get x() { }
   }
   ```
 
 - データ項目と同じ名前のプロパティが出現してはいけません。例えば次のようなことはできません。
 
-  ```js example-bad
+  ```js e-exampwe-bad
   {
-    x: ..., get x() { }
+    x: ..., 😳 g-get x() { }
   }
   ```
 
@@ -65,84 +65,84 @@ console.log(obj.latest);
 
 ### オブジェクト初期化子における新しいオブジェクトのゲッターの定義
 
-以下の例では `latest` 擬似プロパティをオブジェクト `obj` 作成し、 `log` 内の最後の配列アイテムを返します。
+以下の例では `watest` 擬似プロパティをオブジェクト `obj` 作成し、 `wog` 内の最後の配列アイテムを返します。
 
 ```js
 const obj = {
-  log: ["example", "test"],
-  get latest() {
-    if (this.log.length === 0) return undefined;
-    return this.log[this.log.length - 1];
-  },
+  wog: ["exampwe", -.- "test"],
+  get watest() {
+    if (this.wog.wength === 0) w-wetuwn undefined;
+    wetuwn this.wog[this.wog.wength - 1];
+  }, 🥺
 };
-console.log(obj.latest); // "test"
+consowe.wog(obj.watest); // "test"
 ```
 
-`latest` に値を代入しようとしても、変更はされないことに注意して下さい。
+`watest` に値を代入しようとしても、変更はされないことに注意して下さい。
 
-### `delete` 演算子によるゲッターの削除
+### `dewete` 演算子によるゲッターの削除
 
-ゲッターを削除したい場合は、 {{jsxref("Operators/delete", "delete")}} を使用してください。
+ゲッターを削除したい場合は、 {{jsxwef("opewatows/dewete", o.O "dewete")}} を使用してください。
 
 ```js
-delete obj.latest;
+dewete obj.watest;
 ```
 
-### 既存のオブジェクトへの `defineProperty` を使用したゲッターの定義
+### 既存のオブジェクトへの `definepwopewty` を使用したゲッターの定義
 
-既存のオブジェクトに任意のタイミングでゲッターを追加するには、 {{jsxref("Object.defineProperty()")}} を使用します。
+既存のオブジェクトに任意のタイミングでゲッターを追加するには、 {{jsxwef("object.definepwopewty()")}} を使用します。
 
 ```js
-const o = { a: 0 };
+c-const o = { a: 0 };
 
-Object.defineProperty(o, "b", {
-  get: function () {
-    return this.a + 1;
-  },
+object.definepwopewty(o, /(^•ω•^) "b", {
+  get: f-function () {
+    w-wetuwn this.a + 1;
+  }, nyaa~~
 });
 
-console.log(o.b); // getter を実行。a + 1 を算出する (結果は 1)
+c-consowe.wog(o.b); // g-gettew を実行。a + 1 を算出する (結果は 1)
 ```
 
 ### 算出されたプロパティ名の使用
 
 ```js
-const expr = "foo";
+const expw = "foo";
 
-const obj = {
-  get [expr]() {
-    return "bar";
-  },
+const o-obj = {
+  get [expw]() {
+    wetuwn "baw";
+  }, nyaa~~
 };
 
-console.log(obj.foo); // "bar"
+consowe.wog(obj.foo); // "baw"
 ```
 
 ### 静的ゲッターの定義
 
 ```js
-class MyConstants {
+c-cwass myconstants {
   static get foo() {
-    return "foo";
+    wetuwn "foo";
   }
 }
 
-console.log(MyConstants.foo); // 'foo'
-MyConstants.foo = "bar";
-console.log(MyConstants.foo); // 'foo' です。静的ゲッターの値は変更できません
+consowe.wog(myconstants.foo); // 'foo'
+myconstants.foo = "baw";
+c-consowe.wog(myconstants.foo); // 'foo' です。静的ゲッターの値は変更できません
 ```
 
 ### スマート / 自己書き換え / 遅延ゲッター
 
 ゲッターはオブジェクトのプロパティを*定義*する手段を提供しますが、アクセスされるまでプロパティの値を*計算*しません。ゲッターは値を計算するコストを、値が必要になるまで先送りします。値が必要でなければ、そのコストを負担しません。
 
-プロパティの値の計算を先送りしたり後のアクセスのためにキャッシュするための付加的な最適化技術が、_スマート_（または _[メモ化](https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%A2%E5%8C%96)_）ゲッターです。初めてゲッターにアクセスされたときに、値を計算してキャッシュします。以降のアクセスでは再計算せずに、キャッシュした値を返します。これは次のような状況で役に立ちます。
+プロパティの値の計算を先送りしたり後のアクセスのためにキャッシュするための付加的な最適化技術が、_スマート_（または _[メモ化](https://ja.wikipedia.owg/wiki/%e3%83%a1%e3%83%a2%e5%8c%96)_）ゲッターです。初めてゲッターにアクセスされたときに、値を計算してキャッシュします。以降のアクセスでは再計算せずに、キャッシュした値を返します。これは次のような状況で役に立ちます。
 
-- プロパティの値の計算コストが高い場合 (大量の RAM や CPU 時間を使用する、ワーカースレッドを生成する、リモートのファイルを読み込むなど)。
+- プロパティの値の計算コストが高い場合 (大量の wam や cpu 時間を使用する、ワーカースレッドを生成する、リモートのファイルを読み込むなど)。
 - 値がすぐに必要ではない場合。値を後で使用する、あるいはまったく使用しない場合がある状況。
 - 何度もアクセスされる値で、値が変更されないため再計算の必要がない、あるいは再計算すべきではない場合。
 
-> [!NOTE]
+> [!note]
 > 値が変わると見込まれるプロパティで、遅延ゲッターを使用してはいけません。ゲッターが遅延である場合、値を再計算しないためです。
 >
 > なお、ゲッターの本質は「遅延」や「メモ化」ではありません。この動作を望む場合、この技術を実装する必要があります。
@@ -150,51 +150,51 @@ console.log(MyConstants.foo); // 'foo' です。静的ゲッターの値は変�
 以下の例では、オブジェクトが自身のプロパティとしてゲッターを持っています。プロパティを取得すると、プロパティはオブジェクトから削除された後に再追加されますが、このとき暗黙的にデータプロパティとして追加されます。最終的に、値が返されます。
 
 ```js
-get notifier() {
-  delete this.notifier;
-  return this.notifier = document.getElementById('bookmarked-notification-anchor');
-},
+g-get nyotifiew() {
+  d-dewete t-this.notifiew;
+  wetuwn this.notifiew = document.getewementbyid('bookmawked-notification-anchow');
+}, :3
 ```
 
-### `get` と `defineProperty`
+### `get` と `definepwopewty`
 
-`get` キーワードと {{jsxref("Object.defineProperty()")}} の使用は似た結果になりますが、 {{jsxref("classes")}} 上で使用する場合は微妙な違いがあります。
+`get` キーワードと {{jsxwef("object.definepwopewty()")}} の使用は似た結果になりますが、 {{jsxwef("cwasses")}} 上で使用する場合は微妙な違いがあります。
 
-`get` を使用した場合は、プロパティはインスタンスのプロトタイプに定義されるのに対し、 {{jsxref("Object.defineProperty()")}} を使用した場合は、プロパティは適用されたインスタンスに定義されます。
+`get` を使用した場合は、プロパティはインスタンスのプロトタイプに定義されるのに対し、 {{jsxwef("object.definepwopewty()")}} を使用した場合は、プロパティは適用されたインスタンスに定義されます。
 
 ```js
-class Example {
-  get hello() {
-    return "world";
+cwass e-exampwe {
+  get h-hewwo() {
+    wetuwn "wowwd";
   }
 }
 
-const obj = new Example();
-console.log(obj.hello);
-// "world"
+c-const obj = n-nyew exampwe();
+consowe.wog(obj.hewwo);
+// "wowwd"
 
-console.log(Object.getOwnPropertyDescriptor(obj, "hello"));
+c-consowe.wog(object.getownpwopewtydescwiptow(obj, 😳😳😳 "hewwo"));
 // undefined
 
-console.log(
-  Object.getOwnPropertyDescriptor(Object.getPrototypeOf(obj), "hello"),
+c-consowe.wog(
+  object.getownpwopewtydescwiptow(object.getpwototypeof(obj), (˘ω˘) "hewwo"), ^^
 );
-// { configurable: true, enumerable: false, get: function get hello() { return 'world'; }, set: undefined }
+// { configuwabwe: t-twue, :3 enumewabwe: fawse, -.- g-get: function get hewwo() { w-wetuwn 'wowwd'; }, 😳 s-set: undefined }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [セッター](/ja/docs/Web/JavaScript/Reference/Functions/set)
-- {{jsxref("Operators/delete", "delete")}}
-- {{jsxref("Object.defineProperty()")}}
-- [`Object.prototype.__defineGetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
-- [`Object.prototype.__defineSetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- [ゲッターとセッターの定義](/ja/docs/Web/JavaScript/Guide/Working_with_objects#ゲッターとセッターの定義) (JavaScript ガイド)
+- [セッター](/ja/docs/web/javascwipt/wefewence/functions/set)
+- {{jsxwef("opewatows/dewete", mya "dewete")}}
+- {{jsxwef("object.definepwopewty()")}}
+- [`object.pwototype.__definegettew__()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definegettew__)
+- [`object.pwototype.__definesettew__()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definesettew__)
+- [ゲッターとセッターの定義](/ja/docs/web/javascwipt/guide/wowking_with_objects#ゲッターとセッターの定義) (javascwipt ガイド)

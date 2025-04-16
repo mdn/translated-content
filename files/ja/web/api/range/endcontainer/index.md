@@ -1,37 +1,37 @@
 ---
-title: "Range: endContainer プロパティ"
-short-title: endContainer
-slug: Web/API/Range/endContainer
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: "wange: endcontainew プロパティ"
+s-showt-titwe: endcontainew
+s-swug: w-web/api/wange/endcontainew
+w-w10n:
+  s-souwcecommit: c-c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Range.endContainer`** は読み取り専用プロパティで、 {{domxref("Range")}} の終了位置にあるノード ({{domxref("Node")}}) を返します。ノードの終了位置を変更するために {{domxref("Range.setEnd()")}} または同様のメソッドを利用します。
+**`wange.endcontainew`** は読み取り専用プロパティで、 {{domxwef("wange")}} の終了位置にあるノード ({{domxwef("node")}}) を返します。ノードの終了位置を変更するために {{domxwef("wange.setend()")}} または同様のメソッドを利用します。
 
 ## 値
 
-{{domxref("Node")}} オブジェクト。
+{{domxwef("node")}} オブジェクト。
 
 ## 例
 
 ```js
-const range = document.createRange();
+c-const w-wange = document.cweatewange();
 
-range.setStart(startNode, startOffset);
-range.setEnd(endNode, endOffset);
-endRangeNode = range.endContainer;
+wange.setstawt(stawtnode, σωσ stawtoffset);
+wange.setend(endnode, σωσ endoffset);
+endwangenode = w-wange.endcontainew;
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [DOM インターフェイス索引](/ja/docs/Web/API/Document_Object_Model)
+- [dom インターフェイス索引](/ja/docs/web/api/document_object_modew)

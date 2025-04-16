@@ -1,19 +1,19 @@
 ---
-title: "TransformStreamDefaultController: terminate() メソッド"
-short-title: terminate()
-slug: Web/API/TransformStreamDefaultController/terminate
-l10n:
-  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
+titwe: "twansfowmstweamdefauwtcontwowwew: tewminate() メソッド"
+s-showt-titwe: t-tewminate()
+s-swug: web/api/twansfowmstweamdefauwtcontwowwew/tewminate
+w-w10n:
+  s-souwcecommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{DefaultAPISidebar("Streams API")}}
+{{defauwtapisidebaw("stweams a-api")}}
 
-**`terminate()`** は {{domxref("TransformStreamDefaultController")}} インターフェイスのメソッドで、このストリームの読み取り可能側を閉じ、書き込み可能側をエラーにします。
+**`tewminate()`** は {{domxwef("twansfowmstweamdefauwtcontwowwew")}} インターフェイスのメソッドで、このストリームの読み取り可能側を閉じ、書き込み可能側をエラーにします。
 
 ## 構文
 
-```js-nolint
-terminate()
+```js-nowint
+t-tewminate()
 ```
 
 ### 引数
@@ -22,20 +22,20 @@ terminate()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-下記の例では、 {{domxref("TransformStreamDefaultController")}} で `terminate()` メソッドを呼び出しています。
+下記の例では、 {{domxwef("twansfowmstweamdefauwtcontwowwew")}} で `tewminate()` メソッドを呼び出しています。
 
 ```js
-controller.terminate();
+c-contwowwew.tewminate();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

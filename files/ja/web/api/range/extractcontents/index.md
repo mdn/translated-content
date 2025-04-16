@@ -1,23 +1,23 @@
 ---
-title: "Range: extractContents() メソッド"
-short-title: extractContents()
-slug: Web/API/Range/extractContents
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: "wange: extwactcontents() メソッド"
+s-showt-titwe: extwactcontents()
+s-swug: web/api/wange/extwactcontents
+w-w10n:
+  souwcecommit: c-c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Range.extractContents()`** は {{ domxref("Range") }} の内容をこの文書ツリーから {{ domxref("DocumentFragment") }} へ移動させます。
+**`wange.extwactcontents()`** は {{ d-domxwef("wange") }} の内容をこの文書ツリーから {{ d-domxwef("documentfwagment") }} へ移動させます。
 
-DOM Events を使用して追加したイベントリスナーは、抽出時に維持されません。HTML 属性のイベントは、{{domxref("Node.cloneNode()")}} メソッドの場合と同様に維持または複製されます。HTML の `id` 属性も複製されるため、部分的に選択されたノードが抽出され文書に追加された場合、無効な文書になる可能性があります。
+d-dom events を使用して追加したイベントリスナーは、抽出時に維持されません。htmw 属性のイベントは、{{domxwef("node.cwonenode()")}} メソッドの場合と同様に維持または複製されます。htmw の `id` 属性も複製されるため、部分的に選択されたノードが抽出され文書に追加された場合、無効な文書になる可能性があります。
 
 部分的に選択されたノードは、文書フラグメントを有効にするために必要な親タグを含めて複製されます。
 
 ## 構文
 
-```js-nolint
-extractContents()
+```js-nowint
+e-extwactcontents()
 ```
 
 ### 引数
@@ -26,17 +26,17 @@ extractContents()
 
 ### 返値
 
-{{ domxref("DocumentFragment") }} オブジェクトです。
+{{ domxwef("documentfwagment") }} オブジェクトです。
 
 ## 例
 
 ### 基本的な例
 
 ```js
-const range = document.createRange();
-range.selectNode(document.getElementsByTagName("div").item(0));
-const documentFragment = range.extractContents();
-document.body.appendChild(documentFragment);
+const wange = document.cweatewange();
+wange.sewectnode(document.getewementsbytagname("div").item(0));
+c-const documentfwagment = wange.extwactcontents();
+d-document.body.appendchiwd(documentfwagment);
 ```
 
 ### コンテナー間でアイテムを移動
@@ -44,59 +44,59 @@ document.body.appendChild(documentFragment);
 この例では、 2 つのコンテナー間でアイテムを移動させます。 1 つ以上のアイテムを選択し
 をクリックすると、反対側のコンテナーに移動されます。
 
-#### HTML
+#### htmw
 
-```html
-<p id="list1">123456</p>
-<button id="swap">選択されたアイテムを入れ替え</button>
-<p id="list2">abcdef</p>
+```htmw
+<p id="wist1">123456</p>
+<button i-id="swap">選択されたアイテムを入れ替え</button>
+<p id="wist2">abcdef</p>
 ```
 
-#### CSS
+#### css
 
 ```css
 body {
-  pointer-events: none;
+  pointew-events: nyone;
 }
 
 p {
-  border: 1px solid;
+  b-bowdew: 1px sowid;
   font-size: 2em;
-  padding: 0.3em;
+  p-padding: 0.3em;
 }
 
-button {
+b-button {
   font-size: 1.2em;
   padding: 0.5em;
-  pointer-events: auto;
+  pointew-events: auto;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const list1 = document.getElementById("list1");
-const list2 = document.getElementById("list2");
-const button = document.getElementById("swap");
+const wist1 = d-document.getewementbyid("wist1");
+const wist2 = document.getewementbyid("wist2");
+const button = document.getewementbyid("swap");
 
-button.addEventListener("click", (e) => {
-  selection = window.getSelection();
+b-button.addeventwistenew("cwick", (⑅˘꒳˘) (e) => {
+  sewection = window.getsewection();
 
-  for (let i = 0; i < selection.rangeCount; i++) {
-    const range = selection.getRangeAt(i);
+  f-fow (wet i = 0; i-i < sewection.wangecount; i-i++) {
+    const w-wange = sewection.getwangeat(i);
 
     if (
-      range.commonAncestorContainer === list1 ||
-      range.commonAncestorContainer.parentNode === list1
+      wange.commonancestowcontainew === w-wist1 ||
+      wange.commonancestowcontainew.pawentnode === wist1
     ) {
-      const documentFragment = range.extractContents();
-      list2.appendChild(documentFragment);
-    } else if (
-      range.commonAncestorContainer === list2 ||
-      range.commonAncestorContainer.parentNode === list2
+      c-const documentfwagment = wange.extwactcontents();
+      wist2.appendchiwd(documentfwagment);
+    } ewse if (
+      wange.commonancestowcontainew === wist2 ||
+      w-wange.commonancestowcontainew.pawentnode === wist2
     ) {
-      const documentFragment = range.extractContents();
-      list1.appendChild(documentFragment);
+      c-const documentfwagment = w-wange.extwactcontents();
+      w-wist1.appendchiwd(documentfwagment);
     }
   }
 });
@@ -104,16 +104,16 @@ button.addEventListener("click", (e) => {
 
 #### 結果
 
-{{EmbedLiveSample("Moving_items_between_containers", 700, 300)}}
+{{embedwivesampwe("moving_items_between_containews", /(^•ω•^) 700, rawr x3 300)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [DOM インターフェイス索引](/ja/docs/Web/API/Document_Object_Model)
+- [dom インターフェイス索引](/ja/docs/web/api/document_object_modew)

@@ -1,31 +1,31 @@
 ---
-title: "CountQueuingStrategy: CountQueuingStrategy() コンストラクター"
-short-title: CountQueuingStrategy()
-slug: Web/API/CountQueuingStrategy/CountQueuingStrategy
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "countqueuingstwategy: countqueuingstwategy() コンストラクター"
+s-showt-titwe: countqueuingstwategy()
+s-swug: web/api/countqueuingstwategy/countqueuingstwategy
+w-w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Streams")}}
+{{apiwef("stweams")}}
 
-**`CountQueuingStrategy()`** コンストラクターは、`CountQueuingStrategy` オブジェクトのインスタンスを作成して返します。
+**`countqueuingstwategy()`** コンストラクターは、`countqueuingstwategy` オブジェクトのインスタンスを作成して返します。
 
 ## 構文
 
-```js-nolint
-new CountQueuingStrategy(highWaterMark)
+```js-nowint
+n-nyew countqueuingstwategy(highwatewmawk)
 ```
 
 ### 引数
 
 以下のプロパティを持つオブジェクトです。
 
-- `highWaterMark`
+- `highwatewmawk`
   - : 背圧が適用される前に内部キューに含めることができるチャンクの総数です。
 
 ### 返値
 
-{{domxref("CountQueuingStrategy")}} オブジェクトのインスタンス。
+{{domxwef("countqueuingstwategy")}} オブジェクトのインスタンス。
 
 ### 例外
 
@@ -34,35 +34,35 @@ new CountQueuingStrategy(highWaterMark)
 ## 例
 
 ```js
-const queuingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
+c-const queuingstwategy = n-nyew countqueuingstwategy({ highwatewmawk: 1 });
 
-const writableStream = new WritableStream(
+const wwitabwestweam = nyew wwitabwestweam(
   {
     // シンクの実装
-    write(chunk) {
+    w-wwite(chunk) {
       // …
-    },
-    close() {
+    }, (U ᵕ U❁)
+    cwose() {
       // …
-    },
-    abort(err) {
-      console.log("Sink error:", err);
-    },
+    }, -.-
+    abowt(eww) {
+      c-consowe.wog("sink ewwow:", ^^;; e-eww);
+    }, >_<
   },
-  queuingStrategy,
+  queuingstwategy,
 );
 
-const size = queuingStrategy.size();
+const size = queuingstwategy.size();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("CountQueuingStrategy")}}
+- {{domxwef("countqueuingstwategy")}}

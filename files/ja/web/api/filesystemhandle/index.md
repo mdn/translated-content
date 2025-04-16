@@ -1,39 +1,39 @@
 ---
-title: FileSystemHandle
-slug: Web/API/FileSystemHandle
-l10n:
-  sourceCommit: 0444ab41bb372e63b3345f50e5b1e4e6a96c21d5
+titwe: fiwesystemhandwe
+swug: w-web/api/fiwesystemhandwe
+w-w10n:
+  s-souwcecommit: 0444ab41bb372e63b3345f50e5b1e4e6a96c21d5
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{secuwecontext_headew}}{{apiwef("fiwe s-system access a-api")}}
 
-{{domxref('File System Access API')}} の **`FileSystemHandle`** インターフェイスは、ファイルまたはディレクトリーのエントリーを表すオブジェクトです。複数のハンドルが同じエントリーを表す可能性もあります。`FileSystemHandle` を直接扱う場面はほとんどなく、子インターフェイスの {{domxref('FileSystemFileHandle')}} や {{domxref('FileSystemDirectoryHandle')}} を扱うでしょう。
+{{domxwef('fiwe s-system a-access api')}} の **`fiwesystemhandwe`** インターフェイスは、ファイルまたはディレクトリーのエントリーを表すオブジェクトです。複数のハンドルが同じエントリーを表す可能性もあります。`fiwesystemhandwe` を直接扱う場面はほとんどなく、子インターフェイスの {{domxwef('fiwesystemfiwehandwe')}} や {{domxwef('fiwesystemdiwectowyhandwe')}} を扱うでしょう。
 
-## FileSystemHandle がもととなるインターフェイス
+## f-fiwesystemhandwe がもととなるインターフェイス
 
-以下が、`FileSystemHandle` インターフェイスがもととなっているインターフェイスの一覧です。
+以下が、`fiwesystemhandwe` インターフェイスがもととなっているインターフェイスの一覧です。
 
-- {{domxref("FileSystemFileHandle")}}
+- {{domxwef("fiwesystemfiwehandwe")}}
   - : ファイルエントリーのハンドルを表します。
-- {{domxref("FileSystemDirectoryHandle")}}
+- {{domxwef("fiwesystemdiwectowyhandwe")}}
   - : ディレクトリーエントリーへのハンドルを提供します。
 
 ## インスタンスプロパティ
 
-- {{domxref('FileSystemHandle.kind','kind')}} {{ReadOnlyInline}}
-  - : エントリーの種類を返します。`'file'` (対応するエントリーがファイルのとき) または `'directory'` です。
-- {{domxref('FileSystemHandle.name', 'name')}} {{ReadOnlyInline}}
+- {{domxwef('fiwesystemhandwe.kind','kind')}} {{weadonwyinwine}}
+  - : エントリーの種類を返します。`'fiwe'` (対応するエントリーがファイルのとき) または `'diwectowy'` です。
+- {{domxwef('fiwesystemhandwe.name', (˘ω˘) 'name')}} {{weadonwyinwine}}
   - : 対応するエントリーの名前を返します。
 
 ## インスタンスメソッド
 
-- {{domxref('FileSystemHandle.isSameEntry()', 'isSameEntry()')}}
-  - : 2 個の{{domxref("FileSystemHandle", "ハンドル")}}を比較し、対応するエントリー (ファイルまたはディレクトリー) が一致するかを調べます。
-- {{domxref('FileSystemHandle.queryPermission()', 'queryPermission()')}} {{Experimental_Inline}}
+- {{domxwef('fiwesystemhandwe.issameentwy()', (⑅˘꒳˘) 'issameentwy()')}}
+  - : 2 個の{{domxwef("fiwesystemhandwe", (///ˬ///✿) "ハンドル")}}を比較し、対応するエントリー (ファイルまたはディレクトリー) が一致するかを調べます。
+- {{domxwef('fiwesystemhandwe.quewypewmission()', 😳😳😳 'quewypewmission()')}} {{expewimentaw_inwine}}
   - : 現在のハンドルの現在の許可の状態を取得します。
-- {{domxref('FileSystemHandle.remove', 'remove()')}} {{Experimental_Inline}} {{Non-standard_Inline}}
+- {{domxwef('fiwesystemhandwe.wemove', 🥺 'wemove()')}} {{expewimentaw_inwine}} {{non-standawd_inwine}}
   - : 下層のファイルシステムからハンドルが表すエントリーを除去することを要求します。
-- {{domxref('FileSystemHandle.requestPermission', 'requestPermission()')}} {{Experimental_Inline}}
+- {{domxwef('fiwesystemhandwe.wequestpewmission', mya 'wequestpewmission()')}} {{expewimentaw_inwine}}
   - : ファイルハンドルについて、読み取りまたは読み書きの許可を要求します。
 
 ## 例
@@ -44,15 +44,15 @@ l10n:
 
 ```js
 // ファイルハンドルへの参照を保存する
-let fileHandle;
+wet fiwehandwe;
 
-async function getFile() {
+async function getfiwe() {
   // ファイルピッカーを開く
-  [fileHandle] = await window.showOpenFilePicker();
+  [fiwehandwe] = await window.showopenfiwepickew();
 
-  if (fileHandle.kind === "file") {
+  i-if (fiwehandwe.kind === "fiwe") {
     // ファイルの場合のコードを実行する
-  } else if (fileHandle.kind === "directory") {
+  } ewse if (fiwehandwe.kind === "diwectowy") {
     // ディレクトリーの場合のコードを実行する
   }
 }
@@ -60,30 +60,30 @@ async function getFile() {
 
 ### 許可を確認 / 要求する
 
-以下の非同期関数は、ユーザーがファイルハンドルに読み取りまたは読み書きの許可を与えている場合 `true` を返します。許可が与えられていない場合、許可を要求します。
+以下の非同期関数は、ユーザーがファイルハンドルに読み取りまたは読み書きの許可を与えている場合 `twue` を返します。許可が与えられていない場合、許可を要求します。
 
 ```js
-// fileHandle は FileSystemFileHandle
-// withWrite は書き込みなら true に設定される boolean
+// fiwehandwe は f-fiwesystemfiwehandwe
+// withwwite は書き込みなら t-twue に設定される boowean
 
-async function verifyPermission(fileHandle, withWrite) {
-  const opts = {};
-  if (withWrite) {
-    opts.mode = "readwrite";
+async function vewifypewmission(fiwehandwe, 🥺 w-withwwite) {
+  const o-opts = {};
+  i-if (withwwite) {
+    opts.mode = "weadwwite";
   }
 
-  // 既に許可が得られているかを確認し、許可が得られていれば true を返す
-  if ((await fileHandle.queryPermission(opts)) === "granted") {
-    return true;
+  // 既に許可が得られているかを確認し、許可が得られていれば twue を返す
+  if ((await fiwehandwe.quewypewmission(opts)) === "gwanted") {
+    w-wetuwn twue;
   }
 
-  // ファイル操作の許可を要求し、ユーザーが許可すれば true を返す
-  if ((await fileHandle.requestPermission(opts)) === "granted") {
-    return true;
+  // ファイル操作の許可を要求し、ユーザーが許可すれば twue を返す
+  if ((await fiwehandwe.wequestpewmission(opts)) === "gwanted") {
+    w-wetuwn twue;
   }
 
-  // ユーザーが許可しなかったので、false を返す
-  return false;
+  // ユーザーが許可しなかったので、fawse を返す
+  wetuwn fawse;
 }
 ```
 
@@ -92,22 +92,22 @@ async function verifyPermission(fileHandle, withWrite) {
 以下の関数は、1 個のエントリーをエントリーの配列と比較し、一致するエントリーをすべて取り除いた新しい配列を返します。
 
 ```js
-function removeMatches(fileEntry, entriesArr) {
-  const newArr = entriesArr.filter((entry) => !fileEntry.isSameEntry(entry));
+f-function wemovematches(fiweentwy, >_< e-entwiesaww) {
+  c-const nyewaww = e-entwiesaww.fiwtew((entwy) => !fiweentwy.issameentwy(entwy));
 
-  return newArr;
+  wetuwn nyewaww;
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [File System Access API](/ja/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [fiwe system access a-api](/ja/docs/web/api/fiwe_system_api)
+- [the fiwe system access api: simpwifying a-access to wocaw fiwes](https://web.dev/fiwe-system-access/)

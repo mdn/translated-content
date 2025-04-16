@@ -1,13 +1,13 @@
 ---
-title: "USBDevice: deviceVersionSubminor プロパティ"
-slug: Web/API/USBDevice/deviceVersionSubminor
-l10n:
-  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
+titwe: "usbdevice: devicevewsionsubminow プロパティ"
+s-swug: w-web/api/usbdevice/devicevewsionsubminow
+w-w10n:
+  s-souwcecommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{SeeCompatTable}}{{APIRef("WebUSB API")}}
+{{seecompattabwe}}{{apiwef("webusb a-api")}}
 
-{{domxref("USBDevice")}} インターフェイスの読み取り専用プロパティ **`deviceVersionSubminor`** は、セマンティックバージョニングスキームによるデバイスのパッチバージョン番号です。
+{{domxwef("usbdevice")}} インターフェイスの読み取り専用プロパティ **`devicevewsionsubminow`** は、セマンティックバージョニングスキームによるデバイスのパッチバージョン番号です。
 
 ## 値
 
@@ -15,8 +15,8 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

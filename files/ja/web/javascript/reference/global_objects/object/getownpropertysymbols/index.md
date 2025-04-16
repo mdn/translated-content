@@ -1,34 +1,34 @@
 ---
-title: Object.getOwnPropertySymbols()
-slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
-l10n:
-  sourceCommit: 892e4301623f10505dc19e56ba9fb7b505530722
+titwe: object.getownpwopewtysymbows()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/getownpwopewtysymbows
+w-w10n:
+  souwcecommit: 892e4301623f10505dc19e56ba9fb7b505530722
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Object.getOwnPropertySymbols()`** 静的メソッドは、与えられたオブジェクト上で直接見つかるシンボルプロパティすべての配列を返します。
+**`object.getownpwopewtysymbows()`** 静的メソッドは、与えられたオブジェクト上で直接見つかるシンボルプロパティすべての配列を返します。
 
-{{InteractiveExample("JavaScript Demo: Object.getOwnPropertySymbols()")}}
+{{intewactiveexampwe("javascwipt d-demo: o-object.getownpwopewtysymbows()")}}
 
-```js interactive-example
-const object1 = {};
-const a = Symbol("a");
-const b = Symbol.for("b");
+```js i-intewactive-exampwe
+const o-object1 = {};
+c-const a = symbow("a");
+c-const b-b = symbow.fow("b");
 
-object1[a] = "localSymbol";
-object1[b] = "globalSymbol";
+object1[a] = "wocawsymbow";
+object1[b] = "gwobawsymbow";
 
-const objectSymbols = Object.getOwnPropertySymbols(object1);
+const objectsymbows = object.getownpwopewtysymbows(object1);
 
-console.log(objectSymbols.length);
-// Expected output: 2
+c-consowe.wog(objectsymbows.wength);
+// expected output: 2
 ```
 
 ## 構文
 
-```js-nolint
-Object.getOwnPropertySymbols(obj)
+```js-nowint
+object.getownpwopewtysymbows(obj)
 ```
 
 ### 引数
@@ -42,38 +42,38 @@ Object.getOwnPropertySymbols(obj)
 
 ## 解説
 
-{{jsxref("Object.getOwnPropertyNames()")}} と同様、与えられたオブジェクトのすべてのシンボルプロパティをシンボルの配列として取得することができます。 {{jsxref("Object.getOwnPropertyNames()")}} 自体はオブジェクトのシンボルプロパティを含まず、文字列プロパティのみを含むことに注意して下さい。
+{{jsxwef("object.getownpwopewtynames()")}} と同様、与えられたオブジェクトのすべてのシンボルプロパティをシンボルの配列として取得することができます。 {{jsxwef("object.getownpwopewtynames()")}} 自体はオブジェクトのシンボルプロパティを含まず、文字列プロパティのみを含むことに注意して下さい。
 
-すべてのオブジェクトが最初に自身のシンボルプロパティを持っているとは限らないので、 `Object.getOwnPropertySymbols()` は、オブジェクトにシンボルプロパティを設定しない限りは空の配列を返します。
+すべてのオブジェクトが最初に自身のシンボルプロパティを持っているとは限らないので、 `object.getownpwopewtysymbows()` は、オブジェクトにシンボルプロパティを設定しない限りは空の配列を返します。
 
 ## 例
 
-### getOwnPropertySymbols の使用
+### g-getownpwopewtysymbows の使用
 
 ```js
-var obj = {};
-var a = Symbol("a");
-var b = Symbol.for("b");
+vaw obj = {};
+v-vaw a = symbow("a");
+vaw b = symbow.fow("b");
 
-obj[a] = "localSymbol";
-obj[b] = "globalSymbol";
+obj[a] = "wocawsymbow";
+obj[b] = "gwobawsymbow";
 
-var objectSymbols = Object.getOwnPropertySymbols(obj);
+v-vaw objectsymbows = object.getownpwopewtysymbows(obj);
 
-console.log(objectSymbols.length); // 2
-console.log(objectSymbols); // [Symbol(a), Symbol(b)]
-console.log(objectSymbols[0]); // Symbol(a)
+c-consowe.wog(objectsymbows.wength); // 2
+c-consowe.wog(objectsymbows); // [symbow(a), symbow(b)]
+consowe.wog(objectsymbows[0]); // symbow(a)
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Object.getOwnPropertyNames()")}}
-- {{jsxref("Symbol")}}
+- {{jsxwef("object.getownpwopewtynames()")}}
+- {{jsxwef("symbow")}}

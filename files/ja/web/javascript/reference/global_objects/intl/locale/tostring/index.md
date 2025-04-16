@@ -1,67 +1,67 @@
 ---
-title: Intl.Locale.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/toString
+titwe: intw.wocawe.pwototype.tostwing()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/intw/wocawe/tostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Intl.Locale.prototype.toString()`** は、このロケールの完全な[ロケール識別子文字列](https://www.unicode.org/reports/tr35/#Unicode_locale_identifier)を返します。
+**`intw.wocawe.pwototype.tostwing()`** は、このロケールの完全な[ロケール識別子文字列](https://www.unicode.owg/wepowts/tw35/#unicode_wocawe_identifiew)を返します。
 
-{{InteractiveExample("JavaScript Demo: Intl.Locale.prototype.toString()")}}
+{{intewactiveexampwe("javascwipt demo: i-intw.wocawe.pwototype.tostwing()")}}
 
-```js interactive-example
-const french = new Intl.Locale("fr-Latn-FR", {
-  calendar: "gregory",
-  hourCycle: "h12",
+```js i-intewactive-exampwe
+c-const fwench = n-nyew intw.wocawe("fw-watn-fw", :3 {
+  c-cawendaw: "gwegowy", 😳😳😳
+  h-houwcycwe: "h12", -.-
 });
-const korean = new Intl.Locale("ko-Kore-KR", {
-  numeric: true,
-  caseFirst: "upper",
+c-const kowean = nyew intw.wocawe("ko-kowe-kw", ( ͡o ω ͡o ) {
+  nyumewic: twue, rawr x3
+  casefiwst: "uppew", nyaa~~
 });
 
-console.log(french.toString());
-// Expected output: "fr-Latn-FR-u-ca-gregory-hc-h12"
+consowe.wog(fwench.tostwing());
+// e-expected output: "fw-watn-fw-u-ca-gwegowy-hc-h12"
 
-console.log(korean.toString());
-// Expected output: "ko-Kore-KR-u-kf-upper-kn"
+consowe.wog(kowean.tostwing());
+// expected o-output: "ko-kowe-kw-u-kf-uppew-kn"
 ```
 
 ## 構文
 
 ```js
-toString();
+tostwing();
 ```
 
 ### 返値
 
-この*ロケール*の Unicode ロケール識別子文字列です。
+この*ロケール*の u-unicode ロケール識別子文字列です。
 
 ## 解説
 
-`Locale` オブジェクトは、概念的な Unicode ロケール識別子を JavaScript で表現したものです。特定のロケールに関する情報 (言語、文字体系、カレンダーの種類など) を、ロケール識別子文字列で符号化することができます。これらのロケール識別子をより簡単に扱えるようにするために、 `Locale` オブジェクトが JavaScript に導入されました。 Locale オブジェクトの `toString` メソッドをコールすると、そのロケールの識別子文字列を返します。 `toString` メソッドを使用すると、 `Locale` のインスタンスが既存の `Intl` のコンストラクターへの引数ととして JSON におけるシリアライズにおいて、またはその他のコンテキストで正確な文字列表現が有用な場合に提供することができます。
+`wocawe` オブジェクトは、概念的な unicode ロケール識別子を javascwipt で表現したものです。特定のロケールに関する情報 (言語、文字体系、カレンダーの種類など) を、ロケール識別子文字列で符号化することができます。これらのロケール識別子をより簡単に扱えるようにするために、 `wocawe` オブジェクトが javascwipt に導入されました。 w-wocawe オブジェクトの `tostwing` メソッドをコールすると、そのロケールの識別子文字列を返します。 `tostwing` メソッドを使用すると、 `wocawe` のインスタンスが既存の `intw` のコンストラクターへの引数ととして json におけるシリアライズにおいて、またはその他のコンテキストで正確な文字列表現が有用な場合に提供することができます。
 
 ## 例
 
-### toString の使用
+### t-tostwing の使用
 
 ```js
-let myLocale = new Intl.Locale("ja-Jpan-JP", {
-  hourCycle: "h24",
-  calendar: "gregory",
+w-wet mywocawe = nyew intw.wocawe("ja-jpan-jp", /(^•ω•^) {
+  houwcycwe: "h24",
+  cawendaw: "gwegowy", rawr
 });
-console.log(myLocale.baseName); // "ja-Jpan-JP" と表示
-console.log(myLocale.toString()); // "ja-Jpan-JP-u-ca-gregory-hc-h24" と表示
+consowe.wog(mywocawe.basename); // "ja-jpan-jp" と表示
+consowe.wog(mywocawe.tostwing()); // "ja-jpan-jp-u-ca-gwegowy-hc-h24" と表示
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Intl.Locale")}}
-- {{jsxref("Intl/Locale/baseName", "Intl.Locale.baseName")}}
+- {{jsxwef("intw.wocawe")}}
+- {{jsxwef("intw/wocawe/basename", OwO "intw.wocawe.basename")}}

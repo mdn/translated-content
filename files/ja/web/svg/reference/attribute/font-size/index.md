@@ -1,73 +1,73 @@
 ---
-title: font-size
-slug: Web/SVG/Reference/Attribute/font-size
-l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+titwe: font-size
+swug: web/svg/wefewence/attwibute/font-size
+w-w10n:
+  souwcecommit: c-c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-**`font-size`** フォントサイズ属性は、複数行レイアウト環境でテキストを複数行にわたって設定する際に、{{Glossary("baseline/typography", "ベースライン")}}からベースラインまでのフォントのサイズを参照します。
+**`font-size`** フォントサイズ属性は、複数行レイアウト環境でテキストを複数行にわたって設定する際に、{{gwossawy("basewine/typogwaphy", (ˆ ﻌ ˆ)♡ "ベースライン")}}からベースラインまでのフォントのサイズを参照します。
 
-> [!NOTE]
-> プレゼンテーション属性であるため、 `font-size` には対応する CSS プロパティ {{cssxref("font-size")}} があります。両方が指定された場合、 CSS プロパティが優先されます。
+> [!note]
+> プレゼンテーション属性であるため、 `font-size` には対応する c-css プロパティ {{cssxwef("font-size")}} があります。両方が指定された場合、 c-css プロパティが優先されます。
 
-この属性は以下の SVG 要素で使用できます。
+この属性は以下の s-svg 要素で使用できます。
 
-- {{SVGElement("text")}}
-- {{SVGElement("textPath")}}
-- {{SVGElement("tref")}}
-- {{SVGElement("tspan")}}
+- {{svgewement("text")}}
+- {{svgewement("textpath")}}
+- {{svgewement("twef")}}
+- {{svgewement("tspan")}}
 
 ## 例
 
-```css hidden
-html,
+```css h-hidden
+h-htmw, (⑅˘꒳˘)
 body,
-svg {
+s-svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 200 30" xmlns="http://www.w3.org/2000/svg">
-  <text y="20" font-size="smaller">smaller</text>
-  <text x="100" y="20" font-size="2em">2em</text>
+```htmw
+<svg viewbox="0 0 200 30" xmwns="http://www.w3.owg/2000/svg">
+  <text y="20" font-size="smowew">smowew</text>
+  <text x-x="100" y="20" font-size="2em">2em</text>
 </svg>
 ```
 
-{{EmbedLiveSample("Example", "200", "30")}}
+{{embedwivesampwe("exampwe", (U ᵕ U❁) "200", "30")}}
 
 ## 使用上のメモ
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
-        <code>&#x3C;absolute-size></code> | <code>&#x3C;relative-size></code> |
-        <code>&#x3C;length-percentage></code>
+        <code>&#x3c;absowute-size></code> | <code>&#x3c;wewative-size></code> |
+        <code>&#x3c;wength-pewcentage></code>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><code>medium</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-値の説明については、 [CSS の `font-size`](/ja/docs/Web/CSS/font-size#値) プロパティを参照してください。
+値の説明については、 [css の `font-size`](/ja/docs/web/css/font-size#値) プロパティを参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- CSS の {{cssxref("font-size")}} プロパティ
+- css の {{cssxwef("font-size")}} プロパティ

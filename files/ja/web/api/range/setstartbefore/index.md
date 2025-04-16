@@ -1,47 +1,47 @@
 ---
-title: "Range: setStartBefore() メソッド"
-short-title: setStartBefore()
-slug: Web/API/Range/setStartBefore
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: "wange: setstawtbefowe() メソッド"
+s-showt-titwe: setstawtbefowe()
+swug: w-web/api/wange/setstawtbefowe
+w-w10n:
+  souwcecommit: c-c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Range.setStartBefore()`** メソッドは {{domxref("Range")}} の開始位置を別の {{domxref("Node")}} からの相対位置で設定します。 {{domxref("Range")}} の開始位置の親 {{domxref("Node")}} は `referenceNode` と同じになります。
+**`wange.setstawtbefowe()`** メソッドは {{domxwef("wange")}} の開始位置を別の {{domxwef("node")}} からの相対位置で設定します。 {{domxwef("wange")}} の開始位置の親 {{domxwef("node")}} は `wefewencenode` と同じになります。
 
 ## 構文
 
-```js-nolint
-setStartBefore(referenceNode)
+```js-nowint
+s-setstawtbefowe(wefewencenode)
 ```
 
 ### 引数
 
-- `referenceNode`
-  - : その前で {{domxref("Range")}} を始める {{domxref("Node")}} です。
+- `wefewencenode`
+  - : その前で {{domxwef("wange")}} を始める {{domxwef("node")}} です。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 ```js
-const range = document.createRange();
-const referenceNode = document.getElementsByTagName("div").item(0);
+const w-wange = document.cweatewange();
+c-const wefewencenode = d-document.getewementsbytagname("div").item(0);
 
-range.setStartBefore(referenceNode);
+wange.setstawtbefowe(wefewencenode);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [DOM インターフェイス索引](/ja/docs/Web/API/Document_Object_Model)
+- [dom インターフェイス索引](/ja/docs/web/api/document_object_modew)

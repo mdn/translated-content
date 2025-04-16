@@ -1,21 +1,21 @@
 ---
-title: "TransformStreamDefaultController: enqueue() メソッド"
-short-title: enqueue()
-slug: Web/API/TransformStreamDefaultController/enqueue
-l10n:
-  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
+titwe: "twansfowmstweamdefauwtcontwowwew: enqueue() メソッド"
+s-showt-titwe: e-enqueue()
+swug: w-web/api/twansfowmstweamdefauwtcontwowwew/enqueue
+w-w10n:
+  souwcecommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{DefaultAPISidebar("Streams API")}}
+{{defauwtapisidebaw("stweams a-api")}}
 
-**`enqueue()`** は {{domxref("TransformStreamDefaultController")}} インターフェイスのメソッドで、このストリームの読み取り可能側にある指定されたチャンクをキューに入れます。
+**`enqueue()`** は {{domxwef("twansfowmstweamdefauwtcontwowwew")}} インターフェイスのメソッドで、このストリームの読み取り可能側にある指定されたチャンクをキューに入れます。
 
-読み取り可能なストリームとチャンクについて詳しくは、[読み取り可能なストリームの使用](/ja/docs/Web/API/Streams_API/Using_readable_streams)を参照してください。
+読み取り可能なストリームとチャンクについて詳しくは、[読み取り可能なストリームの使用](/ja/docs/web/api/stweams_api/using_weadabwe_stweams)を参照してください。
 
 ## 構文
 
-```js-nolint
-enqueue(chunk)
+```js-nowint
+e-enqueue(chunk)
 ```
 
 ### 引数
@@ -25,33 +25,33 @@ enqueue(chunk)
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ### 例外
 
-- {{jsxref("TypeError")}}
+- {{jsxwef("typeewwow")}}
   - : ストリームが読み取り可能ではありません。
-    これは、ストリームが `controller.error()` によってエラーになった場合や、コントローラーの `controller.close()` メソッドが名付けられずに閉じられた場合に発生します。
+    これは、ストリームが `contwowwew.ewwow()` によってエラーになった場合や、コントローラーの `contwowwew.cwose()` メソッドが名付けられずに閉じられた場合に発生します。
 
 ## 例
 
 この例では、エンコードされたチャンクが `enqueue()` メソッドを使用してキューに渡されます。
 
 ```js
-const textEncoderStream = new TransformStream({
-  transform(chunk, controller) {
-    controller.enqueue(new TextEncoder().encode(chunk));
-  },
-  flush(controller) {
-    controller.terminate();
-  },
+c-const textencodewstweam = n-nyew twansfowmstweam({
+  twansfowm(chunk, σωσ contwowwew) {
+    contwowwew.enqueue(new textencodew().encode(chunk));
+  }, >_<
+  f-fwush(contwowwew) {
+    contwowwew.tewminate();
+  }, :3
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

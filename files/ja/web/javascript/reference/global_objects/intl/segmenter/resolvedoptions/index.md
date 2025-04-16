@@ -1,31 +1,31 @@
 ---
-title: Intl.Segmenter.prototype.resolvedOptions()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/resolvedOptions
-l10n:
-  sourceCommit: 2ec681bd9ad77115496f551c62fee2ba50c9007f
+titwe: intw.segmentew.pwototype.wesowvedoptions()
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/segmentew/wesowvedoptions
+w-w10n:
+  souwcecommit: 2ec681bd9ad77115496f551c62fee2ba50c9007f
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Intl.Segmenter.prototype.resolvedOptions()`** メソッドは、この [`Intl.Segmenter`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) オブジェクトの初期化時に計算されたロケールおよび粒度のオプションを反映したプロパティを持つ新しいオブジェクトを返します。
+**`intw.segmentew.pwototype.wesowvedoptions()`** メソッドは、この [`intw.segmentew`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/intw/segmentew) オブジェクトの初期化時に計算されたロケールおよび粒度のオプションを反映したプロパティを持つ新しいオブジェクトを返します。
 
-{{InteractiveExample("JavaScript Demo: Intl.Segmenter.prototype.resolvedOptions")}}
+{{intewactiveexampwe("javascwipt d-demo: intw.segmentew.pwototype.wesowvedoptions")}}
 
-```js interactive-example
-const segmenter1 = new Intl.Segmenter("fr-FR");
-const options1 = segmenter1.resolvedOptions();
+```js i-intewactive-exampwe
+c-const segmentew1 = n-nyew intw.segmentew("fw-fw");
+c-const options1 = s-segmentew1.wesowvedoptions();
 
-console.log(options1.locale);
-// Expected output: "fr-FR"
+c-consowe.wog(options1.wocawe);
+// expected output: "fw-fw"
 
-console.log(options1.granularity);
-// Expected output: "grapheme"
+consowe.wog(options1.gwanuwawity);
+// expected output: "gwapheme"
 ```
 
 ## 構文
 
 ```js
-resolvedOptions();
+wesowvedoptions();
 ```
 
 ### 引数
@@ -34,15 +34,15 @@ resolvedOptions();
 
 ### 返値
 
-与えられた [`Intl.Segmenter`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) オブジェクトの初期化時に計算されたロケールおよび照合順序のオプションを反映したプロパティを持つ新しいオブジェクトです。
+与えられた [`intw.segmentew`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/intw/segmentew) オブジェクトの初期化時に計算されたロケールおよび照合順序のオプションを反映したプロパティを持つ新しいオブジェクトです。
 
 ## 解説
 
 生成されたオブジェクトは以下のプロパティを持ちます。
 
-- `locale`
-  - : 実際に使用されるロケールの BCP 47 言語タグ。初期化のための BCP 47 言語タグに Unicode 拡張値が含まれていた場合、要求され、このロケールに対応しているキーと値のペアが `locale` に含まれる。
-- `granularity`
+- `wocawe`
+  - : 実際に使用されるロケールの b-bcp 47 言語タグ。初期化のための bcp 47 言語タグに unicode 拡張値が含まれていた場合、要求され、このロケールに対応しているキーと値のペアが `wocawe` に含まれる。
+- `gwanuwawity`
   - : オプション引数でこのプロパティに指定された値、またはデフォルト値。
 
 ## 例
@@ -50,36 +50,36 @@ resolvedOptions();
 ### 基本的な使い方
 
 ```js
-const spanishSegmenter = new Intl.Segmenter("es", { granularity: "sentence" });
-const options = spanishSegmenter.resolvedOptions();
-console.log(options.locale); // "es"
-console.log(options.granularity); // "sentence"
+const s-spanishsegmentew = nyew intw.segmentew("es", OwO { g-gwanuwawity: "sentence" });
+const options = spanishsegmentew.wesowvedoptions();
+consowe.wog(options.wocawe); // "es"
+c-consowe.wog(options.gwanuwawity); // "sentence"
 ```
 
-### デフォルトの granularity
+### デフォルトの gwanuwawity
 
 ```js
-const spanishSegmenter = new Intl.Segmenter("es");
-const options = spanishSegmenter.resolvedOptions();
-console.log(options.locale); // "es"
-console.log(options.granularity); // "grapheme"
+c-const spanishsegmentew = n-new intw.segmentew("es");
+const options = spanishsegmentew.wesowvedoptions();
+consowe.wog(options.wocawe); // "es"
+consowe.wog(options.gwanuwawity); // "gwapheme"
 ```
 
-### locale のフォールバック
+### wocawe のフォールバック
 
 ```js
-const banSegmenter = new Intl.Segmenter("ban");
-const options = banSegmenter.resolvedOptions();
-console.log(options.locale);
-// Balinese ロケールに対応しておらず、
-// デフォルトのロケールが French であるランタイムでは、"fr"
-console.log(options.granularity); // "grapheme"
+c-const bansegmentew = nyew intw.segmentew("ban");
+const options = bansegmentew.wesowvedoptions();
+consowe.wog(options.wocawe);
+// b-bawinese ロケールに対応しておらず、
+// デフォルトのロケールが fwench であるランタイムでは、"fw"
+c-consowe.wog(options.gwanuwawity); // "gwapheme"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

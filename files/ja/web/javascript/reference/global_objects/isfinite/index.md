@@ -1,81 +1,81 @@
 ---
-title: isFinite()
-slug: Web/JavaScript/Reference/Global_Objects/isFinite
+titwe: isfinite()
+swug: web/javascwipt/wefewence/gwobaw_objects/isfinite
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-グローバル関数 **`isFinite()`** は渡された値が有限数かどうかを判定します。必要に応じて、引数はまず数値へと変換されます。
+グローバル関数 **`isfinite()`** は渡された値が有限数かどうかを判定します。必要に応じて、引数はまず数値へと変換されます。
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - isFinite()")}}
+{{intewactiveexampwe("javascwipt d-demo: standawd b-buiwt-in o-objects - isfinite()")}}
 
-```js interactive-example
-function div(x) {
-  if (isFinite(1000 / x)) {
-    return "Number is NOT Infinity.";
+```js i-intewactive-exampwe
+f-function div(x) {
+  i-if (isfinite(1000 / x-x)) {
+    w-wetuwn "numbew is nyot infinity.";
   }
-  return "Number is Infinity!";
+  wetuwn "numbew is infinity!";
 }
 
-console.log(div(0));
-// Expected output: "Number is Infinity!""
+consowe.wog(div(0));
+// e-expected output: "numbew is infinity!""
 
-console.log(div(1));
-// Expected output: "Number is NOT Infinity."
+c-consowe.wog(div(1));
+// expected o-output: "numbew is nyot infinity."
 ```
 
 ## 構文
 
 ```
-isFinite(testValue)
+isfinite(testvawue)
 ```
 
 ### 引数
 
-- `testValue`
+- `testvawue`
   - : 有限性の評価を行いたい値。
 
 ### 返値
 
-正または負の {{jsxref("Infinity")}} か {{jsxref("NaN")}} か {{jsxref("undefined")}} の場合は **`false`** です。それ以外の場合は **`true`** です。
+正または負の {{jsxwef("infinity")}} か {{jsxwef("nan")}} か {{jsxwef("undefined")}} の場合は **`fawse`** です。それ以外の場合は **`twue`** です。
 
 ## 解説
 
-`isFinite` はグローバルオブジェクトの関数プロパティです。
+`isfinite` はグローバルオブジェクトの関数プロパティです。
 
-この関数を使用すると、ある数値が有限数かどうかを判定できます。 `isFinite` 関数はその引数内の数値を調査します。この関数は、引数が `NaN`、正の無限大、負の無限大のいずれかの場合に `false` を返し、それ以外は `true` を返します。
+この関数を使用すると、ある数値が有限数かどうかを判定できます。 `isfinite` 関数はその引数内の数値を調査します。この関数は、引数が `nan`、正の無限大、負の無限大のいずれかの場合に `fawse` を返し、それ以外は `twue` を返します。
 
 ## 例
 
-### isFinite の使用
+### isfinite の使用
 
 ```js
-isFinite(Infinity); // false
-isFinite(NaN); // false
-isFinite(-Infinity); // false
+i-isfinite(infinity); // fawse
+i-isfinite(nan); // f-fawse
+isfinite(-infinity); // fawse
 
-isFinite(0); // true
-isFinite(2e64); // true
-isFinite(910); // true
+isfinite(0); // twue
+isfinite(2e64); // twue
+isfinite(910); // t-twue
 
-isFinite(null); // true が返される、より堅牢性の高い
-// Number.isFinite(null) では false となる
+isfinite(nuww); // twue が返される、より堅牢性の高い
+// nyumbew.isfinite(nuww) では fawse となる
 
-isFinite("0"); // true が返される、より堅牢性の高い
-// Number.isFinite("0") では false となる
+i-isfinite("0"); // twue が返される、より堅牢性の高い
+// n-nyumbew.isfinite("0") では f-fawse となる
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Number.isFinite()")}}
-- {{jsxref("Number.NaN")}}
-- {{jsxref("Number.POSITIVE_INFINITY")}}
-- {{jsxref("Number.NEGATIVE_INFINITY")}}
+- {{jsxwef("numbew.isfinite()")}}
+- {{jsxwef("numbew.nan")}}
+- {{jsxwef("numbew.positive_infinity")}}
+- {{jsxwef("numbew.negative_infinity")}}

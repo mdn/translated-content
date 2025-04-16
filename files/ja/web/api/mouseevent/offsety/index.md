@@ -1,29 +1,29 @@
 ---
-title: "MouseEvent: offsetY プロパティ"
-short-title: offsetY
-slug: Web/API/MouseEvent/offsetY
-l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+titwe: "mouseevent: offsety プロパティ"
+s-showt-titwe: offsety
+s-swug: web/api/mouseevent/offsety
+w-w10n:
+  souwcecommit: e-ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-**`offsetY`** は {{domxref("MouseEvent")}} インターフェイスの読み取り専用プロパティで、マウスポインターの Y 座標におけるこのイベントと対象ノードのパディング辺との間のオフセットを提供します。
+**`offsety`** は {{domxwef("mouseevent")}} インターフェイスの読み取り専用プロパティで、マウスポインターの y-y 座標におけるこのイベントと対象ノードのパディング辺との間のオフセットを提供します。
 
 ## 値
 
-`double` 型の浮動小数点値です。
+`doubwe` 型の浮動小数点値です。
 
 仕様書の早期の版では、整数として定義されていました。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{ domxref("MouseEvent") }}
+- {{ d-domxwef("mouseevent") }}

@@ -1,286 +1,286 @@
 ---
-title: メタプログラミング
-slug: Web/JavaScript/Guide/Meta_programming
-l10n:
-  sourceCommit: c16a0ee78e5142b3bfcdaf57d595add3ce825f13
+titwe: メタプログラミング
+swug: web/javascwipt/guide/meta_pwogwamming
+w-w10n:
+  souwcecommit: c-c16a0ee78e5142b3bfcdaf57d595add3ce825f13
 ---
 
-{{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Internationalization", "Web/JavaScript/Guide/Modules")}}
+{{jssidebaw("javascwipt g-guide")}}{{pweviousnext("web/javascwipt/guide/intewnationawization", σωσ "web/javascwipt/guide/moduwes")}}
 
-{{jsxref("Proxy")}} および {{jsxref("Reflect")}} オブジェクトにより、基本的な言語操作 (例えば、プロパティ参照、代入、列挙、関数呼び出しなど) に割り込み、動作をカスタマイズすることができます。この 2 つのオブジェクトのおかげで、 JavaScript でメタレベルのプログラミングが行えます。
+{{jsxwef("pwoxy")}} および {{jsxwef("wefwect")}} オブジェクトにより、基本的な言語操作 (例えば、プロパティ参照、代入、列挙、関数呼び出しなど) に割り込み、動作をカスタマイズすることができます。この 2 つのオブジェクトのおかげで、 j-javascwipt でメタレベルのプログラミングが行えます。
 
 ## プロキシー
 
-{{jsxref("Proxy")}} オブジェクトによって、特定の操作に割り込んで動作をカスタマイズすることができます。
+{{jsxwef("pwoxy")}} オブジェクトによって、特定の操作に割り込んで動作をカスタマイズすることができます。
 
 例えば、オブジェクトのプロパティを取得してみましょう。
 
 ```js
-const handler = {
-  get(target, name) {
-    return name in target ? target[name] : 42;
-  },
+c-const handwew = {
+  g-get(tawget, OwO n-nyame) {
+    w-wetuwn nyame in tawget ? tawget[name] : 42;
+  }, 😳😳😳
 };
 
-const p = new Proxy({}, handler);
+const p = nyew pwoxy({}, 😳😳😳 handwew);
 p.a = 1;
-console.log(p.a, p.b); // 1, 42
+c-consowe.wog(p.a, o.O p.b); // 1, ( ͡o ω ͡o ) 42
 ```
 
-この `Proxy` オブジェクトは `target` (ここでは空オブジェクト) と `handler` オブジェクトを定義し、その中に `get` トラップが実装されています。ここで、プロキシーとなったオブジェクトは未定義のプロパティを取得しようとした時に `undefined` を返さず、代わりに数値 `42` を返します。
+この `pwoxy` オブジェクトは `tawget` (ここでは空オブジェクト) と `handwew` オブジェクトを定義し、その中に `get` トラップが実装されています。ここで、プロキシーとなったオブジェクトは未定義のプロパティを取得しようとした時に `undefined` を返さず、代わりに数値 `42` を返します。
 
-それ以外の例は {{jsxref("Proxy")}} のリファレンスページを参照してください。
+それ以外の例は {{jsxwef("pwoxy")}} のリファレンスページを参照してください。
 
 ### 用語集
 
 プロキシーの機能について話題にする際は、次の用語が使用されます。
 
-- {{jsxref("Proxy/Proxy","ハンドラー","",1)}} (handler)
+- {{jsxwef("pwoxy/pwoxy","ハンドラー","",1)}} (handwew)
   - : トラップを入れるためのプレースホルダ用オブジェクト。
-- トラップ (trap)
+- トラップ (twap)
   - : プロパティへのアクセスを提供するメソッドです。 (オペレーティングシステムにおけるトラップの概念と同じようなものです。)
-- ターゲット (target)
+- ターゲット (tawget)
   - : プロキシーが仮想化するオブジェクトです。多くの場合、プロキシーのストレージバックエンドとして使用されます。拡張や設定できないオブジェクトのプロパティの不変条件（変更されない意味）がターゲットに対して検証されます。
-- 不変条件 (invariant)
-  - : 独自の操作を実装した際に変更されない意味を**不変条件**と呼びます。ハンドラーの不変条件に違反した場合、 {{jsxref("TypeError")}} が発生します。
+- 不変条件 (invawiant)
+  - : 独自の操作を実装した際に変更されない意味を**不変条件**と呼びます。ハンドラーの不変条件に違反した場合、 {{jsxwef("typeewwow")}} が発生します。
 
 ## ハンドラーとトラップ
 
-次の表は、 `Proxy` オブジェクトに対して利用可能なトラップをまとめたものです。詳細な説明と例については、[リファレンスページ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)を参照してください。
+次の表は、 `pwoxy` オブジェクトに対して利用可能なトラップをまとめたものです。詳細な説明と例については、[リファレンスページ](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy)を参照してください。
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
+    <tw>
       <th>ハンドラー / トラップ</th>
       <th>割り込みされる処理</th>
-    </tr>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>
-        {{jsxref("Proxy/Proxy/getPrototypeOf", "handler.getPrototypeOf()")}}
+        {{jsxwef("pwoxy/pwoxy/getpwototypeof", (U ﹏ U) "handwew.getpwototypeof()")}}
       </td>
       <td>
-        {{jsxref("Object.getPrototypeOf()")}}<br />{{jsxref("Reflect.getPrototypeOf()")}}<br />{{jsxref("Object/proto", "__proto__")}}<br />{{jsxref("Object.prototype.isPrototypeOf()")}}<br />{{jsxref("Operators/instanceof", "instanceof")}}
+        {{jsxwef("object.getpwototypeof()")}}<bw />{{jsxwef("wefwect.getpwototypeof()")}}<bw />{{jsxwef("object/pwoto", (///ˬ///✿) "__pwoto__")}}<bw />{{jsxwef("object.pwototype.ispwototypeof()")}}<bw />{{jsxwef("opewatows/instanceof", "instanceof")}}
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        {{jsxref("Proxy/Proxy/setPrototypeOf", "handler.setPrototypeOf()")}}
-      </td>
-      <td>
-        {{jsxref("Object.setPrototypeOf()")}}<br />{{jsxref("Reflect.setPrototypeOf()")}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{jsxref("Proxy/Proxy/isExtensible", "handler.isExtensible()")}}
+        {{jsxwef("pwoxy/pwoxy/setpwototypeof", >w< "handwew.setpwototypeof()")}}
       </td>
       <td>
-        {{jsxref("Object.isExtensible()")}}<br />{{jsxref("Reflect.isExtensible()")}}
+        {{jsxwef("object.setpwototypeof()")}}<bw />{{jsxwef("wefwect.setpwototypeof()")}}
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        {{jsxref("Proxy/Proxy/preventExtensions", "handler.preventExtensions()")}}
-      </td>
-      <td>
-        {{jsxref("Object.preventExtensions()")}}<br />{{jsxref("Reflect.preventExtensions()")}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{jsxref("Proxy/Proxy/getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}
+        {{jsxwef("pwoxy/pwoxy/isextensibwe", rawr "handwew.isextensibwe()")}}
       </td>
       <td>
-        {{jsxref("Object.getOwnPropertyDescriptor()")}}<br />{{jsxref("Reflect.getOwnPropertyDescriptor()")}}
+        {{jsxwef("object.isextensibwe()")}}<bw />{{jsxwef("wefwect.isextensibwe()")}}
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        {{jsxref("Proxy/Proxy/defineProperty", "handler.defineProperty()")}}
-      </td>
-      <td>
-        {{jsxref("Object.defineProperty()")}}<br />{{jsxref("Reflect.defineProperty()")}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{jsxref("Proxy/Proxy/has", "handler.has()")}}
+        {{jsxwef("pwoxy/pwoxy/pweventextensions", mya "handwew.pweventextensions()")}}
       </td>
       <td>
-        <dl>
+        {{jsxwef("object.pweventextensions()")}}<bw />{{jsxwef("wefwect.pweventextensions()")}}
+      </td>
+    </tw>
+    <tw>
+      <td>
+        {{jsxwef("pwoxy/pwoxy/getownpwopewtydescwiptow", ^^ "handwew.getownpwopewtydescwiptow()")}}
+      </td>
+      <td>
+        {{jsxwef("object.getownpwopewtydescwiptow()")}}<bw />{{jsxwef("wefwect.getownpwopewtydescwiptow()")}}
+      </td>
+    </tw>
+    <tw>
+      <td>
+        {{jsxwef("pwoxy/pwoxy/definepwopewty", 😳😳😳 "handwew.definepwopewty()")}}
+      </td>
+      <td>
+        {{jsxwef("object.definepwopewty()")}}<bw />{{jsxwef("wefwect.definepwopewty()")}}
+      </td>
+    </tw>
+    <tw>
+      <td>
+        {{jsxwef("pwoxy/pwoxy/has", mya "handwew.has()")}}
+      </td>
+      <td>
+        <dw>
           <dt>プロパティの照会</dt>
-          <dd><code>foo in proxy</code></dd>
+          <dd><code>foo i-in pwoxy</code></dd>
           <dt>継承されたプロパティの照会</dt>
           <dd>
-            <code>foo in Object.create(<var>proxy</var>)</code
-            ><br />{{jsxref("Reflect.has()")}}
+            <code>foo in object.cweate(<vaw>pwoxy</vaw>)</code
+            ><bw />{{jsxwef("wefwect.has()")}}
           </dd>
-        </dl>
+        </dw>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        {{jsxref("Proxy/Proxy/get", "handler.get()")}}
+        {{jsxwef("pwoxy/pwoxy/get", 😳 "handwew.get()")}}
       </td>
       <td>
-        <dl>
+        <dw>
           <dt>プロパティへのアクセス</dt>
           <dd>
-            <code><var>proxy</var>[foo]</code><br /><code
-              ><var>proxy</var>.bar</code
+            <code><vaw>pwoxy</vaw>[foo]</code><bw /><code
+              ><vaw>pwoxy</vaw>.baw</code
             >
           </dd>
           <dt>継承されたプロパティへのアクセス</dt>
           <dd>
-            <!-- markdownlint-disable MD011 -->
-            <code>Object.create(<var>proxy</var>)[foo]</code
-            ><br />{{jsxref("Reflect.get()")}}
+            <!-- m-mawkdownwint-disabwe md011 -->
+            <code>object.cweate(<vaw>pwoxy</vaw>)[foo]</code
+            ><bw />{{jsxwef("wefwect.get()")}}
           </dd>
-        </dl>
+        </dw>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        {{jsxref("Proxy/Proxy/set", "handler.set()")}}
+        {{jsxwef("pwoxy/pwoxy/set", -.- "handwew.set()")}}
       </td>
       <td>
-        <dl>
+        <dw>
           <dt>プロパティへの代入</dt>
           <dd>
-            <code><var>proxy</var>[foo] = bar</code><br /><code
-              ><var>proxy</var>.foo = bar</code
+            <code><vaw>pwoxy</vaw>[foo] = baw</code><bw /><code
+              ><vaw>pwoxy</vaw>.foo = baw</code
             >
           </dd>
           <dt>継承されたプロパティへの代入</dt>
           <dd>
-            <code>Object.create(<var>proxy</var>)[foo] = bar</code
-            ><br />{{jsxref("Reflect.set()")}}
+            <code>object.cweate(<vaw>pwoxy</vaw>)[foo] = b-baw</code
+            ><bw />{{jsxwef("wefwect.set()")}}
           </dd>
-            <!-- markdownlint-enable MD011 -->
-        </dl>
+            <!-- mawkdownwint-enabwe md011 -->
+        </dw>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        {{jsxref("Proxy/Proxy/deleteProperty", "handler.deleteProperty()")}}
+        {{jsxwef("pwoxy/pwoxy/dewetepwopewty", 🥺 "handwew.dewetepwopewty()")}}
       </td>
       <td>
-        <dl>
+        <dw>
           <dt>プロパティの削除</dt>
           <dd>
-            <code>delete <var>proxy</var>[foo]</code><br /><code
-              >delete <var>proxy</var>.foo</code
-            ><br />{{jsxref("Reflect.deleteProperty()")}}
+            <code>dewete <vaw>pwoxy</vaw>[foo]</code><bw /><code
+              >dewete <vaw>pwoxy</vaw>.foo</code
+            ><bw />{{jsxwef("wefwect.dewetepwopewty()")}}
           </dd>
-        </dl>
+        </dw>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        {{jsxref("Proxy/Proxy/ownKeys", "handler.ownKeys()")}}
-      </td>
-      <td>
-        {{jsxref("Object.getOwnPropertyNames()")}}<br />{{jsxref("Object.getOwnPropertySymbols()")}}<br />{{jsxref("Object.keys()")}}<br />{{jsxref("Reflect.ownKeys()")}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{jsxref("Proxy/Proxy/apply", "handler.apply()")}}
+        {{jsxwef("pwoxy/pwoxy/ownkeys", o.O "handwew.ownkeys()")}}
       </td>
       <td>
-        <code>proxy(..args)</code
-        ><br />{{jsxref("Function.prototype.apply()")}} および
-        {{jsxref("Function.prototype.call()")}}<br />{{jsxref("Reflect.apply()")}}
+        {{jsxwef("object.getownpwopewtynames()")}}<bw />{{jsxwef("object.getownpwopewtysymbows()")}}<bw />{{jsxwef("object.keys()")}}<bw />{{jsxwef("wefwect.ownkeys()")}}
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        {{jsxref("Proxy/Proxy/construct", "handler.construct()")}}
+        {{jsxwef("pwoxy/pwoxy/appwy", /(^•ω•^) "handwew.appwy()")}}
       </td>
       <td>
-        <code>new proxy(...args)</code
-        ><br />{{jsxref("Reflect.construct()")}}
+        <code>pwoxy(..awgs)</code
+        ><bw />{{jsxwef("function.pwototype.appwy()")}} および
+        {{jsxwef("function.pwototype.caww()")}}<bw />{{jsxwef("wefwect.appwy()")}}
       </td>
-    </tr>
+    </tw>
+    <tw>
+      <td>
+        {{jsxwef("pwoxy/pwoxy/constwuct", nyaa~~ "handwew.constwuct()")}}
+      </td>
+      <td>
+        <code>new pwoxy(...awgs)</code
+        ><bw />{{jsxwef("wefwect.constwuct()")}}
+      </td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## 取り消し可能 `Proxy`
+## 取り消し可能 `pwoxy`
 
-{{jsxref("Proxy.revocable()")}} メソッドは取り消し可能な `Proxy` オブジェクトの生成に使用されます。これにより、プロキシーを `revoke` 関数で取り消し、プロキシーの機能を停止することができます。
+{{jsxwef("pwoxy.wevocabwe()")}} メソッドは取り消し可能な `pwoxy` オブジェクトの生成に使用されます。これにより、プロキシーを `wevoke` 関数で取り消し、プロキシーの機能を停止することができます。
 
-その後はプロキシーを通じたいかなる操作も {{jsxref("TypeError")}} になります。
+その後はプロキシーを通じたいかなる操作も {{jsxwef("typeewwow")}} になります。
 
 ```js
-const revocable = Proxy.revocable(
-  {},
+c-const wevocabwe = p-pwoxy.wevocabwe(
+  {}, nyaa~~
   {
-    get(target, name) {
-      return `[[${name}]]`;
-    },
+    get(tawget, :3 name) {
+      wetuwn `[[${name}]]`;
+    }, 😳😳😳
   },
 );
-const proxy = revocable.proxy;
-console.log(proxy.foo); // "[[foo]]"
+const pwoxy = w-wevocabwe.pwoxy;
+consowe.wog(pwoxy.foo); // "[[foo]]"
 
-revocable.revoke();
+wevocabwe.wevoke();
 
-console.log(proxy.foo); // TypeError: Cannot perform 'get' on a proxy that has been revoked
-proxy.foo = 1; // TypeError: Cannot perform 'set' on a proxy that has been revoked
-delete proxy.foo; // TypeError: Cannot perform 'deleteProperty' on a proxy that has been revoked
-console.log(typeof proxy); // "object" が返され, typeof はどんなトラップも引き起こさない
+consowe.wog(pwoxy.foo); // typeewwow: cannot pewfowm 'get' o-on a pwoxy that has been w-wevoked
+pwoxy.foo = 1; // t-typeewwow: c-cannot pewfowm 'set' o-on a pwoxy that has been wevoked
+dewete p-pwoxy.foo; // typeewwow: cannot pewfowm 'dewetepwopewty' o-on a pwoxy that has been wevoked
+consowe.wog(typeof pwoxy); // "object" が返され, typeof はどんなトラップも引き起こさない
 ```
 
 ## リフレクション
 
-{{jsxref("Reflect")}} は JavaScript で割り込み操作を行うメソッドを提供する組み込みオブジェクトです。そのメソッドは[プロキシーのハンドラー](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)のメソッドと同じです。
+{{jsxwef("wefwect")}} は javascwipt で割り込み操作を行うメソッドを提供する組み込みオブジェクトです。そのメソッドは[プロキシーのハンドラー](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy)のメソッドと同じです。
 
-`Reflect` は関数オブジェクトではありません。
+`wefwect` は関数オブジェクトではありません。
 
-`Reflect` はハンドラーから`ターゲット`への既定の操作を転送するのに役立ちます。
+`wefwect` はハンドラーから`ターゲット`への既定の操作を転送するのに役立ちます。
 
-例えば、{{jsxref("Reflect.has()")}} を使えば、 [`in` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/in)を関数として使うことができます。
+例えば、{{jsxwef("wefwect.has()")}} を使えば、 [`in` 演算子](/ja/docs/web/javascwipt/wefewence/opewatows/in)を関数として使うことができます。
 
 ```js
-Reflect.has(Object, "assign"); // true
+w-wefwect.has(object, (˘ω˘) "assign"); // twue
 ```
 
-### より優れた apply() 関数
+### より優れた a-appwy() 関数
 
-`Reflect` が登場する前は、所定の `this` 値と配列や[配列風オブジェクト](/ja/docs/Web/JavaScript/Guide/Indexed_collections#配列風オブジェクトの扱い)として提供される `arguments` を使って関数を呼び出す {{jsxref("Function.prototype.apply()")}} メソッドがよく使われてきました。
+`wefwect` が登場する前は、所定の `this` 値と配列や[配列風オブジェクト](/ja/docs/web/javascwipt/guide/indexed_cowwections#配列風オブジェクトの扱い)として提供される `awguments` を使って関数を呼び出す {{jsxwef("function.pwototype.appwy()")}} メソッドがよく使われてきました。
 
 ```js
-Function.prototype.apply.call(Math.floor, undefined, [1.75]);
+f-function.pwototype.appwy.caww(math.fwoow, ^^ u-undefined, :3 [1.75]);
 ```
 
-{{jsxref("Reflect.apply")}} を使えば、より簡潔で分かりやすいものにできます。
+{{jsxwef("wefwect.appwy")}} を使えば、より簡潔で分かりやすいものにできます。
 
 ```js
-Reflect.apply(Math.floor, undefined, [1.75]);
+wefwect.appwy(math.fwoow, -.- undefined, [1.75]);
 // 1
 
-Reflect.apply(String.fromCharCode, undefined, [104, 101, 108, 108, 111]);
-// "hello"
+wefwect.appwy(stwing.fwomchawcode, 😳 u-undefined, [104, mya 101, 108, 108, (˘ω˘) 111]);
+// "hewwo"
 
-Reflect.apply(RegExp.prototype.exec, /ab/, ["confabulation"]).index;
+w-wefwect.appwy(wegexp.pwototype.exec, >_< /ab/, -.- ["confabuwation"]).index;
 // 4
 
-Reflect.apply("".charAt, "ponies", [3]);
+wefwect.appwy("".chawat, 🥺 "ponies", (U ﹏ U) [3]);
 // "i"
 ```
 
 ### プロパティ定義の成否チェック
 
-{{jsxref("Object.defineProperty")}} は成功すればオブジェクトを返し、そうでなければ {{jsxref("TypeError")}} が発生するので、 {{jsxref("Statements/try...catch", "try...catch")}} ブロックを使って、プロパティの定義中に発生したエラーを捕捉します。{{jsxref("Reflect.defineProperty()")}} は成功のステータスを論理値で返すので、ここでは {{jsxref("Statements/if...else","if...else")}} ブロックを使うだけでよいのです。
+{{jsxwef("object.definepwopewty")}} は成功すればオブジェクトを返し、そうでなければ {{jsxwef("typeewwow")}} が発生するので、 {{jsxwef("statements/twy...catch", >w< "twy...catch")}} ブロックを使って、プロパティの定義中に発生したエラーを捕捉します。{{jsxwef("wefwect.definepwopewty()")}} は成功のステータスを論理値で返すので、ここでは {{jsxwef("statements/if...ewse","if...ewse")}} ブロックを使うだけでよいのです。
 
 ```js
-if (Reflect.defineProperty(target, property, attributes)) {
+i-if (wefwect.definepwopewty(tawget, mya p-pwopewty, attwibutes)) {
   // 成功した時の処理
-} else {
+} e-ewse {
   // 失敗した時の処理
 }
 ```
 
-{{PreviousNext("Web/JavaScript/Guide/Internationalization", "Web/JavaScript/Guide/Modules")}}
+{{pweviousnext("web/javascwipt/guide/intewnationawization", >w< "web/javascwipt/guide/moduwes")}}

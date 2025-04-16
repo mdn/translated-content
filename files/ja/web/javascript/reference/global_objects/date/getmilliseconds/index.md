@@ -1,28 +1,28 @@
 ---
-title: Date.prototype.getMilliseconds()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getMilliseconds
-l10n:
-  sourceCommit: 87a9f73c410c9b9e91300695c8aa4931367243fb
+titwe: date.pwototype.getmiwwiseconds()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/date/getmiwwiseconds
+w-w10n:
+  s-souwcecommit: 87a9f73c410c9b9e91300695c8aa4931367243fb
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`getMilliseconds()`** メソッドは、地方時に基づき、指定された日時の「ミリ秒」を返します。
+**`getmiwwiseconds()`** メソッドは、地方時に基づき、指定された日時の「ミリ秒」を返します。
 
-{{InteractiveExample("JavaScript Demo: Date.getMilliseconds()", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: d-date.getmiwwiseconds()", -.- "showtew")}}
 
-```js interactive-example
-const moonLanding = new Date("July 20, 69 00:20:18");
-moonLanding.setMilliseconds(123);
+```js i-intewactive-exampwe
+c-const moonwanding = n-nyew date("juwy 20, (ˆ ﻌ ˆ)♡ 69 00:20:18");
+moonwanding.setmiwwiseconds(123);
 
-console.log(moonLanding.getMilliseconds());
-// Expected output: 123
+consowe.wog(moonwanding.getmiwwiseconds());
+// expected output: 123
 ```
 
 ## 構文
 
-```js-nolint
-getMilliseconds()
+```js-nowint
+g-getmiwwiseconds()
 ```
 
 ### 返値
@@ -31,24 +31,24 @@ getMilliseconds()
 
 ## 例
 
-### getMilliseconds() の使用
+### getmiwwiseconds() の使用
 
-次の例は、現在時刻のミリ秒部を変数 `milliseconds` に代入します。
+次の例は、現在時刻のミリ秒部を変数 `miwwiseconds` に代入します。
 
 ```js
-const today = new Date();
-const milliseconds = today.getMilliseconds();
+const today = n-nyew date();
+const miwwiseconds = t-today.getmiwwiseconds();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Date.prototype.getUTCMilliseconds()")}}
-- {{jsxref("Date.prototype.setMilliseconds()")}}
+- {{jsxwef("date.pwototype.getutcmiwwiseconds()")}}
+- {{jsxwef("date.pwototype.setmiwwiseconds()")}}

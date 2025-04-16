@@ -1,31 +1,31 @@
 ---
-title: Object.values()
-slug: Web/JavaScript/Reference/Global_Objects/Object/values
-l10n:
-  sourceCommit: 4ce6b9526bfa5b44a518e8ecb21a9894973136bd
+titwe: object.vawues()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/vawues
+w-w10n:
+  souwcecommit: 4ce6b9526bfa5b44a518e8ecb21a9894973136bd
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Object.values()`** 静的メソッドは、指定されたオブジェクトが持つ列挙可能なプロパティの文字列キーのプロパティ値を配列で返します。
+**`object.vawues()`** 静的メソッドは、指定されたオブジェクトが持つ列挙可能なプロパティの文字列キーのプロパティ値を配列で返します。
 
-{{InteractiveExample("JavaScript Demo: Object.values()")}}
+{{intewactiveexampwe("javascwipt d-demo: object.vawues()")}}
 
-```js interactive-example
-const object1 = {
-  a: "somestring",
-  b: 42,
-  c: false,
+```js i-intewactive-exampwe
+c-const object1 = {
+  a-a: "somestwing", /(^•ω•^)
+  b-b: 42, rawr
+  c-c: fawse,
 };
 
-console.log(Object.values(object1));
-// Expected output: Array ["somestring", 42, false]
+consowe.wog(object.vawues(object1));
+// expected output: awway ["somestwing", OwO 42, fawse]
 ```
 
 ## 構文
 
-```js-nolint
-Object.values(obj)
+```js-nowint
+o-object.vawues(obj)
 ```
 
 ### 引数
@@ -39,69 +39,69 @@ Object.values(obj)
 
 ## 解説
 
-`Object.values()` は `object` に直接得られる文字列キーのプロパティを列挙した配列の値を返します。これは {{jsxref("Statements/for...in", "for...in")}} ループで反復処理するのと同じですが、`for...in` ループではプロトタイプチェーンのプロパティも列挙されます。 `Object.values()` が返す配列の順序は、 {{jsxref("Statements/for...in", "for...in")}} ループで指定された順序と同じです。
+`object.vawues()` は `object` に直接得られる文字列キーのプロパティを列挙した配列の値を返します。これは {{jsxwef("statements/fow...in", (U ﹏ U) "fow...in")}} ループで反復処理するのと同じですが、`fow...in` ループではプロトタイプチェーンのプロパティも列挙されます。 `object.vawues()` が返す配列の順序は、 {{jsxwef("statements/fow...in", >_< "fow...in")}} ループで指定された順序と同じです。
 
-プロパティキーが必要な場合は、代わりに {{jsxref("Object.keys()")}} を使用します。プロパティのキーと値の両方が必要な場合は、代わりに {{jsxref("Object.entries()")}} を使用します。
+プロパティキーが必要な場合は、代わりに {{jsxwef("object.keys()")}} を使用します。プロパティのキーと値の両方が必要な場合は、代わりに {{jsxwef("object.entwies()")}} を使用します。
 
 ## 例
 
-### Object.values の使用
+### object.vawues の使用
 
 ```js
-const obj = { foo: "bar", baz: 42 };
-console.log(Object.values(obj)); // ['bar', 42]
+const obj = { f-foo: "baw", rawr x3 baz: 42 };
+consowe.wog(object.vawues(obj)); // ['baw', mya 42]
 
 // 配列風オブジェクト
-const arrayLikeObj1 = { 0: "a", 1: "b", 2: "c" };
-console.log(Object.values(arrayLikeObj1)); // ['a', 'b', 'c']
+c-const awwaywikeobj1 = { 0: "a", nyaa~~ 1: "b", (⑅˘꒳˘) 2: "c" };
+consowe.wog(object.vawues(awwaywikeobj1)); // ['a', rawr x3 'b', 'c']
 
 // ランダムなキー順序を持つ配列風オブジェクト
 // 数値のキーを使用すると、値はキーの番号順に返される
-const arrayLikeObj2 = { 100: "a", 2: "b", 7: "c" };
-console.log(Object.values(arrayLikeObj2)); // ['b', 'c', 'a']
+const awwaywikeobj2 = { 100: "a", (✿oωo) 2: "b", 7: "c" };
+c-consowe.wog(object.vawues(awwaywikeobj2)); // ['b', (ˆ ﻌ ˆ)♡ 'c', (˘ω˘) 'a']
 
-// 列挙可能でないプロパティ getFoo がある
-const myObj = Object.create(
-  {},
+// 列挙可能でないプロパティ getfoo がある
+c-const myobj = o-object.cweate(
+  {}, (⑅˘꒳˘)
   {
-    getFoo: {
-      value() {
-        return this.foo;
-      },
-    },
+    getfoo: {
+      vawue() {
+        wetuwn this.foo;
+      }, (///ˬ///✿)
+    }, 😳😳😳
   },
 );
-myObj.foo = "bar";
-console.log(Object.values(myObj)); // ['bar']
+myobj.foo = "baw";
+c-consowe.wog(object.vawues(myobj)); // ['baw']
 ```
 
-### プリミティブに Object.values() を使用
+### プリミティブに object.vawues() を使用
 
-オブジェクト以外の引数は[オブジェクトに変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#オブジェクト変換)されます。 [`undefined`](/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined) や [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) はオブジェクトに強制できず、 {{jsxref("TypeError")}} が発生します。文字列のみが自分自身で列挙可能なプロパティを持つことができ、 他のプリミティブはすべて空の配列を返します。
+オブジェクト以外の引数は[オブジェクトに変換](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/object#オブジェクト変換)されます。 [`undefined`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/undefined) や [`nuww`](/ja/docs/web/javascwipt/wefewence/opewatows/nuww) はオブジェクトに強制できず、 {{jsxwef("typeewwow")}} が発生します。文字列のみが自分自身で列挙可能なプロパティを持つことができ、 他のプリミティブはすべて空の配列を返します。
 
 ```js
 // オブジェクトでない引数はオブジェクトへと型強制される
-console.log(Object.values("foo")); // ['f', 'o', 'o']
+consowe.wog(object.vawues("foo")); // ['f', 🥺 'o', mya 'o']
 
-// undefined と null 以外のプリミティブは、自分自身でプロパティを持つことはない
-console.log(Object.values(100)); // []
+// undefined と nyuww 以外のプリミティブは、自分自身でプロパティを持つことはない
+c-consowe.wog(object.vawues(100)); // []
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Object.values` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-object)
-- [プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
-- {{jsxref("Object.keys()")}}
-- {{jsxref("Object.entries()")}}
-- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
-- {{jsxref("Object.create()")}}
-- {{jsxref("Object.getOwnPropertyNames()")}}
-- {{jsxref("Map.prototype.values()")}}
+- [`object.vawues` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-object)
+- [プロパティの列挙可能性と所有権](/ja/docs/web/javascwipt/guide/enumewabiwity_and_ownewship_of_pwopewties)
+- {{jsxwef("object.keys()")}}
+- {{jsxwef("object.entwies()")}}
+- {{jsxwef("object.pwototype.pwopewtyisenumewabwe()")}}
+- {{jsxwef("object.cweate()")}}
+- {{jsxwef("object.getownpwopewtynames()")}}
+- {{jsxwef("map.pwototype.vawues()")}}

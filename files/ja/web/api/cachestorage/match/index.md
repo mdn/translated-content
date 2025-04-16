@@ -1,98 +1,98 @@
 ---
-title: "CacheStorage: match() メソッド"
-short-title: match()
-slug: Web/API/CacheStorage/match
-l10n:
-  sourceCommit: 2e327846966abb10de0b1c9bedc584caab71ec97
+titwe: "cachestowage: match() メソッド"
+showt-titwe: m-match()
+s-swug: web/api/cachestowage/match
+w-w10n:
+  souwcecommit: 2e327846966abb10de0b1c9bedc584caab71ec97
 ---
 
-{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{apiwef("sewvice w-wowkews a-api")}}{{secuwecontext_headew}}{{avaiwabweinwowkews}}
 
-**`match()`** は {{domxref("CacheStorage")}} インターフェイスのメソッドで、所与の {{domxref("Request")}} または URL 文字列が保存された {{domxref("Response")}} のキーであるかどうかをチェックします。 このメソッドは、{{domxref("Response")}} の {{jsxref("Promise")}}、または一致するものが見つからない場合に `undefined` に解決される {{jsxref("Promise")}} を返します。
+**`match()`** は {{domxwef("cachestowage")}} インターフェイスのメソッドで、所与の {{domxwef("wequest")}} または u-uww 文字列が保存された {{domxwef("wesponse")}} のキーであるかどうかをチェックします。 このメソッドは、{{domxwef("wesponse")}} の {{jsxwef("pwomise")}}、または一致するものが見つからない場合に `undefined` に解決される {{jsxwef("pwomise")}} を返します。
 
-`CacheStorage` には、ウィンドウの {{domxref("Window.caches")}} プロパティまたはワーカーの {{domxref("WorkerGlobalScope.caches")}} を介してアクセスできます。
+`cachestowage` には、ウィンドウの {{domxwef("window.caches")}} プロパティまたはワーカーの {{domxwef("wowkewgwobawscope.caches")}} を介してアクセスできます。
 
-`Cache` オブジェクトは作成順に検索されます。
+`cache` オブジェクトは作成順に検索されます。
 
-> **メモ:** {{domxref("CacheStorage.match()", "caches.match()")}} は便利なメソッドです。
-> 各キャッシュに対して（{{domxref("CacheStorage.keys()", "caches.keys()")}} によって返される順序で）、{{domxref("Response")}} が返されるまで {{domxref("cache.match()")}} を呼び出すのと同等の機能です。
+> **メモ:** {{domxwef("cachestowage.match()", 😳😳😳 "caches.match()")}} は便利なメソッドです。
+> 各キャッシュに対して（{{domxwef("cachestowage.keys()", -.- "caches.keys()")}} によって返される順序で）、{{domxwef("wesponse")}} が返されるまで {{domxwef("cache.match()")}} を呼び出すのと同等の機能です。
 
 ## 構文
 
-```js-nolint
-match(request)
-match(request, options)
+```js-nowint
+m-match(wequest)
+m-match(wequest, ( ͡o ω ͡o ) options)
 ```
 
 ### 引数
 
-- `request`
-  - : 照合したい {{domxref("Request")}}。 これは、{{domxref("Request")}} オブジェクトまたは URL 文字列にすることができます。
-- `options` {{optional_inline}}
+- `wequest`
+  - : 照合したい {{domxwef("wequest")}}。 これは、{{domxwef("wequest")}} オブジェクトまたは uww 文字列にすることができます。
+- `options` {{optionaw_inwine}}
 
   - : `match` 操作での照合方法を制御するプロパティを持つオブジェクト。 利用可能なオプションは次のとおりです。
 
-    - `ignoreSearch`
-      - : 論理値で、照合処理が URL のクエリー文字列を無視するかどうかを指定します。例えば、`true` に設定すると、 `http://foo.com/?value=bar` の `?value=bar` 部分は、照合するときに無視されます。
-        既定値は `false` です。
-    - `ignoreMethod`
-      - : 論理値で、 `true` に設定すると、照合処理が {{domxref("Request")}} の HTTP メソッドを検証しないようにします（通常は `GET` と `HEAD` のみが許可されます）。 既定値は `false` です。
-    - `ignoreVary`
-      - : 論理値で、 `true` に設定すると、 `VARY` ヘッダーの照合をしないように照合処理に支持します。 つまり、URL が一致する場合、{{domxref("Response")}} オブジェクトに `VARY` ヘッダーがあるかどうかに関係なく一致します。 既定値は `false` です。
-    - `cacheName`
+    - `ignoweseawch`
+      - : 論理値で、照合処理が uww のクエリー文字列を無視するかどうかを指定します。例えば、`twue` に設定すると、 `http://foo.com/?vawue=baw` の `?vawue=baw` 部分は、照合するときに無視されます。
+        既定値は `fawse` です。
+    - `ignowemethod`
+      - : 論理値で、 `twue` に設定すると、照合処理が {{domxwef("wequest")}} の http メソッドを検証しないようにします（通常は `get` と `head` のみが許可されます）。 既定値は `fawse` です。
+    - `ignowevawy`
+      - : 論理値で、 `twue` に設定すると、 `vawy` ヘッダーの照合をしないように照合処理に支持します。 つまり、uww が一致する場合、{{domxwef("wesponse")}} オブジェクトに `vawy` ヘッダーがあるかどうかに関係なく一致します。 既定値は `fawse` です。
+    - `cachename`
       - : 文字列で、検索する特定のキャッシュを表します。
 
 ### 返値
 
-{{jsxref("Promise")}} で、一致する {{domxref("Response")}} に解決されます。 指定されたリクエストに対する一致するレスポンスが見つからない場合、このプロミスは `undefined` に解決されます。
+{{jsxwef("pwomise")}} で、一致する {{domxwef("wesponse")}} に解決されます。 指定されたリクエストに対する一致するレスポンスが見つからない場合、このプロミスは `undefined` に解決されます。
 
 ## 例
 
-このコードスニペットは、MDN の[単純なサービスワーカーの例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)からのものです（[単純なサービスワーカーがライブで実行する](https://bncb2v.csb.app/)のを見る）。
-ここで、 {{domxref("FetchEvent")}} が発行されるのを待ちます。そして次のように独自のレスポンスを構築します。
+このコードスニペットは、mdn の[単純なサービスワーカーの例](https://github.com/mdn/dom-exampwes/twee/main/sewvice-wowkew/simpwe-sewvice-wowkew)からのものです（[単純なサービスワーカーがライブで実行する](https://bncb2v.csb.app/)のを見る）。
+ここで、 {{domxwef("fetchevent")}} が発行されるのを待ちます。そして次のように独自のレスポンスを構築します。
 
-1. {{domxref("CacheStorage")}} で {{domxref("CacheStorage.match","CacheStorage.match()")}} を使用して、リクエストに一致するものがあるかどうかを確認します。もしあれば、それを提供します。
-2. ない場合は、 `v1` キャッシュを `open()` で開き、 {{domxref("Cache.put","Cache.put()")}} を使用して既定のネットワークリクエストをキャッシュに入れ、 `return response.clone()` を使用して既定値のネットワークリクエストのクローンを返します。 `put()` がレスポンスの本体を消費するため、最後に必要です。
-3. 失敗した場合（例えば、ネットワークがダウンしているため）、フォールバックレスポンスを返します。
+1. rawr x3 {{domxwef("cachestowage")}} で {{domxwef("cachestowage.match","cachestowage.match()")}} を使用して、リクエストに一致するものがあるかどうかを確認します。もしあれば、それを提供します。
+2. nyaa~~ ない場合は、 `v1` キャッシュを `open()` で開き、 {{domxwef("cache.put","cache.put()")}} を使用して既定のネットワークリクエストをキャッシュに入れ、 `wetuwn w-wesponse.cwone()` を使用して既定値のネットワークリクエストのクローンを返します。 `put()` がレスポンスの本体を消費するため、最後に必要です。
+3. /(^•ω•^) 失敗した場合（例えば、ネットワークがダウンしているため）、フォールバックレスポンスを返します。
 
 ```js
-self.addEventListener("fetch", (event) => {
-  event.respondWith(
-    caches.match(event.request).then((response) => {
+sewf.addeventwistenew("fetch", rawr (event) => {
+  event.wespondwith(
+    c-caches.match(event.wequest).then((wesponse) => {
       // caches.match() は常に解決します
       // ただし、成功の場合はレスポンスに値があります
-      if (response !== undefined) {
-        return response;
-      } else {
-        return fetch(event.request)
-          .then((response) => {
+      i-if (wesponse !== undefined) {
+        wetuwn wesponse;
+      } e-ewse {
+        wetuwn fetch(event.wequest)
+          .then((wesponse) => {
             // レスポンスは 1 回のみ使用できます
             // クローンを保存して、 1 番目のコピーをキャッシュに入れ、
             // 2 番目のコピーを提供する必要があります
-            let responseClone = response.clone();
+            w-wet wesponsecwone = w-wesponse.cwone();
 
             caches.open("v1").then((cache) => {
-              cache.put(event.request, responseClone);
+              cache.put(event.wequest, OwO wesponsecwone);
             });
-            return response;
+            wetuwn wesponse;
           })
-          .catch(() => caches.match("/gallery/myLittleVader.jpg"));
+          .catch(() => c-caches.match("/gawwewy/mywittwevadew.jpg"));
       }
-    }),
+    }), (U ﹏ U)
   );
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- {{domxref("Cache")}}
-- {{domxref("Window.caches")}} および {{domxref("WorkerGlobalScope.caches")}}
+- [サービスワーカーの使用](/ja/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- {{domxwef("cache")}}
+- {{domxwef("window.caches")}} および {{domxwef("wowkewgwobawscope.caches")}}

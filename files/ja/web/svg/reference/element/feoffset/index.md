@@ -1,14 +1,14 @@
 ---
-title: <feOffset>
-slug: Web/SVG/Reference/Element/feOffset
-original_slug: Web/SVG/Element/feOffset
-l10n:
-  sourceCommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
+titwe: <feoffset>
+swug: web/svg/wefewence/ewement/feoffset
+o-owiginaw_swug: w-web/svg/ewement/feoffset
+w-w10n:
+  souwcecommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-**`<feOffset>`** は SVG のフィルタープリミティブで、入力画像をオフセットします。入力画像全体は {{SVGAttr("dx")}} と {{SVGAttr("dy")}} 属性で指定した値だけオフセットされます。
+**`<feoffset>`** は s-svg のフィルタープリミティブで、入力画像をオフセットします。入力画像全体は {{svgattw("dx")}} と {{svgattw("dy")}} 属性で指定した値だけオフセットされます。
 
 ## 使用コンテキスト
 
@@ -16,68 +16,68 @@ l10n:
 
 ## 属性
 
-- {{SVGAttr("in")}}
-- {{SVGAttr("dx")}}
-- {{SVGAttr("dy")}}
+- {{svgattw("in")}}
+- {{svgattw("dx")}}
+- {{svgattw("dy")}}
 
-## DOM インターフェイス
+## d-dom インターフェイス
 
-この要素は {{domxref("SVGFEOffsetElement")}} インターフェイスを実装しています。
+この要素は {{domxwef("svgfeoffsetewement")}} インターフェイスを実装しています。
 
 ## 例
 
-### SVG
+### s-svg
 
-```html
-<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+```htmw
+<svg w-width="200" h-height="200" xmwns="http://www.w3.owg/2000/svg">
   <defs>
-    <filter id="offset" width="180" height="180">
-      <feOffset in="SourceGraphic" dx="60" dy="60" />
-    </filter>
+    <fiwtew id="offset" width="180" height="180">
+      <feoffset in="souwcegwaphic" d-dx="60" dy="60" />
+    </fiwtew>
   </defs>
 
-  <rect x="0" y="0" width="100" height="100" stroke="black" fill="green" />
-  <rect
-    x="0"
+  <wect x="0" y="0" width="100" height="100" s-stwoke="bwack" fiww="gween" />
+  <wect
+    x-x="0"
     y="0"
     width="100"
     height="100"
-    stroke="black"
-    fill="green"
-    filter="url(#offset)" />
+    stwoke="bwack"
+    f-fiww="gween"
+    fiwtew="uww(#offset)" />
 </svg>
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Example", 200, 200)}}
+{{embedwivesampwe("exampwe", -.- 200, 200)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{SVGElement("filter")}}
-- {{SVGElement("animate")}}
-- {{SVGElement("set")}}
-- {{SVGElement("feBlend")}}
-- {{SVGElement("feColorMatrix")}}
-- {{SVGElement("feComponentTransfer")}}
-- {{SVGElement("feComposite")}}
-- {{SVGElement("feConvolveMatrix")}}
-- {{SVGElement("feDiffuseLighting")}}
-- {{SVGElement("feDisplacementMap")}}
-- {{SVGElement("feFlood")}}
-- {{SVGElement("feGaussianBlur")}}
-- {{SVGElement("feImage")}}
-- {{SVGElement("feMerge")}}
-- {{SVGElement("feMorphology")}}
-- {{SVGElement("feSpecularLighting")}}
-- {{SVGElement("feTile")}}
-- {{SVGElement("feTurbulence")}}
-- [SVG チュートリアル: フィルター効果](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)
+- {{svgewement("fiwtew")}}
+- {{svgewement("animate")}}
+- {{svgewement("set")}}
+- {{svgewement("febwend")}}
+- {{svgewement("fecowowmatwix")}}
+- {{svgewement("fecomponenttwansfew")}}
+- {{svgewement("fecomposite")}}
+- {{svgewement("feconvowvematwix")}}
+- {{svgewement("fediffusewighting")}}
+- {{svgewement("fedispwacementmap")}}
+- {{svgewement("fefwood")}}
+- {{svgewement("fegaussianbwuw")}}
+- {{svgewement("feimage")}}
+- {{svgewement("femewge")}}
+- {{svgewement("femowphowogy")}}
+- {{svgewement("fespecuwawwighting")}}
+- {{svgewement("fetiwe")}}
+- {{svgewement("fetuwbuwence")}}
+- [svg チュートリアル: フィルター効果](/ja/docs/web/svg/tutowiaws/svg_fwom_scwatch/fiwtew_effects)

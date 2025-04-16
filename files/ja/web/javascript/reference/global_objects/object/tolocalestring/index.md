@@ -1,121 +1,121 @@
 ---
-title: Object.prototype.toLocaleString()
-slug: Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
-l10n:
-  sourceCommit: 5e878acadb7afcf0443b619b1d2f70a4dfafd679
+titwe: object.pwototype.towocawestwing()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/towocawestwing
+w-w10n:
+  souwcecommit: 5e878acadb7afcf0443b619b1d2f70a4dfafd679
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`toLocaleString()`** は {{jsxref("Object")}} インスタンスのメソッドで、オブジェクトを表す文字列を返します。このメソッドは、ロケール固有の目的のために派生オブジェクトによってオーバーライドするためのものです。
+**`towocawestwing()`** は {{jsxwef("object")}} インスタンスのメソッドで、オブジェクトを表す文字列を返します。このメソッドは、ロケール固有の目的のために派生オブジェクトによってオーバーライドするためのものです。
 
-{{InteractiveExample("JavaScript Demo: Object.prototype.tolocalestring()")}}
+{{intewactiveexampwe("javascwipt d-demo: object.pwototype.towocawestwing()")}}
 
-```js interactive-example
-const date1 = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+```js i-intewactive-exampwe
+c-const d-date1 = nyew date(date.utc(2012, (⑅˘꒳˘) 11, rawr x3 20, 3, 0, 0));
 
-console.log(date1.toLocaleString("ar-EG"));
-// Expected output: "٢٠‏/١٢‏/٢٠١٢ ٤:٠٠:٠٠ ص"
+c-consowe.wog(date1.towocawestwing("aw-eg"));
+// e-expected output: "٢٠‏/١٢‏/٢٠١٢ ٤:٠٠:٠٠ ص"
 
-const number1 = 123456.789;
+const nyumbew1 = 123456.789;
 
-console.log(number1.toLocaleString("de-DE"));
-// Expected output: "123.456,789"
+consowe.wog(numbew1.towocawestwing("de-de"));
+// expected output: "123.456,789"
 ```
 
 ## 構文
 
-```js-nolint
-toLocaleString()
+```js-nowint
+towocawestwing()
 ```
 
 ### 引数
 
-なし。ただし、このメソッドをオーバーライドするすべてのオブジェクトは、 {{jsxref("Date.prototype.toLocaleString")}} のように `locales` と `options` に対応する最大 2 つの引数を受け取ることが期待されます。これらの引数の位置は、他の目的には使用しないでください。
+なし。ただし、このメソッドをオーバーライドするすべてのオブジェクトは、 {{jsxwef("date.pwototype.towocawestwing")}} のように `wocawes` と `options` に対応する最大 2 つの引数を受け取ることが期待されます。これらの引数の位置は、他の目的には使用しないでください。
 
 ### 返値
 
-`this.toString()` 呼び出しの返値です。
+`this.tostwing()` 呼び出しの返値です。
 
 ## 解説
 
-`Object.prototype` 継承するすべてのオブジェクト（つまり、 [`null` プロトタイプオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#null_プロトタイプオブジェクト)を除くすべてのオブジェクト）は、 `toLocaleString()` メソッドを継承します。 {{jsxref("Object")}}'s `toLocaleString` は、 {{jsxref("Object/toString", "this.toString()")}} を呼び出した結果を返します。
+`object.pwototype` 継承するすべてのオブジェクト（つまり、 [`nuww` プロトタイプオブジェクト](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/object#nuww_プロトタイプオブジェクト)を除くすべてのオブジェクト）は、 `towocawestwing()` メソッドを継承します。 {{jsxwef("object")}}'s `towocawestwing` は、 {{jsxwef("object/tostwing", (✿oωo) "this.tostwing()")}} を呼び出した結果を返します。
 
-この関数は、オブジェクトに汎用的な `toLocaleString` メソッドを提供するために用意されています。コア言語では、これらの組み込みオブジェクトは `toLocaleString` をオーバーライドしてロケール特有の書式設定を行います。
+この関数は、オブジェクトに汎用的な `towocawestwing` メソッドを提供するために用意されています。コア言語では、これらの組み込みオブジェクトは `towocawestwing` をオーバーライドしてロケール特有の書式設定を行います。
 
-- {{jsxref("Array")}}: {{jsxref("Array.prototype.toLocaleString()")}}
-- {{jsxref("Number")}}: {{jsxref("Number.prototype.toLocaleString()")}}
-- {{jsxref("Date")}}: {{jsxref("Date.prototype.toLocaleString()")}}
-- {{jsxref("TypedArray")}}: {{jsxref("TypedArray.prototype.toLocaleString()")}}
-- {{jsxref("BigInt")}}: {{jsxref("BigInt.prototype.toLocaleString()")}}
+- {{jsxwef("awway")}}: {{jsxwef("awway.pwototype.towocawestwing()")}}
+- {{jsxwef("numbew")}}: {{jsxwef("numbew.pwototype.towocawestwing()")}}
+- {{jsxwef("date")}}: {{jsxwef("date.pwototype.towocawestwing()")}}
+- {{jsxwef("typedawway")}}: {{jsxwef("typedawway.pwototype.towocawestwing()")}}
+- {{jsxwef("bigint")}}: {{jsxwef("bigint.pwototype.towocawestwing()")}}
 
 ## 例
 
-### 基底の toLocaleString() メソッドの使用
+### 基底の t-towocawestwing() メソッドの使用
 
-基底の `toLocaleString()` メソッドは、単純に `toString()` を呼び出します。
+基底の `towocawestwing()` メソッドは、単純に `tostwing()` を呼び出します。
 
 ```js
 const obj = {
-  toString() {
-    return "My Object";
-  },
+  tostwing() {
+    w-wetuwn "my object";
+  }, (ˆ ﻌ ˆ)♡
 };
-console.log(obj.toLocaleString()); // "My Object"
+c-consowe.wog(obj.towocawestwing()); // "my object"
 ```
 
-### Array における toLocaleString() のオーバーライド
+### awway における towocawestwing() のオーバーライド
 
-{{jsxref("Array.prototype.toLocaleString()")}}は、各要素の `toLocaleString()` メソッドを呼び出して、結果をロケール特有の区切り文字で連結することで、配列の値を文字列として出力するために使用されます。例を示します。
+{{jsxwef("awway.pwototype.towocawestwing()")}}は、各要素の `towocawestwing()` メソッドを呼び出して、結果をロケール特有の区切り文字で連結することで、配列の値を文字列として出力するために使用されます。例を示します。
 
 ```js
-const testArray = [4, 7, 10];
+const testawway = [4, (˘ω˘) 7, 10];
 
-const euroPrices = testArray.toLocaleString("fr", {
-  style: "currency",
-  currency: "EUR",
+c-const euwopwices = t-testawway.towocawestwing("fw", (⑅˘꒳˘) {
+  s-stywe: "cuwwency", (///ˬ///✿)
+  cuwwency: "euw", 😳😳😳
 });
 // "4,00 €,7,00 €,10,00 €"
 ```
 
-### Date における toLocaleString() の上書き
+### date における towocawestwing() の上書き
 
-{{jsxref("Date.prototype.toLocaleString()")}} は、特定のロケールに適した日付表示を出力するために使用されます。例を示します。
+{{jsxwef("date.pwototype.towocawestwing()")}} は、特定のロケールに適した日付表示を出力するために使用されます。例を示します。
 
 ```js
-const testDate = new Date();
-// "Date Fri May 29 2020 18:04:24 GMT+0100 （イギリス夏時間）"
+const testdate = n-nyew date();
+// "date fwi may 29 2020 18:04:24 gmt+0100 （イギリス夏時間）"
 
-const deDate = testDate.toLocaleString("de");
-// "29.5.2020, 18:04:24"
+const dedate = testdate.towocawestwing("de");
+// "29.5.2020, 🥺 18:04:24"
 
-const frDate = testDate.toLocaleString("fr");
-// "29/05/2020, 18:04:24"
+c-const fwdate = testdate.towocawestwing("fw");
+// "29/05/2020, mya 18:04:24"
 ```
 
-### Number における toLocaleString() の上書き
+### n-nyumbew における t-towocawestwing() の上書き
 
-{{jsxref("Number.prototype.toLocaleString()")}} は、特定のロケールに適した数値表示を出力するために使用されます。例を示します。
+{{jsxwef("numbew.pwototype.towocawestwing()")}} は、特定のロケールに適した数値表示を出力するために使用されます。例を示します。
 
 ```js
-const testNumber = 2901234564;
+c-const testnumbew = 2901234564;
 // "2901234564"
 
-const deNumber = testNumber.toLocaleString("de");
+c-const denumbew = testnumbew.towocawestwing("de");
 // "2.901.234.564"
 
-const frNumber = testNumber.toLocaleString("fr");
+const f-fwnumbew = testnumbew.towocawestwing("fw");
 // "2 901 234 564"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Object.prototype.toString()")}}
+- {{jsxwef("object.pwototype.tostwing()")}}

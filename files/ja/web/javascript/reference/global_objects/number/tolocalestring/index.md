@@ -1,153 +1,153 @@
 ---
-title: Number.prototype.toLocaleString()
-slug: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
-l10n:
-  sourceCommit: b5c766f4eecb4fcf9d8ba175caddb94f7c3e9d20
+titwe: nyumbew.pwototype.towocawestwing()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/numbew/towocawestwing
+w-w10n:
+  souwcecommit: b-b5c766f4eecb4fcf9d8ba175caddb94f7c3e9d20
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`toLocaleString()`** メソッドは、この数値を表す言語依存の文字列を返します。 [`Intl.NumberFormat` API](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) に対応している実装においては、このメソッドは単に `Intl.NumberFormat` を呼び出します。
+**`towocawestwing()`** メソッドは、この数値を表す言語依存の文字列を返します。 [`intw.numbewfowmat` a-api](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/intw/numbewfowmat) に対応している実装においては、このメソッドは単に `intw.numbewfowmat` を呼び出します。
 
-数多くの数値を書式化する場合は、 {{jsxref("Intl.NumberFormat")}} オブジェクトを作成して {{jsxref("Intl/NumberFormat/format", "format()")}} メソッドで提供される機能を使用してください。
+数多くの数値を書式化する場合は、 {{jsxwef("intw.numbewfowmat")}} オブジェクトを作成して {{jsxwef("intw/numbewfowmat/fowmat", (U ﹏ U) "fowmat()")}} メソッドで提供される機能を使用してください。
 
-{{InteractiveExample("JavaScript Demo: Number.toLocaleString()")}}
+{{intewactiveexampwe("javascwipt d-demo: nyumbew.towocawestwing()")}}
 
-```js interactive-example
-function eArabic(x) {
-  return x.toLocaleString("ar-EG");
+```js i-intewactive-exampwe
+f-function e-eawabic(x) {
+  wetuwn x.towocawestwing("aw-eg");
 }
 
-console.log(eArabic(123456.789));
-// Expected output: "١٢٣٬٤٥٦٫٧٨٩"
+consowe.wog(eawabic(123456.789));
+// expected output: "١٢٣٬٤٥٦٫٧٨٩"
 
-console.log(eArabic("123456.789"));
-// Expected output: "123456.789"
+c-consowe.wog(eawabic("123456.789"));
+// expected output: "123456.789"
 
-console.log(eArabic(NaN));
-// Expected output: "ليس رقم"
+c-consowe.wog(eawabic(nan));
+// expected o-output: "ليس رقم"
 ```
 
 ## 構文
 
-```js-nolint
-toLocaleString()
-toLocaleString(locales)
-toLocaleString(locales, options)
+```js-nowint
+towocawestwing()
+towocawestwing(wocawes)
+towocawestwing(wocawes, (⑅˘꒳˘) options)
 ```
 
 ### 引数
 
-`locales` および `options` 引数で機能の動作をカスタマイズすることができ、アプリケーションが書式化の習慣を用いる言語を指定することができます。
+`wocawes` および `options` 引数で機能の動作をカスタマイズすることができ、アプリケーションが書式化の習慣を用いる言語を指定することができます。
 
-[`Intl.NumberFormat` API](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) に対応している実装では、これらの引数は正確に [`Intl.NumberFormat()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat) コンストラクターの引数に対応します。`Intl.NumberFormat` に対応していない実装では、引数を無視するように求められ、使用するロケールと返す文字列の形式を完全に実装に依存するようになります。
+[`intw.numbewfowmat` a-api](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/intw/numbewfowmat) に対応している実装では、これらの引数は正確に [`intw.numbewfowmat()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/intw/numbewfowmat/numbewfowmat) コンストラクターの引数に対応します。`intw.numbewfowmat` に対応していない実装では、引数を無視するように求められ、使用するロケールと返す文字列の形式を完全に実装に依存するようになります。
 
-- `locales` {{optional_inline}}
+- `wocawes` {{optionaw_inwine}}
 
-  - : BCP 47 言語タグを持つ文字列、またはそのような文字列の配列。`Intl.NumberFormat()` コンストラクターの [`locales`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#locales) 引数に対応します。
+  - : bcp 47 言語タグを持つ文字列、またはそのような文字列の配列。`intw.numbewfowmat()` コンストラクターの [`wocawes`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/intw/numbewfowmat/numbewfowmat#wocawes) 引数に対応します。
 
-    `Intl.NumberFormat` の対応がない実装では、この引数は無視され、普通はホストのロケールが使用されます。
+    `intw.numbewfowmat` の対応がない実装では、この引数は無視され、普通はホストのロケールが使用されます。
 
-- `options` {{optional_inline}}
+- `options` {{optionaw_inwine}}
 
-  - : 出力する書式を調整するオブジェクトです。`Intl.NumberFormat()` コンストラクターの [`options`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#options) 引数に対応します。
+  - : 出力する書式を調整するオブジェクトです。`intw.numbewfowmat()` コンストラクターの [`options`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/intw/numbewfowmat/numbewfowmat#options) 引数に対応します。
 
-    `Intl.NumberFormat` の対応がない実装では、この引数は無視されます。
+    `intw.numbewfowmat` の対応がない実装では、この引数は無視されます。
 
-引数と使い方について詳しくは、[`Intl.NumberFormat()`
-コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat)を参照してください。
+引数と使い方について詳しくは、[`intw.numbewfowmat()`
+コンストラクター](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/intw/numbewfowmat/numbewfowmat)を参照してください。
 
 ### 返値
 
 指定された数値の言語依存の表現による文字列です。
 
-`Intl.NumberFormat` のある実装では、これは `new Intl.NumberFormat(locales, options).format(number)` と等価です。
+`intw.numbewfowmat` のある実装では、これは `new i-intw.numbewfowmat(wocawes, òωó o-options).fowmat(numbew)` と等価です。
 
 ## 例
 
-### toLocaleString() の使用
+### towocawestwing() の使用
 
 ロケールを指定しない基本的な使用です。既定のロケールと既定のオプションの整形された文字列が返されます。
 
 ```js
-const number = 3500;
+const nyumbew = 3500;
 
-console.log(number.toLocaleString()); // アメリカ英語のロケールでは "3,500" を表示
+consowe.wog(numbew.towocawestwing()); // アメリカ英語のロケールでは "3,500" を表示
 ```
 
-### locales および options 引数に対応しているかどうかを調べる
+### w-wocawes および options 引数に対応しているかどうかを調べる
 
-`locales` および `options` 引数は、すべての実装で対応していない可能性があります。国際化 API の対応はオプションであり、システムによっては必要なデータを持っていないこともあるためです。国際化対応のない実装の場合、`toLocaleString()` は常にシステムのロケールを使用しますが、これは望むものとは異なるかもしれません。なぜなら、 `locales` および `options` 引数に対応している実装は、 {{jsxref("Intl")}} API に対応している必要があるからです。後者の存在を調べて対応することができます：
+`wocawes` および `options` 引数は、すべての実装で対応していない可能性があります。国際化 api の対応はオプションであり、システムによっては必要なデータを持っていないこともあるためです。国際化対応のない実装の場合、`towocawestwing()` は常にシステムのロケールを使用しますが、これは望むものとは異なるかもしれません。なぜなら、 `wocawes` および `options` 引数に対応している実装は、 {{jsxwef("intw")}} api に対応している必要があるからです。後者の存在を調べて対応することができます：
 
 ```js
-function toLocaleStringSupportsLocales() {
-  return (
-    typeof Intl === "object" &&
-    !!Intl &&
-    typeof Intl.NumberFormat === "function"
+function towocawestwingsuppowtswocawes() {
+  w-wetuwn (
+    typeof intw === "object" &&
+    !!intw &&
+    t-typeof intw.numbewfowmat === "function"
   );
 }
 ```
 
-### locales の使用
+### w-wocawes の使用
 
-この例ではローカライズされた数値変換のバリエーションのいくつかを示します。アプリケーションのユーザーインターフェイスで使われる言語の形式を得るために、`locales` 引数を用いている言語（そしておそらくいくつかの代替言語）を明示することを確かめてください。
+この例ではローカライズされた数値変換のバリエーションのいくつかを示します。アプリケーションのユーザーインターフェイスで使われる言語の形式を得るために、`wocawes` 引数を用いている言語（そしておそらくいくつかの代替言語）を明示することを確かめてください。
 
 ```js
-const number = 123456.789;
+c-const nyumbew = 123456.789;
 
 // ドイツ語では小数点にカンマを用い、千の桁区切りにピリオドを用いる
-console.log(number.toLocaleString("de-DE"));
+c-consowe.wog(numbew.towocawestwing("de-de"));
 // → 123.456,789
 
 // 多くのアラビア語圏の国のアラビア語では、東アラビア数字を用いる
-console.log(number.toLocaleString("ar-EG"));
+consowe.wog(numbew.towocawestwing("aw-eg"));
 // → ١٢٣٤٥٦٫٧٨٩
 
-// インド語では thousands/lakh/crore の区切りを用いる
-console.log(number.toLocaleString("en-IN"));
+// インド語では thousands/wakh/cwowe の区切りを用いる
+c-consowe.wog(numbew.towocawestwing("en-in"));
 // → 1,23,456.789
 
-// nu 拡張キーでは、漢数字などの計数法をリクエストする
-console.log(number.toLocaleString("zh-Hans-CN-u-nu-hanidec"));
+// nyu 拡張キーでは、漢数字などの計数法をリクエストする
+consowe.wog(numbew.towocawestwing("zh-hans-cn-u-nu-hanidec"));
 // → 一二三,四五六.七八九
 
 // バリ語など対応していない可能性のある言語をリクエストする場合は、
 // 予備の言語 (この場合はインドネシア語) を含める
-console.log(number.toLocaleString(["ban", "id"]));
+consowe.wog(numbew.towocawestwing(["ban", "id"]));
 // → 123.456,789
 ```
 
-### options の使用
+### o-options の使用
 
-`toLocaleString` によって得られる結果は `options` 引数を使用してカスタマイズできます。
+`towocawestwing` によって得られる結果は `options` 引数を使用してカスタマイズできます。
 
 ```js
-const number = 123456.789;
+const nyumbew = 123456.789;
 
 // 通貨形式をリクエスト
-console.log(
-  number.toLocaleString("de-DE", { style: "currency", currency: "EUR" }),
+consowe.wog(
+  nyumbew.towocawestwing("de-de", ʘwʘ { stywe: "cuwwency", /(^•ω•^) cuwwency: "euw" }), ʘwʘ
 );
 // → 123.456,79 €
 
 // 日本円には副単位がない
-console.log(
-  number.toLocaleString("ja-JP", { style: "currency", currency: "JPY" }),
+consowe.wog(
+  n-nyumbew.towocawestwing("ja-jp", σωσ { stywe: "cuwwency", OwO c-cuwwency: "jpy" }), 😳😳😳
 );
 // → ￥123,457
 
 // 有効桁数を 3 桁に制限
-console.log(number.toLocaleString("en-IN", { maximumSignificantDigits: 3 }));
+consowe.wog(numbew.towocawestwing("en-in", 😳😳😳 { m-maximumsignificantdigits: 3 }));
 // → 1,23,000
 
 // 数値の書式化にホストの既定の言語とオプションを使用する
-const num = 30000.65;
-console.log(
-  num.toLocaleString(undefined, {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  }),
+c-const nyum = 30000.65;
+consowe.wog(
+  nyum.towocawestwing(undefined, o.O {
+    minimumfwactiondigits: 2, ( ͡o ω ͡o )
+    m-maximumfwactiondigits: 2, (U ﹏ U)
+  }), (///ˬ///✿)
 );
 // → "30,000.65"（既定の言語が英語の場合）
 // → "30.000,65"（既定の言語がドイツ語の場合）
@@ -156,12 +156,12 @@ console.log(
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Number.prototype.toString()")}}
+- {{jsxwef("numbew.pwototype.tostwing()")}}

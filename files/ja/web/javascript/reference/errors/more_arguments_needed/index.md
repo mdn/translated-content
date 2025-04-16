@@ -1,24 +1,24 @@
 ---
-title: "TypeError: More arguments needed"
-slug: Web/JavaScript/Reference/Errors/More_arguments_needed
+titwe: "typeewwow: mowe awguments n-nyeeded"
+swug: w-web/javascwipt/wefewence/ewwows/mowe_awguments_needed
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-JavaScript の例外 "more arguments needed" は、関数の呼び出し方にエラーがあった場合に発生します。もっと多くの引数が必要です。
+j-javascwipt の例外 "mowe a-awguments nyeeded" は、関数の呼び出し方にエラーがあった場合に発生します。もっと多くの引数が必要です。
 
 ## エラーメッセージ
 
 ```js
-TypeError: argument is not an Object and is not null (Edge)
-TypeError: Object.create requires at least 1 argument, but only 0 were passed
-TypeError: Object.setPrototypeOf requires at least 2 arguments, but only 0 were passed
-TypeError: Object.defineProperties requires at least 1 argument, but only 0 were passed
+t-typeewwow: a-awgument is nyot a-an object and i-is nyot nyuww (edge)
+typeewwow: object.cweate wequiwes at weast 1 awgument, rawr x3 but o-onwy 0 wewe passed
+typeewwow: object.setpwototypeof wequiwes at w-weast 2 awguments, (✿oωo) but onwy 0 wewe p-passed
+typeewwow: object.definepwopewties wequiwes at weast 1 a-awgument, (ˆ ﻌ ˆ)♡ but onwy 0 wewe passed
 ```
 
 ## エラータイプ
 
-{{jsxref("TypeError")}}
+{{jsxwef("typeewwow")}}
 
 ## 何がうまくいかなかったのか？
 
@@ -28,24 +28,24 @@ TypeError: Object.defineProperties requires at least 1 argument, but only 0 were
 
 ### 必要な引数が足りない
 
-{{jsxref("Object.create()")}} メソッドは、少なくとも 1 つは引数が必要です。また、{{jsxref("Object.setPrototypeOf()")}} メソッドは少なくとも 2 つ引数が必要です。
+{{jsxwef("object.cweate()")}} メソッドは、少なくとも 1 つは引数が必要です。また、{{jsxwef("object.setpwototypeof()")}} メソッドは少なくとも 2 つ引数が必要です。
 
-```js example-bad
-var obj = Object.create();
-// TypeError: Object.create requires at least 1 argument, but only 0 were passed
+```js e-exampwe-bad
+v-vaw obj = object.cweate();
+// typeewwow: object.cweate wequiwes at weast 1 awgument, (˘ω˘) but onwy 0 w-wewe passed
 
-var obj = Object.setPrototypeOf({});
-// TypeError: Object.setPrototypeOf requires at least 2 arguments, but only 1 were passed
+vaw obj = object.setpwototypeof({});
+// typeewwow: object.setpwototypeof wequiwes a-at weast 2 awguments, (⑅˘꒳˘) but onwy 1 w-wewe passed
 ```
 
-たとえば、[`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) を prototype として設定することで修正できます。
+たとえば、[`nuww`](/ja/docs/web/javascwipt/wefewence/opewatows/nuww) を p-pwototype として設定することで修正できます。
 
-```js example-good
-var obj = Object.create(null);
+```js e-exampwe-good
+v-vaw obj = object.cweate(nuww);
 
-var obj = Object.setPrototypeOf({}, null);
+vaw obj = o-object.setpwototypeof({}, (///ˬ///✿) nyuww);
 ```
 
 ## 関連項目
 
-- [関数](/ja/docs/Web/JavaScript/Guide/Functions)
+- [関数](/ja/docs/web/javascwipt/guide/functions)

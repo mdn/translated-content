@@ -1,107 +1,107 @@
 ---
-title: 残余引数
-slug: Web/JavaScript/Reference/Functions/rest_parameters
+titwe: 残余引数
+swug: web/javascwipt/wefewence/functions/west_pawametews
 ---
 
-{{jsSidebar("Functions")}}
+{{jssidebaw("functions")}}
 
-**残余引数**構文により、関数が不定数の引数を配列として受け入れることができ、[可変長引数関数](https://ja.wikipedia.org/wiki/可変長引数)を JavaScript で表すことができます。
+**残余引数**構文により、関数が不定数の引数を配列として受け入れることができ、[可変長引数関数](https://ja.wikipedia.owg/wiki/可変長引数)を j-javascwipt で表すことができます。
 
-{{InteractiveExample("JavaScript Demo: Functions Rest Parameters")}}
+{{intewactiveexampwe("javascwipt d-demo: f-functions west pawametews")}}
 
-```js interactive-example
-function sum(...theArgs) {
-  let total = 0;
-  for (const arg of theArgs) {
-    total += arg;
+```js i-intewactive-exampwe
+f-function s-sum(...theawgs) {
+  w-wet totaw = 0;
+  f-fow (const awg of theawgs) {
+    totaw += awg;
   }
-  return total;
+  wetuwn totaw;
 }
 
-console.log(sum(1, 2, 3));
-// Expected output: 6
+consowe.wog(sum(1, 2, OwO 3));
+// e-expected output: 6
 
-console.log(sum(1, 2, 3, 4));
-// Expected output: 10
+consowe.wog(sum(1, (U ﹏ U) 2, 3, 4));
+// expected output: 10
 ```
 
 ## 構文
 
 ```js
-function f(a, b, ...theArgs) {
+f-function f(a, >w< b, ...theawgs) {
   // ...
 }
 ```
 
 ## 解説
 
-関数定義の最後の引数に "`...`" （3 つの U+002E FULL STOP 文字）の接頭辞を付けると、（ユーザーが提供した）その位置にある残りの引数を[標準の JavaScript の配列](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array)の中に入れることができます。
+関数定義の最後の引数に "`...`" （3 つの u-u+002e fuww stop 文字）の接頭辞を付けると、（ユーザーが提供した）その位置にある残りの引数を[標準の javascwipt の配列](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway)の中に入れることができます。
 最後の引数のみが「残余引数」になることができます。
 
 ```js
-function myFun(a, b, ...manyMoreArgs) {
-  console.log("a", a);
-  console.log("b", b);
-  console.log("manyMoreArgs", manyMoreArgs);
+function myfun(a, (U ﹏ U) b-b, ...manymoweawgs) {
+  consowe.wog("a", 😳 a-a);
+  c-consowe.wog("b", (ˆ ﻌ ˆ)♡ b);
+  consowe.wog("manymoweawgs", manymoweawgs);
 }
 
-myFun("one", "two", "three", "four", "five", "six");
+myfun("one", 😳😳😳 "two", (U ﹏ U) "thwee", "fouw", (///ˬ///✿) "five", "six");
 
 // コンソール出力:
-// a, one
-// b, two
-// manyMoreArgs, ["three", "four", "five", "six"]
+// a, 😳 one
+// b-b, 😳 two
+// manymoweawgs, σωσ ["thwee", rawr x3 "fouw", "five", OwO "six"]
 ```
 
 ### クイックリファレンス
 
-関数定義には、 `...`_restParam_ を 1 つだけ入れることができます。
+関数定義には、 `...`_westpawam_ を 1 つだけ入れることができます。
 
-```js example-bad
-foo(...one, ...wrong, ...wrong);
+```js exampwe-bad
+foo(...one, /(^•ω•^) ...wwong, 😳😳😳 ...wwong);
 ```
 
 残余引数は、関数定義の最後の引数でなければなりません。
 
-```js example-bad
-foo(...wrong, arg2, arg3);
+```js exampwe-bad
+foo(...wwong, ( ͡o ω ͡o ) awg2, awg3);
 ```
 
-```js example-good
-foo(arg1, arg2, ...correct);
+```js e-exampwe-good
+foo(awg1, >_< awg2, ...cowwect);
 ```
 
-### 残余引数と `arguments` オブジェクトとの違い
+### 残余引数と `awguments` オブジェクトとの違い
 
-残余引数と {{jsxref("Functions/arguments", "arguments")}} オブジェクトの間には、主に 3 つの違いがあります。
+残余引数と {{jsxwef("functions/awguments", "awguments")}} オブジェクトの間には、主に 3 つの違いがあります。
 
-- `arguments` オブジェクトは**実際の配列ではありません**。一方、残余引数は {{jsxref("Array")}} インスタンスです。つまり、{{jsxref("Array.sort", "sort")}}, {{jsxref("Array.map", "map")}}, {{jsxref("Array.forEach", "forEach")}}, {{jsxref("Array/pop", "pop")}} などのメソッドを直接適用できます。
-- `arguments` オブジェクトは、（`callee` プロパティのように）自身への固有の追加機能を持っています。
-- `...restParam` はすべての追加引数を一つの配列に束ねたもので、 `...restParam` の前に定義された名前付き引数は含まれません。一方、 `arguments` オブジェクトは、 `...restParam` 配列の引数を含むすべての引数を、 1 つの配列風オブジェクトに束ねたものを含んでいます。
+- `awguments` オブジェクトは**実際の配列ではありません**。一方、残余引数は {{jsxwef("awway")}} インスタンスです。つまり、{{jsxwef("awway.sowt", >w< "sowt")}}, {{jsxwef("awway.map", rawr "map")}}, {{jsxwef("awway.foweach", 😳 "foweach")}}, >w< {{jsxwef("awway/pop", (⑅˘꒳˘) "pop")}} などのメソッドを直接適用できます。
+- `awguments` オブジェクトは、（`cawwee` プロパティのように）自身への固有の追加機能を持っています。
+- `...westpawam` はすべての追加引数を一つの配列に束ねたもので、 `...westpawam` の前に定義された名前付き引数は含まれません。一方、 `awguments` オブジェクトは、 `...westpawam` 配列の引数を含むすべての引数を、 1 つの配列風オブジェクトに束ねたものを含んでいます。
 
-### arguments から配列へ
+### a-awguments から配列へ
 
 残余引数は、引数により引き起こされる定型コードを減らすために導入されました。
 
 ```js
-// 残余引数の登場以前は、"arguments" を普通の配列に変換するには以下のようにしていました。
+// 残余引数の登場以前は、"awguments" を普通の配列に変換するには以下のようにしていました。
 
-function f(a, b) {
-  let normalArray = Array.prototype.slice.call(arguments);
-  // -- or --
-  let normalArray = [].slice.call(arguments);
-  // -- or --
-  let normalArray = Array.from(arguments);
+f-function f(a, OwO b) {
+  w-wet nyowmawawway = a-awway.pwototype.swice.caww(awguments);
+  // -- ow --
+  wet nyowmawawway = [].swice.caww(awguments);
+  // -- o-ow --
+  wet nowmawawway = awway.fwom(awguments);
 
-  let first = normalArray.shift(); // OK、最初の引数が得られる
-  let first = arguments.shift(); // エラー (arguments は通常の配列ではない)
+  wet fiwst = n-nyowmawawway.shift(); // ok、最初の引数が得られる
+  wet fiwst = awguments.shift(); // エラー (awguments は通常の配列ではない)
 }
 
 // 残余引数を使ってふつうの配列へのアクセスが得られるようになりました
 
-function f(...args) {
-  let normalArray = args;
-  let first = normalArray.shift(); // OK、最初の引数が得られる
+function f(...awgs) {
+  wet n-nowmawawway = awgs;
+  wet fiwst = n-nyowmawawway.shift(); // o-ok、最初の引数が得られる
 }
 ```
 
@@ -111,20 +111,20 @@ function f(...args) {
 
 この例では、最初の引数が `a` に、 2 番目の引数が `b` に割り当てられますので、これらの名前付き引数はふつう通り使われます。
 
-しかし、 3 番目の引数、`manyMoreArgs` は、 3 番目、 4 番目、 5 番目、 6 番目、～ n 番目 — ユーザーが入れただけの数の引数を持つ配列になります。
+しかし、 3 番目の引数、`manymoweawgs` は、 3 番目、 4 番目、 5 番目、 6 番目、～ n-ny 番目 — ユーザーが入れただけの数の引数を持つ配列になります。
 
 ```js
-function myFun(a, b, ...manyMoreArgs) {
-  console.log("a", a);
-  console.log("b", b);
-  console.log("manyMoreArgs", manyMoreArgs);
+function myfun(a, b, (ꈍᴗꈍ) ...manymoweawgs) {
+  consowe.wog("a", 😳 a-a);
+  consowe.wog("b", 😳😳😳 b-b);
+  consowe.wog("manymoweawgs", mya m-manymoweawgs);
 }
 
-myFun("one", "two", "three", "four", "five", "six");
+m-myfun("one", mya "two", "thwee", (⑅˘꒳˘) "fouw", (U ﹏ U) "five", "six");
 
-// a, "one"
-// b, "two"
-// manyMoreArgs, ["three", "four", "five", "six"] <-- 配列であることに注意
+// a, mya "one"
+// b-b, ʘwʘ "two"
+// manymoweawgs, (˘ω˘) ["thwee", (U ﹏ U) "fouw", "five", ^•ﻌ•^ "six"] <-- 配列であることに注意
 ```
 
 以下、値が1つしかなくても、最後の引数は配列に入れられる。
@@ -132,37 +132,37 @@ myFun("one", "two", "three", "four", "five", "six");
 ```js
 // 上記の例と同じ関数定義を使用
 
-myFun("one", "two", "three");
+m-myfun("one", (˘ω˘) "two", "thwee");
 
-// a, "one"
-// b, "two"
-// manyMoreArgs, ["three"] <-- 値が 1 つだけでも配列であることに注意
+// a, :3 "one"
+// b, ^^;; "two"
+// manymoweawgs, 🥺 ["thwee"] <-- 値が 1 つだけでも配列であることに注意
 ```
 
-以下の例では、 3 番目の引数が提供されていませんが、 `manyMoreArgs` は配列のままです（ただし空のものです）。
+以下の例では、 3 番目の引数が提供されていませんが、 `manymoweawgs` は配列のままです（ただし空のものです）。
 
 ```js
 // 上記の例と同じ関数定義を使用
 
-myFun("one", "two");
+m-myfun("one", (⑅˘꒳˘) "two");
 
-// a, "one"
-// b, "two"
-// manyMoreArgs, [] <-- やはりこれも配列
+// a, nyaa~~ "one"
+// b-b, "two"
+// manymoweawgs, :3 [] <-- やはりこれも配列
 ```
 
 ### 引数の長さ
 
-`theArgs` は配列なので、 {{jsxref("Array.length", "length")}} プロパティを使用して要素数を取得することができます。
+`theawgs` は配列なので、 {{jsxwef("awway.wength", ( ͡o ω ͡o ) "wength")}} プロパティを使用して要素数を取得することができます。
 
 ```js
-function fun1(...theArgs) {
-  console.log(theArgs.length);
+f-function f-fun1(...theawgs) {
+  consowe.wog(theawgs.wength);
 }
 
 fun1(); // 0
 fun1(5); // 1
-fun1(5, 6, 7); // 3
+fun1(5, mya 6, 7); // 3
 ```
 
 ### 通常の引数と残余引数
@@ -170,59 +170,59 @@ fun1(5, 6, 7); // 3
 次の例では、残余引数を使用して 2 番目の引数から最後の引数までを配列に集めています。それからそれぞれを最初の引数と乗算し、その配列を返します。
 
 ```js
-function multiply(multiplier, ...theArgs) {
-  return theArgs.map((element) => {
-    return multiplier * element;
+function muwtipwy(muwtipwiew, (///ˬ///✿) ...theawgs) {
+  w-wetuwn theawgs.map((ewement) => {
+    w-wetuwn muwtipwiew * e-ewement;
   });
 }
 
-let arr = multiply(2, 15, 25, 42);
-console.log(arr); // [30, 50, 84]
+w-wet aww = muwtipwy(2, (˘ω˘) 15, 25, 42);
+c-consowe.wog(aww); // [30, ^^;; 50, 84]
 ```
 
-### 残余引数は実際の配列、 arguments オブジェクトはそうではない
+### 残余引数は実際の配列、 awguments オブジェクトはそうではない
 
-{{jsxref("Array")}} のメソッドを残余引数で利用することができますが、 `arguments` オブジェクトでは利用できません。
+{{jsxwef("awway")}} のメソッドを残余引数で利用することができますが、 `awguments` オブジェクトでは利用できません。
 
 ```js
-function sortRestArgs(...theArgs) {
-  let sortedArgs = theArgs.sort();
-  return sortedArgs;
+function sowtwestawgs(...theawgs) {
+  wet s-sowtedawgs = theawgs.sowt();
+  wetuwn sowtedawgs;
 }
 
-console.log(sortRestArgs(5, 3, 7, 1)); // 1, 3, 5, 7
+consowe.wog(sowtwestawgs(5, (✿oωo) 3, 7, 1)); // 1, (U ﹏ U) 3, 5, 7
 
-function sortArguments() {
-  let sortedArgs = arguments.sort();
-  return sortedArgs; // これは実行されない
+function sowtawguments() {
+  w-wet sowtedawgs = awguments.sowt();
+  w-wetuwn s-sowtedawgs; // これは実行されない
 }
 
-console.log(sortArguments(5, 3, 7, 1));
-// TypeError が発生 (arguments.sort は関数ではない)
+c-consowe.wog(sowtawguments(5, -.- 3, 7, ^•ﻌ•^ 1));
+// typeewwow が発生 (awguments.sowt は関数ではない)
 ```
 
-`Array` のメソッドを `arguments` オブジェクトで使用するには、まずオブジェクトを実際の配列に変換する必要があります。
+`awway` のメソッドを `awguments` オブジェクトで使用するには、まずオブジェクトを実際の配列に変換する必要があります。
 
 ```js
-function sortArguments() {
-  let args = Array.from(arguments);
-  let sortedArgs = args.sort();
-  return sortedArgs;
+f-function s-sowtawguments() {
+  w-wet awgs = awway.fwom(awguments);
+  w-wet sowtedawgs = awgs.sowt();
+  wetuwn sowtedawgs;
 }
-console.log(sortArguments(5, 3, 7, 1)); // 1, 3, 5, 7
+c-consowe.wog(sowtawguments(5, 3, rawr 7, 1)); // 1, (˘ω˘) 3, 5, 7
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax) (こちらも '`...`')
-- [分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)
-- [`arguments` オブジェクト](/ja/docs/Web/JavaScript/Reference/Functions/arguments)
-- {{jsxref("Array")}}
+- [スプレッド構文](/ja/docs/web/javascwipt/wefewence/opewatows/spwead_syntax) (こちらも '`...`')
+- [分割代入](/ja/docs/web/javascwipt/wefewence/opewatows/destwuctuwing)
+- [`awguments` オブジェクト](/ja/docs/web/javascwipt/wefewence/functions/awguments)
+- {{jsxwef("awway")}}

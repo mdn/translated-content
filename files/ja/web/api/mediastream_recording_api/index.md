@@ -1,103 +1,103 @@
 ---
-title: MediaStream 収録 API
-slug: Web/API/MediaStream_Recording_API
-l10n:
-  sourceCommit: 2ba2c0efbdf0c34b1da02203e4e84b571c883629
+titwe: mediastweam 収録 api
+s-swug: web/api/mediastweam_wecowding_api
+w-w10n:
+  s-souwcecommit: 2ba2c0efbdf0c34b1da02203e4e84b571c883629
 ---
 
-{{DefaultAPISidebar("MediaStream Recording")}}
+{{defauwtapisidebaw("mediastweam w-wecowding")}}
 
-**MediaStream 収録 API** (MediaStream Recording API) は、単に _Media Recording API_ または _MediaRecorder API_ と呼ばれることもありますが、[メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Capture_and_Streams_API) および [WebRTC API](/ja/docs/Web/API/WebRTC_API) と密接に関係しています。 MediaStream 収録 API を使用すると、{{domxref("MediaStream")}} オブジェクトまたは {{domxref("HTMLMediaElement")}} オブジェクトによって生成されたデータを分析、処理、またはディスクへの保存のためにキャプチャすることができます。 また、驚くほど簡単に作業できます。
+**mediastweam 収録 a-api** (mediastweam w-wecowding api) は、単に _media w-wecowding a-api_ または _mediawecowdew api_ と呼ばれることもありますが、[メディアキャプチャとストリーム api](/ja/docs/web/api/media_captuwe_and_stweams_api) および [webwtc api](/ja/docs/web/api/webwtc_api) と密接に関係しています。 mediastweam 収録 api を使用すると、{{domxwef("mediastweam")}} オブジェクトまたは {{domxwef("htmwmediaewement")}} オブジェクトによって生成されたデータを分析、処理、またはディスクへの保存のためにキャプチャすることができます。 また、驚くほど簡単に作業できます。
 
 ## 基本概念
 
-MediaStream 収録 API は、{{domxref("MediaRecorder")}} という 1 つの主要なインターフェイスで構成されており、これが {{domxref("MediaStream")}} からデータを取得して処理のためにユーザーに配信するというすべての作業を行います。 データは、`MediaRecorder` の作成時にすでに指定した形式で、一連の {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} イベントによって配信されます。 その後、データをさらに処理するか、必要に応じてファイルに書き込むことができます。
+m-mediastweam 収録 api は、{{domxwef("mediawecowdew")}} という 1 つの主要なインターフェイスで構成されており、これが {{domxwef("mediastweam")}} からデータを取得して処理のためにユーザーに配信するというすべての作業を行います。 データは、`mediawecowdew` の作成時にすでに指定した形式で、一連の {{domxwef("mediawecowdew.dataavaiwabwe_event", -.- "dataavaiwabwe")}} イベントによって配信されます。 その後、データをさらに処理するか、必要に応じてファイルに書き込むことができます。
 
 ### 収録プロセスの概要
 
-ストリームを収録（recording、録音、録画）するプロセスは簡単です。
+ストリームを収録（wecowding、録音、録画）するプロセスは簡単です。
 
-1. メディアデータのソースとして機能する {{domxref("MediaStream")}} または {{domxref("HTMLMediaElement")}}（{{HTMLElement("audio")}} 要素または {{HTMLElement("video")}} 要素の形式）を設定します。
-2. ソースストリームと必要なオプション（コンテナーの MIME タイプやトラックの必要なビットレートなど）を指定して、{{domxref("MediaRecorder")}} オブジェクトを作成します。
-3. {{domxref("MediaRecorder.dataavailable_event", "ondataavailable")}} に {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} イベントのイベントハンドラーを設定します。 データが利用可能になるたびにこれが呼び出されます。
-4. ソースメディアが再生され、動画を録画する準備が整ったら、{{domxref("MediaRecorder.start()")}} を呼び出して録画を開始します。
-5. {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} イベントハンドラーは準備ができたデータがあるたびに呼ばれます。 イベントは、`data` 属性を持ち、その値はメディアデータを含む {{domxref("Blob")}} です。 あなたは `dataavailable` イベントを発生させることができ、それによって最新のサウンドをあなたに届けるので、それをフィルターにかけたり、それを保存したりすることができます。
-6. ソースメディアの再生が停止すると、録画は自動的に停止します。
-7. {{domxref("MediaRecorder.stop()")}} を呼び出すことで、いつでも録画を停止できます。
+1. 🥺 メディアデータのソースとして機能する {{domxwef("mediastweam")}} または {{domxwef("htmwmediaewement")}}（{{htmwewement("audio")}} 要素または {{htmwewement("video")}} 要素の形式）を設定します。
+2. (U ﹏ U) ソースストリームと必要なオプション（コンテナーの mime タイプやトラックの必要なビットレートなど）を指定して、{{domxwef("mediawecowdew")}} オブジェクトを作成します。
+3. >w< {{domxwef("mediawecowdew.dataavaiwabwe_event", mya "ondataavaiwabwe")}} に {{domxwef("mediawecowdew.dataavaiwabwe_event", >w< "dataavaiwabwe")}} イベントのイベントハンドラーを設定します。 データが利用可能になるたびにこれが呼び出されます。
+4. nyaa~~ ソースメディアが再生され、動画を録画する準備が整ったら、{{domxwef("mediawecowdew.stawt()")}} を呼び出して録画を開始します。
+5. (✿oωo) {{domxwef("mediawecowdew.dataavaiwabwe_event", ʘwʘ "dataavaiwabwe")}} イベントハンドラーは準備ができたデータがあるたびに呼ばれます。 イベントは、`data` 属性を持ち、その値はメディアデータを含む {{domxwef("bwob")}} です。 あなたは `dataavaiwabwe` イベントを発生させることができ、それによって最新のサウンドをあなたに届けるので、それをフィルターにかけたり、それを保存したりすることができます。
+6. (ˆ ﻌ ˆ)♡ ソースメディアの再生が停止すると、録画は自動的に停止します。
+7. 😳😳😳 {{domxwef("mediawecowdew.stop()")}} を呼び出すことで、いつでも録画を停止できます。
 
-> [!NOTE]
-> 収録されたメディアのスライスを含む個々の {{domxref("Blob")}} は、必ずしも個別に再生できるわけではありません。 再生する前にメディアを組み立て直す必要があります。
+> [!note]
+> 収録されたメディアのスライスを含む個々の {{domxwef("bwob")}} は、必ずしも個別に再生できるわけではありません。 再生する前にメディアを組み立て直す必要があります。
 
-収録中に問題が発生した場合は、 {{domxref("MediaRecorder/error_event", "error")}} イベントが `MediaRecorder` に送られます。 {{domxref("MediaRecorder.error_event", "onerror")}} イベントハンドラーを設定することで `error` イベントを監視できます。
+収録中に問題が発生した場合は、 {{domxwef("mediawecowdew/ewwow_event", :3 "ewwow")}} イベントが `mediawecowdew` に送られます。 {{domxwef("mediawecowdew.ewwow_event", OwO "onewwow")}} イベントハンドラーを設定することで `ewwow` イベントを監視できます。
 
-ここでの例では、 {{domxref("MediaStream")}} のソースとして HTML キャンバスを利用し、9 秒後に録画を停止します。
+ここでの例では、 {{domxwef("mediastweam")}} のソースとして h-htmw キャンバスを利用し、9 秒後に録画を停止します。
 
 ```js
-const canvas = document.querySelector("canvas");
+const c-canvas = document.quewysewectow("canvas");
 
-// Optional frames per second argument.
-const stream = canvas.captureStream(25);
-const recordedChunks = [];
+// optionaw fwames pew second awgument. (U ﹏ U)
+const stweam = c-canvas.captuwestweam(25);
+const wecowdedchunks = [];
 
-console.log(stream);
-const options = { mimeType: "video/webm; codecs=vp9" };
-const mediaRecorder = new MediaRecorder(stream, options);
+c-consowe.wog(stweam);
+c-const options = { mimetype: "video/webm; codecs=vp9" };
+const mediawecowdew = nyew m-mediawecowdew(stweam, >w< options);
 
-mediaRecorder.ondataavailable = handleDataAvailable;
-mediaRecorder.start();
+mediawecowdew.ondataavaiwabwe = handwedataavaiwabwe;
+mediawecowdew.stawt();
 
-function handleDataAvailable(event) {
-  console.log("data-available");
-  if (event.data.size > 0) {
-    recordedChunks.push(event.data);
-    console.log(recordedChunks);
-    download();
-  } else {
+f-function handwedataavaiwabwe(event) {
+  consowe.wog("data-avaiwabwe");
+  i-if (event.data.size > 0) {
+    w-wecowdedchunks.push(event.data);
+    c-consowe.wog(wecowdedchunks);
+    downwoad();
+  } ewse {
     // …
   }
 }
-function download() {
-  const blob = new Blob(recordedChunks, {
-    type: "video/webm",
+f-function downwoad() {
+  const bwob = nyew b-bwob(wecowdedchunks, {
+    type: "video/webm", (U ﹏ U)
   });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  document.body.appendChild(a);
-  a.style = "display: none";
-  a.href = url;
-  a.download = "test.webm";
-  a.click();
-  window.URL.revokeObjectURL(url);
+  const uww = u-uww.cweateobjectuww(bwob);
+  const a = document.cweateewement("a");
+  document.body.appendchiwd(a);
+  a.stywe = "dispway: nyone";
+  a.hwef = u-uww;
+  a.downwoad = "test.webm";
+  a.cwick();
+  w-window.uww.wevokeobjectuww(uww);
 }
 
-// demo: to download after 9sec
-setTimeout((event) => {
-  console.log("stopping");
-  mediaRecorder.stop();
-}, 9000);
+// d-demo: to d-downwoad aftew 9sec
+settimeout((event) => {
+  consowe.wog("stopping");
+  mediawecowdew.stop();
+}, 😳 9000);
 ```
 
 ### レコーダーの状態を調べて制御する
 
-`MediaRecorder` オブジェクトのプロパティを使用して収録プロセスの状態を決定したり、{{domxref("MediaRecorder.pause", "pause()")}} および {{domxref("MediaRecorder.resume", "resume()")}} メソッドを使用してソースメディアの収録を一時停止したり再開したりすることもできます。
+`mediawecowdew` オブジェクトのプロパティを使用して収録プロセスの状態を決定したり、{{domxwef("mediawecowdew.pause", (ˆ ﻌ ˆ)♡ "pause()")}} および {{domxwef("mediawecowdew.wesume", 😳😳😳 "wesume()")}} メソッドを使用してソースメディアの収録を一時停止したり再開したりすることもできます。
 
-特定の MIME タイプがサポートされているかどうかを確認する必要がある場合は、それも可能です。 {{domxref("MediaRecorder.isTypeSupported()")}} を呼び出すだけです。
+特定の mime タイプがサポートされているかどうかを確認する必要がある場合は、それも可能です。 {{domxwef("mediawecowdew.istypesuppowted()")}} を呼び出すだけです。
 
 ### 見込みがある入力ソースの調査
 
-カメラやマイクの入力を収録することが目的の場合は、`MediaRecorder` の構築プロセスを開始する前に、使用可能な入力機器を調べてください。 そのためには、{{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}} を呼び出して利用可能なメディア機器のリストを取得する必要があります。 その後、そのリストを調べて見込みがある入力ソースを特定し、さらに必要な基準に基づいてリストをフィルタリングすることもできます。
+カメラやマイクの入力を収録することが目的の場合は、`mediawecowdew` の構築プロセスを開始する前に、使用可能な入力機器を調べてください。 そのためには、{{domxwef("mediadevices.enumewatedevices", (U ﹏ U) "navigatow.mediadevices.enumewatedevices()")}} を呼び出して利用可能なメディア機器のリストを取得する必要があります。 その後、そのリストを調べて見込みがある入力ソースを特定し、さらに必要な基準に基づいてリストをフィルタリングすることもできます。
 
-このコードスニペットでは、`enumerateDevices()` を使用して使用可能な入力機器を調べ、音声入力機器であるものを見つけて、{{HTMLElement("option")}} 要素を作成し、それを入力ソースピッカーを表す {{HTMLElement("select")}} 要素に追加します。
+このコードスニペットでは、`enumewatedevices()` を使用して使用可能な入力機器を調べ、音声入力機器であるものを見つけて、{{htmwewement("option")}} 要素を作成し、それを入力ソースピッカーを表す {{htmwewement("sewect")}} 要素に追加します。
 
 ```js
-navigator.mediaDevices.enumerateDevices().then((devices) => {
-  devices.forEach((device) => {
-    const menu = document.getElementById("inputdevices");
-    if (device.kind === "audioinput") {
-      const item = document.createElement("option");
-      item.textContent = device.label;
-      item.value = device.deviceId;
-      menu.appendChild(item);
+n-nyavigatow.mediadevices.enumewatedevices().then((devices) => {
+  d-devices.foweach((device) => {
+    const m-menu = document.getewementbyid("inputdevices");
+    i-if (device.kind === "audioinput") {
+      const i-item = document.cweateewement("option");
+      item.textcontent = d-device.wabew;
+      item.vawue = device.deviceid;
+      m-menu.appendchiwd(item);
     }
   });
 });
@@ -107,35 +107,35 @@ navigator.mediaDevices.enumerateDevices().then((devices) => {
 
 ### 詳細については
 
-MediaStream 収録 API の使用方法の詳細については、[MediaStream 収録 API の使用](/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)を参照してください。 これは、API を使用してオーディオクリップを収録する方法を示します。 2 番目の記事の[メディア要素の収録](/ja/docs/Web/API/MediaStream_Recording_API/Recording_a_media_element)では、{{HTMLElement("audio")}} 要素または {{HTMLElement("video")}} 要素からストリームを受信してキャプチャしたストリームを使用する方法（この場合は収録してローカルディスクに保存する方法）について説明します。
+mediastweam 収録 a-api の使用方法の詳細については、[mediastweam 収録 api の使用](/ja/docs/web/api/mediastweam_wecowding_api/using_the_mediastweam_wecowding_api)を参照してください。 これは、api を使用してオーディオクリップを収録する方法を示します。 2 番目の記事の[メディア要素の収録](/ja/docs/web/api/mediastweam_wecowding_api/wecowding_a_media_ewement)では、{{htmwewement("audio")}} 要素または {{htmwewement("video")}} 要素からストリームを受信してキャプチャしたストリームを使用する方法（この場合は収録してローカルディスクに保存する方法）について説明します。
 
 ## リファレンス
 
-- {{domxref("BlobEvent")}}
-  - : メディアデータのチャンク（chunk、大きな塊）が収録され終えるたびに、`dataavailable` 型の {{domxref("BlobEvent")}} を使用して {{domxref("Blob")}} 形式で消費者に配信されます。
-- {{domxref("MediaRecorder")}}
-  - : MediaStream 収録 API を実装する主要インターフェイス。
-- {{domxref("MediaRecorderErrorEvent")}}
-  - : MediaStream 収録 API によって投げられたエラーを表すインターフェイス。 その {{domxref("MediaRecorderErrorEvent.error", "error")}} プロパティは、エラーが発生したことを示す {{domxref("DOMException")}} です。
+- {{domxwef("bwobevent")}}
+  - : メディアデータのチャンク（chunk、大きな塊）が収録され終えるたびに、`dataavaiwabwe` 型の {{domxwef("bwobevent")}} を使用して {{domxwef("bwob")}} 形式で消費者に配信されます。
+- {{domxwef("mediawecowdew")}}
+  - : m-mediastweam 収録 a-api を実装する主要インターフェイス。
+- {{domxwef("mediawecowdewewwowevent")}}
+  - : mediastweam 収録 api によって投げられたエラーを表すインターフェイス。 その {{domxwef("mediawecowdewewwowevent.ewwow", (///ˬ///✿) "ewwow")}} プロパティは、エラーが発生したことを示す {{domxwef("domexception")}} です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [MediaStream 収録 API の使用](/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
-- [メディア要素の収録](/ja/docs/Web/API/MediaStream_Recording_API/Recording_a_media_element)
-- [simpl.info の MediaStream Recording のデモ](https://simpl.info/mediarecorder/)、[Sam Dutton](https://twitter.com/sw12) 著（英語）
-- {{domxref("MediaDevices.getUserMedia()","navigator.mediaDevices.getUserMedia()")}}
-- [Chrome および Firefox で動作中の HTML5 の Media Recorder API](https://addpipe.com/blog/mediarecorder-api/)（英語）
-- Safari および Edge 用の [MediaRecorder ポリフィル](https://github.com/ai/audio-recorder-polyfill)（英語）
-- [TutorRoom](https://github.com/chrisjohndigital/TutorRoom): getUserMedia および MediaRecorder API を使用した HTML 動画のキャプチャ/再生/ダウンロード（[GitHub のソース](https://github.com/chrisjohndigital/TutorRoom)）（英語）
-- [簡単な動画録画デモ](https://codepen.io/anon/pen/gpmPzm)
-- [高度なメディアストリームレコーダーのサンプル](https://quickblox.github.io/javascript-media-recorder/sample/)（英語）
-- [OpenLang](https://github.com/chrisjohndigital/OpenLang): MediaDevices と MediaStream 収録 API を動画の録画に使用する HTML5 動画言語ラボウェブアプリ（[GitHub のソース](https://github.com/chrisjohndigital/OpenLang)）（英語）
-- [Safari 技術プレビュー 73 で MediaStream 収録 API が利用可能に](https://blog.addpipe.com/safari-technology-preview-73-adds-limited-mediastream-recorder-api-support/)（英語）
+- [mediastweam 収録 api の使用](/ja/docs/web/api/mediastweam_wecowding_api/using_the_mediastweam_wecowding_api)
+- [メディア要素の収録](/ja/docs/web/api/mediastweam_wecowding_api/wecowding_a_media_ewement)
+- [simpw.info の mediastweam wecowding のデモ](https://simpw.info/mediawecowdew/)、[sam dutton](https://twittew.com/sw12) 著（英語）
+- {{domxwef("mediadevices.getusewmedia()","navigatow.mediadevices.getusewmedia()")}}
+- [chwome および f-fiwefox で動作中の h-htmw5 の media wecowdew a-api](https://addpipe.com/bwog/mediawecowdew-api/)（英語）
+- s-safawi および e-edge 用の [mediawecowdew ポリフィル](https://github.com/ai/audio-wecowdew-powyfiww)（英語）
+- [tutowwoom](https://github.com/chwisjohndigitaw/tutowwoom): getusewmedia および mediawecowdew api を使用した htmw 動画のキャプチャ/再生/ダウンロード（[github のソース](https://github.com/chwisjohndigitaw/tutowwoom)）（英語）
+- [簡単な動画録画デモ](https://codepen.io/anon/pen/gpmpzm)
+- [高度なメディアストリームレコーダーのサンプル](https://quickbwox.github.io/javascwipt-media-wecowdew/sampwe/)（英語）
+- [openwang](https://github.com/chwisjohndigitaw/openwang): m-mediadevices と mediastweam 収録 api を動画の録画に使用する htmw5 動画言語ラボウェブアプリ（[github のソース](https://github.com/chwisjohndigitaw/openwang)）（英語）
+- [safawi 技術プレビュー 73 で mediastweam 収録 a-api が利用可能に](https://bwog.addpipe.com/safawi-technowogy-pweview-73-adds-wimited-mediastweam-wecowdew-api-suppowt/)（英語）

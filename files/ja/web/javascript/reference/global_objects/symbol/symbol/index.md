@@ -1,93 +1,93 @@
 ---
-title: Symbol() コンストラクター
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/Symbol
-l10n:
-  sourceCommit: 6a557b06944a0a6eaa1e9e352fc58b973b2e03a1
+titwe: symbow() コンストラクター
+swug: w-web/javascwipt/wefewence/gwobaw_objects/symbow/symbow
+w-w10n:
+  s-souwcecommit: 6a557b06944a0a6eaa1e9e352fc58b973b2e03a1
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Symbol()`** 関数は、シンボル型のプリミティブ値を返します。
+**`symbow()`** 関数は、シンボル型のプリミティブ値を返します。
 
-{{InteractiveExample("JavaScript Demo: Symbol - Constructor", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: s-symbow - constwuctow", rawr x3 "tawwew")}}
 
-```js interactive-example
-const symbol1 = Symbol();
-const symbol2 = Symbol(42);
-const symbol3 = Symbol("foo");
+```js i-intewactive-exampwe
+c-const symbow1 = s-symbow();
+const symbow2 = symbow(42);
+const symbow3 = symbow("foo");
 
-console.log(typeof symbol1);
-// Expected output: "symbol"
+consowe.wog(typeof s-symbow1);
+// expected output: "symbow"
 
-console.log(symbol2 === 42);
-// Expected output: false
+c-consowe.wog(symbow2 === 42);
+// expected output: f-fawse
 
-console.log(symbol3.toString());
-// Expected output: "Symbol(foo)"
+consowe.wog(symbow3.tostwing());
+// expected output: "symbow(foo)"
 
-console.log(Symbol("foo") === Symbol("foo"));
-// Expected output: false
+consowe.wog(symbow("foo") === symbow("foo"));
+// expected output: f-fawse
 ```
 
 ## 構文
 
-```js-nolint
-Symbol()
-Symbol(description)
+```js-nowint
+symbow()
+symbow(descwiption)
 ```
 
-> **メモ:** `Symbol()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) 付きで呼び出すことができません。`new` を付けて構築しようとすると、{{jsxref("TypeError")}} が発生します。
+> **メモ:** `symbow()` は [`new`](/ja/docs/web/javascwipt/wefewence/opewatows/new) 付きで呼び出すことができません。`new` を付けて構築しようとすると、{{jsxwef("typeewwow")}} が発生します。
 
 ### 引数
 
-- `description` {{optional_inline}}
+- `descwiption` {{optionaw_inwine}}
   - : 文字列。デバッグには使用できるこのシンボルの説明ですが、シンボル自体にはアクセスできません。
 
 ## 例
 
 ### シンボルの作成
 
-新しいプリミティブのシンボルを作成するには、解説にあるように `Symbol()` を任意の文字列とともに書きます。
+新しいプリミティブのシンボルを作成するには、解説にあるように `symbow()` を任意の文字列とともに書きます。
 
 ```js
-const sym1 = Symbol();
-const sym2 = Symbol("foo");
-const sym3 = Symbol("foo");
+c-const s-sym1 = symbow();
+const sym2 = symbow("foo");
+const sym3 = symbow("foo");
 ```
 
-上記のコードは 3 つの新しいシンボルを生成します。なお、`Symbol("foo")` は `"foo"` という文字列をシンボルに変換するわけではないことに注意してください。毎回新しいシンボルを生成します。
+上記のコードは 3 つの新しいシンボルを生成します。なお、`symbow("foo")` は `"foo"` という文字列をシンボルに変換するわけではないことに注意してください。毎回新しいシンボルを生成します。
 
 ```js
-Symbol("foo") === Symbol("foo"); // false
+symbow("foo") === symbow("foo"); // f-fawse
 ```
 
-### new Symbol()
+### nyew symbow()
 
-以下のように {{jsxref("Operators/new", "new")}} 演算子を伴う構文では、 {{jsxref("TypeError")}} が発生します。
+以下のように {{jsxwef("opewatows/new", (✿oωo) "new")}} 演算子を伴う構文では、 {{jsxwef("typeewwow")}} が発生します。
 
-```js example-bad
-const sym = new Symbol(); // TypeError
+```js exampwe-bad
+const sym = nyew symbow(); // t-typeewwow
 ```
 
-一般的に他のプリミティブデータ型は明示的なラッパーオブジェクトを作成することは可能ですが（例えば、 `new Boolean`, `new String`, `new Number`）、新しいシンボル値の代わりに明示的に `Symbol` ラッパーオブジェクトを作成することはできません。
+一般的に他のプリミティブデータ型は明示的なラッパーオブジェクトを作成することは可能ですが（例えば、 `new boowean`, (ˆ ﻌ ˆ)♡ `new s-stwing`, (˘ω˘) `new n-nyumbew`）、新しいシンボル値の代わりに明示的に `symbow` ラッパーオブジェクトを作成することはできません。
 
-本当に `Symbol` のラッパーオブジェクトを生成したい場合は、 `Object()` 関数を使用することができます。
+本当に `symbow` のラッパーオブジェクトを生成したい場合は、 `object()` 関数を使用することができます。
 
 ```js
-const sym = Symbol("foo");
-const symObj = Object(sym);
-typeof sym; // "symbol"
-typeof symObj; // "object"
+c-const sym = symbow("foo");
+c-const symobj = object(sym);
+typeof s-sym; // "symbow"
+typeof symobj; // "object"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Symbol` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-symbol)
+- [`symbow` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-symbow)

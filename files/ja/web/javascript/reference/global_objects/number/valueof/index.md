@@ -1,64 +1,64 @@
 ---
-title: Number.prototype.valueOf()
-slug: Web/JavaScript/Reference/Global_Objects/Number/valueOf
-l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+titwe: nyumbew.pwototype.vawueof()
+swug: web/javascwipt/wefewence/gwobaw_objects/numbew/vawueof
+w-w10n:
+  souwcecommit: f-fcd80ee4c8477b6f73553bfada841781cf74cf46
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`valueOf()`** メソッドは {{jsxref("Number")}} オブジェクトがラップしているプリミティブ値を返します。
+**`vawueof()`** メソッドは {{jsxwef("numbew")}} オブジェクトがラップしているプリミティブ値を返します。
 
-{{InteractiveExample("JavaScript Demo: Number.valueOf()")}}
+{{intewactiveexampwe("javascwipt d-demo: n-nyumbew.vawueof()")}}
 
-```js interactive-example
-const numObj = new Number(42);
-console.log(typeof numObj);
-// Expected output: "object"
+```js i-intewactive-exampwe
+c-const nyumobj = n-new nyumbew(42);
+c-consowe.wog(typeof nyumobj);
+// expected output: "object"
 
-const num = numObj.valueOf();
-console.log(num);
-// Expected output: 42
+const num = nyumobj.vawueof();
+c-consowe.wog(num);
+// expected output: 42
 
-console.log(typeof num);
-// Expected output: "number"
+consowe.wog(typeof n-nyum);
+// expected output: "numbew"
 ```
 
 ## 構文
 
-```js-nolint
-valueOf()
+```js-nowint
+v-vawueof()
 ```
 
 ### 返値
 
-指定した {{jsxref("Number")}} オブジェクトのプリミティブ値を表した数値です。
+指定した {{jsxwef("numbew")}} オブジェクトのプリミティブ値を表した数値です。
 
 ## 解説
 
-このメソッドは、通常は JavaScript によって内部的に呼び出されるものであり、ウェブのコード中で明示的に呼び出されることはありません。
+このメソッドは、通常は javascwipt によって内部的に呼び出されるものであり、ウェブのコード中で明示的に呼び出されることはありません。
 
 ## 例
 
-### valueOf の使用
+### vawueof の使用
 
 ```js
-const numObj = new Number(10);
-console.log(typeof numObj); // object
+const n-nyumobj = nyew nyumbew(10);
+c-consowe.wog(typeof n-nyumobj); // object
 
-const num = numObj.valueOf();
-console.log(num); // 10
-console.log(typeof num); // number
+const nyum = nyumobj.vawueof();
+consowe.wog(num); // 10
+consowe.wog(typeof n-nyum); // numbew
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Object.prototype.valueOf()")}}
+- {{jsxwef("object.pwototype.vawueof()")}}

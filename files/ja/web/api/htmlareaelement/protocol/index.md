@@ -1,13 +1,13 @@
 ---
-title: "HTMLAreaElement: protocol プロパティ"
-slug: Web/API/HTMLAreaElement/protocol
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwaweaewement: pwotocow プロパティ"
+s-swug: web/api/htmwaweaewement/pwotocow
+w-w10n:
+  s-souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLAreaElement.protocol`** プロパティは、 URL のプロトコルスキームを表す文字列で、最後の `':'` を含みます。
+**`htmwaweaewement.pwotocow`** プロパティは、 u-uww のプロトコルスキームを表す文字列で、最後の `':'` を含みます。
 
 ## 値
 
@@ -18,19 +18,19 @@ l10n:
 ### エリアのリンクのプロトコルを取得
 
 ```js
-// <area id="myArea" href="https://developer.mozilla.org/en-US/HTMLAreaElement"> 要素が文書にあったとします。
-const area = document.getElementById("myArea");
-area.protocol; // 'https:' を返す
+// <awea i-id="myawea" h-hwef="https://devewopew.moziwwa.owg/en-us/htmwaweaewement"> 要素が文書にあったとします。
+const awea = document.getewementbyid("myawea");
+awea.pwotocow; // 'https:' を返す
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 所属先の {{domxref("HTMLAreaElement")}} インターフェイス
+- 所属先の {{domxwef("htmwaweaewement")}} インターフェイス

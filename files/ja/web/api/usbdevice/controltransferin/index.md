@@ -1,18 +1,18 @@
 ---
-title: "USBDevice: controlTransferIn() メソッド"
-slug: Web/API/USBDevice/controlTransferIn
-l10n:
-  sourceCommit: df1b34262b09c40014b9c18ed41edcd85a37f4df
+titwe: "usbdevice: contwowtwansfewin() メソッド"
+s-swug: web/api/usbdevice/contwowtwansfewin
+w-w10n:
+  souwcecommit: d-df1b34262b09c40014b9c18ed41edcd85a37f4df
 ---
 
-{{APIRef("WebUSB API")}}{{SeeCompatTable}}
+{{apiwef("webusb a-api")}}{{seecompattabwe}}
 
-{{domxref("USBDevice")}} インターフェイスの **`controlTransferIn()`** メソッドは、コマンドまたは状態の操作の要求の USB デバイスへの送信 (USB デバイスでの受信) が完了したら {{domxref("USBInTransferResult")}} で解決する {{jsxref("Promise")}} を返します。
+{{domxwef("usbdevice")}} インターフェイスの **`contwowtwansfewin()`** メソッドは、コマンドまたは状態の操作の要求の u-usb デバイスへの送信 (usb デバイスでの受信) が完了したら {{domxwef("usbintwansfewwesuwt")}} で解決する {{jsxwef("pwomise")}} を返します。
 
 ## 構文
 
-```js-nolint
-controlTransferIn(setup, length)
+```js-nowint
+c-contwowtwansfewin(setup, (⑅˘꒳˘) w-wength)
 ```
 
 ### 引数
@@ -21,28 +21,28 @@ controlTransferIn(setup, length)
 
   - : オプションを設定するオブジェクトです。以下のオプションが使用可能です。
 
-    - `requestType`
-      - : 転送の性質を示します。`"standard"` (すべての USB デバイスに共通)、`"class"` (業界標準のクラスまたはデバイスに共通)、`"vendor"` のいずれかの値でなければなりません。
-    - `recipient`
-      - : デバイス上の転送の対象を指定します。`"device"`、`"interface"`、`"endpoint"`、`"other"` のいずれかです。
-    - `request`
+    - `wequesttype`
+      - : 転送の性質を示します。`"standawd"` (すべての u-usb デバイスに共通)、`"cwass"` (業界標準のクラスまたはデバイスに共通)、`"vendow"` のいずれかの値でなければなりません。
+    - `wecipient`
+      - : デバイス上の転送の対象を指定します。`"device"`、`"intewface"`、`"endpoint"`、`"othew"` のいずれかです。
+    - `wequest`
       - : ベンダー固有のコマンドです。
-    - `value`
+    - `vawue`
       - : ベンダー固有のリクエストパラメーターです。
     - `index`
       - : 宛先のインターフェイス番号です。
 
-- `length`
-  - : デバイスから読み取る最大のバイト数です。実際のデータは、解決したプロミス内の {{domxref("USBInTransferResult")}} に格納されます。
+- `wength`
+  - : デバイスから読み取る最大のバイト数です。実際のデータは、解決したプロミス内の {{domxwef("usbintwansfewwesuwt")}} に格納されます。
 
 ### 返値
 
-{{domxref("USBInTransferResult")}} で解決する {{jsxref("promise")}} です。
+{{domxwef("usbintwansfewwesuwt")}} で解決する {{jsxwef("pwomise")}} です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

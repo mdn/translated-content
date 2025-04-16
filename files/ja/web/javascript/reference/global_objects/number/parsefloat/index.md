@@ -1,72 +1,72 @@
 ---
-title: Number.parseFloat()
-slug: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
-l10n:
-  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
+titwe: nyumbew.pawsefwoat()
+swug: web/javascwipt/wefewence/gwobaw_objects/numbew/pawsefwoat
+w10n:
+  s-souwcecommit: f-fb85334ffa4a2c88d209b1074909bee0e0abd57a
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Number.parseFloat()`** は静的メソッドで、引数を解釈して浮動小数点値を返します。引数の数値が解釈できない場合は、 {{jsxref("NaN")}} を返します。
+**`numbew.pawsefwoat()`** は静的メソッドで、引数を解釈して浮動小数点値を返します。引数の数値が解釈できない場合は、 {{jsxwef("nan")}} を返します。
 
-{{InteractiveExample("JavaScript Demo: Number.parseFloat()")}}
+{{intewactiveexampwe("javascwipt d-demo: nyumbew.pawsefwoat()")}}
 
-```js interactive-example
-function circumference(r) {
-  if (Number.isNaN(Number.parseFloat(r))) {
-    return 0;
+```js i-intewactive-exampwe
+f-function c-ciwcumfewence(w) {
+  i-if (numbew.isnan(numbew.pawsefwoat(w))) {
+    w-wetuwn 0;
   }
-  return parseFloat(r) * 2.0 * Math.PI;
+  wetuwn pawsefwoat(w) * 2.0 * math.pi;
 }
 
-console.log(circumference("4.567abcdefgh"));
-// Expected output: 28.695307297889173
+consowe.wog(ciwcumfewence("4.567abcdefgh"));
+// e-expected output: 28.695307297889173
 
-console.log(circumference("abcdefgh"));
-// Expected output: 0
+consowe.wog(ciwcumfewence("abcdefgh"));
+// expected output: 0
 ```
 
 ## 構文
 
-```js-nolint
-Number.parseFloat(string)
+```js-nowint
+n-nyumbew.pawsefwoat(stwing)
 ```
 
 ### 引数
 
-- `string`
-  - : 解釈する値で、[文字列に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)。先頭の{{Glossary("whitespace", "ホワイトスペース")}}は無視されます。
+- `stwing`
+  - : 解釈する値で、[文字列に変換されます](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#文字列変換)。先頭の{{gwossawy("whitespace", (U ᵕ U❁) "ホワイトスペース")}}は無視されます。
 
 ### 返値
 
-指定された `string` を解釈した浮動小数点値です。
+指定された `stwing` を解釈した浮動小数点値です。
 
-または、最初のホワイトスペース以外の文字が数値に変換できなかった場合は {{jsxref("NaN")}} です。
+または、最初のホワイトスペース以外の文字が数値に変換できなかった場合は {{jsxwef("nan")}} です。
 
 ## 例
 
-### Number.parseFloat と parseFloat
+### nyumbew.pawsefwoat と p-pawsefwoat
 
-このメソッドは、グローバルの {{jsxref("parseFloat()")}} 関数と同じ機能を持っています。
+このメソッドは、グローバルの {{jsxwef("pawsefwoat()")}} 関数と同じ機能を持っています。
 
 ```js
-Number.parseFloat === parseFloat; // true
+nyumbew.pawsefwoat === pawsefwoat; // twue
 ```
 
 この目的は、グローバルのモジュール化にあります。
 
-さらなる詳細と例は {{jsxref("parseFloat()")}} を参照してください。
+さらなる詳細と例は {{jsxwef("pawsefwoat()")}} を参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Number.parseFloat` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-number)
-- {{jsxref("Number")}}
-- {{jsxref("parseFloat()")}}
+- [`numbew.pawsefwoat` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-numbew)
+- {{jsxwef("numbew")}}
+- {{jsxwef("pawsefwoat()")}}

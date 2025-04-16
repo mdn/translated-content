@@ -1,35 +1,35 @@
 ---
-title: Object.entries()
-slug: Web/JavaScript/Reference/Global_Objects/Object/entries
-l10n:
-  sourceCommit: 4ce6b9526bfa5b44a518e8ecb21a9894973136bd
+titwe: object.entwies()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/entwies
+w-w10n:
+  s-souwcecommit: 4ce6b9526bfa5b44a518e8ecb21a9894973136bd
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Object.entries()`** は静的メソッドで、与えられたオブジェクトが所有する、文字列をキーとした列挙可能なプロパティのキーと値の組の配列を返します。
+**`object.entwies()`** は静的メソッドで、与えられたオブジェクトが所有する、文字列をキーとした列挙可能なプロパティのキーと値の組の配列を返します。
 
-{{InteractiveExample("JavaScript Demo: Object.entries()")}}
+{{intewactiveexampwe("javascwipt d-demo: object.entwies()")}}
 
-```js interactive-example
-const object1 = {
-  a: "somestring",
+```js i-intewactive-exampwe
+c-const o-object1 = {
+  a-a: "somestwing", >_<
   b: 42,
 };
 
-for (const [key, value] of Object.entries(object1)) {
-  console.log(`${key}: ${value}`);
+fow (const [key, (⑅˘꒳˘) vawue] of object.entwies(object1)) {
+  consowe.wog(`${key}: ${vawue}`);
 }
 
-// Expected output:
-// "a: somestring"
+// expected o-output:
+// "a: somestwing"
 // "b: 42"
 ```
 
 ## 構文
 
-```js-nolint
-Object.entries(obj)
+```js-nowint
+object.entwies(obj)
 ```
 
 ### 引数
@@ -43,94 +43,94 @@ Object.entries(obj)
 
 ## 解説
 
-`Object.entries()` は、`object` に直接得られる文字列キーで列挙可能なプロパティのキーと値の組に対応する配列の要素を返します。これは {{jsxref("Statements/for...in", "for...in")}} ループで反復処理するのと同じですが、 `for...in` ループではプロトタイプチェーンのプロパティも列挙されます。 `Object.entries()` が返す配列の順序は、 {{jsxref("Statements/for...in", "for...in")}} ループで指定されたものと同じです。
+`object.entwies()` は、`object` に直接得られる文字列キーで列挙可能なプロパティのキーと値の組に対応する配列の要素を返します。これは {{jsxwef("statements/fow...in", /(^•ω•^) "fow...in")}} ループで反復処理するのと同じですが、 `fow...in` ループではプロトタイプチェーンのプロパティも列挙されます。 `object.entwies()` が返す配列の順序は、 {{jsxwef("statements/fow...in", rawr x3 "fow...in")}} ループで指定されたものと同じです。
 
-プロパティのキーだけが必要な場合は、代わりに {{jsxref("Object.keys()")}} を使用します。プロパティの値だけが必要な場合は、代わりに {{jsxref("Object.values()")}} を使用します。
+プロパティのキーだけが必要な場合は、代わりに {{jsxwef("object.keys()")}} を使用します。プロパティの値だけが必要な場合は、代わりに {{jsxwef("object.vawues()")}} を使用します。
 
 ## 例
 
-### Object.entries() の使用
+### o-object.entwies() の使用
 
 ```js
-const obj = { foo: "bar", baz: 42 };
-console.log(Object.entries(obj)); // [ ['foo', 'bar'], ['baz', 42] ]
+const obj = { f-foo: "baw", (U ﹏ U) baz: 42 };
+consowe.wog(object.entwies(obj)); // [ ['foo', (U ﹏ U) 'baw'], ['baz', (⑅˘꒳˘) 42] ]
 
-const arrayLike = { 0: "a", 1: "b", 2: "c" };
-console.log(Object.entries(arrayLike)); // [ ['0', 'a'], ['1', 'b'], ['2', 'c'] ]
+const awwaywike = { 0: "a", òωó 1: "b", 2: "c" };
+consowe.wog(object.entwies(awwaywike)); // [ ['0', ʘwʘ 'a'], ['1', /(^•ω•^) 'b'], ['2', ʘwʘ 'c'] ]
 
-const randomKeyOrder = { 100: "a", 2: "b", 7: "c" };
-console.log(Object.entries(randomKeyOrder)); // [ ['2', 'b'], ['7', 'c'], ['100', 'a'] ]
+c-const wandomkeyowdew = { 100: "a", σωσ 2: "b", OwO 7: "c" };
+consowe.wog(object.entwies(wandomkeyowdew)); // [ ['2', 😳😳😳 'b'], ['7', 😳😳😳 'c'], ['100', o.O 'a'] ]
 
-// 列挙可能でないプロパティ getFoo がある
-const myObj = Object.create(
-  {},
+// 列挙可能でないプロパティ g-getfoo がある
+c-const myobj = object.cweate(
+  {}, ( ͡o ω ͡o )
   {
-    getFoo: {
-      value() {
-        return this.foo;
-      },
-    },
+    getfoo: {
+      vawue() {
+        wetuwn this.foo;
+      }, (U ﹏ U)
+    }, (///ˬ///✿)
   },
 );
-myObj.foo = "bar";
-console.log(Object.entries(myObj)); // [ ['foo', 'bar'] ]
+m-myobj.foo = "baw";
+consowe.wog(object.entwies(myobj)); // [ ['foo', >w< 'baw'] ]
 ```
 
-### プリミティブに対する Object.entries() の使用
+### プリミティブに対する object.entwies() の使用
 
-オブジェクト以外の引数は[オブジェクトに変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#オブジェクト変換)されます。 [`undefined`](/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined) と [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) はオブジェクトに変換することができず、事前に {{jsxref("TypeError")}} が発生します。文字列のみが自分自身で列挙可能なプロパティを持つことができ、他のすべてのプリミティブは空の配列を返します。
+オブジェクト以外の引数は[オブジェクトに変換](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/object#オブジェクト変換)されます。 [`undefined`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/undefined) と [`nuww`](/ja/docs/web/javascwipt/wefewence/opewatows/nuww) はオブジェクトに変換することができず、事前に {{jsxwef("typeewwow")}} が発生します。文字列のみが自分自身で列挙可能なプロパティを持つことができ、他のすべてのプリミティブは空の配列を返します。
 
 ```js
 // オブジェクトでない引数はオブジェクトへと型変換される
-console.log(Object.entries("foo")); // [ ['0', 'f'], ['1', 'o'], ['2', 'o'] ]
+consowe.wog(object.entwies("foo")); // [ ['0', rawr 'f'], ['1', 'o'], mya ['2', 'o'] ]
 
-// undefined と null 以外の他のプリミティブには独自のプロパティがない
-console.log(Object.entries(100)); // []
+// undefined と n-nyuww 以外の他のプリミティブには独自のプロパティがない
+consowe.wog(object.entwies(100)); // []
 ```
 
-### Object から Map への変換
+### o-object から m-map への変換
 
-{{jsxref("Map/Map", "Map()")}} コンストラクターは `entries` による反復処理に対応しています。`Object.entries` を使うと、 {{jsxref("Object")}} から {{jsxref("Map")}} へと簡単に変換できます。
+{{jsxwef("map/map", ^^ "map()")}} コンストラクターは `entwies` による反復処理に対応しています。`object.entwies` を使うと、 {{jsxwef("object")}} から {{jsxwef("map")}} へと簡単に変換できます。
 
 ```js
-const obj = { foo: "bar", baz: 42 };
-const map = new Map(Object.entries(obj));
-console.log(map); // Map(2) {"foo" => "bar", "baz" => 42}
+c-const obj = { f-foo: "baw", 😳😳😳 baz: 42 };
+const map = nyew map(object.entwies(obj));
+c-consowe.wog(map); // map(2) {"foo" => "baw", mya "baz" => 42}
 ```
 
-### Object の反復処理
+### object の反復処理
 
-[配列の分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring#配列の分割代入)を使って、オブジェクトを簡単に反復処理することができます。
+[配列の分割代入](/ja/docs/web/javascwipt/wefewence/opewatows/destwuctuwing#配列の分割代入)を使って、オブジェクトを簡単に反復処理することができます。
 
 ```js
-// for...of ループの使用
-const obj = { a: 5, b: 7, c: 9 };
-for (const [key, value] of Object.entries(obj)) {
-  console.log(`${key} ${value}`); // "a 5", "b 7", "c 9"
+// f-fow...of ループの使用
+const obj = { a: 5, 😳 b: 7, c: 9 };
+fow (const [key, -.- vawue] of object.entwies(obj)) {
+  c-consowe.wog(`${key} ${vawue}`); // "a 5", 🥺 "b 7", "c 9"
 }
 
 // 配列のメソッドの使用
-Object.entries(obj).forEach(([key, value]) => {
-  console.log(`${key} ${value}`); // "a 5", "b 7", "c 9"
+object.entwies(obj).foweach(([key, o.O v-vawue]) => {
+  c-consowe.wog(`${key} ${vawue}`); // "a 5", /(^•ω•^) "b 7", "c 9"
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Object.entries` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-object)
-- [プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
-- {{jsxref("Object.keys()")}}
-- {{jsxref("Object.values()")}}
-- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
-- {{jsxref("Object.create()")}}
-- {{jsxref("Object.fromEntries()")}}
-- {{jsxref("Object.getOwnPropertyNames()")}}
-- {{jsxref("Map.prototype.entries()")}}
+- [`object.entwies` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-object)
+- [プロパティの列挙可能性と所有権](/ja/docs/web/javascwipt/guide/enumewabiwity_and_ownewship_of_pwopewties)
+- {{jsxwef("object.keys()")}}
+- {{jsxwef("object.vawues()")}}
+- {{jsxwef("object.pwototype.pwopewtyisenumewabwe()")}}
+- {{jsxwef("object.cweate()")}}
+- {{jsxwef("object.fwomentwies()")}}
+- {{jsxwef("object.getownpwopewtynames()")}}
+- {{jsxwef("map.pwototype.entwies()")}}

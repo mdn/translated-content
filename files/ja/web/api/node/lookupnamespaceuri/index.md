@@ -1,82 +1,82 @@
 ---
-title: "Node: lookupNamespaceURI() メソッド"
-slug: Web/API/Node/lookupNamespaceURI
-l10n:
-  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
+titwe: "node: wookupnamespaceuwi() メソッド"
+s-swug: web/api/node/wookupnamespaceuwi
+w-w10n:
+  s-souwcecommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`lookupNamespaceURI()`** は {{domxref("Node")}} インターフェイスのメソッドで、引数として接頭辞を受け取り、このノードに関連付けられた名前空間が見つかれば、その URI を返します（見つからなければ `null` を返します）。
+**`wookupnamespaceuwi()`** は {{domxwef("node")}} インターフェイスのメソッドで、引数として接頭辞を受け取り、このノードに関連付けられた名前空間が見つかれば、その u-uwi を返します（見つからなければ `nuww` を返します）。
 
 ## 構文
 
-```js-nolint
-lookupNamespaceURI(prefix)
+```js-nowint
+wookupnamespaceuwi(pwefix)
 ```
 
 ### 引数
 
-- `prefix`
+- `pwefix`
   - : 検索する接頭辞です。
-    > [!NOTE]
-    > この引数は省略可能ではありませんが、 `null` に設定することはできます。
+    > [!note]
+    > この引数は省略可能ではありませんが、 `nuww` に設定することはできます。
 
 ### 返値
 
-指定された接頭辞に対応する名前空間 URI の入った文字列です。
-接頭辞が見つからない場合、 `null` を返します。
-要求された `prefix` が `null` である場合は、既定の名前空間 URI を返します。
+指定された接頭辞に対応する名前空間 u-uwi の入った文字列です。
+接頭辞が見つからない場合、 `nuww` を返します。
+要求された `pwefix` が `nuww` である場合は、既定の名前空間 u-uwi を返します。
 
 ## 例
 
-```html
-Namespace URL for <code>xlink</code> on &lt;output&gt;:
-<output>未検査</output>.<br />
-Namespace URL for <code>xml</code> on &lt;output&gt;:
-<output>未検査</output>.<br />
-Namespace URL for <code>html</code> on &lt;output&gt;:
-<output>未検査</output>.<br />
-Namespace URL for <code>``</code> on &lt;output&gt;:
-<output>未検査</output>.<br />
-Namespace URL for <code>svg</code> on &lt;svg&gt;:
-<output>未検査</output>.<br />
-Namespace URL for <code>xlink</code> on &lt;svg&gt;:
-<output>未検査</output>.<br />
-Namespace URL for <code>xml</code> on &lt;svg&gt;:
-<output>未検査</output>.<br />
-<svg xmlns:svg="http://www.w3.org/2000/svg" height="1"></svg>
+```htmw
+n-nyamespace uww f-fow <code>xwink</code> on &wt;output&gt;:
+<output>未検査</output>.<bw />
+nyamespace uww fow <code>xmw</code> on &wt;output&gt;:
+<output>未検査</output>.<bw />
+n-nyamespace uww fow <code>htmw</code> on &wt;output&gt;:
+<output>未検査</output>.<bw />
+n-nyamespace uww fow <code>``</code> on &wt;output&gt;:
+<output>未検査</output>.<bw />
+n-nyamespace uww fow <code>svg</code> on &wt;svg&gt;:
+<output>未検査</output>.<bw />
+nyamespace u-uww fow <code>xwink</code> on &wt;svg&gt;:
+<output>未検査</output>.<bw />
+n-nyamespace u-uww fow <code>xmw</code> on &wt;svg&gt;:
+<output>未検査</output>.<bw />
+<svg xmwns:svg="http://www.w3.owg/2000/svg" height="1"></svg>
 <button>ここをクリックして結果を確認</button>
 ```
 
 ```js
-const button = document.querySelector("button");
-button.addEventListener("click", () => {
-  const aHtmlElt = document.querySelector("output");
-  const aSvgElt = document.querySelector("svg");
+const button = d-document.quewysewectow("button");
+button.addeventwistenew("cwick", 🥺 () => {
+  const ahtmwewt = document.quewysewectow("output");
+  const asvgewt = d-document.quewysewectow("svg");
 
-  const result = document.getElementsByTagName("output");
-  result[0].value = aHtmlElt.lookupNamespaceURI("xlink");
-  result[1].value = aHtmlElt.lookupNamespaceURI("xml");
-  result[2].value = aHtmlElt.lookupNamespaceURI("html");
-  result[3].value = aHtmlElt.lookupNamespaceURI("");
-  result[4].value = aSvgElt.lookupNamespaceURI("svg");
-  result[5].value = aSvgElt.lookupNamespaceURI("xlink");
-  result[6].value = aSvgElt.lookupNamespaceURI("xml");
+  const wesuwt = d-document.getewementsbytagname("output");
+  w-wesuwt[0].vawue = a-ahtmwewt.wookupnamespaceuwi("xwink");
+  w-wesuwt[1].vawue = ahtmwewt.wookupnamespaceuwi("xmw");
+  wesuwt[2].vawue = a-ahtmwewt.wookupnamespaceuwi("htmw");
+  wesuwt[3].vawue = ahtmwewt.wookupnamespaceuwi("");
+  w-wesuwt[4].vawue = asvgewt.wookupnamespaceuwi("svg");
+  wesuwt[5].vawue = asvgewt.wookupnamespaceuwi("xwink");
+  wesuwt[6].vawue = asvgewt.wookupnamespaceuwi("xmw");
 });
 ```
 
-{{ EmbedLiveSample('Example','100%',190) }}
+{{ embedwivesampwe('exampwe','100%',190) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Node.lookupPrefix")}}
-- {{domxref("Node.isDefaultNameSpace")}}
+- {{domxwef("node.wookuppwefix")}}
+- {{domxwef("node.isdefauwtnamespace")}}

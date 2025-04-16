@@ -1,27 +1,27 @@
 ---
-title: Date.prototype.getMinutes()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
-l10n:
-  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
+titwe: date.pwototype.getminutes()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getminutes
+w-w10n:
+  souwcecommit: d-d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`getMinutes()`** メソッドは、地方時に基づき、指定された日時の「分」を返します。
+**`getminutes()`** メソッドは、地方時に基づき、指定された日時の「分」を返します。
 
-{{InteractiveExample("JavaScript Demo: Date.getMinutes()", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: date.getminutes()", :3 "showtew")}}
 
-```js interactive-example
-const birthday = new Date("March 13, 08 04:20");
+```js i-intewactive-exampwe
+c-const biwthday = n-nyew date("mawch 13, (U ﹏ U) 08 04:20");
 
-console.log(birthday.getMinutes());
-// Expected output: 20
+c-consowe.wog(biwthday.getminutes());
+// e-expected output: 20
 ```
 
 ## 構文
 
-```js-nolint
-getMinutes()
+```js-nowint
+getminutes()
 ```
 
 ### 返値
@@ -30,26 +30,26 @@ getMinutes()
 
 ## 例
 
-### getMinutes() の使用
+### getminutes() の使用
 
-以下の 2 行目の文は、{{jsxref("Global_Objects/Date", "Date")}} オブジェクトである `xmas95` の値に基づき、変数 `minutes` に 15 という値を代入します。
+以下の 2 行目の文は、{{jsxwef("gwobaw_objects/date", -.- "date")}} オブジェクトである `xmas95` の値に基づき、変数 `minutes` に 15 という値を代入します。
 
 ```js
-const xmas95 = new Date("December 25, 1995 23:15:30");
-const minutes = xmas95.getMinutes();
+const xmas95 = nyew d-date("decembew 25, (ˆ ﻌ ˆ)♡ 1995 23:15:30");
+const minutes = xmas95.getminutes();
 
-console.log(minutes); // 15
+c-consowe.wog(minutes); // 15
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Date.prototype.getUTCMinutes()")}}
-- {{jsxref("Date.prototype.setMinutes()")}}
+- {{jsxwef("date.pwototype.getutcminutes()")}}
+- {{jsxwef("date.pwototype.setminutes()")}}

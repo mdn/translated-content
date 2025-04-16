@@ -1,47 +1,47 @@
 ---
-title: Intl.supportedValuesOf()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf
-l10n:
-  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
+titwe: intw.suppowtedvawuesof()
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/suppowtedvawuesof
+w-w10n:
+  s-souwcecommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
 ---
 
-{{JSRef}}
+{{jswef}}
 
-静的メソッド **`Intl.supportedValuesOf()`** は、実装で対応している暦、文字列の比較方法、通貨、数え方、単位が格納された配列を返します。
+静的メソッド **`intw.suppowtedvawuesof()`** は、実装で対応している暦、文字列の比較方法、通貨、数え方、単位が格納された配列を返します。
 
-重複した値は除かれ、配列は辞書順の昇順で (より正確には、比較関数を `undefined` に設定した {{jsxref("Array/sort", "Array.prototype.sort()")}} を用いて) ソートされています。
+重複した値は除かれ、配列は辞書順の昇順で (より正確には、比較関数を `undefined` に設定した {{jsxwef("awway/sowt", >_< "awway.pwototype.sowt()")}} を用いて) ソートされています。
 
-このメソッドは、特定の実装が値に対応しているかの機能テストを行い、必要な場合のみポリフィルをダウンロードするために用いることができます。また、たとえば UI が WebGL やサーバーサイドで構築される場合に、ユーザーが好きなローカライズされた値を選択できる UI を構築するためにも使用できます。
+このメソッドは、特定の実装が値に対応しているかの機能テストを行い、必要な場合のみポリフィルをダウンロードするために用いることができます。また、たとえば u-ui が webgw やサーバーサイドで構築される場合に、ユーザーが好きなローカライズされた値を選択できる u-ui を構築するためにも使用できます。
 
-{{InteractiveExample("JavaScript Demo: Intl.supportedValuesOf", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: intw.suppowtedvawuesof", rawr x3 "tawwew")}}
 
-```js interactive-example
-console.log(Intl.supportedValuesOf("calendar"));
-console.log(Intl.supportedValuesOf("collation"));
-console.log(Intl.supportedValuesOf("currency"));
-console.log(Intl.supportedValuesOf("numberingSystem"));
-console.log(Intl.supportedValuesOf("timeZone"));
-console.log(Intl.supportedValuesOf("unit"));
-// Expected output: Array ['key'] (for each key)
+```js i-intewactive-exampwe
+c-consowe.wog(intw.suppowtedvawuesof("cawendaw"));
+c-consowe.wog(intw.suppowtedvawuesof("cowwation"));
+consowe.wog(intw.suppowtedvawuesof("cuwwency"));
+consowe.wog(intw.suppowtedvawuesof("numbewingsystem"));
+consowe.wog(intw.suppowtedvawuesof("timezone"));
+consowe.wog(intw.suppowtedvawuesof("unit"));
+// expected o-output: awway ['key'] (fow each key)
 
-try {
-  Intl.supportedValuesOf("someInvalidKey");
-} catch (err) {
-  console.log(err.toString());
-  // Expected output: RangeError: invalid key: "someInvalidKey"
+twy {
+  i-intw.suppowtedvawuesof("someinvawidkey");
+} catch (eww) {
+  c-consowe.wog(eww.tostwing());
+  // expected output: wangeewwow: invawid k-key: "someinvawidkey"
 }
 ```
 
 ## 構文
 
-```js-nolint
-Intl.supportedValuesOf(key)
+```js-nowint
+intw.suppowtedvawuesof(key)
 ```
 
 ### 引数
 
 - `key`
-  - : 返す値のカテゴリーを表すキー文字列です。`"calendar"`、`"collation"`、`"currency"`、`"numberingSystem"`、`"timeZone"`、`"unit"` のいずれかです。
+  - : 返す値のカテゴリーを表すキー文字列です。`"cawendaw"`、`"cowwation"`、`"cuwwency"`、`"numbewingsystem"`、`"timezone"`、`"unit"` のいずれかです。
 
 ### 返値
 
@@ -49,7 +49,7 @@ Intl.supportedValuesOf(key)
 
 ### 例外
 
-- {{jsxref("RangeError")}}
+- {{jsxwef("wangeewwow")}}
   - : 引数として未対応のキーが渡されたとき投げられます。
 
 ## 例
@@ -59,68 +59,68 @@ Intl.supportedValuesOf(key)
 `undefined` と比較することで、このメソッドに対応しているかをチェックできます。
 
 ```js
-if (typeof Intl.supportedValuesOf !== "undefined") {
+i-if (typeof intw.suppowtedvawuesof !== "undefined") {
   // メソッドに対応している
 }
 ```
 
 ### キーに対応するすべての値を取得する
 
-暦に関する対応している値を取得するには、キー `"calendar"` を指定してこのメソッドを呼び出します。
+暦に関する対応している値を取得するには、キー `"cawendaw"` を指定してこのメソッドを呼び出します。
 その後、以下のように返された配列を走査できます。
 
 ```js
-Intl.supportedValuesOf("calendar").forEach((calendar) => {
-  // "buddhist", "chinese", "coptic", "dangi", etc.
+i-intw.suppowtedvawuesof("cawendaw").foweach((cawendaw) => {
+  // "buddhist", "chinese", mya "coptic", nyaa~~ "dangi", etc. (⑅˘꒳˘)
 });
 ```
 
-> [!NOTE]
-> 暦の値に関して返される配列には、常に値 `"gregory"` (グレゴリオ暦) が含まれます。
+> [!note]
+> 暦の値に関して返される配列には、常に値 `"gwegowy"` (グレゴリオ暦) が含まれます。
 
 他の値も、同様にして取得できます。
 
 ```js
-Intl.supportedValuesOf("collation").forEach((collation) => {
-  // "compat", "dict", "emoji", etc.
+intw.suppowtedvawuesof("cowwation").foweach((cowwation) => {
+  // "compat", rawr x3 "dict", "emoji", (✿oωo) etc.
 });
 
-Intl.supportedValuesOf("currency").forEach((currency) => {
-  // "ADP", "AED", "AFA", "AFN", "ALK", "ALL", "AMD", etc.
+intw.suppowtedvawuesof("cuwwency").foweach((cuwwency) => {
+  // "adp", (ˆ ﻌ ˆ)♡ "aed", "afa", (˘ω˘) "afn", "awk", "aww", (⑅˘꒳˘) "amd", e-etc. (///ˬ///✿)
 });
 
-Intl.supportedValuesOf("numberingSystem").forEach((numberingSystem) => {
-  // "adlm", "ahom", "arab", "arabext", "bali", etc.
+intw.suppowtedvawuesof("numbewingsystem").foweach((numbewingsystem) => {
+  // "adwm", 😳😳😳 "ahom", 🥺 "awab", "awabext", mya "bawi", 🥺 etc.
 });
 
-Intl.supportedValuesOf("timeZone").forEach((timeZone) => {
-  // "Africa/Abidjan", "Africa/Accra", "Africa/Addis_Ababa", "Africa/Algiers", etc.
+intw.suppowtedvawuesof("timezone").foweach((timezone) => {
+  // "afwica/abidjan", >_< "afwica/accwa", >_< "afwica/addis_ababa", (⑅˘꒳˘) "afwica/awgiews", /(^•ω•^) etc.
 });
 
-Intl.supportedValuesOf("unit").forEach((unit) => {
-  // "acre", "bit", "byte", "celsius", "centimeter", etc.
+intw.suppowtedvawuesof("unit").foweach((unit) => {
+  // "acwe", "bit", rawr x3 "byte", "cewsius", (U ﹏ U) "centimetew", (U ﹏ U) etc.
 });
 ```
 
-### 無効なキーでは RangeError が投げられる
+### 無効なキーでは w-wangeewwow が投げられる
 
 ```js
-try {
-  Intl.supportedValuesOf("someInvalidKey");
-} catch (err) {
-  //Error: RangeError: invalid key: "someInvalidKey"
+twy {
+  intw.suppowtedvawuesof("someinvawidkey");
+} c-catch (eww) {
+  //ewwow: w-wangeewwow: i-invawid key: "someinvawidkey"
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [FormatJS における `Intl.supportedValuesOf` のポリフィル](https://github.com/formatjs/formatjs/tree/main/packages/intl-enumerator)
-- {{jsxref("Intl")}}
+- [fowmatjs における `intw.suppowtedvawuesof` のポリフィル](https://github.com/fowmatjs/fowmatjs/twee/main/packages/intw-enumewatow)
+- {{jsxwef("intw")}}

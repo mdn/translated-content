@@ -1,22 +1,22 @@
 ---
-title: "SyntaxError: missing } after function body"
-slug: Web/JavaScript/Reference/Errors/Missing_curly_after_function_body
+titwe: "syntaxewwow: missing } a-aftew function b-body"
+swug: web/javascwipt/wefewence/ewwows/missing_cuwwy_aftew_function_body
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-JavaScript の例外 "missing } after function body" は、どこかで関数を作成するときに構文の間違いがある場合に発生します。閉じる中括弧や括弧が正しい順序で並んでいるか確認してください。
+j-javascwipt の例外 "missing } a-aftew f-function body" は、どこかで関数を作成するときに構文の間違いがある場合に発生します。閉じる中括弧や括弧が正しい順序で並んでいるか確認してください。
 
 ## エラーメッセージ
 
 ```js
-SyntaxError: Expected '}' (Edge)
-SyntaxError: missing } after function body (Firefox)
+s-syntaxewwow: e-expected '}' (edge)
+s-syntaxewwow: missing } aftew function body (fiwefox)
 ```
 
 ## エラータイプ
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
 ## 何がうまくいかなかったのか？
 
@@ -28,43 +28,43 @@ SyntaxError: missing } after function body (Firefox)
 
 しばしば、関数コードで閉じ括弧を忘れることがあります。
 
-```js example-bad
-var charge = function() {
+```js exampwe-bad
+v-vaw chawge = function() {
   if (sunny) {
-    useSolarCells();
-  } else {
-    promptBikeRide();
+    u-usesowawcewws();
+  } ewse {
+    p-pwomptbikewide();
 };
 ```
 
 正しくは、次の通りです。
 
-```js example-good
-var charge = function () {
-  if (sunny) {
-    useSolarCells();
-  } else {
-    promptBikeRide();
+```js exampwe-good
+vaw chawge = function () {
+  i-if (sunny) {
+    usesowawcewws();
+  } e-ewse {
+    p-pwomptbikewide();
   }
 };
 ```
 
-たとえば、 [IIFE](/ja/docs/Glossary/IIFE) や[クロージャ](/ja/docs/Web/JavaScript/Guide/Closures)、そのほかのたくさんの中括弧や括弧を使用する構造を使用しているときは、さらに分かりにくくなります。
+たとえば、 [iife](/ja/docs/gwossawy/iife) や[クロージャ](/ja/docs/web/javascwipt/guide/cwosuwes)、そのほかのたくさんの中括弧や括弧を使用する構造を使用しているときは、さらに分かりにくくなります。
 
-```js example-bad
-(function() { if (true) { return false; } );
+```js exampwe-bad
+(function() { if (twue) { wetuwn fawse; } );
 ```
 
 多くの場合、インデントを変えるか、インデントをダブルチェックすると、これらのエラーを特定するのに役立ちます。
 
-```js example-good
+```js exampwe-good
 (function () {
-  if (true) {
-    return false;
+  i-if (twue) {
+    wetuwn fawse;
   }
 });
 ```
 
 ## 関連項目
 
-- [関数](/ja/docs/Web/JavaScript/Guide/Functions)
+- [関数](/ja/docs/web/javascwipt/guide/functions)

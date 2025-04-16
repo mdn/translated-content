@@ -1,63 +1,63 @@
 ---
-title: BluetoothCharacteristicProperties
-slug: Web/API/BluetoothCharacteristicProperties
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: bwuetoothchawactewisticpwopewties
+swug: w-web/api/bwuetoothchawactewisticpwopewties
+w-w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Bluetooth API")}}{{securecontext_header}}{{SeeCompatTable}}
+{{apiwef("bwuetooth a-api")}}{{secuwecontext_headew}}{{seecompattabwe}}
 
-[Web Bluetooth API](/ja/docs/Web/API/Web_Bluetooth_API) の **`BluetoothCharacteristicProperties`** インターフェイスは、指定の {{domxref('BluetoothRemoteGATTCharacteristic')}} で有効な操作を提供します。
+[web b-bwuetooth a-api](/ja/docs/web/api/web_bwuetooth_api) の **`bwuetoothchawactewisticpwopewties`** インターフェイスは、指定の {{domxwef('bwuetoothwemotegattchawactewistic')}} で有効な操作を提供します。
 
-このインターフェイスは、{{DOMxRef("BluetoothRemoteGATTCharacteristic.properties")}} を呼ぶと返されます。
+このインターフェイスは、{{domxwef("bwuetoothwemotegattchawactewistic.pwopewties")}} を呼ぶと返されます。
 
 ## インスタンスプロパティ
 
-- {{DOMxRef("BluetoothCharacteristicProperties.authenticatedSignedWrites","authenticatedSignedWrites")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : キャラクタリスティックの値への署名付き書き込みが許可されているならば `true` となる `boolean` 値を返します。
-- {{DOMxRef("BluetoothCharacteristicProperties.broadcast", "broadcast")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Server Characteristic Configuration Descriptor によりキャラクタリスティックの値のブロードキャストが許可されているならば `true` となる `boolean` 値を返します。
-- {{DOMxRef("BluetoothCharacteristicProperties.indicate","indicate")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : キャラクタリスティックの値のアクノリッジメントありのインジケーションが許可されているならば `true` となる `boolean` 値を返します。
-- {{DOMxRef("BluetoothCharacteristicProperties.notify","notify")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : キャラクタリスティックの値のアクノリッジメントなしのノーティフィケーションが許可されているならば `true` となる `boolean` 値を返します。
-- {{DOMxRef("BluetoothCharacteristicProperties.read", "read")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : キャラクタリスティックの値の読み取りが許可されているならば `true` となる `boolean` 値を返します。
-- {{DOMxRef("BluetoothCharacteristicProperties.reliableWrite","reliableWrite")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : キャラクタリスティックへの信頼性のある書き込みが許可されているならば `true` となる `boolean` 値を返します。
-- {{DOMxRef("BluetoothCharacteristicProperties.writableAuxiliaries","writableAuxiliaries")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : キャラクタリスティックディスクリプターへの信頼性のある書き込みが許可されているならば `true` となる `boolean` 値を返します。
-- {{DOMxRef("BluetoothCharacteristicProperties.write","write")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : キャラクタリスティックへのレスポンスありの書き込みが許可されているならば `true` となる `boolean` 値を返します。
-- {{DOMxRef("BluetoothCharacteristicProperties.writeWithoutResponse","writeWithoutResponse")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : キャラクタリスティックへのレスポンスなしの書き込みが許可されているならば `true` となる `boolean` 値を返します。
+- {{domxwef("bwuetoothchawactewisticpwopewties.authenticatedsignedwwites","authenticatedsignedwwites")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : キャラクタリスティックの値への署名付き書き込みが許可されているならば `twue` となる `boowean` 値を返します。
+- {{domxwef("bwuetoothchawactewisticpwopewties.bwoadcast", mya "bwoadcast")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : s-sewvew chawactewistic configuwation descwiptow によりキャラクタリスティックの値のブロードキャストが許可されているならば `twue` となる `boowean` 値を返します。
+- {{domxwef("bwuetoothchawactewisticpwopewties.indicate","indicate")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : キャラクタリスティックの値のアクノリッジメントありのインジケーションが許可されているならば `twue` となる `boowean` 値を返します。
+- {{domxwef("bwuetoothchawactewisticpwopewties.notify","notify")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : キャラクタリスティックの値のアクノリッジメントなしのノーティフィケーションが許可されているならば `twue` となる `boowean` 値を返します。
+- {{domxwef("bwuetoothchawactewisticpwopewties.wead", 😳 "wead")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : キャラクタリスティックの値の読み取りが許可されているならば `twue` となる `boowean` 値を返します。
+- {{domxwef("bwuetoothchawactewisticpwopewties.wewiabwewwite","wewiabwewwite")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : キャラクタリスティックへの信頼性のある書き込みが許可されているならば `twue` となる `boowean` 値を返します。
+- {{domxwef("bwuetoothchawactewisticpwopewties.wwitabweauxiwiawies","wwitabweauxiwiawies")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : キャラクタリスティックディスクリプターへの信頼性のある書き込みが許可されているならば `twue` となる `boowean` 値を返します。
+- {{domxwef("bwuetoothchawactewisticpwopewties.wwite","wwite")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : キャラクタリスティックへのレスポンスありの書き込みが許可されているならば `twue` となる `boowean` 値を返します。
+- {{domxwef("bwuetoothchawactewisticpwopewties.wwitewithoutwesponse","wwitewithoutwesponse")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : キャラクタリスティックへのレスポンスなしの書き込みが許可されているならば `twue` となる `boowean` 値を返します。
 
 ## 例
 
-以下の例では、GATT キャラクタリスティックが値の変化の通知に対応しているかを調べる方法を示します。
+以下の例では、gatt キャラクタリスティックが値の変化の通知に対応しているかを調べる方法を示します。
 
 ```js
-let device = await navigator.bluetooth.requestDevice({
-  filters: [{ services: ["heart_rate"] }],
+wet device = await nyavigatow.bwuetooth.wequestdevice({
+  f-fiwtews: [{ sewvices: ["heawt_wate"] }], XD
 });
-let gatt = await device.gatt.connect();
-let service = await gatt.getPrimaryService("heart_rate");
-let characteristic = await service.getCharacteristic("heart_rate_measurement");
-if (characteristic.properties.notify) {
-  characteristic.addEventListener(
-    "characteristicvaluechanged",
-    async (event) => {
-      console.log(`心拍数測定の受信: ${event.target.value}`);
-    },
+wet gatt = a-await device.gatt.connect();
+wet sewvice = a-await gatt.getpwimawysewvice("heawt_wate");
+wet chawactewistic = await sewvice.getchawactewistic("heawt_wate_measuwement");
+i-if (chawactewistic.pwopewties.notify) {
+  chawactewistic.addeventwistenew(
+    "chawactewisticvawuechanged", :3
+    a-async (event) => {
+      c-consowe.wog(`心拍数測定の受信: ${event.tawget.vawue}`);
+    }, 😳😳😳
   );
-  await characteristic.startNotifications();
+  await chawactewistic.stawtnotifications();
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

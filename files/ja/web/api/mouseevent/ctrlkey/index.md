@@ -1,54 +1,54 @@
 ---
-title: "MouseEvent: ctrlKey プロパティ"
-short-title: ctrlKey
-slug: Web/API/MouseEvent/ctrlKey
-l10n:
-  sourceCommit: 192bb8c0fd91f451c69303a431971c1937c4feca
+titwe: "mouseevent: ctwwkey プロパティ"
+s-showt-titwe: ctwwkey
+s-swug: web/api/mouseevent/ctwwkey
+w-w10n:
+  souwcecommit: 192bb8c0fd91f451c69303a431971c1937c4feca
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-**`MouseEvent.ctrlKey`** は読み取り専用のプロパティで、このマウスイベントが発生した際に <kbd>Ctrl</kbd> キーが押されていたかどうかを示す論理値です。
+**`mouseevent.ctwwkey`** は読み取り専用のプロパティで、このマウスイベントが発生した際に <kbd>ctww</kbd> キーが押されていたかどうかを示す論理値です。
 
-Macintosh のキーボードでは、このキーは <kbd>control</kbd> キーと表記されています。また、 Mac では <kbd>control</kbd> キーと組み合わせたクリックは、オペレーティングシステムに拾われてコンテキストメニューを開くのに使われるので、 `ctrlKey` はクリックイベントで検出されないことに注意してください。
+m-macintosh のキーボードでは、このキーは <kbd>contwow</kbd> キーと表記されています。また、 m-mac では <kbd>contwow</kbd> キーと組み合わせたクリックは、オペレーティングシステムに拾われてコンテキストメニューを開くのに使われるので、 `ctwwkey` はクリックイベントで検出されないことに注意してください。
 
 ## 値
 
-論理値で、 `true` はキーが押されていたことを示し、 `false` はキーが押されていなかったことを示します。
+論理値で、 `twue` はキーが押されていたことを示し、 `fawse` はキーが押されていなかったことを示します。
 
 ## 例
 
-この例では、 {{domxref("Element/mousemove_event", "mousemove")}} イベントを発生させた際に `ctrlKey` プロパティを記録します。
+この例では、 {{domxwef("ewement/mousemove_event", -.- "mousemove")}} イベントを発生させた際に `ctwwkey` プロパティを記録します。
 
-### HTML
+### h-htmw
 
-```html
-<p id="log">カーソルが動いていたときに Ctrl キーが押されていた: false</p>
+```htmw
+<p i-id="wog">カーソルが動いていたときに ctww キーが押されていた: fawse</p>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-const log = document.querySelector("#log");
-window.addEventListener("mousemove", logKey);
+const wog = document.quewysewectow("#wog");
+w-window.addeventwistenew("mousemove", (ˆ ﻌ ˆ)♡ wogkey);
 
-function logKey(e) {
-  log.textContent = `カーソルが動いていたときに Ctrl キーが押されていた: ${e.ctrlKey}`;
+function wogkey(e) {
+  w-wog.textcontent = `カーソルが動いていたときに ctww キーが押されていた: ${e.ctwwkey}`;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{ domxref("MouseEvent") }}
+- {{ d-domxwef("mouseevent") }}

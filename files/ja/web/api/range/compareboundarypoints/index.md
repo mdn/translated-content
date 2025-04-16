@@ -1,19 +1,19 @@
 ---
-title: "Range: compareBoundaryPoints() メソッド"
-short-title: compareBoundaryPoints()
-slug: Web/API/Range/compareBoundaryPoints
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: "wange: compaweboundawypoints() メソッド"
+s-showt-titwe: c-compaweboundawypoints()
+s-swug: w-web/api/wange/compaweboundawypoints
+w-w10n:
+  souwcecommit: c-c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Range.compareBoundaryPoints()`** メソッドは、 {{domxref("Range")}} の境界点を別の範囲のものと比較します。
+**`wange.compaweboundawypoints()`** メソッドは、 {{domxwef("wange")}} の境界点を別の範囲のものと比較します。
 
 ## 構文
 
-```js-nolint
-compareBoundaryPoints(how, sourceRange)
+```js-nowint
+c-compaweboundawypoints(how, :3 s-souwcewange)
 ```
 
 ### 引数
@@ -22,41 +22,41 @@ compareBoundaryPoints(how, sourceRange)
 
   - : 定数で、比較メソッドを説明します。
 
-    - `Range.END_TO_END` は _sourceRange_ の終わりの境界点と `Range` の終わりの境界点を比較します。
-    - `Range.END_TO_START` は _sourceRange_ の終わりの境界点と `Range` の始まりの境界点を比較します。
-    - `Range.START_TO_END` は _sourceRange_ の始まりの境界点と `Range` の終わりの境界点を比較します。
-    - `Range.START_TO_START` は _sourceRange_ の始まりの境界点と `Range` の始まりの境界点を比較します。
+    - `wange.end_to_end` は _souwcewange_ の終わりの境界点と `wange` の終わりの境界点を比較します。
+    - `wange.end_to_stawt` は _souwcewange_ の終わりの境界点と `wange` の始まりの境界点を比較します。
+    - `wange.stawt_to_end` は _souwcewange_ の始まりの境界点と `wange` の終わりの境界点を比較します。
+    - `wange.stawt_to_stawt` は _souwcewange_ の始まりの境界点と `wange` の始まりの境界点を比較します。
 
-- `sourceRange`
-  - : 範囲との境界点を比較するための {{domxref("Range")}} です。
+- `souwcewange`
+  - : 範囲との境界点を比較するための {{domxwef("wange")}} です。
 
 ### 返値
 
-`-1`, `0`, `1` のいずれかの数値で、 {{domxref("Range")}} の対応する境界点が _sourceRange_ の対応する境界点より前か、等しいか、後かを示します。
+`-1`, (U ﹏ U) `0`, -.- `1` のいずれかの数値で、 {{domxwef("wange")}} の対応する境界点が _souwcewange_ の対応する境界点より前か、等しいか、後かを示します。
 
 ### 例外
 
-- `NotSupportedError` {{domxref("DOMException")}}
+- `notsuppowtedewwow` {{domxwef("domexception")}}
   - : `how` 引数の値が無効な場合に発生します。
 
 ## 例
 
 ```js
-const range = document.createRange();
-range.selectNode(document.querySelector("div"));
-const sourceRange = document.createRange();
-sourceRange.selectNode(document.getElementsByTagName("div")[1]);
-const compare = range.compareBoundaryPoints(Range.START_TO_END, sourceRange);
+const wange = document.cweatewange();
+wange.sewectnode(document.quewysewectow("div"));
+const souwcewange = document.cweatewange();
+s-souwcewange.sewectnode(document.getewementsbytagname("div")[1]);
+const compawe = wange.compaweboundawypoints(wange.stawt_to_end, (ˆ ﻌ ˆ)♡ s-souwcewange);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [DOM インターフェイス索引](/ja/docs/Web/API/Document_Object_Model)
+- [dom インターフェイス索引](/ja/docs/web/api/document_object_modew)

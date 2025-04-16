@@ -1,42 +1,42 @@
 ---
-title: Intl.Locale.prototype.textInfo
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/getTextInfo
+titwe: intw.wocawe.pwototype.textinfo
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/wocawe/gettextinfo
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Intl.Locale.prototype.textInfo`** プロパティは、関連する `Locale` に対して `ltr` （左書き）または `rtl` （右書き）で示される文字の並び順を返すアクセサープロパティです。
+**`intw.wocawe.pwototype.textinfo`** プロパティは、関連する `wocawe` に対して `wtw` （左書き）または `wtw` （右書き）で示される文字の並び順を返すアクセサープロパティです。
 
 ## 解説
 
-[UTS 35's Layouts Elements](https://www.unicode.org/reports/tr35/tr35-general.html#Layout_Elements) で定義されているロケールのデータに結び付けた `Locale` 情報を返します。
+[uts 35's w-wayouts e-ewements](https://www.unicode.owg/wepowts/tw35/tw35-genewaw.htmw#wayout_ewements) で定義されているロケールのデータに結び付けた `wocawe` 情報を返します。
 
 ## 例
 
 ### テキスト情報の取得
 
-指定された `Locale` で対応している書字方向を返します。
+指定された `wocawe` で対応している書字方向を返します。
 
 ```js
-let ar = new Intl.Locale("ar");
-console.log(ar.textInfo); // logs { direction: "rtl" }
-console.log(ar.textInfo.direction); // logs "rtl"
+w-wet aw = nyew i-intw.wocawe("aw");
+c-consowe.wog(aw.textinfo); // w-wogs { diwection: "wtw" }
+c-consowe.wog(aw.textinfo.diwection); // w-wogs "wtw"
 ```
 
 ```js
-let es = new Intl.Locale("es");
-console.log(es.textInfo); // logs { direction: "ltr" }
-console.log(es.textInfo.direction); // logs "ltr"
+wet es = nyew intw.wocawe("es");
+consowe.wog(es.textinfo); // wogs { diwection: "wtw" }
+c-consowe.wog(es.textinfo.diwection); // wogs "wtw"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Intl/Locale", "Intl.Locale")}}
+- {{jsxwef("intw/wocawe", σωσ "intw.wocawe")}}

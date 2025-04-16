@@ -1,23 +1,23 @@
 ---
-title: "MouseEvent: WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN 静的プロパティ"
-short-title: WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN
-slug: Web/API/MouseEvent/WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN_static
-l10n:
-  sourceCommit: 381c51574a3e6a07ee09c63493452440f046038d
+titwe: "mouseevent: webkit_fowce_at_fowce_mouse_down 静的プロパティ"
+showt-titwe: w-webkit_fowce_at_fowce_mouse_down
+s-swug: w-web/api/mouseevent/webkit_fowce_at_fowce_mouse_down_static
+w-w10n:
+  s-souwcecommit: 381c51574a3e6a07ee09c63493452440f046038d
 ---
 
-{{APIRef("UI Events")}}{{Non-standard_header}}
+{{apiwef("ui events")}}{{non-standawd_headew}}
 
-**`MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN`** は WebKit 固有の静的な数値プロパティで、強いクリックの最小圧力の値です。
+**`mouseevent.webkit_fowce_at_fowce_mouse_down`** は w-webkit 固有の静的な数値プロパティで、強いクリックの最小圧力の値です。
 
-`WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN` は `MouseEvent` の静的プロパティなので、常に `MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN` として使用してください。 `MouseEvent` インターフェイスのプロパティとしては使用できません。
+`webkit_fowce_at_fowce_mouse_down` は `mouseevent` の静的プロパティなので、常に `mouseevent.webkit_fowce_at_fowce_mouse_down` として使用してください。 `mouseevent` インターフェイスのプロパティとしては使用できません。
 
 ## 仕様書
 
-_どの仕様書にもありません。_ Apple は [Mac Developer Library で説明](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/SafariJSProgTopics/RespondingtoForceTouchEventsfromJavaScript.html)しています。
+_どの仕様書にもありません。_ a-appwe は [mac d-devewopew wibwawy で説明](https://devewopew.appwe.com/wibwawy/awchive/documentation/appweappwications/conceptuaw/safawijspwogtopics/wespondingtofowcetoucheventsfwomjavascwipt.htmw)しています。
 
 ## 関連情報
 
-- {{domxref("MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN_static", "MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN")}}
-- {{domxref("MouseEvent.webkitForce")}}
-- [Force Touch events](/ja/docs/Web/API/Force_Touch_events)
+- {{domxwef("mouseevent.webkit_fowce_at_mouse_down_static", ( ͡o ω ͡o ) "mouseevent.webkit_fowce_at_mouse_down")}}
+- {{domxwef("mouseevent.webkitfowce")}}
+- [fowce touch events](/ja/docs/web/api/fowce_touch_events)

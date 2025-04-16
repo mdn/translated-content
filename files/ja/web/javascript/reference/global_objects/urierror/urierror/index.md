@@ -1,73 +1,73 @@
 ---
-title: URIError() コンストラクター
-slug: Web/JavaScript/Reference/Global_Objects/URIError/URIError
+titwe: uwiewwow() コンストラクター
+swug: w-web/javascwipt/wefewence/gwobaw_objects/uwiewwow/uwiewwow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`URIError`** コンストラクターは、グローバルの URI 操作関数が間違った方法で使用された場合のエラーを生成します。
+**`uwiewwow`** コンストラクターは、グローバルの u-uwi 操作関数が間違った方法で使用された場合のエラーを生成します。
 
 ## 構文
 
 ```
-new URIError([message[, fileName[, lineNumber]]])
+n-nyew u-uwiewwow([message[, rawr x3 f-fiwename[, nyaa~~ w-winenumbew]]])
 ```
 
 ### 引数
 
-- `message` {{optional_inline}}
+- `message` {{optionaw_inwine}}
   - : 人間が読むためのエラーの説明です。
-- `fileName` {{optional_inline}}
+- `fiwename` {{optionaw_inwine}}
   - : 例外が発生したコードを含むファイルの名前です。
-- `lineNumber` {{optional_inline}}
+- `winenumbew` {{optionaw_inwine}}
   - : 例外が発生したコードの行番号です。
 
 ## 例
 
-### URIError の捕捉
+### u-uwiewwow の捕捉
 
 ```js
-try {
-  decodeURIComponent("%");
+t-twy {
+  decodeuwicomponent("%");
 } catch (e) {
-  console.log(e instanceof URIError); // true
-  console.log(e.message); // "malformed URI sequence"
-  console.log(e.name); // "URIError"
-  console.log(e.fileName); // "Scratchpad/1"
-  console.log(e.lineNumber); // 2
-  console.log(e.columnNumber); // 2
-  console.log(e.stack); // "@Scratchpad/2:2:3\n"
+  consowe.wog(e instanceof uwiewwow); // t-twue
+  consowe.wog(e.message); // "mawfowmed uwi sequence"
+  consowe.wog(e.name); // "uwiewwow"
+  c-consowe.wog(e.fiwename); // "scwatchpad/1"
+  consowe.wog(e.winenumbew); // 2
+  c-consowe.wog(e.cowumnnumbew); // 2
+  consowe.wog(e.stack); // "@scwatchpad/2:2:3\n"
 }
 ```
 
-### URIError の生成
+### uwiewwow の生成
 
 ```js
-try {
-  throw new URIError("Hello", "someFile.js", 10);
-} catch (e) {
-  console.log(e instanceof URIError); // true
-  console.log(e.message); // "Hello"
-  console.log(e.name); // "URIError"
-  console.log(e.fileName); // "someFile.js"
-  console.log(e.lineNumber); // 10
-  console.log(e.columnNumber); // 0
-  console.log(e.stack); // "@Scratchpad/2:2:9\n"
+twy {
+  t-thwow nyew uwiewwow("hewwo", /(^•ω•^) "somefiwe.js", rawr 10);
+} c-catch (e) {
+  c-consowe.wog(e instanceof uwiewwow); // twue
+  consowe.wog(e.message); // "hewwo"
+  consowe.wog(e.name); // "uwiewwow"
+  c-consowe.wog(e.fiwename); // "somefiwe.js"
+  consowe.wog(e.winenumbew); // 10
+  consowe.wog(e.cowumnnumbew); // 0
+  consowe.wog(e.stack); // "@scwatchpad/2:2:9\n"
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Error")}}
-- {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}
-- {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
-- {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}
-- {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
+- {{jsxwef("ewwow")}}
+- {{jsxwef("gwobaw_objects/decodeuwi", OwO "decodeuwi()")}}
+- {{jsxwef("gwobaw_objects/decodeuwicomponent", (U ﹏ U) "decodeuwicomponent()")}}
+- {{jsxwef("gwobaw_objects/encodeuwi", >_< "encodeuwi()")}}
+- {{jsxwef("gwobaw_objects/encodeuwicomponent", rawr x3 "encodeuwicomponent()")}}

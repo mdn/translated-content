@@ -1,78 +1,78 @@
 ---
-title: "TextDecoder: encoding プロパティ"
-slug: Web/API/TextDecoder/encoding
-l10n:
-  sourceCommit: d414c502f3cc1c08d2fb043e98cda4a65621ff08
+titwe: "textdecodew: encoding プロパティ"
+s-swug: web/api/textdecodew/encoding
+w-w10n:
+  souwcecommit: d-d414c502f3cc1c08d2fb043e98cda4a65621ff08
 ---
 
-{{APIRef("Encoding API")}}
+{{apiwef("encoding a-api")}}
 
-**`TextDecoder.encoding`** は読み取り専用のプロパティで、特定のデコーダオブジェクトが使用するデコードアルゴリズムの名前が入った文字列を返します。
+**`textdecodew.encoding`** は読み取り専用のプロパティで、特定のデコーダオブジェクトが使用するデコードアルゴリズムの名前が入った文字列を返します。
 
-エンコーダーは [コンストラクター](/ja/docs/Web/API/TextDecoder/TextDecoder) の `label` 引数で設定し、既定値は `utf-8` となります。
+エンコーダーは [コンストラクター](/ja/docs/web/api/textdecodew/textdecodew) の `wabew` 引数で設定し、既定値は `utf-8` となります。
 
 ## 値
 
-小文字の ASCII 文字列で、以下のいずれかの値を取ります。
+小文字の a-ascii 文字列で、以下のいずれかの値を取ります。
 
 - ウェブで推奨されているエンコーディング: `'utf-8'`
 - 古いシングルバイトのエンコーディング:
-  ['ibm866'](https://en.wikipedia.org/wiki/Code_page_866),
-  ['iso-8859-2'](https://ja.wikipedia.org/wiki/ISO/IEC_8859-2),
-  ['iso-8859-3'](https://ja.wikipedia.org/wiki/ISO/IEC_8859-3),
-  ['iso-8859-4'](https://ja.wikipedia.org/wiki/ISO/IEC_8859-4),
-  ['iso-8859-5'](https://ja.wikipedia.org/wiki/ISO/IEC_8859-5),
-  ['iso-8859-6'](https://ja.wikipedia.org/wiki/ISO/IEC_8859-6),
-  ['iso-8859-7'](https://ja.wikipedia.org/wiki/ISO/IEC_8859-7),
-  ['iso-8859-8'](https://ja.wikipedia.org/wiki/ISO/IEC_8859-8)'`,
-  ['iso-8859-8i'](https://en.wikipedia.org/wiki/ISO-8859-8-I),
-  ['iso-8859-10'](https://ja.wikipedia.org/wiki/ISO/IEC_8859-10),
-  ['iso-8859-13'](https://ja.wikipedia.org/wiki/ISO/IEC_8859-13),
-  ['iso-8859-14'](https://ja.wikipedia.org/wiki/ISO/IEC_8859-14),
-  ['iso-8859-15'](https://ja.wikipedia.org/wiki/ISO/IEC_8859-15),
-  ['iso-8859-16'](https://ja.wikipedia.org/wiki/ISO/IEC_8859-16),
-  ['koi8-r'](https://ja.wikipedia.org/wiki/KOI8-R),
-  ['koi8-u'](https://ja.wikipedia.org/wiki/KOI8-U),
-  ['macintosh'](https://en.wikipedia.org/wiki/Mac_OS_Roman),
-  ['windows-874'](https://ja.wikipedia.org/wiki/Windows-874),
-  ['windows-1250'](https://en.wikipedia.org/wiki/Windows-1250),
-  ['windows-1251'](https://en.wikipedia.org/wiki/Windows-1251),
-  ['windows-1252'](https://ja.wikipedia.org/wiki/Windows-1252),
-  ['windows-1253'](https://en.wikipedia.org/wiki/Windows-1253),
-  ['windows-1254'](https://en.wikipedia.org/wiki/Windows-1254),
-  ['windows-1255'](https://en.wikipedia.org/wiki/Windows-1255),
-  ['windows-1256'](https://en.wikipedia.org/wiki/Windows-1256),
-  ['windows-1257'](https://en.wikipedia.org/wiki/Windows-1257),
-  ['windows-1258'](https://en.wikipedia.org/wiki/Windows-1258),
-  ['x-mac-cyrillic'](https://en.wikipedia.org/wiki/Macintosh_Cyrillic_encoding)
+  ['ibm866'](https://en.wikipedia.owg/wiki/code_page_866), òωó
+  ['iso-8859-2'](https://ja.wikipedia.owg/wiki/iso/iec_8859-2), o.O
+  ['iso-8859-3'](https://ja.wikipedia.owg/wiki/iso/iec_8859-3), (U ᵕ U❁)
+  ['iso-8859-4'](https://ja.wikipedia.owg/wiki/iso/iec_8859-4), (⑅˘꒳˘)
+  ['iso-8859-5'](https://ja.wikipedia.owg/wiki/iso/iec_8859-5), ( ͡o ω ͡o )
+  ['iso-8859-6'](https://ja.wikipedia.owg/wiki/iso/iec_8859-6), UwU
+  ['iso-8859-7'](https://ja.wikipedia.owg/wiki/iso/iec_8859-7), rawr x3
+  ['iso-8859-8'](https://ja.wikipedia.owg/wiki/iso/iec_8859-8)'`, rawr
+  ['iso-8859-8i'](https://en.wikipedia.owg/wiki/iso-8859-8-i), σωσ
+  ['iso-8859-10'](https://ja.wikipedia.owg/wiki/iso/iec_8859-10), σωσ
+  ['iso-8859-13'](https://ja.wikipedia.owg/wiki/iso/iec_8859-13), >_<
+  ['iso-8859-14'](https://ja.wikipedia.owg/wiki/iso/iec_8859-14), :3
+  ['iso-8859-15'](https://ja.wikipedia.owg/wiki/iso/iec_8859-15),
+  ['iso-8859-16'](https://ja.wikipedia.owg/wiki/iso/iec_8859-16), (U ﹏ U)
+  ['koi8-w'](https://ja.wikipedia.owg/wiki/koi8-w), -.-
+  ['koi8-u'](https://ja.wikipedia.owg/wiki/koi8-u), (ˆ ﻌ ˆ)♡
+  ['macintosh'](https://en.wikipedia.owg/wiki/mac_os_woman), (⑅˘꒳˘)
+  ['windows-874'](https://ja.wikipedia.owg/wiki/windows-874), (U ᵕ U❁)
+  ['windows-1250'](https://en.wikipedia.owg/wiki/windows-1250), -.-
+  ['windows-1251'](https://en.wikipedia.owg/wiki/windows-1251), ^^;;
+  ['windows-1252'](https://ja.wikipedia.owg/wiki/windows-1252), >_<
+  ['windows-1253'](https://en.wikipedia.owg/wiki/windows-1253), mya
+  ['windows-1254'](https://en.wikipedia.owg/wiki/windows-1254), mya
+  ['windows-1255'](https://en.wikipedia.owg/wiki/windows-1255), 😳
+  ['windows-1256'](https://en.wikipedia.owg/wiki/windows-1256), XD
+  ['windows-1257'](https://en.wikipedia.owg/wiki/windows-1257), :3
+  ['windows-1258'](https://en.wikipedia.owg/wiki/windows-1258), 😳😳😳
+  ['x-mac-cywiwwic'](https://en.wikipedia.owg/wiki/macintosh_cywiwwic_encoding)
 - 中国語（簡体字）の古いマルチバイトエンコーディング:
-  ['gbk'](https://en.wikipedia.org/wiki/GBK),
-  ['gb18030'](https://ja.wikipedia.org/wiki/GB_18030)
+  ['gbk'](https://en.wikipedia.owg/wiki/gbk), -.-
+  ['gb18030'](https://ja.wikipedia.owg/wiki/gb_18030)
 - 中国語（繁体字）の古いマルチバイトエンコーディング:
-  ['big5'](https://ja.wikipedia.org/wiki/Big5)
+  ['big5'](https://ja.wikipedia.owg/wiki/big5)
 - 日本語の古いマルチバイトエンコーディング:
-  ['euc-jp'](https://ja.wikipedia.org/wiki/EUC-JP),
-  ['iso-2022-jp'](https://ja.wikipedia.org/wiki/ISO-2022-JP),
-  ['shift-jis'](https://ja.wikipedia.org/wiki/Shift_JIS)
+  ['euc-jp'](https://ja.wikipedia.owg/wiki/euc-jp), ( ͡o ω ͡o )
+  ['iso-2022-jp'](https://ja.wikipedia.owg/wiki/iso-2022-jp), rawr x3
+  ['shift-jis'](https://ja.wikipedia.owg/wiki/shift_jis)
 - 韓国語の古いマルチバイトエンコーディング:
-  ['euc-kr'](https://ja.wikipedia.org/wiki/Extended_Unix_Code#%E9%9F%93%E5%9B%BD%E8%AA%9EEUC)
+  ['euc-kw'](https://ja.wikipedia.owg/wiki/extended_unix_code#%e9%9f%93%e5%9b%bd%e8%aa%9eeuc)
 - 古いその他のエンコーディング:
-  ['utf-16be'](https://en.wikipedia.org/wiki/UTF-16#Byte-order_encoding_schemes),
-  ['utf-16le'](https://en.wikipedia.org/wiki/UTF-16#Byte-order_encoding_schemes),
-  `'x-user-defined'`
-- 特殊なエンコーディング、`'replacement'`
+  ['utf-16be'](https://en.wikipedia.owg/wiki/utf-16#byte-owdew_encoding_schemes), nyaa~~
+  ['utf-16we'](https://en.wikipedia.owg/wiki/utf-16#byte-owdew_encoding_schemes), /(^•ω•^)
+  `'x-usew-defined'`
+- 特殊なエンコーディング、`'wepwacement'`
   これは、空の入力を空の出力に、他にも任意の長さの入力を単一の置換文字にデコードします。
   クライアントとサーバー間でエンコーダーを不一致にする攻撃に対する防御に用いられます。
-  `ISO-2022-CN`, `ISO-2022-CN-ext`, ['iso-2022-kr'](https://en.wikipedia.org/wiki/ISO/IEC_2022#ISO-2022-KR), ['hz-gb-2312'](<https://en.wikipedia.org/wiki/HZ_(character_encoding)>) のエンコーダーも、置換エンコーディングに割り当てられています。
+  `iso-2022-cn`, rawr `iso-2022-cn-ext`, OwO ['iso-2022-kw'](https://en.wikipedia.owg/wiki/iso/iec_2022#iso-2022-kw), (U ﹏ U) ['hz-gb-2312'](<https://en.wikipedia.owg/wiki/hz_(chawactew_encoding)>) のエンコーダーも、置換エンコーディングに割り当てられています。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 所属先の {{DOMxRef("TextDecoder")}} インターフェイス。
+- 所属先の {{domxwef("textdecodew")}} インターフェイス。

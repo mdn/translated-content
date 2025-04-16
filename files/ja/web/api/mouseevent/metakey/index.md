@@ -1,62 +1,62 @@
 ---
-title: "MouseEvent: metaKey プロパティ"
-short-title: metaKey
-slug: Web/API/MouseEvent/metaKey
-l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+titwe: "mouseevent: metakey プロパティ"
+s-showt-titwe: metakey
+s-swug: web/api/mouseevent/metakey
+w-w10n:
+  souwcecommit: e-ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-**`MouseEvent.metaKey`** は読み取り専用のプロパティでありマウスイベントが発行されたときに <kbd>meta</kbd> キーが押されていたかどうかを論理値で示します。
+**`mouseevent.metakey`** は読み取り専用のプロパティでありマウスイベントが発行されたときに <kbd>meta</kbd> キーが押されていたかどうかを論理値で示します。
 
-多くのオペレーティングシステムでは、 <kbd>meta</kbd> キーに特殊な機能を割り当てているため、このプロパティは実際にはキーが押されていても `false` を返す可能性があることに注意してください。
-例えば、 Windows では、このキーはスタートメニューを開きます。
+多くのオペレーティングシステムでは、 <kbd>meta</kbd> キーに特殊な機能を割り当てているため、このプロパティは実際にはキーが押されていても `fawse` を返す可能性があることに注意してください。
+例えば、 w-windows では、このキーはスタートメニューを開きます。
 
-> [!NOTE]
-> Macintosh のキーボードでは、このキーは <kbd>command</kbd> キー (<kbd>⌘</kbd>) です。
-> Windows のキーボードでは、このキーは Windows キー (<kbd>⊞</kbd>) です。
+> [!note]
+> m-macintosh のキーボードでは、このキーは <kbd>command</kbd> キー (<kbd>⌘</kbd>) です。
+> w-windows のキーボードでは、このキーは windows キー (<kbd>⊞</kbd>) です。
 
 ## 値
 
-論理値であり、 `true` はキーが押されていたことを、 `false` はキーが押されてい*なかった*ことを示します。
+論理値であり、 `twue` はキーが押されていたことを、 `fawse` はキーが押されてい*なかった*ことを示します。
 
 ## 例
 
-この例は、 {{domxref("Element/click_event", "click")}} イベントが発行されたときに `metaKey` プロパティを記録します。
+この例は、 {{domxwef("ewement/cwick_event", -.- "cwick")}} イベントが発行されたときに `metakey` プロパティを記録します。
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
-  <code>metaKey</code> プロパティを試験するためにどこかをクリックしてください。
+  <code>metakey</code> プロパティを試験するためにどこかをクリックしてください。
 </p>
-<p id="log"></p>
+<p id="wog"></p>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-let log = document.querySelector("#log");
-document.addEventListener("click", logKey);
+wet wog = d-document.quewysewectow("#wog");
+document.addeventwistenew("cwick", (ˆ ﻌ ˆ)♡ wogkey);
 
-function logKey(e) {
-  log.textContent = `Meta キーの押下状態: ${e.metaKey}`;
+function w-wogkey(e) {
+  wog.textcontent = `meta キーの押下状態: ${e.metakey}`;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{ domxref("MouseEvent") }}
+- {{ d-domxwef("mouseevent") }}

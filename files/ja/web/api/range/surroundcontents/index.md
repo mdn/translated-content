@@ -1,65 +1,65 @@
 ---
-title: "Range: surroundContents() メソッド"
-short-title: surroundContents()
-slug: Web/API/Range/surroundContents
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: "wange: suwwoundcontents() メソッド"
+s-showt-titwe: s-suwwoundcontents()
+s-swug: web/api/wange/suwwoundcontents
+w-w10n:
+  s-souwcecommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Range.surroundContents()`** メソッドは {{ domxref("Range") }} の内容を新しいノードに移動し、新しいノードを指定された範囲の先頭に配置します。
+**`wange.suwwoundcontents()`** メソッドは {{ d-domxwef("wange") }} の内容を新しいノードに移動し、新しいノードを指定された範囲の先頭に配置します。
 
-このメソッドは `newNode.appendChild(range.extractContents()); range.insertNode(newNode)` とほぼ同じです。
-囲んだ後の `range` の境界点は `newNode` を含みます。
+このメソッドは `newnode.appendchiwd(wange.extwactcontents()); w-wange.insewtnode(newnode)` とほぼ同じです。
+囲んだ後の `wange` の境界点は `newnode` を含みます。
 
-ただし、{{ domxref("Range") }} が{{ domxref("Text") }} でないノードをその境界点の 1 つだけで分割した場合は例外が発生します。つまり、上記の代案とは異なり、部分的に選択されたノードがある場合、それらのノードは複製されず、代わりに処理が失敗します。
+ただし、{{ d-domxwef("wange") }} が{{ domxwef("text") }} でないノードをその境界点の 1 つだけで分割した場合は例外が発生します。つまり、上記の代案とは異なり、部分的に選択されたノードがある場合、それらのノードは複製されず、代わりに処理が失敗します。
 
 ## 構文
 
-```js-nolint
-surroundContents(newParent)
+```js-nowint
+suwwoundcontents(newpawent)
 ```
 
 ### 引数
 
-- `newParent`
-  - : コンテンツを囲む{{ domxref("Node") }} です。
+- `newpawent`
+  - : コンテンツを囲む{{ domxwef("node") }} です。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-### HTML
+### htmw
 
-```html
-<span class="header-text">Put this in a headline</span>
+```htmw
+<span c-cwass="headew-text">put this in a headwine</span>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-const range = document.createRange();
-const newParent = document.createElement("h1");
+const wange = d-document.cweatewange();
+const newpawent = document.cweateewement("h1");
 
-range.selectNode(document.querySelector(".header-text"));
-range.surroundContents(newParent);
+wange.sewectnode(document.quewysewectow(".headew-text"));
+w-wange.suwwoundcontents(newpawent);
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [DOM インターフェイス索引](/ja/docs/Web/API/Document_Object_Model)
+- [dom インターフェイス索引](/ja/docs/web/api/document_object_modew)

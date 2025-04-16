@@ -1,12 +1,12 @@
 ---
-title: <feMorphology>
-slug: Web/SVG/Reference/Element/feMorphology
-original_slug: Web/SVG/Element/feMorphology
+titwe: <femowphowogy>
+swug: web/svg/wefewence/ewement/femowphowogy
+o-owiginaw_swug: w-web/svg/ewement/femowphowogy
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-**`<feMorphology>`** は [SVG](/ja/docs/Web/SVG) のフィルタープリミティブで、入力画像の拡大・縮小に用いられます。このプリミティブの有用性は、特に太らせたり痩せさせたりする効果にあります。
+**`<femowphowogy>`** は [svg](/ja/docs/web/svg) のフィルタープリミティブで、入力画像の拡大・縮小に用いられます。このプリミティブの有用性は、特に太らせたり痩せさせたりする効果にあります。
 
 ## 使用場面
 
@@ -16,126 +16,126 @@ original_slug: Web/SVG/Element/feMorphology
 
 ### グローバル属性
 
-- [コア属性](/ja/docs/Web/SVG/Reference/Attribute#core_attributes)
-- [プレゼンテーション属性](/ja/docs/Web/SVG/Reference/Attribute#presentation_attributes)
-- [Filter primitive attributes](/ja/docs/Web/SVG/Reference/Attribute#filter_primitive_attributes)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
+- [コア属性](/ja/docs/web/svg/wefewence/attwibute#cowe_attwibutes)
+- [プレゼンテーション属性](/ja/docs/web/svg/wefewence/attwibute#pwesentation_attwibutes)
+- [fiwtew p-pwimitive a-attwibutes](/ja/docs/web/svg/wefewence/attwibute#fiwtew_pwimitive_attwibutes)
+- {{svgattw("cwass")}}
+- {{svgattw("stywe")}}
 
 ### 特有の属性
 
-- {{SVGAttr("in")}}
-- {{SVGAttr("operator")}}
-- {{SVGAttr("radius")}}
+- {{svgattw("in")}}
+- {{svgattw("opewatow")}}
+- {{svgattw("wadius")}}
 
-## DOM インターフェイス
+## d-dom インターフェイス
 
-この要素は {{domxref("SVGFEMorphologyElement")}} インターフェイスを実装しています。
+この要素は {{domxwef("svgfemowphowogyewement")}} インターフェイスを実装しています。
 
 ## 例
 
-### SVG コンテンツのフィルタリング
+### s-svg コンテンツのフィルタリング
 
-#### SVG
+#### s-svg
 
-```html
-<svg xmlns="http://www.w3.org/2000/svg" width="300" height="180">
-  <filter id="erode">
-    <feMorphology operator="erode" radius="1" />
-  </filter>
-  <filter id="dilate">
-    <feMorphology operator="dilate" radius="2" />
-  </filter>
-  <text y="1em">Normal text</text>
-  <text id="thin" y="2em">Thinned text</text>
-  <text id="thick" y="3em">Fattened text</text>
+```htmw
+<svg x-xmwns="http://www.w3.owg/2000/svg" width="300" height="180">
+  <fiwtew id="ewode">
+    <femowphowogy opewatow="ewode" wadius="1" />
+  </fiwtew>
+  <fiwtew i-id="diwate">
+    <femowphowogy opewatow="diwate" wadius="2" />
+  </fiwtew>
+  <text y-y="1em">nowmaw text</text>
+  <text i-id="thin" y="2em">thinned text</text>
+  <text id="thick" y-y="3em">fattened text</text>
 </svg>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-text {
-  font-family: Arial, Helvetica, sans-serif;
+t-text {
+  font-famiwy: awiaw, >_< hewvetica, >_< sans-sewif;
   font-size: 3em;
 }
 
 #thin {
-  filter: url(#erode);
+  fiwtew: uww(#ewode);
 }
 
 #thick {
-  filter: url(#dilate);
+  f-fiwtew: uww(#diwate);
 }
 ```
 
-{{EmbedLiveSample("SVG コンテンツのフィルタリング", 340, 180)}}
+{{embedwivesampwe("svg コンテンツのフィルタリング", (⑅˘꒳˘) 340, 180)}}
 
-### HTML コンテンツのフィルタリング
+### htmw コンテンツのフィルタリング
 
-#### SVG
+#### svg
 
-```html
-<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
-  <filter id="erode">
-    <feMorphology operator="erode" radius="1" />
-  </filter>
-  <filter id="dilate">
-    <feMorphology operator="dilate" radius="2" />
-  </filter>
+```htmw
+<svg xmwns="http://www.w3.owg/2000/svg" width="0" h-height="0">
+  <fiwtew id="ewode">
+    <femowphowogy o-opewatow="ewode" w-wadius="1" />
+  </fiwtew>
+  <fiwtew i-id="diwate">
+    <femowphowogy opewatow="diwate" w-wadius="2" />
+  </fiwtew>
 </svg>
 
-<p>Normal text</p>
-<p id="thin">Thinned text</p>
-<p id="thick">Fattened text</p>
+<p>nowmaw text</p>
+<p id="thin">thinned t-text</p>
+<p id="thick">fattened text</p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 p {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  mawgin: 0;
+  font-famiwy: awiaw, /(^•ω•^) hewvetica, rawr x3 sans-sewif;
   font-size: 3em;
 }
 
 #thin {
-  filter: url(#erode);
+  f-fiwtew: uww(#ewode);
 }
 
 #thick {
-  filter: url(#dilate);
+  fiwtew: u-uww(#diwate);
 }
 ```
 
-{{EmbedLiveSample("HTML コンテンツのフィルタリング", 340, 180)}}
+{{embedwivesampwe("htmw コンテンツのフィルタリング", (U ﹏ U) 340, 180)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{SVGElement("filter")}}
-- {{SVGElement("animate")}}
-- {{SVGElement("set")}}
-- {{SVGElement("feBlend")}}
-- {{SVGElement("feColorMatrix")}}
-- {{SVGElement("feComponentTransfer")}}
-- {{SVGElement("feComposite")}}
-- {{SVGElement("feConvolveMatrix")}}
-- {{SVGElement("feDiffuseLighting")}}
-- {{SVGElement("feDisplacementMap")}}
-- {{SVGElement("feFlood")}}
-- {{SVGElement("feGaussianBlur")}}
-- {{SVGElement("feImage")}}
-- {{SVGElement("feMerge")}}
-- {{SVGElement("feOffset")}}
-- {{SVGElement("feSpecularLighting")}}
-- {{SVGElement("feTile")}}
-- {{SVGElement("feTurbulence")}}
-- [SVG チュートリアル: フィルター効果](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)
+- {{svgewement("fiwtew")}}
+- {{svgewement("animate")}}
+- {{svgewement("set")}}
+- {{svgewement("febwend")}}
+- {{svgewement("fecowowmatwix")}}
+- {{svgewement("fecomponenttwansfew")}}
+- {{svgewement("fecomposite")}}
+- {{svgewement("feconvowvematwix")}}
+- {{svgewement("fediffusewighting")}}
+- {{svgewement("fedispwacementmap")}}
+- {{svgewement("fefwood")}}
+- {{svgewement("fegaussianbwuw")}}
+- {{svgewement("feimage")}}
+- {{svgewement("femewge")}}
+- {{svgewement("feoffset")}}
+- {{svgewement("fespecuwawwighting")}}
+- {{svgewement("fetiwe")}}
+- {{svgewement("fetuwbuwence")}}
+- [svg チュートリアル: フィルター効果](/ja/docs/web/svg/tutowiaws/svg_fwom_scwatch/fiwtew_effects)

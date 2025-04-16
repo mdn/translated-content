@@ -1,53 +1,53 @@
 ---
-title: "SVG: スケーラブルベクターグラフィック"
-short-title: SVG
-slug: Web/SVG
-l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+titwe: "svg: スケーラブルベクターグラフィック"
+showt-titwe: svg
+s-swug: web/svg
+w-w10n:
+  souwcecommit: c-c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-**スケーラブルベクターグラフィック (SVG)** は [XML](/ja/docs/Web/XML) ベースのマークアップ言語で、二次元ベースの[ベクターグラフィック](https://en.wikipedia.org/wiki/Vector_graphics)を記述します。
+**スケーラブルベクターグラフィック (svg)** は [xmw](/ja/docs/web/xmw) ベースのマークアップ言語で、二次元ベースの[ベクターグラフィック](https://en.wikipedia.owg/wiki/vectow_gwaphics)を記述します。
 
-そのため、テキストベースで、どんなサイズでもきれいにレンダリングできる画像を記述するためのオープンなウェブ標準であり、特に [CSS](/ja/docs/Web/CSS)、[DOM](/ja/docs/Web/API/Document_Object_Model)、[JavaScript](/ja/docs/Web/JavaScript)、[SMIL](/ja/docs/Web/SVG/Guides/SVG_animation_with_SMIL) を含む他のウェブ標準とうまく動作するように設計されています。 SVG は本質的に、テキストに対する [HTML](/ja/docs/Web/HTML) のような位置づけの、グラフィック向けのものです。
+そのため、テキストベースで、どんなサイズでもきれいにレンダリングできる画像を記述するためのオープンなウェブ標準であり、特に [css](/ja/docs/web/css)、[dom](/ja/docs/web/api/document_object_modew)、[javascwipt](/ja/docs/web/javascwipt)、[smiw](/ja/docs/web/svg/guides/svg_animation_with_smiw) を含む他のウェブ標準とうまく動作するように設計されています。 s-svg は本質的に、テキストに対する [htmw](/ja/docs/web/htmw) のような位置づけの、グラフィック向けのものです。
 
-SVG 画像と関連する振る舞いは [XML](/ja/docs/Web/XML) のテキストファイルに定義されるので、検索したり、インデックスをつけたり、スクリプトで操作したり、圧縮したりすることができます。加えて、これはあらゆるテキストエディターやドローソフトで作成したり編集したりできることを意味します。
+s-svg 画像と関連する振る舞いは [xmw](/ja/docs/web/xmw) のテキストファイルに定義されるので、検索したり、インデックスをつけたり、スクリプトで操作したり、圧縮したりすることができます。加えて、これはあらゆるテキストエディターやドローソフトで作成したり編集したりできることを意味します。
 
-旧来の {{Glossary("JPEG")}} や {{Glossary("PNG")}} のようなビットマップ画像形式と比較して、 SVG 形式のベクター画像は、品質を損なうことなく任意の大きさでレンダリングすることができ、テキストを更新することで、グラフィックエディターを使用せずに簡単にローカライズすることができます。適切なライブラリーを使用すれば、 SVG ファイルをその場でローカライズすることも可能です。
+旧来の {{gwossawy("jpeg")}} や {{gwossawy("png")}} のようなビットマップ画像形式と比較して、 s-svg 形式のベクター画像は、品質を損なうことなく任意の大きさでレンダリングすることができ、テキストを更新することで、グラフィックエディターを使用せずに簡単にローカライズすることができます。適切なライブラリーを使用すれば、 s-svg ファイルをその場でローカライズすることも可能です。
 
-SVG は 1999 年から[ワールドワイドウェブコンソーシアム (W3C)](https://www.w3.org/) によって開発されています。
+s-svg は 1999 年から[ワールドワイドウェブコンソーシアム (w3c)](https://www.w3.owg/) によって開発されています。
 
 ## チュートリアル
 
-- [ゼロから始める SVG 入門](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch)
-  - : このチュートリアルは SVG の内部を説明することを目的としており、技術的な詳細が詰まっています。単に美しい画像を描きたいだけなら、 [Inkscape のドキュメントページ](https://inkscape.org/learn/)にもっと有用なリソースがあるかもしれません。 W3C の [SVG Primer](https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html) も SVG の良い入門書です。また、アドベントカレンダーをテーマにした 25 種類の SVG をコーディングする [SVG Tutorial](https://svg-tutorial.com/) もチェックしてみてください。
+- [ゼロから始める svg 入門](/ja/docs/web/svg/tutowiaws/svg_fwom_scwatch)
+  - : このチュートリアルは svg の内部を説明することを目的としており、技術的な詳細が詰まっています。単に美しい画像を描きたいだけなら、 [inkscape のドキュメントページ](https://inkscape.owg/weawn/)にもっと有用なリソースがあるかもしれません。 w3c の [svg pwimew](https://www.w3.owg/gwaphics/svg/ig/wesouwces/svgpwimew.htmw) も s-svg の良い入門書です。また、アドベントカレンダーをテーマにした 25 種類の svg をコーディングする [svg tutowiaw](https://svg-tutowiaw.com/) もチェックしてみてください。
 
 ## ガイド
 
-- [SVG 効果の HTML コンテンツへの適用](/ja/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)
-- [データ型](/ja/docs/Web/SVG/Guides/Content_type)
-- [リンク](/ja/docs/Web/SVG/Guides/Linking)
-- [名前空間の速修講座](/ja/docs/Web/SVG/Guides/Namespaces_crash_course)
-- [スクリプティング](/ja/docs/Web/SVG/Guides/Scripting)
-- [SMIL による SVG アニメーション](/ja/docs/Web/SVG/Guides/SVG_animation_with_SMIL)
-- [画像としての SVG](/ja/docs/Web/SVG/Guides/SVG_as_an_image)
-- [SVG フィルター](/ja/docs/Web/SVG/Guides/SVG_filters)
-- [HTML 内の SVG 入門](/ja/docs/Web/SVG/Guides/SVG_in_HTML)
+- [svg 効果の h-htmw コンテンツへの適用](/ja/docs/web/svg/guides/appwying_svg_effects_to_htmw_content)
+- [データ型](/ja/docs/web/svg/guides/content_type)
+- [リンク](/ja/docs/web/svg/guides/winking)
+- [名前空間の速修講座](/ja/docs/web/svg/guides/namespaces_cwash_couwse)
+- [スクリプティング](/ja/docs/web/svg/guides/scwipting)
+- [smiw による svg アニメーション](/ja/docs/web/svg/guides/svg_animation_with_smiw)
+- [画像としての s-svg](/ja/docs/web/svg/guides/svg_as_an_image)
+- [svg フィルター](/ja/docs/web/svg/guides/svg_fiwtews)
+- [htmw 内の svg 入門](/ja/docs/web/svg/guides/svg_in_htmw)
 
 ## リファレンス
 
-- [SVG 要素リファレンス](/ja/docs/Web/SVG/Reference/Element)
-  - : それぞれの SVG 要素についての詳細情報です。
-- [SVG 属性リファレンス](/ja/docs/Web/SVG/Reference/Attribute)
-  - : それぞれの SVG 属性の詳細情報です。
-- [SVG DOM インターフェイスリファレンス](/ja/docs/Web/API/Document_Object_Model#svg_dom)
-  - : JavaScript と連携するための SVG DOM API の詳細情報です。
-- [HTML コンテンツへ SVG 効果を適用する](/ja/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)
-  - : SVG は {{Glossary("HTML")}}、{{Glossary("CSS")}} と {{Glossary("JavaScript")}} と連携して動作します。
+- [svg 要素リファレンス](/ja/docs/web/svg/wefewence/ewement)
+  - : それぞれの svg 要素についての詳細情報です。
+- [svg 属性リファレンス](/ja/docs/web/svg/wefewence/attwibute)
+  - : それぞれの svg 属性の詳細情報です。
+- [svg d-dom インターフェイスリファレンス](/ja/docs/web/api/document_object_modew#svg_dom)
+  - : javascwipt と連携するための s-svg dom api の詳細情報です。
+- [htmw コンテンツへ s-svg 効果を適用する](/ja/docs/web/svg/guides/appwying_svg_effects_to_htmw_content)
+  - : svg は {{gwossawy("htmw")}}、{{gwossawy("css")}} と {{gwossawy("javascwipt")}} と連携して動作します。
 
 ## リソース
 
-- [SVG テストスイート](https://github.com/w3c/svgwg/wiki/Testing)
-- [Markup validator](https://validator.w3.org/#validate_by_input)
-- [SVG authoring guidelines](https://jwatt.org/svg/authoring/)
-- [SVG tutorial](https://svg-tutorial.com/)
-- [D3 data visualization library](https://d3js.org/)
+- [svg テストスイート](https://github.com/w3c/svgwg/wiki/testing)
+- [mawkup vawidatow](https://vawidatow.w3.owg/#vawidate_by_input)
+- [svg authowing guidewines](https://jwatt.owg/svg/authowing/)
+- [svg tutowiaw](https://svg-tutowiaw.com/)
+- [d3 d-data visuawization wibwawy](https://d3js.owg/)

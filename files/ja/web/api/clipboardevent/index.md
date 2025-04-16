@@ -1,42 +1,42 @@
 ---
-title: ClipboardEvent
-slug: Web/API/ClipboardEvent
-l10n:
-  sourceCommit: 7087ffd50a4d81d1b91fe603c26456e9ce398574
+titwe: cwipboawdevent
+swug: web/api/cwipboawdevent
+w-w10n:
+  souwcecommit: 7087ffd50a4d81d1b91fe603c26456e9ce398574
 ---
 
-{{APIRef("Clipboard API")}}
+{{apiwef("cwipboawd a-api")}}
 
-**`ClipboardEvent`** は[クリップボード API](/ja/docs/Web/API/Clipboard_API) のインターフェイスで、 クリップボードの変更に関連する情報を提供するイベントを表します。すなわち、{{domxref("Element/cut_event", "cut")}}、{{domxref("Element/copy_event", "copy")}}、{{domxref("Element/paste_event", "paste")}} イベントです。
+**`cwipboawdevent`** は[クリップボード a-api](/ja/docs/web/api/cwipboawd_api) のインターフェイスで、 クリップボードの変更に関連する情報を提供するイベントを表します。すなわち、{{domxwef("ewement/cut_event", ( ͡o ω ͡o ) "cut")}}、{{domxwef("ewement/copy_event", UwU "copy")}}、{{domxwef("ewement/paste_event", rawr x3 "paste")}} イベントです。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-- {{domxref("ClipboardEvent.ClipboardEvent", "ClipboardEvent()")}}
-  - : 指定した引数で `ClipboardEvent` イベントを生成します。
+- {{domxwef("cwipboawdevent.cwipboawdevent", rawr "cwipboawdevent()")}}
+  - : 指定した引数で `cwipboawdevent` イベントを生成します。
 
 ## インスタンスプロパティ
 
-_親である {{domxref("Event")}} から継承したプロパティもあります。_
+_親である {{domxwef("event")}} から継承したプロパティもあります。_
 
-- {{domxref("ClipboardEvent.clipboardData")}} {{ReadOnlyInline}}
-  - : ユーザーが開始した {{domxref("Element/cut_event", "cut")}}、{{domxref("Element/copy_event", "copy")}}、{{domxref("Element/paste_event", "paste")}} 操作によって影響を受けたデータとその MIME タイプを含む {{domxref("DataTransfer")}} オブジェクト。
+- {{domxwef("cwipboawdevent.cwipboawddata")}} {{weadonwyinwine}}
+  - : ユーザーが開始した {{domxwef("ewement/cut_event", σωσ "cut")}}、{{domxwef("ewement/copy_event", σωσ "copy")}}、{{domxwef("ewement/paste_event", >_< "paste")}} 操作によって影響を受けたデータとその m-mime タイプを含む {{domxwef("datatwansfew")}} オブジェクト。
 
 ## インスタンスメソッド
 
-_固有のメソッドはありません。親である {{domxref("Event")}} から継承したメソッドがあります。_
+_固有のメソッドはありません。親である {{domxwef("event")}} から継承したメソッドがあります。_
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- Copy 関連イベント： {{domxref("Element/copy_event", "copy")}}, {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/paste_event", "paste")}}
-- [クリップボード API](/ja/docs/Web/API/Clipboard_API)
-- [Image support for Async Clipboard article](https://web.dev/async-clipboard/)
+- c-copy 関連イベント： {{domxwef("ewement/copy_event", :3 "copy")}}, (U ﹏ U) {{domxwef("ewement/cut_event", -.- "cut")}}, {{domxwef("ewement/paste_event", (ˆ ﻌ ˆ)♡ "paste")}}
+- [クリップボード a-api](/ja/docs/web/api/cwipboawd_api)
+- [image s-suppowt f-fow async cwipboawd awticwe](https://web.dev/async-cwipboawd/)

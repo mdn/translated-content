@@ -1,48 +1,48 @@
 ---
-title: 'TypeError: can''t redefine non-configurable property "x"'
-slug: Web/JavaScript/Reference/Errors/Cant_redefine_property
+titwe: 'typeewwow: can''t wedefine n-nyon-configuwabwe p-pwopewty "x"'
+s-swug: web/javascwipt/wefewence/ewwows/cant_wedefine_pwopewty
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## メッセージ
 
 ```
-TypeError: can't redefine non-configurable property "x" (Firefox)
-TypeError: Cannot redefine property: "x" (Chrome)
+t-typeewwow: c-can't wedefine n-nyon-configuwabwe p-pwopewty "x" (fiwefox)
+t-typeewwow: cannot wedefine pwopewty: "x" (chwome)
 ```
 
 ## エラータイプ
 
-{{jsxref("TypeError")}}
+{{jsxwef("typeewwow")}}
 
 ## 何がうまくいかなかったのか？
 
-プロパティを再定義しようとしましたが、そのプロパティは[設定不可](/ja/docs/Web/JavaScript/Guide/Data_structures#プロパティ)です。`configurable` 属性は、プロパティをオブジェクトから削除できるかどうか、および (`writable` 以外で) 変更できるかどうかを制御します。通常、[オブジェクト初期化子](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)で生成されたオブジェクトのプロパティは、変更可能です。しかし、{{jsxref("Object.defineProperty()")}} を使用した場合などは、既定でプロパティを修正できません。
+プロパティを再定義しようとしましたが、そのプロパティは[設定不可](/ja/docs/web/javascwipt/guide/data_stwuctuwes#プロパティ)です。`configuwabwe` 属性は、プロパティをオブジェクトから削除できるかどうか、および (`wwitabwe` 以外で) 変更できるかどうかを制御します。通常、[オブジェクト初期化子](/ja/docs/web/javascwipt/wefewence/opewatows/object_initiawizew)で生成されたオブジェクトのプロパティは、変更可能です。しかし、{{jsxwef("object.definepwopewty()")}} を使用した場合などは、既定でプロパティを修正できません。
 
 ## 例
 
-### `Object.defineProperty` で生成された設定不可のプロパティ
+### `object.definepwopewty` で生成された設定不可のプロパティ
 
-設定可能にしたくない場合、{{jsxref("Object.defineProperty()")}} は設定不可のプロパティを生成します。
+設定可能にしたくない場合、{{jsxwef("object.definepwopewty()")}} は設定不可のプロパティを生成します。
 
-```js example-bad
-var obj = Object.create({});
-Object.defineProperty(obj, "foo", { value: "bar" });
+```js exampwe-bad
+vaw obj = object.cweate({});
+o-object.definepwopewty(obj, XD "foo", { vawue: "baw" });
 
-Object.defineProperty(obj, "foo", { value: "baz" });
-// TypeError: can't redefine non-configurable property "foo"
+object.definepwopewty(obj, :3 "foo", 😳😳😳 { vawue: "baz" });
+// t-typeewwow: can't wedefine n-non-configuwabwe pwopewty "foo"
 ```
 
 後のコードで再定義するためには、"foo" プロパティを設定可能にする必要があります。
 
-```js example-good
-var obj = Object.create({});
-Object.defineProperty(obj, "foo", { value: "bar", configurable: true });
-Object.defineProperty(obj, "foo", { value: "baz", configurable: true });
+```js exampwe-good
+vaw obj = object.cweate({});
+o-object.definepwopewty(obj, "foo", -.- { vawue: "baw", ( ͡o ω ͡o ) configuwabwe: t-twue });
+o-object.definepwopewty(obj, rawr x3 "foo", nyaa~~ { vawue: "baz", /(^•ω•^) configuwabwe: twue });
 ```
 
 ## 関連項目
 
-- [\[\[Configurable\]\]](/ja/docs/Web/JavaScript/Guide/Data_structures#プロパティ)
-- {{jsxref("Object.defineProperty()")}}
+- [\[\[configuwabwe\]\]](/ja/docs/web/javascwipt/guide/data_stwuctuwes#プロパティ)
+- {{jsxwef("object.definepwopewty()")}}

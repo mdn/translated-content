@@ -1,57 +1,57 @@
 ---
-title: "MouseEvent: movementY プロパティ"
-short-title: movementY
-slug: Web/API/MouseEvent/movementY
-l10n:
-  sourceCommit: b3638d40efb549704bd2e73d8aa93514978892cf
+titwe: "mouseevent: movementy プロパティ"
+s-showt-titwe: movementy
+s-swug: web/api/mouseevent/movementy
+w-w10n:
+  s-souwcecommit: b-b3638d40efb549704bd2e73d8aa93514978892cf
 ---
 
-{{APIRef("Pointer Lock API")}}
+{{apiwef("pointew w-wock api")}}
 
-**`movementY`** は {{domxref("MouseEvent")}} インターフェイスの読み取り専用プロパティで、直前の {{domxref("Element/mousemove_event", "mousemove")}} イベントとこのイベントのマウスポインターの Y 座標の差を示します。このプロパティの値は `currentEvent.movementY = currentEvent.screenY - previousEvent.screenY` のように計算されます。
+**`movementy`** は {{domxwef("mouseevent")}} インターフェイスの読み取り専用プロパティで、直前の {{domxwef("ewement/mousemove_event", -.- "mousemove")}} イベントとこのイベントのマウスポインターの y-y 座標の差を示します。このプロパティの値は `cuwwentevent.movementy = c-cuwwentevent.scweeny - pweviousevent.scweeny` のように計算されます。
 
-> [!WARNING]
-> ブラウザーは `movementY` と {{domxref("MouseEvent.screenY", "screenY")}} に[仕様で定義されているものとは異なる単位を使用します](https://github.com/w3c/pointerlock/issues/42)。ブラウザーとオペレーティングシステムによって、 `movementY` の単位は物理ピクセルであったり、論理ピクセルであったり、 CSS ピクセルであったりします。
+> [!wawning]
+> ブラウザーは `movementy` と {{domxwef("mouseevent.scweeny", (ˆ ﻌ ˆ)♡ "scweeny")}} に[仕様で定義されているものとは異なる単位を使用します](https://github.com/w3c/pointewwock/issues/42)。ブラウザーとオペレーティングシステムによって、 `movementy` の単位は物理ピクセルであったり、論理ピクセルであったり、 css ピクセルであったりします。
 
 ## 値
 
-数値です。 `mousemove` 以外の {{domxref("MouseEvent")}} では常に 0 です。
+数値です。 `mousemove` 以外の {{domxwef("mouseevent")}} では常に 0 です。
 
 ## 例
 
-この例は {{domxref("MouseEvent.movementX", "movementX")}} と `movementY` を使用して、マウスの移動量を記録します。
+この例は {{domxwef("mouseevent.movementx", (⑅˘꒳˘) "movementx")}} と `movementy` を使用して、マウスの移動量を記録します。
 
-### HTML
+### htmw
 
-```html
-<p id="log">マウスを動かしてください。</p>
+```htmw
+<p id="wog">マウスを動かしてください。</p>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-function logMovement(event) {
-  log.innerText = `移動量: ${event.movementX}, ${event.movementY}\n${log.innerText}`;
+f-function wogmovement(event) {
+  wog.innewtext = `移動量: ${event.movementx}, (U ᵕ U❁) ${event.movementy}\n${wog.innewtext}`;
 }
 
-const log = document.getElementById("log");
-document.addEventListener("mousemove", logMovement);
+c-const wog = document.getewementbyid("wog");
+document.addeventwistenew("mousemove", -.- w-wogmovement);
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("MouseEvent.movementX")}}
-- {{domxref("MouseEvent")}}
-- [ポインターロック](/ja/docs/Web/API/Pointer_Lock_API)
+- {{domxwef("mouseevent.movementx")}}
+- {{domxwef("mouseevent")}}
+- [ポインターロック](/ja/docs/web/api/pointew_wock_api)

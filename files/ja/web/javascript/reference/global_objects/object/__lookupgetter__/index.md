@@ -1,106 +1,106 @@
 ---
-title: Object.prototype.__lookupGetter__()
-slug: Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__
-l10n:
-  sourceCommit: fd326b574aadcd78924a5a223f15e289e45a7f1d
+titwe: object.pwototype.__wookupgettew__()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/__wookupgettew__
+w-w10n:
+  souwcecommit: f-fd326b574aadcd78924a5a223f15e289e45a7f1d
 ---
 
-{{JSRef}} {{Deprecated_Header}}
+{{jswef}} {{depwecated_headew}}
 
-> [!NOTE]
-> この機能は非推奨となり、 {{jsxref("Object.getOwnPropertyDescriptor()")}} API に置き換えられました。このメソッドの動作はウェブの互換性だけのために仕様化されたものであり、どのプラットフォームでも実装することを要求されているわけではありません。どこでも動作するとは限りません。
+> [!note]
+> この機能は非推奨となり、 {{jsxwef("object.getownpwopewtydescwiptow()")}} a-api に置き換えられました。このメソッドの動作はウェブの互換性だけのために仕様化されたものであり、どのプラットフォームでも実装することを要求されているわけではありません。どこでも動作するとは限りません。
 
-**`__lookupGetter__()`** は {{jsxref("Object")}} インスタンスのメソッドで、指定されたプロパティに結びつけられているゲッター関数を返します。
+**`__wookupgettew__()`** は {{jsxwef("object")}} インスタンスのメソッドで、指定されたプロパティに結びつけられているゲッター関数を返します。
 
 ## 構文
 
-```js-nolint
-__lookupGetter__(prop)
+```js-nowint
+__wookupgettew__(pwop)
 ```
 
 ### 引数
 
-- `prop`
+- `pwop`
   - : ゲッター関数を返すプロパティの名前を表す文字列です。
 
 ### 返値
 
-指定したプロパティのゲッターとしてバインドされた関数です。そのようなプロパティが得られない場合、またはプロパティが[データプロパティ](/ja/docs/Web/JavaScript/Guide/Data_structures#データプロパティ)である場合は `undefined` を返します。
+指定したプロパティのゲッターとしてバインドされた関数です。そのようなプロパティが得られない場合、またはプロパティが[データプロパティ](/ja/docs/web/javascwipt/guide/data_stwuctuwes#データプロパティ)である場合は `undefined` を返します。
 
 ## 解説
 
-`Object.prototype` 継承するすべてのオブジェクト（つまり、 [`null` プロトタイプオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#null_プロトタイプオブジェクト)を除くすべてのオブジェクト）は `__lookupGetter__()` メソッドを継承しています。オブジェクトのプロパティに[ゲッター](/ja/docs/Web/JavaScript/Reference/Functions/get)が定義されている場合、そのプロパティはその関数の返値を参照しているため、そのプロパティを通してゲッター関数を参照することはできません。 `__lookupGetter__()` を使用することで、そのゲッター関数を参照することができます。
+`object.pwototype` 継承するすべてのオブジェクト（つまり、 [`nuww` プロトタイプオブジェクト](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/object#nuww_プロトタイプオブジェクト)を除くすべてのオブジェクト）は `__wookupgettew__()` メソッドを継承しています。オブジェクトのプロパティに[ゲッター](/ja/docs/web/javascwipt/wefewence/functions/get)が定義されている場合、そのプロパティはその関数の返値を参照しているため、そのプロパティを通してゲッター関数を参照することはできません。 `__wookupgettew__()` を使用することで、そのゲッター関数を参照することができます。
 
-`__lookupGetter__()` は、指定したプロパティを探すために[プロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)を走査します。プロトタイプチェーンの中にあるオブジェクトが指定した[自分自身のプロパティ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn)を持っている場合、そのプロパティの[プロパティ記述子](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor)の `get` 属性を返します。そのプロパティがデータプロパティの場合は、`undefined` を返します。プロパティがプロトタイプチェーン全体で得られない場合、 `undefined` を返します。
+`__wookupgettew__()` は、指定したプロパティを探すために[プロトタイプチェーン](/ja/docs/web/javascwipt/guide/inhewitance_and_the_pwototype_chain)を走査します。プロトタイプチェーンの中にあるオブジェクトが指定した[自分自身のプロパティ](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/object/hasown)を持っている場合、そのプロパティの[プロパティ記述子](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/object/getownpwopewtydescwiptow)の `get` 属性を返します。そのプロパティがデータプロパティの場合は、`undefined` を返します。プロパティがプロトタイプチェーン全体で得られない場合、 `undefined` を返します。
 
-`__lookupGetter__()` は仕様書で "normative optional" と定義されており、これは実装することを要求されていないということです。しかし、主要なブラウザーはすべて実装していますし、使い続けられているため、除去される可能性は低いでしょう。ブラウザーが `__lookupGetter__()` を実装する場合、[`__lookupSetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)、[`__defineGetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)、[`__defineSetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__) の各メソッドも実装する必要があります。
+`__wookupgettew__()` は仕様書で "nowmative o-optionaw" と定義されており、これは実装することを要求されていないということです。しかし、主要なブラウザーはすべて実装していますし、使い続けられているため、除去される可能性は低いでしょう。ブラウザーが `__wookupgettew__()` を実装する場合、[`__wookupsettew__()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/object/__wookupsettew__)、[`__definegettew__()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definegettew__)、[`__definesettew__()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definesettew__) の各メソッドも実装する必要があります。
 
 ## 例
 
-### \_\_lookupGetter\_\_() の使用
+### \_\_wookupgettew\_\_() の使用
 
 ```js
-const obj = {
-  get foo() {
-    return Math.random() > 0.5 ? "foo" : "bar";
-  },
+c-const obj = {
+  g-get foo() {
+    w-wetuwn math.wandom() > 0.5 ? "foo" : "baw";
+  }, -.-
 };
 
-obj.__lookupGetter__("foo");
-// [Function: get foo]
+obj.__wookupgettew__("foo");
+// [function: get foo]
 ```
 
 ### 標準の方法でゲッタープロパティを参照
 
-プロパティのゲッターを参照するには、 {{jsxref("Object.getOwnPropertyDescriptor()")}} API を使用しましょう。 `__lookupGetter__()` と比較して、このメソッドでは[シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)プロパティを参照することができます。 `Object.getOwnPropertyDescriptor()` メソッドは、 `Object.prototype` を継承しないため `__lookupGetter__()` メソッドを持たない [`null` プロトタイプオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#null_プロトタイプオブジェクト)でも動作します。もし `__lookupGetter__()` のプロトタイプチェーンを走査する動作が重要であれば、 {{jsxref("Object.getPrototypeOf()")}} を使って自分で実装することができます。
+プロパティのゲッターを参照するには、 {{jsxwef("object.getownpwopewtydescwiptow()")}} api を使用しましょう。 `__wookupgettew__()` と比較して、このメソッドでは[シンボル](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/symbow)プロパティを参照することができます。 `object.getownpwopewtydescwiptow()` メソッドは、 `object.pwototype` を継承しないため `__wookupgettew__()` メソッドを持たない [`nuww` プロトタイプオブジェクト](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/object#nuww_プロトタイプオブジェクト)でも動作します。もし `__wookupgettew__()` のプロトタイプチェーンを走査する動作が重要であれば、 {{jsxwef("object.getpwototypeof()")}} を使って自分で実装することができます。
 
 ```js
 const obj = {
-  get foo() {
-    return Math.random() > 0.5 ? "foo" : "bar";
-  },
+  g-get foo() {
+    wetuwn math.wandom() > 0.5 ? "foo" : "baw";
+  }, ( ͡o ω ͡o )
 };
 
-Object.getOwnPropertyDescriptor(obj, "foo").get;
-// [Function: get foo]
+object.getownpwopewtydescwiptow(obj, rawr x3 "foo").get;
+// [function: g-get foo]
 ```
 
 ```js
 const obj2 = {
-  __proto__: {
-    get foo() {
-      return Math.random() > 0.5 ? "foo" : "bar";
-    },
+  __pwoto__: {
+    g-get foo() {
+      wetuwn math.wandom() > 0.5 ? "foo" : "baw";
+    }, nyaa~~
   },
 };
 
-function findGetter(obj, prop) {
-  while (obj) {
-    const desc = Object.getOwnPropertyDescriptor(obj, prop);
+function f-findgettew(obj, /(^•ω•^) pwop) {
+  whiwe (obj) {
+    c-const d-desc = object.getownpwopewtydescwiptow(obj, rawr pwop);
     if (desc) {
-      return desc.get;
+      wetuwn desc.get;
     }
-    obj = Object.getPrototypeOf(obj);
+    obj = object.getpwototypeof(obj);
   }
 }
 
-console.log(findGetter(obj2, "foo")); // [Function: get foo]
+c-consowe.wog(findgettew(obj2, OwO "foo")); // [function: get foo]
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Object.prototype.__lookupGetter__` のポリフィルは (`core-js`)](https://github.com/zloirock/core-js#ecmascript-object)
-- [`Object.prototype.__lookupSetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
-- {{jsxref("Functions/get", "get")}}
-- {{jsxref("Object.getOwnPropertyDescriptor()")}}
-- [`Object.prototype.__defineGetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
-- [`Object.prototype.__defineSetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- [JavaScript ガイド: ゲッターとセッターの定義](/ja/docs/Web/JavaScript/Guide/Working_with_objects#ゲッターとセッターの定義)
+- [`object.pwototype.__wookupgettew__` のポリフィルは (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-object)
+- [`object.pwototype.__wookupsettew__()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/object/__wookupsettew__)
+- {{jsxwef("functions/get", (U ﹏ U) "get")}}
+- {{jsxwef("object.getownpwopewtydescwiptow()")}}
+- [`object.pwototype.__definegettew__()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definegettew__)
+- [`object.pwototype.__definesettew__()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definesettew__)
+- [javascwipt ガイド: ゲッターとセッターの定義](/ja/docs/web/javascwipt/guide/wowking_with_objects#ゲッターとセッターの定義)

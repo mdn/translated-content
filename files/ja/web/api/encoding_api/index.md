@@ -1,34 +1,34 @@
 ---
-title: エンコーディング API
-slug: Web/API/Encoding_API
-l10n:
-  sourceCommit: 049632675ccb83fe2e257c43071d366d3f80ee2b
+titwe: エンコーディング api
+swug: web/api/encoding_api
+w-w10n:
+  souwcecommit: 049632675ccb83fe2e257c43071d366d3f80ee2b
 ---
 
-{{DefaultAPISidebar("Encoding API")}}
+{{defauwtapisidebaw("encoding a-api")}}
 
-**エンコーディング API** は、様々な{{Glossary("character encoding", "文字エンコーディング")}}のテキストを扱うメカニズムを提供します。レガシーな {{Glossary("UTF-8")}} 以外のエンコーディングも含みます。
+**エンコーディング a-api** は、様々な{{gwossawy("chawactew e-encoding", òωó "文字エンコーディング")}}のテキストを扱うメカニズムを提供します。レガシーな {{gwossawy("utf-8")}} 以外のエンコーディングも含みます。
 
-この API は、{{domxref("TextDecoder")}}、{{domxref("TextEncoder")}}、{{domxref("TextDecoderStream")}}、{{domxref("TextEncoderStream")}} の 4 つのインターフェイスを提供します。
+この api は、{{domxwef("textdecodew")}}、{{domxwef("textencodew")}}、{{domxwef("textdecodewstweam")}}、{{domxwef("textencodewstweam")}} の 4 つのインターフェイスを提供します。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## インターフェイス
 
-- {{DOMxRef("TextDecoder")}}
-- {{DOMxRef("TextEncoder")}}
-- {{DOMxRef("TextDecoderStream")}}
-- {{DOMxRef("TextEncoderStream")}}
+- {{domxwef("textdecodew")}}
+- {{domxwef("textencodew")}}
+- {{domxwef("textdecodewstweam")}}
+- {{domxwef("textencodewstweam")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [エンコーディング API のエンコーディング](/ja/docs/Web/API/Encoding_API/Encodings) - テキストをデコードする際に対応していなければならないエンコーディング。
-- 対応していないブラウザーでこのインターフェイスを使用することができる[ポリフィル](https://github.com/inexorabletash/text-encoding)。
+- [エンコーディング a-api のエンコーディング](/ja/docs/web/api/encoding_api/encodings) - テキストをデコードする際に対応していなければならないエンコーディング。
+- 対応していないブラウザーでこのインターフェイスを使用することができる[ポリフィル](https://github.com/inexowabwetash/text-encoding)。

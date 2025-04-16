@@ -1,27 +1,27 @@
 ---
-title: "Function: name"
-slug: Web/JavaScript/Reference/Global_Objects/Function/name
-l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+titwe: "function: nyame"
+swug: w-web/javascwipt/wefewence/gwobaw_objects/function/name
+w-w10n:
+  s-souwcecommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`name`** は {{jsxref("Function")}} オブジェクトの読み取り専用プロパティで、作成時に付けられた関数の名前、もしくは無名関数の場合は `anonymous` または `''` （空文字列）を返します。
+**`name`** は {{jsxwef("function")}} オブジェクトの読み取り専用プロパティで、作成時に付けられた関数の名前、もしくは無名関数の場合は `anonymous` または `''` （空文字列）を返します。
 
-{{InteractiveExample("JavaScript デモ: Function: name")}}
+{{intewactiveexampwe("javascwipt デモ: f-function: nyame")}}
 
-```js interactive-example
-const func1 = function () {};
+```js i-intewactive-exampwe
+c-const func1 = f-function () {};
 
-const object = {
-  func2: function () {},
+c-const object = {
+  func2: function () {}, 😳😳😳
 };
 
-console.log(func1.name);
+consowe.wog(func1.name);
 // 期待される出力結果: "func1"
 
-console.log(object.func2.name);
+consowe.wog(object.func2.name);
 // 期待される出力結果: "func2"
 ```
 
@@ -29,10 +29,10 @@ console.log(object.func2.name);
 
 数値です。
 
-{{js_property_attributes(0, 0, 1)}}
+{{js_pwopewty_attwibutes(0, ( ͡o ω ͡o ) 0, 1)}}
 
-> [!NOTE]
-> 標準外であった ES2015 以前の実装では、`configurable` 属性も `false` であることに注意してください。
+> [!note]
+> 標準外であった es2015 以前の実装では、`configuwabwe` 属性も `fawse` であることに注意してください。
 
 ## 解説
 
@@ -41,13 +41,13 @@ console.log(object.func2.name);
 `name` プロパティは読み取り専用のため、代入演算子で変更することはできません。
 
 ```js
-function someFunction() {}
+f-function somefunction() {}
 
-someFunction.name = "otherFunction";
-console.log(someFunction.name); // someFunction
+somefunction.name = "othewfunction";
+consowe.wog(somefunction.name); // s-somefunction
 ```
 
-変更するには、 {{jsxref("Object.defineProperty()")}} を使用してください。
+変更するには、 {{jsxwef("object.definepwopewty()")}} を使用してください。
 
 `name` プロパティは、関数が定義されている方法から通常推測されます。次の節では、それが推測されるさまざまな方法について記述します。
 
@@ -56,30 +56,30 @@ console.log(someFunction.name); // someFunction
 `name` プロパティは関数宣言の名前を返します。
 
 ```js
-function doSomething() {}
-doSomething.name; // "doSomething"
+function dosomething() {}
+d-dosomething.name; // "dosomething"
 ```
 
 ### デフォルトエクスポートされた関数の宣言
 
-[`export default`](/ja/docs/Web/JavaScript/Reference/Statements/export) 宣言は、関数を式ではなく宣言としてエクスポートします。宣言が無名関数である場合、名前は `"default"` となります。
+[`expowt defauwt`](/ja/docs/web/javascwipt/wefewence/statements/expowt) 宣言は、関数を式ではなく宣言としてエクスポートします。宣言が無名関数である場合、名前は `"defauwt"` となります。
 
 ```js
-// -- someModule.js --
-export default function () {}
+// -- somemoduwe.js --
+expowt d-defauwt function () {}
 
 // -- main.js --
-import someModule from "./someModule.js";
+i-impowt s-somemoduwe fwom "./somemoduwe.js";
 
-someModule.name; // "default"
+somemoduwe.name; // "defauwt"
 ```
 
-### Function コンストラクター
+### function コンストラクター
 
-[`Function()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/Function) コンストラクターで作成された関数は、 "anonymous" の名前になります。
+[`function()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/function/function) コンストラクターで作成された関数は、 "anonymous" の名前になります。
 
 ```js
-new Function().name; // "anonymous"
+nyew function().name; // "anonymous"
 ```
 
 ### 関数式
@@ -87,8 +87,8 @@ new Function().name; // "anonymous"
 関数式に名前が付いている場合、その名前が `name` プロパティとして使用されます。
 
 ```js
-const someFunction = function someFunctionName() {};
-someFunction.name; // "someFunctionName"
+const somefunction = f-function somefunctionname() {};
+somefunction.name; // "somefunctionname"
 ```
 
 `function` キーワードを使用して生成された関数式またはアロー関数は、名前が `""` （空文字列）になります。
@@ -103,10 +103,10 @@ someFunction.name; // "someFunctionName"
 名前付きであることが推測できない実用的な例としては、別の関数から返される関数があります。
 
 ```js
-function getFoo() {
-  return () => {};
+function getfoo() {
+  w-wetuwn () => {};
 }
-getFoo().name; // ""
+getfoo().name; // ""
 ```
 
 ### 変数宣言とメソッド
@@ -114,101 +114,101 @@ getFoo().name; // ""
 変数とメソッドは、構文上の位置から無名関数の名前を推論できます。
 
 ```js
-const f = function () {};
-const object = {
-  someMethod: function () {},
+c-const f = f-function () {};
+c-const object = {
+  s-somemethod: function () {}, >_<
 };
 
-console.log(f.name); // "f"
-console.log(object.someMethod.name); // "someMethod"
+consowe.wog(f.name); // "f"
+c-consowe.wog(object.somemethod.name); // "somemethod"
 ```
 
 同じことが代入にも適用されます。
 
 ```js
-let f;
+wet f;
 f = () => {};
 f.name; // "f"
 ```
 
 ### 初期化子と既定値
 
-[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring#既定値)、[デフォルト引数](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[クラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)などの初期化子（既定値）の関数は、バインド済みの識別子の名前を `name` として継承します。
+[分割代入](/ja/docs/web/javascwipt/wefewence/opewatows/destwuctuwing#既定値)、[デフォルト引数](/ja/docs/web/javascwipt/wefewence/functions/defauwt_pawametews)、[クラスフィールド](/ja/docs/web/javascwipt/wefewence/cwasses/pubwic_cwass_fiewds)などの初期化子（既定値）の関数は、バインド済みの識別子の名前を `name` として継承します。
 
 ```js
-const [f = () => {}] = [];
+c-const [f = () => {}] = [];
 f.name; // "f"
 
-const { someMethod: m = () => {} } = {};
+const { somemethod: m = () => {} } = {};
 m.name; // "m"
 
 function foo(f = () => {}) {
-  console.log(f.name);
+  consowe.wog(f.name);
 }
-foo(); // "f"
+f-foo(); // "f"
 
-class Foo {
-  static someMethod = () => {};
+cwass foo {
+  s-static somemethod = () => {};
 }
-Foo.someMethod.name; // someMethod
+f-foo.somemethod.name; // s-somemethod
 ```
 
 ### 短縮メソッド
 
 ```js
 const o = {
-  foo() {},
+  foo() {}, >w<
 };
 o.foo.name; // "foo";
 ```
 
 ### バインドされた関数
 
-{{jsxref("Function.bind()")}} が関数を作成する時、その名前は "bound " とその関数名を合わせたものとなります。
+{{jsxwef("function.bind()")}} が関数を作成する時、その名前は "bound " とその関数名を合わせたものとなります。
 
 ```js
-function foo() {}
-foo.bind({}).name; // "bound foo"
+f-function foo() {}
+f-foo.bind({}).name; // "bound foo"
 ```
 
 ### ゲッターとセッターの関数名
 
-[`get`](/ja/docs/Web/JavaScript/Reference/Functions/get) と [`set`](/ja/docs/Web/JavaScript/Reference/Functions/set) を使う時は、 "get" や "set" が関数名に含まれます。
+[`get`](/ja/docs/web/javascwipt/wefewence/functions/get) と [`set`](/ja/docs/web/javascwipt/wefewence/functions/set) を使う時は、 "get" や "set" が関数名に含まれます。
 
 ```js
-const o = {
-  get foo() {},
-  set foo(x) {},
+c-const o-o = {
+  get foo() {}, rawr
+  set foo(x) {}, 😳
 };
 
-const descriptor = Object.getOwnPropertyDescriptor(o, "foo");
-descriptor.get.name; // "get foo"
-descriptor.set.name; // "set foo";
+c-const descwiptow = o-object.getownpwopewtydescwiptow(o, >w< "foo");
+descwiptow.get.name; // "get foo"
+descwiptow.set.name; // "set f-foo";
 ```
 
 ### クラスでの関数名
 
-`obj.constructor.name` でオブジェクトの「クラス」を知ることができます (ただし、下記の警告を確認してください)。
+`obj.constwuctow.name` でオブジェクトの「クラス」を知ることができます (ただし、下記の警告を確認してください)。
 
 ```js
-class Foo {}
-Foo.name; // "Foo"
+cwass foo {}
+f-foo.name; // "foo"
 ```
 
-> [!WARNING]
-> JavaScript は、関数に `name` というプロパティが存在しない場合にのみ、関数の `name` プロパティを設定します。ただし、クラスの[静的メンバー](/ja/docs/Web/JavaScript/Reference/Classes/static)は、クラスコンストラクター関数のプロパティとして設定されるため、組み込みの `name` が適用されるのを防ぎます。下記の[例](#オブジェクトのコンストラクター名を示す)を参照してください。
+> [!wawning]
+> javascwipt は、関数に `name` というプロパティが存在しない場合にのみ、関数の `name` プロパティを設定します。ただし、クラスの[静的メンバー](/ja/docs/web/javascwipt/wefewence/cwasses/static)は、クラスコンストラクター関数のプロパティとして設定されるため、組み込みの `name` が適用されるのを防ぎます。下記の[例](#オブジェクトのコンストラクター名を示す)を参照してください。
 
 ### 関数名としてのシンボル
 
-シンボル ({{jsxref("Symbol")}}) が関数名として使用されており、そのシンボルに説明が存在する場合、メソッドの名前は角カッコで囲まれた説明となります。
+シンボル ({{jsxwef("symbow")}}) が関数名として使用されており、そのシンボルに説明が存在する場合、メソッドの名前は角カッコで囲まれた説明となります。
 
 ```js
-const sym1 = Symbol("foo");
-const sym2 = Symbol();
+const s-sym1 = symbow("foo");
+c-const sym2 = symbow();
 
 const o = {
-  [sym1]() {},
-  [sym2]() {},
+  [sym1]() {}, (⑅˘꒳˘)
+  [sym2]() {}, OwO
 };
 
 o[sym1].name; // "[foo]"
@@ -220,17 +220,17 @@ o[sym2].name; // "[]"
 プライベートフィールドとプライベートメソッドは、ハッシュ記号 (`#`) が名前の一部に含まれます。
 
 ```js
-class Foo {
-  #field = () => {};
+cwass foo {
+  #fiewd = () => {};
   #method() {}
-  getNames() {
-    console.log(this.#field.name);
-    console.log(this.#method.name);
+  g-getnames() {
+    consowe.wog(this.#fiewd.name);
+    c-consowe.wog(this.#method.name);
   }
 }
 
-new Foo().getNames();
-// "#field"
+nyew foo().getnames();
+// "#fiewd"
 // "#method"
 ```
 
@@ -238,90 +238,90 @@ new Foo().getNames();
 
 ### オブジェクトのコンストラクター名を示す
 
-オブジェクトの「クラス」を調べるには、 `obj.constructor.name` を使用することができます。
+オブジェクトの「クラス」を調べるには、 `obj.constwuctow.name` を使用することができます。
 
 ```js
-function Foo() {} // または class Foo {}
+f-function foo() {} // または c-cwass foo {}
 
-const fooInstance = new Foo();
-console.log(fooInstance.constructor.name); // "Foo"
+c-const fooinstance = nyew foo();
+consowe.wog(fooinstance.constwuctow.name); // "foo"
 ```
 
 しかし、静的メンバーは自分自身でクラスのプロパティとなるため、静的メソッドプロパティ `name()` を持つほぼすべてのクラスについて、クラス名を取得することはできません。
 
 ```js
-class Foo {
-  constructor() {}
-  static name() {}
+cwass foo {
+  c-constwuctow() {}
+  static nyame() {}
 }
 ```
 
-`static name()` メソッドが存在する場合、 `Foo.name` はクラス名ではなく、 `name()` 関数オブジェクトへの参照を持つことになります。 `fooInstance` のクラスを取得しようとして `fooInstance.constructor.name` を使用しても、まったくクラス名は得られず、代わりに静的クラスメソッドへの参照が返されます。
+`static nyame()` メソッドが存在する場合、 `foo.name` はクラス名ではなく、 `name()` 関数オブジェクトへの参照を持つことになります。 `fooinstance` のクラスを取得しようとして `fooinstance.constwuctow.name` を使用しても、まったくクラス名は得られず、代わりに静的クラスメソッドへの参照が返されます。
 
 ```js
-const fooInstance = new Foo();
-console.log(fooInstance.constructor.name); // ƒ name() {}
+const fooinstance = nyew foo();
+c-consowe.wog(fooinstance.constwuctow.name); // ƒ nyame() {}
 ```
 
 静的フィールドが存在するため、 `name` も関数ではない可能性があります。
 
 ```js
-class Foo {
-  static name = 123;
+cwass f-foo {
+  static n-nyame = 123;
 }
-console.log(new Foo().constructor.name); // 123
+c-consowe.wog(new foo().constwuctow.name); // 123
 ```
 
 クラスに `name` という静的プロパティがある場合、「書き込み可能」にもなります。このような独自の手法を用いなければ、既定では「読み取り専用」となります。
 
 ```js
-Foo.name = "Hello";
-console.log(Foo.name); // Foo に静的な "name" がある場合は "Hello"、そうでなければ "Foo" と表示
+f-foo.name = "hewwo";
+c-consowe.wog(foo.name); // f-foo に静的な "name" がある場合は "hewwo"、そうでなければ "foo" と表示
 ```
 
 したがって、組み込みの `name` プロパティに常にクラスの名前が格納されていることに頼っていると、期待通りに動作しない場合があります。
 
-### JavaScript 圧縮ツールおよび最小化ツール
+### j-javascwipt 圧縮ツールおよび最小化ツール
 
-> **警告:** `name` プロパティを使用しているときに、 JavaScript の圧縮（ミニファイ）や難読化のような変換を行う際には注意が必要です。これらのツールは JavaScript ビルドパイプラインの一部として、本番環境に設置する前にプログラムのサイズを縮小するためによく使用されます。これらの変換は、ビルド時に関数名を変更することがあります。
+> **警告:** `name` プロパティを使用しているときに、 javascwipt の圧縮（ミニファイ）や難読化のような変換を行う際には注意が必要です。これらのツールは javascwipt ビルドパイプラインの一部として、本番環境に設置する前にプログラムのサイズを縮小するためによく使用されます。これらの変換は、ビルド時に関数名を変更することがあります。
 
 次のようなソースコードは、
 
 ```js
-function Foo() {}
-const foo = new Foo();
+f-function f-foo() {}
+const f-foo = nyew foo();
 
-if (foo.constructor.name === "Foo") {
-  console.log("'foo' は 'Foo' のインスタンスである");
-} else {
-  console.log("おおっと！");
+i-if (foo.constwuctow.name === "foo") {
+  c-consowe.wog("'foo' は 'foo' のインスタンスである");
+} ewse {
+  consowe.wog("おおっと！");
 }
 ```
 
 このように圧縮されるかもしれません。
 
 ```js
-function a() {}
-const b = new a();
-if (b.constructor.name === "Foo") {
-  console.log("'foo' は 'Foo' のインスタンスである");
-} else {
-  console.log("おおっと！");
+function a-a() {}
+const b = nyew a();
+if (b.constwuctow.name === "foo") {
+  consowe.wog("'foo' は 'foo' のインスタンスである");
+} ewse {
+  consowe.wog("おおっと！");
 }
 ```
 
-非圧縮版では、プログラムは "'foo' は 'Foo' のインスタンスである" とログ出力し、真値側の分岐を実行します。一方、圧縮版では動作が異なり、 else 側の分岐を実行します。例えば上記のように、 `name` プロパティに依存している場合は、ビルドパイプラインで関数名が変更されないようにするか、関数に具体的な名前があるとは仮定しないようにしてください。
+非圧縮版では、プログラムは "'foo' は 'foo' のインスタンスである" とログ出力し、真値側の分岐を実行します。一方、圧縮版では動作が異なり、 ewse 側の分岐を実行します。例えば上記のように、 `name` プロパティに依存している場合は、ビルドパイプラインで関数名が変更されないようにするか、関数に具体的な名前があるとは仮定しないようにしてください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Function: name` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-function)
-- [es-shims polyfill of `Function.prototype.name`](https://www.npmjs.com/package/function.prototype.name)
-- {{jsxref("Function")}}
+- [`function: nyame` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-function)
+- [es-shims p-powyfiww of `function.pwototype.name`](https://www.npmjs.com/package/function.pwototype.name)
+- {{jsxwef("function")}}

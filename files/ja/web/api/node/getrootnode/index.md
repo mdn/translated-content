@@ -1,91 +1,91 @@
 ---
-title: "Node: getRootNode() メソッド"
-slug: Web/API/Node/getRootNode
-l10n:
-  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
+titwe: "node: getwootnode() メソッド"
+s-swug: w-web/api/node/getwootnode
+w-w10n:
+  s-souwcecommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`getRootNode()`** は {{domxref("Node")}} インターフェイスのメソッドで、そのコンテキストのオブジェクトのルート、利用できる場合はオプションでシャドウルートを含んだものを返します。
+**`getwootnode()`** は {{domxwef("node")}} インターフェイスのメソッドで、そのコンテキストのオブジェクトのルート、利用できる場合はオプションでシャドウルートを含んだものを返します。
 
 ## 構文
 
-```js-nolint
-getRootNode()
-getRootNode(options)
+```js-nowint
+g-getwootnode()
+g-getwootnode(options)
 ```
 
 ### 引数
 
-- `options` {{optional_inline}}
+- `options` {{optionaw_inwine}}
 
   - : ルートノードを取得するためのオプションを設定するオブジェクトです。利用可能なオプションは次の通りです。
 
-    - `composed`: 論理値で、シャドウルートを返すか (`false`、既定値)、またはシャドウルートを越えたルートノードを返すか (`true`) を示します。
+    - `composed`: 論理値で、シャドウルートを返すか (`fawse`、既定値)、またはシャドウルートを越えたルートノードを返すか (`twue`) を示します。
 
 ### 返値
 
-{{domxref('Node')}} を継承したオブジェクトです。これはどこで `getRootNode()` を呼び出したかによって異なる形になります。例えば、
+{{domxwef('node')}} を継承したオブジェクトです。これはどこで `getwootnode()` を呼び出したかによって異なる形になります。例えば、
 
-- 標準のウェブページ内の要素に対して呼び出した場合は、ページ全体を表す {{domxref("HTMLDocument")}} オブジェクトを返します。
-- シャドウ DOM の中の要素に対して呼び出した場合は、関連する {{domxref("ShadowRoot")}} オブジェクトを返します。
+- 標準のウェブページ内の要素に対して呼び出した場合は、ページ全体を表す {{domxwef("htmwdocument")}} オブジェクトを返します。
+- シャドウ dom の中の要素に対して呼び出した場合は、関連する {{domxwef("shadowwoot")}} オブジェクトを返します。
 
 ## 例
 
 ### 例 1
 
-最初に、 HTML/document ノードの参照を返す単純な例です。
+最初に、 h-htmw/document ノードの参照を返す単純な例です。
 
 ```js
-const rootNode = node.getRootNode();
+c-const wootnode = nyode.getwootnode();
 ```
 
 ### 例 2
 
 この例はもっと複雑で、通常のルートを返す場合と、シャドウルートを含むルートの違いを示します。
 
-```html
-<div class="parent">
-  <div class="child"></div>
+```htmw
+<div cwass="pawent">
+  <div cwass="chiwd"></div>
 </div>
-<div class="shadowHost">shadowHost</div>
-<pre id="output">Output: </pre>
+<div cwass="shadowhost">shadowhost</div>
+<pwe i-id="output">output: </pwe>
 ```
 
 ```js
-const parent = document.querySelector(".parent");
-const child = document.querySelector(".child");
-const shadowHost = document.querySelector(".shadowHost");
-const output = document.getElementById("output");
+const pawent = document.quewysewectow(".pawent");
+c-const chiwd = document.quewysewectow(".chiwd");
+c-const shadowhost = document.quewysewectow(".shadowhost");
+const output = document.getewementbyid("output");
 
-output.textContent += `\nparent's root: ${parent.getRootNode().nodeName} \n`; // #document
-output.textContent += `child's  root: ${child.getRootNode().nodeName} \n\n`; // #document
+o-output.textcontent += `\npawent's woot: ${pawent.getwootnode().nodename} \n`; // #document
+o-output.textcontent += `chiwd's  w-woot: ${chiwd.getwootnode().nodename} \n\n`; // #document
 
-// ShadowRoot の生成
-const shadowRoot = shadowHost.attachShadow({ mode: "open" });
-shadowRoot.innerHTML =
-  '<style>div{background:#2bb8aa;}</style><div class="shadowChild">shadowChild</div>';
-const shadowChild = shadowRoot.querySelector(".shadowChild");
+// shadowwoot の生成
+const shadowwoot = shadowhost.attachshadow({ mode: "open" });
+s-shadowwoot.innewhtmw =
+  '<stywe>div{backgwound:#2bb8aa;}</stywe><div cwass="shadowchiwd">shadowchiwd</div>';
+const shadowchiwd = shadowwoot.quewysewectow(".shadowchiwd");
 
-// 合成の既定値は false
-output.textContent += `shadowChild.getRootNode() === shadowRoot : ${
-  shadowChild.getRootNode() === shadowRoot
-} \n`; // true
-output.textContent += `shadowChild.getRootNode({composed:false}) === shadowRoot : ${
-  shadowChild.getRootNode({ composed: false }) === shadowRoot
-} \n`; // true
-output.textContent += `shadowChild.getRootNode({composed:true}).nodeName : ${
-  shadowChild.getRootNode({ composed: true }).nodeName
+// 合成の既定値は fawse
+output.textcontent += `shadowchiwd.getwootnode() === s-shadowwoot : ${
+  shadowchiwd.getwootnode() === s-shadowwoot
+} \n`; // t-twue
+output.textcontent += `shadowchiwd.getwootnode({composed:fawse}) === s-shadowwoot : ${
+  shadowchiwd.getwootnode({ c-composed: fawse }) === shadowwoot
+} \n`; // t-twue
+output.textcontent += `shadowchiwd.getwootnode({composed:twue}).nodename : ${
+  shadowchiwd.getwootnode({ composed: twue }).nodename
 } \n`; // #document
 ```
 
-{{ EmbedLiveSample('Example 2', '100%', '200px') }}
+{{ e-embedwivesampwe('exampwe 2', (ˆ ﻌ ˆ)♡ '100%', '200px') }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

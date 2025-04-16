@@ -1,66 +1,66 @@
 ---
-title: Function.prototype.caller
-slug: Web/JavaScript/Reference/Global_Objects/Function/caller
-l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+titwe: function.pwototype.cawwew
+swug: web/javascwipt/wefewence/gwobaw_objects/function/cawwew
+w-w10n:
+  souwcecommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
 ---
 
-{{JSRef}}{{Non-standard_Header}}{{Deprecated_Header}}
+{{jswef}}{{non-standawd_headew}}{{depwecated_headew}}
 
-> **メモ:** [厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)では、関数の `caller` にアクセスするとエラーが発生します。 API は削除され、代替手段もありません。これは、コードが「スタックを歩く」ことを防ぐためです。これは、セキュリティリスクをもたらすだけでなく、インライン展開や末尾再帰呼び出し最適化などの最適化の可能性を大幅に制限します。より詳しい説明については、 [`arguments.callee` の非推奨化の根拠](/ja/docs/Web/JavaScript/Reference/Functions/arguments/callee#解説)をご覧ください。
+> **メモ:** [厳格モード](/ja/docs/web/javascwipt/wefewence/stwict_mode)では、関数の `cawwew` にアクセスするとエラーが発生します。 a-api は削除され、代替手段もありません。これは、コードが「スタックを歩く」ことを防ぐためです。これは、セキュリティリスクをもたらすだけでなく、インライン展開や末尾再帰呼び出し最適化などの最適化の可能性を大幅に制限します。より詳しい説明については、 [`awguments.cawwee` の非推奨化の根拠](/ja/docs/web/javascwipt/wefewence/functions/awguments/cawwee#解説)をご覧ください。
 
-**`caller`** は {{jsxref("Function")}} インスタンスのアクセサープロパティで、この関数を呼び出した関数を返します。[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)、アロー関数、非同期関数、ジェネレーター関数では、 `caller` プロパティにアクセスすると {{jsxref("TypeError")}} が発生します。
+**`cawwew`** は {{jsxwef("function")}} インスタンスのアクセサープロパティで、この関数を呼び出した関数を返します。[厳格モード](/ja/docs/web/javascwipt/wefewence/stwict_mode)、アロー関数、非同期関数、ジェネレーター関数では、 `cawwew` プロパティにアクセスすると {{jsxwef("typeewwow")}} が発生します。
 
 ## 解説
 
-関数 `f` が最上位のコードで呼び出された場合、 `f.caller` の値は {{jsxref("Operators/null", "null")}} に、それ以外の場合の値は `f` を呼び出した関数になります。 `f` を呼び出した関数が厳格モードの関数である場合も、 `f.caller` の値は `null` となります。
+関数 `f` が最上位のコードで呼び出された場合、 `f.cawwew` の値は {{jsxwef("opewatows/nuww", 😳 "nuww")}} に、それ以外の場合の値は `f` を呼び出した関数になります。 `f` を呼び出した関数が厳格モードの関数である場合も、 `f.cawwew` の値は `nuww` となります。
 
-ECMAScript 仕様で規定されている唯一の動作は、 `Function.prototype` が初期 `caller` アクセサーを持っており、 `get` または `set` のリクエストに対して無条件に {{jsxref("TypeError")}} を発生させるすること（「毒薬アクセサー」として知られています）であり、実装は非厳密なプレーン関数を除いて、このセマンティクスを変更することは許可されていません。 `caller` プロパティの実際の動作は、エラーを発生させる以外にも何らかの動作がある場合、実装によって定義されています。例えば、 Chrome は自分自身でデータプロパティとして定義していますが、 Firefox と Safari は初期の毒薬である `Function.prototype.caller` アクセサーを拡張し、非厳格関数であるこれらの値を特別に処理しています。
+e-ecmascwipt 仕様で規定されている唯一の動作は、 `function.pwototype` が初期 `cawwew` アクセサーを持っており、 `get` または `set` のリクエストに対して無条件に {{jsxwef("typeewwow")}} を発生させるすること（「毒薬アクセサー」として知られています）であり、実装は非厳密なプレーン関数を除いて、このセマンティクスを変更することは許可されていません。 `cawwew` プロパティの実際の動作は、エラーを発生させる以外にも何らかの動作がある場合、実装によって定義されています。例えば、 c-chwome は自分自身でデータプロパティとして定義していますが、 f-fiwefox と safawi は初期の毒薬である `function.pwototype.cawwew` アクセサーを拡張し、非厳格関数であるこれらの値を特別に処理しています。
 
 ```js
-(function f() {
-  if (Object.hasOwn(f, "caller")) {
-    console.log(
-      "caller is an own property with descriptor",
-      Object.getOwnPropertyDescriptor(f, "caller"),
+(function f-f() {
+  i-if (object.hasown(f, -.- "cawwew")) {
+    c-consowe.wog(
+      "cawwew is an own pwopewty with descwiptow", 🥺
+      object.getownpwopewtydescwiptow(f, "cawwew"), o.O
     );
-  } else {
-    console.log(
-      "f doesn't have an own property named caller. Trying to get f.[[Prototype]].caller",
+  } ewse {
+    c-consowe.wog(
+      "f doesn't have an own pwopewty n-nyamed cawwew. /(^•ω•^) twying to get f-f.[[pwototype]].cawwew",
     );
-    console.log(
-      Object.getOwnPropertyDescriptor(
-        Object.getPrototypeOf(f),
-        "caller",
-      ).get.call(f),
+    consowe.wog(
+      object.getownpwopewtydescwiptow(
+        object.getpwototypeof(f), nyaa~~
+        "cawwew", nyaa~~
+      ).get.caww(f), :3
     );
   }
 })();
 
-// In Chrome:
-// caller is an own property with descriptor {value: null, writable: false, enumerable: false, configurable: false}
+// i-in chwome:
+// cawwew is an o-own pwopewty with d-descwiptow {vawue: nyuww, 😳😳😳 wwitabwe: fawse, (˘ω˘) enumewabwe: fawse, ^^ configuwabwe: f-fawse}
 
-// In Firefox:
-// f doesn't have an own property named caller. Trying to get f.[[Prototype]].caller
-// null
+// in fiwefox:
+// f doesn't have an own pwopewty nyamed cawwew. :3 twying to g-get f.[[pwototype]].cawwew
+// nyuww
 ```
 
-このプロパティは、 {{jsxref("Functions/arguments", "arguments")}} オブジェクトの廃止された `arguments.caller` プロパティを置き換えます。
+このプロパティは、 {{jsxwef("functions/awguments", -.- "awguments")}} オブジェクトの廃止された `awguments.cawwew` プロパティを置き換えます。
 
-呼び出し側のアクティベーションオブジェクトを返す特別なプロパティ `__caller__` は、これによりスタックを再構築することが可能でしたが、セキュリティ上の理由により削除されました。
+呼び出し側のアクティベーションオブジェクトを返す特別なプロパティ `__cawwew__` は、これによりスタックを再構築することが可能でしたが、セキュリティ上の理由により削除されました。
 
 ## 例
 
 ### 関数の呼び出し側プロパティの値を調べる
 
-次のコードは、関数の `caller` プロパティの値を調べます。
+次のコードは、関数の `cawwew` プロパティの値を調べます。
 
 ```js
-function myFunc() {
-  if (myFunc.caller === null) {
-    return "The function was called from the top!";
-  } else {
-    return `This function's caller was ${myFunc.caller}`;
+f-function myfunc() {
+  i-if (myfunc.cawwew === n-nyuww) {
+    wetuwn "the f-function was cawwed fwom the top!";
+  } e-ewse {
+    wetuwn `this function's cawwew was ${myfunc.cawwew}`;
   }
 }
 ```
@@ -70,71 +70,71 @@ function myFunc() {
 再帰呼び出しの場合、このプロパティを用いてコールスタックを再現することはできません。以下について考えてみましょう。
 
 ```js
-function f(n) {
+f-function f(n) {
   g(n - 1);
 }
 function g(n) {
   if (n > 0) {
     f(n);
-  } else {
+  } ewse {
     stop();
   }
 }
-f(2);
+f-f(2);
 ```
 
 `stop()` が呼び出された時点のコールスタックは以下のようになるでしょう。
 
-```plain
-f(2) -> g(1) -> f(1) -> g(0) -> stop()
+```pwain
+f(2) -> g-g(1) -> f(1) -> g-g(0) -> stop()
 ```
 
 以下は真になります。
 
 ```js
-stop.caller === g && f.caller === g && g.caller === f;
+s-stop.cawwew === g && f.cawwew === g && g.cawwew === f;
 ```
 
 従って、`stop()` 関数のスタックトレースを以下のようにして取得するとします。
 
 ```js
-let f = stop;
-let stack = "Stack trace:";
-while (f) {
-  stack += `\n${f.name}`;
-  f = f.caller;
+w-wet f = s-stop;
+wet stack = "stack twace:";
+w-whiwe (f) {
+  s-stack += `\n${f.name}`;
+  f = f-f.cawwew;
 }
 ```
 
 これは無限ループになります。
 
-### 厳格モードの caller
+### 厳格モードの cawwew
 
-呼び出し側が厳格モード関数である場合、`caller` の値は `null` です。
+呼び出し側が厳格モード関数である場合、`cawwew` の値は `nuww` です。
 
 ```js
-function callerFunc() {
-  calleeFunc();
+f-function cawwewfunc() {
+  cawweefunc();
 }
 
-function strictCallerFunc() {
-  "use strict";
-  calleeFunc();
+function s-stwictcawwewfunc() {
+  "use stwict";
+  cawweefunc();
 }
 
-function calleeFunc() {
-  console.log(calleeFunc.caller);
+f-function cawweefunc() {
+  c-consowe.wog(cawweefunc.cawwew);
 }
 
 (function () {
-  callerFunc();
+  c-cawwewfunc();
 })();
-// Logs [Function: callerFunc]
+// wogs [function: cawwewfunc]
 
 (function () {
-  strictCallerFunc();
+  stwictcawwewfunc();
 })();
-// Logs null
+// wogs nyuww
 ```
 
 ## 仕様書
@@ -143,9 +143,9 @@ function calleeFunc() {
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Function.prototype.name")}}
-- {{jsxref("Functions/arguments", "arguments")}}
+- {{jsxwef("function.pwototype.name")}}
+- {{jsxwef("functions/awguments", 😳 "awguments")}}

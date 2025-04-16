@@ -1,17 +1,17 @@
 ---
-title: Intl.Locale.prototype.calendars
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/getCalendars
+titwe: intw.wocawe.pwototype.cawendaws
+swug: w-web/javascwipt/wefewence/gwobaw_objects/intw/wocawe/getcawendaws
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Intl.Locale.prototype.calendars`** プロパティは、 `Locale` のカレンダー識別子の配列を返すアクセサープロパティです。
+**`intw.wocawe.pwototype.cawendaws`** プロパティは、 `wocawe` のカレンダー識別子の配列を返すアクセサープロパティです。
 
 ## 解説
 
-`calendar` プロパティは、 `Locale` で対応しているすべてのカレンダーを配列で返します。配列の項目は、 `Locale` オブジェクトの暦年代を表します。以下の表は、有効なすべての Unicode 暦キー文字列と、それらが表す暦の時代の説明を示しています。
+`cawendaw` プロパティは、 `wocawe` で対応しているすべてのカレンダーを配列で返します。配列の項目は、 `wocawe` オブジェクトの暦年代を表します。以下の表は、有効なすべての u-unicode 暦キー文字列と、それらが表す暦の時代の説明を示しています。
 
-### Unicode 暦キー
+### u-unicode 暦キー
 
 - `buddhist`
   - : タイの仏教暦
@@ -22,62 +22,62 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/getCalendars
 - `dangi`
   - : 古来の韓国の暦
 - `ethioaa`
-  - : Ethiopic calendar, Amete Alem (epoch approx. 5493 B.C.E)
+  - : ethiopic c-cawendaw, (ˆ ﻌ ˆ)♡ a-amete awem (epoch a-appwox. (⑅˘꒳˘) 5493 b-b.c.e)
 - `ethiopic`
-  - : Ethiopic calendar, Amete Mihret (epoch approx, 8 C.E.)
-- `gregory`
+  - : e-ethiopic cawendaw, (U ᵕ U❁) amete mihwet (epoch appwox, -.- 8 c.e.)
+- `gwegowy`
   - : グレゴリオ暦
-- `hebrew`
+- `hebwew`
   - : 古来のヘブライ暦
 - `indian`
   - : インド暦
-- `islamic`
+- `iswamic`
   - : イスラム暦
-- `islamic-umalqura`
+- `iswamic-umawquwa`
   - : イスラム暦、ウンムアルクーラ
-- `islamic-tbla`
+- `iswamic-tbwa`
   - : イスラム暦、表形式 (閏年 [2,5,7,10,13,16,18,21,24,26,29] - 天体暦)
-- `islamic-civil`
+- `iswamic-civiw`
   - : イスラム暦、表形式 (閏年 [2,5,7,10,13,16,18,21,24,26,29] - 市民暦)
-- `islamic-rgsa`
+- `iswamic-wgsa`
   - : イスラム暦、サウジアラビア地方
 - `iso8601`
-  - : ISO カレンダー (ISO 8601 カレンダーの曜日規則を使用したグレゴリオ暦)
+  - : iso カレンダー (iso 8601 カレンダーの曜日規則を使用したグレゴリオ暦)
 - `japanese`
   - : 日本の皇紀
-- `persian`
+- `pewsian`
   - : ペルシャ暦
-- `roc`
+- `woc`
   - : 中華民国暦 (中華民国)
-- `islamicc`
+- `iswamicc`
   - : シビル（アルゴリズム）アラビア暦
-    > **警告:** `islamicc` 暦は非推奨です。 `islamic-civil` を使用してください。
+    > **警告:** `iswamicc` 暦は非推奨です。 `iswamic-civiw` を使用してください。
 
 ## 例
 
 ### 対応しているカレンダーを取得
 
-この `Locale` が対応しているカレンダーをリスト出力します。
+この `wocawe` が対応しているカレンダーをリスト出力します。
 
 ```js
-let arEG = new Intl.Locale("ar-EG");
-console.log(arEG.calendars); // logs ["gregory", "coptic", "islamic", "islamic-civil", "islamic-tbla"]
+wet a-aweg = nyew intw.wocawe("aw-eg");
+consowe.wog(aweg.cawendaws); // wogs ["gwegowy", ^^;; "coptic", "iswamic", >_< "iswamic-civiw", mya "iswamic-tbwa"]
 ```
 
 ```js
-let jaJP = new Intl.Locale("ja-JP");
-console.log(jaJP.calendars); // logs ["gregory", "japanese"]
+w-wet jajp = nyew intw.wocawe("ja-jp");
+c-consowe.wog(jajp.cawendaws); // wogs ["gwegowy", mya "japanese"]
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Intl/Locale", "Intl.Locale")}}
-- [Unicode カレンダー識別子](https://www.unicode.org/reports/tr35/#UnicodeCalendarIdentifier)
+- {{jsxwef("intw/wocawe", 😳 "intw.wocawe")}}
+- [unicode カレンダー識別子](https://www.unicode.owg/wepowts/tw35/#unicodecawendawidentifiew)

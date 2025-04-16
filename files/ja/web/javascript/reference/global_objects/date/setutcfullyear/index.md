@@ -1,76 +1,76 @@
 ---
-title: Date.prototype.setUTCFullYear()
-slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCFullYear
-l10n:
-  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
+titwe: date.pwototype.setutcfuwwyeaw()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/date/setutcfuwwyeaw
+w-w10n:
+  s-souwcecommit: d-d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`setUTCFullYear()`** メソッドは、協定世界時に基づき、指定された日付の年を設定します。
+**`setutcfuwwyeaw()`** メソッドは、協定世界時に基づき、指定された日付の年を設定します。
 
-{{InteractiveExample("JavaScript Demo: Date.setUTCFullYear()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.setutcfuwwyeaw()")}}
 
-```js interactive-example
-const event = new Date("December 31, 1975 23:15:30 GMT-3:00");
+```js i-intewactive-exampwe
+c-const event = nyew d-date("decembew 31, :3 1975 23:15:30 gmt-3:00");
 
-console.log(event.getUTCFullYear());
-// Expected output: 1976
+consowe.wog(event.getutcfuwwyeaw());
+// expected output: 1976
 
-console.log(event.toUTCString());
-// Expected output: "Thu, 01 Jan 1976 02:15:30 GMT"
+c-consowe.wog(event.toutcstwing());
+// expected output: "thu, 😳😳😳 01 jan 1976 02:15:30 gmt"
 
-event.setUTCFullYear(1975);
+event.setutcfuwwyeaw(1975);
 
-console.log(event.toUTCString());
-// Expected output: "Wed, 01 Jan 1975 02:15:30 GMT"
+c-consowe.wog(event.toutcstwing());
+// expected o-output: "wed, -.- 01 jan 1975 02:15:30 gmt"
 ```
 
 ## 構文
 
-```js-nolint
-setUTCFullYear(yearValue)
-setUTCFullYear(yearValue, monthValue)
-setUTCFullYear(yearValue, monthValue, dayValue)
+```js-nowint
+setutcfuwwyeaw(yeawvawue)
+s-setutcfuwwyeaw(yeawvawue, ( ͡o ω ͡o ) monthvawue)
+s-setutcfuwwyeaw(yeawvawue, rawr x3 m-monthvawue, nyaa~~ dayvawue)
 ```
 
 ### 引数
 
-- `yearValue`
+- `yeawvawue`
   - : 「年」の数字を指定する整数値。例えば、1995。
-- `monthValue`
+- `monthvawue`
   - : 任意。1 月から 12 月を表す 0 から 11 までの間の整数値。
-- `dayValue`
-  - : 任意。「日」を表す 1 から 31 までの間の整数値。`dayValue` 引数を指定した場合、`monthValue` も指定しなければなりません。
+- `dayvawue`
+  - : 任意。「日」を表す 1 から 31 までの間の整数値。`dayvawue` 引数を指定した場合、`monthvawue` も指定しなければなりません。
 
 ### 返値
 
-協定世界時 (UTC) 1970 年 1 月 1 日 00:00:00 から更新された日時までの間のミリ秒単位の数値。
+協定世界時 (utc) 1970 年 1 月 1 日 00:00:00 から更新された日時までの間のミリ秒単位の数値。
 
 ## 解説
 
-`monthValue` 引数と `dayValue` 引数を指定しない場合、{{jsxref("Date.prototype.getUTCMonth()", "getUTCMonth()")}} メソッドと {{jsxref("Date.prototype.getUTCDate()", "getUTCDate()")}} メソッドから返される値が使われます。
+`monthvawue` 引数と `dayvawue` 引数を指定しない場合、{{jsxwef("date.pwototype.getutcmonth()", /(^•ω•^) "getutcmonth()")}} メソッドと {{jsxwef("date.pwototype.getutcdate()", rawr "getutcdate()")}} メソッドから返される値が使われます。
 
-指定した値が期待される日付の範囲外の場合、それに応じて `setUTCFullYear()` が他の引数と {{jsxref("Date")}} オブジェクトの日付情報の更新を試みます。例えば、`monthValue` に 15 を指定した場合、年に 1 が加算 (`yearValue + 1`) され、月が 3 になります。
+指定した値が期待される日付の範囲外の場合、それに応じて `setutcfuwwyeaw()` が他の引数と {{jsxwef("date")}} オブジェクトの日付情報の更新を試みます。例えば、`monthvawue` に 15 を指定した場合、年に 1 が加算 (`yeawvawue + 1`) され、月が 3 になります。
 
 ## 例
 
-### setUTCFullYear() の使用
+### setutcfuwwyeaw() の使用
 
 ```js
-const theBigDay = new Date();
-theBigDay.setUTCFullYear(1997);
+const thebigday = nyew date();
+thebigday.setutcfuwwyeaw(1997);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Date.prototype.getUTCFullYear()")}}
-- {{jsxref("Date.prototype.setFullYear()")}}
+- {{jsxwef("date.pwototype.getutcfuwwyeaw()")}}
+- {{jsxwef("date.pwototype.setfuwwyeaw()")}}

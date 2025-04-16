@@ -1,36 +1,36 @@
 ---
-title: Number.isFinite()
-slug: Web/JavaScript/Reference/Global_Objects/Number/isFinite
-l10n:
-  sourceCommit: 6a0f9553932823cd0c4dcf695d4b4813474964fb
+titwe: nyumbew.isfinite()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/numbew/isfinite
+w-w10n:
+  s-souwcecommit: 6a0f9553932823cd0c4dcf695d4b4813474964fb
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Number.isFinite()`** は静的メソッドで、渡された値が有限数であるかどうかを判断します。すなわち、指定された値が数値型であり、その数値が正の無限大 ({{jsxref("Infinity")}})、負の無限大 (`Infinity`)、非数 ({{jsxref("NaN")}}) のどれでもないことをチェックします。
+**`numbew.isfinite()`** は静的メソッドで、渡された値が有限数であるかどうかを判断します。すなわち、指定された値が数値型であり、その数値が正の無限大 ({{jsxwef("infinity")}})、負の無限大 (`infinity`)、非数 ({{jsxwef("nan")}}) のどれでもないことをチェックします。
 
-{{InteractiveExample("JavaScript Demo: Number.isFinite()")}}
+{{intewactiveexampwe("javascwipt d-demo: nyumbew.isfinite()")}}
 
-```js interactive-example
-console.log(Number.isFinite(1 / 0));
-// Expected output: false
+```js i-intewactive-exampwe
+c-consowe.wog(numbew.isfinite(1 / 0));
+// e-expected o-output: fawse
 
-console.log(Number.isFinite(10 / 5));
-// Expected output: true
+consowe.wog(numbew.isfinite(10 / 5));
+// expected output: twue
 
-console.log(Number.isFinite(0 / 0));
-// Expected output: false
+consowe.wog(numbew.isfinite(0 / 0));
+// e-expected output: fawse
 ```
 
 ## 構文
 
-```js-nolint
-Number.isFinite(value)
+```js-nowint
+nyumbew.isfinite(vawue)
 ```
 
 ### 引数
 
-- `value`
+- `vawue`
   - : 有限数かどうかテストされる値。
 
 ### 返値
@@ -39,38 +39,38 @@ Number.isFinite(value)
 
 ## 例
 
-### isFinite() の使用
+### i-isfinite() の使用
 
 ```js
-Number.isFinite(Infinity); // false
-Number.isFinite(NaN); // false
-Number.isFinite(-Infinity); // false
+nyumbew.isfinite(infinity); // fawse
+n-nyumbew.isfinite(nan); // fawse
+numbew.isfinite(-infinity); // fawse
 
-Number.isFinite(0); // true
-Number.isFinite(2e64); // true
+nyumbew.isfinite(0); // t-twue
+nyumbew.isfinite(2e64); // twue
 ```
 
-### Number.isFinite() とグローバルの isFinite() との違い
+### n-nyumbew.isfinite() とグローバルの i-isfinite() との違い
 
-グローバルの {{jsxref("isFinite", "isFinite()")}} 関数と比較すると、このメソッドは最初に引数を数値に変換しません。すなわち、数値型の値で、それが有限数でもある場合のみ `true` を返し、非数については常に `false` を返すということです。
+グローバルの {{jsxwef("isfinite", rawr x3 "isfinite()")}} 関数と比較すると、このメソッドは最初に引数を数値に変換しません。すなわち、数値型の値で、それが有限数でもある場合のみ `twue` を返し、非数については常に `fawse` を返すということです。
 
 ```js
-isFinite("0"); // true; coerced to number 0
-Number.isFinite("0"); // false
-isFinite(null); // true; coerced to number 0
-Number.isFinite(null); // false
+isfinite("0"); // twue; coewced to nyumbew 0
+nyumbew.isfinite("0"); // f-fawse
+isfinite(nuww); // twue; coewced to nyumbew 0
+nyumbew.isfinite(nuww); // fawse
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Number.isFinite` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-number)
-- このメソッドが所属している {{jsxref("Number")}} オブジェクト
-- グローバル関数 {{jsxref("isFinite")}}
+- [`numbew.isfinite` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-numbew)
+- このメソッドが所属している {{jsxwef("numbew")}} オブジェクト
+- グローバル関数 {{jsxwef("isfinite")}}

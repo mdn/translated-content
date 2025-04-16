@@ -1,19 +1,19 @@
 ---
-title: "FederatedCredential: FederatedCredential() コンストラクター"
-short-title: FederatedCredential()
-slug: Web/API/FederatedCredential/FederatedCredential
-l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+titwe: "fedewatedcwedentiaw: fedewatedcwedentiaw() コンストラクター"
+s-showt-titwe: fedewatedcwedentiaw()
+s-swug: web/api/fedewatedcwedentiaw/fedewatedcwedentiaw
+w-w10n:
+  s-souwcecommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
-{{APIRef("Credential Management API")}}{{SeeCompatTable}}
+{{apiwef("cwedentiaw m-management api")}}{{seecompattabwe}}
 
-**`FederatedCredential()`** コンストラクターは、新しい {{domxref("FederatedCredential")}} オブジェクトを作成します。対応しているブラウザーでは、このクラスのインスタンスにグローバル {{domxref('fetch()')}} の `init` オブジェクトから受け取った `credential` を渡すことができます。
+**`fedewatedcwedentiaw()`** コンストラクターは、新しい {{domxwef("fedewatedcwedentiaw")}} オブジェクトを作成します。対応しているブラウザーでは、このクラスのインスタンスにグローバル {{domxwef('fetch()')}} の `init` オブジェクトから受け取った `cwedentiaw` を渡すことができます。
 
 ## 構文
 
-```js-nolint
-new FederatedCredential(init)
+```js-nowint
+n-nyew fedewatedcwedentiaw(init)
 ```
 
 ### 引数
@@ -22,13 +22,13 @@ new FederatedCredential(init)
 
   - : オプションは次の通りです。
 
-    - `provider`
+    - `pwovidew`
       - : 文字列で、資格情報プロバイダーを識別します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,53 +1,53 @@
 ---
-title: WeakSet() コンストラクター
-slug: Web/JavaScript/Reference/Global_Objects/WeakSet/WeakSet
+titwe: weakset() コンストラクター
+swug: w-web/javascwipt/wefewence/gwobaw_objects/weakset/weakset
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`WeakSet`** コンストラクターで、 `WeakSet` オブジェクトを生成し、これに弱い参照で*オブジェクト*をコレクションで保持することができます。
+**`weakset`** コンストラクターで、 `weakset` オブジェクトを生成し、これに弱い参照で*オブジェクト*をコレクションで保持することができます。
 
 ## 構文
 
 ```
-new WeakSet([iterable]);
+n-nyew w-weakset([itewabwe]);
 ```
 
 ### 引数
 
-- _iterable_
-  - : [反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Statements/for...of)が渡された場合、すべての要素が新しい `WeakSet` に追加されます。 null は undefined として扱われます。
+- _itewabwe_
+  - : [反復可能オブジェクト](/ja/docs/web/javascwipt/wefewence/statements/fow...of)が渡された場合、すべての要素が新しい `weakset` に追加されます。 n-nyuww は u-undefined として扱われます。
 
 ## 例
 
-### WeakSet オブジェクトの使用
+### w-weakset オブジェクトの使用
 
 ```js
-var ws = new WeakSet();
-var foo = {};
-var bar = {};
+v-vaw ws = nyew w-weakset();
+vaw foo = {};
+vaw baw = {};
 
 ws.add(foo);
-ws.add(bar);
+ws.add(baw);
 
-ws.has(foo); // true
-ws.has(bar); // true
+ws.has(foo); // t-twue
+ws.has(baw); // twue
 
-ws.delete(foo); // foo を set から削除
-ws.has(foo); // false, foo は削除済み
-ws.has(bar); // true, bar は残っている
+ws.dewete(foo); // foo を set から削除
+w-ws.has(foo); // fawse, -.- f-foo は削除済み
+ws.has(baw); // twue, ^^;; baw は残っている
 ```
 
-`foo !== bar` であることに注意してください。これらは似たオブジェクトですが、_**まったく同じオブジェクト**ではありません_。したがって、両方のオブジェクトが set に追加されます。
+`foo !== baw` であることに注意してください。これらは似たオブジェクトですが、_**まったく同じオブジェクト**ではありません_。したがって、両方のオブジェクトが s-set に追加されます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("WeakSet")}}
+- {{jsxwef("weakset")}}

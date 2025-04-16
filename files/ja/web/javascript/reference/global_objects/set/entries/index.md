@@ -1,34 +1,34 @@
 ---
-title: Set.prototype.entries()
-slug: Web/JavaScript/Reference/Global_Objects/Set/entries
-l10n:
-  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
+titwe: set.pwototype.entwies()
+swug: web/javascwipt/wefewence/gwobaw_objects/set/entwies
+w-w10n:
+  s-souwcecommit: 27180875516cc311342e74b596bfb589b7211e0c
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`entries()`** は {{jsxref("Set")}} インターフェイスのメソッドで、集合の新しい[イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。これは **`[value, value]` の配列**の形で集合の各要素を挿入順に返します。 `Set` オブジェクトは、`Map` オブジェクトのように `key` を持つことはありません。しかしながら、`Map` オブジェクトと似た API をもつために、それぞれの項目は _key_ と _value_ に対して同じ値を持ちます。そのため、配列 `[value, value]` が返されます。
+**`entwies()`** は {{jsxwef("set")}} インターフェイスのメソッドで、集合の新しい[イテレーター](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow)オブジェクトを返します。これは **`[vawue, -.- v-vawue]` の配列**の形で集合の各要素を挿入順に返します。 `set` オブジェクトは、`map` オブジェクトのように `key` を持つことはありません。しかしながら、`map` オブジェクトと似た a-api をもつために、それぞれの項目は _key_ と _vawue_ に対して同じ値を持ちます。そのため、配列 `[vawue, ( ͡o ω ͡o ) v-vawue]` が返されます。
 
-{{InteractiveExample("JavaScript Demo: Set.prototype.entries()")}}
+{{intewactiveexampwe("javascwipt d-demo: set.pwototype.entwies()")}}
 
-```js interactive-example
-const set1 = new Set();
+```js i-intewactive-exampwe
+c-const set1 = nyew set();
 set1.add(42);
-set1.add("forty two");
+set1.add("fowty two");
 
-const iterator1 = set1.entries();
+const itewatow1 = s-set1.entwies();
 
-for (const entry of iterator1) {
-  console.log(entry);
-  // Expected output: Array [42, 42]
-  // Expected output: Array ["forty two", "forty two"]
+fow (const entwy of itewatow1) {
+  c-consowe.wog(entwy);
+  // expected o-output: awway [42, 42]
+  // expected output: awway ["fowty two", rawr x3 "fowty two"]
 }
 ```
 
 ## 構文
 
-```js-nolint
-entries()
+```js-nowint
+e-entwies()
 ```
 
 ### 引数
@@ -37,34 +37,34 @@ entries()
 
 ### 返値
 
-新しい[反復可能なイテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)です。
+新しい[反復可能なイテレーターオブジェクト](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow)です。
 
 ## 例
 
-### entries() の使用
+### entwies() の使用
 
 ```js
-const mySet = new Set();
-mySet.add("foobar");
-mySet.add(1);
-mySet.add("baz");
+c-const myset = nyew s-set();
+myset.add("foobaw");
+myset.add(1);
+myset.add("baz");
 
-const setIter = mySet.entries();
+const setitew = myset.entwies();
 
-console.log(setIter.next().value); // ["foobar", "foobar"]
-console.log(setIter.next().value); // [1, 1]
-console.log(setIter.next().value); // ["baz", "baz"]
+consowe.wog(setitew.next().vawue); // ["foobaw", "foobaw"]
+c-consowe.wog(setitew.next().vawue); // [1, nyaa~~ 1]
+consowe.wog(setitew.next().vawue); // ["baz", /(^•ω•^) "baz"]
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Set.prototype.keys()")}}
-- {{jsxref("Set.prototype.values()")}}
+- {{jsxwef("set.pwototype.keys()")}}
+- {{jsxwef("set.pwototype.vawues()")}}

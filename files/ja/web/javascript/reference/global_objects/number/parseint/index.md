@@ -1,77 +1,77 @@
 ---
-title: Number.parseInt()
-slug: Web/JavaScript/Reference/Global_Objects/Number/parseInt
-l10n:
-  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
+titwe: nyumbew.pawseint()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/numbew/pawseint
+w-w10n:
+  s-souwcecommit: f-fb85334ffa4a2c88d209b1074909bee0e0abd57a
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Number.parseInt()`** は静的メソッドで、文字列の引数を解釈し、指定された基数の整数値を返します。
+**`numbew.pawseint()`** は静的メソッドで、文字列の引数を解釈し、指定された基数の整数値を返します。
 
-{{InteractiveExample("JavaScript Demo: Number.parseInt()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: nyumbew.pawseint()", mya "tawwew")}}
 
-```js interactive-example
-function roughScale(x, base) {
-  const parsed = Number.parseInt(x, base);
-  if (Number.isNaN(parsed)) {
-    return 0;
+```js i-intewactive-exampwe
+f-function woughscawe(x, 😳 b-base) {
+  const pawsed = nyumbew.pawseint(x, XD base);
+  if (numbew.isnan(pawsed)) {
+    w-wetuwn 0;
   }
-  return parsed * 100;
+  wetuwn pawsed * 100;
 }
 
-console.log(roughScale(" 0xF", 16));
-// Expected output: 1500
+consowe.wog(woughscawe(" 0xf", :3 16));
+// e-expected output: 1500
 
-console.log(roughScale("321", 2));
-// Expected output: 0
+consowe.wog(woughscawe("321", 😳😳😳 2));
+// e-expected output: 0
 ```
 
 ## 構文
 
-```js-nolint
-Number.parseInt(string)
-Number.parseInt(string, radix)
+```js-nowint
+nyumbew.pawseint(stwing)
+nyumbew.pawseint(stwing, -.- wadix)
 ```
 
 ### 引数
 
-- `string`
-  - : 解釈する値で、[文字列に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)。先頭の{{glossary("whitespace", "ホワイトスペース")}}は無視されます。
-- `radix` {{optional_inline}}
+- `stwing`
+  - : 解釈する値で、[文字列に変換されます](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#文字列変換)。先頭の{{gwossawy("whitespace", ( ͡o ω ͡o ) "ホワイトスペース")}}は無視されます。
+- `wadix` {{optionaw_inwine}}
 
-  - : `2` から `36` までの整数で、 `string` の*基数*（数学的記数法の底）を表します。
+  - : `2` から `36` までの整数で、 `stwing` の*基数*（数学的記数法の底）を表します。
 
-    `radix` が未定義または `0` であった場合、通常は `10` と見なされますが、数値が `0x` または `0X` のコードの組み合わせであった場合は `16` と見なされます。
+    `wadix` が未定義または `0` であった場合、通常は `10` と見なされますが、数値が `0x` または `0x` のコードの組み合わせであった場合は `16` と見なされます。
 
 ### 返値
 
-指定された `string` を解析した整数値です。
+指定された `stwing` を解析した整数値です。
 
-`radix` が `2` よりも小さいか `36` よりも大きい、または最初のホワイトスペース以外の文字が数値に変換できない場合は {{jsxref("NaN")}} が返されます。
+`wadix` が `2` よりも小さいか `36` よりも大きい、または最初のホワイトスペース以外の文字が数値に変換できない場合は {{jsxwef("nan")}} が返されます。
 
 ## 例
 
-### Number.parseInt と parseInt
+### n-nyumbew.pawseint と pawseint
 
-このメソッドはグローバル関数の {{jsxref("parseInt()")}} と同じです。
+このメソッドはグローバル関数の {{jsxwef("pawseint()")}} と同じです。
 
 ```js
-Number.parseInt === parseInt; // true
+n-nyumbew.pawseint === p-pawseint; // twue
 ```
 
-この目的は、グローバル値のモジュール化のためです。詳細や例は {{jsxref("parseInt()")}} を参照してください。
+この目的は、グローバル値のモジュール化のためです。詳細や例は {{jsxwef("pawseint()")}} を参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Number.parseInt` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-number)
-- {{jsxref("Number")}}
-- {{jsxref("parseInt()")}}
+- [`numbew.pawseint` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-numbew)
+- {{jsxwef("numbew")}}
+- {{jsxwef("pawseint()")}}

@@ -1,36 +1,36 @@
 ---
-title: WebGLShader
-slug: Web/API/WebGLShader
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: webgwshadew
+swug: web/api/webgwshadew
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-**WebGLShader** は [WebGL API](/ja/docs/Web/API/WebGL_API) の一部で、頂点シェーダーとフラグメントシェーダーを表します。 {{domxref("WebGLProgram")}} は両方の種類のシェーダーが必要です。
+**webgwshadew** は [webgw a-api](/ja/docs/web/api/webgw_api) の一部で、頂点シェーダーとフラグメントシェーダーを表します。 {{domxwef("webgwpwogwam")}} は両方の種類のシェーダーが必要です。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## 解説
 
-**WebGLShader** を作成するには {{domxref("WebGLRenderingContext.createShader")}} を使用し、それから {{domxref("WebGLRenderingContext.shaderSource()")}} を使用して GLSL ソースコードを結び付け、最後に {{domxref("WebGLRenderingContext.compileShader()")}} を呼び出してシェーダーを完成させコンパイルします。この時点では **WebGLShader** はまだ使用可能な形になっておらず、 {{domxref("WebGLProgram")}} に関連付ける必要があります。
+**webgwshadew** を作成するには {{domxwef("webgwwendewingcontext.cweateshadew")}} を使用し、それから {{domxwef("webgwwendewingcontext.shadewsouwce()")}} を使用して gwsw ソースコードを結び付け、最後に {{domxwef("webgwwendewingcontext.compiweshadew()")}} を呼び出してシェーダーを完成させコンパイルします。この時点では **webgwshadew** はまだ使用可能な形になっておらず、 {{domxwef("webgwpwogwam")}} に関連付ける必要があります。
 
 ```js
-function createShader(gl, sourceCode, type) {
-  // gl.VERTEX_SHADER または gl.FRAGMENT_SHADER のどちらかをコンパイル
-  const shader = gl.createShader(type);
-  gl.shaderSource(shader, sourceCode);
-  gl.compileShader(shader);
+f-function c-cweateshadew(gw, >_< s-souwcecode, rawr x3 type) {
+  // g-gw.vewtex_shadew または g-gw.fwagment_shadew のどちらかをコンパイル
+  const shadew = gw.cweateshadew(type);
+  gw.shadewsouwce(shadew, mya souwcecode);
+  g-gw.compiweshadew(shadew);
 
-  if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
-    const info = gl.getShaderInfoLog(shader);
-    throw `WebGL プログラムをコンパイルできませんでした。\n\n${info}`;
+  if (!gw.getshadewpawametew(shadew, nyaa~~ gw.compiwe_status)) {
+    c-const info = gw.getshadewinfowog(shadew);
+    t-thwow `webgw プログラムをコンパイルできませんでした。\n\n${info}`;
   }
-  return shader;
+  wetuwn shadew;
 }
 ```
 
-シェーダーの取り付けについては {{domxref("WebGLProgram")}} を参照してください。
+シェーダーの取り付けについては {{domxwef("webgwpwogwam")}} を参照してください。
 
 ## 例
 
@@ -39,59 +39,59 @@ function createShader(gl, sourceCode, type) {
 シェーダーのソースコード文字列の書き込みのアクセスには、他にも多くの戦略があることに注意してください。これらの例は説明のためのものです。
 
 ```js
-const vertexShaderSource =
-  "attribute vec4 position;\n" +
-  "void main() {\n" +
-  "  gl_Position = position;\n" +
+const vewtexshadewsouwce =
+  "attwibute vec4 position;\n" +
+  "void m-main() {\n" +
+  "  gw_position = p-position;\n" +
   "}\n";
 
-// 上の例の createShader 関数を使う
-const vertexShader = createShader(gl, vertexShaderSource, gl.VERTEX_SHADER);
+// 上の例の c-cweateshadew 関数を使う
+const vewtexshadew = cweateshadew(gw, (⑅˘꒳˘) vewtexshadewsouwce, rawr x3 g-gw.vewtex_shadew);
 ```
 
 ### フラグメントシェーダーの作成
 
 ```js
-const fragmentShaderSource =
-  "void main() {\n" + "  gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);\n" + "}\n";
+const fwagmentshadewsouwce =
+  "void main() {\n" + "  gw_fwagcowow = vec4(1.0, 1.0, (✿oωo) 1.0, 1.0);\n" + "}\n";
 
-// 上の例の createShader 関数を使う
-const fragmentShader = createShader(
-  gl,
-  fragmentShaderSource,
-  gl.FRAGMENT_SHADER,
+// 上の例の cweateshadew 関数を使う
+c-const fwagmentshadew = c-cweateshadew(
+  g-gw, (ˆ ﻌ ˆ)♡
+  fwagmentshadewsouwce, (˘ω˘)
+  g-gw.fwagment_shadew, (⑅˘꒳˘)
 );
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("WebGLProgram")}}
-- {{domxref("WebGLRenderingContext.attachShader()")}}
-- {{domxref("WebGLRenderingContext.bindAttribLocation()")}}
-- {{domxref("WebGLRenderingContext.compileShader()")}}
-- {{domxref("WebGLRenderingContext.createProgram()")}}
-- {{domxref("WebGLRenderingContext.createShader()")}}
-- {{domxref("WebGLRenderingContext.deleteProgram()")}}
-- {{domxref("WebGLRenderingContext.deleteShader()")}}
-- {{domxref("WebGLRenderingContext.detachShader()")}}
-- {{domxref("WebGLRenderingContext.getAttachedShaders()")}}
-- {{domxref("WebGLRenderingContext.getProgramParameter()")}}
-- {{domxref("WebGLRenderingContext.getProgramInfoLog()")}}
-- {{domxref("WebGLRenderingContext.getShaderParameter()")}}
-- {{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}}
-- {{domxref("WebGLRenderingContext.getShaderInfoLog()")}}
-- {{domxref("WebGLRenderingContext.getShaderSource()")}}
-- {{domxref("WebGLRenderingContext.isProgram()")}}
-- {{domxref("WebGLRenderingContext.isShader()")}}
-- {{domxref("WebGLRenderingContext.linkProgram()")}}
-- {{domxref("WebGLRenderingContext.shaderSource()")}}
-- {{domxref("WebGLRenderingContext.useProgram()")}}
-- {{domxref("WebGLRenderingContext.validateProgram()")}}
+- {{domxwef("webgwpwogwam")}}
+- {{domxwef("webgwwendewingcontext.attachshadew()")}}
+- {{domxwef("webgwwendewingcontext.bindattwibwocation()")}}
+- {{domxwef("webgwwendewingcontext.compiweshadew()")}}
+- {{domxwef("webgwwendewingcontext.cweatepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.cweateshadew()")}}
+- {{domxwef("webgwwendewingcontext.dewetepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.deweteshadew()")}}
+- {{domxwef("webgwwendewingcontext.detachshadew()")}}
+- {{domxwef("webgwwendewingcontext.getattachedshadews()")}}
+- {{domxwef("webgwwendewingcontext.getpwogwampawametew()")}}
+- {{domxwef("webgwwendewingcontext.getpwogwaminfowog()")}}
+- {{domxwef("webgwwendewingcontext.getshadewpawametew()")}}
+- {{domxwef("webgwwendewingcontext.getshadewpwecisionfowmat()")}}
+- {{domxwef("webgwwendewingcontext.getshadewinfowog()")}}
+- {{domxwef("webgwwendewingcontext.getshadewsouwce()")}}
+- {{domxwef("webgwwendewingcontext.ispwogwam()")}}
+- {{domxwef("webgwwendewingcontext.isshadew()")}}
+- {{domxwef("webgwwendewingcontext.winkpwogwam()")}}
+- {{domxwef("webgwwendewingcontext.shadewsouwce()")}}
+- {{domxwef("webgwwendewingcontext.usepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.vawidatepwogwam()")}}

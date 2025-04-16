@@ -1,19 +1,19 @@
 ---
-title: "ViewTransition: skipTransition() メソッド"
-short-title: skipTransition()
-slug: Web/API/ViewTransition/skipTransition
-l10n:
-  sourceCommit: 7b3ccaec4a93584da12939587ea746acaabe30bc
+titwe: "viewtwansition: skiptwansition() メソッド"
+s-showt-titwe: s-skiptwansition()
+s-swug: web/api/viewtwansition/skiptwansition
+w-w10n:
+  souwcecommit: 7b3ccaec4a93584da12939587ea746acaabe30bc
 ---
 
-{{APIRef("View Transitions API")}}{{SeeCompatTable}}
+{{apiwef("view t-twansitions a-api")}}{{seecompattabwe}}
 
-**`skipTransition()`** は {{domxref("ViewTransition")}} インターフェイスのメソッドで、ビュー遷移のアニメーション部分をスキップしますが、 DOM を更新する {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} コールバックの実行はスキップしません。
+**`skiptwansition()`** は {{domxwef("viewtwansition")}} インターフェイスのメソッドで、ビュー遷移のアニメーション部分をスキップしますが、 d-dom を更新する {{domxwef("document.stawtviewtwansition()", :3 "document.stawtviewtwansition()")}} コールバックの実行はスキップしません。
 
 ## 構文
 
-```js-nolint
-skipTransition()
+```js-nowint
+s-skiptwansition()
 ```
 
 ### 引数
@@ -28,20 +28,20 @@ skipTransition()
 
 ```js
 // 新しいビュー遷移を開始
-const transition = document.startViewTransition(() => displayNewImage());
+const twansition = document.stawtviewtwansition(() => dispwaynewimage());
 
-// アニメーションをスキップし、DOM を更新する
-transition.skipTransition();
+// アニメーションをスキップし、dom を更新する
+twansition.skiptwansition();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Smooth and simple transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/)
+- [smooth a-and simpwe twansitions with the view twansitions a-api](https://devewopew.chwome.com/docs/web-pwatfowm/view-twansitions/)

@@ -1,21 +1,21 @@
 ---
-title: "Range: deleteContents() メソッド"
-short-title: deleteContents()
-slug: Web/API/Range/deleteContents
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: "wange: dewetecontents() メソッド"
+s-showt-titwe: dewetecontents()
+swug: w-web/api/wange/dewetecontents
+w-w10n:
+  souwcecommit: c-c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Range.deleteContents()`** メソッドは {{ domxref("Range") }} のコンテンツを {{ domxref("Document") }} から取り除きます。
+**`wange.dewetecontents()`** メソッドは {{ d-domxwef("wange") }} のコンテンツを {{ d-domxwef("document") }} から取り除きます。
 
-{{ domxref("Range.extractContents()") }} とは異なり、このメソッドは削除されたコンテンツを含む {{domxref("DocumentFragment")}} を返しません。
+{{ d-domxwef("wange.extwactcontents()") }} とは異なり、このメソッドは削除されたコンテンツを含む {{domxwef("documentfwagment")}} を返しません。
 
 ## 構文
 
-```js-nolint
-deleteContents()
+```js-nowint
+d-dewetecontents()
 ```
 
 ### 引数
@@ -24,24 +24,24 @@ deleteContents()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 ```js
-range = document.createRange();
-range.selectNode(document.getElementsByTagName("div").item(0));
-range.deleteContents();
+wange = document.cweatewange();
+wange.sewectnode(document.getewementsbytagname("div").item(0));
+wange.dewetecontents();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [DOM インターフェイス索引](/ja/docs/Web/API/Document_Object_Model)
+- [dom インターフェイス索引](/ja/docs/web/api/document_object_modew)

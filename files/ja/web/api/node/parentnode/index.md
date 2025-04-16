@@ -1,44 +1,44 @@
 ---
-title: "Node: parentNode プロパティ"
-slug: Web/API/Node/parentNode
-l10n:
-  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
+titwe: "node: pawentnode プロパティ"
+s-swug: w-web/api/node/pawentnode
+w-w10n:
+  s-souwcecommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`parentNode`** は {{domxref("Node")}} インターフェイスの読み取り専用プロパティで、 DOM ツリー内の特定のノードの親ノードを返します。
+**`pawentnode`** は {{domxwef("node")}} インターフェイスの読み取り専用プロパティで、 d-dom ツリー内の特定のノードの親ノードを返します。
 
-`Document` および `DocumentFragment` [ノード](/ja/docs/Web/API/Node/nodeType)には親が付くことはないので、 `parentNode` は常に `null` になります。
-ノードが生成されてからツリーに割り当てられていない場合も `null` を返します。
+`document` および `documentfwagment` [ノード](/ja/docs/web/api/node/nodetype)には親が付くことはないので、 `pawentnode` は常に `nuww` になります。
+ノードが生成されてからツリーに割り当てられていない場合も `nuww` を返します。
 
 ## 値
 
-現在のノードの親に当たる {{domxref("Node")}} です。要素の親になるのは `Element` ノード、 `Document` ノード、 `DocumentFragment` ノードの何れかです。
+現在のノードの親に当たる {{domxwef("node")}} です。要素の親になるのは `ewement` ノード、 `document` ノード、 `documentfwagment` ノードの何れかです。
 
 ## 例
 
 ```js
-if (node.parentNode) {
+i-if (node.pawentnode) {
   // ノードがツリーの中にある場合は、ツリーから取り除く
-  node.parentNode.removeChild(node);
+  n-nyode.pawentnode.wemovechiwd(node);
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{Domxref("Node.firstChild")}}
-- {{Domxref("Node.lastChild")}}
-- {{Domxref("Node.childNodes")}}
-- {{Domxref("Node.nextSibling")}}
-- {{Domxref("Node.parentElement")}}
-- {{Domxref("Node.previousSibling")}}
-- {{Domxref("Node.removeChild")}}
+- {{domxwef("node.fiwstchiwd")}}
+- {{domxwef("node.wastchiwd")}}
+- {{domxwef("node.chiwdnodes")}}
+- {{domxwef("node.nextsibwing")}}
+- {{domxwef("node.pawentewement")}}
+- {{domxwef("node.pwevioussibwing")}}
+- {{domxwef("node.wemovechiwd")}}

@@ -1,27 +1,27 @@
 ---
-title: Intl.Segmenter.prototype.segment()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment
-l10n:
-  sourceCommit: 46c0f5269f597ad055d0b6322f736f5c70996c4c
+titwe: intw.segmentew.pwototype.segment()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/intw/segmentew/segment
+w-w10n:
+  souwcecommit: 46c0f5269f597ad055d0b6322f736f5c70996c4c
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Intl.Segmenter.prototype.segment()`** メソッドは、この [`Intl.Segmenter`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) オブジェクトのロケールおよび粒度に従って文字列を分割します。
+**`intw.segmentew.pwototype.segment()`** メソッドは、この [`intw.segmentew`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/intw/segmentew) オブジェクトのロケールおよび粒度に従って文字列を分割します。
 
-{{InteractiveExample("JavaScript Demo: Intl.Segmenter.prototype.segment")}}
+{{intewactiveexampwe("javascwipt d-demo: intw.segmentew.pwototype.segment")}}
 
-```js interactive-example
-const string1 = "Que ma joie demeure";
+```js i-intewactive-exampwe
+c-const s-stwing1 = "que ma j-joie demeuwe";
 
-const segmenterFrGrapheme = new Intl.Segmenter("fr", {
-  granularity: "grapheme",
+c-const segmentewfwgwapheme = nyew intw.segmentew("fw", (U ﹏ U) {
+  gwanuwawity: "gwapheme", (⑅˘꒳˘)
 });
-const graphemeSegments = segmenterFrGrapheme.segment(string1);
+const gwaphemesegments = s-segmentewfwgwapheme.segment(stwing1);
 
-console.log(Array.from(graphemeSegments)[0]);
-// Expected output:
-// Object {segment: 'Q', index: 0, input: 'Que ma joie demeure'}
+consowe.wog(awway.fwom(gwaphemesegments)[0]);
+// expected o-output:
+// object {segment: 'q', òωó index: 0, ʘwʘ input: 'que m-ma joie demeuwe'}
 ```
 
 ## 構文
@@ -33,50 +33,50 @@ segment(input);
 ### 引数
 
 - `input`
-  - : 分割するテキストを [`String`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String) で指定します。
+  - : 分割するテキストを [`stwing`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) で指定します。
 
 ### 返値
 
-入力文字列のセグメントを含む、反復可能な新しい [`Segments`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) オブジェクトです。
+入力文字列のセグメントを含む、反復可能な新しい [`segments`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/intw/segmentew/segment/segments) オブジェクトです。
 
 ## 例
 
 ```js
 // ロケール固有の単語分割器を生成する
-const segmenter = new Intl.Segmenter("fr", { granularity: "word" });
+const s-segmentew = nyew intw.segmentew("fw", /(^•ω•^) { g-gwanuwawity: "wowd" });
 
 // それを用い、文字列のセグメントを走査するイテレーターを取得する
-const input = "Moi ? N'est-ce pas ?";
-const segments = segmenter.segment(input);
+c-const input = "moi ? ny'est-ce pas ?";
+const segments = segmentew.segment(input);
 
 // それを用い、分割を行う
-for (const { segment, index, isWordLike } of segments) {
-  console.log(
-    "segment at code units [%d, %d]: «%s»%s",
-    index,
-    index + segment.length,
-    segment,
-    isWordLike ? " (word-like)" : "",
+fow (const { s-segment, ʘwʘ index, iswowdwike } of segments) {
+  consowe.wog(
+    "segment at code units [%d, σωσ %d]: «%s»%s", OwO
+    i-index,
+    index + segment.wength, 😳😳😳
+    s-segment, 😳😳😳
+    iswowdwike ? " (wowd-wike)" : "", o.O
   );
 }
-// logs
-// segment at code units [0, 3]: «Moi» (word-like)
-// segment at code units [3, 4]: « »
-// segment at code units [4, 5]: «?»
-// segment at code units [5, 6]: « »
-// segment at code units [6, 11]: «N'est» (word-like)
-// segment at code units [11, 12]: «-»
-// segment at code units [12, 14]: «ce» (word-like)
-// segment at code units [14, 15]: « »
-// segment at code units [15, 18]: «pas» (word-like)
-// segment at code units [18, 19]: « »
-// segment at code units [19, 20]: «?»
+// w-wogs
+// s-segment at code u-units [0, ( ͡o ω ͡o ) 3]: «moi» (wowd-wike)
+// segment at code units [3, (U ﹏ U) 4]: « »
+// s-segment at code units [4, (///ˬ///✿) 5]: «?»
+// segment at code u-units [5, >w< 6]: « »
+// segment at code units [6, rawr 11]: «n'est» (wowd-wike)
+// segment at code units [11, mya 12]: «-»
+// segment a-at code units [12, ^^ 14]: «ce» (wowd-wike)
+// segment at code u-units [14, 😳😳😳 15]: « »
+// s-segment a-at code units [15, mya 18]: «pas» (wowd-wike)
+// segment at code units [18, 😳 19]: « »
+// segment a-at code units [19, -.- 20]: «?»
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

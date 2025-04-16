@@ -1,479 +1,479 @@
 ---
-title: fill
-slug: Web/SVG/Reference/Attribute/fill
-l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+titwe: fiww
+swug: web/svg/wefewence/attwibute/fiww
+w-w10n:
+  souwcecommit: c-c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-**`fill`** 属性には使われ方により 2 つの意味があります. 1 つは図形やテキストに使われた場合で，その要素を塗りつぶす色（またはグラデーションやパターンなどの SVG ペイントサーバー）を意味します．もう 1 つはアニメーションに使われた場合で，そのアニメーションの最終状態を定義します．
+**`fiww`** 属性には使われ方により 2 つの意味があります. (˘ω˘) 1 つは図形やテキストに使われた場合で，その要素を塗りつぶす色（またはグラデーションやパターンなどの s-svg ペイントサーバー）を意味します．もう 1 つはアニメーションに使われた場合で，そのアニメーションの最終状態を定義します．
 
-> [!NOTE]
-> プレゼンテーション属性であるため、 `fill` には対応する CSS プロパティ {{cssxref("fill")}} があります。両方が指定された場合、 CSS プロパティが優先されます。
+> [!note]
+> プレゼンテーション属性であるため、 `fiww` には対応する c-css プロパティ {{cssxwef("fiww")}} があります。両方が指定された場合、 c-css プロパティが優先されます。
 
-SVG のプレゼンテーション属性の `fill` と CSS の {{cssxref("fill")}} プロパティは、次の SVG 要素で使用できます。
+s-svg のプレゼンテーション属性の `fiww` と c-css の {{cssxwef("fiww")}} プロパティは、次の svg 要素で使用できます。
 
-- {{SVGElement('circle')}}
-- {{SVGElement('ellipse')}}
-- {{SVGElement('path')}}
-- {{SVGElement('polygon')}}
-- {{SVGElement('polyline')}}
-- {{SVGElement('rect')}}
-- {{SVGElement('text')}}
-- {{SVGElement('textPath')}}
-- {{SVGElement('tref')}}
-- {{SVGElement('tspan')}}
+- {{svgewement('ciwcwe')}}
+- {{svgewement('ewwipse')}}
+- {{svgewement('path')}}
+- {{svgewement('powygon')}}
+- {{svgewement('powywine')}}
+- {{svgewement('wect')}}
+- {{svgewement('text')}}
+- {{svgewement('textpath')}}
+- {{svgewement('twef')}}
+- {{svgewement('tspan')}}
 
-SVG の `fill` 属性は、以下の SVG 要素でアニメーションの最後の状態を定義するために使用することができます。
+svg の `fiww` 属性は、以下の s-svg 要素でアニメーションの最後の状態を定義するために使用することができます。
 
-- {{SVGElement('animate')}}
-- {{SVGElement('animateMotion')}}
-- {{SVGElement('animateTransform')}}
-- {{SVGElement('set')}}.
+- {{svgewement('animate')}}
+- {{svgewement('animatemotion')}}
+- {{svgewement('animatetwansfowm')}}
+- {{svgewement('set')}}. :3
 
 ## 例
 
 ### 基本色とグラデーションの塗り潰し、およびアニメーション
 
 ```css hidden
-html,
+htmw, ^^;;
 body,
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+```htmw
+<svg viewbox="0 0 300 100" x-xmwns="http://www.w3.owg/2000/svg">
   <!-- 基本色の塗り潰し -->
-  <circle cx="50" cy="50" r="40" fill="pink" />
+  <ciwcwe cx="50" cy="50" w="40" f-fiww="pink" />
 
   <!-- 円をグラデーションで塗り潰し -->
   <defs>
-    <radialGradient id="myGradient">
-      <stop offset="0%" stop-color="pink" />
-      <stop offset="100%" stop-color="black" />
-    </radialGradient>
+    <wadiawgwadient id="mygwadient">
+      <stop o-offset="0%" stop-cowow="pink" />
+      <stop offset="100%" stop-cowow="bwack" />
+    </wadiawgwadient>
   </defs>
 
-  <circle cx="150" cy="50" r="40" fill="url(#myGradient)" />
+  <ciwcwe c-cx="150" cy="50" w="40" fiww="uww(#mygwadient)" />
 
   <!--
   アニメーションの円の最終状態を維持します。これは半径 40 の円です。
   -->
-  <circle cx="250" cy="50" r="20">
+  <ciwcwe c-cx="250" cy="50" w-w="20">
     <animate
-      attributeType="XML"
-      attributeName="r"
-      from="0"
+      attwibutetype="xmw"
+      attwibutename="w"
+      fwom="0"
       to="40"
-      dur="5s"
-      fill="freeze" />
-  </circle>
+      d-duw="5s"
+      fiww="fweeze" />
+  </ciwcwe>
 </svg>
 ```
 
-{{EmbedLiveSample("Basic color and gradient fills, and animation", '100%', 200)}}
+{{embedwivesampwe("basic cowow and gwadient fiwws, 🥺 and animation", (⑅˘꒳˘) '100%', 200)}}
 
-### `context-fill` の例
+### `context-fiww` の例
 
-この例では、 {{SVGElement('path')}} 要素を使用して 3 つの図形を定義し、それぞれに異なる [`stroke`](/ja/docs/Web/SVG/Reference/Attribute/stroke) と `fill` の色を設定しています。また、 {{SVGElement('circle')}} 要素を {{SVGElement('marker')}} 要素を介してマーカーとして定義しています。各図形には、CSS の `marker` プロパティを介してマーカーが適用されています。
+この例では、 {{svgewement('path')}} 要素を使用して 3 つの図形を定義し、それぞれに異なる [`stwoke`](/ja/docs/web/svg/wefewence/attwibute/stwoke) と `fiww` の色を設定しています。また、 {{svgewement('ciwcwe')}} 要素を {{svgewement('mawkew')}} 要素を介してマーカーとして定義しています。各図形には、css の `mawkew` プロパティを介してマーカーが適用されています。
 
-{{SVGElement('circle')}} には、 `stroke="context-stroke"` および `fill="context-fill"` が設定されています。これは図形のコンテキスト内でマーカーとして設定されているため、これらの属性により、それぞれの場合で {{SVGElement('path')}} 要素に設定された `fill` および `stroke` が継承されます。
+{{svgewement('ciwcwe')}} には、 `stwoke="context-stwoke"` および `fiww="context-fiww"` が設定されています。これは図形のコンテキスト内でマーカーとして設定されているため、これらの属性により、それぞれの場合で {{svgewement('path')}} 要素に設定された `fiww` および `stwoke` が継承されます。
 
-```html-nolint
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 90">
-  <style>
-    path {
-      stroke-width: 2px;
-      marker: url(#circle);
+```htmw-nowint
+<svg x-xmwns="http://www.w3.owg/2000/svg" viewbox="0 0 300 90">
+  <stywe>
+    p-path {
+      s-stwoke-width: 2px;
+      m-mawkew: u-uww(#ciwcwe);
     }
-  </style>
-  <path d="M 10 44.64 L 30 10 L 70 10 L 90 44.64 L 70 79.28 L 30 79.28 Z"
-        stroke="red" fill="orange" />
-  <path d="M 100 44.64 L 80 10 L 120 10 L 140 44.64 L 120 79.28 L 80 79.28 Z"
-        stroke="green" fill="lightgreen" />
-  <path d="M 150 44.64 L 130 10 L 170 10 L 190 44.64 L 170 79.28 L 130 79.28 Z"
-        stroke="blue" fill="lightblue" />
-  <marker id="circle" markerWidth="12" markerHeight="12"
-          refX="6" refY="6" markerUnits="userSpaceOnUse">
-    <circle cx="6" cy="6" r="3" stroke-width="2"
-            stroke="context-stroke" fill="context-fill"  />
-  </marker>
+  </stywe>
+  <path d="m 10 44.64 w 30 10 w-w 70 10 w 90 44.64 w 70 79.28 w 30 79.28 z"
+        s-stwoke="wed" fiww="owange" />
+  <path d="m 100 44.64 w 80 10 w 120 10 w 140 44.64 w 120 79.28 w-w 80 79.28 z"
+        stwoke="gween" f-fiww="wightgween" />
+  <path d-d="m 150 44.64 w-w 130 10 w 170 10 w 190 44.64 w 170 79.28 w 130 79.28 z"
+        s-stwoke="bwue" f-fiww="wightbwue" />
+  <mawkew id="ciwcwe" mawkewwidth="12" m-mawkewheight="12"
+          w-wefx="6" wefy="6" mawkewunits="usewspaceonuse">
+    <ciwcwe c-cx="6" cy="6" w="3" stwoke-width="2"
+            s-stwoke="context-stwoke" fiww="context-fiww"  />
+  </mawkew>
 </svg>
 ```
 
 出力結果は次のようになります。
 
-{{EmbedLiveSample("`context-stroke` example", '100%', 220)}}
+{{embedwivesampwe("`context-stwoke` exampwe", nyaa~~ '100%', :3 220)}}
 
-> [!NOTE]
-> 要素は、 `context-stroke` と `context-fill` を使用して、 {{SVGElement('use')}} 要素によって参照された際に `stroke` と `fill` の値を継承することもできます。
+> [!note]
+> 要素は、 `context-stwoke` と `context-fiww` を使用して、 {{svgewement('use')}} 要素によって参照された際に `stwoke` と `fiww` の値を継承することもできます。
 
-## animate
+## a-animate
 
-{{SVGElement('animate')}} において、 `fill` はアニメーションの最終状態を定義します。
+{{svgewement('animate')}} において、 `fiww` はアニメーションの最終状態を定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
-        <code>freeze</code> (<em>最後のアニメーションフレームの状態を維持</em
-        >) | <code>remove</code> (<em
+        <code>fweeze</code> (<em>最後のアニメーションフレームの状態を維持</em
+        >) | <code>wemove</code> (<em
           >最初のアニメーションフレームの状態を維持</em
         >)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
-      <td><code>remove</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
+      <td><code>wemove</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>不可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## animateMotion
+## a-animatemotion
 
-{{SVGElement('animateMotion')}} において、 `fill` はアニメーションの最終状態を定義します。
+{{svgewement('animatemotion')}} において、 `fiww` はアニメーションの最終状態を定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        <code>freeze</code> (<em>最後のアニメーションフレームの状態を維持</em
-        >) | <code>remove</code> (<em
+        <code>fweeze</code> (<em>最後のアニメーションフレームの状態を維持</em
+        >) | <code>wemove</code> (<em
           >最初のアニメーションフレームの状態を維持</em
         >)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
-      <td><code>remove</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
+      <td><code>wemove</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>不可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## animateTransform
+## animatetwansfowm
 
-{{SVGElement('animateTransform')}} において、 `fill` はアニメーションの最終状態を定義します。
+{{svgewement('animatetwansfowm')}} において、 `fiww` はアニメーションの最終状態を定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        <code>freeze</code> (<em>最後のアニメーションフレームの状態を維持</em
-        >) | <code>remove</code> (<em
+        <code>fweeze</code> (<em>最後のアニメーションフレームの状態を維持</em
+        >) | <code>wemove</code> (<em
           >最初のアニメーションフレームの状態を維持</em
         >)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
-      <td><code>remove</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
+      <td><code>wemove</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>不可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## circle
+## ciwcwe
 
-{{SVGElement('circle')}} において、 `fill` は円の色を定義するプレゼンテーション属性です。
+{{svgewement('ciwcwe')}} において、 `fiww` は円の色を定義するプレゼンテーション属性です。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#paint">&#x3C;paint></a></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#paint">&#x3c;paint></a></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
-      <td><code>black</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
+      <td><code>bwack</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## ellipse
+## ewwipse
 
-{{SVGElement('ellipse')}} において、 `fill` は楕円の色を定義するプレゼンテーション属性です。
+{{svgewement('ewwipse')}} において、 `fiww` は楕円の色を定義するプレゼンテーション属性です。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#paint">&#x3C;paint></a></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#paint">&#x3c;paint></a></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
-      <td><code>black</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
+      <td><code>bwack</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## path
 
-{{SVGElement('path')}} において、 `fill` は図形の内部の色を定義するプレゼンテーション属性です。 (_内部は {{SVGAttr('fill-rule')}} 属性によって定義されます_)
+{{svgewement('path')}} において、 `fiww` は図形の内部の色を定義するプレゼンテーション属性です。 (_内部は {{svgattw('fiww-wuwe')}} 属性によって定義されます_)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#paint">&#x3C;paint></a></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#paint">&#x3c;paint></a></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
-      <td><code>black</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
+      <td><code>bwack</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## polygon
+## powygon
 
-{{SVGElement('polygon')}} において、 `fill` は図形の内部の色を定義するプレゼンテーション属性です。（_内部は {{SVGAttr('fill-rule')}} 属性によって定義されます_）
+{{svgewement('powygon')}} において、 `fiww` は図形の内部の色を定義するプレゼンテーション属性です。（_内部は {{svgattw('fiww-wuwe')}} 属性によって定義されます_）
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#paint">&#x3C;paint></a></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#paint">&#x3c;paint></a></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
-      <td><code>black</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
+      <td><code>bwack</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## polyline
+## powywine
 
-{{SVGElement('polyline')}} において、 `fill` は図形の内部の色を定義するプレゼンテーション属性です。 (_内部は {{SVGAttr('fill-rule')}} 属性によって定義されます_)
+{{svgewement('powywine')}} において、 `fiww` は図形の内部の色を定義するプレゼンテーション属性です。 (_内部は {{svgattw('fiww-wuwe')}} 属性によって定義されます_)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#paint">&#x3C;paint></a></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#paint">&#x3c;paint></a></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
-      <td><code>black</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
+      <td><code>bwack</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## rect
+## w-wect
 
-{{SVGElement('rect')}} において、 `fill` は四角形の色を定義するプレゼンテーション属性です。
+{{svgewement('wect')}} において、 `fiww` は四角形の色を定義するプレゼンテーション属性です。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#paint">&#x3C;paint></a></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#paint">&#x3c;paint></a></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
-      <td><code>black</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
+      <td><code>bwack</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## set
 
-{{SVGElement('set')}} において、 `fill` はアニメーションの最終状態を定義します。
+{{svgewement('set')}} において、 `fiww` はアニメーションの最終状態を定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        <code>freeze</code> (<em>最後のアニメーションフレームの状態を維持</em
-        >) | <code>remove</code> (<em
+        <code>fweeze</code> (<em>最後のアニメーションフレームの状態を維持</em
+        >) | <code>wemove</code> (<em
           >最初のアニメーションフレームの状態を維持</em
         >)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
-      <td><code>remove</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
-      <td>No</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
+      <td><code>wemove</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
+      <td>no</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## text
 
-{{SVGElement('text')}} において、 `fill` はテキストの色を定義するプレゼンテーション属性です。
+{{svgewement('text')}} において、 `fiww` はテキストの色を定義するプレゼンテーション属性です。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#paint">&#x3C;paint></a></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#paint">&#x3c;paint></a></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
-      <td><code>black</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
+      <td><code>bwack</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## textPath
+## textpath
 
-{{SVGElement('textPath')}} において、 `fill` はテキストの色を定義するプレゼンテーション属性です。
+{{svgewement('textpath')}} において、 `fiww` はテキストの色を定義するプレゼンテーション属性です。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#paint">&#x3C;paint></a></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#paint">&#x3c;paint></a></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
-      <td><code>black</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
+      <td><code>bwack</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## tref
+## twef
 
-> [!WARNING]
-> SVG2 では、 {{SVGElement('tref')}} は非推奨であり、使用するべきではありません。
+> [!wawning]
+> svg2 では、 {{svgewement('twef')}} は非推奨であり、使用するべきではありません。
 
-{{SVGElement('tref')}} において、 `fill` はテキストの色を定義するプレゼンテーション属性です。
+{{svgewement('twef')}} において、 `fiww` はテキストの色を定義するプレゼンテーション属性です。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#paint">&#x3C;paint></a></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#paint">&#x3c;paint></a></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
-      <td><code>black</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
+      <td><code>bwack</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## tspan
 
-{{SVGElement('tspan')}} において、 `fill` はテキストの色を定義するプレゼンテーション属性です。
+{{svgewement('tspan')}} において、 `fiww` はテキストの色を定義するプレゼンテーション属性です。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#paint">&#x3C;paint></a></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#paint">&#x3c;paint></a></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
-      <td><code>black</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
+      <td><code>bwack</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- CSS の {{cssxref("fill")}} プロパティ
+- css の {{cssxwef("fiww")}} プロパティ

@@ -1,78 +1,78 @@
 ---
-title: URIError
-slug: Web/JavaScript/Reference/Global_Objects/URIError
+titwe: uwiewwow
+swug: web/javascwipt/wefewence/gwobaw_objects/uwiewwow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`URIError`** オブジェクトは、グローバル URI 処理関数が間違った方法で使用された場合のエラーを表します。
+**`uwiewwow`** オブジェクトは、グローバル u-uwi 処理関数が間違った方法で使用された場合のエラーを表します。
 
 ## コンストラクター
 
-- {{jsxref("Global_Objects/URIError/URIError", "URIError()")}}
-  - : 新しい `URIError` オブジェクトを生成します。
+- {{jsxwef("gwobaw_objects/uwiewwow/uwiewwow", 😳 "uwiewwow()")}}
+  - : 新しい `uwiewwow` オブジェクトを生成します。
 
 ## インスタンスプロパティ
 
-- {{jsxref("Error.prototype.message", "URIError.prototype.message")}}
-  - : エラーメッセージです。 ECMA-262 において {{jsxref("URIError")}} は自身の `message` プロパティを提供するべきとされていますが、 [SpiderMonkey](/ja/docs/Mozilla/Projects/SpiderMonkey) では {{jsxref("Error.prototype.message")}} を継承しています。
-- {{jsxref("Error.prototype.name", "URIError.prototype.name")}}
-  - : エラー名です。 {{jsxref("Error")}} から継承しています。
-- {{jsxref("Error.prototype.fileName", "URIError.prototype.fileName")}}
-  - : このエラーが発生したファイルのパスです。 {{jsxref("Error")}} から継承しています。
-- {{jsxref("Error.prototype.lineNumber", "URIError.prototype.lineNumber")}}
-  - : このエラーが発生したファイル内の行番号です。 {{jsxref("Error")}} から継承しています。
-- {{jsxref("Error.prototype.columnNumber", "URIError.prototype.columnNumber")}}
-  - : このエラーが発生した行内の桁番号です。 {{jsxref("Error")}} から継承しています。
-- {{jsxref("Error.prototype.stack", "URIError.prototype.stack")}}
-  - : スタックトレースです。 {{jsxref("Error")}} から継承しています。
+- {{jsxwef("ewwow.pwototype.message", XD "uwiewwow.pwototype.message")}}
+  - : エラーメッセージです。 e-ecma-262 において {{jsxwef("uwiewwow")}} は自身の `message` プロパティを提供するべきとされていますが、 [spidewmonkey](/ja/docs/moziwwa/pwojects/spidewmonkey) では {{jsxwef("ewwow.pwototype.message")}} を継承しています。
+- {{jsxwef("ewwow.pwototype.name", :3 "uwiewwow.pwototype.name")}}
+  - : エラー名です。 {{jsxwef("ewwow")}} から継承しています。
+- {{jsxwef("ewwow.pwototype.fiwename", "uwiewwow.pwototype.fiwename")}}
+  - : このエラーが発生したファイルのパスです。 {{jsxwef("ewwow")}} から継承しています。
+- {{jsxwef("ewwow.pwototype.winenumbew", "uwiewwow.pwototype.winenumbew")}}
+  - : このエラーが発生したファイル内の行番号です。 {{jsxwef("ewwow")}} から継承しています。
+- {{jsxwef("ewwow.pwototype.cowumnnumbew", 😳😳😳 "uwiewwow.pwototype.cowumnnumbew")}}
+  - : このエラーが発生した行内の桁番号です。 {{jsxwef("ewwow")}} から継承しています。
+- {{jsxwef("ewwow.pwototype.stack", -.- "uwiewwow.pwototype.stack")}}
+  - : スタックトレースです。 {{jsxwef("ewwow")}} から継承しています。
 
 ## 例
 
-### URIError のキャッチ
+### u-uwiewwow のキャッチ
 
 ```js
-try {
-  decodeURIComponent("%");
-} catch (e) {
-  console.log(e instanceof URIError); // true
-  console.log(e.message); // "malformed URI sequence"
-  console.log(e.name); // "URIError"
-  console.log(e.fileName); // "Scratchpad/1"
-  console.log(e.lineNumber); // 2
-  console.log(e.columnNumber); // 2
-  console.log(e.stack); // "@Scratchpad/2:2:3\n"
+t-twy {
+  d-decodeuwicomponent("%");
+} c-catch (e) {
+  c-consowe.wog(e i-instanceof uwiewwow); // twue
+  consowe.wog(e.message); // "mawfowmed uwi sequence"
+  consowe.wog(e.name); // "uwiewwow"
+  c-consowe.wog(e.fiwename); // "scwatchpad/1"
+  consowe.wog(e.winenumbew); // 2
+  consowe.wog(e.cowumnnumbew); // 2
+  consowe.wog(e.stack); // "@scwatchpad/2:2:3\n"
 }
 ```
 
-### URIError の生成
+### uwiewwow の生成
 
 ```js
-try {
-  throw new URIError("Hello", "someFile.js", 10);
-} catch (e) {
-  console.log(e instanceof URIError); // true
-  console.log(e.message); // "Hello"
-  console.log(e.name); // "URIError"
-  console.log(e.fileName); // "someFile.js"
-  console.log(e.lineNumber); // 10
-  console.log(e.columnNumber); // 0
-  console.log(e.stack); // "@Scratchpad/2:2:9\n"
+t-twy {
+  thwow nyew uwiewwow("hewwo", ( ͡o ω ͡o ) "somefiwe.js", rawr x3 10);
+} c-catch (e) {
+  consowe.wog(e instanceof uwiewwow); // twue
+  c-consowe.wog(e.message); // "hewwo"
+  consowe.wog(e.name); // "uwiewwow"
+  c-consowe.wog(e.fiwename); // "somefiwe.js"
+  c-consowe.wog(e.winenumbew); // 10
+  consowe.wog(e.cowumnnumbew); // 0
+  consowe.wog(e.stack); // "@scwatchpad/2:2:9\n"
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Error")}}
-- {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}
-- {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
-- {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}
-- {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
+- {{jsxwef("ewwow")}}
+- {{jsxwef("gwobaw_objects/decodeuwi", nyaa~~ "decodeuwi()")}}
+- {{jsxwef("gwobaw_objects/decodeuwicomponent", /(^•ω•^) "decodeuwicomponent()")}}
+- {{jsxwef("gwobaw_objects/encodeuwi", rawr "encodeuwi()")}}
+- {{jsxwef("gwobaw_objects/encodeuwicomponent", OwO "encodeuwicomponent()")}}

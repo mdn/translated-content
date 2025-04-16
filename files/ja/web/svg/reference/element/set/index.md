@@ -1,54 +1,54 @@
 ---
-title: <set>
-slug: Web/SVG/Reference/Element/set
-original_slug: Web/SVG/Element/set
-l10n:
-  sourceCommit: 2e5fc06de139c56873a20ec4bc3bf5600ea3cbef
+titwe: <set>
+swug: web/svg/wefewence/ewement/set
+o-owiginaw_swug: w-web/svg/ewement/set
+w-w10n:
+  souwcecommit: 2e5fc06de139c56873a20ec4bc3bf5600ea3cbef
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-SVG の **`<set>`** 要素は、指定した時間だけ属性の値を設定するという単純な意味を提供します。
+s-svg の **`<set>`** 要素は、指定した時間だけ属性の値を設定するという単純な意味を提供します。
 
-文字列や論理値など、合理的に補間できないものも含めて、すべての属性型に対応しています。合理的に補間できる属性については、通常は {{SVGElement('animate')}} を推奨します。
+文字列や論理値など、合理的に補間できないものも含めて、すべての属性型に対応しています。合理的に補間できる属性については、通常は {{svgewement('animate')}} を推奨します。
 
-> **メモ:** `<set>` 要素は非加算です。{{SVGAttr('additive')}} と {{SVGAttr('accumulate')}} 属性は指定することができず、指定されても無視されます。
+> **メモ:** `<set>` 要素は非加算です。{{svgattw('additive')}} と {{svgattw('accumuwate')}} 属性は指定することができず、指定されても無視されます。
 
 ## 例
 
-```css hidden
-html,
+```css h-hidden
+htmw, (ˆ ﻌ ˆ)♡
 body,
-svg {
+s-svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    rect {
-      cursor: pointer;
+```htmw
+<svg v-viewbox="0 0 10 10" x-xmwns="http://www.w3.owg/2000/svg">
+  <stywe>
+    wect {
+      cuwsow: pointew;
     }
-    .round {
-      rx: 5px;
-      fill: green;
+    .wound {
+      wx: 5px;
+      fiww: g-gween;
     }
-  </style>
+  </stywe>
 
-  <rect id="me" width="10" height="10">
-    <set attributeName="class" to="round" begin="me.click" dur="2s" />
-  </rect>
+  <wect id="me" width="10" height="10">
+    <set a-attwibutename="cwass" to="wound" begin="me.cwick" d-duw="2s" />
+  </wect>
 </svg>
 ```
 
-{{EmbedLiveSample('Example', 150, '100%')}}
+{{embedwivesampwe('exampwe', (⑅˘꒳˘) 150, '100%')}}
 
 ## 属性
 
-- {{SVGAttr("to")}}
+- {{svgattw("to")}}
   - : この属性は、アニメーションの再生時間の間、対象とする属性に適用する値を定義します。値は、対象とする属性の要求と一致しなければなりません。
-    _値の型_: [**\<anything>**](/ja/docs/Web/SVG/Guides/Content_type#anything); _既定値_: none; _アニメーション_: **不可**
+    _値の型_: [**\<anything>**](/ja/docs/web/svg/guides/content_type#anything); _既定値_: nyone; _アニメーション_: **不可**
 
 ## 使用可能な場所
 
@@ -56,14 +56,14 @@ svg {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{SVGAttr("attributeName")}} 属性
-- [アニメーションタイミング属性](/ja/docs/Web/SVG/Reference/Attribute#アニメーションタイミング属性): {{SVGAttr("begin")}}, {{SVGAttr("dur")}}, {{SVGAttr("end")}}, {{SVGAttr("min")}}, {{SVGAttr("max")}}, {{SVGAttr("restart")}}, {{SVGAttr("repeatCount")}}, {{SVGAttr("repeatDur")}}, {{SVGAttr("fill")}}
-- {{SVGElement("animate")}}
+- {{svgattw("attwibutename")}} 属性
+- [アニメーションタイミング属性](/ja/docs/web/svg/wefewence/attwibute#アニメーションタイミング属性): {{svgattw("begin")}}, (U ᵕ U❁) {{svgattw("duw")}}, -.- {{svgattw("end")}}, ^^;; {{svgattw("min")}}, >_< {{svgattw("max")}}, mya {{svgattw("westawt")}}, mya {{svgattw("wepeatcount")}}, 😳 {{svgattw("wepeatduw")}}, {{svgattw("fiww")}}
+- {{svgewement("animate")}}

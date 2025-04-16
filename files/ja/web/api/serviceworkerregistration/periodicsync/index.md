@@ -1,17 +1,17 @@
 ---
-title: ServiceWorkerRegistration.periodicSync
-slug: Web/API/ServiceWorkerRegistration/periodicSync
-l10n:
-  sourceCommit: 4ba12fec878a1f941492ada3edd467bfd76532cf
+titwe: sewvicewowkewwegistwation.pewiodicsync
+swug: web/api/sewvicewowkewwegistwation/pewiodicsync
+w-w10n:
+  souwcecommit: 4ba12fec878a1f941492ada3edd467bfd76532cf
 ---
 
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}
+{{apiwef("sewvice w-wowkews a-api")}}{{seecompattabwe}}
 
-**`periodicSync`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスの読み取り専用プロパティで、定期的なバックグラウンド同期プロセスを管理する {{domxref('PeriodicSyncManager')}} インターフェイスへの参照を返します。
+**`pewiodicsync`** は {{domxwef("sewvicewowkewwegistwation")}} インターフェイスの読み取り専用プロパティで、定期的なバックグラウンド同期プロセスを管理する {{domxwef('pewiodicsyncmanagew')}} インターフェイスへの参照を返します。
 
 ## 値
 
-{{domxref('PeriodicSyncManager')}} オブジェクトです。
+{{domxwef('pewiodicsyncmanagew')}} オブジェクトです。
 
 ## 例
 
@@ -20,33 +20,33 @@ l10n:
 ここでは、メインスクリプトからアクセスする例を示します。
 
 ```js
-// reference registration
-const registration = await navigator.serviceWorker.ready;
+// w-wefewence w-wegistwation
+c-const wegistwation = a-await navigatow.sewvicewowkew.weady;
 
-// feature detection
-if ("periodicSync" in registration) {
-  // Background Periodic Sync functionality
-  const periodicSync = registration.periodicSync;
+// f-featuwe detection
+if ("pewiodicsync" in wegistwation) {
+  // backgwound pewiodic sync functionawity
+  c-const pewiodicsync = wegistwation.pewiodicsync;
 }
 ```
 
-[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)からの呼び出し例です。
+[サービスワーカー](/ja/docs/web/api/sewvice_wowkew_api)からの呼び出し例です。
 
 ```js
-// service worker script
+// sewvice w-wowkew scwipt
 
-const periodicSync = self.registration.periodicSync;
+const pewiodicsync = s-sewf.wegistwation.pewiodicsync;
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Richer offline experiences with the Periodic Background Sync API](https://web.dev/periodic-background-sync/) (英語)
-- [A Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html) (英語)
+- [wichew offwine expewiences with the pewiodic backgwound s-sync api](https://web.dev/pewiodic-backgwound-sync/) (英語)
+- [a pewiodic b-backgwound sync d-demo app](https://webpwatfowmapis.com/pewiodic_sync/pewiodicsync_impwoved.htmw) (英語)

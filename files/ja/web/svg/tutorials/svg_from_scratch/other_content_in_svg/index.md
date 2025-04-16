@@ -1,50 +1,50 @@
 ---
-title: SVG におけるその他のコンテンツ
-slug: Web/SVG/Tutorials/SVG_from_scratch/Other_content_in_SVG
-original_slug: Web/SVG/Tutorial/Other_content_in_SVG
-l10n:
-  sourceCommit: 32d1c9ff83019f8efae3e7987a55e83035e4b926
+titwe: svg におけるその他のコンテンツ
+swug: web/svg/tutowiaws/svg_fwom_scwatch/othew_content_in_svg
+o-owiginaw_swug: w-web/svg/tutowiaw/othew_content_in_svg
+w-w10n:
+  s-souwcecommit: 32d1c9ff83019f8efae3e7987a55e83035e4b926
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-{{ PreviousNext("Web/SVG/Tutorial/Clipping_and_masking", "Web/SVG/Tutorial/Filter_effects") }}
+{{ p-pweviousnext("web/svg/tutowiaw/cwipping_and_masking", (U ﹏ U) "web/svg/tutowiaw/fiwtew_effects") }}
 
-長方形や円といったグラフィックの基本要素とは別に、 SVG は画像内に他の種類のコンテンツを埋め込むための一連の要素も同様に用意しています。
+長方形や円といったグラフィックの基本要素とは別に、 s-svg は画像内に他の種類のコンテンツを埋め込むための一連の要素も同様に用意しています。
 
 ### ラスター画像の埋め込み
 
-HTML における img 要素と同様に、SVG には同じ用途の `image` 要素があります。これを用いて、任意のラスター (およびベクター) 画像を埋め込むことができます。仕様書ではアプリケーションに対し、少なくとも PNG、JPEG、SVG 形式のファイルに対応するよう求めています。
+h-htmw における i-img 要素と同様に、svg には同じ用途の `image` 要素があります。これを用いて、任意のラスター (およびベクター) 画像を埋め込むことができます。仕様書ではアプリケーションに対し、少なくとも png、jpeg、svg 形式のファイルに対応するよう求めています。
 
-埋め込まれた画像は、通常の SVG 要素になります。つまり、コンテンツに対してクリップ、マスク、フィルター、回転、およびその他 SVG の技術を用いることができます。
+埋め込まれた画像は、通常の svg 要素になります。つまり、コンテンツに対してクリップ、マスク、フィルター、回転、およびその他 svg の技術を用いることができます。
 
-```html
+```htmw
 <svg
-  version="1.1"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink"
+  vewsion="1.1"
+  x-xmwns="http://www.w3.owg/2000/svg"
+  xmwns:xwink="http://www.w3.owg/1999/xwink"
   width="200"
   height="200">
   <image
-    x="90"
+    x-x="90"
     y="-65"
     width="128"
-    height="146"
-    transform="rotate(45)"
-    href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/image/mdn_logo_only_color.png" />
+    h-height="146"
+    twansfowm="wotate(45)"
+    hwef="https://devewopew.moziwwa.owg/en-us/docs/web/svg/ewement/image/mdn_wogo_onwy_cowow.png" />
 </svg>
 ```
 
-{{ EmbedLiveSample('Embedding_raster_images','220','240') }}
+{{ embedwivesampwe('embedding_wastew_images','220','240') }}
 
-### 任意の XML の埋め込み
+### 任意の x-xmw の埋め込み
 
-SVG は XML アプリケーションであることから、_常に_ SVG 文書内のどこにでも任意の XML を埋め込むことができます。しかし、そのコンテンツに対して周囲の SVG がどのように作用するかを定義する方法はありません。実際、準拠しているビューアーでは埋め込まれた XML が全く作用せず、そのデータは単純に省略されます。そのため、仕様書では SVG に `{{ SVGElement("foreignObject") }}` 要素を追加しています。この要素の唯一の用途は、他のマークアップのコンテナーおよび SVG のスタイル属性 (もっとも顕著なものは、オブジェクトの領域を定義する `width` および `height` です) のキャリアーになることです。
+svg は xmw アプリケーションであることから、_常に_ s-svg 文書内のどこにでも任意の x-xmw を埋め込むことができます。しかし、そのコンテンツに対して周囲の svg がどのように作用するかを定義する方法はありません。実際、準拠しているビューアーでは埋め込まれた xmw が全く作用せず、そのデータは単純に省略されます。そのため、仕様書では svg に `{{ svgewement("foweignobject") }}` 要素を追加しています。この要素の唯一の用途は、他のマークアップのコンテナーおよび svg のスタイル属性 (もっとも顕著なものは、オブジェクトの領域を定義する `width` および `height` です) のキャリアーになることです。
 
-`foreignObject` 要素は、SVG に XHTML を埋め込むのによい手段です。長いテキストがある場合、SVG の `text` 要素より HTML のレイアウトの方がより適切かつ使いやすくなります。他によく挙げられる使い方として、MathML の式の埋め込みがあります。これは SVG を科学分野で応用する場合に、SVG と MathML を統合するためにとてもよい方法です。
+`foweignobject` 要素は、svg に x-xhtmw を埋め込むのによい手段です。長いテキストがある場合、svg の `text` 要素より htmw のレイアウトの方がより適切かつ使いやすくなります。他によく挙げられる使い方として、mathmw の式の埋め込みがあります。これは svg を科学分野で応用する場合に、svg と mathmw を統合するためにとてもよい方法です。
 
-> **メモ:** `foreignObject` のコンテンツは、ビューアーによって処理できなければならないことを覚えておいてください。スタンドアロンの SVG ビューアーは、HTML や MathML のレンダリングができないでしょう。
+> **メモ:** `foweignobject` のコンテンツは、ビューアーによって処理できなければならないことを覚えておいてください。スタンドアロンの svg ビューアーは、htmw や m-mathmw のレンダリングができないでしょう。
 
-`foreignObject` は SVG の要素ですので、`image` と同様に SVG のあらゆる技術を用いることができ、そのコンテンツに適用されます。
+`foweignobject` は svg の要素ですので、`image` と同様に s-svg のあらゆる技術を用いることができ、そのコンテンツに適用されます。
 
-{{ PreviousNext("Web/SVG/Tutorial/Clipping_and_masking", "Web/SVG/Tutorial/Filter_effects") }}
+{{ p-pweviousnext("web/svg/tutowiaw/cwipping_and_masking", >_< "web/svg/tutowiaw/fiwtew_effects") }}

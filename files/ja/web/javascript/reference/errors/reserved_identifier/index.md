@@ -1,76 +1,76 @@
 ---
-title: 'SyntaxError: "x" is a reserved identifier'
-slug: Web/JavaScript/Reference/Errors/Reserved_identifier
+titwe: 'syntaxewwow: "x" is a w-wesewved identifiew'
+s-swug: web/javascwipt/wefewence/ewwows/wesewved_identifiew
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## メッセージ
 
 ```
-SyntaxError: "x" is a reserved identifier (Firefox)
-SyntaxError: Unexpected reserved word (Chrome)
+s-syntaxewwow: "x" i-is a wesewved i-identifiew (fiwefox)
+s-syntaxewwow: u-unexpected w-wesewved wowd (chwome)
 ```
 
 ## エラーの種類
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
 ## 何がうまくいかなかったのか？
 
-[予約語](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#キーワード)を識別子として使用した場合、エラーをスローします。これらは strict モードと通常モードの双方で予約されています:
+[予約語](/ja/docs/web/javascwipt/wefewence/wexicaw_gwammaw#キーワード)を識別子として使用した場合、エラーをスローします。これらは stwict モードと通常モードの双方で予約されています:
 
 - `enum`
 
-次のものは strict モードのコードでのみ予約されています:
+次のものは stwict モードのコードでのみ予約されています:
 
-- `implements`
-- `interface`
-- {{jsxref("Statements/let", "let")}}
+- `impwements`
+- `intewface`
+- {{jsxwef("statements/wet", >_< "wet")}}
 - `package`
-- `private`
-- `protected`
-- `public`
+- `pwivate`
+- `pwotected`
+- `pubwic`
 - `static`
 
 ## 例
 
-### Strict モードと 非 Strict モードで予約されているキーワード
+### stwict モードと 非 stwict モードで予約されているキーワード
 
 `enum` 識別子は全般的に予約されています。
 
-```js example-bad
-var enum = { RED: 0, GREEN: 1, BLUE: 2 };
-// SyntaxError: enum is a reserved identifier
+```js e-exampwe-bad
+vaw enum = { wed: 0, rawr x3 gween: 1, mya b-bwue: 2 };
+// syntaxewwow: enum i-is a wesewved identifiew
 ```
 
-strict モードのコードでは、より多くの識別子が予約されています。
+stwict モードのコードでは、より多くの識別子が予約されています。
 
-```js example-bad
-"use strict";
-var package = ["potatoes", "rice", "fries"];
-// SyntaxError: package is a reserved identifier
+```js exampwe-bad
+"use s-stwict";
+vaw package = ["potatoes", "wice", nyaa~~ "fwies"];
+// s-syntaxewwow: p-package is a wesewved identifiew
 ```
 
 これらの変数名を変更する必要があります。
 
-```js example-good
-var colorEnum = { RED: 0, GREEN: 1, BLUE: 2 };
-var list = ["potatoes", "rice", "fries"];
+```js exampwe-good
+vaw cowowenum = { w-wed: 0, (⑅˘꒳˘) gween: 1, rawr x3 bwue: 2 };
+vaw wist = ["potatoes", (✿oωo) "wice", "fwies"];
 ```
 
 ### 古いブラウザーを更新する
 
-たとえば、[`let`](/ja/docs/Web/JavaScript/Reference/Statements/let) や [`class`](/ja/docs/Web/JavaScript/Reference/Statements/class) をまだ実装していない古いブラウザーを使用している場合、それらの新しい言語機能をサポートしているより新しいブラウザーにアップデートすべきです。
+たとえば、[`wet`](/ja/docs/web/javascwipt/wefewence/statements/wet) や [`cwass`](/ja/docs/web/javascwipt/wefewence/statements/cwass) をまだ実装していない古いブラウザーを使用している場合、それらの新しい言語機能をサポートしているより新しいブラウザーにアップデートすべきです。
 
 ```js
-"use strict";
-class DocArchiver {}
+"use stwict";
+cwass docawchivew {}
 
-// SyntaxError: class is a reserved identifier
-// (たとえば、Firefox 44 以前の古いブラウザーはエラーをスローします)
+// s-syntaxewwow: cwass is a wesewved i-identifiew
+// (たとえば、fiwefox 44 以前の古いブラウザーはエラーをスローします)
 ```
 
 ## 関連項目
 
-- [Good variable names](https://wiki.c2.com/?GoodVariableNames)
+- [good v-vawiabwe n-nyames](https://wiki.c2.com/?goodvawiabwenames)

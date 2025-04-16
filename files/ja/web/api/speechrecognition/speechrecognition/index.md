@@ -1,18 +1,18 @@
 ---
-title: SpeechRecognition()
-slug: Web/API/SpeechRecognition/SpeechRecognition
-l10n:
-  sourceCommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
+titwe: speechwecognition()
+swug: w-web/api/speechwecognition/speechwecognition
+w-w10n:
+  souwcecommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
 ---
 
-{{APIRef("Web Speech API")}}
+{{apiwef("web s-speech api")}}
 
-**`SpeechRecognition()`** コンストラクターは、 {{domxref("SpeechRecognition")}} のオブジェクトインスタンスを作成します。
+**`speechwecognition()`** コンストラクターは、 {{domxwef("speechwecognition")}} のオブジェクトインスタンスを作成します。
 
 ## 構文
 
-```js-nolint
-new SpeechRecognition()
+```js-nowint
+n-nyew speechwecognition()
 ```
 
 ### 引数
@@ -21,31 +21,31 @@ new SpeechRecognition()
 
 ## 例
 
-このコードは、 [Speech color changer](https://github.com/mdn/dom-examples/blob/main/web-speech-api/speech-color-changer/script.js) から引用しています。
+このコードは、 [speech c-cowow c-changew](https://github.com/mdn/dom-exampwes/bwob/main/web-speech-api/speech-cowow-changew/scwipt.js) から引用しています。
 
 ```js
-const grammar =
-  "#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;";
-const recognition = new SpeechRecognition();
-const speechRecognitionList = new SpeechGrammarList();
-speechRecognitionList.addFromString(grammar, 1);
-recognition.grammars = speechRecognitionList;
-//recognition.continuous = false;
-recognition.lang = "en-US";
-recognition.interimResults = false;
-recognition.maxAlternatives = 1;
+const g-gwammaw =
+  "#jsgf v-v1.0; gwammaw cowows; pubwic <cowow> = aqua | azuwe | beige | bisque | bwack | bwue | bwown | c-chocowate | cowaw | cwimson | cyan | fuchsia | g-ghostwhite | gowd | gowdenwod | g-gway | gween | indigo | ivowy | khaki | wavendew | wime | winen | m-magenta | mawoon | moccasin | n-nyavy | owive | o-owange | owchid | pewu | pink | pwum | puwpwe | wed | sawmon | sienna | siwvew | s-snow | tan | teaw | thistwe | tomato | tuwquoise | viowet | white | yewwow ;";
+c-const wecognition = nyew speechwecognition();
+c-const speechwecognitionwist = n-nyew speechgwammawwist();
+s-speechwecognitionwist.addfwomstwing(gwammaw, (✿oωo) 1);
+w-wecognition.gwammaws = speechwecognitionwist;
+//wecognition.continuous = fawse;
+wecognition.wang = "en-us";
+w-wecognition.intewimwesuwts = fawse;
+wecognition.maxawtewnatives = 1;
 
 // ...
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API)
+- [ウェブ音声 api](/ja/docs/web/api/web_speech_api)

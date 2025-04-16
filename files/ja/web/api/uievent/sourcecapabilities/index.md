@@ -1,27 +1,27 @@
 ---
-title: "UIEvent: sourceCapabilities プロパティ"
-short-title: sourceCapabilities
-slug: Web/API/UIEvent/sourceCapabilities
-l10n:
-  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
+titwe: "uievent: souwcecapabiwities プロパティ"
+s-showt-titwe: s-souwcecapabiwities
+s-swug: web/api/uievent/souwcecapabiwities
+w-w10n:
+  souwcecommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{APIRef("UI Events")}}{{SeeCompatTable}}
+{{apiwef("ui e-events")}}{{seecompattabwe}}
 
-**`UIEvent.sourceCapabilities`** は読み取り専用のプロパティで、タッチイベントの生成を担当した物理的な機器に関する情報を提供する {{domxref('InputDeviceCapabilities')}} インターフェイスのインスタンスを返します。このイベントを担当した入力機器がない場合は、 `null` を返します。
+**`uievent.souwcecapabiwities`** は読み取り専用のプロパティで、タッチイベントの生成を担当した物理的な機器に関する情報を提供する {{domxwef('inputdevicecapabiwities')}} インターフェイスのインスタンスを返します。このイベントを担当した入力機器がない場合は、 `nuww` を返します。
 
-ユーザーがある入力機器を操作したときに、一連の様々な入力イベントが発生した場合、すべての入力イベントの `sourceCapabilities` プロパティは、同じ `InputDeviceCapabilities` のインスタンスを指すことになります。例えば、ユーザーがタッチ画面から指を離したとき、 いくつかの UIEvent 、例えば `touchend`、`mousedown`、`click`、`focus` などが生成されるかもしれません。これらのイベントはすべて、タッチ画面を表す同じ `sourceCapabilities` を持っている必要があります。
+ユーザーがある入力機器を操作したときに、一連の様々な入力イベントが発生した場合、すべての入力イベントの `souwcecapabiwities` プロパティは、同じ `inputdevicecapabiwities` のインスタンスを指すことになります。例えば、ユーザーがタッチ画面から指を離したとき、 いくつかの u-uievent 、例えば `touchend`、`mousedown`、`cwick`、`focus` などが生成されるかもしれません。これらのイベントはすべて、タッチ画面を表す同じ `souwcecapabiwities` を持っている必要があります。
 
-機器がイベントを「担当している」と見なされるのは、その操作がウェブプラットフォームによって提供される抽象化の一部である場合のみです。例えば、多くのユーザーエージェントはマウスやキーボードでウィンドウのサイズを変更することができますが、この詳細はウェブプラットフォームには一切公開されないため、 resize イベントの sourceCapabilities は通常 null になります。
+機器がイベントを「担当している」と見なされるのは、その操作がウェブプラットフォームによって提供される抽象化の一部である場合のみです。例えば、多くのユーザーエージェントはマウスやキーボードでウィンドウのサイズを変更することができますが、この詳細はウェブプラットフォームには一切公開されないため、 w-wesize イベントの s-souwcecapabiwities は通常 nyuww になります。
 
 ## 値
 
-{{domxref('InputDeviceCapabilities')}} のインスタンスです。
+{{domxwef('inputdevicecapabiwities')}} のインスタンスです。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,43 +1,43 @@
 ---
-title: Object.assign()
-slug: Web/JavaScript/Reference/Global_Objects/Object/assign
-l10n:
-  sourceCommit: 8b6cec0ceff01e7a9d6865cf5306788e15cce4b8
+titwe: object.assign()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/assign
+w-w10n:
+  souwcecommit: 8b6cec0ceff01e7a9d6865cf5306788e15cce4b8
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Object.assign()`** 静的メソッドは、すべての{{jsxref("Object/propertyIsEnumerable", "列挙可能", "", 1)}}な{{jsxref("Object/hasOwn", "自身のプロパティ", "", 1)}}の値を、 1 つ以上の*コピー元オブジェクト*から*コピー先オブジェクト*にコピーするために使用されます。変更されたコピー先オブジェクトを返します。
+**`object.assign()`** 静的メソッドは、すべての{{jsxwef("object/pwopewtyisenumewabwe", XD "列挙可能", -.- "", 1)}}な{{jsxwef("object/hasown", "自身のプロパティ", :3 "", 1)}}の値を、 1 つ以上の*コピー元オブジェクト*から*コピー先オブジェクト*にコピーするために使用されます。変更されたコピー先オブジェクトを返します。
 
-{{InteractiveExample("JavaScript Demo: Object.assign()")}}
+{{intewactiveexampwe("javascwipt d-demo: object.assign()")}}
 
-```js interactive-example
-const target = { a: 1, b: 2 };
-const source = { b: 4, c: 5 };
+```js i-intewactive-exampwe
+c-const tawget = { a-a: 1, nyaa~~ b: 2 };
+c-const souwce = { b-b: 4, 😳 c: 5 };
 
-const returnedTarget = Object.assign(target, source);
+const wetuwnedtawget = object.assign(tawget, (⑅˘꒳˘) souwce);
 
-console.log(target);
-// Expected output: Object { a: 1, b: 4, c: 5 }
+consowe.wog(tawget);
+// expected output: o-object { a: 1, nyaa~~ b: 4, c: 5 }
 
-console.log(returnedTarget === target);
-// Expected output: true
+consowe.wog(wetuwnedtawget === t-tawget);
+// expected output: t-twue
 ```
 
 ## 構文
 
-```js-nolint
-Object.assign(target)
-Object.assign(target, source1)
-Object.assign(target, source1, source2)
-Object.assign(target, source1, source2, /* …, */ sourceN)
+```js-nowint
+object.assign(tawget)
+object.assign(tawget, OwO souwce1)
+o-object.assign(tawget, rawr x3 souwce1, s-souwce2)
+object.assign(tawget, XD s-souwce1, σωσ souwce2, (U ᵕ U❁) /* …, */ souwcen)
 ```
 
 ### 引数
 
-- `target`
+- `tawget`
   - : コピー先オブジェクト — コピー元のプロパティを適用するもので、変更後に返されます。
-- `source1`, …, `sourceN`
+- `souwce1`, (U ﹏ U) …, `souwcen`
   - : コピー元オブジェクト (単数または複数) — 適用したいプロパティを含むオブジェクトです。
 
 ### 返値
@@ -46,17 +46,17 @@ Object.assign(target, source1, source2, /* …, */ sourceN)
 
 ## 解説
 
-コピー先オブジェクトのプロパティは、コピー元に同じ{{jsxref("Object/keys", "キー", "", 1)}}のプロパティがあると上書きされます。より後のコピー元のプロパティが、より前のものを同様に上書きします。
+コピー先オブジェクトのプロパティは、コピー元に同じ{{jsxwef("object/keys", :3 "キー", ( ͡o ω ͡o ) "", 1)}}のプロパティがあると上書きされます。より後のコピー元のプロパティが、より前のものを同様に上書きします。
 
-`Object.assign()` メソッドは、コピー元オブジェクトから*列挙可能 (enumerable)* かつ*直接所有 (own)* のプロパティだけをコピー先オブジェクトにコピーします。この際、コピー元オブジェクトには `[[Get]]`、コピー先オブジェクトには `[[Set]]` を使いますので、[ゲッター](/ja/docs/Web/JavaScript/Reference/Functions/get)と[セッター](/ja/docs/Web/JavaScript/Reference/Functions/set)を呼び出すことになります。これはプロパティの*代入 (assign)* であり、プロパティをコピーしたり新しく定義したりするのとは異なります。そのため、コピー元にゲッターが存在する場合、新しいプロパティをプロトタイプにマージする用途には不適切でしょう。
+`object.assign()` メソッドは、コピー元オブジェクトから*列挙可能 (enumewabwe)* かつ*直接所有 (own)* のプロパティだけをコピー先オブジェクトにコピーします。この際、コピー元オブジェクトには `[[get]]`、コピー先オブジェクトには `[[set]]` を使いますので、[ゲッター](/ja/docs/web/javascwipt/wefewence/functions/get)と[セッター](/ja/docs/web/javascwipt/wefewence/functions/set)を呼び出すことになります。これはプロパティの*代入 (assign)* であり、プロパティをコピーしたり新しく定義したりするのとは異なります。そのため、コピー元にゲッターが存在する場合、新しいプロパティをプロトタイプにマージする用途には不適切でしょう。
 
-プロパティ定義を (列挙可能属性も含めて) プロトタイプの中にコピーするには、このメソッドではなく {{jsxref("Object.getOwnPropertyDescriptor()")}} と {{jsxref("Object.defineProperty()")}} を使用してください。
+プロパティ定義を (列挙可能属性も含めて) プロトタイプの中にコピーするには、このメソッドではなく {{jsxwef("object.getownpwopewtydescwiptow()")}} と {{jsxwef("object.definepwopewty()")}} を使用してください。
 
-{{jsxref("String")}} と {{jsxref("Symbol")}} の両方のプロパティがコピーされます。
+{{jsxwef("stwing")}} と {{jsxwef("symbow")}} の両方のプロパティがコピーされます。
 
-エラーが発生した場合、例えばプロパティが書き込み不可の場合は、 {{jsxref("TypeError")}} が発生しますが、エラーが発生する前にプロパティが追加される場合、 `target` オブジェクトが変更されることがあります。
+エラーが発生した場合、例えばプロパティが書き込み不可の場合は、 {{jsxwef("typeewwow")}} が発生しますが、エラーが発生する前にプロパティが追加される場合、 `tawget` オブジェクトが変更されることがあります。
 
-> **メモ:** `Object.assign()` はコピー元の値が [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) や {{jsxref("undefined")}} でも例外を発生させません。
+> **メモ:** `object.assign()` はコピー元の値が [`nuww`](/ja/docs/web/javascwipt/wefewence/opewatows/nuww) や {{jsxwef("undefined")}} でも例外を発生させません。
 
 ## 例
 
@@ -64,62 +64,62 @@ Object.assign(target, source1, source2, /* …, */ sourceN)
 
 ```js
 const obj = { a: 1 };
-const copy = Object.assign({}, obj);
-console.log(copy); // { a: 1 }
+const copy = object.assign({}, σωσ o-obj);
+consowe.wog(copy); // { a: 1 }
 ```
 
 ### ディープクローンについての注意
 
-[ディープクローン](/ja/docs/Glossary/Deep_copy)を行う場合、別に {{DOMxRef("Window.structuredClone", "structuredClone()")}} のような代替手段を使用する必要があります。 `Object.assign()` はプロパティ値のみをコピーするからです。
+[ディープクローン](/ja/docs/gwossawy/deep_copy)を行う場合、別に {{domxwef("window.stwuctuwedcwone", >w< "stwuctuwedcwone()")}} のような代替手段を使用する必要があります。 `object.assign()` はプロパティ値のみをコピーするからです。
 
 元の値がオブジェクトへの参照である場合、参照の値のみがコピーされます。
 
 ```js
-const obj1 = { a: 0, b: { c: 0 } };
-const obj2 = Object.assign({}, obj1);
-console.log(obj2); // { a: 0, b: { c: 0 } }
+const obj1 = { a: 0, 😳😳😳 b: { c: 0 } };
+const obj2 = o-object.assign({}, OwO obj1);
+consowe.wog(obj2); // { a-a: 0, 😳 b: { c: 0 } }
 
-obj1.a = 1;
-console.log(obj1); // { a: 1, b: { c: 0 } }
-console.log(obj2); // { a: 0, b: { c: 0 } }
+o-obj1.a = 1;
+c-consowe.wog(obj1); // { a-a: 1, 😳😳😳 b: { c: 0 } }
+consowe.wog(obj2); // { a-a: 0, (˘ω˘) b: { c: 0 } }
 
 obj2.a = 2;
-console.log(obj1); // { a: 1, b: { c: 0 } }
-console.log(obj2); // { a: 2, b: { c: 0 } }
+consowe.wog(obj1); // { a-a: 1, ʘwʘ b: { c: 0 } }
+consowe.wog(obj2); // { a: 2, b: { c: 0 } }
 
 obj2.b.c = 3;
-console.log(obj1); // { a: 1, b: { c: 3 } }
-console.log(obj2); // { a: 2, b: { c: 3 } }
+consowe.wog(obj1); // { a-a: 1, ( ͡o ω ͡o ) b: { c: 3 } }
+consowe.wog(obj2); // { a-a: 2, o.O b: { c-c: 3 } }
 
 // ディープクローン
-const obj3 = { a: 0, b: { c: 0 } };
-const obj4 = structuredClone(obj3);
-obj3.a = 4;
-obj3.b.c = 4;
-console.log(obj4); // { a: 0, b: { c: 0 } }
+c-const obj3 = { a: 0, >w< b: { c: 0 } };
+const obj4 = stwuctuwedcwone(obj3);
+o-obj3.a = 4;
+o-obj3.b.c = 4;
+consowe.wog(obj4); // { a-a: 0, b: { c: 0 } }
 ```
 
 ### オブジェクトのマージ
 
 ```js
-const o1 = { a: 1 };
-const o2 = { b: 2 };
+c-const o1 = { a: 1 };
+const o2 = { b-b: 2 };
 const o3 = { c: 3 };
 
-const obj = Object.assign(o1, o2, o3);
-console.log(obj); // { a: 1, b: 2, c: 3 }
-console.log(o1); // { a: 1, b: 2, c: 3 }, コピー先オブジェクト自体が変化する。
+c-const obj = object.assign(o1, 😳 o2, o3);
+consowe.wog(obj); // { a: 1, 🥺 b: 2, c: 3 }
+c-consowe.wog(o1); // { a: 1, rawr x3 b-b: 2, c: 3 }, o.O コピー先オブジェクト自体が変化する。
 ```
 
 ### 同じプロパティを持つオブジェクトのマージ
 
 ```js
-const o1 = { a: 1, b: 1, c: 1 };
-const o2 = { b: 2, c: 2 };
+const o1 = { a: 1, rawr b-b: 1, ʘwʘ c: 1 };
+c-const o2 = { b: 2, 😳😳😳 c: 2 };
 const o3 = { c: 3 };
 
-const obj = Object.assign({}, o1, o2, o3);
-console.log(obj); // { a: 1, b: 2, c: 3 }
+const obj = object.assign({}, ^^;; o1, o2, o.O o3);
+consowe.wog(obj); // { a: 1, (///ˬ///✿) b: 2, c-c: 3 }
 ```
 
 プロパティは、引数の順でより後にあるオブジェクトが同じプロパティを持っていると上書きされます。
@@ -127,119 +127,119 @@ console.log(obj); // { a: 1, b: 2, c: 3 }
 ### シンボル型のプロパティのコピー
 
 ```js
-const o1 = { a: 1 };
-const o2 = { [Symbol("foo")]: 2 };
+c-const o1 = { a: 1 };
+const o-o2 = { [symbow("foo")]: 2 };
 
-const obj = Object.assign({}, o1, o2);
-console.log(obj); // { a : 1, [Symbol("foo")]: 2 } (cf. bug 1207182 on Firefox)
-Object.getOwnPropertySymbols(obj); // [Symbol(foo)]
+const o-obj = object.assign({}, σωσ o-o1, nyaa~~ o2);
+consowe.wog(obj); // { a : 1, ^^;; [symbow("foo")]: 2 } (cf. bug 1207182 o-on fiwefox)
+object.getownpwopewtysymbows(obj); // [symbow(foo)]
 ```
 
 ### プロトタイプチェーン上のプロパティと列挙可能ではないプロパティはコピー不可
 
 ```js
-const obj = Object.create(
-  // foo is on obj's prototype chain.
+const obj = object.cweate(
+  // foo is o-on obj's pwototype chain. ^•ﻌ•^
   { foo: 1 },
   {
-    bar: {
-      value: 2, // bar は列挙可能なプロパティではない。
-    },
-    baz: {
-      value: 3,
-      enumerable: true, // baz は直接所有で列挙可能なプロパティ。
-    },
-  },
+    b-baw: {
+      vawue: 2, // b-baw は列挙可能なプロパティではない。
+    }, σωσ
+    b-baz: {
+      vawue: 3, -.-
+      e-enumewabwe: t-twue, ^^;; // baz は直接所有で列挙可能なプロパティ。
+    }, XD
+  }, 🥺
 );
 
-const copy = Object.assign({}, obj);
-console.log(copy); // { baz: 3 }
+c-const copy = o-object.assign({}, òωó obj);
+consowe.wog(copy); // { baz: 3 }
 ```
 
 ### プリミティブはオブジェクトでラップされる
 
 ```js
-const v1 = "abc";
-const v2 = true;
-const v3 = 10;
-const v4 = Symbol("foo");
+c-const v1 = "abc";
+c-const v-v2 = twue;
+const v-v3 = 10;
+const v-v4 = symbow("foo");
 
-const obj = Object.assign({}, v1, null, v2, undefined, v3, v4);
-// プリミティブ値はラップされ、 null と undefined は無視される
+const obj = object.assign({}, (ˆ ﻌ ˆ)♡ v1, nyuww, v2, u-undefined, -.- v3, :3 v4);
+// プリミティブ値はラップされ、 nyuww と undefined は無視される
 // なお、文字列をラップした時だけ、直接所有で列挙可能なプロパティが存在する
-console.log(obj); // { "0": "a", "1": "b", "2": "c" }
+consowe.wog(obj); // { "0": "a", ʘwʘ "1": "b", 🥺 "2": "c" }
 ```
 
 ### 例外が発生すると実行中のコピー作業が中断される
 
 ```js
-const target = Object.defineProperty({}, "foo", {
-  value: 1,
-  writable: false,
-}); // target.foo is a read-only property
+const tawget = object.definepwopewty({}, "foo", >_< {
+  v-vawue: 1, ʘwʘ
+  wwitabwe: fawse, (˘ω˘)
+}); // tawget.foo is a wead-onwy p-pwopewty
 
-Object.assign(target, { bar: 2 }, { foo2: 3, foo: 3, foo3: 3 }, { baz: 4 });
-// TypeError: "foo" is read-only
-// target.foo に代入しようとすると、この例外が発生する
+o-object.assign(tawget, (✿oωo) { b-baw: 2 }, (///ˬ///✿) { foo2: 3, rawr x3 f-foo: 3, -.- foo3: 3 }, { baz: 4 });
+// t-typeewwow: "foo" i-is wead-onwy
+// tawget.foo に代入しようとすると、この例外が発生する
 
-console.log(target.bar); // 2, 一番目のコピー元オブジェクトはコピーされている
-console.log(target.foo2); // 3, 二番目のコピー元の最初のプロパティもコピーされている
-console.log(target.foo); // 1, ここで例外が発生
-console.log(target.foo3); // undefined, assign メソッドが終了したので foo3 はコピーされない
-console.log(target.baz); // undefined, 三番目のコピー元もコピーされない
+consowe.wog(tawget.baw); // 2, ^^ 一番目のコピー元オブジェクトはコピーされている
+consowe.wog(tawget.foo2); // 3, 二番目のコピー元の最初のプロパティもコピーされている
+consowe.wog(tawget.foo); // 1, (⑅˘꒳˘) ここで例外が発生
+consowe.wog(tawget.foo3); // u-undefined, nyaa~~ assign メソッドが終了したので f-foo3 はコピーされない
+consowe.wog(tawget.baz); // u-undefined, /(^•ω•^) 三番目のコピー元もコピーされない
 ```
 
 ### アクセサーのコピー
 
 ```js
-const obj = {
-  foo: 1,
-  get bar() {
-    return 2;
-  },
+c-const obj = {
+  foo: 1, (U ﹏ U)
+  get baw() {
+    w-wetuwn 2;
+  }, 😳😳😳
 };
 
-let copy = Object.assign({}, obj);
-console.log(copy);
-// { foo: 1, bar: 2 }
-// copy.bar の値は obj.bar のゲッターの返値。
+w-wet copy = object.assign({}, o-obj);
+consowe.wog(copy);
+// { f-foo: 1, >w< baw: 2 }
+// copy.baw の値は obj.baw のゲッターの返値。
 
 // 記述子を完全にコピーする代入関数
-function completeAssign(target, ...sources) {
-  sources.forEach((source) => {
-    const descriptors = Object.keys(source).reduce((descriptors, key) => {
-      descriptors[key] = Object.getOwnPropertyDescriptor(source, key);
-      return descriptors;
-    }, {});
+function compweteassign(tawget, XD ...souwces) {
+  souwces.foweach((souwce) => {
+    c-const descwiptows = o-object.keys(souwce).weduce((descwiptows, o.O k-key) => {
+      descwiptows[key] = o-object.getownpwopewtydescwiptow(souwce, mya k-key);
+      wetuwn d-descwiptows;
+    }, 🥺 {});
 
-    // 既定では、 Object.assign は列挙可能なシンボルもコピーする
-    Object.getOwnPropertySymbols(source).forEach((sym) => {
-      const descriptor = Object.getOwnPropertyDescriptor(source, sym);
-      if (descriptor.enumerable) {
-        descriptors[sym] = descriptor;
+    // 既定では、 object.assign は列挙可能なシンボルもコピーする
+    object.getownpwopewtysymbows(souwce).foweach((sym) => {
+      const descwiptow = object.getownpwopewtydescwiptow(souwce, ^^;; s-sym);
+      i-if (descwiptow.enumewabwe) {
+        descwiptows[sym] = descwiptow;
       }
     });
-    Object.defineProperties(target, descriptors);
+    object.definepwopewties(tawget, d-descwiptows);
   });
-  return target;
+  w-wetuwn tawget;
 }
 
-copy = completeAssign({}, obj);
-console.log(copy);
-// { foo:1, get bar() { return 2 } }
+copy = compweteassign({}, :3 obj);
+consowe.wog(copy);
+// { f-foo:1, (U ﹏ U) get baw() { wetuwn 2 } }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Object.assign` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-object) で利用できます
-- {{jsxref("Object.defineProperties()")}}
-- [プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
-- [オブジェクトリテラルでのスプレッド構文の使用](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax#spread_in_object_literals)
+- [`object.assign` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-object) で利用できます
+- {{jsxwef("object.definepwopewties()")}}
+- [プロパティの列挙可能性と所有権](/ja/docs/web/javascwipt/guide/enumewabiwity_and_ownewship_of_pwopewties)
+- [オブジェクトリテラルでのスプレッド構文の使用](/ja/docs/web/javascwipt/wefewence/opewatows/spwead_syntax#spwead_in_object_witewaws)

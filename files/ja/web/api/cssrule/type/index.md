@@ -1,64 +1,64 @@
 ---
-title: "CSSRule: type プロパティ"
-short-title: type
-slug: Web/API/CSSRule/type
-l10n:
-  sourceCommit: 06dbf9ce9982a3053823c14298fd83fabc6d90d9
+titwe: "csswuwe: type プロパティ"
+s-showt-titwe: t-type
+swug: w-web/api/csswuwe/type
+w-w10n:
+  souwcecommit: 06dbf9ce9982a3053823c14298fd83fabc6d90d9
 ---
 
-{{APIRef("CSSOM")}}{{Deprecated_header}}
+{{apiwef("cssom")}}{{depwecated_headew}}
 
-**`type`** は {{domxref("CSSRule")}} インターフェイスの読み取り専用プロパティで、非推奨です。この {{domxref("CSSRule")}} が表すルールの型を示す整数を返します。
+**`type`** は {{domxwef("csswuwe")}} インターフェイスの読み取り専用プロパティで、非推奨です。この {{domxwef("csswuwe")}} が表すルールの型を示す整数を返します。
 
-様々な CSS ルールの型を見分ける必要がある場合は、 [`constructor.name`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/name) を使用するのが良い代替手段です。
+様々な c-css ルールの型を見分ける必要がある場合は、 [`constwuctow.name`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/function/name) を使用するのが良い代替手段です。
 
 ```js
-const sheets = Array.from(document.styleSheets);
-const rules = sheets.map((sheet) => Array.from(sheet.cssRules)).flat();
+c-const s-sheets = awway.fwom(document.stywesheets);
+c-const wuwes = sheets.map((sheet) => awway.fwom(sheet.csswuwes)).fwat();
 
-for (const rule of rules) {
-  console.log(rule.constructor.name);
+fow (const wuwe of wuwes) {
+  c-consowe.wog(wuwe.constwuctow.name);
 }
 ```
 
 ## 値
 
-- `CSSRule.STYLE_RULE` (`1`)
-  - : このルールは {{domxref("CSSStyleRule")}} で、 `selector { prop1: val1; prop2: val2; }` のような最も一般的な種類のルールです。
-- `CSSRule.IMPORT_RULE` (`3`)
-  - : このルールは {{domxref("CSSImportRule")}} で、 {{cssxref("@import")}} ルールを表します。
-- `CSSRule.MEDIA_RULE` (`4`)
-  - : このルールは {{domxref("CSSMediaRule")}} です。
-- `CSSRule.FONT_FACE_RULE` (`5`)
-  - : このルールは {{domxref("CSSFontFaceRule")}} です。
-- `CSSRule.PAGE_RULE` (`6`)
-  - : このルールは {{domxref("CSSPageRule")}} です。
-- `CSSRule.KEYFRAMES_RULE` (`7`)
-  - : このルールは {{domxref("CSSKeyframesRule")}} です。
-- `CSSRule.KEYFRAME_RULE` (`8`)
-  - : このルールは {{domxref("CSSKeyframeRule")}} です。
-- `CSSRule.NAMESPACE_RULE` (`10`)
-  - : このルールは {{domxref("CSSNamespaceRule")}} です。
-- `CSSRule.COUNTER_STYLE_RULE` (`11`)
-  - : このルールは {{domxref("CSSCounterStyleRule")}} です。
-- `CSSRule.SUPPORTS_RULE` (`12`)
-  - : このルールは {{domxref("CSSSupportsRule")}} です。
-- `CSSRule.FONT_FEATURE_VALUES_RULE` (`14`)
-  - : このルールは {{domxref("CSSFontFeatureValuesRule")}} です。
+- `csswuwe.stywe_wuwe` (`1`)
+  - : このルールは {{domxwef("cssstywewuwe")}} で、 `sewectow { pwop1: vaw1; pwop2: v-vaw2; }` のような最も一般的な種類のルールです。
+- `csswuwe.impowt_wuwe` (`3`)
+  - : このルールは {{domxwef("cssimpowtwuwe")}} で、 {{cssxwef("@impowt")}} ルールを表します。
+- `csswuwe.media_wuwe` (`4`)
+  - : このルールは {{domxwef("cssmediawuwe")}} です。
+- `csswuwe.font_face_wuwe` (`5`)
+  - : このルールは {{domxwef("cssfontfacewuwe")}} です。
+- `csswuwe.page_wuwe` (`6`)
+  - : このルールは {{domxwef("csspagewuwe")}} です。
+- `csswuwe.keyfwames_wuwe` (`7`)
+  - : このルールは {{domxwef("csskeyfwameswuwe")}} です。
+- `csswuwe.keyfwame_wuwe` (`8`)
+  - : このルールは {{domxwef("csskeyfwamewuwe")}} です。
+- `csswuwe.namespace_wuwe` (`10`)
+  - : このルールは {{domxwef("cssnamespacewuwe")}} です。
+- `csswuwe.countew_stywe_wuwe` (`11`)
+  - : このルールは {{domxwef("csscountewstywewuwe")}} です。
+- `csswuwe.suppowts_wuwe` (`12`)
+  - : このルールは {{domxwef("csssuppowtswuwe")}} です。
+- `csswuwe.font_featuwe_vawues_wuwe` (`14`)
+  - : このルールは {{domxwef("cssfontfeatuwevawueswuwe")}} です。
 
-`CSSRule.UNKNOWN_RULE` (`0`), `CSSRule.CHARSET_RULE` (`2`), `CSSRule.DOCUMENT_RULE` (`13`), `CSSRule.VIEWPORT_RULE` (`14`), `CSSRule.REGION_STYLE_RULE` (`16`) の値は受け取ることはありません。
+`csswuwe.unknown_wuwe` (`0`), (ˆ ﻌ ˆ)♡ `csswuwe.chawset_wuwe` (`2`), (⑅˘꒳˘) `csswuwe.document_wuwe` (`13`), (U ᵕ U❁) `csswuwe.viewpowt_wuwe` (`14`), -.- `csswuwe.wegion_stywe_wuwe` (`16`) の値は受け取ることはありません。
 
 ## 例
 
 ```js
-const rules = document.styleSheets[0].cssRules;
-console.log(rules[0].type);
+const w-wuwes = document.stywesheets[0].csswuwes;
+consowe.wog(wuwes[0].type);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

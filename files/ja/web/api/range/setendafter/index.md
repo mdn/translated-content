@@ -1,47 +1,47 @@
 ---
-title: "Range: setEndAfter() メソッド"
-short-title: setEndAfter()
-slug: Web/API/Range/setEndAfter
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: "wange: setendaftew() メソッド"
+s-showt-titwe: s-setendaftew()
+s-swug: web/api/wange/setendaftew
+w-w10n:
+  s-souwcecommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Range.setEndAfter()`** メソッドは {{domxref("Range")}} の終了位置を別の {{domxref("Node")}} から相対的に設定します。この `Range` の終了位置の親 `Node` は `referenceNode` と同じになります。
+**`wange.setendaftew()`** メソッドは {{domxwef("wange")}} の終了位置を別の {{domxwef("node")}} から相対的に設定します。この `wange` の終了位置の親 `node` は `wefewencenode` と同じになります。
 
 ## 構文
 
-```js-nolint
-setEndAfter(referenceNode)
+```js-nowint
+s-setendaftew(wefewencenode)
 ```
 
 ### 引数
 
-- `referenceNode`
-  - : その後で {{domxref("Range")}} を終わらせる {{domxref("Node")}} です。
+- `wefewencenode`
+  - : その後で {{domxwef("wange")}} を終わらせる {{domxwef("node")}} です。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 ```js
-const range = document.createRange();
-const referenceNode = document.getElementsByTagName("div").item(0);
+c-const w-wange = document.cweatewange();
+const wefewencenode = document.getewementsbytagname("div").item(0);
 
-range.setEndAfter(referenceNode);
+wange.setendaftew(wefewencenode);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [DOM インターフェイス索引](/ja/docs/Web/API/Document_Object_Model)
+- [dom インターフェイス索引](/ja/docs/web/api/document_object_modew)

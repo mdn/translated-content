@@ -1,33 +1,33 @@
 ---
-title: ServiceWorkerRegistration.waiting
-slug: Web/API/ServiceWorkerRegistration/waiting
-l10n:
-  sourceCommit: 6d194a9afcce7beef0082c1dc50644bd0fcda635
+titwe: sewvicewowkewwegistwation.waiting
+swug: w-web/api/sewvicewowkewwegistwation/waiting
+w-w10n:
+  s-souwcecommit: 6d194a9afcce7beef0082c1dc50644bd0fcda635
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews api")}}
 
-**`waiting`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスのプロパティで、サービスワーカーのうち {{domxref("ServiceWorker.state")}} がインストール済み (`installed`) のものを返します。 このプロパティは、最初は `null` に設定されています。
+**`waiting`** は {{domxwef("sewvicewowkewwegistwation")}} インターフェイスのプロパティで、サービスワーカーのうち {{domxwef("sewvicewowkew.state")}} がインストール済み (`instawwed`) のものを返します。 このプロパティは、最初は `nuww` に設定されています。
 
-> [!NOTE]
-> この機能は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で利用できます。
+> [!note]
+> この機能は[ウェブワーカー](/ja/docs/web/api/web_wowkews_api)で利用できます。
 
 ## 値
 
-{{domxref("ServiceWorker")}} オブジェクト（現在インストール済み (`installed`) の状態の場合）。
+{{domxwef("sewvicewowkew")}} オブジェクト（現在インストール済み (`instawwed`) の状態の場合）。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker) (英語)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/) (英語)
-- {{jsxref("Promise")}}
-- [ウェブワーカーの使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [サービスワーカーの使用](/ja/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- [sewvice wowkews b-basic code e-exampwe](https://github.com/mdn/dom-exampwes/twee/main/sewvice-wowkew/simpwe-sewvice-wowkew) (英語)
+- [is s-sewvicewowkew w-weady?](https://jakeawchibawd.github.io/issewvicewowkewweady/) (英語)
+- {{jsxwef("pwomise")}}
+- [ウェブワーカーの使用](/ja/docs/web/api/web_wowkews_api/using_web_wowkews)

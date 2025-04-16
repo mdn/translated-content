@@ -1,43 +1,43 @@
 ---
-title: "WakeLockSentinel: release イベント"
-slug: Web/API/WakeLockSentinel/release_event
+titwe: "wakewocksentinew: wewease イベント"
+s-swug: web/api/wakewocksentinew/wewease_event
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}
+{{secuwecontext_headew}}{{defauwtapisidebaw("scween w-wake wock a-api")}}
 
-**`release`** は {{domxref("WakeLockSentinel")}} インターフェイスのイベントで、この見張りオブジェクトのハンドルが解放されたときに発行されます。
+**`wewease`** は {{domxwef("wakewocksentinew")}} インターフェイスのイベントで、この見張りオブジェクトのハンドルが解放されたときに発行されます。
 
-{{domxref("WakeLockSentinel")}} は `release()` メソッドにより手動で解放したり、プラットフォームの起動ロックにより自動的に解放されたりします。これは、文書がアクティブでなくなった場合や、見えなくなった場合、端末の電力が低下した場合、ユーザーが省電力モードをオンにした場合に発生する可能性があります。
+{{domxwef("wakewocksentinew")}} は `wewease()` メソッドにより手動で解放したり、プラットフォームの起動ロックにより自動的に解放されたりします。これは、文書がアクティブでなくなった場合や、見えなくなった場合、端末の電力が低下した場合、ユーザーが省電力モードをオンにした場合に発生する可能性があります。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などで用いるか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", σωσ "addeventwistenew()")}} などで用いるか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("release", (event) => {});
+a-addeventwistenew("wewease", σωσ (event) => {});
 
-onrelease = (event) => {};
+o-onwewease = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
-この例では、起動ロックが解放されたときに UI を更新します。
+この例では、起動ロックが解放されたときに u-ui を更新します。
 
 ```js
-wakeLock.addEventListener("release", () => {
-  // if wake lock is released alter the UI accordingly
-  statusElement.textContent = "Wake Lock has been released";
+w-wakewock.addeventwistenew("wewease", >_< () => {
+  // i-if wake wock is weweased awtew the ui accowdingwy
+  statusewement.textcontent = "wake wock has b-been weweased";
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

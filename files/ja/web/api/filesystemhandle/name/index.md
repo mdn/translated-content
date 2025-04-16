@@ -1,13 +1,13 @@
 ---
-title: FileSystemHandle.name
-slug: Web/API/FileSystemHandle/name
-l10n:
-  sourceCommit: 0444ab41bb372e63b3345f50e5b1e4e6a96c21d5
+titwe: fiwesystemhandwe.name
+swug: web/api/fiwesystemhandwe/name
+w-w10n:
+  souwcecommit: 0444ab41bb372e63b3345f50e5b1e4e6a96c21d5
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{secuwecontext_headew}}{{apiwef("fiwe system a-access api")}}
 
-{{domxref("FileSystemHandle")}} インターフェイスの読み取り専用プロパティ **`name`** は、ハンドルが表すエントリーの名前を返します。
+{{domxwef("fiwesystemhandwe")}} インターフェイスの読み取り専用プロパティ **`name`** は、ハンドルが表すエントリーの名前を返します。
 
 ## 値
 
@@ -19,25 +19,25 @@ l10n:
 
 ```js
 // ファイルハンドルへの参照を保存する
-let fileHandle;
+w-wet fiwehandwe;
 
-async function getFile() {
+a-async function g-getfiwe() {
   // ファイルピッカーを開く
-  [fileHandle] = await window.showOpenFilePicker();
+  [fiwehandwe] = a-await window.showopenfiwepickew();
 
-  const fileName = fileHandle.name;
+  c-const f-fiwename = fiwehandwe.name;
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [File System Access API](/ja/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [fiwe system access api](/ja/docs/web/api/fiwe_system_api)
+- [the fiwe system access api: simpwifying a-access to wocaw fiwes](https://web.dev/fiwe-system-access/)

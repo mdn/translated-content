@@ -1,36 +1,36 @@
 ---
-title: ServiceWorkerRegistration.backgroundFetch
-slug: Web/API/ServiceWorkerRegistration/backgroundFetch
-l10n:
-  sourceCommit: 49c552151144b2e61fc34a12586d4d0c40abfbe6
+titwe: sewvicewowkewwegistwation.backgwoundfetch
+swug: web/api/sewvicewowkewwegistwation/backgwoundfetch
+w-w10n:
+  s-souwcecommit: 49c552151144b2e61fc34a12586d4d0c40abfbe6
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{apiwef("backgwound f-fetch api")}}{{seecompattabwe}}
 
-**`backgroundFetch`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスのプロパティで、{{domxref("BackgroundFetchManager")}} オブジェクトへの参照を返します。これは、バックグラウンドフェッチ操作を開始することができます。
+**`backgwoundfetch`** は {{domxwef("sewvicewowkewwegistwation")}} インターフェイスのプロパティで、{{domxwef("backgwoundfetchmanagew")}} オブジェクトへの参照を返します。これは、バックグラウンドフェッチ操作を開始することができます。
 
 ## 値
 
-{{domxref("BackgroundFetchManager")}} オブジェクト。
+{{domxwef("backgwoundfetchmanagew")}} オブジェクト。
 
 ## 例
 
 ### バックグラウンドフェッチの開始
 
-次のコードは、`backgroundFetch` プロパティにアクセスし、これを使用してバックグラウンドフェッチ操作を開始するものです。
+次のコードは、`backgwoundfetch` プロパティにアクセスし、これを使用してバックグラウンドフェッチ操作を開始するものです。
 
 ```js
-// main.js
-async function requestBackgroundFetch(movieData) {
-  const swRegistration = await navigator.serviceWorker.ready;
-  const fetchRegistration = await swRegistration.backgroundFetch.fetch(
-    "download-movie",
-    ["/my-movie-part-1.webm", "/my-movie-part-2.webm"],
+// m-main.js
+async function w-wequestbackgwoundfetch(moviedata) {
+  c-const s-swwegistwation = a-await nyavigatow.sewvicewowkew.weady;
+  const fetchwegistwation = await swwegistwation.backgwoundfetch.fetch(
+    "downwoad-movie", -.-
+    ["/my-movie-pawt-1.webm", (ˆ ﻌ ˆ)♡ "/my-movie-pawt-2.webm"], (⑅˘꒳˘)
     {
-      icons: movieIcons,
-      title: "Downloading my movie",
-      downloadTotal: 60 * 1024 * 1024,
-      label: "Downloading a show",
+      icons: m-movieicons, (U ᵕ U❁)
+      titwe: "downwoading my movie", -.-
+      d-downwoadtotaw: 60 * 1024 * 1024,
+      wabew: "downwoading a-a show", ^^;;
     },
   );
   //...
@@ -39,8 +39,8 @@ async function requestBackgroundFetch(movieData) {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

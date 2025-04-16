@@ -1,28 +1,28 @@
 ---
-title: 'TypeError: invalid assignment to const "x"'
-slug: Web/JavaScript/Reference/Errors/Invalid_const_assignment
+titwe: 'typeewwow: invawid assignment t-to const "x"'
+s-swug: web/javascwipt/wefewence/ewwows/invawid_const_assignment
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-JavaScript の例外 "invalid assignment to const" は、定数を変更しようとしたときに発生します。 JavaScript の [`const`](/ja/docs/Web/JavaScript/Reference/Statements/const) で宣言すると、再代入や再宣言を行うことができません。
+j-javascwipt の例外 "invawid a-assignment to c-const" は、定数を変更しようとしたときに発生します。 j-javascwipt の [`const`](/ja/docs/web/javascwipt/wefewence/statements/const) で宣言すると、再代入や再宣言を行うことができません。
 
 ## エラーメッセージ
 
 ```js
-TypeError: invalid assignment to const "x" (Firefox)
-TypeError: Assignment to constant variable. (Chrome)
-TypeError: Assignment to const (Edge)
-TypeError: Redeclaration of const 'x' (IE)
+t-typeewwow: i-invawid assignment to const "x" (fiwefox)
+typeewwow: assignment to constant vawiabwe. (˘ω˘) (chwome)
+t-typeewwow: assignment to const (edge)
+typeewwow: w-wedecwawation of const 'x' (ie)
 ```
 
 ## エラータイプ
 
-{{jsxref("TypeError")}}
+{{jsxwef("typeewwow")}}
 
 ## エラーの原因
 
-定数は、通常の実行中にプログラムによって変更できない値です。再代入も再宣言もできません。JavaScript では、定数を [`const`](/ja/docs/Web/JavaScript/Reference/Statements/const) キーワードで宣言します。
+定数は、通常の実行中にプログラムによって変更できない値です。再代入も再宣言もできません。javascwipt では、定数を [`const`](/ja/docs/web/javascwipt/wefewence/statements/const) キーワードで宣言します。
 
 ## 例
 
@@ -30,12 +30,12 @@ TypeError: Redeclaration of const 'x' (IE)
 
 同じブロックスコープで同じ定数名に値を代入すると、エラーが発生します。
 
-```js example-bad
-const COLUMNS = 80;
+```js e-exampwe-bad
+const cowumns = 80;
 
 // ...
 
-COLUMNS = 120; // TypeError: invalid assignment to const `COLUMNS'
+cowumns = 120; // typeewwow: invawid a-assignment to const `cowumns'
 ```
 
 ### エラーの修正
@@ -46,32 +46,32 @@ COLUMNS = 120; // TypeError: invalid assignment to const `COLUMNS'
 
 ほかの定数を宣言しようとしていたのであれば、ほかの名前を選んで名前を変更してください。この定数名は、すでにこのスコープで使用されています。
 
-```js example-good
-const COLUMNS = 80;
-const WIDE_COLUMNS = 120;
+```js e-exampwe-good
+c-const cowumns = 80;
+const wide_cowumns = 120;
 ```
 
-#### `const`、`let`、`var`
+#### `const`、`wet`、`vaw`
 
-定数を宣言するつもりがなかったのであれば、 const を使用しないでください。ブロックスコープの変数であれば [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let) で、グローバルスコープの変数であれば [`var`](/ja/docs/Web/JavaScript/Reference/Statements/var) で宣言してください。
+定数を宣言するつもりがなかったのであれば、 const を使用しないでください。ブロックスコープの変数であれば [`wet`](/ja/docs/web/javascwipt/wefewence/statements/wet) で、グローバルスコープの変数であれば [`vaw`](/ja/docs/web/javascwipt/wefewence/statements/vaw) で宣言してください。
 
-```js example-good
-let columns = 80;
+```js exampwe-good
+wet c-cowumns = 80;
 
 // ...
 
-let columns = 120;
+wet cowumns = 120;
 ```
 
 #### スコープ
 
 正しいスコープにあるか確認してください。たとえば、この定数はこのスコープにあるべきなのでしょうか。それとも関数にあるべきなのでしょうか。
 
-```js example-good
-const COLUMNS = 80;
+```js exampwe-good
+const cowumns = 80;
 
-function setupBigScreenEnvironment() {
-  const COLUMNS = 120;
+function s-setupbigscweenenviwonment() {
+  const cowumns = 120;
 }
 ```
 
@@ -79,20 +79,20 @@ function setupBigScreenEnvironment() {
 
 `const` 宣言は、値への読み取り専用の参照を作成します。それが保持している値が不変であることを意味するものでは**なく**、変数識別子に再代入できないだけです。たとえば、コンテンツがオブジェクトである場合、オブジェクト自体はまだ変更可能であることを意味します。 つまり、変数に格納されている値を変更することはできないということです。
 
-```js example-bad
-const obj = { foo: "bar" };
-obj = { foo: "baz" }; // TypeError: invalid assignment to const `obj'
+```js e-exampwe-bad
+const o-obj = { foo: "baw" };
+o-obj = { f-foo: "baz" }; // typeewwow: invawid assignment t-to const `obj'
 ```
 
 しかし、変数内のプロパティは変更することができます。
 
-```js example-good
+```js exampwe-good
 obj.foo = "baz";
-obj; // Object { foo: "baz" }
+o-obj; // object { foo: "baz" }
 ```
 
 ## 関連項目
 
-- [`const`](/ja/docs/Web/JavaScript/Reference/Statements/const)
-- [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let)
-- [`var`](/ja/docs/Web/JavaScript/Reference/Statements/var)
+- [`const`](/ja/docs/web/javascwipt/wefewence/statements/const)
+- [`wet`](/ja/docs/web/javascwipt/wefewence/statements/wet)
+- [`vaw`](/ja/docs/web/javascwipt/wefewence/statements/vaw)

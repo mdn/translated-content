@@ -1,18 +1,18 @@
 ---
-title: "USBDevice: reset() メソッド"
-slug: Web/API/USBDevice/reset
-l10n:
-  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
+titwe: "usbdevice: weset() メソッド"
+s-swug: w-web/api/usbdevice/weset
+w-w10n:
+  s-souwcecommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{APIRef("WebUSB API")}}{{SeeCompatTable}}
+{{apiwef("webusb api")}}{{seecompattabwe}}
 
-{{domxref("USBDevice")}} インターフェイスの **`reset()`** メソッドは、デバイスがリセットされ、アプリケーションによる操作がすべてキャンセルされ、それらのプロミスが拒否されたら解決する {{jsxref("Promise")}} を返します。
+{{domxwef("usbdevice")}} インターフェイスの **`weset()`** メソッドは、デバイスがリセットされ、アプリケーションによる操作がすべてキャンセルされ、それらのプロミスが拒否されたら解決する {{jsxwef("pwomise")}} を返します。
 
 ## 構文
 
-```js-nolint
-reset()
+```js-nowint
+w-weset()
 ```
 
 ### 引数
@@ -21,12 +21,12 @@ reset()
 
 ### 返値
 
-{{jsxref("Promise")}} です。
+{{jsxwef("pwomise")}} です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

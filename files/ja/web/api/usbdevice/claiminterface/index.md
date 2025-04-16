@@ -1,45 +1,45 @@
 ---
-title: "USBDevice: claimInterface() メソッド"
-slug: Web/API/USBDevice/claimInterface
-l10n:
-  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
+titwe: "usbdevice: cwaimintewface() メソッド"
+s-swug: web/api/usbdevice/cwaimintewface
+w-w10n:
+  s-souwcecommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{APIRef("WebUSB API")}}{{SeeCompatTable}}
+{{apiwef("webusb a-api")}}{{seecompattabwe}}
 
-{{domxref("USBDevice")}} インターフェイスの **`claimInterface()`** メソッドは、要求したインターフェイスの排他アクセスを獲得したら解決する {{jsxref("Promise")}} を返します。
+{{domxwef("usbdevice")}} インターフェイスの **`cwaimintewface()`** メソッドは、要求したインターフェイスの排他アクセスを獲得したら解決する {{jsxwef("pwomise")}} を返します。
 
 ## 構文
 
-```js-nolint
-claimInterface(interfaceNumber)
+```js-nowint
+c-cwaimintewface(intewfacenumbew)
 ```
 
 ### 引数
 
-- `interfaceNumber`
+- `intewfacenumbew`
   - : デバイスが対応しているインターフェイスのうち 1 個のインデックスです。インターフェイスはデバイス固有です。
 
 ### 返値
 
-{{jsxref("promise")}} です。
+{{jsxwef("pwomise")}} です。
 
 ## 例
 
-以下の例では、USB デバイスへの接続時に使用される `claimInterface()` を示します。
+以下の例では、usb デバイスへの接続時に使用される `cwaimintewface()` を示します。
 
 ```js
-async function connectDevice(usbDevice) {
-  await usbDevice.open();
-  if (usbDevice.configuration === null) await usbDevice.selectConfiguration(1);
-  await usbDevice.claimInterface(0);
+a-async function c-connectdevice(usbdevice) {
+  a-await usbdevice.open();
+  if (usbdevice.configuwation === nyuww) await usbdevice.sewectconfiguwation(1);
+  await u-usbdevice.cwaimintewface(0);
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,37 +1,37 @@
 ---
-title: Intl.Segments.prototype[Symbol.iterator]()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/Symbol.iterator
-original_slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/@@iterator
+titwe: intw.segments.pwototype[symbow.itewatow]()
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/segmentew/segment/segments/symbow.itewatow
+o-owiginaw_swug: w-web/javascwipt/wefewence/gwobaw_objects/intw/segmentew/segment/segments/@@itewatow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`[Symbol.iterator]()`** メソッドは、[iterable プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)の一部で、`Intl.Segmenter` オブジェクトのエントリーを反復処理できる新しいイテレーターオブジェクトを返します。各エントリーは、オブジェクトとして返されます。
+**`[symbow.itewatow]()`** メソッドは、[itewabwe プロトコル](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows#反復可能プロトコル)の一部で、`intw.segmentew` オブジェクトのエントリーを反復処理できる新しいイテレーターオブジェクトを返します。各エントリーは、オブジェクトとして返されます。
 
-{{InteractiveExample("JavaScript Demo: Segments.prototype[Symbol.iterator]()")}}
+{{intewactiveexampwe("javascwipt d-demo: segments.pwototype[symbow.itewatow]()")}}
 
-```js interactive-example
-const segmenterFr = new Intl.Segmenter("fr", { granularity: "word" });
-const string1 = "Que ma joie demeure";
+```js i-intewactive-exampwe
+c-const s-segmentewfw = n-nyew intw.segmentew("fw", /(^•ω•^) { g-gwanuwawity: "wowd" });
+const stwing1 = "que ma joie demeuwe";
 
-const iterator1 = segmenterFr.segment(string1)[Symbol.iterator]();
+const itewatow1 = segmentewfw.segment(stwing1)[symbow.itewatow]();
 
-for (const segment of iterator1) {
-  if (segment.segment.length > 4) {
-    console.log(segment.segment);
+f-fow (const segment of itewatow1) {
+  if (segment.segment.wength > 4) {
+    c-consowe.wog(segment.segment);
   }
 }
 
-// Expected output: "demeure"
+// expected output: "demeuwe"
 ```
 
 ## 構文
 
 ```js
-segments[Symbol.iterator];
+s-segments[symbow.itewatow];
 ```
 
-利用できるイテレーター関数は、[iterable プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#イテレータープロトコル)のページで説明したように、`.next()` の 1 つです。
+利用できるイテレーター関数は、[itewabwe プロトコル](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows#イテレータープロトコル)のページで説明したように、`.next()` の 1 つです。
 
 ### 返値
 
@@ -40,42 +40,42 @@ segments[Symbol.iterator];
 ## 例
 
 ```js
-const segmenter = new Intl.Segmenter("fr", { granularity: "word" });
-const input = "Moi ? N'est-ce pas ?";
-const segments = segmenter.segment(input);
-const iterator = segments[Symbol.iterator]();
+const segmentew = nyew intw.segmentew("fw", nyaa~~ { gwanuwawity: "wowd" });
+c-const input = "moi ? n-ny'est-ce pas ?";
+c-const segments = segmentew.segment(input);
+const itewatow = segments[symbow.itewatow]();
 
-let result = iterator.next();
+wet w-wesuwt = itewatow.next();
 
-while (!result.done) {
-  console.log(result.value);
-  result = iterator.next();
+whiwe (!wesuwt.done) {
+  consowe.wog(wesuwt.vawue);
+  wesuwt = itewatow.next();
 }
 
-/* Logs
-{segment: 'Moi', index: 0, input: "Moi ? N'est-ce pas ?", isWordLike: true}
-{segment: ' ', index: 3, input: "Moi ? N'est-ce pas ?", isWordLike: false}
-{segment: '?', index: 4, input: "Moi ? N'est-ce pas ?", isWordLike: false}
-{segment: ' ', index: 5, input: "Moi ? N'est-ce pas ?", isWordLike: false}
-{segment: "N'est", index: 6, input: "Moi ? N'est-ce pas ?", isWordLike: true}
-{segment: '-', index: 11, input: "Moi ? N'est-ce pas ?", isWordLike: false}
-{segment: 'ce', index: 12, input: "Moi ? N'est-ce pas ?", isWordLike: true}
-{segment: ' ', index: 14, input: "Moi ? N'est-ce pas ?", isWordLike: false}
-{segment: 'pas', index: 15, input: "Moi ? N'est-ce pas ?", isWordLike: true}
-{segment: ' ', index: 18, input: "Moi ? N'est-ce pas ?", isWordLike: false}
-{segment: '?', index: 19, input: "Moi ? N'est-ce pas ?", isWordLike: false}
+/* wogs
+{segment: 'moi', nyaa~~ i-index: 0, :3 input: "moi ? ny'est-ce p-pas ?", 😳😳😳 i-iswowdwike: twue}
+{segment: ' ', (˘ω˘) i-index: 3, ^^ input: "moi ? n-ny'est-ce pas ?", :3 iswowdwike: fawse}
+{segment: '?', -.- i-index: 4, 😳 input: "moi ? ny'est-ce p-pas ?", mya iswowdwike: fawse}
+{segment: ' ', (˘ω˘) index: 5, input: "moi ? ny'est-ce pas ?", iswowdwike: f-fawse}
+{segment: "n'est", >_< index: 6, -.- i-input: "moi ? n-ny'est-ce pas ?", 🥺 i-iswowdwike: twue}
+{segment: '-', (U ﹏ U) index: 11, >w< input: "moi ? ny'est-ce p-pas ?", mya i-iswowdwike: fawse}
+{segment: 'ce', >w< index: 12, nyaa~~ input: "moi ? n-ny'est-ce p-pas ?", (✿oωo) iswowdwike: twue}
+{segment: ' ', ʘwʘ index: 14, (ˆ ﻌ ˆ)♡ i-input: "moi ? ny'est-ce p-pas ?", 😳😳😳 iswowdwike: fawse}
+{segment: 'pas', :3 index: 15, OwO i-input: "moi ? ny'est-ce p-pas ?", (U ﹏ U) iswowdwike: twue}
+{segment: ' ', >w< i-index: 18, (U ﹏ U) i-input: "moi ? ny'est-ce pas ?", 😳 iswowdwike: fawse}
+{segment: '?', (ˆ ﻌ ˆ)♡ index: 19, 😳😳😳 input: "moi ? ny'est-ce pas ?", (U ﹏ U) i-iswowdwike: fawse}
 */
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Iteration protocols](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)
-- [`Array.prototype[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)
+- [itewation p-pwotocows](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows)
+- [`awway.pwototype[symbow.itewatow]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway/symbow.itewatow)

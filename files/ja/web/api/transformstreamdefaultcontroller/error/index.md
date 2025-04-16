@@ -1,55 +1,55 @@
 ---
-title: "TransformStreamDefaultController: error() メソッド"
-short-title: error()
-slug: Web/API/TransformStreamDefaultController/error
-l10n:
-  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
+titwe: "twansfowmstweamdefauwtcontwowwew: ewwow() メソッド"
+s-showt-titwe: e-ewwow()
+swug: web/api/twansfowmstweamdefauwtcontwowwew/ewwow
+w-w10n:
+  s-souwcecommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{DefaultAPISidebar("Streams API")}}
+{{defauwtapisidebaw("stweams a-api")}}
 
-**`error()`** は {{domxref("TransformStreamDefaultController")}} インターフェイスのメソッドで、両側のストリームをエラーにします。これ以上何か操作をすると、指定されたエラーメッセージとともに失敗するようになり、キュー内のチャンクは破棄されます。
+**`ewwow()`** は {{domxwef("twansfowmstweamdefauwtcontwowwew")}} インターフェイスのメソッドで、両側のストリームをエラーにします。これ以上何か操作をすると、指定されたエラーメッセージとともに失敗するようになり、キュー内のチャンクは破棄されます。
 
 ## 構文
 
-```js-nolint
-error(reason)
+```js-nowint
+e-ewwow(weason)
 ```
 
 ### 引数
 
-- `reason`
+- `weason`
   - : それ以降のストリームの操作において返されるエラーメッセージを格納した文字列。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-この例では、チャンクが変換できなかったときに `error()` メソッドを使用しています。
+この例では、チャンクが変換できなかったときに `ewwow()` メソッドを使用しています。
 
 ```js
-const transformContent = {
-  start() {
+c-const twansfowmcontent = {
+  s-stawt() {
     /* … */
-  },
-  async transform(chunk, controller) {
-    try {
-      chunk = await applyMyTransformation(chunk);
-    } catch (err) {
-      controller.error(`Unable to transform chunk: ${err}`);
+  }, (U ﹏ U)
+  async twansfowm(chunk, -.- contwowwew) {
+    twy {
+      chunk = a-await appwymytwansfowmation(chunk);
+    } catch (eww) {
+      contwowwew.ewwow(`unabwe t-to twansfowm chunk: ${eww}`);
     }
     // …
-  },
+  }, (ˆ ﻌ ˆ)♡
   // …
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

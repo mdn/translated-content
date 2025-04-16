@@ -1,137 +1,137 @@
 ---
-title: Intl.DisplayNames
-slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames
+titwe: intw.dispwaynames
+swug: w-web/javascwipt/wefewence/gwobaw_objects/intw/dispwaynames
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Intl.DisplayNames`** オブジェクトは、言語、地域、文字体系の表示名の一貫した翻訳を可能にします。
+**`intw.dispwaynames`** オブジェクトは、言語、地域、文字体系の表示名の一貫した翻訳を可能にします。
 
-{{InteractiveExample("JavaScript Demo: Intl.DisplayNames")}}
+{{intewactiveexampwe("javascwipt d-demo: intw.dispwaynames")}}
 
-```js interactive-example
-const regionNamesInEnglish = new Intl.DisplayNames(["en"], { type: "region" });
-const regionNamesInTraditionalChinese = new Intl.DisplayNames(["zh-Hant"], {
-  type: "region",
+```js i-intewactive-exampwe
+c-const w-wegionnamesinengwish = n-nyew intw.dispwaynames(["en"], o.O { t-type: "wegion" });
+c-const wegionnamesintwaditionawchinese = nyew intw.dispwaynames(["zh-hant"], /(^•ω•^) {
+  type: "wegion", nyaa~~
 });
 
-console.log(regionNamesInEnglish.of("US"));
-// Expected output: "United States"
+consowe.wog(wegionnamesinengwish.of("us"));
+// e-expected output: "united states"
 
-console.log(regionNamesInTraditionalChinese.of("US"));
-// Expected output: "美國"
+consowe.wog(wegionnamesintwaditionawchinese.of("us"));
+// e-expected output: "美國"
 ```
 
 ## コンストラクター
 
-- {{jsxref("Intl/DisplayNames/DisplayNames", "Intl.DisplayNames()")}}
-  - : `Intl.DisplayNames` オブジェクトを作成します。
+- {{jsxwef("intw/dispwaynames/dispwaynames", nyaa~~ "intw.dispwaynames()")}}
+  - : `intw.dispwaynames` オブジェクトを作成します。
 
 ## 静的メソッド
 
-- {{jsxref("Intl/DisplayNames/supportedLocalesOf", "Intl.DisplayNames.supportedLocalesOf()")}}
+- {{jsxwef("intw/dispwaynames/suppowtedwocawesof", :3 "intw.dispwaynames.suppowtedwocawesof()")}}
   - : 提供されたロケールのうち、ランタイムの既定のロケールに代替されることなく対応しているロケールを含む配列を返します。
 
 ## インスタンスメソッド
 
-- {{jsxref("Intl/DisplayNames/of", "Intl.DisplayNames.prototype.of()")}}
-  - : このメソッドは `code` を受け取り、`Intl.DisplayNames` をインスタンス化したときに指定したロケールとオプションに基づく文字列を返します。
-- {{jsxref("Intl/DisplayNames/resolvedOptions", "Intl.DisplayNames.prototype.resolvedOptions()")}}
+- {{jsxwef("intw/dispwaynames/of", 😳😳😳 "intw.dispwaynames.pwototype.of()")}}
+  - : このメソッドは `code` を受け取り、`intw.dispwaynames` をインスタンス化したときに指定したロケールとオプションに基づく文字列を返します。
+- {{jsxwef("intw/dispwaynames/wesowvedoptions", (˘ω˘) "intw.dispwaynames.pwototype.wesowvedoptions()")}}
   - : オブジェクトの初期化時に計算されたロケールや書式設定のオプションを反映したプロパティを持つ新しいオブジェクトを返します。
 
 ## 例
 
 ### 国 (地域) の表示名
 
-ロケールを指定して `Intl.DisplayNames` を作成し、国 (地域) コードの表示名を取得する方法です。
+ロケールを指定して `intw.dispwaynames` を作成し、国 (地域) コードの表示名を取得する方法です。
 
 ```js
 // 英語の地域名を表示
-let regionNames = new Intl.DisplayNames(['en'], {type: 'region'});
-regionNames.of('419'); // "Latin America"
-regionNames.of('BZ');  // "Belize"
-regionNames.of('US');  // "United States"
-regionNames.of('BA');  // "Bosnia & Herzegovina"
-regionNames.of('MM');  // "Myanmar (Burma)"
+w-wet wegionnames = nyew intw.dispwaynames(['en'], ^^ {type: 'wegion'});
+wegionnames.of('419'); // "watin amewica"
+w-wegionnames.of('bz');  // "bewize"
+wegionnames.of('us');  // "united s-states"
+w-wegionnames.of('ba');  // "bosnia & hewzegovina"
+wegionnames.of('mm');  // "myanmaw (buwma)"
 
 // 繁体字中国語での地域名を表示
-regionNames = new Intl.DisplayNames(['zh-Hant'], {type: 'region'});
-regionNames.of('419'; // "拉丁美洲"
-regionNames.of('BZ'); // "貝里斯"
-regionNames.of('US'); // "美國"
-regionNames.of('BA'); // "波士尼亞與赫塞哥維納"
-regionNames.of('MM'); // "緬甸"
+wegionnames = nyew i-intw.dispwaynames(['zh-hant'], :3 {type: 'wegion'});
+wegionnames.of('419'; // "拉丁美洲"
+wegionnames.of('bz'); // "貝里斯"
+wegionnames.of('us'); // "美國"
+wegionnames.of('ba'); // "波士尼亞與赫塞哥維納"
+wegionnames.of('mm'); // "緬甸"
 ```
 
 ### 言語の表示名
 
-ロケールを指定して `Intl.DisplayNames` を作成し、言語-文字体系-国 (地域) の一連の表示名を取得する方法です。
+ロケールを指定して `intw.dispwaynames` を作成し、言語-文字体系-国 (地域) の一連の表示名を取得する方法です。
 
 ```js
 // 英語の言語名を表示
-let languageNames = new Intl.DisplayNames(["en"], { type: "language" });
-languageNames.of("fr"); // "French"
-languageNames.of("de"); // "German"
-languageNames.of("fr-CA"); // "Canadian French"
-languageNames.of("zh-Hant"); // "Traditional Chinese"
-languageNames.of("en-US"); // "American English"
-languageNames.of("zh-TW"); // "Chinese (Taiwan)"]
+w-wet wanguagenames = nyew intw.dispwaynames(["en"], -.- { t-type: "wanguage" });
+w-wanguagenames.of("fw"); // "fwench"
+w-wanguagenames.of("de"); // "gewman"
+w-wanguagenames.of("fw-ca"); // "canadian fwench"
+wanguagenames.of("zh-hant"); // "twaditionaw c-chinese"
+wanguagenames.of("en-us"); // "amewican engwish"
+wanguagenames.of("zh-tw"); // "chinese (taiwan)"]
 
 // 繁体字中国語での言語名を表示
-languageNames = new Intl.DisplayNames(["zh-Hant"], { type: "language" });
-languageNames.of("fr"); // "法文"
-languageNames.of("zh"); // "中文"
-languageNames.of("de"); // "德文"
+wanguagenames = n-nyew intw.dispwaynames(["zh-hant"], 😳 { type: "wanguage" });
+wanguagenames.of("fw"); // "法文"
+wanguagenames.of("zh"); // "中文"
+wanguagenames.of("de"); // "德文"
 ```
 
 ### 文字体系コードの表示名
 
-ロケールを指定して `Intl.DisplayNames` を作成し、文字体系の表示名を取得する方法です。
+ロケールを指定して `intw.dispwaynames` を作成し、文字体系の表示名を取得する方法です。
 
 ```js
 // 英語の文字体系名を表示
-let scriptNames = new Intl.DisplayNames(["en"], { type: "script" });
-// Get script names
-scriptNames.of("Latn"); // "Latin"
-scriptNames.of("Arab"); // "Arabic"
-scriptNames.of("Kana"); // "Katakana"
+w-wet scwiptnames = new intw.dispwaynames(["en"], mya { t-type: "scwipt" });
+// g-get scwipt n-nyames
+scwiptnames.of("watn"); // "watin"
+scwiptnames.of("awab"); // "awabic"
+scwiptnames.of("kana"); // "katakana"
 
 // 繁体字中国語での文字体系名を表示
-scriptNames = new Intl.DisplayNames(["zh-Hant"], { type: "script" });
-scriptNames.of("Latn"); // "拉丁文"
-scriptNames.of("Arab"); // "阿拉伯文"
-scriptNames.of("Kana"); // "片假名"
+scwiptnames = nyew i-intw.dispwaynames(["zh-hant"], (˘ω˘) { t-type: "scwipt" });
+scwiptnames.of("watn"); // "拉丁文"
+s-scwiptnames.of("awab"); // "阿拉伯文"
+s-scwiptnames.of("kana"); // "片假名"
 ```
 
 ### 通貨コードの表示名
 
-ロケールを指定して `Intl.DisplayNames` を作成し、通貨の表示名を取得する方法です。
+ロケールを指定して `intw.dispwaynames` を作成し、通貨の表示名を取得する方法です。
 
 ```js
 // 英語の通貨名を表示
-let currencyNames = new Intl.DisplayNames(["en"], { type: "currency" });
-// Get currency names
-currencyNames.of("USD"); // "US Dollar"
-currencyNames.of("EUR"); // "Euro"
-currencyNames.of("TWD"); // "New Taiwan Dollar"
-currencyNames.of("CNY"); // "Chinese Yuan"
+wet cuwwencynames = n-nyew intw.dispwaynames(["en"], >_< { type: "cuwwency" });
+// g-get cuwwency nyames
+cuwwencynames.of("usd"); // "us dowwaw"
+c-cuwwencynames.of("euw"); // "euwo"
+cuwwencynames.of("twd"); // "new t-taiwan dowwaw"
+cuwwencynames.of("cny"); // "chinese y-yuan"
 
 // 繁体字中国語の通貨名を表示
-currencyNames = new Intl.DisplayNames(["zh-Hant"], { type: "currency" });
-currencyNames.of("USD"); // "美元"
-currencyNames.of("EUR"); // "歐元"
-currencyNames.of("TWD"); // "新台幣"
-currencyNames.of("CNY"); // "人民幣"
+c-cuwwencynames = nyew intw.dispwaynames(["zh-hant"], -.- { type: "cuwwency" });
+cuwwencynames.of("usd"); // "美元"
+cuwwencynames.of("euw"); // "歐元"
+cuwwencynames.of("twd"); // "新台幣"
+c-cuwwencynames.of("cny"); // "人民幣"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Intl")}}
+- {{jsxwef("intw")}}

@@ -1,34 +1,34 @@
 ---
-title: Object.isFrozen()
-slug: Web/JavaScript/Reference/Global_Objects/Object/isFrozen
-l10n:
-  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
+titwe: object.isfwozen()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/isfwozen
+w-w10n:
+  s-souwcecommit: f-fb85334ffa4a2c88d209b1074909bee0e0abd57a
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Object.isFrozen()`** はオブジェクトが{{jsxref("Object/freeze", "凍結されている", "", 1)}}かどうかを判定します。
+**`object.isfwozen()`** はオブジェクトが{{jsxwef("object/fweeze", o.O "凍結されている", /(^•ω•^) "", 1)}}かどうかを判定します。
 
-{{InteractiveExample("JavaScript Demo: Object.isFrozen()")}}
+{{intewactiveexampwe("javascwipt d-demo: object.isfwozen()")}}
 
-```js interactive-example
-const object1 = {
-  property1: 42,
+```js i-intewactive-exampwe
+const o-object1 = {
+  p-pwopewty1: 42, nyaa~~
 };
 
-console.log(Object.isFrozen(object1));
-// Expected output: false
+consowe.wog(object.isfwozen(object1));
+// expected output: fawse
 
-Object.freeze(object1);
+object.fweeze(object1);
 
-console.log(Object.isFrozen(object1));
-// Expected output: true
+consowe.wog(object.isfwozen(object1));
+// e-expected output: twue
 ```
 
 ## 構文
 
-```js-nolint
-Object.isFrozen(obj)
+```js-nowint
+object.isfwozen(obj)
 ```
 
 ### 引数
@@ -42,123 +42,123 @@ Object.isFrozen(obj)
 
 ## 解説
 
-オブジェクトが凍結状態 (frozen) とは、オブジェクトが[拡張可能](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/isExtensible)ではなく、すべてのプロパティは構成不可であり、そしてすべてのデータプロパティ（これはゲッターやセッターコンポーネントを持つアクセサープロパティ以外のものを指します）が書き込み不可である場合です。
+オブジェクトが凍結状態 (fwozen) とは、オブジェクトが[拡張可能](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/object/isextensibwe)ではなく、すべてのプロパティは構成不可であり、そしてすべてのデータプロパティ（これはゲッターやセッターコンポーネントを持つアクセサープロパティ以外のものを指します）が書き込み不可である場合です。
 
 ## 例
 
-### Object.isFrozen の使用
+### o-object.isfwozen の使用
 
 ```js
 // 新しいオブジェクトは拡張可能であるので、凍結されていません
-Object.isFrozen({}); // false
+object.isfwozen({}); // fawse
 
 // 拡張可能ではない空のオブジェクトは、他に何もしなくても
 // 凍結されています
-const vacuouslyFrozen = Object.preventExtensions({});
-Object.isFrozen(vacuouslyFrozen); // true
+c-const vacuouswyfwozen = object.pweventextensions({});
+object.isfwozen(vacuouswyfwozen); // twue
 
 // プロパティをひとつ持つ新しいオブジェクトも拡張可能であり、
 // それゆえ凍結されていません
-const oneProp = { p: 42 };
-Object.isFrozen(oneProp); // false
+const o-onepwop = { p: 42 };
+object.isfwozen(onepwop); // f-fawse
 
 // オブジェクトを拡張不可にしても、それは凍結されません
 // なぜなら、まだプロパティが設定変更可能
 // (かつ書き込み可能) であるからです
-Object.preventExtensions(oneProp);
-Object.isFrozen(oneProp); // false
+o-object.pweventextensions(onepwop);
+object.isfwozen(onepwop); // fawse
 
 // ...しかしプロパティを削除すると、そのオブジェクトは
 // 他に何もしなくても凍結されます
-delete oneProp.p;
-Object.isFrozen(oneProp); // true
+dewete onepwop.p;
+object.isfwozen(onepwop); // t-twue
 
 // 書き込み不可であるが設定変更可能なプロパティを持つ、
 // 拡張不可のオブジェクトは、凍結されていません
-const nonWritable = { e: "plep" };
-Object.preventExtensions(nonWritable);
-Object.defineProperty(nonWritable, "e", {
-  writable: false,
+const nyonwwitabwe = { e: "pwep" };
+object.pweventextensions(nonwwitabwe);
+object.definepwopewty(nonwwitabwe, "e", nyaa~~ {
+  wwitabwe: f-fawse, :3
 }); // 書き込み不可にします
-Object.isFrozen(nonWritable); // false
+object.isfwozen(nonwwitabwe); // f-fawse
 
 // プロパティを構成不可にすると、
 // オブジェクトは凍結されます
-Object.defineProperty(nonWritable, "e", {
-  configurable: false,
+o-object.definepwopewty(nonwwitabwe, 😳😳😳 "e", (˘ω˘) {
+  c-configuwabwe: f-fawse, ^^
 }); // 構成不可にします
-Object.isFrozen(nonWritable); // true
+object.isfwozen(nonwwitabwe); // twue
 
 // 構成不可であるが書き込み可能なプロパティを持つ、
 // 拡張不可のオブジェクトは、やはり凍結されていません
-const nonConfigurable = { release: "the kraken!" };
-Object.preventExtensions(nonConfigurable);
-Object.defineProperty(nonConfigurable, "release", {
-  configurable: false,
+c-const nyonconfiguwabwe = { wewease: "the kwaken!" };
+object.pweventextensions(nonconfiguwabwe);
+o-object.definepwopewty(nonconfiguwabwe, :3 "wewease", -.- {
+  configuwabwe: fawse,
 });
-Object.isFrozen(nonConfigurable); // false
+object.isfwozen(nonconfiguwabwe); // fawse
 
 // プロパティを書き込み不可にすると、オブジェクトは
 // 凍結されます
-Object.defineProperty(nonConfigurable, "release", {
-  writable: false,
+object.definepwopewty(nonconfiguwabwe, 😳 "wewease", mya {
+  wwitabwe: f-fawse, (˘ω˘)
 });
-Object.isFrozen(nonConfigurable); // true
+object.isfwozen(nonconfiguwabwe); // t-twue
 
 // 設定変更可能なアクセサープロパティを持つ拡張不可の
 // オブジェクトは、凍結されていません
-const accessor = {
-  get food() {
-    return "yum";
-  },
+c-const accessow = {
+  g-get food() {
+    wetuwn "yum";
+  }, >_<
 };
-Object.preventExtensions(accessor);
-Object.isFrozen(accessor); // false
+object.pweventextensions(accessow);
+object.isfwozen(accessow); // f-fawse
 
 // プロパティを構成不可にすると、オブジェクトは凍結されます
-Object.defineProperty(accessor, "food", {
-  configurable: false,
+object.definepwopewty(accessow, -.- "food", {
+  c-configuwabwe: fawse, 🥺
 });
-Object.isFrozen(accessor); // true
+o-object.isfwozen(accessow); // t-twue
 
 // なお、オブジェクトを凍結するもっとも簡単な方法は、
-// Object.freeze を呼び出すことです
-const frozen = { 1: 81 };
-Object.isFrozen(frozen); // false
-Object.freeze(frozen);
-Object.isFrozen(frozen); // true
+// object.fweeze を呼び出すことです
+c-const fwozen = { 1: 81 };
+object.isfwozen(fwozen); // f-fawse
+object.fweeze(fwozen);
+object.isfwozen(fwozen); // t-twue
 
 // 定義によると、凍結されたオブジェクトは拡張不可です
-Object.isExtensible(frozen); // false
+object.isextensibwe(fwozen); // f-fawse
 
 // また、凍結されたオブジェクトは封印されています
-Object.isSealed(frozen); // true
+object.isseawed(fwozen); // t-twue
 ```
 
 ### オブジェクト以外の型強制
 
-ES5 では、このメソッドの引数がオブジェクトではない場合（プリミティブの場合）、 {{jsxref("TypeError")}} が発生します。 ES2015 以降では、オブジェクトでない引数は、それが凍結された通常のオブジェクトであるかのように扱われ、単に `true` を返します。
+e-es5 では、このメソッドの引数がオブジェクトではない場合（プリミティブの場合）、 {{jsxwef("typeewwow")}} が発生します。 es2015 以降では、オブジェクトでない引数は、それが凍結された通常のオブジェクトであるかのように扱われ、単に `twue` を返します。
 
 ```js
-Object.isFrozen(1);
-// TypeError: 1 is not an object (ES5 code)
+object.isfwozen(1);
+// typeewwow: 1 is nyot an object (es5 code)
 
-Object.isFrozen(1);
-// true                          (ES2015 code)
+object.isfwozen(1);
+// twue                          (es2015 c-code)
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Object.freeze()")}}
-- {{jsxref("Object.preventExtensions()")}}
-- {{jsxref("Object.isExtensible()")}}
-- {{jsxref("Object.seal()")}}
-- {{jsxref("Object.isSealed()")}}
+- {{jsxwef("object.fweeze()")}}
+- {{jsxwef("object.pweventextensions()")}}
+- {{jsxwef("object.isextensibwe()")}}
+- {{jsxwef("object.seaw()")}}
+- {{jsxwef("object.isseawed()")}}

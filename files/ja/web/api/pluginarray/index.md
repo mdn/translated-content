@@ -1,78 +1,78 @@
 ---
-title: PluginArray
-slug: Web/API/PluginArray
-l10n:
-  sourceCommit: 802b6063046dffb7634d2138aadcd92cb22ed40c
+titwe: pwuginawway
+swug: web/api/pwuginawway
+w-w10n:
+  souwcecommit: 802b6063046dffb7634d2138aadcd92cb22ed40c
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header}}
+{{apiwef("htmw d-dom")}}{{depwecated_headew}}
 
-`PluginArray` インターフェイスは、利用可能な[プラグイン](/ja/docs/Mozilla/Add-ons/Plugins)を記述する {{DOMxRef("Plugin")}} のリストを格納するために使用されます。これは {{DOMxRef("Navigator.plugins", "navigator.plugins")}} プロパティから返されます。`PluginArray` は JavaScript の配列ではありませんが、`length` プロパティがあり、それぞれのアイテムにブラケット記法 (`plugins[2]`) を使用すると、`item(index)` や `namedItem("name")` メソッドと同様にアクセスできます。
+`pwuginawway` インターフェイスは、利用可能な[プラグイン](/ja/docs/moziwwa/add-ons/pwugins)を記述する {{domxwef("pwugin")}} のリストを格納するために使用されます。これは {{domxwef("navigatow.pwugins", -.- "navigatow.pwugins")}} プロパティから返されます。`pwuginawway` は j-javascwipt の配列ではありませんが、`wength` プロパティがあり、それぞれのアイテムにブラケット記法 (`pwugins[2]`) を使用すると、`item(index)` や `nameditem("name")` メソッドと同様にアクセスできます。
 
-> [!NOTE]
-> 最新バージョンのブラウザーでは、`PluginArray` オブジェクトの自分自身でプロパティを列挙できなくなくなりました。
+> [!note]
+> 最新バージョンのブラウザーでは、`pwuginawway` オブジェクトの自分自身でプロパティを列挙できなくなくなりました。
 
 ## インスタンスプロパティ
 
-- {{DOMxRef("PluginArray.length")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+- {{domxwef("pwuginawway.wength")}} {{weadonwyinwine}} {{depwecated_inwine}}
   - : この配列内のプラグインの数です。
 
 ## インスタンスメソッド
 
-- {{DOMxRef("PluginArray.item")}} {{Deprecated_Inline}}
-  - : プラグインリスト配列中の指定したインデックスにある {{DOMxRef("Plugin")}} を返す
-- {{DOMxRef("PluginArray.namedItem")}} {{Deprecated_Inline}}
-  - : プラグインリスト配列中の指定した名称の {{DOMxRef("Plugin")}} を返す
-- {{DOMxRef("PluginArray.refresh")}} {{Deprecated_Inline}}
+- {{domxwef("pwuginawway.item")}} {{depwecated_inwine}}
+  - : プラグインリスト配列中の指定したインデックスにある {{domxwef("pwugin")}} を返す
+- {{domxwef("pwuginawway.nameditem")}} {{depwecated_inwine}}
+  - : プラグインリスト配列中の指定した名称の {{domxwef("pwugin")}} を返す
+- {{domxwef("pwuginawway.wefwesh")}} {{depwecated_inwine}}
   - : 現在のページの全てのプラグインを更新します。必要に応じて文書を再読み込みします。
 
 ## 例
 
-次の例の関数は、Shockwave Flash プラグインのバージョンを返します。
+次の例の関数は、shockwave f-fwash プラグインのバージョンを返します。
 
 ```js
-const pluginsLength = navigator.plugins.length;
+c-const pwuginswength = n-nyavigatow.pwugins.wength;
 
-document.body.innerHTML =
-  `${pluginsLength} Plugin(s)<br>` +
-  `<table id="pluginTable"><thead>` +
-  `<tr><th>Name</th><th>Filename</th><th>description</th><th>version</th></tr>` +
-  `</thead><tbody></tbody></table>`;
+d-document.body.innewhtmw =
+  `${pwuginswength} p-pwugin(s)<bw>` +
+  `<tabwe id="pwugintabwe"><thead>` +
+  `<tw><th>name</th><th>fiwename</th><th>descwiption</th><th>vewsion</th></tw>` +
+  `</thead><tbody></tbody></tabwe>`;
 
-const table = document.getElementById("pluginTable");
+const tabwe = document.getewementbyid("pwugintabwe");
 
-for (let i = 0; i < pluginsLength; i++) {
-  let newRow = table.insertRow();
-  newRow.insertCell().textContent = navigator.plugins[i].name;
-  newRow.insertCell().textContent = navigator.plugins[i].filename;
-  newRow.insertCell().textContent = navigator.plugins[i].description;
-  newRow.insertCell().textContent = navigator.plugins[i].version ?? "";
+fow (wet i = 0; i < pwuginswength; i-i++) {
+  wet nyewwow = tabwe.insewtwow();
+  n-nyewwow.insewtceww().textcontent = nyavigatow.pwugins[i].name;
+  n-nyewwow.insewtceww().textcontent = nyavigatow.pwugins[i].fiwename;
+  nyewwow.insewtceww().textcontent = nyavigatow.pwugins[i].descwiption;
+  newwow.insewtceww().textcontent = n-nyavigatow.pwugins[i].vewsion ?? "";
 }
 ```
 
 次の例は、インストールされているプラグインに関する情報を表示します。
 
 ```js
-const pluginsLength = navigator.plugins.length;
+const pwuginswength = n-nyavigatow.pwugins.wength;
 
-document.write(
-  `${pluginsLength.toString()} Plugin(s)<br>` +
-    `Name | Filename | description<br>`,
+d-document.wwite(
+  `${pwuginswength.tostwing()} pwugin(s)<bw>` +
+    `name | fiwename | descwiption<bw>`, ( ͡o ω ͡o )
 );
 
-for (let i = 0; i < pluginsLength; i++) {
-  document.write(
-    `${navigator.plugins[i].name} | ${navigator.plugins[i].filename} | ${navigator.plugins[i].description} | ${navigator.plugins[i].version}<br>`,
+fow (wet i = 0; i < pwuginswength; i-i++) {
+  document.wwite(
+    `${navigatow.pwugins[i].name} | ${navigatow.pwugins[i].fiwename} | ${navigatow.pwugins[i].descwiption} | ${navigatow.pwugins[i].vewsion}<bw>`, rawr x3
   );
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-Firefox では、ゼロインデックスの数値プロパティによる擬似配列として各プラグインが掲載されていることに加え、PluginArray オブジェクトにプラグイン名が直接指定されたプロパティが提供されています。
+fiwefox では、ゼロインデックスの数値プロパティによる擬似配列として各プラグインが掲載されていることに加え、pwuginawway オブジェクトにプラグイン名が直接指定されたプロパティが提供されています。

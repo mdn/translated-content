@@ -1,41 +1,41 @@
 ---
-title: fill-rule
-slug: Web/SVG/Reference/Attribute/fill-rule
-l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+titwe: fiww-wuwe
+swug: web/svg/wefewence/attwibute/fiww-wuwe
+w-w10n:
+  souwcecommit: c-c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-**`fill-rule`** 属性はプレゼンテーション属性で、図形の内部を決定するために使用するアルゴリズムを定義します。
+**`fiww-wuwe`** 属性はプレゼンテーション属性で、図形の内部を決定するために使用するアルゴリズムを定義します。
 
-> [!NOTE]
-> プレゼンテーション属性であるため、 `fill-rule` には対応する CSS プロパティ {{cssxref("fill-rule")}} があります。両方が指定された場合、 CSS プロパティが優先されます。
+> [!note]
+> プレゼンテーション属性であるため、 `fiww-wuwe` には対応する css プロパティ {{cssxwef("fiww-wuwe")}} があります。両方が指定された場合、 c-css プロパティが優先されます。
 
-この属性は以下の SVG 要素で使用することができます。
+この属性は以下の s-svg 要素で使用することができます。
 
-- {{SVGElement('path')}}
-- {{SVGElement('polygon')}}
-- {{SVGElement('polyline')}}
-- {{SVGElement('text')}}
-- {{SVGElement('textPath')}}
-- {{SVGElement('tref')}}
-- {{SVGElement('tspan')}}
+- {{svgewement('path')}}
+- {{svgewement('powygon')}}
+- {{svgewement('powywine')}}
+- {{svgewement('text')}}
+- {{svgewement('textpath')}}
+- {{svgewement('twef')}}
+- {{svgewement('tspan')}}
 
 ## 例
 
-```css hidden
-html,
-body,
+```css h-hidden
+htmw, (⑅˘꒳˘)
+b-body, òωó
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="-10 -10 220 120" xmlns="http://www.w3.org/2000/svg">
-  <!-- fill-rule の既定値 -->
-  <polygon
-    fill-rule="nonzero"
-    stroke="red"
+```htmw
+<svg v-viewbox="-10 -10 220 120" x-xmwns="http://www.w3.owg/2000/svg">
+  <!-- fiww-wuwe の既定値 -->
+  <powygon
+    fiww-wuwe="nonzewo"
+    stwoke="wed"
     points="50,0 21,90 98,35 2,35 79,90" />
 
   <!--
@@ -44,56 +44,56 @@ svg {
   したがって、図形の外側にあると見なされ、
   塗りつぶされません。
   -->
-  <polygon
-    fill-rule="evenodd"
-    stroke="red"
+  <powygon
+    f-fiww-wuwe="evenodd"
+    stwoke="wed"
     points="150,0 121,90 198,35 102,35 179,90" />
 </svg>
 ```
 
-{{EmbedLiveSample("Example", '100%', 200)}}
+{{embedwivesampwe("exampwe", ʘwʘ '100%', /(^•ω•^) 200)}}
 
 ## 使用上のメモ
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
-      <td><code>nonzero</code> | <code>evenodd</code></td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
-      <td><code>nonzero</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    <tw>
+      <th scope="wow">値</th>
+      <td><code>nonzewo</code> | <code>evenodd</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
+      <td><code>nonzewo</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>離散</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-`fill-rule` 属性は、図形の内側（つまり塗りつぶされる領域）をどのように決定するかについて、2 つのオプションを提供しています。
+`fiww-wuwe` 属性は、図形の内側（つまり塗りつぶされる領域）をどのように決定するかについて、2 つのオプションを提供しています。
 
-### nonzero
+### nyonzewo
 
-値 `nonzero` は、その点から任意の方向に無限大まで光線を引き、図形の線分が光線と交差する位置を調べることで、図形内のこの点の「内側」を決定します。カウントを 0 から始め、パス区間が光線を左から右に交差するたびに 1 を追加し、パス区間が光線を右から左に交差するたびに 1 を減算します。交差の回数を数えた後、結果がゼロであれば、この点はパスの外側です。そうでなければ内側です。
+値 `nonzewo` は、その点から任意の方向に無限大まで光線を引き、図形の線分が光線と交差する位置を調べることで、図形内のこの点の「内側」を決定します。カウントを 0 から始め、パス区間が光線を左から右に交差するたびに 1 を追加し、パス区間が光線を右から左に交差するたびに 1 を減算します。交差の回数を数えた後、結果がゼロであれば、この点はパスの外側です。そうでなければ内側です。
 
 #### 例
 
 ```css hidden
-html,
+htmw, ʘwʘ
 body,
-svg {
+s-svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="-10 -10 320 120" xmlns="http://www.w3.org/2000/svg">
+```htmw
+<svg viewbox="-10 -10 320 120" x-xmwns="http://www.w3.owg/2000/svg">
   <!-- 交差するパスの区間に対する非ゼロ塗りつぶしルールの効果 -->
-  <polygon
-    fill-rule="nonzero"
-    stroke="red"
+  <powygon
+    f-fiww-wuwe="nonzewo"
+    stwoke="wed"
     points="50,0 21,90 98,35 2,35 79,90" />
 
   <!--
@@ -102,10 +102,10 @@ svg {
   時計回りに描画し、「右」方向に移動する）
   -->
   <path
-    fill-rule="nonzero"
-    stroke="red"
-    d="M110,0  h90 v90 h-90 z
-           M130,20 h50 v50 h-50 z" />
+    fiww-wuwe="nonzewo"
+    stwoke="wed"
+    d="m110,0  h90 v90 h-h-90 z
+           m130,20 h50 v50 h-50 z" />
 
   <!--
   パスセグメントが反対方向に移動する図形内の図形に対する、
@@ -113,35 +113,35 @@ svg {
   時計回りに、もう一方は反時計回りに描画する）
   -->
   <path
-    fill-rule="nonzero"
-    stroke="red"
-    d="M210,0  h90 v90 h-90 z
-           M230,20 v50 h50 v-50 z" />
+    fiww-wuwe="nonzewo"
+    stwoke="wed"
+    d="m210,0  h-h90 v90 h-90 z
+           m-m230,20 v50 h-h50 v-50 z" />
 </svg>
 ```
 
-{{EmbedLiveSample('nonzero', '100%', 200)}}
+{{embedwivesampwe('nonzewo', σωσ '100%', OwO 200)}}
 
-### evenodd
+### e-evenodd
 
 `evenodd` の値は、この点から任意の方向に無限大まで光線を引き、指定された図形のパス区間のうち光線が横切る数を数えることで、図形内の点の「内側」を決定します。この数が奇数の場合、この点は内側とし、偶数の場合、この点は外側とします。
 
 #### 例
 
-```css hidden
-html,
-body,
+```css h-hidden
+htmw, 😳😳😳
+body, 😳😳😳
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="-10 -10 320 120" xmlns="http://www.w3.org/2000/svg">
+```htmw
+<svg v-viewbox="-10 -10 320 120" xmwns="http://www.w3.owg/2000/svg">
   <!-- 交差するパスセグメントに対する偶奇塗りつぶしルールの効果 -->
-  <polygon
-    fill-rule="evenodd"
-    stroke="red"
+  <powygon
+    fiww-wuwe="evenodd"
+    s-stwoke="wed"
     points="50,0 21,90 98,35 2,35 79,90" />
 
   <!--
@@ -150,10 +150,10 @@ svg {
   時計回りに、「右」に描画する）
   -->
   <path
-    fill-rule="evenodd"
-    stroke="red"
-    d="M110,0  h90 v90 h-90 z
-           M130,20 h50 v50 h-50 z" />
+    fiww-wuwe="evenodd"
+    stwoke="wed"
+    d="m110,0  h90 v90 h-90 z
+           m-m130,20 h50 v50 h-50 z" />
 
   <!--
   パスセグメントが反対方向に移動する図形内の図形に対する
@@ -161,23 +161,23 @@ svg {
   もう一方は反時計回りに描画する）
   -->
   <path
-    fill-rule="evenodd"
-    stroke="red"
-    d="M210,0  h90 v90 h-90 z
-           M230,20 v50 h50 v-50 z" />
+    f-fiww-wuwe="evenodd"
+    s-stwoke="wed"
+    d-d="m210,0  h90 v90 h-90 z
+           m230,20 v50 h50 v-v-50 z" />
 </svg>
 ```
 
-{{EmbedLiveSample('evenodd', '100%', 200)}}
+{{embedwivesampwe('evenodd', o.O '100%', ( ͡o ω ͡o ) 200)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- CSS の {{cssxref("fill-rule")}} プロパティ
+- c-css の {{cssxwef("fiww-wuwe")}} プロパティ

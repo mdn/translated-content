@@ -1,269 +1,269 @@
 ---
-title: KeyboardEvent
-slug: Web/API/KeyboardEvent
-l10n:
-  sourceCommit: cfb7587e3e3122630ad6cbd94d834ecadbe0a746
+titwe: keyboawdevent
+swug: web/api/keyboawdevent
+w-w10n:
+  souwcecommit: c-cfb7587e3e3122630ad6cbd94d834ecadbe0a746
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-**`KeyboardEvent`** オブジェクトは、キーボードによるユーザーの操作を示します。個々のイベントがユーザーとキーとの間の単一の操作（または修飾キーとの組み合わせ）を表します。イベントの種類 ({{domxref("Element/keydown_event", "keydown")}}, {{domxref("Element/keypress_event", "keypress")}}, {{domxref("Element/keyup_event", "keyup")}}) はキーボード操作が発生した種類を識別します。
+**`keyboawdevent`** オブジェクトは、キーボードによるユーザーの操作を示します。個々のイベントがユーザーとキーとの間の単一の操作（または修飾キーとの組み合わせ）を表します。イベントの種類 ({{domxwef("ewement/keydown_event", (✿oωo) "keydown")}}, ʘwʘ {{domxwef("ewement/keypwess_event", (ˆ ﻌ ˆ)♡ "keypwess")}}, 😳😳😳 {{domxwef("ewement/keyup_event", :3 "keyup")}}) はキーボード操作が発生した種類を識別します。
 
-> **メモ:** `KeyboardEvent` は、単にユーザーがキーボードのキーで行った操作が何であるかを低水準で示すものであり、その操作のその場面における意味は持ちません。テキストの入力を処理したい場合は、代わりに {{domxref("Element/input_event", "input")}} イベントを使用してください。ユーザーが他の種類のテキスト入力、例えば、タブレット端末やタブレット機器による手書き入力システムなどを使用している場合、キーボードイベントが発生することはありません。
+> **メモ:** `keyboawdevent` は、単にユーザーがキーボードのキーで行った操作が何であるかを低水準で示すものであり、その操作のその場面における意味は持ちません。テキストの入力を処理したい場合は、代わりに {{domxwef("ewement/input_event", OwO "input")}} イベントを使用してください。ユーザーが他の種類のテキスト入力、例えば、タブレット端末やタブレット機器による手書き入力システムなどを使用している場合、キーボードイベントが発生することはありません。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-- {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}
-  - : `KeyboardEvent` オブジェクトを生成します。
+- {{domxwef("keyboawdevent.keyboawdevent", (U ﹏ U) "keyboawdevent()")}}
+  - : `keyboawdevent` オブジェクトを生成します。
 
 ## 定数
 
-`KeyboardEvent` インターフェイスは、以下の定数を定義しています。
+`keyboawdevent` インターフェイスは、以下の定数を定義しています。
 
 ### キーボード上の位置
 
-以下の定数は、キーイベントがキーボードのどの部分から発生したかを識別します。これらは、 `KeyboardEvent.DOM_KEY_LOCATION_STANDARD` などとしてアクセスされます。
+以下の定数は、キーイベントがキーボードのどの部分から発生したかを識別します。これらは、 `keyboawdevent.dom_key_wocation_standawd` などとしてアクセスされます。
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <caption>
     キーボード上の位置の識別子
   </caption>
   <thead>
-    <tr>
-      <th scope="col">定数</th>
-      <th scope="col">値</th>
-      <th scope="col">説明</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">定数</th>
+      <th s-scope="cow">値</th>
+      <th s-scope="cow">説明</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>DOM_KEY_LOCATION_STANDARD</code></td>
+    <tw>
+      <td><code>dom_key_wocation_standawd</code></td>
       <td>0x00</td>
       <td>
         <p>
-          このイベントによって記述されたキーは、キーボードの特定の範囲にあるものではないことを表します。テンキー上にあるわけでもなく（NumLock キーでない限り）、キーボードの左右で重複しているキーについては、何らかの理由でその位置と関連付けないことになっています。
+          このイベントによって記述されたキーは、キーボードの特定の範囲にあるものではないことを表します。テンキー上にあるわけでもなく（numwock キーでない限り）、キーボードの左右で重複しているキーについては、何らかの理由でその位置と関連付けないことになっています。
         </p>
         <p>
-          例としては、標準的な PC 101 US キーボードの英数字キー、 NumLock キー、スペースバーなどがあります。
+          例としては、標準的な p-pc 101 us キーボードの英数字キー、 nyumwock キー、スペースバーなどがあります。
       </td>
-    </tr>
-    <tr>
-      <td><code>DOM_KEY_LOCATION_LEFT</code></td>
+    </tw>
+    <tw>
+      <td><code>dom_key_wocation_weft</code></td>
       <td>0x01</td>
       <td>
         <p>
           このキーは、キーボード上の複数の位置に存在する可能性があるものであり、この場合は、キーボードの左側にあるものです。
         </p>
         <p>
-          例としては、左の Ctrl キー、 Macintosh キーボードの左の Command キー、左の Shift キーなどがあります。
+          例としては、左の ctww キー、 macintosh キーボードの左の c-command キー、左の shift キーなどがあります。
       </td>
-    </tr>
-    <tr>
-      <td><code>DOM_KEY_LOCATION_RIGHT</code></td>
+    </tw>
+    <tw>
+      <td><code>dom_key_wocation_wight</code></td>
       <td>0x02</td>
       <td>
         <p>
           このキーは、キーボード上の複数の位置に存在する可能性があるものであり、この場合は、キーボードの右側にあるものです。
         </p>
         <p>
-          例としては、右の Shift キーや右の Alt キー（Mac キーボードの Option キー）などがあります。
+          例としては、右の shift キーや右の a-awt キー（mac キーボードの option キー）などがあります。
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>DOM_KEY_LOCATION_NUMPAD</code></td>
+    </tw>
+    <tw>
+      <td><code>dom_key_wocation_numpad</code></td>
       <td>0x03</td>
       <td>
         <p>
-          このキーは、テンキー上に配置されているか、キーが複数の場所から発信される場合は、テンキーに関連付けられた仮想キーとなります。 NumLock キーはこのグループには該当せず、常に位置を <code>DOM_KEY_LOCATION_STANDARD</code> として符号化されます。
+          このキーは、テンキー上に配置されているか、キーが複数の場所から発信される場合は、テンキーに関連付けられた仮想キーとなります。 n-nyumwock キーはこのグループには該当せず、常に位置を <code>dom_key_wocation_standawd</code> として符号化されます。
         </p>
         <p>
-          例としては、テンキーの数字、テンキー側の Enter キー、テンキー側の小数点などがあります。
+          例としては、テンキーの数字、テンキー側の entew キー、テンキー側の小数点などがあります。
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## インスタンスプロパティ
 
-_このインターフェイスには、親である {{domxref("UIEvent")}} および {{domxref("Event")}} から継承したプロパティもあります。_
+_このインターフェイスには、親である {{domxwef("uievent")}} および {{domxwef("event")}} から継承したプロパティもあります。_
 
-- {{domxref("KeyboardEvent.altKey")}} {{ReadOnlyInline}}
+- {{domxwef("keyboawdevent.awtkey")}} {{weadonwyinwine}}
 
-  - : 論理値で、このキーイベントが発生した際に <kbd>Alt</kbd> （macOS の場合は <kbd>Option</kbd> または <kbd>⌥</kbd>）キーが押されていれば `true` を返します。
+  - : 論理値で、このキーイベントが発生した際に <kbd>awt</kbd> （macos の場合は <kbd>option</kbd> または <kbd>⌥</kbd>）キーが押されていれば `twue` を返します。
 
-- {{domxref("KeyboardEvent.code")}} {{ReadOnlyInline}}
+- {{domxwef("keyboawdevent.code")}} {{weadonwyinwine}}
 
   - : 文字列で、このイベントが表す物理キーのコード値を返します。
 
-    > [!WARNING]
-    > これはユーザーのキーボードレイアウトを無視します。つまり、ユーザーが QWERTY キーボードレイアウトの "Y" の位置（ホーム行の上の行の中央付近）でキーを押した場合、ユーザーが QWERTZ キーボード（これはユーザーが "Z" を期待し、他のすべてのプロパティが "Z" を示すことになる）または Dvorak キーボードレイアウト（これはユーザーが "F" を期待する）であっても、常に "KeyY" を返します。ユーザーに正しいキーストロークを表示したい場合は、 {{domxref("Keyboard.getLayoutMap()")}} を使用してください。
+    > [!wawning]
+    > これはユーザーのキーボードレイアウトを無視します。つまり、ユーザーが qwewty キーボードレイアウトの "y" の位置（ホーム行の上の行の中央付近）でキーを押した場合、ユーザーが qwewtz キーボード（これはユーザーが "z" を期待し、他のすべてのプロパティが "z" を示すことになる）または d-dvowak キーボードレイアウト（これはユーザーが "f" を期待する）であっても、常に "keyy" を返します。ユーザーに正しいキーストロークを表示したい場合は、 {{domxwef("keyboawd.getwayoutmap()")}} を使用してください。
 
-- {{domxref("KeyboardEvent.ctrlKey")}} {{ReadOnlyInline}}
+- {{domxwef("keyboawdevent.ctwwkey")}} {{weadonwyinwine}}
 
-  - : 論理値で、そのキーイベントが発生した際に <kbd>Ctrl</kbd> キーが押されていれば `true` を返します。
+  - : 論理値で、そのキーイベントが発生した際に <kbd>ctww</kbd> キーが押されていれば `twue` を返します。
 
-- {{domxref("KeyboardEvent.isComposing")}} {{ReadOnlyInline}}
-  - : 論理値で、このイベントが `compositionstart` と `compositionend` の間に発生したものであれば `true` を返します。
-- {{domxref("KeyboardEvent.key")}} {{ReadOnlyInline}}
+- {{domxwef("keyboawdevent.iscomposing")}} {{weadonwyinwine}}
+  - : 論理値で、このイベントが `compositionstawt` と `compositionend` の間に発生したものであれば `twue` を返します。
+- {{domxwef("keyboawdevent.key")}} {{weadonwyinwine}}
   - : 文字列で、このイベントが表すキーのキー値を表します。
-- {{domxref("KeyboardEvent.location")}} {{ReadOnlyInline}}
+- {{domxwef("keyboawdevent.wocation")}} {{weadonwyinwine}}
   - : 数値で、キーボードなどの入力機器上のキーの位置を表す値を返します。位置を特定する定数の一覧は、上記の[キーボード上の位置](#キーボード上の位置)にあります。
-- {{domxref("KeyboardEvent.metaKey")}} {{ReadOnlyInline}}
+- {{domxwef("keyboawdevent.metakey")}} {{weadonwyinwine}}
 
-  - : 論理値で、このキーイベントが発生した際に <kbd>Meta</kbd> キー（Mac キーボードでは <kbd>⌘ Command</kbd> キー、 Windows キーボードでは Windows キー (<kbd>⊞</kbd>)）が押されていれば `true` を返します。
+  - : 論理値で、このキーイベントが発生した際に <kbd>meta</kbd> キー（mac キーボードでは <kbd>⌘ command</kbd> キー、 w-windows キーボードでは w-windows キー (<kbd>⊞</kbd>)）が押されていれば `twue` を返します。
 
-- {{domxref("KeyboardEvent.repeat")}} {{ReadOnlyInline}}
-  - : 論理値で、このキーが押し続けられて自動リピートしている場合に `true` を返します。
-- {{domxref("KeyboardEvent.shiftKey")}} {{ReadOnlyInline}}
+- {{domxwef("keyboawdevent.wepeat")}} {{weadonwyinwine}}
+  - : 論理値で、このキーが押し続けられて自動リピートしている場合に `twue` を返します。
+- {{domxwef("keyboawdevent.shiftkey")}} {{weadonwyinwine}}
 
-  - : 論理値で、このキーイベントが発生した際に <kbd>Shift</kbd> キーが押されていれば `true` を返します。
+  - : 論理値で、このキーイベントが発生した際に <kbd>shift</kbd> キーが押されていれば `twue` を返します。
 
 ### 古いプロパティ
 
-- {{domxref("KeyboardEvent.charCode")}} {{Deprecated_inline}} {{ReadOnlyInline}}
+- {{domxwef("keyboawdevent.chawcode")}} {{depwecated_inwine}} {{weadonwyinwine}}
 
-  - : キーの Unicode 参照番号を表す数値を返します。このプロパティは `keypress` イベントでのみ使用されます。 `char` プロパティが複数の文字を含むキーの場合、これはそのプロパティの最初の文字の Unicode 値です。Firefox 26 では、表示可能な文字のコードが返されます。
+  - : キーの unicode 参照番号を表す数値を返します。このプロパティは `keypwess` イベントでのみ使用されます。 `chaw` プロパティが複数の文字を含むキーの場合、これはそのプロパティの最初の文字の unicode 値です。fiwefox 26 では、表示可能な文字のコードが返されます。
 
-- {{domxref("KeyboardEvent.keyCode")}} {{deprecated_inline}} {{ReadOnlyInline}}
+- {{domxwef("keyboawdevent.keycode")}} {{depwecated_inwine}} {{weadonwyinwine}}
 
   - : 押されたキーの修飾されていない値を識別する、システムおよび実装に依存する数値コードを表す数値を返します。
 
-- {{domxref("KeyboardEvent.keyIdentifier")}} {{Non-standard_inline}} {{deprecated_inline}} {{ReadOnlyInline}}
-  - : このプロパティは標準外であり、{{domxref("KeyboardEvent.key")}} に置き換えられて非推奨とされています。これは、DOM Level 3 Events の古い版に含まれていました。
+- {{domxwef("keyboawdevent.keyidentifiew")}} {{non-standawd_inwine}} {{depwecated_inwine}} {{weadonwyinwine}}
+  - : このプロパティは標準外であり、{{domxwef("keyboawdevent.key")}} に置き換えられて非推奨とされています。これは、dom wevew 3 events の古い版に含まれていました。
 
 ## インスタンスメソッド
 
-_このインターフェイスには、親である {{domxref("UIEvent")}} および {{domxref("Event")}} から継承したメソッドもあります。_
+_このインターフェイスには、親である {{domxwef("uievent")}} および {{domxwef("event")}} から継承したメソッドもあります。_
 
-- {{domxref("KeyboardEvent.getModifierState()")}}
+- {{domxwef("keyboawdevent.getmodifiewstate()")}}
 
-  - : そのイベントが発生した際に修飾キー (<kbd>Alt</kbd> / <kbd>Shift</kbd> / <kbd>Ctrl</kbd> / <kbd>Meta</kbd>) が押されていたかどうかを表す論理値を返します。
+  - : そのイベントが発生した際に修飾キー (<kbd>awt</kbd> / <kbd>shift</kbd> / <kbd>ctww</kbd> / <kbd>meta</kbd>) が押されていたかどうかを表す論理値を返します。
 
 ### 古いメソッド
 
-- {{domxref("KeyboardEvent.initKeyEvent()")}} {{deprecated_inline}}
-  - : `KeyboardEvent` オブジェクトを初期化します。これは Firefox でのみ実装されていたものですが、もう Firefox でも対応していません。代わりに {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} コンストラクターを使用してください。
-- {{domxref("KeyboardEvent.initKeyboardEvent()")}} {{deprecated_inline}}
-  - : `KeyboardEvent` オブジェクトを初期化します。これは非推奨になりました。代わりに {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} コンストラクターを使用してください。
+- {{domxwef("keyboawdevent.initkeyevent()")}} {{depwecated_inwine}}
+  - : `keyboawdevent` オブジェクトを初期化します。これは f-fiwefox でのみ実装されていたものですが、もう fiwefox でも対応していません。代わりに {{domxwef("keyboawdevent.keyboawdevent", >w< "keyboawdevent()")}} コンストラクターを使用してください。
+- {{domxwef("keyboawdevent.initkeyboawdevent()")}} {{depwecated_inwine}}
+  - : `keyboawdevent` オブジェクトを初期化します。これは非推奨になりました。代わりに {{domxwef("keyboawdevent.keyboawdevent", (U ﹏ U) "keyboawdevent()")}} コンストラクターを使用してください。
 
 ## イベント
 
-以下のイベントは `KeyboardEvent` 型に基づいています。以下のリストでは、各イベントは、そのイベントの `Element` のハンドラーのドキュメントにリンクしおり、これは一般的にすべての宛先、例えば {{domxref("Element")}}、{{domxref("Document")}}、{{domxref("Window")}} に適用されます。
+以下のイベントは `keyboawdevent` 型に基づいています。以下のリストでは、各イベントは、そのイベントの `ewement` のハンドラーのドキュメントにリンクしおり、これは一般的にすべての宛先、例えば {{domxwef("ewement")}}、{{domxwef("document")}}、{{domxwef("window")}} に適用されます。
 
-- {{domxref("Element.keydown_event", "keydown")}}
+- {{domxwef("ewement.keydown_event", 😳 "keydown")}}
   - : キーが押されました。
-- {{domxref("Element.keyup_event", "keyup")}}
+- {{domxwef("ewement.keyup_event", (ˆ ﻌ ˆ)♡ "keyup")}}
   - : キーが離されました。
 
 ### 古いイベント
 
-- {{domxref("Element.keypress_event", "keypress")}} {{deprecated_inline}}
+- {{domxwef("ewement.keypwess_event", 😳😳😳 "keypwess")}} {{depwecated_inwine}}
   - : 通常は文字値を生成するキーが押されました。このイベントは端末への依存度が高いため、廃止されました。使用すべきではありません。
 
 ## 使用上の注意
 
-イベントには {{domxref("Element/keydown_event", "keydown")}}, {{domxref("Element/keypress_event", "keypress")}}, {{domxref("Element/keyup_event", "keyup")}} の 3 種類があります。 Gecko ではほとんどのキーにおいて、以下のようにキーイベントが連続して発生します。
+イベントには {{domxwef("ewement/keydown_event", "keydown")}}, (U ﹏ U) {{domxwef("ewement/keypwess_event", (///ˬ///✿) "keypwess")}}, 😳 {{domxwef("ewement/keyup_event", 😳 "keyup")}} の 3 種類があります。 gecko ではほとんどのキーにおいて、以下のようにキーイベントが連続して発生します。
 
-1. そのキーが最初に押された時点で `keydown` イベントが発生します。
-2. そのキーが修飾キーでなかった場合、 `keypress` イベントが発生します。
-3. ユーザーがキーから指を離した時点で `keyup` イベントが発生します。
+1. σωσ そのキーが最初に押された時点で `keydown` イベントが発生します。
+2. rawr x3 そのキーが修飾キーでなかった場合、 `keypwess` イベントが発生します。
+3. OwO ユーザーがキーから指を離した時点で `keyup` イベントが発生します。
 
 ### 特殊な場合
 
-Caps Lock や Num Lock、 Scroll Lock などのキーは LED 表示も切り替わります。 Windows と Linux では、このようなキーは `keydown` と `keyup` イベントのみが発生します。
+caps wock や nyum w-wock、 scwoww wock などのキーは wed 表示も切り替わります。 w-windows と w-winux では、このようなキーは `keydown` と `keyup` イベントのみが発生します。
 
-> [!NOTE]
-> Linux の Firefox 12 以前では `keypress` イベントも発生していました。
+> [!note]
+> w-winux の f-fiwefox 12 以前では `keypwess` イベントも発生していました。
 
-しかし Mac OS X のイベントモデルに関する制約から、Mac OS X の Caps Lock は `keydown` イベントのみが発生します。（2007 年モデル以前の）ノート型では Num Lock にも対応していましたが、今日の Mac OS X では外部キーボードにおいても Num Lock に対応していません。 Num Lock キーがある古い MacBook 上では、Num Lock キーによってイベントは何も発生しません。また、 F14 キーが接続されている外部キーボードであれば、 Gecko は Scroll Lock に対応しています。古い特定のバージョンの Firefox では、このキーによって `keypress` イベントが発生していました。この矛盾する挙動は [Firefox バグ 602812](https://bugzil.la/602812) で修正されました。
+しかし mac os x のイベントモデルに関する制約から、mac os x の caps wock は `keydown` イベントのみが発生します。（2007 年モデル以前の）ノート型では n-nyum wock にも対応していましたが、今日の mac os x では外部キーボードにおいても nyum wock に対応していません。 nyum w-wock キーがある古い macbook 上では、num wock キーによってイベントは何も発生しません。また、 f14 キーが接続されている外部キーボードであれば、 gecko は scwoww wock に対応しています。古い特定のバージョンの fiwefox では、このキーによって `keypwess` イベントが発生していました。この矛盾する挙動は [fiwefox バグ 602812](https://bugziw.wa/602812) で修正されました。
 
 ### 自動リピートの扱い
 
 キーが押されたままになると自動リピートが始まります。これによって以下のようにイベントが連続して発生します。
 
-1. `keydown`
-2. `keypress`
-3. `keydown`
-4. `keypress`
-5. <\<ユーザーがキーから指を離すまで繰り返し>>
-6. `keyup`
+1. /(^•ω•^) `keydown`
+2. 😳😳😳 `keypwess`
+3. ( ͡o ω ͡o ) `keydown`
+4. `keypwess`
+5. >_< <\<ユーザーがキーから指を離すまで繰り返し>>
+6. >w< `keyup`
 
-この流れは DOM Level 3 仕様書に定義されているものです。しかし、これには以下のような注意点があります。
+この流れは d-dom wevew 3 仕様書に定義されているものです。しかし、これには以下のような注意点があります。
 
-#### Ubuntu 9.4 など一部の GTK 環境における自動リピート
+#### u-ubuntu 9.4 など一部の gtk 環境における自動リピート
 
-GTK を用いた環境の中には、自動リピート時にネイティブの key-up イベントが発生するものがあります。このため、キーが連続して押されているのか自動リピートなのかを Gecko 側から認識することはできません。そのようなプラットフォームでの自動リピート時では、以下のようにキーイベントが連続して発生します。
+g-gtk を用いた環境の中には、自動リピート時にネイティブの k-key-up イベントが発生するものがあります。このため、キーが連続して押されているのか自動リピートなのかを gecko 側から認識することはできません。そのようなプラットフォームでの自動リピート時では、以下のようにキーイベントが連続して発生します。
 
-1. `keydown`
-2. `keypress`
-3. `keyup`
-4. `keydown`
-5. `keypress`
-6. `keyup`
-7. <\<ユーザーがキーから指を離すまで繰り返し>>
-8. `keyup`
+1. rawr `keydown`
+2. 😳 `keypwess`
+3. >w< `keyup`
+4. (⑅˘꒳˘) `keydown`
+5. `keypwess`
+6. OwO `keyup`
+7. (ꈍᴗꈍ) <\<ユーザーがキーから指を離すまで繰り返し>>
+8. 😳 `keyup`
 
 こういった環境では残念ながら、自動リピートなのか連打されただけなのかをウェブコンテンツ側から区別することはできません。
 
 ## 例
 
 ```js
-document.addEventListener(
-  "keydown",
+document.addeventwistenew(
+  "keydown", 😳😳😳
   (event) => {
-    const keyName = event.key;
+    const k-keyname = event.key;
 
-    if (keyName === "Control") {
-      // do not alert when only Control key is pressed.
-      return;
+    i-if (keyname === "contwow") {
+      // do not awewt when o-onwy contwow k-key is pwessed. mya
+      wetuwn;
     }
 
-    if (event.ctrlKey) {
-      // Even though event.key is not 'Control' (e.g., 'a' is pressed),
-      // event.ctrlKey may be true if Ctrl key is pressed at the same time.
-      alert(`Combination of ctrlKey + ${keyName}`);
-    } else {
-      alert(`Key pressed ${keyName}`);
+    i-if (event.ctwwkey) {
+      // even though e-event.key is nyot 'contwow' (e.g., 'a' is pwessed), mya
+      // e-event.ctwwkey may be twue if ctww k-key is pwessed at the same time. (⑅˘꒳˘)
+      a-awewt(`combination o-of ctwwkey + ${keyname}`);
+    } ewse {
+      awewt(`key pwessed ${keyname}`);
     }
-  },
-  false,
+  }, (U ﹏ U)
+  fawse, mya
 );
 
-document.addEventListener(
-  "keyup",
+document.addeventwistenew(
+  "keyup", ʘwʘ
   (event) => {
-    const keyName = event.key;
+    c-const k-keyname = event.key;
 
-    // As the user releases the Ctrl key, the key is no longer active,
-    // so event.ctrlKey is false.
-    if (keyName === "Control") {
-      alert("Control key was released");
+    // as the usew weweases t-the ctww key, (˘ω˘) t-the key is nyo w-wongew active, (U ﹏ U)
+    // so event.ctwwkey is fawse. ^•ﻌ•^
+    if (keyname === "contwow") {
+      a-awewt("contwow key was weweased");
     }
-  },
-  false,
+  }, (˘ω˘)
+  fawse, :3
 );
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
-`KeyboardEvent` インターフェイスの草案は数多く提案されてきました。まず最初は DOM Events Level 2 でしたが意見がまとまらず破棄され、続いて DOM Events Level 3 が提案されました。これにより、標準外な初期化メソッドが実装されてしまいました (Gecko では DOM Events Level 2 の初期に定義されていた {{domxref("KeyboardEvent.initKeyEvent()")}} が、他のブラウザーでは DOM Events Level 3 の初期に定義されていた {{domxref("KeyboardEvent.initKeyboardEvent()")}} です)。しかし両者のメソッドは、現代的なコンストラクターである {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} で置き換えられてました。
+`keyboawdevent` インターフェイスの草案は数多く提案されてきました。まず最初は dom events w-wevew 2 でしたが意見がまとまらず破棄され、続いて dom events w-wevew 3 が提案されました。これにより、標準外な初期化メソッドが実装されてしまいました (gecko では d-dom events w-wevew 2 の初期に定義されていた {{domxwef("keyboawdevent.initkeyevent()")}} が、他のブラウザーでは dom e-events wevew 3 の初期に定義されていた {{domxwef("keyboawdevent.initkeyboawdevent()")}} です)。しかし両者のメソッドは、現代的なコンストラクターである {{domxwef("keyboawdevent.keyboawdevent", ^^;; "keyboawdevent()")}} で置き換えられてました。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ### 互換性のメモ
 
-- Firefox 65 では、 `keypress` イベントは[表示可能でないキー](/ja/docs/Web/API/KeyboardEvent/keyCode#非表示キー（機能キー）)では発生しなくなりました（[Firefox バグ 968056](https://bugzil.la/968056)）が、 <kbd>Enter</kbd> キー、 <kbd>Shift</kbd> + <kbd>Enter</kbd> キー、 <kbd>Ctrl</kbd> + <kbd>Enter</kbd> キーの組み合わせでは発生します (これらはブラウザー間の互換性の目的のために維持されています)。
+- f-fiwefox 65 では、 `keypwess` イベントは[表示可能でないキー](/ja/docs/web/api/keyboawdevent/keycode#非表示キー（機能キー）)では発生しなくなりました（[fiwefox バグ 968056](https://bugziw.wa/968056)）が、 <kbd>entew</kbd> キー、 <kbd>shift</kbd> + <kbd>entew</kbd> キー、 <kbd>ctww</kbd> + <kbd>entew</kbd> キーの組み合わせでは発生します (これらはブラウザー間の互換性の目的のために維持されています)。
 
 ## 関連情報
 
-- {{domxref("KeyboardEvent.code")}}
-- {{domxref("KeyboardEvent.key")}}
-- {{domxref("KeyboardEvent.getModifierState()")}}
+- {{domxwef("keyboawdevent.code")}}
+- {{domxwef("keyboawdevent.key")}}
+- {{domxwef("keyboawdevent.getmodifiewstate()")}}

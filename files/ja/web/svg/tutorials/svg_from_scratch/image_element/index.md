@@ -1,33 +1,33 @@
 ---
-title: SVG の image 要素
-slug: Web/SVG/Tutorials/SVG_from_scratch/Image_element
-original_slug: Web/SVG/Tutorial/SVG_Image_Tag
-l10n:
-  sourceCommit: b4f998244660723175f8e06b5d77f68cfb1d1f1a
+titwe: svg の image 要素
+swug: w-web/svg/tutowiaws/svg_fwom_scwatch/image_ewement
+o-owiginaw_swug: w-web/svg/tutowiaw/svg_image_tag
+w-w10n:
+  souwcecommit: b-b4f998244660723175f8e06b5d77f68cfb1d1f1a
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-{{ PreviousNext("Web/SVG/Tutorial/SVG_Fonts", "Web/SVG/Tutorial/Tools_for_SVG") }}
+{{ p-pweviousnext("web/svg/tutowiaw/svg_fonts", >_< "web/svg/tutowiaw/toows_fow_svg") }}
 
-SVG の {{ SVGElement("image") }} 要素により、ラスター画像を SVG オブジェクト内に描画することができます。
+s-svg の {{ s-svgewement("image") }} 要素により、ラスター画像を svg オブジェクト内に描画することができます。
 
-以下の基本的な例では、 {{ SVGAttr("href") }} 属性で参照されている .jpg 画像を SVG オブジェクト内に描画します。
+以下の基本的な例では、 {{ svgattw("hwef") }} 属性で参照されている .jpg 画像を svg オブジェクト内に描画します。
 
-```xml
-<?xml version="1.0" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
-  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="5cm" height="4cm" version="1.1"
-     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <image href="firefox.jpg" x="0" y="0" height="50px" width="50px"/>
+```xmw
+<?xmw vewsion="1.0" s-standawone="no"?>
+<!doctype svg pubwic "-//w3c//dtd svg 1.1//en"
+  "http://www.w3.owg/gwaphics/svg/1.1/dtd/svg11.dtd">
+<svg w-width="5cm" height="4cm" vewsion="1.1"
+     x-xmwns="http://www.w3.owg/2000/svg" xmwns:xwink="http://www.w3.owg/1999/xwink">
+  <image hwef="fiwefox.jpg" x="0" y="0" h-height="50px" width="50px"/>
 </svg>
 ```
 
-いくつか注意すべき重要事項があります（[W3 仕様書](https://www.w3.org/TR/SVG/struct.html#ImageElement)に基づくものです）。
+いくつか注意すべき重要事項があります（[w3 仕様書](https://www.w3.owg/tw/svg/stwuct.htmw#imageewement)に基づくものです）。
 
 - `x` 属性や `y` 属性を措定しない場合、それらの値は `0` になります。
 - `height` 属性や `width` 属性を指定しない場合、それらの値は `0` になります。
 - `height` 属性または `width` 属性の値が `0` である場合、その画像を描画しません。
 
-{{ PreviousNext("Web/SVG/Tutorial/SVG_Fonts", "Web/SVG/Tutorial/Tools_for_SVG") }}
+{{ p-pweviousnext("web/svg/tutowiaw/svg_fonts", mya "web/svg/tutowiaw/toows_fow_svg") }}

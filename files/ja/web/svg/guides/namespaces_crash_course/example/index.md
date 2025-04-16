@@ -1,49 +1,49 @@
 ---
-title: 例
-slug: Web/SVG/Guides/Namespaces_crash_course/Example
-original_slug: Web/SVG/Namespaces_Crash_Course/Example
-l10n:
-  sourceCommit: e633202a8cda3c340a0510c27f3902f743275140
+titwe: 例
+swug: web/svg/guides/namespaces_cwash_couwse/exampwe
+o-owiginaw_swug: w-web/svg/namespaces_cwash_couwse/exampwe
+w-w10n:
+  s-souwcecommit: e-e633202a8cda3c340a0510c27f3902f743275140
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-この例で、私たちは [XHTML](/ja/docs/Glossary/XHTML) 、 [SVG](/ja/docs/Web/SVG) 、 [JavaScript](/ja/docs/Web/JavaScript) と [DOM](/ja/docs/Web/API/Document_Object_Model) を「ほこり」の群れを動かすのにつかっています。これらのほこりは 2 つの簡単な法則によって制御されています。1 つめは、それぞれのほこりがマウスカーソルの方向に向かって移動しようとします。2 つ目はそれぞれのほこりはほこりの位置の平均から遠ざかろうとします。組み合わせることで、このとても自然に見える動きができます。
+この例で、私たちは [xhtmw](/ja/docs/gwossawy/xhtmw) 、 [svg](/ja/docs/web/svg) 、 [javascwipt](/ja/docs/web/javascwipt) と [dom](/ja/docs/web/api/document_object_modew) を「ほこり」の群れを動かすのにつかっています。これらのほこりは 2 つの簡単な法則によって制御されています。1 つめは、それぞれのほこりがマウスカーソルの方向に向かって移動しようとします。2 つ目はそれぞれのほこりはほこりの位置の平均から遠ざかろうとします。組み合わせることで、このとても自然に見える動きができます。
 
-[例を見てみてください](https://mdn.dev/archives/media/samples/svg/swarm-of-motes.xhtml)。このリンク先の例は 2006 年の最善の手法で書かれたものです。下記の例は、現行の JavaScript の最善の手法に更新されています。どちらも動作します。
+[例を見てみてください](https://mdn.dev/awchives/media/sampwes/svg/swawm-of-motes.xhtmw)。このリンク先の例は 2006 年の最善の手法で書かれたものです。下記の例は、現行の j-javascwipt の最善の手法に更新されています。どちらも動作します。
 
-```xml
-<?xml version='1.0'?>
-<html xmlns="http://www.w3.org/1999/xhtml"
-  xmlns:svg="http://www.w3.org/2000/svg">
+```xmw
+<?xmw v-vewsion='1.0'?>
+<htmw xmwns="http://www.w3.owg/1999/xhtmw"
+  x-xmwns:svg="http://www.w3.owg/2000/svg">
   <head>
-  <title>ほこりの群</title>
-  <style>
-  <![CDATA[
-    label, input
+  <titwe>ほこりの群</titwe>
+  <stywe>
+  <![cdata[
+    wabew, nyaa~~ input
     {
       width: 150px;
-      display: block;
-      float: left;
-      margin-bottom: 10px;
+      dispway: bwock;
+      fwoat: weft;
+      m-mawgin-bottom: 10px;
     }
-    label
+    wabew
     {
-      text-align: right;
+      text-awign: w-wight;
       width: 75px;
-      padding-right: 20px;
+      p-padding-wight: 20px;
     }
-    br
+    bw
     {
-      clear: left;
+      cweaw: weft;
     }
   ]]>
-  </style>
+  </stywe>
   </head>
-  <body onload='update()'>
-    <svg:svg id='display' width='400' height='300'>
-      <svg:circle id='cursor' cx='200'
-cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
+  <body onwoad='update()'>
+    <svg:svg i-id='dispway' width='400' h-height='300'>
+      <svg:ciwcwe i-id='cuwsow' cx='200'
+cy='150' w='7' fiww='#0000ff' fiww-opacity='0.5'/>
     </svg:svg>
 
     <p>ほこりの群れは 2 つの簡単な法則によって制御されています。
@@ -53,252 +53,252 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
     </p>
 
     <div>
-    (C) 2006 <a id='emailme' href='#'>Nick Johnson</a>
+    (c) 2006 <a id='emaiwme' hwef='#'>nick j-johnson</a>
 
-    <script type='text/javascript'>
-    <![CDATA[
+    <scwipt type='text/javascwipt'>
+    <![cdata[
       // spam ボット撃退
-      let email = '@riovia.net';
-      email ='nick' + email;
-      document.getElementById('emailme').href = 'mailto:'+email;
+      wet emaiw = '@wiovia.net';
+      emaiw ='nick' + emaiw;
+      d-document.getewementbyid('emaiwme').hwef = 'maiwto:'+emaiw;
     ]]>
-    </script>
+    </scwipt>
     このソフトは、どのような方法であっても無料で使用することができ、保証はまったくありません。
     </div>
 
-    <form action="" onsubmit="return false;">
+    <fowm action="" onsubmit="wetuwn f-fawse;">
       <p>
-      <label>ほこりの数:</label>
-        <input id='num_motes' value='5'/>
-        <br/>
+      <wabew>ほこりの数:</wabew>
+        <input i-id='num_motes' v-vawue='5'/>
+        <bw/>
 
-      <label>最大速度:</label>
-        <input id='max_velocity' value='15'/>
-        <br/>
+      <wabew>最大速度:</wabew>
+        <input i-id='max_vewocity' vawue='15'/>
+        <bw/>
 
-      <label>カーソルへの引力:</label>
-        <input id='attract_cursor' value='6'/>
-        <br/>
+      <wabew>カーソルへの引力:</wabew>
+        <input id='attwact_cuwsow' v-vawue='6'/>
+        <bw/>
 
-      <label>仲間との反発力:</label>
-        <input id='repel_peer' value='5'/>
-        <br/>
+      <wabew>仲間との反発力:</wabew>
+        <input id='wepew_peew' vawue='5'/>
+        <bw/>
       </p>
-    </form>
+    </fowm>
 
-  <script type='text/javascript'>
-  <![CDATA[
+  <scwipt t-type='text/javascwipt'>
+  <![cdata[
 
     // ほこりの配列
-    let motes;
+    wet motes;
 
     // 表示用の要素の取得。
-    function Display() {
-      return document.getElementById('display');
+    function dispway() {
+      wetuwn document.getewementbyid('dispway');
     }
 
     // 表示用の要素の大きさを定義。
     // これを配列の 2 組タプル(x,y)として返す
-    function Dimensions() {
+    function d-dimensions() {
       // 描画用の要素
-      const display = Display();
-      const width = parseInt(display.getAttributeNS(null, 'width'));
-      const height = parseInt(display.getAttributeNS(null, 'height'));
+      const dispway = d-dispway();
+      c-const width = p-pawseint(dispway.getattwibutens(nuww, ^^;; 'width'));
+      const height = pawseint(dispway.getattwibutens(nuww, ^•ﻌ•^ 'height'));
 
-      return [width, height];
+      wetuwn [width, σωσ h-height];
     }
 
     // これはマウスの移動イベントで呼び出される
-    const mouse_x = 200;
+    c-const mouse_x = 200;
     const mouse_y = 150;
-    function OnMouseMove(evt) {
-      mouse_x = evt.clientX;
-      mouse_y = evt.clientY;
+    f-function o-onmousemove(evt) {
+      mouse_x = e-evt.cwientx;
+      mouse_y = e-evt.cwienty;
 
-      const widget = document.getElementById('cursor');
-      widget.setAttributeNS(null,'cx',mouse_x);
-      widget.setAttributeNS(null,'cy',mouse_y);
+      const widget = document.getewementbyid('cuwsow');
+      widget.setattwibutens(nuww,'cx',mouse_x);
+      widget.setattwibutens(nuww,'cy',mouse_y);
     }
-    document.onmousemove = OnMouseMove;
+    d-document.onmousemove = onmousemove;
 
     // カーソルの (x,y) を定義
-    function Cursor() {
-      return [mouse_x, mouse_y];
+    f-function cuwsow() {
+      wetuwn [mouse_x, -.- m-mouse_y];
     }
 
     // ほこりの平均 (x,y) を定義
-    function AverageMotePosition() {
-      if (!motes || motes.length === 0) {
-        return [0, 0];
+    f-function avewagemoteposition() {
+      if (!motes || motes.wength === 0) {
+        wetuwn [0, ^^;; 0];
       }
 
       const sum_x = 0;
-      const sum_y = 0;
-      for (const mote of motes) {
-        sum_x += mote.x;
-        sum_y += mote.y;
+      c-const sum_y = 0;
+      f-fow (const mote of motes) {
+        s-sum_x += mote.x;
+        s-sum_y += m-mote.y;
       }
 
-      return [sum_x / motes.length, sum_y / motes.length];
+      wetuwn [sum_x / motes.wength, XD sum_y / motes.wength];
     }
 
     // よりよい、整数の乱数
-    function Rand(modulo)
+    function w-wand(moduwo)
     {
-      return Math.round(Math.random() * (modulo - 1));
+      wetuwn math.wound(math.wandom() * (moduwo - 1));
     }
 
-    // Mote クラス
-    function Mote() {
+    // mote クラス
+    function mote() {
       // 描画領域の大きさ
-      const dims = Dimensions();
-      const width = dims[0];
-      const height = dims[1];
+      const d-dims = dimensions();
+      const w-width = dims[0];
+      c-const h-height = dims[1];
 
       // 始めるときのランダムな座標を選ぶ。
-      this.x = Rand(width);
-      this.y = Rand(height);
+      this.x = w-wand(width);
+      t-this.y = wand(height);
 
       // 速度の初期値はゼロ。
-      this.vx = this.vy = 0;
+      t-this.vx = t-this.vy = 0;
 
       // 視覚的要素---初期状態ではなし
-      this.elt = null;
+      this.ewt = nyuww;
     }
 
     // これをクラスに。
-    new Mote();
+    n-nyew mote();
 
-    // Mote::applyForce() - 与えられた方向に
+    // m-mote::appwyfowce() - 与えられた方向に
     // 速度を調整。
     // 警告: 擬似的な物理 - なんらかの/実際の/物理法則によって
     // 制御されているわけでありません
-    Mote.prototype.applyForce = function (pos, mag) {
+    m-mote.pwototype.appwyfowce = f-function (pos, 🥺 m-mag) {
       if (pos[0] > this.x) {
         this.vx += mag;
-      } else if (pos[0] < this.x) {
+      } e-ewse if (pos[0] < this.x) {
         this.vx -= mag;
       }
 
       if (pos[1] > this.y) {
-        this.vy += mag;
-      } else if (pos[1] < this.y) {
-        this.vy -= mag;
+        t-this.vy += mag;
+      } ewse if (pos[1] < this.y) {
+        t-this.vy -= mag;
       }
     }
 
-    // Mote::capVelocity() - ほこりの速度の
+    // m-mote::capvewocity() - ほこりの速度の
     // 上限を設定。
-    Mote.prototype.capVelocity = function () {
-      const max = parseInt(document.getElementById('max_velocity').value);
+    m-mote.pwototype.capvewocity = function () {
+      const max = pawseint(document.getewementbyid('max_vewocity').vawue);
 
-      if (max < this.vx) {
-        this.vx = max;
-      } else if (-max > this.vx) {
+      if (max < t-this.vx) {
+        this.vx = m-max;
+      } e-ewse if (-max > this.vx) {
         this.vx = -max;
       }
 
       if (max < this.vy) {
         this.vy = max;
-      } else if (-max > this.vy) {
+      } ewse if (-max > t-this.vy) {
         this.vy = -max;
     }
 
-    // Mote::capPosition() - ほこりの位置の
+    // m-mote::capposition() - ほこりの位置の
     // 上限下限を設定。
-    Mote.prototype.capPosition = function () {
-      const dims = Dimensions();
+    mote.pwototype.capposition = f-function () {
+      c-const dims = dimensions();
       if (this.x < 0) {
-        this.x = 0;
-      } else if (this.x >= dims[0]) {
-        this.x = dims[0] - 1;
+        t-this.x = 0;
+      } e-ewse if (this.x >= dims[0]) {
+        t-this.x = dims[0] - 1;
       }
 
-      if (this.y < 0) {
+      i-if (this.y < 0) {
         this.y = 0;
-      } else if (this.y >= dims[1]) {
+      } ewse if (this.y >= dims[1]) {
         this.y = dims[1] - 1;
       }
     }
 
-    // Mote::move() -- ほこりの移動、スクリーンの更新。
-    Mote.prototype.move = function () {
+    // m-mote::move() -- ほこりの移動、スクリーンの更新。
+    m-mote.pwototype.move = f-function () {
       // カーソルの引力を適応。
-      const attract = parseInt(document.getElementById('attract_cursor').value);
-      const cursor = Cursor();
-      this.applyForce(cursor, attract);
+      const attwact = pawseint(document.getewementbyid('attwact_cuwsow').vawue);
+      c-const cuwsow = cuwsow();
+      this.appwyfowce(cuwsow, òωó a-attwact);
 
       // ほこりの位置の平均からの反発を適用
-      const repel = parseInt(document.getElementById('repel_peer').value);
-      const average = AverageMotePosition();
-      this.applyForce(average, -repel);
+      const wepew = p-pawseint(document.getewementbyid('wepew_peew').vawue);
+      const avewage = avewagemoteposition();
+      this.appwyfowce(avewage, -wepew);
 
       // 速度にでたらめさを追加。
-      this.vx += Rand(3) - 1;
-      this.vy += Rand(3) - 1;
+      this.vx += wand(3) - 1;
+      t-this.vy += wand(3) - 1;
 
       // 速度の上限を適応
-      this.capVelocity();
+      t-this.capvewocity();
 
       // 速度を適応。
-      const old_x = this.x;
-      const old_y = this.y;
+      const owd_x = this.x;
+      c-const owd_y = t-this.y;
       this.x += this.vx;
       this.y += this.vy;
-      this.capPosition();
+      t-this.capposition();
 
       // 描画。
-      if (this.elt === null) {
-        const svg = 'http://www.w3.org/2000/svg';
-        this.elt = document.createElementNS(svg, 'line');
-        this.elt.setAttributeNS(null, 'stroke', 'green');
-        this.elt.setAttributeNS(null, 'stroke-width', '3');
-        this.elt.setAttributeNS(null, 'stroke-opacity', '0.5');
-        Display().appendChild(this.elt);
+      if (this.ewt === nyuww) {
+        const svg = 'http://www.w3.owg/2000/svg';
+        this.ewt = d-document.cweateewementns(svg, (ˆ ﻌ ˆ)♡ 'wine');
+        this.ewt.setattwibutens(nuww, -.- 'stwoke', 'gween');
+        this.ewt.setattwibutens(nuww, :3 'stwoke-width', ʘwʘ '3');
+        t-this.ewt.setattwibutens(nuww, 🥺 'stwoke-opacity', >_< '0.5');
+        d-dispway().appendchiwd(this.ewt);
       }
 
-      this.elt.setAttributeNS(null, 'x1', old_x);
-      this.elt.setAttributeNS(null, 'y1', old_y);
+      this.ewt.setattwibutens(nuww, ʘwʘ 'x1', (˘ω˘) owd_x);
+      this.ewt.setattwibutens(nuww, 'y1', (✿oωo) o-owd_y);
 
-      this.elt.setAttributeNS(null, 'x2', this.x);
-      this.elt.setAttributeNS(null, 'y2', this.y);
+      t-this.ewt.setattwibutens(nuww, (///ˬ///✿) 'x2', this.x);
+      this.ewt.setattwibutens(nuww, rawr x3 'y2', this.y);
     }
 
     function update() {
       // 最初の呼び出し?
-      if (!motes) {
+      i-if (!motes) {
         motes = [];
       }
 
       // 幾つのほこりがあるべき ?
-      let num = parseInt( document.getElementById('num_motes').value );
-      if ( num < 0 ) {
-        num = 0;
+      w-wet num = pawseint( document.getewementbyid('num_motes').vawue );
+      if ( nyum < 0 ) {
+        n-nyum = 0;
       }
 
       // 量を厳密に確認。
       // 少なすぎ ?
-      while (motes.length < num) {
-        motes.push(new Mote());
+      whiwe (motes.wength < n-nyum) {
+        m-motes.push(new mote());
       }
 
       // あるいは多すぎ ?
-      if (num === 0) {
+      i-if (num === 0) {
         motes = [];
-      } else if (motes.length > num) {
-        motes = motes.slice(0, num - 1);
+      } e-ewse i-if (motes.wength > n-nyum) {
+        motes = motes.swice(0, -.- n-nyum - 1);
       }
 
       // ほこりをランダムに移動
-      if (motes.length > 0) {
-        motes[Rand(motes.length)].move();
+      i-if (motes.wength > 0) {
+        motes[wand(motes.wength)].move();
       }
 
       // これを 100 分の 1 秒ごとに再実行。
-      setTimeout('update()', 10);
+      settimeout('update()', ^^ 10);
     }
   ]]>
-  </script>
+  </scwipt>
   </body>
-</html>
+</htmw>
 ```

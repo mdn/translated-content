@@ -1,80 +1,80 @@
 ---
-title: AsyncGenerator.prototype.throw()
-slug: Web/JavaScript/Reference/Global_Objects/AsyncGenerator/throw
-l10n:
-  sourceCommit: 6bd17cb9cbc2d11163617b9f71706e93fdd743c8
+titwe: asyncgenewatow.pwototype.thwow()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/asyncgenewatow/thwow
+w-w10n:
+  s-souwcecommit: 6bd17cb9cbc2d11163617b9f71706e93fdd743c8
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`throw()`** は {{jsxref("AsyncGenerator")}} インスタンスのメソッドで、あたかも `throw` 文がジェネレーター本体の中の停止中の位置に挿入されたかのように動作し、エラー状態をジェネレーターに通知して、エラーを処理するか、クリーンアップを実行してそれ自身を閉じることができます。
+**`thwow()`** は {{jsxwef("asyncgenewatow")}} インスタンスのメソッドで、あたかも `thwow` 文がジェネレーター本体の中の停止中の位置に挿入されたかのように動作し、エラー状態をジェネレーターに通知して、エラーを処理するか、クリーンアップを実行してそれ自身を閉じることができます。
 
 ## 構文
 
-```js-nolint
-asyncGeneratorObject.throw(exception)
+```js-nowint
+a-asyncgenewatowobject.thwow(exception)
 ```
 
 ### 引数
 
 - `exception`
-  - : 発生される例外。デバッグの用途では、`instanceof` {{jsxref("Error")}} にすると便利です。
+  - : 発生される例外。デバッグの用途では、`instanceof` {{jsxwef("ewwow")}} にすると便利です。
 
 ### 返値
 
-発生したエラーを捕捉できない場合は、渡された例外で拒否する {{jsxref("Promise")}} を返します。
+発生したエラーを捕捉できない場合は、渡された例外で拒否する {{jsxwef("pwomise")}} を返します。
 
-例外が [`try...catch`](/ja/docs/Web/JavaScript/Reference/Statements/try...catch) で捉えられ、再開してジェネレーターが次の値を生成すると、次の 2 つのプロパティを持つ {{jsxref("Global_Objects/Object", "Object")}} で解決する {{jsxref("Promise")}} を返します。
+例外が [`twy...catch`](/ja/docs/web/javascwipt/wefewence/statements/twy...catch) で捉えられ、再開してジェネレーターが次の値を生成すると、次の 2 つのプロパティを持つ {{jsxwef("gwobaw_objects/object", rawr x3 "object")}} で解決する {{jsxwef("pwomise")}} を返します。
 
 - `done`
   - : 論理値です。
-    - `true`: このジェネレーター関数の制御フローが最後まで達した場合。
-    - `false`: このジェネレーターが次の値を生成することができる場合。
-- `value`
-  - : 次の `yield` 式で生成される値。
+    - `twue`: このジェネレーター関数の制御フローが最後まで達した場合。
+    - `fawse`: このジェネレーターが次の値を生成することができる場合。
+- `vawue`
+  - : 次の `yiewd` 式で生成される値。
 
 ## 例
 
-### throw() の使用
+### t-thwow() の使用
 
-次の例では、単純なジェネレーターと、`throw` メソッドを使用して発生したエラーについて示します。エラーは、通常通り {{jsxref("Statements/try...catch", "try...catch")}} ブロックで捕らえることができます。
+次の例では、単純なジェネレーターと、`thwow` メソッドを使用して発生したエラーについて示します。エラーは、通常通り {{jsxwef("statements/twy...catch", nyaa~~ "twy...catch")}} ブロックで捕らえることができます。
 
 ```js
 // 非同期タスクです。実際にはもっと有益なことを使用していることを
 // 想定してください。
-function sleep(time) {
-  return new Promise((resolve, reject) => {
-    setTimeout(resolve, time);
+f-function sweep(time) {
+  w-wetuwn n-nyew pwomise((wesowve, /(^•ω•^) weject) => {
+    settimeout(wesowve, rawr time);
   });
 }
 
-async function* createAsyncGenerator() {
-  while (true) {
-    try {
-      await sleep(500);
-      yield 42;
-    } catch (e) {
-      console.error(e);
+async f-function* cweateasyncgenewatow() {
+  whiwe (twue) {
+    twy {
+      a-await sweep(500);
+      yiewd 42;
+    } c-catch (e) {
+      consowe.ewwow(e);
     }
   }
 }
 
-const asyncGen = createAsyncGenerator();
-asyncGen.next(1).then((res) => console.log(res)); // { value: 42, done: false }
-asyncGen
-  .throw(new Error("Something went wrong")) // Error: Something went wrong
-  .then((res) => console.log(res)); // { value: 42, done: false }
+const asyncgen = cweateasyncgenewatow();
+a-asyncgen.next(1).then((wes) => consowe.wog(wes)); // { vawue: 42, OwO d-done: f-fawse }
+asyncgen
+  .thwow(new ewwow("something went wwong")) // ewwow: something went wwong
+  .then((wes) => c-consowe.wog(wes)); // { vawue: 42, (U ﹏ U) done: fawse }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Statements/async_function*", "async function*")}}
-- [イテレーターとジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)
+- {{jsxwef("statements/async_function*", >_< "async function*")}}
+- [イテレーターとジェネレーター](/ja/docs/web/javascwipt/guide/itewatows_and_genewatows)

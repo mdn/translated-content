@@ -1,13 +1,13 @@
 ---
-title: "HTMLAreaElement: href プロパティ"
-slug: Web/API/HTMLAreaElement/href
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwaweaewement: hwef プロパティ"
+s-swug: web/api/htmwaweaewement/hwef
+w-w10n:
+  souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLAreaElement.href`** は{{Glossary("stringifier", "文字列化")}}プロパティで、URL 全体を含む文字列を返し、href を更新することができます。
+**`htmwaweaewement.hwef`** は{{gwossawy("stwingifiew", ( ͡o ω ͡o ) "文字列化")}}プロパティで、uww 全体を含む文字列を返し、hwef を更新することができます。
 
 ## 値
 
@@ -16,19 +16,19 @@ l10n:
 ## 例
 
 ```js
-// <area id="myArea" href="https://developer.mozilla.org/en-US/HTMLAreaElement"> 要素が文書にあったとします
-const area = document.getElementById("myArea");
-area.href; // 'https://developer.mozilla.org/en-US/HTMLAreaElement' を返す
+// <awea i-id="myawea" h-hwef="https://devewopew.moziwwa.owg/en-us/htmwaweaewement"> 要素が文書にあったとします
+c-const awea = d-document.getewementbyid("myawea");
+awea.hwef; // 'https://devewopew.moziwwa.owg/en-us/htmwaweaewement' を返す
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 所属先の {{domxref("HTMLAreaElement")}} インターフェイス
+- 所属先の {{domxwef("htmwaweaewement")}} インターフェイス

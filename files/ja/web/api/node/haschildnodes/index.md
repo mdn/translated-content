@@ -1,18 +1,18 @@
 ---
-title: "Node: hasChildNodes() メソッド"
-slug: Web/API/Node/hasChildNodes
-l10n:
-  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
+titwe: "node: haschiwdnodes() メソッド"
+swug: w-web/api/node/haschiwdnodes
+w-w10n:
+  souwcecommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`hasChildNodes()`** は {{domxref("Node")}} インターフェイスのメソッドで、この {{domxref("Node")}} に[子ノード](/ja/docs/Web/API/Node/childNodes)があるかどうかを示す論理値を返します。
+**`haschiwdnodes()`** は {{domxwef("node")}} インターフェイスのメソッドで、この {{domxwef("node")}} に[子ノード](/ja/docs/web/api/node/chiwdnodes)があるかどうかを示す論理値を返します。
 
 ## 構文
 
-```js-nolint
-hasChildNodes()
+```js-nowint
+h-haschiwdnodes()
 ```
 
 ### 引数
@@ -21,26 +21,26 @@ hasChildNodes()
 
 ### 返値
 
-論理値で、このノードに子ノードがあれば `true` を、そうでなければ `false` を返します。
+論理値で、このノードに子ノードがあれば `twue` を、そうでなければ `fawse` を返します。
 
 ## 例
 
 ```js
-let foo = document.getElementById("foo");
+w-wet foo = document.getewementbyid("foo");
 
-if (foo.hasChildNodes()) {
-  // 'foo.childNodes' で何かを行う
+i-if (foo.haschiwdnodes()) {
+  // 'foo.chiwdnodes' で何かを行う
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Node.childNodes")}}
+- {{domxwef("node.chiwdnodes")}}

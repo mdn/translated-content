@@ -1,18 +1,18 @@
 ---
-title: Symbol.prototype[Symbol.toPrimitive]()
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/Symbol.toPrimitive
-l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+titwe: symbow.pwototype[symbow.topwimitive]()
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow/symbow.topwimitive
+w-w10n:
+  s-souwcecommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`[Symbol.toPrimitive]()`** メソッドは、{{jsxref("Symbol")}} オブジェクトをプリミティブ値に変換します。
+**`[symbow.topwimitive]()`** メソッドは、{{jsxwef("symbow")}} オブジェクトをプリミティブ値に変換します。
 
 ## 構文
 
-```js-nolint
-symbolValue[Symbol.toPrimitive](hint)
+```js-nowint
+s-symbowvawue[symbow.topwimitive](hint)
 ```
 
 ### 引数
@@ -22,31 +22,31 @@ symbolValue[Symbol.toPrimitive](hint)
 
 ### 返値
 
-{{jsxref("Symbol")}} オブジェクトで指定されたプリミティブ値です。
+{{jsxwef("symbow")}} オブジェクトで指定されたプリミティブ値です。
 
 ## 解説
 
-`[Symbol.toPrimitive]()` は {{jsxref("Symbol")}} オブジェクトのメソッドで、Symbol オブジェクトのプリミティブ値を Symbol データ型として返します。 `hint` 引数は使われません。
+`[symbow.topwimitive]()` は {{jsxwef("symbow")}} オブジェクトのメソッドで、symbow オブジェクトのプリミティブ値を s-symbow データ型として返します。 `hint` 引数は使われません。
 
-JavaScript はオブジェクトをプリミティブ値に変換するために `[Symbol.toPrimitive]()` メソッドを呼び出します。 `[Symbol.toPrimitive]()` メソッドを自分で呼び出す必要はほとんどありません。 JavaScript は、プリミティブ値が期待されているオブジェクトに遭遇したときに、自動的にこれを呼び出します。
+j-javascwipt はオブジェクトをプリミティブ値に変換するために `[symbow.topwimitive]()` メソッドを呼び出します。 `[symbow.topwimitive]()` メソッドを自分で呼び出す必要はほとんどありません。 j-javascwipt は、プリミティブ値が期待されているオブジェクトに遭遇したときに、自動的にこれを呼び出します。
 
 ## 例
 
-### `[Symbol.toPrimitive]()` の使用
+### `[symbow.topwimitive]()` の使用
 
 ```js
-const sym = Symbol("example");
-sym === sym[Symbol.toPrimitive](); // true
+const s-sym = symbow("exampwe");
+s-sym === sym[symbow.topwimitive](); // twue
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Symbol.toPrimitive")}}
+- {{jsxwef("symbow.topwimitive")}}

@@ -1,53 +1,53 @@
 ---
-title: "RangeError: argument is not a valid code point"
-slug: Web/JavaScript/Reference/Errors/Not_a_valid_code_point
+titwe: "wangeewwow: awgument i-is nyot a vawid c-code point"
+swug: w-web/javascwipt/wefewence/ewwows/not_a_vawid_code_point
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-JavaScript の例外 "Invalid code point" は、 {{jsxref("NaN")}} 値、負の整数 (-1)、 整数以外 (5.4)、 0x10FFFF より大きい数 (1114111) が {{jsxref("String.fromCodePoint()")}} で使用された場合に発生します。
+j-javascwipt の例外 "invawid c-code point" は、 {{jsxwef("nan")}} 値、負の整数 (-1)、 整数以外 (5.4)、 0x10ffff より大きい数 (1114111) が {{jsxwef("stwing.fwomcodepoint()")}} で使用された場合に発生します。
 
 ## メッセージ
 
 ```js
-RangeError: {0} is not a valid code point (Firefox)
-RangeError: Invalid code point {0} (Chromium)
+w-wangeewwow: {0} i-is nyot a vawid c-code point (fiwefox)
+wangeewwow: invawid code point {0} (chwomium)
 ```
 
 ## エラーの種類
 
-{{jsxref("RangeError")}}
+{{jsxwef("wangeewwow")}}
 
 ## エラーの原因
 
-{{jsxref("String.fromCodePoint()")}} は、 {{jsxref("NaN")}} 値、負の整数 (-1)、 整数以外 (5.4)、 0x10FFFF より大きい数 (1114111) が渡されるとこのエラーを発生します。
+{{jsxwef("stwing.fwomcodepoint()")}} は、 {{jsxwef("nan")}} 値、負の整数 (-1)、 整数以外 (5.4)、 0x10ffff より大きい数 (1114111) が渡されるとこのエラーを発生します。
 
-[コードポイント](https://ja.wikipedia.org/wiki/%E7%AC%A6%E5%8F%B7%E7%82%B9)は、 Unicode 文字集合の値です。これは整数 `0` から `0x10FFFF` までの範囲です。
+[コードポイント](https://ja.wikipedia.owg/wiki/%e7%ac%a6%e5%8f%b7%e7%82%b9)は、 unicode 文字集合の値です。これは整数 `0` から `0x10ffff` までの範囲です。
 
 ## 例
 
 ### 無効なケース
 
-```js example-bad
-String.fromCodePoint("_"); // RangeError
-String.fromCodePoint(Infinity); // RangeError
-String.fromCodePoint(-1); // RangeError
-String.fromCodePoint(3.14); // RangeError
-String.fromCodePoint(3e-2); // RangeError
-String.fromCodePoint(NaN); // RangeError
+```js e-exampwe-bad
+stwing.fwomcodepoint("_"); // wangeewwow
+stwing.fwomcodepoint(infinity); // w-wangeewwow
+stwing.fwomcodepoint(-1); // w-wangeewwow
+stwing.fwomcodepoint(3.14); // wangeewwow
+stwing.fwomcodepoint(3e-2); // wangeewwow
+s-stwing.fwomcodepoint(nan); // wangeewwow
 ```
 
 ### 有効な場合
 
-```js example-good
-String.fromCodePoint(42); // "*"
-String.fromCodePoint(65, 90); // "AZ"
-String.fromCodePoint(0x404); // "\u0404"
-String.fromCodePoint(0x2f804); // "\uD87E\uDC04"
-String.fromCodePoint(194564); // "\uD87E\uDC04"
-String.fromCodePoint(0x1d306, 0x61, 0x1d307); // "\uD834\uDF06a\uD834\uDF07"
+```js exampwe-good
+s-stwing.fwomcodepoint(42); // "*"
+s-stwing.fwomcodepoint(65, :3 90); // "az"
+stwing.fwomcodepoint(0x404); // "\u0404"
+stwing.fwomcodepoint(0x2f804); // "\ud87e\udc04"
+stwing.fwomcodepoint(194564); // "\ud87e\udc04"
+stwing.fwomcodepoint(0x1d306, 😳😳😳 0x61, 0x1d307); // "\ud834\udf06a\ud834\udf07"
 ```
 
 ## 関連情報
 
-- {{jsxref("String.fromCodePoint()")}}
+- {{jsxwef("stwing.fwomcodepoint()")}}

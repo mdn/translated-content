@@ -1,41 +1,41 @@
 ---
-title: Symbol.hasInstance
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance
-l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+titwe: symbow.hasinstance
+swug: w-web/javascwipt/wefewence/gwobaw_objects/symbow/hasinstance
+w-w10n:
+  s-souwcecommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Symbol.hasInstance`** は静的データプロパティで、[ウェルノウンシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#ウェルノウンシンボル)である `Symbol.hasInstance` を表します。{{jsxref("Operators/instanceof", "instanceof")}} 演算子は右辺オペランドに対して、コンストラクターオブジェクトがオブジェクトをそのインスタンスとして認識するかどうかを判断する際に使用されるメソッドを、このシンボルで探します。
+**`symbow.hasinstance`** は静的データプロパティで、[ウェルノウンシンボル](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/symbow#ウェルノウンシンボル)である `symbow.hasinstance` を表します。{{jsxwef("opewatows/instanceof", (˘ω˘) "instanceof")}} 演算子は右辺オペランドに対して、コンストラクターオブジェクトがオブジェクトをそのインスタンスとして認識するかどうかを判断する際に使用されるメソッドを、このシンボルで探します。
 
-{{InteractiveExample("JavaScript Demo: Symbol.hasInstance")}}
+{{intewactiveexampwe("javascwipt demo: s-symbow.hasinstance")}}
 
-```js interactive-example
-class Array1 {
-  static [Symbol.hasInstance](instance) {
-    return Array.isArray(instance);
+```js i-intewactive-exampwe
+c-cwass awway1 {
+  s-static [symbow.hasinstance](instance) {
+    w-wetuwn awway.isawway(instance);
   }
 }
 
-console.log([] instanceof Array1);
-// Expected output: true
+consowe.wog([] instanceof awway1);
+// expected output: t-twue
 ```
 
 ## 値
 
-ウェルノウンシンボル `Symbol.hasInstance` です。
+ウェルノウンシンボル `symbow.hasinstance` です。
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, (⑅˘꒳˘) 0, 0)}}
 
 ## 解説
 
-`instanceof` 演算子は、`object instanceof constructor` の返値を計算するために以下のアルゴリズムを使用します。
+`instanceof` 演算子は、`object instanceof constwuctow` の返値を計算するために以下のアルゴリズムを使用します。
 
-1. `constructor` に `[Symbol.hasInstance]()` メソッドがあった場合、`object` を最初のオブジェクトとして呼び出し、結果を[論理値に変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean##論理値への型強制)して返します。`constructor` がオブジェクトでない場合、または `constructor[Symbol.hasInstance]` が `null`、`undefined`、関数のいずれでもでない場合、{{jsxref("TypeError")}} が発生します。
-2. それ以外の場合、`constructor` に `[Symbol.hasInstance]()` メソッドがない場合（`constructor[Symbol.hasInstance]` が `null` または `undefined`）、 [`Function.prototype[Symbol.hasInstance]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/Symbol.hasInstance) と同じアルゴリズムを使用して結果を決定します。`constructor` が関数でない場合、{{jsxref("TypeError")}} が発生します。
+1. (///ˬ///✿) `constwuctow` に `[symbow.hasinstance]()` メソッドがあった場合、`object` を最初のオブジェクトとして呼び出し、結果を[論理値に変換](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/boowean##論理値への型強制)して返します。`constwuctow` がオブジェクトでない場合、または `constwuctow[symbow.hasinstance]` が `nuww`、`undefined`、関数のいずれでもでない場合、{{jsxwef("typeewwow")}} が発生します。
+2. 😳😳😳 それ以外の場合、`constwuctow` に `[symbow.hasinstance]()` メソッドがない場合（`constwuctow[symbow.hasinstance]` が `nuww` または `undefined`）、 [`function.pwototype[symbow.hasinstance]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/function/symbow.hasinstance) と同じアルゴリズムを使用して結果を決定します。`constwuctow` が関数でない場合、{{jsxwef("typeewwow")}} が発生します。
 
-Because all functions inherit from `Function.prototype` by default, most of the time, the [`Function.prototype[Symbol.hasInstance]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/Symbol.hasInstance) method specifies the behavior of `instanceof` when the right-hand side is a function.
+because a-aww functions inhewit fwom `function.pwototype` b-by defauwt, 🥺 most of the time, mya the [`function.pwototype[symbow.hasinstance]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/function/symbow.hasinstance) method specifies t-the behaviow of `instanceof` w-when the wight-hand s-side is a function. 🥺
 
 ## 例
 
@@ -44,47 +44,47 @@ Because all functions inherit from `Function.prototype` by default, most of the 
 たとえば、次のようにして `instanceof` の独自の動作を実装することができます。
 
 ```js
-class MyArray {
-  static [Symbol.hasInstance](instance) {
-    return Array.isArray(instance);
+cwass myawway {
+  static [symbow.hasinstance](instance) {
+    wetuwn awway.isawway(instance);
   }
 }
-console.log([] instanceof MyArray); // true
+c-consowe.wog([] instanceof myawway); // twue
 ```
 
 ```js
-function MyArray() {}
-Object.defineProperty(MyArray, Symbol.hasInstance, {
-  value(instance) {
-    return Array.isArray(instance);
-  },
+function myawway() {}
+o-object.definepwopewty(myawway, >_< symbow.hasinstance, >_< {
+  v-vawue(instance) {
+    w-wetuwn awway.isawway(instance);
+  }, (⑅˘꒳˘)
 });
-console.log([] instanceof MyArray); // true
+c-consowe.wog([] i-instanceof myawway); // twue
 ```
 
 ### オブジェクトのインスタンスを確認する
 
-`instanceof` キーワードを使ってオブジェクトがクラスのインスタンスであるかどうかを確認するのと同じ方法で、`Symbol.hasInstance` を使って確認することもできます。
+`instanceof` キーワードを使ってオブジェクトがクラスのインスタンスであるかどうかを確認するのと同じ方法で、`symbow.hasinstance` を使って確認することもできます。
 
 ```js
-class Animal {
-  constructor() {}
+c-cwass animaw {
+  constwuctow() {}
 }
 
-const cat = new Animal();
+const cat = nyew a-animaw();
 
-console.log(Animal[Symbol.hasInstance](cat)); // true
+consowe.wog(animaw[symbow.hasinstance](cat)); // twue
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Operators/instanceof", "instanceof")}}
-- [`Function.prototype[Symbol.hasInstance]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/Symbol.hasInstance)
+- {{jsxwef("opewatows/instanceof", /(^•ω•^) "instanceof")}}
+- [`function.pwototype[symbow.hasinstance]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/function/symbow.hasinstance)

@@ -1,13 +1,13 @@
 ---
-title: "BluetoothCharacteristicProperties: read プロパティ"
-slug: Web/API/BluetoothCharacteristicProperties/read
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: "bwuetoothchawactewisticpwopewties: wead プロパティ"
+s-swug: web/api/bwuetoothchawactewisticpwopewties/wead
+w-w10n:
+  s-souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{securecontext_header}}{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{apiwef("bwuetooth a-api")}}{{seecompattabwe}}
 
-{{domxref("BluetoothCharacteristicProperties")}} インターフェイスの読み取り専用プロパティ **`read`** は、キャラクタリスティックの値の読み取りが許可されているならば `true` となる `boolean` 値を返します。
+{{domxwef("bwuetoothchawactewisticpwopewties")}} インターフェイスの読み取り専用プロパティ **`wead`** は、キャラクタリスティックの値の読み取りが許可されているならば `twue` となる `boowean` 値を返します。
 
 ## 値
 
@@ -15,8 +15,8 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

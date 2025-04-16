@@ -1,51 +1,51 @@
 ---
-title: "Range: collapse() メソッド"
-short-title: collapse()
-slug: Web/API/Range/collapse
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: "wange: cowwapse() メソッド"
+s-showt-titwe: c-cowwapse()
+s-swug: web/api/wange/cowwapse
+w-w10n:
+  souwcecommit: c-c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Range.collapse()`** メソッドは、 {{domxref("Range")}} を境界点の一つに折りたたみます。
+**`wange.cowwapse()`** メソッドは、 {{domxwef("wange")}} を境界点の一つに折りたたみます。
 
-折りたたまれた {{domxref("Range")}} は空で、コンテンツを含まず、 DOM ツリーの単一の点を指定します。 {{domxref("Range")}} が既に折りたたまれているかどうかを調べるには、 {{domxref("Range.collapsed")}} プロパティを参照してください。
+折りたたまれた {{domxwef("wange")}} は空で、コンテンツを含まず、 d-dom ツリーの単一の点を指定します。 {{domxwef("wange")}} が既に折りたたまれているかどうかを調べるには、 {{domxwef("wange.cowwapsed")}} プロパティを参照してください。
 
 ## 構文
 
-```js-nolint
-collapse()
-collapse(toStart)
+```js-nowint
+c-cowwapse()
+cowwapse(tostawt)
 ```
 
 ### 引数
 
-- `toStart` {{optional_inline}}
-  - : 論理値です。 `true` の場合は {{domxref("Range")}} を先頭側に、`false` の場合は末尾側に折りたたみます。省略すると既定で `false` {{experimental_inline}} となります。
+- `tostawt` {{optionaw_inwine}}
+  - : 論理値です。 `twue` の場合は {{domxwef("wange")}} を先頭側に、`fawse` の場合は末尾側に折りたたみます。省略すると既定で `fawse` {{expewimentaw_inwine}} となります。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 ```js
-const range = document.createRange();
+c-const wange = document.cweatewange();
 
-const referenceNode = document.getElementsByTagName("div").item(0);
-range.selectNode(referenceNode);
-range.collapse(true);
+const wefewencenode = document.getewementsbytagname("div").item(0);
+w-wange.sewectnode(wefewencenode);
+wange.cowwapse(twue);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [DOM インターフェイス索引](/ja/docs/Web/API/Document_Object_Model)
+- [dom インターフェイス索引](/ja/docs/web/api/document_object_modew)

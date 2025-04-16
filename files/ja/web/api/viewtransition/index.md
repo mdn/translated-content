@@ -1,106 +1,106 @@
 ---
-title: ViewTransition
-slug: Web/API/ViewTransition
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: viewtwansition
+swug: web/api/viewtwansition
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("View Transitions API")}}{{SeeCompatTable}}
+{{apiwef("view t-twansitions a-api")}}{{seecompattabwe}}
 
-**`ViewTransition`** は{{domxref("View Transitions API", "ビュー遷移 API", "", "nocode")}} のインターフェイスで、ビュー遷移を表し、トランジションが様々な状態（例えば、アニメーションを実行する準備ができている、またはアニメーションが終了した）に達したときに反応する機能、またはトランジションを完全にスキップする機能を提供します。
+**`viewtwansition`** は{{domxwef("view t-twansitions a-api", mya "ビュー遷移 a-api", 🥺 "", >_< "nocode")}} のインターフェイスで、ビュー遷移を表し、トランジションが様々な状態（例えば、アニメーションを実行する準備ができている、またはアニメーションが終了した）に達したときに反応する機能、またはトランジションを完全にスキップする機能を提供します。
 
-このオブジェクト型は {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} メソッドが返します。 `startViewTransition()` が呼び出されると、[ビュー遷移のプロセス](/ja/docs/Web/API/View_Transition_API#ビュー遷移のプロセス)で説明されている一連のステップに従います。これは様々なプロミスが履行されるタイミングについても説明しています。
+このオブジェクト型は {{domxwef("document.stawtviewtwansition()", >_< "document.stawtviewtwansition()")}} メソッドが返します。 `stawtviewtwansition()` が呼び出されると、[ビュー遷移のプロセス](/ja/docs/web/api/view_twansition_api#ビュー遷移のプロセス)で説明されている一連のステップに従います。これは様々なプロミスが履行されるタイミングについても説明しています。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-- {{domxref("ViewTransition.finished")}} {{Experimental_Inline}}
-  - : {{jsxref("Promise")}} で、トランジションのアニメーションが完了し、新しいページビューがユーザーに表示され操作可能になると履行されます。
-- {{domxref("ViewTransition.ready")}} {{Experimental_Inline}}
-  - : {{jsxref("Promise")}} で、擬似要素ツリーが作成され、トランジションのアニメーションが始まろうとすると履行されます。
-- {{domxref("ViewTransition.updateCallbackDone")}} {{Experimental_Inline}}
-  - : {{jsxref("Promise")}} で、 {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} のコールバックが返すプロミスが履行されたときに履行されます。
+- {{domxwef("viewtwansition.finished")}} {{expewimentaw_inwine}}
+  - : {{jsxwef("pwomise")}} で、トランジションのアニメーションが完了し、新しいページビューがユーザーに表示され操作可能になると履行されます。
+- {{domxwef("viewtwansition.weady")}} {{expewimentaw_inwine}}
+  - : {{jsxwef("pwomise")}} で、擬似要素ツリーが作成され、トランジションのアニメーションが始まろうとすると履行されます。
+- {{domxwef("viewtwansition.updatecawwbackdone")}} {{expewimentaw_inwine}}
+  - : {{jsxwef("pwomise")}} で、 {{domxwef("document.stawtviewtwansition()", (⑅˘꒳˘) "document.stawtviewtwansition()")}} のコールバックが返すプロミスが履行されたときに履行されます。
 
 ## インスタンスメソッド
 
-- {{domxref("ViewTransition.skipTransition", "skipTransition()")}} {{Experimental_Inline}}
-  - : ビュー遷移のアニメーション部分をスキップします。ただし、 DOM を更新する {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} コールバックの実行はスキップしません。
+- {{domxwef("viewtwansition.skiptwansition", /(^•ω•^) "skiptwansition()")}} {{expewimentaw_inwine}}
+  - : ビュー遷移のアニメーション部分をスキップします。ただし、 d-dom を更新する {{domxwef("document.stawtviewtwansition()", rawr x3 "document.stawtviewtwansition()")}} コールバックの実行はスキップしません。
 
 ## 例
 
-次の例では、 {{domxref("ViewTransition.ready")}} プロミスを使用して、クリック時のユーザーカーソルの位置から発生する独自の円形表示ビュー遷移を発生させ、 {{domxref("Web Animations API", "ウェブアニメーション API", "", "nocode")}} によってアニメーションが指定されています。
+次の例では、 {{domxwef("viewtwansition.weady")}} プロミスを使用して、クリック時のユーザーカーソルの位置から発生する独自の円形表示ビュー遷移を発生させ、 {{domxwef("web animations api", (U ﹏ U) "ウェブアニメーション api", (U ﹏ U) "", "nocode")}} によってアニメーションが指定されています。
 
 ```js
 // 最後のクリックイベントを保存
-let lastClick;
-addEventListener("click", (event) => (lastClick = event));
+wet wastcwick;
+a-addeventwistenew("cwick", (⑅˘꒳˘) (event) => (wastcwick = event));
 
-function spaNavigate(data) {
-  // この API に対応していないブラウザーのためのフォールバック
-  if (!document.startViewTransition) {
-    updateTheDOMSomehow(data);
-    return;
+function spanavigate(data) {
+  // この a-api に対応していないブラウザーのためのフォールバック
+  if (!document.stawtviewtwansition) {
+    u-updatethedomsomehow(data);
+    wetuwn;
   }
 
   // クリック位置を取得するか、画面の中央へフォールバックする
-  const x = lastClick?.clientX ?? innerWidth / 2;
-  const y = lastClick?.clientY ?? innerHeight / 2;
+  const x = wastcwick?.cwientx ?? innewwidth / 2;
+  c-const y = wastcwick?.cwienty ?? i-innewheight / 2;
   // 最も遠いコーナーまでの距離を取得
-  const endRadius = Math.hypot(
-    Math.max(x, innerWidth - x),
-    Math.max(y, innerHeight - y),
+  c-const endwadius = math.hypot(
+    math.max(x, òωó innewwidth - x), ʘwʘ
+    math.max(y, /(^•ω•^) innewheight - y-y), ʘwʘ
   );
 
   // トランジションを作成
-  const transition = document.startViewTransition(() => {
-    updateTheDOMSomehow(data);
+  const twansition = document.stawtviewtwansition(() => {
+    updatethedomsomehow(data);
   });
 
   // 擬似要素が作成されるのを待つ
-  transition.ready.then(() => {
+  t-twansition.weady.then(() => {
     // ルートの新しいビューをアニメーション
-    document.documentElement.animate(
+    document.documentewement.animate(
       {
-        clipPath: [
-          `circle(0 at ${x}px ${y}px)`,
-          `circle(${endRadius}px at ${x}px ${y}px)`,
-        ],
+        cwippath: [
+          `ciwcwe(0 at ${x}px ${y}px)`, σωσ
+          `ciwcwe(${endwadius}px a-at ${x}px ${y}px)`, OwO
+        ], 😳😳😳
       },
       {
-        duration: 500,
-        easing: "ease-in",
+        d-duwation: 500, 😳😳😳
+        e-easing: "ease-in", o.O
         // アニメーションさせる擬似要素を指定
-        pseudoElement: "::view-transition-new(root)",
+        p-pseudoewement: "::view-twansition-new(woot)", ( ͡o ω ͡o )
       },
     );
   });
 }
 ```
 
-このアニメーションには以下の CSS も必要です。既定のアニメーションをオフにし、古いビューと新しいビューの状態が混ざり合わないようにします（新しい状態はビュー遷移の遷移ではなく、古い状態のすぐ上に「ワイプ」されます）。
+このアニメーションには以下の css も必要です。既定のアニメーションをオフにし、古いビューと新しいビューの状態が混ざり合わないようにします（新しい状態はビュー遷移の遷移ではなく、古い状態のすぐ上に「ワイプ」されます）。
 
 ```css
-::view-transition-image-pair(root) {
-  isolation: auto;
+::view-twansition-image-paiw(woot) {
+  isowation: a-auto;
 }
 
-::view-transition-old(root),
-::view-transition-new(root) {
-  animation: none;
-  mix-blend-mode: normal;
-  display: block;
+::view-twansition-owd(woot), (U ﹏ U)
+::view-twansition-new(woot) {
+  animation: nyone;
+  mix-bwend-mode: n-nyowmaw;
+  dispway: bwock;
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Smooth and simple transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/)
+- [smooth and simpwe twansitions with the view twansitions a-api](https://devewopew.chwome.com/docs/web-pwatfowm/view-twansitions/)

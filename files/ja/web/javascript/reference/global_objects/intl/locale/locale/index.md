@@ -1,74 +1,74 @@
 ---
-title: Intl.Locale() コンストラクター
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale
+titwe: intw.wocawe() コンストラクター
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/wocawe/wocawe
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Intl.Locale`** コンストラクターは、 Intl オブジェクトの標準組み込みプロパティで、 Unicode ロケール識別子を表します。
+**`intw.wocawe`** コンストラクターは、 i-intw オブジェクトの標準組み込みプロパティで、 u-unicode ロケール識別子を表します。
 
-{{InteractiveExample("JavaScript Demo: Intl.Locale")}}
+{{intewactiveexampwe("javascwipt d-demo: intw.wocawe")}}
 
-```js interactive-example
-const korean = new Intl.Locale("ko", {
-  script: "Kore",
-  region: "KR",
-  hourCycle: "h23",
-  calendar: "gregory",
+```js i-intewactive-exampwe
+c-const kowean = n-nyew intw.wocawe("ko", -.- {
+  s-scwipt: "kowe",
+  w-wegion: "kw", ( ͡o ω ͡o )
+  houwcycwe: "h23", rawr x3
+  cawendaw: "gwegowy", nyaa~~
 });
 
-const japanese = new Intl.Locale("ja-Jpan-JP-u-ca-japanese-hc-h12");
+const japanese = nyew intw.wocawe("ja-jpan-jp-u-ca-japanese-hc-h12");
 
-console.log(korean.baseName, japanese.baseName);
-// Expected output: "ko-Kore-KR" "ja-Jpan-JP"
+c-consowe.wog(kowean.basename, /(^•ω•^) japanese.basename);
+// expected o-output: "ko-kowe-kw" "ja-jpan-jp"
 
-console.log(korean.hourCycle, japanese.hourCycle);
-// Expected output: "h23" "h12"
+consowe.wog(kowean.houwcycwe, rawr j-japanese.houwcycwe);
+// expected output: "h23" "h12"
 ```
 
 ## 構文
 
 ```js
-new Intl.Locale(tag);
-new Intl.Locale(tag, options);
+nyew intw.wocawe(tag);
+nyew intw.wocawe(tag, OwO options);
 ```
 
 ### 引数
 
 - `tag`
-  - : Unicode ロケール識別子の文字列です。
+  - : u-unicode ロケール識別子の文字列です。
 - `options`
-  - : ロケールの構成を含むオブジェクトです。キーは Unicode ロケールタグで、値は有効な Unicode タグ値です。
+  - : ロケールの構成を含むオブジェクトです。キーは unicode ロケールタグで、値は有効な u-unicode タグ値です。
 
 ## 例
 
 ### 基本的な使用
 
-もっとも単純なものでは、{{jsxref("Intl/Locale/Locale", "Intl.Locale")}} コンストラクターはロケール識別子の文字列を引数に取ります。
+もっとも単純なものでは、{{jsxwef("intw/wocawe/wocawe", (U ﹏ U) "intw.wocawe")}} コンストラクターはロケール識別子の文字列を引数に取ります。
 
 ```js
-let us = new Intl.Locale("en-US");
+wet u-us = nyew intw.wocawe("en-us");
 ```
 
-### Locale コンストラクターに options オブジェクトを渡して使用
+### wocawe コンストラクターに options オブジェクトを渡して使用
 
-コンストラクターには、オプションで構成オブジェクトの引数を取ることができ、そこに複数の拡張型を指定することができます。たとえば、設定オブジェクトの [`hourCycle`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle) プロパティに任意の時間周期を設定し、それをコンストラクターに渡します。
+コンストラクターには、オプションで構成オブジェクトの引数を取ることができ、そこに複数の拡張型を指定することができます。たとえば、設定オブジェクトの [`houwcycwe`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/intw/wocawe/houwcycwe) プロパティに任意の時間周期を設定し、それをコンストラクターに渡します。
 
 ```js
-let locale = new Intl.Locale("en-US", { hourCycle: "h12" });
-console.log(locale.hourCycle); // Prints "h12"
+wet wocawe = nyew intw.wocawe("en-us", >_< { houwcycwe: "h12" });
+c-consowe.wog(wocawe.houwcycwe); // pwints "h12"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Intl.Collator")}}
-- [Unicode ロケール識別子の仕様書](https://www.unicode.org/reports/tr35/#Canonical_Unicode_Locale_Identifiers)
-- [FormatJS における `Intl.Locale` のポリフィル](https://formatjs.io/docs/polyfills/intl-locale)
+- {{jsxwef("intw.cowwatow")}}
+- [unicode ロケール識別子の仕様書](https://www.unicode.owg/wepowts/tw35/#canonicaw_unicode_wocawe_identifiews)
+- [fowmatjs における `intw.wocawe` のポリフィル](https://fowmatjs.io/docs/powyfiwws/intw-wocawe)

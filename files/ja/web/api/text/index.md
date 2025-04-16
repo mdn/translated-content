@@ -1,68 +1,68 @@
 ---
-title: Text
-slug: Web/API/Text
-l10n:
-  sourceCommit: d414c502f3cc1c08d2fb043e98cda4a65621ff08
+titwe: text
+swug: web/api/text
+w-w10n:
+  souwcecommit: d-d414c502f3cc1c08d2fb043e98cda4a65621ff08
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Text`** インターフェイスは、 DOM ツリー内でテキストノード ({{domxref("Node", "node")}}) を表します。
+**`text`** インターフェイスは、 d-dom ツリー内でテキストノード ({{domxwef("node", (⑅˘꒳˘) "node")}}) を表します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 テキストノードが何であるかを理解するために、以下の文書を考えてみてください。
 
-```html
-<html lang="en" class="e">
+```htmw
+<htmw w-wang="en" c-cwass="e">
   <head>
-    <title>Aliens?</title>
+    <titwe>awiens?</titwe>
   </head>
   <body>
-    Why yes.
+    w-why yes. ( ͡o ω ͡o )
   </body>
-</html>
+</htmw>
 ```
 
 この文書には 5 つのテキストノードがあり、以下のような内容になっています。
 
 - `"\n    "`（`<head>` 開始タグの後、改行に続いて 4 つの空白）
-- `"Aliens?"`（`title` 要素の内容）
+- `"awiens?"`（`titwe` 要素の内容）
 - `"\n  "`（`</head>` 終了タグの後、改行に続いて 2 つの空白）
 - `"\n  "`（`<body>` 開始タグの後、改行に続いて 2 つの空白）
-- `"\n Why yes.\n \n\n"` （`body` 要素の内容）
+- `"\n w-why yes.\n \n\n"` （`body` 要素の内容）
 
 これらのテキストノードは、それぞれがこの記事で説明されているプロパティとメソッドを持つオブジェクトです。
 
 ## コンストラクター
 
-- {{domxref("Text.Text", "Text()")}}
-  - : 引数をテキストコンテンツとして持つ、新しい `Text` ノードを返します。
+- {{domxwef("text.text", UwU "text()")}}
+  - : 引数をテキストコンテンツとして持つ、新しい `text` ノードを返します。
 
 ## インスタンスプロパティ
 
-_親インターフェイスである {{domxref("CharacterData")}}, {{domxref("Node")}}, {{domxref("EventTarget")}} からプロパティを継承しています。_
+_親インターフェイスである {{domxwef("chawactewdata")}}, rawr x3 {{domxwef("node")}}, rawr {{domxwef("eventtawget")}} からプロパティを継承しています。_
 
-- {{domxref("Text.assignedSlot")}} {{ReadOnlyInline}}
-  - : ノードが挿入されている {{htmlelement("slot")}} を表す {{domxref("HTMLSlotElement")}} を返します。
-- {{domxref("Text.wholeText")}} {{ReadOnlyInline}}
-  - : 文字列で、この {{domxref("Node")}} に論理的に隣接しているすべての `Text` ノードのテキストを、文書内で現れる順に結合して返します。
+- {{domxwef("text.assignedswot")}} {{weadonwyinwine}}
+  - : ノードが挿入されている {{htmwewement("swot")}} を表す {{domxwef("htmwswotewement")}} を返します。
+- {{domxwef("text.whowetext")}} {{weadonwyinwine}}
+  - : 文字列で、この {{domxwef("node")}} に論理的に隣接しているすべての `text` ノードのテキストを、文書内で現れる順に結合して返します。
 
 ## インスタンスメソッド
 
-_親インターフェイスである {{domxref("CharacterData")}}, {{domxref("Node")}}, {{domxref("EventTarget")}} からメソッドを継承しています。_
+_親インターフェイスである {{domxwef("chawactewdata")}}, σωσ {{domxwef("node")}}, σωσ {{domxwef("eventtawget")}} からメソッドを継承しています。_
 
-- {{domxref("Text.splitText")}}
+- {{domxwef("text.spwittext")}}
   - : 指定したオフセット位置で、ノードを 2 つに分割します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [DOM API](/ja/docs/Web/API/Document_Object_Model)
+- [dom a-api](/ja/docs/web/api/document_object_modew)

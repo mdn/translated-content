@@ -1,13 +1,13 @@
 ---
-title: "USBDevice: deviceClass プロパティ"
-slug: Web/API/USBDevice/deviceClass
-l10n:
-  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
+titwe: "usbdevice: devicecwass プロパティ"
+s-swug: web/api/usbdevice/devicecwass
+w-w10n:
+  souwcecommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{SeeCompatTable}}{{APIRef("WebUSB API")}}
+{{seecompattabwe}}{{apiwef("webusb a-api")}}
 
-{{domxref("USBDevice")}} インターフェイスの読み取り専用プロパティ **`deviceClass`** は、デバイスとともに動く USB ドライバーのロード用に USB デバイスを特定する 3 個のプロパティのうちの 1 個です。他の 2 個のプロパティは `USBDevice.deviceSubclass` と `USBDevice.deviceProtocol` です。
+{{domxwef("usbdevice")}} インターフェイスの読み取り専用プロパティ **`devicecwass`** は、デバイスとともに動く u-usb ドライバーのロード用に u-usb デバイスを特定する 3 個のプロパティのうちの 1 個です。他の 2 個のプロパティは `usbdevice.devicesubcwass` と `usbdevice.devicepwotocow` です。
 
 ## 値
 
@@ -15,8 +15,8 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

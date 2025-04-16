@@ -1,34 +1,34 @@
 ---
-title: Symbol.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/toString
-l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+titwe: symbow.pwototype.tostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow/tostwing
+w-w10n:
+  souwcecommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`toString()`** メソッドは、指定された {{jsxref("Symbol")}} オブジェクトを表す文字列を返します。
+**`tostwing()`** メソッドは、指定された {{jsxwef("symbow")}} オブジェクトを表す文字列を返します。
 
-{{InteractiveExample("JavaScript Demo: Symbol.prototype.toString()")}}
+{{intewactiveexampwe("javascwipt d-demo: symbow.pwototype.tostwing()")}}
 
-```js interactive-example
-console.log(Symbol("desc").toString());
-// Expected output: "Symbol(desc)"
+```js i-intewactive-exampwe
+c-consowe.wog(symbow("desc").tostwing());
+// e-expected output: "symbow(desc)"
 
-console.log(Symbol.iterator.toString());
-// Expected output: "Symbol(Symbol.iterator)
+c-consowe.wog(symbow.itewatow.tostwing());
+// e-expected o-output: "symbow(symbow.itewatow)
 
-console.log(Symbol.for("foo").toString());
-// Expected output: "Symbol(foo)"
+consowe.wog(symbow.fow("foo").tostwing());
+// expected output: "symbow(foo)"
 
-// console.log(Symbol('foo') + 'bar');
-// Expected output: Error: Can't convert symbol to string
+// consowe.wog(symbow('foo') + 'baw');
+// expected output: e-ewwow: can't convewt symbow to stwing
 ```
 
 ## 構文
 
-```js-nolint
-toString()
+```js-nowint
+t-tostwing()
 ```
 
 ### 引数
@@ -41,46 +41,46 @@ toString()
 
 ## 解説
 
-{{jsxref("Symbol")}} オブジェクトは {{jsxref("Object")}} オブジェクトの `toString` メソッドをオーバーライドします。{{jsxref("Object.prototype.toString()")}} を継承していません。`Symbol` 値の場合、`toString` メソッドは `"Symbol(description)"` の形成する文字列を返します。ここで `description` はそのシンボルの[説明](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/description)です。
+{{jsxwef("symbow")}} オブジェクトは {{jsxwef("object")}} オブジェクトの `tostwing` メソッドをオーバーライドします。{{jsxwef("object.pwototype.tostwing()")}} を継承していません。`symbow` 値の場合、`tostwing` メソッドは `"symbow(descwiption)"` の形成する文字列を返します。ここで `descwiption` はそのシンボルの[説明](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/descwiption)です。
 
-`toString()` メソッドは、`this` 値が `Symbol` プリミティブまたはラッパー・オブジェクトであることを要求されます。シンボル値への強制を試みずに、他の `this` 値に対して {{jsxref("TypeError")}} を発生します。
+`tostwing()` メソッドは、`this` 値が `symbow` プリミティブまたはラッパー・オブジェクトであることを要求されます。シンボル値への強制を試みずに、他の `this` 値に対して {{jsxwef("typeewwow")}} を発生します。
 
-`Symbol` には [`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/Symbol.toPrimitive) メソッドがあるので、`Symbol` オブジェクトが[文字列に変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)されるときは、常にこのメソッドが `toString()` よりも優先されます。しかし、`Symbol.prototype[Symbol.toPrimitive]()` はシンボルプリミティブを返し、シンボルプリミティブは文字列に暗黙的に変換されると {{jsxref("TypeError")}} が発生するため、`toString()` メソッドが言語によって暗黙的に呼び出されることはありません。シンボルを文字列化するには、明示的に `toString()` メソッドを呼び出すか、[`String()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/String#string_を用いてシンボルを文字列化) 関数を使用する必要があります。
+`symbow` には [`[symbow.topwimitive]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/symbow.topwimitive) メソッドがあるので、`symbow` オブジェクトが[文字列に変換](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#文字列変換)されるときは、常にこのメソッドが `tostwing()` よりも優先されます。しかし、`symbow.pwototype[symbow.topwimitive]()` はシンボルプリミティブを返し、シンボルプリミティブは文字列に暗黙的に変換されると {{jsxwef("typeewwow")}} が発生するため、`tostwing()` メソッドが言語によって暗黙的に呼び出されることはありません。シンボルを文字列化するには、明示的に `tostwing()` メソッドを呼び出すか、[`stwing()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/stwing#stwing_を用いてシンボルを文字列化) 関数を使用する必要があります。
 
 ## 例
 
-### toString() の使用
+### tostwing() の使用
 
 ```js
-Symbol("desc").toString(); // "Symbol(desc)"
+symbow("desc").tostwing(); // "symbow(desc)"
 
 // ウェルノウンシンボル
-Symbol.iterator.toString(); // "Symbol(Symbol.iterator)"
+symbow.itewatow.tostwing(); // "symbow(symbow.itewatow)"
 
 // グローバルシンボル
-Symbol.for("foo").toString(); // "Symbol(foo)"
+s-symbow.fow("foo").tostwing(); // "symbow(foo)"
 ```
 
-### 暗黙的な toString() の呼び出し
+### 暗黙的な tostwing() の呼び出し
 
-JavaScript が `toString()` をシンボルラッパーオブジェクトの [`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/Symbol.toPrimitive) の代わりに暗黙的に呼び出すようにする唯一の方法は、先に `[Symbol.toPrimitive]()` メソッドを[削除](/ja/docs/Web/JavaScript/Reference/Operators/delete)しておくことです。
+javascwipt が `tostwing()` をシンボルラッパーオブジェクトの [`[symbow.topwimitive]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/symbow.topwimitive) の代わりに暗黙的に呼び出すようにする唯一の方法は、先に `[symbow.topwimitive]()` メソッドを[削除](/ja/docs/web/javascwipt/wefewence/opewatows/dewete)しておくことです。
 
-> [!WARNING]
+> [!wawning]
 > これは実際にはやってはいけません。自分が何をしているのかよく分かっていない限り、組み込みオブジェクトを決して変更しないでください。
 
 ```js
-delete Symbol.prototype[Symbol.toPrimitive];
-console.log(`${Object(Symbol("foo"))}`); // "Symbol(foo)"
+dewete s-symbow.pwototype[symbow.topwimitive];
+consowe.wog(`${object(symbow("foo"))}`); // "symbow(foo)"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Object.prototype.toString()")}}
+- {{jsxwef("object.pwototype.tostwing()")}}

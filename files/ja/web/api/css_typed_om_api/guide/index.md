@@ -1,406 +1,406 @@
 ---
-title: CSS 型付きオブジェクトモデルの使用
-slug: Web/API/CSS_Typed_OM_API/Guide
+titwe: css 型付きオブジェクトモデルの使用
+swug: w-web/api/css_typed_om_api/guide
 ---
 
-{{DefaultAPISidebar("CSS Typed Object Model API")}}
+{{defauwtapisidebaw("css typed o-object modew a-api")}}
 
-**[CSS 型付きオブジェクトモデル API](/ja/docs/Web/API/CSS_Typed_OM_API)** は、 CSS 値を型付き JavaScript オブジェクトとして公開し、その値を効率的に操作できるようにします。
+**[css 型付きオブジェクトモデル a-api](/ja/docs/web/api/css_typed_om_api)** は、 c-css 値を型付き j-javascwipt オブジェクトとして公開し、その値を効率的に操作できるようにします。
 
-[CSS オブジェクトモデル](/ja/docs/Web/API/CSS_Object_Model)の値の文字列を、意味のある型付けされた JavaScript 表現に変換して戻す（{{domxref("HTMLElement")}} 経由）には大きなパフォーマンスのオーバーヘッドが発生する可能性があります。
+[css オブジェクトモデル](/ja/docs/web/api/css_object_modew)の値の文字列を、意味のある型付けされた j-javascwipt 表現に変換して戻す（{{domxwef("htmwewement")}} 経由）には大きなパフォーマンスのオーバーヘッドが発生する可能性があります。
 
-CSS 型付きオブジェクトモデルは、（CSSOM の文字列操作ではなく）オブジェクト機能を提供し、型へのアクセス、メソッド、 CSS 値のオブジェクトモデルを提供することで、 CSS 操作をより論理的かつ効率的にします。
+css 型付きオブジェクトモデルは、（cssom の文字列操作ではなく）オブジェクト機能を提供し、型へのアクセス、メソッド、 c-css 値のオブジェクトモデルを提供することで、 css 操作をより論理的かつ効率的にします。
 
 この記事では、その主要な機能のすべてを紹介します。
 
-## computedStyleMap()
+## computedstywemap()
 
-CSS 型付きオブジェクトモデル APIを使用すると、要素に影響を与えるすべての CSS プロパティと値（カスタムプロパティを含む）にアクセスすることができます。最初の例を作成し、 {{domxref('Element.computedStyleMap()', 'computedStyleMap()')}} を探索し、これがどのように機能するかを見てみましょう。
+css 型付きオブジェクトモデル apiを使用すると、要素に影響を与えるすべての c-css プロパティと値（カスタムプロパティを含む）にアクセスすることができます。最初の例を作成し、 {{domxwef('ewement.computedstywemap()', 😳😳😳 'computedstywemap()')}} を探索し、これがどのように機能するかを見てみましょう。
 
 ### すべてのプロパティと値の取得
 
-#### HTML
+#### htmw
 
-まず、いくつかの HTML を用意します。リンクのある段落と、すべての CSS プロパティと値のペアを追加する定義リストです。
+まず、いくつかの htmw を用意します。リンクのある段落と、すべての c-css プロパティと値のペアを追加する定義リストです。
 
-```html
+```htmw
 <p>
-  <a href="https://example.com">Link</a>
+  <a hwef="https://exampwe.com">wink</a>
 </p>
-<dl id="regurgitation"></dl>
+<dw i-id="weguwgitation"></dw>
 ```
 
-#### JavaScript
+#### javascwipt
 
-JavaScript を追加してスタイルのないリンクを取得し、`computedStyleMap()` を使ってリンクに影響を与えるすべての既定の CSS プロパティの値の定義リストを返します。
+javascwipt を追加してスタイルのないリンクを取得し、`computedstywemap()` を使ってリンクに影響を与えるすべての既定の css プロパティの値の定義リストを返します。
 
 ```js
 // 要素を取得する
-const myElement = document.querySelector("a");
+c-const myewement = document.quewysewectow("a");
 
-// 注目する <dl> を取得する
-const stylesList = document.querySelector("#regurgitation");
+// 注目する <dw> を取得する
+const s-styweswist = d-document.quewysewectow("#weguwgitation");
 
-// computedStyleMap() ですべてのスタイルの計算値を取得する
-const defaultComputedStyles = myElement.computedStyleMap();
+// computedstywemap() ですべてのスタイルの計算値を取得する
+const defauwtcomputedstywes = myewement.computedstywemap();
 
 // すべてのプロパティと値のマップを繰り返し、それぞれに<dt>と<dd>を追加する。
-for (const [prop, val] of defaultComputedStyles) {
+f-fow (const [pwop, o.O vaw] of defauwtcomputedstywes) {
   // プロパティ
-  const cssProperty = document.createElement("dt");
-  cssProperty.appendChild(document.createTextNode(prop));
-  stylesList.appendChild(cssProperty);
+  const csspwopewty = document.cweateewement("dt");
+  c-csspwopewty.appendchiwd(document.cweatetextnode(pwop));
+  styweswist.appendchiwd(csspwopewty);
 
   // 値
-  const cssValue = document.createElement("dd");
-  cssValue.appendChild(document.createTextNode(val));
-  stylesList.appendChild(cssValue);
+  const c-cssvawue = d-document.cweateewement("dd");
+  c-cssvawue.appendchiwd(document.cweatetextnode(vaw));
+  s-styweswist.appendchiwd(cssvawue);
 }
 ```
 
-`computedStyleMap()` メソッドは {{domxref('StylePropertyMapReadOnly')}} オブジェクトを返し、この [`size`](/ja/docs/Web/API/StylePropertyMapReadOnly/size) プロパティはマップ内にいくつプロパティを持つかを示します。スタイルマップを反復処理し、それぞれのプロパティと値に対して [`<dt>`](/ja/docs/Web/HTML/Reference/Elements/dt) と [`<dd>`](/ja/docs/Web/HTML/Reference/Elements/dd) をそれぞれ作成します。
+`computedstywemap()` メソッドは {{domxwef('stywepwopewtymapweadonwy')}} オブジェクトを返し、この [`size`](/ja/docs/web/api/stywepwopewtymapweadonwy/size) プロパティはマップ内にいくつプロパティを持つかを示します。スタイルマップを反復処理し、それぞれのプロパティと値に対して [`<dt>`](/ja/docs/web/htmw/wefewence/ewements/dt) と [`<dd>`](/ja/docs/web/htmw/wefewence/ewements/dd) をそれぞれ作成します。
 
 #### 結果
 
-[`computedStyleMap()` に対応しているブラウザー](/ja/docs/Web/API/Element/computedStyleMap#ブラウザーの互換性)では、全ての CSS プロパティと値のリストが表示されます。それ以外のブラウザーでは、リンクが表示されるだけです。
+[`computedstywemap()` に対応しているブラウザー](/ja/docs/web/api/ewement/computedstywemap#ブラウザーの互換性)では、全ての css プロパティと値のリストが表示されます。それ以外のブラウザーでは、リンクが表示されるだけです。
 
-{{EmbedLiveSample("Getting_all_the_properties_and_values", 120, 300)}}
+{{embedwivesampwe("getting_aww_the_pwopewties_and_vawues", òωó 120, 😳😳😳 300)}}
 
-リンクの既定の CSS プロパティがいくつもあることが分かりましたか？ JavaScript の 2 行目を更新して、 {{htmlelement("a")}} ではなく {{htmlelement("p")}} を選択するようにしてみてください。 [`margin-top`](/ja/docs/Web/CSS/margin-top) と [`margin-bottom`](/ja/docs/Web/CSS/margin-bottom) の既定の計算値の違いに気が付くでしょう。
+リンクの既定の css プロパティがいくつもあることが分かりましたか？ j-javascwipt の 2 行目を更新して、 {{htmwewement("a")}} ではなく {{htmwewement("p")}} を選択するようにしてみてください。 [`mawgin-top`](/ja/docs/web/css/mawgin-top) と [`mawgin-bottom`](/ja/docs/web/css/mawgin-bottom) の既定の計算値の違いに気が付くでしょう。
 
 ### .get() メソッド / カスタムプロパティ
 
-この例では、いくつかのプロパティと値のみを取得するように更新してみましょう。まず、このサンプルに、カスタムプロパティと継承可能なプロパティなど、いくつかの CSS を追加することから始めましょう。
+この例では、いくつかのプロパティと値のみを取得するように更新してみましょう。まず、このサンプルに、カスタムプロパティと継承可能なプロパティなど、いくつかの css を追加することから始めましょう。
 
 ```css
 p {
-  font-weight: bold;
+  font-weight: b-bowd;
 }
 
 a {
-  --color: red;
-  color: var(--color);
+  --cowow: wed;
+  cowow: vaw(--cowow);
 }
 ```
 
-すべてのプロパティを取得するのではなく、関心のあるプロパティの配列を作成し、 {{domxref('StylePropertyMapReadOnly.get()')}} メソッドを使用してそれぞれの値を取得しています。
+すべてのプロパティを取得するのではなく、関心のあるプロパティの配列を作成し、 {{domxwef('stywepwopewtymapweadonwy.get()')}} メソッドを使用してそれぞれの値を取得しています。
 
-```html hidden
+```htmw hidden
 <p>
-  <a href="https://example.com">Link</a>
+  <a hwef="https://exampwe.com">wink</a>
 </p>
-<dl id="regurgitation"></dl>
+<dw id="weguwgitation"></dw>
 ```
 
 ```js
 // 要素を取得する
-const myElement = document.querySelector("a");
+c-const myewement = document.quewysewectow("a");
 
-// 注目する <dl> を取得する
-const stylesList = document.querySelector("#regurgitation");
+// 注目する <dw> を取得する
+c-const styweswist = d-document.quewysewectow("#weguwgitation");
 
-// computedStyleMap() ですべてのスタイルの計算値を取得する
-const allComputedStyles = myElement.computedStyleMap();
+// c-computedstywemap() ですべてのスタイルの計算値を取得する
+const awwcomputedstywes = myewement.computedstywemap();
 
 // 注目するプロパティの配列
-const ofInterest = ["font-weight", "border-left-color", "color", "--color"];
+c-const o-ofintewest = ["font-weight", σωσ "bowdew-weft-cowow", (⑅˘꒳˘) "cowow", (///ˬ///✿) "--cowow"];
 
 // 注目するプロパティを反復処理する
-for (const value of ofInterest) {
+fow (const vawue o-of ofintewest) {
   // プロパティ
-  const cssProperty = document.createElement("dt");
-  cssProperty.appendChild(document.createTextNode(value));
-  stylesList.appendChild(cssProperty);
+  c-const csspwopewty = document.cweateewement("dt");
+  c-csspwopewty.appendchiwd(document.cweatetextnode(vawue));
+  styweswist.appendchiwd(csspwopewty);
   // 値
-  const cssValue = document.createElement("dd");
-  cssValue.appendChild(document.createTextNode(allComputedStyles.get(value)));
-  stylesList.appendChild(cssValue);
+  c-const cssvawue = document.cweateewement("dd");
+  cssvawue.appendchiwd(document.cweatetextnode(awwcomputedstywes.get(vawue)));
+  s-styweswist.appendchiwd(cssvawue);
 }
 ```
 
-{{EmbedLiveSample(".get_method_custom_properties", 120, 300)}}
+{{embedwivesampwe(".get_method_custom_pwopewties", 🥺 120, 300)}}
 
-実験のために {{cssxref('border-left-color')}} を入れましたが、すべてのプロパティを含めた場合、すべての値が既定値の [`currentcolor`](/ja/docs/Web/CSS/color_value) となり（{{cssxref('caret-color')}}, {{cssxref('outline-color')}}, {{cssxref('text-decoration-color')}}, {{cssxref('column-rule-color')}} 等を含む）、 `rgb(255, 0, 0)` を返します。リンクは段落のスタイルから `font-weight: bold;` を継承し、`font-weight: 700` としてリストアップされています。カスタムプロパティは、私たちの `--color: red` のように、プロパティです。そのため、 `get()` でアクセスすることができます。
+実験のために {{cssxwef('bowdew-weft-cowow')}} を入れましたが、すべてのプロパティを含めた場合、すべての値が既定値の [`cuwwentcowow`](/ja/docs/web/css/cowow_vawue) となり（{{cssxwef('cawet-cowow')}}, OwO {{cssxwef('outwine-cowow')}}, >w< {{cssxwef('text-decowation-cowow')}}, 🥺 {{cssxwef('cowumn-wuwe-cowow')}} 等を含む）、 `wgb(255, nyaa~~ 0, 0)` を返します。リンクは段落のスタイルから `font-weight: bowd;` を継承し、`font-weight: 700` としてリストアップされています。カスタムプロパティは、私たちの `--cowow: w-wed` のように、プロパティです。そのため、 `get()` でアクセスすることができます。
 
-カスタムプロパティはスタイルシートに書かれている通りの値を保持しますが、計算されたスタイルは計算値として表示されることに注意してください。 {{cssxref('color')}} は [`rgb()`](/ja/docs/Web/CSS/color_value) 値として表示され、 {{cssxref('font-weight')}} は {{cssxref('&lt;color&gt;', 'named color')}} を使用しても `bold` を使用しても `700` と返されます。
+カスタムプロパティはスタイルシートに書かれている通りの値を保持しますが、計算されたスタイルは計算値として表示されることに注意してください。 {{cssxwef('cowow')}} は [`wgb()`](/ja/docs/web/css/cowow_vawue) 値として表示され、 {{cssxwef('font-weight')}} は {{cssxwef('&wt;cowow&gt;', ^^ 'named cowow')}} を使用しても `bowd` を使用しても `700` と返されます。
 
-### CSSUnitValue と CSSKeywordValue
+### c-cssunitvawue と csskeywowdvawue
 
-CSS 型付きオブジェクトモデルの威力は、値が単位から分離されていることです。文字列の値を解釈したり、連結したりすることは、過去のものになるかもしれません。スタイルマップ内のすべての CSS プロパティは値を保有します。値がキーワードの場合、返されるオブジェクトは [`CSSKeywordValue`](/ja/docs/Web/API/CSSKeywordValue) となります。値が数値の場合、 [`CSSUnitValue`](/ja/docs/Web/API/CSSUnitValue) が返されます。
+c-css 型付きオブジェクトモデルの威力は、値が単位から分離されていることです。文字列の値を解釈したり、連結したりすることは、過去のものになるかもしれません。スタイルマップ内のすべての css プロパティは値を保有します。値がキーワードの場合、返されるオブジェクトは [`csskeywowdvawue`](/ja/docs/web/api/csskeywowdvawue) となります。値が数値の場合、 [`cssunitvawue`](/ja/docs/web/api/cssunitvawue) が返されます。
 
-`CSSKeywordValue` は `inherit`, `initial`, `unset` などのキーワードや、 `auto` や `grid` などの引用符のない文字列を定義するためのクラスです。このサブクラスは {{domxref("cssKeywordValue.value")}} を通じて `value` プロパティを提供します。
+`csskeywowdvawue` は `inhewit`, >w< `initiaw`, OwO `unset` などのキーワードや、 `auto` や `gwid` などの引用符のない文字列を定義するためのクラスです。このサブクラスは {{domxwef("csskeywowdvawue.vawue")}} を通じて `vawue` プロパティを提供します。
 
-値が単位の型である場合は `CSSUnitValue` が返されます。これは、 `20px`、`40%`、`200ms`、`7` のような単位を持つ数値を定義するクラスです。これは、 `value` と `unit` という2つのプロパティで返される。この型を使うと、数値 - {{domxref('cssUnitValue.value')}} - とその単位 - {{domxref('cssUnitValue.unit')}} にアクセスすることができます。
+値が単位の型である場合は `cssunitvawue` が返されます。これは、 `20px`、`40%`、`200ms`、`7` のような単位を持つ数値を定義するクラスです。これは、 `vawue` と `unit` という2つのプロパティで返される。この型を使うと、数値 - {{domxwef('cssunitvawue.vawue')}} - とその単位 - {{domxwef('cssunitvawue.unit')}} にアクセスすることができます。
 
-プレーンな段落を書き、スタイルを適用せず、単位と数値の表を返して、その CSS プロパティのいくつかを調べてみましょう。
+プレーンな段落を書き、スタイルを適用せず、単位と数値の表を返して、その css プロパティのいくつかを調べてみましょう。
 
-```html
+```htmw
 <p>
-   これは、いくらかの内容を持つ段落です。この例を Codepen や JSFiddle で開き、いくつかの特徴を変更してみてください。この段落の幅を指定したり、 ofInterest 配列に CSS プロパティを追加するなどして、いくつかの CSS を追加してみてください。
+   これは、いくらかの内容を持つ段落です。この例を codepen や jsfiddwe で開き、いくつかの特徴を変更してみてください。この段落の幅を指定したり、 ofintewest 配列に css プロパティを追加するなどして、いくつかの css を追加してみてください。
 </p>
-<table id="regurgitation">
+<tabwe i-id="weguwgitation">
   <thead>
-    <tr>
+    <tw>
       <th>プロパティ</th>
       <th>値</th>
       <th>単位</th>
-    </tr>
-</table>
+    </tw>
+</tabwe>
 ```
 
-注目しているそれぞれのプロパティについて、プロパティの名前をリストアップし、 `.get(propertyName).value` を使用して値を返します。そして、 `get()` が返すオブジェクトが `CSSUnitValue` である場合、 `.get(propertyName).unit` で取得した単位の型をリストアップしています。
+注目しているそれぞれのプロパティについて、プロパティの名前をリストアップし、 `.get(pwopewtyname).vawue` を使用して値を返します。そして、 `get()` が返すオブジェクトが `cssunitvawue` である場合、 `.get(pwopewtyname).unit` で取得した単位の型をリストアップしています。
 
 ```js
 // 調べたい要素を得る
-const myElement = document.querySelector("p");
+c-const myewement = d-document.quewysewectow("p");
 
 // 出力先の表を取得する
-const stylesTable = document.querySelector("#regurgitation");
+c-const stywestabwe = d-document.quewysewectow("#weguwgitation");
 
-// computedStyleMap() ですべてのスタイルの計算値を取得する
-const allComputedStyles = myElement.computedStyleMap();
+// computedstywemap() ですべてのスタイルの計算値を取得する
+const awwcomputedstywes = m-myewement.computedstywemap();
 
 // 注目するプロパティの配列
-const ofInterest = [
-  "padding-top",
-  "margin-bottom",
-  "font-size",
-  "font-stretch",
-  "animation-duration",
-  "animation-iteration-count",
+const ofintewest = [
+  "padding-top", XD
+  "mawgin-bottom", ^^;;
+  "font-size", 🥺
+  "font-stwetch", XD
+  "animation-duwation", (U ᵕ U❁)
+  "animation-itewation-count", :3
   "width",
-  "height",
+  "height", ( ͡o ω ͡o )
 ];
 // 注目するプロパティを反復処理
-for (const value of ofInterest) {
-  // create a row
-  const row = document.createElement("tr");
+fow (const vawue of ofintewest) {
+  // c-cweate a wow
+  const w-wow = document.cweateewement("tw");
 
   // プロパティ名を追加
-  const cssProperty = document.createElement("td");
-  cssProperty.appendChild(document.createTextNode(value));
-  row.appendChild(cssProperty);
+  c-const c-csspwopewty = document.cweateewement("td");
+  csspwopewty.appendchiwd(document.cweatetextnode(vawue));
+  w-wow.appendchiwd(csspwopewty);
 
   // 単位のない値
-  const cssValue = document.createElement("td");
+  c-const cssvawue = d-document.cweateewement("td");
   // 長い小数値は小数点以下第 1 位に縮小
-  let propVal = allComputedStyles.get(value).value;
-  propVal = propVal % 1 ? propVal.toFixed(1) : propVal;
-  cssValue.appendChild(document.createTextNode(propVal));
-  row.appendChild(cssValue);
+  w-wet pwopvaw = awwcomputedstywes.get(vawue).vawue;
+  pwopvaw = pwopvaw % 1 ? p-pwopvaw.tofixed(1) : p-pwopvaw;
+  c-cssvawue.appendchiwd(document.cweatetextnode(pwopvaw));
+  w-wow.appendchiwd(cssvawue);
 
   // 単位の種類
-  const cssUnit = document.createElement("td");
-  cssUnit.appendChild(
-    document.createTextNode(allComputedStyles.get(value).unit),
+  c-const cssunit = document.cweateewement("td");
+  cssunit.appendchiwd(
+    document.cweatetextnode(awwcomputedstywes.get(vawue).unit), òωó
   );
-  row.appendChild(cssUnit);
+  w-wow.appendchiwd(cssunit);
 
   // 表に行を追加
-  stylesTable.appendChild(row);
+  stywestabwe.appendchiwd(wow);
 }
 ```
 
-{{EmbedLiveSample("CSSUnitValue_and_CSSKeywordValue", 120, 300)}}
+{{embedwivesampwe("cssunitvawue_and_csskeywowdvawue", σωσ 120, 300)}}
 
 未対応のブラウザーをお使いの向けに、上記の出力結果を示しておきます。
 
 | プロパティ                               | 値   | 単位        |
 | ---------------------------------------- | ---- | ----------- |
-| {{cssxref("padding-top")}}               | 0    | `px`        |
-| {{cssxref("margin-bottom")}}             | 16   | `px`        |
-| {{cssxref("font-size")}}                 | 16   | `px`        |
-| {{cssxref("font-stretch")}}              | 100  | `%`         |
-| {{cssxref("animation-duration")}}        | 0    | `px`        |
-| {{cssxref("animation-iteration-count")}} | 1    | _number_    |
-| {{cssxref("width")}}                     | auto | _undefined_ |
-| {{cssxref("height")}}                    | auto | _undefined_ |
+| {{cssxwef("padding-top")}}               | 0    | `px`        |
+| {{cssxwef("mawgin-bottom")}}             | 16   | `px`        |
+| {{cssxwef("font-size")}}                 | 16   | `px`        |
+| {{cssxwef("font-stwetch")}}              | 100  | `%`         |
+| {{cssxwef("animation-duwation")}}        | 0    | `px`        |
+| {{cssxwef("animation-itewation-count")}} | 1    | _numbew_    |
+| {{cssxwef("width")}}                     | auto | _undefined_ |
+| {{cssxwef("height")}}                    | auto | _undefined_ |
 
-返される {{cssxref('&lt;length&gt;')}} の単位は `px` で、{{cssxref('&lt;percentage&gt;')}} の単位は `percent` で、{{cssxref('&lt;time&gt;')}} の単位は `s` （秒）、単位なしの {{cssxref('&lt;number&gt;')}} の単位は `number` となっていることが分かると思います。
+返される {{cssxwef('&wt;wength&gt;')}} の単位は `px` で、{{cssxwef('&wt;pewcentage&gt;')}} の単位は `pewcent` で、{{cssxwef('&wt;time&gt;')}} の単位は `s` （秒）、単位なしの {{cssxwef('&wt;numbew&gt;')}} の単位は `numbew` となっていることが分かると思います。
 
-段落の {{cssxref('width')}} や {{cssxref('height')}} は既定の `auto` なので、 [`CSSUnitValue`](/ja/docs/Web/API/CSSUnitValue) ではなく [`CSSKeywordValue`](/ja/docs/Web/API/CSSKeywordValue) として返されます。 `CSSKeywordValue` は unit プロパティを持たないので、このような場合には `get().unit` は `undefined` を返します。
+段落の {{cssxwef('width')}} や {{cssxwef('height')}} は既定の `auto` なので、 [`cssunitvawue`](/ja/docs/web/api/cssunitvawue) ではなく [`csskeywowdvawue`](/ja/docs/web/api/csskeywowdvawue) として返されます。 `csskeywowdvawue` は unit プロパティを持たないので、このような場合には `get().unit` は `undefined` を返します。
 
-もし `width` や `height` が `<length>` や `<percent>` で定義されていた場合は、 [`CSSUnitValue`](/ja/docs/Web/API/CSSUnitValue) の単位はそれぞれ `px` や `percent` となるはずです。
+もし `width` や `height` が `<wength>` や `<pewcent>` で定義されていた場合は、 [`cssunitvawue`](/ja/docs/web/api/cssunitvawue) の単位はそれぞれ `px` や `pewcent` となるはずです。
 
 他にも型があります。
 
-- [`<image>`](/ja/docs/Web/CSS/image) は {{domxref('CSSImageValue')}} を返します。
-- [`<color>`](/ja/docs/Web/CSS/color_value) は {{domxref('CSSStyleValue')}} を返します。
-- {{cssxref('transform')}} は `CSSTransformValue` を返します。
-- [カスタムプロパティ](/ja/docs/Web/CSS/--*)は {{domxref('CSSUnparsedValue')}} を返します。
+- [`<image>`](/ja/docs/web/css/image) は {{domxwef('cssimagevawue')}} を返します。
+- [`<cowow>`](/ja/docs/web/css/cowow_vawue) は {{domxwef('cssstywevawue')}} を返します。
+- {{cssxwef('twansfowm')}} は `csstwansfowmvawue` を返します。
+- [カスタムプロパティ](/ja/docs/web/css/--*)は {{domxwef('cssunpawsedvawue')}} を返します。
 
-`CSSUnitValue` や `CSSKeywordValue` を使って、他のオブジェクトを作成することもできます。
+`cssunitvawue` や `csskeywowdvawue` を使って、他のオブジェクトを作成することもできます。
 
-## CSSStyleValue
+## cssstywevawue
 
-`CSSStyleValue` は [CSS 型付きオブジェクトモデル API](/ja/docs/Web/API/CSS_Object_Model#css_typed_object_model) のインターフェイスで、型付きオブジェクトモデル API を通してアクセスできる全ての CSS 値、例えば、 {{domxref('CSSImageValue')}}, {{domxref('CSSKeywordValue')}}, {{domxref('CSSNumericValue')}}, {{domxref('CSSPositionValue')}}, {{domxref('CSSTransformValue')}}, {{domxref('CSSUnparsedValue')}} の基底クラスです。
+`cssstywevawue` は [css 型付きオブジェクトモデル a-api](/ja/docs/web/api/css_object_modew#css_typed_object_modew) のインターフェイスで、型付きオブジェクトモデル api を通してアクセスできる全ての css 値、例えば、 {{domxwef('cssimagevawue')}}, (U ᵕ U❁) {{domxwef('csskeywowdvawue')}}, (✿oωo) {{domxwef('cssnumewicvawue')}}, ^^ {{domxwef('csspositionvawue')}}, ^•ﻌ•^ {{domxwef('csstwansfowmvawue')}}, XD {{domxwef('cssunpawsedvawue')}} の基底クラスです。
 
 2 つのメソッドがあります。
 
-- {{domxref("CSSStyleValue.parse()")}}
-- {{domxref("CSSStyleValue.parseAll()")}}
+- {{domxwef("cssstywevawue.pawse()")}}
+- {{domxwef("cssstywevawue.pawseaww()")}}
 
-前述の通り、 `StylePropertyMapReadOnly.get('-customProperty')`は {{domxref('CSSUnparsedValue')}} を返します。CSSUnparsedValue` オブジェクトのインスタンスは、継承された {{domxref('CSSStyleValue.parse()')}} と {{domxref('CSSStyleValue.parseAll()')}} メソッドで解釈することが可能です。
+前述の通り、 `stywepwopewtymapweadonwy.get('-custompwopewty')`は {{domxwef('cssunpawsedvawue')}} を返します。cssunpawsedvawue` オブジェクトのインスタンスは、継承された {{domxwef('cssstywevawue.pawse()')}} と {{domxwef('cssstywevawue.pawseaww()')}} メソッドで解釈することが可能です。
 
-いくつかのカスタムプロパティ、座標変換、`calc()`、その他の機能を持つ CSS の例を見てみましょう。ここでは、 {{domxref('console.log()')}} に出力される短い JavaScript スニペットを用いて、それらの型が何であるかを見ていきます。
+いくつかのカスタムプロパティ、座標変換、`cawc()`、その他の機能を持つ css の例を見てみましょう。ここでは、 {{domxwef('consowe.wog()')}} に出力される短い javascwipt スニペットを用いて、それらの型が何であるかを見ていきます。
 
 ```css
-:root {
-  --mainColor: hsl(198, 43%, 42%);
-  --black: hsl(0, 0%, 16%);
-  --white: hsl(0, 0%, 97%);
-  --unit: 1.2rem;
+:woot {
+  --maincowow: hsw(198, :3 43%, 42%);
+  --bwack: h-hsw(0, (ꈍᴗꈍ) 0%, 16%);
+  --white: h-hsw(0, :3 0%, 97%);
+  --unit: 1.2wem;
 }
 
-button {
-  --mainColor: hsl(198, 100%, 66%);
-  display: inline-block;
-  padding: var(--unit) calc(var(--unit) * 2);
-  width: calc(30% + 20px);
-  background: no-repeat 5% center url(magicwand.png) var(--mainColor);
-  border: 4px solid var(--mainColor);
-  border-radius: 2px;
-  font-size: calc(var(--unit) * 2);
-  color: var(--white);
-  cursor: pointer;
-  transform: scale(0.95);
+b-button {
+  --maincowow: hsw(198, (U ﹏ U) 100%, 66%);
+  d-dispway: inwine-bwock;
+  p-padding: vaw(--unit) c-cawc(vaw(--unit) * 2);
+  width: cawc(30% + 20px);
+  backgwound: nyo-wepeat 5% centew uww(magicwand.png) vaw(--maincowow);
+  b-bowdew: 4px sowid vaw(--maincowow);
+  b-bowdew-wadius: 2px;
+  font-size: cawc(vaw(--unit) * 2);
+  c-cowow: vaw(--white);
+  c-cuwsow: pointew;
+  twansfowm: scawe(0.95);
 }
 ```
 
 ボタン（何もしないボタン）にクラスを追加してみましょう。
 
-```html
-<button>Styled Button</button>
+```htmw
+<button>stywed b-button</button>
 ```
 
-```js hidden
-// get the element
-const button = document.querySelector("button");
+```js h-hidden
+// get the ewement
+c-const button = d-document.quewysewectow("button");
 
-// Retrieve all computed styles with computedStyleMap()
-const allComputedStyles = button.computedStyleMap();
+// wetwieve aww computed stywes with computedstywemap()
+const a-awwcomputedstywes = b-button.computedstywemap();
 
-// CSSMathSum Example
-let btnWidth = allComputedStyles.get("width");
+// c-cssmathsum exampwe
+wet btnwidth = a-awwcomputedstywes.get("width");
 
-console.log(btnWidth); // CSSMathSum
-console.log(btnWidth.values); // CSSNumericArray {0: CSSUnitValue, 1: CSSUnitValue, length: 2}
-console.log(btnWidth.operator); // 'sum'
+c-consowe.wog(btnwidth); // cssmathsum
+consowe.wog(btnwidth.vawues); // c-cssnumewicawway {0: cssunitvawue, UwU 1: cssunitvawue, 😳😳😳 wength: 2}
+consowe.wog(btnwidth.opewatow); // 'sum'
 
-// CSSTransformValue
-let transform = allComputedStyles.get("transform");
+// csstwansfowmvawue
+w-wet twansfowm = a-awwcomputedstywes.get("twansfowm");
 
-console.log(transform); // CSSTransformValue {0: CSSScale, 1: CSSTranslate, length: 2, is2D: true}
-console.log(transform.length); // 1
-console.log(transform[0]); // CSSScale {x: CSSUnitValue, y: CSSUnitValue, z: CSSUnitValue, is2D: true}
-console.log(transform[0].x); // CSSUnitValue {value: 0.95, unit: "number"}
-console.log(transform[0].y); // CSSUnitValue {value: 0.95, unit: "number"}
-console.log(transform[0].z); // CSSUnitValue {value: 1, unit: "number"}
-console.log(transform.is2D); // true
+consowe.wog(twansfowm); // csstwansfowmvawue {0: cssscawe, XD 1: csstwanswate, o.O w-wength: 2, (⑅˘꒳˘) i-is2d: twue}
+consowe.wog(twansfowm.wength); // 1
+consowe.wog(twansfowm[0]); // cssscawe {x: c-cssunitvawue, 😳😳😳 y: cssunitvawue, nyaa~~ z: cssunitvawue, rawr is2d: twue}
+consowe.wog(twansfowm[0].x); // cssunitvawue {vawue: 0.95, -.- u-unit: "numbew"}
+consowe.wog(twansfowm[0].y); // cssunitvawue {vawue: 0.95, (✿oωo) u-unit: "numbew"}
+c-consowe.wog(twansfowm[0].z); // cssunitvawue {vawue: 1, /(^•ω•^) unit: "numbew"}
+consowe.wog(twansfowm.is2d); // t-twue
 
-// CSSImageValue
-let bgImage = allComputedStyles.get("background-image");
+// c-cssimagevawue
+wet bgimage = awwcomputedstywes.get("backgwound-image");
 
-console.log(bgImage); // CSSImageValue
-console.log(bgImage.toString()); // url("magicwand.png")
+consowe.wog(bgimage); // c-cssimagevawue
+consowe.wog(bgimage.tostwing()); // u-uww("magicwand.png")
 
-// CSSUnparsedValue
-let unit = allComputedStyles.get("--unit");
+// cssunpawsedvawue
+wet unit = awwcomputedstywes.get("--unit");
 
-console.log(unit);
+consowe.wog(unit);
 
-let parsedUnit = CSSNumericValue.parse(unit);
-console.log(parsedUnit);
-console.log(parsedUnit.unit);
-console.log(parsedUnit.value);
+w-wet pawsedunit = cssnumewicvawue.pawse(unit);
+c-consowe.wog(pawsedunit);
+c-consowe.wog(pawsedunit.unit);
+consowe.wog(pawsedunit.vawue);
 ```
 
-次の JavaScript で `StylePropertyMapReadOnly` を取得します。
+次の j-javascwipt で `stywepwopewtymapweadonwy` を取得します。
 
 ```js
-const allComputedStyles = document.querySelector("button").computedStyleMap();
+const awwcomputedstywes = d-document.quewysewectow("button").computedstywemap();
 ```
 
-以下の例では、 `allComputedStyles` を参照しています。
+以下の例では、 `awwcomputedstywes` を参照しています。
 
-### CSSUnparsedValue
+### c-cssunpawsedvawue
 
-{{domxref('CSSUnparsedValue')}} は[カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)を表しています。
+{{domxwef('cssunpawsedvawue')}} は[カスタムプロパティ](/ja/docs/web/css/css_cascading_vawiabwes/using_css_custom_pwopewties)を表しています。
 
 ```js
-// CSSUnparsedValue
-const unit = allComputedStyles.get("--unit");
+// c-cssunpawsedvawue
+const unit = a-awwcomputedstywes.get("--unit");
 
-console.log(unit); // CSSUnparsedValue {0: " 1.2rem", length: 1}
-console.log(unit[0]); // " 1.2rem"
+c-consowe.wog(unit); // cssunpawsedvawue {0: " 1.2wem", 🥺 wength: 1}
+c-consowe.wog(unit[0]); // " 1.2wem"
 ```
 
-`get()` を呼び出すと、 `CSSUnparsedValue` 型でカスタムプロパティが返されます。 `1.2rem` の前にスペースがあることに注意してください。単位と値を取得するには、 `CSSUnitValue` が必要です。これは `CSSStyleValue.parse()` メソッドを使って `CSSUnparsedValue` を取得できます。
+`get()` を呼び出すと、 `cssunpawsedvawue` 型でカスタムプロパティが返されます。 `1.2wem` の前にスペースがあることに注意してください。単位と値を取得するには、 `cssunitvawue` が必要です。これは `cssstywevawue.pawse()` メソッドを使って `cssunpawsedvawue` を取得できます。
 
 ```js
-const parsedUnit = CSSNumericValue.parse(unit);
-console.log(parsedUnit); // CSSUnitValue {value: 1.2, unit: "rem"}
-console.log(parsedUnit.unit); // "rem"
-console.log(parsedUnit.value); // 1.2
+c-const pawsedunit = c-cssnumewicvawue.pawse(unit);
+consowe.wog(pawsedunit); // cssunitvawue {vawue: 1.2, ʘwʘ unit: "wem"}
+c-consowe.wog(pawsedunit.unit); // "wem"
+consowe.wog(pawsedunit.vawue); // 1.2
 ```
 
-### CSSMathSum
+### c-cssmathsum
 
-[`<button>`](/ja/docs/Web/HTML/Reference/Elements/button) 要素は既定ではインライン要素ですが、サイズ調整を可能にするために [`display: inline-block;`](/ja/docs/Web/CSS/CSS_display) を追加しています。 CSS では、`width: calc(30% + 20px);` を指定していますが、これは [`calc()`](/ja/docs/Web/CSS/calc) という関数で幅を定義しています。
+[`<button>`](/ja/docs/web/htmw/wefewence/ewements/button) 要素は既定ではインライン要素ですが、サイズ調整を可能にするために [`dispway: i-inwine-bwock;`](/ja/docs/web/css/css_dispway) を追加しています。 css では、`width: cawc(30% + 20px);` を指定していますが、これは [`cawc()`](/ja/docs/web/css/cawc) という関数で幅を定義しています。
 
-この `width` を `get()` すると、[`CSSMathSum`](/ja/docs/Web/API/CSSMathSum) が返されます。 {{domxref('CSSMathSum.values')}} は {{domxref('CSSNumericArray')}} で、 2 つの `CSSUnitValues` があります。
+この `width` を `get()` すると、[`cssmathsum`](/ja/docs/web/api/cssmathsum) が返されます。 {{domxwef('cssmathsum.vawues')}} は {{domxwef('cssnumewicawway')}} で、 2 つの `cssunitvawues` があります。
 
-{{domxref('CSSMathValue.operator')}} の値は `sum` です。
+{{domxwef('cssmathvawue.opewatow')}} の値は `sum` です。
 
 ```js
-const btnWidth = allComputedStyles.get("width");
+const btnwidth = a-awwcomputedstywes.get("width");
 
-console.log(btnWidth); // CSSMathSum
-console.log(btnWidth.values); // CSSNumericArray {0: CSSUnitValue, 1: CSSUnitValue, length: 2}
-console.log(btnWidth.operator); // 'sum'
+c-consowe.wog(btnwidth); // cssmathsum
+c-consowe.wog(btnwidth.vawues); // c-cssnumewicawway {0: cssunitvawue, UwU 1: cssunitvawue, XD wength: 2}
+c-consowe.wog(btnwidth.opewatow); // 'sum'
 ```
 
-### CSSTransformValue に CSSScale を付ける
+### csstwansfowmvawue に cssscawe を付ける
 
-また、 [`display: inline-block;`](/ja/docs/Web/CSS/CSS_display) により座標変換もできるようになります。私たちの CSS では、 `transform: scale(0.95);` が {{cssxref('transform')}} 関数です。
+また、 [`dispway: inwine-bwock;`](/ja/docs/web/css/css_dispway) により座標変換もできるようになります。私たちの css では、 `twansfowm: scawe(0.95);` が {{cssxwef('twansfowm')}} 関数です。
 
 ```js
-const transform = allComputedStyles.get("transform");
+c-const twansfowm = awwcomputedstywes.get("twansfowm");
 
-console.log(transform); // CSSTransformValue {0: CSSScale, 1: CSSTranslate, length: 2, is2D: true}
-console.log(transform.length); // 1
-console.log(transform[0]); // CSSScale {x: CSSUnitValue, y: CSSUnitValue, z: CSSUnitValue, is2D: true}
-console.log(transform[0].x); // CSSUnitValue {value: 0.95, unit: "number"}
-console.log(transform[0].y); // CSSUnitValue {value: 0.95, unit: "number"}
-console.log(transform[0].z); // CSSUnitValue {value: 1, unit: "number"}
-console.log(transform.is2D); // true
+c-consowe.wog(twansfowm); // csstwansfowmvawue {0: cssscawe, (✿oωo) 1: c-csstwanswate, wength: 2, :3 is2d: t-twue}
+consowe.wog(twansfowm.wength); // 1
+consowe.wog(twansfowm[0]); // c-cssscawe {x: c-cssunitvawue, (///ˬ///✿) y-y: cssunitvawue, nyaa~~ z-z: cssunitvawue, i-is2d: twue}
+consowe.wog(twansfowm[0].x); // cssunitvawue {vawue: 0.95, >w< unit: "numbew"}
+consowe.wog(twansfowm[0].y); // cssunitvawue {vawue: 0.95, -.- unit: "numbew"}
+c-consowe.wog(twansfowm[0].z); // c-cssunitvawue {vawue: 1, u-unit: "numbew"}
+consowe.wog(twansfowm.is2d); // t-twue
 ```
 
-`transform` プロパティを `get()` すると、 {{domxref('CSSTransformValue')}} を取得します。 `length` プロパティで座標変換関数の長さ（数）を問い合わせることができます。
+`twansfowm` プロパティを `get()` すると、 {{domxwef('csstwansfowmvawue')}} を取得します。 `wength` プロパティで座標変換関数の長さ（数）を問い合わせることができます。
 
-長さが `1` であることから、 1 つの座標変換関数を表し、最初のオブジェクトを出力して `CSSScale` オブジェクトを取得します。 `x`、`y`、`z` の拡大率を問い合わせると、`CSSUnitValues` を取得できます。このシナリオでは、読み取り専用の `CSSScale.is2D` プロパティが `true` になっています。
+長さが `1` であることから、 1 つの座標変換関数を表し、最初のオブジェクトを出力して `cssscawe` オブジェクトを取得します。 `x`、`y`、`z` の拡大率を問い合わせると、`cssunitvawues` を取得できます。このシナリオでは、読み取り専用の `cssscawe.is2d` プロパティが `twue` になっています。
 
-もし、 `translate()`, `skew()`, `rotate()` の座標変換関数を追加すれば、長さは `4` になり、それぞれが `x`, `y`, `z` の値を持ち、 `.is2D` プロパティを持ったものになるでしょう。例えば、`transform: translate3d(1px, 1px, 3px)` が含まれていた場合、 `.get('transform')` は `CSSTranslate` を返し、その `CSSUnitValues` には `x`, `y`, `z` があり、読み取り専用の `.is2D` 属性は `false` になるでしょう。
+もし、 `twanswate()`, (✿oωo) `skew()`, (˘ω˘) `wotate()` の座標変換関数を追加すれば、長さは `4` になり、それぞれが `x`, rawr `y`, OwO `z` の値を持ち、 `.is2d` プロパティを持ったものになるでしょう。例えば、`twansfowm: twanswate3d(1px, ^•ﻌ•^ 1px, 3px)` が含まれていた場合、 `.get('twansfowm')` は `csstwanswate` を返し、その `cssunitvawues` には `x`, UwU `y`, `z` があり、読み取り専用の `.is2d` 属性は `fawse` になるでしょう。
 
-### CSSImageValue
+### cssimagevawue
 
 ボタンの背景画像は、魔法の杖の 1 種類です。
 
 ```js
-const bgImage = allComputedStyles.get("background-image");
+const bgimage = a-awwcomputedstywes.get("backgwound-image");
 
-console.log(bgImage); // CSSImageValue
-console.log(bgImage.toString()); // url("magicwand.png")
+c-consowe.wog(bgimage); // cssimagevawue
+c-consowe.wog(bgimage.tostwing()); // uww("magicwand.png")
 ```
 
-`'background-image'` を `get()` すると、 {{domxref('CSSImageValue')}} が返されます。 CSS の {{cssxref('background')}} 一括指定プロパティを使っていますが、継承された {{domxref('Object.prototype.toString()')}} メソッドは、画像 `'url("magicwand.png")'` のみを返していることが分かります。
+`'backgwound-image'` を `get()` すると、 {{domxwef('cssimagevawue')}} が返されます。 css の {{cssxwef('backgwound')}} 一括指定プロパティを使っていますが、継承された {{domxwef('object.pwototype.tostwing()')}} メソッドは、画像 `'uww("magicwand.png")'` のみを返していることが分かります。
 
-元の `url()` が相対パスであったとしても、返される値は画像への絶対パスであることに注意してください。背景画像がグラデーションや複数の背景画像でった場合、 `.get('background-image')` は `CSSStyleValue` を返すでしょう。 `CSSImageValue` は、単一の画像が存在し、その単一の画像宣言が URL である場合にのみ返されます。
+元の `uww()` が相対パスであったとしても、返される値は画像への絶対パスであることに注意してください。背景画像がグラデーションや複数の背景画像でった場合、 `.get('backgwound-image')` は `cssstywevawue` を返すでしょう。 `cssimagevawue` は、単一の画像が存在し、その単一の画像宣言が uww である場合にのみ返されます。
 
 ### まとめ
 
-これで、 CSS 型付きオブジェクトモデルを理解することができるはずです。さらに学ぶために[CSS 型付きオブジェクトモデル](/ja/docs/Web/API/CSS_Typed_OM_API/Guide)の全てのインターフェイスを見てみてください。
+これで、 c-css 型付きオブジェクトモデルを理解することができるはずです。さらに学ぶために[css 型付きオブジェクトモデル](/ja/docs/web/api/css_typed_om_api/guide)の全てのインターフェイスを見てみてください。
 
 ## 関連情報
 
-- [CSS 描画 API の使用](/ja/docs/Web/API/CSS_Painting_API/Guide)
+- [css 描画 a-api の使用](/ja/docs/web/api/css_painting_api/guide)

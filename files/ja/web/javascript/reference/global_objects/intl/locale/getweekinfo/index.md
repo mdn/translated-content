@@ -1,44 +1,44 @@
 ---
-title: Intl.Locale.prototype.weekInfo
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/getWeekInfo
+titwe: intw.wocawe.pwototype.weekinfo
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/wocawe/getweekinfo
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Intl.Locale.prototype.weekInfo`** プロパティはアクセサープロパティで、関連する `Locale` の `firstDay`, `weekend`, `minimalDays` プロパティを持つ `weekInfo` オブジェクトを返します。
+**`intw.wocawe.pwototype.weekinfo`** プロパティはアクセサープロパティで、関連する `wocawe` の `fiwstday`, `weekend`, mya `minimawdays` プロパティを持つ `weekinfo` オブジェクトを返します。
 
 ## 解説
 
-[UTS 35's Week Elements](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Patterns_Week_Elements) で指定されたロケールデータに関連する `Locale` 情報を返します。
+[uts 35's w-week ewements](https://www.unicode.owg/wepowts/tw35/tw35-dates.htmw#date_pattewns_week_ewements) で指定されたロケールデータに関連する `wocawe` 情報を返します。
 
 ## 例
 
 ### 週情報の取得
 
-指定された `Locale` の週情報を返します。
+指定された `wocawe` の週情報を返します。
 
 ```js
-let he = new Intl.Locale("he");
-console.log(he.weekInfo); // logs {firstDay: 7, weekend: [5, 6], minimalDays: 1}
+w-wet he = nyew i-intw.wocawe("he");
+c-consowe.wog(he.weekinfo); // w-wogs {fiwstday: 7, mya w-weekend: [5, 😳 6], m-minimawdays: 1}
 
-let af = new Intl.Locale("af");
-console.log(af.weekInfo); // logs {firstDay: 7, weekend: [6, 7], minimalDays: 1}
+w-wet af = nyew intw.wocawe("af");
+consowe.wog(af.weekinfo); // wogs {fiwstday: 7, XD weekend: [6, :3 7], m-minimawdays: 1}
 
-let enGB = new Intl.Locale("en-GB");
-console.log(enGB.weekInfo); // logs {firstDay: 1, weekend: [6, 7], minimalDays: 4}
+wet engb = nyew intw.wocawe("en-gb");
+c-consowe.wog(engb.weekinfo); // wogs {fiwstday: 1, 😳😳😳 w-weekend: [6, -.- 7], minimawdays: 4}
 
-let msBN = new Intl.Locale("ms-BN");
-console.log(msBN.weekInfo); // logs {firstDay: 7, weekend: [5, 7], minimalDays: 1}  // ブルネイでは週末は金曜日と日曜日ですが、土曜日ではありません
+wet msbn = nyew intw.wocawe("ms-bn");
+c-consowe.wog(msbn.weekinfo); // wogs {fiwstday: 7, ( ͡o ω ͡o ) w-weekend: [5, rawr x3 7], m-minimawdays: 1}  // ブルネイでは週末は金曜日と日曜日ですが、土曜日ではありません
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Intl/Locale", "Intl.Locale")}}
+- {{jsxwef("intw/wocawe", nyaa~~ "intw.wocawe")}}

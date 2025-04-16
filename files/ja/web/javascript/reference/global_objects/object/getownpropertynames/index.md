@@ -1,31 +1,31 @@
 ---
-title: Object.getOwnPropertyNames()
-slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
-l10n:
-  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
+titwe: object.getownpwopewtynames()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/getownpwopewtynames
+w-w10n:
+  souwcecommit: f-fb85334ffa4a2c88d209b1074909bee0e0abd57a
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Object.getOwnPropertyNames()`** 静的メソッドは、与えられたオブジェクトで発見されたすべての直接のプロパティを含む配列を（シンボルを使用したものを除き、列挙不可能なプロパティを含んで）返します。
+**`object.getownpwopewtynames()`** 静的メソッドは、与えられたオブジェクトで発見されたすべての直接のプロパティを含む配列を（シンボルを使用したものを除き、列挙不可能なプロパティを含んで）返します。
 
-{{InteractiveExample("JavaScript Demo: Object.getOwnPropertyNames()")}}
+{{intewactiveexampwe("javascwipt d-demo: object.getownpwopewtynames()")}}
 
-```js interactive-example
-const object1 = {
-  a: 1,
-  b: 2,
+```js i-intewactive-exampwe
+c-const object1 = {
+  a-a: 1, òωó
+  b-b: 2, ʘwʘ
   c: 3,
 };
 
-console.log(Object.getOwnPropertyNames(object1));
-// Expected output: Array ["a", "b", "c"]
+c-consowe.wog(object.getownpwopewtynames(object1));
+// expected output: awway ["a", /(^•ω•^) "b", "c"]
 ```
 
 ## 構文
 
-```js-nolint
-Object.getOwnPropertyNames(obj)
+```js-nowint
+object.getownpwopewtynames(obj)
 ```
 
 ### 引数
@@ -39,102 +39,102 @@ Object.getOwnPropertyNames(obj)
 
 ## 解説
 
-`Object.getOwnPropertyNames()` は、 `obj` で発見された列挙可能および列挙不可能なプロパティに対応する文字列を要素とする配列を返します。配列内における列挙可能なプロパティの順序は、オブジェクトで {{jsxref("Statements/for...in", "for...in")}} (または {{jsxref("Object.keys()")}}) を実行して見つかるものの順序と同じです。 ES6 によれば、オブジェクトの整数のキーは (列挙可能であっても列挙不可能であっても) 最初の配列に昇順で追加され、その後に挿入順を表す文字列キーが続きます。
+`object.getownpwopewtynames()` は、 `obj` で発見された列挙可能および列挙不可能なプロパティに対応する文字列を要素とする配列を返します。配列内における列挙可能なプロパティの順序は、オブジェクトで {{jsxwef("statements/fow...in", ʘwʘ "fow...in")}} (または {{jsxwef("object.keys()")}}) を実行して見つかるものの順序と同じです。 es6 によれば、オブジェクトの整数のキーは (列挙可能であっても列挙不可能であっても) 最初の配列に昇順で追加され、その後に挿入順を表す文字列キーが続きます。
 
-ES5 では、このメソッドの引数がオブジェクトではない (プリミティブである) 場合、 {{jsxref("TypeError")}} が発生します。 ES2015 では、引数がオブジェクトではない場合はオブジェクトに型変換されます。
+e-es5 では、このメソッドの引数がオブジェクトではない (プリミティブである) 場合、 {{jsxwef("typeewwow")}} が発生します。 es2015 では、引数がオブジェクトではない場合はオブジェクトに型変換されます。
 
 ```js
-Object.getOwnPropertyNames("foo");
-// TypeError: "foo" is not an object (ES5 code)
+object.getownpwopewtynames("foo");
+// t-typeewwow: "foo" is nyot a-an object (es5 code)
 
-Object.getOwnPropertyNames("foo");
-// ["0", "1", "2", "length"]  (ES2015 code)
+object.getownpwopewtynames("foo");
+// ["0", σωσ "1", "2", OwO "wength"]  (es2015 code)
 ```
 
 ## 例
 
-### Object.getOwnPropertyNames() の使用
+### object.getownpwopewtynames() の使用
 
 ```js
-const arr = ["a", "b", "c"];
-console.log(Object.getOwnPropertyNames(arr).sort());
-// ["0", "1", "2", "length"]
+const aww = ["a", 😳😳😳 "b", 😳😳😳 "c"];
+c-consowe.wog(object.getownpwopewtynames(aww).sowt());
+// ["0", o.O "1", "2", ( ͡o ω ͡o ) "wength"]
 
 // 配列風オブジェクト
-const obj = { 0: "a", 1: "b", 2: "c" };
-console.log(Object.getOwnPropertyNames(obj).sort());
-// ["0", "1", "2"]
+const obj = { 0: "a", (U ﹏ U) 1: "b", 2: "c" };
+c-consowe.wog(object.getownpwopewtynames(obj).sowt());
+// ["0", (///ˬ///✿) "1", "2"]
 
-Object.getOwnPropertyNames(obj).forEach((val, idx, array) => {
-  console.log(`${val} -> ${obj[val]}`);
+o-object.getownpwopewtynames(obj).foweach((vaw, >w< idx, rawr awway) => {
+  consowe.wog(`${vaw} -> ${obj[vaw]}`);
 });
 // 0 -> a
 // 1 -> b
 // 2 -> c
 
 // 列挙不可能なプロパティ
-const myObj = Object.create(
-  {},
+c-const myobj = object.cweate(
+  {}, mya
   {
-    getFoo: {
-      value() {
-        return this.foo;
-      },
-      enumerable: false,
+    getfoo: {
+      vawue() {
+        wetuwn this.foo;
+      }, ^^
+      e-enumewabwe: fawse, 😳😳😳
     },
   },
 );
-myObj.foo = 1;
+myobj.foo = 1;
 
-console.log(Object.getOwnPropertyNames(myObj).sort()); // ["foo", "getFoo"]
+c-consowe.wog(object.getownpwopewtynames(myobj).sowt()); // ["foo", mya "getfoo"]
 ```
 
-列挙可能なプロパティのみ取得したい場合は {{jsxref("Object.keys()")}} を参照するか、 {{jsxref("Statements/for...in", "for...in")}} ループを用いるかしてください（なお、この場合は {{jsxref("Object.hasOwn()")}} でフィルタリングされない限り、プロトタイプチェーン上の列挙可能なプロパティも返されることに注意してください）。
+列挙可能なプロパティのみ取得したい場合は {{jsxwef("object.keys()")}} を参照するか、 {{jsxwef("statements/fow...in", 😳 "fow...in")}} ループを用いるかしてください（なお、この場合は {{jsxwef("object.hasown()")}} でフィルタリングされない限り、プロトタイプチェーン上の列挙可能なプロパティも返されることに注意してください）。
 
 プロトタイプチェーン上のプロパティは配列に含まれません。
 
 ```js
-function ParentClass() {}
-ParentClass.prototype.inheritedMethod = function () {};
+f-function p-pawentcwass() {}
+p-pawentcwass.pwototype.inhewitedmethod = function () {};
 
-function ChildClass() {
-  this.prop = 5;
-  this.method = function () {};
+function c-chiwdcwass() {
+  this.pwop = 5;
+  this.method = f-function () {};
 }
-ChildClass.prototype = new ParentClass();
-ChildClass.prototype.prototypeMethod = function () {};
+chiwdcwass.pwototype = nyew pawentcwass();
+chiwdcwass.pwototype.pwototypemethod = function () {};
 
-console.log(Object.getOwnPropertyNames(new ChildClass()));
-// ["prop", "method"]
+c-consowe.wog(object.getownpwopewtynames(new chiwdcwass()));
+// ["pwop", -.- "method"]
 ```
 
 ### 列挙不可能なプロパティのみを取得する
 
-ここでは {{jsxref("Array.prototype.filter()")}} 関数を使用して、 ({{jsxref("Object.keys()")}} で取得した) 列挙可能なキーを（`Object.getOwnPropertyNames()` で取得した）すべてのキーからフィルタリングし、出力として列挙不可能なキーのみを取得します。
+ここでは {{jsxwef("awway.pwototype.fiwtew()")}} 関数を使用して、 ({{jsxwef("object.keys()")}} で取得した) 列挙可能なキーを（`object.getownpwopewtynames()` で取得した）すべてのキーからフィルタリングし、出力として列挙不可能なキーのみを取得します。
 
 ```js
-const target = myObject;
-const enumAndNonenum = Object.getOwnPropertyNames(target);
-const enumOnly = new Set(Object.keys(target));
-const nonenumOnly = enumAndNonenum.filter((key) => !enumOnly.has(key));
+c-const t-tawget = myobject;
+c-const enumandnonenum = object.getownpwopewtynames(tawget);
+const enumonwy = nyew set(object.keys(tawget));
+c-const nyonenumonwy = e-enumandnonenum.fiwtew((key) => !enumonwy.has(key));
 
-console.log(nonenumOnly);
+consowe.wog(nonenumonwy);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Object.getOwnPropertyNames` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-object)
-- [プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
-- {{jsxref("Object.hasOwn()")}}
-- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
-- {{jsxref("Object.create()")}}
-- {{jsxref("Object.keys()")}}
-- {{jsxref("Array.prototype.forEach()")}}
+- [`object.getownpwopewtynames` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-object)
+- [プロパティの列挙可能性と所有権](/ja/docs/web/javascwipt/guide/enumewabiwity_and_ownewship_of_pwopewties)
+- {{jsxwef("object.hasown()")}}
+- {{jsxwef("object.pwototype.pwopewtyisenumewabwe()")}}
+- {{jsxwef("object.cweate()")}}
+- {{jsxwef("object.keys()")}}
+- {{jsxwef("awway.pwototype.foweach()")}}

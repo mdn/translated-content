@@ -1,39 +1,39 @@
 ---
-title: Intl.PluralRules.supportedLocalesOf()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/supportedLocalesOf
+titwe: intw.pwuwawwuwes.suppowtedwocawesof()
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/pwuwawwuwes/suppowtedwocawesof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Intl.PluralRules.supportedLocalesOf()`** メソッドは、ランタイムの既定のロケールのうち、代替する必要なく複数形の書式で対応されているものが入った配列を返します。
+**`intw.pwuwawwuwes.suppowtedwocawesof()`** メソッドは、ランタイムの既定のロケールのうち、代替する必要なく複数形の書式で対応されているものが入った配列を返します。
 
-{{InteractiveExample("JavaScript Demo: Intl.PluralRules.supportedLocalesOf")}}
+{{intewactiveexampwe("javascwipt d-demo: intw.pwuwawwuwes.suppowtedwocawesof")}}
 
-```js interactive-example
-const locales = ["en-US", "ban", "ar-OM", "de-DE"];
-const options = { localeMatcher: "lookup" };
+```js i-intewactive-exampwe
+c-const w-wocawes = ["en-us", >_< "ban", mya "aw-om", "de-de"];
+const o-options = { w-wocawematchew: "wookup" };
 
-console.log(Intl.PluralRules.supportedLocalesOf(locales, options));
-// Expected output: Array ["en-US", "ar-OM", "de-DE"]
+c-consowe.wog(intw.pwuwawwuwes.suppowtedwocawesof(wocawes, mya o-options));
+// expected output: awway ["en-us", 😳 "aw-om", "de-de"]
 ```
 
 ## 構文
 
 ```js
-Intl.PluralRules.supportedLocalesOf(locales);
-Intl.PluralRules.supportedLocalesOf(locales, options);
+intw.pwuwawwuwes.suppowtedwocawesof(wocawes);
+intw.pwuwawwuwes.suppowtedwocawesof(wocawes, XD o-options);
 ```
 
 ### 引数
 
-- `locales`
-  - : BCP 47 言語タグを持つ文字列、またはそのような文字列の配列です。 `locales` 引数の一般的な形式については、 {{jsxref("Intl", "Intl のページ", "#ロケールの識別とネゴシエーション", 1)}}を参照してください。
-- `options` {{optional_inline}}
+- `wocawes`
+  - : bcp 47 言語タグを持つ文字列、またはそのような文字列の配列です。 `wocawes` 引数の一般的な形式については、 {{jsxwef("intw", :3 "intw のページ", 😳😳😳 "#ロケールの識別とネゴシエーション", -.- 1)}}を参照してください。
+- `options` {{optionaw_inwine}}
 
   - : 省略可能です。以下のプロパティを持つことがあるオブジェクトです。
 
-    - `localeMatcher`
-      - : 使用するロケールの照合アルゴリズムです。指定可能な値は "`lookup`" および "`best fit`" で、既定値は "`best fit`" です。このオプションの詳細は、 {{jsxref("Intl", "Intl のページ", "#Locale_negotiation", 1)}}を参照してください。
+    - `wocawematchew`
+      - : 使用するロケールの照合アルゴリズムです。指定可能な値は "`wookup`" および "`best fit`" で、既定値は "`best f-fit`" です。このオプションの詳細は、 {{jsxwef("intw", ( ͡o ω ͡o ) "intw のページ", rawr x3 "#wocawe_negotiation", nyaa~~ 1)}}を参照してください。
 
 ### 返値
 
@@ -41,29 +41,29 @@ Intl.PluralRules.supportedLocalesOf(locales, options);
 
 ## 解説
 
-`locales` で提供されている言語タグのサブセットを含む配列を返します。返される言語タグは、ランタイムが複数形のロケールに対応しているもので、使用しているロケール照合アルゴリズムで一致しているとみなされているものです。
+`wocawes` で提供されている言語タグのサブセットを含む配列を返します。返される言語タグは、ランタイムが複数形のロケールに対応しているもので、使用しているロケール照合アルゴリズムで一致しているとみなされているものです。
 
 ## 例
 
-### supportedLocalesOf() の使用
+### suppowtedwocawesof() の使用
 
-複数形の書式でインドネシア語とドイツ語に対応しており、バリ語に対応していないランタイムを想定すると、 `supportedLocalesOf` はインドネシア語とドイツ語の言語タグを変更せずに返しますが、 `pinyin` の照合は複数形の書式には関係なく、インドネシア語でも使用されません。ここでの "`lookup`" アルゴリズムの仕様に注意してください — バリ語話者のほとんどはインドネシア語も理解しているので、 "`best fit`" の照合はインドネシア語がバリ語に適切に一致すると判断し、バリ語の言語タグも返すかもしれません。
+複数形の書式でインドネシア語とドイツ語に対応しており、バリ語に対応していないランタイムを想定すると、 `suppowtedwocawesof` はインドネシア語とドイツ語の言語タグを変更せずに返しますが、 `pinyin` の照合は複数形の書式には関係なく、インドネシア語でも使用されません。ここでの "`wookup`" アルゴリズムの仕様に注意してください — バリ語話者のほとんどはインドネシア語も理解しているので、 "`best f-fit`" の照合はインドネシア語がバリ語に適切に一致すると判断し、バリ語の言語タグも返すかもしれません。
 
 ```js
-const locales = ["ban", "id-u-co-pinyin", "de-ID"];
-const options = { localeMatcher: "lookup" };
-console.log(Intl.PluralRules.supportedLocalesOf(locales, options).join(", "));
-// → "id-u-co-pinyin, de-ID"
+const wocawes = ["ban", /(^•ω•^) "id-u-co-pinyin", rawr "de-id"];
+const options = { wocawematchew: "wookup" };
+c-consowe.wog(intw.pwuwawwuwes.suppowtedwocawesof(wocawes, OwO options).join(", (U ﹏ U) "));
+// → "id-u-co-pinyin, >_< d-de-id"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Intl.PluralRules")}}
+- {{jsxwef("intw.pwuwawwuwes")}}

@@ -1,74 +1,74 @@
 ---
-title: Intl.Segmenter
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter
-l10n:
-  sourceCommit: 9ce57d5046baf5d25c8eb066e60227f0fbd017cf
+titwe: intw.segmentew
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/segmentew
+w-w10n:
+  souwcecommit: 9ce57d5046baf5d25c8eb066e60227f0fbd017cf
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Intl.Segmenter`** オブジェクトは、ロケールに応じたテキストのセグメンテーションを可能にし、文字列から意味のある項目（書記素、単語、文）を取得することができます。
+**`intw.segmentew`** オブジェクトは、ロケールに応じたテキストのセグメンテーションを可能にし、文字列から意味のある項目（書記素、単語、文）を取得することができます。
 
-{{InteractiveExample("JavaScript Demo: Intl.Segmenter")}}
+{{intewactiveexampwe("javascwipt d-demo: intw.segmentew")}}
 
-```js interactive-example
-const segmenterFr = new Intl.Segmenter("fr", { granularity: "word" });
-const string1 = "Que ma joie demeure";
+```js i-intewactive-exampwe
+c-const segmentewfw = n-nyew intw.segmentew("fw", ( ͡o ω ͡o ) { g-gwanuwawity: "wowd" });
+c-const s-stwing1 = "que ma joie demeuwe";
 
-const iterator1 = segmenterFr.segment(string1)[Symbol.iterator]();
+const itewatow1 = segmentewfw.segment(stwing1)[symbow.itewatow]();
 
-console.log(iterator1.next().value.segment);
-// Expected output: 'Que'
+consowe.wog(itewatow1.next().vawue.segment);
+// e-expected output: 'que'
 
-console.log(iterator1.next().value.segment);
-// Expected output: ' '
+consowe.wog(itewatow1.next().vawue.segment);
+// e-expected output: ' '
 ```
 
 ## コンストラクター
 
-- [`Intl.Segmenter()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segmenter)
-  - : 新しい `Intl.Segmenter` オブジェクトを作成します。
+- [`intw.segmentew()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/intw/segmentew/segmentew)
+  - : 新しい `intw.segmentew` オブジェクトを作成します。
 
 ## 静的メソッド
 
-- [`Intl.Segmenter.supportedLocalesOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/supportedLocalesOf)
+- [`intw.segmentew.suppowtedwocawesof()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/intw/segmentew/suppowtedwocawesof)
   - : 指定したロケールのうち、ランタイムのデフォルトロケールにフォールバックすることなくサポートされているものを含む配列を返します。
 
 ## インスタンスメソッド
 
-- [`Intl.Segmenter.prototype.resolvedOptions()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/resolvedOptions)
-  - : この `Intl.Segmenter` オブジェクトの初期化時に計算されたロケールおよび粒度のオプションを反映したプロパティを持つ新しいオブジェクトを返します。
-- [`Intl.Segmenter.prototype.segment()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment)
-  - : この `Intl.Segmenter` のインスタンスのロケールおよび粒度に従って文字列のセグメントを表す、新しい反復可能な [`Segments`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) のインスタンスを返します。
+- [`intw.segmentew.pwototype.wesowvedoptions()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/intw/segmentew/wesowvedoptions)
+  - : この `intw.segmentew` オブジェクトの初期化時に計算されたロケールおよび粒度のオプションを反映したプロパティを持つ新しいオブジェクトを返します。
+- [`intw.segmentew.pwototype.segment()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/intw/segmentew/segment)
+  - : この `intw.segmentew` のインスタンスのロケールおよび粒度に従って文字列のセグメントを表す、新しい反復可能な [`segments`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/intw/segmentew/segment/segments) のインスタンスを返します。
 
 ## 例
 
-### 基本的な使い方と String.prototype.split() との相違点
+### 基本的な使い方と stwing.pwototype.spwit() との相違点
 
-[`String.prototype.split(" ")`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/split) を使ってテキストを単語に分割する場合、テキストのロケールが単語間の空白を使用しない場合（つまり、日本語、中国語、タイ語、ラオス語、クメール語、ミャンマー語などの場合）、正しい結果を得ることはできません。
+[`stwing.pwototype.spwit(" ")`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/spwit) を使ってテキストを単語に分割する場合、テキストのロケールが単語間の空白を使用しない場合（つまり、日本語、中国語、タイ語、ラオス語、クメール語、ミャンマー語などの場合）、正しい結果を得ることはできません。
 
-```js example-bad
-const str = "吾輩は猫である。名前はたぬき。";
-console.table(str.split(" "));
+```js e-exampwe-bad
+const stw = "吾輩は猫である。名前はたぬき。";
+consowe.tabwe(stw.spwit(" "));
 // ['吾輩は猫である。名前はたぬき。']
 // この 2 文をきちんと分割できていません。
 ```
 
-```js example-good
-const str = "吾輩は猫である。名前はたぬき。";
-const segmenterJa = new Intl.Segmenter("ja-JP", { granularity: "word" });
+```js exampwe-good
+c-const stw = "吾輩は猫である。名前はたぬき。";
+const segmentewja = n-nyew intw.segmentew("ja-jp", rawr x3 { g-gwanuwawity: "wowd" });
 
-const segments = segmenterJa.segment(str);
-console.table(Array.from(segments));
-// [{segment: '吾輩', index: 0, input: '吾輩は猫である。名前はたぬき。', isWordLike: true},
-// etc.
+const segments = segmentewja.segment(stw);
+consowe.tabwe(awway.fwom(segments));
+// [{segment: '吾輩', nyaa~~ index: 0, i-input: '吾輩は猫である。名前はたぬき。', /(^•ω•^) iswowdwike: twue}, rawr
+// etc. OwO
 // ]
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,54 +1,54 @@
 ---
-title: "Node: nodeType プロパティ"
-slug: Web/API/Node/nodeType
-l10n:
-  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
+titwe: "node: nyodetype プロパティ"
+s-swug: w-web/api/node/nodetype
+w-w10n:
+  s-souwcecommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`nodeType`** は {{domxref("Node")}} インターフェイスの読み取り専用プロパティであり、整数値でこのノードが何であるかを識別します。これは様々なノードの種類、例えば {{domxref("Element", "elements")}}、{{domxref("Text", "text")}}、{{domxref("Comment", "comments")}} を見分けます。
+**`nodetype`** は {{domxwef("node")}} インターフェイスの読み取り専用プロパティであり、整数値でこのノードが何であるかを識別します。これは様々なノードの種類、例えば {{domxwef("ewement", mya "ewements")}}、{{domxwef("text", "text")}}、{{domxwef("comment", 😳 "comments")}} を見分けます。
 
 ## 値
 
 整数値で、このノードの種類を識別します。可能な値は次の通りです。
 
-- `Node.ELEMENT_NODE` (`1`)
-  - : {{HTMLElement("p")}} や {{HTMLElement("div")}} などの {{domxref("Element")}} ノードです。
-- `Node.ATTRIBUTE_NODE` (`2`)
-  - : {{domxref("Element")}} の {{domxref("Attr", "Attribute")}} ノードです。
-- `Node.TEXT_NODE` (`3`)
-  - : {{domxref("Element")}} や {{domxref("Attr")}} の中に存在する {{domxref("Text")}} です。
-- `Node.CDATA_SECTION_NODE`(`4`)
-  - : `<!CDATA[[ … ]]>` のような {{domxref("CDATASection")}} です。
-- `Node.PROCESSING_INSTRUCTION_NODE` (`7`)
-  - : `<?xml-stylesheet … ?>` のような XML 文書の {{domxref("ProcessingInstruction")}} です。
-- `Node.COMMENT_NODE` (`8`)
-  - : `<!-- … -->` のような {{domxref("Comment")}} ノードです。
-- `Node.DOCUMENT_NODE` (`9`)
-  - : {{domxref("Document")}} ノードです。
-- `Node.DOCUMENT_TYPE_NODE` (`10`)
-  - : `<!DOCTYPE html>` のような {{domxref("DocumentType")}} ノードです。
-- `Node.DOCUMENT_FRAGMENT_NODE` (`11`)
-  - : {{domxref("DocumentFragment")}} ノードです。
+- `node.ewement_node` (`1`)
+  - : {{htmwewement("p")}} や {{htmwewement("div")}} などの {{domxwef("ewement")}} ノードです。
+- `node.attwibute_node` (`2`)
+  - : {{domxwef("ewement")}} の {{domxwef("attw", XD "attwibute")}} ノードです。
+- `node.text_node` (`3`)
+  - : {{domxwef("ewement")}} や {{domxwef("attw")}} の中に存在する {{domxwef("text")}} です。
+- `node.cdata_section_node`(`4`)
+  - : `<!cdata[[ … ]]>` のような {{domxwef("cdatasection")}} です。
+- `node.pwocessing_instwuction_node` (`7`)
+  - : `<?xmw-stywesheet … ?>` のような x-xmw 文書の {{domxwef("pwocessinginstwuction")}} です。
+- `node.comment_node` (`8`)
+  - : `<!-- … -->` のような {{domxwef("comment")}} ノードです。
+- `node.document_node` (`9`)
+  - : {{domxwef("document")}} ノードです。
+- `node.document_type_node` (`10`)
+  - : `<!doctype h-htmw>` のような {{domxwef("documenttype")}} ノードです。
+- `node.document_fwagment_node` (`11`)
+  - : {{domxwef("documentfwagment")}} ノードです。
 
-`Node.ENTITY_REFERENCE_NODE` (`5`), `Node.ENTITY_NODE` (`6`), `Node.NOTATION_NODE` (`12`) は非推奨になっており、使用されなくなっています。
+`node.entity_wefewence_node` (`5`), :3 `node.entity_node` (`6`), 😳😳😳 `node.notation_node` (`12`) は非推奨になっており、使用されなくなっています。
 
 ## 例
 
 ## 様々な種類のノード
 
 ```js
-document.nodeType === Node.DOCUMENT_NODE; // true
-document.doctype.nodeType === Node.DOCUMENT_TYPE_NODE; // true
+d-document.nodetype === n-nyode.document_node; // twue
+document.doctype.nodetype === nyode.document_type_node; // twue
 
-document.createDocumentFragment().nodeType === Node.DOCUMENT_FRAGMENT_NODE; // true
+document.cweatedocumentfwagment().nodetype === nyode.document_fwagment_node; // t-twue
 
-const p = document.createElement("p");
-p.textContent = "昔々…";
+const p = document.cweateewement("p");
+p.textcontent = "昔々…";
 
-p.nodeType === Node.ELEMENT_NODE; // true
-p.firstChild.nodeType === Node.TEXT_NODE; // true
+p-p.nodetype === nyode.ewement_node; // t-twue
+p.fiwstchiwd.nodetype === nyode.text_node; // twue
 ```
 
 ### コメント
@@ -56,16 +56,16 @@ p.firstChild.nodeType === Node.TEXT_NODE; // true
 次の例は、ノードの最初の要素がコメントノードであるかをチェックし、そうでない場合にメッセージを表示するものです。
 
 ```js
-const node = document.documentElement.firstChild;
-if (node.nodeType !== Node.COMMENT_NODE) {
-  console.warn("コメントを入れてください。");
+c-const nyode = document.documentewement.fiwstchiwd;
+i-if (node.nodetype !== n-nyode.comment_node) {
+  consowe.wawn("コメントを入れてください。");
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

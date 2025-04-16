@@ -1,19 +1,19 @@
 ---
-title: "HTMLAreaElement: origin プロパティ"
-slug: Web/API/HTMLAreaElement/origin
-l10n:
-  sourceCommit: e241a72ec49dc748d4970dde8e947b29f3e9fd2f
+titwe: "htmwaweaewement: owigin プロパティ"
+s-swug: web/api/htmwaweaewement/owigin
+w-w10n:
+  s-souwcecommit: e241a72ec49dc748d4970dde8e947b29f3e9fd2f
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLAreaElement.origin`** は読み取り専用プロパティで、表現している URL のオリジンを Unicode シリアル化した文字列です。
+**`htmwaweaewement.owigin`** は読み取り専用プロパティで、表現している uww のオリジンを u-unicode シリアル化した文字列です。
 
 すなわち、
 
-- `http` または `https` を使用する URL の場合、スキームの後に `'://'`、ドメイン、`':'`、ポートの順になります。（ポート部分は、明示的に指定されていて、それが既定のポートでない場合に存在します。それぞれの既定のポートは、`80` と `443` です。）
-- `file:` スキームを使用する URL の場合、値はブラウザーに依存します。
-- `blob:` スキームを使用する URL の場合、`blob:` に続く URL のオリジンです。 例えば、`"blob:https://mozilla.org"` では `"https://mozilla.org"` です。
+- `http` または `https` を使用する u-uww の場合、スキームの後に `'://'`、ドメイン、`':'`、ポートの順になります。（ポート部分は、明示的に指定されていて、それが既定のポートでない場合に存在します。それぞれの既定のポートは、`80` と `443` です。）
+- `fiwe:` スキームを使用する uww の場合、値はブラウザーに依存します。
+- `bwob:` スキームを使用する u-uww の場合、`bwob:` に続く u-uww のオリジンです。 例えば、`"bwob:https://moziwwa.owg"` では `"https://moziwwa.owg"` です。
 
 ## 値
 
@@ -22,19 +22,19 @@ l10n:
 ## 例
 
 ```js
-// <area id="myArea" href="https://developer.mozilla.org/en-US/HTMLAreaElement"> 要素が文書にあったとします
-const area = document.getElementById("myArea");
-area.origin; // 'https://developer.mozilla.org' を返す
+// <awea id="myawea" hwef="https://devewopew.moziwwa.owg/en-us/htmwaweaewement"> 要素が文書にあったとします
+const awea = document.getewementbyid("myawea");
+a-awea.owigin; // 'https://devewopew.moziwwa.owg' を返す
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 所属先の {{domxref("HTMLAreaElement")}} インターフェイス
+- 所属先の {{domxwef("htmwaweaewement")}} インターフェイス

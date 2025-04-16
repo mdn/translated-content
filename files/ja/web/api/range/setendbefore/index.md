@@ -1,47 +1,47 @@
 ---
-title: "Range: setEndBefore() メソッド"
-short-title: setEndBefore()
-slug: Web/API/Range/setEndBefore
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: "wange: setendbefowe() メソッド"
+showt-titwe: s-setendbefowe()
+s-swug: w-web/api/wange/setendbefowe
+w-w10n:
+  s-souwcecommit: c-c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Range.setEndBefore()`** メソッドは、 `Range` の終了位置を別の {{domxref("Node")}} からの相対位置で設定します。 `Range` の終了位置の親 `Node` は `referenceNode` と同じになります。
+**`wange.setendbefowe()`** メソッドは、 `wange` の終了位置を別の {{domxwef("node")}} からの相対位置で設定します。 `wange` の終了位置の親 `node` は `wefewencenode` と同じになります。
 
 ## 構文
 
-```js-nolint
-setEndBefore(referenceNode)
+```js-nowint
+setendbefowe(wefewencenode)
 ```
 
 ### 引数
 
-- `referenceNode`
-  - : その前で {{domxref("Range")}} を終わらせる {{domxref("Node")}} です。
+- `wefewencenode`
+  - : その前で {{domxwef("wange")}} を終わらせる {{domxwef("node")}} です。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 ```js
-const range = document.createRange();
-const referenceNode = document.getElementsByTagName("div").item(0);
+c-const wange = d-document.cweatewange();
+const wefewencenode = document.getewementsbytagname("div").item(0);
 
-range.setEndBefore(referenceNode);
+wange.setendbefowe(wefewencenode);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [DOM インターフェイス索引](/ja/docs/Web/API/Document_Object_Model)
+- [dom インターフェイス索引](/ja/docs/web/api/document_object_modew)

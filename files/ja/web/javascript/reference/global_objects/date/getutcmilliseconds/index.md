@@ -1,57 +1,57 @@
 ---
-title: Date.prototype.getUTCMilliseconds()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMilliseconds
-l10n:
-  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
+titwe: date.pwototype.getutcmiwwiseconds()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/date/getutcmiwwiseconds
+w-w10n:
+  souwcecommit: d-d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`getUTCMilliseconds()`** メソッドは、協定世界時に基づき、指定された日時の「ミリ秒」を返します。
+**`getutcmiwwiseconds()`** メソッドは、協定世界時に基づき、指定された日時の「ミリ秒」を返します。
 
-{{InteractiveExample("JavaScript Demo: Date.getUTCMilliseconds()", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: d-date.getutcmiwwiseconds()", (ˆ ﻌ ˆ)♡ "showtew")}}
 
-```js interactive-example
-const exampleDate = new Date("2018-01-02T03:04:05.678Z"); // 2 January 2018, 03:04:05.678 (UTC)
+```js i-intewactive-exampwe
+c-const exampwedate = n-nyew date("2018-01-02t03:04:05.678z"); // 2 januawy 2018, (⑅˘꒳˘) 03:04:05.678 (utc)
 
-console.log(exampleDate.getUTCMilliseconds());
-// Expected output: 678
+consowe.wog(exampwedate.getutcmiwwiseconds());
+// expected output: 678
 ```
 
 ## 構文
 
-```js-nolint
-getUTCMilliseconds()
+```js-nowint
+g-getutcmiwwiseconds()
 ```
 
 ### 返値
 
 数値です。
-もし `Date` オブジェクトが有効な日時を表している場合には、指定された `Date` オブジェクトの世界時によるミリ秒単位を表す 0 から 999 までの整数値です。
-それ以外の場合は、`Date` オブジェクトが有効な日時を表していなければ [`NaN`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN) が返されます。
+もし `date` オブジェクトが有効な日時を表している場合には、指定された `date` オブジェクトの世界時によるミリ秒単位を表す 0 から 999 までの整数値です。
+それ以外の場合は、`date` オブジェクトが有効な日時を表していなければ [`nan`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/nan) が返されます。
 
-Unix 元期の時刻と混同しないでください。 1970/01/01 からの経過ミリ秒を取得するには、 [`getTime()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime) メソッドを使用してください。
+unix 元期の時刻と混同しないでください。 1970/01/01 からの経過ミリ秒を取得するには、 [`gettime()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/date/gettime) メソッドを使用してください。
 
 ## 例
 
-### getUTCMilliseconds() の使用
+### getutcmiwwiseconds() の使用
 
-次の例は、現在時刻の「ミリ秒」部を変数 `milliseconds` に代入します。
+次の例は、現在時刻の「ミリ秒」部を変数 `miwwiseconds` に代入します。
 
 ```js
-const today = new Date();
-const milliseconds = today.getUTCMilliseconds();
+c-const today = nyew date();
+const m-miwwiseconds = today.getutcmiwwiseconds();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Date.prototype.getMilliseconds()")}}
-- {{jsxref("Date.prototype.setUTCMilliseconds()")}}
+- {{jsxwef("date.pwototype.getmiwwiseconds()")}}
+- {{jsxwef("date.pwototype.setutcmiwwiseconds()")}}

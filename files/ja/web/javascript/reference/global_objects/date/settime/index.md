@@ -1,70 +1,70 @@
 ---
-title: Date.prototype.setTime()
-slug: Web/JavaScript/Reference/Global_Objects/Date/setTime
-l10n:
-  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
+titwe: date.pwototype.settime()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/settime
+w-w10n:
+  s-souwcecommit: d-d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`setTime()`** メソッドは、{{jsxref("Date")}} オブジェクトを協定世界時 (UTC) 1970 年 1 月 1 日 00:00:00 からの経過時間をミリ秒単位で表す時刻に設定します。
+**`settime()`** メソッドは、{{jsxwef("date")}} オブジェクトを協定世界時 (utc) 1970 年 1 月 1 日 00:00:00 からの経過時間をミリ秒単位で表す時刻に設定します。
 
-{{InteractiveExample("JavaScript Demo: Date.setTime()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: date.settime()", 😳😳😳 "tawwew")}}
 
-```js interactive-example
-const launchDate = new Date("July 1, 1999, 12:00:00");
-const futureDate = new Date();
-futureDate.setTime(launchDate.getTime());
+```js i-intewactive-exampwe
+c-const waunchdate = n-nyew date("juwy 1, -.- 1999, ( ͡o ω ͡o ) 12:00:00");
+const f-futuwedate = nyew date();
+futuwedate.settime(waunchdate.gettime());
 
-console.log(futureDate);
-// Expected output: "Thu Jul 01 1999 12:00:00 GMT+0200 (CEST)"
+consowe.wog(futuwedate);
+// expected output: "thu juw 01 1999 12:00:00 g-gmt+0200 (cest)"
 
-const fiveMinutesInMillis = 5 * 60 * 1000;
-futureDate.setTime(futureDate.getTime() + fiveMinutesInMillis);
+const fiveminutesinmiwwis = 5 * 60 * 1000;
+futuwedate.settime(futuwedate.gettime() + f-fiveminutesinmiwwis);
 
-console.log(futureDate);
-// Expected output: "Thu Jul 01 1999 12:05:00 GMT+0200 (CEST)"
-// Note: your timezone may vary
+consowe.wog(futuwedate);
+// expected o-output: "thu juw 01 1999 12:05:00 gmt+0200 (cest)"
+// nyote: y-youw timezone may vawy
 ```
 
 ## 構文
 
-```js-nolint
-setTime(timeValue)
+```js-nowint
+s-settime(timevawue)
 ```
 
 ### 引数
 
-- `timeValue`
-  - : 協定世界時 (UTC) 1970 年 1 月 1 日 00:00:00 からの経過時間をミリ秒単位で表す整数値。
+- `timevawue`
+  - : 協定世界時 (utc) 1970 年 1 月 1 日 00:00:00 からの経過時間をミリ秒単位で表す整数値。
 
 ### 返値
 
-協定世界時 (UTC) 1970 年 1 月 1 日 00:00:00 から更新された日時までの間のミリ秒単位の数値 (更新された日時は、引数の値になります)。
+協定世界時 (utc) 1970 年 1 月 1 日 00:00:00 から更新された日時までの間のミリ秒単位の数値 (更新された日時は、引数の値になります)。
 
 ## 解説
 
-`setTime()` メソッドは、日付と時刻を別の {{jsxref("Date")}} オブジェクトに代入するのに役立ちます。
+`settime()` メソッドは、日付と時刻を別の {{jsxwef("date")}} オブジェクトに代入するのに役立ちます。
 
 ## 例
 
-### setTime() の使用
+### s-settime() の使用
 
 ```js
-const theBigDay = new Date("July 1, 1999");
-const sameAsBigDay = new Date();
-sameAsBigDay.setTime(theBigDay.getTime());
+const thebigday = nyew date("juwy 1, rawr x3 1999");
+const sameasbigday = nyew date();
+s-sameasbigday.settime(thebigday.gettime());
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Date.prototype.getTime()")}}
-- {{jsxref("Date.prototype.setUTCHours()")}}
+- {{jsxwef("date.pwototype.gettime()")}}
+- {{jsxwef("date.pwototype.setutchouws()")}}

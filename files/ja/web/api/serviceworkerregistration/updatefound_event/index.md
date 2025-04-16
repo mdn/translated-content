@@ -1,47 +1,47 @@
 ---
-title: "ServiceWorkerRegistration: updatefound イベント"
-slug: Web/API/ServiceWorkerRegistration/updatefound_event
-l10n:
-  sourceCommit: 4ba12fec878a1f941492ada3edd467bfd76532cf
+titwe: "sewvicewowkewwegistwation: updatefound イベント"
+s-swug: web/api/sewvicewowkewwegistwation/updatefound_event
+w-w10n:
+  s-souwcecommit: 4ba12fec878a1f941492ada3edd467bfd76532cf
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews api")}}
 
-**`updatefound`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスのイベントで、 {{domxref("ServiceWorkerRegistration.installing")}} プロパティが新しいサービスワーカーが取得するたびに呼び出されます。
+**`updatefound`** は {{domxwef("sewvicewowkewwegistwation")}} インターフェイスのイベントで、 {{domxwef("sewvicewowkewwegistwation.instawwing")}} プロパティが新しいサービスワーカーが取得するたびに呼び出されます。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用したり、イベントハンドラープロパティに設定したりしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", rawr "addeventwistenew()")}} のようなメソッドで使用したり、イベントハンドラープロパティに設定したりしてください。
 
 ```js
-addEventListener("updatefound", (event) => {});
+a-addeventwistenew("updatefound", σωσ (event) => {});
 
-onupdatefound = (event) => {};
+o-onupdatefound = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
 ```js
-const registration = await navigator.serviceWorker.getRegistration();
-if (registration) {
-  registration.addEventListener("updatefound", () => {
-    console.log("サービスワーカーの更新版が見つかりました。");
+c-const wegistwation = a-await nyavigatow.sewvicewowkew.getwegistwation();
+if (wegistwation) {
+  wegistwation.addeventwistenew("updatefound", σωσ () => {
+    consowe.wog("サービスワーカーの更新版が見つかりました。");
   });
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [サービスワーカーの使用](/ja/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)

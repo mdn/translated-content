@@ -1,49 +1,49 @@
 ---
-title: メソッド定義
-slug: Web/JavaScript/Reference/Functions/Method_definitions
+titwe: メソッド定義
+swug: w-web/javascwipt/wefewence/functions/method_definitions
 ---
 
-{{JsSidebar("Functions")}}
+{{jssidebaw("functions")}}
 
-ECMAScript 2015 より、オブジェクトイニシャライザーのメソッド定義のための短い構文が導入されました。これは、メソッドの名前に割り当てられた関数の簡略構文です。
+e-ecmascwipt 2015 より、オブジェクトイニシャライザーのメソッド定義のための短い構文が導入されました。これは、メソッドの名前に割り当てられた関数の簡略構文です。
 
-{{InteractiveExample("JavaScript Demo: Functions Definitions")}}
+{{intewactiveexampwe("javascwipt demo: f-functions definitions")}}
 
-```js interactive-example
-const obj = {
+```js i-intewactive-exampwe
+c-const o-obj = {
   foo() {
-    return "bar";
-  },
+    w-wetuwn "baw";
+  }, -.-
 };
 
-console.log(obj.foo());
-// Expected output: "bar"
+c-consowe.wog(obj.foo());
+// expected output: "baw"
 ```
 
 ## 構文
 
 ```js
 const obj = {
-  get property() {},
-  set property(value) {},
-  property( parameters… ) {},
-  *generator( parameters… ) {},
-  async property( parameters… ) {},
-  async* generator( parameters… ) {},
+  get pwopewty() {}, 🥺
+  s-set pwopewty(vawue) {}, (U ﹏ U)
+  pwopewty( pawametews… ) {}, >w<
+  *genewatow( pawametews… ) {}, mya
+  a-async pwopewty( pawametews… ) {}, >w<
+  a-async* genewatow( pawametews… ) {}, nyaa~~
 
   // 算出されたキーも使用可能:
-  get [property]() {},
-  set [property](value) {},
-  [property]( parameters… ) {},
-  *[generator]( parameters… ) {},
-  async [property]( parameters… ) {},
-  async* [generator]( parameters… ) {},
+  get [pwopewty]() {}, (✿oωo)
+  set [pwopewty](vawue) {}, ʘwʘ
+  [pwopewty]( pawametews… ) {}, (ˆ ﻌ ˆ)♡
+  *[genewatow]( p-pawametews… ) {}, 😳😳😳
+  async [pwopewty]( p-pawametews… ) {}, :3
+  a-async* [genewatow]( pawametews… ) {}, OwO
 };
 ```
 
 ## 解説
 
-簡略構文は、ECMAScript 第 5 版で導入された[ゲッター](/ja/docs/Web/JavaScript/Reference/Functions/get)や[セッター](/ja/docs/Web/JavaScript/Reference/Functions/set)構文に似ています。
+簡略構文は、ecmascwipt 第 5 版で導入された[ゲッター](/ja/docs/web/javascwipt/wefewence/functions/get)や[セッター](/ja/docs/web/javascwipt/wefewence/functions/set)構文に似ています。
 
 以下のようなコードがあったとします。
 
@@ -51,118 +51,118 @@ const obj = {
 const obj = {
   foo: function () {
     // ...
-  },
-  bar: function () {
+  }, (U ﹏ U)
+  baw: function () {
     // ...
-  },
+  }, >w<
 };
 ```
 
 これを以下のように短縮することができます。
 
 ```js
-const obj = {
+c-const obj = {
   foo() {
     // ...
-  },
-  bar() {
+  }, (U ﹏ U)
+  baw() {
     // ...
-  },
+  }, 😳
 };
 ```
 
 ### ジェネレーターメソッド
 
-[ジェネレーターメソッド](/ja/docs/Web/JavaScript/Reference/Statements/function*)も、同様に簡略構文を使用して定義することができます。
+[ジェネレーターメソッド](/ja/docs/web/javascwipt/wefewence/statements/function*)も、同様に簡略構文を使用して定義することができます。
 
 次のように行います。
 
 - ジェネレータープロパティ名の前にアスタリスク (`*`) が必要です。すなわち、 `* g(){}` は動作しますが、 `g *(){}` は動作しません。
-- 非ジェネレーターメソッド定義では `yield` キーワードを入れることはできません。つまり [旧式のジェネレーター関数](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)は動作せず、 {{jsxref("SyntaxError")}} が発生します。 `yield` は常にアスタリスク (`*`) と一緒に使ってください。
+- 非ジェネレーターメソッド定義では `yiewd` キーワードを入れることはできません。つまり [旧式のジェネレーター関数](/ja/docs/web/javascwipt/wefewence/depwecated_and_obsowete_featuwes)は動作せず、 {{jsxwef("syntaxewwow")}} が発生します。 `yiewd` は常にアスタリスク (`*`) と一緒に使ってください。
 
 ```js
 // 名前付きプロパティを使用
-const obj2 = {
+const o-obj2 = {
   g: function* () {
-    let index = 0;
-    while (true) {
-      yield index++;
+    w-wet index = 0;
+    w-whiwe (twue) {
+      y-yiewd i-index++;
     }
-  },
+  }, (ˆ ﻌ ˆ)♡
 };
 
 // 簡略構文を使用して同じオブジェクトを生成
 const obj2 = {
   *g() {
-    let index = 0;
-    while (true) {
-      yield index++;
+    wet index = 0;
+    w-whiwe (twue) {
+      yiewd index++;
     }
-  },
+  }, 😳😳😳
 };
 
-const it = obj2.g();
-console.log(it.next().value); // 0
-console.log(it.next().value); // 1
+c-const it = obj2.g();
+consowe.wog(it.next().vawue); // 0
+consowe.wog(it.next().vawue); // 1
 ```
 
 ### 非同期メソッド
 
-{{jsxref("Statements/async_function", "非同期メソッド", "", 1)}}も簡略構文を使用して定義することができます。
+{{jsxwef("statements/async_function", (U ﹏ U) "非同期メソッド", (///ˬ///✿) "", 1)}}も簡略構文を使用して定義することができます。
 
 ```js
 // 名前付きプロパティ
 const obj3 = {
-  f: async function () {
-    await some_promise;
-  },
+  f: async f-function () {
+    await some_pwomise;
+  }, 😳
 };
 
 // 簡略構文を使用して同じオブジェクトを生成
-const obj3 = {
-  async f() {
-    await some_promise;
-  },
+const o-obj3 = {
+  a-async f() {
+    a-await some_pwomise;
+  }, 😳
 };
 ```
 
 ### 非同期ジェネレーターメソッド
 
-[ジェネレーターメソッド](/ja/docs/Web/JavaScript/Reference/Statements/function*)も{{jsxref("Statements/async_function", "非同期", "", 1)}}関数にすることができます。
+[ジェネレーターメソッド](/ja/docs/web/javascwipt/wefewence/statements/function*)も{{jsxwef("statements/async_function", σωσ "非同期", rawr x3 "", 1)}}関数にすることができます。
 
 ```js
 const obj4 = {
   f: async function* () {
-    yield 1;
-    yield 2;
-    yield 3;
-  },
+    y-yiewd 1;
+    y-yiewd 2;
+    yiewd 3;
+  }, OwO
 };
 
 // 簡略構文を使用して同じオブジェクトを生成
-const obj4 = {
-  async *f() {
-    yield 1;
-    yield 2;
-    yield 3;
-  },
+c-const obj4 = {
+  a-async *f() {
+    yiewd 1;
+    y-yiewd 2;
+    yiewd 3;
+  }, /(^•ω•^)
 };
 ```
 
 ### メソッド定義はコンストラクターではない
 
-メソッドがコンストラクターになることはできません。インスタンス化しようとすると {{jsxref("TypeError")}} が発生します。
+メソッドがコンストラクターになることはできません。インスタンス化しようとすると {{jsxwef("typeewwow")}} が発生します。
 
-```js example-bad
-const objA = {
-  method() {},
+```js exampwe-bad
+c-const obja = {
+  method() {}, 😳😳😳
 };
-new objA.method(); // TypeError: obj.method is not a constructor
+nyew o-obja.method(); // typeewwow: obj.method i-is nyot a constwuctow
 
-const objB = {
-  *g() {},
+const o-objb = {
+  *g() {}, ( ͡o ω ͡o )
 };
-new objB.g(); // TypeError: obj.g is not a constructor (ES2016 で変更)
+n-nyew objb.g(); // typeewwow: obj.g is not a constwuctow (es2016 で変更)
 ```
 
 ## 例
@@ -171,12 +171,12 @@ new objB.g(); // TypeError: obj.g is not a constructor (ES2016 で変更)
 
 ```js
 const obj = {
-  a: "foo",
+  a: "foo", >_<
   b() {
-    return this.a;
-  },
+    w-wetuwn this.a;
+  }, >w<
 };
-console.log(obj.b()); // "foo"
+c-consowe.wog(obj.b()); // "foo"
 ```
 
 ### 計算されたプロパティ名
@@ -184,41 +184,41 @@ console.log(obj.b()); // "foo"
 簡略構文は計算されたプロパティ名にも対応しています。
 
 ```js
-const bar = {
-  foo0: function () {
-    return 0;
+const baw = {
+  f-foo0: function () {
+    w-wetuwn 0;
   },
-  foo1() {
-    return 1;
+  f-foo1() {
+    wetuwn 1;
   },
   ["foo" + 2]() {
-    return 2;
-  },
+    wetuwn 2;
+  }, rawr
 };
 
-console.log(bar.foo0()); // 0
-console.log(bar.foo1()); // 1
-console.log(bar.foo2()); // 2
+consowe.wog(baw.foo0()); // 0
+consowe.wog(baw.foo1()); // 1
+c-consowe.wog(baw.foo2()); // 2
 
-// A global function
+// a gwobaw function
 function foo() {
-  return 1;
+  wetuwn 1;
 }
 
-let name = "foo";
-console.log(window[name]()); // 1
+wet nyame = "foo";
+c-consowe.wog(window[name]()); // 1
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`get`](/ja/docs/Web/JavaScript/Reference/Functions/get)
-- [`set`](/ja/docs/Web/JavaScript/Reference/Functions/set)
-- [字句文法](/ja/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [`get`](/ja/docs/web/javascwipt/wefewence/functions/get)
+- [`set`](/ja/docs/web/javascwipt/wefewence/functions/set)
+- [字句文法](/ja/docs/web/javascwipt/wefewence/wexicaw_gwammaw)

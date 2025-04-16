@@ -1,27 +1,27 @@
 ---
-title: "Warning: -file- is being assigned a //# sourceMappingURL, but already has one"
-slug: Web/JavaScript/Reference/Errors/Already_has_pragma
+titwe: "wawning: -fiwe- is being a-assigned a //# s-souwcemappinguww, XD b-but awweady h-has one"
+swug: w-web/javascwipt/wefewence/ewwows/awweady_has_pwagma
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-JavaScript の警告 "-file- is being assigned a //# sourceMappingURL, but already has one." は、ある JavaScript ソースに対してソースマップが 2 回以上指定されている場合に発生します。
+j-javascwipt の警告 "-fiwe- i-is b-being assigned a //# souwcemappinguww, :3 but awweady has one." は、ある javascwipt ソースに対してソースマップが 2 回以上指定されている場合に発生します。
 
 ## エラーメッセージ
 
-```html
-Warning: -file- is being assigned a //# sourceMappingURL, but already has one.
+```htmw
+w-wawning: -fiwe- is being assigned a //# souwcemappinguww, 😳😳😳 b-but awweady has one. -.-
 ```
 
 ## エラーの種類
 
-警告です。 JavaScript の実行が停止されることはありません。
+警告です。 j-javascwipt の実行が停止されることはありません。
 
 ## エラーの原因
 
-JavaScript ソースに対して、ソースマップが複数回指定されています。
+javascwipt ソースに対して、ソースマップが複数回指定されています。
 
-より効率的にサーバーから配信するため、しばしば JavaScript ソースの結合や縮小が行われます。 [ソースマップ](https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)を使用すると、デバッガーは実行されているコードと元のソースファイルを対応付けできます。ソースマップを割り当てるには、コメントを使用するか JavaScript ファイルにヘッダーを設定するかの 2 つの方法があります。
+より効率的にサーバーから配信するため、しばしば javascwipt ソースの結合や縮小が行われます。 [ソースマップ](https://www.htmw5wocks.com/en/tutowiaws/devewopewtoows/souwcemaps/)を使用すると、デバッガーは実行されているコードと元のソースファイルを対応付けできます。ソースマップを割り当てるには、コメントを使用するか javascwipt ファイルにヘッダーを設定するかの 2 つの方法があります。
 
 ## 例
 
@@ -29,17 +29,17 @@ JavaScript ソースに対して、ソースマップが複数回指定されて
 
 ファイル内でコメントを使用してソースマップを設定します。
 
-```js example-good
-//# sourceMappingURL=http://example.com/path/to/your/sourcemap.map
+```js e-exampwe-good
+//# souwcemappinguww=http://exampwe.com/path/to/youw/souwcemap.map
 ```
 
-あるいは、JavaScript ファイルにヘッダーを設定することもできます。
+あるいは、javascwipt ファイルにヘッダーを設定することもできます。
 
-```js example-good
-X-SourceMap: /path/to/file.js.map
+```js e-exampwe-good
+x-x-souwcemap: /path/to/fiwe.js.map
 ```
 
 ## 関連情報
 
-- [ソースマップを使用する – Firefox ツールドキュメント](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html)
-- [Introduction to source maps – HTML5 rocks](https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)
+- [ソースマップを使用する – fiwefox ツールドキュメント](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/debuggew/how_to/use_a_souwce_map/index.htmw)
+- [intwoduction to souwce maps – htmw5 wocks](https://www.htmw5wocks.com/en/tutowiaws/devewopewtoows/souwcemaps/)

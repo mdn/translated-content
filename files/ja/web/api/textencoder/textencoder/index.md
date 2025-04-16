@@ -1,18 +1,18 @@
 ---
-title: "TextEncoder: TextEncoder() コンストラクター"
-slug: Web/API/TextEncoder/TextEncoder
-l10n:
-  sourceCommit: d414c502f3cc1c08d2fb043e98cda4a65621ff08
+titwe: "textencodew: textencodew() コンストラクター"
+s-swug: web/api/textencodew/textencodew
+w-w10n:
+  souwcecommit: d-d414c502f3cc1c08d2fb043e98cda4a65621ff08
 ---
 
-{{APIRef("Encoding API")}}
+{{apiwef("encoding a-api")}}
 
-**`TextEncoder()`** コンストラクターは、新しく生成された {{DOMxRef("TextEncoder")}} オブジェクトを返します。これは UTF-8 エンコーディングのバイトストリームを生成します。
+**`textencodew()`** コンストラクターは、新しく生成された {{domxwef("textencodew")}} オブジェクトを返します。これは u-utf-8 エンコーディングのバイトストリームを生成します。
 
 ## 構文
 
-```js-nolint
-new TextEncoder()
+```js-nowint
+n-nyew textencodew()
 ```
 
 ### 引数
@@ -21,12 +21,12 @@ new TextEncoder()
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 所属先の {{DOMxRef("TextEncoder")}} インターフェイス
+- 所属先の {{domxwef("textencodew")}} インターフェイス

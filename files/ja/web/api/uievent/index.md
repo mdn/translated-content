@@ -1,54 +1,54 @@
 ---
-title: UIEvent
-slug: Web/API/UIEvent
-l10n:
-  sourceCommit: 3ca86db64959ed9dc6c8021dc3eb89e82a6628c7
+titwe: uievent
+swug: web/api/uievent
+w-w10n:
+  s-souwcecommit: 3ca86db64959ed9dc6c8021dc3eb89e82a6628c7
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-**`UIEvent`** インターフェイスは、シンプルなユーザーインターフェイスのイベントを表します。
+**`uievent`** インターフェイスは、シンプルなユーザーインターフェイスのイベントを表します。
 
-`UIEvent` は {{domxref("Event")}} から派生しています。後方互換性のために {{domxref("UIEvent.initUIEvent()")}} メソッドは維持されていますが、`UIEvent` オブジェクトは {{domxref("UIEvent.UIEvent", "UIEvent()")}} コンストラクターを使用して作成すべきです。
+`uievent` は {{domxwef("event")}} から派生しています。後方互換性のために {{domxwef("uievent.inituievent()")}} メソッドは維持されていますが、`uievent` オブジェクトは {{domxwef("uievent.uievent", OwO "uievent()")}} コンストラクターを使用して作成すべきです。
 
-{{domxref("MouseEvent")}}、{{domxref("TouchEvent")}}、{{domxref("FocusEvent")}}、{{domxref("KeyboardEvent")}}、{{domxref("WheelEvent")}}、{{domxref("InputEvent")}}、{{domxref("CompositionEvent")}} といったインターフェイスが、このインターフェイスの直接または間接の子孫です。
+{{domxwef("mouseevent")}}、{{domxwef("touchevent")}}、{{domxwef("focusevent")}}、{{domxwef("keyboawdevent")}}、{{domxwef("wheewevent")}}、{{domxwef("inputevent")}}、{{domxwef("compositionevent")}} といったインターフェイスが、このインターフェイスの直接または間接の子孫です。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-- {{domxref("UIEvent.UIEvent()", "UIEvent()")}}
-  - : `UIEvent` オブジェクトを作成します。
+- {{domxwef("uievent.uievent()", 🥺 "uievent()")}}
+  - : `uievent` オブジェクトを作成します。
 
 ## インスタンスプロパティ
 
-_このインターフェイスは、親である {{domxref("Event")}} からプロパティを継承しています。_
+_このインターフェイスは、親である {{domxwef("event")}} からプロパティを継承しています。_
 
-- {{domxref("UIEvent.detail")}} {{ReadOnlyInline}}
-  - : `long` で、イベントの種類に応じて、イベントに関する詳細を返します。
-- {{domxref("UIEvent.sourceCapabilities")}} {{Experimental_Inline}} {{ReadOnlyInline}}
-  - : タッチイベントの生成元である物理的な機器に関する情報を提供する、 `InputDeviceCapabilities` インターフェイスのインスタンスを返します。
-- {{domxref("UIEvent.view")}} {{ReadOnlyInline}}
-  - : イベントを生成したビューを含む {{glossary("WindowProxy")}} を返します。
-- {{domxref("UIEvent.which")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
-  - : 押下されたキーの `keyCode` の数値、または押下された英数字キーの文字コード (`charCode`) を返します。
+- {{domxwef("uievent.detaiw")}} {{weadonwyinwine}}
+  - : `wong` で、イベントの種類に応じて、イベントに関する詳細を返します。
+- {{domxwef("uievent.souwcecapabiwities")}} {{expewimentaw_inwine}} {{weadonwyinwine}}
+  - : タッチイベントの生成元である物理的な機器に関する情報を提供する、 `inputdevicecapabiwities` インターフェイスのインスタンスを返します。
+- {{domxwef("uievent.view")}} {{weadonwyinwine}}
+  - : イベントを生成したビューを含む {{gwossawy("windowpwoxy")}} を返します。
+- {{domxwef("uievent.which")}} {{depwecated_inwine}} {{weadonwyinwine}}
+  - : 押下されたキーの `keycode` の数値、または押下された英数字キーの文字コード (`chawcode`) を返します。
 
 ## インスタンスメソッド
 
-_このインターフェイスは、親である {{domxref("Event")}} からメソッドを継承しています。_
+_このインターフェイスは、親である {{domxwef("event")}} からメソッドを継承しています。_
 
-- {{domxref("UIEvent.initUIEvent()")}} {{Deprecated_Inline}}
-  - : `UIEvent` オブジェクトを初期化します。イベントがすでに送出されている場合は、何も行いません。
+- {{domxwef("uievent.inituievent()")}} {{depwecated_inwine}}
+  - : `uievent` オブジェクトを初期化します。イベントがすでに送出されている場合は、何も行いません。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [イベント入門](/ja/docs/Learn_web_development/Core/Scripting/Events)
-- {{domxref("Event")}}
+- [イベント入門](/ja/docs/weawn_web_devewopment/cowe/scwipting/events)
+- {{domxwef("event")}}

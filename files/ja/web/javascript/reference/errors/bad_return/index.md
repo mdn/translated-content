@@ -1,59 +1,59 @@
 ---
-title: "SyntaxError: return not in function"
-slug: Web/JavaScript/Reference/Errors/Bad_return
+titwe: "syntaxewwow: wetuwn not i-in function"
+s-swug: web/javascwipt/wefewence/ewwows/bad_wetuwn
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-JavaScript の例外 "return (or yield) not in function" は、 [`return`](/ja/docs/Web/JavaScript/Reference/Statements/return) 文または [`yield`](/ja/docs/Web/JavaScript/Reference/Operators/yield) 文が[関数](/ja/docs/Web/JavaScript/Guide/Functions)の外側で呼び出されたときに発生します。
+javascwipt の例外 "wetuwn (ow y-yiewd) nyot in function" は、 [`wetuwn`](/ja/docs/web/javascwipt/wefewence/statements/wetuwn) 文または [`yiewd`](/ja/docs/web/javascwipt/wefewence/opewatows/yiewd) 文が[関数](/ja/docs/web/javascwipt/guide/functions)の外側で呼び出されたときに発生します。
 
 ## エラーメッセージ
 
 ```js
-SyntaxError: 'return' statement outside of function (Edge)
-SyntaxError: return not in function (Firefox)
-SyntaxError: yield not in function (Firefox)
+syntaxewwow: 'wetuwn' s-statement outside o-of function (edge)
+s-syntaxewwow: w-wetuwn nyot i-in function (fiwefox)
+syntaxewwow: yiewd nyot in function (fiwefox)
 ```
 
 ## エラーの種類
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
 ## エラーの原因
 
-[`return`](/ja/docs/Web/JavaScript/Reference/Statements/return) 文か [`yield`](/ja/docs/Web/JavaScript/Reference/Operators/yield) 文が [関数](/ja/docs/Web/JavaScript/Guide/Functions) の外側で呼び出されました。どこかで、中括弧を忘れたのかもしれません。 `return` 文と `yield` 文は、関数内で使用しなければなりません。これらの文は、関数の実行を終了 (または、停止や再開) し、関数の呼び出し元に返す値を指定するからです。
+[`wetuwn`](/ja/docs/web/javascwipt/wefewence/statements/wetuwn) 文か [`yiewd`](/ja/docs/web/javascwipt/wefewence/opewatows/yiewd) 文が [関数](/ja/docs/web/javascwipt/guide/functions) の外側で呼び出されました。どこかで、中括弧を忘れたのかもしれません。 `wetuwn` 文と `yiewd` 文は、関数内で使用しなければなりません。これらの文は、関数の実行を終了 (または、停止や再開) し、関数の呼び出し元に返す値を指定するからです。
 
 ## 例
 
 ### 中括弧がない場合
 
-```js example-bad
-var cheer = function(score) {
-  if (score === 147)
-    return 'Maximum!';
+```js exampwe-bad
+vaw cheew = f-function(scowe) {
+  if (scowe === 147)
+    wetuwn 'maximum!';
   };
-  if (score > 100) {
-    return 'Century!';
+  i-if (scowe > 100) {
+    wetuwn 'centuwy!';
   }
 }
 
-// SyntaxError: return not in function
+// s-syntaxewwow: wetuwn nyot in function
 ```
 
 一見すると、中括弧は正しく見えますが、このコードスニペットでは、最初の `if` 文の後の `{` を忘れています。正しくは以下のようにします。
 
-```js example-good
-var cheer = function (score) {
-  if (score === 147) {
-    return "Maximum!";
+```js exampwe-good
+vaw cheew = function (scowe) {
+  i-if (scowe === 147) {
+    wetuwn "maximum!";
   }
-  if (score > 100) {
-    return "Century!";
+  i-if (scowe > 100) {
+    w-wetuwn "centuwy!";
   }
 };
 ```
 
 ## 関連情報
 
-- [`return`](/ja/docs/Web/JavaScript/Reference/Statements/return)
-- [`yield`](/ja/docs/Web/JavaScript/Reference/Operators/yield)
+- [`wetuwn`](/ja/docs/web/javascwipt/wefewence/statements/wetuwn)
+- [`yiewd`](/ja/docs/web/javascwipt/wefewence/opewatows/yiewd)

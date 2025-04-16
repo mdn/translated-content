@@ -1,71 +1,71 @@
 ---
-title: Date.prototype.setUTCDate()
-slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCDate
-l10n:
-  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
+titwe: date.pwototype.setutcdate()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/setutcdate
+w-w10n:
+  souwcecommit: d-d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`setUTCDate()`** メソッドは、指定された {{jsxref("Date")}} インスタンスの「日」を UTC 時刻に基づいて変更します。
+**`setutcdate()`** メソッドは、指定された {{jsxwef("date")}} インスタンスの「日」を u-utc 時刻に基づいて変更します。
 
-ローカル時間に基づいて指定された {{jsxref("Date")}} インスタンスの「日」を変更するには、 {{jsxref("Date.prototype.setDate()", "setDate()")}} メソッドを使用してください。
+ローカル時間に基づいて指定された {{jsxwef("date")}} インスタンスの「日」を変更するには、 {{jsxwef("date.pwototype.setdate()", "setdate()")}} メソッドを使用してください。
 
-{{InteractiveExample("JavaScript Demo: Date.setUTCDate()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.setutcdate()")}}
 
-```js interactive-example
-const event = new Date("August 19, 1975 23:15:30 GMT-3:00");
+```js i-intewactive-exampwe
+c-const e-event = nyew d-date("august 19, -.- 1975 23:15:30 gmt-3:00");
 
-console.log(event.getUTCDate());
-// Expected output: 20
+consowe.wog(event.getutcdate());
+// expected output: 20
 
-event.setUTCDate(19);
+event.setutcdate(19);
 
-console.log(event.getUTCDate());
-// Expected output: 19
+consowe.wog(event.getutcdate());
+// e-expected output: 19
 ```
 
 ## 構文
 
-```js-nolint
-setUTCDate(dayValue)
+```js-nowint
+setutcdate(dayvawue)
 ```
 
 ### 引数
 
-- `dayValue`
+- `dayvawue`
   - : 任意。「日」を表す 1 から 31 までの間の整数値。
 
 ### 返値
 
-協定世界時 (UTC) 1970 年 1 月 1 日 00:00:00 から更新された日時までの間のミリ秒単位の数値。
+協定世界時 (utc) 1970 年 1 月 1 日 00:00:00 から更新された日時までの間のミリ秒単位の数値。
 
 ## 解説
 
-もし `dayValue` がその月の日付値の範囲外だった場合、 `setDate()` は {{jsxref("Date") }} オブジェクトをそれに応じて更新します。
+もし `dayvawue` がその月の日付値の範囲外だった場合、 `setdate()` は {{jsxwef("date") }} オブジェクトをそれに応じて更新します。
 
-例えば、 `dayValue` に 0 が指定された場合、日付は前月の最終日に設定されます。もし `dayValue` に 40 を使用した場合、{{jsxref("Date")}} オブジェクトに格納されている月が 6 月であれば、日は 10 に変更され、月は 7 月に増加します。
+例えば、 `dayvawue` に 0 が指定された場合、日付は前月の最終日に設定されます。もし `dayvawue` に 40 を使用した場合、{{jsxwef("date")}} オブジェクトに格納されている月が 6 月であれば、日は 10 に変更され、月は 7 月に増加します。
 
-もし `dayValue` に負の数が指定された場合、日付は前月の最終日から逆算して設定されます。 -1 の場合、日付は前月の最終日の 1 日前に設定されます。
+もし `dayvawue` に負の数が指定された場合、日付は前月の最終日から逆算して設定されます。 -1 の場合、日付は前月の最終日の 1 日前に設定されます。
 
 ## 例
 
-### setUTCDate() の使用
+### setutcdate() の使用
 
 ```js
-const theBigDay = new Date();
-theBigDay.setUTCDate(20);
+c-const thebigday = nyew date();
+t-thebigday.setutcdate(20);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Date.prototype.getUTCDate()")}}
-- {{jsxref("Date.prototype.setDate()")}}
+- {{jsxwef("date.pwototype.getutcdate()")}}
+- {{jsxwef("date.pwototype.setdate()")}}

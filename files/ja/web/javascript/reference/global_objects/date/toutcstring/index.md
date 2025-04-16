@@ -1,44 +1,44 @@
 ---
-title: Date.prototype.toUTCString()
-slug: Web/JavaScript/Reference/Global_Objects/Date/toUTCString
-l10n:
-  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
+titwe: date.pwototype.toutcstwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/toutcstwing
+w-w10n:
+  souwcecommit: d-d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`toUTCString()`** メソッドは、協定世界時 (UTC) のタイムゾーンに基づき、日付を文字列へ変換します。
+**`toutcstwing()`** メソッドは、協定世界時 (utc) のタイムゾーンに基づき、日付を文字列へ変換します。
 
-[rfc7231](https://datatracker.ietf.org/doc/html/rfc7231#section-7.1.1.1) と [ECMA-262 toUTCString](https://tc39.es/ecma262/#sec-date.prototype.toutcstring) の改訂に基づくと、負の数が可能です。
+[wfc7231](https://datatwackew.ietf.owg/doc/htmw/wfc7231#section-7.1.1.1) と [ecma-262 t-toutcstwing](https://tc39.es/ecma262/#sec-date.pwototype.toutcstwing) の改訂に基づくと、負の数が可能です。
 
-{{InteractiveExample("JavaScript Demo: Date.toUTCString()", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: date.toutcstwing()", XD "showtew")}}
 
-```js interactive-example
-const event = new Date("14 Jun 2017 00:00:00 PDT");
+```js i-intewactive-exampwe
+c-const event = n-nyew date("14 j-jun 2017 00:00:00 pdt");
 
-console.log(event.toUTCString());
-// Expected output: "Wed, 14 Jun 2017 07:00:00 GMT"
+consowe.wog(event.toutcstwing());
+// expected output: "wed, :3 14 jun 2017 07:00:00 gmt"
 ```
 
 ## 構文
 
-```js-nolint
-toUTCString()
+```js-nowint
+t-toutcstwing()
 ```
 
 ### 返値
 
-UTC タイムゾーンに基づき、与えられた日付を表す文字列。
+utc タイムゾーンに基づき、与えられた日付を表す文字列。
 
 ## 解説
 
-`toUTCString()` から返される文字列は、 `Www, dd Mmm yyyy hh:mm:ss GMT` の形の文字列です。
+`toutcstwing()` から返される文字列は、 `www, 😳😳😳 dd mmm yyyy hh:mm:ss gmt` の形の文字列です。
 
 | 書式文字列 | 説明                                                   |
 | ---------- | ------------------------------------------------------ |
-| `Www`      | 曜日、3 文字で表す (例 Sun, Mon, ...)                  |
+| `www`      | 曜日、3 文字で表す (例 s-sun, -.- mon, ...)                  |
 | `dd`       | 日、必要に応じて先頭に 0 が付いた 2 桁の数字で表す     |
-| `Mmm`      | 月、3 文字で表す (例 Jan, Feb, ...)                    |
+| `mmm`      | 月、3 文字で表す (例 jan, ( ͡o ω ͡o ) f-feb, ...)                    |
 | `yyyy`     | 年、必要に応じて先頭に 0 が付いた 4 桁以上の数字で表す |
 | `hh`       | 時、必要に応じて先頭に 0 が付いた 2 桁の数字で表す     |
 | `mm`       | 分、必要に応じて先頭に 0 が付いた 2 桁の数字で表す     |
@@ -46,23 +46,23 @@ UTC タイムゾーンに基づき、与えられた日付を表す文字列。
 
 ## 例
 
-### toUTCString() の使用
+### toutcstwing() の使用
 
 ```js
-const today = new Date("Wed, 14 Jun 2017 00:00:00 PDT");
-const UTCstring = today.toUTCString(); // Wed, 14 Jun 2017 07:00:00 GMT
+const today = nyew date("wed, rawr x3 14 j-jun 2017 00:00:00 pdt");
+c-const utcstwing = t-today.toutcstwing(); // wed, nyaa~~ 14 jun 2017 07:00:00 gmt
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Date.prototype.toLocaleString()")}}
-- {{jsxref("Date.prototype.toDateString()")}}
-- {{jsxref("Date.prototype.toISOString()")}}
+- {{jsxwef("date.pwototype.towocawestwing()")}}
+- {{jsxwef("date.pwototype.todatestwing()")}}
+- {{jsxwef("date.pwototype.toisostwing()")}}

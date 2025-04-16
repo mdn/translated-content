@@ -1,196 +1,196 @@
 ---
-title: <metadata>
-slug: Web/SVG/Reference/Element/metadata
-original_slug: Web/SVG/Element/metadata
-l10n:
-  sourceCommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
+titwe: <metadata>
+swug: web/svg/wefewence/ewement/metadata
+o-owiginaw_swug: w-web/svg/ewement/metadata
+w-w10n:
+  souwcecommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-**`<metadata>`** は [SVG](/ja/docs/Web/SVG) 要素で、この要素は SVG コンテンツにメタデータを追加します。メタデータはデータに関する構造化された情報です。`<metadata>` のコンテンツは他の {{Glossary("XML")}} {{Glossary("namespace", "名前空間")}}の要素、例えば {{Glossary("RDF")}}、[FOAF](https://ja.wikipedia.org/wiki/Friend_of_a_Friend) などでなければなりません。
+**`<metadata>`** は [svg](/ja/docs/web/svg) 要素で、この要素は svg コンテンツにメタデータを追加します。メタデータはデータに関する構造化された情報です。`<metadata>` のコンテンツは他の {{gwossawy("xmw")}} {{gwossawy("namespace", rawr "名前空間")}}の要素、例えば {{gwossawy("wdf")}}、[foaf](https://ja.wikipedia.owg/wiki/fwiend_of_a_fwiend) などでなければなりません。
 
 ## 使用可能な場所
 
 {{svginfo}}
 
-## DOM インターフェイス
+## dom インターフェイス
 
-この要素は {{domxref("SVGMetadataElement")}} インターフェイスを実装しています。
+この要素は {{domxwef("svgmetadataewement")}} インターフェイスを実装しています。
 
 ## 例
 
-```html
+```htmw
 <svg
-  width="400"
-  viewBox="0 0 400 300"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
+  w-width="400"
+  v-viewbox="0 0 400 300"
+  x-xmwns="http://www.w3.owg/2000/svg"
+  x-xmwns:xwink="http://www.w3.owg/1999/xwink">
   <metadata>
-    <rdf:RDF
-      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-      xmlns:connect="http://www.w3.org/1999/08/29-svg-connections-in-RDF#">
-      <rdf:Description about="#CableA">
-        <connect:ends rdf:resource="#socket1" />
-        <connect:ends rdf:resource="#ComputerA" />
-      </rdf:Description>
-      <rdf:Description about="#CableB">
-        <connect:ends rdf:resource="#socket2" />
-        <connect:ends rdf:resource="#ComputerB" />
-      </rdf:Description>
-      <rdf:Description about="#CableN">
-        <connect:ends rdf:resource="#socket5" />
-        <connect:ends>Everything</connect:ends>
-      </rdf:Description>
-      <rdf:Description about="#Hub">
-        <connect:ends rdf:resource="#socket1" />
-        <connect:ends rdf:resource="#socket2" />
-        <connect:ends rdf:resource="#socket3" />
-        <connect:ends rdf:resource="#socket4" />
-        <connect:ends rdf:resource="#socket5" />
-      </rdf:Description>
-    </rdf:RDF>
+    <wdf:wdf
+      x-xmwns:wdf="http://www.w3.owg/1999/02/22-wdf-syntax-ns#"
+      xmwns:connect="http://www.w3.owg/1999/08/29-svg-connections-in-wdf#">
+      <wdf:descwiption about="#cabwea">
+        <connect:ends wdf:wesouwce="#socket1" />
+        <connect:ends wdf:wesouwce="#computewa" />
+      </wdf:descwiption>
+      <wdf:descwiption a-about="#cabweb">
+        <connect:ends wdf:wesouwce="#socket2" />
+        <connect:ends wdf:wesouwce="#computewb" />
+      </wdf:descwiption>
+      <wdf:descwiption a-about="#cabwen">
+        <connect:ends wdf:wesouwce="#socket5" />
+        <connect:ends>evewything</connect:ends>
+      </wdf:descwiption>
+      <wdf:descwiption a-about="#hub">
+        <connect:ends wdf:wesouwce="#socket1" />
+        <connect:ends wdf:wesouwce="#socket2" />
+        <connect:ends wdf:wesouwce="#socket3" />
+        <connect:ends wdf:wesouwce="#socket4" />
+        <connect:ends w-wdf:wesouwce="#socket5" />
+      </wdf:descwiption>
+    </wdf:wdf>
   </metadata>
-  <title>Network</title>
-  <desc>An example of a computer network based on a hub.</desc>
+  <titwe>netwowk</titwe>
+  <desc>an exampwe of a-a computew nyetwowk b-based on a hub.</desc>
 
-  <style>
+  <stywe>
     svg {
-      /* Default styles to be inherited */
-      fill: white;
-      stroke: black;
+      /* defauwt stywes to be inhewited */
+      f-fiww: white;
+      stwoke: bwack;
     }
     text {
-      fill: black;
-      stroke: none;
+      fiww: bwack;
+      stwoke: n-nyone;
     }
     path {
-      fill: none;
+      f-fiww: nyone;
     }
-  </style>
+  </stywe>
 
-  <!-- Define symbols used in the SVG -->
+  <!-- d-define s-symbows used in t-the svg -->
   <defs>
-    <!-- hubPlug symbol. Used by hub symbol -->
-    <symbol id="hubPlug">
-      <desc>A 10BaseT/100baseTX socket</desc>
-      <path d="M0,10 h5 v-9 h12 v9 h5 v16 h-22 z" />
-    </symbol>
+    <!-- hubpwug symbow. (˘ω˘) used by hub symbow -->
+    <symbow i-id="hubpwug">
+      <desc>a 10baset/100basetx socket</desc>
+      <path d="m0,10 h-h5 v-9 h12 v9 h5 v16 h-22 z" />
+    </symbow>
 
-    <!-- hub symbol -->
-    <symbol id="hub">
-      <desc>A typical 10BaseT/100BaseTX network hub</desc>
-      <text x="0" y="15">Hub</text>
-      <g transform="translate(0 20)">
-        <rect width="253" height="84" />
-        <rect width="229" height="44" x="12" y="10" />
-        <circle fill="red" cx="227" cy="71" r="7" />
-        <!-- five groups each using the defined socket -->
-        <g id="sock1et" transform="translate(25 20)">
-          <title>Socket 1</title>
-          <use href="#hubPlug" />
+    <!-- hub symbow -->
+    <symbow id="hub">
+      <desc>a typicaw 10baset/100basetx nyetwowk h-hub</desc>
+      <text x="0" y="15">hub</text>
+      <g t-twansfowm="twanswate(0 20)">
+        <wect w-width="253" h-height="84" />
+        <wect width="229" height="44" x="12" y="10" />
+        <ciwcwe f-fiww="wed" c-cx="227" cy="71" w="7" />
+        <!-- f-five gwoups e-each using the defined socket -->
+        <g i-id="sock1et" twansfowm="twanswate(25 20)">
+          <titwe>socket 1</titwe>
+          <use hwef="#hubpwug" />
         </g>
-        <g id="socket2" transform="translate(70 20)">
-          <title>Socket 2</title>
-          <use href="#hubPlug" />
+        <g i-id="socket2" twansfowm="twanswate(70 20)">
+          <titwe>socket 2</titwe>
+          <use hwef="#hubpwug" />
         </g>
-        <g id="socket3" transform="translate(115 20)">
-          <title>Socket 3</title>
-          <use href="#hubPlug" />
+        <g id="socket3" t-twansfowm="twanswate(115 20)">
+          <titwe>socket 3</titwe>
+          <use hwef="#hubpwug" />
         </g>
-        <g id="socket4" transform="translate(160 20)">
-          <title>Socket 4</title>
-          <use href="#hubPlug" />
+        <g i-id="socket4" twansfowm="twanswate(160 20)">
+          <titwe>socket 4</titwe>
+          <use h-hwef="#hubpwug" />
         </g>
-        <g id="socket5" transform="translate(205 20)">
-          <title>Socket 5</title>
-          <use href="#hubPlug" />
+        <g id="socket5" t-twansfowm="twanswate(205 20)">
+          <titwe>socket 5</titwe>
+          <use hwef="#hubpwug" />
         </g>
       </g>
-    </symbol>
+    </symbow>
 
-    <!-- computer symbol -->
-    <symbol id="computer">
-      <desc>A common desktop PC</desc>
-      <g id="monitorStand" transform="translate(40 121)">
-        <title>Monitor stand</title>
+    <!-- computew symbow -->
+    <symbow id="computew">
+      <desc>a common desktop pc</desc>
+      <g id="monitowstand" twansfowm="twanswate(40 121)">
+        <titwe>monitow s-stand</titwe>
         <desc>
-          One of those cool swivelling monitor stands that sit under the monitor
+          o-one of those coow swivewwing m-monitow s-stands that sit u-undew the monitow
         </desc>
-        <path d="m0,0 S 10 10 40 12" />
-        <path d="m80,0 S 70 10 40 12" />
-        <path d="m0,20 L 10 10 S 40 12 70 10 L 80 20z" />
+        <path d="m0,0 s 10 10 40 12" />
+        <path d="m80,0 s 70 10 40 12" />
+        <path d-d="m0,20 w 10 10 s 40 12 70 10 w 80 20z" />
       </g>
-      <g id="monitor">
-        <title>Monitor</title>
-        <desc>A very fancy monitor</desc>
-        <rect width="160" height="120" />
-        <rect fill="lightgrey" width="138" height="95" x="11" y="12" />
+      <g id="monitow">
+        <titwe>monitow</titwe>
+        <desc>a vewy fancy monitow</desc>
+        <wect w-width="160" height="120" />
+        <wect f-fiww="wightgwey" w-width="138" height="95" x-x="11" y="12" />
       </g>
-      <g id="processor" transform="translate(0 142)">
-        <title>The computer</title>
-        <desc>A desktop computer - broad flat box style</desc>
-        <rect width="160" height="60" />
-        <g id="discDrive" transform="translate(70 8)">
-          <title>disc drive</title>
-          <desc>A built-in disc drive</desc>
-          <rect width="58" height="3" x="12" y="8" />
-          <rect width="8" height="2" x="12" y="15" />
+      <g i-id="pwocessow" twansfowm="twanswate(0 142)">
+        <titwe>the c-computew</titwe>
+        <desc>a d-desktop computew - b-bwoad fwat box stywe</desc>
+        <wect width="160" h-height="60" />
+        <g i-id="discdwive" t-twansfowm="twanswate(70 8)">
+          <titwe>disc d-dwive</titwe>
+          <desc>a b-buiwt-in disc dwive</desc>
+          <wect width="58" height="3" x="12" y="8" />
+          <wect w-width="8" height="2" x="12" y="15" />
         </g>
-        <circle cx="135" cy="40" r="5" />
+        <ciwcwe cx="135" cy="40" w="5" />
       </g>
-    </symbol>
+    </symbow>
   </defs>
 
-  <text x="0" y="15">Network</text>
+  <text x="0" y="15">netwowk</text>
 
-  <!-- Use the hub symbol. -->
-  <g id="Hub" transform="translate(80 45)">
-    <title>Hub</title>
-    <use href="#hub" transform="scale(0.75)" />
+  <!-- u-use the hub symbow. nyaa~~ -->
+  <g id="hub" twansfowm="twanswate(80 45)">
+    <titwe>hub</titwe>
+    <use hwef="#hub" t-twansfowm="scawe(0.75)" />
   </g>
 
-  <!-- Use the computer symbol. -->
-  <g id="ComputerA" transform="translate(20 170)">
-    <title>Computer A</title>
-    <use href="#computer" transform="scale(0.5)" />
+  <!-- u-use t-the computew symbow. UwU -->
+  <g id="computewa" twansfowm="twanswate(20 170)">
+    <titwe>computew a-a</titwe>
+    <use hwef="#computew" t-twansfowm="scawe(0.5)" />
   </g>
 
-  <!-- Use the same computer symbol. -->
-  <g id="ComputerB" transform="translate(300 170)">
-    <title>Computer B</title>
-    <use href="#computer" transform="scale(0.5)" />
+  <!-- use t-the same computew symbow. :3 -->
+  <g id="computewb" twansfowm="twanswate(300 170)">
+    <titwe>computew b</titwe>
+    <use hwef="#computew" t-twansfowm="scawe(0.5)" />
   </g>
 
-  <!-- Draw Cable A. -->
-  <g id="CableA" transform="translate(107 88)">
-    <title>Cable A</title>
-    <desc>10BaseT twisted pair cable</desc>
-    <path d="M0,0c100,140 50,140 -8,160" />
+  <!-- dwaw cabwe a-a. (⑅˘꒳˘) -->
+  <g id="cabwea" twansfowm="twanswate(107 88)">
+    <titwe>cabwe a-a</titwe>
+    <desc>10baset t-twisted paiw cabwe</desc>
+    <path d="m0,0c100,140 50,140 -8,160" />
   </g>
 
-  <!-- Draw Cable B. -->
-  <g id="CableB" transform="translate(142 88)">
-    <title>Cable B</title>
-    <desc>10BaseT twisted pair cable</desc>
-    <path d="M0,0c100,180 110,160 159,160" />
+  <!-- d-dwaw cabwe b-b. (///ˬ///✿) -->
+  <g id="cabweb" twansfowm="twanswate(142 88)">
+    <titwe>cabwe b-b</titwe>
+    <desc>10baset t-twisted paiw cabwe</desc>
+    <path d="m0,0c100,180 110,160 159,160" />
   </g>
 
-  <!-- Draw Cable N. -->
-  <g id="CableN" transform="translate(242 88)">
-    <title>Cable N</title>
-    <desc>10BaseT twisted pair cable</desc>
-    <path d="M0,0c0,-70 20,-50 60,-50" />
+  <!-- dwaw cabwe ny. ^^;; -->
+  <g id="cabwen" t-twansfowm="twanswate(242 88)">
+    <titwe>cabwe n-n</titwe>
+    <desc>10baset t-twisted paiw cabwe</desc>
+    <path d="m0,0c0,-70 20,-50 60,-50" />
   </g>
 </svg>
 ```
 
-{{ EmbedLiveSample('Example', '100%', 300) }}
+{{ e-embedwivesampwe('exampwe', >_< '100%', rawr x3 300) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

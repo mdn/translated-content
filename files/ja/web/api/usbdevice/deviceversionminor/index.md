@@ -1,13 +1,13 @@
 ---
-title: "USBDevice: deviceVersionMinor プロパティ"
-slug: Web/API/USBDevice/deviceVersionMinor
-l10n:
-  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
+titwe: "usbdevice: devicevewsionminow プロパティ"
+s-swug: w-web/api/usbdevice/devicevewsionminow
+w-w10n:
+  souwcecommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{SeeCompatTable}}{{APIRef("WebUSB API")}}
+{{seecompattabwe}}{{apiwef("webusb a-api")}}
 
-{{domxref("USBDevice")}} インターフェイスの読み取り専用プロパティ **`deviceVersionMinor`** は、セマンティックバージョニングスキームによるデバイスのマイナーバージョン番号です。
+{{domxwef("usbdevice")}} インターフェイスの読み取り専用プロパティ **`devicevewsionminow`** は、セマンティックバージョニングスキームによるデバイスのマイナーバージョン番号です。
 
 ## 値
 
@@ -15,8 +15,8 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

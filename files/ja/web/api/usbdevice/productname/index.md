@@ -1,22 +1,22 @@
 ---
-title: "USBDevice: productName プロパティ"
-slug: Web/API/USBDevice/productName
-l10n:
-  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
+titwe: "usbdevice: pwoductname プロパティ"
+s-swug: web/api/usbdevice/pwoductname
+w-w10n:
+  souwcecommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{SeeCompatTable}}{{APIRef("WebUSB API")}}
+{{seecompattabwe}}{{apiwef("webusb a-api")}}
 
-{{domxref("USBDevice")}} インターフェイスの読み取り専用プロパティ **`productName`** は、製造元が定義する、USB デバイスを識別する名前です。
+{{domxwef("usbdevice")}} インターフェイスの読み取り専用プロパティ **`pwoductname`** は、製造元が定義する、usb デバイスを識別する名前です。
 
 ## 値
 
-製造元が定義する、USB デバイスを識別する名前です。
+製造元が定義する、usb デバイスを識別する名前です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

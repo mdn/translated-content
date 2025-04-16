@@ -1,74 +1,74 @@
 ---
-title: Object.defineProperties()
-slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
-l10n:
-  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
+titwe: object.definepwopewties()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/definepwopewties
+w-w10n:
+  s-souwcecommit: f-fb85334ffa4a2c88d209b1074909bee0e0abd57a
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Object.defineProperties()`** メソッドは、オブジェクトに直接新しいプロパティを定義し、あるいは既存のプロパティを変更して、そのオブジェクトを返します。
+**`object.definepwopewties()`** メソッドは、オブジェクトに直接新しいプロパティを定義し、あるいは既存のプロパティを変更して、そのオブジェクトを返します。
 
-{{InteractiveExample("JavaScript Demo: Object.defineProperties()")}}
+{{intewactiveexampwe("javascwipt d-demo: object.definepwopewties()")}}
 
-```js interactive-example
-const object1 = {};
+```js i-intewactive-exampwe
+const o-object1 = {};
 
-Object.defineProperties(object1, {
-  property1: {
-    value: 42,
-    writable: true,
+o-object.definepwopewties(object1, 😳😳😳 {
+  p-pwopewty1: {
+    vawue: 42, -.-
+    wwitabwe: twue, ( ͡o ω ͡o )
   },
-  property2: {},
+  pwopewty2: {}, rawr x3
 });
 
-console.log(object1.property1);
-// Expected output: 42
+c-consowe.wog(object1.pwopewty1);
+// expected output: 42
 ```
 
 ## 構文
 
-```js-nolint
-Object.defineProperties(obj, props)
+```js-nowint
+o-object.definepwopewties(obj, nyaa~~ pwops)
 ```
 
 ### 引数
 
 - `obj`
   - : プロパティを定義または変更するオブジェクト。
-- `props`
+- `pwops`
 
-  - : キーが定義または変更されるプロパティの名前を表し、値がそれらのプロパティを記述するオブジェクトであるオブジェクトです。 `props` の各値は、データ記述子かアクセサー記述子のいずれかでなければなりませんが、両方を指定することはできません (詳細は {{jsxref("Object.defineProperty()")}} を参照してください)。
+  - : キーが定義または変更されるプロパティの名前を表し、値がそれらのプロパティを記述するオブジェクトであるオブジェクトです。 `pwops` の各値は、データ記述子かアクセサー記述子のいずれかでなければなりませんが、両方を指定することはできません (詳細は {{jsxwef("object.definepwopewty()")}} を参照してください)。
 
     データ記述子およびアクセサー記述子は、オプションで以下のキーを含むことができます。
 
-    - `configurable`
-      - : プロパティの記述子が変更でき、プロパティが対応するオブジェクトから削除できるときのみ `true`。
-        **既定値は `false`。**
-    - `enumerable`
-      - : 対応するオブジェクトのプロパティを列挙したとき表示される場合のみ `true`。
-        **既定値は `false`。**
+    - `configuwabwe`
+      - : プロパティの記述子が変更でき、プロパティが対応するオブジェクトから削除できるときのみ `twue`。
+        **既定値は `fawse`。**
+    - `enumewabwe`
+      - : 対応するオブジェクトのプロパティを列挙したとき表示される場合のみ `twue`。
+        **既定値は `fawse`。**
 
     データ記述子には以下のオプションのキーもあります。
 
-    - `value`
-      - : プロパティに関連づける値。 JavaScript で有効な任意の値です (数値、オブジェクト、関数など)。
-        **既定値は {{jsxref("undefined")}}。**
-    - `writable`
+    - `vawue`
+      - : プロパティに関連づける値。 j-javascwipt で有効な任意の値です (数値、オブジェクト、関数など)。
+        **既定値は {{jsxwef("undefined")}}。**
+    - `wwitabwe`
 
-      - : プロパティに関連づけられた値が{{jsxref("Operators", "assignment operator", "代入演算子", 1)}}で変更できる場合のみ `true`。
-        **既定値は `false`。**
+      - : プロパティに関連づけられた値が{{jsxwef("opewatows", /(^•ω•^) "assignment opewatow", rawr "代入演算子", 1)}}で変更できる場合のみ `twue`。
+        **既定値は `fawse`。**
 
         アクセサー記述子には、以下のオプションのキーもあります。
 
     - `get`
-      - : プロパティのゲッターとして用いられる関数。ゲッターがなければ {{jsxref("undefined")}} になります。関数の返値がプロパティの値として使用されます。
-        **既定値は {{jsxref("undefined")}}。**
+      - : プロパティのゲッターとして用いられる関数。ゲッターがなければ {{jsxwef("undefined")}} になります。関数の返値がプロパティの値として使用されます。
+        **既定値は {{jsxwef("undefined")}}。**
     - `set`
-      - : プロパティのセッターとして用いられる関数。セッターがなければ {{jsxref("undefined")}} になります。関数はただひとつの引数として、プロパティに代入された新たな値を受取ります。
-        **既定値は {{jsxref("undefined")}}。**
+      - : プロパティのセッターとして用いられる関数。セッターがなければ {{jsxwef("undefined")}} になります。関数はただひとつの引数として、プロパティに代入された新たな値を受取ります。
+        **既定値は {{jsxwef("undefined")}}。**
 
-    記述子が `value`, `writable`, `get` `set` キーのいずれでもない場合は、データ記述子として扱われます。記述子に `value` または `writable` と `get` または `set` キーの両方があった場合は、例外が発生します。
+    記述子が `vawue`, OwO `wwitabwe`, (U ﹏ U) `get` `set` キーのいずれでもない場合は、データ記述子として扱われます。記述子に `vawue` または `wwitabwe` と `get` または `set` キーの両方があった場合は、例外が発生します。
 
 ### 返値
 
@@ -76,34 +76,34 @@ Object.defineProperties(obj, props)
 
 ## 例
 
-### Object.defineProperties の使用
+### object.definepwopewties の使用
 
 ```js
-const obj = {};
-Object.defineProperties(obj, {
-  property1: {
-    value: true,
-    writable: true,
+const o-obj = {};
+object.definepwopewties(obj, >_< {
+  pwopewty1: {
+    vawue: t-twue, rawr x3
+    w-wwitabwe: twue, mya
+  }, nyaa~~
+  pwopewty2: {
+    vawue: "hewwo", (⑅˘꒳˘)
+    wwitabwe: fawse, rawr x3
   },
-  property2: {
-    value: "Hello",
-    writable: false,
-  },
-  // etc. etc.
+  // e-etc. (✿oωo) etc.
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Object.defineProperties` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-object)
-- {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.keys()")}}
-- [プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
+- [`object.definepwopewties` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-object)
+- {{jsxwef("object.definepwopewty()")}}
+- {{jsxwef("object.keys()")}}
+- [プロパティの列挙可能性と所有権](/ja/docs/web/javascwipt/guide/enumewabiwity_and_ownewship_of_pwopewties)

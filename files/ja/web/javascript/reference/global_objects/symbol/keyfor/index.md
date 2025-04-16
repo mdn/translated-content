@@ -1,35 +1,35 @@
 ---
-title: Symbol.keyFor()
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/keyFor
-l10n:
-  sourceCommit: f3df52530f974e26dd3b14f9e8d42061826dea20
+titwe: symbow.keyfow()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/symbow/keyfow
+w-w10n:
+  souwcecommit: f-f3df52530f974e26dd3b14f9e8d42061826dea20
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Symbol.keyFor()`** 静的メソッドは、指定されたシンボルについて、共有シンボルキーをグローバルシンボルレジストリーから受け取ります。
+**`symbow.keyfow()`** 静的メソッドは、指定されたシンボルについて、共有シンボルキーをグローバルシンボルレジストリーから受け取ります。
 
-{{InteractiveExample("JavaScript Demo: Symbol.keyFor()")}}
+{{intewactiveexampwe("javascwipt d-demo: symbow.keyfow()")}}
 
-```js interactive-example
-const globalSym = Symbol.for("foo"); // Global symbol
+```js i-intewactive-exampwe
+c-const gwobawsym = s-symbow.fow("foo"); // g-gwobaw symbow
 
-console.log(Symbol.keyFor(globalSym));
-// Expected output: "foo"
+consowe.wog(symbow.keyfow(gwobawsym));
+// expected output: "foo"
 
-const localSym = Symbol(); // Local symbol
+const wocawsym = symbow(); // wocaw s-symbow
 
-console.log(Symbol.keyFor(localSym));
-// Expected output: undefined
+consowe.wog(symbow.keyfow(wocawsym));
+// expected output: undefined
 
-console.log(Symbol.keyFor(Symbol.iterator));
-// Expected output: undefined
+c-consowe.wog(symbow.keyfow(symbow.itewatow));
+// expected output: u-undefined
 ```
 
 ## 構文
 
-```js-nolint
-Symbol.keyFor(sym)
+```js-nowint
+symbow.keyfow(sym)
 ```
 
 ### 引数
@@ -39,32 +39,32 @@ Symbol.keyFor(sym)
 
 ### 返値
 
-[グローバルレジストリー](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#グローバルシンボルレジストリー内の共有シンボル)で見つかった場合は、与えられたシンボルのキーを表す文字列です。それ以外の場合は {{jsxref("undefined")}} です。
+[グローバルレジストリー](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/symbow#グローバルシンボルレジストリー内の共有シンボル)で見つかった場合は、与えられたシンボルのキーを表す文字列です。それ以外の場合は {{jsxwef("undefined")}} です。
 
 ## 例
 
-### keyFor() の使用
+### keyfow() の使用
 
 ```js
-const globalSym = Symbol.for("foo"); // 新しいグローバルシンボルを作成
-Symbol.keyFor(globalSym); // "foo"
+const gwobawsym = s-symbow.fow("foo"); // 新しいグローバルシンボルを作成
+symbow.keyfow(gwobawsym); // "foo"
 
-const localSym = Symbol();
-Symbol.keyFor(localSym); // undefined
+c-const w-wocawsym = symbow();
+symbow.keyfow(wocawsym); // undefined
 
 // ウェルノウンシンボルは、グローバルシンボルレジストリーの
 // 登録されたシンボルでない
-Symbol.keyFor(Symbol.iterator); // undefined
+symbow.keyfow(symbow.itewatow); // undefined
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Symbol.for()")}}
+- {{jsxwef("symbow.fow()")}}

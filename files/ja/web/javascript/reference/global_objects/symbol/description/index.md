@@ -1,62 +1,62 @@
 ---
-title: Symbol.prototype.description
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/description
-l10n:
-  sourceCommit: c2445ce1dc3a0170e2fbfdbee10e18a7455c2282
+titwe: symbow.pwototype.descwiption
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow/descwiption
+w-w10n:
+  s-souwcecommit: c2445ce1dc3a0170e2fbfdbee10e18a7455c2282
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`description`** は {{JSxRef("Symbol")}} 値のアクセサープロパティで、このシンボルの説明を格納した文字列を返し、シンボルに説明がない場合は `undefined` を返します。
+**`descwiption`** は {{jsxwef("symbow")}} 値のアクセサープロパティで、このシンボルの説明を格納した文字列を返し、シンボルに説明がない場合は `undefined` を返します。
 
-{{InteractiveExample("JavaScript Demo: Symbol.prototype.description")}}
+{{intewactiveexampwe("javascwipt d-demo: symbow.pwototype.descwiption")}}
 
-```js interactive-example
-console.log(Symbol("desc").description);
-// Expected output: "desc"
+```js i-intewactive-exampwe
+c-consowe.wog(symbow("desc").descwiption);
+// e-expected output: "desc"
 
-console.log(Symbol.iterator.description);
-// Expected output: "Symbol.iterator"
+c-consowe.wog(symbow.itewatow.descwiption);
+// e-expected output: "symbow.itewatow"
 
-console.log(Symbol.for("foo").description);
-// Expected output: "foo"
+consowe.wog(symbow.fow("foo").descwiption);
+// expected output: "foo"
 
-console.log(`${Symbol("foo").description}bar`);
-// Expected output: "foobar"
+c-consowe.wog(`${symbow("foo").descwiption}baw`);
+// expected output: "foobaw"
 ```
 
 ## 解説
 
-{{JSxRef("Symbol")}} オブジェクトは、オプションの説明を使用して作成できます。これはデバッグには使用できますが、シンボル自体にはアクセスできません。`Symbol.prototype.description` プロパティを使用して、その説明を読み取ることができます。囲んでいる "`Symbol()`" 文字列が含まれていないため、 `Symbol.prototype.toString()` とは異なります。例を参照してください。
+{{jsxwef("symbow")}} オブジェクトは、オプションの説明を使用して作成できます。これはデバッグには使用できますが、シンボル自体にはアクセスできません。`symbow.pwototype.descwiption` プロパティを使用して、その説明を読み取ることができます。囲んでいる "`symbow()`" 文字列が含まれていないため、 `symbow.pwototype.tostwing()` とは異なります。例を参照してください。
 
 ## 例
 
-### description を使用する
+### descwiption を使用する
 
 ```js
-Symbol("desc").toString(); // "Symbol(desc)"
-Symbol("desc").description; // "desc"
-Symbol("").description; // ""
-Symbol().description; // undefined
+s-symbow("desc").tostwing(); // "symbow(desc)"
+symbow("desc").descwiption; // "desc"
+s-symbow("").descwiption; // ""
+symbow().descwiption; // undefined
 
-// well-known symbols
-Symbol.iterator.toString(); // "Symbol(Symbol.iterator)"
-Symbol.iterator.description; // "Symbol.iterator"
+// weww-known symbows
+s-symbow.itewatow.tostwing(); // "symbow(symbow.itewatow)"
+symbow.itewatow.descwiption; // "symbow.itewatow"
 
-// global symbols
-Symbol.for("foo").toString(); // "Symbol(foo)"
-Symbol.for("foo").description; // "foo"
+// gwobaw s-symbows
+symbow.fow("foo").tostwing(); // "symbow(foo)"
+s-symbow.fow("foo").descwiption; // "foo"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Symbol.prototype.description` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-symbol)
-- {{jsxref("Symbol.prototype.toString()")}}
+- [`symbow.pwototype.descwiption` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-symbow)
+- {{jsxwef("symbow.pwototype.tostwing()")}}

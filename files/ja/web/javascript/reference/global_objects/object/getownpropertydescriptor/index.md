@@ -1,149 +1,149 @@
 ---
-title: Object.getOwnPropertyDescriptor()
-slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
-l10n:
-  sourceCommit: 892e4301623f10505dc19e56ba9fb7b505530722
+titwe: object.getownpwopewtydescwiptow()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/getownpwopewtydescwiptow
+w-w10n:
+  s-souwcecommit: 892e4301623f10505dc19e56ba9fb7b505530722
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Object.getOwnPropertyDescriptor()`** 静的メソッドは、与えられたオブジェクトの特定のプロパティ (すなわち、あるオブジェクトの直接の表現であり、オブジェクトのプロトタイプチェーン内のものではない) の構成を記述したオブジェクトを返します。返されるオブジェクトは変更可能ですが、変更しても元のプロパティの構成には影響を与えません。
+**`object.getownpwopewtydescwiptow()`** 静的メソッドは、与えられたオブジェクトの特定のプロパティ (すなわち、あるオブジェクトの直接の表現であり、オブジェクトのプロトタイプチェーン内のものではない) の構成を記述したオブジェクトを返します。返されるオブジェクトは変更可能ですが、変更しても元のプロパティの構成には影響を与えません。
 
-{{InteractiveExample("JavaScript Demo: Object.getOwnPropertyDescriptor()")}}
+{{intewactiveexampwe("javascwipt demo: o-object.getownpwopewtydescwiptow()")}}
 
-```js interactive-example
-const object1 = {
-  property1: 42,
+```js i-intewactive-exampwe
+c-const object1 = {
+  p-pwopewty1: 42, ^^
 };
 
-const descriptor1 = Object.getOwnPropertyDescriptor(object1, "property1");
+c-const descwiptow1 = object.getownpwopewtydescwiptow(object1, 😳😳😳 "pwopewty1");
 
-console.log(descriptor1.configurable);
-// Expected output: true
+consowe.wog(descwiptow1.configuwabwe);
+// expected output: t-twue
 
-console.log(descriptor1.value);
-// Expected output: 42
+consowe.wog(descwiptow1.vawue);
+// expected output: 42
 ```
 
 ## 構文
 
-```js-nolint
-Object.getOwnPropertyDescriptor(obj, prop)
+```js-nowint
+o-object.getownpwopewtydescwiptow(obj, mya pwop)
 ```
 
 ### 引数
 
 - `obj`
   - : プロパティの確認を行うオブジェクトです。
-- `prop`
-  - : 記述を受け取るプロパティの名前または {{jsxref("Symbol")}} です。
+- `pwop`
+  - : 記述を受け取るプロパティの名前または {{jsxwef("symbow")}} です。
 
 ### 返値
 
-指定したプロパティがオブジェクトにある場合は、プロパティ記述子で、それ以外の場合は {{jsxref("undefined")}} です。
+指定したプロパティがオブジェクトにある場合は、プロパティ記述子で、それ以外の場合は {{jsxwef("undefined")}} です。
 
 ## 解説
 
-このメソッドで、プロパティの正確な定義を確認することができます。 JavaScript の*プロパティ*は、文字列値の名前または {{jsxref("Symbol")}} とプロパティ記述子から成ります。プロパティ記述子およびその属性についての詳細情報は、 {{jsxref("Object.defineProperty()")}} にあります。
+このメソッドで、プロパティの正確な定義を確認することができます。 j-javascwipt の*プロパティ*は、文字列値の名前または {{jsxwef("symbow")}} とプロパティ記述子から成ります。プロパティ記述子およびその属性についての詳細情報は、 {{jsxwef("object.definepwopewty()")}} にあります。
 
 *プロパティ記述子*は、以下の属性のいくつかを記録したものです。
 
-- `value`
+- `vawue`
   - : プロパティに関連づけられた値です (データ記述子のみ)。
-- `writable`
-  - : `true` である場合、プロパティに関連づけられた値は変更することができます (データ記述子のみ)。
+- `wwitabwe`
+  - : `twue` である場合、プロパティに関連づけられた値は変更することができます (データ記述子のみ)。
 - `get`
   - : プロパティのゲッターとして提供する関数、あるいはゲッターがない場合は `undefined` です (アクセサー記述子のみ)。
 - `set`
   - : プロパティのセッターとして提供する関数、あるいはセッターがない場合は `undefined` です (アクセサー記述子のみ)。
-- `configurable`
-  - : `true` である場合、この種の記述子を変更することや、対応するオブジェクトからプロパティを削除することができます。
-- `enumerable`
-  - : `true` である場合、このプロパティは対応するオブジェクトでのプロパティ列挙に現れます。
+- `configuwabwe`
+  - : `twue` である場合、この種の記述子を変更することや、対応するオブジェクトからプロパティを削除することができます。
+- `enumewabwe`
+  - : `twue` である場合、このプロパティは対応するオブジェクトでのプロパティ列挙に現れます。
 
 ## 例
 
-### Object.getOwnPropertyDescriptor() の使用
+### object.getownpwopewtydescwiptow() の使用
 
 ```js
-let o, d;
+wet o, 😳 d;
 
 o = {
   get foo() {
-    return 17;
-  },
+    w-wetuwn 17;
+  }, -.-
 };
-d = Object.getOwnPropertyDescriptor(o, "foo");
-console.log(d);
+d = object.getownpwopewtydescwiptow(o, 🥺 "foo");
+c-consowe.wog(d);
 // {
-//   configurable: true,
-//   enumerable: true,
-//   get: [Function: get foo],
+//   c-configuwabwe: twue, o.O
+//   enumewabwe: twue, /(^•ω•^)
+//   get: [function: get f-foo], nyaa~~
 //   set: undefined
 // }
 
-o = { bar: 42 };
-d = Object.getOwnPropertyDescriptor(o, "bar");
-console.log(d);
+o = { baw: 42 };
+d = object.getownpwopewtydescwiptow(o, nyaa~~ "baw");
+consowe.wog(d);
 // {
-//   configurable: true,
-//   enumerable: true,
-//   value: 42,
-//   writable: true
+//   c-configuwabwe: twue,
+//   e-enumewabwe: t-twue, :3
+//   vawue: 42, 😳😳😳
+//   w-wwitabwe: t-twue
 // }
 
-o = { [Symbol.for("baz")]: 73 };
-d = Object.getOwnPropertyDescriptor(o, Symbol.for("baz"));
-console.log(d);
+o = { [symbow.fow("baz")]: 73 };
+d = object.getownpwopewtydescwiptow(o, (˘ω˘) s-symbow.fow("baz"));
+consowe.wog(d);
 // {
-//   configurable: true,
-//   enumerable: true,
-//   value: 73,
-//   writable: true
+//   configuwabwe: t-twue, ^^
+//   enumewabwe: twue, :3
+//   vawue: 73, -.-
+//   wwitabwe: twue
 // }
 
 o = {};
-Object.defineProperty(o, "qux", {
-  value: 8675309,
-  writable: false,
-  enumerable: false,
+object.definepwopewty(o, 😳 "qux", {
+  v-vawue: 8675309, mya
+  wwitabwe: f-fawse, (˘ω˘)
+  enumewabwe: f-fawse, >_<
 });
-d = Object.getOwnPropertyDescriptor(o, "qux");
-console.log(d);
+d-d = object.getownpwopewtydescwiptow(o, -.- "qux");
+consowe.wog(d);
 // {
-//   value: 8675309,
-//   writable: false,
-//   enumerable: false,
-//   configurable: false
+//   vawue: 8675309, 🥺
+//   wwitabwe: fawse, (U ﹏ U)
+//   e-enumewabwe: f-fawse, >w<
+//   configuwabwe: fawse
 // }
 ```
 
 ### オブジェクト以外の型変換
 
-ECMAScript 5 では、このメソッドへの最初の引数がオブジェクトでない (プリミティブである) 場合は、 {{jsxref("TypeError")}} が発生します。 ECMAScript 2015 では、最初の引数がオブジェクトでなくても、最初に強制的にオブジェクトに変換します。
+e-ecmascwipt 5 では、このメソッドへの最初の引数がオブジェクトでない (プリミティブである) 場合は、 {{jsxwef("typeewwow")}} が発生します。 e-ecmascwipt 2015 では、最初の引数がオブジェクトでなくても、最初に強制的にオブジェクトに変換します。
 
 ```js
-Object.getOwnPropertyDescriptor("foo", 0);
-// TypeError: "foo" is not an object  // ES5 code
+object.getownpwopewtydescwiptow("foo", mya 0);
+// t-typeewwow: "foo" is nyot an object  // e-es5 code
 
-Object.getOwnPropertyDescriptor("foo", 0);
-// Object returned by ES2015 code: {
-//   configurable: false,
-//   enumerable: true,
-//   value: "f",
-//   writable: false
+object.getownpwopewtydescwiptow("foo", >w< 0);
+// object wetuwned by e-es2015 code: {
+//   configuwabwe: f-fawse, nyaa~~
+//   enumewabwe: twue, (✿oωo)
+//   v-vawue: "f", ʘwʘ
+//   w-wwitabwe: fawse
 // }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Reflect.getOwnPropertyDescriptor()")}}
+- {{jsxwef("object.definepwopewty()")}}
+- {{jsxwef("wefwect.getownpwopewtydescwiptow()")}}

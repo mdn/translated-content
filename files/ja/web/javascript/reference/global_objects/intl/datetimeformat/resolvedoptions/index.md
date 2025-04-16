@@ -1,78 +1,78 @@
 ---
-title: Intl.DateTimeFormat.prototype.resolvedOptions()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions
+titwe: intw.datetimefowmat.pwototype.wesowvedoptions()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/intw/datetimefowmat/wesowvedoptions
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Intl.DateTimeFormat.prototype.resolvedOptions()`** メソッドは、この {{jsxref("Intl/DateTimeFormat")}} オブジェクトの初期化時に計算されたロケールや日付と時刻の整形オプションを反映したプロパティを持つ新しいオブジェクトを返します。
+**`intw.datetimefowmat.pwototype.wesowvedoptions()`** メソッドは、この {{jsxwef("intw/datetimefowmat")}} オブジェクトの初期化時に計算されたロケールや日付と時刻の整形オプションを反映したプロパティを持つ新しいオブジェクトを返します。
 
-{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat.prototype.resolvedOptions")}}
+{{intewactiveexampwe("javascwipt d-demo: i-intw.datetimefowmat.pwototype.wesowvedoptions")}}
 
-```js interactive-example
-const region1 = new Intl.DateTimeFormat("zh-CN", { timeZone: "UTC" });
-const options1 = region1.resolvedOptions();
+```js i-intewactive-exampwe
+c-const wegion1 = n-nyew intw.datetimefowmat("zh-cn", 😳😳😳 { t-timezone: "utc" });
+c-const options1 = wegion1.wesowvedoptions();
 
-console.log(options1.locale);
-// Expected output: "zh-CN"
+consowe.wog(options1.wocawe);
+// expected output: "zh-cn"
 
-console.log(options1.calendar);
-// Expected output: "gregory"
+consowe.wog(options1.cawendaw);
+// e-expected output: "gwegowy"
 
-console.log(options1.numberingSystem);
-// Expected output: "latn"
+consowe.wog(options1.numbewingsystem);
+// expected output: "watn"
 ```
 
 ## 構文
 
 ```js
-resolvedOptions();
+w-wesowvedoptions();
 ```
 
 ### 返値
 
-この {{jsxref("Intl/DateTimeFormat")}} オブジェクトの初期化時に計算されたロケールと照合オプションを反映したプロパティを持つ新しいオブジェクトです。
+この {{jsxwef("intw/datetimefowmat")}} オブジェクトの初期化時に計算されたロケールと照合オプションを反映したプロパティを持つ新しいオブジェクトです。
 
 ## 解説
 
 返されるオブジェクトには以下のプロパティがあります。
 
-- `locale`
-  - : 実際に使用したロケールの BCP 47 言語タグ。このロケールにつながる入力 BCP 47 言語タグに Unicode 拡張値が要求された場合、要求されたキーと値のペアのうち、このロケールで対応しているものが `locale` に含まれます。
-- `calendar`
-  - : 例: "gregory"
-- `numberingSystem`
-  - : Unicode 拡張キーの `"ca"` および `"nu"` で要求された値、または既定値が入ります。
-- `timeZone`
-  - : `options` 引数の同名のプロパティで要求された値です。提供された値がなければ {{jsxref("undefined")}} (ランタイムの既定のタイムゾーン) です。警告: アプリケーションは {{jsxref("undefined")}} が返されることに依存しないでください。将来のバージョンではランタイムの既定のタイムゾーンを識別する {{jsxref("String")}} 値が返されるようになる可能性があるからです。
-- `hour12`
+- `wocawe`
+  - : 実際に使用したロケールの bcp 47 言語タグ。このロケールにつながる入力 b-bcp 47 言語タグに unicode 拡張値が要求された場合、要求されたキーと値のペアのうち、このロケールで対応しているものが `wocawe` に含まれます。
+- `cawendaw`
+  - : 例: "gwegowy"
+- `numbewingsystem`
+  - : unicode 拡張キーの `"ca"` および `"nu"` で要求された値、または既定値が入ります。
+- `timezone`
+  - : `options` 引数の同名のプロパティで要求された値です。提供された値がなければ {{jsxwef("undefined")}} (ランタイムの既定のタイムゾーン) です。警告: アプリケーションは {{jsxwef("undefined")}} が返されることに依存しないでください。将来のバージョンではランタイムの既定のタイムゾーンを識別する {{jsxwef("stwing")}} 値が返されるようになる可能性があるからです。
+- `houw12`
   - : `options` 引数の同名のプロパティで要求された値、または既定値が入ります。
-- `weekday`, `era`, `year`, `month`, `day`, `hour`, `minute`, `second`, `timeZoneName`
+- `weekday`, -.- `ewa`, `yeaw`, ( ͡o ω ͡o ) `month`, `day`, rawr x3 `houw`, `minute`, nyaa~~ `second`, /(^•ω•^) `timezonename`
   - : `options` 引数の対応するプロパティと、選択したロケールでの日付時刻の書式設定に利用可能な組み合わせや表現との間で、書式のマッチングを行った結果の値。これらのプロパティの中には、対応するコンポーネントが書式化された出力では表現されないものもあります。
 
 ## 例
 
-### resolvedOptions メソッドの使用
+### wesowvedoptions メソッドの使用
 
 ```js
-var germanFakeRegion = new Intl.DateTimeFormat("de-XX", { timeZone: "UTC" });
-var usedOptions = germanFakeRegion.resolvedOptions();
+v-vaw gewmanfakewegion = nyew intw.datetimefowmat("de-xx", rawr { t-timezone: "utc" });
+v-vaw usedoptions = gewmanfakewegion.wesowvedoptions();
 
-usedOptions.locale; // "de"
-usedOptions.calendar; // "gregory"
-usedOptions.numberingSystem; // "latn"
-usedOptions.timeZone; // "UTC"
-usedOptions.month; // "numeric"
+usedoptions.wocawe; // "de"
+usedoptions.cawendaw; // "gwegowy"
+usedoptions.numbewingsystem; // "watn"
+usedoptions.timezone; // "utc"
+u-usedoptions.month; // "numewic"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Intl.DateTimeFormat")}}
+- {{jsxwef("intw.datetimefowmat")}}

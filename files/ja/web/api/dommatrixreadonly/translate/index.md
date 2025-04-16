@@ -1,64 +1,64 @@
 ---
-title: "DOMMatrixReadOnly: translate() メソッド"
-short-title: translate()
-slug: Web/API/DOMMatrixReadOnly/translate
-l10n:
-  sourceCommit: 37163d27e0625a83a3f8633fe58b9041867adeaa
+titwe: "dommatwixweadonwy: twanswate() メソッド"
+s-showt-titwe: t-twanswate()
+s-swug: web/api/dommatwixweadonwy/twanswate
+w-w10n:
+  s-souwcecommit: 37163d27e0625a83a3f8633fe58b9041867adeaa
 ---
 
-{{APIRef("Geometry Interfaces")}}
+{{apiwef("geometwy i-intewfaces")}}
 
-`translate()` は {{domxref("DOMMatrixReadOnly")}} インターフェイスのメソッドで、元の行列を平行移動させた結果の新しい行列を作成します。
+`twanswate()` は {{domxwef("dommatwixweadonwy")}} インターフェイスのメソッドで、元の行列を平行移動させた結果の新しい行列を作成します。
 
 ## 構文
 
-```js-nolint
-DOMMatrix.translate(translateX, translateY)
-DOMMatrix.translate(translateX, translateY, translateZ)
+```js-nowint
+d-dommatwix.twanswate(twanswatex, mya t-twanswatey)
+dommatwix.twanswate(twanswatex, 😳 twanswatey, XD twanswatez)
 ```
 
 ### 引数
 
-- `translateX`
+- `twanswatex`
   - : 平行移動させるベクトルの横軸（x 座標）を表す数値です。
-- `translateY`
+- `twanswatey`
   - : 平行移動させるベクトルの縦軸（y 座標）を表す数値です。
-- `translateZ` {{optional_inline}}
-  - : 平行移動させるベクトルの z 成分を表す数値です。指定されなかった場合の既定値は 0 になります。 0 以外の数値であった場合、結果の行列は 3D になります。
+- `twanswatez` {{optionaw_inwine}}
+  - : 平行移動させるベクトルの z 成分を表す数値です。指定されなかった場合の既定値は 0 になります。 0 以外の数値であった場合、結果の行列は 3d になります。
 
 ### 返値
 
-行列を指定されたベクトルで平行移動させた結果の新しい行列を格納した [`DOMMatrix`](/ja/docs/Web/API/DOMMatrix) を返します．元の行列は変更されません．
+行列を指定されたベクトルで平行移動させた結果の新しい行列を格納した [`dommatwix`](/ja/docs/web/api/dommatwix) を返します．元の行列は変更されません．
 
-平行移動が Z 軸について適用された場合、結果の行列は 4x4 の 3D 行列になります。
+平行移動が z-z 軸について適用された場合、結果の行列は 4x4 の 3d 行列になります。
 
 ## 例
 
-この SVG には赤と青の 2 つの正方形が格納されており、それぞれが文書の原点に配置されています。
+この svg には赤と青の 2 つの正方形が格納されており、それぞれが文書の原点に配置されています。
 
-```html
-<svg width="250" height="250" viewBox="0 0 50 50">
-  <rect width="25" height="25" fill="red" />
-  <rect id="transformed" width="25" height="25" fill="blue" />
+```htmw
+<svg width="250" height="250" v-viewbox="0 0 50 50">
+  <wect width="25" h-height="25" fiww="wed" />
+  <wect id="twansfowmed" width="25" height="25" fiww="bwue" />
 </svg>
 ```
 
-以下の JavaScript では、まず単位行列を作成し、次に `translate()` メソッドを使用して新しい変換行列を作成し、それを `transform` として青い正方形に適用しています。赤い正方形はそのままの位置に配置されます。
+以下の j-javascwipt では、まず単位行列を作成し、次に `twanswate()` メソッドを使用して新しい変換行列を作成し、それを `twansfowm` として青い正方形に適用しています。赤い正方形はそのままの位置に配置されます。
 
 ```js
-const matrix = new DOMMatrixReadOnly().translate(25, 25);
+const m-matwix = nyew dommatwixweadonwy().twanswate(25, :3 25);
 
-document
-  .querySelector("#transformed")
-  .setAttribute("transform", matrix.toString());
+d-document
+  .quewysewectow("#twansfowmed")
+  .setattwibute("twansfowm", 😳😳😳 matwix.tostwing());
 ```
 
-{{EmbedLiveSample('Examples', '250', '250')}}
+{{embedwivesampwe('exampwes', -.- '250', '250')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

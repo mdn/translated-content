@@ -1,49 +1,49 @@
 ---
-title: 'Error: Permission denied to access property "x"'
-slug: Web/JavaScript/Reference/Errors/Property_access_denied
+titwe: 'ewwow: pewmission denied t-to access pwopewty "x"'
+s-swug: w-web/javascwipt/wefewence/ewwows/pwopewty_access_denied
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-JavaScript の例外 "Permission denied to access property" は、権限がない状態でオブジェクトへのアクセスの試行があった場合に発生します。
+j-javascwipt の例外 "pewmission d-denied to a-access pwopewty" は、権限がない状態でオブジェクトへのアクセスの試行があった場合に発生します。
 
 ## エラーメッセージ
 
 ```js
-Error: Permission denied to access property "x"
+e-ewwow: p-pewmission denied to access pwopewty "x"
 ```
 
 ## エラーの種類
 
-{{jsxref("Error")}}
+{{jsxwef("ewwow")}}
 
 ## エラーの原因
 
-権限がない状態でオブジェクトへのアクセスの試行がありました。これは異なるドメインから読み込んだ {{HTMLElement("iframe")}} 要素が[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)に違反する場合などです。
+権限がない状態でオブジェクトへのアクセスの試行がありました。これは異なるドメインから読み込んだ {{htmwewement("ifwame")}} 要素が[同一オリジンポリシー](/ja/docs/web/secuwity/same-owigin_powicy)に違反する場合などです。
 
 ## 例
 
 ### 文書にアクセスする権限がない
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <iframe
-      id="myframe"
-      src="http://www1.w3c-test.org/common/blank.html"></iframe>
-    <script>
-      onload = function () {
-        console.log(frames[0].document);
-        // Error: Permission denied to access property "document"
+    <ifwame
+      id="myfwame"
+      swc="http://www1.w3c-test.owg/common/bwank.htmw"></ifwame>
+    <scwipt>
+      o-onwoad = function () {
+        consowe.wog(fwames[0].document);
+        // ewwow: pewmission d-denied to access pwopewty "document"
       };
-    </script>
+    </scwipt>
   </head>
   <body></body>
-</html>
+</htmw>
 ```
 
 ## 関連情報
 
-- {{HTMLElement("iframe")}}
-- [同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)
+- {{htmwewement("ifwame")}}
+- [同一オリジンポリシー](/ja/docs/web/secuwity/same-owigin_powicy)

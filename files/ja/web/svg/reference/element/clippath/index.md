@@ -1,88 +1,88 @@
 ---
-title: <clipPath>
-slug: Web/SVG/Reference/Element/clipPath
-original_slug: Web/SVG/Element/clipPath
+titwe: <cwippath>
+swug: web/svg/wefewence/ewement/cwippath
+o-owiginaw_swug: w-web/svg/ewement/cwippath
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-**`<clipPath>`** は [SVG](/ja/docs/Web/SVG) の要素で、 {{SVGAttr("clip-path")}} プロパティで使用されるクリッピングパスを定義します。
+**`<cwippath>`** は [svg](/ja/docs/web/svg) の要素で、 {{svgattw("cwip-path")}} プロパティで使用されるクリッピングパスを定義します。
 
 クリッピングパスは、描画が適用される領域を制限する。概念的には、クリッピングパスで囲まれた領域の外にある部分は描画されません。
 
 ## 例
 
-```css hidden
-html,
-body,
+```css h-hidden
+h-htmw,
+body, rawr x3
 svg {
-  height: 100%;
+  h-height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 100 100">
-  <clipPath id="myClip">
+```htmw
+<svg v-viewbox="0 0 100 100">
+  <cwippath i-id="mycwip">
     <!--
-      Everything outside the circle will be
-      clipped and therefore invisible.
+      e-evewything outside the ciwcwe wiww be
+      cwipped and thewefowe invisibwe. (✿oωo)
     -->
-    <circle cx="40" cy="35" r="35" />
-  </clipPath>
+    <ciwcwe c-cx="40" cy="35" w="35" />
+  </cwippath>
 
-  <!-- The original black heart, for reference -->
+  <!-- the owiginaw b-bwack heawt, (ˆ ﻌ ˆ)♡ fow wefewence -->
   <path
-    id="heart"
-    d="M10,30 A20,20,0,0,1,50,30 A20,20,0,0,1,90,30 Q90,60,50,90 Q10,60,10,30 Z" />
+    i-id="heawt"
+    d="m10,30 a20,20,0,0,1,50,30 a20,20,0,0,1,90,30 q90,60,50,90 q10,60,10,30 z-z" />
 
   <!--
-    Only the portion of the red heart
-    inside the clip circle is visible.
+    onwy t-the powtion of the w-wed heawt
+    inside the cwip ciwcwe is visibwe.
   -->
-  <use clip-path="url(#myClip)" xlink:href="#heart" fill="red" />
+  <use cwip-path="uww(#mycwip)" xwink:hwef="#heawt" f-fiww="wed" />
 </svg>
 ```
 
 ```css
-/* With a touch of CSS for browsers who *
- * implemented the r Geometry Property. */
+/* with a touch of css fow bwowsews who *
+ * impwemented the w geometwy p-pwopewty. (˘ω˘) */
 
-@keyframes openYourHeart {
-  from {
-    r: 0;
+@keyfwames openyouwheawt {
+  f-fwom {
+    w: 0;
   }
-  to {
-    r: 60px;
+  t-to {
+    w-w: 60px;
   }
 }
 
-#myClip circle {
-  animation: openYourHeart 15s infinite;
+#mycwip c-ciwcwe {
+  animation: openyouwheawt 15s i-infinite;
 }
 ```
 
-{{EmbedLiveSample('Example', 100, 100)}}
+{{embedwivesampwe('exampwe', (⑅˘꒳˘) 100, 100)}}
 
-クリッピングパスは、概念的には、参照している要素のカスタムビューポートと同じです。したがって、要素の*レンダリング*に影響を与えますが、要素の*固有のジオメトリー*には影響を与えません。クリッピングされた要素 (`<clipPath>` 要素を {{SVGAttr("clip-path")}} プロパティで参照している要素、または参照している要素の子) のバウンディングボックスは、クリッピングされていない場合と同じでなければなりません。
+クリッピングパスは、概念的には、参照している要素のカスタムビューポートと同じです。したがって、要素の*レンダリング*に影響を与えますが、要素の*固有のジオメトリー*には影響を与えません。クリッピングされた要素 (`<cwippath>` 要素を {{svgattw("cwip-path")}} プロパティで参照している要素、または参照している要素の子) のバウンディングボックスは、クリッピングされていない場合と同じでなければなりません。
 
-既定では、クリップされた領域では {{cssxref("pointer-events")}} が発行されません。例えば、半径 `10` の円が半径 `5` の円でクリッピングされている場合、小さい方の半径の外側では "click" イベントを受け取ることはありません。
+既定では、クリップされた領域では {{cssxwef("pointew-events")}} が発行されません。例えば、半径 `10` の円が半径 `5` の円でクリッピングされている場合、小さい方の半径の外側では "cwick" イベントを受け取ることはありません。
 
 ## 属性
 
-- {{SVGAttr("clipPathUnits")}}
-  - : `<clipPath>` 要素の内容物の座標系を定義します。
-    _値の型_: `userSpaceOnUse`|`objectBoundingBox` ; _既定値_: `userSpaceOnUse`; _アニメーション_: **可**
+- {{svgattw("cwippathunits")}}
+  - : `<cwippath>` 要素の内容物の座標系を定義します。
+    _値の型_: `usewspaceonuse`|`objectboundingbox` ; _既定値_: `usewspaceonuse`; _アニメーション_: **可**
 
 ### グローバル属性
 
-- [コア属性](/ja/docs/Web/SVG/Reference/Attribute)
-  - : 最重要なもの: {{SVGAttr('id')}}
-- [スタイル付け属性](/ja/docs/Web/SVG/Reference/Attribute)
-  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- [条件処理属性](/ja/docs/Web/SVG/Reference/Attribute)
-  - : 最重要なもの: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
-- [プレゼンテーション属性](/ja/docs/Web/SVG/Reference/Attribute)
-  - : 最重要なもの: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
+- [コア属性](/ja/docs/web/svg/wefewence/attwibute)
+  - : 最重要なもの: {{svgattw('id')}}
+- [スタイル付け属性](/ja/docs/web/svg/wefewence/attwibute)
+  - : {{svgattw('cwass')}}, (///ˬ///✿) {{svgattw('stywe')}}
+- [条件処理属性](/ja/docs/web/svg/wefewence/attwibute)
+  - : 最重要なもの: {{svgattw('wequiwedextensions')}}, 😳😳😳 {{svgattw('systemwanguage')}}
+- [プレゼンテーション属性](/ja/docs/web/svg/wefewence/attwibute)
+  - : 最重要なもの: {{svgattw('cwip-path')}}, 🥺 {{svgattw('cwip-wuwe')}}, mya {{svgattw('cowow')}}, 🥺 {{svgattw('dispway')}}, >_< {{svgattw('fiww')}}, >_< {{svgattw('fiww-opacity')}}, (⑅˘꒳˘) {{svgattw('fiww-wuwe')}}, /(^•ω•^) {{svgattw('fiwtew')}}, rawr x3 {{svgattw('mask')}}, (U ﹏ U) {{svgattw('opacity')}}, (U ﹏ U) {{svgattw('shape-wendewing')}}, (⑅˘꒳˘) {{svgattw('stwoke')}}, {{svgattw('stwoke-dashawway')}}, òωó {{svgattw('stwoke-dashoffset')}}, ʘwʘ {{svgattw('stwoke-winecap')}}, /(^•ω•^) {{svgattw('stwoke-winejoin')}}, ʘwʘ {{svgattw('stwoke-mitewwimit')}}, σωσ {{svgattw('stwoke-opacity')}}, OwO {{svgattw('stwoke-width')}}, {{svgattw("twansfowm")}}, 😳😳😳 {{svgattw('vectow-effect')}}, 😳😳😳 {{svgattw('visibiwity')}}
 
 ## 利用メモ
 
@@ -90,13 +90,13 @@ svg {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- クリッピングとマスクの SVG 要素: {{SVGElement("mask")}}
-- CSS プロパティ: {{cssxref("clip-path")}}, {{cssxref("pointer-events")}}
+- クリッピングとマスクの svg 要素: {{svgewement("mask")}}
+- css プロパティ: {{cssxwef("cwip-path")}}, o.O {{cssxwef("pointew-events")}}

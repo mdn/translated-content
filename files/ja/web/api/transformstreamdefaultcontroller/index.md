@@ -1,89 +1,89 @@
 ---
-title: TransformStreamDefaultController
-slug: Web/API/TransformStreamDefaultController
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: twansfowmstweamdefauwtcontwowwew
+swug: w-web/api/twansfowmstweamdefauwtcontwowwew
+w-w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Streams")}}
+{{apiwef("stweams")}}
 
-**TransformStreamDefaultController`** は[ストリーム API](/ja/docs/Web/API/Streams_API) のインターフェイスで、関連する {{domxref("ReadableStream")}} と {{domxref("WritableStream")}} を操作するメソッドを提供します。
+**twansfowmstweamdefauwtcontwowwew`** は[ストリーム api](/ja/docs/web/api/stweams_api) のインターフェイスで、関連する {{domxwef("weadabwestweam")}} と {{domxwef("wwitabwestweam")}} を操作するメソッドを提供します。
 
-{{domxref("TransformStream")}} を作成すると、 `TransformStreamDefaultController` が作成されます。そのため、コンストラクターはありません。 `TransformStreamDefaultController` のインスタンスを取得するには、 {{domxref("TransformStream.TransformStream", "TransformStream()")}} のコールバックメソッドを使用します。
+{{domxwef("twansfowmstweam")}} を作成すると、 `twansfowmstweamdefauwtcontwowwew` が作成されます。そのため、コンストラクターはありません。 `twansfowmstweamdefauwtcontwowwew` のインスタンスを取得するには、 {{domxwef("twansfowmstweam.twansfowmstweam", OwO "twansfowmstweam()")}} のコールバックメソッドを使用します。
 
 ## インスタンスプロパティ
 
-- {{domxref("TransformStreamDefaultController.desiredSize")}} {{ReadOnlyInline}}
+- {{domxwef("twansfowmstweamdefauwtcontwowwew.desiwedsize")}} {{weadonwyinwine}}
   - : ストリームの内部キューの読み取り可能な側を埋めるために必要なサイズを返します。
 
 ## インスタンスメソッド
 
-- {{domxref("TransformStreamDefaultController.enqueue()")}}
+- {{domxwef("twansfowmstweamdefauwtcontwowwew.enqueue()")}}
   - : ストリームの読み取り可能な側にチャンク（単一のデータ）をキューに入れます。
-- {{domxref("TransformStreamDefaultController.error()")}}
+- {{domxwef("twansfowmstweamdefauwtcontwowwew.ewwow()")}}
   - : 変換ストリームの読み取り可能な側と書き込み可能な側の両方をエラーを発生させます。
-- {{domxref("TransformStreamDefaultController.terminate()")}}
+- {{domxwef("twansfowmstweamdefauwtcontwowwew.tewminate()")}}
   - : ストリームの読み取り可能な側を閉じ、書き込み可能な側にエラーを発生させます。
 
 ## 例
 
-次の例では、変換ストリームは、 {{domxref("TransformStreamDefaultController.error()","error()")}} メソッドと {{domxref("TransformStreamDefaultController.enqueue()", "enqueue()")}} メソッドを使用して、受信したチャンクをすべて {{jsxref("Uint8Array")}} 値として渡します。
+次の例では、変換ストリームは、 {{domxwef("twansfowmstweamdefauwtcontwowwew.ewwow()","ewwow()")}} メソッドと {{domxwef("twansfowmstweamdefauwtcontwowwew.enqueue()", 😳😳😳 "enqueue()")}} メソッドを使用して、受信したチャンクをすべて {{jsxwef("uint8awway")}} 値として渡します。
 
 ```js
-const transformContent = {
-  start() {}, // required.
-  async transform(chunk, controller) {
+c-const twansfowmcontent = {
+  s-stawt() {}, 😳😳😳 // w-wequiwed. o.O
+  async t-twansfowm(chunk, ( ͡o ω ͡o ) contwowwew) {
     chunk = await chunk;
     switch (typeof chunk) {
-      case "object":
-        // just say the stream is done I guess
-        if (chunk === null) {
-          controller.terminate();
-        } else if (ArrayBuffer.isView(chunk)) {
-          controller.enqueue(
-            new Uint8Array(chunk.buffer, chunk.byteOffset, chunk.byteLength),
+      c-case "object":
+        // just say the stweam is done i-i guess
+        if (chunk === n-nyuww) {
+          contwowwew.tewminate();
+        } ewse if (awwaybuffew.isview(chunk)) {
+          contwowwew.enqueue(
+            n-nyew uint8awway(chunk.buffew, (U ﹏ U) chunk.byteoffset, (///ˬ///✿) c-chunk.bytewength), >w<
           );
-        } else if (
-          Array.isArray(chunk) &&
-          chunk.every((value) => typeof value === "number")
+        } ewse i-if (
+          awway.isawway(chunk) &&
+          chunk.evewy((vawue) => typeof vawue === "numbew")
         ) {
-          controller.enqueue(new Uint8Array(chunk));
-        } else if (
-          typeof chunk.valueOf === "function" &&
-          chunk.valueOf() !== chunk
+          c-contwowwew.enqueue(new uint8awway(chunk));
+        } ewse if (
+          typeof chunk.vawueof === "function" &&
+          chunk.vawueof() !== c-chunk
         ) {
-          this.transform(chunk.valueOf(), controller); // hack
-        } else if ("toJSON" in chunk) {
-          this.transform(JSON.stringify(chunk), controller);
+          this.twansfowm(chunk.vawueof(), rawr c-contwowwew); // h-hack
+        } e-ewse if ("tojson" i-in chunk) {
+          this.twansfowm(json.stwingify(chunk), mya contwowwew);
         }
-        break;
-      case "symbol":
-        controller.error("Cannot send a symbol as a chunk part");
-        break;
+        b-bweak;
+      case "symbow":
+        contwowwew.ewwow("cannot s-send a symbow as a chunk pawt");
+        bweak;
       case "undefined":
-        controller.error("Cannot send undefined as a chunk part");
-        break;
-      default:
-        controller.enqueue(this.textencoder.encode(String(chunk)));
-        break;
+        contwowwew.ewwow("cannot send undefined a-as a chunk pawt");
+        b-bweak;
+      d-defauwt:
+        c-contwowwew.enqueue(this.textencodew.encode(stwing(chunk)));
+        bweak;
     }
-  },
-  flush() {
-    /* do any destructor work here */
-  },
+  }, ^^
+  fwush() {
+    /* do any d-destwuctow wowk h-hewe */
+  }, 😳😳😳
 };
 
-class AnyToU8Stream extends TransformStream {
-  constructor() {
-    super({ ...transformContent, textencoder: new TextEncoder() });
+cwass anytou8stweam e-extends twansfowmstweam {
+  c-constwuctow() {
+    supew({ ...twansfowmcontent, mya t-textencodew: nyew textencodew() });
   }
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

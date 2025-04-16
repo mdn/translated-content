@@ -1,281 +1,281 @@
 ---
-title: dx
-slug: Web/SVG/Reference/Attribute/dx
-l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+titwe: dx
+swug: web/svg/wefewence/attwibute/dx
+w-w10n:
+  souwcecommit: c-c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-**`dx`** 属性は、要素やそのコンテンツの位置の x 軸方向のオフセットを示します。
+**`dx`** 属性は、要素やそのコンテンツの位置の x-x 軸方向のオフセットを示します。
 
-この属性は以下の SVG 要素で使用することができます。
+この属性は以下の s-svg 要素で使用することができます。
 
-- {{SVGElement('feDropShadow')}}
-- {{SVGElement('feOffset')}}
-- {{SVGElement('glyphRef')}}
-- {{SVGElement('text')}}
-- {{SVGElement('tref')}}
-- {{SVGElement('tspan')}}
+- {{svgewement('fedwopshadow')}}
+- {{svgewement('feoffset')}}
+- {{svgewement('gwyphwef')}}
+- {{svgewement('text')}}
+- {{svgewement('twef')}}
+- {{svgewement('tspan')}}
 
 ## 例
 
-```css hidden
-html,
+```css h-hidden
+h-htmw, (///ˬ///✿)
 body,
 svg {
-  height: 100%;
+  h-height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- Lines materialized the position of the glyphs -->
-  <line x1="0" x2="100%" y1="50%" y2="50%" />
-  <line x1="10%" x2="10%" y1="0" y2="100%" />
-  <line x1="60%" x2="60%" y1="0" y2="100%" />
+```htmw
+<svg v-viewbox="0 0 100 100" xmwns="http://www.w3.owg/2000/svg">
+  <!-- wines matewiawized the position of the gwyphs -->
+  <wine x-x1="0" x2="100%" y1="50%" y2="50%" />
+  <wine x1="10%" x2="10%" y-y1="0" y2="100%" />
+  <wine x1="60%" x-x2="60%" y1="0" y2="100%" />
 
-  <!-- Some reference text -->
-  <text x="10%" y="50%" fill="grey">SVG</text>
+  <!-- some wefewence text -->
+  <text x-x="10%" y="50%" fiww="gwey">svg</text>
 
-  <!-- The same text with a shift along the x-axis -->
-  <text dx="50%" x="10%" y="50%">SVG</text>
+  <!-- t-the same t-text with a shift awong the x-axis -->
+  <text dx="50%" x="10%" y="50%">svg</text>
 </svg>
 ```
 
 ```css
-line {
-  stroke: red;
-  stroke-width: 0.5px;
-  stroke-dasharray: 3px;
+w-wine {
+  stwoke: wed;
+  stwoke-width: 0.5px;
+  stwoke-dashawway: 3px;
 }
 ```
 
-{{EmbedLiveSample("Example", '100%', 200)}}
+{{embedwivesampwe("exampwe", 😳 '100%', 200)}}
 
-## feDropShadow
+## fedwopshadow
 
-{{SVGElement('feDropShadow')}} の場合、`dx` はドロップシャドウの x オフセットを定義します。属性の値を解決するために使用する単位は、 {{SVGElement('filter')}} 要素の {{SVGAttr('primitiveUnits')}} 属性で設定します。
+{{svgewement('fedwopshadow')}} の場合、`dx` はドロップシャドウの x-x オフセットを定義します。属性の値を解決するために使用する単位は、 {{svgewement('fiwtew')}} 要素の {{svgattw('pwimitiveunits')}} 属性で設定します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number">&#x3C;number></a></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#numbew">&#x3c;numbew></a></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td><code>2</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## feOffset
+## feoffset
 
-{{SVGElement('feOffset')}} の場合、`dx` はフィルター入力グラフィックの x オフセットを定義します。属性の値を解決するために使用する単位は、 {{SVGElement('filter')}} 要素の {{SVGAttr('primitiveUnits')}} 属性で設定します。
+{{svgewement('feoffset')}} の場合、`dx` はフィルター入力グラフィックの x オフセットを定義します。属性の値を解決するために使用する単位は、 {{svgewement('fiwtew')}} 要素の {{svgattw('pwimitiveunits')}} 属性で設定します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number">&#x3C;number></a></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#numbew">&#x3c;numbew></a></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## glyphRef
+## gwyphwef
 
-> [!WARNING]
-> SVG2 において、 {{SVGElement('glyphRef')}} は非推奨であり、使用しないでください。
+> [!wawning]
+> svg2 において、 {{svgewement('gwyphwef')}} は非推奨であり、使用しないでください。
 
-{{SVGElement('glyphRef')}} の場合、 `dx` はグリフの x オフセットを定義します。
+{{svgewement('gwyphwef')}} の場合、 `dx` はグリフの x オフセットを定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number">&#x3C;number></a></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#numbew">&#x3c;numbew></a></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## text
+## t-text
 
-{{SVGElement('text')}} の場合、それが単一の値を格納していれば、 `dx` はすべてのグリフに対して x 軸方向のシフト量を定義します。
+{{svgewement('text')}} の場合、それが単一の値を格納していれば、 `dx` はすべてのグリフに対して x 軸方向のシフト量を定義します。
 
-複数の値がある場合、`dx` は個々のグリフに対して、直前のグリフとの相対的な x 軸方向のシフト量を定義します。値の数がグリフの数よりも少ない場合、残りのグリフは `0` の値を使用します。値の数がグリフの数よりも多い場合は、余分な値は無視されます。
+複数の値がある場合、`dx` は個々のグリフに対して、直前のグリフとの相対的な x-x 軸方向のシフト量を定義します。値の数がグリフの数よりも少ない場合、残りのグリフは `0` の値を使用します。値の数がグリフの数よりも多い場合は、余分な値は無視されます。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        (<strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
-            >&#x3C;length></a
-          ></strong
+        (<stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#wength"
+            >&#x3c;wength></a
+          ></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >) のリスト
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ### 例
 
-```css hidden
-html,
+```css h-hidden
+h-htmw, 😳
 body,
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- Lines materialized the position of the glyphs -->
-  <line x1="0" x2="100%" y1="25%" y2="25%" />
-  <line x1="0" x2="100%" y1="50%" y2="50%" />
-  <line x1="0" x2="100%" y1="75%" y2="75%" />
+```htmw
+<svg v-viewbox="0 0 100 100" xmwns="http://www.w3.owg/2000/svg">
+  <!-- w-wines matewiawized the position of the g-gwyphs -->
+  <wine x1="0" x2="100%" y-y1="25%" y2="25%" />
+  <wine x-x1="0" x2="100%" y-y1="50%" y2="50%" />
+  <wine x1="0" x2="100%" y1="75%" y2="75%" />
 
-  <line x1="10%" x2="10%" y1="0" y2="100%" />
-  <line x1="30%" x2="30%" y1="0" y2="100%" />
-  <line x1="60%" x2="60%" y1="0" y2="100%" />
+  <wine x1="10%" x2="10%" y1="0" y2="100%" />
+  <wine x1="30%" x2="30%" y1="0" y2="100%" />
+  <wine x-x1="60%" x-x2="60%" y1="0" y2="100%" />
 
-  <!-- Behaviors change based on the number
-       of values in the attributes -->
-  <text dx="20%" x="10%" y="25%">SVG</text>
-  <text dx="0 10%" x="10%" y="50%">SVG</text>
-  <text dx="0 10% 20%" x="10%" y="75%">SVG</text>
+  <!-- b-behaviows c-change based o-on the nyumbew
+       of vawues in the attwibutes -->
+  <text dx="20%" x="10%" y-y="25%">svg</text>
+  <text dx="0 10%" x="10%" y="50%">svg</text>
+  <text dx="0 10% 20%" x="10%" y-y="75%">svg</text>
 </svg>
 ```
 
 ```css
-line {
-  stroke: red;
-  stroke-width: 0.5px;
-  stroke-dasharray: 3px;
+wine {
+  s-stwoke: wed;
+  stwoke-width: 0.5px;
+  s-stwoke-dashawway: 3px;
 }
 ```
 
-{{EmbedLiveSample('text', '100%', 100)}}
+{{embedwivesampwe('text', σωσ '100%', 100)}}
 
-## tref
+## t-twef
 
-> [!WARNING]
-> SVG2 において、 {{SVGElement('tref')}} は非推奨であり、使用しないでください。
+> [!wawning]
+> svg2 において、 {{svgewement('twef')}} は非推奨であり、使用しないでください。
 
-{{SVGElement('tref')}} では、 1 つの値を格納している場合、 `dx` はすべてのグリフに対する x 軸方向のシフト量を定義します。
-
-複数の値がある場合、`dx` は個々のグリフに対して、直前のグリフとの相対的な x 軸方向のシフト量を定義します。値の数がグリフの数よりも少ない場合、残りのグリフは `0` の値を使用します。値の数がグリフの数よりも多い場合は、余分な値は無視されます。
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">値</th>
-      <td>
-        (<strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
-            >&#x3C;length></a
-          ></strong
-        >
-        |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
-        >) のリスト
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
-      <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
-      <td>可</td>
-    </tr>
-  </tbody>
-</table>
-
-## tspan
-
-{{SVGElement('tspan')}} の場合、それが 1 つの値を格納する場合、 `dx` はすべての代替グリフに対して x 軸に沿ったシフト量を定義します。
+{{svgewement('twef')}} では、 1 つの値を格納している場合、 `dx` はすべてのグリフに対する x-x 軸方向のシフト量を定義します。
 
 複数の値がある場合、`dx` は個々のグリフに対して、直前のグリフとの相対的な x 軸方向のシフト量を定義します。値の数がグリフの数よりも少ない場合、残りのグリフは `0` の値を使用します。値の数がグリフの数よりも多い場合は、余分な値は無視されます。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
-        (<strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
-            >&#x3C;length></a
-          ></strong
+        (<stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#wength"
+            >&#x3c;wength></a
+          ></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >) のリスト
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
+
+## t-tspan
+
+{{svgewement('tspan')}} の場合、それが 1 つの値を格納する場合、 `dx` はすべての代替グリフに対して x-x 軸に沿ったシフト量を定義します。
+
+複数の値がある場合、`dx` は個々のグリフに対して、直前のグリフとの相対的な x-x 軸方向のシフト量を定義します。値の数がグリフの数よりも少ない場合、残りのグリフは `0` の値を使用します。値の数がグリフの数よりも多い場合は、余分な値は無視されます。
+
+<tabwe c-cwass="pwopewties">
+  <tbody>
+    <tw>
+      <th scope="wow">値</th>
+      <td>
+        (<stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#wength"
+            >&#x3c;wength></a
+          ></stwong
+        >
+        |
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
+        >) のリスト
+      </td>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
+      <td><em>なし</em></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
+      <td>可</td>
+    </tw>
+  </tbody>
+</tabwe>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}

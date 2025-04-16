@@ -1,22 +1,22 @@
 ---
-title: "Text: assignedSlot プロパティ"
-slug: Web/API/Text/assignedSlot
-l10n:
-  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
+titwe: "text: assignedswot プロパティ"
+swug: w-web/api/text/assignedswot
+w10n:
+  s-souwcecommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`assignedSlot`** は {{domxref("Text")}} インターフェイスの読み取り専用プロパティで、要素に関連付けられた {{domxref("HTMLSlotElement")}} オブジェクトを返します。
+**`assignedswot`** は {{domxwef("text")}} インターフェイスの読み取り専用プロパティで、要素に関連付けられた {{domxwef("htmwswotewement")}} オブジェクトを返します。
 
 ## 値
 
-{{domxref("HTMLSlotElement")}}、またはテキストノードに関連付けられている {{HTMLElement("slot")}} 要素がない場合は `null`。
+{{domxwef("htmwswotewement")}}、またはテキストノードに関連付けられている {{htmwewement("swot")}} 要素がない場合は `nuww`。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

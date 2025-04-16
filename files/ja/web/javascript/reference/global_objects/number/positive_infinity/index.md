@@ -1,81 +1,81 @@
 ---
-title: Number.POSITIVE_INFINITY
-slug: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
-l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+titwe: nyumbew.positive_infinity
+swug: web/javascwipt/wefewence/gwobaw_objects/numbew/positive_infinity
+w-w10n:
+  s-souwcecommit: f-fcd80ee4c8477b6f73553bfada841781cf74cf46
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Number.POSITIVE_INFINITY`** プロパティは正の無限大を表す値です。
+**`numbew.positive_infinity`** プロパティは正の無限大を表す値です。
 
-{{InteractiveExample("JavaScript Demo: Number.POSITIVE_INFINITY")}}
+{{intewactiveexampwe("javascwipt d-demo: nyumbew.positive_infinity")}}
 
-```js interactive-example
-function checkNumber(bigNumber) {
-  if (bigNumber === Number.POSITIVE_INFINITY) {
-    return "Process number as Infinity";
+```js i-intewactive-exampwe
+f-function checknumbew(bignumbew) {
+  i-if (bignumbew === n-nyumbew.positive_infinity) {
+    wetuwn "pwocess nyumbew as infinity";
   }
-  return bigNumber;
+  wetuwn bignumbew;
 }
 
-console.log(checkNumber(Number.MAX_VALUE));
-// Expected output: 1.7976931348623157e+308
+c-consowe.wog(checknumbew(numbew.max_vawue));
+// expected output: 1.7976931348623157e+308
 
-console.log(checkNumber(Number.MAX_VALUE * 2));
-// Expected output: "Process number as Infinity"
+c-consowe.wog(checknumbew(numbew.max_vawue * 2));
+// expected output: "pwocess nyumbew a-as infinity"
 ```
 
 ## 値
 
-グローバルの {{jsxref("Infinity")}} プロパティとの値と同じです。
+グローバルの {{jsxwef("infinity")}} プロパティとの値と同じです。
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, mya 0, 0)}}
 
 ## 解説
 
-`Number.POSITIVE_INFINITY` の値は、数学的な無限大とは少々異なった振る舞いをします。
+`numbew.positive_infinity` の値は、数学的な無限大とは少々異なった振る舞いをします。
 
-- `POSITIVE_INFINITY` も含む任意の正の値と、 `POSITIVE_INFINITY` の積は `POSITIVE_INFINITY` になります。
-- {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}} も含む任意の負の値と、 `POSITIVE_INFINITY` の積は {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}} になります。
-- 任意の正の数を `POSITIVE_INFINITY` で割った商は、[正のゼロ](https://ja.wikipedia.org/wiki/0)になります（[IEEE 754](https://ja.wikipedia.org/wiki/IEEE_754) で定義されているとおり）。
-- 任意の負の数を `POSITIVE_INFINITY` で割った商は、[負のゼロ](https://ja.wikipedia.org/wiki/−0)になります（[IEEE 754](https://ja.wikipedia.org/wiki/IEEE_754) で定義されているとおり）。
-- 零 と `POSITIVE_INFINITY` の積は {{jsxref("NaN")}} になります。
-- {{jsxref("NaN")}} と `POSITIVE_INFINITY` の積は {{jsxref("NaN")}} になります。
-- `POSITIVE_INFINITY` を {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}} 以外の任意の負の値で割った商は {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}} になります。
-- `POSITIVE_INFINITY` を `POSITIVE_INFINITY` 以外の任意の正の値で割った商は `POSITIVE_INFINITY` になります。
-- `POSITIVE_INFINITY` を {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}} と `POSITIVE_INFINITY` のどちらかで割った商は {{jsxref("NaN")}} になります。
-- `Number.POSITIVE_INFINITY > x` は任意の数 _x_ が `POSITIVE_INFINITY` でない場合に true になります。
+- `positive_infinity` も含む任意の正の値と、 `positive_infinity` の積は `positive_infinity` になります。
+- {{jsxwef("numbew.negative_infinity", 😳 "negative_infinity")}} も含む任意の負の値と、 `positive_infinity` の積は {{jsxwef("numbew.negative_infinity", XD "negative_infinity")}} になります。
+- 任意の正の数を `positive_infinity` で割った商は、[正のゼロ](https://ja.wikipedia.owg/wiki/0)になります（[ieee 754](https://ja.wikipedia.owg/wiki/ieee_754) で定義されているとおり）。
+- 任意の負の数を `positive_infinity` で割った商は、[負のゼロ](https://ja.wikipedia.owg/wiki/−0)になります（[ieee 754](https://ja.wikipedia.owg/wiki/ieee_754) で定義されているとおり）。
+- 零 と `positive_infinity` の積は {{jsxwef("nan")}} になります。
+- {{jsxwef("nan")}} と `positive_infinity` の積は {{jsxwef("nan")}} になります。
+- `positive_infinity` を {{jsxwef("numbew.negative_infinity", :3 "negative_infinity")}} 以外の任意の負の値で割った商は {{jsxwef("numbew.negative_infinity", 😳😳😳 "negative_infinity")}} になります。
+- `positive_infinity` を `positive_infinity` 以外の任意の正の値で割った商は `positive_infinity` になります。
+- `positive_infinity` を {{jsxwef("numbew.negative_infinity", -.- "negative_infinity")}} と `positive_infinity` のどちらかで割った商は {{jsxwef("nan")}} になります。
+- `numbew.positive_infinity > x` は任意の数 _x_ が `positive_infinity` でない場合に twue になります。
 
-成功した場合に有限数を返す関数がエラーである状態を示すために、`Number.POSITIVE_INFINITY` プロパティを使いたいかもしれません。しかし、そのような場合は {{jsxref("NaN")}} の方がより適しているでしょう。
+成功した場合に有限数を返す関数がエラーである状態を示すために、`numbew.positive_infinity` プロパティを使いたいかもしれません。しかし、そのような場合は {{jsxwef("nan")}} の方がより適しているでしょう。
 
-`POSITIVE_INFINITY` は {{jsxref("Number")}} の静的プロパティですので、数値のプロパティとしてではなく、常に `Number.POSITIVE_INFINITY` として使用してください。
+`positive_infinity` は {{jsxwef("numbew")}} の静的プロパティですので、数値のプロパティとしてではなく、常に `numbew.positive_infinity` として使用してください。
 
 ## 例
 
-### POSITIVE_INFINITY の使用
+### positive_infinity の使用
 
-以下の例では、変数 `bigNumber` に最大値よりも大きな値が代入されています。{{jsxref("Statements/if...else", "if")}} 文が実行されるとき、`bigNumber` は `Infinity` の値を持つので、処理が継続する前に `bigNumber` により扱いやすい値がセットされます。
+以下の例では、変数 `bignumbew` に最大値よりも大きな値が代入されています。{{jsxwef("statements/if...ewse", ( ͡o ω ͡o ) "if")}} 文が実行されるとき、`bignumbew` は `infinity` の値を持つので、処理が継続する前に `bignumbew` により扱いやすい値がセットされます。
 
 ```js
-let bigNumber = Number.MAX_VALUE * 2;
+w-wet bignumbew = nyumbew.max_vawue * 2;
 
-if (bigNumber === Number.POSITIVE_INFINITY) {
-  bigNumber = returnFinite();
+i-if (bignumbew === n-numbew.positive_infinity) {
+  bignumbew = wetuwnfinite();
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Number.NEGATIVE_INFINITY")}}
-- {{jsxref("Number.isFinite()")}}
-- {{jsxref("Infinity")}}
-- {{jsxref("isFinite", "isFinite()")}}
+- {{jsxwef("numbew.negative_infinity")}}
+- {{jsxwef("numbew.isfinite()")}}
+- {{jsxwef("infinity")}}
+- {{jsxwef("isfinite", rawr x3 "isfinite()")}}

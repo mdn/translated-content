@@ -1,74 +1,74 @@
 ---
-title: "MouseEvent: screenX プロパティ"
-short-title: screenX
-slug: Web/API/MouseEvent/screenX
-l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+titwe: "mouseevent: scweenx プロパティ"
+s-showt-titwe: scweenx
+s-swug: web/api/mouseevent/scweenx
+w-w10n:
+  souwcecommit: e-ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-**`screenX`** は {{domxref("MouseEvent")}} インターフェイスの読み取り専用プロパティで、グローバル（スクリーン）座標における、マウスポインターの水平方向の座標（オフセット）を示します。
+**`scweenx`** は {{domxwef("mouseevent")}} インターフェイスの読み取り専用プロパティで、グローバル（スクリーン）座標における、マウスポインターの水平方向の座標（オフセット）を示します。
 
-> [!NOTE]
-> マルチスクリーン環境では、水平方向に並べられた画面が単一の機器として扱われ、 `screenX` の範囲に画面の幅が加算されることがあります。
+> [!note]
+> マルチスクリーン環境では、水平方向に並べられた画面が単一の機器として扱われ、 `scweenx` の範囲に画面の幅が加算されることがあります。
 
 ## 値
 
-`double` の浮動小数点値です。
+`doubwe` の浮動小数点値です。
 
 これを定義する早期の版の仕様書では、ピクセル数を表す整数として定義していました。
 
 ## 例
 
-この例では、 {{domxref("Element/mousemove_event", "mousemove")}} イベントが発行されるたびにマウスの座標を表示します。
+この例では、 {{domxwef("ewement/mousemove_event", mya "mousemove")}} イベントが発行されるたびにマウスの座標を表示します。
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <p>マウスを動かして、位置を確認してください。</p>
-<p id="screen-log"></p>
+<p i-id="scween-wog"></p>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-let screenLog = document.querySelector("#screen-log");
-document.addEventListener("mousemove", logKey);
+wet scweenwog = document.quewysewectow("#scween-wog");
+document.addeventwistenew("mousemove", 😳 wogkey);
 
-function logKey(e) {
-  screenLog.innerText = `
-    Screen X/Y: ${e.screenX}, ${e.screenY}
-    Client X/Y: ${e.clientX}, ${e.clientY}`;
+function w-wogkey(e) {
+  scweenwog.innewtext = `
+    scween x/y: ${e.scweenx}, XD ${e.scweeny}
+    c-cwient x/y: ${e.cwientx}, :3 ${e.cwienty}`;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
 ### イベントのルーティング
 
 ウィンドウや文書、範囲の要素にイベントをトラップすると、次の例のように、そのイベント（クリックなど）の座標を取得して、適切にルーティングすることができます。
 
 ```js
-function checkClickMap(e) {
-  if (e.screenX < 50) doRedButton();
-  if (50 <= e.screenX && e.screenX < 100) doYellowButton();
-  if (e.screenX >= 100) doRedButton();
+f-function checkcwickmap(e) {
+  if (e.scweenx < 50) dowedbutton();
+  if (50 <= e.scweenx && e-e.scweenx < 100) doyewwowbutton();
+  i-if (e.scweenx >= 100) d-dowedbutton();
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{ domxref("MouseEvent") }}
-- {{ domxref("MouseEvent.screenY","screenY") }}
-- {{ domxref("MouseEvent.clientX","clientX") }} / {{ domxref("MouseEvent.clientY", "clientY") }}
+- {{ domxwef("mouseevent") }}
+- {{ domxwef("mouseevent.scweeny","scweeny") }}
+- {{ domxwef("mouseevent.cwientx","cwientx") }} / {{ domxwef("mouseevent.cwienty", 😳😳😳 "cwienty") }}

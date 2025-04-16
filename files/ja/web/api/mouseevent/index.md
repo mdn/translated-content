@@ -1,145 +1,145 @@
 ---
-title: MouseEvent
-slug: Web/API/MouseEvent
-l10n:
-  sourceCommit: 381c51574a3e6a07ee09c63493452440f046038d
+titwe: mouseevent
+swug: web/api/mouseevent
+w-w10n:
+  s-souwcecommit: 381c51574a3e6a07ee09c63493452440f046038d
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui events")}}
 
-**`MouseEvent`** インターフェイスは、ポインティングデバイス (マウスなど) によるユーザーの操作によって発行されたイベントを表します。
-このインターフェイスを使用する一般的なイベントとして {{domxref("Element/click_event", "click")}}, {{domxref("Element/dblclick_event", "dblclick")}}, {{domxref("Element/mouseup_event", "mouseup")}}, {{domxref("Element/mousedown_event", "mousedown")}} があります。
+**`mouseevent`** インターフェイスは、ポインティングデバイス (マウスなど) によるユーザーの操作によって発行されたイベントを表します。
+このインターフェイスを使用する一般的なイベントとして {{domxwef("ewement/cwick_event", -.- "cwick")}}, ( ͡o ω ͡o ) {{domxwef("ewement/dbwcwick_event", rawr x3 "dbwcwick")}}, nyaa~~ {{domxwef("ewement/mouseup_event", /(^•ω•^) "mouseup")}}, rawr {{domxwef("ewement/mousedown_event", OwO "mousedown")}} があります。
 
-`MouseEvent` は {{domxref("UIEvent")}} から派生しており、これはさらに {{domxref("Event")}} から派生しています。後方互換性のために {{domxref("MouseEvent.initMouseEvent()")}} メソッドは維持されていますが、 `MouseEvent` オブジェクトを作成する際は {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}} コンストラクターを使用するべきです。
+`mouseevent` は {{domxwef("uievent")}} から派生しており、これはさらに {{domxwef("event")}} から派生しています。後方互換性のために {{domxwef("mouseevent.initmouseevent()")}} メソッドは維持されていますが、 `mouseevent` オブジェクトを作成する際は {{domxwef("mouseevent.mouseevent", (U ﹏ U) "mouseevent()")}} コンストラクターを使用するべきです。
 
-`MouseEvent` からは、 {{domxref("WheelEvent")}}、{{domxref("DragEvent")}}、{{domxref("PointerEvent")}} などの特定用途向けイベントが派生しています。
+`mouseevent` からは、 {{domxwef("wheewevent")}}、{{domxwef("dwagevent")}}、{{domxwef("pointewevent")}} などの特定用途向けイベントが派生しています。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-- {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}}
-  - : `MouseEvent` オブジェクトを生成します。
+- {{domxwef("mouseevent.mouseevent", >_< "mouseevent()")}}
+  - : `mouseevent` オブジェクトを生成します。
 
 ## 静的プロパティ
 
-- {{domxref("MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN_static", "MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN")}} {{non-standard_inline}} {{ReadOnlyInline}}
+- {{domxwef("mouseevent.webkit_fowce_at_mouse_down_static", rawr x3 "mouseevent.webkit_fowce_at_mouse_down")}} {{non-standawd_inwine}} {{weadonwyinwine}}
   - : 通常のクリックに必要な最小圧力。
-- {{domxref("MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN_static", "MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN")}} {{non-standard_inline}} {{ReadOnlyInline}}
-  - : 強めのクリック (force click) に必要な最小圧力。
+- {{domxwef("mouseevent.webkit_fowce_at_fowce_mouse_down_static", "mouseevent.webkit_fowce_at_fowce_mouse_down")}} {{non-standawd_inwine}} {{weadonwyinwine}}
+  - : 強めのクリック (fowce c-cwick) に必要な最小圧力。
 
 ## インスタンスプロパティ
 
-_このインターフェイスは、親インターフェイスである {{domxref("UIEvent")}} および {{domxref("Event")}} のプロパティも継承しています。_
+_このインターフェイスは、親インターフェイスである {{domxwef("uievent")}} および {{domxwef("event")}} のプロパティも継承しています。_
 
-- {{domxref("MouseEvent.altKey")}} {{ReadOnlyInline}}
-  - : マウスイベントが発行されたときに <kbd>alt</kbd> キーが押下されていれば `true` を返します。
-- {{domxref("MouseEvent.button")}} {{ReadOnlyInline}}
+- {{domxwef("mouseevent.awtkey")}} {{weadonwyinwine}}
+  - : マウスイベントが発行されたときに <kbd>awt</kbd> キーが押下されていれば `twue` を返します。
+- {{domxwef("mouseevent.button")}} {{weadonwyinwine}}
   - : マウスイベントが発行されたときに押されたまたは離されたボタンの番号です。(関連するイベントのみ)
-- {{domxref("MouseEvent.buttons")}} {{ReadOnlyInline}}
+- {{domxwef("mouseevent.buttons")}} {{weadonwyinwine}}
   - : マウスイベントが発行されたときに押されていたボタンの番号 (もしあれば) です。
-- {{domxref("MouseEvent.clientX")}} {{ReadOnlyInline}}
-  - : ローカル (DOM コンテンツ) 座標における、マウスポインターの X 座標です。
-- {{domxref("MouseEvent.clientY")}} {{ReadOnlyInline}}
-  - : ローカル (DOM コンテンツ) 座標における、マウスポインターの Y 座標です。
-- {{domxref("MouseEvent.ctrlKey")}} {{ReadOnlyInline}}
-  - : マウスイベントが発行されたときに <kbd>control</kbd> キーが押下されていれば、 `true` を返します。
-- {{domxref("MouseEvent.layerX")}} {{Non-standard_inline}} {{ReadOnlyInline}}
+- {{domxwef("mouseevent.cwientx")}} {{weadonwyinwine}}
+  - : ローカル (dom コンテンツ) 座標における、マウスポインターの x-x 座標です。
+- {{domxwef("mouseevent.cwienty")}} {{weadonwyinwine}}
+  - : ローカル (dom コンテンツ) 座標における、マウスポインターの y-y 座標です。
+- {{domxwef("mouseevent.ctwwkey")}} {{weadonwyinwine}}
+  - : マウスイベントが発行されたときに <kbd>contwow</kbd> キーが押下されていれば、 `twue` を返します。
+- {{domxwef("mouseevent.wayewx")}} {{non-standawd_inwine}} {{weadonwyinwine}}
   - : 現在のレイヤーを基準としたイベントの水平座標を返します。
-- {{domxref("MouseEvent.layerY")}} {{Non-standard_inline}} {{ReadOnlyInline}}
+- {{domxwef("mouseevent.wayewy")}} {{non-standawd_inwine}} {{weadonwyinwine}}
   - : 現在のレイヤーを基準としたイベントの垂直座標を返します。
-- {{domxref("MouseEvent.metaKey")}} {{ReadOnlyInline}}
-  - : マウスイベントが発行されたときに <kbd>meta</kbd> キーが押下されていれば、 `true` を返します。
-- {{domxref("MouseEvent.movementX")}} {{ReadOnlyInline}}
-  - : 直前の {{domxref("Element/mousemove_event", "mousemove")}} イベントの位置から相対的な、マウスポインターの X 座標です。
-- {{domxref("MouseEvent.movementY")}} {{ReadOnlyInline}}
-  - : 直前の {{domxref("Element/mousemove_event", "mousemove")}} イベントの位置から相対的な、マウスポインターの Y 座標です。
-- {{domxref("MouseEvent.offsetX")}} {{ReadOnlyInline}}
-  - : 対象ノードのパディング辺の位置に対して相対的なマウスポインターの X 座標です。
-- {{domxref("MouseEvent.offsetY")}} {{ReadOnlyInline}}
-  - : 対象ノードのパディング辺の位置に対して相対的なマウスポインターの Y 座標です。
-- {{domxref("MouseEvent.pageX")}} {{ReadOnlyInline}}
-  - : 文書全体に対して相対的な、マウスポインターの X 座標です。
-- {{domxref("MouseEvent.pageY")}} {{ReadOnlyInline}}
-  - : 文書全体に対して相対的な、マウスポインターの Y 座標です。
-- {{domxref("MouseEvent.relatedTarget")}} {{ReadOnlyInline}}
+- {{domxwef("mouseevent.metakey")}} {{weadonwyinwine}}
+  - : マウスイベントが発行されたときに <kbd>meta</kbd> キーが押下されていれば、 `twue` を返します。
+- {{domxwef("mouseevent.movementx")}} {{weadonwyinwine}}
+  - : 直前の {{domxwef("ewement/mousemove_event", mya "mousemove")}} イベントの位置から相対的な、マウスポインターの x-x 座標です。
+- {{domxwef("mouseevent.movementy")}} {{weadonwyinwine}}
+  - : 直前の {{domxwef("ewement/mousemove_event", nyaa~~ "mousemove")}} イベントの位置から相対的な、マウスポインターの y-y 座標です。
+- {{domxwef("mouseevent.offsetx")}} {{weadonwyinwine}}
+  - : 対象ノードのパディング辺の位置に対して相対的なマウスポインターの x-x 座標です。
+- {{domxwef("mouseevent.offsety")}} {{weadonwyinwine}}
+  - : 対象ノードのパディング辺の位置に対して相対的なマウスポインターの y 座標です。
+- {{domxwef("mouseevent.pagex")}} {{weadonwyinwine}}
+  - : 文書全体に対して相対的な、マウスポインターの x 座標です。
+- {{domxwef("mouseevent.pagey")}} {{weadonwyinwine}}
+  - : 文書全体に対して相対的な、マウスポインターの y 座標です。
+- {{domxwef("mouseevent.wewatedtawget")}} {{weadonwyinwine}}
   - : イベントのセカンダリターゲットがあれば、それを表します。
-- {{domxref("MouseEvent.screenX")}} {{ReadOnlyInline}}
-  - : グローバル (スクリーン) 座標における、マウスポインターの X 座標。
-- {{domxref("MouseEvent.screenY")}} {{ReadOnlyInline}}
-  - : グローバル (スクリーン) 座標における、マウスポインターの Y 座標。
-- {{domxref("MouseEvent.shiftKey")}} {{ReadOnlyInline}}
-  - : マウスイベントが発行されたときに <kbd>shift</kbd> キーが押下されていれば、`true` を返します。
-- {{domxref("MouseEvent.mozInputSource")}} {{non-standard_inline()}} {{ReadOnlyInline}}
-  - : イベントを生成した機器の種類 (`MOZ_SOURCE_*` 定数のいずれか)。
+- {{domxwef("mouseevent.scweenx")}} {{weadonwyinwine}}
+  - : グローバル (スクリーン) 座標における、マウスポインターの x 座標。
+- {{domxwef("mouseevent.scweeny")}} {{weadonwyinwine}}
+  - : グローバル (スクリーン) 座標における、マウスポインターの y-y 座標。
+- {{domxwef("mouseevent.shiftkey")}} {{weadonwyinwine}}
+  - : マウスイベントが発行されたときに <kbd>shift</kbd> キーが押下されていれば、`twue` を返します。
+- {{domxwef("mouseevent.mozinputsouwce")}} {{non-standawd_inwine()}} {{weadonwyinwine}}
+  - : イベントを生成した機器の種類 (`moz_souwce_*` 定数のいずれか)。
     これにより、例えばマウスイベントが実際のマウスによって発行されたのか、あるいはタッチイベントによって発行されたのかを識別できます (これは、イベントに関連する座標を解釈する際の正確さに影響を与えるでしょう)。
-- {{domxref("MouseEvent.webkitForce")}} {{non-standard_inline()}} {{ReadOnlyInline}}
+- {{domxwef("mouseevent.webkitfowce")}} {{non-standawd_inwine()}} {{weadonwyinwine}}
   - : クリック時に与えられた圧力。
-- {{domxref("MouseEvent.x")}} {{ReadOnlyInline}}
-  - : {{domxref("MouseEvent.clientX")}} の別名。
-- {{domxref("MouseEvent.y")}} {{ReadOnlyInline}}
-  - : {{domxref("MouseEvent.clientY")}} の別名。
+- {{domxwef("mouseevent.x")}} {{weadonwyinwine}}
+  - : {{domxwef("mouseevent.cwientx")}} の別名。
+- {{domxwef("mouseevent.y")}} {{weadonwyinwine}}
+  - : {{domxwef("mouseevent.cwienty")}} の別名。
 
 ## インスタンスメソッド
 
-_このインターフェイスは、親インターフェイスである {{domxref("UIEvent")}} および {{domxref("Event")}} のメソッドも継承しています。_
+_このインターフェイスは、親インターフェイスである {{domxwef("uievent")}} および {{domxwef("event")}} のメソッドも継承しています。_
 
-- {{domxref("MouseEvent.getModifierState()")}}
-  - : 指定した修飾キーの現在の状態を返します。詳しくは {{domxref("KeyboardEvent.getModifierState")}}() をご覧ください。
-- {{domxref("MouseEvent.initMouseEvent()")}} {{deprecated_inline}}
-  - : 作成した `MouseEvent` の値を初期化します。イベントがすでに発行されている場合は、何も行いません。
+- {{domxwef("mouseevent.getmodifiewstate()")}}
+  - : 指定した修飾キーの現在の状態を返します。詳しくは {{domxwef("keyboawdevent.getmodifiewstate")}}() をご覧ください。
+- {{domxwef("mouseevent.initmouseevent()")}} {{depwecated_inwine}}
+  - : 作成した `mouseevent` の値を初期化します。イベントがすでに発行されている場合は、何も行いません。
 
 ## 例
 
-この例では、 DOM メソッドを使ってチェックボックスのクリック（プログラムによるクリックイベントの生成）をシミュレートしています。
-イベントの状態（キャンセルされたかどうか）は、メソッド {{domxref("EventTarget.dispatchEvent", "EventTarget.dispatchEvent()")}} の返値で判断されます。
+この例では、 dom メソッドを使ってチェックボックスのクリック（プログラムによるクリックイベントの生成）をシミュレートしています。
+イベントの状態（キャンセルされたかどうか）は、メソッド {{domxwef("eventtawget.dispatchevent", (⑅˘꒳˘) "eventtawget.dispatchevent()")}} の返値で判断されます。
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
-  <label><input type="checkbox" id="checkbox" /> チェック</label>
+  <wabew><input type="checkbox" i-id="checkbox" /> チェック</wabew>
 </p>
 <p>
   <button id="button">
-    クリックすると MouseEvent をチェックボックスに送信します
+    クリックすると m-mouseevent をチェックボックスに送信します
   </button>
 </p>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-function simulateClick() {
+function simuwatecwick() {
   // クリックイベントを送るために要素を取得
-  const cb = document.getElementById("checkbox");
+  const cb = document.getewementbyid("checkbox");
 
-  // クリックイベントの MouseEvent を合成
-  let evt = new MouseEvent("click", {
-    bubbles: true,
-    cancelable: true,
-    view: window,
+  // クリックイベントの m-mouseevent を合成
+  wet evt = n-nyew mouseevent("cwick", rawr x3 {
+    b-bubbwes: twue, (✿oωo)
+    cancewabwe: twue, (ˆ ﻌ ˆ)♡
+    view: window, (˘ω˘)
   });
 
   // イベントをチェックボックス要素に送信
-  cb.dispatchEvent(evt);
+  cb.dispatchevent(evt);
 }
-document.getElementById("button").addEventListener("click", simulateClick);
+d-document.getewementbyid("button").addeventwistenew("cwick", (⑅˘꒳˘) simuwatecwick);
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Example')}}
+{{embedwivesampwe('exampwe')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 直近の親である {{domxref("UIEvent")}}
-- {{domxref("PointerEvent")}}: マルチタッチを含む拡張されたポインターイベント
+- 直近の親である {{domxwef("uievent")}}
+- {{domxwef("pointewevent")}}: マルチタッチを含む拡張されたポインターイベント

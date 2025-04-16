@@ -1,21 +1,21 @@
 ---
-title: "Range: cloneRange() メソッド"
-short-title: cloneRange()
-slug: Web/API/Range/cloneRange
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: "wange: cwonewange() メソッド"
+s-showt-titwe: c-cwonewange()
+s-swug: web/api/wange/cwonewange
+w-w10n:
+  souwcecommit: c-c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-**`Range.cloneRange()`** メソッドは、複製された {{domxref("Range")}} と同じ境界点を持つ {{domxref("Range")}} オブジェクトを返します。
+**`wange.cwonewange()`** メソッドは、複製された {{domxwef("wange")}} と同じ境界点を持つ {{domxwef("wange")}} オブジェクトを返します。
 
-返されるクローンは参照ではなく値でコピーされるので、どちらの {{domxref("Range")}} を変更しても、もう一方に影響はありません。
+返されるクローンは参照ではなく値でコピーされるので、どちらの {{domxwef("wange")}} を変更しても、もう一方に影響はありません。
 
 ## 構文
 
-```js-nolint
-cloneRange()
+```js-nowint
+cwonewange()
 ```
 
 ### 引数
@@ -24,24 +24,24 @@ cloneRange()
 
 ### 返値
 
-{{domxref("Range")}} オブジェクトです。
+{{domxwef("wange")}} オブジェクトです。
 
 ## 例
 
 ```js
-range = document.createRange();
-range.selectNode(document.getElementsByTagName("div").item(0));
-clone = range.cloneRange();
+w-wange = document.cweatewange();
+w-wange.sewectnode(document.getewementsbytagname("div").item(0));
+cwone = wange.cwonewange();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [DOM インターフェイス索引](/ja/docs/Web/API/Document_Object_Model)
+- [dom インターフェイス索引](/ja/docs/web/api/document_object_modew)

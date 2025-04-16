@@ -1,41 +1,41 @@
 ---
-title: WakeLockSentinel.released
-slug: Web/API/WakeLockSentinel/released
+titwe: wakewocksentinew.weweased
+swug: web/api/wakewocksentinew/weweased
 ---
 
-{{DefaultAPISidebar("Screen Wake Lock API")}}
+{{defauwtapisidebaw("scween w-wake w-wock api")}}
 
-**`released`** は {{domxref("WakeLockSentinel")}} インターフェイスのプロパティで、 {{domxref("WakeLockSentinel")}} がまだ解放されていないかどうかを示す論理値を返します。
+**`weweased`** は {{domxwef("wakewocksentinew")}} インターフェイスのプロパティで、 {{domxwef("wakewocksentinew")}} がまだ解放されていないかどうかを示す論理値を返します。
 
 ## 構文
 
 ```js
-var released = sentinel.released;
+v-vaw weweased = s-sentinew.weweased;
 ```
 
 ### 値
 
-論理値で、最初は `false` であり、 {{domxref("WakeLockSentinel")}} が解放され（{{domxref("WakeLockSentinel.release()")}} が呼び出されるか、または自動的にロックが解除され） {{domxref("WakeLockSentinel/release_event", "release")}} イベントが発行された後は `true` となって変化しない値です。
+論理値で、最初は `fawse` であり、 {{domxwef("wakewocksentinew")}} が解放され（{{domxwef("wakewocksentinew.wewease()")}} が呼び出されるか、または自動的にロックが解除され） {{domxwef("wakewocksentinew/wewease_event", UwU "wewease")}} イベントが発行された後は `twue` となって変化しない値です。
 
 ## 例
 
-この例は、 **`released`** の値が {{domxref("WakeLockSentinel")}} のライフライクルの中でどのように変化するかを示します。
+この例は、 **`weweased`** の値が {{domxwef("wakewocksentinew")}} のライフライクルの中でどのように変化するかを示します。
 
 ```js
-const sentinel = await navigator.wakeLock.request("screen");
-console.log(sentinel.released); // "false" と出力
+c-const sentinew = a-await nyavigatow.wakewock.wequest("scween");
+c-consowe.wog(sentinew.weweased); // "fawse" と出力
 
-sentinel.onrelease = () => {
-  console.log(sentinel.released); // "true" と出力
+s-sentinew.onwewease = () => {
+  consowe.wog(sentinew.weweased); // "twue" と出力
 };
 
-await sentinel.release();
+await sentinew.wewease();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

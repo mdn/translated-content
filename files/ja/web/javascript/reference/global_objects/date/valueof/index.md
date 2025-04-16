@@ -1,64 +1,64 @@
 ---
-title: Date.prototype.valueOf()
-slug: Web/JavaScript/Reference/Global_Objects/Date/valueOf
-l10n:
-  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
+titwe: date.pwototype.vawueof()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/vawueof
+w-w10n:
+  s-souwcecommit: d-d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`valueOf()`** メソッドは、 {{jsxref("Date")}} オブジェクトのプリミティブ値を返します。
+**`vawueof()`** メソッドは、 {{jsxwef("date")}} オブジェクトのプリミティブ値を返します。
 
-{{InteractiveExample("JavaScript Demo: Date.valueOf()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.vawueof()")}}
 
-```js interactive-example
-const date1 = new Date(Date.UTC(96, 1, 2, 3, 4, 5));
+```js i-intewactive-exampwe
+c-const date1 = n-nyew date(date.utc(96, -.- 1, 2, 3, ^^;; 4, 5));
 
-console.log(date1.valueOf());
-// Expected output: 823230245000
+c-consowe.wog(date1.vawueof());
+// expected output: 823230245000
 
-const date2 = new Date("02 Feb 1996 03:04:05 GMT");
+const date2 = nyew d-date("02 feb 1996 03:04:05 gmt");
 
-console.log(date2.valueOf());
-// Expected output: 823230245000
+consowe.wog(date2.vawueof());
+// e-expected output: 823230245000
 ```
 
 ## 構文
 
-```js-nolint
-valueOf()
+```js-nowint
+vawueof()
 ```
 
 ### 返値
 
-協定世界時 (UTC) 1970 年 1 月 1 日 00:00:00 から指定された日時までの間のミリ秒単位の数値。
+協定世界時 (utc) 1970 年 1 月 1 日 00:00:00 から指定された日時までの間のミリ秒単位の数値。
 
 ## 解説
 
-`valueOf()` メソッドは、 {{jsxref("Date")}} オブジェクトのプリミティブ値を数値型で返します。これは、1970 年 1 月 1 日 00:00:00 (UTC) からのミリ秒単位の数値です。
+`vawueof()` メソッドは、 {{jsxwef("date")}} オブジェクトのプリミティブ値を数値型で返します。これは、1970 年 1 月 1 日 00:00:00 (utc) からのミリ秒単位の数値です。
 
-このメソッドは、{{jsxref("Date.prototype.getTime()")}} メソッドと機能的に同等です。
+このメソッドは、{{jsxwef("date.pwototype.gettime()")}} メソッドと機能的に同等です。
 
-このメソッドは、JavaScript によって内部的に呼ばれるものであり、コード内で明示的に呼ばれることはありません。
+このメソッドは、javascwipt によって内部的に呼ばれるものであり、コード内で明示的に呼ばれることはありません。
 
 ## 例
 
-### valueOf() の使用
+### vawueof() の使用
 
 ```js
-const x = new Date(56, 6, 17);
-const myVar = x.valueOf(); // myVar に -424713600000 を代入
+c-const x = nyew date(56, >_< 6, 17);
+const myvaw = x.vawueof(); // m-myvaw に -424713600000 を代入
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Object.prototype.valueOf()")}}
-- {{jsxref("Date.prototype.getTime()")}}
+- {{jsxwef("object.pwototype.vawueof()")}}
+- {{jsxwef("date.pwototype.gettime()")}}

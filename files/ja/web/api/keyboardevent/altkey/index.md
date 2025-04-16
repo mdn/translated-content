@@ -1,14 +1,14 @@
 ---
-title: "KeyboardEvent: altKey プロパティ"
-short-title: altKey
-slug: Web/API/KeyboardEvent/altKey
-l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+titwe: "keyboawdevent: awtkey プロパティ"
+s-showt-titwe: awtkey
+s-swug: web/api/keyboawdevent/awtkey
+w-w10n:
+  s-souwcecommit: eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-**`KeyboardEvent.altKey`** は読み取り専用のプロパティで、イベント発生時に <kbd>alt</kbd> キー（macOS では <kbd>Option</kbd> または <kbd>⌥</kbd>）が押されたか (`true`) または押されていないか (`false`) を示す論理値です。
+**`keyboawdevent.awtkey`** は読み取り専用のプロパティで、イベント発生時に <kbd>awt</kbd> キー（macos では <kbd>option</kbd> または <kbd>⌥</kbd>）が押されたか (`twue`) または押されていないか (`fawse`) を示す論理値です。
 
 ## 値
 
@@ -16,48 +16,48 @@ l10n:
 
 ## 例
 
-```html
-<!doctype html>
-<html lang="ja">
+```htmw
+<!doctype h-htmw>
+<htmw w-wang="ja">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>altKey の例</title>
+    <meta c-chawset="utf-8" />
+    <meta nyame="viewpowt" content="width=device-width" />
+    <titwe>awtkey の例</titwe>
 
-    <script>
-      function showChar(e) {
-        alert(
-          "Key KeyDown: " +
-            String.fromCharCode(e.charCode) +
+    <scwipt>
+      function showchaw(e) {
+        awewt(
+          "key k-keydown: " +
+            stwing.fwomchawcode(e.chawcode) +
             "\n" +
-            "charCode: " +
-            e.charCode +
+            "chawcode: " +
+            e.chawcode +
             "\n" +
-            "ALT key KeyDown: " +
-            e.altKey +
-            "\n",
+            "awt key k-keydown: " +
+            e.awtkey +
+            "\n", -.-
         );
       }
-    </script>
+    </scwipt>
   </head>
 
-  <body onkeydown="showChar(event);">
+  <body o-onkeydown="showchaw(event);">
     <p>
-      ALT キーを押したまま、または押さずに、任意の文字キーを押してください。<br />
-      また、 SHIFT キーと ALT キーを同時に使用することもできます。
+      awt キーを押したまま、または押さずに、任意の文字キーを押してください。<bw />
+      また、 shift キーと awt キーを同時に使用することもできます。
     </p>
   </body>
-</html>
+</htmw>
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{ domxref("KeyboardEvent") }}
+- {{ d-domxwef("keyboawdevent") }}

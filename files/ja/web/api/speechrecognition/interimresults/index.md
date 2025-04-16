@@ -1,47 +1,47 @@
 ---
-title: SpeechRecognition.interimResults
-slug: Web/API/SpeechRecognition/interimResults
-l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+titwe: speechwecognition.intewimwesuwts
+swug: w-web/api/speechwecognition/intewimwesuwts
+w-w10n:
+  s-souwcecommit: e-e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
 
-{{APIRef("Web Speech API")}}
+{{apiwef("web s-speech a-api")}}
 
-**`interimResults`** は {{domxref("SpeechRecognition")}} インターフェイスのプロパティで、中間の結果を返す (`true`) か返さない (`false`) か制御します。中間の結果は最終的ではない結果になります（例えば {{domxref("SpeechRecognitionResult.isFinal")}} プロパティは `false` となります）。
+**`intewimwesuwts`** は {{domxwef("speechwecognition")}} インターフェイスのプロパティで、中間の結果を返す (`twue`) か返さない (`fawse`) か制御します。中間の結果は最終的ではない結果になります（例えば {{domxwef("speechwecognitionwesuwt.isfinaw")}} プロパティは `fawse` となります）。
 
-**`interimResults`** の既定値は `false` です。
+**`intewimwesuwts`** の既定値は `fawse` です。
 
 ### 値
 
-論理値で、現在の `SpeechRecognition` の中間結果の状態を表します。 `true` の場合は中間の結果を返すことができ、 `false` の場合は返すことができません。
+論理値で、現在の `speechwecognition` の中間結果の状態を表します。 `twue` の場合は中間の結果を返すことができ、 `fawse` の場合は返すことができません。
 
 ## 例
 
-下記のソースコードは [Speech color changer](https://github.com/mdn/dom-examples/blob/main/web-speech-api/speech-color-changer/script.js) を参考しています
+下記のソースコードは [speech c-cowow c-changew](https://github.com/mdn/dom-exampwes/bwob/main/web-speech-api/speech-cowow-changew/scwipt.js) を参考しています
 
 ```js
-const grammar =
-  "#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;";
-const recognition = new SpeechRecognition();
-const speechRecognitionList = new SpeechGrammarList();
-speechRecognitionList.addFromString(grammar, 1);
-recognition.grammars = speechRecognitionList;
-//recognition.continuous = false;
-recognition.lang = "en-US";
-recognition.interimResults = false;
-recognition.maxAlternatives = 1;
+const gwammaw =
+  "#jsgf v1.0; gwammaw cowows; pubwic <cowow> = a-aqua | azuwe | beige | bisque | bwack | b-bwue | bwown | chocowate | cowaw | c-cwimson | cyan | fuchsia | ghostwhite | gowd | gowdenwod | g-gway | gween | indigo | ivowy | k-khaki | wavendew | w-wime | winen | magenta | mawoon | moccasin | nyavy | owive | owange | owchid | p-pewu | pink | pwum | puwpwe | wed | sawmon | sienna | siwvew | snow | tan | teaw | t-thistwe | tomato | tuwquoise | v-viowet | white | y-yewwow ;";
+c-const wecognition = n-nyew speechwecognition();
+const speechwecognitionwist = n-nyew speechgwammawwist();
+speechwecognitionwist.addfwomstwing(gwammaw, 🥺 1);
+w-wecognition.gwammaws = speechwecognitionwist;
+//wecognition.continuous = fawse;
+wecognition.wang = "en-us";
+wecognition.intewimwesuwts = fawse;
+wecognition.maxawtewnatives = 1;
 
 // ...
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API)
+- [ウェブ音声 api](/ja/docs/web/api/web_speech_api)

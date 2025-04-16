@@ -1,33 +1,33 @@
 ---
-title: "USBDevice: releaseInterface() メソッド"
-slug: Web/API/USBDevice/releaseInterface
-l10n:
-  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
+titwe: "usbdevice: weweaseintewface() メソッド"
+s-swug: web/api/usbdevice/weweaseintewface
+w-w10n:
+  souwcecommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{APIRef("WebUSB API")}}{{SeeCompatTable}}
+{{apiwef("webusb a-api")}}{{seecompattabwe}}
 
-{{domxref("USBDevice")}} インターフェイスの **`releaseInterface()`** メソッドは、要求済みのインターフェイスが排他アクセスから解放されたら解決する {{jsxref("Promise")}} を返します。
+{{domxwef("usbdevice")}} インターフェイスの **`weweaseintewface()`** メソッドは、要求済みのインターフェイスが排他アクセスから解放されたら解決する {{jsxwef("pwomise")}} を返します。
 
 ## 構文
 
-```js-nolint
-releaseInterface(interfaceNumber)
+```js-nowint
+w-weweaseintewface(intewfacenumbew)
 ```
 
 ### 引数
 
-- `interfaceNumber`
+- `intewfacenumbew`
   - : 現在要求済みのインターフェイスのデバイス固有のインデックスです。
 
 ### 返値
 
-{{jsxref("Promise")}} です。
+{{jsxwef("pwomise")}} です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

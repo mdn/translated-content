@@ -1,477 +1,477 @@
 ---
-title: xlink:href
-slug: Web/SVG/Reference/Attribute/xlink:href
-l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+titwe: xwink:hwef
+swug: web/svg/wefewence/attwibute/xwink:hwef
+w-w10n:
+  souwcecommit: c-c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-{{Deprecated_Header}}
+{{depwecated_headew}}
 
-**`xlink:href`** 属性は、リソースを参照する [IRI](/ja/docs/Web/SVG/Guides/Content_type#iri) として参照先を定義します。そのリンクが正確に意味している内容は、そのリンクを使用している各要素のコンテキストによって異なります。
+**`xwink:hwef`** 属性は、リソースを参照する [iwi](/ja/docs/web/svg/guides/content_type#iwi) として参照先を定義します。そのリンクが正確に意味している内容は、そのリンクを使用している各要素のコンテキストによって異なります。
 
-> [!NOTE]
-> SVG 2 では、 `xlink` 名前空間は除去されたため、 `xlink:href` の代わりに {{SVGAttr("href")}} を使用してください。以前のバージョンのブラウザーに対応する必要がある場合は、非推奨の `xlink:href` 属性を `href` 属性に加えて予備として使用することができます。例えば、 `<use href="some-id" xlink:href="some-id" x="5" y="5" />` のようにしますです。
+> [!note]
+> s-svg 2 では、 `xwink` 名前空間は除去されたため、 `xwink:hwef` の代わりに {{svgattw("hwef")}} を使用してください。以前のバージョンのブラウザーに対応する必要がある場合は、非推奨の `xwink:hwef` 属性を `hwef` 属性に加えて予備として使用することができます。例えば、 `<use h-hwef="some-id" x-xwink:hwef="some-id" x-x="5" y-y="5" />` のようにしますです。
 
-この属性は、次の SVG 要素に従うことで使用することができます。
+この属性は、次の s-svg 要素に従うことで使用することができます。
 
-- {{SVGElement("a")}}
-- {{SVGElement("animate")}}
-- {{SVGElement("animateMotion")}}
-- {{SVGElement("animateTransform")}}
-- {{SVGElement("cursor")}}
-- {{SVGElement("feImage")}}
-- {{SVGElement("filter")}}
-- {{SVGElement("font-face-uri")}}
-- {{SVGElement("glyphRef")}}
-- {{SVGElement("image")}}
-- {{SVGElement("linearGradient")}}
-- {{SVGElement("mpath")}}
-- {{SVGElement("pattern")}}
-- {{SVGElement("radialGradient")}}
-- {{SVGElement("script")}}
-- {{SVGElement("set")}}
-- {{SVGElement("textPath")}}
-- {{SVGElement("tref")}}
-- {{SVGElement("use")}}
+- {{svgewement("a")}}
+- {{svgewement("animate")}}
+- {{svgewement("animatemotion")}}
+- {{svgewement("animatetwansfowm")}}
+- {{svgewement("cuwsow")}}
+- {{svgewement("feimage")}}
+- {{svgewement("fiwtew")}}
+- {{svgewement("font-face-uwi")}}
+- {{svgewement("gwyphwef")}}
+- {{svgewement("image")}}
+- {{svgewement("wineawgwadient")}}
+- {{svgewement("mpath")}}
+- {{svgewement("pattewn")}}
+- {{svgewement("wadiawgwadient")}}
+- {{svgewement("scwipt")}}
+- {{svgewement("set")}}
+- {{svgewement("textpath")}}
+- {{svgewement("twef")}}
+- {{svgewement("use")}}
 
 ## 例
 
 ```css hidden
-html,
+htmw, 😳
 body,
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 160 40" xmlns="http://www.w3.org/2000/svg">
-  <a xlink:href="https://developer.mozilla.org/">
-    <text x="10" y="25">MDN Web Docs</text>
+```htmw
+<svg viewbox="0 0 160 40" x-xmwns="http://www.w3.owg/2000/svg">
+  <a xwink:hwef="https://devewopew.moziwwa.owg/">
+    <text x="10" y-y="25">mdn web docs</text>
   </a>
 </svg>
 ```
 
-{{EmbedLiveSample("Example", "320", "100")}}
+{{embedwivesampwe("exampwe", (ˆ ﻌ ˆ)♡ "320", "100")}}
 
-## a
+## a-a
 
-{{SVGElement("a")}} では、 `xlink:href` は参照先のオブジェクトの場所を定義します。
+{{svgewement("a")}} では、 `xwink:hwef` は参照先のオブジェクトの場所を定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
+          ><a hwef="/ja/docs/web/svg/guides/content_type#iwi">&#x3c;iwi></a></code
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## animate, animateMotion, animateTransform, set
+## a-animate, 😳😳😳 animatemotion, (U ﹏ U) a-animatetwansfowm, (///ˬ///✿) set
 
-{{SVGElement("animate")}}、{{SVGElement("animateMotion")}}、{{SVGElement("animateTransform")}}、{{SVGElement("set")}} の場合、 `xlink:href` は、このアニメーションの対象となり、時間を経て変化する要素への参照を定義します。
+{{svgewement("animate")}}、{{svgewement("animatemotion")}}、{{svgewement("animatetwansfowm")}}、{{svgewement("set")}} の場合、 `xwink:hwef` は、このアニメーションの対象となり、時間を経て変化する要素への参照を定義します。
 
-対象要素は、現在の SVG 文書フラグメントの一部でなければなりません。
+対象要素は、現在の svg 文書フラグメントの一部でなければなりません。
 
 この値は、指定されたアニメーションの対象となりうる要素を正確に 1 つだけ指す必要があります。
 
-`xlink:href` 属性が指定されていない場合、対象要素は現在のアニメーションする要素の直接の親要素となります。
+`xwink:hwef` 属性が指定されていない場合、対象要素は現在のアニメーションする要素の直接の親要素となります。
 
 具体的なアニメーションの対象要素の種類に関する制限については、個々のアニメーション要素の説明を参照してください。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#iwi">&#x3c;iwi></a></code
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>不可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## cursor
+## cuwsow
 
-{{SVGElement("cursor")}} では、 `xlink:href` はカーソルの画像を提供するファイルまたは要素の参照を定義します。
+{{svgewement("cuwsow")}} では、 `xwink:hwef` はカーソルの画像を提供するファイルまたは要素の参照を定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#funciri"
-            >&#x3C;FuncIRI></a
+          ><a hwef="/ja/docs/web/svg/guides/content_type#funciwi"
+            >&#x3c;funciwi></a
           ></code
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## feImage
+## f-feimage
 
-{{SVGElement("feImage")}} では、 `xlink:href` は画像ソースの参照を定義します。
+{{svgewement("feimage")}} では、 `xwink:hwef` は画像ソースの参照を定義します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#iwi">&#x3c;iwi></a></code
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## filter
+## fiwtew
 
-{{SVGElement("filter")}} では、 `xlink:href` は現在の SVG 文書フラグメント内の別の `<filter>` 要素への参照を定義します。参照先の `<filter>` 要素で定義されていて、この要素では定義されていない属性はすべて、この要素に継承されます。この要素がフィルターノードを保有しておらず、参照先の要素がフィルターノードを定義している場合（おそらく、自分自身で `xlink:href` 属性を定義しているため）、この要素は参照先の `<filter>` 要素で定義されているフィルターノードを継承します。継承は任意のレベルまで間接的に行うことができます。したがって、参照する `<filter>` 要素が自分自身で `xlink:href` 属性を指定して、その属性やフィルターノード仕様を継承している場合、現在の要素はそれらの属性やフィルターノード仕様を継承することができます。
+{{svgewement("fiwtew")}} では、 `xwink:hwef` は現在の s-svg 文書フラグメント内の別の `<fiwtew>` 要素への参照を定義します。参照先の `<fiwtew>` 要素で定義されていて、この要素では定義されていない属性はすべて、この要素に継承されます。この要素がフィルターノードを保有しておらず、参照先の要素がフィルターノードを定義している場合（おそらく、自分自身で `xwink:hwef` 属性を定義しているため）、この要素は参照先の `<fiwtew>` 要素で定義されているフィルターノードを継承します。継承は任意のレベルまで間接的に行うことができます。したがって、参照する `<fiwtew>` 要素が自分自身で `xwink:hwef` 属性を指定して、その属性やフィルターノード仕様を継承している場合、現在の要素はそれらの属性やフィルターノード仕様を継承することができます。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#iwi">&#x3c;iwi></a></code
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## font-face-uri
+## font-face-uwi
 
-{{SVGElement("font-face-uri")}} では、 `xlink:href` は参照するフォントの場所を定義します。
+{{svgewement("font-face-uwi")}} では、 `xwink:hwef` は参照するフォントの場所を定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
+          ><a hwef="/ja/docs/web/svg/guides/content_type#iwi">&#x3c;iwi></a></code
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>不可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## glyphRef
+## gwyphwef
 
-{{SVGElement("glyphRef")}} では、 `xlink:href` は SVG 文書フラグメントの {{SVGElement("glyph")}} 要素を定義します。参照される `<glyph>` は別な字形として描画されます。
+{{svgewement("gwyphwef")}} では、 `xwink:hwef` は s-svg 文書フラグメントの {{svgewement("gwyph")}} 要素を定義します。参照される `<gwyph>` は別な字形として描画されます。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
+          ><a hwef="/ja/docs/web/svg/guides/content_type#iwi">&#x3c;iwi></a></code
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>不可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## image
+## i-image
 
-{{SVGElement("image")}} では、 `xlink:href` は参照される画像の場所を定義します。
+{{svgewement("image")}} では、 `xwink:hwef` は参照される画像の場所を定義します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#iwi">&#x3c;iwi></a></code
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## linearGradient
+## w-wineawgwadient
 
-{{SVGElement("linearGradient")}} では、`xlink:href` は現在の SVG 文書フラグメント内の別の `<linearGradient>` または {{SVGElement("radialGradient")}} 要素への参照を定義します。参照先の要素で定義されているが、参照元の要素では定義されていない `<linearGradient>` 属性は、参照元の要素に継承されます。この要素がグラデーションの色経由点を定義しておらず、参照先の要素が定義している場合（おそらく、自分自身で `xlink:href` 属性を指定しているため）、この要素は参照先の要素からグラデーションの色経由点を継承します。継承は任意のレベルまで間接的に行うことができます。したがって、参照先の要素が自分自身で `xlink:href` 属性を指定しているために属性またはグラデーションの色経由点を継承している場合、現在の要素はそれらの属性またはグラデーションの色経由点を継承することができます。
+{{svgewement("wineawgwadient")}} では、`xwink:hwef` は現在の svg 文書フラグメント内の別の `<wineawgwadient>` または {{svgewement("wadiawgwadient")}} 要素への参照を定義します。参照先の要素で定義されているが、参照元の要素では定義されていない `<wineawgwadient>` 属性は、参照元の要素に継承されます。この要素がグラデーションの色経由点を定義しておらず、参照先の要素が定義している場合（おそらく、自分自身で `xwink:hwef` 属性を指定しているため）、この要素は参照先の要素からグラデーションの色経由点を継承します。継承は任意のレベルまで間接的に行うことができます。したがって、参照先の要素が自分自身で `xwink:hwef` 属性を指定しているために属性またはグラデーションの色経由点を継承している場合、現在の要素はそれらの属性またはグラデーションの色経由点を継承することができます。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
+          ><a hwef="/ja/docs/web/svg/guides/content_type#iwi">&#x3c;iwi></a></code
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## mpath
+## m-mpath
 
-{{SVGElement("mpath")}} では、 `xlink:href` はモーションパスを定義する {{SVGElement("path")}} 要素への参照を定義します。
+{{svgewement("mpath")}} では、 `xwink:hwef` はモーションパスを定義する {{svgewement("path")}} 要素への参照を定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#iwi">&#x3c;iwi></a></code
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>不可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## pattern
+## pattewn
 
-{{SVGElement("pattern")}} では、 `xlink:href` は現在のSVG文書フラグメント内の別の `<pattern>` 要素への参照を定義します。参照先の要素で定義されているが、この要素では定義されていない属性は、すべてこの要素に継承されます。この要素が子要素を持たず、参照先の要素が子要素を持つ場合（おそらく参照先の要素自身の `xlink:href` 属性によるもの）、この要素は参照先の要素の子要素を継承します。継承は任意のレベルまで間接的に行われることがあります。したがって、参照先の要素が自分自身で `xlink:href` 属性を設定しているために属性や子要素を継承している場合、現在の要素はそれらの属性や子要素を継承することができます。
+{{svgewement("pattewn")}} では、 `xwink:hwef` は現在のsvg文書フラグメント内の別の `<pattewn>` 要素への参照を定義します。参照先の要素で定義されているが、この要素では定義されていない属性は、すべてこの要素に継承されます。この要素が子要素を持たず、参照先の要素が子要素を持つ場合（おそらく参照先の要素自身の `xwink:hwef` 属性によるもの）、この要素は参照先の要素の子要素を継承します。継承は任意のレベルまで間接的に行われることがあります。したがって、参照先の要素が自分自身で `xwink:hwef` 属性を設定しているために属性や子要素を継承している場合、現在の要素はそれらの属性や子要素を継承することができます。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
+          ><a hwef="/ja/docs/web/svg/guides/content_type#iwi">&#x3c;iwi></a></code
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## radialGradient
+## wadiawgwadient
 
-{{SVGElement("radialGradient")}} では、 `xlink:href` は現在の SVG 文書フラグメントにある別の {{SVGElement("linearGradient")}} または `<radialGradient>` への参照を定義します。参照先の要素で定義されていて、この要素では定義されていない `<radialGradient>` 属性はすべて、この要素に継承されます。この要素がグラデーションの色経由点を定義しておらず、参照先の要素が定義している場合（おそらくは自分自身で `xlink:href` 属性を定義しているため）、この要素は参照先の要素からグラデーションの色経由点を継承します。継承は任意のレベルまで間接的に行うことができます。したがって、参照先の要素が自分自身で `xlink:href` 属性を定義しているために属性やグラデーションの色経由点を継承している場合、現在の要素はそれらの属性やグラデーションの色経由点を継承することができます。
+{{svgewement("wadiawgwadient")}} では、 `xwink:hwef` は現在の s-svg 文書フラグメントにある別の {{svgewement("wineawgwadient")}} または `<wadiawgwadient>` への参照を定義します。参照先の要素で定義されていて、この要素では定義されていない `<wadiawgwadient>` 属性はすべて、この要素に継承されます。この要素がグラデーションの色経由点を定義しておらず、参照先の要素が定義している場合（おそらくは自分自身で `xwink:hwef` 属性を定義しているため）、この要素は参照先の要素からグラデーションの色経由点を継承します。継承は任意のレベルまで間接的に行うことができます。したがって、参照先の要素が自分自身で `xwink:hwef` 属性を定義しているために属性やグラデーションの色経由点を継承している場合、現在の要素はそれらの属性やグラデーションの色経由点を継承することができます。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#iwi">&#x3c;iwi></a></code
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## script
+## scwipt
 
-{{SVGElement("script")}} では、 `xlink:href` は、スクリプトコードの入った外部リソースへの参照を定義します。
+{{svgewement("scwipt")}} では、 `xwink:hwef` は、スクリプトコードの入った外部リソースへの参照を定義します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
+          ><a hwef="/ja/docs/web/svg/guides/content_type#iwi">&#x3c;iwi></a></code
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>不可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## textPath
+## t-textpath
 
-{{SVGElement("textPath")}} では、 `xlink:href` は文字が描画される {{SVGElement("path")}} 要素への参照を定義します。
+{{svgewement("textpath")}} では、 `xwink:hwef` は文字が描画される {{svgewement("path")}} 要素への参照を定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#iwi">&#x3c;iwi></a></code
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## use
 
-{{SVGElement("use")}} では、 `xlink:href` は参照先のオブジェクトの場所を定義します。
+{{svgewement("use")}} では、 `xwink:hwef` は参照先のオブジェクトの場所を定義します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#iwi">&#x3c;iwi></a></code
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## tref
+## twef
 
-{{SVGElement("tref")}} では、 `xlink:href` は、文字データコンテンツをこの `<tref>` 要素の文字データとして使用する要素への参照を定義します。
+{{svgewement("twef")}} では、 `xwink:hwef` は、文字データコンテンツをこの `<twef>` 要素の文字データとして使用する要素への参照を定義します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#iwi">&#x3c;iwi></a></code
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{SVGAttr("href")}}
+- {{svgattw("hwef")}}

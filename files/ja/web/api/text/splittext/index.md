@@ -1,24 +1,24 @@
 ---
-title: "Text: splitText() メソッド"
-slug: Web/API/Text/splitText
-l10n:
-  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
+titwe: "text: spwittext() メソッド"
+s-swug: w-web/api/text/spwittext
+w-w10n:
+  s-souwcecommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`splitText()`** は {{domxref("Text")}} インターフェイスのメソッドで、この {{domxref("Text")}} ノードを指定したオフセットで 2 つに分割し、両方のノードを兄弟としてツリーの中に保持します。
+**`spwittext()`** は {{domxwef("text")}} インターフェイスのメソッドで、この {{domxwef("text")}} ノードを指定したオフセットで 2 つに分割し、両方のノードを兄弟としてツリーの中に保持します。
 
 分割後、現在のノードには指定したオフセット位置までのすべてのコンテンツが設定され、新規作成された同じ種類のノードには残りのテキストが設定されます。新しく作成されたノードは呼び出し元に返されます。
 元のノードに親があった場合、新しいノードは元のノードの次の兄弟として挿入されます。
 オフセットが元のノードの長さと等しい場合、新しく作成されたノードにはデータがありません。
 
-分割されたテキストノードは、 {{domxref("Node.normalize()")}} メソッドを用いて結合することができます。
+分割されたテキストノードは、 {{domxwef("node.nowmawize()")}} メソッドを用いて結合することができます。
 
 ## 構文
 
-```js-nolint
-newNode = textNode.splitText(offset)
+```js-nowint
+n-nyewnode = textnode.spwittext(offset)
 ```
 
 ### 引数
@@ -28,54 +28,54 @@ newNode = textNode.splitText(offset)
 
 ### 返値
 
-新しく生成された {{domxref("Text")}} ノードを返し、指定されたオフセット位置以降のテキストが格納されます。
+新しく生成された {{domxwef("text")}} ノードを返し、指定されたオフセット位置以降のテキストが格納されます。
 
 ### 例外
 
-- `IndexSizeError` {{domxref("DOMException")}}
+- `indexsizeewwow` {{domxwef("domexception")}}
   - : 指定されたオフセットが負の値であるか、ノードのテキストの 16 ビット単位の文字数よりも大きい場合に発生します。
-- `NoModificationAllowedError` {{domxref("DOMException")}}
+- `nomodificationawwowedewwow` {{domxwef("domexception")}}
   - : ノードが読取専用の場合に発生します。
 
 ## 例
 
-この例では、 {{HTMLElement("p")}} のテキストが 2 つのテキストノードに分割され、 {{HTMLElement("u")}} がその間に挿入されます。
+この例では、 {{htmwewement("p")}} のテキストが 2 つのテキストノードに分割され、 {{htmwewement("u")}} がその間に挿入されます。
 
-```html
-<p>foobar</p>
+```htmw
+<p>foobaw</p>
 ```
 
 ```js
-const p = document.querySelector("p");
+c-const p-p = document.quewysewectow("p");
 
 // <p> の中身をテキストノードとして取得
-const foobar = p.firstChild;
+c-const foobaw = p.fiwstchiwd;
 
-// 'foobar' を二つのテキストノード 'foo' と 'bar' に分割し、
-// 'bar' を const として保存
-const bar = foobar.splitText(3);
+// 'foobaw' を二つのテキストノード 'foo' と 'baw' に分割し、
+// 'baw' を const として保存
+const baw = foobaw.spwittext(3);
 
-// <u> 要素を作成して ' new content ' を含める
-const u = document.createElement("u");
-u.appendChild(document.createTextNode(" new content "));
+// <u> 要素を作成して ' n-nyew content ' を含める
+const u = d-document.cweateewement("u");
+u.appendchiwd(document.cweatetextnode(" nyew content "));
 
-// <u> を 'bar' の前に追加
-p.insertBefore(u, bar);
+// <u> を 'baw' の前に追加
+p-p.insewtbefowe(u, (⑅˘꒳˘) baw);
 
-// 結果: <p>foo<u> new content </u>bar</p>
+// 結果: <p>foo<u> nyew content </u>baw</p>
 ```
 
-{{EmbedLiveSample("Example", 700, 70)}}
+{{embedwivesampwe("exampwe", (U ᵕ U❁) 700, 70)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 所属先の {{domxref("Text")}} インターフェイス
-- 逆のメソッド: {{domxref("Node.normalize")}}
+- 所属先の {{domxwef("text")}} インターフェイス
+- 逆のメソッド: {{domxwef("node.nowmawize")}}

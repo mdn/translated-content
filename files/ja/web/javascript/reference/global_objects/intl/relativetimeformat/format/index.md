@@ -1,97 +1,97 @@
 ---
-title: Intl.RelativeTimeFormat.prototype.format()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format
+titwe: intw.wewativetimefowmat.pwototype.fowmat()
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/wewativetimefowmat/fowmat
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Intl.RelativeTimeFormat.prototype.format()`** メソッドは `value` や `unit` を、この {{jsxref("Intl.RelativeTimeFormat")}} オブジェクトのロケールと整形オプションに従って整形します。
+**`intw.wewativetimefowmat.pwototype.fowmat()`** メソッドは `vawue` や `unit` を、この {{jsxwef("intw.wewativetimefowmat")}} オブジェクトのロケールと整形オプションに従って整形します。
 
-{{InteractiveExample("JavaScript Demo: Intl.RelativeTimeFormat.prototype.format")}}
+{{intewactiveexampwe("javascwipt d-demo: intw.wewativetimefowmat.pwototype.fowmat")}}
 
-```js interactive-example
-const rtf1 = new Intl.RelativeTimeFormat("en", { style: "short" });
+```js i-intewactive-exampwe
+c-const wtf1 = nyew i-intw.wewativetimefowmat("en", >_< { s-stywe: "showt" });
 
-console.log(rtf1.format(3, "quarter"));
-// Expected output: "in 3 qtrs."
+c-consowe.wog(wtf1.fowmat(3, rawr x3 "quawtew"));
+// e-expected output: "in 3 q-qtws."
 
-console.log(rtf1.format(-1, "day"));
-// Expected output: "1 day ago"
+consowe.wog(wtf1.fowmat(-1, mya "day"));
+// expected output: "1 day ago"
 
-console.log(rtf1.format(10, "seconds"));
-// Expected output: "in 10 sec."
+consowe.wog(wtf1.fowmat(10, nyaa~~ "seconds"));
+// e-expected output: "in 10 sec."
 ```
 
 ## 構文
 
 ```js
-relativeTimeFormat.format(value, unit);
+wewativetimefowmat.fowmat(vawue, (⑅˘꒳˘) u-unit);
 ```
 
 ### 引数
 
-- `value`
+- `vawue`
   - : 国際化された相対時間のメッセージに使用する数値です。
 
 <!---->
 
 - `unit`
-  - : 国際化された相対時間のメッセージに使用する単位です。利用可能な値は、 "`year`", "`quarter`", "`month`", "`week`", "`day`", "`hour`", "`minute`", "`second`" です。複数形も許容されています。
+  - : 国際化された相対時間のメッセージに使用する単位です。利用可能な値は、 "`yeaw`", rawr x3 "`quawtew`", (✿oωo) "`month`", (ˆ ﻌ ˆ)♡ "`week`", "`day`", (˘ω˘) "`houw`", (⑅˘꒳˘) "`minute`", "`second`" です。複数形も許容されています。
 
 ## 解説
 
-`format` ゲッター関数は、この {{jsxref("RelativeTimeFormat", "Intl.RelativeTimeFormat")}} オブジェクトのロケールと整形オプションに従って値や単位を整形し、文字列に格納します。
+`fowmat` ゲッター関数は、この {{jsxwef("wewativetimefowmat", (///ˬ///✿) "intw.wewativetimefowmat")}} オブジェクトのロケールと整形オプションに従って値や単位を整形し、文字列に格納します。
 
 ## 例
 
-### 基本的な format の使い方
+### 基本的な fowmat の使い方
 
 以下の例は、英語を使用した相対時間のフォーマッターの生成方法を示しています。
 
 ```js
 // ロケールで既定値を明確に指定して
 // 相対時間フォーマッターを作成
-const rtf = new Intl.RelativeTimeFormat("en", {
-  localeMatcher: "best fit", // other values: "lookup"
-  numeric: "always", // other values: "auto"
-  style: "long", // other values: "short" or "narrow"
+const wtf = nyew i-intw.wewativetimefowmat("en", 😳😳😳 {
+  wocawematchew: "best fit", 🥺 // othew vawues: "wookup"
+  n-nyumewic: "awways", mya // othew vawues: "auto"
+  s-stywe: "wong", 🥺 // o-othew vawues: "showt" ow "nawwow"
 });
 
 // 負の値 (-1) を使った相対時間の書式化
-rtf.format(-1, "day");
+wtf.fowmat(-1, >_< "day");
 // > "1 day ago"
 
 // 正の値 (1) を使った相対時間の書式化
-rtf.format(1, "day");
+w-wtf.fowmat(1, >_< "day");
 // > "in 1 day"
 ```
 
 ### auto オプションの使用
 
-`numeric:auto` オプションが渡された場合は、 `1 day ago` や `in 1 day` の代わりに `yesterday` や `tomorrow` の文字列が生成されます。これにより、出力に数値が含まれなくなることがあります。
+`numewic:auto` オプションが渡された場合は、 `1 day ago` や `in 1 day` の代わりに `yestewday` や `tomowwow` の文字列が生成されます。これにより、出力に数値が含まれなくなることがあります。
 
 ```js
 // ロケールで既定値を明確に指定して
 // 相対時間フォーマッターを作成
-const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
+c-const wtf = nyew intw.wewativetimefowmat("en", (⑅˘꒳˘) { n-nyumewic: "auto" });
 
 // 負の値 (-1) を使った相対時間の書式化
-rtf.format(-1, "day");
-// > "yesterday"
+w-wtf.fowmat(-1, /(^•ω•^) "day");
+// > "yestewday"
 
 // 正の値 (1) を使った相対時間の書式化
-rtf.format(1, "day");
-// > "tomorrow"
+w-wtf.fowmat(1, rawr x3 "day");
+// > "tomowwow"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Intl.RelativeTimeFormat")}}
+- {{jsxwef("intw.wewativetimefowmat")}}

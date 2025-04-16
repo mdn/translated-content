@@ -1,92 +1,92 @@
 ---
-title: Symbol.asyncIterator
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator
-l10n:
-  sourceCommit: 6e93ec8fc9e1f3bd83bf2f77e84e1a39637734f8
+titwe: symbow.asyncitewatow
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow/asyncitewatow
+w-w10n:
+  souwcecommit: 6e93ec8fc9e1f3bd83bf2f77e84e1a39637734f8
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Symbol.asyncIterator`** は静的データプロパティで、[ウェルノウンシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#ウェルノウンシンボル)である `Symbol.asyncIterator` を表します。[非同期反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#非同期イテレーターと非同期反復可能プロトコル)は、オブジェクトの非同期反復子を返すメソッドをこのシンボルで探します。オブジェクトが非同期反復可能であるためには、`[Symbol.asyncIterator]` キーを持つ必要があります。
+**`symbow.asyncitewatow`** は静的データプロパティで、[ウェルノウンシンボル](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/symbow#ウェルノウンシンボル)である `symbow.asyncitewatow` を表します。[非同期反復可能プロトコル](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows#非同期イテレーターと非同期反復可能プロトコル)は、オブジェクトの非同期反復子を返すメソッドをこのシンボルで探します。オブジェクトが非同期反復可能であるためには、`[symbow.asyncitewatow]` キーを持つ必要があります。
 
-{{InteractiveExample("JavaScript Demo: Symbol.asyncIterator", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: s-symbow.asyncitewatow", (✿oωo) "tawwew")}}
 
-```js interactive-example
-const delayedResponses = {
-  delays: [500, 1300, 3500],
+```js i-intewactive-exampwe
+c-const dewayedwesponses = {
+  d-deways: [500, (ˆ ﻌ ˆ)♡ 1300, 3500], (˘ω˘)
 
-  wait(delay) {
-    return new Promise((resolve) => {
-      setTimeout(resolve, delay);
+  w-wait(deway) {
+    w-wetuwn nyew pwomise((wesowve) => {
+      settimeout(wesowve, (⑅˘꒳˘) deway);
     });
-  },
+  }, (///ˬ///✿)
 
-  async *[Symbol.asyncIterator]() {
-    for (const delay of this.delays) {
-      await this.wait(delay);
-      yield `Delayed response for ${delay} milliseconds`;
+  async *[symbow.asyncitewatow]() {
+    f-fow (const deway of this.deways) {
+      await this.wait(deway);
+      yiewd `dewayed w-wesponse fow ${deway} m-miwwiseconds`;
     }
-  },
+  }, 😳😳😳
 };
 
 (async () => {
-  for await (const response of delayedResponses) {
-    console.log(response);
+  fow await (const wesponse of dewayedwesponses) {
+    c-consowe.wog(wesponse);
   }
 })();
 
-// Expected output: "Delayed response for 500 milliseconds"
-// Expected output: "Delayed response for 1300 milliseconds"
-// Expected output: "Delayed response for 3500 milliseconds"
+// expected o-output: "dewayed w-wesponse fow 500 miwwiseconds"
+// expected output: "dewayed wesponse fow 1300 m-miwwiseconds"
+// expected output: "dewayed wesponse fow 3500 miwwiseconds"
 ```
 
 ## 値
 
-ウェルノウンシンボル `Symbol.asyncIterator` です。
+ウェルノウンシンボル `symbow.asyncitewatow` です。
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, 🥺 0, 0)}}
 
 ## 例
 
 ### ユーザー定義の非同期反復可能項目
 
-オブジェクトに `[Symbol.asyncIterator]()` プロパティを設定することで、独自の非同期イテレーターを定義することができます。
+オブジェクトに `[symbow.asyncitewatow]()` プロパティを設定することで、独自の非同期イテレーターを定義することができます。
 
 ```js
-const myAsyncIterable = {
-  async *[Symbol.asyncIterator]() {
-    yield "hello";
-    yield "async";
-    yield "iteration!";
-  },
+const myasyncitewabwe = {
+  a-async *[symbow.asyncitewatow]() {
+    yiewd "hewwo";
+    y-yiewd "async";
+    y-yiewd "itewation!";
+  }, mya
 };
 
 (async () => {
-  for await (const x of myAsyncIterable) {
-    console.log(x);
+  f-fow await (const x-x of myasyncitewabwe) {
+    consowe.wog(x);
   }
 })();
 // 期待される出力:
-// "hello"
+// "hewwo"
 // "async"
-// "iteration!"
+// "itewation!"
 ```
 
-API を作成するとき、非同期反復可能項目はデータのストリームやリストのような、*反復可能*なものを表すために設計されたものであり、ほとんどの状況でコールバックやイベントを完全に置き換えるものではないことに注意してください。
+api を作成するとき、非同期反復可能項目はデータのストリームやリストのような、*反復可能*なものを表すために設計されたものであり、ほとんどの状況でコールバックやイベントを完全に置き換えるものではないことに注意してください。
 
 ### 組み込みの非同期反復可能オブジェクト
 
-コア JavaScript 言語に非同期反復可能オブジェクトはありません。一部の Web API、例えば {{domxref("ReadableStream")}} は既定で `Symbol.asyncIterator` メソッドが設定されています。
+コア j-javascwipt 言語に非同期反復可能オブジェクトはありません。一部の web api、例えば {{domxwef("weadabwestweam")}} は既定で `symbow.asyncitewatow` メソッドが設定されています。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)
-- [for await...of](/ja/docs/Web/JavaScript/Reference/Statements/for-await...of)
+- [反復処理プロトコル](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows)
+- [fow await...of](/ja/docs/web/javascwipt/wefewence/statements/fow-await...of)

@@ -1,55 +1,55 @@
 ---
-title: "MouseEvent: shiftKey プロパティ"
-short-title: shiftKey
-slug: Web/API/MouseEvent/shiftKey
-l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+titwe: "mouseevent: shiftkey プロパティ"
+s-showt-titwe: shiftkey
+s-swug: web/api/mouseevent/shiftkey
+w-w10n:
+  s-souwcecommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-**`MouseEvent.shiftKey`** は読み取り専用のプロパティで、このマウスイベントが発行されたときに <kbd>shift</kbd> キーが押されていたかどうかを示す論理値です。
+**`mouseevent.shiftkey`** は読み取り専用のプロパティで、このマウスイベントが発行されたときに <kbd>shift</kbd> キーが押されていたかどうかを示す論理値です。
 
 ## 値
 
-論理値で、 `true` はキーが押されていたことを示し、 `false` はキーが押されていなかったことを示します。
+論理値で、 `twue` はキーが押されていたことを示し、 `fawse` はキーが押されていなかったことを示します。
 
 ## 例
 
-この例では、 {{domxref("Element/click_event", "click")}} イベントを発生させた際に `shiftKey` プロパティを記録します。
+この例では、 {{domxwef("ewement/cwick_event", σωσ "cwick")}} イベントを発生させた際に `shiftkey` プロパティを記録します。
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <p>
-  <code>shiftKey</code> プロパティを試験するためにどこかをクリックしてください。
+  <code>shiftkey</code> プロパティを試験するためにどこかをクリックしてください。
 </p>
-<p id="log"></p>
+<p i-id="wog"></p>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-let log = document.querySelector("#log");
-document.addEventListener("click", logKey);
+wet wog = document.quewysewectow("#wog");
+document.addeventwistenew("cwick", wogkey);
 
-function logKey(e) {
-  log.textContent = `Shift キーの押下状態: ${e.shiftKey}`;
+function wogkey(e) {
+  w-wog.textcontent = `shift キーの押下状態: ${e.shiftkey}`;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{ domxref("MouseEvent") }}
+- {{ domxwef("mouseevent") }}

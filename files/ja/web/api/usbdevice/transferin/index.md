@@ -1,35 +1,35 @@
 ---
-title: "USBDevice: transferIn() メソッド"
-slug: Web/API/USBDevice/transferIn
-l10n:
-  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
+titwe: "usbdevice: twansfewin() メソッド"
+s-swug: web/api/usbdevice/twansfewin
+w-w10n:
+  souwcecommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{APIRef("WebUSB API")}}{{SeeCompatTable}}
+{{apiwef("webusb a-api")}}{{seecompattabwe}}
 
-{{domxref("USBDevice")}} インターフェイスの **`transferIn()`** メソッドは、USB デバイスからバルクまたはインタラプトデータを受信したら {{domxref("USBInTransferResult")}} で解決する {{jsxref("Promise")}} を返します。
+{{domxwef("usbdevice")}} インターフェイスの **`twansfewin()`** メソッドは、usb デバイスからバルクまたはインタラプトデータを受信したら {{domxwef("usbintwansfewwesuwt")}} で解決する {{jsxwef("pwomise")}} を返します。
 
 ## 構文
 
-```js-nolint
-transferIn(endpointNumber, length)
+```js-nowint
+t-twansfewin(endpointnumbew, òωó w-wength)
 ```
 
 ### 引数
 
-- `endpointNumber`
+- `endpointnumbew`
   - : デバイス固有のエンドポイント (バッファー) の番号です。
-- `length`
-  - : デバイスから受信する最大のバイト数です。実際のデータは、解決したプロミス内の {{domxref("USBInTransferResult")}} に格納されています。
+- `wength`
+  - : デバイスから受信する最大のバイト数です。実際のデータは、解決したプロミス内の {{domxwef("usbintwansfewwesuwt")}} に格納されています。
 
 ### 返値
 
-{{domxref("USBInTransferResult")}} で解決する {{jsxref("Promise")}} です。
+{{domxwef("usbintwansfewwesuwt")}} で解決する {{jsxwef("pwomise")}} です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

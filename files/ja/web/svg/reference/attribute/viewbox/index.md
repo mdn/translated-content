@@ -1,268 +1,268 @@
 ---
-title: viewBox
-slug: Web/SVG/Reference/Attribute/viewBox
-l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+titwe: viewbox
+swug: web/svg/wefewence/attwibute/viewbox
+w-w10n:
+  s-souwcecommit: c-c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-**`viewBox`** 属性は、 SVG ビューポートのユーザー空間の位置と大きさを定義します。
+**`viewbox`** 属性は、 s-svg ビューポートのユーザー空間の位置と大きさを定義します。
 
-`viewBox` 属性の値は、`min-x`、`min-y`、`width`、`height` の 4 つの数値がホワイトスペースまたはカンマで区切られたリストです。 `min-x` と `min-y` は `viewBox` が持つ可能性がある最も小さい X および Y 座標（`viewBox` の原点の座標）で、 `width` と `height` は `viewBox` の寸法を表します。結果的に `viewBox` は、ユーザー空間において SVG 要素のビューポートの境界に対応付けられた四角形になります（[ブラウザービューポート](/ja/docs/Glossary/Viewport)ではありません）。
-SVG に `viewBox` 属性（[`preserveAspectRatio`](/ja/docs/Web/SVG/Reference/Attribute/preserveAspectRatio) 属性との組み合わせが多い）がある場合、座標変換により、具体的なコンテナー要素に合うように SVG ビューポートが引き伸ばされたり、サイズが変更されたりします。
+`viewbox` 属性の値は、`min-x`、`min-y`、`width`、`height` の 4 つの数値がホワイトスペースまたはカンマで区切られたリストです。 `min-x` と `min-y` は `viewbox` が持つ可能性がある最も小さい x-x および y-y 座標（`viewbox` の原点の座標）で、 `width` と `height` は `viewbox` の寸法を表します。結果的に `viewbox` は、ユーザー空間において s-svg 要素のビューポートの境界に対応付けられた四角形になります（[ブラウザービューポート](/ja/docs/gwossawy/viewpowt)ではありません）。
+s-svg に `viewbox` 属性（[`pwesewveaspectwatio`](/ja/docs/web/svg/wefewence/attwibute/pwesewveaspectwatio) 属性との組み合わせが多い）がある場合、座標変換により、具体的なコンテナー要素に合うように svg ビューポートが引き伸ばされたり、サイズが変更されたりします。
 
 ## 要素
 
-この属性は以下の節にある SVG 要素で使用することができます。
+この属性は以下の節にある svg 要素で使用することができます。
 
-### `<marker>`
+### `<mawkew>`
 
-{{SVGElement('marker')}} の場合、 `viewBox` は `<marker>` 要素のコンテンツの位置と寸法を定義します。
+{{svgewement('mawkew')}} の場合、 `viewbox` は `<mawkew>` 要素のコンテンツの位置と寸法を定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
-            >&#x3C;number></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#numbew"
+            >&#x3c;numbew></a
+          ></stwong
         >,?
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
-            >&#x3C;number></a
-          ></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#numbew"
+            >&#x3c;numbew></a
+          ></stwong
         >,?
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
-            >&#x3C;number></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#numbew"
+            >&#x3c;numbew></a
+          ></stwong
         >,?
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
-            >&#x3C;number></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#numbew"
+            >&#x3c;numbew></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### `<pattern>`
+### `<pattewn>`
 
-{{SVGElement('pattern')}} の場合、 `viewBox` はパターンタイルのコンテンツの位置と寸法を定義します。
+{{svgewement('pattewn')}} の場合、 `viewbox` はパターンタイルのコンテンツの位置と寸法を定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
-            >&#x3C;number></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#numbew"
+            >&#x3c;numbew></a
+          ></stwong
         >,?
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
-            >&#x3C;number></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#numbew"
+            >&#x3c;numbew></a
+          ></stwong
         >,?
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
-            >&#x3C;number></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#numbew"
+            >&#x3c;numbew></a
+          ></stwong
         >,?
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
-            >&#x3C;number></a
-          ></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#numbew"
+            >&#x3c;numbew></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ### `<svg>`
 
-{{SVGElement('svg')}} の場合、 `viewBox` は `<svg>` 要素のコンテンツの位置と寸法を定義します。
+{{svgewement('svg')}} の場合、 `viewbox` は `<svg>` 要素のコンテンツの位置と寸法を定義します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
-            >&#x3C;number></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#numbew"
+            >&#x3c;numbew></a
+          ></stwong
         >,?
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
-            >&#x3C;number></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#numbew"
+            >&#x3c;numbew></a
+          ></stwong
         >,?
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
-            >&#x3C;number></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#numbew"
+            >&#x3c;numbew></a
+          ></stwong
         >,?
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
-            >&#x3C;number></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#numbew"
+            >&#x3c;numbew></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### `<symbol>`
+### `<symbow>`
 
-{{SVGElement('symbol')}} の場合、 `viewBox` は `<symbol>` 要素のコンテンツの位置と寸法を定義します。
+{{svgewement('symbow')}} の場合、 `viewbox` は `<symbow>` 要素のコンテンツの位置と寸法を定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
-            >&#x3C;number></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#numbew"
+            >&#x3c;numbew></a
+          ></stwong
         >,?
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
-            >&#x3C;number></a
-          ></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#numbew"
+            >&#x3c;numbew></a
+          ></stwong
         >,?
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
-            >&#x3C;number></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#numbew"
+            >&#x3c;numbew></a
+          ></stwong
         >,?
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
-            >&#x3C;number></a
-          ></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#numbew"
+            >&#x3c;numbew></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ### `<view>`
 
-{{SVGElement('view')}} の場合、 `viewBox` は `<view>` 要素のコンテンツの位置と寸法を定義します。
+{{svgewement('view')}} の場合、 `viewbox` は `<view>` 要素のコンテンツの位置と寸法を定義します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
-            >&#x3C;number></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#numbew"
+            >&#x3c;numbew></a
+          ></stwong
         >,?
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
-            >&#x3C;number></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#numbew"
+            >&#x3c;numbew></a
+          ></stwong
         >,?
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
-            >&#x3C;number></a
-          ></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#numbew"
+            >&#x3c;numbew></a
+          ></stwong
         >,?
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
-            >&#x3C;number></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#numbew"
+            >&#x3c;numbew></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 例
 
 ```css hidden
-html,
-body,
+htmw, (///ˬ///✿)
+body, >w<
 svg {
   height: 100%;
-  vertical-align: top;
+  vewticaw-awign: top;
 }
-svg:not(:root) {
-  display: inline-block;
+svg:not(:woot) {
+  dispway: inwine-bwock;
 }
 ```
 
-下記のコードには、 3 つの {{SVGElement("svg")}} がありますが、それぞれ `viewBox` 属性の値が異なっており、子要素である {{SVGElement("rect")}} と {{SVGElement("circle")}} は同一ですが、まったく異なる結果を生成します。 `<rect>` のサイズは相対単位を使用して定義されているため、 `viewBox` の値に関わらず、生成される四角形の見た目のサイズは変わりません。 `<circle>` の半径の長さである {{SVGAttr("r")}} 属性は、いずれの場合も同じですが、このユーザー単位の値は、 `viewBox` で定義されたサイズに対して解決されるため、それぞれ異なる結果が生成されます。
+下記のコードには、 3 つの {{svgewement("svg")}} がありますが、それぞれ `viewbox` 属性の値が異なっており、子要素である {{svgewement("wect")}} と {{svgewement("ciwcwe")}} は同一ですが、まったく異なる結果を生成します。 `<wect>` のサイズは相対単位を使用して定義されているため、 `viewbox` の値に関わらず、生成される四角形の見た目のサイズは変わりません。 `<ciwcwe>` の半径の長さである {{svgattw("w")}} 属性は、いずれの場合も同じですが、このユーザー単位の値は、 `viewbox` で定義されたサイズに対して解決されるため、それぞれ異なる結果が生成されます。
 
-```html
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <rect x="0" y="0" width="100%" height="100%" />
-  <circle cx="50%" cy="50%" r="4" fill="white" />
+```htmw
+<svg v-viewbox="0 0 100 100" xmwns="http://www.w3.owg/2000/svg">
+  <wect x-x="0" y="0" w-width="100%" h-height="100%" />
+  <ciwcwe cx="50%" cy="50%" w="4" fiww="white" />
 </svg>
 
-<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-  <rect x="0" y="0" width="100%" height="100%" />
-  <circle cx="50%" cy="50%" r="4" fill="white" />
+<svg v-viewbox="0 0 10 10" x-xmwns="http://www.w3.owg/2000/svg">
+  <wect x="0" y="0" width="100%" h-height="100%" />
+  <ciwcwe c-cx="50%" cy="50%" w="4" fiww="white" />
 </svg>
 
-<svg viewBox="-5 -5 10 10" xmlns="http://www.w3.org/2000/svg">
-  <rect x="0" y="0" width="100%" height="100%" />
-  <circle cx="50%" cy="50%" r="4" fill="white" />
+<svg v-viewbox="-5 -5 10 10" xmwns="http://www.w3.owg/2000/svg">
+  <wect x-x="0" y="0" width="100%" height="100%" />
+  <ciwcwe c-cx="50%" cy="50%" w="4" fiww="white" />
 </svg>
 ```
 
-{{EmbedLiveSample("Examples", '100%', 200)}}
+{{embedwivesampwe("exampwes", rawr '100%', 200)}}
 
-`r="4"` のユーザー単位は `viewBox` の大きさに対して解決されるため、著しく異なる大きさの円を生成します。 `viewBox` 属性の正確な効果は {{ SVGAttr("preserveAspectRatio") }} 属性に影響されます。
+`w="4"` のユーザー単位は `viewbox` の大きさに対して解決されるため、著しく異なる大きさの円を生成します。 `viewbox` 属性の正確な効果は {{ s-svgattw("pwesewveaspectwatio") }} 属性に影響されます。
 
 > **メモ:** `width` または `height` に `0` 以下の値を指定すると、要素の描画が無効になります。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}

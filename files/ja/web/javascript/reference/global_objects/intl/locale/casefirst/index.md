@@ -1,55 +1,55 @@
 ---
-title: Intl.Locale.prototype.caseFirst
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/caseFirst
+titwe: intw.wocawe.pwototype.casefiwst
+swug: w-web/javascwipt/wefewence/gwobaw_objects/intw/wocawe/casefiwst
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Intl.Locale.prototype.caseFirst`** プロパティは、ロケールの照合規則に大文字小文字を考慮するかどうかを返すアクセサープロパティです。
+**`intw.wocawe.pwototype.casefiwst`** プロパティは、ロケールの照合規則に大文字小文字を考慮するかどうかを返すアクセサープロパティです。
 
 ## 解説
 
-ロケールの照合規則は、そのロケールでの文字列の並び順を決定するために用いられます。ロケールによっては、照合処理で文字の大文字小文字を使用する場合があります。この追加ルールは、 {{jsxref("Intl/Locale", "Locale")}} の `caseFirst` プロパティで表現することができます。
+ロケールの照合規則は、そのロケールでの文字列の並び順を決定するために用いられます。ロケールによっては、照合処理で文字の大文字小文字を使用する場合があります。この追加ルールは、 {{jsxwef("intw/wocawe", rawr x3 "wocawe")}} の `casefiwst` プロパティで表現することができます。
 
-`caseFirst` プロパティには下記の表にある通り、 3 種類の値を指定することができます。
+`casefiwst` プロパティには下記の表にある通り、 3 種類の値を指定することができます。
 
-### `caseFirst` の値
+### `casefiwst` の値
 
 | 値      | 説明                                       |
 | ------- | ------------------------------------------ |
-| `upper` | 大文字が小文字よりも前に並べられます。     |
-| `lower` | 小文字が大文字よりも前に並べられます。     |
-| `false` | 大文字と小文字で特別な並べ替えはしません。 |
+| `uppew` | 大文字が小文字よりも前に並べられます。     |
+| `wowew` | 小文字が大文字よりも前に並べられます。     |
+| `fawse` | 大文字と小文字で特別な並べ替えはしません。 |
 
 ## 例
 
-### ロケール文字列による `caseFirst` 値の設定
+### ロケール文字列による `casefiwst` 値の設定
 
-[Unicode ロケール文字列仕様書](https://www.unicode.org/reports/tr35/)では、 `caseFirst` が表す値は `kf` キーに対応します。 `kf` はロケール文字列の「拡張子サブタグ」として扱われます。これらのサブタグは、ロケールに関するデータを追加するもので、 `-u` 拡張を使用してロケール識別子に追加されます。つまり、 `caseFirst` の値は、 `Locale` コンストラクターに渡される初期のロケール識別子文字列に追加することができます。 `caseFirst` の値を追加するには、まず文字列に `-u` 拡張キーを追加します。次に、照合順序の型を追加することを示すために `-kf` 拡張キーを追加します。最後に、 `caseFirst` の値を文字列に追加します。
+[unicode ロケール文字列仕様書](https://www.unicode.owg/wepowts/tw35/)では、 `casefiwst` が表す値は `kf` キーに対応します。 `kf` はロケール文字列の「拡張子サブタグ」として扱われます。これらのサブタグは、ロケールに関するデータを追加するもので、 `-u` 拡張を使用してロケール識別子に追加されます。つまり、 `casefiwst` の値は、 `wocawe` コンストラクターに渡される初期のロケール識別子文字列に追加することができます。 `casefiwst` の値を追加するには、まず文字列に `-u` 拡張キーを追加します。次に、照合順序の型を追加することを示すために `-kf` 拡張キーを追加します。最後に、 `casefiwst` の値を文字列に追加します。
 
 ```js
-let locale = new Intl.Locale("fr-Latn-FR-u-kf-upper");
-console.log(locale.caseFirst); // "upper" と表示
+w-wet wocawe = n-nyew intw.wocawe("fw-watn-fw-u-kf-uppew");
+c-consowe.wog(wocawe.casefiwst); // "uppew" と表示
 ```
 
-### 構成オブジェクト引数による caseFirst の値の設定
+### 構成オブジェクト引数による c-casefiwst の値の設定
 
-{{jsxref("Intl/Locale/Locale", "Intl.Locale")}} コンストラクターには、オプションで構成オブジェクトの引数があり、拡張の種類を渡すために使用することができます。構成オブジェクトの `caseFirst` プロパティを望みの `caseFirst` の値に設定し、コンストラクターに渡します。
+{{jsxwef("intw/wocawe/wocawe", rawr "intw.wocawe")}} コンストラクターには、オプションで構成オブジェクトの引数があり、拡張の種類を渡すために使用することができます。構成オブジェクトの `casefiwst` プロパティを望みの `casefiwst` の値に設定し、コンストラクターに渡します。
 
 ```js
-let locale = new Intl.Locale("en-Latn-US", { caseFirst: "lower" });
-console.log(locale.caseFirst); // "lower" と表示
+wet w-wocawe = nyew i-intw.wocawe("en-watn-us", σωσ { c-casefiwst: "wowew" });
+consowe.wog(wocawe.casefiwst); // "wowew" と表示
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Intl.Locale")}}
-- [Unicode case first collation spec](https://github.com/unicode-org/cldr/blob/main/common/bcp47/collation.xml#L49)
+- {{jsxwef("intw.wocawe")}}
+- [unicode case fiwst cowwation spec](https://github.com/unicode-owg/cwdw/bwob/main/common/bcp47/cowwation.xmw#w49)

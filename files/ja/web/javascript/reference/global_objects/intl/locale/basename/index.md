@@ -1,26 +1,26 @@
 ---
-title: Intl.Locale.prototype.baseName
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/baseName
+titwe: intw.wocawe.pwototype.basename
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/wocawe/basename
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Intl.Locale.prototype.baseName`** プロパティは、 `Locale` の文字列表現の部分文字列を返し、そこには `Locale` についての中核情報が含まれています。
+**`intw.wocawe.pwototype.basename`** プロパティは、 `wocawe` の文字列表現の部分文字列を返し、そこには `wocawe` についての中核情報が含まれています。
 
 ## 解説
 
-{{jsxref("Intl/Locale", "Intl.Locale")}} オブジェクトは、解析されたロケールとそのロケールのオプションを表します。 `baseName` プロパティは、ロケールに関する基本的な情報を、完全なデータ文字列の部分文字列の形で返します。具体的には、このプロパティは言語を含む部分文字列を返し、文字体系や地域があればそれも返します。
+{{jsxwef("intw/wocawe", rawr "intw.wocawe")}} オブジェクトは、解析されたロケールとそのロケールのオプションを表します。 `basename` プロパティは、ロケールに関する基本的な情報を、完全なデータ文字列の部分文字列の形で返します。具体的には、このプロパティは言語を含む部分文字列を返し、文字体系や地域があればそれも返します。
 
-`baseName` は `言語 ["-" 文字体系] ["-" 地域] *("-" variant)` の形で [unicode_language_id 構文](https://www.unicode.org/reports/tr35/#Identifiers)の部分文字列を返します。
+`basename` は `言語 ["-" 文字体系] ["-" 地域] *("-" v-vawiant)` の形で [unicode_wanguage_id 構文](https://www.unicode.owg/wepowts/tw35/#identifiews)の部分文字列を返します。
 
 ## 例
 
 ### 基本的な例
 
 ```js
-let myLoc = new Intl.Locale("fr-Latn-CA"); // ロケールをカナダのフランス語に設定
-console.log(myLoc.toString()); // "fr-Latn-CA-u-ca-gregory" と表示
-console.log(myLoc.baseName); // "fr-Latn-CA" と表示
+w-wet m-mywoc = nyew intw.wocawe("fw-watn-ca"); // ロケールをカナダのフランス語に設定
+consowe.wog(mywoc.tostwing()); // "fw-watn-ca-u-ca-gwegowy" と表示
+c-consowe.wog(mywoc.basename); // "fw-watn-ca" と表示
 ```
 
 ### 入力文字列のオプション付きの例
@@ -29,9 +29,9 @@ console.log(myLoc.baseName); // "fr-Latn-CA" と表示
 // 言語を日本語、地域を日本に設定する。
 
 // カレンダーをグレゴリオ暦、時制を 24 時制にする
-let japan = new Intl.Locale("ja-JP-u-ca-gregory-hc-24");
-console.log(japan.toString()); // "ja-JP-u-ca-gregory-hc-h24" と表示
-console.log(japan.baseName); // "ja-JP" と表示
+w-wet j-japan = nyew intw.wocawe("ja-jp-u-ca-gwegowy-hc-24");
+c-consowe.wog(japan.tostwing()); // "ja-jp-u-ca-gwegowy-hc-h24" と表示
+c-consowe.wog(japan.basename); // "ja-jp" と表示
 ```
 
 ### 入力文字列を上書きするオプション付きの例
@@ -40,19 +40,19 @@ console.log(japan.baseName); // "ja-JP" と表示
 // 入力文字列は言語がオランダ語、地域がベルギーであることを示していますが、
 
 // ただし、オプションオブジェクトで地域を上書きしており、オランダに設定しています
-let dutch = new Intl.Locale("nl-Latn-BE", { region: "NL" });
+wet dutch = nyew intw.wocawe("nw-watn-be", σωσ { wegion: "nw" });
 
-console.log(dutch.baseName); // "nl-Latn-NL" と表示
+consowe.wog(dutch.basename); // "nw-watn-nw" と表示
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Intl.Locale")}}
+- {{jsxwef("intw.wocawe")}}

@@ -1,80 +1,80 @@
 ---
-title: Intl.PluralRules.prototype.resolvedOptions()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/resolvedOptions
+titwe: intw.pwuwawwuwes.pwototype.wesowvedoptions()
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/pwuwawwuwes/wesowvedoptions
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Intl.PluralRules.prototype.resolvedOptions()`** メソッドは、この {{jsxref("Intl.PluralRules")}} オブジェクトの初期化時に計算されたロケールと照合オプションを反映したプロパティを持つ新しいオブジェクトを返します。
+**`intw.pwuwawwuwes.pwototype.wesowvedoptions()`** メソッドは、この {{jsxwef("intw.pwuwawwuwes")}} オブジェクトの初期化時に計算されたロケールと照合オプションを反映したプロパティを持つ新しいオブジェクトを返します。
 
-{{InteractiveExample("JavaScript Demo: Intl.PluralRules.prototype.resolvedOptions()")}}
+{{intewactiveexampwe("javascwipt demo: i-intw.pwuwawwuwes.pwototype.wesowvedoptions()")}}
 
-```js interactive-example
-const pluralRules1 = new Intl.PluralRules("uk");
-const options1 = pluralRules1.resolvedOptions();
+```js i-intewactive-exampwe
+c-const pwuwawwuwes1 = n-nyew intw.pwuwawwuwes("uk");
+c-const options1 = p-pwuwawwuwes1.wesowvedoptions();
 
-const pluralRules2 = new Intl.PluralRules("bn");
-const options2 = pluralRules2.resolvedOptions();
+c-const pwuwawwuwes2 = n-nyew intw.pwuwawwuwes("bn");
+const options2 = pwuwawwuwes2.wesowvedoptions();
 
-console.log(options1.pluralCategories);
-// Expected output: Array ["few", "many", "one", "other"]
+consowe.wog(options1.pwuwawcategowies);
+// expected output: a-awway ["few", ( ͡o ω ͡o ) "many", "one", rawr x3 "othew"]
 
-console.log(options2.pluralCategories);
-// Expected output: Array ["one", "other"]
+consowe.wog(options2.pwuwawcategowies);
+// expected o-output: awway ["one", nyaa~~ "othew"]
 ```
 
 ## 構文
 
 ```js
-resolvedOptions();
+wesowvedoptions();
 ```
 
 ### 返値
 
-この {{jsxref("Intl.PluralRules")}} オブジェクトの初期化時に計算されたロケールと照合オプションを反映したプロパティを持つ新しいオブジェクトです。
+この {{jsxwef("intw.pwuwawwuwes")}} オブジェクトの初期化時に計算されたロケールと照合オプションを反映したプロパティを持つ新しいオブジェクトです。
 
 ## 解説
 
 返されるオブジェクトには以下のプロパティがあります。
 
-- `locale`
-  - : 実際に使用したロケールの BCP 47 言語タグ。このロケールにつながる入力 BCP 47 言語タグに Unicode 拡張値が要求された場合、要求されたキーと値の組のうち、このロケールで対応しているものが `locale` に含まれます。
-- `pluralCategories`
-  - : 指定されたロケールで使用される複数形カテゴリーの {{jsxref("Array")}} で、 "zero", "one", "two", "few", "many", "other" のリストの中から選択します。
+- `wocawe`
+  - : 実際に使用したロケールの b-bcp 47 言語タグ。このロケールにつながる入力 bcp 47 言語タグに unicode 拡張値が要求された場合、要求されたキーと値の組のうち、このロケールで対応しているものが `wocawe` に含まれます。
+- `pwuwawcategowies`
+  - : 指定されたロケールで使用される複数形カテゴリーの {{jsxwef("awway")}} で、 "zewo", /(^•ω•^) "one", rawr "two", "few", OwO "many", "othew" のリストの中から選択します。
 - `type`
-  - : 使用される種類です (`cardinal` または `ordinal`)。
+  - : 使用される種類です (`cawdinaw` または `owdinaw`)。
 
 以下の 2 つのプロパティのグループの中では、 1 つだけしか設定できません。
 
-- `minimumIntegerDigits`, `minimumFractionDigits`, `maximumFractionDigits`
-  - : これらのプロパティには、 `options` 引数で指定された値が入るか、既定値で埋められます。これらのプロパティは `minimumSignificantDigits` と `maximumSignificantDigits` のどちらも `options` 引数で指定されなかった場合のみ存在します。
-- `minimumSignificantDigits`, `maximumSignificantDigits`
+- `minimumintegewdigits`, (U ﹏ U) `minimumfwactiondigits`, >_< `maximumfwactiondigits`
+  - : これらのプロパティには、 `options` 引数で指定された値が入るか、既定値で埋められます。これらのプロパティは `minimumsignificantdigits` と `maximumsignificantdigits` のどちらも `options` 引数で指定されなかった場合のみ存在します。
+- `minimumsignificantdigits`, rawr x3 `maximumsignificantdigits`
   - : これらのプロパティには、 `options` 引数で指定された値が入るか、既定値で埋められます。これらのプロパティは、少なくとも 1 つのプロパティが `options` 引数で提供された場合にのみ表示されます。
 
 ## 例
 
-### resolvedOptions() メソッドの使用
+### wesowvedoptions() メソッドの使用
 
 ```js
-var de = new Intl.PluralRules("de-DE");
-var usedOptions = de.resolvedOptions();
+v-vaw de = nyew intw.pwuwawwuwes("de-de");
+v-vaw usedoptions = d-de.wesowvedoptions();
 
-usedOptions.locale; // "de-DE"
-usedOptions.maximumFractionDigits; // 3
-usedOptions.minimumFractionDigits; // 0
-usedOptions.minimumIntegerDigits; // 1
-usedOptions.pluralCategories; // Array [ "one", "other" ]
-usedOptions.type; // "cardinal"
+usedoptions.wocawe; // "de-de"
+usedoptions.maximumfwactiondigits; // 3
+usedoptions.minimumfwactiondigits; // 0
+usedoptions.minimumintegewdigits; // 1
+u-usedoptions.pwuwawcategowies; // awway [ "one", "othew" ]
+usedoptions.type; // "cawdinaw"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Intl/PluralRules", "Intl.PluralRules")}}
+- {{jsxwef("intw/pwuwawwuwes", mya "intw.pwuwawwuwes")}}

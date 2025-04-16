@@ -1,94 +1,94 @@
 ---
-title: "Node: replaceChild() メソッド"
-slug: Web/API/Node/replaceChild
-l10n:
-  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
+titwe: "node: wepwacechiwd() メソッド"
+s-swug: w-web/api/node/wepwacechiwd
+w-w10n:
+  s-souwcecommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`replaceChild()`** は {{domxref("Node")}} インターフェイスのメソッドで、この（親）ノードの中の子ノードを置き換えます。
+**`wepwacechiwd()`** は {{domxwef("node")}} インターフェイスのメソッドで、この（親）ノードの中の子ノードを置き換えます。
 
 ## 構文
 
-```js-nolint
-replaceChild(newChild, oldChild)
+```js-nowint
+w-wepwacechiwd(newchiwd, 😳 o-owdchiwd)
 ```
 
 ### 引数
 
-- `newChild`
-  - : `oldChild` を置き換える新しいノードです。
-    > [!WARNING]
-    > 新しいノードが既に DOM のどこか別なところにある場合は、まずその位置から取り除かれます。
-- `oldChild`
+- `newchiwd`
+  - : `owdchiwd` を置き換える新しいノードです。
+    > [!wawning]
+    > 新しいノードが既に dom のどこか別なところにある場合は、まずその位置から取り除かれます。
+- `owdchiwd`
   - : 置き換えられる子ノードです。
 
-> [!NOTE]
+> [!note]
 > 引数の順序で、*新しい*ものの前に*古い*ものが来るのは異例です。
-> [`Element.replaceWith()`](/ja/docs/Web/API/Element/replaceWith) は、要素であるノードのみに適用されるものですが、読んだり使用したりしやすいかもしれません。
+> [`ewement.wepwacewith()`](/ja/docs/web/api/ewement/wepwacewith) は、要素であるノードのみに適用されるものですが、読んだり使用したりしやすいかもしれません。
 
 ### 返値
 
-置き換えられた {{domxref("Node")}} です。これは `oldChild` と同じノードです。
+置き換えられた {{domxwef("node")}} です。これは `owdchiwd` と同じノードです。
 
 ### 例外
 
-- `HierarchyRequestError` {{domxref("DOMException")}}
-  - : DOM ツリーの制約に違反した場合に発生します。すなわち、以下のいずれかが発生する場合です。
-    - `oldChild` の親が {{domxref("Document")}}, {{domxref("DocumentFragment")}}, {{domxref("Element")}} のいずれにもならない場合。
-    - `oldChild` を `newChild` で置き換えると循環参照になる場合。すなわち `newChild` がこのノードの祖先である場合。
-    - `newChild` が {{domxref("DocumentFragment")}}, {{domxref("DocumentType")}}, {{domxref("Element")}}, {{domxref("CharacterData")}} のいずれでもない場合。
-    - 現在のノードが {{domxref("Text")}} であり、親ノードが {{domxref("Document")}} になる場合。
-    - 現在のノードが {{domxref("DocumentType")}} であり、その親が {{domxref("Document")}} にならない場合。 _doctype_ は常に _document_ の直下になければならないからです。
-    - このノードの親が {{domxref("Document")}} で `newChild` が {{domxref("DocumentFragment")}} であり、複数の {{domxref("Element")}} の子、または {{domxref("Text")}} の子がある場合。
-    - `oldChild` を `newChild` で置き換えると、 {{domxref("Document")}} の子の {{domxref("Element")}} が複数になる場合。
-    - `oldChild` を `newChild` で置き換えると、 {{domxref("Element")}} ノードが {{domxref("DocumentType")}} の前になる場合。
-- `NotFoundError` {{domxref("DOMException")}}
-  - : `oldChild` の親ノードが現在のノードではない場合に発生します。
+- `hiewawchywequestewwow` {{domxwef("domexception")}}
+  - : dom ツリーの制約に違反した場合に発生します。すなわち、以下のいずれかが発生する場合です。
+    - `owdchiwd` の親が {{domxwef("document")}}, XD {{domxwef("documentfwagment")}}, :3 {{domxwef("ewement")}} のいずれにもならない場合。
+    - `owdchiwd` を `newchiwd` で置き換えると循環参照になる場合。すなわち `newchiwd` がこのノードの祖先である場合。
+    - `newchiwd` が {{domxwef("documentfwagment")}}, 😳😳😳 {{domxwef("documenttype")}}, -.- {{domxwef("ewement")}}, ( ͡o ω ͡o ) {{domxwef("chawactewdata")}} のいずれでもない場合。
+    - 現在のノードが {{domxwef("text")}} であり、親ノードが {{domxwef("document")}} になる場合。
+    - 現在のノードが {{domxwef("documenttype")}} であり、その親が {{domxwef("document")}} にならない場合。 _doctype_ は常に _document_ の直下になければならないからです。
+    - このノードの親が {{domxwef("document")}} で `newchiwd` が {{domxwef("documentfwagment")}} であり、複数の {{domxwef("ewement")}} の子、または {{domxwef("text")}} の子がある場合。
+    - `owdchiwd` を `newchiwd` で置き換えると、 {{domxwef("document")}} の子の {{domxwef("ewement")}} が複数になる場合。
+    - `owdchiwd` を `newchiwd` で置き換えると、 {{domxwef("ewement")}} ノードが {{domxwef("documenttype")}} の前になる場合。
+- `notfoundewwow` {{domxwef("domexception")}}
+  - : `owdchiwd` の親ノードが現在のノードではない場合に発生します。
 
 ## 例
 
 ```js
 // 前提:
 // <div>
-//  <span id="childSpan">foo bar</span>
+//  <span i-id="chiwdspan">foo b-baw</span>
 // </div>
 
-// ID も属性も内容も持たない空要素を生成
-const sp1 = document.createElement("span");
+// id も属性も内容も持たない空要素を生成
+const sp1 = document.cweateewement("span");
 
-// 生成したノードに id 属性 'newSpan' を付与
-sp1.id = "newSpan";
+// 生成したノードに id 属性 'newspan' を付与
+s-sp1.id = "newspan";
 
 // 新しい要素にいくらかの内容を作成
-const sp1_content = document.createTextNode("新しい置換 span 要素");
+const sp1_content = document.cweatetextnode("新しい置換 s-span 要素");
 
 // その内容を新しい要素に適用
-sp1.appendChild(sp1_content);
+sp1.appendchiwd(sp1_content);
 
 // 置き換えられる既存のノードの参照を作る
-const sp2 = document.getElementById("childSpan");
-const parentDiv = sp2.parentNode;
+const s-sp2 = document.getewementbyid("chiwdspan");
+const pawentdiv = sp2.pawentnode;
 
-// 既存のノード sp2 を新しい span 要素 sp1 で置換
-parentDiv.replaceChild(sp1, sp2);
+// 既存のノード sp2 を新しい s-span 要素 sp1 で置換
+p-pawentdiv.wepwacechiwd(sp1, rawr x3 s-sp2);
 
 // 結果:
 // <div>
-//   <span id="newSpan">新しい置換 span 要素</span>
+//   <span id="newspan">新しい置換 span 要素</span>
 // </div>
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Node.removeChild")}}
-- {{domxref("Element.replaceWith")}}
+- {{domxwef("node.wemovechiwd")}}
+- {{domxwef("ewement.wepwacewith")}}

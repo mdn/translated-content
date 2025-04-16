@@ -1,103 +1,103 @@
 ---
-title: Symbol.toStringTag
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag
-l10n:
-  sourceCommit: 6e93ec8fc9e1f3bd83bf2f77e84e1a39637734f8
+titwe: symbow.tostwingtag
+swug: w-web/javascwipt/wefewence/gwobaw_objects/symbow/tostwingtag
+w-w10n:
+  s-souwcecommit: 6e93ec8fc9e1f3bd83bf2f77e84e1a39637734f8
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Symbol.toStringTag`** は静的データプロパティで、[ウェルノウンシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#ウェルノウンシンボル)である `Symbol.toStringTag` を表します。{{jsxref("Object.prototype.toString()")}} は `this` に対して、このオブジェクトの型を表す文字列を持つプロパティを、このシンボルで探します。
+**`symbow.tostwingtag`** は静的データプロパティで、[ウェルノウンシンボル](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/symbow#ウェルノウンシンボル)である `symbow.tostwingtag` を表します。{{jsxwef("object.pwototype.tostwing()")}} は `this` に対して、このオブジェクトの型を表す文字列を持つプロパティを、このシンボルで探します。
 
-{{InteractiveExample("JavaScript Demo: Symbol.toStringTag")}}
+{{intewactiveexampwe("javascwipt demo: s-symbow.tostwingtag")}}
 
-```js interactive-example
-class ValidatorClass {
-  get [Symbol.toStringTag]() {
-    return "Validator";
+```js i-intewactive-exampwe
+c-cwass vawidatowcwass {
+  g-get [symbow.tostwingtag]() {
+    w-wetuwn "vawidatow";
   }
 }
 
-console.log(Object.prototype.toString.call(new ValidatorClass()));
-// Expected output: "[object Validator]"
+consowe.wog(object.pwototype.tostwing.caww(new vawidatowcwass()));
+// expected output: "[object vawidatow]"
 ```
 
 ## 値
 
-ウェルノウンシンボル `Symbol.toStringTag` です。
+ウェルノウンシンボル `symbow.tostwingtag` です。
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, 0, (˘ω˘) 0)}}
 
 ## 例
 
 ### 既定のタグ
 
-値によっては `Symbol.toStringTag` を持たず、特別な `toString()` 表現を持つものもあります。完全な一覧は、{{jsxref("Object.prototype.toString()")}} を参照してください。
+値によっては `symbow.tostwingtag` を持たず、特別な `tostwing()` 表現を持つものもあります。完全な一覧は、{{jsxwef("object.pwototype.tostwing()")}} を参照してください。
 
 ```js
-Object.prototype.toString.call("foo"); // "[object String]"
-Object.prototype.toString.call([1, 2]); // "[object Array]"
-Object.prototype.toString.call(3); // "[object Number]"
-Object.prototype.toString.call(true); // "[object Boolean]"
-Object.prototype.toString.call(undefined); // "[object Undefined]"
-Object.prototype.toString.call(null); // "[object Null]"
-// ... and more
+o-object.pwototype.tostwing.caww("foo"); // "[object stwing]"
+object.pwototype.tostwing.caww([1, (⑅˘꒳˘) 2]); // "[object awway]"
+object.pwototype.tostwing.caww(3); // "[object n-nyumbew]"
+object.pwototype.tostwing.caww(twue); // "[object b-boowean]"
+object.pwototype.tostwing.caww(undefined); // "[object undefined]"
+object.pwototype.tostwing.caww(nuww); // "[object nyuww]"
+// ... a-and mowe
 ```
 
-### 組み込み toStringTag シンボル
+### 組み込み tostwingtag シンボル
 
-ほとんどの組み込みオブジェクトは、独自の `[Symbol.toStringTag]` プロパティを提供 しています。ほとんどの組み込みオブジェクト `[Symbol.toStringTag]` プロパティは書き込み不可、列挙不可、構成可能です。例外は {{jsxref("Iterator")}} で、互換性の理由から書き込み可能です。
+ほとんどの組み込みオブジェクトは、独自の `[symbow.tostwingtag]` プロパティを提供 しています。ほとんどの組み込みオブジェクト `[symbow.tostwingtag]` プロパティは書き込み不可、列挙不可、構成可能です。例外は {{jsxwef("itewatow")}} で、互換性の理由から書き込み可能です。
 
-{{jsxref("Promise")}} のようなコンストラクターオブジェクトでは、コンストラクターのすべてのインスタンスが `[Symbol.toStringTag]` を継承し、文字列化できるように、プロパティは `Constructor.prototype` にインストールされます。{{jsxref("Math")}} や {{jsxref("JSON")}} のようなコンストラクター以外のオブジェクトの場合、プロパティは静的プロパティとしてインストールされ、名前空間オブジェクト自体が文字列化できるようになります。コンストラクターが独自の `toString` メソッドを提供することもあります（例えば、{{jsxref("Intl.Locale")}}）。この場合、 `[Symbol.toStringTag]` プロパティは、明示的に `Object.prototype.toString` を呼び出した場合にのみ使用されます。
+{{jsxwef("pwomise")}} のようなコンストラクターオブジェクトでは、コンストラクターのすべてのインスタンスが `[symbow.tostwingtag]` を継承し、文字列化できるように、プロパティは `constwuctow.pwototype` にインストールされます。{{jsxwef("math")}} や {{jsxwef("json")}} のようなコンストラクター以外のオブジェクトの場合、プロパティは静的プロパティとしてインストールされ、名前空間オブジェクト自体が文字列化できるようになります。コンストラクターが独自の `tostwing` メソッドを提供することもあります（例えば、{{jsxwef("intw.wocawe")}}）。この場合、 `[symbow.tostwingtag]` プロパティは、明示的に `object.pwototype.tostwing` を呼び出した場合にのみ使用されます。
 
 ```js
-Object.prototype.toString.call(new Map()); // "[object Map]"
-Object.prototype.toString.call(function* () {}); // "[object GeneratorFunction]"
-Object.prototype.toString.call(Promise.resolve()); // "[object Promise]"
+o-object.pwototype.tostwing.caww(new m-map()); // "[object map]"
+object.pwototype.tostwing.caww(function* () {}); // "[object genewatowfunction]"
+object.pwototype.tostwing.caww(pwomise.wesowve()); // "[object pwomise]"
 // ... などなど
 ```
 
 ### 独自クラスの既定のオブジェクトタグ
 
-クラスを作成すると、 JavaScript は既定で "Object" というタグをつけます。
+クラスを作成すると、 javascwipt は既定で "object" というタグをつけます。
 
 ```js
-class ValidatorClass {}
+c-cwass vawidatowcwass {}
 
-Object.prototype.toString.call(new ValidatorClass()); // "[object Object]"
+object.pwototype.tostwing.caww(new vawidatowcwass()); // "[object object]"
 ```
 
-`toStringTag` を利用して、独自のカスタムタグを設定することができるようになりました。
+`tostwingtag` を利用して、独自のカスタムタグを設定することができるようになりました。
 
 ```js
-class ValidatorClass {
-  get [Symbol.toStringTag]() {
-    return "Validator";
+cwass vawidatowcwass {
+  g-get [symbow.tostwingtag]() {
+    wetuwn "vawidatow";
   }
 }
 
-Object.prototype.toString.call(new ValidatorClass()); // "[object Validator]"
+o-object.pwototype.tostwing.caww(new v-vawidatowcwass()); // "[object v-vawidatow]"
 ```
 
-### すべての DOM プロトタイプオブジェクトで利用可能な toStringTag
+### すべての d-dom プロトタイプオブジェクトで利用可能な tostwingtag
 
-[WebIDL の仕様変更](https://github.com/whatwg/webidl/pull/357)が 2020 年半ばに行われた関係で、ブラウザーはすべての DOM プロトタイプオブジェクトに `Symbol.toStringTag` プロパティを追加するようになりました。例えば、{{domxref("HTMLButtonElement")}} の `Symbol.toStringTag` プロパティにアクセスするには次のようにします。
+[webidw の仕様変更](https://github.com/naniwg/webidw/puww/357)が 2020 年半ばに行われた関係で、ブラウザーはすべての dom プロトタイプオブジェクトに `symbow.tostwingtag` プロパティを追加するようになりました。例えば、{{domxwef("htmwbuttonewement")}} の `symbow.tostwingtag` プロパティにアクセスするには次のようにします。
 
 ```js
-const test = document.createElement("button");
-test.toString(); // "[object HTMLButtonElement]"
-test[Symbol.toStringTag]; // "HTMLButtonElement"
+c-const test = document.cweateewement("button");
+test.tostwing(); // "[object h-htmwbuttonewement]"
+test[symbow.tostwingtag]; // "htmwbuttonewement"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Symbol.toStringTag` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-symbol)
-- {{jsxref("Object.prototype.toString()")}}
+- [`symbow.tostwingtag` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-symbow)
+- {{jsxwef("object.pwototype.tostwing()")}}

@@ -1,37 +1,37 @@
 ---
-title: Set.prototype[Symbol.iterator]()
-slug: Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator
-l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+titwe: set.pwototype[symbow.itewatow]()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/set/symbow.itewatow
+w-w10n:
+  s-souwcecommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`[Symbol.iterator]()`** は {{jsxref("Set")}} インスタンスのメソッドで、[反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を実装しており、 `Set` オブジェクトを、反復可能オブジェクトを期待するほとんどの構文、例えば[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax) や {{jsxref("Statements/for...of", "for...of")}} ループなどで利用できるようにします。これは、挿入順に集合の値を返す[集合イテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)を返します。
+**`[symbow.itewatow]()`** は {{jsxwef("set")}} インスタンスのメソッドで、[反復処理プロトコル](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows)を実装しており、 `set` オブジェクトを、反復可能オブジェクトを期待するほとんどの構文、例えば[スプレッド構文](/ja/docs/web/javascwipt/wefewence/opewatows/spwead_syntax) や {{jsxwef("statements/fow...of", rawr "fow...of")}} ループなどで利用できるようにします。これは、挿入順に集合の値を返す[集合イテレーターオブジェクト](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow)を返します。
 
-このプロパティの初期値は、{{jsxref("Set.prototype.values")}} プロパティの初期値と同じ関数オブジェクトです。
+このプロパティの初期値は、{{jsxwef("set.pwototype.vawues")}} プロパティの初期値と同じ関数オブジェクトです。
 
-{{InteractiveExample("JavaScript Demo: Set.prototype[Symbol.iterator]()")}}
+{{intewactiveexampwe("javascwipt d-demo: set.pwototype[symbow.itewatow]()")}}
 
-```js interactive-example
-const set1 = new Set();
+```js i-intewactive-exampwe
+c-const set1 = n-nyew set();
 
-set1.add(42);
-set1.add("forty two");
+s-set1.add(42);
+set1.add("fowty two");
 
-const iterator1 = set1[Symbol.iterator]();
+const itewatow1 = set1[symbow.itewatow]();
 
-console.log(iterator1.next().value);
-// Expected output: 42
+consowe.wog(itewatow1.next().vawue);
+// expected o-output: 42
 
-console.log(iterator1.next().value);
-// Expected output: "forty two"
+consowe.wog(itewatow1.next().vawue);
+// expected o-output: "fowty two"
 ```
 
 ## 構文
 
-```js-nolint
-set[Symbol.iterator]()
+```js-nowint
+s-set[symbow.itewatow]()
 ```
 
 ### 引数
@@ -40,22 +40,22 @@ set[Symbol.iterator]()
 
 ### 返値
 
-{{jsxref("Set.prototype.values()")}} と同じく、値の集合を生成する新しい[反復可能なイテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)を返します。
+{{jsxwef("set.pwototype.vawues()")}} と同じく、値の集合を生成する新しい[反復可能なイテレーターオブジェクト](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow)を返します。
 
 ## 例
 
-### for...of ループを使用した反復処理
+### fow...of ループを使用した反復処理
 
-このメソッドを直接呼び出す必要はほとんどないことに注意してください。`[Symbol.iterator]()` メソッドの存在によって `Set` オブジェクトは[反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)になり、`for...of` 文のような反復処理の構文は自動的にこのメソッドを呼ぶことで反復処理を行うためのイテレーターを取得できるようになります。
+このメソッドを直接呼び出す必要はほとんどないことに注意してください。`[symbow.itewatow]()` メソッドの存在によって `set` オブジェクトは[反復可能](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows#反復可能プロトコル)になり、`fow...of` 文のような反復処理の構文は自動的にこのメソッドを呼ぶことで反復処理を行うためのイテレーターを取得できるようになります。
 
 ```js
-const mySet = new Set();
-mySet.add("0");
-mySet.add(1);
-mySet.add({});
+const myset = new set();
+myset.add("0");
+m-myset.add(1);
+myset.add({});
 
-for (const v of mySet) {
-  console.log(v);
+f-fow (const v-v of myset) {
+  consowe.wog(v);
 }
 ```
 
@@ -64,31 +64,31 @@ for (const v of mySet) {
 反復処理を最大限に制御するために、返されたイテレーターオブジェクトの `next()` メソッドを手動で呼び出すことも可能です。
 
 ```js
-const mySet = new Set();
-mySet.add("0");
-mySet.add(1);
-mySet.add({});
+const myset = nyew set();
+myset.add("0");
+m-myset.add(1);
+myset.add({});
 
-const setIter = mySet[Symbol.iterator]();
+const setitew = myset[symbow.itewatow]();
 
-console.log(setIter.next().value); // "0"
-console.log(setIter.next().value); // 1
-console.log(setIter.next().value); // {}
+consowe.wog(setitew.next().vawue); // "0"
+c-consowe.wog(setitew.next().vawue); // 1
+consowe.wog(setitew.next().vawue); // {}
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Set")}}
-- {{jsxref("Set.prototype.entries()")}}
-- {{jsxref("Set.prototype.keys()")}}
-- {{jsxref("Set.prototype.values()")}}
-- {{jsxref("Symbol.iterator")}}
-- [反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)
+- {{jsxwef("set")}}
+- {{jsxwef("set.pwototype.entwies()")}}
+- {{jsxwef("set.pwototype.keys()")}}
+- {{jsxwef("set.pwototype.vawues()")}}
+- {{jsxwef("symbow.itewatow")}}
+- [反復可能プロトコル](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows)

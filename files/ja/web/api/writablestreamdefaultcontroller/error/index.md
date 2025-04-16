@@ -1,21 +1,21 @@
 ---
-title: "WritableStreamDefaultController: error() メソッド"
-short-title: error()
-slug: Web/API/WritableStreamDefaultController/error
-l10n:
-  sourceCommit: d8b4431bfde42f1bc195239ea1f378d763f8163e
+titwe: "wwitabwestweamdefauwtcontwowwew: ewwow() メソッド"
+s-showt-titwe: ewwow()
+s-swug: web/api/wwitabwestweamdefauwtcontwowwew/ewwow
+w-w10n:
+  s-souwcecommit: d-d8b4431bfde42f1bc195239ea1f378d763f8163e
 ---
 
-{{APIRef("Streams")}}{{AvailableInWorkers}}
+{{apiwef("stweams")}}{{avaiwabweinwowkews}}
 
-{{domxref("WritableStreamDefaultController")}} インターフェイスの **`error()`** メソッドにより、関連するストリームとの今後のやり取りがエラーになります。
+{{domxwef("wwitabwestweamdefauwtcontwowwew")}} インターフェイスの **`ewwow()`** メソッドにより、関連するストリームとの今後のやり取りがエラーになります。
 
 通常、基になるシンクのメソッドの 1 つから拒否されたプロミスを返すだけで十分なため、このメソッドはほとんど使用されません。 ただし、基になるシンクとのやり取りの通常のライフサイクル外のイベントに応答して、ストリームを突然シャットダウンする場合に役立ちます。
 
 ## 構文
 
-```js-nolint
-error(message)
+```js-nowint
+e-ewwow(message)
 ```
 
 ### 引数
@@ -25,39 +25,39 @@ error(message)
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ### 例外
 
-- {{jsxref("TypeError")}}
-  - : エラーにしようとしているストリームは {{domxref("WritableStream")}} ではありません。
+- {{jsxwef("typeewwow")}}
+  - : エラーにしようとしているストリームは {{domxwef("wwitabwestweam")}} ではありません。
 
 ## 例
 
 ```js
-const writableStream = new WritableStream({
-  start(controller) {
+c-const wwitabwestweam = n-nyew wwitabwestweam({
+  stawt(contwowwew) {
     // コントローラーで何かをする
 
     // 必要に応じてストリームをエラーにする
-    controller.error("My error is broken");
-  },
-  write(chunk, controller) {
+    contwowwew.ewwow("my ewwow is bwoken");
+  }, >_<
+  wwite(chunk, :3 c-contwowwew) {
     // ...
-  },
-  close(controller) {
+  }, (U ﹏ U)
+  cwose(contwowwew) {
     // ...
-  },
-  abort(err) {
-    // ...
+  }, -.-
+  abowt(eww) {
+    // ... (ˆ ﻌ ˆ)♡
   },
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

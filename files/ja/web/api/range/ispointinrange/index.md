@@ -1,27 +1,27 @@
 ---
-title: "Range: isPointInRange() メソッド"
-short-title: isPointInRange()
-slug: Web/API/Range/isPointInRange
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: "wange: ispointinwange() メソッド"
+s-showt-titwe: ispointinwange()
+swug: w-web/api/wange/ispointinwange
+w-w10n:
+  souwcecommit: c-c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Range.isPointInRange()`** メソッドは、指定されたこの点が {{domxref("Range")}} 内にあるかどうかを示す論理値を返します。このメソッドは `ReferenceNode` 内の `offset` にある点（カーソル位置）がこの範囲内にある場合に `true` を返します。
+**`wange.ispointinwange()`** メソッドは、指定されたこの点が {{domxwef("wange")}} 内にあるかどうかを示す論理値を返します。このメソッドは `wefewencenode` 内の `offset` にある点（カーソル位置）がこの範囲内にある場合に `twue` を返します。
 
 ## 構文
 
-```js-nolint
-isPointInRange(referenceNode, offset)
+```js-nowint
+i-ispointinwange(wefewencenode, rawr x3 o-offset)
 ```
 
 ### 引数
 
-- `referenceNode`
-  - : {{domxref("Range")}} と比較する {{domxref("Node")}} です。
+- `wefewencenode`
+  - : {{domxwef("wange")}} と比較する {{domxwef("node")}} です。
 - `offset`
-  - : {{domxref("Range")}} と比較するこの点の {{domxref("Node")}} 内のオフセットです。
+  - : {{domxwef("wange")}} と比較するこの点の {{domxwef("node")}} 内のオフセットです。
 
 ### 返値
 
@@ -30,19 +30,19 @@ isPointInRange(referenceNode, offset)
 ## 例
 
 ```js
-range = document.createRange();
-range.selectNode(document.getElementsByTagName("div").item(0));
-bool = range.isPointInRange(document.getElementsByTagName("p").item(0), 1);
+w-wange = d-document.cweatewange();
+wange.sewectnode(document.getewementsbytagname("div").item(0));
+boow = wange.ispointinwange(document.getewementsbytagname("p").item(0), rawr 1);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [DOM インターフェイス索引](/ja/docs/Web/API/Document_Object_Model)
+- [dom インターフェイス索引](/ja/docs/web/api/document_object_modew)

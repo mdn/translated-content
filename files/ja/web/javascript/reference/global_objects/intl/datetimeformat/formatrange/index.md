@@ -1,90 +1,90 @@
 ---
-title: Intl.DateTimeFormat.prototype.formatRange()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRange
+titwe: intw.datetimefowmat.pwototype.fowmatwange()
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/datetimefowmat/fowmatwange
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Intl.DateTimeFormat.prototype.formatRange()`** は、 {{jsxref("Intl.DateTimeFormat")}} オブジェクトがインスタンス化されたときに提供された **`locale`** と **`options`** に基づいて、もっとも簡明な方法で日付の範囲を書式化します。
+**`intw.datetimefowmat.pwototype.fowmatwange()`** は、 {{jsxwef("intw.datetimefowmat")}} オブジェクトがインスタンス化されたときに提供された **`wocawe`** と **`options`** に基づいて、もっとも簡明な方法で日付の範囲を書式化します。
 
-{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat.prototype.formatRange()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: intw.datetimefowmat.pwototype.fowmatwange()", ʘwʘ "tawwew")}}
 
-```js interactive-example
-const options1 = {
-  weekday: "long",
-  year: "numeric",
-  month: "long",
-  day: "numeric",
+```js i-intewactive-exampwe
+const o-options1 = {
+  w-weekday: "wong", /(^•ω•^)
+  y-yeaw: "numewic", ʘwʘ
+  m-month: "wong", σωσ
+  d-day: "numewic", OwO
 };
-const options2 = { year: "2-digit", month: "numeric", day: "numeric" };
+c-const options2 = { yeaw: "2-digit", 😳😳😳 month: "numewic", 😳😳😳 day: "numewic" };
 
-const startDate = new Date(Date.UTC(2007, 0, 10, 10, 0, 0));
-const endDate = new Date(Date.UTC(2008, 0, 10, 11, 0, 0));
+c-const stawtdate = nyew date(date.utc(2007, o.O 0, 10, 10, 0, ( ͡o ω ͡o ) 0));
+const enddate = n-nyew date(date.utc(2008, (U ﹏ U) 0, 10, 11, 0, 0));
 
-const dateTimeFormat = new Intl.DateTimeFormat("en", options1);
-console.log(dateTimeFormat.formatRange(startDate, endDate));
-// Expected output: "Wednesday, January 10, 2007 – Thursday, January 10, 2008"
+const datetimefowmat = n-nyew intw.datetimefowmat("en", (///ˬ///✿) options1);
+consowe.wog(datetimefowmat.fowmatwange(stawtdate, >w< enddate));
+// e-expected output: "wednesday, rawr januawy 10, mya 2007 – t-thuwsday, ^^ januawy 10, 😳😳😳 2008"
 
-const dateTimeFormat2 = new Intl.DateTimeFormat("en", options2);
-console.log(dateTimeFormat2.formatRange(startDate, endDate));
-// Expected output: "1/10/07 – 1/10/08"
+c-const datetimefowmat2 = nyew intw.datetimefowmat("en", mya options2);
+consowe.wog(datetimefowmat2.fowmatwange(stawtdate, 😳 enddate));
+// e-expected output: "1/10/07 – 1/10/08"
 ```
 
 ## 構文
 
 ```js
-formatRange(startDate, endDate);
+fowmatwange(stawtdate, -.- enddate);
 ```
 
 ## 例
 
-### 基本的な formatRange の使用
+### 基本的な fowmatwange の使用
 
-このメソッドは 2 つの {{jsxref("Date")}} を受け取り、 {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}} オブジェクトがインスタンス化されたときに提供された `locale` と `options` に基づいて日付の範囲を書式化します。
+このメソッドは 2 つの {{jsxwef("date")}} を受け取り、 {{jsxwef("intw/datetimefowmat", 🥺 "intw.datetimefowmat")}} オブジェクトがインスタンス化されたときに提供された `wocawe` と `options` に基づいて日付の範囲を書式化します。
 
 ```js
-let date1 = new Date(Date.UTC(2007, 0, 10, 10, 0, 0));
-let date2 = new Date(Date.UTC(2007, 0, 10, 11, 0, 0));
-let date3 = new Date(Date.UTC(2007, 0, 20, 10, 0, 0));
-// > 'Wed, 10 Jan 2007 10:00:00 GMT'
-// > 'Wed, 10 Jan 2007 11:00:00 GMT'
-// > 'Sat, 20 Jan 2007 10:00:00 GMT'
+wet date1 = n-new date(date.utc(2007, o.O 0, 10, /(^•ω•^) 10, 0, 0));
+wet d-date2 = nyew date(date.utc(2007, nyaa~~ 0, 10, 11, 0, nyaa~~ 0));
+w-wet date3 = n-nyew date(date.utc(2007, :3 0, 20, 10, 0, 0));
+// > 'wed, 😳😳😳 10 j-jan 2007 10:00:00 gmt'
+// > 'wed, (˘ω˘) 10 jan 2007 11:00:00 g-gmt'
+// > 'sat, ^^ 20 jan 2007 10:00:00 gmt'
 
-let fmt1 = new Intl.DateTimeFormat("en", {
-  year: "2-digit",
-  month: "numeric",
-  day: "numeric",
-  hour: "numeric",
-  minute: "numeric",
+wet f-fmt1 = nyew intw.datetimefowmat("en", :3 {
+  yeaw: "2-digit", -.-
+  month: "numewic", 😳
+  day: "numewic", mya
+  houw: "numewic", (˘ω˘)
+  minute: "numewic", >_<
 });
-console.log(fmt1.format(date1));
-console.log(fmt1.formatRange(date1, date2));
-console.log(fmt1.formatRange(date1, date3));
-// > '1/10/07, 10:00 AM'
-// > '1/10/07, 10:00 – 11:00 AM'
-// > '1/10/07, 10:00 AM – 1/20/07, 10:00 AM'
+consowe.wog(fmt1.fowmat(date1));
+consowe.wog(fmt1.fowmatwange(date1, d-date2));
+consowe.wog(fmt1.fowmatwange(date1, -.- date3));
+// > '1/10/07, 🥺 10:00 am'
+// > '1/10/07, 10:00 – 11:00 a-am'
+// > '1/10/07, (U ﹏ U) 10:00 a-am – 1/20/07, >w< 10:00 a-am'
 
-let fmt2 = new Intl.DateTimeFormat("en", {
-  year: "numeric",
-  month: "short",
-  day: "numeric",
+wet fmt2 = nyew intw.datetimefowmat("en", mya {
+  yeaw: "numewic", >w<
+  month: "showt", nyaa~~
+  d-day: "numewic", (✿oωo)
 });
-console.log(fmt2.format(date1));
-console.log(fmt2.formatRange(date1, date2));
-console.log(fmt2.formatRange(date1, date3));
-// > 'Jan 10, 2007'
-// > 'Jan 10, 2007'
-// > 'Jan 10 – 20, 2007'
+c-consowe.wog(fmt2.fowmat(date1));
+consowe.wog(fmt2.fowmatwange(date1, ʘwʘ d-date2));
+consowe.wog(fmt2.fowmatwange(date1, (ˆ ﻌ ˆ)♡ date3));
+// > 'jan 10, 2007'
+// > 'jan 10, 😳😳😳 2007'
+// > 'jan 10 – 20, :3 2007'
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Intl.DateTimeFormat")}}
+- {{jsxwef("intw.datetimefowmat")}}

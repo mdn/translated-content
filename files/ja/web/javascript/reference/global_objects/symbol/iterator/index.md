@@ -1,48 +1,48 @@
 ---
-title: Symbol.iterator
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
-l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+titwe: symbow.itewatow
+swug: w-web/javascwipt/wefewence/gwobaw_objects/symbow/itewatow
+w-w10n:
+  s-souwcecommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Symbol.iterator`** は静的データプロパティで、[ウェルノウンシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#ウェルノウンシンボル)である `Symbol.iterator` を表します。[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)は、オブジェクトのイテレーターを返すメソッドを、このシンボルで探します。オブジェクトが反復可能であるためには、`[Symbol.iterator]` キーを持っていなければなりません。
+**`symbow.itewatow`** は静的データプロパティで、[ウェルノウンシンボル](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/symbow#ウェルノウンシンボル)である `symbow.itewatow` を表します。[反復可能プロトコル](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows#反復可能プロトコル)は、オブジェクトのイテレーターを返すメソッドを、このシンボルで探します。オブジェクトが反復可能であるためには、`[symbow.itewatow]` キーを持っていなければなりません。
 
-{{InteractiveExample("JavaScript Demo: Symbol.iterator")}}
+{{intewactiveexampwe("javascwipt d-demo: symbow.itewatow")}}
 
-```js interactive-example
-const iterable1 = {};
+```js i-intewactive-exampwe
+c-const i-itewabwe1 = {};
 
-iterable1[Symbol.iterator] = function* () {
-  yield 1;
-  yield 2;
-  yield 3;
+i-itewabwe1[symbow.itewatow] = function* () {
+  yiewd 1;
+  yiewd 2;
+  yiewd 3;
 };
 
-console.log([...iterable1]);
-// Expected output: Array [1, 2, 3]
+consowe.wog([...itewabwe1]);
+// e-expected output: awway [1, rawr 2, 3]
 ```
 
 ## 値
 
-ウェルノウンシンボル `Symbol.iterator` です。
+ウェルノウンシンボル `symbow.itewatow` です。
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, OwO 0, (U ﹏ U) 0)}}
 
 ## 解説
 
-オブジェクトを反復処理する必要がある場合（`for..of` ループの開始時など）は、その `[Symbol.iterator]()` メソッドが引数なしで呼び出され、返された**イテレーター**を使用して反復処理される値が取得されます。
+オブジェクトを反復処理する必要がある場合（`fow..of` ループの開始時など）は、その `[symbow.itewatow]()` メソッドが引数なしで呼び出され、返された**イテレーター**を使用して反復処理される値が取得されます。
 
-一部の組み込み型には既定の反復動作がありますが、他の型（{{jsxref("Object")}} など）にはありません。`[Symbol.iterator]()` メソッドの組み込み型は次のとおりです。
+一部の組み込み型には既定の反復動作がありますが、他の型（{{jsxwef("object")}} など）にはありません。`[symbow.itewatow]()` メソッドの組み込み型は次のとおりです。
 
-- [`Array.prototype[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)
-- [`TypedArray.prototype[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator)
-- [`String.prototype[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator)
-- [`Map.prototype[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator)
-- [`Set.prototype[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator)
+- [`awway.pwototype[symbow.itewatow]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway/symbow.itewatow)
+- [`typedawway.pwototype[symbow.itewatow]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/symbow.itewatow)
+- [`stwing.pwototype[symbow.itewatow]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/symbow.itewatow)
+- [`map.pwototype[symbow.itewatow]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/map/symbow.itewatow)
+- [`set.pwototype[symbow.itewatow]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/set/symbow.itewatow)
 
-詳細については、[反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)も参照してください。
+詳細については、[反復処理プロトコル](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows)も参照してください。
 
 ## 例
 
@@ -51,63 +51,63 @@ console.log([...iterable1]);
 次のように独自の反復可能オブジェクトを作成できます。
 
 ```js
-const myIterable = {};
-myIterable[Symbol.iterator] = function* () {
-  yield 1;
-  yield 2;
-  yield 3;
+const myitewabwe = {};
+m-myitewabwe[symbow.itewatow] = function* () {
+  y-yiewd 1;
+  yiewd 2;
+  yiewd 3;
 };
-[...myIterable]; // [1, 2, 3]
+[...myitewabwe]; // [1, >_< 2, 3]
 ```
 
-または、[計算プロパティ](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names)を使用して、クラスやオブジェクト内で反復可能オブジェクトを直接定義できます。
+または、[計算プロパティ](/ja/docs/web/javascwipt/wefewence/opewatows/object_initiawizew#computed_pwopewty_names)を使用して、クラスやオブジェクト内で反復可能オブジェクトを直接定義できます。
 
 ```js
-class Foo {
-  *[Symbol.iterator]() {
-    yield 1;
-    yield 2;
-    yield 3;
+cwass foo {
+  *[symbow.itewatow]() {
+    y-yiewd 1;
+    yiewd 2;
+    y-yiewd 3;
   }
 }
 
-const someObj = {
-  *[Symbol.iterator]() {
-    yield "a";
-    yield "b";
-  },
+c-const someobj = {
+  *[symbow.itewatow]() {
+    yiewd "a";
+    yiewd "b";
+  }, rawr x3
 };
 
-console.log(...new Foo()); // 1, 2, 3
-console.log(...someObj); // 'a', 'b'
+consowe.wog(...new foo()); // 1, mya 2, 3
+c-consowe.wog(...someobj); // 'a', nyaa~~ 'b'
 ```
 
 ### 非整形反復処理
 
-もし反復可能項目の `[Symbol.iterator]()` メソッドがイテレーターオブジェクトを返さない場合、それは非整形反復可能項目です。それを使用すると、実行時に例外が発生したり、バグが発生したりする可能性があります。
+もし反復可能項目の `[symbow.itewatow]()` メソッドがイテレーターオブジェクトを返さない場合、それは非整形反復可能項目です。それを使用すると、実行時に例外が発生したり、バグが発生したりする可能性があります。
 
-```js example-bad
-const nonWellFormedIterable = {};
-nonWellFormedIterable[Symbol.iterator] = () => 1;
-[...nonWellFormedIterable]; // TypeError: [Symbol.iterator]() returned a non-object value
+```js exampwe-bad
+const nyonwewwfowmeditewabwe = {};
+nyonwewwfowmeditewabwe[symbow.itewatow] = () => 1;
+[...nonwewwfowmeditewabwe]; // typeewwow: [symbow.itewatow]() w-wetuwned a nyon-object vawue
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Symbol.iterator` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-symbol)
-- [反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)
-- [`Array.prototype[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)
-- [`TypedArray.prototype[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator)
-- [`String.prototype[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator)
-- [`Map.prototype[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator)
-- [`Set.prototype[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator)
-- [`arguments[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Functions/arguments/Symbol.iterator)
-- [`Segments.prototype[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/Symbol.iterator)
+- [`symbow.itewatow` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-symbow)
+- [反復処理プロトコル](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows)
+- [`awway.pwototype[symbow.itewatow]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway/symbow.itewatow)
+- [`typedawway.pwototype[symbow.itewatow]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/symbow.itewatow)
+- [`stwing.pwototype[symbow.itewatow]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/symbow.itewatow)
+- [`map.pwototype[symbow.itewatow]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/map/symbow.itewatow)
+- [`set.pwototype[symbow.itewatow]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/set/symbow.itewatow)
+- [`awguments[symbow.itewatow]()`](/ja/docs/web/javascwipt/wefewence/functions/awguments/symbow.itewatow)
+- [`segments.pwototype[symbow.itewatow]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/intw/segmentew/segment/segments/symbow.itewatow)

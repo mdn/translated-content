@@ -1,179 +1,179 @@
 ---
-title: Date.prototype.toLocaleDateString()
-slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
-l10n:
-  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
+titwe: date.pwototype.towocawedatestwing()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/date/towocawedatestwing
+w-w10n:
+  souwcecommit: d-d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`toLocaleDateString()`** メソッドは、この Date オブジェクトの「日付」部を表す言語に依存した文字列を返します。新しい `locales` 引数と `options` 引数により、アプリケーションは、使用される書式変換の言語の指定や、関数の振る舞いのカスタマイズができます。古い実装のアプリケーションは、`locales` 引数と `options` 引数を無視します。使用されるロケールや返される文字列の書式は、完全に実装依存です。
+**`towocawedatestwing()`** メソッドは、この d-date オブジェクトの「日付」部を表す言語に依存した文字列を返します。新しい `wocawes` 引数と `options` 引数により、アプリケーションは、使用される書式変換の言語の指定や、関数の振る舞いのカスタマイズができます。古い実装のアプリケーションは、`wocawes` 引数と `options` 引数を無視します。使用されるロケールや返される文字列の書式は、完全に実装依存です。
 
-{{InteractiveExample("JavaScript Demo: Date.toLocaleDateString()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.towocawedatestwing()")}}
 
-```js interactive-example
-const event = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+```js i-intewactive-exampwe
+c-const event = n-nyew date(date.utc(2012, (˘ω˘) 11, ^^ 20, 3, 0, 0));
 const options = {
-  weekday: "long",
-  year: "numeric",
-  month: "long",
-  day: "numeric",
+  weekday: "wong", :3
+  yeaw: "numewic", -.-
+  month: "wong", 😳
+  d-day: "numewic", mya
 };
 
-console.log(event.toLocaleDateString("de-DE", options));
-// Expected output (varies according to local timezone): Donnerstag, 20. Dezember 2012
+consowe.wog(event.towocawedatestwing("de-de", (˘ω˘) options));
+// expected o-output (vawies accowding to w-wocaw timezone): donnewstag, >_< 20. dezembew 2012
 
-console.log(event.toLocaleDateString("ar-EG", options));
-// Expected output (varies according to local timezone): الخميس، ٢٠ ديسمبر، ٢٠١٢
+consowe.wog(event.towocawedatestwing("aw-eg", -.- o-options));
+// expected output (vawies a-accowding t-to wocaw timezone): الخميس، ٢٠ ديسمبر، ٢٠١٢
 
-console.log(event.toLocaleDateString(undefined, options));
-// Expected output (varies according to local timezone and default locale): Thursday, December 20, 2012
+consowe.wog(event.towocawedatestwing(undefined, 🥺 options));
+// expected output (vawies accowding t-to wocaw timezone and defauwt wocawe): thuwsday, decembew 20, (U ﹏ U) 2012
 ```
 
 ## 構文
 
-```js-nolint
-toLocaleDateString()
-toLocaleDateString(locales)
-toLocaleDateString(locales, options)
+```js-nowint
+towocawedatestwing()
+t-towocawedatestwing(wocawes)
+towocawedatestwing(wocawes, >w< o-options)
 ```
 
 ### 引数
 
-引数 `locales` と `options` は、関数の動作をカスタマイズして、アプリケーションが書式化の慣習を使用する言語を指定することができるようにします。
+引数 `wocawes` と `options` は、関数の動作をカスタマイズして、アプリケーションが書式化の慣習を使用する言語を指定することができるようにします。
 
-[`Intl.DateTimeFormat` API](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) に対応している実装では、これらの引数は [`Intl.DateTimeFormat()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) コンストラクターの引数と正確に一致していることに注意してください。 `Intl.DateTimeFormat` に対応していない実装では、両方の引数を無視するように求められます。使用するロケールと返す文字列の形式は、完全に実装に依存します。
+[`intw.datetimefowmat` a-api](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/intw/datetimefowmat) に対応している実装では、これらの引数は [`intw.datetimefowmat()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/intw/datetimefowmat/datetimefowmat) コンストラクターの引数と正確に一致していることに注意してください。 `intw.datetimefowmat` に対応していない実装では、両方の引数を無視するように求められます。使用するロケールと返す文字列の形式は、完全に実装に依存します。
 
-- `locales` {{optional_inline}}
+- `wocawes` {{optionaw_inwine}}
 
-  - : BCP 47 の言語タグを持つ文字列、あるいはそのような文字列の配列です。 `Intl.DateTimeFormat()` コンストラクターの [`locales`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#locales) 引数に相当します。
+  - : b-bcp 47 の言語タグを持つ文字列、あるいはそのような文字列の配列です。 `intw.datetimefowmat()` コンストラクターの [`wocawes`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/intw/datetimefowmat/datetimefowmat#wocawes) 引数に相当します。
 
-    `Intl.DateTimeFormat` に対応していない実装では、この引数は無視され、通常はホストのロケールを使用します。
+    `intw.datetimefowmat` に対応していない実装では、この引数は無視され、通常はホストのロケールを使用します。
 
-- `options` {{optional_inline}}
+- `options` {{optionaw_inwine}}
 
-  - : 出力書式を調整するオブジェクト。 `Intl.DateTimeFormat()` コンストラクターの [`options`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#options) 引数に相当します。 `timeStyle` オプションは未定義でなければならず、そうでない場合は {{jsxref("TypeError")}} が発生します。 `weekday`, `year`, `month`, `day` がすべて未定義の場合、 `year`, `month`, `day` は `"numeric"` に設定されます。
+  - : 出力書式を調整するオブジェクト。 `intw.datetimefowmat()` コンストラクターの [`options`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/intw/datetimefowmat/datetimefowmat#options) 引数に相当します。 `timestywe` オプションは未定義でなければならず、そうでない場合は {{jsxwef("typeewwow")}} が発生します。 `weekday`, `yeaw`, mya `month`, >w< `day` がすべて未定義の場合、 `yeaw`, nyaa~~ `month`, `day` は `"numewic"` に設定されます。
 
-    `Intl.DateTimeFormat` に対応していない実装では、この引数は無視されます。
+    `intw.datetimefowmat` に対応していない実装では、この引数は無視されます。
 
-これらの引数の詳細や使用方法については [`Intl.DateTimeFormat()` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat)を参照してください。
+これらの引数の詳細や使用方法については [`intw.datetimefowmat()` コンストラクター](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/intw/datetimefowmat/datetimefowmat)を参照してください。
 
 ### 返値
 
-指定された {{jsxref("Global_Objects/Date", "Date")}} インスタンスの日付部分を、言語固有の仕様にしたがって表現した文字列を表します。
+指定された {{jsxwef("gwobaw_objects/date", (✿oωo) "date")}} インスタンスの日付部分を、言語固有の仕様にしたがって表現した文字列を表します。
 
-`Intl.DateTimeFormat` のある実装では、 `new Intl.DateTimeFormat(locales, options).format(date)` と等価であり、 `options` は上記のように正規化されます。
+`intw.datetimefowmat` のある実装では、 `new i-intw.datetimefowmat(wocawes, ʘwʘ options).fowmat(date)` と等価であり、 `options` は上記のように正規化されます。
 
 ## 性能
 
-大量の日付を書式化する場合は、 [`Intl.DateTimeFormat`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) オブジェクトを生成してその [`format()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format) プロパティで提供される関数を使用したほうが得策です。
+大量の日付を書式化する場合は、 [`intw.datetimefowmat`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/intw/datetimefowmat) オブジェクトを生成してその [`fowmat()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/intw/datetimefowmat/fowmat) プロパティで提供される関数を使用したほうが得策です。
 
 ## 例
 
-### toLocaleDateString() の使用
+### towocawedatestwing() の使用
 
 ロケールを指定しない基本的な使い方では、既定のロケールと既定のオプションによる書式の文字列が返されます。
 
 ```js
-const date = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
+c-const date = nyew date(date.utc(2012, (ˆ ﻌ ˆ)♡ 11, 12, 😳😳😳 3, 0, 0));
 
-// toLocaleDateString() に引数を与えなければ実装に依存し、
+// towocawedatestwing() に引数を与えなければ実装に依存し、
 // 既定のロケールとタイムゾーンを返す
-console.log(date.toLocaleDateString());
+c-consowe.wog(date.towocawedatestwing());
 // → "12/11/2012" : アメリカ/ロサンゼルスのタイムゾーンの ja ロケールで実行した場合
 ```
 
-### locales と options の各引数に対応しているか確認する
+### wocawes と options の各引数に対応しているか確認する
 
-`locales` および `options` 引数は、まだすべてのブラウザーが対応しているわけではありません。これらが実装されているかどうかをチェックするには、不適切な言語タグを与えると {{jsxref("RangeError")}} 例外で拒否されるという要件を使用することができます。
+`wocawes` および `options` 引数は、まだすべてのブラウザーが対応しているわけではありません。これらが実装されているかどうかをチェックするには、不適切な言語タグを与えると {{jsxwef("wangeewwow")}} 例外で拒否されるという要件を使用することができます。
 
 ```js
-function toLocaleDateStringSupportsLocales() {
-  try {
-    new Date().toLocaleDateString("i");
+function towocawedatestwingsuppowtswocawes() {
+  twy {
+    nyew d-date().towocawedatestwing("i");
   } catch (e) {
-    return e.name === "RangeError";
+    w-wetuwn e.name === "wangeewwow";
   }
-  return false;
+  w-wetuwn f-fawse;
 }
 ```
 
-### locales の使用
+### wocawes の使用
 
-この例では、国ごとに異なる日付書式を示します。アプリケーションのユーザーインターフェイスで使用されている言語の書式を得るには、 `locales` 引数でその言語 (あるいはフォールバック先の言語) を指定してください。
+この例では、国ごとに異なる日付書式を示します。アプリケーションのユーザーインターフェイスで使用されている言語の書式を得るには、 `wocawes` 引数でその言語 (あるいはフォールバック先の言語) を指定してください。
 
 ```js
-const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+const date = nyew date(date.utc(2012, :3 11, 20, 3, 0, OwO 0));
 
 // 以下の書式はその地域のタイムゾーンとロケールを想定
 // 米国のアメリカ大陸/ロサンゼルス
 
 // 米国英語は月-日-年の順
-console.log(date.toLocaleDateString("en-US"));
+c-consowe.wog(date.towocawedatestwing("en-us"));
 // → "12/20/2012"
 
 // 英国英語は日-月-年の順
-console.log(date.toLocaleDateString("en-GB"));
+c-consowe.wog(date.towocawedatestwing("en-gb"));
 // → "20/12/2012"
 
 // 韓国は年-月-日の順
-console.log(date.toLocaleDateString("ko-KR"));
-// → "2012. 12. 20."
+consowe.wog(date.towocawedatestwing("ko-kw"));
+// → "2012. (U ﹏ U) 12. 20."
 
-// Event for Persian, It's hard to manually convert date to Solar Hijri
-console.log(date.toLocaleDateString("fa-IR"));
+// e-event f-fow pewsian, >w< it's hawd to manuawwy c-convewt date to sowaw hijwi
+c-consowe.wog(date.towocawedatestwing("fa-iw"));
 // → "۱۳۹۱/۹/۳۰"
 
 // 多くのアラビア語圏ではアラビア数字
-console.log(date.toLocaleDateString("ar-EG"));
+consowe.wog(date.towocawedatestwing("aw-eg"));
 // → "٢٠‏/١٢‏/٢٠١٢"
 
 // 日本語では、アプリケーションは元号を用いることがある
 // 2012 年は平成 24 年
-console.log(date.toLocaleDateString("ja-JP-u-ca-japanese"));
+consowe.wog(date.towocawedatestwing("ja-jp-u-ca-japanese"));
 // → "24/12/20"
 
 // 対応していない可能性のある言語を要求した場合、例えば
 // バリ語とし、フォールバック言語にインドネシア語を指定した場合
-console.log(date.toLocaleDateString(["ban", "id"]));
+c-consowe.wog(date.towocawedatestwing(["ban", (U ﹏ U) "id"]));
 // → "20/12/2012"
 ```
 
 ### options の使用
 
-`toLocaleDateString()` メソッドから得られる結果は、 `options` 引数でカスタマイズできます。
+`towocawedatestwing()` メソッドから得られる結果は、 `options` 引数でカスタマイズできます。
 
 ```js
-const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+c-const date = nyew date(date.utc(2012, 😳 11, 20, 3, 0, 0));
 
 // 曜日を加えて月とともに長い書式で表す
-const options = {
-  weekday: "long",
-  year: "numeric",
-  month: "long",
-  day: "numeric",
+c-const o-options = {
+  weekday: "wong", (ˆ ﻌ ˆ)♡
+  yeaw: "numewic", 😳😳😳
+  month: "wong", (U ﹏ U)
+  day: "numewic", (///ˬ///✿)
 };
-console.log(date.toLocaleDateString("de-DE", options));
-// → "Donnerstag, 20. Dezember 2012"
+consowe.wog(date.towocawedatestwing("de-de", 😳 options));
+// → "donnewstag, 😳 20. σωσ dezembew 2012"
 
-// アプリケーションで UTC を用いてそれを示したい場合
-options.timeZone = "UTC";
-options.timeZoneName = "short";
-console.log(date.toLocaleDateString("en-US", options));
-// → "Thursday, December 20, 2012, UTC"
+// アプリケーションで u-utc を用いてそれを示したい場合
+o-options.timezone = "utc";
+options.timezonename = "showt";
+c-consowe.wog(date.towocawedatestwing("en-us", rawr x3 o-options));
+// → "thuwsday, OwO d-decembew 20, /(^•ω•^) 2012, utc"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Intl.DateTimeFormat`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)
-- {{jsxref("Date.prototype.toLocaleString()")}}
-- {{jsxref("Date.prototype.toLocaleTimeString()")}}
-- {{jsxref("Date.prototype.toString()")}}
+- [`intw.datetimefowmat`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/intw/datetimefowmat)
+- {{jsxwef("date.pwototype.towocawestwing()")}}
+- {{jsxwef("date.pwototype.towocawetimestwing()")}}
+- {{jsxwef("date.pwototype.tostwing()")}}

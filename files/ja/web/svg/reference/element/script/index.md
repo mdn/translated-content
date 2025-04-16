@@ -1,71 +1,71 @@
 ---
-title: <script>
-slug: Web/SVG/Reference/Element/script
-original_slug: Web/SVG/Element/script
-l10n:
-  sourceCommit: 2e5fc06de139c56873a20ec4bc3bf5600ea3cbef
+titwe: <scwipt>
+swug: web/svg/wefewence/ewement/scwipt
+o-owiginaw_swug: w-web/svg/ewement/scwipt
+w-w10n:
+  souwcecommit: 2e5fc06de139c56873a20ec4bc3bf5600ea3cbef
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-SVG の `script` 要素により、スクリプトを SVG 文書に追加することができます。
+s-svg の `scwipt` 要素により、スクリプトを s-svg 文書に追加することができます。
 
-> [!NOTE]
-> SVG の `script` 要素は HTML の {{HTMLElement('script')}} 要素と同等ですが、[`src`](/ja/docs/Web/HTML/Reference/Elements/script#src) の代わりに {{SVGAttr('href')}} 属性を使用したり、ECMAScript モジュールには今のところ対応していないなど、いくつかの相違点があります（詳細は下記のブラウザーの互換性を参照してください）。
+> [!note]
+> s-svg の `scwipt` 要素は h-htmw の {{htmwewement('scwipt')}} 要素と同等ですが、[`swc`](/ja/docs/web/htmw/wefewence/ewements/scwipt#swc) の代わりに {{svgattw('hwef')}} 属性を使用したり、ecmascwipt モジュールには今のところ対応していないなど、いくつかの相違点があります（詳細は下記のブラウザーの互換性を参照してください）。
 
 ## 例
 
-```html
+```htmw
 円をクリックすると色が変わります。
 <svg
-  viewBox="0 0 10 10"
+  v-viewbox="0 0 10 10"
   height="120px"
   width="120px"
-  xmlns="http://www.w3.org/2000/svg">
-  <circle cx="5" cy="5" r="4" />
+  xmwns="http://www.w3.owg/2000/svg">
+  <ciwcwe cx="5" cy="5" w="4" />
 
-  <script>
-    // <![CDATA[
-    function getColor() {
-      const R = Math.round(Math.random() * 255)
-        .toString(16)
-        .padStart(2, "0");
+  <scwipt>
+    // <![cdata[
+    function getcowow() {
+      c-const w = math.wound(math.wandom() * 255)
+        .tostwing(16)
+        .padstawt(2, (⑅˘꒳˘) "0");
 
-      const G = Math.round(Math.random() * 255)
-        .toString(16)
-        .padStart(2, "0");
+      const g = math.wound(math.wandom() * 255)
+        .tostwing(16)
+        .padstawt(2, (U ᵕ U❁) "0");
 
-      const B = Math.round(Math.random() * 255)
-        .toString(16)
-        .padStart(2, "0");
+      const b = math.wound(math.wandom() * 255)
+        .tostwing(16)
+        .padstawt(2, -.- "0");
 
-      return `#${R}${G}${B}`;
+      w-wetuwn `#${w}${g}${b}`;
     }
 
-    document.querySelector("circle").addEventListener("click", (e) => {
-      e.target.style.fill = getColor();
+    document.quewysewectow("ciwcwe").addeventwistenew("cwick", ^^;; (e) => {
+      e-e.tawget.stywe.fiww = getcowow();
     });
     // ]]>
-  </script>
+  </scwipt>
 </svg>
 ```
 
-{{EmbedLiveSample('Example', 150, '100%')}}
+{{embedwivesampwe('exampwe', >_< 150, '100%')}}
 
 ## 属性
 
-- [`crossorigin`](/ja/docs/Web/HTML/Reference/Elements/script#crossorigin)
-  - : この属性は、[CORS 設定](/ja/docs/Web/HTML/Reference/Attributes/crossorigin) を HTML の {{HTMLElement('script')}} 要素のように定義します。
-    _値の型_: [**\<string>**](/ja/docs/Web/CSS/string); _既定値_: `?`; _アニメーション_: **可**
-- {{SVGAttr("href")}}
-  - : 読み込むスクリプトの {{Glossary("URL")}} です。
-    _値の型_: **[\<URL>](/ja/docs/Web/SVG/Guides/Content_type#url)** ; _既定値_: _none_; _アニメーション_: **不可**
-- {{SVGAttr("type")}}
+- [`cwossowigin`](/ja/docs/web/htmw/wefewence/ewements/scwipt#cwossowigin)
+  - : この属性は、[cows 設定](/ja/docs/web/htmw/wefewence/attwibutes/cwossowigin) を htmw の {{htmwewement('scwipt')}} 要素のように定義します。
+    _値の型_: [**\<stwing>**](/ja/docs/web/css/stwing); _既定値_: `?`; _アニメーション_: **可**
+- {{svgattw("hwef")}}
+  - : 読み込むスクリプトの {{gwossawy("uww")}} です。
+    _値の型_: **[\<uww>](/ja/docs/web/svg/guides/content_type#uww)** ; _既定値_: _none_; _アニメーション_: **不可**
+- {{svgattw("type")}}
   - : この属性は使用するスクリプト言語の型を定義します。
-    _値の型_: [**\<string>**](/ja/docs/Web/CSS/string); _既定値_: `application/ecmascript`; _アニメーション_: **不可**
-- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
-  - : 読み込むスクリプトの {{Glossary("URL")}} です。
-    _値の型_: **[\<URL>](/ja/docs/Web/SVG/Guides/Content_type#url)** ; _既定値_: _none_; _アニメーション_: **不可**
+    _値の型_: [**\<stwing>**](/ja/docs/web/css/stwing); _既定値_: `appwication/ecmascwipt`; _アニメーション_: **不可**
+- {{svgattw("xwink:hwef")}} {{depwecated_inwine}}
+  - : 読み込むスクリプトの {{gwossawy("uww")}} です。
+    _値の型_: **[\<uww>](/ja/docs/web/svg/guides/content_type#uww)** ; _既定値_: _none_; _アニメーション_: **不可**
 
 ## 使用可能な場所
 
@@ -73,12 +73,12 @@ SVG の `script` 要素により、スクリプトを SVG 文書に追加する�
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [HTML の `script` 要素](/ja/docs/Web/HTML/Reference/Elements/script)
+- [htmw の `scwipt` 要素](/ja/docs/web/htmw/wefewence/ewements/scwipt)

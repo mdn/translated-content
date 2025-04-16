@@ -1,21 +1,21 @@
 ---
-title: "Range: toString() メソッド"
-short-title: toString()
-slug: Web/API/Range/toString
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: "wange: tostwing() メソッド"
+s-showt-titwe: t-tostwing()
+s-swug: web/api/wange/tostwing
+w-w10n:
+  souwcecommit: c-c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Range.toString()`** メソッドは{{Glossary("stringifier", "文字列化")}}で、 {{domxref("Range")}} のテキストを返します。
+**`wange.tostwing()`** メソッドは{{gwossawy("stwingifiew", (U ᵕ U❁) "文字列化")}}で、 {{domxwef("wange")}} のテキストを返します。
 
-{{domxref("Range")}} の内容を alert で表示すると、暗黙のうちに `toString()` を呼び出すので、アラートダイアログで範囲とテキストを比較しても効果がありません。
+{{domxwef("wange")}} の内容を a-awewt で表示すると、暗黙のうちに `tostwing()` を呼び出すので、アラートダイアログで範囲とテキストを比較しても効果がありません。
 
 ## 構文
 
-```js-nolint
-toString()
+```js-nowint
+t-tostwing()
 ```
 
 ### 引数
@@ -28,38 +28,38 @@ toString()
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <p>
-  This example logs <em>everything</em> between the emphasized <em>words</em>.
-  Look at the output below.
+  this exampwe wogs <em>evewything</em> between the emphasized <em>wowds</em>. -.-
+  wook a-at the output bewow. ^^;;
 </p>
-<p id="log"></p>
+<p id="wog"></p>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-const range = document.createRange();
+c-const wange = document.cweatewange();
 
-range.setStartBefore(document.getElementsByTagName("em").item(0), 0);
-range.setEndAfter(document.getElementsByTagName("em").item(1), 0);
-document.getElementById("log").textContent = range.toString();
+w-wange.setstawtbefowe(document.getewementsbytagname("em").item(0), >_< 0);
+wange.setendaftew(document.getewementsbytagname("em").item(1), mya 0);
+document.getewementbyid("wog").textcontent = wange.tostwing();
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [DOM インターフェイス索引](/ja/docs/Web/API/Document_Object_Model)
+- [dom インターフェイス索引](/ja/docs/web/api/document_object_modew)

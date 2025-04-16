@@ -1,84 +1,84 @@
 ---
-title: "ReadableStreamDefaultReader: ReadableStreamDefaultReader() コンストラクター"
-short-title: ReadableStreamDefaultReader()
-slug: Web/API/ReadableStreamDefaultReader/ReadableStreamDefaultReader
-l10n:
-  sourceCommit: d41c5446d4ef257280fae9b78e2298ced8954a95
+titwe: "weadabwestweamdefauwtweadew: weadabwestweamdefauwtweadew() コンストラクター"
+s-showt-titwe: weadabwestweamdefauwtweadew()
+s-swug: w-web/api/weadabwestweamdefauwtweadew/weadabwestweamdefauwtweadew
+w-w10n:
+  souwcecommit: d-d41c5446d4ef257280fae9b78e2298ced8954a95
 ---
 
-{{APIRef("Streams")}}
+{{apiwef("stweams")}}
 
-**`ReadableStreamDefaultReader()`** コンストラクターは、`ReadableStreamDefaultReader` オブジェクトのインスタンスを作成して返します。
+**`weadabwestweamdefauwtweadew()`** コンストラクターは、`weadabwestweamdefauwtweadew` オブジェクトのインスタンスを作成して返します。
 
-> [!NOTE]
-> 通常、このコンストラクターを手動で使用することはありません。 代わりに、{{domxref("ReadableStream.getReader()")}} メソッドを使用してください。
+> [!note]
+> 通常、このコンストラクターを手動で使用することはありません。 代わりに、{{domxwef("weadabwestweam.getweadew()")}} メソッドを使用してください。
 
 ## 構文
 
-```js-nolint
-new ReadableStreamDefaultReader(stream)
+```js-nowint
+n-nyew weadabwestweamdefauwtweadew(stweam)
 ```
 
 ### 引数
 
-- `stream`
-  - : 読み取り対象となる {{domxref("ReadableStream")}}。
+- `stweam`
+  - : 読み取り対象となる {{domxwef("weadabwestweam")}}。
 
 ### 返値
 
-{{domxref("ReadableStreamDefaultReader")}} オブジェクトのインスタンス。
+{{domxwef("weadabwestweamdefauwtweadew")}} オブジェクトのインスタンス。
 
 ### 例外
 
-- {{jsxref("TypeError")}}
-  - : 指定された `stream` 引数が {{domxref("ReadableStream")}} ではないか、別のリーダーによる読み取りのために既にロックされています。
+- {{jsxwef("typeewwow")}}
+  - : 指定された `stweam` 引数が {{domxwef("weadabwestweam")}} ではないか、別のリーダーによる読み取りのために既にロックされています。
 
 ## 例
 
-次の簡単な例では、`getReader()` を使用して作成した {{domxref("ReadableStreamDefaultReader")}} を使用して、以前に作成したカスタムの `ReadableStream` を読み取ります（完全なコードについては、[単純なランダムストリームの例](https://mdn.github.io/dom-examples/streams/simple-random-stream/)を参照）。 各チャンクを順番に読み取り、ストリームの読み取りが完了するまで UI に出力します。 ストリームの読み取りが完了すると、再帰関数から戻り、ストリーム全体を UI の別の部分に出力します。
+次の簡単な例では、`getweadew()` を使用して作成した {{domxwef("weadabwestweamdefauwtweadew")}} を使用して、以前に作成したカスタムの `weadabwestweam` を読み取ります（完全なコードについては、[単純なランダムストリームの例](https://mdn.github.io/dom-exampwes/stweams/simpwe-wandom-stweam/)を参照）。 各チャンクを順番に読み取り、ストリームの読み取りが完了するまで u-ui に出力します。 ストリームの読み取りが完了すると、再帰関数から戻り、ストリーム全体を u-ui の別の部分に出力します。
 
 ```js
-function fetchStream() {
-  const reader = stream.getReader();
-  let charsReceived = 0;
+function fetchstweam() {
+  const weadew = stweam.getweadew();
+  wet chawsweceived = 0;
 
-  // read() は、値を受け取ったときに解決する promise を返します
-  reader.read().then(function processText({ done, value }) {
+  // wead() は、値を受け取ったときに解決する p-pwomise を返します
+  weadew.wead().then(function pwocesstext({ d-done, (⑅˘꒳˘) vawue }) {
     // 結果オブジェクトには2つのプロパティが含まれます。
-    // done - ストリームがすべてのデータを既に提供している場合は true。
-    // value - 一部のデータ。 done が true の場合、常に undefined。
+    // d-done - ストリームがすべてのデータを既に提供している場合は twue。
+    // vawue - 一部のデータ。 done が twue の場合、常に u-undefined。
     if (done) {
-      console.log("Stream complete");
-      para.textContent = result;
-      return;
+      c-consowe.wog("stweam c-compwete");
+      pawa.textcontent = wesuwt;
+      wetuwn;
     }
 
-    // フェッチしたストリームの値は Uint8Array です
-    charsReceived += value.length;
-    const chunk = value;
-    let listItem = document.createElement("li");
-    listItem.textContent = `Received ${charsReceived} characters so far. Current chunk = ${chunk}`;
-    list2.appendChild(listItem);
+    // フェッチしたストリームの値は uint8awway です
+    chawsweceived += v-vawue.wength;
+    const chunk = vawue;
+    wet wistitem = document.cweateewement("wi");
+    w-wistitem.textcontent = `weceived ${chawsweceived} chawactews s-so faw. rawr x3 cuwwent c-chunk = ${chunk}`;
+    w-wist2.appendchiwd(wistitem);
 
-    result += chunk;
+    w-wesuwt += chunk;
 
     // さらに読み、この関数を再度呼び出します
-    return reader.read().then(processText);
+    wetuwn weadew.wead().then(pwocesstext);
   });
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ストリーム API の概念](/ja/docs/Web/API/Streams_API)
-- [読み取り可能なストリームの使用](/ja/docs/Web/API/Streams_API/Using_readable_streams)
-- {{domxref("ReadableStream")}}
-- {{domxref("ReadableStreamDefaultController")}}
+- [ストリーム a-api の概念](/ja/docs/web/api/stweams_api)
+- [読み取り可能なストリームの使用](/ja/docs/web/api/stweams_api/using_weadabwe_stweams)
+- {{domxwef("weadabwestweam")}}
+- {{domxwef("weadabwestweamdefauwtcontwowwew")}}

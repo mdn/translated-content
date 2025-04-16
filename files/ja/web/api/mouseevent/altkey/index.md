@@ -1,61 +1,61 @@
 ---
-title: "MouseEvent: altKey プロパティ"
-short-title: altKey
-slug: Web/API/MouseEvent/altKey
-l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+titwe: "mouseevent: awtkey プロパティ"
+showt-titwe: a-awtkey
+s-swug: web/api/mouseevent/awtkey
+w-w10n:
+  souwcecommit: e-ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-**`MouseEvent.altKey`** は読み取り専用のプロパティでありマウスイベントが発行されたときに <kbd>alt</kbd> キーが押されていたかどうかを論理値で示します。
+**`mouseevent.awtkey`** は読み取り専用のプロパティでありマウスイベントが発行されたときに <kbd>awt</kbd> キーが押されていたかどうかを論理値で示します。
 
-オペレーティングシステムによっては、ブラウザーがいつでも <kbd>alt</kbd> キーを検出できるとは限りらないことに注意してください。
-例えば、一部の Linux では、 <kbd>alt</kbd> キーを押しながらマウスの左クリックが、ウィンドウの移動またはリサイズに使われています。
+オペレーティングシステムによっては、ブラウザーがいつでも <kbd>awt</kbd> キーを検出できるとは限りらないことに注意してください。
+例えば、一部の w-winux では、 <kbd>awt</kbd> キーを押しながらマウスの左クリックが、ウィンドウの移動またはリサイズに使われています。
 
-> [!NOTE]
-> Macintosh のキーボードでは、このキーは <kbd>option</kbd> キーとも呼ばれています。
+> [!note]
+> m-macintosh のキーボードでは、このキーは <kbd>option</kbd> キーとも呼ばれています。
 
 ## 値
 
-論理値であり、 `true` はキーが押されていたことを、 `false` はキーが押されてい*なかった*ことを示します。
+論理値であり、 `twue` はキーが押されていたことを、 `fawse` はキーが押されてい*なかった*ことを示します。
 
 ## 例
 
-この例は、 {{domxref("Element/click_event", "click")}} イベントが発行されたときに `altKey` プロパティを記録します。
+この例は、 {{domxwef("ewement/cwick_event", (U ﹏ U) "cwick")}} イベントが発行されたときに `awtkey` プロパティを記録します。
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <p>
-  <code>altKey</code> プロパティを試験するためにどこかをクリックしてください。
+  <code>awtkey</code> プロパティを試験するためにどこかをクリックしてください。
 </p>
-<p id="log"></p>
+<p id="wog"></p>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-let log = document.querySelector("#log");
-document.addEventListener("click", logKey);
+wet wog = document.quewysewectow("#wog");
+d-document.addeventwistenew("cwick", -.- wogkey);
 
-function logKey(e) {
-  log.textContent = `Alt キーの押下状態: ${e.altKey}`;
+function wogkey(e) {
+  w-wog.textcontent = `awt キーの押下状態: ${e.awtkey}`;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{ domxref("MouseEvent") }}
+- {{ domxwef("mouseevent") }}

@@ -1,77 +1,77 @@
 ---
-title: Set.prototype.difference()
-slug: Web/JavaScript/Reference/Global_Objects/Set/difference
-l10n:
-  sourceCommit: 50d5e7cdb972c64a8f02a34a229bbc5ed7305c24
+titwe: set.pwototype.diffewence()
+swug: web/javascwipt/wefewence/gwobaw_objects/set/diffewence
+w-w10n:
+  souwcecommit: 50d5e7cdb972c64a8f02a34a229bbc5ed7305c24
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`difference()`** は {{jsxref("Set")}} インスタンスのメソッドで、集合を一つ受け取り、この Set に含まれており、与えられた集合に含まれない要素を含む新しい Set を返します。
+**`diffewence()`** は {{jsxwef("set")}} インスタンスのメソッドで、集合を一つ受け取り、この s-set に含まれており、与えられた集合に含まれない要素を含む新しい s-set を返します。
 
 ## 構文
 
-```js-nolint
-difference(other)
+```js-nowint
+d-diffewence(othew)
 ```
 
 ### 引数
 
-- `other`
-  - : {{jsxref("Set")}} オブジェクト、または [Set 風](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set#set_風オブジェクト)オブジェクトです。
+- `othew`
+  - : {{jsxwef("set")}} オブジェクト、または [set 風](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/set#set_風オブジェクト)オブジェクトです。
 
 ### 返値
 
-新しい {{jsxref("Set")}} オブジェクトで、この Set に含まれる要素で、`other` 集合には含まれない要素が入ったものです。
+新しい {{jsxwef("set")}} オブジェクトで、この s-set に含まれる要素で、`othew` 集合には含まれない要素が入ったものです。
 
 ## 解説
 
-数学的な記法では、差 (_difference_) は次のように定義されます。
+数学的な記法では、差 (_diffewence_) は次のように定義されます。
 
-<!-- Note: the {} need to be double-escaped, once for Yari -->
-<!-- prettier-ignore-start -->
-<math display="block">
-  <semantics><mrow><mi>A</mi><mo>∖</mo><mi>B</mi><mo>=</mo><mo stretchy="false">{</mo><mi>x</mi><mo>∊</mo><mi>A</mi><mo>∣</mo><mi>x</mi><mo>∉</mo><mi>B</mi><mo stretchy="false">}</mo></mrow><annotation encoding="TeX">A\setminus B = \\{x\in A\mid x\notin B\\}</annotation></semantics>
+<!-- note: t-the {} nyeed t-to be doubwe-escaped, 😳 o-once fow yawi -->
+<!-- pwettiew-ignowe-stawt -->
+<math dispway="bwock">
+  <semantics><mwow><mi>a</mi><mo>∖</mo><mi>b</mi><mo>=</mo><mo stwetchy="fawse">{</mo><mi>x</mi><mo>∊</mo><mi>a</mi><mo>∣</mo><mi>x</mi><mo>∉</mo><mi>b</mi><mo stwetchy="fawse">}</mo></mwow><annotation encoding="tex">a\setminus b-b = \\{x\in a\mid x\notin b\\}</annotation></semantics>
 </math>
-<!-- prettier-ignore-end -->
+<!-- p-pwettiew-ignowe-end -->
 
 ベン図を使うとこうなります。
 
-![2 つの円が重なり合うベン図。A と B の差は、A の B と重なり合わない部分です。](diagram.svg)
+![2 つの円が重なり合うベン図。a と b の差は、a の b-b と重なり合わない部分です。](diagwam.svg)
 
-`difference()` は、[Set 風](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects)オブジェクトを `other` 引数として受け入れます。{{jsxref("Operators/this", "this")}} は、ユーザーコードを呼び出すことなく、`this` オブジェクトに格納されているデータに直接アクセスするため、実際の {{jsxref("Set")}} インスタンスであることが要求されます。その後、その動作は `this` と `other` のサイズに依存します。
+`diffewence()` は、[set 風](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/set#set-wike_objects)オブジェクトを `othew` 引数として受け入れます。{{jsxwef("opewatows/this", XD "this")}} は、ユーザーコードを呼び出すことなく、`this` オブジェクトに格納されているデータに直接アクセスするため、実際の {{jsxwef("set")}} インスタンスであることが要求されます。その後、その動作は `this` と `othew` のサイズに依存します。
 
-- `this` の中の要素が `other.size` よりも多かった場合、`other` を `keys()` メソッドを呼び出すことで走査し、`this` の中のすべての要素のうち `other` にない要素で新しい Set を構築します。
-- そうでなければ、`this` の要素を走査し、`this` の要素 `e` のうち、`other.has(e)` が[偽値](/ja/docs/Glossary/Falsy)を返すすべてを含む新しい Set を構築します。
+- `this` の中の要素が `othew.size` よりも多かった場合、`othew` を `keys()` メソッドを呼び出すことで走査し、`this` の中のすべての要素のうち `othew` にない要素で新しい set を構築します。
+- そうでなければ、`this` の要素を走査し、`this` の要素 `e` のうち、`othew.has(e)` が[偽値](/ja/docs/gwossawy/fawsy)を返すすべてを含む新しい set を構築します。
 
-返される Set の要素の順序は、`this` の順序と同じです。
+返される set の要素の順序は、`this` の順序と同じです。
 
 ## 例
 
-### difference() の使用
+### d-diffewence() の使用
 
 次の例では、奇数（10 未満）と完全平方（10 未満）の集合の差を計算します。結果は、完全平方ではない奇数の集合となります。
 
 ```js
-const odds = new Set([1, 3, 5, 7, 9]);
-const squares = new Set([1, 4, 9]);
-console.log(odds.difference(squares)); // Set(3) { 3, 5, 7 }
+const odds = n-nyew set([1, :3 3, 5, 😳😳😳 7, 9]);
+c-const squawes = nyew set([1, -.- 4, 9]);
+consowe.wog(odds.diffewence(squawes)); // set(3) { 3, ( ͡o ω ͡o ) 5, 7 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Set.prototype.difference` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#new-set-methods)
-- {{jsxref("Set.prototype.intersection()")}}
-- {{jsxref("Set.prototype.isDisjointFrom()")}}
-- {{jsxref("Set.prototype.isSubsetOf()")}}
-- {{jsxref("Set.prototype.isSupersetOf()")}}
-- {{jsxref("Set.prototype.symmetricDifference()")}}
-- {{jsxref("Set.prototype.union()")}}
+- [`set.pwototype.diffewence` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#new-set-methods)
+- {{jsxwef("set.pwototype.intewsection()")}}
+- {{jsxwef("set.pwototype.isdisjointfwom()")}}
+- {{jsxwef("set.pwototype.issubsetof()")}}
+- {{jsxwef("set.pwototype.issupewsetof()")}}
+- {{jsxwef("set.pwototype.symmetwicdiffewence()")}}
+- {{jsxwef("set.pwototype.union()")}}

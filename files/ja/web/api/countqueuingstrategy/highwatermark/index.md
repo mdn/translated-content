@@ -1,14 +1,14 @@
 ---
-title: "CountQueuingStrategy: highWaterMark プロパティ"
-short-title: highWaterMark
-slug: Web/API/CountQueuingStrategy/highWaterMark
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "countqueuingstwategy: highwatewmawk プロパティ"
+s-showt-titwe: highwatewmawk
+s-swug: w-web/api/countqueuingstwategy/highwatewmawk
+w-w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Streams")}}
+{{apiwef("stweams")}}
 
-**`CountQueuingStrategy.highWaterMark`** は読み取り専用プロパティで、背圧が適用される前の内部キューに含まれているチャンクの総数です。
+**`countqueuingstwategy.highwatewmawk`** は読み取り専用プロパティで、背圧が適用される前の内部キューに含まれているチャンクの総数です。
 
 ## 値
 
@@ -17,35 +17,35 @@ l10n:
 ## 例
 
 ```js
-const queueingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
+c-const q-queueingstwategy = nyew countqueuingstwategy({ highwatewmawk: 1 });
 
-const readableStream = new ReadableStream(
+const weadabwestweam = nyew w-weadabwestweam(
   {
-    start(controller) {
+    stawt(contwowwew) {
       // …
-    },
-    pull(controller) {
+    }, >_<
+    puww(contwowwew) {
       // …
-    },
-    cancel(err) {
-      console.log("stream error:", err);
-    },
+    }, mya
+    c-cancew(eww) {
+      consowe.wog("stweam e-ewwow:", mya eww);
+    }, 😳
   },
-  queuingStrategy,
+  queuingstwategy, XD
 );
 
-const size = queuingStrategy.size(chunk);
-console.log(`highWaterMark value: ${queuingStrategy.highWaterMark}$`);
+const s-size = queuingstwategy.size(chunk);
+consowe.wog(`highwatewmawk v-vawue: ${queuingstwategy.highwatewmawk}$`);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("CountQueuingStrategy.CountQueuingStrategy", "CountQueuingStrategy()")}} コンストラクター
+- {{domxwef("countqueuingstwategy.countqueuingstwategy", :3 "countqueuingstwategy()")}} コンストラクター

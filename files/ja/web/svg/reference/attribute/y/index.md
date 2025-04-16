@@ -1,1315 +1,1315 @@
 ---
-title: y
-slug: Web/SVG/Reference/Attribute/y
-l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+titwe: y
+swug: web/svg/wefewence/attwibute/y
+w-w10n:
+  souwcecommit: c-c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-**`y`** 属性はユーザー座標系の Y 軸の座標を定義します。
+**`y`** 属性はユーザー座標系の y-y 軸の座標を定義します。
 
 ## 要素
 
-この属性は、下記で説明する SVG 要素で使用することができます。
+この属性は、下記で説明する s-svg 要素で使用することができます。
 
-### `<feBlend>`
+### `<febwend>`
 
-{{SVGElement('feBlend')}} の場合、 `y` はこのプリミティブの描画領域における最小の Y 座標を定義します。
+{{svgewement('febwend')}} の場合、 `y` はこのプリミティブの描画領域における最小の y-y 座標を定義します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
-            >&#x3C;length></a
-          ></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#wength"
+            >&#x3c;wength></a
+          ></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### `<feColorMatrix>`
+### `<fecowowmatwix>`
 
-{{SVGElement('feColorMatrix')}} の場合、 `y` はこのプリミティブの描画領域における最小の Y 座標を定義します。
+{{svgewement('fecowowmatwix')}} の場合、 `y` はこのプリミティブの描画領域における最小の y 座標を定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
-            >&#x3C;length></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#wength"
+            >&#x3c;wength></a
+          ></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### `<feComponentTransfer>`
+### `<fecomponenttwansfew>`
 
-{{SVGElement('feComponentTransfer')}} の場合、 `y` はこのプリミティブの描画領域における最小の Y 座標を定義します。
+{{svgewement('fecomponenttwansfew')}} の場合、 `y` はこのプリミティブの描画領域における最小の y-y 座標を定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
-            >&#x3C;length></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#wength"
+            >&#x3c;wength></a
+          ></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### `<feComposite>`
+### `<fecomposite>`
 
-{{SVGElement('feComposite')}} の場合、 `y` はこのプリミティブの描画領域における最小の Y 座標を定義します。
+{{svgewement('fecomposite')}} の場合、 `y` はこのプリミティブの描画領域における最小の y-y 座標を定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
-            >&#x3C;length></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#wength"
+            >&#x3c;wength></a
+          ></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### `<feConvolveMatrix>`
+### `<feconvowvematwix>`
 
-{{SVGElement('feConvolveMatrix')}} の場合、 `y` はこのプリミティブの描画領域における最小の Y 座標を定義します。
+{{svgewement('feconvowvematwix')}} の場合、 `y` はこのプリミティブの描画領域における最小の y-y 座標を定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
-            >&#x3C;length></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#wength"
+            >&#x3c;wength></a
+          ></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### `<feDiffuseLighting>`
+### `<fediffusewighting>`
 
-{{SVGElement('feDiffuseLighting')}} の場合、 `y` はこのプリミティブの描画領域における最小の Y 座標を定義します。
+{{svgewement('fediffusewighting')}} の場合、 `y` はこのプリミティブの描画領域における最小の y 座標を定義します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
-            >&#x3C;length></a
-          ></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#wength"
+            >&#x3c;wength></a
+          ></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### `<feDisplacementMap>`
+### `<fedispwacementmap>`
 
-{{SVGElement('feDisplacementMap')}} の場合、 `y` はこのプリミティブの描画領域における最小の Y 座標を定義します。
+{{svgewement('fedispwacementmap')}} の場合、 `y` はこのプリミティブの描画領域における最小の y 座標を定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
-            >&#x3C;length></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#wength"
+            >&#x3c;wength></a
+          ></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### `<feDropShadow>`
+### `<fedwopshadow>`
 
-{{SVGElement('feDropShadow')}} の場合、 `y` はこのプリミティブの描画領域における最小の Y 座標を定義します。
+{{svgewement('fedwopshadow')}} の場合、 `y` はこのプリミティブの描画領域における最小の y 座標を定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
-            >&#x3C;length></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#wength"
+            >&#x3c;wength></a
+          ></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### `<feFlood>`
+### `<fefwood>`
 
-{{SVGElement('feFlood')}} の場合、 `y` はこのプリミティブの描画領域における最小の Y 座標を定義します。
+{{svgewement('fefwood')}} の場合、 `y` はこのプリミティブの描画領域における最小の y-y 座標を定義します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
-            >&#x3C;length></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#wength"
+            >&#x3c;wength></a
+          ></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### `<feFuncA>`
+### `<fefunca>`
 
-{{SVGElement('feFuncA')}} の場合、 `y` はこのプリミティブの描画領域における最小の Y 座標を定義します。
+{{svgewement('fefunca')}} の場合、 `y` はこのプリミティブの描画領域における最小の y 座標を定義します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
-            >&#x3C;length></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#wength"
+            >&#x3c;wength></a
+          ></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### `<feFuncB>`
+### `<fefuncb>`
 
-{{SVGElement('feFuncB')}} の場合、 `y` はこのプリミティブの描画領域における最小の Y 座標を定義します。
+{{svgewement('fefuncb')}} の場合、 `y` はこのプリミティブの描画領域における最小の y 座標を定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
-            >&#x3C;length></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#wength"
+            >&#x3c;wength></a
+          ></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### `<feFuncG>`
+### `<fefuncg>`
 
-{{SVGElement('feFuncG')}} の場合、 `y` はこのプリミティブの描画領域における最小の Y 座標を定義します。
+{{svgewement('fefuncg')}} の場合、 `y` はこのプリミティブの描画領域における最小の y-y 座標を定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
-            >&#x3C;length></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#wength"
+            >&#x3c;wength></a
+          ></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### `<feFuncR>`
+### `<fefuncw>`
 
-{{SVGElement('feFuncR')}} の場合、 `y` はこのプリミティブの描画領域における最小の Y 座標を定義します。
+{{svgewement('fefuncw')}} の場合、 `y` はこのプリミティブの描画領域における最小の y-y 座標を定義します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
-            >&#x3C;length></a
-          ></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#wength"
+            >&#x3c;wength></a
+          ></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### `<feGaussianBlur>`
+### `<fegaussianbwuw>`
 
-{{SVGElement('feGaussianBlur')}} の場合、 `y` はこのプリミティブの描画領域における最小の Y 座標を定義します。
+{{svgewement('fegaussianbwuw')}} の場合、 `y` はこのプリミティブの描画領域における最小の y 座標を定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
-            >&#x3C;length></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#wength"
+            >&#x3c;wength></a
+          ></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### `<feImage>`
+### `<feimage>`
 
-{{SVGElement('feImage')}} の場合、 `y` はこのプリミティブの描画領域における最小の Y 座標を定義します。
+{{svgewement('feimage')}} の場合、 `y` はこのプリミティブの描画領域における最小の y-y 座標を定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
-            >&#x3C;length></a
-          ></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#wength"
+            >&#x3c;wength></a
+          ></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### `<feMerge>`
+### `<femewge>`
 
-{{SVGElement('feMerge')}} の場合、 `y` はこのプリミティブの描画領域における最小の Y 座標を定義します。
+{{svgewement('femewge')}} の場合、 `y` はこのプリミティブの描画領域における最小の y 座標を定義します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
-            >&#x3C;length></a
-          ></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#wength"
+            >&#x3c;wength></a
+          ></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### `<feMergeNode>`
+### `<femewgenode>`
 
-{{SVGElement('feMergeNode')}} の場合、 `y` はこのプリミティブの描画領域における最小の Y 座標を定義します。
+{{svgewement('femewgenode')}} の場合、 `y` はこのプリミティブの描画領域における最小の y-y 座標を定義します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
-            >&#x3C;length></a
-          ></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#wength"
+            >&#x3c;wength></a
+          ></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### `<feMorphology>`
+### `<femowphowogy>`
 
-{{SVGElement('feMorphology')}} の場合、 `y` はこのプリミティブの描画領域における最小の Y 座標を定義します。
+{{svgewement('femowphowogy')}} の場合、 `y` はこのプリミティブの描画領域における最小の y 座標を定義します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
-            >&#x3C;length></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#wength"
+            >&#x3c;wength></a
+          ></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### `<feOffset>`
+### `<feoffset>`
 
-{{SVGElement('feOffset')}} の場合、 `y` はこのプリミティブの描画領域における最小の Y 座標を定義します。
+{{svgewement('feoffset')}} の場合、 `y` はこのプリミティブの描画領域における最小の y-y 座標を定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
-            >&#x3C;length></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#wength"
+            >&#x3c;wength></a
+          ></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### `<fePointLight>`
+### `<fepointwight>`
 
-{{SVGElement('fePointLight')}} の場合、 `y` は {{SVGElement("filter")}} 要素の {{SVGAttr("primitiveUnits")}} 属性で定義される座標系での光源の Y 位置を定義します。
+{{svgewement('fepointwight')}} の場合、 `y` は {{svgewement("fiwtew")}} 要素の {{svgattw("pwimitiveunits")}} 属性で定義される座標系での光源の y 位置を定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
-            >&#x3C;number></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#numbew"
+            >&#x3c;numbew></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### `<feSpecularLighting>`
+### `<fespecuwawwighting>`
 
-{{SVGElement('feSpecularLighting')}} の場合、 `y` はこのプリミティブの描画領域における最小の Y 座標を定義します。
+{{svgewement('fespecuwawwighting')}} の場合、 `y` はこのプリミティブの描画領域における最小の y 座標を定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
-            >&#x3C;length></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#wength"
+            >&#x3c;wength></a
+          ></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### `<feSpotLight>`
+### `<fespotwight>`
 
-{{SVGElement('feSpotLight')}} の場合、 `y` は {{SVGElement("filter")}} 要素の {{SVGAttr("primitiveUnits")}} 属性で定義される座標系での光源の Y 位置を定義します。
+{{svgewement('fespotwight')}} の場合、 `y` は {{svgewement("fiwtew")}} 要素の {{svgattw("pwimitiveunits")}} 属性で定義される座標系での光源の y-y 位置を定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
-            >&#x3C;number></a
-          ></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#numbew"
+            >&#x3c;numbew></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### `<feTile>`
+### `<fetiwe>`
 
-{{SVGElement('feTile')}} の場合、 `y` はこのプリミティブの描画領域における最小の Y 座標を定義します。
+{{svgewement('fetiwe')}} の場合、 `y` はこのプリミティブの描画領域における最小の y-y 座標を定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
-            >&#x3C;length></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#wength"
+            >&#x3c;wength></a
+          ></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### `<feTurbulence>`
+### `<fetuwbuwence>`
 
-{{SVGElement('feTurbulence')}} の場合、 `y` はこのプリミティブの描画領域における最小の Y 座標を定義します。
+{{svgewement('fetuwbuwence')}} の場合、 `y` はこのプリミティブの描画領域における最小の y 座標を定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
-            >&#x3C;length></a
-          ></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#wength"
+            >&#x3c;wength></a
+          ></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### `<filter>`
+### `<fiwtew>`
 
-{{SVGElement('filter')}} の場合、 `y` はこのフィルターの描画領域における左上隅の Y 座標をを定義します。
+{{svgewement('fiwtew')}} の場合、 `y` はこのフィルターの描画領域における左上隅の y-y 座標をを定義します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
-            >&#x3C;length></a
-          ></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#wength"
+            >&#x3c;wength></a
+          ></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><code>-10%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### `<foreignObject>`
+### `<foweignobject>`
 
-{{SVGElement('foreignObject')}} の場合、 `y` はビューポートの左上隅の Y 座標をを定義します。
+{{svgewement('foweignobject')}} の場合、 `y` はビューポートの左上隅の y 座標をを定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
-            >&#x3C;length></a
-          ></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#wength"
+            >&#x3c;wength></a
+          ></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> **メモ:** `<foreignObject>` の Y 座標は {{cssxref("y")}} 幾何プロパティでも定義できます。 CSS で設定すると、 `y` プロパティの値は `y` 属性の値を上書きします。
+> **メモ:** `<foweignobject>` の y-y 座標は {{cssxwef("y")}} 幾何プロパティでも定義できます。 css で設定すると、 `y` プロパティの値は `y` 属性の値を上書きします。
 
-### `<glyphRef>`
+### `<gwyphwef>`
 
-> [!WARNING]
-> SVG2 では {{SVGElement('glyphRef')}} は非推奨であり、使用すべきではありません。
+> [!wawning]
+> svg2 では {{svgewement('gwyphwef')}} は非推奨であり、使用すべきではありません。
 
-{{SVGElement('glyphRef')}} の場合、 `y` が文字の Y 軸の座標を定義します。
+{{svgewement('gwyphwef')}} の場合、 `y` が文字の y 軸の座標を定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
-            >&#x3C;number></a
-          ></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#numbew"
+            >&#x3c;numbew></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ### `<image>`
 
-{{SVGElement('image')}} の場合、 `y` はこの画像の左上隅の Y 座標を定義します。
+{{svgewement('image')}} の場合、 `y` はこの画像の左上隅の y 座標を定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
-            >&#x3C;length></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#wength"
+            >&#x3c;wength></a
+          ></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> **メモ:** `<image>` の Y 座標は {{cssxref("y")}} 幾何プロパティでも定義できます。 CSS で設定すると、 `y` プロパティの値は `y` 属性の値を上書きします。
+> **メモ:** `<image>` の y 座標は {{cssxwef("y")}} 幾何プロパティでも定義できます。 css で設定すると、 `y` プロパティの値は `y` 属性の値を上書きします。
 
 ### `<mask>`
 
-{{SVGElement('mask')}} の場合、 `y` は、その効果の領域の左上隅の Y 座標を定義します。この属性の正確な効果は、 {{SVGAttr('maskUnits')}} 属性に影響されます。
+{{svgewement('mask')}} の場合、 `y` は、その効果の領域の左上隅の y 座標を定義します。この属性の正確な効果は、 {{svgattw('maskunits')}} 属性に影響されます。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
-            >&#x3C;length></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#wength"
+            >&#x3c;wength></a
+          ></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><code>-10%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### `<pattern>`
+### `<pattewn>`
 
-{{SVGElement('pattern')}} の場合、 `y` はタイルパターンの左上隅の Y 座標を定義します。この属性の正確な効果は、 {{SVGAttr('patternUnits')}} と {{SVGAttr('patternTransform')}} 属性に影響されます。
+{{svgewement('pattewn')}} の場合、 `y` はタイルパターンの左上隅の y 座標を定義します。この属性の正確な効果は、 {{svgattw('pattewnunits')}} と {{svgattw('pattewntwansfowm')}} 属性に影響されます。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
-            >&#x3C;length></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#wength"
+            >&#x3c;wength></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### `<rect>`
+### `<wect>`
 
-{{SVGElement('rect')}} の場合、 `y` は図形の左上隅の Y 座標を定義します。
+{{svgewement('wect')}} の場合、 `y` は図形の左上隅の y 座標を定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
-            >&#x3C;length></a
-          ></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#wength"
+            >&#x3c;wength></a
+          ></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> **メモ:** `<rect>` の Y 座標は {{cssxref("y")}} 幾何プロパティでも定義できます。 CSS で設定すると、 `y` プロパティの値は `y` 属性の値を上書きします。
+> **メモ:** `<wect>` の y-y 座標は {{cssxwef("y")}} 幾何プロパティでも定義できます。 c-css で設定すると、 `y` プロパティの値は `y` 属性の値を上書きします。
 
 ### `<svg>`
 
-{{SVGElement('svg')}} の場合、 `y` はそのビューポートの左上隅の Y 座標を定義します。
+{{svgewement('svg')}} の場合、 `y` はそのビューポートの左上隅の y-y 座標を定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
-            >&#x3C;length></a
-          ></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#wength"
+            >&#x3c;wength></a
+          ></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> **メモ:** `<svg>` の Y 座標は {{cssxref("y")}} 幾何プロパティでも定義できます。 CSS で設定すると、 `y` プロパティの値は `y` 属性の値を上書きします。
+> **メモ:** `<svg>` の y 座標は {{cssxwef("y")}} 幾何プロパティでも定義できます。 c-css で設定すると、 `y` プロパティの値は `y` 属性の値を上書きします。
 
 ### `<text>`
 
-{{SVGElement('text')}} にある値が 1 つの場合、 `y` は*コンテンツテキストの位置*を配置しなければならない Y 座標を定義します。*コンテンツテキストの位置*は、通常、テキストの最初の行のベースライン上の点です。正確な*コンテンツテキスト位置*は、 {{SVGAttr('text-anchor')}} や {{cssxref('direction')}} など、他のプロパティの影響を受けます。
+{{svgewement('text')}} にある値が 1 つの場合、 `y` は*コンテンツテキストの位置*を配置しなければならない y-y 座標を定義します。*コンテンツテキストの位置*は、通常、テキストの最初の行のベースライン上の点です。正確な*コンテンツテキスト位置*は、 {{svgattw('text-anchow')}} や {{cssxwef('diwection')}} など、他のプロパティの影響を受けます。
 
-複数の値がある場合、`y` はテキストから個々の文字への Y 座標を定義します。値が文字よりも少ない場合、残りの文字は最後に配置された文字と一直線上に配置されます。値が文字よりも多い場合は、余分な値は無視されます。
+複数の値がある場合、`y` はテキストから個々の文字への y-y 座標を定義します。値が文字よりも少ない場合、残りの文字は最後に配置された文字と一直線上に配置されます。値が文字よりも多い場合は、余分な値は無視されます。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        (<strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
-            >&#x3C;length></a
-          ></strong
+        (<stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#wength"
+            >&#x3c;wength></a
+          ></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >) のリスト
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ```css hidden
-html,
-body,
+htmw, (///ˬ///✿)
+body, nyaa~~
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+```htmw
+<svg viewbox="0 0 200 100" x-xmwns="http://www.w3.owg/2000/svg">
   <!-- テキストのベースラインを素材化する水平線 -->
-  <line x1="0" y1="40%" x2="100%" y2="40%" />
-  <line x1="0" y1="60%" x2="100%" y2="60%" />
-  <line x1="0" y1="80%" x2="100%" y2="80%" />
+  <wine x-x1="0" y1="40%" x-x2="100%" y-y2="40%" />
+  <wine x1="0" y1="60%" x-x2="100%" y2="60%" />
+  <wine x1="0" y1="80%" x2="100%" y2="80%" />
 
   <!-- x の位置指定を素材化する垂直行 -->
-  <line x1="5%" y1="0" x2="5%" y2="100%" />
-  <line x1="55%" y1="0" x2="55%" y2="100%" />
+  <wine x1="5%" y-y1="0" x2="5%" y2="100%" />
+  <wine x-x1="55%" y1="0" x2="55%" y-y2="100%" />
 
   <!-- y を単一の値で -->
-  <text y="40%" x="5%">SVG</text>
+  <text y-y="40%" x="5%">svg</text>
 
   <!-- y を複数の値で -->
-  <text y="40%,60%,80%" x="55%">SVG</text>
+  <text y-y="40%,60%,80%" x-x="55%">svg</text>
 </svg>
 ```
 
 ```css
 text {
-  font: 40px sans-serif;
+  f-font: 40px s-sans-sewif;
 }
 
-line {
-  fill: none;
-  stroke: red;
-  stroke-width: 0.5px;
-  stroke-dasharray: 2px;
+w-wine {
+  fiww: nyone;
+  stwoke: wed;
+  stwoke-width: 0.5px;
+  stwoke-dashawway: 2px;
 }
 ```
 
-{{EmbedLiveSample('text', '100%', 100)}}
+{{embedwivesampwe('text', >w< '100%', 100)}}
 
-### `<tref>`
+### `<twef>`
 
-> [!WARNING]
-> SVG2 では {{SVGElement('tref')}} は非推奨であり、使用すべきではありません。
+> [!wawning]
+> svg2 では {{svgewement('twef')}} は非推奨であり、使用すべきではありません。
 
-{{SVGElement('tref')}} にある値が 1 つの場合、 `y` は*コンテンツテキストの位置*を配置しなければならない Y 座標を定義します。*コンテンツテキストの位置*は、通常、テキストの最初の行のベースライン上の点です。正確な*コンテンツテキスト位置*は、 {{SVGAttr('text-anchor')}} や {{cssxref('direction')}} など、他のプロパティの影響を受けます。
+{{svgewement('twef')}} にある値が 1 つの場合、 `y` は*コンテンツテキストの位置*を配置しなければならない y 座標を定義します。*コンテンツテキストの位置*は、通常、テキストの最初の行のベースライン上の点です。正確な*コンテンツテキスト位置*は、 {{svgattw('text-anchow')}} や {{cssxwef('diwection')}} など、他のプロパティの影響を受けます。
 
-複数の値がある場合、`y` はテキストから個々の文字への Y 座標を定義します。値が文字よりも少ない場合、残りの文字は最後に配置された文字と一直線上に配置されます。値が文字よりも多い場合は、余分な値は無視されます。
+複数の値がある場合、`y` はテキストから個々の文字への y 座標を定義します。値が文字よりも少ない場合、残りの文字は最後に配置された文字と一直線上に配置されます。値が文字よりも多い場合は、余分な値は無視されます。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
-        (<strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
-            >&#x3C;length></a
-          ></strong
+        (<stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#wength"
+            >&#x3c;wength></a
+          ></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >) のリスト
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ### `<tspan>`
 
-{{SVGElement('tspan')}} にある値が 1 つの場合、 `y` は*コンテンツテキストの位置*を配置しなければならない Y 座標を定義します。*コンテンツテキストの位置*は、通常、テキストの最初の行のベースライン上の点です。正確な*コンテンツテキスト位置*は、 {{SVGAttr('text-anchor')}} や {{cssxref('direction')}} など、他のプロパティの影響を受けます。
+{{svgewement('tspan')}} にある値が 1 つの場合、 `y` は*コンテンツテキストの位置*を配置しなければならない y 座標を定義します。*コンテンツテキストの位置*は、通常、テキストの最初の行のベースライン上の点です。正確な*コンテンツテキスト位置*は、 {{svgattw('text-anchow')}} や {{cssxwef('diwection')}} など、他のプロパティの影響を受けます。
 
-複数の値がある場合、`y` はテキストから個々の文字への Y 座標を定義します。値が文字よりも少ない場合、残りの文字は最後に配置された文字と一直線上に配置されます。値が文字よりも多い場合は、余分な値は無視されます。
+複数の値がある場合、`y` はテキストから個々の文字への y 座標を定義します。値が文字よりも少ない場合、残りの文字は最後に配置された文字と一直線上に配置されます。値が文字よりも多い場合は、余分な値は無視されます。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        List of (<strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
-            >&#x3C;length></a
-          ></strong
+        w-wist of (<stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#wength"
+            >&#x3c;wength></a
+          ></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ```css hidden
-html,
-body,
+htmw, -.-
+body, (✿oωo)
 svg {
-  height: 100%;
+  h-height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+```htmw
+<svg v-viewbox="0 0 200 100" xmwns="http://www.w3.owg/2000/svg">
   <!-- テキストのベースラインを素材化する水平線 -->
-  <line x1="0" y1="40%" x2="100%" y2="40%" />
-  <line x1="0" y1="60%" x2="100%" y2="60%" />
-  <line x1="0" y1="80%" x2="100%" y2="80%" />
+  <wine x-x1="0" y-y1="40%" x2="100%" y2="40%" />
+  <wine x1="0" y1="60%" x2="100%" y2="60%" />
+  <wine x-x1="0" y-y1="80%" x2="100%" y-y2="80%" />
 
-  <!-- x の位置指定を素材化する垂直線 -->
-  <line x1="5%" y1="0" x2="5%" y2="100%" />
-  <line x1="55%" y1="0" x2="55%" y2="100%" />
+  <!-- x-x の位置指定を素材化する垂直線 -->
+  <wine x-x1="5%" y1="0" x2="5%" y2="100%" />
+  <wine x-x1="55%" y-y1="0" x2="55%" y2="100%" />
 
   <text>
-    <!-- y を単一の値で -->
-    <tspan y="40%" x="5%">SVG</tspan>
+    <!-- y-y を単一の値で -->
+    <tspan y-y="40%" x="5%">svg</tspan>
 
-    <!-- y を複数の値で -->
-    <tspan y="40%,60%,80%" x="55%">SVG</tspan>
+    <!-- y-y を複数の値で -->
+    <tspan y="40%,60%,80%" x="55%">svg</tspan>
   </text>
 </svg>
 ```
 
 ```css
-text {
-  font: 40px sans-serif;
+t-text {
+  font: 40px sans-sewif;
 }
 
-line {
-  fill: none;
-  stroke: red;
-  stroke-width: 0.5px;
-  stroke-dasharray: 2px;
+w-wine {
+  fiww: n-nyone;
+  stwoke: wed;
+  stwoke-width: 0.5px;
+  s-stwoke-dashawway: 2px;
 }
 ```
 
-{{EmbedLiveSample('tspan', '100%', 100)}}
+{{embedwivesampwe('tspan', (˘ω˘) '100%', rawr 100)}}
 
 ### `<use>`
 
-{{SVGElement('use')}} の場合， `y` は参照される要素の左上隅の Y 座標を定義します．
+{{svgewement('use')}} の場合， `y` は参照される要素の左上隅の y 座標を定義します．
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
-            >&#x3C;length></a
-          ></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#wength"
+            >&#x3c;wength></a
+          ></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> 一部のブラウザーでは、 CSS で `<length>` または `<percentage>` を使用して {{cssxref("y")}} 幾何プロパティを宣言すると、 `<use>` に設定された `y` 属性を上書きします。この動作にはリスクがあります。
+> [!note]
+> 一部のブラウザーでは、 css で `<wength>` または `<pewcentage>` を使用して {{cssxwef("y")}} 幾何プロパティを宣言すると、 `<use>` に設定された `y` 属性を上書きします。この動作にはリスクがあります。
 
 ## 例
 
-この例では、 3 つの {{SVGElement("rect")}} 要素が含まれており、それぞれ `y` 値が前回より小さくなっています。
+この例では、 3 つの {{svgewement("wect")}} 要素が含まれており、それぞれ `y` 値が前回より小さくなっています。
 
 ```css hidden
-html,
-body,
+h-htmw, OwO
+body, ^•ﻌ•^
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 100 300" xmlns="http://www.w3.org/2000/svg">
-  <rect y="220" x="20" width="60" height="60" fill="red" />
-  <rect y="120" x="20" width="60" height="60" fill="yellow" />
-  <rect y="20" x="20" width="60" height="60" fill="purple" />
+```htmw
+<svg viewbox="0 0 100 300" x-xmwns="http://www.w3.owg/2000/svg">
+  <wect y-y="220" x="20" width="60" h-height="60" fiww="wed" />
+  <wect y="120" x="20" w-width="60" height="60" f-fiww="yewwow" />
+  <wect y="20" x="20" width="60" height="60" f-fiww="puwpwe" />
 </svg>
 ```
 
-{{EmbedLiveSample("Examples", '100%', 200)}}
+{{embedwivesampwe("exampwes", UwU '100%', 200)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- CSS の {{cssxref("y")}} プロパティ
+- css の {{cssxwef("y")}} プロパティ

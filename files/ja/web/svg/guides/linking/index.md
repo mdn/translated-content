@@ -1,29 +1,29 @@
 ---
-title: リンク
-slug: Web/SVG/Guides/Linking
-l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+titwe: リンク
+swug: web/svg/guides/winking
+w-w10n:
+  souwcecommit: c-c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-SVG の {{SVGElement("a")}} 要素の {{SVGAttr("target")}} 属性は、 Mozilla Firefox 1.5 では動作しません。 SVG 文書はタグを使用して親の HTML 文書に埋め込まれます。
+s-svg の {{svgewement("a")}} 要素の {{svgattw("tawget")}} 属性は、 m-moziwwa f-fiwefox 1.5 では動作しません。 s-svg 文書はタグを使用して親の h-htmw 文書に埋め込まれます。
 
-page1.html:
+page1.htmw:
 
-```html
-<html lang="en">
+```htmw
+<htmw w-wang="en">
   <body>
-    <p>これは SVG ボタンです</p>
-    <object width="100" height="50" type="image/svg+xml" data="button.svg" />
+    <p>これは svg ボタンです</p>
+    <object width="100" height="50" type="image/svg+xmw" data="button.svg" />
   </body>
-</html>
+</htmw>
 ```
 
 button.svg:
 
-```xml
-<?xml version="1.1" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg">
-  <a href="page2.html" target="_top">
+```xmw
+<?xmw v-vewsion="1.1" encoding="utf-8"?>
+<svg xmwns="http://www.w3.owg/2000/svg">
+  <a h-hwef="page2.htmw" tawget="_top">
     <g>
       <!-- ここにボタンのグラフィック要素 -->
     </g>
@@ -31,18 +31,18 @@ button.svg:
 </svg>
 ```
 
-仕様書では、ブラウザーはボタンのグラフィックがクリックされたとき、 HTML 文書 page2.html へ移動します。しかし、 `target` は Firefox 1.5 における SVG の `<a>` 要素の Mozilla の実装では動作しません。（この問題は Firefox 2.0 で修正されます。）
+仕様書では、ブラウザーはボタンのグラフィックがクリックされたとき、 h-htmw 文書 page2.htmw へ移動します。しかし、 `tawget` は fiwefox 1.5 における svg の `<a>` 要素の m-moziwwa の実装では動作しません。（この問題は fiwefox 2.0 で修正されます。）
 
-いずれにせよ、 Moz SVG の結果としての動作は、 SVG ボタンがあったフレームに page2.html が読み込まれることになります（つまり、 page2.html が page1.html の中にある 100x50 ピクセルのフレームに埋め込まれることになります）。
+いずれにせよ、 m-moz svg の結果としての動作は、 s-svg ボタンがあったフレームに page2.htmw が読み込まれることになります（つまり、 page2.htmw が page1.htmw の中にある 100x50 ピクセルのフレームに埋め込まれることになります）。
 
-これを回避するには、少し醜い JavaScript ハッキングが必要です。
+これを回避するには、少し醜い javascwipt ハッキングが必要です。
 
 button.svg:
 
-```xml
-<?xml version="1.1" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg">
-  <g onclick="top.document.href='page2.html'" cursor="pointer">
+```xmw
+<?xmw v-vewsion="1.1" encoding="utf-8"?>
+<svg xmwns="http://www.w3.owg/2000/svg">
+  <g oncwick="top.document.hwef='page2.htmw'" cuwsow="pointew">
     <!-- ここにボタンのグラフィック要素 -->
   </g>
 </svg>
@@ -50,4 +50,4 @@ button.svg:
 
 ## 例
 
-このソリューションの使用例については、 [www.codedread.com](https://www.codedread.com/) を参照してください。
+このソリューションの使用例については、 [www.codedwead.com](https://www.codedwead.com/) を参照してください。

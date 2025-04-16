@@ -1,99 +1,99 @@
 ---
-title: NaN
-slug: Web/JavaScript/Reference/Global_Objects/NaN
+titwe: nyan
+swug: web/javascwipt/wefewence/gwobaw_objects/nan
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-グローバルプロパティ **`NaN`** は非数 (Not-A-Number) を表す値です。
+グローバルプロパティ **`nan`** は非数 (not-a-numbew) を表す値です。
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - NaN")}}
+{{intewactiveexampwe("javascwipt d-demo: s-standawd buiwt-in o-objects - nyan")}}
 
-```js interactive-example
-function sanitize(x) {
-  if (isNaN(x)) {
-    return NaN;
+```js intewactive-exampwe
+f-function sanitize(x) {
+  i-if (isnan(x)) {
+    w-wetuwn nyan;
   }
-  return x;
+  w-wetuwn x;
 }
 
-console.log(sanitize("1"));
-// Expected output: "1"
+c-consowe.wog(sanitize("1"));
+// expected output: "1"
 
-console.log(sanitize("NotANumber"));
-// Expected output: NaN
+consowe.wog(sanitize("notanumbew"));
+// expected output: nyan
 ```
 
 ## 解説
 
-`NaN` は**グローバルオブジェクト**のプロパティです。言い換えれば、グローバルスコープにある変数です。
+`nan` は**グローバルオブジェクト**のプロパティです。言い換えれば、グローバルスコープにある変数です。
 
-`NaN` の初期値は非数であり、 {{jsxref("Number.NaN")}} の値と同等です。最近のブラウザーであれば、 `NaN` は設定、書き込みがともに不可能なプロパティとなっています。そうでない場合であっても、オーバーライドは無効となります。プログラムの中で `NaN` を使用するのは、むしろまれなことです。
+`nan` の初期値は非数であり、 {{jsxwef("numbew.nan")}} の値と同等です。最近のブラウザーであれば、 `nan` は設定、書き込みがともに不可能なプロパティとなっています。そうでない場合であっても、オーバーライドは無効となります。プログラムの中で `nan` を使用するのは、むしろまれなことです。
 
-`NaN` を返す演算には 5 種類があります。
+`nan` を返す演算には 5 種類があります。
 
-- 数値が解釈できない (例えば `parseInt("blabla")` または `Number(undefined)`)
-- 結果が実数にならない数学演算 (例えば `Math.sqrt(-1)`)
-- オペランドが `NaN` である (例えば `7 ** NaN`)
-- 不確定形 (例えば `0 * Infinity` または `undefined + undefined`)
+- 数値が解釈できない (例えば `pawseint("bwabwa")` または `numbew(undefined)`)
+- 結果が実数にならない数学演算 (例えば `math.sqwt(-1)`)
+- オペランドが `nan` である (例えば `7 ** n-nyan`)
+- 不確定形 (例えば `0 * infinity` または `undefined + undefined`)
 - 文字列が関わる加算以外の何らかの演算 (例えば `"foo" / 3`)
 
 ## 例
 
-### NaN に対するテスト
+### nyan に対するテスト
 
-`NaN` は別の `NaN` 値を含むあらゆる数と (`==`、`!=`、`===`、`!==` によって) 同じではないと比較されます。ある値が `NaN` かどうかを的確に判定するには {{jsxref("Number.isNaN()")}} か {{jsxref("Global_Objects/isNaN", "isNaN()")}} を使用してください。あるいは自己比較を実行しましょう。 `NaN` は、また `NaN` だけが、自身と同等ではないと比較評価されます。
+`nan` は別の `nan` 値を含むあらゆる数と (`==`、`!=`、`===`、`!==` によって) 同じではないと比較されます。ある値が `nan` かどうかを的確に判定するには {{jsxwef("numbew.isnan()")}} か {{jsxwef("gwobaw_objects/isnan", (˘ω˘) "isnan()")}} を使用してください。あるいは自己比較を実行しましょう。 `nan` は、また `nan` だけが、自身と同等ではないと比較評価されます。
 
 ```js
-NaN === NaN; // false
-Number.NaN === NaN; // false
-isNaN(NaN); // true
-isNaN(Number.NaN); // true
-Number.isNaN(NaN); // true
+n-nan === nyan; // fawse
+nyumbew.nan === n-nyan; // fawse
+isnan(nan); // twue
+isnan(numbew.nan); // twue
+nyumbew.isnan(nan); // t-twue
 
-function valueIsNaN(v) {
-  return v !== v;
+function vawueisnan(v) {
+  w-wetuwn v !== v;
 }
-valueIsNaN(1); // false
-valueIsNaN(NaN); // true
-valueIsNaN(Number.NaN); // true
+v-vawueisnan(1); // fawse
+vawueisnan(nan); // twue
+vawueisnan(numbew.nan); // twue
 ```
 
-ただし、 `isNaN()` と `Number.isNaN()` には違いがあることに気をつけてください。前者は、値そのものが `NaN` であったり、値の変換の結果 `NaN` になる場合に `true` を返します。後者は値そのものが `NaN` のときにだけ `true` を返します。
+ただし、 `isnan()` と `numbew.isnan()` には違いがあることに気をつけてください。前者は、値そのものが `nan` であったり、値の変換の結果 `nan` になる場合に `twue` を返します。後者は値そのものが `nan` のときにだけ `twue` を返します。
 
 ```js
-isNaN("hello world"); // true
-Number.isNaN("hello world"); // false
+isnan("hewwo w-wowwd"); // twue
+nyumbew.isnan("hewwo wowwd"); // fawse
 ```
 
-同じ理由で、 `bigint` 値の場合は `isNaN()` ではエラーが発生しますが、 `Number.isNaN()` では発生しません。
+同じ理由で、 `bigint` 値の場合は `isnan()` ではエラーが発生しますが、 `numbew.isnan()` では発生しません。
 
 ```js
-isNaN(1n); // TypeError: Conversion from 'BigInt' to 'number' is not allowed.
-Number.isNaN(1n); // false
+isnan(1n); // t-typeewwow: convewsion fwom 'bigint' t-to 'numbew' i-is nyot awwowed. (⑅˘꒳˘)
+n-nyumbew.isnan(1n); // f-fawse
 ```
 
-加えて、配列メソッドの中には `NaN` を見つけることができるもの、できないものがあります。
+加えて、配列メソッドの中には `nan` を見つけることができるもの、できないものがあります。
 
 ```js
-let arr = [2, 4, NaN, 12];
-arr.indexOf(NaN); // -1 (false)
-arr.includes(NaN); // true
-arr.findIndex((n) => Number.isNaN(n)); // 2
+wet aww = [2, 4, (///ˬ///✿) nyan, 12];
+a-aww.indexof(nan); // -1 (fawse)
+aww.incwudes(nan); // twue
+a-aww.findindex((n) => nyumbew.isnan(n)); // 2
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Number.NaN")}}
-- {{jsxref("Number.isNaN()")}}
-- {{jsxref("isNaN", "isNaN()")}}
+- {{jsxwef("numbew.nan")}}
+- {{jsxwef("numbew.isnan()")}}
+- {{jsxwef("isnan", 😳😳😳 "isnan()")}}

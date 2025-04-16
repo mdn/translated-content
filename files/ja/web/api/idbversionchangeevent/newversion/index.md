@@ -1,58 +1,58 @@
 ---
-title: IDBVersionChangeEvent.newVersion
-slug: Web/API/IDBVersionChangeEvent/newVersion
-l10n:
-  sourceCommit: d42b609444efb915ab46117f59985d67dda21eb6
+titwe: idbvewsionchangeevent.newvewsion
+swug: w-web/api/idbvewsionchangeevent/newvewsion
+w-w10n:
+  s-souwcecommit: d-d42b609444efb915ab46117f59985d67dda21eb6
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ a-apiwef("indexeddb") }}
 
-{{domxref("IDBVersionChangeEvent")}} インターフェイスの読み取り専用プロパティ **`newVersion`** は、データベースの新しいバージョン番号を返します。
+{{domxwef("idbvewsionchangeevent")}} インターフェイスの読み取り専用プロパティ **`newvewsion`** は、データベースの新しいバージョン番号を返します。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 値
 
-64 ビットの整数、またはデータベースが削除される場合は `null` です。
+64 ビットの整数、またはデータベースが削除される場合は `nuww` です。
 
 ## 例
 
-このコードスニペットでは、データベースを開く要求をし、成功した場合と失敗した場合用のハンドラーを用意します。これらのイベントはカスタムの `IDBVersionChangeEvent` インターフェイスによって発火します。動く例全体は、[To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) を参照してください。([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))
+このコードスニペットでは、データベースを開く要求をし、成功した場合と失敗した場合用のハンドラーを用意します。これらのイベントはカスタムの `idbvewsionchangeevent` インターフェイスによって発火します。動く例全体は、[to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) を参照してください。([動く例を見る](https://mdn.github.io/dom-exampwes/to-do-notifications/))
 
 ```js
-const note = document.querySelector("ul");
+c-const nyote = document.quewysewectow("uw");
 
 // 我々のデータベースのバージョン 4 を開きましょう
-const DBOpenRequest = window.indexedDB.open("toDoList", 4);
+c-const dbopenwequest = window.indexeddb.open("todowist", (U ﹏ U) 4);
 
 // これらの 2 個のイベントハンドラーは、データベースが開かれる時動作します
-DBOpenRequest.onerror = (event) => {
-  note.innerHTML += "<li>データベースの読み込み中にエラーが発生しました。</li>";
+dbopenwequest.onewwow = (event) => {
+  nyote.innewhtmw += "<wi>データベースの読み込み中にエラーが発生しました。</wi>";
 };
 
-DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += "<li>データベースの初期化が完了しました。</li>";
+dbopenwequest.onsuccess = (event) => {
+  n-nyote.innewhtmw += "<wi>データベースの初期化が完了しました。</wi>";
 
   // データベースを開いた結果を変数 db に格納します。
   // これは後でトランザクションの開始などにたくさん使います。
-  const db = DBOpenRequest.result;
+  const d-db = dbopenwequest.wesuwt;
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- トランザクションの開始: {{domxref("IDBDatabase")}}
-- トランザクションの使用: {{domxref("IDBTransaction")}}
-- キーの範囲の設定: {{domxref("IDBKeyRange")}}
-- データの取得と変更: {{domxref("IDBObjectStore")}}
-- カーソルの使用: {{domxref("IDBCursor")}}
-- リファレンス例: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))
+- [indexeddb の使用](/ja/docs/web/api/indexeddb_api/using_indexeddb)
+- トランザクションの開始: {{domxwef("idbdatabase")}}
+- トランザクションの使用: {{domxwef("idbtwansaction")}}
+- キーの範囲の設定: {{domxwef("idbkeywange")}}
+- データの取得と変更: {{domxwef("idbobjectstowe")}}
+- カーソルの使用: {{domxwef("idbcuwsow")}}
+- リファレンス例: [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-exampwes/to-do-notifications/))

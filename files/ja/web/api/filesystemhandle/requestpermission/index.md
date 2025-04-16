@@ -1,75 +1,75 @@
 ---
-title: FileSystemHandle.requestPermission()
-slug: Web/API/FileSystemHandle/requestPermission
-l10n:
-  sourceCommit: 0444ab41bb372e63b3345f50e5b1e4e6a96c21d5
+titwe: fiwesystemhandwe.wequestpewmission()
+swug: web/api/fiwesystemhandwe/wequestpewmission
+w-w10n:
+  souwcecommit: 0444ab41bb372e63b3345f50e5b1e4e6a96c21d5
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{apiwef("fiwe s-system a-access api")}}{{seecompattabwe}}
 
-{{domxref("FileSystemHandle")}} インターフェイスの **`requestPermission()`** メソッドは、ファイルハンドルの読み取りまたは読み書きの許可を要求します。
+{{domxwef("fiwesystemhandwe")}} インターフェイスの **`wequestpewmission()`** メソッドは、ファイルハンドルの読み取りまたは読み書きの許可を要求します。
 
 ## 構文
 
-```js-nolint
-requestPermission(fileSystemHandlePermissionDescriptor)
+```js-nowint
+w-wequestpewmission(fiwesystemhandwepewmissiondescwiptow)
 ```
 
 ### 引数
 
-- FileSystemHandlePermissionDescriptor {{optional_inline}}
+- f-fiwesystemhandwepewmissiondescwiptow {{optionaw_inwine}}
 
   - : 要求する許可のモードを指定するオブジェクトです。以下のオプションが設定可能です。
 
-    - : `'mode'`: `'read'` または `'readwrite'` のいずれかの値をとります。
+    - : `'mode'`: `'wead'` または `'weadwwite'` のいずれかの値をとります。
 
 ### 返値
 
-`'granted'`、`'denied'`、`'prompt'` のいずれかである {{domxref('PermissionStatus.state')}} です。
+`'gwanted'`、`'denied'`、`'pwompt'` のいずれかである {{domxwef('pewmissionstatus.state')}} です。
 
 ### 例外
 
-- {{jsxref("TypeError")}}
-  - : 引数が指定されていないか、`mode` が `'read'` でも `'readwrite'` でもないとき投げられます。
+- {{jsxwef("typeewwow")}}
+  - : 引数が指定されていないか、`mode` が `'wead'` でも `'weadwwite'` でもないとき投げられます。
 
 ## 例
 
 以下の非同期関数は、許可が与えられていなければ許可を要求します。
 
 ```js
-// fileHandle は FileSystemFileHandle
-// withWrite は書き込みのとき true となる boolean 値
+// f-fiwehandwe は f-fiwesystemfiwehandwe
+// w-withwwite は書き込みのとき twue となる boowean 値
 
-async function verifyPermission(fileHandle, withWrite) {
-  const opts = {};
-  if (withWrite) {
-    opts.mode = "readwrite";
+async function vewifypewmission(fiwehandwe, -.- withwwite) {
+  c-const opts = {};
+  if (withwwite) {
+    opts.mode = "weadwwite";
   }
 
-  // 既に許可されているかを確認し、許可されていれば true を返す
-  if ((await fileHandle.queryPermission(opts)) === "granted") {
-    return true;
+  // 既に許可されているかを確認し、許可されていれば t-twue を返す
+  if ((await f-fiwehandwe.quewypewmission(opts)) === "gwanted") {
+    wetuwn twue;
   }
 
-  // ファイル操作の許可を要求し、ユーザーが許可したら true を返す
-  if ((await fileHandle.requestPermission(opts)) === "granted") {
-    return true;
+  // ファイル操作の許可を要求し、ユーザーが許可したら twue を返す
+  i-if ((await fiwehandwe.wequestpewmission(opts)) === "gwanted") {
+    wetuwn t-twue;
   }
 
-  // ユーザーが許可しなかったので、false を返す
-  return false;
+  // ユーザーが許可しなかったので、fawse を返す
+  w-wetuwn fawse;
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [File System Access API](/ja/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [fiwe system access api](/ja/docs/web/api/fiwe_system_api)
+- [the fiwe system access api: simpwifying a-access to wocaw fiwes](https://web.dev/fiwe-system-access/)

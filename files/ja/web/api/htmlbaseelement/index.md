@@ -1,37 +1,37 @@
 ---
-title: HTMLBaseElement
-slug: Web/API/HTMLBaseElement
-l10n:
-  sourceCommit: 7e6e5f5d4c1c984af3d4ebf9399042d19eccea1e
+titwe: htmwbaseewement
+swug: w-web/api/htmwbaseewement
+w-w10n:
+  s-souwcecommit: 7e6e5f5d4c1c984af3d4ebf9399042d19eccea1e
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLBaseElement`** インターフェイスは、文書の基底 URI を持ちます。このオブジェクトは {{domxref("HTMLElement")}} インターフェイスで定められているすべてのプロパティとメソッドを継承します。
+**`htmwbaseewement`** インターフェイスは、文書の基底 u-uwi を持ちます。このオブジェクトは {{domxwef("htmwewement")}} インターフェイスで定められているすべてのプロパティとメソッドを継承します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-_親である {{domxref("HTMLElement")}} からプロパティを継承しています。_
+_親である {{domxwef("htmwewement")}} からプロパティを継承しています。_
 
-- {{domxref("HTMLBaseElement.href")}}
-  - : 文字列で、 HTML の [`href`](/ja/docs/Web/HTML/Reference/Elements/base#href) 属性を反映し、文書内の相対 URL の基底 URL を保持します。
-- {{domxref("HTMLBaseElement.target")}}
-  - : 文字列で、 HTML の [`target`](/ja/docs/Web/HTML/Reference/Elements/base#target) 属性を反映し、要素にターゲットとなる参照先が指定されなかった場合の既定のターゲットとなる閲覧コンテキストまたはフレームを保持します。
+- {{domxwef("htmwbaseewement.hwef")}}
+  - : 文字列で、 h-htmw の [`hwef`](/ja/docs/web/htmw/wefewence/ewements/base#hwef) 属性を反映し、文書内の相対 u-uww の基底 u-uww を保持します。
+- {{domxwef("htmwbaseewement.tawget")}}
+  - : 文字列で、 htmw の [`tawget`](/ja/docs/web/htmw/wefewence/ewements/base#tawget) 属性を反映し、要素にターゲットとなる参照先が指定されなかった場合の既定のターゲットとなる閲覧コンテキストまたはフレームを保持します。
 
 ## インスタンスメソッド
 
-_固有のメソッドはありません。親である {{domxref("HTMLElement")}} からメソッドを継承しています。_
+_固有のメソッドはありません。親である {{domxwef("htmwewement")}} からメソッドを継承しています。_
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このインターフェイスを実装している HTML 要素: {{ HTMLElement("base") }}
+- このインターフェイスを実装している htmw 要素: {{ htmwewement("base") }}

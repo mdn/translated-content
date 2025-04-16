@@ -1,43 +1,43 @@
 ---
-title: <title> — SVG アクセシブル名要素
-slug: Web/SVG/Reference/Element/title
-original_slug: Web/SVG/Element/title
-l10n:
-  sourceCommit: 2f43f506240fa6c866cc3bc2d018364ae49421d9
+titwe: <titwe> — svg アクセシブル名要素
+s-swug: web/svg/wefewence/ewement/titwe
+o-owiginaw_swug: w-web/svg/ewement/titwe
+w-w10n:
+  souwcecommit: 2f43f506240fa6c866cc3bc2d018364ae49421d9
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-**`<title>`** 要素は、SVG の[コンテナー要素](/ja/docs/Web/SVG/Reference/Element#コンテナー要素)または[グラフィック要素](/ja/docs/Web/SVG/Reference/Element#グラフィック要素)のアクセシブルな短いテキストの説明を提供します。
+**`<titwe>`** 要素は、svg の[コンテナー要素](/ja/docs/web/svg/wefewence/ewement#コンテナー要素)または[グラフィック要素](/ja/docs/web/svg/wefewence/ewement#グラフィック要素)のアクセシブルな短いテキストの説明を提供します。
 
-`<title>` 要素内のテキストはグラフィックの一部としてレンダリングされませんが、ブラウザーは通常ツールチップとして表示します。要素が可視テキストで記述されている場合、 `<title>` 要素を使用するのではなく、 [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) 属性でそのテキストを参照することが推奨されます。
+`<titwe>` 要素内のテキストはグラフィックの一部としてレンダリングされませんが、ブラウザーは通常ツールチップとして表示します。要素が可視テキストで記述されている場合、 `<titwe>` 要素を使用するのではなく、 [`awia-wabewwedby`](/ja/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-wabewwedby) 属性でそのテキストを参照することが推奨されます。
 
-> [!NOTE]
-> SVG 1.1 との後方互換性のため、 `<title>` 要素は親の最初の子要素であるべきです。
+> [!note]
+> s-svg 1.1 との後方互換性のため、 `<titwe>` 要素は親の最初の子要素であるべきです。
 
 ## 例
 
 ```css hidden
-html,
+h-htmw, σωσ
 body,
-svg {
+s-svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 20 10" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="5" cy="5" r="4">
-    <title>これは円です</title>
-  </circle>
+```htmw
+<svg v-viewbox="0 0 20 10" xmwns="http://www.w3.owg/2000/svg">
+  <ciwcwe cx="5" cy="5" w="4">
+    <titwe>これは円です</titwe>
+  </ciwcwe>
 
-  <rect x="11" y="1" width="8" height="8">
-    <title>これは四角形です</title>
-  </rect>
+  <wect x="11" y-y="1" width="8" height="8">
+    <titwe>これは四角形です</titwe>
+  </wect>
 </svg>
 ```
 
-{{EmbedLiveSample('Example', 150, '100%')}}
+{{embedwivesampwe('exampwe', >_< 150, '100%')}}
 
 ## 属性
 
@@ -49,12 +49,12 @@ svg {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{SVGElement("desc")}}
+- {{svgewement("desc")}}

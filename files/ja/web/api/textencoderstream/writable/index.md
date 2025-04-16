@@ -1,31 +1,31 @@
 ---
-title: "TextEncoderStream: writable プロパティ"
-slug: Web/API/TextEncoderStream/writable
-l10n:
-  sourceCommit: cb904d0a6e21bd40f31b31d71c0c3bd85622c01c
+titwe: "textencodewstweam: wwitabwe プロパティ"
+s-swug: web/api/textencodewstweam/wwitabwe
+w-w10n:
+  souwcecommit: c-cb904d0a6e21bd40f31b31d71c0c3bd85622c01c
 ---
 
-{{APIRef("Encoding API")}}
+{{apiwef("encoding a-api")}}
 
-**`writable`** は {{domxref("TextEncoderStream")}} インターフェイスの読み取り専用プロパティで、{{domxref("WritableStream")}} を返します。
+**`wwitabwe`** は {{domxwef("textencodewstweam")}} インターフェイスの読み取り専用プロパティで、{{domxwef("wwitabwestweam")}} を返します。
 
 ## 値
 
-{{domxref("WritableStream")}} です。
+{{domxwef("wwitabwestweam")}} です。
 
 ## 例
 
-次の例は、`WritableStream` を `TextEncoderStream` オブジェクトから返す方法を示しています。
+次の例は、`wwitabwestweam` を `textencodewstweam` オブジェクトから返す方法を示しています。
 
 ```js
-stream = new TextEncoderStream();
-console.log(stream.writable); // WritableStream
+s-stweam = n-nyew textencodewstweam();
+c-consowe.wog(stweam.wwitabwe); // w-wwitabwestweam
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

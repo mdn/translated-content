@@ -1,64 +1,64 @@
 ---
-title: cursor
-slug: Web/SVG/Reference/Attribute/cursor
-l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+titwe: cuwsow
+swug: web/svg/wefewence/attwibute/cuwsow
+w-w10n:
+  s-souwcecommit: c-c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-`cursor` 属性は、マウスポインタが要素の上にあるときに表示されるマウスカーソルを指定します。
+`cuwsow` 属性は、マウスポインタが要素の上にあるときに表示されるマウスカーソルを指定します。
 
-> [!NOTE]
-> プレゼンテーション属性であるため、 `cursor` には対応する CSS プロパティ {{cssxref("cursor")}} があります。両方が指定された場合、 CSS プロパティが優先されます。
+> [!note]
+> プレゼンテーション属性であるため、 `cuwsow` には対応する c-css プロパティ {{cssxwef("cuwsow")}} があります。両方が指定された場合、 c-css プロパティが優先されます。
 
-この属性は CSS の {{cssxref("cursor")}} プロパティと全く同じ動作をしますが、 {{ SVGElement("cursor") }} 要素に対応しているブラウザーであれば [\<FuncIRI>](/ja/docs/Web/SVG/Guides/Content_type#funciri) 記法を使用して使用することができます。
+この属性は c-css の {{cssxwef("cuwsow")}} プロパティと全く同じ動作をしますが、 {{ s-svgewement("cuwsow") }} 要素に対応しているブラウザーであれば [\<funciwi>](/ja/docs/web/svg/guides/content_type#funciwi) 記法を使用して使用することができます。
 
 ## 使用コンテキスト
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">カテゴリー</th>
+    <tw>
+      <th scope="wow">カテゴリー</th>
       <td>プレゼンテーション属性</td>
-    </tr>
-    <tr>
-      <th scope="row">値</th>
+    </tw>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        [[<a href="/ja/docs/Web/SVG/Guides/Content_type#funciri">&#x3C;FuncIRI></a
-        >,]* [ <strong>auto</strong> | crosshair | default | pointer | move |
-        e-resize | ne-resize | nw-resize | n-resize | se-resize | sw-resize |
-        s-resize | w-resize| text | wait | help ]] | inherit
+        [[<a hwef="/ja/docs/web/svg/guides/content_type#funciwi">&#x3c;funciwi></a
+        >,]* [ <stwong>auto</stwong> | cwosshaiw | d-defauwt | pointew | move |
+        e-wesize | n-nye-wesize | nyw-wesize | ny-wesize | s-se-wesize | sw-wesize |
+        s-wesize | w-wesize| text | w-wait | hewp ]] | inhewit
       </td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
-    <tr>
-      <th scope="row">正規ドキュメント</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">正規ドキュメント</th>
       <td>
-        <a href="https://www.w3.org/TR/SVG11/interact.html#CursorProperty"
-          >SVG 1.1 (2nd Edition)</a
+        <a hwef="https://www.w3.owg/tw/svg11/intewact.htmw#cuwsowpwopewty"
+          >svg 1.1 (2nd edition)</a
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 要素
 
-以下の要素で `cursor` 属性を使用することができます。
+以下の要素で `cuwsow` 属性を使用することができます。
 
-- [コンテナー要素](/ja/docs/Web/SVG/Reference/Element#コンテナー要素)
-- [グラフィック要素](/ja/docs/Web/SVG/Reference/Element#グラフィック要素)
+- [コンテナー要素](/ja/docs/web/svg/wefewence/ewement#コンテナー要素)
+- [グラフィック要素](/ja/docs/web/svg/wefewence/ewement#グラフィック要素)
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- CSS の {{cssxref("cursor")}} プロパティ
+- css の {{cssxwef("cuwsow")}} プロパティ

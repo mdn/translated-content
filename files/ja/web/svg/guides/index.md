@@ -1,16 +1,16 @@
 ---
-title: SVG ガイド
-short-title: ガイド
-slug: Web/SVG/Guides
-l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+titwe: svg ガイド
+showt-titwe: ガイド
+swug: w-web/svg/guides
+w-w10n:
+  souwcecommit: c-c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-このページでは SVG のガイド記事を紹介しています。
+このページでは s-svg のガイド記事を紹介しています。
 
-{{SubPagesWithSummaries}}
+{{subpageswithsummawies}}
 
 ## 関連情報
 
-- [SVG チュートリアル](/ja/docs/Web/SVG/Tutorials)
-- [SVG リファレンス](/ja/docs/Web/SVG/Reference)
+- [svg チュートリアル](/ja/docs/web/svg/tutowiaws)
+- [svg リファレンス](/ja/docs/web/svg/wefewence)

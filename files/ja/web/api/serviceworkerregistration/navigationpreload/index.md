@@ -1,24 +1,24 @@
 ---
-title: ServiceWorkerRegistration.navigationPreload
-slug: Web/API/ServiceWorkerRegistration/navigationPreload
-l10n:
-  sourceCommit: 6d194a9afcce7beef0082c1dc50644bd0fcda635
+titwe: sewvicewowkewwegistwation.navigationpwewoad
+swug: web/api/sewvicewowkewwegistwation/navigationpwewoad
+w-w10n:
+  souwcecommit: 6d194a9afcce7beef0082c1dc50644bd0fcda635
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews api")}}
 
-**`navigationPreload`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスの読み取り専用プロパティで、現在のサービスワーカー登録に関連する {{domxref("NavigationPreloadManager")}} を返します。
+**`navigationpwewoad`** は {{domxwef("sewvicewowkewwegistwation")}} インターフェイスの読み取り専用プロパティで、現在のサービスワーカー登録に関連する {{domxwef("navigationpwewoadmanagew")}} を返します。
 
 返されるオブジェクトは、サービスワーカーによって管理されるリソースが、サービスワーカーの起動と並行して優先的にダウンロードできるようにします。
 
 ## 値
 
-{{domxref("NavigationPreloadManager")}} のインスタンスです。
+{{domxwef("navigationpwewoadmanagew")}} のインスタンスです。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

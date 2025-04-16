@@ -1,76 +1,76 @@
 ---
-title: Date.prototype.toDateString()
-slug: Web/JavaScript/Reference/Global_Objects/Date/toDateString
-l10n:
-  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
+titwe: date.pwototype.todatestwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/todatestwing
+w-w10n:
+  s-souwcecommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`toDateString()`** メソッドは、 {{jsxref("Date")}} オブジェクトの日付部分をローカルタイムゾーンで英語で返します。
+**`todatestwing()`** メソッドは、 {{jsxwef("date")}} オブジェクトの日付部分をローカルタイムゾーンで英語で返します。
 
-{{InteractiveExample("JavaScript Demo: Date.toDateString()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.todatestwing()")}}
 
-```js interactive-example
-const event = new Date(1993, 6, 28, 14, 39, 7);
+```js i-intewactive-exampwe
+c-const e-event = nyew date(1993, mya 6, 28, 14, 39, 😳 7);
 
-console.log(event.toString());
-// Expected output: "Wed Jul 28 1993 14:39:07 GMT+0200 (CEST)"
-// Note: your timezone may vary
+c-consowe.wog(event.tostwing());
+// expected o-output: "wed juw 28 1993 14:39:07 gmt+0200 (cest)"
+// nyote: youw timezone m-may vawy
 
-console.log(event.toDateString());
-// Expected output: "Wed Jul 28 1993"
+consowe.wog(event.todatestwing());
+// expected output: "wed juw 28 1993"
 ```
 
 ## 構文
 
 ```
-dateObj.toDateString()
+d-dateobj.todatestwing()
 ```
 
 ### 返値
 
-与えられた {{jsxref("Date")}} オブジェクトの「日付」部を表す文字列を人間が読める英語の表記で返します。
+与えられた {{jsxwef("date")}} オブジェクトの「日付」部を表す文字列を人間が読める英語の表記で返します。
 
 ## 解説
 
-{{jsxref("Date")}} インスタンスは、特定の時点を参照します。 `toDateString()` は日付をローカルタイムゾーンで解釈し、_日付_ の部分を英語で整形します。英語の次の書式で空白区切りで返します。
+{{jsxwef("date")}} インスタンスは、特定の時点を参照します。 `todatestwing()` は日付をローカルタイムゾーンで解釈し、_日付_ の部分を英語で整形します。英語の次の書式で空白区切りで返します。
 
-1. 曜日名の最初の 3 文字
-2. 月名の最初の 3 文字
-3. 2 桁の日、必要であれば左に 0 埋め
-4. 4 桁 (以上) の年、必要であれば左に 0 埋め
+1. XD 曜日名の最初の 3 文字
+2. :3 月名の最初の 3 文字
+3. 😳😳😳 2 桁の日、必要であれば左に 0 埋め
+4. -.- 4 桁 (以上) の年、必要であれば左に 0 埋め
 
-例 "Thu Jan 01 1970".
+例 "thu jan 01 1970".
 
-- _時刻_ の部分を取得したい場合は、 [`toTimeString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/toTimeString) を使用してください。
-- 日付と時刻の両方を取得したい場合は、 [`toString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/toString) を使用してください。
-- 日付をローカルタイムゾーンではなく UTC として解釈したい場合は、 [`toUTCString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/toUTCString) を使用してください。
-- 日付をもっとユーザーが読みやすい形式（例えばローカライズ）で整形したい場合は、 [`toLocaleDateString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString) を使用してください。
+- _時刻_ の部分を取得したい場合は、 [`totimestwing()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/date/totimestwing) を使用してください。
+- 日付と時刻の両方を取得したい場合は、 [`tostwing()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/date/tostwing) を使用してください。
+- 日付をローカルタイムゾーンではなく u-utc として解釈したい場合は、 [`toutcstwing()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/date/toutcstwing) を使用してください。
+- 日付をもっとユーザーが読みやすい形式（例えばローカライズ）で整形したい場合は、 [`towocawedatestwing()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/date/towocawedatestwing) を使用してください。
 
 ## 例
 
-### toDateString() の基本的な使い方
+### todatestwing() の基本的な使い方
 
 ```js
-var d = new Date(1993, 5, 28, 14, 39, 7);
+vaw d = nyew date(1993, ( ͡o ω ͡o ) 5, 28, 14, 39, rawr x3 7);
 
-console.log(d.toString()); // logs Mon Jun 28 1993 14:39:07 GMT-0600 (PDT)
-console.log(d.toDateString()); // logs Mon Jun 28 1993
+c-consowe.wog(d.tostwing()); // wogs mon jun 28 1993 14:39:07 g-gmt-0600 (pdt)
+c-consowe.wog(d.todatestwing()); // wogs mon jun 28 1993
 ```
 
-> **メモ:** {{jsxref("Date")}} の引数として使用する場合、月は 0 から始まります（よって、 0 は 1 月に、 11 は 12 月 に対応します）。
+> **メモ:** {{jsxwef("date")}} の引数として使用する場合、月は 0 から始まります（よって、 0 は 1 月に、 11 は 12 月 に対応します）。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Date.prototype.toLocaleDateString()")}}
-- {{jsxref("Date.prototype.toTimeString()")}}
-- {{jsxref("Date.prototype.toString()")}}
+- {{jsxwef("date.pwototype.towocawedatestwing()")}}
+- {{jsxwef("date.pwototype.totimestwing()")}}
+- {{jsxwef("date.pwototype.tostwing()")}}

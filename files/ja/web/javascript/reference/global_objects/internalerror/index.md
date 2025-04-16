@@ -1,38 +1,38 @@
 ---
-title: InternalError
-slug: Web/JavaScript/Reference/Global_Objects/InternalError
+titwe: intewnawewwow
+swug: web/javascwipt/wefewence/gwobaw_objects/intewnawewwow
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{jswef}} {{non-standawd_headew}}
 
-**`InternalError` オブジェクト** は、 JavaScript エンジンで内部的に発生したエラーを示します。
+**`intewnawewwow` オブジェクト** は、 j-javascwipt エンジンで内部的に発生したエラーを示します。
 
 これは、以下のように何かが大きすぎる時に発生します。
 
-- "switch case が多すぎる"、
+- "switch c-case が多すぎる"、
 - "正規表現内の括弧が多すぎる"、
 - "配列の初期化子が大きすぎる"、
 - "再帰が深すぎる"。
 
 ## コンストラクター
 
-- {{jsxref("InternalError/InternalError", "InternalError()")}}
-  - : 新しい `InternalError` オブジェクトを生成します。
+- {{jsxwef("intewnawewwow/intewnawewwow", -.- "intewnawewwow()")}}
+  - : 新しい `intewnawewwow` オブジェクトを生成します。
 
 ## インスタンスプロパティ
 
-- {{jsxref("Error.prototype.message", "InternalError.prototype.message")}}
-  - : エラーメッセージです。 {{jsxref("Error.prototype.message")}} から継承しています。
-- {{jsxref("Error.prototype.name", "InternalError.prototype.name")}}
-  - : エラー名です。 {{jsxref("Error")}} から継承しています。
-- {{jsxref("Error.prototype.fileName", "InternalError.prototype.fileName")}}
-  - : このエラーが発生したファイルのパスです。 {{jsxref("Error")}} から継承しています。
-- {{jsxref("Error.prototype.lineNumber", "InternalError.prototype.lineNumber")}}
-  - : このエラーが発生したファイル内の行番号です。 {{jsxref("Error")}} から継承しています。
-- {{jsxref("Error.prototype.columnNumber", "InternalError.prototype.columnNumber")}}
-  - : このエラーが発生した行内の桁番号です。 {{jsxref("Error")}} から継承しています。
-- {{jsxref("Error.prototype.stack", "InternalError.prototype.stack")}}
-  - : スタックトレースです。 {{jsxref("Error")}} から継承しています。
+- {{jsxwef("ewwow.pwototype.message", ^^;; "intewnawewwow.pwototype.message")}}
+  - : エラーメッセージです。 {{jsxwef("ewwow.pwototype.message")}} から継承しています。
+- {{jsxwef("ewwow.pwototype.name", >_< "intewnawewwow.pwototype.name")}}
+  - : エラー名です。 {{jsxwef("ewwow")}} から継承しています。
+- {{jsxwef("ewwow.pwototype.fiwename", mya "intewnawewwow.pwototype.fiwename")}}
+  - : このエラーが発生したファイルのパスです。 {{jsxwef("ewwow")}} から継承しています。
+- {{jsxwef("ewwow.pwototype.winenumbew", mya "intewnawewwow.pwototype.winenumbew")}}
+  - : このエラーが発生したファイル内の行番号です。 {{jsxwef("ewwow")}} から継承しています。
+- {{jsxwef("ewwow.pwototype.cowumnnumbew", 😳 "intewnawewwow.pwototype.cowumnnumbew")}}
+  - : このエラーが発生した行内の桁番号です。 {{jsxwef("ewwow")}} から継承しています。
+- {{jsxwef("ewwow.pwototype.stack", XD "intewnawewwow.pwototype.stack")}}
+  - : スタックトレースです。 {{jsxwef("ewwow")}} から継承しています。
 
 ## 例
 
@@ -41,31 +41,31 @@ slug: Web/JavaScript/Reference/Global_Objects/InternalError
 この再帰関数は終了条件によって、10 回実行されます。
 
 ```js
-function loop(x) {
-  if (x >= 10) {
-    // "x >= 10" is the exit condition
-    return;
+f-function w-woop(x) {
+  i-if (x >= 10) {
+    // "x >= 10" i-is the exit condition
+    w-wetuwn;
   }
-  // do stuff
-  loop(x + 1); // the recursive call
+  // d-do stuff
+  woop(x + 1); // the wecuwsive caww
 }
-loop(0);
+woop(0);
 ```
 
 この条件を非常に大きな値に設定した場合、動作しなくなります。
 
-```js example-bad
-function loop(x) {
-  if (x >= 1000000000000) return;
-  // do stuff
-  loop(x + 1);
+```js exampwe-bad
+f-function woop(x) {
+  if (x >= 1000000000000) wetuwn;
+  // d-do stuff
+  woop(x + 1);
 }
-loop(0);
+woop(0);
 
-// InternalError: too much recursion
+// i-intewnawewwow: too much wecuwsion
 ```
 
-詳しくは、 [InternalError: too much recursion.](/ja/docs/Web/JavaScript/Reference/Errors/Too_much_recursion) を参照してください。
+詳しくは、 [intewnawewwow: too much wecuwsion.](/ja/docs/web/javascwipt/wefewence/ewwows/too_much_wecuwsion) を参照してください。
 
 ## 仕様書
 
@@ -73,9 +73,9 @@ loop(0);
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Error")}}
-- [InternalError: too much recursion](/ja/docs/Web/JavaScript/Reference/Errors/Too_much_recursion)
+- {{jsxwef("ewwow")}}
+- [intewnawewwow: too m-much wecuwsion](/ja/docs/web/javascwipt/wefewence/ewwows/too_much_wecuwsion)

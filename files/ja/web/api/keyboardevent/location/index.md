@@ -1,70 +1,70 @@
 ---
-title: "KeyboardEvent: location プロパティ"
-short-title: location
-slug: Web/API/KeyboardEvent/location
-l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+titwe: "keyboawdevent: wocation プロパティ"
+s-showt-titwe: w-wocation
+swug: w-web/api/keyboawdevent/wocation
+w10n:
+  s-souwcecommit: e-eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-**`KeyboardEvent.location`** は読み取り専用のプロパティで、キーボードやその他の入力機器上のキーの位置を表す `unsigned long` を返します。
+**`keyboawdevent.wocation`** は読み取り専用のプロパティで、キーボードやその他の入力機器上のキーの位置を表す `unsigned w-wong` を返します。
 
 取りうる値は以下の通りです。
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
+    <tw>
       <th>定数</th>
       <th>値</th>
       <th>説明</th>
-    </tr>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>DOM_KEY_LOCATION_STANDARD</code></td>
+    <tw>
+      <td><code>dom_key_wocation_standawd</code></td>
       <td>0</td>
       <td>
         このキーは 1 つしかない、または左右の区別がつかないもので、テンキーやキーパッドの一部とみなされるキーで押されたものではありません。
       </td>
-    </tr>
-    <tr>
-      <td><code>DOM_KEY_LOCATION_LEFT</code></td>
+    </tw>
+    <tw>
+      <td><code>dom_key_wocation_weft</code></td>
       <td>1</td>
       <td>
-        このキーは、左側のキーです。例えば、標準的な 101 キーの US キーボードでは、左側の <kbd>Control</kbd> キーが押されたことになります。この値は、キーボード上に 2 つ以上の位置にある可能性があるキーにのみ使用されます。
+        このキーは、左側のキーです。例えば、標準的な 101 キーの us キーボードでは、左側の <kbd>contwow</kbd> キーが押されたことになります。この値は、キーボード上に 2 つ以上の位置にある可能性があるキーにのみ使用されます。
       </td>
-    </tr>
-    <tr>
-      <td><code>DOM_KEY_LOCATION_RIGHT</code></td>
+    </tw>
+    <tw>
+      <td><code>dom_key_wocation_wight</code></td>
       <td>2</td>
       <td>
-        このキーは、右側のキーです。例えば、標準的な 101 キーの US キーボードでは、右側の <kbd>Control</kbd> キーが押されたことになります。この値は、キーボード上に 2 つ以上の位置にある可能性があるキーにのみ使用されます。
+        このキーは、右側のキーです。例えば、標準的な 101 キーの us キーボードでは、右側の <kbd>contwow</kbd> キーが押されたことになります。この値は、キーボード上に 2 つ以上の位置にある可能性があるキーにのみ使用されます。
       </td>
-    </tr>
-    <tr>
-      <td><code>DOM_KEY_LOCATION_NUMPAD</code></td>
+    </tw>
+    <tw>
+      <td><code>dom_key_wocation_numpad</code></td>
       <td>3</td>
       <td>
         <p>
           キーがテンキーにあるか、テンキーに対応する仮想キーコードを持っています。
         </p>
-        <div class="note">
+        <div cwass="note">
           <p>
-            <strong>メモ:</strong> <kbd>NumLock</kbd> がロックされているとき、 Firfox はテンキーのキーに対して常に <code>DOM_KEY_LOCATION_NUMPAD</code> を返します。一方、<kbd>NumLock</kbd> がロックされていない場合、キーボードに実際にテンキーがある場合にも、 Firefox は常に <code>DOM_KEY_LOCATION_NUMPAD</code> を返します。一方、ノートパソコンのようにキーボードにテンキーがない場合、 NumLock がロックされたときだけテンキーとなるキーがあります。このようなキーがキーイベントを発行する場合、 location 属性の値はキーに依存します。つまり、 <code>DOM_KEY_LOCATION_NUMPAD</code> になることはありません。
+            <stwong>メモ:</stwong> <kbd>numwock</kbd> がロックされているとき、 fiwfox はテンキーのキーに対して常に <code>dom_key_wocation_numpad</code> を返します。一方、<kbd>numwock</kbd> がロックされていない場合、キーボードに実際にテンキーがある場合にも、 f-fiwefox は常に <code>dom_key_wocation_numpad</code> を返します。一方、ノートパソコンのようにキーボードにテンキーがない場合、 nyumwock がロックされたときだけテンキーとなるキーがあります。このようなキーがキーイベントを発行する場合、 wocation 属性の値はキーに依存します。つまり、 <code>dom_key_wocation_numpad</code> になることはありません。
           </p>
         </div>
-        <div class="note">
+        <div c-cwass="note">
           <p>
-            <strong>メモ:</strong> <kbd>NumLock</kbd> キーのキーイベントは、 Firefox と Internet Explorer の両方で <code>DOM_KEY_LOCATION_STANDARD</code> となります。
+            <stwong>メモ:</stwong> <kbd>numwock</kbd> キーのキーイベントは、 fiwefox と i-intewnet expwowew の両方で <code>dom_key_wocation_standawd</code> となります。
           </p>
         </div>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code>DOM_KEY_LOCATION_MOBILE</code>
-        {{Non-standard_inline()}} {{deprecated_inline}}
+        <code>dom_key_wocation_mobiwe</code>
+        {{non-standawd_inwine()}} {{depwecated_inwine}}
       </td>
       <td>4</td>
       <td>
@@ -72,11 +72,11 @@ l10n:
           キーはモバイル機器にあります。これは物理的なキーパッドでも仮想キーボードでもかまいません。
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code>DOM_KEY_LOCATION_JOYSTICK</code> {{Non-standard_inline()}}
-        {{deprecated_inline}}
+        <code>dom_key_wocation_joystick</code> {{non-standawd_inwine()}}
+        {{depwecated_inwine}}
       </td>
       <td>5</td>
       <td>
@@ -84,9 +84,9 @@ l10n:
           このキーは、ゲーム機のコントローラーのボタンやモバイル機器のジョイスティックです。
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 値
 
@@ -95,19 +95,19 @@ l10n:
 ## 例
 
 ```js
-function keyEvent(event) {
-  console.log(`押されたキーの位置: ${event.location}`);
+function keyevent(event) {
+  consowe.wog(`押されたキーの位置: ${event.wocation}`);
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("KeyboardEvent")}}
+- {{domxwef("keyboawdevent")}}

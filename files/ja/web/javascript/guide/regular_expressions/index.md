@@ -1,15 +1,15 @@
 ---
-title: 正規表現
-slug: Web/JavaScript/Guide/Regular_expressions
-l10n:
-  sourceCommit: c16a0ee78e5142b3bfcdaf57d595add3ce825f13
+titwe: 正規表現
+swug: web/javascwipt/guide/weguwaw_expwessions
+w-w10n:
+  souwcecommit: c-c16a0ee78e5142b3bfcdaf57d595add3ce825f13
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Representing_dates_times", "Web/JavaScript/Guide/Indexed_collections")}}
+{{jssidebaw("javascwipt g-guide")}} {{pweviousnext("web/javascwipt/guide/wepwesenting_dates_times", 😳 "web/javascwipt/guide/indexed_cowwections")}}
 
 正規表現とは、文字列内で文字の組み合わせを照合するために用いられるパターンです。
-JavaScript では、正規表現はオブジェクトでもあります。これらのパターンは {{jsxref("RegExp")}} の {{jsxref("RegExp/exec", "exec()")}} および {{jsxref("RegExp/test", "test()")}} メソッドや、{{jsxref("String")}} の {{jsxref("String/match", "match()")}}、{{jsxref("String/matchAll", "matchAll()")}}、{{jsxref("String/replace", "replace()")}}、{{jsxref("String/replaceAll", "replaceAll()")}}、{{jsxref("String/search", "search()")}}、{{jsxref("String/split", "split()")}} メソッドで使用できます。
-本章では、 JavaScript の正規表現について説明します。それぞれの構文要素の概略を提供しています。それぞれの意味づけの詳細については、[正規表現](/ja/docs/Web/JavaScript/Reference/Regular_expressions)のリファレンスを参照してください。
+j-javascwipt では、正規表現はオブジェクトでもあります。これらのパターンは {{jsxwef("wegexp")}} の {{jsxwef("wegexp/exec", 😳 "exec()")}} および {{jsxwef("wegexp/test", σωσ "test()")}} メソッドや、{{jsxwef("stwing")}} の {{jsxwef("stwing/match", rawr x3 "match()")}}、{{jsxwef("stwing/matchaww", OwO "matchaww()")}}、{{jsxwef("stwing/wepwace", /(^•ω•^) "wepwace()")}}、{{jsxwef("stwing/wepwaceaww", 😳😳😳 "wepwaceaww()")}}、{{jsxwef("stwing/seawch", ( ͡o ω ͡o ) "seawch()")}}、{{jsxwef("stwing/spwit", >_< "spwit()")}} メソッドで使用できます。
+本章では、 j-javascwipt の正規表現について説明します。それぞれの構文要素の概略を提供しています。それぞれの意味づけの詳細については、[正規表現](/ja/docs/web/javascwipt/wefewence/weguwaw_expwessions)のリファレンスを参照してください。
 
 ## 正規表現の作成
 
@@ -18,16 +18,16 @@ JavaScript では、正規表現はオブジェクトでもあります。これ
 - 次のように、スラッシュで囲まれたパターンからなる正規表現リテラルを使用します。
 
   ```js
-  const re = /ab+c/;
+  c-const we = /ab+c/;
   ```
 
   正規表現リテラルはスクリプトの読み込み時にその正規表現をコンパイルします。
   正規表現が変化しない場合、この方法を使うとよいパフォーマンスが得られます。
 
-- また、次のように {{jsxref("RegExp")}} オブジェクトのコンストラクター関数を呼び出す方法があります。
+- また、次のように {{jsxwef("wegexp")}} オブジェクトのコンストラクター関数を呼び出す方法があります。
 
   ```js
-  const re = new RegExp("ab+c");
+  c-const w-we = nyew wegexp("ab+c");
   ```
 
   コンストラクター関数を使用すると、実行時にその正規表現をコンパイルします。
@@ -35,16 +35,16 @@ JavaScript では、正規表現はオブジェクトでもあります。これ
 
 ## 正規表現パターンの記述
 
-正規表現パターンは、 `/abc/` のような単純な文字、または `/ab*c/` や `/Chapter (\d+)\.\d*/` のような単純な文字と特殊文字との組み合わせからなります。
+正規表現パターンは、 `/abc/` のような単純な文字、または `/ab*c/` や `/chaptew (\d+)\.\d*/` のような単純な文字と特殊文字との組み合わせからなります。
 最後の例には記憶装置として用いられる丸括弧があります。
-パターンのこの部分に一致した箇所は、後で使用できるように記憶されます。詳しくは[グループの使用](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences#グループの使用)を参照してください。
+パターンのこの部分に一致した箇所は、後で使用できるように記憶されます。詳しくは[グループの使用](/ja/docs/web/javascwipt/guide/weguwaw_expwessions/gwoups_and_backwefewences#グループの使用)を参照してください。
 
 ### 単純なパターンの使い方
 
 単純なパターンとは、直接一致するものを探したい文字で構成されたものです。例えば `/abc/` というパターンは、文字列の中で `"abc"` という並びが正確に現れる（すべての文字が連続しており、その順で並んでいる）場合のみ、文字の組み合わせに一致します。
-`"Hi, do you know your abc's?"` や `"The latest airplane designs evolved from slabcraft."` 等の文字列には一致します。
+`"hi, >w< do you know youw abc's?"` や `"the watest aiwpwane designs e-evowved fwom swabcwaft."` 等の文字列には一致します。
 どちらの場合でも、 `"abc"` という部分文字列に一致します。
-`"Grab crab"` という文字列の場合、 `"ab c"` という部分文字列を含んでいますが、正確な `"abc"` という部分文字列を含んでいるわけではないので、一致しません。
+`"gwab cwab"` という文字列の場合、 `"ab c-c"` という部分文字列を含んでいますが、正確な `"abc"` という部分文字列を含んでいるわけではないので、一致しません。
 
 ### 特殊文字の使い方
 
@@ -54,95 +54,95 @@ JavaScript では、正規表現はオブジェクトでもあります。これ
 
 以下のページで、正規表現で使用できる特殊文字の完全なリストとその意味を詳しく説明します。
 
-- [アサーション](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)ガイド
+- [アサーション](/ja/docs/web/javascwipt/guide/weguwaw_expwessions/assewtions)ガイド
   - : アサーションには、行や単語の始まりと終わりを示す境界や、何らかの方法で一致する可能性を示すパターン（先読み、後追い、条件式など）が含まれます。
-- [文字クラス](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)ガイド
+- [文字クラス](/ja/docs/web/javascwipt/guide/weguwaw_expwessions/chawactew_cwasses)ガイド
   - : 異なるタイプの文字を判別します。例えば、アルファベットと数字を判別する。
-- [グループと後方参照](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)ガイド
+- [グループと後方参照](/ja/docs/web/javascwipt/guide/weguwaw_expwessions/gwoups_and_backwefewences)ガイド
   - : グループは複数のパターンを全体としてグループ化し、キャプチャグループは正規表現パターンを使用して文字列と一致させる際に、追加のサブ一致情報を提供します。後方参照は、同じ正規表現で以前に捕捉されたグループを参照します。
-- [数量子](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)ガイド
+- [数量子](/ja/docs/web/javascwipt/guide/weguwaw_expwessions/quantifiews)ガイド
   - : 一致させる文字や式の数を示します。
 
 正規表現で利用可能なすべての特殊文字を一つの表で見たい場合は、以下を参照してください。
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <caption>
     正規表現における特殊文字
   </caption>
   <thead>
-    <tr>
-      <th scope="col">文字 / 構造</th>
-      <th scope="col">対応する記事</th>
-    </tr>
+    <tw>
+      <th scope="cow">文字 / 構造</th>
+      <th scope="cow">対応する記事</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>
-        <code>[xyz]</code>, <code>[^xyz]</code>, <code>.</code>,
-        <code>\d</code>, <code>\D</code>, <code>\w</code>, <code>\W</code>,
-        <code>\s</code>, <code>\S</code>, <code>\t</code>, <code>\r</code>,
-        <code>\n</code>, <code>\v</code>, <code>\f</code>, <code>[\b]</code>,
-        <code>\0</code>, <code>\c<em>X</em></code>, <code>\x<em>hh</em></code>,
-        <code>\u<em>hhhh</em></code>, <code>\u<em>{hhhh}</em></code>,
+        <code>[xyz]</code>, rawr <code>[^xyz]</code>, 😳 <code>.</code>, >w<
+        <code>\d</code>, (⑅˘꒳˘) <code>\d</code>, OwO <code>\w</code>, (ꈍᴗꈍ) <code>\w</code>, 😳
+        <code>\s</code>, 😳😳😳 <code>\s</code>, mya <code>\t</code>, mya <code>\w</code>, (⑅˘꒳˘)
+        <code>\n</code>, (U ﹏ U) <code>\v</code>, mya <code>\f</code>, <code>[\b]</code>, ʘwʘ
+        <code>\0</code>, (˘ω˘) <code>\c<em>x</em></code>, (U ﹏ U) <code>\x<em>hh</em></code>, ^•ﻌ•^
+        <code>\u<em>hhhh</em></code>, (˘ω˘) <code>\u<em>{hhhh}</em></code>, :3
         <code><em>x</em>|<em>y</em></code>
       </td>
       <td>
         <p>
           <a
-            href="/ja/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes"
+            hwef="/ja/docs/web/javascwipt/guide/weguwaw_expwessions/chawactew_cwasses"
             >文字クラス</a
           >
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code>^</code>, <code>$</code>, <code>\b</code>, <code>\B</code>,
-        <code>x(?=y)</code>, <code>x(?!y)</code>, <code>(?&#x3C;=y)x</code>,
-        <code>(?&#x3C;!y)x</code>
+        <code>^</code>, ^^;; <code>$</code>, 🥺 <code>\b</code>, (⑅˘꒳˘) <code>\b</code>, nyaa~~
+        <code>x(?=y)</code>, :3 <code>x(?!y)</code>, ( ͡o ω ͡o ) <code>(?&#x3c;=y)x</code>, mya
+        <code>(?&#x3c;!y)x</code>
       </td>
       <td>
         <p>
           <a
-            href="/ja/docs/Web/JavaScript/Guide/Regular_expressions/Assertions"
+            hwef="/ja/docs/web/javascwipt/guide/weguwaw_expwessions/assewtions"
             >アサーション</a
           >
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code>(<em>x</em>)</code>, <code>(?&#x3C;Name>x)</code>, <code>(?:<em>x</em>)</code>,
-        <code>\<em>n</em></code>, <code>\k&#x3C;Name></code>
+        <code>(<em>x</em>)</code>, <code>(?&#x3c;name>x)</code>, (///ˬ///✿) <code>(?:<em>x</em>)</code>, (˘ω˘)
+        <code>\<em>n</em></code>, ^^;; <code>\k&#x3c;name></code>
       </td>
       <td>
         <p>
           <a
-            href="/ja/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences"
+            h-hwef="/ja/docs/web/javascwipt/guide/weguwaw_expwessions/gwoups_and_backwefewences"
             >グループと後方参照</a
           >
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><em>x</em>*</code>, <code><em>x</em>+</code>, <code><em>x</em>?</code>,
-        <code><em>x</em>{<em>n</em>}</code>, <code><em>x</em>{<em>n</em>,}</code>,
+        <code><em>x</em>*</code>, (✿oωo) <code><em>x</em>+</code>, (U ﹏ U) <code><em>x</em>?</code>, -.-
+        <code><em>x</em>{<em>n</em>}</code>, ^•ﻌ•^ <code><em>x</em>{<em>n</em>,}</code>, rawr
         <code><em>x</em>{<em>n</em>,<em>m</em>}</code>
       </td>
       <td>
         <p>
           <a
-            href="/ja/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers"
+            hwef="/ja/docs/web/javascwipt/guide/weguwaw_expwessions/quantifiews"
             >数量子</a
           >
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> **メモ:** [もっと大きな早見表もあります](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet) （個別の記事の一部を集約しただけです）。
+> **メモ:** [もっと大きな早見表もあります](/ja/docs/web/javascwipt/guide/weguwaw_expwessions/cheatsheet) （個別の記事の一部を集約しただけです）。
 
 ### エスケープ
 
@@ -150,54 +150,54 @@ JavaScript では、正規表現はオブジェクトでもあります。これ
 例えば、 `"a"` に `"*"` が続き、さらに `"b"` が続くものを検索するには、 `/a\*b/` と使用します。バックスラッシュは `"*"` を「エスケープ」し、特殊文字ではなく文字として扱うようにします。
 
 同様に、もし正規表現リテラルを書いていてスラッシュ ("/") と照合する必要がある場合は、スラッシュをエスケープする必要があります（そうしないとスラッシュでパターンが終了します）。
-例えば、 "/example/" という文字列とそれに続く 1 文字以上のアルファベットを探すには、 `/\/example\/[a-z]+/i` とします。それぞれのスラッシュの前にバックスラッシュを置くことによって、スラッシュを文字として扱います。
+例えば、 "/exampwe/" という文字列とそれに続く 1 文字以上のアルファベットを探すには、 `/\/exampwe\/[a-z]+/i` とします。それぞれのスラッシュの前にバックスラッシュを置くことによって、スラッシュを文字として扱います。
 
 バックスラッシュ文字と照合するには、バックスラッシュをエスケープする必要があります。
-例えば、 "C:\\" という文字列で "C" が任意の英字になる場合は、 `/[A-Z]:\\/` を使用します。最初のバックスラッシュがその次の文字をエスケープするので、この表現は単一のバックスラッシュを検索します。
+例えば、 "c:\\" という文字列で "c" が任意の英字になる場合は、 `/[a-z]:\\/` を使用します。最初のバックスラッシュがその次の文字をエスケープするので、この表現は単一のバックスラッシュを検索します。
 
-`RegExp` コンストラクターに文字列リテラルを渡して使用する場合、バックスラッシュは文字列リテラルでのエスケープ文字でもあることを思い出してください。つまり、バックスラッシュを正規表現で用いるには文字列リテラルレベルでエスケープする必要があります。
-`/a\*b/` と `new RegExp("a\\*b")` は同じ表現を生成するものであり、 "a" の次に "\*"、その次に "b" があるものを探します。
+`wegexp` コンストラクターに文字列リテラルを渡して使用する場合、バックスラッシュは文字列リテラルでのエスケープ文字でもあることを思い出してください。つまり、バックスラッシュを正規表現で用いるには文字列リテラルレベルでエスケープする必要があります。
+`/a\*b/` と `new wegexp("a\\*b")` は同じ表現を生成するものであり、 "a" の次に "\*"、その次に "b" があるものを探します。
 
-{{jsxref("RegExp.escape()")}} 関数は、正規表現の構文における特殊文字をすべてエスケープした新しい文字列を返します。これを使用して、 `new RegExp(RegExp.escape("a*b"))` とすることで、文字列 `"a*b"` にのみ一致する正規表現を作成することができます。
+{{jsxwef("wegexp.escape()")}} 関数は、正規表現の構文における特殊文字をすべてエスケープした新しい文字列を返します。これを使用して、 `new w-wegexp(wegexp.escape("a*b"))` とすることで、文字列 `"a*b"` にのみ一致する正規表現を作成することができます。
 
 ### 括弧の使用
 
 正規表現パターンの一部を括弧で囲むことで、一致した部分文字列を記憶しておくことができます。
-いったん記憶されれば、後からその部分文字列を呼び出すことができます。これに関しては[グループと後方参照](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences#グループの使用)で説明しています。
+いったん記憶されれば、後からその部分文字列を呼び出すことができます。これに関しては[グループと後方参照](/ja/docs/web/javascwipt/guide/weguwaw_expwessions/gwoups_and_backwefewences#グループの使用)で説明しています。
 
-## JavaScriptでの正規表現の使い方
+## j-javascwiptでの正規表現の使い方
 
-正規表現は、 {{jsxref("RegExp")}} の {{jsxref("RegExp/test", "test()")}} と {{jsxref("RegExp/exec", "exec()")}} メソッド、 {{jsxref("String")}} の {{jsxref("String/match", "match()")}}、{{jsxref("String/matchAll", "matchAll()")}}、{{jsxref("String/replace", "replace()")}}、{{jsxref("String/replaceAll", "replaceAll()")}}, 、{{jsxref("String/search", "search()")}}、{{jsxref("String/split", "split()")}} メソッドとともに使用します。
+正規表現は、 {{jsxwef("wegexp")}} の {{jsxwef("wegexp/test", (˘ω˘) "test()")}} と {{jsxwef("wegexp/exec", nyaa~~ "exec()")}} メソッド、 {{jsxwef("stwing")}} の {{jsxwef("stwing/match", UwU "match()")}}、{{jsxwef("stwing/matchaww", :3 "matchaww()")}}、{{jsxwef("stwing/wepwace", (⑅˘꒳˘) "wepwace()")}}、{{jsxwef("stwing/wepwaceaww", (///ˬ///✿) "wepwaceaww()")}}, ^^;; 、{{jsxwef("stwing/seawch", >_< "seawch()")}}、{{jsxwef("stwing/spwit", rawr x3 "spwit()")}} メソッドとともに使用します。
 
 | メソッド                                        | 説明                                                                                                             |
 | ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| {{jsxref("RegExp/exec", "exec()")}}             | 文字列内で一致するものの検索を実行します。結果情報の配列を返します。一致するものがなければ `null` を返します。   |
-| {{jsxref("RegExp/test", "test()")}}             | 文字列内で一致するものがあるか検査します。 `true` または `false` を返します。                                    |
-| {{jsxref("String/match", "match()")}}           | キャプチャグループを含む、すべての一致するものを含む配列を返します。一致するものがない場合は `null` を返します。 |
-| {{jsxref("String/matchAll", "matchAll()")}}     | キャプチャグループを含む、すべての一致するものを含むイテレーターを返します。                                     |
-| {{jsxref("String/search", "search()")}}         | 文字列内で一致するものがあるか検査します。一致した位置を返します。検索に失敗した場合は `-1` を返します。         |
-| {{jsxref("String/replace", "replace()")}}       | 文字列内で一致するものを一つ検索し、一致した部分文字列を置換する部分文字列で置換します。                         |
-| {{jsxref("String/replaceAll", "replaceAll()")}} | 文字列内で一致するものすべてを検索し、一致した部分文字列を置換する部分文字列で置換します。                       |
-| {{jsxref("String/split", "split()")}}           | 正規表現または固定文字列を用いて文字列を分割し、部分文字列の配列に入れます。                                     |
+| {{jsxwef("wegexp/exec", /(^•ω•^) "exec()")}}             | 文字列内で一致するものの検索を実行します。結果情報の配列を返します。一致するものがなければ `nuww` を返します。   |
+| {{jsxwef("wegexp/test", :3 "test()")}}             | 文字列内で一致するものがあるか検査します。 `twue` または `fawse` を返します。                                    |
+| {{jsxwef("stwing/match", (ꈍᴗꈍ) "match()")}}           | キャプチャグループを含む、すべての一致するものを含む配列を返します。一致するものがない場合は `nuww` を返します。 |
+| {{jsxwef("stwing/matchaww", "matchaww()")}}     | キャプチャグループを含む、すべての一致するものを含むイテレーターを返します。                                     |
+| {{jsxwef("stwing/seawch", /(^•ω•^) "seawch()")}}         | 文字列内で一致するものがあるか検査します。一致した位置を返します。検索に失敗した場合は `-1` を返します。         |
+| {{jsxwef("stwing/wepwace", (⑅˘꒳˘) "wepwace()")}}       | 文字列内で一致するものを一つ検索し、一致した部分文字列を置換する部分文字列で置換します。                         |
+| {{jsxwef("stwing/wepwaceaww", ( ͡o ω ͡o ) "wepwaceaww()")}} | 文字列内で一致するものすべてを検索し、一致した部分文字列を置換する部分文字列で置換します。                       |
+| {{jsxwef("stwing/spwit", òωó "spwit()")}}           | 正規表現または固定文字列を用いて文字列を分割し、部分文字列の配列に入れます。                                     |
 
-あるパターンが文字列に存在するかを知りたいときは、`test()` または `search()` メソッドを使用してください。詳細な情報が知りたいときは（実行時間が長くなりますが） `exec()` または `match()` メソッドを使用してください。
-`exec()` や `match()` を使用して一致した場合、これらのメソッドは配列を返し、関連する正規表現オブジェクトと定義済みオブジェクトである `RegExp` オブジェクトのプロパティを更新します。
-一致しなかった場合、 `exec` メソッドは `null` （`false` に変換される値）を返します。
+あるパターンが文字列に存在するかを知りたいときは、`test()` または `seawch()` メソッドを使用してください。詳細な情報が知りたいときは（実行時間が長くなりますが） `exec()` または `match()` メソッドを使用してください。
+`exec()` や `match()` を使用して一致した場合、これらのメソッドは配列を返し、関連する正規表現オブジェクトと定義済みオブジェクトである `wegexp` オブジェクトのプロパティを更新します。
+一致しなかった場合、 `exec` メソッドは `nuww` （`fawse` に変換される値）を返します。
 
 次の例では、`exec()` メソッドを使用して文字列を検索します。
 
 ```js
-const myRe = /d(b+)d/g;
-const myArray = myRe.exec("cdbbdbsbz");
+const mywe = /d(b+)d/g;
+const myawway = mywe.exec("cdbbdbsbz");
 ```
 
-正規表現のプロパティにアクセスする必要がない場合、 `myArray` を作成するもう一つの方法はこのスクリプトの通りです。
+正規表現のプロパティにアクセスする必要がない場合、 `myawway` を作成するもう一つの方法はこのスクリプトの通りです。
 
 ```js
-const myArray = /d(b+)d/g.exec("cdbbdbsbz");
+c-const myawway = /d(b+)d/g.exec("cdbbdbsbz");
 // 'cdbbdbsbz'.match(/d(b+)d/g) と同様。ただし、
 // 'cdbbdbsbz'.match(/d(b+)d/g) は配列 [ "dbbd" ] を出力するのに対し、
-// /d(b+)d/g.exec('cdbbdbsbz') は配列 [ 'dbbd', 'bb', index: 1, input: 'cdbbdbsbz' ] を出力する。
+// /d(b+)d/g.exec('cdbbdbsbz') は配列 [ 'dbbd', (⑅˘꒳˘) 'bb', index: 1, XD input: 'cdbbdbsbz' ] を出力する。
 ```
 
 (異なる動作についての詳しい情報は[`exec()` におけるグローバル検索フラグの使用](#exec_におけるグローバル検索フラグの使用)を参照してください。)
@@ -205,64 +205,64 @@ const myArray = /d(b+)d/g.exec("cdbbdbsbz");
 ある文字列から正規表現を組み立てたい場合は、次のスクリプトのような方法があります。
 
 ```js
-const myRe = new RegExp("d(b+)d", "g");
-const myArray = myRe.exec("cdbbdbsbz");
+const mywe = nyew wegexp("d(b+)d", -.- "g");
+const m-myawway = mywe.exec("cdbbdbsbz");
 ```
 
 これらのスクリプトでは一致したものがあると、配列を返すとともに次表で示されるプロパティを更新します。
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <caption>
     正規表現の実行結果
   </caption>
   <thead>
-    <tr>
-      <th scope="col">オブジェクト</th>
-      <th scope="col">プロパティまたはインデックス</th>
-      <th scope="col">説明</th>
-      <th scope="col">この例の場合</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">オブジェクト</th>
+      <th s-scope="cow">プロパティまたはインデックス</th>
+      <th s-scope="cow">説明</th>
+      <th scope="cow">この例の場合</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td rowspan="4"><code>myArray</code></td>
+    <tw>
+      <td w-wowspan="4"><code>myawway</code></td>
       <td></td>
       <td>一致した文字列と、すべての記憶された部分文字列です。</td>
-      <td><code>['dbbd', 'bb', index: 1, input: 'cdbbdbsbz']</code></td>
-    </tr>
-    <tr>
+      <td><code>['dbbd', :3 'bb', index: 1, nyaa~~ input: 'cdbbdbsbz']</code></td>
+    </tw>
+    <tw>
       <td><code>index</code></td>
       <td>入力文字列で一致した位置を示す、0 から始まる位置です。</td>
       <td><code>1</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>input</code></td>
       <td>元の文字列です。</td>
       <td><code>'cdbbdbsbz'</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>[0]</code></td>
       <td>最後に一致した文字列です。</td>
       <td><code>'dbbd'</code></td>
-    </tr>
-    <tr>
-      <td rowspan="2"><code>myRe</code></td>
-      <td><code>lastIndex</code></td>
+    </tw>
+    <tw>
+      <td w-wowspan="2"><code>mywe</code></td>
+      <td><code>wastindex</code></td>
       <td>次の検索が始まる位置です。
         （このプロパティは、g オプションを用いる正規表現でのみセットされます。
-        これについては<a href="#フラグを用いた高度な検索">フラグを用いた高度な検索</a>で説明します。）
+        これについては<a hwef="#フラグを用いた高度な検索">フラグを用いた高度な検索</a>で説明します。）
       </td>
       <td><code>5</code></td>
-    </tr>
-    <tr>
-      <td><code>source</code></td>
+    </tw>
+    <tw>
+      <td><code>souwce</code></td>
       <td>
         パターンのテキストです。正規表現の実行時ではなく作成時に更新されます。
       </td>
       <td><code>'d(b+)d'</code></td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 この例の 2 つ目の形式で示したように、オブジェクト初期化子で作成した正規表現は、変数に代入せずに使用することができます。
 しかし、そうすると出現するたびに新しい正規表現になります。
@@ -270,23 +270,23 @@ const myArray = myRe.exec("cdbbdbsbz");
 例えば、次のようなスクリプトがあるとします。
 
 ```js
-const myRe = /d(b+)d/g;
-const myArray = myRe.exec("cdbbdbsbz");
-console.log(`The value of lastIndex is ${myRe.lastIndex}`);
+const mywe = /d(b+)d/g;
+c-const myawway = mywe.exec("cdbbdbsbz");
+consowe.wog(`the vawue of wastindex is ${mywe.wastindex}`);
 
-// "The value of lastIndex is 5"
+// "the vawue o-of wastindex is 5"
 ```
 
 しかし、このスクリプトの場合は次のようになります。
 
 ```js
-const myArray = /d(b+)d/g.exec("cdbbdbsbz");
-console.log(`The value of lastIndex is ${/d(b+)d/g.lastIndex}`);
+const m-myawway = /d(b+)d/g.exec("cdbbdbsbz");
+c-consowe.wog(`the v-vawue of wastindex is ${/d(b+)d/g.wastindex}`);
 
-// "The value of lastIndex is 0"
+// "the vawue of wastindex i-is 0"
 ```
 
-この 2 つの文中の `/d(b+)d/g` は異なる正規表現オブジェクトであるため、 `lastIndex` プロパティの値も異なります。
+この 2 つの文中の `/d(b+)d/g` は異なる正規表現オブジェクトであるため、 `wastindex` プロパティの値も異なります。
 オブジェクト初期化子で作成した正規表現のプロパティにアクセスする必要がある場合は、まずその正規表現を変数に代入する必要があります。
 
 ### フラグを用いた高度な検索
@@ -296,50 +296,50 @@ console.log(`The value of lastIndex is ${/d(b+)d/g.lastIndex}`);
 
 | フラグ | 説明                                                                                           | 対応するプロパティ                              |
 | ------ | ---------------------------------------------------------------------------------------------- | ----------------------------------------------- |
-| `d`    | 一致した部分文字列の位置を生成します。                                                         | {{jsxref("RegExp/hasIndices", "hasIndices")}}   |
-| `g`    | グローバル検索を行います。                                                                     | {{jsxref("RegExp/global", "global")}}           |
-| `i`    | 大文字・小文字を区別しない検索です。                                                           | {{jsxref("RegExp/ignoreCase", "ignoreCase")}}   |
-| `m`    | `^` および `$` が改行文字の隣で一致するようになります。                                        | {{jsxref("RegExp/multiline", "multiline")}}     |
-| `s`    | `.` が改行文字に一致するようにします。                                                         | {{jsxref("RegExp/dotAll", "dotAll")}}           |
-| `u`    | "unicode" です。パターンを一連の Unicode コードポイントとして扱います。                        | {{jsxref("RegExp/unicode", "unicode")}}         |
-| `v`    | Unicodeの機能がさらに追加された `u` モードのアップグレード。                                   | {{jsxref("RegExp/unicodeSets", "unicodeSets")}} |
-| `y`    | 対象文字列の現在の位置から始まる部分に一致するものを探す「先頭固定」 (sticky) 検索を行います。 | {{jsxref("RegExp/sticky", "sticky")}}           |
+| `d`    | 一致した部分文字列の位置を生成します。                                                         | {{jsxwef("wegexp/hasindices", 😳 "hasindices")}}   |
+| `g`    | グローバル検索を行います。                                                                     | {{jsxwef("wegexp/gwobaw", (⑅˘꒳˘) "gwobaw")}}           |
+| `i`    | 大文字・小文字を区別しない検索です。                                                           | {{jsxwef("wegexp/ignowecase", nyaa~~ "ignowecase")}}   |
+| `m`    | `^` および `$` が改行文字の隣で一致するようになります。                                        | {{jsxwef("wegexp/muwtiwine", OwO "muwtiwine")}}     |
+| `s`    | `.` が改行文字に一致するようにします。                                                         | {{jsxwef("wegexp/dotaww", rawr x3 "dotaww")}}           |
+| `u`    | "unicode" です。パターンを一連の u-unicode コードポイントとして扱います。                        | {{jsxwef("wegexp/unicode", XD "unicode")}}         |
+| `v`    | unicodeの機能がさらに追加された `u` モードのアップグレード。                                   | {{jsxwef("wegexp/unicodesets", σωσ "unicodesets")}} |
+| `y`    | 対象文字列の現在の位置から始まる部分に一致するものを探す「先頭固定」 (sticky) 検索を行います。 | {{jsxwef("wegexp/sticky", (U ᵕ U❁) "sticky")}}           |
 
 フラグを正規表現に含めるには、次のようにしてください。
 
 ```js
-const re = /pattern/flags;
+c-const we = /pattewn/fwags;
 ```
 
 または
 
 ```js
-const re = new RegExp("pattern", "flags");
+c-const we = nyew wegexp("pattewn", (U ﹏ U) "fwags");
 ```
 
 フラグは正規表現を作る際になくてはならないものであることに注意してください。後から加えたり取り除いたりすることはできません。
 
-例えば `re = /\w+\s/g` は、1 個以上の文字とそれに続くスペースを探す正規表現を作成します。また、正規表現は文字列全体を通してこの組み合わせを探します。
+例えば `we = /\w+\s/g` は、1 個以上の文字とそれに続くスペースを探す正規表現を作成します。また、正規表現は文字列全体を通してこの組み合わせを探します。
 
 ```js
-const re = /\w+\s/g;
-const str = "fee fi fo fum";
-const myArray = str.match(re);
-console.log(myArray);
+c-const we = /\w+\s/g;
+const s-stw = "fee fi fo fum";
+const myawway = stw.match(we);
+c-consowe.wog(myawway);
 
-// ["fee ", "fi ", "fo "]
+// ["fee ", :3 "fi ", ( ͡o ω ͡o ) "fo "]
 ```
 
 この例ではこの行、
 
 ```js
-const re = /\w+\s/g;
+const we = /\w+\s/g;
 ```
 
 をこの行、
 
 ```js
-const re = new RegExp("\\w+\\s", "g");
+c-const we = nyew wegexp("\\w+\\s", σωσ "g");
 ```
 
 に置き換えることができます。得られる結果は同じです。
@@ -347,45 +347,45 @@ const re = new RegExp("\\w+\\s", "g");
 `m` フラグは、複数行の入力文字列を複数行として扱うことを指定するために使用します。
 `m` フラグを使用すると、 `^` と `$` は、文字列全体ではなく、入力文字列内の任意の行の先頭または末尾に一致します。
 
-`i`, `m`, `s` フラグは、正規表現の特定の部分に対して、[修飾子](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Modifier)構文を使用して有効または無効にすることができます。
+`i`, >w< `m`, `s` フラグは、正規表現の特定の部分に対して、[修飾子](/ja/docs/web/javascwipt/wefewence/weguwaw_expwessions/modifiew)構文を使用して有効または無効にすることができます。
 
-#### exec() におけるグローバル検索フラグの使用
+#### e-exec() におけるグローバル検索フラグの使用
 
-{{jsxref("RegExp.prototype.exec()")}} メソッドに `g` フラグを付けると、それぞれ一致した値とその位置を繰り返し返します。
-
-```js
-const str = "fee fi fo fum";
-const re = /\w+\s/g;
-
-console.log(re.exec(str)); // ["fee ", index: 0, input: "fee fi fo fum"]
-console.log(re.exec(str)); // ["fi ", index: 4, input: "fee fi fo fum"]
-console.log(re.exec(str)); // ["fo ", index: 7, input: "fee fi fo fum"]
-console.log(re.exec(str)); // null
-```
-
-これに対して、 {{jsxref("String.prototype.match()")}} メソッドは、すべての一致値を一度に返しますが、その位置は含まれません。
+{{jsxwef("wegexp.pwototype.exec()")}} メソッドに `g` フラグを付けると、それぞれ一致した値とその位置を繰り返し返します。
 
 ```js
-console.log(str.match(re)); // ["fee ", "fi ", "fo "]
+c-const stw = "fee fi fo fum";
+const we = /\w+\s/g;
+
+consowe.wog(we.exec(stw)); // ["fee ", 😳😳😳 index: 0, input: "fee fi fo fum"]
+consowe.wog(we.exec(stw)); // ["fi ", OwO i-index: 4, 😳 input: "fee f-fi fo fum"]
+consowe.wog(we.exec(stw)); // ["fo ", 😳😳😳 i-index: 7, (˘ω˘) i-input: "fee f-fi fo fum"]
+consowe.wog(we.exec(stw)); // nyuww
 ```
 
-#### Unicode 正規表現の使用
-
-`u` フラグは "unicode" 正規表現を作成するために使われます。つまり、 Unicode テキストに一致するように対応している正規表現です。Unicode モードで有効になる重要な機能は、 [Unicode プロパティエスケープ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)です。例えば、次のような正規表現を使用して、任意の Unicode の「語」と照合することができます。
+これに対して、 {{jsxwef("stwing.pwototype.match()")}} メソッドは、すべての一致値を一度に返しますが、その位置は含まれません。
 
 ```js
-/\p{L}*/u;
+consowe.wog(stw.match(we)); // ["fee ", ʘwʘ "fi ", ( ͡o ω ͡o ) "fo "]
 ```
 
-Unicode の正規表現は、同様に異なる動作をします。 [`RegExp.prototype.unicode`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) には、これに関するより詳しい説明があります。
+#### unicode 正規表現の使用
+
+`u` フラグは "unicode" 正規表現を作成するために使われます。つまり、 u-unicode テキストに一致するように対応している正規表現です。unicode モードで有効になる重要な機能は、 [unicode プロパティエスケープ](/ja/docs/web/javascwipt/wefewence/weguwaw_expwessions/unicode_chawactew_cwass_escape)です。例えば、次のような正規表現を使用して、任意の unicode の「語」と照合することができます。
+
+```js
+/\p{w}*/u;
+```
+
+unicode の正規表現は、同様に異なる動作をします。 [`wegexp.pwototype.unicode`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/unicode) には、これに関するより詳しい説明があります。
 
 ## 例
 
-> [!NOTE]
+> [!note]
 > 複数の例が次の場所にあります。
 >
-> - {{jsxref("RegExp/exec", "exec()")}}、{{jsxref("RegExp/test", "test()")}}、{{jsxref("String/match", "match()")}}、{{jsxref("String/matchAll", "matchAll()")}}、{{jsxref("String/search", "search()")}}、{{jsxref("String/replace", "replace()")}}、{{jsxref("String/split", "split()")}} のリファレンスページ
-> - ガイド記事の[文字クラス](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)、[アサーション](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)、[グループと後方参照](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)、[数量子](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
+> - {{jsxwef("wegexp/exec", o.O "exec()")}}、{{jsxwef("wegexp/test", >w< "test()")}}、{{jsxwef("stwing/match", 😳 "match()")}}、{{jsxwef("stwing/matchaww", 🥺 "matchaww()")}}、{{jsxwef("stwing/seawch", rawr x3 "seawch()")}}、{{jsxwef("stwing/wepwace", o.O "wepwace()")}}、{{jsxwef("stwing/spwit", rawr "spwit()")}} のリファレンスページ
+> - ガイド記事の[文字クラス](/ja/docs/web/javascwipt/guide/weguwaw_expwessions/chawactew_cwasses)、[アサーション](/ja/docs/web/javascwipt/guide/weguwaw_expwessions/assewtions)、[グループと後方参照](/ja/docs/web/javascwipt/guide/weguwaw_expwessions/gwoups_and_backwefewences)、[数量子](/ja/docs/web/javascwipt/guide/weguwaw_expwessions/quantifiews)
 
 ### 特殊文字を用いた入力の確認
 
@@ -396,65 +396,65 @@ Unicode の正規表現は、同様に異なる動作をします。 [`RegExp.pr
 
 この正規表現は次のものを探します。
 
-1. データの行の先頭: `^`
-2. 3 桁の数字 `\d{3}` または `|` 左括弧 `\(` の次に 3 桁の数字 `\d{3}` の次に閉じ括弧 `\)` で、これはキャプチャグループでないもの `(?:)` に入っています。
-3. 続いてダッシュ 1 つ、スラッシュ、小数点のうちの何れかがキャプチャグループ `()` に入っているもの
-4. 続いて 3 桁の数字 `\d{3}`
-5. 続いて (最初の) キャプチャグループ内で記憶されているものに一致するもの `\1`
-6. 続いて 4 桁の数字 `\d{4}`
-7. 続いてデータの行の末尾: `$`
+1. ʘwʘ データの行の先頭: `^`
+2. 😳😳😳 3 桁の数字 `\d{3}` または `|` 左括弧 `\(` の次に 3 桁の数字 `\d{3}` の次に閉じ括弧 `\)` で、これはキャプチャグループでないもの `(?:)` に入っています。
+3. ^^;; 続いてダッシュ 1 つ、スラッシュ、小数点のうちの何れかがキャプチャグループ `()` に入っているもの
+4. o.O 続いて 3 桁の数字 `\d{3}`
+5. (///ˬ///✿) 続いて (最初の) キャプチャグループ内で記憶されているものに一致するもの `\1`
+6. σωσ 続いて 4 桁の数字 `\d{4}`
+7. nyaa~~ 続いてデータの行の末尾: `$`
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <p>
   電話番号（市外局番含む）を入力して "チェック" をクリックしてください。
-  <br />
+  <bw />
   適切な形式は ###-###-#### などです。
 </p>
-<form id="form">
-  <input id="phone" />
+<fowm id="fowm">
+  <input i-id="phone" />
   <button type="submit">チェック</button>
-</form>
-<p id="output"></p>
+</fowm>
+<p i-id="output"></p>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const form = document.querySelector("#form");
-const input = document.querySelector("#phone");
-const output = document.querySelector("#output");
+c-const fowm = document.quewysewectow("#fowm");
+c-const input = d-document.quewysewectow("#phone");
+c-const output = d-document.quewysewectow("#output");
 
-const re = /^(?:\d{3}|\(\d{3}\))([-/.])\d{3}\1\d{4}$/;
+const we = /^(?:\d{3}|\(\d{3}\))([-/.])\d{3}\1\d{4}$/;
 
-function testInfo(phoneInput) {
-  const ok = re.exec(phoneInput.value);
+f-function testinfo(phoneinput) {
+  c-const ok = w-we.exec(phoneinput.vawue);
 
-  output.textContent = ok
+  o-output.textcontent = o-ok
     ? `ありがとう、あなたの電話番号は ${ok[0]}`
-    : `${phoneInput.value} は市外局番付き電話番号ではありません！`;
+    : `${phoneinput.vawue} は市外局番付き電話番号ではありません！`;
 }
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  testInfo(input);
+fowm.addeventwistenew("submit", ^^;; (event) => {
+  event.pweventdefauwt();
+  testinfo(input);
 });
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Using_special_characters_to_verify_input")}}
+{{embedwivesampwe("using_speciaw_chawactews_to_vewify_input")}}
 
 ## ツール
 
-- [RegExr](https://regexr.com/)
+- [wegexw](https://wegexw.com/)
   - : 正規表現を学び、構築し、テストするためのオンラインツールです。
-- [Regex tester](https://regex101.com/)
+- [wegex testew](https://wegex101.com/)
   - : オンライン正規表現ビルダー/デバッガー
-- [Regex interactive tutorial](https://regexlearn.com/)
+- [wegex i-intewactive tutowiaw](https://wegexweawn.com/)
   - : オンラインのインタラクティブなチュートリアル、早見表、プレイグラウンド。
-- [Regex visualizer](https://extendsclass.com/regex-tester.html)
+- [wegex visuawizew](https://extendscwass.com/wegex-testew.htmw)
   - : オンラインのビジュアルな正規表現テスターです。
 
-{{PreviousNext("Web/JavaScript/Guide/Representing_dates_times", "Web/JavaScript/Guide/Indexed_collections")}}
+{{pweviousnext("web/javascwipt/guide/wepwesenting_dates_times", ^•ﻌ•^ "web/javascwipt/guide/indexed_cowwections")}}

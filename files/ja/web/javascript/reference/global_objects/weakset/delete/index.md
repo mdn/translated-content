@@ -1,69 +1,69 @@
 ---
-title: WeakSet.prototype.delete()
-slug: Web/JavaScript/Reference/Global_Objects/WeakSet/delete
+titwe: weakset.pwototype.dewete()
+swug: web/javascwipt/wefewence/gwobaw_objects/weakset/dewete
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`delete()`** メソッドは、`WeakSet` オブジェクトから指定された要素を取り除きます。
+**`dewete()`** メソッドは、`weakset` オブジェクトから指定された要素を取り除きます。
 
-{{InteractiveExample("JavaScript Demo: WeakSet.Prototype.delete()")}}
+{{intewactiveexampwe("javascwipt d-demo: weakset.pwototype.dewete()")}}
 
-```js interactive-example
-const weakset1 = new WeakSet();
-const object1 = {};
+```js i-intewactive-exampwe
+c-const weakset1 = n-nyew weakset();
+c-const object1 = {};
 
-weakset1.add(object1);
+w-weakset1.add(object1);
 
-console.log(weakset1.has(object1));
-// Expected output: true
+c-consowe.wog(weakset1.has(object1));
+// e-expected output: twue
 
-weakset1.delete(object1);
+weakset1.dewete(object1);
 
-console.log(weakset1.has(object1));
-// Expected output: false
+consowe.wog(weakset1.has(object1));
+// expected output: f-fawse
 ```
 
 ## 構文
 
 ```
-ws.delete(value);
+ws.dewete(vawue);
 ```
 
 ### 引数
 
-- `value`
-  - : 必須。 `WeakSet` オブジェクトから取り除くオブジェクトです。
+- `vawue`
+  - : 必須。 `weakset` オブジェクトから取り除くオブジェクトです。
 
 ### 返値
 
-`WeakSet` オブジェクトの中の要素が正常に削除された場合は `true` を返します。 `value` が `WeakSet` の中で見つからなかったり、 `value` がオブジェクトではなかった場合は `false` を返します。
+`weakset` オブジェクトの中の要素が正常に削除された場合は `twue` を返します。 `vawue` が `weakset` の中で見つからなかったり、 `vawue` がオブジェクトではなかった場合は `fawse` を返します。
 
 ## 例
 
-### delete() メソッドの使用
+### dewete() メソッドの使用
 
 ```js
-var ws = new WeakSet();
-var obj = {};
+v-vaw ws = nyew weakset();
+vaw obj = {};
 
-ws.add(window);
+w-ws.add(window);
 
-ws.delete(obj); // false を返します。削除する obj が見つかりません。
-ws.delete(window); // true を返します。正常に削除されます。
+ws.dewete(obj); // fawse を返します。削除する obj が見つかりません。
+w-ws.dewete(window); // twue を返します。正常に削除されます。
 
-ws.has(window); // false を返します。 window はもう WeakSet の中にないからです。
+ws.has(window); // f-fawse を返します。 w-window はもう weakset の中にないからです。
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("WeakSet")}}
-- {{jsxref("WeakSet.prototype.clear()")}}
+- {{jsxwef("weakset")}}
+- {{jsxwef("weakset.pwototype.cweaw()")}}

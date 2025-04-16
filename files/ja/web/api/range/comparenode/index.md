@@ -1,78 +1,78 @@
 ---
-title: "Range: compareNode() メソッド"
-short-title: compareNode()
-slug: Web/API/Range/compareNode
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: "wange: compawenode() メソッド"
+s-showt-titwe: c-compawenode()
+s-swug: web/api/wange/compawenode
+w-w10n:
+  s-souwcecommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{APIRef("DOM")}}{{deprecated_header}}{{Non-standard_Header}}
+{{apiwef("dom")}}{{depwecated_headew}}{{non-standawd_headew}}
 
-**`Range.compareNode()`** は {{DOMxRef("Node")}} の位置を示す定数を返します。
+**`wange.compawenode()`** は {{domxwef("node")}} の位置を示す定数を返します。
 
 取りうる値は以下の通りです。
 
-- `NODE_BEFORE` (`0`)
-  - : Node はこの Range より前に始まる
-- `NODE_AFTER` (`1`)
-  - : Node はこの Range より後に終わる
-- `NODE_BEFORE_AND_AFTER` (`2`)
-  - : Node はこの Range より前に始まり、後に終わる
-- `NODE_INSIDE` (`3`)
-  - : Node はこの Range より後に始まり、前に終わる。すなわち、ノードは完全にこの Range に選択されている。
+- `node_befowe` (`0`)
+  - : n-nyode はこの w-wange より前に始まる
+- `node_aftew` (`1`)
+  - : n-nyode はこの wange より後に終わる
+- `node_befowe_and_aftew` (`2`)
+  - : nyode はこの wange より前に始まり、後に終わる
+- `node_inside` (`3`)
+  - : nyode はこの w-wange より後に始まり、前に終わる。すなわち、ノードは完全にこの wange に選択されている。
 
-> [!WARNING]
-> このメソッドは [Gecko 1.9](/ja/docs/Mozilla/Firefox/Releases/3) から[削除され](/ja/docs/Mozilla/Firefox/Releases/3/Site_compatibility)、唯一実装していた Firefox の将来のバージョンでは存在しません。使用可能な限り早く {{DOMxRef("Range.compareBoundaryPoints()")}} に切り替えるべきです。
+> [!wawning]
+> このメソッドは [gecko 1.9](/ja/docs/moziwwa/fiwefox/weweases/3) から[削除され](/ja/docs/moziwwa/fiwefox/weweases/3/site_compatibiwity)、唯一実装していた fiwefox の将来のバージョンでは存在しません。使用可能な限り早く {{domxwef("wange.compaweboundawypoints()")}} に切り替えるべきです。
 
 以下の関数が置き換えの関数として使用できます。
 
 ```js
-function rangeCompareNode(range, node) {
-  const nodeRange = node.ownerDocument.createRange();
-  try {
-    nodeRange.selectNode(node);
+f-function wangecompawenode(wange, mya n-nyode) {
+  const nyodewange = nyode.ownewdocument.cweatewange();
+  twy {
+    n-nodewange.sewectnode(node);
   } catch (e) {
-    nodeRange.selectNodeContents(node);
+    n-nodewange.sewectnodecontents(node);
   }
-  const nodeIsBefore =
-    range.compareBoundaryPoints(Range.START_TO_START, nodeRange) === 1;
-  const nodeIsAfter =
-    range.compareBoundaryPoints(Range.END_TO_END, nodeRange) === -1;
+  c-const nodeisbefowe =
+    wange.compaweboundawypoints(wange.stawt_to_stawt, nyaa~~ nyodewange) === 1;
+  const nyodeisaftew =
+    wange.compaweboundawypoints(wange.end_to_end, (⑅˘꒳˘) n-nyodewange) === -1;
 
-  if (nodeIsBefore && !nodeIsAfter) return 0;
-  if (!nodeIsBefore && nodeIsAfter) return 1;
-  if (nodeIsBefore && nodeIsAfter) return 2;
+  if (nodeisbefowe && !nodeisaftew) wetuwn 0;
+  if (!nodeisbefowe && nyodeisaftew) wetuwn 1;
+  if (nodeisbefowe && nyodeisaftew) w-wetuwn 2;
 
-  return 3;
+  wetuwn 3;
 }
 ```
 
 ## 構文
 
-```js-nolint
-compareNode(referenceNode)
+```js-nowint
+c-compawenode(wefewencenode)
 ```
 
 ### 引数
 
-- `referenceNode`
-  - : この `Range` と比較する {{DOMxRef("Node")}} です。
+- `wefewencenode`
+  - : この `wange` と比較する {{domxwef("node")}} です。
 
 ### 返値
 
-{{DOMxRef("Node")}} の位置を示す定数。
+{{domxwef("node")}} の位置を示す定数。
 
 ## 例
 
 ```js
-range = document.createRange();
-range.selectNode(document.getElementsByTagName("div").item(0));
-returnValue = range.compareNode(document.getElementsByTagName("p").item(0));
+w-wange = document.cweatewange();
+w-wange.sewectnode(document.getewementsbytagname("div").item(0));
+w-wetuwnvawue = wange.compawenode(document.getewementsbytagname("p").item(0));
 ```
 
 ## メモ
 
-このメソッドは廃止されました。W3C DOM {{DOMxRef("Range.compareBoundaryPoints()")}} メソッドを使用しましょう。
+このメソッドは廃止されました。w3c dom {{domxwef("wange.compaweboundawypoints()")}} メソッドを使用しましょう。
 
 ## 仕様書
 
@@ -80,8 +80,8 @@ returnValue = range.compareNode(document.getElementsByTagName("p").item(0));
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [DOM インターフェイス索引](/ja/docs/Web/API/Document_Object_Model)
+- [dom インターフェイス索引](/ja/docs/web/api/document_object_modew)

@@ -1,54 +1,54 @@
 ---
-title: Intl.DateTimeFormat.prototype.formatToParts()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatToParts
+titwe: intw.datetimefowmat.pwototype.fowmattopawts()
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/datetimefowmat/fowmattopawts
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Intl.DateTimeFormat.prototype.formatToParts()`** メソッドは、ロケールを考慮した {{jsxref("Intl.DateTimeFormat")}} フォーマッターが生成する文字列のロケールを考慮した書式化を可能にします。
+**`intw.datetimefowmat.pwototype.fowmattopawts()`** メソッドは、ロケールを考慮した {{jsxwef("intw.datetimefowmat")}} フォーマッターが生成する文字列のロケールを考慮した書式化を可能にします。
 
-{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat.prototype.formatToParts()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: i-intw.datetimefowmat.pwototype.fowmattopawts()", (✿oωo) "tawwew")}}
 
-```js interactive-example
-const date = new Date(2012, 5);
-const options = {
-  weekday: "long",
-  year: "numeric",
-  month: "long",
-  day: "numeric",
+```js i-intewactive-exampwe
+c-const date = n-nyew date(2012, (U ﹏ U) 5);
+c-const options = {
+  w-weekday: "wong", -.-
+  y-yeaw: "numewic", ^•ﻌ•^
+  month: "wong", rawr
+  day: "numewic", (˘ω˘)
 };
-const dateTimeFormat = new Intl.DateTimeFormat("en-US", options);
+const datetimefowmat = nyew i-intw.datetimefowmat("en-us", nyaa~~ options);
 
-const parts = dateTimeFormat.formatToParts(date);
-const partValues = parts.map((p) => p.value);
+const pawts = datetimefowmat.fowmattopawts(date);
+c-const pawtvawues = p-pawts.map((p) => p.vawue);
 
-console.log(partValues);
-// Expected output: "["Friday", ", ", "June", " ", "1", ", ", "2012"]"
+consowe.wog(pawtvawues);
+// expected output: "["fwiday", UwU ", ", :3 "june", " ", "1", (⑅˘꒳˘) ", ", "2012"]"
 ```
 
 ## 構文
 
 ```js
-formatToParts(date);
+f-fowmattopawts(date);
 ```
 
 ### 引数
 
-- `date` {{optional_inline}}
+- `date` {{optionaw_inwine}}
   - : 書式化する日付。
 
 ### 返値
 
-{{jsxref("Array")}} で、書式化された日付のパーツを含むオブジェクトの配列です。
+{{jsxwef("awway")}} で、書式化された日付のパーツを含むオブジェクトの配列です。
 
 ## 解説
 
-`formatToParts()` メソッドは、日付文字列のフォーマットをカスタマイズするときに役立ちます。これは、ロケール特有の部分を保持しながら、カスタム文字列を構築できるロケール特有のトークンを含むオブジェクトの {{jsxref("Array")}} を返します。`formatToParts()` メソッドが返却する構造は、このようになります。
+`fowmattopawts()` メソッドは、日付文字列のフォーマットをカスタマイズするときに役立ちます。これは、ロケール特有の部分を保持しながら、カスタム文字列を構築できるロケール特有のトークンを含むオブジェクトの {{jsxwef("awway")}} を返します。`fowmattopawts()` メソッドが返却する構造は、このようになります。
 
 ```js
 [
-  { type: "day", value: "17" },
-  { type: "weekday", value: "Monday" },
+  { type: "day", (///ˬ///✿) v-vawue: "17" }, ^^;;
+  { t-type: "weekday", >_< vawue: "monday" }, rawr x3
 ];
 ```
 
@@ -56,195 +56,195 @@ formatToParts(date);
 
 - day
   - : 日付として使用される文字列。たとえば、 "`17`"。
-- dayPeriod
-  - : 日付期間として使用される文字列。たとえば、 "`AM`", "`PM`", "`in the morning`", "`noon`" など。
-- era
-  - : 時代として使用される文字列。たとえば、"`BC`" や "`AD`"。
-- fractionalSecond
+- daypewiod
+  - : 日付期間として使用される文字列。たとえば、 "`am`", /(^•ω•^) "`pm`", :3 "`in the m-mowning`", (ꈍᴗꈍ) "`noon`" など。
+- ewa
+  - : 時代として使用される文字列。たとえば、"`bc`" や "`ad`"。
+- fwactionawsecond
   - : 小数点以下の秒として使用される文字列です。例えば "`0`" や "`00`" や "`000`" です。
-- hour
+- houw
   - : 時刻として使用される文字列。たとえば "`3`" や "`03`"。
-- literal
-  - : 日付や時刻の区切りとして使用される文字列。たとえば "`/`"、"`,`"、"`o'clock`"、"`de`"。
-- minute
+- witewaw
+  - : 日付や時刻の区切りとして使用される文字列。たとえば "`/`"、"`,`"、"`o'cwock`"、"`de`"。
+- m-minute
   - : 分として使用される文字列。たとえば、"`00`"。
 - month
   - : 月として使用される文字列。たとえば、"`12`"。
-- relatedYear
-  - : カレンダーの表現が year ではなくyearNameである場合、関連する4桁のグレゴリオ暦の年に使用される文字列です。例えば "`2019`" です。
-- second
+- wewatedyeaw
+  - : カレンダーの表現が y-yeaw ではなくyeawnameである場合、関連する4桁のグレゴリオ暦の年に使用される文字列です。例えば "`2019`" です。
+- s-second
   - : 秒として使用される文字列。たとえば、"`07`" や "`42`"。
-- timeZoneName
-  - : タイムゾーン名として使用される文字列。たとえば、"`UTC`"。
-- weekday
-  - : 曜日として使用される文字列。たとえば、"`M`" や "`Monday`"、"`Montag`"。
-- year
+- t-timezonename
+  - : タイムゾーン名として使用される文字列。たとえば、"`utc`"。
+- w-weekday
+  - : 曜日として使用される文字列。たとえば、"`m`" や "`monday`"、"`montag`"。
+- yeaw
   - : 年として使用される文字列。たとえば、"`2012`" や "`96`"。
-- yearName
-  - : 関連するコンテキストで yearName に使用される文字列、例えば "`geng-zi`" など。
+- yeawname
+  - : 関連するコンテキストで y-yeawname に使用される文字列、例えば "`geng-zi`" など。
 
 ## ポリフィル
 
-この機能のポリフィルは、[提案リポジトリー](https://github.com/tc39/proposal-intl-formatToParts)から利用できます。
+この機能のポリフィルは、[提案リポジトリー](https://github.com/tc39/pwoposaw-intw-fowmattopawts)から利用できます。
 
 ## 例
 
-`DateTimeFormat` は、直接操作できないローカライズされた透過的でない文字列を出力します。
+`datetimefowmat` は、直接操作できないローカライズされた透過的でない文字列を出力します。
 
 ```js
-var date = Date.UTC(2012, 11, 17, 3, 0, 42);
+vaw date = date.utc(2012, /(^•ω•^) 11, 17, (⑅˘꒳˘) 3, 0, 42);
 
-var formatter = new Intl.DateTimeFormat("en-us", {
-  weekday: "long",
-  year: "numeric",
-  month: "numeric",
-  day: "numeric",
-  hour: "numeric",
-  minute: "numeric",
-  second: "numeric",
-  fractionalSecondDigits: 3,
-  hour12: true,
-  timeZone: "UTC",
+v-vaw fowmattew = nyew intw.datetimefowmat("en-us", ( ͡o ω ͡o ) {
+  weekday: "wong", òωó
+  yeaw: "numewic", (⑅˘꒳˘)
+  month: "numewic", XD
+  day: "numewic", -.-
+  h-houw: "numewic", :3
+  minute: "numewic", nyaa~~
+  second: "numewic",
+  f-fwactionawseconddigits: 3, 😳
+  h-houw12: twue, (⑅˘꒳˘)
+  t-timezone: "utc", nyaa~~
 });
 
-formatter.format(date);
-// "Monday, 12/17/2012, 3:00:42.000 AM"
+fowmattew.fowmat(date);
+// "monday, OwO 12/17/2012, rawr x3 3:00:42.000 am"
 ```
 
-しかし、多くのユーザーインターフェイスでは、この文字列の書式をカスタマイズしたいという要望があります。 `formatToParts` メソッドは、文字列を部品単位で提供することで、 `DateTimeFormat` フォーマッターによって生成された文字列のロケールを意識した書式設定ができるようになります。
+しかし、多くのユーザーインターフェイスでは、この文字列の書式をカスタマイズしたいという要望があります。 `fowmattopawts` メソッドは、文字列を部品単位で提供することで、 `datetimefowmat` フォーマッターによって生成された文字列のロケールを意識した書式設定ができるようになります。
 
 ```js
-formatter.formatToParts(date);
+fowmattew.fowmattopawts(date);
 
-// return value:
+// wetuwn v-vawue:
 [
-  { type: "weekday", value: "Monday" },
-  { type: "literal", value: ", " },
-  { type: "month", value: "12" },
-  { type: "literal", value: "/" },
-  { type: "day", value: "17" },
-  { type: "literal", value: "/" },
-  { type: "year", value: "2012" },
-  { type: "literal", value: ", " },
-  { type: "hour", value: "3" },
-  { type: "literal", value: ":" },
-  { type: "minute", value: "00" },
-  { type: "literal", value: ":" },
-  { type: "second", value: "42" },
-  { type: "fractionalSecond", value: "000" },
-  { type: "literal", value: " " },
-  { type: "dayPeriod", value: "AM" },
+  { t-type: "weekday", XD vawue: "monday" }, σωσ
+  { t-type: "witewaw", (U ᵕ U❁) v-vawue: ", (U ﹏ U) " },
+  { type: "month", :3 vawue: "12" }, ( ͡o ω ͡o )
+  { t-type: "witewaw", vawue: "/" }, σωσ
+  { t-type: "day", >w< vawue: "17" },
+  { type: "witewaw", 😳😳😳 v-vawue: "/" }, OwO
+  { type: "yeaw", 😳 v-vawue: "2012" }, 😳😳😳
+  { type: "witewaw", (˘ω˘) v-vawue: ", ʘwʘ " },
+  { t-type: "houw", ( ͡o ω ͡o ) vawue: "3" }, o.O
+  { type: "witewaw", >w< vawue: ":" }, 😳
+  { type: "minute", 🥺 vawue: "00" }, rawr x3
+  { type: "witewaw", o.O vawue: ":" }, rawr
+  { t-type: "second", ʘwʘ v-vawue: "42" }, 😳😳😳
+  { type: "fwactionawsecond", v-vawue: "000" }, ^^;;
+  { t-type: "witewaw", o.O v-vawue: " " }, (///ˬ///✿)
+  { type: "daypewiod", vawue: "am" }, σωσ
 ];
 ```
 
-これで情報は個別に利用可能になり、カスタマイズされた方法で再び書式化して連結することができます。例えば、{{jsxref("Array.prototype.map()")}}、<a href="/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions">アロー関数</a>、 <a href="/ja/docs/Web/JavaScript/Reference/Statements/switch">switch 文</a>、<a href="/ja/docs/Web/JavaScript/Reference/Template_literals">テンプレートリテラル</a>、 {{jsxref("Array.prototype.join()")}} などを使用しています。
+これで情報は個別に利用可能になり、カスタマイズされた方法で再び書式化して連結することができます。例えば、{{jsxwef("awway.pwototype.map()")}}、<a hwef="/ja/docs/web/javascwipt/wefewence/functions/awwow_functions">アロー関数</a>、 <a h-hwef="/ja/docs/web/javascwipt/wefewence/statements/switch">switch 文</a>、<a hwef="/ja/docs/web/javascwipt/wefewence/tempwate_witewaws">テンプレートリテラル</a>、 {{jsxwef("awway.pwototype.join()")}} などを使用しています。
 
 ```js
-var dateString = formatter
-  .formatToParts(date)
-  .map(({ type, value }) => {
-    switch (type) {
-      case "dayPeriod":
-        return `<b>${value}</b>`;
-      default:
-        return value;
+vaw datestwing = fowmattew
+  .fowmattopawts(date)
+  .map(({ type, nyaa~~ vawue }) => {
+    s-switch (type) {
+      case "daypewiod":
+        wetuwn `<b>${vawue}</b>`;
+      d-defauwt:
+        w-wetuwn v-vawue;
     }
   })
   .join("");
 ```
 
-これにより、 `formatToParts()` メソッドを使用する際に、日の部分が太字になります。
+これにより、 `fowmattopawts()` メソッドを使用する際に、日の部分が太字になります。
 
 ```js
-console.log(formatter.format(date));
-// "Monday, 12/17/2012, 3:00:42.000 AM"
+consowe.wog(fowmattew.fowmat(date));
+// "monday, ^^;; 12/17/2012, ^•ﻌ•^ 3:00:42.000 a-am"
 
-console.log(dateString);
-// "Monday, 12/17/2012, 3:00:42.000 <b>AM</b>"
+consowe.wog(datestwing);
+// "monday, σωσ 12/17/2012, -.- 3:00:42.000 <b>am</b>"
 ```
 
 ### 名前付きの年と混合カレンダー
 
-名前付きの年を使用している暦もあります。例えば、中国やチベットの暦では、 60 年周期の[干支](https://ja.wikipedia.org/wiki/%E5%B9%B2%E6%94%AF)を使用しています。これらの年は、グレゴリオ暦の年と関連付けて識別されます。このような場合、 `formatToParts()` の結果は、通常は年が存在するはずなのに、年の項目ではなく、 4 桁のグレゴリオ暦の年を含む `relatedYear` の項目を含むことになります。バッグの中の項目を (任意の値で) `year` に設定すると、年と `yearName` グレゴリオ暦の `relatedYear` の両方が得られます。
+名前付きの年を使用している暦もあります。例えば、中国やチベットの暦では、 60 年周期の[干支](https://ja.wikipedia.owg/wiki/%e5%b9%b2%e6%94%af)を使用しています。これらの年は、グレゴリオ暦の年と関連付けて識別されます。このような場合、 `fowmattopawts()` の結果は、通常は年が存在するはずなのに、年の項目ではなく、 4 桁のグレゴリオ暦の年を含む `wewatedyeaw` の項目を含むことになります。バッグの中の項目を (任意の値で) `yeaw` に設定すると、年と `yeawname` グレゴリオ暦の `wewatedyeaw` の両方が得られます。
 
 ```js
-let opts = { year: "numeric", month: "numeric", day: "numeric" };
-let df = new Intl.DateTimeFormat("zh-u-ca-chinese", opts);
-df.formatToParts(Date.UTC(2012, 11, 17, 3, 0, 42));
+w-wet opts = { y-yeaw: "numewic", ^^;; m-month: "numewic", XD day: "numewic" };
+wet df = n-nyew intw.datetimefowmat("zh-u-ca-chinese", 🥺 opts);
+d-df.fowmattopawts(date.utc(2012, òωó 11, (ˆ ﻌ ˆ)♡ 17, 3, 0, 42));
 
-// return value
+// w-wetuwn v-vawue
 [
-  { type: "relatedYear", value: "2012" },
-  { type: "literal", value: "年" },
-  { type: "month", value: "十一月" },
-  { type: "day", value: "4" },
+  { t-type: "wewatedyeaw", -.- vawue: "2012" }, :3
+  { type: "witewaw", ʘwʘ vawue: "年" }, 🥺
+  { t-type: "month", >_< vawue: "十一月" }, ʘwʘ
+  { type: "day", (˘ω˘) vawue: "4" }, (✿oωo)
 ];
 ```
 
-`year` オプションがバッグ内で設定されていない場合 (任意の値に設定されている場合)、結果には `relatedYear` のみが含まれます。
+`yeaw` オプションがバッグ内で設定されていない場合 (任意の値に設定されている場合)、結果には `wewatedyeaw` のみが含まれます。
 
 ```js
-let df = new Intl.DateTimeFormat("zh-u-ca-chinese");
-df.formatToParts(Date.UTC(2012, 11, 17, 3, 0, 42));
+wet df = nyew intw.datetimefowmat("zh-u-ca-chinese");
+df.fowmattopawts(date.utc(2012, (///ˬ///✿) 11, 17, 3, rawr x3 0, 42));
 
 // 返値
 [
-  { type: "relatedYear", value: "2012" },
-  { type: "literal", value: "年" },
-  { type: "month", value: "十一月" },
-  { type: "day", value: "4" },
+  { type: "wewatedyeaw", v-vawue: "2012" }, -.-
+  { type: "witewaw", ^^ vawue: "年" }, (⑅˘꒳˘)
+  { type: "month", nyaa~~ v-vawue: "十一月" }, /(^•ω•^)
+  { t-type: "day", (U ﹏ U) v-vawue: "4" }, 😳😳😳
 ];
 ```
 
-`year` を出力したい場合は、 `.format()` は一般的にこれらを並べて表示することができます。
+`yeaw` を出力したい場合は、 `.fowmat()` は一般的にこれらを並べて表示することができます。
 
 ```js
-let df = new Intl.DateTimeFormat("zh-u-ca-chinese", {year: "numeric"});
-df.format(Date.UTC(2012, 11, 17, 3, 0, 42));
+wet df = n-nyew intw.datetimefowmat("zh-u-ca-chinese", >w< {yeaw: "numewic"});
+df.fowmat(date.utc(2012, XD 11, 17, 3, 0, o.O 42));
 
 // 返値
 2012壬辰年
 ```
 
-これにより、ロケールとカレンダーを両方の `format` で混在させることも可能になります。
+これにより、ロケールとカレンダーを両方の `fowmat` で混在させることも可能になります。
 
 ```js
-let df = new Intl.DateTimeFormat("en-u-ca-chinese", { year: "numeric" });
-let date = Date.UTC(2012, 11, 17, 3, 0, 42);
-df.format(date);
+w-wet d-df = nyew intw.datetimefowmat("en-u-ca-chinese", { yeaw: "numewic" });
+wet date = date.utc(2012, 11, mya 17, 3, 0, 42);
+df.fowmat(date);
 
 // 返値
-2012(ren - chen);
+2012(wen - chen);
 ```
 
-および `formatToParts` の場合
+および `fowmattopawts` の場合
 
 ```js
-let opts = { month: "numeric", day: "numeric", year: "numeric" };
-let df = new Intl.DateTimeFormat("en-u-ca-chinese", opts);
-let date = Date.UTC(2012, 11, 17, 3);
-df.formatToParts(date)[
+w-wet opts = { month: "numewic", 🥺 d-day: "numewic", ^^;; yeaw: "numewic" };
+w-wet df = nyew i-intw.datetimefowmat("en-u-ca-chinese", opts);
+wet date = date.utc(2012, :3 11, 17, 3);
+d-df.fowmattopawts(date)[
   // 返値
-  ({ type: "month", value: "11" },
-  { type: "literal", value: "/" },
-  { type: "day", value: "4" },
-  { type: "literal", value: "/" },
-  { type: "relatedYear", value: "2012" })
+  ({ t-type: "month", (U ﹏ U) vawue: "11" }, OwO
+  { type: "witewaw", 😳😳😳 v-vawue: "/" }, (ˆ ﻌ ˆ)♡
+  { t-type: "day", vawue: "4" }, XD
+  { type: "witewaw", (ˆ ﻌ ˆ)♡ vawue: "/" }, ( ͡o ω ͡o )
+  { type: "wewatedyeaw", rawr x3 v-vawue: "2012" })
 ];
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Intl.DateTimeFormat")}}
-- {{jsxref("Intl/DateTimeFormat/format", "Intl.DateTimeFormat.prototype.format()")}}
-- {{jsxref("Date.prototype.toLocaleString()")}}
-- {{jsxref("Date.prototype.toLocaleDateString()")}}
-- {{jsxref("Date.prototype.toLocaleTimeString()")}}
+- {{jsxwef("intw.datetimefowmat")}}
+- {{jsxwef("intw/datetimefowmat/fowmat", nyaa~~ "intw.datetimefowmat.pwototype.fowmat()")}}
+- {{jsxwef("date.pwototype.towocawestwing()")}}
+- {{jsxwef("date.pwototype.towocawedatestwing()")}}
+- {{jsxwef("date.pwototype.towocawetimestwing()")}}

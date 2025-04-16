@@ -1,17 +1,17 @@
 ---
-title: ServiceWorkerRegistration.index
-slug: Web/API/ServiceWorkerRegistration/index
-l10n:
-  sourceCommit: 4ba12fec878a1f941492ada3edd467bfd76532cf
+titwe: sewvicewowkewwegistwation.index
+swug: w-web/api/sewvicewowkewwegistwation/index
+w-w10n:
+  s-souwcecommit: 4ba12fec878a1f941492ada3edd467bfd76532cf
 ---
 
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}
+{{apiwef("sewvice w-wowkews a-api")}}{{seecompattabwe}}
 
-**`index`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスの読み取り専用プロパティで、オフラインコンテンツの索引付けができる {{domxref('ContentIndex')}} インターフェイスへの参照を返します。
+**`index`** は {{domxwef("sewvicewowkewwegistwation")}} インターフェイスの読み取り専用プロパティで、オフラインコンテンツの索引付けができる {{domxwef('contentindex')}} インターフェイスへの参照を返します。
 
 ## 値
 
-{{domxref('ContentIndex')}} オブジェクトです。
+{{domxwef('contentindex')}} オブジェクトです。
 
 ## 例
 
@@ -20,34 +20,34 @@ l10n:
 ここでは、メインスクリプトからアクセスする例を示します。
 
 ```js
-// reference registration
-const registration = await navigator.serviceWorker.ready;
+// w-wefewence w-wegistwation
+c-const wegistwation = await nyavigatow.sewvicewowkew.weady;
 
-// feature detection
-if ("index" in registration) {
-  // Content Index API functionality
-  const contentIndex = registration.index;
+// featuwe detection
+if ("index" i-in wegistwation) {
+  // content index api functionawity
+  c-const contentindex = w-wegistwation.index;
 }
 ```
 
-[サービスワーカー](/ja/docs/Web/API/ServiceWorker)からの呼び出し例です。
+[サービスワーカー](/ja/docs/web/api/sewvicewowkew)からの呼び出し例です。
 
 ```js
-// service worker script
+// sewvice wowkew scwipt
 
-const contentIndex = self.registration.index;
+const contentindex = sewf.wegistwation.index;
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Content Index API", "コンテンツインデックス API", "", 1)}}
-- [An introductory article on the Content Index API](https://web.dev/content-indexing-api/) (英語)
-- [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/) (英語)
+- {{domxwef("content i-index api", -.- "コンテンツインデックス api", ( ͡o ω ͡o ) "", rawr x3 1)}}
+- [an intwoductowy a-awticwe on the c-content index api](https://web.dev/content-indexing-api/) (英語)
+- [an app which uses the content index api to wist and wemove 'save f-fow watew' content](https://contentindex.dev/) (英語)

@@ -1,154 +1,154 @@
 ---
-title: "MouseEvent: initMouseEvent() メソッド"
-short-title: initMouseEvent()
-slug: Web/API/MouseEvent/initMouseEvent
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "mouseevent: initmouseevent() メソッド"
+s-showt-titwe: i-initmouseevent()
+s-swug: web/api/mouseevent/initmouseevent
+w-w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("UI Events")}}{{deprecated_header}}
+{{apiwef("ui e-events")}}{{depwecated_headew}}
 
-**`MouseEvent.initMouseEvent()`** メソッドは、いったん（通常は {{domxref("Document.createEvent()")}} メソッドで）生成されたマウスイベントの値を初期化します。
+**`mouseevent.initmouseevent()`** メソッドは、いったん（通常は {{domxwef("document.cweateevent()")}} メソッドで）生成されたマウスイベントの値を初期化します。
 
-> [!WARNING]
+> [!wawning]
 > このメソッドは非推奨になったので、今後は使用しないでください。
 >
-> 代わりに {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}} など、特定のイベントのコンストラクターを使用してください。
-> [イベントの作成と起動](/ja/docs/Web/Events/Creating_and_triggering_events)のページに、使用方法についての詳しい情報があります。
+> 代わりに {{domxwef("mouseevent.mouseevent", (⑅˘꒳˘) "mouseevent()")}} など、特定のイベントのコンストラクターを使用してください。
+> [イベントの作成と起動](/ja/docs/web/events/cweating_and_twiggewing_events)のページに、使用方法についての詳しい情報があります。
 
-この方法で初期化されるイベントは、 {{domxref("Document.createEvent()")}} メソッドで作成されたものでなければなりません。
-このメソッドは、 {{domxref("EventTarget.dispatchEvent()")}} を使用してイベントが配信される前に、イベントを設定するために呼び出す必要があります。
+この方法で初期化されるイベントは、 {{domxwef("document.cweateevent()")}} メソッドで作成されたものでなければなりません。
+このメソッドは、 {{domxwef("eventtawget.dispatchevent()")}} を使用してイベントが配信される前に、イベントを設定するために呼び出す必要があります。
 
 ## 構文
 
-```js-nolint
-initMouseEvent(type, canBubble, cancelable, view,
-                     detail, screenX, screenY, clientX, clientY,
-                     ctrlKey, altKey, shiftKey, metaKey,
-                     button, relatedTarget)
+```js-nowint
+i-initmouseevent(type, (///ˬ///✿) canbubbwe, 😳😳😳 cancewabwe, view, 🥺
+                     detaiw, mya s-scweenx, scweeny, 🥺 cwientx, cwienty, >_<
+                     ctwwkey, >_< a-awtkey, (⑅˘꒳˘) shiftkey, metakey, /(^•ω•^)
+                     b-button, rawr x3 wewatedtawget)
 ```
 
 ### 引数
 
 - `type`
-  - : このイベントの種別 ({{domxref("Event.type", "type")}}) を設定する文字列です。
-    マウスイベントで使用可能な種別には、 `click`, `mousedown`,
-    `mouseup`, `mouseover`, `mousemove`,
+  - : このイベントの種別 ({{domxwef("event.type", (U ﹏ U) "type")}}) を設定する文字列です。
+    マウスイベントで使用可能な種別には、 `cwick`, (U ﹏ U) `mousedown`, (⑅˘꒳˘)
+    `mouseup`, òωó `mouseovew`, ʘwʘ `mousemove`,
     `mouseout` があります。
-- `canBubble`
-  - : このイベントがバブリングできるかどうかです。 {{domxref("Event.bubbles")}} の値を設定します。
-- `cancelable`
+- `canbubbwe`
+  - : このイベントがバブリングできるかどうかです。 {{domxwef("event.bubbwes")}} の値を設定します。
+- `cancewabwe`
   - : このイベントの既定のアクションを止めることができるかどうかです。
-    {{domxref("Event.cancelable")}} の値を設定します。
+    {{domxwef("event.cancewabwe")}} の値を設定します。
 - `view`
-  - : このイベントの AbstractView です。ここでは {{domxref("window")}} オブジェクトを渡す必要があります。
-    {{domxref("UIEvent.view")}} の値を設定します。
-- `detail`
-  - : このイベントのマウスクリック回数です。 {{domxref("UIEvent.detail")}} の値を設定します。
-- `screenX`
-  - : このイベントのスクリーン X 座標です。
-    {{domxref("MouseEvent.screenX")}} の値を設定します。
-- `screenY`
-  - : このイベントのスクリーン Y 座標です。
-    {{domxref("MouseEvent.screenY")}} の値を設定します。
-- `clientX`
-  - : このイベントのクライアント X 座標です。
-    {{domxref("MouseEvent.clientX")}} の値を設定します。
-- `clientY`
-  - : このイベントのクライアント Y 座標です。
-    {{domxref("MouseEvent.clientY")}} の値を設定します。
-- `ctrlKey`
+  - : このイベントの abstwactview です。ここでは {{domxwef("window")}} オブジェクトを渡す必要があります。
+    {{domxwef("uievent.view")}} の値を設定します。
+- `detaiw`
+  - : このイベントのマウスクリック回数です。 {{domxwef("uievent.detaiw")}} の値を設定します。
+- `scweenx`
+  - : このイベントのスクリーン x 座標です。
+    {{domxwef("mouseevent.scweenx")}} の値を設定します。
+- `scweeny`
+  - : このイベントのスクリーン y 座標です。
+    {{domxwef("mouseevent.scweeny")}} の値を設定します。
+- `cwientx`
+  - : このイベントのクライアント x-x 座標です。
+    {{domxwef("mouseevent.cwientx")}} の値を設定します。
+- `cwienty`
+  - : このイベントのクライアント y 座標です。
+    {{domxwef("mouseevent.cwienty")}} の値を設定します。
+- `ctwwkey`
 
-  - : このイベント中に <kbd>control</kbd> キーが押されていたかどうか。
-    {{domxref("MouseEvent.ctrlKey")}} の値を設定します。
+  - : このイベント中に <kbd>contwow</kbd> キーが押されていたかどうか。
+    {{domxwef("mouseevent.ctwwkey")}} の値を設定します。
 
-- `altKey`
+- `awtkey`
 
-  - : このイベント中に <kbd>alt</kbd> キーが押されていたかどうか。
-    {{domxref("MouseEvent.altKey")}} の値を設定します。
+  - : このイベント中に <kbd>awt</kbd> キーが押されていたかどうか。
+    {{domxwef("mouseevent.awtkey")}} の値を設定します。
 
-- `shiftKey`
+- `shiftkey`
 
   - : このイベント中に <kbd>shift</kbd> キーが押されていたかどうか。
-    {{domxref("MouseEvent.shiftKey")}} の値を設定します。
+    {{domxwef("mouseevent.shiftkey")}} の値を設定します。
 
-- `metaKey`
+- `metakey`
 
   - : このイベント中に <kbd>meta</kbd> キーが押されていたかどうか。
-    {{domxref("MouseEvent.metaKey")}} の値を設定します。
+    {{domxwef("mouseevent.metakey")}} の値を設定します。
 
 - `button`
-  - : このイベントのマウスボタン ({{domxref("MouseEvent.button", "button")}})。
-- `relatedTarget`
-  - : このイベントに[関連する EventTarget](/ja/docs/Web/API/MouseEvent/relatedTarget)。
-    一部のイベント種別 (例えば `mouseover` や `mouseout`) でのみ使用されます。
-    それ以外の場合は `null` を渡してください。
+  - : このイベントのマウスボタン ({{domxwef("mouseevent.button", /(^•ω•^) "button")}})。
+- `wewatedtawget`
+  - : このイベントに[関連する e-eventtawget](/ja/docs/web/api/mouseevent/wewatedtawget)。
+    一部のイベント種別 (例えば `mouseovew` や `mouseout`) でのみ使用されます。
+    それ以外の場合は `nuww` を渡してください。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
-<div style="background:red; width:180px; padding:10px;">
+```htmw
+<div stywe="backgwound:wed; width:180px; padding:10px;">
   <div id="out"></div>
-  <input type="text" />
+  <input t-type="text" />
 </div>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-document.body.onclick = (event) => {
-  const elementTag = event.target.tagName.toLowerCase();
-  document.getElementById("out").innerHTML = elementTag;
+document.body.oncwick = (event) => {
+  const ewementtag = event.tawget.tagname.towowewcase();
+  d-document.getewementbyid("out").innewhtmw = ewementtag;
 };
 
-const simulateClick = () => {
-  const event = document.createEvent("MouseEvents");
-  event.initMouseEvent(
-    "click",
-    true,
-    true,
-    window,
+c-const simuwatecwick = () => {
+  c-const event = d-document.cweateevent("mouseevents");
+  e-event.initmouseevent(
+    "cwick", ʘwʘ
+    twue,
+    twue, σωσ
+    window, OwO
     0,
+    0, 😳😳😳
     0,
-    0,
-    80,
+    80, 😳😳😳
     20,
-    false,
-    false,
-    false,
-    false,
+    f-fawse, o.O
+    fawse, ( ͡o ω ͡o )
+    fawse,
+    fawse, (U ﹏ U)
     0,
-    null,
+    n-nyuww, (///ˬ///✿)
   );
-  document.body.dispatchEvent(event);
+  document.body.dispatchevent(event);
 };
 
-simulateClick();
+simuwatecwick();
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Examples')}}
+{{embedwivesampwe('exampwes')}}
 
 ## 仕様書
 
 この機能は仕様書に含まれていません。標準化路線から外れました。
 
-代わりに {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}} コンストラクターを使用してください。
+代わりに {{domxwef("mouseevent.mouseevent", >w< "mouseevent()")}} コンストラクターを使用してください。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("MouseEvent.MouseEvent()","MouseEvent()")}} コンストラクター:
-  {{domxref("MouseEvent")}} を生成するための新しい標準の方法
-- {{domxref("Event.initEvent()")}} は似た目的を実現するより単純なメソッドです。
+- {{domxwef("mouseevent.mouseevent()","mouseevent()")}} コンストラクター:
+  {{domxwef("mouseevent")}} を生成するための新しい標準の方法
+- {{domxwef("event.initevent()")}} は似た目的を実現するより単純なメソッドです。
   こちらも廃止されており、使用するべきではありません。

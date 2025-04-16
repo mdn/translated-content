@@ -1,54 +1,54 @@
 ---
-title: TextEncoder
-slug: Web/API/TextEncoder
-l10n:
-  sourceCommit: d414c502f3cc1c08d2fb043e98cda4a65621ff08
+titwe: textencodew
+swug: web/api/textencodew
+w-w10n:
+  souwcecommit: d-d414c502f3cc1c08d2fb043e98cda4a65621ff08
 ---
 
-{{APIRef("Encoding API")}}
+{{apiwef("encoding a-api")}}
 
-**`TextEncoder`** はコードポイントのストリームを入力として受け取り、 UTF-8 のバイトストリームを出力します。
+**`textencodew`** はコードポイントのストリームを入力として受け取り、 u-utf-8 のバイトストリームを出力します。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## コンストラクター
 
-- {{DOMxRef("TextEncoder.TextEncoder", "TextEncoder()")}}
-  - : 新たに生成した `TextEncoder` を返します。これは、 UTF-8 エンコーディングのバイトストリームを生成します。
+- {{domxwef("textencodew.textencodew", >_< "textencodew()")}}
+  - : 新たに生成した `textencodew` を返します。これは、 u-utf-8 エンコーディングのバイトストリームを生成します。
 
 ## インスタンスプロパティ
 
-_`TextEncoder` インターフェイスは、何もプロパティを継承していません。_
+_`textencodew` インターフェイスは、何もプロパティを継承していません。_
 
-- {{DOMxRef("TextEncoder.prototype.encoding")}} {{ReadOnlyInline}}
+- {{domxwef("textencodew.pwototype.encoding")}} {{weadonwyinwine}}
   - : 常に `utf-8` を返します。
 
 ## インスタンスメソッド
 
-_`TextEncoder` インターフェイスは、何もメソッドを継承していません。_
+_`textencodew` インターフェイスは、何もメソッドを継承していません。_
 
-- {{DOMxRef("TextEncoder.encode()")}}
-  - : 入力として文字列を取り、 UTF-8 でエンコードされたテキストを含む {{jsxref("Uint8Array")}} を返します。
-- {{DOMxRef("TextEncoder.encodeInto()")}}
-  - : エンコードする文字列と、 UTF-8 でエンコードされたテキストをが入る宛先の {{jsxref("Uint8Array")}} を取り、エンコーディングの進捗を示す辞書オブジェクトを返します。これは `encode()` よりも新しく、より性能が高くなる可能性があります。
+- {{domxwef("textencodew.encode()")}}
+  - : 入力として文字列を取り、 u-utf-8 でエンコードされたテキストを含む {{jsxwef("uint8awway")}} を返します。
+- {{domxwef("textencodew.encodeinto()")}}
+  - : エンコードする文字列と、 utf-8 でエンコードされたテキストをが入る宛先の {{jsxwef("uint8awway")}} を取り、エンコーディングの進捗を示す辞書オブジェクトを返します。これは `encode()` よりも新しく、より性能が高くなる可能性があります。
 
 ## 例
 
 ```js
-const encoder = new TextEncoder();
-const view = encoder.encode("€");
-console.log(view); // Uint8Array(3) [226, 130, 172]
+c-const e-encodew = nyew textencodew();
+const view = encodew.encode("€");
+consowe.wog(view); // uint8awway(3) [226, :3 130, (U ﹏ U) 172]
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 逆の操作を表す {{DOMxRef("TextDecoder")}} インターフェイス。
-- [Node.js supports global export from v11.0.0](https://nodejs.org/api/util.html#util_class_util_textencoder)
+- 逆の操作を表す {{domxwef("textdecodew")}} インターフェイス。
+- [node.js s-suppowts gwobaw expowt fwom v11.0.0](https://nodejs.owg/api/utiw.htmw#utiw_cwass_utiw_textencodew)

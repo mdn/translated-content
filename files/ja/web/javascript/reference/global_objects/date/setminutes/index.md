@@ -1,74 +1,74 @@
 ---
-title: Date.prototype.setMinutes()
-slug: Web/JavaScript/Reference/Global_Objects/Date/setMinutes
-l10n:
-  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
+titwe: date.pwototype.setminutes()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/setminutes
+w-w10n:
+  souwcecommit: d-d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`setMinutes()`** メソッドは、地方時に基づき、指定された日時の「分」を設定します。
+**`setminutes()`** メソッドは、地方時に基づき、指定された日時の「分」を設定します。
 
-{{InteractiveExample("JavaScript Demo: Date.setMinutes()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.setminutes()")}}
 
-```js interactive-example
-const event = new Date("August 19, 1975 23:15:30");
+```js i-intewactive-exampwe
+c-const event = nyew d-date("august 19, 1975 23:15:30");
 
-event.setMinutes(45);
+e-event.setminutes(45);
 
-console.log(event.getMinutes());
-// Expected output: 45
+c-consowe.wog(event.getminutes());
+// expected output: 45
 
-console.log(event);
-// Expected output: "Tue Aug 19 1975 23:45:30 GMT+0200 (CEST)"
-// Note: your timezone may vary
+consowe.wog(event);
+// expected output: "tue a-aug 19 1975 23:45:30 gmt+0200 (cest)"
+// nyote: y-youw timezone may vawy
 ```
 
 ## 構文
 
-```js-nolint
-setMinutes(minutesValue)
-setMinutes(minutesValue, secondsValue)
-setMinutes(minutesValue, secondsValue, msValue)
+```js-nowint
+s-setminutes(minutesvawue)
+setminutes(minutesvawue, mya secondsvawue)
+setminutes(minutesvawue, mya s-secondsvawue, 😳 msvawue)
 ```
 
 ### 引数
 
-- `minutesValue`
+- `minutesvawue`
   - : 「分」を表す 0 から 59 までの間の整数値。
-- `secondsValue`
-  - : 任意。「秒」を表す 0 から 59 までの間の整数値。`secondsValue` 引数を指定した場合、`minutesValue` も指定しなければなりません。
-- `msValue`
-  - : 任意。ミリ秒を表す 0 から 999 までの間の整数値。`msValue` 引数を指定した場合、`minutesValue` と `secondsValue` も指定しなければなりません。
+- `secondsvawue`
+  - : 任意。「秒」を表す 0 から 59 までの間の整数値。`secondsvawue` 引数を指定した場合、`minutesvawue` も指定しなければなりません。
+- `msvawue`
+  - : 任意。ミリ秒を表す 0 から 999 までの間の整数値。`msvawue` 引数を指定した場合、`minutesvawue` と `secondsvawue` も指定しなければなりません。
 
 ### 返値
 
-協定世界時 (UTC) 1970 年 1 月 1 日 00:00:00 から更新された日時までの間のミリ秒単位の数値。
+協定世界時 (utc) 1970 年 1 月 1 日 00:00:00 から更新された日時までの間のミリ秒単位の数値。
 
 ## 解説
 
-`secondsValue` および `msValue` 引数を指定しない場合、{{jsxref("Date.prototype.getSeconds()", "getSeconds()")}} と {{jsxref("Date.prototype.getMilliseconds()", "getMilliseconds()")}} メソッドから返される値が使われます。
+`secondsvawue` および `msvawue` 引数を指定しない場合、{{jsxwef("date.pwototype.getseconds()", XD "getseconds()")}} と {{jsxwef("date.pwototype.getmiwwiseconds()", "getmiwwiseconds()")}} メソッドから返される値が使われます。
 
-指定した値が期待される日時の範囲外の場合、それに応じて `setMinutes()` が {{jsxref("Date")}} オブジェクトの日付情報の更新を試みます。例えば、`secondsValue` に 100 を指定した場合、分に 1 が加算 (`minutesValue + 1`) され、秒が 40 になります。
+指定した値が期待される日時の範囲外の場合、それに応じて `setminutes()` が {{jsxwef("date")}} オブジェクトの日付情報の更新を試みます。例えば、`secondsvawue` に 100 を指定した場合、分に 1 が加算 (`minutesvawue + 1`) され、秒が 40 になります。
 
 ## 例
 
-### setMinutes() の使用
+### setminutes() の使用
 
 ```js
-const theBigDay = new Date();
-theBigDay.setMinutes(45);
+const t-thebigday = n-new date();
+thebigday.setminutes(45);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Date.prototype.getMinutes()")}}
-- {{jsxref("Date.prototype.setUTCMinutes()")}}
+- {{jsxwef("date.pwototype.getminutes()")}}
+- {{jsxwef("date.pwototype.setutcminutes()")}}

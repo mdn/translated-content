@@ -1,77 +1,77 @@
 ---
-title: "SpeechRecognition: result イベント"
-slug: Web/API/SpeechRecognition/result_event
-l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+titwe: "speechwecognition: wesuwt イベント"
+s-swug: web/api/speechwecognition/wesuwt_event
+w-w10n:
+  souwcecommit: e-e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
 
-{{APIRef("Web Speech API")}}
+{{apiwef("web s-speech api")}}
 
-**`result`** は[ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API) のイベントで、音声認識サービスが結果を返したとき、つまり単語やフレーズが正の値で認識され、それがアプリに伝達されたときに発行されます。
+**`wesuwt`** は[ウェブ音声 a-api](/ja/docs/web/api/web_speech_api) のイベントで、音声認識サービスが結果を返したとき、つまり単語やフレーズが正の値で認識され、それがアプリに伝達されたときに発行されます。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", XD "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("result", (event) => {});
+a-addeventwistenew("wesuwt", :3 (event) => {});
 
-onresult = (event) => {};
+o-onwesuwt = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("SpeechRecognitionEvent")}} です。 {{domxref("Event")}} を継承しています。
+{{domxwef("speechwecognitionevent")}} です。 {{domxwef("event")}} を継承しています。
 
-{{InheritanceDiagram("SpeechRecognitionEvent")}}
+{{inhewitancediagwam("speechwecognitionevent")}}
 
 ## イベントプロパティ
 
-_以下に列挙したプロパティに加えて、親インターフェイスである {{domxref("Event")}} から継承したプロパティも利用できます。_
+_以下に列挙したプロパティに加えて、親インターフェイスである {{domxwef("event")}} から継承したプロパティも利用できます。_
 
-- {{domxref("SpeechRecognitionEvent.emma")}} {{ReadOnlyInline}}
-  - : 結果の EMMA (Extensible MultiModal Annotation markup language) - XML - 表現を返します。
-- {{domxref("SpeechRecognitionEvent.interpretation")}} {{ReadOnlyInline}}
+- {{domxwef("speechwecognitionevent.emma")}} {{weadonwyinwine}}
+  - : 結果の e-emma (extensibwe muwtimodaw annotation mawkup wanguage) - xmw - 表現を返します。
+- {{domxwef("speechwecognitionevent.intewpwetation")}} {{weadonwyinwine}}
   - : ユーザーが言ったことの意味づけを返します。
-- {{domxref("SpeechRecognitionEvent.resultIndex")}} {{ReadOnlyInline}}
-  - : 実際に変更された {{domxref("SpeechRecognitionResultList")}} 「配列」の中で最もインデックス値の小さい結果を返します。
-- {{domxref("SpeechRecognitionEvent.results")}} {{ReadOnlyInline}}
-  - : 現在のセッションのすべての音声認識結果を表す {{domxref("SpeechRecognitionResultList")}} オブジェクトを返します。
+- {{domxwef("speechwecognitionevent.wesuwtindex")}} {{weadonwyinwine}}
+  - : 実際に変更された {{domxwef("speechwecognitionwesuwtwist")}} 「配列」の中で最もインデックス値の小さい結果を返します。
+- {{domxwef("speechwecognitionevent.wesuwts")}} {{weadonwyinwine}}
+  - : 現在のセッションのすべての音声認識結果を表す {{domxwef("speechwecognitionwesuwtwist")}} オブジェクトを返します。
 
 ## 例
 
-下記のソースコードは [Speech color changer](https://github.com/mdn/dom-examples/blob/main/web-speech-api/speech-color-changer/script.js) の例を参考しています
+下記のソースコードは [speech c-cowow changew](https://github.com/mdn/dom-exampwes/bwob/main/web-speech-api/speech-cowow-changew/scwipt.js) の例を参考しています
 
-`result` イベントは、 [`addEventListener`](/ja/docs/Web/API/EventTarget/addEventListener) メソッドで使用することができます。
+`wesuwt` イベントは、 [`addeventwistenew`](/ja/docs/web/api/eventtawget/addeventwistenew) メソッドで使用することができます。
 
 ```js
-const recognition = new SpeechRecognition();
+const wecognition = n-nyew speechwecognition();
 
-recognition.addEventListener("result", (event) => {
-  const color = event.results[0][0].transcript;
-  diagnostic.textContent = `結果を受信しました: ${color}.`;
-  bg.style.backgroundColor = color;
+wecognition.addeventwistenew("wesuwt", 😳😳😳 (event) => {
+  c-const cowow = event.wesuwts[0][0].twanscwipt;
+  diagnostic.textcontent = `結果を受信しました: ${cowow}.`;
+  bg.stywe.backgwoundcowow = cowow;
 });
 ```
 
-または `onresult` イベントハンドラープロパティを使用してください。
+または `onwesuwt` イベントハンドラープロパティを使用してください。
 
 ```js
-recognition.onresult = (event) => {
-  const color = event.results[0][0].transcript;
-  diagnostic.textContent = `結果を受信しました: ${color}.`;
-  bg.style.backgroundColor = color;
+w-wecognition.onwesuwt = (event) => {
+  const c-cowow = event.wesuwts[0][0].twanscwipt;
+  d-diagnostic.textcontent = `結果を受信しました: ${cowow}.`;
+  bg.stywe.backgwoundcowow = cowow;
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API)
+- [ウェブ音声 api](/ja/docs/web/api/web_speech_api)

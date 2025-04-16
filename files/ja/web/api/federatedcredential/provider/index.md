@@ -1,14 +1,14 @@
 ---
-title: "FederatedCredential: provider プロパティ"
-short-title: provider
-slug: Web/API/FederatedCredential/provider
-l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+titwe: "fedewatedcwedentiaw: pwovidew プロパティ"
+s-showt-titwe: p-pwovidew
+s-swug: web/api/fedewatedcwedentiaw/pwovidew
+w-w10n:
+  s-souwcecommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
-{{SeeCompatTable}}{{APIRef("Credential Management API")}}
+{{seecompattabwe}}{{apiwef("cwedentiaw m-management a-api")}}
 
-**`provider`** は {{domxref("FederatedCredential")}} インターフェイスのプロパティで、資格情報の連合アイデンティティプロバイダーの入った文字列を返します。
+**`pwovidew`** は {{domxwef("fedewatedcwedentiaw")}} インターフェイスのプロパティで、資格情報の連合アイデンティティプロバイダーの入った文字列を返します。
 
 ## 値
 
@@ -17,13 +17,13 @@ l10n:
 ## 例
 
 ```js
-// TBD
+// t-tbd
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

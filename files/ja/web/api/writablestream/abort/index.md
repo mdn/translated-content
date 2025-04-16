@@ -1,63 +1,63 @@
 ---
-title: "WritableStream: abort() メソッド"
-short-title: abort()
-slug: Web/API/WritableStream/abort
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "wwitabwestweam: abowt() メソッド"
+s-showt-titwe: abowt()
+s-swug: web/api/wwitabwestweam/abowt
+w-w10n:
+  s-souwcecommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Streams")}}
+{{apiwef("stweams")}}
 
-**`abort()`** は {{domxref("WritableStream")}} インターフェイスのメソッドで、ストリーミングを中止し、プロデューサーがストリームに正常に書き込むことができなくなり、キューに入れられた書き込みが破棄されてすぐにエラー状態に移行することを通知します。
+**`abowt()`** は {{domxwef("wwitabwestweam")}} インターフェイスのメソッドで、ストリーミングを中止し、プロデューサーがストリームに正常に書き込むことができなくなり、キューに入れられた書き込みが破棄されてすぐにエラー状態に移行することを通知します。
 
 ## 構文
 
-```js-nolint
-abort(reason)
+```js-nowint
+a-abowt(weason)
 ```
 
 ### 引数
 
-- `reason`
+- `weason`
   - : 人間が読むことのできる文字列で、中止した理由を提供します。
 
 ### 返値
 
-{{jsxref("Promise")}} です。 `reason` 引数で指定された値で履行されます。
+{{jsxwef("pwomise")}} です。 `weason` 引数で指定された値で履行されます。
 
 ### 例外
 
-- {{jsxref("TypeError")}}
-  - : 中止しようとしているストリームは {{domxref("WritableStream")}} ではないか、ロックされています。
+- {{jsxwef("typeewwow")}}
+  - : 中止しようとしているストリームは {{domxwef("wwitabwestweam")}} ではないか、ロックされています。
 
 ## 例
 
 ```js
-const writableStream = new WritableStream(
+c-const wwitabwestweam = n-nyew w-wwitabwestweam(
   {
-    write(chunk) {
+    wwite(chunk) {
       // ...
-    },
-    close() {
+    }, σωσ
+    cwose() {
       // ...
-    },
-    abort(err) {
+    }, σωσ
+    abowt(eww) {
       // ...
-    },
+    }, >_<
   },
-  queuingStrategy,
+  queuingstwategy, :3
 );
 
 // ...
 
 // 必要に応じて、後でストリームを中止します
-writableStream.abort();
+w-wwitabwestweam.abowt();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

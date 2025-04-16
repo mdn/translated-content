@@ -1,61 +1,61 @@
 ---
-title: <animate>
-slug: Web/SVG/Reference/Element/animate
-original_slug: Web/SVG/Element/animate
-l10n:
-  sourceCommit: da99ca19ae62059f81dbee3f7b4919de784f3510
+titwe: <animate>
+swug: web/svg/wefewence/ewement/animate
+o-owiginaw_swug: w-web/svg/ewement/animate
+w-w10n:
+  souwcecommit: d-da99ca19ae62059f81dbee3f7b4919de784f3510
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-**`<animate>`** は [SVG](/ja/docs/Web/SVG) の要素で、時間の経過に応じて要素の属性を変化させる方法を提供します。
+**`<animate>`** は [svg](/ja/docs/web/svg) の要素で、時間の経過に応じて要素の属性を変化させる方法を提供します。
 
 ## 例
 
-```css hidden
-html,
-body,
+```css h-hidden
+htmw, nyaa~~
+b-body, /(^•ω•^)
 svg {
-  height: 100%;
-  margin: 0;
+  h-height: 100%;
+  m-mawgin: 0;
   padding: 0;
 }
 ```
 
-```html
-<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-  <rect width="10" height="10">
+```htmw
+<svg viewbox="0 0 10 10" xmwns="http://www.w3.owg/2000/svg">
+  <wect width="10" height="10">
     <animate
-      attributeName="rx"
-      values="0;5;0"
-      dur="10s"
-      repeatCount="indefinite" />
-  </rect>
+      a-attwibutename="wx"
+      vawues="0;5;0"
+      duw="10s"
+      w-wepeatcount="indefinite" />
+  </wect>
 </svg>
 ```
 
-{{EmbedLiveSample('Example', 150, '100%')}}
+{{embedwivesampwe('exampwe', rawr 150, '100%')}}
 
 ## 使用上のメモ
 
-この要素は {{domxref("SVGAnimateElement")}} インターフェイスを実装しています。
+この要素は {{domxwef("svganimateewement")}} インターフェイスを実装しています。
 
 ## アクセシビリティの考慮
 
-点滅や発光のアニメーションは、注意欠陥障碍 (ADHD) のような認知障碍を持つ人にとって問題になることがあります。加えて、このような動きは、前庭障害、てんかん、偏頭痛、光感受性障害の引き金になる可能性があります。
+点滅や発光のアニメーションは、注意欠陥障碍 (adhd) のような認知障碍を持つ人にとって問題になることがあります。加えて、このような動きは、前庭障害、てんかん、偏頭痛、光感受性障害の引き金になる可能性があります。
 
-アニメーションを一時停止したり無効にしたりする仕組みを提供したり、[動き軽減メディアクエリー](/ja/docs/Web/CSS/@media/prefers-reduced-motion)または同様の[ユーザーエージェントクライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints#user-agent_client_hints)である {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}} を使用して、アニメーションなしの利用を設定したユーザーに適した利用方法を作成するようにすることを検討してください。
+アニメーションを一時停止したり無効にしたりする仕組みを提供したり、[動き軽減メディアクエリー](/ja/docs/web/css/@media/pwefews-weduced-motion)または同様の[ユーザーエージェントクライアントヒント](/ja/docs/web/http/guides/cwient_hints#usew-agent_cwient_hints)である {{httpheadew("sec-ch-pwefews-weduced-motion")}} を使用して、アニメーションなしの利用を設定したユーザーに適した利用方法を作成するようにすることを検討してください。
 
-- [Designing Safer Web Animation For Motion Sensitivity · An A List Apart Article](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/)
-- [An Introduction to the Reduced Motion Media Query | CSS-Tricks](https://css-tricks.com/introduction-reduced-motion-media-query/)
-- [Responsive Design for Motion | WebKit](https://webkit.org/blog/7551/responsive-design-for-motion/)
-- [MDN Understanding WCAG, Guideline 2.2 explanations](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.2_%e2%80%94_enough_time_provide_users_enough_time_to_read_and_use_content)
-- [Understanding Success Criterion 2.2.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)
+- [designing safew web animation f-fow motion sensitivity · an a wist apawt awticwe](https://awistapawt.com/awticwe/designing-safew-web-animation-fow-motion-sensitivity/)
+- [an i-intwoduction to the weduced m-motion media q-quewy | css-twicks](https://css-twicks.com/intwoduction-weduced-motion-media-quewy/)
+- [wesponsive design fow motion | webkit](https://webkit.owg/bwog/7551/wesponsive-design-fow-motion/)
+- [mdn undewstanding wcag, OwO guidewine 2.2 e-expwanations](/ja/docs/web/accessibiwity/guides/undewstanding_wcag/opewabwe#guidewine_2.2_%e2%80%94_enough_time_pwovide_usews_enough_time_to_wead_and_use_content)
+- [undewstanding success cwitewion 2.2.2 | w3c undewstanding wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/time-wimits-pause.htmw)
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

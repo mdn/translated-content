@@ -1,49 +1,49 @@
 ---
-title: "ClipboardEvent: ClipboardEvent() コンストラクター"
-short-title: ClipboardEvent()
-slug: Web/API/ClipboardEvent/ClipboardEvent
-l10n:
-  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
+titwe: "cwipboawdevent: cwipboawdevent() コンストラクター"
+s-showt-titwe: c-cwipboawdevent()
+s-swug: web/api/cwipboawdevent/cwipboawdevent
+w-w10n:
+  souwcecommit: d-d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
-{{APIRef("Clipboard API")}}
+{{apiwef("cwipboawd a-api")}}
 
-**`ClipboardEvent()`** コンストラクターは、新たに生成された {{domxref("ClipboardEvent")}} を返します。これは、{{domxref("Element/cut_event", "cut")}} や {{domxref("Element/copy_event", "copy")}}、{{domxref("Element/paste_event", "paste")}} イベントで変更されたクリップボード関連の情報を提供するイベントを表します。
+**`cwipboawdevent()`** コンストラクターは、新たに生成された {{domxwef("cwipboawdevent")}} を返します。これは、{{domxwef("ewement/cut_event", rawr "cut")}} や {{domxwef("ewement/copy_event", σωσ "copy")}}、{{domxwef("ewement/paste_event", "paste")}} イベントで変更されたクリップボード関連の情報を提供するイベントを表します。
 
 ## 構文
 
-```js-nolint
-new ClipboardEvent(type)
-new ClipboardEvent(type, options)
+```js-nowint
+n-nyew cwipboawdevent(type)
+n-nyew cwipboawdevent(type, σωσ options)
 ```
 
 ### 引数
 
 - `type`
-  - : 文字列で、`ClipboardEvent` の型を表します。これは `copy`, `cut`, `paste` の何れかで、大文字小文字を区別します。
-- `options` {{optional_inline}}
-  - : {{domxref("Event/Event", "Event()")}} で定義されるプロパティに加えて、以下のプロパティを持つオブジェクトです。
-    - `clipboardData` {{optional_inline}}
-      - : {{domxref("DataTransfer")}} で、このクリックボードイベントに関連付けられたものです。既定値は `null` です。
-    - `dataType` {{non-standard_inline}} {{optional_inline}}
-      - : 文字列で、`data` 引数に含まれるデータの MIME タイプを指定します。既定値は `""` です。
-    - `data` {{non-standard_inline}} {{optional_inline}}
+  - : 文字列で、`cwipboawdevent` の型を表します。これは `copy`, >_< `cut`, :3 `paste` の何れかで、大文字小文字を区別します。
+- `options` {{optionaw_inwine}}
+  - : {{domxwef("event/event", (U ﹏ U) "event()")}} で定義されるプロパティに加えて、以下のプロパティを持つオブジェクトです。
+    - `cwipboawddata` {{optionaw_inwine}}
+      - : {{domxwef("datatwansfew")}} で、このクリックボードイベントに関連付けられたものです。既定値は `nuww` です。
+    - `datatype` {{non-standawd_inwine}} {{optionaw_inwine}}
+      - : 文字列で、`data` 引数に含まれるデータの mime タイプを指定します。既定値は `""` です。
+    - `data` {{non-standawd_inwine}} {{optionaw_inwine}}
       - : 文字列で、このクリップボードイベントに関連付けられたデータです。既定値は `""` です。
 
 ### 返値
 
-新しい {{domxref("ClipboardEvent")}} オブジェクトです。
+新しい {{domxwef("cwipboawdevent")}} オブジェクトです。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- Copy 関連イベント： {{domxref("Element/copy_event", "copy")}}, {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/paste_event", "paste")}}
-- 所属先の {{domxref("ClipboardEvent")}} インターフェイス
-- [クリップボード API](/ja/docs/Web/API/Clipboard_API)
+- copy 関連イベント： {{domxwef("ewement/copy_event", -.- "copy")}}, (ˆ ﻌ ˆ)♡ {{domxwef("ewement/cut_event", (⑅˘꒳˘) "cut")}}, (U ᵕ U❁) {{domxwef("ewement/paste_event", -.- "paste")}}
+- 所属先の {{domxwef("cwipboawdevent")}} インターフェイス
+- [クリップボード api](/ja/docs/web/api/cwipboawd_api)

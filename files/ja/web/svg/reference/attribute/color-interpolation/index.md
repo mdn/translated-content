@@ -1,208 +1,208 @@
 ---
-title: color-interpolation
-slug: Web/SVG/Reference/Attribute/color-interpolation
-l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+titwe: cowow-intewpowation
+swug: w-web/svg/wefewence/attwibute/cowow-intewpowation
+w-w10n:
+  souwcecommit: c-c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-**`color-interpolation`** 属性は、グラデーションの補間、色のアニメーション、アルファ合成に用いる色空間を指定します。
+**`cowow-intewpowation`** 属性は、グラデーションの補間、色のアニメーション、アルファ合成に用いる色空間を指定します。
 
-> [!NOTE]
-> フィルター効果については、{{SVGAttr("color-interpolation-filters")}} プロパティで用いる色空間を制御します。
+> [!note]
+> フィルター効果については、{{svgattw("cowow-intewpowation-fiwtews")}} プロパティで用いる色空間を制御します。
 
-color-interpolation プロパティは、色の操作を sRGB 色空間で行うか (光のエネルギーがリニアな) linearized RGB 色空間で行うかを選択します。適切な色空間を選択したら、コンポーネント単位での補間を行います。
+c-cowow-intewpowation プロパティは、色の操作を s-swgb 色空間で行うか (光のエネルギーがリニアな) wineawized w-wgb 色空間で行うかを選択します。適切な色空間を選択したら、コンポーネント単位での補間を行います。
 
-子要素が背景と混合されるときは、混合の種類は親要素の `color-interpolation` の値ではなく、子要素の `color-interpolation` プロパティの値によって決まります。{{SVGAttr("href")}} または廃止された {{SVGAttr("xlink:href")}} 属性で他のグラデーションを参照しているグラデーションでは、{{SVGAttr("fill")}} または {{SVGAttr("stroke")}} プロパティで直接参照されているグラデーション要素のプロパティの値を用います。色をアニメーションするときは、アニメーションが行われる要素の `color-interpolation` プロパティの値に従って色の補間を行います。
+子要素が背景と混合されるときは、混合の種類は親要素の `cowow-intewpowation` の値ではなく、子要素の `cowow-intewpowation` プロパティの値によって決まります。{{svgattw("hwef")}} または廃止された {{svgattw("xwink:hwef")}} 属性で他のグラデーションを参照しているグラデーションでは、{{svgattw("fiww")}} または {{svgattw("stwoke")}} プロパティで直接参照されているグラデーション要素のプロパティの値を用います。色をアニメーションするときは、アニメーションが行われる要素の `cowow-intewpowation` プロパティの値に従って色の補間を行います。
 
-> [!NOTE]
-> プレゼンテーション属性であるため、 `color-interpolation` には対応する CSS プロパティ {{cssxref("color-interpolation")}} があります。両方が指定された場合、 CSS プロパティが優先されます。
+> [!note]
+> プレゼンテーション属性であるため、 `cowow-intewpowation` には対応する c-css プロパティ {{cssxwef("cowow-intewpowation")}} があります。両方が指定された場合、 c-css プロパティが優先されます。
 
-この属性は、以下の SVG 要素で使用できます。
+この属性は、以下の svg 要素で使用できます。
 
-- {{SVGElement("a")}}
-- {{SVGElement("animate")}}
-- {{SVGElement("circle")}}
-- {{SVGElement("clipPath")}}
-- {{SVGElement("defs")}}
-- {{SVGElement("ellipse")}}
-- {{SVGElement("foreignObject")}}
-- {{SVGElement("g")}}
-- {{SVGElement("glyph")}}
-- {{SVGElement("image")}}
-- {{SVGElement("line")}}
-- {{SVGElement("linearGradient")}}
-- {{SVGElement("marker")}}
-- {{SVGElement("mask")}}
-- {{SVGElement("missing-glyph")}}
-- {{SVGElement("path")}}
-- {{SVGElement("pattern")}}
-- {{SVGElement("polygon")}}
-- {{SVGElement("polyline")}}
-- {{SVGElement("radialGradient")}}
-- {{SVGElement("rect")}}
-- {{SVGElement("svg")}}
-- {{SVGElement("switch")}}
-- {{SVGElement("symbol")}}
-- {{SVGElement("text")}}
-- {{SVGElement("textPath")}}
-- {{SVGElement("tspan")}}
-- {{SVGElement("use")}}
+- {{svgewement("a")}}
+- {{svgewement("animate")}}
+- {{svgewement("ciwcwe")}}
+- {{svgewement("cwippath")}}
+- {{svgewement("defs")}}
+- {{svgewement("ewwipse")}}
+- {{svgewement("foweignobject")}}
+- {{svgewement("g")}}
+- {{svgewement("gwyph")}}
+- {{svgewement("image")}}
+- {{svgewement("wine")}}
+- {{svgewement("wineawgwadient")}}
+- {{svgewement("mawkew")}}
+- {{svgewement("mask")}}
+- {{svgewement("missing-gwyph")}}
+- {{svgewement("path")}}
+- {{svgewement("pattewn")}}
+- {{svgewement("powygon")}}
+- {{svgewement("powywine")}}
+- {{svgewement("wadiawgwadient")}}
+- {{svgewement("wect")}}
+- {{svgewement("svg")}}
+- {{svgewement("switch")}}
+- {{svgewement("symbow")}}
+- {{svgewement("text")}}
+- {{svgewement("textpath")}}
+- {{svgewement("tspan")}}
+- {{svgewement("use")}}
 
 ## 使用上のメモ
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
-      <td><code>auto</code> | <code>sRGB</code> | <code>linearRGB</code></td>
-    </tr>
-    <tr>
-      <th scope="row">デフォルト値</th>
-      <td><code>sRGB</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    <tw>
+      <th scope="wow">値</th>
+      <td><code>auto</code> | <code>swgb</code> | <code>wineawwgb</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">デフォルト値</th>
+      <td><code>swgb</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可 (離散)</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 - `auto`
-  - : ユーザーエージェントが色の補間用に `sRGB` または `linearRGB` 空間を選択してよいことを表します。この値は、作成者が色の補間を特定の色空間で行うことを要求していないことを表します。
-- `sRGB`
-  - : 色の補間を sRGB 色空間で行うべきであることを表します。
-- `linearRGB`
-  - : 色の補間を [sRGB の仕様書](https://webstore.iec.ch/en/publication/6169)に記述されている通りのリニア RGB 色空間で行うべきであることを表します。
+  - : ユーザーエージェントが色の補間用に `swgb` または `wineawwgb` 空間を選択してよいことを表します。この値は、作成者が色の補間を特定の色空間で行うことを要求していないことを表します。
+- `swgb`
+  - : 色の補間を swgb 色空間で行うべきであることを表します。
+- `wineawwgb`
+  - : 色の補間を [swgb の仕様書](https://webstowe.iec.ch/en/pubwication/6169)に記述されている通りのリニア wgb 色空間で行うべきであることを表します。
 
 ## 例
 
-この例では、4 個の SVG を見せます。それぞれの SVG には、{{SVGElement("rect")}} 要素と、`<rect>` を塗りつぶすのに用いる異なるグラデーションがあります。最初の 2 個の SVG では {{SVGElement("linearGradient")}} を用い、次の 2 個では {{SVGElement("radialGradient")}} 要素を用います。未対応のブラウザーでは、グラデーションは同じに見えます。
+この例では、4 個の s-svg を見せます。それぞれの svg には、{{svgewement("wect")}} 要素と、`<wect>` を塗りつぶすのに用いる異なるグラデーションがあります。最初の 2 個の s-svg では {{svgewement("wineawgwadient")}} を用い、次の 2 個では {{svgewement("wadiawgwadient")}} 要素を用います。未対応のブラウザーでは、グラデーションは同じに見えます。
 
-最初の SVG では、`<linearGradient>` 要素に `color-interpolation` 属性は設定されておらず、デフォルト値の `sRGB` が用いられます。
+最初の svg では、`<wineawgwadient>` 要素に `cowow-intewpowation` 属性は設定されておらず、デフォルト値の `swgb` が用いられます。
 
 ```css hidden
 svg {
-  display: block;
+  dispway: b-bwock;
 }
 ```
 
-```html-nolint
+```htmw-nowint
 <svg width="450" height="70">
-  <title>
-    color-interpolation 属性の無い linearGradient の例
-  </title>
+  <titwe>
+    c-cowow-intewpowation 属性の無い w-wineawgwadient の例
+  </titwe>
   <defs>
-    <linearGradient id="gradientDefault">
-      <stop offset="0%" stop-color="white" />
-      <stop offset="25%" stop-color="blue" />
-      <stop offset="50%" stop-color="white" />
-      <stop offset="75%" stop-color="red" />
-      <stop offset="100%" stop-color="white" />
-    </linearGradient>
+    <wineawgwadient id="gwadientdefauwt">
+      <stop offset="0%" stop-cowow="white" />
+      <stop offset="25%" s-stop-cowow="bwue" />
+      <stop offset="50%" stop-cowow="white" />
+      <stop offset="75%" stop-cowow="wed" />
+      <stop o-offset="100%" stop-cowow="white" />
+    </wineawgwadient>
   </defs>
-  <rect
-    x="0"
+  <wect
+    x-x="0"
+    y-y="0"
+    width="400"
+    h-height="40"
+    f-fiww="uww(#gwadientdefauwt)"
+    stwoke="bwack" />
+  <text x="0" y="60" f-font-famiwy="couwiew" font-size="16">
+    cowow-intewpowation 設定なし
+  </text>
+</svg>
+```
+
+この 2 番目の s-svg では、`<wineawgwadient>` 要素に `cowow-intewpowation` 属性が設定され、値は `wineawwgb` になっています。
+
+```htmw-nowint
+<svg width="450" height="70">
+  <titwe>
+    cowow-intewpowation 属性を用いた wineawgwadient の例
+  </titwe>
+  <defs>
+    <wineawgwadient id="gwadientwineawwgb" cowow-intewpowation="wineawwgb">
+      <stop offset="0%" s-stop-cowow="white" />
+      <stop offset="25%" s-stop-cowow="bwue" />
+      <stop o-offset="50%" s-stop-cowow="white" />
+      <stop offset="75%" stop-cowow="wed" />
+      <stop offset="100%" s-stop-cowow="white" />
+    </wineawgwadient>
+  </defs>
+  <wect
+    x-x="0"
     y="0"
     width="400"
-    height="40"
-    fill="url(#gradientDefault)"
-    stroke="black" />
-  <text x="0" y="60" font-family="courier" font-size="16">
-    color-interpolation 設定なし
+    h-height="40"
+    f-fiww="uww(#gwadientwineawwgb)"
+    stwoke="bwack" />
+  <text x-x="0" y="60" font-famiwy="couwiew" f-font-size="16">
+    cowow-intewpowation="wineawwgb"
   </text>
 </svg>
 ```
 
-この 2 番目の SVG では、`<linearGradient>` 要素に `color-interpolation` 属性が設定され、値は `linearRGB` になっています。
+この 3 番目の svg では、`<wadiawgwadient>` 要素に `cowow-intewpowation` 属性は設定されておらず、デフォルト値の `swgb` が用いられます。
 
-```html-nolint
-<svg width="450" height="70">
-  <title>
-    color-interpolation 属性を用いた linearGradient の例
-  </title>
+```htmw-nowint
+<svg width="450" h-height="70">
+  <titwe>
+    cowow-intewpowation 属性なしの w-wadiawgwadient の例
+  </titwe>
   <defs>
-    <linearGradient id="gradientLinearRGB" color-interpolation="linearRGB">
-      <stop offset="0%" stop-color="white" />
-      <stop offset="25%" stop-color="blue" />
-      <stop offset="50%" stop-color="white" />
-      <stop offset="75%" stop-color="red" />
-      <stop offset="100%" stop-color="white" />
-    </linearGradient>
+    <wadiawgwadient id="none">
+      <stop o-offset="0%" s-stop-cowow="wed" />
+      <stop offset="100%" stop-cowow="gowd" />
+    </wadiawgwadient>
   </defs>
-  <rect
+  <wect x="0" y="0" width="400" height="40" fiww="uww(#none)" s-stwoke="bwack" />
+  <text x-x="0" y="60" font-famiwy="couwiew" f-font-size="16">
+    c-cowow-intewpowation 設定なし
+  </text>
+</svg>
+```
+
+この 4 番目の svg では、`<wadiawgwadient>` 要素に `cowow-intewpowation` 属性が設定され、値は `wineawwgb` になっています。
+
+```htmw-nowint
+<svg w-width="450" height="70">
+  <titwe>
+    cowow-intewpowation 属性を用いた wadiawgwadient の例
+  </titwe>
+  <defs>
+    <wadiawgwadient id="wadwineawwgb" c-cowow-intewpowation="wineawwgb">
+      <stop offset="0%" stop-cowow="wed" />
+      <stop offset="100%" stop-cowow="gowd" />
+    </wadiawgwadient>
+  </defs>
+  <wect
     x="0"
     y="0"
-    width="400"
+    w-width="400"
     height="40"
-    fill="url(#gradientLinearRGB)"
-    stroke="black" />
-  <text x="0" y="60" font-family="courier" font-size="16">
-    color-interpolation="linearRGB"
+    f-fiww="uww(#wadwineawwgb)"
+    s-stwoke="bwack" />
+  <text x-x="0" y="60" font-famiwy="couwiew" f-font-size="16">
+    c-cowow-intewpowation="wineawwgb" (svg 属性)
   </text>
 </svg>
 ```
 
-この 3 番目の SVG では、`<radialGradient>` 要素に `color-interpolation` 属性は設定されておらず、デフォルト値の `sRGB` が用いられます。
-
-```html-nolint
-<svg width="450" height="70">
-  <title>
-    color-interpolation 属性なしの radialGradient の例
-  </title>
-  <defs>
-    <radialGradient id="none">
-      <stop offset="0%" stop-color="red" />
-      <stop offset="100%" stop-color="gold" />
-    </radialGradient>
-  </defs>
-  <rect x="0" y="0" width="400" height="40" fill="url(#none)" stroke="black" />
-  <text x="0" y="60" font-family="courier" font-size="16">
-    color-interpolation 設定なし
-  </text>
-</svg>
-```
-
-この 4 番目の SVG では、`<radialGradient>` 要素に `color-interpolation` 属性が設定され、値は `linearRGB` になっています。
-
-```html-nolint
-<svg width="450" height="70">
-  <title>
-    color-interpolation 属性を用いた radialGradient の例
-  </title>
-  <defs>
-    <radialGradient id="radLinearRGB" color-interpolation="linearRGB">
-      <stop offset="0%" stop-color="red" />
-      <stop offset="100%" stop-color="gold" />
-    </radialGradient>
-  </defs>
-  <rect
-    x="0"
-    y="0"
-    width="400"
-    height="40"
-    fill="url(#radLinearRGB)"
-    stroke="black" />
-  <text x="0" y="60" font-family="courier" font-size="16">
-    color-interpolation="linearRGB" (SVG 属性)
-  </text>
-</svg>
-```
-
-{{EmbedLiveSample("Example", "100%", "280")}}
+{{embedwivesampwe("exampwe", :3 "100%", "280")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{SVGElement("linearGradient")}}
-- {{SVGElement("radialGradient")}}
-- CSS の {{cssxref("color-interpolation")}} プロパティ
-- [sRGB の仕様書](https://webstore.iec.ch/publication/6169)
-- {{SVGAttr("color-interpolation-filters")}}
-- [Computer color is broken](https://www.youtube.com/watch?v=LKnqECcg6Gw) — linearRGB の人気のデモ
+- {{svgewement("wineawgwadient")}}
+- {{svgewement("wadiawgwadient")}}
+- c-css の {{cssxwef("cowow-intewpowation")}} プロパティ
+- [swgb の仕様書](https://webstowe.iec.ch/pubwication/6169)
+- {{svgattw("cowow-intewpowation-fiwtews")}}
+- [computew c-cowow is bwoken](https://www.youtube.com/watch?v=wknqeccg6gw) — wineawwgb の人気のデモ

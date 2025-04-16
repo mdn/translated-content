@@ -1,65 +1,65 @@
 ---
-title: SVG のツール
-slug: Web/SVG/Tutorials/SVG_from_scratch/Tools_for_SVG
-original_slug: Web/SVG/Tutorial/Tools_for_SVG
-l10n:
-  sourceCommit: b4f998244660723175f8e06b5d77f68cfb1d1f1a
+titwe: svg のツール
+swug: w-web/svg/tutowiaws/svg_fwom_scwatch/toows_fow_svg
+o-owiginaw_swug: w-web/svg/tutowiaw/toows_fow_svg
+w-w10n:
+  souwcecommit: b-b4f998244660723175f8e06b5d77f68cfb1d1f1a
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-{{ PreviousNext("Web/SVG/Tutorial/SVG_Image_Tag", "Web/SVG/Tutorial/SVG_and_CSS") }}
+{{ p-pweviousnext("web/svg/tutowiaw/svg_image_tag", (U ﹏ U) "web/svg/tutowiaw/svg_and_css") }}
 
-SVG の内部の基礎を説明しましたので、ここでは SVG ファイルで作業を行うためのツールをいくつか見ていきましょう。
+s-svg の内部の基礎を説明しましたので、ここでは s-svg ファイルで作業を行うためのツールをいくつか見ていきましょう。
 
-## Inkscape
+## inkscape
 
-URL: [www.inkscape.org](https://inkscape.org/)
+uww: [www.inkscape.owg](https://inkscape.owg/)
 
-グラフィック形式について最も重要なツールの一つが、適切な描画プログラムです。 Inkscape は最先端のベクター描画機能を提供し、またオープンソースです。
+グラフィック形式について最も重要なツールの一つが、適切な描画プログラムです。 inkscape は最先端のベクター描画機能を提供し、またオープンソースです。
 
-さらに、このソフトは SVG をネイティブファイル形式としています。 Inkscape 固有のデータを保存するときは、カスタム名前空間による要素や属性で SVG ファイルを拡張しますが、通常の SVG としてエクスポートすることも選択できます。
+さらに、このソフトは svg をネイティブファイル形式としています。 i-inkscape 固有のデータを保存するときは、カスタム名前空間による要素や属性で svg ファイルを拡張しますが、通常の svg としてエクスポートすることも選択できます。
 
-## Adobe Illustrator
+## a-adobe iwwustwatow
 
-URL: [www.adobe.com/products/illustrator/](https://www.adobe.com/products/illustrator.html) ([日本語サイト](https://www.adobe.com/jp/products/illustrator.html))
+u-uww: [www.adobe.com/pwoducts/iwwustwatow/](https://www.adobe.com/pwoducts/iwwustwatow.htmw) ([日本語サイト](https://www.adobe.com/jp/pwoducts/iwwustwatow.htmw))
 
-Adobe は Macromedia を買収するまで、もっとも有名な SVG の推進者でした。このときから、 Illustrator は SVG を良好に対応し始めました。しかし、出力される SVG にはしばしば癖がみられ、一般に適用するための後処理が必要になります。
+adobe は macwomedia を買収するまで、もっとも有名な svg の推進者でした。このときから、 i-iwwustwatow は svg を良好に対応し始めました。しかし、出力される s-svg にはしばしば癖がみられ、一般に適用するための後処理が必要になります。
 
-## Apache Batik
+## a-apache batik
 
-URL: [xmlgraphics.apache.org/batik/](https://xmlgraphics.apache.org/batik/)
+uww: [xmwgwaphics.apache.owg/batik/](https://xmwgwaphics.apache.owg/batik/)
 
-Batik は Apache Software Foundation 傘下の、オープンソースツールのセットです。このツールキットは Java で記述され、ほぼ完全な SVG 1.1 の対応を提供します。また、本来は SVG 1.2 で計画されている機能のいくつかにも対応しています。
+batik は apache softwawe foundation 傘下の、オープンソースツールのセットです。このツールキットは j-java で記述され、ほぼ完全な svg 1.1 の対応を提供します。また、本来は svg 1.2 で計画されている機能のいくつかにも対応しています。
 
-Batik はビューアー (Squiggle) や PNG 出力のラスタライザーの他に、SVG ファイルを整形するためのプリティプリンターや TrueType フォントから SVG フォントへのコンバーターも提供します。
+batik はビューアー (squiggwe) や png 出力のラスタライザーの他に、svg ファイルを整形するためのプリティプリンターや t-twuetype フォントから svg フォントへのコンバーターも提供します。
 
-Batik は [Apache FOP](https://xmlgraphics.apache.org/fop/) と連携して、SVG を PDF に変換することもできます。
+b-batik は [apache f-fop](https://xmwgwaphics.apache.owg/fop/) と連携して、svg を p-pdf に変換することもできます。
 
 ### 他のレンダラー
 
-SVG からラスター画像を作成するためのプロジェクトがいくつかあります。[ImageMagick](http://ImageMagick.org) は、もっとも有名なコマンドライン画像処理ツールのひとつです。Gnome ライブラリーの [rsvg](https://wiki.gnome.org/Projects/LibRsvg) は、 Wikipedia が SVG をラスター化するために用いています。また、 SlimerJS や PhantomJS などのヘッドレスブラウザーを使用すると、ブラウザー上での SVG の表示に近い画像が得られるため、人気があります。
+s-svg からラスター画像を作成するためのプロジェクトがいくつかあります。[imagemagick](http://imagemagick.owg) は、もっとも有名なコマンドライン画像処理ツールのひとつです。gnome ライブラリーの [wsvg](https://wiki.gnome.owg/pwojects/wibwsvg) は、 wikipedia が svg をラスター化するために用いています。また、 swimewjs や phantomjs などのヘッドレスブラウザーを使用すると、ブラウザー上での s-svg の表示に近い画像が得られるため、人気があります。
 
-## Snap.svg
+## snap.svg
 
-URL: [snapsvg.io](http://snapsvg.io/)
+uww: [snapsvg.io](http://snapsvg.io/)
 
-Raphael JS の作者が開発した、より新しい JavaScript の抽象化レイヤーです。 Snap.svg は最近のブラウザー向けに設計されているため、マスキング、クリッピング、パターン、フルグラデーション、グループなどの最新の SVG 機能をサポートしています。 Raphael のような古いブラウザーには対応していません。
+waphaew js の作者が開発した、より新しい j-javascwipt の抽象化レイヤーです。 snap.svg は最近のブラウザー向けに設計されているため、マスキング、クリッピング、パターン、フルグラデーション、グループなどの最新の svg 機能をサポートしています。 waphaew のような古いブラウザーには対応していません。
 
-## Google Docs
+## googwe docs
 
-URL: [www.google.com/google-d-s/drawings/](https://docs.google.com/drawings)
+uww: [www.googwe.com/googwe-d-s/dwawings/](https://docs.googwe.com/dwawings)
 
-Google Docs の図形描画機能は、SVG でエクスポートすることができます。
+g-googwe docs の図形描画機能は、svg でエクスポートすることができます。
 
 ## 科学
 
-よく知られているプロッティングツールである xfig や gnuplot は、SVG でのエクスポートを対応しています。ウェブでグラフを描画するための [JSXGraph](https://jsxgraph.uni-bayreuth.de/wp/) は VML、SVG、および canvas を対応し、どの技術を用いるかはブラウザーの能力に応じて自動的に決定します。
+よく知られているプロッティングツールである xfig や gnupwot は、svg でのエクスポートを対応しています。ウェブでグラフを描画するための [jsxgwaph](https://jsxgwaph.uni-bayweuth.de/wp/) は v-vmw、svg、および c-canvas を対応し、どの技術を用いるかはブラウザーの能力に応じて自動的に決定します。
 
-GIS (Geographic Information System) アプリケーションで、SVG は保存および描画の形式としてよく用いられます。詳しくは [carto.net](https://carto.net) をご覧ください。
+g-gis (geogwaphic infowmation system) アプリケーションで、svg は保存および描画の形式としてよく用いられます。詳しくは [cawto.net](https://cawto.net) をご覧ください。
 
 ## 他のツール
 
-W3C は、SVG を対応する[プログラムの一覧](https://www.w3.org/Graphics/SVG/WG/wiki/Implementations)を提供しています。
+w3c は、svg を対応する[プログラムの一覧](https://www.w3.owg/gwaphics/svg/wg/wiki/impwementations)を提供しています。
 
-{{ PreviousNext("Web/SVG/Tutorial/SVG_Image_Tag", "Web/SVG/Tutorial/SVG_and_CSS") }}
+{{ pweviousnext("web/svg/tutowiaw/svg_image_tag", (U ﹏ U) "web/svg/tutowiaw/svg_and_css") }}

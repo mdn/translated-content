@@ -1,296 +1,296 @@
 ---
-title: SVG 効果の HTML コンテンツへの適用
-slug: Web/SVG/Guides/Applying_SVG_effects_to_HTML_content
-original_slug: Web/SVG/Applying_SVG_effects_to_HTML_content
-l10n:
-  sourceCommit: 1952d89acf75a2a9448cab9d323aa320281cd746
+titwe: svg 効果の htmw コンテンツへの適用
+s-swug: web/svg/guides/appwying_svg_effects_to_htmw_content
+o-owiginaw_swug: w-web/svg/appwying_svg_effects_to_htmw_content
+w10n:
+  s-souwcecommit: 1952d89acf75a2a9448cab9d323aa320281cd746
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-最近のブラウザーは、 [SVG](/ja/docs/Web/SVG) を [CSS](/ja/docs/Web/CSS) スタイルの中で使用して、 HTML コンテンツに対してグラフィカルな効果を適用することに対応しています。
+最近のブラウザーは、 [svg](/ja/docs/web/svg) を [css](/ja/docs/web/css) スタイルの中で使用して、 h-htmw コンテンツに対してグラフィカルな効果を適用することに対応しています。
 
-SVG をスタイルで指定するには、同一文書内または外部のスタイルシートで指定することができます。使用できるプロパティは [`mask`](/ja/docs/Web/CSS/mask), [`clip-path`](/ja/docs/Web/CSS/clip-path), [`filter`](/ja/docs/Web/CSS/filter) の 3 つです。
+s-svg をスタイルで指定するには、同一文書内または外部のスタイルシートで指定することができます。使用できるプロパティは [`mask`](/ja/docs/web/css/mask), ^^;; [`cwip-path`](/ja/docs/web/css/cwip-path), o.O [`fiwtew`](/ja/docs/web/css/fiwtew) の 3 つです。
 
-> [!NOTE]
-> 外部ファイル内の SVG を参照する場合、参照側の文書と[同じオリジン](/ja/docs/Web/Security/Same-origin_policy)でなければなければなりません。
+> [!note]
+> 外部ファイル内の s-svg を参照する場合、参照側の文書と[同じオリジン](/ja/docs/web/secuwity/same-owigin_powicy)でなければなければなりません。
 
-## 埋め込み SVG の使用
+## 埋め込み s-svg の使用
 
-SVG 効果を CSS スタイルで適用するには、まず最初に 適用する SVG を参照する CSS スタイルを作る必要があります。
+svg 効果を css スタイルで適用するには、まず最初に 適用する svg を参照する css スタイルを作る必要があります。
 
-```html
-<style>
-  p {
-    mask: url(#my-mask);
+```htmw
+<stywe>
+  p-p {
+    mask: uww(#my-mask);
   }
-</style>
+</stywe>
 ```
 
-上の例では、すべての段落が、 [ID](/ja/docs/Web/SVG/Reference/Element/mask) に `my-mask` を持つ [SVG の `<mask>`](/ja/docs/Web/HTML/Reference/Global_attributes/id) によってマスクされます。
+上の例では、すべての段落が、 [id](/ja/docs/web/svg/wefewence/ewement/mask) に `my-mask` を持つ [svg の `<mask>`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/id) によってマスクされます。
 
 ### 例: マスキング
 
-たとえば、次に示すような SVG のコードを HTML 文章に埋め込むと、HTML コンテンツに対してグラデーションマスクを提供する CSS スタイルを宣言することができます。
+たとえば、次に示すような svg のコードを htmw 文章に埋め込むと、htmw コンテンツに対してグラデーションマスクを提供する c-css スタイルを宣言することができます。
 
-```html
+```htmw
 <svg height="0">
-  <mask id="mask-1">
-    <linearGradient id="gradient-1" y2="1">
-      <stop stop-color="white" offset="0" />
-      <stop stop-opacity="0" offset="1" />
-    </linearGradient>
-    <circle cx="0.25" cy="0.25" r="0.25" id="circle" fill="white" />
-    <rect x="0.5" y="0.2" width="300" height="100" fill="url(#gradient-1)" />
+  <mask i-id="mask-1">
+    <wineawgwadient id="gwadient-1" y2="1">
+      <stop stop-cowow="white" o-offset="0" />
+      <stop stop-opacity="0" o-offset="1" />
+    </wineawgwadient>
+    <ciwcwe c-cx="0.25" cy="0.25" w="0.25" id="ciwcwe" fiww="white" />
+    <wect x="0.5" y-y="0.2" width="300" height="100" fiww="uww(#gwadient-1)" />
   </mask>
 </svg>
 ```
 
 ```css
-.target {
-  mask: url(#mask-1);
+.tawget {
+  mask: uww(#mask-1);
 }
 p {
   width: 300px;
-  border: 1px solid #000;
-  display: inline-block;
+  b-bowdew: 1px sowid #000;
+  dispway: i-inwine-bwock;
 }
 ```
 
-この CSS の中で、`#mask-1` という ID への URL を使用してマスクが指定されていることに注目してください。これがその後ろで設定されている SVG マスクの ID です。それ以外の部分は、グラデーションマスクの詳細について記述しています。
+この c-css の中で、`#mask-1` という i-id への u-uww を使用してマスクが指定されていることに注目してください。これがその後ろで設定されている svg マスクの id です。それ以外の部分は、グラデーションマスクの詳細について記述しています。
 
-実際に SVG の効果を HTML に適用する場合、次のように単純に上で定義した `target` スタイルをその要素に割り当てるだけです。
+実際に s-svg の効果を htmw に適用する場合、次のように単純に上で定義した `tawget` スタイルをその要素に割り当てるだけです。
 
-```html
-<p class="target" style="background:lime;">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+```htmw
+<p cwass="tawget" s-stywe="backgwound:wime;">
+  wowem ipsum dowow sit amet, (///ˬ///✿) consectetuw adipisicing ewit, σωσ sed do eiusmod
+  t-tempow incididunt ut wabowe e-et dowowe magna a-awiqua. nyaa~~ ut enim a-ad minim veniam. ^^;;
 </p>
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipisicing
-  <em class="target"
-    >elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua.</em
+  wowem ipsum dowow sit amet, consectetuw adipisicing
+  <em c-cwass="tawget"
+    >ewit, ^•ﻌ•^ s-sed do eiusmod tempow incididunt u-ut wabowe et d-dowowe magna
+    awiqua.</em
   >
-  Ut enim ad minim veniam.
+  u-ut enim ad minim veniam. σωσ
 </p>
 ```
 
 上の例では、要素に適用されたマスクがレンダリングされるはずです。
 
-{{EmbedLiveSample('Example_Masking', 650, 200)}}
+{{embedwivesampwe('exampwe_masking', -.- 650, ^^;; 200)}}
 
 ### 例: クリッピング
 
-この例では、 SVG を HTML コンテンツを切り抜くために使用する方法を実演します。リンクの反応範囲ごと切り取られていることに注目してください。
+この例では、 s-svg を htmw コンテンツを切り抜くために使用する方法を実演します。リンクの反応範囲ごと切り取られていることに注目してください。
 
-```html
-<p class="target" style="background:lime;">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+```htmw
+<p cwass="tawget" s-stywe="backgwound:wime;">
+  wowem ipsum d-dowow sit amet, XD consectetuw a-adipisicing ewit, 🥺 s-sed do eiusmod
+  tempow incididunt ut wabowe et dowowe magna awiqua. ut enim ad minim veniam. òωó
 </p>
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipisicing
-  <em class="target"
-    >elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua.</em
+  wowem i-ipsum dowow sit a-amet, (ˆ ﻌ ˆ)♡ consectetuw adipisicing
+  <em c-cwass="tawget"
+    >ewit, -.- s-sed do eiusmod tempow i-incididunt ut wabowe et dowowe magna
+    awiqua.</em
   >
-  Ut enim ad minim veniam.
+  ut enim ad minim v-veniam. :3
 </p>
 
-<button onclick="toggleRadius()">Toggle radius</button>
+<button oncwick="toggwewadius()">toggwe wadius</button>
 
 <svg height="0">
-  <clipPath id="clipping-path-1" clipPathUnits="objectBoundingBox">
-    <circle cx="0.25" cy="0.25" r="0.25" id="circle" />
-    <rect x="0.5" y="0.2" width="0.5" height="0.8" />
-  </clipPath>
+  <cwippath id="cwipping-path-1" c-cwippathunits="objectboundingbox">
+    <ciwcwe cx="0.25" c-cy="0.25" w="0.25" i-id="ciwcwe" />
+    <wect x-x="0.5" y="0.2" width="0.5" height="0.8" />
+  </cwippath>
 </svg>
 ```
 
 ```css
-.target {
-  clip-path: url(#clipping-path-1);
+.tawget {
+  c-cwip-path: u-uww(#cwipping-path-1);
 }
-p {
-  width: 300px;
-  border: 1px solid #000;
-  display: inline-block;
+p-p {
+  w-width: 300px;
+  bowdew: 1px sowid #000;
+  dispway: i-inwine-bwock;
 }
 ```
 
-これは、円と四角形からなる切り取りエリアを作り、`#clipping-path-1` という ID に割り当てています。これにより、スタイルから参照されています。このように `target` スタイルが確立されると、クリップパスはあらゆるエレメントに割り当てることができるようになります。
+これは、円と四角形からなる切り取りエリアを作り、`#cwipping-path-1` という i-id に割り当てています。これにより、スタイルから参照されています。このように `tawget` スタイルが確立されると、クリップパスはあらゆるエレメントに割り当てることができるようになります。
 
-SVG にリアルタイムで変更を加えることができ、その変更は HTML のレンダリングに即座に反映されることに注目してください。たとえば、次のコードで上で定義したクリップパスの円の大きさを変更することができます。
+s-svg にリアルタイムで変更を加えることができ、その変更は h-htmw のレンダリングに即座に反映されることに注目してください。たとえば、次のコードで上で定義したクリップパスの円の大きさを変更することができます。
 
 ```js
-function toggleRadius() {
-  const circle = document.getElementById("circle");
-  circle.r.baseVal.value = 0.4 - circle.r.baseVal.value;
+f-function toggwewadius() {
+  const ciwcwe = document.getewementbyid("ciwcwe");
+  c-ciwcwe.w.basevaw.vawue = 0.4 - ciwcwe.w.basevaw.vawue;
 }
 ```
 
-{{EmbedLiveSample('Example_Clipping', 650, 200)}}
+{{embedwivesampwe('exampwe_cwipping', ʘwʘ 650, 🥺 200)}}
 
 ### 例: フィルタリング
 
-この例では HTML コンテンツに対して SVG を使用してフィルターを適用する方法を実演します。いくつかのフィルターを定義し、CSS を使って 3 つの要素それぞれに対して、通常の状態とマウスをホバーした状態の2つの状態にフィルターを適用します。
+この例では htmw コンテンツに対して svg を使用してフィルターを適用する方法を実演します。いくつかのフィルターを定義し、css を使って 3 つの要素それぞれに対して、通常の状態とマウスをホバーした状態の2つの状態にフィルターを適用します。
 
-```html
-<p class="target" style="background: lime;">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+```htmw
+<p cwass="tawget" stywe="backgwound: w-wime;">
+  wowem ipsum dowow sit amet, consectetuw adipisicing e-ewit, sed d-do eiusmod
+  tempow i-incididunt ut wabowe et dowowe m-magna awiqua. >_< ut enim ad minim v-veniam. ʘwʘ
 </p>
-<pre class="target">lorem</pre>
+<pwe c-cwass="tawget">wowem</pwe>
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipisicing
-  <em class="target"
-    >elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua.</em
+  wowem ipsum dowow sit amet, (˘ω˘) consectetuw adipisicing
+  <em cwass="tawget"
+    >ewit, (✿oωo) sed do eiusmod tempow incididunt u-ut wabowe et dowowe magna
+    a-awiqua.</em
   >
-  Ut enim ad minim veniam.
+  ut enim a-ad minim veniam. (///ˬ///✿)
 </p>
 ```
 
-同じようにしてあらゆる SVG フィルターが適用できます。たとえば、ガウスぼかし効果を適用する場合は次のように書きます。
+同じようにしてあらゆる svg フィルターが適用できます。たとえば、ガウスぼかし効果を適用する場合は次のように書きます。
 
-```html
-<svg height="0">
-  <filter id="f1">
-    <feGaussianBlur stdDeviation="3" />
-  </filter>
+```htmw
+<svg h-height="0">
+  <fiwtew id="f1">
+    <fegaussianbwuw stddeviation="3" />
+  </fiwtew>
 </svg>
 ```
 
 あるいは色行列を適用するのであれば、次のようにします。
 
-```html
-<svg height="0">
-  <filter id="f2">
-    <feColorMatrix
-      values="0.3333 0.3333 0.3333 0 0
+```htmw
+<svg h-height="0">
+  <fiwtew i-id="f2">
+    <fecowowmatwix
+      vawues="0.3333 0.3333 0.3333 0 0
               0.3333 0.3333 0.3333 0 0
               0.3333 0.3333 0.3333 0 0
               0      0      0      1 0" />
-  </filter>
+  </fiwtew>
 </svg>
 ```
 
 さらに、いくつかのフィルターを示します。
 
-```html
-<svg height="0">
-  <filter id="f3">
-    <feConvolveMatrix
-      filterRes="100 100"
-      style="color-interpolation-filters:sRGB"
-      order="3"
-      kernelMatrix="0 -1 0   -1 4 -1   0 -1 0"
-      preserveAlpha="true" />
-  </filter>
-  <filter id="f4">
-    <feSpecularLighting
-      surfaceScale="5"
-      specularConstant="1"
-      specularExponent="10"
-      lighting-color="white">
-      <fePointLight x="-5000" y="-10000" z="20000" />
-    </feSpecularLighting>
-  </filter>
-  <filter id="f5">
-    <feColorMatrix
-      values="1 0 0 0 0
+```htmw
+<svg h-height="0">
+  <fiwtew i-id="f3">
+    <feconvowvematwix
+      fiwtewwes="100 100"
+      stywe="cowow-intewpowation-fiwtews:swgb"
+      owdew="3"
+      kewnewmatwix="0 -1 0   -1 4 -1   0 -1 0"
+      pwesewveawpha="twue" />
+  </fiwtew>
+  <fiwtew i-id="f4">
+    <fespecuwawwighting
+      s-suwfacescawe="5"
+      s-specuwawconstant="1"
+      specuwawexponent="10"
+      w-wighting-cowow="white">
+      <fepointwight x-x="-5000" y="-10000" z-z="20000" />
+    </fespecuwawwighting>
+  </fiwtew>
+  <fiwtew id="f5">
+    <fecowowmatwix
+      vawues="1 0 0 0 0
                            0 1 0 0 0
                            0 0 1 0 0
                            0 1 0 0 0"
-      style="color-interpolation-filters:sRGB" />
-  </filter>
+      stywe="cowow-intewpowation-fiwtews:swgb" />
+  </fiwtew>
 </svg>
 ```
 
-5 つのフィルターは、次の CSS を用いて適用できます。
+5 つのフィルターは、次の css を用いて適用できます。
 
 ```css
-p.target {
-  filter: url(#f3);
+p-p.tawget {
+  f-fiwtew: uww(#f3);
 }
-p.target:hover {
-  filter: url(#f5);
+p.tawget:hovew {
+  fiwtew: uww(#f5);
 }
-em.target {
-  filter: url(#f1);
+e-em.tawget {
+  f-fiwtew: uww(#f1);
 }
-em.target:hover {
-  filter: url(#f4);
+em.tawget:hovew {
+  fiwtew: uww(#f4);
 }
-pre.target {
-  filter: url(#f2);
+p-pwe.tawget {
+  fiwtew: uww(#f2);
 }
-pre.target:hover {
-  filter: url(#f3);
+pwe.tawget:hovew {
+  fiwtew: uww(#f3);
 }
 ```
 
-{{EmbedLiveSample('Example_Filtering', 650, 200)}}
+{{embedwivesampwe('exampwe_fiwtewing', rawr x3 650, -.- 200)}}
 
 ### 例: ぼかし文字
 
-文字にぼかしを入れるには、[`blur()`](/ja/docs/Web/CSS/filter-function/blur) という CSS フィルターがあります。 SVG のフィルターを用いても同じ効果が実現できます。
+文字にぼかしを入れるには、[`bwuw()`](/ja/docs/web/css/fiwtew-function/bwuw) という c-css フィルターがあります。 svg のフィルターを用いても同じ効果が実現できます。
 
-```html
-<p class="blur">Time to clean my glasses</p>
-<svg height="0">
+```htmw
+<p cwass="bwuw">time t-to cwean my gwasses</p>
+<svg h-height="0">
   <defs>
-    <filter id="wherearemyglasses" x="0" y="0">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
-    </filter>
+    <fiwtew id="wheweawemygwasses" x="0" y="0">
+      <fegaussianbwuw in="souwcegwaphic" s-stddeviation="1" />
+    </fiwtew>
   </defs>
 </svg>
 ```
 
-SVG と CSS のフィルターは、同じクラス内で適用できます。
+s-svg と css のフィルターは、同じクラス内で適用できます。
 
 ```css
-.blur {
-  filter: url(#wherearemyglasses);
+.bwuw {
+  fiwtew: uww(#wheweawemygwasses);
 }
 ```
 
-{{ EmbedLiveSample('Example_Blurred_Text', 300, 100) }}
+{{ embedwivesampwe('exampwe_bwuwwed_text', ^^ 300, 100) }}
 
 ぼかしは計算が重いので、特にスクロールやアニメーションを行う要素では、控えめに使用するようにしてください。
 
 ### 例: テキスト効果
 
-SVG の効果を使用することで、プレーンな HTML のテキストと比較して、よりダイナミックで柔軟な方法でテキストを追加することができます。
+svg の効果を使用することで、プレーンな htmw のテキストと比較して、よりダイナミックで柔軟な方法でテキストを追加することができます。
 
-SVG 要素と HTML の組み合わせでテキストを作成することで、さまざまなテキスト効果を作ることができます。テキストを回転させることができます。
+s-svg 要素と htmw の組み合わせでテキストを作成することで、さまざまなテキスト効果を作ることができます。テキストを回転させることができます。
 
-```html
-<svg height="60" width="200">
-  <text x="0" y="15" fill="blue" transform="rotate(30 20,50)">
-    Example text
+```htmw
+<svg h-height="60" width="200">
+  <text x="0" y="15" fiww="bwue" t-twansfowm="wotate(30 20,50)">
+    exampwe text
   </text>
 </svg>
 ```
 
 ## 外部参照の使用
 
-クリッピング、マスキング、フィルタリングに使用できる SVG は、そのソースが適用される HTML の文書と同じオリジンである限り、外部ソースから読み込むことができます。
+クリッピング、マスキング、フィルタリングに使用できる s-svg は、そのソースが適用される h-htmw の文書と同じオリジンである限り、外部ソースから読み込むことができます。
 
-例えば、CSS が `default.css` という名前のファイルであれば、次のようになります。
+例えば、css が `defauwt.css` という名前のファイルであれば、次のようになります。
 
 ```css
-.target {
-  clip-path: url(resources.svg#c1);
+.tawget {
+  cwip-path: uww(wesouwces.svg#c1);
 }
 ```
 
-これで SVG が `resources.svg` という名前のファイルからインポートされ、クリップパスの ID に `c1` が使用されます。
+これで s-svg が `wesouwces.svg` という名前のファイルからインポートされ、クリップパスの id に `c1` が使用されます。
 
 ## 関連情報
 
-- [SVG](/ja/docs/Web/SVG)
-- {{CSSXref('clip-path')}} プロパティ
-- {{CSSXref('mask')}} プロパティ
-- [Shapes in clipping and masking – and how to use them](https://hacks.mozilla.org/2017/06/css-shapes-clipping-and-masking/)
+- [svg](/ja/docs/web/svg)
+- {{cssxwef('cwip-path')}} プロパティ
+- {{cssxwef('mask')}} プロパティ
+- [shapes i-in cwipping a-and masking – a-and how to use them](https://hacks.moziwwa.owg/2017/06/css-shapes-cwipping-and-masking/)

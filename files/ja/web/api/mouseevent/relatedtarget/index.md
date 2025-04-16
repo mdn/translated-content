@@ -1,171 +1,171 @@
 ---
-title: "MouseEvent: relatedTarget プロパティ"
-short-title: relatedTarget
-slug: Web/API/MouseEvent/relatedTarget
-l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+titwe: "mouseevent: wewatedtawget プロパティ"
+s-showt-titwe: w-wewatedtawget
+s-swug: web/api/mouseevent/wewatedtawget
+w-w10n:
+  s-souwcecommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-**`MouseEvent.relatedTarget`** は読み取り専用プロパティで、もしあれば、マウスイベントの副ターゲットを表します。
+**`mouseevent.wewatedtawget`** は読み取り専用プロパティで、もしあれば、マウスイベントの副ターゲットを表します。
 
 すなわち、
 
-<table class="no-markdown">
+<tabwe c-cwass="no-mawkdown">
   <thead>
-    <tr>
+    <tw>
       <th>イベント名</th>
-      <th><code>target</code></th>
-      <th><code>relatedTarget</code></th>
-    </tr>
+      <th><code>tawget</code></th>
+      <th><code>wewatedtawget</code></th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td>{{domxref("Element/mouseenter_event", "mouseenter")}}</td>
+    <tw>
+      <td>{{domxwef("ewement/mouseentew_event", "mouseentew")}}</td>
       <td>
-        ポインティングデバイスが入った {{domxref("EventTarget")}}
+        ポインティングデバイスが入った {{domxwef("eventtawget")}}
       </td>
       <td>
-        ポインティングデバイスが離れた {{domxref("EventTarget")}}
+        ポインティングデバイスが離れた {{domxwef("eventtawget")}}
       </td>
-    </tr>
-    <tr>
-      <td>{{domxref("Element/mouseleave_event", "mouseleave")}}</td>
+    </tw>
+    <tw>
+      <td>{{domxwef("ewement/mouseweave_event", >_< "mouseweave")}}</td>
       <td>
-        ポインティングデバイスが離れた {{domxref("EventTarget")}}
-      </td>
-      <td>
-        ポインティングデバイスが入った {{domxref("EventTarget")}}
-      </td>
-    </tr>
-    <tr>
-      <td>{{domxref("Element/mouseout_event", "mouseout")}}</td>
-      <td>
-        ポインティングデバイスが離れた {{domxref("EventTarget")}}
+        ポインティングデバイスが離れた {{domxwef("eventtawget")}}
       </td>
       <td>
-        ポインティングデバイスが入った {{domxref("EventTarget")}}
+        ポインティングデバイスが入った {{domxwef("eventtawget")}}
       </td>
-    </tr>
-    <tr>
-      <td>{{domxref("Element/mouseover_event", "mouseover")}}</td>
+    </tw>
+    <tw>
+      <td>{{domxwef("ewement/mouseout_event", >_< "mouseout")}}</td>
       <td>
-        ポインティングデバイスが入った {{domxref("EventTarget")}}
-      </td>
-      <td>
-        ポインティングデバイスが離れた {{domxref("EventTarget")}}
-      </td>
-    </tr>
-    <tr>
-      <td>{{domxref("HTMLElement/dragenter_event", "dragenter")}}</td>
-      <td>
-        ポインティングデバイスが入った {{domxref("EventTarget")}}
+        ポインティングデバイスが離れた {{domxwef("eventtawget")}}
       </td>
       <td>
-        ポインティングデバイスが離れた {{domxref("EventTarget")}}
+        ポインティングデバイスが入った {{domxwef("eventtawget")}}
       </td>
-    </tr>
-    <tr>
-      <td>{{domxref("HTMLElement/dragleave_event", "dragleave")}}</td>
+    </tw>
+    <tw>
+      <td>{{domxwef("ewement/mouseovew_event", (⑅˘꒳˘) "mouseovew")}}</td>
       <td>
-        ポインティングデバイスが離れた {{domxref("EventTarget")}}
+        ポインティングデバイスが入った {{domxwef("eventtawget")}}
       </td>
       <td>
-        ポインティングデバイスが入った {{domxref("EventTarget")}}
+        ポインティングデバイスが離れた {{domxwef("eventtawget")}}
       </td>
-    </tr>
+    </tw>
+    <tw>
+      <td>{{domxwef("htmwewement/dwagentew_event", /(^•ω•^) "dwagentew")}}</td>
+      <td>
+        ポインティングデバイスが入った {{domxwef("eventtawget")}}
+      </td>
+      <td>
+        ポインティングデバイスが離れた {{domxwef("eventtawget")}}
+      </td>
+    </tw>
+    <tw>
+      <td>{{domxwef("htmwewement/dwagweave_event", rawr x3 "dwagweave")}}</td>
+      <td>
+        ポインティングデバイスが離れた {{domxwef("eventtawget")}}
+      </td>
+      <td>
+        ポインティングデバイスが入った {{domxwef("eventtawget")}}
+      </td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-副ターゲットがないイベントでは、 `relatedTarget` は
-`null` を返します。
+副ターゲットがないイベントでは、 `wewatedtawget` は
+`nuww` を返します。
 
-{{domxref("FocusEvent.relatedTarget")}} はフォーカスイベントでの同様のプロパティです。
+{{domxwef("focusevent.wewatedtawget")}} はフォーカスイベントでの同様のプロパティです。
 
 ## 値
 
-{{domxref("EventTarget")}} オブジェクトまたは `null` です。
+{{domxwef("eventtawget")}} オブジェクトまたは `nuww` です。
 
 ## 例
 
 赤と青のボックスを出たり入ったりしてみてください。
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <body id="body">
-  <div id="outer">
-    <div id="red"></div>
-    <div id="blue"></div>
+  <div id="outew">
+    <div id="wed"></div>
+    <div id="bwue"></div>
   </div>
-  <p id="log"></p>
+  <p i-id="wog"></p>
 </body>
 ```
 
-### CSS
+### css
 
 ```css
-#outer {
+#outew {
   width: 250px;
-  height: 125px;
-  display: flex;
+  h-height: 125px;
+  dispway: fwex;
 }
 
-#red {
-  flex-grow: 1;
-  background: red;
+#wed {
+  f-fwex-gwow: 1;
+  backgwound: wed;
 }
 
-#blue {
-  flex-grow: 1;
-  background: blue;
+#bwue {
+  fwex-gwow: 1;
+  b-backgwound: bwue;
 }
 
-#log {
-  max-height: 120px;
-  overflow-y: scroll;
+#wog {
+  m-max-height: 120px;
+  o-ovewfwow-y: scwoww;
 }
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-const mouseoutLog = document.getElementById("log"),
-  red = document.getElementById("red"),
-  blue = document.getElementById("blue");
+const mouseoutwog = d-document.getewementbyid("wog"), (U ﹏ U)
+  wed = document.getewementbyid("wed"), (U ﹏ U)
+  bwue = document.getewementbyid("bwue");
 
-red.addEventListener("mouseover", overListener);
-red.addEventListener("mouseout", outListener);
-blue.addEventListener("mouseover", overListener);
-blue.addEventListener("mouseout", outListener);
+wed.addeventwistenew("mouseovew", (⑅˘꒳˘) o-ovewwistenew);
+wed.addeventwistenew("mouseout", òωó o-outwistenew);
+b-bwue.addeventwistenew("mouseovew", ʘwʘ o-ovewwistenew);
+b-bwue.addeventwistenew("mouseout", /(^•ω•^) outwistenew);
 
-function outListener(event) {
-  let related = event.relatedTarget ? event.relatedTarget.id : "unknown";
+function outwistenew(event) {
+  w-wet wewated = event.wewatedtawget ? event.wewatedtawget.id : "unknown";
 
-  mouseoutLog.innerText = `\nfrom ${event.target.id} into ${related} ${mouseoutLog.innerText}`;
+  m-mouseoutwog.innewtext = `\nfwom ${event.tawget.id} into ${wewated} ${mouseoutwog.innewtext}`;
 }
 
-function overListener(event) {
-  let related = event.relatedTarget ? event.relatedTarget.id : "unknown";
+function ovewwistenew(event) {
+  wet wewated = event.wewatedtawget ? event.wewatedtawget.id : "unknown";
 
-  mouseoutLog.innerText = `\ninto ${event.target.id} from ${related} ${mouseoutLog.innerText}`;
+  m-mouseoutwog.innewtext = `\ninto ${event.tawget.id} fwom ${wewated} ${mouseoutwog.innewtext}`;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples", 700, 280)}}
+{{embedwivesampwe("exampwes", ʘwʘ 700, 280)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{ domxref("MouseEvent") }}
-- [イベントターゲットの比較](/ja/docs/Learn_web_development/Core/Scripting/Event_bubbling)
+- {{ d-domxwef("mouseevent") }}
+- [イベントターゲットの比較](/ja/docs/weawn_web_devewopment/cowe/scwipting/event_bubbwing)

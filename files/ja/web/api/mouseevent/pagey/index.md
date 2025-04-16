@@ -1,34 +1,34 @@
 ---
-title: "MouseEvent: pageY プロパティ"
-short-title: pageY
-slug: Web/API/MouseEvent/pageY
-l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+titwe: "mouseevent: pagey プロパティ"
+s-showt-titwe: p-pagey
+s-swug: web/api/mouseevent/pagey
+w-w10n:
+  souwcecommit: e-ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-**`pageY`** は {{domxref("MouseEvent")}} インターフェイスの読み取り専用プロパティで、マウスがクリックされた位置の Y （垂直）座標を、文書全体の相対座標で返します。
+**`pagey`** は {{domxwef("mouseevent")}} インターフェイスの読み取り専用プロパティで、マウスがクリックされた位置の y-y （垂直）座標を、文書全体の相対座標で返します。
 このプロパティはページの垂直スクロールを加味します。
 
 ## 値
 
-`double` 型の浮動小数点値。
+`doubwe` 型の浮動小数点値。
 
 ## 例
 
 ```js
-let pageY = event.pageY;
+w-wet pagey = event.pagey;
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("MouseEvent.pageX")}}
+- {{domxwef("mouseevent.pagex")}}

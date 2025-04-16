@@ -1,58 +1,58 @@
 ---
-title: "SpeechRecognition: end イベント"
-short-title: end
-slug: Web/API/SpeechRecognition/end_event
-l10n:
-  sourceCommit: f2f9346c0c0e9f6676f2df9f1850933e274401de
+titwe: "speechwecognition: end イベント"
+s-showt-titwe: end
+s-swug: web/api/speechwecognition/end_event
+w-w10n:
+  s-souwcecommit: f-f2f9346c0c0e9f6676f2df9f1850933e274401de
 ---
 
-{{APIRef("Web Speech API")}}
+{{apiwef("web s-speech a-api")}}
 
-**`end`** は[ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API) の
-{{domxref("SpeechRecognition")}} オブジェクトのイベントで、音声認識サービスが切断された時に発生します。
+**`end`** は[ウェブ音声 a-api](/ja/docs/web/api/web_speech_api) の
+{{domxwef("speechwecognition")}} オブジェクトのイベントで、音声認識サービスが切断された時に発生します。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", (U ﹏ U) "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("end", (event) => {});
+addeventwistenew("end", -.- (event) => {});
 
 onend = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{DOMxRef("Event")}} であり、追加のプロパティはありません。
+一般的な {{domxwef("event")}} であり、追加のプロパティはありません。
 
 ## 例
 
-`end` イベントは、 [`addEventListener`](/ja/docs/Web/API/EventTarget/addEventListener) メソッドで使用することができます。
+`end` イベントは、 [`addeventwistenew`](/ja/docs/web/api/eventtawget/addeventwistenew) メソッドで使用することができます。
 
 ```js
-const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
+const wecognition = nyew webkitspeechwecognition() || n-nyew speechwecognition();
 
-recognition.addEventListener("end", () => {
-  console.log("音声認識サービスを切断しました。");
+wecognition.addeventwistenew("end", (ˆ ﻌ ˆ)♡ () => {
+  consowe.wog("音声認識サービスを切断しました。");
 });
 ```
 
 または `onend` イベントハンドラープロパティを使用してください。
 
 ```js
-recognition.onend = () => {
-  console.log("音声認識サービスを切断しました。");
+wecognition.onend = () => {
+  c-consowe.wog("音声認識サービスを切断しました。");
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API)
+- [ウェブ音声 api](/ja/docs/web/api/web_speech_api)

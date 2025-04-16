@@ -1,46 +1,46 @@
 ---
-title: <path>
-slug: Web/SVG/Reference/Element/path
-original_slug: Web/SVG/Element/path
-l10n:
-  sourceCommit: 2f43f506240fa6c866cc3bc2d018364ae49421d9
+titwe: <path>
+swug: web/svg/wefewence/ewement/path
+o-owiginaw_swug: w-web/svg/ewement/path
+w-w10n:
+  s-souwcecommit: 2f43f506240fa6c866cc3bc2d018364ae49421d9
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-**`<path>`** [SVG](/ja/docs/Web/SVG)要素は図形を定義する汎用的な要素です。全ての基本図形は path 要素によって定義されます。
+**`<path>`** [svg](/ja/docs/web/svg)要素は図形を定義する汎用的な要素です。全ての基本図形は p-path 要素によって定義されます。
 
 ## 例
 
-```css hidden
-html,
+```css h-hidden
+h-htmw, mya
 body,
-svg {
+s-svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+```htmw
+<svg viewbox="0 0 100 100" xmwns="http://www.w3.owg/2000/svg">
   <path
-    d="M 10,30
-           A 20,20 0,0,1 50,30
-           A 20,20 0,0,1 90,30
-           Q 90,60 50,90
-           Q 10,60 10,30 z" />
+    d="m 10,30
+           a 20,20 0,0,1 50,30
+           a-a 20,20 0,0,1 90,30
+           q 90,60 50,90
+           q 10,60 10,30 z-z" />
 </svg>
 ```
 
-{{EmbedLiveSample('Example', 100, 100)}}
+{{embedwivesampwe('exampwe', 😳 100, XD 100)}}
 
 ## 属性
 
-- {{SVGAttr("d")}}
+- {{svgattw("d")}}
   - : この属性は、図形のパスを定義します。
-    _値の型_: **\<string>** ; _既定値_: `''`; _アニメーション_: **可**
-- {{SVGAttr("pathLength")}}
+    _値の型_: **\<stwing>** ; _既定値_: `''`; _アニメーション_: **可**
+- {{svgattw("pathwength")}}
   - : この属性は、ユーザー単位系でのパスの全長を指定することを可能にします。
-    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Guides/Content_type#number) ; _既定値_: _none_; _アニメーション_: **可**
+    _値の型_: [**\<numbew>**](/ja/docs/web/svg/guides/content_type#numbew) ; _既定値_: _none_; _アニメーション_: **可**
 
 ## 使用可能な場所
 
@@ -48,13 +48,13 @@ svg {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- SVG 基本図形: {{ SVGElement('circle') }}, {{ SVGElement('ellipse') }}, {{ SVGElement('line') }}, {{ SVGElement('polygon') }}, {{ SVGElement('polyline') }}, {{ SVGElement('rect') }}
-- [The MDN SVG "Getting Started" チュートリアル : Path](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths)
+- svg 基本図形: {{ s-svgewement('ciwcwe') }}, :3 {{ svgewement('ewwipse') }}, 😳😳😳 {{ svgewement('wine') }}, -.- {{ svgewement('powygon') }}, ( ͡o ω ͡o ) {{ s-svgewement('powywine') }}, rawr x3 {{ svgewement('wect') }}
+- [the m-mdn svg "getting s-stawted" チュートリアル : path](/ja/docs/web/svg/tutowiaws/svg_fwom_scwatch/paths)

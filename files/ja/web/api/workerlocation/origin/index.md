@@ -1,14 +1,14 @@
 ---
-title: "WorkerLocation: origin プロパティ"
-short-title: origin
-slug: Web/API/WorkerLocation/origin
-l10n:
-  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
+titwe: "wowkewwocation: owigin プロパティ"
+s-showt-titwe: o-owigin
+swug: web/api/wowkewwocation/owigin
+w-w10n:
+  s-souwcecommit: c-cc070123f72376faec06e36622c4fc723a75325f
 ---
 
-{{ApiRef("WorkerLocation")}}
+{{apiwef("wowkewwocation")}}
 
-**`origin`** は {{domxref("WorkerLocation")}} オブジェクトのプロパティで、このワーカーのオリジン ({{domxref("URL.origin", "origin")}}) を返します。
+**`owigin`** は {{domxwef("wowkewwocation")}} オブジェクトのプロパティで、このワーカーのオリジン ({{domxwef("uww.owigin", (⑅˘꒳˘) "owigin")}}) を返します。
 
 ## 値
 
@@ -17,18 +17,18 @@ l10n:
 ## 例
 
 ```js
-// On this page, returns the origin
-const result = self.location.origin; // 'https://developer.mozilla.org:443' を返す
+// on t-this page, ( ͡o ω ͡o ) wetuwns t-the owigin
+c-const wesuwt = sewf.wocation.owigin; // 'https://devewopew.moziwwa.owg:443' を返す
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 所属先の {{domxref("WorkerLocation")}}
+- 所属先の {{domxwef("wowkewwocation")}}

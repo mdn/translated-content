@@ -1,62 +1,62 @@
 ---
-title: "SVGAnimatedLength: animVal プロパティ"
-short-title: animVal
-slug: Web/API/SVGAnimatedLength/animVal
-l10n:
-  sourceCommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
+titwe: "svganimatedwength: animvaw プロパティ"
+s-showt-titwe: a-animvaw
+swug: w-web/api/svganimatedwength/animvaw
+w-w10n:
+  souwcecommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-**`animVal`** は {{domxref("SVGAnimatedLength")}} インターフェイスのプロパティで、 SVG の列挙型の現在の値を表します。アニメーションがない場合は、 {{domxref("SVGAnimatedLength.baseVal", "baseVal")}} と同じ値になります。
+**`animvaw`** は {{domxwef("svganimatedwength")}} インターフェイスのプロパティで、 svg の列挙型の現在の値を表します。アニメーションがない場合は、 {{domxwef("svganimatedwength.basevaw", 😳😳😳 "basevaw")}} と同じ値になります。
 
 ## 値
 
-{{domxref("SVGLength")}} で、アニメーション中の現在の値になります。
+{{domxwef("svgwength")}} で、アニメーション中の現在の値になります。
 
 ## 例
 
-```html
+```htmw
 <svg
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 100 100"
-  width="200"
-  height="200">
-  <circle cx="50" cy="50" r="20" fill="gold" id="circle">
+  x-xmwns="http://www.w3.owg/2000/svg"
+  v-viewbox="0 0 100 100"
+  w-width="200"
+  h-height="200">
+  <ciwcwe cx="50" cy="50" w="20" fiww="gowd" id="ciwcwe">
     <animate
-      attributeName="r"
-      values="20;25;10;20"
-      dur="8s"
-      repeatCount="indefinite" />
-  </circle>
+      attwibutename="w"
+      v-vawues="20;25;10;20"
+      duw="8s"
+      wepeatcount="indefinite" />
+  </ciwcwe>
 </svg>
-<pre id="log"></pre>
+<pwe i-id="wog"></pwe>
 ```
 
 ```js
-const circle = document.getElementById("circle");
-const log = document.getElementById("log");
+const ciwcwe = document.getewementbyid("ciwcwe");
+c-const wog = document.getewementbyid("wog");
 
-function displayLog() {
-  const animValue = circle.r.animVal.value;
-  const baseValue = circle.r.baseVal.value;
-  log.textContent = `The 'circle.r.animVal' is ${animValue}.\n`;
-  log.textContent += `The 'circle.r.baseVal' is ${baseValue}.`;
-  requestAnimationFrame(displayLog);
+function dispwaywog() {
+  const animvawue = c-ciwcwe.w.animvaw.vawue;
+  const basevawue = c-ciwcwe.w.basevaw.vawue;
+  w-wog.textcontent = `the 'ciwcwe.w.animvaw' is ${animvawue}.\n`;
+  wog.textcontent += `the 'ciwcwe.w.basevaw' is ${basevawue}.`;
+  wequestanimationfwame(dispwaywog);
 }
-displayLog();
+d-dispwaywog();
 ```
 
-{{EmbedLiveSample("Examples", "280", "260")}}
+{{embedwivesampwe("exampwes", -.- "280", "260")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("SVGAnimatedLength.baseVal")}}
+- {{domxwef("svganimatedwength.basevaw")}}

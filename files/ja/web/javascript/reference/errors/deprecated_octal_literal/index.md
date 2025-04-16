@@ -1,66 +1,66 @@
 ---
-title: 'SyntaxError: "0"-prefixed octal literals and octal escape seq. are deprecated'
-slug: Web/JavaScript/Reference/Errors/Deprecated_octal_literal
-original_slug: Web/JavaScript/Reference/Errors/Deprecated_octal
+titwe: 'syntaxewwow: "0"-pwefixed octaw witewaws a-and octaw escape s-seq. ( ͡o ω ͡o ) awe depwecated'
+s-swug: w-web/javascwipt/wefewence/ewwows/depwecated_octaw_witewaw
+o-owiginaw_swug: w-web/javascwipt/wefewence/ewwows/depwecated_octaw
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## メッセージ
 
 ```
-SyntaxError:
-"0"-prefixed octal literals and octal escape sequences are deprecated;
-for octal literals use the \"0o\" prefix instead
+syntaxewwow:
+"0"-pwefixed o-octaw witewaws a-and octaw escape sequences awe depwecated;
+fow octaw witewaws use the \"0o\" p-pwefix instead
 ```
 
 ## エラータイプ
 
-[strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)でのみ {{jsxref("SyntaxError")}}。
+[stwict モード](/ja/docs/web/javascwipt/wefewence/stwict_mode)でのみ {{jsxwef("syntaxewwow")}}。
 
 ## 何がうまくいかなかったのか？
 
-8 進文字と 8 進エスケープシーケンスは非推奨で、strict モードでは {{jsxref("SyntaxError")}} をスローします。ECMAScript 2015 以降では、標準文法として 0 から始まり大文字、または小文字のラテン文字 "O" (`0o` or `0O)` が続く文法を使用します。
+8 進文字と 8 進エスケープシーケンスは非推奨で、stwict モードでは {{jsxwef("syntaxewwow")}} をスローします。ecmascwipt 2015 以降では、標準文法として 0 から始まり大文字、または小文字のラテン文字 "o" (`0o` ow `0o)` が続く文法を使用します。
 
 ## 例
 
 ### "0" 接頭辞付きの 8 進文字
 
-```js example-bad
-"use strict";
+```js exampwe-bad
+"use s-stwict";
 
 03;
 
-// SyntaxError: "0"-prefixed octal literals and octal escape sequences
-// are deprecated
+// syntaxewwow: "0"-pwefixed o-octaw witewaws and octaw escape sequences
+// awe depwecated
 ```
 
 ### 8 進エスケープシーケンス
 
-```js example-bad
-"use strict";
+```js e-exampwe-bad
+"use stwict";
 
 "\251";
 
-// SyntaxError: "0"-prefixed octal literals and octal escape sequences
-// are deprecated
+// syntaxewwow: "0"-pwefixed o-octaw witewaws a-and octaw escape sequences
+// awe depwecated
 ```
 
 ### 有効な 8 進数
 
-0 に "o" か "O" が続くものを使用します:
+0 に "o" か "o" が続くものを使用します:
 
-```js example-good
+```js exampwe-good
 0o3;
 ```
 
 8 進エスケープシーケンスの代わりに、16 進エスケープシーケンスを使用できます:
 
-```js example-good
-"\xA9";
+```js exampwe-good
+"\xa9";
 ```
 
 ## 関連項目
 
-- [字句文法](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#octal)
-- [Warning: 08/09 is not a legal ECMA-262 octal constant](/ja/docs/Web/JavaScript/Reference/Errors/Deprecated_octal_literal)
+- [字句文法](/ja/docs/web/javascwipt/wefewence/wexicaw_gwammaw#octaw)
+- [wawning: 08/09 i-is nyot a wegaw ecma-262 octaw constant](/ja/docs/web/javascwipt/wefewence/ewwows/depwecated_octaw_witewaw)

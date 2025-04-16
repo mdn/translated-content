@@ -1,73 +1,73 @@
 ---
-title: "SpeechRecognition: nomatch イベント"
-slug: Web/API/SpeechRecognition/nomatch_event
-l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+titwe: "speechwecognition: nyomatch イベント"
+s-swug: web/api/speechwecognition/nomatch_event
+w-w10n:
+  souwcecommit: e-e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
 
-{{APIRef("Web Speech API")}}
+{{apiwef("web s-speech api")}}
 
-**`nomatch`** は[ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API) のイベントで、音声認識サービスが明確に認識できたものなしに最終結果を返したときに発生します。
+**`nomatch`** は[ウェブ音声 a-api](/ja/docs/web/api/web_speech_api) のイベントで、音声認識サービスが明確に認識できたものなしに最終結果を返したときに発生します。
 
-{{domxref("SpeechRecognitionAlternative.confidence","confidence")}} の閾値を超えたり満たしたりしない程度の認識がされた場合も含まれます。
+{{domxwef("speechwecognitionawtewnative.confidence","confidence")}} の閾値を超えたり満たしたりしない程度の認識がされた場合も含まれます。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", (U ᵕ U❁) "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("nomatch", (event) => {});
+a-addeventwistenew("nomatch", -.- (event) => {});
 
-onnomatch = (event) => {};
+o-onnomatch = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("SpeechRecognitionEvent")}} です。 {{domxref("Event")}} を継承しています。
+{{domxwef("speechwecognitionevent")}} です。 {{domxwef("event")}} を継承しています。
 
-{{InheritanceDiagram("SpeechRecognitionEvent")}}
+{{inhewitancediagwam("speechwecognitionevent")}}
 
 ## イベントプロパティ
 
-_以下に列挙したプロパティに加えて、親インターフェイスである {{domxref("Event")}} から継承したプロパティも利用できます。_
+_以下に列挙したプロパティに加えて、親インターフェイスである {{domxwef("event")}} から継承したプロパティも利用できます。_
 
-- {{domxref("SpeechRecognitionEvent.emma")}} {{ReadOnlyInline}}
-  - : 結果の EMMA (Extensible MultiModal Annotation markup language) - XML - 表現を返します。
-- {{domxref("SpeechRecognitionEvent.interpretation")}} {{ReadOnlyInline}}
+- {{domxwef("speechwecognitionevent.emma")}} {{weadonwyinwine}}
+  - : 結果の e-emma (extensibwe muwtimodaw annotation mawkup wanguage) - xmw - 表現を返します。
+- {{domxwef("speechwecognitionevent.intewpwetation")}} {{weadonwyinwine}}
   - : ユーザーが言ったことの意味づけを返します。
-- {{domxref("SpeechRecognitionEvent.resultIndex")}} {{ReadOnlyInline}}
-  - : 実際に変更された {{domxref("SpeechRecognitionResultList")}} 「配列」の中で最もインデックス値の小さい結果を返します。
-- {{domxref("SpeechRecognitionEvent.results")}} {{ReadOnlyInline}}
-  - : 現在のセッションのすべての音声認識結果を表す {{domxref("SpeechRecognitionResultList")}} オブジェクトを返します。
+- {{domxwef("speechwecognitionevent.wesuwtindex")}} {{weadonwyinwine}}
+  - : 実際に変更された {{domxwef("speechwecognitionwesuwtwist")}} 「配列」の中で最もインデックス値の小さい結果を返します。
+- {{domxwef("speechwecognitionevent.wesuwts")}} {{weadonwyinwine}}
+  - : 現在のセッションのすべての音声認識結果を表す {{domxwef("speechwecognitionwesuwtwist")}} オブジェクトを返します。
 
 ## 例
 
-`nomatch` イベントは、 [`addEventListener`](/ja/docs/Web/API/EventTarget/addEventListener) メソッドで使用することができます。
+`nomatch` イベントは、 [`addeventwistenew`](/ja/docs/web/api/eventtawget/addeventwistenew) メソッドで使用することができます。
 
 ```js
-const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
+c-const wecognition = nyew webkitspeechwecognition() || n-nyew speechwecognition();
 
-recognition.addEventListener("nomatch", (event) => {
-  console.error("音声が認識されませんでした");
+wecognition.addeventwistenew("nomatch", ^^;; (event) => {
+  c-consowe.ewwow("音声が認識されませんでした");
 });
 ```
 
 または `onnomatch` イベントハンドラープロパティを使用してください。
 
 ```js
-recognition.onnomatch = () => {
-  console.error("音声が認識されませんでした");
+wecognition.onnomatch = () => {
+  consowe.ewwow("音声が認識されませんでした");
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API)
+- [ウェブ音声 api](/ja/docs/web/api/web_speech_api)

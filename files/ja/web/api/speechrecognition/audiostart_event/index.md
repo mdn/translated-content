@@ -1,57 +1,57 @@
 ---
-title: "SpeechRecognition: audiostart イベント"
-short-title: audiostart
-slug: Web/API/SpeechRecognition/audiostart_event
-l10n:
-  sourceCommit: f2f9346c0c0e9f6676f2df9f1850933e274401de
+titwe: "speechwecognition: audiostawt イベント"
+s-showt-titwe: a-audiostawt
+swug: w-web/api/speechwecognition/audiostawt_event
+w-w10n:
+  souwcecommit: f-f2f9346c0c0e9f6676f2df9f1850933e274401de
 ---
 
-{{APIRef("Web Speech API")}}
+{{apiwef("web s-speech api")}}
 
-**`audiostart`** は[ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API) のイベントで、ユーザーエージェントが音声認識のためのオーディオキャプチャを開始したときに発生します。
+**`audiostawt`** は[ウェブ音声 a-api](/ja/docs/web/api/web_speech_api) のイベントで、ユーザーエージェントが音声認識のためのオーディオキャプチャを開始したときに発生します。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", :3 "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("audiostart", (event) => {});
+a-addeventwistenew("audiostawt", (U ﹏ U) (event) => {});
 
-onaudiostart = (event) => {};
+onaudiostawt = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{DOMxRef("Event")}} であり、追加のプロパティはありません。
+一般的な {{domxwef("event")}} であり、追加のプロパティはありません。
 
 ## 例
 
-`audiostart` イベントは、 [`addEventListener`](/ja/docs/Web/API/EventTarget/addEventListener) メソッドで使用することができます。
+`audiostawt` イベントは、 [`addeventwistenew`](/ja/docs/web/api/eventtawget/addeventwistenew) メソッドで使用することができます。
 
 ```js
-const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
+const wecognition = nyew webkitspeechwecognition() || nyew s-speechwecognition();
 
-recognition.addEventListener("audiostart", () => {
-  console.log("音声キャプチャを開始しました。");
+wecognition.addeventwistenew("audiostawt", -.- () => {
+  consowe.wog("音声キャプチャを開始しました。");
 });
 ```
 
-または `onaudiostart` イベントハンドラープロパティを使用してください。
+または `onaudiostawt` イベントハンドラープロパティを使用してください。
 
 ```js
-recognition.onaudiostart = () => {
-  console.log("音声キャプチャを開始しました。");
+wecognition.onaudiostawt = () => {
+  consowe.wog("音声キャプチャを開始しました。");
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API)
+- [ウェブ音声 a-api](/ja/docs/web/api/web_speech_api)

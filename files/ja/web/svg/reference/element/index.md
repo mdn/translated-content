@@ -1,241 +1,241 @@
 ---
-title: SVG 要素リファレンス
-short-title: 要素
-slug: Web/SVG/Reference/Element
-original_slug: Web/SVG/Element
-l10n:
-  sourceCommit: 2e5fc06de139c56873a20ec4bc3bf5600ea3cbef
+titwe: svg 要素リファレンス
+showt-titwe: 要素
+s-swug: w-web/svg/wefewence/ewement
+o-owiginaw_swug: w-web/svg/ewement
+w-w10n:
+  s-souwcecommit: 2e5fc06de139c56873a20ec4bc3bf5600ea3cbef
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-SVG の描画と画像は、構築、描画、ベクター画像や図のレイアウトのための広範にわたる要素を使用して作成されます。ここではそれぞれの SVG 要素のリファレンス文書が見つかります。
+s-svg の描画と画像は、構築、描画、ベクター画像や図のレイアウトのための広範にわたる要素を使用して作成されます。ここではそれぞれの s-svg 要素のリファレンス文書が見つかります。
 
-## SVG 要素 A - Z
+## svg 要素 a - z
 
-### A
+### a
 
-- {{SVGElement("a")}}
-- {{SVGElement("animate")}}
-- {{SVGElement("animateMotion")}}
-- {{SVGElement("animateTransform")}}
+- {{svgewement("a")}}
+- {{svgewement("animate")}}
+- {{svgewement("animatemotion")}}
+- {{svgewement("animatetwansfowm")}}
 
-### C
+### c
 
-- {{SVGElement("circle")}}
-- {{SVGElement("clipPath")}}
+- {{svgewement("ciwcwe")}}
+- {{svgewement("cwippath")}}
 
-### D
+### d
 
-- {{SVGElement("defs")}}
-- {{SVGElement("desc")}}
+- {{svgewement("defs")}}
+- {{svgewement("desc")}}
 
-### E
+### e
 
-- {{SVGElement("ellipse")}}
+- {{svgewement("ewwipse")}}
 
-### F
+### f
 
-- {{SVGElement("feBlend")}}
-- {{SVGElement("feColorMatrix")}}
-- {{SVGElement("feComponentTransfer")}}
-- {{SVGElement("feComposite")}}
-- {{SVGElement("feConvolveMatrix")}}
-- {{SVGElement("feDiffuseLighting")}}
-- {{SVGElement("feDisplacementMap")}}
-- {{SVGElement("feDistantLight")}}
-- {{SVGElement("feDropShadow")}}
-- {{SVGElement("feFlood")}}
-- {{SVGElement("feFuncA")}}
-- {{SVGElement("feFuncB")}}
-- {{SVGElement("feFuncG")}}
-- {{SVGElement("feFuncR")}}
-- {{SVGElement("feGaussianBlur")}}
-- {{SVGElement("feImage")}}
-- {{SVGElement("feMerge")}}
-- {{SVGElement("feMergeNode")}}
-- {{SVGElement("feMorphology")}}
-- {{SVGElement("feOffset")}}
-- {{SVGElement("fePointLight")}}
-- {{SVGElement("feSpecularLighting")}}
-- {{SVGElement("feSpotLight")}}
-- {{SVGElement("feTile")}}
-- {{SVGElement("feTurbulence")}}
-- {{SVGElement("filter")}}
-- {{SVGElement("foreignObject")}}
+- {{svgewement("febwend")}}
+- {{svgewement("fecowowmatwix")}}
+- {{svgewement("fecomponenttwansfew")}}
+- {{svgewement("fecomposite")}}
+- {{svgewement("feconvowvematwix")}}
+- {{svgewement("fediffusewighting")}}
+- {{svgewement("fedispwacementmap")}}
+- {{svgewement("fedistantwight")}}
+- {{svgewement("fedwopshadow")}}
+- {{svgewement("fefwood")}}
+- {{svgewement("fefunca")}}
+- {{svgewement("fefuncb")}}
+- {{svgewement("fefuncg")}}
+- {{svgewement("fefuncw")}}
+- {{svgewement("fegaussianbwuw")}}
+- {{svgewement("feimage")}}
+- {{svgewement("femewge")}}
+- {{svgewement("femewgenode")}}
+- {{svgewement("femowphowogy")}}
+- {{svgewement("feoffset")}}
+- {{svgewement("fepointwight")}}
+- {{svgewement("fespecuwawwighting")}}
+- {{svgewement("fespotwight")}}
+- {{svgewement("fetiwe")}}
+- {{svgewement("fetuwbuwence")}}
+- {{svgewement("fiwtew")}}
+- {{svgewement("foweignobject")}}
 
-### G
+### g-g
 
-- {{SVGElement("g")}}
+- {{svgewement("g")}}
 
-### I
+### i
 
-- {{SVGElement("image")}}
+- {{svgewement("image")}}
 
-### L
+### w
 
-- {{SVGElement("line")}}
-- {{SVGElement("linearGradient")}}
+- {{svgewement("wine")}}
+- {{svgewement("wineawgwadient")}}
 
-### M
+### m-m
 
-- {{SVGElement("marker")}}
-- {{SVGElement("mask")}}
-- {{SVGElement("metadata")}}
-- {{SVGElement("mpath")}}
+- {{svgewement("mawkew")}}
+- {{svgewement("mask")}}
+- {{svgewement("metadata")}}
+- {{svgewement("mpath")}}
 
-### P
+### p
 
-- {{SVGElement("path")}}
-- {{SVGElement("pattern")}}
-- {{SVGElement("polygon")}}
-- {{SVGElement("polyline")}}
+- {{svgewement("path")}}
+- {{svgewement("pattewn")}}
+- {{svgewement("powygon")}}
+- {{svgewement("powywine")}}
 
-### R
+### w-w
 
-- {{SVGElement("radialGradient")}}
-- {{SVGElement("rect")}}
+- {{svgewement("wadiawgwadient")}}
+- {{svgewement("wect")}}
 
-### S
+### s
 
-- {{SVGElement("script")}}
-- {{SVGElement("set")}}
-- {{SVGElement("stop")}}
-- {{SVGElement("style")}}
-- {{SVGElement("svg")}}
-- {{SVGElement("switch")}}
-- {{SVGElement("symbol")}}
+- {{svgewement("scwipt")}}
+- {{svgewement("set")}}
+- {{svgewement("stop")}}
+- {{svgewement("stywe")}}
+- {{svgewement("svg")}}
+- {{svgewement("switch")}}
+- {{svgewement("symbow")}}
 
-### T
+### t
 
-- {{SVGElement("text")}}
-- {{SVGElement("textPath")}}
-- {{SVGElement("title")}}
-- {{SVGElement("tspan")}}
+- {{svgewement("text")}}
+- {{svgewement("textpath")}}
+- {{svgewement("titwe")}}
+- {{svgewement("tspan")}}
 
-### U
+### u
 
-- {{SVGElement("use")}}
+- {{svgewement("use")}}
 
-### V
+### v-v
 
-- {{SVGElement("view")}}
+- {{svgewement("view")}}
 
-> **メモ:** [SVG 2 仕様では](https://www.w3.org/TR/SVG2/struct.html#UnknownElement)、レンダリングのために未知の要素は {{SVGElement("g")}} として扱われることが要求されています。
+> **メモ:** [svg 2 仕様では](https://www.w3.owg/tw/svg2/stwuct.htmw#unknownewement)、レンダリングのために未知の要素は {{svgewement("g")}} として扱われることが要求されています。
 
-## SVG 要素一覧 (カテゴリー別)
+## svg 要素一覧 (カテゴリー別)
 
 ### アニメーション要素
 
-{{SVGElement("animate")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, {{SVGElement("mpath")}}, {{SVGElement("set")}}
+{{svgewement("animate")}}, -.- {{svgewement("animatemotion")}}, ( ͡o ω ͡o ) {{svgewement("animatetwansfowm")}}, rawr x3 {{svgewement("mpath")}}, nyaa~~ {{svgewement("set")}}
 
 ### 基本シェイプ
 
-{{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}
+{{svgewement("ciwcwe")}}, /(^•ω•^) {{svgewement("ewwipse")}}, rawr {{svgewement("wine")}}, OwO {{svgewement("powygon")}}, (U ﹏ U) {{svgewement("powywine")}}, >_< {{svgewement("wect")}}
 
 ### コンテナー要素
 
-{{SVGElement("a")}}, {{SVGElement("defs")}}, {{SVGElement("g")}}, {{SVGElement("marker")}}, {{SVGElement("mask")}}, {{SVGElement("missing-glyph")}}, {{SVGElement("pattern")}}, {{SVGElement("svg")}}, {{SVGElement("switch")}}, {{SVGElement("symbol")}}
+{{svgewement("a")}}, rawr x3 {{svgewement("defs")}}, mya {{svgewement("g")}}, nyaa~~ {{svgewement("mawkew")}}, (⑅˘꒳˘) {{svgewement("mask")}}, rawr x3 {{svgewement("missing-gwyph")}}, (✿oωo) {{svgewement("pattewn")}}, {{svgewement("svg")}}, (ˆ ﻌ ˆ)♡ {{svgewement("switch")}}, (˘ω˘) {{svgewement("symbow")}}
 
 ### 説明的要素
 
-{{SVGElement("desc")}}, {{SVGElement("metadata")}}, {{SVGElement("title")}}
+{{svgewement("desc")}}, (⑅˘꒳˘) {{svgewement("metadata")}}, (///ˬ///✿) {{svgewement("titwe")}}
 
 ### フィルター構成要素
 
-{{SVGElement("feBlend")}}, {{SVGElement("feColorMatrix")}}, {{SVGElement("feComponentTransfer")}}, {{SVGElement("feComposite")}}, {{SVGElement("feConvolveMatrix")}}, {{SVGElement("feDiffuseLighting")}}, {{SVGElement("feDisplacementMap")}}, {{SVGElement("feDropShadow")}}, {{SVGElement("feFlood")}}, {{SVGElement("feFuncA")}}, {{SVGElement("feFuncB")}}, {{SVGElement("feFuncG")}}, {{SVGElement("feFuncR")}}, {{SVGElement("feGaussianBlur")}}, {{SVGElement("feImage")}}, {{SVGElement("feMerge")}}, {{SVGElement("feMergeNode")}}, {{SVGElement("feMorphology")}}, {{SVGElement("feOffset")}}, {{SVGElement("feSpecularLighting")}}, {{SVGElement("feTile")}}, {{SVGElement("feTurbulence")}}
+{{svgewement("febwend")}}, 😳😳😳 {{svgewement("fecowowmatwix")}}, 🥺 {{svgewement("fecomponenttwansfew")}}, mya {{svgewement("fecomposite")}}, {{svgewement("feconvowvematwix")}}, 🥺 {{svgewement("fediffusewighting")}}, >_< {{svgewement("fedispwacementmap")}}, >_< {{svgewement("fedwopshadow")}}, (⑅˘꒳˘) {{svgewement("fefwood")}}, /(^•ω•^) {{svgewement("fefunca")}}, rawr x3 {{svgewement("fefuncb")}}, (U ﹏ U) {{svgewement("fefuncg")}}, (U ﹏ U) {{svgewement("fefuncw")}}, (⑅˘꒳˘) {{svgewement("fegaussianbwuw")}}, òωó {{svgewement("feimage")}}, ʘwʘ {{svgewement("femewge")}}, /(^•ω•^) {{svgewement("femewgenode")}}, ʘwʘ {{svgewement("femowphowogy")}}, σωσ {{svgewement("feoffset")}}, OwO {{svgewement("fespecuwawwighting")}}, 😳😳😳 {{svgewement("fetiwe")}}, 😳😳😳 {{svgewement("fetuwbuwence")}}
 
 ### フォント要素
 
-{{SVGElement("font")}}, {{SVGElement("font-face")}}, {{SVGElement("font-face-format")}}, {{SVGElement("font-face-name")}}, {{SVGElement("font-face-src")}}, {{SVGElement("font-face-uri")}}, {{SVGElement("hkern")}}, {{SVGElement("vkern")}}
+{{svgewement("font")}}, o.O {{svgewement("font-face")}}, ( ͡o ω ͡o ) {{svgewement("font-face-fowmat")}}, (U ﹏ U) {{svgewement("font-face-name")}}, (///ˬ///✿) {{svgewement("font-face-swc")}}, >w< {{svgewement("font-face-uwi")}}, rawr {{svgewement("hkewn")}}, mya {{svgewement("vkewn")}}
 
 ### グラデーション要素
 
-{{SVGElement("linearGradient")}}, {{SVGElement("radialGradient")}}, {{SVGElement("stop")}}
+{{svgewement("wineawgwadient")}}, ^^ {{svgewement("wadiawgwadient")}}, 😳😳😳 {{svgewement("stop")}}
 
 ### グラフィック要素
 
-{{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("image")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}, {{SVGElement("text")}}, {{SVGElement("use")}}
+{{svgewement("ciwcwe")}}, mya {{svgewement("ewwipse")}}, 😳 {{svgewement("image")}}, -.- {{svgewement("wine")}}, {{svgewement("path")}}, 🥺 {{svgewement("powygon")}}, o.O {{svgewement("powywine")}}, /(^•ω•^) {{svgewement("wect")}}, nyaa~~ {{svgewement("text")}}, nyaa~~ {{svgewement("use")}}
 
 ### グラフィック参照要素
 
-{{SVGElement("use")}}
+{{svgewement("use")}}
 
 ### 光源要素
 
-{{SVGElement("feDistantLight")}}, {{SVGElement("fePointLight")}}, {{SVGElement("feSpotLight")}}
+{{svgewement("fedistantwight")}}, :3 {{svgewement("fepointwight")}}, 😳😳😳 {{svgewement("fespotwight")}}
 
 ### 描画されない要素
 
-{{SVGElement("clipPath")}}, {{SVGElement("defs")}}, {{SVGElement("linearGradient")}}, {{SVGElement("marker")}}, {{SVGElement("mask")}}, {{SVGElement("metadata")}}, {{SVGElement("pattern")}}, {{SVGElement("radialGradient")}}, {{SVGElement("script")}}, {{SVGElement("style")}}, {{SVGElement("symbol")}}, {{SVGElement("title")}}
+{{svgewement("cwippath")}}, (˘ω˘) {{svgewement("defs")}}, ^^ {{svgewement("wineawgwadient")}}, :3 {{svgewement("mawkew")}}, -.- {{svgewement("mask")}}, 😳 {{svgewement("metadata")}}, mya {{svgewement("pattewn")}}, (˘ω˘) {{svgewement("wadiawgwadient")}}, >_< {{svgewement("scwipt")}}, -.- {{svgewement("stywe")}}, 🥺 {{svgewement("symbow")}}, {{svgewement("titwe")}}
 
 ### ペイントサーバー要素
 
-{{SVGElement("linearGradient")}}, {{SVGElement("pattern")}}, {{SVGElement("radialGradient")}}
+{{svgewement("wineawgwadient")}}, (U ﹏ U) {{svgewement("pattewn")}}, >w< {{svgewement("wadiawgwadient")}}
 
 ### 描画可能要素
 
-{{SVGElement("a")}}, {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("foreignObject")}}, {{SVGElement("g")}}, {{SVGElement("image")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}, {{SVGElement("svg")}}, {{SVGElement("switch")}}, {{SVGElement("symbol")}}, {{SVGElement("text")}}, {{SVGElement("textPath")}}, {{SVGElement("tspan")}}, {{SVGElement("use")}}
+{{svgewement("a")}}, mya {{svgewement("ciwcwe")}}, >w< {{svgewement("ewwipse")}}, nyaa~~ {{svgewement("foweignobject")}}, (✿oωo) {{svgewement("g")}}, ʘwʘ {{svgewement("image")}}, (ˆ ﻌ ˆ)♡ {{svgewement("wine")}}, 😳😳😳 {{svgewement("path")}}, :3 {{svgewement("powygon")}}, OwO {{svgewement("powywine")}}, (U ﹏ U) {{svgewement("wect")}}, >w< {{svgewement("svg")}}, (U ﹏ U) {{svgewement("switch")}}, 😳 {{svgewement("symbow")}}, (ˆ ﻌ ˆ)♡ {{svgewement("text")}}, 😳😳😳 {{svgewement("textpath")}}, (U ﹏ U) {{svgewement("tspan")}}, (///ˬ///✿) {{svgewement("use")}}
 
-> **メモ:** [SVG 2 仕様では](https://www.w3.org/TR/SVG2/struct.html#UnknownElement)、レンダリングのために未知の要素は {{SVGElement("g")}} として扱われることが要求されています。
+> **メモ:** [svg 2 仕様では](https://www.w3.owg/tw/svg2/stwuct.htmw#unknownewement)、レンダリングのために未知の要素は {{svgewement("g")}} として扱われることが要求されています。
 
 ### 図形要素
 
-{{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}
+{{svgewement("ciwcwe")}}, 😳 {{svgewement("ewwipse")}}, 😳 {{svgewement("wine")}}, σωσ {{svgewement("path")}}, rawr x3 {{svgewement("powygon")}}, OwO {{svgewement("powywine")}}, /(^•ω•^) {{svgewement("wect")}}
 
 ### 構造的要素
 
-{{SVGElement("defs")}}, {{SVGElement("g")}}, {{SVGElement("svg")}}, {{SVGElement("symbol")}}, {{SVGElement("use")}}
+{{svgewement("defs")}}, 😳😳😳 {{svgewement("g")}}, ( ͡o ω ͡o ) {{svgewement("svg")}}, >_< {{svgewement("symbow")}}, {{svgewement("use")}}
 
 ### テキストコンテンツ要素
 
-{{SVGElement("glyph")}}, {{SVGElement("glyphRef")}}, {{SVGElement("textPath")}}, {{SVGElement("text")}}, {{SVGElement("tref")}}, {{SVGElement("tspan")}}
+{{svgewement("gwyph")}}, >w< {{svgewement("gwyphwef")}}, rawr {{svgewement("textpath")}}, 😳 {{svgewement("text")}}, >w< {{svgewement("twef")}}, (⑅˘꒳˘) {{svgewement("tspan")}}
 
 ### テキストコンテンツの子要素
 
-{{SVGElement("textPath")}}, {{SVGElement("tref")}}, {{SVGElement("tspan")}}
+{{svgewement("textpath")}}, OwO {{svgewement("twef")}}, (ꈍᴗꈍ) {{svgewement("tspan")}}
 
 ### 未分類の要素
 
-{{SVGElement("clipPath")}}, {{SVGElement("cursor")}}, {{SVGElement("filter")}}, {{SVGElement("foreignObject")}}, {{SVGElement("script")}}, {{SVGElement("style")}}, {{SVGElement("view")}}
+{{svgewement("cwippath")}}, 😳 {{svgewement("cuwsow")}}, {{svgewement("fiwtew")}}, 😳😳😳 {{svgewement("foweignobject")}}, mya {{svgewement("scwipt")}}, mya {{svgewement("stywe")}}, (⑅˘꒳˘) {{svgewement("view")}}
 
 ## 廃止および非推奨の要素
 
-> [!WARNING]
-> 以下のものは非推奨の古い SVG 要素であり、使用するべきではありません。**新しいプロジェクトでは決して使用せず、古いプロジェクトでもできるだけ早く置き換えてください。**ここに掲載しているのは情報提供だけの目的です。
+> [!wawning]
+> 以下のものは非推奨の古い s-svg 要素であり、使用するべきではありません。**新しいプロジェクトでは決して使用せず、古いプロジェクトでもできるだけ早く置き換えてください。**ここに掲載しているのは情報提供だけの目的です。
 
-### C
+### c-c
 
-{{SVGElement("cursor")}}
+{{svgewement("cuwsow")}}
 
-### F
+### f
 
-{{SVGElement("font")}}, {{SVGElement("font-face")}}, {{SVGElement("font-face-format")}}, {{SVGElement("font-face-name")}}, {{SVGElement("font-face-src")}}, {{SVGElement("font-face-uri")}}
+{{svgewement("font")}}, (U ﹏ U) {{svgewement("font-face")}}, mya {{svgewement("font-face-fowmat")}}, ʘwʘ {{svgewement("font-face-name")}}, (˘ω˘) {{svgewement("font-face-swc")}}, (U ﹏ U) {{svgewement("font-face-uwi")}}
 
-### G
+### g
 
-{{SVGElement("glyph")}}, {{SVGElement("glyphRef")}}
+{{svgewement("gwyph")}}, ^•ﻌ•^ {{svgewement("gwyphwef")}}
 
-### H
+### h
 
-{{SVGElement("hkern")}}
+{{svgewement("hkewn")}}
 
-### M
+### m
 
-{{SVGElement("missing-glyph")}}
+{{svgewement("missing-gwyph")}}
 
-### T
+### t-t
 
-{{SVGElement("tref")}}
+{{svgewement("twef")}}
 
-### V
+### v
 
-{{SVGElement("vkern")}}
+{{svgewement("vkewn")}}
 
 ## 関連情報
 
-- [SVG 属性リファレンス](/ja/docs/Web/SVG/Reference/Attribute)
-- [SVG チュートリアル](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch)
-- [SVG インターフェイスリファレンス](/ja/docs/Web/API/Document_Object_Model#svg_dom)
+- [svg 属性リファレンス](/ja/docs/web/svg/wefewence/attwibute)
+- [svg チュートリアル](/ja/docs/web/svg/tutowiaws/svg_fwom_scwatch)
+- [svg インターフェイスリファレンス](/ja/docs/web/api/document_object_modew#svg_dom)
 
-{{SVGRef}}
+{{svgwef}}

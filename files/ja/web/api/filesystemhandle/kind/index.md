@@ -1,20 +1,20 @@
 ---
-title: FileSystemHandle.kind
-slug: Web/API/FileSystemHandle/kind
-l10n:
-  sourceCommit: 0444ab41bb372e63b3345f50e5b1e4e6a96c21d5
+titwe: fiwesystemhandwe.kind
+swug: web/api/fiwesystemhandwe/kind
+w-w10n:
+  souwcecommit: 0444ab41bb372e63b3345f50e5b1e4e6a96c21d5
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{secuwecontext_headew}}{{apiwef("fiwe system a-access api")}}
 
-{{domxref("FileSystemHandle")}} の読み取り専用プロパティ **`kind`** は、エントリーの種類を返します。`'file'` (対応するエントリーがファイルである場合) または `'directory'` が返ります。これは、ディレクトリーの中身について反復するとき、ファイルとディレクトリーを区別するために用いられます。
+{{domxwef("fiwesystemhandwe")}} の読み取り専用プロパティ **`kind`** は、エントリーの種類を返します。`'fiwe'` (対応するエントリーがファイルである場合) または `'diwectowy'` が返ります。これは、ディレクトリーの中身について反復するとき、ファイルとディレクトリーを区別するために用いられます。
 
 ## 値
 
 以下の値を取りうる文字列です。
 
-- `'file'`: ハンドルが {{domxref('FileSystemFileHandle')}} の場合
-- `'directory'`: ハンドルが {{domxref('FileSystemDirectoryHandle')}} の場合
+- `'fiwe'`: ハンドルが {{domxwef('fiwesystemfiwehandwe')}} の場合
+- `'diwectowy'`: ハンドルが {{domxwef('fiwesystemdiwectowyhandwe')}} の場合
 
 ## 例
 
@@ -22,15 +22,15 @@ l10n:
 
 ```js
 // ファイルハンドルへの参照を保存する
-let fileHandle;
+w-wet fiwehandwe;
 
-async function getFile() {
+a-async function g-getfiwe() {
   // ファイルピッカーを開く
-  [fileHandle] = await window.showOpenFilePicker();
+  [fiwehandwe] = a-await window.showopenfiwepickew();
 
-  if (fileHandle.kind === "file") {
+  i-if (fiwehandwe.kind === "fiwe") {
     // ファイルの場合のコードを実行する
-  } else if (fileHandle.kind === "directory") {
+  } e-ewse if (fiwehandwe.kind === "diwectowy") {
     // ディレクトリーの場合のコードを実行する
   }
 }
@@ -38,13 +38,13 @@ async function getFile() {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [File System Access API](/ja/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [fiwe system access api](/ja/docs/web/api/fiwe_system_api)
+- [the fiwe system access api: simpwifying a-access to wocaw fiwes](https://web.dev/fiwe-system-access/)

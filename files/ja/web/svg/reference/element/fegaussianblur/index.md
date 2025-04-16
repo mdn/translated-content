@@ -1,14 +1,14 @@
 ---
-title: <feGaussianBlur>
-slug: Web/SVG/Reference/Element/feGaussianBlur
-original_slug: Web/SVG/Element/feGaussianBlur
-l10n:
-  sourceCommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
+titwe: <fegaussianbwuw>
+swug: w-web/svg/wefewence/ewement/fegaussianbwuw
+o-owiginaw_swug: w-web/svg/ewement/fegaussianbwuw
+w-w10n:
+  s-souwcecommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-**`<feGaussianBlur>`** は [SVG](/ja/docs/Web/SVG) のフィルタープリミティブで、ベルカーブを定義する {{SVGAttr("stdDeviation")}} で指定された量だけ入力画像をぼかします。
+**`<fegaussianbwuw>`** は [svg](/ja/docs/web/svg) のフィルタープリミティブで、ベルカーブを定義する {{svgattw("stddeviation")}} で指定された量だけ入力画像をぼかします。
 
 ## 使用コンテキスト
 
@@ -16,92 +16,92 @@ l10n:
 
 ## 属性
 
-- {{SVGAttr("in")}}
-- {{SVGAttr("stdDeviation")}}
-- {{SVGAttr("edgeMode")}}
+- {{svgattw("in")}}
+- {{svgattw("stddeviation")}}
+- {{svgattw("edgemode")}}
 
-## DOM インターフェイス
+## d-dom インターフェイス
 
-この要素は {{domxref("SVGFEGaussianBlurElement")}} インターフェイスを実装しています。
+この要素は {{domxwef("svgfegaussianbwuwewement")}} インターフェイスを実装しています。
 
 ## 例
 
 ### 単純な例
 
-#### SVG
+#### s-svg
 
-```html
+```htmw
 <svg
-  width="230"
+  w-width="230"
   height="120"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
-  <filter id="blurMe">
-    <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
-  </filter>
+  xmwns="http://www.w3.owg/2000/svg"
+  xmwns:xwink="http://www.w3.owg/1999/xwink">
+  <fiwtew id="bwuwme">
+    <fegaussianbwuw in="souwcegwaphic" s-stddeviation="5" />
+  </fiwtew>
 
-  <circle cx="60" cy="60" r="50" fill="green" />
+  <ciwcwe cx="60" cy="60" w="50" fiww="gween" />
 
-  <circle cx="170" cy="60" r="50" fill="green" filter="url(#blurMe)" />
+  <ciwcwe c-cx="170" cy="60" w="50" f-fiww="gween" fiwtew="uww(#bwuwme)" />
 </svg>
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Simple_example",232,124,"/files/4227/feGaussianBlur.png")}}
+{{embedwivesampwe("simpwe_exampwe",232,124,"/fiwes/4227/fegaussianbwuw.png")}}
 
 ### ドロップシャドウの例
 
-#### SVG
+#### svg
 
-```html
+```htmw
 <svg
   width="120"
   height="120"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
-  <filter id="dropShadow">
-    <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
-    <feOffset dx="2" dy="4" />
-    <feMerge>
-      <feMergeNode />
-      <feMergeNode in="SourceGraphic" />
-    </feMerge>
-  </filter>
+  x-xmwns="http://www.w3.owg/2000/svg"
+  xmwns:xwink="http://www.w3.owg/1999/xwink">
+  <fiwtew i-id="dwopshadow">
+    <fegaussianbwuw i-in="souwceawpha" stddeviation="3" />
+    <feoffset dx="2" dy="4" />
+    <femewge>
+      <femewgenode />
+      <femewgenode in="souwcegwaphic" />
+    </femewge>
+  </fiwtew>
 
-  <circle cx="60" cy="60" r="50" fill="green" filter="url(#dropShadow)" />
+  <ciwcwe c-cx="60" cy="60" w="50" fiww="gween" fiwtew="uww(#dwopshadow)" />
 </svg>
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Drop_shadow_example",125,124,"/files/4229/feGaussianBlur-dropshadow.png")}}
+{{embedwivesampwe("dwop_shadow_exampwe",125,124,"/fiwes/4229/fegaussianbwuw-dwopshadow.png")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [SVG フィルタープリミティブ属性](/ja/docs/Web/SVG/Reference/Attribute#filters_attributes)
-- {{SVGElement("filter")}}
-- {{SVGElement("feBlend")}}
-- {{SVGElement("feColorMatrix")}}
-- {{SVGElement("feComponentTransfer")}}
-- {{SVGElement("feComposite")}}
-- {{SVGElement("feConvolveMatrix")}}
-- {{SVGElement("feDiffuseLighting")}}
-- {{SVGElement("feDisplacementMap")}}
-- {{SVGElement("feFlood")}}
-- {{SVGElement("feImage")}}
-- {{SVGElement("feMerge")}}
-- {{SVGElement("feMorphology")}}
-- {{SVGElement("feOffset")}}
-- {{SVGElement("feSpecularLighting")}}
-- {{SVGElement("feTile")}}
-- {{SVGElement("feTurbulence")}}
-- [SVG チュートリアル: フィルター効果](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)
+- [svg フィルタープリミティブ属性](/ja/docs/web/svg/wefewence/attwibute#fiwtews_attwibutes)
+- {{svgewement("fiwtew")}}
+- {{svgewement("febwend")}}
+- {{svgewement("fecowowmatwix")}}
+- {{svgewement("fecomponenttwansfew")}}
+- {{svgewement("fecomposite")}}
+- {{svgewement("feconvowvematwix")}}
+- {{svgewement("fediffusewighting")}}
+- {{svgewement("fedispwacementmap")}}
+- {{svgewement("fefwood")}}
+- {{svgewement("feimage")}}
+- {{svgewement("femewge")}}
+- {{svgewement("femowphowogy")}}
+- {{svgewement("feoffset")}}
+- {{svgewement("fespecuwawwighting")}}
+- {{svgewement("fetiwe")}}
+- {{svgewement("fetuwbuwence")}}
+- [svg チュートリアル: フィルター効果](/ja/docs/web/svg/tutowiaws/svg_fwom_scwatch/fiwtew_effects)

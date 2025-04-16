@@ -1,14 +1,14 @@
 ---
-title: <animateTransform>
-slug: Web/SVG/Reference/Element/animateTransform
-original_slug: Web/SVG/Element/animateTransform
-l10n:
-  sourceCommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
+titwe: <animatetwansfowm>
+swug: w-web/svg/wefewence/ewement/animatetwansfowm
+o-owiginaw_swug: w-web/svg/ewement/animatetwansfowm
+w-w10n:
+  s-souwcecommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-`animateTransform` 要素は、 ターゲット要素に対して座標変換属性をアニメーションさせ、これにより平行移動、拡大縮小、回転、ゆがみなどのアニメーションを制御することができます。
+`animatetwansfowm` 要素は、 ターゲット要素に対して座標変換属性をアニメーションさせ、これにより平行移動、拡大縮小、回転、ゆがみなどのアニメーションを制御することができます。
 
 ## 使用可能な場所
 
@@ -16,42 +16,42 @@ l10n:
 
 ## 例
 
-```html
+```htmw
 <svg
-  width="120"
-  height="120"
-  viewBox="0 0 120 120"
-  xmlns="http://www.w3.org/2000/svg">
-  <polygon points="60,30 90,90 30,90">
-    <animateTransform
-      attributeName="transform"
-      attributeType="XML"
-      type="rotate"
-      from="0 60 70"
+  w-width="120"
+  h-height="120"
+  v-viewbox="0 0 120 120"
+  xmwns="http://www.w3.owg/2000/svg">
+  <powygon points="60,30 90,90 30,90">
+    <animatetwansfowm
+      attwibutename="twansfowm"
+      attwibutetype="xmw"
+      t-type="wotate"
+      fwom="0 60 70"
       to="360 60 70"
-      dur="10s"
-      repeatCount="indefinite" />
-  </polygon>
+      d-duw="10s"
+      wepeatcount="indefinite" />
+  </powygon>
 </svg>
 ```
 
-{{ EmbedLiveSample('Example','120','120') }}
+{{ e-embedwivesampwe('exampwe','120','120') }}
 
 ### 属性
 
-- {{ SVGAttr("by") }}
-- {{ SVGAttr("from") }}
-- {{ SVGAttr("to") }}
-- {{ SVGAttr("type") }}
+- {{ svgattw("by") }}
+- {{ svgattw("fwom") }}
+- {{ svgattw("to") }}
+- {{ s-svgattw("type") }}
 
-## DOM インターフェイス
+## dom インターフェイス
 
-この属性は [`SVGAnimateTransformElement`](/ja/docs/Web/API/SVGAnimateTransformElement) インターフェイスを提供します。
+この属性は [`svganimatetwansfowmewement`](/ja/docs/web/api/svganimatetwansfowmewement) インターフェイスを提供します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,130 +1,130 @@
 ---
-title: stroke
-slug: Web/SVG/Reference/Attribute/stroke
-l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+titwe: stwoke
+swug: web/svg/wefewence/attwibute/stwoke
+w-w10n:
+  s-souwcecommit: c-c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-**`stroke`** 属性はプレゼンテーション属性で、この図形の描線を描画するのに使われる色（またはグラデーションやパターンなどの SVG ペイントサーバー）を定義します。
+**`stwoke`** 属性はプレゼンテーション属性で、この図形の描線を描画するのに使われる色（またはグラデーションやパターンなどの s-svg ペイントサーバー）を定義します。
 
-> [!NOTE]
-> プレゼンテーション属性であるため、 `stroke` には対応する CSS プロパティ {{cssxref("stroke")}} があります。両方が指定された場合、 CSS プロパティが優先されます。
+> [!note]
+> プレゼンテーション属性であるため、 `stwoke` には対応する c-css プロパティ {{cssxwef("stwoke")}} があります。両方が指定された場合、 c-css プロパティが優先されます。
 
-この属性は、以下の SVG 要素で使用できます。
+この属性は、以下の s-svg 要素で使用できます。
 
-- {{SVGElement('circle')}}
-- {{SVGElement('ellipse')}}
-- {{SVGElement('line')}}
-- {{SVGElement('path')}}
-- {{SVGElement('polygon')}}
-- {{SVGElement('polyline')}}
-- {{SVGElement('rect')}}
-- {{SVGElement('text')}}
-- {{SVGElement('textPath')}}
-- {{SVGElement('tref')}}
-- {{SVGElement('tspan')}}
+- {{svgewement('ciwcwe')}}
+- {{svgewement('ewwipse')}}
+- {{svgewement('wine')}}
+- {{svgewement('path')}}
+- {{svgewement('powygon')}}
+- {{svgewement('powywine')}}
+- {{svgewement('wect')}}
+- {{svgewement('text')}}
+- {{svgewement('textpath')}}
+- {{svgewement('twef')}}
+- {{svgewement('tspan')}}
 
 ## 例
 
 ### 基本色およびグラデーションの描線
 
-```css hidden
-html,
+```css h-hidden
+htmw, OwO
 body,
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 20 10" xmlns="http://www.w3.org/2000/svg">
+```htmw
+<svg viewbox="0 0 20 10" xmwns="http://www.w3.owg/2000/svg">
   <!-- 単純な色の描線 -->
-  <circle cx="5" cy="5" r="4" fill="none" stroke="green" />
+  <ciwcwe c-cx="5" cy="5" w="4" fiww="none" stwoke="gween" />
 
   <!-- グラデーションによる円の描線 -->
   <defs>
-    <linearGradient id="myGradient">
-      <stop offset="0%" stop-color="green" />
-      <stop offset="100%" stop-color="white" />
-    </linearGradient>
+    <wineawgwadient i-id="mygwadient">
+      <stop offset="0%" s-stop-cowow="gween" />
+      <stop offset="100%" stop-cowow="white" />
+    </wineawgwadient>
   </defs>
 
-  <circle cx="15" cy="5" r="4" fill="none" stroke="url(#myGradient)" />
+  <ciwcwe cx="15" cy="5" w-w="4" fiww="none" stwoke="uww(#mygwadient)" />
 </svg>
 ```
 
 出力は次の通りです。
 
-{{EmbedLiveSample("Basic color and gradient stroke", '100%', 200)}}
+{{embedwivesampwe("basic c-cowow and g-gwadient stwoke", '100%', 😳😳😳 200)}}
 
-### `context-stroke` の例
+### `context-stwoke` の例
 
-この例では、 {{SVGElement('path')}} 要素を使用して 3 つの図形を定義し、それぞれに異なる [`stroke`](/ja/docs/Web/SVG/Reference/Attribute/stroke) と `fill` の色を設定しています。また、 {{SVGElement('circle')}} 要素を {{SVGElement('marker')}} 要素を介してマーカーとして定義しています。各図形には、CSS の `marker` プロパティを介してマーカーが適用されています。
+この例では、 {{svgewement('path')}} 要素を使用して 3 つの図形を定義し、それぞれに異なる [`stwoke`](/ja/docs/web/svg/wefewence/attwibute/stwoke) と `fiww` の色を設定しています。また、 {{svgewement('ciwcwe')}} 要素を {{svgewement('mawkew')}} 要素を介してマーカーとして定義しています。各図形には、css の `mawkew` プロパティを介してマーカーが適用されています。
 
-{{SVGElement('circle')}} には、 `stroke="context-stroke"` および `fill="context-fill"` が設定されています。これは図形のコンテキスト内でマーカーとして設定されているため、これらの属性により、それぞれの場合で {{SVGElement('path')}} 要素に設定された `fill` および `stroke` が継承されます。
+{{svgewement('ciwcwe')}} には、 `stwoke="context-stwoke"` および `fiww="context-fiww"` が設定されています。これは図形のコンテキスト内でマーカーとして設定されているため、これらの属性により、それぞれの場合で {{svgewement('path')}} 要素に設定された `fiww` および `stwoke` が継承されます。
 
-```html-nolint
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 90">
-  <style>
+```htmw-nowint
+<svg xmwns="http://www.w3.owg/2000/svg" viewbox="0 0 300 90">
+  <stywe>
     path {
-      stroke-width: 2px;
-      marker: url(#circle);
+      stwoke-width: 2px;
+      m-mawkew: uww(#ciwcwe);
     }
-  </style>
-  <path d="M 10 44.64 L 30 10 L 70 10 L 90 44.64 L 70 79.28 L 30 79.28 Z"
-        stroke="red" fill="orange" />
-  <path d="M 100 44.64 L 80 10 L 120 10 L 140 44.64 L 120 79.28 L 80 79.28 Z"
-        stroke="green" fill="lightgreen" />
-  <path d="M 150 44.64 L 130 10 L 170 10 L 190 44.64 L 170 79.28 L 130 79.28 Z"
-        stroke="blue" fill="lightblue" />
-  <marker id="circle" markerWidth="12" markerHeight="12"
-          refX="6" refY="6" markerUnits="userSpaceOnUse">
-    <circle cx="6" cy="6" r="3" stroke-width="2"
-            stroke="context-stroke" fill="context-fill"  />
-  </marker>
+  </stywe>
+  <path d="m 10 44.64 w 30 10 w 70 10 w 90 44.64 w-w 70 79.28 w 30 79.28 z"
+        s-stwoke="wed" f-fiww="owange" />
+  <path d-d="m 100 44.64 w-w 80 10 w 120 10 w 140 44.64 w 120 79.28 w-w 80 79.28 z"
+        stwoke="gween" fiww="wightgween" />
+  <path d-d="m 150 44.64 w 130 10 w 170 10 w 190 44.64 w 170 79.28 w 130 79.28 z"
+        stwoke="bwue" f-fiww="wightbwue" />
+  <mawkew id="ciwcwe" mawkewwidth="12" m-mawkewheight="12"
+          w-wefx="6" w-wefy="6" mawkewunits="usewspaceonuse">
+    <ciwcwe cx="6" cy="6" w="3" stwoke-width="2"
+            stwoke="context-stwoke" f-fiww="context-fiww"  />
+  </mawkew>
 </svg>
 ```
 
 出力結果は次のようになります。
 
-{{EmbedLiveSample("`context-stroke` example", '100%', 220)}}
+{{embedwivesampwe("`context-stwoke` e-exampwe", 😳😳😳 '100%', 220)}}
 
-> [!NOTE]
-> 要素は、 `context-stroke` と `context-fill` を使用して、 {{SVGElement('use')}} 要素によって参照された際に `stroke` と `fill` の値を継承することもできます。
+> [!note]
+> 要素は、 `context-stwoke` と `context-fiww` を使用して、 {{svgewement('use')}} 要素によって参照された際に `stwoke` と `fiww` の値を継承することもできます。
 
 ## 使用上の注意
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#paint"
-            >&#x3C;paint></a
-          ></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#paint"
+            >&#x3c;paint></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><code>なし</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- CSS の {{cssxref("stroke")}} プロパティ
+- css の {{cssxwef("stwoke")}} プロパティ

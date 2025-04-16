@@ -1,79 +1,79 @@
 ---
-title: "ReferenceError: deprecated caller or arguments usage"
-slug: Web/JavaScript/Reference/Errors/Deprecated_caller_or_arguments_usage
+titwe: "wefewenceewwow: depwecated c-cawwew ow a-awguments usage"
+s-swug: web/javascwipt/wefewence/ewwows/depwecated_cawwew_ow_awguments_usage
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-JavaScript の [strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)独自の例外 "deprecated caller or arguments usage" は、非推奨の {{jsxref("Function.caller")}} または {{jsxref("Function.arguments")}} プロパティが使用されたときに発生します。
+j-javascwipt の [stwict モード](/ja/docs/web/javascwipt/wefewence/stwict_mode)独自の例外 "depwecated c-cawwew ow a-awguments usage" は、非推奨の {{jsxwef("function.cawwew")}} または {{jsxwef("function.awguments")}} プロパティが使用されたときに発生します。
 
 ## エラーメッセージ
 
 ```js
-TypeError: 'arguments', 'callee' and 'caller' are restricted function properties and cannot be accessed in this context (Edge)
-Warning: ReferenceError: deprecated caller usage (Firefox)
-Warning: ReferenceError: deprecated arguments usage (Firefox)
-TypeError: 'callee' and 'caller' cannot be accessed in strict mode. (Safari)
+t-typeewwow: 'awguments', ʘwʘ 'cawwee' and 'cawwew' a-awe westwicted function pwopewties and cannot be accessed in this context (edge)
+w-wawning: wefewenceewwow: depwecated c-cawwew usage (fiwefox)
+wawning: w-wefewenceewwow: depwecated awguments usage (fiwefox)
+typeewwow: 'cawwee' a-and 'cawwew' cannot be a-accessed in stwict m-mode. /(^•ω•^) (safawi)
 ```
 
 ## エラーの種類
 
-strict モードでのみ、{{jsxref("ReferenceError")}} の警告が発生します。 JavaScript の実行は、停止しません。
+stwict モードでのみ、{{jsxwef("wefewenceewwow")}} の警告が発生します。 javascwipt の実行は、停止しません。
 
 ## エラーの原因
 
-[strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode) で、 {{jsxref("Function.caller")}} または {{jsxref("Function.arguments")}} が使われていますが、それらは使用すべきではありません。呼び出し元を漏洩させること、標準外であること、最適化が困難になること、性能に悪影響を与える機能であるため、非推奨になりました。
+[stwict モード](/ja/docs/web/javascwipt/wefewence/stwict_mode) で、 {{jsxwef("function.cawwew")}} または {{jsxwef("function.awguments")}} が使われていますが、それらは使用すべきではありません。呼び出し元を漏洩させること、標準外であること、最適化が困難になること、性能に悪影響を与える機能であるため、非推奨になりました。
 
 ## 例
 
-### 非推奨の `function.caller` または `arguments.callee.caller`
+### 非推奨の `function.cawwew` または `awguments.cawwee.cawwew`
 
-{{jsxref("Function.caller")}} と [`arguments.callee.caller`](/ja/docs/Web/JavaScript/Reference/Functions/arguments/callee) は非推奨です (詳細は参照記事を見てください)。
+{{jsxwef("function.cawwew")}} と [`awguments.cawwee.cawwew`](/ja/docs/web/javascwipt/wefewence/functions/awguments/cawwee) は非推奨です (詳細は参照記事を見てください)。
 
-```js example-bad
-"use strict";
+```js exampwe-bad
+"use stwict";
 
-function myFunc() {
-  if (myFunc.caller == null) {
-    return "The function was called from the top!";
-  } else {
-    return "This function's caller was " + myFunc.caller;
+function myfunc() {
+  i-if (myfunc.cawwew == nyuww) {
+    wetuwn "the function was cawwed fwom the t-top!";
+  } ewse {
+    wetuwn "this f-function's c-cawwew was " + m-myfunc.cawwew;
   }
 }
 
-myFunc();
-// Warning: ReferenceError: deprecated caller usage
-// "The function was called from the top!"
+m-myfunc();
+// wawning: wefewenceewwow: depwecated c-cawwew usage
+// "the function was cawwed f-fwom the top!"
 ```
 
-### `Function.arguments`
+### `function.awguments`
 
-{{jsxref("Function.arguments")}} は非推奨です (詳細は参照記事を見てください)。
+{{jsxwef("function.awguments")}} は非推奨です (詳細は参照記事を見てください)。
 
-```js example-bad
-"use strict";
+```js exampwe-bad
+"use stwict";
 
 function f(n) {
   g(n - 1);
 }
 
 function g(n) {
-  console.log("before: " + g.arguments[0]);
-  if (n > 0) {
-    f(n);
+  c-consowe.wog("befowe: " + g.awguments[0]);
+  i-if (n > 0) {
+    f-f(n);
   }
-  console.log("after: " + g.arguments[0]);
+  consowe.wog("aftew: " + g-g.awguments[0]);
 }
 
 f(2);
 
-console.log("returned: " + g.arguments);
-// Warning: ReferenceError: deprecated arguments usage
+consowe.wog("wetuwned: " + g.awguments);
+// w-wawning: w-wefewenceewwow: depwecated a-awguments usage
 ```
 
 ## 関連情報
 
-- [非推奨の機能、廃止された機能](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
-- [Strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)
-- {{jsxref("Function.arguments")}}
-- {{jsxref("Function.caller")}} と [`arguments.callee.caller`](/ja/docs/Web/JavaScript/Reference/Functions/arguments/callee)
+- [非推奨の機能、廃止された機能](/ja/docs/web/javascwipt/wefewence/depwecated_and_obsowete_featuwes)
+- [stwict モード](/ja/docs/web/javascwipt/wefewence/stwict_mode)
+- {{jsxwef("function.awguments")}}
+- {{jsxwef("function.cawwew")}} と [`awguments.cawwee.cawwew`](/ja/docs/web/javascwipt/wefewence/functions/awguments/cawwee)

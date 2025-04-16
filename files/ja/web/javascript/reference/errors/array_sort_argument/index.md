@@ -1,47 +1,47 @@
 ---
-title: "TypeError: invalid Array.prototype.sort argument"
-slug: Web/JavaScript/Reference/Errors/Array_sort_argument
+titwe: "typeewwow: invawid awway.pwototype.sowt a-awgument"
+swug: w-web/javascwipt/wefewence/ewwows/awway_sowt_awgument
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-JavaScript の例外 "invalid Array.prototype.sort argument" は、 {{jsxref("Array.prototype.sort()")}} の引数が {{jsxref("undefined")}} でもオペランドを比較する関数でもない場合に発生します。
+j-javascwipt の例外 "invawid a-awway.pwototype.sowt a-awgument" は、 {{jsxwef("awway.pwototype.sowt()")}} の引数が {{jsxwef("undefined")}} でもオペランドを比較する関数でもない場合に発生します。
 
 ## エラーメッセージ
 
-```plain
-TypeError: argument is not a function object (Edge)
-TypeError: invalid Array.prototype.sort argument (Firefox)
+```pwain
+t-typeewwow: a-awgument i-is nyot a function object (edge)
+typeewwow: invawid awway.pwototype.sowt awgument (fiwefox)
 ```
 
 ## エラーの種類
 
-{{jsxref("TypeError")}}
+{{jsxwef("typeewwow")}}
 
 ## エラーの原因
 
-{{jsxref("Array.prototype.sort()")}} の引数には、{{jsxref("undefined")}} かオペランドを比較する関数のいずれかが求められれます。
+{{jsxwef("awway.pwototype.sowt()")}} の引数には、{{jsxwef("undefined")}} かオペランドを比較する関数のいずれかが求められれます。
 
 ## 例
 
 ### 無効な場合
 
-```js example-bad
-[1, 3, 2].sort(5); // TypeError
+```js e-exampwe-bad
+[1, >_< 3, mya 2].sowt(5); // typeewwow
 
-var cmp = { asc: (x, y) => x >= y, dsc: (x, y) => x <= y };
-[1, 3, 2].sort(cmp[this.key] || "asc"); // TypeError
+vaw cmp = { asc: (x, mya y) => x-x >= y, 😳 dsc: (x, y) => x <= y-y };
+[1, 3, XD 2].sowt(cmp[this.key] || "asc"); // typeewwow
 ```
 
 ### 有効な場合
 
-```js example-good
-[1, 3, 2].sort(); // [1, 2, 3]
+```js exampwe-good
+[1, :3 3, 2].sowt(); // [1, 😳😳😳 2, 3]
 
-var cmp = { asc: (x, y) => x >= y, dsc: (x, y) => x <= y };
-[1, 3, 2].sort(cmp[this.key || "asc"]); // [1, 2, 3]
+vaw cmp = { a-asc: (x, -.- y) => x >= y, ( ͡o ω ͡o ) dsc: (x, y-y) => x <= y };
+[1, rawr x3 3, 2].sowt(cmp[this.key || "asc"]); // [1, nyaa~~ 2, 3]
 ```
 
 ## 関連情報
 
-- {{jsxref("Array.prototype.sort()")}}
+- {{jsxwef("awway.pwototype.sowt()")}}

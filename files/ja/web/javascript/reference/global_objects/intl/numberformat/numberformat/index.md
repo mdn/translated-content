@@ -1,130 +1,130 @@
 ---
-title: Intl.NumberFormat() コンストラクター
-slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat
+titwe: intw.numbewfowmat() コンストラクター
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/numbewfowmat/numbewfowmat
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Intl.NumberFormat()`** コンストラクターは、言語に依存した数値の整形ができる {{jsxref("NumberFormat", "Intl.NumberFormat")}} オブジェクトを生成します。
+**`intw.numbewfowmat()`** コンストラクターは、言語に依存した数値の整形ができる {{jsxwef("numbewfowmat", :3 "intw.numbewfowmat")}} オブジェクトを生成します。
 
-{{InteractiveExample("JavaScript Demo: Intl.NumberFormat")}}
+{{intewactiveexampwe("javascwipt d-demo: intw.numbewfowmat")}}
 
-```js interactive-example
-const number = 123456.789;
+```js i-intewactive-exampwe
+c-const n-nyumbew = 123456.789;
 
-console.log(
-  new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" }).format(
-    number,
+c-consowe.wog(
+  n-nyew intw.numbewfowmat("de-de", OwO { s-stywe: "cuwwency", (U ﹏ U) cuwwency: "euw" }).fowmat(
+    n-nyumbew, >w<
   ),
 );
-// Expected output: "123.456,79 €"
+// expected output: "123.456,79 €"
 
-// The Japanese yen doesn't use a minor unit
-console.log(
-  new Intl.NumberFormat("ja-JP", { style: "currency", currency: "JPY" }).format(
-    number,
+// the japanese yen doesn't use a minow unit
+c-consowe.wog(
+  nyew intw.numbewfowmat("ja-jp", (U ﹏ U) { stywe: "cuwwency", 😳 c-cuwwency: "jpy" }).fowmat(
+    nyumbew, (ˆ ﻌ ˆ)♡
   ),
 );
-// Expected output: "￥123,457"
+// e-expected output: "￥123,457"
 
-// Limit to three significant digits
-console.log(
-  new Intl.NumberFormat("en-IN", { maximumSignificantDigits: 3 }).format(
-    number,
-  ),
+// wimit to thwee significant d-digits
+consowe.wog(
+  nyew i-intw.numbewfowmat("en-in", 😳😳😳 { m-maximumsignificantdigits: 3 }).fowmat(
+    nyumbew, (U ﹏ U)
+  ), (///ˬ///✿)
 );
-// Expected output: "1,23,000"
+// expected output: "1,23,000"
 ```
 
 ## 構文
 
 ```js
-new Intl.NumberFormat([locales[, options]])
+nyew intw.numbewfowmat([wocawes[, 😳 o-options]])
 ```
 
 ### 引数
 
-- `locales` {{optional_inline}}
+- `wocawes` {{optionaw_inwine}}
 
-  - : BCP 47 言語タグを持つ文字列、またはそのような文字列の配列。 `locales` 引数の一般的な形式と解釈については、 {{jsxref("Global_Objects/Intl", "Intl", "#ロケールの識別とネゴシエーション", 1)}} のページを参照してください。次の Unicode 拡張キーが許可されています。
+  - : bcp 47 言語タグを持つ文字列、またはそのような文字列の配列。 `wocawes` 引数の一般的な形式と解釈については、 {{jsxwef("gwobaw_objects/intw", 😳 "intw", σωσ "#ロケールの識別とネゴシエーション", rawr x3 1)}} のページを参照してください。次の unicode 拡張キーが許可されています。
 
     - `nu`
-      - : 使用される数値システムです。指定可能な値には "`adlm`", "`ahom`", "`arab`", "`arabext`", "`bali`", "`beng`", "`bhks`", "`brah`", "`cakm`", "`cham`", "`deva`", "`diak`", "`fullwide`", "`gong`", "`gonm`", "`gujr`", "`guru`", "`hanidec`", "`hmng`", "`hmnp`", "`java`", "`kali`", "`khmr`", "`knda`", "`lana`", "`lanatham`", "`laoo`", "`latn`", "`lepc`", "`limb`", "`mathbold`", "`mathdbl`", "`mathmono`", "`mathsanb`", "`mathsans`", "`mlym`", "`modi`", "`mong`", "`mroo`", "`mtei`", "`mymr`", "`mymrshan`", "`mymrtlng`", "`newa`", "`nkoo`", "`olck`", "`orya`", "`osma`", "`rohg`", "`saur`", "`segment`", "`shrd`", "`sind`", "`sinh`", "`sora`", "`sund`", "`takr`", "`talu`", "`tamldec`", "`telu`", "`thai`", "`tibt`", "`tirh`", "`vaii`", "`wara`", "`wcho`" があります。 [標準 Unicode 命数法一覧](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystem) を参照してください。
+      - : 使用される数値システムです。指定可能な値には "`adwm`", OwO "`ahom`", "`awab`", /(^•ω•^) "`awabext`", 😳😳😳 "`bawi`", "`beng`", ( ͡o ω ͡o ) "`bhks`", >_< "`bwah`", "`cakm`", >w< "`cham`", "`deva`", rawr "`diak`", 😳 "`fuwwwide`", >w< "`gong`", "`gonm`", (⑅˘꒳˘) "`gujw`", "`guwu`", OwO "`hanidec`", (ꈍᴗꈍ) "`hmng`", "`hmnp`", 😳 "`java`", 😳😳😳 "`kawi`", "`khmw`", mya "`knda`", mya "`wana`", "`wanatham`", (⑅˘꒳˘) "`waoo`", (U ﹏ U) "`watn`", "`wepc`", mya "`wimb`", ʘwʘ "`mathbowd`", "`mathdbw`", (˘ω˘) "`mathmono`", (U ﹏ U) "`mathsanb`", ^•ﻌ•^ "`mathsans`", (˘ω˘) "`mwym`", :3 "`modi`", "`mong`", ^^;; "`mwoo`", "`mtei`", 🥺 "`mymw`", (⑅˘꒳˘) "`mymwshan`", nyaa~~ "`mymwtwng`", "`newa`", :3 "`nkoo`", ( ͡o ω ͡o ) "`owck`", "`owya`", mya "`osma`", (///ˬ///✿) "`wohg`", "`sauw`", (˘ω˘) "`segment`", ^^;; "`shwd`", "`sind`", (✿oωo) "`sinh`", "`sowa`", (U ﹏ U) "`sund`", -.- "`takw`", "`tawu`", ^•ﻌ•^ "`tamwdec`", rawr "`tewu`", "`thai`", (˘ω˘) "`tibt`", nyaa~~ "`tiwh`", "`vaii`", UwU "`wawa`", :3 "`wcho`" があります。 [標準 unicode 命数法一覧](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/intw/wocawe/numbewingsystem) を参照してください。
 
-- `options` {{optional_inline}}
+- `options` {{optionaw_inwine}}
 
   - : 以下のプロパティのすべてまたは一部を持つオブジェクトです。
 
-    - `compactDisplay`
-      - : `notation` が "`compact`" の場合のみ使用されます。 "`short`" (既定値) または "`long`" のどちらかを取ります。
-    - `currency`
-      - : 通貨の書式で使用するための通貨です。使用可能な値は ISO 4217 通貨コードであり、例えば米ドルは "`USD`"、ユーロは "`EUR`"、日本円には "`JPY`" です。 — [Current currency & funds code list](https://www.currency-iso.org/en/home/tables/table-a1.html) を参照してください。既定値はありません。 `style` が "`currency`" である場合、 `currency` プロパティを提供する必要があります。
-    - `currencyDisplay`
+    - `compactdispway`
+      - : `notation` が "`compact`" の場合のみ使用されます。 "`showt`" (既定値) または "`wong`" のどちらかを取ります。
+    - `cuwwency`
+      - : 通貨の書式で使用するための通貨です。使用可能な値は iso 4217 通貨コードであり、例えば米ドルは "`usd`"、ユーロは "`euw`"、日本円には "`jpy`" です。 — [cuwwent c-cuwwency & funds code w-wist](https://www.cuwwency-iso.owg/en/home/tabwes/tabwe-a1.htmw) を参照してください。既定値はありません。 `stywe` が "`cuwwency`" である場合、 `cuwwency` プロパティを提供する必要があります。
+    - `cuwwencydispway`
 
       - : 通貨の書式で通貨を表示する方法です。使用可能な値は次の通りです。
 
-        - "`symbol`" はローカライズされた通貨記号、例えば € などを使用します。これが既定値です。
-        - "`narrowSymbol`" は短い形式の記号を使用します ("US$100" ではなく "$100")。
-        - "`code`" は ISO 通貨コードを使用します。
-        - "`name`" はローカライズされた通貨名、例えば "`dollar`" を使用します。
+        - "`symbow`" はローカライズされた通貨記号、例えば € などを使用します。これが既定値です。
+        - "`nawwowsymbow`" は短い形式の記号を使用します ("us$100" ではなく "$100")。
+        - "`code`" は i-iso 通貨コードを使用します。
+        - "`name`" はローカライズされた通貨名、例えば "`dowwaw`" を使用します。
 
-    - `currencySign`
-      - : 多くのロケールでは、会計の書式はマイナス記号を追加する代わりに数値を括弧で囲みます。この形式は `currencySign` オプションを "`accounting`" に設定すると有効になります。既定値は "`standard`" です。
-    - `localeMatcher`
-      - : 使用するロケール比較アルゴリズムです。使用可能な値は "`lookup`" および "`best fit`" です。既定値は "`best fit`" です。このオプションについての情報は、 {{jsxref("Global_Objects/Intl", "Intl page", "#Locale_negotiation", 1)}} を参照してください。
+    - `cuwwencysign`
+      - : 多くのロケールでは、会計の書式はマイナス記号を追加する代わりに数値を括弧で囲みます。この形式は `cuwwencysign` オプションを "`accounting`" に設定すると有効になります。既定値は "`standawd`" です。
+    - `wocawematchew`
+      - : 使用するロケール比較アルゴリズムです。使用可能な値は "`wookup`" および "`best f-fit`" です。既定値は "`best f-fit`" です。このオプションについての情報は、 {{jsxwef("gwobaw_objects/intw", (⑅˘꒳˘) "intw page", (///ˬ///✿) "#wocawe_negotiation", 1)}} を参照してください。
     - `notation`
 
-      - : 数値を表示するための書式です。既定値は "`standard`" です。
+      - : 数値を表示するための書式です。既定値は "`standawd`" です。
 
-        - "`standard`" は、通常の数値の書式です。
+        - "`standawd`" は、通常の数値の書式です。
         - "`scientific`" は、整形された数値の次数をを返します。
-        - "`engineering`" は、3 で割ることができる場合に 10 のべき乗を返します。
-        - "`compact`" は、指数表記を表す文字列で、既定値は "short" の形式を使用したものです。
+        - "`engineewing`" は、3 で割ることができる場合に 10 のべき乗を返します。
+        - "`compact`" は、指数表記を表す文字列で、既定値は "showt" の形式を使用したものです。
 
-    - `numberingSystem`
-      - : 数値体系です。使用可能な値には、 "`arab`", "`arabext`", " `bali`", "`beng`", "`deva`", "`fullwide`", " `gujr`", "`guru`", "`hanidec`", "`khmr`", " `knda`", "`laoo`", "`latn`", "`limb`", "`mlym`", " `mong`", "`mymr`", "`orya`", "`tamldec`", " `telu`", "`thai`", "`tibt`" があります。
-    - `signDisplay`
+    - `numbewingsystem`
+      - : 数値体系です。使用可能な値には、 "`awab`", ^^;; "`awabext`", >_< " `bawi`", "`beng`", rawr x3 "`deva`", /(^•ω•^) "`fuwwwide`", :3 " `gujw`", "`guwu`", (ꈍᴗꈍ) "`hanidec`", /(^•ω•^) "`khmw`", " `knda`", (⑅˘꒳˘) "`waoo`", ( ͡o ω ͡o ) "`watn`", "`wimb`", òωó "`mwym`", (⑅˘꒳˘) " `mong`", "`mymw`", XD "`owya`", "`tamwdec`", -.- " `tewu`", :3 "`thai`", nyaa~~ "`tibt`" があります。
+    - `signdispway`
 
       - : 数値の符号を表示するときです。既定値は "`auto`" です。
 
         - "`auto`" は、負の数のみ符号を表示します。
-        - "`never`" は、符号を表示しません。
-        - "`always`" は、常に符号を表示します。
-        - "`exceptZero`" は正の数と負の数には符号を表示しますが、ゼロには表示しません。
+        - "`nevew`" は、符号を表示しません。
+        - "`awways`" は、常に符号を表示します。
+        - "`exceptzewo`" は正の数と負の数には符号を表示しますが、ゼロには表示しません。
 
-    - `style`
+    - `stywe`
 
-      - : 使用する整形スタイルで、既定値は "`decimal`" です。
+      - : 使用する整形スタイルで、既定値は "`decimaw`" です。
 
-        - "`decimal`" は、ふつうの数値の整形に使用します。
-        - "`currency`" は、通貨の整形に使用します。
-        - "`percent`" は、パーセントの整形に使用します。
+        - "`decimaw`" は、ふつうの数値の整形に使用します。
+        - "`cuwwency`" は、通貨の整形に使用します。
+        - "`pewcent`" は、パーセントの整形に使用します。
         - "`unit`" は単位の整形に使用します。
 
     - `unit`
-      - : `unit` の整形で使用する単位で、使用可能な値は [UTS #35, Part 2, Section 6](https://unicode.org/reports/tr35/tr35-general.html#Unit_Elements) で定義されているコア単位識別子です。 [全体リスト](https://github.com/unicode-org/cldr/blob/master/common/validity/unit.xml)から単位の[サブセット](https://tc39.es/proposal-unified-intl-numberformat/section6/locales-currencies-tz_proposed_out.html#sec-issanctionedsimpleunitidentifier)が ECMAScript で使用するために選択されました。一組の単純な単位を "`-per-`" で結合し、複合単位を創ることができます。既定値はありません。 `style` が "`unit`" である場合、 `unit` プロパティを指定する必要があります。
-    - `unitDisplay`
+      - : `unit` の整形で使用する単位で、使用可能な値は [uts #35, 😳 pawt 2, s-section 6](https://unicode.owg/wepowts/tw35/tw35-genewaw.htmw#unit_ewements) で定義されているコア単位識別子です。 [全体リスト](https://github.com/unicode-owg/cwdw/bwob/mastew/common/vawidity/unit.xmw)から単位の[サブセット](https://tc39.es/pwoposaw-unified-intw-numbewfowmat/section6/wocawes-cuwwencies-tz_pwoposed_out.htmw#sec-issanctionedsimpweunitidentifiew)が ecmascwipt で使用するために選択されました。一組の単純な単位を "`-pew-`" で結合し、複合単位を創ることができます。既定値はありません。 `stywe` が "`unit`" である場合、 `unit` プロパティを指定する必要があります。
+    - `unitdispway`
 
-      - : `unit` の整形で使用する単位の整形スタイルで、既定値は "`short`" です。
+      - : `unit` の整形で使用する単位の整形スタイルで、既定値は "`showt`" です。
 
-        - "`long`" (例: `16 litres`)
-        - "`short`" (例: `16 l`)
-        - "`narrow`" (例: `16l`)
+        - "`wong`" (例: `16 witwes`)
+        - "`showt`" (例: `16 w-w`)
+        - "`nawwow`" (例: `16w`)
 
-    - `useGrouping`
-      - : グループ化する区切り記号を使用するかどうかです。例えば、 3 桁区切りや 1000/ラク/クレオールの区切り記号など。設定可能な値は true と false で、既定値は true です。
+    - `usegwouping`
+      - : グループ化する区切り記号を使用するかどうかです。例えば、 3 桁区切りや 1000/ラク/クレオールの区切り記号など。設定可能な値は twue と fawse で、既定値は twue です。
 
-    以下のプロパティは 2 つのグループに分類できます。 `minimumIntegerDigits`、`minimumFractionDigits`、`maximumFractionDigits` が一方のグループ、 `minimumSignificantDigits` と `maximumSignificantDigits` が他方のグループに属します。 2 つ目のグループから少なくとも 1 つのプロパティが定義されていれば、 1 つ目のグループは無視されます。
+    以下のプロパティは 2 つのグループに分類できます。 `minimumintegewdigits`、`minimumfwactiondigits`、`maximumfwactiondigits` が一方のグループ、 `minimumsignificantdigits` と `maximumsignificantdigits` が他方のグループに属します。 2 つ目のグループから少なくとも 1 つのプロパティが定義されていれば、 1 つ目のグループは無視されます。
 
-    - `minimumIntegerDigits`
+    - `minimumintegewdigits`
       - : 整数部に使用する最小桁数です。使用可能な値は 1 から 21 までです。既定値は 1 です。
-    - `minimumFractionDigits`
-      - : 小数部に使用する最小桁数です。使用可能な値は 0 から 20 までです。既定値は、通常の数値とパーセント形式では 0 です。通貨形式では [ISO 4217 通貨コードリスト](https://www.currency-iso.org/en/home/tables/table-a1.html)で提供されている副単位の桁数です (このリストで情報が提供されていない場合は 2 です)。
-    - `maximumFractionDigits`
-      - : 小数部に使用する最大桁数です。使用可能な値は 0 から 20 までです。既定値は、通常の数値では `minimumFractionDigits` と 3 の大きい方、通貨形式では `minimumFractionDigits` と [ISO 4217 通貨コードリスト](https://www.currency-iso.org/en/home/tables/table-a1.html)で提供されている副単位の桁数です (このリストで情報が提供されていない場合は 2)、パーセント形式の場合は `minimumFractionDigits` と 0 の大きい方です。
-    - `minimumSignificantDigits`
+    - `minimumfwactiondigits`
+      - : 小数部に使用する最小桁数です。使用可能な値は 0 から 20 までです。既定値は、通常の数値とパーセント形式では 0 です。通貨形式では [iso 4217 通貨コードリスト](https://www.cuwwency-iso.owg/en/home/tabwes/tabwe-a1.htmw)で提供されている副単位の桁数です (このリストで情報が提供されていない場合は 2 です)。
+    - `maximumfwactiondigits`
+      - : 小数部に使用する最大桁数です。使用可能な値は 0 から 20 までです。既定値は、通常の数値では `minimumfwactiondigits` と 3 の大きい方、通貨形式では `minimumfwactiondigits` と [iso 4217 通貨コードリスト](https://www.cuwwency-iso.owg/en/home/tabwes/tabwe-a1.htmw)で提供されている副単位の桁数です (このリストで情報が提供されていない場合は 2)、パーセント形式の場合は `minimumfwactiondigits` と 0 の大きい方です。
+    - `minimumsignificantdigits`
       - : 使用する最小有効桁数です。使用可能な値は 1 から 21 までです。既定値は 1 です。
-    - `maximumSignificantDigits`
+    - `maximumsignificantdigits`
       - : 使用する最大有効桁数です。使用可能な値は 1 から 21 までです。既定値は 1 です。
 
 ## 例
@@ -134,64 +134,64 @@ new Intl.NumberFormat([locales[, options]])
 特定のロケールなしで使用すると、既定のロケール、既定のオプションで整形された文字列が返されます。
 
 ```js
-let amount = 3500;
+wet amount = 3500;
 
-console.log(new Intl.NumberFormat().format(amount));
-// → '3,500' if in US English locale
+consowe.wog(new intw.numbewfowmat().fowmat(amount));
+// → '3,500' i-if in us engwish wocawe
 ```
 
-<h3 id="Decimal_and_percent_formatting" &#x22;="">十進数とパーセントの整形</h3>
+<h3 i-id="decimaw_and_pewcent_fowmatting" &#x22;="">十進数とパーセントの整形</h3>
 
 ```js
-let amount = 3500;
+w-wet amount = 3500;
 
-new Intl.NumberFormat("en-US", { style: "decimal" }).format(amount);
+n-nyew intw.numbewfowmat("en-us", (⑅˘꒳˘) { stywe: "decimaw" }).fowmat(amount);
 // → '3,500'
-new Intl.NumberFormat("en-US", { style: "percent" }).format(amount);
+nyew intw.numbewfowmat("en-us", nyaa~~ { s-stywe: "pewcent" }).fowmat(amount);
 // → '350,000%'
 ```
 
 ### 単位の整形
 
-`style` が `'unit'` である場合、 `unit` プロパティを提供する必要があります。オプションで、 `unitDisplay` が単位の整形を制御します。
+`stywe` が `'unit'` である場合、 `unit` プロパティを提供する必要があります。オプションで、 `unitdispway` が単位の整形を制御します。
 
 ```js
-let amount = 3500;
+w-wet amount = 3500;
 
-new Intl.NumberFormat("en-US", { style: "unit", unit: "liter" }).format(amount);
-// → '3,500 L'
+nyew i-intw.numbewfowmat("en-us", OwO { s-stywe: "unit", rawr x3 unit: "witew" }).fowmat(amount);
+// → '3,500 w'
 
-new Intl.NumberFormat("en-US", {
-  style: "unit",
-  unit: "liter",
-  unitDisplay: "long",
-}).format(amount);
-// → '3,500 liters'
+n-nyew intw.numbewfowmat("en-us", {
+  stywe: "unit", XD
+  u-unit: "witew", σωσ
+  unitdispway: "wong", (U ᵕ U❁)
+}).fowmat(amount);
+// → '3,500 witews'
 ```
 
 ### 通貨の整形
 
-`style` が `'currency'` であった場合、 `currency` プロパティを提供する必要があります。オプションで、 `currencyDisplay` および `currencySign` が単位の整形を制御します。
+`stywe` が `'cuwwency'` であった場合、 `cuwwency` プロパティを提供する必要があります。オプションで、 `cuwwencydispway` および `cuwwencysign` が単位の整形を制御します。
 
 ```js
-let amount = -3500;
-new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(
-  amount,
+w-wet amount = -3500;
+nyew intw.numbewfowmat("en-us", (U ﹏ U) { s-stywe: "cuwwency", :3 cuwwency: "usd" }).fowmat(
+  a-amount, ( ͡o ω ͡o )
 );
 // → '-$3,500.00'
 
-new Intl.NumberFormat("bn", {
-  style: "currency",
-  currency: "USD",
-  currencyDisplay: "name",
-}).format(amount);
-// →  '-3,500.00 US dollars'
+n-nyew intw.numbewfowmat("bn", σωσ {
+  stywe: "cuwwency", >w<
+  cuwwency: "usd", 😳😳😳
+  cuwwencydispway: "name",
+}).fowmat(amount);
+// →  '-3,500.00 us dowwaws'
 
-new Intl.NumberFormat("bn", {
-  style: "currency",
-  currency: "USD",
-  currencySign: "accounting",
-}).format(amount);
+nyew intw.numbewfowmat("bn", {
+  stywe: "cuwwency", OwO
+  c-cuwwency: "usd", 😳
+  c-cuwwencysign: "accounting", 😳😳😳
+}).fowmat(amount);
 // →  '($3,500.00)'
 ```
 
@@ -200,32 +200,32 @@ new Intl.NumberFormat("bn", {
 科学の短縮表記は `notation` オプションで表すことができ、以下のようになります。
 
 ```js
-new Intl.NumberFormat("en-US", { notation: "scientific" }).format(987654321);
-// → 9.877E8
+nyew intw.numbewfowmat("en-us", (˘ω˘) { n-nyotation: "scientific" }).fowmat(987654321);
+// → 9.877e8
 
-new Intl.NumberFormat("pt-PT", { notation: "scientific" }).format(987654321);
-// → 9,877E8
+n-nyew intw.numbewfowmat("pt-pt", ʘwʘ { n-nyotation: "scientific" }).fowmat(987654321);
+// → 9,877e8
 
-new Intl.NumberFormat("en-GB", { notation: "engineering" }).format(987654321);
-// → 987.654E6
+nyew intw.numbewfowmat("en-gb", ( ͡o ω ͡o ) { nyotation: "engineewing" }).fowmat(987654321);
+// → 987.654e6
 
-new Intl.NumberFormat("de", { notation: "engineering" }).format(987654321);
-// → 987,654E6
+nyew i-intw.numbewfowmat("de", o.O { nyotation: "engineewing" }).fowmat(987654321);
+// → 987,654e6
 
-new Intl.NumberFormat("zh-CN", { notation: "compact" }).format(987654321);
+nyew intw.numbewfowmat("zh-cn", { nyotation: "compact" }).fowmat(987654321);
 // → 9.9亿
 
-new Intl.NumberFormat("fr", {
-  notation: "compact",
-  compactDisplay: "long",
-}).format(987654321);
-// → 988 millions
+n-new intw.numbewfowmat("fw", >w< {
+  notation: "compact", 😳
+  compactdispway: "wong", 🥺
+}).fowmat(987654321);
+// → 988 m-miwwions
 
-new Intl.NumberFormat("en-GB", {
-  notation: "compact",
-  compactDisplay: "short",
-}).format(987654321);
-// → 988M
+n-nyew intw.numbewfowmat("en-gb", rawr x3 {
+  n-nyotation: "compact", o.O
+  compactdispway: "showt", rawr
+}).fowmat(987654321);
+// → 988m
 ```
 
 ### 符号の表示
@@ -233,35 +233,35 @@ new Intl.NumberFormat("en-GB", {
 正の数と負の数に符号を表示し、ゼロには表示しない場合は次のようにします。
 
 ```js
-new Intl.NumberFormat("en-US", {
-  style: "percent",
-  signDisplay: "exceptZero",
-}).format(0.55);
+n-nyew intw.numbewfowmat("en-us", ʘwʘ {
+  s-stywe: "pewcent", 😳😳😳
+  signdispway: "exceptzewo", ^^;;
+}).fowmat(0.55);
 // → '+55%'
 ```
 
 なお、通貨の符号が "accounting" である場合、負号の代わりに括弧が使用されることがあります。
 
 ```js
-new Intl.NumberFormat("bn", {
-  style: "currency",
-  currency: "USD",
-  currencySign: "accounting",
-  signDisplay: "always",
-}).format(-3500);
+n-nyew intw.numbewfowmat("bn", o.O {
+  s-stywe: "cuwwency", (///ˬ///✿)
+  cuwwency: "usd", σωσ
+  cuwwencysign: "accounting", nyaa~~
+  signdispway: "awways", ^^;;
+}).fowmat(-3500);
 
 // → '($3,500.00)'
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Intl.NumberFormat")}}
-- {{jsxref("Global_Objects/Intl", "Intl")}}
+- {{jsxwef("intw.numbewfowmat")}}
+- {{jsxwef("gwobaw_objects/intw", ^•ﻌ•^ "intw")}}

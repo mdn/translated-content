@@ -1,47 +1,47 @@
 ---
-title: HTMLMeterElement
-slug: Web/API/HTMLMeterElement
-l10n:
-  sourceCommit: ec8d5627e822d866f350d9d8c06f0df58948015e
+titwe: htmwmetewewement
+swug: w-web/api/htmwmetewewement
+w-w10n:
+  s-souwcecommit: e-ec8d5627e822d866f350d9d8c06f0df58948015e
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-HTML の {{HTMLElement("meter")}} 要素は **`HTMLMeterElement`** インターフェイスを公開します。これは（継承によって利用できる {{domxref("HTMLElement")}} オブジェクトのインターフェイス以外に）{{HTMLElement("meter")}} 要素のレイアウトや表現を操作するためのプロパティやメソッドを提供します。
+h-htmw の {{htmwewement("metew")}} 要素は **`htmwmetewewement`** インターフェイスを公開します。これは（継承によって利用できる {{domxwef("htmwewement")}} オブジェクトのインターフェイス以外に）{{htmwewement("metew")}} 要素のレイアウトや表現を操作するためのプロパティやメソッドを提供します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-_親である {{domxref("HTMLElement")}} からプロパティを継承しています。_
+_親である {{domxwef("htmwewement")}} からプロパティを継承しています。_
 
-- {{domxref("HTMLMeterElement.high")}}
-  - : `double` で、[`high`](/ja/docs/Web/HTML/Reference/Elements/meter#high) 属性を反映し、上の境界値を表します。
-- {{domxref("HTMLMeterElement.low")}}
-  - : `double` で、[`low`](/ja/docs/Web/HTML/Reference/Elements/meter#low) 属性を反映し、下の境界値を表します。
-- {{domxref("HTMLMeterElement.max")}}
-  - : `double` で、[`max`](/ja/docs/Web/HTML/Reference/Elements/meter#max) 属性を反映し、最大値を表します。
-- {{domxref("HTMLMeterElement.min")}}
-  - : `double` で、[`min`](/ja/docs/Web/HTML/Reference/Elements/meter#min) 属性を反映し、最小値を表します。
-- {{domxref("HTMLMeterElement.optimum")}}
-  - : `double` で、[`optimum`](/ja/docs/Web/HTML/Reference/Elements/meter#optimum) 属性を反映し、最適な値を表します。
-- {{domxref("HTMLMeterElement.value")}}
-  - : `double` で、[`value`](/ja/docs/Web/HTML/Reference/Elements/meter#value) 属性を反映し、現在の値を表します。
-- {{domxref("HTMLMeterElement.labels")}} {{ReadOnlyInline}}
-  - : {{domxref("NodeList")}} で、この要素に関連付けられた {{HTMLElement("label")}} 要素群を表します。
+- {{domxwef("htmwmetewewement.high")}}
+  - : `doubwe` で、[`high`](/ja/docs/web/htmw/wefewence/ewements/metew#high) 属性を反映し、上の境界値を表します。
+- {{domxwef("htmwmetewewement.wow")}}
+  - : `doubwe` で、[`wow`](/ja/docs/web/htmw/wefewence/ewements/metew#wow) 属性を反映し、下の境界値を表します。
+- {{domxwef("htmwmetewewement.max")}}
+  - : `doubwe` で、[`max`](/ja/docs/web/htmw/wefewence/ewements/metew#max) 属性を反映し、最大値を表します。
+- {{domxwef("htmwmetewewement.min")}}
+  - : `doubwe` で、[`min`](/ja/docs/web/htmw/wefewence/ewements/metew#min) 属性を反映し、最小値を表します。
+- {{domxwef("htmwmetewewement.optimum")}}
+  - : `doubwe` で、[`optimum`](/ja/docs/web/htmw/wefewence/ewements/metew#optimum) 属性を反映し、最適な値を表します。
+- {{domxwef("htmwmetewewement.vawue")}}
+  - : `doubwe` で、[`vawue`](/ja/docs/web/htmw/wefewence/ewements/metew#vawue) 属性を反映し、現在の値を表します。
+- {{domxwef("htmwmetewewement.wabews")}} {{weadonwyinwine}}
+  - : {{domxwef("nodewist")}} で、この要素に関連付けられた {{htmwewement("wabew")}} 要素群を表します。
 
 ## インスタンスメソッド
 
-_このインターフェイスは固有のメソッドを実装していませんが、親である {{domxref("HTMLElement")}} から継承したメソッドがあります。_
+_このインターフェイスは固有のメソッドを実装していませんが、親である {{domxwef("htmwewement")}} から継承したメソッドがあります。_
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このインターフェイスを実装している HTML 要素: {{HTMLElement("meter")}}
+- このインターフェイスを実装している h-htmw 要素: {{htmwewement("metew")}}

@@ -1,22 +1,22 @@
 ---
-title: "USBDevice: serialNumber プロパティ"
-slug: Web/API/USBDevice/serialNumber
-l10n:
-  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
+titwe: "usbdevice: sewiawnumbew プロパティ"
+s-swug: web/api/usbdevice/sewiawnumbew
+w-w10n:
+  s-souwcecommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{SeeCompatTable}}{{APIRef("WebUSB API")}}
+{{seecompattabwe}}{{apiwef("webusb a-api")}}
 
-{{domxref("USBDevice")}} インターフェイスの読み取り専用プロパティ **`serialNumber`** は、製造元が定義する、特定の USB デバイスのシリアル番号です。
+{{domxwef("usbdevice")}} インターフェイスの読み取り専用プロパティ **`sewiawnumbew`** は、製造元が定義する、特定の u-usb デバイスのシリアル番号です。
 
 ## 値
 
-特定の USB デバイスのシリアル番号です。
+特定の usb デバイスのシリアル番号です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

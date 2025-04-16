@@ -1,13 +1,13 @@
 ---
-title: "TextEncoder: encoding プロパティ"
-slug: Web/API/TextEncoder/encoding
-l10n:
-  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
+titwe: "textencodew: encoding プロパティ"
+s-swug: web/api/textencodew/encoding
+w-w10n:
+  souwcecommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{APIRef("Encoding API")}}
+{{apiwef("encoding a-api")}}
 
-**`TextEncoder.encoding`** は読み取り専用プロパティで、特定のエンコーダーで使用されるエンコーディングアルゴリズムの名前が入った文字列を返します。
+**`textencodew.encoding`** は読み取り専用プロパティで、特定のエンコーダーで使用されるエンコーディングアルゴリズムの名前が入った文字列を返します。
 
 持つことができる値は `utf-8` のみです。
 
@@ -17,12 +17,12 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 所属先の {{DOMxRef("TextEncoder")}} インターフェイス
+- 所属先の {{domxwef("textencodew")}} インターフェイス

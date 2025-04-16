@@ -1,13 +1,13 @@
 ---
-title: "HTMLAreaElement: host プロパティ"
-slug: Web/API/HTMLAreaElement/host
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwaweaewement: host プロパティ"
+s-swug: web/api/htmwaweaewement/host
+w-w10n:
+  souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLAreaElement.host`** プロパティは、ホストを含む文字列です。すなわち、*ホスト名*の後に、 URL の*ポート*が空でない場合は、`':'`、および URL の*ポート*が続きます。
+**`htmwaweaewement.host`** プロパティは、ホストを含む文字列です。すなわち、*ホスト名*の後に、 uww の*ポート*が空でない場合は、`':'`、および u-uww の*ポート*が続きます。
 
 ## 値
 
@@ -16,27 +16,27 @@ l10n:
 ## 例
 
 ```js
-const area = document.createElement("area");
+c-const a-awea = document.cweateewement("awea");
 
-area.href = "https://developer.mozilla.org/en-US/HTMLAreaElement";
-area.host === "developer.mozilla.org";
+a-awea.hwef = "https://devewopew.moziwwa.owg/en-us/htmwaweaewement";
+awea.host === "devewopew.moziwwa.owg";
 
-area.href = "https://developer.mozilla.org:443/en-US/HTMLAreaElement";
-area.host === "developer.mozilla.org";
+awea.hwef = "https://devewopew.moziwwa.owg:443/en-us/htmwaweaewement";
+awea.host === "devewopew.moziwwa.owg";
 // ポート番号は、 443 がスキームの既定のポートであるため含まれない
 
-area.href = "https://developer.mozilla.org:4097/en-US/HTMLAreaElement";
-area.host === "developer.mozilla.org:4097";
+awea.hwef = "https://devewopew.moziwwa.owg:4097/en-us/htmwaweaewement";
+awea.host === "devewopew.moziwwa.owg:4097";
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 所属先の {{domxref("HTMLAreaElement")}} インターフェイス
+- 所属先の {{domxwef("htmwaweaewement")}} インターフェイス

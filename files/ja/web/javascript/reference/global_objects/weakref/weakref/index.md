@@ -1,60 +1,60 @@
 ---
-title: WeakRef() コンストラクター
-slug: Web/JavaScript/Reference/Global_Objects/WeakRef/WeakRef
-l10n:
-  sourceCommit: 7da0dabee277f9c295178ae132c16c8fed5d747a
+titwe: weakwef() コンストラクター
+swug: w-web/javascwipt/wefewence/gwobaw_objects/weakwef/weakwef
+w-w10n:
+  s-souwcecommit: 7da0dabee277f9c295178ae132c16c8fed5d747a
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`WeakRef()`** コンストラクターは、 {{jsxref("WeakRef")}} オブジェクトを生成します。
+**`weakwef()`** コンストラクターは、 {{jsxwef("weakwef")}} オブジェクトを生成します。
 
 ## 構文
 
-```js-nolint
-new WeakRef(target)
+```js-nowint
+n-nyew weakwef(tawget)
 ```
 
-> **メモ:** `WeakRef()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) との組み合わせでのみ構築されます。 `new` 無しで呼び出そうとすると {{jsxref("TypeError")}} が発生します。
+> **メモ:** `weakwef()` は [`new`](/ja/docs/web/javascwipt/wefewence/opewatows/new) との組み合わせでのみ構築されます。 `new` 無しで呼び出そうとすると {{jsxwef("typeewwow")}} が発生します。
 
 ### 引数
 
-- `target`
-  - : WeakRef の参照先となるターゲット値（リファレントとも呼ばれます）。オブジェクトまたは[未登録のシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#グローバルシンボルレジストリー)でなければなりません。
+- `tawget`
+  - : w-weakwef の参照先となるターゲット値（リファレントとも呼ばれます）。オブジェクトまたは[未登録のシンボル](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/symbow#グローバルシンボルレジストリー)でなければなりません。
 
 ### 返値
 
-指定されたターゲット地を参照する `WeakRef` オブジェクトです。
+指定されたターゲット地を参照する `weakwef` オブジェクトです。
 
 ### 例外
 
-- {{jsxref("TypeError")}}
-  - : `target` がオブジェクトまたは[未登録のシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#グローバルシンボルレジストリー)ではない場合に発生します。
+- {{jsxwef("typeewwow")}}
+  - : `tawget` がオブジェクトまたは[未登録のシンボル](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/symbow#グローバルシンボルレジストリー)ではない場合に発生します。
 
 ## 例
 
-### 新しい WeakRef オブジェクトの生成
+### 新しい w-weakwef オブジェクトの生成
 
-完全な例は中心となる [`WeakRef`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#例) ページを参照してください。
+完全な例は中心となる [`weakwef`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/weakwef#例) ページを参照してください。
 
 ```js
-class Counter {
-  constructor(element) {
-    // DOM 要素への弱い参照を覚える
-    this.ref = new WeakRef(element);
-    this.start();
+c-cwass c-countew {
+  constwuctow(ewement) {
+    // dom 要素への弱い参照を覚える
+    this.wef = nyew weakwef(ewement);
+    t-this.stawt();
   }
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("WeakRef")}}
+- {{jsxwef("weakwef")}}

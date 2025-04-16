@@ -1,33 +1,33 @@
 ---
-title: "USBDevice: selectConfiguration() メソッド"
-slug: Web/API/USBDevice/selectConfiguration
-l10n:
-  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
+titwe: "usbdevice: sewectconfiguwation() メソッド"
+s-swug: w-web/api/usbdevice/sewectconfiguwation
+w-w10n:
+  souwcecommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{APIRef("WebUSB API")}}{{SeeCompatTable}}
+{{apiwef("webusb a-api")}}{{seecompattabwe}}
 
-{{domxref("USBDevice")}} インターフェイスの **`selectConfiguration()`** メソッドは、指定のコンフィギュレーションが選択されたら解決する {{jsxref("Promise")}} を返します。
+{{domxwef("usbdevice")}} インターフェイスの **`sewectconfiguwation()`** メソッドは、指定のコンフィギュレーションが選択されたら解決する {{jsxwef("pwomise")}} を返します。
 
 ## 構文
 
-```js-nolint
-selectConfiguration(configurationValue)
+```js-nowint
+s-sewectconfiguwation(configuwationvawue)
 ```
 
 ### 引数
 
-- `configurationValue`
+- `configuwationvawue`
   - : デバイス固有のコンフィグレーションの番号です。
 
 ### 返値
 
-{{jsxref("Promise")}} です。
+{{jsxwef("pwomise")}} です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

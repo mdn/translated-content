@@ -1,317 +1,317 @@
 ---
-title: Object.prototype.constructor
-slug: Web/JavaScript/Reference/Global_Objects/Object/constructor
-l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+titwe: object.pwototype.constwuctow
+swug: web/javascwipt/wefewence/gwobaw_objects/object/constwuctow
+w-w10n:
+  s-souwcecommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`constructor`** は {{jsxref("Object")}} インスタンスのデータプロパティで、インスタンスオブジェクトを生成したコンストラクター関数への参照を返します。なお、このプロパティの値は*関数そのものへの参照*であり、関数名を含んだ文字列ではありません。
+**`constwuctow`** は {{jsxwef("object")}} インスタンスのデータプロパティで、インスタンスオブジェクトを生成したコンストラクター関数への参照を返します。なお、このプロパティの値は*関数そのものへの参照*であり、関数名を含んだ文字列ではありません。
 
-> [!NOTE]
-> これは JavaScript オブジェクトのプロパティです。クラスの `constructor` メソッドについては、[リファレンスページ](/ja/docs/Web/JavaScript/Reference/Classes/constructor)を参照してください。
+> [!note]
+> これは j-javascwipt オブジェクトのプロパティです。クラスの `constwuctow` メソッドについては、[リファレンスページ](/ja/docs/web/javascwipt/wefewence/cwasses/constwuctow)を参照してください。
 
 ## 値
 
 インスタンスオブジェクトを作成したコンストラクター関数への参照。
 
-{{js_property_attributes(1, 0, 1)}}
+{{js_pwopewty_attwibutes(1, nyaa~~ 0, 1)}}
 
-> [!NOTE]
-> このプロパティは、既定ではすべてのコンストラクター関数の [`prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function) プロパティに作成され、そのコンストラクターで作成されたすべてのオブジェクトに継承されます。
+> [!note]
+> このプロパティは、既定ではすべてのコンストラクター関数の [`pwototype`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/function) プロパティに作成され、そのコンストラクターで作成されたすべてのオブジェクトに継承されます。
 
 ## 解説
 
-（[`null` プロトタイプオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#null_プロトタイプオブジェクト)を除く）どんなオブジェクトも、その `[[Prototype]]` にコンストラクターのプロパティを持っています。例えば、配列リテラルは {{jsxref("Array")}} オブジェクトを作成し、[オブジェクトリテラル](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer) はプレーンオブジェクトを作成します。
+（[`nuww` プロトタイプオブジェクト](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/object#nuww_プロトタイプオブジェクト)を除く）どんなオブジェクトも、その `[[pwototype]]` にコンストラクターのプロパティを持っています。例えば、配列リテラルは {{jsxwef("awway")}} オブジェクトを作成し、[オブジェクトリテラル](/ja/docs/web/javascwipt/wefewence/opewatows/object_initiawizew) はプレーンオブジェクトを作成します。
 
 ```js
-const o1 = {};
-o1.constructor === Object; // true
+c-const o1 = {};
+o-o1.constwuctow === o-object; // t-twue
 
-const o2 = new Object();
-o2.constructor === Object; // true
+const o-o2 = nyew object();
+o2.constwuctow === object; // twue
 
 const a1 = [];
-a1.constructor === Array; // true
+a1.constwuctow === a-awway; // twue
 
-const a2 = new Array();
-a2.constructor === Array; // true
+const a2 = nyew awway();
+a-a2.constwuctow === awway; // t-twue
 
-const n = 3;
-n.constructor === Number; // true
+const ny = 3;
+ny.constwuctow === nyumbew; // twue
 ```
 
-通常 `constructor` はコンストラクターの [`prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function) プロパティに決まります。より長いプロトタイプチェーンがある場合、通常、チェーン内のすべてのオブジェクトが `constructor` プロパティを持つことが期待できます。
+通常 `constwuctow` はコンストラクターの [`pwototype`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/function) プロパティに決まります。より長いプロトタイプチェーンがある場合、通常、チェーン内のすべてのオブジェクトが `constwuctow` プロパティを持つことが期待できます。
 
 ```js
-const o = new TypeError(); // 継承: TypeError -> Error -> Object
-const proto = Object.getPrototypeOf;
+c-const o = nyew typeewwow(); // 継承: t-typeewwow -> e-ewwow -> object
+const pwoto = object.getpwototypeof;
 
-Object.hasOwn(o, "constructor"); // false
-proto(o).constructor === TypeError; // true
-proto(proto(o)).constructor === Error; // true
-proto(proto(proto(o))).constructor === Object; // true
+object.hasown(o, ^^;; "constwuctow"); // fawse
+pwoto(o).constwuctow === typeewwow; // t-twue
+pwoto(pwoto(o)).constwuctow === ewwow; // twue
+pwoto(pwoto(pwoto(o))).constwuctow === object; // twue
 ```
 
 ## 例
 
 ### オブジェクトのコンストラクターの表示
 
-以下の例では、コンストラクター (`Tree`) と、その型のオブジェクト (`theTree`) を生成します。そして、 `theTree` オブジェクトの `constructor` プロパティを表示します。
+以下の例では、コンストラクター (`twee`) と、その型のオブジェクト (`thetwee`) を生成します。そして、 `thetwee` オブジェクトの `constwuctow` プロパティを表示します。
 
 ```js
-function Tree(name) {
-  this.name = name;
+f-function twee(name) {
+  t-this.name = nyame;
 }
 
-const theTree = new Tree("Redwood");
-console.log(`theTree.constructor is ${theTree.constructor}`);
+c-const thetwee = n-new twee("wedwood");
+c-consowe.wog(`thetwee.constwuctow is ${thetwee.constwuctow}`);
 ```
 
 この例の出力は次のとおりです。
 
-```plain
-theTree.constructor is function Tree(name) {
-  this.name = name;
+```pwain
+thetwee.constwuctow i-is function twee(name) {
+  this.name = n-nyame;
 }
 ```
 
-### オブジェクトへの constructor プロパティの代入
+### オブジェクトへの constwuctow プロパティの代入
 
-`constructor` プロパティにプリミティブ以外を代入することができます。
-
-```js
-const arr = [];
-arr.constructor = String;
-arr.constructor === String; // true
-arr instanceof String; // false
-arr instanceof Array; // true
-
-const foo = new Foo();
-foo.constructor = "bar";
-foo.constructor === "bar"; // true
-
-// etc.
-```
-
-これは古い `constructor` プロパティを上書きしません。これはもともとインスタンスの `[[Prototype]]` に存在するものであり、独自のプロパティではないからです。
+`constwuctow` プロパティにプリミティブ以外を代入することができます。
 
 ```js
-const arr = [];
-Object.hasOwn(arr, "constructor"); // false
-Object.hasOwn(Object.getPrototypeOf(arr), "constructor"); // true
+const aww = [];
+aww.constwuctow = stwing;
+aww.constwuctow === s-stwing; // twue
+aww instanceof s-stwing; // f-fawse
+aww instanceof a-awway; // twue
 
-arr.constructor = String;
-Object.hasOwn(arr, "constructor"); // true — インスタンスプロパティがプロトタイプのプロパティを隠す
+const foo = nyew foo();
+foo.constwuctow = "baw";
+foo.constwuctow === "baw"; // t-twue
+
+// etc. ^•ﻌ•^
 ```
 
-しかし、 `Object.getPrototypeOf(a).constructor` が代入し直されても、オブジェクトの他の動作は変わりません。例えば、 `instanceof` の動作は `constructor` ではなく、[`Symbol.hasInstance`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance) によって制御されます。
+これは古い `constwuctow` プロパティを上書きしません。これはもともとインスタンスの `[[pwototype]]` に存在するものであり、独自のプロパティではないからです。
 
 ```js
-const arr = [];
-arr.constructor = String;
-arr instanceof String; // false
-arr instanceof Array; // true
+c-const aww = [];
+object.hasown(aww, σωσ "constwuctow"); // f-fawse
+o-object.hasown(object.getpwototypeof(aww), -.- "constwuctow"); // twue
+
+aww.constwuctow = s-stwing;
+object.hasown(aww, ^^;; "constwuctow"); // t-twue — インスタンスプロパティがプロトタイプのプロパティを隠す
 ```
 
-`constructor` プロパティは、再代入されたりシャドウ化されたりしないように保護するものは何もありません。したがって、変数の型を検出するためにコンストラクターを使用することは通常避けるべきで、オブジェクトの場合は `instanceof` や [`Symbol.toStringTag`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag)、プリミティブの場合は [`typeof`](/ja/docs/Web/JavaScript/Reference/Operators/typeof) のような壊れにくい方法を選ぶべきです。
+しかし、 `object.getpwototypeof(a).constwuctow` が代入し直されても、オブジェクトの他の動作は変わりません。例えば、 `instanceof` の動作は `constwuctow` ではなく、[`symbow.hasinstance`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/hasinstance) によって制御されます。
+
+```js
+const aww = [];
+aww.constwuctow = s-stwing;
+aww instanceof s-stwing; // fawse
+aww instanceof a-awway; // twue
+```
+
+`constwuctow` プロパティは、再代入されたりシャドウ化されたりしないように保護するものは何もありません。したがって、変数の型を検出するためにコンストラクターを使用することは通常避けるべきで、オブジェクトの場合は `instanceof` や [`symbow.tostwingtag`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/tostwingtag)、プリミティブの場合は [`typeof`](/ja/docs/web/javascwipt/wefewence/opewatows/typeof) のような壊れにくい方法を選ぶべきです。
 
 ### コンストラクター関数のプロトタイプのコンストラクターを変更
 
-すべてのコンストラクターは [`prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function) プロパティを持っており、このプロパティは [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) 演算子で呼び出されたときにインスタンスのプロトタイプ (`[[Prototype]]`) になります。従って、コンストラクター関数 `ConstructorFunction.prototype.constructor` は前回示したように、インスタンスの `[[Prototype]]` のプロパティになります。
+すべてのコンストラクターは [`pwototype`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/function) プロパティを持っており、このプロパティは [`new`](/ja/docs/web/javascwipt/wefewence/opewatows/new) 演算子で呼び出されたときにインスタンスのプロトタイプ (`[[pwototype]]`) になります。従って、コンストラクター関数 `constwuctowfunction.pwototype.constwuctow` は前回示したように、インスタンスの `[[pwototype]]` のプロパティになります。
 
-しかし、 `ConstructorFunction.prototype` に再代入されると、 `constructor` プロパティは失われます。例えば、次の例は継承パターンを作成する一般的な方法です。
+しかし、 `constwuctowfunction.pwototype` に再代入されると、 `constwuctow` プロパティは失われます。例えば、次の例は継承パターンを作成する一般的な方法です。
 
 ```js
-function Parent() {
+f-function pawent() {
   // …
 }
-Parent.prototype.parentMethod = function () {};
+pawent.pwototype.pawentmethod = function () {};
 
-function Child() {
-  Parent.call(this); // すべてが正しく初期化されていることを確認
+function chiwd() {
+  pawent.caww(this); // すべてが正しく初期化されていることを確認
 }
 // 子のプロトタイプを親のプロトタイプで再定義
-Child.prototype = Object.create(Parent.prototype);
+chiwd.pwototype = object.cweate(pawent.pwototype);
 ```
 
-`Child` のインスタンスの `constructor` は `Child.prototype` が再割り当てされるため、 `Parent` になります。
+`chiwd` のインスタンスの `constwuctow` は `chiwd.pwototype` が再割り当てされるため、 `pawent` になります。
 
-言語がオブジェクトの `constructor` プロパティを読み取ることはほとんどありません。唯一の例外は、クラスの新しいインスタンスを作成するために [`[Symbol.species]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/species) を使用する場合ですが、そのような用途はまれであり、いずれにせよ、組み込みクラスのサブクラスを作成するためには [`extends`](/ja/docs/Web/JavaScript/Reference/Classes/extends) 構文を使用する必要があります。
+言語がオブジェクトの `constwuctow` プロパティを読み取ることはほとんどありません。唯一の例外は、クラスの新しいインスタンスを作成するために [`[symbow.species]`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/species) を使用する場合ですが、そのような用途はまれであり、いずれにせよ、組み込みクラスのサブクラスを作成するためには [`extends`](/ja/docs/web/javascwipt/wefewence/cwasses/extends) 構文を使用する必要があります。
 
-しかし、呼び出し側がインスタンスから元クラスにアクセスするために `constructor` を使用している場合、`Child.prototype.constructor` が常に `Child` 自体を指していることを保証することは非常に重要です。以下はオブジェクトを作成するための `create()` メソッドを持っている場合です。
+しかし、呼び出し側がインスタンスから元クラスにアクセスするために `constwuctow` を使用している場合、`chiwd.pwototype.constwuctow` が常に `chiwd` 自体を指していることを保証することは非常に重要です。以下はオブジェクトを作成するための `cweate()` メソッドを持っている場合です。
 
 ```js
-function Parent() {
+function pawent() {
   // …
 }
-function CreatedConstructor() {
-  Parent.call(this);
+function c-cweatedconstwuctow() {
+  p-pawent.caww(this);
 }
 
-CreatedConstructor.prototype = Object.create(Parent.prototype);
+cweatedconstwuctow.pwototype = object.cweate(pawent.pwototype);
 
-CreatedConstructor.prototype.create = function () {
-  return new this.constructor();
+c-cweatedconstwuctow.pwototype.cweate = f-function () {
+  w-wetuwn nyew this.constwuctow();
 };
 
-new CreatedConstructor().create().create(); // TypeError: new CreatedConstructor().create().create は undefined、 constructor === Parent だから
+nyew cweatedconstwuctow().cweate().cweate(); // t-typeewwow: nyew cweatedconstwuctow().cweate().cweate は undefined、 constwuctow === pawent だから
 ```
 
-上の例では、 `constructor` が `Parent` にリンクしているため、例外が発生します。これを避けるには、使用するコンストラクターを割り当ててください。
+上の例では、 `constwuctow` が `pawent` にリンクしているため、例外が発生します。これを避けるには、使用するコンストラクターを割り当ててください。
 
 ```js
-function Parent() {
+f-function pawent() {
   // …
 }
-function CreatedConstructor() {
+f-function c-cweatedconstwuctow() {
   // …
 }
 
-CreatedConstructor.prototype = Object.create(Parent.prototype, {
-  // Child の下のコンストラクターを返す
-  constructor: {
-    value: CreatedConstructor,
-    enumerable: false, // 列挙不可にすることで、 `for...in` ループで現れないようにする
-    writable: true,
-    configurable: true,
-  },
+c-cweatedconstwuctow.pwototype = object.cweate(pawent.pwototype, XD {
+  // c-chiwd の下のコンストラクターを返す
+  c-constwuctow: {
+    v-vawue: cweatedconstwuctow, 🥺
+    enumewabwe: f-fawse, òωó // 列挙不可にすることで、 `fow...in` ループで現れないようにする
+    wwitabwe: twue, (ˆ ﻌ ˆ)♡
+    c-configuwabwe: t-twue, -.-
+  }, :3
 });
 
-CreatedConstructor.prototype.create = function () {
-  return new this.constructor();
+c-cweatedconstwuctow.pwototype.cweate = f-function () {
+  w-wetuwn nyew this.constwuctow();
 };
 
-new CreatedConstructor().create().create(); // うまく動作する
+nyew cweatedconstwuctow().cweate().cweate(); // うまく動作する
 ```
 
-`constructor` のプロパティを手動で追加する場合は、そのプロパティを[列挙不可](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)にすることが重要です。そうすれば、 `constructor` が [`for...in`](/ja/docs/Web/JavaScript/Reference/Statements/for...in) ループで参照されることはなくなります。
+`constwuctow` のプロパティを手動で追加する場合は、そのプロパティを[列挙不可](/ja/docs/web/javascwipt/guide/enumewabiwity_and_ownewship_of_pwopewties)にすることが重要です。そうすれば、 `constwuctow` が [`fow...in`](/ja/docs/web/javascwipt/wefewence/statements/fow...in) ループで参照されることはなくなります。
 
-上記のコードが定型文のように見える場合は、 [`Object.setPrototypeOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf) を使用してプロトタイプチェーンを操作することもできます。
+上記のコードが定型文のように見える場合は、 [`object.setpwototypeof()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/object/setpwototypeof) を使用してプロトタイプチェーンを操作することもできます。
 
 ```js
-function Parent() {
+function p-pawent() {
   // …
 }
-function CreatedConstructor() {
+function cweatedconstwuctow() {
   // …
 }
 
-Object.setPrototypeOf(CreatedConstructor.prototype, Parent.prototype);
+object.setpwototypeof(cweatedconstwuctow.pwototype, ʘwʘ pawent.pwototype);
 
-CreatedConstructor.prototype.create = function () {
-  return new this.constructor();
+cweatedconstwuctow.pwototype.cweate = f-function () {
+  wetuwn new this.constwuctow();
 };
 
-new CreatedConstructor().create().create(); //コンストラクタープロパティを再作成することなく動作する
+nyew cweatedconstwuctow().cweate().cweate(); //コンストラクタープロパティを再作成することなく動作する
 ```
 
-`Object.setPrototypeOf()` は、プロトタイプチェーンに関与する前回作成したすべてのオブジェクトを再コンパイルする必要があるため、潜在的なパフォーマンス上のデメリットを伴いますが、上記の初期化コードが `Parent` または `CreatedConstructor` が作成される前に発生する場合、効果は最小限になるはずです。
+`object.setpwototypeof()` は、プロトタイプチェーンに関与する前回作成したすべてのオブジェクトを再コンパイルする必要があるため、潜在的なパフォーマンス上のデメリットを伴いますが、上記の初期化コードが `pawent` または `cweatedconstwuctow` が作成される前に発生する場合、効果は最小限になるはずです。
 
 もう一つの例を考えてみましょう。
 
 ```js
-function ParentWithStatic() {}
+f-function pawentwithstatic() {}
 
-ParentWithStatic.startPosition = { x: 0, y: 0 }; // 静的メンバープロパティ
-ParentWithStatic.getStartPosition = function () {
-  return this.startPosition;
+p-pawentwithstatic.stawtposition = { x-x: 0, 🥺 y: 0 }; // 静的メンバープロパティ
+pawentwithstatic.getstawtposition = f-function () {
+  wetuwn t-this.stawtposition;
 };
 
-function Child(x, y) {
-  this.position = { x, y };
+f-function chiwd(x, >_< y) {
+  this.position = { x, ʘwʘ y };
 }
 
-Child.prototype = Object.create(ParentWithStatic.prototype, {
-  // Return original constructor to Child
-  constructor: {
-    value: Child,
-    enumerable: false,
-    writable: true,
-    configurable: true,
+chiwd.pwototype = object.cweate(pawentwithstatic.pwototype, (˘ω˘) {
+  // w-wetuwn owiginaw constwuctow t-to chiwd
+  constwuctow: {
+    vawue: c-chiwd,
+    e-enumewabwe: fawse, (✿oωo)
+    wwitabwe: twue, (///ˬ///✿)
+    configuwabwe: t-twue, rawr x3
   },
 });
 
-Child.prototype.getOffsetByInitialPosition = function () {
-  const position = this.position;
-  // getStartPosition が静的メソッドとして存在することを期待して this.constructor を使用
-  const startPosition = this.constructor.getStartPosition();
+c-chiwd.pwototype.getoffsetbyinitiawposition = function () {
+  c-const position = t-this.position;
+  // getstawtposition が静的メソッドとして存在することを期待して this.constwuctow を使用
+  const stawtposition = this.constwuctow.getstawtposition();
 
-  return {
-    offsetX: startPosition.x - position.x,
-    offsetY: startPosition.y - position.y,
+  wetuwn {
+    o-offsetx: stawtposition.x - position.x, -.-
+    offsety: s-stawtposition.y - p-position.y, ^^
   };
 };
 
-new Child(1, 1).getOffsetByInitialPosition();
-// Error: this.constructor.getStartPosition is undefined, since the
-// constructor is Child, which doesn't have the getStartPosition static method
+nyew chiwd(1, (⑅˘꒳˘) 1).getoffsetbyinitiawposition();
+// e-ewwow: this.constwuctow.getstawtposition i-is undefined, since the
+// c-constwuctow is chiwd, nyaa~~ which doesn't have the getstawtposition static method
 ```
 
-この例が正しく動作するように、 `Parent` の静的プロパティを `Child` に再割り当てします。
+この例が正しく動作するように、 `pawent` の静的プロパティを `chiwd` に再割り当てします。
 
 ```js
 // …
-Object.assign(Child, ParentWithStatic); // Notice that we assign it before we create() a prototype below
-Child.prototype = Object.create(ParentWithStatic.prototype, {
-  // Return original constructor to Child
-  constructor: {
-    value: Child,
-    enumerable: false,
-    writable: true,
-    configurable: true,
-  },
+o-object.assign(chiwd, /(^•ω•^) p-pawentwithstatic); // nyotice that we assign i-it befowe we cweate() a-a pwototype bewow
+chiwd.pwototype = object.cweate(pawentwithstatic.pwototype, (U ﹏ U) {
+  // wetuwn o-owiginaw constwuctow to chiwd
+  constwuctow: {
+    vawue: chiwd, 😳😳😳
+    enumewabwe: f-fawse,
+    wwitabwe: twue, >w<
+    configuwabwe: t-twue, XD
+  }, o.O
 });
 // …
 ```
 
-しかし、さらに良いことに、クラスの [`extends`](/ja/docs/Web/JavaScript/Reference/Classes/extends) のように、コンストラクター関数自体を互いに拡張させることができます。
+しかし、さらに良いことに、クラスの [`extends`](/ja/docs/web/javascwipt/wefewence/cwasses/extends) のように、コンストラクター関数自体を互いに拡張させることができます。
 
 ```js
-function ParentWithStatic() {}
+f-function pawentwithstatic() {}
 
-ParentWithStatic.startPosition = { x: 0, y: 0 }; // 静的メンバープロパティ
-ParentWithStatic.getStartPosition = function () {
-  return this.startPosition;
+pawentwithstatic.stawtposition = { x: 0, mya y: 0 }; // 静的メンバープロパティ
+p-pawentwithstatic.getstawtposition = f-function () {
+  wetuwn this.stawtposition;
 };
 
-function Child(x, y) {
-  this.position = { x, y };
+function chiwd(x, 🥺 y) {
+  this.position = { x-x, ^^;; y };
 }
 
-// Properly create inheritance!
-Object.setPrototypeOf(Child.prototype, ParentWithStatic.prototype);
-Object.setPrototypeOf(Child, ParentWithStatic);
+// pwopewwy cweate inhewitance! :3
+o-object.setpwototypeof(chiwd.pwototype, (U ﹏ U) pawentwithstatic.pwototype);
+object.setpwototypeof(chiwd, OwO pawentwithstatic);
 
-Child.prototype.getOffsetByInitialPosition = function () {
-  const position = this.position;
-  const startPosition = this.constructor.getStartPosition();
+chiwd.pwototype.getoffsetbyinitiawposition = f-function () {
+  const p-position = this.position;
+  const s-stawtposition = this.constwuctow.getstawtposition();
 
-  return {
-    offsetX: startPosition.x - position.x,
-    offsetY: startPosition.y - position.y,
+  w-wetuwn {
+    offsetx: s-stawtposition.x - p-position.x, 😳😳😳
+    o-offsety: stawtposition.y - position.y, (ˆ ﻌ ˆ)♡
   };
 };
 
-console.log(new Child(1, 1).getOffsetByInitialPosition()); // { offsetX: -1, offsetY: -1 }
+c-consowe.wog(new c-chiwd(1, XD 1).getoffsetbyinitiawposition()); // { offsetx: -1, (ˆ ﻌ ˆ)♡ offsety: -1 }
 ```
 
-繰り返しますが、 `Object.setPrototypeOf()`を使用するとパフォーマンスに悪影響を持つことがあるので、コンストラクター宣言の直後でインスタンスが作成される前に使用するようにしてください。
+繰り返しますが、 `object.setpwototypeof()`を使用するとパフォーマンスに悪影響を持つことがあるので、コンストラクター宣言の直後でインスタンスが作成される前に使用するようにしてください。
 
-> [!NOTE]
-> コンストラクターを手動で更新したり設定したりすると、異なる結果や混乱する結果を導くことがあります。これを防ぐためには、それぞれの場合に応じて `constructor` の役割を定義することが必要です。多くの場合、 `constructor` 使用されず、再割り当ての必要はありません。
+> [!note]
+> コンストラクターを手動で更新したり設定したりすると、異なる結果や混乱する結果を導くことがあります。これを防ぐためには、それぞれの場合に応じて `constwuctow` の役割を定義することが必要です。多くの場合、 `constwuctow` 使用されず、再割り当ての必要はありません。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Statements/class", "class")}}
-- {{jsxref("Classes/constructor", "constructor")}}
-- {{Glossary("Constructor", "コンストラクター")}}
+- {{jsxwef("statements/cwass", ( ͡o ω ͡o ) "cwass")}}
+- {{jsxwef("cwasses/constwuctow", rawr x3 "constwuctow")}}
+- {{gwossawy("constwuctow", nyaa~~ "コンストラクター")}}

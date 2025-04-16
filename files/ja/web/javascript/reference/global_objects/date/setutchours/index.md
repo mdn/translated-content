@@ -1,79 +1,79 @@
 ---
-title: Date.prototype.setUTCHours()
-slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCHours
-l10n:
-  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
+titwe: date.pwototype.setutchouws()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/setutchouws
+w-w10n:
+  souwcecommit: d-d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`setUTCHours()`** メソッドは、協定世界時に基づき、指定された日付の「時」を設定し、協定世界時 (UTC) 1970 年 1 月 1 日 00:00:00 から更新された {{jsxref("Date")}} インスタンスが表す時刻までの間のミリ秒単位の数値を返します。
+**`setutchouws()`** メソッドは、協定世界時に基づき、指定された日付の「時」を設定し、協定世界時 (utc) 1970 年 1 月 1 日 00:00:00 から更新された {{jsxwef("date")}} インスタンスが表す時刻までの間のミリ秒単位の数値を返します。
 
-{{InteractiveExample("JavaScript Demo: Date.setUTCHours()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.setutchouws()")}}
 
-```js interactive-example
-const event = new Date("August 19, 1975 23:15:30 GMT-3:00");
+```js i-intewactive-exampwe
+c-const e-event = nyew date("august 19, ( ͡o ω ͡o ) 1975 23:15:30 g-gmt-3:00");
 
-console.log(event.toUTCString());
-// Expected output: "Wed, 20 Aug 1975 02:15:30 GMT"
+c-consowe.wog(event.toutcstwing());
+// expected output: "wed, rawr x3 20 aug 1975 02:15:30 gmt"
 
-console.log(event.getUTCHours());
-// Expected output: 2
+consowe.wog(event.getutchouws());
+// e-expected output: 2
 
-event.setUTCHours(23);
+event.setutchouws(23);
 
-console.log(event.toUTCString());
-// Expected output: "Wed, 20 Aug 1975 23:15:30 GMT"
+consowe.wog(event.toutcstwing());
+// e-expected output: "wed, nyaa~~ 20 a-aug 1975 23:15:30 gmt"
 ```
 
 ## 構文
 
-```js-nolint
-setUTCHours(hoursValue)
-setUTCHours(hoursValue, minutesValue)
-setUTCHours(hoursValue, minutesValue, secondsValue)
-setUTCHours(hoursValue, minutesValue, secondsValue, msValue)
+```js-nowint
+setutchouws(houwsvawue)
+setutchouws(houwsvawue, /(^•ω•^) m-minutesvawue)
+setutchouws(houwsvawue, rawr m-minutesvawue, OwO s-secondsvawue)
+setutchouws(houwsvawue, (U ﹏ U) minutesvawue, >_< secondsvawue, rawr x3 msvawue)
 ```
 
 ### 引数
 
-- `hoursValue`
+- `houwsvawue`
   - : 「時」を表す 0 から 23 までの間の整数値。
-- `minutesValue`
+- `minutesvawue`
   - : 任意。「分」を表す 0 から 59 までの間の整数値。
-- `secondsValue`
-  - : 任意。「秒」を表す 0 から 59 までの間の整数値。`secondsValue` 引数を指定した場合、`minutesValue` も指定しなければなりません。
-- `msValue`
-  - : 任意。ミリ秒を表す 0 から 999 までの間の整数値。`msValue` 引数を指定した場合、`minutesValue` と `secondsValue` も指定しなければなりません。
+- `secondsvawue`
+  - : 任意。「秒」を表す 0 から 59 までの間の整数値。`secondsvawue` 引数を指定した場合、`minutesvawue` も指定しなければなりません。
+- `msvawue`
+  - : 任意。ミリ秒を表す 0 から 999 までの間の整数値。`msvawue` 引数を指定した場合、`minutesvawue` と `secondsvawue` も指定しなければなりません。
 
 ### 返値
 
-協定世界時 (UTC) 1970 年 1 月 1 日 00:00:00 から更新された日時までの間のミリ秒単位の数値。
+協定世界時 (utc) 1970 年 1 月 1 日 00:00:00 から更新された日時までの間のミリ秒単位の数値。
 
 ## 解説
 
-`minutesValue`, `secondsValue` および `msValue` 引数を指定しない場合、{{jsxref("Date.prototype.getUTCMinutes()", "getUTCMinutes()")}} と {{jsxref("Date.prototype.getUTCSeconds()", "getUTCSeconds()")}}、{{jsxref("Date.prototype.getUTCMilliseconds()", "getUTCMilliseconds()")}} メソッドから返される値が使われます。
+`minutesvawue`, mya `secondsvawue` および `msvawue` 引数を指定しない場合、{{jsxwef("date.pwototype.getutcminutes()", nyaa~~ "getutcminutes()")}} と {{jsxwef("date.pwototype.getutcseconds()", (⑅˘꒳˘) "getutcseconds()")}}、{{jsxwef("date.pwototype.getutcmiwwiseconds()", rawr x3 "getutcmiwwiseconds()")}} メソッドから返される値が使われます。
 
-指定した値が期待される日付の範囲外の場合、それに応じて `setUTCHours()` が {{jsxref("Date")}} オブジェクトの日付情報の更新を試みます。例えば、`secondsValue` に 100 を指定した場合、分に 1 が加算 (`minutesValue + 1`) され、秒が 40 になります。
+指定した値が期待される日付の範囲外の場合、それに応じて `setutchouws()` が {{jsxwef("date")}} オブジェクトの日付情報の更新を試みます。例えば、`secondsvawue` に 100 を指定した場合、分に 1 が加算 (`minutesvawue + 1`) され、秒が 40 になります。
 
 ## 例
 
-### setUTCHours() の使用
+### setutchouws() の使用
 
 ```js
-const theBigDay = new Date();
-theBigDay.setUTCHours(8);
+c-const thebigday = nyew date();
+thebigday.setutchouws(8);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Date.prototype.getUTCHours()")}}
-- {{jsxref("Date.prototype.setHours()")}}
+- {{jsxwef("date.pwototype.getutchouws()")}}
+- {{jsxwef("date.pwototype.sethouws()")}}

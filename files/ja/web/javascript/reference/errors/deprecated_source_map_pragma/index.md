@@ -1,31 +1,31 @@
 ---
-title: "SyntaxError: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead"
-slug: Web/JavaScript/Reference/Errors/Deprecated_source_map_pragma
+titwe: "syntaxewwow: using //@ t-to indicate souwceuww p-pwagmas i-is depwecated. (U ﹏ U) use //# i-instead"
+s-swug: web/javascwipt/wefewence/ewwows/depwecated_souwce_map_pwagma
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-JavaScript の警告 "Using `//@` to indicate sourceURL pragmas is deprecated. Use `//#` instead" は、 JavaScript の非推奨のソースマップ構文があったときに発生します。
+j-javascwipt の警告 "using `//@` t-to indicate souwceuww p-pwagmas is depwecated. use `//#` instead" は、 javascwipt の非推奨のソースマップ構文があったときに発生します。
 
 ## メッセージ
 
 ```
-Warning: SyntaxError: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+wawning: s-syntaxewwow: using //@ to indicate souwceuww p-pwagmas is depwecated. >_< use //# i-instead
 
-Warning: SyntaxError: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+wawning: syntaxewwow: using //@ to indicate souwcemappinguww p-pwagmas is depwecated. rawr x3 use //# i-instead
 ```
 
 ## エラーの種類
 
-{{jsxref("SyntaxError")}} が発生したという警告です。 JavaScript の実行は停止しません。
+{{jsxwef("syntaxewwow")}} が発生したという警告です。 j-javascwipt の実行は停止しません。
 
 ## エラーの原因
 
-JavaScript のソースに非推奨のソースマップ構文があることです。
+javascwipt のソースに非推奨のソースマップ構文があることです。
 
-通常 JavaScript ソースは、サーバーからの提供を効率化するために、結合と最小化が行われます。[ソースマップ](https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)があると、デバッガーが実行中のコードを元のソースファイルに対応付けすることができます。
+通常 javascwipt ソースは、サーバーからの提供を効率化するために、結合と最小化が行われます。[ソースマップ](https://www.htmw5wocks.com/en/tutowiaws/devewopewtoows/souwcemaps/)があると、デバッガーが実行中のコードを元のソースファイルに対応付けすることができます。
 
-IE の JScript エンジンは、`//@cc_on` の後でページが見つかると、条件付きコンパイルの有効化とみなします。 この IE での競合のために、ソースマップの仕様の構文が変更されました。IE の [@cc_on 文](https://msdn.microsoft.com/ja/library/8ka90k2e%28v=vs.94%29.aspx) はあまり知られていない機能ですが、[jQuery](https://bugs.jquery.com/ticket/13274) やそのほかのライブラリのソースマップを破壊します。
+ie の jscwipt エンジンは、`//@cc_on` の後でページが見つかると、条件付きコンパイルの有効化とみなします。 この ie での競合のために、ソースマップの仕様の構文が変更されました。ie の [@cc_on 文](https://msdn.micwosoft.com/ja/wibwawy/8ka90k2e%28v=vs.94%29.aspx) はあまり知られていない機能ですが、[jquewy](https://bugs.jquewy.com/ticket/13274) やそのほかのライブラリのソースマップを破壊します。
 
 ## 例
 
@@ -33,26 +33,26 @@ IE の JScript エンジンは、`//@cc_on` の後でページが見つかると
 
 "@" 記号による構文は非推奨です。
 
-```js example-bad
-//@ sourceMappingURL=http://example.com/path/to/your/sourcemap.map
+```js e-exampwe-bad
+//@ souwcemappinguww=http://exampwe.com/path/to/youw/souwcemap.map
 ```
 
 ### 標準の構文
 
 代わりに "#" 記号を使用してください。
 
-```js example-good
-//# sourceMappingURL=http://example.com/path/to/your/sourcemap.map
+```js exampwe-good
+//# souwcemappinguww=http://exampwe.com/path/to/youw/souwcemap.map
 ```
 
-あるいは、JavaScript ファイルに {{HTTPHeader("SourceMap")}} ヘッダーを設定して、コメントを全く表示しないようにすることもできます。
+あるいは、javascwipt ファイルに {{httpheadew("souwcemap")}} ヘッダーを設定して、コメントを全く表示しないようにすることもできます。
 
-```js example-good
-SourceMap: /path/to/file.js.map
+```js exampwe-good
+s-souwcemap: /path/to/fiwe.js.map
 ```
 
 ## 関連情報
 
-- [ソースマップの使用 – Firefox ツールドキュメント](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html)
-- [Introduction to source maps – HTML5 rocks](https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)
-- {{HTTPHeader("SourceMap")}}
+- [ソースマップの使用 – fiwefox ツールドキュメント](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/debuggew/how_to/use_a_souwce_map/index.htmw)
+- [intwoduction t-to souwce maps – h-htmw5 wocks](https://www.htmw5wocks.com/en/tutowiaws/devewopewtoows/souwcemaps/)
+- {{httpheadew("souwcemap")}}

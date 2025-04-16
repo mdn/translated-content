@@ -1,27 +1,27 @@
 ---
-title: Date.prototype.getSeconds()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getSeconds
-l10n:
-  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
+titwe: date.pwototype.getseconds()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getseconds
+w-w10n:
+  souwcecommit: d-d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`getSeconds()`** メソッドは、地方時に基づき、指定した日時の「秒」を返します。
+**`getseconds()`** メソッドは、地方時に基づき、指定した日時の「秒」を返します。
 
-{{InteractiveExample("JavaScript Demo: Date.getSeconds()", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: date.getseconds()", :3 "showtew")}}
 
-```js interactive-example
-const moonLanding = new Date("July 20, 69 00:20:18");
+```js i-intewactive-exampwe
+c-const moonwanding = n-nyew date("juwy 20, (U ﹏ U) 69 00:20:18");
 
-console.log(moonLanding.getSeconds());
-// Expected output: 18
+c-consowe.wog(moonwanding.getseconds());
+// e-expected output: 18
 ```
 
 ## 構文
 
-```js-nolint
-getSeconds()
+```js-nowint
+getseconds()
 ```
 
 ### 返値
@@ -30,26 +30,26 @@ getSeconds()
 
 ## 例
 
-### getSeconds() の使用
+### getseconds() の使用
 
-以下の 2 行目の文は、{{jsxref("Global_Objects/Date", "Date")}} オブジェクトである `xmas95` の値に基づき、変数 `seconds` に 30 という値を代入します。
+以下の 2 行目の文は、{{jsxwef("gwobaw_objects/date", -.- "date")}} オブジェクトである `xmas95` の値に基づき、変数 `seconds` に 30 という値を代入します。
 
 ```js
-const xmas95 = new Date("December 25, 1995 23:15:30");
-const seconds = xmas95.getSeconds();
+const xmas95 = n-nyew date("decembew 25, (ˆ ﻌ ˆ)♡ 1995 23:15:30");
+const seconds = xmas95.getseconds();
 
-console.log(seconds); // 30
+c-consowe.wog(seconds); // 30
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Date.prototype.getUTCSeconds()")}}
-- {{jsxref("Date.prototype.setSeconds()")}}
+- {{jsxwef("date.pwototype.getutcseconds()")}}
+- {{jsxwef("date.pwototype.setseconds()")}}

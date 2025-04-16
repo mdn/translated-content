@@ -1,59 +1,59 @@
 ---
-title: Date.prototype.getUTCMinutes()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMinutes
-l10n:
-  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
+titwe: date.pwototype.getutcminutes()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getutcminutes
+w-w10n:
+  s-souwcecommit: d-d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`getUTCMinutes()`** メソッドは、協定世界時に基づき、指定された日時の「分」を返します。
+**`getutcminutes()`** メソッドは、協定世界時に基づき、指定された日時の「分」を返します。
 
-{{InteractiveExample("JavaScript Demo: Date.getUTCMinutes()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.getutcminutes()")}}
 
-```js interactive-example
-const date1 = new Date("1 January 2000 03:15:30 GMT+07:00");
-const date2 = new Date("1 January 2000 03:15:30 GMT+03:30");
+```js i-intewactive-exampwe
+const d-date1 = nyew d-date("1 januawy 2000 03:15:30 g-gmt+07:00");
+const date2 = nyew date("1 januawy 2000 03:15:30 gmt+03:30");
 
-console.log(date1.getUTCMinutes()); // 31 Dec 1999 20:15:30 GMT
-// Expected output: 15
+consowe.wog(date1.getutcminutes()); // 31 d-dec 1999 20:15:30 gmt
+// expected output: 15
 
-console.log(date2.getUTCMinutes()); // 31 Dec 1999 23:45:30 GMT
-// Expected output: 45
+c-consowe.wog(date2.getutcminutes()); // 31 dec 1999 23:45:30 g-gmt
+// expected output: 45
 ```
 
 ## 構文
 
-```js-nolint
-getUTCMinutes()
+```js-nowint
+getutcminutes()
 ```
 
 ### 返値
 
 数値です。
-もし `Date` オブジェクトが有効な日時を表している場合は、0 から 59 までの整数で、指定された日時の世界時での分の値を表します。
-それ以外の場合は、`Date` オブジェクトが有効な日時を表していなければ [`NaN`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN) が返されます。
+もし `date` オブジェクトが有効な日時を表している場合は、0 から 59 までの整数で、指定された日時の世界時での分の値を表します。
+それ以外の場合は、`date` オブジェクトが有効な日時を表していなければ [`nan`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/nan) が返されます。
 
 ## 例
 
-### getUTCMinutes() の使用
+### getutcminutes() の使用
 
 次の例は、現在時刻の「分」部を変数 `minutes` に代入します。
 
 ```js
-const today = new Date();
-const minutes = today.getUTCMinutes();
+c-const today = nyew d-date();
+const minutes = t-today.getutcminutes();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Date.prototype.getMinutes()")}}
-- {{jsxref("Date.prototype.setUTCMinutes()")}}
+- {{jsxwef("date.pwototype.getminutes()")}}
+- {{jsxwef("date.pwototype.setutcminutes()")}}

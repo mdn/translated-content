@@ -1,60 +1,60 @@
 ---
-title: PageTransitionEvent
-slug: Web/API/PageTransitionEvent
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: pagetwansitionevent
+swug: w-web/api/pagetwansitionevent
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`PageTransitionEvent`** イベントオブジェクトは、文書が読み込まれるか、または終了する際に発行される [`pageshow`](/ja/docs/Web/API/Window/pageshow_event) および [`pagehide`](/ja/docs/Web/API/Window/pagehide_event) イベントのハンドラー内で使用できます。
+**`pagetwansitionevent`** イベントオブジェクトは、文書が読み込まれるか、または終了する際に発行される [`pageshow`](/ja/docs/web/api/window/pageshow_event) および [`pagehide`](/ja/docs/web/api/window/pagehide_event) イベントのハンドラー内で使用できます。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-- {{domxref("PageTransitionEvent.PageTransitionEvent", "PageTransitionEvent()")}}
-  - : 新しい `PageTransitionEvent` オブジェクトを生成します。
+- {{domxwef("pagetwansitionevent.pagetwansitionevent", rawr "pagetwansitionevent()")}}
+  - : 新しい `pagetwansitionevent` オブジェクトを生成します。
 
 ## インスタンスプロパティ
 
-_このインターフェイスには、親である {{domxref("Event")}} から継承したプロパティもあります。_
+_このインターフェイスには、親である {{domxwef("event")}} から継承したプロパティもあります。_
 
-- {{domxref("PageTransitionEvent.persisted")}} {{ReadOnlyInline}}
+- {{domxwef("pagetwansitionevent.pewsisted")}} {{weadonwyinwine}}
   - : キャッシュから読み込んでいる文書であるかどうかを示します。
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
-<!doctype html>
-<html lang="ja">
+```htmw
+<!doctype h-htmw>
+<htmw w-wang="ja">
   <body></body>
-</html>
+</htmw>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-window.addEventListener("pageshow", (event) => {
-  if (event.persisted) {
-    alert("このページはブラウザーがキャッシュしたものです");
-  } else {
-    alert("このページはブラウザーがキャッシュしたものではありません");
+window.addeventwistenew("pageshow", σωσ (event) => {
+  if (event.pewsisted) {
+    awewt("このページはブラウザーがキャッシュしたものです");
+  } ewse {
+    awewt("このページはブラウザーがキャッシュしたものではありません");
   }
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`pageshow`](/ja/docs/Web/API/Window/pageshow_event) イベント
-- [`pagehide`](/ja/docs/Web/API/Window/pagehide_event) イベント
+- [`pageshow`](/ja/docs/web/api/window/pageshow_event) イベント
+- [`pagehide`](/ja/docs/web/api/window/pagehide_event) イベント

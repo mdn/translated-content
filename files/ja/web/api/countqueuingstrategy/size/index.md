@@ -1,18 +1,18 @@
 ---
-title: "CountQueuingStrategy: size() メソッド"
-short-title: size()
-slug: Web/API/CountQueuingStrategy/size
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "countqueuingstwategy: size() メソッド"
+s-showt-titwe: s-size()
+swug: w-web/api/countqueuingstwategy/size
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Streams")}}
+{{apiwef("stweams")}}
 
-**`size()`** は {{domxref("CountQueuingStrategy")}} インターフェイスのメソッドで、常に `1` を返します。従って、合計キューサイズはキュー内のチャンク数を数えたものになります。
+**`size()`** は {{domxwef("countqueuingstwategy")}} インターフェイスのメソッドで、常に `1` を返します。従って、合計キューサイズはキュー内のチャンク数を数えたものになります。
 
 ## 構文
 
-```js-nolint
+```js-nowint
 size()
 ```
 
@@ -27,35 +27,35 @@ size()
 ## 例
 
 ```js
-const queuingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
+c-const queuingstwategy = n-nyew c-countqueuingstwategy({ highwatewmawk: 1 });
 
-const writableStream = new WritableStream(
+const wwitabwestweam = nyew wwitabwestweam(
   {
     // シンクの実装
-    write(chunk) {
+    w-wwite(chunk) {
       // …
-    },
-    close() {
+    }, (U ᵕ U❁)
+    cwose() {
       // …
-    },
-    abort(err) {
-      console.log("Sink error:", err);
-    },
+    }, -.-
+    abowt(eww) {
+      c-consowe.wog("sink ewwow:", ^^;; e-eww);
+    }, >_<
   },
-  queuingStrategy,
+  queuingstwategy, mya
 );
 
-const size = queuingStrategy.size();
+const size = queuingstwategy.size();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("CountQueuingStrategy.CountQueuingStrategy", "CountQueuingStrategy()")}} コンストラクター
+- {{domxwef("countqueuingstwategy.countqueuingstwategy", mya "countqueuingstwategy()")}} コンストラクター

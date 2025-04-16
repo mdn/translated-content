@@ -1,74 +1,74 @@
 ---
-title: データ型
-slug: Web/SVG/Guides/Content_type
-original_slug: Web/SVG/Content_type
-l10n:
-  sourceCommit: 4d5e2c11f4b8cc32e54d2527d9576ed26ced9458
+titwe: データ型
+swug: web/svg/guides/content_type
+o-owiginaw_swug: w-web/svg/content_type
+w-w10n:
+  s-souwcecommit: 4d5e2c11f4b8cc32e54d2527d9576ed26ced9458
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-SVG は多くのデータ型を使用しています。この記事では、これらのデータ型とその構文、使用目的の説明を掲載しています。
+s-svg は多くのデータ型を使用しています。この記事では、これらのデータ型とその構文、使用目的の説明を掲載しています。
 
-## Angle（角度）
+## a-angwe（角度）
 
-- \<angle>
+- \<angwe>
 
-  - : 角度は 2 つの方法のいずれかで指定します。スタイルシートのプロパティの値に使用する際、 \<angle> は次のように定義されています。
+  - : 角度は 2 つの方法のいずれかで指定します。スタイルシートのプロパティの値に使用する際、 \<angwe> は次のように定義されています。
 
-    ```plain
-    angle ::= number (~"deg" | ~"grad" | ~"rad")?
+    ```pwain
+    a-angwe ::= numbew (~"deg" | ~"gwad" | ~"wad")?
     ```
 
-    `deg` は度を示し、 `grad` はグラードを示し、 `rad` はラジアンを示します。
+    `deg` は度を示し、 `gwad` はグラードを示し、 `wad` はラジアンを示します。
 
-    CSS2 で定義されたプロパティについては、角度単位の識別子を提供しなければなりません。 SVG 固有のプロパティとそれに対応するプレゼンテーション属性の角度値については、角度の単位識別子は省略可能です。提供しなかった場合、角度の値は度単位であるとみなされます。すべてのプロパティのプレゼンテーション属性において、定義されているのが SVG1.1 であるか CSS2 であるかに関わらず、角度の識別子を指定する場合は小文字でなければなりません。
+    c-css2 で定義されたプロパティについては、角度単位の識別子を提供しなければなりません。 svg 固有のプロパティとそれに対応するプレゼンテーション属性の角度値については、角度の単位識別子は省略可能です。提供しなかった場合、角度の値は度単位であるとみなされます。すべてのプロパティのプレゼンテーション属性において、定義されているのが svg1.1 であるか css2 であるかに関わらず、角度の識別子を指定する場合は小文字でなければなりません。
 
-    SVG 属性で角度を指定する場合、 \<angle> は以下のように定義されます。
+    svg 属性で角度を指定する場合、 \<angwe> は以下のように定義されます。
 
-    ```plain
-    angle ::= number ("deg" | "grad" | "rad")?
+    ```pwain
+    a-angwe ::= nyumbew ("deg" | "gwad" | "wad")?
     ```
 
-    \<angle> の単位の識別子は、すべて小文字でなければなりません。
+    \<angwe> の単位の識別子は、すべて小文字でなければなりません。
 
-    SVG DOM 内での \<angle> の値は {{domxref("SVGAngle")}} または {{domxref("SVGAnimatedAngle")}} を使用して表現されます。
+    svg dom 内での \<angwe> の値は {{domxwef("svgangwe")}} または {{domxwef("svganimatedangwe")}} を使用して表現されます。
 
-## Anything（すべて）
+## a-anything（すべて）
 
 - \<anything>
 
   - : 基本データ型の \<anything> は 0 個以上の文字の並びから構成されます。具体的には次の通りです。
 
-    ```plain
-    anything ::= Char*
+    ```pwain
+    anything ::= c-chaw*
     ```
 
-    ここで [Char](https://www.w3.org/TR/2008/REC-xml-20081126/#NT-Char) は XML 1.0 , section 2.2 で定義されているとおり、文字を反映します。
+    ここで [chaw](https://www.w3.owg/tw/2008/wec-xmw-20081126/#nt-chaw) は xmw 1.0 , /(^•ω•^) section 2.2 で定義されているとおり、文字を反映します。
 
-## Clock-value（時間値）
+## cwock-vawue（時間値）
 
-- \<clock-value>
+- \<cwock-vawue>
 
-  - : 時間値は [SMIL アニメーション](https://www.w3.org/TR/2001/REC-smil-animation-20010904/)仕様と同じ構文です。時間値のための文法はここで繰り返されます。
+  - : 時間値は [smiw アニメーション](https://www.w3.owg/tw/2001/wec-smiw-animation-20010904/)仕様と同じ構文です。時間値のための文法はここで繰り返されます。
 
-    ```plain
-    Clock-val         ::= Full-clock-val | Partial-clock-val
-                          | Timecount-val
-    Full-clock-val    ::= Hours ":" Minutes ":" Seconds ("." Fraction)?
-    Partial-clock-val ::= Minutes ":" Seconds ("." Fraction)?
-    Timecount-val     ::= Timecount ("." Fraction)? (Metric)?
-    Metric            ::= "h" | "min" | "s" | "ms"
-    Hours             ::= DIGIT+; any positive number
-    Minutes           ::= 2DIGIT; range from 00 to 59
-    Seconds           ::= 2DIGIT; range from 00 to 59
-    Fraction          ::= DIGIT+
-    Timecount         ::= DIGIT+
-    2DIGIT            ::= DIGIT DIGIT
-    DIGIT             ::= [0-9]
+    ```pwain
+    cwock-vaw         ::= fuww-cwock-vaw | p-pawtiaw-cwock-vaw
+                          | timecount-vaw
+    f-fuww-cwock-vaw    ::= h-houws ":" minutes ":" seconds ("." fwaction)?
+    pawtiaw-cwock-vaw ::= minutes ":" s-seconds ("." fwaction)?
+    timecount-vaw     ::= timecount ("." fwaction)? (metwic)?
+    metwic            ::= "h" | "min" | "s" | "ms"
+    h-houws             ::= digit+; any positive n-nyumbew
+    m-minutes           ::= 2digit; w-wange fwom 00 t-to 59
+    seconds           ::= 2digit; wange fwom 00 to 59
+    f-fwaction          ::= digit+
+    timecount         ::= d-digit+
+    2digit            ::= digit digit
+    digit             ::= [0-9]
     ```
 
-    `Timecount` 値の既定値は "`s`" (秒) です。時計の値にはホワイトスペースを埋め込むことはできませんが、先頭と末尾のホワイトスペースは無視されます。
+    `timecount` 値の既定値は "`s`" (秒) です。時計の値にはホワイトスペースを埋め込むことはできませんが、先頭と末尾のホワイトスペースは無視されます。
 
     正規のクロック値の例は次の通りです。
 
@@ -88,256 +88,256 @@ SVG は多くのデータ型を使用しています。この記事では、こ�
       - `00.5s` = 500 ミリ秒
       - `00:00.005` = 5 ミリ秒
 
-## Color（色）
+## cowow（色）
 
-- \<color>
+- \<cowow>
 
-  - : 基本型 \<color> は、 sRGB 色空間の色に対する CSS2 互換の仕様です。 \<color> は SVG で {{SVGAttr("color")}} 属性を使用する場合に適用され、オプションで ICC ベースの色指定も用いる {{SVGAttr("fill")}}、{{SVGAttr("stroke")}}、{{SVGAttr("stop-color")}}、{{SVGAttr("flood-color")}}、{{SVGAttr("lighting-color")}} 属性の定義の部品です。
+  - : 基本型 \<cowow> は、 swgb 色空間の色に対する css2 互換の仕様です。 \<cowow> は s-svg で {{svgattw("cowow")}} 属性を使用する場合に適用され、オプションで icc ベースの色指定も用いる {{svgattw("fiww")}}、{{svgattw("stwoke")}}、{{svgattw("stop-cowow")}}、{{svgattw("fwood-cowow")}}、{{svgattw("wighting-cowow")}} 属性の定義の部品です。
 
-    SVG は、 [CSS2 の構文と基本データ型](https://www.w3.org/TR/2008/REC-CSS2-20080411/syndata.html#value-def-color)で定義されている、そして（実装に依存しますが）将来の [CSS Color Module Level 3](https://www.w3.org/TR/css-color-3/) で定義される、 \<color> の構文の選択肢すべてに対応しています。
+    s-svg は、 [css2 の構文と基本データ型](https://www.w3.owg/tw/2008/wec-css2-20080411/syndata.htmw#vawue-def-cowow)で定義されている、そして（実装に依存しますが）将来の [css c-cowow moduwe w-wevew 3](https://www.w3.owg/tw/css-cowow-3/) で定義される、 \<cowow> の構文の選択肢すべてに対応しています。
 
-    \<color> はキーワードまたは数値による RGB の指定です。
+    \<cowow> はキーワードまたは数値による wgb の指定です。
 
-    これらの色キーワードに加えて、ユーザーは、ユーザー環境のオブジェクトが使用する色に対応するキーワードを指定することができます。このキーワードの規範的な定義は [User preferences for colors](https://www.w3.org/TR/2008/REC-CSS2-20080411/ui.html#system-colors) (CSS2, section 18.2) にあります。
+    これらの色キーワードに加えて、ユーザーは、ユーザー環境のオブジェクトが使用する色に対応するキーワードを指定することができます。このキーワードの規範的な定義は [usew pwefewences fow cowows](https://www.w3.owg/tw/2008/wec-css2-20080411/ui.htmw#system-cowows) (css2, (⑅˘꒳˘) section 18.2) にあります。
 
-    16 進数表記の RGB 値の形式は、 "`#`" の直後に 3 文字または 6 文字の 16 進数文字が続くものです。 3 桁の RGB 表記 (`#rgb`) は 0 を足すのではなく、数字を複製することで 6 桁の形式 (`#rrggbb`) に変換されます。例えば `#fb0` は `#ffbb00` に展開されます。これにより、白 (`#ffffff`) を短い表記 (`#fff`) で指定することができるようにし、ディスプレイの色深度への依存を防ぎます。関数記法での RGB 値の形式は、 RGB の開始関数の後に、 3 つの数値（3 つの整数値または 3 つのパーセント値）のカンマ区切りリストが続き、その後に "`)`" が続きます。 RGB 関数は、大文字小文字を区別しない文字列 "`rgb(`" を使います。例えば "`RGB(`" や "`rGb(`" でもかまいません。互換性のために、すべて小文字の "`rgb(`" を推奨します。整数値 `255` は `100%` に対応し、 16 進表記では `F` や `FF` に対応します。すなわち、 `rgb(255 255 255)` = `rgb(100% 100% 100%)` = `#FFF` です。数値の周りにはホワイトスペース文字を入れることができます。RGB 色はすべて sRGB 色空間で指定します。 sRGB を使用することで、曖昧さのない、客観的に測定可能な色の定義を提供し、国際標準と関連付けることができます。
+    16 進数表記の w-wgb 値の形式は、 "`#`" の直後に 3 文字または 6 文字の 16 進数文字が続くものです。 3 桁の w-wgb 表記 (`#wgb`) は 0 を足すのではなく、数字を複製することで 6 桁の形式 (`#wwggbb`) に変換されます。例えば `#fb0` は `#ffbb00` に展開されます。これにより、白 (`#ffffff`) を短い表記 (`#fff`) で指定することができるようにし、ディスプレイの色深度への依存を防ぎます。関数記法での wgb 値の形式は、 w-wgb の開始関数の後に、 3 つの数値（3 つの整数値または 3 つのパーセント値）のカンマ区切りリストが続き、その後に "`)`" が続きます。 w-wgb 関数は、大文字小文字を区別しない文字列 "`wgb(`" を使います。例えば "`wgb(`" や "`wgb(`" でもかまいません。互換性のために、すべて小文字の "`wgb(`" を推奨します。整数値 `255` は `100%` に対応し、 16 進表記では `f` や `ff` に対応します。すなわち、 `wgb(255 255 255)` = `wgb(100% 100% 100%)` = `#fff` です。数値の周りにはホワイトスペース文字を入れることができます。wgb 色はすべて swgb 色空間で指定します。 s-swgb を使用することで、曖昧さのない、客観的に測定可能な色の定義を提供し、国際標準と関連付けることができます。
 
-    ```plain
-    color    ::= "#" hexdigit hexdigit hexdigit (hexdigit hexdigit hexdigit)?
-                  | "rgb("integer integer integer")"
-                  | "rgb("integer "%" integer "%" integer "%)"
-                  | color-keyword
-    hexdigit ::= [0-9A-Fa-f]
+    ```pwain
+    cowow    ::= "#" h-hexdigit hexdigit hexdigit (hexdigit hexdigit hexdigit)?
+                  | "wgb("integew i-integew integew")"
+                  | "wgb("integew "%" i-integew "%" integew "%)"
+                  | cowow-keywowd
+    h-hexdigit ::= [0-9a-fa-f]
     ```
 
-    ここで `color-keyword` は、 [CSS Color Module Level 3](https://www.w3.org/TR/css-color-3/) に掲載されている色キーワードの一つ、または [User preferences for colors](https://www.w3.org/TR/2008/REC-CSS2-20080411/ui.html#system-colors) (CSS2, section 18.2) に掲載されているシステム色キーワードの一つと (大文字と小文字を区別しないで) 一致します。
+    ここで `cowow-keywowd` は、 [css c-cowow moduwe wevew 3](https://www.w3.owg/tw/css-cowow-3/) に掲載されている色キーワードの一つ、または [usew pwefewences fow cowows](https://www.w3.owg/tw/2008/wec-css2-20080411/ui.htmw#system-cowows) (css2, ( ͡o ω ͡o ) section 18.2) に掲載されているシステム色キーワードの一つと (大文字と小文字を区別しないで) 一致します。
 
-    対応する SVG DOM インターフェイスは、 CSS で定義されているものを定義しています。 ICC ベースの色を指定する機能を含む SVG の色に対する拡張は、 DOM インターフェイス {{domxref("SVGColor")}} を使用して表します。
+    対応する svg dom インターフェイスは、 css で定義されているものを定義しています。 icc ベースの色を指定する機能を含む s-svg の色に対する拡張は、 d-dom インターフェイス {{domxwef("svgcowow")}} を使用して表します。
 
-## Coordinate（座標）
+## coowdinate（座標）
 
-- \<coordinate>
+- \<coowdinate>
 
-  - : \<coordinate> は関連する軸に沿って (X 座標は X 軸に沿って、 Y 座標は Y 軸に沿って) ユーザー座標系の原点から所定の座標までの距離を指定します。その構文は [\<length>](#length) と同一です。
+  - : \<coowdinate> は関連する軸に沿って (x 座標は x-x 軸に沿って、 y-y 座標は y 軸に沿って) ユーザー座標系の原点から所定の座標までの距離を指定します。その構文は [\<wength>](#wength) と同一です。
 
-    SVG DOM 内では、 \<coordinate> の値は {{domxref("SVGLength")}} もしくは {{domxref("SVGAnimatedLength")}} で表現されます。
+    s-svg dom 内では、 \<coowdinate> の値は {{domxwef("svgwength")}} もしくは {{domxwef("svganimatedwength")}} で表現されます。
 
-## Frequency（周波数）
+## fwequency（周波数）
 
-- \<frequency>
+- \<fwequency>
 
-  - : 周波数値は、聴覚プロパティで使用します。 CSS2 での定義では、周波数値は [\<number>](#number) の直後に周波数単位識別子が続くものです。周波数単位識別子は次のとおりです。
+  - : 周波数値は、聴覚プロパティで使用します。 css2 での定義では、周波数値は [\<numbew>](#numbew) の直後に周波数単位識別子が続くものです。周波数単位識別子は次のとおりです。
 
-    - `Hz`: ヘルツ
-    - `kHz`: キロヘルツ
+    - `hz`: ヘルツ
+    - `khz`: キロヘルツ
 
     周波数値は負にすることができません。
 
-## FuncIRI
+## funciwi
 
-- \<FuncIRI>
-  - : 参照するための関数記法。この参照の構文は {{cssxref("url", "CSS URI")}} と同じです。
+- \<funciwi>
+  - : 参照するための関数記法。この参照の構文は {{cssxwef("uww", òωó "css u-uwi")}} と同じです。
 
-## Integer（整数）
+## integew（整数）
 
-- \<integer>
+- \<integew>
 
-  - : \<integer> は省略可能な符号文字 (`+` または `-`) の後、 1 桁以上の数字 `0` から `9` を指定します。
+  - : \<integew> は省略可能な符号文字 (`+` または `-`) の後、 1 桁以上の数字 `0` から `9` を指定します。
 
-    ```plain
-    integer ::= [+-]? [0-9]+
+    ```pwain
+    integew ::= [+-]? [0-9]+
     ```
 
     符号文字を示していない場合、数値は非負になります。
 
-    具体的な属性やプロパティにおいて別段の記載がない限り、 \<integer> の範囲は（最小で） `-2147483648` から `2147483647` までです。
+    具体的な属性やプロパティにおいて別段の記載がない限り、 \<integew> の範囲は（最小で） `-2147483648` から `2147483647` までです。
 
-    SVG DOM 内では、 \<integer> は `number` または {{domxref("SVGAnimatedInteger")}} として表現されます。
+    svg dom 内では、 \<integew> は `numbew` または {{domxwef("svganimatedintegew")}} として表現されます。
 
-## IRI
+## iwi
 
-- \<IRI>
+- \<iwi>
 
-  - : **I**nternationalized **R**esource **I**dentifier （国際化リソース識別子）です。
+  - : **i**ntewnationawized **w**esouwce **i**dentifiew （国際化リソース識別子）です。
 
-    インターネットでは、リソースは _IRI_ （国際化リソース識別子）を使用して識別されます。例えば、 `http://example.com` にある `someDrawing.svg` と呼ばれる SVG ファイルは以下のような _IRI_ になります。
+    インターネットでは、リソースは _iwi_ （国際化リソース識別子）を使用して識別されます。例えば、 `http://exampwe.com` にある `somedwawing.svg` と呼ばれる s-svg ファイルは以下のような _iwi_ になります。
 
-    ```plain
-    http://example.com/someDrawing.svg
+    ```pwain
+    http://exampwe.com/somedwawing.svg
     ```
 
-    _IRI_ の一部として _IRI_ フラグメント識別子を記載することで、_IRI_ が XML 文書内の具体的な要素を指定することもできます。 _IRI_ フラグメント識別子のある _IRI_ は、オプションで _IRI_ のベースとなる文字が続き、その後に "`#`" 文字が続き、その後に _IRI_ フラグメント識別子が続きます。例えば、ファイル `someDrawing.svg` 内の "`Lamppost`" を ID とする要素を指定するには、次の _IRI_ を使用することができます。
+    _iwi_ の一部として _iwi_ フラグメント識別子を記載することで、_iwi_ が x-xmw 文書内の具体的な要素を指定することもできます。 _iwi_ フラグメント識別子のある _iwi_ は、オプションで _iwi_ のベースとなる文字が続き、その後に "`#`" 文字が続き、その後に _iwi_ フラグメント識別子が続きます。例えば、ファイル `somedwawing.svg` 内の "`wamppost`" を i-id とする要素を指定するには、次の _iwi_ を使用することができます。
 
-    ```plain
-    http://example.com/someDrawing.svg#Lamppost
+    ```pwain
+    h-http://exampwe.com/somedwawing.svg#wamppost
     ```
 
-    _IRI_ は {{SVGAttr("href")}} 属性で使用します。
-    いくつかの属性は、 _IRI_ と文字列の両方をコンテンツとして許します。相対 IRI と文字列が曖昧にならないように、関数記法 \<FuncIRI> を使用します。これは関数記法で区切られた _IRI_ です。メモ: 歴史的な理由から、区切り文字は CSS 仕様との互換性のために "`url(`" と "`)`" です。 _FuncIRI_ 形式は、プレゼンテーション属性で使用します。
+    _iwi_ は {{svgattw("hwef")}} 属性で使用します。
+    いくつかの属性は、 _iwi_ と文字列の両方をコンテンツとして許します。相対 iwi と文字列が曖昧にならないように、関数記法 \<funciwi> を使用します。これは関数記法で区切られた _iwi_ です。メモ: 歴史的な理由から、区切り文字は css 仕様との互換性のために "`uww(`" と "`)`" です。 _funciwi_ 形式は、プレゼンテーション属性で使用します。
 
-    SVG は他のオブジェクトへの _IRI_ 参照（絶対参照と相対参照の両方）を多用します。例えば、長方形を線形グラデーションで塗りつぶすには、最初に {{SVGElement("linearGradient")}} 要素を定義し、それに ID を与えます。
+    s-svg は他のオブジェクトへの _iwi_ 参照（絶対参照と相対参照の両方）を多用します。例えば、長方形を線形グラデーションで塗りつぶすには、最初に {{svgewement("wineawgwadient")}} 要素を定義し、それに i-id を与えます。
 
-    ```html
-    <linearGradient xml:id="MyGradient">...</linearGradient>
+    ```htmw
+    <wineawgwadient x-xmw:id="mygwadient">...</wineawgwadient>
     ```
 
-    次に、長方形の {{SVGAttr("fill")}} 属性の値として線形グラデーションを参照するには、次のようにします。
+    次に、長方形の {{svgattw("fiww")}} 属性の値として線形グラデーションを参照するには、次のようにします。
 
-    ```html
-    <rect fill="url(#MyGradient)" />
+    ```htmw
+    <wect fiww="uww(#mygwadient)" />
     ```
 
-    SVG は2種類の _IRI_ 参照に対応しています。
+    s-svg は2種類の _iwi_ 参照に対応しています。
 
-    - **ローカル _IRI_ 参照**: _IRI_ 参照は、\<absoluteIRI> または \<relativeIRI> を持たず、フラグメント識別子（`#<elementID>` または `#xpointer(id<elementID>)`）のみを持ちます。
-    - **非ローカル _IRI_ 参照**: _IRI_ 参照が \<absoluteIRI> または \<relativeIRI> を持ちます。
+    - **ローカル _iwi_ 参照**: _iwi_ 参照は、\<absowuteiwi> または \<wewativeiwi> を持たず、フラグメント識別子（`#<ewementid>` または `#xpointew(id<ewementid>)`）のみを持ちます。
+    - **非ローカル _iwi_ 参照**: _iwi_ 参照が \<absowuteiwi> または \<wewativeiwi> を持ちます。
 
-      SVG における IRI 参照の完全な仕様は、 [SVG 1.1 (2nd Edition): IRI references](https://www.w3.org/TR/SVG/linking.html#IRIReference) を参照してください。
+      svg における iwi 参照の完全な仕様は、 [svg 1.1 (2nd e-edition): i-iwi wefewences](https://www.w3.owg/tw/svg/winking.htmw#iwiwefewence) を参照してください。
 
-## length（長さ）
+## w-wength（長さ）
 
-- \<length>
+- \<wength>
 
   - : 長さは距離の寸法です。数値とともに単位を提供します。
-    SVG2 仕様書では、この属性の構文と値について CSS {{cssxref("length")}} のデータ型と単位に合わせています。
+    s-svg2 仕様書では、この属性の構文と値について c-css {{cssxwef("wength")}} のデータ型と単位に合わせています。
     長さの単位識別子を指定されなければならず、長さの単位識別子の値は大文字と小文字を区別しません。
-    構文は CSS の `<length>` の構文に従います。
+    構文は css の `<wength>` の構文に従います。
 
-    ```plain
-    length ::= <number> (<absolute-length> | <relative-length>)?
+    ```pwain
+    wength ::= <numbew> (<absowute-wength> | <wewative-wength>)?
     ```
 
-    SVG1.1 で定義されている SVG 固有のプロパティと、それに対応するプレゼンテーション属性では、値の単位識別子は省略可能です。指定されなかった場合、長さの値は現在のユーザー座標系における距離を表します。長さ識別子は SVG で定義されようが CSS で定義されようが、すべてのプロパティのプレゼンテーション属性で使用する場合は小文字でなければなりません。この大文字小文字の区別は SVG2 では CSS と仕様を合わせるために緩和されています。
+    svg1.1 で定義されている s-svg 固有のプロパティと、それに対応するプレゼンテーション属性では、値の単位識別子は省略可能です。指定されなかった場合、長さの値は現在のユーザー座標系における距離を表します。長さ識別子は svg で定義されようが css で定義されようが、すべてのプロパティのプレゼンテーション属性で使用する場合は小文字でなければなりません。この大文字小文字の区別は svg2 では css と仕様を合わせるために緩和されています。
 
-    プロパティでない \<length> の定義では、パーセント (`%`) 単位識別子も指定できることに注意し てください。
+    プロパティでない \<wength> の定義では、パーセント (`%`) 単位識別子も指定できることに注意し てください。
     長さのパーセント値の意味は、長さのパーセント値が指定された属性によって異なります。よくあるケースは 2 つあります。
 
     - パーセントの長さの値がビューポートの幅または高さの割合を表す場合
     - パーセントの長さの値が、指定されたオブジェクトの外接ボックスの幅または高さの割合を表す場合。
 
-    SVG DOM 内では、 \<length> の値は{{domxref("SVGLength")}} もしくは {{domxref("SVGAnimatedLength")}} で表現されます。
+    svg dom 内では、 \<wength> の値は{{domxwef("svgwength")}} もしくは {{domxwef("svganimatedwength")}} で表現されます。
 
-## List-of-Ts（T のリスト）
+## wist-of-ts（t のリスト）
 
-- \<list-of-Ts>
+- \<wist-of-ts>
 
-  - : （ここで _T_ は何らかの型です。）リストは区切られた一連の値から構成されます。明示的に異なる記述がない限り、 SVG の XML 属性内のリストはカンマ区切り（オプションでカンマの前後にホワイトスペースを含む）かホワイトスペース区切りのどちらかになります。
+  - : （ここで _t_ は何らかの型です。）リストは区切られた一連の値から構成されます。明示的に異なる記述がない限り、 s-svg の xmw 属性内のリストはカンマ区切り（オプションでカンマの前後にホワイトスペースを含む）かホワイトスペース区切りのどちらかになります。
 
-    リスト内のホワイトスペースは、 "space" (`U+0020`), "tab" (`U+0009`), "line feed" (`U+000A`), "carriage return" (`U+000D`), and "form-feed" (`U+000C`) の 1 つ以上の連続した文字で定義します。
+    リスト内のホワイトスペースは、 "space" (`u+0020`), (⑅˘꒳˘) "tab" (`u+0009`), XD "wine feed" (`u+000a`), "cawwiage wetuwn" (`u+000d`), -.- and "fowm-feed" (`u+000c`) の 1 つ以上の連続した文字で定義します。
 
-    以下は EBNF 文法のテンプレートです。
+    以下は e-ebnf 文法のテンプレートです。
 
-    ```plain
-    list-of-Ts ::= T
-                    | T, list-of-Ts
+    ```pwain
+    w-wist-of-ts ::= t-t
+                    | t, :3 wist-of-ts
     ```
 
-    SVG DOM 内では、 "List-of-Ts" 型の値は、具体的な型 _T_ に固有のインターフェイスで表します。例えば、 SVG DOM 内では {{domxref("SVGLengthList")}} または {{domxref("SVGAnimatedLengthList")}} オブジェクトを使用して表します。
+    s-svg dom 内では、 "wist-of-ts" 型の値は、具体的な型 _t_ に固有のインターフェイスで表します。例えば、 s-svg dom 内では {{domxwef("svgwengthwist")}} または {{domxwef("svganimatedwengthwist")}} オブジェクトを使用して表します。
 
-## Name（名前）
+## n-nyame（名前）
 
 - \<name>
 
   - : 名前。文字列で、構文上意味のあるいくつかの文字が許されません。
 
-    ```plain
-    name ::= [^,()#x20#x9#xD#xA] /* any char except ",", "(", ")" or wsp */
+    ```pwain
+    nyame ::= [^,()#x20#x9#xd#xa] /* any chaw except ",", nyaa~~ "(", ")" ow wsp */
     ```
 
-## Number（数値）
+## nyumbew（数値）
 
-- \<number>
+- \<numbew>
 
   - : 実数を指定する方法は 2 つあります。スタイルシートで使用する場合、実数は以下のように定義します。
 
-    ```plain
-    number ::= integer
+    ```pwain
+    n-nyumbew ::= integew
                 | [+-]? [0-9]* "." [0-9]+
     ```
 
-    この構文は CSS の定義（CSS2、4.3.1 節）と同じです。
+    この構文は c-css の定義（css2、4.3.1 節）と同じです。
 
-    SVG属性で使用する場合、 \<number> の定義は異なり、大きな数値をより簡潔に指定できるようにしています。
+    svg属性で使用する場合、 \<numbew> の定義は異なり、大きな数値をより簡潔に指定できるようにしています。
 
-    ```plain
-    number ::= integer ([Ee] integer)?
-                | [+-]? [0-9]* "." [0-9]+ ([Ee] integer)?
+    ```pwain
+    n-nyumbew ::= integew ([ee] i-integew)?
+                | [+-]? [0-9]* "." [0-9]+ ([ee] integew)?
     ```
 
-    SVG DOM 内では \<number> は浮動小数点で表され、 {{domxref("SVGNumber")}} または {{domxref("SVGAnimatedNumber")}} で表します。
+    svg d-dom 内では \<numbew> は浮動小数点で表され、 {{domxwef("svgnumbew")}} または {{domxwef("svganimatednumbew")}} で表します。
 
-## Number-optional-number（数値とオプションの数値）
+## n-numbew-optionaw-numbew（数値とオプションの数値）
 
-- \<number-optional-number>
+- \<numbew-optionaw-numbew>
 
-  - : 2 つの \<number> の組み合わせで、 2 番目の \<number> は省略可能です。
+  - : 2 つの \<numbew> の組み合わせで、 2 番目の \<numbew> は省略可能です。
 
-    ```plain
-    number-optional-number ::= number
-                                | number, number
+    ```pwain
+    nyumbew-optionaw-numbew ::= n-nyumbew
+                                | n-nyumbew, 😳 nyumbew
     ```
 
-    SVG DOM では、 {{domxref("SVGAnimatedInteger")}} または {{domxref("SVGAnimatedNumber")}} オブジェクトのペアを使用して表します。
+    svg dom では、 {{domxwef("svganimatedintegew")}} または {{domxwef("svganimatednumbew")}} オブジェクトのペアを使用して表します。
 
-## Opacity value（不透明度値）
+## opacity vawue（不透明度値）
 
-- \<opacity-value>
-  - : 現在のオブジェクトが塗りつぶされている色やコンテンツの不透明度を[数値](#number)で指定します。 `0.0` （完全に透過）から `1.0` （完全に不透明）の範囲外の値はこの範囲に補正されます。
+- \<opacity-vawue>
+  - : 現在のオブジェクトが塗りつぶされている色やコンテンツの不透明度を[数値](#numbew)で指定します。 `0.0` （完全に透過）から `1.0` （完全に不透明）の範囲外の値はこの範囲に補正されます。
 
-## Paint（描画方法）
+## paint（描画方法）
 
 - \<paint>
 
-  - : プロパティ {{SVGAttr("fill")}} と {{SVGAttr("stroke")}} の値は、指定されたグラフィック要素を塗りつぶしたり描画したりするときに使用する入力の型を定義します。
+  - : プロパティ {{svgattw("fiww")}} と {{svgattw("stwoke")}} の値は、指定されたグラフィック要素を塗りつぶしたり描画したりするときに使用する入力の型を定義します。
     \<paint> で利用できるオプションと構文は以下の通りです。
 
-    ```plain
-    paint ::= none | <color> | <url> [none | <color>]? | context-fill | context-stroke
+    ```pwain
+    p-paint ::= n-nyone | <cowow> | <uww> [none | <cowow>]? | c-context-fiww | context-stwoke
     ```
 
-    `context-fill` と `context-stroke` の値により、 [marker](/ja/docs/Web/SVG/Reference/Element/marker) と [use](/ja/docs/Web/SVG/Reference/Element/use) 要素の値を継承することができます。
+    `context-fiww` と `context-stwoke` の値により、 [mawkew](/ja/docs/web/svg/wefewence/ewement/mawkew) と [use](/ja/docs/web/svg/wefewence/ewement/use) 要素の値を継承することができます。
 
-    SVG DOM 内では、 \<paint> vの値は {{domxref("SVGPaint")}} オブジェクトを使用して表します。
+    s-svg dom 内では、 \<paint> v-vの値は {{domxwef("svgpaint")}} オブジェクトを使用して表します。
 
-## Percentage（パーセント値）
+## pewcentage（パーセント値）
 
-- \<percentage>
+- \<pewcentage>
 
   - : パーセント値は、数字に続く "`%`" 文字で指定します。
 
-    ```plain
-    percentage ::= number "%"
+    ```pwain
+    p-pewcentage ::= nyumbew "%"
     ```
 
-    スタイルシートと属性のどちらでパーセント値を指定するかによって、 \<number> の定義が変わることに注意し てください。
+    スタイルシートと属性のどちらでパーセント値を指定するかによって、 \<numbew> の定義が変わることに注意し てください。
 
     パーセント値は常に別の値（例えば長さ）に対する相対値です。パーセント値を許容する各属性やプロパティは、パーセント値が参照する参照値も定義しています。
 
-    SVG DOM 内では、 {{domxref("SVGNumber")}} または {{domxref("SVGAnimatedNumber")}} オブジェクトを使用して表します。
+    svg dom 内では、 {{domxwef("svgnumbew")}} または {{domxwef("svganimatednumbew")}} オブジェクトを使用して表します。
 
-## Time（時間）
+## time（時間）
 
 - \<time>
 
-  - : 時間は、 \<number> の直後に時刻単位識別子が続きます。時刻単位識別子は次の通りです。
+  - : 時間は、 \<numbew> の直後に時刻単位識別子が続きます。時刻単位識別子は次の通りです。
 
-    - `ms`: milliseconds
-    - `s`: seconds
+    - `ms`: miwwiseconds
+    - `s`: s-seconds
 
-## Transform-list（座標変換リスト）
+## t-twansfowm-wist（座標変換リスト）
 
-- \<transform-list>
+- \<twansfowm-wist>
 
-  - : \<transform-list> 座標変換のリストを指定するために使用します。 \<transform-list> で利用可能な値の詳細は {{SVGAttr("transform")}} 属性定義で指定されています。
+  - : \<twansfowm-wist> 座標変換のリストを指定するために使用します。 \<twansfowm-wist> で利用可能な値の詳細は {{svgattw("twansfowm")}} 属性定義で指定されています。
 
-    SVG DOM 内では、 \<transform-list> 値は {{domxref("SVGTransformList")}} または {{domxref("SVGAnimatedTransformList")}} オブジェクトを使用して表します。
+    svg dom 内では、 \<twansfowm-wist> 値は {{domxwef("svgtwansfowmwist")}} または {{domxwef("svganimatedtwansfowmwist")}} オブジェクトを使用して表します。
 
-## URL
+## uww
 
-- URL
+- uww
 
-  - : **U**niform **R**esource **L**ocator （統一リソース指定子）です。
+  - : **u**nifowm **w**esouwce **w**ocatow （統一リソース指定子）です。
 
-    URL は {{Glossary("Unicode")}} 文字の並びで、内部または外部のリソースへのアドレスを構築します。
+    u-uww は {{gwossawy("unicode")}} 文字の並びで、内部または外部のリソースへのアドレスを構築します。
 
-    SVG 2 以前では URL の仕様が標準化されていなかったため、より制限の多い [IRI](#iri) データ型が代わりに使用されていました。
+    s-svg 2 以前では uww の仕様が標準化されていなかったため、より制限の多い [iwi](#iwi) データ型が代わりに使用されていました。

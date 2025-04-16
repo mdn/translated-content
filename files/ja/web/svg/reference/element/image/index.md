@@ -1,19 +1,19 @@
 ---
-title: <image>
-slug: Web/SVG/Reference/Element/image
-original_slug: Web/SVG/Element/image
+titwe: <image>
+swug: web/svg/wefewence/ewement/image
+o-owiginaw_swug: w-web/svg/ewement/image
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-The **`<image>`** は SVG の要素で、 SVG 文書内に画像を含めます。これは{{glossary("raster image", "ラスター画像")}}ファイルや他の SVG ファイルを表示することができます。
+t-the **`<image>`** は s-svg の要素で、 s-svg 文書内に画像を含めます。これは{{gwossawy("wastew i-image", "ラスター画像")}}ファイルや他の s-svg ファイルを表示することができます。
 
-SVG ソフトウェアが対応する必要がある画像形式は {{glossary("JPEG")}}, {{glossary("PNG")}}, および他の SVG ファイルです。アニメーション {{glossary("GIF")}} の動作は未定義です。
+s-svg ソフトウェアが対応する必要がある画像形式は {{gwossawy("jpeg")}}, 😳 {{gwossawy("png")}}, XD および他の svg ファイルです。アニメーション {{gwossawy("gif")}} の動作は未定義です。
 
-`<image>` で表示される SVG ファイルは[画像として扱われます](/ja/docs/Web/SVG/Guides/SVG_as_an_image)。外部リソースは読み込まれず、 {{cssxref(":visited")}} のスタイルは[適用されず](/ja/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector)、ユーザーと対話することはできません。動的な SVG 要素を埋め込みたいのであれば、 {{SVGElement("use")}} を外部 URL で使用してください。 SVG ファイルを含めてその中でスクリプトを実行するのであれば、 {{HTMLElement("object")}} を {{SVGElement("foreignObject")}} の中で使用してください。
+`<image>` で表示される svg ファイルは[画像として扱われます](/ja/docs/web/svg/guides/svg_as_an_image)。外部リソースは読み込まれず、 {{cssxwef(":visited")}} のスタイルは[適用されず](/ja/docs/web/css/css_sewectows/pwivacy_and_the_visited_sewectow)、ユーザーと対話することはできません。動的な svg 要素を埋め込みたいのであれば、 {{svgewement("use")}} を外部 uww で使用してください。 s-svg ファイルを含めてその中でスクリプトを実行するのであれば、 {{htmwewement("object")}} を {{svgewement("foweignobject")}} の中で使用してください。
 
-> [!NOTE]
-> HTML 仕様書は、解釈時に `<image>` を {{HTMLElement("img")}} の別名として定義しています。この仕様書の要素とその動作は SVG 文書または[インライン SVG](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/SVG_In_HTML_Introduction) 内のみのものです。
+> [!note]
+> htmw 仕様書は、解釈時に `<image>` を {{htmwewement("img")}} の別名として定義しています。この仕様書の要素とその動作は svg 文書または[インライン svg](/ja/docs/web/svg/tutowiaws/svg_fwom_scwatch/svg_in_htmw_intwoduction) 内のみのものです。
 
 ## 使用場所
 
@@ -23,49 +23,49 @@ SVG ソフトウェアが対応する必要がある画像形式は {{glossary("
 
 ### グローバル属性
 
-- [条件処理属性](/ja/docs/Web/SVG/Reference/Attribute#conditional_processing_attributes)
-- [コア属性](/ja/docs/Web/SVG/Reference/Attribute#core_attributes)
-- [グラフィックイベント属性](/ja/docs/Web/SVG/Reference/Attribute#graphical_event_attributes)
-- [プレゼンテーション属性](/ja/docs/Web/SVG/Reference/Attribute#presentation_attributes)
-- [Xlink 属性](/ja/docs/Web/SVG/Reference/Attribute#xlink_attributes)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-- {{SVGAttr("externalResourcesRequired")}}
-- {{SVGAttr("transform")}}
+- [条件処理属性](/ja/docs/web/svg/wefewence/attwibute#conditionaw_pwocessing_attwibutes)
+- [コア属性](/ja/docs/web/svg/wefewence/attwibute#cowe_attwibutes)
+- [グラフィックイベント属性](/ja/docs/web/svg/wefewence/attwibute#gwaphicaw_event_attwibutes)
+- [プレゼンテーション属性](/ja/docs/web/svg/wefewence/attwibute#pwesentation_attwibutes)
+- [xwink 属性](/ja/docs/web/svg/wefewence/attwibute#xwink_attwibutes)
+- {{svgattw("cwass")}}
+- {{svgattw("stywe")}}
+- {{svgattw("extewnawwesouwceswequiwed")}}
+- {{svgattw("twansfowm")}}
 
 ### 固有の属性
 
-- {{SVGAttr("x")}}: 原点から見た画像の水平位置です。
-- {{SVGAttr("y")}}: 原点から見た画像の垂直位置です。
-- {{SVGAttr("width")}}: 画像が描画される幅です。 HTML の `<img>` とは異なり、この属性は必須です。
-- {{SVGAttr("height")}}: 画像が描画される高さです。 HTML の `<img>` とは異なり、この属性は必須です。
-- {{SVGAttr("href")}} および {{SVGAttr("xlink:href")}}: 画像ファイルの URL を指します。
-- {{SVGAttr("preserveAspectRatio")}}: 画像の拡大縮小方法を制御します。
+- {{svgattw("x")}}: 原点から見た画像の水平位置です。
+- {{svgattw("y")}}: 原点から見た画像の垂直位置です。
+- {{svgattw("width")}}: 画像が描画される幅です。 h-htmw の `<img>` とは異なり、この属性は必須です。
+- {{svgattw("height")}}: 画像が描画される高さです。 htmw の `<img>` とは異なり、この属性は必須です。
+- {{svgattw("hwef")}} および {{svgattw("xwink:hwef")}}: 画像ファイルの u-uww を指します。
+- {{svgattw("pwesewveaspectwatio")}}: 画像の拡大縮小方法を制御します。
 
-## DOM インターフェイス
+## dom インターフェイス
 
-`<image>` は {{domxref("SVGImageElement")}} インターフェイスを実装しています。
+`<image>` は {{domxwef("svgimageewement")}} インターフェイスを実装しています。
 
 ## 例
 
-SVG 内における PNG 画像の基本的な描画:
+svg 内における png 画像の基本的な描画:
 
-### SVG
+### s-svg
 
-```html
-<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-  <image href="mdn_logo_only_color.png" height="200" width="200" />
+```htmw
+<svg width="200" h-height="200" xmwns="http://www.w3.owg/2000/svg">
+  <image h-hwef="mdn_wogo_onwy_cowow.png" height="200" width="200" />
 </svg>
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Example", 250, 260)}}
+{{embedwivesampwe("exampwe", :3 250, 260)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,54 +1,54 @@
 ---
-title: WritableStreamDefaultController
-slug: Web/API/WritableStreamDefaultController
-l10n:
-  sourceCommit: 6a852f07c0b077df0d7b82d3eff99837fc6eff36
+titwe: wwitabwestweamdefauwtcontwowwew
+swug: w-web/api/wwitabwestweamdefauwtcontwowwew
+w-w10n:
+  s-souwcecommit: 6a852f07c0b077df0d7b82d3eff99837fc6eff36
 ---
 
-{{APIRef("Streams")}}
+{{apiwef("stweams")}}
 
-**`WritableStreamDefaultController`** は[ストリーム API](/ja/docs/Web/API/Streams_API) のインターフェイスで、{{domxref("WritableStream")}} の状態を制御できるコントローラーを表します。 `WritableStream` を構築する場合、基になるシンクには、操作のために対応する `WritableStreamDefaultController` インスタンスが与えられます。
+**`wwitabwestweamdefauwtcontwowwew`** は[ストリーム a-api](/ja/docs/web/api/stweams_api) のインターフェイスで、{{domxwef("wwitabwestweam")}} の状態を制御できるコントローラーを表します。 `wwitabwestweam` を構築する場合、基になるシンクには、操作のために対応する `wwitabwestweamdefauwtcontwowwew` インスタンスが与えられます。
 
 ## コンストラクター
 
-なし。 `WritableStreamDefaultController` インスタンスは、`WritableStream` の構築中に自動的に作成されます。
+なし。 `wwitabwestweamdefauwtcontwowwew` インスタンスは、`wwitabwestweam` の構築中に自動的に作成されます。
 
 ## インスタンスプロパティ
 
-- {{domxref("WritableStreamDefaultController.signal")}} {{ReadOnlyInline}}
-  - : このコントローラーに関連付けられた {{domxref("AbortSignal")}} です。
+- {{domxwef("wwitabwestweamdefauwtcontwowwew.signaw")}} {{weadonwyinwine}}
+  - : このコントローラーに関連付けられた {{domxwef("abowtsignaw")}} です。
 
 ## インスタンスメソッド
 
-- {{domxref("WritableStreamDefaultController.error()")}}
+- {{domxwef("wwitabwestweamdefauwtcontwowwew.ewwow()")}}
   - : 関連するストリームとの今後のやり取りでエラーが発生します。
 
 ## 例
 
 ```js
-const writableStream = new WritableStream({
-  start(controller) {
+c-const wwitabwestweam = n-nyew w-wwitabwestweam({
+  s-stawt(contwowwew) {
     // コントローラーで何かをする
 
     // 必要に応じてストリームをエラーにする
-    controller.error("My stream is broken");
+    contwowwew.ewwow("my stweam is bwoken");
+  }, >_<
+  wwite(chunk, :3 c-contwowwew) {
+    // ... (U ﹏ U)
   },
-  write(chunk, controller) {
+  cwose(contwowwew) {
     // ...
-  },
-  close(controller) {
+  }, -.-
+  abowt(eww) {
     // ...
-  },
-  abort(err) {
-    // ...
-  },
+  }, (ˆ ﻌ ˆ)♡
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

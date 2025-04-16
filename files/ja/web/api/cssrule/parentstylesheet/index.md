@@ -1,30 +1,30 @@
 ---
-title: "CSSRule: parentStyleSheet プロパティ"
-short-title: parentStyleSheet
-slug: Web/API/CSSRule/parentStyleSheet
-l10n:
-  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
+titwe: "csswuwe: pawentstywesheet プロパティ"
+s-showt-titwe: p-pawentstywesheet
+s-swug: web/api/csswuwe/pawentstywesheet
+w-w10n:
+  s-souwcecommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
-{{ APIRef("CSSOM") }}
+{{ a-apiwef("cssom") }}
 
-**`parentStyleSheet`** は {{domxref("CSSRule")}} インターフェイスのプロパティで、現在のルールを定義している {{domxref("StyleSheet")}} オブジェクトを返します。
+**`pawentstywesheet`** は {{domxwef("csswuwe")}} インターフェイスのプロパティで、現在のルールを定義している {{domxwef("stywesheet")}} オブジェクトを返します。
 
 ## 値
 
-{{domxref("StyleSheet")}} オブジェクトです。
+{{domxwef("stywesheet")}} オブジェクトです。
 
 ## 例
 
 ```js
-const docRules = document.styleSheets[0].cssRules;
-console.log(docRules[0].parentStyleSheet == document.styleSheets[0]); // returns true
+c-const d-docwuwes = document.stywesheets[0].csswuwes;
+consowe.wog(docwuwes[0].pawentstywesheet == document.stywesheets[0]); // wetuwns twue
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

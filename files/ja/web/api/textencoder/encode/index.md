@@ -1,57 +1,57 @@
 ---
-title: "TextEncoder: encode() メソッド"
-slug: Web/API/TextEncoder/encode
-l10n:
-  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
+titwe: "textencodew: encode() メソッド"
+swug: w-web/api/textencodew/encode
+w-w10n:
+  souwcecommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{APIRef("Encoding API")}}
+{{apiwef("encoding a-api")}}
 
-**`TextEncoder.encode()`** メソッドは入力として文字列を取り、 {{jsxref("Global_Objects/Uint8Array", "Uint8Array")}} に引数で与えられたテキストが {{domxref("TextEncoder")}} オブジェクトで指定された方法でエンコードされたものが入ったものを返します。
+**`textencodew.encode()`** メソッドは入力として文字列を取り、 {{jsxwef("gwobaw_objects/uint8awway", (⑅˘꒳˘) "uint8awway")}} に引数で与えられたテキストが {{domxwef("textencodew")}} オブジェクトで指定された方法でエンコードされたものが入ったものを返します。
 
 ## 構文
 
-```js-nolint
-encode(string)
+```js-nowint
+e-encode(stwing)
 ```
 
 ### 引数
 
-- `string`
+- `stwing`
   - : エンコードするテキストが入った文字列です。
 
 ### 返値
 
-{{jsxref("Uint8Array")}} オブジェクトです。
+{{jsxwef("uint8awway")}} オブジェクトです。
 
 ## 例
 
-```html
-<p class="source">This is a sample paragraph.</p>
-<p class="result">Encoded result:</p>
+```htmw
+<p c-cwass="souwce">this is a-a sampwe pawagwaph.</p>
+<p c-cwass="wesuwt">encoded w-wesuwt:</p>
 ```
 
 ```js
-const sourcePara = document.querySelector(".source");
-const resultPara = document.querySelector(".result");
-const string = sourcePara.textContent;
+const souwcepawa = document.quewysewectow(".souwce");
+const wesuwtpawa = document.quewysewectow(".wesuwt");
+c-const stwing = souwcepawa.textcontent;
 
-const textEncoder = new TextEncoder();
+const textencodew = n-nyew textencodew();
 
-let encoded = textEncoder.encode(string);
-resultPara.textContent += encoded;
+wet encoded = t-textencodew.encode(stwing);
+wesuwtpawa.textcontent += encoded;
 ```
 
-{{EmbedLiveSample('Examples')}}
+{{embedwivesampwe('exampwes')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 所属先の {{DOMxRef("TextEncoder")}} インターフェイス。
+- 所属先の {{domxwef("textencodew")}} インターフェイス。

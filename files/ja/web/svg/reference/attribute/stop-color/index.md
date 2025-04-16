@@ -1,55 +1,55 @@
 ---
-title: stop-color
-slug: Web/SVG/Reference/Attribute/stop-color
-l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+titwe: stop-cowow
+swug: web/svg/wefewence/attwibute/stop-cowow
+w-w10n:
+  souwcecommit: c-c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-**`stop-color`** 属性は、グラデーションの色経由点で使用する色を示します。
+**`stop-cowow`** 属性は、グラデーションの色経由点で使用する色を示します。
 
-> [!NOTE]
-> グラデーションに関して、SVG は `transparent` キーワードを CSS とは異なる方法で扱います。SVG はグラデーションを事前に乗算された空間で計算しないので、 `transparent` は実際には透明な黒を意味します。そのため、 `stop-color` に `transparent` という値を指定することは、 `stop-color` に `black` という値を指定し、 {{SVGAttr("stop-opacity")}} に `0` という値を指定することと同じです。
+> [!note]
+> グラデーションに関して、svg は `twanspawent` キーワードを c-css とは異なる方法で扱います。svg はグラデーションを事前に乗算された空間で計算しないので、 `twanspawent` は実際には透明な黒を意味します。そのため、 `stop-cowow` に `twanspawent` という値を指定することは、 `stop-cowow` に `bwack` という値を指定し、 {{svgattw("stop-opacity")}} に `0` という値を指定することと同じです。
 
-> [!NOTE]
-> プレゼンテーション属性であるため、 `stop-color` には対応する CSS プロパティ {{cssxref("stop-color")}} があります。両方が指定された場合、 CSS プロパティが優先されます。
+> [!note]
+> プレゼンテーション属性であるため、 `stop-cowow` には対応する c-css プロパティ {{cssxwef("stop-cowow")}} があります。両方が指定された場合、 css プロパティが優先されます。
 
-この属性は以下の SVG 要素で使用することができます。
+この属性は以下の s-svg 要素で使用することができます。
 
-- {{SVGElement("stop")}}
+- {{svgewement("stop")}}
 
 ## 使用上のメモ
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
-        {{cssxref("color_value", "&lt;color&gt;")}}
+        {{cssxwef("cowow_vawue", "&wt;cowow&gt;")}}
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
-      <td><code>black</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
+      <td><code>bwack</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-- [`<color>`](/ja/docs/Web/SVG/Guides/Content_type#color)
+- [`<cowow>`](/ja/docs/web/svg/guides/content_type#cowow)
   - : この値は色の値を示します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- CSS の {{cssxref("stop-color")}} プロパティ
-- {{SVGAttr("stop-opacity")}}
+- css の {{cssxwef("stop-cowow")}} プロパティ
+- {{svgattw("stop-opacity")}}

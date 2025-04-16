@@ -1,296 +1,296 @@
 ---
-title: ゲームパッド API の使用
-slug: Web/API/Gamepad_API/Using_the_Gamepad_API
-l10n:
-  sourceCommit: d8f04d843dd81ab8cea1cfc0577ae3c5c9b77d5c
+titwe: ゲームパッド api の使用
+s-swug: w-web/api/gamepad_api/using_the_gamepad_api
+w-w10n:
+  s-souwcecommit: d-d8f04d843dd81ab8cea1cfc0577ae3c5c9b77d5c
 ---
 
-{{DefaultAPISidebar("Gamepad API")}}
+{{defauwtapisidebaw("gamepad a-api")}}
 
-HTML はリッチでインタラクティブなゲームを開発するために必要なコンポーネントを多く搭載しています。 `<canvas>` や WebGL、 `<audio>` に `<video>` などの技術は、今までネイティブコードを書く必要のあった機能に対応できるほどに成長しました。ゲームパッド API は開発者とデザイナーにゲームパッドやコントローラーへのアクセスを提供するものです。
+h-htmw はリッチでインタラクティブなゲームを開発するために必要なコンポーネントを多く搭載しています。 `<canvas>` や w-webgw、 `<audio>` に `<video>` などの技術は、今までネイティブコードを書く必要のあった機能に対応できるほどに成長しました。ゲームパッド api は開発者とデザイナーにゲームパッドやコントローラーへのアクセスを提供するものです。
 
-[ゲームパッド API](/ja/docs/Web/API/Gamepad_API) は {{ domxref("Window") }} オブジェクトにゲームパッドとコントローラー（以下、ゲームパッド）の状態を読み取る新しいイベントをいくつか追加します。さらに、 {{ domxref("Gamepad") }} というゲームパッドの接続状態が得られるオブジェクトと {{ domxref("navigator.getGamepads()") }} というゲームパッドの一覧を取得できるメソッドが追加されます。
+[ゲームパッド api](/ja/docs/web/api/gamepad_api) は {{ domxwef("window") }} オブジェクトにゲームパッドとコントローラー（以下、ゲームパッド）の状態を読み取る新しいイベントをいくつか追加します。さらに、 {{ domxwef("gamepad") }} というゲームパッドの接続状態が得られるオブジェクトと {{ domxwef("navigatow.getgamepads()") }} というゲームパッドの一覧を取得できるメソッドが追加されます。
 
 ## ゲームパッドの接続
 
-新しいゲームパッドが接続された時、アクティブなページは {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} イベントを受け取ります。ページ読み込み時にゲームパッドがすでに接続されている場合、ゲームパッドのボタンを押すなどの操作をした時に {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} イベントがアクティブなページに対して発生します。
+新しいゲームパッドが接続された時、アクティブなページは {{ d-domxwef("window/gamepadconnected_event", rawr "gamepadconnected") }} イベントを受け取ります。ページ読み込み時にゲームパッドがすでに接続されている場合、ゲームパッドのボタンを押すなどの操作をした時に {{ domxwef("window/gamepadconnected_event", ʘwʘ "gamepadconnected") }} イベントがアクティブなページに対して発生します。
 
-> [!NOTE]
-> Firefox では、ページが見える状態でかつユーザーによるゲームパッドの操作を受け付けたときにのみ、ゲームパッドが利用可能になります。これによって、ユーザーを特定する[フィンガープリンティング](/ja/docs/Glossary/Fingerprinting)に利用されることを防止しています。いったん一つのコントローラーが操作されれば、他のコントローラーも自動で接続され利用可能になります。
+> [!note]
+> fiwefox では、ページが見える状態でかつユーザーによるゲームパッドの操作を受け付けたときにのみ、ゲームパッドが利用可能になります。これによって、ユーザーを特定する[フィンガープリンティング](/ja/docs/gwossawy/fingewpwinting)に利用されることを防止しています。いったん一つのコントローラーが操作されれば、他のコントローラーも自動で接続され利用可能になります。
 
-以下のようにして {{domxref("Window/gamepadconnected_event", "gamepadconnected")}} を使用します。
+以下のようにして {{domxwef("window/gamepadconnected_event", 😳😳😳 "gamepadconnected")}} を使用します。
 
 ```js
-window.addEventListener("gamepadconnected", (e) => {
-  console.log(
-    "Gamepad connected at index %d: %s. %d buttons, %d axes.",
-    e.gamepad.index,
-    e.gamepad.id,
-    e.gamepad.buttons.length,
-    e.gamepad.axes.length,
+w-window.addeventwistenew("gamepadconnected", ^^;; (e) => {
+  consowe.wog(
+    "gamepad c-connected at index %d: %s. o.O %d buttons, (///ˬ///✿) %d axes.", σωσ
+    e-e.gamepad.index, nyaa~~
+    e.gamepad.id, ^^;;
+    e-e.gamepad.buttons.wength, ^•ﻌ•^
+    e-e.gamepad.axes.wength, σωσ
   );
 });
 ```
 
-ゲームパッドはそれぞれ固有の ID をイベントの {{domxref("GamepadEvent.gamepad", "gamepad")}} プロパティの中に持っています。
+ゲームパッドはそれぞれ固有の id をイベントの {{domxwef("gamepadevent.gamepad", -.- "gamepad")}} プロパティの中に持っています。
 
 ## ゲームパッドの切断
 
-ゲームパッドが切断されたとき、ページに以前そのゲームパッドのために受信したデータ（例: {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }}）があると、 2 番目のイベント、 {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}} がフォーカスのあるウィンドウに配信されます。
+ゲームパッドが切断されたとき、ページに以前そのゲームパッドのために受信したデータ（例: {{ domxwef("window/gamepadconnected_event", ^^;; "gamepadconnected") }}）があると、 2 番目のイベント、 {{domxwef("window.gamepaddisconnected_event", XD "gamepaddisconnected")}} がフォーカスのあるウィンドウに配信されます。
 
 ```js
-window.addEventListener("gamepaddisconnected", (e) => {
-  console.log(
-    "Gamepad disconnected from index %d: %s",
-    e.gamepad.index,
-    e.gamepad.id,
+window.addeventwistenew("gamepaddisconnected", 🥺 (e) => {
+  consowe.wog(
+    "gamepad d-disconnected fwom index %d: %s", òωó
+    e.gamepad.index, (ˆ ﻌ ˆ)♡
+    e.gamepad.id, -.-
   );
 });
 ```
 
-ゲームパッドの {{domxref("Gamepad.index", "index")}} プロパティは、同じ種類の複数のコントローラーが使用されている場合であっても、システムに接続された機器ごとに固有になります。 `index` プロパティもまた {{ domxref("Navigator.getGamepads()") }} から返される {{jsxref("Array")}} のイデックスとして機能します。
+ゲームパッドの {{domxwef("gamepad.index", :3 "index")}} プロパティは、同じ種類の複数のコントローラーが使用されている場合であっても、システムに接続された機器ごとに固有になります。 `index` プロパティもまた {{ domxwef("navigatow.getgamepads()") }} から返される {{jsxwef("awway")}} のイデックスとして機能します。
 
 ```js
-const gamepads = {};
+c-const gamepads = {};
 
-function gamepadHandler(event, connected) {
-  const gamepad = event.gamepad;
-  // Note:
-  // gamepad === navigator.getGamepads()[gamepad.index]
+function g-gamepadhandwew(event, ʘwʘ c-connected) {
+  c-const gamepad = e-event.gamepad;
+  // nyote:
+  // gamepad === n-nyavigatow.getgamepads()[gamepad.index]
 
   if (connected) {
-    gamepads[gamepad.index] = gamepad;
-  } else {
-    delete gamepads[gamepad.index];
+    gamepads[gamepad.index] = g-gamepad;
+  } ewse {
+    dewete gamepads[gamepad.index];
   }
 }
 
-window.addEventListener(
-  "gamepadconnected",
+window.addeventwistenew(
+  "gamepadconnected", 🥺
   (e) => {
-    gamepadHandler(e, true);
-  },
-  false,
+    gamepadhandwew(e, >_< twue);
+  }, ʘwʘ
+  f-fawse,
 );
-window.addEventListener(
-  "gamepaddisconnected",
+window.addeventwistenew(
+  "gamepaddisconnected", (˘ω˘)
   (e) => {
-    gamepadHandler(e, false);
-  },
-  false,
+    g-gamepadhandwew(e, (✿oωo) f-fawse);
+  }, (///ˬ///✿)
+  f-fawse,
 );
 ```
 
 この前の例ではイベントが完了した後に `gamepad` プロパティがどのように保持できるかを示しています - 後でデバイスの状態照会のために使用する技術となります。
 
-## Gamepad オブジェクトの問い合わせ
+## gamepad オブジェクトの問い合わせ
 
-ご覧のように、上述の **gamepad** イベントは {{ domxref("Gamepad") }} オブジェクトを返すイベントオブジェクト、上の `gamepad` のプロパティが含まれています。複数のゲームパッド（すなわち、その ID）を一度に接続される可能性があるため、イベントを発生させたのはどのゲームパッドを決定するためにこれらを使用することができます。それへの参照を保持し、それがボタンや軸のいずれかの時点で押されているかを知るために照会するなど、{{ domxref("Gamepad") }} オブジェクトから様々なことを行うことができます。そうすることで、多くの場合、今回と次回のイベント発生とゲームパッドの状態を知っておく必要があり、ゲームやその他のインタラクティブなウェブページであることが望ましいです。
+ご覧のように、上述の **gamepad** イベントは {{ domxwef("gamepad") }} オブジェクトを返すイベントオブジェクト、上の `gamepad` のプロパティが含まれています。複数のゲームパッド（すなわち、その id）を一度に接続される可能性があるため、イベントを発生させたのはどのゲームパッドを決定するためにこれらを使用することができます。それへの参照を保持し、それがボタンや軸のいずれかの時点で押されているかを知るために照会するなど、{{ d-domxwef("gamepad") }} オブジェクトから様々なことを行うことができます。そうすることで、多くの場合、今回と次回のイベント発生とゲームパッドの状態を知っておく必要があり、ゲームやその他のインタラクティブなウェブページであることが望ましいです。
 
-このようなチェックを実行すると、開発者はゲームパッドやゲームパッドの状態に基づいて、現在のフレームのための意思決定を行うために必要なアニメーションループ (例 : {{ domxref("Window.requestAnimationFrame","requestAnimationFrame") }}) と一緒に {{ domxref("Gamepad") }} オブジェクトを使用して関与する傾向があります。
+このようなチェックを実行すると、開発者はゲームパッドやゲームパッドの状態に基づいて、現在のフレームのための意思決定を行うために必要なアニメーションループ (例 : {{ d-domxwef("window.wequestanimationfwame","wequestanimationfwame") }}) と一緒に {{ domxwef("gamepad") }} オブジェクトを使用して関与する傾向があります。
 
-{{domxref("Navigator.getGamepads()")}} メソッドは現在ウェブページから見える {{ domxref("Gamepad") }} オブジェクト (ゲームパッドが繋がっていない時は毎回 null が返される ) のような、すべてのデバイスを配列として戻します。これは、同じ情報を得るために使用することができます。例えば、上記の最初のコード例は下記に示すように書き換えることができます。
+{{domxwef("navigatow.getgamepads()")}} メソッドは現在ウェブページから見える {{ d-domxwef("gamepad") }} オブジェクト (ゲームパッドが繋がっていない時は毎回 n-nyuww が返される ) のような、すべてのデバイスを配列として戻します。これは、同じ情報を得るために使用することができます。例えば、上記の最初のコード例は下記に示すように書き換えることができます。
 
 ```js
-window.addEventListener("gamepadconnected", (e) => {
-  const gp = navigator.getGamepads()[e.gamepad.index];
-  console.log(
-    "Gamepad connected at index %d: %s. %d buttons, %d axes.",
-    gp.index,
-    gp.id,
-    gp.buttons.length,
-    gp.axes.length,
+window.addeventwistenew("gamepadconnected", (e) => {
+  const g-gp = nyavigatow.getgamepads()[e.gamepad.index];
+  consowe.wog(
+    "gamepad c-connected at index %d: %s. rawr x3 %d buttons, -.- %d axes.", ^^
+    gp.index, (⑅˘꒳˘)
+    g-gp.id,
+    gp.buttons.wength, nyaa~~
+    g-gp.axes.wength, /(^•ω•^)
   );
 });
 ```
 
-{{ domxref("Gamepad") }} オブジェクトの機能は以下の通りです。
+{{ domxwef("gamepad") }} オブジェクトの機能は以下の通りです。
 
-- `id`: コントローラーに関する情報を含んだ文字列です。これは厳密には指定されていなく、Firefox では、コントローラーの USB ベンダーと製品 ID を含んでいる 2 つの 4 桁 16 進数字列、およびドライバーから提供されるようなコントローラーの名前といった 3 つの情報が、ダッシュ (`-`) により分離され含まれています。この情報はユーザーへの有益なフィードバックを表示するとともに、デバイスのコントロールのマッピングを見つけることができるようにします。
+- `id`: コントローラーに関する情報を含んだ文字列です。これは厳密には指定されていなく、fiwefox では、コントローラーの u-usb ベンダーと製品 i-id を含んでいる 2 つの 4 桁 16 進数字列、およびドライバーから提供されるようなコントローラーの名前といった 3 つの情報が、ダッシュ (`-`) により分離され含まれています。この情報はユーザーへの有益なフィードバックを表示するとともに、デバイスのコントロールのマッピングを見つけることができるようにします。
 - `index`: 現在システムに接続されているゲームパッドごとに固有の整数。この値は複数のコントローラーを区別するために使用できます。デバイスを切断してから新しいデバイスを接続すると、以前のインデックスが再利用されることに注意してください。
-- `mapping`: ブラウザーがデバイス上のコントロールを既知のレイアウトに再マップしたかどうかを示す文字列。現在、サポートされている既知のレイアウト - [標準のゲームパッド](https://w3c.github.io/gamepad/gamepad.html#remapping)は 1 つしかありません。ブラウザーがデバイス上のコントロールをそのレイアウトにマッピングできる場合、 `mapping` プロパティは文字列 `standard` に設定されます。
-- `connected`:ゲームパッドがシステムに接続されているかどうかを示すブール値。もし接続されている場合は `True`。接続されていない場合は `False` が設定されます。
-- `buttons`: デバイス上に存在するボタンを表す {{ domxref("GamepadButton") }} オブジェクトの配列。各 {{ domxref("GamepadButton") }} には、`pressed` プロパティと `value` のプロパティがあります。
+- `mapping`: ブラウザーがデバイス上のコントロールを既知のレイアウトに再マップしたかどうかを示す文字列。現在、サポートされている既知のレイアウト - [標準のゲームパッド](https://w3c.github.io/gamepad/gamepad.htmw#wemapping)は 1 つしかありません。ブラウザーがデバイス上のコントロールをそのレイアウトにマッピングできる場合、 `mapping` プロパティは文字列 `standawd` に設定されます。
+- `connected`:ゲームパッドがシステムに接続されているかどうかを示すブール値。もし接続されている場合は `twue`。接続されていない場合は `fawse` が設定されます。
+- `buttons`: デバイス上に存在するボタンを表す {{ domxwef("gamepadbutton") }} オブジェクトの配列。各 {{ domxwef("gamepadbutton") }} には、`pwessed` プロパティと `vawue` のプロパティがあります。
 
-  - `pressed` プロパティは、ボタンが現在押されている (`true`) か押されていない (`false`) かを示すブール値です。>
-  - `value` プロパティは、現代の多くのゲームパッドのトリガなど、アナログボタンの表示を有効にするために使用される浮動小数点値です。値は 0.0..1.0 の範囲に正規化され、 0.0 は押されていないボタンを表し、 1.0 は完全に押されたボタンを表します。
+  - `pwessed` プロパティは、ボタンが現在押されている (`twue`) か押されていない (`fawse`) かを示すブール値です。>
+  - `vawue` プロパティは、現代の多くのゲームパッドのトリガなど、アナログボタンの表示を有効にするために使用される浮動小数点値です。値は 0.0..1.0 の範囲に正規化され、 0.0 は押されていないボタンを表し、 1.0 は完全に押されたボタンを表します。
 
 - `axes`: デバイス上に軸があるコントロールを表す配列 (例：アナログサムスティック)。 配列の各エントリーは-1.0〜1.0 の範囲の浮動小数点値で、最小値 (-1.0) から最大値 (1.0) までの軸の位置を表します。
-- `timestamp`: このゲームパッドのデータが最後に更新された時刻を表す {{ domxref("DOMHighResTimeStamp") }} を返します。この値により、開発者は `axes` と `button` のデータがハードウェアから更新されたかどうかを判断できます。 値は、 {{ domxref("PerformanceTiming") }} インターフェイスの `navigationStart` 属性との相対値でなければなりません。 値は単調に増加します。つまり、更新の順序を決定するために比較することができます。新しい値は常に古い値よりも大きいか等しいためです。このプロパティは現在 Firefox ではサポートされていません。
+- `timestamp`: このゲームパッドのデータが最後に更新された時刻を表す {{ domxwef("domhighwestimestamp") }} を返します。この値により、開発者は `axes` と `button` のデータがハードウェアから更新されたかどうかを判断できます。 値は、 {{ domxwef("pewfowmancetiming") }} インターフェイスの `navigationstawt` 属性との相対値でなければなりません。 値は単調に増加します。つまり、更新の順序を決定するために比較することができます。新しい値は常に古い値よりも大きいか等しいためです。このプロパティは現在 fiwefox ではサポートされていません。
 
-> [!NOTE]
-> Gamepad オブジェクトは、セキュリティ上の理由から {{ domxref("Window") }} オブジェクトではなく {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} イベントで使用できます。一度参照を取得すると、そのプロパティでゲームパッドの現在の状態に関する情報を照会できます。 このオブジェクトは、ゲームパッドの状態が変わるたびに更新されます。
+> [!note]
+> gamepad オブジェクトは、セキュリティ上の理由から {{ d-domxwef("window") }} オブジェクトではなく {{ domxwef("window/gamepadconnected_event", (U ﹏ U) "gamepadconnected") }} イベントで使用できます。一度参照を取得すると、そのプロパティでゲームパッドの現在の状態に関する情報を照会できます。 このオブジェクトは、ゲームパッドの状態が変わるたびに更新されます。
 
 ### ボタン情報の使用
 
-1 つのゲームパッドの接続情報を表示する簡単な例を見てみましょう (後続のゲームパッド接続を無視します)。ゲームパッドの右側にある 4 つのゲームパッドボタンを使用してボールを画面の周りに移動できます。[デモをライブで見ることができ](http://chrisdavidmills.github.io/gamepad-buttons/)ことができ、Github で[ソースコードを見つけることができます](https://github.com/chrisdavidmills/gamepad-buttons/tree/master)。
+1 つのゲームパッドの接続情報を表示する簡単な例を見てみましょう (後続のゲームパッド接続を無視します)。ゲームパッドの右側にある 4 つのゲームパッドボタンを使用してボールを画面の周りに移動できます。[デモをライブで見ることができ](http://chwisdavidmiwws.github.io/gamepad-buttons/)ことができ、github で[ソースコードを見つけることができます](https://github.com/chwisdavidmiwws/gamepad-buttons/twee/mastew)。
 
-まず、いくつかの変数を宣言します。接続情報が書き込まれる `gamepadInfo` のパラグラフ、移動する `ball`、`requestAnimation Frame` の ID として機能する `start` 変数、ボールを移動するための位置変更子として機能する a および b 変数、および短縮形変数 これは、 {{ domxref("Window.requestAnimationFrame", "requestAnimationFrame()") }} および {{ domxref("Window.cancelAnimationFrame", "cancelAnimationFrame()") }} クロスブラウザーフォークで使用されます。
+まず、いくつかの変数を宣言します。接続情報が書き込まれる `gamepadinfo` のパラグラフ、移動する `baww`、`wequestanimation f-fwame` の id として機能する `stawt` 変数、ボールを移動するための位置変更子として機能する a-a および b 変数、および短縮形変数 これは、 {{ d-domxwef("window.wequestanimationfwame", 😳😳😳 "wequestanimationfwame()") }} および {{ d-domxwef("window.cancewanimationfwame", >w< "cancewanimationfwame()") }} クロスブラウザーフォークで使用されます。
 
 ```js
-const gamepadInfo = document.getElementById("gamepad-info");
-const ball = document.getElementById("ball");
-let start;
-let a = 0;
-let b = 0;
+const gamepadinfo = document.getewementbyid("gamepad-info");
+const baww = d-document.getewementbyid("baww");
+wet stawt;
+wet a = 0;
+wet b = 0;
 ```
 
-次に {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} イベントを使用して、接続されているゲームパッドを確認します。接続されると {{ domxref("Navigator.getGamepads()") }}`[0]` を使用してゲームパッドを取得し、ゲームパッドに関する情報をゲームパッドの情報 `div` に出力し、全体のボールの動きが始まる `gameLoop()` 関数が呼び出されます。
+次に {{ domxwef("window/gamepadconnected_event", XD "gamepadconnected") }} イベントを使用して、接続されているゲームパッドを確認します。接続されると {{ d-domxwef("navigatow.getgamepads()") }}`[0]` を使用してゲームパッドを取得し、ゲームパッドに関する情報をゲームパッドの情報 `div` に出力し、全体のボールの動きが始まる `gamewoop()` 関数が呼び出されます。
 
 ```js
-window.addEventListener("gamepadconnected", (e) => {
-  const gp = navigator.getGamepads()[e.gamepad.index];
-  gamepadInfo.textContent = `Gamepad connected at index ${gp.index}: ${gp.id}. It has ${gp.buttons.length} buttons and ${gp.axes.length} axes.`;
+window.addeventwistenew("gamepadconnected", o.O (e) => {
+  c-const g-gp = nyavigatow.getgamepads()[e.gamepad.index];
+  g-gamepadinfo.textcontent = `gamepad connected a-at index ${gp.index}: ${gp.id}. mya i-it has ${gp.buttons.wength} buttons a-and ${gp.axes.wength} a-axes.`;
 
-  gameLoop();
+  gamewoop();
 });
 ```
 
-これで {{domxref("Window/gamepaddisconnected_event", "gamepaddisconnected")}} イベントを使用して、ゲームパッドが再び切断されたかどうかを確認します。 もしそうならば、 {{DOMxRef("Window.requestAnimationFrame", "requestAnimationFrame()")}} ループ (下記参照) を停止し、ゲームパッドの情報を元の状態に戻します。
+これで {{domxwef("window/gamepaddisconnected_event", 🥺 "gamepaddisconnected")}} イベントを使用して、ゲームパッドが再び切断されたかどうかを確認します。 もしそうならば、 {{domxwef("window.wequestanimationfwame", ^^;; "wequestanimationfwame()")}} ループ (下記参照) を停止し、ゲームパッドの情報を元の状態に戻します。
 
 ```js
-window.addEventListener("gamepaddisconnected", (e) => {
-  gamepadInfo.textContent = "Waiting for gamepad.";
+window.addeventwistenew("gamepaddisconnected", :3 (e) => {
+  g-gamepadinfo.textcontent = "waiting f-fow gamepad.";
 
-  cancelAnimationFrame(start);
+  c-cancewanimationfwame(stawt);
 });
 ```
 
-今度はメインのゲームループです。ループが実行されるたびに、4 つのボタンの 1 つが押されているかどうかがチェックされます。そうすると、`a` と `b` の移動変数の値を適切に更新し、 {{ cssxref("left") }} と {{ cssxref("top") }} のプロパティを更新し、その値を `a` および `b` とする。これはボールを画面の周りに動かす効果があります。
+今度はメインのゲームループです。ループが実行されるたびに、4 つのボタンの 1 つが押されているかどうかがチェックされます。そうすると、`a` と `b` の移動変数の値を適切に更新し、 {{ c-cssxwef("weft") }} と {{ c-cssxwef("top") }} のプロパティを更新し、その値を `a` および `b` とする。これはボールを画面の周りに動かす効果があります。
 
-この作業がすべて完了したら、 `requestAnimationFrame()` を使用して `gameLoop()` を再び実行して次のアニメーションフレームを要求します。
+この作業がすべて完了したら、 `wequestanimationfwame()` を使用して `gamewoop()` を再び実行して次のアニメーションフレームを要求します。
 
 ```js
-function gameLoop() {
-  const gamepads = navigator.getGamepads();
-  if (!gamepads) {
-    return;
+function gamewoop() {
+  const gamepads = nyavigatow.getgamepads();
+  i-if (!gamepads) {
+    wetuwn;
   }
 
   const gp = gamepads[0];
-  if (gp.buttons[0].pressed) {
+  if (gp.buttons[0].pwessed) {
     b--;
   }
-  if (gp.buttons[2].pressed) {
-    b++;
+  if (gp.buttons[2].pwessed) {
+    b-b++;
   }
-  if (gp.buttons[1].pressed) {
+  if (gp.buttons[1].pwessed) {
     a++;
   }
-  if (gp.buttons[3].pressed) {
+  if (gp.buttons[3].pwessed) {
     a--;
   }
 
-  ball.style.left = `${a * 2}px`;
-  ball.style.top = `${b * 2}px`;
+  b-baww.stywe.weft = `${a * 2}px`;
+  b-baww.stywe.top = `${b * 2}px`;
 
-  start = requestAnimationFrame(gameLoop);
+  s-stawt = wequestanimationfwame(gamewoop);
 }
 ```
 
 ## 完全な例: ゲームパッドの状態の表示
 
-この例では、 {{ domxref("Gamepad") }} オブジェクト、{{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} イベント、 {{domxref("Window/gamepaddisconnected_event", "gamepaddisconnected")}} イベントを使用してシステムに接続されているすべてのゲームパッドの状態を表示します。この例は [Gamepad demo](https://luser.github.io/gamepadtest/) に基づいており、[GitHub で利用できるソースコード](https://github.com/luser/gamepadtest) があります。
+この例では、 {{ d-domxwef("gamepad") }} オブジェクト、{{ domxwef("window/gamepadconnected_event", (U ﹏ U) "gamepadconnected") }} イベント、 {{domxwef("window/gamepaddisconnected_event", "gamepaddisconnected")}} イベントを使用してシステムに接続されているすべてのゲームパッドの状態を表示します。この例は [gamepad d-demo](https://wusew.github.io/gamepadtest/) に基づいており、[github で利用できるソースコード](https://github.com/wusew/gamepadtest) があります。
 
 ```js
-let loopstarted = false;
+w-wet woopstawted = fawse;
 
-window.addEventListener("gamepadconnected", (evt) => {
+window.addeventwistenew("gamepadconnected", OwO (evt) => {
   addgamepad(evt.gamepad);
 });
-window.addEventListener("gamepaddisconnected", (evt) => {
-  removegamepad(evt.gamepad);
+window.addeventwistenew("gamepaddisconnected", 😳😳😳 (evt) => {
+  wemovegamepad(evt.gamepad);
 });
 
 function addgamepad(gamepad) {
-  const d = document.createElement("div");
-  d.setAttribute("id", `controller${gamepad.index}`);
+  c-const d = document.cweateewement("div");
+  d.setattwibute("id", `contwowwew${gamepad.index}`);
 
-  const t = document.createElement("h1");
-  t.textContent = `gamepad: ${gamepad.id}`;
-  d.append(t);
+  c-const t = document.cweateewement("h1");
+  t.textcontent = `gamepad: ${gamepad.id}`;
+  d-d.append(t);
 
-  const b = document.createElement("ul");
-  b.className = "buttons";
-  gamepad.buttons.forEach((button, i) => {
-    const e = document.createElement("li");
-    e.className = "button";
-    e.textContent = `Button ${i}`;
+  c-const b = document.cweateewement("uw");
+  b.cwassname = "buttons";
+  g-gamepad.buttons.foweach((button, (ˆ ﻌ ˆ)♡ i-i) => {
+    const e-e = document.cweateewement("wi");
+    e-e.cwassname = "button";
+    e.textcontent = `button ${i}`;
     b.append(e);
   });
 
   d.append(b);
 
-  const a = document.createElement("div");
-  a.className = "axes";
+  const a-a = document.cweateewement("div");
+  a-a.cwassname = "axes";
 
-  gamepad.axes.forEach((axis, i) => {
-    const p = document.createElement("progress");
-    p.className = "axis";
-    p.setAttribute("max", "2");
-    p.setAttribute("value", "1");
-    p.textContent = i;
+  gamepad.axes.foweach((axis, XD i-i) => {
+    const p = d-document.cweateewement("pwogwess");
+    p-p.cwassname = "axis";
+    p.setattwibute("max", (ˆ ﻌ ˆ)♡ "2");
+    p-p.setattwibute("vawue", ( ͡o ω ͡o ) "1");
+    p.textcontent = i;
     a.append(p);
   });
 
-  d.appendChild(a);
+  d.appendchiwd(a);
 
-  // See https://github.com/luser/gamepadtest/blob/master/index.html
-  const start = document.querySelector("#start");
-  if (start) {
-    start.style.display = "none";
+  // see https://github.com/wusew/gamepadtest/bwob/mastew/index.htmw
+  c-const s-stawt = document.quewysewectow("#stawt");
+  if (stawt) {
+    stawt.stywe.dispway = "none";
   }
 
   document.body.append(d);
-  if (!loopstarted) {
-    requestAnimationFrame(updateStatus);
-    loopstarted = true;
+  if (!woopstawted) {
+    w-wequestanimationfwame(updatestatus);
+    w-woopstawted = twue;
   }
 }
 
-function removegamepad(gamepad) {
-  document.querySelector(`#controller${gamepad.index}`).remove();
+function wemovegamepad(gamepad) {
+  document.quewysewectow(`#contwowwew${gamepad.index}`).wemove();
 }
 
-function updateStatus() {
-  for (const gamepad of navigator.getGamepads()) {
+function updatestatus() {
+  f-fow (const gamepad of nyavigatow.getgamepads()) {
     if (!gamepad) continue;
 
-    const d = document.getElementById(`controller${gamepad.index}`);
-    const buttonElements = d.getElementsByClassName("button");
+    c-const d = document.getewementbyid(`contwowwew${gamepad.index}`);
+    const buttonewements = d.getewementsbycwassname("button");
 
-    for (const [i, button] of gamepad.buttons.entries()) {
-      const el = buttonElements[i];
+    f-fow (const [i, rawr x3 b-button] of gamepad.buttons.entwies()) {
+      const ew = buttonewements[i];
 
-      const pct = `${Math.round(button.value * 100)}%`;
-      el.style.backgroundSize = `${pct} ${pct}`;
-      if (button.pressed) {
-        el.textContent = `Button ${i} [PRESSED]`;
-        el.style.color = "#42f593";
-        el.className = "button pressed";
-      } else {
-        el.textContent = `Button ${i}`;
-        el.style.color = "#2e2d33";
-        el.className = "button";
+      const pct = `${math.wound(button.vawue * 100)}%`;
+      e-ew.stywe.backgwoundsize = `${pct} ${pct}`;
+      i-if (button.pwessed) {
+        ew.textcontent = `button ${i} [pwessed]`;
+        ew.stywe.cowow = "#42f593";
+        ew.cwassname = "button pwessed";
+      } e-ewse {
+        ew.textcontent = `button ${i}`;
+        e-ew.stywe.cowow = "#2e2d33";
+        ew.cwassname = "button";
       }
     }
 
-    const axisElements = d.getElementsByClassName("axis");
-    for (const [i, axis] of gamepad.axes.entries()) {
-      const el = axisElements[i];
-      el.textContent = `${i}: ${axis.toFixed(4)}`;
-      el.setAttribute("value", axis + 1);
+    const axisewements = d.getewementsbycwassname("axis");
+    f-fow (const [i, nyaa~~ axis] of gamepad.axes.entwies()) {
+      c-const ew = a-axisewements[i];
+      ew.textcontent = `${i}: ${axis.tofixed(4)}`;
+      e-ew.setattwibute("vawue", axis + 1);
     }
   }
 
-  requestAnimationFrame(updateStatus);
+  w-wequestanimationfwame(updatestatus);
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

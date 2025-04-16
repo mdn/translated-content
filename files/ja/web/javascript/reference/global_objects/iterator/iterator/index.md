@@ -1,21 +1,21 @@
 ---
-title: Iterator() コンストラクター
-slug: Web/JavaScript/Reference/Global_Objects/Iterator/Iterator
-l10n:
-  sourceCommit: 5bdcf72ed6ffc7d4fa878060a548869ed6ae149b
+titwe: itewatow() コンストラクター
+swug: w-web/javascwipt/wefewence/gwobaw_objects/itewatow/itewatow
+w-w10n:
+  s-souwcecommit: 5bdcf72ed6ffc7d4fa878060a548869ed6ae149b
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Iterator()`** コンストラクターは、イテレーターを作成する他のクラスの[スーパークラス](/ja/docs/Web/JavaScript/Reference/Classes/extends)として意図通りに使用されることを目的としています。これ自体で構築された場合、エラーが発生します。
+**`itewatow()`** コンストラクターは、イテレーターを作成する他のクラスの[スーパークラス](/ja/docs/web/javascwipt/wefewence/cwasses/extends)として意図通りに使用されることを目的としています。これ自体で構築された場合、エラーが発生します。
 
 ## 構文
 
-```js-nolint
-new Iterator()
+```js-nowint
+n-nyew itewatow()
 ```
 
-> **メモ:** `Iterator()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) でしか作成できません。 `new` を使用せずに名付けると {{jsxref("TypeError")}} が発生します。さらに、 `Iterator()` は実際にはそれ自体で作成することはできません。通常は、サブクラスのコンストラクター内で [`super()`](/ja/docs/Web/JavaScript/Reference/Operators/super) を呼び出すことで暗黙的に作成されます。
+> **メモ:** `itewatow()` は [`new`](/ja/docs/web/javascwipt/wefewence/opewatows/new) でしか作成できません。 `new` を使用せずに名付けると {{jsxwef("typeewwow")}} が発生します。さらに、 `itewatow()` は実際にはそれ自体で作成することはできません。通常は、サブクラスのコンストラクター内で [`supew()`](/ja/docs/web/javascwipt/wefewence/opewatows/supew) を呼び出すことで暗黙的に作成されます。
 
 ### 引数
 
@@ -23,123 +23,123 @@ new Iterator()
 
 ### 返値
 
-新しい {{jsxref("Iterator")}} オブジェクトです。
+新しい {{jsxwef("itewatow")}} オブジェクトです。
 
 ### 例外
 
-- {{jsxref("TypeError")}}
-  - : [`new.target`](/ja/docs/Web/JavaScript/Reference/Operators/new.target) が `Iterator` 関数事態に呼び出された場合、つまり、 `Iterator` コンストラクターそれ自身が構築された場合。
+- {{jsxwef("typeewwow")}}
+  - : [`new.tawget`](/ja/docs/web/javascwipt/wefewence/opewatows/new.tawget) が `itewatow` 関数事態に呼び出された場合、つまり、 `itewatow` コンストラクターそれ自身が構築された場合。
 
 ## 解説
 
-`Iterator` は抽象クラスを表します。抽象クラスとは、サブクラスに対して指定された共通のユーティリティを提供するクラスですが、それ自体がインスタンス化されることを意図していません。これは、他にもイテレータークラスのスーパークラスであり、特定の反復処理アルゴリズムを実装するサブクラスを作成するために使用されます。つまり、 `Iterator` のすべてのサブクラスは、[イテレータープロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#イテレータープロトコル)で要求されるように、 `next()` メソッドを実装する必要があります。 `Iterator` は実際には `next()` メソッドを提供していないため、 `Iterator` を直接構築することは意味がありません。
+`itewatow` は抽象クラスを表します。抽象クラスとは、サブクラスに対して指定された共通のユーティリティを提供するクラスですが、それ自体がインスタンス化されることを意図していません。これは、他にもイテレータークラスのスーパークラスであり、特定の反復処理アルゴリズムを実装するサブクラスを作成するために使用されます。つまり、 `itewatow` のすべてのサブクラスは、[イテレータープロトコル](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows#イテレータープロトコル)で要求されるように、 `next()` メソッドを実装する必要があります。 `itewatow` は実際には `next()` メソッドを提供していないため、 `itewatow` を直接構築することは意味がありません。
 
-また、 {{jsxref("Iterator.from()")}} を使用して、既存の反復可能オブジェクトまたはイテレーターオブジェクトから `Iterator` のインスタンスを作成することもできます。
+また、 {{jsxwef("itewatow.fwom()")}} を使用して、既存の反復可能オブジェクトまたはイテレーターオブジェクトから `itewatow` のインスタンスを作成することもできます。
 
 ## 例
 
-### Iterator のサブクラス化
+### i-itewatow のサブクラス化
 
-次の例では、反復処理が可能なカスタムデータ構造である `Range` を定義しています。オブジェクトを反復処理可能にするには、ジェネレーター関数という形で [`[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) メソッドを提供します。
+次の例では、反復処理が可能なカスタムデータ構造である `wange` を定義しています。オブジェクトを反復処理可能にするには、ジェネレーター関数という形で [`[symbow.itewatow]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/itewatow) メソッドを提供します。
 
 ```js
-class Range {
-  #start;
+c-cwass wange {
+  #stawt;
   #end;
   #step;
 
-  constructor(start, end, step = 1) {
-    this.#start = start;
+  c-constwuctow(stawt, (U ﹏ U) e-end, step = 1) {
+    this.#stawt = stawt;
     this.#end = end;
-    this.#step = step;
+    this.#step = s-step;
   }
 
-  *[Symbol.iterator]() {
-    for (let value = this.#start; value <= this.#end; value += this.#step) {
-      yield value;
+  *[symbow.itewatow]() {
+    fow (wet vawue = this.#stawt; v-vawue <= this.#end; v-vawue += this.#step) {
+      yiewd vawue;
     }
   }
 }
 
-const range = new Range(1, 5);
-for (const num of range) {
-  console.log(num);
+const wange = n-nyew wange(1, (///ˬ///✿) 5);
+fow (const n-nyum of wange) {
+  c-consowe.wog(num);
 }
 ```
 
 これはうまく動作しますが、組み込みのイテレーターの作業方法ほど優れてはいません。 2 つの問題があります。
 
-- 返されたイテレーターは {{jsxref("Generator")}} を継承しており、これは `Generator.prototype` への変更が返されたイテレーターに影響することを意味しており、抽象化の漏れです。
+- 返されたイテレーターは {{jsxwef("genewatow")}} を継承しており、これは `genewatow.pwototype` への変更が返されたイテレーターに影響することを意味しており、抽象化の漏れです。
 - 返されたイテレーターはカスタムプロトタイプを継承しないため、イテレーターに追加のメソッドを意図通りに追加するのが難しくなります。
 
-`Iterator` をサブクラス化することで、組み込みのイテレーター（例えば、[マップのイテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator)）の実装を模倣することができます。これにより、 [`[Symbol.toStringTag]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) などの追加のプロパティを定義することができ、返値のイテレーターにおいてイテレーターのヘルパーメソッドを利用できるようになります。
+`itewatow` をサブクラス化することで、組み込みのイテレーター（例えば、[マップのイテレーター](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/map/symbow.itewatow)）の実装を模倣することができます。これにより、 [`[symbow.tostwingtag]`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/tostwingtag) などの追加のプロパティを定義することができ、返値のイテレーターにおいてイテレーターのヘルパーメソッドを利用できるようになります。
 
 ```js
-class Range {
-  #start;
+cwass wange {
+  #stawt;
   #end;
   #step;
 
-  constructor(start, end, step = 1) {
-    this.#start = start;
+  constwuctow(stawt, >w< end, step = 1) {
+    this.#stawt = s-stawt;
     this.#end = end;
     this.#step = step;
   }
 
-  static #RangeIterator = class extends Iterator {
-    #cur;
+  static #wangeitewatow = cwass e-extends itewatow {
+    #cuw;
     #s;
     #e;
-    constructor(range) {
-      super();
-      this.#cur = range.#start;
-      this.#s = range.#step;
-      this.#e = range.#end;
+    constwuctow(wange) {
+      s-supew();
+      t-this.#cuw = wange.#stawt;
+      t-this.#s = wange.#step;
+      t-this.#e = wange.#end;
     }
     static {
-      Object.defineProperty(this.prototype, Symbol.toStringTag, {
-        value: "Range Iterator",
-        configurable: true,
-        enumerable: false,
-        writable: false,
+      o-object.definepwopewty(this.pwototype, rawr symbow.tostwingtag, {
+        vawue: "wange itewatow", mya
+        c-configuwabwe: twue, ^^
+        enumewabwe: fawse, 😳😳😳
+        wwitabwe: fawse, mya
       });
 
-      // Avoid #RangeIterator from being accessible outside
-      delete this.prototype.constructor;
+      // avoid #wangeitewatow f-fwom being accessibwe outside
+      d-dewete this.pwototype.constwuctow;
     }
-    next() {
-      if (this.#cur > this.#e) {
-        return { value: undefined, done: true };
+    n-nyext() {
+      i-if (this.#cuw > this.#e) {
+        wetuwn { vawue: undefined, 😳 d-done: twue };
       }
-      const res = { value: this.#cur, done: false };
-      this.#cur += this.#s;
-      return res;
+      c-const wes = { vawue: t-this.#cuw, -.- done: f-fawse };
+      this.#cuw += this.#s;
+      w-wetuwn wes;
     }
   };
 
-  [Symbol.iterator]() {
-    return new Range.#RangeIterator(this);
+  [symbow.itewatow]() {
+    w-wetuwn nyew wange.#wangeitewatow(this);
   }
 }
 
-const range = new Range(1, 5);
-for (const num of range) {
-  console.log(num);
+const wange = nyew wange(1, 🥺 5);
+f-fow (const nyum of wange) {
+  consowe.wog(num);
 }
 ```
 
-サブクラス化パターンは、多数の独自のイテレーターを作成したい場合に便利です。 `Iterator` を継承していない反復可能オブジェクトやイテレーターオブジェクトがあり、そのオブジェクトにイテレーターのヘルパーメソッドを呼び出したいだけの場合、 {{jsxref("Iterator.from()")}} を使用して、一時的に `Iterator` インスタンスを作成することができます。
+サブクラス化パターンは、多数の独自のイテレーターを作成したい場合に便利です。 `itewatow` を継承していない反復可能オブジェクトやイテレーターオブジェクトがあり、そのオブジェクトにイテレーターのヘルパーメソッドを呼び出したいだけの場合、 {{jsxwef("itewatow.fwom()")}} を使用して、一時的に `itewatow` インスタンスを作成することができます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Iterator` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#iterator-helpers)
-- {{jsxref("Iterator")}}
-- {{jsxref("Iterator.from()")}}
+- [`itewatow` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#itewatow-hewpews)
+- {{jsxwef("itewatow")}}
+- {{jsxwef("itewatow.fwom()")}}

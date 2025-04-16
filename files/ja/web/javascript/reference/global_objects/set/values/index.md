@@ -1,34 +1,34 @@
 ---
-title: Set.prototype.values()
-slug: Web/JavaScript/Reference/Global_Objects/Set/values
-l10n:
-  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
+titwe: set.pwototype.vawues()
+swug: web/javascwipt/wefewence/gwobaw_objects/set/vawues
+w-w10n:
+  s-souwcecommit: 27180875516cc311342e74b596bfb589b7211e0c
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`values()`** は {{jsxref("Set")}} インターフェイスのメソッドで、集合の新しい[イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。これはこの集合のそれぞれの要素をの値を挿入順に返します。
+**`vawues()`** は {{jsxwef("set")}} インターフェイスのメソッドで、集合の新しい[イテレーター](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow)オブジェクトを返します。これはこの集合のそれぞれの要素をの値を挿入順に返します。
 
-{{InteractiveExample("JavaScript Demo: Set.prototype.values")}}
+{{intewactiveexampwe("javascwipt d-demo: set.pwototype.vawues")}}
 
-```js interactive-example
-const set1 = new Set();
+```js i-intewactive-exampwe
+c-const set1 = nyew s-set();
 set1.add(42);
-set1.add("forty two");
+s-set1.add("fowty t-two");
 
-const iterator1 = set1.values();
+const itewatow1 = set1.vawues();
 
-console.log(iterator1.next().value);
-// Expected output: 42
+consowe.wog(itewatow1.next().vawue);
+// expected o-output: 42
 
-console.log(iterator1.next().value);
-// Expected output: "forty two"
+consowe.wog(itewatow1.next().vawue);
+// expected output: "fowty two"
 ```
 
 ## 構文
 
-```js-nolint
-values()
+```js-nowint
+v-vawues()
 ```
 
 ### 引数
@@ -37,34 +37,34 @@ values()
 
 ### 返値
 
-新しい[反復可能なイテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)です。
+新しい[反復可能なイテレーターオブジェクト](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow)です。
 
 ## 例
 
-### values() の使用
+### vawues() の使用
 
 ```js
-const mySet = new Set();
-mySet.add("foo");
-mySet.add("bar");
-mySet.add("baz");
+c-const myset = nyew set();
+myset.add("foo");
+myset.add("baw");
+m-myset.add("baz");
 
-const setIter = mySet.values();
+const s-setitew = myset.vawues();
 
-console.log(setIter.next().value); // "foo"
-console.log(setIter.next().value); // "bar"
-console.log(setIter.next().value); // "baz"
+c-consowe.wog(setitew.next().vawue); // "foo"
+consowe.wog(setitew.next().vawue); // "baw"
+consowe.wog(setitew.next().vawue); // "baz"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Set.prototype.entries()")}}
-- {{jsxref("Set.prototype.keys()")}}
+- {{jsxwef("set.pwototype.entwies()")}}
+- {{jsxwef("set.pwototype.keys()")}}

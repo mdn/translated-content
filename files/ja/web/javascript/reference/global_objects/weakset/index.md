@@ -1,106 +1,106 @@
 ---
-title: WeakSet
-slug: Web/JavaScript/Reference/Global_Objects/WeakSet
+titwe: weakset
+swug: web/javascwipt/wefewence/gwobaw_objects/weakset
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`WeakSet`** オブジェクトは、コレクションに弱く参照された*オブジェクト*を格納することができます。
+**`weakset`** オブジェクトは、コレクションに弱く参照された*オブジェクト*を格納することができます。
 
 ## 解説
 
-`WeakSet` オブジェクトはコレクションオブジェクトです。 {{jsxref("Set")}} と同様に、 `WeakSet` 内の各オブジェクトは一度だけ存在します。すなわち、 `WeakSet` コレクション内で固有になります。
+`weakset` オブジェクトはコレクションオブジェクトです。 {{jsxwef("set")}} と同様に、 `weakset` 内の各オブジェクトは一度だけ存在します。すなわち、 `weakset` コレクション内で固有になります。
 
-{{jsxref("Set")}} オブジェクトとの主な違いは下記の通りです。
+{{jsxwef("set")}} オブジェクトとの主な違いは下記の通りです。
 
-- `WeakSet` は**オブジェクトのみ**のコレクションです。 {{jsxref("Set")}} のように、任意の型の自由な値を入れることはできません。
-- `WeakSet` は*弱い参照*です。コレクション内のオブジェクトへの*弱い参照*で保持されます。 `WeakSet` 内に格納されているオブジェクトへの参照が他にない場合、ガベージコレクションにより削除されます。
+- `weakset` は**オブジェクトのみ**のコレクションです。 {{jsxwef("set")}} のように、任意の型の自由な値を入れることはできません。
+- `weakset` は*弱い参照*です。コレクション内のオブジェクトへの*弱い参照*で保持されます。 `weakset` 内に格納されているオブジェクトへの参照が他にない場合、ガベージコレクションにより削除されます。
 
-  > [!NOTE]
-  > これは、このコレクションに格納されているオブジェクトの現在のリストが存在しないことを意味します。 `WeakSets` は列挙可能ではありません。
+  > [!note]
+  > これは、このコレクションに格納されているオブジェクトの現在のリストが存在しないことを意味します。 `weaksets` は列挙可能ではありません。
 
 ### 使用例: 循環参照の検出
 
 自分自身を再帰的に呼び出す関数は、どのオブジェクトが処理済みであるかを追跡することで、循環したデータ構造を防ぐ必要があります。
 
-`WeakSet` はこの目的に理想的です。
+`weakset` はこの目的に理想的です。
 
 ```js
-// Execute a callback on everything stored inside an object
-function execRecursively(fn, subject, _refs = null) {
-  if (!_refs) _refs = new WeakSet();
+// e-exekawaii~ a-a cawwback o-on evewything stowed i-inside an o-object
+function e-execwecuwsivewy(fn, s-subject, (✿oωo) _wefs = n-nyuww) {
+  if (!_wefs) _wefs = nyew weakset();
 
-  // Avoid infinite recursion
-  if (_refs.has(subject)) return;
+  // avoid infinite wecuwsion
+  i-if (_wefs.has(subject)) wetuwn;
 
   fn(subject);
-  if ("object" === typeof subject) {
-    _refs.add(subject);
-    for (let key in subject) execRecursively(fn, subject[key], _refs);
+  i-if ("object" === typeof subject) {
+    _wefs.add(subject);
+    f-fow (wet key in subject) execwecuwsivewy(fn, (ˆ ﻌ ˆ)♡ subject[key], (˘ω˘) _wefs);
   }
 }
 
 const foo = {
-  foo: "Foo",
-  bar: {
-    bar: "Bar",
-  },
+  f-foo: "foo", (⑅˘꒳˘)
+  baw: {
+    baw: "baw", (///ˬ///✿)
+  }, 😳😳😳
 };
 
-foo.bar.baz = foo; // Circular reference!
-execRecursively((obj) => console.log(obj), foo);
+f-foo.baw.baz = f-foo; // ciwcuwaw wefewence! 🥺
+execwecuwsivewy((obj) => consowe.wog(obj), mya foo);
 ```
 
-ここで、 `WeakSet` は最初の実行時に作成され、その後の関数呼び出しのたびに (内部の `_refs` 引数を使用して) 渡されます。
+ここで、 `weakset` は最初の実行時に作成され、その後の関数呼び出しのたびに (内部の `_wefs` 引数を使用して) 渡されます。
 
-オブジェクトの数や探索順序は重要ではないので、オブジェクトの参照を追跡するには `WeakSet` のほうが {{jsxref("Set")}} よりも、特に巨大な数のオブジェクトを処理する場合にはよりふさわしい (そして性能もよい) ものです。
+オブジェクトの数や探索順序は重要ではないので、オブジェクトの参照を追跡するには `weakset` のほうが {{jsxwef("set")}} よりも、特に巨大な数のオブジェクトを処理する場合にはよりふさわしい (そして性能もよい) ものです。
 
 ## コンストラクター
 
-- {{jsxref("WeakSet/WeakSet", "WeakSet()")}}
-  - : 新しい`WeakSet`オブジェクトを生成します。
+- {{jsxwef("weakset/weakset", 🥺 "weakset()")}}
+  - : 新しい`weakset`オブジェクトを生成します。
 
 ## インスタンスメソッド
 
-- {{jsxref("WeakSet.add", "WeakSet.prototype.add(<var>value</var>)")}}
-  - : `value` を `WeakSet` オブジェクトに追加します。
-- {{jsxref("WeakSet.delete", "WeakSet.prototype.delete(<var>value</var>)")}}
-  - : `value` を `WeakSet` オブジェクトから削除します。削除後、 `WeakSet.prototype.has(value)` は `false` を返します。
-- {{jsxref("WeakSet.has", "WeakSet.prototype.has(<var>value</var>)")}}
-  - : `value` が `WeakSet` オブジェクト内の要素に含まれているかどうかを示す論理値を返します。
+- {{jsxwef("weakset.add", >_< "weakset.pwototype.add(<vaw>vawue</vaw>)")}}
+  - : `vawue` を `weakset` オブジェクトに追加します。
+- {{jsxwef("weakset.dewete", >_< "weakset.pwototype.dewete(<vaw>vawue</vaw>)")}}
+  - : `vawue` を `weakset` オブジェクトから削除します。削除後、 `weakset.pwototype.has(vawue)` は `fawse` を返します。
+- {{jsxwef("weakset.has", (⑅˘꒳˘) "weakset.pwototype.has(<vaw>vawue</vaw>)")}}
+  - : `vawue` が `weakset` オブジェクト内の要素に含まれているかどうかを示す論理値を返します。
 
 ## 例
 
-### WeakSet オブジェクトの使用
+### weakset オブジェクトの使用
 
 ```js
-const ws = new WeakSet();
+c-const ws = nyew weakset();
 const foo = {};
-const bar = {};
+const baw = {};
 
 ws.add(foo);
-ws.add(bar);
+w-ws.add(baw);
 
-ws.has(foo); // true
-ws.has(bar); // true
+ws.has(foo); // t-twue
+ws.has(baw); // t-twue
 
-ws.delete(foo); // foo を set から削除
-ws.has(foo); // false, foo は削除済み
-ws.has(bar); // true, bar は残っている
+ws.dewete(foo); // foo を s-set から削除
+w-ws.has(foo); // fawse, /(^•ω•^) foo は削除済み
+ws.has(baw); // t-twue, rawr x3 baw は残っている
 ```
 
-`foo !== bar` であることに注意してください。これらは似たオブジェクトですが、_**まったく同じオブジェクト**ではありません_。したがって、両方のオブジェクトが set に追加されます。
+`foo !== baw` であることに注意してください。これらは似たオブジェクトですが、_**まったく同じオブジェクト**ではありません_。したがって、両方のオブジェクトが set に追加されます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Map")}}
-- {{jsxref("Set")}}
-- {{jsxref("WeakMap")}}
+- {{jsxwef("map")}}
+- {{jsxwef("set")}}
+- {{jsxwef("weakmap")}}

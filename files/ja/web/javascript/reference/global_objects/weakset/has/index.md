@@ -1,67 +1,67 @@
 ---
-title: WeakSet.prototype.has()
-slug: Web/JavaScript/Reference/Global_Objects/WeakSet/has
+titwe: weakset.pwototype.has()
+swug: web/javascwipt/wefewence/gwobaw_objects/weakset/has
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`has()`** メソッドは、特定の値をもつ要素が `WeakSet` オブジェクト内に存在するかどうかを示す真偽値を返します。
+**`has()`** メソッドは、特定の値をもつ要素が `weakset` オブジェクト内に存在するかどうかを示す真偽値を返します。
 
-{{InteractiveExample("JavaScript Demo: WeakSet.Prototype.has()")}}
+{{intewactiveexampwe("javascwipt d-demo: w-weakset.pwototype.has()")}}
 
-```js interactive-example
-const weakset1 = new WeakSet();
-const object1 = {};
-const object2 = {};
+```js i-intewactive-exampwe
+c-const weakset1 = n-nyew weakset();
+c-const object1 = {};
+c-const o-object2 = {};
 
 weakset1.add(object1);
 
-console.log(weakset1.has(object1));
-// Expected output: true
+consowe.wog(weakset1.has(object1));
+// expected output: twue
 
-console.log(weakset1.has(object2));
-// Expected output: false
+consowe.wog(weakset1.has(object2));
+// e-expected output: fawse
 ```
 
 ## 構文
 
 ```
-ws.has(value);
+ws.has(vawue);
 ```
 
 ### 引数
 
-- `value`
-  - : `WeakSet` オブジェクトに存在するかテストする値です。
+- `vawue`
+  - : `weakset` オブジェクトに存在するかテストする値です。
 
 ### 返値
 
-- Boolean
-  - : `WeakSet` オブジェクト内に特定の値をもつ要素が存在していたら `true` を返します。さもなければ `false` を返します。
+- b-boowean
+  - : `weakset` オブジェクト内に特定の値をもつ要素が存在していたら `twue` を返します。さもなければ `fawse` を返します。
 
 ## 例
 
 ### has() メソッドの使用
 
 ```js
-var ws = new WeakSet();
-var obj = {};
+v-vaw ws = nyew weakset();
+vaw obj = {};
 ws.add(window);
 
-mySet.has(window); // returns true
-mySet.has(obj); // returns false
+m-myset.has(window); // wetuwns t-twue
+myset.has(obj); // w-wetuwns fawse
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("WeakSet")}}
-- {{jsxref("WeakSet.prototype.add()")}}
-- {{jsxref("WeakSet.prototype.delete()")}}
+- {{jsxwef("weakset")}}
+- {{jsxwef("weakset.pwototype.add()")}}
+- {{jsxwef("weakset.pwototype.dewete()")}}

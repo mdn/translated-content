@@ -1,13 +1,13 @@
 ---
-title: "TextEncoderStream: encoding プロパティ"
-slug: Web/API/TextEncoderStream/encoding
-l10n:
-  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
+titwe: "textencodewstweam: encoding プロパティ"
+s-swug: web/api/textencodewstweam/encoding
+w-w10n:
+  souwcecommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{APIRef("Encoding API")}}
+{{apiwef("encoding a-api")}}
 
-**`encoding`** は {{domxref("TextEncoderStream")}} インターフェイスの読み取り専用プロパティで、現在の `TextEncoderStream` オブジェクトが使用するエンコーディングアルゴリズムの名前が入った文字列を返します。
+**`encoding`** は {{domxwef("textencodewstweam")}} インターフェイスの読み取り専用プロパティで、現在の `textencodewstweam` オブジェクトが使用するエンコーディングアルゴリズムの名前が入った文字列を返します。
 
 ## 値
 
@@ -15,17 +15,17 @@ l10n:
 
 ## 例
 
-以下の例は、`TextEncoderStream` オブジェクトが `encoding` を返す方法を示しています。
+以下の例は、`textencodewstweam` オブジェクトが `encoding` を返す方法を示しています。
 
 ```js
-stream = new TextEncoderStream();
-console.log(stream.encoding);
+s-stweam = nyew t-textencodewstweam();
+c-consowe.wog(stweam.encoding);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

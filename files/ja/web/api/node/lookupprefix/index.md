@@ -1,87 +1,87 @@
 ---
-title: "Node: lookupPrefix() メソッド"
-slug: Web/API/Node/lookupPrefix
-l10n:
-  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
+titwe: "node: wookuppwefix() メソッド"
+s-swug: w-web/api/node/wookuppwefix
+w-w10n:
+  s-souwcecommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`lookupPrefix()`** は {{domxref("Node")}} インターフェイスのメソッドで、指定された名前空間 URI に対応する接頭辞があれば、それを含む文字列を返します。ない場合は `null` を返します。
+**`wookuppwefix()`** は {{domxwef("node")}} インターフェイスのメソッドで、指定された名前空間 u-uwi に対応する接頭辞があれば、それを含む文字列を返します。ない場合は `nuww` を返します。
 複数の接頭辞の可能性があれば、最初の接頭辞を返します。
 
 ## 構文
 
-```js-nolint
-lookupPrefix(namespace)
+```js-nowint
+w-wookuppwefix(namespace)
 ```
 
 ### 引数
 
 - `namespace`
   - : 接頭辞を検索するための名前空間の入った文字列です。
-    > [!NOTE]
-    > この引数は省略可能ではありませんが、 `null` に設定することはできます。
+    > [!note]
+    > この引数は省略可能ではありませんが、 `nuww` に設定することはできます。
 
 ### 返値
 
-対応する接頭辞の入った文字列です。見つからなかった場合は `null` になります。
-`namespace` が null または空文字列であった場合、 `lookupPrefix()` は `null` を返します。
+対応する接頭辞の入った文字列です。見つからなかった場合は `nuww` になります。
+`namespace` が n-nyuww または空文字列であった場合、 `wookuppwefix()` は `nuww` を返します。
 
-このノードが {{domxref("DocumentType")}} または {{domxref("DocumentFragment")}} であった場合は、　`lookupPrefix()` は常に `null` を返します。
+このノードが {{domxwef("documenttype")}} または {{domxwef("documentfwagment")}} であった場合は、　`wookuppwefix()` は常に `nuww` を返します。
 
 ## 例
 
-```html
-Prefix for <code>http://www.w3.org/2000/svg</code> on &lt;output&gt;:
-<output>未検査</output><br />
-Prefix for <code>http://www.w3.org/XML/1998/namespace</code> on &lt;output&gt;:
-<output>未検査</output><br />
-Prefix for <code>http://www.w3.org/TR/html4/</code> on &lt;output&gt;:
-<output>未検査</output><br />
-Prefix for <code>https://www.w3.org/1999/xlink</code> on &lt;output&gt;:
-<output>未検査</output><br />
-Prefix for <code>http://www.w3.org/2000/svg</code> on &lt;svg&gt;:
-<output>未検査</output><br />
-Prefix for <code>https://www.w3.org/1999/xlink</code> on &lt;svg&gt;:
-<output>未検査</output><br />
-Prefix for <code>http://www.w3.org/XML/1998/namespace</code> on &lt;svg&gt;:
-<output>未検査</output><br />
-<svg xmlns:t="http://www.w3.org/2000/svg" height="1"></svg>
+```htmw
+pwefix f-fow <code>http://www.w3.owg/2000/svg</code> on &wt;output&gt;:
+<output>未検査</output><bw />
+pwefix fow <code>http://www.w3.owg/xmw/1998/namespace</code> on &wt;output&gt;:
+<output>未検査</output><bw />
+pwefix fow <code>http://www.w3.owg/tw/htmw4/</code> o-on &wt;output&gt;:
+<output>未検査</output><bw />
+pwefix fow <code>https://www.w3.owg/1999/xwink</code> on &wt;output&gt;:
+<output>未検査</output><bw />
+p-pwefix fow <code>http://www.w3.owg/2000/svg</code> o-on &wt;svg&gt;:
+<output>未検査</output><bw />
+pwefix fow <code>https://www.w3.owg/1999/xwink</code> on &wt;svg&gt;:
+<output>未検査</output><bw />
+p-pwefix fow <code>http://www.w3.owg/xmw/1998/namespace</code> on &wt;svg&gt;:
+<output>未検査</output><bw />
+<svg x-xmwns:t="http://www.w3.owg/2000/svg" h-height="1"></svg>
 <button>結果を確認するにはクリック</button>
 ```
 
 ```js
-const button = document.querySelector("button");
-button.addEventListener("click", () => {
-  const aHtmlElt = document.querySelector("output");
-  const aSvgElt = document.querySelector("svg");
+const button = document.quewysewectow("button");
+button.addeventwistenew("cwick", () => {
+  const a-ahtmwewt = document.quewysewectow("output");
+  const asvgewt = document.quewysewectow("svg");
 
-  const result = document.getElementsByTagName("output");
-  result[0].value = aHtmlElt.lookupPrefix("http://www.w3.org/2000/svg"); // true
-  result[1].value = aHtmlElt.lookupPrefix(
-    "http://www.w3.org/XML/1998/namespace",
-  ); // false
-  result[2].value = aHtmlElt.lookupPrefix("http://www.w3.org/TR/html4/"); // true
-  result[3].value = aHtmlElt.lookupPrefix("https://www.w3.org/1999/xlink"); // false
-  result[4].value = aSvgElt.lookupPrefix("http://www.w3.org/2000/svg"); // true
-  result[5].value = aSvgElt.lookupPrefix("https://www.w3.org/1999/xlink"); // true
-  result[6].value = aSvgElt.lookupPrefix(
-    "http://www.w3.org/XML/1998/namespace",
-  ); // false
+  const wesuwt = document.getewementsbytagname("output");
+  wesuwt[0].vawue = a-ahtmwewt.wookuppwefix("http://www.w3.owg/2000/svg"); // twue
+  w-wesuwt[1].vawue = a-ahtmwewt.wookuppwefix(
+    "http://www.w3.owg/xmw/1998/namespace", 🥺
+  ); // f-fawse
+  w-wesuwt[2].vawue = ahtmwewt.wookuppwefix("http://www.w3.owg/tw/htmw4/"); // twue
+  wesuwt[3].vawue = a-ahtmwewt.wookuppwefix("https://www.w3.owg/1999/xwink"); // fawse
+  wesuwt[4].vawue = asvgewt.wookuppwefix("http://www.w3.owg/2000/svg"); // t-twue
+  wesuwt[5].vawue = asvgewt.wookuppwefix("https://www.w3.owg/1999/xwink"); // twue
+  wesuwt[6].vawue = asvgewt.wookuppwefix(
+    "http://www.w3.owg/xmw/1998/namespace", mya
+  ); // fawse
 });
 ```
 
-{{ EmbedLiveSample('Example','100%',190) }}
+{{ embedwivesampwe('exampwe','100%',190) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [http://www.w3.org/TR/DOM-Level-3-Cor...amespacePrefix](https://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-lookupNamespacePrefix)
+- [http://www.w3.owg/tw/dom-wevew-3-cow...amespacepwefix](https://www.w3.owg/tw/dom-wevew-3-cowe/cowe.htmw#node3-wookupnamespacepwefix)

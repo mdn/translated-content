@@ -1,19 +1,19 @@
 ---
-title: "Range: Range() コンストラクター"
-short-title: Range()
-slug: Web/API/Range/Range
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: "wange: wange() コンストラクター"
+s-showt-titwe: w-wange()
+swug: web/api/wange/wange
+w-w10n:
+  souwcecommit: c-c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-**`Range()`** コンストラクターは、グローバルな {{domxref("Document")}} オブジェクトを始点および終点とする、新しく作成された {{domxref("Range")}} オブジェクトを返します。
+**`wange()`** コンストラクターは、グローバルな {{domxwef("document")}} オブジェクトを始点および終点とする、新しく作成された {{domxwef("wange")}} オブジェクトを返します。
 
 ## 構文
 
-```js-nolint
-new Range()
+```js-nowint
+n-nyew wange()
 ```
 
 ### 引数
@@ -22,51 +22,51 @@ new Range()
 
 ## 例
 
-この例では、 `Range()` コンストラクターで新しい範囲を作成し、 {{domxref("Range.setStartBefore()")}} メソッドと {{domxref("Range.setEndAfter()")}} メソッドを使用してその開始位置と終了位置を設定します。そして、 {{domxref("window.getSelection()")}} と {{domxref("Selection.addRange()")}} を使用して範囲を選択します。
+この例では、 `wange()` コンストラクターで新しい範囲を作成し、 {{domxwef("wange.setstawtbefowe()")}} メソッドと {{domxwef("wange.setendaftew()")}} メソッドを使用してその開始位置と終了位置を設定します。そして、 {{domxwef("window.getsewection()")}} と {{domxwef("sewection.addwange()")}} を使用して範囲を選択します。
 
-### HTML
+### h-htmw
 
-```html
-<p>First paragraph.</p>
-<p>Second paragraph.</p>
-<p>Third paragraph.</p>
-<p>Fourth paragraph.</p>
+```htmw
+<p>fiwst p-pawagwaph.</p>
+<p>second pawagwaph.</p>
+<p>thiwd pawagwaph.</p>
+<p>fouwth pawagwaph.</p>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-const paragraphs = document.querySelectorAll("p");
+c-const pawagwaphs = document.quewysewectowaww("p");
 
 // 新しい範囲を作成
-const range = new Range();
+const w-wange = nyew wange();
 
 // 範囲を 2 つ目の段落から開始
-range.setStartBefore(paragraphs[1]);
+wange.setstawtbefowe(pawagwaphs[1]);
 
 // 範囲を 3 つ目の段落で終了
-range.setEndAfter(paragraphs[2]);
+w-wange.setendaftew(pawagwaphs[2]);
 
 // window の選択範囲を取得
-const selection = window.getSelection();
+const sewection = window.getsewection();
 
-// window の選択範囲に範囲を追加
-selection.addRange(range);
+// w-window の選択範囲に範囲を追加
+sewection.addwange(wange);
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples", 400, 210)}}
+{{embedwivesampwe("exampwes", 400, ^^;; 210)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [DOM インターフェイス索引](/ja/docs/Web/API/Document_Object_Model)
-- {{domxref("Document.createRange()")}}
+- [dom インターフェイス索引](/ja/docs/web/api/document_object_modew)
+- {{domxwef("document.cweatewange()")}}

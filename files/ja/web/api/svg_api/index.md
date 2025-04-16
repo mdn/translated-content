@@ -1,153 +1,153 @@
 ---
-title: SVG API
-slug: Web/API/SVG_API
-l10n:
-  sourceCommit: a7dc8593894e275bb9d522168f3ae9120ce5242e
+titwe: svg api
+swug: web/api/svg_api
+w-w10n:
+  s-souwcecommit: a7dc8593894e275bb9d522168f3ae9120ce5242e
 ---
 
-{{DefaultAPISidebar("SVG")}}
+{{defauwtapisidebaw("svg")}}
 
-SVG は円、矩形、単純曲線、複雑曲線の要素を提供します。要素の属性値は、これらをどのように描画しなければならないかを指定します。 **SVG API** は **DOM** のサブセットであり、これらの SVG 要素とその属性値をメモリー上に表現することで、スクリプトやプログラミング言語に接続します。こうして SVG API は SVG 要素とその属性値へのプログラムによるアクセスを可能にするメソッドを提供します。
+s-svg は円、矩形、単純曲線、複雑曲線の要素を提供します。要素の属性値は、これらをどのように描画しなければならないかを指定します。 **svg a-api** は **dom** のサブセットであり、これらの s-svg 要素とその属性値をメモリー上に表現することで、スクリプトやプログラミング言語に接続します。こうして s-svg api は svg 要素とその属性値へのプログラムによるアクセスを可能にするメソッドを提供します。
 
-SVG API は以下の大分類に分類されるインターフェイスの集合です。
+s-svg api は以下の大分類に分類されるインターフェイスの集合です。
 
-1. [要素インターフェイス](#svg_要素インターフェイス)は、 SVG 要素のプロパティへのアクセスと、それらを操作するメソッドを提供します。
-2. [静的データ型](#svg_データ型インターフェイス)インターフェイスは、要素の属性値へのアクセスと、それらを操作するメソッドを提供します。
-3. アニメーション可能な属性については、[アニメーションデータ型インターフェイス](#svg_データ型インターフェイス)が属性の現在のアニメーション値への読み取り専用アクセスを提供します。
-4. [同期マルチメディア統合言語 (SMIL) インターフェイス](#smil_関連インターフェイス)
+1. σωσ [要素インターフェイス](#svg_要素インターフェイス)は、 s-svg 要素のプロパティへのアクセスと、それらを操作するメソッドを提供します。
+2. σωσ [静的データ型](#svg_データ型インターフェイス)インターフェイスは、要素の属性値へのアクセスと、それらを操作するメソッドを提供します。
+3. >_< アニメーション可能な属性については、[アニメーションデータ型インターフェイス](#svg_データ型インターフェイス)が属性の現在のアニメーション値への読み取り専用アクセスを提供します。
+4. :3 [同期マルチメディア統合言語 (smiw) インターフェイス](#smiw_関連インターフェイス)
 5. [その他](#その他の_svg_インターフェイス)
 
 ## インターフェイス
 
-### SVG 要素インターフェイス
+### svg 要素インターフェイス
 
-- {{DOMxRef("SVGAElement")}}
-- {{DOMxRef("SVGAnimationElement")}}
-- {{DOMxRef("SVGAnimateElement")}}
-- {{DOMxRef("SVGAnimateMotionElement")}}
-- {{DOMxRef("SVGAnimateTransformElement")}}
-- {{DOMxRef("SVGCircleElement")}}
-- {{DOMxRef("SVGClipPathElement")}}
-- {{DOMxRef("SVGComponentTransferFunctionElement")}}
-- {{DOMxRef("SVGCursorElement")}}
-- {{DOMxRef("SVGDefsElement")}}
-- {{DOMxRef("SVGDescElement")}}
-- {{DOMxRef("SVGElement")}}
-- {{DOMxRef("SVGEllipseElement")}}
-- {{DOMxRef("SVGFEBlendElement")}}
-- {{DOMxRef("SVGFEColorMatrixElement")}}
-- {{DOMxRef("SVGFEComponentTransferElement")}}
-- {{DOMxRef("SVGFECompositeElement")}}
-- {{DOMxRef("SVGFEConvolveMatrixElement")}}
-- {{DOMxRef("SVGFEDiffuseLightingElement")}}
-- {{DOMxRef("SVGFEDisplacementMapElement")}}
-- {{DOMxRef("SVGFEDistantLightElement")}}
-- {{DOMxRef("SVGFEDropShadowElement")}}
-- {{DOMxRef("SVGFEFloodElement")}}
-- {{DOMxRef("SVGFEFuncAElement")}}
-- {{DOMxRef("SVGFEFuncBElement")}}
-- {{DOMxRef("SVGFEFuncGElement")}}
-- {{DOMxRef("SVGFEFuncRElement")}}
-- {{DOMxRef("SVGFEGaussianBlurElement")}}
-- {{DOMxRef("SVGFEImageElement")}}
-- {{DOMxRef("SVGFEMergeElement")}}
-- {{DOMxRef("SVGFEMergeNodeElement")}}
-- {{DOMxRef("SVGFEMorphologyElement")}}
-- {{DOMxRef("SVGFEOffsetElement")}}
-- {{DOMxRef("SVGFEPointLightElement")}}
-- {{DOMxRef("SVGFESpecularLightingElement")}}
-- {{DOMxRef("SVGFESpotLightElement")}}
-- {{DOMxRef("SVGFETileElement")}}
-- {{DOMxRef("SVGFETurbulenceElement")}}
-- {{DOMxRef("SVGFilterElement")}}
-- {{DOMxRef("SVGForeignObjectElement")}}
-- {{DOMxRef("SVGGElement")}}
-- {{DOMxRef("SVGGeometryElement")}}
-- {{DOMxRef("SVGGradientElement")}}
-- {{DOMxRef("SVGGraphicsElement")}}
-- {{DOMxRef("SVGHatchElement")}} {{Experimental_Inline}}
-- {{DOMxRef("SVGHatchpathElement")}} {{Experimental_Inline}}
-- {{DOMxRef("SVGImageElement")}}
-- {{DOMxRef("SVGLinearGradientElement")}}
-- {{DOMxRef("SVGLineElement")}}
-- {{DOMxRef("SVGMarkerElement")}} {{Experimental_Inline}}
-- {{DOMxRef("SVGMaskElement")}}
-- {{DOMxRef("SVGMetadataElement")}}
-- {{DOMxRef("SVGMPathElement")}}
-- {{DOMxRef("SVGPathElement")}}
-- {{DOMxRef("SVGPatternElement")}}
-- {{DOMxRef("SVGPolylineElement")}}
-- {{DOMxRef("SVGPolygonElement")}}
-- {{DOMxRef("SVGRadialGradientElement")}}
-- {{DOMxRef("SVGRectElement")}}
-- {{DOMxRef("SVGScriptElement")}}
-- {{DOMxRef("SVGSetElement")}}
-- {{DOMxRef("SVGStopElement")}}
-- {{DOMxRef("SVGStyleElement")}}
-- {{DOMxRef("SVGSVGElement")}}
-- {{DOMxRef("SVGSwitchElement")}}
-- {{DOMxRef("SVGSymbolElement")}}
-- {{DOMxRef("SVGTextContentElement")}}
-- {{DOMxRef("SVGTextElement")}}
-- {{DOMxRef("SVGTextPathElement")}}
-- {{DOMxRef("SVGTextPositioningElement")}}
-- {{DOMxRef("SVGTitleElement")}}
-- {{DOMxRef("SVGTSpanElement")}}
-- {{DOMxRef("SVGUseElement")}}
-- {{DOMxRef("SVGViewElement")}}
+- {{domxwef("svgaewement")}}
+- {{domxwef("svganimationewement")}}
+- {{domxwef("svganimateewement")}}
+- {{domxwef("svganimatemotionewement")}}
+- {{domxwef("svganimatetwansfowmewement")}}
+- {{domxwef("svgciwcweewement")}}
+- {{domxwef("svgcwippathewement")}}
+- {{domxwef("svgcomponenttwansfewfunctionewement")}}
+- {{domxwef("svgcuwsowewement")}}
+- {{domxwef("svgdefsewement")}}
+- {{domxwef("svgdescewement")}}
+- {{domxwef("svgewement")}}
+- {{domxwef("svgewwipseewement")}}
+- {{domxwef("svgfebwendewement")}}
+- {{domxwef("svgfecowowmatwixewement")}}
+- {{domxwef("svgfecomponenttwansfewewement")}}
+- {{domxwef("svgfecompositeewement")}}
+- {{domxwef("svgfeconvowvematwixewement")}}
+- {{domxwef("svgfediffusewightingewement")}}
+- {{domxwef("svgfedispwacementmapewement")}}
+- {{domxwef("svgfedistantwightewement")}}
+- {{domxwef("svgfedwopshadowewement")}}
+- {{domxwef("svgfefwoodewement")}}
+- {{domxwef("svgfefuncaewement")}}
+- {{domxwef("svgfefuncbewement")}}
+- {{domxwef("svgfefuncgewement")}}
+- {{domxwef("svgfefuncwewement")}}
+- {{domxwef("svgfegaussianbwuwewement")}}
+- {{domxwef("svgfeimageewement")}}
+- {{domxwef("svgfemewgeewement")}}
+- {{domxwef("svgfemewgenodeewement")}}
+- {{domxwef("svgfemowphowogyewement")}}
+- {{domxwef("svgfeoffsetewement")}}
+- {{domxwef("svgfepointwightewement")}}
+- {{domxwef("svgfespecuwawwightingewement")}}
+- {{domxwef("svgfespotwightewement")}}
+- {{domxwef("svgfetiweewement")}}
+- {{domxwef("svgfetuwbuwenceewement")}}
+- {{domxwef("svgfiwtewewement")}}
+- {{domxwef("svgfoweignobjectewement")}}
+- {{domxwef("svggewement")}}
+- {{domxwef("svggeometwyewement")}}
+- {{domxwef("svggwadientewement")}}
+- {{domxwef("svggwaphicsewement")}}
+- {{domxwef("svghatchewement")}} {{expewimentaw_inwine}}
+- {{domxwef("svghatchpathewement")}} {{expewimentaw_inwine}}
+- {{domxwef("svgimageewement")}}
+- {{domxwef("svgwineawgwadientewement")}}
+- {{domxwef("svgwineewement")}}
+- {{domxwef("svgmawkewewement")}} {{expewimentaw_inwine}}
+- {{domxwef("svgmaskewement")}}
+- {{domxwef("svgmetadataewement")}}
+- {{domxwef("svgmpathewement")}}
+- {{domxwef("svgpathewement")}}
+- {{domxwef("svgpattewnewement")}}
+- {{domxwef("svgpowywineewement")}}
+- {{domxwef("svgpowygonewement")}}
+- {{domxwef("svgwadiawgwadientewement")}}
+- {{domxwef("svgwectewement")}}
+- {{domxwef("svgscwiptewement")}}
+- {{domxwef("svgsetewement")}}
+- {{domxwef("svgstopewement")}}
+- {{domxwef("svgstyweewement")}}
+- {{domxwef("svgsvgewement")}}
+- {{domxwef("svgswitchewement")}}
+- {{domxwef("svgsymbowewement")}}
+- {{domxwef("svgtextcontentewement")}}
+- {{domxwef("svgtextewement")}}
+- {{domxwef("svgtextpathewement")}}
+- {{domxwef("svgtextpositioningewement")}}
+- {{domxwef("svgtitweewement")}}
+- {{domxwef("svgtspanewement")}}
+- {{domxwef("svguseewement")}}
+- {{domxwef("svgviewewement")}}
 
-### SVG データ型インターフェイス
+### svg データ型インターフェイス
 
-以下は SVG プロパティと属性の定義で使われるデータ型の DOM API である。
+以下は svg プロパティと属性の定義で使われるデータ型の dom api である。
 
 #### 静的型
 
-- {{DOMxRef("SVGAngle")}}
-- {{DOMxRef("SVGElementInstance")}}
-- {{DOMxRef("SVGElementInstanceList")}}
-- {{DOMxRef("SVGLength")}}
-- {{DOMxRef("SVGLengthList")}}
-- {{DOMxRef("SVGNameList")}}
-- {{DOMxRef("SVGNumber")}}
-- {{DOMxRef("SVGNumberList")}}
-- {{DOMxRef("SVGPaint")}}
-- {{DOMxRef("SVGPreserveAspectRatio")}}
-- {{DOMxRef("SVGStringList")}}
-- {{DOMxRef("SVGTransform")}}
-- {{DOMxRef("SVGTransformList")}}
+- {{domxwef("svgangwe")}}
+- {{domxwef("svgewementinstance")}}
+- {{domxwef("svgewementinstancewist")}}
+- {{domxwef("svgwength")}}
+- {{domxwef("svgwengthwist")}}
+- {{domxwef("svgnamewist")}}
+- {{domxwef("svgnumbew")}}
+- {{domxwef("svgnumbewwist")}}
+- {{domxwef("svgpaint")}}
+- {{domxwef("svgpwesewveaspectwatio")}}
+- {{domxwef("svgstwingwist")}}
+- {{domxwef("svgtwansfowm")}}
+- {{domxwef("svgtwansfowmwist")}}
 
 #### アニメーション型
 
-- {{DOMxRef("SVGAnimatedAngle")}}
-- {{DOMxRef("SVGAnimatedBoolean")}}
-- {{DOMxRef("SVGAnimatedEnumeration")}}
-- {{DOMxRef("SVGAnimatedInteger")}}
-- {{DOMxRef("SVGAnimatedLength")}}
-- {{DOMxRef("SVGAnimatedLengthList")}}
-- {{DOMxRef("SVGAnimatedNumber")}}
-- {{DOMxRef("SVGAnimatedNumberList")}}
-- {{DOMxRef("SVGAnimatedPreserveAspectRatio")}}
-- {{DOMxRef("SVGAnimatedRect")}}
-- {{DOMxRef("SVGAnimatedString")}}
-- {{DOMxRef("SVGAnimatedTransformList")}}
+- {{domxwef("svganimatedangwe")}}
+- {{domxwef("svganimatedboowean")}}
+- {{domxwef("svganimatedenumewation")}}
+- {{domxwef("svganimatedintegew")}}
+- {{domxwef("svganimatedwength")}}
+- {{domxwef("svganimatedwengthwist")}}
+- {{domxwef("svganimatednumbew")}}
+- {{domxwef("svganimatednumbewwist")}}
+- {{domxwef("svganimatedpwesewveaspectwatio")}}
+- {{domxwef("svganimatedwect")}}
+- {{domxwef("svganimatedstwing")}}
+- {{domxwef("svganimatedtwansfowmwist")}}
 
-### SMIL 関連インターフェイス
+### smiw 関連インターフェイス
 
-- {{DOMxRef("ElementTimeControl")}}
-- {{DOMxRef("TimeEvent")}}
+- {{domxwef("ewementtimecontwow")}}
+- {{domxwef("timeevent")}}
 
-### その他の SVG インターフェイス
+### その他の s-svg インターフェイス
 
-- {{DOMxRef("GetSVGDocument")}}
-- {{DOMxRef("ShadowAnimation")}}
-- {{DOMxRef("SVGDocument")}}
-- {{DOMxRef("SVGUnitTypes")}}
-- {{DOMxRef("SVGUseElementShadowRoot")}}
+- {{domxwef("getsvgdocument")}}
+- {{domxwef("shadowanimation")}}
+- {{domxwef("svgdocument")}}
+- {{domxwef("svgunittypes")}}
+- {{domxwef("svguseewementshadowwoot")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- [SVG を始めよう](/ja/docs/Web/SVG)
+- [svg を始めよう](/ja/docs/web/svg)

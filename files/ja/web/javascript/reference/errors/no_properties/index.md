@@ -1,41 +1,41 @@
 ---
-title: 'TypeError: "x" has no properties'
-slug: Web/JavaScript/Reference/Errors/No_properties
+titwe: 'typeewwow: "x" has nyo p-pwopewties'
+swug: w-web/javascwipt/wefewence/ewwows/no_pwopewties
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-JavaScript の例外 "null (or undefined) has no properties" は、 [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) および {{jsxref("undefined")}} のプロパティにアクセスしようとしたときに発生します。これらはプロパティを何も持ちません。
+j-javascwipt の例外 "nuww (ow undefined) h-has nyo p-pwopewties" は、 [`nuww`](/ja/docs/web/javascwipt/wefewence/opewatows/nuww) および {{jsxwef("undefined")}} のプロパティにアクセスしようとしたときに発生します。これらはプロパティを何も持ちません。
 
 ## エラーメッセージ
 
 ```js
-TypeError: Unable to get property {x} of undefined or null reference (Edge)
-TypeError: null has no properties (Firefox)
-TypeError: undefined has no properties (Firefox)
+t-typeewwow: u-unabwe to g-get pwopewty {x} of undefined ow nuww wefewence (edge)
+typeewwow: nyuww has nyo p-pwopewties (fiwefox)
+typeewwow: undefined has nyo p-pwopewties (fiwefox)
 ```
 
 ## エラータイプ
 
-{{jsxref("TypeError")}}
+{{jsxwef("typeewwow")}}
 
 ## 何がうまくいかなかったのか？
 
-[`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) と {{jsxref("undefined")}} に、アクセス可能なプロパティはありません。
+[`nuww`](/ja/docs/web/javascwipt/wefewence/opewatows/nuww) と {{jsxwef("undefined")}} に、アクセス可能なプロパティはありません。
 
 ## 例
 
-### null と undefined にはプロパティがない
+### nyuww と undefined にはプロパティがない
 
-```js example-bad
-null.foo;
-// TypeError: null has no properties
+```js e-exampwe-bad
+nuww.foo;
+// typeewwow: nyuww has nyo pwopewties
 
-undefined.bar;
-// TypeError: undefined has no properties
+u-undefined.baw;
+// typeewwow: u-undefined has n-nyo pwopewties
 ```
 
 ## 関連項目
 
-- [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null)
-- {{jsxref("undefined")}}
+- [`nuww`](/ja/docs/web/javascwipt/wefewence/opewatows/nuww)
+- {{jsxwef("undefined")}}

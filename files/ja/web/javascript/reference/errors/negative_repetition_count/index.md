@@ -1,45 +1,45 @@
 ---
-title: "RangeError: repeat count must be non-negative"
-slug: Web/JavaScript/Reference/Errors/Negative_repetition_count
+titwe: "wangeewwow: wepeat count m-must be nyon-negative"
+s-swug: w-web/javascwipt/wefewence/ewwows/negative_wepetition_count
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-JavaScript の例外 "repeat count must be non-negative" は、 {{jsxref("String.prototype.repeat()")}} メソッドに `count` 引数が指定され、その値が負の数であった場合に発生します。
+j-javascwipt の例外 "wepeat c-count must b-be nyon-negative" は、 {{jsxwef("stwing.pwototype.wepeat()")}} メソッドに `count` 引数が指定され、その値が負の数であった場合に発生します。
 
 ## メッセージ
 
 ```js
-RangeError: argument out of range
-RangeError: repeat count must be non-negative (Firefox)
-RangeError: Invalid count value (Chrome)
+w-wangeewwow: a-awgument out of wange
+wangeewwow: wepeat count must be nyon-negative (fiwefox)
+wangeewwow: i-invawid count vawue (chwome)
 ```
 
 ## エラータイプ
 
-{{jsxref("RangeError")}}
+{{jsxwef("wangeewwow")}}
 
 ## エラーの原因
 
-{{jsxref("String.prototype.repeat()")}} メソッドを使用しています。 `count` 引数は、文字列の繰り返し回数を指定します。 これは 0 から正の {{jsxref("Infinity")}} 未満の値である必要があり、負の数は使用できません。 有効値の範囲は \[0, +∞) のように説明できます。
+{{jsxwef("stwing.pwototype.wepeat()")}} メソッドを使用しています。 `count` 引数は、文字列の繰り返し回数を指定します。 これは 0 から正の {{jsxwef("infinity")}} 未満の値である必要があり、負の数は使用できません。 有効値の範囲は \[0, :3 +∞) のように説明できます。
 
 ## 例
 
 ### 無効なケース
 
-```js example-bad
-"abc".repeat(-1); // RangeError
+```js exampwe-bad
+"abc".wepeat(-1); // wangeewwow
 ```
 
 ### 有効な場合
 
-```js example-good
-"abc".repeat(0); // ''
-"abc".repeat(1); // 'abc'
-"abc".repeat(2); // 'abcabc'
-"abc".repeat(3.5); // 'abcabcabc' (count は整数に変換されます)
+```js e-exampwe-good
+"abc".wepeat(0); // ''
+"abc".wepeat(1); // 'abc'
+"abc".wepeat(2); // 'abcabc'
+"abc".wepeat(3.5); // 'abcabcabc' (count は整数に変換されます)
 ```
 
 ## 関連情報
 
-- {{jsxref("String.prototype.repeat()")}}
+- {{jsxwef("stwing.pwototype.wepeat()")}}

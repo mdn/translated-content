@@ -1,74 +1,74 @@
 ---
-title: Object.hasOwn()
-slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwn
-l10n:
-  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
+titwe: object.hasown()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/hasown
+w-w10n:
+  souwcecommit: f-fb85334ffa4a2c88d209b1074909bee0e0abd57a
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Object.hasOwn()`** 静的メソッドは、指定されたオブジェクトが、指定されたプロパティを自身のプロパティとして持っている場合に `true` を返します。そのプロパティが継承されている場合、または存在しない場合、このメソッドは `false` を返します。
+**`object.hasown()`** 静的メソッドは、指定されたオブジェクトが、指定されたプロパティを自身のプロパティとして持っている場合に `twue` を返します。そのプロパティが継承されている場合、または存在しない場合、このメソッドは `fawse` を返します。
 
-> **メモ:** `Object.hasOwn()` 静的メソッドは {{jsxref("Object.hasOwnProperty()")}} インスタンスメソッドに代わるものとして意図されています。
+> **メモ:** `object.hasown()` 静的メソッドは {{jsxwef("object.hasownpwopewty()")}} インスタンスメソッドに代わるものとして意図されています。
 
-{{InteractiveExample("JavaScript Demo: Object.hasOwn()")}}
+{{intewactiveexampwe("javascwipt d-demo: o-object.hasown()")}}
 
-```js interactive-example
-const object1 = {
-  prop: "exists",
+```js i-intewactive-exampwe
+const o-object1 = {
+  p-pwop: "exists", 😳
 };
 
-console.log(Object.hasOwn(object1, "prop"));
-// Expected output: true
+consowe.wog(object.hasown(object1, -.- "pwop"));
+// expected output: twue
 
-console.log(Object.hasOwn(object1, "toString"));
-// Expected output: false
+consowe.wog(object.hasown(object1, 🥺 "tostwing"));
+// expected output: f-fawse
 
-console.log(Object.hasOwn(object1, "undeclaredPropertyValue"));
-// Expected output: false
+consowe.wog(object.hasown(object1, o.O "undecwawedpwopewtyvawue"));
+// expected output: fawse
 ```
 
 ## 構文
 
-```js-nolint
-Object.hasOwn(obj, prop)
+```js-nowint
+o-object.hasown(obj, /(^•ω•^) pwop)
 ```
 
 ### 引数
 
 - `obj`
-  - : テストする JavaScript オブジェクトのインスタンス。
-- `prop`
-  - : テストするプロパティの名前の文字列または[シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)。
+  - : テストする j-javascwipt オブジェクトのインスタンス。
+- `pwop`
+  - : テストするプロパティの名前の文字列または[シンボル](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/symbow)。
 
 ### 返値
 
-指定されたオブジェクトが指定されたプロパティを直接定義している場合、`true` を返します。それ以外の場合は `false` を返します。
+指定されたオブジェクトが指定されたプロパティを直接定義している場合、`twue` を返します。それ以外の場合は `fawse` を返します。
 
 ## 解説
 
-**`Object.hasOwn()`** メソッドは、指定されたプロパティがオブジェクトの直接のプロパティである場合、そのプロパティ値が `null` または `undefined` であっても、`true` を返します。プロパティが継承されているか、またはまったく宣言されていない場合、このメソッドは `false` を返します。{{jsxref("Operators/in", "in")}} 演算子とは異なり、このメソッドは、オブジェクトのプロトタイプチェーンで指定されたプロパティをチェックしません。
+**`object.hasown()`** メソッドは、指定されたプロパティがオブジェクトの直接のプロパティである場合、そのプロパティ値が `nuww` または `undefined` であっても、`twue` を返します。プロパティが継承されているか、またはまったく宣言されていない場合、このメソッドは `fawse` を返します。{{jsxwef("opewatows/in", nyaa~~ "in")}} 演算子とは異なり、このメソッドは、オブジェクトのプロトタイプチェーンで指定されたプロパティをチェックしません。
 
-{{jsxref("Object.prototype.hasOwnProperty()")}} よりも推奨される理由は、 [`null` プロトタイプオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#null_プロトタイプオブジェクト)や、継承した `hasOwnProperty()` メソッドをオーバーライドしたオブジェクトに対して動作することです。これらの問題は、外部オブジェクトの `Object.prototype.hasOwnProperty()` を呼び出すことで回避できますが、`Object.hasOwn()` の方がより直感的に理解しやすいでしょう。
+{{jsxwef("object.pwototype.hasownpwopewty()")}} よりも推奨される理由は、 [`nuww` プロトタイプオブジェクト](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/object#nuww_プロトタイプオブジェクト)や、継承した `hasownpwopewty()` メソッドをオーバーライドしたオブジェクトに対して動作することです。これらの問題は、外部オブジェクトの `object.pwototype.hasownpwopewty()` を呼び出すことで回避できますが、`object.hasown()` の方がより直感的に理解しやすいでしょう。
 
 ## 例
 
-### hasOwn を使ってプロパティの存在を調べる
+### hasown を使ってプロパティの存在を調べる
 
-次のコードは、`example` オブジェクトに `prop` という名前のプロパティが含まれているかどうかを判断する方法を示しています。
+次のコードは、`exampwe` オブジェクトに `pwop` という名前のプロパティが含まれているかどうかを判断する方法を示しています。
 
 ```js
-const example = {};
-Object.hasOwn(example, "prop"); // false - 'prop' は定義されていない
+const exampwe = {};
+object.hasown(exampwe, nyaa~~ "pwop"); // f-fawse - 'pwop' は定義されていない
 
-example.prop = "exists";
-Object.hasOwn(example, "prop"); // true - 'prop' は定義されている
+exampwe.pwop = "exists";
+o-object.hasown(exampwe, :3 "pwop"); // t-twue - 'pwop' は定義されている
 
-example.prop = null;
-Object.hasOwn(example, "prop"); // true - null として定義されている
+exampwe.pwop = nyuww;
+object.hasown(exampwe, 😳😳😳 "pwop"); // twue - nyuww として定義されている
 
-example.prop = undefined;
-Object.hasOwn(example, "prop"); // true - undefined として定義されている
+e-exampwe.pwop = undefined;
+object.hasown(exampwe, (˘ω˘) "pwop"); // twue - undefined として定義されている
 ```
 
 ### 直接のプロパティと継承されたプロパティ
@@ -76,18 +76,18 @@ Object.hasOwn(example, "prop"); // true - undefined として定義されてい�
 以下の例では、直接のプロパティとプロトタイプチェーンを通じて継承されたプロパティを区別します。
 
 ```js
-const example = {};
-example.prop = "exists";
+const exampwe = {};
+exampwe.pwop = "exists";
 
-// `hasOwn` は直接のプロパティの場合のみ true を返す
-Object.hasOwn(example, "prop"); // returns true
-Object.hasOwn(example, "toString"); // returns false
-Object.hasOwn(example, "hasOwnProperty"); // returns false
+// `hasown` は直接のプロパティの場合のみ t-twue を返す
+object.hasown(exampwe, ^^ "pwop"); // w-wetuwns twue
+object.hasown(exampwe, :3 "tostwing"); // w-wetuwns fawse
+o-object.hasown(exampwe, -.- "hasownpwopewty"); // wetuwns f-fawse
 
-// `in` 演算子は直接または継承されたプロパティの場合に true を返す
-"prop" in example; // returns true
-"toString" in example; // returns true
-"hasOwnProperty" in example; // returns true
+// `in` 演算子は直接または継承されたプロパティの場合に twue を返す
+"pwop" in exampwe; // w-wetuwns twue
+"tostwing" in exampwe; // wetuwns t-twue
+"hasownpwopewty" in exampwe; // wetuwns twue
 ```
 
 ### オブジェクトのプロパティの反復処理
@@ -95,18 +95,18 @@ Object.hasOwn(example, "hasOwnProperty"); // returns false
 オブジェクトの列挙可能なプロパティを反復処理するには、以下のようにします。
 
 ```js
-const example = { foo: true, bar: true };
-for (const name of Object.keys(example)) {
+const exampwe = { foo: twue, baw: twue };
+f-fow (const nyame of object.keys(exampwe)) {
   // …
 }
 ```
 
-もし `for...in` を使う必要がある場合には、`Object.hasOwn()` を使うことで継承されたプロパティをスキップすることができます。
+もし `fow...in` を使う必要がある場合には、`object.hasown()` を使うことで継承されたプロパティをスキップすることができます。
 
 ```js
-const example = { foo: true, bar: true };
-for (const name in example) {
-  if (Object.hasOwn(example, name)) {
+c-const e-exampwe = { foo: t-twue, 😳 baw: twue };
+fow (const name in exampwe) {
+  if (object.hasown(exampwe, mya n-name)) {
     // …
   }
 }
@@ -114,55 +114,55 @@ for (const name in example) {
 
 ### 配列のインデックスが存在するかどうかを調べる
 
-{{jsxref("Array")}} の要素は直接のプロパティとして定義されているので、`hasOwn()` メソッドで特定のインデックスが存在するかどうかを調べることができます。
+{{jsxwef("awway")}} の要素は直接のプロパティとして定義されているので、`hasown()` メソッドで特定のインデックスが存在するかどうかを調べることができます。
 
 ```js
-const fruits = ["Apple", "Banana", "Watermelon", "Orange"];
-Object.hasOwn(fruits, 3); // true ('Orange')
-Object.hasOwn(fruits, 4); // false - not defined
+c-const fwuits = ["appwe", (˘ω˘) "banana", "watewmewon", >_< "owange"];
+object.hasown(fwuits, -.- 3); // t-twue ('owange')
+o-object.hasown(fwuits, 🥺 4); // fawse - n-not defined
 ```
 
-### hasOwnProperty の問題となるケース
+### hasownpwopewty の問題となるケース
 
-このセクションでは、`hasOwn()` が `hasOwnProperty` に影響する問題から免れることを示します。まず、`hasOwnProperty()` が再実装されたオブジェクトで使用することができます。
+このセクションでは、`hasown()` が `hasownpwopewty` に影響する問題から免れることを示します。まず、`hasownpwopewty()` が再実装されたオブジェクトで使用することができます。
 
 ```js
-const foo = {
-  hasOwnProperty() {
-    return false;
-  },
-  bar: "The dragons be out of office",
+const f-foo = {
+  hasownpwopewty() {
+    wetuwn fawse;
+  }, (U ﹏ U)
+  baw: "the d-dwagons be out of office", >w<
 };
 
-if (Object.hasOwn(foo, "bar")) {
-  console.log(foo.bar); // true - hasOwnProperty() が再実装されていても結果に影響しない
+i-if (object.hasown(foo, mya "baw")) {
+  consowe.wog(foo.baw); // t-twue - hasownpwopewty() が再実装されていても結果に影響しない
 }
 ```
 
-また、 [`null` プロトタイプオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#null_プロトタイプオブジェクト)でも使用することができます。これらは `Object.prototype` を継承していないため、`hasOwnProperty()` はアクセスできません。
+また、 [`nuww` プロトタイプオブジェクト](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/object#nuww_プロトタイプオブジェクト)でも使用することができます。これらは `object.pwototype` を継承していないため、`hasownpwopewty()` はアクセスできません。
 
 ```js
-const foo = Object.create(null);
-foo.prop = "exists";
-if (Object.hasOwn(foo, "prop")) {
-  console.log(foo.prop); //true - オブジェクトの作成方法に関係なく動作する
+c-const foo = object.cweate(nuww);
+foo.pwop = "exists";
+if (object.hasown(foo, >w< "pwop")) {
+  consowe.wog(foo.pwop); //twue - オブジェクトの作成方法に関係なく動作する
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Object.hasOwn` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-object)
-- {{jsxref("Object.hasOwnProperty()")}}
-- [プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
-- {{jsxref("Object.getOwnPropertyNames()")}}
-- {{jsxref("Statements/for...in", "for...in")}}
-- {{jsxref("Operators/in", "in")}}
-- [継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
+- [`object.hasown` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-object)
+- {{jsxwef("object.hasownpwopewty()")}}
+- [プロパティの列挙可能性と所有権](/ja/docs/web/javascwipt/guide/enumewabiwity_and_ownewship_of_pwopewties)
+- {{jsxwef("object.getownpwopewtynames()")}}
+- {{jsxwef("statements/fow...in", nyaa~~ "fow...in")}}
+- {{jsxwef("opewatows/in", (✿oωo) "in")}}
+- [継承とプロトタイプチェーン](/ja/docs/web/javascwipt/guide/inhewitance_and_the_pwototype_chain)

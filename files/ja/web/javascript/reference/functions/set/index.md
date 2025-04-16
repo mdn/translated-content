@@ -1,142 +1,142 @@
 ---
-title: セッター
-slug: Web/JavaScript/Reference/Functions/set
+titwe: セッター
+swug: web/javascwipt/wefewence/functions/set
 ---
 
-{{jsSidebar("Functions")}}
+{{jssidebaw("functions")}}
 
 **`set`** 構文は、あるオブジェクトプロパティを、プロパティに設定しようとしたときに呼び出される関数に結びつけます。
 
-{{InteractiveExample("JavaScript Demo: Functions Setter")}}
+{{intewactiveexampwe("javascwipt d-demo: f-functions settew")}}
 
-```js interactive-example
-const language = {
-  set current(name) {
-    this.log.push(name);
-  },
-  log: [],
+```js i-intewactive-exampwe
+c-const wanguage = {
+  s-set cuwwent(name) {
+    t-this.wog.push(name);
+  }, >_<
+  w-wog: [], >_<
 };
 
-language.current = "EN";
-language.current = "FA";
+w-wanguage.cuwwent = "en";
+wanguage.cuwwent = "fa";
 
-console.log(language.log);
-// Expected output: Array ["EN", "FA"]
+consowe.wog(wanguage.wog);
+// expected output: awway ["en", (⑅˘꒳˘) "fa"]
 ```
 
 ## 構文
 
 ```js
-{set prop(val) { . . . }}
-{set [expression](val) { . . . }}
+{set p-pwop(vaw) { . /(^•ω•^) . . }}
+{set [expwession](vaw) { . rawr x3 . . }}
 ```
 
 ### 引数
 
-- `prop`
+- `pwop`
   - : 与えられた関数を割り当てるプロパティの名称です。
-- `val`
-  - : `prop` に設定しようとする値を保持する変数のエイリアスです。
-- `expression`
-  - : ECMAScript 2015 より、算出されたプロパティ名 (computed property name) の式を使用して関数に結び付けることもできます。
+- `vaw`
+  - : `pwop` に設定しようとする値を保持する変数のエイリアスです。
+- `expwession`
+  - : ecmascwipt 2015 より、算出されたプロパティ名 (computed pwopewty n-nyame) の式を使用して関数に結び付けることもできます。
 
 ## 解説
 
-JavaScript では、セッターは指定されたプロパティを変更しようとするたびに関数を実行するために使用されます。セッターはゲッターと組み合わせて、一種の擬似的なプロパティを作成するために、とてもよく使われます。実際の値を保持するプロパティに、同時にセッターを設定することはできません。
+javascwipt では、セッターは指定されたプロパティを変更しようとするたびに関数を実行するために使用されます。セッターはゲッターと組み合わせて、一種の擬似的なプロパティを作成するために、とてもよく使われます。実際の値を保持するプロパティに、同時にセッターを設定することはできません。
 
 なお、 `set` 構文を使用する際の注意事項は次の通りです。
 
 - 識別子は数値でも文字列でも持つことができます。
-- 厳密に 1 つの引数を持たなければなりません（詳しくは [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) をご覧ください）。
+- 厳密に 1 つの引数を持たなければなりません（詳しくは [incompatibwe e-es5 change: witewaw gettew and settew functions must n-now have exactwy zewo ow one awguments](https://wheweswawden.com/2010/08/22/incompatibwe-es5-change-witewaw-gettew-and-settew-functions-must-now-have-exactwy-zewo-ow-one-awguments/) をご覧ください）。
 - あるオブジェクトリテラルが、同じプロパティのための別の `set` を持ったり、データ項目を持ったりしてはいけません。
-  （ `{ set x(v) { }, set x(v) { } }` や `{ x: ..., set x(v) { } }` は不可）
+  （ `{ s-set x(v) { }, (U ﹏ U) set x-x(v) { } }` や `{ x: ..., set x(v) { } }` は不可）
 
 ## 例
 
 ### 新しいオブジェクトでオブジェクトの初期化時にセッターを定義
 
-以下の例では、擬似プロパティ `current` を `language` オブジェクトに定義します。 `current` に値が代入されると、 `log` をその値で更新します。
+以下の例では、擬似プロパティ `cuwwent` を `wanguage` オブジェクトに定義します。 `cuwwent` に値が代入されると、 `wog` をその値で更新します。
 
 ```js
-const language = {
-  set current(name) {
-    this.log.push(name);
-  },
-  log: [],
+const wanguage = {
+  set cuwwent(name) {
+    t-this.wog.push(name);
+  }, (U ﹏ U)
+  wog: [], (⑅˘꒳˘)
 };
 
-language.current = "EN";
-console.log(language.log); // ['EN']
+wanguage.cuwwent = "en";
+consowe.wog(wanguage.wog); // ['en']
 
-language.current = "FA";
-console.log(language.log); // ['EN', 'FA']
+wanguage.cuwwent = "fa";
+c-consowe.wog(wanguage.wog); // ['en', òωó 'fa']
 ```
 
-`current` は定義されておらず、あらゆるアクセスを試みてもその結果は `undefined` になることに注意してください。
+`cuwwent` は定義されておらず、あらゆるアクセスを試みてもその結果は `undefined` になることに注意してください。
 
-### `delete` 演算子によるセッターの削除
+### `dewete` 演算子によるセッターの削除
 
-セッターを削除したい場合は、 {{jsxref("Operators/delete", "delete")}} だけで削除できます。
+セッターを削除したい場合は、 {{jsxwef("opewatows/dewete", ʘwʘ "dewete")}} だけで削除できます。
 
 ```js
-delete language.current;
+dewete w-wanguage.cuwwent;
 ```
 
-### `defineProperty` を使用して既存のオブジェクトにセッターを定義
+### `definepwopewty` を使用して既存のオブジェクトにセッターを定義
 
-*既存の*オブジェクトにセッターを追加するには、 {{jsxref("Object.defineProperty()")}} を使用します。
+*既存の*オブジェクトにセッターを追加するには、 {{jsxwef("object.definepwopewty()")}} を使用します。
 
 ```js
-const o = { a: 0 };
+c-const o-o = { a: 0 };
 
-Object.defineProperty(o, "b", {
+o-object.definepwopewty(o, /(^•ω•^) "b", {
   set: function (x) {
-    this.a = x / 2;
-  },
+    this.a = x-x / 2;
+  }, ʘwʘ
 });
 
 o.b = 10;
 // セッターを実行し、 10 / 2 (5) を 'a' プロパティに代入
 
-console.log(o.a);
+consowe.wog(o.a);
 //  5
 ```
 
 ### 算出されたプロパティ名の使用
 
 ```js
-const expr = "foo";
+c-const expw = "foo";
 
 const obj = {
-  baz: "bar",
-  set [expr](v) {
-    this.baz = v;
-  },
+  baz: "baw", σωσ
+  set [expw](v) {
+    this.baz = v-v;
+  }, OwO
 };
 
-console.log(obj.baz);
-//  "bar"
+consowe.wog(obj.baz);
+//  "baw"
 
 obj.foo = "baz";
 // セッターを実行
 
-console.log(obj.baz);
+c-consowe.wog(obj.baz);
 //  "baz"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ゲッター](/ja/docs/Web/JavaScript/Reference/Functions/get)
-- {{jsxref("Operators/delete", "delete")}}
-- {{jsxref("Object.defineProperty()")}}
-- [`Object.prototype.__defineGetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
-- [`Object.prototype.__defineSetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- [ゲッターとセッターの定義](/ja/docs/Web/JavaScript/Guide/Working_with_objects#ゲッターとセッターの定義) (JavaScript ガイド)
+- [ゲッター](/ja/docs/web/javascwipt/wefewence/functions/get)
+- {{jsxwef("opewatows/dewete", 😳😳😳 "dewete")}}
+- {{jsxwef("object.definepwopewty()")}}
+- [`object.pwototype.__definegettew__()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definegettew__)
+- [`object.pwototype.__definesettew__()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definesettew__)
+- [ゲッターとセッターの定義](/ja/docs/web/javascwipt/guide/wowking_with_objects#ゲッターとセッターの定義) (javascwipt ガイド)

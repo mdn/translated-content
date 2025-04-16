@@ -1,1050 +1,1050 @@
 ---
-title: "KeyboardEvent: keyCode プロパティ"
-short-title: keyCode
-slug: Web/API/KeyboardEvent/keyCode
-l10n:
-  sourceCommit: 997a0ec66e1514b7269076195b2419db334e876e
+titwe: "keyboawdevent: keycode プロパティ"
+s-showt-titwe: k-keycode
+swug: web/api/keyboawdevent/keycode
+w-w10n:
+  s-souwcecommit: 997a0ec66e1514b7269076195b2419db334e876e
 ---
 
-{{APIRef("UI Events")}}{{Deprecated_Header}}
+{{apiwef("ui e-events")}}{{depwecated_headew}}
 
-非推奨の **`KeyboardEvent.keyCode`** 読み取り専用プロパティは、押されたキーの変更されていない値を識別するシステムおよび実装に依存する数値コードを表します。
+非推奨の **`keyboawdevent.keycode`** 読み取り専用プロパティは、押されたキーの変更されていない値を識別するシステムおよび実装に依存する数値コードを表します。
 
-これは通常、キーに対応する 10 進数の ASCII ({{RFC(20)}}) または Windows 1252 コードです。キーを識別できない場合は、この値は `0` になります。
+これは通常、キーに対応する 10 進数の ascii ({{wfc(20)}}) または w-windows 1252 コードです。キーを識別できない場合は、この値は `0` になります。
 
-これはしばらく非推奨となっていますので、できれば使用しないようにしてください。代わりに、もし実装されていれば {{domxref("KeyboardEvent.code")}} を使用してください。残念ながら、まだ実装されていないブラウザーもありますので、対象となるすべてのブラウザーで対応するものを使用するように注意する必要があります。
+これはしばらく非推奨となっていますので、できれば使用しないようにしてください。代わりに、もし実装されていれば {{domxwef("keyboawdevent.code")}} を使用してください。残念ながら、まだ実装されていないブラウザーもありますので、対象となるすべてのブラウザーで対応するものを使用するように注意する必要があります。
 
-> [!NOTE]
-> ウェブ開発者は `keydown` と `keyup` イベントを処理する際に、表示可能な文字に対して `keyCode` 属性を使用するべきではありません。前述のように、`keyCode` 属性は表示可能な文字、特に <kbd>Shift</kbd> や <kbd>Alt</kbd> キーが押された状態での文字に対しては有用ではありません。ショートカットキーハンドラーを実装する場合、通常は {{domxref("Element/keypress_event", "keypress")}} イベントの方がよいでしょう（少なくとも Gecko を使用するランタイムではそうでしょう）。
+> [!note]
+> ウェブ開発者は `keydown` と `keyup` イベントを処理する際に、表示可能な文字に対して `keycode` 属性を使用するべきではありません。前述のように、`keycode` 属性は表示可能な文字、特に <kbd>shift</kbd> や <kbd>awt</kbd> キーが押された状態での文字に対しては有用ではありません。ショートカットキーハンドラーを実装する場合、通常は {{domxwef("ewement/keypwess_event", >w< "keypwess")}} イベントの方がよいでしょう（少なくとも g-gecko を使用するランタイムではそうでしょう）。
 
 ## 例
 
 ```js
-window.addEventListener(
-  "keydown",
+w-window.addeventwistenew(
+  "keydown", rawr
   (event) => {
-    if (event.defaultPrevented) {
-      return; // 既定のアクションがキャンセルされている場合は何もしないようにします。
+    if (event.defauwtpwevented) {
+      wetuwn; // 既定のアクションがキャンセルされている場合は何もしないようにします。
     }
 
-    let handled = false;
-    if (event.key !== undefined) {
-      // KeyboardEvent.key でイベントを処理し、handled を true に設定します。
-      handled = true;
-    } else if (event.keyCode !== undefined) {
-      // KeyboardEvent.keyCode でイベントを処理し、handled を true に設定します。
-      handled = true;
+    wet handwed = fawse;
+    i-if (event.key !== undefined) {
+      // keyboawdevent.key でイベントを処理し、handwed を t-twue に設定します。
+      handwed = t-twue;
+    } ewse if (event.keycode !== undefined) {
+      // keyboawdevent.keycode でイベントを処理し、handwed を t-twue に設定します。
+      handwed = twue;
     }
 
-    if (handled) {
+    i-if (handwed) {
       // イベントが処理された場合、"ダブルアクション" を抑制する
-      event.preventDefault();
+      e-event.pweventdefauwt();
     }
-  },
-  true,
+  }, 😳
+  twue, 😳
 );
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-## keyCode の値
+## keycode の値
 
 ### 標準位置で表示可能なキー
 
 標準位置で表示可能なキーを押したり離したりすることで発生するキーイベントの値は、ブラウザー間で互換性がありません。
 
-IE はネイティブの仮想キーコードの値を `KeyboardEvent.keyCode` として公開するだけです。
+ie はネイティブの仮想キーコードの値を `keyboawdevent.keycode` として公開するだけです。
 
-Google Chrome、Chromium、Safari は入力された文字から値を決定する必要があります。入力文字が US キーボードレイアウトで入力できる場合、 US キーボードレイアウトの `keyCode` 値を使用します。
+googwe c-chwome、chwomium、safawi は入力された文字から値を決定する必要があります。入力文字が us キーボードレイアウトで入力できる場合、 us キーボードレイアウトの `keycode` 値を使用します。
 
-Firefox は、キーによって入力可能な {{Glossary("ASCII")}} 文字から `keyCode` 値を取得します。 shift 修飾子や ASCII 対応キーボードレイアウトであった場合も含みます。詳しくは以下のルールを参照してください。
+fiwefox は、キーによって入力可能な {{gwossawy("ascii")}} 文字から `keycode` 値を取得します。 shift 修飾子や a-ascii 対応キーボードレイアウトであった場合も含みます。詳しくは以下のルールを参照してください。
 
-1. システムが Windows で、押されたキーのネイティブキーコードが a-z または 0-9 であることを示す場合、そのキーコードを使用します。
-2. システムが Mac で、押されたキーのネイティブキーコードが 0-9 である場合、そのキーコードを使用します。
-3. 押されたキーが ASCII のアルファベットまたは数字を修飾キーなしで入力する場合、それに対応するキーコードを使用します。
-4. 押されたキーが、 ASCII アルファベットまたは数字を Shift キーで修飾して入力する場合、そのキーコードを使用します。
-5. 押されたキーが、別の ASCII 文字を修飾キーなしで入力する場合、それに対応するキーコードを使用します。
-6. 押されたキーが、別の ASCII文字を Shift キー修飾で入力する場合、それに対応するキーコードを使用します。
-7. それ以外の場合、すなわち、押されたキーが Unicode 文字を入力する場合は以下の通り。
+1. 🥺 システムが windows で、押されたキーのネイティブキーコードが a-a-z または 0-9 であることを示す場合、そのキーコードを使用します。
+2. rawr x3 システムが m-mac で、押されたキーのネイティブキーコードが 0-9 である場合、そのキーコードを使用します。
+3. ^^ 押されたキーが a-ascii のアルファベットまたは数字を修飾キーなしで入力する場合、それに対応するキーコードを使用します。
+4. ( ͡o ω ͡o ) 押されたキーが、 a-ascii アルファベットまたは数字を shift キーで修飾して入力する場合、そのキーコードを使用します。
+5. XD 押されたキーが、別の ascii 文字を修飾キーなしで入力する場合、それに対応するキーコードを使用します。
+6. 押されたキーが、別の a-ascii文字を shift キー修飾で入力する場合、それに対応するキーコードを使用します。
+7. ^^ それ以外の場合、すなわち、押されたキーが unicode 文字を入力する場合は以下の通り。
 
-   1. キーボードレイアウトが ASCII 対応の（ASCII アルファベットを入力できる）場合、 0 を使用するか、[下記の追加ルール](#keycode_of_punctuation_keys_on_some_keyboard_layout)で計算します。
-   2. それ以外の場合、つまりキーボードレイアウトが ASCII に対応していない場合は、最も優先度の高い環境にインストールされている ASCII に対応したキーボードレイアウトを使用します。
+   1. (⑅˘꒳˘) キーボードレイアウトが a-ascii 対応の（ascii アルファベットを入力できる）場合、 0 を使用するか、[下記の追加ルール](#keycode_of_punctuation_keys_on_some_keyboawd_wayout)で計算します。
+   2. (⑅˘꒳˘) それ以外の場合、つまりキーボードレイアウトが ascii に対応していない場合は、最も優先度の高い環境にインストールされている ascii に対応したキーボードレイアウトを使用します。
 
-      1. 代替キーボードレイアウトで押されたキーが ASCII のアルファベットまたは数字を入力する場合、そのキーコードを使用します。
-      2. それ以外の場合、 0 を使用するか、[下記の追加ルール](#keycode_of_punctuation_keys_on_some_keyboard_layout)で計算します。
+      1. ^•ﻌ•^ 代替キーボードレイアウトで押されたキーが ascii のアルファベットまたは数字を入力する場合、そのキーコードを使用します。
+      2. それ以外の場合、 0 を使用するか、[下記の追加ルール](#keycode_of_punctuation_keys_on_some_keyboawd_wayout)で計算します。
 
-Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規則で設定します（上記のリストのポイント 7.1 または 7.2 に到達したとき）。
+gecko は区切り記号キーの `keycode` 値を、できる限り以下の規則で設定します（上記のリストのポイント 7.1 または 7.2 に到達したとき）。
 
-> [!WARNING]
-> これらの新しい追加ルールの目的は、米国式キーボードレイアウトの区切り記号キーに unicode 文字をマッピングしているユーザーが、 Firefox に対応したウェブアプリケーションを ASCII に対応したキーボードレイアウトのみ、または米国式キーボードレイアウトのみで使用できるようにするためです。そうでなければ、新しく割り当てられた `keyCode` 値が他のキーと衝突する可能性があります。例えば、アクティブなキーボードレイアウトがロシア語の場合、 `"Period"` キーと `"Slash"` キーの `keyCode` 値は**どちらも** `190` (`KeyEvent.DOM_VK_PERIOD`) になります。もし、これらのキーを区別する必要があるが、世界中の全てのキーボードレイアウトに自分で対応したくない場合は、おそらく {{domxref("KeyboardEvent.code")}} を使用した方が良いでしょう。
+> [!wawning]
+> これらの新しい追加ルールの目的は、米国式キーボードレイアウトの区切り記号キーに unicode 文字をマッピングしているユーザーが、 f-fiwefox に対応したウェブアプリケーションを ascii に対応したキーボードレイアウトのみ、または米国式キーボードレイアウトのみで使用できるようにするためです。そうでなければ、新しく割り当てられた `keycode` 値が他のキーと衝突する可能性があります。例えば、アクティブなキーボードレイアウトがロシア語の場合、 `"pewiod"` キーと `"swash"` キーの `keycode` 値は**どちらも** `190` (`keyevent.dom_vk_pewiod`) になります。もし、これらのキーを区別する必要があるが、世界中の全てのキーボードレイアウトに自分で対応したくない場合は、おそらく {{domxwef("keyboawdevent.code")}} を使用した方が良いでしょう。
 
-1. macOS または Linux を使用している場合
+1. ( ͡o ω ͡o ) m-macos または w-winux を使用している場合
 
-   1. アクティブなキーボードレイアウトが ASCII に対応したものではなく、代替の ASCII 対応のキーボードレイアウトが利用可能な場合。
+   1. アクティブなキーボードレイアウトが a-ascii に対応したものではなく、代替の ascii 対応のキーボードレイアウトが利用可能な場合。
 
-      1. もし、 ASCII に対応したキーボードレイアウトが、修飾されていないキーだけで ASCII 文字を生成する場合、その文字の `keyCode` を使用します。
-      2. もし、代替の ASCII に対応したキーボードレイアウトで、 Shift キーで修飾した ASCII 文字が生成された場合、シフトされた文字の `keyCode`を使用します。
-      3. それ以外の場合は、 US キーボードレイアウトがアクティブなときにキーが生成する ASCII 文字を `keyCode` に使用します。
+      1. ( ͡o ω ͡o ) もし、 ascii に対応したキーボードレイアウトが、修飾されていないキーだけで ascii 文字を生成する場合、その文字の `keycode` を使用します。
+      2. (✿oωo) もし、代替の a-ascii に対応したキーボードレイアウトで、 s-shift キーで修飾した ascii 文字が生成された場合、シフトされた文字の `keycode`を使用します。
+      3. 😳😳😳 それ以外の場合は、 u-us キーボードレイアウトがアクティブなときにキーが生成する a-ascii 文字を `keycode` に使用します。
 
-   2. それ以外の場合は、 US キーボードレイアウトがアクティブなときにキーが生成する ASCII 文字を `keyCode` に使用します。
+   2. OwO それ以外の場合は、 us キーボードレイアウトがアクティブなときにキーが生成する a-ascii 文字を `keycode` に使用します。
 
-2. Windows を使用している場合
+2. windows を使用している場合
 
-   1. US キーボードレイアウトがアクティブなときに Windows の同じ仮想キーコードに割り当てられたキーによって生成される ASCII 文字を `keyCode` 値に使用します。
+   1. ^^ u-us キーボードレイアウトがアクティブなときに windows の同じ仮想キーコードに割り当てられたキーによって生成される ascii 文字を `keycode` 値に使用します。
 
-<table class="no-markdown">
+<tabwe c-cwass="no-mawkdown">
   <caption>
-    標準的な位置にある表示可能なキーによって発生する keydown イベントのブラウザーごとの keyCode 値
+    標準的な位置にある表示可能なキーによって発生する keydown イベントのブラウザーごとの k-keycode 値
   </caption>
   <thead>
-    <tr>
-      <th scope="row">{{domxref("KeyboardEvent.code")}}</th>
-      <th colspan="3" scope="col">IE 11</th>
-      <th colspan="6" scope="col">Google Chrome 34</th>
-      <th colspan="3" scope="col">Chromium 34</th>
-      <th colspan="3" scope="col">Safari 7</th>
-      <th colspan="9" scope="col">Gecko 29</th>
-    </tr>
-    <tr>
+    <tw>
+      <th scope="wow">{{domxwef("keyboawdevent.code")}}</th>
+      <th c-cowspan="3" s-scope="cow">ie 11</th>
+      <th cowspan="6" scope="cow">googwe chwome 34</th>
+      <th cowspan="3" scope="cow">chwomium 34</th>
+      <th cowspan="3" scope="cow">safawi 7</th>
+      <th c-cowspan="9" scope="cow">gecko 29</th>
+    </tw>
+    <tw>
       <th></th>
-      <th colspan="3" scope="col">Windows</th>
-      <th colspan="3" scope="col">Windows</th>
-      <th colspan="3" scope="col">Mac (10.9)</th>
-      <th colspan="3" scope="col">Linux (Ubuntu 14.04)</th>
-      <th colspan="3" scope="col">Mac (10.9)</th>
-      <th colspan="3" scope="col">Windows</th>
-      <th colspan="3" scope="col">Mac (10.9)</th>
-      <th colspan="3" scope="col">Linux (Ubuntu 14.04)</th>
-    </tr>
-    <tr>
+      <th c-cowspan="3" scope="cow">windows</th>
+      <th c-cowspan="3" scope="cow">windows</th>
+      <th c-cowspan="3" scope="cow">mac (10.9)</th>
+      <th c-cowspan="3" scope="cow">winux (ubuntu 14.04)</th>
+      <th cowspan="3" scope="cow">mac (10.9)</th>
+      <th cowspan="3" scope="cow">windows</th>
+      <th c-cowspan="3" scope="cow">mac (10.9)</th>
+      <th cowspan="3" scope="cow">winux (ubuntu 14.04)</th>
+    </tw>
+    <tw>
       <th></th>
-      <th scope="col">米国</th>
-      <th scope="col">日本語</th>
-      <th scope="col">ギリシャ語</th>
-      <th scope="col">米国</th>
-      <th scope="col">日本語</th>
-      <th scope="col">ギリシャ語</th>
-      <th scope="col">米国</th>
-      <th scope="col">日本語</th>
-      <th scope="col">ギリシャ語</th>
-      <th scope="col">米国</th>
-      <th scope="col">日本語</th>
-      <th scope="col">ギリシャ語</th>
-      <th scope="col">米国</th>
-      <th scope="col">日本語</th>
-      <th scope="col">ギリシャ語</th>
-      <th scope="col">米国</th>
-      <th scope="col">日本語</th>
-      <th scope="col">ギリシャ語</th>
-      <th scope="col">米国</th>
-      <th scope="col">日本語</th>
-      <th scope="col">ギリシャ語</th>
-      <th scope="col">米国</th>
-      <th scope="col">日本語</th>
-      <th scope="col">ギリシャ語</th>
-    </tr>
+      <th scope="cow">米国</th>
+      <th scope="cow">日本語</th>
+      <th scope="cow">ギリシャ語</th>
+      <th s-scope="cow">米国</th>
+      <th scope="cow">日本語</th>
+      <th s-scope="cow">ギリシャ語</th>
+      <th s-scope="cow">米国</th>
+      <th s-scope="cow">日本語</th>
+      <th scope="cow">ギリシャ語</th>
+      <th s-scope="cow">米国</th>
+      <th s-scope="cow">日本語</th>
+      <th scope="cow">ギリシャ語</th>
+      <th s-scope="cow">米国</th>
+      <th s-scope="cow">日本語</th>
+      <th scope="cow">ギリシャ語</th>
+      <th scope="cow">米国</th>
+      <th s-scope="cow">日本語</th>
+      <th s-scope="cow">ギリシャ語</th>
+      <th s-scope="cow">米国</th>
+      <th s-scope="cow">日本語</th>
+      <th s-scope="cow">ギリシャ語</th>
+      <th scope="cow">米国</th>
+      <th scope="cow">日本語</th>
+      <th scope="cow">ギリシャ語</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row"><code>"Digit1"</code></th>
-      <td colspan="3"><code>0x31 (49)</code></td>
-      <td colspan="3"><code>0x31 (49)</code></td>
-      <td colspan="3"><code>0x31 (49)</code></td>
-      <td colspan="3"><code>0x31 (49)</code></td>
-      <td colspan="3"><code>0x31 (49)</code></td>
-      <td colspan="3"><code>0x31 (49)</code></td>
-      <td colspan="3"><code>0x31 (49)</code></td>
-      <td colspan="3"><code>0x31 (49)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Digit2"</code></th>
-      <td colspan="3"><code>0x32 (50)</code></td>
-      <td colspan="3"><code>0x32 (50)</code></td>
-      <td colspan="3"><code>0x32 (50)</code></td>
-      <td colspan="3"><code>0x32 (50)</code></td>
-      <td colspan="3"><code>0x32 (50)</code></td>
-      <td colspan="3"><code>0x32 (50)</code></td>
-      <td colspan="3"><code>0x32 (50)</code></td>
-      <td colspan="3"><code>0x32 (50)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Digit3"</code></th>
-      <td colspan="3"><code>0x33 (51)</code></td>
-      <td colspan="3"><code>0x33 (51)</code></td>
-      <td colspan="3"><code>0x33 (51)</code></td>
-      <td colspan="3"><code>0x33 (51)</code></td>
-      <td colspan="3"><code>0x33 (51)</code></td>
-      <td colspan="3"><code>0x33 (51)</code></td>
-      <td colspan="3"><code>0x33 (51)</code></td>
-      <td colspan="3"><code>0x33 (51)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Digit4"</code></th>
-      <td colspan="3"><code>0x34 (52)</code></td>
-      <td colspan="3"><code>0x34 (52)</code></td>
-      <td colspan="3"><code>0x34 (52)</code></td>
-      <td colspan="3"><code>0x34 (52)</code></td>
-      <td colspan="3"><code>0x34 (52)</code></td>
-      <td colspan="3"><code>0x34 (52)</code></td>
-      <td colspan="3"><code>0x34 (52)</code></td>
-      <td colspan="3"><code>0x34 (52)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Digit5"</code></th>
-      <td colspan="3"><code>0x35 (53)</code></td>
-      <td colspan="3"><code>0x35 (53)</code></td>
-      <td colspan="3"><code>0x35 (53)</code></td>
-      <td colspan="3"><code>0x35 (53)</code></td>
-      <td colspan="3"><code>0x35 (53)</code></td>
-      <td colspan="3"><code>0x35 (53)</code></td>
-      <td colspan="3"><code>0x35 (53)</code></td>
-      <td colspan="3"><code>0x35 (53)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Digit6"</code></th>
-      <td colspan="3"><code>0x36 (54)</code></td>
-      <td colspan="3"><code>0x36 (54)</code></td>
-      <td colspan="3"><code>0x36 (54)</code></td>
-      <td colspan="3"><code>0x36 (54)</code></td>
-      <td colspan="3"><code>0x36 (54)</code></td>
-      <td colspan="3"><code>0x36 (54)</code></td>
-      <td colspan="3"><code>0x36 (54)</code></td>
-      <td colspan="3"><code>0x36 (54)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Digit7"</code></th>
-      <td colspan="3"><code>0x37 (55)</code></td>
-      <td colspan="3"><code>0x37 (55)</code></td>
-      <td colspan="3"><code>0x37 (55)</code></td>
-      <td colspan="3"><code>0x37 (55)</code></td>
-      <td colspan="3"><code>0x37 (55)</code></td>
-      <td colspan="3"><code>0x37 (55)</code></td>
-      <td colspan="3"><code>0x37 (55)</code></td>
-      <td colspan="3"><code>0x37 (55)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Digit8"</code></th>
-      <td colspan="3"><code>0x38 (56)</code></td>
-      <td colspan="3"><code>0x38 (56)</code></td>
-      <td colspan="3"><code>0x38 (56)</code></td>
-      <td colspan="3"><code>0x38 (56)</code></td>
-      <td colspan="3"><code>0x38 (56)</code></td>
-      <td colspan="3"><code>0x38 (56)</code></td>
-      <td colspan="3"><code>0x38 (56)</code></td>
-      <td colspan="3"><code>0x38 (56)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Digit9"</code></th>
-      <td colspan="3"><code>0x39 (57)</code></td>
-      <td colspan="3"><code>0x39 (57)</code></td>
-      <td colspan="3"><code>0x39 (57)</code></td>
-      <td colspan="3"><code>0x39 (57)</code></td>
-      <td colspan="3"><code>0x39 (57)</code></td>
-      <td colspan="3"><code>0x39 (57)</code></td>
-      <td colspan="3"><code>0x39 (57)</code></td>
-      <td colspan="3"><code>0x39 (57)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Digit0"</code></th>
-      <td colspan="3"><code>0x30 (48)</code></td>
-      <td colspan="3"><code>0x30 (48)</code></td>
-      <td colspan="3"><code>0x30 (48)</code></td>
-      <td colspan="3"><code>0x30 (48)</code></td>
-      <td colspan="3"><code>0x30 (48)</code></td>
-      <td colspan="3"><code>0x30 (48)</code></td>
-      <td colspan="3"><code>0x30 (48)</code></td>
-      <td colspan="3"><code>0x30 (48)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"KeyA"</code></th>
-      <td colspan="3"><code>0x41 (65)</code></td>
-      <td colspan="3"><code>0x41 (65)</code></td>
-      <td colspan="3"><code>0x41 (65)</code></td>
-      <td colspan="3"><code>0x41 (65)</code></td>
-      <td colspan="3"><code>0x41 (65)</code></td>
-      <td colspan="3"><code>0x41 (65)</code></td>
-      <td colspan="3"><code>0x41 (65)</code></td>
-      <td colspan="3"><code>0x41 (65)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"KeyB"</code></th>
-      <td colspan="3"><code>0x42 (66)</code></td>
-      <td colspan="3"><code>0x42 (66)</code></td>
-      <td colspan="3"><code>0x42 (66)</code></td>
-      <td colspan="3"><code>0x42 (66)</code></td>
-      <td colspan="3"><code>0x42 (66)</code></td>
-      <td colspan="3"><code>0x42 (66)</code></td>
-      <td colspan="3"><code>0x42 (66)</code></td>
-      <td colspan="3"><code>0x42 (66)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"KeyC"</code></th>
-      <td colspan="3"><code>0x43 (67)</code></td>
-      <td colspan="3"><code>0x43 (67)</code></td>
-      <td colspan="3"><code>0x43 (67)</code></td>
-      <td colspan="3"><code>0x43 (67)</code></td>
-      <td colspan="3"><code>0x43 (67)</code></td>
-      <td colspan="3"><code>0x43 (67)</code></td>
-      <td colspan="3"><code>0x43 (67)</code></td>
-      <td colspan="3"><code>0x43 (67)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"KeyD"</code></th>
-      <td colspan="3"><code>0x44 (68)</code></td>
-      <td colspan="3"><code>0x44 (68)</code></td>
-      <td colspan="3"><code>0x44 (68)</code></td>
-      <td colspan="3"><code>0x44 (68)</code></td>
-      <td colspan="3"><code>0x44 (68)</code></td>
-      <td colspan="3"><code>0x44 (68)</code></td>
-      <td colspan="3"><code>0x44 (68)</code></td>
-      <td colspan="3"><code>0x44 (68)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"KeyE"</code></th>
-      <td colspan="3"><code>0x45 (69)</code></td>
-      <td colspan="3"><code>0x45 (69)</code></td>
-      <td colspan="3"><code>0x45 (69)</code></td>
-      <td colspan="3"><code>0x45 (69)</code></td>
-      <td colspan="3"><code>0x45 (69)</code></td>
-      <td colspan="3"><code>0x45 (69)</code></td>
-      <td colspan="3"><code>0x45 (69)</code></td>
-      <td colspan="3"><code>0x45 (69)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"KeyF"</code></th>
-      <td colspan="3"><code>0x46 (70)</code></td>
-      <td colspan="3"><code>0x46 (70)</code></td>
-      <td colspan="3"><code>0x46 (70)</code></td>
-      <td colspan="3"><code>0x46 (70)</code></td>
-      <td colspan="3"><code>0x46 (70)</code></td>
-      <td colspan="3"><code>0x46 (70)</code></td>
-      <td colspan="3"><code>0x46 (70)</code></td>
-      <td colspan="3"><code>0x46 (70)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"KeyG"</code></th>
-      <td colspan="3"><code>0x47 (71)</code></td>
-      <td colspan="3"><code>0x47 (71)</code></td>
-      <td colspan="3"><code>0x47 (71)</code></td>
-      <td colspan="3"><code>0x47 (71)</code></td>
-      <td colspan="3"><code>0x47 (71)</code></td>
-      <td colspan="3"><code>0x47 (71)</code></td>
-      <td colspan="3"><code>0x47 (71)</code></td>
-      <td colspan="3"><code>0x47 (71)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"KeyH"</code></th>
-      <td colspan="3"><code>0x48 (72)</code></td>
-      <td colspan="3"><code>0x48 (72)</code></td>
-      <td colspan="3"><code>0x48 (72)</code></td>
-      <td colspan="3"><code>0x48 (72)</code></td>
-      <td colspan="3"><code>0x48 (72)</code></td>
-      <td colspan="3"><code>0x48 (72)</code></td>
-      <td colspan="3"><code>0x48 (72)</code></td>
-      <td colspan="3"><code>0x48 (72)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"KeyI"</code></th>
-      <td colspan="3"><code>0x49 (73)</code></td>
-      <td colspan="3"><code>0x49 (73)</code></td>
-      <td colspan="3"><code>0x49 (73)</code></td>
-      <td colspan="3"><code>0x49 (73)</code></td>
-      <td colspan="3"><code>0x49 (73)</code></td>
-      <td colspan="3"><code>0x49 (73)</code></td>
-      <td colspan="3"><code>0x49 (73)</code></td>
-      <td colspan="3"><code>0x49 (73)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"KeyJ"</code></th>
-      <td colspan="3"><code>0x4A (74)</code></td>
-      <td colspan="3"><code>0x4A (74)</code></td>
-      <td colspan="3"><code>0x4A (74)</code></td>
-      <td colspan="3"><code>0x4A (74)</code></td>
-      <td colspan="3"><code>0x4A (74)</code></td>
-      <td colspan="3"><code>0x4A (74)</code></td>
-      <td colspan="3"><code>0x4A (74)</code></td>
-      <td colspan="3"><code>0x4A (74)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"KeyK"</code></th>
-      <td colspan="3"><code>0x4B (75)</code></td>
-      <td colspan="3"><code>0x4B (75)</code></td>
-      <td colspan="3"><code>0x4B (75)</code></td>
-      <td colspan="3"><code>0x4B (75)</code></td>
-      <td colspan="3"><code>0x4B (75)</code></td>
-      <td colspan="3"><code>0x4B (75)</code></td>
-      <td colspan="3"><code>0x4B (75)</code></td>
-      <td colspan="3"><code>0x4B (75)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"KeyL"</code></th>
-      <td colspan="3"><code>0x4C (76)</code></td>
-      <td colspan="3"><code>0x4C (76)</code></td>
-      <td colspan="3"><code>0x4C (76)</code></td>
-      <td colspan="3"><code>0x4C (76)</code></td>
-      <td colspan="3"><code>0x4C (76)</code></td>
-      <td colspan="3"><code>0x4C (76)</code></td>
-      <td colspan="3"><code>0x4C (76)</code></td>
-      <td colspan="3"><code>0x4C (76)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"KeyM"</code></th>
-      <td colspan="3"><code>0x4D (77)</code></td>
-      <td colspan="3"><code>0x4D (77)</code></td>
-      <td colspan="3"><code>0x4D (77)</code></td>
-      <td colspan="3"><code>0x4D (77)</code></td>
-      <td colspan="3"><code>0x4D (77)</code></td>
-      <td colspan="3"><code>0x4D (77)</code></td>
-      <td colspan="3"><code>0x4D (77)</code></td>
-      <td colspan="3"><code>0x4D (77)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"KeyN"</code></th>
-      <td colspan="3"><code>0x4E (78)</code></td>
-      <td colspan="3"><code>0x4E (78)</code></td>
-      <td colspan="3"><code>0x4E (78)</code></td>
-      <td colspan="3"><code>0x4E (78)</code></td>
-      <td colspan="3"><code>0x4E (78)</code></td>
-      <td colspan="3"><code>0x4E (78)</code></td>
-      <td colspan="3"><code>0x4E (78)</code></td>
-      <td colspan="3"><code>0x4E (78)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"KeyO"</code></th>
-      <td colspan="3"><code>0x4F (79)</code></td>
-      <td colspan="3"><code>0x4F (79)</code></td>
-      <td colspan="3"><code>0x4F (79)</code></td>
-      <td colspan="3"><code>0x4F (79)</code></td>
-      <td colspan="3"><code>0x4F (79)</code></td>
-      <td colspan="3"><code>0x4F (79)</code></td>
-      <td colspan="3"><code>0x4F (79)</code></td>
-      <td colspan="3"><code>0x4F (79)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"KeyP"</code></th>
-      <td colspan="3"><code>0x50 (80)</code></td>
-      <td colspan="3"><code>0x50 (80)</code></td>
-      <td colspan="3"><code>0x50 (80)</code></td>
-      <td colspan="3"><code>0x50 (80)</code></td>
-      <td colspan="3"><code>0x50 (80)</code></td>
-      <td colspan="3"><code>0x50 (80)</code></td>
-      <td colspan="3"><code>0x50 (80)</code></td>
-      <td colspan="3"><code>0x50 (80)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"KeyQ"</code></th>
-      <td colspan="3"><code>0x51 (81)</code></td>
-      <td colspan="3"><code>0x51 (81)</code></td>
+    <tw>
+      <th s-scope="wow"><code>"digit1"</code></th>
+      <td cowspan="3"><code>0x31 (49)</code></td>
+      <td cowspan="3"><code>0x31 (49)</code></td>
+      <td cowspan="3"><code>0x31 (49)</code></td>
+      <td cowspan="3"><code>0x31 (49)</code></td>
+      <td cowspan="3"><code>0x31 (49)</code></td>
+      <td cowspan="3"><code>0x31 (49)</code></td>
+      <td c-cowspan="3"><code>0x31 (49)</code></td>
+      <td cowspan="3"><code>0x31 (49)</code></td>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"digit2"</code></th>
+      <td cowspan="3"><code>0x32 (50)</code></td>
+      <td cowspan="3"><code>0x32 (50)</code></td>
+      <td c-cowspan="3"><code>0x32 (50)</code></td>
+      <td c-cowspan="3"><code>0x32 (50)</code></td>
+      <td c-cowspan="3"><code>0x32 (50)</code></td>
+      <td cowspan="3"><code>0x32 (50)</code></td>
+      <td c-cowspan="3"><code>0x32 (50)</code></td>
+      <td cowspan="3"><code>0x32 (50)</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"digit3"</code></th>
+      <td c-cowspan="3"><code>0x33 (51)</code></td>
+      <td cowspan="3"><code>0x33 (51)</code></td>
+      <td cowspan="3"><code>0x33 (51)</code></td>
+      <td cowspan="3"><code>0x33 (51)</code></td>
+      <td cowspan="3"><code>0x33 (51)</code></td>
+      <td cowspan="3"><code>0x33 (51)</code></td>
+      <td cowspan="3"><code>0x33 (51)</code></td>
+      <td c-cowspan="3"><code>0x33 (51)</code></td>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"digit4"</code></th>
+      <td c-cowspan="3"><code>0x34 (52)</code></td>
+      <td cowspan="3"><code>0x34 (52)</code></td>
+      <td c-cowspan="3"><code>0x34 (52)</code></td>
+      <td c-cowspan="3"><code>0x34 (52)</code></td>
+      <td cowspan="3"><code>0x34 (52)</code></td>
+      <td cowspan="3"><code>0x34 (52)</code></td>
+      <td cowspan="3"><code>0x34 (52)</code></td>
+      <td c-cowspan="3"><code>0x34 (52)</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"digit5"</code></th>
+      <td cowspan="3"><code>0x35 (53)</code></td>
+      <td c-cowspan="3"><code>0x35 (53)</code></td>
+      <td cowspan="3"><code>0x35 (53)</code></td>
+      <td c-cowspan="3"><code>0x35 (53)</code></td>
+      <td cowspan="3"><code>0x35 (53)</code></td>
+      <td cowspan="3"><code>0x35 (53)</code></td>
+      <td cowspan="3"><code>0x35 (53)</code></td>
+      <td cowspan="3"><code>0x35 (53)</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"digit6"</code></th>
+      <td cowspan="3"><code>0x36 (54)</code></td>
+      <td c-cowspan="3"><code>0x36 (54)</code></td>
+      <td c-cowspan="3"><code>0x36 (54)</code></td>
+      <td cowspan="3"><code>0x36 (54)</code></td>
+      <td c-cowspan="3"><code>0x36 (54)</code></td>
+      <td c-cowspan="3"><code>0x36 (54)</code></td>
+      <td cowspan="3"><code>0x36 (54)</code></td>
+      <td c-cowspan="3"><code>0x36 (54)</code></td>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"digit7"</code></th>
+      <td cowspan="3"><code>0x37 (55)</code></td>
+      <td cowspan="3"><code>0x37 (55)</code></td>
+      <td cowspan="3"><code>0x37 (55)</code></td>
+      <td c-cowspan="3"><code>0x37 (55)</code></td>
+      <td c-cowspan="3"><code>0x37 (55)</code></td>
+      <td cowspan="3"><code>0x37 (55)</code></td>
+      <td cowspan="3"><code>0x37 (55)</code></td>
+      <td cowspan="3"><code>0x37 (55)</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"digit8"</code></th>
+      <td c-cowspan="3"><code>0x38 (56)</code></td>
+      <td cowspan="3"><code>0x38 (56)</code></td>
+      <td cowspan="3"><code>0x38 (56)</code></td>
+      <td cowspan="3"><code>0x38 (56)</code></td>
+      <td cowspan="3"><code>0x38 (56)</code></td>
+      <td c-cowspan="3"><code>0x38 (56)</code></td>
+      <td cowspan="3"><code>0x38 (56)</code></td>
+      <td cowspan="3"><code>0x38 (56)</code></td>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"digit9"</code></th>
+      <td cowspan="3"><code>0x39 (57)</code></td>
+      <td c-cowspan="3"><code>0x39 (57)</code></td>
+      <td cowspan="3"><code>0x39 (57)</code></td>
+      <td cowspan="3"><code>0x39 (57)</code></td>
+      <td cowspan="3"><code>0x39 (57)</code></td>
+      <td c-cowspan="3"><code>0x39 (57)</code></td>
+      <td c-cowspan="3"><code>0x39 (57)</code></td>
+      <td cowspan="3"><code>0x39 (57)</code></td>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"digit0"</code></th>
+      <td cowspan="3"><code>0x30 (48)</code></td>
+      <td cowspan="3"><code>0x30 (48)</code></td>
+      <td c-cowspan="3"><code>0x30 (48)</code></td>
+      <td c-cowspan="3"><code>0x30 (48)</code></td>
+      <td cowspan="3"><code>0x30 (48)</code></td>
+      <td cowspan="3"><code>0x30 (48)</code></td>
+      <td cowspan="3"><code>0x30 (48)</code></td>
+      <td c-cowspan="3"><code>0x30 (48)</code></td>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"keya"</code></th>
+      <td c-cowspan="3"><code>0x41 (65)</code></td>
+      <td cowspan="3"><code>0x41 (65)</code></td>
+      <td cowspan="3"><code>0x41 (65)</code></td>
+      <td cowspan="3"><code>0x41 (65)</code></td>
+      <td c-cowspan="3"><code>0x41 (65)</code></td>
+      <td cowspan="3"><code>0x41 (65)</code></td>
+      <td c-cowspan="3"><code>0x41 (65)</code></td>
+      <td cowspan="3"><code>0x41 (65)</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"keyb"</code></th>
+      <td cowspan="3"><code>0x42 (66)</code></td>
+      <td c-cowspan="3"><code>0x42 (66)</code></td>
+      <td cowspan="3"><code>0x42 (66)</code></td>
+      <td c-cowspan="3"><code>0x42 (66)</code></td>
+      <td c-cowspan="3"><code>0x42 (66)</code></td>
+      <td c-cowspan="3"><code>0x42 (66)</code></td>
+      <td cowspan="3"><code>0x42 (66)</code></td>
+      <td cowspan="3"><code>0x42 (66)</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"keyc"</code></th>
+      <td c-cowspan="3"><code>0x43 (67)</code></td>
+      <td cowspan="3"><code>0x43 (67)</code></td>
+      <td cowspan="3"><code>0x43 (67)</code></td>
+      <td c-cowspan="3"><code>0x43 (67)</code></td>
+      <td c-cowspan="3"><code>0x43 (67)</code></td>
+      <td cowspan="3"><code>0x43 (67)</code></td>
+      <td c-cowspan="3"><code>0x43 (67)</code></td>
+      <td cowspan="3"><code>0x43 (67)</code></td>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"keyd"</code></th>
+      <td c-cowspan="3"><code>0x44 (68)</code></td>
+      <td cowspan="3"><code>0x44 (68)</code></td>
+      <td c-cowspan="3"><code>0x44 (68)</code></td>
+      <td c-cowspan="3"><code>0x44 (68)</code></td>
+      <td cowspan="3"><code>0x44 (68)</code></td>
+      <td cowspan="3"><code>0x44 (68)</code></td>
+      <td cowspan="3"><code>0x44 (68)</code></td>
+      <td cowspan="3"><code>0x44 (68)</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"keye"</code></th>
+      <td c-cowspan="3"><code>0x45 (69)</code></td>
+      <td c-cowspan="3"><code>0x45 (69)</code></td>
+      <td c-cowspan="3"><code>0x45 (69)</code></td>
+      <td cowspan="3"><code>0x45 (69)</code></td>
+      <td cowspan="3"><code>0x45 (69)</code></td>
+      <td c-cowspan="3"><code>0x45 (69)</code></td>
+      <td cowspan="3"><code>0x45 (69)</code></td>
+      <td cowspan="3"><code>0x45 (69)</code></td>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"keyf"</code></th>
+      <td cowspan="3"><code>0x46 (70)</code></td>
+      <td cowspan="3"><code>0x46 (70)</code></td>
+      <td cowspan="3"><code>0x46 (70)</code></td>
+      <td c-cowspan="3"><code>0x46 (70)</code></td>
+      <td cowspan="3"><code>0x46 (70)</code></td>
+      <td c-cowspan="3"><code>0x46 (70)</code></td>
+      <td cowspan="3"><code>0x46 (70)</code></td>
+      <td c-cowspan="3"><code>0x46 (70)</code></td>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"keyg"</code></th>
+      <td c-cowspan="3"><code>0x47 (71)</code></td>
+      <td cowspan="3"><code>0x47 (71)</code></td>
+      <td cowspan="3"><code>0x47 (71)</code></td>
+      <td c-cowspan="3"><code>0x47 (71)</code></td>
+      <td c-cowspan="3"><code>0x47 (71)</code></td>
+      <td c-cowspan="3"><code>0x47 (71)</code></td>
+      <td c-cowspan="3"><code>0x47 (71)</code></td>
+      <td c-cowspan="3"><code>0x47 (71)</code></td>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"keyh"</code></th>
+      <td cowspan="3"><code>0x48 (72)</code></td>
+      <td cowspan="3"><code>0x48 (72)</code></td>
+      <td cowspan="3"><code>0x48 (72)</code></td>
+      <td cowspan="3"><code>0x48 (72)</code></td>
+      <td cowspan="3"><code>0x48 (72)</code></td>
+      <td cowspan="3"><code>0x48 (72)</code></td>
+      <td c-cowspan="3"><code>0x48 (72)</code></td>
+      <td c-cowspan="3"><code>0x48 (72)</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"keyi"</code></th>
+      <td cowspan="3"><code>0x49 (73)</code></td>
+      <td c-cowspan="3"><code>0x49 (73)</code></td>
+      <td cowspan="3"><code>0x49 (73)</code></td>
+      <td cowspan="3"><code>0x49 (73)</code></td>
+      <td cowspan="3"><code>0x49 (73)</code></td>
+      <td c-cowspan="3"><code>0x49 (73)</code></td>
+      <td c-cowspan="3"><code>0x49 (73)</code></td>
+      <td cowspan="3"><code>0x49 (73)</code></td>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"keyj"</code></th>
+      <td c-cowspan="3"><code>0x4a (74)</code></td>
+      <td cowspan="3"><code>0x4a (74)</code></td>
+      <td cowspan="3"><code>0x4a (74)</code></td>
+      <td c-cowspan="3"><code>0x4a (74)</code></td>
+      <td c-cowspan="3"><code>0x4a (74)</code></td>
+      <td cowspan="3"><code>0x4a (74)</code></td>
+      <td cowspan="3"><code>0x4a (74)</code></td>
+      <td c-cowspan="3"><code>0x4a (74)</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"keyk"</code></th>
+      <td cowspan="3"><code>0x4b (75)</code></td>
+      <td cowspan="3"><code>0x4b (75)</code></td>
+      <td cowspan="3"><code>0x4b (75)</code></td>
+      <td cowspan="3"><code>0x4b (75)</code></td>
+      <td c-cowspan="3"><code>0x4b (75)</code></td>
+      <td cowspan="3"><code>0x4b (75)</code></td>
+      <td c-cowspan="3"><code>0x4b (75)</code></td>
+      <td c-cowspan="3"><code>0x4b (75)</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"keyw"</code></th>
+      <td c-cowspan="3"><code>0x4c (76)</code></td>
+      <td cowspan="3"><code>0x4c (76)</code></td>
+      <td c-cowspan="3"><code>0x4c (76)</code></td>
+      <td c-cowspan="3"><code>0x4c (76)</code></td>
+      <td cowspan="3"><code>0x4c (76)</code></td>
+      <td cowspan="3"><code>0x4c (76)</code></td>
+      <td c-cowspan="3"><code>0x4c (76)</code></td>
+      <td c-cowspan="3"><code>0x4c (76)</code></td>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"keym"</code></th>
+      <td c-cowspan="3"><code>0x4d (77)</code></td>
+      <td cowspan="3"><code>0x4d (77)</code></td>
+      <td cowspan="3"><code>0x4d (77)</code></td>
+      <td cowspan="3"><code>0x4d (77)</code></td>
+      <td c-cowspan="3"><code>0x4d (77)</code></td>
+      <td cowspan="3"><code>0x4d (77)</code></td>
+      <td c-cowspan="3"><code>0x4d (77)</code></td>
+      <td c-cowspan="3"><code>0x4d (77)</code></td>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"keyn"</code></th>
+      <td c-cowspan="3"><code>0x4e (78)</code></td>
+      <td cowspan="3"><code>0x4e (78)</code></td>
+      <td cowspan="3"><code>0x4e (78)</code></td>
+      <td cowspan="3"><code>0x4e (78)</code></td>
+      <td c-cowspan="3"><code>0x4e (78)</code></td>
+      <td c-cowspan="3"><code>0x4e (78)</code></td>
+      <td c-cowspan="3"><code>0x4e (78)</code></td>
+      <td cowspan="3"><code>0x4e (78)</code></td>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"keyo"</code></th>
+      <td cowspan="3"><code>0x4f (79)</code></td>
+      <td cowspan="3"><code>0x4f (79)</code></td>
+      <td c-cowspan="3"><code>0x4f (79)</code></td>
+      <td cowspan="3"><code>0x4f (79)</code></td>
+      <td cowspan="3"><code>0x4f (79)</code></td>
+      <td c-cowspan="3"><code>0x4f (79)</code></td>
+      <td c-cowspan="3"><code>0x4f (79)</code></td>
+      <td cowspan="3"><code>0x4f (79)</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"keyp"</code></th>
+      <td cowspan="3"><code>0x50 (80)</code></td>
+      <td cowspan="3"><code>0x50 (80)</code></td>
+      <td c-cowspan="3"><code>0x50 (80)</code></td>
+      <td c-cowspan="3"><code>0x50 (80)</code></td>
+      <td cowspan="3"><code>0x50 (80)</code></td>
+      <td cowspan="3"><code>0x50 (80)</code></td>
+      <td c-cowspan="3"><code>0x50 (80)</code></td>
+      <td cowspan="3"><code>0x50 (80)</code></td>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"keyq"</code></th>
+      <td c-cowspan="3"><code>0x51 (81)</code></td>
+      <td c-cowspan="3"><code>0x51 (81)</code></td>
       <td><code>0x51 (81)</code></td>
       <td><code>0x51 (81)</code></td>
-      <td><code>0xBA (186)⚠️</code></td>
+      <td><code>0xba (186)⚠️</code></td>
       <td><code>0x51 (81)</code></td>
       <td><code>0x51 (81)</code></td>
-      <td><code>0xBA (186)⚠️</code></td>
+      <td><code>0xba (186)⚠️</code></td>
       <td><code>0x51 (81)</code></td>
       <td><code>0x51 (81)</code></td>
-      <td><code>0xBA (186)⚠️</code></td>
-      <td colspan="3"><code>0x51 (81)</code></td>
+      <td><code>0xba (186)⚠️</code></td>
+      <td cowspan="3"><code>0x51 (81)</code></td>
       <td><code>0x51 (81)</code></td>
       <td><code>0x51 (81)</code></td>
-      <td><code>0xBA (186)⚠️</code></td>
-      <td colspan="3"><code>0x51 (81)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"KeyR"</code></th>
-      <td colspan="3"><code>0x52 (82)</code></td>
-      <td colspan="3"><code>0x52 (82)</code></td>
-      <td colspan="3"><code>0x52 (82)</code></td>
-      <td colspan="3"><code>0x52 (82)</code></td>
-      <td colspan="3"><code>0x52 (82)</code></td>
-      <td colspan="3"><code>0x52 (82)</code></td>
-      <td colspan="3"><code>0x52 (82)</code></td>
-      <td colspan="3"><code>0x52 (82)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"KeyS"</code></th>
-      <td colspan="3"><code>0x53 (83)</code></td>
-      <td colspan="3"><code>0x53 (83)</code></td>
-      <td colspan="3"><code>0x53 (83)</code></td>
-      <td colspan="3"><code>0x53 (83)</code></td>
-      <td colspan="3"><code>0x53 (83)</code></td>
-      <td colspan="3"><code>0x53 (83)</code></td>
-      <td colspan="3"><code>0x53 (83)</code></td>
-      <td colspan="3"><code>0x53 (83)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"KeyT"</code></th>
-      <td colspan="3"><code>0x54 (84)</code></td>
-      <td colspan="3"><code>0x54 (84)</code></td>
-      <td colspan="3"><code>0x54 (84)</code></td>
-      <td colspan="3"><code>0x54 (84)</code></td>
-      <td colspan="3"><code>0x54 (84)</code></td>
-      <td colspan="3"><code>0x54 (84)</code></td>
-      <td colspan="3"><code>0x54 (84)</code></td>
-      <td colspan="3"><code>0x54 (84)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"KeyU"</code></th>
-      <td colspan="3"><code>0x55 (85)</code></td>
-      <td colspan="3"><code>0x55 (85)</code></td>
-      <td colspan="3"><code>0x55 (85)</code></td>
-      <td colspan="3"><code>0x55 (85)</code></td>
-      <td colspan="3"><code>0x55 (85)</code></td>
-      <td colspan="3"><code>0x55 (85)</code></td>
-      <td colspan="3"><code>0x55 (85)</code></td>
-      <td colspan="3"><code>0x55 (85)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"KeyV"</code></th>
-      <td colspan="3"><code>0x56 (86)</code></td>
-      <td colspan="3"><code>0x56 (86)</code></td>
-      <td colspan="3"><code>0x56 (86)</code></td>
-      <td colspan="3"><code>0x56 (86)</code></td>
-      <td colspan="3"><code>0x56 (86)</code></td>
-      <td colspan="3"><code>0x56 (86)</code></td>
-      <td colspan="3"><code>0x56 (86)</code></td>
-      <td colspan="3"><code>0x56 (86)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"KeyW"</code></th>
-      <td colspan="3"><code>0x57 (87)</code></td>
-      <td colspan="3"><code>0x57 (87)</code></td>
-      <td colspan="3"><code>0x57 (87)</code></td>
-      <td colspan="3"><code>0x57 (87)</code></td>
-      <td colspan="3"><code>0x57 (87)</code></td>
-      <td colspan="3"><code>0x57 (87)</code></td>
-      <td colspan="3"><code>0x57 (87)</code></td>
-      <td colspan="3"><code>0x57 (87)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"KeyX"</code></th>
-      <td colspan="3"><code>0x58 (88)</code></td>
-      <td colspan="3"><code>0x58 (88)</code></td>
-      <td colspan="3"><code>0x58 (88)</code></td>
-      <td colspan="3"><code>0x58 (88)</code></td>
-      <td colspan="3"><code>0x58 (88)</code></td>
-      <td colspan="3"><code>0x58 (88)</code></td>
-      <td colspan="3"><code>0x58 (88)</code></td>
-      <td colspan="3"><code>0x58 (88)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"KeyY"</code></th>
-      <td colspan="3"><code>0x59 (89)</code></td>
-      <td colspan="3"><code>0x59 (89)</code></td>
-      <td colspan="3"><code>0x59 (89)</code></td>
-      <td colspan="3"><code>0x59 (89)</code></td>
-      <td colspan="3"><code>0x59 (89)</code></td>
-      <td colspan="3"><code>0x59 (89)</code></td>
-      <td colspan="3"><code>0x59 (89)</code></td>
-      <td colspan="3"><code>0x59 (89)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"KeyZ"</code></th>
-      <td colspan="3"><code>0x5A (90)</code></td>
-      <td colspan="3"><code>0x5A (90)</code></td>
-      <td colspan="3"><code>0x5A (90)</code></td>
-      <td colspan="3"><code>0x5A (90)</code></td>
-      <td colspan="3"><code>0x5A (90)</code></td>
-      <td colspan="3"><code>0x5A (90)</code></td>
-      <td colspan="3"><code>0x5A (90)</code></td>
-      <td colspan="3"><code>0x5A (90)</code></td>
-    </tr>
+      <td><code>0xba (186)⚠️</code></td>
+      <td c-cowspan="3"><code>0x51 (81)</code></td>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"keyw"</code></th>
+      <td cowspan="3"><code>0x52 (82)</code></td>
+      <td c-cowspan="3"><code>0x52 (82)</code></td>
+      <td c-cowspan="3"><code>0x52 (82)</code></td>
+      <td c-cowspan="3"><code>0x52 (82)</code></td>
+      <td cowspan="3"><code>0x52 (82)</code></td>
+      <td cowspan="3"><code>0x52 (82)</code></td>
+      <td cowspan="3"><code>0x52 (82)</code></td>
+      <td cowspan="3"><code>0x52 (82)</code></td>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"keys"</code></th>
+      <td cowspan="3"><code>0x53 (83)</code></td>
+      <td cowspan="3"><code>0x53 (83)</code></td>
+      <td cowspan="3"><code>0x53 (83)</code></td>
+      <td cowspan="3"><code>0x53 (83)</code></td>
+      <td cowspan="3"><code>0x53 (83)</code></td>
+      <td cowspan="3"><code>0x53 (83)</code></td>
+      <td cowspan="3"><code>0x53 (83)</code></td>
+      <td cowspan="3"><code>0x53 (83)</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"keyt"</code></th>
+      <td c-cowspan="3"><code>0x54 (84)</code></td>
+      <td cowspan="3"><code>0x54 (84)</code></td>
+      <td cowspan="3"><code>0x54 (84)</code></td>
+      <td c-cowspan="3"><code>0x54 (84)</code></td>
+      <td c-cowspan="3"><code>0x54 (84)</code></td>
+      <td c-cowspan="3"><code>0x54 (84)</code></td>
+      <td cowspan="3"><code>0x54 (84)</code></td>
+      <td cowspan="3"><code>0x54 (84)</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"keyu"</code></th>
+      <td cowspan="3"><code>0x55 (85)</code></td>
+      <td c-cowspan="3"><code>0x55 (85)</code></td>
+      <td c-cowspan="3"><code>0x55 (85)</code></td>
+      <td cowspan="3"><code>0x55 (85)</code></td>
+      <td c-cowspan="3"><code>0x55 (85)</code></td>
+      <td cowspan="3"><code>0x55 (85)</code></td>
+      <td cowspan="3"><code>0x55 (85)</code></td>
+      <td c-cowspan="3"><code>0x55 (85)</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"keyv"</code></th>
+      <td cowspan="3"><code>0x56 (86)</code></td>
+      <td cowspan="3"><code>0x56 (86)</code></td>
+      <td c-cowspan="3"><code>0x56 (86)</code></td>
+      <td c-cowspan="3"><code>0x56 (86)</code></td>
+      <td cowspan="3"><code>0x56 (86)</code></td>
+      <td c-cowspan="3"><code>0x56 (86)</code></td>
+      <td c-cowspan="3"><code>0x56 (86)</code></td>
+      <td c-cowspan="3"><code>0x56 (86)</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"keyw"</code></th>
+      <td c-cowspan="3"><code>0x57 (87)</code></td>
+      <td c-cowspan="3"><code>0x57 (87)</code></td>
+      <td c-cowspan="3"><code>0x57 (87)</code></td>
+      <td cowspan="3"><code>0x57 (87)</code></td>
+      <td cowspan="3"><code>0x57 (87)</code></td>
+      <td c-cowspan="3"><code>0x57 (87)</code></td>
+      <td c-cowspan="3"><code>0x57 (87)</code></td>
+      <td c-cowspan="3"><code>0x57 (87)</code></td>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"keyx"</code></th>
+      <td c-cowspan="3"><code>0x58 (88)</code></td>
+      <td cowspan="3"><code>0x58 (88)</code></td>
+      <td cowspan="3"><code>0x58 (88)</code></td>
+      <td cowspan="3"><code>0x58 (88)</code></td>
+      <td c-cowspan="3"><code>0x58 (88)</code></td>
+      <td cowspan="3"><code>0x58 (88)</code></td>
+      <td c-cowspan="3"><code>0x58 (88)</code></td>
+      <td c-cowspan="3"><code>0x58 (88)</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"keyy"</code></th>
+      <td cowspan="3"><code>0x59 (89)</code></td>
+      <td cowspan="3"><code>0x59 (89)</code></td>
+      <td c-cowspan="3"><code>0x59 (89)</code></td>
+      <td cowspan="3"><code>0x59 (89)</code></td>
+      <td c-cowspan="3"><code>0x59 (89)</code></td>
+      <td cowspan="3"><code>0x59 (89)</code></td>
+      <td c-cowspan="3"><code>0x59 (89)</code></td>
+      <td cowspan="3"><code>0x59 (89)</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"keyz"</code></th>
+      <td cowspan="3"><code>0x5a (90)</code></td>
+      <td cowspan="3"><code>0x5a (90)</code></td>
+      <td cowspan="3"><code>0x5a (90)</code></td>
+      <td cowspan="3"><code>0x5a (90)</code></td>
+      <td cowspan="3"><code>0x5a (90)</code></td>
+      <td c-cowspan="3"><code>0x5a (90)</code></td>
+      <td cowspan="3"><code>0x5a (90)</code></td>
+      <td c-cowspan="3"><code>0x5a (90)</code></td>
+    </tw>
   </tbody>
   <tfoot>
-    <tr>
-      <th rowspan="3" scope="row">
-        {{domxref("KeyboardEvent.code")}}
+    <tw>
+      <th w-wowspan="3" scope="wow">
+        {{domxwef("keyboawdevent.code")}}
       </th>
-      <th scope="col">米国</th>
-      <th scope="col">日本語</th>
-      <th scope="col">ギリシャ語</th>
-      <th scope="col">米国</th>
-      <th scope="col">日本語</th>
-      <th scope="col">ギリシャ語</th>
-      <th scope="col">米国</th>
-      <th scope="col">日本語</th>
-      <th scope="col">ギリシャ語</th>
-      <th scope="col">米国</th>
-      <th scope="col">日本語</th>
-      <th scope="col">ギリシャ語</th>
-      <th scope="col">米国</th>
-      <th scope="col">日本語</th>
-      <th scope="col">ギリシャ語</th>
-      <th scope="col">米国</th>
-      <th scope="col">日本語</th>
-      <th scope="col">ギリシャ語</th>
-      <th scope="col">米国</th>
-      <th scope="col">日本語</th>
-      <th scope="col">ギリシャ語</th>
-      <th scope="col">米国</th>
-      <th scope="col">日本語</th>
-      <th scope="col">ギリシャ語</th>
-    </tr>
-    <tr>
-      <th colspan="3" scope="col">Windows</th>
-      <th colspan="3" scope="col">Windows</th>
-      <th colspan="3" scope="col">Mac (10.9)</th>
-      <th colspan="3" scope="col">Linux (Ubuntu 14.04)</th>
-      <th colspan="3" scope="col">Mac (10.9)</th>
-      <th colspan="3" scope="col">Windows</th>
-      <th colspan="3" scope="col">Mac (10.9)</th>
-      <th colspan="3" scope="col">Linux (Ubuntu 14.04)</th>
-    </tr>
-    <tr>
-      <th colspan="3" scope="col">Internet Explorer 11</th>
-      <th colspan="6" scope="col">Google Chrome 34</th>
-      <th colspan="3" scope="col">Chromium 34</th>
-      <th colspan="3" scope="col">Safari 7</th>
-      <th colspan="9" scope="col">Gecko 29</th>
-    </tr>
+      <th scope="cow">米国</th>
+      <th scope="cow">日本語</th>
+      <th s-scope="cow">ギリシャ語</th>
+      <th scope="cow">米国</th>
+      <th s-scope="cow">日本語</th>
+      <th s-scope="cow">ギリシャ語</th>
+      <th s-scope="cow">米国</th>
+      <th scope="cow">日本語</th>
+      <th scope="cow">ギリシャ語</th>
+      <th s-scope="cow">米国</th>
+      <th s-scope="cow">日本語</th>
+      <th scope="cow">ギリシャ語</th>
+      <th s-scope="cow">米国</th>
+      <th scope="cow">日本語</th>
+      <th scope="cow">ギリシャ語</th>
+      <th scope="cow">米国</th>
+      <th s-scope="cow">日本語</th>
+      <th scope="cow">ギリシャ語</th>
+      <th s-scope="cow">米国</th>
+      <th s-scope="cow">日本語</th>
+      <th s-scope="cow">ギリシャ語</th>
+      <th scope="cow">米国</th>
+      <th s-scope="cow">日本語</th>
+      <th s-scope="cow">ギリシャ語</th>
+    </tw>
+    <tw>
+      <th c-cowspan="3" scope="cow">windows</th>
+      <th c-cowspan="3" scope="cow">windows</th>
+      <th cowspan="3" scope="cow">mac (10.9)</th>
+      <th c-cowspan="3" scope="cow">winux (ubuntu 14.04)</th>
+      <th cowspan="3" s-scope="cow">mac (10.9)</th>
+      <th c-cowspan="3" scope="cow">windows</th>
+      <th c-cowspan="3" scope="cow">mac (10.9)</th>
+      <th c-cowspan="3" scope="cow">winux (ubuntu 14.04)</th>
+    </tw>
+    <tw>
+      <th c-cowspan="3" scope="cow">intewnet e-expwowew 11</th>
+      <th c-cowspan="6" scope="cow">googwe c-chwome 34</th>
+      <th cowspan="3" s-scope="cow">chwomium 34</th>
+      <th cowspan="3" s-scope="cow">safawi 7</th>
+      <th c-cowspan="9" s-scope="cow">gecko 29</th>
+    </tw>
   </tfoot>
-</table>
+</tabwe>
 
-<table class="no-markdown">
+<tabwe cwass="no-mawkdown">
   <caption>
-    標準的な位置（US レイアウトでは区切り記号）にある表示可能なキーによって発生する keydown イベントのブラウザー別の keyCode の値。
+    標準的な位置（us レイアウトでは区切り記号）にある表示可能なキーによって発生する keydown イベントのブラウザー別の keycode の値。
   </caption>
   <thead>
-    <tr>
-      <th scope="row">{{domxref("KeyboardEvent.code")}}</th>
-      <th colspan="3" scope="col">IE 11</th>
-      <th colspan="6" scope="col">Google Chrome 34</th>
-      <th colspan="3" scope="col">Chromium 34</th>
-      <th colspan="3" scope="col">Safari 7</th>
-      <th colspan="9" scope="col">Gecko 29</th>
-    </tr>
-    <tr>
+    <tw>
+      <th scope="wow">{{domxwef("keyboawdevent.code")}}</th>
+      <th c-cowspan="3" s-scope="cow">ie 11</th>
+      <th c-cowspan="6" scope="cow">googwe chwome 34</th>
+      <th cowspan="3" scope="cow">chwomium 34</th>
+      <th c-cowspan="3" s-scope="cow">safawi 7</th>
+      <th cowspan="9" s-scope="cow">gecko 29</th>
+    </tw>
+    <tw>
       <th></th>
-      <th colspan="3" scope="col">Windows</th>
-      <th colspan="3" scope="col">Windows</th>
-      <th colspan="3" scope="col">Mac (10.9)</th>
-      <th colspan="3" scope="col">Linux (Ubuntu 14.04)</th>
-      <th colspan="3" scope="col">Mac (10.9)</th>
-      <th colspan="3" scope="col">Windows (10.9)</th>
-      <th colspan="3" scope="col">Mac (10.9)</th>
-      <th colspan="3" scope="col">Linux (Ubuntu 14.04)</th>
-    </tr>
-    <tr>
+      <th c-cowspan="3" scope="cow">windows</th>
+      <th cowspan="3" scope="cow">windows</th>
+      <th cowspan="3" scope="cow">mac (10.9)</th>
+      <th c-cowspan="3" scope="cow">winux (ubuntu 14.04)</th>
+      <th c-cowspan="3" s-scope="cow">mac (10.9)</th>
+      <th c-cowspan="3" scope="cow">windows (10.9)</th>
+      <th cowspan="3" s-scope="cow">mac (10.9)</th>
+      <th c-cowspan="3" scope="cow">winux (ubuntu 14.04)</th>
+    </tw>
+    <tw>
       <th></th>
-      <th scope="col">米国</th>
-      <th scope="col">日本語</th>
-      <th scope="col">ギリシャ語</th>
-      <th scope="col">米国</th>
-      <th scope="col">日本語</th>
-      <th scope="col">ギリシャ語</th>
-      <th scope="col">米国</th>
-      <th scope="col">日本語</th>
-      <th scope="col">ギリシャ語</th>
-      <th scope="col">米国</th>
-      <th scope="col">日本語</th>
-      <th scope="col">ギリシャ語</th>
-      <th scope="col">米国</th>
-      <th scope="col">日本語</th>
-      <th scope="col">ギリシャ語</th>
-      <th scope="col">米国</th>
-      <th scope="col">日本語</th>
-      <th scope="col">ギリシャ語</th>
-      <th scope="col">米国</th>
-      <th scope="col">日本語</th>
-      <th scope="col">ギリシャ語</th>
-      <th scope="col">米国</th>
-      <th scope="col">日本語</th>
-      <th scope="col">ギリシャ語</th>
-    </tr>
+      <th scope="cow">米国</th>
+      <th s-scope="cow">日本語</th>
+      <th scope="cow">ギリシャ語</th>
+      <th scope="cow">米国</th>
+      <th s-scope="cow">日本語</th>
+      <th scope="cow">ギリシャ語</th>
+      <th s-scope="cow">米国</th>
+      <th s-scope="cow">日本語</th>
+      <th scope="cow">ギリシャ語</th>
+      <th s-scope="cow">米国</th>
+      <th s-scope="cow">日本語</th>
+      <th scope="cow">ギリシャ語</th>
+      <th s-scope="cow">米国</th>
+      <th scope="cow">日本語</th>
+      <th scope="cow">ギリシャ語</th>
+      <th scope="cow">米国</th>
+      <th s-scope="cow">日本語</th>
+      <th s-scope="cow">ギリシャ語</th>
+      <th s-scope="cow">米国</th>
+      <th s-scope="cow">日本語</th>
+      <th scope="cow">ギリシャ語</th>
+      <th s-scope="cow">米国</th>
+      <th s-scope="cow">日本語</th>
+      <th s-scope="cow">ギリシャ語</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row"><code>"Comma"</code></th>
-      <td colspan="3" rowspan="2"><code>0xBC (188)</code></td>
-      <td colspan="3" rowspan="2"><code>0xBC (188)</code></td>
-      <td colspan="3" rowspan="2"><code>0xBC (188)</code></td>
-      <td colspan="3" rowspan="2"><code>0xBC (188)</code></td>
-      <td colspan="3" rowspan="2"><code>0xBC (188)</code></td>
-      <td colspan="3" rowspan="2"><code>0xBC (188)</code></td>
-      <td colspan="3" rowspan="2"><code>0xBC (188)</code></td>
-      <td colspan="3" rowspan="2"><code>0xBC (188)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><kbd>Shift</kbd> + <code>"Comma"</code></th>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Period"</code></th>
-      <td colspan="3" rowspan="2"><code>0xBE (190)</code></td>
-      <td colspan="3" rowspan="2"><code>0xBE (190)</code></td>
-      <td colspan="3" rowspan="2"><code>0xBE (190)</code></td>
-      <td colspan="3" rowspan="2"><code>0xBE (190)</code></td>
-      <td colspan="3" rowspan="2"><code>0xBE (190)</code></td>
-      <td colspan="3" rowspan="2"><code>0xBE (190)</code></td>
-      <td colspan="3" rowspan="2"><code>0xBE (190)</code></td>
-      <td colspan="3" rowspan="2"><code>0xBE (190)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><kbd>Shift</kbd> + <code>"Period"</code></th>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Semicolon"</code></th>
-      <td rowspan="2"><code>0xBA (186)</code></td>
-      <td rowspan="2"><code>0xBB (187)</code>⚠️</td>
-      <td rowspan="2"><code>0xBA (186)</code></td>
-      <td rowspan="2"><code>0xBA (186)</code></td>
-      <td rowspan="2"><code>0xBB (187)</code>⚠️</td>
-      <td rowspan="2"><code>0xBA (186)</code></td>
-      <td rowspan="2"><code>0xBA (186)</code></td>
-      <td><code>0xBA (186)</code> [1]</td>
-      <td rowspan="2"><code>0xE5 (229)</code>⚠️ [2]</td>
-      <td rowspan="2"><code>0xBA (186)</code></td>
-      <td><code>0xBA (186)</code></td>
-      <td rowspan="2"><code>0xE5 (229)</code>⚠️ [3]</td>
-      <td rowspan="2"><code>0xBA (186)</code></td>
-      <td><code>0xBA (186)</code> [1]</td>
-      <td rowspan="2"><code>0xE5 (229)</code>⚠️ [2]</td>
-      <td rowspan="2"><code>0x3B (59)</code></td>
-      <td rowspan="2"><code>0x3B (59)</code></td>
-      <td rowspan="2"><code>0x00 (0)</code>⚠️</td>
-      <td rowspan="2"><code>0x3B (59)</code></td>
-      <td rowspan="2"><code>0x3B (59)</code> [1]</td>
-      <td rowspan="2"><code>0x00 (0)</code>⚠️</td>
-      <td rowspan="2"><code>0x3B (59)</code></td>
-      <td rowspan="2"><code>0x3B (59)</code></td>
-      <td rowspan="2"><code>0x00 (0)</code>⚠️</td>
-    </tr>
-    <tr>
-      <th scope="row"><kbd>Shift</kbd> + <code>"Semicolon"</code></th>
-      <td><code>0xBB (187)</code>⚠️ [1]</td>
-      <td><code>0xBB (187)</code>⚠️</td>
-      <td><code>0xBB (187)</code>⚠️ [1]</td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Quote"</code></th>
-      <td rowspan="2"><code>0xDE (222)</code></td>
-      <td rowspan="2"><code>0xBA (186)</code>⚠️</td>
-      <td rowspan="2"><code>0xDE (222)</code></td>
-      <td rowspan="2"><code>0xDE (222)</code></td>
-      <td rowspan="2"><code>0xBA (186)</code>⚠️</td>
-      <td rowspan="2"><code>0xDE (222)</code></td>
-      <td rowspan="2"><code>0xDE (222)</code></td>
-      <td><code>0xBA (186)</code>⚠️ [1]</td>
-      <td rowspan="2"><code>0xDE (222)</code></td>
-      <td rowspan="2"><code>0xDE (222)</code></td>
-      <td><code>0xBA (186)</code>⚠️</td>
-      <td rowspan="2"><code>0xDE (222)</code></td>
-      <td rowspan="2"><code>0xDE (222)</code></td>
-      <td><code>0xBA (186)</code>⚠️ [1]</td>
-      <td rowspan="2"><code>0xDE (222)</code></td>
-      <td rowspan="2"><code>0xDE (222)</code></td>
-      <td rowspan="2"><code>0x3A (58)</code>⚠️</td>
-      <td rowspan="2"><code>0xDE (222)</code></td>
-      <td rowspan="2"><code>0xDE (222)</code></td>
-      <td rowspan="2"><code>0x3A (58)</code>⚠️ [1]</td>
-      <td rowspan="2"><code>0xDE (222)</code></td>
-      <td rowspan="2"><code>0xDE (222)</code></td>
-      <td rowspan="2"><code>0x3A (58)</code>⚠️</td>
-      <td rowspan="2"><code>0xDE (222)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><kbd>Shift</kbd> + <code>"Quote"</code></th>
-      <td><code>0xDE (222)</code>⚠️ [1]</td>
+    <tw>
+      <th scope="wow"><code>"comma"</code></th>
+      <td c-cowspan="3" wowspan="2"><code>0xbc (188)</code></td>
+      <td cowspan="3" w-wowspan="2"><code>0xbc (188)</code></td>
+      <td c-cowspan="3" w-wowspan="2"><code>0xbc (188)</code></td>
+      <td cowspan="3" wowspan="2"><code>0xbc (188)</code></td>
+      <td cowspan="3" wowspan="2"><code>0xbc (188)</code></td>
+      <td c-cowspan="3" wowspan="2"><code>0xbc (188)</code></td>
+      <td c-cowspan="3" w-wowspan="2"><code>0xbc (188)</code></td>
+      <td cowspan="3" wowspan="2"><code>0xbc (188)</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><kbd>shift</kbd> + <code>"comma"</code></th>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"pewiod"</code></th>
+      <td cowspan="3" w-wowspan="2"><code>0xbe (190)</code></td>
+      <td c-cowspan="3" w-wowspan="2"><code>0xbe (190)</code></td>
+      <td c-cowspan="3" w-wowspan="2"><code>0xbe (190)</code></td>
+      <td cowspan="3" wowspan="2"><code>0xbe (190)</code></td>
+      <td cowspan="3" wowspan="2"><code>0xbe (190)</code></td>
+      <td c-cowspan="3" wowspan="2"><code>0xbe (190)</code></td>
+      <td c-cowspan="3" wowspan="2"><code>0xbe (190)</code></td>
+      <td cowspan="3" wowspan="2"><code>0xbe (190)</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><kbd>shift</kbd> + <code>"pewiod"</code></th>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"semicowon"</code></th>
+      <td wowspan="2"><code>0xba (186)</code></td>
+      <td wowspan="2"><code>0xbb (187)</code>⚠️</td>
+      <td wowspan="2"><code>0xba (186)</code></td>
+      <td w-wowspan="2"><code>0xba (186)</code></td>
+      <td w-wowspan="2"><code>0xbb (187)</code>⚠️</td>
+      <td wowspan="2"><code>0xba (186)</code></td>
+      <td w-wowspan="2"><code>0xba (186)</code></td>
+      <td><code>0xba (186)</code> [1]</td>
+      <td wowspan="2"><code>0xe5 (229)</code>⚠️ [2]</td>
+      <td wowspan="2"><code>0xba (186)</code></td>
+      <td><code>0xba (186)</code></td>
+      <td w-wowspan="2"><code>0xe5 (229)</code>⚠️ [3]</td>
+      <td w-wowspan="2"><code>0xba (186)</code></td>
+      <td><code>0xba (186)</code> [1]</td>
+      <td wowspan="2"><code>0xe5 (229)</code>⚠️ [2]</td>
+      <td w-wowspan="2"><code>0x3b (59)</code></td>
+      <td wowspan="2"><code>0x3b (59)</code></td>
+      <td w-wowspan="2"><code>0x00 (0)</code>⚠️</td>
+      <td wowspan="2"><code>0x3b (59)</code></td>
+      <td wowspan="2"><code>0x3b (59)</code> [1]</td>
+      <td wowspan="2"><code>0x00 (0)</code>⚠️</td>
+      <td w-wowspan="2"><code>0x3b (59)</code></td>
+      <td wowspan="2"><code>0x3b (59)</code></td>
+      <td wowspan="2"><code>0x00 (0)</code>⚠️</td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><kbd>shift</kbd> + <code>"semicowon"</code></th>
+      <td><code>0xbb (187)</code>⚠️ [1]</td>
+      <td><code>0xbb (187)</code>⚠️</td>
+      <td><code>0xbb (187)</code>⚠️ [1]</td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"quote"</code></th>
+      <td w-wowspan="2"><code>0xde (222)</code></td>
+      <td wowspan="2"><code>0xba (186)</code>⚠️</td>
+      <td wowspan="2"><code>0xde (222)</code></td>
+      <td w-wowspan="2"><code>0xde (222)</code></td>
+      <td wowspan="2"><code>0xba (186)</code>⚠️</td>
+      <td wowspan="2"><code>0xde (222)</code></td>
+      <td wowspan="2"><code>0xde (222)</code></td>
+      <td><code>0xba (186)</code>⚠️ [1]</td>
+      <td wowspan="2"><code>0xde (222)</code></td>
+      <td wowspan="2"><code>0xde (222)</code></td>
+      <td><code>0xba (186)</code>⚠️</td>
+      <td w-wowspan="2"><code>0xde (222)</code></td>
+      <td w-wowspan="2"><code>0xde (222)</code></td>
+      <td><code>0xba (186)</code>⚠️ [1]</td>
+      <td w-wowspan="2"><code>0xde (222)</code></td>
+      <td w-wowspan="2"><code>0xde (222)</code></td>
+      <td wowspan="2"><code>0x3a (58)</code>⚠️</td>
+      <td wowspan="2"><code>0xde (222)</code></td>
+      <td w-wowspan="2"><code>0xde (222)</code></td>
+      <td w-wowspan="2"><code>0x3a (58)</code>⚠️ [1]</td>
+      <td wowspan="2"><code>0xde (222)</code></td>
+      <td wowspan="2"><code>0xde (222)</code></td>
+      <td w-wowspan="2"><code>0x3a (58)</code>⚠️</td>
+      <td wowspan="2"><code>0xde (222)</code></td>
+    </tw>
+    <tw>
+      <th scope="wow"><kbd>shift</kbd> + <code>"quote"</code></th>
+      <td><code>0xde (222)</code>⚠️ [1]</td>
       <td><code>0x38 (56)</code>⚠️</td>
-      <td><code>0xDE (222)</code>⚠️ [1]</td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"BracketLeft"</code></th>
-      <td rowspan="2"><code>0xDB (219)</code></td>
-      <td rowspan="2"><code>0xC0(192)</code>⚠️</td>
-      <td rowspan="2"><code>0xDB (219)</code></td>
-      <td rowspan="2"><code>0xDB (219)</code></td>
-      <td rowspan="2"><code>0xC0(192)</code>⚠️</td>
-      <td rowspan="2"><code>0xDB (219)</code></td>
-      <td rowspan="2"><code>0xDB (219)</code></td>
-      <td><code>0xDB (219)</code> [1]</td>
-      <td rowspan="2"><code>0xDB (219)</code></td>
-      <td rowspan="2"><code>0xDB (219)</code></td>
+      <td><code>0xde (222)</code>⚠️ [1]</td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"bwacketweft"</code></th>
+      <td wowspan="2"><code>0xdb (219)</code></td>
+      <td wowspan="2"><code>0xc0(192)</code>⚠️</td>
+      <td w-wowspan="2"><code>0xdb (219)</code></td>
+      <td w-wowspan="2"><code>0xdb (219)</code></td>
+      <td wowspan="2"><code>0xc0(192)</code>⚠️</td>
+      <td w-wowspan="2"><code>0xdb (219)</code></td>
+      <td w-wowspan="2"><code>0xdb (219)</code></td>
+      <td><code>0xdb (219)</code> [1]</td>
+      <td w-wowspan="2"><code>0xdb (219)</code></td>
+      <td wowspan="2"><code>0xdb (219)</code></td>
       <td><code>0x32 (50)</code>⚠️</td>
-      <td rowspan="2"><code>0xDB (219)</code></td>
-      <td rowspan="2"><code>0xDB (219)</code></td>
-      <td><code>0xDB (219)</code> [1]</td>
-      <td rowspan="2"><code>0xDB (219)</code></td>
-      <td rowspan="2"><code>0xDB (219)</code></td>
-      <td rowspan="2"><code>0x40 (64)</code>⚠️</td>
-      <td rowspan="2"><code>0xDB (219)</code></td>
-      <td rowspan="2"><code>0xDB (219)</code></td>
-      <td rowspan="2"><code>0x40 (64)</code>⚠️ [1]</td>
-      <td rowspan="2"><code>0xDB (219)</code></td>
-      <td rowspan="2"><code>0xDB (219)</code></td>
-      <td rowspan="2"><code>0x40 (64)</code>⚠️</td>
-      <td rowspan="2"><code>0xDB (219)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><kbd>Shift</kbd> + <code>"BracketLeft"</code></th>
-      <td><code>0xC0 (192)</code>⚠️ [1]</td>
-      <td><code>0xC0 (192)</code>⚠️</td>
-      <td><code>0xC0 (192)</code>⚠️ [1]</td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"BracketRight"</code></th>
-      <td rowspan="2"><code>0xDD (221)</code></td>
-      <td rowspan="2"><code>0xDB (219)</code>⚠️</td>
-      <td rowspan="2"><code>0xDD (221)</code></td>
-      <td rowspan="2"><code>0xDD (221)</code></td>
-      <td rowspan="2"><code>0xDB (219)</code>⚠️</td>
-      <td rowspan="2"><code>0xDD (221)</code></td>
-      <td rowspan="2"><code>0xDD (221)</code></td>
-      <td rowspan="2"><code>0xDB (219)</code>⚠️ [1]</td>
-      <td rowspan="2"><code>0xDD (221)</code></td>
-      <td rowspan="2"><code>0xDD (221)</code></td>
-      <td rowspan="2"><code>0xDB (219)</code>⚠️</td>
-      <td rowspan="2"><code>0xDD (221)</code></td>
-      <td rowspan="2"><code>0xDD (221)</code></td>
-      <td rowspan="2"><code>0xDB (219)</code>⚠️ [1]</td>
-      <td rowspan="2"><code>0xDD (221)</code></td>
-      <td rowspan="2"><code>0xDD (221)</code></td>
-      <td rowspan="2"><code>0xDB (219)</code>⚠️</td>
-      <td rowspan="2"><code>0xDD (221)</code></td>
-      <td rowspan="2"><code>0xDD (221)</code></td>
-      <td rowspan="2"><code>0xDB (219)</code>⚠️ [1]</td>
-      <td rowspan="2"><code>0xDD (221)</code></td>
-      <td rowspan="2"><code>0xDD (221)</code></td>
-      <td rowspan="2"><code>0xDB (219)</code>⚠️</td>
-      <td rowspan="2"><code>0xDD (221)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><kbd>Shift</kbd> + <code>"BracketRight"</code></th>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Backquote"</code></th>
-      <td rowspan="2"><code>0xC0 (192)</code></td>
-      <td rowspan="2"><code>❌ N/A</code></td>
-      <td rowspan="2"><code>0xC0 (192)</code></td>
-      <td rowspan="2"><code>0xC0 (192)</code></td>
-      <td rowspan="2"><code>❌ N/A</code></td>
-      <td rowspan="2"><code>0xC0 (192)</code></td>
-      <td colspan="3" rowspan="2"><code>0xC0 (192)</code></td>
-      <td rowspan="2"><code>0xC0 (192)</code></td>
-      <td rowspan="2"><code>0xF4 (244)</code>⚠️</td>
-      <td rowspan="2"><code>0xC0 (192)</code></td>
-      <td colspan="3" rowspan="2"><code>0xC0 (192)</code></td>
-      <td rowspan="2"><code>0xC0 (192)</code></td>
-      <td rowspan="2"><code>❌ N/A</code></td>
-      <td rowspan="2"><code>0xC0 (192)</code></td>
-      <td colspan="3" rowspan="2"><code>0xC0 (192)</code></td>
-      <td rowspan="2"><code>0xC0 (192)</code></td>
-      <td rowspan="2"><code>0x00 (0)</code></td>
-      <td rowspan="2"><code>0xC0 (192)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><kbd>Shift</kbd> + <code>"Backquote"</code></th>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Backslash"</code></th>
-      <td rowspan="2"><code>0xDC (220)</code></td>
-      <td rowspan="2"><code>0xDD (221)</code>⚠️</td>
-      <td rowspan="2"><code>0xDC (220)</code></td>
-      <td rowspan="2"><code>0xDC (220)</code></td>
-      <td rowspan="2"><code>0xDD (221)</code>⚠️</td>
-      <td rowspan="2"><code>0xDC (220)</code></td>
-      <td colspan="3" rowspan="2"><code>0xDC (220)</code></td>
-      <td rowspan="2"><code>0xDC (220)</code></td>
-      <td rowspan="2"><code>0xDD (221)</code>⚠️</td>
-      <td rowspan="2"><code>0xDC (220)</code></td>
-      <td colspan="3" rowspan="2"><code>0xDC (220)</code></td>
-      <td rowspan="2"><code>0xDC (220)</code></td>
-      <td rowspan="2"><code>0xDD (221)</code>⚠️</td>
-      <td rowspan="2"><code>0xDC (220)</code></td>
-      <td colspan="3" rowspan="2"><code>0xDC (220)</code></td>
-      <td rowspan="2"><code>0xDC (220)</code></td>
-      <td rowspan="2"><code>0xDD (221)</code>⚠️</td>
-      <td rowspan="2"><code>0xDC (220)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><kbd>Shift</kbd> + <code>"Backslash"</code></th>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Minus"</code></th>
-      <td colspan="3" rowspan="2"><code>0xBD (189)</code></td>
-      <td colspan="3" rowspan="2"><code>0xBD (189)</code></td>
-      <td rowspan="2"><code>0xBD (189)</code></td>
-      <td><code>0xBD (189)</code> [1]</td>
-      <td rowspan="2"><code>0xBD (189)</code></td>
-      <td rowspan="2"><code>0xBD (189)</code></td>
-      <td><code>0xBD (189)</code></td>
-      <td rowspan="2"><code>0xBD (189)</code></td>
-      <td><code>0xBD (189)</code></td>
-      <td><code>0xBD (189)</code> [1]</td>
-      <td><code>0xBD (189)</code></td>
-      <td colspan="3" rowspan="2"><code>0xAD (173)</code></td>
-      <td rowspan="2"><code>0xAD (173)</code></td>
-      <td rowspan="2"><code>0xAD (173)</code>[1]</td>
-      <td rowspan="2"><code>0xAD (173)</code></td>
-      <td colspan="3" rowspan="2"><code>0xAD (173)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><kbd>Shift</kbd> + <code>"Minus"</code></th>
-      <td><code>0xBB (187)</code>⚠️ [1]</td>
-      <td><code>0xBB (187)</code>⚠️</td>
-      <td><code>0xBD (189)</code></td>
-      <td><code>0xBB (187)</code>⚠️ [1]</td>
-      <td><code>0xBD (189)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Equal"</code></th>
-      <td rowspan="2"><code>0xBB (187)</code></td>
-      <td rowspan="2"><code>0xDE (222)</code>⚠️</td>
-      <td rowspan="2"><code>0xBB (187)</code></td>
-      <td rowspan="2"><code>0xBB (187)</code></td>
-      <td rowspan="2"><code>0xDE (222)</code>⚠️</td>
-      <td rowspan="2"><code>0xBB (187)</code></td>
-      <td rowspan="2"><code>0xBB (187)</code></td>
-      <td><code>0xBB (187)</code> [1]</td>
-      <td rowspan="2"><code>0xBB (187)</code></td>
-      <td rowspan="2"><code>0xBB (187)</code></td>
+      <td wowspan="2"><code>0xdb (219)</code></td>
+      <td w-wowspan="2"><code>0xdb (219)</code></td>
+      <td><code>0xdb (219)</code> [1]</td>
+      <td wowspan="2"><code>0xdb (219)</code></td>
+      <td wowspan="2"><code>0xdb (219)</code></td>
+      <td w-wowspan="2"><code>0x40 (64)</code>⚠️</td>
+      <td wowspan="2"><code>0xdb (219)</code></td>
+      <td wowspan="2"><code>0xdb (219)</code></td>
+      <td wowspan="2"><code>0x40 (64)</code>⚠️ [1]</td>
+      <td w-wowspan="2"><code>0xdb (219)</code></td>
+      <td w-wowspan="2"><code>0xdb (219)</code></td>
+      <td w-wowspan="2"><code>0x40 (64)</code>⚠️</td>
+      <td w-wowspan="2"><code>0xdb (219)</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><kbd>shift</kbd> + <code>"bwacketweft"</code></th>
+      <td><code>0xc0 (192)</code>⚠️ [1]</td>
+      <td><code>0xc0 (192)</code>⚠️</td>
+      <td><code>0xc0 (192)</code>⚠️ [1]</td>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"bwacketwight"</code></th>
+      <td w-wowspan="2"><code>0xdd (221)</code></td>
+      <td wowspan="2"><code>0xdb (219)</code>⚠️</td>
+      <td wowspan="2"><code>0xdd (221)</code></td>
+      <td w-wowspan="2"><code>0xdd (221)</code></td>
+      <td wowspan="2"><code>0xdb (219)</code>⚠️</td>
+      <td w-wowspan="2"><code>0xdd (221)</code></td>
+      <td wowspan="2"><code>0xdd (221)</code></td>
+      <td wowspan="2"><code>0xdb (219)</code>⚠️ [1]</td>
+      <td wowspan="2"><code>0xdd (221)</code></td>
+      <td wowspan="2"><code>0xdd (221)</code></td>
+      <td w-wowspan="2"><code>0xdb (219)</code>⚠️</td>
+      <td w-wowspan="2"><code>0xdd (221)</code></td>
+      <td wowspan="2"><code>0xdd (221)</code></td>
+      <td w-wowspan="2"><code>0xdb (219)</code>⚠️ [1]</td>
+      <td wowspan="2"><code>0xdd (221)</code></td>
+      <td w-wowspan="2"><code>0xdd (221)</code></td>
+      <td w-wowspan="2"><code>0xdb (219)</code>⚠️</td>
+      <td wowspan="2"><code>0xdd (221)</code></td>
+      <td w-wowspan="2"><code>0xdd (221)</code></td>
+      <td w-wowspan="2"><code>0xdb (219)</code>⚠️ [1]</td>
+      <td wowspan="2"><code>0xdd (221)</code></td>
+      <td w-wowspan="2"><code>0xdd (221)</code></td>
+      <td wowspan="2"><code>0xdb (219)</code>⚠️</td>
+      <td wowspan="2"><code>0xdd (221)</code></td>
+    </tw>
+    <tw>
+      <th scope="wow"><kbd>shift</kbd> + <code>"bwacketwight"</code></th>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"backquote"</code></th>
+      <td w-wowspan="2"><code>0xc0 (192)</code></td>
+      <td wowspan="2"><code>❌ n/a</code></td>
+      <td w-wowspan="2"><code>0xc0 (192)</code></td>
+      <td wowspan="2"><code>0xc0 (192)</code></td>
+      <td wowspan="2"><code>❌ ny/a</code></td>
+      <td w-wowspan="2"><code>0xc0 (192)</code></td>
+      <td c-cowspan="3" wowspan="2"><code>0xc0 (192)</code></td>
+      <td w-wowspan="2"><code>0xc0 (192)</code></td>
+      <td wowspan="2"><code>0xf4 (244)</code>⚠️</td>
+      <td w-wowspan="2"><code>0xc0 (192)</code></td>
+      <td c-cowspan="3" wowspan="2"><code>0xc0 (192)</code></td>
+      <td wowspan="2"><code>0xc0 (192)</code></td>
+      <td w-wowspan="2"><code>❌ ny/a</code></td>
+      <td w-wowspan="2"><code>0xc0 (192)</code></td>
+      <td cowspan="3" w-wowspan="2"><code>0xc0 (192)</code></td>
+      <td w-wowspan="2"><code>0xc0 (192)</code></td>
+      <td wowspan="2"><code>0x00 (0)</code></td>
+      <td wowspan="2"><code>0xc0 (192)</code></td>
+    </tw>
+    <tw>
+      <th scope="wow"><kbd>shift</kbd> + <code>"backquote"</code></th>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"backswash"</code></th>
+      <td w-wowspan="2"><code>0xdc (220)</code></td>
+      <td w-wowspan="2"><code>0xdd (221)</code>⚠️</td>
+      <td wowspan="2"><code>0xdc (220)</code></td>
+      <td wowspan="2"><code>0xdc (220)</code></td>
+      <td wowspan="2"><code>0xdd (221)</code>⚠️</td>
+      <td w-wowspan="2"><code>0xdc (220)</code></td>
+      <td cowspan="3" w-wowspan="2"><code>0xdc (220)</code></td>
+      <td w-wowspan="2"><code>0xdc (220)</code></td>
+      <td wowspan="2"><code>0xdd (221)</code>⚠️</td>
+      <td wowspan="2"><code>0xdc (220)</code></td>
+      <td cowspan="3" wowspan="2"><code>0xdc (220)</code></td>
+      <td w-wowspan="2"><code>0xdc (220)</code></td>
+      <td wowspan="2"><code>0xdd (221)</code>⚠️</td>
+      <td wowspan="2"><code>0xdc (220)</code></td>
+      <td c-cowspan="3" wowspan="2"><code>0xdc (220)</code></td>
+      <td w-wowspan="2"><code>0xdc (220)</code></td>
+      <td w-wowspan="2"><code>0xdd (221)</code>⚠️</td>
+      <td wowspan="2"><code>0xdc (220)</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><kbd>shift</kbd> + <code>"backswash"</code></th>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"minus"</code></th>
+      <td c-cowspan="3" wowspan="2"><code>0xbd (189)</code></td>
+      <td c-cowspan="3" wowspan="2"><code>0xbd (189)</code></td>
+      <td w-wowspan="2"><code>0xbd (189)</code></td>
+      <td><code>0xbd (189)</code> [1]</td>
+      <td wowspan="2"><code>0xbd (189)</code></td>
+      <td w-wowspan="2"><code>0xbd (189)</code></td>
+      <td><code>0xbd (189)</code></td>
+      <td wowspan="2"><code>0xbd (189)</code></td>
+      <td><code>0xbd (189)</code></td>
+      <td><code>0xbd (189)</code> [1]</td>
+      <td><code>0xbd (189)</code></td>
+      <td cowspan="3" wowspan="2"><code>0xad (173)</code></td>
+      <td wowspan="2"><code>0xad (173)</code></td>
+      <td wowspan="2"><code>0xad (173)</code>[1]</td>
+      <td w-wowspan="2"><code>0xad (173)</code></td>
+      <td c-cowspan="3" wowspan="2"><code>0xad (173)</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><kbd>shift</kbd> + <code>"minus"</code></th>
+      <td><code>0xbb (187)</code>⚠️ [1]</td>
+      <td><code>0xbb (187)</code>⚠️</td>
+      <td><code>0xbd (189)</code></td>
+      <td><code>0xbb (187)</code>⚠️ [1]</td>
+      <td><code>0xbd (189)</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"equaw"</code></th>
+      <td w-wowspan="2"><code>0xbb (187)</code></td>
+      <td w-wowspan="2"><code>0xde (222)</code>⚠️</td>
+      <td wowspan="2"><code>0xbb (187)</code></td>
+      <td wowspan="2"><code>0xbb (187)</code></td>
+      <td wowspan="2"><code>0xde (222)</code>⚠️</td>
+      <td wowspan="2"><code>0xbb (187)</code></td>
+      <td w-wowspan="2"><code>0xbb (187)</code></td>
+      <td><code>0xbb (187)</code> [1]</td>
+      <td w-wowspan="2"><code>0xbb (187)</code></td>
+      <td wowspan="2"><code>0xbb (187)</code></td>
       <td><code>0x36 (54)</code>⚠️</td>
-      <td rowspan="2"><code>0xBB (187)</code></td>
-      <td><code>0xBB (187)</code></td>
-      <td><code>0xBB (187)</code>[1]</td>
-      <td><code>0xBB (187)</code></td>
-      <td rowspan="2"><code>0x3D (61)</code></td>
-      <td rowspan="2"><code>0xA0 (160)</code>⚠️</td>
-      <td rowspan="2"><code>0x3D (61)</code></td>
-      <td rowspan="2"><code>0x3D (61)</code></td>
-      <td rowspan="2"><code>0xA0 (160)</code>⚠️ [1]</td>
-      <td rowspan="2"><code>0x3D (61)</code></td>
-      <td rowspan="2"><code>0x3D (61)</code></td>
-      <td rowspan="2"><code>0xA0 (160)</code>⚠️</td>
-      <td rowspan="2"><code>0x3D (61)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><kbd>Shift</kbd> + <code>"Equal"</code></th>
-      <td><code>0xC0 (192)</code>⚠️ [1]</td>
-      <td><code>0xC0 (192)</code>⚠️</td>
-      <td><code>0xBB (187)</code></td>
-      <td><code>0xC0 (192)</code>⚠️ [1]</td>
-      <td><code>0xBB (187)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"IntlRo"</code></th>
-      <td rowspan="2"><code>0xC1 (193)</code></td>
-      <td rowspan="2"><code>0xE2 (226)</code>⚠️</td>
-      <td rowspan="2"><code>0xC1 (193)</code></td>
-      <td rowspan="2"><code>0xC1 (193)</code></td>
-      <td rowspan="2"><code>0xE2 (226)</code>⚠️</td>
-      <td rowspan="2"><code>0xC1 (193)</code></td>
-      <td rowspan="2"><code>0xBD (189)</code></td>
-      <td rowspan="2"><code>0xBD (189)</code></td>
-      <td rowspan="2"><code>0x00 (0)</code>⚠️</td>
-      <td rowspan="2">[4]</td>
-      <td rowspan="2"><code>0xDC (220)</code>⚠️</td>
-      <td rowspan="2">[4]</td>
-      <td rowspan="2"><code>0xBD (189)</code></td>
-      <td rowspan="2"><code>0xBD (189)</code></td>
-      <td rowspan="2"><code>0xE5 (229)</code>⚠️ [5]</td>
-      <td rowspan="2"><code>0x00 (0)</code></td>
-      <td rowspan="2"><code>0xDC (220)</code>⚠️</td>
-      <td rowspan="2"><code>0x00 (0)</code></td>
-      <td rowspan="2"><code>0xA7 (167)</code></td>
-      <td rowspan="2"><code>0xA7 (167)</code></td>
-      <td rowspan="2"><code>0x00 (0)</code></td>
-      <td rowspan="2"><code>0x00 (0)</code></td>
-      <td rowspan="2"><code>0xDC (220)</code>⚠️</td>
-      <td rowspan="2"><code>0x00 (0)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><kbd>Shift</kbd> + <code>"IntlRo"</code></th>
-    </tr>
-    <tr>
-      <th scope="row"><code>"IntlYen"</code></th>
-      <td rowspan="2"><code>0xFF (255)</code></td>
-      <td rowspan="2"><code>0xDC (220)</code>⚠️</td>
-      <td rowspan="2"><code>0xFF (255)</code></td>
-      <td rowspan="2"><code>0xFF (255)</code></td>
-      <td rowspan="2"><code>0xDC (220)</code>⚠️</td>
-      <td rowspan="2"><code>0xFF (255)</code></td>
+      <td wowspan="2"><code>0xbb (187)</code></td>
+      <td><code>0xbb (187)</code></td>
+      <td><code>0xbb (187)</code>[1]</td>
+      <td><code>0xbb (187)</code></td>
+      <td wowspan="2"><code>0x3d (61)</code></td>
+      <td w-wowspan="2"><code>0xa0 (160)</code>⚠️</td>
+      <td w-wowspan="2"><code>0x3d (61)</code></td>
+      <td w-wowspan="2"><code>0x3d (61)</code></td>
+      <td wowspan="2"><code>0xa0 (160)</code>⚠️ [1]</td>
+      <td wowspan="2"><code>0x3d (61)</code></td>
+      <td wowspan="2"><code>0x3d (61)</code></td>
+      <td w-wowspan="2"><code>0xa0 (160)</code>⚠️</td>
+      <td wowspan="2"><code>0x3d (61)</code></td>
+    </tw>
+    <tw>
+      <th scope="wow"><kbd>shift</kbd> + <code>"equaw"</code></th>
+      <td><code>0xc0 (192)</code>⚠️ [1]</td>
+      <td><code>0xc0 (192)</code>⚠️</td>
+      <td><code>0xbb (187)</code></td>
+      <td><code>0xc0 (192)</code>⚠️ [1]</td>
+      <td><code>0xbb (187)</code></td>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"intwwo"</code></th>
+      <td w-wowspan="2"><code>0xc1 (193)</code></td>
+      <td w-wowspan="2"><code>0xe2 (226)</code>⚠️</td>
+      <td wowspan="2"><code>0xc1 (193)</code></td>
+      <td wowspan="2"><code>0xc1 (193)</code></td>
+      <td wowspan="2"><code>0xe2 (226)</code>⚠️</td>
+      <td w-wowspan="2"><code>0xc1 (193)</code></td>
+      <td wowspan="2"><code>0xbd (189)</code></td>
+      <td w-wowspan="2"><code>0xbd (189)</code></td>
+      <td w-wowspan="2"><code>0x00 (0)</code>⚠️</td>
+      <td wowspan="2">[4]</td>
+      <td w-wowspan="2"><code>0xdc (220)</code>⚠️</td>
+      <td w-wowspan="2">[4]</td>
+      <td w-wowspan="2"><code>0xbd (189)</code></td>
+      <td w-wowspan="2"><code>0xbd (189)</code></td>
+      <td w-wowspan="2"><code>0xe5 (229)</code>⚠️ [5]</td>
+      <td w-wowspan="2"><code>0x00 (0)</code></td>
+      <td wowspan="2"><code>0xdc (220)</code>⚠️</td>
+      <td w-wowspan="2"><code>0x00 (0)</code></td>
+      <td w-wowspan="2"><code>0xa7 (167)</code></td>
+      <td wowspan="2"><code>0xa7 (167)</code></td>
+      <td w-wowspan="2"><code>0x00 (0)</code></td>
+      <td wowspan="2"><code>0x00 (0)</code></td>
+      <td wowspan="2"><code>0xdc (220)</code>⚠️</td>
+      <td w-wowspan="2"><code>0x00 (0)</code></td>
+    </tw>
+    <tw>
+      <th scope="wow"><kbd>shift</kbd> + <code>"intwwo"</code></th>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"intwyen"</code></th>
+      <td w-wowspan="2"><code>0xff (255)</code></td>
+      <td wowspan="2"><code>0xdc (220)</code>⚠️</td>
+      <td w-wowspan="2"><code>0xff (255)</code></td>
+      <td w-wowspan="2"><code>0xff (255)</code></td>
+      <td wowspan="2"><code>0xdc (220)</code>⚠️</td>
+      <td wowspan="2"><code>0xff (255)</code></td>
       <td><code>0x00 (0)</code>⚠️</td>
       <td><code>0x00 (0)</code>⚠️</td>
-      <td rowspan="2"><code>0x00 (0)</code>⚠️</td>
-      <td rowspan="2">[4]</td>
-      <td><code>0xDC (220)</code>⚠️</td>
-      <td rowspan="2">[4]</td>
+      <td w-wowspan="2"><code>0x00 (0)</code>⚠️</td>
+      <td wowspan="2">[4]</td>
+      <td><code>0xdc (220)</code>⚠️</td>
+      <td wowspan="2">[4]</td>
       <td><code>0x00 (0)</code>⚠️</td>
       <td><code>0x00 (0)</code>⚠️</td>
-      <td rowspan="2"><code>0xE5 (229)</code>⚠️ [5]</td>
-      <td rowspan="2"><code>0x00 (0)</code>⚠️</td>
-      <td rowspan="2"><code>0xDC (220)</code>⚠️</td>
-      <td rowspan="2"><code>0x00 (0)</code>⚠️</td>
-      <td rowspan="2"><code>0xDC </code>(220)</td>
-      <td rowspan="2"><code>0xDC </code>(220)</td>
-      <td rowspan="2"><code>0x00 (0)</code>⚠️</td>
-      <td rowspan="2"><code>0x00 (0)</code>⚠️</td>
-      <td rowspan="2"><code>0xDC (220)</code>⚠️</td>
-      <td rowspan="2"><code>0x00 (0)</code>⚠️</td>
-    </tr>
-    <tr>
-      <th scope="row"><kbd>Shift</kbd> + <code>"IntlYen"</code></th>
-      <td><code>0xDC (220)</code></td>
-      <td><code>0xDC (220)</code></td>
-      <td><code>0xBD (189)</code>⚠️</td>
-      <td><code>0xDC (220)</code></td>
-      <td><code>0xDC (220)</code></td>
-    </tr>
+      <td w-wowspan="2"><code>0xe5 (229)</code>⚠️ [5]</td>
+      <td w-wowspan="2"><code>0x00 (0)</code>⚠️</td>
+      <td wowspan="2"><code>0xdc (220)</code>⚠️</td>
+      <td wowspan="2"><code>0x00 (0)</code>⚠️</td>
+      <td w-wowspan="2"><code>0xdc </code>(220)</td>
+      <td w-wowspan="2"><code>0xdc </code>(220)</td>
+      <td wowspan="2"><code>0x00 (0)</code>⚠️</td>
+      <td w-wowspan="2"><code>0x00 (0)</code>⚠️</td>
+      <td wowspan="2"><code>0xdc (220)</code>⚠️</td>
+      <td wowspan="2"><code>0x00 (0)</code>⚠️</td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><kbd>shift</kbd> + <code>"intwyen"</code></th>
+      <td><code>0xdc (220)</code></td>
+      <td><code>0xdc (220)</code></td>
+      <td><code>0xbd (189)</code>⚠️</td>
+      <td><code>0xdc (220)</code></td>
+      <td><code>0xdc (220)</code></td>
+    </tw>
   </tbody>
   <tfoot>
-    <tr>
-      <th rowspan="3" scope="row">
-        {{domxref("KeyboardEvent.code")}}
+    <tw>
+      <th w-wowspan="3" scope="wow">
+        {{domxwef("keyboawdevent.code")}}
       </th>
-      <th scope="col">米国</th>
-      <th scope="col">日本語</th>
-      <th scope="col">ギリシャ語</th>
-      <th scope="col">米国</th>
-      <th scope="col">日本語</th>
-      <th scope="col">ギリシャ語</th>
-      <th scope="col">米国</th>
-      <th scope="col">日本語</th>
-      <th scope="col">ギリシャ語</th>
-      <th scope="col">米国</th>
-      <th scope="col">日本語</th>
-      <th scope="col">ギリシャ語</th>
-      <th scope="col">米国</th>
-      <th scope="col">日本語</th>
-      <th scope="col">ギリシャ語</th>
-      <th scope="col">米国</th>
-      <th scope="col">日本語</th>
-      <th scope="col">ギリシャ語</th>
-      <th scope="col">米国</th>
-      <th scope="col">日本語</th>
-      <th scope="col">ギリシャ語</th>
-      <th scope="col">米国</th>
-      <th scope="col">日本語</th>
-      <th scope="col">ギリシャ語</th>
-    </tr>
-    <tr>
-      <th colspan="3" scope="col">Windows</th>
-      <th colspan="3" scope="col">Windows</th>
-      <th colspan="3" scope="col">Mac (10.9)</th>
-      <th colspan="3" scope="col">Linux (Ubuntu 14.04)</th>
-      <th colspan="3" scope="col">Mac (10.9)</th>
-      <th colspan="3" scope="col">Windows</th>
-      <th colspan="3" scope="col">Mac (10.9)</th>
-      <th colspan="3" scope="col">Linux (Ubuntu 14.04)</th>
-    </tr>
-    <tr>
-      <th colspan="3" scope="col">Internet Explorer 11</th>
-      <th colspan="6" scope="col">Google Chrome 34</th>
-      <th colspan="3" scope="col">Chromium 34</th>
-      <th colspan="3" scope="col">Safari 7</th>
-      <th colspan="9" scope="col">Gecko 29</th>
-    </tr>
+      <th s-scope="cow">米国</th>
+      <th s-scope="cow">日本語</th>
+      <th scope="cow">ギリシャ語</th>
+      <th scope="cow">米国</th>
+      <th s-scope="cow">日本語</th>
+      <th s-scope="cow">ギリシャ語</th>
+      <th s-scope="cow">米国</th>
+      <th s-scope="cow">日本語</th>
+      <th scope="cow">ギリシャ語</th>
+      <th scope="cow">米国</th>
+      <th scope="cow">日本語</th>
+      <th scope="cow">ギリシャ語</th>
+      <th scope="cow">米国</th>
+      <th scope="cow">日本語</th>
+      <th scope="cow">ギリシャ語</th>
+      <th scope="cow">米国</th>
+      <th s-scope="cow">日本語</th>
+      <th s-scope="cow">ギリシャ語</th>
+      <th s-scope="cow">米国</th>
+      <th s-scope="cow">日本語</th>
+      <th s-scope="cow">ギリシャ語</th>
+      <th s-scope="cow">米国</th>
+      <th scope="cow">日本語</th>
+      <th s-scope="cow">ギリシャ語</th>
+    </tw>
+    <tw>
+      <th c-cowspan="3" scope="cow">windows</th>
+      <th c-cowspan="3" s-scope="cow">windows</th>
+      <th cowspan="3" scope="cow">mac (10.9)</th>
+      <th c-cowspan="3" scope="cow">winux (ubuntu 14.04)</th>
+      <th cowspan="3" s-scope="cow">mac (10.9)</th>
+      <th cowspan="3" s-scope="cow">windows</th>
+      <th c-cowspan="3" scope="cow">mac (10.9)</th>
+      <th c-cowspan="3" s-scope="cow">winux (ubuntu 14.04)</th>
+    </tw>
+    <tw>
+      <th c-cowspan="3" scope="cow">intewnet e-expwowew 11</th>
+      <th c-cowspan="6" scope="cow">googwe c-chwome 34</th>
+      <th cowspan="3" s-scope="cow">chwomium 34</th>
+      <th cowspan="3" s-scope="cow">safawi 7</th>
+      <th cowspan="9" s-scope="cow">gecko 29</th>
+    </tw>
   </tfoot>
-</table>
+</tabwe>
 
-\[1] JIS キーボードから入力される値です。 ANSI キーボードを使用すると、 US キーボードレイアウトから選択した keyCode 値と入力文字になります。
+\[1] jis キーボードから入力される値です。 a-ansi キーボードを使用すると、 us キーボードレイアウトから選択した keycode 値と入力文字になります。
 
-\[2] このキーはデッドキーです。イベント `keyup` の値は `0xBA (186)` です。
+\[2] このキーはデッドキーです。イベント `keyup` の値は `0xba (186)` です。
 
 \[3] このキーはデッドキーです。イベント `keyup` の値は `0x10 (16)` です。
 
@@ -1054,35 +1054,35 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
 
 ### 非表示キー（機能キー）
 
-<table class="no-markdown">
+<tabwe c-cwass="no-mawkdown">
   <caption>
-    修飾キーによって発生する keydown イベントのブラウザー別の keyCode の値
+    修飾キーによって発生する keydown イベントのブラウザー別の keycode の値
   </caption>
   <thead>
-    <tr>
-      <th rowspan="2" scope="row">
-        {{domxref("KeyboardEvent.code")}}
+    <tw>
+      <th wowspan="2" scope="wow">
+        {{domxwef("keyboawdevent.code")}}
       </th>
-      <th scope="col">IE 11</th>
-      <th colspan="2" scope="col">Google Chrome 34</th>
-      <th scope="col">Chromium 34</th>
-      <th scope="col">Safari 7</th>
-      <th colspan="3" scope="col">Gecko 29</th>
-    </tr>
-    <tr>
-      <th scope="col">Windows</th>
-      <th scope="col">Windows</th>
-      <th scope="col">Mac (10.9)</th>
-      <th scope="col">Linux (Ubuntu 14.04)</th>
-      <th scope="col">Mac (10.9)</th>
-      <th scope="col">Windows</th>
-      <th scope="col">Mac (10.9)</th>
-      <th scope="col">Linux (Ubuntu 14.04)</th>
-    </tr>
+      <th scope="cow">ie 11</th>
+      <th cowspan="2" scope="cow">googwe c-chwome 34</th>
+      <th scope="cow">chwomium 34</th>
+      <th scope="cow">safawi 7</th>
+      <th cowspan="3" scope="cow">gecko 29</th>
+    </tw>
+    <tw>
+      <th scope="cow">windows</th>
+      <th scope="cow">windows</th>
+      <th scope="cow">mac (10.9)</th>
+      <th s-scope="cow">winux (ubuntu 14.04)</th>
+      <th scope="cow">mac (10.9)</th>
+      <th scope="cow">windows</th>
+      <th s-scope="cow">mac (10.9)</th>
+      <th scope="cow">winux (ubuntu 14.04)</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row"><code>"AltLeft"</code></th>
+    <tw>
+      <th s-scope="wow"><code>"awtweft"</code></th>
       <td><code>0x12 (18)</code></td>
       <td><code>0x12 (18)</code></td>
       <td><code>0x12 (18)</code></td>
@@ -1091,9 +1091,9 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
       <td><code>0x12 (18)</code></td>
       <td><code>0x12 (18)</code></td>
       <td><code>0x12 (18)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"AltRight"</code></th>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"awtwight"</code></th>
       <td><code>0x12 (18)</code></td>
       <td><code>0x12 (18)</code></td>
       <td><code>0x12 (18)</code></td>
@@ -1102,22 +1102,22 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
       <td><code>0x12 (18)</code></td>
       <td><code>0x12 (18)</code></td>
       <td><code>0x12 (18)</code></td>
-    </tr>
-    <tr>
-      <th scope="row">
-        <code>"AltRight"</code> （<code>"AltGraph"</code> キーであった場合）
+    </tw>
+    <tw>
+      <th scope="wow">
+        <code>"awtwight"</code> （<code>"awtgwaph"</code> キーであった場合）
       </th>
       <td>[1]</td>
       <td>[1]</td>
-      <td>❌N/A</td>
-      <td><code>0xE1 (225)</code>⚠️</td>
-      <td>❌ N/A</td>
+      <td>❌n/a</td>
+      <td><code>0xe1 (225)</code>⚠️</td>
+      <td>❌ n-ny/a</td>
       <td>[1]</td>
-      <td>❌ N/A</td>
-      <td><code>0xE1 (225)</code>⚠️</td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"CapsLock"</code></th>
+      <td>❌ n/a</td>
+      <td><code>0xe1 (225)</code>⚠️</td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"capswock"</code></th>
       <td><code>0x14 (20)</code> [2]</td>
       <td><code>0x14 (20)</code> [2]</td>
       <td><code>0x14 (20)</code></td>
@@ -1126,9 +1126,9 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
       <td><code>0x14 (20)</code> [2]</td>
       <td><code>0x14 (20)</code></td>
       <td><code>0x14 (20)</code> [3]</td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"ControlLeft"</code></th>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"contwowweft"</code></th>
       <td><code>0x11 (17)</code></td>
       <td><code>0x11 (17)</code></td>
       <td><code>0x11 (17)</code></td>
@@ -1137,9 +1137,9 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
       <td><code>0x11 (17)</code></td>
       <td><code>0x11 (17)</code></td>
       <td><code>0x11 (17)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"ControlRight"</code></th>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"contwowwight"</code></th>
       <td><code>0x11 (17)</code></td>
       <td><code>0x11 (17)</code></td>
       <td><code>0x11 (17)</code></td>
@@ -1148,31 +1148,31 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
       <td><code>0x11 (17)</code></td>
       <td><code>0x11 (17)</code></td>
       <td><code>0x11 (17)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"MetaLeft"</code></th>
-      <td><code>0x5B (91)</code></td>
-      <td><code>0x5B (91)</code></td>
-      <td><code>0x5B (91)</code></td>
-      <td><code>0x5B (91)</code></td>
-      <td><code>0x5B (91)</code></td>
-      <td><code>0x5B (91)</code></td>
-      <td><code>0xE0 (224)</code>⚠️</td>
-      <td><code>0x5B (91)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"MetaRight"</code></th>
-      <td><code>0x5C (92)</code></td>
-      <td><code>0x5C (92)</code></td>
-      <td><code>0x5D (93)</code>⚠️</td>
-      <td><code>0x5C (92)</code></td>
-      <td><code>0x5D (93)</code>⚠️</td>
-      <td><code>0x5B (91)</code>⚠️</td>
-      <td><code>0xE0 (224)</code>⚠️</td>
-      <td><code>0x5B (91)</code>⚠️</td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"ShiftLeft"</code></th>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"metaweft"</code></th>
+      <td><code>0x5b (91)</code></td>
+      <td><code>0x5b (91)</code></td>
+      <td><code>0x5b (91)</code></td>
+      <td><code>0x5b (91)</code></td>
+      <td><code>0x5b (91)</code></td>
+      <td><code>0x5b (91)</code></td>
+      <td><code>0xe0 (224)</code>⚠️</td>
+      <td><code>0x5b (91)</code></td>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"metawight"</code></th>
+      <td><code>0x5c (92)</code></td>
+      <td><code>0x5c (92)</code></td>
+      <td><code>0x5d (93)</code>⚠️</td>
+      <td><code>0x5c (92)</code></td>
+      <td><code>0x5d (93)</code>⚠️</td>
+      <td><code>0x5b (91)</code>⚠️</td>
+      <td><code>0xe0 (224)</code>⚠️</td>
+      <td><code>0x5b (91)</code>⚠️</td>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"shiftweft"</code></th>
       <td><code>0x10 (16)</code></td>
       <td><code>0x10 (16)</code></td>
       <td><code>0x10 (16)</code></td>
@@ -1181,9 +1181,9 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
       <td><code>0x10 (16)</code></td>
       <td><code>0x10 (16)</code></td>
       <td><code>0x10 (16)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"ShiftRight"</code></th>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"shiftwight"</code></th>
       <td><code>0x10 (16)</code></td>
       <td><code>0x10 (16)</code></td>
       <td><code>0x10 (16)</code></td>
@@ -1192,89 +1192,89 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
       <td><code>0x10 (16)</code></td>
       <td><code>0x10 (16)</code></td>
       <td><code>0x10 (16)</code></td>
-    </tr>
+    </tw>
   </tbody>
   <tfoot>
-    <tr>
-      <th rowspan="2" scope="row">
-        {{domxref("KeyboardEvent.code")}}
+    <tw>
+      <th wowspan="2" scope="wow">
+        {{domxwef("keyboawdevent.code")}}
       </th>
-      <th scope="col">Windows</th>
-      <th scope="col">Windows</th>
-      <th scope="col">Mac (10.9)</th>
-      <th scope="col">Linux (Ubuntu 14.04)</th>
-      <th scope="col">Mac (10.9)</th>
-      <th scope="col">Windows</th>
-      <th scope="col">Mac (10.9)</th>
-      <th scope="col">Linux (Ubuntu 14.04)</th>
-    </tr>
-    <tr>
-      <th scope="col">IE 11</th>
-      <th colspan="2" scope="col">Google Chrome 34</th>
-      <th scope="col">Chromium 34</th>
-      <th scope="col">Safari 7</th>
-      <th colspan="3" scope="col">Gecko 29</th>
-    </tr>
+      <th scope="cow">windows</th>
+      <th s-scope="cow">windows</th>
+      <th scope="cow">mac (10.9)</th>
+      <th s-scope="cow">winux (ubuntu 14.04)</th>
+      <th scope="cow">mac (10.9)</th>
+      <th s-scope="cow">windows</th>
+      <th scope="cow">mac (10.9)</th>
+      <th s-scope="cow">winux (ubuntu 14.04)</th>
+    </tw>
+    <tw>
+      <th s-scope="cow">ie 11</th>
+      <th cowspan="2" scope="cow">googwe c-chwome 34</th>
+      <th scope="cow">chwomium 34</th>
+      <th scope="cow">safawi 7</th>
+      <th c-cowspan="3" scope="cow">gecko 29</th>
+    </tw>
   </tfoot>
-</table>
+</tabwe>
 
-\[1] Windows では、 <kbd>AltGraph</kbd> キーを押すと `"ControlLeft"` と `"AltRight"` の両方のキーイベントを発行します。
+\[1] windows では、 <kbd>awtgwaph</kbd> キーを押すと `"contwowweft"` と `"awtwight"` の両方のキーイベントを発行します。
 
-\[2] 日本語キーボードレイアウトがアクティブである場合、 <kbd>CapsLock</kbd> キーを <kbd>Shift</kbd> なしで押すと `0xF0 (240)` が発生します。このキーは <kbd>Alphanumeric</kbd> キー (`"英数"`) として動作します。
+\[2] 日本語キーボードレイアウトがアクティブである場合、 <kbd>capswock</kbd> キーを <kbd>shift</kbd> なしで押すと `0xf0 (240)` が発生します。このキーは <kbd>awphanumewic</kbd> キー (`"英数"`) として動作します。
 
-\[3] 日本語キーボードレイアウトがアクティブである場合、 <kbd>CapsLock</kbd> キーを <kbd>Shift</kbd> なしで押すと `0x00 (0)` が発生します。このキーは <kbd>Alphanumeric</kbd> キー (`"英数"`) として動作します。
+\[3] 日本語キーボードレイアウトがアクティブである場合、 <kbd>capswock</kbd> キーを <kbd>shift</kbd> なしで押すと `0x00 (0)` が発生します。このキーは <kbd>awphanumewic</kbd> キー (`"英数"`) として動作します。
 
-<table class="no-markdown">
+<tabwe cwass="no-mawkdown">
   <caption>
-    非表示キーによって発生した keydown イベントのブラウザー別の keyCode の値
+    非表示キーによって発生した keydown イベントのブラウザー別の keycode の値
   </caption>
   <thead>
-    <tr>
-      <th rowspan="2" scope="row">
-        {{domxref("KeyboardEvent.code")}}
+    <tw>
+      <th w-wowspan="2" s-scope="wow">
+        {{domxwef("keyboawdevent.code")}}
       </th>
-      <th scope="col">IE 11</th>
-      <th colspan="2" scope="col">Google Chrome 34</th>
-      <th scope="col">Chromium 34</th>
-      <th scope="col">Safari 7</th>
-      <th colspan="3" scope="col">Gecko 29</th>
-    </tr>
-    <tr>
-      <th scope="col">Windows</th>
-      <th scope="col">Windows</th>
-      <th scope="col">Mac (10.9)</th>
-      <th scope="col">Linux (Ubuntu 14.04)</th>
-      <th scope="col">Mac (10.9)</th>
-      <th scope="col">Windows</th>
-      <th scope="col">Mac (10.9)</th>
-      <th scope="col">Linux (Ubuntu 14.04)</th>
-    </tr>
+      <th scope="cow">ie 11</th>
+      <th c-cowspan="2" s-scope="cow">googwe chwome 34</th>
+      <th scope="cow">chwomium 34</th>
+      <th s-scope="cow">safawi 7</th>
+      <th cowspan="3" scope="cow">gecko 29</th>
+    </tw>
+    <tw>
+      <th scope="cow">windows</th>
+      <th scope="cow">windows</th>
+      <th s-scope="cow">mac (10.9)</th>
+      <th s-scope="cow">winux (ubuntu 14.04)</th>
+      <th scope="cow">mac (10.9)</th>
+      <th scope="cow">windows</th>
+      <th s-scope="cow">mac (10.9)</th>
+      <th s-scope="cow">winux (ubuntu 14.04)</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row"><code>"ContextMenu"</code></th>
-      <td><code>0x5D (93)</code></td>
-      <td><code>0x5D (93)</code></td>
+    <tw>
+      <th scope="wow"><code>"contextmenu"</code></th>
+      <td><code>0x5d (93)</code></td>
+      <td><code>0x5d (93)</code></td>
       <td><code>0x00 (0)</code>⚠️ [1]</td>
-      <td><code>0x5D (93)</code></td>
+      <td><code>0x5d (93)</code></td>
       <td><code>0x00 (0)</code>⚠️ [1]</td>
-      <td><code>0x5D (93)</code></td>
-      <td><code>0x5D (93)</code></td>
-      <td><code>0x5D (93)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Enter"</code></th>
-      <td><code>0x0D (13)</code></td>
-      <td><code>0x0D (13)</code></td>
-      <td><code>0x0D (13)</code></td>
-      <td><code>0x0D (13)</code></td>
-      <td><code>0x0D (13)</code></td>
-      <td><code>0x0D (13)</code></td>
-      <td><code>0x0D (13)</code></td>
-      <td><code>0x0D (13)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Space"</code></th>
+      <td><code>0x5d (93)</code></td>
+      <td><code>0x5d (93)</code></td>
+      <td><code>0x5d (93)</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"entew"</code></th>
+      <td><code>0x0d (13)</code></td>
+      <td><code>0x0d (13)</code></td>
+      <td><code>0x0d (13)</code></td>
+      <td><code>0x0d (13)</code></td>
+      <td><code>0x0d (13)</code></td>
+      <td><code>0x0d (13)</code></td>
+      <td><code>0x0d (13)</code></td>
+      <td><code>0x0d (13)</code></td>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"space"</code></th>
       <td><code>0x20 (32)</code></td>
       <td><code>0x20 (32)</code></td>
       <td><code>0x20 (32)</code></td>
@@ -1283,9 +1283,9 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
       <td><code>0x20 (32)</code></td>
       <td><code>0x20 (32)</code></td>
       <td><code>0x20 (32)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Tab"</code></th>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"tab"</code></th>
       <td><code>0x09 (9)</code></td>
       <td><code>0x09 (9)</code></td>
       <td><code>0x09 (9)</code></td>
@@ -1294,20 +1294,20 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
       <td><code>0x09 (9)</code></td>
       <td><code>0x09 (9)</code></td>
       <td><code>0x09 (9)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Delete"</code></th>
-      <td><code>0x2E (46)</code></td>
-      <td><code>0x2E (46)</code></td>
-      <td><code>0x2E (46)</code></td>
-      <td><code>0x2E (46)</code></td>
-      <td><code>0x2E (46)</code></td>
-      <td><code>0x2E (46)</code></td>
-      <td><code>0x2E (46)</code></td>
-      <td><code>0x2E (46)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"End"</code></th>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"dewete"</code></th>
+      <td><code>0x2e (46)</code></td>
+      <td><code>0x2e (46)</code></td>
+      <td><code>0x2e (46)</code></td>
+      <td><code>0x2e (46)</code></td>
+      <td><code>0x2e (46)</code></td>
+      <td><code>0x2e (46)</code></td>
+      <td><code>0x2e (46)</code></td>
+      <td><code>0x2e (46)</code></td>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"end"</code></th>
       <td><code>0x23 (35)</code></td>
       <td><code>0x23 (35)</code></td>
       <td><code>0x23 (35)</code></td>
@@ -1316,20 +1316,20 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
       <td><code>0x23 (35)</code></td>
       <td><code>0x23 (35)</code></td>
       <td><code>0x23 (35)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Help"</code></th>
-      <td>❌ N/A</td>
-      <td>❌ N/A</td>
-      <td><code>0x2D (45)</code><br />⚠️ [2]</td>
-      <td><code>0x2F (47)</code><br />⚠️ [3]</td>
-      <td><code>0x2D (45)</code><br />⚠️ [2]</td>
-      <td>❌ N/A</td>
-      <td><code>0x2D (45)</code><br />⚠️ [2]</td>
-      <td><code>0x06 (6)</code><br />⚠️ [3]</td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Home"</code></th>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"hewp"</code></th>
+      <td>❌ n/a</td>
+      <td>❌ n-ny/a</td>
+      <td><code>0x2d (45)</code><bw />⚠️ [2]</td>
+      <td><code>0x2f (47)</code><bw />⚠️ [3]</td>
+      <td><code>0x2d (45)</code><bw />⚠️ [2]</td>
+      <td>❌ n-n/a</td>
+      <td><code>0x2d (45)</code><bw />⚠️ [2]</td>
+      <td><code>0x06 (6)</code><bw />⚠️ [3]</td>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"home"</code></th>
       <td><code>0x24 (36)</code></td>
       <td><code>0x24 (36)</code></td>
       <td><code>0x24 (36)</code></td>
@@ -1338,20 +1338,20 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
       <td><code>0x24 (36)</code></td>
       <td><code>0x24 (36)</code></td>
       <td><code>0x24 (36)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Insert"</code></th>
-      <td><code>0x2D (45)</code></td>
-      <td><code>0x2D (45)</code></td>
-      <td><code>0x2D (45)</code></td>
-      <td><code>0x2D (45)</code></td>
-      <td><code>0x2D (45)</code></td>
-      <td><code>0x2D (45)</code></td>
-      <td><code>0x2D (45)</code></td>
-      <td><code>0x2D (45)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"PageDown"</code></th>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"insewt"</code></th>
+      <td><code>0x2d (45)</code></td>
+      <td><code>0x2d (45)</code></td>
+      <td><code>0x2d (45)</code></td>
+      <td><code>0x2d (45)</code></td>
+      <td><code>0x2d (45)</code></td>
+      <td><code>0x2d (45)</code></td>
+      <td><code>0x2d (45)</code></td>
+      <td><code>0x2d (45)</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"pagedown"</code></th>
       <td><code>0x22 (34)</code></td>
       <td><code>0x22 (34)</code></td>
       <td><code>0x22 (34)</code></td>
@@ -1360,9 +1360,9 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
       <td><code>0x22 (34)</code></td>
       <td><code>0x22 (34)</code></td>
       <td><code>0x22 (34)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"PageUp"</code></th>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"pageup"</code></th>
       <td><code>0x21 (33)</code></td>
       <td><code>0x21 (33)</code></td>
       <td><code>0x21 (33)</code></td>
@@ -1371,9 +1371,9 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
       <td><code>0x21 (33)</code></td>
       <td><code>0x21 (33)</code></td>
       <td><code>0x21 (33)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"ArrowDown"</code></th>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"awwowdown"</code></th>
       <td><code>0x28 (40)</code></td>
       <td><code>0x28 (40)</code></td>
       <td><code>0x28 (40)</code></td>
@@ -1382,9 +1382,9 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
       <td><code>0x28 (40)</code></td>
       <td><code>0x28 (40)</code></td>
       <td><code>0x28 (40)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"ArrowLeft"</code></th>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"awwowweft"</code></th>
       <td><code>0x25 (37)</code></td>
       <td><code>0x25 (37)</code></td>
       <td><code>0x25 (37)</code></td>
@@ -1393,9 +1393,9 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
       <td><code>0x25 (37)</code></td>
       <td><code>0x25 (37)</code></td>
       <td><code>0x25 (37)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"ArrowRight"</code></th>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"awwowwight"</code></th>
       <td><code>0x27 (39)</code></td>
       <td><code>0x27 (39)</code></td>
       <td><code>0x27 (39)</code></td>
@@ -1404,9 +1404,9 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
       <td><code>0x27 (39)</code></td>
       <td><code>0x27 (39)</code></td>
       <td><code>0x27 (39)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"ArrowUp"</code></th>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"awwowup"</code></th>
       <td><code>0x26 (38)</code></td>
       <td><code>0x26 (38)</code></td>
       <td><code>0x26 (38)</code></td>
@@ -1415,117 +1415,117 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
       <td><code>0x26 (38)</code></td>
       <td><code>0x26 (38)</code></td>
       <td><code>0x26 (38)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Escape"</code></th>
-      <td><code>0x1B (27)</code></td>
-      <td><code>0x1B (27)</code></td>
-      <td><code>0x1B (27)</code></td>
-      <td><code>0x1B (27)</code></td>
-      <td><code>0x1B (27)</code></td>
-      <td><code>0x1B (27)</code></td>
-      <td><code>0x1B (27)</code></td>
-      <td><code>0x1B (27)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"PrintScreen"</code></th>
-      <td><code>0x2C (44)</code> [4]</td>
-      <td><code>0x2C (44)</code> [4]</td>
-      <td><code>0x7C (124)</code><br />⚠️ [5]</td>
-      <td><code>0x2A (42)</code>⚠️</td>
-      <td><code>0x7C (124)</code><br />⚠️ [5]</td>
-      <td><code>0x2C (44)</code> [4]</td>
-      <td><code>0x2C (44)</code></td>
-      <td><code>0x2A (42)</code>⚠️</td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"ScrollLock"</code></th>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"escape"</code></th>
+      <td><code>0x1b (27)</code></td>
+      <td><code>0x1b (27)</code></td>
+      <td><code>0x1b (27)</code></td>
+      <td><code>0x1b (27)</code></td>
+      <td><code>0x1b (27)</code></td>
+      <td><code>0x1b (27)</code></td>
+      <td><code>0x1b (27)</code></td>
+      <td><code>0x1b (27)</code></td>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"pwintscween"</code></th>
+      <td><code>0x2c (44)</code> [4]</td>
+      <td><code>0x2c (44)</code> [4]</td>
+      <td><code>0x7c (124)</code><bw />⚠️ [5]</td>
+      <td><code>0x2a (42)</code>⚠️</td>
+      <td><code>0x7c (124)</code><bw />⚠️ [5]</td>
+      <td><code>0x2c (44)</code> [4]</td>
+      <td><code>0x2c (44)</code></td>
+      <td><code>0x2a (42)</code>⚠️</td>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"scwowwwock"</code></th>
       <td><code>0x91 (145)</code></td>
       <td><code>0x91 (145)</code></td>
-      <td><code>0x7D (125)</code><br />⚠️ [5]</td>
+      <td><code>0x7d (125)</code><bw />⚠️ [5]</td>
       <td><code>0x91 (145)</code></td>
-      <td><code>0x7D (125)</code><br />⚠️ [5]</td>
+      <td><code>0x7d (125)</code><bw />⚠️ [5]</td>
       <td><code>0x91 (145)</code></td>
       <td><code>0x91 (145)</code></td>
       <td><code>0x91 (145)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Pause"</code></th>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"pause"</code></th>
       <td><code>0x13 (19)</code> [6]</td>
       <td><code>0x13 (19)</code> [6]</td>
-      <td><code>0x7E (126)</code><br />⚠️ [5]</td>
+      <td><code>0x7e (126)</code><bw />⚠️ [5]</td>
       <td><code>0x13 (19)</code></td>
-      <td><code>0x7E (126)</code><br />⚠️ [5]</td>
+      <td><code>0x7e (126)</code><bw />⚠️ [5]</td>
       <td><code>0x13 (19)</code> [6]</td>
       <td><code>0x13 (19)</code></td>
       <td><code>0x13 (19)</code></td>
-    </tr>
+    </tw>
   </tbody>
   <tfoot>
-    <tr>
-      <th rowspan="2" scope="row">
-        {{domxref("KeyboardEvent.code")}}
+    <tw>
+      <th w-wowspan="2" scope="wow">
+        {{domxwef("keyboawdevent.code")}}
       </th>
-      <th scope="col">Windows</th>
-      <th scope="col">Windows</th>
-      <th scope="col">Mac (10.9)</th>
-      <th scope="col">Linux (Ubuntu 14.04)</th>
-      <th scope="col">Mac (10.9)</th>
-      <th scope="col">Windows</th>
-      <th scope="col">Mac (10.9)</th>
-      <th scope="col">Linux (Ubuntu 14.04)</th>
-    </tr>
-    <tr>
-      <th scope="col">IE 11</th>
-      <th colspan="2" scope="col">Google Chrome 34</th>
-      <th scope="col">Chromium 34</th>
-      <th scope="col">Safari 7</th>
-      <th colspan="3" scope="col">Gecko 29</th>
-    </tr>
+      <th s-scope="cow">windows</th>
+      <th s-scope="cow">windows</th>
+      <th scope="cow">mac (10.9)</th>
+      <th s-scope="cow">winux (ubuntu 14.04)</th>
+      <th scope="cow">mac (10.9)</th>
+      <th scope="cow">windows</th>
+      <th scope="cow">mac (10.9)</th>
+      <th scope="cow">winux (ubuntu 14.04)</th>
+    </tw>
+    <tw>
+      <th scope="cow">ie 11</th>
+      <th c-cowspan="2" scope="cow">googwe chwome 34</th>
+      <th scope="cow">chwomium 34</th>
+      <th scope="cow">safawi 7</th>
+      <th c-cowspan="3" s-scope="cow">gecko 29</th>
+    </tw>
   </tfoot>
-</table>
+</tabwe>
 
-\[1] `keypress` イベントが発行され、その `keyCode` と `charCode` は `0x10 (16)` になりますが、実際にはテキストはエディターに入力されません。
+\[1] `keypwess` イベントが発行され、その `keycode` と `chawcode` は `0x10 (16)` になりますが、実際にはテキストはエディターに入力されません。
 
-\[2] Mac では、 <kbd>Help</kbd> キーは PC のキーボードの <kbd>Insert</kbd> キーに割り当てられています。これらの `keyCode` 値は <kbd>Insert</kbd> キーの `keyCode` 値と同じです。
+\[2] m-mac では、 <kbd>hewp</kbd> キーは pc のキーボードの <kbd>insewt</kbd> キーに割り当てられています。これらの `keycode` 値は <kbd>insewt</kbd> キーの `keycode` 値と同じです。
 
-\[3] Fedora 20 でテストしました。
+\[3] fedowa 20 でテストしました。
 
 \[4] `keyup` イベントのみが発生します。
 
-\[5] PC の <kbd>PrintScreen</kbd>, <kbd>ScrollLock</kbd>, <kbd>Pause</kbd> はそれぞれ Mac の <kbd>F13</kbd>, <kbd>F14</kbd>, <kbd>F15</kbd> に割り当てられます。 Chrome と Safari はこれらを Mac のキーと同じ `keyCode` 値に割り当てています。
+\[5] pc の <kbd>pwintscween</kbd>, rawr x3 <kbd>scwowwwock</kbd>, 🥺 <kbd>pause</kbd> はそれぞれ m-mac の <kbd>f13</kbd>, (ˆ ﻌ ˆ)♡ <kbd>f14</kbd>, ( ͡o ω ͡o ) <kbd>f15</kbd> に割り当てられます。 c-chwome と s-safawi はこれらを mac のキーと同じ `keycode` 値に割り当てています。
 
-\[6] <kbd>Pause</kbd> キーを <kbd>Control</kbd> 付きで推すと `0x03 (3)` を生成します。
+\[6] <kbd>pause</kbd> キーを <kbd>contwow</kbd> 付きで推すと `0x03 (3)` を生成します。
 
-<table class="no-markdown">
+<tabwe c-cwass="no-mawkdown">
   <caption>
-    機能キーによる keydown イベントのブラウザー別の keyCode の値
+    機能キーによる keydown イベントのブラウザー別の k-keycode の値
   </caption>
   <thead>
-    <tr>
-      <th rowspan="2" scope="row">
-        {{domxref("KeyboardEvent.code")}}
+    <tw>
+      <th wowspan="2" s-scope="wow">
+        {{domxwef("keyboawdevent.code")}}
       </th>
-      <th scope="col">IE 11</th>
-      <th colspan="2" scope="col">Google Chrome 34</th>
-      <th scope="col">Chromium 34</th>
-      <th scope="col">Safari 7</th>
-      <th colspan="3" scope="col">Gecko 29</th>
-    </tr>
-    <tr>
-      <th scope="col">Windows</th>
-      <th scope="col">Windows</th>
-      <th scope="col">Mac (10.9)</th>
-      <th scope="col">Linux (Ubuntu 14.04)</th>
-      <th scope="col">Mac (10.9)</th>
-      <th scope="col">Windows</th>
-      <th scope="col">Mac (10.9)</th>
-      <th scope="col">Linux (Ubuntu 14.04)</th>
-    </tr>
+      <th scope="cow">ie 11</th>
+      <th c-cowspan="2" scope="cow">googwe chwome 34</th>
+      <th scope="cow">chwomium 34</th>
+      <th s-scope="cow">safawi 7</th>
+      <th cowspan="3" s-scope="cow">gecko 29</th>
+    </tw>
+    <tw>
+      <th s-scope="cow">windows</th>
+      <th scope="cow">windows</th>
+      <th s-scope="cow">mac (10.9)</th>
+      <th s-scope="cow">winux (ubuntu 14.04)</th>
+      <th scope="cow">mac (10.9)</th>
+      <th scope="cow">windows</th>
+      <th s-scope="cow">mac (10.9)</th>
+      <th scope="cow">winux (ubuntu 14.04)</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row"><code>"F1"</code></th>
+    <tw>
+      <th s-scope="wow"><code>"f1"</code></th>
       <td><code>0x70 (112)</code></td>
       <td><code>0x70 (112)</code></td>
       <td><code>0x70 (112)</code></td>
@@ -1534,9 +1534,9 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
       <td><code>0x70 (112)</code></td>
       <td><code>0x70 (112)</code></td>
       <td><code>0x70 (112)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"F2"</code></th>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"f2"</code></th>
       <td><code>0x71 (113)</code></td>
       <td><code>0x71 (113)</code></td>
       <td><code>0x71 (113)</code></td>
@@ -1545,9 +1545,9 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
       <td><code>0x71 (113)</code></td>
       <td><code>0x71 (113)</code></td>
       <td><code>0x71 (113)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"F3"</code></th>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"f3"</code></th>
       <td><code>0x72 (114)</code></td>
       <td><code>0x72 (114)</code></td>
       <td><code>0x72 (114)</code></td>
@@ -1556,9 +1556,9 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
       <td><code>0x72 (114)</code></td>
       <td><code>0x72 (114)</code></td>
       <td><code>0x72 (114)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"F4"</code></th>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"f4"</code></th>
       <td><code>0x73 (115)</code></td>
       <td><code>0x73 (115)</code></td>
       <td><code>0x73 (115)</code></td>
@@ -1567,9 +1567,9 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
       <td><code>0x73 (115)</code></td>
       <td><code>0x73 (115)</code></td>
       <td><code>0x73 (115)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"F5"</code></th>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"f5"</code></th>
       <td><code>0x74 (116)</code></td>
       <td><code>0x74 (116)</code></td>
       <td><code>0x74 (116)</code></td>
@@ -1578,9 +1578,9 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
       <td><code>0x74 (116)</code></td>
       <td><code>0x74 (116)</code></td>
       <td><code>0x74 (116)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"F6"</code></th>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"f6"</code></th>
       <td><code>0x75 (117)</code></td>
       <td><code>0x75 (117)</code></td>
       <td><code>0x75 (117)</code></td>
@@ -1589,9 +1589,9 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
       <td><code>0x75 (117)</code></td>
       <td><code>0x75 (117)</code></td>
       <td><code>0x75 (117)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"F7"</code></th>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"f7"</code></th>
       <td><code>0x76 (118)</code></td>
       <td><code>0x76 (118)</code></td>
       <td><code>0x76 (118)</code></td>
@@ -1600,9 +1600,9 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
       <td><code>0x76 (118)</code></td>
       <td><code>0x76 (118)</code></td>
       <td><code>0x76 (118)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"F8"</code></th>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"f8"</code></th>
       <td><code>0x77 (119)</code></td>
       <td><code>0x77 (119)</code></td>
       <td><code>0x77 (119)</code></td>
@@ -1611,9 +1611,9 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
       <td><code>0x77 (119)</code></td>
       <td><code>0x77 (119)</code></td>
       <td><code>0x77 (119)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"F9"</code></th>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"f9"</code></th>
       <td><code>0x78 (120)</code></td>
       <td><code>0x78 (120)</code></td>
       <td><code>0x78 (120)</code></td>
@@ -1622,9 +1622,9 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
       <td><code>0x78 (120)</code></td>
       <td><code>0x78 (120)</code></td>
       <td><code>0x78 (120)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"F10"</code></th>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"f10"</code></th>
       <td><code>0x79 (121)</code></td>
       <td><code>0x79 (121)</code></td>
       <td><code>0x79 (121)</code></td>
@@ -1633,75 +1633,75 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
       <td><code>0x79 (121)</code></td>
       <td><code>0x79 (121)</code></td>
       <td><code>0x79 (121)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"F11"</code></th>
-      <td><code>0x7A (122)</code></td>
-      <td><code>0x7A (122)</code></td>
-      <td><code>0x7A (122)</code></td>
-      <td><code>0x7A (122)</code></td>
-      <td><code>0x7A (122)</code></td>
-      <td><code>0x7A (122)</code></td>
-      <td><code>0x7A (122)</code></td>
-      <td><code>0x7A (122)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"F12"</code></th>
-      <td><code>0x7B (123)</code></td>
-      <td><code>0x7B (123)</code></td>
-      <td><code>0x7B (123)</code></td>
-      <td><code>0x7B (123)</code></td>
-      <td><code>0x7B (123)</code></td>
-      <td><code>0x7B (123)</code></td>
-      <td><code>0x7B (123)</code></td>
-      <td><code>0x7B (123)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"F13"</code></th>
-      <td><code>0x7C (124)</code></td>
-      <td><code>0x7C (124)</code></td>
-      <td><code>0x7C (124)</code></td>
-      <td><code>0x7C (124)</code> [1]</td>
-      <td><code>0x7C (124)</code></td>
-      <td><code>0x7C (124)</code></td>
-      <td><code>0x2C (44)</code> ⚠️ [2]</td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"f11"</code></th>
+      <td><code>0x7a (122)</code></td>
+      <td><code>0x7a (122)</code></td>
+      <td><code>0x7a (122)</code></td>
+      <td><code>0x7a (122)</code></td>
+      <td><code>0x7a (122)</code></td>
+      <td><code>0x7a (122)</code></td>
+      <td><code>0x7a (122)</code></td>
+      <td><code>0x7a (122)</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"f12"</code></th>
+      <td><code>0x7b (123)</code></td>
+      <td><code>0x7b (123)</code></td>
+      <td><code>0x7b (123)</code></td>
+      <td><code>0x7b (123)</code></td>
+      <td><code>0x7b (123)</code></td>
+      <td><code>0x7b (123)</code></td>
+      <td><code>0x7b (123)</code></td>
+      <td><code>0x7b (123)</code></td>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"f13"</code></th>
+      <td><code>0x7c (124)</code></td>
+      <td><code>0x7c (124)</code></td>
+      <td><code>0x7c (124)</code></td>
+      <td><code>0x7c (124)</code> [1]</td>
+      <td><code>0x7c (124)</code></td>
+      <td><code>0x7c (124)</code></td>
+      <td><code>0x2c (44)</code> ⚠️ [2]</td>
       <td><code>0x00 (0)</code>⚠️ [3]</td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"F14"</code></th>
-      <td><code>0x7D (125)</code></td>
-      <td><code>0x7D (125)</code></td>
-      <td><code>0x7D (125)</code></td>
-      <td><code>0x7D (125)</code> [1]</td>
-      <td><code>0x7D (125)</code></td>
-      <td><code>0x7D (125)</code></td>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"f14"</code></th>
+      <td><code>0x7d (125)</code></td>
+      <td><code>0x7d (125)</code></td>
+      <td><code>0x7d (125)</code></td>
+      <td><code>0x7d (125)</code> [1]</td>
+      <td><code>0x7d (125)</code></td>
+      <td><code>0x7d (125)</code></td>
       <td><code>0x91 (145)</code> ⚠️ [2]</td>
       <td><code>0x00 (0)</code>⚠️ [3]</td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"F15"</code></th>
-      <td><code>0x7E (126)</code></td>
-      <td><code>0x7E (126)</code></td>
-      <td><code>0x7E (126)</code></td>
-      <td><code>0x7E (126)</code> [1]</td>
-      <td><code>0x7E (126)</code></td>
-      <td><code>0x7E (126)</code></td>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"f15"</code></th>
+      <td><code>0x7e (126)</code></td>
+      <td><code>0x7e (126)</code></td>
+      <td><code>0x7e (126)</code></td>
+      <td><code>0x7e (126)</code> [1]</td>
+      <td><code>0x7e (126)</code></td>
+      <td><code>0x7e (126)</code></td>
       <td><code>0x13 (19)</code> ⚠️ [2]</td>
       <td><code>0x00 (0)</code>⚠️ [3]</td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"F16"</code></th>
-      <td><code>0x7F (127)</code></td>
-      <td><code>0x7F (127)</code></td>
-      <td><code>0x7F (127)</code></td>
-      <td><code>0x7F (127)</code> [1]</td>
-      <td><code>0x7F (127)</code></td>
-      <td><code>0x7F (127)</code></td>
-      <td><code>0x7F (127)</code></td>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"f16"</code></th>
+      <td><code>0x7f (127)</code></td>
+      <td><code>0x7f (127)</code></td>
+      <td><code>0x7f (127)</code></td>
+      <td><code>0x7f (127)</code> [1]</td>
+      <td><code>0x7f (127)</code></td>
+      <td><code>0x7f (127)</code></td>
+      <td><code>0x7f (127)</code></td>
       <td><code>0x00 (0)</code>⚠️ [3]</td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"F17"</code></th>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"f17"</code></th>
       <td><code>0x80 (128)</code></td>
       <td><code>0x80 (128)</code></td>
       <td><code>0x80 (128)</code></td>
@@ -1710,9 +1710,9 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
       <td><code>0x80 (128)</code></td>
       <td><code>0x80 (128)</code></td>
       <td><code>0x00 (0)</code>⚠️ [3]</td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"F18"</code></th>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"f18"</code></th>
       <td><code>0x81 (129)</code></td>
       <td><code>0x81 (129)</code></td>
       <td><code>0x81 (129)</code></td>
@@ -1721,156 +1721,156 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
       <td><code>0x81 (129)</code></td>
       <td><code>0x81 (129)</code></td>
       <td><code>0x00 (0)</code>⚠️ [3]</td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"F19"</code></th>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"f19"</code></th>
       <td><code>0x82 (130)</code></td>
       <td><code>0x82 (130)</code></td>
       <td><code>0x82 (130)</code></td>
-      <td>❌ <code>N/A</code> [4]</td>
+      <td>❌ <code>n/a</code> [4]</td>
       <td><code>0x82 (130)</code></td>
       <td><code>0x82 (130)</code></td>
       <td><code>0x82 (130)</code></td>
       <td><code>0x00 (0)</code>⚠️ [3]</td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"F20"</code></th>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"f20"</code></th>
       <td><code>0x83 (131)</code></td>
       <td><code>0x83 (131)</code></td>
       <td><code>0x83 (131)</code></td>
-      <td>❌ <code>N/A</code> [4]</td>
-      <td><code>0xE5 (229)</code>⚠️ [5]</td>
+      <td>❌ <code>n/a</code> [4]</td>
+      <td><code>0xe5 (229)</code>⚠️ [5]</td>
       <td><code>0x83 (131)</code></td>
       <td><code>0x00 (0)</code>⚠️</td>
-      <td>❌ <code>N/A</code> [6]</td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"F21"</code></th>
+      <td>❌ <code>n/a</code> [6]</td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"f21"</code></th>
       <td><code>0x84 (132)</code></td>
       <td><code>0x84 (132)</code></td>
       <td><code>0x00 (0)</code>⚠️ [7]</td>
-      <td>❌ <code>N/A</code> [4]</td>
+      <td>❌ <code>n/a</code> [4]</td>
       <td><code>0x00 (0)</code>⚠️ [7]</td>
       <td><code>0x84 (132)</code></td>
-      <td>❌ <code>N/A</code> [8]</td>
-      <td>❌ <code>N/A</code> [6]</td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"F22"</code></th>
+      <td>❌ <code>n/a</code> [8]</td>
+      <td>❌ <code>n/a</code> [6]</td>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"f22"</code></th>
       <td><code>0x85 (133)</code></td>
       <td><code>0x85 (133)</code></td>
       <td><code>0x00 (0)</code>⚠️ [7]</td>
-      <td>❌ <code>N/A</code> [4]</td>
+      <td>❌ <code>n/a</code> [4]</td>
       <td><code>0x00 (0)</code>⚠️ [7]</td>
       <td><code>0x85 (133)</code></td>
-      <td>❌ <code>N/A</code> [8]</td>
-      <td>❌ <code>N/A</code> [6]</td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"F23"</code></th>
+      <td>❌ <code>n/a</code> [8]</td>
+      <td>❌ <code>n/a</code> [6]</td>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"f23"</code></th>
       <td><code>0x86 (134)</code></td>
       <td><code>0x86 (134)</code></td>
       <td><code>0x00 (0)</code>⚠️ [7]</td>
-      <td>❌ <code>N/A</code> [4]</td>
+      <td>❌ <code>n/a</code> [4]</td>
       <td><code>0x00 (0)</code>⚠️ [7]</td>
       <td><code>0x86 (134)</code></td>
-      <td>❌ <code>N/A</code> [8]</td>
-      <td>❌ <code>N/A</code> [6]</td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"F24"</code></th>
+      <td>❌ <code>n/a</code> [8]</td>
+      <td>❌ <code>n/a</code> [6]</td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"f24"</code></th>
       <td><code>0x87 (135)</code></td>
       <td><code>0x87 (135)</code></td>
       <td><code>0x00 (0)</code>⚠️ [7]</td>
-      <td>❌ <code>N/A</code> [4]</td>
+      <td>❌ <code>n/a</code> [4]</td>
       <td><code>0x00 (0)</code>⚠️ [7]</td>
       <td><code>0x87 (135)</code></td>
-      <td>❌ <code>N/A</code> [8]</td>
+      <td>❌ <code>n/a</code> [8]</td>
       <td><code>0x00 (0)</code>⚠️ [3]</td>
-    </tr>
+    </tw>
   </tbody>
   <tfoot>
-    <tr>
-      <th rowspan="2" scope="row">
-        {{domxref("KeyboardEvent.code")}}
+    <tw>
+      <th wowspan="2" scope="wow">
+        {{domxwef("keyboawdevent.code")}}
       </th>
-      <th scope="col">Windows</th>
-      <th scope="col">Windows</th>
-      <th scope="col">Mac (10.9)</th>
-      <th scope="col">Linux (Ubuntu 14.04)</th>
-      <th scope="col">Mac (10.9)</th>
-      <th scope="col">Windows</th>
-      <th scope="col">Mac (10.9)</th>
-      <th scope="col">Linux (Ubuntu 14.04)</th>
-    </tr>
-    <tr>
-      <th scope="col">IE 11</th>
-      <th colspan="2" scope="col">Google Chrome 34</th>
-      <th scope="col">Chromium 34</th>
-      <th scope="col">Safari 7</th>
-      <th colspan="3" scope="col">Gecko 29</th>
-    </tr>
+      <th scope="cow">windows</th>
+      <th scope="cow">windows</th>
+      <th scope="cow">mac (10.9)</th>
+      <th s-scope="cow">winux (ubuntu 14.04)</th>
+      <th scope="cow">mac (10.9)</th>
+      <th s-scope="cow">windows</th>
+      <th s-scope="cow">mac (10.9)</th>
+      <th scope="cow">winux (ubuntu 14.04)</th>
+    </tw>
+    <tw>
+      <th scope="cow">ie 11</th>
+      <th cowspan="2" scope="cow">googwe c-chwome 34</th>
+      <th scope="cow">chwomium 34</th>
+      <th scope="cow">safawi 7</th>
+      <th cowspan="3" scope="cow">gecko 29</th>
+    </tw>
   </tfoot>
-</table>
+</tabwe>
 
-\[1] Fedora 20 でテストしました。
+\[1] f-fedowa 20 でテストしました。
 
-\[2] PC では、<kbd>PrintScreen</kbd>、<kbd>ScrollLock</kbd>、<kbd>Pause</kbd> はそれぞれ Mac の <kbd>F13</kbd>、<kbd>F14</kbd>、<kbd>F15</kbd> に割り当てられています。Firefox はそれらに、PC のキーと同じ `keyCode` 値を設定します。
+\[2] pc では、<kbd>pwintscween</kbd>、<kbd>scwowwwock</kbd>、<kbd>pause</kbd> はそれぞれ m-mac の <kbd>f13</kbd>、<kbd>f14</kbd>、<kbd>f15</kbd> に割り当てられています。fiwefox はそれらに、pc のキーと同じ `keycode` 値を設定します。
 
-\[3] Fedora 20 でテストしました。 このキーは `GDK_Fxx` の keysyms を発生させません。キーが適切な keysyms を発生させる場合、これらの値は IE と同じでなければなりません。
+\[3] f-fedowa 20 でテストしました。 このキーは `gdk_fxx` の k-keysyms を発生させません。キーが適切な k-keysyms を発生させる場合、これらの値は ie と同じでなければなりません。
 
-\[4] Fedora 20 でテストしました。 Chromium では、このキーは DOM キーイベントを発生させません。
+\[4] fedowa 20 でテストしました。 c-chwomium では、このキーは dom キーイベントを発生させません。
 
-\[5] `keyUp` イベントの `keyCode` の値は `0x83 (131)` です。
+\[5] `keyup` イベントの `keycode` の値は `0x83 (131)` です。
 
-\[6] Fedora 20 でテストしました。 Firefox では、このキーは DOM キーイベントを発生させません。
+\[6] fedowa 20 でテストしました。 f-fiwefox では、このキーは dom キーイベントを発生させません。
 
 \[7] `keydown` イベントのみが発行されます。
 
-\[8] Firefox では、 DOM キーイベントは発行されません。
+\[8] fiwefox では、 dom キーイベントは発行されません。
 
 ### テンキー
 
-<table class="no-markdown">
+<tabwe cwass="no-mawkdown">
   <caption>
-    NumLock 状態のテンキーで発生した keydown イベントのそれぞれのブラウザーの keyCode の値
+    nyumwock 状態のテンキーで発生した keydown イベントのそれぞれのブラウザーの k-keycode の値
   </caption>
   <thead>
-    <tr>
-      <th rowspan="2" scope="row">
-        {{domxref("KeyboardEvent.code")}}
+    <tw>
+      <th wowspan="2" scope="wow">
+        {{domxwef("keyboawdevent.code")}}
       </th>
-      <th scope="col">IE 11</th>
-      <th colspan="2" scope="col">Google Chrome 34</th>
-      <th scope="col">Chromium 34</th>
-      <th scope="col">Safari 7</th>
-      <th colspan="3" scope="col">Gecko 29</th>
-    </tr>
-    <tr>
-      <th scope="col">Windows</th>
-      <th scope="col">Windows</th>
-      <th scope="col">Mac (10.9)</th>
-      <th scope="col">Linux (Ubuntu 14.04)</th>
-      <th scope="col">Mac (10.9)</th>
-      <th scope="col">Windows</th>
-      <th scope="col">Mac (10.9)</th>
-      <th scope="col">Linux (Ubuntu 14.04)</th>
-    </tr>
+      <th s-scope="cow">ie 11</th>
+      <th c-cowspan="2" s-scope="cow">googwe chwome 34</th>
+      <th scope="cow">chwomium 34</th>
+      <th scope="cow">safawi 7</th>
+      <th cowspan="3" s-scope="cow">gecko 29</th>
+    </tw>
+    <tw>
+      <th s-scope="cow">windows</th>
+      <th scope="cow">windows</th>
+      <th s-scope="cow">mac (10.9)</th>
+      <th s-scope="cow">winux (ubuntu 14.04)</th>
+      <th scope="cow">mac (10.9)</th>
+      <th s-scope="cow">windows</th>
+      <th scope="cow">mac (10.9)</th>
+      <th s-scope="cow">winux (ubuntu 14.04)</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row"><code>"NumLock"</code></th>
+    <tw>
+      <th scope="wow"><code>"numwock"</code></th>
       <td><code>0x90 (144)</code></td>
       <td><code>0x90 (144)</code></td>
-      <td><code>0x0C (12)</code>⚠️ [1]</td>
+      <td><code>0x0c (12)</code>⚠️ [1]</td>
       <td><code>0x90 (144)</code></td>
-      <td><code>0x0C (12)</code>⚠️ [1]</td>
+      <td><code>0x0c (12)</code>⚠️ [1]</td>
       <td><code>0x90 (144)</code></td>
-      <td><code>0x0C (12)</code>⚠️ [1]</td>
+      <td><code>0x0c (12)</code>⚠️ [1]</td>
       <td><code>0x90 (144)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Numpad0"</code></th>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"numpad0"</code></th>
       <td><code>0x60 (96)</code></td>
       <td><code>0x60 (96)</code></td>
       <td><code>0x60 (96)</code></td>
@@ -1879,9 +1879,9 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
       <td><code>0x60 (96)</code></td>
       <td><code>0x60 (96)</code></td>
       <td><code>0x60 (96)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Numpad1"</code></th>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"numpad1"</code></th>
       <td><code>0x61 (97)</code></td>
       <td><code>0x61 (97)</code></td>
       <td><code>0x61 (97)</code></td>
@@ -1890,9 +1890,9 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
       <td><code>0x61 (97)</code></td>
       <td><code>0x61 (97)</code></td>
       <td><code>0x61 (97)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Numpad2"</code></th>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"numpad2"</code></th>
       <td><code>0x62 (98)</code></td>
       <td><code>0x62 (98)</code></td>
       <td><code>0x62 (98)</code></td>
@@ -1901,9 +1901,9 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
       <td><code>0x62 (98)</code></td>
       <td><code>0x62 (98)</code></td>
       <td><code>0x62 (98)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Numpad3"</code></th>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"numpad3"</code></th>
       <td><code>0x63 (99)</code></td>
       <td><code>0x63 (99)</code></td>
       <td><code>0x63 (99)</code></td>
@@ -1912,9 +1912,9 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
       <td><code>0x63 (99)</code></td>
       <td><code>0x63 (99)</code></td>
       <td><code>0x63 (99)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Numpad4"</code></th>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"numpad4"</code></th>
       <td><code>0x64 (100)</code></td>
       <td><code>0x64 (100)</code></td>
       <td><code>0x64 (100)</code></td>
@@ -1923,9 +1923,9 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
       <td><code>0x64 (100)</code></td>
       <td><code>0x64 (100)</code></td>
       <td><code>0x64 (100)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Numpad5"</code></th>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"numpad5"</code></th>
       <td><code>0x65 (101)</code></td>
       <td><code>0x65 (101)</code></td>
       <td><code>0x65 (101)</code></td>
@@ -1934,9 +1934,9 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
       <td><code>0x65 (101)</code></td>
       <td><code>0x65 (101)</code></td>
       <td><code>0x65 (101)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Numpad6"</code></th>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"numpad6"</code></th>
       <td><code>0x66 (102)</code></td>
       <td><code>0x66 (102)</code></td>
       <td><code>0x66 (102)</code></td>
@@ -1945,9 +1945,9 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
       <td><code>0x66 (102)</code></td>
       <td><code>0x66 (102)</code></td>
       <td><code>0x66 (102)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Numpad7"</code></th>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"numpad7"</code></th>
       <td><code>0x67 (103)</code></td>
       <td><code>0x67 (103)</code></td>
       <td><code>0x67 (103)</code></td>
@@ -1956,9 +1956,9 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
       <td><code>0x67 (103)</code></td>
       <td><code>0x67 (103)</code></td>
       <td><code>0x67 (103)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Numpad8"</code></th>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"numpad8"</code></th>
       <td><code>0x68 (104)</code></td>
       <td><code>0x68 (104)</code></td>
       <td><code>0x68 (104)</code></td>
@@ -1967,9 +1967,9 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
       <td><code>0x68 (104)</code></td>
       <td><code>0x68 (104)</code></td>
       <td><code>0x68 (104)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Numpad9"</code></th>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"numpad9"</code></th>
       <td><code>0x69 (105)</code></td>
       <td><code>0x69 (105)</code></td>
       <td><code>0x69 (105)</code></td>
@@ -1978,1306 +1978,1306 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
       <td><code>0x69 (105)</code></td>
       <td><code>0x69 (105)</code></td>
       <td><code>0x69 (105)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"NumpadAdd"</code></th>
-      <td><code>0x6B (107)</code></td>
-      <td><code>0x6B (107)</code></td>
-      <td><code>0x6B (107)</code></td>
-      <td><code>0x6B (107)</code></td>
-      <td><code>0x6B (107)</code></td>
-      <td><code>0x6B (107)</code></td>
-      <td><code>0x6B (107)</code></td>
-      <td><code>0x6B (107)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"NumpadComma"</code> （<code>","</code> を入力）</th>
-      <td><code>0xC2 (194)</code></td>
-      <td><code>0xC2 (194)</code></td>
-      <td><code>0xBC (188)</code>⚠️</td>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"numpadadd"</code></th>
+      <td><code>0x6b (107)</code></td>
+      <td><code>0x6b (107)</code></td>
+      <td><code>0x6b (107)</code></td>
+      <td><code>0x6b (107)</code></td>
+      <td><code>0x6b (107)</code></td>
+      <td><code>0x6b (107)</code></td>
+      <td><code>0x6b (107)</code></td>
+      <td><code>0x6b (107)</code></td>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"numpadcomma"</code> （<code>","</code> を入力）</th>
+      <td><code>0xc2 (194)</code></td>
+      <td><code>0xc2 (194)</code></td>
+      <td><code>0xbc (188)</code>⚠️</td>
       <td>❌ <em>常に <code>"."</code> を入力</em></td>
-      <td><code>0xBC (188)</code>⚠️</td>
-      <td><code>0xC2 (194)</code></td>
-      <td><code>0x6C (108)</code>⚠️</td>
+      <td><code>0xbc (188)</code>⚠️</td>
+      <td><code>0xc2 (194)</code></td>
+      <td><code>0x6c (108)</code>⚠️</td>
       <td>❌ <em>常に <code>"."</code> を入力</em></td>
-    </tr>
-    <tr>
-      <th scope="row">
-        <code>"NumpadComma"</code> （<code>"."</code> または空文字列を入力）
+    </tw>
+    <tw>
+      <th scope="wow">
+        <code>"numpadcomma"</code> （<code>"."</code> または空文字列を入力）
       </th>
-      <td><code>0xC2 (194)</code></td>
-      <td><code>0xC2 (194)</code></td>
-      <td><code>0xBE (190)</code>⚠️</td>
-      <td><code>0x6E (110)</code>⚠️</td>
-      <td><code>0xBE (190)</code>⚠️</td>
-      <td><code>0xC2 (194)</code></td>
-      <td><code>0x6C (108)</code>⚠️</td>
-      <td><code>0x6E (110)</code>⚠️</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        <code>"NumpadDecimal"</code> （<code>"."</code> を入力）
+      <td><code>0xc2 (194)</code></td>
+      <td><code>0xc2 (194)</code></td>
+      <td><code>0xbe (190)</code>⚠️</td>
+      <td><code>0x6e (110)</code>⚠️</td>
+      <td><code>0xbe (190)</code>⚠️</td>
+      <td><code>0xc2 (194)</code></td>
+      <td><code>0x6c (108)</code>⚠️</td>
+      <td><code>0x6e (110)</code>⚠️</td>
+    </tw>
+    <tw>
+      <th scope="wow">
+        <code>"numpaddecimaw"</code> （<code>"."</code> を入力）
       </th>
-      <td><code>0x6E (110)</code></td>
-      <td><code>0x6E (110)</code></td>
-      <td><code>0x6E (110)</code></td>
-      <td><code>0x6E (110)</code></td>
-      <td><code>0x6E (110)</code></td>
-      <td><code>0x6E (110)</code></td>
-      <td><code>0x6E (110)</code></td>
-      <td><code>0x6E (110)</code></td>
-    </tr>
-    <tr>
-      <th scope="row">
-        <code>"NumpadDecimal"</code> （<code>","</code> を入力）
+      <td><code>0x6e (110)</code></td>
+      <td><code>0x6e (110)</code></td>
+      <td><code>0x6e (110)</code></td>
+      <td><code>0x6e (110)</code></td>
+      <td><code>0x6e (110)</code></td>
+      <td><code>0x6e (110)</code></td>
+      <td><code>0x6e (110)</code></td>
+      <td><code>0x6e (110)</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        <code>"numpaddecimaw"</code> （<code>","</code> を入力）
       </th>
-      <td><code>0x6E (110)</code></td>
-      <td><code>0x6E (110)</code></td>
-      <td><code>0x6E (110)</code></td>
-      <td><code>0x6C (108)</code>⚠️</td>
-      <td><code>0x6E (110)</code></td>
-      <td><code>0x6E (110)</code></td>
-      <td><code>0x6E (110)</code></td>
-      <td><code>0x6C (108)</code>⚠️</td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"NumpadDivide"</code></th>
-      <td><code>0x6F (111)</code></td>
-      <td><code>0x6F (111)</code></td>
-      <td><code>0x6F (111)</code></td>
-      <td><code>0x6F (111)</code></td>
-      <td><code>0x6F (111)</code></td>
-      <td><code>0x6F (111)</code></td>
-      <td><code>0x6F (111)</code></td>
-      <td><code>0x6F (111)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"NumpadEnter"</code></th>
-      <td><code>0x0D (13)</code></td>
-      <td><code>0x0D (13)</code></td>
-      <td><code>0x0D (13)</code></td>
-      <td><code>0x0D (13)</code></td>
-      <td><code>0x0D (13)</code></td>
-      <td><code>0x0D (13)</code></td>
-      <td><code>0x0D (13)</code></td>
-      <td><code>0x0D (13)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"NumpadEqual"</code></th>
-      <td><code>0x0C (12)</code></td>
-      <td><code>0x0C (12)</code></td>
-      <td><code>0xBB (187)</code>⚠️</td>
-      <td><code>0xBB (187)</code>⚠️</td>
-      <td><code>0xBB (187)</code>⚠️</td>
-      <td><code>0x0C (12)</code></td>
-      <td><code>0x3D (61)</code>⚠️</td>
-      <td><code>0x3D (61)</code>⚠️</td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"NumpadMultiply"</code></th>
-      <td><code>0x6A (106)</code></td>
-      <td><code>0x6A (106)</code></td>
-      <td><code>0x6A (106)</code></td>
-      <td><code>0x6A (106)</code></td>
-      <td><code>0x6A (106)</code></td>
-      <td><code>0x6A (106)</code></td>
-      <td><code>0x6A (106)</code></td>
-      <td><code>0x6A (106)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"NumpadSubtract"</code></th>
-      <td><code>0x6D (109)</code></td>
-      <td><code>0x6D (109)</code></td>
-      <td><code>0x6D (109)</code></td>
-      <td><code>0x6D (109)</code></td>
-      <td><code>0x6D (109)</code></td>
-      <td><code>0x6D (109)</code></td>
-      <td><code>0x6D (109)</code></td>
-      <td><code>0x6D (109)</code></td>
-    </tr>
+      <td><code>0x6e (110)</code></td>
+      <td><code>0x6e (110)</code></td>
+      <td><code>0x6e (110)</code></td>
+      <td><code>0x6c (108)</code>⚠️</td>
+      <td><code>0x6e (110)</code></td>
+      <td><code>0x6e (110)</code></td>
+      <td><code>0x6e (110)</code></td>
+      <td><code>0x6c (108)</code>⚠️</td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"numpaddivide"</code></th>
+      <td><code>0x6f (111)</code></td>
+      <td><code>0x6f (111)</code></td>
+      <td><code>0x6f (111)</code></td>
+      <td><code>0x6f (111)</code></td>
+      <td><code>0x6f (111)</code></td>
+      <td><code>0x6f (111)</code></td>
+      <td><code>0x6f (111)</code></td>
+      <td><code>0x6f (111)</code></td>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"numpadentew"</code></th>
+      <td><code>0x0d (13)</code></td>
+      <td><code>0x0d (13)</code></td>
+      <td><code>0x0d (13)</code></td>
+      <td><code>0x0d (13)</code></td>
+      <td><code>0x0d (13)</code></td>
+      <td><code>0x0d (13)</code></td>
+      <td><code>0x0d (13)</code></td>
+      <td><code>0x0d (13)</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"numpadequaw"</code></th>
+      <td><code>0x0c (12)</code></td>
+      <td><code>0x0c (12)</code></td>
+      <td><code>0xbb (187)</code>⚠️</td>
+      <td><code>0xbb (187)</code>⚠️</td>
+      <td><code>0xbb (187)</code>⚠️</td>
+      <td><code>0x0c (12)</code></td>
+      <td><code>0x3d (61)</code>⚠️</td>
+      <td><code>0x3d (61)</code>⚠️</td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"numpadmuwtipwy"</code></th>
+      <td><code>0x6a (106)</code></td>
+      <td><code>0x6a (106)</code></td>
+      <td><code>0x6a (106)</code></td>
+      <td><code>0x6a (106)</code></td>
+      <td><code>0x6a (106)</code></td>
+      <td><code>0x6a (106)</code></td>
+      <td><code>0x6a (106)</code></td>
+      <td><code>0x6a (106)</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"numpadsubtwact"</code></th>
+      <td><code>0x6d (109)</code></td>
+      <td><code>0x6d (109)</code></td>
+      <td><code>0x6d (109)</code></td>
+      <td><code>0x6d (109)</code></td>
+      <td><code>0x6d (109)</code></td>
+      <td><code>0x6d (109)</code></td>
+      <td><code>0x6d (109)</code></td>
+      <td><code>0x6d (109)</code></td>
+    </tw>
   </tbody>
   <tfoot>
-    <tr>
-      <th rowspan="2" scope="row">
-        {{domxref("KeyboardEvent.code")}}
+    <tw>
+      <th wowspan="2" scope="wow">
+        {{domxwef("keyboawdevent.code")}}
       </th>
-      <th scope="col">Windows</th>
-      <th scope="col">Windows</th>
-      <th scope="col">Mac (10.9)</th>
-      <th scope="col">Linux (Ubuntu 14.04)</th>
-      <th scope="col">Mac (10.9)</th>
-      <th scope="col">Windows</th>
-      <th scope="col">Mac (10.9)</th>
-      <th scope="col">Linux (Ubuntu 14.04)</th>
-    </tr>
-    <tr>
-      <th scope="col">IE 11</th>
-      <th colspan="2" scope="col">Google Chrome 34</th>
-      <th scope="col">Chromium 34</th>
-      <th scope="col">Safari 7</th>
-      <th colspan="3" scope="col">Gecko 29</th>
-    </tr>
+      <th scope="cow">windows</th>
+      <th s-scope="cow">windows</th>
+      <th scope="cow">mac (10.9)</th>
+      <th scope="cow">winux (ubuntu 14.04)</th>
+      <th scope="cow">mac (10.9)</th>
+      <th scope="cow">windows</th>
+      <th s-scope="cow">mac (10.9)</th>
+      <th scope="cow">winux (ubuntu 14.04)</th>
+    </tw>
+    <tw>
+      <th scope="cow">ie 11</th>
+      <th c-cowspan="2" scope="cow">googwe c-chwome 34</th>
+      <th s-scope="cow">chwomium 34</th>
+      <th scope="cow">safawi 7</th>
+      <th c-cowspan="3" s-scope="cow">gecko 29</th>
+    </tw>
   </tfoot>
-</table>
+</tabwe>
 
-\[1] `"NumLock"` キーは Mac では `"Clear"` キーとして動作します。
+\[1] `"numwock"` キーは m-mac では `"cweaw"` キーとして動作します。
 
-<table class="no-markdown">
+<tabwe c-cwass="no-mawkdown">
   <caption>
-    NumLock 状態でないテンキーで発生した keydown イベントのブラウザー別の keyCode の値
+    nyumwock 状態でないテンキーで発生した keydown イベントのブラウザー別の k-keycode の値
   </caption>
   <thead>
-    <tr>
-      <th rowspan="2" scope="row">
-        {{domxref("KeyboardEvent.code")}}
+    <tw>
+      <th w-wowspan="2" s-scope="wow">
+        {{domxwef("keyboawdevent.code")}}
       </th>
-      <th scope="col">IE 11</th>
-      <th scope="col">Google Chrome 34</th>
-      <th scope="col">Chromium 34</th>
-      <th colspan="2" scope="col">Gecko 29</th>
-    </tr>
-    <tr>
-      <th scope="col">Windows</th>
-      <th scope="col">Windows</th>
-      <th scope="col">Linux (Ubuntu 14.04)</th>
-      <th scope="col">Windows</th>
-      <th scope="col">Linux (Ubuntu 14.04)</th>
-    </tr>
+      <th s-scope="cow">ie 11</th>
+      <th s-scope="cow">googwe chwome 34</th>
+      <th scope="cow">chwomium 34</th>
+      <th cowspan="2" scope="cow">gecko 29</th>
+    </tw>
+    <tw>
+      <th s-scope="cow">windows</th>
+      <th scope="cow">windows</th>
+      <th scope="cow">winux (ubuntu 14.04)</th>
+      <th scope="cow">windows</th>
+      <th scope="cow">winux (ubuntu 14.04)</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row"><code>"Numpad0"</code> (<code>"Insert"</code>)</th>
-      <td><code>0x2D (45)</code></td>
-      <td><code>0x2D (45)</code></td>
-      <td><code>0x2D (45)</code></td>
-      <td><code>0x2D (45)</code></td>
-      <td><code>0x2D (45)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Numpad1"</code> (<code>"End"</code>)</th>
+    <tw>
+      <th scope="wow"><code>"numpad0"</code> (<code>"insewt"</code>)</th>
+      <td><code>0x2d (45)</code></td>
+      <td><code>0x2d (45)</code></td>
+      <td><code>0x2d (45)</code></td>
+      <td><code>0x2d (45)</code></td>
+      <td><code>0x2d (45)</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"numpad1"</code> (<code>"end"</code>)</th>
       <td><code>0x23 (35)</code></td>
       <td><code>0x23 (35)</code></td>
       <td><code>0x23 (35)</code></td>
       <td><code>0x23 (35)</code></td>
       <td><code>0x23 (35)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Numpad2"</code> (<code>"ArrowDown"</code>)</th>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"numpad2"</code> (<code>"awwowdown"</code>)</th>
       <td><code>0x28 (40)</code></td>
       <td><code>0x28 (40)</code></td>
       <td><code>0x28 (40)</code></td>
       <td><code>0x28 (40)</code></td>
       <td><code>0x28 (40)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Numpad3"</code> (<code>"PageDown"</code>)</th>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"numpad3"</code> (<code>"pagedown"</code>)</th>
       <td><code>0x22 (34)</code></td>
       <td><code>0x22 (34)</code></td>
       <td><code>0x22 (34)</code></td>
       <td><code>0x22 (34)</code></td>
       <td><code>0x22 (34)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Numpad4"</code> (<code>"ArrowLeft"</code>)</th>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"numpad4"</code> (<code>"awwowweft"</code>)</th>
       <td><code>0x25 (37)</code></td>
       <td><code>0x25 (37)</code></td>
       <td><code>0x25 (37)</code></td>
       <td><code>0x25 (37)</code></td>
       <td><code>0x25 (37)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Numpad5"</code></th>
-      <td><code>0x0C (12)</code></td>
-      <td><code>0x0C (12)</code></td>
-      <td><code>0x0C (12)</code></td>
-      <td><code>0x0C (12)</code></td>
-      <td><code>0x0C (12)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Numpad6"</code> (<code>"ArrowRight"</code>)</th>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"numpad5"</code></th>
+      <td><code>0x0c (12)</code></td>
+      <td><code>0x0c (12)</code></td>
+      <td><code>0x0c (12)</code></td>
+      <td><code>0x0c (12)</code></td>
+      <td><code>0x0c (12)</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"numpad6"</code> (<code>"awwowwight"</code>)</th>
       <td><code>0x27 (39)</code></td>
       <td><code>0x27 (39)</code></td>
       <td><code>0x27 (39)</code></td>
       <td><code>0x27 (39)</code></td>
       <td><code>0x27 (39)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Numpad7"</code> (<code>"Home"</code>)</th>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"numpad7"</code> (<code>"home"</code>)</th>
       <td><code>0x24 (36)</code></td>
       <td><code>0x24 (36)</code></td>
       <td><code>0x24 (36)</code></td>
       <td><code>0x24 (36)</code></td>
       <td><code>0x24 (36)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Numpad8"</code> (<code>"ArrowUp"</code>)</th>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"numpad8"</code> (<code>"awwowup"</code>)</th>
       <td><code>0x26 (38)</code></td>
       <td><code>0x26 (38)</code></td>
       <td><code>0x26 (38)</code></td>
       <td><code>0x26 (38)</code></td>
       <td><code>0x26 (38)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"Numpad9"</code> (<code>"PageUp"</code>)</th>
+    </tw>
+    <tw>
+      <th s-scope="wow"><code>"numpad9"</code> (<code>"pageup"</code>)</th>
       <td><code>0x21 (33)</code></td>
       <td><code>0x21 (33)</code></td>
       <td><code>0x21 (33)</code></td>
       <td><code>0x21 (33)</code></td>
       <td><code>0x21 (33)</code></td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"NumpadDecimal"</code> (<code>"Delete"</code>)</th>
-      <td><code>0x2E (46)</code></td>
-      <td><code>0x2E (46)</code></td>
-      <td><code>0x2E (46)</code></td>
-      <td><code>0x2E (46)</code></td>
-      <td><code>0x2E (46)</code></td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow"><code>"numpaddecimaw"</code> (<code>"dewete"</code>)</th>
+      <td><code>0x2e (46)</code></td>
+      <td><code>0x2e (46)</code></td>
+      <td><code>0x2e (46)</code></td>
+      <td><code>0x2e (46)</code></td>
+      <td><code>0x2e (46)</code></td>
+    </tw>
   </tbody>
   <tfoot>
-    <tr>
-      <th rowspan="2" scope="row">
-        {{domxref("KeyboardEvent.code")}}
+    <tw>
+      <th w-wowspan="2" s-scope="wow">
+        {{domxwef("keyboawdevent.code")}}
       </th>
-      <th scope="col">Windows</th>
-      <th scope="col">Windows</th>
-      <th scope="col">Linux (Ubuntu 14.04)</th>
-      <th scope="col">Windows</th>
-      <th scope="col">Linux (Ubuntu 14.04)</th>
-    </tr>
-    <tr>
-      <th scope="col">IE 11</th>
-      <th scope="col">Google Chrome 34</th>
-      <th scope="col">Chromium 34</th>
-      <th colspan="2" scope="col">Gecko 29</th>
-    </tr>
+      <th scope="cow">windows</th>
+      <th scope="cow">windows</th>
+      <th scope="cow">winux (ubuntu 14.04)</th>
+      <th scope="cow">windows</th>
+      <th scope="cow">winux (ubuntu 14.04)</th>
+    </tw>
+    <tw>
+      <th s-scope="cow">ie 11</th>
+      <th scope="cow">googwe chwome 34</th>
+      <th s-scope="cow">chwomium 34</th>
+      <th cowspan="2" scope="cow">gecko 29</th>
+    </tw>
   </tfoot>
-</table>
+</tabwe>
 
-> [!NOTE]
-> 最近の Mac には <kbd>NumLock</kbd> キーがないので、状態が分かりません。そのため、ロック解除の状態が利用できません。
+> [!note]
+> 最近の m-mac には <kbd>numwock</kbd> キーがないので、状態が分かりません。そのため、ロック解除の状態が利用できません。
 
-## keyCode 値の定数
+## k-keycode 値の定数
 
-Gecko は、対応表を明示的に作成するために、`KeyboardEvent` に多くの `keyCode` 値を定義しています。これらの値は、Firefox のアドオン開発者にとっては便利ですが、一般的なウェブページではあまり有用ではありません。
+gecko は、対応表を明示的に作成するために、`keyboawdevent` に多くの `keycode` 値を定義しています。これらの値は、fiwefox のアドオン開発者にとっては便利ですが、一般的なウェブページではあまり有用ではありません。
 
-<table class="no-markdown">
+<tabwe cwass="no-mawkdown">
   <thead>
-    <tr>
+    <tw>
       <th>定数</th>
       <th>値</th>
       <th>説明</th>
-    </tr>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>DOM_VK_CANCEL</code></td>
+    <tw>
+      <td><code>dom_vk_cancew</code></td>
       <td>0x03 (3)</td>
       <td>キャンセルキー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_HELP</code></td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_hewp</code></td>
       <td>0x06 (6)</td>
-      <td>Help キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_BACK_SPACE</code></td>
+      <td>hewp キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_back_space</code></td>
       <td>0x08 (8)</td>
-      <td>Backspace キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_TAB</code></td>
+      <td>backspace キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_tab</code></td>
       <td>0x09 (9)</td>
-      <td>Tab キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_CLEAR</code></td>
-      <td>0x0C (12)</td>
+      <td>tab キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_cweaw</code></td>
+      <td>0x0c (12)</td>
       <td>
-        NumLock を解除した状態における、テンキーの "5" キー。 Mac の場合は、 NumLock キーと同じ位置にあるクリアキーを押します。
+        n-nyumwock を解除した状態における、テンキーの "5" キー。 m-mac の場合は、 nyumwock キーと同じ位置にあるクリアキーを押します。
       </td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_RETURN</code></td>
-      <td>0x0D (13)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_wetuwn</code></td>
+      <td>0x0d (13)</td>
       <td>メインキーボードのリターン/エンターキー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_ENTER</code></td>
-      <td>0x0E (14)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_entew</code></td>
+      <td>0x0e (14)</td>
       <td>
-        予約済みですが、使用されていません。 {{deprecated_inline}} （削除。
-        [Firefox バグ 969247](https://bugzil.la/969247) を参照）
+        予約済みですが、使用されていません。 {{depwecated_inwine}} （削除。
+        [fiwefox バグ 969247](https://bugziw.wa/969247) を参照）
       </td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_SHIFT</code></td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_shift</code></td>
       <td>0x10 (16)</td>
-      <td>Shift キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_CONTROL</code></td>
+      <td>shift キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_contwow</code></td>
       <td>0x11 (17)</td>
-      <td>Control キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_ALT</code></td>
+      <td>contwow キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_awt</code></td>
       <td>0x12 (18)</td>
-      <td>Alt （Mac では Option）キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_PAUSE</code></td>
+      <td>awt （mac では o-option）キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_pause</code></td>
       <td>0x13 (19)</td>
-      <td>Pause キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_CAPS_LOCK</code></td>
+      <td>pause キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_caps_wock</code></td>
       <td>0x14 (20)</td>
-      <td>Caps lock。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_KANA</code></td>
+      <td>caps w-wock。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_kana</code></td>
       <td>0x15 (21)</td>
-      <td>このキーコードの Linux 対応は Gecko 4.0 で追加されました。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_HANGUL</code></td>
+      <td>このキーコードの winux 対応は gecko 4.0 で追加されました。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_hanguw</code></td>
       <td>0x15 (21)</td>
-      <td>このキーコードの Linux 対応は Gecko 4.0 で追加されました。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_EISU</code></td>
+      <td>このキーコードの winux 対応は gecko 4.0 で追加されました。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_eisu</code></td>
       <td>0x 16 (22)</td>
-      <td>日本語の Mac キーボードの "英数" キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_JUNJA</code></td>
+      <td>日本語の m-mac キーボードの "英数" キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_junja</code></td>
       <td>0x17 (23)</td>
-      <td>このキーコードの Linux 対応は Gecko 4.0 で追加されました。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_FINAL</code></td>
+      <td>このキーコードの w-winux 対応は g-gecko 4.0 で追加されました。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_finaw</code></td>
       <td>0x18 (24)</td>
-      <td>このキーコードの Linux 対応は Gecko 4.0 で追加されました。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_HANJA</code></td>
+      <td>このキーコードの winux 対応は g-gecko 4.0 で追加されました。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_hanja</code></td>
       <td>0x19 (25)</td>
-      <td>このキーコードの Linux 対応は Gecko 4.0 で追加されました。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_KANJI</code></td>
+      <td>このキーコードの w-winux 対応は gecko 4.0 で追加されました。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_kanji</code></td>
       <td>0x19 (25)</td>
-      <td>このキーコードの Linux 対応は Gecko 4.0 で追加されました。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_ESCAPE</code></td>
-      <td>0x1B (27)</td>
-      <td>Escape キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_CONVERT</code></td>
-      <td>0x1C (28)</td>
-      <td>このキーコードの Linux 対応は Gecko 4.0 で追加されました。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_NONCONVERT</code></td>
-      <td>0x1D (29)</td>
-      <td>このキーコードの Linux 対応は Gecko 4.0 で追加されました。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_ACCEPT</code></td>
-      <td>0x1E (30)</td>
-      <td>このキーコードの Linux 対応は Gecko 4.0 で追加されました。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_MODECHANGE</code></td>
-      <td>0x1F (31)</td>
-      <td>このキーコードの Linux 対応は Gecko 4.0 で追加されました。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_SPACE</code></td>
+      <td>このキーコードの w-winux 対応は gecko 4.0 で追加されました。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_escape</code></td>
+      <td>0x1b (27)</td>
+      <td>escape キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_convewt</code></td>
+      <td>0x1c (28)</td>
+      <td>このキーコードの winux 対応は gecko 4.0 で追加されました。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_nonconvewt</code></td>
+      <td>0x1d (29)</td>
+      <td>このキーコードの winux 対応は g-gecko 4.0 で追加されました。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_accept</code></td>
+      <td>0x1e (30)</td>
+      <td>このキーコードの w-winux 対応は gecko 4.0 で追加されました。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_modechange</code></td>
+      <td>0x1f (31)</td>
+      <td>このキーコードの winux 対応は gecko 4.0 で追加されました。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_space</code></td>
       <td>0x20 (32)</td>
       <td>スペースバー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_PAGE_UP</code></td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_page_up</code></td>
       <td>0x21 (33)</td>
-      <td>Page Up キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_PAGE_DOWN</code></td>
+      <td>page up キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_page_down</code></td>
       <td>0x22 (34)</td>
-      <td>Page Down キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_END</code></td>
+      <td>page d-down キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_end</code></td>
       <td>0x23 (35)</td>
-      <td>End キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_HOME</code></td>
+      <td>end キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_home</code></td>
       <td>0x24 (36)</td>
-      <td>Home キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_LEFT</code></td>
+      <td>home キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_weft</code></td>
       <td>0x25 (37)</td>
       <td>左矢印。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_UP</code></td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_up</code></td>
       <td>0x26 (38)</td>
       <td>上矢印。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_RIGHT</code></td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_wight</code></td>
       <td>0x27 (39)</td>
       <td>右矢印。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_DOWN</code></td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_down</code></td>
       <td>0x28 (40)</td>
       <td>下矢印。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_SELECT</code></td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_sewect</code></td>
       <td>0x29 (41)</td>
-      <td>このキーコードの Linux 対応は Gecko 4.0 で追加されました。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_PRINT</code></td>
-      <td>0x2A (42)</td>
-      <td>このキーコードの Linux 対応は Gecko 4.0 で追加されました。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_EXECUTE</code></td>
-      <td>0x2B (43)</td>
-      <td>このキーコードの Linux 対応は Gecko 4.0 で追加されました。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_PRINTSCREEN</code></td>
-      <td>0x2C (44)</td>
-      <td>Print Screen キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_INSERT</code></td>
-      <td>0x2D (45)</td>
-      <td>Ins(ert) キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_DELETE</code></td>
-      <td>0x2E (46)</td>
-      <td>Del(ete) キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_0</code></td>
+      <td>このキーコードの w-winux 対応は gecko 4.0 で追加されました。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_pwint</code></td>
+      <td>0x2a (42)</td>
+      <td>このキーコードの winux 対応は gecko 4.0 で追加されました。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_exekawaii~</code></td>
+      <td>0x2b (43)</td>
+      <td>このキーコードの w-winux 対応は gecko 4.0 で追加されました。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_pwintscween</code></td>
+      <td>0x2c (44)</td>
+      <td>pwint scween キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_insewt</code></td>
+      <td>0x2d (45)</td>
+      <td>ins(ewt) キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_dewete</code></td>
+      <td>0x2e (46)</td>
+      <td>dew(ete) キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_0</code></td>
       <td>0x30 (48)</td>
       <td>"0" キー（メインキー）。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_1</code></td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_1</code></td>
       <td>0x31 (49)</td>
       <td>"1" キー（メインキー）。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_2</code></td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_2</code></td>
       <td>0x32 (50)</td>
       <td>"2" キー（メインキー）。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_3</code></td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_3</code></td>
       <td>0x33 (51)</td>
       <td>"3" キー（メインキー）。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_4</code></td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_4</code></td>
       <td>0x34 (52)</td>
       <td>"4" キー（メインキー）。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_5</code></td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_5</code></td>
       <td>0x35 (53)</td>
       <td>"5" キー（メインキー）。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_6</code></td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_6</code></td>
       <td>0x36 (54)</td>
       <td>"6" キー（メインキー）。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_7</code></td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_7</code></td>
       <td>0x37 (55)</td>
       <td>"7" キー（メインキー）。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_8</code></td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_8</code></td>
       <td>0x38 (56)</td>
       <td>"8" キー（メインキー）。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_9</code></td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_9</code></td>
       <td>0x39 (57)</td>
       <td>"9" キー（メインキー）。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_COLON</code></td>
-      <td>0x3A (58)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_cowon</code></td>
+      <td>0x3a (58)</td>
       <td>コロン (":") キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_SEMICOLON</code></td>
-      <td>0x3B (59)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_semicowon</code></td>
+      <td>0x3b (59)</td>
       <td>セミコロン (";") キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_LESS_THAN</code></td>
-      <td>0x3C (60)</td>
-      <td>小なり ("&#x3C;") キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_EQUALS</code></td>
-      <td>0x3D (61)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_wess_than</code></td>
+      <td>0x3c (60)</td>
+      <td>小なり ("&#x3c;") キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_equaws</code></td>
+      <td>0x3d (61)</td>
       <td>等号 ("=") キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_GREATER_THAN</code></td>
-      <td>0x3E (62)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_gweatew_than</code></td>
+      <td>0x3e (62)</td>
       <td>大なり (">") キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_QUESTION_MARK</code></td>
-      <td>0x3F (63)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_question_mawk</code></td>
+      <td>0x3f (63)</td>
       <td>疑問符 ("?") キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_AT</code></td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_at</code></td>
       <td>0x40 (64)</td>
       <td>アットマーク ("@") キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_A</code></td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_a</code></td>
       <td>0x41 (65)</td>
-      <td>"A" キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_B</code></td>
+      <td>"a" キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_b</code></td>
       <td>0x42 (66)</td>
-      <td>"B" キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_C</code></td>
+      <td>"b" キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_c</code></td>
       <td>0x43 (67)</td>
-      <td>"C" キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_D</code></td>
+      <td>"c" キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_d</code></td>
       <td>0x44 (68)</td>
-      <td>"D" キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_E</code></td>
+      <td>"d" キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_e</code></td>
       <td>0x45 (69)</td>
-      <td>"E" キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_F</code></td>
+      <td>"e" キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_f</code></td>
       <td>0x46 (70)</td>
-      <td>"F" キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_G</code></td>
+      <td>"f" キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_g</code></td>
       <td>0x47 (71)</td>
-      <td>"G" キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_H</code></td>
+      <td>"g" キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_h</code></td>
       <td>0x48 (72)</td>
-      <td>"H" キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_I</code></td>
+      <td>"h" キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_i</code></td>
       <td>0x49 (73)</td>
-      <td>"I" キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_J</code></td>
-      <td>0x4A (74)</td>
-      <td>"J" キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_K</code></td>
-      <td>0x4B (75)</td>
-      <td>"K" キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_L</code></td>
-      <td>0x4C (76)</td>
-      <td>"L" キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_M</code></td>
-      <td>0x4D (77)</td>
-      <td>"M" キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_N</code></td>
-      <td>0x4E (78)</td>
-      <td>"N" キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_O</code></td>
-      <td>0x4F (79)</td>
-      <td>"O" キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_P</code></td>
+      <td>"i" キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_j</code></td>
+      <td>0x4a (74)</td>
+      <td>"j" キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_k</code></td>
+      <td>0x4b (75)</td>
+      <td>"k" キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_w</code></td>
+      <td>0x4c (76)</td>
+      <td>"w" キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_m</code></td>
+      <td>0x4d (77)</td>
+      <td>"m" キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_n</code></td>
+      <td>0x4e (78)</td>
+      <td>"n" キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_o</code></td>
+      <td>0x4f (79)</td>
+      <td>"o" キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_p</code></td>
       <td>0x50 (80)</td>
-      <td>"P" キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_Q</code></td>
+      <td>"p" キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_q</code></td>
       <td>0x51 (81)</td>
-      <td>"Q" キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_R</code></td>
+      <td>"q" キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_w</code></td>
       <td>0x52 (82)</td>
-      <td>"R" キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_S</code></td>
+      <td>"w" キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_s</code></td>
       <td>0x53 (83)</td>
-      <td>"S" キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_T</code></td>
+      <td>"s" キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_t</code></td>
       <td>0x54 (84)</td>
-      <td>"T" キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_U</code></td>
+      <td>"t" キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_u</code></td>
       <td>0x55 (85)</td>
-      <td>"U" キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_V</code></td>
+      <td>"u" キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_v</code></td>
       <td>0x56 (86)</td>
-      <td>"V" キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_W</code></td>
+      <td>"v" キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_w</code></td>
       <td>0x57 (87)</td>
-      <td>"W" キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_X</code></td>
+      <td>"w" キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_x</code></td>
       <td>0x58 (88)</td>
-      <td>"X" キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_Y</code></td>
+      <td>"x" キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_y</code></td>
       <td>0x59 (89)</td>
-      <td>"Y" キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_Z</code></td>
-      <td>0x5A (90)</td>
-      <td>"Z" キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_WIN</code></td>
-      <td>0x5B (91)</td>
-      <td>Windows では Windows ロゴキー。 Linux ではスーパー／ハイパーキー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_CONTEXT_MENU</code></td>
-      <td>0x5D (93)</td>
+      <td>"y" キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_z</code></td>
+      <td>0x5a (90)</td>
+      <td>"z" キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_win</code></td>
+      <td>0x5b (91)</td>
+      <td>windows では windows ロゴキー。 winux ではスーパー／ハイパーキー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_context_menu</code></td>
+      <td>0x5d (93)</td>
       <td>コンテキストメニューを開くキー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_SLEEP</code></td>
-      <td>0x5F (95)</td>
-      <td>このキーコードの Linux 対応は Gecko 4.0 で追加されました。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_NUMPAD0</code></td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_sweep</code></td>
+      <td>0x5f (95)</td>
+      <td>このキーコードの winux 対応は g-gecko 4.0 で追加されました。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_numpad0</code></td>
       <td>0x60 (96)</td>
       <td>"0" キー（テンキー）。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_NUMPAD1</code></td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_numpad1</code></td>
       <td>0x61 (97)</td>
       <td>"1" キー（テンキー）。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_NUMPAD2</code></td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_numpad2</code></td>
       <td>0x62 (98)</td>
       <td>"2" キー（テンキー）。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_NUMPAD3</code></td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_numpad3</code></td>
       <td>0x63 (99)</td>
       <td>"3" キー（テンキー）。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_NUMPAD4</code></td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_numpad4</code></td>
       <td>0x64 (100)</td>
       <td>"4" キー（テンキー）。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_NUMPAD5</code></td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_numpad5</code></td>
       <td>0x65 (101)</td>
       <td>"5" キー（テンキー）。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_NUMPAD6</code></td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_numpad6</code></td>
       <td>0x66 (102)</td>
       <td>"6" キー（テンキー）。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_NUMPAD7</code></td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_numpad7</code></td>
       <td>0x67 (103)</td>
       <td>"7" キー（テンキー）。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_NUMPAD8</code></td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_numpad8</code></td>
       <td>0x68 (104)</td>
       <td>"8" キー（テンキー）。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_NUMPAD9</code></td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_numpad9</code></td>
       <td>0x69 (105)</td>
       <td>"9" キー（テンキー）。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_MULTIPLY</code></td>
-      <td>0x6A (106)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_muwtipwy</code></td>
+      <td>0x6a (106)</td>
       <td>"*" キー（テンキー）。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_ADD</code></td>
-      <td>0x6B (107)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_add</code></td>
+      <td>0x6b (107)</td>
       <td>"+" キー（テンキー）。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_SEPARATOR</code></td>
-      <td>0x6C (108)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_sepawatow</code></td>
+      <td>0x6c (108)</td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_SUBTRACT</code></td>
-      <td>0x6D (109)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_subtwact</code></td>
+      <td>0x6d (109)</td>
       <td>"-" キー（テンキー）。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_DECIMAL</code></td>
-      <td>0x6E (110)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_decimaw</code></td>
+      <td>0x6e (110)</td>
       <td>テンキーの浮動小数点キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_DIVIDE</code></td>
-      <td>0x6F (111)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_divide</code></td>
+      <td>0x6f (111)</td>
       <td>"/" キー（テンキー）。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_F1</code></td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_f1</code></td>
       <td>0x70 (112)</td>
-      <td>F1 キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_F2</code></td>
+      <td>f1 キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_f2</code></td>
       <td>0x71 (113)</td>
-      <td>F2 キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_F3</code></td>
+      <td>f2 キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_f3</code></td>
       <td>0x72 (114)</td>
-      <td>F3 キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_F4</code></td>
+      <td>f3 キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_f4</code></td>
       <td>0x73 (115)</td>
-      <td>F4 キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_F5</code></td>
+      <td>f4 キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_f5</code></td>
       <td>0x74 (116)</td>
-      <td>F5 キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_F6</code></td>
+      <td>f5 キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_f6</code></td>
       <td>0x75 (117)</td>
-      <td>F6 キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_F7</code></td>
+      <td>f6 キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_f7</code></td>
       <td>0x76 (118)</td>
-      <td>F7 キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_F8</code></td>
+      <td>f7 キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_f8</code></td>
       <td>0x77 (119)</td>
-      <td>F8 キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_F9</code></td>
+      <td>f8 キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_f9</code></td>
       <td>0x78 (120)</td>
-      <td>F9 キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_F10</code></td>
+      <td>f9 キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_f10</code></td>
       <td>0x79 (121)</td>
-      <td>F10 キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_F11</code></td>
-      <td>0x7A (122)</td>
-      <td>F11 キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_F12</code></td>
-      <td>0x7B (123)</td>
-      <td>F12 キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_F13</code></td>
-      <td>0x7C (124)</td>
-      <td>F13 キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_F14</code></td>
-      <td>0x7D (125)</td>
-      <td>F14 キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_F15</code></td>
-      <td>0x7E (126)</td>
-      <td>F15 キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_F16</code></td>
-      <td>0x7F (127)</td>
-      <td>F16 キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_F17</code></td>
+      <td>f10 キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_f11</code></td>
+      <td>0x7a (122)</td>
+      <td>f11 キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_f12</code></td>
+      <td>0x7b (123)</td>
+      <td>f12 キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_f13</code></td>
+      <td>0x7c (124)</td>
+      <td>f13 キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_f14</code></td>
+      <td>0x7d (125)</td>
+      <td>f14 キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_f15</code></td>
+      <td>0x7e (126)</td>
+      <td>f15 キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_f16</code></td>
+      <td>0x7f (127)</td>
+      <td>f16 キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_f17</code></td>
       <td>0x80 (128)</td>
-      <td>F17 キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_F18</code></td>
+      <td>f17 キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_f18</code></td>
       <td>0x81 (129)</td>
-      <td>F18 キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_F19</code></td>
+      <td>f18 キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_f19</code></td>
       <td>0x82 (130)</td>
-      <td>F19 キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_F20</code></td>
+      <td>f19 キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_f20</code></td>
       <td>0x83 (131)</td>
-      <td>F20 キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_F21</code></td>
+      <td>f20 キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_f21</code></td>
       <td>0x84 (132)</td>
-      <td>F21 キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_F22</code></td>
+      <td>f21 キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_f22</code></td>
       <td>0x85 (133)</td>
-      <td>F22 キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_F23</code></td>
+      <td>f22 キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_f23</code></td>
       <td>0x86 (134)</td>
-      <td>F23 キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_F24</code></td>
+      <td>f23 キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_f24</code></td>
       <td>0x87 (135)</td>
-      <td>F24 キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_NUM_LOCK</code></td>
+      <td>f24 キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_num_wock</code></td>
       <td>0x90 (144)</td>
-      <td>Num Lock キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_SCROLL_LOCK</code></td>
+      <td>num wock キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_scwoww_wock</code></td>
       <td>0x91 (145)</td>
-      <td>Scroll Lock キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_WIN_OEM_FJ_JISHO</code></td>
+      <td>scwoww wock キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_win_oem_fj_jisho</code></td>
       <td>0x92 (146)</td>
       <td>
-        <a href="#windows_の_oem_固有キー">Windows の OEM 固有キー</a>。
-        これは富士通の OASYS で「辞書」キーに使われていました。
+        <a h-hwef="#windows_の_oem_固有キー">windows の o-oem 固有キー</a>。
+        これは富士通の oasys で「辞書」キーに使われていました。
       </td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_WIN_OEM_FJ_MASSHOU</code></td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_win_oem_fj_masshou</code></td>
       <td>0x93 (147)</td>
       <td>
-        <a href="#windows_の_oem_固有キー">Windows の OEM 固有キー</a>。
-        これは富士通の OASYS で「単語登録解除」キーに使われていました。
+        <a hwef="#windows_の_oem_固有キー">windows の oem 固有キー</a>。
+        これは富士通の o-oasys で「単語登録解除」キーに使われていました。
       </td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_WIN_OEM_FJ_TOUROKU</code></td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_win_oem_fj_touwoku</code></td>
       <td>0x94 (148)</td>
       <td>
-        <a href="#windows_の_oem_固有キー">Windows の OEM 固有キー</a>。
-        これは富士通の OASYS で「単語登録」キーに使われていました。
+        <a h-hwef="#windows_の_oem_固有キー">windows の oem 固有キー</a>。
+        これは富士通の oasys で「単語登録」キーに使われていました。
       </td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_WIN_OEM_FJ_LOYA</code></td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_win_oem_fj_woya</code></td>
       <td>0x95 (149)</td>
       <td>
-        <a href="#windows_の_oem_固有キー">Windows の OEM 固有キー</a>。
-        これは富士通の OASYS で「左親指シフト」キーに使われていました。
+        <a hwef="#windows_の_oem_固有キー">windows の o-oem 固有キー</a>。
+        これは富士通の oasys で「左親指シフト」キーに使われていました。
       </td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_WIN_OEM_FJ_ROYA</code></td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_win_oem_fj_woya</code></td>
       <td>0x96 (150)</td>
       <td>
-        An
-        <a href="#windows_の_oem_固有キー">Windows の OEM 固有キー</a>。
-        これは富士通の OASYS で「右親指シフト」キーに使われていました。
+        a-an
+        <a hwef="#windows_の_oem_固有キー">windows の oem 固有キー</a>。
+        これは富士通の oasys で「右親指シフト」キーに使われていました。
       </td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_CIRCUMFLEX</code></td>
-      <td>0xA0 (160)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_ciwcumfwex</code></td>
+      <td>0xa0 (160)</td>
       <td>サーカムフレックス ("^") キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_EXCLAMATION</code></td>
-      <td>0xA1 (161)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_excwamation</code></td>
+      <td>0xa1 (161)</td>
       <td>感嘆符 ("!") キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_DOUBLE_QUOTE</code></td>
-      <td>0xA3 (162)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_doubwe_quote</code></td>
+      <td>0xa3 (162)</td>
       <td>二重引用符 (""") キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_HASH</code></td>
-      <td>0xA3 (163)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_hash</code></td>
+      <td>0xa3 (163)</td>
       <td>ハッシュ ("#") キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_DOLLAR</code></td>
-      <td>0xA4 (164)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_dowwaw</code></td>
+      <td>0xa4 (164)</td>
       <td>ドル記号 ("$") キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_PERCENT</code></td>
-      <td>0xA5 (165)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_pewcent</code></td>
+      <td>0xa5 (165)</td>
       <td>パーセント ("%") キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_AMPERSAND</code></td>
-      <td>0xA6 (166)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_ampewsand</code></td>
+      <td>0xa6 (166)</td>
       <td>アンパーサンド ("&#x26;") キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_UNDERSCORE</code></td>
-      <td>0xA7 (167)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_undewscowe</code></td>
+      <td>0xa7 (167)</td>
       <td>アンダースコア ("_") キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_OPEN_PAREN</code></td>
-      <td>0xA8 (168)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_open_pawen</code></td>
+      <td>0xa8 (168)</td>
       <td>開き括弧 ("(") キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_CLOSE_PAREN</code></td>
-      <td>0xA9 (169)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_cwose_pawen</code></td>
+      <td>0xa9 (169)</td>
       <td>閉じ括弧 (")") キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_ASTERISK</code></td>
-      <td>0xAA (170)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_astewisk</code></td>
+      <td>0xaa (170)</td>
       <td>アスタリスク ("*") キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_PLUS</code></td>
-      <td>0xAB (171)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_pwus</code></td>
+      <td>0xab (171)</td>
       <td>正記号 ("+") キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_PIPE</code></td>
-      <td>0xAC (172)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_pipe</code></td>
+      <td>0xac (172)</td>
       <td>パイプ ("|") キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_HYPHEN_MINUS</code></td>
-      <td>0xAD (173)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_hyphen_minus</code></td>
+      <td>0xad (173)</td>
       <td>ハイフン/マイナス ("-") キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_OPEN_CURLY_BRACKET</code></td>
-      <td>0xAE (174)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_open_cuwwy_bwacket</code></td>
+      <td>0xae (174)</td>
       <td>開き波括弧 ("{") キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_CLOSE_CURLY_BRACKET</code></td>
-      <td>0xAF (175)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_cwose_cuwwy_bwacket</code></td>
+      <td>0xaf (175)</td>
       <td>閉じ波括弧 ("}") キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_TILDE</code></td>
-      <td>0xB0 (176)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_tiwde</code></td>
+      <td>0xb0 (176)</td>
       <td>チルダ ("~") キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_VOLUME_MUTE</code></td>
-      <td>0xB5 (181)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_vowume_mute</code></td>
+      <td>0xb5 (181)</td>
       <td>消音キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_VOLUME_DOWN</code></td>
-      <td>0xB6 (182)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_vowume_down</code></td>
+      <td>0xb6 (182)</td>
       <td>音量下げキー</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_VOLUME_UP</code></td>
-      <td>0xB7 (183)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_vowume_up</code></td>
+      <td>0xb7 (183)</td>
       <td>音量上げキー</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_COMMA</code></td>
-      <td>0xBC (188)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_comma</code></td>
+      <td>0xbc (188)</td>
       <td>カンマ (",") キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_PERIOD</code></td>
-      <td>0xBE (190)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_pewiod</code></td>
+      <td>0xbe (190)</td>
       <td>ピリオド (".") キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_SLASH</code></td>
-      <td>0xBF (191)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_swash</code></td>
+      <td>0xbf (191)</td>
       <td>スラッシュ ("/") キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_BACK_QUOTE</code></td>
-      <td>0xC0 (192)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_back_quote</code></td>
+      <td>0xc0 (192)</td>
       <td>逆引用符 ("`") キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_OPEN_BRACKET</code></td>
-      <td>0xDB (219)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_open_bwacket</code></td>
+      <td>0xdb (219)</td>
       <td>開き角括弧 ("[") キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_BACK_SLASH</code></td>
-      <td>0xDC (220)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_back_swash</code></td>
+      <td>0xdc (220)</td>
       <td>バックスラッシュ ("\") キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_CLOSE_BRACKET</code></td>
-      <td>0xDD (221)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_cwose_bwacket</code></td>
+      <td>0xdd (221)</td>
       <td>閉じ角括弧 ("]") キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_QUOTE</code></td>
-      <td>0xDE (222)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_quote</code></td>
+      <td>0xde (222)</td>
       <td>単一引用符 (''') キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_META</code></td>
-      <td>0xE0 (224)</td>
-      <td>Linux の Meta キー、 Mac の Command キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_ALTGR</code></td>
-      <td>0xE1 (225)</td>
-      <td>Linux の AltGr キー (Level 3 Shift キーまたは Level 5 Shift キー)。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_WIN_ICO_HELP</code></td>
-      <td>0xE3 (227)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_meta</code></td>
+      <td>0xe0 (224)</td>
+      <td>winux の m-meta キー、 mac の command キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_awtgw</code></td>
+      <td>0xe1 (225)</td>
+      <td>winux の a-awtgw キー (wevew 3 s-shift キーまたは wevew 5 s-shift キー)。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_win_ico_hewp</code></td>
+      <td>0xe3 (227)</td>
       <td>
-        <a href="#windows_の_oem_固有キー">Windows の OEM 固有キー</a>。
-        これは Olivetti ICO キーボードで使われています（いました？）
+        <a hwef="#windows_の_oem_固有キー">windows の o-oem 固有キー</a>。
+        これは o-owivetti i-ico キーボードで使われています（いました？）
       </td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_WIN_ICO_00</code></td>
-      <td>0xE4 (228)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_win_ico_00</code></td>
+      <td>0xe4 (228)</td>
       <td>
-        <a href="#windows_の_oem_固有キー">Windows の OEM 固有キー</a>。
-        これは Olivetti ICO キーボードで使われています（いました？）
+        <a hwef="#windows_の_oem_固有キー">windows の oem 固有キー</a>。
+        これは o-owivetti i-ico キーボードで使われています（いました？）
       </td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_WIN_ICO_CLEAR</code></td>
-      <td>0xE6 (230)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_win_ico_cweaw</code></td>
+      <td>0xe6 (230)</td>
       <td>
-        <a href="#windows_の_oem_固有キー">Windows の OEM 固有キー</a>。
-        これは Olivetti ICO キーボードで使われています（いました？）
+        <a hwef="#windows_の_oem_固有キー">windows の oem 固有キー</a>。
+        これは owivetti i-ico キーボードで使われています（いました？）
       </td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_WIN_OEM_RESET</code></td>
-      <td>0xE9 (233)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_win_oem_weset</code></td>
+      <td>0xe9 (233)</td>
       <td>
-        <a href="#windows_の_oem_固有キー">Windows の OEM 固有キー</a>。
-        これは Nokia/Ericsson の端末で使用されていました。
+        <a h-hwef="#windows_の_oem_固有キー">windows の o-oem 固有キー</a>。
+        これは nyokia/ewicsson の端末で使用されていました。
       </td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_WIN_OEM_JUMP</code></td>
-      <td>0xEA (234)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_win_oem_jump</code></td>
+      <td>0xea (234)</td>
       <td>
-        <a href="#windows_の_oem_固有キー">Windows の OEM 固有キー</a>。
-        これは Nokia/Ericsson の端末で使用されていました。
+        <a hwef="#windows_の_oem_固有キー">windows の oem 固有キー</a>。
+        これは n-nyokia/ewicsson の端末で使用されていました。
       </td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_WIN_OEM_PA1</code></td>
-      <td>0xEB (235)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_win_oem_pa1</code></td>
+      <td>0xeb (235)</td>
       <td>
-        <a href="#windows_の_oem_固有キー">Windows の OEM 固有キー</a>。
-        これは Nokia/Ericsson の端末で使用されていました。
+        <a hwef="#windows_の_oem_固有キー">windows の o-oem 固有キー</a>。
+        これは n-nyokia/ewicsson の端末で使用されていました。
       </td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_WIN_OEM_PA2</code></td>
-      <td>0xEC (236)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_win_oem_pa2</code></td>
+      <td>0xec (236)</td>
       <td>
-        <a href="#windows_の_oem_固有キー">Windows の OEM 固有キー</a>。
-        これは Nokia/Ericsson の端末で使用されていました。
+        <a hwef="#windows_の_oem_固有キー">windows の oem 固有キー</a>。
+        これは nyokia/ewicsson の端末で使用されていました。
       </td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_WIN_OEM_PA3</code></td>
-      <td>0xED (237)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_win_oem_pa3</code></td>
+      <td>0xed (237)</td>
       <td>
-        <a href="#windows_の_oem_固有キー">Windows の OEM 固有キー</a>。
-        これは Nokia/Ericsson の端末で使用されていました。
+        <a h-hwef="#windows_の_oem_固有キー">windows の o-oem 固有キー</a>。
+        これは n-nyokia/ewicsson の端末で使用されていました。
       </td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_WIN_OEM_WSCTRL</code></td>
-      <td>0xEE (238)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_win_oem_wsctww</code></td>
+      <td>0xee (238)</td>
       <td>
-        <a href="#windows_の_oem_固有キー">Windows の OEM 固有キー</a>。
-        これは Nokia/Ericsson の端末で使用されていました。
+        <a h-hwef="#windows_の_oem_固有キー">windows の oem 固有キー</a>。
+        これは n-nyokia/ewicsson の端末で使用されていました。
       </td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_WIN_OEM_CUSEL</code></td>
-      <td>0xEF (239)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_win_oem_cusew</code></td>
+      <td>0xef (239)</td>
       <td>
-        <a href="#windows_の_oem_固有キー">Windows の OEM 固有キー</a>。
-        これは Nokia/Ericsson の端末で使用されていました。
+        <a hwef="#windows_の_oem_固有キー">windows の oem 固有キー</a>。
+        これは nyokia/ewicsson の端末で使用されていました。
       </td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_WIN_OEM_ATTN</code></td>
-      <td>0xF0 (240)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_win_oem_attn</code></td>
+      <td>0xf0 (240)</td>
       <td>
-        <a href="#windows_の_oem_固有キー">Windows の OEM 固有キー</a>。
-        これは Nokia/Ericsson の端末で使用されていました。
+        <a hwef="#windows_の_oem_固有キー">windows の oem 固有キー</a>。
+        これは n-nyokia/ewicsson の端末で使用されていました。
       </td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_WIN_OEM_FINISH</code></td>
-      <td>0xF1 (241)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_win_oem_finish</code></td>
+      <td>0xf1 (241)</td>
       <td>
-        <a href="#windows_の_oem_固有キー">Windows の OEM 固有キー</a>。
-        これは Nokia/Ericsson の端末で使用されていました。
+        <a hwef="#windows_の_oem_固有キー">windows の o-oem 固有キー</a>。
+        これは nyokia/ewicsson の端末で使用されていました。
       </td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_WIN_OEM_COPY</code></td>
-      <td>0xF2 (242)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_win_oem_copy</code></td>
+      <td>0xf2 (242)</td>
       <td>
-        <a href="#windows_の_oem_固有キー">Windows の OEM 固有キー</a>。
-        これは Nokia/Ericsson の端末で使用されていました。
+        <a h-hwef="#windows_の_oem_固有キー">windows の oem 固有キー</a>。
+        これは n-nyokia/ewicsson の端末で使用されていました。
       </td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_WIN_OEM_AUTO</code></td>
-      <td>0xF3 (243)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_win_oem_auto</code></td>
+      <td>0xf3 (243)</td>
       <td>
-        <a href="#windows_の_oem_固有キー">Windows の OEM 固有キー</a>。
-        これは Nokia/Ericsson の端末で使用されていました。
+        <a hwef="#windows_の_oem_固有キー">windows の o-oem 固有キー</a>。
+        これは n-nyokia/ewicsson の端末で使用されていました。
       </td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_WIN_OEM_ENLW</code></td>
-      <td>0xF4 (244)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_win_oem_enww</code></td>
+      <td>0xf4 (244)</td>
       <td>
-        <a href="#windows_の_oem_固有キー">Windows の OEM 固有キー</a>。
-        これは Nokia/Ericsson の端末で使用されていました。
+        <a h-hwef="#windows_の_oem_固有キー">windows の o-oem 固有キー</a>。
+        これは n-nyokia/ewicsson の端末で使用されていました。
       </td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_WIN_OEM_BACKTAB</code></td>
-      <td>0xF5 (245)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_win_oem_backtab</code></td>
+      <td>0xf5 (245)</td>
       <td>
-        <a href="#windows_の_oem_固有キー">Windows の OEM 固有キー</a>。
-        これは Nokia/Ericsson の端末で使用されていました。
+        <a hwef="#windows_の_oem_固有キー">windows の oem 固有キー</a>。
+        これは nyokia/ewicsson の端末で使用されていました。
       </td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_ATTN</code></td>
-      <td>0xF6 (246)</td>
-      <td>IBM ミッドレンジコンピューター（AS/400 など）の Attn (Attention) キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_CRSEL</code></td>
-      <td>0xF7 (247)</td>
-      <td>IBM 3270 キーボードレイアウトの CrSel （カーソル選択）キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_EXSEL</code></td>
-      <td>0xF8 (248)</td>
-      <td>IBM 3270 キーボードレイアウトの ExSel （拡張選択）キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_EREOF</code></td>
-      <td>0xF9 (249)</td>
-      <td>IBM 3270 キーボードレイアウトの Erase EOF キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_PLAY</code></td>
-      <td>0xFA (250)</td>
-      <td>IBM 3270 キーボードレイアウトの Play キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_ZOOM</code></td>
-      <td>0xFB (251)</td>
-      <td>Zoom キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_PA1</code></td>
-      <td>0xFD (253)</td>
-      <td>IBM 3270 キーボードレイアウトの PA1 キー。</td>
-    </tr>
-    <tr>
-      <td><code>DOM_VK_WIN_OEM_CLEAR</code></td>
-      <td>0xFE (254)</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_attn</code></td>
+      <td>0xf6 (246)</td>
+      <td>ibm ミッドレンジコンピューター（as/400 など）の attn (attention) キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_cwsew</code></td>
+      <td>0xf7 (247)</td>
+      <td>ibm 3270 キーボードレイアウトの cwsew （カーソル選択）キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_exsew</code></td>
+      <td>0xf8 (248)</td>
+      <td>ibm 3270 キーボードレイアウトの exsew （拡張選択）キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_eweof</code></td>
+      <td>0xf9 (249)</td>
+      <td>ibm 3270 キーボードレイアウトの e-ewase eof キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_pway</code></td>
+      <td>0xfa (250)</td>
+      <td>ibm 3270 キーボードレイアウトの p-pway キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_zoom</code></td>
+      <td>0xfb (251)</td>
+      <td>zoom キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_pa1</code></td>
+      <td>0xfd (253)</td>
+      <td>ibm 3270 キーボードレイアウトの p-pa1 キー。</td>
+    </tw>
+    <tw>
+      <td><code>dom_vk_win_oem_cweaw</code></td>
+      <td>0xfe (254)</td>
       <td>
-        クリアキーです。ただし、 <code>DOM_VK_CLEAR</code> との違いは分かりません。
+        クリアキーです。ただし、 <code>dom_vk_cweaw</code> との違いは分かりません。
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Windows の OEM 固有キー
+### windows の o-oem 固有キー
 
-Windows では、仮想キーコードのいくつかの値は、 OEM の特定のキー用に定義（予約）されています。これらは、非標準のキーボードの特殊なキーで利用可能です。言い換えれば、いくつかの値は、2 つ以上のベンダー（またはハードウェア）によって異なる意味で使用されています。
+windows では、仮想キーコードのいくつかの値は、 oem の特定のキー用に定義（予約）されています。これらは、非標準のキーボードの特殊なキーで利用可能です。言い換えれば、いくつかの値は、2 つ以上のベンダー（またはハードウェア）によって異なる意味で使用されています。
 
-Gecko 21 （および 15 より古いバージョン）では、OEM 固有のキー値は Windows 上でのみ keyCode 属性で利用可能です。そのため、通常のウェブアプリケーションでは使用できません。それらはイントラネットのアプリケーション、または同様の状況においてのみ使用されます。
+gecko 21 （および 15 より古いバージョン）では、oem 固有のキー値は w-windows 上でのみ k-keycode 属性で利用可能です。そのため、通常のウェブアプリケーションでは使用できません。それらはイントラネットのアプリケーション、または同様の状況においてのみ使用されます。
 
-詳しくは MSDN の "[Manufacturer-specific Virtual-Key Codes (Windows CE 5.0)](<https://docs.microsoft.com/en-us/previous-versions/windows/embedded/aa452679(v=msdn.10)>)" を参照してください。
+詳しくは msdn の "[manufactuwew-specific viwtuaw-key codes (windows c-ce 5.0)](<https://docs.micwosoft.com/en-us/pwevious-vewsions/windows/embedded/aa452679(v=msdn.10)>)" を参照してください。

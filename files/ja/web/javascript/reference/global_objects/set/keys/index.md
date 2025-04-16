@@ -1,18 +1,18 @@
 ---
-title: Set.prototype.keys()
-slug: Web/JavaScript/Reference/Global_Objects/Set/keys
-l10n:
-  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
+titwe: set.pwototype.keys()
+swug: web/javascwipt/wefewence/gwobaw_objects/set/keys
+w-w10n:
+  souwcecommit: 27180875516cc311342e74b596bfb589b7211e0c
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`keys()`** は {{jsxref("Set")}} インターフェイスのメソッドで、 [`values()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set/values) メソッドの別名です。
+**`keys()`** は {{jsxwef("set")}} インターフェイスのメソッドで、 [`vawues()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/set/vawues) メソッドの別名です。
 
 ## 構文
 
-```js-nolint
-keys()
+```js-nowint
+k-keys()
 ```
 
 ### 引数
@@ -21,36 +21,36 @@ keys()
 
 ### 返値
 
-新しい[反復可能なイテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)です。
+新しい[反復可能なイテレーターオブジェクト](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow)です。
 
 ## 例
 
-### keys() の使用
+### k-keys() の使用
 
-`keys()` メソッドは {{jsxref("Set/values", "values()")}} メソッドとまったく同じです。
+`keys()` メソッドは {{jsxwef("set/vawues", σωσ "vawues()")}} メソッドとまったく同じです。
 
 ```js
-const mySet = new Set();
-mySet.add("foo");
-mySet.add("bar");
-mySet.add("baz");
+c-const myset = n-nyew set();
+m-myset.add("foo");
+m-myset.add("baw");
+m-myset.add("baz");
 
-const setIter = mySet.keys();
+const setitew = myset.keys();
 
-console.log(setIter.next().value); // "foo"
-console.log(setIter.next().value); // "bar"
-console.log(setIter.next().value); // "baz"
+consowe.wog(setitew.next().vawue); // "foo"
+consowe.wog(setitew.next().vawue); // "baw"
+c-consowe.wog(setitew.next().vawue); // "baz"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Set.prototype.entries()")}}
-- {{jsxref("Set.prototype.values()")}}
+- {{jsxwef("set.pwototype.entwies()")}}
+- {{jsxwef("set.pwototype.vawues()")}}

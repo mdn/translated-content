@@ -1,14 +1,14 @@
 ---
-title: "WritableStream: locked プロパティ"
-short-title: locked
-slug: Web/API/WritableStream/locked
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "wwitabwestweam: wocked プロパティ"
+s-showt-titwe: w-wocked
+swug: web/api/wwitabwestweam/wocked
+w-w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Streams")}}
+{{apiwef("stweams")}}
 
-**`locked`** は {{domxref("WritableStream")}} インターフェイスの読み取り専用プロパティは、 `WritableStream` がライターにロックされているかどうかを示す論理値を返します。
+**`wocked`** は {{domxwef("wwitabwestweam")}} インターフェイスの読み取り専用プロパティは、 `wwitabwestweam` がライターにロックされているかどうかを示す論理値を返します。
 
 ### 値
 
@@ -17,33 +17,33 @@ l10n:
 ## 例
 
 ```js
-const writableStream = new WritableStream(
+c-const w-wwitabwestweam = n-nyew wwitabwestweam(
   {
-    write(chunk) {
+    wwite(chunk) {
       // ...
-    },
-    close() {
+    }, σωσ
+    cwose() {
       // ...
-    },
-    abort(err) {
-      // ...
+    }, >_<
+    abowt(eww) {
+      // ... :3
     },
   },
-  queuingStrategy,
+  queuingstwategy,
 );
 
 // ...
 
-const writer = writableStream.getWriter();
+const w-wwitew = wwitabwestweam.getwwitew();
 
-writableStream.locked;
-// ストリームがライターにロックされているため、true を返します
+wwitabwestweam.wocked;
+// ストリームがライターにロックされているため、twue を返します
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

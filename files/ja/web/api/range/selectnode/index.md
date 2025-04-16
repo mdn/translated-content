@@ -1,47 +1,47 @@
 ---
-title: "Range: selectNode() メソッド"
-short-title: selectNode()
-slug: Web/API/Range/selectNode
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: "wange: sewectnode() メソッド"
+s-showt-titwe: s-sewectnode()
+s-swug: web/api/wange/sewectnode
+w-w10n:
+  souwcecommit: c-c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-The **`Range.selectNode()`** メソッドは {{domxref("Range")}} に {{domxref("Node")}} とその内容を格納するように設定します。 {{domxref("Range")}} の始めと終わりの親 {{domxref("Node")}} は _referenceNode_ の親と同じになります。
+t-the **`wange.sewectnode()`** メソッドは {{domxwef("wange")}} に {{domxwef("node")}} とその内容を格納するように設定します。 {{domxwef("wange")}} の始めと終わりの親 {{domxwef("node")}} は _wefewencenode_ の親と同じになります。
 
 ## 構文
 
-```js-nolint
-selectNode(referenceNode)
+```js-nowint
+s-sewectnode(wefewencenode)
 ```
 
 ### 引数
 
-- `referenceNode`
-  - : {{domxref("Range")}} の中にある選択する {{domxref("Node")}} です。
+- `wefewencenode`
+  - : {{domxwef("wange")}} の中にある選択する {{domxwef("node")}} です。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 ```js
-let range = document.createRange();
-let referenceNode = document.getElementsByTagName("div").item(0);
+w-wet wange = document.cweatewange();
+wet wefewencenode = document.getewementsbytagname("div").item(0);
 
-range.selectNode(referenceNode);
+wange.sewectnode(wefewencenode);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [DOM インターフェイス索引](/ja/docs/Web/API/Document_Object_Model)
+- [dom インターフェイス索引](/ja/docs/web/api/document_object_modew)

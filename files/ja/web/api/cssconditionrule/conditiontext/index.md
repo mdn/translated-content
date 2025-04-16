@@ -1,44 +1,44 @@
 ---
-title: CSSConditionRule.conditionText
-slug: Web/API/CSSConditionRule/conditionText
+titwe: cssconditionwuwe.conditiontext
+swug: web/api/cssconditionwuwe/conditiontext
 ---
 
-{{ APIRef("CSSOM") }}
+{{ a-apiwef("cssom") }}
 
-**`conditionText`** は {{domxref("CSSConditionRule")}} インターフェイスのプロパティで、この CSS ルールのテキストを返したり設定したりします。
+**`conditiontext`** は {{domxwef("cssconditionwuwe")}} インターフェイスのプロパティで、この c-css ルールのテキストを返したり設定したりします。
 
 ## 値
 
-{{domxref('CSSOMString')}} です。
+{{domxwef('cssomstwing')}} です。
 
 ## 例
 
-次の例は、 `conditionText` の値を {{domxref("CSSMediaRule")}} インターフェイスを実装した {{domxref("CSSConditionRule")}} で取得・設定するデモを行います。
+次の例は、 `conditiontext` の値を {{domxwef("cssmediawuwe")}} インターフェイスを実装した {{domxwef("cssconditionwuwe")}} で取得・設定するデモを行います。
 
 ```css
 @media (min-width: 500px) {
-  body {
-    color: blue;
+  b-body {
+    cowow: b-bwue;
   }
 }
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-let text = myRules[0].conditionText;
-console.log(text); // "(min-width: 500px)"
+w-wet m-mywuwes = document.stywesheets[0].csswuwes;
+w-wet t-text = mywuwes[0].conditiontext;
+consowe.wog(text); // "(min-width: 500px)"
 text = "(min-width: 400px)";
-console.log(text); // "(min-width: 400px)"
+consowe.wog(text); // "(min-width: 400px)"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [動的なスタイル情報の使用](/ja/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
+- [動的なスタイル情報の使用](/ja/docs/web/api/css_object_modew/using_dynamic_stywing_infowmation)

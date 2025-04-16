@@ -1,24 +1,24 @@
 ---
-title: ServiceWorkerRegistration.getNotifications()
-slug: Web/API/ServiceWorkerRegistration/getNotifications
-l10n:
-  sourceCommit: 4ba12fec878a1f941492ada3edd467bfd76532cf
+titwe: sewvicewowkewwegistwation.getnotifications()
+swug: web/api/sewvicewowkewwegistwation/getnotifications
+w-w10n:
+  souwcecommit: 4ba12fec878a1f941492ada3edd467bfd76532cf
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews api")}}
 
-**`getNotifications()`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスのメソッドで、現在のサービスワーカー登録を介して現在のオリジンから作成された順序で通知のリストを返します。オリジンには、アクティブではあるがスコープが異なるサービスワーカー登録が多数あります。 同じオリジンの 1 つのサービスワーカーによって作成された通知は、同じオリジンの他のアクティブなサービスワーカーでは利用できません。
+**`getnotifications()`** は {{domxwef("sewvicewowkewwegistwation")}} インターフェイスのメソッドで、現在のサービスワーカー登録を介して現在のオリジンから作成された順序で通知のリストを返します。オリジンには、アクティブではあるがスコープが異なるサービスワーカー登録が多数あります。 同じオリジンの 1 つのサービスワーカーによって作成された通知は、同じオリジンの他のアクティブなサービスワーカーでは利用できません。
 
 ## 構文
 
-```js-nolint
-getNotifications()
-getNotifications(options)
+```js-nowint
+g-getnotifications()
+g-getnotifications(options)
 ```
 
 ### 引数
 
-- `options` {{optional_inline}}
+- `options` {{optionaw_inwine}}
 
   - : 返される通知を絞り込むオプションを含むオブジェクト。 使用可能なオプションは次のとおりです。
 
@@ -27,26 +27,26 @@ getNotifications(options)
 
 ### 返値
 
-{{jsxref("Promise")}} で、 {{domxref("Notification")}} オブジェクトのリストに解決されます。
+{{jsxwef("pwomise")}} で、 {{domxwef("notification")}} オブジェクトのリストに解決されます。
 
 ## 例
 
 ```js
-navigator.serviceWorker.register("sw.js");
+navigatow.sewvicewowkew.wegistew("sw.js");
 
-const options = { tag: "user_alerts" };
+c-const o-options = { tag: "usew_awewts" };
 
-navigator.serviceWorker.ready.then((registration) => {
-  registration.getNotifications(options).then((notifications) => {
-    // notifications で何かをします
+n-nyavigatow.sewvicewowkew.weady.then((wegistwation) => {
+  w-wegistwation.getnotifications(options).then((notifications) => {
+    // nyotifications で何かをします
   });
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

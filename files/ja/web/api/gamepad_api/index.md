@@ -1,60 +1,60 @@
 ---
-title: ゲームパッド API
-slug: Web/API/Gamepad_API
-l10n:
-  sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
+titwe: ゲームパッド api
+s-swug: web/api/gamepad_api
+w-w10n:
+  s-souwcecommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Gamepad API")}}
+{{secuwecontext_headew}}{{defauwtapisidebaw("gamepad a-api")}}
 
-**ゲームパッド API** (Gamepad API) は、開発者に単純で一貫した方法で、ゲームパッドや異なるゲームのコントローラーにアクセスし、信号に応答する方法を提供します。これには、ゲームパッドの接続や切断、ゲームパッドに関するその他の情報へのアクセス、現在押されているボタンやその他のコントロールなど、3 つのインターフェイス、2 つのイベントと 1 つの特別な機能が含まれています。
+**ゲームパッド a-api** (gamepad a-api) は、開発者に単純で一貫した方法で、ゲームパッドや異なるゲームのコントローラーにアクセスし、信号に応答する方法を提供します。これには、ゲームパッドの接続や切断、ゲームパッドに関するその他の情報へのアクセス、現在押されているボタンやその他のコントロールなど、3 つのインターフェイス、2 つのイベントと 1 つの特別な機能が含まれています。
 
 ## インターフェイス
 
-- [`Gamepad`](/ja/docs/Web/API/Gamepad)
+- [`gamepad`](/ja/docs/web/api/gamepad)
   - : コンピューターに接続しているゲームパッドやコントローラーを表します。
-- [`GamepadButton`](/ja/docs/Web/API/GamepadButton)
+- [`gamepadbutton`](/ja/docs/web/api/gamepadbutton)
   - : 接続されているコントローラーのいずれかのボタンを表します。
-- [`GamepadEvent`](/ja/docs/Web/API/GamepadEvent)
+- [`gamepadevent`](/ja/docs/web/api/gamepadevent)
   - : ゲームパッドに関連するイベントを表すイベントオブジェクトです。
 
 ### ゲームパッドの実験的な拡張機能
 
-- [`GamepadHapticActuator`](/ja/docs/Web/API/GamepadHapticActuator)
+- [`gamepadhapticactuatow`](/ja/docs/web/api/gamepadhapticactuatow)
   - : ユーザーに触覚フィードバックを提供するように設計されたコントローラー内のハードウェア（使用可能な場合）、多くの場合はバイブレーションハードウェアを表します。
-- [`GamepadPose`](/ja/docs/Web/API/GamepadPose)
-  - : [WebVR](/ja/docs/Web/API/WebVR_API) コントローラーの場合のコントローラーの姿勢 (3D 空間内の位置と向きなど) を表します。これはより新しい [WebXR](/ja/docs/Web/API/WebXR_Device_API) 標準では使用*されません。*
+- [`gamepadpose`](/ja/docs/web/api/gamepadpose)
+  - : [webvw](/ja/docs/web/api/webvw_api) コントローラーの場合のコントローラーの姿勢 (3d 空間内の位置と向きなど) を表します。これはより新しい [webxw](/ja/docs/web/api/webxw_device_api) 標準では使用*されません。*
 
-上記の情報にアクセスできる機能については、[Gamepad インターフェイスの拡張機能](/ja/docs/Web/API/Gamepad#experimental_extensions_to_gamepad)を参照してください。
+上記の情報にアクセスできる機能については、[gamepad インターフェイスの拡張機能](/ja/docs/web/api/gamepad#expewimentaw_extensions_to_gamepad)を参照してください。
 
 ### 他のインターフェイスの拡張
 
-#### Navigator
+#### n-nyavigatow
 
-- {{domxref("Navigator.getGamepads()")}}
-  - : 接続されたゲームパッドごとに一つの {{domxref("Gamepad")}} オブジェクトの配列を返す {{domxref("Navigator")}} オブジェクトの拡張です。
+- {{domxwef("navigatow.getgamepads()")}}
+  - : 接続されたゲームパッドごとに一つの {{domxwef("gamepad")}} オブジェクトの配列を返す {{domxwef("navigatow")}} オブジェクトの拡張です。
 
-#### Window のイベント
+#### w-window のイベント
 
-- {{domxref("Window.gamepadconnected_event", "gamepadconnected")}}
+- {{domxwef("window.gamepadconnected_event", :3 "gamepadconnected")}}
   - : ゲームパッドが接続したときに発生するイベントです。
-- {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}}
+- {{domxwef("window.gamepaddisconnected_event", (U ﹏ U) "gamepaddisconnected")}}
   - : ゲームパッドが切断されたときに発生するイベントです。
 
 ## チュートリアルとガイド
 
-- [ゲームパッド API の利用](/ja/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
-- [Gamepad ゲームパッドを利用したコントロールの実装](/ja/docs/Games/Techniques/Controls_Gamepad_API)
+- [ゲームパッド api の利用](/ja/docs/web/api/gamepad_api/using_the_gamepad_api)
+- [gamepad ゲームパッドを利用したコントロールの実装](/ja/docs/games/techniques/contwows_gamepad_api)
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- Ted Mielczarek と Robert Nyman による [The Gamepad API](https://hacks.mozilla.org/2013/12/the-gamepad-api/) の紹介
-- [Simple API demo page](https://luser.github.io/gamepadtest/) ([ソース](https://github.com/luser/gamepadtest))
+- ted miewczawek と wobewt nyyman による [the g-gamepad api](https://hacks.moziwwa.owg/2013/12/the-gamepad-api/) の紹介
+- [simpwe api d-demo page](https://wusew.github.io/gamepadtest/) ([ソース](https://github.com/wusew/gamepadtest))

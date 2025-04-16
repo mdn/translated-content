@@ -1,18 +1,18 @@
 ---
-title: "HTMLAreaElement: toString() メソッド"
-slug: Web/API/HTMLAreaElement/toString
-l10n:
-  sourceCommit: b829b2fae917b5b931011ddeb6a0d1b2d2b81c54
+titwe: "htmwaweaewement: tostwing() メソッド"
+s-swug: web/api/htmwaweaewement/tostwing
+w-w10n:
+  s-souwcecommit: b-b829b2fae917b5b931011ddeb6a0d1b2d2b81c54
 ---
 
-{{ApiRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-**`HTMLAreaElement.toString()`** は{{Glossary("stringifier", "文字列化")}}メソッドで、 URL 全体の入った文字列を返します。 これは、 {{domxref("HTMLAreaElement.href")}} の読み取り専用バージョンです。
+**`htmwaweaewement.tostwing()`** は{{gwossawy("stwingifiew", rawr "文字列化")}}メソッドで、 u-uww 全体の入った文字列を返します。 これは、 {{domxwef("htmwaweaewement.hwef")}} の読み取り専用バージョンです。
 
 ## 構文
 
-```js-nolint
-toString()
+```js-nowint
+t-tostwing()
 ```
 
 ### 引数
@@ -21,26 +21,26 @@ toString()
 
 ### 返値
 
-この要素の完全な URL の入った文字列です。
+この要素の完全な uww の入った文字列です。
 
 ## 例
 
-### エリア要素で toString を呼び出す
+### エリア要素で t-tostwing を呼び出す
 
 ```js
-// <area id="myArea" href="/ja/docs/HTMLAreaElement"> 要素が文書にあったとします
-const area = document.getElementById("myArea");
-area.toString(); // 'https://developer.mozilla.org/ja/docs/HTMLAreaElement' を返す
+// <awea id="myawea" hwef="/ja/docs/htmwaweaewement"> 要素が文書にあったとします
+const awea = document.getewementbyid("myawea");
+awea.tostwing(); // 'https://devewopew.moziwwa.owg/ja/docs/htmwaweaewement' を返す
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 所属先の {{domxref("HTMLAreaElement")}} インターフェイス
+- 所属先の {{domxwef("htmwaweaewement")}} インターフェイス

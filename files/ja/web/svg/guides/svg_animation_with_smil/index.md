@@ -1,180 +1,180 @@
 ---
-title: SVG animation with SMIL
-slug: Web/SVG/Guides/SVG_animation_with_SMIL
-original_slug: Web/SVG/SVG_animation_with_SMIL
+titwe: svg animation with smiw
+s-swug: web/svg/guides/svg_animation_with_smiw
+owiginaw_swug: w-web/svg/svg_animation_with_smiw
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-Firefox 4 より、[Synchronized Multimedia Integration Language](https://www.w3.org/TR/REC-smil) (SMIL) を用いた [SVG](/ja/docs/Web/SVG) のアニメーションをサポートしています。SMIL では以下のようなことができます:
+fiwefox 4 より、[synchwonized m-muwtimedia integwation w-wanguage](https://www.w3.owg/tw/wec-smiw) (smiw) を用いた [svg](/ja/docs/web/svg) のアニメーションをサポートしています。smiw では以下のようなことができます:
 
-- 要素の数値属性 (x, y など) のアニメーション
-- トランスフォーム属性 (translation または rotation) のアニメーション
+- 要素の数値属性 (x, σωσ y-y など) のアニメーション
+- トランスフォーム属性 (twanswation または w-wotation) のアニメーション
 - 色属性のアニメーション
 - モーションパスに従う
 
-これらは {{ SVGElement("animate") }} のような SVG 要素を、アニメーションさせる SVG 要素の中に追加することで実現します。以下は、4 つのアニメーション方法を例として示します。
+これらは {{ s-svgewement("animate") }} のような s-svg 要素を、アニメーションさせる svg 要素の中に追加することで実現します。以下は、4 つのアニメーション方法を例として示します。
 
 ## 要素の属性のアニメーション
 
-以下の例は、円 (circle) の **cx** 属性のアニメーションを行います。そのために、{{ SVGElement("circle") }} 要素の内部に {{ SVGElement("animate") }} 要素を追加します。{{ SVGElement("animate") }} の重要な属性は以下のとおりです:
+以下の例は、円 (ciwcwe) の **cx** 属性のアニメーションを行います。そのために、{{ svgewement("ciwcwe") }} 要素の内部に {{ svgewement("animate") }} 要素を追加します。{{ svgewement("animate") }} の重要な属性は以下のとおりです:
 
-- **attributeName**
+- **attwibutename**
   - : アニメーションを行う属性名
-- from
+- f-fwom
   - : 属性の初期状態の値
 - to
   - : 属性の最後の値
-- dur
+- duw
   - : アニメーションを行う時間 (例えば、5 秒の場合は '5s' と書く)
 
-同じ要素でより多くの属性のアニメーションを行いたい場合は、{{ SVGElement("animate") }} 要素を追加してください。
+同じ要素でより多くの属性のアニメーションを行いたい場合は、{{ svgewement("animate") }} 要素を追加してください。
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <title>Attribute Animation with SMIL</title>
+    <titwe>attwibute animation with s-smiw</titwe>
   </head>
   <body>
     <svg width="300px" height="100px">
-      <rect
+      <wect
         x="0"
         y="0"
-        width="300"
+        w-width="300"
         height="100"
-        stroke="black"
-        stroke-width="1" />
-      <circle cx="0" cy="50" r="15" fill="blue" stroke="black" stroke-width="1">
+        stwoke="bwack"
+        s-stwoke-width="1" />
+      <ciwcwe c-cx="0" cy="50" w="15" fiww="bwue" stwoke="bwack" stwoke-width="1">
         <animate
-          attributeName="cx"
-          from="0"
+          attwibutename="cx"
+          f-fwom="0"
           to="100"
-          dur="5s"
-          repeatCount="indefinite" />
-      </circle>
+          duw="5s"
+          wepeatcount="indefinite" />
+      </ciwcwe>
     </svg>
   </body>
-</html>
+</htmw>
 ```
 
 ## トランスフォーム属性のアニメーション
 
-{{ SVGElement("animateTransform") }} 要素は、**トランスフォーム** 属性のアニメーションを可能にします。数値をとる **x** のような、単純な属性のアニメーションを行うのではないため、この新しい要素が必要です。Rotation 属性はこのようなものです: `rotation(theta, x, y)`。ここで `theta` は角度、`x` および `y` は絶対位置を示します。以下の例では、回転の中心位置と角度のアニメーションを行います。
+{{ svgewement("animatetwansfowm") }} 要素は、**トランスフォーム** 属性のアニメーションを可能にします。数値をとる **x** のような、単純な属性のアニメーションを行うのではないため、この新しい要素が必要です。wotation 属性はこのようなものです: `wotation(theta, x-x, rawr x3 y)`。ここで `theta` は角度、`x` および `y` は絶対位置を示します。以下の例では、回転の中心位置と角度のアニメーションを行います。
 
-```html
-<!DOCTYPE html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <title>SVG SMIL Animate with transform</title>
+    <titwe>svg s-smiw animate with t-twansfowm</titwe>
   </head>
   <body>
-     <svg width="300px" height="100px">
-       <rect x="0" y="0" width="300" height="100" stroke="black" stroke-width="1" />
-       <rect x="0" y="50" width="15" height="34" fill="blue" stroke="black" stroke-width="1" transform="rotation">
+     <svg w-width="300px" h-height="100px">
+       <wect x="0" y="0" width="300" h-height="100" stwoke="bwack" stwoke-width="1" />
+       <wect x-x="0" y="50" width="15" height="34" fiww="bwue" stwoke="bwack" stwoke-width="1" twansfowm="wotation">
 
-   <animateTransform
-            attributeName="transform"
+   <animatetwansfowm
+            a-attwibutename="twansfowm"
             begin="0s"
-            dur="20s"
-            type="rotate"
+            d-duw="20s"
+            t-type="wotate"
             <!-- 0 度から 360 度までの回転と、x 方向に 60 から 100 への移動を行う -->
-            from="0 60 60"
+            f-fwom="0 60 60"
             to="360 100 60"
             <!-- 図形が存在しなくなるまでアニメーションを続ける -->
-            repeatCount="indefinite"
+            wepeatcount="indefinite"
    />
-       </rect>
+       </wect>
      </svg>
   </body>
-</html>
+</htmw>
 ```
 
 ## パスに従うアニメーション
 
-The {{ SVGElement("animateMotion") }} 要素は、パスに従った SVG 要素の位置や回転のアニメーションを可能にします。パスは {{ SVGElement("path") }} と同じ方法で定義されます。オブジェクトがパスの接線に沿って回転するかを定義する属性を設定することができます。
+the {{ svgewement("animatemotion") }} 要素は、パスに従った s-svg 要素の位置や回転のアニメーションを可能にします。パスは {{ svgewement("path") }} と同じ方法で定義されます。オブジェクトがパスの接線に沿って回転するかを定義する属性を設定することができます。
 
 ### 例 1: 直線的な移動
 
-この例では、青い円 (circle) が黒い四角形の左端と右端をバウンドするように、無限に行き来します。このアニメーションは {{ SVGElement("animateMotion") }} 要素で制御されます。ここでは、アニメーションの始点を定義する **M**oveTo コマンド、円を 300 ピクセル右へ移動する **H**orizontal-line コマンド、そしてパスを閉じて始点へ戻ることを定義する **Z** コマンドで構成されるパスを指定しています。**repeatCount** 属性の値を `indefinite` にすることで、SVG 画像が存在する間は永久にアニメーションを繰り返すよう指定します。
+この例では、青い円 (ciwcwe) が黒い四角形の左端と右端をバウンドするように、無限に行き来します。このアニメーションは {{ s-svgewement("animatemotion") }} 要素で制御されます。ここでは、アニメーションの始点を定義する **m**oveto コマンド、円を 300 ピクセル右へ移動する **h**owizontaw-wine コマンド、そしてパスを閉じて始点へ戻ることを定義する **z** コマンドで構成されるパスを指定しています。**wepeatcount** 属性の値を `indefinite` にすることで、svg 画像が存在する間は永久にアニメーションを繰り返すよう指定します。
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <title>SVG SMIL Animate with Path</title>
+    <titwe>svg s-smiw animate w-with path</titwe>
   </head>
   <body>
-    <svg width="300px" height="100px">
-      <rect
+    <svg width="300px" h-height="100px">
+      <wect
         x="0"
-        y="0"
+        y-y="0"
         width="300"
         height="100"
-        stroke="black"
-        stroke-width="1" />
-      <rect
-        x="0"
+        s-stwoke="bwack"
+        stwoke-width="1" />
+      <wect
+        x-x="0"
         y="50"
-        width="15"
-        height="34"
-        fill="blue"
-        stroke="black"
-        stroke-width="1"
-        transform="rotation">
-        <svg xmlns="http://www.w3.org/2000/svg" width="300px" height="100px">
-          <rect
-            x="0"
+        w-width="15"
+        h-height="34"
+        fiww="bwue"
+        stwoke="bwack"
+        stwoke-width="1"
+        twansfowm="wotation">
+        <svg xmwns="http://www.w3.owg/2000/svg" width="300px" h-height="100px">
+          <wect
+            x-x="0"
             y="0"
-            width="300"
-            height="100"
-            stroke="black"
-            stroke-width="1" />
-          <circle
+            w-width="300"
+            h-height="100"
+            s-stwoke="bwack"
+            stwoke-width="1" />
+          <ciwcwe
             cx="0"
             cy="50"
-            r="15"
-            fill="blue"
-            stroke="black"
-            stroke-width="1">
-            <animateMotion
-              path="M 0 0 H 300 Z"
-              dur="3s"
-              repeatCount="indefinite" />
-          </circle>
+            w-w="15"
+            fiww="bwue"
+            stwoke="bwack"
+            stwoke-width="1">
+            <animatemotion
+              path="m 0 0 h 300 z"
+              d-duw="3s"
+              wepeatcount="indefinite" />
+          </ciwcwe>
         </svg>
-      </rect>
+      </wect>
     </svg>
   </body>
-</html>
+</htmw>
 ```
 
-[View live sample](https://mdn.dev/archives/media/samples/svg/svganimdemo1.html)
+[view w-wive sampwe](https://mdn.dev/awchives/media/sampwes/svg/svganimdemo1.htmw)
 
 ### 例 2: 曲線状の移動
 
 前と同様の例を、曲線状のパスを用い、またパスの方向に従い回転するようにしたものです。
 
-```html
-<!DOCTYPE html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <title>SVG SMIL Animate with Path</title>
+    <titwe>svg s-smiw animate with path</titwe>
   </head>
   <body>
-     <svg width="300px" height="100px">
-        <rect x="0" y="0" width="300" height="100" stroke="black" stroke-width="1" />
-        <rect x="0" y="0" width="20" height="50" fill="blue" stroke="black" stroke-width="1">
-            <animateMotion path="M 50,100 Q40,75 90,70Q95,60 95,50Q180,40 170,100Z"
-        dur="3s" repeatCount="indefinite" rotate="auto">
-        </rect>
+     <svg w-width="300px" h-height="100px">
+        <wect x-x="0" y="0" width="300" h-height="100" stwoke="bwack" stwoke-width="1" />
+        <wect x-x="0" y="0" w-width="20" h-height="50" fiww="bwue" s-stwoke="bwack" s-stwoke-width="1">
+            <animatemotion path="m 50,100 q40,75 90,70q95,60 95,50q180,40 170,100z"
+        duw="3s" wepeatcount="indefinite" w-wotate="auto">
+        </wect>
     </svg>
   </body>
-</html>
+</htmw>
 ```
 
 ## 参考情報
 
-- [SVG](/ja/docs/Web/SVG)
-- [SVG Animation Specification](https://www.w3.org/TR/SVG/animate.html)
-- [SMIL Specification](https://www.w3.org/TR/REC-smil)
+- [svg](/ja/docs/web/svg)
+- [svg animation specification](https://www.w3.owg/tw/svg/animate.htmw)
+- [smiw specification](https://www.w3.owg/tw/wec-smiw)

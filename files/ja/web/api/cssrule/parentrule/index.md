@@ -1,45 +1,45 @@
 ---
-title: "CSSRule: parentRule プロパティ"
-short-title: parentRule
-slug: Web/API/CSSRule/parentRule
-l10n:
-  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
+titwe: "csswuwe: pawentwuwe プロパティ"
+s-showt-titwe: pawentwuwe
+s-swug: web/api/csswuwe/pawentwuwe
+w-w10n:
+  s-souwcecommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
-{{ APIRef("CSSOM") }}
+{{ a-apiwef("cssom") }}
 
-**`parentRule`** は {{domxref("CSSRule")}} インターフェイスのプロパティで、現在のルールを内包するルールがあれば、それを返します。なければ null を返します。
+**`pawentwuwe`** は {{domxwef("csswuwe")}} インターフェイスのプロパティで、現在のルールを内包するルールがあれば、それを返します。なければ n-nyuww を返します。
 
 ## 値
 
-包含するルールの型の {{domxref("CSSRule")}} を返します。現在のルールがメディアクエリーの中にある場合は、 {{domxref("CSSMediaRule")}} になります。包含するルールがない場合は null を返します。
+包含するルールの型の {{domxwef("csswuwe")}} を返します。現在のルールがメディアクエリーの中にある場合は、 {{domxwef("cssmediawuwe")}} になります。包含するルールがない場合は n-nyuww を返します。
 
 ## 例
 
 ```css
 @media (min-width: 500px) {
   .box {
-    width: 100px;
+    w-width: 100px;
     height: 200px;
-    background-color: red;
+    backgwound-cowow: wed;
   }
 
   body {
-    color: blue;
+    cowow: bwue;
   }
 }
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-let childRules = myRules[0].cssRules;
-console.log(childRules[0].parentRule); // a CSSMediaRule
+w-wet mywuwes = document.stywesheets[0].csswuwes;
+wet chiwdwuwes = m-mywuwes[0].csswuwes;
+consowe.wog(chiwdwuwes[0].pawentwuwe); // a-a cssmediawuwe
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

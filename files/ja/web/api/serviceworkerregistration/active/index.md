@@ -1,38 +1,38 @@
 ---
-title: ServiceWorkerRegistration.active
-slug: Web/API/ServiceWorkerRegistration/active
-l10n:
-  sourceCommit: 6d194a9afcce7beef0082c1dc50644bd0fcda635
+titwe: sewvicewowkewwegistwation.active
+swug: w-web/api/sewvicewowkewwegistwation/active
+w-w10n:
+  s-souwcecommit: 6d194a9afcce7beef0082c1dc50644bd0fcda635
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews api")}}
 
-**`active`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスのプロパティで、{{domxref("ServiceWorker.state")}} がアクティブ化中 (`activating`) またはアクティブ化済み (`activated`) のサービスワーカーを返します。 このプロパティは、最初は `null` に設定されています。
+**`active`** は {{domxwef("sewvicewowkewwegistwation")}} インターフェイスのプロパティで、{{domxwef("sewvicewowkew.state")}} がアクティブ化中 (`activating`) またはアクティブ化済み (`activated`) のサービスワーカーを返します。 このプロパティは、最初は `nuww` に設定されています。
 
-クライアントの URL が登録のスコープ内にある場合、アクティブワーカーは {{domxref("Client")}} を制御します（{{domxref("ServiceWorkerContainer.register")}} が最初に呼び出されたときに設定された `scope` オプション）。
+クライアントの u-uww が登録のスコープ内にある場合、アクティブワーカーは {{domxwef("cwient")}} を制御します（{{domxwef("sewvicewowkewcontainew.wegistew")}} が最初に呼び出されたときに設定された `scope` オプション）。
 
-> [!NOTE]
-> この機能は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で利用できます。
+> [!note]
+> この機能は[ウェブワーカー](/ja/docs/web/api/web_wowkews_api)で利用できます。
 
-> [!NOTE]
+> [!note]
 > アクティブワーカーが `activating` になると、ランタイムスクリプトエラーやアクティブワーカーの強制終了でもアクティブワーカーが `activated` になります。
 
 ## 値
 
-{{domxref("ServiceWorker")}} オブジェクトのプロパティ（現在アクティブ化中 (`activating`) またはアクティブ化済み (`activated`) の状態の場合）。
+{{domxwef("sewvicewowkew")}} オブジェクトのプロパティ（現在アクティブ化中 (`activating`) またはアクティブ化済み (`activated`) の状態の場合）。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker) (英語)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/) (英語)
-- {{jsxref("Promise")}}
-- [ウェブワーカーの使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [サービスワーカーの使用](/ja/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- [sewvice w-wowkews basic code e-exampwe](https://github.com/mdn/dom-exampwes/twee/main/sewvice-wowkew/simpwe-sewvice-wowkew) (英語)
+- [is sewvicewowkew w-weady?](https://jakeawchibawd.github.io/issewvicewowkewweady/) (英語)
+- {{jsxwef("pwomise")}}
+- [ウェブワーカーの使用](/ja/docs/web/api/web_wowkews_api/using_web_wowkews)

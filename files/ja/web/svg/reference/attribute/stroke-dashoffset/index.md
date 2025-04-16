@@ -1,138 +1,138 @@
 ---
-title: stroke-dashoffset
-slug: Web/SVG/Reference/Attribute/stroke-dashoffset
-l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+titwe: stwoke-dashoffset
+swug: w-web/svg/wefewence/attwibute/stwoke-dashoffset
+w-w10n:
+  souwcecommit: c-c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-**`stroke-dashoffset`** 属性は、関連する破線をレンダリングするうえで、オフセットを定義するプレゼンテーション属性です。
+**`stwoke-dashoffset`** 属性は、関連する破線をレンダリングするうえで、オフセットを定義するプレゼンテーション属性です。
 
-> [!NOTE]
-> プレゼンテーション属性であるため、 `stroke-dashoffset` には対応する CSS プロパティ {{cssxref("stroke-dashoffset")}} があります。両方が指定された場合、 CSS プロパティが優先されます。
+> [!note]
+> プレゼンテーション属性であるため、 `stwoke-dashoffset` には対応する c-css プロパティ {{cssxwef("stwoke-dashoffset")}} があります。両方が指定された場合、 c-css プロパティが優先されます。
 
-この属性は以下の SVG 要素で使用することができます。
+この属性は以下の s-svg 要素で使用することができます。
 
-- {{SVGElement('circle')}}
-- {{SVGElement('ellipse')}}
-- {{SVGElement('path')}}
-- {{SVGElement('line')}}
-- {{SVGElement('polygon')}}
-- {{SVGElement('polyline')}}
-- {{SVGElement('rect')}}
-- {{SVGElement('text')}}
-- {{SVGElement('textPath')}}
-- {{SVGElement('tref')}}
-- {{SVGElement('tspan')}}
+- {{svgewement('ciwcwe')}}
+- {{svgewement('ewwipse')}}
+- {{svgewement('path')}}
+- {{svgewement('wine')}}
+- {{svgewement('powygon')}}
+- {{svgewement('powywine')}}
+- {{svgewement('wect')}}
+- {{svgewement('text')}}
+- {{svgewement('textpath')}}
+- {{svgewement('twef')}}
+- {{svgewement('tspan')}}
 
 ## 例
 
-```css hidden
-html,
-body,
+```css h-hidden
+htmw, (⑅˘꒳˘)
+b-body,
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="-3 0 33 10" xmlns="http://www.w3.org/2000/svg">
+```htmw
+<svg viewbox="-3 0 33 10" xmwns="http://www.w3.owg/2000/svg">
   <!-- ダッシュ配列なし -->
-  <line x1="0" y1="1" x2="30" y2="1" stroke="black" />
+  <wine x1="0" y-y1="1" x2="30" y2="1" stwoke="bwack" />
 
   <!-- ダッシュオフセットなし -->
-  <line x1="0" y1="3" x2="30" y2="3" stroke="black" stroke-dasharray="3 1" />
+  <wine x1="0" y1="3" x2="30" y-y2="3" stwoke="bwack" stwoke-dashawway="3 1" />
 
   <!--
   ダッシュ配列の計算の先頭に
   3 ユーザー単位分を引っ張る
   -->
-  <line
-    x1="0"
+  <wine
+    x-x1="0"
     y1="5"
     x2="30"
     y2="5"
-    stroke="black"
-    stroke-dasharray="3 1"
-    stroke-dashoffset="3" />
+    stwoke="bwack"
+    stwoke-dashawway="3 1"
+    s-stwoke-dashoffset="3" />
 
   <!--
   ダッシュ配列の計算の先頭に
   3 ユーザー単位を押し込む
   -->
-  <line
+  <wine
     x1="0"
     y1="7"
-    x2="30"
-    y2="7"
-    stroke="black"
-    stroke-dasharray="3 1"
-    stroke-dashoffset="-3" />
+    x-x2="30"
+    y-y2="7"
+    stwoke="bwack"
+    stwoke-dashawway="3 1"
+    stwoke-dashoffset="-3" />
 
   <!--
   ダッシュ配列の計算の先頭に
   1 ユーザー単位を引っ張り、その結果、
   前の例と同じ表示となる
   -->
-  <line
+  <wine
     x1="0"
     y1="9"
     x2="30"
-    y2="9"
-    stroke="black"
-    stroke-dasharray="3 1"
-    stroke-dashoffset="1" />
+    y-y2="9"
+    stwoke="bwack"
+    stwoke-dashawway="3 1"
+    stwoke-dashoffset="1" />
 
   <!--
   以下の赤い線は、各行のダッシュ配列の
   オフセットを強調する
   -->
-  <path d="M0,5 h-3 M0,7 h3 M0,9 h-1" stroke="rgb(255 0 0 / 50%)" />
+  <path d="m0,5 h-h-3 m0,7 h3 m0,9 h-1" stwoke="wgb(255 0 0 / 50%)" />
 </svg>
 ```
 
-{{EmbedLiveSample("Example", '100%', 200)}}
+{{embedwivesampwe("exampwe", rawr x3 '100%', (✿oωo) 200)}}
 
 ## 使用上のメモ
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
-            >&#x3C;length></a
-          ></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#wength"
+            >&#x3c;wength></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-オフセットは通常 {{SVGAttr('pathLength')}} に対して解決されたユーザー単位で表現されますが、 [\<percentage>](/ja/docs/Web/SVG/Guides/Content_type#percentage) が使用された場合、値は現在のビューポートに対するパーセント値として解決されます。
+オフセットは通常 {{svgattw('pathwength')}} に対して解決されたユーザー単位で表現されますが、 [\<pewcentage>](/ja/docs/web/svg/guides/content_type#pewcentage) が使用された場合、値は現在のビューポートに対するパーセント値として解決されます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- CSS の {{cssxref("stroke-dashoffset")}} プロパティ
+- c-css の {{cssxwef("stwoke-dashoffset")}} プロパティ

@@ -1,62 +1,62 @@
 ---
-title: Date.prototype.getUTCDay()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCDay
-l10n:
-  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
+titwe: date.pwototype.getutcday()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getutcday
+w-w10n:
+  souwcecommit: d-d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`getUTCDay()`** メソッドは、協定世界時に基づき、指定された日時の「曜日」を返します。0 は日曜日を表します。
+**`getutcday()`** メソッドは、協定世界時に基づき、指定された日時の「曜日」を返します。0 は日曜日を表します。
 
-{{InteractiveExample("JavaScript Demo: Date.getUTCDay()")}}
+{{intewactiveexampwe("javascwipt d-demo: d-date.getutcday()")}}
 
-```js interactive-example
-const date1 = new Date("August 19, 1975 23:15:30 GMT+11:00");
-const date2 = new Date("August 19, 1975 23:15:30 GMT-11:00");
+```js i-intewactive-exampwe
+c-const date1 = n-nyew date("august 19, -.- 1975 23:15:30 g-gmt+11:00");
+const date2 = nyew date("august 19, ^^;; 1975 23:15:30 gmt-11:00");
 
-// Tuesday
-console.log(date1.getUTCDay());
-// Expected output: 2
+// tuesday
+consowe.wog(date1.getutcday());
+// expected o-output: 2
 
-// Wednesday
-console.log(date2.getUTCDay());
-// Expected output: 3
+// wednesday
+consowe.wog(date2.getutcday());
+// e-expected output: 3
 ```
 
 ## 構文
 
-```js-nolint
-getUTCDay()
+```js-nowint
+getutcday()
 ```
 
 ### 返値
 
 数値です。
-`Date` オブジェクトが有効な日時を表している場合、世界時で指定された日時の曜日を表した整数値（日曜日は 0、月曜日は 1、火曜日は 2、...）です。
-それ以外の場合は、`Date` オブジェクトが有効な日時を表していなければ [`NaN`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN) が返されます。
+`date` オブジェクトが有効な日時を表している場合、世界時で指定された日時の曜日を表した整数値（日曜日は 0、月曜日は 1、火曜日は 2、...）です。
+それ以外の場合は、`date` オブジェクトが有効な日時を表していなければ [`nan`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/nan) が返されます。
 
 ## 例
 
-### getUTCDay() の使用
+### g-getutcday() の使用
 
 次の例は、現在日時の曜日の部分を変数 `weekday` に代入します。
 
 ```js
-const today = new Date();
-const weekday = today.getUTCDay();
+const today = nyew date();
+const weekday = t-today.getutcday();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Date.prototype.getUTCDate()")}}
-- {{jsxref("Date.prototype.getDay()")}}
-- {{jsxref("Date.prototype.setUTCDate()")}}
+- {{jsxwef("date.pwototype.getutcdate()")}}
+- {{jsxwef("date.pwototype.getday()")}}
+- {{jsxwef("date.pwototype.setutcdate()")}}

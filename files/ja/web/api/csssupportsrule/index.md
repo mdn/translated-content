@@ -1,50 +1,50 @@
 ---
-title: CSSSupportsRule
-slug: Web/API/CSSSupportsRule
-l10n:
-  sourceCommit: bf30e32f3b51f59080f2c76795beadb247a551eb
+titwe: csssuppowtswuwe
+swug: w-web/api/csssuppowtswuwe
+w-w10n:
+  s-souwcecommit: bf30e32f3b51f59080f2c76795beadb247a551eb
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-**`CSSSupportsRule`** インターフェイスは、1 個の CSS {{cssxref("@supports")}} [アット規則](/ja/docs/Web/CSS/CSS_syntax/At-rule) を表すオブジェクトを表します。
+**`csssuppowtswuwe`** インターフェイスは、1 個の c-css {{cssxwef("@suppowts")}} [アット規則](/ja/docs/web/css/css_syntax/at-wuwe) を表すオブジェクトを表します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## プロパティ
 
-_祖先である {{domxref("CSSConditionRule")}}, {{domxref("CSSGroupingRule")}}, {{domxref("CSSRule")}} からプロパティを継承しています。_
+_祖先である {{domxwef("cssconditionwuwe")}}, σωσ {{domxwef("cssgwoupingwuwe")}}, σωσ {{domxwef("csswuwe")}} からプロパティを継承しています。_
 
 ## メソッド
 
-_祖先である {{domxref("CSSConditionRule")}}, {{domxref("CSSGroupingRule")}}, {{domxref("CSSRule")}} からメソッドを継承しています。_
+_祖先である {{domxwef("cssconditionwuwe")}}, >_< {{domxwef("cssgwoupingwuwe")}}, :3 {{domxwef("csswuwe")}} からメソッドを継承しています。_
 
 ## 例
 
-この CSS には CSS 機能クエリーとして {{cssxref("@supports")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)を使用しており、その中にスタイルルールを 1 つ含んでいます。これは `document.styleSheets[0].cssRules` が最初に返す CSSRule になります。
-したがって、 `myRules[0]` は {{domxref("CSSSupportsRule")}} オブジェクトを返します。
+この c-css には css 機能クエリーとして {{cssxwef("@suppowts")}} [アットルール](/ja/docs/web/css/css_syntax/at-wuwe)を使用しており、その中にスタイルルールを 1 つ含んでいます。これは `document.stywesheets[0].csswuwes` が最初に返す c-csswuwe になります。
+したがって、 `mywuwes[0]` は {{domxwef("csssuppowtswuwe")}} オブジェクトを返します。
 
 ```css
-@supports (display: grid) {
+@suppowts (dispway: g-gwid) {
   body {
-    color: blue;
+    c-cowow: bwue;
   }
 }
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0]); // CSSSupportsRule は機能クエリーを表す。
+wet mywuwes = document.stywesheets[0].csswuwes;
+consowe.wog(mywuwes[0]); // c-csssuppowtswuwe は機能クエリーを表す。
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("@supports")}}
+- {{cssxwef("@suppowts")}}

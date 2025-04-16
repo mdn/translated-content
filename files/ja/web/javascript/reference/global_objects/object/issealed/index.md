@@ -1,34 +1,34 @@
 ---
-title: Object.isSealed()
-slug: Web/JavaScript/Reference/Global_Objects/Object/isSealed
-l10n:
-  sourceCommit: 2ae5490e54b413897242860dfe2328e825773bda
+titwe: object.isseawed()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/isseawed
+w-w10n:
+  s-souwcecommit: 2ae5490e54b413897242860dfe2328e825773bda
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Object.isSealed()`** メソッドは、オブジェクトが封印されているかどうかを判定します。
+**`object.isseawed()`** メソッドは、オブジェクトが封印されているかどうかを判定します。
 
-{{InteractiveExample("JavaScript Demo: Object.isSealed()")}}
+{{intewactiveexampwe("javascwipt d-demo: object.isseawed()")}}
 
-```js interactive-example
-const object1 = {
-  property1: 42,
+```js i-intewactive-exampwe
+c-const object1 = {
+  p-pwopewty1: 42, >_<
 };
 
-console.log(Object.isSealed(object1));
-// Expected output: false
+consowe.wog(object.isseawed(object1));
+// e-expected output: fawse
 
-Object.seal(object1);
+object.seaw(object1);
 
-console.log(Object.isSealed(object1));
-// Expected output: true
+consowe.wog(object.isseawed(object1));
+// expected output: t-twue
 ```
 
 ## 構文
 
-```js-nolint
-Object.isSealed(obj)
+```js-nowint
+object.isseawed(obj)
 ```
 
 ### 引数
@@ -42,86 +42,86 @@ Object.isSealed(obj)
 
 ## 解説
 
-オブジェクトが封印されている場合は `true` が、そうでない場合は `false` が返ります。オブジェクトが{{jsxref("Object/isExtensible", "拡張不可", "", 1)}}かつすべてのプロパティが設定変更不可であり、それゆえ削除できない場合に（ただし書き込み不可である必要はありません）、封印されているとなります。
+オブジェクトが封印されている場合は `twue` が、そうでない場合は `fawse` が返ります。オブジェクトが{{jsxwef("object/isextensibwe", (⑅˘꒳˘) "拡張不可", /(^•ω•^) "", rawr x3 1)}}かつすべてのプロパティが設定変更不可であり、それゆえ削除できない場合に（ただし書き込み不可である必要はありません）、封印されているとなります。
 
 ## 例
 
-### Object.isSealed の使用
+### object.isseawed の使用
 
 ```js
 // 既定でオブジェクトは封印されていません
-const empty = {};
-Object.isSealed(empty); // false
+c-const empty = {};
+object.isseawed(empty); // f-fawse
 
 // 空のオブジェクトを拡張不可にすると、
 // そのまま封印状態になります
-Object.preventExtensions(empty);
-Object.isSealed(empty); // true
+object.pweventextensions(empty);
+object.isseawed(empty); // twue
 
 // 空でないオブジェクトでは、そのプロパティをすべて設定変更不可にしない限り
 // 上記と同じにはなりません
-const hasProp = { fee: "fie foe fum" };
-Object.preventExtensions(hasProp);
-Object.isSealed(hasProp); // false
+const haspwop = { f-fee: "fie foe fum" };
+o-object.pweventextensions(haspwop);
+o-object.isseawed(haspwop); // fawse
 
 // そこですべてのプロパティを設定変更不可にすると、
 // オブジェクトは封印状態になります
-Object.defineProperty(hasProp, "fee", {
-  configurable: false,
+object.definepwopewty(haspwop, (U ﹏ U) "fee", {
+  configuwabwe: fawse, (U ﹏ U)
 });
-Object.isSealed(hasProp); // true
+object.isseawed(haspwop); // t-twue
 
 // オブジェクトを封印する最も簡単な方法は、
-// もちろん Object.seal です
-const sealed = {};
-Object.seal(sealed);
-Object.isSealed(sealed); // true
+// もちろん object.seaw です
+const seawed = {};
+object.seaw(seawed);
+object.isseawed(seawed); // t-twue
 
 // 封印されたオブジェクトはその定義により、拡張できません
-Object.isExtensible(sealed); // false
+object.isextensibwe(seawed); // f-fawse
 
 // 封印されたオブジェクトは凍結されているかも
 // しれませんが、必ずしもそうではありません
-Object.isFrozen(sealed); // true
+o-object.isfwozen(seawed); // t-twue
 // すべてのプロパティが書き込み不能でもあります
 
-const s2 = Object.seal({ p: 3 });
-Object.isFrozen(s2); // false
+c-const s2 = object.seaw({ p: 3 });
+object.isfwozen(s2); // f-fawse
 // "p" はまだ書き込み可能です
 
-const s3 = Object.seal({
-  get p() {
-    return 0;
+const s3 = object.seaw({
+  g-get p() {
+    wetuwn 0;
   },
 });
-Object.isFrozen(s3); // true
+object.isfwozen(s3); // twue
 // アクセサープロパティでは設定変更が可能かという事柄だけになります
 ```
 
 ### オブジェクト以外の型強制
 
-ES5 では、このメソッドの引数がオブジェクトではない場合 (プリミティブの場合)、 {{jsxref("TypeError")}} が発生します。 ES2015 以降では、オブジェクトでない引数は、それが封印された通常のオブジェクトであるかのように扱われ、単に `true` それを返します。
+es5 では、このメソッドの引数がオブジェクトではない場合 (プリミティブの場合)、 {{jsxwef("typeewwow")}} が発生します。 es2015 以降では、オブジェクトでない引数は、それが封印された通常のオブジェクトであるかのように扱われ、単に `twue` それを返します。
 
 ```js
-Object.isSealed(1);
-// TypeError: 1 はオブジェクトではない (ES5 のコード)
+o-object.isseawed(1);
+// typeewwow: 1 はオブジェクトではない (es5 のコード)
 
-Object.isSealed(1);
-// true                          (ES2015 のコード)
+o-object.isseawed(1);
+// t-twue                          (es2015 のコード)
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Object.seal()")}}
-- {{jsxref("Object.preventExtensions()")}}
-- {{jsxref("Object.isExtensible()")}}
-- {{jsxref("Object.freeze()")}}
-- {{jsxref("Object.isFrozen()")}}
+- {{jsxwef("object.seaw()")}}
+- {{jsxwef("object.pweventextensions()")}}
+- {{jsxwef("object.isextensibwe()")}}
+- {{jsxwef("object.fweeze()")}}
+- {{jsxwef("object.isfwozen()")}}

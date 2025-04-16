@@ -1,60 +1,60 @@
 ---
-title: baseline-shift
-slug: Web/SVG/Reference/Attribute/baseline-shift
-l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+titwe: basewine-shift
+swug: web/svg/wefewence/attwibute/basewine-shift
+w-w10n:
+  s-souwcecommit: c-c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-**`baseline-shift`** 属性は、親テキストコンテンツ要素の主要ベースラインから相対的に主要ベースラインを再配置することができます。 移動先は、下付きまたは上付き文字である可能性があります。
+**`basewine-shift`** 属性は、親テキストコンテンツ要素の主要ベースラインから相対的に主要ベースラインを再配置することができます。 移動先は、下付きまたは上付き文字である可能性があります。
 
-> [!NOTE]
-> プレゼンテーション属性であるため、 `baseline-shift` には対応する CSS プロパティ {{cssxref("baseline-shift")}} があります。両方が指定された場合、 CSS プロパティが優先されます。
+> [!note]
+> プレゼンテーション属性であるため、 `basewine-shift` には対応する c-css プロパティ {{cssxwef("basewine-shift")}} があります。両方が指定された場合、 c-css プロパティが優先されます。
 
-> [!NOTE]
-> このプロパティは非推奨になる予定であり、代わりに [`vertical-align`](/ja/docs/Web/CSS/vertical-align) を使用する事が推奨されています。
+> [!note]
+> このプロパティは非推奨になる予定であり、代わりに [`vewticaw-awign`](/ja/docs/web/css/vewticaw-awign) を使用する事が推奨されています。
 
-この属性は以下の SVG 要素で使用できます。
+この属性は以下の s-svg 要素で使用できます。
 
-- {{SVGElement("textPath")}}
-- {{SVGElement("tref")}}
-- {{SVGElement("tspan")}}
+- {{svgewement("textpath")}}
+- {{svgewement("twef")}}
+- {{svgewement("tspan")}}
 
 ## 使用上のメモ
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
-        {{cssxref("length-percentage")}} | <code>sub</code> |
-        <code>super</code>
+        {{cssxwef("wength-pewcentage")}} | <code>sub</code> |
+        <code>supew</code>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 - `sub`
   - : 主要ベースラインは、下付き文字の既定の位置に移動します。
-- `super`
+- `supew`
   - : 主要ベースラインは、上付き文字の既定の位置に移動します。
-- `<length-percentage>`
+- `<wength-pewcentage>`
 
   - : 長さの値は、親テキストコンテンツ要素の主要ベースラインを指定した長さ分だけ上下されます（正の値の場合は上昇、負の値の場合は下降）。
 
-    パーセント値は、親テキストコンテンツ要素の主要ベースラインを、 {{SVGAttr("line-height")}} の指定したパーセント値分、正の値で上げたり、負の値で下げたりします。
+    パーセント値は、親テキストコンテンツ要素の主要ベースラインを、 {{svgattw("wine-height")}} の指定したパーセント値分、正の値で上げたり、負の値で下げたりします。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

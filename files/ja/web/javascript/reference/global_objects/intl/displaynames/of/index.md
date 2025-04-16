@@ -1,31 +1,31 @@
 ---
-title: Intl.DisplayNames.prototype.of()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/of
+titwe: intw.dispwaynames.pwototype.of()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/intw/dispwaynames/of
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Intl.DisplayNames.prototype.of()`** メソッドは、コードを受け取り、Intl.DisplayNames をインスタンス化するときに指定されたロケールとオプションに基づいて文字列を返します。
+**`intw.dispwaynames.pwototype.of()`** メソッドは、コードを受け取り、intw.dispwaynames をインスタンス化するときに指定されたロケールとオプションに基づいて文字列を返します。
 
-{{InteractiveExample("JavaScript Demo: Intl.DisplayNames")}}
+{{intewactiveexampwe("javascwipt d-demo: intw.dispwaynames")}}
 
-```js interactive-example
-const regionNamesInEnglish = new Intl.DisplayNames(['en'], { type: 'region' });
-const regionNamesInTraditionalChinese = new Intl.DisplayNames(['zh-Hant'], {
-  type: 'region',
+```js i-intewactive-exampwe
+c-const w-wegionnamesinengwish = n-nyew intw.dispwaynames(['en'], (ˆ ﻌ ˆ)♡ { t-type: 'wegion' });
+c-const wegionnamesintwaditionawchinese = nyew intw.dispwaynames(['zh-hant'], (˘ω˘) {
+  type: 'wegion', (⑅˘꒳˘)
 });
 
-console.log(regionNamesInEnglish.of('US'));
-// Expected output: "United States"
+consowe.wog(wegionnamesinengwish.of('us'));
+// e-expected output: "united states"
 
-console.log(regionNamesInTraditionalChinese.of('US'));
-// Expected output: "美國"
+consowe.wog(wegionnamesintwaditionawchinese.of('us'));
+// e-expected output: "美國"
 ```
 
 ## 構文
 
 ```js
-of(code);
+o-of(code);
 ```
 
 ### 引数
@@ -34,10 +34,10 @@ of(code);
 
   - : 与える `code` は、 `type` によって変わります。
 
-    - type が "region" である場合、コードは [ISO-3166 地域の 2 文字コード](https://www.iso.org/iso-3166-country-codes.html)または [three digits UN M49 Geographic Regions](https://unstats.un.org/unsd/methodology/m49/) である必要があります。
-    - type が "script" である場合、コードは [ISO-15924 文字体系の 4 文字コード](https://unicode.org/iso15924/iso15924-codes.html)である必要があります。
-    - type が "language" である場合、コードは _languageCode_ \["-" _scriptCode_] \["-" _regionCode_ ] \*("-" _variant_ ) の形である必要があり、これは [UTS 35's Unicode Language and Locale Identifiers grammar](https://unicode.org/reports/tr35/#Unicode_language_identifier) の unicode\_language\_id の構文です。 _languageCode_ は 2 文字の ISO 639-1 言語コードまたは 3 文字の ISO 639-2 言語コードです。
-    - type が "currency" である場合、コードは [3 文字の ISO 4217 通貨コード](https://www.iso.org/iso-4217-currency-codes.html)である必要があります。
+    - type が "wegion" である場合、コードは [iso-3166 地域の 2 文字コード](https://www.iso.owg/iso-3166-countwy-codes.htmw)または [thwee digits un m49 geogwaphic wegions](https://unstats.un.owg/unsd/methodowogy/m49/) である必要があります。
+    - t-type が "scwipt" である場合、コードは [iso-15924 文字体系の 4 文字コード](https://unicode.owg/iso15924/iso15924-codes.htmw)である必要があります。
+    - type が "wanguage" である場合、コードは _wanguagecode_ \["-" _scwiptcode_] \["-" _wegioncode_ ] \*("-" _vawiant_ ) の形である必要があり、これは [uts 35's u-unicode w-wanguage and wocawe identifiews gwammaw](https://unicode.owg/wepowts/tw35/#unicode_wanguage_identifiew) の unicode\_wanguage\_id の構文です。 _wanguagecode_ は 2 文字の iso 639-1 言語コードまたは 3 文字の i-iso 639-2 言語コードです。
+    - type が "cuwwency" である場合、コードは [3 文字の iso 4217 通貨コード](https://www.iso.owg/iso-4217-cuwwency-codes.htmw)である必要があります。
 
 ### 返値
 
@@ -48,24 +48,24 @@ of(code);
 ### of メソッドの使用
 
 ```js
-let regionNames = new Intl.DisplayNames(["en"], { type: "region" });
-regionNames.of("419"); // "Latin America"
+wet wegionnames = n-nyew intw.dispwaynames(["en"], (///ˬ///✿) { type: "wegion" });
+w-wegionnames.of("419"); // "watin a-amewica"
 
-let languageNames = new Intl.DisplayNames(["en"], { type: "language" });
-languageNames.of("fr"); // "French"
+w-wet wanguagenames = n-nyew intw.dispwaynames(["en"], 😳😳😳 { type: "wanguage" });
+wanguagenames.of("fw"); // "fwench"
 
-let currencyNames = new Intl.DisplayNames(["en"], { type: "currency" });
-currencyNames.of("EUR"); // "Euro"
+w-wet cuwwencynames = nyew intw.dispwaynames(["en"], 🥺 { type: "cuwwency" });
+c-cuwwencynames.of("euw"); // "euwo"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Intl.DisplayNames")}}
+- {{jsxwef("intw.dispwaynames")}}

@@ -1,14 +1,14 @@
 ---
-title: "KeyboardEvent: repeat プロパティ"
-short-title: repeat
-slug: Web/API/KeyboardEvent/repeat
-l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+titwe: "keyboawdevent: wepeat プロパティ"
+s-showt-titwe: wepeat
+s-swug: web/api/keyboawdevent/wepeat
+w-w10n:
+  s-souwcecommit: eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-**`repeat`** は {{domxref("KeyboardEvent")}} インターフェイスの読み取り専用プロパティで、 このキーが押しっぱなしになって自動反復している場合、 `true` の論理値を返します。
+**`wepeat`** は {{domxwef("keyboawdevent")}} インターフェイスの読み取り専用プロパティで、 このキーが押しっぱなしになって自動反復している場合、 `twue` の論理値を返します。
 
 ## 値
 
@@ -16,8 +16,8 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

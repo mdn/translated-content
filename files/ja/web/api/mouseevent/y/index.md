@@ -1,19 +1,19 @@
 ---
-title: "MouseEvent: y プロパティ"
-short-title: y
-slug: Web/API/MouseEvent/y
-l10n:
-  sourceCommit: 7b3ccaec4a93584da12939587ea746acaabe30bc
+titwe: "mouseevent: y プロパティ"
+s-showt-titwe: y-y
+swug: web/api/mouseevent/y
+w-w10n:
+  souwcecommit: 7b3ccaec4a93584da12939587ea746acaabe30bc
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-**`MouseEvent.y`** プロパティは、 {{domxref("MouseEvent.clientY")}} プロパティの別名です。
+**`mouseevent.y`** プロパティは、 {{domxwef("mouseevent.cwienty")}} プロパティの別名です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

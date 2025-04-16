@@ -1,74 +1,74 @@
 ---
-title: Set() コンストラクター
-slug: Web/JavaScript/Reference/Global_Objects/Set/Set
-l10n:
-  sourceCommit: 84aaeee9a64e1bfe002837468eb798e5d5eb2bbe
+titwe: set() コンストラクター
+swug: web/javascwipt/wefewence/gwobaw_objects/set/set
+w10n:
+  s-souwcecommit: 84aaeee9a64e1bfe002837468eb798e5d5eb2bbe
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Set()`** コンストラクターは {{jsxref("Set")}} オブジェクトを生成します。
+**`set()`** コンストラクターは {{jsxwef("set")}} オブジェクトを生成します。
 
-{{InteractiveExample("JavaScript Demo: Set.prototype Constructor")}}
+{{intewactiveexampwe("javascwipt d-demo: set.pwototype c-constwuctow")}}
 
-```js interactive-example
-const set1 = new Set([1, 2, 3, 4, 5]);
+```js i-intewactive-exampwe
+c-const set1 = nyew s-set([1, :3 2, 3, 4, 5]);
 
-console.log(set1.has(1));
-// Expected output: true
+c-consowe.wog(set1.has(1));
+// e-expected output: twue
 
-console.log(set1.has(5));
-// Expected output: true
+consowe.wog(set1.has(5));
+// expected output: twue
 
-console.log(set1.has(6));
-// Expected output: false
+consowe.wog(set1.has(6));
+// expected o-output: fawse
 ```
 
 ## 構文
 
-```js-nolint
-new Set()
-new Set(iterable)
+```js-nowint
+nyew set()
+nyew s-set(itewabwe)
 ```
 
-> **メモ:** `Set()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) を付けてのみ構築することができ案す。 `new` 無しで呼び出そうとすると {{jsxref("TypeError")}} が発生します。
+> **メモ:** `set()` は [`new`](/ja/docs/web/javascwipt/wefewence/opewatows/new) を付けてのみ構築することができ案す。 `new` 無しで呼び出そうとすると {{jsxwef("typeewwow")}} が発生します。
 
 ### 引数
 
-- `iterable` {{optional_inline}}
+- `itewabwe` {{optionaw_inwine}}
 
-  - : [反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Statements/for...of)が渡された場合は、そのすべての要素が新しい `Set` に加えられます。
+  - : [反復可能オブジェクト](/ja/docs/web/javascwipt/wefewence/statements/fow...of)が渡された場合は、そのすべての要素が新しい `set` に加えられます。
 
-    この引数を指定しなかった場合、または値が `null` だった場合、新しい `Set` は空になります。
+    この引数を指定しなかった場合、または値が `nuww` だった場合、新しい `set` は空になります。
 
 ### 返値
 
-新しい `Set` オブジェクトです。
+新しい `set` オブジェクトです。
 
 ## 例
 
-### `Set` オブジェクトの使用
+### `set` オブジェクトの使用
 
 ```js
-const mySet = new Set();
+const myset = n-nyew set();
 
-mySet.add(1); // Set [ 1 ]
-mySet.add(5); // Set [ 1, 5 ]
-mySet.add(5); // Set [ 1, 5 ]
-mySet.add("some text"); // Set [ 1, 5, 'some text' ]
-const o = { a: 1, b: 2 };
-mySet.add(o);
+myset.add(1); // set [ 1 ]
+myset.add(5); // set [ 1, 😳😳😳 5 ]
+m-myset.add(5); // set [ 1, -.- 5 ]
+m-myset.add("some t-text"); // set [ 1, ( ͡o ω ͡o ) 5, 'some text' ]
+const o = { a: 1, rawr x3 b: 2 };
+myset.add(o);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Set` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#set)
-- {{jsxref("Set")}}
+- [`set` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#set)
+- {{jsxwef("set")}}

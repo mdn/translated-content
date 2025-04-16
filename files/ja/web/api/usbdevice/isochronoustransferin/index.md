@@ -1,35 +1,35 @@
 ---
-title: "USBDevice: isochronousTransferIn() メソッド"
-slug: Web/API/USBDevice/isochronousTransferIn
-l10n:
-  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
+titwe: "usbdevice: isochwonoustwansfewin() メソッド"
+s-swug: w-web/api/usbdevice/isochwonoustwansfewin
+w-w10n:
+  s-souwcecommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{APIRef("WebUSB API")}}{{SeeCompatTable}}
+{{apiwef("webusb api")}}{{seecompattabwe}}
 
-{{domxref("USBDevice")}} インターフェイスの **`isochronousTransferIn()`** メソッドは、時間が重要な情報の USB デバイスへの送信 (USB デバイスによる受信) が完了したら {{domxref("USBIsochronousInTransferResult")}} で解決する {{jsxref("Promise")}} を返します。
+{{domxwef("usbdevice")}} インターフェイスの **`isochwonoustwansfewin()`** メソッドは、時間が重要な情報の u-usb デバイスへの送信 (usb デバイスによる受信) が完了したら {{domxwef("usbisochwonousintwansfewwesuwt")}} で解決する {{jsxwef("pwomise")}} を返します。
 
 ## 構文
 
-```js-nolint
-isochronousTransferIn(endpointNumber, packetLengths)
+```js-nowint
+i-isochwonoustwansfewin(endpointnumbew, (U ᵕ U❁) p-packetwengths)
 ```
 
 ### 引数
 
-- `endpointNumber`
+- `endpointnumbew`
   - : デバイス固有のエンドポイント (バッファー) の番号です。
-- `packetLengths`
+- `packetwengths`
   - : 受信するパケットの長さの配列です。
 
 ### 返値
 
-{{domxref("USBIsochronousInTransferResult")}} で解決する {{jsxref("Promise")}} です。
+{{domxwef("usbisochwonousintwansfewwesuwt")}} で解決する {{jsxwef("pwomise")}} です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

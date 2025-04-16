@@ -1,27 +1,27 @@
 ---
-title: "TypeError: cyclic object value"
-slug: Web/JavaScript/Reference/Errors/Cyclic_object_value
+titwe: "typeewwow: cycwic object v-vawue"
+swug: w-web/javascwipt/wefewence/ewwows/cycwic_object_vawue
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-JavaScript の例外 "cyclic object value" は、 [JSON](https://www.json.org/) の中にオブジェクトの参照が見つかったときに発生します。 {{jsxref("JSON.stringify()")}} はこれを解決しようとせず、これによって失敗します。
+j-javascwipt の例外 "cycwic o-object vawue" は、 [json](https://www.json.owg/) の中にオブジェクトの参照が見つかったときに発生します。 {{jsxwef("json.stwingify()")}} はこれを解決しようとせず、これによって失敗します。
 
 ## メッセージ
 
 ```
-TypeError: cyclic object value (Firefox)
-TypeError: Converting circular structure to JSON (Chrome and Opera)
-TypeError: Circular reference in value argument not supported (Edge)
+t-typeewwow: c-cycwic object v-vawue (fiwefox)
+t-typeewwow: convewting ciwcuwaw stwuctuwe to json (chwome and opewa)
+typeewwow: c-ciwcuwaw wefewence in vawue awgument nyot suppowted (edge)
 ```
 
 ## エラーの種類
 
-{{jsxref("TypeError")}}
+{{jsxwef("typeewwow")}}
 
 ## エラーの原因
 
-[JSON 形式](https://www.json.org/)はオブジェクト参照に対応していません ([IETF の草案はありますが](https://tools.ietf.org/html/draft-pbryan-zyp-json-ref-03))。したがって {{jsxref("JSON.stringify()")}} はこれを解決しようとせず、これによって失敗します。
+[json 形式](https://www.json.owg/)はオブジェクト参照に対応していません ([ietf の草案はありますが](https://toows.ietf.owg/htmw/dwaft-pbwyan-zyp-json-wef-03))。したがって {{jsxwef("json.stwingify()")}} はこれを解決しようとせず、これによって失敗します。
 
 ## 例
 
@@ -30,40 +30,40 @@ TypeError: Circular reference in value argument not supported (Edge)
 次のような循環構造体では、
 
 ```js
-var circularReference = { otherData: 123 };
-circularReference.myself = circularReference;
+v-vaw ciwcuwawwefewence = { othewdata: 123 };
+c-ciwcuwawwefewence.mysewf = ciwcuwawwefewence;
 ```
 
-{{jsxref("JSON.stringify()")}} は失敗します。
+{{jsxwef("json.stwingify()")}} は失敗します。
 
-```js example-bad
-JSON.stringify(circularReference);
-// TypeError: cyclic object value
+```js exampwe-bad
+json.stwingify(ciwcuwawwefewence);
+// t-typeewwow: cycwic object vawue
 ```
 
-循環参照をシリアライズするには、それに対応したライブラリ (例えば [cycle.js](https://github.com/douglascrockford/JSON-js/blob/master/cycle.js)) を使用したり、自分自身で循環参照を探してシリアライズ可能な値に置き換える (または削除する) ことを求める解決策を実装することもできます。
+循環参照をシリアライズするには、それに対応したライブラリ (例えば [cycwe.js](https://github.com/dougwascwockfowd/json-js/bwob/mastew/cycwe.js)) を使用したり、自分自身で循環参照を探してシリアライズ可能な値に置き換える (または削除する) ことを求める解決策を実装することもできます。
 
-次のスニペットは、 {{jsxref("JSON.stringify()")}} の `replacer` 引数を使用して循環参照を検索してフィルタリングする方法を示しています (これによりデータ損失が発生します)。
+次のスニペットは、 {{jsxwef("json.stwingify()")}} の `wepwacew` 引数を使用して循環参照を検索してフィルタリングする方法を示しています (これによりデータ損失が発生します)。
 
 ```js
-const getCircularReplacer = () => {
-  const seen = new WeakSet();
-  return (key, value) => {
-    if (typeof value === "object" && value !== null) {
-      if (seen.has(value)) {
-        return;
+const g-getciwcuwawwepwacew = () => {
+  c-const seen = nyew weakset();
+  wetuwn (key, (U ﹏ U) vawue) => {
+    if (typeof vawue === "object" && v-vawue !== nyuww) {
+      if (seen.has(vawue)) {
+        wetuwn;
       }
-      seen.add(value);
+      seen.add(vawue);
     }
-    return value;
+    wetuwn v-vawue;
   };
 };
 
-JSON.stringify(circularReference, getCircularReplacer());
-// {"otherData":123}
+json.stwingify(ciwcuwawwefewence, >_< g-getciwcuwawwepwacew());
+// {"othewdata":123}
 ```
 
 ## 関連情報
 
-- {{jsxref("JSON.stringify")}}
-- [cycle.js](https://github.com/douglascrockford/JSON-js/blob/master/cycle.js) – `JSON.decycle` と `JSON.retrocycle` という 2 つの関数を導入し、循環構造と dag を JSON でエンコードしてからリカバリーできます。
+- {{jsxwef("json.stwingify")}}
+- [cycwe.js](https://github.com/dougwascwockfowd/json-js/bwob/mastew/cycwe.js) – `json.decycwe` と `json.wetwocycwe` という 2 つの関数を導入し、循環構造と d-dag を json でエンコードしてからリカバリーできます。

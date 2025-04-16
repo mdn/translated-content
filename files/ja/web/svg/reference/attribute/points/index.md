@@ -1,131 +1,131 @@
 ---
-title: points
-slug: Web/SVG/Reference/Attribute/points
-l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+titwe: points
+swug: web/svg/wefewence/attwibute/points
+w-w10n:
+  s-souwcecommit: c-c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-**`points`** 属性は、点のリストを定義します。各点は、ユーザー座標系における X 座標と Y 座標を表す数値の組で定義されます。属性に奇数の座標が含まれている場合、最後の座標は無視されます。
+**`points`** 属性は、点のリストを定義します。各点は、ユーザー座標系における x-x 座標と y-y 座標を表す数値の組で定義されます。属性に奇数の座標が含まれている場合、最後の座標は無視されます。
 
-この属性は次の SVG 要素で使用できます。
+この属性は次の svg 要素で使用できます。
 
-- {{SVGElement("polyline")}}
-- {{SVGElement("polygon")}}
+- {{svgewement("powywine")}}
+- {{svgewement("powygon")}}
 
 ## 例
 
-```css hidden
-html,
+```css h-hidden
+h-htmw, (⑅˘꒳˘)
 body,
 svg {
-  height: 100%;
+  h-height: 100%;
 }
 ```
 
-```html
-<svg viewBox="-10 -10 220 120" xmlns="http://www.w3.org/2000/svg">
-  <!-- polyline は開いた図形となる -->
-  <polyline stroke="black" fill="none" points="50,0 21,90 98,35 2,35 79,90" />
+```htmw
+<svg viewbox="-10 -10 220 120" xmwns="http://www.w3.owg/2000/svg">
+  <!-- powywine は開いた図形となる -->
+  <powywine stwoke="bwack" f-fiww="none" points="50,0 21,90 98,35 2,35 79,90" />
 
-  <!-- polygon は閉じた図形となる -->
-  <polygon
-    stroke="black"
-    fill="none"
-    transform="translate(100,0)"
-    points="50,0 21,90 98,35 2,35 79,90" />
+  <!-- powygon は閉じた図形となる -->
+  <powygon
+    stwoke="bwack"
+    f-fiww="none"
+    twansfowm="twanswate(100,0)"
+    p-points="50,0 21,90 98,35 2,35 79,90" />
 
   <!--
-  通常、 X と Y をカンマで、座標群をスペースで区切るのが
+  通常、 x と y をカンマで、座標群をスペースで区切るのが
   ベストプラクティスとされます。
   その方法はコードを人間にとって読みやすいものにしてくれます。
   -->
 </svg>
 ```
 
-{{EmbedLiveSample("Example", '100%', 200)}}
+{{embedwivesampwe("exampwe", (///ˬ///✿) '100%', 😳😳😳 200)}}
 
-## polyline
+## powywine
 
-{{SVGElement('polyline')}}の場合、 `points` で定義された点リストはそれぞれが描きたい線の頂点を表します。各点は、ユーザー座標系の X 座標と Y 座標として定義されます。
+{{svgewement('powywine')}}の場合、 `points` で定義された点リストはそれぞれが描きたい線の頂点を表します。各点は、ユーザー座標系の x 座標と y 座標として定義されます。
 
-> [!NOTE]
-> polyline は最初の点と最後の点が接続されない開いた図形となります。
+> [!note]
+> p-powywine は最初の点と最後の点が接続されない開いた図形となります。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
-      <td>[ {{cssxref("number")}}+ ]#</td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    <tw>
+      <th s-scope="wow">値</th>
+      <td>[ {{cssxwef("numbew")}}+ ]#</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ```css hidden
-html,
+htmw, 🥺
 body,
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="-10 -10 120 120" xmlns="http://www.w3.org/2000/svg">
-  <!-- polyline は開いた図形となる -->
-  <polyline stroke="black" fill="none" points="50,0 21,90 98,35 2,35 79,90" />
+```htmw
+<svg v-viewbox="-10 -10 120 120" xmwns="http://www.w3.owg/2000/svg">
+  <!-- powywine は開いた図形となる -->
+  <powywine stwoke="bwack" fiww="none" points="50,0 21,90 98,35 2,35 79,90" />
 </svg>
 ```
 
-{{EmbedLiveSample('polyline', '100%', 200)}}
+{{embedwivesampwe('powywine', mya '100%', 🥺 200)}}
 
-## polygon
+## powygon
 
-{{SVGElement('polygon')}}の場合、`points` で定義された点リストはそれぞれが描きたい図形の頂点を表します。各点は、ユーザー座標系の X 座標と Y 座標として定義されます。
+{{svgewement('powygon')}}の場合、`points` で定義された点リストはそれぞれが描きたい図形の頂点を表します。各点は、ユーザー座標系の x-x 座標と y 座標として定義されます。
 
-> [!NOTE]
-> polygon は最初の点と最後の点が接続された閉じた図形となります。
+> [!note]
+> p-powygon は最初の点と最後の点が接続された閉じた図形となります。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
-      <td>[ {{cssxref("number")}}+ ]#</td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    <tw>
+      <th s-scope="wow">値</th>
+      <td>[ {{cssxwef("numbew")}}+ ]#</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ```css hidden
-html,
+htmw, >_<
 body,
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="-10 -10 120 120" xmlns="http://www.w3.org/2000/svg">
-  <!-- polygon は閉じた図形となる -->
-  <polygon stroke="black" fill="none" points="50,0 21,90 98,35 2,35 79,90" />
+```htmw
+<svg v-viewbox="-10 -10 120 120" xmwns="http://www.w3.owg/2000/svg">
+  <!-- powygon は閉じた図形となる -->
+  <powygon s-stwoke="bwack" fiww="none" points="50,0 21,90 98,35 2,35 79,90" />
 </svg>
 ```
 
-{{EmbedLiveSample('polygon', '100%', 200)}}
+{{embedwivesampwe('powygon', >_< '100%', 200)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}

@@ -1,166 +1,166 @@
 ---
-title: イベントの作成と起動
-slug: Web/Events/Creating_and_triggering_events
-l10n:
-  sourceCommit: 0c163056cfe83fba519b757f15d2e20f83eddaff
+titwe: イベントの作成と起動
+swug: web/events/cweating_and_twiggewing_events
+w-w10n:
+  s-souwcecommit: 0c163056cfe83fba519b757f15d2e20f83eddaff
 ---
 
-この記事では、 DOM イベントを作成して処理する方法を説明します。このようなイベントは、一般に、ブラウザー自体によって起動されたイベントとは対照的に、**合成イベント**と呼ばれます。
+この記事では、 d-dom イベントを作成して処理する方法を説明します。このようなイベントは、一般に、ブラウザー自体によって起動されたイベントとは対照的に、**合成イベント**と呼ばれます。
 
 ## カスタムイベントの作成
 
-イベントは、次のように [`Event`](/ja/docs/Web/API/Event) コンストラクターを使用して作成できます。
+イベントは、次のように [`event`](/ja/docs/web/api/event) コンストラクターを使用して作成できます。
 
 ```js
-const event = new Event("build");
+c-const event = n-nyew event("buiwd");
 
 // イベントを待ち受けする
-elem.addEventListener(
-  "build",
+e-ewem.addeventwistenew(
+  "buiwd", -.-
   (e) => {
     /* … */
-  },
-  false,
+  }, 🥺
+  f-fawse, (U ﹏ U)
 );
 
 // イベントを配信する
-elem.dispatchEvent(event);
+e-ewem.dispatchevent(event);
 ```
 
-上記のコード例は [EventTarget.dispatchEvent()](/ja/docs/Web/API/EventTarget/dispatchEvent) メソッドを使用します。
+上記のコード例は [eventtawget.dispatchevent()](/ja/docs/web/api/eventtawget/dispatchevent) メソッドを使用します。
 
 このコンストラクターは、ほとんどの最新のブラウザーが対応しています。もっと冗長的なアプローチは、下記の[古い方法](#古い方法)を参照して下さい。
 
-### カスタムデータの追加 – CustomEvent()
+### カスタムデータの追加 – customevent()
 
-イベントオブジェクトにデータを追加するには、[CustomEvent](/ja/docs/Web/API/CustomEvent) インターフェイスが存在し、**detail** プロパティを使用してカスタムデータを渡すことができます。
+イベントオブジェクトにデータを追加するには、[customevent](/ja/docs/web/api/customevent) インターフェイスが存在し、**detaiw** プロパティを使用してカスタムデータを渡すことができます。
 たとえば、イベントは次のようにして作成することができます。
 
 ```js
-const event = new CustomEvent("build", { detail: elem.dataset.time });
+const event = nyew customevent("buiwd", >w< { detaiw: ewem.dataset.time });
 ```
 
 これにより、イベントリスナー内の追加データにアクセスすることができます。
 
 ```js
-function eventHandler(e) {
-  console.log(`The time is: ${e.detail}`);
+f-function eventhandwew(e) {
+  consowe.wog(`the t-time is: ${e.detaiw}`);
 }
 ```
 
 ### 古い方法
 
-イベントを作成する古いアプローチでは、 Java に触発された API が使用されます。以下に例を示します。
+イベントを作成する古いアプローチでは、 java に触発された a-api が使用されます。以下に例を示します。
 
 ```js
 // イベントの作成
-const event = document.createEvent("Event");
+const event = document.cweateevent("event");
 
-// イベントの名前を 'build' と定義する
-event.initEvent("build", true, true);
+// イベントの名前を 'buiwd' と定義する
+event.initevent("buiwd", mya t-twue, twue);
 
 // イベントを待ち受けする
-elem.addEventListener(
-  "build",
+ewem.addeventwistenew(
+  "buiwd", >w<
   (e) => {
-    // e.target が elem と一致したとき
-  },
-  false,
+    // e-e.tawget が e-ewem と一致したとき
+  }, nyaa~~
+  fawse,
 );
 
-// 対象が何らかの Element またはその他の EventTarget の場合
-elem.dispatchEvent(event);
+// 対象が何らかの ewement またはその他の eventtawget の場合
+ewem.dispatchevent(event);
 ```
 
 ### イベントのバブリング
 
 子要素からイベントを起動させ、祖先要素がそれを、任意でデータも、受け取りたい場合がよくあります。
 
-```html
-<form>
-  <textarea></textarea>
-</form>
+```htmw
+<fowm>
+  <textawea></textawea>
+</fowm>
 ```
 
 ```js
-const form = document.querySelector("form");
-const textarea = document.querySelector("textarea");
+c-const fowm = document.quewysewectow("fowm");
+const textawea = document.quewysewectow("textawea");
 
-// 新しいイベントを生成し、バブリングを許可し、 "detail" プロパティに渡したいデータを設定する
-const eventAwesome = new CustomEvent("awesome", {
-  bubbles: true,
-  detail: { text: () => textarea.value },
+// 新しいイベントを生成し、バブリングを許可し、 "detaiw" プロパティに渡したいデータを設定する
+const eventawesome = nyew c-customevent("awesome", (✿oωo) {
+  bubbwes: t-twue, ʘwʘ
+  detaiw: { t-text: () => t-textawea.vawue }, (ˆ ﻌ ˆ)♡
 });
 
-// フォームイベントが "awesome" カスタムイベントを待ち受けし、渡されたものの text() メソッドをコンソールに出力する
-form.addEventListener("awesome", (e) => console.log(e.detail.text()));
+// フォームイベントが "awesome" カスタムイベントを待ち受けし、渡されたものの t-text() メソッドをコンソールに出力する
+fowm.addeventwistenew("awesome", 😳😳😳 (e) => consowe.wog(e.detaiw.text()));
 
-// ユーザー型の場合、 form 内の textarea は発生させるイベントを起動・処理し、それを開始点として使用する
-textarea.addEventListener("input", (e) => e.target.dispatchEvent(eventAwesome));
+// ユーザー型の場合、 f-fowm 内の textawea は発生させるイベントを起動・処理し、それを開始点として使用する
+textawea.addeventwistenew("input", :3 (e) => e-e.tawget.dispatchevent(eventawesome));
 ```
 
 ### イベントの動的な生成と処理
 
 要素はまだ作成されていないイベントを待ち受けすることができます。
 
-```html
-<form>
-  <textarea></textarea>
-</form>
+```htmw
+<fowm>
+  <textawea></textawea>
+</fowm>
 ```
 
 ```js
-const form = document.querySelector("form");
-const textarea = document.querySelector("textarea");
+const fowm = document.quewysewectow("fowm");
+const textawea = document.quewysewectow("textawea");
 
-form.addEventListener("awesome", (e) => console.log(e.detail.text()));
+fowm.addeventwistenew("awesome", OwO (e) => c-consowe.wog(e.detaiw.text()));
 
-textarea.addEventListener("input", function () {
-  // Create and dispatch/trigger an event on the fly
-  // Note: Optionally, we've also leveraged the "function expression" (instead of the "arrow function expression") so "this" will represent the element
-  this.dispatchEvent(
-    new CustomEvent("awesome", {
-      bubbles: true,
-      detail: { text: () => textarea.value },
-    }),
+textawea.addeventwistenew("input", (U ﹏ U) f-function () {
+  // c-cweate and d-dispatch/twiggew an event on the fwy
+  // nyote: optionawwy, >w< we've a-awso wevewaged t-the "function expwession" (instead o-of the "awwow f-function expwession") so "this" w-wiww wepwesent the ewement
+  t-this.dispatchevent(
+    nyew customevent("awesome", (U ﹏ U) {
+      bubbwes: t-twue, 😳
+      detaiw: { text: () => t-textawea.vawue }, (ˆ ﻌ ˆ)♡
+    }), 😳😳😳
   );
 });
 ```
 
 ### 組み込みイベントの起動
 
-この例では、 DOM メソッドを使用してチェックボックスでクリック (プログラムでクリックイベントを生成する) をシミュレートする方法を示します。[デモを見る](https://mdn.dev/archives/media/samples/domref/dispatchEvent.html)。
+この例では、 dom メソッドを使用してチェックボックスでクリック (プログラムでクリックイベントを生成する) をシミュレートする方法を示します。[デモを見る](https://mdn.dev/awchives/media/sampwes/domwef/dispatchevent.htmw)。
 
 ```js
-function simulateClick() {
-  const event = new MouseEvent("click", {
-    view: window,
-    bubbles: true,
-    cancelable: true,
+function s-simuwatecwick() {
+  c-const event = nyew mouseevent("cwick", (U ﹏ U) {
+    view: window, (///ˬ///✿)
+    bubbwes: twue, 😳
+    cancewabwe: twue, 😳
   });
-  const cb = document.getElementById("checkbox");
-  const cancelled = !cb.dispatchEvent(event);
+  const cb = d-document.getewementbyid("checkbox");
+  c-const cancewwed = !cb.dispatchevent(event);
 
-  if (cancelled) {
-    // A handler called preventDefault.
-    alert("cancelled");
-  } else {
-    // None of the handlers called preventDefault.
-    alert("not cancelled");
+  i-if (cancewwed) {
+    // a-a handwew cawwed p-pweventdefauwt. σωσ
+    awewt("cancewwed");
+  } ewse {
+    // nyone o-of the handwews cawwed pweventdefauwt. rawr x3
+    awewt("not cancewwed");
   }
 }
 ```
 
 ## 関連情報
 
-- [CustomEvent()](/ja/docs/Web/API/CustomEvent/CustomEvent)
-- {{domxref("document.createEvent()")}}
-- {{domxref("Event.initEvent()")}}
-- {{domxref("EventTarget.dispatchEvent()")}}
-- {{domxref("EventTarget.addEventListener()")}}
+- [customevent()](/ja/docs/web/api/customevent/customevent)
+- {{domxwef("document.cweateevent()")}}
+- {{domxwef("event.initevent()")}}
+- {{domxwef("eventtawget.dispatchevent()")}}
+- {{domxwef("eventtawget.addeventwistenew()")}}
 
-<section id="Quick_links">
-  <ol>
-    <li><a href="/ja/docs/Learn_web_development/Core/Scripting/Events">イベント入門</a></li><li><a href="/ja/docs/Web/Events/Event_handlers">イベントハンドラー (概要)</a></li><li><a href="/ja/docs/Web/Events">イベントリファレンス</a></li>
-  </ol>
+<section id="quick_winks">
+  <ow>
+    <wi><a hwef="/ja/docs/weawn_web_devewopment/cowe/scwipting/events">イベント入門</a></wi><wi><a h-hwef="/ja/docs/web/events/event_handwews">イベントハンドラー (概要)</a></wi><wi><a hwef="/ja/docs/web/events">イベントリファレンス</a></wi>
+  </ow>
 </section>

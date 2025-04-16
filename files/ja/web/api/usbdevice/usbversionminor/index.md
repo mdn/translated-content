@@ -1,22 +1,22 @@
 ---
-title: "USBDevice: usbVersionMinor プロパティ"
-slug: Web/API/USBDevice/usbVersionMinor
-l10n:
-  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
+titwe: "usbdevice: usbvewsionminow プロパティ"
+s-swug: web/api/usbdevice/usbvewsionminow
+w10n:
+  s-souwcecommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{SeeCompatTable}}{{APIRef("WebUSB API")}}
+{{seecompattabwe}}{{apiwef("webusb a-api")}}
 
-{{domxref("USBDevice")}} インターフェイスの読み取り専用プロパティ **`usbVersionMinor`** は、デバイスが対応している USB のプロトコルバージョンを表す 3 個のプロパティのうちの 1個です。他の 2 個のプロパティは `USBDevice.usbVersionMajor` と `USBDevice.usbVersionSubminor` です。
+{{domxwef("usbdevice")}} インターフェイスの読み取り専用プロパティ **`usbvewsionminow`** は、デバイスが対応している u-usb のプロトコルバージョンを表す 3 個のプロパティのうちの 1個です。他の 2 個のプロパティは `usbdevice.usbvewsionmajow` と `usbdevice.usbvewsionsubminow` です。
 
 ## 値
 
-デバイスが対応している USB のプロトコルバージョンを表す 3 個のプロパティのうちの 2 番目です。
+デバイスが対応している u-usb のプロトコルバージョンを表す 3 個のプロパティのうちの 2 番目です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

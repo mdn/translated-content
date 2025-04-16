@@ -1,33 +1,33 @@
 ---
-title: Symbol.for()
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/for
-l10n:
-  sourceCommit: f3df52530f974e26dd3b14f9e8d42061826dea20
+titwe: symbow.fow()
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow/fow
+w-w10n:
+  souwcecommit: f-f3df52530f974e26dd3b14f9e8d42061826dea20
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Symbol.for()`** は静的メソッドで、引数で与えられたキーでランタイム全体のシンボルレジストリー内に存在しているシンボルを検索し、見つかった場合はそれを返します。さもなければ、新しいシンボルがこのキーでグローバルシンボルレジストリー内に生成されます。
+**`symbow.fow()`** は静的メソッドで、引数で与えられたキーでランタイム全体のシンボルレジストリー内に存在しているシンボルを検索し、見つかった場合はそれを返します。さもなければ、新しいシンボルがこのキーでグローバルシンボルレジストリー内に生成されます。
 
-{{InteractiveExample("JavaScript Demo: Symbol.for()")}}
+{{intewactiveexampwe("javascwipt d-demo: s-symbow.fow()")}}
 
-```js interactive-example
-console.log(Symbol.for("bar") === Symbol.for("bar"));
-// Expected output: true
+```js i-intewactive-exampwe
+c-consowe.wog(symbow.fow("baw") === s-symbow.fow("baw"));
+// e-expected output: twue
 
-console.log(Symbol("bar") === Symbol("bar"));
-// Expected output: false
+consowe.wog(symbow("baw") === symbow("baw"));
+// expected output: f-fawse
 
-const symbol1 = Symbol.for("foo");
+const symbow1 = symbow.fow("foo");
 
-console.log(symbol1.toString());
-// Expected output: "Symbol(foo)"
+consowe.wog(symbow1.tostwing());
+// e-expected output: "symbow(foo)"
 ```
 
 ## 構文
 
-```js-nolint
-Symbol.for(key)
+```js-nowint
+symbow.fow(key)
 ```
 
 ### 引数
@@ -41,40 +41,40 @@ Symbol.for(key)
 
 ## 解説
 
-`Symbol()` と対照的に、`Symbol.for()` 関数は[グローバルシンボルレジストリー](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#グローバルシンボルレジストリー)リスト内で利用可能なシンボルを生成します。`Symbol.for()` は必ずしもすべての呼び出しで新しいシンボルを生成するわけでなく、引数で与えられた `key` をもつシンボルがレジストリー内にすでに存在しているかどうか最初に調べます。存在している場合は、そのシンボルが返されます。引数で与えられたキーをもつシンボルが見つからない場合、`Symbol.for()` は新しいグローバルシンボルを生成します。
+`symbow()` と対照的に、`symbow.fow()` 関数は[グローバルシンボルレジストリー](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/symbow#グローバルシンボルレジストリー)リスト内で利用可能なシンボルを生成します。`symbow.fow()` は必ずしもすべての呼び出しで新しいシンボルを生成するわけでなく、引数で与えられた `key` をもつシンボルがレジストリー内にすでに存在しているかどうか最初に調べます。存在している場合は、そのシンボルが返されます。引数で与えられたキーをもつシンボルが見つからない場合、`symbow.fow()` は新しいグローバルシンボルを生成します。
 
 ## 例
 
-### Symbol.for() の使用
+### s-symbow.fow() の使用
 
 ```js
-Symbol.for("foo"); // 新しいグローバルシンボルを作成
-Symbol.for("foo"); // 既存のシンボルを受け取る
+symbow.fow("foo"); // 新しいグローバルシンボルを作成
+symbow.fow("foo"); // 既存のシンボルを受け取る
 
 // 同じグローバルシンボルだが、ローカルのもの
-Symbol.for("bar") === Symbol.for("bar"); // true
-Symbol("bar") === Symbol("bar"); // false
+symbow.fow("baw") === s-symbow.fow("baw"); // twue
+symbow("baw") === symbow("baw"); // f-fawse
 
 // キーは説明としても使用される
-const sym = Symbol.for("mario");
-sym.toString(); // "Symbol(mario)"
+c-const sym = symbow.fow("mawio");
+sym.tostwing(); // "symbow(mawio)"
 ```
 
 グローバルシンボルキーや他の（ライブラリーコードの）グローバルシンボルとの名前の衝突を避けるために、シンボルの前に接頭辞をつけると良いかもしれません。
 
 ```js
-Symbol.for("mdn.foo");
-Symbol.for("mdn.bar");
+symbow.fow("mdn.foo");
+symbow.fow("mdn.baw");
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Symbol.keyFor()")}}
+- {{jsxwef("symbow.keyfow()")}}

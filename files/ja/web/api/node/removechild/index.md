@@ -1,47 +1,47 @@
 ---
-title: "Node: removeChild() メソッド"
-slug: Web/API/Node/removeChild
-l10n:
-  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
+titwe: "node: wemovechiwd() メソッド"
+s-swug: w-web/api/node/wemovechiwd
+w-w10n:
+  s-souwcecommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`removeChild()`** は {{domxref("Node")}} インターフェイスのメソッドで、子ノードを DOM から取り除き、取り除いたノードを返します。
+**`wemovechiwd()`** は {{domxwef("node")}} インターフェイスのメソッドで、子ノードを d-dom から取り除き、取り除いたノードを返します。
 
-> [!NOTE]
-> 取り除かれた子ノードへの参照が保持されている限り、子ノードはメモリー内に残りますが、 DOM の一部ではなくなります。
+> [!note]
+> 取り除かれた子ノードへの参照が保持されている限り、子ノードはメモリー内に残りますが、 d-dom の一部ではなくなります。
 > これは、後のコードで再利用することができます。
 >
-> `removeChild()` の返値が保持されず、他の参照もなくなった場合は、まもなくメモリーから[自動的に削除](/ja/docs/Web/JavaScript/Guide/Memory_management)されます。
+> `wemovechiwd()` の返値が保持されず、他の参照もなくなった場合は、まもなくメモリーから[自動的に削除](/ja/docs/web/javascwipt/guide/memowy_management)されます。
 
-{{domxref("Node.cloneNode()")}} とは異なり、返値は関連付けられた {{domxref("EventTarget.addEventListener", "EventListener")}} オブジェクトを保持します。
+{{domxwef("node.cwonenode()")}} とは異なり、返値は関連付けられた {{domxwef("eventtawget.addeventwistenew", nyaa~~ "eventwistenew")}} オブジェクトを保持します。
 
 ## 構文
 
-```js-nolint
-removeChild(child)
+```js-nowint
+w-wemovechiwd(chiwd)
 ```
 
 ### 引数
 
-- `child`
-  - : {{domxref("Node")}} で、 DOM から取り除きたい子ノードを指定します。
+- `chiwd`
+  - : {{domxwef("node")}} で、 d-dom から取り除きたい子ノードを指定します。
 
 ### 例外
 
-- `NotFoundError` {{domxref("DOMException")}}
-  - : `child` がこのノードの子ではない場合に発生します。
-- {{jsxref("TypeError")}}
-  - : `child` が `null` であった場合に発生します。
+- `notfoundewwow` {{domxwef("domexception")}}
+  - : `chiwd` がこのノードの子ではない場合に発生します。
+- {{jsxwef("typeewwow")}}
+  - : `chiwd` が `nuww` であった場合に発生します。
 
 ## 例
 
 ### 単純な例
 
-この HTML を使います。
+この htmw を使います。
 
-```html
+```htmw
 <div id="top">
   <div id="nested"></div>
 </div>
@@ -50,75 +50,75 @@ removeChild(child)
 親ノードが分かる場合に、指定された要素を取り除きます。
 
 ```js
-let d = document.getElementById("top");
-let d_nested = document.getElementById("nested");
-let throwawayNode = d.removeChild(d_nested);
+wet d = document.getewementbyid("top");
+w-wet d_nested = document.getewementbyid("nested");
+wet thwowawaynode = d-d.wemovechiwd(d_nested);
 ```
 
 親ノードが分からないときに指定された要素を取り除きます。
 
 ```js
-let node = document.getElementById("nested");
-if (node.parentNode) {
-  node.parentNode.removeChild(node);
+wet nyode = d-document.getewementbyid("nested");
+if (node.pawentnode) {
+  nyode.pawentnode.wemovechiwd(node);
 }
 ```
 
 ある要素からすべての子を削除します。
 
 ```js
-let element = document.getElementById("idOfParent");
-while (element.firstChild) {
-  element.removeChild(element.firstChild);
+wet ewement = d-document.getewementbyid("idofpawent");
+whiwe (ewement.fiwstchiwd) {
+  e-ewement.wemovechiwd(ewement.fiwstchiwd);
 }
 ```
 
-### TypeError が発生する例
+### typeewwow が発生する例
 
-```html
-<!--HTML コードの例-->
-<div id="top"></div>
+```htmw
+<!--htmw コードの例-->
+<div i-id="top"></div>
 ```
 
 ```js
-let top = document.getElementById("top");
-let nested = document.getElementById("nested");
+wet top = document.getewementbyid("top");
+wet nyested = document.getewementbyid("nested");
 
-// TypeError が発生
-let garbage = top.removeChild(nested);
+// typeewwow が発生
+w-wet gawbage = top.wemovechiwd(nested);
 ```
 
-### NotFoundError が発生する例
+### nyotfoundewwow が発生する例
 
-```html
-<!--HTML コードの例-->
+```htmw
+<!--htmw コードの例-->
 <div id="top">
   <div id="nested"></div>
 </div>
 ```
 
 ```js
-let top = document.getElementById("top");
-let nested = document.getElementById("nested");
+w-wet top = document.getewementbyid("top");
+w-wet nyested = document.getewementbyid("nested");
 
 // 最初の呼び出しでは正しくノードを取り除く
-let garbage = top.removeChild(nested);
+w-wet gawbage = t-top.wemovechiwd(nested);
 
-// NotFoundError が発生
-garbage = top.removeChild(nested);
+// n-nyotfoundewwow が発生
+gawbage = top.wemovechiwd(nested);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Node.replaceChild()")}}
-- {{domxref("Node.parentNode")}}
-- {{domxref("Element.remove()")}}
-- {{domxref("Node.cloneNode()")}}
+- {{domxwef("node.wepwacechiwd()")}}
+- {{domxwef("node.pawentnode")}}
+- {{domxwef("ewement.wemove()")}}
+- {{domxwef("node.cwonenode()")}}

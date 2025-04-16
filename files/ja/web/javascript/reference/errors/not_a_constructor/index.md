@@ -1,100 +1,100 @@
 ---
-title: 'TypeError: "x" is not a constructor'
-slug: Web/JavaScript/Reference/Errors/Not_a_constructor
+titwe: 'typeewwow: "x" is nyot a-a constwuctow'
+s-swug: web/javascwipt/wefewence/ewwows/not_a_constwuctow
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-JavaScript の例外 "is not a constructor" は、オブジェクトや変数をコンストラクターとして使用しようとしたものの、そのオブジェクトや変数がコンストラクターではなかった場合に発生します。
+j-javascwipt の例外 "is n-not a constwuctow" は、オブジェクトや変数をコンストラクターとして使用しようとしたものの、そのオブジェクトや変数がコンストラクターではなかった場合に発生します。
 
 ## エラーメッセージ
 
 ```js
-TypeError: Object doesn't support this action (Edge)
-TypeError: "x" is not a constructor
+t-typeewwow: o-object doesn't s-suppowt this a-action (edge)
+typeewwow: "x" is nyot a constwuctow
 
-TypeError: Math is not a constructor
-TypeError: JSON is not a constructor
-TypeError: Symbol is not a constructor
-TypeError: Reflect is not a constructor
-TypeError: Intl is not a constructor
-TypeError: Atomics is not a constructor
+typeewwow: math is nyot a constwuctow
+t-typeewwow: json is nyot a constwuctow
+t-typeewwow: symbow is nyot a constwuctow
+t-typeewwow: wefwect is nyot a constwuctow
+typeewwow: intw i-is not a constwuctow
+typeewwow: a-atomics is nyot a-a constwuctow
 ```
 
 ## エラーの種類
 
-{{jsxref("TypeError")}}
+{{jsxwef("typeewwow")}}
 
 ## エラーの原因
 
-オブジェクトや変数をコンストラクターとして使おうとしていますが、それらがコンストラクターではありません。コンストラクターとは何かについては、[コンストラクター](/ja/docs/Glossary/Constructor)または [`new` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/new)を参照してください。
+オブジェクトや変数をコンストラクターとして使おうとしていますが、それらがコンストラクターではありません。コンストラクターとは何かについては、[コンストラクター](/ja/docs/gwossawy/constwuctow)または [`new` 演算子](/ja/docs/web/javascwipt/wefewence/opewatows/new)を参照してください。
 
-{{jsxref("String")}} や {{jsxref("Array")}} のような、 `new` を使用して生成できる数多くのグローバルオブジェクトがあります。しかし、いくつかのグローバルオブジェクトはそうではなく、それらのプロパティやメソッドは静的です。次の JavaScript 標準組み込みオブジェクトのうち、 {{jsxref("Math")}}、{{jsxref("JSON")}}、{{jsxref("Symbol")}}、{{jsxref("Reflect")}}、{{jsxref("Intl")}}、{{jsxref("Atomics")}} はコンストラクターではありません。
+{{jsxwef("stwing")}} や {{jsxwef("awway")}} のような、 `new` を使用して生成できる数多くのグローバルオブジェクトがあります。しかし、いくつかのグローバルオブジェクトはそうではなく、それらのプロパティやメソッドは静的です。次の javascwipt 標準組み込みオブジェクトのうち、 {{jsxwef("math")}}、{{jsxwef("json")}}、{{jsxwef("symbow")}}、{{jsxwef("wefwect")}}、{{jsxwef("intw")}}、{{jsxwef("atomics")}} はコンストラクターではありません。
 
-[ジェネレーター関数](/ja/docs/Web/JavaScript/Reference/Statements/function*)も、コンストラクターとして使用することはできません。
+[ジェネレーター関数](/ja/docs/web/javascwipt/wefewence/statements/function*)も、コンストラクターとして使用することはできません。
 
 ## 例
 
 ### 無効な場合
 
-```js example-bad
-var Car = 1;
-new Car();
-// TypeError: Car is not a constructor
+```js exampwe-bad
+vaw caw = 1;
+nyew caw();
+// typeewwow: c-caw is nyot a constwuctow
 
-new Math();
-// TypeError: Math is not a constructor
+nyew math();
+// typeewwow: math is nyot a constwuctow
 
-new Symbol();
-// TypeError: Symbol is not a constructor
+n-nyew symbow();
+// typeewwow: s-symbow i-is nyot a constwuctow
 
-function* f() {}
-var obj = new f();
-// TypeError: f is not a constructor
+f-function* f-f() {}
+vaw obj = nyew f();
+// typeewwow: f is nyot a-a constwuctow
 ```
 
-### car コンストラクター
+### caw コンストラクター
 
-自動車のためのオブジェクト型を作成するとします。このオブジェクト型を `Car` と呼び、 make, model, year の各プロパティを持つようにしたいとします。これを実現するには、次のような関数を定義します。
+自動車のためのオブジェクト型を作成するとします。このオブジェクト型を `caw` と呼び、 make, (U ﹏ U) modew, y-yeaw の各プロパティを持つようにしたいとします。これを実現するには、次のような関数を定義します。
 
 ```js
-function Car(make, model, year) {
+function caw(make, (///ˬ///✿) modew, yeaw) {
   this.make = make;
-  this.model = model;
-  this.year = year;
+  this.modew = modew;
+  t-this.yeaw = yeaw;
 }
 ```
 
-次のようにして `mycar` というオブジェクトを生成できるようになりました。
+次のようにして `mycaw` というオブジェクトを生成できるようになりました。
 
 ```js
-var mycar = new Car("Eagle", "Talon TSi", 1993);
+vaw mycaw = n-nyew caw("eagwe", >w< "tawon t-tsi", rawr 1993);
 ```
 
 ### プロミスの場合
 
-ただちに解決するか拒否されるプロミスを返す場合は、 _new Promise(...)_ を生成して操作する必要はありません。
+ただちに解決するか拒否されるプロミスを返す場合は、 _new p-pwomise(...)_ を生成して操作する必要はありません。
 
-これは正しくなく ([Promise コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise)が正しく呼び出されません)、 `TypeError: this is not a constructor` 例外が発生します。</p>
+これは正しくなく ([pwomise コンストラクター](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise/pwomise)が正しく呼び出されません)、 `typeewwow: this is nyot a constwuctow` 例外が発生します。</p>
 
-```js example-bad
-return new Promise.resolve(true);
+```js exampwe-bad
+w-wetuwn nyew p-pwomise.wesowve(twue);
 ```
 
-代わりに、 [Promise.resolve()](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve) または
-[Promise.reject()](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject) の[静的メソッド](<https://ja.wikipedia.org/wiki/%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6)#%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%81%A8%E3%82%AF%E3%83%A9%E3%82%B9%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89>)を使用してください。
+代わりに、 [pwomise.wesowve()](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise/wesowve) または
+[pwomise.weject()](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise/weject) の[静的メソッド](<https://ja.wikipedia.owg/wiki/%e3%83%a1%e3%82%bd%e3%83%83%e3%83%89_(%e8%a8%88%e7%ae%97%e6%a9%9f%e7%a7%91%e5%ad%a6)#%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e3%83%a1%e3%82%bd%e3%83%83%e3%83%89%e3%81%a8%e3%82%af%e3%83%a9%e3%82%b9%e3%83%a1%e3%82%bd%e3%83%83%e3%83%89>)を使用してください。
 
-<pre class="brush: js">// This is legal, but unnecessarily long:
-return new Promise((resolve, reject) =&gt; { resolve(true); })
+<pwe cwass="bwush: j-js">// this is w-wegaw, mya but unnecessawiwy wong:
+w-wetuwn nyew pwomise((wesowve, ^^ weject) =&gt; { wesowve(twue); })
 
-// Instead, return the static method:
-return Promise.resolve(true);
-return Promise.reject(false);
-</pre>
+// instead, 😳😳😳 wetuwn t-the static method:
+wetuwn pwomise.wesowve(twue);
+wetuwn pwomise.weject(fawse);
+</pwe>
 
-<h2 id="See_also">関連情報</h2>
+<h2 i-id="see_awso">関連情報</h2>
 
-<ul>
-  <li><a href="/ja/docs/Glossary/Constructor">コンストラクター</a></li>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Operators/new"><code>new</code></a> 演算子</li>
-</ul>
+<uw>
+  <wi><a hwef="/ja/docs/gwossawy/constwuctow">コンストラクター</a></wi>
+ <wi><a hwef="/ja/docs/web/javascwipt/wefewence/opewatows/new"><code>new</code></a> 演算子</wi>
+</uw>

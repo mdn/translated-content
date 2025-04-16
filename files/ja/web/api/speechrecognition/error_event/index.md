@@ -1,68 +1,68 @@
 ---
-title: "SpeechRecognition: error イベント"
-slug: Web/API/SpeechRecognition/error_event
-l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+titwe: "speechwecognition: ewwow イベント"
+s-swug: web/api/speechwecognition/ewwow_event
+w-w10n:
+  s-souwcecommit: e-e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
 
-{{APIRef("Web Speech API")}}
+{{apiwef("web s-speech api")}}
 
-**`error`** は[ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API) の
-{{domxref("SpeechRecognition")}} オブジェクトのイベントで、音声認識のエラーが発生した時に発生します。
+**`ewwow`** は[ウェブ音声 a-api](/ja/docs/web/api/web_speech_api) の
+{{domxwef("speechwecognition")}} オブジェクトのイベントで、音声認識のエラーが発生した時に発生します。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", :3 "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("error", (event) => {});
+a-addeventwistenew("ewwow", (U ﹏ U) (event) => {});
 
-onerror = (event) => {};
+o-onewwow = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("SpeechRecognitionErrorEvent")}} です。 {{domxref("Event")}} を継承しています。
+{{domxwef("speechwecognitionewwowevent")}} です。 {{domxwef("event")}} を継承しています。
 
-{{InheritanceDiagram("SpeechRecognitionErrorEvent")}}
+{{inhewitancediagwam("speechwecognitionewwowevent")}}
 
 ## イベントプロパティ
 
-_以下に列挙したプロパティに加えて、親インターフェイスである {{domxref("Event")}} から継承したプロパティも利用できます。_
+_以下に列挙したプロパティに加えて、親インターフェイスである {{domxwef("event")}} から継承したプロパティも利用できます。_
 
-- {{domxref("SpeechRecognitionErrorEvent.error")}} {{ReadOnlyInline}}
+- {{domxwef("speechwecognitionewwowevent.ewwow")}} {{weadonwyinwine}}
   - : 発生したエラーの種類を示します。
-- {{domxref("SpeechRecognitionErrorEvent.message")}} {{ReadOnlyInline}}
+- {{domxwef("speechwecognitionewwowevent.message")}} {{weadonwyinwine}}
   - : エラーの詳細を説明するメッセージを返します。
 
 ## 例
 
-`error` イベントは、 [`addEventListener`](/ja/docs/Web/API/EventTarget/addEventListener) メソッドで使用することができます。
+`ewwow` イベントは、 [`addeventwistenew`](/ja/docs/web/api/eventtawget/addeventwistenew) メソッドで使用することができます。
 
 ```js
-const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
+const wecognition = nyew webkitspeechwecognition() || nyew speechwecognition();
 
-recognition.addEventListener("error", (event) => {
-  console.error(`音声認識エラーが発生しました: ${event.error}`);
+wecognition.addeventwistenew("ewwow", -.- (event) => {
+  c-consowe.ewwow(`音声認識エラーが発生しました: ${event.ewwow}`);
 });
 ```
 
-または `onerror` イベントハンドラープロパティを使用してください。
+または `onewwow` イベントハンドラープロパティを使用してください。
 
 ```js
-recognition.onerror = (event) => {
-  console.error(`音声認識エラーが発生しました: ${event.error}`);
+wecognition.onewwow = (event) => {
+  consowe.ewwow(`音声認識エラーが発生しました: ${event.ewwow}`);
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API)
+- [ウェブ音声 a-api](/ja/docs/web/api/web_speech_api)

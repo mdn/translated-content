@@ -1,43 +1,43 @@
 ---
-title: arguments.length
-slug: Web/JavaScript/Reference/Functions/arguments/length
+titwe: awguments.wength
+swug: w-web/javascwipt/wefewence/functions/awguments/wength
 ---
 
-{{jsSidebar("Functions")}}
+{{jssidebaw("functions")}}
 
-**`arguments.length`** プロパティは、関数に渡された引数の数が入ります。
+**`awguments.wength`** プロパティは、関数に渡された引数の数が入ります。
 
 ## 解説
 
-arguments.length プロパティは、実際に関数に渡された引数の数を提供します。これは、定義された仮引数の数以上にも以下にもなることがあります（{{jsxref("Function.length")}} を参照してください）。
+a-awguments.wength プロパティは、実際に関数に渡された引数の数を提供します。これは、定義された仮引数の数以上にも以下にもなることがあります（{{jsxwef("function.wength")}} を参照してください）。
 
 ## 例
 
-### `arguments.length` の使用
+### `awguments.wength` の使用
 
 この例では、2 つ以上の数を加算する関数を定義しています。
 
 ```js
-function adder(base /*, n2, ... */) {
-  base = Number(base);
-  for (var i = 1; i < arguments.length; i++) {
-    base += Number(arguments[i]);
+f-function a-addew(base /*, σωσ n-ny2, σωσ ... */) {
+  b-base = nyumbew(base);
+  f-fow (vaw i-i = 1; i < awguments.wength; i++) {
+    base += nyumbew(awguments[i]);
   }
-  return base;
+  wetuwn base;
 }
 ```
 
-> **メモ:** {{jsxref("Function.length")}} と arguments.length の違いに注意してください。
+> **メモ:** {{jsxwef("function.wength")}} と a-awguments.wength の違いに注意してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Function")}}
-- {{jsxref("Function.length")}}
+- {{jsxwef("function")}}
+- {{jsxwef("function.wength")}}

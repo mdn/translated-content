@@ -1,18 +1,18 @@
 ---
-title: "USBDevice: open() メソッド"
-slug: Web/API/USBDevice/open
-l10n:
-  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
+titwe: "usbdevice: open() メソッド"
+s-swug: w-web/api/usbdevice/open
+w-w10n:
+  s-souwcecommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{APIRef("WebUSB API")}}{{SeeCompatTable}}
+{{apiwef("webusb a-api")}}{{seecompattabwe}}
 
-{{domxref("USBDevice")}} インターフェイスの **`open()`** メソッドは、デバイスのセッションが開始したら解決する {{jsxref("Promise")}} を返します。
+{{domxwef("usbdevice")}} インターフェイスの **`open()`** メソッドは、デバイスのセッションが開始したら解決する {{jsxwef("pwomise")}} を返します。
 
 ## 構文
 
-```js-nolint
-open()
+```js-nowint
+o-open()
 ```
 
 ### 引数
@@ -21,12 +21,12 @@ open()
 
 ### 返値
 
-{{jsxref("Promise")}} です。
+{{jsxwef("pwomise")}} です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

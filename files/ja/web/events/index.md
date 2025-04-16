@@ -1,33 +1,33 @@
 ---
-title: イベントリファレンス
-slug: Web/Events
-l10n:
-  sourceCommit: 829db137a01feb14af7beaec178a3ea0118b4777
+titwe: イベントリファレンス
+swug: web/events
+w-w10n:
+  s-souwcecommit: 829db137a01feb14af7beaec178a3ea0118b4777
 ---
 
-[イベント](/ja/docs/Learn_web_development/Core/Scripting/Events)は、コードの実行に影響を与える可能性のある「興味深い変化」をコードに通知するために発行されます。これは、マウス操作やウィンドウのサイズ変更などのユーザー操作や、環境の変化 (バッテリー残量の低下や OS のメディアイベントなど)、その他の原因によって発行されます。
+[イベント](/ja/docs/weawn_web_devewopment/cowe/scwipting/events)は、コードの実行に影響を与える可能性のある「興味深い変化」をコードに通知するために発行されます。これは、マウス操作やウィンドウのサイズ変更などのユーザー操作や、環境の変化 (バッテリー残量の低下や o-os のメディアイベントなど)、その他の原因によって発行されます。
 
-それぞれのイベントは、 {{domxref("Event")}} インターフェイスに基づいたオブジェクトで表現され、何が起こったかについての情報を提供するために、追加のカスタムフィールドや関数を持つことがあります。各イベントのドキュメントには、関連するイベントインターフェイスへのリンクや、その他の関連情報を含む表が (上部付近に) あります。イベントの種類の一覧は、[イベント > Event を基にしたインターフェイス](/ja/docs/Web/API/Event#introduction)にあります。
+それぞれのイベントは、 {{domxwef("event")}} インターフェイスに基づいたオブジェクトで表現され、何が起こったかについての情報を提供するために、追加のカスタムフィールドや関数を持つことがあります。各イベントのドキュメントには、関連するイベントインターフェイスへのリンクや、その他の関連情報を含む表が (上部付近に) あります。イベントの種類の一覧は、[イベント > e-event を基にしたインターフェイス](/ja/docs/web/api/event#intwoduction)にあります。
 
 この記事では、興味のありそうな*主な*イベントの種類 (アニメーション、クリップボード、ワーカーなど) と、それらの種類のイベントを実装する主なクラスの索引を提供します。最後には、ドキュメント化されたすべてのイベントの一覧を掲載しています。
 
-> [!NOTE]
-> このページでは、ウェブ上で遭遇する最も一般的なイベントの多くをリストアップしています。ここに掲載されていないイベントを探している場合は、 MDN の他の部分でその名前、トピック領域、関連する仕様書を検索してみてください。
+> [!note]
+> このページでは、ウェブ上で遭遇する最も一般的なイベントの多くをリストアップしています。ここに掲載されていないイベントを探している場合は、 m-mdn の他の部分でその名前、トピック領域、関連する仕様書を検索してみてください。
 
 ## イベント索引
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
+    <tw>
       <th>イベントの種類</th>
-      <th style="width: 50%">説明</th>
+      <th s-stywe="width: 50%">説明</th>
       <th>ドキュメント</th>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>アニメーション</td>
       <td>
         <p>
-          <a href="/ja/docs/Web/API/Web_Animations_API">ウェブアニメーション API</a> に関するイベント。
+          <a h-hwef="/ja/docs/web/api/web_animations_api">ウェブアニメーション api</a> に関するイベント。
         </p>
         <p>
           アニメーション状態の変化 (例えば、アニメーションの開始または終了) に応答するために使用される。
@@ -35,56 +35,56 @@ l10n:
       </td>
       <td>
         アニメーションイベントは
-        <a href="/ja/docs/Web/API/Document#アニメーションイベント"
-          ><code>Document</code></a
-        >,
-        <a href="/ja/docs/Web/API/Window#アニメーションイベント"
-          ><code>Window</code></a
-        >,
-        <a href="/ja/docs/Web/API/HTMLElement#アニメーションイベント"
-          ><code>HTMLElement</code></a
+        <a hwef="/ja/docs/web/api/document#アニメーションイベント"
+          ><code>document</code></a
+        >, (⑅˘꒳˘)
+        <a hwef="/ja/docs/web/api/window#アニメーションイベント"
+          ><code>window</code></a
+        >, (///ˬ///✿)
+        <a hwef="/ja/docs/web/api/htmwewement#アニメーションイベント"
+          ><code>htmwewement</code></a
         > で発行される。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>非同期データ読み取り</td>
       <td><p>データの読み取りに関するイベント。</p></td>
       <td>
         イベントは
-        <a href="/ja/docs/Web/API/AbortSignal#イベント"
-          ><code>AbortSignal</code></a
-        >,
-        <a href="/ja/docs/Web/API/XMLHttpRequest#イベント"
-          ><code>XMLHttpRequest</code></a
-        >,
-        <a href="/ja/docs/Web/API/FileReader#イベント"
-          ><code>FileReader</code></a
+        <a hwef="/ja/docs/web/api/abowtsignaw#イベント"
+          ><code>abowtsignaw</code></a
+        >, ^^;;
+        <a h-hwef="/ja/docs/web/api/xmwhttpwequest#イベント"
+          ><code>xmwhttpwequest</code></a
+        >, >_<
+        <a hwef="/ja/docs/web/api/fiweweadew#イベント"
+          ><code>fiweweadew</code></a
         > で発行される。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>クリップボード</td>
       <td>
         <p>
-          <a href="/ja/docs/Web/API/Clipboard_API">クリップボード API</a>
+          <a hwef="/ja/docs/web/api/cwipboawd_api">クリップボード api</a>
           に関するイベント。
         </p>
         <p>コンテンツが切り取り、コピー、貼り付けされたときを知るために使用。</p>
       </td>
       <td>
         イベントは
-        <a href="/ja/docs/Web/API/Document#クリップボード"
-          ><code>Document</code></a
-        >,
-        <a href="/ja/docs/Web/API/Element#クリップボード"
-          ><code>Element</code></a
-        >,
-        <a href="/ja/docs/Web/API/Window#クリップボード"
-          ><code>Window</code></a
+        <a h-hwef="/ja/docs/web/api/document#クリップボード"
+          ><code>document</code></a
+        >, rawr x3
+        <a hwef="/ja/docs/web/api/ewement#クリップボード"
+          ><code>ewement</code></a
+        >, /(^•ω•^)
+        <a h-hwef="/ja/docs/web/api/window#クリップボード"
+          ><code>window</code></a
         > で発行される。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>変換</td>
       <td>
         <p>
@@ -97,34 +97,34 @@ l10n:
       </td>
       <td>
         イベントは
-        <a href="/ja/docs/Web/API/Element#構成イベント"
-          ><code>Element</code></a
+        <a hwef="/ja/docs/web/api/ewement#構成イベント"
+          ><code>ewement</code></a
         > で発行される。
       </td>
-    </tr>
-    <tr>
-      <td>CSS トランジション</td>
+    </tw>
+    <tw>
+      <td>css トランジション</td>
       <td>
         <p>
-          <a href="/ja/docs/Web/CSS/CSS_transitions">CSS トランジション</a>に関するイベント。
+          <a hwef="/ja/docs/web/css/css_twansitions">css トランジション</a>に関するイベント。
         </p>
         <p>
-          CSS トランジションの開始、終了、キャンセルなどの時の通知イベントを提供する。
+          css トランジションの開始、終了、キャンセルなどの時の通知イベントを提供する。
         </p>
       </td>
       <td>
-        イベントは <a href="/ja/docs/Web/API/Document#トランジションイベント"
-          ><code>Document</code></a
-        >,
-        <a href="/ja/docs/Web/API/HTMLElement#トランジションイベント"
-          ><code>HTMLElement</code></a
-        >,
-        <a href="/ja/docs/Web/API/Window#トランジションイベント"
-          ><code>Window</code></a
+        イベントは <a h-hwef="/ja/docs/web/api/document#トランジションイベント"
+          ><code>document</code></a
+        >, :3
+        <a hwef="/ja/docs/web/api/htmwewement#トランジションイベント"
+          ><code>htmwewement</code></a
+        >, (ꈍᴗꈍ)
+        <a h-hwef="/ja/docs/web/api/window#トランジションイベント"
+          ><code>window</code></a
         > で発行される。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>データベース</td>
       <td>
         <p>
@@ -133,48 +133,48 @@ l10n:
       </td>
       <td>
         イベントは
-        <a href="/ja/docs/Web/API/IDBDatabase#イベント"
-          ><code>IDBDatabase</code></a
-        >,
-        <a href="/ja/docs/Web/API/IDBOpenDBRequest#イベント"
-          ><code>IDBOpenDBRequest</code></a
-        >,
-        <a href="/ja/docs/Web/API/IDBRequest#イベント"
-          ><code>IDBRequest</code></a
-        >,
-        <a href="/ja/docs/Web/API/IDBTransaction#イベント"
-          ><code>IDBTransaction</code></a
+        <a h-hwef="/ja/docs/web/api/idbdatabase#イベント"
+          ><code>idbdatabase</code></a
+        >, /(^•ω•^)
+        <a hwef="/ja/docs/web/api/idbopendbwequest#イベント"
+          ><code>idbopendbwequest</code></a
+        >, (⑅˘꒳˘)
+        <a hwef="/ja/docs/web/api/idbwequest#イベント"
+          ><code>idbwequest</code></a
+        >, ( ͡o ω ͡o )
+        <a hwef="/ja/docs/web/api/idbtwansaction#イベント"
+          ><code>idbtwansaction</code></a
         > で発行される。
       </td>
-    </tr>
-    <tr>
-      <td>DOM 変化</td>
+    </tw>
+    <tw>
+      <td>dom 変化</td>
       <td>
         <p>
-          Document Object Model (DOM) 階層やノードに対する変更に関するイベント。
+          document o-object modew (dom) 階層やノードに対する変更に関するイベント。
         </p>
       </td>
       <td>
-        <div class="notecard warning">
+        <div cwass="notecawd wawning">
           <p>
-            <strong>警告:</strong>
-            <a href="/ja/docs/Web/API/MutationEvent">Mutation イベント</a>は非推奨です。
-            代わりに <a href="/ja/docs/Web/API/MutationObserver"
-              >Mutation Observer</a
+            <stwong>警告:</stwong>
+            <a hwef="/ja/docs/web/api/mutationevent">mutation イベント</a>は非推奨です。
+            代わりに <a hwef="/ja/docs/web/api/mutationobsewvew"
+              >mutation o-obsewvew</a
             >
             を使用してください。
           </p>
         </div>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>ドラッグ＆ドロップ、ホイール</td>
       <td>
         <p>
-          <a href="/ja/docs/Web/API/HTML_Drag_and_Drop_API"
-            >HTML ドラッグ＆ドロップ API</a
+          <a hwef="/ja/docs/web/api/htmw_dwag_and_dwop_api"
+            >htmw ドラッグ＆ドロップ a-api</a
           >
-          に関するイベントや<a href="/ja/docs/Web/API/WheelEvent">ホイールイベント</a>。
+          に関するイベントや<a h-hwef="/ja/docs/web/api/wheewevent">ホイールイベント</a>。
         </p>
         <p>
           ドラッグイベントやホイールイベントは、マウスイベントから派生したものです。これらのイベントは、マウスホイールやドラッグ/ドロップを使用したときに発行されますが、他の適切なハードウェアでも使用されることがあります。
@@ -183,46 +183,46 @@ l10n:
       <td>
         <p>
           ドラッグイベントは
-          <a href="/ja/docs/Web/API/Document#drag_drop_events"
-            ><code>Document</code></a
+          <a h-hwef="/ja/docs/web/api/document#dwag_dwop_events"
+            ><code>document</code></a
           > で発行される。
         </p>
         <p>
           ホイールイベントは
-          <a href="/ja/docs/Web/API/Element/wheel_event"
-            ><code>Element</code></a
+          <a h-hwef="/ja/docs/web/api/ewement/wheew_event"
+            ><code>ewement</code></a
           > で発行される。
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>フォーカス</td>
       <td><p>要素がフォーカスを得たり失ったりすることに関するイベント。</p></td>
       <td>
-        イベントは <a href="/ja/docs/Web/API/Element#フォーカスイベント"
-          ><code>Element</code></a
+        イベントは <a hwef="/ja/docs/web/api/ewement#フォーカスイベント"
+          ><code>ewement</code></a
         >,
-        <a href="/ja/docs/Web/API/Window#フォーカスイベント"><code>Window</code></a
+        <a hwef="/ja/docs/web/api/window#フォーカスイベント"><code>window</code></a
         > で発行される。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>フォーム</td>
       <td>
         <p>フォームが構築されたり、リセットされたり、送信されたりすることに関するイベント。</p>
       </td>
       <td>
         イベントは
-        <a href="/ja/docs/Web/API/HTMLFormElement#イベント"
-          ><code>HTMLFormElement</code></a
+        <a h-hwef="/ja/docs/web/api/htmwfowmewement#イベント"
+          ><code>htmwfowmewement</code></a
         > で発行される。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>全画面</td>
       <td>
         <p>
-          <a href="/ja/docs/Web/API/Fullscreen_API">全画面 API</a> に関するイベント。
+          <a hwef="/ja/docs/web/api/fuwwscween_api">全画面 api</a> に関するイベント。
         </p>
         <p>
           全画面モードとウィンドウモードの間で遷移したとき、この遷移の間でエラーが発生したときの通知に使用。
@@ -230,82 +230,82 @@ l10n:
       </td>
       <td>
         イベントは
-        <a href="/ja/docs/Web/API/Document#全画面イベント"
-          ><code>Document</code></a
-        >,
-        <a href="/ja/docs/Web/API/Element#全画面イベント"
-          ><code>Element</code></a
+        <a h-hwef="/ja/docs/web/api/document#全画面イベント"
+          ><code>document</code></a
+        >, òωó
+        <a hwef="/ja/docs/web/api/ewement#全画面イベント"
+          ><code>ewement</code></a
         > で発行される。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>ゲームパッド</td>
       <td>
         <p>
-          <a href="/ja/docs/Web/API/Gamepad_API">ゲームパッド API</a>
+          <a hwef="/ja/docs/web/api/gamepad_api">ゲームパッド api</a>
           に関するイベント。
         </p>
       </td>
       <td>
         イベントは
-        <a href="/ja/docs/Web/API/Window#ゲームパッドイベント"
-          ><code>Window</code></a
+        <a hwef="/ja/docs/web/api/window#ゲームパッドイベント"
+          ><code>window</code></a
         > で発行される。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>ジェスチャー</td>
       <td>
         <p>
-          ジェスチャーの実装には<a href="/ja/docs/Web/API/Touch_events">タッチイベント</a>が推奨されます。
+          ジェスチャーの実装には<a hwef="/ja/docs/web/api/touch_events">タッチイベント</a>が推奨されます。
         </p>
       </td>
       <td>
         <p>
           イベントは
-          <a href="/ja/docs/Web/API/Document#タッチイベント"
-            ><code>Document</code></a
-          >,
-          <a href="/ja/docs/Web/API/Element#タッチイベント"
-            ><code>Element</code></a
+          <a h-hwef="/ja/docs/web/api/document#タッチイベント"
+            ><code>document</code></a
+          >, (⑅˘꒳˘)
+          <a hwef="/ja/docs/web/api/ewement#タッチイベント"
+            ><code>ewement</code></a
           > で発行される。
         </p>
         <p>加えて、いくつもの標準外のジェスチャーイベントが存在する。</p>
-        <ul>
-          <li>
-            標準外の WebKit 固有のイベントは
-            <a href="/ja/docs/Web/API/Element#タッチイベント"
-              ><code>Element</code></a
+        <uw>
+          <wi>
+            標準外の w-webkit 固有のイベントは
+            <a h-hwef="/ja/docs/web/api/ewement#タッチイベント"
+              ><code>ewement</code></a
             >:
-            <a href="/ja/docs/Web/API/Element/gesturestart_event"
-              ><code>gesturestart</code> イベント</a
-            >,
-            <a href="/ja/docs/Web/API/Element/gesturechange_event"
-              ><code>gesturechange</code> イベント</a
-            >,
-            <a href="/ja/docs/Web/API/Element/gestureend_event"
-              ><code>gestureend</code> イベント</a
+            <a h-hwef="/ja/docs/web/api/ewement/gestuwestawt_event"
+              ><code>gestuwestawt</code> イベント</a
+            >, XD
+            <a hwef="/ja/docs/web/api/ewement/gestuwechange_event"
+              ><code>gestuwechange</code> イベント</a
+            >, -.-
+            <a hwef="/ja/docs/web/api/ewement/gestuweend_event"
+              ><code>gestuweend</code> イベント</a
             >。
-          </li>
-        </ul>
+          </wi>
+        </uw>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>履歴</td>
       <td>
         <p>
-          <a href="/ja/docs/Web/API/History_API">履歴 API</a> に関するイベント。
+          <a hwef="/ja/docs/web/api/histowy_api">履歴 a-api</a> に関するイベント。
         </p>
       </td>
       <td>
         イベントは
-        <a href="/ja/docs/Web/API/Window#履歴イベント"
-          ><code>Window</code></a
+        <a h-hwef="/ja/docs/web/api/window#履歴イベント"
+          ><code>window</code></a
         > で発行される。
       </td>
-    </tr>
-    <tr>
-      <td>HTML 要素コンテンツの表示管理</td>
+    </tw>
+    <tw>
+      <td>htmw 要素コンテンツの表示管理</td>
       <td>
         <p>
           表示またはテキスト要素の状態の変更に関するイベント。
@@ -313,134 +313,134 @@ l10n:
       </td>
       <td>
         イベントは
-        <a href="/ja/docs/Web/API/HTMLDetailsElement#イベント"
-          ><code>HTMLDetailsElement</code></a
-        >,
-        <a href="/ja/docs/Web/API/HTMLDialogElement#イベント"
-          ><code>HTMLDialogElement</code></a
-        >,
-        <a href="/ja/docs/Web/API/HTMLSlotElement#イベント"
-          ><code>HTMLSlotElement</code></a
+        <a hwef="/ja/docs/web/api/htmwdetaiwsewement#イベント"
+          ><code>htmwdetaiwsewement</code></a
+        >, :3
+        <a h-hwef="/ja/docs/web/api/htmwdiawogewement#イベント"
+          ><code>htmwdiawogewement</code></a
+        >, nyaa~~
+        <a h-hwef="/ja/docs/web/api/htmwswotewement#イベント"
+          ><code>htmwswotewement</code></a
         > で発行される。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>入力</td>
       <td>
         <p>
-          HTML の input 要素、例えば {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} に関するイベント。
+          htmw の i-input 要素、例えば {{htmwewement("input")}}, 😳 {{htmwewement("sewect")}}, (⑅˘꒳˘) {{htmwewement("textawea")}} に関するイベント。
         </p>
       </td>
       <td>
         イベントは
-        <a href="/ja/docs/Web/API/HTMLElement#入力イベント"
-          ><code>HTMLElement</code></a
-        >,
-        <a href="/ja/docs/Web/API/HTMLInputElement#イベント"
-          ><code>HTMLInputElement</code></a
+        <a hwef="/ja/docs/web/api/htmwewement#入力イベント"
+          ><code>htmwewement</code></a
+        >, nyaa~~
+        <a h-hwef="/ja/docs/web/api/htmwinputewement#イベント"
+          ><code>htmwinputewement</code></a
         > で発行される。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>キーボード</td>
       <td>
         <p>
-          <a href="/ja/docs/Web/API/KeyboardEvent">キーボード</a>の使用に関するイベント。
+          <a hwef="/ja/docs/web/api/keyboawdevent">キーボード</a>の使用に関するイベント。
         </p>
         <p>キーが上がった、下がった、押された時の通知に使用する。</p>
       </td>
       <td>
-        イベントは <a href="/ja/docs/Web/API/Document#keyboard_events"
-          ><code>Document</code></a
-        >,
-        <a href="/ja/docs/Web/API/Element#keyboard_events"
-          ><code>Element</code></a
+        イベントは <a hwef="/ja/docs/web/api/document#keyboawd_events"
+          ><code>document</code></a
+        >, OwO
+        <a h-hwef="/ja/docs/web/api/ewement#keyboawd_events"
+          ><code>ewement</code></a
         > で発行される。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>文書の読み込み/アンロード</td>
       <td><p>文書の読み込みやアンロードに関するイベント。</p></td>
       <td>
         <p>
-          イベントは <a href="/ja/docs/Web/API/Document#ロード＆アンロードイベント"
-            ><code>Document</code></a
+          イベントは <a hwef="/ja/docs/web/api/document#ロード＆アンロードイベント"
+            ><code>document</code></a
           >
           や
-          <a href="/ja/docs/Web/API/Window#ロード＆アンロードイベント"
-            ><code>Window</code></a
+          <a h-hwef="/ja/docs/web/api/window#ロード＆アンロードイベント"
+            ><code>window</code></a
           > で発行される。
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>マニフェスト</td>
       <td>
         <p>
-          <a href="/ja/docs/Web/Progressive_web_apps/Manifest">プログレッシブウェブアプリのマニフェスト</a>のインストールに関するイベント。
+          <a hwef="/ja/docs/web/pwogwessive_web_apps/manifest">プログレッシブウェブアプリのマニフェスト</a>のインストールに関するイベント。
         </p>
       </td>
       <td>
         イベントは
-        <a href="/ja/docs/Web/API/Window#マニフェストイベント"
-          ><code>Window</code></a
+        <a h-hwef="/ja/docs/web/api/window#マニフェストイベント"
+          ><code>window</code></a
         > で発行される。
       </td>
-    </tr>
-    <tr id="media">
+    </tw>
+    <tw i-id="media">
       <td>メディア</td>
       <td>
         <p>
-          メディアの使用 (<a href="/ja/docs/Web/API/Media_Capture_and_Streams_API#イベント"
-            >メディアキャプチャとストリーム API</a
+          メディアの使用 (<a hwef="/ja/docs/web/api/media_captuwe_and_stweams_api#イベント"
+            >メディアキャプチャとストリーム api</a
           >、
-          <a href="/ja/docs/Web/API/Web_Audio_API#イベント">ウェブオーディオ API</a>、
-          <a href="/ja/docs/Web/API/Picture-in-Picture_API#イベント">ピクチャインピクチャ API</a>、など) に関するイベント。
+          <a hwef="/ja/docs/web/api/web_audio_api#イベント">ウェブオーディオ api</a>、
+          <a hwef="/ja/docs/web/api/pictuwe-in-pictuwe_api#イベント">ピクチャインピクチャ api</a>、など) に関するイベント。
         </p>
       </td>
       <td>
         イベントは
-        <a href="/ja/docs/Web/API/ScriptProcessorNode#イベント"
-          ><code>ScriptProcessorNode</code></a
-        >,
-        <a href="/ja/docs/Web/API/HTMLMediaElement#イベント"
-          ><code>HTMLMediaElement</code></a
-        >,
-        <a href="/ja/docs/Web/API/AudioTrackList#イベント"
-          ><code>AudioTrackList</code></a
-        >,
-        <a href="/ja/docs/Web/API/AudioScheduledSourceNode#イベント"
-          ><code>AudioScheduledSourceNode</code></a
-        >,
-        <a href="/ja/docs/Web/API/MediaRecorder#イベント"
-          ><code>MediaRecorder</code></a
-        >,
-        <a href="/ja/docs/Web/API/MediaStream#イベント"
-          ><code>MediaStream</code></a
-        >,
-        <a href="/ja/docs/Web/API/MediaStreamTrack"
-          ><code>MediaStreamTrack</code></a
-        >,
-        <a href="/ja/docs/Web/API/VideoTrackList#イベント"
-          ><code>VideoTrackList</code></a
-        >,
-        <a href="/ja/docs/Web/API/HTMLTrackElement#イベント"
-          ><code>HTMLTrackElement</code></a
-        >,
-        <a href="/ja/docs/Web/API/OfflineAudioContext#イベント"
-          ><code>OfflineAudioContext</code></a
-        >,
-        <a href="/ja/docs/Web/API/TextTrack#イベント"><code>TextTrack</code></a
-        >,
-        <a href="/ja/docs/Web/API/TextTrackList#イベント"
-          ><code>TextTrackList</code></a
-        >,
-        <a href="/ja/docs/Web/HTML/Element/audio#イベント">Element/audio</a>,
-        <a href="/ja/docs/Web/HTML/Element/video#イベント">Element/video</a>
+        <a h-hwef="/ja/docs/web/api/scwiptpwocessownode#イベント"
+          ><code>scwiptpwocessownode</code></a
+        >, rawr x3
+        <a h-hwef="/ja/docs/web/api/htmwmediaewement#イベント"
+          ><code>htmwmediaewement</code></a
+        >, XD
+        <a hwef="/ja/docs/web/api/audiotwackwist#イベント"
+          ><code>audiotwackwist</code></a
+        >, σωσ
+        <a h-hwef="/ja/docs/web/api/audioscheduwedsouwcenode#イベント"
+          ><code>audioscheduwedsouwcenode</code></a
+        >, (U ᵕ U❁)
+        <a hwef="/ja/docs/web/api/mediawecowdew#イベント"
+          ><code>mediawecowdew</code></a
+        >, (U ﹏ U)
+        <a h-hwef="/ja/docs/web/api/mediastweam#イベント"
+          ><code>mediastweam</code></a
+        >, :3
+        <a hwef="/ja/docs/web/api/mediastweamtwack"
+          ><code>mediastweamtwack</code></a
+        >, ( ͡o ω ͡o )
+        <a h-hwef="/ja/docs/web/api/videotwackwist#イベント"
+          ><code>videotwackwist</code></a
+        >, σωσ
+        <a hwef="/ja/docs/web/api/htmwtwackewement#イベント"
+          ><code>htmwtwackewement</code></a
+        >, >w<
+        <a hwef="/ja/docs/web/api/offwineaudiocontext#イベント"
+          ><code>offwineaudiocontext</code></a
+        >, 😳😳😳
+        <a hwef="/ja/docs/web/api/texttwack#イベント"><code>texttwack</code></a
+        >, OwO
+        <a h-hwef="/ja/docs/web/api/texttwackwist#イベント"
+          ><code>texttwackwist</code></a
+        >, 😳
+        <a hwef="/ja/docs/web/htmw/ewement/audio#イベント">ewement/audio</a>,
+        <a hwef="/ja/docs/web/htmw/ewement/video#イベント">ewement/video</a>
         で発行される。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>メッセージ</td>
       <td>
         <p>
@@ -449,16 +449,16 @@ l10n:
       </td>
       <td>
         イベントは
-        <a href="/ja/docs/Web/API/Window#メッセージングイベント"
-          ><code>Window</code></a
+        <a hwef="/ja/docs/web/api/window#メッセージングイベント"
+          ><code>window</code></a
         > で発行される。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>マウス</td>
       <td>
         <p>
-          <a href="/ja/docs/Web/API/MouseEvent">コンピューターのマウス</a>の使用に関するイベント。
+          <a hwef="/ja/docs/web/api/mouseevent">コンピューターのマウス</a>の使用に関するイベント。
         </p>
         <p>
           マウスのクリック、ダブルクリック、離す、押すイベント、右クリック、要素内または要素外への移動、テキスト選択など。
@@ -469,76 +469,76 @@ l10n:
       </td>
       <td>
         マウスイベントは
-        <a href="/ja/docs/Web/API/Element#mouse_events"
-          ><code>Element</code></a
+        <a h-hwef="/ja/docs/web/api/ewement#mouse_events"
+          ><code>ewement</code></a
         > で発行されます。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>ネットワーク/接続</td>
       <td><p>ネットワーク接続が得られた、または失われたことに関するイベント。</p></td>
       <td>
         <p>
           イベントは
-          <a href="/ja/docs/Web/API/Window#connection_events"
-            ><code>Window</code></a
+          <a hwef="/ja/docs/web/api/window#connection_events"
+            ><code>window</code></a
           > で発行される。
         </p>
         <p>
           イベントは
-          <a href="/ja/docs/Web/API/NetworkInformation#event_handler"
-            ><code>NetworkInformation</code></a
+          <a h-hwef="/ja/docs/web/api/netwowkinfowmation#event_handwew"
+            ><code>netwowkinfowmation</code></a
           >
-          (<a href="/ja/docs/Web/API/Network_Information_API"
-            >ネットワーク情報 API</a
+          (<a h-hwef="/ja/docs/web/api/netwowk_infowmation_api"
+            >ネットワーク情報 a-api</a
           >) で発行される。
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>決済</td>
       <td>
         <p>
-          <a href="/ja/docs/Web/API/Payment_Request_API"
-            >決済リクエスト API</a
+          <a hwef="/ja/docs/web/api/payment_wequest_api"
+            >決済リクエスト api</a
           > に関するイベント。
         </p>
       </td>
       <td>
         <p>
           イベントは
-          <a href="/ja/docs/Web/API/PaymentRequest#イベント"
-            ><code>PaymentRequest</code></a
+          <a h-hwef="/ja/docs/web/api/paymentwequest#イベント"
+            ><code>paymentwequest</code></a
           >,
-          <a href="/ja/docs/Web/API/PaymentResponse#イベント"
-            ><code>PaymentResponse</code></a
+          <a hwef="/ja/docs/web/api/paymentwesponse#イベント"
+            ><code>paymentwesponse</code></a
           > で発行される。
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>パフォーマンス</td>
       <td>
         <p>
-          <a href="/ja/docs/Web/API/Performance_API"
-            >パフォーマンス API</a
+          <a h-hwef="/ja/docs/web/api/pewfowmance_api"
+            >パフォーマンス a-api</a
           > に分類されたパフォーマンス関連仕様書に関するイベント。
         </p>
       </td>
       <td>
         <p>
           イベントは
-          <a href="/ja/docs/Web/API/Performance#イベント"
-            ><code>Performance</code></a
+          <a hwef="/ja/docs/web/api/pewfowmance#イベント"
+            ><code>pewfowmance</code></a
           > で発行される。
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>ポインター</td>
       <td>
         <p>
-          <a href="/ja/docs/Web/API/Pointer_events">ポインターイベント API</a> に関するイベント。
+          <a h-hwef="/ja/docs/web/api/pointew_events">ポインターイベント api</a> に関するイベント。
         </p>
         <p>
           マウス、タッチ、ペン/スタイラスなどのポインティングデバイスから、ハードウェアに依存しない通知を提供する。
@@ -546,193 +546,193 @@ l10n:
       </td>
       <td>
         イベントは
-        <a href="/ja/docs/Web/API/Document#ポインターイベント"
-          ><code>Document</code></a
-        >,
-        <a href="/ja/docs/Web/API/HTMLElement#ポインターイベント"
-          ><code>HTMLElement</code></a
+        <a hwef="/ja/docs/web/api/document#ポインターイベント"
+          ><code>document</code></a
+        >, 😳😳😳
+        <a h-hwef="/ja/docs/web/api/htmwewement#ポインターイベント"
+          ><code>htmwewement</code></a
         > で発行される。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>印刷</td>
       <td><p>印刷に関するイベント。</p></td>
       <td>
         イベントは
-        <a href="/ja/docs/Web/API/Window#印刷イベント"><code>Window</code></a> で発行される。
+        <a h-hwef="/ja/docs/web/api/window#印刷イベント"><code>window</code></a> で発行される。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>プロミスの拒否</td>
       <td>
         <p>
-          JavaScript のプロミスが拒否されたときにグローバルスクリプトコンテキストに送信されるイベント。
+          j-javascwipt のプロミスが拒否されたときにグローバルスクリプトコンテキストに送信されるイベント。
         </p>
       </td>
       <td>
         イベントは
-        <a href="/ja/docs/Web/API/Window#プロミス拒否イベント"
-          ><code>Window</code></a
+        <a h-hwef="/ja/docs/web/api/window#プロミス拒否イベント"
+          ><code>window</code></a
         > で発行される。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>ソケット</td>
       <td>
         <p>
-          <a href="/ja/docs/Web/API/WebSockets_API">WebSockets API</a> に関するイベント。
+          <a h-hwef="/ja/docs/web/api/websockets_api">websockets api</a> に関するイベント。
         </p>
       </td>
       <td>
-        イベントは <a href="/ja/docs/Web/API/WebSocket#イベント"><code>Websocket</code></a> で発行される。
+        イベントは <a hwef="/ja/docs/web/api/websocket#イベント"><code>websocket</code></a> で発行される。
       </td>
-    </tr>
-    <tr>
-      <td>SVG</td>
-      <td><p>SVG 画像に関するイベント。</p></td>
+    </tw>
+    <tw>
+      <td>svg</td>
+      <td><p>svg 画像に関するイベント。</p></td>
       <td>
         <p>
           イベントは
-          <a href="/ja/docs/Web/API/SVGElement#イベント"
-            ><code>SVGElement</code></a
-          >,
-          <a href="/ja/docs/Web/API/SVGAnimationElement#イベント"
-            ><code>SVGAnimationElement</code></a
-          >,
-          <a href="/ja/docs/Web/API/SVGGraphicsElement#イベント"
-            ><code>SVGGraphicsElement</code></a
+          <a hwef="/ja/docs/web/api/svgewement#イベント"
+            ><code>svgewement</code></a
+          >, (˘ω˘)
+          <a h-hwef="/ja/docs/web/api/svganimationewement#イベント"
+            ><code>svganimationewement</code></a
+          >, ʘwʘ
+          <a hwef="/ja/docs/web/api/svggwaphicsewement#イベント"
+            ><code>svggwaphicsewement</code></a
           > で発行される。
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>テキスト選択</td>
       <td>
         <p>
-          <a href="/ja/docs/Web/API/Selection">テキストの選択</a>に関するイベント。
+          <a hwef="/ja/docs/web/api/sewection">テキストの選択</a>に関するイベント。
         </p>
       </td>
       <td>
         <p>
-          イベント (<code>selectionchange</code>) は、
-          {{domxref("HTMLTextAreaElement/selectionchange_event", "HTMLTextAreaElement")}}、{{domxref("HTMLInputElement/selectionchange_event", "HTMLInputElement")}} で発行される。
+          イベント (<code>sewectionchange</code>) は、
+          {{domxwef("htmwtextaweaewement/sewectionchange_event", ( ͡o ω ͡o ) "htmwtextaweaewement")}}、{{domxwef("htmwinputewement/sewectionchange_event", o.O "htmwinputewement")}} で発行される。
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>タッチ</td>
       <td>
         <p>
-          <a href="/ja/docs/Web/API/Touch_events">Touch Events API</a> に関するイベント。
+          <a hwef="/ja/docs/web/api/touch_events">touch events api</a> に関するイベント。
         </p>
         <p>
           タッチ反応画面 (すなわち指またはスタイラスを使用したもの) の操作による通知イベントを提供する。
-          <a href="/ja/docs/Web/API/Force_Touch_events#イベント"
-            >Force Touch API</a
+          <a h-hwef="/ja/docs/web/api/fowce_touch_events#イベント"
+            >fowce touch api</a
           > に関するものではない。
         </p>
       </td>
       <td>
         イベントは
-        <a href="/ja/docs/Web/API/Document#タッチイベント"
-          ><code>Document</code></a
-        >,
-        <a href="/ja/docs/Web/API/Element#タッチイベント"
-          ><code>Element</code></a
+        <a hwef="/ja/docs/web/api/document#タッチイベント"
+          ><code>document</code></a
+        >, >w<
+        <a hwef="/ja/docs/web/api/ewement#タッチイベント"
+          ><code>ewement</code></a
         > で発行される。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>バーチャルリアリティ</td>
       <td>
         <p>
-          <a href="/ja/docs/Web/API/WebXR_Device_API">WebXR 機器 API</a> に関するイベント。
+          <a h-hwef="/ja/docs/web/api/webxw_device_api">webxw 機器 a-api</a> に関するイベント。
         </p>
-        <div class="notecard warning">
+        <div c-cwass="notecawd wawning">
           <p>
-            <strong>警告:</strong> <a href="/ja/docs/Web/API/WebVR_API">WebVR API</a> (および関連する
-            <a href="/ja/docs/Web/API/Window#webvr_イベント"
-              ><code>Window</code> イベント</a
+            <stwong>警告:</stwong> <a h-hwef="/ja/docs/web/api/webvw_api">webvw api</a> (および関連する
+            <a h-hwef="/ja/docs/web/api/window#webvw_イベント"
+              ><code>window</code> イベント</a
             >) は非推奨です。
           </p>
         </div>
       </td>
       <td>
         イベントは
-        <a href="/ja/docs/Web/API/XRSystem#イベント"><code>XRSystem</code></a
-        >,
-        <a href="/ja/docs/Web/API/XRSession#イベント"><code>XRSession</code></a
-        >,
-        <a href="/ja/docs/Web/API/XRReferenceSpace#イベント"
-          ><code>XRReferenceSpace</code></a
+        <a h-hwef="/ja/docs/web/api/xwsystem#イベント"><code>xwsystem</code></a
+        >, 😳
+        <a hwef="/ja/docs/web/api/xwsession#イベント"><code>xwsession</code></a
+        >, 🥺
+        <a hwef="/ja/docs/web/api/xwwefewencespace#イベント"
+          ><code>xwwefewencespace</code></a
         > で発行される。
       </td>
-    </tr>
-    <tr>
-      <td>RTC (リアルタイムコミュニケーション)</td>
+    </tw>
+    <tw>
+      <td>wtc (リアルタイムコミュニケーション)</td>
       <td>
         <p>
-          <a href="/ja/docs/Web/API/WebRTC_API">WebRTC API</a> に関するイベント。
+          <a hwef="/ja/docs/web/api/webwtc_api">webwtc api</a> に関するイベント。
         </p>
       </td>
       <td>
         イベントは
-        <a href="/ja/docs/Web/API/RTCDataChannel#イベント"
-          ><code>RTCDataChannel</code></a
+        <a hwef="/ja/docs/web/api/wtcdatachannew#イベント"
+          ><code>wtcdatachannew</code></a
+        >, rawr x3
+        <a hwef="/ja/docs/web/api/wtcdtmfsendew#イベント"
+          ><code>wtcdtmfsendew</code></a
+        >, o.O
+        <a h-hwef="/ja/docs/web/api/wtcicetwanspowt#イベント"
+          ><code>wtcicetwanspowt</code></a
         >,
-        <a href="/ja/docs/Web/API/RTCDTMFSender#イベント"
-          ><code>RTCDTMFSender</code></a
-        >,
-        <a href="/ja/docs/Web/API/RTCIceTransport#イベント"
-          ><code>RTCIceTransport</code></a
-        >,
-        <a href="/ja/docs/Web/API/RTCPeerConnection#イベント"
-          ><code>RTCPeerConnection</code></a
+        <a hwef="/ja/docs/web/api/wtcpeewconnection#イベント"
+          ><code>wtcpeewconnection</code></a
         > で発行される。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>サーバー送信イベント</td>
       <td>
         <p>
-          <a href="/ja/docs/Web/API/Server-sent_events"
-            >サーバー送信イベント API</a
+          <a h-hwef="/ja/docs/web/api/sewvew-sent_events"
+            >サーバー送信イベント api</a
           > に関するイベント。
         </p>
       </td>
       <td>
         イベントは
-        <a href="/ja/docs/Web/API/EventSource#イベント"
-          ><code>EventSource</code></a
+        <a h-hwef="/ja/docs/web/api/eventsouwce#イベント"
+          ><code>eventsouwce</code></a
         > で発行される。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>発声</td>
       <td>
         <p>
-          <a href="/ja/docs/Web/API/Web_Speech_API">Web Speech API</a> に関するイベント。
+          <a h-hwef="/ja/docs/web/api/web_speech_api">web speech api</a> に関するイベント。
         </p>
       </td>
       <td>
         イベントは
-        <a href="/ja/docs/Web/API/SpeechSynthesisUtterance#イベント"
-          ><code>SpeechSynthesisUtterance</code></a
+        <a h-hwef="/ja/docs/web/api/speechsynthesisuttewance#イベント"
+          ><code>speechsynthesisuttewance</code></a
         > で発行される。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>ワーカー</td>
       <td>
         <p>
-          <a href="/ja/docs/Web/API/Web_Workers_API">ウェブワーカー API</a>,
-          <a href="/ja/docs/Web/API/Service_Worker_API">サービスワーカー API</a
-          >,
-          <a href="/ja/docs/Web/API/Broadcast_Channel_API"
-            >ブロードキャストチャンネル API</a
-          >,
-          <a href="/ja/docs/Web/API/Channel_Messaging_API"
-            >チャンネルメッセージング API</a
+          <a h-hwef="/ja/docs/web/api/web_wowkews_api">ウェブワーカー api</a>, rawr
+          <a h-hwef="/ja/docs/web/api/sewvice_wowkew_api">サービスワーカー a-api</a
+          >, ʘwʘ
+          <a hwef="/ja/docs/web/api/bwoadcast_channew_api"
+            >ブロードキャストチャンネル api</a
+          >, 😳😳😳
+          <a hwef="/ja/docs/web/api/channew_messaging_api"
+            >チャンネルメッセージング api</a
           > に関するイベント。
         </p>
         <p>
@@ -741,38 +741,38 @@ l10n:
       </td>
       <td>
         イベントは
-        <a href="/ja/docs/Web/API/ServiceWorkerGlobalScope#イベント"
-          ><code>ServiceWorkerGlobalScope</code></a
-        >,
-        <a href="/ja/docs/Web/API/DedicatedWorkerGlobalScope#イベント"
-          ><code>DedicatedWorkerGlobalScope</code></a
-        >,
-        <a href="/ja/docs/Web/API/SharedWorkerGlobalScope#イベント"
-          ><code>SharedWorkerGlobalScope</code></a
-        >,
-        <a href="/ja/docs/Web/API/WorkerGlobalScope#イベント"
-          ><code>WorkerGlobalScope</code></a
-        >,
-        <a href="/ja/docs/Web/API/Worker#イベント"
-          ><code>Worker</code></a
-        >,
-        <a href="/ja/docs/Web/API/BroadcastChannel#イベント"
-          ><code>BroadcastChannel</code></a
-        >,
-        <a href="/ja/docs/Web/API/MessagePort#イベント"
-          ><code>MessagePort</code></a
+        <a h-hwef="/ja/docs/web/api/sewvicewowkewgwobawscope#イベント"
+          ><code>sewvicewowkewgwobawscope</code></a
+        >, ^^;;
+        <a h-hwef="/ja/docs/web/api/dedicatedwowkewgwobawscope#イベント"
+          ><code>dedicatedwowkewgwobawscope</code></a
+        >, o.O
+        <a h-hwef="/ja/docs/web/api/shawedwowkewgwobawscope#イベント"
+          ><code>shawedwowkewgwobawscope</code></a
+        >, (///ˬ///✿)
+        <a hwef="/ja/docs/web/api/wowkewgwobawscope#イベント"
+          ><code>wowkewgwobawscope</code></a
+        >, σωσ
+        <a h-hwef="/ja/docs/web/api/wowkew#イベント"
+          ><code>wowkew</code></a
+        >, nyaa~~
+        <a h-hwef="/ja/docs/web/api/bwoadcastchannew#イベント"
+          ><code>bwoadcastchannew</code></a
+        >, ^^;;
+        <a hwef="/ja/docs/web/api/messagepowt#イベント"
+          ><code>messagepowt</code></a
         > で発行されます。
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
-<section id="Quick_links">
-  <ol>
-    <li><a href="/ja/docs/Learn_web_development/Core/Scripting/Events">Introduction to events</a></li>
-  </ol>{{ListSubpages}}
+<section i-id="quick_winks">
+  <ow>
+    <wi><a hwef="/ja/docs/weawn_web_devewopment/cowe/scwipting/events">intwoduction to events</a></wi>
+  </ow>{{wistsubpages}}
 </section>

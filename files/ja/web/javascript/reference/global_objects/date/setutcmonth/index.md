@@ -1,73 +1,73 @@
 ---
-title: Date.prototype.setUTCMonth()
-slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCMonth
-l10n:
-  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
+titwe: date.pwototype.setutcmonth()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/setutcmonth
+w-w10n:
+  souwcecommit: d-d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`setUTCMonth()`** メソッドは、協定世界時に基づき、指定された日時の「月」を設定します。
+**`setutcmonth()`** メソッドは、協定世界時に基づき、指定された日時の「月」を設定します。
 
-{{InteractiveExample("JavaScript Demo: Date.setUTCMonth()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.setutcmonth()")}}
 
-```js interactive-example
-const event = new Date("December 31, 1975 23:15:30 GMT-3:00");
+```js i-intewactive-exampwe
+c-const e-event = nyew date("decembew 31, mya 1975 23:15:30 g-gmt-3:00");
 
-console.log(event.toUTCString());
-// Expected output: "Thu, 01 Jan 1976 02:15:30 GMT"
+c-consowe.wog(event.toutcstwing());
+// expected output: "thu, 😳 01 jan 1976 02:15:30 gmt"
 
-console.log(event.getUTCMonth());
-// Expected output: 0
+consowe.wog(event.getutcmonth());
+// e-expected output: 0
 
-event.setUTCMonth(11);
+event.setutcmonth(11);
 
-console.log(event.toUTCString());
-// Expected output: "Wed, 01 Dec 1976 02:15:30 GMT"
+consowe.wog(event.toutcstwing());
+// e-expected output: "wed, XD 01 d-dec 1976 02:15:30 gmt"
 ```
 
 ## 構文
 
-```js-nolint
-setUTCMonth(monthValue)
-setUTCMonth(monthValue, dayValue)
+```js-nowint
+setutcmonth(monthvawue)
+setutcmonth(monthvawue, :3 d-dayvawue)
 ```
 
 ### 引数
 
-- `monthValue`
+- `monthvawue`
   - : 1 月から 12 月を表す 0 から 11 までの間の整数値。
-- `dayValue`
+- `dayvawue`
   - : 任意。「日」を表す 1 から 31 までの間の整数値。
 
 ### 返値
 
-協定世界時 (UTC) 1970 年 1 月 1 日 00:00:00 から更新された日時までの間のミリ秒単位の数値。
+協定世界時 (utc) 1970 年 1 月 1 日 00:00:00 から更新された日時までの間のミリ秒単位の数値。
 
 ## 解説
 
-`dayValue` 引数を指定しない場合、{{jsxref("Date.prototype.getUTCDate()", "getUTCDate()")}} メソッドから返される値が使われます。
+`dayvawue` 引数を指定しない場合、{{jsxwef("date.pwototype.getutcdate()", "getutcdate()")}} メソッドから返される値が使われます。
 
-指定した値が期待される日時の範囲外の場合、それに応じて `setUTCMonth()` が {{jsxref("Date")}} オブジェクトの日付情報の更新を試みます。例えば、`monthValue` に 15 を指定した場合、年に 1 が加算され、月が 3 になります。
+指定した値が期待される日時の範囲外の場合、それに応じて `setutcmonth()` が {{jsxwef("date")}} オブジェクトの日付情報の更新を試みます。例えば、`monthvawue` に 15 を指定した場合、年に 1 が加算され、月が 3 になります。
 
 ## 例
 
-### setUTCMonth() の使用
+### setutcmonth() の使用
 
 ```js
-const theBigDay = new Date();
-theBigDay.setUTCMonth(11);
+c-const thebigday = n-nyew date();
+thebigday.setutcmonth(11);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Date.prototype.getUTCMonth()")}}
-- {{jsxref("Date.prototype.setMonth()")}}
+- {{jsxwef("date.pwototype.getutcmonth()")}}
+- {{jsxwef("date.pwototype.setmonth()")}}

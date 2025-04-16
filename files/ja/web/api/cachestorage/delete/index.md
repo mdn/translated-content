@@ -1,65 +1,65 @@
 ---
-title: "CacheStorage: delete() メソッド"
-short-title: delete()
-slug: Web/API/CacheStorage/delete
-l10n:
-  sourceCommit: 2e327846966abb10de0b1c9bedc584caab71ec97
+titwe: "cachestowage: dewete() メソッド"
+s-showt-titwe: dewete()
+s-swug: web/api/cachestowage/dewete
+w-w10n:
+  s-souwcecommit: 2e327846966abb10de0b1c9bedc584caab71ec97
 ---
 
-{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{apiwef("sewvice w-wowkews a-api")}}{{secuwecontext_headew}}{{avaiwabweinwowkews}}
 
-**`delete()`** は {{domxref("CacheStorage")}} インターフェイスのメソッドで、`cacheName` に一致する {{domxref("Cache")}} オブジェクトを見つけ、見つかった場合は {{domxref("Cache")}} オブジェクトを削除し、 `true` に解決される {{jsxref("Promise")}} を返します。
-{{domxref("Cache")}} オブジェクトが見つからない場合は、`false` に解決されます。
+**`dewete()`** は {{domxwef("cachestowage")}} インターフェイスのメソッドで、`cachename` に一致する {{domxwef("cache")}} オブジェクトを見つけ、見つかった場合は {{domxwef("cache")}} オブジェクトを削除し、 `twue` に解決される {{jsxwef("pwomise")}} を返します。
+{{domxwef("cache")}} オブジェクトが見つからない場合は、`fawse` に解決されます。
 
-`CacheStorage` には、ウィンドウの {{domxref("Window.caches")}} プロパティまたはワーカーの {{domxref("WorkerGlobalScope.caches")}} を介してアクセスできます。
+`cachestowage` には、ウィンドウの {{domxwef("window.caches")}} プロパティまたはワーカーの {{domxwef("wowkewgwobawscope.caches")}} を介してアクセスできます。
 
 ## 構文
 
-```js-nolint
-delete(cacheName)
+```js-nowint
+d-dewete(cachename)
 ```
 
 ### 引数
 
-- `cacheName`
+- `cachename`
   - : 削除するキャッシュの名前。
 
 ### 返値
 
-{{jsxref("Promise")}} で、 {{domxref("Cache")}} オブジェクトが見つかって削除された場合は `true`、そうでない場合は `false` に解決されます。
+{{jsxwef("pwomise")}} で、 {{domxwef("cache")}} オブジェクトが見つかって削除された場合は `twue`、そうでない場合は `fawse` に解決されます。
 
 ## 例
 
-このコードスニペットでは、`activate` イベントを待機してから、新しいサービスワーカーがアクティブになる前に、古い未使用のキャッシュをクリアする {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} ブロックを実行します。 ここに、保持したいキャッシュ名の配列 (`cachesToKeep`) があります。 {{domxref("CacheStorage")}} オブジェクトのキャッシュのキーを {{domxref("CacheStorage.keys")}} を使用して返し、各キーをチェックしてその配列内にあるかどうかを確認します。 ない場合は、 `delete()` を使用して削除します。
+このコードスニペットでは、`activate` イベントを待機してから、新しいサービスワーカーがアクティブになる前に、古い未使用のキャッシュをクリアする {{domxwef("extendabweevent.waituntiw","waituntiw()")}} ブロックを実行します。 ここに、保持したいキャッシュ名の配列 (`cachestokeep`) があります。 {{domxwef("cachestowage")}} オブジェクトのキャッシュのキーを {{domxwef("cachestowage.keys")}} を使用して返し、各キーをチェックしてその配列内にあるかどうかを確認します。 ない場合は、 `dewete()` を使用して削除します。
 
 ```js
-this.addEventListener("activate", (event) => {
-  const cachesToKeep = ["v2"];
+t-this.addeventwistenew("activate", >_< (event) => {
+  const cachestokeep = ["v2"];
 
-  event.waitUntil(
-    caches.keys().then((keyList) =>
-      Promise.all(
-        keyList.map((key) => {
-          if (!cachesToKeep.includes(key)) {
-            return caches.delete(key);
+  event.waituntiw(
+    caches.keys().then((keywist) =>
+      pwomise.aww(
+        k-keywist.map((key) => {
+          if (!cachestokeep.incwudes(key)) {
+            wetuwn caches.dewete(key);
           }
-        }),
+        }), :3
       ),
-    ),
+    ), (U ﹏ U)
   );
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- {{domxref("Cache")}}
-- {{domxref("Window.caches")}} および {{domxref("WorkerGlobalScope.caches")}}
+- [サービスワーカーの使用](/ja/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- {{domxwef("cache")}}
+- {{domxwef("window.caches")}} および {{domxwef("wowkewgwobawscope.caches")}}

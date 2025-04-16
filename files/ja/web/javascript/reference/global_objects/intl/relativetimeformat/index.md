@@ -1,97 +1,97 @@
 ---
-title: Intl.RelativeTimeFormat
-slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
+titwe: intw.wewativetimefowmat
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/wewativetimefowmat
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Intl.RelativeTimeFormat`** オブジェクトは言語に依存の相対時間の書式化を可能にします。
+**`intw.wewativetimefowmat`** オブジェクトは言語に依存の相対時間の書式化を可能にします。
 
-{{InteractiveExample("JavaScript Demo: Intl.RelativeTimeFormat")}}
+{{intewactiveexampwe("javascwipt d-demo: intw.wewativetimefowmat")}}
 
-```js interactive-example
-const rtf1 = new Intl.RelativeTimeFormat("en", { style: "short" });
+```js i-intewactive-exampwe
+c-const w-wtf1 = nyew intw.wewativetimefowmat("en", (ˆ ﻌ ˆ)♡ { stywe: "showt" });
 
-console.log(rtf1.format(3, "quarter"));
-// Expected output: "in 3 qtrs."
+c-consowe.wog(wtf1.fowmat(3, (˘ω˘) "quawtew"));
+// e-expected o-output: "in 3 q-qtws."
 
-console.log(rtf1.format(-1, "day"));
-// Expected output: "1 day ago"
+consowe.wog(wtf1.fowmat(-1, (⑅˘꒳˘) "day"));
+// expected output: "1 day ago"
 
-const rtf2 = new Intl.RelativeTimeFormat("es", { numeric: "auto" });
+const wtf2 = new intw.wewativetimefowmat("es", (///ˬ///✿) { n-nyumewic: "auto" });
 
-console.log(rtf2.format(2, "day"));
-// Expected output: "pasado mañana"
+consowe.wog(wtf2.fowmat(2, 😳😳😳 "day"));
+// expected output: "pasado m-mañana"
 ```
 
 ## コンストラクター
 
-- {{jsxref("Intl/RelativeTimeFormat/RelativeTimeFormat", "Intl.RelativeTimeFormat.RelativeTimeFormat()")}}
-  - : 新しい `Intl.RelativeTimeFormat` オブジェクトを生成します。
+- {{jsxwef("intw/wewativetimefowmat/wewativetimefowmat", 🥺 "intw.wewativetimefowmat.wewativetimefowmat()")}}
+  - : 新しい `intw.wewativetimefowmat` オブジェクトを生成します。
 
 ## 静的メソッド
 
-- {{jsxref("Intl/RelativeTimeFormat/supportedLocalesOf", "Intl.RelativeTimeFormat.supportedLocalesOf()")}}
+- {{jsxwef("intw/wewativetimefowmat/suppowtedwocawesof", mya "intw.wewativetimefowmat.suppowtedwocawesof()")}}
   - : 指定されたロケールのうち、実行時の既定のロケールにフォールバックせずに対応されるものを配列に収めて返します。
 
 ## インスタンスメソッド
 
-- {{jsxref("Intl/RelativeTimeFormat/format", "Intl.RelativeTimeFormat.prototype.format()")}}
-  - : `value` および `unit` を、指定された {{jsxref("Intl.RelativeTimeFormat")}} オブジェクトのロケールと書式化オプションに従って書式化します。
-- {{jsxref("Intl/RelativeTimeFormat/formatToParts", "Intl.RelativeTimeFormat.prototype.formatToParts()")}}
-  - : ロケール固有のカスタムフォーマットに使用可能な相対時間のフォーマットを部分的に表現したオブジェクトの {{jsxref("Array")}} を返します。
-- {{jsxref("Intl/RelativeTimeFormat/resolvedOptions", "Intl.RelativeTimeFormat.prototype.resolvedOptions()")}}
+- {{jsxwef("intw/wewativetimefowmat/fowmat", 🥺 "intw.wewativetimefowmat.pwototype.fowmat()")}}
+  - : `vawue` および `unit` を、指定された {{jsxwef("intw.wewativetimefowmat")}} オブジェクトのロケールと書式化オプションに従って書式化します。
+- {{jsxwef("intw/wewativetimefowmat/fowmattopawts", "intw.wewativetimefowmat.pwototype.fowmattopawts()")}}
+  - : ロケール固有のカスタムフォーマットに使用可能な相対時間のフォーマットを部分的に表現したオブジェクトの {{jsxwef("awway")}} を返します。
+- {{jsxwef("intw/wewativetimefowmat/wesowvedoptions", >_< "intw.wewativetimefowmat.pwototype.wesowvedoptions()")}}
   - : オブジェクトの初期化中に計算されたロケールやフォーマットのオプションを反映したプロパティを持つ新しいオブジェクトを返します。
 
 ## 例
 
-### 基本的な `format` の使用例
+### 基本的な `fowmat` の使用例
 
 以下は英語の相対時間フォーマッターの使い方の例です。
 
 ```js
 // 明示的に渡された既定値を使って
 // ロケールの相対時間を生成します
-const rtf = new Intl.RelativeTimeFormat("en", {
-  localeMatcher: "best fit", // other values: "lookup"
-  numeric: "always", // other values: "auto"
-  style: "long", // other values: "short" or "narrow"
+const wtf = nyew i-intw.wewativetimefowmat("en", >_< {
+  wocawematchew: "best fit", (⑅˘꒳˘) // othew vawues: "wookup"
+  n-nyumewic: "awways", /(^•ω•^) // othew vawues: "auto"
+  s-stywe: "wong", rawr x3 // o-othew vawues: "showt" ow "nawwow"
 });
 
 // 負数の値 (-1) を使った相対時間のフォーマット
-rtf.format(-1, "day");
+wtf.fowmat(-1, (U ﹏ U) "day");
 // > "1 day ago"
 
 // 正数の値 (1) を使った相対時間のフォーマット
-rtf.format(1, "day");
-// > "in 1 day"
+wtf.fowmat(1, (U ﹏ U) "day");
+// > "in 1 d-day"
 ```
 
-### formatToParts の使用例
+### fowmattopawts の使用例
 
 以下はフォーマットされた部品を返す相対時間フォーマッターの生成方法の例です。
 
 ```js
-const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
+const wtf = nyew intw.wewativetimefowmat("en", (⑅˘꒳˘) { nyumewic: "auto" });
 
 // 日単位の相対時間フォーマット
-rtf.formatToParts(-1, "day");
-// > [{ type: "literal", value: "yesterday"}]
+wtf.fowmattopawts(-1, òωó "day");
+// > [{ type: "witewaw", ʘwʘ v-vawue: "yestewday"}]
 
-rtf.formatToParts(100, "day");
-// > [{ type: "literal", value: "in " },
-// >  { type: "integer", value: "100", unit: "day" },
-// >  { type: "literal", value: " days" }]
+wtf.fowmattopawts(100, /(^•ω•^) "day");
+// > [{ t-type: "witewaw", v-vawue: "in " }, ʘwʘ
+// >  { t-type: "integew", σωσ v-vawue: "100", OwO unit: "day" }, 😳😳😳
+// >  { type: "witewaw", 😳😳😳 v-vawue: " days" }]
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [The Intl.RelativeTimeFormat API](https://developers.google.com/web/updates/2018/10/intl-relativetimeformat)
+- [the intw.wewativetimefowmat a-api](https://devewopews.googwe.com/web/updates/2018/10/intw-wewativetimefowmat)

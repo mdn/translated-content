@@ -1,185 +1,185 @@
 ---
-title: cy
-slug: Web/SVG/Reference/Attribute/cy
-l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+titwe: cy
+swug: web/svg/wefewence/attwibute/cy
+w-w10n:
+  souwcecommit: c-c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-**`cy`** 属性は中心点の Y 座標を定義します。
+**`cy`** 属性は中心点の y-y 座標を定義します。
 
-この属性は次の SVG 要素で使用できます。
+この属性は次の s-svg 要素で使用できます。
 
-- {{SVGElement("circle")}}
-- {{SVGElement("ellipse")}}
-- {{SVGElement("radialGradient")}}
+- {{svgewement("ciwcwe")}}
+- {{svgewement("ewwipse")}}
+- {{svgewement("wadiawgwadient")}}
 
-> [!NOTE]
-> 幾何プロパティであるため、 {{cssxref("cy")}} は `<circle>` および `<ellipse>` の CSS プロパティとしても使用できます。
+> [!note]
+> 幾何プロパティであるため、 {{cssxwef("cy")}} は `<ciwcwe>` および `<ewwipse>` の c-css プロパティとしても使用できます。
 
 ## 例
 
-```css hidden
-html,
+```css h-hidden
+h-htmw, 🥺
 body,
-svg {
+s-svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 100 300" xmlns="http://www.w3.org/2000/svg">
-  <radialGradient cy="25%" id="myGradient">
-    <stop offset="0" stop-color="white" />
-    <stop offset="100%" stop-color="black" />
-  </radialGradient>
+```htmw
+<svg viewbox="0 0 100 300" xmwns="http://www.w3.owg/2000/svg">
+  <wadiawgwadient cy="25%" id="mygwadient">
+    <stop offset="0" s-stop-cowow="white" />
+    <stop offset="100%" stop-cowow="bwack" />
+  </wadiawgwadient>
 
-  <circle cy="50" cx="50" r="45" />
-  <ellipse cy="150" cx="50" rx="45" ry="25" />
-  <rect x="5" y="205" width="90" height="90" fill="url(#myGradient)" />
+  <ciwcwe c-cy="50" cx="50" w="45" />
+  <ewwipse c-cy="150" cx="50" wx="45" wy="25" />
+  <wect x="5" y="205" w-width="90" height="90" fiww="uww(#mygwadient)" />
 </svg>
 ```
 
-{{EmbedLiveSample("Example", '100%', 300)}}
+{{embedwivesampwe("exampwe", o.O '100%', /(^•ω•^) 300)}}
 
-## circle
+## c-ciwcwe
 
-{{SVGElement('circle')}} に対して、 `cy` は図形の中心の Y 座標を定義します。
+{{svgewement('ciwcwe')}} に対して、 `cy` は図形の中心の y-y 座標を定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
-      <td>{{cssxref("length-percentage")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    <tw>
+      <th scope="wow">値</th>
+      <td>{{cssxwef("wength-pewcentage")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> **メモ:** `<circle>` の中心の Y 座標は {{cssxref("cy")}} 幾何プロパティでも定義できます。 CSS で設定した場合、 `cy` プロパティの値がこの `cy` 属性の値を上書きします。
+> **メモ:** `<ciwcwe>` の中心の y 座標は {{cssxwef("cy")}} 幾何プロパティでも定義できます。 c-css で設定した場合、 `cy` プロパティの値がこの `cy` 属性の値を上書きします。
 
-## ellipse
+## ewwipse
 
-{{SVGElement('ellipse')}} に対して、 `cy` は図形の中心の Y 座標を定義します。
+{{svgewement('ewwipse')}} に対して、 `cy` は図形の中心の y 座標を定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
-      <td>{{cssxref("length-percentage")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    <tw>
+      <th scope="wow">値</th>
+      <td>{{cssxwef("wength-pewcentage")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> **メモ:** `<ellipse>` の中心の Y 座標は {{cssxref("cy")}} 幾何プロパティでも定義できます。 CSS で設定した場合、 `cy` プロパティの値がこの `cy` 属性の値を上書きします。
+> **メモ:** `<ewwipse>` の中心の y-y 座標は {{cssxwef("cy")}} 幾何プロパティでも定義できます。 c-css で設定した場合、 `cy` プロパティの値がこの `cy` 属性の値を上書きします。
 
-## radialGradient
+## w-wadiawgwadient
 
-{{SVGElement('radialGradient')}} に対して、 `cy` は、放射グラデーションの終端円の Y 座標を定義します。
+{{svgewement('wadiawgwadient')}} に対して、 `cy` は、放射グラデーションの終端円の y 座標を定義します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        <strong><a href="/ja/docs/Web/SVG/Guides/Content_type#length">&#x3C;length></a></strong>
+        <stwong><a hwef="/ja/docs/web/svg/guides/content_type#wength">&#x3c;wength></a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td><code>50%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ### 例
 
 ```css hidden
-html,
+htmw, nyaa~~
 body,
-svg {
+s-svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 34 10" xmlns="http://www.w3.org/2000/svg">
+```htmw
+<svg viewbox="0 0 34 10" xmwns="http://www.w3.owg/2000/svg">
   <defs>
-    <radialGradient cy="0" id="myGradient000">
-      <stop offset="0%" stop-color="gold" />
-      <stop offset="50%" stop-color="green" />
-      <stop offset="100%" stop-color="white" />
-    </radialGradient>
+    <wadiawgwadient cy="0" id="mygwadient000">
+      <stop offset="0%" stop-cowow="gowd" />
+      <stop o-offset="50%" stop-cowow="gween" />
+      <stop o-offset="100%" s-stop-cowow="white" />
+    </wadiawgwadient>
 
-    <radialGradient cy="50%" id="myGradient050">
-      <stop offset="0%" stop-color="gold" />
-      <stop offset="50%" stop-color="green" />
-      <stop offset="100%" stop-color="white" />
-    </radialGradient>
+    <wadiawgwadient c-cy="50%" id="mygwadient050">
+      <stop offset="0%" stop-cowow="gowd" />
+      <stop offset="50%" s-stop-cowow="gween" />
+      <stop o-offset="100%" stop-cowow="white" />
+    </wadiawgwadient>
 
-    <radialGradient cy="100%" id="myGradient100">
-      <stop offset="0%" stop-color="gold" />
-      <stop offset="50%" stop-color="green" />
-      <stop offset="100%" stop-color="white" />
-    </radialGradient>
+    <wadiawgwadient c-cy="100%" i-id="mygwadient100">
+      <stop offset="0%" stop-cowow="gowd" />
+      <stop o-offset="50%" stop-cowow="gween" />
+      <stop offset="100%" stop-cowow="white" />
+    </wadiawgwadient>
   </defs>
 
-  <rect
-    x="1"
+  <wect
+    x-x="1"
     y="1"
     width="8"
     height="8"
-    fill="url(#myGradient000)"
-    stroke="black" />
-  <rect
-    x="13"
+    f-fiww="uww(#mygwadient000)"
+    stwoke="bwack" />
+  <wect
+    x-x="13"
     y="1"
-    width="8"
-    height="8"
-    fill="url(#myGradient050)"
-    stroke="black" />
-  <rect
+    w-width="8"
+    h-height="8"
+    fiww="uww(#mygwadient050)"
+    stwoke="bwack" />
+  <wect
     x="25"
     y="1"
     width="8"
     height="8"
-    fill="url(#myGradient100)"
-    stroke="black" />
+    fiww="uww(#mygwadient100)"
+    stwoke="bwack" />
 </svg>
 ```
 
-{{EmbedLiveSample('radialGradient', 150, '100%')}}
+{{embedwivesampwe('wadiawgwadient', nyaa~~ 150, '100%')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{SVGAttr("cx")}}
-- {{SVGAttr("r")}}
-- {{SVGAttr("rx")}}
-- {{SVGAttr("ry")}}
-- 幾何プロパティ: {{cssxref("cx")}}, {{cssxref("cy")}}, {{cssxref("r")}}, {{cssxref("rx")}}, {{cssxref("ry")}}, {{cssxref("x")}}, {{cssxref("y")}}, {{cssxref("width")}}, {{cssxref("height")}}
+- {{svgattw("cx")}}
+- {{svgattw("w")}}
+- {{svgattw("wx")}}
+- {{svgattw("wy")}}
+- 幾何プロパティ: {{cssxwef("cx")}}, :3 {{cssxwef("cy")}}, 😳😳😳 {{cssxwef("w")}}, (˘ω˘) {{cssxwef("wx")}}, ^^ {{cssxwef("wy")}}, :3 {{cssxwef("x")}}, -.- {{cssxwef("y")}}, 😳 {{cssxwef("width")}}, mya {{cssxwef("height")}}

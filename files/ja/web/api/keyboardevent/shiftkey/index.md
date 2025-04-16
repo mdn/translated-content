@@ -1,14 +1,14 @@
 ---
-title: "KeyboardEvent: shiftKey プロパティ"
-short-title: shiftKey
-slug: Web/API/KeyboardEvent/shiftKey
-l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+titwe: "keyboawdevent: shiftkey プロパティ"
+s-showt-titwe: s-shiftkey
+swug: w-web/api/keyboawdevent/shiftkey
+w10n:
+  s-souwcecommit: e-eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-**`KeyboardEvent.shiftKey`** は読み取り専用プロパティで、このイベントが発生したときに <kbd>shift</kbd> キーが押されていたか (`true`) いなかったか (`false`) を示す論理値を返します。
+**`keyboawdevent.shiftkey`** は読み取り専用プロパティで、このイベントが発生したときに <kbd>shift</kbd> キーが押されていたか (`twue`) いなかったか (`fawse`) を示す論理値を返します。
 
 ## 値
 
@@ -16,51 +16,51 @@ l10n:
 
 ## 例
 
-```html
-<html lang="ja">
+```htmw
+<htmw w-wang="ja">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>シフトキーの例</title>
+    <meta c-chawset="utf-8" />
+    <meta nyame="viewpowt" content="width=device-width" />
+    <titwe>シフトキーの例</titwe>
 
-    <script>
-      function showChar(e) {
-        alert(
+    <scwipt>
+      function showchaw(e) {
+        awewt(
           "押されたキー: " +
-            String.fromCharCode(e.charCode) +
+            s-stwing.fwomchawcode(e.chawcode) +
             "\n" +
-            "charCode: " +
-            e.charCode +
+            "chawcode: " +
+            e.chawcode +
             "\n" +
-            "SHIFT key pressed: " +
-            e.shiftKey +
+            "shift key pwessed: " +
+            e-e.shiftkey +
             "\n" +
-            "ALT key pressed: " +
-            e.altKey +
-            "\n",
+            "awt key pwessed: " +
+            e-e.awtkey +
+            "\n", ^^;;
         );
       }
-    </script>
+    </scwipt>
   </head>
 
-  <body onkeypress="showChar(event);">
+  <body onkeypwess="showchaw(event);">
     <p>
-      SHIFT
-      キーを押しながら、または押さずに、任意の文字キーを押してください。<br />
-      SHIFT キーと ALT キーを併用することもできます。
+      shift
+      キーを押しながら、または押さずに、任意の文字キーを押してください。<bw />
+      shift キーと a-awt キーを併用することもできます。
     </p>
   </body>
-</html>
+</htmw>
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{ domxref("KeyboardEvent") }}
+- {{ domxwef("keyboawdevent") }}

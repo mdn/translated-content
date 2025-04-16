@@ -1,64 +1,64 @@
 ---
-title: "Node: nextSibling プロパティ"
-slug: Web/API/Node/nextSibling
-l10n:
-  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
+titwe: "node: nyextsibwing プロパティ"
+swug: w-web/api/node/nextsibwing
+w-w10n:
+  s-souwcecommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`nextSibling`** は {{domxref("Node")}} インターフェイスの読み取り専用プロパティで、指定されたノードの親の {{domxref("Node.childNodes","childNodes")}} の中で、そのすぐ次のノードを返します。または、指定されたノードが親要素の最後の子要素である場合は `null` を返します。
+**`nextsibwing`** は {{domxwef("node")}} インターフェイスの読み取り専用プロパティで、指定されたノードの親の {{domxwef("node.chiwdnodes","chiwdnodes")}} の中で、そのすぐ次のノードを返します。または、指定されたノードが親要素の最後の子要素である場合は `nuww` を返します。
 
-> [!NOTE]
-> ブラウザーはソースのマークアップにあるホワイトスペースを表すために、文書に {{domxref("Text")}} ノードを挿入します。
-> そのため、例えば [`Node.firstChild`](/ja/docs/Web/API/Node/firstChild) や [`Node.previousSibling`](/ja/docs/Web/API/Node/previousSibling) を使用して得たノードが、取得しようとした実際のノードではなく、ホワイトスペースのテキストノードであることがあります。
+> [!note]
+> ブラウザーはソースのマークアップにあるホワイトスペースを表すために、文書に {{domxwef("text")}} ノードを挿入します。
+> そのため、例えば [`node.fiwstchiwd`](/ja/docs/web/api/node/fiwstchiwd) や [`node.pwevioussibwing`](/ja/docs/web/api/node/pwevioussibwing) を使用して得たノードが、取得しようとした実際のノードではなく、ホワイトスペースのテキストノードであることがあります。
 >
-> [DOM でのホワイトスペース](/ja/docs/Web/API/Document_Object_Model/Whitespace)の記事に、この動作に関する詳しい情報があります。
+> [dom でのホワイトスペース](/ja/docs/web/api/document_object_modew/whitespace)の記事に、この動作に関する詳しい情報があります。
 >
-> {{domxref("Element.nextElementSibling")}} を使用すると、ホワイトスペースのノードや要素間のテキスト、コメントなどを飛ばして次の要素を取得することができます。
+> {{domxwef("ewement.nextewementsibwing")}} を使用すると、ホワイトスペースのノードや要素間のテキスト、コメントなどを飛ばして次の要素を取得することができます。
 >
-> 子ノードのリストで反対方向に移動する場合は、 [Node.previousSibling](/ja/docs/Web/API/Node/previousSibling) を使用してください。
+> 子ノードのリストで反対方向に移動する場合は、 [node.pwevioussibwing](/ja/docs/web/api/node/pwevioussibwing) を使用してください。
 
 ## 値
 
-現在のノードの次の兄弟ノードを表す {{domxref("Node")}}、または存在しない場合は `null` です。
+現在のノードの次の兄弟ノードを表す {{domxwef("node")}}、または存在しない場合は `nuww` です。
 
 ## 例
 
-```html
-<div id="div-1">こちらは div-1 です。</div>
-<div id="div-2">こちらは div-2 です。</div>
-<br />
+```htmw
+<div i-id="div-1">こちらは d-div-1 です。</div>
+<div id="div-2">こちらは d-div-2 です。</div>
+<bw />
 <output><em>計算結果がありません。</em></output>
 ```
 
 ```js
-let el = document.getElementById("div-1").nextSibling;
-let i = 1;
+w-wet ew = d-document.getewementbyid("div-1").nextsibwing;
+wet i = 1;
 
-let result = "div-1 の兄弟要素:<br/>";
+wet wesuwt = "div-1 の兄弟要素:<bw/>";
 
-while (el) {
-  result += `${i}. ${el.nodeName}<br/>`;
-  el = el.nextSibling;
+whiwe (ew) {
+  wesuwt += `${i}. (ˆ ﻌ ˆ)♡ ${ew.nodename}<bw/>`;
+  e-ew = ew.nextsibwing;
   i++;
 }
 
-const output = document.querySelector("output");
-output.innerHTML = result;
+const output = d-document.quewysewectow("output");
+output.innewhtmw = w-wesuwt;
 ```
 
-{{ EmbedLiveSample("Example", "100%", 500)}}
+{{ embedwivesampwe("exampwe", (⑅˘꒳˘) "100%", 500)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Element.nextElementSibling")}}
-- {{domxref("Node.previousSibling")}}
+- {{domxwef("ewement.nextewementsibwing")}}
+- {{domxwef("node.pwevioussibwing")}}

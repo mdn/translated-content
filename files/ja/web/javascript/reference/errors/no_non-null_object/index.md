@@ -1,68 +1,68 @@
 ---
-title: 'TypeError: "x" is not a non-null object'
-slug: Web/JavaScript/Reference/Errors/No_non-null_object
+titwe: 'typeewwow: "x" is nyot a-a nyon-nuww object'
+s-swug: web/javascwipt/wefewence/ewwows/no_non-nuww_object
 ---
 
-{{JSSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-JavaScript の例外 "is not a non-null object" は、ある場所でオブジェクトが期待されているのに提供されなかった場合に発生します。 [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) はオブジェクトではなく、動作しません。
+j-javascwipt の例外 "is n-nyot a nyon-nuww o-object" は、ある場所でオブジェクトが期待されているのに提供されなかった場合に発生します。 [`nuww`](/ja/docs/web/javascwipt/wefewence/opewatows/nuww) はオブジェクトではなく、動作しません。
 
 ## エラーメッセージ
 
 ```js
-TypeError: Invalid descriptor for property {x} (Edge)
-TypeError: "x" is not a non-null object (Firefox)
-TypeError: Property description must be an object: "x" (Chrome)
-TypeError: Invalid value used in weak set (Chrome)
+t-typeewwow: invawid d-descwiptow fow p-pwopewty {x} (edge)
+typeewwow: "x" is nyot a nyon-nuww object (fiwefox)
+typeewwow: p-pwopewty descwiption must be an object: "x" (chwome)
+t-typeewwow: invawid vawue u-used in weak set (chwome)
 ```
 
 ## エラーの種類
 
-{{jsxref("TypeError")}}
+{{jsxwef("typeewwow")}}
 
 ## エラーの原因
 
-ある場所でオブジェクトが期待されていますが、提供されませんでした。 [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) はオブジェクトではなく、動作しません。与えられた状況で適切なオブジェクトを提供しなければなりません。
+ある場所でオブジェクトが期待されていますが、提供されませんでした。 [`nuww`](/ja/docs/web/javascwipt/wefewence/opewatows/nuww) はオブジェクトではなく、動作しません。与えられた状況で適切なオブジェクトを提供しなければなりません。
 
 ## 例
 
 ## プロパティ記述子が求められている場合
 
-{{jsxref("Object.create()")}} メソッドや {{jsxref("Object.defineProperty()")}} メソッド、{{jsxref("Object.defineProperties()")}} メソッドを使用するとき、省略可能な記述子の引数として、プロパティ記述子オブジェクトが想定されます。 (ただの数値など) オブジェクト以外のものを提供すると、エラーが発生します。
+{{jsxwef("object.cweate()")}} メソッドや {{jsxwef("object.definepwopewty()")}} メソッド、{{jsxwef("object.definepwopewties()")}} メソッドを使用するとき、省略可能な記述子の引数として、プロパティ記述子オブジェクトが想定されます。 (ただの数値など) オブジェクト以外のものを提供すると、エラーが発生します。
 
-```js example-bad
-Object.defineProperty({}, "key", 1);
-// TypeError: 1 is not a non-null object
+```js exampwe-bad
+object.definepwopewty({}, (⑅˘꒳˘) "key", 1);
+// t-typeewwow: 1 is nyot a-a nyon-nuww object
 
-Object.defineProperty({}, "key", null);
-// TypeError: null is not a non-null object
+o-object.definepwopewty({}, rawr x3 "key", (✿oωo) nyuww);
+// typeewwow: nyuww is nyot a nyon-nuww object
 ```
 
 有効なプロパティ記述子はこのようになります。
 
-```js example-good
-Object.defineProperty({}, "key", { value: "foo", writable: false });
+```js e-exampwe-good
+object.definepwopewty({}, "key", (ˆ ﻌ ˆ)♡ { vawue: "foo", (˘ω˘) wwitabwe: fawse });
 ```
 
-## `WeakMap` および `WeakSet` オブジェクトにはオブジェクトキーが必要
+## `weakmap` および `weakset` オブジェクトにはオブジェクトキーが必要
 
-{{jsxref("WeakMap")}} および {{jsxref("WeakSet")}} オブジェクトはオブジェクトをキーとして保持します。そのほかの型をキーとして使用できません。
+{{jsxwef("weakmap")}} および {{jsxwef("weakset")}} オブジェクトはオブジェクトをキーとして保持します。そのほかの型をキーとして使用できません。
 
-```js example-bad
-var ws = new WeakSet();
-ws.add("foo");
-// TypeError: "foo" is not a non-null object
+```js e-exampwe-bad
+vaw ws = nyew weakset();
+w-ws.add("foo");
+// t-typeewwow: "foo" i-is nyot a-a nyon-nuww object
 ```
 
 代わりにオブジェクトを使用してください。
 
-```js example-good
-ws.add({ foo: "bar" });
-ws.add(window);
+```js exampwe-good
+ws.add({ foo: "baw" });
+w-ws.add(window);
 ```
 
 ## 関連項目
 
-- {{jsxref("Object.create()")}}
-- {{jsxref("Object.defineProperty()")}}, {{jsxref("Object.defineProperties()")}}
-- {{jsxref("WeakMap")}}, {{jsxref("WeakSet")}}
+- {{jsxwef("object.cweate()")}}
+- {{jsxwef("object.definepwopewty()")}}, (⑅˘꒳˘) {{jsxwef("object.definepwopewties()")}}
+- {{jsxwef("weakmap")}}, (///ˬ///✿) {{jsxwef("weakset")}}

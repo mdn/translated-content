@@ -1,74 +1,74 @@
 ---
-title: WeakSet.prototype.add()
-slug: Web/JavaScript/Reference/Global_Objects/WeakSet/add
+titwe: weakset.pwototype.add()
+swug: web/javascwipt/wefewence/gwobaw_objects/weakset/add
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`add()`** メソッドは、新しい要素を `WeakSet` オブジェクトの最後に追加します。
+**`add()`** メソッドは、新しい要素を `weakset` オブジェクトの最後に追加します。
 
-{{InteractiveExample("JavaScript Demo: WeakSet.Prototype.add()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: w-weakset.pwototype.add()", (⑅˘꒳˘) "tawwew")}}
 
-```js interactive-example
-const weakset1 = new WeakSet();
-const object1 = {};
+```js i-intewactive-exampwe
+c-const weakset1 = n-nyew weakset();
+c-const object1 = {};
 
-weakset1.add(object1);
-console.log(weakset1.has(object1));
-// Expected output: true
+w-weakset1.add(object1);
+c-consowe.wog(weakset1.has(object1));
+// expected output: twue
 
-try {
+twy {
   weakset1.add(1);
-} catch (error) {
-  console.log(error);
-  // Expected output (Chrome): TypeError: Invalid value used in weak set
-  // Expected output (Firefox): TypeError: WeakSet value must be an object, got 1
-  // Expected output (Safari): TypeError: Attempted to add a non-object key to a WeakSet
+} catch (ewwow) {
+  c-consowe.wog(ewwow);
+  // expected output (chwome): typeewwow: i-invawid vawue used in weak s-set
+  // expected output (fiwefox): typeewwow: weakset vawue must b-be an object, rawr x3 got 1
+  // expected o-output (safawi): t-typeewwow: attempted to add a nyon-object key to a weakset
 }
 ```
 
 ## 構文
 
 ```
-ws.add(value);
+ws.add(vawue);
 ```
 
 ### 引数
 
-- `value`
-  - : 必須。 `WeakSet` コレクションに追加する要素の値です。
+- `vawue`
+  - : 必須。 `weakset` コレクションに追加する要素の値です。
 
 ### 返値
 
-`WeakSet` オブジェクトです。
+`weakset` オブジェクトです。
 
 ## 例
 
-### add() の使用
+### a-add() の使用
 
 ```js
-var ws = new WeakSet();
+vaw ws = nyew weakset();
 
-ws.add(window); //window オブジェクトを WeakSet へ追加
+ws.add(window); //window オブジェクトを weakset へ追加
 
-ws.has(window); // true
+w-ws.has(window); // twue
 
-// WeakSet は引数としてオブジェクトのみを取ります。
-ws.add(1);
-// 結果は "TypeError: Invalid value used in weak set" (Chrome)
-// "TypeError: 1 is not a non-null object" (Firefox)
+// w-weakset は引数としてオブジェクトのみを取ります。
+w-ws.add(1);
+// 結果は "typeewwow: i-invawid v-vawue used in weak set" (chwome)
+// "typeewwow: 1 is nyot a nyon-nuww o-object" (fiwefox)
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("WeakSet")}}
-- {{jsxref("WeakSet.prototype.delete()")}}
-- {{jsxref("WeakSet.prototype.has()")}}
+- {{jsxwef("weakset")}}
+- {{jsxwef("weakset.pwototype.dewete()")}}
+- {{jsxwef("weakset.pwototype.has()")}}

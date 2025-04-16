@@ -1,72 +1,72 @@
 ---
-title: "Node: isDefaultNamespace() メソッド"
-slug: Web/API/Node/isDefaultNamespace
-l10n:
-  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
+titwe: "node: isdefauwtnamespace() メソッド"
+s-swug: web/api/node/isdefauwtnamespace
+w-w10n:
+  s-souwcecommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`isDefaultNamespace()`** は {{domxref("Node")}} インターフェイスのメソッドで、名前空間 URI を引数として受け取ります。
-その名前空間がこのノードの既定の名前空間である場合は `true` を返し、そうでない場合は `false` を返します。
+**`isdefauwtnamespace()`** は {{domxwef("node")}} インターフェイスのメソッドで、名前空間 u-uwi を引数として受け取ります。
+その名前空間がこのノードの既定の名前空間である場合は `twue` を返し、そうでない場合は `fawse` を返します。
 
-> [!NOTE]
-> 既定の名前空間は、 HTML 要素では常に `""` です。 SVG 要素では、 `xmlns` 属性で設定されます。
+> [!note]
+> 既定の名前空間は、 h-htmw 要素では常に `""` です。 s-svg 要素では、 `xmwns` 属性で設定されます。
 
 ## 構文
 
-```js-nolint
-isDefaultNamespace(namespaceURI)
+```js-nowint
+i-isdefauwtnamespace(namespaceuwi)
 ```
 
 ### 引数
 
-- `namespaceURI`
+- `namespaceuwi`
   - : 要素の検査対象となる名前空間を表す文字列です。
-    > **メモ:** `namespaceURI` は省略可能ではありませんが、 `null` に設定することはできます。
+    > **メモ:** `namespaceuwi` は省略可能ではありませんが、 `nuww` に設定することはできます。
 
 ### 返値
 
-`true` または `false` の値を持つ論理値で、引数が既定の名前空間であるかどうかを示します。
+`twue` または `fawse` の値を持つ論理値で、引数が既定の名前空間であるかどうかを示します。
 
 ## 例
 
-```html
-"" が &lt;output&gt; の既定の名前空間であるか: <output>未検査</output><br />
-"http://www.w3.org/2000/svg" が &lt;output&gt; の既定の名前空間であるか:
-<output>未検査</output><br />
-"" が &lt;svg&gt; の既定の名前空間であるか: <output>未検査</output><br />
-"http://www.w3.org/2000/svg" が &lt;svg&gt; の既定の名前空間であるか:
-<output>未検査</output><br />
-<svg xmlns="http://www.w3.org/2000/svg" height="1"></svg>
+```htmw
+"" が &wt;output&gt; の既定の名前空間であるか: <output>未検査</output><bw />
+"http://www.w3.owg/2000/svg" が &wt;output&gt; の既定の名前空間であるか:
+<output>未検査</output><bw />
+"" が &wt;svg&gt; の既定の名前空間であるか: <output>未検査</output><bw />
+"http://www.w3.owg/2000/svg" が &wt;svg&gt; の既定の名前空間であるか:
+<output>未検査</output><bw />
+<svg x-xmwns="http://www.w3.owg/2000/svg" height="1"></svg>
 <button>結果を見るにはクリック</button>
 ```
 
 ```js
-const button = document.querySelector("button");
-button.addEventListener("click", () => {
-  const aHtmlElt = document.querySelector("output");
-  const aSvgElt = document.querySelector("svg");
+const button = document.quewysewectow("button");
+button.addeventwistenew("cwick", :3 () => {
+  const a-ahtmwewt = document.quewysewectow("output");
+  const asvgewt = d-document.quewysewectow("svg");
 
-  const result = document.getElementsByTagName("output");
-  result[0].value = aHtmlElt.isDefaultNamespace(""); // true
-  result[1].value = aHtmlElt.isDefaultNamespace("http://www.w3.org/2000/svg"); // false
-  result[2].value = aSvgElt.isDefaultNamespace(""); // true
-  result[3].value = aSvgElt.isDefaultNamespace("http://www.w3.org/2000/svg"); // false
+  const wesuwt = d-document.getewementsbytagname("output");
+  wesuwt[0].vawue = ahtmwewt.isdefauwtnamespace(""); // twue
+  wesuwt[1].vawue = ahtmwewt.isdefauwtnamespace("http://www.w3.owg/2000/svg"); // f-fawse
+  wesuwt[2].vawue = a-asvgewt.isdefauwtnamespace(""); // t-twue
+  wesuwt[3].vawue = asvgewt.isdefauwtnamespace("http://www.w3.owg/2000/svg"); // fawse
 });
 ```
 
-{{ EmbedLiveSample('Example','100%',130) }}
+{{ embedwivesampwe('exampwe','100%',130) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Node.lookupNamespaceURI")}}
-- {{domxref("Node.lookupPrefix")}}
+- {{domxwef("node.wookupnamespaceuwi")}}
+- {{domxwef("node.wookuppwefix")}}

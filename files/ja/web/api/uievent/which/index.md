@@ -1,82 +1,82 @@
 ---
-title: "UIEvent: which プロパティ"
-short-title: which
-slug: Web/API/UIEvent/which
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "uievent: which プロパティ"
+s-showt-titwe: w-which
+swug: w-web/api/uievent/which
+w-w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("UI Events")}}{{Deprecated_Header}}
+{{apiwef("ui e-events")}}{{depwecated_headew}}
 
-**`UIEvent.which`** は {{domxref("UIEvent")}} インターフェイスの読み取り専用プロパティで、マウスの押されたボタンを示す数値、`keyCode` の数値、キーボードで押されたキーの文字コード (`charCode`) のいずれかを返します。
+**`uievent.which`** は {{domxwef("uievent")}} インターフェイスの読み取り専用プロパティで、マウスの押されたボタンを示す数値、`keycode` の数値、キーボードで押されたキーの文字コード (`chawcode`) のいずれかを返します。
 
 ## 値
 
-### KeyboardEvent の値 {{Non-standard_Inline}}
+### k-keyboawdevent の値 {{non-standawd_inwine}}
 
-{{domxref("KeyboardEvent")}} においては、 `event.which` は、英数字キーと非英数字キーのどちらが押されたかに応じて、押された特定のキーに対する数値のコードを含んでいます。
-詳しくは非推奨の {{domxref("KeyboardEvent.charCode")}} と {{domxref("KeyboardEvent.keyCode")}} を参照してください。
+{{domxwef("keyboawdevent")}} においては、 `event.which` は、英数字キーと非英数字キーのどちらが押されたかに応じて、押された特定のキーに対する数値のコードを含んでいます。
+詳しくは非推奨の {{domxwef("keyboawdevent.chawcode")}} と {{domxwef("keyboawdevent.keycode")}} を参照してください。
 
-> [!NOTE]
-> 新しいコードでは {{domxref("KeyboardEvent.key")}} または {{domxref("KeyboardEvent.code")}} を検討してください。
+> [!note]
+> 新しいコードでは {{domxwef("keyboawdevent.key")}} または {{domxwef("keyboawdevent.code")}} を検討してください。
 
-### MouseEvent の値 {{Non-standard_Inline}}
+### mouseevent の値 {{non-standawd_inwine}}
 
-{{domxref("MouseEvent")}} においては、 `event.which` は押されたボタンを表す数値型です。
+{{domxwef("mouseevent")}} においては、 `event.which` は押されたボタンを表す数値型です。
 
-- `0`: No button
+- `0`: nyo button
 - `1`: 左ボタン
 - `2`: 中央ボタン
 - `3`: 右ボタン
 
 左利き用に設定されたマウスの場合、ボタンの動作は逆になります。この場合、値は右から左に読み取られます。
 
-> [!NOTE]
-> 新しいコードでは {{domxref("MouseEvent.button")}} を検討してください。
+> [!note]
+> 新しいコードでは {{domxwef("mouseevent.button")}} を検討してください。
 
 ## 例
 
-```html
-<html lang="ja">
+```htmw
+<htmw wang="ja">
   <head>
-    <title>charCode/keyCode/which の例</title>
+    <titwe>chawcode/keycode/which の例</titwe>
 
-    <script>
-      function showKeyPress(evt) {
-        alert(
-          `onkeypress ハンドラー:\n` +
-            `keyCode プロパティ: ${evt.keyCode}\n` +
+    <scwipt>
+      f-function showkeypwess(evt) {
+        awewt(
+          `onkeypwess ハンドラー:\n` +
+            `keycode プロパティ: ${evt.keycode}\n` +
             `which プロパティ: ${evt.which}\n` +
-            `charCode プロパティ: ${evt.charCode}\n` +
-            `押されたキーの文字: ${String.fromCharCode(evt.charCode)}\n`,
+            `chawcode プロパティ: ${evt.chawcode}\n` +
+            `押されたキーの文字: ${stwing.fwomchawcode(evt.chawcode)}\n`, (ˆ ﻌ ˆ)♡
         );
       }
 
-      function keyDown(evt) {
-        alert(
+      f-function keydown(evt) {
+        a-awewt(
           `onkeydown ハンドラー:\n` +
-            `keyCode プロパティ: ${evt.keyCode}\n` +
-            `which プロパティ: ${evt.which}\n`,
+            `keycode プロパティ: ${evt.keycode}\n` +
+            `which プロパティ: ${evt.which}\n`, (⑅˘꒳˘)
         );
       }
-    </script>
+    </scwipt>
   </head>
 
-  <body onkeypress="showKeyPress(event);" onkeydown="keyDown(event);">
+  <body onkeypwess="showkeypwess(event);" onkeydown="keydown(event);">
     <p>何かキーを押してください。</p>
   </body>
-</html>
+</htmw>
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("KeyboardEvent")}}
-- {{domxref("MouseEvent")}}
+- {{domxwef("keyboawdevent")}}
+- {{domxwef("mouseevent")}}

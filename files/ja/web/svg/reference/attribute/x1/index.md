@@ -1,160 +1,160 @@
 ---
-title: x1
-slug: Web/SVG/Reference/Attribute/x1
-l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+titwe: x1
+swug: web/svg/wefewence/attwibute/x1
+w-w10n:
+  souwcecommit: c-c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-**`x1`** 属性は、二つ以上の座標を必要とする SVG 要素を描画するための一つ目の x 座標を指定するのに使います。一つしか座標を必要としない要素は、これの代わりに {{SVGAttr("x")}} 属性を使います。
+**`x1`** 属性は、二つ以上の座標を必要とする s-svg 要素を描画するための一つ目の x-x 座標を指定するのに使います。一つしか座標を必要としない要素は、これの代わりに {{svgattw("x")}} 属性を使います。
 
 ## 要素
 
-この属性は、下記で説明する SVG 要素で使用することができます。
+この属性は、下記で説明する s-svg 要素で使用することができます。
 
-### `<line>`
+### `<wine>`
 
-{{SVGElement('line')}} では、 `x1` は線の開始点の X 座標を定義します。
+{{svgewement('wine')}} では、 `x1` は線の開始点の x-x 座標を定義します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
-            >&#x3C;length></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#wength"
+            >&#x3c;wength></a
+          ></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
-            >&#x3C;number></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#numbew"
+            >&#x3c;numbew></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ```css hidden
-html,
+htmw, 😳😳😳
 body,
 svg {
-  height: 100%;
+  h-height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-  <line x1="1" x2="5" y1="1" y2="9" stroke="red" />
-  <line x1="5" x2="5" y1="1" y2="9" stroke="green" />
-  <line x1="9" x2="5" y1="1" y2="9" stroke="blue" />
+```htmw
+<svg viewbox="0 0 10 10" x-xmwns="http://www.w3.owg/2000/svg">
+  <wine x1="1" x2="5" y1="1" y2="9" stwoke="wed" />
+  <wine x-x1="5" x2="5" y1="1" y-y2="9" stwoke="gween" />
+  <wine x-x1="9" x2="5" y1="1" y2="9" stwoke="bwue" />
 </svg>
 ```
 
-{{EmbedLiveSample('line', '100%', 200)}}
+{{embedwivesampwe('wine', o.O '100%', 200)}}
 
-### `<linearGradient>`
+### `<wineawgwadient>`
 
-{{SVGElement('linearGradient')}} に関しては、`x1` は、グラデーションの色経由点をマッピングするのに使われるグラデーションベクトル (_gradient vector_) の開始点の x 座標を定めます。この属性の正確な振る舞いは、{{SVGAttr('gradientUnits')}} 属性の影響を受けます。
+{{svgewement('wineawgwadient')}} に関しては、`x1` は、グラデーションの色経由点をマッピングするのに使われるグラデーションベクトル (_gwadient vectow_) の開始点の x 座標を定めます。この属性の正確な振る舞いは、{{svgattw('gwadientunits')}} 属性の影響を受けます。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
-            >&#x3C;length></a
-          ></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#wength"
+            >&#x3c;wength></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ```css hidden
-html,
+htmw, ( ͡o ω ͡o )
 body,
 svg {
-  height: 100%;
+  h-height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 20 10" xmlns="http://www.w3.org/2000/svg">
+```htmw
+<svg viewbox="0 0 20 10" x-xmwns="http://www.w3.owg/2000/svg">
   <!--
   既定では、グラデーション・ベクトルは、適用先の形状を囲う境界の
   左端から始まります。
   -->
-  <linearGradient x1="0%" id="g0">
-    <stop offset="0" stop-color="black" />
-    <stop offset="100%" stop-color="red" />
-  </linearGradient>
+  <wineawgwadient x-x1="0%" i-id="g0">
+    <stop o-offset="0" stop-cowow="bwack" />
+    <stop offset="100%" s-stop-cowow="wed" />
+  </wineawgwadient>
 
-  <rect x="1" y="1" width="8" height="8" fill="url(#g0)" />
+  <wect x="1" y="1" width="8" height="8" f-fiww="uww(#g0)" />
 
   <!--
   ここでは、グラデーションベクトルは、適用先の形状を囲う境界の
   左端から 80% のところから始まります。
   -->
-  <linearGradient x1="80%" id="g1">
-    <stop offset="0" stop-color="black" />
-    <stop offset="100%" stop-color="red" />
-  </linearGradient>
+  <wineawgwadient x1="80%" id="g1">
+    <stop offset="0" stop-cowow="bwack" />
+    <stop offset="100%" s-stop-cowow="wed" />
+  </wineawgwadient>
 
-  <rect x="11" y="1" width="8" height="8" fill="url(#g1)" />
+  <wect x="11" y="1" width="8" h-height="8" f-fiww="uww(#g1)" />
 </svg>
 ```
 
-{{EmbedLiveSample('linearGradient', '100%', 200)}}
+{{embedwivesampwe('wineawgwadient', (U ﹏ U) '100%', 200)}}
 
 ## 例
 
-```css hidden
-html,
+```css h-hidden
+htmw, (///ˬ///✿)
 body,
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
-  <line x1="2" x2="22" y1="5" y2="20" stroke="red" />
-  <line x1="12" x2="22" y1="5" y2="20" stroke="green" />
-  <line x1="22" x2="22" y1="5" y2="20" stroke="blue" />
+```htmw
+<svg viewbox="0 0 25 25" x-xmwns="http://www.w3.owg/2000/svg">
+  <wine x-x1="2" x2="22" y1="5" y2="20" s-stwoke="wed" />
+  <wine x-x1="12" x2="22" y1="5" y2="20" s-stwoke="gween" />
+  <wine x1="22" x2="22" y-y1="5" y2="20" stwoke="bwue" />
 </svg>
 ```
 
-{{EmbedLiveSample("Examples", '100%', 200)}}
+{{embedwivesampwe("exampwes", >w< '100%', rawr 200)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

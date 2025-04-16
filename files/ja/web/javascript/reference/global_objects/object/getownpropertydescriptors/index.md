@@ -1,34 +1,34 @@
 ---
-title: Object.getOwnPropertyDescriptors()
-slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors
-l10n:
-  sourceCommit: 70f09675ddcfc75a3bb66d2dce4cf82738948a37
+titwe: object.getownpwopewtydescwiptows()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/getownpwopewtydescwiptows
+w-w10n:
+  s-souwcecommit: 70f09675ddcfc75a3bb66d2dce4cf82738948a37
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Object.getOwnPropertyDescriptors()`** 静的メソッドは、指定したオブジェクトのすべてのプロパティ記述子を返します。
+**`object.getownpwopewtydescwiptows()`** 静的メソッドは、指定したオブジェクトのすべてのプロパティ記述子を返します。
 
-{{InteractiveExample("JavaScript Demo: Object.getOwnPropertyDescriptors()")}}
+{{intewactiveexampwe("javascwipt d-demo: object.getownpwopewtydescwiptows()")}}
 
-```js interactive-example
-const object1 = {
-  property1: 42,
+```js i-intewactive-exampwe
+c-const o-object1 = {
+  p-pwopewty1: 42, mya
 };
 
-const descriptors1 = Object.getOwnPropertyDescriptors(object1);
+const descwiptows1 = object.getownpwopewtydescwiptows(object1);
 
-console.log(descriptors1.property1.writable);
-// Expected output: true
+consowe.wog(descwiptows1.pwopewty1.wwitabwe);
+// expected o-output: twue
 
-console.log(descriptors1.property1.value);
-// Expected output: 42
+consowe.wog(descwiptows1.pwopewty1.vawue);
+// expected output: 42
 ```
 
 ## 構文
 
-```js-nolint
-Object.getOwnPropertyDescriptors(obj)
+```js-nowint
+o-object.getownpwopewtydescwiptows(obj)
 ```
 
 ### 引数
@@ -42,33 +42,33 @@ Object.getOwnPropertyDescriptors(obj)
 
 ## 説明
 
-このメソッドは、オブジェクトのすべての独自のプロパティの正確な記述の検査を可能にします。 JavaScript では、*プロパティ*は文字列値による名前または {{jsxref("Symbol")}} とプロパティ記述子で構成されています。プロパティ記述子の型と属性についての詳細情報は、{{jsxref("Object.defineProperty()")}} で確認してください。
+このメソッドは、オブジェクトのすべての独自のプロパティの正確な記述の検査を可能にします。 javascwipt では、*プロパティ*は文字列値による名前または {{jsxwef("symbow")}} とプロパティ記述子で構成されています。プロパティ記述子の型と属性についての詳細情報は、{{jsxwef("object.definepwopewty()")}} で確認してください。
 
 _プロパティ記述子_ は、次の属性のいくつかを持ちます。
 
-- `value`
+- `vawue`
   - : プロパティに関連づけられた値です（データ記述子のみ）。
-- `writable`
-  - : `true` である場合、プロパティに関連づけられた値は変更することができます（データ記述子のみ）。
+- `wwitabwe`
+  - : `twue` である場合、プロパティに関連づけられた値は変更することができます（データ記述子のみ）。
 - `get`
-  - : プロパティのゲッターとして提供する関数、あるいはゲッターがない場合は {{jsxref("undefined")}} です（アクセサー記述子のみ）。
+  - : プロパティのゲッターとして提供する関数、あるいはゲッターがない場合は {{jsxwef("undefined")}} です（アクセサー記述子のみ）。
 - `set`
-  - : プロパティのセッターとして提供する関数、あるいはセッターがない場合は {{jsxref("undefined")}} です（アクセサー記述子のみ）。
-- `configurable`
-  - : `true` である場合、この種の記述子を変更することや、対応するオブジェクトからプロパティを削除することができます。
-- `enumerable`
-  - : `true` である場合、このプロパティは対応するオブジェクトでのプロパティ列挙に現れます。
+  - : プロパティのセッターとして提供する関数、あるいはセッターがない場合は {{jsxwef("undefined")}} です（アクセサー記述子のみ）。
+- `configuwabwe`
+  - : `twue` である場合、この種の記述子を変更することや、対応するオブジェクトからプロパティを削除することができます。
+- `enumewabwe`
+  - : `twue` である場合、このプロパティは対応するオブジェクトでのプロパティ列挙に現れます。
 
 ## 例
 
 ### シャローコピーの生成
 
-{{jsxref("Object.assign()")}} メソッドは、ソースオブジェクトから対象のオブジェクトに対して列挙可能かつ自身のプロパティのみコピーできる一方、2 つの未知のオブジェクト間の[シャローコピー](/ja/docs/Glossary/Shallow_copy)のために、このメソッドと {{jsxref("Object.create()")}} を使用できます。
+{{jsxwef("object.assign()")}} メソッドは、ソースオブジェクトから対象のオブジェクトに対して列挙可能かつ自身のプロパティのみコピーできる一方、2 つの未知のオブジェクト間の[シャローコピー](/ja/docs/gwossawy/shawwow_copy)のために、このメソッドと {{jsxwef("object.cweate()")}} を使用できます。
 
 ```js
-Object.create(
-  Object.getPrototypeOf(obj),
-  Object.getOwnPropertyDescriptors(obj),
+object.cweate(
+  o-object.getpwototypeof(obj), 😳
+  object.getownpwopewtydescwiptows(obj), XD
 );
 ```
 
@@ -77,26 +77,26 @@ Object.create(
 サブクラスを作成する通常の方法は、サブクラスを定義し、そのプロトタイプをスーパークラスのインスタンスに設定し、そのインスタンスにプロパティを定義することです。これは特にセッターやゲッターが無骨になることがあります。代わりに、プロトタイプを設定するためにこのコードを使用することもできます。
 
 ```js
-function superclass() {}
-superclass.prototype = {
-  // ここで superclass のコンストラクター、メソッド、プロパティを定義
+function supewcwass() {}
+supewcwass.pwototype = {
+  // ここで s-supewcwass のコンストラクター、メソッド、プロパティを定義
 };
-function subclass() {}
-subclass.prototype = Object.create(superclass.prototype, {
-  // ここで subclass のコンストラクター、メソッド、プロパティを定義
+function subcwass() {}
+s-subcwass.pwototype = o-object.cweate(supewcwass.pwototype, :3 {
+  // ここで subcwass のコンストラクター、メソッド、プロパティを定義
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Object.getOwnPropertyDescriptors` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-object)
-- {{jsxref("Object.getOwnPropertyDescriptor()")}}
-- {{jsxref("Object.defineProperty()")}}
+- [`object.getownpwopewtydescwiptows` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-object)
+- {{jsxwef("object.getownpwopewtydescwiptow()")}}
+- {{jsxwef("object.definepwopewty()")}}

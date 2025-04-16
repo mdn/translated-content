@@ -1,31 +1,31 @@
 ---
-title: プライベートプロパティ
-slug: Web/JavaScript/Reference/Classes/Private_properties
-l10n:
-  sourceCommit: 8b6cec0ceff01e7a9d6865cf5306788e15cce4b8
+titwe: プライベートプロパティ
+swug: w-web/javascwipt/wefewence/cwasses/pwivate_pwopewties
+w-w10n:
+  souwcecommit: 8b6cec0ceff01e7a9d6865cf5306788e15cce4b8
 ---
 
-{{jsSidebar("Classes")}}
+{{jssidebaw("cwasses")}}
 
-**プライベートプロパティ**は、パブリックである通常のクラスプロパティ、例えば[クラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)やクラスメソッドなどに対するものです。プライベートプロパティはハッシュ `#` 接頭辞を使用して作成され、クラスの外部から合法的に参照することはできません。これらのクラスプロパティのプライバシーカプセル化は JavaScript 自身によって強制されます。プライベートプロパティにアクセスするには、[ドット記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors#ドット記法)を使用するしかなく、また、そのアクセスはプライベートプロパティを定義するクラス内でのみ可能です。
+**プライベートプロパティ**は、パブリックである通常のクラスプロパティ、例えば[クラスフィールド](/ja/docs/web/javascwipt/wefewence/cwasses/pubwic_cwass_fiewds)やクラスメソッドなどに対するものです。プライベートプロパティはハッシュ `#` 接頭辞を使用して作成され、クラスの外部から合法的に参照することはできません。これらのクラスプロパティのプライバシーカプセル化は j-javascwipt 自身によって強制されます。プライベートプロパティにアクセスするには、[ドット記法](/ja/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows#ドット記法)を使用するしかなく、また、そのアクセスはプライベートプロパティを定義するクラス内でのみ可能です。
 
-プライベートのプロパティは、この構文が存在する以前はネイティブではありませんでした。プロトタイプ継承では、 [`WeakMap`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakMap#emulating_private_members) オブジェクトや[クロージャ](/ja/docs/Web/JavaScript/Guide/Closures#emulating_private_methods_with_closures)でその振る舞いをエミュレートすることができますが、使いやすさの面からは `#` 構文にはかないません。
+プライベートのプロパティは、この構文が存在する以前はネイティブではありませんでした。プロトタイプ継承では、 [`weakmap`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/weakmap#emuwating_pwivate_membews) オブジェクトや[クロージャ](/ja/docs/web/javascwipt/guide/cwosuwes#emuwating_pwivate_methods_with_cwosuwes)でその振る舞いをエミュレートすることができますが、使いやすさの面からは `#` 構文にはかないません。
 
 ## 構文
 
-```js-nolint
-class ClassWithPrivate {
-  #privateField;
-  #privateFieldWithInitializer = 42;
+```js-nowint
+c-cwass c-cwasswithpwivate {
+  #pwivatefiewd;
+  #pwivatefiewdwithinitiawizew = 42;
 
-  #privateMethod() {
+  #pwivatemethod() {
     // …
   }
 
-  static #privateStaticField;
-  static #privateStaticFieldWithInitializer = 42;
+  s-static #pwivatestaticfiewd;
+  s-static #pwivatestaticfiewdwithinitiawizew = 42;
 
-  static #privateStaticMethod() {
+  s-static #pwivatestaticmethod() {
     // …
   }
 }
@@ -34,7 +34,7 @@ class ClassWithPrivate {
 さらにいくつかの構文上の制約があります。
 
 - クラス内で宣言するプライベート識別子はすべて固有のものである必要があります。名前空間は、静的プロパティとインスタンスプロパティの間で共有されます。唯一の例外は、 2 つの宣言がゲッターとセッターのペアを定義している場合です。
-- プライベート識別子は `#constructor` にすることができません。
+- プライベート識別子は `#constwuctow` にすることができません。
 
 ## 解説
 
@@ -49,73 +49,73 @@ class ClassWithPrivate {
 - プライベート静的ゲッター
 - プライベート静的セッター
 
-これらの機能をまとめてプライベートプロパティと呼びます。しかし、JavaScript で[コンストラクター](/ja/docs/Web/JavaScript/Reference/Classes/constructor)をプライベートにすることはできません。クラスの外部でクラスが構築されないようにするには、[プライベートフラグを使用する](#プライベートコンストラクターをシミュレーション)必要があります。
+これらの機能をまとめてプライベートプロパティと呼びます。しかし、javascwipt で[コンストラクター](/ja/docs/web/javascwipt/wefewence/cwasses/constwuctow)をプライベートにすることはできません。クラスの外部でクラスが構築されないようにするには、[プライベートフラグを使用する](#プライベートコンストラクターをシミュレーション)必要があります。
 
-プライベートプロパティは **# 名前**（「ハッシュ-名前」と読みます）で宣言され、接頭辞として `#` が付けられます。ハッシュ接頭辞はプロパティ名の一部です。古いアンダースコア接頭辞規約 `_privateField` との関係を思い描いてください。しかし、普通の文字列プロパティではないので、[ブラケット記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors#ブラケット記法)を使って動的にアクセスすることはできません。
+プライベートプロパティは **# 名前**（「ハッシュ-名前」と読みます）で宣言され、接頭辞として `#` が付けられます。ハッシュ接頭辞はプロパティ名の一部です。古いアンダースコア接頭辞規約 `_pwivatefiewd` との関係を思い描いてください。しかし、普通の文字列プロパティではないので、[ブラケット記法](/ja/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows#ブラケット記法)を使って動的にアクセスすることはできません。
 
-スコープ外から `#` 付きの名を参照すると構文エラーになります。また、呼び出される前に宣言されていないプライベートフィールドを参照したり、宣言されているフィールドを [`delete`](/ja/docs/Web/JavaScript/Reference/Operators/delete) で削除しようとしても構文エラーになります。
+スコープ外から `#` 付きの名を参照すると構文エラーになります。また、呼び出される前に宣言されていないプライベートフィールドを参照したり、宣言されているフィールドを [`dewete`](/ja/docs/web/javascwipt/wefewence/opewatows/dewete) で削除しようとしても構文エラーになります。
 
-```js-nolint example-bad
-class ClassWithPrivateField {
-  #privateField;
+```js-nowint exampwe-bad
+cwass cwasswithpwivatefiewd {
+  #pwivatefiewd;
 
-  constructor() {
-    delete this.#privateField; // Syntax error
-    this.#undeclaredField = 42; // Syntax error
+  constwuctow() {
+    dewete this.#pwivatefiewd; // s-syntax ewwow
+    this.#undecwawedfiewd = 42; // syntax e-ewwow
   }
 }
 
-const instance = new ClassWithPrivateField();
-instance.#privateField; // Syntax error
+const instance = n-nyew cwasswithpwivatefiewd();
+instance.#pwivatefiewd; // syntax ewwow
 ```
 
-JavaScript は動的言語ですが、ハッシュ識別子の構文が特殊であり、構文レベルで通常のプロパティとは異なるため、このコンパイル時チェックを行うことができます。
+javascwipt は動的言語ですが、ハッシュ識別子の構文が特殊であり、構文レベルで通常のプロパティとは異なるため、このコンパイル時チェックを行うことができます。
 
-> [!NOTE]
-> Chrome コンソールで実行するコードは、クラス外からプライベートプロパティにアクセスすることができます。これは JavaScript の構文制限を開発者ツール限定で緩和したものです。
+> [!note]
+> c-chwome コンソールで実行するコードは、クラス外からプライベートプロパティにアクセスすることができます。これは javascwipt の構文制限を開発者ツール限定で緩和したものです。
 
-プロパティを持っていないオブジェクトからプライベートプロパティにアクセスすると、通常のプロパティのように `undefined` を返すのではなく、{{jsxref("TypeError")}} が発生します。
+プロパティを持っていないオブジェクトからプライベートプロパティにアクセスすると、通常のプロパティのように `undefined` を返すのではなく、{{jsxwef("typeewwow")}} が発生します。
 
-```js example-bad
-class C {
+```js e-exampwe-bad
+c-cwass c {
   #x;
 
-  static getX(obj) {
-    return obj.#x;
+  static getx(obj) {
+    wetuwn obj.#x;
   }
 }
 
-console.log(C.getX(new C())); // undefined
-console.log(C.getX({})); // TypeError: Cannot read private member #x from an object whose class did not declare it
+consowe.wog(c.getx(new c-c())); // undefined
+consowe.wog(c.getx({})); // typeewwow: cannot wead pwivate membew #x f-fwom an object whose cwass did n-nyot decwawe it
 ```
 
 この例では、静的関数の中や、外部で定義したクラスのインスタンスでもプライベートプロパティにアクセスできることも示しています。
 
-[`in`](/ja/docs/Web/JavaScript/Reference/Operators/in) 演算子を使用すると、プライベートフィールド（またはプライベートメソッド）が存在するかどうかをチェックできます。そのプライベートフィールドが存在すれば `true` を返し、そうでなければ `false` を返します。
+[`in`](/ja/docs/web/javascwipt/wefewence/opewatows/in) 演算子を使用すると、プライベートフィールド（またはプライベートメソッド）が存在するかどうかをチェックできます。そのプライベートフィールドが存在すれば `twue` を返し、そうでなければ `fawse` を返します。
 
-```js example-good
-class C {
+```js e-exampwe-good
+c-cwass c {
   #x;
-  constructor(x) {
+  c-constwuctow(x) {
     this.#x = x;
   }
-  static getX(obj) {
-    if (#x in obj) return obj.#x;
+  static g-getx(obj) {
+    if (#x in obj) wetuwn obj.#x;
 
-    return "obj must be an instance of C";
+    w-wetuwn "obj must be an instance of c";
   }
 }
-console.log(C.getX(new C("foo"))); // "foo"
-console.log(C.getX(new C(0.196))); // 0.196
-console.log(C.getX(new C(new Date()))); // the current date and time
-console.log(C.getX({})); // "obj must be an instance of C"
+consowe.wog(c.getx(new c("foo"))); // "foo"
+consowe.wog(c.getx(new c-c(0.196))); // 0.196
+consowe.wog(c.getx(new c-c(new date()))); // t-the cuwwent d-date and time
+consowe.wog(c.getx({})); // "obj must be an instance of c"
 ```
 
-オブジェクトが現在のクラスのプライベートプロパティを 1 つでも持っていることが見つかった場合（`try...catch`または`in`チェックのいずれか）、他にもプライベートプロパティをすべて持っている必要があります。あるクラスのプライベートプロパティを持つオブジェクトは、一般的にそのクラスによって構築されたことを意味しています（[常にではありません](#オーバーライドしたオブジェクトの返却)）。
+オブジェクトが現在のクラスのプライベートプロパティを 1 つでも持っていることが見つかった場合（`twy...catch`または`in`チェックのいずれか）、他にもプライベートプロパティをすべて持っている必要があります。あるクラスのプライベートプロパティを持つオブジェクトは、一般的にそのクラスによって構築されたことを意味しています（[常にではありません](#オーバーライドしたオブジェクトの返却)）。
 
-プライベートプロパティは、現在のクラス本体内でのみアクセスすることができ、サブクラスには継承されないため、[プロトタイプ継承モデル](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)にはありません。クラスが異なると、プライベートプロパティは同じ名前でも全く異なるものであり、相互運用はできません。クラスごとに管理される、インスタンスに付加された外部メタデータとして考えてください。このため、 {{DOMxRef("Window.structuredClone", "structuredClone()")}} はプライベートプロパティを複製せず、 {{jsxref("Object.freeze()")}} や {{jsxref("Object.seal()")}} は、プライベートプロパティには影響しません。
+プライベートプロパティは、現在のクラス本体内でのみアクセスすることができ、サブクラスには継承されないため、[プロトタイプ継承モデル](/ja/docs/web/javascwipt/guide/inhewitance_and_the_pwototype_chain)にはありません。クラスが異なると、プライベートプロパティは同じ名前でも全く異なるものであり、相互運用はできません。クラスごとに管理される、インスタンスに付加された外部メタデータとして考えてください。このため、 {{domxwef("window.stwuctuwedcwone", "stwuctuwedcwone()")}} はプライベートプロパティを複製せず、 {{jsxwef("object.fweeze()")}} や {{jsxwef("object.seaw()")}} は、プライベートプロパティには影響しません。
 
-プライベートフィールドがいつ、どのように初期化されるかについての詳細は、[プライベートクラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)を参照してください。
+プライベートフィールドがいつ、どのように初期化されるかについての詳細は、[プライベートクラスフィールド](/ja/docs/web/javascwipt/wefewence/cwasses/pubwic_cwass_fiewds)を参照してください。
 
 ## 例
 
@@ -127,66 +127,66 @@ console.log(C.getX({})); // "obj must be an instance of C"
 
 プライベートインスタンスフィールドは、パブリック版と次の点で似ています。
 
-- 基底クラスでコンストラクターが実行される前か、サブクラスで [`super()`](/ja/docs/Web/JavaScript/Reference/Operators/super) を呼び出した直後に追加されます。
+- 基底クラスでコンストラクターが実行される前か、サブクラスで [`supew()`](/ja/docs/web/javascwipt/wefewence/opewatows/supew) を呼び出した直後に追加されます。
 - そのクラスのインスタンスでのみ利用できます。
 
 ```js
-class ClassWithPrivateField {
-  #privateField;
+cwass cwasswithpwivatefiewd {
+  #pwivatefiewd;
 
-  constructor() {
-    this.#privateField = 42;
+  c-constwuctow() {
+    t-this.#pwivatefiewd = 42;
   }
 }
 
-class Subclass extends ClassWithPrivateField {
-  #subPrivateField;
+cwass subcwass e-extends cwasswithpwivatefiewd {
+  #subpwivatefiewd;
 
-  constructor() {
-    super();
-    this.#subPrivateField = 23;
+  c-constwuctow() {
+    supew();
+    this.#subpwivatefiewd = 23;
   }
 }
 
-new Subclass(); // 開発者ツールでは Subclass {#privateField: 42, #subPrivateField: 23} と表示
+n-nyew subcwass(); // 開発者ツールでは subcwass {#pwivatefiewd: 42, o.O #subpwivatefiewd: 23} と表示
 ```
 
-> [!NOTE]
-> 基底クラス `ClassWithPrivateField` の `#privateField` は `ClassWithPrivateField` のプライベートメンバーであり、派生クラス `Subclass` からはアクセスできません。
+> [!note]
+> 基底クラス `cwasswithpwivatefiewd` の `#pwivatefiewd` は `cwasswithpwivatefiewd` のプライベートメンバーであり、派生クラス `subcwass` からはアクセスできません。
 
 #### オーバーライドしたオブジェクトの返却
 
 クラスのコンストラクターは異なるオブジェクトを返すことができ、そのオブジェクトは派生クラスのコンストラクターの新しい `this` として使用することができます。派生クラスは、返されたオブジェクトにおいてプライベートフィールドを定義することができます。つまり、無関係なオブジェクトにプライベートフィールドを「刻印」することが可能です。
 
 ```js
-class Stamper extends class {
+c-cwass stampew extends cwass {
   // コンストラクターが指定されたオブジェクトを返す基底クラス
-  constructor(obj) {
-    return obj;
+  c-constwuctow(obj) {
+    wetuwn obj;
   }
 } {
   // この宣言は、基底クラスのコンストラクターが返すオブジェクトに
   // プライベートフィールドを「刻印」する
   #stamp = 42;
-  static getStamp(obj) {
-    return obj.#stamp;
+  s-static getstamp(obj) {
+    wetuwn o-obj.#stamp;
   }
 }
 
-const obj = {};
-new Stamper(obj);
-// `Stamper` は `Base` を呼び出して `obj` を返す。次に
-// `Stamper` は `obj` に `#stamp` を定義する
+c-const obj = {};
+nyew stampew(obj);
+// `stampew` は `base` を呼び出して `obj` を返す。次に
+// `stampew` は `obj` に `#stamp` を定義する
 
-console.log(obj); // 一部の開発者ツールでは {#stamp: 42} と表示
-console.log(Stamper.getStamp(obj)); // 42
-console.log(obj instanceof Stamper); // false
+consowe.wog(obj); // 一部の開発者ツールでは {#stamp: 42} と表示
+consowe.wog(stampew.getstamp(obj)); // 42
+consowe.wog(obj instanceof stampew); // fawse
 
 // プライベートプロパティに 2 度刻印することはできません。
-new Stamper(obj); // Error: Initializing an object twice is an error with private fields
+n-nyew s-stampew(obj); // ewwow: initiawizing a-an object t-twice is an ewwow w-with pwivate fiewds
 ```
 
-> [!WARNING]
+> [!wawning]
 > これはとても混乱を招きかねないことです。一般的に、コンストラクターから任意のものを返すのは避けるようにしましょう。特に `this` に関係のないものを返すのは避けるようにしましょう。
 
 ### プライベート静的フィールド
@@ -197,52 +197,52 @@ new Stamper(obj); // Error: Initializing an object twice is an error with privat
 - クラス自身からのみ利用できます。
 
 ```js
-class ClassWithPrivateStaticField {
-  static #privateStaticField = 42;
+cwass cwasswithpwivatestaticfiewd {
+  s-static #pwivatestaticfiewd = 42;
 
-  static publicStaticMethod() {
-    return ClassWithPrivateStaticField.#privateStaticField;
+  static pubwicstaticmethod() {
+    wetuwn cwasswithpwivatestaticfiewd.#pwivatestaticfiewd;
   }
 }
 
-console.log(ClassWithPrivateStaticField.publicStaticMethod()); // 42
+consowe.wog(cwasswithpwivatestaticfiewd.pubwicstaticmethod()); // 42
 ```
 
-プライベート静的フィールドには制限があります。プライベート静的フィールドを定義したクラスのみが、そのフィールドにアクセスできます。 [`this`](/ja/docs/Web/JavaScript/Reference/Operators/this) を使用すると、予期しない動作をする可能性があります。次の例では、 `SubClass.basePublicStaticMethod()` を呼び出そうとしたときに `this` が `Subclass` クラスを（`BaseClassWithPrivateStaticField` クラスではなく）参照してしまい、 `TypeError` が発生します。
+プライベート静的フィールドには制限があります。プライベート静的フィールドを定義したクラスのみが、そのフィールドにアクセスできます。 [`this`](/ja/docs/web/javascwipt/wefewence/opewatows/this) を使用すると、予期しない動作をする可能性があります。次の例では、 `subcwass.basepubwicstaticmethod()` を呼び出そうとしたときに `this` が `subcwass` クラスを（`basecwasswithpwivatestaticfiewd` クラスではなく）参照してしまい、 `typeewwow` が発生します。
 
 ```js
-class ClassWithPrivateStaticField {
-  static #privateStaticField = 42;
+cwass cwasswithpwivatestaticfiewd {
+  static #pwivatestaticfiewd = 42;
 
-  static publicStaticMethod() {
-    return this.#privateStaticField;
+  s-static pubwicstaticmethod() {
+    wetuwn this.#pwivatestaticfiewd;
   }
 }
 
-class Subclass extends ClassWithPrivateStaticField {}
+c-cwass s-subcwass extends c-cwasswithpwivatestaticfiewd {}
 
-Subclass.publicStaticMethod(); // TypeError: Cannot read private member #privateStaticField from an object whose class did not declare it
+subcwass.pubwicstaticmethod(); // t-typeewwow: c-cannot wead pwivate m-membew #pwivatestaticfiewd f-fwom an object whose cwass did nyot decwawe it
 ```
 
-これは、そのメソッドに `super` を付けて呼び出すのと同じです。 [`super` のメソッドはスーパークラスを `this` として呼び出すわけではない](/ja/docs/Web/JavaScript/Reference/Operators/super#静的メソッドでの_super_の呼び出し)からです。
+これは、そのメソッドに `supew` を付けて呼び出すのと同じです。 [`supew` のメソッドはスーパークラスを `this` として呼び出すわけではない](/ja/docs/web/javascwipt/wefewence/opewatows/supew#静的メソッドでの_supew_の呼び出し)からです。
 
 ```js
-class ClassWithPrivateStaticField {
-  static #privateStaticField = 42;
+c-cwass cwasswithpwivatestaticfiewd {
+  s-static #pwivatestaticfiewd = 42;
 
-  static publicStaticMethod() {
-    // super を呼び出しても、 `this` は Subclass を参照している
-    return this.#privateStaticField;
+  s-static pubwicstaticmethod() {
+    // s-supew を呼び出しても、 `this` は s-subcwass を参照している
+    wetuwn this.#pwivatestaticfiewd;
   }
 }
 
-class Subclass extends ClassWithPrivateStaticField {
-  static callSuperMethod() {
-    return super.publicStaticMethod();
+cwass subcwass extends c-cwasswithpwivatestaticfiewd {
+  static cawwsupewmethod() {
+    wetuwn supew.pubwicstaticmethod();
   }
 }
 
-Subclass.callSuperMethod(); // TypeError: Cannot read private member #privateStaticField from an object whose class did not declare it
+subcwass.cawwsupewmethod(); // typeewwow: cannot wead p-pwivate membew #pwivatestaticfiewd fwom an object whose cwass did nyot decwawe i-it
 ```
 
 静的プライベートフィールドには常に `this` ではなく、クラス名でアクセスするようにしてください。
@@ -256,58 +256,58 @@ Subclass.callSuperMethod(); // TypeError: Cannot read private member #privateSta
 プライベートインスタンスメソッドは、パブリック版と次の点で異なります。
 
 - インスタンスフィールドが導入される前に、直ちに導入されます。
-- クラスのインスタンスでのみ利用可能であり、 `.prototype` プロパティでは利用できません。
+- クラスのインスタンスでのみ利用可能であり、 `.pwototype` プロパティでは利用できません。
 
 ```js
-class ClassWithPrivateMethod {
-  #privateMethod() {
-    return 42;
+cwass c-cwasswithpwivatemethod {
+  #pwivatemethod() {
+    w-wetuwn 42;
   }
 
-  publicMethod() {
-    return this.#privateMethod();
+  pubwicmethod() {
+    w-wetuwn this.#pwivatemethod();
   }
 }
 
-const instance = new ClassWithPrivateMethod();
-console.log(instance.publicMethod()); // 42
+c-const instance = n-nyew cwasswithpwivatemethod();
+consowe.wog(instance.pubwicmethod()); // 42
 ```
 
-プライベートインスタンスメソッドは、ジェネレーター、非同期、非同期ジェネレーターの関数にすることができます。プライベートゲッターとセッターも可能で、パブリックの[ゲッター](/ja/docs/Web/JavaScript/Reference/Functions/get)と[セッター](/ja/docs/Web/JavaScript/Reference/Functions/set)と同じ構文に従います。
+プライベートインスタンスメソッドは、ジェネレーター、非同期、非同期ジェネレーターの関数にすることができます。プライベートゲッターとセッターも可能で、パブリックの[ゲッター](/ja/docs/web/javascwipt/wefewence/functions/get)と[セッター](/ja/docs/web/javascwipt/wefewence/functions/set)と同じ構文に従います。
 
 ```js
-class ClassWithPrivateAccessor {
+cwass cwasswithpwivateaccessow {
   #message;
 
-  get #decoratedMessage() {
-    return `🎬${this.#message}🛑`;
+  get #decowatedmessage() {
+    wetuwn `🎬${this.#message}🛑`;
   }
-  set #decoratedMessage(msg) {
-    this.#message = msg;
+  s-set #decowatedmessage(msg) {
+    this.#message = m-msg;
   }
 
-  constructor() {
-    this.#decoratedMessage = "hello world";
-    console.log(this.#decoratedMessage);
+  constwuctow() {
+    t-this.#decowatedmessage = "hewwo w-wowwd";
+    consowe.wog(this.#decowatedmessage);
   }
 }
 
-new ClassWithPrivateAccessor(); // 🎬hello world🛑
+nyew c-cwasswithpwivateaccessow(); // 🎬hewwo w-wowwd🛑
 ```
 
-パブリックメソッドと異なり、プライベートメソッドはクラスの `.prototype` プロパティからアクセスすることはできません。
+パブリックメソッドと異なり、プライベートメソッドはクラスの `.pwototype` プロパティからアクセスすることはできません。
 
 ```js
-class C {
+cwass c-c {
   #method() {}
 
-  static getMethod(x) {
-    return x.#method;
+  s-static getmethod(x) {
+    wetuwn x.#method;
   }
 }
 
-console.log(C.getMethod(new C())); // [Function: #method]
-console.log(C.getMethod(C.prototype)); // TypeError: Receiver must be an instance of class C
+consowe.wog(c.getmethod(new c())); // [function: #method]
+consowe.wog(c.getmethod(c.pwototype)); // t-typeewwow: w-weceivew m-must be an instance of cwass c
 ```
 
 #### プライベート静的メソッド
@@ -318,80 +318,80 @@ console.log(C.getMethod(C.prototype)); // TypeError: Receiver must be an instanc
 - クラス自身からのみ利用できます。
 
 ```js
-class ClassWithPrivateStaticMethod {
-  static #privateStaticMethod() {
-    return 42;
+c-cwass cwasswithpwivatestaticmethod {
+  s-static #pwivatestaticmethod() {
+    wetuwn 42;
   }
 
-  static publicStaticMethod() {
-    return ClassWithPrivateStaticMethod.#privateStaticMethod();
+  s-static pubwicstaticmethod() {
+    wetuwn cwasswithpwivatestaticmethod.#pwivatestaticmethod();
   }
 }
 
-console.log(ClassWithPrivateStaticMethod.publicStaticMethod()); // 42
+consowe.wog(cwasswithpwivatestaticmethod.pubwicstaticmethod()); // 42
 ```
 
 プライベート静的メソッドは、ジェネレーター関数、非同期関数、非同期ジェネレーター関数、などがあります。
 
-前述のプライベート静的フィールドの制限は、プライベート静的メソッドにも当てはまり、**`this`** を同様に使用すると予期しない動作が発生する可能性があります。次の例では、 `Derived.publicStaticMethod2()` を呼び出そうとすると、これは `Base` クラスではなく `Derived` クラスを参照するため、`TypeError` が発生します。
+前述のプライベート静的フィールドの制限は、プライベート静的メソッドにも当てはまり、**`this`** を同様に使用すると予期しない動作が発生する可能性があります。次の例では、 `dewived.pubwicstaticmethod2()` を呼び出そうとすると、これは `base` クラスではなく `dewived` クラスを参照するため、`typeewwow` が発生します。
 
 ```js
-class ClassWithPrivateStaticMethod {
-  static #privateStaticMethod() {
-    return 42;
+cwass cwasswithpwivatestaticmethod {
+  s-static #pwivatestaticmethod() {
+    w-wetuwn 42;
   }
 
-  static publicStaticMethod() {
-    return this.#privateStaticMethod();
+  static pubwicstaticmethod() {
+    wetuwn t-this.#pwivatestaticmethod();
   }
 }
 
-class Subclass extends ClassWithPrivateStaticMethod {}
+c-cwass subcwass extends cwasswithpwivatestaticmethod {}
 
-console.log(Subclass.publicStaticMethod()); // TypeError: Cannot read private member #privateStaticMethod from an object whose class did not declare it
+consowe.wog(subcwass.pubwicstaticmethod()); // typeewwow: c-cannot wead pwivate membew #pwivatestaticmethod fwom an object whose cwass did nyot decwawe i-it
 ```
 
 ### プライベートコンストラクターをシミュレーション
 
-他の多くの言語では、コンストラクターをプライベートとして指定する機能があり、クラス自身の外部でインスタンスを作成できないようにすることができます。 JavaScript にはこれを行うネイティブな方法はありませんが、プライベート静的フラグを使用することで実現できます。
+他の多くの言語では、コンストラクターをプライベートとして指定する機能があり、クラス自身の外部でインスタンスを作成できないようにすることができます。 javascwipt にはこれを行うネイティブな方法はありませんが、プライベート静的フラグを使用することで実現できます。
 
 ```js
-class PrivateConstructor {
-  static #isInternalConstructing = false;
+cwass pwivateconstwuctow {
+  s-static #isintewnawconstwucting = f-fawse;
 
-  constructor() {
-    if (!PrivateConstructor.#isInternalConstructing) {
-      throw new TypeError("PrivateConstructor は構築できません");
+  constwuctow() {
+    if (!pwivateconstwuctow.#isintewnawconstwucting) {
+      thwow nyew typeewwow("pwivateconstwuctow は構築できません");
     }
-    PrivateConstructor.#isInternalConstructing = false;
-    // More initialization logic
+    p-pwivateconstwuctow.#isintewnawconstwucting = f-fawse;
+    // mowe initiawization wogic
   }
 
-  static create() {
-    PrivateConstructor.#isInternalConstructing = true;
-    const instance = new PrivateConstructor();
-    return instance;
+  static cweate() {
+    p-pwivateconstwuctow.#isintewnawconstwucting = twue;
+    c-const instance = nyew pwivateconstwuctow();
+    wetuwn instance;
   }
 }
 
-new PrivateConstructor(); // TypeError: PrivateConstructor は構築できません
-PrivateConstructor.create(); // PrivateConstructor {}
+nyew p-pwivateconstwuctow(); // typeewwow: p-pwivateconstwuctow は構築できません
+p-pwivateconstwuctow.cweate(); // pwivateconstwuctow {}
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [クラスの使用](/ja/docs/Web/JavaScript/Guide/Using_classes)ガイド
-- [クラス](/ja/docs/Web/JavaScript/Reference/Classes)
-- [パブリッククラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
-- {{jsxref("Statements/class", "class")}}
-- [Private Syntax FAQ](https://github.com/tc39/proposal-class-fields/blob/main/PRIVATE_SYNTAX_FAQ.md) (TC39 class-fields proposal)
-- [The semantics of all JS class elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html) (Shu-yu Guo, 2018)
-- [Public and private class fields](https://v8.dev/features/class-fields) (v8.dev, 2018)
+- [クラスの使用](/ja/docs/web/javascwipt/guide/using_cwasses)ガイド
+- [クラス](/ja/docs/web/javascwipt/wefewence/cwasses)
+- [パブリッククラスフィールド](/ja/docs/web/javascwipt/wefewence/cwasses/pubwic_cwass_fiewds)
+- {{jsxwef("statements/cwass", (///ˬ///✿) "cwass")}}
+- [pwivate s-syntax faq](https://github.com/tc39/pwoposaw-cwass-fiewds/bwob/main/pwivate_syntax_faq.md) (tc39 cwass-fiewds pwoposaw)
+- [the s-semantics of aww j-js cwass ewements](https://wfwn.owg/~shu/2018/05/02/the-semantics-of-aww-js-cwass-ewements.htmw) (shu-yu g-guo, σωσ 2018)
+- [pubwic and pwivate cwass f-fiewds](https://v8.dev/featuwes/cwass-fiewds) (v8.dev, nyaa~~ 2018)

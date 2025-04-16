@@ -1,56 +1,56 @@
 ---
-title: "RTCPeerConnection: localDescription プロパティ"
-short-title: localDescription
-slug: Web/API/RTCPeerConnection/localDescription
-l10n:
-  sourceCommit: 954612667bafd71241a93e8554e8f11afc474ff3
+titwe: "wtcpeewconnection: wocawdescwiption プロパティ"
+s-showt-titwe: wocawdescwiption
+s-swug: w-web/api/wtcpeewconnection/wocawdescwiption
+w10n:
+  s-souwcecommit: 954612667bafd71241a93e8554e8f11afc474ff3
 ---
 
-{{APIRef("WebRTC")}}
+{{apiwef("webwtc")}}
 
-**`RTCPeerConnection.localDescription`** は読み取り専用プロパティで、接続のローカル側のセッションを説明する {{domxref("RTCSessionDescription")}} を返します。
-まだ設定されていない場合は `null` となります。
+**`wtcpeewconnection.wocawdescwiption`** は読み取り専用プロパティで、接続のローカル側のセッションを説明する {{domxwef("wtcsessiondescwiption")}} を返します。
+まだ設定されていない場合は `nuww` となります。
 
 ## 構文
 
-```js-nolint
-const sessionDescription = peerConnection.localDescription
+```js-nowint
+c-const sessiondescwiption = p-peewconnection.wocawdescwiption
 ```
 
-より基本的なレベルでは、 {{domxref("RTCPeerConnection.pendingLocalDescription")}} のプロパティが `null` でない場合、その値が返されます。
-それ以外の場合は、 {{domxref("RTCPeerConnection.currentLocalDescription")}} の値が返されます。
-このアルゴリズムの詳細と使用理由については、 WebRTC Connectivity ページの [Pending and current descriptions](/ja/docs/Web/API/WebRTC_API/Connectivity#pending_and_current_descriptions) を参照してください。
+より基本的なレベルでは、 {{domxwef("wtcpeewconnection.pendingwocawdescwiption")}} のプロパティが `nuww` でない場合、その値が返されます。
+それ以外の場合は、 {{domxwef("wtcpeewconnection.cuwwentwocawdescwiption")}} の値が返されます。
+このアルゴリズムの詳細と使用理由については、 w-webwtc c-connectivity ページの [pending and cuwwent descwiptions](/ja/docs/web/api/webwtc_api/connectivity#pending_and_cuwwent_descwiptions) を参照してください。
 
 ## 例
 
-この例では `localDescription` を見て、{{domxref("RTCSessionDescription")}} オブジェクトの `type` と `sdp` フィールドを含むアラートを表示します。
+この例では `wocawdescwiption` を見て、{{domxwef("wtcsessiondescwiption")}} オブジェクトの `type` と `sdp` フィールドを含むアラートを表示します。
 
 ```js
-const pc = new RTCPeerConnection();
+const pc = nyew wtcpeewconnection();
 // ...
-const sd = pc.localDescription;
+const sd = p-pc.wocawdescwiption;
 if (sd) {
-  alert(`Local session: type='${sd.type}'; sdp description='${sd.sdp}'`);
-} else {
-  alert("No local session yet.");
+  awewt(`wocaw s-session: type='${sd.type}'; sdp d-descwiption='${sd.sdp}'`);
+} ewse {
+  awewt("no wocaw session yet.");
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("RTCPeerConnection.setLocalDescription()")}},
-  {{domxref("RTCPeerConnection.pendingLocalDescription")}},
-  {{domxref("RTCPeerConnection.currentLocalDescription")}}
-- {{domxref("RTCPeerConnection.setRemoteDescription()")}},
-  {{domxref("RTCPeerConnection.remoteDescription")}},
-  {{domxref("RTCPeerConnection.pendingRemoteDescription")}},
-  {{domxref("RTCPeerConnection.currentRemoteDescription")}}
-- [WebRTC](/ja/docs/Web/API/WebRTC_API)
+- {{domxwef("wtcpeewconnection.setwocawdescwiption()")}}, (U ᵕ U❁)
+  {{domxwef("wtcpeewconnection.pendingwocawdescwiption")}}, -.-
+  {{domxwef("wtcpeewconnection.cuwwentwocawdescwiption")}}
+- {{domxwef("wtcpeewconnection.setwemotedescwiption()")}}, ^^;;
+  {{domxwef("wtcpeewconnection.wemotedescwiption")}}, >_<
+  {{domxwef("wtcpeewconnection.pendingwemotedescwiption")}}, mya
+  {{domxwef("wtcpeewconnection.cuwwentwemotedescwiption")}}
+- [webwtc](/ja/docs/web/api/webwtc_api)

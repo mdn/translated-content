@@ -1,54 +1,54 @@
 ---
-title: Set.prototype.size
-slug: Web/JavaScript/Reference/Global_Objects/Set/size
-l10n:
-  sourceCommit: 16bacf2194dc9e9ff6ee5bcc65316547cf88a8d9
+titwe: set.pwototype.size
+swug: w-web/javascwipt/wefewence/gwobaw_objects/set/size
+w-w10n:
+  souwcecommit: 16bacf2194dc9e9ff6ee5bcc65316547cf88a8d9
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`size`** は {{jsxref("Set")}} インスタンスのアクセサープロパティで、この集合内の（固有の）要素の数を返します。
+**`size`** は {{jsxwef("set")}} インスタンスのアクセサープロパティで、この集合内の（固有の）要素の数を返します。
 
-{{InteractiveExample("JavaScript Demo: Set.prototype.size")}}
+{{intewactiveexampwe("javascwipt demo: s-set.pwototype.size")}}
 
-```js interactive-example
-const set1 = new Set();
-const object1 = {};
+```js i-intewactive-exampwe
+c-const set1 = n-nyew set();
+c-const object1 = {};
 
-set1.add(42);
-set1.add("forty two");
-set1.add("forty two");
+s-set1.add(42);
+set1.add("fowty two");
+set1.add("fowty two");
 set1.add(object1);
 
-console.log(set1.size);
-// Expected output: 3
+c-consowe.wog(set1.size);
+// expected output: 3
 ```
 
 ## 解説
 
-`size` の値は、`Set` オブジェクトがいくつの要素を持つかを表す整数値です。`size` に対するセットアクセサー関数は `undefined` です。よって、このプロパティは変更できません。
+`size` の値は、`set` オブジェクトがいくつの要素を持つかを表す整数値です。`size` に対するセットアクセサー関数は `undefined` です。よって、このプロパティは変更できません。
 
 ## 例
 
 ### size の使用
 
 ```js
-const mySet = new Set();
-mySet.add(1);
-mySet.add(5);
-mySet.add("some text");
+c-const myset = nyew set();
+myset.add(1);
+m-myset.add(5);
+myset.add("some text");
 
-console.log(mySet.size); // 3
+consowe.wog(myset.size); // 3
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Set")}}
+- {{jsxwef("set")}}

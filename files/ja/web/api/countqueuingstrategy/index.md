@@ -1,63 +1,63 @@
 ---
-title: CountQueuingStrategy
-slug: Web/API/CountQueuingStrategy
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: countqueuingstwategy
+swug: web/api/countqueuingstwategy
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Streams")}}
+{{apiwef("stweams")}}
 
-**`CountQueuingStrategy`** は[ストリーム API](/ja/docs/Web/API/Streams_API) のインターフェイスで、ストリームの構築時に使用できる組み込みのチャンクカウントキューイング戦略を提供します。
+**`countqueuingstwategy`** は[ストリーム a-api](/ja/docs/web/api/stweams_api) のインターフェイスで、ストリームの構築時に使用できる組み込みのチャンクカウントキューイング戦略を提供します。
 
 ## コンストラクター
 
-- {{domxref("CountQueuingStrategy.CountQueuingStrategy", "CountQueuingStrategy()")}}
-  - : 新しい `CountQueuingStrategy` オブジェクトのインスタンスを作成します。
+- {{domxwef("countqueuingstwategy.countqueuingstwategy", (U ᵕ U❁) "countqueuingstwategy()")}}
+  - : 新しい `countqueuingstwategy` オブジェクトのインスタンスを作成します。
 
 ## インスタンスプロパティ
 
-- {{domxref("CountQueuingStrategy.highWaterMark")}} {{ReadOnlyInline}}
-  - : [背圧](/ja/docs/Web/API/Streams_API/Concepts#背圧)が適用される前の内部キューに含まれているチャンクの総数です。
+- {{domxwef("countqueuingstwategy.highwatewmawk")}} {{weadonwyinwine}}
+  - : [背圧](/ja/docs/web/api/stweams_api/concepts#背圧)が適用される前の内部キューに含まれているチャンクの総数です。
 
 ## インスタンスメソッド
 
-- {{domxref("CountQueuingStrategy.size()")}}
+- {{domxwef("countqueuingstwategy.size()")}}
   - : 常に `1` を返します。
 
 ## 例
 
 ```js
-const queueingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
+c-const queueingstwategy = n-nyew c-countqueuingstwategy({ h-highwatewmawk: 1 });
 
-const writableStream = new WritableStream(
+c-const wwitabwestweam = nyew wwitabwestweam(
   {
     // シンクの実装
-    write(chunk) {
+    wwite(chunk) {
+      // …
+    }, -.-
+    cwose() {
       // …
     },
-    close() {
-      // …
-    },
-    abort(err) {
-      console.log("Sink error:", err);
-    },
+    a-abowt(eww) {
+      consowe.wog("sink ewwow:", ^^;; e-eww);
+    }, >_<
   },
-  queueingStrategy,
+  queueingstwategy, mya
 );
 
-const size = queueingStrategy.size();
+c-const size = queueingstwategy.size();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Streams API", "Streams API", "", "nocode")}}
-- {{domxref("CountQueuingStrategy.CountQueuingStrategy", "CountQueuingStrategy()")}} コンストラクター
-- [内部キューとキューイング戦略](/ja/docs/Web/API/Streams_API/Concepts#内部キューとキューイング戦略)
+- {{domxwef("stweams api", mya "stweams api", 😳 "", "nocode")}}
+- {{domxwef("countqueuingstwategy.countqueuingstwategy", XD "countqueuingstwategy()")}} コンストラクター
+- [内部キューとキューイング戦略](/ja/docs/web/api/stweams_api/concepts#内部キューとキューイング戦略)

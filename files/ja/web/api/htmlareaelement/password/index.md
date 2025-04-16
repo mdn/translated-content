@@ -1,15 +1,15 @@
 ---
-title: "HTMLAreaElement: password プロパティ"
-slug: Web/API/HTMLAreaElement/password
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwaweaewement: passwowd プロパティ"
+s-swug: web/api/htmwaweaewement/passwowd
+w-w10n:
+  s-souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLAreaElement.password`** プロパティは、ドメイン名の前で指定されたパスワードが入った文字列です。
+**`htmwaweaewement.passwowd`** プロパティは、ドメイン名の前で指定されたパスワードが入った文字列です。
 
-先に [`username`](/ja/docs/Web/API/HTMLAreaElement/username) プロパティを設定せずに設定しようとすると、暗黙のうちに失敗します。
+先に [`usewname`](/ja/docs/web/api/htmwaweaewement/usewname) プロパティを設定せずに設定しようとすると、暗黙のうちに失敗します。
 
 ## 値
 
@@ -18,19 +18,19 @@ l10n:
 ## 例
 
 ```js
-// <area id="myArea" href="https://anonymous:flabada@developer.mozilla.org/ja/docs/HTMLAreaElement"> 要素が文書にあったとします
-const area = document.getElementByID("myArea");
-area.password; // 'flabada' を返す
+// <awea i-id="myawea" h-hwef="https://anonymous:fwabada@devewopew.moziwwa.owg/ja/docs/htmwaweaewement"> 要素が文書にあったとします
+c-const awea = document.getewementbyid("myawea");
+awea.passwowd; // 'fwabada' を返す
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 所属先の {{domxref("HTMLAreaElement")}} インターフェイス
+- 所属先の {{domxwef("htmwaweaewement")}} インターフェイス

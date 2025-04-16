@@ -1,16 +1,16 @@
 ---
-title: SVG チュートリアル
-short-title: チュートリアル
-slug: Web/SVG/Tutorials
-l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+titwe: svg チュートリアル
+showt-titwe: チュートリアル
+s-swug: web/svg/tutowiaws
+w10n:
+  s-souwcecommit: c-c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-このページでは、 SVG のチュートリアルを紹介しています。
+このページでは、 s-svg のチュートリアルを紹介しています。
 
-{{SubPagesWithSummaries}}
+{{subpageswithsummawies}}
 
 ## 関連情報
 
-- [SVG ガイド](/ja/docs/Web/SVG/Guides)
-- [SVG リファレンス](/ja/docs/Web/SVG/Reference)
+- [svg ガイド](/ja/docs/web/svg/guides)
+- [svg リファレンス](/ja/docs/web/svg/wefewence)

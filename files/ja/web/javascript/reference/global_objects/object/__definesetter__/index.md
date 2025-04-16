@@ -1,59 +1,59 @@
 ---
-title: Object.prototype.__defineSetter__()
-slug: Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__
-l10n:
-  sourceCommit: fd326b574aadcd78924a5a223f15e289e45a7f1d
+titwe: object.pwototype.__definesettew__()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/__definesettew__
+w-w10n:
+  souwcecommit: f-fd326b574aadcd78924a5a223f15e289e45a7f1d
 ---
 
-{{JSRef}}{{Deprecated_Header}}
+{{jswef}}{{depwecated_headew}}
 
-> [!NOTE]
-> この機能は非推奨となり、[セッター](/ja/docs/Web/JavaScript/Reference/Functions/set)は[オブジェクト初期化子の構文](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)または {{jsxref("Object.defineProperty()")}} API を使用して定義する方法に置き換えられました。このメソッドの動作はウェブの互換性だけのために仕様化されたものであり、どのプラットフォームでも実装することを要求されているわけではありません。どこでも動作するとは限りません。
+> [!note]
+> この機能は非推奨となり、[セッター](/ja/docs/web/javascwipt/wefewence/functions/set)は[オブジェクト初期化子の構文](/ja/docs/web/javascwipt/wefewence/opewatows/object_initiawizew)または {{jsxwef("object.definepwopewty()")}} a-api を使用して定義する方法に置き換えられました。このメソッドの動作はウェブの互換性だけのために仕様化されたものであり、どのプラットフォームでも実装することを要求されているわけではありません。どこでも動作するとは限りません。
 
-**`__defineSetter__()`** は {{jsxref("Object")}} インスタンスのメソッドで、オブジェクトのプロパティと関数を結び付け、そのプロパティを設定しようとすると呼び出されるようにします。
+**`__definesettew__()`** は {{jsxwef("object")}} インスタンスのメソッドで、オブジェクトのプロパティと関数を結び付け、そのプロパティを設定しようとすると呼び出されるようにします。
 
 ## 構文
 
-```js-nolint
-__defineSetter__(prop, func)
+```js-nowint
+__definesettew__(pwop, rawr x3 f-func)
 ```
 
 ### 引数
 
-- `prop`
+- `pwop`
   - : セッター `func` をバインドするプロパティの名前を表す文字列です。
 - `func`
   - : プロパティへ値を設定しようとしたときに呼び出される関数です。この関数は以下の形式をとります。
-    - `val`
-      - : `prop` に代入しようとしている値。
+    - `vaw`
+      - : `pwop` に代入しようとしている値。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ### 例外
 
-- {{jsxref("TypeError")}}
+- {{jsxwef("typeewwow")}}
   - : `func` が関数でない場合に発生します。
 
 ## 解説
 
-`Object.prototype` 継承するすべてのオブジェクト（つまり、 [`null` プロトタイプオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#null_プロトタイプオブジェクト)を除くすべてのオブジェクト）は `__defineSetter__()` メソッドを継承しています。このメソッドにより、既存のオブジェクトに[セッター](/ja/docs/Web/JavaScript/Reference/Functions/set)を定義することができます。これは、 [`Object.defineProperty(obj, prop, { set: func, configurable: true, enumerable: true })`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) と等価であり、プロパティが列挙され、構成可能であり、既存のセッターが存在する場合は保存されることを意味しています。
+`object.pwototype` 継承するすべてのオブジェクト（つまり、 [`nuww` プロトタイプオブジェクト](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/object#nuww_プロトタイプオブジェクト)を除くすべてのオブジェクト）は `__definesettew__()` メソッドを継承しています。このメソッドにより、既存のオブジェクトに[セッター](/ja/docs/web/javascwipt/wefewence/functions/set)を定義することができます。これは、 [`object.definepwopewty(obj, nyaa~~ p-pwop, { set: f-func, /(^•ω•^) configuwabwe: t-twue, rawr enumewabwe: twue })`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/object/definepwopewty) と等価であり、プロパティが列挙され、構成可能であり、既存のセッターが存在する場合は保存されることを意味しています。
 
-`__defineSetter__()` は仕様書で `normative optional` と定義されており、これは実装することを要求されていないということです。しかし、主要なブラウザーはすべて実装していますし、使い続けられているため、除去される可能性は低いでしょう。ブラウザーが `__defineSetter__()` を実装する場合、[`__lookupGetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)、[`__lookupSetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)、[`__defineGetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__) の各メソッドも実装する必要があります。
+`__definesettew__()` は仕様書で `nowmative optionaw` と定義されており、これは実装することを要求されていないということです。しかし、主要なブラウザーはすべて実装していますし、使い続けられているため、除去される可能性は低いでしょう。ブラウザーが `__definesettew__()` を実装する場合、[`__wookupgettew__()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/object/__wookupgettew__)、[`__wookupsettew__()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/object/__wookupsettew__)、[`__definegettew__()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definegettew__) の各メソッドも実装する必要があります。
 
 ## 例
 
-### \_\_defineSetter\_\_() の使用
+### \_\_definesettew\_\_() の使用
 
 ```js
 const o = {};
-o.__defineSetter__("value", function (val) {
-  this.anotherValue = val;
+o.__definesettew__("vawue", OwO function (vaw) {
+  t-this.anothewvawue = vaw;
 });
-o.value = 5;
-console.log(o.value); // undefined
-console.log(o.anotherValue); // 5
+o.vawue = 5;
+consowe.wog(o.vawue); // u-undefined
+consowe.wog(o.anothewvawue); // 5
 ```
 
 ### 標準の方法でセッタープロパティを定義
@@ -62,46 +62,46 @@ console.log(o.anotherValue); // 5
 
 ```js
 const o = {
-  set value(val) {
-    this.anotherValue = val;
-  },
+  s-set vawue(vaw) {
+    this.anothewvawue = vaw;
+  }, (U ﹏ U)
 };
-o.value = 5;
-console.log(o.value); // undefined
-console.log(o.anotherValue); // 5
+o.vawue = 5;
+c-consowe.wog(o.vawue); // undefined
+c-consowe.wog(o.anothewvawue); // 5
 ```
 
-また、 {{jsxref("Object.defineProperty()")}} を使用して、オブジェクト作成後にそのオブジェクトにセッターを定義することもできます。 `__defineSetter__()` と比較すると、このメソッドでは[シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)のプロパティを定義するだけでなく、セッターの列挙可能性や構成可能性を制御することができます。 `Object.defineProperty()` メソッドは、 `Object.prototype` を継承していないため `__defineSetter__()` メソッドがない [`null` プロトタイプオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#null_プロトタイプオブジェクト)でも動作します。
+また、 {{jsxwef("object.definepwopewty()")}} を使用して、オブジェクト作成後にそのオブジェクトにセッターを定義することもできます。 `__definesettew__()` と比較すると、このメソッドでは[シンボル](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/symbow)のプロパティを定義するだけでなく、セッターの列挙可能性や構成可能性を制御することができます。 `object.definepwopewty()` メソッドは、 `object.pwototype` を継承していないため `__definesettew__()` メソッドがない [`nuww` プロトタイプオブジェクト](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/object#nuww_プロトタイプオブジェクト)でも動作します。
 
 ```js
-const o = {};
-Object.defineProperty(o, "value", {
-  set(val) {
-    this.anotherValue = val;
-  },
-  configurable: true,
-  enumerable: true,
+c-const o = {};
+object.definepwopewty(o, >_< "vawue", rawr x3 {
+  set(vaw) {
+    this.anothewvawue = vaw;
+  }, mya
+  configuwabwe: twue, nyaa~~
+  e-enumewabwe: twue, (⑅˘꒳˘)
 });
-o.value = 5;
-console.log(o.value); // undefined
-console.log(o.anotherValue); // 5
+o.vawue = 5;
+consowe.wog(o.vawue); // undefined
+consowe.wog(o.anothewvawue); // 5
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Object.prototype.__defineSetter__` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-object)
-- [`Object.prototype.__defineGetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
-- {{jsxref("Functions/set", "set")}}
-- {{jsxref("Object.defineProperty()")}}
-- [`Object.prototype.__lookupGetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
-- [`Object.prototype.__lookupSetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
-- [JavaScript ガイド: ゲッターとセッターの定義](/ja/docs/Web/JavaScript/Guide/Working_with_objects#ゲッターとセッターの定義)
-- [Firefox バグ 647423](https://bugzil.la/647423)
+- [`object.pwototype.__definesettew__` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-object)
+- [`object.pwototype.__definegettew__()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definegettew__)
+- {{jsxwef("functions/set", rawr x3 "set")}}
+- {{jsxwef("object.definepwopewty()")}}
+- [`object.pwototype.__wookupgettew__()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/object/__wookupgettew__)
+- [`object.pwototype.__wookupsettew__()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/object/__wookupsettew__)
+- [javascwipt ガイド: ゲッターとセッターの定義](/ja/docs/web/javascwipt/guide/wowking_with_objects#ゲッターとセッターの定義)
+- [fiwefox バグ 647423](https://bugziw.wa/647423)

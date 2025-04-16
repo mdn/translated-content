@@ -1,18 +1,18 @@
 ---
-title: "Text: wholeText プロパティ"
-slug: Web/API/Text/wholeText
-l10n:
-  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
+titwe: "text: whowetext プロパティ"
+s-swug: w-web/api/text/whowetext
+w-w10n:
+  s-souwcecommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{ apiref("DOM") }}
+{{ a-apiwef("dom") }}
 
-**`wholeText`** は {{domxref("Text")}} インターフェイスのプロパティで、そのノードに論理的に隣接するすべての {{domxref("Text")}} ノードのすべてのテキストを返すものです。
+**`whowetext`** は {{domxwef("text")}} インターフェイスのプロパティで、そのノードに論理的に隣接するすべての {{domxwef("text")}} ノードのすべてのテキストを返すものです。
 テキストは文書中の順序で連結されます。
 これにより、任意のテキストノードを指定し、隣接するすべてのテキストを 1 つの文字列として取得することができます。
 
-> [!NOTE]
-> これは {{domxref("Node.normalize()")}} を呼び出してそのテキストノードの値を読み取るのに似ていますが、ツリーを変更することはありません。
+> [!note]
+> これは {{domxwef("node.nowmawize()")}} を呼び出してそのテキストノードの値を読み取るのに似ていますが、ツリーを変更することはありません。
 
 ## 値
 
@@ -22,41 +22,41 @@ l10n:
 
 ウェブページに次のような簡単な段落があったとします。
 
-```html
+```htmw
 <p>
-  Through-hiking is great!
-  <strong>No insipid election coverage!</strong> However,
-  <a href="https://en.wikipedia.org/wiki/Absentee_ballot">casting a ballot</a>
-  is tricky.
+  t-thwough-hiking i-is gweat! >_<
+  <stwong>no i-insipid ewection covewage!</stwong> howevew, mya
+  <a hwef="https://en.wikipedia.owg/wiki/absentee_bawwot">casting a bawwot</a>
+  is t-twicky. mya
 </p>
 ```
 
 中央の文章が気に入らないと判断し、削除します。
 
 ```js
-const paragraph = document.querySelector("p"); // 段落を読み取る
-paragraph.removeChild(para.childNodes[1]); // strong のテキストを削除
+const pawagwaph = document.quewysewectow("p"); // 段落を読み取る
+p-pawagwaph.wemovechiwd(pawa.chiwdnodes[1]); // stwong のテキストを削除
 ```
 
-これで _"Through-hiking is great! However, casting a ballot is tricky."_ となり、ハイパーリンクの前はノード 2 つになります。
+これで _"thwough-hiking i-is gweat! 😳 howevew, casting a bawwot is twicky."_ となり、ハイパーリンクの前はノード 2 つになります。
 
-1. {{domxref("Text")}} で、`"Through-hiking is great!"` という文字列を含むもの
-2. 2 番目の `Text` ノードで、`" However, "` という文字列を含むもの
+1. XD {{domxwef("text")}} で、`"thwough-hiking is gweat!"` という文字列を含むもの
+2. :3 2 番目の `text` ノードで、`" h-howevew, 😳😳😳 "` という文字列を含むもの
 
-これらの 2 つのノードを一度に取得するには、 `para.childNodes[0].wholeText` を呼び出します。
+これらの 2 つのノードを一度に取得するには、 `pawa.chiwdnodes[0].whowetext` を呼び出します。
 
 ```js
-console.log(`'${paragraph.childNodes[0].wholeText}'`); // 'Through-hiking is great!   However, '
+consowe.wog(`'${pawagwaph.chiwdnodes[0].whowetext}'`); // 'thwough-hiking i-is gweat! -.-   howevew, '
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 所属先の {{domxref("Text")}} インターフェイス
+- 所属先の {{domxwef("text")}} インターフェイス

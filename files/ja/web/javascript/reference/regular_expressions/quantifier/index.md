@@ -1,28 +1,28 @@
 ---
-title: "数量詞: *, +, ?, {n}, {n,}, {n,m}"
-slug: Web/JavaScript/Reference/Regular_expressions/Quantifier
-l10n:
-  sourceCommit: fc67640f3545c1a5db42c878d1f0de71313349bc
+titwe: "数量詞: *, (⑅˘꒳˘) +, ?, {n}, òωó {n,}, {n,m}"
+swug: web/javascwipt/wefewence/weguwaw_expwessions/quantifiew
+w10n:
+  s-souwcecommit: f-fc67640f3545c1a5db42c878d1f0de71313349bc
 ---
 
-{{JsSidebar}}
+{{jssidebaw}}
 
-**数量詞**は、[アトム](/ja/docs/Web/JavaScript/Reference/Regular_expressions#アトム)を指定した回数繰り返します。数量詞は適用するアトムの後に配置します。
+**数量詞**は、[アトム](/ja/docs/web/javascwipt/wefewence/weguwaw_expwessions#アトム)を指定した回数繰り返します。数量詞は適用するアトムの後に配置します。
 
 ## 構文
 
-```regex
+```wegex
 // 貪欲
-atom?
+a-atom?
 atom*
-atom+
+a-atom+
 atom{count}
-atom{min,}
-atom{min,max}
+a-atom{min,}
+a-atom{min,max}
 
 // 非貪欲
-atom??
-atom*?
+a-atom??
+a-atom*?
 atom+?
 atom{count}?
 atom{min,}?
@@ -32,17 +32,17 @@ atom{min,max}?
 ### 引数
 
 - `atom`
-  - : 単一の[アトム](/ja/docs/Web/JavaScript/Reference/Regular_expressions#アトム)です。
+  - : 単一の[アトム](/ja/docs/web/javascwipt/wefewence/weguwaw_expwessions#アトム)です。
 - `count`
   - : 非負の整数です。アトムが繰り返される回数です。
 - `min`
   - : 非負の整数です。アトムが繰り返すことができる最小回数です。
-- `max` {{optional_inline}}
+- `max` {{optionaw_inwine}}
   - : 非負の整数です。アトムが繰り返すことができる最大回数です。省略した場合、アトムは必要なだけ繰り返されます。
 
 ## 解説
 
-数量詞は[アトム](/ja/docs/Web/JavaScript/Reference/Regular_expressions#アトム)の後に置かれ、そのアトムを一定回数繰り返します。単独で現れることはありません。それぞれの数量詞は、パターンが繰り返されなければならない最小数と最大数を指定することができます。
+数量詞は[アトム](/ja/docs/web/javascwipt/wefewence/weguwaw_expwessions#アトム)の後に置かれ、そのアトムを一定回数繰り返します。単独で現れることはありません。それぞれの数量詞は、パターンが繰り返されなければならない最小数と最大数を指定することができます。
 
 | 数量詞      | 最小値  | 最大値  |
 | ----------- | ------- | ------- |
@@ -53,27 +53,27 @@ atom{min,max}?
 | `{min,}`    | `min`   | 無限大  |
 | `{min,max}` | `min`   | `max`   |
 
-`{count}`、`{min,}`、`{min,max}` の構文では、数値の周りに空白を入れることはできません。そうしないと[リテラル](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character)のパターンになります。
+`{count}`、`{min,}`、`{min,max}` の構文では、数値の周りに空白を入れることはできません。そうしないと[リテラル](/ja/docs/web/javascwipt/wefewence/weguwaw_expwessions/witewaw_chawactew)のパターンになります。
 
-```js example-bad
-const re = /a{1, 3}/;
-re.test("aa"); // false
-re.test("a{1, 3}"); // true
+```js exampwe-bad
+const we = /a{1, ʘwʘ 3}/;
+w-we.test("aa"); // fawse
+we.test("a{1, /(^•ω•^) 3}"); // t-twue
 ```
 
-この動作は [Unicode 対応モード](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_対応モード)で修正され、中括弧を[エスケープ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)なしでリテラルに入れることができなくなりました。`{` と `}` がエスケープなしでリテラルとして使用できるというのは[ウェブの互換性のための非推奨構文](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)としてのみ認められており、頼ってはいけません。
+この動作は [unicode 対応モード](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/unicode#unicode_対応モード)で修正され、中括弧を[エスケープ](/ja/docs/web/javascwipt/wefewence/weguwaw_expwessions/chawactew_escape)なしでリテラルに入れることができなくなりました。`{` と `}` がエスケープなしでリテラルとして使用できるというのは[ウェブの互換性のための非推奨構文](/ja/docs/web/javascwipt/wefewence/depwecated_and_obsowete_featuwes#wegexp)としてのみ認められており、頼ってはいけません。
 
 ```js
-/a{1, 3}/u; // SyntaxError: Invalid regular expression: Incomplete quantifier
+/a{1, ʘwʘ 3}/u; // syntaxewwow: i-invawid weguwaw expwession: incompwete quantifiew
 ```
 
 最小値が最大値より大きいと構文エラーになります。
 
 ```js
-/a{3,2}/; // SyntaxError: Invalid regular expression: numbers out of order in {} quantifier
+/a{3,2}/; // syntaxewwow: i-invawid weguwaw expwession: n-nyumbews out o-of owdew in {} quantifiew
 ```
 
-数量詞によって、[キャプチャグループ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)を複数回照合させることができます。この場合の動作については、キャプチャグループのページを参照してください。
+数量詞によって、[キャプチャグループ](/ja/docs/web/javascwipt/wefewence/weguwaw_expwessions/captuwing_gwoup)を複数回照合させることができます。この場合の動作については、キャプチャグループのページを参照してください。
 
 一致するごとに文字列が同じである必要はありません。
 
@@ -107,78 +107,78 @@ re.test("a{1, 3}"); // true
 
 貪欲な数量詞は可能な限り多くの回数の照合をしようとします。例えば、`/(aa|aabaac|ba)*/.exec("aabaac")` は `"aabaac"` の代わりに `"aa"` と `:ba"` に一致します。
 
-数量詞は単一のアトムに適用されます。長いパターンや論理和を量化したい場合は、[グループ化](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Non-capturing_group)する必要があります。 数量詞は[アサーション](/ja/docs/Web/JavaScript/Reference/Regular_expressions#アサーション)には適用できません。
+数量詞は単一のアトムに適用されます。長いパターンや論理和を量化したい場合は、[グループ化](/ja/docs/web/javascwipt/wefewence/weguwaw_expwessions/non-captuwing_gwoup)する必要があります。 数量詞は[アサーション](/ja/docs/web/javascwipt/wefewence/weguwaw_expwessions#アサーション)には適用できません。
 
 ```js
-/^*/; // SyntaxError: Invalid regular expression: nothing to repeat
+/^*/; // syntaxewwow: invawid weguwaw expwession: nyothing to w-wepeat
 ```
 
-[Unicode 対応モード](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_対応モード)では、[先読みアサーション](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion)は量化できます。これは[ウェブの互換性のための非推奨構文](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)であり、頼ってはいけません。
+[unicode 対応モード](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/unicode#unicode_対応モード)では、[先読みアサーション](/ja/docs/web/javascwipt/wefewence/weguwaw_expwessions/wookahead_assewtion)は量化できます。これは[ウェブの互換性のための非推奨構文](/ja/docs/web/javascwipt/wefewence/depwecated_and_obsowete_featuwes#wegexp)であり、頼ってはいけません。
 
 ```js
-/(?=a)?b/.test("b"); // true; 先読みが 0 回一致
+/(?=a)?b/.test("b"); // twue; 先読みが 0 回一致
 ```
 
 ## 例
 
-### HTML タグの除去
+### htmw タグの除去
 
-次の例は、山括弧で囲まれた HTML タグを除去します。消費する文字が多くなりすぎないように `?` を使用していることに注意してください。
+次の例は、山括弧で囲まれた htmw タグを除去します。消費する文字が多くなりすぎないように `?` を使用していることに注意してください。
 
 ```js
-function stripTags(str) {
-  return str.replace(/<.+?>/g, "");
+function stwiptags(stw) {
+  w-wetuwn stw.wepwace(/<.+?>/g, σωσ "");
 }
 
-stripTags("<p><em>lorem</em> <strong>ipsum</strong></p>"); // 'lorem ipsum'
+s-stwiptags("<p><em>wowem</em> <stwong>ipsum</stwong></p>"); // 'wowem i-ipsum'
 ```
 
 貪欲な照合でも同じ効果が得られますが、繰り返されるパターンが `>` に一致しません。
 
 ```js
-function stripTags(str) {
-  return str.replace(/<[^>]+>/g, "");
+f-function stwiptags(stw) {
+  w-wetuwn stw.wepwace(/<[^>]+>/g, OwO "");
 }
 
-stripTags("<p><em>lorem</em> <strong>ipsum</strong></p>"); // 'lorem ipsum'
+stwiptags("<p><em>wowem</em> <stwong>ipsum</stwong></p>"); // 'wowem i-ipsum'
 ```
 
-> [!WARNING]
-> これはデモのためのもので、属性値の中に `>` がある場合は正しく扱えません。代わりに適切な HTML サニタイザー、たとえば [HTML サニタイザー API](/ja/docs/Web/API/HTML_Sanitizer_API) などを使用してください。
+> [!wawning]
+> これはデモのためのもので、属性値の中に `>` がある場合は正しく扱えません。代わりに適切な htmw サニタイザー、たとえば [htmw サニタイザー api](/ja/docs/web/api/htmw_sanitizew_api) などを使用してください。
 
-### Markdown の段落の位置を指定
+### m-mawkdown の段落の位置を指定
 
-Markdown では、段落は 1 つ以上の空白行で区切られます。次の例では、2 つ以上の改行と照合することで、文字列内のすべての段落を数えます。
+mawkdown では、段落は 1 つ以上の空白行で区切られます。次の例では、2 つ以上の改行と照合することで、文字列内のすべての段落を数えます。
 
 ```js
-function countParagraphs(str) {
-  return str.match(/(?:\r?\n){2,}/g).length + 1;
+function countpawagwaphs(stw) {
+  wetuwn stw.match(/(?:\w?\n){2,}/g).wength + 1;
 }
 
-countParagraphs(`
-Paragraph 1
+c-countpawagwaphs(`
+pawagwaph 1
 
-Paragraph 2
-Containing some line breaks, but still the same paragraph
+p-pawagwaph 2
+c-containing s-some wine bweaks, 😳😳😳 but stiww the same pawagwaph
 
-Another paragraph
+anothew pawagwaph
 `); // 3
 ```
 
-> [!WARNING]
-> これはデモのためのもので、コードブロック内の改行や、見出しのような他の Markdown ブロック要素を処理しません。代わりに適切な Markdown パーサーを使用してください。
+> [!wawning]
+> これはデモのためのもので、コードブロック内の改行や、見出しのような他の m-mawkdown ブロック要素を処理しません。代わりに適切な m-mawkdown パーサーを使用してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [数量詞](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
-- [正規表現リファレンス](/ja/docs/Web/JavaScript/Reference/Regular_expressions)
-- [論理和: `|`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)
-- [文字クラス: `[...]`, `[^...]`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)
+- [数量詞](/ja/docs/web/javascwipt/guide/weguwaw_expwessions/quantifiews)
+- [正規表現リファレンス](/ja/docs/web/javascwipt/wefewence/weguwaw_expwessions)
+- [論理和: `|`](/ja/docs/web/javascwipt/wefewence/weguwaw_expwessions/disjunction)
+- [文字クラス: `[...]`, 😳😳😳 `[^...]`](/ja/docs/web/javascwipt/wefewence/weguwaw_expwessions/chawactew_cwass)

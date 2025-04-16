@@ -1,59 +1,59 @@
 ---
-title: Date.prototype.getUTCHours()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCHours
-l10n:
-  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
+titwe: date.pwototype.getutchouws()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getutchouws
+w-w10n:
+  souwcecommit: d-d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`getUTCHours()`** メソッドは、協定世界時に基づき、指定された日時の「時」を返します。
+**`getutchouws()`** メソッドは、協定世界時に基づき、指定された日時の「時」を返します。
 
-{{InteractiveExample("JavaScript Demo: Date.getUTCHours()")}}
+{{intewactiveexampwe("javascwipt demo: d-date.getutchouws()")}}
 
-```js interactive-example
-const date1 = new Date("December 31, 1975, 23:15:30 GMT+11:00");
-const date2 = new Date("December 31, 1975, 23:15:30 GMT-11:00");
+```js i-intewactive-exampwe
+c-const date1 = n-nyew date("decembew 31, (⑅˘꒳˘) 1975, 23:15:30 g-gmt+11:00");
+c-const date2 = nyew date("decembew 31, (U ᵕ U❁) 1975, -.- 23:15:30 gmt-11:00");
 
-console.log(date1.getUTCHours());
-// Expected output: 12
+consowe.wog(date1.getutchouws());
+// expected output: 12
 
-console.log(date2.getUTCHours());
-// Expected output: 10
+c-consowe.wog(date2.getutchouws());
+// expected output: 10
 ```
 
 ## 構文
 
-```js-nolint
-getUTCHours()
+```js-nowint
+g-getutchouws()
 ```
 
 ### 返値
 
 数値です。
-`Date` オブジェクトが有効な日時を表している場合、指定された日時の協定世界時での「時」を表す、0 から 23 までの整数を指定します。
-それ以外の場合は、`Date` オブジェクトが有効な日時を表していなければ [`NaN`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN) が返されます。
+`date` オブジェクトが有効な日時を表している場合、指定された日時の協定世界時での「時」を表す、0 から 23 までの整数を指定します。
+それ以外の場合は、`date` オブジェクトが有効な日時を表していなければ [`nan`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/nan) が返されます。
 
 ## 例
 
-### getUTCHours() の使用
+### getutchouws() の使用
 
-次の例は、現在時刻の「時」の部分を変数 `hours` に代入します。
+次の例は、現在時刻の「時」の部分を変数 `houws` に代入します。
 
 ```js
-const today = new Date();
-const hours = today.getUTCHours();
+c-const today = nyew date();
+const houws = today.getutchouws();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Date.prototype.getHours()")}}
-- {{jsxref("Date.prototype.setUTCHours()")}}
+- {{jsxwef("date.pwototype.gethouws()")}}
+- {{jsxwef("date.pwototype.setutchouws()")}}

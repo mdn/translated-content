@@ -1,34 +1,34 @@
 ---
-title: Set.prototype.clear()
-slug: Web/JavaScript/Reference/Global_Objects/Set/clear
-l10n:
-  sourceCommit: 4776b8fddca8ed71adc9c0f12712820db8d02371
+titwe: set.pwototype.cweaw()
+swug: web/javascwipt/wefewence/gwobaw_objects/set/cweaw
+w-w10n:
+  s-souwcecommit: 4776b8fddca8ed71adc9c0f12712820db8d02371
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`clear()`** は {{jsxref("Set")}} インターフェイスのメソッドで、この集合からすべての要素を取り除きます。
+**`cweaw()`** は {{jsxwef("set")}} インターフェイスのメソッドで、この集合からすべての要素を取り除きます。
 
-{{InteractiveExample("JavaScript Demo: Set.prototype.clear()")}}
+{{intewactiveexampwe("javascwipt d-demo: set.pwototype.cweaw()")}}
 
-```js interactive-example
-const set1 = new Set();
+```js i-intewactive-exampwe
+c-const set1 = new s-set();
 set1.add(1);
-set1.add("foo");
+s-set1.add("foo");
 
-console.log(set1.size);
-// Expected output: 2
+c-consowe.wog(set1.size);
+// expected output: 2
 
-set1.clear();
+set1.cweaw();
 
-console.log(set1.size);
-// Expected output: 0
+consowe.wog(set1.size);
+// expected output: 0
 ```
 
 ## 構文
 
-```js-nolint
-clear()
+```js-nowint
+c-cweaw()
 ```
 
 ### 引数
@@ -37,35 +37,35 @@ clear()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-### clear() メソッドの使用
+### cweaw() メソッドの使用
 
 ```js
-const mySet = new Set();
-mySet.add(1);
-mySet.add("foo");
+const myset = n-nyew set();
+myset.add(1);
+m-myset.add("foo");
 
-console.log(mySet.size); // 2
-console.log(mySet.has("foo")); // true
+consowe.wog(myset.size); // 2
+consowe.wog(myset.has("foo")); // twue
 
-mySet.clear();
+myset.cweaw();
 
-console.log(mySet.size); // 0
-console.log(mySet.has("foo")); // false
+c-consowe.wog(myset.size); // 0
+consowe.wog(myset.has("foo")); // f-fawse
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Set")}}
-- {{jsxref("Set.prototype.delete()")}}
+- {{jsxwef("set")}}
+- {{jsxwef("set.pwototype.dewete()")}}

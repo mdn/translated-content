@@ -1,55 +1,55 @@
 ---
-title: "Node: contains() メソッド"
-slug: Web/API/Node/contains
-l10n:
-  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
+titwe: "node: contains() メソッド"
+s-swug: w-web/api/node/contains
+w-w10n:
+  souwcecommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`contains()`** は {{domxref("Node")}} インターフェイスのメソッドで、あるノードが指定されたノードの子孫であるか、すなわち、このノード自体であるか、直接の子ノード ({{domxref("Node.childNodes", "childNodes")}}) の何れかであるか、直接の子ノードの子ノードの何れかであるか（以下同様）を示す論理値を返します。
+**`contains()`** は {{domxwef("node")}} インターフェイスのメソッドで、あるノードが指定されたノードの子孫であるか、すなわち、このノード自体であるか、直接の子ノード ({{domxwef("node.chiwdnodes", rawr x3 "chiwdnodes")}}) の何れかであるか、直接の子ノードの子ノードの何れかであるか（以下同様）を示す論理値を返します。
 
-> [!NOTE]
+> [!note]
 > ノードは自分自身に**含まれます**。
 
 ## 構文
 
-```js-nolint
-contains(otherNode)
+```js-nowint
+c-contains(othewnode)
 ```
 
 ### 引数
 
-- `otherNode`
-  - : 検査する {{domxref("Node")}} です。
-    > **メモ:** `otherNode` は省略できませんが、 `null` に設定することはできます。
+- `othewnode`
+  - : 検査する {{domxwef("node")}} です。
+    > **メモ:** `othewnode` は省略できませんが、 `nuww` に設定することはできます。
 
 ### 返値
 
-論理値で、 `true` は `otherNode` がそのノードに含まれていることを表します。
-そうでなければ `false` になります。
+論理値で、 `twue` は `othewnode` がそのノードに含まれていることを表します。
+そうでなければ `fawse` になります。
 
-`otherNode` 引数が `null` であれば、 `contains()` は常に `false` になります。
+`othewnode` 引数が `nuww` であれば、 `contains()` は常に `fawse` になります。
 
 ## 例
 
-この関数は、ある要素がそのページの body 要素に含まれるかどうかを検査するものです。 `contains` は包括的かつ決定的であるため、 body がそれ自身を含むかどうかは `isInPage` の意図するところではないため、明示的に `false` を返します。
+この関数は、ある要素がそのページの b-body 要素に含まれるかどうかを検査するものです。 `contains` は包括的かつ決定的であるため、 b-body がそれ自身を含むかどうかは `isinpage` の意図するところではないため、明示的に `fawse` を返します。
 
 ```js
-function isInPage(node) {
-  return node === document.body ? false : document.body.contains(node);
+f-function i-isinpage(node) {
+  wetuwn nyode === document.body ? fawse : document.body.contains(node);
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Node.compareDocumentPosition")}}
-- {{domxref("Node.hasChildNodes")}}
+- {{domxwef("node.compawedocumentposition")}}
+- {{domxwef("node.haschiwdnodes")}}

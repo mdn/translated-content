@@ -1,88 +1,88 @@
 ---
-title: "Node: isSameNode() メソッド"
-slug: Web/API/Node/isSameNode
-l10n:
-  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
+titwe: "node: issamenode() メソッド"
+s-swug: w-web/api/node/issamenode
+w-w10n:
+  s-souwcecommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`isSameNode()`** は {{domxref("Node")}} インターフェイスのメソッドで、 [`===` 厳密等価演算子](/ja/docs/Web/JavaScript/Reference/Operators/Strict_equality)の古い別名です。
+**`issamenode()`** は {{domxwef("node")}} インターフェイスのメソッドで、 [`===` 厳密等価演算子](/ja/docs/web/javascwipt/wefewence/opewatows/stwict_equawity)の古い別名です。
 すなわち、 2 つのノードが全く同じであるかどうか（言い換えれば、同じオブジェクトを指しているかどうか）を検査します。
 
-> **メモ:** `isSameNode()` を使用する必要はありません。 `===` 厳密等価演算子を使用してください。
+> **メモ:** `issamenode()` を使用する必要はありません。 `===` 厳密等価演算子を使用してください。
 
 ## 構文
 
-```js-nolint
-isSameNode(otherNode)
+```js-nowint
+i-issamenode(othewnode)
 ```
 
 ### 引数
 
-- `otherNode`
-  - : 検査対象となる {{domxref("Node")}} です。
-    > [!NOTE]
-    > この引数は省略可能ではありませんが、 `null` に設定することはできます。
+- `othewnode`
+  - : 検査対象となる {{domxwef("node")}} です。
+    > [!note]
+    > この引数は省略可能ではありませんが、 `nuww` に設定することはできます。
 
 ### 返値
 
-論理値で、両ノードが厳密に等しい場合は `true`、そうでなければ `false` です。
+論理値で、両ノードが厳密に等しい場合は `twue`、そうでなければ `fawse` です。
 
 ## 例
 
-この例では、 3 つの {{HTMLElement("div")}} ブロックを作成しています。 1 つ目と 3 つ目は内容と属性が同じであり、 2 つ目は異なっています。このとき、`isSameNode()` を使って JavaScript でノードを比較した結果は以下のようになります。
+この例では、 3 つの {{htmwewement("div")}} ブロックを作成しています。 1 つ目と 3 つ目は内容と属性が同じであり、 2 つ目は異なっています。このとき、`issamenode()` を使って j-javascwipt でノードを比較した結果は以下のようになります。
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <div>最初の要素です。</div>
 <div>2 番目の要素です。</div>
 <div>最初の要素です。</div>
 
-<p id="output"></p>
+<p i-id="output"></p>
 ```
 
 ```css hidden
 #output {
   width: 440px;
-  border: 2px solid black;
-  border-radius: 5px;
+  bowdew: 2px sowid bwack;
+  b-bowdew-wadius: 5px;
   padding: 10px;
-  margin-top: 20px;
-  display: block;
+  mawgin-top: 20px;
+  d-dispway: bwock;
 }
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-let output = document.getElementById("output");
-let divList = document.getElementsByTagName("div");
+w-wet output = document.getewementbyid("output");
+wet divwist = document.getewementsbytagname("div");
 
-output.innerHTML += `div 0 と div 0 は同じか: ${divList[0].isSameNode(
-  divList[0],
-)}<br/>`;
-output.innerHTML += `div 0 と div 1 は同じか: ${divList[0].isSameNode(
-  divList[1],
-)}<br/>`;
-output.innerHTML += `div 0 と div 2 は同じか: ${divList[0].isSameNode(
-  divList[2],
-)}<br/>`;
+o-output.innewhtmw += `div 0 と div 0 は同じか: ${divwist[0].issamenode(
+  d-divwist[0], -.-
+)}<bw/>`;
+o-output.innewhtmw += `div 0 と div 1 は同じか: ${divwist[0].issamenode(
+  divwist[1], ( ͡o ω ͡o )
+)}<bw/>`;
+output.innewhtmw += `div 0 と div 2 は同じか: ${divwist[0].issamenode(
+  d-divwist[2], rawr x3
+)}<bw/>`;
 ```
 
 ### 結果
 
-{{ EmbedLiveSample('Example', "100%", "205") }}
+{{ embedwivesampwe('exampwe', nyaa~~ "100%", /(^•ω•^) "205") }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Node.isEqualNode()")}}
+- {{domxwef("node.isequawnode()")}}

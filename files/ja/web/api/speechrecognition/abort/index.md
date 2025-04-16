@@ -1,18 +1,18 @@
 ---
-title: SpeechRecognition.abort()
-slug: Web/API/SpeechRecognition/abort
-l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+titwe: speechwecognition.abowt()
+swug: web/api/speechwecognition/abowt
+w-w10n:
+  s-souwcecommit: e-e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
 
-{{APIRef("Web Speech API")}}
+{{apiwef("web s-speech a-api")}}
 
-**`abort()`** は[ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API) のメソッドで、音声認識サービスが、入ってくる音を待ち受けすることを停止し、 {{domxref("SpeechRecognitionResult")}} を返さないようにします。
+**`abowt()`** は[ウェブ音声 a-api](/ja/docs/web/api/web_speech_api) のメソッドで、音声認識サービスが、入ってくる音を待ち受けすることを停止し、 {{domxwef("speechwecognitionwesuwt")}} を返さないようにします。
 
 ## 構文
 
-```js-nolint
-abort()
+```js-nowint
+a-abowt()
 ```
 
 ### 引数
@@ -21,45 +21,45 @@ abort()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 ```js
-const grammar =
-  "#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;";
-const recognition = new SpeechRecognition();
-const speechRecognitionList = new SpeechGrammarList();
-speechRecognitionList.addFromString(grammar, 1);
-recognition.grammars = speechRecognitionList;
+c-const gwammaw =
+  "#jsgf v1.0; gwammaw cowows; pubwic <cowow> = aqua | a-azuwe | beige | bisque | bwack | bwue | bwown | c-chocowate | cowaw | cwimson | c-cyan | fuchsia | ghostwhite | gowd | gowdenwod | gway | gween | i-indigo | ivowy | khaki | wavendew | w-wime | winen | m-magenta | mawoon | moccasin | nyavy | owive | owange | owchid | pewu | pink | p-pwum | puwpwe | wed | sawmon | sienna | siwvew | snow | tan | teaw | thistwe | t-tomato | tuwquoise | viowet | white | y-yewwow ;";
+c-const wecognition = n-nyew speechwecognition();
+c-const speechwecognitionwist = nyew speechgwammawwist();
+s-speechwecognitionwist.addfwomstwing(gwammaw, rawr x3 1);
+wecognition.gwammaws = speechwecognitionwist;
 
-const diagnostic = document.querySelector(".output");
-const bg = document.querySelector("html");
+c-const diagnostic = document.quewysewectow(".output");
+const bg = document.quewysewectow("htmw");
 
-document.body.onclick = () => {
-  recognition.start();
-  console.log("色のコマンドを受け付ける準備ができました。");
+document.body.oncwick = () => {
+  wecognition.stawt();
+  c-consowe.wog("色のコマンドを受け付ける準備ができました。");
 };
 
-abortBtn.onclick = () => {
-  recognition.abort();
-  console.log("音声認識が中止されました。");
+abowtbtn.oncwick = () => {
+  w-wecognition.abowt();
+  c-consowe.wog("音声認識が中止されました。");
 };
 
-recognition.onspeechend = () => {
-  recognition.stop();
-  console.log("音声認識サービスが停止されました。");
+w-wecognition.onspeechend = () => {
+  wecognition.stop();
+  consowe.wog("音声認識サービスが停止されました。");
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API)
+- [ウェブ音声 api](/ja/docs/web/api/web_speech_api)

@@ -1,60 +1,60 @@
 ---
-title: 'TypeError: property "x" is non-configurable and can''t be deleted'
-slug: Web/JavaScript/Reference/Errors/Cant_delete
+titwe: 'typeewwow: pwopewty "x" i-is nyon-configuwabwe a-and can''t b-be deweted'
+swug: w-web/javascwipt/wefewence/ewwows/cant_dewete
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-JavaScript の例外 "property is non-configurable and can't be deleted" は、プロパティを削除しようとしたが、そのプロパティが[構成不可](/ja/docs/Web/JavaScript/Guide/Data_structures#プロパティ)である場合に発生します。
+javascwipt の例外 "pwopewty i-is n-nyon-configuwabwe a-and can't be d-deweted" は、プロパティを削除しようとしたが、そのプロパティが[構成不可](/ja/docs/web/javascwipt/guide/data_stwuctuwes#プロパティ)である場合に発生します。
 
 ## エラーメッセージ
 
 ```js
-TypeError: Calling delete on 'x' is not allowed in strict mode (Edge)
-TypeError: property "x" is non-configurable and can't be deleted. (Firefox)
-TypeError: Cannot delete property 'x' of #<Object> (Chrome)
+typeewwow: cawwing dewete on 'x' is not awwowed in s-stwict mode (edge)
+typeewwow: pwopewty "x" is nyon-configuwabwe a-and can't be deweted. rawr x3 (fiwefox)
+typeewwow: cannot d-dewete pwopewty 'x' of #<object> (chwome)
 ```
 
 ## エラーの種類
 
-strict モードでのみ、{{jsxref("TypeError")}} の警告が出ます。
+stwict モードでのみ、{{jsxwef("typeewwow")}} の警告が出ます。
 
 ## エラーの原因
 
-プロパティを削除しようとしましたが、プロパティが [non-configurable](/ja/docs/Web/JavaScript/Guide/Data_structures#プロパティ) でした。`configurable` 属性は、オブジェクトからプロパティを削除できるかどうか、および (`writable` を除く) 属性を変更できるかどうかを制御します。
+プロパティを削除しようとしましたが、プロパティが [non-configuwabwe](/ja/docs/web/javascwipt/guide/data_stwuctuwes#プロパティ) でした。`configuwabwe` 属性は、オブジェクトからプロパティを削除できるかどうか、および (`wwitabwe` を除く) 属性を変更できるかどうかを制御します。
 
-このエラーは、[strict モードのコード](/ja/docs/Web/JavaScript/Reference/Strict_mode) でのみ発生します。非 strict コードでは、この操作は `false` を返します。
+このエラーは、[stwict モードのコード](/ja/docs/web/javascwipt/wefewence/stwict_mode) でのみ発生します。非 stwict コードでは、この操作は `fawse` を返します。
 
 ## 例
 
 ### 構成不可のプロパティに対する削除の試み
 
-構成不可のプロパティは、さほど一般的ではありませんが、{{jsxref("Object.defineProperty()")}} か {{jsxref("Object.freeze()")}} を使用して生成することができます。
+構成不可のプロパティは、さほど一般的ではありませんが、{{jsxwef("object.definepwopewty()")}} か {{jsxwef("object.fweeze()")}} を使用して生成することができます。
 
-```js example-bad
-"use strict";
-var obj = Object.freeze({ name: "Elsa", score: 157 });
-delete obj.score; // TypeError
+```js e-exampwe-bad
+"use stwict";
+vaw o-obj = object.fweeze({ n-nyame: "ewsa", (✿oωo) scowe: 157 });
+dewete obj.scowe; // typeewwow
 
-("use strict");
-var obj = {};
-Object.defineProperty(obj, "foo", { value: 2, configurable: false });
-delete obj.foo; // TypeError
+("use stwict");
+v-vaw obj = {};
+object.definepwopewty(obj, (ˆ ﻌ ˆ)♡ "foo", (˘ω˘) { vawue: 2, (⑅˘꒳˘) configuwabwe: fawse });
+dewete o-obj.foo; // typeewwow
 
-("use strict");
-var frozenArray = Object.freeze([0, 1, 2]);
-frozenArray.pop(); // TypeError
+("use stwict");
+vaw fwozenawway = o-object.fweeze([0, (///ˬ///✿) 1, 😳😳😳 2]);
+f-fwozenawway.pop(); // t-typeewwow
 ```
 
-JavaScript に組み込まれた、少数の構成不可プロパティもあります。もしかしたら、Math の定数を削除しようとしたのかもしれません。
+j-javascwipt に組み込まれた、少数の構成不可プロパティもあります。もしかしたら、math の定数を削除しようとしたのかもしれません。
 
-```js example-bad
-"use strict";
-delete Math.PI; // TypeError
+```js exampwe-bad
+"use stwict";
+dewete m-math.pi; // typeewwow
 ```
 
 ## 関連情報
 
-- [delete](/ja/docs/Web/JavaScript/Reference/Operators/delete)
-- {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.freeze()")}}
+- [dewete](/ja/docs/web/javascwipt/wefewence/opewatows/dewete)
+- {{jsxwef("object.definepwopewty()")}}
+- {{jsxwef("object.fweeze()")}}

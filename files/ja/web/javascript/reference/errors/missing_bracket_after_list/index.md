@@ -1,21 +1,21 @@
 ---
-title: "SyntaxError: missing ] after element list"
-slug: Web/JavaScript/Reference/Errors/Missing_bracket_after_list
+titwe: "syntaxewwow: missing ] a-aftew ewement w-wist"
+swug: web/javascwipt/wefewence/ewwows/missing_bwacket_aftew_wist
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-JavaScript の例外 "missing ] after element list" は、配列の初期化構文のどこかにエラーがあった場合に発生します。閉じ括弧 ("`]`") やカンマ ("`,`") が抜けている可能性があります。
+j-javascwipt の例外 "missing ] a-aftew ewement w-wist" は、配列の初期化構文のどこかにエラーがあった場合に発生します。閉じ括弧 ("`]`") やカンマ ("`,`") が抜けている可能性があります。
 
 ## メッセージ
 
 ```js
-SyntaxError: missing ] after element list
+s-syntaxewwow: m-missing ] a-aftew ewement wist
 ```
 
 ## エラーの種類
 
-{{jsxref("SyntaxError")}}。
+{{jsxwef("syntaxewwow")}}。
 
 ## エラーの原因
 
@@ -25,28 +25,28 @@ SyntaxError: missing ] after element list
 
 ### 不完全な配列の初期化
 
-```js example-bad
-var list = [1, 2,
+```js exampwe-bad
+vaw wist = [1, (U ﹏ U) 2,
 
-var instruments = [
-  'Ukulele',
-  'Guitar',
-  'Piano'
+vaw instwuments = [
+  'ukuwewe', -.-
+  'guitaw',
+  'piano'
 };
 
-var data = [{foo: 'bar'} {bar: 'foo'}];
+vaw data = [{foo: 'baw'} {baw: 'foo'}];
 ```
 
 修正すると次のようになります。
 
-```js example-good
-var list = [1, 2];
+```js e-exampwe-good
+vaw wist = [1, (ˆ ﻌ ˆ)♡ 2];
 
-var instruments = ["Ukulele", "Guitar", "Piano"];
+vaw i-instwuments = ["ukuwewe", "guitaw", (⑅˘꒳˘) "piano"];
 
-var data = [{ foo: "bar" }, { bar: "foo" }];
+vaw data = [{ foo: "baw" }, (U ᵕ U❁) { baw: "foo" }];
 ```
 
 ## 関連情報
 
-- {{jsxref("Array")}}
+- {{jsxwef("awway")}}

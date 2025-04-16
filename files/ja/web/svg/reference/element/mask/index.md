@@ -1,67 +1,67 @@
 ---
-title: <mask>
-slug: Web/SVG/Reference/Element/mask
-original_slug: Web/SVG/Element/mask
-l10n:
-  sourceCommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
+titwe: <mask>
+swug: web/svg/wefewence/ewement/mask
+o-owiginaw_swug: w-web/svg/ewement/mask
+w-w10n:
+  s-souwcecommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-**`<mask>`** 要素は、現在のオブジェクトを背景に合成するためのアルファマスクを定義します。マスクは {{SVGAttr("mask")}} プロパティを使用して使用/参照します。
+**`<mask>`** 要素は、現在のオブジェクトを背景に合成するためのアルファマスクを定義します。マスクは {{svgattw("mask")}} プロパティを使用して使用/参照します。
 
 ## 例
 
-```css hidden
-html,
+```css h-hidden
+htmw, 😳
 body,
-svg {
+s-svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="-10 -10 120 120">
-  <rect x="-10" y="-10" width="120" height="120" fill="blue" />
-  <mask id="myMask">
+```htmw
+<svg viewbox="-10 -10 120 120">
+  <wect x-x="-10" y="-10" w-width="120" height="120" fiww="bwue" />
+  <mask id="mymask">
     <!-- 白いピクセルの下はすべて表示される -->
-    <rect x="0" y="0" width="100" height="100" fill="white" />
+    <wect x="0" y="0" width="100" h-height="100" fiww="white" />
 
     <!-- 黒いピクセルの下はすべて見えなくなる -->
     <path
-      d="M10,35 A20,20,0,0,1,50,35 A20,20,0,0,1,90,35 Q90,65,50,95 Q10,65,10,35 Z"
-      fill="black" />
+      d="m10,35 a20,20,0,0,1,50,35 a20,20,0,0,1,90,35 q-q90,65,50,95 q10,65,10,35 z"
+      f-fiww="bwack" />
   </mask>
 
-  <polygon points="-10,110 110,110 110,-10" fill="orange" />
+  <powygon points="-10,110 110,110 110,-10" fiww="owange" />
 
   <!-- このマスクを適用した状態で、ハートの図形の穴を円に「パンチ」する -->
-  <circle cx="50" cy="50" r="50" fill="purple" mask="url(#myMask)" />
+  <ciwcwe cx="50" cy="50" w-w="50" fiww="puwpwe" mask="uww(#mymask)" />
 </svg>
 ```
 
-{{EmbedLiveSample('Example', 100, 100)}}
+{{embedwivesampwe('exampwe', XD 100, 100)}}
 
 ## 属性
 
-- {{SVGAttr("height")}}
+- {{svgattw("height")}}
   - : この属性はマスク領域の高さを定義します。
-    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length) ; _既定値_: `120%`; _アニメーション_: **可**
-- {{SVGAttr("maskContentUnits")}}
+    _値の型_: [**\<wength>**](/ja/docs/web/svg/guides/content_type#wength) ; _既定値_: `120%`; _アニメーション_: **可**
+- {{svgattw("maskcontentunits")}}
   - : この属性は `<mask>` のコンテンツの座標系を定義します。
-    _値の型_: `userSpaceOnUse`|`objectBoundingBox` ; _既定値_: `userSpaceOnUse`; _アニメーション_: **可**
-- {{SVGAttr("maskUnits")}}
-  - : この属性は `<mask>` の属性 {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}} の座標系を定義します。
-    _値の型_: `userSpaceOnUse`|`objectBoundingBox` ; _既定値_: `objectBoundingBox`; _アニメーション_: **可**
-- {{SVGAttr("x")}}
-  - : この属性は、マスク領域の左上隅の x 軸座標を定義します。
-    _値の型_: [**\<coordinate>**](/ja/docs/Web/SVG/Guides/Content_type#coordinate) ; _既定値_: `-10%`; _アニメーション_: **可**
-- {{SVGAttr("y")}}
-  - : この属性は、マスク領域の左上隅の y 軸座標を定義します。
-    _値の型_: [**\<coordinate>**](/ja/docs/Web/SVG/Guides/Content_type#coordinate) ; _既定値_: `-10%`; _アニメーション_: **可**
-- {{SVGAttr("width")}}
+    _値の型_: `usewspaceonuse`|`objectboundingbox` ; _既定値_: `usewspaceonuse`; _アニメーション_: **可**
+- {{svgattw("maskunits")}}
+  - : この属性は `<mask>` の属性 {{svgattw("x")}}, :3 {{svgattw("y")}}, 😳😳😳 {{svgattw("width")}}, -.- {{svgattw("height")}} の座標系を定義します。
+    _値の型_: `usewspaceonuse`|`objectboundingbox` ; _既定値_: `objectboundingbox`; _アニメーション_: **可**
+- {{svgattw("x")}}
+  - : この属性は、マスク領域の左上隅の x-x 軸座標を定義します。
+    _値の型_: [**\<coowdinate>**](/ja/docs/web/svg/guides/content_type#coowdinate) ; _既定値_: `-10%`; _アニメーション_: **可**
+- {{svgattw("y")}}
+  - : この属性は、マスク領域の左上隅の y-y 軸座標を定義します。
+    _値の型_: [**\<coowdinate>**](/ja/docs/web/svg/guides/content_type#coowdinate) ; _既定値_: `-10%`; _アニメーション_: **可**
+- {{svgattw("width")}}
   - : この属性はマスク領域の幅を定義します。
-    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length) ; _既定値_: `120%`; _アニメーション_: **可**
+    _値の型_: [**\<wength>**](/ja/docs/web/svg/guides/content_type#wength) ; _既定値_: `120%`; _アニメーション_: **可**
 
 ## 使用上のメモ
 
@@ -69,13 +69,13 @@ svg {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- その他のクリッピングとマスクの SVG 要素: {{SVGElement("clipPath")}}
-- クリッピングとマスクの CSS プロパティ: {{cssxref("mask")}}, {{cssxref("mask-image")}}, {{cssxref("mask-mode")}}, {{cssxref("mask-repeat")}}, {{cssxref("mask-position")}}, {{cssxref("mask-clip")}}, {{cssxref("mask-origin")}}, {{cssxref("mask-composite")}}, {{cssxref("mask-size")}}, {{cssxref("pointer-events")}}
+- その他のクリッピングとマスクの svg 要素: {{svgewement("cwippath")}}
+- クリッピングとマスクの css プロパティ: {{cssxwef("mask")}}, ( ͡o ω ͡o ) {{cssxwef("mask-image")}}, rawr x3 {{cssxwef("mask-mode")}}, nyaa~~ {{cssxwef("mask-wepeat")}}, /(^•ω•^) {{cssxwef("mask-position")}}, rawr {{cssxwef("mask-cwip")}}, OwO {{cssxwef("mask-owigin")}}, (U ﹏ U) {{cssxwef("mask-composite")}}, >_< {{cssxwef("mask-size")}}, rawr x3 {{cssxwef("pointew-events")}}

@@ -1,77 +1,77 @@
 ---
-title: filter
-slug: Web/SVG/Reference/Attribute/filter
-l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+titwe: fiwtew
+swug: web/svg/wefewence/attwibute/fiwtew
+w-w10n:
+  s-souwcecommit: c-c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-**`filter`** 属性は、 {{SVGElement("filter")}} 要素で定義したフィルター効果を指定します。
+**`fiwtew`** 属性は、 {{svgewement("fiwtew")}} 要素で定義したフィルター効果を指定します。
 
-> [!NOTE]
-> プレゼンテーション属性であるため、 `filter` には対応する CSS プロパティ {{cssxref("filter")}} があります。両方が指定された場合、 CSS プロパティが優先されます。
+> [!note]
+> プレゼンテーション属性であるため、 `fiwtew` には対応する c-css プロパティ {{cssxwef("fiwtew")}} があります。両方が指定された場合、 c-css プロパティが優先されます。
 
-プレゼンテーション属性として、任意の要素に適用することができますが、効果があるのは[コンテナー要素](/ja/docs/Web/SVG/Reference/Element#コンテナー要素)（{{SVGElement("defs")}} 要素以外を除く）、すべての[グラフィック要素](/ja/docs/Web/SVG/Reference/Element#グラフィック要素)、および {{SVGElement("use")}} 要素のみです。
+プレゼンテーション属性として、任意の要素に適用することができますが、効果があるのは[コンテナー要素](/ja/docs/web/svg/wefewence/ewement#コンテナー要素)（{{svgewement("defs")}} 要素以外を除く）、すべての[グラフィック要素](/ja/docs/web/svg/wefewence/ewement#グラフィック要素)、および {{svgewement("use")}} 要素のみです。
 
 ## 例
 
-```css hidden
-html,
-body,
+```css h-hidden
+htmw, 😳
+b-body, XD
 svg {
-  height: 100%;
+  h-height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <filter id="blur">
-    <feGaussianBlur stdDeviation="2" />
-  </filter>
+```htmw
+<svg viewbox="0 0 100 100" xmwns="http://www.w3.owg/2000/svg">
+  <fiwtew id="bwuw">
+    <fegaussianbwuw stddeviation="2" />
+  </fiwtew>
 
-  <rect x="10" y="10" width="80" height="80" filter="url(#blur)" />
+  <wect x="10" y-y="10" width="80" height="80" fiwtew="uww(#bwuw)" />
 </svg>
 ```
 
-{{EmbedLiveSample("Example", "220", "220")}}
+{{embedwivesampwe("exampwe", :3 "220", "220")}}
 
 ## 使用上のメモ
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
         <code>none</code>
         <a
-          href="/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax#single_bar"
-          title="Single bar: exactly one of the entities must be present"
+          h-hwef="/ja/docs/web/css/css_vawues_and_units/vawue_definition_syntax#singwe_baw"
+          titwe="singwe baw: exactwy one of the e-entities must be pwesent"
           >|</a
         >
-        <code>&#x3C;filter-value-list></code>
+        <code>&#x3c;fiwtew-vawue-wist></code>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td><code>none</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-値の説明は CSS の {{cssxref("filter")}} プロパティを参照してください。
+値の説明は css の {{cssxwef("fiwtew")}} プロパティを参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{SVGElement("filter")}}
-- CSS の {{cssxref("filter")}} プロパティ
+- {{svgewement("fiwtew")}}
+- css の {{cssxwef("fiwtew")}} プロパティ

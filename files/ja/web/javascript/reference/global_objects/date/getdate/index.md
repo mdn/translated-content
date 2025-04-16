@@ -1,28 +1,28 @@
 ---
-title: Date.prototype.getDate()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getDate
-l10n:
-  sourceCommit: 87a9f73c410c9b9e91300695c8aa4931367243fb
+titwe: date.pwototype.getdate()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getdate
+w-w10n:
+  s-souwcecommit: 87a9f73c410c9b9e91300695c8aa4931367243fb
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`getDate()`** メソッドは、地方時に基づき、指定された日付の「日」を返します。
+**`getdate()`** メソッドは、地方時に基づき、指定された日付の「日」を返します。
 
-{{InteractiveExample("JavaScript Demo: Date.getDate()", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: d-date.getdate()", -.- "showtew")}}
 
-```js interactive-example
-const birthday = new Date("August 19, 1975 23:15:30");
-const date1 = birthday.getDate();
+```js i-intewactive-exampwe
+c-const b-biwthday = nyew d-date("august 19, (ˆ ﻌ ˆ)♡ 1975 23:15:30");
+const date1 = biwthday.getdate();
 
-console.log(date1);
-// Expected output: 19
+consowe.wog(date1);
+// expected o-output: 19
 ```
 
 ## 構文
 
-```js-nolint
-getDate()
+```js-nowint
+getdate()
 ```
 
 ### 返値
@@ -31,27 +31,27 @@ getDate()
 
 ## 例
 
-### getDate() の使用
+### getdate() の使用
 
-以下の 2 行目の文は、{{jsxref("Date")}} オブジェクトである `xmas95` の値に基づき、変数 `day` に 25 という値を代入します。
+以下の 2 行目の文は、{{jsxwef("date")}} オブジェクトである `xmas95` の値に基づき、変数 `day` に 25 という値を代入します。
 
 ```js
-const xmas95 = new Date("December 25, 1995 23:15:30");
-const day = xmas95.getDate();
+const xmas95 = n-nyew date("decembew 25, (⑅˘꒳˘) 1995 23:15:30");
+const day = xmas95.getdate();
 
-console.log(day); // 25
+c-consowe.wog(day); // 25
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Date.prototype.getUTCDate()")}}
-- {{jsxref("Date.prototype.getUTCDay()")}}
-- {{jsxref("Date.prototype.setDate()")}}
+- {{jsxwef("date.pwototype.getutcdate()")}}
+- {{jsxwef("date.pwototype.getutcday()")}}
+- {{jsxwef("date.pwototype.setdate()")}}

@@ -1,71 +1,71 @@
 ---
-title: Date.prototype.setSeconds()
-slug: Web/JavaScript/Reference/Global_Objects/Date/setSeconds
-l10n:
-  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
+titwe: date.pwototype.setseconds()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/setseconds
+w-w10n:
+  souwcecommit: d-d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`setSeconds()`** メソッドは、地方時に基づき、指定された日時の「秒」を設定します。
+**`setseconds()`** メソッドは、地方時に基づき、指定された日時の「秒」を設定します。
 
-{{InteractiveExample("JavaScript Demo: Date.setSeconds()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.setseconds()")}}
 
-```js interactive-example
-const event = new Date("August 19, 1975 23:15:30");
+```js i-intewactive-exampwe
+c-const event = nyew d-date("august 19, 1975 23:15:30");
 
-event.setSeconds(42);
+e-event.setseconds(42);
 
-console.log(event.getSeconds());
-// Expected output: 42
+c-consowe.wog(event.getseconds());
+// expected output: 42
 
-console.log(event);
-// Expected output: "Sat Apr 19 1975 23:15:42 GMT+0100 (CET)"
-// Note: your timezone may vary
+consowe.wog(event);
+// expected output: "sat a-apw 19 1975 23:15:42 gmt+0100 (cet)"
+// nyote: y-youw timezone may vawy
 ```
 
 ## 構文
 
-```js-nolint
-setSeconds(secondsValue)
-setSeconds(secondsValue, msValue)
+```js-nowint
+s-setseconds(secondsvawue)
+setseconds(secondsvawue, ^^;; msvawue)
 ```
 
 ### 引数
 
-- `secondsValue`
+- `secondsvawue`
   - : 日付の「秒」を表す 0 から 59 までの間の整数値。
-- `msValue` {{Optional_inline}}
+- `msvawue` {{optionaw_inwine}}
   - : 日付の「ミリ秒」を表す 0 から 999 までの間の整数。
 
 ### 返値
 
-協定世界時 (UTC) 1970 年 1 月 1 日 00:00:00 から更新された日時までの間のミリ秒単位の数値。
+協定世界時 (utc) 1970 年 1 月 1 日 00:00:00 から更新された日時までの間のミリ秒単位の数値。
 
 ## 解説
 
-`msValue` 引数を指定しなかった場合、{{jsxref("Date.prototype.getMilliseconds()", "getMilliseconds()")}} メソッドから返される値が使われます。
+`msvawue` 引数を指定しなかった場合、{{jsxwef("date.pwototype.getmiwwiseconds()", >_< "getmiwwiseconds()")}} メソッドから返される値が使われます。
 
-指定した値が期待される日付の範囲外の場合、それに応じて `setSeconds()` が {{jsxref("Date")}} オブジェクトの日付情報の更新を試みます。例えば、 `secondsValue` に 100 を指定した場合、分に 1 が加算され、秒が 40 になります。
+指定した値が期待される日付の範囲外の場合、それに応じて `setseconds()` が {{jsxwef("date")}} オブジェクトの日付情報の更新を試みます。例えば、 `secondsvawue` に 100 を指定した場合、分に 1 が加算され、秒が 40 になります。
 
 ## 例
 
-### setSeconds() の使用
+### setseconds() の使用
 
 ```js
-const theBigDay = new Date();
-theBigDay.setSeconds(30);
+const t-thebigday = nyew date();
+thebigday.setseconds(30);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Date.prototype.getSeconds()")}}
-- {{jsxref("Date.prototype.setUTCSeconds()")}}
+- {{jsxwef("date.pwototype.getseconds()")}}
+- {{jsxwef("date.pwototype.setutcseconds()")}}

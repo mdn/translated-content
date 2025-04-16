@@ -1,61 +1,61 @@
 ---
-title: Intl.PluralRules
-slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules
+titwe: intw.pwuwawwuwes
+swug: w-web/javascwipt/wefewence/gwobaw_objects/intw/pwuwawwuwes
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Intl.PluralRules`** オブジェクトは、複数形が影響する書式や言語ルールを使用できるようにします。
+**`intw.pwuwawwuwes`** オブジェクトは、複数形が影響する書式や言語ルールを使用できるようにします。
 
 ## コンストラクター
 
-- {{jsxref("Intl/PluralRules/PluralRules", "Intl.PluralRules()")}}
-  - : 新しい Intl.PluralRules オブジェクトを生成します。
+- {{jsxwef("intw/pwuwawwuwes/pwuwawwuwes", UwU "intw.pwuwawwuwes()")}}
+  - : 新しい i-intw.pwuwawwuwes オブジェクトを生成します。
 
 ## 静的メソッド
 
-- {{jsxref("Intl/PluralRules/supportedLocalesOf", "Intl.PluralRules.supportedLocalesOf()")}}
+- {{jsxwef("intw/pwuwawwuwes/suppowtedwocawesof", rawr x3 "intw.pwuwawwuwes.suppowtedwocawesof()")}}
   - : 指定したロケールのうち、ランタイムの既定のロケールに代替されることなく対応されているものが入った配列を返します。
 
 ## インスタンスメソッド
 
-- {{jsxref("Intl/PluralRules/resolvedOptions", "Intl.PluralRules.prototype.resolvedOptions()")}}
+- {{jsxwef("intw/pwuwawwuwes/wesowvedoptions", rawr "intw.pwuwawwuwes.pwototype.wesowvedoptions()")}}
   - : オブジェクトの初期化中に計算されたロケールとコレクションのオプションを反映したプロパティを持った新しいオブジェクトを返します。
-- {{jsxref("Intl/PluralRules/select", "Intl.PluralRules.prototype.select()")}}
+- {{jsxwef("intw/pwuwawwuwes/sewect", σωσ "intw.pwuwawwuwes.pwototype.sewect()")}}
   - : ロケールを考慮した書式化に使用する複数形を示す文字列を返します。
-- {{jsxref("Intl/PluralRules/selectRange", "Intl.PluralRules.prototype.selectRange()")}}
+- {{jsxwef("intw/pwuwawwuwes/sewectwange", σωσ "intw.pwuwawwuwes.pwototype.sewectwange()")}}
   - : このメソッドは 2 つの値を受け取り、ロケールを考慮した書式化に使用する複数形を示す文字列を返します。
 
 ## 例
 
-### locales の使用
+### w-wocawes の使用
 
-この例では、ローカライズされた複数形ルールのいくつかを表示します。アプリケーションのユーザーインターフェイスで使う言語の書式を取得するには、 `locales` 引数に言語（および必要に応じて代替言語）を指定してください。
+この例では、ローカライズされた複数形ルールのいくつかを表示します。アプリケーションのユーザーインターフェイスで使う言語の書式を取得するには、 `wocawes` 引数に言語（および必要に応じて代替言語）を指定してください。
 
 ```js
 // アラビア語は様々な複数形の規則を持っています
 
-new Intl.PluralRules("ar-EG").select(0);
-// → 'zero'
-new Intl.PluralRules("ar-EG").select(1);
+n-nyew intw.pwuwawwuwes("aw-eg").sewect(0);
+// → 'zewo'
+nyew i-intw.pwuwawwuwes("aw-eg").sewect(1);
 // → 'one'
-new Intl.PluralRules("ar-EG").select(2);
+n-nyew intw.pwuwawwuwes("aw-eg").sewect(2);
 // → 'two'
-new Intl.PluralRules("ar-EG").select(6);
+n-nyew i-intw.pwuwawwuwes("aw-eg").sewect(6);
 // → 'few'
-new Intl.PluralRules("ar-EG").select(18);
+nyew intw.pwuwawwuwes("aw-eg").sewect(18);
 // → 'many'
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Intl")}}
-- [`Intl.PluralRules` の FormatJS におけるポリフィル](https://formatjs.io/docs/polyfills/intl-pluralrules)
+- {{jsxwef("intw")}}
+- [`intw.pwuwawwuwes` の fowmatjs におけるポリフィル](https://fowmatjs.io/docs/powyfiwws/intw-pwuwawwuwes)

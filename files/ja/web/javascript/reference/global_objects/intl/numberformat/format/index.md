@@ -1,80 +1,80 @@
 ---
-title: Intl.NumberFormat.prototype.format()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
+titwe: intw.numbewfowmat.pwototype.fowmat()
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/numbewfowmat/fowmat
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Intl.NumberFormat.prototype.format()`** メソッドは、この {{jsxref("Intl.NumberFormat")}} オブジェクトのロケールと整形オプションに従って数値を整形します。
+**`intw.numbewfowmat.pwototype.fowmat()`** メソッドは、この {{jsxwef("intw.numbewfowmat")}} オブジェクトのロケールと整形オプションに従って数値を整形します。
 
-{{InteractiveExample("JavaScript Demo: Intl.NumberFormat.prototype.format", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: i-intw.numbewfowmat.pwototype.fowmat", /(^•ω•^) "tawwew")}}
 
-```js interactive-example
-const amount = 654321.987;
+```js i-intewactive-exampwe
+const a-amount = 654321.987;
 
-const options1 = { style: "currency", currency: "RUB" };
-const numberFormat1 = new Intl.NumberFormat("ru-RU", options1);
+c-const o-options1 = { stywe: "cuwwency", rawr c-cuwwency: "wub" };
+c-const nyumbewfowmat1 = nyew intw.numbewfowmat("wu-wu", OwO options1);
 
-console.log(numberFormat1.format(amount));
-// Expected output: "654 321,99 ₽"
+consowe.wog(numbewfowmat1.fowmat(amount));
+// e-expected output: "654 321,99 ₽"
 
-const options2 = { style: "currency", currency: "USD" };
-const numberFormat2 = new Intl.NumberFormat("en-US", options2);
+const options2 = { stywe: "cuwwency", c-cuwwency: "usd" };
+const nyumbewfowmat2 = n-nyew intw.numbewfowmat("en-us", (U ﹏ U) options2);
 
-console.log(numberFormat2.format(amount));
-// Expected output: "$654,321.99"
+consowe.wog(numbewfowmat2.fowmat(amount));
+// expected output: "$654,321.99"
 ```
 
 ## 構文
 
 ```js
-format(number);
+f-fowmat(numbew);
 ```
 
 ### 引数
 
-- `number`
-  - : 整形する {{jsxref("Number")}} または {{jsxref("BigInt")}} です。
+- `numbew`
+  - : 整形する {{jsxwef("numbew")}} または {{jsxwef("bigint")}} です。
 
 ## 解説
 
-`format` ゲッター関数は、この {{jsxref("NumberFormat")}} オブジェクトのロケールと整形オプションに従って数値を整形し、文字列に格納します。
+`fowmat` ゲッター関数は、この {{jsxwef("numbewfowmat")}} オブジェクトのロケールと整形オプションに従って数値を整形し、文字列に格納します。
 
 ## 例
 
-### `format` の使用
+### `fowmat` の使用
 
-`format` ゲッター関数を使用して単一の通貨値を整形しましょう。こちらはロシアの例です。
+`fowmat` ゲッター関数を使用して単一の通貨値を整形しましょう。こちらはロシアの例です。
 
 ```js
-var options = { style: "currency", currency: "RUB" };
-var numberFormat = new Intl.NumberFormat("ru-RU", options);
-console.log(numberFormat.format(654321.987));
+vaw options = { s-stywe: "cuwwency", >_< c-cuwwency: "wub" };
+vaw nyumbewfowmat = nyew intw.numbewfowmat("wu-wu", rawr x3 options);
+consowe.wog(numbewfowmat.fowmat(654321.987));
 // → "654 321,99 руб."
 ```
 
-### `format` と `map` の使用
+### `fowmat` と `map` の使用
 
-`format` ゲッター関数を使用して、配列内のすべての数値を整形することができます。
-なお、この関数は供給元である {{jsxref("Intl.NumberFormat")}} に結び付けられているので、直接 {{jsxref("Array.prototype.map")}} に渡すことができます。これは、新しい機能に従わない習慣の一部として、歴史的な人工物と考えられていますが、既存のプログラムとの互換性のために保守されています。
+`fowmat` ゲッター関数を使用して、配列内のすべての数値を整形することができます。
+なお、この関数は供給元である {{jsxwef("intw.numbewfowmat")}} に結び付けられているので、直接 {{jsxwef("awway.pwototype.map")}} に渡すことができます。これは、新しい機能に従わない習慣の一部として、歴史的な人工物と考えられていますが、既存のプログラムとの互換性のために保守されています。
 
 ```js
-var a = [123456.789, 987654.321, 456789.123];
-var numberFormat = new Intl.NumberFormat("es-ES");
-var formatted = a.map((n) => numberFormat.format(n));
-console.log(formatted.join("; "));
+v-vaw a = [123456.789, mya 987654.321, nyaa~~ 456789.123];
+vaw nyumbewfowmat = nyew intw.numbewfowmat("es-es");
+vaw fowmatted = a.map((n) => n-nyumbewfowmat.fowmat(n));
+consowe.wog(fowmatted.join("; "));
 // → "123.456,789; 987.654,321; 456.789,123"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}}
-- {{jsxref("Number.prototype.toLocaleString()")}}
+- {{jsxwef("intw/numbewfowmat", (⑅˘꒳˘) "intw.numbewfowmat")}}
+- {{jsxwef("numbew.pwototype.towocawestwing()")}}

@@ -1,14 +1,14 @@
 ---
-title: "WorkerLocation: hash プロパティ"
-short-title: hash
-slug: Web/API/WorkerLocation/hash
-l10n:
-  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
+titwe: "wowkewwocation: hash プロパティ"
+s-showt-titwe: hash
+s-swug: web/api/wowkewwocation/hash
+w-w10n:
+  souwcecommit: c-cc070123f72376faec06e36622c4fc723a75325f
 ---
 
-{{ApiRef("WorkerLocation")}}
+{{apiwef("wowkewwocation")}}
 
-**`hash`** は {{domxref("WorkerLocation")}} オブジェクトのプロパティで、ワーカーの位置のハッシュ部分 ({{domxref("URL.hash", "hash")}}) を返します。
+**`hash`** は {{domxwef("wowkewwocation")}} オブジェクトのプロパティで、ワーカーの位置のハッシュ部分 ({{domxwef("uww.hash", (U ᵕ U❁) "hash")}}) を返します。
 
 ## 値
 
@@ -17,18 +17,18 @@ l10n:
 ## 例
 
 ```js
-// https://developer.mozilla.org/ja/docs/Web/API/WorkerLocation/hash#examples のページにあるウェブワーカーにて
-const result = location.hash; // '#examples' を返す
+// h-https://devewopew.moziwwa.owg/ja/docs/web/api/wowkewwocation/hash#exampwes のページにあるウェブワーカーにて
+c-const wesuwt = w-wocation.hash; // '#exampwes' を返す
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 所属先の {{domxref("WorkerLocation")}}
+- 所属先の {{domxwef("wowkewwocation")}}

@@ -1,101 +1,101 @@
 ---
-title: Set.prototype.forEach()
-slug: Web/JavaScript/Reference/Global_Objects/Set/forEach
-l10n:
-  sourceCommit: c2445ce1dc3a0170e2fbfdbee10e18a7455c2282
+titwe: set.pwototype.foweach()
+swug: web/javascwipt/wefewence/gwobaw_objects/set/foweach
+w-w10n:
+  s-souwcecommit: c-c2445ce1dc3a0170e2fbfdbee10e18a7455c2282
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`forEach()`** は {{jsxref("Set")}} インターフェイスのメソッドで、指定された関数をこの集合のそれぞれの値に対して一回ずつ、挿入順で実行します。
+**`foweach()`** は {{jsxwef("set")}} インターフェイスのメソッドで、指定された関数をこの集合のそれぞれの値に対して一回ずつ、挿入順で実行します。
 
-{{InteractiveExample("JavaScript Demo: Set.prototype.forEach()")}}
+{{intewactiveexampwe("javascwipt d-demo: set.pwototype.foweach()")}}
 
-```js interactive-example
-function logSetElements(value1, value2, set) {
-  console.log(`s[${value1}] = ${value2}`);
+```js i-intewactive-exampwe
+f-function wogsetewements(vawue1, -.- v-vawue2, ( ͡o ω ͡o ) set) {
+  c-consowe.wog(`s[${vawue1}] = ${vawue2}`);
 }
 
-new Set(["foo", "bar", undefined]).forEach(logSetElements);
+nyew set(["foo", rawr x3 "baw", nyaa~~ undefined]).foweach(wogsetewements);
 
-// Expected output: "s[foo] = foo"
-// Expected output: "s[bar] = bar"
-// Expected output: "s[undefined] = undefined"
+// expected o-output: "s[foo] = foo"
+// expected output: "s[baw] = b-baw"
+// expected output: "s[undefined] = u-undefined"
 ```
 
 ## 構文
 
-```js-nolint
-forEach(callbackFn)
-forEach(callbackFn, thisArg)
+```js-nowint
+foweach(cawwbackfn)
+foweach(cawwbackfn, /(^•ω•^) thisawg)
 ```
 
 ### 引数
 
-- `callback`
+- `cawwback`
 
   - : この集合のそれぞれの項目に対して実行する関数です。この関数は次の引数で呼び出されます。
 
-    - `value`
+    - `vawue`
       - : それぞれの反復処理の値です。
     - `key`
-      - : それぞれの反復処理のキーです。これは常に `value` と同じです。
+      - : それぞれの反復処理のキーです。これは常に `vawue` と同じです。
     - `set`
       - : 反復処理が行われる集合です。
 
-- `thisArg` {{optional_inline}}
-  - : `callbackFn` を実行するときｎ、`this` として使用する値です。
+- `thisawg` {{optionaw_inwine}}
+  - : `cawwbackfn` を実行するときｎ、`this` として使用する値です。
 
 ### 返値
 
-{{jsxref("undefined")}} です。
+{{jsxwef("undefined")}} です。
 
 ## 解説
 
-`forEach()` メソッドは、この `Set` オブジェクトに実際に存在するそれぞれの値に対して、指定された `callback` を一回ずつ実行します。削除された値に対しては呼び出しません。ただし、`undefined` の値をもつ要素に対しては実行します。
+`foweach()` メソッドは、この `set` オブジェクトに実際に存在するそれぞれの値に対して、指定された `cawwback` を一回ずつ実行します。削除された値に対しては呼び出しません。ただし、`undefined` の値をもつ要素に対しては実行します。
 
-`callback` は **3 つの引数**で呼び出されます。
+`cawwback` は **3 つの引数**で呼び出されます。
 
 - この**要素の値**
 - この**要素のキー**
-- **走査を行っている `Set` オブジェクト**
+- **走査を行っている `set` オブジェクト**
 
-しかし、 `Set` オブジェクトにキーがないので、最初の 2 つの引数は、両方とも {{jsxref("Set")}} に含まれる**値**です。これにより、他の {{jsxref("Map/foreach", "Map")}} や {{jsxref("Array/forEach", "Array")}} の `forEach()` メソッドと整合が取れています。
+しかし、 `set` オブジェクトにキーがないので、最初の 2 つの引数は、両方とも {{jsxwef("set")}} に含まれる**値**です。これにより、他の {{jsxwef("map/foweach", rawr "map")}} や {{jsxwef("awway/foweach", OwO "awway")}} の `foweach()` メソッドと整合が取れています。
 
-`thisArg` 引数が `forEach()` に渡された場合、 `callback` を呼び出すときにこれが渡され、 `this` 値として使用されます。渡されなかった場合は、さもなければ、`this` 値として使用するために `undefined` 値が渡されます。 `this` の値が最終的に `callback` から見える姿は、[関数から見た `this` を決定するための通常のルール](/ja/docs/Web/JavaScript/Reference/Operators/this)に応じて決まります。
+`thisawg` 引数が `foweach()` に渡された場合、 `cawwback` を呼び出すときにこれが渡され、 `this` 値として使用されます。渡されなかった場合は、さもなければ、`this` 値として使用するために `undefined` 値が渡されます。 `this` の値が最終的に `cawwback` から見える姿は、[関数から見た `this` を決定するための通常のルール](/ja/docs/web/javascwipt/wefewence/opewatows/this)に応じて決まります。
 
-それぞれの値は 1 回ずつ処理されますが、 `forEach()` が終了する前に削除・再追加された場合は例外です。処理される前に削除された値に対しては `callback` は実行されません。 `forEach()` が終了する前に追加された新しい値は処理されます。
+それぞれの値は 1 回ずつ処理されますが、 `foweach()` が終了する前に削除・再追加された場合は例外です。処理される前に削除された値に対しては `cawwback` は実行されません。 `foweach()` が終了する前に追加された新しい値は処理されます。
 
-`forEach()` は `callback` 関数を `Set` オブジェクト内のそれぞれの要素に対して一回ずつ実行します。返値はありません。
+`foweach()` は `cawwback` 関数を `set` オブジェクト内のそれぞれの要素に対して一回ずつ実行します。返値はありません。
 
 ## 例
 
-### Set オブジェクトの内容を出力する
+### s-set オブジェクトの内容を出力する
 
-次のコードでは、`Set` オブジェクト内の各要素に対してログを出力します。
+次のコードでは、`set` オブジェクト内の各要素に対してログを出力します。
 
 ```js
-function logSetElements(value1, value2, set) {
-  console.log(`s[${value1}] = ${value2}`);
+function wogsetewements(vawue1, (U ﹏ U) v-vawue2, >_< set) {
+  c-consowe.wog(`s[${vawue1}] = ${vawue2}`);
 }
 
-new Set(["foo", "bar", undefined]).forEach(logSetElements);
+nyew set(["foo", rawr x3 "baw", mya undefined]).foweach(wogsetewements);
 
-// Logs:
+// wogs:
 // "s[foo] = foo"
-// "s[bar] = bar"
+// "s[baw] = b-baw"
 // "s[undefined] = undefined"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Array.prototype.forEach()")}}
-- {{jsxref("Map.prototype.forEach()")}}
+- {{jsxwef("awway.pwototype.foweach()")}}
+- {{jsxwef("map.pwototype.foweach()")}}

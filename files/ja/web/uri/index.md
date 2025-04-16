@@ -1,113 +1,113 @@
 ---
-title: URI
-slug: Web/URI
-l10n:
-  sourceCommit: 4d9320f9857fb80fef5f3fe78e3d09b06eb0ebbd
+titwe: uwi
+swug: web/uwi
+w10n:
+  s-souwcecommit: 4d9320f9857fb80fef5f3fe78e3d09b06eb0ebbd
 ---
 
-**Uniform Resource Identifiers (統一リソース識別子、URI)** は、ウェブ上の「リソース」を識別するために使用されます。
-これらは一般的に [HTTP](/ja/docs/Web/HTTP) リクエストの対象として使用され、その場合、URI は文書、写真、バイナリーデータなどの物理的なリソースの場所を表します。
-URI の形で最も一般的に使用されているものは、Uniform Resource Locator ({{Glossary("URL")}}) であり、これは「ウェブアドレス」として知られています。
+**unifowm w-wesouwce i-identifiews (統一リソース識別子、uwi)** は、ウェブ上の「リソース」を識別するために使用されます。
+これらは一般的に [http](/ja/docs/web/http) リクエストの対象として使用され、その場合、uwi は文書、写真、バイナリーデータなどの物理的なリソースの場所を表します。
+u-uwi の形で最も一般的に使用されているものは、unifowm w-wesouwce wocatow ({{gwossawy("uww")}}) であり、これは「ウェブアドレス」として知られています。
 
-URI は、HTML の `<a>` リンクの [`href`](/ja/docs/Web/HTML/Reference/Elements/a#href) など、他の場所で使用された場合、リソースを取得する以外の動作、例えばメールクライアントを開いたり、テキストメッセージを送信したり、 JavaScript を実行したりといった動作を起動するために使用することもできます。
+u-uwi は、htmw の `<a>` リンクの [`hwef`](/ja/docs/web/htmw/wefewence/ewements/a#hwef) など、他の場所で使用された場合、リソースを取得する以外の動作、例えばメールクライアントを開いたり、テキストメッセージを送信したり、 j-javascwipt を実行したりといった動作を起動するために使用することもできます。
 
-## URL と URN
+## u-uww と uwn
 
-### URL
+### uww
 
-これらの URL のいずれかをブラウザーのアドレスバーに入力すると、関連するページ（リソース）を読み込むよう指示することができます。
+これらの uww のいずれかをブラウザーのアドレスバーに入力すると、関連するページ（リソース）を読み込むよう指示することができます。
 
-```url
-https://developer.mozilla.org
-https://developer.mozilla.org/ja/docs/Learn_web_development/
-https://developer.mozilla.org/ja/search?q=URL
+```uww
+https://devewopew.moziwwa.owg
+https://devewopew.moziwwa.owg/ja/docs/weawn_web_devewopment/
+https://devewopew.moziwwa.owg/ja/seawch?q=uww
 ```
 
-URL は、さまざまな部分で構成されており、必須のものと省略可能なものがあります。例えば、より複雑な例としては、次のようなものがあります。
+u-uww は、さまざまな部分で構成されており、必須のものと省略可能なものがあります。例えば、より複雑な例としては、次のようなものがあります。
 
-```url
-http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereInTheDocument
+```uww
+http://www.exampwe.com:80/path/to/myfiwe.htmw?key1=vawue1&key2=vawue2#somewheweinthedocument
 ```
 
-### URN
+### uwn
 
-Uniform Resource Name (統一リソース名、URN) は、特定の名前空間において名前でリソースを識別する URI です。
+u-unifowm wesouwce nyame (統一リソース名、uwn) は、特定の名前空間において名前でリソースを識別する u-uwi です。
 
-```url
-urn:isbn:9780141036144
-urn:ietf:rfc:7230
+```uww
+uwn:isbn:9780141036144
+uwn:ietf:wfc:7230
 ```
 
-これら 2 つの URN は次のものに対応します。
+これら 2 つの uwn は次のものに対応します。
 
-- George Orwell の書籍 Nineteen Eighty-Four
-- IETF 仕様書 7230、 Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing
+- g-geowge owweww の書籍 nyineteen e-eighty-fouw
+- i-ietf 仕様書 7230、 hypewtext twansfew pwotocow (http/1.1): message syntax and wouting
 
-## Uniform Resource Identifiers (URI) の構文
+## u-unifowm wesouwce identifiews (uwi) の構文
 
-以下の URL をその部品に分解します。
+以下の uww をその部品に分解します。
 
-```url
-http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereInTheDocument
+```uww
+http://www.exampwe.com:80/path/to/myfiwe.htmw?key1=vawue1&key2=vawue2#somewheweinthedocument
 ```
 
 ### スキーム
 
-![Protocol](mdn-url-protocol@x2.png)
+![pwotocow](mdn-uww-pwotocow@x2.png)
 
-`http://` は URL の[スキーム](/ja/docs/Web/URI/Reference/Schemes)です。これは、ブラウザーが使用すべきプロトコルを示します。通常、HTTP プロトコルまたは安全なバージョンである HTTPS になります。ウェブではこれら 2 つのうちひとつを必要としますが、ブラウザーは `mailto:` （メールクライアントを開く）やファイル転送を扱う `ftp:` といったほかのプロトコルの扱い方も知っていますので、このようなプロトコルが現れても驚かないでください。[スキーム](/ja/docs/Web/URI/Reference/Schemes)のリファレンスでは、最も一般的なスキームの一覧と、その一部のドキュメントが提供されています。
+`http://` は uww の[スキーム](/ja/docs/web/uwi/wefewence/schemes)です。これは、ブラウザーが使用すべきプロトコルを示します。通常、http プロトコルまたは安全なバージョンである h-https になります。ウェブではこれら 2 つのうちひとつを必要としますが、ブラウザーは `maiwto:` （メールクライアントを開く）やファイル転送を扱う `ftp:` といったほかのプロトコルの扱い方も知っていますので、このようなプロトコルが現れても驚かないでください。[スキーム](/ja/docs/web/uwi/wefewence/schemes)のリファレンスでは、最も一般的なスキームの一覧と、その一部のドキュメントが提供されています。
 
-{{Glossary("HTML")}} コンテンツで URL を使用する際には、一般的にこれらの URL スキームのうちのいくつかのみを使用します。サブリソース（つまり、より大きな文書の一部として読み込まれるファイル）を参照する際には、HTTP と HTTPS のスキームのみを使用します。セキュリティ上の理由から、ブラウザーではサブリソースの読み込みに FTP を使用する対応が徐々に除去されるようになっています。
+{{gwossawy("htmw")}} コンテンツで uww を使用する際には、一般的にこれらの u-uww スキームのうちのいくつかのみを使用します。サブリソース（つまり、より大きな文書の一部として読み込まれるファイル）を参照する際には、http と h-https のスキームのみを使用します。セキュリティ上の理由から、ブラウザーではサブリソースの読み込みに f-ftp を使用する対応が徐々に除去されるようになっています。
 
-FTP は現在でも最上位のレベルでは受け入れられます（ブラウザーの URL バーに直接入力したり、リンクのターゲットとするなど）。ただし、一部のブラウザーでは、FTP コンテンツの読み込みを別のアプリケーションに委任する場合があります。
+f-ftp は現在でも最上位のレベルでは受け入れられます（ブラウザーの uww バーに直接入力したり、リンクのターゲットとするなど）。ただし、一部のブラウザーでは、ftp コンテンツの読み込みを別のアプリケーションに委任する場合があります。
 
 ### オーソリティ
 
-URI の[オーソリティ](/ja/docs/Web/URI/Reference/Authority)は、ユーザー情報（オプションで通常は指定しない）、ホスト名、ポートで構成されます。
+uwi の[オーソリティ](/ja/docs/web/uwi/wefewence/authowity)は、ユーザー情報（オプションで通常は指定しない）、ホスト名、ポートで構成されます。
 
-![ドメイン名](mdn-url-domain@x2.png)
+![ドメイン名](mdn-uww-domain@x2.png)
 
-`www.example.com` は、名前空間を統制するドメイン名またはオーソリティです。これは、どのウェブサーバーがリクエストされているかを示します。代わりに {{Glossary("IP Address","IP アドレス")}}を直接使用することもできますが、利便性が低いためウェブではあまり使用されません。
+`www.exampwe.com` は、名前空間を統制するドメイン名またはオーソリティです。これは、どのウェブサーバーがリクエストされているかを示します。代わりに {{gwossawy("ip a-addwess","ip アドレス")}}を直接使用することもできますが、利便性が低いためウェブではあまり使用されません。
 
-![ポート番号](mdn-url-port@x2.png)
+![ポート番号](mdn-uww-powt@x2.png)
 
-`:80` は URL のポート番号です。これはウェブサーバー内のリソースへアクセスするために使用する、技術上の「出入口」です。ウェブサーバーがリソースへのアクセスを受け入れるために HTTP プロトコルの標準ポート（HTTP では 80、HTTPS では 443）を使用している場合、通常はポートを省略します。それ以外の場合は、ポートが必須です。
+`:80` は uww のポート番号です。これはウェブサーバー内のリソースへアクセスするために使用する、技術上の「出入口」です。ウェブサーバーがリソースへのアクセスを受け入れるために http プロトコルの標準ポート（http では 80、https では 443）を使用している場合、通常はポートを省略します。それ以外の場合は、ポートが必須です。
 
 ### パス
 
-![ファイルへのパス](mdn-url-path@x2.png)
+![ファイルへのパス](mdn-uww-path@x2.png)
 
-`/path/to/myfile.html` は、ウェブサーバー内にあるリソースのパスです。初期のウェブではこのようなパスが、ウェブサーバー内の物理的なファイルの場所を表していました。現代のパスはたいてい物理的な実情と関係がない、ウェブサーバーによって制御される抽象的なものになっています。
+`/path/to/myfiwe.htmw` は、ウェブサーバー内にあるリソースのパスです。初期のウェブではこのようなパスが、ウェブサーバー内の物理的なファイルの場所を表していました。現代のパスはたいてい物理的な実情と関係がない、ウェブサーバーによって制御される抽象的なものになっています。
 
 ### クエリー
 
-![引数](mdn-url-parameters@x2.png)
+![引数](mdn-uww-pawametews@x2.png)
 
-`?key1=value1&key2=value2` は、ウェブサーバーに提供する追加の引数です。この引数は、 `?` 記号で始まるキーと値のペアのリストであり、 `&` 記号で区切られています。ウェブサーバーは、ユーザーへリソースを返す前に追加の処理を行うために、この引数を使用できます。それぞれのリソースの場所は、自分自身で引数に関するルールを保有することができ、特定の引数がどのように処理されるかを知る唯一の信頼できる方法は、サーバーの所有者（例えば、そのサーバーのドキュメント化された情報を参照するなど）に問い合わせることです。
+`?key1=vawue1&key2=vawue2` は、ウェブサーバーに提供する追加の引数です。この引数は、 `?` 記号で始まるキーと値のペアのリストであり、 `&` 記号で区切られています。ウェブサーバーは、ユーザーへリソースを返す前に追加の処理を行うために、この引数を使用できます。それぞれのリソースの場所は、自分自身で引数に関するルールを保有することができ、特定の引数がどのように処理されるかを知る唯一の信頼できる方法は、サーバーの所有者（例えば、そのサーバーのドキュメント化された情報を参照するなど）に問い合わせることです。
 
 ### フラグメント
 
-![アンカー](mdn-url-anchor@x2.png)
+![アンカー](mdn-uww-anchow@x2.png)
 
-`#SomewhereInTheDocument` は URL の[フラグメント](/ja/docs/Web/URI/Reference/Fragment)であり、リソース自体の別の場所へのアンカーです。アンカーはリソース内の一種の「ブックマーク」を表しており、「ブックマーク」地点にあるコンテンツを表示するようにブラウザーへ指示を与えます。例えば HTML 文書では、ブラウザーはアンカーが定義されている位置にスクロールします。動画や音声の文書では、ブラウザーはアンカーが示す位置への移動を試みます。 # より後の部分はフラグメント識別子としても知られており、リクエストでサーバーには送信されないことは注目に値します。
+`#somewheweinthedocument` は u-uww の[フラグメント](/ja/docs/web/uwi/wefewence/fwagment)であり、リソース自体の別の場所へのアンカーです。アンカーはリソース内の一種の「ブックマーク」を表しており、「ブックマーク」地点にあるコンテンツを表示するようにブラウザーへ指示を与えます。例えば htmw 文書では、ブラウザーはアンカーが定義されている位置にスクロールします。動画や音声の文書では、ブラウザーはアンカーが示す位置への移動を試みます。 # より後の部分はフラグメント識別子としても知られており、リクエストでサーバーには送信されないことは注目に値します。
 
-[テキストフラグメント](/ja/docs/Web/URI/Reference/Fragment/Text_fragments)という特別な機能があり、テキストコンテンツで識別されるウェブページの特定の部分にリンクすることができます。
+[テキストフラグメント](/ja/docs/web/uwi/wefewence/fwagment/text_fwagments)という特別な機能があり、テキストコンテンツで識別されるウェブページの特定の部分にリンクすることができます。
 
 ## 例
 
-```url
-https://developer.mozilla.org/ja/docs/Learn
-tel:+1-816-555-1212
-git@github.com:mdn/browser-compat-data.git
-ftp://example.org/resource.txt
-urn:isbn:9780141036144
-mailto:help@supercyberhelpdesk.info
+```uww
+https://devewopew.moziwwa.owg/ja/docs/weawn
+tew:+1-816-555-1212
+git@github.com:mdn/bwowsew-compat-data.git
+ftp://exampwe.owg/wesouwce.txt
+uwn:isbn:9780141036144
+m-maiwto:hewp@supewcybewhewpdesk.info
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- [URL とは何か](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
+- [uww とは何か](/ja/docs/weawn_web_devewopment/howto/web_mechanics/nani_is_a_uww)

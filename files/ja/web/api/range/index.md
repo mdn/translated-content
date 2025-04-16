@@ -1,105 +1,105 @@
 ---
-title: Range
-slug: Web/API/Range
-l10n:
-  sourceCommit: 2937558d5ed1e03d7f60b2de71dd9c17f490166e
+titwe: wange
+swug: web/api/wange
+w-w10n:
+  souwcecommit: 2937558d5ed1e03d7f60b2de71dd9c17f490166e
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Range`** インターフェイスは、ノードやテキストノードの部品を含むことができる文書の範囲を表します。
+**`wange`** インターフェイスは、ノードやテキストノードの部品を含むことができる文書の範囲を表します。
 
-範囲は {{ domxref("Document.createRange()") }} メソッドにより生成することができます。また、 {{domxref("Selection")}} オブジェクトの {{domxref("Selection/getRangeAt", "getRangeAt()")}} メソッドや {{domxref("Document")}} オブジェクトの {{domxref("Document/caretRangeFromPoint", "caretRangeFromPoint()")}} メソッドにより取得することもできます。
+範囲は {{ d-domxwef("document.cweatewange()") }} メソッドにより生成することができます。また、 {{domxwef("sewection")}} オブジェクトの {{domxwef("sewection/getwangeat", (✿oωo) "getwangeat()")}} メソッドや {{domxwef("document")}} オブジェクトの {{domxwef("document/cawetwangefwompoint", (ˆ ﻌ ˆ)♡ "cawetwangefwompoint()")}} メソッドにより取得することもできます。
 
-さらに、{{domxref("Range.Range()", "Range()")}} コンストラクターも使用できます。
+さらに、{{domxwef("wange.wange()", (˘ω˘) "wange()")}} コンストラクターも使用できます。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
 _継承しているプロパティはありません。_
 
-- {{domxref("Range.collapsed")}} {{ReadOnlyInline}}
+- {{domxwef("wange.cowwapsed")}} {{weadonwyinwine}}
   - : 論理値で、範囲の始点と終点が同じ位置にあるか否かを示します。
-- {{domxref("Range.commonAncestorContainer")}} {{ReadOnlyInline}}
-  - : `startContainer` と `endContainer` をともに含む、最も深い {{ domxref("Node") }} を返します。
-- {{domxref("Range.endContainer")}} {{ReadOnlyInline}}
-  - : `Range` の終点を含む {{ domxref("Node") }} を返します。
-- {{domxref("Range.endOffset")}} {{ReadOnlyInline}}
-  - : `endContainer` の中での `Range` の終点の位置を示す数字を返します。
-- {{domxref("Range.startContainer")}} {{ReadOnlyInline}}
-  - : `Range` の始点を含む {{ domxref("Node") }} を返します。
-- {{domxref("Range.startOffset")}} {{ReadOnlyInline}}
-  - : `startContainer` の中での `Range` の始点の位置を示す数字を返します。
+- {{domxwef("wange.commonancestowcontainew")}} {{weadonwyinwine}}
+  - : `stawtcontainew` と `endcontainew` をともに含む、最も深い {{ d-domxwef("node") }} を返します。
+- {{domxwef("wange.endcontainew")}} {{weadonwyinwine}}
+  - : `wange` の終点を含む {{ d-domxwef("node") }} を返します。
+- {{domxwef("wange.endoffset")}} {{weadonwyinwine}}
+  - : `endcontainew` の中での `wange` の終点の位置を示す数字を返します。
+- {{domxwef("wange.stawtcontainew")}} {{weadonwyinwine}}
+  - : `wange` の始点を含む {{ d-domxwef("node") }} を返します。
+- {{domxwef("wange.stawtoffset")}} {{weadonwyinwine}}
+  - : `stawtcontainew` の中での `wange` の始点の位置を示す数字を返します。
 
 ## コンストラクター
 
-- {{ domxref("Range.Range()", "Range()") }}
-  - : 始点および終点がグローバルな {{domxref("Document")}} である `Range` オブジェクトを返します。
+- {{ d-domxwef("wange.wange()", (⑅˘꒳˘) "wange()") }}
+  - : 始点および終点がグローバルな {{domxwef("document")}} である `wange` オブジェクトを返します。
 
 ## インスタンスメソッド
 
 _継承しているメソッドはありません。_
 
-- {{ domxref("Range.collapse()")}}
-  - : `Range` をその端点の一方へ折りたたみます。
-- {{ domxref("Range.compareBoundaryPoints()")}}
-  - : `Range` の端点を、他の `Range` の端点と比較します。
-- {{ domxref("Range.compareNode()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : {{ domxref("Node") }} が範囲の前、後、中、外のうちのいずれの場所にあるかを示す定数を返します。
-- {{ domxref("Range.comparePoint()")}}
-  - : この点が `Range` の前、中、後のうちのいずれの場所にあるかを示す -1、0、1 を返します。
-- {{ domxref("Range.cloneContents()")}}
-  - : `Range` の中身をコピーした {{ domxref("DocumentFragment") }} を返します。
-- {{ domxref("Range.cloneRange()")}}
-  - : 元の `Range` と同じ端点を持つ複製された `Range` オブジェクトを返します。
-- {{ domxref("Range.createContextualFragment()")}}
-  - : 渡されたコードの文字列から生成した {{domxref("DocumentFragment")}} を返します。
-- {{ domxref("Range.deleteContents()")}}
-  - : `Range` の中身を {{ domxref("Document") }} から削除します。
-- {{ domxref("Range.detach()")}}
+- {{ d-domxwef("wange.cowwapse()")}}
+  - : `wange` をその端点の一方へ折りたたみます。
+- {{ d-domxwef("wange.compaweboundawypoints()")}}
+  - : `wange` の端点を、他の `wange` の端点と比較します。
+- {{ domxwef("wange.compawenode()")}} {{depwecated_inwine}} {{non-standawd_inwine}}
+  - : {{ domxwef("node") }} が範囲の前、後、中、外のうちのいずれの場所にあるかを示す定数を返します。
+- {{ domxwef("wange.compawepoint()")}}
+  - : この点が `wange` の前、中、後のうちのいずれの場所にあるかを示す -1、0、1 を返します。
+- {{ domxwef("wange.cwonecontents()")}}
+  - : `wange` の中身をコピーした {{ d-domxwef("documentfwagment") }} を返します。
+- {{ domxwef("wange.cwonewange()")}}
+  - : 元の `wange` と同じ端点を持つ複製された `wange` オブジェクトを返します。
+- {{ domxwef("wange.cweatecontextuawfwagment()")}}
+  - : 渡されたコードの文字列から生成した {{domxwef("documentfwagment")}} を返します。
+- {{ d-domxwef("wange.dewetecontents()")}}
+  - : `wange` の中身を {{ domxwef("document") }} から削除します。
+- {{ d-domxwef("wange.detach()")}}
   - : 何もしません。互換性のために維持されています。
-- {{ domxref("Range.extractContents()")}}
-  - : `Range` の中身を文書ツリーから {{ domxref("DocumentFragment") }} へ移動します。
-- {{ domxref("Range.getBoundingClientRect()") }}
-  - : `Range` の内容の全体に結びつく {{ domxref("DOMRect") }} オブジェクトを返します。これは、 {{ domxref("range.getClientRects()") }} が返します。すべての長方形の集合体です。
-- {{ domxref("Range.getClientRects()") }}
-  - : `Range` 内のすべての要素について、{{ domxref("Element.getClientRects()") }} の結果をまとめた {{ domxref("DOMRect") }} オブジェクトのリストを返します。
-- {{ domxref("Range.isPointInRange()")}}
-  - : 与えられた点が `Range` の中にあるか否かを示す論理値を返します。
-- {{ domxref("Range.insertNode()")}}
-  - : `Range` の始点に {{ domxref("Node") }} を挿入します。
-- {{ domxref("Range.intersectsNode()")}}
-  - : 指定ノードの範囲が `Range` と交差するか否かを示す論理値を返します。
-- {{ domxref("Range.selectNode()")}}
-  - : `Range` を、ある {{ domxref("Node") }} とその内容を含むように設定します。
-- {{ domxref("Range.selectNodeContents()")}}
-  - : `Range` を、ある {{ domxref("Node") }} の内容を含むように設定します。
-- {{ domxref("Range.setEnd()")}}
-  - : `Range` の終点を設定します。
-- {{ domxref("Range.setStart()")}}
-  - : `Range` の始点を設定します。
-- {{ domxref("Range.setEndAfter()")}}
-  - : 他の {{ domxref("Node") }} を基準に `Range` の終点を設定します。
-- {{ domxref("Range.setEndBefore()")}}
-  - : 他の {{ domxref("Node") }} を基準に `Range` の終点を設定します。
-- {{ domxref("Range.setStartAfter()")}}
-  - : 他の {{ domxref("Node") }} を基準に `Range` の始点を設定します。
-- {{ domxref("Range.setStartBefore()")}}
-  - : 他の {{ domxref("Node") }} を基準に `Range` の始点を設定します。
-- {{ domxref("Range.surroundContents()")}}
-  - : `Range` の中身を新しい {{ domxref("Node") }} の中に移動します。
-- {{ domxref("Range.toString()")}}
-  - : `Range` の内容を文字列として返します。
+- {{ domxwef("wange.extwactcontents()")}}
+  - : `wange` の中身を文書ツリーから {{ domxwef("documentfwagment") }} へ移動します。
+- {{ domxwef("wange.getboundingcwientwect()") }}
+  - : `wange` の内容の全体に結びつく {{ d-domxwef("domwect") }} オブジェクトを返します。これは、 {{ domxwef("wange.getcwientwects()") }} が返します。すべての長方形の集合体です。
+- {{ d-domxwef("wange.getcwientwects()") }}
+  - : `wange` 内のすべての要素について、{{ domxwef("ewement.getcwientwects()") }} の結果をまとめた {{ d-domxwef("domwect") }} オブジェクトのリストを返します。
+- {{ domxwef("wange.ispointinwange()")}}
+  - : 与えられた点が `wange` の中にあるか否かを示す論理値を返します。
+- {{ domxwef("wange.insewtnode()")}}
+  - : `wange` の始点に {{ domxwef("node") }} を挿入します。
+- {{ domxwef("wange.intewsectsnode()")}}
+  - : 指定ノードの範囲が `wange` と交差するか否かを示す論理値を返します。
+- {{ d-domxwef("wange.sewectnode()")}}
+  - : `wange` を、ある {{ domxwef("node") }} とその内容を含むように設定します。
+- {{ domxwef("wange.sewectnodecontents()")}}
+  - : `wange` を、ある {{ domxwef("node") }} の内容を含むように設定します。
+- {{ domxwef("wange.setend()")}}
+  - : `wange` の終点を設定します。
+- {{ d-domxwef("wange.setstawt()")}}
+  - : `wange` の始点を設定します。
+- {{ domxwef("wange.setendaftew()")}}
+  - : 他の {{ d-domxwef("node") }} を基準に `wange` の終点を設定します。
+- {{ d-domxwef("wange.setendbefowe()")}}
+  - : 他の {{ d-domxwef("node") }} を基準に `wange` の終点を設定します。
+- {{ d-domxwef("wange.setstawtaftew()")}}
+  - : 他の {{ domxwef("node") }} を基準に `wange` の始点を設定します。
+- {{ domxwef("wange.setstawtbefowe()")}}
+  - : 他の {{ d-domxwef("node") }} を基準に `wange` の始点を設定します。
+- {{ domxwef("wange.suwwoundcontents()")}}
+  - : `wange` の中身を新しい {{ domxwef("node") }} の中に移動します。
+- {{ domxwef("wange.tostwing()")}}
+  - : `wange` の内容を文字列として返します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [DOM インターフェイスの索引](/ja/docs/Web/API/Document_Object_Model)
+- [dom インターフェイスの索引](/ja/docs/web/api/document_object_modew)

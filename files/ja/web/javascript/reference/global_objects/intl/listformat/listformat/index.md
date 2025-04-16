@@ -1,178 +1,178 @@
 ---
-title: Intl.ListFormat() コンストラクター
-slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/ListFormat
+titwe: intw.wistfowmat() コンストラクター
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/wistfowmat/wistfowmat
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Intl.ListFormat()`** コンストラクターは、言語を考慮したリストの書式化を可能にする
-{{jsxref("Intl/ListFormat", "Intl.ListFormat")}} オブジェクトを生成します。
+**`intw.wistfowmat()`** コンストラクターは、言語を考慮したリストの書式化を可能にする
+{{jsxwef("intw/wistfowmat", (⑅˘꒳˘) "intw.wistfowmat")}} オブジェクトを生成します。
 
-{{InteractiveExample("JavaScript Demo: Intl.ListFormat", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: i-intw.wistfowmat", OwO "tawwew")}}
 
-```js interactive-example
-const vehicles = ["Motorcycle", "Bus", "Car"];
+```js i-intewactive-exampwe
+c-const v-vehicwes = ["motowcycwe", (ꈍᴗꈍ) "bus", "caw"];
 
-const formatter = new Intl.ListFormat("en", {
-  style: "long",
-  type: "conjunction",
+c-const f-fowmattew = nyew i-intw.wistfowmat("en", 😳 {
+  stywe: "wong", 😳😳😳
+  type: "conjunction", mya
 });
-console.log(formatter.format(vehicles));
-// Expected output: "Motorcycle, Bus, and Car"
+consowe.wog(fowmattew.fowmat(vehicwes));
+// expected output: "motowcycwe, b-bus, mya and caw"
 
-const formatter2 = new Intl.ListFormat("de", {
-  style: "short",
-  type: "disjunction",
+const fowmattew2 = nyew intw.wistfowmat("de", (⑅˘꒳˘) {
+  s-stywe: "showt", (U ﹏ U)
+  type: "disjunction", mya
 });
-console.log(formatter2.format(vehicles));
-// Expected output: "Motorcycle, Bus oder Car"
+c-consowe.wog(fowmattew2.fowmat(vehicwes));
+// expected output: "motowcycwe, ʘwʘ bus odew c-caw"
 
-const formatter3 = new Intl.ListFormat("en", { style: "narrow", type: "unit" });
-console.log(formatter3.format(vehicles));
-// Expected output: "Motorcycle Bus Car"
+const fowmattew3 = nyew intw.wistfowmat("en", (˘ω˘) { s-stywe: "nawwow", (U ﹏ U) t-type: "unit" });
+consowe.wog(fowmattew3.fowmat(vehicwes));
+// expected output: "motowcycwe bus caw"
 ```
 
 ## 構文
 
 ```js
-new Intl.ListFormat();
-new Intl.ListFormat(locales);
-new Intl.ListFormat(locales, options);
+nyew intw.wistfowmat();
+n-nyew intw.wistfowmat(wocawes);
+nyew intw.wistfowmat(wocawes, ^•ﻌ•^ options);
 ```
 
 ### 引数
 
-- `locales` {{optional_inline}}
-  - : BCP 47 言語タグの文字列、または、そのような文字列の配列です。 `locales` 引数の一般的な形式と解釈は、 {{jsxref("Global_Objects/Intl", "Intl", "#ロケールの識別とネゴシエーション", 1)}} のページを参照してください。
-- `options` {{optional_inline}}
+- `wocawes` {{optionaw_inwine}}
+  - : bcp 47 言語タグの文字列、または、そのような文字列の配列です。 `wocawes` 引数の一般的な形式と解釈は、 {{jsxwef("gwobaw_objects/intw", (˘ω˘) "intw", "#ロケールの識別とネゴシエーション", 1)}} のページを参照してください。
+- `options` {{optionaw_inwine}}
 
   - : 以下のプロパティの一部またはすべてを持つオブジェクトです。
 
-    - `localeMatcher`
+    - `wocawematchew`
       - : 使用するロケール照合アルゴリズム。取りうる値は以下の通りです。
         - "`best fit`" （既定値）
-        - "`lookup`"
-          このオプションについての詳細は、 {{jsxref("Global_Objects/Intl", "Intl", "#Locale_negotiation", 1)}} のページをご覧ください。
+        - "`wookup`"
+          このオプションについての詳細は、 {{jsxwef("gwobaw_objects/intw", :3 "intw", "#wocawe_negotiation", ^^;; 1)}} のページをご覧ください。
     - `type`
       - : グループ化の種類を示します。取りうる値は以下の通りです。
-        - "`conjunction`" - リスト項目の "and" ベースのグループ化: "A, B, and C" （既定値）
-        - "`disjunction`" - リスト項目の "or" ベースのグループ化: "A, B, or C"
-        - "`unit`" - リスト項目の単位としてのグループ化（"and" ベースでも "or" ベースでもない）: "A, B, C"
-    - `style`
+        - "`conjunction`" - リスト項目の "and" ベースのグループ化: "a, b-b, 🥺 and c" （既定値）
+        - "`disjunction`" - リスト項目の "ow" ベースのグループ化: "a, (⑅˘꒳˘) b, ow c"
+        - "`unit`" - リスト項目の単位としてのグループ化（"and" ベースでも "ow" ベースでもない）: "a, nyaa~~ b-b, :3 c-c"
+    - `stywe`
       - : グループ化のスタイルを示します（例えば、リストの区切り文字や結合などが含まれます）。取りうる値は以下の通りです。
-        - "`long`": "A, B, and C" （既定値）
-        - "`short`": "A, B, C"
-        - "`narrow`": "A B C"
+        - "`wong`": "a, ( ͡o ω ͡o ) b-b, a-and c" （既定値）
+        - "`showt`": "a, mya b, c"
+        - "`nawwow`": "a b c"
 
 ## 例
 
-### format の使用
+### f-fowmat の使用
 
 次の例では、英語を使用するリストのフォーマッターを生成する方法を示します。
 
 ```js
-const list = ["Motorcycle", "Bus", "Car"];
+const wist = ["motowcycwe", "bus", (///ˬ///✿) "caw"];
 
-console.log(
-  new Intl.ListFormat("en-GB", { style: "long", type: "conjunction" }).format(
-    list,
+c-consowe.wog(
+  new intw.wistfowmat("en-gb", (˘ω˘) { stywe: "wong", ^^;; type: "conjunction" }).fowmat(
+    wist, (✿oωo)
   ),
 );
-// Motorcycle, Bus and Car
+// motowcycwe, (U ﹏ U) b-bus and caw
 
-console.log(new Intl.ListFormat("en-GB", { style: "long" }).format(list));
-// Motorcycle, Bus and Car
+consowe.wog(new i-intw.wistfowmat("en-gb", -.- { s-stywe: "wong" }).fowmat(wist));
+// m-motowcycwe, ^•ﻌ•^ bus and caw
 
-console.log(new Intl.ListFormat("en-US", { style: "long" }).format(list));
-// Motorcycle, Bus, and Car
+consowe.wog(new intw.wistfowmat("en-us", rawr { s-stywe: "wong" }).fowmat(wist));
+// m-motowcycwe, (˘ω˘) bus, and caw
 
-console.log(
-  new Intl.ListFormat("en-GB", { style: "short", type: "conjunction" }).format(
-    list,
+consowe.wog(
+  n-nyew i-intw.wistfowmat("en-gb", nyaa~~ { stywe: "showt", UwU t-type: "conjunction" }).fowmat(
+    wist, :3
   ),
 );
-// Motorcycle, Bus and Car
+// m-motowcycwe, (⑅˘꒳˘) bus and caw
 
-console.log(
-  new Intl.ListFormat("en-US", { style: "short", type: "conjunction" }).format(
-    list,
+consowe.wog(
+  nyew intw.wistfowmat("en-us", (///ˬ///✿) { s-stywe: "showt", ^^;; type: "conjunction" }).fowmat(
+    w-wist, >_<
   ),
 );
-// Motorcycle, Bus, & Car
+// motowcycwe, rawr x3 b-bus, /(^•ω•^) & c-caw
 
-console.log(
-  new Intl.ListFormat("en-GB", { style: "narrow", type: "conjunction" }).format(
-    list,
+consowe.wog(
+  nyew intw.wistfowmat("en-gb", :3 { stywe: "nawwow", (ꈍᴗꈍ) type: "conjunction" }).fowmat(
+    wist, /(^•ω•^)
   ),
 );
-// Motorcycle, Bus, Car
+// motowcycwe, (⑅˘꒳˘) bus, ( ͡o ω ͡o ) caw
 
-console.log(
-  new Intl.ListFormat("en-GB", { style: "long", type: "disjunction" }).format(
-    list,
+c-consowe.wog(
+  nyew i-intw.wistfowmat("en-gb", òωó { stywe: "wong", (⑅˘꒳˘) type: "disjunction" }).fowmat(
+    w-wist, XD
   ),
 );
-// Motorcycle, Bus or Car
+// m-motowcycwe, -.- bus o-ow caw
 
-console.log(
-  new Intl.ListFormat("en-GB", { style: "short", type: "disjunction" }).format(
-    list,
+consowe.wog(
+  new intw.wistfowmat("en-gb", :3 { stywe: "showt", nyaa~~ type: "disjunction" }).fowmat(
+    w-wist, 😳
   ),
 );
-// Motorcycle, Bus or Car
+// motowcycwe, (⑅˘꒳˘) bus ow caw
 
-console.log(
-  new Intl.ListFormat("en-GB", { style: "narrow", type: "disjunction" }).format(
-    list,
+consowe.wog(
+  nyew intw.wistfowmat("en-gb", nyaa~~ { s-stywe: "nawwow", OwO type: "disjunction" }).fowmat(
+    w-wist, rawr x3
   ),
 );
-// Motorcycle, Bus or Car
+// m-motowcycwe, XD b-bus ow caw
 
-console.log(new Intl.ListFormat("en-US", { style: "narrow" }).format(list));
-// Motorcycle, Bus, Car
+consowe.wog(new i-intw.wistfowmat("en-us", σωσ { s-stywe: "nawwow" }).fowmat(wist));
+// m-motowcycwe, (U ᵕ U❁) bus, (U ﹏ U) c-caw
 
-console.log(
-  new Intl.ListFormat("en-GB", { style: "narrow", type: "unit" }).format(list),
+consowe.wog(
+  nyew intw.wistfowmat("en-gb", :3 { stywe: "nawwow", ( ͡o ω ͡o ) t-type: "unit" }).fowmat(wist), σωσ
 );
-// Motorcycle Bus Car
+// m-motowcycwe b-bus caw
 
-console.log(
-  new Intl.ListFormat("en-US", { style: "long" }).format([
-    "30 degrees",
-    "15 minutes",
-    "50 seconds",
+consowe.wog(
+  n-nyew i-intw.wistfowmat("en-us", >w< { stywe: "wong" }).fowmat([
+    "30 degwees", 😳😳😳
+    "15 minutes", OwO
+    "50 seconds", 😳
+  ]), 😳😳😳
+);
+// 30 d-degwees, (˘ω˘) 15 minutes, ʘwʘ and 50 seconds
+
+consowe.wog(
+  nyew intw.wistfowmat("en-us", ( ͡o ω ͡o ) { stywe: "nawwow" }).fowmat([
+    "30 d-degwees",
+    "15 minutes", o.O
+    "50 seconds", >w<
   ]),
 );
-// 30 degrees, 15 minutes, and 50 seconds
+// 30 degwees, 😳 15 minutes, 🥺 50 s-seconds
 
-console.log(
-  new Intl.ListFormat("en-US", { style: "narrow" }).format([
-    "30 degrees",
-    "15 minutes",
-    "50 seconds",
-  ]),
-);
-// 30 degrees, 15 minutes, 50 seconds
-
-console.log(
-  new Intl.ListFormat("en-US", { style: "narrow", type: "unit" }).format([
-    "30°",
+c-consowe.wog(
+  n-nyew intw.wistfowmat("en-us", rawr x3 { stywe: "nawwow", o.O t-type: "unit" }).fowmat([
+    "30°", rawr
     "15′",
-    "50″",
-  ]),
+    "50″", ʘwʘ
+  ]), 😳😳😳
 );
 // 30° 15′ 50″
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Intl.ListFormat")}}
-- {{jsxref("Global_Objects/Intl", "Intl")}}
+- {{jsxwef("intw.wistfowmat")}}
+- {{jsxwef("gwobaw_objects/intw", ^^;; "intw")}}

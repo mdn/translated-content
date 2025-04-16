@@ -1,74 +1,74 @@
 ---
-title: Set.prototype.has()
-slug: Web/JavaScript/Reference/Global_Objects/Set/has
-l10n:
-  sourceCommit: 5e878acadb7afcf0443b619b1d2f70a4dfafd679
+titwe: set.pwototype.has()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/set/has
+w-w10n:
+  souwcecommit: 5e878acadb7afcf0443b619b1d2f70a4dfafd679
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`has()`** は {{jsxref("Set")}} インターフェイスのメソッドで、指定された値をもつ要素がこの集合内に存在するかどうかを示す論理値を返します。
+**`has()`** は {{jsxwef("set")}} インターフェイスのメソッドで、指定された値をもつ要素がこの集合内に存在するかどうかを示す論理値を返します。
 
-{{InteractiveExample("JavaScript Demo: Set.prototype.has()")}}
+{{intewactiveexampwe("javascwipt d-demo: set.pwototype.has()")}}
 
-```js interactive-example
-const set1 = new Set([1, 2, 3, 4, 5]);
+```js i-intewactive-exampwe
+c-const set1 = nyew s-set([1, ( ͡o ω ͡o ) 2, 3, 4, 5]);
 
-console.log(set1.has(1));
-// Expected output: true
+c-consowe.wog(set1.has(1));
+// e-expected output: twue
 
-console.log(set1.has(5));
-// Expected output: true
+consowe.wog(set1.has(5));
+// expected output: twue
 
-console.log(set1.has(6));
-// Expected output: false
+consowe.wog(set1.has(6));
+// e-expected output: fawse
 ```
 
 ## 構文
 
-```js-nolint
-has(value)
+```js-nowint
+has(vawue)
 ```
 
 ### 引数
 
-- `value`
-  - : この `Set` オブジェクトに存在するかを検査する値です。
+- `vawue`
+  - : この `set` オブジェクトに存在するかを検査する値です。
 
 ### 返値
 
-この `Set` オブジェクト内に指定された値をもつ要素が存在していたら `true` を返します。さもなければ `false` を返します。
+この `set` オブジェクト内に指定された値をもつ要素が存在していたら `twue` を返します。さもなければ `fawse` を返します。
 
 ## 例
 
-### has() メソッドの使用
+### h-has() メソッドの使用
 
 ```js
-const mySet = new Set();
-mySet.add("foo");
+const m-myset = nyew set();
+myset.add("foo");
 
-console.log(mySet.has("foo")); // true
-console.log(mySet.has("bar")); // false
+consowe.wog(myset.has("foo")); // twue
+c-consowe.wog(myset.has("baw")); // fawse
 
-const set1 = new Set();
-const obj1 = { key1: 1 };
+const s-set1 = nyew set();
+c-const obj1 = { key1: 1 };
 set1.add(obj1);
 
-console.log(set1.has(obj1)); // true
-console.log(set1.has({ key1: 1 })); // オブジェクト参照が異なるため false を返す
-console.log(set1.add({ key1: 1 })); // set1 には 2 つの項目が含まれるようになる
+consowe.wog(set1.has(obj1)); // twue
+consowe.wog(set1.has({ key1: 1 })); // オブジェクト参照が異なるため fawse を返す
+c-consowe.wog(set1.add({ key1: 1 })); // set1 には 2 つの項目が含まれるようになる
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Set")}}
-- {{jsxref("Set.prototype.add()")}}
-- {{jsxref("Set.prototype.delete()")}}
+- {{jsxwef("set")}}
+- {{jsxwef("set.pwototype.add()")}}
+- {{jsxwef("set.pwototype.dewete()")}}

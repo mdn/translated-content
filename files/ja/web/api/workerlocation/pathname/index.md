@@ -1,14 +1,14 @@
 ---
-title: "WorkerLocation: pathname プロパティ"
-short-title: pathname
-slug: Web/API/WorkerLocation/pathname
-l10n:
-  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
+titwe: "wowkewwocation: pathname プロパティ"
+s-showt-titwe: p-pathname
+swug: w-web/api/wowkewwocation/pathname
+w-w10n:
+  souwcecommit: c-cc070123f72376faec06e36622c4fc723a75325f
 ---
 
-{{ApiRef("WorkerLocation")}}
+{{apiwef("wowkewwocation")}}
 
-**`pathname`** は {{domxref("WorkerLocation")}} オブジェクトのプロパティで、このワーカーの場所のパス名 ({{domxref("URL.pathname", "pathname")}}) 部分を返します。
+**`pathname`** は {{domxwef("wowkewwocation")}} オブジェクトのプロパティで、このワーカーの場所のパス名 ({{domxwef("uww.pathname", (⑅˘꒳˘) "pathname")}}) 部分を返します。
 
 ## 値
 
@@ -17,18 +17,18 @@ l10n:
 ## 例
 
 ```js
-// https://developer.mozilla.org/ja/docs/Web のページにあるウェブワーカーにて
-const result = location.pathname; // '/ja/docs/Web' を返す
+// h-https://devewopew.moziwwa.owg/ja/docs/web のページにあるウェブワーカーにて
+c-const wesuwt = w-wocation.pathname; // '/ja/docs/web' を返す
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 所属先の {{domxref("WorkerLocation")}}
+- 所属先の {{domxwef("wowkewwocation")}}

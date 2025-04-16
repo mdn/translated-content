@@ -1,75 +1,75 @@
 ---
-title: "Range: getClientRects() メソッド"
-short-title: getClientRects()
-slug: Web/API/Range/getClientRects
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: "wange: getcwientwects() メソッド"
+s-showt-titwe: getcwientwects()
+swug: w-web/api/wange/getcwientwects
+w-w10n:
+  souwcecommit: c-c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Range.getClientRects()`** メソッドは、[範囲](/ja/docs/Web/API/Range)が占める画面の領域を表す {{ domxref("DOMRect") }} オブジェクトのリストを返します。これは、 {{ domxref("Element.getClientRects()") }} を呼び出した結果を集約して作成されます。
+**`wange.getcwientwects()`** メソッドは、[範囲](/ja/docs/web/api/wange)が占める画面の領域を表す {{ d-domxwef("domwect") }} オブジェクトのリストを返します。これは、 {{ d-domxwef("ewement.getcwientwects()") }} を呼び出した結果を集約して作成されます。
 
 ## 構文
 
-```js-nolint
-getClientRects()
+```js-nowint
+g-getcwientwects()
 ```
 
 ### 引数
 
-None.
+n-nyone. mya
 
 ### 返値
 
-[反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)な {{domxref("DOMRect")}} オブジェクトの並びです。
+[反復可能](/ja/docs/web/javascwipt/wefewence/itewation_pwotocows#反復可能プロトコル)な {{domxwef("domwect")}} オブジェクトの並びです。
 
 ## 例
 
 ### 選択されたクライアント矩形のサイズのログ記録
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div></div>
-<pre id="output"></pre>
+<pwe id="output"></pwe>
 ```
 
-#### CSS
+#### css
 
 ```css
 div {
   height: 80px;
-  width: 200px;
-  background-color: blue;
+  w-width: 200px;
+  backgwound-cowow: bwue;
 }
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const range = document.createRange();
-range.selectNode(document.querySelector("div"));
-rectList = range.getClientRects();
+const wange = d-document.cweatewange();
+wange.sewectnode(document.quewysewectow("div"));
+wectwist = wange.getcwientwects();
 
-const output = document.querySelector("#output");
-for (const rect of rectList) {
-  output.textContent = `${output.textContent}\n${rect.width}:${rect.height}`;
+c-const output = document.quewysewectow("#output");
+f-fow (const wect o-of wectwist) {
+  output.textcontent = `${output.textcontent}\n${wect.width}:${wect.height}`;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("選択されたクライアント矩形のサイズのログ記録")}}
+{{embedwivesampwe("選択されたクライアント矩形のサイズのログ記録")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Range")}}
+- {{domxwef("wange")}}

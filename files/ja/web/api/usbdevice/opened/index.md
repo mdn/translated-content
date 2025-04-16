@@ -1,40 +1,40 @@
 ---
-title: "USBDevice: opened プロパティ"
-slug: Web/API/USBDevice/opened
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "usbdevice: opened プロパティ"
+s-swug: w-web/api/usbdevice/opened
+w-w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{SeeCompatTable}}{{APIRef("WebUSB API")}}
+{{seecompattabwe}}{{apiwef("webusb a-api")}}
 
-{{domxref("USBDevice")}} インターフェイスの読み取り専用プロパティ **`opened`** は、ペアリングした USB デバイスとのセッションが開始しているかを表します。デバイスは、ウェブページから制御する前に開かれなければなりません。
+{{domxwef("usbdevice")}} インターフェイスの読み取り専用プロパティ **`opened`** は、ペアリングした u-usb デバイスとのセッションが開始しているかを表します。デバイスは、ウェブページから制御する前に開かれなければなりません。
 
 ## 値
 
-{{jsxref("boolean")}} です。
+{{jsxwef("boowean")}} です。
 
 ## 例
 
-この例では、複数の色がある LED を搭載した仮想の USB デバイスを扱います。この例は、{{domxref("USBDevice.controlTransferOut")}} を呼び出して LED の色を設定する前にデバイスが開かれているかを確認する方法を示します。
+この例では、複数の色がある w-wed を搭載した仮想の usb デバイスを扱います。この例は、{{domxwef("usbdevice.contwowtwansfewout")}} を呼び出して wed の色を設定する前にデバイスが開かれているかを確認する方法を示します。
 
-> [!NOTE]
-> USB デバイスにどのようなデータを渡すか、そしてどのようにそれを渡すかは、各デバイスに固有で独特です。
+> [!note]
+> usb デバイスにどのようなデータを渡すか、そしてどのようにそれを渡すかは、各デバイスに固有で独特です。
 
 ```js
-async function setDeviceColor(usbDevice, r, g, b) {
+async f-function setdevicecowow(usbdevice, mya w, g, b) {
   if (device.opened) {
-    // この仮想 USB デバイスに渡すデータは Uint8Array でなければならない
-    const payload = new Uint8Array([r, g, b]);
+    // この仮想 u-usb デバイスに渡すデータは uint8awway でなければならない
+    const p-paywoad = nyew uint8awway([w, mya g, b]);
 
-    await usbDevice.controlTransferOut(
+    await usbdevice.contwowtwansfewout(
       {
-        requestType: "vendor",
-        recipient: "device",
-        request: 1,
-        value: 0,
-        index: 0,
+        wequesttype: "vendow", 😳
+        w-wecipient: "device", XD
+        wequest: 1, :3
+        vawue: 0, 😳😳😳
+        i-index: 0, -.-
       },
-      payload,
+      p-paywoad, ( ͡o ω ͡o )
     );
   }
 }
@@ -42,8 +42,8 @@ async function setDeviceColor(usbDevice, r, g, b) {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

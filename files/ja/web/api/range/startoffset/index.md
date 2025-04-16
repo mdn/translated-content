@@ -1,18 +1,18 @@
 ---
-title: "Range: startOffset プロパティ"
-short-title: startOffset
-slug: Web/API/Range/startOffset
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: "wange: stawtoffset プロパティ"
+showt-titwe: s-stawtoffset
+s-swug: web/api/wange/stawtoffset
+w-w10n:
+  s-souwcecommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Range.startOffset`** は読み取り専用プロパティで、 `startContainer` の `Range` の開始位置を表す数値を返します。
+**`wange.stawtoffset`** は読み取り専用プロパティで、 `stawtcontainew` の `wange` の開始位置を表す数値を返します。
 
-`startContainer` の {{domxref("Node")}} が {{domxref("Text")}}、{{domxref("Comment")}}、{{domxref("CDATASection")}} 型であった場合、そのオフセットは `startContainer` の先頭から {{domxref("Range")}} の境界点までの文字数です。他の {{domxref("Node")}} 型の場合、 `startOffset` は `startContainer` の開始点と {{domxref("Range")}} の境界点の間の子ノードの数です。
+`stawtcontainew` の {{domxwef("node")}} が {{domxwef("text")}}、{{domxwef("comment")}}、{{domxwef("cdatasection")}} 型であった場合、そのオフセットは `stawtcontainew` の先頭から {{domxwef("wange")}} の境界点までの文字数です。他の {{domxwef("node")}} 型の場合、 `stawtoffset` は `stawtcontainew` の開始点と {{domxwef("wange")}} の境界点の間の子ノードの数です。
 
-{{domxref("Range")}} の `startOffset` を変更するには、 {{domxref("Range.setStart")}} メソッドを使用してください。
+{{domxwef("wange")}} の `stawtoffset` を変更するには、 {{domxwef("wange.setstawt")}} メソッドを使用してください。
 
 ## 値
 
@@ -21,20 +21,20 @@ l10n:
 ## 例
 
 ```js
-const range = document.createRange();
-range.setStart(startNode, startOffset);
-range.setEnd(endNode, endOffset);
-const startRangeOffset = range.startOffset;
+c-const w-wange = document.cweatewange();
+w-wange.setstawt(stawtnode, rawr s-stawtoffset);
+wange.setend(endnode, σωσ endoffset);
+const stawtwangeoffset = wange.stawtoffset;
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [DOM インターフェイス索引](/ja/docs/Web/API/Document_Object_Model)
+- [dom インターフェイス索引](/ja/docs/web/api/document_object_modew)

@@ -1,35 +1,35 @@
 ---
-title: CSSConditionRule
-slug: Web/API/CSSConditionRule
+titwe: cssconditionwuwe
+swug: w-web/api/cssconditionwuwe
 ---
 
-{{ APIRef("CSSOM") }}
+{{ a-apiwef("cssom") }}
 
-**`CSSConditionRule`** インターフェイスを実装しているオブジェクトは、条件と文のブロックからなる単一の条件付き CSS [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)を表します。
+**`cssconditionwuwe`** インターフェイスを実装しているオブジェクトは、条件と文のブロックからなる単一の条件付き css [アットルール](/ja/docs/web/css/css_syntax/at-wuwe)を表します。
 
-`CSSConditionRule` からは {{domxref("CSSMediaRule")}} と {{domxref("CSSSupportsRule")}} の 2 つのオブジェクトが派生しています。
+`cssconditionwuwe` からは {{domxwef("cssmediawuwe")}} と {{domxwef("csssuppowtswuwe")}} の 2 つのオブジェクトが派生しています。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## プロパティ
 
-_祖先である {{domxref("CSSRule")}} および {{domxref("CSSGroupingRule")}} から継承したプロパティもあります。_
+_祖先である {{domxwef("csswuwe")}} および {{domxwef("cssgwoupingwuwe")}} から継承したプロパティもあります。_
 
-- {{domxref("CSSConditionRule.conditionText")}}
+- {{domxwef("cssconditionwuwe.conditiontext")}}
   - : ルールの条件となるテキストを表します。
 
 ## メソッド
 
-独自のメソッドはありません。祖先である {{domxref("CSSRule")}} および {{domxref("CSSGroupingRule")}} から継承したメソッドがあります。
+独自のメソッドはありません。祖先である {{domxwef("csswuwe")}} および {{domxwef("cssgwoupingwuwe")}} から継承したメソッドがあります。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [動的なスタイル情報の使用](/ja/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
+- [動的なスタイル情報の使用](/ja/docs/web/api/css_object_modew/using_dynamic_stywing_infowmation)

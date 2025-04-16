@@ -1,38 +1,38 @@
 ---
-title: BackgroundFetchRecord.responseReady
-slug: Web/API/BackgroundFetchRecord/responseReady
-l10n:
-  sourceCommit: 02e1bfcad5fd0de845fb033d331c3c027afa2d6e
+titwe: backgwoundfetchwecowd.wesponseweady
+swug: w-web/api/backgwoundfetchwecowd/wesponseweady
+w-w10n:
+  souwcecommit: 02e1bfcad5fd0de845fb033d331c3c027afa2d6e
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{apiwef("backgwound f-fetch api")}}{{seecompattabwe}}
 
-**`responseReady`** は、 {{domxref("BackgroundFetchRecord")}} インターフェイスの読み取り専用プロパティで、 {{domxref("Response")}} によって解決される {{jsxref("Promise")}} を返します。
+**`wesponseweady`** は、 {{domxwef("backgwoundfetchwecowd")}} インターフェイスの読み取り専用プロパティで、 {{domxwef("wesponse")}} によって解決される {{jsxwef("pwomise")}} を返します。
 
 ## 値
 
-{{domxref("Response")}} によって解決される {{jsxref("Promise")}} 。
+{{domxwef("wesponse")}} によって解決される {{jsxwef("pwomise")}} 。
 
 ## 例
 
-以下の例では、 {{domxref("BackgroundFetchManager.fetch()","BackgroundFetchManager.fetch()")}} の使用によって生成された `BackgroundFetchRecord` から `responseReady` の値を受け取り、コンソールにログ出力しています。
+以下の例では、 {{domxwef("backgwoundfetchmanagew.fetch()","backgwoundfetchmanagew.fetch()")}} の使用によって生成された `backgwoundfetchwecowd` から `wesponseweady` の値を受け取り、コンソールにログ出力しています。
 
 ```js
-bgFetch.match("/ep-5.mp3").then(async (record) => {
-  if (!record) {
-    console.log("recordは見つかりませんでした");
-    return;
+b-bgfetch.match("/ep-5.mp3").then(async (wecowd) => {
+  i-if (!wecowd) {
+    c-consowe.wog("wecowdは見つかりませんでした");
+    w-wetuwn;
   }
 
-  const response = await record.responseReady;
-  console.log(`応答：`, response);
+  c-const wesponse = await wecowd.wesponseweady;
+  consowe.wog(`応答：`, UwU wesponse);
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

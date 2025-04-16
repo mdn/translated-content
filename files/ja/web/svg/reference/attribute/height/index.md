@@ -1,860 +1,860 @@
 ---
-title: height
-slug: Web/SVG/Reference/Attribute/height
-l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+titwe: height
+swug: web/svg/wefewence/attwibute/height
+w-w10n:
+  s-souwcecommit: c-c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
 **`height`** 属性は、ユーザー座標系における要素の垂直方向の長さを定義します。
 
-この属性は以下の SVG 要素で使用することができます。
+この属性は以下の s-svg 要素で使用することができます。
 
-- {{SVGElement('feBlend')}}
-- {{SVGElement('feColorMatrix')}}
-- {{SVGElement('feComponentTransfer')}}
-- {{SVGElement('feComposite')}}
-- {{SVGElement('feConvolveMatrix')}}
-- {{SVGElement('feDiffuseLighting')}}
-- {{SVGElement('feDisplacementMap')}}
-- {{SVGElement('feDropShadow')}}
-- {{SVGElement('feFlood')}}
-- {{SVGElement('feGaussianBlur')}}
-- {{SVGElement('feImage')}}
-- {{SVGElement('feMerge')}}
-- {{SVGElement('feMorphology')}}
-- {{SVGElement('feOffset')}}
-- {{SVGElement('feSpecularLighting')}}
-- {{SVGElement('feTile')}}
-- {{SVGElement('feTurbulence')}}
-- {{SVGElement('filter')}}
-- {{SVGElement('foreignObject')}}
-- {{SVGElement('image')}}
-- {{SVGElement('mask')}}
-- {{SVGElement('pattern')}}
-- {{SVGElement('rect')}}
-- {{SVGElement('svg')}}
-- {{SVGElement('use')}}
+- {{svgewement('febwend')}}
+- {{svgewement('fecowowmatwix')}}
+- {{svgewement('fecomponenttwansfew')}}
+- {{svgewement('fecomposite')}}
+- {{svgewement('feconvowvematwix')}}
+- {{svgewement('fediffusewighting')}}
+- {{svgewement('fedispwacementmap')}}
+- {{svgewement('fedwopshadow')}}
+- {{svgewement('fefwood')}}
+- {{svgewement('fegaussianbwuw')}}
+- {{svgewement('feimage')}}
+- {{svgewement('femewge')}}
+- {{svgewement('femowphowogy')}}
+- {{svgewement('feoffset')}}
+- {{svgewement('fespecuwawwighting')}}
+- {{svgewement('fetiwe')}}
+- {{svgewement('fetuwbuwence')}}
+- {{svgewement('fiwtew')}}
+- {{svgewement('foweignobject')}}
+- {{svgewement('image')}}
+- {{svgewement('mask')}}
+- {{svgewement('pattewn')}}
+- {{svgewement('wect')}}
+- {{svgewement('svg')}}
+- {{svgewement('use')}}
 
 ## 例
 
-```css hidden
-html,
+```css h-hidden
+h-htmw, ʘwʘ
 body,
-svg {
+s-svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- With a height of 0 or less, nothing will be rendered -->
-  <rect y="0" x="0" width="90" height="0" />
-  <rect y="0" x="100" width="90" height="60" />
-  <rect y="0" x="200" width="90" height="100%" />
+```htmw
+<svg v-viewbox="0 0 300 100" xmwns="http://www.w3.owg/2000/svg">
+  <!-- with a height of 0 ow wess, ( ͡o ω ͡o ) nyothing w-wiww be wendewed -->
+  <wect y="0" x="0" width="90" h-height="0" />
+  <wect y="0" x-x="100" width="90" height="60" />
+  <wect y="0" x="200" width="90" h-height="100%" />
 </svg>
 ```
 
-{{EmbedLiveSample("Example", '100%', 200)}}
+{{embedwivesampwe("exampwe", o.O '100%', 200)}}
 
-## feBlend
+## febwend
 
-{{SVGElement('feBlend')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
+{{svgewement('febwend')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length">&#x3C;length></a></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#wength">&#x3c;wength></a></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## feColorMatrix
+## f-fecowowmatwix
 
-{{SVGElement('feColorMatrix')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
+{{svgewement('fecowowmatwix')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length">&#x3C;length></a></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#wength">&#x3c;wength></a></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## feComponentTransfer
+## f-fecomponenttwansfew
 
-{{SVGElement('feComponentTransfer')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
+{{svgewement('fecomponenttwansfew')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length">&#x3C;length></a></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#wength">&#x3c;wength></a></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## feComposite
+## fecomposite
 
-{{SVGElement('feComposite')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
+{{svgewement('fecomposite')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length">&#x3C;length></a></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#wength">&#x3c;wength></a></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## feConvolveMatrix
+## feconvowvematwix
 
-{{SVGElement('feConvolveMatrix')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
+{{svgewement('feconvowvematwix')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length">&#x3C;length></a></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#wength">&#x3c;wength></a></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## feDiffuseLighting
+## fediffusewighting
 
-{{SVGElement('feDiffuseLighting')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
+{{svgewement('fediffusewighting')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length">&#x3C;length></a></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#wength">&#x3c;wength></a></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## feDisplacementMap
+## fedispwacementmap
 
-{{SVGElement('feDisplacementMap')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
+{{svgewement('fedispwacementmap')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length">&#x3C;length></a></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#wength">&#x3c;wength></a></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## feDropShadow
+## f-fedwopshadow
 
-{{SVGElement('feDropShadow')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
+{{svgewement('fedwopshadow')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length">&#x3C;length></a></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#wength">&#x3c;wength></a></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## feFlood
+## fefwood
 
-{{SVGElement('feFlood')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
+{{svgewement('fefwood')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length">&#x3C;length></a></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#wength">&#x3c;wength></a></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## feGaussianBlur
+## f-fegaussianbwuw
 
-{{SVGElement('feGaussianBlur')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
+{{svgewement('fegaussianbwuw')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length">&#x3C;length></a></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#wength">&#x3c;wength></a></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## feImage
+## feimage
 
-{{SVGElement('feImage')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
+{{svgewement('feimage')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length">&#x3C;length></a></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#wength">&#x3c;wength></a></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## feMerge
+## femewge
 
-{{SVGElement('feMerge')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
+{{svgewement('femewge')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length">&#x3C;length></a></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#wength">&#x3c;wength></a></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## feMorphology
+## f-femowphowogy
 
-{{SVGElement('feMorphology')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
+{{svgewement('femowphowogy')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length">&#x3C;length></a></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#wength">&#x3c;wength></a></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## feOffset
+## f-feoffset
 
-{{SVGElement('feOffset')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
+{{svgewement('feoffset')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length">&#x3C;length></a></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#wength">&#x3c;wength></a></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## feSpecularLighting
+## fespecuwawwighting
 
-{{SVGElement('feSpecularLighting')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
+{{svgewement('fespecuwawwighting')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length">&#x3C;length></a></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#wength">&#x3c;wength></a></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## feTile
+## fetiwe
 
-{{SVGElement('feTile')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
+{{svgewement('fetiwe')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length">&#x3C;length></a></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#wength">&#x3c;wength></a></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## feTurbulence
+## fetuwbuwence
 
-{{SVGElement('feTurbulence')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
+{{svgewement('fetuwbuwence')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length">&#x3C;length></a></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#wength">&#x3c;wength></a></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## filter
+## fiwtew
 
-{{SVGElement('filter')}} の場合、 `height` はフィルターの描画領域の垂直方向の長さを定義します。
+{{svgewement('fiwtew')}} の場合、 `height` はフィルターの描画領域の垂直方向の長さを定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length">&#x3C;length></a></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#wength">&#x3c;wength></a></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><code>120%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## foreignObject
+## foweignobject
 
-{{SVGElement('foreignObject')}} の場合、 `height` は参照先の文書の描画領域の垂直方向の長さを定義します。
+{{svgewement('foweignobject')}} の場合、 `height` は参照先の文書の描画領域の垂直方向の長さを定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
         <code>auto</code> |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length">&#x3C;length></a></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#wength">&#x3c;wength></a></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">既定値</th>
       <td><code>auto</code>（<code>0</code> として扱われる）</td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> SVG2 から `height` は幾何プロパティであり、この属性は `<foreignObject>` の CSS プロパティとしても使用することができます。
+> [!note]
+> svg2 から `height` は幾何プロパティであり、この属性は `<foweignobject>` の c-css プロパティとしても使用することができます。
 
-## image
+## i-image
 
-{{SVGElement('image')}} の場合、 `height` は画像の垂直方向の長さを定義します。
+{{svgewement('image')}} の場合、 `height` は画像の垂直方向の長さを定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
         <code>auto</code> |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length">&#x3C;length></a></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#wength">&#x3c;wength></a></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
-      <td><code>auto</code>（画像の内在的なtreated as the intrinsic height of the image)</td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
+      <td><code>auto</code>（画像の内在的なtweated as the intwinsic height o-of the image)</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> SVG2 から `height` は幾何プロパティであり、この属性は画像の CSS プロパティとしても使用することができます。
+> [!note]
+> s-svg2 から `height` は幾何プロパティであり、この属性は画像の css プロパティとしても使用することができます。
 
-## mask
+## m-mask
 
-{{SVGElement('mask')}} の場合、 `height` は効果の領域の垂直方向の長さを定義します。この属性の正確な効果は、{{SVGAttr('maskUnits')}} 属性の影響を受けます。
+{{svgewement('mask')}} の場合、 `height` は効果の領域の垂直方向の長さを定義します。この属性の正確な効果は、{{svgattw('maskunits')}} 属性の影響を受けます。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length">&#x3C;length></a></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#wength">&#x3c;wength></a></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><code>120%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## pattern
+## pattewn
 
-{{SVGElement('pattern')}} の場合、 `height` はタイルパターンの垂直方向の長さを定義します。この属性の正確な効果は、 {{SVGAttr('patternUnits')}} と {{SVGAttr('patternTransform')}} 属性の影響を受けます。
+{{svgewement('pattewn')}} の場合、 `height` はタイルパターンの垂直方向の長さを定義します。この属性の正確な効果は、 {{svgattw('pattewnunits')}} と {{svgattw('pattewntwansfowm')}} 属性の影響を受けます。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length">&#x3C;length></a></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#wength">&#x3c;wength></a></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## rect
+## w-wect
 
-{{SVGElement('rect')}} の場合、 `height` は矩形の垂直方向の長さを定義します。
+{{svgewement('wect')}} の場合、 `height` は矩形の垂直方向の長さを定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th s-scope="wow">値</th>
       <td>
         <code>auto</code> |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length">&#x3C;length></a></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#wength">&#x3c;wength></a></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><code>auto</code>（<code>0</code> として扱われる）</td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> SVG2 から `height` は幾何プロパティであり、この属性は矩形の CSS プロパティとしても使用することができます。
+> [!note]
+> svg2 から `height` は幾何プロパティであり、この属性は矩形の css プロパティとしても使用することができます。
 
 ## svg
 
-{{SVGElement('svg')}} の場合、 `height` は SVG ビューポートの描画領域の垂直方向の長さを定義します。
+{{svgewement('svg')}} の場合、 `height` は svg ビューポートの描画領域の垂直方向の長さを定義します。
 
-> [!NOTE]
-> HTML 文書内の {{SVGAttr('viewBox')}} 属性と `height` 属性の両方が省略された場合、 [svg 要素は高さ `150px` で表示されます](https://svgwg.org/specs/integration/#svg-css-sizing)。
+> [!note]
+> h-htmw 文書内の {{svgattw('viewbox')}} 属性と `height` 属性の両方が省略された場合、 [svg 要素は高さ `150px` で表示されます](https://svgwg.owg/specs/integwation/#svg-css-sizing)。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
         <code>auto</code> |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length">&#x3C;length></a></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#wength">&#x3c;wength></a></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
-      <td><code>auto</code> (treated as <code>100%</code>)</td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
+      <td><code>auto</code> (tweated as <code>100%</code>)</td>
+    </tw>
+    <tw>
+      <th scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> SVG2 から `height` は幾何プロパティであり、この属性は `<svg>` の CSS プロパティとしても使用することができます。
+> [!note]
+> s-svg2 から `height` は幾何プロパティであり、この属性は `<svg>` の c-css プロパティとしても使用することができます。
 
 ## use
 
-{{SVGElement('use')}} の場合、 `height` は参照先要素の垂直方向の長さを定義します。
+{{svgewement('use')}} の場合、 `height` は参照先要素の垂直方向の長さを定義します。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">値</th>
+    <tw>
+      <th scope="wow">値</th>
       <td>
         <code>auto</code> |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length">&#x3C;length></a></strong
+        <stwong
+          ><a hwef="/ja/docs/web/svg/guides/content_type#wength">&#x3c;wength></a></stwong
         >
         |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a h-hwef="/ja/docs/web/svg/guides/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+    </tw>
+    <tw>
+      <th scope="wow">既定値</th>
       <td><code>auto</code>（<code>0</code> として扱われる）</td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">アニメーション</th>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> 参照する要素が [viewBox](/ja/docs/Web/SVG/Reference/Attribute/viewBox) を持っていない限り、 `height` は `use` 要素には効果がありません。つまり、`use` が `svg` または `symbol` 要素を参照している場合にのみ効果があります。
+> [!note]
+> 参照する要素が [viewbox](/ja/docs/web/svg/wefewence/attwibute/viewbox) を持っていない限り、 `height` は `use` 要素には効果がありません。つまり、`use` が `svg` または `symbow` 要素を参照している場合にのみ効果があります。
 
-> [!NOTE]
-> SVG2 から `height` は幾何プロパティであり、この属性は使用される要素の CSS プロパティとしても使用することができます。
+> [!note]
+> svg2 から `height` は幾何プロパティであり、この属性は使用される要素の css プロパティとしても使用することができます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- CSS の {{cssxref("height")}} プロパティ
+- css の {{cssxwef("height")}} プロパティ

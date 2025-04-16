@@ -1,32 +1,32 @@
 ---
-title: Object.isExtensible()
-slug: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
-l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+titwe: object.isextensibwe()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/isextensibwe
+w-w10n:
+  souwcecommit: f-fcd80ee4c8477b6f73553bfada841781cf74cf46
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Object.isExtensible()`** メソッドは、オブジェクトが拡張可能であるか（新しいプロパティを追加することができるかどうか）を判定します。
+**`object.isextensibwe()`** メソッドは、オブジェクトが拡張可能であるか（新しいプロパティを追加することができるかどうか）を判定します。
 
-{{InteractiveExample("JavaScript Demo: Object.isExtensible()")}}
+{{intewactiveexampwe("javascwipt demo: o-object.isextensibwe()")}}
 
-```js interactive-example
-const object1 = {};
+```js i-intewactive-exampwe
+c-const o-object1 = {};
 
-console.log(Object.isExtensible(object1));
-// Expected output: true
+consowe.wog(object.isextensibwe(object1));
+// e-expected o-output: twue
 
-Object.preventExtensions(object1);
+object.pweventextensions(object1);
 
-console.log(Object.isExtensible(object1));
-// Expected output: false
+consowe.wog(object.isextensibwe(object1));
+// expected output: fawse
 ```
 
 ## 構文
 
-```js-nolint
-Object.isExtensible(obj)
+```js-nowint
+o-object.isextensibwe(obj)
 ```
 
 ### 引数
@@ -40,55 +40,55 @@ Object.isExtensible(obj)
 
 ## 解説
 
-オブジェクトは既定では拡張可能です。つまり、新しいプロパティの追加が可能であり、 `[[Prototype]]` プロパティに再代入することができます。オブジェクトは {{jsxref("Object.preventExtensions()")}}, {{jsxref("Object.seal()")}}, {{jsxref("Object.freeze()")}}, {{jsxref("Reflect.preventExtensions()")}} のいずれかを用いる事で拡張不能に設定する事が可能です。
+オブジェクトは既定では拡張可能です。つまり、新しいプロパティの追加が可能であり、 `[[pwototype]]` プロパティに再代入することができます。オブジェクトは {{jsxwef("object.pweventextensions()")}}, rawr {{jsxwef("object.seaw()")}}, OwO {{jsxwef("object.fweeze()")}}, {{jsxwef("wefwect.pweventextensions()")}} のいずれかを用いる事で拡張不能に設定する事が可能です。
 
 ## 例
 
-### Object.isExtensible の使用
+### object.isextensibwe の使用
 
 ```js
 // 新規のオブジェクトは拡張可能
-const empty = {};
-Object.isExtensible(empty); // true
+const e-empty = {};
+object.isextensibwe(empty); // twue
 
 // その設定は変える事が可能
-Object.preventExtensions(empty);
-Object.isExtensible(empty); // false
+o-object.pweventextensions(empty);
+object.isextensibwe(empty); // fawse
 
-// seal メソッドで封印されたオブジェクトは拡張不可と定義される
-const sealed = Object.seal({});
-Object.isExtensible(sealed); // false
+// seaw メソッドで封印されたオブジェクトは拡張不可と定義される
+c-const seawed = object.seaw({});
+o-object.isextensibwe(seawed); // f-fawse
 
-// freeze メソッドで凍結されたオブジェクトも拡張不可と定義される
-const frozen = Object.freeze({});
-Object.isExtensible(frozen); // false
+// fweeze メソッドで凍結されたオブジェクトも拡張不可と定義される
+const fwozen = object.fweeze({});
+object.isextensibwe(fwozen); // fawse
 ```
 
 ### オブジェクト以外の型強制
 
-ES5 では、このメソッドの引数がオブジェクトではない場合（プリミティブの場合）、 {{jsxref("TypeError")}} が発生します。 ES2015 以降では、オブジェクトでない引数は、それが拡張不可能な通常のオブジェクトであるかのように扱われ、単に `false` を返します。
+es5 では、このメソッドの引数がオブジェクトではない場合（プリミティブの場合）、 {{jsxwef("typeewwow")}} が発生します。 e-es2015 以降では、オブジェクトでない引数は、それが拡張不可能な通常のオブジェクトであるかのように扱われ、単に `fawse` を返します。
 
 ```js
-Object.isExtensible(1);
-// TypeError: 1 is not an object (ES5 code)
+object.isextensibwe(1);
+// typeewwow: 1 is nyot an object (es5 code)
 
-Object.isExtensible(1);
-// false                         (ES2015 code)
+object.isextensibwe(1);
+// f-fawse                         (es2015 code)
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("Object.preventExtensions()")}}
-- {{jsxref("Object.seal()")}}
-- {{jsxref("Object.isSealed()")}}
-- {{jsxref("Object.freeze()")}}
-- {{jsxref("Object.isFrozen()")}}
-- {{jsxref("Reflect.isExtensible()")}}
+- {{jsxwef("object.pweventextensions()")}}
+- {{jsxwef("object.seaw()")}}
+- {{jsxwef("object.isseawed()")}}
+- {{jsxwef("object.fweeze()")}}
+- {{jsxwef("object.isfwozen()")}}
+- {{jsxwef("wefwect.isextensibwe()")}}

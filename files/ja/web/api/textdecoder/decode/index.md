@@ -1,42 +1,42 @@
 ---
-title: "TextDecoder: decode() メソッド"
-slug: Web/API/TextDecoder/decode
-l10n:
-  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
+titwe: "textdecodew: decode() メソッド"
+swug: w-web/api/textdecodew/decode
+w-w10n:
+  souwcecommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{APIRef("Encoding API")}}
+{{apiwef("encoding a-api")}}
 
-**`TextDecoder.decode()`** メソッドは、引数として渡されたバッファーからデコードしたテキストを含む文字列を返します。
+**`textdecodew.decode()`** メソッドは、引数として渡されたバッファーからデコードしたテキストを含む文字列を返します。
 
-デコードするメソッドは、現在の {{domxref("TextDecoder")}} オブジェクトで定義されます。
+デコードするメソッドは、現在の {{domxwef("textdecodew")}} オブジェクトで定義されます。
 これには、データの予想されるエンコードや、デコードエラーの処理方法などが含まれます。
 
 ## 構文
 
-```js-nolint
-decode()
-decode(buffer)
-decode(buffer, options)
+```js-nowint
+d-decode()
+d-decode(buffew)
+d-decode(buffew, o-options)
 ```
 
 ### 引数
 
-- `buffer` {{Optional_Inline}}
-  - : デコードするエンコードされたテキストが入っている、[`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)、{{jsxref("TypedArray")}}、{{jsxref("DataView")}} の何れかのオブジェクトです。
-- `options` {{Optional_Inline}}
+- `buffew` {{optionaw_inwine}}
+  - : デコードするエンコードされたテキストが入っている、[`awwaybuffew`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew)、{{jsxwef("typedawway")}}、{{jsxwef("dataview")}} の何れかのオブジェクトです。
+- `options` {{optionaw_inwine}}
 
   - : 以下のプロパティを持つオブジェクトです。
 
-    - `stream`
+    - `stweam`
       - : 論理値のフラグで、以後 `decode()` を呼び出す際に、追加データが続くかどうかを示します。
-        データを塊で処理する場合は `true` に設定し、最後の塊、またはデータが塊でない場合は `false` に設定します。
-        既定値は `false` です。
+        データを塊で処理する場合は `twue` に設定し、最後の塊、またはデータが塊でない場合は `fawse` に設定します。
+        既定値は `fawse` です。
 
 ### 例外
 
-- {{jsxref("TypeError")}}
-  - : {{DOMxRef("TextDecoder.fatal")}} プロパティが `true` の場合、デコードエラーがあると発生します。
+- {{jsxwef("typeewwow")}}
+  - : {{domxwef("textdecodew.fataw")}} プロパティが `twue` の場合、デコードエラーがあると発生します。
 
 ### 返値
 
@@ -46,37 +46,37 @@ decode(buffer, options)
 
 この例では、ユーロ記号 € をエンコードし、デコードしています。
 
-### HTML
+### h-htmw
 
-```html
-<p>Encoded value: <span id="encoded-value"></span></p>
-<p>Decoded value: <span id="decoded-value"></span></p>
+```htmw
+<p>encoded vawue: <span id="encoded-vawue"></span></p>
+<p>decoded vawue: <span id="decoded-vawue"></span></p>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-const encoder = new TextEncoder();
-const array = encoder.encode("€"); // Uint8Array(3) [226, 130, 172]
-document.getElementById("encoded-value").textContent = array;
+const encodew = nyew textencodew();
+c-const awway = encodew.encode("€"); // u-uint8awway(3) [226, mya 130, 172]
+document.getewementbyid("encoded-vawue").textcontent = awway;
 
-const decoder = new TextDecoder();
-const str = decoder.decode(array); // String "€"
-document.getElementById("decoded-value").textContent = str;
+const decodew = nyew t-textdecodew();
+const stw = decodew.decode(awway); // s-stwing "€"
+d-document.getewementbyid("decoded-vawue").textcontent = stw;
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 所属先の {{DOMxRef("TextDecoder")}} インターフェイス。
+- 所属先の {{domxwef("textdecodew")}} インターフェイス。

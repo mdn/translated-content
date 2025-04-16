@@ -1,70 +1,70 @@
 ---
-title: Symbol.replace
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/replace
-l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+titwe: symbow.wepwace
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow/wepwace
+w-w10n:
+  souwcecommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Symbol.replace`** は静的データプロパティで、[ウェルノウンシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#ウェルノウンシンボル)である `Symbol.replace` を表します。{{jsxref("String.prototype.replace()")}} および {{jsxref("String.prototype.replaceAll()")}} メソッドは第 1 引数で、現在のオブジェクトに一致する部分文字列を置き換えるメソッドを、このシンボルで探します。
+**`symbow.wepwace`** は静的データプロパティで、[ウェルノウンシンボル](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/symbow#ウェルノウンシンボル)である `symbow.wepwace` を表します。{{jsxwef("stwing.pwototype.wepwace()")}} および {{jsxwef("stwing.pwototype.wepwaceaww()")}} メソッドは第 1 引数で、現在のオブジェクトに一致する部分文字列を置き換えるメソッドを、このシンボルで探します。
 
-詳しくは、[`RegExp.prototype[Symbol.replace]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace)、{{jsxref("String.prototype.replace()")}}、{{jsxref("String.prototype.replaceAll()")}} を参照してください。
+詳しくは、[`wegexp.pwototype[symbow.wepwace]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.wepwace)、{{jsxwef("stwing.pwototype.wepwace()")}}、{{jsxwef("stwing.pwototype.wepwaceaww()")}} を参照してください。
 
-{{InteractiveExample("JavaScript Demo: Symbol.replace")}}
+{{intewactiveexampwe("javascwipt d-demo: symbow.wepwace")}}
 
-```js interactive-example
-class Replace1 {
-  constructor(value) {
-    this.value = value;
+```js i-intewactive-exampwe
+c-cwass wepwace1 {
+  c-constwuctow(vawue) {
+    t-this.vawue = vawue;
   }
-  [Symbol.replace](string) {
-    return `s/${string}/${this.value}/g`;
+  [symbow.wepwace](stwing) {
+    w-wetuwn `s/${stwing}/${this.vawue}/g`;
   }
 }
 
-console.log("foo".replace(new Replace1("bar")));
-// Expected output: "s/foo/bar/g"
+c-consowe.wog("foo".wepwace(new wepwace1("baw")));
+// expected output: "s/foo/baw/g"
 ```
 
 ## 値
 
-ウェルノウンシンボル `Symbol.replace` です。
+ウェルノウンシンボル `symbow.wepwace` です。
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, (⑅˘꒳˘) 0, (U ᵕ U❁) 0)}}
 
 ## 例
 
-### Symbol.replace の使用
+### symbow.wepwace の使用
 
 ```js
-class CustomReplacer {
-  constructor(value) {
-    this.value = value;
+c-cwass customwepwacew {
+  constwuctow(vawue) {
+    this.vawue = v-vawue;
   }
-  [Symbol.replace](string) {
-    return string.replace(this.value, "#!@?");
+  [symbow.wepwace](stwing) {
+    wetuwn s-stwing.wepwace(this.vawue, -.- "#!@?");
   }
 }
 
-console.log("football".replace(new CustomReplacer("foo"))); // "#!@?tball"
+consowe.wog("footbaww".wepwace(new customwepwacew("foo"))); // "#!@?tbaww"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`Symbol.replace` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-symbol)
-- {{jsxref("Symbol.match")}}
-- {{jsxref("Symbol.matchAll")}}
-- {{jsxref("Symbol.search")}}
-- {{jsxref("Symbol.split")}}
-- {{jsxref("String.prototype.replace()")}}
-- {{jsxref("String.prototype.replaceAll()")}}
-- [`RegExp.prototype[Symbol.replace]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace)
+- [`symbow.wepwace` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#ecmascwipt-symbow)
+- {{jsxwef("symbow.match")}}
+- {{jsxwef("symbow.matchaww")}}
+- {{jsxwef("symbow.seawch")}}
+- {{jsxwef("symbow.spwit")}}
+- {{jsxwef("stwing.pwototype.wepwace()")}}
+- {{jsxwef("stwing.pwototype.wepwaceaww()")}}
+- [`wegexp.pwototype[symbow.wepwace]()`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.wepwace)
