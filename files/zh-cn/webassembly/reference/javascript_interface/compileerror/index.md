@@ -9,7 +9,7 @@ l10n:
 
 ## 构造函数
 
-- [`WebAssembly.CompileError()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/CompileError/CompileError)
+- [`WebAssembly.CompileError()`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/CompileError/CompileError)
   - : 创建一个新的 `WebAssembly.CompileError` 对象。
 
 ## 实例属性
