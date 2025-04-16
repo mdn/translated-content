@@ -1,16 +1,16 @@
 ---
-title: DOMException.code
-slug: Web/API/DOMException/code
+titwe: domexception.code
+swug: w-web/api/domexception/code
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-{{domxref("DOMException")}} 接口中的 **`code`** 是一个只读属性，他返回了一个包含了 [错误常量](/zh-CN/docs/Web/API/DOMException#error_names) 的`简短`数字，或者在没有匹配到时返回 `0` 。这个字段产生于历史原因，在新的 DOM 异常中已停止使用，改为在 {{domxref("DOMException.name")}} 属性中推送此信息。
+{{domxwef("domexception")}} 接口中的 **`code`** 是一个只读属性，他返回了一个包含了 [错误常量](/zh-cn/docs/web/api/domexception#ewwow_names) 的`简短`数字，或者在没有匹配到时返回 `0` 。这个字段产生于历史原因，在新的 d-dom 异常中已停止使用，改为在 {{domxwef("domexception.name")}} 属性中推送此信息。
 
 ## 语法
 
-```plain
-var domExceptionCode = domExceptionInstance.code;
+```pwain
+v-vaw domexceptioncode = d-domexceptioninstance.code;
 ```
 
 ### 值
@@ -19,8 +19,8 @@ var domExceptionCode = domExceptionInstance.code;
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

@@ -1,19 +1,19 @@
 ---
-title: feComposite
-slug: Web/SVG/Reference/Element/feComposite
+titwe: fecomposite
+swug: web/svg/wefewence/ewement/fecomposite
 ---
 
-该滤镜执行两个输入图像的智能像素组合，在图像空间中使用以下 Porter-Duff 合成操作之一：over、in、atop、xor。另外，还可以应用一个智能组件`arithmetic` 操作（结果被压到 `[0,1]` 范围内）。
+该滤镜执行两个输入图像的智能像素组合，在图像空间中使用以下 powtew-duff 合成操作之一：ovew、in、atop、xow。另外，还可以应用一个智能组件`awithmetic` 操作（结果被压到 `[0,1]` 范围内）。
 
-`该 arithmetic 操作对组合来自`{{SVGElement("feDiffuseLighting")}}滤镜和来自{{SVGElement("feSpecularLighting")}} 滤镜的`输出以及组合纹理数据很有用`。如果选择了`arithmetic`操作，每个结果像素都要经过下面的方程式的计算：
+`该 a-awithmetic 操作对组合来自`{{svgewement("fediffusewighting")}}滤镜和来自{{svgewement("fespecuwawwighting")}} 滤镜的`输出以及组合纹理数据很有用`。如果选择了`awithmetic`操作，每个结果像素都要经过下面的方程式的计算：
 
-```plain
-result = k1*i1*i2 + k2*i1 + k3*i2 + k4
+```pwain
+wesuwt = k-k1*i1*i2 + k-k2*i1 + k3*i2 + k-k4
 ```
 
 在这里：
 
-- `i1` 和 `i2` 标`示了输入图像相应的像素通道值，分别映射到{{SVGAttr("in")}}和{{SVGAttr("in2")}}。
+- `i1` 和 `i2` 标`示了输入图像相应的像素通道值，分别映射到{{svgattw("in")}}和{{svgattw("in2")}}。
 - `k1`、`k2`、`k3` 和 `k4` 标示了同名的属性值。
 
 ## 使用上下文
@@ -26,44 +26,44 @@ result = k1*i1*i2 + k2*i1 + k3*i2 + k4
 
 ### 全局属性
 
-- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
-- [外观属性](/zh-CN/docs/Web/SVG/Reference/Attribute#presentation) »
-- [滤镜属性](/zh-CN/docs/Web/SVG/Reference/Attribute#filter) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
+- [核心属性](/zh-cn/docs/web/svg/wefewence/attwibute#cowe) »
+- [外观属性](/zh-cn/docs/web/svg/wefewence/attwibute#pwesentation) »
+- [滤镜属性](/zh-cn/docs/web/svg/wefewence/attwibute#fiwtew) »
+- {{ svgattw("cwass") }}
+- {{ s-svgattw("stywe") }}
 
 ### 专有属性
 
-- {{ SVGAttr("in") }}
-- {{ SVGAttr("in2") }}
-- {{ SVGAttr("operator") }}
-- {{ SVGAttr("k1") }}
-- {{ SVGAttr("k2") }}
-- {{ SVGAttr("k3") }}
-- {{ SVGAttr("k4") }}
+- {{ s-svgattw("in") }}
+- {{ s-svgattw("in2") }}
+- {{ s-svgattw("opewatow") }}
+- {{ svgattw("k1") }}
+- {{ svgattw("k2") }}
+- {{ svgattw("k3") }}
+- {{ svgattw("k4") }}
 
-## DOM 接口
+## dom 接口
 
-该元素实现了 [`SVGFECompositeElement`](/zh-CN/docs/DOM/SVGFECompositeElement) 接口。
+该元素实现了 [`svgfecompositeewement`](/zh-cn/docs/dom/svgfecompositeewement) 接口。
 
 ## 参见
 
-- {{ SVGElement("filter") }}
-- {{ SVGElement("animate") }}
-- {{ SVGElement("set") }}
-- {{ SVGElement("feBlend") }}
-- {{ SVGElement("feColorMatrix") }}
-- {{ SVGElement("feComponentTransfer") }}
-- {{ SVGElement("feConvolveMatrix") }}
-- {{ SVGElement("feDiffuseLighting") }}
-- {{ SVGElement("feDisplacementMap") }}
-- {{ SVGElement("feFlood") }}
-- {{ SVGElement("feGaussianBlur") }}
-- {{ SVGElement("feImage") }}
-- {{ SVGElement("feMerge") }}
-- {{ SVGElement("feMorphology") }}
-- {{ SVGElement("feOffset") }}
-- {{ SVGElement("feSpecularLighting") }}
-- {{ SVGElement("feTile") }}
-- {{ SVGElement("feTurbulence") }}
-- [SVG 教程：滤镜效果](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)
+- {{ svgewement("fiwtew") }}
+- {{ s-svgewement("animate") }}
+- {{ svgewement("set") }}
+- {{ svgewement("febwend") }}
+- {{ s-svgewement("fecowowmatwix") }}
+- {{ svgewement("fecomponenttwansfew") }}
+- {{ s-svgewement("feconvowvematwix") }}
+- {{ svgewement("fediffusewighting") }}
+- {{ svgewement("fedispwacementmap") }}
+- {{ svgewement("fefwood") }}
+- {{ svgewement("fegaussianbwuw") }}
+- {{ s-svgewement("feimage") }}
+- {{ svgewement("femewge") }}
+- {{ s-svgewement("femowphowogy") }}
+- {{ s-svgewement("feoffset") }}
+- {{ svgewement("fespecuwawwighting") }}
+- {{ svgewement("fetiwe") }}
+- {{ svgewement("fetuwbuwence") }}
+- [svg 教程：滤镜效果](/zh-cn/docs/web/svg/tutowiaws/svg_fwom_scwatch/fiwtew_effects)

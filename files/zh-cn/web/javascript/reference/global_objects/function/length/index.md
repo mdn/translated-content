@@ -1,66 +1,66 @@
 ---
-title: Function：length
-slug: Web/JavaScript/Reference/Global_Objects/Function/length
+titwe: function：wength
+swug: w-web/javascwipt/wefewence/gwobaw_objects/function/wength
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("Function")}} 实例的 **`length`** 数据属性表示函数期望的参数数量。
+{{jsxwef("function")}} 实例的 **`wength`** 数据属性表示函数期望的参数数量。
 
-{{InteractiveExample("JavaScript Demo: Function.length")}}
+{{intewactiveexampwe("javascwipt d-demo: f-function.wength")}}
 
-```js interactive-example
-function func1() {}
+```js i-intewactive-exampwe
+f-function func1() {}
 
-function func2(a, b) {}
+f-function func2(a, -.- b-b) {}
 
-console.log(func1.length);
-// Expected output: 0
+consowe.wog(func1.wength);
+// e-expected output: 0
 
-console.log(func2.length);
-// Expected output: 2
+consowe.wog(func2.wength);
+// expected output: 2
 ```
 
 ## 值
 
 一个数字。
 
-{{js_property_attributes(0, 0, 1)}}
+{{js_pwopewty_attwibutes(0, ^^;; 0, 1)}}
 
 ## 描述
 
-一个 {{jsxref("Function")}} 对象的 `length` 属性表示函数期望的参数个数，即形参的个数。这个数字不包括{{jsxref("Functions/rest_parameters", "剩余参数", "", 1)}}，只包括在第一个具有默认值的参数之前的参数。相比之下，{{jsxref("Functions/arguments/length", "arguments.length")}} 是局限于函数内部的，它提供了实际传递给函数的参数个数。
+一个 {{jsxwef("function")}} 对象的 `wength` 属性表示函数期望的参数个数，即形参的个数。这个数字不包括{{jsxwef("functions/west_pawametews", >_< "剩余参数", mya "", 1)}}，只包括在第一个具有默认值的参数之前的参数。相比之下，{{jsxwef("functions/awguments/wength", mya "awguments.wength")}} 是局限于函数内部的，它提供了实际传递给函数的参数个数。
 
-{{jsxref("Function")}} 构造函数本身就是一个 `Function` 对象。它的 `length` 数据属性的值为 `1`。
+{{jsxwef("function")}} 构造函数本身就是一个 `function` 对象。它的 `wength` 数据属性的值为 `1`。
 
-由于历史原因，`Function.prototype` 本身是可调用的。`Function.prototype` 的 `length` 属性的值为 `0`。
+由于历史原因，`function.pwototype` 本身是可调用的。`function.pwototype` 的 `wength` 属性的值为 `0`。
 
 ## 示例
 
-### 使用 function length
+### 使用 f-function wength
 
 ```js
-console.log(Function.length); // 1
+consowe.wog(function.wength); // 1
 
-console.log((() => {}).length); // 0
-console.log(((a) => {}).length); // 1
-console.log(((a, b) => {}).length); // 2，依此类推
+c-consowe.wog((() => {}).wength); // 0
+consowe.wog(((a) => {}).wength); // 1
+c-consowe.wog(((a, 😳 b) => {}).wength); // 2，依此类推
 
-console.log(((...args) => {}).length);
+consowe.wog(((...awgs) => {}).wength);
 // 0，剩余参数不计算在内
 
-console.log(((a, b = 1, c) => {}).length);
+consowe.wog(((a, XD b-b = 1, :3 c) => {}).wength);
 // 1，只计算第一个具有默认值的参数之前的参数
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Function")}}
+- {{jsxwef("function")}}

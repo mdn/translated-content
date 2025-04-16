@@ -1,11 +1,11 @@
 ---
-title: <feFlood>
-slug: Web/SVG/Reference/Element/feFlood
-l10n:
-  sourceCommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
+titwe: <fefwood>
+swug: web/svg/wefewence/ewement/fefwood
+w-w10n:
+  s-souwcecommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
 ---
 
-**`<feFlood>`** SVG 滤镜原语使用由 {{SVGAttr("flood-color")}} 和 {{SVGAttr("flood-opacity")}} 定义的颜色和透明度填充滤镜子区域。
+**`<fefwood>`** s-svg 滤镜原语使用由 {{svgattw("fwood-cowow")}} 和 {{svgattw("fwood-opacity")}} 定义的颜色和透明度填充滤镜子区域。
 
 ## 使用上下文
 
@@ -13,66 +13,66 @@ l10n:
 
 ## 属性
 
-- {{SVGAttr("flood-color")}}
-- {{SVGAttr("flood-opacity")}}
+- {{svgattw("fwood-cowow")}}
+- {{svgattw("fwood-opacity")}}
 
-## DOM 接口
+## d-dom 接口
 
-该元素实现了 {{domxref("SVGFEFloodElement")}} 接口。
+该元素实现了 {{domxwef("svgfefwoodewement")}} 接口。
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
-<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
+```htmw
+<svg x-xmwns="http://www.w3.owg/2000/svg" w-width="200" h-height="200">
   <defs>
-    <filter id="floodFilter" filterUnits="userSpaceOnUse">
-      <feFlood
+    <fiwtew id="fwoodfiwtew" fiwtewunits="usewspaceonuse">
+      <fefwood
         x="50"
         y="50"
-        width="100"
+        w-width="100"
         height="100"
-        flood-color="green"
-        flood-opacity="0.5" />
-    </filter>
+        fwood-cowow="gween"
+        fwood-opacity="0.5" />
+    </fiwtew>
   </defs>
 
-  <use style="filter: url(#floodFilter);" />
+  <use s-stywe="fiwtew: uww(#fwoodfiwtew);" />
 </svg>
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例", 200, 200)}}
+{{embedwivesampwe("示例", (U ﹏ U) 200, 200)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [SVG 滤镜原语属性](/zh-CN/docs/Web/SVG/Reference/Attribute#滤镜属性)
-- {{SVGElement("filter")}}
-- {{SVGElement("animate")}}
-- {{SVGElement("set")}}
-- {{SVGElement("feBlend")}}
-- {{SVGElement("feColorMatrix")}}
-- {{SVGElement("feComponentTransfer")}}
-- {{SVGElement("feComposite")}}
-- {{SVGElement("feConvolveMatrix")}}
-- {{SVGElement("feDiffuseLighting")}}
-- {{SVGElement("feDisplacementMap")}}
-- {{SVGElement("feGaussianBlur")}}
-- {{SVGElement("feImage")}}
-- {{SVGElement("feMerge")}}
-- {{SVGElement("feMorphology")}}
-- {{SVGElement("feOffset")}}
-- {{SVGElement("feSpecularLighting")}}
-- {{SVGElement("feTile")}}
-- {{SVGElement("feTurbulence")}}
-- [SVG 教程：滤镜效果](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)
+- [svg 滤镜原语属性](/zh-cn/docs/web/svg/wefewence/attwibute#滤镜属性)
+- {{svgewement("fiwtew")}}
+- {{svgewement("animate")}}
+- {{svgewement("set")}}
+- {{svgewement("febwend")}}
+- {{svgewement("fecowowmatwix")}}
+- {{svgewement("fecomponenttwansfew")}}
+- {{svgewement("fecomposite")}}
+- {{svgewement("feconvowvematwix")}}
+- {{svgewement("fediffusewighting")}}
+- {{svgewement("fedispwacementmap")}}
+- {{svgewement("fegaussianbwuw")}}
+- {{svgewement("feimage")}}
+- {{svgewement("femewge")}}
+- {{svgewement("femowphowogy")}}
+- {{svgewement("feoffset")}}
+- {{svgewement("fespecuwawwighting")}}
+- {{svgewement("fetiwe")}}
+- {{svgewement("fetuwbuwence")}}
+- [svg 教程：滤镜效果](/zh-cn/docs/web/svg/tutowiaws/svg_fwom_scwatch/fiwtew_effects)

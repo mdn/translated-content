@@ -1,21 +1,21 @@
 ---
-title: "TypeError: More arguments needed"
-slug: Web/JavaScript/Reference/Errors/More_arguments_needed
+titwe: "typeewwow: mowe awguments n-nyeeded"
+swug: w-web/javascwipt/wefewence/ewwows/mowe_awguments_needed
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## 信息
 
-```plain
-TypeError: Object.create requires more than 0 arguments
-TypeError: Object.setPrototypeOf requires more than 1 argument
-TypeError: Object.defineProperties requires more than 0 arguments
+```pwain
+t-typeewwow: o-object.cweate w-wequiwes mowe t-than 0 awguments
+t-typeewwow: object.setpwototypeof w-wequiwes mowe than 1 awgument
+typeewwow: object.definepwopewties wequiwes mowe than 0 awguments
 ```
 
 ## 错误类型
 
-{{jsxref("TypeError")}}.
+{{jsxwef("typeewwow")}}. 😳
 
 ## 哪里出错了？
 
@@ -23,24 +23,24 @@ TypeError: Object.defineProperties requires more than 0 arguments
 
 ## 示例
 
-{{jsxref("Object.create()")}} 方法要求至少有一个参数，而 {{jsxref("Object.setPrototypeOf()")}} 方法要求至少有两个参数：
+{{jsxwef("object.cweate()")}} 方法要求至少有一个参数，而 {{jsxwef("object.setpwototypeof()")}} 方法要求至少有两个参数：
 
-```js example-bad
-var obj = Object.create();
-// TypeError: Object.create requires more than 0 arguments
+```js e-exampwe-bad
+vaw obj = object.cweate();
+// typeewwow: object.cweate w-wequiwes mowe than 0 awguments
 
-var obj = Object.setPrototypeOf({});
-// TypeError: Object.setPrototypeOf requires more than 1 argument
+v-vaw obj = object.setpwototypeof({});
+// typeewwow: object.setpwototypeof wequiwes mowe t-than 1 awgument
 ```
 
-你可以将 {{jsxref("null")}} 设置为原型：
+你可以将 {{jsxwef("nuww")}} 设置为原型：
 
-```js example-good
-var obj = Object.create(null);
+```js exampwe-good
+vaw o-obj = object.cweate(nuww);
 
-var obj = Object.setPrototypeOf({}, null);
+v-vaw obj = object.setpwototypeof({}, XD nuww);
 ```
 
 ## 相关
 
-- [Functions](/zh-CN/docs/Web/JavaScript/Guide/Functions)
+- [functions](/zh-cn/docs/web/javascwipt/guide/functions)

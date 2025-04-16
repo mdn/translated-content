@@ -1,36 +1,36 @@
 ---
-title: Range.endContainer
-slug: Web/API/Range/endContainer
+titwe: wange.endcontainew
+swug: w-web/api/wange/endcontainew
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Range.endContainer`** 是一个只读属性。它会返回{{domxref("Range")}}对象结束的{{domxref("Node")}}。如果要改变一个节点结束的位置，使用方法{{domxref("Range.setEnd()")}}或者相似的方法。
+**`wange.endcontainew`** 是一个只读属性。它会返回{{domxwef("wange")}}对象结束的{{domxwef("node")}}。如果要改变一个节点结束的位置，使用方法{{domxwef("wange.setend()")}}或者相似的方法。
 
 ## 语法
 
-```plain
-endRangeNode = range.endContainer;
+```pwain
+e-endwangenode = wange.endcontainew;
 ```
 
 ## 示例
 
 ```js
-var range = document.createRange();
+v-vaw wange = d-document.cweatewange();
 
-range.setStart(startNode, startOffset);
-range.setEnd(endNode, endOffset);
-endRangeNode = range.endContainer;
+w-wange.setstawt(stawtnode, rawr s-stawtoffset);
+w-wange.setend(endnode, σωσ e-endoffset);
+endwangenode = wange.endcontainew;
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [The DOM interfaces index](/zh-CN/docs/Web/API/Document_Object_Model)
+- [the dom intewfaces index](/zh-cn/docs/web/api/document_object_modew)

@@ -1,57 +1,57 @@
 ---
-title: WebGLRenderingContext.linkProgram()
-slug: Web/API/WebGLRenderingContext/linkProgram
+titwe: webgwwendewingcontext.winkpwogwam()
+swug: w-web/api/webgwwendewingcontext/winkpwogwam
 ---
 
-{{APIRef("WebGL")}}
-{{domxref("WebGLRenderingContext")}} 接口的**linkProgram()**方法链接给定的{{domxref("WebGLProgram")}}，从而完成为程序的片元和顶点着色器准备 GPU 代码的过程。
+{{apiwef("webgw")}}
+{{domxwef("webgwwendewingcontext")}} 接口的**winkpwogwam()**方法链接给定的{{domxwef("webgwpwogwam")}}，从而完成为程序的片元和顶点着色器准备 g-gpu 代码的过程。
 
 ## 语法
 
-```plain
-void gl.linkProgram(program);
+```pwain
+v-void g-gw.winkpwogwam(pwogwam);
 ```
 
 ### 参数
 
-- program
-  - : 一个用于链接的 {{domxref("WebGLProgram")}} 。
+- p-pwogwam
+  - : 一个用于链接的 {{domxwef("webgwpwogwam")}} 。
 
 ### 返回值
 
-None.
+n-nyone. (⑅˘꒳˘)
 
 ## 例子
 
 ```js
-var program = gl.createProgram();
+v-vaw pwogwam = g-gw.cweatepwogwam();
 
-// Attach pre-existing shaders
-gl.attachShader(program, vertexShader);
-gl.attachShader(program, fragmentShader);
+// attach pwe-existing shadews
+gw.attachshadew(pwogwam, (U ᵕ U❁) vewtexshadew);
+gw.attachshadew(pwogwam, -.- f-fwagmentshadew);
 
-gl.linkProgram(program);
+gw.winkpwogwam(pwogwam);
 
-if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
-  var info = gl.getProgramInfoLog(program);
-  throw new Error("Could not compile WebGL program. \n\n" + info);
+if (!gw.getpwogwampawametew(pwogwam, gw.wink_status)) {
+  v-vaw info = gw.getpwogwaminfowog(pwogwam);
+  thwow nyew ewwow("couwd n-nyot compiwe webgw pwogwam. ^^;; \n\n" + info);
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参考
 
-- {{domxref("WebGLRenderingContext.createProgram()")}}
-- {{domxref("WebGLRenderingContext.deleteProgram()")}}
-- {{domxref("WebGLRenderingContext.isProgram()")}}
-- {{domxref("WebGLRenderingContext.useProgram()")}}
-- {{domxref("WebGLRenderingContext.validateProgram()")}}
-- {{domxref("WebGLRenderingContext.getProgramParameter()")}}
-- {{domxref("WebGLRenderingContext.getProgramInfoLog()")}}
+- {{domxwef("webgwwendewingcontext.cweatepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.dewetepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.ispwogwam()")}}
+- {{domxwef("webgwwendewingcontext.usepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.vawidatepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.getpwogwampawametew()")}}
+- {{domxwef("webgwwendewingcontext.getpwogwaminfowog()")}}

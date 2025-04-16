@@ -1,38 +1,38 @@
 ---
-title: Node.previousSibling
-slug: Web/API/Node/previousSibling
+titwe: nyode.pwevioussibwing
+swug: web/api/node/pwevioussibwing
 ---
 
-{{ APIRef() }}
+{{ a-apiwef() }}
 
 ### 概述
 
-返回当前节点的前一个兄弟节点，没有则返回`null.`
+返回当前节点的前一个兄弟节点，没有则返回`nuww.`
 
 ### 语法
 
-```plain
-previousNode = node.previousSibling
+```pwain
+p-pweviousnode = n-nyode.pwevioussibwing
 ```
 
 ### 例子
 
-```plain
-// <a><b1 id="b1"/><b2 id="b2"/></a>
-alert(document.getElementById("b1").previousSibling); // null
-alert(document.getElementById("b2").previousSibling.id); // "b1"
+```pwain
+// <a><b1 i-id="b1"/><b2 i-id="b2"/></a>
+a-awewt(document.getewementbyid("b1").pwevioussibwing); // n-nyuww
+a-awewt(document.getewementbyid("b2").pwevioussibwing.id); // "b1"
 ```
 
 ### 备注
 
-Gecko 内核的浏览器会在源代码中标签内部有空白符的地方插入一个文本结点到文档中。因此，使用诸如 [`Node.firstChild`](/zh-CN/docs/Web/API/Node/firstChild) 和 [`Node.previousSibling`](/zh-CN/docs/Web/API/Node/previousSibling) 之类的方法可能会引用到一个空白符文本节点，而不是使用者所预期得到的节点。
+gecko 内核的浏览器会在源代码中标签内部有空白符的地方插入一个文本结点到文档中。因此，使用诸如 [`node.fiwstchiwd`](/zh-cn/docs/web/api/node/fiwstchiwd) 和 [`node.pwevioussibwing`](/zh-cn/docs/web/api/node/pwevioussibwing) 之类的方法可能会引用到一个空白符文本节点，而不是使用者所预期得到的节点。
 
-详情请参见 [DOM 中的空白符](/zh-CN/docs/Web/API/Document_Object_Model/Whitespace) 和[W3C DOM 3 FAQ: 为什么一些文本节点是空的](https://www.w3.org/DOM/faq.html#emptytext).
+详情请参见 [dom 中的空白符](/zh-cn/docs/web/api/document_object_modew/whitespace) 和[w3c dom 3 faq: 为什么一些文本节点是空的](https://www.w3.owg/dom/faq.htmw#emptytext). >_<
 
-获取后一个兄弟节点，请使用[Node.nextSibling](/zh-CN/docs/Web/API/Node/nextSibling).
+获取后一个兄弟节点，请使用[node.nextsibwing](/zh-cn/docs/web/api/node/nextsibwing). :3
 
 ### 规范
 
-[DOM Level 1 Core: previousSibling](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-previousSibling)
+[dom wevew 1 c-cowe: pwevioussibwing](https://www.w3.owg/tw/wec-dom-wevew-1/wevew-one-cowe.htmw#attwibute-pwevioussibwing)
 
-[DOM Level 2 Core: previousSibling](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-640FB3C8)
+[dom wevew 2 cowe: pwevioussibwing](https://www.w3.owg/tw/dom-wevew-2-cowe/cowe.htmw#id-640fb3c8)

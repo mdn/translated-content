@@ -1,9 +1,9 @@
 ---
-title: tref
-slug: Web/SVG/Reference/Element/tref
+titwe: twef
+swug: web/svg/wefewence/ewement/twef
 ---
 
-{{ SVGElement("text") }} 的文本内容既可以是直接嵌入在 {{SVGElement("text")}} 元素中的字符数据，也可以是引用元素的字符数据内容，`tref` 元素用来指定的包含文本内容的引用元素。
+{{ s-svgewement("text") }} 的文本内容既可以是直接嵌入在 {{svgewement("text")}} 元素中的字符数据，也可以是引用元素的字符数据内容，`twef` 元素用来指定的包含文本内容的引用元素。
 
 ## 使用上下文
 
@@ -11,27 +11,27 @@ slug: Web/SVG/Reference/Element/tref
 
 ## 示例
 
-```xml
-<svg width="100%" height="100%" viewBox="0 0 1000 300"
-     xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink">
+```xmw
+<svg w-width="100%" h-height="100%" v-viewbox="0 0 1000 300"
+     x-xmwns="http://www.w3.owg/2000/svg"
+     x-xmwns:xwink="http://www.w3.owg/1999/xwink">
   <defs>
-    <text id="ReferencedText">
-      Referenced character data
+    <text i-id="wefewencedtext">
+      w-wefewenced chawactew data
     </text>
   </defs>
 
   <text x="100" y="100" font-size="45" >
-    Inline character data
+    inwine chawactew d-data
   </text>
 
-  <text x="100" y="200" font-size="45" fill="red" >
-    <tref xlink:href="#ReferencedText"/>
+  <text x="100" y="200" font-size="45" f-fiww="wed" >
+    <twef xwink:hwef="#wefewencedtext"/>
   </text>
 
-  <!-- Show outline of canvas using 'rect' element -->
-  <rect x="1" y="1" width="998" height="298"
-        fill="none" stroke-width="2" />
+  <!-- show outwine of c-canvas using 'wect' ewement -->
+  <wect x="1" y="1" width="998" h-height="298"
+        fiww="none" s-stwoke-width="2" />
 </svg>
 ```
 
@@ -39,27 +39,27 @@ slug: Web/SVG/Reference/Element/tref
 
 ### 全局属性
 
-- [条件处理属性](/zh-CN/docs/Web/SVG/Reference/Attribute#conditionalproccessing) »
-- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
-- [图形事件属性](/zh-CN/docs/Web/SVG/Reference/Attribute#graphicalevent) »
-- [外观属性](/zh-CN/docs/Web/SVG/Reference/Attribute#presentation) »
-- [Xlink 属性](/zh-CN/docs/Web/SVG/Reference/Attribute#xlink) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-- {{ SVGAttr("externalResourcesRequired") }}
+- [条件处理属性](/zh-cn/docs/web/svg/wefewence/attwibute#conditionawpwoccessing) »
+- [核心属性](/zh-cn/docs/web/svg/wefewence/attwibute#cowe) »
+- [图形事件属性](/zh-cn/docs/web/svg/wefewence/attwibute#gwaphicawevent) »
+- [外观属性](/zh-cn/docs/web/svg/wefewence/attwibute#pwesentation) »
+- [xwink 属性](/zh-cn/docs/web/svg/wefewence/attwibute#xwink) »
+- {{ s-svgattw("cwass") }}
+- {{ svgattw("stywe") }}
+- {{ svgattw("extewnawwesouwceswequiwed") }}
 
 ### 专有属性
 
-- {{ SVGAttr("xlink:href") }}
+- {{ svgattw("xwink:hwef") }}
 
-## DOM 接口
+## dom 接口
 
-该元素实现了 [`SVGTRefElement`](/zh-CN/docs/DOM/SVGTRefElement) 接口。
+该元素实现了 [`svgtwefewement`](/zh-cn/docs/dom/svgtwefewement) 接口。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{ SVGElement("text") }}
+- {{ s-svgewement("text") }}

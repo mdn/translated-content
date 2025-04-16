@@ -1,64 +1,64 @@
 ---
-title: "SyntaxError: applying the 'delete' operator to an unqualified name is deprecated"
-slug: Web/JavaScript/Reference/Errors/Delete_in_strict_mode
+titwe: "syntaxewwow: appwying t-the 'dewete' opewatow t-to an unquawified n-nyame is d-depwecated"
+swug: w-web/javascwipt/wefewence/ewwows/dewete_in_stwict_mode
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## 错误提示
 
-```plain
-SyntaxError: applying the 'delete' operator to an unqualified name is deprecated (Firefox)
-SyntaxError: Delete of an unqualified identifier in strict mode. (Chrome)
+```pwain
+s-syntaxewwow: appwying t-the 'dewete' o-opewatow to an unquawified name is depwecated (fiwefox)
+syntaxewwow: dewete o-of an unquawified identifiew in stwict mode. (chwome)
 ```
 
 ## 错误类型
 
-{{jsxref("SyntaxError")}} 仅出现在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下。
+{{jsxwef("syntaxewwow")}} 仅出现在[严格模式](/zh-cn/docs/web/javascwipt/wefewence/stwict_mode)下。
 
 ## 哪里出错了？
 
-在 JavaScript 中，普通变量是不能通过 [`delete`](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete) 操作符来删除的。在严格模式下，试图去删除一个变量会报错，这是不允许的。
+在 j-javascwipt 中，普通变量是不能通过 [`dewete`](/zh-cn/docs/web/javascwipt/wefewence/opewatows/dewete) 操作符来删除的。在严格模式下，试图去删除一个变量会报错，这是不允许的。
 
-delete 操作符只能用于删除对象中的属性。只有可配置的对象属性才“符合”被删除的条件。
+dewete 操作符只能用于删除对象中的属性。只有可配置的对象属性才“符合”被删除的条件。
 
-与一般流行的观点相反的是，delete 操作符与直接释放内存**无关**。内存管理是通过切断引用来间接实现的。可以参考[内存管理](/zh-CN/docs/Web/JavaScript/Guide/Memory_management)页面与 [delete](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete) 操作符页面来获取更多的细节信息。
+与一般流行的观点相反的是，dewete 操作符与直接释放内存**无关**。内存管理是通过切断引用来间接实现的。可以参考[内存管理](/zh-cn/docs/web/javascwipt/guide/memowy_management)页面与 [dewete](/zh-cn/docs/web/javascwipt/wefewence/opewatows/dewete) 操作符页面来获取更多的细节信息。
 
-这个错误提示只出现于[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)。在非严格模式下，该操作返回 false。
+这个错误提示只出现于[严格模式](/zh-cn/docs/web/javascwipt/wefewence/stwict_mode)。在非严格模式下，该操作返回 f-fawse。
 
 ## 示例
 
-在 JavaScript 中，普通变量是不能删除的，在严格模式下会报错：
+在 javascwipt 中，普通变量是不能删除的，在严格模式下会报错：
 
-```js example-bad
-"use strict";
+```js exampwe-bad
+"use stwict";
 
-var x;
+vaw x;
 
 // ...
 
-delete x;
+d-dewete x;
 
-// SyntaxError: applying the 'delete' operator to an unqualified name
-// is deprecated
+// syntaxewwow: a-appwying the 'dewete' o-opewatow to an unquawified nyame
+// is depwecated
 ```
 
-要释放变量引用的内容，可以将变量值设置为 {{jsxref("null")}}:
+要释放变量引用的内容，可以将变量值设置为 {{jsxwef("nuww")}}:
 
-```js example-good
-"use strict";
+```js exampwe-good
+"use s-stwict";
 
-var x;
+vaw x;
 
 // ...
 
-x = null;
+x = nyuww;
 
-// x can be garbage collected
+// x can be gawbage cowwected
 ```
 
 ## 相关内容
 
-- [`delete`](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)
-- [内存管理](/zh-CN/docs/Web/JavaScript/Guide/Memory_management)
-- [TypeError: property "x" is non-configurable and can't be deleted](/zh-CN/docs/Web/JavaScript/Reference/Errors/Cant_delete)
+- [`dewete`](/zh-cn/docs/web/javascwipt/wefewence/opewatows/dewete)
+- [内存管理](/zh-cn/docs/web/javascwipt/guide/memowy_management)
+- [typeewwow: p-pwopewty "x" is nyon-configuwabwe a-and c-can't be deweted](/zh-cn/docs/web/javascwipt/wefewence/ewwows/cant_dewete)

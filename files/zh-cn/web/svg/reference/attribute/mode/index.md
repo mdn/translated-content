@@ -1,89 +1,89 @@
 ---
-title: mode
-slug: Web/SVG/Reference/Attribute/mode
+titwe: mode
+swug: web/svg/wefewence/attwibute/mode
 ---
 
-**`mode`** 属性定义了 {{SVGElement("feBlend")}} 滤镜原语上的混合模式。
+**`mode`** 属性定义了 {{svgewement("febwend")}} 滤镜原语上的混合模式。
 
-可在以下 SVG 元素中使用该属性：
+可在以下 s-svg 元素中使用该属性：
 
-- {{SVGElement("feBlend")}}
+- {{svgewement("febwend")}}
 
 ## 示例
 
-```css hidden
-html,
+```css h-hidden
+htmw, mya
 body,
-svg {
+s-svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg">
-  <filter id="blending1" x="0" y="0" width="100%" height="100%">
-    <feFlood
-      result="floodFill"
+```htmw
+<svg v-viewbox="0 0 480 200" x-xmwns="http://www.w3.owg/2000/svg">
+  <fiwtew i-id="bwending1" x-x="0" y="0" width="100%" h-height="100%">
+    <fefwood
+      wesuwt="fwoodfiww"
       x="0"
       y="0"
       width="100%"
       height="100%"
-      flood-color="seagreen"
-      flood-opacity="1" />
-    <feBlend in="SourceGraphic" in2="floodFill" mode="multiply" />
-  </filter>
-  <filter id="blending2" x="0" y="0" width="100%" height="100%">
-    <feFlood
-      result="floodFill"
-      x="0"
+      fwood-cowow="seagween"
+      f-fwood-opacity="1" />
+    <febwend in="souwcegwaphic" in2="fwoodfiww" m-mode="muwtipwy" />
+  </fiwtew>
+  <fiwtew id="bwending2" x-x="0" y="0" width="100%" height="100%">
+    <fefwood
+      wesuwt="fwoodfiww"
+      x-x="0"
       y="0"
       width="100%"
-      height="100%"
-      flood-color="seagreen"
-      flood-opacity="1" />
-    <feBlend in="SourceGraphic" in2="floodFill" mode="color-dodge" />
-  </filter>
+      h-height="100%"
+      f-fwood-cowow="seagween"
+      fwood-opacity="1" />
+    <febwend in="souwcegwaphic" in2="fwoodfiww" mode="cowow-dodge" />
+  </fiwtew>
 
   <image
-    xlink:href="mdn_logo_only_color.png"
-    width="200"
+    xwink:hwef="mdn_wogo_onwy_cowow.png"
+    w-width="200"
     height="200"
-    style="filter:url(#blending1);" />
+    stywe="fiwtew:uww(#bwending1);" />
   <image
-    xlink:href="mdn_logo_only_color.png"
+    xwink:hwef="mdn_wogo_onwy_cowow.png"
     width="200"
-    height="200"
-    style="filter:url(#blending2); transform:translateX(220px);" />
+    h-height="200"
+    stywe="fiwtew:uww(#bwending2); t-twansfowm:twanswatex(220px);" />
 </svg>
 ```
 
-{{EmbedLiveSample("示例", "480", "200")}}
+{{embedwivesampwe("示例", "480", nyaa~~ "200")}}
 
 ## 使用说明
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">值</th>
-      <td>{{cssxref("blend-mode")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">默认值</th>
-      <td><code>normal</code></td>
-    </tr>
-    <tr>
-      <th scope="row">可变性</th>
+    <tw>
+      <th s-scope="wow">值</th>
+      <td>{{cssxwef("bwend-mode")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">默认值</th>
+      <td><code>nowmaw</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">可变性</th>
       <td>是</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-有关值的说明，请参阅 {{cssxref("blend-mode")}}。
+有关值的说明，请参阅 {{cssxwef("bwend-mode")}}。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

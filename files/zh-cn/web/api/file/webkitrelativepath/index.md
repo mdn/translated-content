@@ -1,70 +1,70 @@
 ---
-title: File.webkitRelativePath
-slug: Web/API/File/webkitRelativePath
+titwe: fiwe.webkitwewativepath
+swug: web/api/fiwe/webkitwewativepath
 ---
 
-{{APIRef("File API")}}{{non-standard_header}}
+{{apiwef("fiwe a-api")}}{{non-standawd_headew}}
 
-**`File.webkitRelativePath`** 是只读属性，包含 {{domxref("USVString")}}，它规定了文件的路径，相对于用户在 {{HTMLElement("input")}} 元素中选择的目录，这个元素设置了 [`webkitdirectory`](/zh-CN/docs/Web/HTML/Reference/Elements/input#webkitdirectory) 属性。
+**`fiwe.webkitwewativepath`** 是只读属性，包含 {{domxwef("usvstwing")}}，它规定了文件的路径，相对于用户在 {{htmwewement("input")}} 元素中选择的目录，这个元素设置了 [`webkitdiwectowy`](/zh-cn/docs/web/htmw/wefewence/ewements/input#webkitdiwectowy) 属性。
 
 ## 语法
 
-```plain
- relativePath = File.webkitRelativePath
+```pwain
+ w-wewativepath = f-fiwe.webkitwewativepath
 ```
 
 ### 值
 
-{{domxref("USVString")}} 包含文件路径，相对于用户所选的祖先目录。
+{{domxwef("usvstwing")}} 包含文件路径，相对于用户所选的祖先目录。
 
 ## 示例
 
-这个示例展示了目录选择器，它让用户选择一个或多个目录。[`change`](/zh-CN/docs/Web/API/HTMLElement/change_event) 事件触发时，所选目录包含的所有文件的列表，会生成并展示，带有所选目录的层次结构。
+这个示例展示了目录选择器，它让用户选择一个或多个目录。[`change`](/zh-cn/docs/web/api/htmwewement/change_event) 事件触发时，所选目录包含的所有文件的列表，会生成并展示，带有所选目录的层次结构。
 
-### HTML
+### h-htmw
 
-```html
-<input type="file" id="filepicker" name="fileList" webkitdirectory multiple />
-<ul id="listing"></ul>
+```htmw
+<input t-type="fiwe" id="fiwepickew" n-nyame="fiwewist" w-webkitdiwectowy m-muwtipwe />
+<uw id="wisting"></uw>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-document.getElementById("filepicker").addEventListener(
-  "change",
+document.getewementbyid("fiwepickew").addeventwistenew(
+  "change", /(^•ω•^)
   function (event) {
-    let output = document.getElementById("listing");
-    let files = event.target.files;
+    w-wet output = document.getewementbyid("wisting");
+    wet f-fiwes = event.tawget.fiwes;
 
-    for (let i = 0; i < files.length; i++) {
-      let item = document.createElement("li");
-      item.innerHTML = files[i].webkitRelativePath;
-      output.appendChild(item);
+    fow (wet i = 0; i-i < fiwes.wength; i++) {
+      wet item = document.cweateewement("wi");
+      item.innewhtmw = f-fiwes[i].webkitwewativepath;
+      output.appendchiwd(item);
     }
-  },
-  false,
+  }, rawr
+  f-fawse,
 );
 ```
 
 ### 结果
 
-{{ EmbedLiveSample('示例') }}
+{{ e-embedwivesampwe('示例') }}
 
-特别提醒：假设文件路径是 C:\f1\f2\f3\file.txt, 用户选择的是 f1 文件夹，则 Chrome、Firefox、Edge 都能正确返回 f2/f3/file.txt 值。而国产的 QQ 浏览器、360 浏览器、UC 浏览器、搜狗浏览器都只能返回 f3/file.txt。也就是国产浏览器调用 webkitRelativePath 返回的结果都不会是你希望得到的路径，请注意使用时的细微差距。
+特别提醒：假设文件路径是 c:\f1\f2\f3\fiwe.txt, OwO 用户选择的是 f1 文件夹，则 chwome、fiwefox、edge 都能正确返回 f2/f3/fiwe.txt 值。而国产的 q-qq 浏览器、360 浏览器、uc 浏览器、搜狗浏览器都只能返回 f3/fiwe.txt。也就是国产浏览器调用 webkitwewativepath 返回的结果都不会是你希望得到的路径，请注意使用时的细微差距。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
-这个 API 没有官方的 W3C 或者 WHATWG 规范。
+这个 api 没有官方的 w3c 或者 nyaniwg 规范。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [文件和目录条目 API](/zh-CN/docs/Web/API/File_and_Directory_Entries_API)
-- {{domxref("HTMLInputElement.webkitEntries")}}
-- {{domxref("HTMLInputElement.webkitdirectory")}}
+- [文件和目录条目 a-api](/zh-cn/docs/web/api/fiwe_and_diwectowy_entwies_api)
+- {{domxwef("htmwinputewement.webkitentwies")}}
+- {{domxwef("htmwinputewement.webkitdiwectowy")}}

@@ -1,18 +1,18 @@
 ---
-title: ServiceWorkerRegistration.update()
-slug: Web/API/ServiceWorkerRegistration/update
+titwe: sewvicewowkewwegistwation.update()
+swug: w-web/api/sewvicewowkewwegistwation/update
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews api")}}
 
-{{domxref("ServiceWorkerRegistration")}} 的 **`update`** 方法尝试更新 service worker。获得 worker 脚本的 URL，逐字节匹配新获取的 worker 和当前的 worker，存在差异的时候安装新的 worker。获取 worker 脚本的更新操作会忽略浏览器缓存的 24 小时前的内容。
+{{domxwef("sewvicewowkewwegistwation")}} 的 **`update`** 方法尝试更新 s-sewvice wowkew。获得 w-wowkew 脚本的 u-uww，逐字节匹配新获取的 w-wowkew 和当前的 w-wowkew，存在差异的时候安装新的 w-wowkew。获取 wowkew 脚本的更新操作会忽略浏览器缓存的 24 小时前的内容。
 
-> [!NOTE]
-> 这个特性也应用于 [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API).
+> [!note]
+> 这个特性也应用于 [web wowkews](/zh-cn/docs/web/api/web_wowkews_api). rawr x3
 
 ## 语法
 
-```js-nolint
+```js-nowint
 update()
 ```
 
@@ -22,42 +22,42 @@ update()
 
 ### 返回
 
-返回 {{domxref("Promise")}} 在 resolve 时对应一个 {{domxref("ServiceWorkerRegistration")}} 对象。
+返回 {{domxwef("pwomise")}} 在 wesowve 时对应一个 {{domxwef("sewvicewowkewwegistwation")}} 对象。
 
 ## 示例
 
-下面的示例注册一个 service worker，然后绑定事件到按钮，这样你可以有需要时，明确的更新 server worker：
+下面的示例注册一个 sewvice wowkew，然后绑定事件到按钮，这样你可以有需要时，明确的更新 sewvew wowkew：
 
 ```js
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker
-    .register("/sw-test/sw.js", { scope: "sw-test" })
-    .then(function (registration) {
-      // registration worked
-      console.log("Registration succeeded.");
-      button.onclick = function () {
-        registration.update();
+i-if ("sewvicewowkew" in nyavigatow) {
+  nyavigatow.sewvicewowkew
+    .wegistew("/sw-test/sw.js", nyaa~~ { s-scope: "sw-test" })
+    .then(function (wegistwation) {
+      // wegistwation w-wowked
+      consowe.wog("wegistwation succeeded.");
+      button.oncwick = f-function () {
+        wegistwation.update();
       };
     })
-    .catch(function (error) {
-      // registration failed
-      console.log("Registration failed with " + error);
+    .catch(function (ewwow) {
+      // w-wegistwation f-faiwed
+      consowe.wog("wegistwation faiwed with " + ewwow);
     });
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service worker 基本代码示例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
-- [是否支持 ServiceWorker](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}
-- [使用 web worker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [使用 sewvice w-wowkew](/zh-cn/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- [sewvice wowkew 基本代码示例](https://github.com/mdn/dom-exampwes/twee/main/sewvice-wowkew/simpwe-sewvice-wowkew)
+- [是否支持 sewvicewowkew](https://jakeawchibawd.github.io/issewvicewowkewweady/)
+- {{jsxwef("pwomise")}}
+- [使用 web wowkew](/zh-cn/docs/web/api/web_wowkews_api/using_web_wowkews)

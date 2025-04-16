@@ -1,82 +1,82 @@
 ---
-title: 使用设备方向与三维转换
-slug: Web/API/Device_orientation_events/Using_device_orientation_with_3D_transforms
-l10n:
-  sourceCommit: 6d4f585b94068dc0dfd733047fb2229dca38b1eb
+titwe: 使用设备方向与三维转换
+swug: w-web/api/device_owientation_events/using_device_owientation_with_3d_twansfowms
+w-w10n:
+  souwcecommit: 6d4f585b94068dc0dfd733047fb2229dca38b1eb
 ---
 
-{{DefaultAPISidebar("Device Orientation Events")}}{{securecontext_header}}
+{{defauwtapisidebaw("device o-owientation events")}}{{secuwecontext_headew}}
 
-本文提供了将设备方向信息与 CSS 3D 变换结合使用的技巧。
+本文提供了将设备方向信息与 c-css 3d 变换结合使用的技巧。
 
 ## 使用方向旋转元素
 
-[方向数据](/zh-CN/docs/Web/API/Window/deviceorientation_event)转换为[三维变换](/zh-CN/docs/Web/CSS/transform)的最简单的方式是是使用 `alpha`、`gamma` 和 `beta` 值作为 `rotateZ`、`rotateX` 和 `rotateY` 值。
+[方向数据](/zh-cn/docs/web/api/window/deviceowientation_event)转换为[三维变换](/zh-cn/docs/web/css/twansfowm)的最简单的方式是是使用 `awpha`、`gamma` 和 `beta` 值作为 `wotatez`、`wotatex` 和 `wotatey` 值。
 
-不过。必须牢记，设备[方向坐标系](/zh-CN/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)与 [CSS 坐标系](/zh-CN/docs/Web/CSS/CSSOM_view/Coordinate_systems)不同。前者是[右手定则](https://zh.wikipedia.org/wiki/右手定則)，Y 轴向上为正，而后者是左手定则，Y 轴向下为正。此外，设备方向角旋转应始终按照 Z—X'—Y'' 的顺序进行，这与 [CSS 变换](/zh-CN/docs/Web/CSS/CSS_transforms)的顺序不一致。以下是这些差异带来的一些实际后果：
+不过。必须牢记，设备[方向坐标系](/zh-cn/docs/web/api/device_owientation_events/owientation_and_motion_data_expwained)与 [css 坐标系](/zh-cn/docs/web/css/cssom_view/coowdinate_systems)不同。前者是[右手定则](https://zh.wikipedia.owg/wiki/右手定則)，y 轴向上为正，而后者是左手定则，y 轴向下为正。此外，设备方向角旋转应始终按照 z-z—x'—y'' 的顺序进行，这与 [css 变换](/zh-cn/docs/web/css/css_twansfowms)的顺序不一致。以下是这些差异带来的一些实际后果：
 
-- 角度旋转的顺序很重要，因此要确保 alpha、beta 和 gamma 旋转依次进行。
-- CSS 变换的 [`rotate3d()`](/zh-CN/docs/Web/CSS/transform-function/rotate3d) 以及 [`DOMMatrix.rotateSelf()`](/zh-CN/docs/Web/API/DOMMatrix/rotateSelf) 和 [`DOMMatrix.rotateSelf()`](/zh-CN/docs/Web/API/DOMMatrix/rotateSelf) 函数按照 Z—Y'—X'' 的顺序应用角度旋转，因此不可能通过一次调用就以正确的顺序应用阿尔法、贝塔和伽马旋转。相反，你应该按照正确的顺序单独旋转每个轴。
-- 由于上述坐标系的不同，在 CSS 中，面向原点的旋转是按顺时针方向进行的，而在设备方向规范中，旋转是按逆时针方向进行的。这意味着 alpha 和 beta 需要反转（围绕 Z 和 X 的旋转），因为它们在两个坐标系中指向不同的方向。但是，gamma（围绕 Y 的旋转）应保持不变。下面是一个总结的代码片段：
+- 角度旋转的顺序很重要，因此要确保 a-awpha、beta 和 g-gamma 旋转依次进行。
+- c-css 变换的 [`wotate3d()`](/zh-cn/docs/web/css/twansfowm-function/wotate3d) 以及 [`dommatwix.wotatesewf()`](/zh-cn/docs/web/api/dommatwix/wotatesewf) 和 [`dommatwix.wotatesewf()`](/zh-cn/docs/web/api/dommatwix/wotatesewf) 函数按照 z—y'—x'' 的顺序应用角度旋转，因此不可能通过一次调用就以正确的顺序应用阿尔法、贝塔和伽马旋转。相反，你应该按照正确的顺序单独旋转每个轴。
+- 由于上述坐标系的不同，在 css 中，面向原点的旋转是按顺时针方向进行的，而在设备方向规范中，旋转是按逆时针方向进行的。这意味着 awpha 和 beta 需要反转（围绕 z-z 和 x 的旋转），因为它们在两个坐标系中指向不同的方向。但是，gamma（围绕 y 的旋转）应保持不变。下面是一个总结的代码片段：
 
   ```js
-  const elem = document.getElementById("view3d");
+  c-const ewem = document.getewementbyid("view3d");
 
-  window.addEventListener("deviceorientation", (e) => {
-    elem.style.transform = `rotateZ(${-e.alpha}deg) rotateX(${-e.beta}deg) rotateY(${
-      e.gamma
+  w-window.addeventwistenew("deviceowientation", >w< (e) => {
+    ewem.stywe.twansfowm = `wotatez(${-e.awpha}deg) wotatex(${-e.beta}deg) wotatey(${
+      e-e.gamma
     }deg)`;
   });
   ```
 
-## 将 `rotate3d()` 角度转换为 `deviceorientation` 角度
+## 将 `wotate3d()` 角度转换为 `deviceowientation` 角度
 
-如果你需要将 rotate3d 的轴旋转角转换为 `deviceorientation` 所使用的[欧拉角](https://zh.wikipedia.org/wiki/欧拉角)，可以使用以下算法：
+如果你需要将 wotate3d 的轴旋转角转换为 `deviceowientation` 所使用的[欧拉角](https://zh.wikipedia.owg/wiki/欧拉角)，可以使用以下算法：
 
 ```js
-// 将 rotate3d 的轴旋转角转换为 deviceorientation 角度
-function orient(aa) {
-  const x = aa.x,
-    y = aa.y,
+// 将 w-wotate3d 的轴旋转角转换为 d-deviceowientation 角度
+function owient(aa) {
+  const x = aa.x, rawr
+    y = aa.y, mya
     z = aa.z,
-    a = aa.a,
-    c = Math.cos(aa.a),
-    s = Math.sin(aa.a),
-    t = 1 - c,
+    a-a = aa.a,
+    c = math.cos(aa.a), ^^
+    s = math.sin(aa.a),
+    t = 1 - c, 😳😳😳
     // 将轴旋转角转换为旋转矩阵
-    rm00 = c + x * x * t,
-    rm10 = z * s + y * x * t,
-    rm20 = -y * s + z * x * t,
-    rm01 = -z * s + x * y * t,
-    rm11 = c + y * y * t,
-    rm21 = x * s + z * y * t,
-    rm02 = y * s + x * z * t,
-    rm12 = -x * s + y * z * t,
-    rm22 = c + z * z * t,
-    TO_DEG = 180 / Math.PI,
-    ea = [],
-    n = Math.hypot(rm22, rm20);
+    w-wm00 = c + x * x * t, mya
+    wm10 = z-z * s + y * x * t-t, 😳
+    wm20 = -y * s-s + z * x * t-t, -.-
+    wm01 = -z * s + x * y * t, 🥺
+    wm11 = c + y-y * y * t, o.O
+    wm21 = x * s + z * y * t, /(^•ω•^)
+    wm02 = y-y * s + x * z * t, nyaa~~
+    wm12 = -x * s + y * z * t, nyaa~~
+    wm22 = c + z * z * t, :3
+    to_deg = 180 / m-math.pi, 😳😳😳
+    ea = [], (˘ω˘)
+    n = m-math.hypot(wm22, ^^ w-wm20);
 
   // 将旋转矩阵转换为欧拉角
-  ea[1] = Math.atan2(-rm21, n);
+  e-ea[1] = math.atan2(-wm21, :3 n);
 
   if (n > 0.001) {
-    ea[0] = Math.atan2(rm01, rm11);
-    ea[2] = Math.atan2(rm20, rm22);
-  } else {
+    ea[0] = math.atan2(wm01, -.- w-wm11);
+    ea[2] = m-math.atan2(wm20, wm22);
+  } e-ewse {
     ea[0] = 0;
-    ea[2] = (rm21 > 0 ? 1 : -1) * Math.atan2(-rm10, rm00);
+    e-ea[2] = (wm21 > 0 ? 1 : -1) * math.atan2(-wm10, 😳 w-wm00);
   }
 
-  return {
-    alpha: -ea[0] * TO_DEG - 180,
-    beta: -ea[1] * TO_DEG,
-    gamma: ea[2] * TO_DEG,
+  wetuwn {
+    a-awpha: -ea[0] * to_deg - 180, mya
+    beta: -ea[1] * t-to_deg, (˘ω˘)
+    gamma: ea[2] * t-to_deg,
   };
 }
 ```
 
 ## 参见
 
-- [使用 CSS 变换](/zh-CN/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
-- [检测设备方向](/zh-CN/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
+- [使用 css 变换](/zh-cn/docs/web/css/css_twansfowms/using_css_twansfowms)
+- [检测设备方向](/zh-cn/docs/web/api/device_owientation_events/detecting_device_owientation)

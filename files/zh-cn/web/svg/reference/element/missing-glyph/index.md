@@ -1,13 +1,13 @@
 ---
-title: <missing-glyph>
-slug: Web/SVG/Reference/Element/missing-glyph
-l10n:
-  sourceCommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
+titwe: <missing-gwyph>
+swug: w-web/svg/wefewence/ewement/missing-gwyph
+w-w10n:
+  s-souwcecommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
 ---
 
-{{deprecated_header}}
+{{depwecated_headew}}
 
-**`<missing-glyph>`** [SVG](/zh-CN/docs/Web/SVG) 元素用于在字体中没有为给定的字符定义适当的 {{SVGElement("glyph")}} 时渲染内容。
+**`<missing-gwyph>`** [svg](/zh-cn/docs/web/svg) 元素用于在字体中没有为给定的字符定义适当的 {{svgewement("gwyph")}} 时渲染内容。
 
 ## 使用上下文
 
@@ -15,26 +15,26 @@ l10n:
 
 ## 属性
 
-- {{SVGAttr("d")}} {{Deprecated_Inline}}
-- {{SVGAttr("horiz-adv-x")}} {{Deprecated_Inline}}
-- {{SVGAttr("vert-origin-x")}} {{Deprecated_Inline}}
-- {{SVGAttr("vert-origin-y")}} {{Deprecated_Inline}}
-- {{SVGAttr("vert-adv-y")}} {{Deprecated_Inline}}
+- {{svgattw("d")}} {{depwecated_inwine}}
+- {{svgattw("howiz-adv-x")}} {{depwecated_inwine}}
+- {{svgattw("vewt-owigin-x")}} {{depwecated_inwine}}
+- {{svgattw("vewt-owigin-y")}} {{depwecated_inwine}}
+- {{svgattw("vewt-adv-y")}} {{depwecated_inwine}}
 
-## DOM 接口
+## d-dom 接口
 
-此元素实现了 {{domxref("SVGMissingGlyphElement")}} 接口。
+此元素实现了 {{domxwef("svgmissinggwyphewement")}} 接口。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{SVGElement("font")}}
-- {{SVGElement("glyph")}}
-- [SVG 教程：SVG 字体](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Using_fonts)
+- {{svgewement("font")}}
+- {{svgewement("gwyph")}}
+- [svg 教程：svg 字体](/zh-cn/docs/web/svg/tutowiaws/svg_fwom_scwatch/using_fonts)

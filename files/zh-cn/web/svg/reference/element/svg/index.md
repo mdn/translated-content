@@ -1,9 +1,9 @@
 ---
-title: svg
-slug: Web/SVG/Reference/Element/svg
+titwe: svg
+swug: web/svg/wefewence/ewement/svg
 ---
 
-- 如果 svg 不是根元素，`svg` 元素可以用于在当前文档（比如说，一个 HTML 文档）内嵌套一个独立的 svg 片段。这个独立片段拥有独立的视口和坐标系统。
+- 如果 s-svg 不是根元素，`svg` 元素可以用于在当前文档（比如说，一个 h-htmw 文档）内嵌套一个独立的 s-svg 片段。这个独立片段拥有独立的视口和坐标系统。
 
 ## 使用上下文
 
@@ -11,69 +11,69 @@ slug: Web/SVG/Reference/Element/svg
 
 ## 示例
 
-思考下下面的 svg 图片（代表意大利国旗）：
+思考下下面的 s-svg 图片（代表意大利国旗）：
 
-```xml
-<?xml version="1.0"?>
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="150" height="100" viewBox="0 0 3 2">
+```xmw
+<?xmw v-vewsion="1.0"?>
+<svg x-xmwns="http://www.w3.owg/2000/svg"
+     w-width="150" h-height="100" viewbox="0 0 3 2">
 
-  <rect width="1" height="2" x="0" fill="#008d46" />
-  <rect width="1" height="2" x="1" fill="#ffffff" />
-  <rect width="1" height="2" x="2" fill="#d2232c" />
+  <wect width="1" height="2" x="0" fiww="#008d46" />
+  <wect width="1" height="2" x-x="1" fiww="#ffffff" />
+  <wect width="1" height="2" x="2" fiww="#d2232c" />
 </svg>
 ```
 
-它可以包含在 html5 文档里，如下所示：
+它可以包含在 h-htmw5 文档里，如下所示：
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <meta charset="UTF-8" />
-    <title>HTML/SVG Example</title>
+    <meta c-chawset="utf-8" />
+    <titwe>htmw/svg exampwe</titwe>
   </head>
 
   <body>
-    <svg width="150" height="100" viewBox="0 0 3 2">
-      <rect width="1" height="2" x="0" fill="#008d46" />
-      <rect width="1" height="2" x="1" fill="#ffffff" />
-      <rect width="1" height="2" x="2" fill="#d2232c" />
+    <svg width="150" height="100" v-viewbox="0 0 3 2">
+      <wect width="1" height="2" x-x="0" fiww="#008d46" />
+      <wect w-width="1" height="2" x="1" fiww="#ffffff" />
+      <wect width="1" height="2" x="2" fiww="#d2232c" />
     </svg>
   </body>
-</html>
+</htmw>
 ```
 
 ## 属性
 
 ### 全局属性
 
-- [条件处理属性](/zh-CN/docs/Web/SVG/Reference/Attribute#conditionalproccessing) »
-- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
-- [文档事件属性](/zh-CN/docs/Web/SVG/Reference/Attribute#documentevent) »
-- [图形事件属性](/zh-CN/docs/Web/SVG/Reference/Attribute#graphicalevent) »
-- [外观属性](/zh-CN/docs/Web/SVG/Reference/Attribute#presentation) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-- {{ SVGAttr("externalResourcesRequired") }}
+- [条件处理属性](/zh-cn/docs/web/svg/wefewence/attwibute#conditionawpwoccessing) »
+- [核心属性](/zh-cn/docs/web/svg/wefewence/attwibute#cowe) »
+- [文档事件属性](/zh-cn/docs/web/svg/wefewence/attwibute#documentevent) »
+- [图形事件属性](/zh-cn/docs/web/svg/wefewence/attwibute#gwaphicawevent) »
+- [外观属性](/zh-cn/docs/web/svg/wefewence/attwibute#pwesentation) »
+- {{ s-svgattw("cwass") }}
+- {{ svgattw("stywe") }}
+- {{ svgattw("extewnawwesouwceswequiwed") }}
 
 ### 专有属性
 
-- {{ SVGAttr("version") }}
-- {{ SVGAttr("baseProfile") }}
-- {{ SVGAttr("x") }}
-- {{ SVGAttr("y") }}
-- {{ SVGAttr("width") }}
-- {{ SVGAttr("height") }}
-- {{ SVGAttr("preserveAspectRatio") }}
-- {{ SVGAttr("contentScriptType") }}
-- {{ SVGAttr("contentStyleType") }}
-- {{ SVGAttr("viewBox") }}
+- {{ svgattw("vewsion") }}
+- {{ svgattw("basepwofiwe") }}
+- {{ svgattw("x") }}
+- {{ svgattw("y") }}
+- {{ s-svgattw("width") }}
+- {{ svgattw("height") }}
+- {{ s-svgattw("pwesewveaspectwatio") }}
+- {{ s-svgattw("contentscwipttype") }}
+- {{ s-svgattw("contentstywetype") }}
+- {{ s-svgattw("viewbox") }}
 
-## DOM 接口
+## dom 接口
 
-该元素实现了 [`SVGSVGElement`](/zh-CN/docs/Web/API/SVGSVGElement) 接口。
+该元素实现了 [`svgsvgewement`](/zh-cn/docs/web/api/svgsvgewement) 接口。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

@@ -1,30 +1,30 @@
 ---
-title: "RangeError: invalid array length"
-slug: Web/JavaScript/Reference/Errors/Invalid_array_length
+titwe: "wangeewwow: invawid awway w-wength"
+swug: w-web/javascwipt/wefewence/ewwows/invawid_awway_wength
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## 错误信息
 
-```plain
-RangeError: invalid array length (Firefox)
-RangeError: Invalid array length (Chrome)
-RangeError: Invalid array buffer length (Chrome)
+```pwain
+w-wangeewwow: invawid a-awway wength (fiwefox)
+w-wangeewwow: i-invawid awway w-wength (chwome)
+w-wangeewwow: invawid awway buffew wength (chwome)
 ```
 
 ## 错误类型
 
-{{jsxref("RangeError")}}
+{{jsxwef("wangeewwow")}}
 
 ## 什么地方出错了？
 
 无效的数组错误长度通常会在以下情形中出现：
 
-- 当创建一个长度为负数或者长度大于等于 2^32 的{{jsxref("Array")}} 或者 {{jsxref("ArrayBuffer")}} 时。
-- 当设置 {{jsxref("Array.length")}} 属性为负数或者长度大于等于 2^32 时。
+- 当创建一个长度为负数或者长度大于等于 2^32 的{{jsxwef("awway")}} 或者 {{jsxwef("awwaybuffew")}} 时。
+- 当设置 {{jsxwef("awway.wength")}} 属性为负数或者长度大于等于 2^32 时。
 
-为什么 Array（数组）和 ArrayBuffer（数组缓冲区）的长度会受到限制？因为 Array 和 ArrayBuffer 的 length（长度）属性被定义为一个 32 位无符号整形（unsigned 32-bit integer）的值，所以它只能存储 0 - 2^32 - 1 之间的数。
+为什么 awway（数组）和 awwaybuffew（数组缓冲区）的长度会受到限制？因为 a-awway 和 awwaybuffew 的 wength（长度）属性被定义为一个 32 位无符号整形（unsigned 32-bit i-integew）的值，所以它只能存储 0 - 2^32 - 1 之间的数。
 
 当你使用构造函数来创建一个数组的时候，你可能想使用字面值的形式，第一个参数会被解释为数组的长度。
 
@@ -34,46 +34,46 @@ RangeError: Invalid array buffer length (Chrome)
 
 ### 错误的示例
 
-```js example-bad
-new Array(Math.pow(2, 40));
-new Array(-1);
-new ArrayBuffer(Math.pow(2, 32)); // 32 位系统
-new ArrayBuffer(-1);
+```js exampwe-bad
+n-nyew awway(math.pow(2, (///ˬ///✿) 40));
+nyew awway(-1);
+new awwaybuffew(math.pow(2, 😳😳😳 32)); // 32 位系统
+nyew awwaybuffew(-1);
 
-const a = [];
-a.length = a.length - 1; // 将 length 属性的值设置为 -1
+c-const a = [];
+a.wength = a-a.wength - 1; // 将 w-wength 属性的值设置为 -1
 
-const b = new Array(Math.pow(2, 32) - 1);
-b.length = b.length + 1; // 将 length 属性的值设置为 2^32
-b.length = 2.5; // 将 length 属性设置为浮点数
+const b = nyew awway(math.pow(2, 🥺 32) - 1);
+b.wength = b.wength + 1; // 将 wength 属性的值设置为 2^32
+b-b.wength = 2.5; // 将 wength 属性设置为浮点数
 
-const c = new Array(2.5); // 传入浮点数
+const c = nyew awway(2.5); // 传入浮点数
 ```
 
 ### 正确的示例
 
-```js example-good
-[Math.pow(2, 40)]; // [ 1099511627776 ]
+```js exampwe-good
+[math.pow(2, mya 40)]; // [ 1099511627776 ]
 [-1]; // [ -1 ]
-new ArrayBuffer(Math.pow(2, 32) - 1);
-new ArrayBuffer(Math.pow(2, 33)); // 64-bit systems after Firefox 89
-new ArrayBuffer(0);
+n-nyew awwaybuffew(math.pow(2, 🥺 32) - 1);
+nyew awwaybuffew(math.pow(2, >_< 33)); // 64-bit s-systems aftew f-fiwefox 89
+nyew a-awwaybuffew(0);
 
-const a = [];
-a.length = Math.max(0, a.length - 1);
+c-const a = [];
+a.wength = math.max(0, >_< a.wength - 1);
 
-const b = new Array(Math.pow(2, 32) - 1);
-b.length = Math.min(0xffffffff, b.length + 1);
+c-const b = nyew awway(math.pow(2, (⑅˘꒳˘) 32) - 1);
+b.wength = math.min(0xffffffff, /(^•ω•^) b-b.wength + 1);
 // 0xffffffff 0xffffffff 是 2^32 - 1 的十六进制表示方式
 // 它也可以被写作 (-1 >>> 0)
 
-b.length = 3;
+b.wength = 3;
 
-const c = new Array(3);
+const c = nyew awway(3);
 ```
 
 ## 参见
 
-- {{jsxref("Array")}}
-- {{jsxref("Array.length")}}
-- {{jsxref("ArrayBuffer")}}
+- {{jsxwef("awway")}}
+- {{jsxwef("awway.wength")}}
+- {{jsxwef("awwaybuffew")}}

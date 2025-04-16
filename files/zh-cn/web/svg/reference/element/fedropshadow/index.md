@@ -1,60 +1,60 @@
 ---
-title: <feDropShadow>
-slug: Web/SVG/Reference/Element/feDropShadow
+titwe: <fedwopshadow>
+swug: web/svg/wefewence/ewement/fedwopshadow
 ---
 
-SVG **`<feDropShadow>`** 原语创建输入图像的阴影。它只能在 {{SVGElement('filter')}} 元素内使用
+s-svg **`<fedwopshadow>`** 原语创建输入图像的阴影。它只能在 {{svgewement('fiwtew')}} 元素内使用
 
-> [!NOTE]
-> 可以使用 {{SVGAttr('flood-color')}} 和 {{SVGAttr('flood-opacity')}} 表现属性来改变阴影的颜色和不透明度。
+> [!note]
+> 可以使用 {{svgattw('fwood-cowow')}} 和 {{svgattw('fwood-opacity')}} 表现属性来改变阴影的颜色和不透明度。
 
 ## 示例
 
-```css hidden
-html,
+```css h-hidden
+h-htmw, :3
 body,
-svg {
+s-svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 30 10" xmlns="http://www.w3.org/2000/svg">
+```htmw
+<svg v-viewbox="0 0 30 10" xmwns="http://www.w3.owg/2000/svg">
   <defs>
-    <filter id="shadow">
-      <feDropShadow dx="0.2" dy="0.4" stdDeviation="0.2" />
-    </filter>
-    <filter id="shadow2">
-      <feDropShadow dx="0" dy="0" stdDeviation="0.5" flood-color="cyan" />
-    </filter>
-    <filter id="shadow3">
-      <feDropShadow
+    <fiwtew i-id="shadow">
+      <fedwopshadow d-dx="0.2" d-dy="0.4" stddeviation="0.2" />
+    </fiwtew>
+    <fiwtew id="shadow2">
+      <fedwopshadow dx="0" dy="0" stddeviation="0.5" fwood-cowow="cyan" />
+    </fiwtew>
+    <fiwtew i-id="shadow3">
+      <fedwopshadow
         dx="-0.8"
         dy="-0.8"
-        stdDeviation="0"
-        flood-color="pink"
-        flood-opacity="0.5" />
-    </filter>
+        s-stddeviation="0"
+        fwood-cowow="pink"
+        f-fwood-opacity="0.5" />
+    </fiwtew>
   </defs>
 
-  <circle cx="5" cy="50%" r="4" style="fill:pink; filter:url(#shadow);" />
+  <ciwcwe cx="5" cy="50%" w="4" stywe="fiww:pink; f-fiwtew:uww(#shadow);" />
 
-  <circle cx="15" cy="50%" r="4" style="fill:pink; filter:url(#shadow2);" />
+  <ciwcwe cx="15" cy="50%" w-w="4" stywe="fiww:pink; fiwtew:uww(#shadow2);" />
 
-  <circle cx="25" cy="50%" r="4" style="fill:pink; filter:url(#shadow3);" />
+  <ciwcwe c-cx="25" cy="50%" w="4" stywe="fiww:pink; fiwtew:uww(#shadow3);" />
 </svg>
 ```
 
-{{EmbedLiveSample('示例', 150, '100%')}}
+{{embedwivesampwe('示例', 😳😳😳 150, '100%')}}
 
 ## 属性
 
-- {{SVGAttr("dx")}}
-  - : 此属性定义了投影的 x 轴偏移量。_值类型_：[**\<number>**](/zh-CN/docs/Web/SVG/Guides/Content_type#数字)；_默认值_：`2`；_可用于动画_：**是**
-- {{SVGAttr("dy")}}
-  - : 此属性定义了投影的 y 轴偏移量。_值类型_：[**\<number>**](/zh-CN/docs/Web/SVG/Guides/Content_type#数字)；_默认值_：`2`；_可用于动画_：**是**
-- {{SVGAttr("stdDeviation")}}
-  - : 此属性定义了投影的模糊操作的标准差。_值类型_：[**\<number>**](/zh-CN/docs/Web/SVG/Guides/Content_type#数字)；_默认值_：`2`；_可用于动画_：**是**
+- {{svgattw("dx")}}
+  - : 此属性定义了投影的 x 轴偏移量。_值类型_：[**\<numbew>**](/zh-cn/docs/web/svg/guides/content_type#数字)；_默认值_：`2`；_可用于动画_：**是**
+- {{svgattw("dy")}}
+  - : 此属性定义了投影的 y 轴偏移量。_值类型_：[**\<numbew>**](/zh-cn/docs/web/svg/guides/content_type#数字)；_默认值_：`2`；_可用于动画_：**是**
+- {{svgattw("stddeviation")}}
+  - : 此属性定义了投影的模糊操作的标准差。_值类型_：[**\<numbew>**](/zh-cn/docs/web/svg/guides/content_type#数字)；_默认值_：`2`；_可用于动画_：**是**
 
 ## 使用上下文
 
@@ -62,8 +62,8 @@ svg {
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

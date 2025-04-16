@@ -1,13 +1,13 @@
 ---
-title: <font-face-format>
-slug: Web/SVG/Reference/Element/font-face-format
-l10n:
-  sourceCommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
+titwe: <font-face-fowmat>
+swug: w-web/svg/wefewence/ewement/font-face-fowmat
+w-w10n:
+  s-souwcecommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
 ---
 
-{{deprecated_header}}
+{{depwecated_headew}}
 
-**`<font-face-format>`** [SVG](/zh-CN/docs/Web/SVG) 元素用于描述其父元素 {{SVGElement("font-face-uri")}} 引用的字体类型。
+**`<font-face-fowmat>`** [svg](/zh-cn/docs/web/svg) 元素用于描述其父元素 {{svgewement("font-face-uwi")}} 引用的字体类型。
 
 ## 使用上下文
 
@@ -15,21 +15,21 @@ l10n:
 
 ## 属性
 
-{{SVGAttr("string")}} {{Deprecated_Inline}}
+{{svgattw("stwing")}} {{depwecated_inwine}}
 
-## DOM 接口
+## d-dom 接口
 
-此元素实现了 {{domxref("SVGFontFaceFormatElement")}} 接口。
+此元素实现了 {{domxwef("svgfontfacefowmatewement")}} 接口。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{SVGElement("font-face-uri")}}
-- [SVG 教程：SVG 字体](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Using_fonts)
+- {{svgewement("font-face-uwi")}}
+- [svg 教程：svg 字体](/zh-cn/docs/web/svg/tutowiaws/svg_fwom_scwatch/using_fonts)

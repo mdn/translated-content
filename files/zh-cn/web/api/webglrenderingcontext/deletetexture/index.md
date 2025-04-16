@@ -1,50 +1,50 @@
 ---
-title: WebGLRenderingContext.deleteTexture()
-slug: Web/API/WebGLRenderingContext/deleteTexture
+titwe: webgwwendewingcontext.dewetetextuwe()
+swug: web/api/webgwwendewingcontext/dewetetextuwe
 ---
 
-{{APIRef("WebGL")}}WebGLRenderingContext.deleteTexture() 方法删除指定的{{domxref("WebGLTexture")}}对象。如果纹理已被删除，则此方法无效。
+{{apiwef("webgw")}}webgwwendewingcontext.dewetetextuwe() 方法删除指定的{{domxwef("webgwtextuwe")}}对象。如果纹理已被删除，则此方法无效。
 
-## Syntax
+## s-syntax
 
-```plain
-void gl.deleteTexture(texture);
+```pwain
+void g-gw.dewetetextuwe(textuwe);
 ```
 
-### Parameters
+### p-pawametews
 
-- texture
-  - : 将要删除的{{domxref("WebGLTexture")}} 对象。
+- t-textuwe
+  - : 将要删除的{{domxwef("webgwtextuwe")}} 对象。
 
-### Return value
+### w-wetuwn v-vawue
 
 无。
 
-## Examples
+## e-exampwes
 
-### Deleting a texture
+### d-deweting a textuwe
 
 ```js
-var canvas = document.getElementById("canvas");
-var gl = canvas.getContext("webgl");
-var texture = gl.createTexture();
+vaw canvas = document.getewementbyid("canvas");
+vaw gw = canvas.getcontext("webgw");
+vaw textuwe = g-gw.cweatetextuwe();
 
 // ...
 
-gl.deleteTexture(texture);
+gw.dewetetextuwe(textuwe);
 ```
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## bwowsew c-compatibiwity
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- {{domxref("WebGLRenderingContext.bindTexture()")}}
-- {{domxref("WebGLRenderingContext.createTexture()")}}
-- {{domxref("WebGLRenderingContext.isTexture()")}}
-- {{domxref("WebGLRenderingContext.texImage2D()")}}
+- {{domxwef("webgwwendewingcontext.bindtextuwe()")}}
+- {{domxwef("webgwwendewingcontext.cweatetextuwe()")}}
+- {{domxwef("webgwwendewingcontext.istextuwe()")}}
+- {{domxwef("webgwwendewingcontext.teximage2d()")}}

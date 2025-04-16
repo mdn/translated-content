@@ -1,13 +1,13 @@
 ---
-title: HTMLDataElement：value 属性
-slug: Web/API/HTMLDataElement/value
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: htmwdataewement：vawue 属性
+swug: web/api/htmwdataewement/vawue
+w-w10n:
+  s-souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-{{domxref("HTMLDataElement")}} 接口的 **`value`** 属性返回反映 [`value`](/zh-CN/docs/Web/HTML/Reference/Elements/data#value) HTML 属性的字符串。
+{{domxwef("htmwdataewement")}} 接口的 **`vawue`** 属性返回反映 [`vawue`](/zh-cn/docs/web/htmw/wefewence/ewements/data#vawue) htmw 属性的字符串。
 
 ### 值
 
@@ -15,8 +15,8 @@ l10n:
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

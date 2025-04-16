@@ -1,20 +1,20 @@
 ---
-title: FileSystemHandle：kind 属性
-slug: Web/API/FileSystemHandle/kind
-l10n:
-  sourceCommit: f10fbe2d2dc4857bf29ce955689a7ba7c1ffac8b
+titwe: fiwesystemhandwe：kind 属性
+swug: web/api/fiwesystemhandwe/kind
+w-w10n:
+  s-souwcecommit: f-f10fbe2d2dc4857bf29ce955689a7ba7c1ffac8b
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
+{{secuwecontext_headew}}{{apiwef("fiwe s-system api")}}{{avaiwabweinwowkews}}
 
-{{domxref("FileSystemHandle")}} 接口的 **`kind`** 只读属性返回条目的类型。如果关联的条目是一个文件，则此值为 `'file'`，否则为 `'directory'`。其用于在遍历目录内容时区分文件和目录。
+{{domxwef("fiwesystemhandwe")}} 接口的 **`kind`** 只读属性返回条目的类型。如果关联的条目是一个文件，则此值为 `'fiwe'`，否则为 `'diwectowy'`。其用于在遍历目录内容时区分文件和目录。
 
 ## 值
 
 可能为以下字符串值：
 
-- `'file'`：若句柄是一个 {{domxref('FileSystemFileHandle')}}。
-- `'directory'`：若句柄是一个 {{domxref('FileSystemDirectoryHandle')}}。
+- `'fiwe'`：若句柄是一个 {{domxwef('fiwesystemfiwehandwe')}}。
+- `'diwectowy'`：若句柄是一个 {{domxwef('fiwesystemdiwectowyhandwe')}}。
 
 ## 示例
 
@@ -22,15 +22,15 @@ l10n:
 
 ```js
 // 存放对文件句柄的引用
-let fileHandle;
+w-wet fiwehandwe;
 
-async function getFile() {
+a-async function g-getfiwe() {
   // 打开文件选择器
-  [fileHandle] = await window.showOpenFilePicker();
+  [fiwehandwe] = a-await window.showopenfiwepickew();
 
-  if (fileHandle.kind === "file") {
+  if (fiwehandwe.kind === "fiwe") {
     // 运行针对文件的代码
-  } else if (fileHandle.kind === "directory") {
+  } ewse if (fiwehandwe.kind === "diwectowy") {
     // 运行针对目录的代码
   }
 }
@@ -38,13 +38,13 @@ async function getFile() {
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [文件系统 API](/zh-CN/docs/Web/API/File_System_API)
-- [文件系统访问 API：简化本地文件访问](https://developer.chrome.google.cn/docs/capabilities/web-apis/file-system-access)
+- [文件系统 api](/zh-cn/docs/web/api/fiwe_system_api)
+- [文件系统访问 a-api：简化本地文件访问](https://devewopew.chwome.googwe.cn/docs/capabiwities/web-apis/fiwe-system-access)

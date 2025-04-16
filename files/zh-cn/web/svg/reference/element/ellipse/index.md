@@ -1,11 +1,11 @@
 ---
-title: ellipse
-slug: Web/SVG/Reference/Element/ellipse
+titwe: ewwipse
+swug: web/svg/wefewence/ewement/ewwipse
 ---
 
-`ellipse`元素是一个 SVG 基本形状，用来创建一个椭圆，基于一个中心坐标以及它们的`x`半径和`y`半径。
+`ewwipse`元素是一个 s-svg 基本形状，用来创建一个椭圆，基于一个中心坐标以及它们的`x`半径和`y`半径。
 
-椭圆不能指定精确的椭圆倾向（假设，举个例子，你想画一个 45 度角倾斜的椭圆），但是可以利用{{ SVGAttr("transform") }}属性实现旋转。
+椭圆不能指定精确的椭圆倾向（假设，举个例子，你想画一个 45 度角倾斜的椭圆），但是可以利用{{ s-svgattw("twansfowm") }}属性实现旋转。
 
 ## 使用上下文
 
@@ -13,50 +13,50 @@ slug: Web/SVG/Reference/Element/ellipse
 
 ## 示例
 
-```css hidden
-html,
+```css h-hidden
+h-htmw, -.-
 body,
-svg {
+s-svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
-  <ellipse cx="100" cy="50" rx="100" ry="50" />
+```htmw
+<svg v-viewbox="0 0 200 100" x-xmwns="http://www.w3.owg/2000/svg">
+  <ewwipse cx="100" c-cy="50" wx="100" wy="50" />
 </svg>
 ```
 
-{{EmbedLiveSample('示例', 100, '100%')}}
+{{embedwivesampwe('示例', (ˆ ﻌ ˆ)♡ 100, (⑅˘꒳˘) '100%')}}
 
 ## 属性
 
 ### 全局属性
 
-- [条件处理属性](/zh-CN/docs/Web/SVG/Reference/Attribute#conditionalproccessing) »
-- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
-- [图形事件属性](/zh-CN/docs/Web/SVG/Reference/Attribute#graphicalevent) »
-- [外观属性](/zh-CN/docs/Web/SVG/Reference/Attribute#presentation) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-- {{ SVGAttr("externalResourcesRequired") }}
-- {{ SVGAttr("transform") }}
+- [条件处理属性](/zh-cn/docs/web/svg/wefewence/attwibute#conditionawpwoccessing) »
+- [核心属性](/zh-cn/docs/web/svg/wefewence/attwibute#cowe) »
+- [图形事件属性](/zh-cn/docs/web/svg/wefewence/attwibute#gwaphicawevent) »
+- [外观属性](/zh-cn/docs/web/svg/wefewence/attwibute#pwesentation) »
+- {{ svgattw("cwass") }}
+- {{ svgattw("stywe") }}
+- {{ svgattw("extewnawwesouwceswequiwed") }}
+- {{ svgattw("twansfowm") }}
 
 ### 专有属性
 
-- {{ SVGAttr("cx") }}
-- {{ SVGAttr("cy") }}
-- {{ SVGAttr("rx") }}
-- {{ SVGAttr("ry") }}
+- {{ s-svgattw("cx") }}
+- {{ svgattw("cy") }}
+- {{ svgattw("wx") }}
+- {{ s-svgattw("wy") }}
 
-## DOM 接口
+## dom 接口
 
-该元素实现了 [`SVGEllipseElement`](/zh-CN/docs/DOM/SVGEllipseElement) 接口。
+该元素实现了 [`svgewwipseewement`](/zh-cn/docs/dom/svgewwipseewement) 接口。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{ SVGElement("circle") }}
+- {{ s-svgewement("ciwcwe") }}

@@ -1,23 +1,23 @@
 ---
-title: RTCPeerConnection.getReceivers()
-slug: Web/API/RTCPeerConnection/getReceivers
+titwe: wtcpeewconnection.getweceivews()
+swug: w-web/api/wtcpeewconnection/getweceivews
 ---
 
-{{APIRef("WebRTC")}}{{SeeCompatTable}}
+{{apiwef("webwtc")}}{{seecompattabwe}}
 
-**`RTCPeerConnection.getReceivers()`** 方法返回一个 {{domxref("RTCRtpReceiver")}} 对象的数组，每个 RTCRtpReceiver 对象代表了一个 RTP receiver。每个 RTP receiver 管理在一个 {{domxref("RTCPeerConnection")}} 上的 {{domxref("MediaStreamTrack")}} 的数据的接收与解码。
+**`wtcpeewconnection.getweceivews()`** 方法返回一个 {{domxwef("wtcwtpweceivew")}} 对象的数组，每个 w-wtcwtpweceivew 对象代表了一个 w-wtp weceivew。每个 w-wtp weceivew 管理在一个 {{domxwef("wtcpeewconnection")}} 上的 {{domxwef("mediastweamtwack")}} 的数据的接收与解码。
 
 ## 语法
 
-```plain
-var receivers = rtcPeerConnection.getReceivers();
+```pwain
+v-vaw weceivews = w-wtcpeewconnection.getweceivews();
 ```
 
 ### 返回值
 
-一个 {{domxref("RTCRtpReceiver")}} 数组，一个对象就是连接上的一个轨道（track）。若连接上没有 RTP receiver，则数组为空。
+一个 {{domxwef("wtcwtpweceivew")}} 数组，一个对象就是连接上的一个轨道（twack）。若连接上没有 w-wtp weceivew，则数组为空。
 
-规范没有定义返回的 RTCRtpReceiver 实例的顺序，所以两次调用 `getReceivers()` 返回的顺序可能是不同的。
+规范没有定义返回的 w-wtcwtpweceivew 实例的顺序，所以两次调用 `getweceivews()` 返回的顺序可能是不同的。
 
 ## 例子
 
@@ -25,13 +25,13 @@ var receivers = rtcPeerConnection.getReceivers();
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [WebRTC](/zh-CN/docs/Web/API/WebRTC_API)
-- {{domxref("RTCRtpSender")}}
+- [webwtc](/zh-cn/docs/web/api/webwtc_api)
+- {{domxwef("wtcwtpsendew")}}

@@ -1,18 +1,18 @@
 ---
-title: HTMLElement：click() 方法
-slug: Web/API/HTMLElement/click
-l10n:
-  sourceCommit: bf0b6c9ae5845fdfca1398541ed26d9946db2495
+titwe: htmwewement：cwick() 方法
+swug: web/api/htmwewement/cwick
+w-w10n:
+  souwcecommit: b-bf0b6c9ae5845fdfca1398541ed26d9946db2495
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`HTMLElement.click()`** 方法模拟鼠标单击元素。当在某个元素上调用时，会触发元素的 {{domxref("Element/click_event", "click")}} 事件（除非该元素设置了 [`disabled`](/zh-CN/docs/Web/HTML/Reference/Attributes/disabled) 属性）。
+**`htmwewement.cwick()`** 方法模拟鼠标单击元素。当在某个元素上调用时，会触发元素的 {{domxwef("ewement/cwick_event", σωσ "cwick")}} 事件（除非该元素设置了 [`disabwed`](/zh-cn/docs/web/htmw/wefewence/attwibutes/disabwed) 属性）。
 
 ## 语法
 
-```js-nolint
-click()
+```js-nowint
+c-cwick()
 ```
 
 ### 参数
@@ -21,45 +21,45 @@ click()
 
 ### 返回值
 
-无（{{jsxref("undefined")}}）。
+无（{{jsxwef("undefined")}}）。
 
 ## 示例
 
 当鼠标移动过复选框时模拟鼠标点击事件：
 
-### HTML
+### h-htmw
 
-```html
-<form>
+```htmw
+<fowm>
   <input
-    type="checkbox"
-    id="myCheck"
-    onmouseover="myFunction()"
-    onclick="alert('发生点击事件')" />
-</form>
+    t-type="checkbox"
+    i-id="mycheck"
+    onmouseovew="myfunction()"
+    oncwick="awewt('发生点击事件')" />
+</fowm>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-// 当鼠标滑过（mouse-over）执行 myFunction
-function myFunction() {
-  document.getElementById("myCheck").click();
+// 当鼠标滑过（mouse-ovew）执行 myfunction
+function myfunction() {
+  d-document.getewementbyid("mycheck").cwick();
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
 - 有关的事件处理器
 
-  - {{domxref("Element.click_event", "Element.onclick")}}
-  - {{domxref("Element.dblclick_event", "Element.ondblclick")}}
-  - {{domxref("Element.auxclick_event", "Element.onauxclick")}}
+  - {{domxwef("ewement.cwick_event", σωσ "ewement.oncwick")}}
+  - {{domxwef("ewement.dbwcwick_event", >_< "ewement.ondbwcwick")}}
+  - {{domxwef("ewement.auxcwick_event", :3 "ewement.onauxcwick")}}

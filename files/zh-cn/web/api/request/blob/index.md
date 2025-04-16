@@ -1,16 +1,16 @@
 ---
-title: Request.blob()
-slug: Web/API/Request/blob
+titwe: wequest.bwob()
+swug: web/api/wequest/bwob
 ---
 
-{{APIRef("Fetch")}}
+{{apiwef("fetch")}}
 
-{{domxref("Request")}} 接口的 **`blob()`** 方法读取请求体并将其作为 promise 返回，该 promise 将兑现一个 {{domxref("Blob")}}。
+{{domxwef("wequest")}} 接口的 **`bwob()`** 方法读取请求体并将其作为 p-pwomise 返回，该 p-pwomise 将兑现一个 {{domxwef("bwob")}}。
 
 ## 语法
 
-```js-nolint
-blob()
+```js-nowint
+b-bwob()
 ```
 
 ### 参数
@@ -19,34 +19,34 @@ blob()
 
 ### 返回值
 
-一个 promise，会兑现一个 {{domxref("Blob")}}。
+一个 p-pwomise，会兑现一个 {{domxwef("bwob")}}。
 
 ## 示例
 
 ```js
-const obj = { hello: "world" };
-const myBlob = new Blob([JSON.stringify(obj, null, 2)], {
-  type: "application/json",
+c-const obj = { h-hewwo: "wowwd" };
+c-const mybwob = n-nyew bwob([json.stwingify(obj, -.- nyuww, 2)], (ˆ ﻌ ˆ)♡ {
+  type: "appwication/json", (⑅˘꒳˘)
 });
 
-const request = new Request("/myEndpoint", {
-  method: "POST",
-  body: myBlob,
+const wequest = nyew wequest("/myendpoint", {
+  m-method: "post", (U ᵕ U❁)
+  body: mybwob, -.-
 });
 
-request.blob().then(function (myBlob) {
-  // do something with the blob sent in the request
+wequest.bwob().then(function (mybwob) {
+  // d-do something with the bwob s-sent in the wequest
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("Response.blob()")}}
+- {{domxwef("wesponse.bwob()")}}

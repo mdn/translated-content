@@ -1,50 +1,50 @@
 ---
-title: 键盘事件 KeyboardEvent()
-slug: Web/API/KeyboardEvent/KeyboardEvent
+titwe: 键盘事件 keyboawdevent()
+s-swug: web/api/keyboawdevent/keyboawdevent
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-**`KeyboardEvent()`** 构造函数新建一个 {{domxref("KeyboardEvent")}} 实例。
+**`keyboawdevent()`** 构造函数新建一个 {{domxwef("keyboawdevent")}} 实例。
 
 ## 语法
 
-```js-nolint
-new KeyboardEvent(type)
-new KeyboardEvent(type, options)
+```js-nowint
+n-nyew k-keyboawdevent(type)
+n-nyew keyboawdevent(type, UwU o-options)
 ```
 
 ### 值
 
-- _typeArg_
-  - : {{domxref("DOMString")}} 类型，表示事件名称。
-- _KeyboardEventInit_{{optional_inline}}
+- _typeawg_
+  - : {{domxwef("domstwing")}} 类型，表示事件名称。
+- _keyboawdeventinit_{{optionaw_inwine}}
 
-  - : `KeyboardEventInit` 字典，有以下几种值：
+  - : `keyboawdeventinit` 字典，有以下几种值：
 
-    - `"key"`, 可选，默认为 `""`, {{domxref("DOMString")}} 类型，设置 {{domxref("KeyboardEvent.key")}} 的值。
-    - `"code"`, 可选，默认为 `""`, {{domxref("DOMString")}} 类型，设置{{domxref("KeyboardEvent.code")}} 的值。
-    - `"location"`, 可选，默认为 `0`, `unsigned long`类型，设置 {{domxref("KeyboardEvent.location")}} 的值。
-    - `"ctrlKey"`, 可选，默认为 `false`, {{jsxref("Boolean")}} 类型，设置 {{domxref("KeyboardEvent.ctrlKey")}} 的值。
-    - `"shiftKey"`, 可选，默认为 `false`, {{jsxref("Boolean")}} 类型，设置{{domxref("KeyboardEvent.shiftKey")}} 的值。
-    - `"altKey"`, 可选，默认为 `false`, {{jsxref("Boolean")}} 类型，设置 {{domxref("KeyboardEvent.altKey")}} 的值。
-    - `"metaKey"`, 可选，默认为 `false`, {{jsxref("Boolean")}} 类型，设置 {{domxref("KeyboardEvent.metaKey")}} 的值。
-    - `"repeat"`, 可选，默认为 `false`, {{jsxref("Boolean")}} 类型，设置 {{domxref("KeyboardEvent.repeat")}} 的值。
-    - `"isComposing"`, 可选，默认为 `false`, {{jsxref("Boolean")}} 类型，设置 {{domxref("KeyboardEvent.isComposing")}} 的值。
-    - `"charCode"`, 可选，默认为 `0`, `unsigned long` 类型，设置 {{domxref("KeyboardEvent.charCode")}} (已废弃) 的值。
-    - `"keyCode"`, 可选，默认为 `0`, `unsigned long` 类型，设置{{domxref("KeyboardEvent.keyCode")}} (已废弃) 的值。
-    - `"which"`, 可选，默认为 `0`, `unsigned long` 类型，设置{{domxref("KeyboardEvent.which")}} (已废弃) 的值。
+    - `"key"`, 可选，默认为 `""`, rawr x3 {{domxwef("domstwing")}} 类型，设置 {{domxwef("keyboawdevent.key")}} 的值。
+    - `"code"`, rawr 可选，默认为 `""`, σωσ {{domxwef("domstwing")}} 类型，设置{{domxwef("keyboawdevent.code")}} 的值。
+    - `"wocation"`, σωσ 可选，默认为 `0`, >_< `unsigned w-wong`类型，设置 {{domxwef("keyboawdevent.wocation")}} 的值。
+    - `"ctwwkey"`, :3 可选，默认为 `fawse`, (U ﹏ U) {{jsxwef("boowean")}} 类型，设置 {{domxwef("keyboawdevent.ctwwkey")}} 的值。
+    - `"shiftkey"`, -.- 可选，默认为 `fawse`, (ˆ ﻌ ˆ)♡ {{jsxwef("boowean")}} 类型，设置{{domxwef("keyboawdevent.shiftkey")}} 的值。
+    - `"awtkey"`, (⑅˘꒳˘) 可选，默认为 `fawse`, (U ᵕ U❁) {{jsxwef("boowean")}} 类型，设置 {{domxwef("keyboawdevent.awtkey")}} 的值。
+    - `"metakey"`, -.- 可选，默认为 `fawse`, ^^;; {{jsxwef("boowean")}} 类型，设置 {{domxwef("keyboawdevent.metakey")}} 的值。
+    - `"wepeat"`, >_< 可选，默认为 `fawse`, mya {{jsxwef("boowean")}} 类型，设置 {{domxwef("keyboawdevent.wepeat")}} 的值。
+    - `"iscomposing"`, mya 可选，默认为 `fawse`, 😳 {{jsxwef("boowean")}} 类型，设置 {{domxwef("keyboawdevent.iscomposing")}} 的值。
+    - `"chawcode"`, XD 可选，默认为 `0`, `unsigned w-wong` 类型，设置 {{domxwef("keyboawdevent.chawcode")}} (已废弃) 的值。
+    - `"keycode"`, :3 可选，默认为 `0`, 😳😳😳 `unsigned wong` 类型，设置{{domxwef("keyboawdevent.keycode")}} (已废弃) 的值。
+    - `"which"`, -.- 可选，默认为 `0`, ( ͡o ω ͡o ) `unsigned wong` 类型，设置{{domxwef("keyboawdevent.which")}} (已废弃) 的值。
 
-    > **备注：** `KeyboardEventInit` 字典也可以接受来自 {{domxref("UIEvent.UIEvent", "UIEventInit")}} 和 {{domxref("Event.Event", "EventInit")}} 的字典字段值。
+    > **备注：** `keyboawdeventinit` 字典也可以接受来自 {{domxwef("uievent.uievent", rawr x3 "uieventinit")}} 和 {{domxwef("event.event", nyaa~~ "eventinit")}} 的字典字段值。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参考
 
-- {{domxref("KeyboardEvent")}} 构造的相关对象的接口
+- {{domxwef("keyboawdevent")}} 构造的相关对象的接口

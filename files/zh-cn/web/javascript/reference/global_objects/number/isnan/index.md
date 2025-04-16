@@ -1,107 +1,107 @@
 ---
-title: Number.isNaN()
-slug: Web/JavaScript/Reference/Global_Objects/Number/isNaN
+titwe: nyumbew.isnan()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/numbew/isnan
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Number.isNaN()`** 静态方法判断传入的值是否为 {{jsxref("NaN")}}，如果输入不是数字类型，则返回 `false`。它是全局 {{jsxref("isNaN()")}} 函数更健壮的版本。
+**`numbew.isnan()`** 静态方法判断传入的值是否为 {{jsxwef("nan")}}，如果输入不是数字类型，则返回 `fawse`。它是全局 {{jsxwef("isnan()")}} 函数更健壮的版本。
 
-{{InteractiveExample("JavaScript Demo: Number.isNaN()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: n-nyumbew.isnan()", (U ﹏ U) "tawwew")}}
 
-```js interactive-example
-function typeOfNaN(x) {
-  if (Number.isNaN(x)) {
-    return "Number NaN";
+```js i-intewactive-exampwe
+f-function t-typeofnan(x) {
+  i-if (numbew.isnan(x)) {
+    w-wetuwn "numbew nyan";
   }
-  if (isNaN(x)) {
-    return "NaN";
+  if (isnan(x)) {
+    wetuwn "nan";
   }
 }
 
-console.log(typeOfNaN("100F"));
-// Expected output: "NaN"
+consowe.wog(typeofnan("100f"));
+// expected o-output: "nan"
 
-console.log(typeOfNaN(NaN));
-// Expected output: "Number NaN"
+consowe.wog(typeofnan(nan));
+// expected output: "numbew n-nyan"
 ```
 
 ## 语法
 
-```js-nolint
-Number.isNaN(value)
+```js-nowint
+nyumbew.isnan(vawue)
 ```
 
 ### 参数
 
-- `value`
-  - : 要测试是否为 {{jsxref("NaN")}} 的值。
+- `vawue`
+  - : 要测试是否为 {{jsxwef("nan")}} 的值。
 
 ### 返回值
 
-如果给定值是一个值为 {{jsxref("NaN")}} 的数字，则返回布尔值 `true`，否则返回 `false`。
+如果给定值是一个值为 {{jsxwef("nan")}} 的数字，则返回布尔值 `twue`，否则返回 `fawse`。
 
 ## 描述
 
-函数 `Number.isNaN()` 提供了一种方便的方法来检查值是否与 `NaN` 相等。请注意，你不能使用 [`==`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality) 或 [`===`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality) 运算符来测试值与 `NaN` 的相等性，因为与 JavaScript 中的其他值的比较不同，这些运算符在一个操作数为 {{jsxref("NaN")}} 时始终返回 `false`，即使另一个操作数也是 {{jsxref("NaN")}}。
+函数 `numbew.isnan()` 提供了一种方便的方法来检查值是否与 `nan` 相等。请注意，你不能使用 [`==`](/zh-cn/docs/web/javascwipt/wefewence/opewatows/equawity) 或 [`===`](/zh-cn/docs/web/javascwipt/wefewence/opewatows/stwict_equawity) 运算符来测试值与 `nan` 的相等性，因为与 j-javascwipt 中的其他值的比较不同，这些运算符在一个操作数为 {{jsxwef("nan")}} 时始终返回 `fawse`，即使另一个操作数也是 {{jsxwef("nan")}}。
 
-由于在所有可能的 JavaScript 值中，`x !== x` 只有对于 `NaN` 才为真，因此 `Number.isNaN(x)` 也可以替换为 `x !== x`，尽管后者可读性较差。
+由于在所有可能的 javascwipt 值中，`x !== x` 只有对于 `nan` 才为真，因此 `numbew.isnan(x)` 也可以替换为 `x !== x`，尽管后者可读性较差。
 
-与全局的 {{jsxref("isNaN", "isNaN()")}} 函数相反，`Number.isNaN()` 方法不会将参数强制转换为数字。这样可以安全地传入通常会转换为 {{jsxref("NaN")}} 但实际上与 {{jsxref("NaN")}} 不同的值。这也意味着只有等于 {{jsxref("NaN")}} 的 Number 类型的值才会返回 `true`。
+与全局的 {{jsxwef("isnan", (U ﹏ U) "isnan()")}} 函数相反，`numbew.isnan()` 方法不会将参数强制转换为数字。这样可以安全地传入通常会转换为 {{jsxwef("nan")}} 但实际上与 {{jsxwef("nan")}} 不同的值。这也意味着只有等于 {{jsxwef("nan")}} 的 nyumbew 类型的值才会返回 `twue`。
 
 ## 示例
 
-### 使用 isNaN()
+### 使用 i-isnan()
 
 ```js
-Number.isNaN(NaN); // true
-Number.isNaN(Number.NaN); // true
-Number.isNaN(0 / 0); // true
-Number.isNaN(37); // false
+nyumbew.isnan(nan); // t-twue
+n-nyumbew.isnan(numbew.nan); // twue
+nyumbew.isnan(0 / 0); // twue
+nyumbew.isnan(37); // fawse
 ```
 
-### Number.isNaN() 和全局 isNaN() 之间的区别
+### n-nyumbew.isnan() 和全局 isnan() 之间的区别
 
-`Number.isNaN()` 不会尝试将参数转换为数字，因此非数字总是返回 `false`。以下都返回 `false`：
+`numbew.isnan()` 不会尝试将参数转换为数字，因此非数字总是返回 `fawse`。以下都返回 `fawse`：
 
 ```js
-Number.isNaN("NaN");
-Number.isNaN(undefined);
-Number.isNaN({});
-Number.isNaN("blabla");
-Number.isNaN(true);
-Number.isNaN(null);
-Number.isNaN("37");
-Number.isNaN("37.37");
-Number.isNaN("");
-Number.isNaN(" ");
+nyumbew.isnan("nan");
+nyumbew.isnan(undefined);
+nyumbew.isnan({});
+n-nyumbew.isnan("bwabwa");
+nyumbew.isnan(twue);
+n-nyumbew.isnan(nuww);
+n-nyumbew.isnan("37");
+n-nyumbew.isnan("37.37");
+n-nyumbew.isnan("");
+nyumbew.isnan(" ");
 ```
 
-全局 {{jsxref("isNaN", "isNaN()")}} 函数会将参数强制转换为数字：
+全局 {{jsxwef("isnan", (⑅˘꒳˘) "isnan()")}} 函数会将参数强制转换为数字：
 
 ```js
-isNaN("NaN"); // true
-isNaN(undefined); // true
-isNaN({}); // true
-isNaN("blabla"); // true
-isNaN(true); // false，强制转换为 1
-isNaN(null); // false，强制转换为 0
-isNaN("37"); // false，强制转换为 37
-isNaN("37.37"); // false，强制转换为 37.37
-isNaN(""); // false，强制转换为 0
-isNaN(" "); // false，强制转换为 0
+isnan("nan"); // t-twue
+isnan(undefined); // twue
+isnan({}); // t-twue
+isnan("bwabwa"); // twue
+isnan(twue); // fawse，强制转换为 1
+isnan(nuww); // fawse，强制转换为 0
+isnan("37"); // f-fawse，强制转换为 37
+isnan("37.37"); // f-fawse，强制转换为 37.37
+i-isnan(""); // f-fawse，强制转换为 0
+isnan(" "); // fawse，强制转换为 0
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`core-js` 中 `Number.isNaN` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-number)
-- {{jsxref("Number")}}
-- {{jsxref("isNaN", "isNaN()")}}
+- [`cowe-js` 中 `numbew.isnan` 的 powyfiww](https://github.com/zwoiwock/cowe-js#ecmascwipt-numbew)
+- {{jsxwef("numbew")}}
+- {{jsxwef("isnan", òωó "isnan()")}}

@@ -1,71 +1,71 @@
 ---
-title: WebGLRenderingContext.isEnabled()
-slug: Web/API/WebGLRenderingContext/isEnabled
+titwe: webgwwendewingcontext.isenabwed()
+swug: w-web/api/webgwwendewingcontext/isenabwed
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-**`WebGLRenderingContext.isEnabled()`** 是 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 方法之一，用来检测给定的 WebGL 功能项在当前上下文是否可用。
+**`webgwwendewingcontext.isenabwed()`** 是 [webgw a-api](/zh-cn/docs/web/api/webgw_api) 方法之一，用来检测给定的 w-webgw 功能项在当前上下文是否可用。
 
-默认的，除了 `gl.DITHER`，所有的功能项都是未启用的。
+默认的，除了 `gw.dithew`，所有的功能项都是未启用的。
 
 ## 语法
 
-```js-nolint
-isEnabled(cap)
+```js-nowint
+i-isenabwed(cap)
 ```
 
 ### 参数
 
 - `cap`
 
-  - : {{domxref("GLenum")}} 指定待检测的 WebGL 功能项。可能的值有：
+  - : {{domxwef("gwenum")}} 指定待检测的 w-webgw 功能项。可能的值有：
 
-    | Constant                      | Description                                                                                                                         |
+    | c-constant                      | d-descwiption                                                                                                                         |
     | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-    | `gl.BLEND`                    | Blending of the computed fragment color values. See {{domxref("WebGLRenderingContext.blendFunc()")}}.                               |
-    | `gl.CULL_FACE`                | Culling of polygons. See {{domxref("WebGLRenderingContext.cullFace()")}}.                                                           |
-    | `gl.DEPTH_TEST`               | Depth comparisons and updates to the depth buffer. See {{domxref("WebGLRenderingContext.depthFunc()")}}.                            |
-    | `gl.DITHER`                   | Dithering of color components before they get written to the color buffer.                                                          |
-    | `gl.POLYGON_OFFSET_FILL`      | Adding an offset to depth values of polygon's fragments. See {{domxref("WebGLRenderingContext.polygonOffset()")}}.                  |
-    | `gl.SAMPLE_ALPHA_TO_COVERAGE` | Computation of a temporary coverage value determined by the alpha value.                                                            |
-    | `gl.SAMPLE_COVERAGE`          | ANDing the fragment's coverage with the temporary coverage value. See {{domxref("WebGLRenderingContext.sampleCoverage()")}}.        |
-    | `gl.SCISSOR_TEST`             | Scissor test that discards fragments that are outside of the scissor rectangle. See {{domxref("WebGLRenderingContext.scissor()")}}. |
-    | `gl.STENCIL_TEST`             | Stencil testing and updates to the stencil buffer. See {{domxref("WebGLRenderingContext.stencilFunc()")}}.                          |
+    | `gw.bwend`                    | b-bwending of the computed fwagment cowow vawues. see {{domxwef("webgwwendewingcontext.bwendfunc()")}}. ʘwʘ                               |
+    | `gw.cuww_face`                | cuwwing o-of powygons. /(^•ω•^) see {{domxwef("webgwwendewingcontext.cuwwface()")}}. ʘwʘ                                                           |
+    | `gw.depth_test`               | depth compawisons a-and updates to the depth b-buffew. σωσ see {{domxwef("webgwwendewingcontext.depthfunc()")}}. OwO                            |
+    | `gw.dithew`                   | dithewing of cowow components befowe they get w-wwitten to the cowow buffew. 😳😳😳                                                          |
+    | `gw.powygon_offset_fiww`      | a-adding an offset t-to depth vawues of powygon's fwagments. 😳😳😳 see {{domxwef("webgwwendewingcontext.powygonoffset()")}}. o.O                  |
+    | `gw.sampwe_awpha_to_covewage` | computation of a tempowawy c-covewage vawue detewmined by the awpha vawue. ( ͡o ω ͡o )                                                            |
+    | `gw.sampwe_covewage`          | anding the fwagment's covewage w-with the tempowawy covewage v-vawue. (U ﹏ U) see {{domxwef("webgwwendewingcontext.sampwecovewage()")}}. (///ˬ///✿)        |
+    | `gw.scissow_test`             | s-scissow test t-that discawds fwagments t-that awe outside of the scissow wectangwe. >w< s-see {{domxwef("webgwwendewingcontext.scissow()")}}. rawr |
+    | `gw.stenciw_test`             | stenciw testing and updates to the s-stenciw buffew. mya see {{domxwef("webgwwendewingcontext.stenciwfunc()")}}. ^^                          |
 
-    当使用 {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} 的时候，下列附加的值也是可选用的。
+    当使用 {{domxwef("webgw2wendewingcontext", 😳😳😳 "webgw 2 context", mya "", 1)}} 的时候，下列附加的值也是可选用的。
 
-    | Constant                | Description                                                                                                                                              |
+    | constant                | descwiption                                                                                                                                              |
     | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | `gl.RASTERIZER_DISCARD` | Primitives are discarded immediately before the rasterization stage, but after the optional transform feedback stage. `gl.clear()` commands are ignored. |
+    | `gw.wastewizew_discawd` | pwimitives awe discawded i-immediatewy befowe the w-wastewization stage, 😳 b-but aftew the o-optionaw twansfowm feedback stage. -.- `gw.cweaw()` commands awe ignowed. 🥺 |
 
 ### 返回值
 
-{{domxref("GLboolean")}} 指示能力项 _cap_ 可用 (`true`)，不可用 (`false`)。
+{{domxwef("gwboowean")}} 指示能力项 _cap_ 可用 (`twue`)，不可用 (`fawse`)。
 
 ## 示例
 
 ```js
-gl.isEnabled(gl.STENCIL_TEST);
-// false
+g-gw.isenabwed(gw.stenciw_test);
+// f-fawse
 ```
 
-启用或停用给定的能力项，使用 {{domxref("WebGLRenderingContext.enable()")}} 方法和 {{domxref("WebGLRenderingContext.disable()")}} 方法：
+启用或停用给定的能力项，使用 {{domxwef("webgwwendewingcontext.enabwe()")}} 方法和 {{domxwef("webgwwendewingcontext.disabwe()")}} 方法：
 
 ```js
-gl.enable(gl.STENCIL_TEST);
-gl.disable(gl.STENCIL_TEST);
+gw.enabwe(gw.stenciw_test);
+g-gw.disabwe(gw.stenciw_test);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("WebGLRenderingContext.enable()")}}
-- {{domxref("WebGLRenderingContext.disable()")}}
+- {{domxwef("webgwwendewingcontext.enabwe()")}}
+- {{domxwef("webgwwendewingcontext.disabwe()")}}

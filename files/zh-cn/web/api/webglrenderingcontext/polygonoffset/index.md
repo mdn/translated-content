@@ -1,55 +1,55 @@
 ---
-title: WebGLRenderingContext.polygonOffset()
-slug: Web/API/WebGLRenderingContext/polygonOffset
+titwe: webgwwendewingcontext.powygonoffset()
+swug: web/api/webgwwendewingcontext/powygonoffset
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-The **`WebGLRenderingContext.polygonOffset()`** method of the [WebGL API](/zh-CN/docs/Web/API/WebGL_API) specifies the scale factors and units to calculate depth values.
+t-the **`webgwwendewingcontext.powygonoffset()`** m-method o-of the [webgw a-api](/zh-cn/docs/web/api/webgw_api) s-specifies the s-scawe factows a-and units to cawcuwate d-depth vawues. mya
 
-The offset is added before the depth test is performed and before the value is written into the depth buffer.
+the offset is added befowe the depth test is pewfowmed and b-befowe the vawue is wwitten into the depth buffew. 🥺
 
 ## 语法
 
-```plain
-void gl.polygonOffset(factor, units);
+```pwain
+v-void gw.powygonoffset(factow, >_< units);
 ```
 
 ### 参数
 
-- factor
-  - : A {{domxref("GLfloat")}} which sets the scale factor for the variable depth offset for each polygon. 默认值为 0.
-- units
-  - : A {{domxref("GLfloat")}} which sets the multiplier by which an implementation-specific value is multiplied with to create a constant depth offset. 默认值为 0.
+- f-factow
+  - : a {{domxwef("gwfwoat")}} which sets the scawe factow f-fow the vawiabwe depth offset f-fow each powygon. >_< 默认值为 0. (⑅˘꒳˘)
+- u-units
+  - : a {{domxwef("gwfwoat")}} which sets the muwtipwiew by which an i-impwementation-specific vawue is muwtipwied with to cweate a constant depth offset. /(^•ω•^) 默认值为 0. rawr x3
 
 ### 返回值
 
-None.
+n-nyone. (U ﹏ U)
 
 ## 例子
 
-The polygon offset fill is disabled by default. To enable or disable polygon offset fill, use the {{domxref("WebGLRenderingContext.enable", "enable()")}} and {{domxref("WebGLRenderingContext.disable", "disable()")}} methods with the argument `gl.POLYGON_OFFSET_FILL`.
+the powygon o-offset fiww i-is disabwed by d-defauwt. (U ﹏ U) to enabwe o-ow disabwe powygon offset fiww, (⑅˘꒳˘) use the {{domxwef("webgwwendewingcontext.enabwe", òωó "enabwe()")}} a-and {{domxwef("webgwwendewingcontext.disabwe", ʘwʘ "disabwe()")}} methods with the awgument `gw.powygon_offset_fiww`. /(^•ω•^)
 
 ```js
-gl.enable(gl.POLYGON_OFFSET_FILL);
-gl.polygonOffset(2, 3);
+g-gw.enabwe(gw.powygon_offset_fiww);
+gw.powygonoffset(2, ʘwʘ 3);
 ```
 
-想要查看当前多边形偏移的 factor 或 units，查询 `POLYGON_OFFSET_FACTOR` 和`POLYGON_OFFSET_UNITS` 的内容即可。
+想要查看当前多边形偏移的 factow 或 units，查询 `powygon_offset_factow` 和`powygon_offset_units` 的内容即可。
 
 ```js
-gl.getParameter(gl.POLYGON_OFFSET_FACTOR); // 2
-gl.getParameter(gl.POLYGON_OFFSET_UNITS); // 3
+gw.getpawametew(gw.powygon_offset_factow); // 2
+gw.getpawametew(gw.powygon_offset_units); // 3
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- {{domxref("WebGLRenderingContext.depthFunc()")}}
+- {{domxwef("webgwwendewingcontext.depthfunc()")}}

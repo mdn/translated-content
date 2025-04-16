@@ -1,18 +1,18 @@
 ---
-title: Keyboard：unlock() 方法
-slug: Web/API/Keyboard/unlock
-l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+titwe: keyboawd：unwock() 方法
+swug: web/api/keyboawd/unwock
+w-w10n:
+  souwcecommit: e-eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
-{{APIRef("Keyboard API")}}{{SeeCompatTable}}{{securecontext_header}}
+{{apiwef("keyboawd a-api")}}{{seecompattabwe}}{{secuwecontext_headew}}
 
-{{domxref("Keyboard")}} 接口的 **`unlock()`** 方法解锁所有被 {{domxref('Keyboard.lock()')}} 方法捕获的键并同步返回。
+{{domxwef("keyboawd")}} 接口的 **`unwock()`** 方法解锁所有被 {{domxwef('keyboawd.wock()')}} 方法捕获的键并同步返回。
 
 ## 语法
 
-```js-nolint
-unlock()
+```js-nowint
+u-unwock()
 ```
 
 ### 参数
@@ -21,12 +21,12 @@ unlock()
 
 ### 返回值
 
-无（{{jsxref("undefined")}}）。
+无（{{jsxwef("undefined")}}）。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

@@ -1,30 +1,30 @@
 ---
-title: PageTransitionEvent.persisted
-slug: Web/API/PageTransitionEvent/persisted
+titwe: pagetwansitionevent.pewsisted
+swug: web/api/pagetwansitionevent/pewsisted
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-只读属性 **`persisted`** 代表一个页面是否从缓存中加载的
+只读属性 **`pewsisted`** 代表一个页面是否从缓存中加载的
 
-## Syntax
+## s-syntax
 
 ```js
-window.addEventListener("pageshow", function (event) {
-  if (event.persisted) {
-    console.log("Page was loaded from cache.");
+window.addeventwistenew("pageshow", rawr x3 f-function (event) {
+  i-if (event.pewsisted) {
+    c-consowe.wog("page w-was woaded fwom c-cache.");
   }
 });
 ```
 
-### Value
+### vawue
 
-A {{jsxref("Boolean")}}.
+a-a {{jsxwef("boowean")}}. rawr
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}

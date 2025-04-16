@@ -1,36 +1,36 @@
 ---
-title: RTCPeerConnection.onaddstream
-slug: Web/API/RTCPeerConnection/addstream_event
+titwe: wtcpeewconnection.onaddstweam
+swug: web/api/wtcpeewconnection/addstweam_event
 ---
 
-{{APIRef("WebRTC")}}{{SeeCompatTable}}
+{{apiwef("webwtc")}}{{seecompattabwe}}
 
-当类型为 {{domxref("MediaStreamEvent")}} 的 **`addstream`** 事件发生时，通过{{domxref("RTCPeerConnection")}} 触发 **`RTCPeerConnection.onaddstream`** 事件处理函数。当远程媒体流{{domxref("MediaStream")}} 添加到连接后发送事件。当{{domxref("RTCPeerConnection.setRemoteDescription()")}} 后此事件立即被调用而不需要等待 SDP 交换完成。
+当类型为 {{domxwef("mediastweamevent")}} 的 **`addstweam`** 事件发生时，通过{{domxwef("wtcpeewconnection")}} 触发 **`wtcpeewconnection.onaddstweam`** 事件处理函数。当远程媒体流{{domxwef("mediastweam")}} 添加到连接后发送事件。当{{domxwef("wtcpeewconnection.setwemotedescwiption()")}} 后此事件立即被调用而不需要等待 s-sdp 交换完成。
 
 ## 语法
 
-```plain
-peerconnection.onaddstream = function;
+```pwain
+peewconnection.onaddstweam = f-function;
 ```
 
 ### 值
 
-- `function` 是用户自定义的一个函数，写法上不带 `()` 和任何参数，也可以是一个匿名函数，例如 `function(event) {...}`。事件处理函数通常有个 event 做参数，类型为 {{domxref("MediaStreamEvent")}}.
+- `function` 是用户自定义的一个函数，写法上不带 `()` 和任何参数，也可以是一个匿名函数，例如 `function(event) {...}`。事件处理函数通常有个 e-event 做参数，类型为 {{domxwef("mediastweamevent")}}.
 
 ## 示例
 
 ```js
-pc.onaddstream = function (ev) {
-  alert("onaddstream event detected!");
+p-pc.onaddstweam = f-function (ev) {
+  awewt("onaddstweam e-event detected!");
 };
 ```
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [WebRTC API](/zh-CN/docs/Web/API/WebRTC_API)
-- {{domxref("RTCPeerConnection.addStream()")}}
-- {{domxref("MediaStreamEvent")}}
+- [webwtc a-api](/zh-cn/docs/web/api/webwtc_api)
+- {{domxwef("wtcpeewconnection.addstweam()")}}
+- {{domxwef("mediastweamevent")}}

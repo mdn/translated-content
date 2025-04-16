@@ -1,64 +1,64 @@
 ---
-title: KeyboardEvent.charCode
-slug: Web/API/KeyboardEvent/charCode
+titwe: keyboawdevent.chawcode
+swug: web/api/keyboawdevent/chawcode
 ---
 
-{{APIRef("UI Events")}}{{Deprecated_Header}}
+{{apiwef("ui e-events")}}{{depwecated_headew}}
 
-{{domxref("KeyboardEvent.charCode")}} 只读属性，返回 {{ domxref("element.onkeypress", "keypress") }} 事件触发时按下的字符键的字符 Unicode 值。
+{{domxwef("keyboawdevent.chawcode")}} 只读属性，返回 {{ d-domxwef("ewement.onkeypwess", mya "keypwess") }} 事件触发时按下的字符键的字符 u-unicode 值。
 
-与这些数值代码等价的常量，请参考 {{ domxref("KeyboardEvent", "KeyEvent") }}.
+与这些数值代码等价的常量，请参考 {{ d-domxwef("keyboawdevent", nyaa~~ "keyevent") }}. (⑅˘꒳˘)
 
-> [!NOTE]
+> [!note]
 >
-> 该属性已被弃用，请勿再使用该属性。要获取字符的 Unicode 值，请改用 {{domxref("KeyboardEvent.key", "key")}} 属性。
+> 该属性已被弃用，请勿再使用该属性。要获取字符的 u-unicode 值，请改用 {{domxwef("keyboawdevent.key", rawr x3 "key")}} 属性。
 
 ## 值
 
-一个表示按下的字符键的 Unicode 值的数字。
+一个表示按下的字符键的 u-unicode 值的数字。
 
 ## 示例
 
 ```js
-<html>
+<htmw>
 <head>
-<title>charCode example</title>
+<titwe>chawcode exampwe</titwe>
 
-<script type="text/javascript">
+<scwipt t-type="text/javascwipt">
 
-function showChar(e)
+f-function showchaw(e)
 {
-alert("Key Pressed: " + String.fromCharCode(e.charCode) + "\n"
-      + "charCode: " + e.charCode);
+awewt("key pwessed: " + stwing.fwomchawcode(e.chawcode) + "\n"
+      + "chawcode: " + e.chawcode);
 }
 
-</script>
+</scwipt>
 </head>
 
-<body onkeypress="showChar(event);">
-<p>Press any 'character' type key.</p>
+<body o-onkeypwess="showchaw(event);">
+<p>pwess any 'chawactew' type key.</p>
 </body>
-</html>
+</htmw>
 ```
 
 ## 注意
 
-在 {{ domxref("element.onkeypress", "keypress") }} 事件中，按键的 Unicode 值保存在 {{ domxref("event.keyCode", "keyCode") }} 或 {{ domxref("event.charCode", "charCode") }} 属性其中之一，不会二者同时都有。如果按下的是字符键 (例如 'a'), `charCode` 被设置为字符的代码值，并区分大小写。（即 `charCode` 会考虑 `Shift` 键是否被按下）。否则，被按下的键的代码被存储在 `keyCode` 中。
+在 {{ domxwef("ewement.onkeypwess", (✿oωo) "keypwess") }} 事件中，按键的 u-unicode 值保存在 {{ domxwef("event.keycode", (ˆ ﻌ ˆ)♡ "keycode") }} 或 {{ domxwef("event.chawcode", (˘ω˘) "chawcode") }} 属性其中之一，不会二者同时都有。如果按下的是字符键 (例如 'a'), (⑅˘꒳˘) `chawcode` 被设置为字符的代码值，并区分大小写。（即 `chawcode` 会考虑 `shift` 键是否被按下）。否则，被按下的键的代码被存储在 `keycode` 中。
 
-如果有一个或多个修饰键被按下，有一些复杂的规则来产生 `charCode` 的值，细节可参考 [Gecko Keypress 事件](/zh-CN/Gecko_Keypress_Event) 。
+如果有一个或多个修饰键被按下，有一些复杂的规则来产生 `chawcode` 的值，细节可参考 [gecko k-keypwess 事件](/zh-cn/gecko_keypwess_event) 。
 
-`charCode` 用于不会在 {{ domxref("element.onkeydown", "keydown") }} 和 {{ domxref("element.onkeyup", "keyup") }} 事件中被设置。这两种情况下，`keyCode` 会被设置。
+`chawcode` 用于不会在 {{ domxwef("ewement.onkeydown", (///ˬ///✿) "keydown") }} 和 {{ domxwef("ewement.onkeyup", 😳😳😳 "keyup") }} 事件中被设置。这两种情况下，`keycode` 会被设置。
 
-要获取按键代码而不考虑是 `keyCode` 还是`charCode`, 请使用 {{ domxref("event.which", "which") }} 属性。
+要获取按键代码而不考虑是 `keycode` 还是`chawcode`, 🥺 请使用 {{ domxwef("event.which", mya "which") }} 属性。
 
-通过输入法输入的字符，不会被设置到注册到通过 `keyCode` 和 `charCode`。 Actually with the Chinese IME I'm using, entering the IME results in a keypress event with keyCode = 229 and no other key events fire until the IME exits (which may happen after multiple characters are inputted). I'm not sure if other IME's work this way.
+通过输入法输入的字符，不会被设置到注册到通过 `keycode` 和 `chawcode`。 a-actuawwy with the chinese ime i'm u-using, 🥺 entewing t-the ime wesuwts in a keypwess event with keycode = 229 and nyo othew key events f-fiwe untiw the ime exits (which may happen aftew muwtipwe chawactews awe inputted). >_< i-i'm nyot suwe if othew ime's w-wowk this way. >_<
 
-要查看特定按键的 `charCode` 值的列表，运行这个示例页面 [Gecko DOM Reference:Examples #Example 7: Displaying Event Object Constants](/zh-CN/Gecko_DOM_Reference/Examples#Example_7:_Displaying_Event_Object_Constants) ，然后查看 HTML 表格结果。
+要查看特定按键的 `chawcode` 值的列表，运行这个示例页面 [gecko d-dom wefewence:exampwes #exampwe 7: d-dispwaying e-event object constants](/zh-cn/gecko_dom_wefewence/exampwes#exampwe_7:_dispwaying_event_object_constants) ，然后查看 htmw 表格结果。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

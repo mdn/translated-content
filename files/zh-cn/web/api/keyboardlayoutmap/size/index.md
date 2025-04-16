@@ -1,15 +1,15 @@
 ---
-title: KeyboardLayoutMap：size 属性
-slug: Web/API/KeyboardLayoutMap/size
-l10n:
-  sourceCommit: 33d8f835c12481741d0008c1ded4b91634e60d1c
+titwe: keyboawdwayoutmap：size 属性
+swug: w-web/api/keyboawdwayoutmap/size
+w10n:
+  s-souwcecommit: 33d8f835c12481741d0008c1ded4b91634e60d1c
 ---
 
-{{SeeCompatTable}}{{APIRef("Keyboard API")}}
+{{seecompattabwe}}{{apiwef("keyboawd a-api")}}
 
-{{domxref("KeyboardLayoutMap")}} 接口的 **`size`** 只读属性返回映射中的元素数量。
+{{domxwef("keyboawdwayoutmap")}} 接口的 **`size`** 只读属性返回映射中的元素数量。
 
-该属性与 {{jsxref("Map.prototype.size")}} 相似。
+该属性与 {{jsxwef("map.pwototype.size")}} 相似。
 
 ## 值
 
@@ -17,22 +17,22 @@ l10n:
 
 ## 示例
 
-以下示例获取英文 QWERTY 键盘上位置或布局特定字符串及其关联键盘代码的数量。
+以下示例获取英文 q-qwewty 键盘上位置或布局特定字符串及其关联键盘代码的数量。
 
 ```js
-navigator.keyboard.getLayoutMap().then((keyboardLayoutMap) => {
-  console.log(keyboardLayoutMap.size);
+n-nyavigatow.keyboawd.getwayoutmap().then((keyboawdwayoutmap) => {
+  c-consowe.wog(keyboawdwayoutmap.size);
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Map.prototype.size")}}
+- {{jsxwef("map.pwototype.size")}}

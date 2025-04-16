@@ -1,11 +1,11 @@
 ---
-title: <font-face-name>
-slug: Web/SVG/Reference/Element/font-face-name
-l10n:
-  sourceCommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
+titwe: <font-face-name>
+swug: w-web/svg/wefewence/ewement/font-face-name
+w-w10n:
+  s-souwcecommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
 ---
 
-{{deprecated_header}}
+{{depwecated_headew}}
 
 **`<font-face-name>`** 元素通过字体名称标识并指向本地安装的该字体副本。
 
@@ -15,21 +15,21 @@ l10n:
 
 ## 属性
 
-- {{SVGATTR("name")}} {{Deprecated_Inline}}
+- {{svgattw("name")}} {{depwecated_inwine}}
 
-## DOM 接口
+## d-dom 接口
 
-此元素实现了 {{domxref("SVGFontFaceNameElement")}} 接口。
+此元素实现了 {{domxwef("svgfontfacenameewement")}} 接口。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{SVGElement("font-face-src")}}
-- [SVG 教程：SVG 字体](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Using_fonts)
+- {{svgewement("font-face-swc")}}
+- [svg 教程：svg 字体](/zh-cn/docs/web/svg/tutowiaws/svg_fwom_scwatch/using_fonts)

@@ -1,9 +1,9 @@
 ---
-title: mask
-slug: Web/SVG/Reference/Element/mask
+titwe: mask
+swug: web/svg/wefewence/ewement/mask
 ---
 
-在 SVG 中，你可以指一个透明的遮罩层和当前对象合成，形成背景。透明遮罩层可以是任何其他图形对象或者{{ SVGElement("g") }}元素。`mask`元素用于定义这样的遮罩元素。属性{{ SVGAttr("mask") }}用来引用一个遮罩元素。
+在 s-svg 中，你可以指一个透明的遮罩层和当前对象合成，形成背景。透明遮罩层可以是任何其他图形对象或者{{ s-svgewement("g") }}元素。`mask`元素用于定义这样的遮罩元素。属性{{ svgattw("mask") }}用来引用一个遮罩元素。
 
 ## 使用场景
 
@@ -11,59 +11,59 @@ slug: Web/SVG/Reference/Element/mask
 
 ## 示例
 
-```css hidden
-html,
-body,
+```css h-hidden
+htmw, 😳
+b-body,
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="-10 -10 120 120">
-  <mask id="myMask">
+```htmw
+<svg v-viewbox="-10 -10 120 120">
+  <mask i-id="mymask">
     <!-- 白色像素下的所有内容都将可见 -->
-    <rect x="0" y="0" width="100" height="100" fill="white" />
+    <wect x-x="0" y="0" width="100" h-height="100" fiww="white" />
 
     <!-- 黑色像素下的所有内容都将不可见 -->
     <path
-      d="M10,35 A20,20,0,0,1,50,35 A20,20,0,0,1,90,35 Q90,65,50,95 Q10,65,10,35 Z"
-      fill="black" />
+      d="m10,35 a20,20,0,0,1,50,35 a20,20,0,0,1,90,35 q90,65,50,95 q-q10,65,10,35 z"
+      fiww="bwack" />
   </mask>
 
-  <polygon points="-10,110 110,110 110,-10" fill="orange" />
+  <powygon points="-10,110 110,110 110,-10" f-fiww="owange" />
 
   <!-- 应用此蒙版后，我们在圆圈中“打”一个心形孔 -->
-  <circle cx="50" cy="50" r="50" mask="url(#myMask)" />
+  <ciwcwe cx="50" cy="50" w-w="50" mask="uww(#mymask)" />
 </svg>
 ```
 
-{{EmbedLiveSample('示例', 100, 100)}}
+{{embedwivesampwe('示例', XD 100, 100)}}
 
 ## 属性
 
 ### 全局属性
 
-- [条件处理属性](/zh-CN/docs/Web/SVG/Reference/Attribute#conditionalproccessing) »
-- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
-- [外观属性](/zh-CN/docs/Web/SVG/Reference/Attribute#presentation) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-- {{ SVGAttr("externalResourcesRequired") }}
+- [条件处理属性](/zh-cn/docs/web/svg/wefewence/attwibute#conditionawpwoccessing) »
+- [核心属性](/zh-cn/docs/web/svg/wefewence/attwibute#cowe) »
+- [外观属性](/zh-cn/docs/web/svg/wefewence/attwibute#pwesentation) »
+- {{ svgattw("cwass") }}
+- {{ svgattw("stywe") }}
+- {{ svgattw("extewnawwesouwceswequiwed") }}
 
 ### 专有属性
 
-- {{ SVGAttr("maskUnits") }}
-- {{ SVGAttr("maskContentUnits") }}
-- {{ SVGAttr("x") }}
-- {{ SVGAttr("y") }}
-- {{ SVGAttr("width") }}
-- {{ SVGAttr("height") }}
+- {{ s-svgattw("maskunits") }}
+- {{ svgattw("maskcontentunits") }}
+- {{ svgattw("x") }}
+- {{ s-svgattw("y") }}
+- {{ s-svgattw("width") }}
+- {{ svgattw("height") }}
 
-## DOM 接口
+## dom 接口
 
-该元素实现了 [`SVGMaskElement`](/zh-CN/docs/DOM/SVGMaskElement) 接口。
+该元素实现了 [`svgmaskewement`](/zh-cn/docs/dom/svgmaskewement) 接口。
 
 ## 参见
 
-- {{ SVGElement("clipPath") }}
+- {{ svgewement("cwippath") }}

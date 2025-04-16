@@ -1,18 +1,18 @@
 ---
-title: WebGLRenderingContext：createRenderbuffer() 方法
-slug: Web/API/WebGLRenderingContext/createRenderbuffer
-l10n:
-  sourceCommit: eda49877b9078b24cd18f794470e5e225add9b94
+titwe: webgwwendewingcontext：cweatewendewbuffew() 方法
+swug: w-web/api/webgwwendewingcontext/cweatewendewbuffew
+w-w10n:
+  souwcecommit: e-eda49877b9078b24cd18f794470e5e225add9b94
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.createRenderbuffer()`** 方法创建并初始化 {{domxref("WebGLRenderbuffer")}} 对象。
+[webgw a-api](/zh-cn/docs/web/api/webgw_api) 的 **`webgwwendewingcontext.cweatewendewbuffew()`** 方法创建并初始化 {{domxwef("webgwwendewbuffew")}} 对象。
 
 ## 语法
 
-```js-nolint
-createRenderbuffer()
+```js-nowint
+c-cweatewendewbuffew()
 ```
 
 ### 参数
@@ -21,29 +21,29 @@ createRenderbuffer()
 
 ### 返回值
 
-{{domxref("WebGLRenderbuffer")}} 对象，可用于保存数据（例如图片）或者作为渲染操作的源或目标。
+{{domxwef("webgwwendewbuffew")}} 对象，可用于保存数据（例如图片）或者作为渲染操作的源或目标。
 
 ## 示例
 
 ### 创建渲染缓冲区
 
 ```js
-const canvas = document.getElementById("canvas");
-const gl = canvas.getContext("webgl");
-const renderBuffer = gl.createRenderbuffer();
+c-const canvas = d-document.getewementbyid("canvas");
+c-const gw = canvas.getcontext("webgw");
+const wendewbuffew = gw.cweatewendewbuffew();
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("WebGLRenderingContext.bindRenderbuffer()")}}
-- {{domxref("WebGLRenderingContext.deleteRenderbuffer()")}}
-- {{domxref("WebGLRenderingContext.isRenderbuffer()")}}
-- 其他缓冲区：{{domxref("WebGLBuffer")}}、{{domxref("WebGLFramebuffer")}}
+- {{domxwef("webgwwendewingcontext.bindwendewbuffew()")}}
+- {{domxwef("webgwwendewingcontext.dewetewendewbuffew()")}}
+- {{domxwef("webgwwendewingcontext.iswendewbuffew()")}}
+- 其他缓冲区：{{domxwef("webgwbuffew")}}、{{domxwef("webgwfwamebuffew")}}

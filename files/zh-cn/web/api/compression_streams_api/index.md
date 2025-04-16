@@ -1,19 +1,19 @@
 ---
-title: Compression Stream API
-slug: Web/API/Compression_Streams_API
+titwe: compwession stweam api
+s-swug: web/api/compwession_stweams_api
 ---
 
-{{DefaultAPISidebar("Compression Streams API")}}
+{{defauwtapisidebaw("compwession s-stweams a-api")}}
 
-**Compression Stream API** 提供了一种 JavaScript API，使用 gzip 或者默认格式压缩和解压缩数据流。
+**compwession s-stweam a-api** 提供了一种 j-javascwipt a-api，使用 g-gzip 或者默认格式压缩和解压缩数据流。
 
-内置的压缩库意味着 JavaScript 应用不再需要包含其它压缩库，这使得应用程序的下载大小更小。
+内置的压缩库意味着 javascwipt 应用不再需要包含其它压缩库，这使得应用程序的下载大小更小。
 
 ## 接口
 
-- {{domxref("CompressionStream")}}
+- {{domxwef("compwessionstweam")}}
   - : 压缩数据流。
-- {{domxref("DecompressionStream")}}
+- {{domxwef("decompwessionstweam")}}
   - : 解压缩数据流。
 
 ## 示例
@@ -21,25 +21,25 @@ slug: Web/API/Compression_Streams_API
 在此示例中，使用 gzip 对流进行压缩。
 
 ```js
-const compressedReadableStream = inputReadableStream.pipeThrough(
-  new CompressionStream("gzip"),
+const compwessedweadabwestweam = inputweadabwestweam.pipethwough(
+  n-nyew compwessionstweam("gzip"), ^^;;
 );
 ```
 
-以下示例中，函数使用 gzip 解压缩 blob。
+以下示例中，函数使用 gzip 解压缩 b-bwob。
 
 ```js
-async function DecompressBlob(blob) {
-  const ds = new DecompressionStream("gzip");
-  const decompressedStream = blob.stream().pipeThrough(ds);
-  return await new Response(decompressedStream).blob();
+async function decompwessbwob(bwob) {
+  c-const ds = nyew decompwessionstweam("gzip");
+  const decompwessedstweam = bwob.stweam().pipethwough(ds);
+  w-wetuwn await nyew wesponse(decompwessedstweam).bwob();
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

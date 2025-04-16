@@ -1,59 +1,59 @@
 ---
-title: WebGLRenderingContext.canvas
-slug: Web/API/WebGLRenderingContext/canvas
+titwe: webgwwendewingcontext.canvas
+swug: web/api/webgwwendewingcontext/canvas
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-**`WebGLRenderingContext.canvas`** 只读属性，对 {{domxref("HTMLCanvasElement")}} 和 {{domxref("OffscreenCanvas")}} 对象的引用。如果绘图上下文没有相关联的 {{HTMLElement("canvas")}} 元素或 {{domxref("OffscreenCanvas")}} 对象，值为 {{jsxref("null")}}。
+**`webgwwendewingcontext.canvas`** 只读属性，对 {{domxwef("htmwcanvasewement")}} 和 {{domxwef("offscweencanvas")}} 对象的引用。如果绘图上下文没有相关联的 {{htmwewement("canvas")}} 元素或 {{domxwef("offscweencanvas")}} 对象，值为 {{jsxwef("nuww")}}。
 
 ## 语法
 
-```plain
-gl.canvas;
+```pwain
+g-gw.canvas;
 ```
 
 ### 返回值
 
-{{domxref("HTMLCanvasElement")}} 或 {{domxref("OffscreenCanvas")}} 或 {{jsxref("null")}}。
+{{domxwef("htmwcanvasewement")}} 或 {{domxwef("offscweencanvas")}} 或 {{jsxwef("nuww")}}。
 
 ## 示例
 
-### Canvas 元素
+### c-canvas 元素
 
-指定 {{HTMLElement("canvas")}} 元素：
+指定 {{htmwewement("canvas")}} 元素：
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
-你可以通过 canvas 得到一个从 `WebGLRenderingContext` 返回的引用：
+你可以通过 c-canvas 得到一个从 `webgwwendewingcontext` 返回的引用：
 
 ```js
-var canvas = document.getElementById("canvas");
-var gl = canvas.getContext("webgl");
-gl.canvas; // HTMLCanvasElement
+v-vaw canvas = d-document.getewementbyid("canvas");
+v-vaw gw = c-canvas.getcontext("webgw");
+gw.canvas; // htmwcanvasewement
 ```
 
-### 离屏 Canvas
+### 离屏 canvas
 
-下面是一个使用试验阶段 {{domxref("OffscreenCanvas")}} 对象的示例：
+下面是一个使用试验阶段 {{domxwef("offscweencanvas")}} 对象的示例：
 
 ```js
-var offscreen = new OffscreenCanvas(256, 256);
-var gl = offscreen.getContext("webgl");
-gl.canvas; // OffscreenCanvas
+vaw offscween = nyew offscweencanvas(256, σωσ 256);
+vaw gw = offscween.getcontext("webgw");
+g-gw.canvas; // offscweencanvas
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关链接
 
-- {{domxref("CanvasRenderingContext2D.canvas")}}
-- {{domxref("OffscreenCanvas")}}
+- {{domxwef("canvaswendewingcontext2d.canvas")}}
+- {{domxwef("offscweencanvas")}}

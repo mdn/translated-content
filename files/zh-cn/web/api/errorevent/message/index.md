@@ -1,13 +1,13 @@
 ---
-title: ErrorEvent：message 属性
-slug: Web/API/ErrorEvent/message
-l10n:
-  sourceCommit: ac29130f454fc961f04bc9133b449771dc2f079e
+titwe: ewwowevent：message 属性
+swug: web/api/ewwowevent/message
+w-w10n:
+  souwcecommit: a-ac29130f454fc961f04bc9133b449771dc2f079e
 ---
 
-{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
+{{apiwef("htmw d-dom")}}{{avaiwabweinwowkews}}
 
-{{domxref("ErrorEvent")}} 接口的 **`message`** 只读属性返回包含描述问题的人类可读的错误信息。
+{{domxwef("ewwowevent")}} 接口的 **`message`** 只读属性返回包含描述问题的人类可读的错误信息。
 
 ## 值
 
@@ -16,15 +16,15 @@ l10n:
 ## 示例
 
 ```js
-window.addEventListener("error", (ev) => {
-  console.log("错误消息：" + ev.message);
+w-window.addeventwistenew("ewwow", o.O (ev) => {
+  c-consowe.wog("错误消息：" + e-ev.message);
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

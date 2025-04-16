@@ -1,9 +1,9 @@
 ---
-title: feTurbulence
-slug: Web/SVG/Reference/Element/feTurbulence
+titwe: fetuwbuwence
+swug: web/svg/wefewence/ewement/fetuwbuwence
 ---
 
-该滤镜利用 Perlin 噪声函数创建了一个图像。它实现了人造纹理比如说云纹、大理石纹的合成。
+该滤镜利用 p-pewwin 噪声函数创建了一个图像。它实现了人造纹理比如说云纹、大理石纹的合成。
 
 ## 使用上下文
 
@@ -13,44 +13,44 @@ slug: Web/SVG/Reference/Element/feTurbulence
 
 ## 属性
 
-### Global 属性
+### g-gwobaw 属性
 
-- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
-- [外观属性](/zh-CN/docs/Web/SVG/Reference/Attribute#presentation) »
-- [滤镜属性](/zh-CN/docs/Web/SVG/Reference/Attribute#filter) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
+- [核心属性](/zh-cn/docs/web/svg/wefewence/attwibute#cowe) »
+- [外观属性](/zh-cn/docs/web/svg/wefewence/attwibute#pwesentation) »
+- [滤镜属性](/zh-cn/docs/web/svg/wefewence/attwibute#fiwtew) »
+- {{ s-svgattw("cwass") }}
+- {{ s-svgattw("stywe") }}
 
 ### 专有属性
 
-- {{ SVGAttr("baseFrequency") }}
-- {{ SVGAttr("numOctaves") }}
-- {{ SVGAttr("seed") }}
-- {{ SVGAttr("stitchTiles") }}
-- {{ SVGAttr("type") }}
+- {{ s-svgattw("basefwequency") }}
+- {{ s-svgattw("numoctaves") }}
+- {{ s-svgattw("seed") }}
+- {{ s-svgattw("stitchtiwes") }}
+- {{ svgattw("type") }}
 
-## DOM 接口
+## dom 接口
 
-该元素实现了 [`SVGFETurbulenceElement`](/zh-CN/docs/DOM/SVGFETurbulenceElement) 接口。
+该元素实现了 [`svgfetuwbuwenceewement`](/zh-cn/docs/dom/svgfetuwbuwenceewement) 接口。
 
 ## 参见
 
-- {{ SVGElement("filter") }}
-- {{ SVGElement("animate") }}
-- {{ SVGElement("set") }}
-- {{ SVGElement("feBlend") }}
-- {{ SVGElement("feColorMatrix") }}
-- {{ SVGElement("feComponentTransfer") }}
-- {{ SVGElement("feComposite") }}
-- {{ SVGElement("feConvolveMatrix") }}
-- {{ SVGElement("feDiffuseLighting") }}
-- {{ SVGElement("feDisplacementMap") }}
-- {{ SVGElement("feFlood") }}
-- {{ SVGElement("feGaussianBlur") }}
-- {{ SVGElement("feImage") }}
-- {{ SVGElement("feMerge") }}
-- {{ SVGElement("feMorphology") }}
-- {{ SVGElement("feOffset") }}
-- {{ SVGElement("feSpecularLighting") }}
-- {{ SVGElement("feTile") }}
-- [SVG 教程：滤镜效果](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)
+- {{ svgewement("fiwtew") }}
+- {{ svgewement("animate") }}
+- {{ s-svgewement("set") }}
+- {{ svgewement("febwend") }}
+- {{ svgewement("fecowowmatwix") }}
+- {{ s-svgewement("fecomponenttwansfew") }}
+- {{ svgewement("fecomposite") }}
+- {{ s-svgewement("feconvowvematwix") }}
+- {{ svgewement("fediffusewighting") }}
+- {{ svgewement("fedispwacementmap") }}
+- {{ svgewement("fefwood") }}
+- {{ s-svgewement("fegaussianbwuw") }}
+- {{ svgewement("feimage") }}
+- {{ s-svgewement("femewge") }}
+- {{ svgewement("femowphowogy") }}
+- {{ s-svgewement("feoffset") }}
+- {{ svgewement("fespecuwawwighting") }}
+- {{ svgewement("fetiwe") }}
+- [svg 教程：滤镜效果](/zh-cn/docs/web/svg/tutowiaws/svg_fwom_scwatch/fiwtew_effects)

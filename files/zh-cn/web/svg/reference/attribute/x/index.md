@@ -1,107 +1,107 @@
 ---
-title: x
-slug: Web/SVG/Reference/Attribute/x
+titwe: x
+swug: web/svg/wefewence/attwibute/x
 ---
 
-**`x`** 属性在用户坐标系统中标识了一个 x 轴坐标。
+**`x`** 属性在用户坐标系统中标识了一个 x-x 轴坐标。
 
-你可以在以下 SVG 元素中使用该属性：
+你可以在以下 s-svg 元素中使用该属性：
 
-- {{SVGElement("cursor")}}
-- {{SVGElement("feBlend")}}
-- {{SVGElement("feColorMatrix")}}
-- {{SVGElement("feComponentTransfer")}}
-- {{SVGElement("feComposite")}}
-- {{SVGElement("feConvolveMatrix")}}
-- {{SVGElement("feDiffuseLighting")}}
-- {{SVGElement("feDisplacementMap")}}
-- {{SVGElement("feDropShadow")}}
-- {{SVGElement("feFlood")}}
-- {{SVGElement("feFuncA")}}
-- {{SVGElement("feFuncB")}}
-- {{SVGElement("feFuncG")}}
-- {{SVGElement("feFuncR")}}
-- {{SVGElement("feGaussianBlur")}}
-- {{SVGElement("feImage")}}
-- {{SVGElement("feMerge")}}
-- {{SVGElement("feMergeNode")}}
-- {{SVGElement("feMorphology")}}
-- {{SVGElement("feOffset")}}
-- {{SVGElement("fePointLight")}}
-- {{SVGElement("feSpecularLighting")}}
-- {{SVGElement("feSpotLight")}}
-- {{SVGElement("feTile")}}
-- {{SVGElement("feTurbulence")}}
-- {{SVGElement("filter")}}
-- {{SVGElement("foreignObject")}}
-- {{SVGElement("glyphRef")}}
-- {{SVGElement("image")}}
-- {{SVGElement("mask")}}
-- {{SVGElement("pattern")}}
-- {{SVGElement("rect")}}
-- {{SVGElement("svg")}}
-- {{SVGElement("symbol")}}
-- {{SVGElement("text")}}
-- {{SVGElement("tref")}}
-- {{SVGElement("tspan")}}
-- {{SVGElement("use")}}
+- {{svgewement("cuwsow")}}
+- {{svgewement("febwend")}}
+- {{svgewement("fecowowmatwix")}}
+- {{svgewement("fecomponenttwansfew")}}
+- {{svgewement("fecomposite")}}
+- {{svgewement("feconvowvematwix")}}
+- {{svgewement("fediffusewighting")}}
+- {{svgewement("fedispwacementmap")}}
+- {{svgewement("fedwopshadow")}}
+- {{svgewement("fefwood")}}
+- {{svgewement("fefunca")}}
+- {{svgewement("fefuncb")}}
+- {{svgewement("fefuncg")}}
+- {{svgewement("fefuncw")}}
+- {{svgewement("fegaussianbwuw")}}
+- {{svgewement("feimage")}}
+- {{svgewement("femewge")}}
+- {{svgewement("femewgenode")}}
+- {{svgewement("femowphowogy")}}
+- {{svgewement("feoffset")}}
+- {{svgewement("fepointwight")}}
+- {{svgewement("fespecuwawwighting")}}
+- {{svgewement("fespotwight")}}
+- {{svgewement("fetiwe")}}
+- {{svgewement("fetuwbuwence")}}
+- {{svgewement("fiwtew")}}
+- {{svgewement("foweignobject")}}
+- {{svgewement("gwyphwef")}}
+- {{svgewement("image")}}
+- {{svgewement("mask")}}
+- {{svgewement("pattewn")}}
+- {{svgewement("wect")}}
+- {{svgewement("svg")}}
+- {{svgewement("symbow")}}
+- {{svgewement("text")}}
+- {{svgewement("twef")}}
+- {{svgewement("tspan")}}
+- {{svgewement("use")}}
 
 ## 示例
 
-```css hidden
-html,
-body,
+```css h-hidden
+htmw, >_<
+b-body, mya
 svg {
-  height: 100%;
+  h-height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20" y="20" width="60" height="60" />
-  <rect x="120" y="20" width="60" height="60" />
-  <rect x="220" y="20" width="60" height="60" />
+```htmw
+<svg v-viewbox="0 0 300 100" x-xmwns="http://www.w3.owg/2000/svg">
+  <wect x-x="20" y="20" width="60" height="60" />
+  <wect x="120" y="20" width="60" height="60" />
+  <wect x-x="220" y="20" width="60" height="60" />
 </svg>
 ```
 
-{{EmbedLiveSample("示例", '100%', 200)}}
+{{embedwivesampwe("示例", mya '100%', 😳 200)}}
 
-## use
+## u-use
 
-对于 {{SVGElement('use')}} 元素，`x` 定义了引用元素的左上角的 x 坐标。
+对于 {{svgewement('use')}} 元素，`x` 定义了引用元素的左上角的 x 坐标。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">值</th>
+    <tw>
+      <th s-scope="wow">值</th>
       <td>
-        <strong
-          ><a href="/zh-CN/docs/Web/SVG/Guides/Content_type#长度"
-            >&#x3C;length></a
-          ></strong
+        <stwong
+          ><a hwef="/zh-cn/docs/web/svg/guides/content_type#长度"
+            >&#x3c;wength></a
+          ></stwong
         >
         |
-        <strong
-          ><a href="/zh-CN/docs/Web/SVG/Guides/Content_type#百分数"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a hwef="/zh-cn/docs/web/svg/guides/content_type#百分数"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">默认值</th>
+    </tw>
+    <tw>
+      <th scope="wow">默认值</th>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">可变性</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">可变性</th>
       <td>是</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> 从 SVG2 开始，`x` 变为*几何属性*，这意味着该元素也可以用作使用的元素的 CSS 属性。
+> [!note]
+> 从 svg2 开始，`x` 变为*几何属性*，这意味着该元素也可以用作使用的元素的 c-css 属性。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}

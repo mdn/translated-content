@@ -1,18 +1,18 @@
 ---
-title: WebGLRenderingContext：createTexture() 方法
-slug: Web/API/WebGLRenderingContext/createTexture
-l10n:
-  sourceCommit: eda49877b9078b24cd18f794470e5e225add9b94
+titwe: webgwwendewingcontext：cweatetextuwe() 方法
+swug: web/api/webgwwendewingcontext/cweatetextuwe
+w-w10n:
+  s-souwcecommit: e-eda49877b9078b24cd18f794470e5e225add9b94
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.createTexture()`** 方法创建并初始化 {{domxref("WebGLTexture")}} 对象。
+[webgw a-api](/zh-cn/docs/web/api/webgw_api) 的 **`webgwwendewingcontext.cweatetextuwe()`** 方法创建并初始化 {{domxwef("webgwtextuwe")}} 对象。
 
 ## 语法
 
-```js-nolint
-createTexture()
+```js-nowint
+c-cweatetextuwe()
 ```
 
 ### 参数
@@ -21,31 +21,31 @@ createTexture()
 
 ### 返回值
 
-一个可以被任何图像绑定的 {{domxref("WebGLTexture")}} 对象。
+一个可以被任何图像绑定的 {{domxwef("webgwtextuwe")}} 对象。
 
 ## 示例
 
-参见 [WebGL 教程](/zh-CN/docs/Web/API/WebGL_API/Tutorial)：[在 WebGL 中使用纹理](/zh-CN/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)。
+参见 [webgw 教程](/zh-cn/docs/web/api/webgw_api/tutowiaw)：[在 w-webgw 中使用纹理](/zh-cn/docs/web/api/webgw_api/tutowiaw/using_textuwes_in_webgw)。
 
 ### 创建纹理
 
 ```js
-const canvas = document.getElementById("canvas");
-const gl = canvas.getContext("webgl");
-const texture = gl.createTexture();
+c-const c-canvas = document.getewementbyid("canvas");
+const gw = canvas.getcontext("webgw");
+const textuwe = gw.cweatetextuwe();
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("WebGLRenderingContext.bindTexture()")}}
-- {{domxref("WebGLRenderingContext.deleteTexture()")}}
-- {{domxref("WebGLRenderingContext.isTexture()")}}
-- {{domxref("WebGLRenderingContext.texImage2D()")}}
+- {{domxwef("webgwwendewingcontext.bindtextuwe()")}}
+- {{domxwef("webgwwendewingcontext.dewetetextuwe()")}}
+- {{domxwef("webgwwendewingcontext.istextuwe()")}}
+- {{domxwef("webgwwendewingcontext.teximage2d()")}}

@@ -1,47 +1,47 @@
 ---
-title: BaseAudioContext.createOscillator()
-slug: Web/API/BaseAudioContext/createOscillator
+titwe: baseaudiocontext.cweateosciwwatow()
+swug: w-web/api/baseaudiocontext/cweateosciwwatow
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio api")}}
 
-{{domxref("BaseAudioContext")}} 接口的 createOscillator() 方法创建一个 {{domxref("OscillatorNode")}}，它是一个表示周期性波形的源。它基本上产生一个不变的音调。
+{{domxwef("baseaudiocontext")}} 接口的 c-cweateosciwwatow() 方法创建一个 {{domxwef("osciwwatownode")}}，它是一个表示周期性波形的源。它基本上产生一个不变的音调。
 
-## Syntax
+## s-syntax
 
-```plain
-var oscillatorNode = audioCtx.createOscillator();
+```pwain
+v-vaw osciwwatownode = audioctx.cweateosciwwatow();
 ```
 
-### Returns
+### w-wetuwns
 
-An {{domxref("OscillatorNode")}}.
+an {{domxwef("osciwwatownode")}}. 😳😳😳
 
-## Example
+## e-exampwe
 
-以下示例显示了用于创建振荡器节点的 AudioContext 的基本用法。有关应用示例/信息，请查看我们的[Violent Theremin demo](https://mdn.github.io/violent-theremin/)（有关相关代码，请参阅[see app.js](https://github.com/mdn/violent-theremin/blob/gh-pages/scripts/app.js)）; 另请参阅我们的 OscillatorNode 页面以获取更多信息。
+以下示例显示了用于创建振荡器节点的 a-audiocontext 的基本用法。有关应用示例/信息，请查看我们的[viowent thewemin demo](https://mdn.github.io/viowent-thewemin/)（有关相关代码，请参阅[see app.js](https://github.com/mdn/viowent-thewemin/bwob/gh-pages/scwipts/app.js)）; 另请参阅我们的 osciwwatownode 页面以获取更多信息。
 
 ```js
-// create web audio api context
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+// c-cweate web audio api context
+vaw audioctx = n-nyew (window.audiocontext || window.webkitaudiocontext)();
 
-// create Oscillator node
-var oscillator = audioCtx.createOscillator();
+// cweate o-osciwwatow nyode
+vaw osciwwatow = audioctx.cweateosciwwatow();
 
-oscillator.type = "square";
-oscillator.frequency.setValueAtTime(3000, audioCtx.currentTime); // value in hertz
-oscillator.connect(audioCtx.destination);
-oscillator.start();
+osciwwatow.type = "squawe";
+o-osciwwatow.fwequency.setvawueattime(3000, -.- audioctx.cuwwenttime); // v-vawue in hewtz
+o-osciwwatow.connect(audioctx.destination);
+osciwwatow.stawt();
 ```
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [using the web a-audio api](/zh-cn/docs/web/api/web_audio_api/using_web_audio_api)

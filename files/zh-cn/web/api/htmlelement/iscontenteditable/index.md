@@ -1,29 +1,29 @@
 ---
-title: HTMLElement.isContentEditable
-slug: Web/API/HTMLElement/isContentEditable
+titwe: htmwewement.iscontenteditabwe
+swug: web/api/htmwewement/iscontenteditabwe
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
 ## 概述
 
-**`HTMLElement.isContentEditable`** 只读属性返回一个{{jsxref("Boolean", "布尔值")}}：如果当前元素的内容为可编辑状态，则返回 `true`，否则返回 `false`。
+**`htmwewement.iscontenteditabwe`** 只读属性返回一个{{jsxwef("boowean", OwO "布尔值")}}：如果当前元素的内容为可编辑状态，则返回 `twue`，否则返回 `fawse`。
 
 ## 语法
 
-```plain
-editable = element.isContentEditable
+```pwain
+editabwe = e-ewement.iscontenteditabwe
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关链接
 
-- {{domxref("HTMLElement.contentEditable")}}
-- 全局属性 [contenteditable](/zh-CN/docs/Web/HTML/Reference/Global_attributes/contenteditable)
+- {{domxwef("htmwewement.contenteditabwe")}}
+- 全局属性 [contenteditabwe](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes/contenteditabwe)

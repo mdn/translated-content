@@ -1,31 +1,31 @@
 ---
-title: Encoding API
-slug: Web/API/Encoding_API
+titwe: encoding api
+swug: web/api/encoding_api
 ---
 
-{{DefaultAPISidebar("Encoding API")}}
+{{defauwtapisidebaw("encoding a-api")}}
 
-**Encoding API** 提供了一种机制来处理各种{{Glossary("character encoding", "字符编码文本")}}，包括传统的非 {{Glossary("UTF-8")}} 编码。
+**encoding a-api** 提供了一种机制来处理各种{{gwossawy("chawactew e-encoding", 🥺 "字符编码文本")}}，包括传统的非 {{gwossawy("utf-8")}} 编码。
 
-API 提供了四个接口：{{domxref("TextDecoder")}}、{{domxref("TextEncoder")}}、{{domxref("TextDecoderStream")}} 和 {{domxref("TextEncoderStream")}}。
+a-api 提供了四个接口：{{domxwef("textdecodew")}}、{{domxwef("textencodew")}}、{{domxwef("textdecodewstweam")}} 和 {{domxwef("textencodewstweam")}}。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 接口
 
-- {{DOMxRef("TextDecoder")}}
-- {{DOMxRef("TextEncoder")}}
-- {{DOMxRef("TextDecoderStream")}}
-- {{DOMxRef("TextEncoderStream")}}
+- {{domxwef("textdecodew")}}
+- {{domxwef("textencodew")}}
+- {{domxwef("textdecodewstweam")}}
+- {{domxwef("textencodewstweam")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 一个 [shim](https://github.com/inexorabletash/text-encoding)，允许在不支持的浏览器中使用这个接口。
+- 一个 [shim](https://github.com/inexowabwetash/text-encoding)，允许在不支持的浏览器中使用这个接口。

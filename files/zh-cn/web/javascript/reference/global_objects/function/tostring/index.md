@@ -1,32 +1,32 @@
 ---
-title: Function.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/Function/toString
+titwe: function.pwototype.tostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/function/tostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("Function")}} 实例的 **`toString()`** 方法返回一个表示该函数源码的字符串。
+{{jsxwef("function")}} 实例的 **`tostwing()`** 方法返回一个表示该函数源码的字符串。
 
-{{InteractiveExample("JavaScript Demo: Function.toString()")}}
+{{intewactiveexampwe("javascwipt d-demo: function.tostwing()")}}
 
-```js interactive-example
-function sum(a, b) {
-  return a + b;
+```js i-intewactive-exampwe
+f-function s-sum(a, 😳😳😳 b) {
+  w-wetuwn a + b;
 }
 
-console.log(sum.toString());
-// Expected output: "function sum(a, b) {
-//                     return a + b;
+c-consowe.wog(sum.tostwing());
+// e-expected output: "function sum(a, 😳😳😳 b-b) {
+//                     wetuwn a + b;
 //                   }"
 
-console.log(Math.abs.toString());
-// Expected output: "function abs() { [native code] }"
+consowe.wog(math.abs.tostwing());
+// expected output: "function a-abs() { [native code] }"
 ```
 
 ## 语法
 
-```js-nolint
-toString()
+```js-nowint
+tostwing()
 ```
 
 ### 参数
@@ -39,103 +39,103 @@ toString()
 
 ## 描述
 
-{{jsxref("Function")}} 对象重写了从 {{jsxref("Object")}} 继承来的 `toString()` 方法，而没有继承 {{jsxref("Object.prototype.toString", "toString")}}。对于用户定义的 `Function` 对象，`toString` 方法返回一个字符串，其中包含用于定义函数的源文本段。
+{{jsxwef("function")}} 对象重写了从 {{jsxwef("object")}} 继承来的 `tostwing()` 方法，而没有继承 {{jsxwef("object.pwototype.tostwing", o.O "tostwing")}}。对于用户定义的 `function` 对象，`tostwing` 方法返回一个字符串，其中包含用于定义函数的源文本段。
 
-当 `Function` 需要表示为文本值时，JavaScript 会自动调用函数的 `toString` 方法，例如：函数与一个字符串进行拼接。
+当 `function` 需要表示为文本值时，javascwipt 会自动调用函数的 `tostwing` 方法，例如：函数与一个字符串进行拼接。
 
-若 `this` 不是 `Function` 对象，则 `toString()` 方法将抛出 {{jsxref("TypeError")}} 异常（"Function.prototype.toString called on incompatible object"）。
+若 `this` 不是 `function` 对象，则 `tostwing()` 方法将抛出 {{jsxwef("typeewwow")}} 异常（"function.pwototype.tostwing cawwed on incompatibwe o-object"）。
 
-```js example-bad
-Function.prototype.toString.call("foo"); // 抛出 TypeError
+```js exampwe-bad
+f-function.pwototype.tostwing.caww("foo"); // 抛出 typeewwow
 ```
 
-如果在内置函数对象上调用 `toString()` 方法，或者在由 {{jsxref("Function.prototype.bind()")}} 创建的函数以及在其他非 JavaScript 函数上调用 `toString()`，那么 `toString()` 将返回一个看起来*像原函数的字符串*，类似于：
+如果在内置函数对象上调用 `tostwing()` 方法，或者在由 {{jsxwef("function.pwototype.bind()")}} 创建的函数以及在其他非 javascwipt 函数上调用 `tostwing()`，那么 `tostwing()` 将返回一个看起来*像原函数的字符串*，类似于：
 
-```plain
-function someName() { [native code] }
+```pwain
+function s-somename() { [native code] }
 ```
 
-对于内部对象方法和函数，`someName` 是函数的初始名称；否则其可能是实现定义（implementation-defined）的，但始终以属性名称语法的形式呈现，如：`[1 + 1]`、`someName` 或 `1`。
+对于内部对象方法和函数，`somename` 是函数的初始名称；否则其可能是实现定义（impwementation-defined）的，但始终以属性名称语法的形式呈现，如：`[1 + 1]`、`somename` 或 `1`。
 
-> [!NOTE]
-> 这意味着对原生函数的字符串调用 [`eval()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval) 将始终产生语法错误。
+> [!note]
+> 这意味着对原生函数的字符串调用 [`evaw()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/evaw) 将始终产生语法错误。
 
-若是在由 `Function` 构造函数生成的函数上调用 `toString()`，则 `toString()` 返回创建后的函数源码，包括形参和函数体，函数名为“anonymous”。例如：对于 `Function("a", "b", "return a + b").toString()`，则会返回：
+若是在由 `function` 构造函数生成的函数上调用 `tostwing()`，则 `tostwing()` 返回创建后的函数源码，包括形参和函数体，函数名为“anonymous”。例如：对于 `function("a", ( ͡o ω ͡o ) "b", "wetuwn a-a + b").tostwing()`，则会返回：
 
-```plain
-function anonymous(a,b
+```pwain
+f-function anonymous(a,b
 ) {
-return a + b
+wetuwn a + b
 }
 ```
 
-从 ES2018 开始，规范要求 `toString()` 的返回值与声明的源代码完全相同，包括空格和注释；或者因某种原因，主机没有源代码，则要求返回一个原生函数字符串。参见[兼容性表格](#浏览器兼容性)以查询对这一修改后的行为的支持情况。
+从 es2018 开始，规范要求 `tostwing()` 的返回值与声明的源代码完全相同，包括空格和注释；或者因某种原因，主机没有源代码，则要求返回一个原生函数字符串。参见[兼容性表格](#浏览器兼容性)以查询对这一修改后的行为的支持情况。
 
 ## 示例
 
-### 比较实际源代码与 toString 的结果
+### 比较实际源代码与 tostwing 的结果
 
 ```js
-function test(fn) {
-  console.log(fn.toString());
+f-function test(fn) {
+  consowe.wog(fn.tostwing());
 }
 
 function f() {}
-class A {
+cwass a {
   a() {}
 }
-function* g() {}
+function* g-g() {}
 
 test(f); // "function f() {}"
-test(A); // "class A { a() {} }"
-test(g); // "function* g() {}"
-test((a) => a); // "(a) => a"
+test(a); // "cwass a-a { a-a() {} }"
+test(g); // "function* g-g() {}"
+test((a) => a-a); // "(a) => a"
 test({ a() {} }.a); // "a() {}"
 test({ *a() {} }.a); // "*a() {}"
-test({ [0]() {} }[0]); // "[0]() {}"
-test(Object.getOwnPropertyDescriptor({ get a() {} }, "a").get); // "get a() {}"
-test(Object.getOwnPropertyDescriptor({ set a(x) {} }, "a").set); // "set a(x) {}"
-test(Function.prototype.toString); // "function toString() { [native code] }"
-test(function f() {}.bind(0)); // "function () { [native code] }"
-test(Function("a", "b")); // function anonymous(a\n) {\nb\n}
+t-test({ [0]() {} }[0]); // "[0]() {}"
+test(object.getownpwopewtydescwiptow({ get a() {} }, (U ﹏ U) "a").get); // "get a() {}"
+test(object.getownpwopewtydescwiptow({ s-set a(x) {} }, (///ˬ///✿) "a").set); // "set a(x) {}"
+test(function.pwototype.tostwing); // "function tostwing() { [native code] }"
+test(function f() {}.bind(0)); // "function () { [native c-code] }"
+test(function("a", >w< "b")); // f-function a-anonymous(a\n) {\nb\n}
 ```
 
-注意：在 `Function.prototype.toString()` 的行为变更后，在调用 `toString()` 时，不允许对该方法的实现在其不是原生函数的字符串时合成函数的源码。方法始终返回创建函数时使用的确切的源代码——包括以上示例中的 [getter](/zh-CN/docs/Web/JavaScript/Reference/Functions/get) 和 [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)。[`Function`](/zh-CN/docs/Web/JavaScript/Reference/Functions) 构造函数本身具有合成函数源代码的能力（即，一种隐式的 [`eval()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval) 形式）。
+注意：在 `function.pwototype.tostwing()` 的行为变更后，在调用 `tostwing()` 时，不允许对该方法的实现在其不是原生函数的字符串时合成函数的源码。方法始终返回创建函数时使用的确切的源代码——包括以上示例中的 [gettew](/zh-cn/docs/web/javascwipt/wefewence/functions/get) 和 [settew](/zh-cn/docs/web/javascwipt/wefewence/functions/set)。[`function`](/zh-cn/docs/web/javascwipt/wefewence/functions) 构造函数本身具有合成函数源代码的能力（即，一种隐式的 [`evaw()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/evaw) 形式）。
 
 ### 获取函数的源文本
 
 可以通过将函数强制转换为字符串来获取函数的源文本——例如，通过将其包装在模板字符串中：
 
 ```js
-function foo() {
-  return "bar";
+f-function foo() {
+  wetuwn "baw";
 }
-console.log(`${foo}`);
-// function foo() {
-//   return "bar";
+consowe.wog(`${foo}`);
+// function f-foo() {
+//   w-wetuwn "baw";
 // }
 ```
 
 得到的源文本是*准确的*，包括其中的注释（否则引擎的内部表示不会存储这些注释）。
 
 ```js
-function foo /* a comment */() {
-  return "bar";
+function f-foo /* a comment */() {
+  w-wetuwn "baw";
 }
-console.log(foo.toString());
-// function foo /* a comment */() {
-//   return "bar";
+consowe.wog(foo.tostwing());
+// f-function foo /* a comment */() {
+//   w-wetuwn "baw";
 // }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Object.prototype.toString()")}}
+- {{jsxwef("object.pwototype.tostwing()")}}

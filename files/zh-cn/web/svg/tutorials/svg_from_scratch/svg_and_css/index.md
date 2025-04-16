@@ -1,240 +1,240 @@
 ---
-title: SVG 和 CSS
-slug: Web/SVG/Tutorials/SVG_from_scratch/SVG_and_CSS
+titwe: svg 和 css
+swug: web/svg/tutowiaws/svg_fwom_scwatch/svg_and_css
 ---
 
-{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Tools_for_SVG") }}
+{{ p-pweviousnext("web/svg/tutowiaws/svg_fwom_scwatch/toows_fow_svg") }}
 
-本节将演示如何将 CSS 应用到 [SVG](/zh-CN/docs/Web/SVG) 中。
+本节将演示如何将 c-css 应用到 [svg](/zh-cn/docs/web/svg) 中。
 
-你将创建一个简单的演示代码并在支持 SVG 的浏览器中运行。
+你将创建一个简单的演示代码并在支持 s-svg 的浏览器中运行。
 
 ## 示例
 
-建立一个 SVG 文件 `doc8.svg`。复制下面所有内容：
+建立一个 s-svg 文件 `doc8.svg`。复制下面所有内容：
 
-```html
+```htmw
 <svg
-  width="600px"
-  height="600px"
-  viewBox="-300 -300 600 600"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
-  <link rel="stylesheet" href="style8.css" type="text/css" />
+  w-width="600px"
+  h-height="600px"
+  v-viewbox="-300 -300 600 600"
+  xmwns="http://www.w3.owg/2000/svg"
+  x-xmwns:xwink="http://www.w3.owg/1999/xwink">
+  <wink wew="stywesheet" hwef="stywe8.css" type="text/css" />
 
-  <title>SVG demonstration</title>
-  <desc>Mozilla CSS Getting Started - SVG demonstration</desc>
+  <titwe>svg demonstwation</titwe>
+  <desc>moziwwa c-css getting stawted - svg demonstwation</desc>
 
   <defs>
-    <radialGradient
+    <wadiawgwadient
       id="fade"
-      cx="0"
+      c-cx="0"
       cy="0"
-      r="200"
-      gradientUnits="userSpaceOnUse">
+      w="200"
+      g-gwadientunits="usewspaceonuse">
       <stop id="fade-stop-1" offset="33%" />
-      <stop id="fade-stop-2" offset="95%" />
-    </radialGradient>
+      <stop id="fade-stop-2" o-offset="95%" />
+    </wadiawgwadient>
   </defs>
 
-  <text id="heading" x="-280" y="-270">SVG demonstration</text>
+  <text id="heading" x="-280" y-y="-270">svg d-demonstwation</text>
   <text id="caption" x="-280" y="-250">
-    Move your mouse pointer over the flower.
+    move youw mouse pointew ovew t-the fwowew. (U ﹏ U)
   </text>
 
-  <g id="flower">
-    <circle
-      id="overlay"
+  <g id="fwowew">
+    <ciwcwe
+      id="ovewway"
       cx="0"
       cy="0"
-      r="200"
-      stroke="none"
-      fill="url(#fade)" />
+      w="200"
+      s-stwoke="none"
+      fiww="uww(#fade)" />
 
-    <g id="outer-petals">
-      <g class="quadrant">
-        <g class="segment">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+    <g i-id="outew-petaws">
+      <g c-cwass="quadwant">
+        <g c-cwass="segment">
+          <path c-cwass="segment-fiww" d="m0,0 v-200 a40,40 0 0,0 -62,10 z-z" />
+          <path cwass="segment-edge" d="m0,-200 a40,40 0 0,0 -62,10" />
         </g>
-        <g class="segment" transform="rotate(18)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        <g cwass="segment" twansfowm="wotate(18)">
+          <path cwass="segment-fiww" d-d="m0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path cwass="segment-edge" d="m0,-200 a40,40 0 0,0 -62,10" />
         </g>
-        <g class="segment" transform="rotate(36)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        <g c-cwass="segment" twansfowm="wotate(36)">
+          <path c-cwass="segment-fiww" d-d="m0,0 v-200 a40,40 0 0,0 -62,10 z-z" />
+          <path cwass="segment-edge" d="m0,-200 a40,40 0 0,0 -62,10" />
         </g>
-        <g class="segment" transform="rotate(54)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        <g c-cwass="segment" t-twansfowm="wotate(54)">
+          <path cwass="segment-fiww" d-d="m0,0 v-200 a-a40,40 0 0,0 -62,10 z" />
+          <path c-cwass="segment-edge" d="m0,-200 a40,40 0 0,0 -62,10" />
         </g>
-        <g class="segment" transform="rotate(72)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        <g c-cwass="segment" twansfowm="wotate(72)">
+          <path cwass="segment-fiww" d-d="m0,0 v-200 a40,40 0 0,0 -62,10 z-z" />
+          <path cwass="segment-edge" d-d="m0,-200 a-a40,40 0 0,0 -62,10" />
         </g>
       </g>
 
-      <g class="quadrant">
-        <g class="segment" transform="rotate(90)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+      <g cwass="quadwant">
+        <g cwass="segment" twansfowm="wotate(90)">
+          <path cwass="segment-fiww" d="m0,0 v-200 a40,40 0 0,0 -62,10 z-z" />
+          <path cwass="segment-edge" d-d="m0,-200 a40,40 0 0,0 -62,10" />
         </g>
-        <g class="segment" transform="rotate(108)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        <g cwass="segment" twansfowm="wotate(108)">
+          <path cwass="segment-fiww" d-d="m0,0 v-v-200 a40,40 0 0,0 -62,10 z" />
+          <path c-cwass="segment-edge" d="m0,-200 a40,40 0 0,0 -62,10" />
         </g>
-        <g class="segment" transform="rotate(126)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        <g cwass="segment" t-twansfowm="wotate(126)">
+          <path cwass="segment-fiww" d="m0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path c-cwass="segment-edge" d="m0,-200 a40,40 0 0,0 -62,10" />
         </g>
-        <g class="segment" transform="rotate(144)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        <g c-cwass="segment" t-twansfowm="wotate(144)">
+          <path c-cwass="segment-fiww" d="m0,0 v-v-200 a40,40 0 0,0 -62,10 z-z" />
+          <path c-cwass="segment-edge" d-d="m0,-200 a40,40 0 0,0 -62,10" />
         </g>
-        <g class="segment" transform="rotate(162)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
-        </g>
-      </g>
-
-      <g class="quadrant">
-        <g class="segment" transform="rotate(180)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
-        </g>
-        <g class="segment" transform="rotate(198)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
-        </g>
-        <g class="segment" transform="rotate(216)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
-        </g>
-        <g class="segment" transform="rotate(234)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
-        </g>
-        <g class="segment" transform="rotate(252)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        <g cwass="segment" t-twansfowm="wotate(162)">
+          <path c-cwass="segment-fiww" d="m0,0 v-v-200 a40,40 0 0,0 -62,10 z-z" />
+          <path c-cwass="segment-edge" d="m0,-200 a40,40 0 0,0 -62,10" />
         </g>
       </g>
 
-      <g class="quadrant">
-        <g class="segment" transform="rotate(270)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+      <g cwass="quadwant">
+        <g c-cwass="segment" twansfowm="wotate(180)">
+          <path cwass="segment-fiww" d="m0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path c-cwass="segment-edge" d="m0,-200 a40,40 0 0,0 -62,10" />
         </g>
-        <g class="segment" transform="rotate(288)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        <g cwass="segment" t-twansfowm="wotate(198)">
+          <path c-cwass="segment-fiww" d-d="m0,0 v-200 a40,40 0 0,0 -62,10 z-z" />
+          <path cwass="segment-edge" d="m0,-200 a-a40,40 0 0,0 -62,10" />
         </g>
-        <g class="segment" transform="rotate(306)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        <g c-cwass="segment" twansfowm="wotate(216)">
+          <path cwass="segment-fiww" d="m0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path c-cwass="segment-edge" d="m0,-200 a-a40,40 0 0,0 -62,10" />
         </g>
-        <g class="segment" transform="rotate(324)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        <g cwass="segment" t-twansfowm="wotate(234)">
+          <path c-cwass="segment-fiww" d="m0,0 v-200 a40,40 0 0,0 -62,10 z-z" />
+          <path c-cwass="segment-edge" d="m0,-200 a-a40,40 0 0,0 -62,10" />
         </g>
-        <g class="segment" transform="rotate(342)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        <g c-cwass="segment" twansfowm="wotate(252)">
+          <path cwass="segment-fiww" d="m0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path c-cwass="segment-edge" d-d="m0,-200 a40,40 0 0,0 -62,10" />
+        </g>
+      </g>
+
+      <g c-cwass="quadwant">
+        <g cwass="segment" t-twansfowm="wotate(270)">
+          <path c-cwass="segment-fiww" d="m0,0 v-200 a40,40 0 0,0 -62,10 z-z" />
+          <path cwass="segment-edge" d="m0,-200 a40,40 0 0,0 -62,10" />
+        </g>
+        <g cwass="segment" t-twansfowm="wotate(288)">
+          <path c-cwass="segment-fiww" d="m0,0 v-200 a40,40 0 0,0 -62,10 z-z" />
+          <path cwass="segment-edge" d-d="m0,-200 a40,40 0 0,0 -62,10" />
+        </g>
+        <g cwass="segment" twansfowm="wotate(306)">
+          <path cwass="segment-fiww" d="m0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path c-cwass="segment-edge" d="m0,-200 a40,40 0 0,0 -62,10" />
+        </g>
+        <g cwass="segment" twansfowm="wotate(324)">
+          <path c-cwass="segment-fiww" d="m0,0 v-200 a40,40 0 0,0 -62,10 z-z" />
+          <path c-cwass="segment-edge" d="m0,-200 a40,40 0 0,0 -62,10" />
+        </g>
+        <g cwass="segment" twansfowm="wotate(342)">
+          <path c-cwass="segment-fiww" d-d="m0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path cwass="segment-edge" d-d="m0,-200 a40,40 0 0,0 -62,10" />
         </g>
       </g>
     </g>
 
-    <g id="inner-petals" transform="rotate(9) scale(0.33)">
-      <g class="quadrant">
-        <g class="segment">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+    <g i-id="innew-petaws" twansfowm="wotate(9) scawe(0.33)">
+      <g cwass="quadwant">
+        <g c-cwass="segment">
+          <path cwass="segment-fiww" d-d="m0,0 v-200 a-a40,40 0 0,0 -62,10 z" />
+          <path c-cwass="segment-edge" d="m0,-200 a40,40 0 0,0 -62,10" />
         </g>
-        <g class="segment" transform="rotate(18)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        <g c-cwass="segment" t-twansfowm="wotate(18)">
+          <path c-cwass="segment-fiww" d="m0,0 v-v-200 a40,40 0 0,0 -62,10 z-z" />
+          <path cwass="segment-edge" d="m0,-200 a-a40,40 0 0,0 -62,10" />
         </g>
-        <g class="segment" transform="rotate(36)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        <g c-cwass="segment" t-twansfowm="wotate(36)">
+          <path cwass="segment-fiww" d="m0,0 v-v-200 a40,40 0 0,0 -62,10 z" />
+          <path cwass="segment-edge" d-d="m0,-200 a-a40,40 0 0,0 -62,10" />
         </g>
-        <g class="segment" transform="rotate(54)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        <g cwass="segment" twansfowm="wotate(54)">
+          <path cwass="segment-fiww" d-d="m0,0 v-200 a-a40,40 0 0,0 -62,10 z-z" />
+          <path c-cwass="segment-edge" d="m0,-200 a40,40 0 0,0 -62,10" />
         </g>
-        <g class="segment" transform="rotate(72)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
-        </g>
-      </g>
-
-      <g class="quadrant">
-        <g class="segment" transform="rotate(90)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
-        </g>
-        <g class="segment" transform="rotate(108)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
-        </g>
-        <g class="segment" transform="rotate(126)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
-        </g>
-        <g class="segment" transform="rotate(144)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
-        </g>
-        <g class="segment" transform="rotate(162)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        <g c-cwass="segment" twansfowm="wotate(72)">
+          <path cwass="segment-fiww" d="m0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path cwass="segment-edge" d-d="m0,-200 a40,40 0 0,0 -62,10" />
         </g>
       </g>
 
-      <g class="quadrant">
-        <g class="segment" transform="rotate(180)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+      <g cwass="quadwant">
+        <g c-cwass="segment" twansfowm="wotate(90)">
+          <path c-cwass="segment-fiww" d="m0,0 v-200 a-a40,40 0 0,0 -62,10 z" />
+          <path c-cwass="segment-edge" d-d="m0,-200 a40,40 0 0,0 -62,10" />
         </g>
-        <g class="segment" transform="rotate(198)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        <g c-cwass="segment" t-twansfowm="wotate(108)">
+          <path c-cwass="segment-fiww" d="m0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path cwass="segment-edge" d="m0,-200 a40,40 0 0,0 -62,10" />
         </g>
-        <g class="segment" transform="rotate(216)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        <g c-cwass="segment" t-twansfowm="wotate(126)">
+          <path c-cwass="segment-fiww" d="m0,0 v-200 a40,40 0 0,0 -62,10 z-z" />
+          <path cwass="segment-edge" d="m0,-200 a40,40 0 0,0 -62,10" />
         </g>
-        <g class="segment" transform="rotate(234)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        <g c-cwass="segment" t-twansfowm="wotate(144)">
+          <path cwass="segment-fiww" d-d="m0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path c-cwass="segment-edge" d-d="m0,-200 a40,40 0 0,0 -62,10" />
         </g>
-        <g class="segment" transform="rotate(252)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        <g cwass="segment" t-twansfowm="wotate(162)">
+          <path c-cwass="segment-fiww" d="m0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path cwass="segment-edge" d-d="m0,-200 a-a40,40 0 0,0 -62,10" />
         </g>
       </g>
 
-      <g class="quadrant">
-        <g class="segment" transform="rotate(270)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+      <g c-cwass="quadwant">
+        <g c-cwass="segment" t-twansfowm="wotate(180)">
+          <path cwass="segment-fiww" d-d="m0,0 v-v-200 a40,40 0 0,0 -62,10 z" />
+          <path c-cwass="segment-edge" d-d="m0,-200 a40,40 0 0,0 -62,10" />
         </g>
-        <g class="segment" transform="rotate(288)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        <g c-cwass="segment" twansfowm="wotate(198)">
+          <path cwass="segment-fiww" d-d="m0,0 v-200 a40,40 0 0,0 -62,10 z-z" />
+          <path c-cwass="segment-edge" d="m0,-200 a-a40,40 0 0,0 -62,10" />
         </g>
-        <g class="segment" transform="rotate(306)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        <g cwass="segment" twansfowm="wotate(216)">
+          <path cwass="segment-fiww" d-d="m0,0 v-200 a-a40,40 0 0,0 -62,10 z-z" />
+          <path cwass="segment-edge" d="m0,-200 a40,40 0 0,0 -62,10" />
         </g>
-        <g class="segment" transform="rotate(324)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        <g cwass="segment" t-twansfowm="wotate(234)">
+          <path cwass="segment-fiww" d="m0,0 v-v-200 a40,40 0 0,0 -62,10 z-z" />
+          <path cwass="segment-edge" d-d="m0,-200 a40,40 0 0,0 -62,10" />
         </g>
-        <g class="segment" transform="rotate(342)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
+        <g c-cwass="segment" t-twansfowm="wotate(252)">
+          <path cwass="segment-fiww" d="m0,0 v-200 a40,40 0 0,0 -62,10 z-z" />
+          <path cwass="segment-edge" d="m0,-200 a-a40,40 0 0,0 -62,10" />
+        </g>
+      </g>
+
+      <g c-cwass="quadwant">
+        <g cwass="segment" twansfowm="wotate(270)">
+          <path cwass="segment-fiww" d-d="m0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path c-cwass="segment-edge" d-d="m0,-200 a-a40,40 0 0,0 -62,10" />
+        </g>
+        <g cwass="segment" twansfowm="wotate(288)">
+          <path cwass="segment-fiww" d="m0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path cwass="segment-edge" d="m0,-200 a40,40 0 0,0 -62,10" />
+        </g>
+        <g cwass="segment" twansfowm="wotate(306)">
+          <path cwass="segment-fiww" d="m0,0 v-v-200 a40,40 0 0,0 -62,10 z-z" />
+          <path cwass="segment-edge" d="m0,-200 a-a40,40 0 0,0 -62,10" />
+        </g>
+        <g c-cwass="segment" t-twansfowm="wotate(324)">
+          <path cwass="segment-fiww" d="m0,0 v-v-200 a40,40 0 0,0 -62,10 z" />
+          <path c-cwass="segment-edge" d-d="m0,-200 a40,40 0 0,0 -62,10" />
+        </g>
+        <g c-cwass="segment" twansfowm="wotate(342)">
+          <path c-cwass="segment-fiww" d-d="m0,0 v-200 a40,40 0 0,0 -62,10 z" />
+          <path c-cwass="segment-edge" d-d="m0,-200 a40,40 0 0,0 -62,10" />
         </g>
       </g>
     </g>
@@ -242,159 +242,159 @@ slug: Web/SVG/Tutorials/SVG_from_scratch/SVG_and_CSS
 </svg>
 ```
 
-创建一个 CSS 文件，`style8.css`。复制下面所有内容：
+创建一个 c-css 文件，`stywe8.css`。复制下面所有内容：
 
 ```css
-/*** SVG demonstration ***/
+/*** s-svg demonstwation ***/
 
-/* page */
+/* p-page */
 svg {
-  background-color: beige;
+  b-backgwound-cowow: b-beige;
 }
 
 #heading {
   font-size: 24px;
-  font-weight: bold;
+  f-font-weight: bowd;
 }
 
 #caption {
-  font-size: 12px;
+  f-font-size: 12px;
 }
 
-/* flower */
-#flower:hover {
-  cursor: crosshair;
+/* fwowew */
+#fwowew:hovew {
+  c-cuwsow: c-cwosshaiw;
 }
 
-/* gradient */
+/* g-gwadient */
 #fade-stop-1 {
-  stop-color: blue;
+  stop-cowow: b-bwue;
 }
 
 #fade-stop-2 {
-  stop-color: white;
+  stop-cowow: white;
 }
 
-/* petals */
-.segment-fill {
-  fill: var(--segment-fill-fill);
-  stroke: var(--segment-fill-stroke);
-  stroke-width: var(--segment-fill-stroke-width);
+/* petaws */
+.segment-fiww {
+  f-fiww: vaw(--segment-fiww-fiww);
+  stwoke: v-vaw(--segment-fiww-stwoke);
+  s-stwoke-width: vaw(--segment-fiww-stwoke-width);
 }
 
-.segment-fill:hover {
-  fill: var(--segment-fill-fill-hover);
-  stroke: var(--segment-fill-stroke-hover);
+.segment-fiww:hovew {
+  f-fiww: vaw(--segment-fiww-fiww-hovew);
+  s-stwoke: vaw(--segment-fiww-stwoke-hovew);
 }
 
 .segment-edge {
-  fill: var(--segment-edge-fill);
-  stroke: var(--segment-edge-stroke);
-  stroke-width: var(--segment-edge-stroke-width);
+  fiww: vaw(--segment-edge-fiww);
+  s-stwoke: vaw(--segment-edge-stwoke);
+  stwoke-width: v-vaw(--segment-edge-stwoke-width);
 }
 
-.segment-edge:hover {
-  stroke: var(--segment-edge-stroke-hover);
+.segment-edge:hovew {
+  stwoke: vaw(--segment-edge-stwoke-hovew);
 }
 
-/* outer petals */
-#outer-petals {
+/* o-outew petaws */
+#outew-petaws {
   opacity: 0.75;
-  --segment-fill-fill: azure;
-  --segment-fill-stroke: lightsteelblue;
-  --segment-fill-stroke-width: 1;
-  --segment-edge-fill: none;
-  --segment-edge-stroke: deepskyblue;
-  --segment-edge-stroke-width: 3;
-  --segment-fill-fill-hover: plum;
-  --segment-fill-stroke-hover: none;
-  --segment-edge-stroke-hover: slateblue;
+  --segment-fiww-fiww: azuwe;
+  --segment-fiww-stwoke: wightsteewbwue;
+  --segment-fiww-stwoke-width: 1;
+  --segment-edge-fiww: nyone;
+  --segment-edge-stwoke: d-deepskybwue;
+  --segment-edge-stwoke-width: 3;
+  --segment-fiww-fiww-hovew: pwum;
+  --segment-fiww-stwoke-hovew: n-nyone;
+  --segment-edge-stwoke-hovew: s-swatebwue;
 }
 
 /*
- Non-standard way of styling elements referenced via <use> elements,
- supported by some older browsers
+ nyon-standawd way of stywing ewements wefewenced v-via <use> ewements, >w<
+ suppowted b-by some owdew bwowsews
 */
-#outer-petals .segment-fill {
-  fill: azure;
-  stroke: lightsteelblue;
-  stroke-width: 1;
+#outew-petaws .segment-fiww {
+  f-fiww: a-azuwe;
+  stwoke: wightsteewbwue;
+  stwoke-width: 1;
 }
 
-#outer-petals .segment-edge {
-  fill: none;
-  stroke: deepskyblue;
-  stroke-width: 3;
+#outew-petaws .segment-edge {
+  f-fiww: nyone;
+  s-stwoke: deepskybwue;
+  stwoke-width: 3;
 }
 
-#outer-petals .segment:hover > .segment-fill {
-  fill: plum;
-  stroke: none;
+#outew-petaws .segment:hovew > .segment-fiww {
+  f-fiww: pwum;
+  stwoke: nyone;
 }
 
-#outer-petals .segment:hover > .segment-edge {
-  stroke: slateblue;
+#outew-petaws .segment:hovew > .segment-edge {
+  stwoke: swatebwue;
 }
 
-/* inner petals */
-#inner-petals {
-  --segment-fill-fill: yellow;
-  --segment-fill-stroke: yellow;
-  --segment-fill-stroke-width: 1;
-  --segment-edge-fill: none;
-  --segment-edge-stroke: yellowgreen;
-  --segment-edge-stroke-width: 9;
-  --segment-fill-fill-hover: darkseagreen;
-  --segment-fill-stroke-hover: none;
-  --segment-edge-stroke-hover: green;
+/* i-innew petaws */
+#innew-petaws {
+  --segment-fiww-fiww: y-yewwow;
+  --segment-fiww-stwoke: y-yewwow;
+  --segment-fiww-stwoke-width: 1;
+  --segment-edge-fiww: n-nyone;
+  --segment-edge-stwoke: yewwowgween;
+  --segment-edge-stwoke-width: 9;
+  --segment-fiww-fiww-hovew: d-dawkseagween;
+  --segment-fiww-stwoke-hovew: n-nyone;
+  --segment-edge-stwoke-hovew: g-gween;
 }
 
 /*
- Non-standard way of styling elements referenced via <use> elements,
- supported by some older browsers
+ n-nyon-standawd way of stywing ewements w-wefewenced v-via <use> ewements, σωσ
+ s-suppowted b-by some owdew b-bwowsews
 */
-#inner-petals .segment-fill {
-  fill: yellow;
-  stroke: yellow;
-  stroke-width: 1;
+#innew-petaws .segment-fiww {
+  f-fiww: y-yewwow;
+  stwoke: y-yewwow;
+  stwoke-width: 1;
 }
 
-#inner-petals .segment-edge {
-  fill: none;
-  stroke: yellowgreen;
-  stroke-width: 9;
+#innew-petaws .segment-edge {
+  fiww: nyone;
+  s-stwoke: yewwowgween;
+  stwoke-width: 9;
 }
 
-#inner-petals .segment:hover > .segment-fill {
-  fill: darkseagreen;
-  stroke: none;
+#innew-petaws .segment:hovew > .segment-fiww {
+  f-fiww: dawkseagween;
+  s-stwoke: nyone;
 }
 
-#inner-petals .segment:hover > .segment-edge {
-  stroke: green;
+#innew-petaws .segment:hovew > .segment-edge {
+  s-stwoke: gween;
 }
 ```
 
-在支持 SVG 的浏览器中打开上面的文档。将鼠标移到图上。
+在支持 s-svg 的浏览器中打开上面的文档。将鼠标移到图上。
 
 ### 结果
 
-{{EmbedLiveSample("示例", "660", "660")}}
+{{embedwivesampwe("示例", nyaa~~ "660", 🥺 "660")}}
 
 解释：
 
-- 这个 SVG 文档使用常见连接方法引入样式表。
-- SVG 有自己一套 CSS 属性和对应的值。其中一些和 HTML 使用的 CSS 属性相似。
+- 这个 svg 文档使用常见连接方法引入样式表。
+- svg 有自己一套 css 属性和对应的值。其中一些和 htmw 使用的 css 属性相似。
 
 ## 挑战
 
 | 修改样式表使得当鼠标指针移到任何一个内层花瓣上时所有内层花瓣都变为粉色，但不改变外层花瓣的效果。 |
 | ------------------------------------------------------------------------------------------------ |
 
-[查看挑战的参考答案](/zh-CN/docs/Learn_web_development/Core/Challenges#svg_和_css)
+[查看挑战的参考答案](/zh-cn/docs/weawn_web_devewopment/cowe/chawwenges#svg_和_css)
 
-{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Tools_for_SVG") }}
+{{ p-pweviousnext("web/svg/tutowiaws/svg_fwom_scwatch/toows_fow_svg") }}
 
 ## 接下来？
 
-在这个演示中，你的支持 SVG 的浏览器已经知道如何显示 SVG 元素。样式表只是在某些方面修改了显示方式。这对 HTML 文档来说也是如此。但是你可以将 CSS 用于通用的 XML 文档，在这些文档中，没有预定义的方式来显示元素。下一页演示了这一点：[XML 介绍](/zh-CN/docs/Web/XML/Guides/XML_introduction)
+在这个演示中，你的支持 s-svg 的浏览器已经知道如何显示 s-svg 元素。样式表只是在某些方面修改了显示方式。这对 htmw 文档来说也是如此。但是你可以将 css 用于通用的 xmw 文档，在这些文档中，没有预定义的方式来显示元素。下一页演示了这一点：[xmw 介绍](/zh-cn/docs/web/xmw/guides/xmw_intwoduction)

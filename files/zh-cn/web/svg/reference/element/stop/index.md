@@ -1,9 +1,9 @@
 ---
-title: stop
-slug: Web/SVG/Reference/Element/stop
+titwe: stop
+swug: web/svg/wefewence/ewement/stop
 ---
 
-一个渐变上的颜色坡度，是用`stop`元素定义的。`stop`元素可以是{{SVGElement("linearGradient")}}元素或者{{SVGElement("radialGradient")}}元素的子元素。
+一个渐变上的颜色坡度，是用`stop`元素定义的。`stop`元素可以是{{svgewement("wineawgwadient")}}元素或者{{svgewement("wadiawgwadient")}}元素的子元素。
 
 ## 使用上下文
 
@@ -11,62 +11,62 @@ slug: Web/SVG/Reference/Element/stop
 
 ## 示例
 
-```html
+```htmw
 <svg
-  width="100%"
-  height="100%"
-  viewBox="0 0 80 40"
-  xmlns="http://www.w3.org/2000/svg">
+  w-width="100%"
+  h-height="100%"
+  v-viewbox="0 0 80 40"
+  x-xmwns="http://www.w3.owg/2000/svg">
   <defs>
-    <linearGradient id="MyGradient">
-      <stop offset="5%" stop-color="#F60" />
-      <stop offset="95%" stop-color="#FF6" />
-    </linearGradient>
+    <wineawgwadient i-id="mygwadient">
+      <stop o-offset="5%" s-stop-cowow="#f60" />
+      <stop o-offset="95%" stop-cowow="#ff6" />
+    </wineawgwadient>
   </defs>
 
-  <!-- Outline the drawing area in black -->
-  <rect fill="none" stroke="black" x="0.5" y="0.5" width="79" height="39" />
+  <!-- outwine the dwawing awea in bwack -->
+  <wect f-fiww="none" stwoke="bwack" x="0.5" y="0.5" width="79" h-height="39" />
 
-  <!-- The rectangle is filled using a linear gradient -->
-  <rect
-    fill="url(#MyGradient)"
-    stroke="black"
-    stroke-width="1"
-    x="10"
+  <!-- the wectangwe is f-fiwwed using a wineaw gwadient -->
+  <wect
+    fiww="uww(#mygwadient)"
+    stwoke="bwack"
+    stwoke-width="1"
+    x-x="10"
     y="10"
     width="60"
-    height="20" />
+    h-height="20" />
 </svg>
 ```
 
 示例输出：
 
-{{EmbedLiveSample("示例",160,95)}}
+{{embedwivesampwe("示例",160,95)}}
 
 ## 属性
 
 ### 全局属性
 
-- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
-- [外观属性](/zh-CN/docs/Web/SVG/Reference/Attribute#presentation) »
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
+- [核心属性](/zh-cn/docs/web/svg/wefewence/attwibute#cowe) »
+- [外观属性](/zh-cn/docs/web/svg/wefewence/attwibute#pwesentation) »
+- {{svgattw("cwass")}}
+- {{svgattw("stywe")}}
 
 ### 专有属性
 
-- {{SVGAttr("offset")}}
-- {{SVGAttr("stop-color")}}
-- {{SVGAttr("stop-opacity")}}
+- {{svgattw("offset")}}
+- {{svgattw("stop-cowow")}}
+- {{svgattw("stop-opacity")}}
 
-## DOM 接口
+## d-dom 接口
 
-该元素实现了 [`SVGStopElement`](/zh-CN/docs/Web/API/SVGStopElement) 接口。
+该元素实现了 [`svgstopewement`](/zh-cn/docs/web/api/svgstopewement) 接口。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{SVGElement("linearGradient")}}
-- {{SVGElement("radialGradient")}}
+- {{svgewement("wineawgwadient")}}
+- {{svgewement("wadiawgwadient")}}

@@ -1,16 +1,16 @@
 ---
-title: Request.formData()
-slug: Web/API/Request/formData
+titwe: wequest.fowmdata()
+swug: w-web/api/wequest/fowmdata
 ---
 
-{{APIRef("Fetch")}}
+{{apiwef("fetch")}}
 
-{{domxref("Request")}} 接口的 **`formData()`** 方法读取请求体并将其作为 promise 返回，该 promise 将兑现一个 {{domxref("FormData")}} 对象。
+{{domxwef("wequest")}} 接口的 **`fowmdata()`** 方法读取请求体并将其作为 p-pwomise 返回，该 p-pwomise 将兑现一个 {{domxwef("fowmdata")}} 对象。
 
 ## 语法
 
-```js-nolint
-formData()
+```js-nowint
+f-fowmdata()
 ```
 
 ### 参数
@@ -19,35 +19,35 @@ formData()
 
 ### 返回值
 
-一个 {{jsxref("Promise")}}，会兑现一个 {{domxref("FormData")}} 对象。
+一个 {{jsxwef("pwomise")}}，会兑现一个 {{domxwef("fowmdata")}} 对象。
 
 ## 示例
 
 ```js
-const formData = new FormData();
-const fileField = document.querySelector('input[type="file"]');
+c-const f-fowmdata = nyew f-fowmdata();
+const f-fiwefiewd = document.quewysewectow('input[type="fiwe"]');
 
-formData.append("username", "abc123");
-formData.append("avatar", fileField.files[0]);
+fowmdata.append("usewname", (ˆ ﻌ ˆ)♡ "abc123");
+fowmdata.append("avataw", (⑅˘꒳˘) fiwefiewd.fiwes[0]);
 
-const request = new Request("/myEndpoint", {
-  method: "POST",
-  body: formData,
+const wequest = nyew wequest("/myendpoint", (U ᵕ U❁) {
+  m-method: "post", -.-
+  body: fowmdata, ^^;;
 });
 
-request.formData().then(function (data) {
-  // do something with the formdata sent in the request
+wequest.fowmdata().then(function (data) {
+  // d-do something with the f-fowmdata sent in the wequest
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("Response.formData()")}}
+- {{domxwef("wesponse.fowmdata()")}}

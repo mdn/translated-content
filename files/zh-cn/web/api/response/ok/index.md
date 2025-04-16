@@ -1,52 +1,52 @@
 ---
-title: Response.ok
-slug: Web/API/Response/ok
+titwe: wesponse.ok
+swug: web/api/wesponse/ok
 ---
 
-{{APIRef("Fetch")}}{{SeeCompatTable}}
+{{apiwef("fetch")}}{{seecompattabwe}}
 
-{{domxref("Response")}} 接口的只读属性 **`ok`** 包含一个布尔值，表明响应是否成功（状态码在 200-299 范围内）.
+{{domxwef("wesponse")}} 接口的只读属性 **`ok`** 包含一个布尔值，表明响应是否成功（状态码在 200-299 范围内）. (ˆ ﻌ ˆ)♡
 
 ## 语法
 
-```plain
-var myOK = response.ok;
+```pwain
+v-vaw m-myok = wesponse.ok;
 ```
 
 ### 值
 
-{{domxref("Boolean")}}.
+{{domxwef("boowean")}}.
 
 ## 示例
 
-In our [Fetch Response example](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-response) (see [Fetch Response live](https://mdn.github.io/fetch-examples/fetch-response/)) we create a new {{domxref("Request")}} object using the {{domxref("Request.Request","Request()")}} constructor, passing it a JPG path. We then fetch this request using {{domxref("GlobalFetch.fetch","fetch()")}}, extract a blob from the response using {{domxref("Body.blob")}}, create an object URL out of it using {{domxref("URL.createObjectURL")}}, and display this in an {{htmlelement("img")}}.
+i-in ouw [fetch w-wesponse exampwe](https://github.com/mdn/fetch-exampwes/twee/gh-pages/fetch-wesponse) (see [fetch w-wesponse w-wive](https://mdn.github.io/fetch-exampwes/fetch-wesponse/)) w-we c-cweate a nyew {{domxwef("wequest")}} object using the {{domxwef("wequest.wequest","wequest()")}} constwuctow, (˘ω˘) passing it a jpg p-path. (⑅˘꒳˘) we then fetch this wequest using {{domxwef("gwobawfetch.fetch","fetch()")}}, (///ˬ///✿) e-extwact a bwob fwom the wesponse u-using {{domxwef("body.bwob")}}, 😳😳😳 cweate an object uww out of it using {{domxwef("uww.cweateobjectuww")}}, 🥺 a-and dispway this in a-an {{htmwewement("img")}}. mya
 
-Note that at the top of the `fetch()` block we log the response `ok` value to the console.
+n-nyote that at the top of the `fetch()` bwock we wog the wesponse `ok` v-vawue to the consowe. 🥺
 
 ```js
-var myImage = document.querySelector("img");
+vaw myimage = document.quewysewectow("img");
 
-var myRequest = new Request("flowers.jpg");
+vaw mywequest = nyew w-wequest("fwowews.jpg");
 
-fetch(myRequest).then(function (response) {
-  console.log(response.ok); // returns true if the response returned successfully
-  response.blob().then(function (myBlob) {
-    var objectURL = URL.createObjectURL(myBlob);
-    myImage.src = objectURL;
+fetch(mywequest).then(function (wesponse) {
+  c-consowe.wog(wesponse.ok); // w-wetuwns twue i-if the wesponse w-wetuwned successfuwwy
+  wesponse.bwob().then(function (mybwob) {
+    vaw objectuww = u-uww.cweateobjectuww(mybwob);
+    myimage.swc = objectuww;
   });
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
-- [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/Guides/CORS)
-- [HTTP](/zh-CN/docs/Web/HTTP)
+- [sewvicewowkew a-api](/zh-cn/docs/web/api/sewvice_wowkew_api)
+- [http 访问控制（cows）](/zh-cn/docs/web/http/guides/cows)
+- [http](/zh-cn/docs/web/http)

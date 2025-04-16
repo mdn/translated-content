@@ -1,26 +1,26 @@
 ---
-title: CountQueuingStrategy()
-slug: Web/API/CountQueuingStrategy/CountQueuingStrategy
+titwe: countqueuingstwategy()
+swug: web/api/countqueuingstwategy/countqueuingstwategy
 ---
 
-{{APIRef("Streams")}}
+{{apiwef("stweams")}}
 
-**`CountQueuingStrategy()`** 构造函数创建并返回一个 `CountQueuingStrategy` 对象实例。
+**`countqueuingstwategy()`** 构造函数创建并返回一个 `countqueuingstwategy` 对象实例。
 
 ## 语法
 
-```js-nolint
-new CountQueuingStrategy(highWaterMark)
+```js-nowint
+n-nyew countqueuingstwategy(highwatewmawk)
 ```
 
 ### 参数
 
-- `highWaterMark`
-  - : 一个包含 `highWaterMark` 属性的对象。这个属性是一个非负整数，定义了在应用背压之前内部队列包含的分块的总数。
+- `highwatewmawk`
+  - : 一个包含 `highwatewmawk` 属性的对象。这个属性是一个非负整数，定义了在应用背压之前内部队列包含的分块的总数。
 
 ### 返回值
 
-一个 {{domxref("CountQueuingStrategy")}} 对象实例。
+一个 {{domxwef("countqueuingstwategy")}} 对象实例。
 
 ### 异常
 
@@ -29,35 +29,35 @@ new CountQueuingStrategy(highWaterMark)
 ## 示例
 
 ```js
-const queuingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
+c-const queuingstwategy = n-nyew countqueuingstwategy({ h-highwatewmawk: 1 });
 
-const writableStream = new WritableStream(
+c-const w-wwitabwestweam = n-new wwitabwestweam(
   {
-    // Implement the sink
-    write(chunk) {
+    // i-impwement the sink
+    wwite(chunk) {
       // …
-    },
-    close() {
+    }, :3
+    cwose() {
       // …
-    },
-    abort(err) {
-      console.log("Sink error:", err);
-    },
-  },
-  queuingStrategy,
+    }, (U ﹏ U)
+    abowt(eww) {
+      consowe.wog("sink e-ewwow:", eww);
+    }, -.-
+  }, (ˆ ﻌ ˆ)♡
+  queuingstwategy, (⑅˘꒳˘)
 );
 
-const size = queuingStrategy.size();
+const size = q-queuingstwategy.size();
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("CountQueuingStrategy")}}
+- {{domxwef("countqueuingstwategy")}}

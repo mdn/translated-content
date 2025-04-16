@@ -1,22 +1,22 @@
 ---
-title: Response.error()
-slug: Web/API/Response/error_static
+titwe: wesponse.ewwow()
+swug: w-web/api/wesponse/ewwow_static
 ---
 
-{{APIRef("Fetch")}}
+{{apiwef("fetch")}}
 
-{{domxref("Response")}} 接口的 `error()` 方法返回一个包含网络错误相关信息的新 `Response` 对象。
+{{domxwef("wesponse")}} 接口的 `ewwow()` 方法返回一个包含网络错误相关信息的新 `wesponse` 对象。
 
-> [!NOTE]
-> 这主要与 Service Workers 有关；如果你愿意，可以使用 error 方法返回错误。错误响应的 {{domxref("Response.type","type")}} 被设置为 `error`。
+> [!note]
+> 这主要与 s-sewvice w-wowkews 有关；如果你愿意，可以使用 e-ewwow 方法返回错误。错误响应的 {{domxwef("wesponse.type","type")}} 被设置为 `ewwow`。
 
-> [!NOTE]
-> 一个“错误”的 `Response` 不会真正地暴露给脚本：例如 {{domxref("GlobalFetch.fetch","fetch()")}} 的“错误”响应将会返回 promise 的 reject 状态。
+> [!note]
+> 一个“错误”的 `wesponse` 不会真正地暴露给脚本：例如 {{domxwef("gwobawfetch.fetch","fetch()")}} 的“错误”响应将会返回 p-pwomise 的 w-weject 状态。
 
 ## 语法
 
-```js-nolint
-Response.error()
+```js-nowint
+w-wesponse.ewwow()
 ```
 
 ### 参数
@@ -25,7 +25,7 @@ Response.error()
 
 ### 返回值
 
-一个 {{domxref("Response")}} 对象。
+一个 {{domxwef("wesponse")}} 对象。
 
 ## 示例
 
@@ -33,14 +33,14 @@ Response.error()
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Guides/CORS)
-- [HTTP](/zh-CN/docs/Web/HTTP)
+- [sewvicewowkew a-api](/zh-cn/docs/web/api/sewvice_wowkew_api)
+- [http access contwow (cows)](/zh-cn/docs/web/http/guides/cows)
+- [http](/zh-cn/docs/web/http)

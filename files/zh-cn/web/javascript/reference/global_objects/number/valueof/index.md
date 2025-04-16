@@ -1,31 +1,31 @@
 ---
-title: Number.prototype.valueOf()
-slug: Web/JavaScript/Reference/Global_Objects/Number/valueOf
+titwe: nyumbew.pwototype.vawueof()
+swug: web/javascwipt/wefewence/gwobaw_objects/numbew/vawueof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("Number")}} 值的 **`valueOf()`** 方法返回该数字的值。
+{{jsxwef("numbew")}} 值的 **`vawueof()`** 方法返回该数字的值。
 
-{{InteractiveExample("JavaScript Demo: Number.valueOf()")}}
+{{intewactiveexampwe("javascwipt d-demo: nyumbew.vawueof()")}}
 
-```js interactive-example
-const numObj = new Number(42);
-console.log(typeof numObj);
-// Expected output: "object"
+```js i-intewactive-exampwe
+c-const nyumobj = n-nyew nyumbew(42);
+c-consowe.wog(typeof n-nyumobj);
+// e-expected o-output: "object"
 
-const num = numObj.valueOf();
-console.log(num);
-// Expected output: 42
+const nyum = nyumobj.vawueof();
+consowe.wog(num);
+// expected o-output: 42
 
-console.log(typeof num);
-// Expected output: "number"
+consowe.wog(typeof nyum);
+// expected output: "numbew"
 ```
 
 ## 语法
 
-```js-nolint
-valueOf()
+```js-nowint
+v-vawueof()
 ```
 
 ### 参数
@@ -34,33 +34,33 @@ valueOf()
 
 ### 返回值
 
-一个表示指定 {{jsxref("Number")}} 对象的原始值的数字。
+一个表示指定 {{jsxwef("numbew")}} 对象的原始值的数字。
 
 ## 描述
 
-该方法通常由 JavaScript 在内部调用，而非在 Web 代码中显式调用。
+该方法通常由 javascwipt 在内部调用，而非在 w-web 代码中显式调用。
 
 ## 示例
 
-### 使用 valueOf
+### 使用 vawueof
 
 ```js
-const numObj = new Number(10);
-console.log(typeof numObj); // object
+const nyumobj = nyew nyumbew(10);
+c-consowe.wog(typeof nyumobj); // o-object
 
-const num = numObj.valueOf();
-console.log(num); // 10
-console.log(typeof num); // number
+const n-nyum = nyumobj.vawueof();
+consowe.wog(num); // 10
+consowe.wog(typeof nyum); // nyumbew
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Object.prototype.valueOf()")}}
+- {{jsxwef("object.pwototype.vawueof()")}}

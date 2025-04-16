@@ -1,31 +1,31 @@
 ---
-title: WebGL2RenderingContext.bindBufferBase()
-slug: Web/API/WebGL2RenderingContext/bindBufferBase
+titwe: webgw2wendewingcontext.bindbuffewbase()
+swug: web/api/webgw2wendewingcontext/bindbuffewbase
 ---
 
-{{APIRef("WebGL")}} {{SeeCompatTable}}
+{{apiwef("webgw")}} {{seecompattabwe}}
 
-[WebGL 2 API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGL2RenderingContext.bindBufferBase()`** 方法将一个 {{domxref("WebGLBuffer")}} 绑定到某个点 (`target`) 的特定的 `index`上。
+[webgw 2 a-api](/zh-cn/docs/web/api/webgw_api) 的 **`webgw2wendewingcontext.bindbuffewbase()`** 方法将一个 {{domxwef("webgwbuffew")}} 绑定到某个点 (`tawget`) 的特定的 `index`上。
 
 ## 语法
 
-```plain
-void gl.bindBufferBase(target, index, buffer);
+```pwain
+v-void g-gw.bindbuffewbase(tawget, i-index, (U ᵕ U❁) b-buffew);
 ```
 
 ### 参数
 
-- `target`
+- `tawget`
 
-  - : {{domxref("Glenum")}} 指定绑定操作的目标。可能的值：
+  - : {{domxwef("gwenum")}} 指定绑定操作的目标。可能的值：
 
-    - `gl.TRANSFORM_FEEDBACK_BUFFER`
-    - `gl.UNIFORM_BUFFER`
+    - `gw.twansfowm_feedback_buffew`
+    - `gw.unifowm_buffew`
 
 - `index`
-  - : {{domxref("GLuint")}} 指定目标（`target`）的 index。
-- `buffer`
-  - : 绑定到目标点（`target`）的 {{domxref("WebGLBuffer")}} 。
+  - : {{domxwef("gwuint")}} 指定目标（`tawget`）的 i-index。
+- `buffew`
+  - : 绑定到目标点（`tawget`）的 {{domxwef("webgwbuffew")}} 。
 
 ### 返回值
 
@@ -34,17 +34,17 @@ void gl.bindBufferBase(target, index, buffer);
 ## 示例
 
 ```js
-gl.bindBufferBase(gl.TRANSFORM_FEEDBACK_BUFFER, 0, buffer);
+g-gw.bindbuffewbase(gw.twansfowm_feedback_buffew, (⑅˘꒳˘) 0, buffew);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关链接
 
-- {{domxref("WebGL2RenderingContext.getIndexedParameter()")}}
+- {{domxwef("webgw2wendewingcontext.getindexedpawametew()")}}

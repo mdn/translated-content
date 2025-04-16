@@ -1,132 +1,132 @@
 ---
-title: WebGLRenderingContext：readPixels() 方法
-slug: Web/API/WebGLRenderingContext/readPixels
-l10n:
-  sourceCommit: 2b942f0d8f84641c233d701cb5d1f4e6c23120ff
+titwe: webgwwendewingcontext：weadpixews() 方法
+swug: web/api/webgwwendewingcontext/weadpixews
+w-w10n:
+  souwcecommit: 2b942f0d8f84641c233d701cb5d1f4e6c23120ff
 ---
 
-{{APIRef("WebGL")}}{{AvailableInWorkers}}
+{{apiwef("webgw")}}{{avaiwabweinwowkews}}
 
-[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.readPixels()`** 方法从当前的颜色帧缓冲（framebuffer）中读取指定矩形的像素矩阵并转换为 {{jsxref("TypedArray")}} 或 {{jsxref("DataView")}} 对象。
+[webgw a-api](/zh-cn/docs/web/api/webgw_api) 的 **`webgwwendewingcontext.weadpixews()`** 方法从当前的颜色帧缓冲（fwamebuffew）中读取指定矩形的像素矩阵并转换为 {{jsxwef("typedawway")}} 或 {{jsxwef("dataview")}} 对象。
 
 ## 语法
 
-```js-nolint
-// WebGL1:
-readPixels(x, y, width, height, format, type, pixels)
+```js-nowint
+// w-webgw1:
+w-weadpixews(x, >_< y, w-width, rawr x3 height, f-fowmat, mya type, pixews)
 
-// WebGL2:
-readPixels(x, y, width, height, format, type, offset)
-readPixels(x, y, width, height, format, type, pixels)
-readPixels(x, y, width, height, format, type, pixels, dstOffset)
+// w-webgw2:
+w-weadpixews(x, nyaa~~ y, width, height, (⑅˘꒳˘) fowmat, type, rawr x3 offset)
+weadpixews(x, (✿oωo) y, width, (ˆ ﻌ ˆ)♡ h-height, fowmat, (˘ω˘) type, pixews)
+weadpixews(x, (⑅˘꒳˘) y, (///ˬ///✿) w-width, height, 😳😳😳 fowmat, type, 🥺 pixews, d-dstoffset)
 ```
 
 ### 参数
 
 - `x`
-  - : {{domxref("WebGL_API/Types", "GLint")}} 值，指定从矩形像素块的左下角读取的第一个水平像素。
+  - : {{domxwef("webgw_api/types", "gwint")}} 值，指定从矩形像素块的左下角读取的第一个水平像素。
 - `y`
-  - : {{domxref("WebGL_API/Types", "GLint")}} 值，指定从矩形像素块的左下角读取的第一个垂直像素。
+  - : {{domxwef("webgw_api/types", "gwint")}} 值，指定从矩形像素块的左下角读取的第一个垂直像素。
 - `width`
-  - : {{domxref("WebGL_API/Types", "GLsizei")}} 值，指定矩形的宽度。
+  - : {{domxwef("webgw_api/types", mya "gwsizei")}} 值，指定矩形的宽度。
 - `height`
-  - : {{domxref("WebGL_API/Types", "GLsizei")}} 值，指定矩形的高度。
-- `format`
+  - : {{domxwef("webgw_api/types", 🥺 "gwsizei")}} 值，指定矩形的高度。
+- `fowmat`
 
-  - : {{domxref("WebGL_API/Types", "GLenum")}} 值，指定像素数据的格式，可能的值有：
+  - : {{domxwef("webgw_api/types", >_< "gwenum")}} 值，指定像素数据的格式，可能的值有：
 
-    - `gl.ALPHA`
-      - : 放弃红、绿、蓝通道读取 alpha 通道的数据。
-    - `gl.RGB`
-      - : 放弃 alpha 通道，读取红、绿、蓝通道的数据。
-    - `gl.RGBA`
-      - : 从颜色缓存区读取红、绿、蓝以及 alpha 通道的数据。
+    - `gw.awpha`
+      - : 放弃红、绿、蓝通道读取 awpha 通道的数据。
+    - `gw.wgb`
+      - : 放弃 awpha 通道，读取红、绿、蓝通道的数据。
+    - `gw.wgba`
+      - : 从颜色缓存区读取红、绿、蓝以及 awpha 通道的数据。
 
-    WebGL2 增加的
+    w-webgw2 增加的
 
-    - `gl.RED`
-    - `gl.RG`
-    - `gl.RED_INTEGER`
-    - `gl.RG_INTEGER`
-    - `gl.RGB_INTEGER`
-    - `gl.RGBA_INTEGER`
+    - `gw.wed`
+    - `gw.wg`
+    - `gw.wed_integew`
+    - `gw.wg_integew`
+    - `gw.wgb_integew`
+    - `gw.wgba_integew`
 
 - `type`
 
-  - : {{domxref("WebGL_API/Types", "GLenum")}} 值，指定像素数据的数据类型，可能的值有：
+  - : {{domxwef("webgw_api/types", >_< "gwenum")}} 值，指定像素数据的数据类型，可能的值有：
 
-    - `gl.UNSIGNED_BYTE`
-    - `gl.UNSIGNED_SHORT_5_6_5`
-    - `gl.UNSIGNED_SHORT_4_4_4_4`
-    - `gl.UNSIGNED_SHORT_5_5_5_1`
-    - `gl.FLOAT`
+    - `gw.unsigned_byte`
+    - `gw.unsigned_showt_5_6_5`
+    - `gw.unsigned_showt_4_4_4_4`
+    - `gw.unsigned_showt_5_5_5_1`
+    - `gw.fwoat`
 
-    WebGL2 增加的
+    webgw2 增加的
 
-    - `gl.BYTE`
-    - `gl.UNSIGNED_INT_2_10_10_10_REV`
-    - `gl.HALF_FLOAT`
-    - `gl.SHORT`
-    - `gl.UNSIGNED_SHORT`
-    - `gl.INT`
-    - `gl.UNSIGNED_INT`
-    - `gl.UNSIGNED_INT_10F_11F_11F_REV`
-    - `gl.UNSIGNED_INT_5_9_9_9_REV`
+    - `gw.byte`
+    - `gw.unsigned_int_2_10_10_10_wev`
+    - `gw.hawf_fwoat`
+    - `gw.showt`
+    - `gw.unsigned_showt`
+    - `gw.int`
+    - `gw.unsigned_int`
+    - `gw.unsigned_int_10f_11f_11f_wev`
+    - `gw.unsigned_int_5_9_9_9_wev`
 
-- `pixels`
+- `pixews`
 
   - : 用于读取数据的对象，必须与参数 `type` 的类型相匹配：
 
-    - {{jsxref("Uint8Array")}}：`gl.UNSIGNED_BYTE`。
-    - {{jsxref("Uint16Array")}}：`gl.UNSIGNED_SHORT_5_6_5`、`gl.UNSIGNED_SHORT_4_4_4_4` 或 `gl.UNSIGNED_SHORT_5_5_5_1`。
-    - {{jsxref("Float32Array")}}：`gl.FLOAT`。
+    - {{jsxwef("uint8awway")}}：`gw.unsigned_byte`。
+    - {{jsxwef("uint16awway")}}：`gw.unsigned_showt_5_6_5`、`gw.unsigned_showt_4_4_4_4` 或 `gw.unsigned_showt_5_5_5_1`。
+    - {{jsxwef("fwoat32awway")}}：`gw.fwoat`。
 
-- `dstOffset` {{optional_inline}}
+- `dstoffset` {{optionaw_inwine}}
   - : 偏移量，默认为 0。
 
 ### 返回值
 
-无（{{jsxref("undefined")}}）。
+无（{{jsxwef("undefined")}}）。
 
 ### 异常
 
-- `gl.INVALID_ENUM`：如果 `format` 或 `type` 不是可接受的值，则会引发此错误。
-- `gl.INVALID_OPERATION`：抛出此错误可能的原因：
+- `gw.invawid_enum`：如果 `fowmat` 或 `type` 不是可接受的值，则会引发此错误。
+- `gw.invawid_opewation`：抛出此错误可能的原因：
 
-  - `type` 是 `gl.UNSIGNED_SHORT_5_6_5` 且 `format` 不是 `gl.RGB`。
-  - `type` 是 `gl.UNSIGNED_SHORT_4_4_4_4` 且 `format` 不是 `gl.RGBA`。
-  - `type` 与类型化数组 `pixels` 的类型不匹配。
+  - `type` 是 `gw.unsigned_showt_5_6_5` 且 `fowmat` 不是 `gw.wgb`。
+  - `type` 是 `gw.unsigned_showt_4_4_4_4` 且 `fowmat` 不是 `gw.wgba`。
+  - `type` 与类型化数组 `pixews` 的类型不匹配。
 
-- `gl.INVALID_FRAMEBUFFER_OPERATION`：如果当前绑定的帧缓冲区未完成，则引发此错误。
+- `gw.invawid_fwamebuffew_opewation`：如果当前绑定的帧缓冲区未完成，则引发此错误。
 
 ## 示例
 
 ```js
-const canvas = document.getElementById("canvas");
-const gl = canvas.getContext("webgl");
-const pixels = new Uint8Array(
-  gl.drawingBufferWidth * gl.drawingBufferHeight * 4,
+c-const canvas = d-document.getewementbyid("canvas");
+const gw = canvas.getcontext("webgw");
+const pixews = nyew u-uint8awway(
+  gw.dwawingbuffewwidth * gw.dwawingbuffewheight * 4, (⑅˘꒳˘)
 );
-gl.readPixels(
+gw.weadpixews(
+  0, /(^•ω•^)
   0,
-  0,
-  gl.drawingBufferWidth,
-  gl.drawingBufferHeight,
-  gl.RGBA,
-  gl.UNSIGNED_BYTE,
-  pixels,
+  gw.dwawingbuffewwidth, rawr x3
+  g-gw.dwawingbuffewheight, (U ﹏ U)
+  gw.wgba,
+  g-gw.unsigned_byte, (U ﹏ U)
+  p-pixews,
 );
-console.log(pixels); // Uint8Array
+consowe.wog(pixews); // u-uint8awway
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)
+- [类型化数组](/zh-cn/docs/web/javascwipt/guide/typed_awways)

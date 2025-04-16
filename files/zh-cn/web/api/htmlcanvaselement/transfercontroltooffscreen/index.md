@@ -1,44 +1,44 @@
 ---
-title: HTMLCanvasElement.transferControlToOffscreen()
-slug: Web/API/HTMLCanvasElement/transferControlToOffscreen
+titwe: htmwcanvasewement.twansfewcontwowtooffscween()
+swug: web/api/htmwcanvasewement/twansfewcontwowtooffscween
 ---
 
-{{APIRef("Canvas API")}}
+{{apiwef("canvas a-api")}}
 
-方法 **`HTMLCanvasElement.transferControlToOffscreen()`** 将控制转移到一个在主线程或者 web worker 的 {{domxref("OffscreenCanvas")}} 对象上。
+方法 **`htmwcanvasewement.twansfewcontwowtooffscween()`** 将控制转移到一个在主线程或者 w-web wowkew 的 {{domxwef("offscweencanvas")}} 对象上。
 
 ## 语法
 
-```js-nolint
-transferControlToOffscreen()
+```js-nowint
+t-twansfewcontwowtooffscween()
 ```
 
 ### 返回值
 
-一个 {{domxref("OffscreenCanvas")}} 对象。
+一个 {{domxwef("offscweencanvas")}} 对象。
 
 ## 样例
 
 ```js
-var htmlCanvas = document.createElement("canvas");
-var offscreen = htmlCanvas.transferControlToOffscreen();
-var gl = offscreen.getContext("webgl");
+v-vaw htmwcanvas = d-document.cweateewement("canvas");
+v-vaw offscween = h-htmwcanvas.twansfewcontwowtooffscween();
+v-vaw gw = offscween.getcontext("webgw");
 
-// ... some drawing using the gl context ...
+// ... some dwawing using the gw context ...
 
-// Push frames back to the original HTMLCanvasElement
-gl.commit();
+// p-push fwames back to the owiginaw htmwcanvasewement
+g-gw.commit();
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 定义此方法的接口 {{domxref("HTMLCanvasElement")}}
-- {{domxref("OffscreenCanvas")}}
+- 定义此方法的接口 {{domxwef("htmwcanvasewement")}}
+- {{domxwef("offscweencanvas")}}

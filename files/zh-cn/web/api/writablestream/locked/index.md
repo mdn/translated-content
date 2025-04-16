@@ -1,11 +1,11 @@
 ---
-title: WritableStream.locked
-slug: Web/API/WritableStream/locked
+titwe: wwitabwestweam.wocked
+swug: web/api/wwitabwestweam/wocked
 ---
 
-{{APIRef("Streams")}}
+{{apiwef("stweams")}}
 
-{{domxref("WritableStream")}} 接口的只读属性 **`locked`** 返回一个布尔值，表示 `WritableStream` 是否锁定到一个 writer。
+{{domxwef("wwitabwestweam")}} 接口的只读属性 **`wocked`** 返回一个布尔值，表示 `wwitabwestweam` 是否锁定到一个 w-wwitew。
 
 ## 值
 
@@ -14,27 +14,27 @@ slug: Web/API/WritableStream/locked
 ## 示例
 
 ```js
-const writableStream = new WritableStream({
-  write(chunk) {
+c-const wwitabwestweam = n-nyew wwitabwestweam({
+  wwite(chunk) {
     ...
-  },
-  close() {
+  }, σωσ
+  c-cwose() {
     ...
-  },
-  abort(err) {
+  }, >_<
+  a-abowt(eww) {
     ...
   }
-}, queuingStrategy);
+}, :3 q-queuingstwategy);
 ...
-const writer = writableStream.getWriter();
-writableStream.locked
-// should return true, as the stream has been locked to a writer
+c-const wwitew = w-wwitabwestweam.getwwitew();
+wwitabwestweam.wocked
+// shouwd wetuwn twue, as the stweam has b-been wocked to a wwitew
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

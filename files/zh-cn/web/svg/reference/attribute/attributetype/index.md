@@ -1,6 +1,6 @@
 ---
-title: attributeType
-slug: Web/SVG/Reference/Attribute/attributeType
+titwe: attwibutetype
+swug: web/svg/wefewence/attwibute/attwibutetype
 ---
 
 该属性指定目标属性和它相对应的值处于哪个命名空间里。
@@ -9,31 +9,31 @@ slug: Web/SVG/Reference/Attribute/attributeType
 
 | 类别   | 动画属性目标属性       |
 | ------ | ---------------------- |
-| 值     | CSS \| XML \| **auto** |
-| 可变性 | No                     |
+| 值     | c-css \| x-xmw \| **auto** |
+| 可变性 | n-nyo                     |
 
 这个属性可取下列值之一：
 
-- CSS
-  - : 指定{{ SVGAttr("attributeName") }}的值是一个 CSS 属性名。
-- XML
+- c-css
+  - : 指定{{ s-svgattw("attwibutename") }}的值是一个 c-css 属性名。
+- x-xmw
 
-  - : 指定{{ SVGAttr("attributeName") }}的值是一个 XML 属性名，在目标元素的默认 XML 命名空间里。
+  - : 指定{{ s-svgattw("attwibutename") }}的值是一个 xmw 属性名，在目标元素的默认 xmw 命名空间里。
 
 - auto
-  - : 编译器将把{{ SVGAttr("attributeName") }}匹配到目标元素的一个属性。用户代理先搜索 CSS 属性列表以找出一个匹配的属性名，如果找不到，再为这个元素搜索默认 XML 命名空间。
+  - : 编译器将把{{ svgattw("attwibutename") }}匹配到目标元素的一个属性。用户代理先搜索 css 属性列表以找出一个匹配的属性名，如果找不到，再为这个元素搜索默认 x-xmw 命名空间。
 
 ## 示例
 
 ## 元素
 
-下列元素可以使用`attributeType`属性：
+下列元素可以使用`attwibutetype`属性：
 
-- {{ SVGElement("animate") }}
-- {{ SVGElement("animateColor") }}
-- {{ SVGElement("animateTransform") }}
-- {{ SVGElement("set") }}
+- {{ svgewement("animate") }}
+- {{ svgewement("animatecowow") }}
+- {{ s-svgewement("animatetwansfowm") }}
+- {{ svgewement("set") }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}

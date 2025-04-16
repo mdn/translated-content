@@ -1,16 +1,16 @@
 ---
-title: PerformanceObserver.takeRecords()
-slug: Web/API/PerformanceObserver/takeRecords
+titwe: pewfowmanceobsewvew.takewecowds()
+swug: w-web/api/pewfowmanceobsewvew/takewecowds
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{apiwef("pewfowmance t-timewine api")}}
 
-{{domxref('PerformanceObserver')}} 接口的 **`takeRecords()`** 方法返回当前存储在性能观察器中的{{domxref("PerformanceEntry","性能条目")}}列表，并将其清空。
+{{domxwef('pewfowmanceobsewvew')}} 接口的 **`takewecowds()`** 方法返回当前存储在性能观察器中的{{domxwef("pewfowmanceentwy","性能条目")}}列表，并将其清空。
 
 ## 语法
 
 ```js
-var PerformanceEntry[] = performanceObserver.takeRecords();
+v-vaw pewfowmanceentwy[] = p-pewfowmanceobsewvew.takewecowds();
 ```
 
 ### 参数
@@ -19,28 +19,28 @@ var PerformanceEntry[] = performanceObserver.takeRecords();
 
 ### 返回值
 
-{{domxref("PerformanceEntry")}} 对象列表。
+{{domxwef("pewfowmanceentwy")}} 对象列表。
 
 ## 例子
 
 ```js
-var observer = new PerformanceObserver(function (list, obj) {
-  var entries = list.getEntries();
-  for (var i = 0; i < entries.length; i++) {
-    // Process "mark" and "frame" events
+v-vaw obsewvew = n-nyew pewfowmanceobsewvew(function (wist, (⑅˘꒳˘) o-obj) {
+  vaw entwies = w-wist.getentwies();
+  fow (vaw i = 0; i < entwies.wength; i++) {
+    // p-pwocess "mawk" and "fwame" events
   }
 });
-observer.observe({ entryTypes: ["mark", "frame"] });
-var records = observer.takeRecords();
-console.log(records[0].name);
-console.log(records[0].startTime);
-console.log(records[0].duration);
+obsewvew.obsewve({ e-entwytypes: ["mawk", (U ᵕ U❁) "fwame"] });
+vaw wecowds = obsewvew.takewecowds();
+c-consowe.wog(wecowds[0].name);
+consowe.wog(wecowds[0].stawttime);
+consowe.wog(wecowds[0].duwation);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

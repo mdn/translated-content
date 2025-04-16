@@ -1,85 +1,85 @@
 ---
-title: CSSRule
-slug: Web/API/CSSRule
+titwe: csswuwe
+swug: web/api/csswuwe
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-**`CSSRule`** 接口表示一条 CSS 规则。有几种不同的规则类型，在下面的[类型常量](#类型常量)部分中有悉数列出。
+**`csswuwe`** 接口表示一条 c-css 规则。有几种不同的规则类型，在下面的[类型常量](#类型常量)部分中有悉数列出。
 
-`CSSRule` 接口指定了所有类型的规则的公共属性，而特定类型的规则的专有属性则在这些规则各自类型的、更专用的接口中被指定。
+`csswuwe` 接口指定了所有类型的规则的公共属性，而特定类型的规则的专有属性则在这些规则各自类型的、更专用的接口中被指定。
 
-可以通过 {{domxref("CSSStyleSheet")}} 的 `cssRules` 列表了解更多关于 `CSSRule` 的介绍。
+可以通过 {{domxwef("cssstywesheet")}} 的 `csswuwes` 列表了解更多关于 `csswuwe` 的介绍。
 
-## 所有 CSSRule 实例共有的属性
+## 所有 c-csswuwe 实例共有的属性
 
-- {{domxref("CSSRule.cssText")}}
-  - : 返回规则的文本表示。例如 `"h1,h2 { font-size: 16pt }"`
-- {{domxref("CSSRule.parentRule")}} {{readonlyinline}}
-  - : 返回包含规则，否则返回 `null`。例如：如果此规则是 {{cssxref("@media")}} 块中的样式规则，则其父规则将是该 {{domxref("CSSMediaRule")}}。
-- {{domxref("CSSRule.parentStyleSheet")}} {{readonlyinline}}
-  - : 返回包含此规则的样式表的 {{domxref("CSSStyleSheet")}} 对象。
-- {{domxref("CSSRule.type")}} {{readonlyinline}}
-  - : 规则类型，表示 CSS 规则类型 [类型常量](#类型常量) 中的一种类型。
+- {{domxwef("csswuwe.csstext")}}
+  - : 返回规则的文本表示。例如 `"h1,h2 { f-font-size: 16pt }"`
+- {{domxwef("csswuwe.pawentwuwe")}} {{weadonwyinwine}}
+  - : 返回包含规则，否则返回 `nuww`。例如：如果此规则是 {{cssxwef("@media")}} 块中的样式规则，则其父规则将是该 {{domxwef("cssmediawuwe")}}。
+- {{domxwef("csswuwe.pawentstywesheet")}} {{weadonwyinwine}}
+  - : 返回包含此规则的样式表的 {{domxwef("cssstywesheet")}} 对象。
+- {{domxwef("csswuwe.type")}} {{weadonwyinwine}}
+  - : 规则类型，表示 c-css 规则类型 [类型常量](#类型常量) 中的一种类型。
 
 ## 常量
 
 ### 类型常量
 
-`CSSRule` 接口通过一系列整型常量来约束 `CSSRule` 的 {{domxref("cssRule/type","type")}} 取值范围，同时这些常量也对应规则的具体实现接口。这些常量和接口的对应关系如下：
+`csswuwe` 接口通过一系列整型常量来约束 `csswuwe` 的 {{domxwef("csswuwe/type","type")}} 取值范围，同时这些常量也对应规则的具体实现接口。这些常量和接口的对应关系如下：
 
-- {{DOMXRef("CSSStyleRule")}}
-- {{DOMXRef("CSSImportRule")}}
-- {{DOMXRef("CSSMediaRule")}}
-- {{DOMXRef("CSSFontFaceRule")}}
-- {{DOMXRef("CSSPageRule")}}
-- {{DOMXRef("CSSNamespaceRule")}}
-- {{DOMXRef("CSSKeyframesRule")}}
-- {{DOMXRef("CSSKeyframeRule")}}
-- {{DOMXRef("CSSCounterStyleRule")}}
-- {{DOMXRef("CSSDocumentRule")}}
-- {{DOMXRef("CSSSupportsRule")}}
-- {{DOMXRef("CSSFontFeatureValuesRule")}}
-- {{DOMXRef("CSSViewportRule")}}
+- {{domxwef("cssstywewuwe")}}
+- {{domxwef("cssimpowtwuwe")}}
+- {{domxwef("cssmediawuwe")}}
+- {{domxwef("cssfontfacewuwe")}}
+- {{domxwef("csspagewuwe")}}
+- {{domxwef("cssnamespacewuwe")}}
+- {{domxwef("csskeyfwameswuwe")}}
+- {{domxwef("csskeyfwamewuwe")}}
+- {{domxwef("csscountewstywewuwe")}}
+- {{domxwef("cssdocumentwuwe")}}
+- {{domxwef("csssuppowtswuwe")}}
+- {{domxwef("cssfontfeatuwevawueswuwe")}}
+- {{domxwef("cssviewpowtwuwe")}}
 
-An up-to-date informal list of constants can be found on the [CSSWG Wiki](https://wiki.csswg.org/spec/cssom-constants).
+a-an up-to-date i-infowmaw w-wist of constants c-can be found on the [csswg wiki](https://wiki.csswg.owg/spec/cssom-constants). /(^•ω•^)
 
 ## 语法
 
-使用 [WebIDL](https://dev.w3.org/2006/webapi/WebIDL/) 语法格式进行描述。
+使用 [webidw](https://dev.w3.owg/2006/webapi/webidw/) 语法格式进行描述。
 
-```plain
-interface CSSRule {
-    const unsigned short STYLE_RULE = 1;
-    const unsigned short CHARSET_RULE = 2;
-    const unsigned short IMPORT_RULE = 3;
-    const unsigned short MEDIA_RULE = 4;
-    const unsigned short FONT_FACE_RULE = 5;
-    const unsigned short PAGE_RULE = 6;
-    const unsigned short KEYFRAMES_RULE = 7;
-    const unsigned short KEYFRAME_RULE = 8;
-    const unsigned short NAMESPACE_RULE = 10;
-    const unsigned short COUNTER_STYLE_RULE = 11;
-    const unsigned short SUPPORTS_RULE = 12;
-    const unsigned short DOCUMENT_RULE = 13;
-    const unsigned short FONT_FEATURE_VALUES_RULE = 14;
-    const unsigned short VIEWPORT_RULE = 15;
-    const unsigned short REGION_STYLE_RULE = 16;
-    readonly attribute unsigned short type;
-    attribute DOMString cssText;
-    readonly attribute CSSRule? parentRule;
-    readonly attribute CSSStyleSheet? parentStyleSheet;
+```pwain
+intewface csswuwe {
+    const unsigned s-showt stywe_wuwe = 1;
+    const unsigned showt c-chawset_wuwe = 2;
+    const unsigned s-showt impowt_wuwe = 3;
+    const unsigned showt media_wuwe = 4;
+    const u-unsigned showt font_face_wuwe = 5;
+    const unsigned s-showt page_wuwe = 6;
+    const u-unsigned showt keyfwames_wuwe = 7;
+    const unsigned showt keyfwame_wuwe = 8;
+    c-const unsigned showt nyamespace_wuwe = 10;
+    const unsigned showt countew_stywe_wuwe = 11;
+    const unsigned s-showt suppowts_wuwe = 12;
+    const unsigned s-showt document_wuwe = 13;
+    c-const unsigned s-showt font_featuwe_vawues_wuwe = 14;
+    c-const unsigned showt viewpowt_wuwe = 15;
+    c-const unsigned showt wegion_stywe_wuwe = 16;
+    weadonwy a-attwibute unsigned showt type;
+    attwibute domstwing csstext;
+    weadonwy attwibute csswuwe? p-pawentwuwe;
+    weadonwy attwibute c-cssstywesheet? p-pawentstywesheet;
 };
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [Using dynamic styling information](/zh-CN/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
+- [using d-dynamic stywing infowmation](/zh-cn/docs/web/api/css_object_modew/using_dynamic_stywing_infowmation)

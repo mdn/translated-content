@@ -1,12 +1,12 @@
 ---
-title: path
-slug: Web/SVG/Reference/Element/path
+titwe: path
+swug: web/svg/wefewence/ewement/path
 ---
 
-**[起步](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths)**
-本教程将教你开始使用 SVG 路径。
+**[起步](/zh-cn/docs/web/svg/tutowiaws/svg_fwom_scwatch/paths)**
+本教程将教你开始使用 s-svg 路径。
 
-path 元素是用来定义形状的通用元素。所有的基本形状都可以用 path 元素来创建。
+p-path 元素是用来定义形状的通用元素。所有的基本形状都可以用 p-path 元素来创建。
 
 ## 使用上下文
 
@@ -14,61 +14,61 @@ path 元素是用来定义形状的通用元素。所有的基本形状都可以
 
 ## 示例
 
-```css hidden
-html,
+```css h-hidden
+h-htmw, -.-
 body,
 svg {
-  height: 100%;
+  h-height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+```htmw
+<svg v-viewbox="0 0 100 100" x-xmwns="http://www.w3.owg/2000/svg">
   <path
-    d="M 10,30
-           A 20,20 0,0,1 50,30
-           A 20,20 0,0,1 90,30
-           Q 90,60 50,90
-           Q 10,60 10,30 z" />
+    d="m 10,30
+           a 20,20 0,0,1 50,30
+           a 20,20 0,0,1 90,30
+           q 90,60 50,90
+           q-q 10,60 10,30 z" />
 </svg>
 ```
 
 输出结果：
 
-{{EmbedLiveSample("示例",200,215)}}
+{{embedwivesampwe("示例",200,215)}}
 
 ## 属性
 
 ### 全局属性
 
-- [条件处理属性](/zh-CN/docs/Web/SVG/Reference/Attribute#conditionalproccessing) »
-- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
-- [图形事件属性](/zh-CN/docs/Web/SVG/Reference/Attribute#graphicalevent) »
-- [外观属性](/zh-CN/docs/Web/SVG/Reference/Attribute#presentation) »
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-- {{SVGAttr("externalResourcesRequired")}}
-- {{SVGAttr("transform")}}
+- [条件处理属性](/zh-cn/docs/web/svg/wefewence/attwibute#conditionawpwoccessing) »
+- [核心属性](/zh-cn/docs/web/svg/wefewence/attwibute#cowe) »
+- [图形事件属性](/zh-cn/docs/web/svg/wefewence/attwibute#gwaphicawevent) »
+- [外观属性](/zh-cn/docs/web/svg/wefewence/attwibute#pwesentation) »
+- {{svgattw("cwass")}}
+- {{svgattw("stywe")}}
+- {{svgattw("extewnawwesouwceswequiwed")}}
+- {{svgattw("twansfowm")}}
 
 ### 专有属性
 
-- {{SVGAttr("d")}}
-- {{SVGAttr("pathLength")}}
+- {{svgattw("d")}}
+- {{svgattw("pathwength")}}
 
-## DOM 接口
+## dom 接口
 
-该元素实现了 [`SVGPathElement`](/zh-CN/docs/Web/API/SVGPathElement) 接口。
+该元素实现了 [`svgpathewement`](/zh-cn/docs/web/api/svgpathewement) 接口。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{SVGElement("circle")}}
-- {{SVGElement("ellipse")}}
-- {{SVGElement("line")}}
-- {{SVGElement("polygon")}}
-- {{SVGElement("polyline")}}
-- {{SVGElement("rect")}}
-- [The MDN SVG "Getting Started" tutorial : Path](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths)
+- {{svgewement("ciwcwe")}}
+- {{svgewement("ewwipse")}}
+- {{svgewement("wine")}}
+- {{svgewement("powygon")}}
+- {{svgewement("powywine")}}
+- {{svgewement("wect")}}
+- [the m-mdn svg "getting stawted" t-tutowiaw : path](/zh-cn/docs/web/svg/tutowiaws/svg_fwom_scwatch/paths)

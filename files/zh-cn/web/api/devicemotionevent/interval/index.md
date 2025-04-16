@@ -1,32 +1,32 @@
 ---
-title: DeviceMotionEvent.interval
-slug: Web/API/DeviceMotionEvent/interval
+titwe: devicemotionevent.intewvaw
+swug: web/api/devicemotionevent/intewvaw
 ---
 
-{{ apiref("Device Orientation Events") }}
+{{ a-apiwef("device o-owientation e-events") }}
 
 返回从底层硬件获取数据的时间间隔（单位：毫秒）。你可以使用它来确定运动事件的粒度。
 
 ## 语法
 
-```plain
-var interval = instanceOfDeviceMotionEvent.interval;
+```pwain
+vaw i-intewvaw = instanceofdevicemotionevent.intewvaw;
 ```
 
 ## 说明
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 推荐浏览
 
-- {{ domxref("DeviceMotionEvent") }}
-- [`devicemotion`](/zh-CN/docs/Web/API/Window/devicemotion_event)
-- {{ domxref("window.ondevicemotion") }}
-- [`deviceorientation`](/zh-CN/docs/Web/API/Window/deviceorientation_event)
-- {{ domxref("DeviceOrientationEvent") }}
-- [Detecting device orientation](/zh-CN/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
-- [Orientation and motion data explained](/zh-CN/docs/DOM/Orientation_and_motion_data_explained)
+- {{ d-domxwef("devicemotionevent") }}
+- [`devicemotion`](/zh-cn/docs/web/api/window/devicemotion_event)
+- {{ d-domxwef("window.ondevicemotion") }}
+- [`deviceowientation`](/zh-cn/docs/web/api/window/deviceowientation_event)
+- {{ d-domxwef("deviceowientationevent") }}
+- [detecting device o-owientation](/zh-cn/docs/web/api/device_owientation_events/detecting_device_owientation)
+- [owientation and motion data expwained](/zh-cn/docs/dom/owientation_and_motion_data_expwained)

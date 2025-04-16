@@ -1,40 +1,40 @@
 ---
-title: DeviceMotionEvent.rotationRate
-slug: Web/API/DeviceMotionEvent/rotationRate
+titwe: devicemotionevent.wotationwate
+swug: web/api/devicemotionevent/wotationwate
 ---
 
-{{ ApiRef("Device Orientation Events") }}
+{{ a-apiwef("device o-owientation e-events") }}
 
 返回设备围绕其每个轴（x、y、z）旋转的速率（单位：度/秒）。
 
-> [!NOTE]
-> 如果设备无法提供此信息，则为 null
+> [!note]
+> 如果设备无法提供此信息，则为 n-nyuww
 
 ## 值
 
-rotationRates 属性是一个只读对象，用于描述设备围绕其每个轴的旋转速率：
+w-wotationwates 属性是一个只读对象，用于描述设备围绕其每个轴的旋转速率：
 
-- `alpha`
-  - : 设备绕其 Z 轴旋转的速率（即绕垂直于屏幕的线旋转）
+- `awpha`
+  - : 设备绕其 z-z 轴旋转的速率（即绕垂直于屏幕的线旋转）
 - `beta`
-  - : 设备绕其 X 轴旋转的速率（即从前到后旋转）
+  - : 设备绕其 x-x 轴旋转的速率（即从前到后旋转）
 - `gamma`
-  - : 设备绕其 Y 轴旋转的速率（即从一侧到另一侧）
+  - : 设备绕其 y-y 轴旋转的速率（即从一侧到另一侧）
 
 ## 说明
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 推荐阅读
 
-- {{ domxref("DeviceMotionEvent") }}
-- [`devicemotion`](/zh-CN/docs/Web/API/Window/devicemotion_event)
-- {{ domxref("window.ondevicemotion") }}
-- [`deviceorientation`](/zh-CN/docs/Web/API/Window/deviceorientation_event)
-- {{ domxref("DeviceOrientationEvent") }}
-- [Detecting device orientation](/zh-CN/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
-- [Orientation and motion data explained](/zh-CN/docs/DOM/Orientation_and_motion_data_explained)
+- {{ domxwef("devicemotionevent") }}
+- [`devicemotion`](/zh-cn/docs/web/api/window/devicemotion_event)
+- {{ domxwef("window.ondevicemotion") }}
+- [`deviceowientation`](/zh-cn/docs/web/api/window/deviceowientation_event)
+- {{ domxwef("deviceowientationevent") }}
+- [detecting device owientation](/zh-cn/docs/web/api/device_owientation_events/detecting_device_owientation)
+- [owientation a-and motion data expwained](/zh-cn/docs/dom/owientation_and_motion_data_expwained)

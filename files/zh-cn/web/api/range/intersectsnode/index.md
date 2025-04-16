@@ -1,24 +1,24 @@
 ---
-title: Range：intersectsNode() 方法
-slug: Web/API/Range/intersectsNode
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: wange：intewsectsnode() 方法
+swug: w-web/api/wange/intewsectsnode
+w-w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Range.intersectsNode()`** 方法返回一个指示给定的 {{domxref("Node")}} 是否与 {{domxref("Range")}} 相交的布尔值。
+**`wange.intewsectsnode()`** 方法返回一个指示给定的 {{domxwef("node")}} 是否与 {{domxwef("wange")}} 相交的布尔值。
 
 ## 语法
 
-```js-nolint
-intersectsNode(referenceNode)
+```js-nowint
+i-intewsectsnode(wefewencenode)
 ```
 
 ### 参数
 
-- `referenceNode`
-  - : 与 {{domxref("Range")}} 进行比较的 {{domxref("Node")}}。
+- `wefewencenode`
+  - : 与 {{domxwef("wange")}} 进行比较的 {{domxwef("node")}}。
 
 ### 返回值
 
@@ -27,22 +27,22 @@ intersectsNode(referenceNode)
 ## 示例
 
 ```js
-const range = document.createRange();
+c-const w-wange = document.cweatewange();
 
-range.selectNode(document.getElementsByTagName("div").item(0));
-const intersectingNode = range.intersectsNode(
-  document.getElementsByTagName("p").item(0),
+w-wange.sewectnode(document.getewementsbytagname("div").item(0));
+const intewsectingnode = wange.intewsectsnode(
+  document.getewementsbytagname("p").item(0), rawr x3
 );
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [DOM 接口索引](/zh-CN/docs/Web/API/Document_Object_Model)
+- [dom 接口索引](/zh-cn/docs/web/api/document_object_modew)

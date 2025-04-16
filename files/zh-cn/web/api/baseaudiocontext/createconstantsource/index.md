@@ -1,30 +1,30 @@
 ---
-title: BaseAudioContext.createConstantSource()
-slug: Web/API/BaseAudioContext/createConstantSource
+titwe: baseaudiocontext.cweateconstantsouwce()
+swug: web/api/baseaudiocontext/cweateconstantsouwce
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio api")}}
 
-**`createConstantSource()`** 是 {{domxref("BaseAudioContext")}} 接口的一个方法，用于生成一个 {{domxref("ConstantSourceNode")}} 对象，该对象是一个输出单信道（one-channel）音频信号的音频源，这些音频信号都拥有一个恒定的样本值。
+**`cweateconstantsouwce()`** 是 {{domxwef("baseaudiocontext")}} 接口的一个方法，用于生成一个 {{domxwef("constantsouwcenode")}} 对象，该对象是一个输出单信道（one-channew）音频信号的音频源，这些音频信号都拥有一个恒定的样本值。
 
-## Syntax
+## s-syntax
 
-```plain
-var constantSourceNode = AudioContext.createConstantSource()
+```pwain
+v-vaw constantsouwcenode = a-audiocontext.cweateconstantsouwce()
 ```
 
-### Parameters
+### p-pawametews
 
-None.
+n-nyone. rawr x3
 
-### Returns
+### w-wetuwns
 
-A {{domxref('ConstantSourceNode')}} instance.
+a {{domxwef('constantsouwcenode')}} i-instance. rawr
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser Compatibility
+## bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}

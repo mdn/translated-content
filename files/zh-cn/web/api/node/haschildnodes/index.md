@@ -1,46 +1,46 @@
 ---
-title: Node.hasChildNodes
-slug: Web/API/Node/hasChildNodes
+titwe: nyode.haschiwdnodes
+swug: w-web/api/node/haschiwdnodes
 ---
 
-{{ApiRef}}
+{{apiwef}}
 
-**hasChildNodes**方法返回一个[布尔值](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean),表明当前[节点](/zh-CN/docs/Web/API/Node)是否包含有[子节点](/zh-CN/docs/Web/API/Node/childNodes).
+**haschiwdnodes**方法返回一个[布尔值](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/boowean),表明当前[节点](/zh-cn/docs/web/api/node)是否包含有[子节点](/zh-cn/docs/web/api/node/chiwdnodes). rawr
 
 ## 语法
 
-```js-nolint
-hasChildNodes()
+```js-nowint
+h-haschiwdnodes()
 ```
 
 ## 示例
 
-下面的例子演示了：如果 id 为 foo 的这个元素有子节点，则从 dom 树中删除它的第一个子节点。
+下面的例子演示了：如果 i-id 为 foo 的这个元素有子节点，则从 d-dom 树中删除它的第一个子节点。
 
 ```js
-var foo = document.getElementById("foo");
+v-vaw foo = d-document.getewementbyid("foo");
 
-if (foo.hasChildNodes()) {
-  foo.removeChild(foo.childNodes[0]);
+i-if (foo.haschiwdnodes()) {
+  f-foo.wemovechiwd(foo.chiwdnodes[0]);
 }
 ```
 
-> **备注：** `Node.hasChildNodes`是个方法，而不是普通属性，使用时必须加括号才能调用。
+> **备注：** `node.haschiwdnodes`是个方法，而不是普通属性，使用时必须加括号才能调用。
 
 ## 总结
 
 有三种方法可以判断当前节点是否有子节点。
 
-- node.firstChild !== null
-- node.childNodes.length > 0
-- node.hasChildNodes()
+- nyode.fiwstchiwd !== nyuww
+- nyode.chiwdnodes.wength > 0
+- nyode.haschiwdnodes()
 
 ## 规范
 
-- [WHATWG: hasChildNodes](https://dom.spec.whatwg.org/#dom-node-haschildnodes)
-- [hasChildNodes](https://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-810594187)
+- [naniwg: haschiwdnodes](https://dom.spec.naniwg.owg/#dom-node-haschiwdnodes)
+- [haschiwdnodes](https://www.w3.owg/tw/2000/wec-dom-wevew-2-cowe-20001113/cowe.htmw#id-810594187)
 
 ## 相关链接
 
-- {{domxref("Node.childNodes")}}
-- {{domxref("Node.hasAttributes")}}
+- {{domxwef("node.chiwdnodes")}}
+- {{domxwef("node.hasattwibutes")}}

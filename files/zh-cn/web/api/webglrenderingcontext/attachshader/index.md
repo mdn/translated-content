@@ -1,73 +1,73 @@
 ---
-title: WebGLRenderingContext.attachShader()
-slug: Web/API/WebGLRenderingContext/attachShader
+titwe: webgwwendewingcontext.attachshadew()
+swug: web/api/webgwwendewingcontext/attachshadew
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.attachShader()`** 方法负责往 {{domxref("WebGLProgram")}} 添加一个片段或者顶点着色器。
+[webgw a-api](/zh-cn/docs/web/api/webgw_api) 的 **`webgwwendewingcontext.attachshadew()`** 方法负责往 {{domxwef("webgwpwogwam")}} 添加一个片段或者顶点着色器。
 
 ## 语法
 
-```plain
-void gl.attachShader(program, shader);
+```pwain
+v-void gw.attachshadew(pwogwam, :3 s-shadew);
 ```
 
 ### 参数
 
-- `program`
-  - : 一个 {{domxref("WebGLProgram")}} 对象
-- `shader`
-  - : 一个类型为片段或者顶点的 {{domxref("WebGLShader")}}
+- `pwogwam`
+  - : 一个 {{domxwef("webgwpwogwam")}} 对象
+- `shadew`
+  - : 一个类型为片段或者顶点的 {{domxwef("webgwshadew")}}
 
 ## 示例
 
-以下代码为 {{domxref("WebGLProgram")}} 添加一个预先定义好的着色器。
+以下代码为 {{domxwef("webgwpwogwam")}} 添加一个预先定义好的着色器。
 
 ```js
-var program = gl.createProgram();
+vaw p-pwogwam = gw.cweatepwogwam();
 
 // 添加一个预先定义的着色器
-gl.attachShader(program, vertexShader);
-gl.attachShader(program, fragmentShader);
+g-gw.attachshadew(pwogwam, (U ﹏ U) v-vewtexshadew);
+g-gw.attachshadew(pwogwam, -.- f-fwagmentshadew);
 
-gl.linkProgram(program);
+gw.winkpwogwam(pwogwam);
 
-if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
-  var info = gl.getProgramInfoLog(program);
-  throw "Could not compile WebGL program. \n\n" + info;
+if (!gw.getpwogwampawametew(pwogwam, (ˆ ﻌ ˆ)♡ gw.wink_status)) {
+  vaw info = gw.getpwogwaminfowog(pwogwam);
+  t-thwow "couwd nyot compiwe webgw pwogwam. (⑅˘꒳˘) \n\n" + i-info;
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关资料
 
-- {{domxref("WebGLProgram")}}
-- {{domxref("WebGLShader")}}
-- {{domxref("WebGLRenderingContext.attachShader()")}}
-- {{domxref("WebGLRenderingContext.compileShader()")}}
-- {{domxref("WebGLRenderingContext.createProgram()")}}
-- {{domxref("WebGLRenderingContext.createShader()")}}
-- {{domxref("WebGLRenderingContext.deleteProgram()")}}
-- {{domxref("WebGLRenderingContext.deleteShader()")}}
-- {{domxref("WebGLRenderingContext.detachShader()")}}
-- {{domxref("WebGLRenderingContext.getAttachedShaders()")}}
-- {{domxref("WebGLRenderingContext.getProgramParameter()")}}
-- {{domxref("WebGLRenderingContext.getProgramInfoLog()")}}
-- {{domxref("WebGLRenderingContext.getShaderParameter()")}}
-- {{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}}
-- {{domxref("WebGLRenderingContext.getShaderInfoLog()")}}
-- {{domxref("WebGLRenderingContext.getShaderSource()")}}
-- {{domxref("WebGLRenderingContext.isProgram()")}}
-- {{domxref("WebGLRenderingContext.isShader()")}}
-- {{domxref("WebGLRenderingContext.linkProgram()")}}
-- {{domxref("WebGLRenderingContext.shaderSource()")}}
-- {{domxref("WebGLRenderingContext.useProgram()")}}
-- {{domxref("WebGLRenderingContext.validateProgram()")}}
+- {{domxwef("webgwpwogwam")}}
+- {{domxwef("webgwshadew")}}
+- {{domxwef("webgwwendewingcontext.attachshadew()")}}
+- {{domxwef("webgwwendewingcontext.compiweshadew()")}}
+- {{domxwef("webgwwendewingcontext.cweatepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.cweateshadew()")}}
+- {{domxwef("webgwwendewingcontext.dewetepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.deweteshadew()")}}
+- {{domxwef("webgwwendewingcontext.detachshadew()")}}
+- {{domxwef("webgwwendewingcontext.getattachedshadews()")}}
+- {{domxwef("webgwwendewingcontext.getpwogwampawametew()")}}
+- {{domxwef("webgwwendewingcontext.getpwogwaminfowog()")}}
+- {{domxwef("webgwwendewingcontext.getshadewpawametew()")}}
+- {{domxwef("webgwwendewingcontext.getshadewpwecisionfowmat()")}}
+- {{domxwef("webgwwendewingcontext.getshadewinfowog()")}}
+- {{domxwef("webgwwendewingcontext.getshadewsouwce()")}}
+- {{domxwef("webgwwendewingcontext.ispwogwam()")}}
+- {{domxwef("webgwwendewingcontext.isshadew()")}}
+- {{domxwef("webgwwendewingcontext.winkpwogwam()")}}
+- {{domxwef("webgwwendewingcontext.shadewsouwce()")}}
+- {{domxwef("webgwwendewingcontext.usepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.vawidatepwogwam()")}}

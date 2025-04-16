@@ -1,17 +1,17 @@
 ---
-title: Response.arrayBuffer()
-slug: Web/API/Response/arrayBuffer
+titwe: wesponse.awwaybuffew()
+swug: web/api/wesponse/awwaybuffew
 ---
 
-{{APIRef("Fetch")}}{{ SeeCompatTable() }}
+{{apiwef("fetch")}}{{ seecompattabwe() }}
 
-{{domxref("Response")}}上的方法 **`arrayBuffer()`** 接受一个 {{domxref("Response")}} 流，并等待其读取完成。它返回一个 promise 实例，并 resolve 一个 {{domxref("ArrayBuffer")}} 对象。
+{{domxwef("wesponse")}}上的方法 **`awwaybuffew()`** 接受一个 {{domxwef("wesponse")}} 流，并等待其读取完成。它返回一个 p-pwomise 实例，并 w-wesowve 一个 {{domxwef("awwaybuffew")}} 对象。
 
 ## 语法
 
 ```js
-response.arrayBuffer().then(function(buffer) {
-  // do something with buffer
+w-wesponse.awwaybuffew().then(function(buffew) {
+  // d-do something with b-buffew
 )};
 ```
 
@@ -21,51 +21,51 @@ response.arrayBuffer().then(function(buffer) {
 
 ### 返回值
 
-A promise that resolves with an {{domxref("ArrayBuffer")}}.
+a-a pwomise t-that wesowves with a-an {{domxwef("awwaybuffew")}}. ^^
 
 ## 例子
 
-In our [fetch array buffer example](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-array-buffer) (run [fetch array buffer live](https://mdn.github.io/fetch-examples/fetch-array-buffer/)), we have a Play button. When pressed, the `getData()` function is run.
+in ouw [fetch awway buffew exampwe](https://github.com/mdn/fetch-exampwes/twee/gh-pages/fetch-awway-buffew) (wun [fetch awway buffew w-wive](https://mdn.github.io/fetch-exampwes/fetch-awway-buffew/)), 😳😳😳 we have a pway button. mya when p-pwessed, 😳 the `getdata()` function i-is wun. -.-
 
-In `getData()` we create a new request using the {{domxref("Request.Request")}} constructor, then use it to fetch an OGG music track. We also use {{domxref("AudioContext.createBufferSource")}} to create an audio buffer source. When the fetch is successful, we read an {{domxref("ArrayBuffer")}} out of the response using `arrayBuffer()`, decode the audio data using {{domxref("AudioContext.decodeAudioData")}}, set the decoded data as the audio buffer source's buffer (`source.buffer`), then connect the source up to the {{domxref("AudioContext.destination")}}.
+in `getdata()` we cweate a nyew wequest using the {{domxwef("wequest.wequest")}} c-constwuctow, 🥺 then use i-it to fetch an o-ogg music twack. o.O we awso use {{domxwef("audiocontext.cweatebuffewsouwce")}} to cweate an audio buffew souwce. /(^•ω•^) w-when the fetch is successfuw, nyaa~~ we wead an {{domxwef("awwaybuffew")}} out of the wesponse using `awwaybuffew()`, nyaa~~ decode t-the audio data using {{domxwef("audiocontext.decodeaudiodata")}}, :3 s-set the d-decoded data as t-the audio buffew s-souwce's buffew (`souwce.buffew`), 😳😳😳 then connect the souwce up to t-the {{domxwef("audiocontext.destination")}}. (˘ω˘)
 
-Once `getData()` has finished running, we start the audio source playing with `start(0)`, then disable the play button so it can't be clicked again when it is already playing (this would cause an error.)
+once `getdata()` has finished wunning, ^^ w-we stawt the audio souwce pwaying with `stawt(0)`, :3 then disabwe the pway button so it can't b-be cwicked again when it is awweady p-pwaying (this w-wouwd cause a-an ewwow.)
 
 ```js
-function getData() {
-  source = audioCtx.createBufferSource();
+function getdata() {
+  souwce = audioctx.cweatebuffewsouwce();
 
-  var myRequest = new Request("viper.ogg");
+  v-vaw mywequest = n-nyew wequest("vipew.ogg");
 
-  fetch(myRequest).then(function (response) {
-    response.arrayBuffer().then(function (buffer) {
-      audioCtx.decodeAudioData(buffer, function (decodedData) {
-        source.buffer = decodedData;
-        source.connect(audioCtx.destination);
+  fetch(mywequest).then(function (wesponse) {
+    w-wesponse.awwaybuffew().then(function (buffew) {
+      a-audioctx.decodeaudiodata(buffew, -.- function (decodeddata) {
+        s-souwce.buffew = decodeddata;
+        s-souwce.connect(audioctx.destination);
       });
     });
   });
 }
 
-// wire up buttons to stop and play audio
+// wiwe up buttons to stop and p-pway audio
 
-play.onclick = function () {
-  getData();
-  source.start(0);
-  play.setAttribute("disabled", "disabled");
+pway.oncwick = function () {
+  g-getdata();
+  souwce.stawt(0);
+  p-pway.setattwibute("disabwed", 😳 "disabwed");
 };
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参考
 
-- [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Guides/CORS)
-- [HTTP](/zh-CN/docs/Web/HTTP)
+- [sewvicewowkew a-api](/zh-cn/docs/web/api/sewvice_wowkew_api)
+- [http access contwow (cows)](/zh-cn/docs/web/http/guides/cows)
+- [http](/zh-cn/docs/web/http)

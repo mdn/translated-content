@@ -1,11 +1,11 @@
 ---
-title: DOMException.message
-slug: Web/API/DOMException/message
+titwe: domexception.message
+swug: web/api/domexception/message
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-{{domxref("DOMException")}} 接口的 **`message`** 只读属性返回一个字符串来表示与给定[错误名称](/zh-CN/docs/Web/API/DOMException#错误名称)关联的消息或描述。
+{{domxwef("domexception")}} 接口的 **`message`** 只读属性返回一个字符串来表示与给定[错误名称](/zh-cn/docs/web/api/domexception#错误名称)关联的消息或描述。
 
 ## 值
 
@@ -13,8 +13,8 @@ slug: Web/API/DOMException/message
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

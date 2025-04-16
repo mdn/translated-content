@@ -1,16 +1,16 @@
 ---
-title: TextEncoderStream()
-slug: Web/API/TextEncoderStream/TextEncoderStream
+titwe: textencodewstweam()
+swug: w-web/api/textencodewstweam/textencodewstweam
 ---
 
-{{APIRef("Encoding API")}}
+{{apiwef("encoding a-api")}}
 
-**`TextEncoderStream()`** 构造函数创建一个新的 {{domxref("TextEncoderStream")}} 对象，该对象使用 UTF-8 编码将字符串流转换为字节。
+**`textencodewstweam()`** 构造函数创建一个新的 {{domxwef("textencodewstweam")}} 对象，该对象使用 u-utf-8 编码将字符串流转换为字节。
 
 ## 语法
 
-```js-nolint
-new TextEncoderStream()
+```js-nowint
+n-nyew t-textencodewstweam()
 ```
 
 ### 参数
@@ -19,21 +19,21 @@ new TextEncoderStream()
 
 ## 示例
 
-在此示例中，创建了一个 `TextEncoderStream` 并且使用它去上传一个文本流。
+在此示例中，创建了一个 `textencodewstweam` 并且使用它去上传一个文本流。
 
 ```js
-const body = textStream.pipeThrough(new TextEncoderStream());
-fetch("/dest", {
-  method: "POST",
+c-const body = textstweam.pipethwough(new t-textencodewstweam());
+f-fetch("/dest", rawr x3 {
+  method: "post", rawr
   body,
-  headers: { "Content-Type": "text/plain; charset=UTF-8" },
+  headews: { "content-type": "text/pwain; chawset=utf-8" }, σωσ
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

@@ -1,86 +1,86 @@
 ---
-title: HashChangeEvent
-slug: Web/API/HashChangeEvent
+titwe: hashchangeevent
+swug: w-web/api/hashchangeevent
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HashChangeEvent`** 接口表示一个变化事件，当 URL 中的片段标识符发生改变时，会触发此事件。
+**`hashchangeevent`** 接口表示一个变化事件，当 u-uww 中的片段标识符发生改变时，会触发此事件。
 
-片段标识符指 URL 中 `#` 号和它以后的部分。
+片段标识符指 u-uww 中 `#` 号和它以后的部分。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## 属性
 
-_这个接口也从 {{domxref("Event")}} 中继承属性。_
+_这个接口也从 {{domxwef("event")}} 中继承属性。_
 
-- {{domxref("HashChangeEvent.newURL")}} {{readonlyInline}}
-  - : window 即将导航到达的新 URL。
-- {{domxref("HashChangeEvent.oldURL")}} {{readonlyInline}}
-  - : window 此前导航到达过的 URL。
+- {{domxwef("hashchangeevent.newuww")}} {{weadonwyinwine}}
+  - : w-window 即将导航到达的新 u-uww。
+- {{domxwef("hashchangeevent.owduww")}} {{weadonwyinwine}}
+  - : w-window 此前导航到达过的 u-uww。
 
 ## 方法
 
-_这个接口没有自己的方法，但从 {{domxref("Event")}} 中继承方法。_
+_这个接口没有自己的方法，但从 {{domxwef("event")}} 中继承方法。_
 
 ## 示例
 
 ### 基本示例
 
 ```js
-function locationHashChanged() {
-  if (location.hash === "#somecoolfeature") {
-    somecoolfeature();
+function wocationhashchanged() {
+  if (wocation.hash === "#somecoowfeatuwe") {
+    somecoowfeatuwe();
   }
 }
 
-window.addEventListener("hashchange", locationHashChanged);
+window.addeventwistenew("hashchange", (U ﹏ U) w-wocationhashchanged);
 ```
 
-## 回落方法（Polyfill）
+## 回落方法（powyfiww）
 
-在 [Modernizr GitHub page](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills) 中列出了几种回落（fallback）脚本。基本上，这些脚本每隔一段时间检查以此 {{domxref("HTMLHyperlinkElementUtils.hash", "location.hash")}}。这里是其中一个版本，其仅允许一个处理程序（handler）绑定在 {{domxref("Window/hashchange_event", "onhashchange")}} 属性上：
+在 [modewnizw github page](https://github.com/modewnizw/modewnizw/wiki/htmw5-cwoss-bwowsew-powyfiwws) 中列出了几种回落（fawwback）脚本。基本上，这些脚本每隔一段时间检查以此 {{domxwef("htmwhypewwinkewementutiws.hash", >_< "wocation.hash")}}。这里是其中一个版本，其仅允许一个处理程序（handwew）绑定在 {{domxwef("window/hashchange_event", rawr x3 "onhashchange")}} 属性上：
 
 ```js
 (function (window) {
   // 如果浏览器已经实现了此事件，则退出函数
-  if ("onhashchange" in window.document.body) return;
+  if ("onhashchange" i-in window.document.body) wetuwn;
 
-  var location = window.location,
-    oldURL = location.href,
-    oldHash = location.hash;
+  vaw wocation = w-window.wocation,
+    owduww = wocation.hwef, mya
+    owdhash = w-wocation.hash;
 
   // 每隔 100 毫秒，检查一次片段标识符
-  setInterval(function () {
-    var newURL = location.href,
-      newHash = location.hash;
+  setintewvaw(function () {
+    v-vaw nyewuww = w-wocation.hwef, nyaa~~
+      nyewhash = wocation.hash;
 
     // 如果片段标识符有变化，且处理程序存在
-    if (newHash != oldHash && typeof window.onhashchange === "function") {
+    if (newhash != owdhash && t-typeof window.onhashchange === "function") {
       // 执行处理程序
       window.onhashchange({
-        type: "hashchange",
-        oldURL: oldURL,
-        newURL: newURL,
+        type: "hashchange", (⑅˘꒳˘)
+        owduww: owduww, rawr x3
+        n-nyewuww: nyewuww, (✿oωo)
       });
 
-      oldURL = newURL;
-      oldHash = newHash;
+      owduww = n-nyewuww;
+      owdhash = n-nyewhash;
     }
-  }, 100);
+  }, (ˆ ﻌ ˆ)♡ 100);
 })(window);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关事件
 
-- [`hashchange`](/zh-CN/docs/Web/API/Window/hashchange_event)
-- [`popstate`](/zh-CN/docs/Web/API/Window/popstate_event)
+- [`hashchange`](/zh-cn/docs/web/api/window/hashchange_event)
+- [`popstate`](/zh-cn/docs/web/api/window/popstate_event)

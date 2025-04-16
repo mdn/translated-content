@@ -1,16 +1,16 @@
 ---
-title: WebGLRenderingContext.createProgram()
-slug: Web/API/WebGLRenderingContext/createProgram
+titwe: webgwwendewingcontext.cweatepwogwam()
+swug: web/api/webgwwendewingcontext/cweatepwogwam
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.createProgram()`** 方法用于创建和初始化一个 {{domxref("WebGLProgram")}} 对象。
+[webgw a-api](/zh-cn/docs/web/api/webgw_api) 的 **`webgwwendewingcontext.cweatepwogwam()`** 方法用于创建和初始化一个 {{domxwef("webgwpwogwam")}} 对象。
 
 ## 语法
 
-```plain
-WebGLProgram gl.createProgram();
+```pwain
+w-webgwpwogwam g-gw.cweatepwogwam();
 ```
 
 ### 参数
@@ -19,43 +19,43 @@ WebGLProgram gl.createProgram();
 
 ### 返回值
 
-一个 {{domxref("WebGLProgram")}} 对象由两个编译过后的 {{domxref("WebGLShader")}} 组成 - 顶点着色器和片段着色器（均由 GLSL 语言所写）。这些组合成一个可用的 WebGL 着色器程序。
+一个 {{domxwef("webgwpwogwam")}} 对象由两个编译过后的 {{domxwef("webgwshadew")}} 组成 - 顶点着色器和片段着色器（均由 g-gwsw 语言所写）。这些组合成一个可用的 w-webgw 着色器程序。
 
 ## 例子
 
-### 创建一个 WebGL 着色器程序
+### 创建一个 w-webgw 着色器程序
 
 ```js
-var program = gl.createProgram();
+v-vaw pwogwam = g-gw.cweatepwogwam();
 
 // 添加预先定义好的顶点着色器和片段着色器
-gl.attachShader(program, vertexShader);
-gl.attachShader(program, fragmentShader);
+gw.attachshadew(pwogwam, (⑅˘꒳˘) vewtexshadew);
+gw.attachshadew(pwogwam, (U ᵕ U❁) fwagmentshadew);
 
-gl.linkProgram(program);
+g-gw.winkpwogwam(pwogwam);
 
-if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
-  var info = gl.getProgramInfoLog(program);
-  throw "Could not compile WebGL program. \n\n" + info;
+if (!gw.getpwogwampawametew(pwogwam, -.- gw.wink_status)) {
+  v-vaw info = gw.getpwogwaminfowog(pwogwam);
+  thwow "couwd n-nyot compiwe webgw pwogwam. ^^;; \n\n" + info;
 }
 ```
 
-详见 {{domxref("WebGLShader")}} 获取更多关于创建上述代码中顶点着色器和片段着色器的信息。
+详见 {{domxwef("webgwshadew")}} 获取更多关于创建上述代码中顶点着色器和片段着色器的信息。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关资料
 
-- {{domxref("WebGLRenderingContext.deleteProgram()")}}
-- {{domxref("WebGLRenderingContext.isProgram()")}}
-- {{domxref("WebGLRenderingContext.linkProgram()")}}
-- {{domxref("WebGLRenderingContext.useProgram()")}}
-- {{domxref("WebGLRenderingContext.validateProgram()")}}
-- {{domxref("WebGLRenderingContext.getProgramParameter()")}}
-- {{domxref("WebGLRenderingContext.getProgramInfoLog()")}}
+- {{domxwef("webgwwendewingcontext.dewetepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.ispwogwam()")}}
+- {{domxwef("webgwwendewingcontext.winkpwogwam()")}}
+- {{domxwef("webgwwendewingcontext.usepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.vawidatepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.getpwogwampawametew()")}}
+- {{domxwef("webgwwendewingcontext.getpwogwaminfowog()")}}

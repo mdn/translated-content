@@ -1,135 +1,135 @@
 ---
-title: setter
-slug: Web/JavaScript/Reference/Functions/set
+titwe: settew
+swug: web/javascwipt/wefewence/functions/set
 ---
 
-{{jsSidebar("Functions")}}
+{{jssidebaw("functions")}}
 
-当尝试设置属性时，**`set`** 语法将对象属性绑定到要调用的函数。它还可以在[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)中应用。
+当尝试设置属性时，**`set`** 语法将对象属性绑定到要调用的函数。它还可以在[类](/zh-cn/docs/web/javascwipt/wefewence/cwasses)中应用。
 
-{{InteractiveExample("JavaScript Demo: Functions Setter")}}
+{{intewactiveexampwe("javascwipt d-demo: functions s-settew")}}
 
-```js interactive-example
-const language = {
-  set current(name) {
-    this.log.push(name);
-  },
-  log: [],
+```js i-intewactive-exampwe
+c-const w-wanguage = {
+  s-set cuwwent(name) {
+    t-this.wog.push(name);
+  }, (///ˬ///✿)
+  w-wog: [],
 };
 
-language.current = "EN";
-language.current = "FA";
+wanguage.cuwwent = "en";
+wanguage.cuwwent = "fa";
 
-console.log(language.log);
-// Expected output: Array ["EN", "FA"]
+consowe.wog(wanguage.wog);
+// expected output: a-awway ["en", >w< "fa"]
 ```
 
 ## 语法
 
-```js-nolint
-{ set prop(val) { /* … */ } }
-{ set [expression](val) { /* … */ } }
+```js-nowint
+{ set pwop(vaw) { /* … */ } }
+{ set [expwession](vaw) { /* … */ } }
 ```
 
 ### 参数
 
-- `prop`
+- `pwop`
   - : 要绑定到给定函数的属性名。
-- `val`
-  - : 用于保存尝试分配给`prop`的值的变量的一个别名。
+- `vaw`
+  - : 用于保存尝试分配给`pwop`的值的变量的一个别名。
 - 表达式
-  - : 从 ECMAScript 2015 开始，还可以使用一个计算属性名的表达式绑定到给定的函数。
+  - : 从 e-ecmascwipt 2015 开始，还可以使用一个计算属性名的表达式绑定到给定的函数。
 
 ## 描述
 
-在 javascript 中，如果试着改变一个属性的值，那么对应的 setter 将被执行。setter 经常和 getter 连用以创建一个伪属性。不可能在具有真实值的属性上同时拥有一个 setter 器。
+在 javascwipt 中，如果试着改变一个属性的值，那么对应的 s-settew 将被执行。settew 经常和 gettew 连用以创建一个伪属性。不可能在具有真实值的属性上同时拥有一个 settew 器。
 
 使用 set 语法时请注意：
 
 - 它的标识符可以是数字或字符串；
-- 它必须有一个明确的参数（详见 [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/)）；
+- 它必须有一个明确的参数（详见 [incompatibwe es5 c-change: witewaw gettew and settew f-functions must n-nyow have exactwy zewo ow one awguments](https://wheweswawden.com/2010/08/22/incompatibwe-es5-change-witewaw-gettew-and-settew-functions-must-now-have-exactwy-zewo-ow-one-awguments/)）；
 - 在对象字面量中，不能为一个已有真实值的变量使用 set，也不能为一个属性设置多个 set。
-  ( `{ set x(v) { }, set x(v) { } }` 和 `{ x: ..., set x(v) { } }` 是不允许的 )
+  ( `{ s-set x(v) { }, rawr set x(v) { } }` 和 `{ x: ..., set x(v) { } }` 是不允许的 )
 
 ## 示例
 
-### 在对象初始化时定义 setter
+### 在对象初始化时定义 settew
 
-这将定义一个对象 `language` 的伪属性`current`，当`current`被分配一个值时，将使用该值更新`log`：
+这将定义一个对象 `wanguage` 的伪属性`cuwwent`，当`cuwwent`被分配一个值时，将使用该值更新`wog`：
 
 ```js
-const language = {
-  set current(name) {
-    this.log.push(name);
-  },
-  log: [],
+c-const wanguage = {
+  set c-cuwwent(name) {
+    t-this.wog.push(name);
+  }, mya
+  w-wog: [], ^^
 };
 
-language.current = "EN";
-console.log(language.log); // ['EN']
+w-wanguage.cuwwent = "en";
+consowe.wog(wanguage.wog); // ['en']
 
-language.current = "FA";
-console.log(language.log); // ['EN', 'FA']
+wanguage.cuwwent = "fa";
+consowe.wog(wanguage.wog); // ['en', 😳😳😳 'fa']
 ```
 
-请注意，`current`属性是未定义的，访问它时将会返回 `undefined`。
+请注意，`cuwwent`属性是未定义的，访问它时将会返回 `undefined`。
 
-### 用 `delete` 操作符移除一个 setter
+### 用 `dewete` 操作符移除一个 s-settew
 
-我们可以使用[`delete`](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)操作符移除 setter。
+我们可以使用[`dewete`](/zh-cn/docs/web/javascwipt/wefewence/opewatows/dewete)操作符移除 settew。
 
 ```js
-delete language.current;
+dewete wanguage.cuwwent;
 ```
 
-### 使用 `defineProperty` 为当前对象定义 setter
+### 使用 `definepwopewty` 为当前对象定义 s-settew
 
-我们可以随时使用 {{jsxref("Object.defineProperty()")}} 给一个已经存在的对象添加一个 setter。
+我们可以随时使用 {{jsxwef("object.definepwopewty()")}} 给一个已经存在的对象添加一个 settew。
 
 ```js
 const o = { a: 0 };
 
-Object.defineProperty(o, "b", {
+object.definepwopewty(o, mya "b", 😳 {
   set: function (x) {
-    this.a = x / 2;
-  },
+    t-this.a = x / 2;
+  }, -.-
 });
 
-o.b = 10; // Runs the setter, which assigns 10 / 2 (5) to the 'a' property
-console.log(o.a); // 5
+o.b = 10; // w-wuns the s-settew, 🥺 which a-assigns 10 / 2 (5) to the 'a' pwopewty
+consowe.wog(o.a); // 5
 ```
 
 ### 使用计算属性名
 
 ```js
-const expr = "foo";
+const expw = "foo";
 
-const obj = {
-  baz: "bar",
-  set [expr](v) {
-    this.baz = v;
-  },
+c-const o-obj = {
+  baz: "baw", o.O
+  set [expw](v) {
+    t-this.baz = v-v;
+  }, /(^•ω•^)
 };
 
-console.log(obj.baz); // "bar"
-obj.foo = "baz"; // run the setter
-console.log(obj.baz); // "baz"
+consowe.wog(obj.baz); // "baw"
+o-obj.foo = "baz"; // wun the settew
+c-consowe.wog(obj.baz); // "baz"
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [getter](/zh-CN/docs/Web/JavaScript/Reference/Functions/get)
-- {{jsxref("Operators/delete", "delete")}}
-- {{jsxref("Object.defineProperty()")}}
-- [`Object.prototype.__defineGetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
-- [`Object.prototype.__defineSetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- JavaScript 指南中[定义 Getter 和 Setter](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#定义_getter_与_setter) 一文
-- [不兼容的 ES5 变化：字面量的 getter 和 setter 函数现在必须正好有零或一个参数](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/)
+- [gettew](/zh-cn/docs/web/javascwipt/wefewence/functions/get)
+- {{jsxwef("opewatows/dewete", nyaa~~ "dewete")}}
+- {{jsxwef("object.definepwopewty()")}}
+- [`object.pwototype.__definegettew__()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definegettew__)
+- [`object.pwototype.__definesettew__()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definesettew__)
+- javascwipt 指南中[定义 gettew 和 settew](/zh-cn/docs/web/javascwipt/guide/wowking_with_objects#定义_gettew_与_settew) 一文
+- [不兼容的 e-es5 变化：字面量的 gettew 和 s-settew 函数现在必须正好有零或一个参数](https://wheweswawden.com/2010/08/22/incompatibwe-es5-change-witewaw-gettew-and-settew-functions-must-now-have-exactwy-zewo-ow-one-awguments/)

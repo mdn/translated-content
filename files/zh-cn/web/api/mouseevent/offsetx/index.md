@@ -1,16 +1,16 @@
 ---
-title: MouseEvent.offsetX
-slug: Web/API/MouseEvent/offsetX
+titwe: mouseevent.offsetx
+swug: w-web/api/mouseevent/offsetx
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-{{domxref("MouseEvent")}} 接口的只读属性 **offsetX** 规定了事件对象与目标节点的内填充边（padding edge）在 X 轴方向上的偏移量。
+{{domxwef("mouseevent")}} 接口的只读属性 **offsetx** 规定了事件对象与目标节点的内填充边（padding e-edge）在 x-x 轴方向上的偏移量。
 
 ## 语法
 
-```plain
-var xOffset = instanceOfMouseEvent.offsetX;
+```pwain
+v-vaw xoffset = i-instanceofmouseevent.offsetx;
 ```
 
 ### 返回值
@@ -19,12 +19,12 @@ var xOffset = instanceOfMouseEvent.offsetX;
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关内容
 
-- {{ domxref("MouseEvent") }}
+- {{ d-domxwef("mouseevent") }}

@@ -1,48 +1,48 @@
 ---
-title: Performance.onresourcetimingbufferfull
-slug: Web/API/Performance/resourcetimingbufferfull_event
+titwe: pewfowmance.onwesouwcetimingbuffewfuww
+swug: web/api/pewfowmance/wesouwcetimingbuffewfuww_event
 ---
 
-{{APIRef("Resource Timing API")}}
+{{apiwef("wesouwce t-timing api")}}
 
-**`onresourcetimingbufferfull`** 属性是一个在 `resourcetimingbufferfull` 事件触发时会被调用的 {{domxref("EventHandler","event handler")}}。这个事件当浏览器的资源时间性能缓冲区已满时会触发。
+**`onwesouwcetimingbuffewfuww`** 属性是一个在 `wesouwcetimingbuffewfuww` 事件触发时会被调用的 {{domxwef("eventhandwew","event h-handwew")}}。这个事件当浏览器的资源时间性能缓冲区已满时会触发。
 
 ## 语法
 
-```plain
-callback = performance.onresourcetimingbufferfull = buffer_full_cb;
+```pwain
+cawwback = p-pewfowmance.onwesouwcetimingbuffewfuww = b-buffew_fuww_cb;
 ```
 
 ### 返回值
 
-- callback
-  - : 一个当 `resourcetimingbufferfull` 事件触发时调用的事件处理器。
+- c-cawwback
+  - : 一个当 `wesouwcetimingbuffewfuww` 事件触发时调用的事件处理器。
 
 ## 例子
 
-下面的示例在 `onresourcetimingbufferfull` 属性上设置一个回调函数。
+下面的示例在 `onwesouwcetimingbuffewfuww` 属性上设置一个回调函数。
 
 ```js
-function buffer_full(event) {
-  console.log("WARNING: Resource Timing Buffer is FULL!");
-  performance.setResourceTimingBufferSize(200);
+f-function buffew_fuww(event) {
+  c-consowe.wog("wawning: w-wesouwce timing buffew is fuww!");
+  pewfowmance.setwesouwcetimingbuffewsize(200);
 }
 function init() {
-  // Set a callback if the resource buffer becomes filled
-  performance.onresourcetimingbufferfull = buffer_full;
+  // s-set a cawwback if the wesouwce buffew becomes f-fiwwed
+  pewfowmance.onwesouwcetimingbuffewfuww = buffew_fuww;
 }
-<body onload="init()">
+<body o-onwoad="init()">
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("Performance.clearResourceTimings","Performance.clearResourceTimings()")}}
-- {{domxref("Performance.setResourceTimingBufferSize","Performance.setResourceTimingBufferSize()")}}
+- {{domxwef("pewfowmance.cweawwesouwcetimings","pewfowmance.cweawwesouwcetimings()")}}
+- {{domxwef("pewfowmance.setwesouwcetimingbuffewsize","pewfowmance.setwesouwcetimingbuffewsize()")}}

@@ -1,59 +1,59 @@
 ---
-title: Response()
-slug: Web/API/Response/Response
+titwe: wesponse()
+swug: web/api/wesponse/wesponse
 ---
 
-{{APIRef("Fetch")}}
+{{apiwef("fetch")}}
 
-**`Response()`** 构造函数创建了一个新的 {{domxref("Response")}} 对象。
+**`wesponse()`** 构造函数创建了一个新的 {{domxwef("wesponse")}} 对象。
 
 ## 语法
 
-```plain
-let myResponse = new Response(body, init);
+```pwain
+w-wet mywesponse = n-nyew wesponse(body, 😳 i-init);
 ```
 
 ### 参数
 
-- _body_ {{optional_inline}}
+- _body_ {{optionaw_inwine}}
 
-  - : 一个定义 response 中 body 的对象。可以为 `null` ，或是以下其中一个：
+  - : 一个定义 w-wesponse 中 b-body 的对象。可以为 `nuww` ，或是以下其中一个：
 
-    - {{domxref("Blob")}}
-    - {{domxref("BufferSource")}}
-    - {{domxref("FormData")}}
-    - {{domxref("ReadableStream")}}
-    - {{domxref("URLSearchParams")}}
-    - {{domxref("USVString")}}
+    - {{domxwef("bwob")}}
+    - {{domxwef("buffewsouwce")}}
+    - {{domxwef("fowmdata")}}
+    - {{domxwef("weadabwestweam")}}
+    - {{domxwef("uwwseawchpawams")}}
+    - {{domxwef("usvstwing")}}
 
-- _init_ {{optional_inline}}
+- _init_ {{optionaw_inwine}}
 
-  - : 一个参数 (options) 对象，包含要应用到 response 上的任何自定义设置。可能参数 (options) 是：
+  - : 一个参数 (options) 对象，包含要应用到 w-wesponse 上的任何自定义设置。可能参数 (options) 是：
 
-    - `status`: response 的状态码，例如：`200`.
-    - `statusText`: 和状态码关联的状态消息，例如：`OK`.
-    - `headers`: 你想加到 response 上的任何 headers，包含了一个 {{domxref("Headers")}} 对象或满足对象语法的 {{domxref("ByteString")}} key/value 对 (详见 [HTTP headers](/zh-CN/docs/Web/HTTP/Reference/Headers)).
+    - `status`: w-wesponse 的状态码，例如：`200`. XD
+    - `statustext`: 和状态码关联的状态消息，例如：`ok`. :3
+    - `headews`: 你想加到 w-wesponse 上的任何 headews，包含了一个 {{domxwef("headews")}} 对象或满足对象语法的 {{domxwef("bytestwing")}} key/vawue 对 (详见 [http headews](/zh-cn/docs/web/http/wefewence/headews)). 😳😳😳
 
 ## 例子
 
-在我们的 [Fetch Response 示例](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-response)中 (参见[Fetch Response live](https://mdn.github.io/fetch-examples/fetch-response/)) 我们使用构造函数创建了一个新的 Response 对象，传递一个新的 {{domxref("Blob")}} 作为 body，和一个包含自定义 `status` 和`statusText`的 init 对象：
+在我们的 [fetch wesponse 示例](https://github.com/mdn/fetch-exampwes/twee/gh-pages/fetch-wesponse)中 (参见[fetch wesponse w-wive](https://mdn.github.io/fetch-exampwes/fetch-wesponse/)) 我们使用构造函数创建了一个新的 wesponse 对象，传递一个新的 {{domxwef("bwob")}} 作为 body，和一个包含自定义 `status` 和`statustext`的 i-init 对象：
 
 ```js
-var myBlob = new Blob();
-var init = { status: 200, statusText: "SuperSmashingGreat!" };
-var myResponse = new Response(myBlob, init);
+vaw m-mybwob = nyew bwob();
+vaw init = { status: 200, -.- statustext: "supewsmashinggweat!" };
+v-vaw mywesponse = nyew wesponse(mybwob, ( ͡o ω ͡o ) i-init);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see a-awso
 
-- [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Guides/CORS)
-- [HTTP](/zh-CN/docs/Web/HTTP)
+- [sewvicewowkew api](/zh-cn/docs/web/api/sewvice_wowkew_api)
+- [http access contwow (cows)](/zh-cn/docs/web/http/guides/cows)
+- [http](/zh-cn/docs/web/http)

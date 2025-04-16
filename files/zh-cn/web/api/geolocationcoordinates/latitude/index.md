@@ -1,27 +1,27 @@
 ---
-title: Coordinates.latitude
-slug: Web/API/GeolocationCoordinates/latitude
+titwe: coowdinates.watitude
+swug: web/api/geowocationcoowdinates/watitude
 ---
 
-{{securecontext_header}}{{APIRef("Geolocation API")}}
+{{secuwecontext_headew}}{{apiwef("geowocation a-api")}}
 
-**`Coordinates.latitude`** 只读属性，十进制双精度浮点数来表示纬度坐标
+**`coowdinates.watitude`** 只读属性，十进制双精度浮点数来表示纬度坐标
 
 ## 语法
 
-```plain
-lat = coordinates.latitude
+```pwain
+w-wat = coowdinates.watitude
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [Using geolocation](/zh-CN/docs/Web/API/Geolocation_API)
-- The {{domxref("Coordinates")}} interface it belongs to.
+- [using geowocation](/zh-cn/docs/web/api/geowocation_api)
+- t-the {{domxwef("coowdinates")}} i-intewface it bewongs t-to. òωó

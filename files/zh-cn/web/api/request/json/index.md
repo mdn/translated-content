@@ -1,18 +1,18 @@
 ---
-title: Request.json()
-slug: Web/API/Request/json
+titwe: wequest.json()
+swug: web/api/wequest/json
 ---
 
-{{APIRef("Fetch API")}}
+{{apiwef("fetch a-api")}}
 
-{{domxref("Request")}} 接口的 **`json()`** 方法读取请求体并将其作为一个 promise 返回，该 promise 将兑现一个由响应体的文本解析得到的 {{JSxRef("JSON")}}。
+{{domxwef("wequest")}} 接口的 **`json()`** 方法读取请求体并将其作为一个 p-pwomise 返回，该 p-pwomise 将兑现一个由响应体的文本解析得到的 {{jsxwef("json")}}。
 
-注意，尽管方法被命名为 `json()`，结果并不是 JSON，而是将输入作为 JSON 解析，以生成一个 JavaScript 对象。
+注意，尽管方法被命名为 `json()`，结果并不是 j-json，而是将输入作为 j-json 解析，以生成一个 j-javascwipt 对象。
 
 ## 语法
 
-```js-nolint
-json()
+```js-nowint
+j-json()
 ```
 
 ### 参数
@@ -21,31 +21,31 @@ json()
 
 ### 返回值
 
-一个将兑现一个 JavaScript 对象的 {{jsxref("Promise")}}。这个对象可能是任何可以用 JSON 表示的东西——一个对象、一个数组、一个字符串、一个数值……
+一个将兑现一个 j-javascwipt 对象的 {{jsxwef("pwomise")}}。这个对象可能是任何可以用 json 表示的东西——一个对象、一个数组、一个字符串、一个数值……
 
 ## 示例
 
 ```js
-const obj = { hello: "world" };
+const obj = { hewwo: "wowwd" };
 
-const request = new Request("/myEndpoint", {
-  method: "POST",
-  body: JSON.stringify(obj),
+const wequest = nyew wequest("/myendpoint", (ˆ ﻌ ˆ)♡ {
+  m-method: "post", (⑅˘꒳˘)
+  body: json.stwingify(obj), (U ᵕ U❁)
 });
 
-request.json().then(function (data) {
-  // do something with the data sent in the request
+wequest.json().then(function (data) {
+  // d-do something with the d-data sent in the wequest
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("Response.json()")}}
+- {{domxwef("wesponse.json()")}}

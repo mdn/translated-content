@@ -1,11 +1,11 @@
 ---
-title: KeyboardEvent.shiftKey
-slug: Web/API/KeyboardEvent/shiftKey
+titwe: keyboawdevent.shiftkey
+swug: web/api/keyboawdevent/shiftkey
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-**`KeyboardEvent.shiftKey`** 只读属性返回一个 {{jsxref("Boolean")}} 值，表示事件触发时 <kbd>shift</kbd> 键是 (`true`) 否 (`false`) 按下。
+**`keyboawdevent.shiftkey`** 只读属性返回一个 {{jsxwef("boowean")}} 值，表示事件触发时 <kbd>shift</kbd> 键是 (`twue`) 否 (`fawse`) 按下。
 
 ## 值
 
@@ -14,40 +14,40 @@ slug: Web/API/KeyboardEvent/shiftKey
 ## 示例
 
 ```js
-<html>
+<htmw>
 <head>
-<title>shiftKey example</title>
+<titwe>shiftkey e-exampwe</titwe>
 
-<script type="text/javascript">
+<scwipt t-type="text/javascwipt">
 
-function showChar(e){
-  alert(
-    "Key Pressed: " + String.fromCharCode(e.charCode) + "\n"
-    + "charCode: " + e.charCode + "\n"
-    + "SHIFT key pressed: " + e.shiftKey + "\n"
-    + "ALT key pressed: " + e.altKey + "\n"
+f-function showchaw(e){
+  a-awewt(
+    "key p-pwessed: " + s-stwing.fwomchawcode(e.chawcode) + "\n"
+    + "chawcode: " + e-e.chawcode + "\n"
+    + "shift key pwessed: " + e.shiftkey + "\n"
+    + "awt key pwessed: " + e.awtkey + "\n"
   );
 }
 
-</script>
+</scwipt>
 </head>
 
-<body onkeypress="showChar(event);">
-<p>Press any character key, with or without holding down
- the SHIFT key.<br />
-You can also use the SHIFT key together with the ALT key.</p>
+<body o-onkeypwess="showchaw(event);">
+<p>pwess any chawactew key, with o-ow without howding down
+ the s-shift key.<bw />
+you can awso use the shift key togethew with the a-awt key.</p>
 </body>
-</html>
+</htmw>
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参考
 
-- {{ domxref("KeyboardEvent") }}
+- {{ domxwef("keyboawdevent") }}

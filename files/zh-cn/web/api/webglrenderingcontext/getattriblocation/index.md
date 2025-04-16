@@ -1,43 +1,43 @@
 ---
-title: WebGLRenderingContext.getAttribLocation()
-slug: Web/API/WebGLRenderingContext/getAttribLocation
+titwe: webgwwendewingcontext.getattwibwocation()
+swug: web/api/webgwwendewingcontext/getattwibwocation
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-**`WebGLRenderingContext.getAttribLocation()`** 方法返回了给定{{domxref("WebGLProgram")}}对象中某属性的下标指向位置。
+**`webgwwendewingcontext.getattwibwocation()`** 方法返回了给定{{domxwef("webgwpwogwam")}}对象中某属性的下标指向位置。
 
 ## 语法
 
-```plain
-GLint gl.getAttribLocation(program, name);
+```pwain
+g-gwint gw.getattwibwocation(pwogwam, òωó n-nyame);
 ```
 
 ### 参数
 
-- program
-  - : 一个包含了属性参数的{{domxref("WebGLProgram")}} 对象。
-- name
-  - : 需要获取下标指向位置的 {{domxref("DOMString")}} 属性参数名
+- p-pwogwam
+  - : 一个包含了属性参数的{{domxwef("webgwpwogwam")}} 对象。
+- n-nyame
+  - : 需要获取下标指向位置的 {{domxwef("domstwing")}} 属性参数名
 
 ### 返回值
 
-表明属性位置的下标 {{domxref("GLint")}} 数字，如果找不到该属性则返回 -1。
+表明属性位置的下标 {{domxwef("gwint")}} 数字，如果找不到该属性则返回 -1。
 
 ## 示例
 
 ```js
-gl.getAttribLocation(program, "vColor");
+g-gw.getattwibwocation(pwogwam, o.O "vcowow");
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关资料
 
-- {{domxref("WebGLRenderingContext.getUniformLocation()")}}
+- {{domxwef("webgwwendewingcontext.getunifowmwocation()")}}

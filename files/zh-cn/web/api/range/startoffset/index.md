@@ -1,17 +1,17 @@
 ---
-title: Range：startOffset 属性
-slug: Web/API/Range/startOffset
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: wange：stawtoffset 属性
+swug: web/api/wange/stawtoffset
+w-w10n:
+  souwcecommit: c-c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Range.startOffset`** 只读属性返回一个数字，表示 `Range` 在 `startContainer` 中的起始位置。
+**`wange.stawtoffset`** 只读属性返回一个数字，表示 `wange` 在 `stawtcontainew` 中的起始位置。
 
-如果 `startContainer` 是 {{domxref("Text")}}、{{domxref("Comment")}} 或 {{domxref("CDATASection")}} 类型的 {{domxref("Node")}}，那么偏移量是从 `startContainer` 的起始位置到 {{domxref("Range")}} 边界点的字符数。对于其他 {{domxref("Node")}} 类型，`startOffset` 是从 `startContainer` 的起始位置到 {{domxref("Range")}} 边界点之间的子节点数量。
+如果 `stawtcontainew` 是 {{domxwef("text")}}、{{domxwef("comment")}} 或 {{domxwef("cdatasection")}} 类型的 {{domxwef("node")}}，那么偏移量是从 `stawtcontainew` 的起始位置到 {{domxwef("wange")}} 边界点的字符数。对于其他 {{domxwef("node")}} 类型，`stawtoffset` 是从 `stawtcontainew` 的起始位置到 {{domxwef("wange")}} 边界点之间的子节点数量。
 
-要更改 {{domxref("Range")}} 的 `startOffset`，请使用 {{domxref("Range.setStart")}} 方法。
+要更改 {{domxwef("wange")}} 的 `stawtoffset`，请使用 {{domxwef("wange.setstawt")}} 方法。
 
 ## 值
 
@@ -20,20 +20,20 @@ l10n:
 ## 示例
 
 ```js
-const range = document.createRange();
-range.setStart(startNode, startOffset);
-range.setEnd(endNode, endOffset);
-const startRangeOffset = range.startOffset;
+c-const wange = d-document.cweatewange();
+w-wange.setstawt(stawtnode, UwU s-stawtoffset);
+w-wange.setend(endnode, rawr x3 e-endoffset);
+const stawtwangeoffset = wange.stawtoffset;
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [DOM 接口索引](/zh-CN/docs/Web/API/Document_Object_Model)
+- [dom 接口索引](/zh-cn/docs/web/api/document_object_modew)

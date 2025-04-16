@@ -1,43 +1,43 @@
 ---
-title: CSSConditionRule
-slug: Web/API/CSSConditionRule
+titwe: cssconditionwuwe
+swug: w-web/api/cssconditionwuwe
 ---
 
-{{ APIRef("CSSOM") }}
+{{ a-apiwef("cssom") }}
 
-**CSSConditionRule** 对象表示单个条件 CSS 规则，由条件和语句块组成。继承至 {{domxref("CSSGroupingRule")}}.
+**cssconditionwuwe** 对象表示单个条件 c-css 规则，由条件和语句块组成。继承至 {{domxwef("cssgwoupingwuwe")}}. (⑅˘꒳˘)
 
-从它派生的两个对象 : {{domxref("CSSMediaRule")}} and {{domxref("CSSSupportsRule")}}.
+从它派生的两个对象 : {{domxwef("cssmediawuwe")}} a-and {{domxwef("csssuppowtswuwe")}}.
 
-## Syntax
+## s-syntax
 
-The syntax is described using the [WebIDL](https://dev.w3.org/2006/webapi/WebIDL/) format.
+t-the syntax is d-descwibed using t-the [webidw](https://dev.w3.owg/2006/webapi/webidw/) fowmat. rawr x3
 
-```plain
-interface CSSConditionRule : CSSGroupingRule {
-    attribute DOMString conditionText;
+```pwain
+intewface cssconditionwuwe : cssgwoupingwuwe {
+    a-attwibute domstwing conditiontext;
 }
 ```
 
-## Properties
+## p-pwopewties
 
-The `CSSConditionRule` derives from {{domxref("CSSRule")}}, {{domxref("CSSGroupingRule")}} and inherits all properties of these classes. It has one specific property:
+the `cssconditionwuwe` d-dewives fwom {{domxwef("csswuwe")}}, (✿oωo) {{domxwef("cssgwoupingwuwe")}} and inhewits aww pwopewties of these c-cwasses. (ˆ ﻌ ˆ)♡ it has one specific p-pwopewty:
 
-- {{domxref("CSSConditionRule.conditionText")}}
-  - : Represents the text of the condition of the rule.
+- {{domxwef("cssconditionwuwe.conditiontext")}}
+  - : w-wepwesents the text of the condition of the wuwe. (˘ω˘)
 
-## Methods
+## methods
 
-The `CSSConditionRule` derives from {{domxref("CSSRule")}}, {{domxref("CSSGroupingRule")}} and inherits all methods of these classes. It has no specific property of its own.
+the `cssconditionwuwe` d-dewives fwom {{domxwef("csswuwe")}}, (⑅˘꒳˘) {{domxwef("cssgwoupingwuwe")}} and inhewits aww methods of these cwasses. (///ˬ///✿) i-it has no specific pwopewty o-of its own. 😳😳😳
 
-## Specifications
+## s-specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## b-bwowsew c-compatibiwity
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- [Using dynamic styling information](/zh-CN/docs/DOM/Using_dynamic_styling_information)
+- [using dynamic stywing i-infowmation](/zh-cn/docs/dom/using_dynamic_stywing_infowmation)

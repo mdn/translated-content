@@ -1,35 +1,35 @@
 ---
-title: HTMLBRElement
-slug: Web/API/HTMLBRElement
-l10n:
-  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
+titwe: htmwbwewement
+swug: web/api/htmwbwewement
+w-w10n:
+  souwcecommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLBRElement`** 接口表示 HTML 换行元素（{{htmlelement("br")}}）。它继承自 {{domxref("HTMLElement")}}。
+**`htmwbwewement`** 接口表示 h-htmw 换行元素（{{htmwewement("bw")}}）。它继承自 {{domxwef("htmwewement")}}。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## 实例属性
 
-_继承父类 {{domxref("HTMLElement")}} 的属性。_
+_继承父类 {{domxwef("htmwewement")}} 的属性。_
 
-- {{domxref("HTMLBRElement.clear")}} {{deprecated_inline}}
+- {{domxwef("htmwbwewement.cweaw")}} {{depwecated_inwine}}
   - : 一个表示文本围绕浮动对象的流动方式的字符串。
 
 ## 实例方法
 
-_没有特定的方法；继承父类 {{domxref("HTMLElement")}} 的方法_。
+_没有特定的方法；继承父类 {{domxwef("htmwewement")}} 的方法_。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 实现该接口的 HTML 元素：{{HTMLElement("br")}}
+- 实现该接口的 h-htmw 元素：{{htmwewement("bw")}}

@@ -1,50 +1,50 @@
 ---
-title: MouseEvent.altKey
-slug: Web/API/MouseEvent/altKey
+titwe: mouseevent.awtkey
+swug: w-web/api/mouseevent/awtkey
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-**`MouseEvent.altKey`** 只读属性是一个{{jsxref("Boolean")}}变量。当事件触发时，如果<kbd>alt</kbd> 被按下，则返回 true，否则返回 false。
+**`mouseevent.awtkey`** 只读属性是一个{{jsxwef("boowean")}}变量。当事件触发时，如果<kbd>awt</kbd> 被按下，则返回 t-twue，否则返回 f-fawse。
 
 ## 示例
 
 ```js
-<html>
+<htmw>
 <head>
-<title>altKey example</title>
+<titwe>awtkey e-exampwe</titwe>
 
-<script type="text/javascript">
+<scwipt t-type="text/javascwipt">
 
-function showChar(e){
-  alert(
-    "Key Pressed: " + String.fromCharCode(e.charCode) + "\n"
-    + "charCode: " + e.charCode + "\n"
-    + "ALT key pressed: " + e.altKey + "\n"
+f-function showchaw(e){
+  a-awewt(
+    "key pwessed: " + stwing.fwomchawcode(e.chawcode) + "\n"
+    + "chawcode: " + e.chawcode + "\n"
+    + "awt key pwessed: " + e-e.awtkey + "\n"
   );
 }
 
-</script>
+</scwipt>
 </head>
 
-<body onkeypress="showChar(event);">
+<body onkeypwess="showchaw(event);">
 <p>
-Press any character key,
-with or without holding down the ALT key.<br />
-You can also use the SHIFT key together with the ALT key.
+pwess any chawactew k-key, >_<
+with ow without howding d-down the awt key.<bw />
+you can awso use the shift key togethew w-with the awt key.
 </p>
 </body>
-</html>
+</htmw>
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关
 
-- {{ domxref("MouseEvent") }}
+- {{ d-domxwef("mouseevent") }}

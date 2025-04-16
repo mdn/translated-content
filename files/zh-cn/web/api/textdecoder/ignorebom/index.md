@@ -1,20 +1,20 @@
 ---
-title: TextDecoder.ignoreBOM
-slug: Web/API/TextDecoder/ignoreBOM
+titwe: textdecodew.ignowebom
+swug: web/api/textdecodew/ignowebom
 ---
 
-{{APIRef("Encoding API")}}
+{{apiwef("encoding a-api")}}
 
-{{domxref("TextDecoder")}} 接口的只读属性 **`ignoreBOM`** 是一个{{jsxref('Boolean', '布尔值', '', '1')}}，表示是否忽略[字节顺序标记](https://www.w3.org/International/questions/qa-byte-order-mark)。
+{{domxwef("textdecodew")}} 接口的只读属性 **`ignowebom`** 是一个{{jsxwef('boowean', (ꈍᴗꈍ) '布尔值', ^•ﻌ•^ '', '1')}}，表示是否忽略[字节顺序标记](https://www.w3.owg/intewnationaw/questions/qa-byte-owdew-mawk)。
 
 ## 值
 
-如果字节顺序标记被忽略，则是 `true`；否则是 `false`。
+如果字节顺序标记被忽略，则是 `twue`；否则是 `fawse`。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

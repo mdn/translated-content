@@ -1,16 +1,16 @@
 ---
-title: WebGL2RenderingContext.createSampler()
-slug: Web/API/WebGL2RenderingContext/createSampler
+titwe: webgw2wendewingcontext.cweatesampwew()
+swug: web/api/webgw2wendewingcontext/cweatesampwew
 ---
 
-{{APIRef("WebGL")}} {{SeeCompatTable}}
+{{apiwef("webgw")}} {{seecompattabwe}}
 
-[WebGL 2 API](/zh-CN/docs/Web/API/WebGL_API) 定义的 **`WebGL2RenderingContext.createSampler()`** 方法用于创建并初始化 {{domxref("WebGLSampler")}} 对象。
+[webgw 2 a-api](/zh-cn/docs/web/api/webgw_api) 定义的 **`webgw2wendewingcontext.cweatesampwew()`** 方法用于创建并初始化 {{domxwef("webgwsampwew")}} 对象。
 
 ## 句法
 
-```plain
-WebGLSampler gl.createSampler();
+```pwain
+webgwsampwew g-gw.cweatesampwew();
 ```
 
 ### 参数
@@ -19,24 +19,24 @@ WebGLSampler gl.createSampler();
 
 ### 返回值
 
-{{domxref("WebGLSampler")}} 对象。
+{{domxwef("webgwsampwew")}} 对象。
 
 ## 例子
 
-`gl` 必须是 {{domxref("WebGL2RenderingContext")}} 类型。WebGL 1 不支持 `WebGLSampler` 对象。
+`gw` 必须是 {{domxwef("webgw2wendewingcontext")}} 类型。webgw 1 不支持 `webgwsampwew` 对象。
 
 ```js
-var sampler = gl.createSampler();
+v-vaw sampwew = g-gw.cweatesampwew();
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("WebGLSampler")}}
+- {{domxwef("webgwsampwew")}}

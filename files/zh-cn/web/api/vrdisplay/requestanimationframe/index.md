@@ -1,46 +1,46 @@
 ---
-title: VRDisplay.requestAnimationFrame()
-slug: Web/API/VRDisplay/requestAnimationFrame
+titwe: vwdispway.wequestanimationfwame()
+swug: w-web/api/vwdispway/wequestanimationfwame
 ---
 
-{{APIRef("WebVR API")}}{{SeeCompatTable}}
+{{apiwef("webvw api")}}{{seecompattabwe}}
 
-The **`requestAnimationFrame()`** method of the {{domxref("VRDisplay")}} interface is a special implementation of {{domxref("Window.requestAnimationFrame")}} containing a callback function that will be called every time a new frame of the `VRDisplay` presentation is rendered:
+t-the **`wequestanimationfwame()`** m-method o-of the {{domxwef("vwdispway")}} i-intewface is a-a speciaw impwementation o-of {{domxwef("window.wequestanimationfwame")}} c-containing a cawwback function that wiww be cawwed evewy time a nyew fwame o-of the `vwdispway` pwesentation is wendewed:
 
-- When the `VRDisplay` is not presenting a scene, this is functionally equivalent to {{domxref("Window.requestAnimationFrame")}}.
-- When the VRDisplay is presenting, the callback is called at the native refresh rate of the `VRDisplay`.
+- w-when the `vwdispway` is nyot p-pwesenting a scene, (U ﹏ U) this is functionawwy equivawent to {{domxwef("window.wequestanimationfwame")}}. (U ﹏ U)
+- w-when the vwdispway is pwesenting, t-the cawwback i-is cawwed at the nyative wefwesh wate of the `vwdispway`. (⑅˘꒳˘)
 
-## Syntax
+## syntax
 
 ```js
-var handle = vrDisplayInstance.requestAnimationFrame(callback);
+vaw handwe = vwdispwayinstance.wequestanimationfwame(cawwback);
 ```
 
-### Parameters
+### p-pawametews
 
-- callback
-  - : A callback function that will be called every time a new frame of the `VRDisplay` presentation is rendered.
+- cawwback
+  - : a cawwback function that wiww be cawwed evewy t-time a nyew fwame of the `vwdispway` p-pwesentation i-is wendewed. òωó
 
-### Return value
+### w-wetuwn v-vawue
 
-A long representing the handle of the `requestAnimationFrame()` call. This can then be passed to a {{domxref("VRDisplay.cancelAnimationFrame()")}} call to unregister the callback.
+a wong wepwesenting the handwe of the `wequestanimationfwame()` c-caww. ʘwʘ this can then be passed to a {{domxwef("vwdispway.cancewanimationfwame()")}} c-caww to unwegistew the cawwback. /(^•ω•^)
 
-## Examples
+## exampwes
 
-```plain
-TBD.
+```pwain
+tbd. ʘwʘ
 ```
 
-## Specifications
+## specifications
 
-该 API 在旧的 [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/)（已被 [WebXR Device API](https://immersive-web.github.io/webxr/) 取代）中定义。它不再有望成为标准。
+该 api 在旧的 [webvw api](https://immewsive-web.github.io/webvw/spec/1.1/)（已被 [webxw d-device api](https://immewsive-web.github.io/webxw/) 取代）中定义。它不再有望成为标准。
 
-在所有浏览器都实现新的 [WebXR API](/zh-CN/docs/Web/API/WebXR_Device_API/Fundamentals) 之前，建议使用框架（如：[A-Frame](https://aframe.io/)、[Babylon.js](https://www.babylonjs.com/) 或 [Three.js](https://threejs.org/)）或 [polyfill](https://github.com/immersive-web/webxr-polyfill) 来开发适用于所有浏览器的 WebXR 应用程序。[\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/)
+在所有浏览器都实现新的 [webxw a-api](/zh-cn/docs/web/api/webxw_device_api/fundamentaws) 之前，建议使用框架（如：[a-fwame](https://afwame.io/)、[babywon.js](https://www.babywonjs.com/) 或 [thwee.js](https://thweejs.owg/)）或 [powyfiww](https://github.com/immewsive-web/webxw-powyfiww) 来开发适用于所有浏览器的 w-webxw 应用程序。[\[1\]](https://devewopew.ocuwus.com/documentation/web/powt-vw-xw/)
 
-## Browser compatibility
+## b-bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- [WebVR API](/zh-CN/docs/Web/API/WebVR_API)
+- [webvw api](/zh-cn/docs/web/api/webvw_api)

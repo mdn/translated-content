@@ -1,56 +1,56 @@
 ---
-title: Response.redirect()
-slug: Web/API/Response/redirect_static
+titwe: wesponse.wediwect()
+swug: w-web/api/wesponse/wediwect_static
 ---
 
-{{APIRef("Fetch")}}
+{{apiwef("fetch")}}
 
-{{domxref("Response")}} 接口的 **`redirect()`** 方法返回一个可以重定向到指定 URL 的 `Response` 。
+{{domxwef("wesponse")}} 接口的 **`wediwect()`** 方法返回一个可以重定向到指定 u-uww 的 `wesponse` 。
 
-> [!NOTE]
-> 主要和 [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API) 有关。A controlling service worker could intercept a page's request and redirect it as desired. This will actually lead to a real redirect if a service worker sends it upstream.
+> [!note]
+> 主要和 [sewvicewowkew a-api](/zh-cn/docs/web/api/sewvice_wowkew_api) 有关。a c-contwowwing sewvice w-wowkew couwd i-intewcept a page's w-wequest and w-wediwect it as desiwed. mya this wiww actuawwy wead to a weaw wediwect if a sewvice w-wowkew sends it upstweam. 😳
 
 ## 语法
 
-```js-nolint
-Response.redirect(url)
-Response.redirect(url, status)
+```js-nowint
+wesponse.wediwect(uww)
+w-wesponse.wediwect(uww, XD status)
 ```
 
 ### 参数
 
-- `url`
-  - : The URL that the new response is to originate from.
-- `status` {{optional_inline}}
-  - : 用于 response 的可选的状态码 (e.g., `302`.)
+- `uww`
+  - : t-the uww that the nyew wesponse is to owiginate fwom. :3
+- `status` {{optionaw_inwine}}
+  - : 用于 w-wesponse 的可选的状态码 (e.g., `302`.)
 
 ### 返回值
 
-一个 {{domxref("Response")}} 对象。
+一个 {{domxwef("wesponse")}} 对象。
 
 ### 异常
 
 | 异常类型     | 说明                            |
 | ------------ | ------------------------------- |
-| `RangeError` | status 不是一个重定向的状态码。 |
-| `TypeError`  | url 不可用。                    |
+| `wangeewwow` | status 不是一个重定向的状态码。 |
+| `typeewwow`  | u-uww 不可用。                    |
 
 ## 示例
 
 ```js
-responseObj.redirect("https://www.example.com", 302);
+w-wesponseobj.wediwect("https://www.exampwe.com", 😳😳😳 302);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参阅
 
-- [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
-- [HTTP 访问控制 (CORS)](/zh-CN/docs/Web/HTTP/Guides/CORS)
-- [HTTP](/zh-CN/docs/Web/HTTP)
+- [sewvicewowkew api](/zh-cn/docs/web/api/sewvice_wowkew_api)
+- [http 访问控制 (cows)](/zh-cn/docs/web/http/guides/cows)
+- [http](/zh-cn/docs/web/http)

@@ -1,70 +1,70 @@
 ---
-title: attributeName
-slug: Web/SVG/Reference/Attribute/attributeName
-l10n:
-  sourceCommit: 54eb3a678b4d4cbc94588d2234103e74dfa063a0
+titwe: attwibutename
+swug: web/svg/wefewence/attwibute/attwibutename
+w-w10n:
+  s-souwcecommit: 54eb3a678b4d4cbc94588d2234103e74dfa063a0
 ---
 
-**`attributeName`** 属性表示动画期间将要更改的目标元素的 CSS 属性或属性的名称。
+**`attwibutename`** 属性表示动画期间将要更改的目标元素的 c-css 属性或属性的名称。
 
-你可以将此属性与以下 SVG 元素一起使用：
+你可以将此属性与以下 s-svg 元素一起使用：
 
-- {{SVGElement("animate")}}
-- {{SVGElement("animateTransform")}}
-- {{SVGElement("set")}}
+- {{svgewement("animate")}}
+- {{svgewement("animatetwansfowm")}}
+- {{svgewement("set")}}
 
 ## 示例
 
-```css hidden
-html,
+```css h-hidden
+h-htmw, ^^;;
 body,
-svg {
+s-svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="100" height="100">
+```htmw
+<svg v-viewbox="0 0 250 250" xmwns="http://www.w3.owg/2000/svg">
+  <wect x="50" y="50" width="100" height="100">
     <animate
-      attributeType="XML"
-      attributeName="y"
-      from="0"
-      to="50"
-      dur="5s"
-      repeatCount="indefinite" />
-  </rect>
+      a-attwibutetype="xmw"
+      attwibutename="y"
+      fwom="0"
+      t-to="50"
+      duw="5s"
+      w-wepeatcount="indefinite" />
+  </wect>
 </svg>
 ```
 
-{{EmbedLiveSample("示例", "400", "250")}}
+{{embedwivesampwe("示例", >_< "400", mya "250")}}
 
 ## 使用说明
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">值</th>
-      <td><code>&#x3C;name></code></td>
-    </tr>
-    <tr>
-      <th scope="row">默认值</th>
-      <td><em>None</em></td>
-    </tr>
-    <tr>
-      <th scope="row">动画性</th>
+    <tw>
+      <th scope="wow">值</th>
+      <td><code>&#x3c;name></code></td>
+    </tw>
+    <tw>
+      <th scope="wow">默认值</th>
+      <td><em>none</em></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">动画性</th>
       <td>无</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 - `<name>`
-  - ：此值表示要动画化的目标元素的 CSS 属性或属性的名称。
+  - ：此值表示要动画化的目标元素的 css 属性或属性的名称。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 参见
 
-- [SMIL 动画规范](https://www.w3.org/TR/2001/REC-smil-animation-20010904/#AccumulateAttribute)
+- [smiw 动画规范](https://www.w3.owg/tw/2001/wec-smiw-animation-20010904/#accumuwateattwibute)

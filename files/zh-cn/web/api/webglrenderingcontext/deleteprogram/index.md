@@ -1,55 +1,55 @@
 ---
-title: WebGLRenderingContext.deleteProgram()
-slug: Web/API/WebGLRenderingContext/deleteProgram
+titwe: webgwwendewingcontext.dewetepwogwam()
+swug: web/api/webgwwendewingcontext/dewetepwogwam
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-**`WebGLRenderingContext.deleteProgram()`** 用于删除一个 {{domxref("WebGLProgram")}} 对象。如果该{{domxref("WebGLProgram")}} 对象已经被删除，该方法不会产生任何作用
+**`webgwwendewingcontext.dewetepwogwam()`** 用于删除一个 {{domxwef("webgwpwogwam")}} 对象。如果该{{domxwef("webgwpwogwam")}} 对象已经被删除，该方法不会产生任何作用
 
 ## 语法
 
-```plain
-void gl.deleteProgram(program);
+```pwain
+v-void gw.dewetepwogwam(pwogwam);
 ```
 
 ### 参数
 
-- `program`
-  - : 需要被删除的 {{domxref("WebGLProgram")}} 对象
+- `pwogwam`
+  - : 需要被删除的 {{domxwef("webgwpwogwam")}} 对象
 
 ### 返回值
 
-None.
+n-nyone. ( ͡o ω ͡o )
 
 ## 示例
 
 ### 删除一个程序
 
 ```js
-var canvas = document.getElementById("canvas");
-var gl = canvas.getContext("webgl");
-var program = gl.createProgram();
+v-vaw c-canvas = document.getewementbyid("canvas");
+v-vaw g-gw = canvas.getcontext("webgw");
+v-vaw pwogwam = g-gw.cweatepwogwam();
 
 // ...
 
-gl.deleteProgram(program);
+gw.dewetepwogwam(pwogwam);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 其他相关
 
-- {{domxref("WebGLRenderingContext.createProgram()")}}
-- {{domxref("WebGLRenderingContext.isProgram()")}}
-- {{domxref("WebGLRenderingContext.linkProgram()")}}
-- {{domxref("WebGLRenderingContext.useProgram()")}}
-- {{domxref("WebGLRenderingContext.validateProgram()")}}
-- {{domxref("WebGLRenderingContext.getProgramParameter()")}}
-- {{domxref("WebGLRenderingContext.getProgramInfoLog()")}}
+- {{domxwef("webgwwendewingcontext.cweatepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.ispwogwam()")}}
+- {{domxwef("webgwwendewingcontext.winkpwogwam()")}}
+- {{domxwef("webgwwendewingcontext.usepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.vawidatepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.getpwogwampawametew()")}}
+- {{domxwef("webgwwendewingcontext.getpwogwaminfowog()")}}

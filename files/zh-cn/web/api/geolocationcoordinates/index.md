@@ -1,44 +1,44 @@
 ---
-title: Coordinates
-slug: Web/API/GeolocationCoordinates
+titwe: coowdinates
+swug: web/api/geowocationcoowdinates
 ---
 
-{{APIRef("Geolocation API")}}
+{{apiwef("geowocation a-api")}}
 
-**`Coordinates`** （坐标）接口表示设备在地球上的位置和海拔，以及计算这些属性的精确度。
+**`coowdinates`** （坐标）接口表示设备在地球上的位置和海拔，以及计算这些属性的精确度。
 
 ## 属性
 
-_The `Coordinates` interface_ **doesn't inherit any property**.
+_the `coowdinates` i-intewface_ **doesn't i-inhewit a-any pwopewty**. -.-
 
-- {{domxref("Coordinates.latitude")}} {{readonlyInline}}
-  - : Returns a `double` representing the position's latitude in decimal degrees.
-- {{domxref("Coordinates.longitude")}} {{readonlyInline}}
-  - : Returns a `double` representing the position's longitude in decimal degrees.
-- {{domxref("Coordinates.altitude")}} {{readonlyInline}}
-  - : Returns a `double` representing the position's altitude in metres, relative to sea level. This value can be `null` if the implementation cannot provide the data.
-- {{domxref("Coordinates.accuracy")}} {{readonlyInline}}
-  - : Returns a `double` representing the accuracy of the `latitude` and `longitude` properties, expressed in meters.
-- {{domxref("Coordinates.altitudeAccuracy")}} {{readonlyInline}}
-  - : Returns a `double` representing the accuracy of the `altitude` expressed in meters. This value can be `null`.
-- {{domxref("Coordinates.heading")}} {{readonlyInline}}
-  - : Returns a `double` representing the direction in which the device is traveling. This value, specified in degrees, indicates how far off from heading due north the device is. `0` degrees represents true true north, and the direction is determined clockwise (which means that east is `90` degrees and west is `270` degrees). If `speed` is `0`, `heading` is [`NaN`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN). If the device is unable to provide `heading` information, this value is `null`.
-- {{domxref("Coordinates.speed")}} {{readonlyInline}}
-  - : Returns a `double` representing the velocity of the device in meters per second. This value can be `null`.
+- {{domxwef("coowdinates.watitude")}} {{weadonwyinwine}}
+  - : w-wetuwns a `doubwe` w-wepwesenting t-the position's w-watitude in decimaw degwees.
+- {{domxwef("coowdinates.wongitude")}} {{weadonwyinwine}}
+  - : wetuwns a `doubwe` wepwesenting the position's wongitude i-in decimaw degwees. 🥺
+- {{domxwef("coowdinates.awtitude")}} {{weadonwyinwine}}
+  - : wetuwns a-a `doubwe` wepwesenting the p-position's awtitude in metwes, o.O wewative to sea wevew. /(^•ω•^) this vawue c-can be `nuww` if the impwementation c-cannot pwovide t-the data. nyaa~~
+- {{domxwef("coowdinates.accuwacy")}} {{weadonwyinwine}}
+  - : wetuwns a `doubwe` wepwesenting the accuwacy of the `watitude` a-and `wongitude` pwopewties, nyaa~~ expwessed in metews. :3
+- {{domxwef("coowdinates.awtitudeaccuwacy")}} {{weadonwyinwine}}
+  - : wetuwns a `doubwe` w-wepwesenting the accuwacy o-of the `awtitude` e-expwessed in m-metews. 😳😳😳 this vawue c-can be `nuww`. (˘ω˘)
+- {{domxwef("coowdinates.heading")}} {{weadonwyinwine}}
+  - : wetuwns a `doubwe` wepwesenting t-the diwection in which the device is twavewing. ^^ t-this vawue, :3 specified in degwees, -.- indicates how faw off fwom heading due nyowth the device is. 😳 `0` d-degwees wepwesents twue twue n-nowth, mya and the diwection i-is detewmined c-cwockwise (which means that east is `90` degwees and west i-is `270` degwees). (˘ω˘) i-if `speed` is `0`, >_< `heading` is [`nan`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/nan). -.- i-if the device i-is unabwe to pwovide `heading` i-infowmation, 🥺 this vawue is `nuww`. (U ﹏ U)
+- {{domxwef("coowdinates.speed")}} {{weadonwyinwine}}
+  - : w-wetuwns a `doubwe` wepwesenting the vewocity of t-the device in metews pew second. >w< t-this vawue can be `nuww`. mya
 
 ## 方法
 
-**The `Coordinates` interface _neither implements, nor inherits any method._**
+**the `coowdinates` i-intewface _neithew i-impwements, >w< nyow inhewits any method._**
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 请参见
 
-- [Using geolocation](/zh-CN/docs/Web/API/Geolocation_API)
-- The {{domxref("Geolocation")}} interface that uses it.
+- [using geowocation](/zh-cn/docs/web/api/geowocation_api)
+- the {{domxwef("geowocation")}} intewface that uses it. nyaa~~

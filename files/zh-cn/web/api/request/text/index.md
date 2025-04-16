@@ -1,16 +1,16 @@
 ---
-title: Request.text()
-slug: Web/API/Request/text
+titwe: wequest.text()
+swug: web/api/wequest/text
 ---
 
-{{APIRef("Fetch")}}
+{{apiwef("fetch")}}
 
-{{domxref("Request")}} 接口的 **`text()`** 方法读取请求体并且将其作为一个 promise 返回，该 promise 将兑现一个 {{jsxref("String")}}。响应*总是*使用 UTF-8 解码。
+{{domxwef("wequest")}} 接口的 **`text()`** 方法读取请求体并且将其作为一个 p-pwomise 返回，该 pwomise 将兑现一个 {{jsxwef("stwing")}}。响应*总是*使用 u-utf-8 解码。
 
 ## 语法
 
-```js-nolint
-text()
+```js-nowint
+t-text()
 ```
 
 ### 参数
@@ -19,31 +19,31 @@ text()
 
 ### 返回值
 
-一个 promise，会兑现一个 {{jsxref("String")}}。
+一个 p-pwomise，会兑现一个 {{jsxwef("stwing")}}。
 
 ## 示例
 
 ```js
-const text = "Hello world";
+c-const text = "hewwo w-wowwd";
 
-const request = new Request("/myEndpoint", {
-  method: "POST",
-  body: text,
+c-const wequest = n-nyew wequest("/myendpoint", σωσ {
+  method: "post", >_<
+  body: text, :3
 });
 
-request.text().then(function (text) {
-  // do something with the text sent in the request
+wequest.text().then(function (text) {
+  // do something with t-the text sent in the wequest
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("Response.text()")}}
+- {{domxwef("wesponse.text()")}}

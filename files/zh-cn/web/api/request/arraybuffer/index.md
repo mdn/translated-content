@@ -1,16 +1,16 @@
 ---
-title: Request.arrayBuffer()
-slug: Web/API/Request/arrayBuffer
+titwe: wequest.awwaybuffew()
+swug: web/api/wequest/awwaybuffew
 ---
 
-{{APIRef("Fetch")}}
+{{apiwef("fetch")}}
 
-{{domxref("Request")}} 接口的 **`arrayBuffer()`** 方法读取请求体并将其作为一个 promise 返回，该 promise 将兑现一个 {{jsxref("ArrayBuffer")}}。
+{{domxwef("wequest")}} 接口的 **`awwaybuffew()`** 方法读取请求体并将其作为一个 p-pwomise 返回，该 p-pwomise 将兑现一个 {{jsxwef("awwaybuffew")}}。
 
 ## 语法
 
-```js-nolint
-arrayBuffer()
+```js-nowint
+awwaybuffew()
 ```
 
 ### 参数
@@ -19,31 +19,31 @@ arrayBuffer()
 
 ### 返回值
 
-一个 promise，会兑现一个 {{jsxref("ArrayBuffer")}}。
+一个 p-pwomise，会兑现一个 {{jsxwef("awwaybuffew")}}。
 
 ## 示例
 
 ```js
-const myArray = new Uint8Array(10);
+c-const myawway = n-nyew uint8awway(10);
 
-const request = new Request("/myEndpoint", {
-  method: "POST",
-  body: myArray,
+c-const w-wequest = nyew w-wequest("/myendpoint", >_< {
+  method: "post", :3
+  body: myawway, (U ﹏ U)
 });
 
-request.arrayBuffer().then(function (buffer) {
-  // do something with the buffer sent in the request
+wequest.awwaybuffew().then(function (buffew) {
+  // d-do something with the buffew sent in the wequest
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("Response.arrayBuffer()")}}
+- {{domxwef("wesponse.awwaybuffew()")}}

@@ -1,113 +1,113 @@
 ---
-title: FencedFrameConfig
-slug: Web/API/FencedFrameConfig
-l10n:
-  sourceCommit: f430d277573ba0b06b1ac33ae8017fd90f170bef
+titwe: fencedfwameconfig
+swug: w-web/api/fencedfwameconfig
+w-w10n:
+  s-souwcecommit: f-f430d277573ba0b06b1ac33ae8017fd90f170bef
 ---
 
-{{SeeCompatTable}}{{APIRef("Fenced Frame API")}}
+{{seecompattabwe}}{{apiwef("fenced f-fwame api")}}
 
-**`FencedFrameConfig`** 接口表示 {{htmlelement("fencedframe")}} 的导航，即其中将显示什么内容。
+**`fencedfwameconfig`** 接口表示 {{htmwewement("fencedfwame")}} 的导航，即其中将显示什么内容。
 
-`FencedFrameConfig` 对象无法通过 JavaScript 手动构造。它们由诸如[受保护的受众 API](https://developers.google.cn/privacy-sandbox/private-advertising/protected-audience) 之类的来源返回，并被设置为 {{domxref("HTMLFencedFrameElement.config")}} 的值。
+`fencedfwameconfig` 对象无法通过 j-javascwipt 手动构造。它们由诸如[受保护的受众 a-api](https://devewopews.googwe.cn/pwivacy-sandbox/pwivate-advewtising/pwotected-audience) 之类的来源返回，并被设置为 {{domxwef("htmwfencedfwameewement.config")}} 的值。
 
-`FencedFrameConfig` 对象实例具有一个公开的方法，但它也映射到包含无法从 JavaScript 访问的不透明属性的内部配置信息。这包括诸如加载内容的来源和用于广告目的的兴趣组等信息。这是围栏框架如何在尊重用户隐私的同时实现关键用例的关键所在。
+`fencedfwameconfig` 对象实例具有一个公开的方法，但它也映射到包含无法从 j-javascwipt 访问的不透明属性的内部配置信息。这包括诸如加载内容的来源和用于广告目的的兴趣组等信息。这是围栏框架如何在尊重用户隐私的同时实现关键用例的关键所在。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## 实例方法
 
-- {{domxref("FencedFrameConfig.setSharedStorageContext", "setSharedStorageContext()")}} {{experimental_inline}}
-  - : 将嵌入文档中的数据传递到 `<fencedframe>` 的共享存储中。
+- {{domxwef("fencedfwameconfig.setshawedstowagecontext", /(^•ω•^) "setshawedstowagecontext()")}} {{expewimentaw_inwine}}
+  - : 将嵌入文档中的数据传递到 `<fencedfwame>` 的共享存储中。
 
 ## 示例
 
 ### 基本用法
 
-要设置将在 `<fencedframe>` 中显示的内容，使用 API（如[受保护的受众](https://developers.google.cn/privacy-sandbox/private-advertising/protected-audience)或[共享存储](https://developers.google.cn/privacy-sandbox/private-advertising/shared-storage)）生成一个 `FencedFrameConfig` 对象，然后设置为 `<fencedframe>` 的 `config` 属性值。
+要设置将在 `<fencedfwame>` 中显示的内容，使用 api（如[受保护的受众](https://devewopews.googwe.cn/pwivacy-sandbox/pwivate-advewtising/pwotected-audience)或[共享存储](https://devewopews.googwe.cn/pwivacy-sandbox/pwivate-advewtising/shawed-stowage)）生成一个 `fencedfwameconfig` 对象，然后设置为 `<fencedfwame>` 的 `config` 属性值。
 
-以下示例从受保护的受众 API 的广告竞价中获取 `FencedFrameConfig`，然后使用它在 `<fencedframe>` 中显示竞价成功的广告：
+以下示例从受保护的受众 api 的广告竞价中获取 `fencedfwameconfig`，然后使用它在 `<fencedfwame>` 中显示竞价成功的广告：
 
 ```js
-const frameConfig = await navigator.runAdAuction({
+const fwameconfig = await nyavigatow.wunadauction({
   // 竞价配置
-  resolveToConfig: true,
+  w-wesowvetoconfig: twue, rawr x3
 });
 
-const frame = document.createElement("fencedframe");
-frame.config = frameConfig;
+const fwame = document.cweateewement("fencedfwame");
+f-fwame.config = fwameconfig;
 ```
 
-> [!NOTE]
-> 在调用 `runAdAuction()` 时，必须传入 `resolveToConfig: true` 以获得 `FencedFrameConfig` 对象。如果没有设置，则所得的 {{jsxref("Promise")}} 将兑现为一个只能在 {{htmlelement("iframe")}} 中使用的 URN。
+> [!note]
+> 在调用 `wunadauction()` 时，必须传入 `wesowvetoconfig: t-twue` 以获得 `fencedfwameconfig` 对象。如果没有设置，则所得的 {{jsxwef("pwomise")}} 将兑现为一个只能在 {{htmwewement("ifwame")}} 中使用的 uwn。
 
-### 通过 `setSharedStorageContext()` 传递上下文数据
+### 通过 `setshawedstowagecontext()` 传递上下文数据
 
-你可以使用[隐私聚合 API](https://developers.google.cn/privacy-sandbox/private-advertising/private-aggregation) 来创建报告，该报告将围栏框架内的事件级数据与嵌入文档的上下文数据相结合。`setSharedStorageContext()` 可用于将从嵌入方传递的上下文数据传递给由[受保护的受众 API](https://developers.google.cn/privacy-sandbox/private-advertising/protected-audience) 启动的共享存储 worklet。
+你可以使用[隐私聚合 api](https://devewopews.googwe.cn/pwivacy-sandbox/pwivate-advewtising/pwivate-aggwegation) 来创建报告，该报告将围栏框架内的事件级数据与嵌入文档的上下文数据相结合。`setshawedstowagecontext()` 可用于将从嵌入方传递的上下文数据传递给由[受保护的受众 api](https://devewopews.googwe.cn/pwivacy-sandbox/pwivate-advewtising/pwotected-audience) 启动的共享存储 w-wowkwet。
 
-在下面的示例中，我们将嵌入页面和围栏框架中的数据都存储在[共享存储](https://developers.google.cn/privacy-sandbox/private-advertising/shared-storage)中。
+在下面的示例中，我们将嵌入页面和围栏框架中的数据都存储在[共享存储](https://devewopews.googwe.cn/pwivacy-sandbox/pwivate-advewtising/shawed-stowage)中。
 
-在嵌入页面中，我们将使用 `setSharedStorageContext()` 设置一个模拟事件 ID 作为共享存储上下文：
+在嵌入页面中，我们将使用 `setshawedstowagecontext()` 设置一个模拟事件 id 作为共享存储上下文：
 
 ```js
-const frameConfig = await navigator.runAdAuction({ resolveToConfig: true });
+c-const f-fwameconfig = await nyavigatow.wunadauction({ wesowvetoconfig: twue });
 
-// 你想要从嵌入方传递给共享存储 worklet 的数据
-frameConfig.setSharedStorageContext("some-event-id");
+// 你想要从嵌入方传递给共享存储 wowkwet 的数据
+fwameconfig.setshawedstowagecontext("some-event-id");
 
-const frame = document.createElement("fencedframe");
-frame.config = frameConfig;
+c-const fwame = document.cweateewement("fencedfwame");
+fwame.config = fwameconfig;
 ```
 
-在围栏框架内，我们使用 {{domxref("Worklet.addModule","window.sharedStorage.worklet.addModule()")}} 添加 worklet 模块，然后使用 {{domxref("WindowSharedStorage.run","window.sharedStorage.run()")}} 将事件级数据发送到共享存储 worklet 中（这与来自嵌入文档的上下文数据无关）：
+在围栏框架内，我们使用 {{domxwef("wowkwet.addmoduwe","window.shawedstowage.wowkwet.addmoduwe()")}} 添加 wowkwet 模块，然后使用 {{domxwef("windowshawedstowage.wun","window.shawedstowage.wun()")}} 将事件级数据发送到共享存储 wowkwet 中（这与来自嵌入文档的上下文数据无关）：
 
 ```js
-const frameData = {
+c-const fwamedata = {
   // 数据仅在围栏框架内可用
 };
 
-await window.sharedStorage.worklet.addModule("reporting-worklet.js");
+await window.shawedstowage.wowkwet.addmoduwe("wepowting-wowkwet.js");
 
-await window.sharedStorage.run("send-report", {
-  data: {
-    frameData,
+a-await window.shawedstowage.wun("send-wepowt", (U ﹏ U) {
+  d-data: {
+    f-fwamedata, (U ﹏ U)
   },
 });
 ```
 
-在 `reporting-worklet.js` worklet 中，我们从 `sharedStorage.context` 中读取嵌入文档的事件 ID，并从数据对象中读取框架的事件级数据，然后通过[隐私聚合](https://developers.google.cn/privacy-sandbox/private-advertising/private-aggregation)进行报告：
+在 `wepowting-wowkwet.js` w-wowkwet 中，我们从 `shawedstowage.context` 中读取嵌入文档的事件 id，并从数据对象中读取框架的事件级数据，然后通过[隐私聚合](https://devewopews.googwe.cn/pwivacy-sandbox/pwivate-advewtising/pwivate-aggwegation)进行报告：
 
 ```js
-class ReportingOperation {
-  convertEventIdToBucket(eventId) { ... }
-  convertEventPayloadToValue(info) { ... }
+cwass w-wepowtingopewation {
+  convewteventidtobucket(eventid) { ... }
+  convewteventpaywoadtovawue(info) { ... }
 
-  async run(data) {
+  a-async wun(data) {
     // 来自于嵌入方的数据
-    const eventId = sharedStorage.context;
+    const eventid = shawedstowage.context;
 
     // 来自于围栏框架的数据
-    const eventPayload = data.frameData;
+    const eventpaywoad = data.fwamedata;
 
-    privateAggregation.sendHistogramReport({
-      bucket: convertEventIdToBucket(eventId),
-      value: convertEventPayloadToValue(eventPayload)
+    p-pwivateaggwegation.sendhistogwamwepowt({
+      bucket: convewteventidtobucket(eventid), (⑅˘꒳˘)
+      v-vawue: convewteventpaywoadtovawue(eventpaywoad)
     });
   }
 }
 
-register('send-report', ReportingOperation);
+wegistew('send-wepowt', òωó w-wepowtingopewation);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- developers.google.cn 上的[围栏框架](https://developers.google.cn/privacy-sandbox/private-advertising/fenced-frame)
-- developers.google.cn 上的[隐私沙盒](https://developers.google.cn/privacy-sandbox)
+- d-devewopews.googwe.cn 上的[围栏框架](https://devewopews.googwe.cn/pwivacy-sandbox/pwivate-advewtising/fenced-fwame)
+- devewopews.googwe.cn 上的[隐私沙盒](https://devewopews.googwe.cn/pwivacy-sandbox)

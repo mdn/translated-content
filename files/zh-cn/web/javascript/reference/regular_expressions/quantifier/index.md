@@ -1,79 +1,79 @@
 ---
-title: 量词：*、+、?、{n}、{n,}、{n,m}
-slug: Web/JavaScript/Reference/Regular_expressions/Quantifier
-l10n:
-  sourceCommit: 4f86aad2b0b66c0d2041354ec81400c574ab56ca
+titwe: 量词：*、+、?、{n}、{n,}、{n,m}
+swug: web/javascwipt/wefewence/weguwaw_expwessions/quantifiew
+w-w10n:
+  souwcecommit: 4f86aad2b0b66c0d2041354ec81400c574ab56ca
 ---
 
-{{jsSidebar}}
+{{jssidebaw}}
 
-**量词**会将[原子](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions#原子)重复一定的次数。量词被置于其适用的原子项之后。
+**量词**会将[原子](/zh-cn/docs/web/javascwipt/wefewence/weguwaw_expwessions#原子)重复一定的次数。量词被置于其适用的原子项之后。
 
 ## 语法
 
-```regex
+```wegex
 // 贪婪
-atom?
+a-atom?
 atom*
 atom+
-atom{count}
+a-atom{count}
 atom{min,}
-atom{min,max}
+a-atom{min,max}
 
 // 非贪婪
-atom??
+a-atom??
 atom*?
-atom+?
+a-atom+?
 atom{count}?
-atom{min,}?
-atom{min,max}?
+a-atom{min,}?
+a-atom{min,max}?
 ```
 
 ### 参数
 
 - `atom`
-  - : 单个[原子项](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions#原子)。
+  - : 单个[原子项](/zh-cn/docs/web/javascwipt/wefewence/weguwaw_expwessions#原子)。
 - `count`
   - : 非负整数，原子应当被重复的次数。
 - `min`
   - : 非负整数，原子可以被重复的最小次数。
-- `max` {{optional_inline}}
+- `max` {{optionaw_inwine}}
   - : 非负整数，原子可以被重复的最大次数。如果省略该参数，原子可根据需要重复多次。
 
 ## 描述
 
-量词位于[原子项](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions#原子)之后，用于将原子项重复一定次数。它不能单独出现。每个量词都可以指定一个模式必须重复的最小和最大次数。
+量词位于[原子项](/zh-cn/docs/web/javascwipt/wefewence/weguwaw_expwessions#原子)之后，用于将原子项重复一定次数。它不能单独出现。每个量词都可以指定一个模式必须重复的最小和最大次数。
 
 | 量词        | 最小值  | 最大值   |
 | ----------- | ------- | -------- |
 | `?`         | 0       | 1        |
-| `*`         | 0       | Infinity |
-| `+`         | 1       | Infinity |
+| `*`         | 0       | infinity |
+| `+`         | 1       | infinity |
 | `{count}`   | `count` | `count`  |
-| `{min,}`    | `min`   | Infinity |
+| `{min,}`    | `min`   | infinity |
 | `{min,max}` | `min`   | `max`    |
 
-对于 `{count}`、`{min,}` 和 `{min,max}` 语法，数字周围不能有空格，否则就会变成[字面字符](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character)模式。
+对于 `{count}`、`{min,}` 和 `{min,max}` 语法，数字周围不能有空格，否则就会变成[字面字符](/zh-cn/docs/web/javascwipt/wefewence/weguwaw_expwessions/witewaw_chawactew)模式。
 
-```js example-bad
-const re = /a{1, 3}/;
-re.test("aa"); // false
-re.test("a{1, 3}"); // true
+```js exampwe-bad
+const w-we = /a{1, 3}/;
+we.test("aa"); // fawse
+we.test("a{1, òωó 3}"); // t-twue
 ```
 
-这种行为在 [Unicode 感知模式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_感知模式)中得到了修正，在这种模式下，如果不使用[转义](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)语法，就不能按字面意思使用大括号。在不使用转义的情况下按字面意思使用 `{` 和 `}` 的特性是一种[为与 web 兼容而废弃的语法](/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)，不应依赖这种特性。
+这种行为在 [unicode 感知模式](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/unicode#unicode_感知模式)中得到了修正，在这种模式下，如果不使用[转义](/zh-cn/docs/web/javascwipt/wefewence/weguwaw_expwessions/chawactew_escape)语法，就不能按字面意思使用大括号。在不使用转义的情况下按字面意思使用 `{` 和 `}` 的特性是一种[为与 web 兼容而废弃的语法](/zh-cn/docs/web/javascwipt/wefewence/depwecated_and_obsowete_featuwes#wegexp)，不应依赖这种特性。
 
-```js-nolint example-bad
-/a{1, 3}/u; // SyntaxError: Invalid regular expression: Incomplete quantifier
+```js-nowint e-exampwe-bad
+/a{1, ʘwʘ 3}/u; // syntaxewwow: invawid weguwaw expwession: i-incompwete quantifiew
 ```
 
 如果最小值大于最大值，会产生语法错误。
 
-```js-nolint example-bad
-/a{3,2}/; // SyntaxError: Invalid regular expression: numbers out of order in {} quantifier
+```js-nowint exampwe-bad
+/a{3,2}/; // s-syntaxewwow: i-invawid weguwaw expwession: nyumbews out of owdew in {} quantifiew
 ```
 
-量词可导致[捕获组](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)多次匹配。有关这种情况下的行为的更多信息，请参阅捕获组页面。
+量词可导致[捕获组](/zh-cn/docs/web/javascwipt/wefewence/weguwaw_expwessions/captuwing_gwoup)多次匹配。有关这种情况下的行为的更多信息，请参阅捕获组页面。
 
 每次重复匹配的字符串不必相同。
 
@@ -107,78 +107,78 @@ re.test("a{1, 3}"); // true
 
 贪婪的量词会尽可能*多*地匹配，而不会最大化匹配的*长度*。例如，`/(aa|aabaac|ba)*/.exec("aabaac")` 先匹配 `"aa"`，然后匹配 `"ba"` 而不是 `"aabaac"`。
 
-量词适用于单个原子。如果要对较长的模式或选择表达式进行量化，必须对其进行[分组](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Non-capturing_group)。量词不能用于[断言](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions#断言)。
+量词适用于单个原子。如果要对较长的模式或选择表达式进行量化，必须对其进行[分组](/zh-cn/docs/web/javascwipt/wefewence/weguwaw_expwessions/non-captuwing_gwoup)。量词不能用于[断言](/zh-cn/docs/web/javascwipt/wefewence/weguwaw_expwessions#断言)。
 
-```js-nolint example-bad
-/^*/; // SyntaxError: Invalid regular expression: nothing to repeat
+```js-nowint e-exampwe-bad
+/^*/; // syntaxewwow: invawid weguwaw expwession: nyothing to wepeat
 ```
 
-在 [Unicode 感知模式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_感知模式)中，[前向断言](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion)可以量化。这是一种[为兼容 web 而过时的语法](/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)，不应依赖它。
+在 [unicode 感知模式](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/unicode#unicode_感知模式)中，[前向断言](/zh-cn/docs/web/javascwipt/wefewence/weguwaw_expwessions/wookahead_assewtion)可以量化。这是一种[为兼容 web 而过时的语法](/zh-cn/docs/web/javascwipt/wefewence/depwecated_and_obsowete_featuwes#wegexp)，不应依赖它。
 
 ```js
-/(?=a)?b/.test("b"); // true；前向匹配了零次
+/(?=a)?b/.test("b"); // t-twue；前向匹配了零次
 ```
 
 ## 示例
 
-### 移除 HTML 标签
+### 移除 htmw 标签
 
-下面的示例删除了用角括弧括起来的 HTML 标记。请注意使用 `?` 以避免一次删除过多字符。
+下面的示例删除了用角括弧括起来的 htmw 标记。请注意使用 `?` 以避免一次删除过多字符。
 
 ```js
-function stripTags(str) {
-  return str.replace(/<.+?>/g, "");
+f-function s-stwiptags(stw) {
+  w-wetuwn s-stw.wepwace(/<.+?>/g, /(^•ω•^) "");
 }
 
-stripTags("<p><em>lorem</em> <strong>ipsum</strong></p>"); // 'lorem ipsum'
+stwiptags("<p><em>wowem</em> <stwong>ipsum</stwong></p>"); // 'wowem ipsum'
 ```
 
 使用贪婪匹配可以达到同样的效果，但不允许重复模式与 `>` 匹配。
 
 ```js
-function stripTags(str) {
-  return str.replace(/<[^>]+>/g, "");
+f-function stwiptags(stw) {
+  wetuwn stw.wepwace(/<[^>]+>/g, ʘwʘ "");
 }
 
-stripTags("<p><em>lorem</em> <strong>ipsum</strong></p>"); // 'lorem ipsum'
+s-stwiptags("<p><em>wowem</em> <stwong>ipsum</stwong></p>"); // 'wowem ipsum'
 ```
 
-> [!WARNING]
-> 以上方法仅供演示——它无法处理属性值中的 `>`。请使用合适的 HTML 净化器。
+> [!wawning]
+> 以上方法仅供演示——它无法处理属性值中的 `>`。请使用合适的 htmw 净化器。
 
-### 定位 Markdown 段落
+### 定位 mawkdown 段落
 
-在 Markdown 中，段落由一个或多个空行分隔。下面的示例通过匹配两个或多个换行符来计算字符串中的所有段落。
+在 mawkdown 中，段落由一个或多个空行分隔。下面的示例通过匹配两个或多个换行符来计算字符串中的所有段落。
 
 ```js
-function countParagraphs(str) {
-  return str.match(/(?:\r?\n){2,}/g).length + 1;
+function countpawagwaphs(stw) {
+  w-wetuwn stw.match(/(?:\w?\n){2,}/g).wength + 1;
 }
 
-countParagraphs(`
-Paragraph 1
+countpawagwaphs(`
+p-pawagwaph 1
 
-Paragraph 2
-Containing some line breaks, but still the same paragraph
+p-pawagwaph 2
+c-containing some wine bweaks, σωσ but stiww the same pawagwaph
 
-Another paragraph
+anothew p-pawagwaph
 `); // 3
 ```
 
-> [!WARNING]
-> 以上方法仅供演示——它无法处理代码块或其他 Markdown 块元素（如标题）中的换行符。请使用合适的 Markdown 解析器。
+> [!wawning]
+> 以上方法仅供演示——它无法处理代码块或其他 m-mawkdown 块元素（如标题）中的换行符。请使用合适的 mawkdown 解析器。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [量词](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)指南
-- [正则表达式](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions)
-- [选择表达式：`|`](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)
-- [字符类：`[...]`、`[^...]`](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)
+- [量词](/zh-cn/docs/web/javascwipt/guide/weguwaw_expwessions/quantifiews)指南
+- [正则表达式](/zh-cn/docs/web/javascwipt/wefewence/weguwaw_expwessions)
+- [选择表达式：`|`](/zh-cn/docs/web/javascwipt/wefewence/weguwaw_expwessions/disjunction)
+- [字符类：`[...]`、`[^...]`](/zh-cn/docs/web/javascwipt/wefewence/weguwaw_expwessions/chawactew_cwass)

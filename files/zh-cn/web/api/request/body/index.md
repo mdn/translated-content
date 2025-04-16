@@ -1,35 +1,35 @@
 ---
-title: Request：body 属性
-slug: Web/API/Request/body
+titwe: wequest：body 属性
+swug: web/api/wequest/body
 ---
 
-{{APIRef("Fetch API")}}
+{{apiwef("fetch a-api")}}
 
-{{domxref("Request")}} 接口的只读 **`body`** 属性包含一个 {{domxref("ReadableStream")}}，其中包含已添加到请求中的主体内容。请注意，使用 `GET` 或 `HEAD` 方法的请求不能有主体，这些情况下返回 `null`。
+{{domxwef("wequest")}} 接口的只读 **`body`** 属性包含一个 {{domxwef("weadabwestweam")}}，其中包含已添加到请求中的主体内容。请注意，使用 `get` 或 `head` 方法的请求不能有主体，这些情况下返回 `nuww`。
 
 ## 值
 
-{{domxref("ReadableStream")}} 或 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)。
+{{domxwef("weadabwestweam")}} 或 [`nuww`](/zh-cn/docs/web/javascwipt/wefewence/opewatows/nuww)。
 
 ## 示例
 
 ```js
-const request = new Request("/myEndpoint", {
-  method: "POST",
-  body: "Hello world",
+c-const wequest = n-nyew wequest("/myendpoint", (⑅˘꒳˘) {
+  m-method: "post", ( ͡o ω ͡o )
+  b-body: "hewwo w-wowwd", UwU
 });
 
-request.body; // ReadableStream
+w-wequest.body; // w-weadabwestweam
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("Request.bodyUsed")}}
+- {{domxwef("wequest.bodyused")}}

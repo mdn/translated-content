@@ -1,35 +1,35 @@
 ---
-title: Document：dragend 事件
-slug: Web/API/HTMLElement/dragend_event
+titwe: document：dwagend 事件
+swug: web/api/htmwewement/dwagend_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-`dragend` 事件在拖放操作结束时触发（通过释放鼠标按钮或单击 escape 键）。
+`dwagend` 事件在拖放操作结束时触发（通过释放鼠标按钮或单击 e-escape 键）。
 
 该事件无法取消。
 
 ## 语法
 
-在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
+在类似 {{domxwef("eventtawget.addeventwistenew", nyaa~~ "addeventwistenew()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
 
 ```js
-addEventListener("dragend", (event) => {});
+a-addeventwistenew("dwagend", /(^•ω•^) (event) => {});
 
-ondragend = (event) => {};
+o-ondwagend = (event) => {};
 ```
 
 ## 事件类型
 
-{{domxref("DragEvent")}}，继承自 {{domxref("Event")}}。
+{{domxwef("dwagevent")}}，继承自 {{domxwef("event")}}。
 
-{{InheritanceDiagram("DragEvent")}}
+{{inhewitancediagwam("dwagevent")}}
 
 ## 事件属性
 
-除了以下列出的额外属性，还可以使用从父接口 {{domxref("Event")}} 继承的属性。
+除了以下列出的额外属性，还可以使用从父接口 {{domxwef("event")}} 继承的属性。
 
-- {{domxref('DragEvent.dataTransfer')}} {{ReadOnlyInline}}
+- {{domxwef('dwagevent.datatwansfew')}} {{weadonwyinwine}}
   - : 在执行拖放操作时传输的数据。
 
 ## 示例
@@ -38,83 +38,83 @@ ondragend = (event) => {};
 
 在本示例中，我们在容器中有一个可拖动的元素。尝试抓住元素，拖动它，然后释放它。
 
-我们在拖动元素时，使元素变得半透明，并监听 `dragend` 事件以在释放元素时重置其不透明度。
+我们在拖动元素时，使元素变得半透明，并监听 `dwagend` 事件以在释放元素时重置其不透明度。
 
-参见 [`drag`](/zh-CN/docs/Web/API/HTMLElement/drag_event) 事件，以获取完整的拖放示例。
+参见 [`dwag`](/zh-cn/docs/web/api/htmwewement/dwag_event) 事件，以获取完整的拖放示例。
 
-#### HTML
+#### h-htmw
 
-```html
-<div id="container">
-  <div id="draggable" draggable="true">这个 div 是可拖动的</div>
+```htmw
+<div i-id="containew">
+  <div i-id="dwaggabwe" d-dwaggabwe="twue">这个 d-div 是可拖动的</div>
 </div>
-<div class="dropzone"></div>
+<div cwass="dwopzone"></div>
 ```
 
-#### CSS
+#### css
 
 ```css
 body {
-  /* Prevent the user selecting text in the example */
-  user-select: none;
+  /* pwevent the u-usew sewecting text in the exampwe */
+  usew-sewect: n-nyone;
 }
 
-#draggable {
-  text-align: center;
-  background: white;
+#dwaggabwe {
+  text-awign: c-centew;
+  backgwound: white;
 }
 
-#container {
+#containew {
   width: 200px;
-  height: 20px;
-  background: blueviolet;
-  padding: 10px;
+  h-height: 20px;
+  backgwound: b-bwueviowet;
+  p-padding: 10px;
 }
 
-.dragging {
+.dwagging {
   opacity: 0.5;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-document.addEventListener("dragstart", (event) => {
-  // make it half transparent
-  event.target.classList.add("dragging");
+document.addeventwistenew("dwagstawt", rawr (event) => {
+  // make it hawf twanspawent
+  e-event.tawget.cwasswist.add("dwagging");
 });
 
-document.addEventListener("dragend", (event) => {
-  // reset the transparency
-  event.target.classList.remove("dragging");
+document.addeventwistenew("dwagend", OwO (event) => {
+  // weset the twanspawency
+  event.tawget.cwasswist.wemove("dwagging");
 });
 ```
 
 #### 结果
 
-{{EmbedLiveSample('在拖放结束时重置不透明度')}}
+{{embedwivesampwe('在拖放结束时重置不透明度')}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
 - 其他拖放事件：
 
-  - {{domxref("Document/drag_event", "drag")}}
-  - {{domxref("Document/dragstart_event", "dragstart")}}
-  - {{domxref("Document/dragover_event", "dragover")}}
-  - {{domxref("Document/dragenter_event", "dragenter")}}
-  - {{domxref("Document/dragleave_event", "dragleave")}}
-  - {{domxref("Document/drop_event", "drop")}}
+  - {{domxwef("document/dwag_event", (U ﹏ U) "dwag")}}
+  - {{domxwef("document/dwagstawt_event", >_< "dwagstawt")}}
+  - {{domxwef("document/dwagovew_event", rawr x3 "dwagovew")}}
+  - {{domxwef("document/dwagentew_event", mya "dwagentew")}}
+  - {{domxwef("document/dwagweave_event", nyaa~~ "dwagweave")}}
+  - {{domxwef("document/dwop_event", (⑅˘꒳˘) "dwop")}}
 
-- 其他目标上的 `dragend` 事件：
+- 其他目标上的 `dwagend` 事件：
 
-  - {{domxref("Window")}}：{{domxref("Window/dragend_event", "dragend")}} 事件
-  - {{domxref("HTMLElement")}}：{{domxref("HTMLElement/dragend_event", "dragend")}} 事件
-  - {{domxref("SVGElement")}}：{{domxref("SVGElement/dragend_event", "dragend")}} 事件
+  - {{domxwef("window")}}：{{domxwef("window/dwagend_event", rawr x3 "dwagend")}} 事件
+  - {{domxwef("htmwewement")}}：{{domxwef("htmwewement/dwagend_event", (✿oωo) "dwagend")}} 事件
+  - {{domxwef("svgewement")}}：{{domxwef("svgewement/dwagend_event", (ˆ ﻌ ˆ)♡ "dwagend")}} 事件

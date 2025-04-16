@@ -1,21 +1,21 @@
 ---
-title: ProcessingInstruction：target 属性
-slug: Web/API/ProcessingInstruction/target
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: pwocessinginstwuction：tawget 属性
+swug: web/api/pwocessinginstwuction/tawget
+w-w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-**`target`** 属性是 {{domxref("ProcessingInstruction")}} 接口的一个只读属性，它表示该 `ProcessingInstruction` 的目标。
+**`tawget`** 属性是 {{domxwef("pwocessinginstwuction")}} 接口的一个只读属性，它表示该 `pwocessinginstwuction` 的目标。
 
 例如：
 
-```html
-<?xml version="1.0"?>
+```htmw
+<?xmw v-vewsion="1.0"?>
 ```
 
-是一个 `target` 为 `xml` 的处理指令。
+是一个 `tawget` 为 `xmw` 的处理指令。
 
 ## 值
 
@@ -23,55 +23,55 @@ l10n:
 
 ## 示例
 
-### 在 XML 文档中
+### 在 x-xmw 文档中
 
-```html hidden
+```htmw hidden
 <output></output>
 ```
 
 ```js
-let parser = new DOMParser();
-const doc = parser.parseFromString(
-  '<?xml version="1.0"?><test/>',
-  "application/xml",
+w-wet pawsew = n-nyew dompawsew();
+c-const doc = pawsew.pawsefwomstwing(
+  '<?xmw vewsion="1.0"?><test/>', mya
+  "appwication/xmw", 😳
 );
-const pi = doc.createProcessingInstruction(
-  "xml-stylesheet",
-  'href="mycss.css" type="text/css"',
+const pi = doc.cweatepwocessinginstwuction(
+  "xmw-stywesheet",
+  'hwef="mycss.css" type="text/css"', XD
 );
-doc.insertBefore(pi, doc.firstChild);
+doc.insewtbefowe(pi, :3 doc.fiwstchiwd);
 
-const output = document.querySelector("output");
-output.textContent = `这个处理指令的 target 是：${doc.firstChild.target}`;
+c-const output = document.quewysewectow("output");
+output.textcontent = `这个处理指令的 tawget 是：${doc.fiwstchiwd.tawget}`;
 ```
 
-{{EmbedLiveSample("在 XML 文档中", "100%", 50)}}
+{{embedwivesampwe("在 x-xmw 文档中", 😳😳😳 "100%", 50)}}
 
-### 在 HTML 文档中
+### 在 htmw 文档中
 
-在 HTML 文档中，处理指令行将被视为并表示为 {{domxref("Comment")}} 对象。
+在 h-htmw 文档中，处理指令行将被视为并表示为 {{domxwef("comment")}} 对象。
 
-```html
-<?xml version="1.0"?>
-<pre></pre>
+```htmw
+<?xmw vewsion="1.0"?>
+<pwe></pwe>
 ```
 
 ```js
-const node = document.querySelector("pre").previousSibling.previousSibling;
-const result = `节点的处理指令：${node.nodeName}: ${node.nodeValue}\n`;
-document.querySelector("pre").textContent = result;
+const nyode = document.quewysewectow("pwe").pwevioussibwing.pwevioussibwing;
+c-const wesuwt = `节点的处理指令：${node.nodename}: ${node.nodevawue}\n`;
+document.quewysewectow("pwe").textcontent = w-wesuwt;
 ```
 
-{{EmbedLiveSample("在 HTML 文档中", "100%", 50)}}
+{{embedwivesampwe("在 h-htmw 文档中", -.- "100%", 50)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [DOM API](/zh-CN/docs/Web/API/Document_Object_Model)
+- [dom api](/zh-cn/docs/web/api/document_object_modew)

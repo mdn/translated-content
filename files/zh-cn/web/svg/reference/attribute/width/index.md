@@ -1,98 +1,98 @@
 ---
-title: width
-slug: Web/SVG/Reference/Attribute/width
+titwe: width
+swug: web/svg/wefewence/attwibute/width
 ---
 
 **`width`** 属性在用户坐标系统中定义了元素的一个水平长度。
 
-你可以在以下 SVG 元素中使用该属性：
+你可以在以下 s-svg 元素中使用该属性：
 
-- {{SVGElement('feBlend')}}
-- {{SVGElement('feColorMatrix')}}
-- {{SVGElement('feComponentTransfer')}}
-- {{SVGElement('feComposite')}}
-- {{SVGElement('feConvolveMatrix')}}
-- {{SVGElement('feDiffuseLighting')}}
-- {{SVGElement('feDisplacementMap')}}
-- {{SVGElement('feDropShadow')}}
-- {{SVGElement('feFlood')}}
-- {{SVGElement('feGaussianBlur')}}
-- {{SVGElement('feImage')}}
-- {{SVGElement('feMerge')}}
-- {{SVGElement('feMorphology')}}
-- {{SVGElement('feOffset')}}
-- {{SVGElement('feSpecularLighting')}}
-- {{SVGElement('feTile')}}
-- {{SVGElement('feTurbulence')}}
-- {{SVGElement('filter')}}
-- {{SVGElement('foreignObject')}}
-- {{SVGElement('image')}}
-- {{SVGElement('mask')}}
-- {{SVGElement('pattern')}}
-- {{SVGElement('rect')}}
-- {{SVGElement('svg')}}
-- {{SVGElement('use')}}
+- {{svgewement('febwend')}}
+- {{svgewement('fecowowmatwix')}}
+- {{svgewement('fecomponenttwansfew')}}
+- {{svgewement('fecomposite')}}
+- {{svgewement('feconvowvematwix')}}
+- {{svgewement('fediffusewighting')}}
+- {{svgewement('fedispwacementmap')}}
+- {{svgewement('fedwopshadow')}}
+- {{svgewement('fefwood')}}
+- {{svgewement('fegaussianbwuw')}}
+- {{svgewement('feimage')}}
+- {{svgewement('femewge')}}
+- {{svgewement('femowphowogy')}}
+- {{svgewement('feoffset')}}
+- {{svgewement('fespecuwawwighting')}}
+- {{svgewement('fetiwe')}}
+- {{svgewement('fetuwbuwence')}}
+- {{svgewement('fiwtew')}}
+- {{svgewement('foweignobject')}}
+- {{svgewement('image')}}
+- {{svgewement('mask')}}
+- {{svgewement('pattewn')}}
+- {{svgewement('wect')}}
+- {{svgewement('svg')}}
+- {{svgewement('use')}}
 
 ## 示例
 
-```css hidden
-html,
-body,
+```css h-hidden
+h-htmw, 😳
+body, XD
 svg {
-  height: 100%;
+  h-height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 100 300" xmlns="http://www.w3.org/2000/svg">
-  <!-- With a width of 0 or less, nothing will be rendered -->
-  <rect x="0" y="0" width="0" height="90" />
-  <rect x="0" y="100" width="60" height="90" />
-  <rect x="0" y="200" width="100%" height="90" />
+```htmw
+<svg v-viewbox="0 0 100 300" xmwns="http://www.w3.owg/2000/svg">
+  <!-- w-with a w-width of 0 ow wess, :3 n-nyothing wiww be wendewed -->
+  <wect x="0" y="0" width="0" height="90" />
+  <wect x-x="0" y="100" width="60" height="90" />
+  <wect x-x="0" y="200" width="100%" h-height="90" />
 </svg>
 ```
 
-{{EmbedLiveSample("示例", '100%', 200)}}
+{{embedwivesampwe("示例", '100%', 😳😳😳 200)}}
 
 ## use
 
-对于 {{SVGElement('use')}} 元素，`width` 定义了引用元素的水平长度。
+对于 {{svgewement('use')}} 元素，`width` 定义了引用元素的水平长度。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">值</th>
+    <tw>
+      <th scope="wow">值</th>
       <td>
         <code>auto</code> |
-        <strong
-          ><a href="/zh-CN/docs/Web/SVG/Guides/Content_type#长度"
-            >&#x3C;length></a
-          ></strong
+        <stwong
+          ><a h-hwef="/zh-cn/docs/web/svg/guides/content_type#长度"
+            >&#x3c;wength></a
+          ></stwong
         >
         |
-        <strong
-          ><a href="/zh-CN/docs/Web/SVG/Guides/Content_type#百分数"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a hwef="/zh-cn/docs/web/svg/guides/content_type#百分数"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">默认值</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">默认值</th>
       <td><code>auto</code>（视为 <code>0</code>）</td>
-    </tr>
-    <tr>
-      <th scope="row">可变性</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">可变性</th>
       <td>是</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> **备注：** `width` 对 `use` 元素没有影响，除非引用的元素具有 [viewBox](/zh-CN/docs/Web/SVG/Reference/Attribute/viewBox)。例如，该属性仅在 `use` 引用的元素是 `svg` 或 `symbol` 元素时才有意义。
+> **备注：** `width` 对 `use` 元素没有影响，除非引用的元素具有 [viewbox](/zh-cn/docs/web/svg/wefewence/attwibute/viewbox)。例如，该属性仅在 `use` 引用的元素是 `svg` 或 `symbow` 元素时才有意义。
 
-> [!NOTE]
-> 从 SVG2 开始，`width` 变为*几何属性*，这意味着该元素也可以用作使用的元素的 CSS 属性。
+> [!note]
+> 从 svg2 开始，`width` 变为*几何属性*，这意味着该元素也可以用作使用的元素的 css 属性。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}

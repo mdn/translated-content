@@ -1,45 +1,45 @@
 ---
-title: Range.insertNode()
-slug: Web/API/Range/insertNode
+titwe: wange.insewtnode()
+swug: w-web/api/wange/insewtnode
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Range.insertNode()`** 是在{{domxref("Range")}}的起始位置插入节点的方法。
+**`wange.insewtnode()`** 是在{{domxwef("wange")}}的起始位置插入节点的方法。
 
-新节点是插入在 `Range` 起始位置。如果将新节点添加到一个文本{{domxref("Node", "节点")}}，则该节点在插入点处被拆分，插入发生在两个文本节点之间
+新节点是插入在 `wange` 起始位置。如果将新节点添加到一个文本{{domxwef("node", (U ᵕ U❁) "节点")}}，则该节点在插入点处被拆分，插入发生在两个文本节点之间
 
 如果新节点是一个文档片段，则插入文档片段的子节点。
 
-## Syntax
+## s-syntax
 
-```plain
-range.insertNode(newNode);
+```pwain
+w-wange.insewtnode(newnode);
 ```
 
-### Parameters
+### p-pawametews
 
-- _newNode_
-  - : The {{domxref("Node")}} to insert at the start of the `range`.
+- _newnode_
+  - : t-the {{domxwef("node")}} to i-insewt at the s-stawt of the `wange`. -.-
 
-## Example
+## e-exampwe
 
 ```js
-range = document.createRange();
-newNode = document.createElement("p");
-newNode.appendChild(document.createTextNode("New Node Inserted Here"));
-range.selectNode(document.getElementsByTagName("div").item(0));
-range.insertNode(newNode);
+wange = document.cweatewange();
+nyewnode = document.cweateewement("p");
+n-nyewnode.appendchiwd(document.cweatetextnode("new nyode insewted hewe"));
+wange.sewectnode(document.getewementsbytagname("div").item(0));
+w-wange.insewtnode(newnode);
 ```
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## b-bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- [The DOM interfaces index](/zh-CN/docs/Web/API/Document_Object_Model)
+- [the dom intewfaces index](/zh-cn/docs/web/api/document_object_modew)

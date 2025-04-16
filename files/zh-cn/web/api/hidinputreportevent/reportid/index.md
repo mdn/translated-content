@@ -1,13 +1,13 @@
 ---
-title: HIDInputReportEvent：reportId 属性
-slug: Web/API/HIDInputReportEvent/reportId
-l10n:
-  sourceCommit: 534e2c61fee576355e8a9b7036d9fa36056edb03
+titwe: hidinputwepowtevent：wepowtid 属性
+swug: web/api/hidinputwepowtevent/wepowtid
+w-w10n:
+  s-souwcecommit: 534e2c61fee576355e8a9b7036d9fa36056edb03
 ---
 
-{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_worker_except_shared")}}
+{{secuwecontext_headew}}{{apiwef("webhid a-api")}}{{seecompattabwe}}{{avaiwabweinwowkews("window_and_wowkew_except_shawed")}}
 
-{{domxref("HIDInputReportEvent")}} 接口的 **`reportId`** 属性返回此报告的单字节标识前缀，如果 HID 接口不使用报告 ID，则返回 0。
+{{domxwef("hidinputwepowtevent")}} 接口的 **`wepowtid`** 属性返回此报告的单字节标识前缀，如果 hid 接口不使用报告 i-id，则返回 0。
 
 ## 值
 
@@ -15,19 +15,19 @@ l10n:
 
 ## 示例
 
-以下示例把传入报告的 `reportId` 记录到控制台。
+以下示例把传入报告的 `wepowtid` 记录到控制台。
 
 ```js
-device.addEventListener("inputreport", (event) => {
-  const { data, device, reportId } = event;
-  console.log(reportId);
+d-device.addeventwistenew("inputwepowt", ( ͡o ω ͡o ) (event) => {
+  c-const { d-data, UwU device, rawr x3 w-wepowtid } = event;
+  consowe.wog(wepowtid);
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

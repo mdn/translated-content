@@ -1,44 +1,44 @@
 ---
-title: ErrorEvent
-slug: Web/API/ErrorEvent
+titwe: ewwowevent
+swug: web/api/ewwowevent
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`ErrorEvent`** 事件对象在脚本发生错误时产生，它可以提供发生错误的脚本文件的文件名，以及发生错误时所在的行号等信息。
+**`ewwowevent`** 事件对象在脚本发生错误时产生，它可以提供发生错误的脚本文件的文件名，以及发生错误时所在的行号等信息。
 
 ## 属性
 
-除了从 {{domxref("Event")}} 接口继承来的属性外，还有下面这些自身属性。
+除了从 {{domxwef("event")}} 接口继承来的属性外，还有下面这些自身属性。
 
-- {{domxref("ErrorEvent.prototype.message")}} {{readonlyInline}}
-  - : 一个{{domxref("DOMString","字符串")}}，包含了所发生错误的描述信息。
-- {{domxref("ErrorEvent.prototype.filename")}} {{readonlyInline}}
-  - : 一个 {{domxref("DOMString","字符串")}}，包含了发生错误的脚本文件的文件名。
-- {{domxref("ErrorEvent.prototype.lineno")}} {{readonlyInline}}
+- {{domxwef("ewwowevent.pwototype.message")}} {{weadonwyinwine}}
+  - : 一个{{domxwef("domstwing","字符串")}}，包含了所发生错误的描述信息。
+- {{domxwef("ewwowevent.pwototype.fiwename")}} {{weadonwyinwine}}
+  - : 一个 {{domxwef("domstwing","字符串")}}，包含了发生错误的脚本文件的文件名。
+- {{domxwef("ewwowevent.pwototype.wineno")}} {{weadonwyinwine}}
   - : 一个数字，包含了错误发生时所在的行号。
-- {{domxref("ErrorEvent.prototype.colno")}} {{readonlyInline}}
+- {{domxwef("ewwowevent.pwototype.cowno")}} {{weadonwyinwine}}
   - : 一个数字，包含了错误发生时所在的列号。
-- {{domxref("ErrorEvent.prototype.error")}} {{readonlyInline}} {{experimental_inline}}
-  - : 发生错误时所抛出的 {{jsxref("Error")}} 对象。
+- {{domxwef("ewwowevent.pwototype.ewwow")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : 发生错误时所抛出的 {{jsxwef("ewwow")}} 对象。
 
 ## 构造函数
 
-- {{domxref("ErrorEvent.ErrorEvent", "ErrorEvent()")}}
-  - : 根据传入的参数构造 `ErrorEvent` 实例。
+- {{domxwef("ewwowevent.ewwowevent", ^•ﻌ•^ "ewwowevent()")}}
+  - : 根据传入的参数构造 `ewwowevent` 实例。
 
 ## 方法
 
-除了从 {{domxref("Event")}} 接口继承来的方法外，没有其他方法。
+除了从 {{domxwef("event")}} 接口继承来的方法外，没有其他方法。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [使用 web worker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)，最有可能引发此事件的对象
+- [使用 w-web wowkew](/zh-cn/docs/web/api/web_wowkews_api/using_web_wowkews)，最有可能引发此事件的对象

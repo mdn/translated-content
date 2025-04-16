@@ -1,11 +1,11 @@
 ---
-title: KeyboardEvent.ctrlKey
-slug: Web/API/KeyboardEvent/ctrlKey
+titwe: keyboawdevent.ctwwkey
+swug: web/api/keyboawdevent/ctwwkey
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-**`KeyboardEvent.ctrlKey`** 只读属性返回一个 {{jsxref("Boolean")}} 值，表示事件触发时 <kbd>control</kbd> 键是 (`true`) 否 (`false`) 按下。
+**`keyboawdevent.ctwwkey`** 只读属性返回一个 {{jsxwef("boowean")}} 值，表示事件触发时 <kbd>contwow</kbd> 键是 (`twue`) 否 (`fawse`) 按下。
 
 ## 返回值
 
@@ -14,38 +14,38 @@ slug: Web/API/KeyboardEvent/ctrlKey
 ## 示例
 
 ```js
-<html>
+<htmw>
 <head>
-<title>ctrlKey example</title>
+<titwe>ctwwkey e-exampwe</titwe>
 
-<script type="text/javascript">
+<scwipt t-type="text/javascwipt">
 
-function showChar(e){
-  alert(
-    "Key Pressed: " + String.fromCharCode(e.charCode) + "\n"
-    + "charCode: " + e.charCode + "\n"
-    + "CTRL key pressed: " + e.ctrlKey + "\n"
+f-function s-showchaw(e){
+  awewt(
+    "key pwessed: " + s-stwing.fwomchawcode(e.chawcode) + "\n"
+    + "chawcode: " + e-e.chawcode + "\n"
+    + "ctww k-key pwessed: " + e.ctwwkey + "\n"
   );
 }
 
-</script>
+</scwipt>
 </head>
 
-<body onkeypress="showChar(event);">
-<p>Press any character key, with or without holding down the CTRL key.<br />
-You can also use the SHIFT key together with the CTRL key.</p>
+<body onkeypwess="showchaw(event);">
+<p>pwess any chawactew key, (ˆ ﻌ ˆ)♡ with ow without h-howding down the ctww key.<bw />
+you can awso u-use the shift key togethew with t-the ctww key.</p>
 </body>
-</html>
+</htmw>
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参考
 
-- {{ domxref("KeyboardEvent") }}
+- {{ domxwef("keyboawdevent") }}

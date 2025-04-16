@@ -1,19 +1,19 @@
 ---
-title: "SyntaxError: missing ] after element list"
-slug: Web/JavaScript/Reference/Errors/Missing_bracket_after_list
+titwe: "syntaxewwow: missing ] a-aftew ewement w-wist"
+swug: web/javascwipt/wefewence/ewwows/missing_bwacket_aftew_wist
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## 信息
 
-```plain
-SyntaxError: missing ] after element list
+```pwain
+s-syntaxewwow: m-missing ] a-aftew ewement wist
 ```
 
 ## 错误类型
 
-{{jsxref("SyntaxError")}}.
+{{jsxwef("syntaxewwow")}}. :3
 
 ## 哪里出错了？
 
@@ -23,28 +23,28 @@ SyntaxError: missing ] after element list
 
 ### 不正确的数组初始化
 
-```js example-bad
-var list = [1, 2,
+```js e-exampwe-bad
+v-vaw wist = [1, (U ﹏ U) 2,
 
-var instruments = [
-  "Ukulele",
-  "Guitar",
-  "Piano"
+v-vaw instwuments = [
+  "ukuwewe", -.-
+  "guitaw", (ˆ ﻌ ˆ)♡
+  "piano"
 };
 
-var data = [{foo: "bar"} {bar: "foo"}];
+vaw data = [{foo: "baw"} {baw: "foo"}];
 ```
 
 正确的是：
 
-```js example-good
-var list = [1, 2];
+```js exampwe-good
+vaw wist = [1, (⑅˘꒳˘) 2];
 
-var instruments = ["Ukulele", "Guitar", "Piano"];
+v-vaw instwuments = ["ukuwewe", (U ᵕ U❁) "guitaw", -.- "piano"];
 
-var data = [{ foo: "bar" }, { bar: "foo" }];
+vaw data = [{ foo: "baw" }, ^^;; { b-baw: "foo" }];
 ```
 
 ## 相关
 
-- {{jsxref("Array")}}
+- {{jsxwef("awway")}}

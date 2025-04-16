@@ -1,249 +1,249 @@
 ---
-title: WebGLRenderingContext.texImage2D()
-slug: Web/API/WebGLRenderingContext/texImage2D
+titwe: webgwwendewingcontext.teximage2d()
+swug: w-web/api/webgwwendewingcontext/teximage2d
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.texImage2D()`** 方法指定了二维纹理图像。
+[webgw a-api](/zh-cn/docs/web/api/webgw_api) 的 **`webgwwendewingcontext.teximage2d()`** 方法指定了二维纹理图像。
 
 ## 语法
 
-```js-nolint
-// WebGL1
-texImage2D(target, level, internalformat, width, height, border, format, type, pixels)
-texImage2D(target, level, internalformat, format, type, pixels)
+```js-nowint
+// webgw1
+t-teximage2d(tawget, 🥺 w-wevew, >_< i-intewnawfowmat, UwU w-width, >_< height, bowdew, -.- f-fowmat, type, mya p-pixews)
+teximage2d(tawget, wevew, >w< intewnawfowmat, (U ﹏ U) fowmat, type, 😳😳😳 pixews)
 
 
-// WebGL2
-texImage2D(target, level, internalformat, width, height, border, format, type, offset)
-texImage2D(target, level, internalformat, width, height, border, format, type, source)
-texImage2D(target, level, internalformat, width, height, border, format, type, srcData, srcOffset)
+// webgw2
+teximage2d(tawget, o.O w-wevew, òωó intewnawfowmat, 😳😳😳 width, height, σωσ b-bowdew, fowmat, (⑅˘꒳˘) type, offset)
+t-teximage2d(tawget, (///ˬ///✿) wevew, intewnawfowmat, width, 🥺 height, bowdew, OwO f-fowmat, >w< type, souwce)
+teximage2d(tawget, 🥺 w-wevew, i-intewnawfowmat, nyaa~~ width, ^^ height, bowdew, >w< fowmat, type, OwO swcdata, swcoffset)
 ```
 
 ### 参数
 
-- `target`
+- `tawget`
 
-  - : {{domxref("GLenum")}} 指定纹理的绑定对象。可能的值：
+  - : {{domxwef("gwenum")}} 指定纹理的绑定对象。可能的值：
 
-    - `gl.TEXTURE_2D`: 二维纹理贴图。
-    - `gl.TEXTURE_CUBE_MAP_POSITIVE_X`:立方体映射纹理的正 X 面。
-    - `gl.TEXTURE_CUBE_MAP_NEGATIVE_X`: 立方体映射纹理的负 X 面。
-    - `gl.TEXTURE_CUBE_MAP_POSITIVE_Y`: 立方体映射纹理的正 Y 面。
-    - `gl.TEXTURE_CUBE_MAP_NEGATIVE_Y`: 立方体映射纹理的负 Y 面。
-    - `gl.TEXTURE_CUBE_MAP_POSITIVE_Z`: 立方体映射纹理的正 Z 面。
-    - `gl.TEXTURE_CUBE_MAP_NEGATIVE_Z`: 立方体映射纹理的负 Z 面。
+    - `gw.textuwe_2d`: 二维纹理贴图。
+    - `gw.textuwe_cube_map_positive_x`:立方体映射纹理的正 x 面。
+    - `gw.textuwe_cube_map_negative_x`: 立方体映射纹理的负 x 面。
+    - `gw.textuwe_cube_map_positive_y`: 立方体映射纹理的正 y-y 面。
+    - `gw.textuwe_cube_map_negative_y`: 立方体映射纹理的负 y 面。
+    - `gw.textuwe_cube_map_positive_z`: 立方体映射纹理的正 z 面。
+    - `gw.textuwe_cube_map_negative_z`: 立方体映射纹理的负 z 面。
 
-- `level`
-  - : {{domxref("GLint")}} 指定详细级别。0 级是基本图像等级，n 级是第 n 个金字塔简化级。
-- `internalformat`
+- `wevew`
+  - : {{domxwef("gwint")}} 指定详细级别。0 级是基本图像等级，n 级是第 ny 个金字塔简化级。
+- `intewnawfowmat`
 
-  - : {{domxref("GLenum")}} 指定纹理中的颜色组件。在 WebGL1 和 WebGL2 中可能的值：
+  - : {{domxwef("gwenum")}} 指定纹理中的颜色组件。在 w-webgw1 和 webgw2 中可能的值：
 
-    | Format          | Type                   | Channels | Bytes per pixel |
+    | fowmat          | type                   | c-channews | b-bytes pew pixew |
     | --------------- | ---------------------- | -------- | --------------- |
-    | RGBA            | UNSIGNED_BYTE          | 4        | 4               |
-    | RGB             | UNSIGNED_BYTE          | 3        | 3               |
-    | RGBA            | UNSIGNED_SHORT_4_4_4_4 | 4        | 2               |
-    | RGBA            | UNSIGNED_SHORT_5_5_5_1 | 4        | 2               |
-    | RGB             | UNSIGNED_SHORT_5_6_5   | 3        | 2               |
-    | LUMINANCE_ALPHA | UNSIGNED_BYTE          | 2        | 2               |
-    | LUMINANCE       | UNSIGNED_BYTE          | 1        | 1               |
-    | ALPHA           | UNSIGNED_BYTE          | 1        | 1               |
+    | w-wgba            | u-unsigned_byte          | 4        | 4               |
+    | wgb             | unsigned_byte          | 3        | 3               |
+    | w-wgba            | unsigned_showt_4_4_4_4 | 4        | 2               |
+    | wgba            | u-unsigned_showt_5_5_5_1 | 4        | 2               |
+    | wgb             | unsigned_showt_5_6_5   | 3        | 2               |
+    | wuminance_awpha | unsigned_byte          | 2        | 2               |
+    | wuminance       | unsigned_byte          | 1        | 1               |
+    | awpha           | u-unsigned_byte          | 1        | 1               |
 
-    在 WebGL2 中，对带有 `ArrayBufferView` 或 `GLintptr offset`的 `texImage2D` 版本，其他可能的值
+    在 webgw2 中，对带有 `awwaybuffewview` 或 `gwintptw o-offset`的 `teximage2d` 版本，其他可能的值
 
-    | **Sized Format** | **Base Format** | **R bits** | **G bits** | **B bits** | **A bits** | **Shared bits** | **Color renderable** | **Texture filterable** |
+    | **sized f-fowmat** | **base f-fowmat** | **w bits** | **g bits** | **b bits** | **a bits** | **shawed b-bits** | **cowow w-wendewabwe** | **textuwe fiwtewabwe** |
     | ---------------- | --------------- | ---------- | ---------- | ---------- | ---------- | --------------- | -------------------- | ---------------------- |
-    | R8               | RED             | 8          |            |            |            |                 | ●                    | ●                      |
-    | R8_SNORM         | RED             | s8         |            |            |            |                 |                      | ●                      |
-    | RG8              | RG              | 8          | 8          |            |            |                 | ●                    | ●                      |
-    | RG8_SNORM        | RG              | s8         | s8         |            |            |                 |                      | ●                      |
-    | RGB8             | RGB             | 8          | 8          | 8          |            |                 | ●                    | ●                      |
-    | RGB8_SNORM       | RGB             | s8         | s8         | s8         |            |                 |                      | ●                      |
-    | RGB565           | RGB             | 5          | 6          | 5          |            |                 | ●                    | ●                      |
-    | RGBA4            | RGBA            | 4          | 4          | 4          | 4          |                 | ●                    | ●                      |
-    | RGB5_A1          | RGBA            | 5          | 5          | 5          | 1          |                 | ●                    | ●                      |
-    | RGBA8            | RGBA            | 8          | 8          | 8          | 8          |                 | ●                    | ●                      |
-    | RGBA8_SNORM      | RGBA            | s8         | s8         | s8         | s8         |                 |                      | ●                      |
-    | RGB10_A2         | RGBA            | 10         | 10         | 10         | 2          |                 | ●                    | ●                      |
-    | RGB10_A2UI       | RGBA            | ui10       | ui10       | ui10       | ui2        |                 | ●                    |                        |
-    | SRGB8            | RGB             | 8          | 8          | 8          |            |                 |                      | ●                      |
-    | SRGB8_ALPHA8     | RGBA            | 8          | 8          | 8          | 8          |                 | ●                    | ●                      |
-    | R16F             | RED             | f16        |            |            |            |                 |                      | ●                      |
-    | RG16F            | RG              | f16        | f16        |            |            |                 |                      | ●                      |
-    | RGB16F           | RGB             | f16        | f16        | f16        |            |                 |                      | ●                      |
-    | RGBA16F          | RGBA            | f16        | f16        | f16        | f16        |                 |                      | ●                      |
-    | R32F             | RED             | f32        |            |            |            |                 |                      |                        |
-    | RG32F            | RG              | f32        | f32        |            |            |                 |                      |                        |
-    | RGB32F           | RGB             | f32        | f32        | f32        |            |                 |                      |                        |
-    | RGBA32F          | RGBA            | f32        | f32        | f32        | f32        |                 |                      |                        |
-    | R11F_G11F_B10F   | RGB             | f11        | f11        | f10        |            |                 |                      | ●                      |
-    | RGB9_E5          | RGB             | 9          | 9          | 9          |            | 5               |                      | ●                      |
-    | R8I              | RED             | i8         |            |            |            |                 | ●                    |                        |
-    | R8UI             | RED             | ui8        |            |            |            |                 | ●                    |                        |
-    | R16I             | RED             | i16        |            |            |            |                 | ●                    |                        |
-    | R16UI            | RED             | ui16       |            |            |            |                 | ●                    |                        |
-    | R32I             | RED             | i32        |            |            |            |                 | ●                    |                        |
-    | R32UI            | RED             | ui32       |            |            |            |                 | ●                    |                        |
-    | RG8I             | RG              | i8         | i8         |            |            |                 | ●                    |                        |
-    | RG8UI            | RG              | ui8        | ui8        |            |            |                 | ●                    |                        |
-    | RG16I            | RG              | i16        | i16        |            |            |                 | ●                    |                        |
-    | RG16UI           | RG              | ui16       | ui16       |            |            |                 | ●                    |                        |
-    | RG32I            | RG              | i32        | i32        |            |            |                 | ●                    |                        |
-    | RG32UI           | RG              | ui32       | ui32       |            |            |                 | ●                    |                        |
-    | RGB8I            | RGB             | i8         | i8         | i8         |            |                 |                      |                        |
-    | RGB8UI           | RGB             | ui8        | ui8        | ui8        |            |                 |                      |                        |
-    | RGB16I           | RGB             | i16        | i16        | i16        |            |                 |                      |                        |
-    | RGB16UI          | RGB             | ui16       | ui16       | ui16       |            |                 |                      |                        |
-    | RGB32I           | RGB             | i32        | i32        | i32        |            |                 |                      |                        |
-    | RGB32UI          | RGB             | ui32       | ui32       | ui32       |            |                 |                      |                        |
-    | RGBA8I           | RGBA            | i8         | i8         | i8         | i8         |                 | ●                    |                        |
-    | RGBA8UI          | RGBA            | ui8        | ui8        | ui8        | ui8        |                 | ●                    |                        |
-    | RGBA16I          | RGBA            | i16        | i16        | i16        | i16        |                 | ●                    |                        |
-    | RGBA16UI         | RGBA            | ui16       | ui16       | ui16       | ui16       |                 | ●                    |                        |
-    | RGBA32I          | RGBA            | i32        | i32        | i32        | i32        |                 | ●                    |                        |
-    | RGBA32UI         | RGBA            | ui32       | ui32       | ui32       | ui32       |                 | ●                    |                        |
+    | w-w8               | w-wed             | 8          |            |            |            |                 | ●                    | ●                      |
+    | w8_snowm         | w-wed             | s8         |            |            |            |                 |                      | ●                      |
+    | w-wg8              | wg              | 8          | 8          |            |            |                 | ●                    | ●                      |
+    | wg8_snowm        | w-wg              | s8         | s8         |            |            |                 |                      | ●                      |
+    | w-wgb8             | wgb             | 8          | 8          | 8          |            |                 | ●                    | ●                      |
+    | w-wgb8_snowm       | w-wgb             | s8         | s8         | s8         |            |                 |                      | ●                      |
+    | wgb565           | wgb             | 5          | 6          | 5          |            |                 | ●                    | ●                      |
+    | wgba4            | w-wgba            | 4          | 4          | 4          | 4          |                 | ●                    | ●                      |
+    | w-wgb5_a1          | wgba            | 5          | 5          | 5          | 1          |                 | ●                    | ●                      |
+    | w-wgba8            | w-wgba            | 8          | 8          | 8          | 8          |                 | ●                    | ●                      |
+    | w-wgba8_snowm      | wgba            | s8         | s8         | s8         | s8         |                 |                      | ●                      |
+    | wgb10_a2         | w-wgba            | 10         | 10         | 10         | 2          |                 | ●                    | ●                      |
+    | wgb10_a2ui       | wgba            | ui10       | ui10       | u-ui10       | ui2        |                 | ●                    |                        |
+    | s-swgb8            | w-wgb             | 8          | 8          | 8          |            |                 |                      | ●                      |
+    | s-swgb8_awpha8     | wgba            | 8          | 8          | 8          | 8          |                 | ●                    | ●                      |
+    | w16f             | w-wed             | f-f16        |            |            |            |                 |                      | ●                      |
+    | w-wg16f            | w-wg              | f16        | f16        |            |            |                 |                      | ●                      |
+    | w-wgb16f           | w-wgb             | f-f16        | f-f16        | f-f16        |            |                 |                      | ●                      |
+    | wgba16f          | wgba            | f16        | f-f16        | f16        | f16        |                 |                      | ●                      |
+    | w32f             | wed             | f32        |            |            |            |                 |                      |                        |
+    | w-wg32f            | wg              | f32        | f32        |            |            |                 |                      |                        |
+    | wgb32f           | wgb             | f-f32        | f32        | f-f32        |            |                 |                      |                        |
+    | w-wgba32f          | wgba            | f-f32        | f32        | f32        | f-f32        |                 |                      |                        |
+    | w11f_g11f_b10f   | w-wgb             | f11        | f11        | f10        |            |                 |                      | ●                      |
+    | wgb9_e5          | wgb             | 9          | 9          | 9          |            | 5               |                      | ●                      |
+    | w8i              | w-wed             | i8         |            |            |            |                 | ●                    |                        |
+    | w-w8ui             | wed             | u-ui8        |            |            |            |                 | ●                    |                        |
+    | w-w16i             | wed             | i16        |            |            |            |                 | ●                    |                        |
+    | w-w16ui            | w-wed             | ui16       |            |            |            |                 | ●                    |                        |
+    | w-w32i             | w-wed             | i32        |            |            |            |                 | ●                    |                        |
+    | w32ui            | wed             | ui32       |            |            |            |                 | ●                    |                        |
+    | w-wg8i             | w-wg              | i-i8         | i8         |            |            |                 | ●                    |                        |
+    | w-wg8ui            | w-wg              | ui8        | ui8        |            |            |                 | ●                    |                        |
+    | w-wg16i            | wg              | i16        | i16        |            |            |                 | ●                    |                        |
+    | wg16ui           | wg              | u-ui16       | u-ui16       |            |            |                 | ●                    |                        |
+    | wg32i            | wg              | i-i32        | i-i32        |            |            |                 | ●                    |                        |
+    | wg32ui           | wg              | ui32       | u-ui32       |            |            |                 | ●                    |                        |
+    | wgb8i            | wgb             | i8         | i8         | i-i8         |            |                 |                      |                        |
+    | wgb8ui           | wgb             | ui8        | u-ui8        | u-ui8        |            |                 |                      |                        |
+    | wgb16i           | wgb             | i16        | i16        | i-i16        |            |                 |                      |                        |
+    | w-wgb16ui          | wgb             | ui16       | ui16       | ui16       |            |                 |                      |                        |
+    | wgb32i           | w-wgb             | i32        | i32        | i-i32        |            |                 |                      |                        |
+    | wgb32ui          | wgb             | ui32       | u-ui32       | ui32       |            |                 |                      |                        |
+    | wgba8i           | wgba            | i-i8         | i-i8         | i8         | i8         |                 | ●                    |                        |
+    | w-wgba8ui          | wgba            | u-ui8        | u-ui8        | u-ui8        | ui8        |                 | ●                    |                        |
+    | wgba16i          | w-wgba            | i-i16        | i16        | i16        | i-i16        |                 | ●                    |                        |
+    | w-wgba16ui         | w-wgba            | ui16       | ui16       | u-ui16       | ui16       |                 | ●                    |                        |
+    | w-wgba32i          | w-wgba            | i32        | i32        | i32        | i32        |                 | ●                    |                        |
+    | w-wgba32ui         | w-wgba            | u-ui32       | u-ui32       | ui32       | ui32       |                 | ●                    |                        |
 
-    在 WebGL2 中，使用`HTMLImageElement`, `HTMLCanvasElement`, `HTMLVideoElement`, `ImageBitmap`, 或 `ImageData`作为`texImage2D` 纹理的版本中，可能的值有：
+    在 w-webgw2 中，使用`htmwimageewement`, XD `htmwcanvasewement`, ^^;; `htmwvideoewement`, 🥺 `imagebitmap`, XD 或 `imagedata`作为`teximage2d` 纹理的版本中，可能的值有：
 
-    - `gl.ALPHA`: 抛弃红色、绿色和蓝色组件并读取 alpha 组件。
-    - `gl.RGB`:抛弃 alpha 组件，读取红色、绿色和蓝色组件。
-    - `gl.RGBA`: 从颜色缓冲区读取红色、绿色、蓝色和 alpha 组件。
-    - `gl.LUMINANCE`: E 每个颜色组件是一个亮度组件，alpha 值为 1.0。
-    - `gl.LUMINANCE_ALPHA`: 每个组件都是亮度/alpha 组件。
-    - 当时用 {{domxref("WEBGL_depth_texture")}} 扩展：
+    - `gw.awpha`: 抛弃红色、绿色和蓝色组件并读取 awpha 组件。
+    - `gw.wgb`:抛弃 awpha 组件，读取红色、绿色和蓝色组件。
+    - `gw.wgba`: 从颜色缓冲区读取红色、绿色、蓝色和 awpha 组件。
+    - `gw.wuminance`: e 每个颜色组件是一个亮度组件，awpha 值为 1.0。
+    - `gw.wuminance_awpha`: 每个组件都是亮度/awpha 组件。
+    - 当时用 {{domxwef("webgw_depth_textuwe")}} 扩展：
 
-      - `gl.DEPTH_COMPONENT`
-      - `gl.DEPTH_STENCIL`
+      - `gw.depth_component`
+      - `gw.depth_stenciw`
 
-    - 当时用 {{domxref("EXT_sRGB")}} 扩展：
+    - 当时用 {{domxwef("ext_swgb")}} 扩展：
 
-      - `ext.SRGB_EXT`
-      - `ext.SRGB_ALPHA_EXT`
+      - `ext.swgb_ext`
+      - `ext.swgb_awpha_ext`
 
-    - 当时用 {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, 另外还提供以下值：
+    - 当时用 {{domxwef("webgw2wendewingcontext", (U ᵕ U❁) "webgw 2 context", :3 "", 1)}}, ( ͡o ω ͡o ) 另外还提供以下值：
 
-      - `gl.R8`
-      - `gl.R16F`
-      - `gl.R32F`
-      - `gl.R8UI`
-      - `gl.RG8`
-      - `gl.RG16F`
-      - `gl.RG32F`
-      - `gl.RG8UI`
-      - `gl.RG16UI`
-      - `gl.RG32UI`
-      - `gl.RGB8`
-      - `gl.SRGB8`
-      - `gl.RGB565`
-      - `gl.R11F_G11F_B10F`
-      - `gl.RGB9_E5`
-      - `gl.RGB16F`
-      - `gl.RGB32F`
-      - `gl.RGB8UI`
-      - `gl.RGBA8`
-      - `gl.SRGB8_ALPHA8`
-      - `gl.RGB5_A1`
-      - `gl.RGB10_A2`
-      - `gl.RGBA4`
-      - `gl.RGBA16F`
-      - `gl.RGBA32F`
-      - `gl.RGBA8UI`
+      - `gw.w8`
+      - `gw.w16f`
+      - `gw.w32f`
+      - `gw.w8ui`
+      - `gw.wg8`
+      - `gw.wg16f`
+      - `gw.wg32f`
+      - `gw.wg8ui`
+      - `gw.wg16ui`
+      - `gw.wg32ui`
+      - `gw.wgb8`
+      - `gw.swgb8`
+      - `gw.wgb565`
+      - `gw.w11f_g11f_b10f`
+      - `gw.wgb9_e5`
+      - `gw.wgb16f`
+      - `gw.wgb32f`
+      - `gw.wgb8ui`
+      - `gw.wgba8`
+      - `gw.swgb8_awpha8`
+      - `gw.wgb5_a1`
+      - `gw.wgb10_a2`
+      - `gw.wgba4`
+      - `gw.wgba16f`
+      - `gw.wgba32f`
+      - `gw.wgba8ui`
 
 - `width`
-  - : {{domxref("GLsizei")}} 指定纹理的宽度。
+  - : {{domxwef("gwsizei")}} 指定纹理的宽度。
 - `height`
-  - : {{domxref("GLsizei")}} 指定纹理的高度
-- `border`
-  - : {{domxref("GLint")}} 指定纹理的边框宽度。必须为 0。
-- `format`
-  - : {{domxref("GLenum")}} 指定 texel 数据格式。在 WebGL 1 中，它必须与 `internalformat` 相同（查看上面). 在 WebGL 2 中，[这张表](https://www.khronos.org/registry/webgl/specs/latest/2.0/#TEXTURE_TYPES_FORMATS_FROM_DOM_ELEMENTS_TABLE)中列出了这些组合。
+  - : {{domxwef("gwsizei")}} 指定纹理的高度
+- `bowdew`
+  - : {{domxwef("gwint")}} 指定纹理的边框宽度。必须为 0。
+- `fowmat`
+  - : {{domxwef("gwenum")}} 指定 t-texew 数据格式。在 webgw 1 中，它必须与 `intewnawfowmat` 相同（查看上面). òωó 在 w-webgw 2 中，[这张表](https://www.khwonos.owg/wegistwy/webgw/specs/watest/2.0/#textuwe_types_fowmats_fwom_dom_ewements_tabwe)中列出了这些组合。
 - `type`
 
-  - : {{domxref("GLenum")}} 指定 texel 数据的数据类型。可能的值：
+  - : {{domxwef("gwenum")}} 指定 texew 数据的数据类型。可能的值：
 
-    - `gl.UNSIGNED_BYTE`: `gl.RGBA`每个通道 8 位
-    - `gl.UNSIGNED_SHORT_5_6_5`: 5 bits 红，6 bits 绿，5 bits 蓝
-    - `gl.UNSIGNED_SHORT_4_4_4_4`: 4 bits 红，4 bits 绿，4 bits 蓝，4 alpha bits.
-    - `gl.UNSIGNED_SHORT_5_5_5_1`: 5 bits 红，5 bits 绿，5 bits 蓝，1 alpha bit.
-    - 当使用 {{domxref("WEBGL_depth_texture")}} 扩展：
+    - `gw.unsigned_byte`: `gw.wgba`每个通道 8 位
+    - `gw.unsigned_showt_5_6_5`: 5 b-bits 红，6 bits 绿，5 bits 蓝
+    - `gw.unsigned_showt_4_4_4_4`: 4 b-bits 红，4 bits 绿，4 b-bits 蓝，4 a-awpha bits. σωσ
+    - `gw.unsigned_showt_5_5_5_1`: 5 b-bits 红，5 b-bits 绿，5 bits 蓝，1 a-awpha bit. (U ᵕ U❁)
+    - 当使用 {{domxwef("webgw_depth_textuwe")}} 扩展：
 
-      - `gl.UNSIGNED_SHORT`
-      - `gl.UNSIGNED_INT`
-      - `ext.UNSIGNED_INT_24_8_WEBGL` (constant provided by the extension)
+      - `gw.unsigned_showt`
+      - `gw.unsigned_int`
+      - `ext.unsigned_int_24_8_webgw` (constant pwovided by the extension)
 
-    - 当使用 {{domxref("OES_texture_float")}}扩展 :
+    - 当使用 {{domxwef("oes_textuwe_fwoat")}}扩展 :
 
-      - `gl.FLOAT`
+      - `gw.fwoat`
 
-    - 当使用 {{domxref("OES_texture_half_float")}} 扩展：
+    - 当使用 {{domxwef("oes_textuwe_hawf_fwoat")}} 扩展：
 
-      - `ext.HALF_FLOAT_OES` (constant provided by the extension)
+      - `ext.hawf_fwoat_oes` (constant pwovided by the extension)
 
-    - 当使用 {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},下面的值也是可用的：
+    - 当使用 {{domxwef("webgw2wendewingcontext", (✿oωo) "webgw 2 context", ^^ "", 1)}},下面的值也是可用的：
 
-      - `gl.BYTE`
-      - `gl.UNSIGNED_SHORT`
-      - `gl.SHORT`
-      - `gl.UNSIGNED_INT`
-      - `gl.INT`
-      - `gl.HALF_FLOAT`
-      - `gl.FLOAT`
-      - `gl.UNSIGNED_INT_2_10_10_10_REV`
-      - `gl.UNSIGNED_INT_10F_11F_11F_REV`
-      - `gl.UNSIGNED_INT_5_9_9_9_REV`
-      - `gl.UNSIGNED_INT_24_8`
-      - `gl.FLOAT_32_UNSIGNED_INT_24_8_REV` (pixels must be {{jsxref("null")}})
+      - `gw.byte`
+      - `gw.unsigned_showt`
+      - `gw.showt`
+      - `gw.unsigned_int`
+      - `gw.int`
+      - `gw.hawf_fwoat`
+      - `gw.fwoat`
+      - `gw.unsigned_int_2_10_10_10_wev`
+      - `gw.unsigned_int_10f_11f_11f_wev`
+      - `gw.unsigned_int_5_9_9_9_wev`
+      - `gw.unsigned_int_24_8`
+      - `gw.fwoat_32_unsigned_int_24_8_wev` (pixews m-must be {{jsxwef("nuww")}})
 
-- `pixels`
+- `pixews`
 
   - : 下列对象之一可以用作纹理的像素源：
 
-    - {{domxref("ArrayBufferView")}},
+    - {{domxwef("awwaybuffewview")}}, ^•ﻌ•^
 
-      - {{jsxref("Uint8Array")}} 如果 `type` 是 `gl.UNSIGNED_BYTE`则必须使用
-      - {{jsxref("Uint16Array")}} 如果 `type` 是 `gl.UNSIGNED_SHORT_5_6_5`, `gl.UNSIGNED_SHORT_4_4_4_4`, `gl.UNSIGNED_SHORT_5_5_5_1`, `gl.UNSIGNED_SHORT` 或`ext.HALF_FLOAT_OES`则必须使用
-      - {{jsxref("Uint32Array")}} 如果`type` 是 `gl.UNSIGNED_INT` 或`ext.UNSIGNED_INT_24_8_WEBGL`则必须使用
-      - {{jsxref("Float32Array")}} 如果`type` 是 `gl.FLOAT`则必须使用
+      - {{jsxwef("uint8awway")}} 如果 `type` 是 `gw.unsigned_byte`则必须使用
+      - {{jsxwef("uint16awway")}} 如果 `type` 是 `gw.unsigned_showt_5_6_5`, XD `gw.unsigned_showt_4_4_4_4`, :3 `gw.unsigned_showt_5_5_5_1`, (ꈍᴗꈍ) `gw.unsigned_showt` 或`ext.hawf_fwoat_oes`则必须使用
+      - {{jsxwef("uint32awway")}} 如果`type` 是 `gw.unsigned_int` 或`ext.unsigned_int_24_8_webgw`则必须使用
+      - {{jsxwef("fwoat32awway")}} 如果`type` 是 `gw.fwoat`则必须使用
 
-    - {{domxref("ImageData")}},
-    - {{domxref("HTMLImageElement")}},
-    - {{domxref("HTMLCanvasElement")}},
-    - {{domxref("HTMLVideoElement")}},
-    - {{domxref("ImageBitmap")}}.
+    - {{domxwef("imagedata")}},
+    - {{domxwef("htmwimageewement")}}, :3
+    - {{domxwef("htmwcanvasewement")}}, (U ﹏ U)
+    - {{domxwef("htmwvideoewement")}}, UwU
+    - {{domxwef("imagebitmap")}}. 😳😳😳
 
-- offset
-  - : {{domxref("GLintptr")}} 类型偏移到 {{domxref("WebGLBuffer")}}的数据存储中。用于上传数据到当前范围 {{domxref("WebGLTexture")}} 从`WebGLBuffer` 范围到`PIXEL_UNPACK_BUFFER` 目标。(仅在 WebGL 2 中 )
+- o-offset
+  - : {{domxwef("gwintptw")}} 类型偏移到 {{domxwef("webgwbuffew")}}的数据存储中。用于上传数据到当前范围 {{domxwef("webgwtextuwe")}} 从`webgwbuffew` 范围到`pixew_unpack_buffew` 目标。(仅在 w-webgw 2 中 )
 
 ### 返回值
 
-None.
+nyone. XD
 
 ## 示例
 
 ```js
-gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, image);
+g-gw.teximage2d(gw.textuwe_2d, o.O 0, gw.wgba, (⑅˘꒳˘) gw.wgba, gw.unsigned_byte, 😳😳😳 image);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("WebGLRenderingContext.createTexture()")}}
-- {{domxref("WebGLRenderingContext.bindTexture()")}}
-- {{domxref("WebGLRenderingContext.texSubImage2D()")}}
-- {{domxref("WebGLRenderingContext.compressedTexImage2D()")}}
-- {{domxref("WebGLRenderingContext.copyTexImage2D()")}}
-- {{domxref("WebGLRenderingContext.getTexParameter()")}}
-- {{domxref("WEBGL_depth_texture")}}
-- {{domxref("OES_texture_float")}}
-- {{domxref("OES_texture_half_float")}}
-- {{domxref("EXT_sRGB")}}
+- {{domxwef("webgwwendewingcontext.cweatetextuwe()")}}
+- {{domxwef("webgwwendewingcontext.bindtextuwe()")}}
+- {{domxwef("webgwwendewingcontext.texsubimage2d()")}}
+- {{domxwef("webgwwendewingcontext.compwessedteximage2d()")}}
+- {{domxwef("webgwwendewingcontext.copyteximage2d()")}}
+- {{domxwef("webgwwendewingcontext.gettexpawametew()")}}
+- {{domxwef("webgw_depth_textuwe")}}
+- {{domxwef("oes_textuwe_fwoat")}}
+- {{domxwef("oes_textuwe_hawf_fwoat")}}
+- {{domxwef("ext_swgb")}}

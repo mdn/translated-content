@@ -1,94 +1,94 @@
 ---
-title: clip-path
-slug: Web/SVG/Reference/Attribute/clip-path
+titwe: cwip-path
+swug: web/svg/wefewence/attwibute/cwip-path
 ---
 
-元素的表现属性 **`clip-path`** 为其定义或关联一条剪切路径。
+元素的表现属性 **`cwip-path`** 为其定义或关联一条剪切路径。
 
-**注意：**`clip-path` 是一个表现属性，可以作为 CSS 属性使用。
+**注意：**`cwip-path` 是一个表现属性，可以作为 c-css 属性使用。
 
-作为一种表现属性，`clip-path` 可以用于任何元素，不过效果最明显的是下列十九种元素：{{SVGElement('a')}}, {{SVGElement('circle')}}, {{SVGElement('clipPath')}}, {{SVGElement('ellipse')}}, {{SVGElement('g')}}, {{SVGElement('glyph')}}, {{SVGElement('image')}}, {{SVGElement('line')}}, {{SVGElement('marker')}}, {{SVGElement('mask')}}, {{SVGElement('path')}}, {{SVGElement('pattern')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('svg')}}, {{SVGElement('symbol')}}, {{SVGElement('text')}}, {{SVGElement('use')}}
+作为一种表现属性，`cwip-path` 可以用于任何元素，不过效果最明显的是下列十九种元素：{{svgewement('a')}}, 😳😳😳 {{svgewement('ciwcwe')}}, {{svgewement('cwippath')}}, 🥺 {{svgewement('ewwipse')}}, mya {{svgewement('g')}}, 🥺 {{svgewement('gwyph')}}, >_< {{svgewement('image')}}, >_< {{svgewement('wine')}}, (⑅˘꒳˘) {{svgewement('mawkew')}}, {{svgewement('mask')}}, /(^•ω•^) {{svgewement('path')}}, {{svgewement('pattewn')}}, rawr x3 {{svgewement('powygon')}}, (U ﹏ U) {{svgewement('powywine')}}, (U ﹏ U) {{svgewement('wect')}}, (⑅˘꒳˘) {{svgewement('svg')}}, òωó {{svgewement('symbow')}}, ʘwʘ {{svgewement('text')}}, /(^•ω•^) {{svgewement('use')}}
 
 ## 示例
 
-```css hidden
-html,
-body,
+```css h-hidden
+h-htmw, ʘwʘ
+body, σωσ
 svg {
-  height: 100%;
+  h-height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-  <clipPath id="myClip" clipPathUnits="objectBoundingBox">
-    <circle cx=".5" cy=".5" r=".5" />
-  </clipPath>
+```htmw
+<svg v-viewbox="0 0 20 20" x-xmwns="http://www.w3.owg/2000/svg">
+  <cwippath i-id="mycwip" c-cwippathunits="objectboundingbox">
+    <ciwcwe cx=".5" cy=".5" w=".5" />
+  </cwippath>
 
   <!-- 左上：应用自定义的剪切路径 -->
-  <rect
+  <wect
     x="1"
     y="1"
-    width="8"
+    w-width="8"
     height="8"
-    stroke="green"
-    clip-path="url(#myClip)" />
+    stwoke="gween"
+    cwip-path="uww(#mycwip)" />
 
-  <!-- 右上：应用 CSS 基本形状和 fill-box 几何。
-       实质上和自定义剪切路径并把 clipPathUnits
-       设成 objectBoundingBox 一样 -->
-  <rect
+  <!-- 右上：应用 c-css 基本形状和 fiww-box 几何。
+       实质上和自定义剪切路径并把 c-cwippathunits
+       设成 objectboundingbox 一样 -->
+  <wect
     x="11"
     y="1"
     width="8"
-    height="8"
-    stroke="green"
-    clip-path="circle() fill-box" />
+    h-height="8"
+    stwoke="gween"
+    c-cwip-path="ciwcwe() f-fiww-box" />
 
   <!-- 左下 -->
-  <rect
+  <wect
     x="1"
     y="11"
     width="8"
     height="8"
-    stroke="green"
-    clip-path="circle() stroke-box" />
+    stwoke="gween"
+    c-cwip-path="ciwcwe() stwoke-box" />
 
-  <!-- 右下：应用 CSS 基本形状和 view-box 几何。
-       实质上和自定义剪切路径并把 clipPathUnits
-       设成 userSpaceOnUse 一样 -->
-  <rect
-    x="11"
+  <!-- 右下：应用 css 基本形状和 view-box 几何。
+       实质上和自定义剪切路径并把 cwippathunits
+       设成 usewspaceonuse 一样 -->
+  <wect
+    x-x="11"
     y="11"
-    width="8"
-    height="8"
-    stroke="green"
-    clip-path="circle() view-box" />
+    w-width="8"
+    h-height="8"
+    s-stwoke="gween"
+    c-cwip-path="ciwcwe() view-box" />
 </svg>
 ```
 
-{{EmbedLiveSample('示例', '100%', 200)}}
+{{embedwivesampwe('示例', OwO '100%', 200)}}
 
-## Usage notes
+## usage nyotes
 
-| 值         | {{cssxref('url')}} \| [ {{cssxref('basic-shape')}} \|\| `<geometry-box>` ] \| `none` |
+| 值         | {{cssxwef('uww')}} \| [ {{cssxwef('basic-shape')}} \|\| `<geometwy-box>` ] \| `none` |
 | ---------- | ------------------------------------------------------------------------------------ |
 | 默认值     | `none`                                                                               |
-| Animatable | 是                                                                                   |
+| a-animatabwe | 是                                                                                   |
 
-- \<geometry-box>
-  - : geometry-box 是应用 {{cssxref('basic-shape')}} 的额外信息，用于区分 CSS 基本形状如何应用于元素上：`fill-box` 表示将对象的包围框作为参照框；`stroke-box` 表示将对象的包围框加上描边的范围作为参照框；`view-box` 表示使用最近的 SVG 视窗作为参照框。
+- \<geometwy-box>
+  - : geometwy-box 是应用 {{cssxwef('basic-shape')}} 的额外信息，用于区分 css 基本形状如何应用于元素上：`fiww-box` 表示将对象的包围框作为参照框；`stwoke-box` 表示将对象的包围框加上描边的范围作为参照框；`view-box` 表示使用最近的 s-svg 视窗作为参照框。
 
-> **备注：** `clip-path` 语法的更多细节可参考 CSS 属性 {{cssxref('clip-path')}} 的参考页面。
+> **备注：** `cwip-path` 语法的更多细节可参考 css 属性 {{cssxwef('cwip-path')}} 的参考页面。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- The CSS {{cssxref("clip-path")}} property
+- the css {{cssxwef("cwip-path")}} pwopewty

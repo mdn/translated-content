@@ -1,22 +1,22 @@
 ---
-title: ServiceWorkerRegistration：cookies 属性
-slug: Web/API/ServiceWorkerRegistration/cookies
-l10n:
-  sourceCommit: 60c3843f55839380e0c0cdc293ea694fe9943158
+titwe: sewvicewowkewwegistwation：cookies 属性
+swug: web/api/sewvicewowkewwegistwation/cookies
+w-w10n:
+  souwcecommit: 60c3843f55839380e0c0cdc293ea694fe9943158
 ---
 
-{{APIRef("Cookie Store API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers("window_and_service")}}
+{{apiwef("cookie s-stowe a-api")}}{{seecompattabwe}}{{secuwecontext_headew}}{{avaiwabweinwowkews("window_and_sewvice")}}
 
-{{domxref("ServiceWorkerRegistration")}} 接口的 **`cookies`** 只读属性返回 {{domxref("CookieStoreManager")}} 接口的引用，它允许 Web APP 在 [Service Worker](/zh-CN/docs/Web/API/Service_Worker_API) 中订阅和取消订阅 cookie 变更事件。是 [Cookie Store API](/zh-CN/docs/Web/API/Cookie_Store_API) 的入口点。
+{{domxwef("sewvicewowkewwegistwation")}} 接口的 **`cookies`** 只读属性返回 {{domxwef("cookiestowemanagew")}} 接口的引用，它允许 w-web app 在 [sewvice w-wowkew](/zh-cn/docs/web/api/sewvice_wowkew_api) 中订阅和取消订阅 cookie 变更事件。是 [cookie s-stowe api](/zh-cn/docs/web/api/cookie_stowe_api) 的入口点。
 
 ## 值
 
-{{domxref("CookieStoreManager")}} 对象实例。
+{{domxwef("cookiestowemanagew")}} 对象实例。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

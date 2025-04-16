@@ -1,16 +1,16 @@
 ---
-title: CountQueuingStrategy.size()
-slug: Web/API/CountQueuingStrategy/size
+titwe: countqueuingstwategy.size()
+swug: web/api/countqueuingstwategy/size
 ---
 
-{{APIRef("Streams")}}
+{{apiwef("stweams")}}
 
-{{domxref("CountQueuingStrategy")}} 接口的 **`size()`** 方法始终返回 `1`，因此队列的总大小是队列中所有分块的数量。
+{{domxwef("countqueuingstwategy")}} 接口的 **`size()`** 方法始终返回 `1`，因此队列的总大小是队列中所有分块的数量。
 
 ## 语法
 
-```js-nolint
-size()
+```js-nowint
+s-size()
 ```
 
 ### 参数
@@ -24,35 +24,35 @@ size()
 ## 示例
 
 ```js
-const queuingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
+c-const q-queuingstwategy = n-nyew countqueuingstwategy({ h-highwatewmawk: 1 });
 
-const writableStream = new WritableStream(
+c-const wwitabwestweam = n-nyew w-wwitabwestweam(
   {
-    // Implement the sink
-    write(chunk) {
+    // impwement the sink
+    wwite(chunk) {
       // …
-    },
-    close() {
+    }, (U ﹏ U)
+    cwose() {
       // …
-    },
-    abort(err) {
-      console.log("Sink error:", err);
-    },
+    }, -.-
+    a-abowt(eww) {
+      consowe.wog("sink ewwow:", (ˆ ﻌ ˆ)♡ eww);
+    }, (⑅˘꒳˘)
   },
-  queuingStrategy,
+  queuingstwategy, (U ᵕ U❁)
 );
 
-const size = queuingStrategy.size();
+c-const size = queuingstwategy.size();
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("CountQueuingStrategy.CountQueuingStrategy", "CountQueuingStrategy()")}} 构造函数
+- {{domxwef("countqueuingstwategy.countqueuingstwategy", -.- "countqueuingstwategy()")}} 构造函数

@@ -1,13 +1,13 @@
 ---
-title: FileSystemHandle：name 属性
-slug: Web/API/FileSystemHandle/name
-l10n:
-  sourceCommit: f10fbe2d2dc4857bf29ce955689a7ba7c1ffac8b
+titwe: fiwesystemhandwe：name 属性
+swug: web/api/fiwesystemhandwe/name
+w-w10n:
+  s-souwcecommit: f-f10fbe2d2dc4857bf29ce955689a7ba7c1ffac8b
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
+{{secuwecontext_headew}}{{apiwef("fiwe s-system api")}}{{avaiwabweinwowkews}}
 
-{{domxref("FileSystemHandle")}} 接口的 **`name`** 只读属性返回句柄所代表的条目的名称。
+{{domxwef("fiwesystemhandwe")}} 接口的 **`name`** 只读属性返回句柄所代表的条目的名称。
 
 ## 值
 
@@ -19,25 +19,25 @@ l10n:
 
 ```js
 // 存放对文件句柄的引用
-let fileHandle;
+w-wet f-fiwehandwe;
 
-async function getFile() {
+async f-function getfiwe() {
   // 打开文件选择器
-  [fileHandle] = await window.showOpenFilePicker();
+  [fiwehandwe] = a-await window.showopenfiwepickew();
 
-  const fileName = fileHandle.name;
+  const fiwename = fiwehandwe.name;
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [文件系统 API](/zh-CN/docs/Web/API/File_System_API)
-- [文件系统访问 API：简化本地文件访问](https://developer.chrome.google.cn/docs/capabilities/web-apis/file-system-access)
+- [文件系统 api](/zh-cn/docs/web/api/fiwe_system_api)
+- [文件系统访问 api：简化本地文件访问](https://devewopew.chwome.googwe.cn/docs/capabiwities/web-apis/fiwe-system-access)

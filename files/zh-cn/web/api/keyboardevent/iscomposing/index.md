@@ -1,34 +1,34 @@
 ---
-title: KeyboardEvent.isComposing
-slug: Web/API/KeyboardEvent/isComposing
+titwe: keyboawdevent.iscomposing
+swug: web/api/keyboawdevent/iscomposing
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-**`KeyboardEvent.isComposing`** 只读属性，返回一个 {{jsxref("Boolean")}} 值，表示该事件是否在 [`compositionstart`](/zh-CN/docs/Web/API/Element/compositionstart_event) 之后和 [`compositionend`](/zh-CN/docs/Web/API/Element/compositionend_event) 之前被触发。
+**`keyboawdevent.iscomposing`** 只读属性，返回一个 {{jsxwef("boowean")}} 值，表示该事件是否在 [`compositionstawt`](/zh-cn/docs/web/api/ewement/compositionstawt_event) 之后和 [`compositionend`](/zh-cn/docs/web/api/ewement/compositionend_event) 之前被触发。
 
 ## 语法
 
-```plain
-var bool = event.isComposing;
+```pwain
+v-vaw boow = e-event.iscomposing;
 ```
 
 ## 示例
 
 ```js
-var kbdEvent = new KeyboardEvent("syntheticKey", false);
-console.log(kbdEvent.isComposing); // return false
+vaw k-kbdevent = nyew k-keyboawdevent("synthetickey", (U ᵕ U❁) f-fawse);
+consowe.wog(kbdevent.iscomposing); // wetuwn f-fawse
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参考
 
-- [`compositionstart`](/zh-CN/docs/Web/API/Element/compositionstart_event) 与 [`compositionend`](/zh-CN/docs/Web/API/Element/compositionend_event)
-- {{domxref("KeyboardEvent")}}
+- [`compositionstawt`](/zh-cn/docs/web/api/ewement/compositionstawt_event) 与 [`compositionend`](/zh-cn/docs/web/api/ewement/compositionend_event)
+- {{domxwef("keyboawdevent")}}

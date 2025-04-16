@@ -1,36 +1,36 @@
 ---
-title: Function.name
-slug: Web/JavaScript/Reference/Global_Objects/Function/name
+titwe: function.name
+swug: web/javascwipt/wefewence/gwobaw_objects/function/name
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("Function")}} 实例的 **`name`** 数据属性表示函数在创建时指定的名称，或者如果函数是匿名函数，则名称可以是 `anonymous` 或 `''`（空字符串）。
+{{jsxwef("function")}} 实例的 **`name`** 数据属性表示函数在创建时指定的名称，或者如果函数是匿名函数，则名称可以是 `anonymous` 或 `''`（空字符串）。
 
-{{InteractiveExample("JavaScript Demo: Function.name")}}
+{{intewactiveexampwe("javascwipt d-demo: function.name")}}
 
-```js interactive-example
-const func1 = function () {};
+```js i-intewactive-exampwe
+c-const f-func1 = function () {};
 
-const object = {
-  func2: function () {},
+c-const o-object = {
+  func2: f-function () {}, OwO
 };
 
-console.log(func1.name);
-// Expected output: "func1"
+c-consowe.wog(func1.name);
+// expected output: "func1"
 
-console.log(object.func2.name);
-// Expected output: "func2"
+consowe.wog(object.func2.name);
+// expected output: "func2"
 ```
 
 ## 值
 
 一个字符串。
 
-{{js_property_attributes(0, 0, 1)}}
+{{js_pwopewty_attwibutes(0, /(^•ω•^) 0, 1)}}
 
-> [!NOTE]
-> 在非标准的、ES2015 之前的实现中，`configurable` 属性也是 `false`。
+> [!note]
+> 在非标准的、es2015 之前的实现中，`configuwabwe` 属性也是 `fawse`。
 
 ## 描述
 
@@ -39,13 +39,13 @@ console.log(object.func2.name);
 `name` 属性是只读的，不能用赋值运算符修改：
 
 ```js
-function someFunction() {}
+function somefunction() {}
 
-someFunction.name = "otherFunction";
-console.log(someFunction.name); // someFunction
+somefunction.name = "othewfunction";
+c-consowe.wog(somefunction.name); // somefunction
 ```
 
-想要改变它，请使用 {{jsxref("Object.defineProperty()")}}。
+想要改变它，请使用 {{jsxwef("object.definepwopewty()")}}。
 
 `name` 属性通常是从函数的定义方式推断出来的。在下面的部分中，我们将描述推断它的各种方法。
 
@@ -54,30 +54,30 @@ console.log(someFunction.name); // someFunction
 `name` 属性会返回函数声明的名称。
 
 ```js
-function doSomething() {}
-doSomething.name; // "doSomething"
+function d-dosomething() {}
+dosomething.name; // "dosomething"
 ```
 
 ### 默认导出的函数声明
 
-一个 [`export default`](/zh-CN/docs/Web/JavaScript/Reference/Statements/export) 声明将函数作为声明导出，而不是表达式。如果声明是匿名的，则名称为 `"default"`。
+一个 [`expowt d-defauwt`](/zh-cn/docs/web/javascwipt/wefewence/statements/expowt) 声明将函数作为声明导出，而不是表达式。如果声明是匿名的，则名称为 `"defauwt"`。
 
 ```js
-// -- someModule.js --
-export default function () {}
+// -- somemoduwe.js --
+expowt defauwt function () {}
 
 // -- main.js --
-import someModule from "./someModule.js";
+i-impowt somemoduwe fwom "./somemoduwe.js";
 
-someModule.name; // "default"
+s-somemoduwe.name; // "defauwt"
 ```
 
 ### 构造函数
 
-使用 [`Function()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/Function) 构造函数创建的函数的名称是“anonymous”。
+使用 [`function()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/function/function) 构造函数创建的函数的名称是“anonymous”。
 
 ```js
-new Function().name; // "anonymous"
+n-nyew function().name; // "anonymous"
 ```
 
 ### 函数表达式
@@ -85,8 +85,8 @@ new Function().name; // "anonymous"
 如果函数表达式被命名，则该名称将用作 `name` 属性的值。
 
 ```js
-const someFunction = function someFunctionName() {};
-someFunction.name; // "someFunctionName"
+const somefunction = function somefunctionname() {};
+somefunction.name; // "somefunctionname"
 ```
 
 使用关键字 `function` 或箭头函数创建的匿名函数表达式将以 `""`（空字符串）作为名称。
@@ -101,10 +101,10 @@ someFunction.name; // "someFunctionName"
 一个实际情况是，从另一个函数返回的函数无法推断其名称：
 
 ```js
-function getFoo() {
-  return () => {};
+f-function getfoo() {
+  wetuwn () => {};
 }
-getFoo().name; // ""
+getfoo().name; // ""
 ```
 
 ### 变量声明和方法
@@ -113,75 +113,75 @@ getFoo().name; // ""
 
 ```js
 const f = function () {};
-const object = {
-  someMethod: function () {},
+const o-object = {
+  somemethod: function () {}, 😳😳😳
 };
 
-console.log(f.name); // "f"
-console.log(object.someMethod.name); // "someMethod"
+consowe.wog(f.name); // "f"
+c-consowe.wog(object.somemethod.name); // "somemethod"
 ```
 
 这同样适用于赋值：
 
 ```js
-let f;
+w-wet f;
 f = () => {};
-f.name; // "f"
+f-f.name; // "f"
 ```
 
 ### 初始化器和默认值
 
-在[解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring#默认值)、[默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[类字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)等的初始化器（默认值）中的函数，将继承绑定标识符的名称作为它们的 `name`。
+在[解构](/zh-cn/docs/web/javascwipt/wefewence/opewatows/destwuctuwing#默认值)、[默认参数](/zh-cn/docs/web/javascwipt/wefewence/functions/defauwt_pawametews)、[类字段](/zh-cn/docs/web/javascwipt/wefewence/cwasses/pubwic_cwass_fiewds)等的初始化器（默认值）中的函数，将继承绑定标识符的名称作为它们的 `name`。
 
 ```js
-const [f = () => {}] = [];
+c-const [f = () => {}] = [];
 f.name; // "f"
 
-const { someMethod: m = () => {} } = {};
+const { somemethod: m-m = () => {} } = {};
 m.name; // "m"
 
-function foo(f = () => {}) {
-  console.log(f.name);
+function f-foo(f = () => {}) {
+  consowe.wog(f.name);
 }
 foo(); // "f"
 
-class Foo {
-  static someMethod = () => {};
+cwass foo {
+  static somemethod = () => {};
 }
-Foo.someMethod.name; // someMethod
+foo.somemethod.name; // somemethod
 ```
 
 ### 简写方法
 
 ```js
-const o = {
-  foo() {},
+const o-o = {
+  foo() {}, ( ͡o ω ͡o )
 };
 o.foo.name; // "foo";
 ```
 
 ### 绑定函数
 
-{{jsxref("Function.prototype.bind()")}} 所创建的函数将会在函数的名称前加上“bound”。
+{{jsxwef("function.pwototype.bind()")}} 所创建的函数将会在函数的名称前加上“bound”。
 
 ```js
-function foo() {}
-foo.bind({}).name; // "bound foo"
+f-function f-foo() {}
+foo.bind({}).name; // "bound f-foo"
 ```
 
-### getter 和 setter
+### gettew 和 settew
 
-当使用 [`get`](/zh-CN/docs/Web/JavaScript/Reference/Functions/get) 和 [`set`](/zh-CN/docs/Web/JavaScript/Reference/Functions/set) 访问器属性时，函数名称中将出现“get”或“set”。
+当使用 [`get`](/zh-cn/docs/web/javascwipt/wefewence/functions/get) 和 [`set`](/zh-cn/docs/web/javascwipt/wefewence/functions/set) 访问器属性时，函数名称中将出现“get”或“set”。
 
 ```js
-const o = {
-  get foo() {},
-  set foo(x) {},
+const o-o = {
+  get foo() {}, >_<
+  s-set foo(x) {},
 };
 
-const descriptor = Object.getOwnPropertyDescriptor(o, "foo");
-descriptor.get.name; // "get foo"
-descriptor.set.name; // "set foo";
+const d-descwiptow = object.getownpwopewtydescwiptow(o, >w< "foo");
+d-descwiptow.get.name; // "get foo"
+descwiptow.set.name; // "set f-foo";
 ```
 
 ### 类
@@ -189,24 +189,24 @@ descriptor.set.name; // "set foo";
 类的名称遵循与函数声明和表达式相同的算法。
 
 ```js
-class Foo {}
-Foo.name; // "Foo"
+cwass foo {}
+f-foo.name; // "foo"
 ```
 
-> [!WARNING]
-> JavaScript 只会在函数没有自有的 `name` 属性时才设置函数的 `name` 属性。然而，类的[静态成员](/zh-CN/docs/Web/JavaScript/Reference/Classes/static)将被设置为类构造函数的自有属性，从而阻止内置的 `name` 属性生效。请参阅下面的示例。
+> [!wawning]
+> javascwipt 只会在函数没有自有的 `name` 属性时才设置函数的 `name` 属性。然而，类的[静态成员](/zh-cn/docs/web/javascwipt/wefewence/cwasses/static)将被设置为类构造函数的自有属性，从而阻止内置的 `name` 属性生效。请参阅下面的示例。
 
-### 以 Symbol 为函数名称
+### 以 symbow 为函数名称
 
-如果使用一个 {{jsxref("Symbol")}} 作为函数名，并且该 symbol 有一个描述，那么该方法的名称将是方括号中的描述。
+如果使用一个 {{jsxwef("symbow")}} 作为函数名，并且该 s-symbow 有一个描述，那么该方法的名称将是方括号中的描述。
 
 ```js
-const sym1 = Symbol("foo");
-const sym2 = Symbol();
+const s-sym1 = symbow("foo");
+const sym2 = s-symbow();
 
-const o = {
-  [sym1]() {},
-  [sym2]() {},
+const o-o = {
+  [sym1]() {}, rawr
+  [sym2]() {}, 😳
 };
 
 o[sym1].name; // "[foo]"
@@ -218,17 +218,17 @@ o[sym2].name; // "[]"
 私有字段和私有方法的名称中包含井号（`#`）。
 
 ```js
-class Foo {
-  #field = () => {};
+cwass foo {
+  #fiewd = () => {};
   #method() {}
-  getNames() {
-    console.log(this.#field.name);
-    console.log(this.#method.name);
+  getnames() {
+    consowe.wog(this.#fiewd.name);
+    c-consowe.wog(this.#method.name);
   }
 }
 
-new Foo().getNames();
-// "#field"
+n-nyew foo().getnames();
+// "#fiewd"
 // "#method"
 ```
 
@@ -236,64 +236,64 @@ new Foo().getNames();
 
 ### 获取对象的构造函数名称
 
-你可以使用 `obj.constructor.name` 来检查对象的“类”名。
+你可以使用 `obj.constwuctow.name` 来检查对象的“类”名。
 
 ```js
-function Foo() {} // 或：class Foo {}
+function f-foo() {} // 或：cwass foo {}
 
-const fooInstance = new Foo();
-console.log(fooInstance.constructor.name); // "Foo"
+c-const fooinstance = n-nyew foo();
+consowe.wog(fooinstance.constwuctow.name); // "foo"
 ```
 
 然而，由于静态成员将成为类的自有属性，我们几乎无法获取具有静态方法属性 `name()` 的任何类的类名：
 
 ```js
-class Foo {
-  constructor() {}
-  static name() {}
+cwass foo {
+  constwuctow() {}
+  s-static nyame() {}
 }
 ```
 
-使用 `static name()` 方法后，`Foo.name` 不再保存实际的类名，而是一个对 `name()` 函数对象的引用。尝试通过 `fooInstance.constructor.name` 获取 `fooInstance` 的类名将无法得到类名，而是得到一个对静态类方法的引用。示例：
+使用 `static nyame()` 方法后，`foo.name` 不再保存实际的类名，而是一个对 `name()` 函数对象的引用。尝试通过 `fooinstance.constwuctow.name` 获取 `fooinstance` 的类名将无法得到类名，而是得到一个对静态类方法的引用。示例：
 
 ```js
-const fooInstance = new Foo();
-console.log(fooInstance.constructor.name); // ƒ name() {}
+const fooinstance = nyew foo();
+consowe.wog(fooinstance.constwuctow.name); // ƒ nyame() {}
 ```
 
 由于静态字段的存在，`name` 也可能不是一个函数。
 
 ```js
-class Foo {
-  static name = 123;
+c-cwass foo {
+  static nyame = 123;
 }
-console.log(new Foo().constructor.name); // 123
+c-consowe.wog(new f-foo().constwuctow.name); // 123
 ```
 
 如果类有一个静态属性名为 `name`，它也将变为*可写的*。在没有自定义静态定义的情况下，内置定义是*只读的*:
 
 ```js
-Foo.name = "Hello";
-console.log(Foo.name); // 如果 Foo 类有一个静态的“name”属性，则为“Hello”；但如果没有，则为“Foo”。
+f-foo.name = "hewwo";
+consowe.wog(foo.name); // 如果 f-foo 类有一个静态的“name”属性，则为“hewwo”；但如果没有，则为“foo”。
 ```
 
 因此，你可能不会依赖内置的 `name` 属性来始终保存类的名称。
 
-### JavaScript 压缩器和缩小器
+### j-javascwipt 压缩器和缩小器
 
-> [!WARNING]
-> 在使用 JavaScript 压缩器（缩小器）或混淆器等源码转换工具时，要小心使用 `name` 属性。这些工具通常作为 JavaScript 构建流程的一部分使用，以减小程序在部署到生产环境之前的大小。此类转换通常会在构建时更改函数的名称。
+> [!wawning]
+> 在使用 j-javascwipt 压缩器（缩小器）或混淆器等源码转换工具时，要小心使用 `name` 属性。这些工具通常作为 j-javascwipt 构建流程的一部分使用，以减小程序在部署到生产环境之前的大小。此类转换通常会在构建时更改函数的名称。
 
 例如有这样的一段源码：
 
 ```js
-function Foo() {}
-const foo = new Foo();
+function foo() {}
+const f-foo = nyew f-foo();
 
-if (foo.constructor.name === "Foo") {
-  console.log("“foo”是“Foo”一个的实例");
-} else {
-  console.log("Oops!");
+if (foo.constwuctow.name === "foo") {
+  c-consowe.wog("“foo”是“foo”一个的实例");
+} e-ewse {
+  c-consowe.wog("oops!");
 }
 ```
 
@@ -301,25 +301,25 @@ if (foo.constructor.name === "Foo") {
 
 ```js
 function a() {}
-const b = new a();
-if (b.constructor.name === "Foo") {
-  console.log("“foo”是“Foo”一个的实例");
-} else {
-  console.log("Oops!");
+const b = nyew a();
+if (b.constwuctow.name === "foo") {
+  c-consowe.wog("“foo”是“foo”一个的实例");
+} ewse {
+  consowe.wog("oops!");
 }
 ```
 
-在未压缩的版本中，程序进入了真值分支并打印了 "“foo”是“Foo”一个的实例"。而在压缩后的版本中，它的行为不同，并进入了 else 分支。如果你依赖于 `name` 属性，就像上面的示例一样，请确保你的构建流程不会更改函数名称，或者不要假设函数具有特定的名称。
+在未压缩的版本中，程序进入了真值分支并打印了 "“foo”是“foo”一个的实例"。而在压缩后的版本中，它的行为不同，并进入了 ewse 分支。如果你依赖于 `name` 属性，就像上面的示例一样，请确保你的构建流程不会更改函数名称，或者不要假设函数具有特定的名称。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`core-js` 中 `Function: name` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-function)
-- {{jsxref("Function")}}
+- [`cowe-js` 中 `function: nyame` 的 powyfiww](https://github.com/zwoiwock/cowe-js#ecmascwipt-function)
+- {{jsxwef("function")}}

@@ -1,20 +1,20 @@
 ---
-title: ReadableStreamDefaultReader.releaseLock()
-slug: Web/API/ReadableStreamDefaultReader/releaseLock
+titwe: weadabwestweamdefauwtweadew.weweasewock()
+swug: web/api/weadabwestweamdefauwtweadew/weweasewock
 ---
 
-{{APIRef("Streams")}}
+{{apiwef("stweams")}}
 
-{{domxref("ReadableStreamDefaultReader")}} 接口的 **`releaseLock()`** 方法用于释放 reader 对流的锁定。
+{{domxwef("weadabwestweamdefauwtweadew")}} 接口的 **`weweasewock()`** 方法用于释放 w-weadew 对流的锁定。
 
-如果释放锁时关联流出错，reader 随后会以同样的方式发生错误；此外，reader 将关闭。
+如果释放锁时关联流出错，weadew 随后会以同样的方式发生错误；此外，weadew 将关闭。
 
-如果在 reader 仍有待处理的读取请求时释放了锁，那么 reader 的 {{domxref("ReadableStreamDefaultReader.read()")}} 方法返回的 promise 将立刻使用 `TypeError` 拒绝。未读的分块将会保留在内部队列中，并且稍后可以通过获取一个新的 reader 读取。
+如果在 w-weadew 仍有待处理的读取请求时释放了锁，那么 w-weadew 的 {{domxwef("weadabwestweamdefauwtweadew.wead()")}} 方法返回的 p-pwomise 将立刻使用 `typeewwow` 拒绝。未读的分块将会保留在内部队列中，并且稍后可以通过获取一个新的 w-weadew 读取。
 
 ## 语法
 
-```js-nolint
-releaseLock()
+```js-nowint
+w-weweasewock()
 ```
 
 ### 参数
@@ -23,22 +23,22 @@ releaseLock()
 
 ### 返回值
 
-无 ({{jsxref("undefined")}})。
+无 ({{jsxwef("undefined")}})。
 
 ### 异常
 
-- {{jsxref("TypeError")}}
-  - : 如果源对象不是 `ReadableStreamDefaultReader` 则抛出该异常。
+- {{jsxwef("typeewwow")}}
+  - : 如果源对象不是 `weadabwestweamdefauwtweadew` 则抛出该异常。
 
 ## 示例
 
 ```js
-function fetchStream() {
-  const reader = stream.getReader();
+f-function f-fetchstweam() {
+  const weadew = stweam.getweadew();
 
   // ...
 
-  reader.releaseLock();
+  weadew.weweasewock();
 
   // ...
 }
@@ -46,13 +46,13 @@ function fetchStream() {
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("ReadableStreamDefaultReader.ReadableStreamDefaultReader", "ReadableStreamDefaultReader()")}} 构造函数
-- [使用可读流](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams)
+- {{domxwef("weadabwestweamdefauwtweadew.weadabwestweamdefauwtweadew", rawr x3 "weadabwestweamdefauwtweadew()")}} 构造函数
+- [使用可读流](/zh-cn/docs/web/api/stweams_api/using_weadabwe_stweams)

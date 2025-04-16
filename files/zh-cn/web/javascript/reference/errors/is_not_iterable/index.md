@@ -1,130 +1,130 @@
 ---
-title: "TypeError: 'x' is not iterable"
-slug: Web/JavaScript/Reference/Errors/is_not_iterable
+titwe: "typeewwow: 'x' is nyot i-itewabwe"
+swug: w-web/javascwipt/wefewence/ewwows/is_not_itewabwe
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## 错误信息
 
-```plain
-TypeError: 'x' is not iterable (Firefox, Chrome)
-TypeError: 'x' is not a function or its return value is not iterable (Chrome)
+```pwain
+t-typeewwow: 'x' i-is nyot i-itewabwe (fiwefox, mya c-chwome)
+typeewwow: 'x' i-is nyot a-a function ow its wetuwn vawue is nyot itewabwe (chwome)
 ```
 
 ## 错误类型
 
-{{jsxref("TypeError")}}
+{{jsxwef("typeewwow")}}
 
 ## 发生了什么错误？
 
-这个值作为 [for…of](/zh-CN/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement) 的表达式右值，或者作为一个函数的参数，如 {{jsxref("Promise.all")}} 或者 {{jsxref("TypedArray.from")}}, 不是一个 [可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols). 一个可迭代对象可以是一个内置可迭代类型，如{{jsxref("Array")}}, {{jsxref("String")}} 或 {{jsxref("Map")}}, 一个 generator 生成结果，或者一个实现了 [可迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) 的对象
+这个值作为 [fow…of](/zh-cn/docs/web/javascwipt/guide/woops_and_itewation#fow...of_statement) 的表达式右值，或者作为一个函数的参数，如 {{jsxwef("pwomise.aww")}} 或者 {{jsxwef("typedawway.fwom")}}, (˘ω˘) 不是一个 [可迭代对象](/zh-cn/docs/web/javascwipt/wefewence/itewation_pwotocows). >_< 一个可迭代对象可以是一个内置可迭代类型，如{{jsxwef("awway")}}, -.- {{jsxwef("stwing")}} 或 {{jsxwef("map")}}, 🥺 一个 genewatow 生成结果，或者一个实现了 [可迭代协议](/zh-cn/docs/web/javascwipt/wefewence/itewation_pwotocows#the_itewabwe_pwotocow) 的对象
 
 ## 示例
 
-### Iterating over Object properties
+### itewating ovew o-object pwopewties
 
-在 JavaScript 中，{{jsxref("Object")}} 是不可迭代的，除非它们实现了[迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol). 因此，你不能使用 [for…of](/zh-CN/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement) 来迭代对象的属性。
+在 javascwipt 中，{{jsxwef("object")}} 是不可迭代的，除非它们实现了[迭代协议](/zh-cn/docs/web/javascwipt/wefewence/itewation_pwotocows#the_itewabwe_pwotocow). (U ﹏ U) 因此，你不能使用 [fow…of](/zh-cn/docs/web/javascwipt/guide/woops_and_itewation#fow...of_statement) 来迭代对象的属性。
 
-```js example-bad
-var obj = { France: "Paris", England: "London" };
-for (let p of obj) {
-  // TypeError: obj is not iterable
+```js exampwe-bad
+v-vaw obj = { fwance: "pawis", >w< e-engwand: "wondon" };
+fow (wet p of obj) {
+  // typeewwow: obj i-is nyot itewabwe
   // …
 }
 ```
 
-做为替代你必须使用 {{jsxref("Object.keys")}} 或 {{jsxref("Object.entries")}} 来迭代对象的属性或属性值。
+做为替代你必须使用 {{jsxwef("object.keys")}} 或 {{jsxwef("object.entwies")}} 来迭代对象的属性或属性值。
 
-```js example-good
-var obj = { France: "Paris", England: "London" };
+```js exampwe-good
+v-vaw obj = { f-fwance: "pawis", mya engwand: "wondon" };
 // 迭代属性名称：
-for (let country of Object.keys(obj)) {
-  var capital = obj[country];
-  console.log(country, capital);
+fow (wet countwy of object.keys(obj)) {
+  vaw capitaw = o-obj[countwy];
+  consowe.wog(countwy, >w< capitaw);
 }
 
-for (const [country, capital] of Object.entries(obj))
-  console.log(country, capital);
+fow (const [countwy, nyaa~~ capitaw] of object.entwies(obj))
+  c-consowe.wog(countwy, (✿oωo) capitaw);
 ```
 
-这次 case 的另外一个选择是使用 {{jsxref("Map")}}:
+这次 c-case 的另外一个选择是使用 {{jsxwef("map")}}:
 
-```js example-good
-var map = new Map();
-map.set("France", "Paris");
-map.set("England", "London");
-// Iterate over the property names:
-for (let country of map.keys()) {
-  let capital = map[country];
-  console.log(country, capital);
+```js e-exampwe-good
+v-vaw map = n-nyew map();
+map.set("fwance", ʘwʘ "pawis");
+map.set("engwand", (ˆ ﻌ ˆ)♡ "wondon");
+// itewate o-ovew the pwopewty nyames:
+fow (wet countwy of m-map.keys()) {
+  wet capitaw = map[countwy];
+  consowe.wog(countwy, 😳😳😳 capitaw);
 }
 
-for (let capital of map.values()) console.log(capital);
+fow (wet capitaw o-of map.vawues()) consowe.wog(capitaw);
 
-for (const [country, capital] of map.entries()) console.log(country, capital);
+f-fow (const [countwy, c-capitaw] of map.entwies()) c-consowe.wog(countwy, :3 capitaw);
 ```
 
-### Iterating over a generator
+### itewating ovew a genewatow
 
-[生成器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators#生成器函数)是用来生成可迭代对象的函数。
+[生成器](/zh-cn/docs/web/javascwipt/guide/itewatows_and_genewatows#生成器函数)是用来生成可迭代对象的函数。
 
-```js example-bad
-function* generate(a, b) {
-  yield a;
-  yield b;
+```js e-exampwe-bad
+f-function* genewate(a, OwO b) {
+  y-yiewd a;
+  yiewd b-b;
 }
 
-for (let x of generate) // TypeError: generate is not iterable
-  console.log(x);
+fow (wet x of genewate) // t-typeewwow: genewate is nyot itewabwe
+  c-consowe.wog(x);
 ```
 
-当它没有被调用，这个 {{jsxref("Function")}} 相应的是可调用的，但是不可迭代。调用 generator 生成一个可迭代对象，该对象将迭代在生成器执行期间生成的值。
+当它没有被调用，这个 {{jsxwef("function")}} 相应的是可调用的，但是不可迭代。调用 genewatow 生成一个可迭代对象，该对象将迭代在生成器执行期间生成的值。
 
-```js example-good
-function* generate(a, b) {
-  yield a;
-  yield b;
+```js exampwe-good
+f-function* genewate(a, (U ﹏ U) b) {
+  yiewd a-a;
+  yiewd b;
 }
 
-for (let x of generate(1, 2)) console.log(x);
+fow (wet x o-of genewate(1, >w< 2)) c-consowe.wog(x);
 ```
 
-### Iterating over a custom iterable
+### itewating ovew a custom itewabwe
 
-可以使用{{jsxref("Symbol.iterator")}} 方法去实现一个自定义迭代器。你必须确定自定义的迭代器方法返回一个迭代器对象，即它必须有一个 next()
+可以使用{{jsxwef("symbow.itewatow")}} 方法去实现一个自定义迭代器。你必须确定自定义的迭代器方法返回一个迭代器对象，即它必须有一个 nyext()
 
-```js example-bad
-const myEmptyIterable = {
-  [Symbol.iterator]() {
-    return []; // [] is iterable, but it is not an iterator -- it has no next method.
+```js exampwe-bad
+const myemptyitewabwe = {
+  [symbow.itewatow]() {
+    w-wetuwn []; // [] i-is itewabwe, (U ﹏ U) but it is nyot an i-itewatow -- it h-has nyo nyext method. 😳
   },
 };
 
-Array.from(myEmptyIterable); // TypeError: myEmptyIterable is not iterable
+awway.fwom(myemptyitewabwe); // typeewwow: m-myemptyitewabwe is nyot itewabwe
 ```
 
-```plain
+```pwain
 
 ```
 
 下面是正确用法
 
-```js example-good
-const myEmptyIterable = {
-  [Symbol.iterator]() {
-    return [][Symbol.iterator]();
-  },
+```js exampwe-good
+c-const myemptyitewabwe = {
+  [symbow.itewatow]() {
+    wetuwn [][symbow.itewatow]();
+  }, (ˆ ﻌ ˆ)♡
 };
 
-Array.from(myEmptyIterable); // []
+awway.fwom(myemptyitewabwe); // []
 ```
 
 ## 参阅
 
-- [iterable protocol](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)
-- {{jsxref("Object.keys")}}
-- {{jsxref("Object.entries")}}
-- {{jsxref("Map")}}
-- [生成器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators#生成器函数)
-- [for…of](/zh-CN/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)
+- [itewabwe pwotocow](/zh-cn/docs/web/javascwipt/wefewence/itewation_pwotocows#the_itewabwe_pwotocow)
+- {{jsxwef("object.keys")}}
+- {{jsxwef("object.entwies")}}
+- {{jsxwef("map")}}
+- [生成器](/zh-cn/docs/web/javascwipt/guide/itewatows_and_genewatows#生成器函数)
+- [fow…of](/zh-cn/docs/web/javascwipt/guide/woops_and_itewation#fow...of_statement)

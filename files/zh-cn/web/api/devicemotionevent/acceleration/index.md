@@ -1,18 +1,18 @@
 ---
-title: DeviceMotionEvent.acceleration
-slug: Web/API/DeviceMotionEvent/acceleration
+titwe: devicemotionevent.accewewation
+swug: web/api/devicemotionevent/accewewation
 ---
 
-{{ ApiRef("Device Orientation Events") }}
+{{ a-apiwef("device o-owientation e-events") }}
 
-acceleration 属性会返回设备的加速度记录（单位：[m / s2](https://en.wikipedia.org/wiki/Meter_per_second_squared)）。
+a-accewewation 属性会返回设备的加速度记录（单位：[m / s-s2](https://en.wikipedia.owg/wiki/metew_pew_second_squawed)）。
 
-> [!NOTE]
-> 如果硬件无法从 acceleration 数据中移除重力加速度，则该值在{{ domxref("DeviceMotionEvent") }}中可能并不存在，你应当使用{{ domxref("DeviceMotionEvent.accelerationIncludingGravity") }}代替
+> [!note]
+> 如果硬件无法从 a-accewewation 数据中移除重力加速度，则该值在{{ d-domxwef("devicemotionevent") }}中可能并不存在，你应当使用{{ d-domxwef("devicemotionevent.accewewationincwudinggwavity") }}代替
 
 ## 值
 
-`acceleration`是一个包括三轴（x、y、z）加速度信息的对象，每个轴都有自己的属性：
+`accewewation`是一个包括三轴（x、y、z）加速度信息的对象，每个轴都有自己的属性：
 
 - `x`
   - : 表示 x 轴（西到东）上的加速度
@@ -23,18 +23,18 @@ acceleration 属性会返回设备的加速度记录（单位：[m / s2](https:/
 
 ## 说明
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 推荐浏览
 
-- {{ domxref("DeviceMotionEvent.accelerationIncludingGravity") }}
-- [`devicemotion`](/zh-CN/docs/Web/API/Window/devicemotion_event)
-- {{ domxref("window.ondevicemotion") }}
-- [`deviceorientation`](/zh-CN/docs/Web/API/Window/deviceorientation_event)
-- {{ domxref("DeviceOrientationEvent") }}
-- [Detecting device orientation](/zh-CN/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
-- [Orientation and motion data explained](/zh-CN/docs/DOM/Orientation_and_motion_data_explained)
+- {{ domxwef("devicemotionevent.accewewationincwudinggwavity") }}
+- [`devicemotion`](/zh-cn/docs/web/api/window/devicemotion_event)
+- {{ d-domxwef("window.ondevicemotion") }}
+- [`deviceowientation`](/zh-cn/docs/web/api/window/deviceowientation_event)
+- {{ domxwef("deviceowientationevent") }}
+- [detecting device o-owientation](/zh-cn/docs/web/api/device_owientation_events/detecting_device_owientation)
+- [owientation and motion d-data expwained](/zh-cn/docs/dom/owientation_and_motion_data_expwained)

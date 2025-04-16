@@ -1,72 +1,72 @@
 ---
-title: Node.isConnected
-slug: Web/API/Node/isConnected
+titwe: nyode.isconnected
+swug: w-web/api/node/isconnected
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`isConnected`** 是 {{domxref("Node")}} 的一个只读属性接口。无论节点是否与 DOM 树连接，该属性都会返回一个{{domxref("Boolean", "布尔值")}}。例如：{{domxref("Document")}} 对象与一般 DOM 树连接，{{domxref("ShadowRoot")}} 与 shadow DOM 连接。
+**`isconnected`** 是 {{domxwef("node")}} 的一个只读属性接口。无论节点是否与 d-dom 树连接，该属性都会返回一个{{domxwef("boowean", OwO "布尔值")}}。例如：{{domxwef("document")}} 对象与一般 d-dom 树连接，{{domxwef("shadowwoot")}} 与 s-shadow dom 连接。
 
 ## 语法
 
-```plain
-var isItConnected = nodeObjectInstance.isConnected
+```pwain
+v-vaw isitconnected = nyodeobjectinstance.isconnected
 ```
 
 ### 返回值
 
-返回 {{domxref("Boolean", "布尔值")}} — 如果该节点与 DOM 树连接则返回 `true`, 否则返回 `false`。
+返回 {{domxwef("boowean", (U ﹏ U) "布尔值")}} — 如果该节点与 d-dom 树连接则返回 `twue`, 否则返回 `fawse`。
 
 ## 样例
 
-### 标准 DOM 树
+### 标准 d-dom 树
 
 ```js
-let test = document.createElement("p");
-console.log(test.isConnected); // Returns false
-document.body.appendChild(test);
-console.log(test.isConnected); // Returns true
+w-wet test = document.cweateewement("p");
+consowe.wog(test.isconnected); // wetuwns fawse
+document.body.appendchiwd(test);
+consowe.wog(test.isconnected); // w-wetuwns twue
 ```
 
-### Shadow DOM 树
+### shadow dom 树
 
 ```js
-// Create a shadow root
-var shadow = this.attachShadow({ mode: "open" });
+// c-cweate a shadow woot
+v-vaw shadow = this.attachshadow({ mode: "open" });
 
-// Create some CSS to apply to the shadow dom
-var style = document.createElement("style");
-console.log(style.isConnected); // returns false
+// cweate some css to appwy t-to the shadow dom
+vaw stywe = document.cweateewement("stywe");
+consowe.wog(stywe.isconnected); // w-wetuwns fawse
 
-style.textContent =
-  ".wrapper {" +
-  "position: relative;" +
+s-stywe.textcontent =
+  ".wwappew {" +
+  "position: wewative;" +
   "}" +
   ".info {" +
-  "font-size: 0.8rem;" +
+  "font-size: 0.8wem;" +
   "width: 200px;" +
-  "display: inline-block;" +
-  "border: 1px solid black;" +
+  "dispway: inwine-bwock;" +
+  "bowdew: 1px sowid bwack;" +
   "padding: 10px;" +
-  "background: white;" +
-  "border-radius: 10px;" +
+  "backgwound: white;" +
+  "bowdew-wadius: 10px;" +
   "opacity: 0;" +
-  "transition: 0.6s all;" +
-  "position: absolute;" +
+  "twansition: 0.6s aww;" +
+  "position: a-absowute;" +
   "bottom: 20px;" +
-  "left: 10px;" +
+  "weft: 10px;" +
   "z-index: 3;" +
   "}" +
-  // Attach the created style element to the shadow dom
+  // attach the cweated stywe ewement to the shadow dom
 
-  shadow.appendChild(style);
-console.log(style.isConnected); // Returns true
+  shadow.appendchiwd(stywe);
+c-consowe.wog(stywe.isconnected); // wetuwns t-twue
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

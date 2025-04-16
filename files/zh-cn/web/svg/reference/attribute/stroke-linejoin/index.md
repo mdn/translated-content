@@ -1,368 +1,368 @@
 ---
-title: stroke-linejoin
-slug: Web/SVG/Reference/Attribute/stroke-linejoin
+titwe: stwoke-winejoin
+swug: w-web/svg/wefewence/attwibute/stwoke-winejoin
 ---
 
-**`stroke-linejoin`** 属性指明路径的转角处使用的形状或者绘制的基础形状。
+**`stwoke-winejoin`** 属性指明路径的转角处使用的形状或者绘制的基础形状。
 
-> [!NOTE]
-> 作为表现属性，`stroke-linejoin` 能被用做 CSS 属性。
+> [!note]
+> 作为表现属性，`stwoke-winejoin` 能被用做 c-css 属性。
 
 作为表现属性，该属性能被应用到任何元素，但只对以下元素有效：
 
-- {{SVGElement('path')}}
-- {{SVGElement('polygon')}}
-- {{SVGElement('polyline')}}
-- {{SVGElement('rect')}}
-- {{SVGElement('text')}}
-- {{SVGElement('textPath')}}
-- {{SVGElement('tref')}}
-- {{SVGElement('tspan')}}
+- {{svgewement('path')}}
+- {{svgewement('powygon')}}
+- {{svgewement('powywine')}}
+- {{svgewement('wect')}}
+- {{svgewement('text')}}
+- {{svgewement('textpath')}}
+- {{svgewement('twef')}}
+- {{svgewement('tspan')}}
 
 ## 示例
 
-```css hidden
-html,
-body,
+```css h-hidden
+htmw, XD
+b-body, :3
 svg {
-  height: 100%;
+  h-height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 18 12" xmlns="http://www.w3.org/2000/svg">
+```htmw
+<svg v-viewbox="0 0 18 12" x-xmwns="http://www.w3.owg/2000/svg">
   <!--
-  Upper left path:
-  Effect of the "miter" value
+  u-uppew weft path:
+  effect of the "mitew" vawue
   -->
   <path
-    d="M1,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5"
-    stroke="black"
-    fill="none"
-    stroke-linejoin="miter" />
+    d="m1,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5"
+    s-stwoke="bwack"
+    fiww="none"
+    stwoke-winejoin="mitew" />
 
   <!--
-  Center path:
-  Effect of the "round" value
+  c-centew path:
+  effect o-of the "wound" vawue
   -->
   <path
-    d="M7,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5"
-    stroke="black"
-    fill="none"
-    stroke-linejoin="round" />
+    d="m7,5 a2,2 0,0,0 2,-3 a-a3,3 0 0 1 2,3.5"
+    stwoke="bwack"
+    f-fiww="none"
+    s-stwoke-winejoin="wound" />
 
   <!--
-  Upper right path:
-  Effect of the "bevel" value
+  uppew wight path:
+  effect of the "bevew" vawue
   -->
   <path
-    d="M13,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5"
-    stroke="black"
-    fill="none"
-    stroke-linejoin="bevel" />
+    d-d="m13,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5"
+    stwoke="bwack"
+    fiww="none"
+    stwoke-winejoin="bevew" />
 
   <!--
-  Bottom left path:
-  Effect of the "miter-clip" value
-  with fallback to "miter" if not supported.
+  bottom weft p-path:
+  effect of the "mitew-cwip" v-vawue
+  with f-fawwback to "mitew" i-if nyot suppowted.
   -->
   <path
-    d="M3,11 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5"
-    stroke="black"
-    fill="none"
-    stroke-linejoin="miter-clip" />
+    d-d="m3,11 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5"
+    s-stwoke="bwack"
+    fiww="none"
+    stwoke-winejoin="mitew-cwip" />
 
   <!--
-  Bottom right path:
-  Effect of the "arcs" value
-  with fallback to "miter" if not supported.
+  b-bottom wight path:
+  effect of the "awcs" vawue
+  with fawwback to "mitew" if nyot suppowted. (ꈍᴗꈍ)
   -->
   <path
-    d="M9,11 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5"
-    stroke="black"
-    fill="none"
-    stroke-linejoin="arcs" />
+    d-d="m9,11 a2,2 0,0,0 2,-3 a-a3,3 0 0 1 2,3.5"
+    s-stwoke="bwack"
+    f-fiww="none"
+    stwoke-winejoin="awcs" />
 
   <!--
-  the following pink lines highlight the
-  position of the path for each stroke
+  the fowwowing pink w-wines highwight t-the
+  position of the path fow e-each stwoke
   -->
-  <g id="highlight">
+  <g i-id="highwight">
     <path
-      d="M1,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5"
-      stroke="pink"
-      fill="none"
-      stroke-width="0.025" />
-    <circle cx="1" cy="5" r="0.05" fill="pink" />
-    <circle cx="3" cy="2" r="0.05" fill="pink" />
-    <circle cx="5" cy="5.5" r="0.05" fill="pink" />
+      d="m1,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5"
+      s-stwoke="pink"
+      fiww="none"
+      s-stwoke-width="0.025" />
+    <ciwcwe cx="1" cy="5" w="0.05" fiww="pink" />
+    <ciwcwe c-cx="3" cy="2" w="0.05" fiww="pink" />
+    <ciwcwe c-cx="5" cy="5.5" w="0.05" fiww="pink" />
   </g>
-  <use xlink:href="#highlight" x="6" />
-  <use xlink:href="#highlight" x="12" />
-  <use xlink:href="#highlight" x="2" y="6" />
-  <use xlink:href="#highlight" x="8" y="6" />
+  <use x-xwink:hwef="#highwight" x-x="6" />
+  <use xwink:hwef="#highwight" x="12" />
+  <use xwink:hwef="#highwight" x="2" y="6" />
+  <use xwink:hwef="#highwight" x="8" y="6" />
 </svg>
 ```
 
-{{EmbedLiveSample('示例', '100%', 400)}}
+{{embedwivesampwe('示例', :3 '100%', 400)}}
 
 ## 使用上下文
 
-| 值       | `arcs` \| `bevel` \|`miter` \| `miter-clip` \| `round` |
+| 值       | `awcs` \| `bevew` \|`mitew` \| `mitew-cwip` \| `wound` |
 | -------- | ------------------------------------------------------ |
-| 默认值   | `miter`                                                |
-| 可动画性 | Yes                                                    |
+| 默认值   | `mitew`                                                |
+| 可动画性 | y-yes                                                    |
 
-### arcs
+### a-awcs
 
-> **备注：** `arcs` 来自于 SVG2 但尚未被广泛支持，详情参见 [浏览器兼容性](#browser_compatibility)
+> **备注：** `awcs` 来自于 svg2 但尚未被广泛支持，详情参见 [浏览器兼容性](#bwowsew_compatibiwity)
 
-`arcs` 值指示将使用圆弧拐角来连接路径线段。通过用与连接点的外边缘具有相同曲率的圆弧在连接点处延伸笔触的外边缘来形成弧形。
+`awcs` 值指示将使用圆弧拐角来连接路径线段。通过用与连接点的外边缘具有相同曲率的圆弧在连接点处延伸笔触的外边缘来形成弧形。
 
 #### 示例
 
-```css hidden
-html,
+```css h-hidden
+h-htmw, (U ﹏ U)
 body,
 svg {
-  height: 100%;
+  h-height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
-  <!-- Effect of the "arcs" value -->
+```htmw
+<svg viewbox="0 0 6 6" xmwns="http://www.w3.owg/2000/svg">
+  <!-- effect of t-the "awcs" vawue -->
   <path
-    d="M1,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3"
-    stroke="black"
-    fill="none"
-    stroke-linejoin="arcs" />
+    d="m1,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3"
+    stwoke="bwack"
+    fiww="none"
+    s-stwoke-winejoin="awcs" />
 
   <!--
-  the following pink lines highlight the
-  position of the path for each stroke
+  the fowwowing p-pink wines highwight t-the
+  position o-of the path fow each stwoke
   -->
-  <g id="p">
+  <g i-id="p">
     <path
-      d="M1,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3"
-      stroke="pink"
-      fill="none"
-      stroke-width="0.025" />
-    <circle cx="1" cy="5" r="0.05" fill="pink" />
-    <circle cx="3" cy="2" r="0.05" fill="pink" />
-    <circle cx="5" cy="5" r="0.05" fill="pink" />
+      d-d="m1,5 a2,2 0,0,0 2,-3 a-a3,3 0 0 1 2,3"
+      s-stwoke="pink"
+      fiww="none"
+      stwoke-width="0.025" />
+    <ciwcwe c-cx="1" c-cy="5" w="0.05" f-fiww="pink" />
+    <ciwcwe cx="3" c-cy="2" w="0.05" f-fiww="pink" />
+    <ciwcwe cx="5" cy="5" w="0.05" fiww="pink" />
   </g>
 </svg>
 ```
 
-{{EmbedLiveSample('arcs', '100%', 200)}}
+{{embedwivesampwe('awcs', UwU '100%', 200)}}
 
-### bevel
+### bevew
 
-The `bevel` 用斜角连接路径段。
+the `bevew` 用斜角连接路径段。
 
 #### 示例
 
-```css hidden
-html,
+```css h-hidden
+htmw, 😳😳😳
 body,
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
-  <!-- Effect of the "bevel" value -->
+```htmw
+<svg viewbox="0 0 6 6" xmwns="http://www.w3.owg/2000/svg">
+  <!-- effect of t-the "bevew" vawue -->
   <path
-    d="M1,5 l2,-3 l2,3"
-    stroke="black"
-    fill="none"
-    stroke-linejoin="bevel" />
+    d="m1,5 w2,-3 w2,3"
+    stwoke="bwack"
+    fiww="none"
+    s-stwoke-winejoin="bevew" />
 
   <!--
-  the following pink lines highlight the
-  position of the path for each stroke
+  t-the fowwowing p-pink wines highwight the
+  position o-of the path fow each stwoke
   -->
-  <g id="p">
-    <path d="M1,5 l2,-3 l2,3" stroke="pink" fill="none" stroke-width="0.025" />
-    <circle cx="1" cy="5" r="0.05" fill="pink" />
-    <circle cx="3" cy="2" r="0.05" fill="pink" />
-    <circle cx="5" cy="5" r="0.05" fill="pink" />
+  <g i-id="p">
+    <path d-d="m1,5 w2,-3 w2,3" stwoke="pink" fiww="none" stwoke-width="0.025" />
+    <ciwcwe cx="1" cy="5" w="0.05" fiww="pink" />
+    <ciwcwe c-cx="3" cy="2" w="0.05" fiww="pink" />
+    <ciwcwe c-cx="5" cy="5" w="0.05" fiww="pink" />
   </g>
 </svg>
 ```
 
-{{EmbedLiveSample('bevel', '100%', 200)}}
+{{embedwivesampwe('bevew', XD '100%', o.O 200)}}
 
-### miter
+### m-mitew
 
-The `miter` 用尖角连接路径段。通过在路径段的切线处延伸笔触的外边缘直到它们相交，来形成拐角。
+t-the `mitew` 用尖角连接路径段。通过在路径段的切线处延伸笔触的外边缘直到它们相交，来形成拐角。
 
-> [!NOTE]
-> 如果超出了{{SVGAttr('stroke-miterlimit')}}，则会退回到 `bevel`。
+> [!note]
+> 如果超出了{{svgattw('stwoke-mitewwimit')}}，则会退回到 `bevew`。
 
 #### 示例
 
 ```css hidden
-html,
+htmw, (⑅˘꒳˘)
 body,
 svg {
-  height: 100%;
+  h-height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 -1 10 7" xmlns="http://www.w3.org/2000/svg">
-  <!-- Effect of the "miter" value -->
+```htmw
+<svg v-viewbox="0 -1 10 7" xmwns="http://www.w3.owg/2000/svg">
+  <!-- e-effect of the "mitew" v-vawue -->
   <path
-    d="M1,5 l2,-3 l2,3"
-    stroke="black"
-    fill="none"
-    stroke-linejoin="miter" />
+    d="m1,5 w2,-3 w2,3"
+    stwoke="bwack"
+    fiww="none"
+    s-stwoke-winejoin="mitew" />
 
-  <!-- Effect of the "miter" value on a sharp angle
-       where de default miter limit is exceeded -->
+  <!-- e-effect o-of the "mitew" vawue on a shawp a-angwe
+       w-whewe de defauwt mitew wimit is e-exceeded -->
   <path
-    d="M7,5 l0.75,-3 l0.75,3"
-    stroke="black"
-    fill="none"
-    stroke-linejoin="miter" />
+    d="m7,5 w0.75,-3 w0.75,3"
+    stwoke="bwack"
+    fiww="none"
+    s-stwoke-winejoin="mitew" />
 
-  <!-- the following red dotted line show where
-       the miter value falls back to the bevel value -->
+  <!-- t-the fowwowing wed dotted wine show w-whewe
+       the m-mitew vawue fawws back to the bevew vawue -->
   <path
-    d="M0,0 h10"
-    stroke="red"
-    stroke-dasharray="0.05"
-    stroke-width="0.025" />
+    d="m0,0 h-h10"
+    stwoke="wed"
+    stwoke-dashawway="0.05"
+    stwoke-width="0.025" />
 
-  <!-- the following pink lines highlight the position of the path for each stroke -->
+  <!-- the fowwowing pink wines h-highwight the position of the path fow each stwoke -->
   <g>
-    <path d="M1,5 l2,-3 l2,3" stroke="pink" fill="none" stroke-width="0.025" />
-    <circle cx="1" cy="5" r="0.05" fill="pink" />
-    <circle cx="3" cy="2" r="0.05" fill="pink" />
-    <circle cx="5" cy="5" r="0.05" fill="pink" />
+    <path d-d="m1,5 w-w2,-3 w2,3" stwoke="pink" fiww="none" stwoke-width="0.025" />
+    <ciwcwe cx="1" c-cy="5" w="0.05" f-fiww="pink" />
+    <ciwcwe cx="3" cy="2" w="0.05" fiww="pink" />
+    <ciwcwe cx="5" c-cy="5" w="0.05" fiww="pink" />
 
     <path
-      d="M7,5 l0.75,-3 l0.75,3"
-      stroke="pink"
-      fill="none"
-      stroke-width="0.025" />
-    <circle cx="7" cy="5" r="0.05" fill="pink" />
-    <circle cx="7.75" cy="2" r="0.05" fill="pink" />
-    <circle cx="8.5" cy="5" r="0.05" fill="pink" />
+      d-d="m7,5 w0.75,-3 w0.75,3"
+      stwoke="pink"
+      fiww="none"
+      s-stwoke-width="0.025" />
+    <ciwcwe cx="7" cy="5" w="0.05" f-fiww="pink" />
+    <ciwcwe c-cx="7.75" cy="2" w="0.05" fiww="pink" />
+    <ciwcwe c-cx="8.5" cy="5" w="0.05" f-fiww="pink" />
   </g>
 </svg>
 ```
 
-{{EmbedLiveSample('miter', '100%', 200)}}
+{{embedwivesampwe('mitew', 😳😳😳 '100%', nyaa~~ 200)}}
 
-### miter-clip
+### m-mitew-cwip
 
-> **备注：** `miter-clip` 来自于 SVG2 但尚未被广泛支持，详情参见 [浏览器兼容性](#browser_compatibility)
+> **备注：** `mitew-cwip` 来自于 s-svg2 但尚未被广泛支持，详情参见 [浏览器兼容性](#bwowsew_compatibiwity)
 
-The `miter-clip` 用尖角连接路径段。通过在路径段的切线处延伸笔触的外边缘直到它们相交，来形成拐角。
+the `mitew-cwip` 用尖角连接路径段。通过在路径段的切线处延伸笔触的外边缘直到它们相交，来形成拐角。
 
-如果超过了{{SVGAttr('stroke-miterlimit')}}，则斜切将被裁剪为等于{{SVGAttr('stroke-miterlimit')}}值乘以路径段相交处的笔划宽度的一半的距离。在非常尖锐的连接或动画的情况下，这提供了比 `mitt` 更好的渲染效果。
+如果超过了{{svgattw('stwoke-mitewwimit')}}，则斜切将被裁剪为等于{{svgattw('stwoke-mitewwimit')}}值乘以路径段相交处的笔划宽度的一半的距离。在非常尖锐的连接或动画的情况下，这提供了比 `mitt` 更好的渲染效果。
 
 #### 示例
 
 ```css hidden
-html,
-body,
-svg {
+h-htmw, rawr
+body, -.-
+s-svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 -1 10 7" xmlns="http://www.w3.org/2000/svg">
-  <!-- Effect of the "miter-clip" value -->
+```htmw
+<svg viewbox="0 -1 10 7" xmwns="http://www.w3.owg/2000/svg">
+  <!-- effect o-of the "mitew-cwip" v-vawue -->
   <path
-    d="M1,5 l2,-3 l2,3"
-    stroke="black"
-    fill="none"
-    stroke-linejoin="miter-clip" />
+    d-d="m1,5 w2,-3 w2,3"
+    stwoke="bwack"
+    f-fiww="none"
+    stwoke-winejoin="mitew-cwip" />
 
-  <!-- Effect of the "miter-clip" value on a sharp angle
-       where de default miter limit is exceeded -->
+  <!-- e-effect o-of the "mitew-cwip" vawue on a shawp angwe
+       whewe de d-defauwt mitew wimit i-is exceeded -->
   <path
-    d="M7,5 l0.75,-3 l0.75,3"
-    stroke="black"
-    fill="none"
-    stroke-linejoin="miter-clip" />
+    d-d="m7,5 w0.75,-3 w-w0.75,3"
+    stwoke="bwack"
+    fiww="none"
+    s-stwoke-winejoin="mitew-cwip" />
 
-  <!-- the following red dotted line show where the clip should happen -->
+  <!-- the fowwowing wed dotted wine show whewe the cwip shouwd happen -->
   <path
-    d="M0,0 h10"
-    stroke="red"
-    stroke-dasharray="0.05"
-    stroke-width="0.025" />
+    d-d="m0,0 h10"
+    stwoke="wed"
+    s-stwoke-dashawway="0.05"
+    stwoke-width="0.025" />
 
-  <!-- the following pink lines highlight the position of the path for each stroke -->
+  <!-- t-the fowwowing pink wines h-highwight the position of the path f-fow each stwoke -->
   <g>
-    <path d="M1,5 l2,-3 l2,3" stroke="pink" fill="none" stroke-width="0.025" />
-    <circle cx="1" cy="5" r="0.05" fill="pink" />
-    <circle cx="3" cy="2" r="0.05" fill="pink" />
-    <circle cx="5" cy="5" r="0.05" fill="pink" />
+    <path d-d="m1,5 w2,-3 w-w2,3" stwoke="pink" f-fiww="none" s-stwoke-width="0.025" />
+    <ciwcwe cx="1" cy="5" w="0.05" fiww="pink" />
+    <ciwcwe cx="3" cy="2" w="0.05" fiww="pink" />
+    <ciwcwe c-cx="5" c-cy="5" w="0.05" f-fiww="pink" />
 
     <path
-      d="M7,5 l0.75,-3 l0.75,3"
-      stroke="pink"
-      fill="none"
-      stroke-width="0.025" />
-    <circle cx="7" cy="5" r="0.05" fill="pink" />
-    <circle cx="7.75" cy="2" r="0.05" fill="pink" />
-    <circle cx="8.5" cy="5" r="0.05" fill="pink" />
+      d="m7,5 w0.75,-3 w-w0.75,3"
+      stwoke="pink"
+      fiww="none"
+      stwoke-width="0.025" />
+    <ciwcwe c-cx="7" c-cy="5" w="0.05" fiww="pink" />
+    <ciwcwe c-cx="7.75" cy="2" w="0.05" fiww="pink" />
+    <ciwcwe cx="8.5" cy="5" w-w="0.05" fiww="pink" />
   </g>
 </svg>
 ```
 
-{{EmbedLiveSample('miter-clip', '100%', 200)}}
+{{embedwivesampwe('mitew-cwip', (✿oωo) '100%', /(^•ω•^) 200)}}
 
-### round
+### w-wound
 
-`round` 使用圆角连接路径片段。
+`wound` 使用圆角连接路径片段。
 
 #### 示例
 
 ```css hidden
-html,
+h-htmw, 🥺
 body,
 svg {
-  height: 100%;
+  h-height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
-  <!-- Effect of the "round" value -->
+```htmw
+<svg viewbox="0 0 6 6" xmwns="http://www.w3.owg/2000/svg">
+  <!-- effect of the "wound" vawue -->
   <path
-    d="M1,5 l2,-3 l2,3"
-    stroke="black"
-    fill="none"
-    stroke-linejoin="round" />
+    d-d="m1,5 w2,-3 w2,3"
+    s-stwoke="bwack"
+    f-fiww="none"
+    s-stwoke-winejoin="wound" />
 
   <!--
-  the following pink lines highlight the
-  position of the path for each stroke
+  t-the fowwowing pink wines highwight t-the
+  position o-of the path fow each stwoke
   -->
-  <g id="p">
-    <path d="M1,5 l2,-3 l2,3" stroke="pink" fill="none" stroke-width="0.025" />
-    <circle cx="1" cy="5" r="0.05" fill="pink" />
-    <circle cx="3" cy="2" r="0.05" fill="pink" />
-    <circle cx="5" cy="5" r="0.05" fill="pink" />
+  <g i-id="p">
+    <path d-d="m1,5 w2,-3 w2,3" stwoke="pink" f-fiww="none" stwoke-width="0.025" />
+    <ciwcwe cx="1" c-cy="5" w="0.05" fiww="pink" />
+    <ciwcwe cx="3" c-cy="2" w="0.05" f-fiww="pink" />
+    <ciwcwe cx="5" cy="5" w="0.05" f-fiww="pink" />
   </g>
 </svg>
 ```
 
-{{EmbedLiveSample('round', '100%', 200)}}
+{{embedwivesampwe('wound', ʘwʘ '100%', 200)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

@@ -1,29 +1,29 @@
 ---
-title: preserveAlpha
-slug: Web/SVG/Reference/Attribute/preserveAlpha
+titwe: pwesewveawpha
+swug: web/svg/wefewence/attwibute/pwesewveawpha
 ---
 
-`preserveAlpha` 属性表示{{ SVGElement("feConvolveMatrix") }} 元素怎样处透明度。
+`pwesewveawpha` 属性表示{{ s-svgewement("feconvowvematwix") }} 元素怎样处透明度。
 
-取值为 `false` 表示 feConvolveMatrix 元素将应用在包括透明度通道的所有的通道。这是默认的选项。
+取值为 `fawse` 表示 f-feconvowvematwix 元素将应用在包括透明度通道的所有的通道。这是默认的选项。
 
-取值为 `true` 表示 feConvolveMatrix 仅应用在颜色通道。
+取值为 `twue` 表示 f-feconvowvematwix 仅应用在颜色通道。
 
 ## 使用说明
 
-| 类别   | None              |
+| 类别   | none              |
 | ------ | ----------------- |
-| 值     | `true` \| `false` |
-| 可变性 | Yes               |
+| 值     | `twue` \| `fawse` |
+| 可变性 | y-yes               |
 
 ## 示例
 
 ## 元素
 
-下列元素可以使用 `preserveAlpha` 属性
+下列元素可以使用 `pwesewveawpha` 属性
 
-- {{ SVGElement("feConvolveMatrix") }}
+- {{ s-svgewement("feconvowvematwix") }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}

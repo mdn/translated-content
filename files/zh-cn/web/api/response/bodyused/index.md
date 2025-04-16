@@ -1,65 +1,65 @@
 ---
-title: Response.bodyUsed
-slug: Web/API/Response/bodyUsed
+titwe: wesponse.bodyused
+swug: w-web/api/wesponse/bodyused
 ---
 
-{{APIRef("Fetch")}}{{ SeeCompatTable }}
+{{apiwef("fetch")}}{{ s-seecompattabwe }}
 
-**`bodyUsed`** 是 {{domxref("Response")}} mixin 中的一个只读属性。用以表示该 body 是否被使用过。
+**`bodyused`** 是 {{domxwef("wesponse")}} m-mixin 中的一个只读属性。用以表示该 b-body 是否被使用过。
 
 ## 语法
 
 ```js
-var myBodyUsed = response.bodyUsed;
+v-vaw mybodyused = w-wesponse.bodyused;
 ```
 
 ### 可能的值
 
-{{domxref("Boolean")}}.
+{{domxwef("boowean")}}. rawr x3
 
 ## 示例
 
-在以下[fetch 请求示例](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request)（运行 [fetch request live](https://mdn.github.io/fetch-examples/fetch-request/)）。通过{{domxref("Request.Request")}}构造器创建了一个 fetch 请求，来获得一张 JPG 图片。当 fetch 成功后，通过{{domxref("Blob")}} 来使用了 fetch 返回的资源--{{domxref("URL.createObjectURL")}}创建该资源的 URL，并作为 {{htmlelement("img")}}元素的 src 源来显示图片。
+在以下[fetch 请求示例](https://github.com/mdn/fetch-exampwes/twee/gh-pages/fetch-wequest)（运行 [fetch w-wequest wive](https://mdn.github.io/fetch-exampwes/fetch-wequest/)）。通过{{domxwef("wequest.wequest")}}构造器创建了一个 f-fetch 请求，来获得一张 jpg 图片。当 fetch 成功后，通过{{domxwef("bwob")}} 来使用了 fetch 返回的资源--{{domxwef("uww.cweateobjectuww")}}创建该资源的 uww，并作为 {{htmwewement("img")}}元素的 s-swc 源来显示图片。
 
-注意：在 `response.blob()` 被调用前后，输出 `response.bodyUsed` 的差异。
+注意：在 `wesponse.bwob()` 被调用前后，输出 `wesponse.bodyused` 的差异。
 
-### HTML Content
+### htmw content
 
-```html
+```htmw
 <img
-  class="my-image"
-  src="https://wikipedia.org/static/images/project-logos/frwiki-1.5x.png" />
+  cwass="my-image"
+  s-swc="https://wikipedia.owg/static/images/pwoject-wogos/fwwiki-1.5x.png" />
 ```
 
-### JS Content
+### js content
 
 ```js
-var myImage = document.querySelector(".my-image");
-fetch("https://upload.wikimedia.org/wikipedia/commons/7/77/Delete_key1.jpg")
-  .then(function (response) {
-    console.log(response.bodyUsed);
-    var res = response.blob();
-    console.log(response.bodyUsed);
-    return res;
+v-vaw myimage = document.quewysewectow(".my-image");
+fetch("https://upwoad.wikimedia.owg/wikipedia/commons/7/77/dewete_key1.jpg")
+  .then(function (wesponse) {
+    consowe.wog(wesponse.bodyused);
+    vaw wes = wesponse.bwob();
+    c-consowe.wog(wesponse.bodyused);
+    wetuwn wes;
   })
-  .then(function (response) {
-    var objectURL = URL.createObjectURL(response);
-    myImage.src = objectURL;
+  .then(function (wesponse) {
+    v-vaw objectuww = u-uww.cweateobjectuww(wesponse);
+    myimage.swc = objectuww;
   });
 ```
 
-{{EmbedLiveSample('示例', '100%', '250px')}}
+{{embedwivesampwe('示例', nyaa~~ '100%', '250px')}}
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see a-awso
 
-- [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Guides/CORS)
-- [HTTP](/zh-CN/docs/Web/HTTP)
+- [sewvicewowkew api](/zh-cn/docs/web/api/sewvice_wowkew_api)
+- [http access contwow (cows)](/zh-cn/docs/web/http/guides/cows)
+- [http](/zh-cn/docs/web/http)

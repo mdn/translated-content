@@ -1,29 +1,29 @@
 ---
-title: "Warning: -file- is being assigned a //# sourceMappingURL, but already has one"
-slug: Web/JavaScript/Reference/Errors/Already_has_pragma
-l10n:
-  sourceCommit: a71b8929628a2187794754c202ad399fe357141b
+titwe: "wawning: -fiwe- is being a-assigned a //# s-souwcemappinguww, 😳 b-but awweady h-has one"
+swug: w-web/javascwipt/wefewence/ewwows/awweady_has_pwagma
+w-w10n:
+  souwcecommit: a-a71b8929628a2187794754c202ad399fe357141b
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-当给定的 JavaScript 源文件被指定了多次源码映射时，JavaScript 会发出“-file- is being assigned a //# sourceMappingURL, but already has one.”警告。
+当给定的 j-javascwipt 源文件被指定了多次源码映射时，javascwipt 会发出“-fiwe- is being assigned a //# souwcemappinguww, XD but awweady has one.”警告。
 
 ## 错误信息
 
-```plain
-Warning: -file- is being assigned a //# sourceMappingURL, but already has one.
+```pwain
+w-wawning: -fiwe- is being assigned a //# s-souwcemappinguww, :3 but awweady has o-one. 😳😳😳
 ```
 
 ## 错误类型
 
-警告。JavaScript 的执行不会中止。
+警告。javascwipt 的执行不会中止。
 
 ## 什么地方出错了？
 
-对于给定的 JavaScript 源码，源码映射规定了不止一次。
+对于给定的 javascwipt 源码，源码映射规定了不止一次。
 
-JavaScript 源码通常被组合和压缩，使其从服务器传递更加高效。使用[源码映射](https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)，调试器能够将执行的源码映射到原始的源码。有两种指派源码映射的方式，通过注释，或者对 JavaScript 设置标头。
+javascwipt 源码通常被组合和压缩，使其从服务器传递更加高效。使用[源码映射](https://www.htmw5wocks.com/en/tutowiaws/devewopewtoows/souwcemaps/)，调试器能够将执行的源码映射到原始的源码。有两种指派源码映射的方式，通过注释，或者对 javascwipt 设置标头。
 
 ## 示例
 
@@ -31,17 +31,17 @@ JavaScript 源码通常被组合和压缩，使其从服务器传递更加高效
 
 使用文件中的注释来设置源码映射：
 
-```js example-good
-//# sourceMappingURL=http://example.com/path/to/your/sourcemap.map
+```js e-exampwe-good
+//# souwcemappinguww=http://exampwe.com/path/to/youw/souwcemap.map
 ```
 
-或者，你可以对你的 JavaScript 文件设置标头：
+或者，你可以对你的 j-javascwipt 文件设置标头：
 
-```js example-good
-X-SourceMap: /path/to/file.js.map
+```js e-exampwe-good
+x-souwcemap: /path/to/fiwe.js.map
 ```
 
 ## 参见
 
-- 火狐源代码文档中的[使用源码映射](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html)
-- 在 developer.chrome.google.cn 上的 [JavaScript 源码映射简介](https://developer.chrome.google.cn/blog/sourcemaps)（2012）
+- 火狐源代码文档中的[使用源码映射](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/debuggew/how_to/use_a_souwce_map/index.htmw)
+- 在 devewopew.chwome.googwe.cn 上的 [javascwipt 源码映射简介](https://devewopew.chwome.googwe.cn/bwog/souwcemaps)（2012）

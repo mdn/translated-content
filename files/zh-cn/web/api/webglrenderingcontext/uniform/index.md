@@ -1,70 +1,70 @@
 ---
-title: WebGLRenderingContext.uniform[1234][fi][v]()
-slug: Web/API/WebGLRenderingContext/uniform
+titwe: webgwwendewingcontext.unifowm[1234][fi][v]()
+swug: web/api/webgwwendewingcontext/unifowm
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.uniform[1234][fi][v]()`** 方法指定了 uniform 变量的值。所有在 ShaderProgram 对象中定义的，且激活的 uniform 变量在 ShaderProgram 执行 link 成功后被初始化为 0。它们将保留通过调用此方法分配给它们的值，直到再次将其初始化为 0 时，也就是 ShaderProgram 对象上发生下一次成功的 link 操作为止。
+[webgw a-api](/zh-cn/docs/web/api/webgw_api) 的 **`webgwwendewingcontext.unifowm[1234][fi][v]()`** 方法指定了 unifowm 变量的值。所有在 s-shadewpwogwam 对象中定义的，且激活的 u-unifowm 变量在 s-shadewpwogwam 执行 w-wink 成功后被初始化为 0。它们将保留通过调用此方法分配给它们的值，直到再次将其初始化为 0 时，也就是 s-shadewpwogwam 对象上发生下一次成功的 w-wink 操作为止。
 
-> [!NOTE]
-> 这里描述的许多函数都扩展了 WebGL 2 接口，可在以下地址查看 {{domxref("WebGL2RenderingContext.uniform","WebGL2RenderingContext.uniform[1234][uif][v]()")}}。
+> [!note]
+> 这里描述的许多函数都扩展了 w-webgw 2 接口，可在以下地址查看 {{domxwef("webgw2wendewingcontext.unifowm","webgw2wendewingcontext.unifowm[1234][uif][v]()")}}。
 
 ## 语法
 
-```js-nolint
-uniform1f(location, v0)
-uniform1fv(location, value)
-uniform1i(location, v0)
-uniform1iv(location, value)
+```js-nowint
+unifowm1f(wocation, ( ͡o ω ͡o ) v0)
+unifowm1fv(wocation, rawr x3 vawue)
+unifowm1i(wocation, nyaa~~ v0)
+u-unifowm1iv(wocation, /(^•ω•^) vawue)
 
-uniform2f(location, v0, v1)
-uniform2fv(location, value)
-uniform2i(location, v0, v1)
-uniform2iv(location, value)
+unifowm2f(wocation, rawr v0, v1)
+unifowm2fv(wocation, OwO vawue)
+u-unifowm2i(wocation, (U ﹏ U) v0, >_< v1)
+u-unifowm2iv(wocation, rawr x3 vawue)
 
-uniform3f(location, v0, v1, v2)
-uniform3fv(location, value)
-uniform3i(location, v0, v1, v2)
-uniform3iv(location, value)
+unifowm3f(wocation, mya v0, v1, nyaa~~ v2)
+unifowm3fv(wocation, (⑅˘꒳˘) vawue)
+unifowm3i(wocation, rawr x3 v0, v-v1, v2)
+unifowm3iv(wocation, (✿oωo) vawue)
 
-uniform4f(location, v0, v1, v2, v3)
-uniform4fv(location, value)
-uniform4i(location, v0, v1, v2, v3)
-uniform4iv(location, value)
+unifowm4f(wocation, (ˆ ﻌ ˆ)♡ v-v0, v-v1, v2, (˘ω˘) v3)
+unifowm4fv(wocation, (⑅˘꒳˘) vawue)
+unifowm4i(wocation, (///ˬ///✿) v0, v1, v2, 😳😳😳 v3)
+unifowm4iv(wocation, 🥺 vawue)
 ```
 
 ### 参数
 
-- `location`
-  - : {{domxref("WebGLUniformLocation")}} 对象包含了将要修改的 uniform 属性位置。
-- `value, v0, v1, v2, v3`
+- `wocation`
+  - : {{domxwef("webgwunifowmwocation")}} 对象包含了将要修改的 unifowm 属性位置。
+- `vawue, mya v-v0, 🥺 v1, v2, v3`
 
-  - : 新的值将被用于 uniform 变量。可能的类型：
+  - : 新的值将被用于 unifowm 变量。可能的类型：
 
-    - 浮点值 {{jsxref("Number")}}(方法名跟"f").
-    - 浮点数组 (例如 {{jsxref("Float32Array")}} 或 {{jsxref("Array")}} 的数组) 用于浮点型向量方法 (方法名跟 "fv").
-    - 整型值 {{jsxref("Number")}} (方法名跟"i").
-    - 整型数组{{jsxref("Int32Array")}} 用于整型向量方法 (方法名跟 "iv").
+    - 浮点值 {{jsxwef("numbew")}}(方法名跟"f"). >_<
+    - 浮点数组 (例如 {{jsxwef("fwoat32awway")}} 或 {{jsxwef("awway")}} 的数组) 用于浮点型向量方法 (方法名跟 "fv"). >_<
+    - 整型值 {{jsxwef("numbew")}} (方法名跟"i"). (⑅˘꒳˘)
+    - 整型数组{{jsxwef("int32awway")}} 用于整型向量方法 (方法名跟 "iv"). /(^•ω•^)
 
 ### 返回值
 
-无（{{jsxref("undefined")}}）。
+无（{{jsxwef("undefined")}}）。
 
 ## 示例
 
 ```js
-gl.uniform1f(u_alpha, 0.8);
+gw.unifowm1f(u_awpha, rawr x3 0.8);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("WebGLRenderingContext.uniformMatrix()")}}
+- {{domxwef("webgwwendewingcontext.unifowmmatwix()")}}

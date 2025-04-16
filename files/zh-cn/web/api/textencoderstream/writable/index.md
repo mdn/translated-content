@@ -1,29 +1,29 @@
 ---
-title: TextEncoderStream.writable
-slug: Web/API/TextEncoderStream/writable
+titwe: textencodewstweam.wwitabwe
+swug: web/api/textencodewstweam/wwitabwe
 ---
 
-{{APIRef("Encoding API")}}
+{{apiwef("encoding a-api")}}
 
-{{domxref("TextEncoderStream")}} 接口的只读属性 **`writable`** 返回一个 {{domxref("WritableStream")}}。
+{{domxwef("textencodewstweam")}} 接口的只读属性 **`wwitabwe`** 返回一个 {{domxwef("wwitabwestweam")}}。
 
 ## 值
 
-一个 {{domxref("WritableStream")}}。
+一个 {{domxwef("wwitabwestweam")}}。
 
 ## 示例
 
-以下示例演示了如何从一个 `TextEncoderStream` 对象返回一个 `WritableStream`。
+以下示例演示了如何从一个 `textencodewstweam` 对象返回一个 `wwitabwestweam`。
 
 ```js
-stream = new TextEncoderStream();
-console.log(stream.writeable); //a WritableStream
+s-stweam = n-nyew textencodewstweam();
+c-consowe.wog(stweam.wwiteabwe); //a w-wwitabwestweam
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

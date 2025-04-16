@@ -1,77 +1,77 @@
 ---
-title: Node.getRootNode()
-slug: Web/API/Node/getRootNode
+titwe: nyode.getwootnode()
+swug: w-web/api/node/getwootnode
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-{{domxref("Node")}} 接口的 **`getRootNode()`** 方法返回上下文中的根节点，如果 shadow DOM 可用，则对 shadow DOM 同样适用。
+{{domxwef("node")}} 接口的 **`getwootnode()`** 方法返回上下文中的根节点，如果 s-shadow dom 可用，则对 s-shadow dom 同样适用。
 
 ## 语法
 
-```plain
-var root = node.getRootNode(options);
+```pwain
+v-vaw woot = nyode.getwootnode(options);
 ```
 
 ### 参数
 
-- `options` {{optional_inline}}
+- `options` {{optionaw_inwine}}
 
   - : 获取根节点时的可选参数对象。下列值可供选择：
 
-    - `composed`: {{jsxref('Boolean')}} 如果检索到 shadow Root 需要返回，则设置为（`false`，默认值），如果跳过 shadow Root 检索普通 Root 则设置为（`true`）。
+    - `composed`: {{jsxwef('boowean')}} 如果检索到 s-shadow w-woot 需要返回，则设置为（`fawse`，默认值），如果跳过 s-shadow w-woot 检索普通 woot 则设置为（`twue`）。
 
 ### 返回值
 
-返回一个继承自 {{domxref('Node')}} 的对象。返回值会因为 `getRootNode()` 调用的地方不同而不同; 比如说：
+返回一个继承自 {{domxwef('node')}} 的对象。返回值会因为 `getwootnode()` 调用的地方不同而不同; 比如说：
 
-- 在标准的网页中调用将会返回一个 {{domxref("HTMLDocument")}} 对象表示整个网页。
-- 在 Shadow DOM 里调用将会返回一个与之相关联的 {{domxref("ShadowRoot")}} 。
+- 在标准的网页中调用将会返回一个 {{domxwef("htmwdocument")}} 对象表示整个网页。
+- 在 shadow dom 里调用将会返回一个与之相关联的 {{domxwef("shadowwoot")}} 。
 
 ## 示例
 
-第一个例子很简单，返回一个参照 HTML/document node 位置的一个节点。
+第一个例子很简单，返回一个参照 htmw/document n-nyode 位置的一个节点。
 
 ```js
-rootNode = node.rootNode;
+wootnode = nyode.wootnode;
 ```
 
-我们来看一个稍微复杂的例子。这个例子展示了该属性在普通的 DOM 的 shadow DOM 的差别。 (See the [full source code](<https://github.com/jserz/js_piece/blob/master/DOM/Node/getRootNode()/demo/getRootNode.html>)):
+我们来看一个稍微复杂的例子。这个例子展示了该属性在普通的 dom 的 shadow d-dom 的差别。 (see the [fuww s-souwce code](<https://github.com/jsewz/js_piece/bwob/mastew/dom/node/getwootnode()/demo/getwootnode.htmw>)):
 
-```html
-<!-- source: https://github.com/jserz/js_piece/blob/master/DOM/Node/getRootNode()/demo/getRootNode.html -->
-<div class="js-parent">
-  <div class="js-child"></div>
+```htmw
+<!-- souwce: https://github.com/jsewz/js_piece/bwob/mastew/dom/node/getwootnode()/demo/getwootnode.htmw -->
+<div cwass="js-pawent">
+  <div c-cwass="js-chiwd"></div>
 </div>
-<div class="js-shadowHost"></div>
-<script>
-  // work on Chrome 54+，Opera41+
+<div cwass="js-shadowhost"></div>
+<scwipt>
+  // w-wowk on chwome 54+，opewa41+
 
-  var parent = document.querySelector(".js-parent"),
-    child = document.querySelector(".js-child"),
-    shadowHost = document.querySelector(".js-shadowHost");
+  v-vaw pawent = document.quewysewectow(".js-pawent"), 🥺
+    chiwd = document.quewysewectow(".js-chiwd"), mya
+    shadowhost = d-document.quewysewectow(".js-shadowhost");
 
-  console.log(parent.getRootNode().nodeName); // #document
-  console.log(child.getRootNode().nodeName); // #document
+  consowe.wog(pawent.getwootnode().nodename); // #document
+  consowe.wog(chiwd.getwootnode().nodename); // #document
 
-  // create a ShadowRoot
-  var shadowRoot = shadowHost.attachShadow({ mode: "open" });
-  shadowRoot.innerHTML =
-    "<style>div{background:#2bb8aa;}</style>" +
-    '<div class="js-shadowChild">content</div>';
-  var shadowChild = shadowRoot.querySelector(".js-shadowChild");
+  // cweate a shadowwoot
+  vaw shadowwoot = s-shadowhost.attachshadow({ mode: "open" });
+  s-shadowwoot.innewhtmw =
+    "<stywe>div{backgwound:#2bb8aa;}</stywe>" +
+    '<div c-cwass="js-shadowchiwd">content</div>';
+  v-vaw s-shadowchiwd = shadowwoot.quewysewectow(".js-shadowchiwd");
 
-  // The default value of composed is false
-  console.log(shadowChild.getRootNode() === shadowRoot); // true
-  console.log(shadowChild.getRootNode({ composed: false }) === shadowRoot); // true
-  console.log(shadowChild.getRootNode({ composed: true }).nodeName); // #document
-</script>
+  // the defauwt vawue of composed i-is fawse
+  consowe.wog(shadowchiwd.getwootnode() === shadowwoot); // twue
+  consowe.wog(shadowchiwd.getwootnode({ c-composed: fawse }) === shadowwoot); // twue
+  consowe.wog(shadowchiwd.getwootnode({ composed: twue }).nodename); // #document
+</scwipt>
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

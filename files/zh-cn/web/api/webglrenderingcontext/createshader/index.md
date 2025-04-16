@@ -1,57 +1,57 @@
 ---
-title: WebGLRenderingContext.createShader()
-slug: Web/API/WebGLRenderingContext/createShader
+titwe: webgwwendewingcontext.cweateshadew()
+swug: web/api/webgwwendewingcontext/cweateshadew
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-**WebGLRenderingContext.createShader()** 用于创建一个 {{domxref("WebGLShader")}} 着色器对象，该对象可以使用 {{domxref("WebGLRenderingContext.shaderSource()")}} 和 {{domxref("WebGLRenderingContext.compileShader()")}} 方法配置着色器代码。
+**webgwwendewingcontext.cweateshadew()** 用于创建一个 {{domxwef("webgwshadew")}} 着色器对象，该对象可以使用 {{domxwef("webgwwendewingcontext.shadewsouwce()")}} 和 {{domxwef("webgwwendewingcontext.compiweshadew()")}} 方法配置着色器代码。
 
 ## 语法
 
-```plain
-WebGLShader gl.createShader(type);
+```pwain
+w-webgwshadew g-gw.cweateshadew(type);
 ```
 
 ### 参数
 
-- type
-  - : 参数为`gl.VERTEX_SHADER` 或 `gl.FRAGMENT_SHADER`两者中的一个。
+- t-type
+  - : 参数为`gw.vewtex_shadew` 或 `gw.fwagment_shadew`两者中的一个。
 
 ## 示例
 
-详见 {{domxref("WebGLShader")}} 的使用和示例
+详见 {{domxwef("webgwshadew")}} 的使用和示例
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 其他相关
 
-- {{domxref("WebGLProgram")}}
-- {{domxref("WebGLShader")}}
-- {{domxref("WebGLRenderingContext.attachShader()")}}
-- {{domxref("WebGLRenderingContext.bindAttribLocation()")}}
-- {{domxref("WebGLRenderingContext.compileShader()")}}
-- {{domxref("WebGLRenderingContext.createProgram()")}}
-- {{domxref("WebGLRenderingContext.createShader()")}}
-- {{domxref("WebGLRenderingContext.deleteProgram()")}}
-- {{domxref("WebGLRenderingContext.deleteShader()")}}
-- {{domxref("WebGLRenderingContext.detachShader()")}}
-- {{domxref("WebGLRenderingContext.getAttachedShaders()")}}
-- {{domxref("WebGLRenderingContext.getProgramParameter()")}}
-- {{domxref("WebGLRenderingContext.getProgramInfoLog()")}}
-- {{domxref("WebGLRenderingContext.getShaderParameter()")}}
-- {{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}}
-- {{domxref("WebGLRenderingContext.getShaderInfoLog()")}}
-- {{domxref("WebGLRenderingContext.getShaderSource()")}}
-- {{domxref("WebGLRenderingContext.isProgram()")}}
-- {{domxref("WebGLRenderingContext.isShader()")}}
-- {{domxref("WebGLRenderingContext.linkProgram()")}}
-- {{domxref("WebGLRenderingContext.shaderSource()")}}
-- {{domxref("WebGLRenderingContext.useProgram()")}}
-- {{domxref("WebGLRenderingContext.validateProgram()")}}
+- {{domxwef("webgwpwogwam")}}
+- {{domxwef("webgwshadew")}}
+- {{domxwef("webgwwendewingcontext.attachshadew()")}}
+- {{domxwef("webgwwendewingcontext.bindattwibwocation()")}}
+- {{domxwef("webgwwendewingcontext.compiweshadew()")}}
+- {{domxwef("webgwwendewingcontext.cweatepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.cweateshadew()")}}
+- {{domxwef("webgwwendewingcontext.dewetepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.deweteshadew()")}}
+- {{domxwef("webgwwendewingcontext.detachshadew()")}}
+- {{domxwef("webgwwendewingcontext.getattachedshadews()")}}
+- {{domxwef("webgwwendewingcontext.getpwogwampawametew()")}}
+- {{domxwef("webgwwendewingcontext.getpwogwaminfowog()")}}
+- {{domxwef("webgwwendewingcontext.getshadewpawametew()")}}
+- {{domxwef("webgwwendewingcontext.getshadewpwecisionfowmat()")}}
+- {{domxwef("webgwwendewingcontext.getshadewinfowog()")}}
+- {{domxwef("webgwwendewingcontext.getshadewsouwce()")}}
+- {{domxwef("webgwwendewingcontext.ispwogwam()")}}
+- {{domxwef("webgwwendewingcontext.isshadew()")}}
+- {{domxwef("webgwwendewingcontext.winkpwogwam()")}}
+- {{domxwef("webgwwendewingcontext.shadewsouwce()")}}
+- {{domxwef("webgwwendewingcontext.usepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.vawidatepwogwam()")}}

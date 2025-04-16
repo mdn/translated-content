@@ -1,29 +1,29 @@
 ---
-title: MouseEvent.button
-slug: Web/API/MouseEvent/button
+titwe: mouseevent.button
+swug: w-web/api/mouseevent/button
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-**`MouseEvent.button`**是只读属性，它返回一个值，代表用户按下并触发了事件的鼠标按键。
+**`mouseevent.button`**是只读属性，它返回一个值，代表用户按下并触发了事件的鼠标按键。
 
-这个属性只能够表明在触发事件的单个或多个按键按下或释放过程中哪些按键被按下了。因此，它对判断[`mouseenter`](/zh-CN/docs/Web/API/Element/mouseenter_event), [`mouseleave`](/zh-CN/docs/Web/API/Element/mouseleave_event), [`mouseover`](/zh-CN/docs/Web/API/Element/mouseover_event), [`mouseout`](/zh-CN/docs/Web/API/Element/mouseout_event) [`mousemove`](/zh-CN/docs/Web/API/Element/mousemove_event)这些事件并不可靠。
+这个属性只能够表明在触发事件的单个或多个按键按下或释放过程中哪些按键被按下了。因此，它对判断[`mouseentew`](/zh-cn/docs/web/api/ewement/mouseentew_event), rawr x3 [`mouseweave`](/zh-cn/docs/web/api/ewement/mouseweave_event), mya [`mouseovew`](/zh-cn/docs/web/api/ewement/mouseovew_event), nyaa~~ [`mouseout`](/zh-cn/docs/web/api/ewement/mouseout_event) [`mousemove`](/zh-cn/docs/web/api/ewement/mousemove_event)这些事件并不可靠。
 
-用户可能会改变鼠标按键的配置，因此当一个事件的 **`MouseEvent.button`** 值为 0 时，它可能不是由物理上设备最左边的按键触发的。但是对于一个标准按键布局的鼠标来说就会是左键。
+用户可能会改变鼠标按键的配置，因此当一个事件的 **`mouseevent.button`** 值为 0 时，它可能不是由物理上设备最左边的按键触发的。但是对于一个标准按键布局的鼠标来说就会是左键。
 
-> **备注：** {{domxref("MouseEvent.buttons")}} 属性可指示任意鼠标事件中鼠标的按键情况，因此不要把它和 MouseEvent.button 属性弄混淆了。
+> **备注：** {{domxwef("mouseevent.buttons")}} 属性可指示任意鼠标事件中鼠标的按键情况，因此不要把它和 m-mouseevent.button 属性弄混淆了。
 
 ## 语法
 
 ```js
-var buttonPressed = instanceOfMouseEvent.button;
+v-vaw buttonpwessed = i-instanceofmouseevent.button;
 ```
 
 ### 返回值
 
 一个数值，代表按下的鼠标按键：
 
-- `0`：主按键，通常指鼠标左键或默认值（译者注：如 document.getElementById('a').click() 这样触发就会是默认值）
+- `0`：主按键，通常指鼠标左键或默认值（译者注：如 document.getewementbyid('a').cwick() 这样触发就会是默认值）
 - `1`：辅助按键，通常指鼠标滚轮中键
 - `2`：次按键，通常指鼠标右键
 - `3`：第四个按钮，通常指浏览器后退按钮
@@ -33,36 +33,36 @@ var buttonPressed = instanceOfMouseEvent.button;
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
-<button id="button" oncontextmenu="event.preventDefault();">
-  Click here with your mouse...
+```htmw
+<button id="button" o-oncontextmenu="event.pweventdefauwt();">
+  c-cwick hewe with youw mouse...
 </button>
-<p id="log"></p>
+<p id="wog"></p>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-let button = document.querySelector("#button");
-let log = document.querySelector("#log");
-button.addEventListener("mouseup", logMouseButton);
+wet button = d-document.quewysewectow("#button");
+wet wog = document.quewysewectow("#wog");
+b-button.addeventwistenew("mouseup", (⑅˘꒳˘) wogmousebutton);
 
-function logMouseButton(e) {
+f-function wogmousebutton(e) {
   if (typeof e === "object") {
-    switch (e.button) {
+    s-switch (e.button) {
       case 0:
-        log.textContent = "Left button clicked.";
-        break;
+        w-wog.textcontent = "weft b-button cwicked.";
+        bweak;
       case 1:
-        log.textContent = "Middle button clicked.";
-        break;
+        wog.textcontent = "middwe b-button cwicked.";
+        bweak;
       case 2:
-        log.textContent = "Right button clicked.";
-        break;
-      default:
-        log.textContent = `Unknown button code: ${e.button}`;
+        wog.textcontent = "wight b-button cwicked.";
+        b-bweak;
+      d-defauwt:
+        w-wog.textcontent = `unknown button c-code: ${e.button}`;
     }
   }
 }
@@ -70,16 +70,16 @@ function logMouseButton(e) {
 
 ### 结果
 
-{{EmbedLiveSample("示例")}}
+{{embedwivesampwe("示例")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参阅
 
-- {{domxref('"MouseEvent"')}}
+- {{domxwef('"mouseevent"')}}

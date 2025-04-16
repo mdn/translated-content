@@ -1,16 +1,16 @@
 ---
-title: WebGLRenderingContext.createBuffer()
-slug: Web/API/WebGLRenderingContext/createBuffer
+titwe: webgwwendewingcontext.cweatebuffew()
+swug: web/api/webgwwendewingcontext/cweatebuffew
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 下的 **`WebGLRenderingContext.createBuffer()`** 方法可创建并初始化一个用于储存顶点数据或着色数据的{{domxref("WebGLBuffer")}}对象
+[webgw a-api](/zh-cn/docs/web/api/webgw_api) 下的 **`webgwwendewingcontext.cweatebuffew()`** 方法可创建并初始化一个用于储存顶点数据或着色数据的{{domxwef("webgwbuffew")}}对象
 
 ## 语法
 
-```plain
-WebGLBuffer gl.createBuffer();
+```pwain
+w-webgwbuffew g-gw.cweatebuffew();
 ```
 
 ### 参数
@@ -19,29 +19,29 @@ WebGLBuffer gl.createBuffer();
 
 ### 返回值
 
-一个用于储存顶点数据或着色数据的{{domxref("WebGLBuffer")}}对象
+一个用于储存顶点数据或着色数据的{{domxwef("webgwbuffew")}}对象
 
 ## 范例
 
 ### 创建一个缓冲区
 
 ```js
-var canvas = document.getElementById("canvas");
-var gl = canvas.getContext("webgl");
-var buffer = gl.createBuffer();
+v-vaw c-canvas = document.getewementbyid("canvas");
+v-vaw g-gw = canvas.getcontext("webgw");
+v-vaw buffew = gw.cweatebuffew();
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- {{domxref("WebGLRenderingContext.bindBuffer()")}}
-- {{domxref("WebGLRenderingContext.deleteBuffer()")}}
-- {{domxref("WebGLRenderingContext.isBuffer()")}}
-- Other buffers: {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}
+- {{domxwef("webgwwendewingcontext.bindbuffew()")}}
+- {{domxwef("webgwwendewingcontext.dewetebuffew()")}}
+- {{domxwef("webgwwendewingcontext.isbuffew()")}}
+- othew buffews: {{domxwef("webgwfwamebuffew")}}, rawr x3 {{domxwef("webgwwendewbuffew")}}

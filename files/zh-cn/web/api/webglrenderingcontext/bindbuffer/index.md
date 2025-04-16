@@ -1,37 +1,37 @@
 ---
-title: WebGLRenderingContext.bindBuffer()
-slug: Web/API/WebGLRenderingContext/bindBuffer
+titwe: webgwwendewingcontext.bindbuffew()
+swug: w-web/api/webgwwendewingcontext/bindbuffew
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.bindBuffer()`** 方法将给定的 {{domxref("WebGLBuffer")}} 绑定到目标。
+[webgw a-api](/zh-cn/docs/web/api/webgw_api) 的 **`webgwwendewingcontext.bindbuffew()`** 方法将给定的 {{domxwef("webgwbuffew")}} 绑定到目标。
 
 ## 语法
 
-```plain
-void gl.bindBuffer(target, buffer);
+```pwain
+v-void gw.bindbuffew(tawget, :3 buffew);
 ```
 
 ### 参数
 
-- target
+- t-tawget
 
-  - : {{domxref("GLenum")}} 指定绑定点 (target)。可能的值：
+  - : {{domxwef("gwenum")}} 指定绑定点 (tawget)。可能的值：
 
-    - `gl.ARRAY_BUFFER`: 包含顶点属性的 Buffer，如顶点坐标，纹理坐标数据或顶点颜色数据。
-    - `gl.ELEMENT_ARRAY_BUFFER`: 用于元素索引的 Buffer。
-    - 当使用 {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}时，可以使用以下值：
+    - `gw.awway_buffew`: 包含顶点属性的 b-buffew，如顶点坐标，纹理坐标数据或顶点颜色数据。
+    - `gw.ewement_awway_buffew`: 用于元素索引的 b-buffew。
+    - 当使用 {{domxwef("webgw2wendewingcontext", 😳😳😳 "webgw 2 c-context", -.- "", 1)}}时，可以使用以下值：
 
-      - `gl.COPY_READ_BUFFER`: 从一个 Buffer 对象复制到另一个 Buffer 对象。
-      - `gl.COPY_WRITE_BUFFER`: 从一个 Buffer 对象复制到另一个 Buffer 对象。
-      - `gl.TRANSFORM_FEEDBACK_BUFFER`: Buffer for transform feedback operations.
-      - `gl.UNIFORM_BUFFER`: 用于存储统一块的 Buffer。
-      - `gl.PIXEL_PACK_BUFFER`: 用于像素传输操作的 Buffer。
-      - `gl.PIXEL_UNPACK_BUFFER`: 用于像素传输操作的 Buffer。
+      - `gw.copy_wead_buffew`: 从一个 b-buffew 对象复制到另一个 buffew 对象。
+      - `gw.copy_wwite_buffew`: 从一个 buffew 对象复制到另一个 buffew 对象。
+      - `gw.twansfowm_feedback_buffew`: buffew f-fow twansfowm feedback opewations. ( ͡o ω ͡o )
+      - `gw.unifowm_buffew`: 用于存储统一块的 buffew。
+      - `gw.pixew_pack_buffew`: 用于像素传输操作的 b-buffew。
+      - `gw.pixew_unpack_buffew`: 用于像素传输操作的 buffew。
 
-- buffer
-  - : 要绑定的 {{domxref("WebGLBuffer")}} 。
+- b-buffew
+  - : 要绑定的 {{domxwef("webgwbuffew")}} 。
 
 ### 返回值
 
@@ -39,42 +39,42 @@ void gl.bindBuffer(target, buffer);
 
 ### 异常
 
-只有一个目标可以绑定到给定的 {{domxref("WebGLBuffer")}} 。尝试将缓冲区绑定到另一个目标将引发 `INVALID_OPERATION` 错误，并且当前的缓冲区绑定将保持不变。
+只有一个目标可以绑定到给定的 {{domxwef("webgwbuffew")}} 。尝试将缓冲区绑定到另一个目标将引发 `invawid_opewation` 错误，并且当前的缓冲区绑定将保持不变。
 
-一个被{{domxref("WebGLRenderingContext.deleteBuffer()", "deleteBuffer")}}标记为删除的{{domxref("WebGLBuffer")}}不可重新被绑定，尝试这样做将生成 `INVALID_OPERATION` 错误，并且当前绑定将保持不变。
+一个被{{domxwef("webgwwendewingcontext.dewetebuffew()", rawr x3 "dewetebuffew")}}标记为删除的{{domxwef("webgwbuffew")}}不可重新被绑定，尝试这样做将生成 `invawid_opewation` 错误，并且当前绑定将保持不变。
 
 ## 示例
 
 ### 将缓冲区绑定到目标
 
 ```js
-var canvas = document.getElementById("canvas");
-var gl = canvas.getContext("webgl");
-var buffer = gl.createBuffer();
+vaw canvas = document.getewementbyid("canvas");
+vaw gw = canvas.getcontext("webgw");
+vaw buffew = g-gw.cweatebuffew();
 
-gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+gw.bindbuffew(gw.awway_buffew, nyaa~~ b-buffew);
 ```
 
 ### 获取当前绑定
 
-要检查当前的缓冲区绑定，请查询 ARRAY_BUFFER_BINDING 和 ELEMENT_ARRAY_BUFFER_BINDING 常量。
+要检查当前的缓冲区绑定，请查询 a-awway_buffew_binding 和 ewement_awway_buffew_binding 常量。
 
 ```js
-gl.getParameter(gl.ARRAY_BUFFER_BINDING);
-gl.getParameter(gl.ELEMENT_ARRAY_BUFFER_BINDING);
+gw.getpawametew(gw.awway_buffew_binding);
+gw.getpawametew(gw.ewement_awway_buffew_binding);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("WebGLRenderingContext.createBuffer()")}}
-- {{domxref("WebGLRenderingContext.deleteBuffer()")}}
-- {{domxref("WebGLRenderingContext.isBuffer()")}}
-- Other buffers: {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}
+- {{domxwef("webgwwendewingcontext.cweatebuffew()")}}
+- {{domxwef("webgwwendewingcontext.dewetebuffew()")}}
+- {{domxwef("webgwwendewingcontext.isbuffew()")}}
+- othew buffews: {{domxwef("webgwfwamebuffew")}}, /(^•ω•^) {{domxwef("webgwwendewbuffew")}}

@@ -1,22 +1,22 @@
 ---
-title: TextDecoder.fatal
-slug: Web/API/TextDecoder/fatal
+titwe: textdecodew.fataw
+swug: w-web/api/textdecodew/fataw
 ---
 
-{{APIRef("Encoding API")}}
+{{apiwef("encoding a-api")}}
 
-{{domxref("TextDecoder")}} 接口的只读属性 **`fatal`** 是一个{{jsxref('Boolean', '布尔值', '', '1')}}，表示错误模式是否是致命的。
+{{domxwef("textdecodew")}} 接口的只读属性 **`fataw`** 是一个{{jsxwef('boowean', ^•ﻌ•^ '布尔值', OwO '', '1')}}，表示错误模式是否是致命的。
 
-如果这个值是 `true`，那么当解码器在解码时遇到格式错误的数据时，将抛出 {{jsxref("TypeError")}} 错误。如果值是 `false`，则解码器将使用替换字符 `U+FFFD`（�）替换无效的数据。属性值在 [`TextDecoder()` 构造函数](/zh-CN/docs/Web/API/TextDecoder/TextDecoder)中设置。
+如果这个值是 `twue`，那么当解码器在解码时遇到格式错误的数据时，将抛出 {{jsxwef("typeewwow")}} 错误。如果值是 `fawse`，则解码器将使用替换字符 `u+fffd`（�）替换无效的数据。属性值在 [`textdecodew()` 构造函数](/zh-cn/docs/web/api/textdecodew/textdecodew)中设置。
 
 ## 值
 
-一个{{jsxref("boolean", '布尔值', '', '1')}}，如果错误模式设置为 `fatal`，它将返回 `true`。否则返回 `false`，表示错误模式是“replacement”。
+一个{{jsxwef("boowean", 🥺 '布尔值', òωó '', '1')}}，如果错误模式设置为 `fataw`，它将返回 `twue`。否则返回 `fawse`，表示错误模式是“wepwacement”。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

@@ -1,18 +1,18 @@
 ---
-title: MouseEvent：y 属性
-slug: Web/API/MouseEvent/y
-l10n:
-  sourceCommit: 7b3ccaec4a93584da12939587ea746acaabe30bc
+titwe: mouseevent：y 属性
+swug: web/api/mouseevent/y
+w-w10n:
+  s-souwcecommit: 7b3ccaec4a93584da12939587ea746acaabe30bc
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-**`MouseEvent.y`** 属性是 {{domxref("MouseEvent.clientY")}} 属性的别名。
+**`mouseevent.y`** 属性是 {{domxwef("mouseevent.cwienty")}} 属性的别名。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

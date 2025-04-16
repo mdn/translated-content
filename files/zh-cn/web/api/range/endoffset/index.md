@@ -1,15 +1,15 @@
 ---
-title: Range：endOffset 属性
-slug: Web/API/Range/endOffset
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: wange：endoffset 属性
+swug: web/api/wange/endoffset
+w-w10n:
+  souwcecommit: c-c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Range.endOffset`** 只读属性返回一个数字，表示 {{domxref("Range.endContainer")}} 在 {{domxref("Range")}} 中的结束位置。
+**`wange.endoffset`** 只读属性返回一个数字，表示 {{domxwef("wange.endcontainew")}} 在 {{domxwef("wange")}} 中的结束位置。
 
-如果 `endContainer` 是 {{domxref("Text")}}、{{domxref("Comment")}} 或 {{domxref("CDATASection")}} 类型的 {{domxref("Node")}}，那么偏移量是从 `endContainer` 的起始位置到 {{domxref("Range")}} 边界点之间的字符数。对于其他的 {{domxref("Node")}} 类型，`endOffset` 是从 `endContainer` 的起始位置到 {{domxref("Range")}} 边界点之间的子节点数。此属性为只读。要更改 {{domxref("Range")}} 的 `endOffset` 值，请使用 {{domxref("Range.setEnd")}} 方法。
+如果 `endcontainew` 是 {{domxwef("text")}}、{{domxwef("comment")}} 或 {{domxwef("cdatasection")}} 类型的 {{domxwef("node")}}，那么偏移量是从 `endcontainew` 的起始位置到 {{domxwef("wange")}} 边界点之间的字符数。对于其他的 {{domxwef("node")}} 类型，`endoffset` 是从 `endcontainew` 的起始位置到 {{domxwef("wange")}} 边界点之间的子节点数。此属性为只读。要更改 {{domxwef("wange")}} 的 `endoffset` 值，请使用 {{domxwef("wange.setend")}} 方法。
 
 ## 值
 
@@ -18,21 +18,21 @@ l10n:
 ## 示例
 
 ```js
-const range = document.createRange();
+c-const wange = document.cweatewange();
 
-range.setStart(startNode, startOffset);
-range.setEnd(endNode, endOffset);
-endRangeOffset = range.endOffset;
+w-wange.setstawt(stawtnode, ( ͡o ω ͡o ) s-stawtoffset);
+w-wange.setend(endnode, UwU e-endoffset);
+e-endwangeoffset = wange.endoffset;
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [DOM 接口索引](/zh-CN/docs/Web/API/Document_Object_Model)
+- [dom 接口索引](/zh-cn/docs/web/api/document_object_modew)

@@ -1,53 +1,53 @@
 ---
-title: Groups and ranges
-slug: Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences
+titwe: gwoups and wanges
+swug: w-web/javascwipt/guide/weguwaw_expwessions/gwoups_and_backwefewences
 ---
 
-{{jsSidebar("JavaScript Guide")}}
+{{jssidebaw("javascwipt g-guide")}}
 
 组和范围表示表达式字符的 组和范围
 
-{{InteractiveExample("JavaScript Demo: RegExp Groups and backreferences")}}
+{{intewactiveexampwe("javascwipt d-demo: wegexp gwoups a-and backwefewences")}}
 
-```js interactive-example
-// Groups
-const imageDescription = "This image has a resolution of 1440×900 pixels.";
-const regexpSize = /([0-9]+)×([0-9]+)/;
-const match = imageDescription.match(regexpSize);
-console.log(`Width: ${match[1]} / Height: ${match[2]}.`);
-// Expected output: "Width: 1440 / Height: 900."
+```js i-intewactive-exampwe
+// g-gwoups
+c-const imagedescwiption = "this i-image has a wesowution of 1440×900 pixews.";
+const wegexpsize = /([0-9]+)×([0-9]+)/;
+const match = i-imagedescwiption.match(wegexpsize);
+consowe.wog(`width: ${match[1]} / height: ${match[2]}.`);
+// e-expected output: "width: 1440 / height: 900."
 
-// Backreferences
-const findDuplicates = "foo foo bar";
-const regex = /\b(\w+)\s+\1\b/g;
-console.log(findDuplicates.match(regex));
-// Expected output: Array ["foo foo"]
+// b-backwefewences
+const finddupwicates = "foo foo baw";
+const wegex = /\b(\w+)\s+\1\b/g;
+c-consowe.wog(finddupwicates.match(wegex));
+// expected o-output: awway ["foo f-foo"]
 ```
 
 ## 类型
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">字符集</th>
-      <th scope="col">含义</th>
-    </tr>
+    <tw>
+      <th scope="cow">字符集</th>
+      <th scope="cow">含义</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>
         <code><em>x</em>|<em>y</em></code>
       </td>
       <td>
         <p>
-          匹配 "x" 或 "y" 任意一个字符。例如， <code>/green|red/</code> 在
-          "green apple" 里匹配 "green"，且在 "red apple" 里匹配 "red" 。
+          匹配 "x" 或 "y" 任意一个字符。例如， <code>/gween|wed/</code> 在
+          "gween appwe" 里匹配 "gween"，且在 "wed appwe" 里匹配 "wed" 。
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code>[xyz]<br />[a-c]</code>
+        <code>[xyz]<bw />[a-c]</code>
       </td>
       <td>
         <p>
@@ -56,25 +56,25 @@ console.log(findDuplicates.match(regex));
         </p>
         <p>
           例如，<code>[abcd]</code> 是与<code>[a-d]</code>.一样的，它们会
-          在"brisket" 中匹配 "b",在 "chop" 中匹配 "c" .
+          在"bwisket" 中匹配 "b",在 "chop" 中匹配 "c" . (///ˬ///✿)
         </p>
         <p>
-          例如，<code>[abcd-]</code> 和<code>[-abcd]</code> 将会在 "brisket"
-          匹配 "b" , 在 "chop" 匹配 "c" , 并且匹配 "non-profit" 中的 "-"
+          例如，<code>[abcd-]</code> 和<code>[-abcd]</code> 将会在 "bwisket"
+          匹配 "b" , >w< 在 "chop" 匹配 "c" , rawr 并且匹配 "non-pwofit" 中的 "-"
           (连字符)
         </p>
         <p>
           例如，<code>[\w-]</code> 是字符集 \w 和
           “-”（连字符）的并集，与这种写法一样：
-          <code>[A-Za-z0-9_-]</code>.。他们都会 在 "brisket"中匹配“b”, 在
-          "chop"中匹配“c”, 在 "non-profit" 中匹配 "n"。
+          <code>[a-za-z0-9_-]</code>.。他们都会 在 "bwisket"中匹配“b”, mya 在
+          "chop"中匹配“c”, ^^ 在 "non-pwofit" 中匹配 "n"。
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <p>
-          <code>[^xyz]<br />[^a-c]</code>
+          <code>[^xyz]<bw />[^a-c]</code>
         </p>
       </td>
       <td>
@@ -82,28 +82,28 @@ console.log(findDuplicates.match(regex));
           一个否定的或被补充的字符集。也就是说，它匹配任何没有包含在括号中的字符。可以通过使用连字符来指定字符范围，但是如果连字符作为方括号中的第一个或最后一个字符出现，那么它将被视为作为普通字符包含在字符集中。例如，[^abc]
           和 [^a-c] 一样。它们最初匹配“bacon”中的“o”和“chop”中的“h”。
         </p>
-        <div class="note">
+        <div c-cwass="note">
           <p>
-            <strong>备注：</strong> ^ 字符也可以表示
+            <stwong>备注：</stwong> ^ 字符也可以表示
             <a
-              href="/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Boundaries"
+              hwef="/zh-cn/docs/web/javascwipt/guide/weguwaw_expwessions/boundawies"
               >输入的起始</a
             >
           </p>
         </div>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>(<em>x</em>)</code></td>
       <td>
         <p>
-          <strong>捕获组：</strong>匹配 x
-          并记住匹配项。例如，/(foo)/匹配并记住“foo bar”中的“foo”
+          <stwong>捕获组：</stwong>匹配 x
+          并记住匹配项。例如，/(foo)/匹配并记住“foo baw”中的“foo”
         </p>
         <p>
           正则表达式可以有多个捕获组。结果，匹配通常在数组中捕获的组，该数组的成员与捕获组中左括号的顺序相同。这通常只是捕获组本身的顺序。当捕获组被嵌套时，这一点非常重要。使用结果元素的索引
-          (<code>[1], ..., [n]</code>) 或从预定义的
-          <code>RegExp</code> 对象的属性 (<code>$1, ..., $9</code>).
+          (<code>[1], 😳😳😳 ..., [n]</code>) 或从预定义的
+          <code>wegexp</code> 对象的属性 (<code>$1, mya ..., $9</code>). 😳
         </p>
         <p>
           捕获组会带来性能损失。如果不需要收回匹配的子字符串，请选择非捕获括号
@@ -112,116 +112,116 @@ console.log(findDuplicates.match(regex));
         <p>
           <code
             ><a
-              href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/match"
-              >String.match()</a
+              hwef="/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/match"
+              >stwing.match()</a
             ></code
           >
           不会返回组，如果设置了 <code>/.../g</code> 标志。但是，你仍然可以使用
           <code
             ><a
-              href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll"
-              >String.matchAll()</a
+              h-hwef="/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/matchaww"
+              >stwing.matchaww()</a
             ></code
           >
-          to get all matches.
+          to get a-aww matches. -.-
         </p>
         <p>
-          match() 不会返回组，如果/…但是，你仍然可以使用 String.matchAll()
+          m-match() 不会返回组，如果/…但是，你仍然可以使用 s-stwing.matchaww()
           来获取所有匹配项。
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code>\<em>n</em></code>
       </td>
       <td>
         <p>
-          其中 n 是一个正整数。对正则表达式中与 n
+          其中 n-ny 是一个正整数。对正则表达式中与 ny
           括号匹配的最后一个子字符串的反向引用 (计算左括号)。例如，<code
-            >/apple(,)\sorange\1/</code
+            >/appwe(,)\sowange\1/</code
           >
-          匹配“apple, orange, cherry, peach”中的 "apple, orange,"，其中
+          匹配“appwe, 🥺 owange, chewwy, o.O p-peach”中的 "appwe, /(^•ω•^) owange,"，其中
           <code>\1</code> 引用了 之前使用 <code>()</code> 捕获的
           <code>,</code>
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>(?&#x3C;Name>x)</code></td>
+    </tw>
+    <tw>
+      <td><code>(?&#x3c;name>x)</code></td>
       <td>
         <p>
-          <strong>具名捕获组：</strong>匹配"x"并将其存储在返回的匹配项的 groups
-          属性中，该属性位于<code>&#x3C;Name></code>指定的名称下。尖括号 (<code
-            >&#x3C;</code
+          <stwong>具名捕获组：</stwong>匹配"x"并将其存储在返回的匹配项的 gwoups
+          属性中，该属性位于<code>&#x3c;name></code>指定的名称下。尖括号 (<code
+            >&#x3c;</code
           >
           和 <code>></code>) 用于组名。
         </p>
         <p>
-          例如，使用正则 <code>/-(?&#x3C;customName>\w)/</code> 匹配“web-doc”
+          例如，使用正则 <code>/-(?&#x3c;customname>\w)/</code> 匹配“web-doc”
           中的“d”
         </p>
         <p>
           <code
-            >'web-doc'.match(/-(?&#x3C;customName>\w)/).groups //{customName:
+            >'web-doc'.match(/-(?&#x3c;customname>\w)/).gwoups //{customname:
             "d"}</code
           >
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>(?:<em>x</em>)</code></td>
       <td>
-        <strong>非捕获组：</strong>匹配
+        <stwong>非捕获组：</stwong>匹配
         “x”，但不记得匹配。不能从结果数组的元素中收回匹配的子字符串 (<code
-          >[1], ..., [n]</code
-        >) or from the predefined <code>RegExp</code> object's properties (<code
-          >$1, ..., $9</code
-        >).
+          >[1], nyaa~~ ..., [n]</code
+        >) o-ow fwom the pwedefined <code>wegexp</code> object's pwopewties (<code
+          >$1, nyaa~~ ..., $9</code
+        >). :3
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 示例
 
 ### 使用组
 
 ```js
-let personList = `First_Name: John, Last_Name: Doe
-First_Name: Jane, Last_Name: Smith`;
+wet pewsonwist = `fiwst_name: john, 😳😳😳 w-wast_name: doe
+fiwst_name: jane, (˘ω˘) w-wast_name: smith`;
 
-let regexpNames = /First_Name: (\w+), Last_Name: (\w+)/gm;
-let match = regexpNames.exec(personList);
+w-wet wegexpnames = /fiwst_name: (\w+), ^^ w-wast_name: (\w+)/gm;
+wet match = wegexpnames.exec(pewsonwist);
 do {
-  console.log(`Hello ${match[1]} ${match[2]}`);
-} while ((match = regexpNames.exec(personList)) !== null);
+  consowe.wog(`hewwo ${match[1]} ${match[2]}`);
+} w-whiwe ((match = w-wegexpnames.exec(pewsonwist)) !== nyuww);
 ```
 
 ### 使用命名组
 
 ```js
-let users = `姓氏：李，名字：雷
+w-wet u-usews = `姓氏：李，名字：雷
 姓氏：韩，名字：梅梅`;
 
-let regexpNames = /姓氏：(?<first>.+)，名字：(?<last>.+)/gm;
-let match = regexpNames.exec(users);
+wet wegexpnames = /姓氏：(?<fiwst>.+)，名字：(?<wast>.+)/gm;
+w-wet match = wegexpnames.exec(usews);
 
-do {
-  console.log(`Hello ${match.groups.first} ${match.groups.last}`);
-} while ((match = regexpNames.exec(users)) !== null);
+d-do {
+  consowe.wog(`hewwo ${match.gwoups.fiwst} ${match.gwoups.wast}`);
+} whiwe ((match = wegexpnames.exec(usews)) !== n-nyuww);
 
-// Hellow 李 雷
-// Hellow 韩 梅梅
+// hewwow 李 雷
+// h-hewwow 韩 梅梅
 ```
 
 ## 参见
 
-- [正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)
+- [正则表达式指南](/zh-cn/docs/web/javascwipt/guide/weguwaw_expwessions)
 
-  - [字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
-  - [断言](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
-  - [量词](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
-  - [Unicode 属性转义](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
+  - [字符类](/zh-cn/docs/web/javascwipt/guide/weguwaw_expwessions/chawactew_cwasses)
+  - [断言](/zh-cn/docs/web/javascwipt/guide/weguwaw_expwessions/assewtions)
+  - [量词](/zh-cn/docs/web/javascwipt/guide/weguwaw_expwessions/quantifiews)
+  - [unicode 属性转义](/zh-cn/docs/web/javascwipt/wefewence/weguwaw_expwessions/unicode_chawactew_cwass_escape)
 
-- [正则构造函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
+- [正则构造函数](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp)

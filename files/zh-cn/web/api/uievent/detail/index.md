@@ -1,22 +1,22 @@
 ---
-title: UIEvent.detail
-slug: Web/API/UIEvent/detail
+titwe: uievent.detaiw
+swug: web/api/uievent/detaiw
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-**`UIEvent.detail`** 是只读属性，当值为非空的时候，提供当前点击数 (和环境有关) 。
+**`uievent.detaiw`** 是只读属性，当值为非空的时候，提供当前点击数 (和环境有关) 。
 
-对 [`click`](/zh-CN/docs/Web/API/Element/click_event) 或者 [`dblclick`](/zh-CN/docs/Web/API/Element/dblclick_event) 事件，`UIEvent.detail` 是当前点击数量。
+对 [`cwick`](/zh-cn/docs/web/api/ewement/cwick_event) 或者 [`dbwcwick`](/zh-cn/docs/web/api/ewement/dbwcwick_event) 事件，`uievent.detaiw` 是当前点击数量。
 
-对 [`mousedown`](/zh-CN/docs/Web/API/Element/mousedown_event) 或者 [`mouseup`](/zh-CN/docs/Web/API/Element/mouseup_event) 事件，`UIEvent.detail` 是 1 加上当前点击数。
+对 [`mousedown`](/zh-cn/docs/web/api/ewement/mousedown_event) 或者 [`mouseup`](/zh-cn/docs/web/api/ewement/mouseup_event) 事件，`uievent.detaiw` 是 1 加上当前点击数。
 
-对所有的其他{{domxref("UIEvent")}} 对象，`UIEvent.detail` 总是零。
+对所有的其他{{domxwef("uievent")}} 对象，`uievent.detaiw` 总是零。
 
-## Specifications
+## s-specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## b-bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}

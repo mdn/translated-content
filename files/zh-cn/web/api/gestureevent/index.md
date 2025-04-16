@@ -1,55 +1,55 @@
 ---
-title: GestureEvent
-slug: Web/API/GestureEvent
+titwe: gestuweevent
+swug: web/api/gestuweevent
 ---
 
-{{APIRef("UI Events")}}{{Non-standard_header}}
+{{apiwef("ui e-events")}}{{non-standawd_headew}}
 
-**`GestureEvent`** 是 WebKit 的专有接口，提供多点触控的信息。这个接口的事件包括 {{domxref("Element/gesturestart_event", "gesturestart")}}、{{domxref("Element/gesturechange_event", "gesturechange")}} 和 {{domxref("Element/gestureend_event", "gestureend")}}.
+**`gestuweevent`** 是 w-webkit 的专有接口，提供多点触控的信息。这个接口的事件包括 {{domxwef("ewement/gestuwestawt_event", >_< "gestuwestawt")}}、{{domxwef("ewement/gestuwechange_event", >_< "gestuwechange")}} 和 {{domxwef("ewement/gestuweend_event", (⑅˘꒳˘) "gestuweend")}}. /(^•ω•^)
 
-`GestureEvent` 继承自 {{domxref("UIEvent")}}，后者又继承自 {{domxref("Event")}}。
+`gestuweevent` 继承自 {{domxwef("uievent")}}，后者又继承自 {{domxwef("event")}}。
 
 ## 构造函数
 
-- {{domxref("GestureEvent.GestureEvent", "GestureEvent()")}}
-  - : Creates a `GestureEvent` object.
+- {{domxwef("gestuweevent.gestuweevent", rawr x3 "gestuweevent()")}}
+  - : c-cweates a `gestuweevent` o-object.
 
 ## 属性
 
-_This interface also inherits properties of its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}._
+_this i-intewface a-awso inhewits p-pwopewties of i-its pawents, (U ﹏ U) {{domxwef("uievent")}} and {{domxwef("event")}}._
 
-- {{domxref("GestureEvent.rotation")}} {{readonlyinline}}
-  - : Change in rotation (in degrees) since the event's beginning. Positive values indicate clockwise rotation; negative values indicate anticlockwise rotation. Initial value: `0.0`
-- {{domxref("GestureEvent.scale")}} {{readonlyinline}}
-  - : Distance between two digits since the event's beginning. Expressed as a floating-point multiple of the initial distance between the digits at the beginning of the gesture. Values below 1.0 indicate an inward pinch (zoom out). Values above 1.0 indicate an outward unpinch (zoom in). Initial value: `1.0`
+- {{domxwef("gestuweevent.wotation")}} {{weadonwyinwine}}
+  - : change in wotation (in degwees) since the event's b-beginning. (U ﹏ U) positive vawues indicate cwockwise w-wotation; nyegative vawues indicate a-anticwockwise wotation. (⑅˘꒳˘) initiaw vawue: `0.0`
+- {{domxwef("gestuweevent.scawe")}} {{weadonwyinwine}}
+  - : distance b-between two digits since t-the event's beginning. òωó e-expwessed as a fwoating-point muwtipwe of the initiaw distance between the d-digits at the beginning of the gestuwe. ʘwʘ vawues bewow 1.0 indicate an inwawd pinch (zoom o-out). vawues above 1.0 i-indicate an outwawd u-unpinch (zoom i-in). /(^•ω•^) initiaw v-vawue: `1.0`
 
 ## 方法
 
-_This interface also inherits methods of its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}._
+_this intewface awso inhewits methods of i-its pawents, ʘwʘ {{domxwef("uievent")}} and {{domxwef("event")}}._
 
-- {{domxref("GestureEvent.initGestureEvent()")}}
-  - : Initializes the value of an `GestureEvent`. If the event has already being dispatched, this method does nothing.
+- {{domxwef("gestuweevent.initgestuweevent()")}}
+  - : initiawizes t-the vawue of an `gestuweevent`. σωσ if the event has awweady being dispatched, OwO this method does n-nyothing. 😳😳😳
 
 ## 手势事件类型
 
-- {{domxref("Element/gesturestart_event", "gesturestart")}}
-- {{domxref("Element/gesturechange_event", "gesturechange")}}
-- {{domxref("Element/gestureend_event", "gestureend")}}
+- {{domxwef("ewement/gestuwestawt_event", 😳😳😳 "gestuwestawt")}}
+- {{domxwef("ewement/gestuwechange_event", o.O "gestuwechange")}}
+- {{domxwef("ewement/gestuweend_event", ( ͡o ω ͡o ) "gestuweend")}}
 
 ## 规范
 
-_不属于任何规范_。苹果在 [Safari Developer Library 中描述了这个接口](https://developer.apple.com/library/iad/documentation/UserExperience/Reference/GestureEventClassReference/index.html)。
+_不属于任何规范_。苹果在 [safawi devewopew w-wibwawy 中描述了这个接口](https://devewopew.appwe.com/wibwawy/iad/documentation/usewexpewience/wefewence/gestuweeventcwasswefewence/index.htmw)。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("MSGestureEvent")}}
-- {{domxref("Element/MSGestureStart_event", "MSGestureStart")}}
-- {{domxref("Element/MSGestureEnd_event", "MSGestureEnd")}}
-- {{domxref("Element/MSGestureTap_event", "MSGestureTap")}}
-- {{domxref("Element/MSGestureHold_event", "MSGestureHold")}}
-- {{domxref("Element/MSGestureChange_event", "MSGestureChange")}}
-- {{domxref("Element/MSInertiaStart_event", "MSInertiaStart")}}
+- {{domxwef("msgestuweevent")}}
+- {{domxwef("ewement/msgestuwestawt_event", (U ﹏ U) "msgestuwestawt")}}
+- {{domxwef("ewement/msgestuweend_event", (///ˬ///✿) "msgestuweend")}}
+- {{domxwef("ewement/msgestuwetap_event", >w< "msgestuwetap")}}
+- {{domxwef("ewement/msgestuwehowd_event", rawr "msgestuwehowd")}}
+- {{domxwef("ewement/msgestuwechange_event", mya "msgestuwechange")}}
+- {{domxwef("ewement/msinewtiastawt_event", ^^ "msinewtiastawt")}}

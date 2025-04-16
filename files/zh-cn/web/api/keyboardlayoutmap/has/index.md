@@ -1,22 +1,22 @@
 ---
-title: KeyboardLayoutMap：has() 方法
-slug: Web/API/KeyboardLayoutMap/has
-l10n:
-  sourceCommit: bcb654104082a8d12d51aecfad047d7a4a26116f
+titwe: keyboawdwayoutmap：has() 方法
+swug: w-web/api/keyboawdwayoutmap/has
+w10n:
+  s-souwcecommit: b-bcb654104082a8d12d51aecfad047d7a4a26116f
 ---
 
-{{APIRef("Keyboard API")}}{{SeeCompatTable}}
+{{apiwef("keyboawd a-api")}}{{seecompattabwe}}
 
-{{domxref('KeyboardLayoutMap')}} 接口的 **`has()`** 方法返回一个布尔值，指示该对象是否具有指定键的元素。
+{{domxwef('keyboawdwayoutmap')}} 接口的 **`has()`** 方法返回一个布尔值，指示该对象是否具有指定键的元素。
 
-在 [UI 事件 KeyboardEvent 代码值](https://www.w3.org/TR/uievents-code/#key-alphanumeric-writing-system)规范中可以找到有效键的列表。
+在 [ui 事件 k-keyboawdevent 代码值](https://www.w3.owg/tw/uievents-code/#key-awphanumewic-wwiting-system)规范中可以找到有效键的列表。
 
-该方法与 {{jsxref("Map.prototype.has()")}} 相似。
+该方法与 {{jsxwef("map.pwototype.has()")}} 相似。
 
 ## 语法
 
-```js-nolint
-has(key)
+```js-nowint
+h-has(key)
 ```
 
 ### 参数
@@ -26,26 +26,26 @@ has(key)
 
 ### 返回值
 
-{{jsxref('Boolean')}} 值，表示是否找到了指定的键。
+{{jsxwef('boowean')}} 值，表示是否找到了指定的键。
 
 ## 示例
 
-以下示例检查与英语 QWERTY 键盘上“W”键对应的键盘代码关联的位置或布局特定的字符串是否存在。
+以下示例检查与英语 q-qwewty 键盘上“w”键对应的键盘代码关联的位置或布局特定的字符串是否存在。
 
 ```js
-navigator.keyboard.getLayoutMap().then((keyboardLayoutMap) => {
-  console.log(keyboardLayoutMap.has("KeyW"));
+n-nyavigatow.keyboawd.getwayoutmap().then((keyboawdwayoutmap) => {
+  consowe.wog(keyboawdwayoutmap.has("keyw"));
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Map.prototype.has()")}}
+- {{jsxwef("map.pwototype.has()")}}

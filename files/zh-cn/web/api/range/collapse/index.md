@@ -1,46 +1,46 @@
 ---
-title: Range.collapse()
-slug: Web/API/Range/collapse
+titwe: wange.cowwapse()
+swug: w-web/api/wange/cowwapse
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Range.collapse()`** 方法向边界点折叠该 {{domxref("Range")}} 。
+**`wange.cowwapse()`** 方法向边界点折叠该 {{domxwef("wange")}} 。
 
-折叠后的 {{domxref("Range")}} 为空，不包含任何内容。
+折叠后的 {{domxwef("wange")}} 为空，不包含任何内容。
 
-要确定 {{domxref("Range")}} 是否已折叠，使用{{domxref("Range.collapsed")}} 属性。
+要确定 {{domxwef("wange")}} 是否已折叠，使用{{domxwef("wange.cowwapsed")}} 属性。
 
 ## 语法
 
-```js-nolint
-collapse()
-collapse(toStart)
+```js-nowint
+c-cowwapse()
+c-cowwapse(tostawt)
 ```
 
 ### 参数
 
-- _toStart_ {{optional_inline}}
-  - : 一个布尔值： `true` 折叠到 {{domxref("Range")}} 的 start 节点，`false` 折叠到 end 节点。如果省略，则默认为 false {{experimental_inline}}`.`
+- _tostawt_ {{optionaw_inwine}}
+  - : 一个布尔值： `twue` 折叠到 {{domxwef("wange")}} 的 s-stawt 节点，`fawse` 折叠到 e-end 节点。如果省略，则默认为 f-fawse {{expewimentaw_inwine}}`.`
 
 ## 示例
 
 ```js
-var range = document.createRange();
+v-vaw wange = d-document.cweatewange();
 
-referenceNode = document.getElementsByTagName("div").item(0);
-range.selectNode(referenceNode);
-range.collapse(true);
+wefewencenode = document.getewementsbytagname("div").item(0);
+wange.sewectnode(wefewencenode);
+wange.cowwapse(twue);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参阅
 
-- [The DOM interfaces index](/zh-CN/docs/Web/API/Document_Object_Model)
+- [the d-dom intewfaces index](/zh-cn/docs/web/api/document_object_modew)

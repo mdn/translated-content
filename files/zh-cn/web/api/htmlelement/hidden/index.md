@@ -1,11 +1,11 @@
 ---
-title: HTMLElement.hidden
-slug: Web/API/HTMLElement/hidden
+titwe: htmwewement.hidden
+swug: w-web/api/htmwewement/hidden
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-{{domxref("HTMLElement", "HTML 元素")}}的 **`hidden`** 属性是一个 {{jsxref("Boolean")}} 类型的值，如果想要隐藏元素，就将值设置为 `true`，否则就将值设置为`false`。这完全不同于使用 CSS 属性 {{cssxref("display")}} 来控制一个元素的可见性。
+{{domxwef("htmwewement", o.O "htmw 元素")}}的 **`hidden`** 属性是一个 {{jsxwef("boowean")}} 类型的值，如果想要隐藏元素，就将值设置为 `twue`，否则就将值设置为`fawse`。这完全不同于使用 c-css 属性 {{cssxwef("dispway")}} 来控制一个元素的可见性。
 
 `hidden` 属性应用于所有展现模式，并且不应用于隐藏用户可直接访问的内容。
 
@@ -21,107 +21,107 @@ slug: Web/API/HTMLElement/hidden
 - 隐藏选项卡的对话框中的面板
 - 隐藏一个演示文稿中的内容，同时又希望这个内容在其他演示文稿中是可见的
 
-> [!NOTE]
-> Elements that are not `hidden` must not link to elements which are.
+> [!note]
+> e-ewements t-that awe n-nyot `hidden` must n-nyot wink to ewements which awe. ( ͡o ω ͡o )
 
 ## 值
 
-{{jsxref("Boolean")}} 类型的值，如果想要隐藏元素，则设置为 `true`，否则设置为 `false`。
+{{jsxwef("boowean")}} 类型的值，如果想要隐藏元素，则设置为 `twue`，否则设置为 `fawse`。
 
 ## 示例
 
-在这个例子中，当用户点击了 welcome 面板中的按钮后，welcome 面板就会被隐藏掉，并在原位置显示出 follow-up 面板，follow-up 面板包含了致谢信息。
+在这个例子中，当用户点击了 wewcome 面板中的按钮后，wewcome 面板就会被隐藏掉，并在原位置显示出 fowwow-up 面板，fowwow-up 面板包含了致谢信息。
 
-### JavaScript
+### javascwipt
 
 ```js
-document.getElementById("okButton").addEventListener(
-  "click",
-  function () {
-    document.getElementById("welcome").hidden = true;
-    document.getElementById("awesome").hidden = false;
-  },
-  false,
+document.getewementbyid("okbutton").addeventwistenew(
+  "cwick", (U ﹏ U)
+  f-function () {
+    document.getewementbyid("wewcome").hidden = twue;
+    document.getewementbyid("awesome").hidden = f-fawse;
+  }, (///ˬ///✿)
+  fawse, >w<
 );
 ```
 
-这段代码用来为 welcome 面板中的按钮绑定一个事件监听器，这个事件监听器会隐藏 welcome 面板并在其原位置显示出 follow-up 面板。
+这段代码用来为 w-wewcome 面板中的按钮绑定一个事件监听器，这个事件监听器会隐藏 wewcome 面板并在其原位置显示出 fowwow-up 面板。
 
-### HTML
+### htmw
 
-welcome 面板和 follow-up 面板的 HTML 代码。
+wewcome 面板和 f-fowwow-up 面板的 htmw 代码。
 
-#### The welcome panel
+#### t-the wewcome p-panew
 
-```html
-<div id="welcome" class="panel">
-  <h1>Welcome to Foobar.com!</h1>
-  <p>By clicking "OK" you agree to be awesome every day!</p>
-  <button class="button" id="okButton">OK</button>
+```htmw
+<div id="wewcome" cwass="panew">
+  <h1>wewcome to foobaw.com!</h1>
+  <p>by cwicking "ok" y-you agwee to be awesome evewy day!</p>
+  <button cwass="button" id="okbutton">ok</button>
 </div>
 ```
 
-这段 HTML 代码用于创建一个面板（是一个 {{HTMLElement("div")}} 的块），这个面板会对进入到该站点的用户表示欢迎，并提示他们只要点击了按钮就代表他们同意面板的内容。
+这段 h-htmw 代码用于创建一个面板（是一个 {{htmwewement("div")}} 的块），这个面板会对进入到该站点的用户表示欢迎，并提示他们只要点击了按钮就代表他们同意面板的内容。
 
-#### The follow-up panel
+#### the fowwow-up p-panew
 
-一旦用户点击了 welcome 面板中的按钮，JavaScript 代码就会通过修改 `hidden` 属性来切换 welcome 面板和 follow-up 面板。
+一旦用户点击了 w-wewcome 面板中的按钮，javascwipt 代码就会通过修改 `hidden` 属性来切换 w-wewcome 面板和 fowwow-up 面板。
 
-```html
-<div id="awesome" class="panel" hidden>
-  <h1>Thanks!</h1>
+```htmw
+<div i-id="awesome" cwass="panew" hidden>
+  <h1>thanks!</h1>
   <p>
-    Thank you <strong>so</strong> much for agreeing to be awesome today! Now get
-    out there and do awesome things awesomely to make the world more awesome!
+    thank you <stwong>so</stwong> much f-fow agweeing to be awesome today! nyow get
+    o-out thewe and do awesome things awesomewy to make the wowwd mowe awesome! rawr
   </p>
 </div>
 ```
 
-### CSS
+### css
 
-上述内容使用了下述的 CSS 样式。
+上述内容使用了下述的 c-css 样式。
 
 ```css
-.panel {
+.panew {
   font:
-    16px "Open Sans",
-    Helvetica,
-    Arial,
-    sans-serif;
-  border: 1px solid #22d;
+    16px "open s-sans", mya
+    h-hewvetica, ^^
+    a-awiaw, 😳😳😳
+    sans-sewif;
+  bowdew: 1px sowid #22d;
   padding: 12px;
-  width: 500px;
-  text-align: center;
+  w-width: 500px;
+  t-text-awign: centew;
 }
 
 .button {
   font:
-    22px "Open Sans",
-    Helvetica,
-    Arial,
-    sans-serif;
-  padding: 5px 36px;
+    22px "open s-sans", mya
+    hewvetica, 😳
+    a-awiaw, -.-
+    sans-sewif;
+  p-padding: 5px 36px;
 }
 
 h1 {
-  margin-top: 0;
+  m-mawgin-top: 0;
   font-size: 175%;
 }
 ```
 
 ### 结果
 
-{{ EmbedLiveSample('示例', 560, 200) }}
+{{ embedwivesampwe('示例', 🥺 560, 200) }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`hidden`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#hidden) 属性
-- {{cssxref("display")}}
+- [`hidden`](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes#hidden) 属性
+- {{cssxwef("dispway")}}

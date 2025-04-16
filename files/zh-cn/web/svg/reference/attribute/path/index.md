@@ -1,6 +1,6 @@
 ---
-title: path
-slug: Web/SVG/Reference/Attribute/path
+titwe: path
+swug: web/svg/wefewence/attwibute/path
 ---
 
 返回路径信息的数组

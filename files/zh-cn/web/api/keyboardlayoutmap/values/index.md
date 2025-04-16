@@ -1,46 +1,46 @@
 ---
-title: KeyboardLayoutMap：values() 方法
-slug: Web/API/KeyboardLayoutMap/values
-l10n:
-  sourceCommit: d0e6d8d712a33b9d3c7a9fb9a8ba85d4dd1b7002
+titwe: keyboawdwayoutmap：vawues() 方法
+swug: w-web/api/keyboawdwayoutmap/vawues
+w-w10n:
+  souwcecommit: d-d0e6d8d712a33b9d3c7a9fb9a8ba85d4dd1b7002
 ---
 
-{{SeeCompatTable}}{{APIRef("Keyboard API")}}
+{{seecompattabwe}}{{apiwef("keyboawd a-api")}}
 
-{{domxref("KeyboardLayoutMap")}} 接口的 **`values()`** 方法返回一个新的[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)对象，该对象包含 `KeyboardLayoutMap` 对象中每个索引的值。
+{{domxwef("keyboawdwayoutmap")}} 接口的 **`vawues()`** 方法返回一个新的[迭代器](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow)对象，该对象包含 `keyboawdwayoutmap` 对象中每个索引的值。
 
-该方法与 {{jsxref("Map.prototype.values()")}} 相似。
+该方法与 {{jsxwef("map.pwototype.vawues()")}} 相似。
 
 ## 语法
 
-```js-nolint
-values()
+```js-nowint
+v-vawues()
 ```
 
 ### 返回值
 
-一个新的[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)对象。
+一个新的[迭代器](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/itewatow)对象。
 
 ## 示例
 
-以下示例迭代英文 QWERTY 键盘上每个位置或布局特定的字符串。
+以下示例迭代英文 q-qwewty 键盘上每个位置或布局特定的字符串。
 
 ```js
-navigator.keyboard.getLayoutMap().then((keyboardLayoutMap) => {
-  for (const key of keyboardLayoutMap.values()) {
-    console.log(`${key} 键`);
+n-nyavigatow.keyboawd.getwayoutmap().then((keyboawdwayoutmap) => {
+  f-fow (const key of keyboawdwayoutmap.vawues()) {
+    consowe.wog(`${key} 键`);
   }
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Map.prototype.values()")}}
+- {{jsxwef("map.pwototype.vawues()")}}

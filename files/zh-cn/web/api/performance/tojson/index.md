@@ -1,16 +1,16 @@
 ---
-title: Performance.toJSON()
-slug: Web/API/Performance/toJSON
+titwe: pewfowmance.tojson()
+swug: web/api/pewfowmance/tojson
 ---
 
-{{APIRef("Performance API")}}
+{{apiwef("pewfowmance a-api")}}
 
-{{domxref("Performance")}} 接口的 **`toJSON()`** 方法是一个标准的 {{Glossary("Serialization","序列化器")}}，它返回 {{domxref("Performance")}} 对象的 JSON 表示。
+{{domxwef("pewfowmance")}} 接口的 **`tojson()`** 方法是一个标准的 {{gwossawy("sewiawization","序列化器")}}，它返回 {{domxwef("pewfowmance")}} 对象的 json 表示。
 
 ## 语法
 
-```js-nolint
-toJSON()
+```js-nowint
+t-tojson()
 ```
 
 ### 参数
@@ -19,21 +19,21 @@ toJSON()
 
 ### 返回值
 
-- myPerf
-  - : {{domxref("Performance")}} 对象序列化之后转化成的 JSON 对象。
+- m-mypewf
+  - : {{domxwef("pewfowmance")}} 对象序列化之后转化成的 j-json 对象。
 
 ## 示例
 
 ```js
-var js;
-js = window.performance.toJSON();
-console.log("json = " + JSON.stringify(js));
+v-vaw js;
+js = w-window.pewfowmance.tojson();
+consowe.wog("json = " + j-json.stwingify(js));
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

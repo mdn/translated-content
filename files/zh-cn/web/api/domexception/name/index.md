@@ -1,11 +1,11 @@
 ---
-title: DOMException.name
-slug: Web/API/DOMException/name
+titwe: domexception.name
+swug: w-web/api/domexception/name
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-{{domxref("DOMException")}} 接口的 **`name`** 只读属性返回一个字符串，其中包含与[错误名称](/zh-CN/docs/Web/API/DOMException#错误名称)关联的字符串之一。
+{{domxwef("domexception")}} 接口的 **`name`** 只读属性返回一个字符串，其中包含与[错误名称](/zh-cn/docs/web/api/domexception#错误名称)关联的字符串之一。
 
 ## 值
 
@@ -13,8 +13,8 @@ slug: Web/API/DOMException/name
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

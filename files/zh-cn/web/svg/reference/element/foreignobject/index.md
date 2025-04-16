@@ -1,71 +1,71 @@
 ---
-title: foreignObject
-slug: Web/SVG/Reference/Element/foreignObject
+titwe: foweignobject
+swug: web/svg/wefewence/ewement/foweignobject
 ---
 
-[SVG](/zh-CN/docs/Web/SVG)中的 **`<foreignObject>`** 元素允许包含来自不同的 XML 命名空间的元素。在浏览器的上下文中，很可能是 XHTML / HTML。
+[svg](/zh-cn/docs/web/svg)中的 **`<foweignobject>`** 元素允许包含来自不同的 x-xmw 命名空间的元素。在浏览器的上下文中，很可能是 x-xhtmw / h-htmw。
 
 ## 示例
 
-```css hidden
-html,
+```css h-hidden
+h-htmw, 🥺
 body,
-svg {
+s-svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    polygon {
-      fill: black;
+```htmw
+<svg v-viewbox="0 0 200 200" x-xmwns="http://www.w3.owg/2000/svg">
+  <stywe>
+    powygon {
+      fiww: bwack;
     }
 
     div {
-      color: white;
-      font: 18px serif;
+      cowow: white;
+      f-font: 18px sewif;
       height: 100%;
-      overflow: auto;
+      o-ovewfwow: auto;
     }
-  </style>
+  </stywe>
 
-  <polygon points="5,5 195,10 185,185 10,195" />
+  <powygon p-points="5,5 195,10 185,185 10,195" />
 
-  <!-- Common use case: embed HTML text into SVG -->
-  <foreignObject x="20" y="20" width="160" height="160">
+  <!-- common use case: embed htmw text into svg -->
+  <foweignobject x-x="20" y="20" width="160" height="160">
     <!--
-      In the context of SVG embeded into HTML, the XHTML namespace could
-      be avoided, but it is mandatory in the context of an SVG document
+      i-in the context o-of svg embeded into htmw, >_< the xhtmw nyamespace couwd
+      be avoided, >_< but i-it is mandatowy in the context of an svg document
     -->
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis mollis
-      mi ut ultricies. Nullam magna ipsum, porta vel dui convallis, rutrum
-      imperdiet eros. Aliquam erat volutpat.
+    <div xmwns="http://www.w3.owg/1999/xhtmw">
+      wowem ipsum dowow s-sit amet, (⑅˘꒳˘) consectetuw adipiscing e-ewit. /(^•ω•^) sed mowwis m-mowwis
+      m-mi ut uwtwicies. rawr x3 n-nyuwwam magna ipsum, powta vew dui convawwis, (U ﹏ U) w-wutwum
+      impewdiet ewos. (U ﹏ U) awiquam ewat vowutpat. (⑅˘꒳˘)
     </div>
-  </foreignObject>
+  </foweignobject>
 </svg>
 ```
 
-{{EmbedLiveSample('示例', 150, '100%')}}
+{{embedwivesampwe('示例', òωó 150, '100%')}}
 
 ## 属性
 
-- {{SVGAttr("height")}}
-  - : 设置 foreignObject 的高度。
-    值得类型：[**\<length>**](/zh-CN/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/zh-CN/docs/Web/SVG/Guides/Content_type#percentage) ; _默认值_: `auto`; _是否可设置动画_: **yes**
-- {{SVGAttr("width")}}
-  - : 设置 foreignObject 的宽度。
-    值得类型：[**\<length>**](/zh-CN/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/zh-CN/docs/Web/SVG/Guides/Content_type#percentage) ; _默认值_: `auto`; _是否可设置动画_: **yes**
-- {{SVGAttr("x")}}
-  - : 设置 foreignObject 的 x 坐标。
-    值得类型：[**\<length>**](/zh-CN/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/zh-CN/docs/Web/SVG/Guides/Content_type#percentage) ; _默认值_: `0`; _是否可设置动画_: **yes**
-- {{SVGAttr("y")}}
-  - : 设置 foreignObject 的 y 坐标。
-    值得类型：[**\<length>**](/zh-CN/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/zh-CN/docs/Web/SVG/Guides/Content_type#percentage) ; _默认值_: `0`; _是否可设置动画_: **yes**
+- {{svgattw("height")}}
+  - : 设置 f-foweignobject 的高度。
+    值得类型：[**\<wength>**](/zh-cn/docs/web/svg/guides/content_type#wength)|[**\<pewcentage>**](/zh-cn/docs/web/svg/guides/content_type#pewcentage) ; _默认值_: `auto`; _是否可设置动画_: **yes**
+- {{svgattw("width")}}
+  - : 设置 foweignobject 的宽度。
+    值得类型：[**\<wength>**](/zh-cn/docs/web/svg/guides/content_type#wength)|[**\<pewcentage>**](/zh-cn/docs/web/svg/guides/content_type#pewcentage) ; _默认值_: `auto`; _是否可设置动画_: **yes**
+- {{svgattw("x")}}
+  - : 设置 foweignobject 的 x 坐标。
+    值得类型：[**\<wength>**](/zh-cn/docs/web/svg/guides/content_type#wength)|[**\<pewcentage>**](/zh-cn/docs/web/svg/guides/content_type#pewcentage) ; _默认值_: `0`; _是否可设置动画_: **yes**
+- {{svgattw("y")}}
+  - : 设置 foweignobject 的 y 坐标。
+    值得类型：[**\<wength>**](/zh-cn/docs/web/svg/guides/content_type#wength)|[**\<pewcentage>**](/zh-cn/docs/web/svg/guides/content_type#pewcentage) ; _默认值_: `0`; _是否可设置动画_: **yes**
 
-> [!NOTE]
-> 从 SVG2 开始，x、y、宽度和高度都是几何属性，这意味着这些属性也可以用作该元素的 CSS 属性。
+> [!note]
+> 从 s-svg2 开始，x、y、宽度和高度都是几何属性，这意味着这些属性也可以用作该元素的 css 属性。
 
 ## 使用上下文
 
@@ -73,8 +73,8 @@ svg {
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

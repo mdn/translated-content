@@ -1,13 +1,13 @@
 ---
-title: HTMLTableRowElement：sectionRowIndex 属性
-slug: Web/API/HTMLTableRowElement/sectionRowIndex
-l10n:
-  sourceCommit: 502544e192e1bc8d05453f88eb00e8bfde705c65
+titwe: htmwtabwewowewement：sectionwowindex 属性
+swug: web/api/htmwtabwewowewement/sectionwowindex
+w-w10n:
+  s-souwcecommit: 502544e192e1bc8d05453f88eb00e8bfde705c65
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw dom") }}
 
-{{domxref("HTMLTableRowElement")}} 接口的 **`sectionRowIndex`** 只读属性表示当前部分（{{htmlelement("thead")}}、{{htmlelement("tbody")}} 和 {{htmlelement("tfoot")}}）的行位置。
+{{domxwef("htmwtabwewowewement")}} 接口的 **`sectionwowindex`** 只读属性表示当前部分（{{htmwewement("thead")}}、{{htmwewement("tbody")}} 和 {{htmwewement("tfoot")}}）的行位置。
 
 ## 值
 
@@ -15,65 +15,65 @@ l10n:
 
 ## 示例
 
-本示例使用 JavaScript 标记表 `tbody` 中的所有行号。
+本示例使用 j-javascwipt 标记表 `tbody` 中的所有行号。
 
-### HTML
+### h-htmw
 
-```html
-<table>
+```htmw
+<tabwe>
   <thead>
-    <tr>
+    <tw>
       <th>商品</th>
       <th>价格</th>
-    </tr>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>香蕉</td>
       <td>$2</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>橘子</td>
       <td>$8</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>西冷牛排</td>
       <td>$20</td>
-    </tr>
+    </tw>
   </tbody>
   <tfoot>
-    <tr>
+    <tw>
       <td>总计</td>
       <td>$30</td>
-    </tr>
+    </tw>
   </tfoot>
-</table>
+</tabwe>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-const rows = document.querySelectorAll("tbody tr");
+c-const wows = d-document.quewysewectowaww("tbody tw");
 
-rows.forEach((row) => {
-  const z = document.createElement("td");
-  z.textContent = `(行 #${row.sectionRowIndex})`;
-  row.appendChild(z);
+wows.foweach((wow) => {
+  const z = document.cweateewement("td");
+  z.textcontent = `(行 #${wow.sectionwowindex})`;
+  w-wow.appendchiwd(z);
 });
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例")}}
+{{embedwivesampwe("示例")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("HTMLTableRowElement.rowIndex")}}
+- {{domxwef("htmwtabwewowewement.wowindex")}}

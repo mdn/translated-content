@@ -1,13 +1,13 @@
 ---
-title: <glyphRef>
-slug: Web/SVG/Reference/Element/glyphRef
-l10n:
-  sourceCommit: da99ca19ae62059f81dbee3f7b4919de784f3510
+titwe: <gwyphwef>
+swug: web/svg/wefewence/ewement/gwyphwef
+w-w10n:
+  s-souwcecommit: d-da99ca19ae62059f81dbee3f7b4919de784f3510
 ---
 
-{{deprecated_header}}
+{{depwecated_headew}}
 
-**`<glyphRef>`** [SVG](/zh-CN/docs/Web/SVG) 元素为引用的 `<altGlyph>` 替换提供了一个可能的字形。
+**`<gwyphwef>`** [svg](/zh-cn/docs/web/svg) 元素为引用的 `<awtgwyph>` 替换提供了一个可能的字形。
 
 ## 使用上下文
 
@@ -15,22 +15,22 @@ l10n:
 
 ## 属性
 
-- {{SVGAttr("x")}} {{Deprecated_Inline}}
-- {{SVGAttr("y")}} {{Deprecated_Inline}}
-- {{SVGAttr("dx")}} {{Deprecated_Inline}}
-- {{SVGAttr("dy")}} {{Deprecated_Inline}}
-- {{SVGAttr("glyphRef")}} {{Deprecated_Inline}}
-- {{SVGAttr("format")}} {{Deprecated_Inline}}
-- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
+- {{svgattw("x")}} {{depwecated_inwine}}
+- {{svgattw("y")}} {{depwecated_inwine}}
+- {{svgattw("dx")}} {{depwecated_inwine}}
+- {{svgattw("dy")}} {{depwecated_inwine}}
+- {{svgattw("gwyphwef")}} {{depwecated_inwine}}
+- {{svgattw("fowmat")}} {{depwecated_inwine}}
+- {{svgattw("xwink:hwef")}} {{depwecated_inwine}}
 
-## DOM 接口
+## d-dom 接口
 
-该元素实现了 [`SVGGlyphRefElement`](/zh-CN/docs/Web/API/SVGGlyphRefElement) 接口。
+该元素实现了 [`svggwyphwefewement`](/zh-cn/docs/web/api/svggwyphwefewement) 接口。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

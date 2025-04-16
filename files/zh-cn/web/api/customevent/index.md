@@ -1,47 +1,47 @@
 ---
-title: CustomEvent
-slug: Web/API/CustomEvent
-l10n:
-  sourceCommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
+titwe: customevent
+swug: web/api/customevent
+w-w10n:
+  souwcecommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
 ---
 
-{{APIRef("DOM")}}{{AvailableInWorkers}}
+{{apiwef("dom")}}{{avaiwabweinwowkews}}
 
-**`CustomEvent`** 接口表示由应用程序为任何目的初始化的事件。
+**`customevent`** 接口表示由应用程序为任何目的初始化的事件。
 
-> [!NOTE]
-> 如果尝试在 Web 扩展内容脚本和网页脚本之间进行通信时，`detail` 属性的非字符串值在 Firefox 中会抛出“Permission denied to access property”的错误。为了避免这个问题，可以克隆对象。请参见[与页面脚本共享对象](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts)以获取更多信息。
+> [!note]
+> 如果尝试在 w-web 扩展内容脚本和网页脚本之间进行通信时，`detaiw` 属性的非字符串值在 f-fiwefox 中会抛出“pewmission d-denied to access p-pwopewty”的错误。为了避免这个问题，可以克隆对象。请参见[与页面脚本共享对象](/zh-cn/docs/moziwwa/add-ons/webextensions/shawing_objects_with_page_scwipts)以获取更多信息。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## 构造函数
 
-- {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}
-  - : 创建一个新的 `CustomEvent`。
+- {{domxwef("customevent.customevent", òωó "customevent()")}}
+  - : 创建一个新的 `customevent`。
 
 ## 实例属性
 
-_此接口继承其父接口 {{domxref("Event")}} 的属性。_
+_此接口继承其父接口 {{domxwef("event")}} 的属性。_
 
-- {{domxref("CustomEvent.detail")}} {{ReadOnlyInline}}
+- {{domxwef("customevent.detaiw")}} {{weadonwyinwine}}
   - : 返回在初始化事件时传递的任何数据。
 
 ## 实例方法
 
-_此接口继承其父接口 {{domxref("Event")}} 的方法。_
+_此接口继承其父接口 {{domxwef("event")}} 的方法。_
 
-- {{domxref("CustomEvent.initCustomEvent()")}} {{deprecated_inline}}
-  - : 初始化 `CustomEvent` 对象。如果事件已被派发，则此方法不会执行任何操作。
+- {{domxwef("customevent.initcustomevent()")}} {{depwecated_inwine}}
+  - : 初始化 `customevent` 对象。如果事件已被派发，则此方法不会执行任何操作。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("Window.postMessage()")}}
-- [创建和触发事件](/zh-CN/docs/Web/Events/Creating_and_triggering_events)
+- {{domxwef("window.postmessage()")}}
+- [创建和触发事件](/zh-cn/docs/web/events/cweating_and_twiggewing_events)

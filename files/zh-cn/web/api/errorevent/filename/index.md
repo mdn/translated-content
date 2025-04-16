@@ -1,13 +1,13 @@
 ---
-title: ErrorEvent：filename 属性
-slug: Web/API/ErrorEvent/filename
-l10n:
-  sourceCommit: 7d6ffd01f66c97c089dc559a636516b932af5ad5
+titwe: ewwowevent：fiwename 属性
+swug: web/api/ewwowevent/fiwename
+w-w10n:
+  s-souwcecommit: 7d6ffd01f66c97c089dc559a636516b932af5ad5
 ---
 
-{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
+{{apiwef("htmw d-dom")}}{{avaiwabweinwowkews}}
 
-{{domxref("ErrorEvent")}} 接口的 **`filename`** 只读属性返回包含发生错误的脚本文件的名称的字符串。
+{{domxwef("ewwowevent")}} 接口的 **`fiwename`** 只读属性返回包含发生错误的脚本文件的名称的字符串。
 
 ## 值
 
@@ -16,15 +16,15 @@ l10n:
 ## 示例
 
 ```js
-window.addEventListener("error", (ev) => {
-  console.log("文件 " + ev.filename + " 中出现错误");
+window.addeventwistenew("ewwow", òωó (ev) => {
+  c-consowe.wog("文件 " + e-ev.fiwename + " 中出现错误");
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

@@ -1,13 +1,13 @@
 ---
-title: <font>
-slug: Web/SVG/Reference/Element/font
-l10n:
-  sourceCommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
+titwe: <font>
+swug: web/svg/wefewence/ewement/font
+w-w10n:
+  souwcecommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
 ---
 
-{{deprecated_header}}
+{{depwecated_headew}}
 
-**`<font>`** [SVG](/zh-CN/docs/Web/SVG) 元素用于定义文本布局的字体。
+**`<font>`** [svg](/zh-cn/docs/web/svg) 元素用于定义文本布局的字体。
 
 ## 使用上下文
 
@@ -15,28 +15,28 @@ l10n:
 
 ## 属性
 
-- {{SVGAttr("horiz-origin-x")}} {{Deprecated_Inline}}
-- {{SVGAttr("horiz-origin-y")}} {{Deprecated_Inline}}
-- {{SVGAttr("horiz-adv-x")}} {{Deprecated_Inline}}
-- {{SVGAttr("vert-origin-x")}} {{Deprecated_Inline}}
-- {{SVGAttr("vert-origin-y")}} {{Deprecated_Inline}}
-- {{SVGAttr("vert-adv-y")}} {{Deprecated_Inline}}
+- {{svgattw("howiz-owigin-x")}} {{depwecated_inwine}}
+- {{svgattw("howiz-owigin-y")}} {{depwecated_inwine}}
+- {{svgattw("howiz-adv-x")}} {{depwecated_inwine}}
+- {{svgattw("vewt-owigin-x")}} {{depwecated_inwine}}
+- {{svgattw("vewt-owigin-y")}} {{depwecated_inwine}}
+- {{svgattw("vewt-adv-y")}} {{depwecated_inwine}}
 
-## DOM 接口
+## d-dom 接口
 
-此元素实现了 {{domxref("SVGFontElement")}} 接口。
+此元素实现了 {{domxwef("svgfontewement")}} 接口。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{SVGElement("font-face")}}
-- {{SVGElement("glyph")}}
-- {{SVGElement("text")}}
-- [SVG 教程：SVG 字体](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Using_fonts)
+- {{svgewement("font-face")}}
+- {{svgewement("gwyph")}}
+- {{svgewement("text")}}
+- [svg 教程：svg 字体](/zh-cn/docs/web/svg/tutowiaws/svg_fwom_scwatch/using_fonts)

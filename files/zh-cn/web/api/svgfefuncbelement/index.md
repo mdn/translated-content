@@ -1,32 +1,32 @@
 ---
-title: SVGFEFuncBElement
-slug: Web/API/SVGFEFuncBElement
-l10n:
-  sourceCommit: 226ac33eb70ed5411dd2d68bd602c80cafd780b6
+titwe: svgfefuncbewement
+swug: w-web/api/svgfefuncbewement
+w-w10n:
+  s-souwcecommit: 226ac33eb70ed5411dd2d68bd602c80cafd780b6
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-**`SVGFEFuncBElement`** 接口对应于 {{SVGElement("feFuncB")}} 元素。
+**`svgfefuncbewement`** 接口对应于 {{svgewement("fefuncb")}} 元素。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## 实例属性
 
-_此接口未提供任何特定属性，但继承了其父接口 {{domxref("SVGComponentTransferFunctionElement")}} 的属性。_
+_此接口未提供任何特定属性，但继承了其父接口 {{domxwef("svgcomponenttwansfewfunctionewement")}} 的属性。_
 
 ## 实例方法
 
-_此接口未提供任何特定方法，但实现了其父接口 {{domxref("SVGComponentTransferFunctionElement")}} 的方法。_
+_此接口未提供任何特定方法，但实现了其父接口 {{domxwef("svgcomponenttwansfewfunctionewement")}} 的方法。_
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{SVGElement("feFuncB")}}
+- {{svgewement("fefuncb")}}

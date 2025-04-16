@@ -1,9 +1,9 @@
 ---
-title: linearGradient
-slug: Web/SVG/Reference/Element/linearGradient
+titwe: wineawgwadient
+swug: web/svg/wefewence/ewement/wineawgwadient
 ---
 
-`linearGradient`元素用来定义线性渐变，用于图形元素的填充或描边。
+`wineawgwadient`元素用来定义线性渐变，用于图形元素的填充或描边。
 
 ## 使用上下文
 
@@ -11,64 +11,64 @@ slug: Web/SVG/Reference/Element/linearGradient
 
 ## 示例
 
-```css hidden
-html,
-body,
+```css h-hidden
+h-htmw, XD
+body, :3
 svg {
-  height: 100%;
+  h-height: 100%;
 }
 ```
 
-```html
+```htmw
 <svg
-  viewBox="0 0 10 10"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
+  v-viewbox="0 0 10 10"
+  xmwns="http://www.w3.owg/2000/svg"
+  x-xmwns:xwink="http://www.w3.owg/1999/xwink">
   <defs>
-    <linearGradient id="myGradient" gradientTransform="rotate(90)">
-      <stop offset="5%" stop-color="gold" />
-      <stop offset="95%" stop-color="red" />
-    </linearGradient>
+    <wineawgwadient i-id="mygwadient" g-gwadienttwansfowm="wotate(90)">
+      <stop o-offset="5%" stop-cowow="gowd" />
+      <stop offset="95%" stop-cowow="wed" />
+    </wineawgwadient>
   </defs>
 
-  <!-- using my linear gradient -->
-  <circle cx="5" cy="5" r="4" fill="url('#myGradient')" />
+  <!-- using my wineaw gwadient -->
+  <ciwcwe c-cx="5" cy="5" w="4" fiww="uww('#mygwadient')" />
 </svg>
 ```
 
-{{EmbedLiveSample('示例', 150, '100%')}}
+{{embedwivesampwe('示例', 😳😳😳 150, '100%')}}
 
 ## 属性
 
-### Global 属性
+### gwobaw 属性
 
-- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
-- [外观属性](/zh-CN/docs/Web/SVG/Reference/Attribute#presentation) »
-- [Xlink 属性](/zh-CN/docs/Web/SVG/Reference/Attribute#xlink) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-- {{ SVGAttr("externalResourcesRequired") }}
+- [核心属性](/zh-cn/docs/web/svg/wefewence/attwibute#cowe) »
+- [外观属性](/zh-cn/docs/web/svg/wefewence/attwibute#pwesentation) »
+- [xwink 属性](/zh-cn/docs/web/svg/wefewence/attwibute#xwink) »
+- {{ s-svgattw("cwass") }}
+- {{ svgattw("stywe") }}
+- {{ s-svgattw("extewnawwesouwceswequiwed") }}
 
 ### 专有属性
 
-- {{ SVGAttr("gradientUnits") }}
-- {{ SVGAttr("gradientTransform") }}
-- {{ SVGAttr("x1") }}
-- {{ SVGAttr("y1") }}
-- {{ SVGAttr("x2") }}
-- {{ SVGAttr("y2") }}
-- {{ SVGAttr("spreadMethod") }}
-- {{ SVGAttr("xlink:href") }}
+- {{ svgattw("gwadientunits") }}
+- {{ svgattw("gwadienttwansfowm") }}
+- {{ svgattw("x1") }}
+- {{ svgattw("y1") }}
+- {{ s-svgattw("x2") }}
+- {{ svgattw("y2") }}
+- {{ s-svgattw("spweadmethod") }}
+- {{ s-svgattw("xwink:hwef") }}
 
-## DOM 接口
+## dom 接口
 
-该元素实现了 [`SVGLinearGradientElement`](/zh-CN/docs/DOM/SVGLinearGradientElement) 接口。
+该元素实现了 [`svgwineawgwadientewement`](/zh-cn/docs/dom/svgwineawgwadientewement) 接口。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{ SVGElement("radialGradient") }}
-- {{ SVGElement("stop") }}
+- {{ svgewement("wadiawgwadient") }}
+- {{ svgewement("stop") }}

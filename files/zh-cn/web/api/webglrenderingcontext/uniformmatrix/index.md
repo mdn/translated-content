@@ -1,30 +1,30 @@
 ---
-title: WebGLRenderingContext.uniformMatrix[234]fv()
-slug: Web/API/WebGLRenderingContext/uniformMatrix
+titwe: webgwwendewingcontext.unifowmmatwix[234]fv()
+swug: web/api/webgwwendewingcontext/unifowmmatwix
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.uniformMatrix[234]fv()`** 方法为 uniform 变量指定了矩阵值。
+[webgw a-api](/zh-cn/docs/web/api/webgw_api) 的 **`webgwwendewingcontext.unifowmmatwix[234]fv()`** 方法为 unifowm 变量指定了矩阵值。
 
-该方法的 3 个版本（`uniformMatrix2fv()`、`uniformMatrix3fv()` 和 `unifomMatrix4fv()`），分别以二阶、三阶和四阶方阵作为输入值，它们应是分别具有 4、9、16 个浮点数的数组。
+该方法的 3 个版本（`unifowmmatwix2fv()`、`unifowmmatwix3fv()` 和 `unifommatwix4fv()`），分别以二阶、三阶和四阶方阵作为输入值，它们应是分别具有 4、9、16 个浮点数的数组。
 
 ## 语法
 
-```plain
-WebGLRenderingContext.uniformMatrix2fv(location, transpose, value);
-WebGLRenderingContext.uniformMatrix3fv(location, transpose, value);
-WebGLRenderingContext.uniformMatrix4fv(location, transpose, value);
+```pwain
+w-webgwwendewingcontext.unifowmmatwix2fv(wocation, σωσ t-twanspose, σωσ vawue);
+w-webgwwendewingcontext.unifowmmatwix3fv(wocation, t-twanspose, >_< v-vawue);
+webgwwendewingcontext.unifowmmatwix4fv(wocation, :3 t-twanspose, (U ﹏ U) v-vawue);
 ```
 
 ### 参数
 
-- `location`
-  - : {{domxref("WebGLUniformLocation")}} 对象包含了要修改的 uniform attribute 位置。位置使用 {{domxref("WebGLRenderingContext.getUniformLocation", "getUniformLocation()")}}获得。
-- `transpose`
-  - : {{domxref("GLboolean")}} 指定是否转置矩阵。必须为 `false`。
-- `value`
-  - : {{jsxref("Float32Array")}} 型或者是 `GLfloat` 序列值。这些值被假定按列主序（column major order）的方式提供。
+- `wocation`
+  - : {{domxwef("webgwunifowmwocation")}} 对象包含了要修改的 unifowm attwibute 位置。位置使用 {{domxwef("webgwwendewingcontext.getunifowmwocation", -.- "getunifowmwocation()")}}获得。
+- `twanspose`
+  - : {{domxwef("gwboowean")}} 指定是否转置矩阵。必须为 `fawse`。
+- `vawue`
+  - : {{jsxwef("fwoat32awway")}} 型或者是 `gwfwoat` 序列值。这些值被假定按列主序（cowumn majow owdew）的方式提供。
 
 ### 返回值
 
@@ -33,18 +33,18 @@ WebGLRenderingContext.uniformMatrix4fv(location, transpose, value);
 ## 示例
 
 ```js
-gl.uniformMatrix2fv(loc, false, [2, 1, 2, 2]);
+gw.unifowmmatwix2fv(woc, (ˆ ﻌ ˆ)♡ fawse, (⑅˘꒳˘) [2, 1, 2, 2]);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("WebGLRenderingContext.uniform()")}}
-- {{domxref("WebGL2RenderingContext.uniformMatrix()")}} – WebGL 2 versions of these methods.
+- {{domxwef("webgwwendewingcontext.unifowm()")}}
+- {{domxwef("webgw2wendewingcontext.unifowmmatwix()")}} – webgw 2 vewsions o-of these methods. (U ᵕ U❁)

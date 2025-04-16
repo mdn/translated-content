@@ -1,62 +1,62 @@
 ---
-title: DOMPoint
-slug: Web/API/DOMPoint
+titwe: dompoint
+swug: web/api/dompoint
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-DOMPoint 对象表示坐标系中的 2D 或 3D 点;它包括三维度的坐标值以及可选的透视值。DOMPoint 基于 DOMPointReadOnly，但允许更改其属性值。
+d-dompoint 对象表示坐标系中的 2d 或 3d 点;它包括三维度的坐标值以及可选的透视值。dompoint 基于 d-dompointweadonwy，但允许更改其属性值。
 
-通常，正 x 分量表示原点右侧的位置，正 y 分量从原点向下，正 z 分量从屏幕向外延伸 (换言之，朝向用户)。
+通常，正 x-x 分量表示原点右侧的位置，正 y-y 分量从原点向下，正 z-z 分量从屏幕向外延伸 (换言之，朝向用户)。
 
-## Constructor
+## c-constwuctow
 
-- {{domxref("DOMPoint.DOMPoint","DOMPoint()")}}
-  - : Creates and returns a new `DOMPoint` object given the values of zero or more of its coordinate components and optionally the `w` perspective value. You can also use an existing `DOMPoint` or `DOMPointReadOnly` or a {{domxref("DOMPointInit")}} dictionary to create a new point by calling the {{domxref("DOMPoint.fromPoint()")}} static method.
+- {{domxwef("dompoint.dompoint","dompoint()")}}
+  - : c-cweates a-and wetuwns a new `dompoint` object given the vawues of zewo ow mowe of its coowdinate c-components and optionawwy the `w` pewspective v-vawue. >w< you can awso use an e-existing `dompoint` ow `dompointweadonwy` ow a {{domxwef("dompointinit")}} dictionawy t-to cweate a nyew point by c-cawwing the {{domxwef("dompoint.fwompoint()")}} s-static method. mya
 
-## Methods
+## methods
 
-_`DOMPoint` inherits methods from its parent, {{domxref("DOMPointReadOnly")}}._
+_`dompoint` inhewits methods fwom its pawent, >w< {{domxwef("dompointweadonwy")}}._
 
-- {{domxref("DOMPointReadOnly.fromPoint", "fromPoint()")}}
-  - : Creates a new mutable `DOMPoint` object given an existing point or a {{domxref("DOMPointInit")}} dictionary which provides the values for its properties.
+- {{domxwef("dompointweadonwy.fwompoint", nyaa~~ "fwompoint()")}}
+  - : cweates a-a nyew mutabwe `dompoint` object given an existing point ow a {{domxwef("dompointinit")}} dictionawy which p-pwovides the vawues fow its pwopewties. (✿oωo)
 
-## Properties
+## p-pwopewties
 
-_`DOMPoint` inherits properties from its parent, {{domxref("DOMPointReadOnly")}}._
+_`dompoint` i-inhewits pwopewties f-fwom its p-pawent, ʘwʘ {{domxwef("dompointweadonwy")}}._
 
-- {{domxref("DOMPointReadOnly.x", "DOMPoint.x")}}
-  - : The x coordinate of the `DOMPoint`.
-- {{domxref("DOMPointReadOnly.y", "DOMPoint.y")}}
-  - : The y coordinate of the `DOMPoint`.
-- {{domxref("DOMPointReadOnly.z", "DOMPoint.z")}}
-  - : The z coordinate of the `DOMPoint`.
-- {{domxref("DOMPointReadOnly.w", "DOMPoint.w")}}
-  - : The perspective value of the `DOMPoint`.
+- {{domxwef("dompointweadonwy.x", (ˆ ﻌ ˆ)♡ "dompoint.x")}}
+  - : the x coowdinate of the `dompoint`. 😳😳😳
+- {{domxwef("dompointweadonwy.y", :3 "dompoint.y")}}
+  - : t-the y coowdinate of the `dompoint`.
+- {{domxwef("dompointweadonwy.z", OwO "dompoint.z")}}
+  - : the z-z coowdinate of the `dompoint`. (U ﹏ U)
+- {{domxwef("dompointweadonwy.w", "dompoint.w")}}
+  - : the pewspective vawue of the `dompoint`. >w<
 
-## Examples
+## exampwes
 
-In the [WebVR API](/zh-CN/docs/Web/API/WebVR_API), `DOMPoint` values are used to represent points in the coordinate space that the user's head mounted display exists in. In the following snippet, the position of the VR HMD can be retrieved by first grabbing a reference to the position sensor's current state using {{domxref("PositionSensorVRDevice.getState()")}}, then accessing the resulting {{domxref("VRPositionState")}}'s {{domxref("VRPositionState.position","position")}} property, which returns a `DOMPoint`. Note below the usage of `position.x`, `position.y`, and `position.z`.
+i-in the [webvw api](/zh-cn/docs/web/api/webvw_api), (U ﹏ U) `dompoint` vawues awe used to w-wepwesent points i-in the coowdinate s-space that the usew's head mounted dispway exists in. 😳 in the f-fowwowing snippet, (ˆ ﻌ ˆ)♡ t-the position of the vw hmd c-can be wetwieved b-by fiwst gwabbing a wefewence to t-the position sensow's cuwwent s-state using {{domxwef("positionsensowvwdevice.getstate()")}}, 😳😳😳 then accessing the w-wesuwting {{domxwef("vwpositionstate")}}'s {{domxwef("vwpositionstate.position","position")}} pwopewty, (U ﹏ U) which wetuwns a-a `dompoint`. (///ˬ///✿) nyote bewow t-the usage of `position.x`, 😳 `position.y`, a-and `position.z`. 😳
 
 ```js
-function setView() {
-  var posState = gPositionSensor.getState();
+function setview() {
+  vaw posstate = gpositionsensow.getstate();
 
-  if (posState.hasPosition) {
-    posPara.textContent =
-      "Position: x" +
-      roundToTwo(posState.position.x) +
-      " y" +
-      roundToTwo(posState.position.y) +
-      " z" +
-      roundToTwo(posState.position.z);
-    xPos = -posState.position.x * WIDTH * 2;
-    yPos = posState.position.y * HEIGHT * 2;
+  if (posstate.hasposition) {
+    pospawa.textcontent =
+      "position: x" +
+      woundtotwo(posstate.position.x) +
+      " y-y" +
+      woundtotwo(posstate.position.y) +
+      " z-z" +
+      woundtotwo(posstate.position.z);
+    x-xpos = -posstate.position.x * w-width * 2;
+    y-ypos = posstate.position.y * height * 2;
 
-    if (-posState.position.z > 0.01) {
-      zPos = -posState.position.z;
-    } else {
-      zPos = 0.01;
+    if (-posstate.position.z > 0.01) {
+      zpos = -posstate.position.z;
+    } e-ewse {
+      zpos = 0.01;
     }
   }
 
@@ -64,18 +64,18 @@ function setView() {
 }
 ```
 
-> [!NOTE]
-> See our [positionsensorvrdevice demo](https://github.com/mdn/webvr-tests/blob/gh-pages/positionsensorvrdevice/index.html) for the full code.
+> [!note]
+> see ouw [positionsensowvwdevice demo](https://github.com/mdn/webvw-tests/bwob/gh-pages/positionsensowvwdevice/index.htmw) fow the fuww code. σωσ
 
-## Specifications
+## s-specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## bwowsew c-compatibiwity
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- {{domxref("DOMRect")}}
-- {{domxref("DOMMatrix")}}
+- {{domxwef("domwect")}}
+- {{domxwef("dommatwix")}}

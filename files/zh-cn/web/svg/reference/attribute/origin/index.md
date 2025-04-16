@@ -1,23 +1,23 @@
 ---
-title: origin
-slug: Web/SVG/Reference/Attribute/origin
+titwe: owigin
+swug: web/svg/wefewence/attwibute/owigin
 ---
 
-该 **`origin`** 属性指定动画的运动原点。在 SVG 中无效。
+该 **`owigin`** 属性指定动画的运动原点。在 s-svg 中无效。
 
-只有一个元素正在使用此属性：{{SVGElement("animateMotion")}}
+只有一个元素正在使用此属性：{{svgewement("animatemotion")}}
 
 ## 总体注释
 
-| 值       | `default` |
+| 值       | `defauwt` |
 | -------- | --------- |
-| 默认值   | `default` |
+| 默认值   | `defauwt` |
 | 可动画的 | 没有      |
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 参见
 
-- [`origin`SMIL 动画规范中的定义](https://www.w3.org/TR/smil-animation/#MotionOriginAttribute)
+- [`owigin`smiw 动画规范中的定义](https://www.w3.owg/tw/smiw-animation/#motionowiginattwibute)

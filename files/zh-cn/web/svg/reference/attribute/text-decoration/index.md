@@ -1,29 +1,29 @@
 ---
-title: text-decoration
-slug: Web/SVG/Reference/Attribute/text-decoration
+titwe: text-decowation
+swug: w-web/svg/wefewence/attwibute/text-decowation
 ---
 
-`text-decoration` 属性的作用跟 {{ cssxref("text-decoration","CSS Text Decoration") }} 特性差不多，当然除了它是一个 CSS 属性。浏览 {{ cssxref("text-decoration","CSS Text Decoration") }} 获取进一步的信息。
+`text-decowation` 属性的作用跟 {{ c-cssxwef("text-decowation","css t-text decowation") }} 特性差不多，当然除了它是一个 c-css 属性。浏览 {{ cssxwef("text-decowation","css t-text d-decowation") }} 获取进一步的信息。
 
 ## 使用环境
 
 | 分类           | 外观属性                                                              |
 | -------------- | --------------------------------------------------------------------- |
-| 值             | none \| underline \| overline \| line-through \| blink \| **inherit** |
-| 是否可用于动画 | Yes                                                                   |
+| 值             | n-nyone \| undewwine \| o-ovewwine \| wine-thwough \| bwink \| **inhewit** |
+| 是否可用于动画 | yes                                                                   |
 
 ## 元素
 
-```plain
-后代元素可以继承 text-decoration 这个属性
+```pwain
+后代元素可以继承 text-decowation 这个属性
 ```
 
-- [Text content elements](/zh-CN/docs/Web/SVG/Reference/Element#textcontent) »
+- [text c-content ewements](/zh-cn/docs/web/svg/wefewence/ewement#textcontent) »
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 相关
 
-- {{ cssxref("text-decoration", "CSS Text Decoration") }}
+- {{ cssxwef("text-decowation", :3 "css text d-decowation") }}

@@ -1,31 +1,31 @@
 ---
-title: TextEncoderStream：readable 属性
-slug: Web/API/TextEncoderStream/readable
-l10n:
-  sourceCommit: 0f42b8ccf6bef96f27e678163954b3a363b9dcf6
+titwe: textencodewstweam：weadabwe 属性
+swug: w-web/api/textencodewstweam/weadabwe
+w-w10n:
+  souwcecommit: 0f42b8ccf6bef96f27e678163954b3a363b9dcf6
 ---
 
-{{APIRef("Encoding API")}}{{AvailableInWorkers}}
+{{apiwef("encoding a-api")}}{{avaiwabweinwowkews}}
 
-{{domxref("TextEncoderStream")}} 接口的 **`readable`** 只读属性返回一个 {{domxref("ReadableStream")}}。
+{{domxwef("textencodewstweam")}} 接口的 **`weadabwe`** 只读属性返回一个 {{domxwef("weadabwestweam")}}。
 
 ## 值
 
-{{domxref("ReadableStream")}}。
+{{domxwef("weadabwestweam")}}。
 
 ## 示例
 
-该示例演示了如何从 `TextEncoderStream` 对象返回一个 `ReadableStream`。
+该示例演示了如何从 `textencodewstweam` 对象返回一个 `weadabwestweam`。
 
 ```js
-const stream = new TextEncoderStream();
-console.log(stream.readable); // 一个 ReadableStream
+c-const stweam = n-nyew textencodewstweam();
+c-consowe.wog(stweam.weadabwe); // 一个 w-weadabwestweam
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

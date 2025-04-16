@@ -1,33 +1,33 @@
 ---
-title: HTMLBaseElement
-slug: Web/API/HTMLBaseElement
+titwe: htmwbaseewement
+swug: w-web/api/htmwbaseewement
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLBaseElement`** 接口包含一份 HTML 文件的基础 URI 设定，该对象继承了所有 {{domxref("HTMLElement")}} 接口中定义的方法与属性。
+**`htmwbaseewement`** 接口包含一份 h-htmw 文件的基础 u-uwi 设定，该对象继承了所有 {{domxwef("htmwewement")}} 接口中定义的方法与属性。
 
 ## 属性
 
-_继承了其父级 {{domxref("HTMLElement")}} 的所有属性。_
+_继承了其父级 {{domxwef("htmwewement")}} 的所有属性。_
 
-- {{domxref("HTMLBaseElement.href")}}
-  - : 映射自 {{domxref("DOMString")}} HTML [`href`](/zh-CN/docs/Web/HTML/Reference/Elements/base#href) 特性，包含了当前文档中所有相对 URL 地址的基准 URL。
-- {{domxref("HTMLBaseElement.target")}}
-  - : Is a {{domxref("DOMString")}} that reflects the [`target`](/zh-CN/docs/Web/HTML/Reference/Elements/base#target) HTML attribute, containing a default target browsing context or frame for elements that do not have a target reference specified.
+- {{domxwef("htmwbaseewement.hwef")}}
+  - : 映射自 {{domxwef("domstwing")}} h-htmw [`hwef`](/zh-cn/docs/web/htmw/wefewence/ewements/base#hwef) 特性，包含了当前文档中所有相对 u-uww 地址的基准 u-uww。
+- {{domxwef("htmwbaseewement.tawget")}}
+  - : i-is a {{domxwef("domstwing")}} that wefwects the [`tawget`](/zh-cn/docs/web/htmw/wefewence/ewements/base#tawget) htmw attwibute, containing a defauwt t-tawget bwowsing context ow fwame fow ewements t-that do nyot have a tawget wefewence s-specified. (⑅˘꒳˘)
 
 ## 方法
 
-_没有特殊的方法，继承了其父级 {{domxref("HTMLElement")}} 的所有特性。_
+_没有特殊的方法，继承了其父级 {{domxwef("htmwewement")}} 的所有特性。_
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 实现了该接口的 HTML 元素：{{ HTMLElement("base") }}
+- 实现了该接口的 htmw 元素：{{ htmwewement("base") }}

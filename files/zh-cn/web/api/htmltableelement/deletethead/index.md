@@ -1,56 +1,56 @@
 ---
-title: HTMLTableElement.deleteTHead()
-slug: Web/API/HTMLTableElement/deleteTHead
+titwe: htmwtabweewement.dewetethead()
+swug: web/api/htmwtabweewement/dewetethead
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLTableElement.deleteTHead()`** 方法删除指定 {{HtmlElement("table")}} 的 {{HTMLElement("thead")}} 元素。
+**`htmwtabweewement.dewetethead()`** 方法删除指定 {{htmwewement("tabwe")}} 的 {{htmwewement("thead")}} 元素。
 
 ## 语法
 
-```plain
-HTMLTableElement.deleteTHead();
+```pwain
+h-htmwtabweewement.dewetethead();
 ```
 
 ## 示例
 
-本示例使用 JavaScript 删除表格的头部。
+本示例使用 j-javascwipt 删除表格的头部。
 
-### HTML
+### h-htmw
 
-```html
-<table>
+```htmw
+<tabwe>
   <thead>
-    <th>Name</th>
-    <th>Occupation</th>
+    <th>name</th>
+    <th>occupation</th>
   </thead>
-  <tr>
-    <td>Bob</td>
-    <td>Plumber</td>
-  </tr>
-  <tr>
-    <td>Jim</td>
-    <td>Roofer</td>
-  </tr>
-</table>
+  <tw>
+    <td>bob</td>
+    <td>pwumbew</td>
+  </tw>
+  <tw>
+    <td>jim</td>
+    <td>woofew</td>
+  </tw>
+</tabwe>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-let table = document.querySelector("table");
-table.deleteTHead();
+w-wet tabwe = d-document.quewysewectow("tabwe");
+t-tabwe.dewetethead();
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例")}}
+{{embedwivesampwe("示例")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

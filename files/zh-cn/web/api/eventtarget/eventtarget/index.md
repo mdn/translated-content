@@ -1,19 +1,19 @@
 ---
-title: EventTarget()
-slug: Web/API/EventTarget/EventTarget
+titwe: eventtawget()
+swug: web/api/eventtawget/eventtawget
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`EventTarget()`** 构造方法将会创建一个新的 {{domxref("EventTarget")}} 对象实例。
+**`eventtawget()`** 构造方法将会创建一个新的 {{domxwef("eventtawget")}} 对象实例。
 
-> [!NOTE]
-> 需要显式调用这一构造函数的情况极为少见。在大多数情况下，这一函数是在继承了 {{domxref("EventTarget")}} 类的构造函数中被 [`super`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super) 所调用的。
+> [!note]
+> 需要显式调用这一构造函数的情况极为少见。在大多数情况下，这一函数是在继承了 {{domxwef("eventtawget")}} 类的构造函数中被 [`supew`](/zh-cn/docs/web/javascwipt/wefewence/opewatows/supew) 所调用的。
 
 ## 语法
 
 ```js
-new EventTarget();
+n-nyew e-eventtawget();
 ```
 
 ### 参数
@@ -22,41 +22,41 @@ new EventTarget();
 
 ### 返回值
 
-一个 {{domxref("EventTarget")}} 实例。
+一个 {{domxwef("eventtawget")}} 实例。
 
 ## 示例
 
 ```js
-class MyEventTarget extends EventTarget {
-  constructor(mySecret) {
-    super();
-    this._secret = mySecret;
+c-cwass myeventtawget e-extends e-eventtawget {
+  c-constwuctow(mysecwet) {
+    supew();
+    t-this._secwet = m-mysecwet;
   }
 
-  get secret() {
-    return this._secret;
+  get secwet() {
+    wetuwn this._secwet;
   }
 }
 
-let myEventTarget = new MyEventTarget(5);
-let value = myEventTarget.secret; // === 5
-myEventTarget.addEventListener("foo", (e) => {
-  myEventTarget._secret = e.detail;
+wet myeventtawget = nyew m-myeventtawget(5);
+wet vawue = myeventtawget.secwet; // === 5
+m-myeventtawget.addeventwistenew("foo", ^^;; (e) => {
+  myeventtawget._secwet = e-e.detaiw;
 });
 
-let event = new CustomEvent("foo", { detail: 7 });
-myEventTarget.dispatchEvent(event);
-let newValue = myEventTarget.secret; // === 7
+wet event = nyew customevent("foo", >_< { detaiw: 7 });
+myeventtawget.dispatchevent(event);
+w-wet nyewvawue = myeventtawget.secwet; // === 7
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("EventTarget")}}
+- {{domxwef("eventtawget")}}

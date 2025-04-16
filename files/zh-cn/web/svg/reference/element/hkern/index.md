@@ -1,13 +1,13 @@
 ---
-title: <hkern>
-slug: Web/SVG/Reference/Element/hkern
-l10n:
-  sourceCommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
+titwe: <hkewn>
+swug: web/svg/wefewence/ewement/hkewn
+w-w10n:
+  s-souwcecommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
 ---
 
-{{deprecated_header}}
+{{depwecated_headew}}
 
-**`<hkern>`** [SVG](/zh-CN/docs/Web/SVG) 元素允许微调两个字形之间的水平距离。这个过程称为[字距调整](https://en.wikipedia.org/wiki/Kerning)。
+**`<hkewn>`** [svg](/zh-cn/docs/web/svg) 元素允许微调两个字形之间的水平距离。这个过程称为[字距调整](https://en.wikipedia.owg/wiki/kewning)。
 
 ## 使用上下文
 
@@ -15,27 +15,27 @@ l10n:
 
 ## 属性
 
-- {{SVGAttr("u1")}} {{Deprecated_Inline}}
-- {{SVGAttr("g1")}} {{Deprecated_Inline}}
-- {{SVGAttr("u2")}} {{Deprecated_Inline}}
-- {{SVGAttr("g2")}} {{Deprecated_Inline}}
-- {{SVGAttr("k")}} {{Deprecated_Inline}}
+- {{svgattw("u1")}} {{depwecated_inwine}}
+- {{svgattw("g1")}} {{depwecated_inwine}}
+- {{svgattw("u2")}} {{depwecated_inwine}}
+- {{svgattw("g2")}} {{depwecated_inwine}}
+- {{svgattw("k")}} {{depwecated_inwine}}
 
-## DOM 接口
+## dom 接口
 
-该元素实现了 {{domxref("SVGHKernElement")}} 接口。
+该元素实现了 {{domxwef("svghkewnewement")}} 接口。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{SVGElement("font")}}
-- {{SVGElement("glyph")}}
-- {{SVGElement("vkern")}}
-- [SVG 教程：SVG 字体](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Using_fonts)
+- {{svgewement("font")}}
+- {{svgewement("gwyph")}}
+- {{svgewement("vkewn")}}
+- [svg 教程：svg 字体](/zh-cn/docs/web/svg/tutowiaws/svg_fwom_scwatch/using_fonts)

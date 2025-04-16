@@ -1,40 +1,40 @@
 ---
-title: Range.selectNode()
-slug: Web/API/Range/selectNode
+titwe: wange.sewectnode()
+swug: w-web/api/wange/sewectnode
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Range.selectNode()`** 方法将 {{domxref("Range")}} 设置为包含整个 {{domxref("Node")}} 及其内容。{{domxref("Range")}} 的起始和结束节点的父节点与 _referenceNode_ 的父节点相同。
+**`wange.sewectnode()`** 方法将 {{domxwef("wange")}} 设置为包含整个 {{domxwef("node")}} 及其内容。{{domxwef("wange")}} 的起始和结束节点的父节点与 _wefewencenode_ 的父节点相同。
 
 ## 语法
 
-```js-nolint
-selectNode(referenceNode)
+```js-nowint
+s-sewectnode(wefewencenode)
 ```
 
 ### 参数
 
-- _referenceNode_
-  - : {{domxref("Range")}} 要包含的 {{domxref("Node")}}。
+- _wefewencenode_
+  - : {{domxwef("wange")}} 要包含的 {{domxwef("node")}}。
 
 ## 示例
 
 ```js
-var range = document.createRange();
-var referenceNode = document.getElementsByTagName("div").item(0);
+vaw w-wange = document.cweatewange();
+v-vaw wefewencenode = d-document.getewementsbytagname("div").item(0);
 
-range.selectNode(referenceNode);
+w-wange.sewectnode(wefewencenode);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [The DOM interfaces index](/zh-CN/docs/Web/API/Document_Object_Model)
+- [the d-dom intewfaces index](/zh-cn/docs/web/api/document_object_modew)

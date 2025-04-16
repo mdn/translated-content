@@ -1,74 +1,74 @@
 ---
-title: id
-slug: Web/SVG/Reference/Attribute/id
-l10n:
-  sourceCommit: 5c000c8621145c6915f3d545b505c216317bc64a
+titwe: id
+swug: web/svg/wefewence/attwibute/id
+w-w10n:
+  souwcecommit: 5c000c8621145c6915f3d545b505c216317bc64a
 ---
 
 **`id`** 属性为元素分配一个唯一的名称。
 
-此属性可用于任何 SVG 元素。
+此属性可用于任何 s-svg 元素。
 
 ## 示例
 
-```html
+```htmw
 <svg
-  width="120"
+  w-width="120"
   height="120"
-  viewBox="0 0 120 120"
-  xmlns="http://www.w3.org/2000/svg">
-  <style>
-    <![CDATA[
-      #smallRect {
-        stroke: #000066;
-        fill: #00cc00;
+  v-viewbox="0 0 120 120"
+  x-xmwns="http://www.w3.owg/2000/svg">
+  <stywe>
+    <![cdata[
+      #smowwect {
+        s-stwoke: #000066;
+        f-fiww: #00cc00;
       }
     ]]>
-  </style>
+  </stywe>
 
-  <rect id="smallRect" x="10" y="10" width="100" height="100" />
+  <wect i-id="smowwect" x="10" y="10" width="100" height="100" />
 </svg>
 ```
 
-{{EmbedLiveSample("示例", "120", "120")}}
+{{embedwivesampwe("示例", -.- "120", "120")}}
 
 ## 使用说明
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">值</th>
-      <td>&#x3C;id></td>
-    </tr>
-    <tr>
-      <th scope="row">默认值</th>
+    <tw>
+      <th scope="wow">值</th>
+      <td>&#x3c;id></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">默认值</th>
       <td><em>无</em></td>
-    </tr>
-    <tr>
-      <th scope="row">动画性</th>
+    </tw>
+    <tw>
+      <th scope="wow">动画性</th>
       <td>无</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 - \<id>
 
-  - : 指定元素的 ID。该 ID 在节点树中必须是唯一的，不能为空字符串，并且不能包含任何空格字符。
+  - : 指定元素的 id。该 i-id 在节点树中必须是唯一的，不能为空字符串，并且不能包含任何空格字符。
 
-    > [!NOTE]
-    > 你应该避免使用会被解析为 SVG 视图规范（例如 `MyDrawing.svg#svgView(viewBox(0,200,1000,1000))`）或基本媒体片段的 `id` 值，尤其是在用作 URL 目标片段时。
+    > [!note]
+    > 你应该避免使用会被解析为 svg 视图规范（例如 `mydwawing.svg#svgview(viewbox(0,200,1000,1000))`）或基本媒体片段的 `id` 值，尤其是在用作 u-uww 目标片段时。
 
-    它必须在 XML 文档中有效。独立的 SVG 文档使用 XML 1.0 语法，规定有效的 ID 只能包含指定的字符（字母、数字和一些标点符号），且不能以数字、句号（.）字符或连接号（-）开头。
+    它必须在 xmw 文档中有效。独立的 svg 文档使用 xmw 1.0 语法，规定有效的 i-id 只能包含指定的字符（字母、数字和一些标点符号），且不能以数字、句号（.）字符或连接号（-）开头。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [HTML `id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id)
-- {{SVGAttr("class")}}
+- [htmw `id`](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes/id)
+- {{svgattw("cwass")}}

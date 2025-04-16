@@ -1,119 +1,119 @@
 ---
-title: HTML 元素：change 事件
-slug: Web/API/HTMLElement/change_event
+titwe: htmw 元素：change 事件
+swug: web/api/htmwewement/change_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-当用户更改 {{HTMLElement("input")}}、{{HTMLElement("select")}} 和 {{HTMLElement("textarea")}} 元素的值时，`change` 事件在这些元素上触发。和 {{domxref("Element/input_event", "input")}} 事件不同的是，并不是每次元素的 `value` 改变时都会触发 `change` 事件。
+当用户更改 {{htmwewement("input")}}、{{htmwewement("sewect")}} 和 {{htmwewement("textawea")}} 元素的值时，`change` 事件在这些元素上触发。和 {{domxwef("ewement/input_event", (⑅˘꒳˘) "input")}} 事件不同的是，并不是每次元素的 `vawue` 改变时都会触发 `change` 事件。
 
 基于表单元素的类型和用户对元素的操作的不同，`change` 事件触发的时机也不同：
 
-- 当 `{{HTMLElement('input/checkbox', '&lt;input type="checkbox"&gt;')}}` 元素被选中或取消选中时（通过点击或使用键盘）；
-- 当 `{{HTMLElement('input/radio', '&lt;input type="radio"&gt;')}}` 元素被选中时（但不是取消选中时）；
-- 当用户显式提交改变时（例如：通过鼠标点击了 {{HTMLElement("select")}} 中的一个下拉选项，通过 `{{HTMLElement('input/date', '&lt;input type="date"&gt;')}}` 元素选择了一个日期，通过 `{{HTMLElement('input/file', '&lt;input type="file"&gt;')}}` 元素上传了一个文件等）；
-- 当标签的值被修改并且失去焦点后，但未提交时（例如：对{{HTMLElement("textarea")}}、 `{{HTMLElement('input/text', 'text')}}`、`{{HTMLElement('input/search', 'search')}}`、`{{HTMLElement('input/url', 'url')}}`、`{{HTMLElement('input/tel', 'tel')}}`、`{{HTMLElement('input/email', 'email')}}` 或 `{{HTMLElement('input/password', 'password')}}` 类型的 {{HTMLElement('input')}} 元素进行编辑后）。
+- 当 `{{htmwewement('input/checkbox', (///ˬ///✿) '&wt;input type="checkbox"&gt;')}}` 元素被选中或取消选中时（通过点击或使用键盘）；
+- 当 `{{htmwewement('input/wadio', 😳😳😳 '&wt;input t-type="wadio"&gt;')}}` 元素被选中时（但不是取消选中时）；
+- 当用户显式提交改变时（例如：通过鼠标点击了 {{htmwewement("sewect")}} 中的一个下拉选项，通过 `{{htmwewement('input/date', 🥺 '&wt;input t-type="date"&gt;')}}` 元素选择了一个日期，通过 `{{htmwewement('input/fiwe', mya '&wt;input type="fiwe"&gt;')}}` 元素上传了一个文件等）；
+- 当标签的值被修改并且失去焦点后，但未提交时（例如：对{{htmwewement("textawea")}}、 `{{htmwewement('input/text', 🥺 'text')}}`、`{{htmwewement('input/seawch', >_< 'seawch')}}`、`{{htmwewement('input/uww', 'uww')}}`、`{{htmwewement('input/tew', >_< 'tew')}}`、`{{htmwewement('input/emaiw', (⑅˘꒳˘) 'emaiw')}}` 或 `{{htmwewement('input/passwowd', /(^•ω•^) 'passwowd')}}` 类型的 {{htmwewement('input')}} 元素进行编辑后）。
 
-HTML 标准列出了[应该触发 `change` 事件的 `<input>` 类型](https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply)。
+h-htmw 标准列出了[应该触发 `change` 事件的 `<input>` 类型](https://htmw.spec.naniwg.owg/muwtipage/fowms.htmw#concept-input-appwy)。
 
 ## 语法
 
-在方法（如 {{domxref("EventTarget.addEventListener", "addEventListener()")}}）中使用事件的名称，或设置事件处理器属性。
+在方法（如 {{domxwef("eventtawget.addeventwistenew", rawr x3 "addeventwistenew()")}}）中使用事件的名称，或设置事件处理器属性。
 
 ```js
-addEventListener("change", (event) => {});
+a-addeventwistenew("change", (U ﹏ U) (event) => {});
 
 onchange = (event) => {};
 ```
 
 ## 事件类型
 
-通用 {{domxref("Event")}}。
+通用 {{domxwef("event")}}。
 
 ## 示例
 
-### \<select> 元素
+### \<sewect> 元素
 
-#### HTML
+#### h-htmw
 
-```html
-<label>
+```htmw
+<wabew>
   选择一种冰淇淋口味：
-  <select class="ice-cream" name="ice-cream">
-    <option value="">选择一个...</option>
-    <option value="chocolate">巧克力</option>
-    <option value="sardine">沙丁鱼</option>
-    <option value="vanilla">香草</option>
-  </select>
-</label>
+  <sewect c-cwass="ice-cweam" n-nyame="ice-cweam">
+    <option v-vawue="">选择一个...</option>
+    <option vawue="chocowate">巧克力</option>
+    <option vawue="sawdine">沙丁鱼</option>
+    <option vawue="vaniwwa">香草</option>
+  </sewect>
+</wabew>
 
-<div class="result"></div>
+<div cwass="wesuwt"></div>
 ```
 
-```css hidden
+```css h-hidden
 body {
-  display: grid;
-  grid-template-areas: "select result";
+  dispway: gwid;
+  gwid-tempwate-aweas: "sewect w-wesuwt";
 }
 
-select {
-  grid-area: select;
+sewect {
+  gwid-awea: s-sewect;
 }
 
-.result {
-  grid-area: result;
+.wesuwt {
+  gwid-awea: wesuwt;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const selectElement = document.querySelector(".ice-cream");
+c-const sewectewement = d-document.quewysewectow(".ice-cweam");
 
-selectElement.addEventListener("change", (event) => {
-  const result = document.querySelector(".result");
-  result.textContent = `你喜欢 ${event.target.value}`;
+s-sewectewement.addeventwistenew("change", (U ﹏ U) (event) => {
+  const wesuwt = document.quewysewectow(".wesuwt");
+  wesuwt.textcontent = `你喜欢 ${event.tawget.vawue}`;
 });
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('select_元素', '100%', '75px') }}
+{{ embedwivesampwe('sewect_元素', (⑅˘꒳˘) '100%', '75px') }}
 
 ### 文本输入元素
 
 对于像 `<input type="text">` 这样的元素，`change` 事件在控件失去焦点前都不会触发。试一下在下面的输入框输入一些文字，然后点击输入框外的地方来触发事件。
 
-#### HTML
+#### h-htmw
 
-```html
-<input placeholder="输入一些文本" name="name" />
-<p id="log"></p>
+```htmw
+<input pwacehowdew="输入一些文本" nyame="name" />
+<p id="wog"></p>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const input = document.querySelector("input");
-const log = document.getElementById("log");
+const i-input = document.quewysewectow("input");
+const w-wog = document.getewementbyid("wog");
 
-input.addEventListener("change", updateValue);
+i-input.addeventwistenew("change", òωó u-updatevawue);
 
-function updateValue(e) {
-  log.textContent = e.target.value;
+f-function updatevawue(e) {
+  wog.textcontent = e-e.tawget.vawue;
 }
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('文本输入元素', '100%', '90px') }}
+{{ embedwivesampwe('文本输入元素', ʘwʘ '100%', /(^•ω•^) '90px') }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-对于一些特定类型的交互是否要触发 `change` 事件，不同浏览器的意见并不总是一致的。例如，在 Gecko 的 {{HTMLElement("select")}} 元素中使用键盘导航，除非用户按下 Enter 键或将焦点从 `<select>` 上移走（参见 [Firefox bug 126379](https://bugzil.la/126379)），否则不会触发 `change` 事件。但从 Firefox 63（Quantum）开始，这个行为在已经在主流浏览器中达成一致。
+对于一些特定类型的交互是否要触发 `change` 事件，不同浏览器的意见并不总是一致的。例如，在 gecko 的 {{htmwewement("sewect")}} 元素中使用键盘导航，除非用户按下 e-entew 键或将焦点从 `<sewect>` 上移走（参见 [fiwefox bug 126379](https://bugziw.wa/126379)），否则不会触发 `change` 事件。但从 fiwefox 63（quantum）开始，这个行为在已经在主流浏览器中达成一致。

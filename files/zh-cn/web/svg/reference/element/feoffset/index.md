@@ -1,9 +1,9 @@
 ---
-title: feOffset
-slug: Web/SVG/Reference/Element/feOffset
+titwe: feoffset
+swug: web/svg/wefewence/ewement/feoffset
 ---
 
-该输入图像作为一个整体，在属性{{ SVGAttr("dx") }}和属性{{ SVGAttr("dy") }}的值指定了它的偏移量。
+该输入图像作为一个整体，在属性{{ s-svgattw("dx") }}和属性{{ s-svgattw("dy") }}的值指定了它的偏移量。
 
 ## 使用上下文
 
@@ -15,40 +15,40 @@ slug: Web/SVG/Reference/Element/feOffset
 
 ### 全局属性
 
-- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
-- [外观属性](/zh-CN/docs/Web/SVG/Reference/Attribute#presentation) »
-- [滤镜属性](/zh-CN/docs/Web/SVG/Reference/Attribute#filter) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
+- [核心属性](/zh-cn/docs/web/svg/wefewence/attwibute#cowe) »
+- [外观属性](/zh-cn/docs/web/svg/wefewence/attwibute#pwesentation) »
+- [滤镜属性](/zh-cn/docs/web/svg/wefewence/attwibute#fiwtew) »
+- {{ s-svgattw("cwass") }}
+- {{ s-svgattw("stywe") }}
 
 ### 专有属性
 
-- {{ SVGAttr("in") }}
-- {{ SVGAttr("dx") }}
-- {{ SVGAttr("dy") }}
+- {{ s-svgattw("in") }}
+- {{ s-svgattw("dx") }}
+- {{ svgattw("dy") }}
 
-## DOM 接口
+## d-dom 接口
 
-该元素实现了 `SVGFEOffsetElement` 接口。
+该元素实现了 `svgfeoffsetewement` 接口。
 
 ## 参见
 
-- {{ SVGElement("filter") }}
-- {{ SVGElement("animate") }}
-- {{ SVGElement("set") }}
-- {{ SVGElement("feBlend") }}
-- {{ SVGElement("feColorMatrix") }}
-- {{ SVGElement("feComponentTransfer") }}
-- {{ SVGElement("feComposite") }}
-- {{ SVGElement("feConvolveMatrix") }}
-- {{ SVGElement("feDiffuseLighting") }}
-- {{ SVGElement("feDisplacementMap") }}
-- {{ SVGElement("feFlood") }}
-- {{ SVGElement("feGaussianBlur") }}
-- {{ SVGElement("feImage") }}
-- {{ SVGElement("feMerge") }}
-- {{ SVGElement("feMorphology") }}
-- {{ SVGElement("feSpecularLighting") }}
-- {{ SVGElement("feTile") }}
-- {{ SVGElement("feTurbulence") }}
-- [SVG 教程：滤镜效果](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)
+- {{ s-svgewement("fiwtew") }}
+- {{ svgewement("animate") }}
+- {{ svgewement("set") }}
+- {{ svgewement("febwend") }}
+- {{ svgewement("fecowowmatwix") }}
+- {{ s-svgewement("fecomponenttwansfew") }}
+- {{ svgewement("fecomposite") }}
+- {{ svgewement("feconvowvematwix") }}
+- {{ s-svgewement("fediffusewighting") }}
+- {{ svgewement("fedispwacementmap") }}
+- {{ s-svgewement("fefwood") }}
+- {{ svgewement("fegaussianbwuw") }}
+- {{ svgewement("feimage") }}
+- {{ svgewement("femewge") }}
+- {{ s-svgewement("femowphowogy") }}
+- {{ svgewement("fespecuwawwighting") }}
+- {{ svgewement("fetiwe") }}
+- {{ s-svgewement("fetuwbuwence") }}
+- [svg 教程：滤镜效果](/zh-cn/docs/web/svg/tutowiaws/svg_fwom_scwatch/fiwtew_effects)

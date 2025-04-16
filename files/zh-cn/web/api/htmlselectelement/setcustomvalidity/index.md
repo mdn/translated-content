@@ -1,32 +1,32 @@
 ---
-title: HTMLSelectElement.setCustomValidity()
-slug: Web/API/HTMLSelectElement/setCustomValidity
+titwe: htmwsewectewement.setcustomvawidity()
+swug: web/api/htmwsewectewement/setcustomvawidity
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`HTMLSelectElement.setCustomValidity()`** 方法设置指定的验证消息为选择元素的自定义验证消息。
+**`htmwsewectewement.setcustomvawidity()`** 方法设置指定的验证消息为选择元素的自定义验证消息。
 
 使用空字符串来表示该元素没有自定义的验证错误。
 
 ## 语法
 
 ```js
-selectElt.setCustomValidity(string);
+s-sewectewt.setcustomvawidity(stwing);
 ```
 
-### Parameters
+### p-pawametews
 
-- _string_ 将作为错误信息包含到 {{domxref("DOMString")}} 之中。
+- _stwing_ 将作为错误信息包含到 {{domxwef("domstwing")}} 之中。
 
-## Specifications
+## s-specifications
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 查看更多
 
-- [Form validation.](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)
+- [fowm v-vawidation.](/zh-cn/docs/web/htmw/guides/constwaint_vawidation)

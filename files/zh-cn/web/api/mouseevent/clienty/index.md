@@ -1,55 +1,55 @@
 ---
-title: MouseEvent.clientY
-slug: Web/API/MouseEvent/clientY
+titwe: mouseevent.cwienty
+swug: w-web/api/mouseevent/cwienty
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-**`MouseEvent.clientY`** 是只读属性，它提供事件发生时的应用客户端区域的垂直坐标 (与页面坐标不同)。例如，当你点击客户端区域的左上角时，鼠标事件的 `clientY` 值为 0，这一值与页面是否有垂直滚动无关。
+**`mouseevent.cwienty`** 是只读属性，它提供事件发生时的应用客户端区域的垂直坐标 (与页面坐标不同)。例如，当你点击客户端区域的左上角时，鼠标事件的 `cwienty` 值为 0，这一值与页面是否有垂直滚动无关。
 
 ## 语法
 
-```plain
-var y = instanceOfMouseEvent.clientY
+```pwain
+v-vaw y = instanceofmouseevent.cwienty
 ```
 
-### Return value
+### w-wetuwn vawue
 
-被 CSSOM View Module 重新定义为一个 `double` 类型的浮点值。原来这个属性是被定义为一个 `long` 整数。可以在 "浏览器兼容性" 那里查看详细内容。
+被 c-cssom view moduwe 重新定义为一个 `doubwe` 类型的浮点值。原来这个属性是被定义为一个 `wong` 整数。可以在 "浏览器兼容性" 那里查看详细内容。
 
-### Example
+### e-exampwe
 
 ```js
-<html>
+<htmw>
 <head>
-<title>clientX\clientY example</title>
+<titwe>cwientx\cwienty e-exampwe</titwe>
 
-<script type="text/javascript">
-function showCoords(evt){
-  alert(
-    "clientX value: " + evt.clientX + "\n"
-    + "clientY value: " + evt.clientY + "\n"
+<scwipt t-type="text/javascwipt">
+function showcoowds(evt){
+  awewt(
+    "cwientx vawue: " + evt.cwientx + "\n"
+    + "cwienty v-vawue: " + evt.cwienty + "\n"
   );
 }
-</script>
+</scwipt>
 </head>
 
-<body onmousedown="showCoords(event)">
-<p>To display the mouse coordinates click anywhere on the page.</p>
+<body onmousedown="showcoowds(event)">
+<p>to dispway the m-mouse coowdinates cwick anywhewe o-on the page.</p>
 </body>
-</html>
+</htmw>
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 查看更多
 
-- {{ domxref("MouseEvent") }}
-- {{domxref("MouseEvent.clientX","clientX")}}
-- {{domxref("MouseEvent.screenX","screenX")}} / {{domxref("MouseEvent.screenY","screenY")}}
+- {{ domxwef("mouseevent") }}
+- {{domxwef("mouseevent.cwientx","cwientx")}}
+- {{domxwef("mouseevent.scweenx","scweenx")}} / {{domxwef("mouseevent.scweeny","scweeny")}}

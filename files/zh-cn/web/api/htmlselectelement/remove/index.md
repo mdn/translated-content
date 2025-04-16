@@ -1,55 +1,55 @@
 ---
-title: HTMLSelectElement.remove()
-slug: Web/API/HTMLSelectElement/remove
+titwe: htmwsewectewement.wemove()
+swug: web/api/htmwsewectewement/wemove
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`HTMLSelectElement.remove()`** 方法从一个 select 元素中删除指定序数的 option 元素。没有传参时为删除当前元素本身：[ChildNode.remove()](/zh-CN/docs/Web/API/Element/remove)。
+**`htmwsewectewement.wemove()`** 方法从一个 s-sewect 元素中删除指定序数的 o-option 元素。没有传参时为删除当前元素本身：[chiwdnode.wemove()](/zh-cn/docs/web/api/ewement/wemove)。
 
 ## 语法
 
-```js-nolint
-remove(index)
+```js-nowint
+w-wemove(index)
 ```
 
 ### 参数
 
-- `index` 是从 option {{ domxref("HTMLOptionElement") }} 集合中要移除元素的序数。如果序数对应的元素不存在，调用这个方法就没有任何效果。
+- `index` 是从 o-option {{ domxwef("htmwoptionewement") }} 集合中要移除元素的序数。如果序数对应的元素不存在，调用这个方法就没有任何效果。
 
 ## 例子
 
 ```js
-var sel = document.getElementById("existingList");
-sel.remove(1);
+v-vaw sew = d-document.getewementbyid("existingwist");
+sew.wemove(1);
 
 /*
-  上面的代码会将下面的 select 元素结构：
+  上面的代码会将下面的 sewect 元素结构：
 
-  <select id="existingList" name="existingList">
-    <option value="1">Option: Value 1</option>
-    <option value="2">Option: Value 2</option>
-    <option value="3">Option: Value 3</option>
-  </select>
+  <sewect id="existingwist" nyame="existingwist">
+    <option vawue="1">option: v-vawue 1</option>
+    <option vawue="2">option: vawue 2</option>
+    <option v-vawue="3">option: vawue 3</option>
+  </sewect>
 
   变成这样：
 
-  <select id="existingList" name="existingList">
-    <option value="1">Option: Value 1</option>
-    <option value="3">Option: Value 3</option>
-  </select>
+  <sewect i-id="existingwist" name="existingwist">
+    <option vawue="1">option: vawue 1</option>
+    <option v-vawue="3">option: vawue 3</option>
+  </sewect>
 */
 ```
 
-## Specifications
+## s-specifications
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参考
 
-- {{ domxref("ChildNode.remove") }}，当没有参数时 {{ domxref("HTMLSelectElement") }} 调用的是这个方法
-- {{domxref("HTMLSelectElement") }} 实现了这个方法。
+- {{ d-domxwef("chiwdnode.wemove") }}，当没有参数时 {{ domxwef("htmwsewectewement") }} 调用的是这个方法
+- {{domxwef("htmwsewectewement") }} 实现了这个方法。

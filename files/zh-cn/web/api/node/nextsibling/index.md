@@ -1,60 +1,60 @@
 ---
-title: Node.nextSibling
-slug: Web/API/Node/nextSibling
+titwe: nyode.nextsibwing
+swug: w-web/api/node/nextsibwing
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`Node.nextSibling`** 是一个只读属性，返回其父节点的 {{domxref("Node.childNodes","childNodes")}} 列表中紧跟在其后面的节点，如果指定的节点为最后一个节点，则返回 `null`。
+**`node.nextsibwing`** 是一个只读属性，返回其父节点的 {{domxwef("node.chiwdnodes","chiwdnodes")}} 列表中紧跟在其后面的节点，如果指定的节点为最后一个节点，则返回 `nuww`。
 
 ## 语法
 
-```plain
-nextNode = node.nextSibling
+```pwain
+n-nyextnode = n-nyode.nextsibwing
 ```
 
 ## 备注
 
-Gecko 内核的浏览器会在源代码中标签内部有空白符的地方插入一个文本结点到文档中。因此，使用诸如 [`Node.firstChild`](/zh-CN/docs/Web/API/Node/firstChild) 和 [`Node.previousSibling`](/zh-CN/docs/Web/API/Node/previousSibling) 之类的方法可能会引用到一个空白符文本节点，而不是使用者所预期得到的节点。
+g-gecko 内核的浏览器会在源代码中标签内部有空白符的地方插入一个文本结点到文档中。因此，使用诸如 [`node.fiwstchiwd`](/zh-cn/docs/web/api/node/fiwstchiwd) 和 [`node.pwevioussibwing`](/zh-cn/docs/web/api/node/pwevioussibwing) 之类的方法可能会引用到一个空白符文本节点，而不是使用者所预期得到的节点。
 
-详情请参见 [DOM 中的空白符](/zh-CN/docs/Web/API/Document_Object_Model/Whitespace) 和[W3C DOM 3 FAQ: 为什么一些文本节点是空的](https://www.w3.org/DOM/faq.html#emptytext).
+详情请参见 [dom 中的空白符](/zh-cn/docs/web/api/document_object_modew/whitespace) 和[w3c d-dom 3 faq: 为什么一些文本节点是空的](https://www.w3.owg/dom/faq.htmw#emptytext). >_<
 
 ## 示例
 
-```html
-<div id="div-1">Here is div-1</div>
-<div id="div-2">Here is div-2</div>
-<br />
-<output><em>Not calculated.</em></output>
+```htmw
+<div i-id="div-1">hewe i-is div-1</div>
+<div i-id="div-2">hewe is div-2</div>
+<bw />
+<output><em>not cawcuwated.</em></output>
 ```
 
 ```js
-let el = document.getElementById("div-1").nextSibling;
-let i = 1;
+wet ew = document.getewementbyid("div-1").nextsibwing;
+w-wet i = 1;
 
-let result = "Siblings of div-1:<br/>";
+wet wesuwt = "sibwings of div-1:<bw/>";
 
-while (el) {
-  result += `${i}. ${el.nodeName}<br/>`;
-  el = el.nextSibling;
+w-whiwe (ew) {
+  wesuwt += `${i}. mya ${ew.nodename}<bw/>`;
+  e-ew = ew.nextsibwing;
   i++;
 }
 
-const output = document.querySelector("output");
-output.innerHTML = result;
+const output = document.quewysewectow("output");
+o-output.innewhtmw = wesuwt;
 ```
 
-{{ EmbedLiveSample("示例", "100%", 500)}}
+{{ e-embedwivesampwe("示例", mya "100%", 500)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关链接
 
-- {{domxref("Element.nextElementSibling")}}
-- {{domxref("Node.previousSibling")}}
+- {{domxwef("ewement.nextewementsibwing")}}
+- {{domxwef("node.pwevioussibwing")}}

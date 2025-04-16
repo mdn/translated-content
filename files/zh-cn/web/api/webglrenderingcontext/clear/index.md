@@ -1,35 +1,35 @@
 ---
-title: WebGLRenderingContext.clear()
-slug: Web/API/WebGLRenderingContext/clear
+titwe: webgwwendewingcontext.cweaw()
+swug: web/api/webgwwendewingcontext/cweaw
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.clear()`** 方法使用预设值来清空缓冲。
+[webgw a-api](/zh-cn/docs/web/api/webgw_api) 的 **`webgwwendewingcontext.cweaw()`** 方法使用预设值来清空缓冲。
 
-预设值可以使用 {{domxref("WebGLRenderingContext.clearColor", "clearColor()")}} 、 {{domxref("WebGLRenderingContext.clearDepth", "clearDepth()")}} 或 {{domxref("WebGLRenderingContext.clearStencil", "clearStencil()")}} 设置。
+预设值可以使用 {{domxwef("webgwwendewingcontext.cweawcowow", (⑅˘꒳˘) "cweawcowow()")}} 、 {{domxwef("webgwwendewingcontext.cweawdepth", ( ͡o ω ͡o ) "cweawdepth()")}} 或 {{domxwef("webgwwendewingcontext.cweawstenciw", UwU "cweawstenciw()")}} 设置。
 
-裁剪、抖动处理和缓冲写入遮罩会影响 `clear()` 方法。
+裁剪、抖动处理和缓冲写入遮罩会影响 `cweaw()` 方法。
 
 ## 句法
 
-```plain
-void gl.clear(mask);
+```pwain
+v-void gw.cweaw(mask);
 ```
 
 ### 参数
 
 - `mask`
 
-  - : 一个用于指定需要清除的缓冲区的 {{domxref("GLbitfield")}} 。可能的值有：
+  - : 一个用于指定需要清除的缓冲区的 {{domxwef("gwbitfiewd")}} 。可能的值有：
 
-    - `gl.COLOR_BUFFER_BIT //颜色缓冲区`
-    - `gl.DEPTH_BUFFER_BIT //深度缓冲区`
-    - `gl.STENCIL_BUFFER_BIT //模板缓冲区`
+    - `gw.cowow_buffew_bit //颜色缓冲区`
+    - `gw.depth_buffew_bit //深度缓冲区`
+    - `gw.stenciw_buffew_bit //模板缓冲区`
 
 ### 错误抛出
 
-如果 mask 不是以上列出的值，会抛出 `gl.INVALID_ENUM` 错误。
+如果 m-mask 不是以上列出的值，会抛出 `gw.invawid_enum` 错误。
 
 ### 返回值
 
@@ -37,31 +37,31 @@ void gl.clear(mask);
 
 ## 示例
 
-`clear()` 方法可接受复合值，
+`cweaw()` 方法可接受复合值，
 
 ```js
-gl.clear(gl.DEPTH_BUFFER_BIT);
-gl.clear(gl.DEPTH_BUFFER_BIT | gl.COLOR_BUFFER_BIT);
+g-gw.cweaw(gw.depth_buffew_bit);
+gw.cweaw(gw.depth_buffew_bit | g-gw.cowow_buffew_bit);
 ```
 
-要获得当前的清除值，传入 `COLOR_CLEAR_VALUE`、`DEPTH_CLEAR_VALUE` 或 `STENCIL_CLEAR_VALUE` 常量。
+要获得当前的清除值，传入 `cowow_cweaw_vawue`、`depth_cweaw_vawue` 或 `stenciw_cweaw_vawue` 常量。
 
 ```js
-gl.getParameter(gl.COLOR_CLEAR_VALUE);
-gl.getParameter(gl.DEPTH_CLEAR_VALUE);
-gl.getParameter(gl.STENCIL_CLEAR_VALUE);
+g-gw.getpawametew(gw.cowow_cweaw_vawue);
+g-gw.getpawametew(gw.depth_cweaw_vawue);
+g-gw.getpawametew(gw.stenciw_cweaw_vawue);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关内容
 
-- {{domxref("WebGLRenderingContext.clearColor()")}}
-- {{domxref("WebGLRenderingContext.clearDepth()")}}
-- {{domxref("WebGLRenderingContext.clearStencil()")}}
+- {{domxwef("webgwwendewingcontext.cweawcowow()")}}
+- {{domxwef("webgwwendewingcontext.cweawdepth()")}}
+- {{domxwef("webgwwendewingcontext.cweawstenciw()")}}

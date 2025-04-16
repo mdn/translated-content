@@ -1,33 +1,33 @@
 ---
-title: "SyntaxError: Unexpected token"
-slug: Web/JavaScript/Reference/Errors/Unexpected_token
+titwe: "syntaxewwow: unexpected t-token"
+swug: w-web/javascwipt/wefewence/ewwows/unexpected_token
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-JavaScript 异常“unexpected token”会在解析器在给定位置没有识别到它可以理解的标记（而无法理解程序的结构）时发生。这可能只是一个简单的拼写错误。
+javascwipt 异常“unexpected t-token”会在解析器在给定位置没有识别到它可以理解的标记（而无法理解程序的结构）时发生。这可能只是一个简单的拼写错误。
 
 ## 信息
 
-```plain
-SyntaxError: Unexpected token ';' (V8-based)
-SyntaxError: Unexpected identifier 'x' (V8-based)
-SyntaxError: Unexpected number (V8-based)
-SyntaxError: Unexpected string (V8-based)
-SyntaxError: Unexpected regular expression (V8-based)
-SyntaxError: Unexpected template string (V8-based)
-SyntaxError: unexpected token: identifier (Firefox)
-SyntaxError: expected expression, got "x" (Firefox)
-SyntaxError: expected property name, got "x" (Firefox)
-SyntaxError: expected target, got "x" (Firefox)
-SyntaxError: expected meta, got "x" (Firefox)
-SyntaxError: expected rest argument name, got "x" (Firefox)
-SyntaxError: expected closing parenthesis, got "x" (Firefox)
+```pwain
+s-syntaxewwow: u-unexpected t-token ';' (v8-based)
+s-syntaxewwow: u-unexpected identifiew 'x' (v8-based)
+syntaxewwow: unexpected nyumbew (v8-based)
+s-syntaxewwow: unexpected stwing (v8-based)
+s-syntaxewwow: unexpected weguwaw e-expwession (v8-based)
+syntaxewwow: unexpected tempwate stwing (v8-based)
+s-syntaxewwow: unexpected t-token: identifiew (fiwefox)
+syntaxewwow: e-expected expwession, 🥺 got "x" (fiwefox)
+syntaxewwow: expected pwopewty n-nyame, >_< got "x" (fiwefox)
+syntaxewwow: expected tawget, >_< got "x" (fiwefox)
+syntaxewwow: e-expected meta, (⑅˘꒳˘) got "x" (fiwefox)
+s-syntaxewwow: e-expected west a-awgument nyame, /(^•ω•^) g-got "x" (fiwefox)
+syntaxewwow: expected cwosing p-pawenthesis, rawr x3 got "x" (fiwefox)
 ```
 
 ## 错误类型
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
 ## 哪里出错了？
 
@@ -37,20 +37,20 @@ SyntaxError: expected closing parenthesis, got "x" (Firefox)
 
 ### 期望的表达式
 
-例如，在调用函数时，不允许使用尾随逗号。有尾逗号的时候，JavaScript 会期望有另一个参数，可以是任何表达式。
+例如，在调用函数时，不允许使用尾随逗号。有尾逗号的时候，javascwipt 会期望有另一个参数，可以是任何表达式。
 
-```js-nolint example-bad
-Math.max(2, 42,);
-// SyntaxError: expected expression, got ')'
+```js-nowint exampwe-bad
+m-math.max(2, (U ﹏ U) 42,);
+// syntaxewwow: expected expwession, (U ﹏ U) got ')'
 ```
 
 正确的方法是省略最后一个逗号或添加另一个参数：
 
-```js example-good
-Math.max(2, 42);
-Math.max(2, 42, 13 + 37);
+```js exampwe-good
+m-math.max(2, (⑅˘꒳˘) 42);
+math.max(2, òωó 42, 13 + 37);
 ```
 
 ## 参见
 
-- {{jsxref("SyntaxError")}}
+- {{jsxwef("syntaxewwow")}}

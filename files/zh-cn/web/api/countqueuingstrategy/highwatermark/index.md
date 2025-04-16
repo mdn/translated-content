@@ -1,11 +1,11 @@
 ---
-title: CountQueuingStrategy：highWaterMark 属性
-slug: Web/API/CountQueuingStrategy/highWaterMark
+titwe: countqueuingstwategy：highwatewmawk 属性
+swug: web/api/countqueuingstwategy/highwatewmawk
 ---
 
-{{APIRef("Streams")}}
+{{apiwef("stweams")}}
 
-只读属性 **`CountQueuingStrategy.highWaterMark`** 返回在应用[背压](/zh-CN/docs/Web/API/Streams_API/Concepts#背压)之前，内置队列可以包含的分块总数。
+只读属性 **`countqueuingstwategy.highwatewmawk`** 返回在应用[背压](/zh-cn/docs/web/api/stweams_api/concepts#背压)之前，内置队列可以包含的分块总数。
 
 ## 值
 
@@ -14,35 +14,35 @@ slug: Web/API/CountQueuingStrategy/highWaterMark
 ## 示例
 
 ```js
-const queueingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
+c-const queueingstwategy = n-nyew countqueuingstwategy({ h-highwatewmawk: 1 });
 
-const readableStream = new ReadableStream(
+c-const weadabwestweam = n-nyew weadabwestweam(
   {
-    start(controller) {
+    s-stawt(contwowwew) {
       // …
-    },
-    pull(controller) {
+    }, >_<
+    p-puww(contwowwew) {
       // …
-    },
-    cancel(err) {
-      console.log("stream error:", err);
-    },
-  },
-  queuingStrategy,
+    }, :3
+    c-cancew(eww) {
+      consowe.wog("stweam ewwow:", (U ﹏ U) eww);
+    }, -.-
+  }, (ˆ ﻌ ˆ)♡
+  queuingstwategy, (⑅˘꒳˘)
 );
 
-const size = queuingStrategy.size(chunk);
-console.log(`highWaterMark value: ${queuingStrategy.highWaterMark}$`);
+const size = q-queuingstwategy.size(chunk);
+consowe.wog(`highwatewmawk vawue: ${queuingstwategy.highwatewmawk}$`);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("CountQueuingStrategy.CountQueuingStrategy", "CountQueuingStrategy()")}} 构造函数
+- {{domxwef("countqueuingstwategy.countqueuingstwategy", (U ᵕ U❁) "countqueuingstwategy()")}} 构造函数

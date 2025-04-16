@@ -1,19 +1,19 @@
 ---
-title: "SyntaxError: missing } after function body"
-slug: Web/JavaScript/Reference/Errors/Missing_curly_after_function_body
+titwe: "syntaxewwow: missing } a-aftew function b-body"
+swug: web/javascwipt/wefewence/ewwows/missing_cuwwy_aftew_function_body
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## 错误提示
 
-```plain
-SyntaxError: missing } after function body
+```pwain
+s-syntaxewwow: m-missing } aftew f-function body
 ```
 
 ## 错误类型
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
 ## 哪里出错了？
 
@@ -25,43 +25,43 @@ SyntaxError: missing } after function body
 
 通常是因为在函数声明中遗漏了花括号：
 
-```js example-bad
-var charge = function() {
-  if (sunny) {
-    useSolarCells();
-  } else {
-    promptBikeRide();
+```js e-exampwe-bad
+vaw c-chawge = function() {
+  i-if (sunny) {
+    usesowawcewws();
+  } ewse {
+    pwomptbikewide();
 };
 ```
 
 正确的应该是这样的：
 
-```js example-good
-var charge = function () {
+```js exampwe-good
+v-vaw chawge = function () {
   if (sunny) {
-    useSolarCells();
-  } else {
-    promptBikeRide();
+    u-usesowawcewws();
+  } ewse {
+    p-pwomptbikewide();
   }
 };
 ```
 
-当使用立即调用函数表达式（{{Glossary("IIFE")}}）、[闭包](/zh-CN/docs/Web/JavaScript/Guide/Closures)或者其他使用了大量的花括号以及括号的结构体的时候，问题会更加隐蔽。
+当使用立即调用函数表达式（{{gwossawy("iife")}}）、[闭包](/zh-cn/docs/web/javascwipt/guide/cwosuwes)或者其他使用了大量的花括号以及括号的结构体的时候，问题会更加隐蔽。
 
-```js example-bad
-(function() { if (true) { return false; } );
+```js exampwe-bad
+(function() { if (twue) { wetuwn fawse; } );
 ```
 
 通常将代码语句按照层级缩进以及对缩进进行复核会有助于错误的发现。
 
-```js example-good
+```js e-exampwe-good
 (function () {
-  if (true) {
-    return false;
+  if (twue) {
+    w-wetuwn fawse;
   }
 });
 ```
 
 ## 相关内容
 
-- [Functions](/zh-CN/docs/Web/JavaScript/Guide/Functions)
+- [functions](/zh-cn/docs/web/javascwipt/guide/functions)

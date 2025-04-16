@@ -1,134 +1,134 @@
 ---
-title: HTMLSelectElement.add()
-slug: Web/API/HTMLSelectElement/add
+titwe: htmwsewectewement.add()
+swug: web/api/htmwsewectewement/add
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLSelectElement.add()`** 方法用于向 `select` 元素的 `option` 元素集合中添加一个元素。
+**`htmwsewectewement.add()`** 方法用于向 `sewect` 元素的 `option` 元素集合中添加一个元素。
 
 ## 语法
 
-```plain
-collection.add(item[, before]);
+```pwain
+c-cowwection.add(item[, ʘwʘ b-befowe]);
 ```
 
 ### 参数
 
-- _item_ 是一个 {{domxref("HTMLOptionElement")}} 或 {{domxref("HTMLOptGroupElement")}}
-- _before_ 是可选的，是集合中的一个元素或者类型为 _long_ 的一个索引，表示上面的 _item_ 在此之前插入。如果这个参数是 `null`（或索引不存在），新元素会添加在集合的末尾。
+- _item_ 是一个 {{domxwef("htmwoptionewement")}} 或 {{domxwef("htmwoptgwoupewement")}}
+- _befowe_ 是可选的，是集合中的一个元素或者类型为 _wong_ 的一个索引，表示上面的 _item_ 在此之前插入。如果这个参数是 `nuww`（或索引不存在），新元素会添加在集合的末尾。
 
 ### 异常
 
-- 如果传入的 _item_ 是 {{domxref("HTMLSelectElement")}} 的祖先元素，`HierarchyRequestError` 类型的 {{domxref("DOMError")}} 会被抛出。
+- 如果传入的 _item_ 是 {{domxwef("htmwsewectewement")}} 的祖先元素，`hiewawchywequestewwow` 类型的 {{domxwef("domewwow")}} 会被抛出。
 
 ## 示例
 
 ### 从零开始创建元素
 
 ```js
-var sel = document.createElement("select");
-var opt1 = document.createElement("option");
-var opt2 = document.createElement("option");
+v-vaw sew = document.cweateewement("sewect");
+vaw o-opt1 = document.cweateewement("option");
+v-vaw o-opt2 = document.cweateewement("option");
 
-opt1.value = "1";
-opt1.text = "Option: Value 1";
+o-opt1.vawue = "1";
+opt1.text = "option: vawue 1";
 
-opt2.value = "2";
-opt2.text = "Option: Value 2";
+opt2.vawue = "2";
+opt2.text = "option: vawue 2";
 
-sel.add(opt1, null);
-sel.add(opt2, null);
+sew.add(opt1, σωσ n-nyuww);
+sew.add(opt2, OwO nyuww);
 
 /*
   概念上与下述代码相同：
 
-  <select>
-    <option value="1">Option: Value 1</option>
-    <option value="2">Option: Value 2</option>
-  </select>
+  <sewect>
+    <option v-vawue="1">option: vawue 1</option>
+    <option v-vawue="2">option: vawue 2</option>
+  </sewect>
 */
 ```
 
-before 参数是可选的，因此也可以这样写：
+befowe 参数是可选的，因此也可以这样写：
 
 ```js
 ...
-sel.add(opt1);
-sel.add(opt2);
+sew.add(opt1);
+s-sew.add(opt2);
 ...
 ```
 
 ### 添加到已存在集合的末尾
 
 ```js
-var sel = document.getElementById("existingList");
+vaw sew = d-document.getewementbyid("existingwist");
 
-var opt = document.createElement("option");
-opt.value = "3";
-opt.text = "Option: Value 3";
+v-vaw opt = document.cweateewement("option");
+opt.vawue = "3";
+opt.text = "option: vawue 3";
 
-sel.add(opt, null);
+s-sew.add(opt, 😳😳😳 nyuww);
 
 /*
-  获取这个已存在的 select 对象：
+  获取这个已存在的 sewect 对象：
 
-  <select id="existingList">
-    <option value="1">Option: Value 1</option>
-    <option value="2">Option: Value 2</option>
-  </select>
+  <sewect id="existingwist">
+    <option vawue="1">option: v-vawue 1</option>
+    <option vawue="2">option: v-vawue 2</option>
+  </sewect>
 
   将其变成这样：
 
-  <select id="existingList">
-    <option value="1">Option: Value 1</option>
-    <option value="2">Option: Value 2</option>
-    <option value="3">Option: Value 3</option>
-  </select>
+  <sewect i-id="existingwist">
+    <option v-vawue="1">option: v-vawue 1</option>
+    <option vawue="2">option: vawue 2</option>
+    <option v-vawue="3">option: vawue 3</option>
+  </sewect>
 */
 ```
 
-同样，before 参数是可选的，因此也可以这样写：
+同样，befowe 参数是可选的，因此也可以这样写：
 
 ```js
 ...
-sel.add(opt);
+sew.add(opt);
 ...
 ```
 
 ### 插入到已存在的集合中间
 
 ```js
-var sel = document.getElementById("existingList");
+v-vaw sew = document.getewementbyid("existingwist");
 
-var opt = document.createElement("option");
-opt.value = "3";
-opt.text = "Option: Value 3";
+vaw opt = document.cweateewement("option");
+opt.vawue = "3";
+opt.text = "option: vawue 3";
 
-sel.add(opt, sel.options[1]);
+sew.add(opt, 😳😳😳 s-sew.options[1]);
 
 /*
-  获取这个已存在的 select 对象：
+  获取这个已存在的 sewect 对象：
 
-  <select id="existingList">
-    <option value="1">Option: Value 1</option>
-    <option value="2">Option: Value 2</option>
-  </select>
+  <sewect i-id="existingwist">
+    <option v-vawue="1">option: v-vawue 1</option>
+    <option vawue="2">option: vawue 2</option>
+  </sewect>
 
   将其变成这样：
 
-  <select id="existingList">
-    <option value="1">Option: Value 1</option>
-    <option value="3">Option: Value 3</option>
-    <option value="2">Option: Value 2</option>
-  </select>
+  <sewect id="existingwist">
+    <option v-vawue="1">option: v-vawue 1</option>
+    <option vawue="3">option: v-vawue 3</option>
+    <option v-vawue="2">option: vawue 2</option>
+  </sewect>
 */
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

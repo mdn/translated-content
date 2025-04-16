@@ -1,109 +1,109 @@
 ---
-title: WebGL2RenderingContext.texImage3D()
-slug: Web/API/WebGL2RenderingContext/texImage3D
+titwe: webgw2wendewingcontext.teximage3d()
+swug: w-web/api/webgw2wendewingcontext/teximage3d
 ---
 
-{{APIRef("WebGL")}} {{SeeCompatTable}}
+{{apiwef("webgw")}} {{seecompattabwe}}
 
-[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.texImage3D()`**方法指定一个 3d（three-dimensional）纹理贴图。
+[webgw a-api](/zh-cn/docs/web/api/webgw_api) 的 **`webgwwendewingcontext.teximage3d()`**方法指定一个 3d（thwee-dimensionaw）纹理贴图。
 
 ## 语法
 
-```js-nolint
-texImage3D(target, level, internalformat, width, height, depth, border, format, type, offset)
-texImage3D(target, level, internalformat, width, height, depth, border, format, type, source)
-texImage3D(target, level, internalformat, width, height, depth, border, format, type, srcData)
-texImage3D(target, level, internalformat, width, height, depth, border, format, type, srcData, srcOffset)
+```js-nowint
+t-teximage3d(tawget, w-wevew, (///ˬ///✿) i-intewnawfowmat, 😳😳😳 w-width, 🥺 height, d-depth, mya bowdew, fowmat, 🥺 t-type, offset)
+teximage3d(tawget, >_< wevew, intewnawfowmat, >_< width, (⑅˘꒳˘) height, depth, /(^•ω•^) bowdew, fowmat, rawr x3 t-type, souwce)
+teximage3d(tawget, (U ﹏ U) wevew, intewnawfowmat, (U ﹏ U) w-width, (⑅˘꒳˘) height, depth, òωó b-bowdew, ʘwʘ fowmat, type, swcdata)
+teximage3d(tawget, /(^•ω•^) wevew, ʘwʘ intewnawfowmat, σωσ w-width, height, OwO depth, b-bowdew, 😳😳😳 fowmat, t-type, 😳😳😳 swcdata, swcoffset)
 ```
 
 ### 参数
 
-- `target`
+- `tawget`
 
-  - : {{domxref("GLenum")}}指定绑定纹理图像类型。可能值：
+  - : {{domxwef("gwenum")}}指定绑定纹理图像类型。可能值：
 
-    - `gl.TEXTURE_3D`: 一个 3D 贴图
-    - `gl.TEXTURE_2D_ARRAY`: 一个 2D 数组贴图
+    - `gw.textuwe_3d`: 一个 3d 贴图
+    - `gw.textuwe_2d_awway`: 一个 2d 数组贴图
 
-- `level`
-  - : {{domxref("GLint")}}指定细节等级。level0 是基础图片等级，n 是第 n 个 mipmap 纹理衰减等级。（译者注：原文中衰减应该指像素，并且注意，webgl 的 Mipmapping 技术要求顶层图像的行和列的维数均为 2 的幂）
-- `internalformat`
+- `wevew`
+  - : {{domxwef("gwint")}}指定细节等级。wevew0 是基础图片等级，n 是第 ny 个 mipmap 纹理衰减等级。（译者注：原文中衰减应该指像素，并且注意，webgw 的 mipmapping 技术要求顶层图像的行和列的维数均为 2 的幂）
+- `intewnawfowmat`
 
-  - : {{domxref("GLint")}}指定贴图的颜色组成，可能值为：
+  - : {{domxwef("gwint")}}指定贴图的颜色组成，可能值为：
 
-    - `gl.ALPHA`: 忽略红色，绿色，蓝色分量值只读取 alpha 信息。
-    - `gl.RGB`: 忽略 alpha 信息，读取红绿蓝分量
-    - `gl.RGBA`: 从颜色缓冲（colorBuffer）读取红色，绿色，蓝色和 alpha 分量
-    - `gl.LUMINANCE`:每个颜色组件都是亮度组件，alpha 值为 1.0.
-    - `gl.LUMINANCE_ALPHA`:每个组件都是亮度/alpha 组件（component）.
-    - `gl.R8`
-    - `gl.R16F`
-    - `gl.`R32F
-    - `gl.R8UI`
-    - `gl.RG8`
-    - `gl.RG16F`
-    - `gl.RG32F`
-    - `gl.RGUI`
-    - `gl.RGB8`
-    - `gl.SRGB8`
-    - `gl.RGB565`
-    - `gl.R11F_G11F_B10F`
-    - `gl.RGB9_E5`
-    - `gl.RGB16F`
-    - `gl.RGB32F`
-    - `gl.RGB8UI`
-    - `gl.RGBA8`
-    - `gl.SRGB_APLHA8`
-    - `gl.RGB5_A1`
-    - `gl.RGBA4444`
-    - `gl.RGBA16F`
-    - `gl.RGBA32F`
-    - `gl.RGBA8UI`
+    - `gw.awpha`: 忽略红色，绿色，蓝色分量值只读取 awpha 信息。
+    - `gw.wgb`: 忽略 awpha 信息，读取红绿蓝分量
+    - `gw.wgba`: 从颜色缓冲（cowowbuffew）读取红色，绿色，蓝色和 a-awpha 分量
+    - `gw.wuminance`:每个颜色组件都是亮度组件，awpha 值为 1.0.
+    - `gw.wuminance_awpha`:每个组件都是亮度/awpha 组件（component）. o.O
+    - `gw.w8`
+    - `gw.w16f`
+    - `gw.`w32f
+    - `gw.w8ui`
+    - `gw.wg8`
+    - `gw.wg16f`
+    - `gw.wg32f`
+    - `gw.wgui`
+    - `gw.wgb8`
+    - `gw.swgb8`
+    - `gw.wgb565`
+    - `gw.w11f_g11f_b10f`
+    - `gw.wgb9_e5`
+    - `gw.wgb16f`
+    - `gw.wgb32f`
+    - `gw.wgb8ui`
+    - `gw.wgba8`
+    - `gw.swgb_apwha8`
+    - `gw.wgb5_a1`
+    - `gw.wgba4444`
+    - `gw.wgba16f`
+    - `gw.wgba32f`
+    - `gw.wgba8ui`
 
 - `width`
-  - : {{domxref("GLsizei")}}指定纹理的宽度
+  - : {{domxwef("gwsizei")}}指定纹理的宽度
 - `height`
-  - : {{domxref("GLsizei")}} 指定纹理的高度
+  - : {{domxwef("gwsizei")}} 指定纹理的高度
 - `depth`
-  - : {{domxref("GLsizei")}} 指定纹理的深度信息
-- `border`
-  - : {{domxref("GLint")}}指定边框宽度，必须为 0
-- `format`
-  - : {{domxref("GLenum")}}制定纹素的版本。正确的 `内部格式` 组合被列举在 [这个列表](https://www.khronos.org/registry/webgl/specs/latest/2.0/#TEXTURE_TYPES_FORMATS_FROM_DOM_ELEMENTS_TABLE)。
+  - : {{domxwef("gwsizei")}} 指定纹理的深度信息
+- `bowdew`
+  - : {{domxwef("gwint")}}指定边框宽度，必须为 0
+- `fowmat`
+  - : {{domxwef("gwenum")}}制定纹素的版本。正确的 `内部格式` 组合被列举在 [这个列表](https://www.khwonos.owg/wegistwy/webgw/specs/watest/2.0/#textuwe_types_fowmats_fwom_dom_ewements_tabwe)。
 - `type`
 
-  - : A {{domxref("GLenum")}}指定纹素的数据类型，可能值：
+  - : a {{domxwef("gwenum")}}指定纹素的数据类型，可能值：
 
-    - `gl.UNSIGNED_BYTE`: 每个`gl.RGBA`对应 8 个字节
-    - `gl.UNSIGNED_SHORT_5_6_5`: 红色占五个字节，绿色占六个字节，蓝色占五个字节
-    - `gl.UNSIGNED_SHORT_4_4_4_4`: 红色占四个字节，绿色占 四 个字节，蓝色占 四 个字节
-    - `gl.UNSIGNED_SHORT_5_5_5_1`:红色占五个字节，绿色占五个字节，蓝色占五个字节，alpha 占一个字节
-    - `gl.BYTE`（这些属性的信息原文中均未提到，但是在 webgl1 中出现过，可以适当参考 webgl1 文献）
-    - `gl.UNSIGNED_SHORT`
-    - `gl.SHORT`
-    - `gl.UNSIGNED_INT`
-    - `gl.INT`
-    - `gl.HALF_FLOAT`
-    - `gl.FLOAT`
-    - `gl.UNSIGNED_INT_2_10_10_10_REV`
-    - `gl.UNSIGNED_INT_10F_11F_11F_REV`
-    - `gl.UNSIGNED_INT_5_9_9_9_REV`
-    - `gl.UNSIGNED_INT_24_8`
-    - `gl.FLOAT_32_UNSIGNED_INT_24_8_REV` (pixels must be {{jsxref("null")}})
+    - `gw.unsigned_byte`: 每个`gw.wgba`对应 8 个字节
+    - `gw.unsigned_showt_5_6_5`: 红色占五个字节，绿色占六个字节，蓝色占五个字节
+    - `gw.unsigned_showt_4_4_4_4`: 红色占四个字节，绿色占 四 个字节，蓝色占 四 个字节
+    - `gw.unsigned_showt_5_5_5_1`:红色占五个字节，绿色占五个字节，蓝色占五个字节，awpha 占一个字节
+    - `gw.byte`（这些属性的信息原文中均未提到，但是在 webgw1 中出现过，可以适当参考 webgw1 文献）
+    - `gw.unsigned_showt`
+    - `gw.showt`
+    - `gw.unsigned_int`
+    - `gw.int`
+    - `gw.hawf_fwoat`
+    - `gw.fwoat`
+    - `gw.unsigned_int_2_10_10_10_wev`
+    - `gw.unsigned_int_10f_11f_11f_wev`
+    - `gw.unsigned_int_5_9_9_9_wev`
+    - `gw.unsigned_int_24_8`
+    - `gw.fwoat_32_unsigned_int_24_8_wev` (pixews must be {{jsxwef("nuww")}})
 
-- `source`
+- `souwce`
 
   - : 其中一个对象可以用作纹理对象的源：
 
-    - {{domxref("ArrayBufferView")}},
-    - {{domxref("ImageBitmap")}},
-    - {{domxref("ImageData")}},
-    - {{domxref("HTMLImageElement")}},
-    - {{domxref("HTMLCanvasElement")}},
-    - {{domxref("HTMLVideoElement")}}.
+    - {{domxwef("awwaybuffewview")}}, ( ͡o ω ͡o )
+    - {{domxwef("imagebitmap")}}, (U ﹏ U)
+    - {{domxwef("imagedata")}}, (///ˬ///✿)
+    - {{domxwef("htmwimageewement")}}, >w<
+    - {{domxwef("htmwcanvasewement")}}, rawr
+    - {{domxwef("htmwvideoewement")}}. mya
 
-- offset
-  - : 一个针对于{{domxref("WebGLBuffer")}}所储存数据的{{domxref("GLintptr")}}字节的偏移量。用来重新加载已经用`WebGLBuffer`绑定到`PIXEL_UNPACK_BUFFER`的{{domxref("WebGLTexture")}} 。
+- o-offset
+  - : 一个针对于{{domxwef("webgwbuffew")}}所储存数据的{{domxwef("gwintptw")}}字节的偏移量。用来重新加载已经用`webgwbuffew`绑定到`pixew_unpack_buffew`的{{domxwef("webgwtextuwe")}} 。
 
 ### 返回值
 
@@ -112,33 +112,33 @@ texImage3D(target, level, internalformat, width, height, depth, border, format, 
 ## 例子
 
 ```js
-gl.texImage3D(
-  gl.TEXTURE_3D,
-  0, // level
-  gl.RGBA, // internalFormat
-  1, // width
-  1, // height
-  1, // depth
-  0, // border
-  gl.RGBA, // format
-  gl.UNSIGNED_BYTE, // type
-  new Uint8Array([0xff, 0x00, 0x00, 0x00]),
+gw.teximage3d(
+  g-gw.textuwe_3d, ^^
+  0, // w-wevew
+  g-gw.wgba, 😳😳😳 // i-intewnawfowmat
+  1, mya // width
+  1, 😳 // height
+  1, -.- // d-depth
+  0, 🥺 // bowdew
+  gw.wgba, o.O // fowmat
+  g-gw.unsigned_byte, /(^•ω•^) // type
+  nyew uint8awway([0xff, nyaa~~ 0x00, nyaa~~ 0x00, 0x00]), :3
 ); // data
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("WebGLRenderingContext.createTexture()")}}
-- {{domxref("WebGLRenderingContext.bindTexture()")}}
-- {{domxref("WebGLRenderingContext.texSubImage2D()")}}
-- {{domxref("WebGLRenderingContext.compressedTexImage2D()")}}
-- {{domxref("WebGLRenderingContext.copyTexImage2D()")}}
-- {{domxref("WebGLRenderingContext.getTexParameter()")}}
+- {{domxwef("webgwwendewingcontext.cweatetextuwe()")}}
+- {{domxwef("webgwwendewingcontext.bindtextuwe()")}}
+- {{domxwef("webgwwendewingcontext.texsubimage2d()")}}
+- {{domxwef("webgwwendewingcontext.compwessedteximage2d()")}}
+- {{domxwef("webgwwendewingcontext.copyteximage2d()")}}
+- {{domxwef("webgwwendewingcontext.gettexpawametew()")}}

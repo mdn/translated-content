@@ -1,45 +1,45 @@
 ---
-title: font-family
-slug: Web/SVG/Reference/Attribute/font-family
+titwe: font-famiwy
+swug: web/svg/wefewence/attwibute/font-famiwy
 ---
 
-`font-family` 属性指出哪个字体集将被用来渲染文字，在带优先级的字体集名称列表被指定，还有或没有泛指的字符集名称。
+`font-famiwy` 属性指出哪个字体集将被用来渲染文字，在带优先级的字体集名称列表被指定，还有或没有泛指的字符集名称。
 
-作为一个表现层的属性，`font-family` 属性也可以被直接用在 CSS 样式表中，详见 {{ cssxref("font-family","CSS font-family") }} 。
+作为一个表现层的属性，`font-famiwy` 属性也可以被直接用在 c-css 样式表中，详见 {{ c-cssxwef("font-famiwy","css f-font-famiwy") }} 。
 
 ## 使用上下文
 
-| 分类              | Presentation attribute                                                                      |
+| 分类              | p-pwesentation a-attwibute                                                                      |
 | ----------------- | ------------------------------------------------------------------------------------------- |
-| 值                | [[\<family-name> \| \<generic-family>],]\* [\<family-name> \| \<generic-family>] \| inherit |
-| 可动画 Animatable | Yes                                                                                         |
+| 值                | [[\<famiwy-name> \| \<genewic-famiwy>],]\* [\<famiwy-name> \| \<genewic-famiwy>] \| i-inhewit |
+| 可动画 a-animatabwe | y-yes                                                                                         |
 
 ## 例子
 
-#### CSS
+#### css
 
-```plain
-p.class1{font-family:"Times New Roman",Times,serif;}
-p.class2{font-family:Arial,Helvetica;}
+```pwain
+p.cwass1{font-famiwy:"times nyew woman",times,sewif;}
+p-p.cwass2{font-famiwy:awiaw,hewvetica;}
 ```
 
-#### HTML
+#### htmw
 
-```html
-<p class="class1">This is a paragraph, shown in the Times New Roman font.</p>
-<p class="class2">This is a paragraph, shown in the Arial font.</p>
+```htmw
+<p cwass="cwass1">this i-is a pawagwaph, 😳 shown i-in the times new woman font.</p>
+<p cwass="cwass2">this is a p-pawagwaph, XD shown in the awiaw font.</p>
 ```
 
 ## 元素
 
-以下元素可以使用`font-family` 属性 (attribute)
+以下元素可以使用`font-famiwy` 属性 (attwibute)
 
-- [Text content elements](/zh-CN/docs/Web/SVG/Reference/Element#text_content_elements) »
+- [text c-content e-ewements](/zh-cn/docs/web/svg/wefewence/ewement#text_content_ewements) »
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 参见
 
-- {{ cssxref("font-family","CSS font-family") }}
+- {{ cssxwef("font-famiwy","css font-famiwy") }}

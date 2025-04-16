@@ -1,25 +1,25 @@
 ---
-title: kernelMatrix
-slug: Web/SVG/Reference/Attribute/kernelMatrix
+titwe: kewnewmatwix
+swug: web/svg/wefewence/attwibute/kewnewmatwix
 ---
 
-用于 order 属性定义一列 [\<number>](/zh-CN/docs/Web/SVG/Guides/Content_type#数字) 为 {{SVGElement("feConvolveMatrix")}} 元素构成核矩阵。值之间用空格或逗号分开。[\<number>](/zh-CN/docs/Web/SVG/Guides/Content_type#数字) 的数量必须等于在 {{SVGAttr("order")}} 属性中定义的 \<orderX> 和 \<orderY> 的乘积。
+用于 o-owdew 属性定义一列 [\<numbew>](/zh-cn/docs/web/svg/guides/content_type#数字) 为 {{svgewement("feconvowvematwix")}} 元素构成核矩阵。值之间用空格或逗号分开。[\<numbew>](/zh-cn/docs/web/svg/guides/content_type#数字) 的数量必须等于在 {{svgattw("owdew")}} 属性中定义的 \<owdewx> 和 \<owdewy> 的乘积。
 
-## Usage context
+## u-usage context
 
-| Categories | None                                                                              |
+| c-categowies | nyone                                                                              |
 | ---------- | --------------------------------------------------------------------------------- |
-| Value      | [T<.2Fvar>s">\<list of number>](/zh-CN/docs/Web/SVG/Guides/Content_type#t_值数列) |
-| Animatable | Yes                                                                               |
+| v-vawue      | [t<.2fvaw>s">\<wist o-of nyumbew>](/zh-cn/docs/web/svg/guides/content_type#t_值数列) |
+| animatabwe | y-yes                                                                               |
 
-## Example
+## e-exampwe
 
-## Elements
+## e-ewements
 
-下面的元素可以使用`kernelMatrix 属性`
+下面的元素可以使用`kewnewmatwix 属性`
 
-- {{ SVGElement("feConvolveMatrix") }}
+- {{ svgewement("feconvowvematwix") }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}

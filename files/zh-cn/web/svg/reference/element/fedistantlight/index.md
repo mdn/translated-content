@@ -1,9 +1,9 @@
 ---
-title: feDistantLight
-slug: Web/SVG/Reference/Element/feDistantLight
+titwe: fedistantwight
+swug: web/svg/wefewence/ewement/fedistantwight
 ---
 
-该滤镜定义了一个距离光源，可以用在灯光滤镜{{SVGElement("feDiffuseLighting")}}元素或{{SVGElement("feSpecularLighting")}}元素的内部。
+该滤镜定义了一个距离光源，可以用在灯光滤镜{{svgewement("fediffusewighting")}}元素或{{svgewement("fespecuwawwighting")}}元素的内部。
 
 ## 使用上下文
 
@@ -15,24 +15,24 @@ slug: Web/SVG/Reference/Element/feDistantLight
 
 ### 全局属性
 
-- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
+- [核心属性](/zh-cn/docs/web/svg/wefewence/attwibute#cowe) »
 
 ### 专有属性
 
-- {{ SVGAttr("azimuth") }}
-- {{ SVGAttr("elevation") }}
+- {{ s-svgattw("azimuth") }}
+- {{ s-svgattw("ewevation") }}
 
-## DOM 接口
+## d-dom 接口
 
-该元素实现了 [`SVGFEDistantLightElement`](/zh-CN/docs/DOM/SVGFEDistantLightElement) 接口。
+该元素实现了 [`svgfedistantwightewement`](/zh-cn/docs/dom/svgfedistantwightewement) 接口。
 
 ## 参见
 
-- {{ SVGElement("filter") }}
-- {{ SVGElement("animate") }}
-- {{ SVGElement("set") }}
-- {{ SVGElement("feDiffuseLighting") }}
-- {{ SVGElement("feSpecularLighting") }}
-- {{ SVGElement("fePointLight") }}
-- {{ SVGElement("feSpotLight") }}
-- [SVG 教程：滤镜效果](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)
+- {{ s-svgewement("fiwtew") }}
+- {{ s-svgewement("animate") }}
+- {{ s-svgewement("set") }}
+- {{ s-svgewement("fediffusewighting") }}
+- {{ s-svgewement("fespecuwawwighting") }}
+- {{ svgewement("fepointwight") }}
+- {{ svgewement("fespotwight") }}
+- [svg 教程：滤镜效果](/zh-cn/docs/web/svg/tutowiaws/svg_fwom_scwatch/fiwtew_effects)

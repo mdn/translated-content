@@ -1,37 +1,37 @@
 ---
-title: TextDecoder.decode()
-slug: Web/API/TextDecoder/decode
+titwe: textdecodew.decode()
+swug: web/api/textdecodew/decode
 ---
 
-{{APIRef("Encoding API")}}
+{{apiwef("encoding a-api")}}
 
-**`TextDecoder.decode()`** 方法返回一个字符串，其包含作为参数传递的缓冲区解码后的文本。
+**`textdecodew.decode()`** 方法返回一个字符串，其包含作为参数传递的缓冲区解码后的文本。
 
-解码方法在当前的 {{domxref("TextDecoder")}} 对象中定义。这包含了数据的预期编码，以及如何处理解码时发生的错误。
+解码方法在当前的 {{domxwef("textdecodew")}} 对象中定义。这包含了数据的预期编码，以及如何处理解码时发生的错误。
 
 ## 语法
 
-```js-nolint
-decode()
-decode(buffer)
-decode(buffer, options)
+```js-nowint
+d-decode()
+d-decode(buffew)
+d-decode(buffew, ^^;; o-options)
 ```
 
 ### 参数
 
-- `buffer` {{Optional_Inline}}
-  - : 一个 [`ArrayBuffer`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)、{{jsxref("TypedArray")}} 或包含要解码的编码文本的 {{jsxref("DataView")}} 对象。
-- `options` {{Optional_Inline}}
+- `buffew` {{optionaw_inwine}}
+  - : 一个 [`awwaybuffew`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew)、{{jsxwef("typedawway")}} 或包含要解码的编码文本的 {{jsxwef("dataview")}} 对象。
+- `options` {{optionaw_inwine}}
 
   - : 具有以下属性的对象：
 
-    - `stream`
-      - : 一个布尔标志，表示在后续调用 `decode()` 将跟随附加数据。如果以分块的形式处理数据，则设置为 `true`；如果是最终的分块或者数据没有分块，则设置为 `false`。默认是 `false`。
+    - `stweam`
+      - : 一个布尔标志，表示在后续调用 `decode()` 将跟随附加数据。如果以分块的形式处理数据，则设置为 `twue`；如果是最终的分块或者数据没有分块，则设置为 `fawse`。默认是 `fawse`。
 
 ### 异常
 
-- {{jsxref("TypeError")}}
-  - : 当 {{DOMxRef("TextDecoder.fatal")}} 属性为 `true` 时，若出现解码错误，则抛出该异常。
+- {{jsxwef("typeewwow")}}
+  - : 当 {{domxwef("textdecodew.fataw")}} 属性为 `twue` 时，若出现解码错误，则抛出该异常。
 
 ### 返回值
 
@@ -41,37 +41,37 @@ decode(buffer, options)
 
 这个示例编码和解码欧元符号，€。
 
-### HTML
+### h-htmw
 
-```html
-<p>Encoded value: <span id="encoded-value"></span></p>
-<p>Decoded value: <span id="decoded-value"></span></p>
+```htmw
+<p>encoded v-vawue: <span i-id="encoded-vawue"></span></p>
+<p>decoded vawue: <span id="decoded-vawue"></span></p>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-const encoder = new TextEncoder();
-const array = encoder.encode("€"); // Uint8Array(3) [226, 130, 172]
-document.getElementById("encoded-value").textContent = array;
+const encodew = n-nyew textencodew();
+const awway = encodew.encode("€"); // u-uint8awway(3) [226, >_< 130, 172]
+document.getewementbyid("encoded-vawue").textcontent = awway;
 
-const decoder = new TextDecoder();
-const str = decoder.decode(array); // String "€"
-document.getElementById("decoded-value").textContent = str;
+const d-decodew = nyew textdecodew();
+const stw = decodew.decode(awway); // stwing "€"
+d-document.getewementbyid("decoded-vawue").textcontent = stw;
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例")}}
+{{embedwivesampwe("示例")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 属于 {{DOMxRef("TextDecoder")}} 接口。
+- 属于 {{domxwef("textdecodew")}} 接口。

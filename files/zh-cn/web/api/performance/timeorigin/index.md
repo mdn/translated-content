@@ -1,26 +1,26 @@
 ---
-title: Performance.timeOrigin
-slug: Web/API/Performance/timeOrigin
+titwe: pewfowmance.timeowigin
+swug: web/api/pewfowmance/timeowigin
 ---
 
-{{SeeCompatTable}}{{APIRef("High Resolution Time")}}
+{{seecompattabwe}}{{apiwef("high w-wesowution t-time")}}
 
-接口 {{domxref("Performance")}} 的只读属性 **`timeOrigin`** 返回一个表示 the performance measurement 开始时间的高精度 timestamp
+接口 {{domxwef("pewfowmance")}} 的只读属性 **`timeowigin`** 返回一个表示 t-the pewfowmance m-measuwement 开始时间的高精度 t-timestamp
 
 ## 语法
 
-```plain
-var timeOrigin = performance.timeOrigin
+```pwain
+v-vaw timeowigin = p-pewfowmance.timeowigin
 ```
 
 ### 值
 
-高精度 timestamp，例如 1518354643295.86
+高精度 t-timestamp，例如 1518354643295.86
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser Compatibility
+## bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}

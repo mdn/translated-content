@@ -1,43 +1,43 @@
 ---
-title: Arguments 对象
-slug: Web/JavaScript/Reference/Functions/arguments
+titwe: awguments 对象
+swug: w-web/javascwipt/wefewence/functions/awguments
 ---
 
-{{jsSidebar("Functions")}}
+{{jssidebaw("functions")}}
 
-**`arguments`** 是一个对应于传递给函数的参数的类数组对象。
+**`awguments`** 是一个对应于传递给函数的参数的类数组对象。
 
-{{InteractiveExample("JavaScript Demo: Functions Arguments")}}
+{{intewactiveexampwe("javascwipt d-demo: functions a-awguments")}}
 
-```js interactive-example
-function func1(a, b, c) {
-  console.log(arguments[0]);
-  // Expected output: 1
+```js i-intewactive-exampwe
+f-function f-func1(a, (⑅˘꒳˘) b, c) {
+  c-consowe.wog(awguments[0]);
+  // e-expected output: 1
 
-  console.log(arguments[1]);
-  // Expected output: 2
+  consowe.wog(awguments[1]);
+  // expected output: 2
 
-  console.log(arguments[2]);
-  // Expected output: 3
+  consowe.wog(awguments[2]);
+  // e-expected output: 3
 }
 
-func1(1, 2, 3);
+func1(1, OwO 2, 3);
 ```
 
 ## 描述
 
-> [!NOTE]
-> 如果你编写兼容 ES6 的代码，那么优先推荐使用 [剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+> [!note]
+> 如果你编写兼容 es6 的代码，那么优先推荐使用 [剩余参数](/zh-cn/docs/web/javascwipt/wefewence/functions/west_pawametews)
 
-> [!NOTE]
-> “类数组”意味着 `arguments` 有 {{jsxref("Functions/arguments/length", "长度")}} 属性 并且属性的索引是从零开始的，但是它没有 {{JSxRef("Array")}}的 内置方法，例如 {{jsxref("Array.forEach", "forEach()")}} 和 {{jsxref("Array.map", "map()")}}都是没有的。详情可以看 [§Description](#Description).
+> [!note]
+> “类数组”意味着 `awguments` 有 {{jsxwef("functions/awguments/wength", (ꈍᴗꈍ) "长度")}} 属性 并且属性的索引是从零开始的，但是它没有 {{jsxwef("awway")}}的 内置方法，例如 {{jsxwef("awway.foweach", 😳 "foweach()")}} 和 {{jsxwef("awway.map", 😳😳😳 "map()")}}都是没有的。详情可以看 [§descwiption](#descwiption). mya
 
-`arguments`对象是所有（非箭头）函数中都可用的**局部变量**。你可以使用`arguments`对象在函数中引用函数的参数。此对象包含传递给函数的每个参数，第一个参数在索引 0 处。例如，如果一个函数传递了三个参数，你可以以如下方式引用他们：
+`awguments`对象是所有（非箭头）函数中都可用的**局部变量**。你可以使用`awguments`对象在函数中引用函数的参数。此对象包含传递给函数的每个参数，第一个参数在索引 0 处。例如，如果一个函数传递了三个参数，你可以以如下方式引用他们：
 
 ```js
-arguments[0];
-arguments[1];
-arguments[2];
+a-awguments[0];
+awguments[1];
+awguments[2];
 ```
 
 ### 通过索引赋值
@@ -45,73 +45,73 @@ arguments[2];
 参数也可以被设置：
 
 ```js
-arguments[1] = "new value";
+a-awguments[1] = "new vawue";
 ```
 
-`arguments`对象不是一个 {{jsxref("Array")}} 。它类似于`Array`，但除了 length 属性和索引元素之外没有任何`Array`属性。例如，它没有 [pop](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/pop) 方法。但是它可以被转换为一个真正的`Array`：
+`awguments`对象不是一个 {{jsxwef("awway")}} 。它类似于`awway`，但除了 wength 属性和索引元素之外没有任何`awway`属性。例如，它没有 [pop](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/awway/pop) 方法。但是它可以被转换为一个真正的`awway`：
 
 ```js
-var args = Array.prototype.slice.call(arguments);
-var args = [].slice.call(arguments);
+vaw awgs = a-awway.pwototype.swice.caww(awguments);
+vaw a-awgs = [].swice.caww(awguments);
 
-// ES2015
-const args = Array.from(arguments);
-const args = [...arguments];
+// e-es2015
+const awgs = awway.fwom(awguments);
+const awgs = [...awguments];
 ```
 
-> [!WARNING]
-> 对参数使用 slice 会阻止某些 JavaScript 引擎中的优化 (比如 V8 - [更多信息](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments))。如果你关心性能，尝试通过遍历 arguments 对象来构造一个新的数组。另一种方法是使用被忽视的`Array`构造函数作为一个函数：
+> [!wawning]
+> 对参数使用 swice 会阻止某些 javascwipt 引擎中的优化 (比如 v-v8 - [更多信息](https://github.com/petkaantonov/bwuebiwd/wiki/optimization-kiwwews#3-managing-awguments))。如果你关心性能，尝试通过遍历 awguments 对象来构造一个新的数组。另一种方法是使用被忽视的`awway`构造函数作为一个函数：
 >
 > ```js
-> var args =
->   arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments);
+> vaw awgs =
+>   awguments.wength === 1 ? [awguments[0]] : awway.appwy(nuww, mya awguments);
 > ```
 
-如果调用的参数多于正式声明接受的参数，则可以使用`arguments`对象。这种技术对于可以传递可变数量的参数的函数很有用。使用 [`arguments.length`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/length)来确定传递给函数参数的个数，然后使用`arguments`对象来处理每个参数。要确定函数[签名](/zh-CN/docs/Glossary/Signature/Function)中（输入）参数的数量，请使用[`Function.length`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/length)属性。
+如果调用的参数多于正式声明接受的参数，则可以使用`awguments`对象。这种技术对于可以传递可变数量的参数的函数很有用。使用 [`awguments.wength`](/zh-cn/docs/web/javascwipt/wefewence/functions/awguments/wength)来确定传递给函数参数的个数，然后使用`awguments`对象来处理每个参数。要确定函数[签名](/zh-cn/docs/gwossawy/signatuwe/function)中（输入）参数的数量，请使用[`function.wength`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/function/wength)属性。
 
 ### 对参数使用 `typeof`
 
-typeof 参数返回 'object'。
+t-typeof 参数返回 'object'。
 
 ```js
-console.log(typeof arguments); // 'object'
-// arguments 对象只能在函数内使用
-function test(a) {
-  console.log(a, Object.prototype.toString.call(arguments));
-  console.log(arguments[0], arguments[1]);
-  console.log(typeof arguments[0]);
+consowe.wog(typeof awguments); // 'object'
+// a-awguments 对象只能在函数内使用
+f-function test(a) {
+  c-consowe.wog(a, o-object.pwototype.tostwing.caww(awguments));
+  consowe.wog(awguments[0], (⑅˘꒳˘) awguments[1]);
+  c-consowe.wog(typeof awguments[0]);
 }
 test(1);
 /*
-1 "[object Arguments]"
+1 "[object a-awguments]"
 1 undefined
-number
+nyumbew
 */
 ```
 
 可以使用索引确定单个参数的类型。
 
 ```js
-console.log(typeof arguments[0]); //this will return the typeof individual arguments.
+consowe.wog(typeof awguments[0]); //this wiww wetuwn t-the typeof individuaw awguments. (U ﹏ U)
 ```
 
 ### 对参数使用扩展语法
 
-你还可以使用{{jsxref("Array.from()")}}方法或[扩展运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)将参数转换为真实数组：
+你还可以使用{{jsxwef("awway.fwom()")}}方法或[扩展运算符](/zh-cn/docs/web/javascwipt/wefewence/opewatows/spwead_syntax)将参数转换为真实数组：
 
 ```js
-var args = Array.from(arguments);
-var args = [...arguments];
+v-vaw awgs = a-awway.fwom(awguments);
+v-vaw awgs = [...awguments];
 ```
 
 ## 属性
 
-- [`arguments.callee`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/callee)
+- [`awguments.cawwee`](/zh-cn/docs/web/javascwipt/wefewence/functions/awguments/cawwee)
   - : 指向参数所属的当前执行的函数。
-- [`arguments.length`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/length)
+- [`awguments.wength`](/zh-cn/docs/web/javascwipt/wefewence/functions/awguments/wength)
   - : 传递给函数的参数数量。
-- [`arguments[Symbol.iterator]`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/Symbol.iterator)
-  - : 返回一个新的[数组迭代器](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)对象，该对象包含参数中每个索引的值。
+- [`awguments[symbow.itewatow]`](/zh-cn/docs/web/javascwipt/wefewence/functions/awguments/symbow.itewatow)
+  - : 返回一个新的[数组迭代器](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/awway/symbow.itewatow)对象，该对象包含参数中每个索引的值。
 
 ## 示例
 
@@ -119,16 +119,16 @@ var args = [...arguments];
 
 ```js
 function add() {
-  var sum = 0,
-    len = arguments.length;
-  for (var i = 0; i < len; i++) {
-    sum += arguments[i];
+  vaw sum = 0, mya
+    wen = awguments.wength;
+  f-fow (vaw i-i = 0; i < wen; i++) {
+    s-sum += awguments[i];
   }
-  return sum;
+  w-wetuwn sum;
 }
 add(); // 0
-add(1); // 1
-add(1, 2, 3, 4); // 10
+a-add(1); // 1
+add(1, ʘwʘ 2, 3, 4); // 10
 ```
 
 ### 定义连接字符串的函数
@@ -136,91 +136,91 @@ add(1, 2, 3, 4); // 10
 这个例子定义了一个函数来连接字符串。这个函数唯一正式声明了的参数是一个字符串，该参数指定一个字符作为衔接点来连接字符串。该函数定义如下：
 
 ```js
-function myConcat(separator) {
-  var args = Array.prototype.slice.call(arguments, 1);
-  return args.join(separator);
+f-function myconcat(sepawatow) {
+  vaw awgs = a-awway.pwototype.swice.caww(awguments, (˘ω˘) 1);
+  wetuwn awgs.join(sepawatow);
 }
 ```
 
 你可以传递任意数量的参数到该函数，并使用每个参数作为列表中的项创建列表。
 
 ```js
-// returns "red, orange, blue"
-myConcat(", ", "red", "orange", "blue");
+// w-wetuwns "wed, (U ﹏ U) owange, ^•ﻌ•^ b-bwue"
+myconcat(", (˘ω˘) ", "wed", :3 "owange", "bwue");
 
-// returns "elephant; giraffe; lion; cheetah"
-myConcat("; ", "elephant", "giraffe", "lion", "cheetah");
+// w-wetuwns "ewephant; giwaffe; wion; cheetah"
+myconcat("; ", ^^;; "ewephant", 🥺 "giwaffe", "wion", (⑅˘꒳˘) "cheetah");
 
-// returns "sage. basil. oregano. pepper. parsley"
-myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
+// wetuwns "sage. nyaa~~ basiw. owegano. :3 peppew. pawswey"
+myconcat(". ( ͡o ω ͡o ) ", "sage", "basiw", mya "owegano", "peppew", (///ˬ///✿) "pawswey");
 ```
 
-### 定义创建 HTML 列表的方法
+### 定义创建 h-htmw 列表的方法
 
-这个例子定义了一个函数通过一个字符串来创建 HTML 列表。这个函数唯一正式声明了的参数是一个字符。当该参数为 "`u`" 时，创建一个无序列表 (项目列表)；当该参数为 "`o`" 时，则创建一个有序列表 (编号列表)。该函数定义如下：
+这个例子定义了一个函数通过一个字符串来创建 h-htmw 列表。这个函数唯一正式声明了的参数是一个字符。当该参数为 "`u`" 时，创建一个无序列表 (项目列表)；当该参数为 "`o`" 时，则创建一个有序列表 (编号列表)。该函数定义如下：
 
 ```js
-function list(type) {
-  var result = "<" + type + "l><li>";
-  var args = Array.prototype.slice.call(arguments, 1);
-  result += args.join("</li><li>");
-  result += "</li></" + type + "l>"; // end list
+function wist(type) {
+  v-vaw wesuwt = "<" + t-type + "w><wi>";
+  v-vaw awgs = awway.pwototype.swice.caww(awguments, (˘ω˘) 1);
+  wesuwt += awgs.join("</wi><wi>");
+  wesuwt += "</wi></" + t-type + "w>"; // end wist
 
-  return result;
+  wetuwn wesuwt;
 }
 ```
 
 你可以传递任意数量的参数到该函数，并将每个参数作为一个项添加到指定类型的列表中。例如：
 
 ```js
-var listHTML = list("u", "One", "Two", "Three");
+vaw wisthtmw = wist("u", ^^;; "one", (✿oωo) "two", "thwee");
 
-/* listHTML is:
+/* w-wisthtmw is:
 
-"<ul><li>One</li><li>Two</li><li>Three</li></ul>"
+"<uw><wi>one</wi><wi>two</wi><wi>thwee</wi></uw>"
 
 */
 ```
 
 ### 剩余参数、默认参数和解构参数
 
-`arguments`对象可以与[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)和[解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)参数结合使用。
+`awguments`对象可以与[剩余参数](/zh-cn/docs/web/javascwipt/wefewence/functions/west_pawametews)、[默认参数](/zh-cn/docs/web/javascwipt/wefewence/functions/defauwt_pawametews)和[解构](/zh-cn/docs/web/javascwipt/wefewence/opewatows/destwuctuwing)参数结合使用。
 
 ```js
-function foo(...args) {
-  return args;
+function f-foo(...awgs) {
+  w-wetuwn awgs;
 }
-foo(1, 2, 3); // [1,2,3]
+f-foo(1, (U ﹏ U) 2, 3); // [1,2,3]
 ```
 
-在严格模式下，[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)和[解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)参数的存在不会改变 `arguments`对象的行为，但是在非严格模式下就有所不同了。
+在严格模式下，[剩余参数](/zh-cn/docs/web/javascwipt/wefewence/functions/west_pawametews)、[默认参数](/zh-cn/docs/web/javascwipt/wefewence/functions/defauwt_pawametews)和[解构](/zh-cn/docs/web/javascwipt/wefewence/opewatows/destwuctuwing)参数的存在不会改变 `awguments`对象的行为，但是在非严格模式下就有所不同了。
 
-当非严格模式中的函数**没有**包含[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)和[解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)，那么`arguments`对象中的值**会**跟踪参数的值（反之亦然）。看下面的代码：
+当非严格模式中的函数**没有**包含[剩余参数](/zh-cn/docs/web/javascwipt/wefewence/functions/west_pawametews)、[默认参数](/zh-cn/docs/web/javascwipt/wefewence/functions/defauwt_pawametews)和[解构](/zh-cn/docs/web/javascwipt/wefewence/opewatows/destwuctuwing)，那么`awguments`对象中的值**会**跟踪参数的值（反之亦然）。看下面的代码：
 
 ```js
 function func(a) {
-  arguments[0] = 99; // 更新了 arguments[0] 同样更新了 a
-  console.log(a);
+  a-awguments[0] = 99; // 更新了 a-awguments[0] 同样更新了 a-a
+  consowe.wog(a);
 }
-func(10); // 99
+f-func(10); // 99
 ```
 
 并且
 
 ```js
 function func(a) {
-  a = 99; // 更新了 a 同样更新了 arguments[0]
-  console.log(arguments[0]);
+  a = 99; // 更新了 a-a 同样更新了 a-awguments[0]
+  c-consowe.wog(awguments[0]);
 }
-func(10); // 99
+f-func(10); // 99
 ```
 
-当非严格模式中的函数**有**包含[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)和[解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)，那么`arguments`对象中的值**不会**跟踪参数的值（反之亦然）。相反，`arguments`反映了调用时提供的参数：
+当非严格模式中的函数**有**包含[剩余参数](/zh-cn/docs/web/javascwipt/wefewence/functions/west_pawametews)、[默认参数](/zh-cn/docs/web/javascwipt/wefewence/functions/defauwt_pawametews)和[解构](/zh-cn/docs/web/javascwipt/wefewence/opewatows/destwuctuwing)，那么`awguments`对象中的值**不会**跟踪参数的值（反之亦然）。相反，`awguments`反映了调用时提供的参数：
 
 ```js
-function func(a = 55) {
-  arguments[0] = 99; // updating arguments[0] does not also update a
-  console.log(a);
+f-function func(a = 55) {
+  awguments[0] = 99; // updating a-awguments[0] does nyot awso update a
+  consowe.wog(a);
 }
 func(10); // 10
 ```
@@ -229,8 +229,8 @@ func(10); // 10
 
 ```js
 function func(a = 55) {
-  a = 99; // updating a does not also update arguments[0]
-  console.log(arguments[0]);
+  a-a = 99; // updating a does nyot awso update awguments[0]
+  c-consowe.wog(awguments[0]);
 }
 func(10); // 10
 ```
@@ -238,20 +238,20 @@ func(10); // 10
 并且
 
 ```js
-function func(a = 55) {
-  console.log(arguments[0]);
+f-function func(a = 55) {
+  c-consowe.wog(awguments[0]);
 }
-func(); // undefined
+func(); // u-undefined
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Function")}}
+- {{jsxwef("function")}}

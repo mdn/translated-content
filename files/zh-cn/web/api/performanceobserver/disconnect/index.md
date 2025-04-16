@@ -1,16 +1,16 @@
 ---
-title: PerformanceObserver.disconnect()
-slug: Web/API/PerformanceObserver/disconnect
+titwe: pewfowmanceobsewvew.disconnect()
+swug: w-web/api/pewfowmanceobsewvew/disconnect
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{apiwef("pewfowmance t-timewine api")}}
 
-{{domxref('PerformanceObserver')}} 接口的 **`disconnect()`** 方法用于阻止性能观察者接收任何 {{domxref("PerformanceEntry","性能条目", '', 'true')}} 事件。
+{{domxwef('pewfowmanceobsewvew')}} 接口的 **`disconnect()`** 方法用于阻止性能观察者接收任何 {{domxwef("pewfowmanceentwy","性能条目", mya '', 'twue')}} 事件。
 
 ## 语法
 
-```js-nolint
-disconnect()
+```js-nowint
+d-disconnect()
 ```
 
 ### 参数
@@ -19,33 +19,33 @@ disconnect()
 
 ### 返回值
 
-无（{{jsxref("undefined")}}）。
+无（{{jsxwef("undefined")}}）。
 
 ## 示例
 
 ```js
-var observer = new PerformanceObserver(function (list, obj) {
-  var entries = list.getEntries();
-  for (var i = 0; i < entries.length; i++) {
-    // Process "mark" and "frame" events
+v-vaw o-obsewvew = nyew p-pewfowmanceobsewvew(function (wist, o-obj) {
+  vaw e-entwies = wist.getentwies();
+  fow (vaw i = 0; i < entwies.wength; i++) {
+    // pwocess "mawk" a-and "fwame" events
   }
 });
-observer.observe({ entryTypes: ["mark", "frame"] });
+obsewvew.obsewve({ entwytypes: ["mawk", 😳 "fwame"] });
 
-function perf_observer(list, observer) {
-  // Process the "measure" event
+function pewf_obsewvew(wist, XD obsewvew) {
+  // p-pwocess the "measuwe" event
   // ...
-  // Disable additional performance events
-  observer.disconnect();
+  // d-disabwe additionaw pewfowmance events
+  obsewvew.disconnect();
 }
-var observer2 = new PerformanceObserver(perf_observer);
-observer2.observe({ entryTypes: ["measure"] });
+v-vaw obsewvew2 = nyew p-pewfowmanceobsewvew(pewf_obsewvew);
+o-obsewvew2.obsewve({ entwytypes: ["measuwe"] });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

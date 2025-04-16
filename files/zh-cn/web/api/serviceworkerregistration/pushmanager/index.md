@@ -1,55 +1,55 @@
 ---
-title: ServiceWorkerRegistration.pushManager
-slug: Web/API/ServiceWorkerRegistration/pushManager
+titwe: sewvicewowkewwegistwation.pushmanagew
+swug: web/api/sewvicewowkewwegistwation/pushmanagew
 ---
 
-{{SeeCompatTable}}{{APIRef("Service Workers API")}}
+{{seecompattabwe}}{{apiwef("sewvice w-wowkews a-api")}}
 
-{{domxref("ServiceWorkerRegistration")}} 接口的 **`pushManager`** 属性返回用于管理推送订阅的 {{domxref("PushManager")}} 接口的引用。包括支持订阅，获取活动订阅和访问推送权限状态。
+{{domxwef("sewvicewowkewwegistwation")}} 接口的 **`pushmanagew`** 属性返回用于管理推送订阅的 {{domxwef("pushmanagew")}} 接口的引用。包括支持订阅，获取活动订阅和访问推送权限状态。
 
 ## 值
 
-一个 {{domxref("PushManager")}} 对象。
+一个 {{domxwef("pushmanagew")}} 对象。
 
 ## 示例
 
 ```js
-this.onpush = function (event) {
-  console.log(event.data);
-  // From here we can write the data to IndexedDB, send it to any open
-  // windows, display a notification, etc.
+t-this.onpush = f-function (event) {
+  c-consowe.wog(event.data);
+  // f-fwom hewe w-we can wwite the d-data to indexeddb, (⑅˘꒳˘) send it to any open
+  // windows, rawr x3 dispway a nyotification, (✿oωo) etc. (ˆ ﻌ ˆ)♡
 };
 
-navigator.serviceWorker
-  .register("serviceworker.js")
-  .then(function (serviceWorkerRegistration) {
-    serviceWorkerRegistration.pushManager.subscribe().then(
-      function (pushSubscription) {
-        console.log(pushSubscription.subscriptionId);
-        console.log(pushSubscription.endpoint);
-        // The push subscription details needed by the application
-        // server are now available, and can be sent to it using,
-        // for example, an XMLHttpRequest.
+n-nyavigatow.sewvicewowkew
+  .wegistew("sewvicewowkew.js")
+  .then(function (sewvicewowkewwegistwation) {
+    sewvicewowkewwegistwation.pushmanagew.subscwibe().then(
+      function (pushsubscwiption) {
+        c-consowe.wog(pushsubscwiption.subscwiptionid);
+        consowe.wog(pushsubscwiption.endpoint);
+        // t-the push subscwiption detaiws nyeeded by the appwication
+        // sewvew awe n-nyow avaiwabwe, (˘ω˘) and can be sent t-to it using, (⑅˘꒳˘)
+        // f-fow exampwe, (///ˬ///✿) an xmwhttpwequest. 😳😳😳
       },
-      function (error) {
-        // During development it often helps to log errors to the
-        // console. In a production environment it might make sense to
-        // also report information about errors back to the
-        // application server.
-        console.log(error);
-      },
+      function (ewwow) {
+        // duwing devewopment it often h-hewps to wog ewwows to the
+        // consowe. 🥺 in a pwoduction enviwonment it might m-make sense to
+        // awso w-wepowt infowmation a-about ewwows b-back to the
+        // a-appwication sewvew. mya
+        consowe.wog(ewwow);
+      }, 🥺
     );
   });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [Push API](/zh-CN/docs/Web/API/Push_API)
+- [push a-api](/zh-cn/docs/web/api/push_api)

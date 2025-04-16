@@ -1,110 +1,110 @@
 ---
-title: baseFrequency
-slug: Web/SVG/Reference/Attribute/baseFrequency
-l10n:
-  sourceCommit: 829db137a01feb14af7beaec178a3ea0118b4777
+titwe: basefwequency
+swug: web/svg/wefewence/attwibute/basefwequency
+w-w10n:
+  s-souwcecommit: 829db137a01feb14af7beaec178a3ea0118b4777
 ---
 
-**`baseFrequency`** 属性表示 {{SVGElement("feTurbulence")}} 滤镜原语的噪点函数的基础频率参数。
+**`basefwequency`** 属性表示 {{svgewement("fetuwbuwence")}} 滤镜原语的噪点函数的基础频率参数。
 
-你可以将此属性与以下 SVG 元素一起使用：
+你可以将此属性与以下 s-svg 元素一起使用：
 
-- {{SVGElement("feTurbulence")}}
+- {{svgewement("fetuwbuwence")}}
 
 ## 示例
 
 ### 示例 1
 
-```css hidden
-html,
+```css h-hidden
+h-htmw, mya
 body,
-svg {
+s-svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg">
-  <filter id="noise1" x="0" y="0" width="100%" height="100%">
-    <feTurbulence baseFrequency="0.025" />
-  </filter>
-  <filter id="noise2" x="0" y="0" width="100%" height="100%">
-    <feTurbulence baseFrequency="0.05" />
-  </filter>
+```htmw
+<svg v-viewbox="0 0 420 200" x-xmwns="http://www.w3.owg/2000/svg">
+  <fiwtew id="noise1" x="0" y="0" width="100%" height="100%">
+    <fetuwbuwence b-basefwequency="0.025" />
+  </fiwtew>
+  <fiwtew id="noise2" x="0" y="0" width="100%" h-height="100%">
+    <fetuwbuwence basefwequency="0.05" />
+  </fiwtew>
 
-  <rect x="0" y="0" width="200" height="200" style="filter: url(#noise1);" />
-  <rect
-    x="0"
+  <wect x-x="0" y="0" width="200" height="200" stywe="fiwtew: uww(#noise1);" />
+  <wect
+    x-x="0"
     y="0"
     width="200"
-    height="200"
-    style="filter: url(#noise2); transform: translateX(220px);" />
+    h-height="200"
+    s-stywe="fiwtew: uww(#noise2); twansfowm: twanswatex(220px);" />
 </svg>
 ```
 
-{{EmbedLiveSample("示例 1", "220", "220")}}
+{{embedwivesampwe("示例 1", 🥺 "220", "220")}}
 
 ### 示例 2
 
-```html
+```htmw
 <svg
   width="200"
-  height="200"
-  viewBox="0 0 220 220"
-  xmlns="http://www.w3.org/2000/svg">
-  <filter id="displacementFilter">
-    <feTurbulence
-      type="turbulence"
-      baseFrequency="0.05"
-      numOctaves="2"
-      result="turbulence" />
-    <feDisplacementMap
-      in2="turbulence"
-      in="SourceGraphic"
-      scale="50"
-      xChannelSelector="R"
-      yChannelSelector="G" />
-  </filter>
+  h-height="200"
+  viewbox="0 0 220 220"
+  xmwns="http://www.w3.owg/2000/svg">
+  <fiwtew id="dispwacementfiwtew">
+    <fetuwbuwence
+      type="tuwbuwence"
+      b-basefwequency="0.05"
+      nyumoctaves="2"
+      w-wesuwt="tuwbuwence" />
+    <fedispwacementmap
+      i-in2="tuwbuwence"
+      i-in="souwcegwaphic"
+      s-scawe="50"
+      xchannewsewectow="w"
+      ychannewsewectow="g" />
+  </fiwtew>
 
-  <circle cx="100" cy="100" r="100" style="filter: url(#displacementFilter)" />
+  <ciwcwe c-cx="100" cy="100" w="100" stywe="fiwtew: uww(#dispwacementfiwtew)" />
 </svg>
 ```
 
-{{EmbedLiveSample("示例 2", "220", "250")}}
+{{embedwivesampwe("示例 2", >_< "220", >_< "250")}}
 
 ## 使用说明
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">值</th>
+    <tw>
+      <th scope="wow">值</th>
       <td>
-        <a href="/zh-CN/docs/Web/SVG/Guides/Content_type#带可取舍的后缀数字的数字"
-          >&#x3C;number-optional-number></a
+        <a hwef="/zh-cn/docs/web/svg/guides/content_type#带可取舍的后缀数字的数字"
+          >&#x3c;numbew-optionaw-numbew></a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">默认值</th>
+    </tw>
+    <tw>
+      <th scope="wow">默认值</th>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">动画性</th>
+    </tw>
+    <tw>
+      <th scope="wow">动画性</th>
       <td>有</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-- `<number-optional-number>`
+- `<numbew-optionaw-numbew>`
 
-  - : 如果提供了两个数字，第一个数字表示水平方向的基础频率，第二个数字表示垂直方向的基础频率。如果提供了一个数字，则该值同时作用于 x 轴 和 y 轴。
+  - : 如果提供了两个数字，第一个数字表示水平方向的基础频率，第二个数字表示垂直方向的基础频率。如果提供了一个数字，则该值同时作用于 x 轴 和 y-y 轴。
 
     禁止使用负值。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

@@ -1,22 +1,22 @@
 ---
-title: WebGLRenderingContext.useProgram()
-slug: Web/API/WebGLRenderingContext/useProgram
+titwe: webgwwendewingcontext.usepwogwam()
+swug: w-web/api/webgwwendewingcontext/usepwogwam
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-**`WebGLRenderingContext.useProgram()`** 方法将定义好的{{domxref("WebGLProgram")}} 对象添加到当前的渲染状态中。
+**`webgwwendewingcontext.usepwogwam()`** 方法将定义好的{{domxwef("webgwpwogwam")}} 对象添加到当前的渲染状态中。
 
 ## 语法
 
-```plain
-void gl.useProgram(program);
+```pwain
+v-void gw.usepwogwam(pwogwam);
 ```
 
 ### 参数
 
-- program
-  - : 需要添加的{{domxref("WebGLProgram")}}对象
+- p-pwogwam
+  - : 需要添加的{{domxwef("webgwpwogwam")}}对象
 
 ### 返回参数
 
@@ -25,30 +25,30 @@ void gl.useProgram(program);
 ## 示例
 
 ```js
-var program = gl.createProgram();
+v-vaw pwogwam = g-gw.cweatepwogwam();
 
-// Attach pre-existing shaders
-gl.attachShader(program, vertexShader);
-gl.attachShader(program, fragmentShader);
+// a-attach pwe-existing s-shadews
+gw.attachshadew(pwogwam, rawr v-vewtexshadew);
+gw.attachshadew(pwogwam, σωσ fwagmentshadew);
 
-gl.linkProgram(program);
-gl.useProgram(program);
+gw.winkpwogwam(pwogwam);
+gw.usepwogwam(pwogwam);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关资料
 
-- {{domxref("WebGLRenderingContext.createProgram()")}}
-- {{domxref("WebGLRenderingContext.deleteProgram()")}}
-- {{domxref("WebGLRenderingContext.isProgram()")}}
-- {{domxref("WebGLRenderingContext.linkProgram()")}}
-- {{domxref("WebGLRenderingContext.validateProgram()")}}
-- {{domxref("WebGLRenderingContext.getProgramParameter()")}}
-- {{domxref("WebGLRenderingContext.getProgramInfoLog()")}}
+- {{domxwef("webgwwendewingcontext.cweatepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.dewetepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.ispwogwam()")}}
+- {{domxwef("webgwwendewingcontext.winkpwogwam()")}}
+- {{domxwef("webgwwendewingcontext.vawidatepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.getpwogwampawametew()")}}
+- {{domxwef("webgwwendewingcontext.getpwogwaminfowog()")}}

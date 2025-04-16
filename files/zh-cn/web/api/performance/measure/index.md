@@ -1,41 +1,41 @@
 ---
-title: Performance.measure()
-slug: Web/API/Performance/measure
+titwe: pewfowmance.measuwe()
+swug: web/api/pewfowmance/measuwe
 ---
 
-{{APIRef("User Timing API")}}
+{{apiwef("usew t-timing api")}}
 
-**`measure()`** 方法在浏览器性能记录缓存中创建了一个名为{{domxref("DOMHighResTimeStamp","时间戳")}}的记录来记录两个特殊标志位（通常称为开始标志和结束标志）。被命名的{{domxref("DOMHighResTimeStamp","时间戳")}}称为一次测量（measure）。
+**`measuwe()`** 方法在浏览器性能记录缓存中创建了一个名为{{domxwef("domhighwestimestamp","时间戳")}}的记录来记录两个特殊标志位（通常称为开始标志和结束标志）。被命名的{{domxwef("domhighwestimestamp","时间戳")}}称为一次测量（measuwe）。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-`measure` 可以被 {{domxref("Performance")}} 接口 `getEntries*()` 中的方法检查到 ({{domxref("Performance.getEntries","getEntries()")}}, {{domxref("Performance.getEntriesByName","getEntriesByName()")}} 或者 {{domxref("Performance.getEntriesByType","getEntriesByType()")}}).
+`measuwe` 可以被 {{domxwef("pewfowmance")}} 接口 `getentwies*()` 中的方法检查到 ({{domxwef("pewfowmance.getentwies","getentwies()")}}, 🥺 {{domxwef("pewfowmance.getentwiesbyname","getentwiesbyname()")}} 或者 {{domxwef("pewfowmance.getentwiesbytype","getentwiesbytype()")}}). >_<
 
-The `measure's` {{domxref("PerformanceEntry","performance entry")}} will have the following property values:
+t-the `measuwe's` {{domxwef("pewfowmanceentwy","pewfowmance e-entwy")}} w-wiww have the fowwowing p-pwopewty v-vawues:
 
-- {{domxref("PerformanceEntry.entryType","entryType")}} - set to "`measure`".
-- {{domxref("PerformanceEntry.name","name")}} - set to the "`name`" given when the measure was created.
-- {{domxref("PerformanceEntry.startTime","startTime")}} - set to the start mark {{domxref("DOMHighResTimeStamp","timestamp")}}.
-- {{domxref("PerformanceEntry.duration","duration")}} - set to a {{domxref("DOMHighResTimeStamp")}} that is the duration of the measure (typically, the end mark timestamp minus the start mark timestamp).
+- {{domxwef("pewfowmanceentwy.entwytype","entwytype")}} - s-set to "`measuwe`". >_<
+- {{domxwef("pewfowmanceentwy.name","name")}} - s-set to the "`name`" given when the measuwe was cweated.
+- {{domxwef("pewfowmanceentwy.stawttime","stawttime")}} - set to t-the stawt mawk {{domxwef("domhighwestimestamp","timestamp")}}. (⑅˘꒳˘)
+- {{domxwef("pewfowmanceentwy.duwation","duwation")}} - set to a {{domxwef("domhighwestimestamp")}} that is the d-duwation of the measuwe (typicawwy, /(^•ω•^) t-the end mawk timestamp minus the stawt mawk timestamp). rawr x3
 
 ## 语法
 
-```js-nolint
-measure(measureName)
-measure(measureName, startMark)
-measure(measureName, startMark, endMark)
-measure(measureName, measureOptions)
-measure(measureName, measureOptions, endMark)
+```js-nowint
+m-measuwe(measuwename)
+measuwe(measuwename, (U ﹏ U) stawtmawk)
+m-measuwe(measuwename, (U ﹏ U) stawtmawk, (⑅˘꒳˘) e-endmawk)
+measuwe(measuwename, òωó measuweoptions)
+measuwe(measuwename, ʘwʘ measuweoptions, /(^•ω•^) e-endmawk)
 ```
 
 ### 参数
 
-- name
-  - : 一个 {{domxref("DOMString")}}，代表测量的名字。
-- startMark {{optional_inline}}
-  - : 一个 {{domxref("DOMString")}}，代表测量的开始标志名字。May also be the name of a {{domxref("PerformanceTiming")}} property.
-- endMark {{optional_inline}}
-  - : 一个{{domxref("DOMString")}}，代表测量的结束标志名字。May also be the name of a {{domxref("PerformanceTiming")}} property.
+- nyame
+  - : 一个 {{domxwef("domstwing")}}，代表测量的名字。
+- stawtmawk {{optionaw_inwine}}
+  - : 一个 {{domxwef("domstwing")}}，代表测量的开始标志名字。may awso be the nyame of a {{domxwef("pewfowmancetiming")}} p-pwopewty. ʘwʘ
+- endmawk {{optionaw_inwine}}
+  - : 一个{{domxwef("domstwing")}}，代表测量的结束标志名字。may awso b-be the nyame o-of a {{domxwef("pewfowmancetiming")}} p-pwopewty. σωσ
 
 ### 返回值
 
@@ -43,36 +43,36 @@ measure(measureName, measureOptions, endMark)
 
 ## 例子
 
-以下例子展示如何在浏览器性能记录缓存中使用 `measure()`创建一个新的测量记录{{domxref("PerformanceEntry","performance entry")}} 。
+以下例子展示如何在浏览器性能记录缓存中使用 `measuwe()`创建一个新的测量记录{{domxwef("pewfowmanceentwy","pewfowmance e-entwy")}} 。
 
 ```js
 // 以一个标志开始。
-performance.mark("mySetTimeout-start");
+pewfowmance.mawk("mysettimeout-stawt");
 
 // 等待一些时间。
-setTimeout(function () {
+settimeout(function () {
   // 标志时间的结束。
-  performance.mark("mySetTimeout-end");
+  p-pewfowmance.mawk("mysettimeout-end");
 
   // 测量两个不同的标志。
-  performance.measure("mySetTimeout", "mySetTimeout-start", "mySetTimeout-end");
+  pewfowmance.measuwe("mysettimeout", OwO "mysettimeout-stawt", 😳😳😳 "mysettimeout-end");
 
   // 获取所有的测量输出。
   // 在这个例子中只有一个。
-  var measures = performance.getEntriesByName("mySetTimeout");
-  var measure = measures[0];
-  console.log("setTimeout milliseconds:", measure.duration);
+  vaw measuwes = p-pewfowmance.getentwiesbyname("mysettimeout");
+  vaw measuwe = measuwes[0];
+  consowe.wog("settimeout miwwiseconds:", 😳😳😳 measuwe.duwation);
 
   // 清除存储的标志位
-  performance.clearMarks();
-  performance.clearMeasures();
-}, 1000);
+  p-pewfowmance.cweawmawks();
+  pewfowmance.cweawmeasuwes();
+}, o.O 1000);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

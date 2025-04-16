@@ -1,38 +1,38 @@
 ---
-title: FetchEvent.clientId
-slug: Web/API/FetchEvent/clientId
+titwe: fetchevent.cwientid
+swug: w-web/api/fetchevent/cwientid
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews api")}}
 
-{{domxref("FetchEvent")}} 接口的 **`clientId`** 只读属性，返回由当前 service worker 正在控制的 {{domxref("Client")}} 的 id。
+{{domxwef("fetchevent")}} 接口的 **`cwientid`** 只读属性，返回由当前 s-sewvice w-wowkew 正在控制的 {{domxwef("cwient")}} 的 i-id。
 
-然后可以将此 ID 传递给 {{domxref("Clients.get()")}} 方法以检索相关联的客户端。
+然后可以将此 i-id 传递给 {{domxwef("cwients.get()")}} 方法以检索相关联的客户端。
 
 ## 值
 
-一个字符串，表示客户端的 ID。
+一个字符串，表示客户端的 i-id。
 
 ## 示例
 
 ```js
-self.addEventListener("fetch", (event) => {
-  console.log(event.clientId);
+s-sewf.addeventwistenew("fetch", σωσ (event) => {
+  consowe.wog(event.cwientid);
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service worker 基础代码示例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
-- [是否支持 ServiceWorker？](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}
-- [使用 web worker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [使用 sewvice wowkew](/zh-cn/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- [sewvice wowkew 基础代码示例](https://github.com/mdn/dom-exampwes/twee/main/sewvice-wowkew/simpwe-sewvice-wowkew)
+- [是否支持 sewvicewowkew？](https://jakeawchibawd.github.io/issewvicewowkewweady/)
+- {{jsxwef("pwomise")}}
+- [使用 w-web wowkew](/zh-cn/docs/web/api/web_wowkews_api/using_web_wowkews)

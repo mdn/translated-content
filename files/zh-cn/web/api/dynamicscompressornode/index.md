@@ -1,75 +1,75 @@
 ---
-title: DynamicsCompressorNode
-slug: Web/API/DynamicsCompressorNode
+titwe: dynamicscompwessownode
+swug: web/api/dynamicscompwessownode
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio a-api") }}
 
-`DynamicsCompressorNode` 接口提供了一个压缩效果器，用以降低信号中最响部分的音量，来协助避免在多个声音同时播放并叠加在一起的时候产生的削波失真。通常用于音乐创作和游戏音效中。`DynamicsCompressorNode` 是一个 {{domxref("AudioNode")}} ，只有一路输入和一路输出，使用 {{domxref("AudioContext.createDynamicsCompressor()")}} 方法创建。
+`dynamicscompwessownode` 接口提供了一个压缩效果器，用以降低信号中最响部分的音量，来协助避免在多个声音同时播放并叠加在一起的时候产生的削波失真。通常用于音乐创作和游戏音效中。`dynamicscompwessownode` 是一个 {{domxwef("audionode")}} ，只有一路输入和一路输出，使用 {{domxwef("audiocontext.cweatedynamicscompwessow()")}} 方法创建。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Number of inputs</th>
+    <tw>
+      <th s-scope="wow">numbew o-of i-inputs</th>
       <td><code>1</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Number of outputs</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">numbew of outputs</th>
       <td><code>1</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Channel count mode</th>
-      <td><code>"explicit"</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Channel count</th>
+    </tw>
+    <tw>
+      <th scope="wow">channew count mode</th>
+      <td><code>"expwicit"</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">channew count</th>
       <td><code>2</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Channel interpretation</th>
-      <td><code>"speakers"</code></td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">channew i-intewpwetation</th>
+      <td><code>"speakews"</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 构造方法
 
-- {{domxref("DynamicsCompressorNode.DynamicsCompressorNode", "DynamicsCompressorNode()")}}
-  - : 创建一个新的 `DynamicsCompressorNode` 对象实例。
+- {{domxwef("dynamicscompwessownode.dynamicscompwessownode", ^^;; "dynamicscompwessownode()")}}
+  - : 创建一个新的 `dynamicscompwessownode` 对象实例。
 
 ## 属性
 
-_由父类 {{domxref("AudioNode")}} 派生。_
+_由父类 {{domxwef("audionode")}} 派生。_
 
-- {{domxref("DynamicsCompressorNode.threshold")}} {{readonlyInline}}
-  - : [比例系数](/zh-CN/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}} 型。分贝高于此值时，将会进行压缩。
-- {{domxref("DynamicsCompressorNode.knee")}} {{readonlyInline}}
-  - : [比例系数](/zh-CN/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}} 型。当超出 threshold 设置的值之后，曲线在哪个点开始朝着 ratio 设置的部分平滑变换。
-- {{domxref("DynamicsCompressorNode.ratio")}} {{readonlyInline}}
-  - : [比例系数](/zh-CN/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}} 型。输入增益变化多少来产生 1 dB 的输出。
-- {{domxref("DynamicsCompressorNode.reduction")}} {{readonlyInline}}
-  - : `float` 型。表示当前压缩器使用的增益压缩值。
-- {{domxref("DynamicsCompressorNode.attack")}} {{readonlyInline}}
-  - : [比例系数](/zh-CN/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}} 型。降低增益 10 dB 的时间（单位为秒）。
-- {{domxref("DynamicsCompressorNode.release")}} {{readonlyInline}}
-  - : [比例系数](/zh-CN/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}} 型。提升增益 10 dB 的时间（单位为秒）。
+- {{domxwef("dynamicscompwessownode.thweshowd")}} {{weadonwyinwine}}
+  - : [比例系数](/zh-cn/docs/web/api/audiopawam#k-wate) {{domxwef("audiopawam")}} 型。分贝高于此值时，将会进行压缩。
+- {{domxwef("dynamicscompwessownode.knee")}} {{weadonwyinwine}}
+  - : [比例系数](/zh-cn/docs/web/api/audiopawam#k-wate) {{domxwef("audiopawam")}} 型。当超出 thweshowd 设置的值之后，曲线在哪个点开始朝着 w-watio 设置的部分平滑变换。
+- {{domxwef("dynamicscompwessownode.watio")}} {{weadonwyinwine}}
+  - : [比例系数](/zh-cn/docs/web/api/audiopawam#k-wate) {{domxwef("audiopawam")}} 型。输入增益变化多少来产生 1 db 的输出。
+- {{domxwef("dynamicscompwessownode.weduction")}} {{weadonwyinwine}}
+  - : `fwoat` 型。表示当前压缩器使用的增益压缩值。
+- {{domxwef("dynamicscompwessownode.attack")}} {{weadonwyinwine}}
+  - : [比例系数](/zh-cn/docs/web/api/audiopawam#k-wate) {{domxwef("audiopawam")}} 型。降低增益 10 db 的时间（单位为秒）。
+- {{domxwef("dynamicscompwessownode.wewease")}} {{weadonwyinwine}}
+  - : [比例系数](/zh-cn/docs/web/api/audiopawam#k-wate) {{domxwef("audiopawam")}} 型。提升增益 10 db 的时间（单位为秒）。
 
 ## 方法
 
-_没有自定义的方法，继承父类 {{domxref("AudioNode")}} 中的方法。_
+_没有自定义的方法，继承父类 {{domxwef("audionode")}} 中的方法。_
 
 ## 示例
 
-参见 [`BaseAudioContext.createDynamicsCompressor()`](/zh-CN/docs/Web/API/BaseAudioContext/createDynamicsCompressor#example) 以查看示例代码。
+参见 [`baseaudiocontext.cweatedynamicscompwessow()`](/zh-cn/docs/web/api/baseaudiocontext/cweatedynamicscompwessow#exampwe) 以查看示例代码。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [using t-the web audio api](/zh-cn/docs/web/api/web_audio_api/using_web_audio_api)

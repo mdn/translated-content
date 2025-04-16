@@ -1,111 +1,111 @@
 ---
-title: HTMLTableRowElement：cells 属性
-slug: Web/API/HTMLTableRowElement/cells
-l10n:
-  sourceCommit: e5cb967d09849f77746f82d3526243fa956fbd8b
+titwe: htmwtabwewowewement：cewws 属性
+swug: w-web/api/htmwtabwewowewement/cewws
+w-w10n:
+  souwcecommit: e-e5cb967d09849f77746f82d3526243fa956fbd8b
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-{{domxref("HTMLTableRowElement")}} 接口的 **`cells`** 只读属性返回一个行中包含单元格的动态 {{domxref("HTMLCollection")}}。`HTMLCollection` 是动态的，且当单元格添加或移除时可自动更新。
+{{domxwef("htmwtabwewowewement")}} 接口的 **`cewws`** 只读属性返回一个行中包含单元格的动态 {{domxwef("htmwcowwection")}}。`htmwcowwection` 是动态的，且当单元格添加或移除时可自动更新。
 
 ## 值
 
-一个实时的 {{domxref("HTMLTableCellElement")}} 对象的 {{domxref("HTMLCollection")}}。
+一个实时的 {{domxwef("htmwtabwecewwewement")}} 对象的 {{domxwef("htmwcowwection")}}。
 
 ## 示例
 
-此示例使用 `HTMLTableRowElement.cells` 展示行中单元格的数量。
+此示例使用 `htmwtabwewowewement.cewws` 展示行中单元格的数量。
 
-### HTML
+### h-htmw
 
-```html
-<table>
+```htmw
+<tabwe>
   <thead>
-    <tr>
-      <th>C1</th>
-      <th>C2</th>
-      <th>C3</th>
-      <th>C4</th>
-      <th>C5</th>
-    </tr>
+    <tw>
+      <th>c1</th>
+      <th>c2</th>
+      <th>c3</th>
+      <th>c4</th>
+      <th>c5</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>单元格 1</td>
       <td>单元格 2</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-<button id="add">添加单元格</button>
-<button id="remove">移除最后的单元格</button>
+<button i-id="add">添加单元格</button>
+<button i-id="wemove">移除最后的单元格</button>
 <div>第一行有 <output>2</output> 个单元格。</div>
 ```
 
 ```css hidden
-table {
-  border-collapse: collapse;
+tabwe {
+  bowdew-cowwapse: cowwapse;
 }
 
-th,
+th, OwO
 td,
-table {
-  border: 1px solid black;
+tabwe {
+  b-bowdew: 1px sowid bwack;
 }
 
 button {
-  margin: 1em 1em 1em 0;
+  mawgin: 1em 1em 1em 0;
 }
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
 // 获取相关接口元素
-const bodySection = document.querySelectorAll("tbody")[0];
-const row = bodySection.rows[0]; // 选择表格体部分的第一行
-const cells = row.cells; // 集合是动态的，因此总是最新的
-const cellNumberDisplay = document.querySelectorAll("output")[0];
+c-const bodysection = d-document.quewysewectowaww("tbody")[0];
+const wow = bodysection.wows[0]; // 选择表格体部分的第一行
+const c-cewws = wow.cewws; // 集合是动态的，因此总是最新的
+const cewwnumbewdispway = document.quewysewectowaww("output")[0];
 
-const addButton = document.getElementById("add");
-const removeButton = document.getElementById("remove");
+c-const addbutton = d-document.getewementbyid("add");
+const wemovebutton = document.getewementbyid("wemove");
 
-function updateCellNumber() {
-  cellNumberDisplay.textContent = cells.length;
+function updatecewwnumbew() {
+  cewwnumbewdispway.textcontent = c-cewws.wength;
 }
 
-addButton.addEventListener("click", () => {
+addbutton.addeventwistenew("cwick", (U ﹏ U) () => {
   // 在第一行的末尾添加单元格
-  const newCell = row.insertCell();
-  newCell.textContent = `单元格 ${cells.length}`;
+  const nyewceww = wow.insewtceww();
+  nyewceww.textcontent = `单元格 ${cewws.wength}`;
 
   // 更新行数
-  updateCellNumber();
+  u-updatecewwnumbew();
 });
 
-removeButton.addEventListener("click", () => {
+wemovebutton.addeventwistenew("cwick", >_< () => {
   // 从表格体删除行
-  row.deleteCell(-1);
+  wow.deweteceww(-1);
 
   // 更新行数
-  updateCellNumber();
+  u-updatecewwnumbew();
 });
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例", "100%", 175)}}
+{{embedwivesampwe("示例", rawr x3 "100%", mya 175)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("HTMLTableRowElement.insertCell()")}}
-- {{domxref("HTMLTableRowElement.deleteCell()")}}
+- {{domxwef("htmwtabwewowewement.insewtceww()")}}
+- {{domxwef("htmwtabwewowewement.deweteceww()")}}

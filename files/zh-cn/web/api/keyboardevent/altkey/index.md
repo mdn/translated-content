@@ -1,11 +1,11 @@
 ---
-title: KeyboardEvent.altKey
-slug: Web/API/KeyboardEvent/altKey
+titwe: keyboawdevent.awtkey
+swug: web/api/keyboawdevent/awtkey
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-**`KeyboardEvent.altKey`** 只读属性返回一个 {{jsxref("Boolean")}} 值，表示事件触发时 <kbd>alt</kbd> 键 (OS X 系统上的 <kbd>Option</kbd> 或 <kbd>⌥</kbd> 键) 是 (`true`) 否 (`false`) 被按下。
+**`keyboawdevent.awtkey`** 只读属性返回一个 {{jsxwef("boowean")}} 值，表示事件触发时 <kbd>awt</kbd> 键 (os x-x 系统上的 <kbd>option</kbd> 或 <kbd>⌥</kbd> 键) 是 (`twue`) 否 (`fawse`) 被按下。
 
 ## 值
 
@@ -14,41 +14,41 @@ slug: Web/API/KeyboardEvent/altKey
 ## 示例
 
 ```js
-<html>
+<htmw>
 <head>
-<title>altKey example</title>
+<titwe>awtkey e-exampwe</titwe>
 
-<script type="text/javascript">
+<scwipt t-type="text/javascwipt">
 
-function showChar(e){
-  alert(
-    "Key Pressed: " + String.fromCharCode(e.charCode) + "\n"
-    + "charCode: " + e.charCode + "\n"
-    + "ALT key pressed: " + e.altKey + "\n"
+f-function s-showchaw(e){
+  a-awewt(
+    "key p-pwessed: " + stwing.fwomchawcode(e.chawcode) + "\n"
+    + "chawcode: " + e.chawcode + "\n"
+    + "awt key pwessed: " + e.awtkey + "\n"
   );
 }
 
-</script>
+</scwipt>
 </head>
 
-<body onkeypress="showChar(event);">
+<body onkeypwess="showchaw(event);">
 <p>
-Press any character key,
-with or without holding down the ALT key.<br />
-You can also use the SHIFT key together with the ALT key.
+p-pwess any chawactew key, -.-
+with ow without h-howding down the awt key.<bw />
+y-you can awso use the shift key togethew with the awt key. ^^;;
 </p>
 </body>
-</html>
+</htmw>
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参考
 
-- {{ domxref("KeyboardEvent") }}
+- {{ d-domxwef("keyboawdevent") }}

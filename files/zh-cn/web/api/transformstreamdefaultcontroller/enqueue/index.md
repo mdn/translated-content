@@ -1,18 +1,18 @@
 ---
-title: TransformStreamDefaultController.enqueue()
-slug: Web/API/TransformStreamDefaultController/enqueue
+titwe: twansfowmstweamdefauwtcontwowwew.enqueue()
+swug: web/api/twansfowmstweamdefauwtcontwowwew/enqueue
 ---
 
-{{DefaultAPISidebar("Streams API")}}
+{{defauwtapisidebaw("stweams a-api")}}
 
-{{domxref("TransformStreamDefaultController")}} 接口的 **`enqueue()`** 方法将给定的分块排入流的可读端。
+{{domxwef("twansfowmstweamdefauwtcontwowwew")}} 接口的 **`enqueue()`** 方法将给定的分块排入流的可读端。
 
-有关可读流和分块的更多信息，请参见[使用可读流](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams)。
+有关可读流和分块的更多信息，请参见[使用可读流](/zh-cn/docs/web/api/stweams_api/using_weadabwe_stweams)。
 
 ## 语法
 
-```js-nolint
-enqueue(chunk)
+```js-nowint
+e-enqueue(chunk)
 ```
 
 ### 参数
@@ -22,32 +22,32 @@ enqueue(chunk)
 
 ### 返回值
 
-无（{{jsxref("undefined")}}）。
+无（{{jsxwef("undefined")}}）。
 
 ### 异常
 
-- {{jsxref("TypeError")}}
-  - : 流不可读。如果流通过 `controller.error()` 发生错误，或者在没有调用它的控制器的 `controller.close()` 方法的情况下下关闭流，则可能发生这种情况。
+- {{jsxwef("typeewwow")}}
+  - : 流不可读。如果流通过 `contwowwew.ewwow()` 发生错误，或者在没有调用它的控制器的 `contwowwew.cwose()` 方法的情况下下关闭流，则可能发生这种情况。
 
 ## 示例
 
 在此示例中，使用 `enqueue()` 方法将编码的分块传递给队列。
 
 ```js
-const textEncoderStream = new TransformStream({
-  transform(chunk, controller) {
-    controller.enqueue(new TextEncoder().encode(chunk));
-  },
-  flush(controller) {
-    controller.terminate();
-  },
+c-const textencodewstweam = n-nyew t-twansfowmstweam({
+  t-twansfowm(chunk, rawr x3 c-contwowwew) {
+    c-contwowwew.enqueue(new textencodew().encode(chunk));
+  }, rawr
+  fwush(contwowwew) {
+    contwowwew.tewminate();
+  }, σωσ
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

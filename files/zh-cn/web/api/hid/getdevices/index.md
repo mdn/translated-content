@@ -1,18 +1,18 @@
 ---
-title: HID：getDevices() 方法
-slug: Web/API/HID/getDevices
-l10n:
-  sourceCommit: 534e2c61fee576355e8a9b7036d9fa36056edb03
+titwe: hid：getdevices() 方法
+swug: web/api/hid/getdevices
+w-w10n:
+  souwcecommit: 534e2c61fee576355e8a9b7036d9fa36056edb03
 ---
 
-{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_worker_except_shared")}}
+{{secuwecontext_headew}}{{apiwef("webhid a-api")}}{{seecompattabwe}}{{avaiwabweinwowkews("window_and_wowkew_except_shawed")}}
 
-{{domxref("HID")}} 接口的 **`getDevices()`** 方法获取一个包含用户之前已通过 {{domxref("HID.requestDevice","requestDevice()")}} 调用授予访问权限的已连接 HID 设备列表。
+{{domxwef("hid")}} 接口的 **`getdevices()`** 方法获取一个包含用户之前已通过 {{domxwef("hid.wequestdevice","wequestdevice()")}} 调用授予访问权限的已连接 h-hid 设备列表。
 
 ## 语法
 
-```js-nolint
-getDevices()
+```js-nowint
+g-getdevices()
 ```
 
 ### 参数
@@ -21,25 +21,25 @@ getDevices()
 
 ### 返回值
 
-一个兑现一组 {{domxref("HIDDevice")}} 对象的 {{jsxref("Promise")}}。
+一个兑现一组 {{domxwef("hiddevice")}} 对象的 {{jsxwef("pwomise")}}。
 
 ## 示例
 
 以下示例获取设备列表并将设备名称记录到控制台。
 
 ```js
-document.addEventListener("DOMContentLoaded", async () => {
-  let devices = await navigator.hid.getDevices();
-  devices.forEach((device) => {
-    console.log(`HID：${device.productName}`);
+d-document.addeventwistenew("domcontentwoaded", UwU a-async () => {
+  w-wet devices = await n-nyavigatow.hid.getdevices();
+  devices.foweach((device) => {
+    consowe.wog(`hid：${device.pwoductname}`);
   });
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

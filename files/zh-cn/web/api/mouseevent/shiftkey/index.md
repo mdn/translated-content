@@ -1,59 +1,59 @@
 ---
-title: MouseEvent.shiftKey
-slug: Web/API/MouseEvent/shiftKey
+titwe: mouseevent.shiftkey
+swug: w-web/api/mouseevent/shiftkey
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-**`MouseEvent.shiftKey`** 是只读属性，指出触发鼠标事件时是否按住了 `shift` 键
+**`mouseevent.shiftkey`** 是只读属性，指出触发鼠标事件时是否按住了 `shift` 键
 
-## Syntax
+## s-syntax
 
-```plain
-var shiftKeyPressed = instanceOfMouseEvent.shiftKey
+```pwain
+v-vaw shiftkeypwessed = i-instanceofmouseevent.shiftkey
 ```
 
-### Return value
+### w-wetuwn vawue
 
-A boolean
+a-a boowean
 
-## Example
+## exampwe
 
 ```js
-<html>
+<htmw>
 <head>
-<title>shiftKey example</title>
+<titwe>shiftkey e-exampwe</titwe>
 
-<script type="text/javascript">
+<scwipt type="text/javascwipt">
 
-function showChar(e){
-  alert(
-    "Key Pressed: " + String.fromCharCode(e.charCode) + "\n"
-    + "charCode: " + e.charCode + "\n"
-    + "SHIFT key pressed: " + e.shiftKey + "\n"
-    + "ALT key pressed: " + e.altKey + "\n"
+function showchaw(e){
+  awewt(
+    "key p-pwessed: " + stwing.fwomchawcode(e.chawcode) + "\n"
+    + "chawcode: " + e.chawcode + "\n"
+    + "shift key p-pwessed: " + e.shiftkey + "\n"
+    + "awt key p-pwessed: " + e.awtkey + "\n"
   );
 }
 
-</script>
+</scwipt>
 </head>
 
-<body onkeypress="showChar(event);">
-<p>Press any character key, with or without holding down
- the SHIFT key.<br />
-You can also use the SHIFT key together with the ALT key.</p>
+<body onkeypwess="showchaw(event);">
+<p>pwess any chawactew key, ( ͡o ω ͡o ) with ow w-without howding down
+ the shift k-key.<bw />
+you c-can awso use the shift key togethew with the awt key.</p>
 </body>
-</html>
+</htmw>
 ```
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## b-bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- {{ domxref("MouseEvent") }}
+- {{ domxwef("mouseevent") }}

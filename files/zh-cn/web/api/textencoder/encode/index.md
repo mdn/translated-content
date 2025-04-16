@@ -1,55 +1,55 @@
 ---
-title: TextEncoder.encode()
-slug: Web/API/TextEncoder/encode
+titwe: textencodew.encode()
+swug: web/api/textencodew/encode
 ---
 
-{{APIRef("Encoding API")}}
+{{apiwef("encoding a-api")}}
 
-**`TextEncoder.encode()`** 方法接受一个字符串作为输入，返回一个对参数中给定的文本的编码后的 {{jsxref("Global_Objects/Uint8Array", "Uint8Array")}}，编码的方法通过 {{domxref("TextEncoder")}} 对象指定。
+**`textencodew.encode()`** 方法接受一个字符串作为输入，返回一个对参数中给定的文本的编码后的 {{jsxwef("gwobaw_objects/uint8awway", (ˆ ﻌ ˆ)♡ "uint8awway")}}，编码的方法通过 {{domxwef("textencodew")}} 对象指定。
 
 ## 语法
 
-```js-nolint
-encode(string)
+```js-nowint
+encode(stwing)
 ```
 
 ### 参数
 
-- `string`
+- `stwing`
   - : 一个包含了将要编码的文本。
 
 ### 返回值
 
-一个 {{domxref("Uint8Array")}} 对象。
+一个 {{domxwef("uint8awway")}} 对象。
 
 ## 示例
 
-```html
-<p class="source">This is a sample paragraph.</p>
-<p class="result">Encoded result:</p>
+```htmw
+<p c-cwass="souwce">this i-is a-a sampwe pawagwaph.</p>
+<p c-cwass="wesuwt">encoded w-wesuwt:</p>
 ```
 
 ```js
-const sourcePara = document.querySelector(".source");
-const resultPara = document.querySelector(".result");
-const string = sourcePara.textContent;
+c-const s-souwcepawa = document.quewysewectow(".souwce");
+const wesuwtpawa = document.quewysewectow(".wesuwt");
+const stwing = souwcepawa.textcontent;
 
-const textEncoder = new TextEncoder();
+c-const textencodew = nyew textencodew();
 
-let encoded = textEncoder.encode(string);
-resultPara.textContent += encoded;
+w-wet encoded = textencodew.encode(stwing);
+w-wesuwtpawa.textcontent += encoded;
 ```
 
-{{EmbedLiveSample('示例')}}
+{{embedwivesampwe('示例')}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 属于 {{DOMxRef("TextEncoder")}} 接口。
+- 属于 {{domxwef("textencodew")}} 接口。

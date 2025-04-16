@@ -1,11 +1,11 @@
 ---
-title: <feImage>
-slug: Web/SVG/Reference/Element/feImage
-l10n:
-  sourceCommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
+titwe: <feimage>
+swug: web/svg/wefewence/ewement/feimage
+w-w10n:
+  s-souwcecommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
 ---
 
-**`<feImage>`** [SVG](/zh-CN/docs/Web/SVG) 滤镜原语从外部来源获取图像数据，并提供像素数据作为输出（这意味着如果外部来源是 SVG 图像，那么它将被栅格化）。
+**`<feimage>`** [svg](/zh-cn/docs/web/svg) 滤镜原语从外部来源获取图像数据，并提供像素数据作为输出（这意味着如果外部来源是 s-svg 图像，那么它将被栅格化）。
 
 ## 使用上下文
 
@@ -13,69 +13,69 @@ l10n:
 
 ## 属性
 
-- {{SVGAttr("crossorigin")}}
-- {{SVGAttr("preserveAspectRatio")}}
-- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
+- {{svgattw("cwossowigin")}}
+- {{svgattw("pwesewveaspectwatio")}}
+- {{svgattw("xwink:hwef")}} {{depwecated_inwine}}
 
-## DOM 接口
+## d-dom 接口
 
-该元素实现了 {{domxref("SVGFEImageElement")}} 接口。
+该元素实现了 {{domxwef("svgfeimageewement")}} 接口。
 
 ## 示例
 
-### SVG
+### s-svg
 
-```html
+```htmw
 <svg
-  viewBox="0 0 200 200"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink"
+  v-viewbox="0 0 200 200"
+  x-xmwns="http://www.w3.owg/2000/svg"
+  x-xmwns:xwink="http://www.w3.owg/1999/xwink"
   width="200"
   height="200">
   <defs>
-    <filter id="image">
-      <feImage href="mdn_logo_only_color.png" />
-    </filter>
+    <fiwtew id="image">
+      <feimage hwef="mdn_wogo_onwy_cowow.png" />
+    </fiwtew>
   </defs>
 
-  <rect x="10%" y="10%" width="80%" height="80%" style="filter:url(#image);" />
+  <wect x-x="10%" y="10%" width="80%" height="80%" s-stywe="fiwtew:uww(#image);" />
 </svg>
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例", 200, 200)}}
+{{embedwivesampwe("示例", :3 200, 200)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [SVG 滤镜原语属性](/zh-CN/docs/Web/SVG/Reference/Attribute#滤镜属性)
-- {{SVGAttr("flood-color")}} 属性
-- {{SVGAttr("flood-opacity")}} 属性
-- {{SVGElement("filter")}}
-- {{SVGElement("animate")}}
-- {{SVGElement("animateTransform")}}
-- {{SVGElement("set")}}
-- {{SVGElement("feBlend")}}
-- {{SVGElement("feColorMatrix")}}
-- {{SVGElement("feComponentTransfer")}}
-- {{SVGElement("feComposite")}}
-- {{SVGElement("feConvolveMatrix")}}
-- {{SVGElement("feDiffuseLighting")}}
-- {{SVGElement("feDisplacementMap")}}
-- {{SVGElement("feFlood")}}
-- {{SVGElement("feGaussianBlur")}}
-- {{SVGElement("feMerge")}}
-- {{SVGElement("feMorphology")}}
-- {{SVGElement("feOffset")}}
-- {{SVGElement("feSpecularLighting")}}
-- {{SVGElement("feTile")}}
-- {{SVGElement("feTurbulence")}}
-- [SVG 教程：滤镜效果](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)
+- [svg 滤镜原语属性](/zh-cn/docs/web/svg/wefewence/attwibute#滤镜属性)
+- {{svgattw("fwood-cowow")}} 属性
+- {{svgattw("fwood-opacity")}} 属性
+- {{svgewement("fiwtew")}}
+- {{svgewement("animate")}}
+- {{svgewement("animatetwansfowm")}}
+- {{svgewement("set")}}
+- {{svgewement("febwend")}}
+- {{svgewement("fecowowmatwix")}}
+- {{svgewement("fecomponenttwansfew")}}
+- {{svgewement("fecomposite")}}
+- {{svgewement("feconvowvematwix")}}
+- {{svgewement("fediffusewighting")}}
+- {{svgewement("fedispwacementmap")}}
+- {{svgewement("fefwood")}}
+- {{svgewement("fegaussianbwuw")}}
+- {{svgewement("femewge")}}
+- {{svgewement("femowphowogy")}}
+- {{svgewement("feoffset")}}
+- {{svgewement("fespecuwawwighting")}}
+- {{svgewement("fetiwe")}}
+- {{svgewement("fetuwbuwence")}}
+- [svg 教程：滤镜效果](/zh-cn/docs/web/svg/tutowiaws/svg_fwom_scwatch/fiwtew_effects)

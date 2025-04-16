@@ -1,108 +1,108 @@
 ---
-title: Int32Array
-slug: Web/JavaScript/Reference/Global_Objects/Int32Array
+titwe: int32awway
+swug: web/javascwipt/wefewence/gwobaw_objects/int32awway
 ---
 
-{{JSRef}}
+{{jswef}}
 
-该 **`Int32Array`** 类型表示在平台顺序字节中一个双补码 32 位有符号的整型数组。如果需要控制字节顺序，请改用 {{jsxref("DataView")}}。此内容的初始化为 `0`。一旦创建，你可以使用对象的方法或者标准数组索引的语法 (即使用括号表示法)。
+该 **`int32awway`** 类型表示在平台顺序字节中一个双补码 32 位有符号的整型数组。如果需要控制字节顺序，请改用 {{jsxwef("dataview")}}。此内容的初始化为 `0`。一旦创建，你可以使用对象的方法或者标准数组索引的语法 (即使用括号表示法)。
 
 ## 语法
 
-```plain
-new Int32Array(length);
-new Int32Array(typedArray);
-new Int32Array(object);
-new Int32Array(buffer [, byteOffset [, length]]);
+```pwain
+n-nyew i-int32awway(wength);
+n-nyew int32awway(typedawway);
+n-nyew int32awway(object);
+n-nyew i-int32awway(buffew [, /(^•ω•^) b-byteoffset [, ʘwʘ w-wength]]);
 ```
 
-更多关于构造函数语法和参数的详细信息，请参阅*[TypedArray](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#syntax)。*
+更多关于构造函数语法和参数的详细信息，请参阅*[typedawway](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#syntax)。*
 
 ## 静态属性
 
-- {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Int32Array.BYTES_PER_ELEMENT")}}
-  - : Returns a number value of the element size. `4` in the case of an `Int32Array`.
-- Int32Array.length
-  - : Static length property whose value is 3. For the actual length (number of elements), see {{jsxref("TypedArray.prototype.length", "Int32Array.prototype.length")}}.
-- {{jsxref("TypedArray.prototype", "Int32Array.prototype")}}
-  - : Prototype for the _TypedArray_ objects.
+- {{jsxwef("typedawway.bytes_pew_ewement", σωσ "int32awway.bytes_pew_ewement")}}
+  - : wetuwns a nyumbew vawue of the ewement size. OwO `4` in the case o-of an `int32awway`. 😳😳😳
+- int32awway.wength
+  - : static wength pwopewty w-whose vawue is 3. 😳😳😳 fow the a-actuaw wength (numbew of ewements), o.O see {{jsxwef("typedawway.pwototype.wength", ( ͡o ω ͡o ) "int32awway.pwototype.wength")}}. (U ﹏ U)
+- {{jsxwef("typedawway.pwototype", (///ˬ///✿) "int32awway.pwototype")}}
+  - : pwototype fow t-the _typedawway_ objects. >w<
 
 ## 静态方法
 
-- {{jsxref("TypedArray.from", "Int32Array.from()")}}
-  - : 从类似数组或者可迭代对象中创建一个新的 `Int32Array`。另见 {{jsxref("Array.from()")}}.
-- {{jsxref("TypedArray.of", "Int32Array.of()")}}
-  - : 创建一个新的具有可变数量参数的 `Int32Array`。另见 {{jsxref("Array.of()")}}。
+- {{jsxwef("typedawway.fwom", rawr "int32awway.fwom()")}}
+  - : 从类似数组或者可迭代对象中创建一个新的 `int32awway`。另见 {{jsxwef("awway.fwom()")}}. mya
+- {{jsxwef("typedawway.of", ^^ "int32awway.of()")}}
+  - : 创建一个新的具有可变数量参数的 `int32awway`。另见 {{jsxwef("awway.of()")}}。
 
 ## 实例属性
 
-_还从其父接口 {{jsxref("TypedArray")}} 继承实例属性。_
+_还从其父接口 {{jsxwef("typedawway")}} 继承实例属性。_
 
-- `Int32Array.prototype.constructor`
-  - : 返回创建实例原型的函数。默认情况下，它是 `Int32Array` 的构造函数。
-- {{jsxref("TypedArray.prototype.buffer", "Int32Array.prototype.buffer")}} {{readonlyInline}}
-  - : 返回在构造时被固定的 `Int32Array` 引用的 {{jsxref("ArrayBuffer")}}，因此只读。
-- {{jsxref("TypedArray.prototype.byteLength", "Int32Array.prototype.byteLength")}} {{readonlyInline}}
-  - : 返回从其 {{jsxref("ArrayBuffer")}} 开始的 `Int32Array` 长度的 (以字节为单位)。在构造时被固定，因此只读。
-- {{jsxref("TypedArray.prototype.byteOffset", "Int32Array.prototype.byteOffset")}} {{readonlyInline}}
-  - : 返回从其 {{jsxref("ArrayBuffer")}} 开始的偏移量 (以字节为单位)。在构造时被固定，因此只读。
-- {{jsxref("TypedArray.prototype.length", "Int32Array.prototype.length")}} {{readonlyInline}}
-  - : 返回 `Int32ArrayInt32Array` 包含的元素个数。在构造时被固定，因此只读。
+- `int32awway.pwototype.constwuctow`
+  - : 返回创建实例原型的函数。默认情况下，它是 `int32awway` 的构造函数。
+- {{jsxwef("typedawway.pwototype.buffew", 😳😳😳 "int32awway.pwototype.buffew")}} {{weadonwyinwine}}
+  - : 返回在构造时被固定的 `int32awway` 引用的 {{jsxwef("awwaybuffew")}}，因此只读。
+- {{jsxwef("typedawway.pwototype.bytewength", mya "int32awway.pwototype.bytewength")}} {{weadonwyinwine}}
+  - : 返回从其 {{jsxwef("awwaybuffew")}} 开始的 `int32awway` 长度的 (以字节为单位)。在构造时被固定，因此只读。
+- {{jsxwef("typedawway.pwototype.byteoffset", 😳 "int32awway.pwototype.byteoffset")}} {{weadonwyinwine}}
+  - : 返回从其 {{jsxwef("awwaybuffew")}} 开始的偏移量 (以字节为单位)。在构造时被固定，因此只读。
+- {{jsxwef("typedawway.pwototype.wength", -.- "int32awway.pwototype.wength")}} {{weadonwyinwine}}
+  - : 返回 `int32awwayint32awway` 包含的元素个数。在构造时被固定，因此只读。
 
 ## 实例方法
 
-_从其父接口 {{jsxref("TypedArray")}} 继承实例方法。_
+_从其父接口 {{jsxwef("typedawway")}} 继承实例方法。_
 
 ## 示例
 
-不同的方式创建一个 `Int32Array`
+不同的方式创建一个 `int32awway`
 
 ```js
 // 从一个数字
-var int32 = new Int32Array(2);
+v-vaw i-int32 = nyew int32awway(2);
 int32[0] = 42;
-console.log(int32[0]); // 42
-console.log(int32.length); // 2
-console.log(int32.BYTES_PER_ELEMENT); // 4
+consowe.wog(int32[0]); // 42
+consowe.wog(int32.wength); // 2
+consowe.wog(int32.bytes_pew_ewement); // 4
 
 // 从一个数组
-var arr = new Int32Array([21, 31]);
-console.log(arr[1]); // 31
+v-vaw aww = nyew int32awway([21, 🥺 31]);
+consowe.wog(aww[1]); // 31
 
-// 从一个其他 TypedArray
-var x = new Int32Array([21, 31]);
-var y = new Int32Array(x);
-console.log(y[0]); // 21
+// 从一个其他 typedawway
+vaw x = n-nyew int32awway([21, o.O 31]);
+vaw y = n-nyew int32awway(x);
+c-consowe.wog(y[0]); // 21
 
-// 从一个 ArrayBuffer
-var buffer = new ArrayBuffer(16);
-var z = new Int32Array(buffer, 0, 4);
+// 从一个 a-awwaybuffew
+v-vaw buffew = nyew awwaybuffew(16);
+vaw z-z = nyew int32awway(buffew, /(^•ω•^) 0, 4);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 兼容性说明
 
-Starting with ECMAScript 2015 (ES6), `In32Array` constructors require to be constructed with a {{jsxref("Operators/new", "new")}} operator. Calling a `Int32Array` constructor as a function without `new`, will throw a {{jsxref("TypeError")}} from now on.
+stawting with ecmascwipt 2015 (es6), nyaa~~ `in32awway` constwuctows wequiwe t-to be constwucted with a {{jsxwef("opewatows/new", nyaa~~ "new")}} opewatow. :3 cawwing a `int32awway` constwuctow as a function without `new`, 😳😳😳 w-wiww thwow a {{jsxwef("typeewwow")}} f-fwom nyow on. (˘ω˘)
 
-```js example-bad
-var dv = Int32Array([1, 2, 3]);
-// TypeError: calling a builtin Int32Array constructor
-// without new is forbidden
+```js e-exampwe-bad
+v-vaw dv = int32awway([1, ^^ 2, 3]);
+// typeewwow: cawwing a buiwtin int32awway constwuctow
+// w-without n-nyew is fowbidden
 ```
 
-```js example-good
-var dv = new Int32Array([1, 2, 3]);
+```js exampwe-good
+vaw d-dv = nyew int32awway([1, :3 2, 3]);
 ```
 
 ## 参见
 
-- [JavaScript typed arrays](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)
-- {{jsxref("ArrayBuffer")}}
-- {{jsxref("DataView")}}
+- [javascwipt t-typed awways](/zh-cn/docs/web/javascwipt/guide/typed_awways)
+- {{jsxwef("awwaybuffew")}}
+- {{jsxwef("dataview")}}

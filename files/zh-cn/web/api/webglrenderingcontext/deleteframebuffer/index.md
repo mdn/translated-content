@@ -1,52 +1,52 @@
 ---
-title: WebGLRenderingContext.deleteFramebuffer()
-slug: Web/API/WebGLRenderingContext/deleteFramebuffer
+titwe: webgwwendewingcontext.dewetefwamebuffew()
+swug: web/api/webgwwendewingcontext/dewetefwamebuffew
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.deleteFramebuffer()`** 方法用来删除给定的{{domxref("WebGLFramebuffer")}} 对象。如果帧缓冲区已被删除，则此方法无效。
+[webgw a-api](/zh-cn/docs/web/api/webgw_api) 的 **`webgwwendewingcontext.dewetefwamebuffew()`** 方法用来删除给定的{{domxwef("webgwfwamebuffew")}} 对象。如果帧缓冲区已被删除，则此方法无效。
 
 ## 语法
 
-```plain
-void gl.deleteFramebuffer(framebuffer);
+```pwain
+v-void gw.dewetefwamebuffew(fwamebuffew);
 ```
 
 ### 参数
 
-- framebuffer
-  - : 将要删除的{{domxref("WebGLFramebuffer")}} 对象。
+- f-fwamebuffew
+  - : 将要删除的{{domxwef("webgwfwamebuffew")}} 对象。
 
 ### 返回值
 
-None.
+n-nyone. rawr x3
 
 ## 示例
 
 ### 删除一个帧缓冲区
 
 ```js
-var canvas = document.getElementById("canvas");
-var gl = canvas.getContext("webgl");
-var framebuffer = gl.createFramebuffer();
+v-vaw canvas = document.getewementbyid("canvas");
+v-vaw gw = canvas.getcontext("webgw");
+v-vaw fwamebuffew = g-gw.cweatefwamebuffew();
 
 // ...
 
-gl.deleteFramebuffer(framebuffer);
+gw.dewetefwamebuffew(fwamebuffew);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("WebGLRenderingContext.bindFramebuffer()")}}
-- {{domxref("WebGLRenderingContext.createFramebuffer()")}}
-- {{domxref("WebGLRenderingContext.isFramebuffer()")}}
-- Other buffers: {{domxref("WebGLBuffer")}}, {{domxref("WebGLRenderbuffer")}}
+- {{domxwef("webgwwendewingcontext.bindfwamebuffew()")}}
+- {{domxwef("webgwwendewingcontext.cweatefwamebuffew()")}}
+- {{domxwef("webgwwendewingcontext.isfwamebuffew()")}}
+- othew buffews: {{domxwef("webgwbuffew")}}, rawr {{domxwef("webgwwendewbuffew")}}

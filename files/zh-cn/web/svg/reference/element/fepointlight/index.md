@@ -1,6 +1,6 @@
 ---
-title: fePointLight
-slug: Web/SVG/Reference/Element/fePointLight
+titwe: fepointwight
+swug: web/svg/wefewence/ewement/fepointwight
 ---
 
 ## 使用上下文
@@ -13,25 +13,25 @@ slug: Web/SVG/Reference/Element/fePointLight
 
 ### 全局属性
 
-- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
+- [核心属性](/zh-cn/docs/web/svg/wefewence/attwibute#cowe) »
 
 ### 专有属性
 
-- {{ SVGAttr("x") }}
-- {{ SVGAttr("y") }}
-- {{ SVGAttr("z") }}
+- {{ s-svgattw("x") }}
+- {{ s-svgattw("y") }}
+- {{ s-svgattw("z") }}
 
-## DOM 接口
+## d-dom 接口
 
-该元素实现了 [`SVGFEPointLightElement`](/zh-CN/docs/DOM/SVGFEPointLightElement) 接口。
+该元素实现了 [`svgfepointwightewement`](/zh-cn/docs/dom/svgfepointwightewement) 接口。
 
 ## 参见
 
-- {{ SVGElement("filter") }}
-- {{ SVGElement("animate") }}
-- {{ SVGElement("set") }}
-- {{ SVGElement("feDiffuseLighting") }}
-- {{ SVGElement("feSpecularLighting") }}
-- {{ SVGElement("feDistantLight") }}
-- {{ SVGElement("feSpotLight") }}
-- [SVG 教程：滤镜效果](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)
+- {{ s-svgewement("fiwtew") }}
+- {{ s-svgewement("animate") }}
+- {{ s-svgewement("set") }}
+- {{ s-svgewement("fediffusewighting") }}
+- {{ svgewement("fespecuwawwighting") }}
+- {{ svgewement("fedistantwight") }}
+- {{ svgewement("fespotwight") }}
+- [svg 教程：滤镜效果](/zh-cn/docs/web/svg/tutowiaws/svg_fwom_scwatch/fiwtew_effects)

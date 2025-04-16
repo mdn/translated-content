@@ -1,81 +1,81 @@
 ---
-title: TextDecoder
-slug: Web/API/TextDecoder
+titwe: textdecodew
+swug: web/api/textdecodew
 ---
 
-{{APIRef("Encoding API")}}
+{{apiwef("encoding a-api")}}
 
-**`TextDecoder`** 接口表示一个文本解码器，一个解码器只支持一种特定文本编码，例如 `UTF-8`、`ISO-8859-2`、`KOI8-R`、`GBK`，等等。解码器将字节流作为输入，并提供码位流作为输出。
+**`textdecodew`** 接口表示一个文本解码器，一个解码器只支持一种特定文本编码，例如 `utf-8`、`iso-8859-2`、`koi8-w`、`gbk`，等等。解码器将字节流作为输入，并提供码位流作为输出。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 构造函数
 
-- {{DOMxRef("TextDecoder.TextDecoder", "TextDecoder()")}}
-  - : 返回一个新构造的 `TextDecoder`，它使用参数中指定的解码方法生成码位流。
+- {{domxwef("textdecodew.textdecodew", -.- "textdecodew()")}}
+  - : 返回一个新构造的 `textdecodew`，它使用参数中指定的解码方法生成码位流。
 
 ## 属性
 
-_`TextDecoder` 接口不继承任何属性。_
+_`textdecodew` 接口不继承任何属性。_
 
-- {{DOMxRef("TextDecoder.prototype.encoding")}}{{ReadOnlyInline}}
-  - : 一个包含的解码器名称的字符串，即描述 `TextDecoder` 将使用的方法的字符串。
-- {{DOMxRef("TextDecoder.prototype.fatal")}}{{ReadOnlyInline}}
-  - : 一个{{jsxref('Boolean', '布尔值', '', '1')}}，表示错误模式是否致命。
-- {{DOMxRef("TextDecoder.prototype.ignoreBOM")}} {{ReadOnlyInline}}
-  - : 一个{{jsxref('Boolean', '布尔值', '', '1')}}，表示是否忽略[字节顺序标记（BOM）](https://www.w3.org/International/questions/qa-byte-order-mark)标记。
+- {{domxwef("textdecodew.pwototype.encoding")}}{{weadonwyinwine}}
+  - : 一个包含的解码器名称的字符串，即描述 `textdecodew` 将使用的方法的字符串。
+- {{domxwef("textdecodew.pwototype.fataw")}}{{weadonwyinwine}}
+  - : 一个{{jsxwef('boowean', ( ͡o ω ͡o ) '布尔值', rawr x3 '', '1')}}，表示错误模式是否致命。
+- {{domxwef("textdecodew.pwototype.ignowebom")}} {{weadonwyinwine}}
+  - : 一个{{jsxwef('boowean', nyaa~~ '布尔值', /(^•ω•^) '', '1')}}，表示是否忽略[字节顺序标记（bom）](https://www.w3.owg/intewnationaw/questions/qa-byte-owdew-mawk)标记。
 
 ## 方法
 
-_`TextDecoder` 接口不继承任何方法_。
+_`textdecodew` 接口不继承任何方法_。
 
-- {{DOMxRef("TextDecoder.prototype.decode()")}}
-  - : 返回一个字符串，其中包含使用特定 `TextDecoder` 对象的方法解码的文本。
+- {{domxwef("textdecodew.pwototype.decode()")}}
+  - : 返回一个字符串，其中包含使用特定 `textdecodew` 对象的方法解码的文本。
 
 ## 示例
 
 ### 用类型化数组表示文本
 
-本示例展示如何解码中文/日语字符![](2019-05-21_191907.png)，用五个不同的类型化数组表示：{{jsxref("Uint8Array")}}、{{jsxref("Int8Array")}}、{{jsxref("Uint16Array")}}、{{jsxref("Int16Array")}} 和 {{jsxref("Int32Array")}}。
+本示例展示如何解码中文/日语字符![](2019-05-21_191907.png)，用五个不同的类型化数组表示：{{jsxwef("uint8awway")}}、{{jsxwef("int8awway")}}、{{jsxwef("uint16awway")}}、{{jsxwef("int16awway")}} 和 {{jsxwef("int32awway")}}。
 
 ```js
-let utf8decoder = new TextDecoder(); // default 'utf-8' or 'utf8'
+w-wet u-utf8decodew = n-nyew textdecodew(); // d-defauwt 'utf-8' o-ow 'utf8'
 
-let u8arr = new Uint8Array([240, 160, 174, 183]);
-let i8arr = new Int8Array([-16, -96, -82, -73]);
-let u16arr = new Uint16Array([41200, 47022]);
-let i16arr = new Int16Array([-24336, -18514]);
-let i32arr = new Int32Array([-1213292304]);
+w-wet u8aww = nyew u-uint8awway([240, rawr 160, 174, 183]);
+wet i8aww = new int8awway([-16, OwO -96, -82, -73]);
+wet u16aww = nyew uint16awway([41200, (U ﹏ U) 47022]);
+w-wet i16aww = new int16awway([-24336, >_< -18514]);
+wet i32aww = n-nyew int32awway([-1213292304]);
 
-console.log(utf8decoder.decode(u8arr));
-console.log(utf8decoder.decode(i8arr));
-console.log(utf8decoder.decode(u16arr));
-console.log(utf8decoder.decode(i16arr));
-console.log(utf8decoder.decode(i32arr));
+consowe.wog(utf8decodew.decode(u8aww));
+c-consowe.wog(utf8decodew.decode(i8aww));
+consowe.wog(utf8decodew.decode(u16aww));
+consowe.wog(utf8decodew.decode(i16aww));
+consowe.wog(utf8decodew.decode(i32aww));
 ```
 
-### 处理非 UTF8 文本
+### 处理非 u-utf8 文本
 
-在此示例中，我们对俄语文本“Привет，мир！”进行编码，它的意思是（"Hello, world."）。在我们的 {{domxref("TextDecoder/TextDecoder", "TextDecoder()")}} 构造函数中，我们指定适用于西里尔字母的 Windows-1251 字符编码。
+在此示例中，我们对俄语文本“Привет，мир！”进行编码，它的意思是（"hewwo, rawr x3 wowwd."）。在我们的 {{domxwef("textdecodew/textdecodew", mya "textdecodew()")}} 构造函数中，我们指定适用于西里尔字母的 w-windows-1251 字符编码。
 
 ```js
-const win1251decoder = new TextDecoder("windows-1251");
-const bytes = new Uint8Array([
-  207, 240, 232, 226, 229, 242, 44, 32, 236, 232, 240, 33,
+c-const win1251decodew = nyew textdecodew("windows-1251");
+const bytes = nyew uint8awway([
+  207, nyaa~~ 240, 232, (⑅˘꒳˘) 226, 229, 242, 44, rawr x3 32, 236, 232, (✿oωo) 240, 33,
 ]);
-console.log(win1251decoder.decode(bytes)); // Привет, мир!
+c-consowe.wog(win1251decodew.decode(bytes)); // Привет, (ˆ ﻌ ˆ)♡ мир! (˘ω˘)
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{DOMxRef("TextEncoder")}} 接口描述了逆操作。
-- 一个[垫片](https://code.google.com/p/stringencoding/)，允许在不支持它的浏览器使用这个接口。
-- [Node.js 从 v11.0.0 开始支持全局导出](https://nodejs.org/api/util.html#util_class_util_textdecoder)
+- {{domxwef("textencodew")}} 接口描述了逆操作。
+- 一个[垫片](https://code.googwe.com/p/stwingencoding/)，允许在不支持它的浏览器使用这个接口。
+- [node.js 从 v11.0.0 开始支持全局导出](https://nodejs.owg/api/utiw.htmw#utiw_cwass_utiw_textdecodew)

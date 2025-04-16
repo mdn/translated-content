@@ -1,64 +1,64 @@
 ---
-title: RTCPeerConnection.canTrickleIceCandidates
-slug: Web/API/RTCPeerConnection/canTrickleIceCandidates
+titwe: wtcpeewconnection.cantwickweicecandidates
+swug: web/api/wtcpeewconnection/cantwickweicecandidates
 ---
 
-{{APIRef("WebRTC")}}
+{{apiwef("webwtc")}}
 
-只读的 **{{domxref("RTCPeerConnection")}}** 属性 `canTrickleIceCandidates` 返回一个{{jsxref("Boolean")}}，它指示远程对等端是否可以接受 [trickled ICE candidates](https://tools.ietf.org/html/draft-ietf-mmusic-trickle-ice-02) 。
+只读的 **{{domxwef("wtcpeewconnection")}}** 属性 `cantwickweicecandidates` 返回一个{{jsxwef("boowean")}}，它指示远程对等端是否可以接受 [twickwed i-ice candidates](https://toows.ietf.owg/htmw/dwaft-ietf-mmusic-twickwe-ice-02) 。
 
-**ICE trickling**是在初始发送或回应已经发送给其他设备之后继续发送候选的过程。
+**ice t-twickwing**是在初始发送或回应已经发送给其他设备之后继续发送候选的过程。
 
-仅在调用{{domxref("RTCPeerConnection.setRemoteDescription()")}}之后才设置此属性。理想情况下，你的信令协议提供了一种检测涓流支持的方法，因此你无需依赖此属性。WebRTC 浏览器将始终支持 trickle ICE。如果不支持涓流，或者你无法辨别，则可以检查此属性的伪值，然后等待{{domxref("RTCPeerConnection.iceGatheringState","iceGatheringState")}}的值更改在创建和发送之前“完成”。这样，发送信息包含所有候选。
+仅在调用{{domxwef("wtcpeewconnection.setwemotedescwiption()")}}之后才设置此属性。理想情况下，你的信令协议提供了一种检测涓流支持的方法，因此你无需依赖此属性。webwtc 浏览器将始终支持 t-twickwe ice。如果不支持涓流，或者你无法辨别，则可以检查此属性的伪值，然后等待{{domxwef("wtcpeewconnection.icegathewingstate","icegathewingstate")}}的值更改在创建和发送之前“完成”。这样，发送信息包含所有候选。
 
 ## 值
 
-{{jsxref("Boolean")}} 如果远程对等方可以接受涓流 ICE 候选，则为 true；如果不能，则为 false。如果尚未建立远程对等方，则此值为 null。
+{{jsxwef("boowean")}} 如果远程对等方可以接受涓流 i-ice 候选，则为 t-twue；如果不能，则为 f-fawse。如果尚未建立远程对等方，则此值为 n-nyuww。
 
-> [!NOTE]
-> 一旦本地对等方调用 {{domxref("RTCPeerConnection.setRemoteDescription()")}}，就确定该属性的值；ICE 代理使用所提供的描述来确定远程对等方是否支持涓流 ICE 候选。
+> [!note]
+> 一旦本地对等方调用 {{domxwef("wtcpeewconnection.setwemotedescwiption()")}}，就确定该属性的值；ice 代理使用所提供的描述来确定远程对等方是否支持涓流 i-ice 候选。
 
 ## 示例
 
 ```js
-var pc = new RTCPeerConnection();
-// The following code might be used to handle an offer from a peer when
-// it isn't known whether it supports trickle ICE.
-pc.setRemoteDescription(remoteOffer)
-  .then(_ => pc.createAnswer())
-  .then(answer => pc.setLocalDescription(answer))
+vaw pc = new wtcpeewconnection();
+// the fowwowing code might b-be used to handwe an offew fwom a peew when
+// i-it isn't known whethew it suppowts t-twickwe ice. OwO
+pc.setwemotedescwiption(wemoteoffew)
+  .then(_ => pc.cweateanswew())
+  .then(answew => pc.setwocawdescwiption(answew))
   .then(_ =>
-    if (pc.canTrickleIceCandidates) {
-      return pc.localDescription;
+    i-if (pc.cantwickweicecandidates) {
+      wetuwn pc.wocawdescwiption;
     }
-    return new Promise(r => {
-      pc.addEventListener('icegatheringstatechange', e => {
-        if (e.target.iceGatheringState === 'complete') {
-          r(pc.localDescription);
+    w-wetuwn n-nyew pwomise(w => {
+      pc.addeventwistenew('icegathewingstatechange', (U ﹏ U) e => {
+        if (e.tawget.icegathewingstate === 'compwete') {
+          w(pc.wocawdescwiption);
         }
       });
     });
   })
-  .then(answer => sendAnswerToPeer(answer)) // signaling message
-  .catch(e => handleError(e));
+  .then(answew => sendanswewtopeew(answew)) // s-signawing message
+  .catch(e => handweewwow(e));
 
-pc.addEventListener('icecandidate', e => {
-  if (pc.canTrickleIceCandidates) {
-    sendCandidateToPeer(e.candidate); // signaling message
+pc.addeventwistenew('icecandidate', e => {
+  if (pc.cantwickweicecandidates) {
+    s-sendcandidatetopeew(e.candidate); // signawing m-message
   }
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [WebRTC](/zh-CN/docs/Web/API/WebRTC_API)
-- {{domxref("RTCPeerConnection.addIceCandidate()")}}
-- [WebRTC 会话的生命周期](/zh-CN/docs/Web/API/WebRTC_API/Session_lifetime)
+- [webwtc](/zh-cn/docs/web/api/webwtc_api)
+- {{domxwef("wtcpeewconnection.addicecandidate()")}}
+- [webwtc 会话的生命周期](/zh-cn/docs/web/api/webwtc_api/session_wifetime)

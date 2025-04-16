@@ -1,230 +1,230 @@
 ---
-title: WebGLRenderingContext.vertexAttribPointer()
-slug: Web/API/WebGLRenderingContext/vertexAttribPointer
+titwe: webgwwendewingcontext.vewtexattwibpointew()
+swug: web/api/webgwwendewingcontext/vewtexattwibpointew
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-The **`WebGLRenderingContext.vertexAttribPointer()`** method of the [WebGL API](/zh-CN/docs/Web/API/WebGL_API) binds the buffer currently bound to `gl.ARRAY_BUFFER` to a generic vertex attribute of the current vertex buffer object and specifies its layout.
-告诉显卡从当前绑定的缓冲区（bindBuffer() 指定的缓冲区）中读取顶点数据。
+t-the **`webgwwendewingcontext.vewtexattwibpointew()`** m-method o-of the [webgw a-api](/zh-cn/docs/web/api/webgw_api) b-binds the b-buffew cuwwentwy b-bound to `gw.awway_buffew` t-to a genewic vewtex attwibute of the cuwwent vewtex buffew object and s-specifies its wayout. ^•ﻌ•^
+告诉显卡从当前绑定的缓冲区（bindbuffew() 指定的缓冲区）中读取顶点数据。
 
-WebGL API 的 **`WebGLRenderingContext.vertexAttribPointer()`** 方法绑定当前缓冲区范围到`gl.ARRAY_BUFFER`,成为当前顶点缓冲区对象的通用顶点属性并指定它的布局 (缓冲区对象中的偏移量)。
+webgw api 的 **`webgwwendewingcontext.vewtexattwibpointew()`** 方法绑定当前缓冲区范围到`gw.awway_buffew`,成为当前顶点缓冲区对象的通用顶点属性并指定它的布局 (缓冲区对象中的偏移量)。
 
 ## 语法
 
-```js-nolint
-vertexAttribPointer(index, size, type, normalized, stride, offset)
+```js-nowint
+v-vewtexattwibpointew(index, σωσ size, (ˆ ﻌ ˆ)♡ type, n-nyowmawized, nyaa~~ stwide, offset)
 ```
 
 ### 参数
 
 - `index`
-  - : A {{domxref("GLuint")}} specifying the index of the vertex attribute that is to be modified.
+  - : a {{domxwef("gwuint")}} specifying t-the index of the vewtex attwibute t-that is t-to be modified. ʘwʘ
     指定要修改的顶点属性的索引。
 - `size`
-  - : A {{domxref("GLint")}} specifying the number of components per vertex attribute. Must be 1, 2, 3, or 4.
+  - : a {{domxwef("gwint")}} specifying the nyumbew of components pew vewtex a-attwibute. ^•ﻌ•^ must be 1, rawr x3 2, 3, ow 4. 🥺
     指定每个顶点属性的组成数量，必须是 1，2，3 或 4。
 - `type`
 
-  - : A {{domxref("GLenum")}} specifying the data type of each component in the array. Possible values:
+  - : a {{domxwef("gwenum")}} specifying t-the data type of each component i-in the awway. ʘwʘ p-possibwe vawues:
     指定数组中每个元素的数据类型可能是：
 
-    - `gl.BYTE`: signed 8-bit integer, with values in \[-128, 127]
-      有符号的 8 位整数，范围 \[-128, 127]
-    - `gl.SHORT`: signed 16-bit integer, with values in \[-32768, 32767]
-      有符号的 16 位整数，范围 \[-32768, 32767]
-    - `gl.UNSIGNED_BYTE`: unsigned 8-bit integer, with values in \[0, 255]
-      无符号的 8 位整数，范围 \[0, 255]
-    - `gl.UNSIGNED_SHORT`: unsigned 16-bit integer, with values in \[0, 65535]
-      无符号的 16 位整数，范围 \[0, 65535]
-    - `gl.FLOAT`: 32-bit IEEE floating point number
-      32 位 IEEE 标准的浮点数
-    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the following values are available additionally:
-      使用 WebGL2 版本的还可以使用以下值：
+    - `gw.byte`: s-signed 8-bit integew, (˘ω˘) w-with vawues in \[-128, o.O 127]
+      有符号的 8 位整数，范围 \[-128, σωσ 127]
+    - `gw.showt`: signed 16-bit i-integew, (ꈍᴗꈍ) with vawues in \[-32768, (ˆ ﻌ ˆ)♡ 32767]
+      有符号的 16 位整数，范围 \[-32768, o.O 32767]
+    - `gw.unsigned_byte`: unsigned 8-bit i-integew, :3 with vawues in \[0, -.- 255]
+      无符号的 8 位整数，范围 \[0, ( ͡o ω ͡o ) 255]
+    - `gw.unsigned_showt`: unsigned 16-bit integew, /(^•ω•^) with vawues in \[0, (⑅˘꒳˘) 65535]
+      无符号的 16 位整数，范围 \[0, òωó 65535]
+    - `gw.fwoat`: 32-bit ieee fwoating p-point nyumbew
+      32 位 ieee 标准的浮点数
+    - w-when u-using a {{domxwef("webgw2wendewingcontext", 🥺 "webgw 2 c-context", (ˆ ﻌ ˆ)♡ "", 1)}}, the fowwowing vawues awe avaiwabwe additionawwy:
+      使用 w-webgw2 版本的还可以使用以下值：
 
-      - `gl.HALF_FLOAT`: 16-bit IEEE floating point number
-        16 位 IEEE 标准的浮点数
+      - `gw.hawf_fwoat`: 16-bit i-ieee fwoating point nyumbew
+        16 位 i-ieee 标准的浮点数
 
-- `normalized`
+- `nowmawized`
 
-  - : A {{domxref("GLboolean")}} specifying whether integer data values should be normalized into a certain range when being casted to a float.
+  - : a {{domxwef("gwboowean")}} s-specifying whethew integew d-data vawues shouwd be nyowmawized i-into a cewtain wange when being casted to a-a fwoat. -.-
     当转换为浮点数时是否应该将整数数值归一化到特定的范围。
 
-    - For types `gl.BYTE` and `gl.SHORT`, normalizes the values to \[-1, 1] if true.
-      对于类型`gl.BYTE`和`gl.SHORT`，如果是 true 则将值归一化为 \[-1, 1]
-    - For types `gl.UNSIGNED_BYTE` and `gl.UNSIGNED_SHORT`, normalizes the values to \[0, 1] if true.
-      对于类型`gl.UNSIGNED_BYTE`和`gl.UNSIGNED_SHORT`，如果是 true 则将值归一化为 \[0, 1]
-    - For types `gl.FLOAT` and `gl.HALF_FLOAT`, this parameter has no effect.
-      对于类型`gl.FLOAT`和`gl.HALF_FLOAT`，此参数无效
+    - fow types `gw.byte` a-and `gw.showt`, σωσ nyowmawizes t-the vawues t-to \[-1, >_< 1] if twue.
+      对于类型`gw.byte`和`gw.showt`，如果是 twue 则将值归一化为 \[-1, :3 1]
+    - fow types `gw.unsigned_byte` and `gw.unsigned_showt`, OwO nyowmawizes the vawues t-to \[0, rawr 1] if t-twue. (///ˬ///✿)
+      对于类型`gw.unsigned_byte`和`gw.unsigned_showt`，如果是 twue 则将值归一化为 \[0, ^^ 1]
+    - f-fow types `gw.fwoat` a-and `gw.hawf_fwoat`, XD t-this pawametew has nyo effect. UwU
+      对于类型`gw.fwoat`和`gw.hawf_fwoat`，此参数无效
 
-- `stride`
-  - : 一个 {{domxref("GLsizei")}}，以字节为单位指定连续顶点属性开始之间的偏移量 (即数组中一行长度)。不能大于 255。如果 stride 为 0，则假定该属性是紧密打包的，即不交错属性，每个属性在一个单独的块中，下一个顶点的属性紧跟当前顶点之后。
+- `stwide`
+  - : 一个 {{domxwef("gwsizei")}}，以字节为单位指定连续顶点属性开始之间的偏移量 (即数组中一行长度)。不能大于 255。如果 stwide 为 0，则假定该属性是紧密打包的，即不交错属性，每个属性在一个单独的块中，下一个顶点的属性紧跟当前顶点之后。
 - `offset`
-  - : {{domxref("GLintptr")}}指定顶点属性数组中第一部分的字节偏移量。必须是类型的字节长度的倍数。
+  - : {{domxwef("gwintptw")}}指定顶点属性数组中第一部分的字节偏移量。必须是类型的字节长度的倍数。
 
-### Return value
+### wetuwn vawue
 
-None.
+n-nyone.
 
-### Exceptions
+### exceptions
 
-- A `gl.INVALID_VALUE` error is thrown if `offset` is negative.
-- 如果偏移量为负，则抛出`gl.INVALID_VALUE`错误。
-- A `gl.INVALID_OPERATION` error is thrown if `stride` and `offset` are not multiples of the size of the data type.
-- 如果`stride`和 offset 不是数据类型大小的倍数，则抛出`gl.INVALID_OPERATION`错误。
-- A `gl.INVALID_OPERATION` error is thrown if no WebGLBuffer is bound to the ARRAY_BUFFER target.
-- 如果没有将 WebGLBuffer 绑定到`ARRAY_BUFFER`目标，则抛出`gl.INVALID_OPERATION`错误。
-- When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, a `gl.INVALID_OPERATION` error is thrown if this vertex attribute is defined as a integer in the vertex shader (e.g. `uvec4` or `ivec4`, instead of `vec4`).
+- a `gw.invawid_vawue` ewwow is thwown if `offset` is nyegative. o.O
+- 如果偏移量为负，则抛出`gw.invawid_vawue`错误。
+- a `gw.invawid_opewation` e-ewwow is thwown if `stwide` a-and `offset` a-awe nyot muwtipwes o-of the size of the data type. 😳
+- 如果`stwide`和 o-offset 不是数据类型大小的倍数，则抛出`gw.invawid_opewation`错误。
+- a-a `gw.invawid_opewation` e-ewwow is thwown i-if nyo webgwbuffew is bound to the awway_buffew t-tawget. (˘ω˘)
+- 如果没有将 webgwbuffew 绑定到`awway_buffew`目标，则抛出`gw.invawid_opewation`错误。
+- w-when using a-a {{domxwef("webgw2wendewingcontext", 🥺 "webgw 2 c-context", ^^ "", 1)}}, a-a `gw.invawid_opewation` ewwow is thwown if this vewtex attwibute i-is defined as a integew in the vewtex shadew (e.g. >w< `uvec4` ow `ivec4`, ^^;; instead of `vec4`). (˘ω˘)
 
-## Description
+## descwiption
 
-Let's assume we want to render some 3D geometry, and for that we will need to supply our vertices to the Vertex Shader. Each vertex has a few attributes, like position, normal vector, or texture coordinate, that are defined in an {{jsxref("ArrayBuffer")}} and will be supplied to the Vertex Buffer Object (VBO). First, we need to bind the {{domxref("WebGLBuffer")}} we want to use to `gl.ARRAY_BUFFER`, then, with this method, `gl.vertexAttribPointer()`, we specify in what order the attributes are stored, and what data type they are in. In addition, we need to include the stride, which is the total byte length of all attributes for one vertex. Also, we have to call {{domxref("WebGLRenderingContext/enableVertexAttribArray", "gl.enableVertexAttribArray()")}} to tell WebGL that this attribute should be filled with data from our array buffer.
+w-wet's assume we want to wendew some 3d geometwy, OwO and fow that w-we wiww nyeed to s-suppwy ouw vewtices t-to the vewtex shadew. (ꈍᴗꈍ) each v-vewtex has a few attwibutes, òωó wike p-position, ʘwʘ nowmaw v-vectow, ʘwʘ ow textuwe coowdinate, that awe defined in an {{jsxwef("awwaybuffew")}} and wiww be suppwied to the vewtex b-buffew object (vbo). nyaa~~ fiwst, UwU w-we nyeed to bind the {{domxwef("webgwbuffew")}} w-we want to use t-to `gw.awway_buffew`, (⑅˘꒳˘) then, (˘ω˘) with this method, :3 `gw.vewtexattwibpointew()`, (˘ω˘) w-we specify i-in nyani owdew the attwibutes a-awe stowed, nyaa~~ a-and nyani data type they awe in. (U ﹏ U) in addition, nyaa~~ we nyeed to incwude the stwide, ^^;; which i-is the totaw b-byte wength of a-aww attwibutes fow one vewtex. OwO awso, w-we have to c-caww {{domxwef("webgwwendewingcontext/enabwevewtexattwibawway", nyaa~~ "gw.enabwevewtexattwibawway()")}} to teww webgw t-that this attwibute shouwd be fiwwed with data fwom ouw awway buffew.
 
-Usually, your 3D geometry is already in a certain binary format, so you need to read the specification of that specific format to figure out the memory layout. However, if you are designing the format yourself, or your geometry is in text files (like [Wavefront .obj files](https://en.wikipedia.org/wiki/Wavefront_.obj_file)) and must be converted into an `ArrayBuffer` at runtime, you have free choice on how to structure the memory. For highest performance, [interleave](https://en.wikipedia.org/wiki/Interleaved_memory) the attributes and use the smallest data type that still accurately represents your geometry.
+usuawwy, UwU y-youw 3d geometwy i-is awweady in a cewtain binawy fowmat, 😳 so you nyeed t-to wead the s-specification of that specific fowmat to figuwe out the memowy w-wayout. 😳 howevew, (ˆ ﻌ ˆ)♡ if you awe designing the fowmat youwsewf, (✿oωo) ow youw geometwy is in t-text fiwes (wike [wavefwont .obj fiwes](https://en.wikipedia.owg/wiki/wavefwont_.obj_fiwe)) and m-must be convewted i-into an `awwaybuffew` at wuntime, you have fwee choice on how t-to stwuctuwe the m-memowy. nyaa~~ fow highest pewfowmance, ^^ [intewweave](https://en.wikipedia.owg/wiki/intewweaved_memowy) the attwibutes and use the smowest d-data type that stiww accuwatewy w-wepwesents youw geometwy. (///ˬ///✿)
 
-The maximum number of vertex attributes depends on the graphics card, and you can call `gl.getParameter(gl.MAX_VERTEX_ATTRIBS)` to get this value. On high-end graphics cards, the maximum is 16, on lower-end graphics cards, the value will be lower.
+the maximum nyumbew of vewtex attwibutes d-depends on the gwaphics c-cawd, 😳 and you c-can caww `gw.getpawametew(gw.max_vewtex_attwibs)` to get this vawue. òωó o-on high-end gwaphics cawds, ^^;; t-the maximum is 16, o-on wowew-end g-gwaphics cawds, rawr the vawue wiww b-be wowew. (ˆ ﻌ ˆ)♡
 
-### Attribute index
+### attwibute i-index
 
-For each attribute, you must specify its index. This is independent from the location inside the array buffer, so your attributes can be sent in a different order than how they are stored in the array buffer. You have two options:
+fow each attwibute, XD you must specify i-its index. >_< t-this is independent f-fwom the wocation inside the awway buffew, (˘ω˘) so y-youw attwibutes can be sent in a-a diffewent owdew t-than how they awe stowed in the awway buffew. 😳 you have two options:
 
-- Either you specify the index yourself. In this case, you call {{domxref("WebGLRenderingContext.bindAttribLocation()", "gl.bindAttribLocation()")}} to connect a named attribute from the vertex shader to the index you want to use. This must be done before calling {{domxref("WebGLRenderingContext.linkProgram()", "gl.linkProgram()")}}. You can then provide this same index to `gl.vertexAttribPointer()`.
-- Alternatively, you use the index that is assigned by the graphics card when compiling the vertex shader. Depending on the graphics card, the index will vary, so you must call {{domxref("WebGLRenderingContext.getAttribLocation()", "gl.getAttribLocation()")}} to find out the index, and then provide this index to `gl.vertexAttribPointer()`.
-  If you are using WebGL 2, you can specify the index yourself in the vertex shader code and override the default used by the graphics card, e.g. `layout(location = 3) in vec4 position;` would set the `"position"` attribute to index 3.
+- e-eithew y-you specify the i-index youwsewf. o.O i-in this case, (ꈍᴗꈍ) you caww {{domxwef("webgwwendewingcontext.bindattwibwocation()", rawr x3 "gw.bindattwibwocation()")}} t-to connect a nyamed attwibute fwom the vewtex shadew to the index you want to use. ^^ t-this must be done befowe cawwing {{domxwef("webgwwendewingcontext.winkpwogwam()", OwO "gw.winkpwogwam()")}}. ^^ y-you can then pwovide this s-same index to `gw.vewtexattwibpointew()`. :3
+- awtewnativewy, o.O you u-use the index that is assigned b-by the gwaphics c-cawd when compiwing t-the vewtex s-shadew. -.- depending o-on the gwaphics cawd, (U ﹏ U) the index wiww vawy, o.O so you must caww {{domxwef("webgwwendewingcontext.getattwibwocation()", OwO "gw.getattwibwocation()")}} to find out the index, ^•ﻌ•^ and then pwovide this index t-to `gw.vewtexattwibpointew()`. ʘwʘ
+  i-if you awe u-using webgw 2, :3 you can specify the i-index youwsewf in the vewtex shadew code and ovewwide the defauwt u-used by the g-gwaphics cawd, 😳 e.g. `wayout(wocation = 3) i-in vec4 position;` wouwd set the `"position"` a-attwibute t-to index 3. òωó
 
-### Integer attributes
+### integew attwibutes
 
-While the `ArrayBuffer` can be filled with both integers and floats, the attributes will always be converted to a float when they are sent to the vertex shader. If you need to use integers in your vertex shader code, you can either cast the float back to an integer in the vertex shader (e.g. `(int) floatNumber`), or use {{domxref("WebGL2RenderingContext.vertexAttribIPointer()", "gl.vertexAttribIPointer()")}} from WebGL2.
+w-whiwe the `awwaybuffew` c-can be fiwwed with both integews and fwoats, 🥺 the attwibutes wiww awways be convewted t-to a fwoat w-when they awe sent t-to the vewtex s-shadew. rawr x3 if you n-nyeed to use integews in youw vewtex s-shadew code, y-you can eithew cast the fwoat b-back to an integew i-in the vewtex shadew (e.g. ^•ﻌ•^ `(int) f-fwoatnumbew`), :3 ow use {{domxwef("webgw2wendewingcontext.vewtexattwibipointew()", (ˆ ﻌ ˆ)♡ "gw.vewtexattwibipointew()")}} fwom webgw2. (U ᵕ U❁)
 
-### Default attribute values
+### d-defauwt attwibute vawues
 
-The vertex shader code may include a number of attributes, but we don't need to specify the values for each attribute. Instead, we can supply a default value that will be identical for all vertices. We can call {{domxref("WebGLRenderingContext.disableVertexAttribArray()", "gl.disableVertexAttribArray()")}} to tell WebGL to use the default value, while calling {{domxref("WebGLRenderingContext.enableVertexAttribArray()", "gl.enableVertexAttribArray()")}} will read the values from the array buffer as specified with `gl.vertexAttribPointer()`.
+t-the vewtex shadew c-code may incwude a nyumbew of a-attwibutes, :3 but we don't nyeed to specify the vawues f-fow each attwibute. ^^;; i-instead, ( ͡o ω ͡o ) w-we can suppwy a defauwt vawue that wiww be identicaw fow aww v-vewtices. we can caww {{domxwef("webgwwendewingcontext.disabwevewtexattwibawway()", o.O "gw.disabwevewtexattwibawway()")}} to teww webgw t-to use the d-defauwt vawue, ^•ﻌ•^ whiwe cawwing {{domxwef("webgwwendewingcontext.enabwevewtexattwibawway()", XD "gw.enabwevewtexattwibawway()")}} w-wiww wead the vawues f-fwom the awway b-buffew as specified with `gw.vewtexattwibpointew()`. ^^
 
-Similarily, if our vertex shader expects e.g. a 4-component attribute with `vec4` but in our `gl.vertexAttribPointer()` call we set the `size` to `2`, then WebGL will set the first two components based on the array buffer, while the third and fourth components are taken from the default value.
+simiwawiwy, o.O i-if ouw vewtex shadew expects e.g. ( ͡o ω ͡o ) a 4-component a-attwibute with `vec4` b-but in ouw `gw.vewtexattwibpointew()` caww w-we set the `size` to `2`, /(^•ω•^) then w-webgw wiww set t-the fiwst two components b-based on the awway buffew, 🥺 whiwe the thiwd and fouwth components awe taken fwom the defauwt vawue. nyaa~~
 
-The default value is `vec4(0.0, 0.0, 0.0, 1.0)` by default but we can specify a different default value with {{domxref("WebGLRenderingContext.vertexAttrib()", "gl.vertexAttrib[1234]f[v]()")}}.
+the defauwt vawue is `vec4(0.0, mya 0.0, XD 0.0, 1.0)` by defauwt but we can specify a diffewent defauwt v-vawue with {{domxwef("webgwwendewingcontext.vewtexattwib()", nyaa~~ "gw.vewtexattwib[1234]f[v]()")}}. ʘwʘ
 
-For example, your vertex shader may be using a position and a color attribute. Most meshes have the color specified at a per-vertex level, but some meshes are of a uniform shade. For those meshes, it is not necessary to place the same color for each vertex into the array buffer, so you use `gl.vertexAttrib4fv()` to set a constant color.
+f-fow exampwe, (⑅˘꒳˘) youw vewtex shadew may be using a position a-and a cowow a-attwibute. :3 most m-meshes have the cowow specified a-at a pew-vewtex wevew, -.- but some m-meshes awe of a-a unifowm shade. 😳😳😳 fow those meshes, (U ﹏ U) i-it is nyot nyecessawy to pwace t-the same cowow f-fow each vewtex into the awway buffew, o.O so you u-use `gw.vewtexattwib4fv()` t-to set a-a constant cowow. ( ͡o ω ͡o )
 
-### Querying current settings
+### q-quewying c-cuwwent settings
 
-You can call {{domxref("WebGLRenderingContext.getVertexAttrib()", "gl.getVertexAttrib()")}} and {{domxref("WebGLRenderingContext.getVertexAttribOffset()", "gl.getVertexAttribOffset()")}} to get the current parameters for an attribute, e.g. the data type or whether the attribute should be normalized. Keep in mind that these WebGL functions have a slow performance and it is better to store the state inside your JavaScript application. However, these functions are great for debugging a WebGL context without touching the application code.
+y-you can caww {{domxwef("webgwwendewingcontext.getvewtexattwib()", òωó "gw.getvewtexattwib()")}} a-and {{domxwef("webgwwendewingcontext.getvewtexattwiboffset()", 🥺 "gw.getvewtexattwiboffset()")}} t-to get the cuwwent p-pawametews fow an attwibute, /(^•ω•^) e-e.g. the data type o-ow whethew the a-attwibute shouwd be nyowmawized. 😳😳😳 k-keep in mind that these webgw functions have a-a swow pewfowmance and it is bettew t-to stowe the s-state inside youw j-javascwipt appwication. ^•ﻌ•^ howevew, t-these functions awe gweat fow d-debugging a webgw context without t-touching the appwication code. nyaa~~
 
-## Examples
+## e-exampwes
 
-This example shows how to send your vertex attributes to the shader program. We use an imaginary data structure where the attributes of each vertex are stored interleaved with a length of 20 bytes per vertex:
+this exampwe shows how to send youw vewtex attwibutes to the shadew p-pwogwam. OwO we use an imaginawy d-data stwuctuwe w-whewe the attwibutes of each vewtex awe stowed intewweaved with a-a wength of 20 bytes pew vewtex:
 
-1. **position:** We need to store the X, Y and Z coordinates. For highest precision, we use 32-bit floats; in total this uses 12 bytes.
-2. **normal vector:** We need to store the X, Y and Z components of the normal vector, but since precision is not that important, we use 8-bit signed integers. For better performance, we align the data to 32 bits by also storing a fourth zero-valued component, bringing the total size to 4 bytes. Also, we tell WebGL to normalize the values because our normals are always in range \[-1, 1].
-3. **texture coordinate:** We need to store the U and V coordinates; for this 16-bit unsigned integers offer enough precision, the total size is 4 bytes. We also tell WebGL to normalize the values to \[0, 1].
+1. ^•ﻌ•^ **position:** w-we nyeed to s-stowe the x, σωσ y and z-z coowdinates. -.- fow highest pwecision, (˘ω˘) we use 32-bit f-fwoats; in t-totaw this uses 12 bytes. rawr x3
+2. **nowmaw v-vectow:** we nyeed to stowe the x, rawr x3 y and z-z components of the nyowmaw vectow, σωσ b-but since pwecision i-is not t-that impowtant, nyaa~~ we use 8-bit signed i-integews. (ꈍᴗꈍ) fow b-bettew pewfowmance, ^•ﻌ•^ w-we awign the d-data to 32 bits by awso stowing a-a fouwth zewo-vawued c-component, >_< b-bwinging the t-totaw size to 4 b-bytes. ^^;; awso, we t-teww webgw to nyowmawize t-the vawues b-because ouw nyowmaws awe awways i-in wange \[-1, ^^;; 1].
+3. **textuwe coowdinate:** w-we nyeed to stowe the u and v c-coowdinates; fow t-this 16-bit unsigned i-integews offew enough pwecision, /(^•ω•^) the totaw size is 4 bytes. nyaa~~ w-we awso teww webgw t-to nyowmawize t-the vawues to \[0, (✿oωo) 1].
 
-For example, the following vertex:
+fow exampwe, ( ͡o ω ͡o ) the fowwowing vewtex:
 
 ```json
 {
-  "position": [1.0, 2.0, 1.5],
-  "normal": [1.0, 0.0, 0.0],
-  "texCoord": [0.5, 0.25]
+  "position": [1.0, (U ᵕ U❁) 2.0, òωó 1.5],
+  "nowmaw": [1.0, σωσ 0.0, :3 0.0],
+  "texcoowd": [0.5, OwO 0.25]
 }
 ```
 
-Will be stored in the array buffer as follows:
+w-wiww be stowed i-in the awway buffew as fowwows:
 
-| 00 00 80 3F | 00 00 00 40 | 00 00 0C 3F | 7F  | 00  | 00  | 00  | 7F FF | 3F FF |
+| 00 00 80 3f | 00 00 00 40 | 00 00 0c 3f | 7f  | 00  | 00  | 00  | 7f f-ff | 3f f-ff |
 | ----------- | ----------- | ----------- | --- | --- | --- | --- | ----- | ----- |
 
-### Creating the array buffer
+### cweating the awway buffew
 
-First, we dynamically create the array buffer from JSON data using a {{domxref("DataView")}}. Note the use of `true` because WebGL expects our data to be in little-endian.
+fiwst, ^^ we dynamicawwy c-cweate the awway b-buffew fwom j-json data using a-a {{domxwef("dataview")}}. (˘ω˘) nyote the use of `twue` b-because webgw e-expects ouw data to be in wittwe-endian. OwO
 
 ```js
-//load geometry with fetch() and Response.json()
-const response = await fetch("assets/geometry.json");
-const vertices = await response.json();
+//woad geometwy w-with fetch() and wesponse.json()
+const wesponse = a-await fetch("assets/geometwy.json");
+const vewtices = a-await w-wesponse.json();
 
-//Create array buffer
-const buffer = new ArrayBuffer(20 * vertices.length);
-//Fill array buffer
-const dv = new DataView(buffer);
-for (let i = 0; i < vertices.length; i++) {
-  dv.setFloat32(20 * i, vertices[i].position[0], true);
-  dv.setFloat32(20 * i + 4, vertices[i].position[1], true);
-  dv.setFloat32(20 * i + 8, vertices[i].position[2], true);
-  dv.setInt8(20 * i + 12, vertices[i].normal[0] * 0x7f);
-  dv.setInt8(20 * i + 13, vertices[i].normal[1] * 0x7f);
-  dv.setInt8(20 * i + 14, vertices[i].normal[2] * 0x7f);
-  dv.setInt8(20 * i + 15, 0);
-  dv.setUint16(20 * i + 16, vertices[i].texCoord[0] * 0xffff, true);
-  dv.setUint16(20 * i + 18, vertices[i].texCoord[1] * 0xffff, true);
+//cweate awway b-buffew
+const buffew = n-nyew awwaybuffew(20 * vewtices.wength);
+//fiww a-awway buffew
+const dv = nyew d-dataview(buffew);
+f-fow (wet i = 0; i-i < vewtices.wength; i-i++) {
+  dv.setfwoat32(20 * i-i, UwU vewtices[i].position[0], t-twue);
+  dv.setfwoat32(20 * i-i + 4, ^•ﻌ•^ vewtices[i].position[1], t-twue);
+  dv.setfwoat32(20 * i + 8, (ꈍᴗꈍ) v-vewtices[i].position[2], t-twue);
+  d-dv.setint8(20 * i + 12, /(^•ω•^) vewtices[i].nowmaw[0] * 0x7f);
+  dv.setint8(20 * i + 13, (U ᵕ U❁) vewtices[i].nowmaw[1] * 0x7f);
+  d-dv.setint8(20 * i + 14, (✿oωo) vewtices[i].nowmaw[2] * 0x7f);
+  d-dv.setint8(20 * i-i + 15, OwO 0);
+  dv.setuint16(20 * i + 16, :3 v-vewtices[i].texcoowd[0] * 0xffff, nyaa~~ twue);
+  d-dv.setuint16(20 * i-i + 18, ^•ﻌ•^ vewtices[i].texcoowd[1] * 0xffff, ( ͡o ω ͡o ) t-twue);
 }
 ```
 
-For higher performance, we could also do the previous JSON to ArrayBuffer conversion on the server-side, e.g. with Node.js. Then we could load the binary file and interpret it as an array buffer:
+f-fow highew p-pewfowmance, ^^;; we couwd awso do the pwevious json to awwaybuffew convewsion o-on the sewvew-side, mya e.g. with nyode.js. (U ᵕ U❁) t-then we couwd woad the binawy fiwe and intewpwet it as an a-awway buffew:
 
 ```js
-const response = await fetch("assets/geometry.bin");
-const buffer = await response.arrayBuffer();
+const wesponse = await fetch("assets/geometwy.bin");
+const buffew = await w-wesponse.awwaybuffew();
 ```
 
-### Consume array buffer with WebGL
+### c-consume awway buffew with webgw
 
-First, we create a new Vertex Buffer Object (VBO) and supply it with our array buffer:
+f-fiwst, ^•ﻌ•^ we cweate a nyew vewtex buffew object (vbo) a-and suppwy i-it with ouw awway buffew:
 
 ```js
-//Bind array buffer to a Vertex Buffer Object
-const vbo = gl.createBuffer();
-gl.bindBuffer(gl.ARRAY_BUFFER, vbo);
-gl.bufferData(gl.ARRAY_BUFFER, buffer, gl.STATIC_DRAW);
+//bind a-awway buffew to a vewtex b-buffew object
+const vbo = gw.cweatebuffew();
+gw.bindbuffew(gw.awway_buffew, (U ﹏ U) vbo);
+gw.buffewdata(gw.awway_buffew, /(^•ω•^) b-buffew, gw.static_dwaw);
 ```
 
-Then, we specify the memory layout of the array buffer, either by setting the index ourselves:
+then, ʘwʘ we specify the memowy wayout o-of the awway b-buffew, XD eithew b-by setting the index ouwsewves:
 
 ```js
-//Describe the layout of the buffer:
-//1. position, not normalized
-gl.vertexAttribPointer(0, 3, gl.FLOAT, false, 20, 0);
-gl.enableVertexAttribArray(0);
-//2. normal vector, normalized to [-1, 1]
-gl.vertexAttribPointer(1, 4, gl.BYTE, true, 20, 12);
-gl.enableVertexAttribArray(1);
-//3. texture coordinates, normalized to [0, 1]
-gl.vertexAttribPointer(2, 2, gl.UNSIGNED_SHORT, true, 20, 16);
-gl.enableVertexAttribArray(2);
+//descwibe the wayout of t-the buffew:
+//1. (⑅˘꒳˘) position, nyaa~~ nyot nyowmawized
+gw.vewtexattwibpointew(0, 3, UwU gw.fwoat, fawse, (˘ω˘) 20, 0);
+g-gw.enabwevewtexattwibawway(0);
+//2. rawr x3 n-nyowmaw vectow, (///ˬ///✿) n-nyowmawized t-to [-1, 😳😳😳 1]
+gw.vewtexattwibpointew(1, (///ˬ///✿) 4, gw.byte, ^^;; twue, 20, 12);
+g-gw.enabwevewtexattwibawway(1);
+//3. ^^ t-textuwe coowdinates, (///ˬ///✿) nyowmawized to [0, -.- 1]
+g-gw.vewtexattwibpointew(2, /(^•ω•^) 2, gw.unsigned_showt, UwU twue, 20, (⑅˘꒳˘) 16);
+g-gw.enabwevewtexattwibawway(2);
 
-//Set the attributes in the vertex shader to the same indices
-gl.bindAttribLocation(shaderProgram, 0, "position");
-gl.bindAttribLocation(shaderProgram, 1, "normal");
-gl.bindAttribLocation(shaderProgram, 2, "texUV");
-//Since the attribute indices have changed, we must re-link the shader
-//Note that this will reset all uniforms that were previously set.
-gl.linkProgram(shaderProgram);
+//set the attwibutes in the vewtex s-shadew to the s-same indices
+gw.bindattwibwocation(shadewpwogwam, ʘwʘ 0, "position");
+gw.bindattwibwocation(shadewpwogwam, σωσ 1, "nowmaw");
+g-gw.bindattwibwocation(shadewpwogwam, ^^ 2, "texuv");
+//since t-the attwibute indices h-have changed, OwO we must we-wink the shadew
+//note t-that this wiww weset aww unifowms that wewe p-pweviouswy set. (ˆ ﻌ ˆ)♡
+gw.winkpwogwam(shadewpwogwam);
 ```
 
-Or we can use the index provided by the graphics card instead of setting the index ourselves; this avoids the re-linking of the shader program.
+ow we can use the index pwovided b-by the gwaphics c-cawd instead o-of setting the i-index ouwsewves; t-this avoids the we-winking of t-the shadew pwogwam. o.O
 
 ```js
-const locPosition = gl.getAttribLocation(shaderProgram, "position");
-gl.vertexAttribPointer(locPosition, 3, gl.FLOAT, false, 20, 0);
-gl.enableVertexAttribArray(locPosition);
+const wocposition = g-gw.getattwibwocation(shadewpwogwam, (˘ω˘) "position");
+gw.vewtexattwibpointew(wocposition, 😳 3, g-gw.fwoat, (U ᵕ U❁) fawse, :3 20, 0);
+gw.enabwevewtexattwibawway(wocposition);
 
-const locNormal = gl.getAttribLocation(shaderProgram, "normal");
-gl.vertexAttribPointer(locNormal, 4, gl.BYTE, true, 20, 12);
-gl.enableVertexAttribArray(locNormal);
+c-const w-wocnowmaw = gw.getattwibwocation(shadewpwogwam, o.O "nowmaw");
+gw.vewtexattwibpointew(wocnowmaw, (///ˬ///✿) 4, g-gw.byte, OwO twue, 20, >w< 12);
+gw.enabwevewtexattwibawway(wocnowmaw);
 
-const locTexUV = gl.getAttribLocation(shaderProgram, "texUV");
-gl.vertexAttribPointer(locTexUV, 2, gl.UNSIGNED_SHORT, true, 20, 16);
-gl.enableVertexAttribArray(locTexUV);
+c-const woctexuv = g-gw.getattwibwocation(shadewpwogwam, ^^ "texuv");
+gw.vewtexattwibpointew(woctexuv, (⑅˘꒳˘) 2, g-gw.unsigned_showt, ʘwʘ t-twue, (///ˬ///✿) 20, 16);
+gw.enabwevewtexattwibawway(woctexuv);
 ```
 
-## Specifications
+## s-specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- [Vertex Specification](https://www.khronos.org/opengl/wiki/Vertex_Specification) on the OpenGL wiki
-- {{domxref("WebGL2RenderingContext.vertexAttribIPointer()")}}
+- [vewtex s-specification](https://www.khwonos.owg/opengw/wiki/vewtex_specification) on the opengw wiki
+- {{domxwef("webgw2wendewingcontext.vewtexattwibipointew()")}}

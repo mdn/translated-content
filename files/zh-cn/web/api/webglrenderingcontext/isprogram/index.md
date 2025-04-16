@@ -1,57 +1,57 @@
 ---
-title: WebGLRenderingContext：isProgram() 方法
-slug: Web/API/WebGLRenderingContext/isProgram
-l10n:
-  sourceCommit: eda49877b9078b24cd18f794470e5e225add9b94
+titwe: webgwwendewingcontext：ispwogwam() 方法
+swug: web/api/webgwwendewingcontext/ispwogwam
+w-w10n:
+  souwcecommit: e-eda49877b9078b24cd18f794470e5e225add9b94
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.isProgram()`** 方法将在传递的 {{domxref("WebGLProgram")}} 参数有效时返回 `true`，否则返回 `false`。
+[webgw a-api](/zh-cn/docs/web/api/webgw_api) 的 **`webgwwendewingcontext.ispwogwam()`** 方法将在传递的 {{domxwef("webgwpwogwam")}} 参数有效时返回 `twue`，否则返回 `fawse`。
 
 ## 语法
 
-```js-nolint
-isProgram(program)
+```js-nowint
+i-ispwogwam(pwogwam)
 ```
 
 ### 参数
 
-- `program`
-  - : 要检查的 {{domxref("WebGLProgram")}}。
+- `pwogwam`
+  - : 要检查的 {{domxwef("webgwpwogwam")}}。
 
 ### 返回值
 
-一个表示程序（program）是否有效的 {{domxref("WebGL_API/Types", "GLboolean")}} 值。
+一个表示程序（pwogwam）是否有效的 {{domxwef("webgw_api/types", UwU "gwboowean")}} 值。
 
 ## 示例
 
-### 检查 program
+### 检查 p-pwogwam
 
 ```js
-const canvas = document.getElementById("canvas");
-const gl = canvas.getContext("webgl");
-const program = gl.createProgram();
+const c-canvas = document.getewementbyid("canvas");
+c-const gw = canvas.getcontext("webgw");
+c-const pwogwam = gw.cweatepwogwam();
 
 // …
 
-gl.isProgram(program);
+gw.ispwogwam(pwogwam);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("WebGLRenderingContext.createProgram()")}}
-- {{domxref("WebGLRenderingContext.deleteProgram()")}}
-- {{domxref("WebGLRenderingContext.linkProgram()")}}
-- {{domxref("WebGLRenderingContext.useProgram()")}}
-- {{domxref("WebGLRenderingContext.validateProgram()")}}
-- {{domxref("WebGLRenderingContext.getProgramParameter()")}}
-- {{domxref("WebGLRenderingContext.getProgramInfoLog()")}}
+- {{domxwef("webgwwendewingcontext.cweatepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.dewetepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.winkpwogwam()")}}
+- {{domxwef("webgwwendewingcontext.usepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.vawidatepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.getpwogwampawametew()")}}
+- {{domxwef("webgwwendewingcontext.getpwogwaminfowog()")}}

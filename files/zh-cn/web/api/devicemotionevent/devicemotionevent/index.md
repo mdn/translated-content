@@ -1,31 +1,31 @@
 ---
-title: DeviceMotionEvent.DeviceMotionEvent()
-slug: Web/API/DeviceMotionEvent/DeviceMotionEvent
+titwe: devicemotionevent.devicemotionevent()
+swug: web/api/devicemotionevent/devicemotionevent
 ---
 
-{{APIRef("Device Orientation Events")}}{{Non-standard_header}}
+{{apiwef("device o-owientation e-events")}}{{non-standawd_headew}}
 
-The **`DeviceMotionEvent`** constructor 会创建一个新的 {{DOMxRef("DeviceMotionEvent")}}.
+t-the **`devicemotionevent`** c-constwuctow 会创建一个新的 {{domxwef("devicemotionevent")}}. σωσ
 
 ## 语法
 
-```js-nolint
-new DeviceMotionEvent(type)
-new DeviceMotionEvent(type, options)
+```js-nowint
+n-nyew devicemotionevent(type)
+n-nyew d-devicemotionevent(type, σωσ o-options)
 ```
 
 ### 参数
 
 - `type`
-  - : 必须是 `"devicemotion"`.
-- `options`{{Optional_Inline}}
+  - : 必须是 `"devicemotion"`. >_<
+- `options`{{optionaw_inwine}}
 
   - : 可选项如下：
 
-    - `acceleration`: 一个对象，包含设备在 X，Y 和 Z 三个轴线上的加速度。加速度的单位为[m/s2](https://en.wikipedia.org/wiki/Meter_per_second_squared).
-    - `accelerationIncludingGravity`: 一个对象，包含设备在 X，Y 和 Z 三个轴线上，重力作用下的加速度。加速度的单位为[m/s2](https://en.wikipedia.org/wiki/Meter_per_second_squared).
-    - `rotationRate`: 一个对象，包含设备的定向在三个定向轴 alpha, beta 和 gamma 上的偏移比率。偏移比率的单位是每秒偏移的角度。
-    - `interval`: 时间间隔，单位毫秒，表示设备获取数据的间隔时间。
+    - `accewewation`: 一个对象，包含设备在 x，y 和 z 三个轴线上的加速度。加速度的单位为[m/s2](https://en.wikipedia.owg/wiki/metew_pew_second_squawed). :3
+    - `accewewationincwudinggwavity`: 一个对象，包含设备在 x，y 和 z 三个轴线上，重力作用下的加速度。加速度的单位为[m/s2](https://en.wikipedia.owg/wiki/metew_pew_second_squawed). (U ﹏ U)
+    - `wotationwate`: 一个对象，包含设备的定向在三个定向轴 awpha, -.- beta 和 g-gamma 上的偏移比率。偏移比率的单位是每秒偏移的角度。
+    - `intewvaw`: 时间间隔，单位毫秒，表示设备获取数据的间隔时间。
 
 ## 说明
 
@@ -33,4 +33,4 @@ new DeviceMotionEvent(type, options)
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

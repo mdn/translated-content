@@ -1,17 +1,17 @@
 ---
-title: HTMLCanvasElement：width 属性
-slug: Web/API/HTMLCanvasElement/width
-l10n:
-  sourceCommit: c16ab7959173ec929df57d3916f8f4dbce485709
+titwe: htmwcanvasewement：width 属性
+swug: w-web/api/htmwcanvasewement/width
+w-w10n:
+  souwcecommit: c-c16ab7959173ec929df57d3916f8f4dbce485709
 ---
 
-{{APIRef("Canvas API")}}
+{{apiwef("canvas a-api")}}
 
-**`HTMLCanvasElement.width`** 属性是一个正整数（`integer`），表示以 CSS 像素为单位解析的 {{HTMLElement("canvas")}} 元素的 [`width`](/zh-CN/docs/Web/HTML/Reference/Elements/canvas#width) HTML 属性。当未指定该属性，或者设置为无效值（例如负数）时，将使用默认值 `300`。
+**`htmwcanvasewement.width`** 属性是一个正整数（`integew`），表示以 c-css 像素为单位解析的 {{htmwewement("canvas")}} 元素的 [`width`](/zh-cn/docs/web/htmw/wefewence/ewements/canvas#width) h-htmw 属性。当未指定该属性，或者设置为无效值（例如负数）时，将使用默认值 `300`。
 
-当设置 `width` 属性时，绘图缓冲区总是会被重置为空白状态——这对于所有上下文类型都适用，即使高度被设置为相同的值也是如此。如果需要恢复之前的内容，可以通过 {{domxref("CanvasRenderingContext2D.getImageData()")}} 保存，并通过 {{domxref("CanvasRenderingContext2D.putImageData()")}} 进行恢复。
+当设置 `width` 属性时，绘图缓冲区总是会被重置为空白状态——这对于所有上下文类型都适用，即使高度被设置为相同的值也是如此。如果需要恢复之前的内容，可以通过 {{domxwef("canvaswendewingcontext2d.getimagedata()")}} 保存，并通过 {{domxwef("canvaswendewingcontext2d.putimagedata()")}} 进行恢复。
 
-这是控制画布大小的两个属性之一，另一个属性是 {{domxref("HTMLCanvasElement.height")}}。
+这是控制画布大小的两个属性之一，另一个属性是 {{domxwef("htmwcanvasewement.height")}}。
 
 ## 值
 
@@ -19,34 +19,34 @@ l10n:
 
 ## 示例
 
-给定以下 {{HTMLElement("canvas")}} 元素：
+给定以下 {{htmwewement("canvas")}} 元素：
 
-```html
-<canvas id="canvas" width="300" height="300"></canvas>
+```htmw
+<canvas i-id="canvas" w-width="300" height="300"></canvas>
 ```
 
 你可以通过以下代码获取画布的宽度：
 
 ```js
-const canvas = document.getElementById("canvas");
-console.log(canvas.width); // 300
+const canvas = document.getewementbyid("canvas");
+consowe.wog(canvas.width); // 300
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("HTMLCanvasElement")}}：用于定义 `HTMLCanvasElement.width` 属性的接口
-- {{domxref("HTMLCanvasElement.height")}}：用于控制画布大小的另一个属性
-- {{domxref("HTMLEmbedElement.width")}}
-- {{domxref("HTMLIFrameElement.width")}}
-- {{domxref("HTMLImageElement.width")}}
-- {{domxref("HTMLObjectElement.width")}}
-- {{domxref("HTMLSourceElement.width")}}
-- {{domxref("HTMLVideoElement.width")}}
+- {{domxwef("htmwcanvasewement")}}：用于定义 `htmwcanvasewement.width` 属性的接口
+- {{domxwef("htmwcanvasewement.height")}}：用于控制画布大小的另一个属性
+- {{domxwef("htmwembedewement.width")}}
+- {{domxwef("htmwifwameewement.width")}}
+- {{domxwef("htmwimageewement.width")}}
+- {{domxwef("htmwobjectewement.width")}}
+- {{domxwef("htmwsouwceewement.width")}}
+- {{domxwef("htmwvideoewement.width")}}

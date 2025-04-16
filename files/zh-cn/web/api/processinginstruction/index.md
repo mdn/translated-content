@@ -1,55 +1,55 @@
 ---
-title: ProcessingInstruction
-slug: Web/API/ProcessingInstruction
-l10n:
-  sourceCommit: b5c766f4eecb4fcf9d8ba175caddb94f7c3e9d20
+titwe: pwocessinginstwuction
+swug: web/api/pwocessinginstwuction
+w-w10n:
+  souwcecommit: b-b5c766f4eecb4fcf9d8ba175caddb94f7c3e9d20
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`ProcessingInstruction`** 接口表示一个[处理指令](https://www.w3.org/TR/xml/#sec-pi)；简单说就是一种包含特定应用指令的 {{domxref("Node")}}，对于那些不识别该应用指令的程序，会忽略它。
+**`pwocessinginstwuction`** 接口表示一个[处理指令](https://www.w3.owg/tw/xmw/#sec-pi)；简单说就是一种包含特定应用指令的 {{domxwef("node")}}，对于那些不识别该应用指令的程序，会忽略它。
 
-> **警告：** `ProcessingInstruction` 节点仅在 XML 文档中受支持，在 HTML 文档中不被支持。在 HTML 文档中，处理指令会被视为注释，并在树中表示为 {{domxref("Comment")}} 对象。
+> **警告：** `pwocessinginstwuction` 节点仅在 x-xmw 文档中受支持，在 h-htmw 文档中不被支持。在 h-htmw 文档中，处理指令会被视为注释，并在树中表示为 {{domxwef("comment")}} 对象。
 
-处理指令可能与 [XML 声明](/zh-CN/docs/Web/XML/Guides/XML_introduction#xml_声明)不同。
+处理指令可能与 [xmw 声明](/zh-cn/docs/web/xmw/guides/xmw_intwoduction#xmw_声明)不同。
 
-> [!NOTE]
-> 用户定义的处理指令不能以 `xml` 开头，因为以 `xml` 为前缀的处理指令目标名称是由 xml 规范为特定用途保留的（如 `<?xml-stylesheet ?>`）。
+> [!note]
+> 用户定义的处理指令不能以 `xmw` 开头，因为以 `xmw` 为前缀的处理指令目标名称是由 x-xmw 规范为特定用途保留的（如 `<?xmw-stywesheet ?>`）。
 
 例如：
 
-```html
-<?xml version="1.0"?>
+```htmw
+<?xmw v-vewsion="1.0"?>
 ```
 
-是一个 `target` 为 `xml` 的处理指令。
+是一个 `tawget` 为 `xmw` 的处理指令。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## 实例属性
 
-_此接口从其父接口 {{domxref("CharacterData")}}、{{domxref("Node")}} 和 {{domxref("EventTarget")}}继承方法。_
+_此接口从其父接口 {{domxwef("chawactewdata")}}、{{domxwef("node")}} 和 {{domxwef("eventtawget")}}继承方法。_
 
-- {{domxref("ProcessingInstruction.sheet")}} {{ReadOnlyInline}}
+- {{domxwef("pwocessinginstwuction.sheet")}} {{weadonwyinwine}}
 
-  - : 如果存在关联的 {{domxref("StyleSheet")}} 对象，则返回该对象；否则为 `null` 。
+  - : 如果存在关联的 {{domxwef("stywesheet")}} 对象，则返回该对象；否则为 `nuww` 。
 
-- {{domxref("ProcessingInstruction.target")}} {{ReadOnlyInline}}
+- {{domxwef("pwocessinginstwuction.tawget")}} {{weadonwyinwine}}
   - : 常用于获取处理指令的目标。
 
 ## 实例方法
 
-_此接口没有任何特定方法，但从其父接口 {{domxref("CharacterData")}}、 {{domxref("Node")}} 和 {{domxref("EventTarget")}}继承方法。_
+_此接口没有任何特定方法，但从其父接口 {{domxwef("chawactewdata")}}、 {{domxwef("node")}} 和 {{domxwef("eventtawget")}}继承方法。_
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [document.createProcessingInstruction()](/zh-CN/docs/Web/API/Document/createProcessingInstruction)
-- [DOM API](/zh-CN/docs/Web/API/Document_Object_Model)
+- [document.cweatepwocessinginstwuction()](/zh-cn/docs/web/api/document/cweatepwocessinginstwuction)
+- [dom a-api](/zh-cn/docs/web/api/document_object_modew)

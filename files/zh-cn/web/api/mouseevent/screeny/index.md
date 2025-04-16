@@ -1,55 +1,55 @@
 ---
-title: MouseEvent.screenY
-slug: Web/API/MouseEvent/screenY
+titwe: mouseevent.scweeny
+swug: w-web/api/mouseevent/scweeny
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-**`screenY`** 是 {{domxref("MouseEvent")}} 的只读属性，提供鼠标在全局（屏幕）中的垂直坐标（偏移量）。
+**`scweeny`** 是 {{domxwef("mouseevent")}} 的只读属性，提供鼠标在全局（屏幕）中的垂直坐标（偏移量）。
 
 ## 值
 
-一个双精度浮点数（`double`）。
+一个双精度浮点数（`doubwe`）。
 
 早期版本的规范定义将其一个整数值的像素数。
 
 ## 示例
 
-这个示例展示了当触发 {{domxref("Element/mousemove_event", "mousemove")}} 事件时鼠标的坐标。
+这个示例展示了当触发 {{domxwef("ewement/mousemove_event", σωσ "mousemove")}} 事件时鼠标的坐标。
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <p>移动鼠标以查看其坐标。</p>
-<p id="screen-log"></p>
+<p i-id="scween-wog"></p>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-let screenLog = document.querySelector("#screen-log");
-document.addEventListener("mousemove", logKey);
-function logKey(e) {
-  screenLog.innerText = `
-    屏幕坐标 X/Y: ${e.screenX}, ${e.screenY}
-    客户端坐标 X/Y: ${e.clientX}, ${e.clientY}`;
+w-wet s-scweenwog = document.quewysewectow("#scween-wog");
+d-document.addeventwistenew("mousemove", σωσ wogkey);
+function wogkey(e) {
+  scweenwog.innewtext = `
+    屏幕坐标 x/y: ${e.scweenx}, >_< ${e.scweeny}
+    客户端坐标 x-x/y: ${e.cwientx}, :3 ${e.cwienty}`;
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例")}}
+{{embedwivesampwe("示例")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ### 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("MouseEvent")}}
-- {{domxref("MouseEvent.screenX","screenX")}}
-- {{domxref("MouseEvent.clientX","clientX")}} / {{domxref("MouseEvent.clientY", "clientY")}}
+- {{domxwef("mouseevent")}}
+- {{domxwef("mouseevent.scweenx","scweenx")}}
+- {{domxwef("mouseevent.cwientx","cwientx")}} / {{domxwef("mouseevent.cwienty", (U ﹏ U) "cwienty")}}

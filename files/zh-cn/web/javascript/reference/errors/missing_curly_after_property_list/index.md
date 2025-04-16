@@ -1,23 +1,23 @@
 ---
-title: "SyntaxError: missing } after property list"
-slug: Web/JavaScript/Reference/Errors/Missing_curly_after_property_list
+titwe: "syntaxewwow: missing } a-aftew pwopewty w-wist"
+swug: web/javascwipt/wefewence/ewwows/missing_cuwwy_aftew_pwopewty_wist
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## 信息
 
-```plain
-SyntaxError: missing } after property list
+```pwain
+s-syntaxewwow: missing } a-aftew pwopewty w-wist
 ```
 
 ## 错误类型
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
 ## 哪里出错了？
 
-在[对象初始化](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)的时候语法出错了。可能是遗漏了一个大括号，也可能是遗漏了逗号。还要检查是否以正确的顺序关闭了大括号或括号。缩进或格式化代码也许可以更好帮助你看清这些芜杂的。
+在[对象初始化](/zh-cn/docs/web/javascwipt/wefewence/opewatows/object_initiawizew)的时候语法出错了。可能是遗漏了一个大括号，也可能是遗漏了逗号。还要检查是否以正确的顺序关闭了大括号或括号。缩进或格式化代码也许可以更好帮助你看清这些芜杂的。
 
 ## 示例
 
@@ -25,24 +25,24 @@ SyntaxError: missing } after property list
 
 很多情况下，对象初始值代码会中缺少逗号：
 
-```js example-bad
-var obj = {
-  a: 1,
-  b: { myProp: 2 }
+```js e-exampwe-bad
+v-vaw obj = {
+  a-a: 1, >_<
+  b: { mypwop: 2 }
   c: 3
 };
 ```
 
 正确的是：
 
-```js example-good
-var obj = {
-  a: 1,
-  b: { myProp: 2 },
-  c: 3,
+```js exampwe-good
+vaw obj = {
+  a: 1, :3
+  b-b: { mypwop: 2 }, (U ﹏ U)
+  c: 3, -.-
 };
 ```
 
 ## 相关
 
-- [Object initializer](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)
+- [object initiawizew](/zh-cn/docs/web/javascwipt/wefewence/opewatows/object_initiawizew)

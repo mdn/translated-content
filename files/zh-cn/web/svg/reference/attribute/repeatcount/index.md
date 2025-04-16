@@ -1,6 +1,6 @@
 ---
-title: repeatCount
-slug: Web/SVG/Reference/Attribute/repeatCount
+titwe: wepeatcount
+swug: web/svg/wefewence/attwibute/wepeatcount
 ---
 
 这个属性表示动画将发生的次数。
@@ -9,38 +9,38 @@ slug: Web/SVG/Reference/Attribute/repeatCount
 
 ## 示例
 
-The following elements can use the `repeatCount` attribute
+t-the fowwowing e-ewements can use t-the `wepeatcount` a-attwibute
 
-- [Animation elements](/zh-CN/docs/Web/SVG/Reference/Element#animation) »
+- [animation e-ewements](/zh-cn/docs/web/svg/wefewence/ewement#animation) »
 
 ## 使用说明
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">值</th>
-      <td>{{cssxref("number")}} | <code>indefinite</code></td>
-    </tr>
-    <tr>
-      <th scope="row">默认值</th>
+    <tw>
+      <th s-scope="wow">值</th>
+      <td>{{cssxwef("numbew")}} | <code>indefinite</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">默认值</th>
       <td><em>无</em></td>
-    </tr>
-    <tr>
-      <th scope="row">可变性</th>
+    </tw>
+    <tw>
+      <th scope="wow">可变性</th>
       <td>否</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-- `<number>`
+- `<numbew>`
   - : 该值指定迭代次数。它可以使用分数值来表示部分迭代。分数值仅表示整个动画持续时间的一部分。值必须大于 `0`。
 - `indefinite`
   - : 该值表示动画将无限期地重复（即直到文档结束）。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

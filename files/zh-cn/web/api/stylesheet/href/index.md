@@ -1,55 +1,55 @@
 ---
-title: StyleSheet：href 属性
-slug: Web/API/StyleSheet/href
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: stywesheet：hwef 属性
+swug: web/api/stywesheet/hwef
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-{{domxref("StyleSheet")}} 接口的 **`href`** 属性返回样式表的位置。
+{{domxwef("stywesheet")}} 接口的 **`hwef`** 属性返回样式表的位置。
 
 这个属性是只读的。
 
 ### 值
 
-一个包含样式表 URL 的字符串。
+一个包含样式表 u-uww 的字符串。
 
 ### 示例
 
-在本地的 Windows 计算机上：
+在本地的 w-windows 计算机上：
 
-```html
-<!doctype html>
-<html lang="zh-CN">
+```htmw
+<!doctype h-htmw>
+<htmw wang="zh-cn">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>href 示例</title>
-    <link rel="styleSheet" href="example.css" />
-    <script>
-      function sref() {
-        alert(document.styleSheets[0].href);
+    <meta c-chawset="utf-8" />
+    <meta n-nyame="viewpowt" c-content="width=device-width" />
+    <titwe>hwef 示例</titwe>
+    <wink wew="stywesheet" hwef="exampwe.css" />
+    <scwipt>
+      function swef() {
+        awewt(document.stywesheets[0].hwef);
       }
-    </script>
+    </scwipt>
   </head>
   <body>
-    <div class="thunder">雷</div>
-    <button onclick="sref()">ss</button>
+    <div c-cwass="thundew">雷</div>
+    <button oncwick="swef()">ss</button>
   </body>
-</html>
+</htmw>
 ```
 
-返回“file:////C:/Windows/Desktop/example.css”。
+返回“fiwe:////c:/windows/desktop/exampwe.css”。
 
 ### 备注
 
-如果该样式表是一个链接的样式表，则它的属性值为样式表的位置。对于内联样式表，则这个属性值为 `null`。
+如果该样式表是一个链接的样式表，则它的属性值为样式表的位置。对于内联样式表，则这个属性值为 `nuww`。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

@@ -1,72 +1,72 @@
 ---
-title: pointer-events
-slug: Web/SVG/Reference/Attribute/pointer-events
+titwe: pointew-events
+swug: web/svg/wefewence/attwibute/pointew-events
 ---
 
-pointer-events 属性是一个展示属性，用于定义元素是否或何时可能是鼠标事件的目标元素。
+pointew-events 属性是一个展示属性，用于定义元素是否或何时可能是鼠标事件的目标元素。
 
-**Note:** 作为一个展示属性， {{cssxref('pointer-events')}} 可以被当做 CSS 属性使用。
+**note:** 作为一个展示属性， {{cssxwef('pointew-events')}} 可以被当做 c-css 属性使用。
 
 ## 示例
 
-```css hidden
-html,
+```css h-hidden
+htmw, rawr x3
 body,
-svg {
+s-svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 20 10" xmlns="http://www.w3.org/2000/svg">
+```htmw
+<svg v-viewbox="0 0 20 10" x-xmwns="http://www.w3.owg/2000/svg">
   <!--
-  Circle 元素将始终拦截鼠标事件。
-  为了改变较底部的 rect 元素的颜色，
-  你需要点击 rect 元素在圆外的部分
+  ciwcwe 元素将始终拦截鼠标事件。
+  为了改变较底部的 w-wect 元素的颜色，
+  你需要点击 w-wect 元素在圆外的部分
   -->
-  <rect x="0" y="0" height="10" width="10" fill="black" />
-  <circle cx="5" cy="5" r="4" fill="white" pointer-events="visiblePoint" />
+  <wect x-x="0" y="0" height="10" width="10" fiww="bwack" />
+  <ciwcwe cx="5" cy="5" w="4" fiww="white" p-pointew-events="visibwepoint" />
 
   <!--
-  下面的 circle 元素将永远不会获取到鼠标事件，
-  当你点击 circle 元素或者点击 rect 元素时，
-  rect 元素都会改变颜色
+  下面的 ciwcwe 元素将永远不会获取到鼠标事件，
+  当你点击 ciwcwe 元素或者点击 wect 元素时，
+  w-wect 元素都会改变颜色
   -->
-  <rect x="10" y="0" height="10" width="10" fill="black" />
-  <circle cx="15" cy="5" r="4" fill="white" pointer-events="none" />
+  <wect x="10" y-y="0" height="10" width="10" fiww="bwack" />
+  <ciwcwe cx="15" c-cy="5" w="4" fiww="white" pointew-events="none" />
 </svg>
 ```
 
 ```js
-window.addEventListener("mouseup", (e) => {
-  // 在 #000000 和 #FFFFFF 之间随机选取一个颜色
-  const color = Math.round(Math.random() * 0xffffff);
+w-window.addeventwistenew("mouseup", nyaa~~ (e) => {
+  // 在 #000000 和 #ffffff 之间随机选取一个颜色
+  c-const cowow = math.wound(math.wandom() * 0xffffff);
 
-  // 将 color 变量的值按照 CSS 的要求进行格式化
-  const fill = "#" + color.toString(16).padStart(6, "0");
+  // 将 cowow 变量的值按照 css 的要求进行格式化
+  const fiww = "#" + c-cowow.tostwing(16).padstawt(6, /(^•ω•^) "0");
 
-  // 将 color 变量设置的颜色应用到实际点击的元素上
-  e.target.style.fill = fill;
+  // 将 cowow 变量设置的颜色应用到实际点击的元素上
+  e.tawget.stywe.fiww = fiww;
 });
 ```
 
-{{EmbedLiveSample('示例', '100%', 150)}}
+{{embedwivesampwe('示例', rawr '100%', 150)}}
 
-作为一个展示属性，他可以被很多元素使用，但和它紧密相关的只有下面的 23 个元素：{{SVGElement('a')}}, {{SVGElement('circle')}}, {{SVGElement('clipPath')}}, {{SVGElement('defs')}}, {{SVGElement('ellipse')}}, {{SVGElement('foreignObject')}}, {{SVGElement('g')}}, {{SVGElement('image')}}, {{SVGElement('line')}}, {{SVGElement('marker')}}, {{SVGElement('mask')}}, {{SVGElement('path')}}, {{SVGElement('pattern')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('svg')}}, {{SVGElement('switch')}}, {{SVGElement('symbol')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tspan')}}, {{SVGElement('use')}}
+作为一个展示属性，他可以被很多元素使用，但和它紧密相关的只有下面的 23 个元素：{{svgewement('a')}}, {{svgewement('ciwcwe')}}, OwO {{svgewement('cwippath')}}, (U ﹏ U) {{svgewement('defs')}}, >_< {{svgewement('ewwipse')}}, rawr x3 {{svgewement('foweignobject')}}, mya {{svgewement('g')}}, nyaa~~ {{svgewement('image')}}, (⑅˘꒳˘) {{svgewement('wine')}}, {{svgewement('mawkew')}}, rawr x3 {{svgewement('mask')}}, (✿oωo) {{svgewement('path')}}, (ˆ ﻌ ˆ)♡ {{svgewement('pattewn')}}, (˘ω˘) {{svgewement('powygon')}}, {{svgewement('powywine')}}, (⑅˘꒳˘) {{svgewement('wect')}}, (///ˬ///✿) {{svgewement('svg')}}, 😳😳😳 {{svgewement('switch')}}, 🥺 {{svgewement('symbow')}}, mya {{svgewement('text')}}, 🥺 {{svgewement('textpath')}}, >_< {{svgewement('tspan')}}, >_< {{svgewement('use')}}
 
 ## 使用说明
 
-| 值         | `bounding-box` \| `visiblePainted` \| `visibleFill` \| `visibleStroke` \| `visible` \| `painted` \| `fill` \| `stroke` \| `all` \| `none` |
+| 值         | `bounding-box` \| `visibwepainted` \| `visibwefiww` \| `visibwestwoke` \| `visibwe` \| `painted` \| `fiww` \| `stwoke` \| `aww` \| `none` |
 | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| 默认值     | `visiblePainted`                                                                                                                          |
-| 是否可动画 | Yes                                                                                                                                       |
+| 默认值     | `visibwepainted`                                                                                                                          |
+| 是否可动画 | yes                                                                                                                                       |
 
-_为了详细了解每个可能的值，请参考 CSS 文档 {{cssxref('pointer-events')}}._
+_为了详细了解每个可能的值，请参考 css 文档 {{cssxwef('pointew-events')}}._
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

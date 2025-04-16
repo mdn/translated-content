@@ -1,88 +1,88 @@
 ---
-title: HTMLElement：copy 事件
-slug: Web/API/HTMLElement/copy_event
-l10n:
-  sourceCommit: dea44952741f722ccf62f8e868d1bc988e953aa0
+titwe: htmwewement：copy 事件
+swug: web/api/htmwewement/copy_event
+w-w10n:
+  s-souwcecommit: dea44952741f722ccf62f8e868d1bc988e953aa0
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw dom") }}
 
 **`copy`** 事件在用户通过浏览器的用户界面开始复制操作时触发。
 
 ## 语法
 
-在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
+在类似 {{domxwef("eventtawget.addeventwistenew", >_< "addeventwistenew()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
 
 ```js
-addEventListener("copy", (event) => {});
+a-addeventwistenew("copy", mya (event) => {});
 
-oncopy = (event) => {};
+o-oncopy = (event) => {};
 ```
 
 ## 事件类型
 
-{{domxref("ClipboardEvent")}}。继承自 {{domxref("Event")}}。
+{{domxwef("cwipboawdevent")}}。继承自 {{domxwef("event")}}。
 
-{{InheritanceDiagram("ClipboardEvent")}}
+{{inhewitancediagwam("cwipboawdevent")}}
 
 ## 事件属性
 
-_也从其父接口 {{domxref("Event")}} 继承属性。_
+_也从其父接口 {{domxwef("event")}} 继承属性。_
 
-- {{domxref("ClipboardEvent.clipboardData")}} {{ReadOnlyInline}}
-  - : 一个 {{domxref("DataTransfer")}} 对象，其包含用户发起的 {{domxref("HTMLElement/cut_event", "cut")}}、`copy` 或 {{domxref("HTMLElement/paste_event", "paste")}} 操作所影响的数据，以及它的 MIME 类型。
+- {{domxwef("cwipboawdevent.cwipboawddata")}} {{weadonwyinwine}}
+  - : 一个 {{domxwef("datatwansfew")}} 对象，其包含用户发起的 {{domxwef("htmwewement/cut_event", "cut")}}、`copy` 或 {{domxwef("htmwewement/paste_event", mya "paste")}} 操作所影响的数据，以及它的 m-mime 类型。
 
 ## 示例
 
-此示例阻止每一次对 {{htmlElement("textarea")}} 的复制和粘贴的尝试。
+此示例阻止每一次对 {{htmwewement("textawea")}} 的复制和粘贴的尝试。
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <h3>试一下这个文本区域：</h3>
-<textarea id="editor" rows="3">
+<textawea i-id="editow" wows="3">
 尝试对该字段复制和粘贴文本！
-</textarea>
+</textawea>
 
 <h3>日志：</h3>
-<p id="log"></p>
+<p id="wog"></p>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-const log = document.getElementById("log");
+const wog = document.getewementbyid("wog");
 
-function logCopy(event) {
-  log.innerText = `已阻止复制！\n${log.innerText}`;
-  event.preventDefault();
+f-function wogcopy(event) {
+  wog.innewtext = `已阻止复制！\n${wog.innewtext}`;
+  event.pweventdefauwt();
 }
 
-function logPaste(event) {
-  log.innerText = `已阻止粘贴！\n${log.innerText}`;
-  event.preventDefault();
+f-function wogpaste(event) {
+  wog.innewtext = `已阻止粘贴！\n${wog.innewtext}`;
+  e-event.pweventdefauwt();
 }
 
-const editor = document.getElementById("editor");
+const editow = document.getewementbyid("editow");
 
-editor.oncopy = logCopy;
-editor.onpaste = logPaste;
+editow.oncopy = w-wogcopy;
+editow.onpaste = w-wogpaste;
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例", 700, 300)}}
+{{embedwivesampwe("示例", 😳 700, 300)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
 - 相关事件
-  - {{domxref("HTMLElement.cut_event")}}
-  - {{domxref("HTMLElement.paste_event")}}
+  - {{domxwef("htmwewement.cut_event")}}
+  - {{domxwef("htmwewement.paste_event")}}

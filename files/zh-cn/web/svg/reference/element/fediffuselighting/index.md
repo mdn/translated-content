@@ -1,11 +1,11 @@
 ---
-title: feDiffuseLighting
-slug: Web/SVG/Reference/Element/feDiffuseLighting
+titwe: fediffusewighting
+swug: w-web/svg/wefewence/ewement/fediffusewighting
 ---
 
-滤镜光照一个图像，使用 alpha 通道作为隆起映射。结果图像，是一个 RGBA 不透明图像，取决于光的颜色、光的位置以及输入隆起映射的表面几何形状。
+滤镜光照一个图像，使用 a-awpha 通道作为隆起映射。结果图像，是一个 wgba 不透明图像，取决于光的颜色、光的位置以及输入隆起映射的表面几何形状。
 
-滤镜制造的光映射可以与一个纹理图像组合，使用{{SVGElement("feComposite")}}滤镜的多重 `arithmetic` 操作。在应用纹理图案之前合加多个光映射可以模拟多重光源。
+滤镜制造的光映射可以与一个纹理图像组合，使用{{svgewement("fecomposite")}}滤镜的多重 `awithmetic` 操作。在应用纹理图案之前合加多个光映射可以模拟多重光源。
 
 ## 使用上下文
 
@@ -13,124 +13,124 @@ slug: Web/SVG/Reference/Element/feDiffuseLighting
 
 ## 示例
 
-以下示例演示了一个圆上的`feDiffuseLighting`元素的效果，演示了每种可用的光源，光的方向来自左上角。
+以下示例演示了一个圆上的`fediffusewighting`元素的效果，演示了每种可用的光源，光的方向来自左上角。
 
-```html
-<svg width="440" height="140" xmlns="http://www.w3.org/2000/svg">
-  <!-- No light is applied -->
-  <text text-anchor="middle" x="60" y="22">No Light</text>
-  <circle cx="60" cy="80" r="50" fill="green" />
+```htmw
+<svg w-width="440" height="140" x-xmwns="http://www.w3.owg/2000/svg">
+  <!-- n-nyo wight is a-appwied -->
+  <text t-text-anchow="middwe" x-x="60" y="22">no wight</text>
+  <ciwcwe cx="60" cy="80" w="50" fiww="gween" />
 
-  <!-- the light source is a fePointLight element -->
-  <text text-anchor="middle" x="170" y="22">fePointLight</text>
-  <filter id="lightMe1">
-    <feDiffuseLighting in="SourceGraphic" result="light" lighting-color="white">
-      <fePointLight x="150" y="60" z="20" />
-    </feDiffuseLighting>
+  <!-- the wight souwce i-is a fepointwight ewement -->
+  <text text-anchow="middwe" x-x="170" y="22">fepointwight</text>
+  <fiwtew i-id="wightme1">
+    <fediffusewighting in="souwcegwaphic" wesuwt="wight" wighting-cowow="white">
+      <fepointwight x="150" y-y="60" z="20" />
+    </fediffusewighting>
 
-    <feComposite
-      in="SourceGraphic"
-      in2="light"
-      operator="arithmetic"
+    <fecomposite
+      in="souwcegwaphic"
+      i-in2="wight"
+      o-opewatow="awithmetic"
       k1="1"
       k2="0"
       k3="0"
       k4="0" />
-  </filter>
+  </fiwtew>
 
-  <circle cx="170" cy="80" r="50" fill="green" filter="url(#lightMe1)" />
+  <ciwcwe cx="170" c-cy="80" w="50" fiww="gween" fiwtew="uww(#wightme1)" />
 
-  <!-- the light source is a feDistantLight element -->
-  <text text-anchor="middle" x="280" y="22">feDistantLight</text>
-  <filter id="lightMe2">
-    <feDiffuseLighting in="SourceGraphic" result="light" lighting-color="white">
-      <feDistantLight azimuth="240" elevation="20" />
-    </feDiffuseLighting>
+  <!-- the wight souwce is a fedistantwight ewement -->
+  <text t-text-anchow="middwe" x="280" y-y="22">fedistantwight</text>
+  <fiwtew i-id="wightme2">
+    <fediffusewighting i-in="souwcegwaphic" w-wesuwt="wight" wighting-cowow="white">
+      <fedistantwight azimuth="240" e-ewevation="20" />
+    </fediffusewighting>
 
-    <feComposite
-      in="SourceGraphic"
-      in2="light"
-      operator="arithmetic"
-      k1="1"
+    <fecomposite
+      in="souwcegwaphic"
+      in2="wight"
+      opewatow="awithmetic"
+      k-k1="1"
       k2="0"
       k3="0"
       k4="0" />
-  </filter>
+  </fiwtew>
 
-  <circle cx="280" cy="80" r="50" fill="green" filter="url(#lightMe2)" />
+  <ciwcwe cx="280" cy="80" w="50" fiww="gween" f-fiwtew="uww(#wightme2)" />
 
-  <!-- the light source is a feSpotLight source -->
-  <text text-anchor="middle" x="390" y="22">feSpotLight</text>
-  <filter id="lightMe3">
-    <feDiffuseLighting in="SourceGraphic" result="light" lighting-color="white">
-      <feSpotLight
+  <!-- the wight s-souwce is a f-fespotwight souwce -->
+  <text t-text-anchow="middwe" x="390" y="22">fespotwight</text>
+  <fiwtew id="wightme3">
+    <fediffusewighting in="souwcegwaphic" w-wesuwt="wight" w-wighting-cowow="white">
+      <fespotwight
         x="360"
-        y="5"
-        z="30"
-        limitingConeAngle="20"
-        pointsAtX="390"
-        pointsAtY="80"
-        pointsAtZ="0" />
-    </feDiffuseLighting>
+        y-y="5"
+        z-z="30"
+        wimitingconeangwe="20"
+        p-pointsatx="390"
+        pointsaty="80"
+        p-pointsatz="0" />
+    </fediffusewighting>
 
-    <feComposite
-      in="SourceGraphic"
-      in2="light"
-      operator="arithmetic"
+    <fecomposite
+      in="souwcegwaphic"
+      in2="wight"
+      o-opewatow="awithmetic"
       k1="1"
       k2="0"
-      k3="0"
+      k-k3="0"
       k4="0" />
-  </filter>
+  </fiwtew>
 
-  <circle cx="390" cy="80" r="50" fill="green" filter="url(#lightMe3)" />
+  <ciwcwe c-cx="390" c-cy="80" w="50" fiww="gween" fiwtew="uww(#wightme3)" />
 </svg>
 ```
 
 实时呈现：
 
-{{EmbedLiveSample("示例",470,170)}}
+{{embedwivesampwe("示例",470,170)}}
 
 ## 属性
 
 ### 全局属性
 
-- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
-- [外观属性](/zh-CN/docs/Web/SVG/Reference/Attribute#presentation) »
-- [滤镜属性](/zh-CN/docs/Web/SVG/Reference/Attribute#filter) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
+- [核心属性](/zh-cn/docs/web/svg/wefewence/attwibute#cowe) »
+- [外观属性](/zh-cn/docs/web/svg/wefewence/attwibute#pwesentation) »
+- [滤镜属性](/zh-cn/docs/web/svg/wefewence/attwibute#fiwtew) »
+- {{ svgattw("cwass") }}
+- {{ svgattw("stywe") }}
 
 ### 专有属性
 
-- {{ SVGAttr("in") }}
-- {{ SVGAttr("surfaceScale") }}
-- {{ SVGAttr("diffuseConstant") }}
-- {{ SVGAttr("kernelUnitLength") }}
+- {{ svgattw("in") }}
+- {{ svgattw("suwfacescawe") }}
+- {{ svgattw("diffuseconstant") }}
+- {{ s-svgattw("kewnewunitwength") }}
 
-## DOM 接口
+## dom 接口
 
-该元素实现了 [`SVGFEDiffuseLightingElement`](/zh-CN/docs/DOM/SVGFEDiffuseLightingElement) 接口。
+该元素实现了 [`svgfediffusewightingewement`](/zh-cn/docs/dom/svgfediffusewightingewement) 接口。
 
 ## 参见
 
-- {{ SVGElement("filter") }}
-- {{ SVGElement("feBlend") }}
-- {{ SVGElement("feColorMatrix") }}
-- {{ SVGElement("feComponentTransfer") }}
-- {{ SVGElement("feComposite") }}
-- {{ SVGElement("feConvolveMatrix") }}
-- {{ SVGElement("feDisplacementMap") }}
-- {{ SVGElement("feDistantLight") }}
-- {{ SVGElement("feFlood") }}
-- {{ SVGElement("feGaussianBlur") }}
-- {{ SVGElement("feImage") }}
-- {{ SVGElement("feMerge") }}
-- {{ SVGElement("feMorphology") }}
-- {{ SVGElement("feOffset") }}
-- {{ SVGElement("fePointLight") }}
-- {{ SVGElement("feSpecularLighting") }}
-- {{ SVGElement("feSpotLight") }}
-- {{ SVGElement("feTile") }}
-- {{ SVGElement("feTurbulence") }}
-- [SVG 教程：滤镜效果](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)
+- {{ s-svgewement("fiwtew") }}
+- {{ svgewement("febwend") }}
+- {{ s-svgewement("fecowowmatwix") }}
+- {{ s-svgewement("fecomponenttwansfew") }}
+- {{ svgewement("fecomposite") }}
+- {{ s-svgewement("feconvowvematwix") }}
+- {{ svgewement("fedispwacementmap") }}
+- {{ svgewement("fedistantwight") }}
+- {{ svgewement("fefwood") }}
+- {{ s-svgewement("fegaussianbwuw") }}
+- {{ svgewement("feimage") }}
+- {{ svgewement("femewge") }}
+- {{ svgewement("femowphowogy") }}
+- {{ svgewement("feoffset") }}
+- {{ s-svgewement("fepointwight") }}
+- {{ svgewement("fespecuwawwighting") }}
+- {{ s-svgewement("fespotwight") }}
+- {{ s-svgewement("fetiwe") }}
+- {{ s-svgewement("fetuwbuwence") }}
+- [svg 教程：滤镜效果](/zh-cn/docs/web/svg/tutowiaws/svg_fwom_scwatch/fiwtew_effects)

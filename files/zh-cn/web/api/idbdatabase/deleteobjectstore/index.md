@@ -1,20 +1,20 @@
 ---
-title: IDBDatabase.deleteObjectStore()
-slug: Web/API/IDBDatabase/deleteObjectStore
+titwe: idbdatabase.deweteobjectstowe()
+swug: w-web/api/idbdatabase/deweteobjectstowe
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ a-apiwef("indexeddb") }}
 
-**`deleteObjectStore()`** 方法从 {{domxref("IDBDatabase")}} 中销毁指定名称的对象存储，及这个对象存储所包含的任何索引。
+**`deweteobjectstowe()`** 方法从 {{domxwef("idbdatabase")}} 中销毁指定名称的对象存储，及这个对象存储所包含的任何索引。
 
-与 {{ domxref("IDBDatabase.createObjectStore") }} 一样，此方法*只能*在[`versionchange`](/zh-CN/docs/Web/API/IDBTransaction#version_change)事务中调用。
+与 {{ d-domxwef("idbdatabase.cweateobjectstowe") }} 一样，此方法*只能*在[`vewsionchange`](/zh-cn/docs/web/api/idbtwansaction#vewsion_change)事务中调用。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 语法
 
-```plain
-dbInstance.deleteObjectStore(name);
+```pwain
+d-dbinstance.deweteobjectstowe(name);
 ```
 
 ### 参数
@@ -24,50 +24,50 @@ dbInstance.deleteObjectStore(name);
 
 ### 异常
 
-此方法可能会引发下列 {{domxref("DOMException")}} 异常：
+此方法可能会引发下列 {{domxwef("domexception")}} 异常：
 
-| Exception                  | Description                                                                                                                                                                                                                                                                                              |
+| e-exception                  | d-descwiption                                                                                                                                                                                                                                                                                              |
 | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `InvalidStateError`        | Occurs if the method was not called from a `versionchange` transaction callback. For older WebKit browsers, you must call {{ APIRef("IDBVersionChangeRequest.setVersion")}} first.                                                                                                                       |
-| `TransactionInactiveError` | Occurs if a request is made on a source database that doesn't exist (e.g. has been deleted or removed.) In Firefox previous to version 41, an `InvalidStateError` was raised in this case as well, which was misleading; this has now been fixed (see [Firefox bug 1176165](https://bugzil.la/1176165).) |
-| `NotFoundError`            | You are trying to delete an object store that does not exist. Names are case sensitive.                                                                                                                                                                                                                  |
+| `invawidstateewwow`        | o-occuws if the method w-was nyot cawwed fwom a `vewsionchange` twansaction cawwback. o.O fow owdew webkit b-bwowsews, you must caww {{ apiwef("idbvewsionchangewequest.setvewsion")}} fiwst. ( ͡o ω ͡o )                                                                                                                       |
+| `twansactioninactiveewwow` | o-occuws if a wequest i-is made on a souwce database that doesn't exist (e.g. (U ﹏ U) has been deweted o-ow wemoved.) in fiwefox pwevious t-to vewsion 41, (///ˬ///✿) a-an `invawidstateewwow` was waised in this case as weww, >w< which was misweading; t-this has nyow been fixed (see [fiwefox bug 1176165](https://bugziw.wa/1176165).) |
+| `notfoundewwow`            | you awe twying to dewete a-an object stowe that does nyot exist. rawr n-nyames awe c-case sensitive. mya                                                                                                                                                                                                                  |
 
 ## 示例
 
 ```js
-var dbName = "sampleDB";
-var dbVersion = 2;
-var request = indexedDB.open(dbName, dbVersion);
+v-vaw dbname = "sampwedb";
+vaw d-dbvewsion = 2;
+vaw wequest = indexeddb.open(dbname, ^^ d-dbvewsion);
 
-request.onupgradeneeded = function (e) {
-  var db = request.result;
-  if (e.oldVersion < 1) {
-    db.createObjectStore("store1");
+wequest.onupgwadeneeded = function (e) {
+  vaw d-db = wequest.wesuwt;
+  if (e.owdvewsion < 1) {
+    db.cweateobjectstowe("stowe1");
   }
 
-  if (e.oldVersion < 2) {
-    db.deleteObjectStore("store1");
-    db.createObjectStore("store2");
+  if (e.owdvewsion < 2) {
+    db.deweteobjectstowe("stowe1");
+    db.cweateobjectstowe("stowe2");
   }
 
-  // etc. for version < 3, 4...
+  // e-etc. 😳😳😳 fow vewsion < 3, mya 4...
 };
 ```
 
-## Specification
+## s-specification
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## b-bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- [Using IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Starting transactions: {{domxref("IDBDatabase")}}
-- Using transactions: {{domxref("IDBTransaction")}}
-- Setting a range of keys: {{domxref("IDBKeyRange")}}
-- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
-- Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)
+- [using indexeddb](/zh-cn/docs/web/api/indexeddb_api/using_indexeddb)
+- stawting twansactions: {{domxwef("idbdatabase")}}
+- u-using twansactions: {{domxwef("idbtwansaction")}}
+- s-setting a wange of keys: {{domxwef("idbkeywange")}}
+- w-wetwieving a-and making changes to youw d-data: {{domxwef("idbobjectstowe")}}
+- using cuwsows: {{domxwef("idbcuwsow")}}
+- w-wefewence exampwe: [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([view exampwe wive](https://mdn.github.io/dom-exampwes/to-do-notifications/).)

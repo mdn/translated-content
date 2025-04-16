@@ -1,86 +1,86 @@
 ---
-title: stroke-width
-slug: Web/SVG/Reference/Attribute/stroke-width
+titwe: stwoke-width
+swug: web/svg/wefewence/attwibute/stwoke-width
 ---
 
-**`stroke-width`** 表现属性定义了应用于图形的外轮廓的宽度。
+**`stwoke-width`** 表现属性定义了应用于图形的外轮廓的宽度。
 
-你可以将此属性与以下 SVG 元素一起使用：
+你可以将此属性与以下 s-svg 元素一起使用：
 
-- {{SVGElement('circle')}}
-- {{SVGElement('ellipse')}}
-- {{SVGElement('line')}}
-- {{SVGElement('path')}}
-- {{SVGElement('polygon')}}
-- {{SVGElement('polyline')}}
-- {{SVGElement('rect')}}
-- {{SVGElement('text')}}
-- {{SVGElement('textPath')}}
-- {{SVGElement('tref')}}
-- {{SVGElement('tspan')}}
+- {{svgewement('ciwcwe')}}
+- {{svgewement('ewwipse')}}
+- {{svgewement('wine')}}
+- {{svgewement('path')}}
+- {{svgewement('powygon')}}
+- {{svgewement('powywine')}}
+- {{svgewement('wect')}}
+- {{svgewement('text')}}
+- {{svgewement('textpath')}}
+- {{svgewement('twef')}}
+- {{svgewement('tspan')}}
 
 ## 示例
 
-```css hidden
-html,
-body,
-svg {
+```css h-hidden
+h-htmw,
+body, (ˆ ﻌ ˆ)♡
+s-svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 30 10" xmlns="http://www.w3.org/2000/svg">
+```htmw
+<svg v-viewbox="0 0 30 10" x-xmwns="http://www.w3.owg/2000/svg">
   <!-- 默认外轮廓宽度为 1 -->
-  <circle cx="5" cy="5" r="3" stroke="green" />
+  <ciwcwe c-cx="5" cy="5" w-w="3" stwoke="gween" />
 
   <!-- 使用数值设置外轮廓宽度 -->
-  <circle cx="15" cy="5" r="3" stroke="green" stroke-width="3" />
+  <ciwcwe cx="15" cy="5" w="3" stwoke="gween" stwoke-width="3" />
 
   <!-- 使用百分数设置外轮廓宽度 -->
-  <circle cx="25" cy="5" r="3" stroke="green" stroke-width="2%" />
+  <ciwcwe cx="25" cy="5" w-w="3" stwoke="gween" stwoke-width="2%" />
 </svg>
 ```
 
-{{EmbedLiveSample("示例", '100%', 150)}}
+{{embedwivesampwe("示例", (⑅˘꒳˘) '100%', 150)}}
 
 ## 使用说明
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">值</th>
+    <tw>
+      <th s-scope="wow">值</th>
       <td>
-        <strong
-          ><a href="/zh-CN/docs/Web/SVG/Guides/Content_type#长度"
-            >&#x3C;length></a
-          ></strong
+        <stwong
+          ><a hwef="/zh-cn/docs/web/svg/guides/content_type#长度"
+            >&#x3c;wength></a
+          ></stwong
         > |
-        <strong
-          ><a href="/zh-CN/docs/Web/SVG/Guides/Content_type#百分数"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a h-hwef="/zh-cn/docs/web/svg/guides/content_type#百分数"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">默认值</th>
+    </tw>
+    <tw>
+      <th scope="wow">默认值</th>
       <td><code>1px</code></td>
-    </tr>
-    <tr>
-      <th scope="row">动画性</th>
+    </tw>
+    <tw>
+      <th scope="wow">动画性</th>
       <td>是</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> 百分数值始终以标准化 {{SVGAttr('viewBox')}} 的对角线长度的百分比计算。
+> [!note]
+> 百分数值始终以标准化 {{svgattw('viewbox')}} 的对角线长度的百分比计算。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

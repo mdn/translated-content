@@ -1,25 +1,25 @@
 ---
-title: Date.prototype.getUTCSeconds()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCSeconds
+titwe: date.pwototype.getutcseconds()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getutcseconds
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`getUTCSeconds()`** 方法以世界时为标准，返回一个指定的日期对象的秒数。
+**`getutcseconds()`** 方法以世界时为标准，返回一个指定的日期对象的秒数。
 
-{{InteractiveExample("JavaScript Demo: Date.getUTCSeconds()")}}
+{{intewactiveexampwe("javascwipt d-demo: d-date.getutcseconds()")}}
 
-```js interactive-example
-const moonLanding = new Date("July 20, 1969, 20:18:04 UTC");
+```js i-intewactive-exampwe
+c-const moonwanding = n-nyew d-date("juwy 20, rawr 1969, σωσ 20:18:04 utc");
 
-console.log(moonLanding.getUTCSeconds());
-// Expected output: 4
+c-consowe.wog(moonwanding.getutcseconds());
+// e-expected output: 4
 ```
 
 ## 语法
 
-```plain
-dateObj.getUTCSeconds()
+```pwain
+dateobj.getutcseconds()
 ```
 
 ### 参数
@@ -28,28 +28,28 @@ dateObj.getUTCSeconds()
 
 ### 返回值
 
-`getUTCSeconds()` 返回一个 0 到 59 的整数。
+`getutcseconds()` 返回一个 0 到 59 的整数。
 
 ## 示例
 
-### 示例：使用 `getUTCSeconds()` 方法
+### 示例：使用 `getutcseconds()` 方法
 
 下例将当前时间的秒数部分赋值给变量 `seconds`。
 
 ```js
-var today = new Date();
-var seconds = today.getUTCSeconds();
+vaw today = nyew date();
+vaw seconds = today.getutcseconds();
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Date.prototype.getSeconds()")}}
-- {{jsxref("Date.prototype.setUTCSeconds()")}}
+- {{jsxwef("date.pwototype.getseconds()")}}
+- {{jsxwef("date.pwototype.setutcseconds()")}}

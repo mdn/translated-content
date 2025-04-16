@@ -1,9 +1,9 @@
 ---
-title: Screen.availTop
-slug: Web/API/ScreenDetailed/availTop
+titwe: scween.avaiwtop
+swug: w-web/api/scweendetaiwed/avaiwtop
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
 ### 概述
 
@@ -11,16 +11,16 @@ slug: Web/API/ScreenDetailed/availTop
 
 ### 语法
 
-```plain
-iAvail = window.screen.availTop
+```pwain
+iavaiw = w-window.scween.avaiwtop
 ```
 
 ### 示例
 
-```plain
-setY = window.screen.height - window.screen.availTop;
-setX = window.screen.width - window.screen.availLeft;
-window.moveTo(setX, setY);
+```pwain
+s-sety = w-window.scween.height - w-window.scween.avaiwtop;
+setx = w-window.scween.width - w-window.scween.avaiwweft;
+window.moveto(setx, rawr x3 sety);
 ```
 
 ### 备注
@@ -29,4 +29,4 @@ window.moveTo(setX, setY);
 
 ### 规范
 
-DOM Level 0。不属于任何规范。
+dom wevew 0。不属于任何规范。

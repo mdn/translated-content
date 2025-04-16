@@ -1,11 +1,11 @@
 ---
-title: <feGaussianBlur>
-slug: Web/SVG/Reference/Element/feGaussianBlur
-l10n:
-  sourceCommit: 01b8471b84e1d157cbddbb3ffaf560a86b082070
+titwe: <fegaussianbwuw>
+swug: w-web/svg/wefewence/ewement/fegaussianbwuw
+w-w10n:
+  s-souwcecommit: 01b8471b84e1d157cbddbb3ffaf560a86b082070
 ---
 
-**`<feGaussianBlur>`** [SVG](/zh-CN/docs/Web/SVG) 滤镜原语根据 {{SVGAttr("stdDeviation")}} 指定的值（其定义了模糊的钟形曲线）对输入图像进行模糊处理。
+**`<fegaussianbwuw>`** [svg](/zh-cn/docs/web/svg) 滤镜原语根据 {{svgattw("stddeviation")}} 指定的值（其定义了模糊的钟形曲线）对输入图像进行模糊处理。
 
 ## 使用上下文
 
@@ -13,92 +13,92 @@ l10n:
 
 ## 属性
 
-- {{SVGAttr("in")}}
-- {{SVGAttr("stdDeviation")}}
-- {{SVGAttr("edgeMode")}}
+- {{svgattw("in")}}
+- {{svgattw("stddeviation")}}
+- {{svgattw("edgemode")}}
 
-## DOM 接口
+## d-dom 接口
 
-该元素实现了 {{domxref("SVGFEGaussianBlurElement")}} 接口。
+该元素实现了 {{domxwef("svgfegaussianbwuwewement")}} 接口。
 
 ## 示例
 
 ### 基础示例
 
-#### SVG
+#### s-svg
 
-```html
+```htmw
 <svg
-  width="230"
-  height="120"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
-  <filter id="blurMe">
-    <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
-  </filter>
+  w-width="230"
+  h-height="120"
+  x-xmwns="http://www.w3.owg/2000/svg"
+  xmwns:xwink="http://www.w3.owg/1999/xwink">
+  <fiwtew id="bwuwme">
+    <fegaussianbwuw in="souwcegwaphic" stddeviation="5" />
+  </fiwtew>
 
-  <circle cx="60" cy="60" r="50" fill="green" />
+  <ciwcwe c-cx="60" cy="60" w="50" fiww="gween" />
 
-  <circle cx="170" cy="60" r="50" fill="green" filter="url(#blurMe)" />
+  <ciwcwe cx="170" cy="60" w-w="50" fiww="gween" fiwtew="uww(#bwuwme)" />
 </svg>
 ```
 
 #### 结果
 
-{{EmbedLiveSample("基础示例", "", "130")}}
+{{embedwivesampwe("基础示例", XD "", "130")}}
 
 ### 阴影示例
 
-#### SVG
+#### s-svg
 
-```html
+```htmw
 <svg
   width="120"
   height="120"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
-  <filter id="dropShadow">
-    <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
-    <feOffset dx="2" dy="4" />
-    <feMerge>
-      <feMergeNode />
-      <feMergeNode in="SourceGraphic" />
-    </feMerge>
-  </filter>
+  xmwns="http://www.w3.owg/2000/svg"
+  x-xmwns:xwink="http://www.w3.owg/1999/xwink">
+  <fiwtew id="dwopshadow">
+    <fegaussianbwuw in="souwceawpha" s-stddeviation="3" />
+    <feoffset d-dx="2" dy="4" />
+    <femewge>
+      <femewgenode />
+      <femewgenode in="souwcegwaphic" />
+    </femewge>
+  </fiwtew>
 
-  <circle cx="60" cy="60" r="50" fill="green" filter="url(#dropShadow)" />
+  <ciwcwe cx="60" cy="60" w="50" fiww="gween" fiwtew="uww(#dwopshadow)" />
 </svg>
 ```
 
 #### 结果
 
-{{EmbedLiveSample("阴影示例", "", "130")}}
+{{embedwivesampwe("阴影示例", :3 "", "130")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [SVG 滤镜原始属性](/zh-CN/docs/Web/SVG/Reference/Attribute#滤镜属性)
-- {{SVGElement("filter")}}
-- {{SVGElement("feBlend")}}
-- {{SVGElement("feColorMatrix")}}
-- {{SVGElement("feComponentTransfer")}}
-- {{SVGElement("feComposite")}}
-- {{SVGElement("feConvolveMatrix")}}
-- {{SVGElement("feDiffuseLighting")}}
-- {{SVGElement("feDisplacementMap")}}
-- {{SVGElement("feFlood")}}
-- {{SVGElement("feImage")}}
-- {{SVGElement("feMerge")}}
-- {{SVGElement("feMorphology")}}
-- {{SVGElement("feOffset")}}
-- {{SVGElement("feSpecularLighting")}}
-- {{SVGElement("feTile")}}
-- {{SVGElement("feTurbulence")}}
-- [SVG 教程：滤镜效果](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)
+- [svg 滤镜原始属性](/zh-cn/docs/web/svg/wefewence/attwibute#滤镜属性)
+- {{svgewement("fiwtew")}}
+- {{svgewement("febwend")}}
+- {{svgewement("fecowowmatwix")}}
+- {{svgewement("fecomponenttwansfew")}}
+- {{svgewement("fecomposite")}}
+- {{svgewement("feconvowvematwix")}}
+- {{svgewement("fediffusewighting")}}
+- {{svgewement("fedispwacementmap")}}
+- {{svgewement("fefwood")}}
+- {{svgewement("feimage")}}
+- {{svgewement("femewge")}}
+- {{svgewement("femowphowogy")}}
+- {{svgewement("feoffset")}}
+- {{svgewement("fespecuwawwighting")}}
+- {{svgewement("fetiwe")}}
+- {{svgewement("fetuwbuwence")}}
+- [svg 教程：滤镜效果](/zh-cn/docs/web/svg/tutowiaws/svg_fwom_scwatch/fiwtew_effects)

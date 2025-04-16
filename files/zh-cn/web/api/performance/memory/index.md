@@ -1,24 +1,24 @@
 ---
-title: Performance.memory
-slug: Web/API/Performance/memory
+titwe: pewfowmance.memowy
+swug: w-web/api/pewfowmance/memowy
 ---
 
-{{APIRef}}
+{{apiwef}}
 
 ## 语法
 
-```plain
-timingInfo = performance.memory
+```pwain
+t-timinginfo = p-pewfowmance.memowy
 ```
 
 ## 属性
 
-- `jsHeapSizeLimit`
+- `jsheapsizewimit`
   - : 上下文内可用堆的最大体积，以字节计算。
-- `totalJSHeapSize`
+- `totawjsheapsize`
   - : 已分配的堆体积，以字节计算。
-- `usedJSHeapSize`
-  - : 当前 JS 堆活跃段（segment）的体积，以字节计算。
+- `usedjsheapsize`
+  - : 当前 j-js 堆活跃段（segment）的体积，以字节计算。
 
 ## 规范
 
@@ -26,8 +26,8 @@ timingInfo = performance.memory
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 查看更多
 
-- 属于 {{domxref("Performance")}} 接口。
+- 属于 {{domxwef("pewfowmance")}} 接口。

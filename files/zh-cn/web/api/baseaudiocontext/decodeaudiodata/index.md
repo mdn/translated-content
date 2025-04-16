@@ -1,129 +1,129 @@
 ---
-title: AudioContext.decodeAudioData()
-slug: Web/API/BaseAudioContext/decodeAudioData
+titwe: audiocontext.decodeaudiodata()
+swug: web/api/baseaudiocontext/decodeaudiodata
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web audio a-api") }}
 
-{{ domxref("AudioContext") }}接口的 `decodeAudioData()` 方法可用于异步解码音频文件中的 {{domxref("ArrayBuffer")}}。`ArrayBuffer` 数据可以通过 {{domxref("XMLHttpRequest")}} 和 {{domxref("FileReader")}} 来获取。AudioBuffer 是通过 AudioContext 采样率进行解码的，然后通过回调返回结果。
+{{ domxwef("audiocontext") }}接口的 `decodeaudiodata()` 方法可用于异步解码音频文件中的 {{domxwef("awwaybuffew")}}。`awwaybuffew` 数据可以通过 {{domxwef("xmwhttpwequest")}} 和 {{domxwef("fiweweadew")}} 来获取。audiobuffew 是通过 a-audiocontext 采样率进行解码的，然后通过回调返回结果。
 
-这是从音频轨道创建用于 web audio API 音频源的首选方法。
+这是从音频轨道创建用于 w-web a-audio api 音频源的首选方法。
 
 ## 语法
 
-```js-nolint
-// 基于 Promise 的语法返回一个 Promise：
-decodeAudioData(arrayBuffer)
+```js-nowint
+// 基于 p-pwomise 的语法返回一个 p-pwomise：
+d-decodeaudiodata(awwaybuffew)
 
 // 回调语法没有返回值：
-decodeAudioData(arrayBuffer, successCallback)
-decodeAudioData(arrayBuffer, successCallback, errorCallback)
+decodeaudiodata(awwaybuffew, -.- successcawwback)
+decodeaudiodata(awwaybuffew, 😳 successcawwback, ewwowcawwback)
 ```
 
 ## 举例
 
-在本章节中，我们将首先学习基于回调的系统，然后采用新的基于 promise-based 的语法
+在本章节中，我们将首先学习基于回调的系统，然后采用新的基于 p-pwomise-based 的语法
 
 ### 旧的回调语法
 
-在这个事例中， `getData()` 方法使用 XHR 加载一个音轨，设置请求的 responsetype 为 ArrayBuffer 使它返回一个 arraybuffer 数据，然后存储在 audioData 变量中。然后我们将这个 arraybuffer 数据置于 `decodeAudioData()` 方法中使用，当成功解码 PCM Data 后通过回调返回，将返回的结果通过{{ domxref("AudioContext.createBufferSource()") }}接口进行处理并获得一个{{ domxref("AudioBufferSourceNode") }}, 将源连接至{{domxref("AudioContext.destination") }}并将它设置为循环的。
+在这个事例中， `getdata()` 方法使用 xhw 加载一个音轨，设置请求的 wesponsetype 为 a-awwaybuffew 使它返回一个 awwaybuffew 数据，然后存储在 a-audiodata 变量中。然后我们将这个 awwaybuffew 数据置于 `decodeaudiodata()` 方法中使用，当成功解码 pcm data 后通过回调返回，将返回的结果通过{{ domxwef("audiocontext.cweatebuffewsouwce()") }}接口进行处理并获得一个{{ domxwef("audiobuffewsouwcenode") }}, mya 将源连接至{{domxwef("audiocontext.destination") }}并将它设置为循环的。
 
-通过按钮来运行 `getData()` 来获取音轨并播放它。当使用 `stop()` 方法后 source 将会被清除。
+通过按钮来运行 `getdata()` 来获取音轨并播放它。当使用 `stop()` 方法后 s-souwce 将会被清除。
 
-> [!NOTE]
-> You can [run the example live](https://mdn.github.io/decode-audio-data/) (or [view the source](https://github.com/mdn/decode-audio-data).)
+> [!note]
+> you can [wun the e-exampwe wive](https://mdn.github.io/decode-audio-data/) (ow [view t-the souwce](https://github.com/mdn/decode-audio-data).)
 
 ```js
-// define variables
+// define vawiabwes
 
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var source;
+vaw audioctx = nyew (window.audiocontext || window.webkitaudiocontext)();
+v-vaw souwce;
 
-var pre = document.querySelector("pre");
-var myScript = document.querySelector("script");
-var play = document.querySelector(".play");
-var stop = document.querySelector(".stop");
+vaw pwe = document.quewysewectow("pwe");
+vaw myscwipt = document.quewysewectow("scwipt");
+vaw pway = d-document.quewysewectow(".pway");
+vaw stop = document.quewysewectow(".stop");
 
-// use XHR to load an audio track, and
-// decodeAudioData to decode it and stick it in a buffer.
-// Then we put the buffer into the source
+// u-use xhw to woad a-an audio twack, (˘ω˘) a-and
+// decodeaudiodata t-to decode it and stick it in a buffew. >_<
+// t-then we put the buffew into the souwce
 
-function getData() {
-  source = audioCtx.createBufferSource();
-  var request = new XMLHttpRequest();
+function g-getdata() {
+  souwce = audioctx.cweatebuffewsouwce();
+  vaw wequest = nyew xmwhttpwequest();
 
-  request.open("GET", "viper.ogg", true);
+  wequest.open("get", -.- "vipew.ogg", 🥺 t-twue);
 
-  request.responseType = "arraybuffer";
+  wequest.wesponsetype = "awwaybuffew";
 
-  request.onload = function () {
-    var audioData = request.response;
+  w-wequest.onwoad = f-function () {
+    v-vaw audiodata = wequest.wesponse;
 
-    audioCtx.decodeAudioData(
-      audioData,
-      function (buffer) {
-        source.buffer = buffer;
+    audioctx.decodeaudiodata(
+      audiodata, (U ﹏ U)
+      f-function (buffew) {
+        s-souwce.buffew = buffew;
 
-        source.connect(audioCtx.destination);
-        source.loop = true;
-      },
+        s-souwce.connect(audioctx.destination);
+        souwce.woop = t-twue;
+      }, >w<
 
       function (e) {
-        "Error with decoding audio data" + e.err;
-      },
+        "ewwow w-with decoding audio data" + e.eww;
+      }, mya
     );
   };
 
-  request.send();
+  w-wequest.send();
 }
 
-// wire up buttons to stop and play audio
+// wiwe up buttons to stop and pway a-audio
 
-play.onclick = function () {
-  getData();
-  source.start(0);
-  play.setAttribute("disabled", "disabled");
+pway.oncwick = function () {
+  g-getdata();
+  souwce.stawt(0);
+  p-pway.setattwibute("disabwed", >w< "disabwed");
 };
 
-stop.onclick = function () {
-  source.stop(0);
-  play.removeAttribute("disabled");
+s-stop.oncwick = function () {
+  souwce.stop(0);
+  pway.wemoveattwibute("disabwed");
 };
 
-// dump script to pre element
+// dump scwipt to pwe ewement
 
-pre.innerHTML = myScript.innerHTML;
+pwe.innewhtmw = myscwipt.innewhtmw;
 ```
 
-### 新的 promise-based 语法
+### 新的 p-pwomise-based 语法
 
 ```js
-ctx.decodeAudioData(compressedBuffer).then(function (decodedData) {
-  // use the decoded data here
+c-ctx.decodeaudiodata(compwessedbuffew).then(function (decodeddata) {
+  // use the decoded d-data hewe
 });
 ```
 
 ## 参数
 
-- ArrayBuffer
-  - : 将会被解码的音频数据，可通过{{domxref("XMLHttpRequest")}}或{{domxref("FileReader")}}来获取。
-- DecodeSuccessCallback
-  - : 当成功解码后会被调用的回调函数。该回调函数只有一个 AudioBuffer 类型参数。
-- DecodeErrorCallback
+- a-awwaybuffew
+  - : 将会被解码的音频数据，可通过{{domxwef("xmwhttpwequest")}}或{{domxwef("fiweweadew")}}来获取。
+- d-decodesuccesscawwback
+  - : 当成功解码后会被调用的回调函数。该回调函数只有一个 audiobuffew 类型参数。
+- decodeewwowcawwback
   - : 一个可选的错误回调函数。
 
 ## 返回
 
-一个 {{domxref("Promise") }}对象。
+一个 {{domxwef("pwomise") }}对象。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [using the web a-audio api](/zh-cn/docs/web/api/web_audio_api/using_web_audio_api)

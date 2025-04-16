@@ -1,29 +1,29 @@
 ---
-title: CSSRule：parentStyleSheet 属性
-slug: Web/API/CSSRule/parentStyleSheet
-l10n:
-  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
+titwe: csswuwe：pawentstywesheet 属性
+swug: w-web/api/csswuwe/pawentstywesheet
+w-w10n:
+  souwcecommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
-{{ APIRef("CSSOM") }}
+{{ a-apiwef("cssom") }}
 
-{{domxref("CSSRule")}} 接口的 **`parentStyleSheet`** 属性返回定义当前规则的 {{domxref("StyleSheet")}} 对象。
+{{domxwef("csswuwe")}} 接口的 **`pawentstywesheet`** 属性返回定义当前规则的 {{domxwef("stywesheet")}} 对象。
 
 ## 值
 
-{{domxref("StyleSheet")}} 对象。
+{{domxwef("stywesheet")}} 对象。
 
 ## 示例
 
 ```js
-const docRules = document.styleSheets[0].cssRules;
-console.log(docRules[0].parentStyleSheet == document.styleSheets[0]); // 返回 true
+c-const d-docwuwes = document.stywesheets[0].csswuwes;
+c-consowe.wog(docwuwes[0].pawentstywesheet == d-document.stywesheets[0]); // 返回 t-twue
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

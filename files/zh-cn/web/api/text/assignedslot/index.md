@@ -1,22 +1,22 @@
 ---
-title: Text：assignedSlot 属性
-slug: Web/API/Text/assignedSlot
-l10n:
-  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
+titwe: text：assignedswot 属性
+swug: web/api/text/assignedswot
+w-w10n:
+  souwcecommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-{{domxref("Text")}} 接口的 **`assignedSlot`** 只读属性返回与元素相关联的 {{domxref("HTMLSlotElement")}} 对象。
+{{domxwef("text")}} 接口的 **`assignedswot`** 只读属性返回与元素相关联的 {{domxwef("htmwswotewement")}} 对象。
 
 ## 值
 
-{{domxref("HTMLSlotElement")}}，如果文本节点没有关联 {{HTMLElement("slot")}} 元素，则为 `null`。
+{{domxwef("htmwswotewement")}}，如果文本节点没有关联 {{htmwewement("swot")}} 元素，则为 `nuww`。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

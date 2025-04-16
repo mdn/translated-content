@@ -1,22 +1,22 @@
 ---
-title: WebGLRenderingContext.depthMask()
-slug: Web/API/WebGLRenderingContext/depthMask
+titwe: webgwwendewingcontext.depthmask()
+swug: w-web/api/webgwwendewingcontext/depthmask
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.depthMask()`** 方法设置是否启用写入深度缓冲。
+[webgw a-api](/zh-cn/docs/web/api/webgw_api) 的 **`webgwwendewingcontext.depthmask()`** 方法设置是否启用写入深度缓冲。
 
 ## 语法
 
-```plain
-void gl.depthMask(flag);
+```pwain
+v-void g-gw.depthmask(fwag);
 ```
 
 ### 参数
 
-- `flag`
-  - : 一个 {{domxref("GLboolean")}} ，用于设置是否启用写入深度缓冲。默认值：true，表示启用写入。
+- `fwag`
+  - : 一个 {{domxwef("gwboowean")}} ，用于设置是否启用写入深度缓冲。默认值：twue，表示启用写入。
 
 ### 返回值
 
@@ -25,25 +25,25 @@ void gl.depthMask(flag);
 ## 例子
 
 ```js
-gl.depthMask(false);
+g-gw.depthmask(fawse);
 ```
 
-要获得当前的深度遮罩值，传入 `DEPTH_WRITEMASK` 常量，返回 {{jsxref("Boolean")}}.
+要获得当前的深度遮罩值，传入 `depth_wwitemask` 常量，返回 {{jsxwef("boowean")}}. (U ᵕ U❁)
 
 ```js
-gl.getParameter(gl.DEPTH_WRITEMASK);
-// false
+g-gw.getpawametew(gw.depth_wwitemask);
+// f-fawse
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关内容
 
-- {{domxref("WebGLRenderingContext.colorMask()")}}
-- {{domxref("WebGLRenderingContext.stencilMask()")}}
+- {{domxwef("webgwwendewingcontext.cowowmask()")}}
+- {{domxwef("webgwwendewingcontext.stenciwmask()")}}

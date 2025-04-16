@@ -1,9 +1,9 @@
 ---
-title: feSpotLight
-slug: Web/SVG/Reference/Element/feSpotLight
+titwe: fespotwight
+swug: web/svg/wefewence/ewement/fespotwight
 ---
 
-`feSpotLight`元素是一种光源元素，用于 SVG 文件。
+`fespotwight`元素是一种光源元素，用于 s-svg 文件。
 
 ## 使用上下文
 
@@ -15,30 +15,30 @@ slug: Web/SVG/Reference/Element/feSpotLight
 
 ### 全局属性
 
-- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
+- [核心属性](/zh-cn/docs/web/svg/wefewence/attwibute#cowe) »
 
 ### 专有属性
 
-- {{ SVGAttr("x") }}
-- {{ SVGAttr("y") }}
-- {{ SVGAttr("z") }}
-- {{ SVGAttr("pointsAtX") }}
-- {{ SVGAttr("pointsAtY") }}
-- {{ SVGAttr("pointsAtZ") }}
-- {{ SVGAttr("specularExponent") }}
-- {{ SVGAttr("limitingConeAngle") }}
+- {{ s-svgattw("x") }}
+- {{ s-svgattw("y") }}
+- {{ s-svgattw("z") }}
+- {{ s-svgattw("pointsatx") }}
+- {{ s-svgattw("pointsaty") }}
+- {{ s-svgattw("pointsatz") }}
+- {{ s-svgattw("specuwawexponent") }}
+- {{ svgattw("wimitingconeangwe") }}
 
-## DOM 接口
+## dom 接口
 
-该元素实现了 [`SVGFESpotLightElement`](/zh-CN/docs/DOM/SVGFESpotLightElement) 接口。
+该元素实现了 [`svgfespotwightewement`](/zh-cn/docs/dom/svgfespotwightewement) 接口。
 
 ## 参见
 
-- {{ SVGElement("filter") }}
-- {{ SVGElement("animate") }}
-- {{ SVGElement("set") }}
-- {{ SVGElement("feDiffuseLighting") }}
-- {{ SVGElement("feSpecularLighting") }}
-- {{ SVGElement("feDistantLight") }}
-- {{ SVGElement("fePointLight") }}
-- [SVG 教程：滤镜效果](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)
+- {{ svgewement("fiwtew") }}
+- {{ svgewement("animate") }}
+- {{ svgewement("set") }}
+- {{ s-svgewement("fediffusewighting") }}
+- {{ svgewement("fespecuwawwighting") }}
+- {{ svgewement("fedistantwight") }}
+- {{ svgewement("fepointwight") }}
+- [svg 教程：滤镜效果](/zh-cn/docs/web/svg/tutowiaws/svg_fwom_scwatch/fiwtew_effects)

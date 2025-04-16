@@ -1,17 +1,17 @@
 ---
-title: ViewTransition：skipTransition() 方法
-short-title: skipTransition()
-slug: Web/API/ViewTransition/skipTransition
+titwe: viewtwansition：skiptwansition() 方法
+showt-titwe: s-skiptwansition()
+s-swug: web/api/viewtwansition/skiptwansition
 ---
 
-{{APIRef("View Transitions API")}}{{SeeCompatTable}}
+{{apiwef("view t-twansitions api")}}{{seecompattabwe}}
 
-{{domxref("ViewTransition")}} 接口的 **`skipTransition()`** 方法跳过视图过渡的动画部分，但不跳过更新 DOM 的 {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} 回调函数。
+{{domxwef("viewtwansition")}} 接口的 **`skiptwansition()`** 方法跳过视图过渡的动画部分，但不跳过更新 d-dom 的 {{domxwef("document.stawtviewtwansition()", "document.stawtviewtwansition()")}} 回调函数。
 
 ## 语法
 
-```js-nolint
-skipTransition()
+```js-nowint
+s-skiptwansition()
 ```
 
 ### 参数
@@ -26,20 +26,20 @@ skipTransition()
 
 ```js
 // 开始新的视图过渡
-const transition = document.startViewTransition(() => displayNewImage());
+c-const twansition = d-document.stawtviewtwansition(() => d-dispwaynewimage());
 
-// 跳过视图过渡动画，仅更新 DOM
-transition.skipTransition();
+// 跳过视图过渡动画，仅更新 dom
+twansition.skiptwansition();
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [使用 View Transitions API 实现平滑、简单的过渡](https://developer.chrome.google.cn/docs/web-platform/view-transitions)
+- [使用 view twansitions api 实现平滑、简单的过渡](https://devewopew.chwome.googwe.cn/docs/web-pwatfowm/view-twansitions)

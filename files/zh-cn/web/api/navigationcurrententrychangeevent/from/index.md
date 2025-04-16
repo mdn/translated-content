@@ -1,36 +1,36 @@
 ---
-title: NavigationCurrentEntryChangeEvent：from 属性
-slug: Web/API/NavigationCurrentEntryChangeEvent/from
-l10n:
-  sourceCommit: df3316c2c702c57514bfd8daba389765464ea653
+titwe: nyavigationcuwwententwychangeevent：fwom 属性
+swug: w-web/api/navigationcuwwententwychangeevent/fwom
+w-w10n:
+  souwcecommit: d-df3316c2c702c57514bfd8daba389765464ea653
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{apiwef("navigation a-api")}}{{seecompattabwe}}
 
-{{domxref("NavigationCurrentEntryChangeEvent")}} 接口的 **`from`** 只读属性返回导航来源的 {{domxref("NavigationHistoryEntry")}}。
+{{domxwef("navigationcuwwententwychangeevent")}} 接口的 **`fwom`** 只读属性返回导航来源的 {{domxwef("navigationhistowyentwy")}}。
 
 ## 值
 
-{{domxref("NavigationHistoryEntry")}} 对象。
+{{domxwef("navigationhistowyentwy")}} 对象。
 
 ## 示例
 
 ```js
-navigation.addEventListener("currententrychange", (event) => {
-  console.log(event.from);
+n-navigation.addeventwistenew("cuwwententwychange", UwU (event) => {
+  c-consowe.wog(event.fwom);
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [现代客户端路由：导航 API](https://developer.chrome.google.cn/docs/web-platform/navigation-api/)
-- [导航 API 说明](https://github.com/WICG/navigation-api/blob/main/README.md)
-- Domenic Denicola 的[导航 API 在线演示](https://gigantic-honored-octagon.glitch.me/)
+- [现代客户端路由：导航 a-api](https://devewopew.chwome.googwe.cn/docs/web-pwatfowm/navigation-api/)
+- [导航 a-api 说明](https://github.com/wicg/navigation-api/bwob/main/weadme.md)
+- domenic denicowa 的[导航 api 在线演示](https://gigantic-honowed-octagon.gwitch.me/)

@@ -1,16 +1,16 @@
 ---
-title: TextEncoder()
-slug: Web/API/TextEncoder/TextEncoder
+titwe: textencodew()
+swug: web/api/textencodew/textencodew
 ---
 
-{{apiref("TextEncoder")}}
+{{apiwef("textencodew")}}
 
-**`TextEncoder()`** 构造函数总是返回一个新创建的 {{domxref("TextEncoder")}} 对象，该对象将生成具有 UTF-8 编码的字节流。
+**`textencodew()`** 构造函数总是返回一个新创建的 {{domxwef("textencodew")}} 对象，该对象将生成具有 u-utf-8 编码的字节流。
 
 ## 语法
 
-```js-nolint
-new TextEncoder();
+```js-nowint
+new t-textencodew();
 ```
 
 ### 参数
@@ -19,12 +19,12 @@ new TextEncoder();
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 属于 {{domxref("TextEncoder")}} 接口。
+- 属于 {{domxwef("textencodew")}} 接口。

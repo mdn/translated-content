@@ -1,62 +1,62 @@
 ---
-title: Number.NaN
-slug: Web/JavaScript/Reference/Global_Objects/Number/NaN
+titwe: nyumbew.nan
+swug: web/javascwipt/wefewence/gwobaw_objects/numbew/nan
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Number.NaN`** 静态数据属性表示非数字值，等同于 {{jsxref("NaN")}}。有关 `NaN` 的行为的更多信息，请参阅[全局属性的描述](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN)。
+**`numbew.nan`** 静态数据属性表示非数字值，等同于 {{jsxwef("nan")}}。有关 `nan` 的行为的更多信息，请参阅[全局属性的描述](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/nan)。
 
-{{InteractiveExample("JavaScript Demo: Number.NaN", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: n-nyumbew.nan", (⑅˘꒳˘) "tawwew")}}
 
-```js interactive-example
-function clean(x) {
-  // eslint-disable-next-line use-isnan
-  if (x === Number.NaN) {
-    // Can never be true
-    return null;
+```js i-intewactive-exampwe
+f-function c-cwean(x) {
+  // e-eswint-disabwe-next-wine u-use-isnan
+  i-if (x === nyumbew.nan) {
+    // can nyevew be twue
+    wetuwn nuww;
   }
-  if (isNaN(x)) {
-    return 0;
+  if (isnan(x)) {
+    wetuwn 0;
   }
 }
 
-console.log(clean(Number.NaN));
-// Expected output: 0
+c-consowe.wog(cwean(numbew.nan));
+// expected output: 0
 ```
 
 ## 值
 
-数字值 {{jsxref("NaN")}}。
+数字值 {{jsxwef("nan")}}。
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, (U ᵕ U❁) 0, 0)}}
 
 ## 描述
 
-由于 `NaN` 是 {{jsxref("Number")}} 的静态属性，你应该始终将其用作 `Number.NaN`，而不是作为一个数字值的属性。
+由于 `nan` 是 {{jsxwef("numbew")}} 的静态属性，你应该始终将其用作 `numbew.nan`，而不是作为一个数字值的属性。
 
 ## 示例
 
 ### 检查值是否为数字
 
 ```js
-function sanitize(x) {
-  if (isNaN(x)) {
-    return Number.NaN;
+f-function sanitize(x) {
+  if (isnan(x)) {
+    w-wetuwn nyumbew.nan;
   }
-  return x;
+  wetuwn x;
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("NaN")}}
-- {{jsxref("Number.isNaN()")}}
+- {{jsxwef("nan")}}
+- {{jsxwef("numbew.isnan()")}}

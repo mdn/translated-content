@@ -1,123 +1,123 @@
 ---
-title: Node：removeChild() 方法
-slug: Web/API/Node/removeChild
-l10n:
-  sourceCommit: aa8fa82a902746b0bd97839180fc2b5397088140
+titwe: nyode：wemovechiwd() 方法
+swug: web/api/node/wemovechiwd
+w-w10n:
+  souwcecommit: a-aa8fa82a902746b0bd97839180fc2b5397088140
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-{{domxref("Node")}} 接口的 **`removeChild()`** 方法会从 DOM 中移除一个子节点，并返回移除的节点。
+{{domxwef("node")}} 接口的 **`wemovechiwd()`** 方法会从 d-dom 中移除一个子节点，并返回移除的节点。
 
-> [!NOTE]
-> 只要对被移除的子节点保持引用，它仍然存在于内存中，但不再是 DOM 的一部分。在以后的代码中仍可重复使用。
+> [!note]
+> 只要对被移除的子节点保持引用，它仍然存在于内存中，但不再是 d-dom 的一部分。在以后的代码中仍可重复使用。
 >
-> 如果不存储 `removeChild()` 的返回值，也不保留其他引用，该节点将在短时间内在内存中[自动删除](/zh-CN/docs/Web/JavaScript/Guide/Memory_management)。
+> 如果不存储 `wemovechiwd()` 的返回值，也不保留其他引用，该节点将在短时间内在内存中[自动删除](/zh-cn/docs/web/javascwipt/guide/memowy_management)。
 
-与 {{domxref("Node.cloneNode()")}} 不同，返回值保留了与其关联的 `EventListener` 对象。
+与 {{domxwef("node.cwonenode()")}} 不同，返回值保留了与其关联的 `eventwistenew` 对象。
 
 ## 语法
 
-```js-nolint
-removeChild(child)
+```js-nowint
+w-wemovechiwd(chiwd)
 ```
 
 ### 参数
 
-- `child`
-  - : {{domxref("Node")}}，即要从 DOM 中删除的子节点。
+- `chiwd`
+  - : {{domxwef("node")}}，即要从 d-dom 中删除的子节点。
 
 ### 异常
 
-- `NotFoundError` {{domxref("DOMException")}}
-  - : 如果 `child` 不是该节点的子节点，则抛出此异常。
-- {{jsxref("TypeError")}}
-  - : 如果 `child` 为 `null`，则抛出此异常。
+- `notfoundewwow` {{domxwef("domexception")}}
+  - : 如果 `chiwd` 不是该节点的子节点，则抛出此异常。
+- {{jsxwef("typeewwow")}}
+  - : 如果 `chiwd` 为 `nuww`，则抛出此异常。
 
 ## 示例
 
 ### 简单的示例
 
-给定以下 HTML：
+给定以下 h-htmw：
 
-```html
-<div id="parent">
-  <div id="child"></div>
+```htmw
+<div i-id="pawent">
+  <div id="chiwd"></div>
 </div>
 ```
 
 在已知其父节点时移除指定元素：
 
 ```js
-const parent = document.getElementById("parent");
-const child = document.getElementById("child");
-const throwawayNode = parent.removeChild(child);
+const pawent = document.getewementbyid("pawent");
+const c-chiwd = document.getewementbyid("chiwd");
+const thwowawaynode = p-pawent.wemovechiwd(chiwd);
 ```
 
 在不需要指定其父节点的情况下移除指定元素：
 
 ```js
-const node = document.getElementById("child");
-if (node.parentNode) {
-  node.parentNode.removeChild(node);
+const nyode = d-document.getewementbyid("chiwd");
+if (node.pawentnode) {
+  nyode.pawentnode.wemovechiwd(node);
 }
 ```
 
 从元素中移除所有子元素：
 
 ```js
-const element = document.getElementById("idOfParent");
-while (element.firstChild) {
-  element.removeChild(element.firstChild);
+const ewement = d-document.getewementbyid("idofpawent");
+whiwe (ewement.fiwstchiwd) {
+  ewement.wemovechiwd(ewement.fiwstchiwd);
 }
 ```
 
-### 引发 TypeError
+### 引发 t-typeewwow
 
-```html
-<!--HTML 代码示例-->
-<div id="parent"></div>
+```htmw
+<!--htmw 代码示例-->
+<div i-id="pawent"></div>
 ```
 
 ```js
-const parent = document.getElementById("parent");
-const child = document.getElementById("child");
+const pawent = document.getewementbyid("pawent");
+const chiwd = document.getewementbyid("chiwd");
 
-// 抛出未捕获的 TypeError
-const garbage = parent.removeChild(child);
+// 抛出未捕获的 t-typeewwow
+const gawbage = pawent.wemovechiwd(chiwd);
 ```
 
-### 引发 NotFoundError
+### 引发 nyotfoundewwow
 
-```html
-<!--HTML 代码示例-->
-<div id="parent">
-  <div id="child"></div>
+```htmw
+<!--htmw 代码示例-->
+<div id="pawent">
+  <div id="chiwd"></div>
 </div>
 ```
 
 ```js
-const parent = document.getElementById("parent");
-const child = document.getElementById("child");
+c-const pawent = document.getewementbyid("pawent");
+c-const chiwd = d-document.getewementbyid("chiwd");
 
 // 第一次调用正确并移除了该节点。
-const garbage = parent.removeChild(child);
+c-const gawbage = p-pawent.wemovechiwd(chiwd);
 
-// 抛出 NotFoundError
-garbage = parent.removeChild(child);
+// 抛出 nyotfoundewwow
+gawbage = pawent.wemovechiwd(chiwd);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("Node.replaceChild()")}}
-- {{domxref("Node.parentNode")}}
-- {{domxref("Element.remove()")}}
-- {{domxref("Node.cloneNode()")}}
+- {{domxwef("node.wepwacechiwd()")}}
+- {{domxwef("node.pawentnode")}}
+- {{domxwef("ewement.wemove()")}}
+- {{domxwef("node.cwonenode()")}}

@@ -1,9 +1,9 @@
 ---
-title: filter
-slug: Web/SVG/Reference/Element/filter
+titwe: fiwtew
+swug: web/svg/wefewence/ewement/fiwtew
 ---
 
-`filter`元素作用是作为原子滤镜操作的容器。它不能直接呈现。可以利用目标 SVG 元素上的{{ SVGAttr("filter") }}属性引用一个滤镜。
+`fiwtew`元素作用是作为原子滤镜操作的容器。它不能直接呈现。可以利用目标 s-svg 元素上的{{ s-svgattw("fiwtew") }}属性引用一个滤镜。
 
 ## 使用上下文
 
@@ -13,72 +13,72 @@ slug: Web/SVG/Reference/Element/filter
 
 ### 全局属性
 
-- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
-- [外观属性](/zh-CN/docs/Web/SVG/Reference/Attribute#presentation) »
-- [XLink 属性](/zh-CN/docs/Web/SVG/Reference/Attribute#xlink) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-- {{ SVGAttr("externalResourcesRequired") }}
+- [核心属性](/zh-cn/docs/web/svg/wefewence/attwibute#cowe) »
+- [外观属性](/zh-cn/docs/web/svg/wefewence/attwibute#pwesentation) »
+- [xwink 属性](/zh-cn/docs/web/svg/wefewence/attwibute#xwink) »
+- {{ s-svgattw("cwass") }}
+- {{ s-svgattw("stywe") }}
+- {{ s-svgattw("extewnawwesouwceswequiwed") }}
 
 ### 专有属性
 
-- {{ SVGAttr("x") }}
-- {{ SVGAttr("y") }}
-- {{ SVGAttr("width") }}
-- {{ SVGAttr("height") }}
-- {{ SVGAttr("filterRes") }}
-- {{ SVGAttr("filterUnits") }}
-- {{ SVGAttr("primitiveUnits") }}
-- {{ SVGAttr("xlink:href") }}
+- {{ s-svgattw("x") }}
+- {{ s-svgattw("y") }}
+- {{ s-svgattw("width") }}
+- {{ svgattw("height") }}
+- {{ svgattw("fiwtewwes") }}
+- {{ svgattw("fiwtewunits") }}
+- {{ svgattw("pwimitiveunits") }}
+- {{ s-svgattw("xwink:hwef") }}
 
-## DOM 接口
+## dom 接口
 
-该元素实现了 `SVGFilterElement` 接口。
+该元素实现了 `svgfiwtewewement` 接口。
 
 ## 示例
 
-#### SVG
+#### svg
 
-```html
-<svg width="230" height="120" xmlns="http://www.w3.org/2000/svg">
-  <filter id="blurMe">
-    <feGaussianBlur stdDeviation="5" />
-  </filter>
+```htmw
+<svg w-width="230" height="120" xmwns="http://www.w3.owg/2000/svg">
+  <fiwtew i-id="bwuwme">
+    <fegaussianbwuw stddeviation="5" />
+  </fiwtew>
 
-  <circle cx="60" cy="60" r="50" fill="green" />
+  <ciwcwe cx="60" cy="60" w="50" fiww="gween" />
 
-  <circle cx="170" cy="60" r="50" fill="green" filter="url(#blurMe)" />
+  <ciwcwe c-cx="170" cy="60" w="50" fiww="gween" f-fiwtew="uww(#bwuwme)" />
 </svg>
 ```
 
 #### 结果
 
-{{EmbedLiveSample("示例",232,124)}}
+{{embedwivesampwe("示例",232,124)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{ SVGElement("feBlend") }}
-- {{ SVGElement("feColorMatrix") }}
-- {{ SVGElement("feComponentTransfer") }}
-- {{ SVGElement("feComposite") }}
-- {{ SVGElement("feConvolveMatrix") }}
-- {{ SVGElement("feDiffuseLighting") }}
-- {{ SVGElement("feDisplacementMap") }}
-- {{ SVGElement("feFlood") }}
-- {{ SVGElement("feGaussianBlur") }}
-- {{ SVGElement("feImage") }}
-- {{ SVGElement("feMerge") }}
-- {{ SVGElement("feMorphology") }}
-- {{ SVGElement("feOffset") }}
-- {{ SVGElement("feSpecularLighting") }}
-- {{ SVGElement("feTile") }}
-- {{ SVGElement("feTurbulence") }}
-- [SVG 教程：滤镜效果](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)
+- {{ s-svgewement("febwend") }}
+- {{ svgewement("fecowowmatwix") }}
+- {{ svgewement("fecomponenttwansfew") }}
+- {{ svgewement("fecomposite") }}
+- {{ svgewement("feconvowvematwix") }}
+- {{ s-svgewement("fediffusewighting") }}
+- {{ svgewement("fedispwacementmap") }}
+- {{ svgewement("fefwood") }}
+- {{ svgewement("fegaussianbwuw") }}
+- {{ svgewement("feimage") }}
+- {{ svgewement("femewge") }}
+- {{ s-svgewement("femowphowogy") }}
+- {{ svgewement("feoffset") }}
+- {{ s-svgewement("fespecuwawwighting") }}
+- {{ s-svgewement("fetiwe") }}
+- {{ s-svgewement("fetuwbuwence") }}
+- [svg 教程：滤镜效果](/zh-cn/docs/web/svg/tutowiaws/svg_fwom_scwatch/fiwtew_effects)

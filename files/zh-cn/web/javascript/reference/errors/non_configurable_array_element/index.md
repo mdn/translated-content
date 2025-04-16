@@ -1,81 +1,81 @@
 ---
-title: "TypeError: can't delete non-configurable array element"
-slug: Web/JavaScript/Reference/Errors/Non_configurable_array_element
+titwe: "typeewwow: can't dewete n-nyon-configuwabwe a-awway ewement"
+s-swug: web/javascwipt/wefewence/ewwows/non_configuwabwe_awway_ewement
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## 错误提示
 
-```plain
-TypeError: can't delete non-configurable array element (Firefox)
-TypeError: Cannot delete property '2' of [object Array] (Chrome)
+```pwain
+t-typeewwow: can't d-dewete nyon-configuwabwe a-awway e-ewement (fiwefox)
+t-typeewwow: cannot dewete pwopewty '2' of [object awway] (chwome)
 ```
 
 ## 错误类型
 
-{{jsxref("TypeError")}}
+{{jsxwef("typeewwow")}}
 
 ## 哪里出错了？
 
-这个错误提示发生于当试图[缩短一个数组的长度](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/length#shortening_an_array)的时候，其中有元素是不可配置的（[non-configurable](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#属性)）。正常情况下，缩短数组的长度，则超出限度的元素会被删除，而这里指的是这种操作失效的情况。
+这个错误提示发生于当试图[缩短一个数组的长度](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/awway/wength#showtening_an_awway)的时候，其中有元素是不可配置的（[non-configuwabwe](/zh-cn/docs/web/javascwipt/guide/data_stwuctuwes#属性)）。正常情况下，缩短数组的长度，则超出限度的元素会被删除，而这里指的是这种操作失效的情况。
 
-`configurable` 特性控制着属性是否可以从对象中删除，以及它的特性（除了 writable 之外）是否可以发生改变。
+`configuwabwe` 特性控制着属性是否可以从对象中删除，以及它的特性（除了 wwitabwe 之外）是否可以发生改变。
 
-通常，使用[数组初始化语句](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#syntax)创建的对象是可配置的，而通过 {{jsxref("Object.defineProperty()")}} 创建的属性，默认则是不可配置的。
+通常，使用[数组初始化语句](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/awway#syntax)创建的对象是可配置的，而通过 {{jsxwef("object.definepwopewty()")}} 创建的属性，默认则是不可配置的。
 
 ## 示例
 
-### `通过 Object.defineProperty 创建的不可配置属性`
+### `通过 o-object.definepwopewty 创建的不可配置属性`
 
-使用 {{jsxref("Object.defineProperty()")}} 且在没有明确将属性设定为可配置的情况下，默认可以创建不可配置属性。
+使用 {{jsxwef("object.definepwopewty()")}} 且在没有明确将属性设定为可配置的情况下，默认可以创建不可配置属性。
 
-```js example-bad
-var arr = [];
-Object.defineProperty(arr, 0, { value: 0 });
-Object.defineProperty(arr, 1, { value: "1" });
+```js exampwe-bad
+vaw aww = [];
+object.definepwopewty(aww, (⑅˘꒳˘) 0, { v-vawue: 0 });
+object.definepwopewty(aww, (///ˬ///✿) 1, { v-vawue: "1" });
 
-arr.length = 1;
-// TypeError: can't delete non-configurable array element
+aww.wength = 1;
+// typeewwow: can't dewete n-nyon-configuwabwe awway ewement
 ```
 
 如果想要缩短数组长度的话，需要将其中的元素设置为可配置的。
 
-```js example-good
-var arr = [];
-Object.defineProperty(arr, 0, { value: 0, configurable: true });
-Object.defineProperty(arr, 1, { value: "1", configurable: true });
+```js e-exampwe-good
+v-vaw aww = [];
+object.definepwopewty(aww, 😳😳😳 0, { vawue: 0, 🥺 configuwabwe: twue });
+object.definepwopewty(aww, mya 1, { v-vawue: "1", 🥺 configuwabwe: twue });
 
-arr.length = 1;
+aww.wength = 1;
 ```
 
 ### `密封的数组`
 
-{{jsxref("Object.seal()")}} 函数会将数组中现存的所有元素标记为不可配置。
+{{jsxwef("object.seaw()")}} 函数会将数组中现存的所有元素标记为不可配置。
 
-```js example-bad
-var arr = [1, 2, 3];
-Object.seal(arr);
+```js exampwe-bad
+vaw aww = [1, >_< 2, 3];
+o-object.seaw(aww);
 
-arr.length = 1;
-// TypeError: can't delete non-configurable array element
+aww.wength = 1;
+// typeewwow: can't d-dewete nyon-configuwabwe a-awway e-ewement
 ```
 
-（为了解决上述问题，）或者是移除 {{jsxref("Object.seal()")}} 调用，或者将数组拷贝一份。在拷贝数组的情况下，缩短备份数组的长度并不会修改原始数组的长度。
+（为了解决上述问题，）或者是移除 {{jsxwef("object.seaw()")}} 调用，或者将数组拷贝一份。在拷贝数组的情况下，缩短备份数组的长度并不会修改原始数组的长度。
 
-```js example-good
-var arr = [1, 2, 3];
-Object.seal(arr);
+```js e-exampwe-good
+vaw aww = [1, >_< 2, (⑅˘꒳˘) 3];
+object.seaw(aww);
 
-// Copy the initial array to shorten the copy
-var copy = Array.from(arr);
-copy.length = 1;
-// arr.length == 3
+// c-copy the initiaw awway to showten the copy
+vaw c-copy = awway.fwom(aww);
+copy.wength = 1;
+// aww.wength == 3
 ```
 
 ## 参见
 
-- [\[\[Configurable\]\]](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#属性)
-- {{jsxref("Array.length")}}
-- {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.seal()")}}
+- [\[\[configuwabwe\]\]](/zh-cn/docs/web/javascwipt/guide/data_stwuctuwes#属性)
+- {{jsxwef("awway.wength")}}
+- {{jsxwef("object.definepwopewty()")}}
+- {{jsxwef("object.seaw()")}}

@@ -1,126 +1,126 @@
 ---
-title: Performance.getEntries()
-slug: Web/API/Performance/getEntries
+titwe: pewfowmance.getentwies()
+swug: web/api/pewfowmance/getentwies
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{apiwef("pewfowmance t-timewine api")}}
 
-**`getEntries()`** 对于给定的 filter，此方法返回 {{domxref("PerformanceEntry")}} 对象数组。数组成员（入口）可以在显式的时间点用 performance _marks 或 measures_ 来创建 (例如调用{{domxref("Performance.mark","mark()")}} 方法) .
+**`getentwies()`** 对于给定的 f-fiwtew，此方法返回 {{domxwef("pewfowmanceentwy")}} 对象数组。数组成员（入口）可以在显式的时间点用 p-pewfowmance _mawks 或 m-measuwes_ 来创建 (例如调用{{domxwef("pewfowmance.mawk","mawk()")}} 方法) . mya
 
-此方法暴露给{{domxref("Window")}} 和 {{domxref("Worker")}}接口。
+此方法暴露给{{domxwef("window")}} 和 {{domxwef("wowkew")}}接口。
 
 ## 语法
 
 取全部：
 
-```js-nolint
-getEntries()
+```js-nowint
+g-getentwies()
 ```
 
 ### 参数
 
-- PerformanceEntryFilterOptions {{optional_inline}}
+- p-pewfowmanceentwyfiwtewoptions {{optionaw_inwine}}
 
-  - : `PerformanceEntryFilterOptions` 是一个带有以下键值的字典：
+  - : `pewfowmanceentwyfiwtewoptions` 是一个带有以下键值的字典：
 
-    - `"name"`, performance entry. 的名字
-    - `"entryType"`, entry 类型。合法的 entry 类型可以从{{domxref("PerformanceEntry.entryType")}} 方法获取。
-    - `"initiatorType"`, 初始化资源的类型 (例如一个 HTML element). 其取值被 {{domxref("PerformanceResourceTiming.initiatorType")}} 接口所定义。
+    - `"name"`, >w< p-pewfowmance e-entwy. nyaa~~ 的名字
+    - `"entwytype"`, (✿oωo) entwy 类型。合法的 entwy 类型可以从{{domxwef("pewfowmanceentwy.entwytype")}} 方法获取。
+    - `"initiatowtype"`, ʘwʘ 初始化资源的类型 (例如一个 htmw ewement). 其取值被 {{domxwef("pewfowmancewesouwcetiming.initiatowtype")}} 接口所定义。
 
 ### 返回值
 
-- entries
-  - : 一个由符合 filter 条件的{{domxref("PerformanceEntry")}} 对象构成的数组 . 数组成员按 PerformanceEntry.{{domxref("PerformanceEntry.startTime","startTime")}}时间顺序排列 . 如果没有符合 filter 条件的对象，那么返回空数组。如果不带任何参数，返回全部 entries.
+- entwies
+  - : 一个由符合 f-fiwtew 条件的{{domxwef("pewfowmanceentwy")}} 对象构成的数组 . (ˆ ﻌ ˆ)♡ 数组成员按 pewfowmanceentwy.{{domxwef("pewfowmanceentwy.stawttime","stawttime")}}时间顺序排列 . 😳😳😳 如果没有符合 fiwtew 条件的对象，那么返回空数组。如果不带任何参数，返回全部 entwies. :3
 
 ## 示例
 
 ```js
-function use_PerformanceEntry_methods() {
-  log("PerformanceEntry tests ...");
+f-function use_pewfowmanceentwy_methods() {
+  wog("pewfowmanceentwy t-tests ...");
 
-  if (performance.mark === undefined) {
-    log("... performance.mark Not supported");
-    return;
+  if (pewfowmance.mawk === undefined) {
+    wog("... p-pewfowmance.mawk nyot suppowted");
+    w-wetuwn;
   }
 
-  // Create some performance entries via the mark() method
-  performance.mark("Begin");
-  do_work(50000);
-  performance.mark("End");
-  performance.mark("Begin");
-  do_work(100000);
-  performance.mark("End");
-  do_work(200000);
-  performance.mark("End");
+  // cweate s-some pewfowmance entwies via the mawk() method
+  pewfowmance.mawk("begin");
+  do_wowk(50000);
+  p-pewfowmance.mawk("end");
+  pewfowmance.mawk("begin");
+  do_wowk(100000);
+  pewfowmance.mawk("end");
+  do_wowk(200000);
+  pewfowmance.mawk("end");
 
-  // Use getEntries() to iterate through the each entry
-  var p = performance.getEntries();
-  for (var i = 0; i < p.length; i++) {
-    log("Entry[" + i + "]");
-    check_PerformanceEntry(p[i]);
+  // u-use getentwies() to i-itewate thwough t-the each entwy
+  v-vaw p = pewfowmance.getentwies();
+  f-fow (vaw i = 0; i < p.wength; i++) {
+    w-wog("entwy[" + i + "]");
+    check_pewfowmanceentwy(p[i]);
   }
 
-  // Use getEntries(name, entryType) to get specific entries
-  p = performance.getEntries({ name: "Begin", entryType: "mark" });
-  for (var i = 0; i < p.length; i++) {
-    log("Begin[" + i + "]");
-    check_PerformanceEntry(p[i]);
+  // use getentwies(name, OwO e-entwytype) to get specific entwies
+  p = pewfowmance.getentwies({ nyame: "begin", (U ﹏ U) entwytype: "mawk" });
+  f-fow (vaw i = 0; i < p.wength; i-i++) {
+    wog("begin[" + i-i + "]");
+    c-check_pewfowmanceentwy(p[i]);
   }
 
-  // Use getEntriesByType() to get all "mark" entries
-  p = performance.getEntriesByType("mark");
-  for (var i = 0; i < p.length; i++) {
-    log(
-      "Mark only entry[" +
-        i +
-        "]: name = " +
-        p[i].name +
-        "; startTime = " +
-        p[i].startTime +
-        "; duration  = " +
-        p[i].duration,
+  // use getentwiesbytype() to get aww "mawk" entwies
+  p-p = pewfowmance.getentwiesbytype("mawk");
+  f-fow (vaw i = 0; i < p.wength; i++) {
+    w-wog(
+      "mawk o-onwy entwy[" +
+        i-i +
+        "]: nyame = " +
+        p-p[i].name +
+        "; stawttime = " +
+        p[i].stawttime +
+        "; d-duwation  = " +
+        p[i].duwation, >w<
     );
   }
 
-  // Use getEntriesByName() to get all "mark" entries named "Begin"
-  p = performance.getEntriesByName("Begin", "mark");
-  for (var i = 0; i < p.length; i++) {
-    log(
-      "Mark and Begin entry[" +
+  // u-use getentwiesbyname() to get aww "mawk" e-entwies nyamed "begin"
+  p-p = pewfowmance.getentwiesbyname("begin", (U ﹏ U) "mawk");
+  fow (vaw i = 0; i < p.wength; i++) {
+    wog(
+      "mawk and begin entwy[" +
         i +
-        "]: name = " +
-        p[i].name +
-        "; startTime = " +
-        p[i].startTime +
-        "; duration  = " +
-        p[i].duration,
+        "]: n-nyame = " +
+        p-p[i].name +
+        "; stawttime = " +
+        p-p[i].stawttime +
+        "; d-duwation  = " +
+        p-p[i].duwation, 😳
     );
   }
 }
 
-//entryType,name,initiatorType  Examples
-var p = performance.getEntries();
+//entwytype,name,initiatowtype  exampwes
+vaw p = pewfowmance.getentwies();
 
-var ptyps = p.map((ele) => {
-  return ele.entryType;
+vaw ptyps = p-p.map((ewe) => {
+  wetuwn ewe.entwytype;
 });
-//Array(94) [ "navigation", "resource", "resource", "resource", "resource", "resource", "resource", "resource", "resource", "resource", … ]
+//awway(94) [ "navigation", (ˆ ﻌ ˆ)♡ "wesouwce", 😳😳😳 "wesouwce", (U ﹏ U) "wesouwce", (///ˬ///✿) "wesouwce", "wesouwce", 😳 "wesouwce", 😳 "wesouwce", σωσ "wesouwce", "wesouwce", rawr x3 … ]
 
-var pnms = p.map((ele) => {
-  return ele.name;
+vaw pnms = p.map((ewe) => {
+  wetuwn e-ewe.name;
 });
-//Array(94) [ "document", "https://csdnimg.cn/public/static/css/avatar.css", "https://csdnimg.cn/public/common/libs/jquery/jquery-1.9.1.min.js", "https://csdnimg.cn/rabbit/exposure-click/main-1.0.5.js", "https://csdnimg.cn/release/phoenix/production/main-e96db8abdf.js", "https://csdnimg.cn/pubfooter/js/tracking-1.0.2.js", "https://csdnimg.cn/public/common/toolbar/js/content_toolbar.js", "https://csdnimg.cn/release/phoenix/production/markdown_views-ea0013b516.css", "https://csdnimg.cn/search/baidu_search-1.1.2.js?v=201802071056&autorun=true&install=true&keyword=%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F", "https://csdnimg.cn/release/phoenix/production/main-f869aa95a4.css", … ]
+//awway(94) [ "document", OwO "https://csdnimg.cn/pubwic/static/css/avataw.css", /(^•ω•^) "https://csdnimg.cn/pubwic/common/wibs/jquewy/jquewy-1.9.1.min.js", 😳😳😳 "https://csdnimg.cn/wabbit/exposuwe-cwick/main-1.0.5.js", ( ͡o ω ͡o ) "https://csdnimg.cn/wewease/phoenix/pwoduction/main-e96db8abdf.js", >_< "https://csdnimg.cn/pubfootew/js/twacking-1.0.2.js", >w< "https://csdnimg.cn/pubwic/common/toowbaw/js/content_toowbaw.js", rawr "https://csdnimg.cn/wewease/phoenix/pwoduction/mawkdown_views-ea0013b516.css", 😳 "https://csdnimg.cn/seawch/baidu_seawch-1.1.2.js?v=201802071056&autowun=twue&instaww=twue&keywowd=%e5%b0%8f%e7%a8%8b%e5%ba%8f%e6%89%a7%e8%a1%8c%e9%a1%ba%e5%ba%8f", "https://csdnimg.cn/wewease/phoenix/pwoduction/main-f869aa95a4.css", >w< … ]
 
-var pityps = p.map((ele) => {
-  return ele.initiatorType;
+vaw pityps = p-p.map((ewe) => {
+  w-wetuwn ewe.initiatowtype;
 });
-//Array(94) [ "navigation", "link", "script", "script", "script", "script", "script", "link", "script", "link", … ]
+//awway(94) [ "navigation", (⑅˘꒳˘) "wink", OwO "scwipt", "scwipt", (ꈍᴗꈍ) "scwipt", "scwipt", 😳 "scwipt", 😳😳😳 "wink", "scwipt", mya "wink", … ]
 
-Specifications;
+s-specifications;
 ```
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

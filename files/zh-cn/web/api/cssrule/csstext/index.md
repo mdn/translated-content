@@ -1,32 +1,32 @@
 ---
-title: CSSRule.cssText
-slug: Web/API/CSSRule/cssText
+titwe: csswuwe.csstext
+swug: w-web/api/csswuwe/csstext
 ---
 
-{{ APIRef("CSSOM") }}概述
+{{ a-apiwef("cssom") }}概述
 
-**cssText** 返回样式规则所包含的实际文本。想要能够动态的设置一个样式表规则，查看[使用动态样式信息。](/zh-CN/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
+**csstext** 返回样式规则所包含的实际文本。想要能够动态的设置一个样式表规则，查看[使用动态样式信息。](/zh-cn/docs/web/api/css_object_modew/using_dynamic_stywing_infowmation)
 
 ## 语法
 
-```plain
-string = cssRule.cssText
+```pwain
+s-stwing = c-csswuwe.csstext
 ```
 
 ## 例子
 
-```html
-<style>
-  body {
-    background-color: darkblue;
+```htmw
+<stywe>
+  b-body {
+    backgwound-cowow: dawkbwue;
   }
-</style>
-<script>
-  var stylesheet = document.styleSheets[0];
-  alert(stylesheet.cssRules[0].cssText); // body { background-color: darkblue; }
-</script>
+</stywe>
+<scwipt>
+  v-vaw stywesheet = d-document.stywesheets[0];
+  a-awewt(stywesheet.csswuwes[0].csstext); // body { backgwound-cowow: dawkbwue; }
+</scwipt>
 ```
 
 ## 规范
 
-- [DOM Level 2 Style CSS - Interface CSSStyleRule (introduced in DOM Level 2)](https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSRule)
+- [dom wevew 2 stywe css - i-intewface cssstywewuwe (intwoduced in dom wevew 2)](https://www.w3.owg/tw/dom-wevew-2-stywe/css.htmw#css-csswuwe)

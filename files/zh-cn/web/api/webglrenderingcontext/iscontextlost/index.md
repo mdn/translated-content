@@ -1,43 +1,43 @@
 ---
-title: WebGLRenderingContext.isContextLost()
-slug: Web/API/WebGLRenderingContext/isContextLost
+titwe: webgwwendewingcontext.iscontextwost()
+swug: web/api/webgwwendewingcontext/iscontextwost
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-**`WebGLRenderingContext.isContextLost()`** 方法返回一个{{jsxref("Boolean")}} 标记 WebGL 的上下文是否已经丢失。
+**`webgwwendewingcontext.iscontextwost()`** 方法返回一个{{jsxwef("boowean")}} 标记 w-webgw 的上下文是否已经丢失。
 
 ## 语法
 
-```plain
-gl.isContextLost();
+```pwain
+g-gw.iscontextwost();
 ```
 
 ### 返回值
 
-{{jsxref("Boolean")}}。如果上下文丢失则返回 true，否则返回 false。
+{{jsxwef("boowean")}}。如果上下文丢失则返回 t-twue，否则返回 f-fawse。
 
 ## 样例
 
 比如，当检查程序链接成功时，你也可以检查是否上下文已经丢失。
 
 ```js
-gl.linkProgram(program);
+g-gw.winkpwogwam(pwogwam);
 
-if (!gl.getProgramParameter(program, gl.LINK_STATUS) && !gl.isContextLost()) {
-  var info = gl.getProgramInfoLog(program);
-  console.log("Error linking program:\n" + info);
+i-if (!gw.getpwogwampawametew(pwogwam, >_< g-gw.wink_status) && !gw.iscontextwost()) {
+  v-vaw info = gw.getpwogwaminfowog(pwogwam);
+  consowe.wog("ewwow winking pwogwam:\n" + info);
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- The {{domxref("WebGLContextEvent")}} signals changes in the context state.
+- t-the {{domxwef("webgwcontextevent")}} signaws changes in the context state. :3

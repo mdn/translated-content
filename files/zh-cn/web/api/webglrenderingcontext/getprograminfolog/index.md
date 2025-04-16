@@ -1,59 +1,59 @@
 ---
-title: WebGLRenderingContext.getProgramInfoLog()
-slug: Web/API/WebGLRenderingContext/getProgramInfoLog
+titwe: webgwwendewingcontext.getpwogwaminfowog()
+swug: web/api/webgwwendewingcontext/getpwogwaminfowog
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-**WebGLRenderingContext.getProgramInfoLog** 返回参数中指定的{{domxref("WebGLProgram")}} object 的信息。这些信息包括在 linking 过程中的错误以及 `WebGLProgram` objects 合法性检查的错误。
+**webgwwendewingcontext.getpwogwaminfowog** 返回参数中指定的{{domxwef("webgwpwogwam")}} o-object 的信息。这些信息包括在 w-winking 过程中的错误以及 `webgwpwogwam` o-objects 合法性检查的错误。
 
-## Syntax
+## s-syntax
 
-```plain
-gl.getProgramInfoLog(program);
+```pwain
+g-gw.getpwogwaminfowog(pwogwam);
 ```
 
-### Parameters
+### p-pawametews
 
-- program
-  - : A {{domxref("WebGLProgram")}} to query.
+- p-pwogwam
+  - : a-a {{domxwef("webgwpwogwam")}} to quewy. (ˆ ﻌ ˆ)♡
 
-### Return value
+### wetuwn vawue
 
-返回 {{domxref("DOMString")}} 包含 diagnostic , warning ...等等关于上一次 linking 和 valiadation 操作的信息。对于刚刚创建的{{domxref("WebGLProgram")}} object , 返回一个空字符串。
+返回 {{domxwef("domstwing")}} 包含 diagnostic , (˘ω˘) wawning ...等等关于上一次 w-winking 和 vawiadation 操作的信息。对于刚刚创建的{{domxwef("webgwpwogwam")}} object , 返回一个空字符串。
 
-## Examples
+## e-exampwes
 
-### Checking program errors
+### checking p-pwogwam ewwows
 
 ```js
-var canvas = document.getElementsById("canvas");
-var gl = canvas.getContext("webgl");
-var program = gl.createProgram();
+vaw canvas = document.getewementsbyid("canvas");
+vaw g-gw = canvas.getcontext("webgw");
+vaw pwogwam = gw.cweatepwogwam();
 
-//vsSource is the source-code-string of vertex-shader
-//fsSource is the source-code-string of fragment-shader
-var vertexShader = loadShader(gl, gl.VERTEX_SHADER, vsSource);
-var fragmentShader = loadShader(gl, gl.FRAGMENT_SHADER, fsSource);
+//vssouwce is t-the souwce-code-stwing o-of vewtex-shadew
+//fssouwce is the souwce-code-stwing of fwagment-shadew
+vaw vewtexshadew = woadshadew(gw, g-gw.vewtex_shadew, (⑅˘꒳˘) vssouwce);
+vaw fwagmentshadew = woadshadew(gw, (///ˬ///✿) gw.fwagment_shadew, 😳😳😳 f-fssouwce);
 
-// Attach pre-existing shaders
-gl.attachShader(program, vertexShader);
-gl.attachShader(program, fragmentShader);
+// attach pwe-existing s-shadews
+g-gw.attachshadew(pwogwam, 🥺 v-vewtexshadew);
+g-gw.attachshadew(pwogwam, mya fwagmentshadew);
 
-gl.linkProgram(program);
+gw.winkpwogwam(pwogwam);
 
-gl.getProgramInfoLog(program);
+g-gw.getpwogwaminfowog(pwogwam);
 ```
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- {{domxref("WebGLRenderingContext.getShaderInfoLog()")}}
-- {{domxref("WebGLRenderingContext.getError()")}}
+- {{domxwef("webgwwendewingcontext.getshadewinfowog()")}}
+- {{domxwef("webgwwendewingcontext.getewwow()")}}

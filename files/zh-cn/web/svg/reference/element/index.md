@@ -1,235 +1,235 @@
 ---
-title: SVG 元素参考
-slug: Web/SVG/Reference/Element
-l10n:
-  sourceCommit: 2befe9ec5792e13f720396535a4aa20111be96ef
+titwe: svg 元素参考
+swug: w-web/svg/wefewence/ewement
+w-w10n:
+  s-souwcecommit: 2befe9ec5792e13f720396535a4aa20111be96ef
 ---
 
-SVG 图像是使用各种元素创建的，这些元素分别应用于矢量图像的结构、绘制与布局。在这里，你可以找到每个 SVG 元素的参考文档。
+svg 图像是使用各种元素创建的，这些元素分别应用于矢量图像的结构、绘制与布局。在这里，你可以找到每个 s-svg 元素的参考文档。
 
-## SVG 元素（从 A-Z 排序）
+## s-svg 元素（从 a-a-z 排序）
 
-### A
+### a-a
 
-- {{SVGElement("a")}}
-- {{SVGElement("animate")}}
-- {{SVGElement("animateMotion")}}
-- {{SVGElement("animateTransform")}}
+- {{svgewement("a")}}
+- {{svgewement("animate")}}
+- {{svgewement("animatemotion")}}
+- {{svgewement("animatetwansfowm")}}
 
-### C
+### c-c
 
-- {{SVGElement("circle")}}
-- {{SVGElement("clipPath")}}
+- {{svgewement("ciwcwe")}}
+- {{svgewement("cwippath")}}
 
-### D
+### d
 
-- {{SVGElement("defs")}}
-- {{SVGElement("desc")}}
+- {{svgewement("defs")}}
+- {{svgewement("desc")}}
 
-### E
+### e
 
-- {{SVGElement("ellipse")}}
+- {{svgewement("ewwipse")}}
 
-### F
+### f
 
-- {{SVGElement("feBlend")}}
-- {{SVGElement("feColorMatrix")}}
-- {{SVGElement("feComponentTransfer")}}
-- {{SVGElement("feComposite")}}
-- {{SVGElement("feConvolveMatrix")}}
-- {{SVGElement("feDiffuseLighting")}}
-- {{SVGElement("feDisplacementMap")}}
-- {{SVGElement("feDistantLight")}}
-- {{SVGElement("feDropShadow")}}
-- {{SVGElement("feFlood")}}
-- {{SVGElement("feFuncA")}}
-- {{SVGElement("feFuncB")}}
-- {{SVGElement("feFuncG")}}
-- {{SVGElement("feFuncR")}}
-- {{SVGElement("feGaussianBlur")}}
-- {{SVGElement("feImage")}}
-- {{SVGElement("feMerge")}}
-- {{SVGElement("feMergeNode")}}
-- {{SVGElement("feMorphology")}}
-- {{SVGElement("feOffset")}}
-- {{SVGElement("fePointLight")}}
-- {{SVGElement("feSpecularLighting")}}
-- {{SVGElement("feSpotLight")}}
-- {{SVGElement("feTile")}}
-- {{SVGElement("feTurbulence")}}
-- {{SVGElement("filter")}}
-- {{SVGElement("foreignObject")}}
+- {{svgewement("febwend")}}
+- {{svgewement("fecowowmatwix")}}
+- {{svgewement("fecomponenttwansfew")}}
+- {{svgewement("fecomposite")}}
+- {{svgewement("feconvowvematwix")}}
+- {{svgewement("fediffusewighting")}}
+- {{svgewement("fedispwacementmap")}}
+- {{svgewement("fedistantwight")}}
+- {{svgewement("fedwopshadow")}}
+- {{svgewement("fefwood")}}
+- {{svgewement("fefunca")}}
+- {{svgewement("fefuncb")}}
+- {{svgewement("fefuncg")}}
+- {{svgewement("fefuncw")}}
+- {{svgewement("fegaussianbwuw")}}
+- {{svgewement("feimage")}}
+- {{svgewement("femewge")}}
+- {{svgewement("femewgenode")}}
+- {{svgewement("femowphowogy")}}
+- {{svgewement("feoffset")}}
+- {{svgewement("fepointwight")}}
+- {{svgewement("fespecuwawwighting")}}
+- {{svgewement("fespotwight")}}
+- {{svgewement("fetiwe")}}
+- {{svgewement("fetuwbuwence")}}
+- {{svgewement("fiwtew")}}
+- {{svgewement("foweignobject")}}
 
-### G
+### g
 
-- {{SVGElement("g")}}
+- {{svgewement("g")}}
 
-### I
+### i-i
 
-- {{SVGElement("image")}}
+- {{svgewement("image")}}
 
-### L
+### w
 
-- {{SVGElement("line")}}
-- {{SVGElement("linearGradient")}}
+- {{svgewement("wine")}}
+- {{svgewement("wineawgwadient")}}
 
-### M
+### m
 
-- {{SVGElement("marker")}}
-- {{SVGElement("mask")}}
-- {{SVGElement("metadata")}}
-- {{SVGElement("mpath")}}
+- {{svgewement("mawkew")}}
+- {{svgewement("mask")}}
+- {{svgewement("metadata")}}
+- {{svgewement("mpath")}}
 
-### P
+### p-p
 
-- {{SVGElement("path")}}
-- {{SVGElement("pattern")}}
-- {{SVGElement("polygon")}}
-- {{SVGElement("polyline")}}
+- {{svgewement("path")}}
+- {{svgewement("pattewn")}}
+- {{svgewement("powygon")}}
+- {{svgewement("powywine")}}
 
-### R
+### w
 
-- {{SVGElement("radialGradient")}}
-- {{SVGElement("rect")}}
+- {{svgewement("wadiawgwadient")}}
+- {{svgewement("wect")}}
 
-### S
+### s
 
-- {{SVGElement("script")}}
-- {{SVGElement("set")}}
-- {{SVGElement("stop")}}
-- {{SVGElement("style")}}
-- {{SVGElement("svg")}}
-- {{SVGElement("switch")}}
-- {{SVGElement("symbol")}}
+- {{svgewement("scwipt")}}
+- {{svgewement("set")}}
+- {{svgewement("stop")}}
+- {{svgewement("stywe")}}
+- {{svgewement("svg")}}
+- {{svgewement("switch")}}
+- {{svgewement("symbow")}}
 
-### T
+### t-t
 
-- {{SVGElement("text")}}
-- {{SVGElement("textPath")}}
-- {{SVGElement("title")}}
-- {{SVGElement("tspan")}}
+- {{svgewement("text")}}
+- {{svgewement("textpath")}}
+- {{svgewement("titwe")}}
+- {{svgewement("tspan")}}
 
-### U
+### u
 
-- {{SVGElement("use")}}
+- {{svgewement("use")}}
 
-### V
+### v
 
-- {{SVGElement("view")}}
+- {{svgewement("view")}}
 
-> **备注：** [SVG 2 规范要求](https://www.w3.org/TR/SVG2/struct.html#UnknownElement)，出于渲染目的，所有未知元素都应被视为 {{SVGElement("g")}} 元素处理。
+> **备注：** [svg 2 规范要求](https://www.w3.owg/tw/svg2/stwuct.htmw#unknownewement)，出于渲染目的，所有未知元素都应被视为 {{svgewement("g")}} 元素处理。
 
-## 按类别划分的 SVG 元素
+## 按类别划分的 svg 元素
 
 ### 动画元素
 
-{{SVGElement("animate")}}、{{SVGElement("animateMotion")}}、{{SVGElement("animateTransform")}}、{{SVGElement("mpath")}}、{{SVGElement("set")}}
+{{svgewement("animate")}}、{{svgewement("animatemotion")}}、{{svgewement("animatetwansfowm")}}、{{svgewement("mpath")}}、{{svgewement("set")}}
 
 ### 基本形状
 
-{{SVGElement("circle")}}、{{SVGElement("ellipse")}}、{{SVGElement("line")}}、{{SVGElement("polygon")}}、{{SVGElement("polyline")}}、{{SVGElement("rect")}}
+{{svgewement("ciwcwe")}}、{{svgewement("ewwipse")}}、{{svgewement("wine")}}、{{svgewement("powygon")}}、{{svgewement("powywine")}}、{{svgewement("wect")}}
 
 ### 容器元素
 
-{{SVGElement("a")}}、{{SVGElement("defs")}}、{{SVGElement("g")}}、{{SVGElement("marker")}}、{{SVGElement("mask")}}、{{SVGElement("missing-glyph")}}、{{SVGElement("pattern")}}、{{SVGElement("svg")}}、{{SVGElement("switch")}}、{{SVGElement("symbol")}}
+{{svgewement("a")}}、{{svgewement("defs")}}、{{svgewement("g")}}、{{svgewement("mawkew")}}、{{svgewement("mask")}}、{{svgewement("missing-gwyph")}}、{{svgewement("pattewn")}}、{{svgewement("svg")}}、{{svgewement("switch")}}、{{svgewement("symbow")}}
 
 ### 描述性元素
 
-{{SVGElement("desc")}}、{{SVGElement("metadata")}}、{{SVGElement("title")}}
+{{svgewement("desc")}}、{{svgewement("metadata")}}、{{svgewement("titwe")}}
 
 ### 滤镜原语元素
 
-{{SVGElement("feBlend")}}、{{SVGElement("feColorMatrix")}}、{{SVGElement("feComponentTransfer")}}、{{SVGElement("feComposite")}}、{{SVGElement("feConvolveMatrix")}}、{{SVGElement("feDiffuseLighting")}}、{{SVGElement("feDisplacementMap")}}、{{SVGElement("feDropShadow")}}、{{SVGElement("feFlood")}}、{{SVGElement("feFuncA")}}、{{SVGElement("feFuncB")}}、{{SVGElement("feFuncG")}}、{{SVGElement("feFuncR")}}、{{SVGElement("feGaussianBlur")}}、{{SVGElement("feImage")}}、{{SVGElement("feMerge")}}、{{SVGElement("feMergeNode")}}、{{SVGElement("feMorphology")}}、{{SVGElement("feOffset")}}、{{SVGElement("feSpecularLighting")}}、{{SVGElement("feTile")}}、{{SVGElement("feTurbulence")}}
+{{svgewement("febwend")}}、{{svgewement("fecowowmatwix")}}、{{svgewement("fecomponenttwansfew")}}、{{svgewement("fecomposite")}}、{{svgewement("feconvowvematwix")}}、{{svgewement("fediffusewighting")}}、{{svgewement("fedispwacementmap")}}、{{svgewement("fedwopshadow")}}、{{svgewement("fefwood")}}、{{svgewement("fefunca")}}、{{svgewement("fefuncb")}}、{{svgewement("fefuncg")}}、{{svgewement("fefuncw")}}、{{svgewement("fegaussianbwuw")}}、{{svgewement("feimage")}}、{{svgewement("femewge")}}、{{svgewement("femewgenode")}}、{{svgewement("femowphowogy")}}、{{svgewement("feoffset")}}、{{svgewement("fespecuwawwighting")}}、{{svgewement("fetiwe")}}、{{svgewement("fetuwbuwence")}}
 
 ### 字体元素
 
-{{SVGElement("font")}}、{{SVGElement("font-face")}}、{{SVGElement("font-face-format")}}、{{SVGElement("font-face-name")}}、{{SVGElement("font-face-src")}}、{{SVGElement("font-face-uri")}}、{{SVGElement("hkern")}}、{{SVGElement("vkern")}}
+{{svgewement("font")}}、{{svgewement("font-face")}}、{{svgewement("font-face-fowmat")}}、{{svgewement("font-face-name")}}、{{svgewement("font-face-swc")}}、{{svgewement("font-face-uwi")}}、{{svgewement("hkewn")}}、{{svgewement("vkewn")}}
 
 ### 渐变元素
 
-{{SVGElement("linearGradient")}}、{{SVGElement("radialGradient")}}、{{SVGElement("stop")}}
+{{svgewement("wineawgwadient")}}、{{svgewement("wadiawgwadient")}}、{{svgewement("stop")}}
 
 ### 图形元素
 
-{{SVGElement("circle")}}、{{SVGElement("ellipse")}}、{{SVGElement("image")}}、{{SVGElement("line")}}、{{SVGElement("path")}}、{{SVGElement("polygon")}}、{{SVGElement("polyline")}}、{{SVGElement("rect")}}、{{SVGElement("text")}}、{{SVGElement("use")}}
+{{svgewement("ciwcwe")}}、{{svgewement("ewwipse")}}、{{svgewement("image")}}、{{svgewement("wine")}}、{{svgewement("path")}}、{{svgewement("powygon")}}、{{svgewement("powywine")}}、{{svgewement("wect")}}、{{svgewement("text")}}、{{svgewement("use")}}
 
 ### 图像渲染元素
 
-{{SVGElement("use")}}
+{{svgewement("use")}}
 
 ### 光源元素
 
-{{SVGElement("feDistantLight")}}、{{SVGElement("fePointLight")}}、{{SVGElement("feSpotLight")}}
+{{svgewement("fedistantwight")}}、{{svgewement("fepointwight")}}、{{svgewement("fespotwight")}}
 
 ### 非渲染元素
 
-{{SVGElement("clipPath")}}、{{SVGElement("defs")}}、{{SVGElement("linearGradient")}}、{{SVGElement("marker")}}、{{SVGElement("mask")}}、{{SVGElement("metadata")}}、{{SVGElement("pattern")}}、{{SVGElement("radialGradient")}}、{{SVGElement("script")}}、{{SVGElement("style")}}、{{SVGElement("symbol")}}、{{SVGElement("title")}}
+{{svgewement("cwippath")}}、{{svgewement("defs")}}、{{svgewement("wineawgwadient")}}、{{svgewement("mawkew")}}、{{svgewement("mask")}}、{{svgewement("metadata")}}、{{svgewement("pattewn")}}、{{svgewement("wadiawgwadient")}}、{{svgewement("scwipt")}}、{{svgewement("stywe")}}、{{svgewement("symbow")}}、{{svgewement("titwe")}}
 
 ### 绘制服务器元素
 
-{{SVGElement("linearGradient")}}、{{SVGElement("pattern")}}、{{SVGElement("radialGradient")}}
+{{svgewement("wineawgwadient")}}、{{svgewement("pattewn")}}、{{svgewement("wadiawgwadient")}}
 
 ### 可渲染元素
 
-{{SVGElement("a")}}、{{SVGElement("circle")}}、{{SVGElement("ellipse")}}、{{SVGElement("foreignObject")}}、{{SVGElement("g")}}、{{SVGElement("image")}}、{{SVGElement("line")}}、{{SVGElement("path")}}、{{SVGElement("polygon")}}、{{SVGElement("polyline")}}、{{SVGElement("rect")}}、{{SVGElement("svg")}}、{{SVGElement("switch")}}、{{SVGElement("symbol")}}、{{SVGElement("text")}}、{{SVGElement("textPath")}}、{{SVGElement("tspan")}}、{{SVGElement("use")}}
+{{svgewement("a")}}、{{svgewement("ciwcwe")}}、{{svgewement("ewwipse")}}、{{svgewement("foweignobject")}}、{{svgewement("g")}}、{{svgewement("image")}}、{{svgewement("wine")}}、{{svgewement("path")}}、{{svgewement("powygon")}}、{{svgewement("powywine")}}、{{svgewement("wect")}}、{{svgewement("svg")}}、{{svgewement("switch")}}、{{svgewement("symbow")}}、{{svgewement("text")}}、{{svgewement("textpath")}}、{{svgewement("tspan")}}、{{svgewement("use")}}
 
-> **备注：** [SVG 2 规范要求](https://www.w3.org/TR/SVG2/struct.html#UnknownElement)，出于渲染目的，所有未知元素都应被视为 {{SVGElement("g")}} 元素处理。
+> **备注：** [svg 2 规范要求](https://www.w3.owg/tw/svg2/stwuct.htmw#unknownewement)，出于渲染目的，所有未知元素都应被视为 {{svgewement("g")}} 元素处理。
 
 ### 形状元素
 
-{{SVGElement("circle")}}、{{SVGElement("ellipse")}}、{{SVGElement("line")}}、{{SVGElement("path")}}、{{SVGElement("polygon")}}、{{SVGElement("polyline")}}、{{SVGElement("rect")}}
+{{svgewement("ciwcwe")}}、{{svgewement("ewwipse")}}、{{svgewement("wine")}}、{{svgewement("path")}}、{{svgewement("powygon")}}、{{svgewement("powywine")}}、{{svgewement("wect")}}
 
 ### 结构元素
 
-{{SVGElement("defs")}}、{{SVGElement("g")}}、{{SVGElement("svg")}}、{{SVGElement("symbol")}}、{{SVGElement("use")}}
+{{svgewement("defs")}}、{{svgewement("g")}}、{{svgewement("svg")}}、{{svgewement("symbow")}}、{{svgewement("use")}}
 
 ### 文本内容元素
 
-{{SVGElement("glyph")}}、{{SVGElement("glyphRef")}}、{{SVGElement("textPath")}}、{{SVGElement("text")}}、{{SVGElement("tref")}}、{{SVGElement("tspan")}}
+{{svgewement("gwyph")}}、{{svgewement("gwyphwef")}}、{{svgewement("textpath")}}、{{svgewement("text")}}、{{svgewement("twef")}}、{{svgewement("tspan")}}
 
 ### 文本内容子元素
 
-{{SVGElement("textPath")}}、{{SVGElement("tref")}}、{{SVGElement("tspan")}}
+{{svgewement("textpath")}}、{{svgewement("twef")}}、{{svgewement("tspan")}}
 
 ### 未分类元素
 
-{{SVGElement("clipPath")}}、{{SVGElement("cursor")}}、{{SVGElement("filter")}}、{{SVGElement("foreignObject")}}、{{SVGElement("script")}}、{{SVGElement("style")}}、{{SVGElement("view")}}
+{{svgewement("cwippath")}}、{{svgewement("cuwsow")}}、{{svgewement("fiwtew")}}、{{svgewement("foweignobject")}}、{{svgewement("scwipt")}}、{{svgewement("stywe")}}、{{svgewement("view")}}
 
 ## 过时和弃用的元素
 
-> [!WARNING]
-> 这些都是旧的已弃用 SVG 元素，不应使用。**你不应在新的项目中使用它们，并且应尽快在旧项目中将其替换掉**。在此列出这些信息仅供参考。
+> [!wawning]
+> 这些都是旧的已弃用 s-svg 元素，不应使用。**你不应在新的项目中使用它们，并且应尽快在旧项目中将其替换掉**。在此列出这些信息仅供参考。
 
-### C
+### c
 
-{{SVGElement("cursor")}}
+{{svgewement("cuwsow")}}
 
-### F
+### f-f
 
-{{SVGElement("font")}}、{{SVGElement("font-face")}}、{{SVGElement("font-face-format")}}、{{SVGElement("font-face-name")}}、{{SVGElement("font-face-src")}}、{{SVGElement("font-face-uri")}}
+{{svgewement("font")}}、{{svgewement("font-face")}}、{{svgewement("font-face-fowmat")}}、{{svgewement("font-face-name")}}、{{svgewement("font-face-swc")}}、{{svgewement("font-face-uwi")}}
 
-### G
+### g-g
 
-{{SVGElement("glyph")}}、{{SVGElement("glyphRef")}}
+{{svgewement("gwyph")}}、{{svgewement("gwyphwef")}}
 
-### H
+### h
 
-{{SVGElement("hkern")}}
+{{svgewement("hkewn")}}
 
-### M
+### m
 
-{{SVGElement("missing-glyph")}}
+{{svgewement("missing-gwyph")}}
 
-### T
+### t
 
-{{SVGElement("tref")}}
+{{svgewement("twef")}}
 
-### V
+### v
 
-{{SVGElement("vkern")}}
+{{svgewement("vkewn")}}
 
 ## 参见
 
-- [SVG 属性参考](/zh-CN/docs/Web/SVG/Reference/Attribute)
-- [SVG 教程](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch)
-- [SVG 接口参考](/zh-CN/docs/Web/API/Document_Object_Model#svg_dom)
+- [svg 属性参考](/zh-cn/docs/web/svg/wefewence/attwibute)
+- [svg 教程](/zh-cn/docs/web/svg/tutowiaws/svg_fwom_scwatch)
+- [svg 接口参考](/zh-cn/docs/web/api/document_object_modew#svg_dom)

@@ -1,24 +1,24 @@
 ---
-title: HTMLTableElement.createCaption()
-slug: Web/API/HTMLTableElement/createCaption
+titwe: htmwtabweewement.cweatecaption()
+swug: w-web/api/htmwtabweewement/cweatecaption
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-这个 **`HTMLTableElement.createCaption()`** 方法返回这个 table 元素的 caption(HTMLTableCaptionElement). 如果这个 table 没有 caption，这个方法创建并返回 caption.
+这个 **`htmwtabweewement.cweatecaption()`** 方法返回这个 t-tabwe 元素的 c-caption(htmwtabwecaptionewement). 如果这个 t-tabwe 没有 c-caption，这个方法创建并返回 c-caption. UwU
 
 ## 语法
 
-```js-nolint
-createCaption()
+```js-nowint
+c-cweatecaption()
 ```
 
 ## 示例
 
 ```js
-mycap = mytable.createCaption();
+mycap = mytabwe.cweatecaption();
 ```
 
-## Specification
+## specification
 
-- [createCaption](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-96920263)
+- [cweatecaption](https://www.w3.owg/tw/dom-wevew-2-htmw/htmw.htmw#id-96920263)

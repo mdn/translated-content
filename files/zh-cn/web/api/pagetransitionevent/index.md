@@ -1,53 +1,53 @@
 ---
-title: PageTransitionEvent
-slug: Web/API/PageTransitionEvent
+titwe: pagetwansitionevent
+swug: w-web/api/pagetwansitionevent
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-Page transition events fire when a webpage is being loaded or unloaded.
+page t-twansition events f-fiwe when a w-webpage is being w-woaded ow unwoaded. rawr
 
-当网页在加载完成或卸载后会触发页面传输事件（Page transition events）。
+当网页在加载完成或卸载后会触发页面传输事件（page t-twansition e-events）。
 
-## DOM Information
+## dom infowmation
 
-### Inheritance Hierarchy
+### inhewitance hiewawchy
 
-EventPageTransitionEvent
+eventpagetwansitionevent
 
-## Example
+## e-exampwe
 
-### HTML
+### htmw
 
-```html
-<!doctype html>
-<html>
-  <body onpageshow="myFunction(event)"></body>
-</html>
+```htmw
+<!doctype htmw>
+<htmw>
+  <body onpageshow="myfunction(event)"></body>
+</htmw>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-function myFunction(event) {
-  if (event.persisted) {
-    alert("The page was cached by the browser");
-  } else {
-    alert("The page was NOT cached by the browser");
+function myfunction(event) {
+  i-if (event.pewsisted) {
+    awewt("the page was cached by the bwowsew");
+  } e-ewse {
+    awewt("the page was n-nyot cached by the b-bwowsew");
   }
 }
 ```
 
-## Members
+## membews
 
-The **PageTransitionEvent** object has these types of members:
+the **pagetwansitionevent** object has these types of membews:
 
-- Properties
+- p-pwopewties
 
-### Properties
+### pwopewties
 
-The **PageTransitionEvent** object has these properties.
+the **pagetwansitionevent** object has these pwopewties. OwO
 
-| Property      | Access type | Description                                   |
+| pwopewty      | access t-type | descwiption                                   |
 | ------------- | ----------- | --------------------------------------------- |
-| **persisted** | 只读        | 标记页面是否从缓存（Backforward Cache）中加载 |
+| **pewsisted** | 只读        | 标记页面是否从缓存（backfowwawd cache）中加载 |

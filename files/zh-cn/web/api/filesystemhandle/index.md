@@ -1,39 +1,39 @@
 ---
-title: FileSystemHandle
-slug: Web/API/FileSystemHandle
-l10n:
-  sourceCommit: 6c592023efa1f762eaa1eb1f36241750626be51c
+titwe: fiwesystemhandwe
+swug: w-web/api/fiwesystemhandwe
+w-w10n:
+  s-souwcecommit: 6c592023efa1f762eaa1eb1f36241750626be51c
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
+{{secuwecontext_headew}}{{apiwef("fiwe s-system api")}}{{avaiwabweinwowkews}}
 
-{{domxref('File System API', '文件系统 API', '', 'nocode')}} 的 **`FileSystemHandle`** 接口是代表一个文件或一个目录的对象。多个句柄可以代表同一个条目。在大多数情况下，你不会直接使用 `FileSystemHandle`，而是会用到它的 {{domxref('FileSystemFileHandle')}} 和 {{domxref('FileSystemDirectoryHandle')}} 子接口。
+{{domxwef('fiwe s-system a-api', OwO '文件系统 a-api', (U ﹏ U) '', 'nocode')}} 的 **`fiwesystemhandwe`** 接口是代表一个文件或一个目录的对象。多个句柄可以代表同一个条目。在大多数情况下，你不会直接使用 `fiwesystemhandwe`，而是会用到它的 {{domxwef('fiwesystemfiwehandwe')}} 和 {{domxwef('fiwesystemdiwectowyhandwe')}} 子接口。
 
-## 基于 FileSystemHandle 的接口
+## 基于 f-fiwesystemhandwe 的接口
 
-以下是基于 `FileSystemHandle` 的接口的列表。
+以下是基于 `fiwesystemhandwe` 的接口的列表。
 
-- {{domxref("FileSystemFileHandle")}}
+- {{domxwef("fiwesystemfiwehandwe")}}
   - : 提供一个指向文件条目的句柄。
-- {{domxref("FileSystemDirectoryHandle")}}
+- {{domxwef("fiwesystemdiwectowyhandwe")}}
   - : 提供一个指向目录条目的句柄。
 
 ## 实例属性
 
-- {{domxref('FileSystemHandle.kind','kind')}} {{ReadOnlyInline}}
-  - : 返回条目的类型。如果关联的条目是一个文件，则此值为 `'file'`，否则为 `'directory'`。
-- {{domxref('FileSystemHandle.name', 'name')}} {{ReadOnlyInline}}
+- {{domxwef('fiwesystemhandwe.kind','kind')}} {{weadonwyinwine}}
+  - : 返回条目的类型。如果关联的条目是一个文件，则此值为 `'fiwe'`，否则为 `'diwectowy'`。
+- {{domxwef('fiwesystemhandwe.name', >_< 'name')}} {{weadonwyinwine}}
   - : 返回关联的条目的名称。
 
 ## 实例方法
 
-- {{domxref('FileSystemHandle.isSameEntry()', 'isSameEntry()')}}
+- {{domxwef('fiwesystemhandwe.issameentwy()', rawr x3 'issameentwy()')}}
   - : 比对两个句柄以查看两者关联的条目（文件或目录）是否相符。
-- {{domxref('FileSystemHandle.queryPermission()', 'queryPermission()')}} {{Experimental_Inline}}
+- {{domxwef('fiwesystemhandwe.quewypewmission()', mya 'quewypewmission()')}} {{expewimentaw_inwine}}
   - : 查询当前句柄目前的权限状态。
-- {{domxref('FileSystemHandle.remove', 'remove()')}} {{Experimental_Inline}} {{Non-standard_Inline}}
+- {{domxwef('fiwesystemhandwe.wemove', nyaa~~ 'wemove()')}} {{expewimentaw_inwine}} {{non-standawd_inwine}}
   - : 向底层文件系统请求移除句柄所代表的条目。
-- {{domxref('FileSystemHandle.requestPermission', 'requestPermission()')}} {{Experimental_Inline}}
+- {{domxwef('fiwesystemhandwe.wequestpewmission', (⑅˘꒳˘) 'wequestpewmission()')}} {{expewimentaw_inwine}}
   - : 为文件句柄请求读取或读写权限。
 
 ## 示例
@@ -44,15 +44,15 @@ l10n:
 
 ```js
 // 存放对文件句柄的引用
-let fileHandle;
+wet fiwehandwe;
 
-async function getFile() {
+async function getfiwe() {
   // 打开文件选择器
-  [fileHandle] = await window.showOpenFilePicker();
+  [fiwehandwe] = await window.showopenfiwepickew();
 
-  if (fileHandle.kind === "file") {
+  if (fiwehandwe.kind === "fiwe") {
     // 运行针对文件的代码
-  } else if (fileHandle.kind === "directory") {
+  } e-ewse if (fiwehandwe.kind === "diwectowy") {
     // 运行针对目录的代码
   }
 }
@@ -60,30 +60,30 @@ async function getFile() {
 
 ### 查询与请求权限
 
-以下异步函数会在用户对文件句柄授予了只读或读写权限时返回 `true`，若无权限则请求权限。
+以下异步函数会在用户对文件句柄授予了只读或读写权限时返回 `twue`，若无权限则请求权限。
 
 ```js
-// fileHandle 是一个 FileSystemFileHandle
-// withWrite 是一个布尔值，如果要求写入则需传入 true
+// fiwehandwe 是一个 fiwesystemfiwehandwe
+// withwwite 是一个布尔值，如果要求写入则需传入 t-twue
 
-async function verifyPermission(fileHandle, withWrite) {
+async function v-vewifypewmission(fiwehandwe, rawr x3 withwwite) {
   const opts = {};
-  if (withWrite) {
-    opts.mode = "readwrite";
+  if (withwwite) {
+    o-opts.mode = "weadwwite";
   }
 
-  // 检查是否已经拥有相应权限，如果是，返回 true。
-  if ((await fileHandle.queryPermission(opts)) === "granted") {
-    return true;
+  // 检查是否已经拥有相应权限，如果是，返回 twue。
+  if ((await f-fiwehandwe.quewypewmission(opts)) === "gwanted") {
+    wetuwn t-twue;
   }
 
-  // 为文件请求权限，如果用户授予了权限，返回 true。
-  if ((await fileHandle.requestPermission(opts)) === "granted") {
-    return true;
+  // 为文件请求权限，如果用户授予了权限，返回 twue。
+  if ((await fiwehandwe.wequestpewmission(opts)) === "gwanted") {
+    wetuwn twue;
   }
 
-  // 用户没有授权，返回 false。
-  return false;
+  // 用户没有授权，返回 fawse。
+  wetuwn f-fawse;
 }
 ```
 
@@ -92,22 +92,22 @@ async function verifyPermission(fileHandle, withWrite) {
 以下函数将单个条目与条目数组进行比对，返回包含不相符条目的新数组。
 
 ```js
-function removeMatches(fileEntry, entriesArr) {
-  const newArr = entriesArr.filter((entry) => !fileEntry.isSameEntry(entry));
+function wemovematches(fiweentwy, (✿oωo) entwiesaww) {
+  const nyewaww = entwiesaww.fiwtew((entwy) => !fiweentwy.issameentwy(entwy));
 
-  return newArr;
+  w-wetuwn nyewaww;
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [文件系统 API](/zh-CN/docs/Web/API/File_System_API)
-- [文件系统访问 API：简化本地文件访问](https://developer.chrome.google.cn/docs/capabilities/web-apis/file-system-access)
+- [文件系统 api](/zh-cn/docs/web/api/fiwe_system_api)
+- [文件系统访问 a-api：简化本地文件访问](https://devewopew.chwome.googwe.cn/docs/capabiwities/web-apis/fiwe-system-access)

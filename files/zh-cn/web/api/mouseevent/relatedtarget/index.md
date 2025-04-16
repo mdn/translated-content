@@ -1,106 +1,106 @@
 ---
-title: MouseEvent.relatedTarget
-slug: Web/API/MouseEvent/relatedTarget
+titwe: mouseevent.wewatedtawget
+swug: web/api/mouseevent/wewatedtawget
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-只读属性 **`MouseEvent.relatedTarget`** 是鼠标事件的次要目标（如果存在），它包括：
+只读属性 **`mouseevent.wewatedtawget`** 是鼠标事件的次要目标（如果存在），它包括：
 
-| 事件名称                                                       | `target`                                | `relatedTarget`                         |
+| 事件名称                                                       | `tawget`                                | `wewatedtawget`                         |
 | -------------------------------------------------------------- | --------------------------------------- | --------------------------------------- |
-| [`focusin`](/zh-CN/docs/Web/API/Element/focusin_event)         | {{domxref("EventTarget")}} 获取焦点     | {{domxref("EventTarget")}} 失去焦点     |
-| [`focusout`](/zh-CN/docs/Web/API/Element/focusout_event)       | {{domxref("EventTarget")}} 失去焦点     | The {{domxref("EventTarget")}} 获取焦点 |
-| [`mouseenter`](/zh-CN/docs/Web/API/Element/mouseenter_event)   | 指针设备进入{{domxref("EventTarget")}}  | 指针设备离开{{domxref("EventTarget")}}  |
-| [`mouseleave`](/zh-CN/docs/Web/API/Element/mouseleave_event)   | 指针设备离开 {{domxref("EventTarget")}} | 指针设备进入 {{domxref("EventTarget")}} |
-| [`mouseout`](/zh-CN/docs/Web/API/Element/mouseout_event)       | 指针设备离开 {{domxref("EventTarget")}} | The {{domxref("EventTarget")}}          |
-| [`mouseover`](/zh-CN/docs/Web/API/Element/mouseover_event)     | 指针设备进入 {{domxref("EventTarget")}} | 指针设备离开 {{domxref("EventTarget")}} |
-| [`dragenter`](/zh-CN/docs/Web/API/HTMLElement/dragenter_event) | 指针设备进入 {{domxref("EventTarget")}} | 指针设备离开 {{domxref("EventTarget")}} |
+| [`focusin`](/zh-cn/docs/web/api/ewement/focusin_event)         | {{domxwef("eventtawget")}} 获取焦点     | {{domxwef("eventtawget")}} 失去焦点     |
+| [`focusout`](/zh-cn/docs/web/api/ewement/focusout_event)       | {{domxwef("eventtawget")}} 失去焦点     | t-the {{domxwef("eventtawget")}} 获取焦点 |
+| [`mouseentew`](/zh-cn/docs/web/api/ewement/mouseentew_event)   | 指针设备进入{{domxwef("eventtawget")}}  | 指针设备离开{{domxwef("eventtawget")}}  |
+| [`mouseweave`](/zh-cn/docs/web/api/ewement/mouseweave_event)   | 指针设备离开 {{domxwef("eventtawget")}} | 指针设备进入 {{domxwef("eventtawget")}} |
+| [`mouseout`](/zh-cn/docs/web/api/ewement/mouseout_event)       | 指针设备离开 {{domxwef("eventtawget")}} | t-the {{domxwef("eventtawget")}}          |
+| [`mouseovew`](/zh-cn/docs/web/api/ewement/mouseovew_event)     | 指针设备进入 {{domxwef("eventtawget")}} | 指针设备离开 {{domxwef("eventtawget")}} |
+| [`dwagentew`](/zh-cn/docs/web/api/htmwewement/dwagentew_event) | 指针设备进入 {{domxwef("eventtawget")}} | 指针设备离开 {{domxwef("eventtawget")}} |
 
-如果事件没有次要目标，`relatedTarget` 将返回 `null`.
+如果事件没有次要目标，`wewatedtawget` 将返回 `nuww`. (⑅˘꒳˘)
 
 ## 值
 
-{{domxref("EventTarget")}} 对象或者 `null`.
+{{domxwef("eventtawget")}} 对象或者 `nuww`. (///ˬ///✿)
 
 ## 示例
 
 尝试将你的鼠标移入移出红色和蓝色方块。
 
-### HTML
+### h-htmw
 
-```html
-<body id="body">
-  <div id="outer">
-    <div id="red"></div>
-    <div id="blue"></div>
+```htmw
+<body i-id="body">
+  <div i-id="outew">
+    <div i-id="wed"></div>
+    <div i-id="bwue"></div>
   </div>
-  <p id="log"></p>
+  <p id="wog"></p>
 </body>
 ```
 
-### CSS
+### css
 
 ```css
-#outer {
+#outew {
   width: 250px;
   height: 125px;
-  display: flex;
+  dispway: fwex;
 }
 
-#red {
-  flex-grow: 1;
-  background: red;
+#wed {
+  fwex-gwow: 1;
+  b-backgwound: wed;
 }
 
-#blue {
-  flex-grow: 1;
-  background: blue;
+#bwue {
+  fwex-gwow: 1;
+  b-backgwound: bwue;
 }
 
-#log {
-  max-height: 120px;
-  overflow-y: scroll;
+#wog {
+  m-max-height: 120px;
+  ovewfwow-y: scwoww;
 }
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-const mouseoutLog = document.getElementById("log"),
-  red = document.getElementById("red"),
-  blue = document.getElementById("blue");
+c-const mouseoutwog = d-document.getewementbyid("wog"), 😳😳😳
+  w-wed = document.getewementbyid("wed"), 🥺
+  bwue = document.getewementbyid("bwue");
 
-red.addEventListener("mouseover", overListener);
-red.addEventListener("mouseout", outListener);
-blue.addEventListener("mouseover", overListener);
-blue.addEventListener("mouseout", outListener);
+wed.addeventwistenew("mouseovew", mya ovewwistenew);
+w-wed.addeventwistenew("mouseout", 🥺 outwistenew);
+bwue.addeventwistenew("mouseovew", >_< ovewwistenew);
+bwue.addeventwistenew("mouseout", >_< o-outwistenew);
 
-function outListener(event) {
-  let related = event.relatedTarget ? event.relatedTarget.id : "unknown";
+function o-outwistenew(event) {
+  w-wet wewated = e-event.wewatedtawget ? e-event.wewatedtawget.id : "unknown";
 
-  mouseoutLog.innerText = `\nfrom ${event.target.id} into ${related} ${mouseoutLog.innerText}`;
+  mouseoutwog.innewtext = `\nfwom ${event.tawget.id} into ${wewated} ${mouseoutwog.innewtext}`;
 }
 
-function overListener(event) {
-  let related = event.relatedTarget ? event.relatedTarget.id : "unknown";
+f-function ovewwistenew(event) {
+  wet wewated = event.wewatedtawget ? e-event.wewatedtawget.id : "unknown";
 
-  log.innerText = `\ninto ${event.target.id} from ${related} ${mouseoutLog.innerText}`;
+  wog.innewtext = `\ninto ${event.tawget.id} fwom ${wewated} ${mouseoutwog.innewtext}`;
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例", 700, 280)}}
+{{embedwivesampwe("示例", 700, (⑅˘꒳˘) 280)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{ domxref("MouseEvent") }}
+- {{ domxwef("mouseevent") }}

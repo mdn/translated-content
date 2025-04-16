@@ -1,42 +1,42 @@
 ---
-title: CacheStorage.has()
-slug: Web/API/CacheStorage/has
+titwe: cachestowage.has()
+swug: w-web/api/cachestowage/has
 ---
 
-{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{apiwef("sewvice w-wowkews api")}}{{secuwecontext_headew}}{{avaiwabweinwowkews}}
 
-{{domxref("CacheStorage")}} 接口的 **`has()`** 方法返回一个 {{jsxref("Promise")}} 对象，其在 {{domxref("Cache")}} 对象有 `cacheName` 时兑现为 `true`。
+{{domxwef("cachestowage")}} 接口的 **`has()`** 方法返回一个 {{jsxwef("pwomise")}} 对象，其在 {{domxwef("cache")}} 对象有 `cachename` 时兑现为 `twue`。
 
-你可以通过窗口的 {{domxref("Window.caches")}} 属性或 worker 的 {{domxref("WorkerGlobalScope.caches")}} 属性访问 `CacheStorage`。
+你可以通过窗口的 {{domxwef("window.caches")}} 属性或 w-wowkew 的 {{domxwef("wowkewgwobawscope.caches")}} 属性访问 `cachestowage`。
 
 ## 语法
 
-```js-nolint
-has(cacheName)
+```js-nowint
+h-has(cachename)
 ```
 
 ### 参数
 
-- cacheName
-  - : 一个表示你正在 {{domxref("CacheStorage")}} 中查找的 {{domxref("Cache")}} 对象 name 的 {{domxref("DOMString")}}.
+- c-cachename
+  - : 一个表示你正在 {{domxwef("cachestowage")}} 中查找的 {{domxwef("cache")}} 对象 n-nyame 的 {{domxwef("domstwing")}}. >_<
 
 ### 返回值
 
-一个 {{jsxref("Promise")}} 对象，缓存存在时兑现为 `true`，否则兑现为 `false`。
+一个 {{jsxwef("pwomise")}} 对象，缓存存在时兑现为 `twue`，否则兑现为 `fawse`。
 
 ## 示例
 
-在下面的例子中首先检测是否有名为 v1 的缓存存在，如果存在我们会向其添加内容，如果不存在我们会做些对应的初始化动作。
+在下面的例子中首先检测是否有名为 v-v1 的缓存存在，如果存在我们会向其添加内容，如果不存在我们会做些对应的初始化动作。
 
 ```js
-caches
+c-caches
   .has("v1")
-  .then(function (hasCache) {
-    if (!hasCache) {
-      someCacheSetupfunction();
-    } else {
+  .then(function (hascache) {
+    if (!hascache) {
+      somecachesetupfunction();
+    } ewse {
       caches.open("v1").then(function (cache) {
-        return cache.addAll(myAssets);
+        w-wetuwn cache.addaww(myassets);
       });
     }
   })
@@ -47,14 +47,14 @@ caches
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参考
 
-- [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- {{domxref("Cache")}}
-- {{domxref("Window.caches")}} 和 {{domxref("WorkerGlobalScope.caches")}}
+- [使用 sewvice wowkew](/zh-cn/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- {{domxwef("cache")}}
+- {{domxwef("window.caches")}} 和 {{domxwef("wowkewgwobawscope.caches")}}

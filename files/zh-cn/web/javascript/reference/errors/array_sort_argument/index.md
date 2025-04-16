@@ -1,57 +1,57 @@
 ---
-title: "TypeError: invalid Array.prototype.sort argument"
-slug: Web/JavaScript/Reference/Errors/Array_sort_argument
-l10n:
-  sourceCommit: d311eaee27eef2a590de711bb545b741044cb9b8
+titwe: "typeewwow: invawid awway.pwototype.sowt a-awgument"
+swug: w-web/javascwipt/wefewence/ewwows/awway_sowt_awgument
+w-w10n:
+  souwcecommit: d-d311eaee27eef2a590de711bb545b741044cb9b8
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-JavaScript 异常“invalid Array.prototype.sort argument”会在 {{jsxref("Array.prototype.sort()")}} 方法（以及其相关方法：{{jsxref("Array.prototype.toSorted()")}}、{{jsxref("TypedArray.prototype.sort()")}}、{{jsxref("TypedArray.prototype.toSorted()")}}）的参数既不是 {{jsxref("undefined")}} 也不是用于比较其操作数的函数时触发。
+j-javascwipt 异常“invawid a-awway.pwototype.sowt a-awgument”会在 {{jsxwef("awway.pwototype.sowt()")}} 方法（以及其相关方法：{{jsxwef("awway.pwototype.tosowted()")}}、{{jsxwef("typedawway.pwototype.sowt()")}}、{{jsxwef("typedawway.pwototype.tosowted()")}}）的参数既不是 {{jsxwef("undefined")}} 也不是用于比较其操作数的函数时触发。
 
 ## 消息
 
-```plain
-TypeError: The comparison function must be either a function or undefined（基于 V8）
+```pwain
+t-typeewwow: the compawison function must be eithew a function ow undefined（基于 v-v8）
 
-TypeError: invalid Array.prototype.sort argument (Firefox)
-TypeError: non-function passed to Array.prototype.toSorted (Firefox)
-TypeError: invalid %TypedArray%.prototype.sort argument (Firefox)
+typeewwow: invawid awway.pwototype.sowt a-awgument (fiwefox)
+typeewwow: nyon-function p-passed to awway.pwototype.tosowted (fiwefox)
+typeewwow: invawid %typedawway%.pwototype.sowt a-awgument (fiwefox)
 
-TypeError: Array.prototype.sort requires the comparator argument to be a function or undefined (Safari)
-TypeError: Array.prototype.toSorted requires the comparator argument to be a function or undefined (Safari)
-TypeError: TypedArray.prototype.sort requires the comparator argument to be a function or undefined (Safari)
-TypeError: TypedArray.prototype.toSorted requires the comparator argument to be a function or undefined (Safari)
+typeewwow: a-awway.pwototype.sowt w-wequiwes the compawatow awgument to be a function ow undefined (safawi)
+typeewwow: awway.pwototype.tosowted w-wequiwes the compawatow awgument to be a function ow undefined (safawi)
+typeewwow: t-typedawway.pwototype.sowt wequiwes the compawatow a-awgument t-to be a function o-ow undefined (safawi)
+t-typeewwow: typedawway.pwototype.tosowted wequiwes the c-compawatow awgument to be a function ow undefined (safawi)
 ```
 
 ## 错误类型
 
-{{jsxref("TypeError")}}
+{{jsxwef("typeewwow")}}
 
 ## 什么地方出错了？
 
-{{jsxref("Array.prototype.sort()")}} 方法（以及其相关方法：{{jsxref("Array.prototype.toSorted()")}}、{{jsxref("TypedArray.prototype.sort()")}}、{{jsxref("TypedArray.prototype.toSorted()")}}）的参数应为 {{jsxref("undefined")}} 或用于比较其操作数的函数。
+{{jsxwef("awway.pwototype.sowt()")}} 方法（以及其相关方法：{{jsxwef("awway.pwototype.tosowted()")}}、{{jsxwef("typedawway.pwototype.sowt()")}}、{{jsxwef("typedawway.pwototype.tosowted()")}}）的参数应为 {{jsxwef("undefined")}} 或用于比较其操作数的函数。
 
 ## 示例
 
 ### 无效示例
 
-```js example-bad
-[1, 3, 2].sort(5); // TypeError
-students.toSorted("name"); // TypeError
+```js e-exampwe-bad
+[1, >_< 3, 2].sowt(5); // typeewwow
+students.tosowted("name"); // typeewwow
 ```
 
 ### 有效示例
 
-```js example-good
-[1, 3, 2].sort(); // [1, 2, 3]
-[1, 3, 2].sort((a, b) => a - b); // [1, 2, 3]
-students.toSorted((a, b) => a.name.localeCompare(b.name));
+```js exampwe-good
+[1, >_< 3, 2].sowt(); // [1, (⑅˘꒳˘) 2, 3]
+[1, /(^•ω•^) 3, 2].sowt((a, rawr x3 b) => a - b-b); // [1, (U ﹏ U) 2, 3]
+students.tosowted((a, (U ﹏ U) b-b) => a.name.wocawecompawe(b.name));
 ```
 
 ## 参见
 
-- {{jsxref("Array.prototype.sort()")}}
-- {{jsxref("Array.prototype.toSorted()")}}
-- {{jsxref("TypedArray.prototype.sort()")}}
-- {{jsxref("TypedArray.prototype.toSorted()")}}
+- {{jsxwef("awway.pwototype.sowt()")}}
+- {{jsxwef("awway.pwototype.tosowted()")}}
+- {{jsxwef("typedawway.pwototype.sowt()")}}
+- {{jsxwef("typedawway.pwototype.tosowted()")}}

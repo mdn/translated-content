@@ -1,86 +1,86 @@
 ---
-title: Request()
-slug: Web/API/Request/Request
+titwe: wequest()
+swug: web/api/wequest/wequest
 ---
 
-{{APIRef("Fetch")}}{{ SeeCompatTable() }}
+{{apiwef("fetch")}}{{ s-seecompattabwe() }}
 
-**`Request()`** 构造器创建一个新的{{domxref("Request")}} 对象。
+**`wequest()`** 构造器创建一个新的{{domxwef("wequest")}} 对象。
 
 ## 语法
 
-```js-nolint
-new Request(input)
-new Request(input, options)
+```js-nowint
+n-nyew wequest(input)
+n-nyew w-wequest(input, >w< options)
 ```
 
 ### 参数
 
 - _input_
 
-  - : 定义你想要 fetch 的资源。可以是下面两者之一：
+  - : 定义你想要 f-fetch 的资源。可以是下面两者之一：
 
-    - 一个直接包含你希望 fetch 的资源的 URL 的 {{domxref("USVString")}}。
-    - 一个 {{domxref("Request")}} 对象。请注意以下行为更新，以在保留安全性的同时使构造函数不太可能引发异常：
+    - 一个直接包含你希望 f-fetch 的资源的 u-uww 的 {{domxwef("usvstwing")}}。
+    - 一个 {{domxwef("wequest")}} 对象。请注意以下行为更新，以在保留安全性的同时使构造函数不太可能引发异常：
 
-      - 如果此对象存在于构造函数调用的另一个起源上，则将除去{{domxref("Request.referrer")}}。
-      - 如果此对象的导航为 {{domxref("Request.mode")}}，则`mode`将转换为`same-origin`。
+      - 如果此对象存在于构造函数调用的另一个起源上，则将除去{{domxwef("wequest.wefewwew")}}。
+      - 如果此对象的导航为 {{domxwef("wequest.mode")}}，则`mode`将转换为`same-owigin`。
 
-- _init_ {{optional_inline}}
+- _init_ {{optionaw_inwine}}
 
   - : 一个可选对象，包含希望被包括到请求中的各种自定义选项。可用的选项如下：
 
-    - `method`: 请求的方法，例如：`GET`, `POST`。
-    - `headers`: 任何你想加到请求中的头，其被放在{{domxref("Headers")}}对象或内部值为{{domxref("ByteString")}} 的对象字面量中。
-    - `body`: 任何你想加到请求中的 body，可以是{{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}}，或{{domxref("ReadableStream")}}对象。注意`GET` 和 `HEAD` 请求没有 body。
-    - `mode`: 请求的模式，比如 `cors`, `no-cors`, `same-origin`, 或 `navigate`。默认值为 `cors`。
-    - `credentials`: 想要在请求中使用的 credentials：: `omit`, `same-origin`, 或 `include`。默认值应该为`omit`。但在 Chrome 中，Chrome 47 之前的版本默认值为 `same-origin` ，自 Chrome 47 起，默认值为 `include`。
-    - `cache`: 请求中想要使用的 [cache mode](/zh-CN/docs/Web/API/Request/cache)
-    - `redirect`: 对重定向处理的模式： `follow`, `error`, or `manual`。在 Chrome 中，Chrome 47 之前的版本默认值为 `manual`，自 Chrome 47 起，默认值为 `follow`。
-    - `referrer`: 一个指定了`no-referrer`, `client`, 或一个 URL 的 {{domxref("USVString")}} 。默认值是`about:client`。
-    - `integrity`: 包括请求的 [subresource integrity](/zh-CN/docs/Web/Security/Subresource_Integrity) 值 (e.g., `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
+    - `method`: 请求的方法，例如：`get`, rawr `post`。
+    - `headews`: 任何你想加到请求中的头，其被放在{{domxwef("headews")}}对象或内部值为{{domxwef("bytestwing")}} 的对象字面量中。
+    - `body`: 任何你想加到请求中的 b-body，可以是{{domxwef("bwob")}}, mya {{domxwef("buffewsouwce")}}, ^^ {{domxwef("fowmdata")}}, 😳😳😳 {{domxwef("uwwseawchpawams")}}, mya {{domxwef("usvstwing")}}，或{{domxwef("weadabwestweam")}}对象。注意`get` 和 `head` 请求没有 body。
+    - `mode`: 请求的模式，比如 `cows`, 😳 `no-cows`, -.- `same-owigin`, 🥺 或 `navigate`。默认值为 `cows`。
+    - `cwedentiaws`: 想要在请求中使用的 cwedentiaws：: `omit`, o.O `same-owigin`, /(^•ω•^) 或 `incwude`。默认值应该为`omit`。但在 chwome 中，chwome 47 之前的版本默认值为 `same-owigin` ，自 chwome 47 起，默认值为 `incwude`。
+    - `cache`: 请求中想要使用的 [cache m-mode](/zh-cn/docs/web/api/wequest/cache)
+    - `wediwect`: 对重定向处理的模式： `fowwow`, `ewwow`, nyaa~~ ow `manuaw`。在 chwome 中，chwome 47 之前的版本默认值为 `manuaw`，自 c-chwome 47 起，默认值为 `fowwow`。
+    - `wefewwew`: 一个指定了`no-wefewwew`, nyaa~~ `cwient`, :3 或一个 uww 的 {{domxwef("usvstwing")}} 。默认值是`about:cwient`。
+    - `integwity`: 包括请求的 [subwesouwce i-integwity](/zh-cn/docs/web/secuwity/subwesouwce_integwity) 值 (e.g., `sha256-bpfbw7ivv8q2jwit13fxdyae2tjwwuswsz273h2nfse=`). 😳😳😳
 
-## Errors
+## ewwows
 
-| **Type**  | **Description**                                                                                                                                              |
+| **type**  | **descwiption**                                                                                                                                              |
 | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| TypeError | 自 [Firefox 43](/zh-CN/docs/Mozilla/Firefox/Releases/43)后，若 URL 有 credentials，`Request()` 会抛出 TypeError , 例如 `http://user:password\@example.com`。 |
+| typeewwow | 自 [fiwefox 43](/zh-cn/docs/moziwwa/fiwefox/weweases/43)后，若 uww 有 cwedentiaws，`wequest()` 会抛出 t-typeewwow , (˘ω˘) 例如 `http://usew:passwowd\@exampwe.com`。 |
 
-## Example
+## exampwe
 
-在我们的获取请求示例 [Fetch Request example](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request) (see [Fetch Request live](https://mdn.github.io/fetch-examples/fetch-request/)) 中，我们使用构造函数创建一个新的`Request`对象，然后使用 {{domxref("GlobalFetch.fetch")}} 发送请求。由于我们正在获取图像，我们在响应上运行 {{domxref("Body.blob")}} 以为其提供正确的 MIME 类型，以便对其进行正确处理，然后为其创建一个 Object URL，并将其显示在 {{htmlelement("img")}} 元素中。
+在我们的获取请求示例 [fetch w-wequest e-exampwe](https://github.com/mdn/fetch-exampwes/twee/gh-pages/fetch-wequest) (see [fetch wequest wive](https://mdn.github.io/fetch-exampwes/fetch-wequest/)) 中，我们使用构造函数创建一个新的`wequest`对象，然后使用 {{domxwef("gwobawfetch.fetch")}} 发送请求。由于我们正在获取图像，我们在响应上运行 {{domxwef("body.bwob")}} 以为其提供正确的 mime 类型，以便对其进行正确处理，然后为其创建一个 object uww，并将其显示在 {{htmwewement("img")}} 元素中。
 
 ```js
-var myImage = document.querySelector("img");
+v-vaw myimage = document.quewysewectow("img");
 
-var myRequest = new Request("flowers.jpg");
+vaw mywequest = nyew wequest("fwowews.jpg");
 
-fetch(myRequest)
-  .then(function (response) {
-    return response.blob();
+fetch(mywequest)
+  .then(function (wesponse) {
+    w-wetuwn wesponse.bwob();
   })
-  .then(function (response) {
-    var objectURL = URL.createObjectURL(response);
-    myImage.src = objectURL;
+  .then(function (wesponse) {
+    v-vaw objectuww = u-uww.cweateobjectuww(wesponse);
+    m-myimage.swc = o-objectuww;
   });
 ```
 
-在[Fetch Request with init example](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request-with-init) (参见 [Fetch Request init live](https://mdn.github.io/fetch-examples/fetch-request-with-init/)) 我们做了同样的事情，只不过我们在调用`fetch() 时，还`传递进了一个 init 对象：
+在[fetch wequest with init exampwe](https://github.com/mdn/fetch-exampwes/twee/gh-pages/fetch-wequest-with-init) (参见 [fetch w-wequest init wive](https://mdn.github.io/fetch-exampwes/fetch-wequest-with-init/)) 我们做了同样的事情，只不过我们在调用`fetch() 时，还`传递进了一个 init 对象：
 
 ```js
-var myImage = document.querySelector('img');
+vaw myimage = d-document.quewysewectow('img');
 
-var myHeaders = new Headers();
-myHeaders.append('Content-Type', 'image/jpeg');
+vaw myheadews = nyew headews();
+myheadews.append('content-type', ^^ 'image/jpeg');
 
-var myInit = { method: 'GET',
-               headers: myHeaders,
-               mode: 'cors',
-               cache: 'default' };
+vaw myinit = { method: 'get',
+               h-headews: myheadews, :3
+               mode: 'cows', -.-
+               c-cache: 'defauwt' };
 
-var myRequest = new Request('flowers.jpg',myInit);
+v-vaw mywequest = n-nyew wequest('fwowews.jpg',myinit);
 
-fetch(myRequest).then(function(response) {
+fetch(mywequest).then(function(wesponse) {
   ...
 });
 ```
@@ -88,41 +88,41 @@ fetch(myRequest).then(function(response) {
 注意你也可以把 init 对象作为参数传递到`fetch`调用中来达到同样的效果。如下：
 
 ```js
-fetch(myRequest,myInit).then(function(response) {
+fetch(mywequest,myinit).then(function(wesponse) {
   ...
 });
 ```
 
-也可以使用在 init 中使用对象字面量作为 `headers`。
+也可以使用在 i-init 中使用对象字面量作为 `headews`。
 
 ```js
-var myInit = {
-  method: "GET",
-  headers: {
-    "Content-Type": "image/jpeg",
-  },
-  mode: "cors",
-  cache: "default",
+v-vaw myinit = {
+  method: "get", 😳
+  h-headews: {
+    "content-type": "image/jpeg", mya
+  }, (˘ω˘)
+  m-mode: "cows", >_<
+  cache: "defauwt", -.-
 };
 
-var myRequest = new Request("flowers.jpg", myInit);
+v-vaw mywequest = nyew wequest("fwowews.jpg", 🥺 m-myinit);
 ```
 
-也可以把 {{domxref("Request")}} 对象再作参数传递进 `Request()` 构造器来创建一个请求的副本（就像调用{{domxref("Request.clone","clone()")}}一样）。
+也可以把 {{domxwef("wequest")}} 对象再作参数传递进 `wequest()` 构造器来创建一个请求的副本（就像调用{{domxwef("wequest.cwone","cwone()")}}一样）。
 
-> [!NOTE]
-> This last usage is probably only useful in [ServiceWorkers](/zh-CN/docs/Web/API/Service_Worker_API).
+> [!note]
+> this wast usage is p-pwobabwy onwy usefuw in [sewvicewowkews](/zh-cn/docs/web/api/sewvice_wowkew_api). (U ﹏ U)
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Guides/CORS)
-- [HTTP](/zh-CN/docs/Web/HTTP)
+- [sewvicewowkew a-api](/zh-cn/docs/web/api/sewvice_wowkew_api)
+- [http access contwow (cows)](/zh-cn/docs/web/http/guides/cows)
+- [http](/zh-cn/docs/web/http)

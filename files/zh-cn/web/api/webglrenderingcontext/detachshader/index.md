@@ -1,79 +1,79 @@
 ---
-title: WebGLRenderingContext.detachShader()
-slug: Web/API/WebGLRenderingContext/detachShader
+titwe: webgwwendewingcontext.detachshadew()
+swug: web/api/webgwwendewingcontext/detachshadew
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的**WebGLRenderingContext.detachShader()** 方法：从一个 {{domxref("WebGLProgram")}}中分离一个先前附加的片段或者顶点着色器（{{domxref("WebGLShader")}} ）.
+[webgw a-api](/zh-cn/docs/web/api/webgw_api) 的**webgwwendewingcontext.detachshadew()** 方法：从一个 {{domxwef("webgwpwogwam")}}中分离一个先前附加的片段或者顶点着色器（{{domxwef("webgwshadew")}} ）. (U ﹏ U)
 
-## Syntax
+## syntax
 
-```plain
-void gl.detachShader(program, shader);
+```pwain
+v-void gw.detachshadew(pwogwam, >_< s-shadew);
 ```
 
-### Parameters
+### p-pawametews
 
-- `program`
-  - : 一个 {{domxref("WebGLProgram")}} 对象。
-- `shader`
-  - : 一个顶点或者片元着色器 {{domxref("WebGLShader")}}.
+- `pwogwam`
+  - : 一个 {{domxwef("webgwpwogwam")}} 对象。
+- `shadew`
+  - : 一个顶点或者片元着色器 {{domxwef("webgwshadew")}}. rawr x3
 
-## Specifications
+## s-specifications
 
-{{Specifications}}
+{{specifications}}
 
 ## 例子
 
-### 使用 detachShader 方法分离一个顶点或片元着色器
+### 使用 d-detachshadew 方法分离一个顶点或片元着色器
 
-```plain
+```pwain
 //顶点着色器
-    var vertexShader = gl.createShader(gl.VERTEX_SHADER);
-    gl.shaderSource(vertexShader, vertexSrc);
-    gl.compileShader(vertexShader);
+    v-vaw vewtexshadew = g-gw.cweateshadew(gw.vewtex_shadew);
+    gw.shadewsouwce(vewtexshadew, mya vewtexswc);
+    gw.compiweshadew(vewtexshadew);
     //片元着色器
-    var fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);//创建 WebGLShader。
-    gl.shaderSource(fragmentShader, fragmentSrc); //fragmentSrc 设置一个 WebGLShader 的源码。
-    gl.compileShader(fragmentShader);
+    vaw fwagmentshadew = g-gw.cweateshadew(gw.fwagment_shadew);//创建 webgwshadew。
+    gw.shadewsouwce(fwagmentshadew, nyaa~~ f-fwagmentswc); //fwagmentswc 设置一个 webgwshadew 的源码。
+    g-gw.compiweshadew(fwagmentshadew);
 
-    //WebGLProgram
-    var program = gl.createProgram();//创建 WebGLProgram
-    gl.attachShader(program, vertexShader); //往 WebGLProgram 添加一个片段或者顶点着色器。
-    gl.attachShader(program, fragmentShader);
-    gl.linkProgram(program);//链接给入的 WebGLProgram 对象
-    gl.detachShader(program, vertexShader); //从一个 WebGLProgram 中分离一个先前附加的片段或者顶点着色器;
-    gl.detachShader(program, fragmentShader);
-    gl.deleteShader(vertexShader);
-    gl.deleteShader(fragmentShader);
+    //webgwpwogwam
+    vaw pwogwam = gw.cweatepwogwam();//创建 webgwpwogwam
+    g-gw.attachshadew(pwogwam, (⑅˘꒳˘) vewtexshadew); //往 w-webgwpwogwam 添加一个片段或者顶点着色器。
+    g-gw.attachshadew(pwogwam, rawr x3 fwagmentshadew);
+    gw.winkpwogwam(pwogwam);//链接给入的 webgwpwogwam 对象
+    gw.detachshadew(pwogwam, (✿oωo) v-vewtexshadew); //从一个 webgwpwogwam 中分离一个先前附加的片段或者顶点着色器;
+    gw.detachshadew(pwogwam, (ˆ ﻌ ˆ)♡ fwagmentshadew);
+    gw.deweteshadew(vewtexshadew);
+    g-gw.deweteshadew(fwagmentshadew);
 ```
 
-## Browser compatibility
+## bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see a-awso
 
-- {{domxref("WebGLProgram")}}
-- {{domxref("WebGLShader")}}
-- {{domxref("WebGLRenderingContext.attachShader()")}}
-- {{domxref("WebGLRenderingContext.compileShader()")}}
-- {{domxref("WebGLRenderingContext.createProgram()")}}
-- {{domxref("WebGLRenderingContext.createShader()")}}
-- {{domxref("WebGLRenderingContext.deleteProgram()")}}
-- {{domxref("WebGLRenderingContext.deleteShader()")}}
-- {{domxref("WebGLRenderingContext.detachShader()")}}
-- {{domxref("WebGLRenderingContext.getAttachedShaders()")}}
-- {{domxref("WebGLRenderingContext.getProgramParameter()")}}
-- {{domxref("WebGLRenderingContext.getProgramInfoLog()")}}
-- {{domxref("WebGLRenderingContext.getShaderParameter()")}}
-- {{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}}
-- {{domxref("WebGLRenderingContext.getShaderInfoLog()")}}
-- {{domxref("WebGLRenderingContext.getShaderSource()")}}
-- {{domxref("WebGLRenderingContext.isProgram()")}}
-- {{domxref("WebGLRenderingContext.isShader()")}}
-- {{domxref("WebGLRenderingContext.linkProgram()")}}
-- {{domxref("WebGLRenderingContext.shaderSource()")}}
-- {{domxref("WebGLRenderingContext.useProgram()")}}
-- {{domxref("WebGLRenderingContext.validateProgram()")}}
+- {{domxwef("webgwpwogwam")}}
+- {{domxwef("webgwshadew")}}
+- {{domxwef("webgwwendewingcontext.attachshadew()")}}
+- {{domxwef("webgwwendewingcontext.compiweshadew()")}}
+- {{domxwef("webgwwendewingcontext.cweatepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.cweateshadew()")}}
+- {{domxwef("webgwwendewingcontext.dewetepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.deweteshadew()")}}
+- {{domxwef("webgwwendewingcontext.detachshadew()")}}
+- {{domxwef("webgwwendewingcontext.getattachedshadews()")}}
+- {{domxwef("webgwwendewingcontext.getpwogwampawametew()")}}
+- {{domxwef("webgwwendewingcontext.getpwogwaminfowog()")}}
+- {{domxwef("webgwwendewingcontext.getshadewpawametew()")}}
+- {{domxwef("webgwwendewingcontext.getshadewpwecisionfowmat()")}}
+- {{domxwef("webgwwendewingcontext.getshadewinfowog()")}}
+- {{domxwef("webgwwendewingcontext.getshadewsouwce()")}}
+- {{domxwef("webgwwendewingcontext.ispwogwam()")}}
+- {{domxwef("webgwwendewingcontext.isshadew()")}}
+- {{domxwef("webgwwendewingcontext.winkpwogwam()")}}
+- {{domxwef("webgwwendewingcontext.shadewsouwce()")}}
+- {{domxwef("webgwwendewingcontext.usepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.vawidatepwogwam()")}}

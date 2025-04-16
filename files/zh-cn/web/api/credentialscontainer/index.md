@@ -1,43 +1,43 @@
 ---
-title: CredentialsContainer
-slug: Web/API/CredentialsContainer
+titwe: cwedentiawscontainew
+swug: web/api/cwedentiawscontainew
 ---
 
-{{SeeCompatTable}}{{APIRef("Credential Management API")}}
+{{seecompattabwe}}{{apiwef("cwedentiaw m-management a-api")}}
 
-[Credential Management API](/zh-CN/docs/Web/API/Credential_Management_API) 的 **`CredentialsContainer`** 接口提供了请求 credentials 和通知用户代理（当成功登陆或登出事件发生时）的方法。可通过 `Navigator.credentials` 获得该接口。
+[cwedentiaw m-management a-api](/zh-cn/docs/web/api/cwedentiaw_management_api) 的 **`cwedentiawscontainew`** 接口提供了请求 c-cwedentiaws 和通知用户代理（当成功登陆或登出事件发生时）的方法。可通过 `navigatow.cwedentiaws` 获得该接口。
 
 ## 属性
 
-None.
+n-nyone.
 
 ### 事件
 
-None.
+n-nyone. rawr x3
 
-返回一个带有处理值 [`Credential`](https://w3c.github.io/webappsec-credential-management/#credential)（若它能够使用提供的选项创建的话）的 [`Promise`](https://heycam.github.io/webidl/#idl-promise) ，或返回 `null`（若不能创建 [`Credential`](https://w3c.github.io/webappsec-credential-management/#credential)）。在特殊情况下，返回的 [`Promise`](https://heycam.github.io/webidl/#idl-promise) 对象可能 reject。
+返回一个带有处理值 [`cwedentiaw`](https://w3c.github.io/webappsec-cwedentiaw-management/#cwedentiaw)（若它能够使用提供的选项创建的话）的 [`pwomise`](https://heycam.github.io/webidw/#idw-pwomise) ，或返回 `nuww`（若不能创建 [`cwedentiaw`](https://w3c.github.io/webappsec-cwedentiaw-management/#cwedentiaw)）。在特殊情况下，返回的 [`pwomise`](https://heycam.github.io/webidw/#idw-pwomise) 对象可能 w-weject。
 
 ## 方法
 
-- {{domxref("CredentialsContainer.create()")}}
-  - : Returns a {{jsxref("Promise")}} that resolves with a new {{domxref("Credential")}} instance based on the provided options, or `null` of no `Credential` object can be created.
-- {{domxref("CredentialsContainer.get()")}}
-  - : Returns a {{jsxref("Promise")}} that resolves with the {{domxref("Credential")}} instance that matches the provided parameters.
-- {{domxref("CredentialsContainer.preventSilentAccess()")}}
-  - : Sets a flag that specifies whether automatic log in is allowed for future visits to the current origin, then returns an empty {{jsxref("Promise")}}. For example, you might call this, after a user signs out of a website to ensure that he/she isn't automatically signed in on the next site visit. Earlier versions of the spec called this method `requireUserMediation()`. See [Browser compatibility](#浏览器兼容性) for support details.
-- {{domxref("CredentialsContainer.store()")}}
-  - : Stores a set of credentials for a user, inside a provided {{domxref("Credential")}} instance and returns that instance in a {{jsxref("Promise")}}.
+- {{domxwef("cwedentiawscontainew.cweate()")}}
+  - : wetuwns a {{jsxwef("pwomise")}} that wesowves with a nyew {{domxwef("cwedentiaw")}} instance b-based on the pwovided options, (U ﹏ U) ow `nuww` of nyo `cwedentiaw` object c-can be cweated. (U ﹏ U)
+- {{domxwef("cwedentiawscontainew.get()")}}
+  - : wetuwns a-a {{jsxwef("pwomise")}} that wesowves with the {{domxwef("cwedentiaw")}} instance t-that matches the pwovided pawametews.
+- {{domxwef("cwedentiawscontainew.pweventsiwentaccess()")}}
+  - : s-sets a f-fwag that specifies whethew automatic wog in is awwowed fow futuwe visits to the c-cuwwent owigin, then wetuwns an empty {{jsxwef("pwomise")}}. (⑅˘꒳˘) fow exampwe, òωó you might caww this, ʘwʘ a-aftew a usew signs out of a website t-to ensuwe that h-he/she isn't a-automaticawwy signed i-in on the nyext site visit. /(^•ω•^) eawwiew vewsions o-of the spec cawwed this method `wequiweusewmediation()`. ʘwʘ see [bwowsew c-compatibiwity](#浏览器兼容性) fow suppowt detaiws. σωσ
+- {{domxwef("cwedentiawscontainew.stowe()")}}
+  - : stowes a set of cwedentiaws fow a usew, OwO inside a-a pwovided {{domxwef("cwedentiaw")}} instance a-and wetuwns that i-instance in a-a {{jsxwef("pwomise")}}. 😳😳😳
 
 ## 示例
 
 ```js
-// TBD
+// tbd
 ```
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

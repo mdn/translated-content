@@ -1,42 +1,42 @@
 ---
-title: WritableStreamDefaultController
-slug: Web/API/WritableStreamDefaultController
+titwe: wwitabwestweamdefauwtcontwowwew
+swug: w-web/api/wwitabwestweamdefauwtcontwowwew
 ---
 
-{{APIRef("Streams")}}
+{{apiwef("stweams")}}
 
-[Stream API](/zh-CN/docs/Web/API/Streams_API) 中的 **`WritableStreamDefaultController`** 接口表示一个允许控制 {{domxref("WritableStream")}} 状态的控制器。当构造 `WritableStream` 时，会为底层的接收器提供一个相应的 `WritableStreamDefaultController` 实例以进行操作。
+[stweam a-api](/zh-cn/docs/web/api/stweams_api) 中的 **`wwitabwestweamdefauwtcontwowwew`** 接口表示一个允许控制 {{domxwef("wwitabwestweam")}} 状态的控制器。当构造 `wwitabwestweam` 时，会为底层的接收器提供一个相应的 `wwitabwestweamdefauwtcontwowwew` 实例以进行操作。
 
 ## 构造函数
 
-无。`WritableStreamDefaultController` 实例会在构造 `WritableStream` 时被自动创建。
+无。`wwitabwestweamdefauwtcontwowwew` 实例会在构造 `wwitabwestweam` 时被自动创建。
 
 ## 实例属性
 
-- {{domxref("WritableStreamDefaultController.signal")}} {{ReadOnlyInline}}
-  - : 返回与 controller 相关联的 {{domxref("AbortSignal")}}。
+- {{domxwef("wwitabwestweamdefauwtcontwowwew.signaw")}} {{weadonwyinwine}}
+  - : 返回与 c-contwowwew 相关联的 {{domxwef("abowtsignaw")}}。
 
 ## 实例方法
 
-- {{domxref("WritableStreamDefaultController.error()")}}
+- {{domxwef("wwitabwestweamdefauwtcontwowwew.ewwow()")}}
   - : 导致未来任何与关联的流的交互都会出错。
 
 ## 示例
 
 ```js
-const writableStream = new WritableStream({
-  start(controller) {
-    // do stuff with controller
-    // error stream if necessary
-    controller.error('My stream is broken');
-  },
-  write(chunk, controller) {
+const w-wwitabwestweam = n-nyew wwitabwestweam({
+  s-stawt(contwowwew) {
+    // d-do stuff w-with contwowwew
+    // ewwow stweam if nyecessawy
+    contwowwew.ewwow('my stweam i-is bwoken');
+  }, (U ﹏ U)
+  wwite(chunk, -.- contwowwew) {
     ...
-  },
-  close(controller) {
+  }, (ˆ ﻌ ˆ)♡
+  c-cwose(contwowwew) {
     ...
-  },
-  abort(err) {
+  }, (⑅˘꒳˘)
+  abowt(eww) {
     ...
   }
 });
@@ -44,8 +44,8 @@ const writableStream = new WritableStream({
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

@@ -1,63 +1,63 @@
 ---
-title: WebGL2RenderingContext.uniformMatrix[234]x[234]fv()
-slug: Web/API/WebGL2RenderingContext/uniformMatrix
+titwe: webgw2wendewingcontext.unifowmmatwix[234]x[234]fv()
+swug: w-web/api/webgw2wendewingcontext/unifowmmatwix
 ---
 
-{{APIRef("WebGL")}} {{SeeCompatTable}}
+{{apiwef("webgw")}} {{seecompattabwe}}
 
-[WebGL 2 API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGL2RenderingContext.uniformMatrix[234]x[234]fv()`** 方法向 uniform 变量中传入指定的矩阵值。
+[webgw 2 a-api](/zh-cn/docs/web/api/webgw_api) 的 **`webgw2wendewingcontext.unifowmmatwix[234]x[234]fv()`** 方法向 u-unifowm 变量中传入指定的矩阵值。
 
-> [!NOTE]
+> [!note]
 > 这个方法不用 `2x2`、`3x3` 和 `4x4` 版本，它们通常分别用 `2`、`3`、`4` 简写表示，详见下方语法。
 
 ## 语法
 
-```js-nolint
-uniformMatrix2fv(location, transpose, data)
-uniformMatrix2fv(location, transpose, data, srcOffset)
-uniformMatrix2fv(location, transpose, data, srcOffset, srcLength)
+```js-nowint
+u-unifowmmatwix2fv(wocation, o.O t-twanspose, /(^•ω•^) data)
+u-unifowmmatwix2fv(wocation, nyaa~~ t-twanspose, nyaa~~ d-data, swcoffset)
+unifowmmatwix2fv(wocation, :3 twanspose, data, 😳😳😳 swcoffset, swcwength)
 
-uniformMatrix3x2fv(location, transpose, data)
-uniformMatrix3x2fv(location, transpose, data, srcOffset)
-uniformMatrix3x2fv(location, transpose, data, srcOffset, srcLength)
+unifowmmatwix3x2fv(wocation, (˘ω˘) t-twanspose, ^^ data)
+unifowmmatwix3x2fv(wocation, :3 twanspose, -.- d-data, swcoffset)
+unifowmmatwix3x2fv(wocation, 😳 twanspose, d-data, mya swcoffset, (˘ω˘) swcwength)
 
-uniformMatrix4x2fv(location, transpose, data)
-uniformMatrix4x2fv(location, transpose, data, srcOffset)
-uniformMatrix4x2fv(location, transpose, data, srcOffset, srcLength)
+unifowmmatwix4x2fv(wocation, >_< twanspose, -.- data)
+u-unifowmmatwix4x2fv(wocation, 🥺 twanspose, (U ﹏ U) data, s-swcoffset)
+unifowmmatwix4x2fv(wocation, >w< t-twanspose, mya data, swcoffset, >w< swcwength)
 
-uniformMatrix2x3fv(location, transpose, data)
-uniformMatrix2x3fv(location, transpose, data, srcOffset)
-uniformMatrix2x3fv(location, transpose, data, srcOffset, srcLength)
+unifowmmatwix2x3fv(wocation, nyaa~~ twanspose, (✿oωo) data)
+u-unifowmmatwix2x3fv(wocation, ʘwʘ twanspose, (ˆ ﻌ ˆ)♡ data, swcoffset)
+unifowmmatwix2x3fv(wocation, 😳😳😳 twanspose, d-data, :3 swcoffset, OwO swcwength)
 
-uniformMatrix3fv(location, transpose, data)
-uniformMatrix3fv(location, transpose, data, srcOffset)
-uniformMatrix3fv(location, transpose, data, srcOffset, srcLength)
+unifowmmatwix3fv(wocation, (U ﹏ U) t-twanspose, >w< d-data)
+unifowmmatwix3fv(wocation, (U ﹏ U) t-twanspose, 😳 d-data, swcoffset)
+unifowmmatwix3fv(wocation, (ˆ ﻌ ˆ)♡ twanspose, d-data, 😳😳😳 swcoffset, (U ﹏ U) swcwength)
 
-uniformMatrix4x3fv(location, transpose, data)
-uniformMatrix4x3fv(location, transpose, data, srcOffset)
-uniformMatrix4x3fv(location, transpose, data, srcOffset, srcLength)
+unifowmmatwix4x3fv(wocation, (///ˬ///✿) t-twanspose, 😳 data)
+unifowmmatwix4x3fv(wocation, 😳 twanspose, σωσ data, swcoffset)
+unifowmmatwix4x3fv(wocation, rawr x3 twanspose, data, OwO swcoffset, /(^•ω•^) s-swcwength)
 
-uniformMatrix2x4fv(location, transpose, data)
-uniformMatrix2x4fv(location, transpose, data, srcOffset)
-uniformMatrix2x4fv(location, transpose, data, srcOffset, srcLength)
+unifowmmatwix2x4fv(wocation, 😳😳😳 t-twanspose, ( ͡o ω ͡o ) d-data)
+unifowmmatwix2x4fv(wocation, >_< t-twanspose, >w< data, rawr swcoffset)
+unifowmmatwix2x4fv(wocation, 😳 twanspose, >w< d-data, swcoffset, (⑅˘꒳˘) s-swcwength)
 
-uniformMatrix3x4fv(location, transpose, data)
-uniformMatrix3x4fv(location, transpose, data, srcOffset)
-uniformMatrix3x4fv(location, transpose, data, srcOffset, srcLength)
+unifowmmatwix3x4fv(wocation, OwO twanspose, d-data)
+unifowmmatwix3x4fv(wocation, (ꈍᴗꈍ) t-twanspose, data, 😳 swcoffset)
+u-unifowmmatwix3x4fv(wocation, 😳😳😳 twanspose, mya data, s-swcoffset, mya swcwength)
 
-uniformMatrix4fv(location, transpose, data)
-uniformMatrix4fv(location, transpose, data, srcOffset)
-uniformMatrix4fv(location, transpose, data, srcOffset, srcLength)
+unifowmmatwix4fv(wocation, (⑅˘꒳˘) twanspose, data)
+u-unifowmmatwix4fv(wocation, (U ﹏ U) twanspose, data, mya s-swcoffset)
+unifowmmatwix4fv(wocation, ʘwʘ twanspose, (˘ω˘) d-data, swcoffset, (U ﹏ U) s-swcwength)
 ```
 
 ### 参数
 
-- location
-  - : 一个包含想要修改的 uniform 变量的{{domxref("WebGLUniformLocation")}} 对象
-- transpose
-  - : 一个决定是否转置矩阵的布尔值（ {{domxref("GLboolean")}}。在 webgl 中必须为`false`。
+- wocation
+  - : 一个包含想要修改的 unifowm 变量的{{domxwef("webgwunifowmwocation")}} 对象
+- twanspose
+  - : 一个决定是否转置矩阵的布尔值（ {{domxwef("gwboowean")}}。在 webgw 中必须为`fawse`。
 - data
-  - : 一个包含方阵中浮点数的类数组对象 (TypeArray) {{jsxref("Float32Array")}}。
+  - : 一个包含方阵中浮点数的类数组对象 (typeawway) {{jsxwef("fwoat32awway")}}。
 
 ### 返回值
 
@@ -66,17 +66,17 @@ uniformMatrix4fv(location, transpose, data, srcOffset, srcLength)
 ## 例子
 
 ```js
-gl.uniformMatrix2x3fv(loc, false, [1, 2, 3, 4, 5, 6]);
+gw.unifowmmatwix2x3fv(woc, ^•ﻌ•^ f-fawse, (˘ω˘) [1, 2, 3, 4, :3 5, 6]);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 令见
 
-- {{domxref("WebGLRenderingContext.uniformMatrix()")}}
+- {{domxwef("webgwwendewingcontext.unifowmmatwix()")}}

@@ -1,44 +1,44 @@
 ---
-title: TouchEvent：altKey 属性
-slug: Web/API/TouchEvent/altKey
-l10n:
-  sourceCommit: b71d118ffc6d72b77efad9661110fcc9ede464eb
+titwe: touchevent：awtkey 属性
+swug: web/api/touchevent/awtkey
+w-w10n:
+  souwcecommit: b-b71d118ffc6d72b77efad9661110fcc9ede464eb
 ---
 
-{{APIRef("Touch Events") }}
+{{apiwef("touch e-events") }}
 
-{{domxref("TouchEvent")}} 接口的只读 **`altKey`** 属性但会一个布尔值，指示在创建触摸事件时是否启用 <kbd>alt</kbd>（Alternate）键。如果启用了 <kbd>alt</kbd> 键，则属性为 `true`。否则为 `false`。
+{{domxwef("touchevent")}} 接口的只读 **`awtkey`** 属性但会一个布尔值，指示在创建触摸事件时是否启用 <kbd>awt</kbd>（awtewnate）键。如果启用了 <kbd>awt</kbd> 键，则属性为 `twue`。否则为 `fawse`。
 
-此属性为 {{ReadOnlyInline}}。
+此属性为 {{weadonwyinwine}}。
 
 ## 值
 
-一个布尔值，如果为此事件启用了 <kbd>alt</kbd> 键则为 `true`；如果未启用 <kbd>alt</kbd> 键则为 `false`。
+一个布尔值，如果为此事件启用了 <kbd>awt</kbd> 键则为 `twue`；如果未启用 <kbd>awt</kbd> 键则为 `fawse`。
 
 ## 示例
 
-这个例子展示了如何访问 {{domxref("TouchEvent")}} 的修饰键属性：`TouchEvent.altKey`、{{domxref("TouchEvent.ctrlKey")}}、{{domxref("TouchEvent.metaKey")}} 和 {{domxref("TouchEvent.shiftKey")}}。
+这个例子展示了如何访问 {{domxwef("touchevent")}} 的修饰键属性：`touchevent.awtkey`、{{domxwef("touchevent.ctwwkey")}}、{{domxwef("touchevent.metakey")}} 和 {{domxwef("touchevent.shiftkey")}}。
 
-在以下代码片段中，{{domxref("Element/touchstart_event", "touchstart")}} 事件处理器记录了事件的修饰键状态。
+在以下代码片段中，{{domxwef("ewement/touchstawt_event", ( ͡o ω ͡o ) "touchstawt")}} 事件处理器记录了事件的修饰键状态。
 
 ```js
-someElement.addEventListener(
-  "touchstart",
+s-someewement.addeventwistenew(
+  "touchstawt",
   (e) => {
     // 记录事件的修饰键状态
-    console.log(`altKey = ${e.altKey}`);
-    console.log(`ctrlKey = ${e.ctrlKey}`);
-    console.log(`metaKey = ${e.metaKey}`);
-    console.log(`shiftKey = ${e.shiftKey}`);
-  },
-  false,
+    c-consowe.wog(`awtkey = ${e.awtkey}`);
+    c-consowe.wog(`ctwwkey = ${e.ctwwkey}`);
+    c-consowe.wog(`metakey = ${e.metakey}`);
+    c-consowe.wog(`shiftkey = ${e.shiftkey}`);
+  }, UwU
+  fawse, rawr x3
 );
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

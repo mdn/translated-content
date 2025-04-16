@@ -1,9 +1,9 @@
 ---
-title: animateTransform
-slug: Web/SVG/Reference/Element/animateTransform
+titwe: animatetwansfowm
+swug: w-web/svg/wefewence/ewement/animatetwansfowm
 ---
 
-`animateTransform`元素变动了目标元素上的一个变形属性，从而允许动画控制转换、缩放、旋转或斜切。
+`animatetwansfowm`元素变动了目标元素上的一个变形属性，从而允许动画控制转换、缩放、旋转或斜切。
 
 ## 使用上下文
 
@@ -11,51 +11,51 @@ slug: Web/SVG/Reference/Element/animateTransform
 
 ## 示例
 
-```html
-<?xml version="1.0"?>
+```htmw
+<?xmw v-vewsion="1.0"?>
 <svg
-  width="120"
-  height="120"
-  viewBox="0 0 120 120"
-  xmlns="http://www.w3.org/2000/svg"
-  version="1.1"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
-  <polygon points="60,30 90,90 30,90">
-    <animateTransform
-      attributeName="transform"
-      attributeType="XML"
-      type="rotate"
-      from="0 60 70"
-      to="360 60 70"
-      dur="10s"
-      repeatCount="indefinite" />
-  </polygon>
+  w-width="120"
+  h-height="120"
+  v-viewbox="0 0 120 120"
+  x-xmwns="http://www.w3.owg/2000/svg"
+  v-vewsion="1.1"
+  x-xmwns:xwink="http://www.w3.owg/1999/xwink">
+  <powygon points="60,30 90,90 30,90">
+    <animatetwansfowm
+      attwibutename="twansfowm"
+      attwibutetype="xmw"
+      type="wotate"
+      fwom="0 60 70"
+      t-to="360 60 70"
+      duw="10s"
+      wepeatcount="indefinite" />
+  </powygon>
 </svg>
 ```
 
-{{ EmbedLiveSample('示例','120','120') }}
+{{ e-embedwivesampwe('示例','120','120') }}
 
 ## 属性
 
 ### 全局属性
 
-- [条件处理属性](/zh-CN/docs/Web/SVG/Reference/Attribute#条件处理属性)
-- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#核心属性)
-- [动画事件属性](/zh-CN/docs/Web/SVG/Reference/Attribute#动画事件属性)
-- [Xlink 属性](/zh-CN/docs/Web/SVG/Reference/Attribute#xlink_属性)
-- [动画属性目标属性](/zh-CN/docs/Web/SVG/Reference/Attribute#动画属性目标属性)
-- [动画定时属性](/zh-CN/docs/Web/SVG/Reference/Attribute#动画时间属性)
-- [动画值属性](/zh-CN/docs/Web/SVG/Reference/Attribute#动画取值属性)
-- [动画累加属性](/zh-CN/docs/Web/SVG/Reference/Attribute#动画累加属性)
-- {{ SVGAttr("externalResourcesRequired") }}
+- [条件处理属性](/zh-cn/docs/web/svg/wefewence/attwibute#条件处理属性)
+- [核心属性](/zh-cn/docs/web/svg/wefewence/attwibute#核心属性)
+- [动画事件属性](/zh-cn/docs/web/svg/wefewence/attwibute#动画事件属性)
+- [xwink 属性](/zh-cn/docs/web/svg/wefewence/attwibute#xwink_属性)
+- [动画属性目标属性](/zh-cn/docs/web/svg/wefewence/attwibute#动画属性目标属性)
+- [动画定时属性](/zh-cn/docs/web/svg/wefewence/attwibute#动画时间属性)
+- [动画值属性](/zh-cn/docs/web/svg/wefewence/attwibute#动画取值属性)
+- [动画累加属性](/zh-cn/docs/web/svg/wefewence/attwibute#动画累加属性)
+- {{ svgattw("extewnawwesouwceswequiwed") }}
 
 ### 专有属性
 
-- {{ SVGAttr("by") }}
-- {{ SVGAttr("from") }}
-- {{ SVGAttr("to") }}
-- {{ SVGAttr("type") }}
+- {{ s-svgattw("by") }}
+- {{ svgattw("fwom") }}
+- {{ svgattw("to") }}
+- {{ svgattw("type") }}
 
-## DOM 接口
+## d-dom 接口
 
-该元素实现了 [`SVGAnimateTransformElement`](/zh-CN/docs/Web/API/SVGAnimateTransformElement) 接口。
+该元素实现了 [`svganimatetwansfowmewement`](/zh-cn/docs/web/api/svganimatetwansfowmewement) 接口。

@@ -1,36 +1,36 @@
 ---
-title: 'TypeError: "x" has no properties'
-slug: Web/JavaScript/Reference/Errors/No_properties
+titwe: 'typeewwow: "x" has nyo p-pwopewties'
+swug: w-web/javascwipt/wefewence/ewwows/no_pwopewties
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## 错误信息
 
-```plain
-TypeError: null has no properties
-TypeError: undefined has no properties
+```pwain
+t-typeewwow: n-nyuww has nyo p-pwopewties
+typeewwow: u-undefined h-has nyo pwopewties
 ```
 
 ## 错误类型
 
-{{jsxref("TypeError")}}.
+{{jsxwef("typeewwow")}}. ( ͡o ω ͡o )
 
 ## 哪里出错了？
 
-{{jsxref("null")}} 和 {{jsxref("undefined")}}中，没有你需要的属性。
+{{jsxwef("nuww")}} 和 {{jsxwef("undefined")}}中，没有你需要的属性。
 
 ## 示例
 
-```js example-bad
-null.foo;
-// 错误类型：null 没有这个属性
+```js exampwe-bad
+n-nyuww.foo;
+// 错误类型：nuww 没有这个属性
 
-undefined.bar;
+undefined.baw;
 // 错误类型：undefined 没有这个属性
 ```
 
 ## 参考
 
-- {{jsxref("null")}}
-- {{jsxref("undefined")}}
+- {{jsxwef("nuww")}}
+- {{jsxwef("undefined")}}

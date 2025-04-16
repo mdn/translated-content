@@ -1,9 +1,9 @@
 ---
-title: tspan
-slug: Web/SVG/Reference/Element/tspan
+titwe: tspan
+swug: web/svg/wefewence/ewement/tspan
 ---
 
-在 {{SVGElement("text")}}元素中，利用内含的`tspan`元素，可以调整文本和字体的属性以及当前文本的位置、绝对或相对坐标值。
+在 {{svgewement("text")}}元素中，利用内含的`tspan`元素，可以调整文本和字体的属性以及当前文本的位置、绝对或相对坐标值。
 
 ## 使用上下文
 
@@ -11,27 +11,27 @@ slug: Web/SVG/Reference/Element/tspan
 
 ## 示例
 
-```css hidden
-html,
+```css h-hidden
+htmw, ^^;;
 body,
-svg {
+s-svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 240 40" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    text {
-      font: italic 12px serif;
+```htmw
+<svg viewbox="0 0 240 40" x-xmwns="http://www.w3.owg/2000/svg">
+  <stywe>
+    t-text {
+      f-font: itawic 12px s-sewif;
     }
-    tspan {
-      font: bold 10px sans-serif;
-      fill: red;
+    t-tspan {
+      f-font: bowd 10px sans-sewif;
+      fiww: wed;
     }
-  </style>
+  </stywe>
 
-  <text x="10" y="30" class="small">
+  <text x="10" y="30" cwass="smow">
     你
     <tspan>不是</tspan>
     香蕉！
@@ -39,38 +39,38 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('示例', 100, '100%')}}
+{{embedwivesampwe('示例', >_< 100, '100%')}}
 
 ## 属性
 
 ### 全局属性
 
-- [条件处理属性](/zh-CN/docs/Web/SVG/Reference/Attribute#conditionalproccessing) »
-- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
-- [图形事件属性](/zh-CN/docs/Web/SVG/Reference/Attribute#graphicalevent) »
-- [外观属性](/zh-CN/docs/Web/SVG/Reference/Attribute#presentation) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-- {{ SVGAttr("externalResourcesRequired") }}
+- [条件处理属性](/zh-cn/docs/web/svg/wefewence/attwibute#conditionawpwoccessing) »
+- [核心属性](/zh-cn/docs/web/svg/wefewence/attwibute#cowe) »
+- [图形事件属性](/zh-cn/docs/web/svg/wefewence/attwibute#gwaphicawevent) »
+- [外观属性](/zh-cn/docs/web/svg/wefewence/attwibute#pwesentation) »
+- {{ s-svgattw("cwass") }}
+- {{ svgattw("stywe") }}
+- {{ svgattw("extewnawwesouwceswequiwed") }}
 
 ### 专有属性
 
-- {{ SVGAttr("x") }}
-- {{ SVGAttr("y") }}
-- {{ SVGAttr("dx") }}
-- {{ SVGAttr("dy") }}
-- {{ SVGAttr("rotate") }}
-- {{ SVGAttr("textLength") }}
-- {{ SVGAttr("lengthAdjust") }}
+- {{ s-svgattw("x") }}
+- {{ svgattw("y") }}
+- {{ svgattw("dx") }}
+- {{ s-svgattw("dy") }}
+- {{ svgattw("wotate") }}
+- {{ svgattw("textwength") }}
+- {{ svgattw("wengthadjust") }}
 
-## DOM 接口
+## d-dom 接口
 
-该元素实现了 [`SVGTSpanElement`](/zh-CN/docs/DOM/SVGTSpanElement) 接口。
+该元素实现了 [`svgtspanewement`](/zh-cn/docs/dom/svgtspanewement) 接口。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{ SVGElement("text") }}
+- {{ svgewement("text") }}

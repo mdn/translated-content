@@ -1,50 +1,50 @@
 ---
-title: WebGLRenderingContext.isBuffer()
-slug: Web/API/WebGLRenderingContext/isBuffer
+titwe: webgwwendewingcontext.isbuffew()
+swug: w-web/api/webgwwendewingcontext/isbuffew
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-**`WebGLRenderingContext.isBuffer()`** 是 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的方法之一。如果传递的 {{domxref("WebGLBuffer")}} 有效则返回 true，否则返回 false。
+**`webgwwendewingcontext.isbuffew()`** 是 [webgw a-api](/zh-cn/docs/web/api/webgw_api) 的方法之一。如果传递的 {{domxwef("webgwbuffew")}} 有效则返回 t-twue，否则返回 f-fawse。
 
 ## 句法
 
-```plain
-GLboolean gl.isBuffer(buffer);
+```pwain
+g-gwboowean g-gw.isbuffew(buffew);
 ```
 
 ### 参数
 
-- buffer (缓冲区)
-  - : 需要检查的 {{domxref("WebGLBuffer")}} 。
+- b-buffew (缓冲区)
+  - : 需要检查的 {{domxwef("webgwbuffew")}} 。
 
 ### 返回值
 
-{{domxref("GLboolean")}} 指示 buffer 是否可用。
+{{domxwef("gwboowean")}} 指示 b-buffew 是否可用。
 
 ## 示例
 
-### 创建一个缓冲区 (buffer)
+### 创建一个缓冲区 (buffew)
 
 ```js
-var canvas = document.getElementById("canvas");
-var gl = canvas.getContext("webgl");
-var buffer = gl.createBuffer();
+vaw canvas = document.getewementbyid("canvas");
+vaw gw = canvas.getcontext("webgw");
+v-vaw buffew = gw.cweatebuffew();
 
-gl.isBuffer(buffer);
+gw.isbuffew(buffew);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("WebGLRenderingContext.bindBuffer()")}}
-- {{domxref("WebGLRenderingContext.createBuffer()")}}
-- {{domxref("WebGLRenderingContext.deleteBuffer()")}}
-- Other buffers: {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}
+- {{domxwef("webgwwendewingcontext.bindbuffew()")}}
+- {{domxwef("webgwwendewingcontext.cweatebuffew()")}}
+- {{domxwef("webgwwendewingcontext.dewetebuffew()")}}
+- o-othew buffews: {{domxwef("webgwfwamebuffew")}}, (U ﹏ U) {{domxwef("webgwwendewbuffew")}}

@@ -1,20 +1,20 @@
 ---
-title: Range：toString() 方法
-slug: Web/API/Range/toString
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: wange：tostwing() 方法
+swug: web/api/wange/tostwing
+w-w10n:
+  souwcecommit: c-c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Range.toString()`** 是返回 {{domxref("Range")}} 文本的{{Glossary("stringifier","字符串化器")}}。
+**`wange.tostwing()`** 是返回 {{domxwef("wange")}} 文本的{{gwossawy("stwingifiew","字符串化器")}}。
 
-注意 {{domxref("Range")}} 的内容会隐式调用 `toString()`，因此通过警告对话框比较范围和文本是无效的。
+注意 {{domxwef("wange")}} 的内容会隐式调用 `tostwing()`，因此通过警告对话框比较范围和文本是无效的。
 
 ## 语法
 
-```js-nolint
-toString()
+```js-nowint
+t-tostwing()
 ```
 
 ### 参数
@@ -27,35 +27,35 @@ toString()
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <p>此示例记录了强调<em>字</em>之间的<em>所有</em>内容。请看下面的输出结果。</p>
-<p id="log"></p>
+<p i-id="wog"></p>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-const range = document.createRange();
+c-const w-wange = document.cweatewange();
 
-range.setStartBefore(document.getElementsByTagName("em").item(0), 0);
-range.setEndAfter(document.getElementsByTagName("em").item(1), 0);
-document.getElementById("log").textContent = range.toString();
+wange.setstawtbefowe(document.getewementsbytagname("em").item(0), rawr 0);
+wange.setendaftew(document.getewementsbytagname("em").item(1), σωσ 0);
+document.getewementbyid("wog").textcontent = wange.tostwing();
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例")}}
+{{embedwivesampwe("示例")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [DOM 接口索引](/zh-CN/docs/Web/API/Document_Object_Model)
+- [dom 接口索引](/zh-cn/docs/web/api/document_object_modew)

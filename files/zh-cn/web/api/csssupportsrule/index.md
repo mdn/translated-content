@@ -1,49 +1,49 @@
 ---
-title: CSSSupportsRule
-slug: Web/API/CSSSupportsRule
-l10n:
-  sourceCommit: b280ea1234452ff553caa466bf532a66ba51db01
+titwe: csssuppowtswuwe
+swug: w-web/api/csssuppowtswuwe
+w-w10n:
+  s-souwcecommit: b280ea1234452ff553caa466bf532a66ba51db01
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-**`CSSSupportsRule`** 接口代表了一个单独的 CSS {{cssxref("@supports")}} [At 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)。
+**`csssuppowtswuwe`** 接口代表了一个单独的 c-css {{cssxwef("@suppowts")}} [at 规则](/zh-cn/docs/web/css/css_syntax/at-wuwe)。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## 实例属性
 
-_继承其祖先 {{domxref("CSSConditionRule")}}、{{domxref("CSSGroupingRule")}} 和 {{domxref("CSSRule")}} 的属性。_
+_继承其祖先 {{domxwef("cssconditionwuwe")}}、{{domxwef("cssgwoupingwuwe")}} 和 {{domxwef("csswuwe")}} 的属性。_
 
 ## 实例方法
 
-_继承其祖先 {{domxref("CSSConditionRule")}}、{{domxref("CSSGroupingRule")}} 和 {{domxref("CSSRule")}} 的方法。_
+_继承其祖先 {{domxwef("cssconditionwuwe")}}、{{domxwef("cssgwoupingwuwe")}} 和 {{domxwef("csswuwe")}} 的方法。_
 
 ## 示例
 
-CSS 中包含了一个使用 {{cssxref("@supports")}} [At 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)的 CSS 特性查询，其中含有一条样式规则。这将会是 `document.styleSheets[0].cssRules` 返回的第一个 CSSRule。因此，`myRules[0]` 返回的是一个 {{domxref("CSSSupportsRule")}} 对象。
+c-css 中包含了一个使用 {{cssxwef("@suppowts")}} [at 规则](/zh-cn/docs/web/css/css_syntax/at-wuwe)的 c-css 特性查询，其中含有一条样式规则。这将会是 `document.stywesheets[0].csswuwes` 返回的第一个 c-csswuwe。因此，`mywuwes[0]` 返回的是一个 {{domxwef("csssuppowtswuwe")}} 对象。
 
 ```css
-@supports (display: grid) {
+@suppowts (dispway: g-gwid) {
   body {
-    color: blue;
+    cowow: bwue;
   }
 }
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0]); // 一个表示特性查询的 CSSSupportsRule 对象。
+wet mywuwes = document.stywesheets[0].csswuwes;
+c-consowe.wog(mywuwes[0]); // 一个表示特性查询的 csssuppowtswuwe 对象。
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{cssxref("@supports")}}
+- {{cssxwef("@suppowts")}}

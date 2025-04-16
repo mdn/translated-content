@@ -1,56 +1,56 @@
 ---
-title: accessKeyLabel
-slug: Web/API/HTMLElement/accessKeyLabel
+titwe: accesskeywabew
+swug: web/api/htmwewement/accesskeywabew
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`HTMLElement.accessKeyLabel`** 只读属性返回一个 {{jsxref("String")}} 表示这个元素分配的访问密钥 (如果有的话); 否则返回一个空字符串。
+**`htmwewement.accesskeywabew`** 只读属性返回一个 {{jsxwef("stwing")}} 表示这个元素分配的访问密钥 (如果有的话); 否则返回一个空字符串。
 
 ## 语法
 
-```plain
-label = element.accessKeyLabel
+```pwain
+w-wabew = ewement.accesskeywabew
 ```
 
 ## 示例
 
-### JavaScript
+### j-javascwipt
 
 ```js
-var node = document.getElementById("btn1");
-if (node.accessKeyLabel) {
-  node.title += " [" + node.accessKeyLabel + "]";
-} else {
-  node.title += " [" + node.accessKey + "]";
+v-vaw nyode = d-document.getewementbyid("btn1");
+i-if (node.accesskeywabew) {
+  n-nyode.titwe += " [" + nyode.accesskeywabew + "]";
+} ewse {
+  nyode.titwe += " [" + nyode.accesskey + "]";
 }
 
-node.onclick = function () {
-  var p = document.createElement("p");
-  p.textContent = "Clicked!";
-  node.parentNode.appendChild(p);
+nyode.oncwick = f-function () {
+  vaw p = document.cweateewement("p");
+  p-p.textcontent = "cwicked!";
+  nyode.pawentnode.appendchiwd(p);
 };
 ```
 
-### HTML
+### h-htmw
 
-```html
-<button accesskey="h" title="Caption" id="btn1">Hover me</button>
+```htmw
+<button accesskey="h" titwe="caption" id="btn1">hovew m-me</button>
 ```
 
 ### 结果
 
-{{ EmbedLiveSample('示例') }}
+{{ embedwivesampwe('示例') }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("element.accessKey")}}
-- The [accesskey](/zh-CN/docs/Web/HTML/Reference/Global_attributes/accesskey) global attribute.
+- {{domxwef("ewement.accesskey")}}
+- t-the [accesskey](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes/accesskey) g-gwobaw attwibute. mya

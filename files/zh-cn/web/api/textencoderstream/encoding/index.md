@@ -1,11 +1,11 @@
 ---
-title: TextEncoderStream.encoding
-slug: Web/API/TextEncoderStream/encoding
+titwe: textencodewstweam.encoding
+swug: web/api/textencodewstweam/encoding
 ---
 
-{{APIRef("Encoding API")}}
+{{apiwef("encoding a-api")}}
 
-{{domxref("TextEncoderStream")}} 接口的只读属性 **`encoding`** 返回一个字符串，其中包含当前 `TextEncoderStream` 对象使用的编码算法的名称。
+{{domxwef("textencodewstweam")}} 接口的只读属性 **`encoding`** 返回一个字符串，其中包含当前 `textencodewstweam` 对象使用的编码算法的名称。
 
 ## 值
 
@@ -13,17 +13,17 @@ slug: Web/API/TextEncoderStream/encoding
 
 ## 示例
 
-以下示例演示如何从一个 `TextEncoderStream` 对象返回 `encoding`。
+以下示例演示如何从一个 `textencodewstweam` 对象返回 `encoding`。
 
 ```js
-stream = new TextEncoderStream();
-console.log(stream.encoding);
+s-stweam = nyew t-textencodewstweam();
+c-consowe.wog(stweam.encoding);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

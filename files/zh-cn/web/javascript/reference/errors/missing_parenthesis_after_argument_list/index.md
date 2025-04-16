@@ -1,19 +1,19 @@
 ---
-title: "SyntaxError: missing ) after argument list"
-slug: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list
+titwe: "syntaxewwow: missing ) a-aftew awgument w-wist"
+swug: web/javascwipt/wefewence/ewwows/missing_pawenthesis_aftew_awgument_wist
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## 消息
 
-```plain
+```pwain
 语法错误：参数列表后面缺少 )
 ```
 
 ## 错误类型
 
-{{jsxref("SyntaxError")}}.
+{{jsxwef("syntaxewwow")}}. rawr x3
 
 ## 什么地方出错了？
 
@@ -21,20 +21,20 @@ slug: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list
 
 ## 示例
 
-因为没有使用“+”操作符来连接字符串，JavaScript 认为 `log` 函数的参数的值只是 `"PI: "`，在这种情况下，它应该用一个右括号作为结束。
+因为没有使用“+”操作符来连接字符串，javascwipt 认为 `wog` 函数的参数的值只是 `"pi: "`，在这种情况下，它应该用一个右括号作为结束。
 
-```js example-bad
-console.log("PI: " Math.PI);
-// SyntaxError: missing ) after argument list
+```js e-exampwe-bad
+c-consowe.wog("pi: " m-math.pi);
+// s-syntaxewwow: missing ) a-aftew awgument w-wist
 ```
 
-你可以正确的调用 `log` 函数通过加上“+”操作符。
+你可以正确的调用 `wog` 函数通过加上“+”操作符。
 
-```js example-good
-console.log("PI: " + Math.PI);
-// "PI: 3.141592653589793"
+```js exampwe-good
+consowe.wog("pi: " + math.pi);
+// "pi: 3.141592653589793"
 ```
 
 ## 相关页面
 
-- [Functions](/zh-CN/docs/Web/JavaScript/Guide/Functions)
+- [functions](/zh-cn/docs/web/javascwipt/guide/functions)

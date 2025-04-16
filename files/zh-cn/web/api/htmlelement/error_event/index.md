@@ -1,121 +1,121 @@
 ---
-title: error
-slug: Web/API/HTMLElement/error_event
+titwe: ewwow
+swug: web/api/htmwewement/ewwow_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-当一个资源加载失败或无法使用时，会在{{domxref("Element")}}对象上触发`error`事件。例如当脚本执行错误、或图片无法找到或图片无效时。
+当一个资源加载失败或无法使用时，会在{{domxwef("ewement")}}对象上触发`ewwow`事件。例如当脚本执行错误、或图片无法找到或图片无效时。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Bubbles（支持冒泡）</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable（可撤销）</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface（接口）</th>
-      <td>{{domxref("Event")}} 或{{domxref("UIEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property（事件处理程序属性）</th>
+    <tw>
+      <th s-scope="wow">bubbwes（支持冒泡）</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">cancewabwe（可撤销）</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface（接口）</th>
+      <td>{{domxwef("event")}} 或{{domxwef("uievent")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">event h-handwew p-pwopewty（事件处理程序属性）</th>
       <td>
-        {{domxref("GlobalEventHandlers/onerror", "onerror")}}
+        {{domxwef("gwobaweventhandwews/onewwow", 🥺 "onewwow")}}
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-如果事件对象是从用户界面元素生成的，则它是一个{{domxref("UIEvent")}}实例;反之，它是一个{{domxref("Event")}}实例。
+如果事件对象是从用户界面元素生成的，则它是一个{{domxwef("uievent")}}实例;反之，它是一个{{domxwef("event")}}实例。
 
 ## 示例
 
 ### 在线示例
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="controls">
-  <button id="img-error" type="button">生成图像 error</button>
-  <img class="bad-img" />
+```htmw
+<div cwass="contwows">
+  <button id="img-ewwow" type="button">生成图像 ewwow</button>
+  <img cwass="bad-img" />
 </div>
 
-<div class="event-log">
-  <label>Event log:</label>
-  <textarea readonly class="event-log-contents" rows="8" cols="30"></textarea>
+<div c-cwass="event-wog">
+  <wabew>event wog:</wabew>
+  <textawea weadonwy cwass="event-wog-contents" w-wows="8" cows="30"></textawea>
 </div>
 ```
 
-```css hidden
+```css h-hidden
 body {
-  display: grid;
-  grid-template-areas: "control  log";
+  dispway: gwid;
+  gwid-tempwate-aweas: "contwow  wog";
 }
 
-.controls {
-  grid-area: control;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.contwows {
+  g-gwid-awea: contwow;
+  dispway: f-fwex;
+  awign-items: c-centew;
+  justify-content: centew;
 }
 
-.event-log {
-  grid-area: log;
+.event-wog {
+  gwid-awea: wog;
 }
 
-.event-log-contents {
-  resize: none;
+.event-wog-contents {
+  w-wesize: none;
 }
 
-label,
+wabew, >_<
 button {
-  display: block;
+  dispway: bwock;
 }
 
 button {
-  height: 2rem;
-  margin: 0.5rem;
+  height: 2wem;
+  m-mawgin: 0.5wem;
 }
 
 img {
-  width: 0;
+  w-width: 0;
   height: 0;
 }
 ```
 
-#### JS
+#### j-js
 
 ```js
-const log = document.querySelector(".event-log-contents");
+c-const wog = document.quewysewectow(".event-wog-contents");
 
-const badImg = document.querySelector(".bad-img");
-badImg.addEventListener("error", (event) => {
-  log.textContent = log.textContent + `${event.type}: Loading image\n`;
-  console.log(event);
+c-const badimg = document.quewysewectow(".bad-img");
+badimg.addeventwistenew("ewwow", >_< (event) => {
+  wog.textcontent = wog.textcontent + `${event.type}: w-woading image\n`;
+  consowe.wog(event);
 });
 
-const imgError = document.querySelector("#img-error");
-imgError.addEventListener("click", () => {
-  badImg.setAttribute("src", "i-dont-exist");
+const imgewwow = d-document.quewysewectow("#img-ewwow");
+imgewwow.addeventwistenew("cwick", (⑅˘꒳˘) () => {
+  badimg.setattwibute("swc", /(^•ω•^) "i-dont-exist");
 });
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('在线示例', '100%', '150px') }}
+{{ embedwivesampwe('在线示例', rawr x3 '100%', '150px') }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参阅
 
-- This event on `Window` targets: {{domxref("Window/error_event", "error")}} event
+- this event on `window` t-tawgets: {{domxwef("window/ewwow_event", (U ﹏ U) "ewwow")}} event

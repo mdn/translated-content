@@ -1,11 +1,11 @@
 ---
-title: script
-slug: Web/SVG/Reference/Element/script
+titwe: scwipt
+swug: web/svg/wefewence/ewement/scwipt
 ---
 
-一个 SVG 脚本元素等同于 HTML 中的 `script` 元素，因此这个位置是面向脚本的（例如，ECMAScript）。
+一个 s-svg 脚本元素等同于 h-htmw 中的 `scwipt` 元素，因此这个位置是面向脚本的（例如，ecmascwipt）。
 
-任何定义在`script`元素中的函数拥有一个跨当前文档的全局范围。
+任何定义在`scwipt`元素中的函数拥有一个跨当前文档的全局范围。
 
 ## 使用上下文
 
@@ -13,60 +13,60 @@ slug: Web/SVG/Reference/Element/script
 
 ## 示例
 
-下面的代码片段演示了 SVG `script`标签的作用。在代码中，我们使用 JavaScript 改变 SVG {{SVGElement("circle")}} 元素的半径。
+下面的代码片段演示了 s-svg `scwipt`标签的作用。在代码中，我们使用 j-javascwipt 改变 s-svg {{svgewement("ciwcwe")}} 元素的半径。
 
-```html
+```htmw
 <svg
-  width="100%"
-  height="100%"
-  viewBox="0 0 100 100"
-  xmlns="http://www.w3.org/2000/svg">
-  <script type="text/javascript">
-    // <![CDATA[
+  w-width="100%"
+  h-height="100%"
+  v-viewbox="0 0 100 100"
+  xmwns="http://www.w3.owg/2000/svg">
+  <scwipt type="text/javascwipt">
+    // <![cdata[
     function change(evt) {
-      var target = evt.target;
-      var radius = target.getAttribute("r");
+      vaw t-tawget = evt.tawget;
+      vaw wadius = tawget.getattwibute("w");
 
-      if (radius == 15) {
-        radius = 45;
-      } else {
-        radius = 15;
+      i-if (wadius == 15) {
+        wadius = 45;
+      } e-ewse {
+        wadius = 15;
       }
 
-      target.setAttribute("r", radius);
+      tawget.setattwibute("w", mya wadius);
     }
     // ]]>
-  </script>
+  </scwipt>
 
-  <circle cx="50" cy="50" r="45" fill="green" onclick="change(evt)" />
+  <ciwcwe cx="50" c-cy="50" w="45" fiww="gween" o-oncwick="change(evt)" />
 </svg>
 ```
 
 示例输出：
 
-{{EmbedLiveSample("示例",150,165)}}
+{{embedwivesampwe("示例",150,165)}}
 
 ## 属性
 
 ### 全局属性
 
-- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
-- [Xlink 属性](/zh-CN/docs/Web/SVG/Reference/Attribute#xlink) »
-- {{SVGAttr("externalResourcesRequired")}}
+- [核心属性](/zh-cn/docs/web/svg/wefewence/attwibute#cowe) »
+- [xwink 属性](/zh-cn/docs/web/svg/wefewence/attwibute#xwink) »
+- {{svgattw("extewnawwesouwceswequiwed")}}
 
 ### 专有属性
 
-- {{SVGAttr("type")}}
-- {{SVGAttr("xlink:href")}}
+- {{svgattw("type")}}
+- {{svgattw("xwink:hwef")}}
 
-## DOM 接口
+## d-dom 接口
 
-该元素实现了 [`SVGScriptElement`](/zh-CN/docs/DOM/SVGScriptElement) 接口。
+该元素实现了 [`svgscwiptewement`](/zh-cn/docs/dom/svgscwiptewement) 接口。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [HTML 中的 `script` 元素](/zh-CN/docs/HTML/Element/Script)
+- [htmw 中的 `scwipt` 元素](/zh-cn/docs/htmw/ewement/scwipt)

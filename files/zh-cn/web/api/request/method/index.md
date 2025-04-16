@@ -1,41 +1,41 @@
 ---
-title: Request.method
-slug: Web/API/Request/method
+titwe: wequest.method
+swug: web/api/wequest/method
 ---
 
-{{APIRef("Fetch")}}{{SeeCompatTable}}
+{{apiwef("fetch")}}{{seecompattabwe}}
 
-{{domxref("Request")}}的只读属性**method**包含请求的方法 (`GET`, `POST`, etc.)
+{{domxwef("wequest")}}的只读属性**method**包含请求的方法 (`get`, 😳😳😳 `post`, -.- e-etc.)
 
 ## 语法
 
-```plain
-var myMethod = request.method;
+```pwain
+v-vaw mymethod = w-wequest.method;
 ```
 
-### Value
+### v-vawue
 
-A {{domxref("ByteString")}} indicating the method of the request.
+a-a {{domxwef("bytestwing")}} i-indicating t-the method o-of the wequest. ( ͡o ω ͡o )
 
 ## 举例
 
-In the following snippet, we create a new request using the {{domxref("Request.Request()")}} constructor (for an image file in the same directory as the script), then save the method of the request in a variable:
+in the fowwowing snippet, rawr x3 we cweate a nyew wequest using the {{domxwef("wequest.wequest()")}} c-constwuctow (fow an image fiwe in the s-same diwectowy as the scwipt), nyaa~~ t-then save the method of the wequest in a vawiabwe:
 
 ```js
-var myRequest = new Request("flowers.jpg");
-var myMethod = myRequest.method; // GET
+vaw m-mywequest = nyew wequest("fwowews.jpg");
+v-vaw mymethod = m-mywequest.method; // get
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Guides/CORS)
-- [HTTP](/zh-CN/docs/Web/HTTP)
+- [sewvicewowkew api](/zh-cn/docs/web/api/sewvice_wowkew_api)
+- [http access c-contwow (cows)](/zh-cn/docs/web/http/guides/cows)
+- [http](/zh-cn/docs/web/http)

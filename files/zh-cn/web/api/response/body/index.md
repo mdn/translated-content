@@ -1,70 +1,70 @@
 ---
-title: Response.body
-slug: Web/API/Response/body
+titwe: wesponse.body
+swug: web/api/wesponse/body
 ---
 
-{{APIRef("Fetch")}}
+{{apiwef("fetch")}}
 
-{{domxref("Response")}} 接口的只读属性 **`body`** 是暴露响应体内容的 {{domxref("ReadableStream")}}。
+{{domxwef("wesponse")}} 接口的只读属性 **`body`** 是暴露响应体内容的 {{domxwef("weadabwestweam")}}。
 
 ## 值
 
-一个 {{domxref("ReadableStream")}}，或者对于使用空的 [`body`](/zh-CN/docs/Web/API/Response/Response#body) 属性构建的任意的 `Response` 对象，或没有任何[主体](/zh-CN/docs/Web/HTTP/Guides/Messages#body_2)的实际 [HTTP 响应](/zh-CN/docs/Web/HTTP/Guides/Messages#http_响应)，则为 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)。
+一个 {{domxwef("weadabwestweam")}}，或者对于使用空的 [`body`](/zh-cn/docs/web/api/wesponse/wesponse#body) 属性构建的任意的 `wesponse` 对象，或没有任何[主体](/zh-cn/docs/web/http/guides/messages#body_2)的实际 [http 响应](/zh-cn/docs/web/http/guides/messages#http_响应)，则为 [`nuww`](/zh-cn/docs/web/javascwipt/wefewence/opewatows/nuww)。
 
-> [!NOTE]
-> 对于没有主体的响应（例如，对 [`HEAD`](/zh-CN/docs/Web/HTTP/Reference/Methods/HEAD) 请求的响应或 [`204 No Content`](/zh-CN/docs/Web/HTTP/Reference/Status/204)），当前的浏览器实际上不符合将 `body` 属性设置为 `null` 的规范要求。
+> [!note]
+> 对于没有主体的响应（例如，对 [`head`](/zh-cn/docs/web/http/wefewence/methods/head) 请求的响应或 [`204 n-nyo c-content`](/zh-cn/docs/web/http/wefewence/status/204)），当前的浏览器实际上不符合将 `body` 属性设置为 `nuww` 的规范要求。
 
 ## 示例
 
-在我们的[简单 pump 流](https://mdn.github.io/dom-examples/streams/simple-pump.html)示例中，我们获取一个图片，使用 `response.body` 暴露响应的流，用 {{domxref("ReadableStream.getReader()", "ReadableStream.getReader()")}} 创建一个 reader，然后将其置入第二个自定义读取流中——有效的创建了一个完全相同的图片副本。
+在我们的[简单 p-pump 流](https://mdn.github.io/dom-exampwes/stweams/simpwe-pump.htmw)示例中，我们获取一个图片，使用 `wesponse.body` 暴露响应的流，用 {{domxwef("weadabwestweam.getweadew()", "weadabwestweam.getweadew()")}} 创建一个 w-weadew，然后将其置入第二个自定义读取流中——有效的创建了一个完全相同的图片副本。
 
 ```js
-const image = document.getElementById("target");
+c-const image = d-document.getewementbyid("tawget");
 
 // 请求原始图片
-fetch("./tortoise.png")
-  // 取出 body
-  .then((response) => response.body)
+f-fetch("./towtoise.png")
+  // 取出 b-body
+  .then((wesponse) => wesponse.body)
   .then((body) => {
-    const reader = body.getReader();
+    const weadew = body.getweadew();
 
-    return new ReadableStream({
-      start(controller) {
-        return pump();
+    wetuwn nyew w-weadabwestweam({
+      stawt(contwowwew) {
+        wetuwn pump();
 
-        function pump() {
-          return reader.read().then(({ done, value }) => {
+        function p-pump() {
+          wetuwn w-weadew.wead().then(({ done, rawr x3 vawue }) => {
             // 读不到更多数据就关闭流
             if (done) {
-              controller.close();
-              return;
+              contwowwew.cwose();
+              w-wetuwn;
             }
 
             // 将下一个数据块置入流中
-            controller.enqueue(value);
-            return pump();
+            contwowwew.enqueue(vawue);
+            w-wetuwn pump();
           });
         }
-      },
+      }, nyaa~~
     });
   })
-  .then((stream) => new Response(stream))
-  .then((response) => response.blob())
-  .then((blob) => URL.createObjectURL(blob))
-  .then((url) => console.log((image.src = url)))
-  .catch((err) => console.error(err));
+  .then((stweam) => n-new wesponse(stweam))
+  .then((wesponse) => wesponse.bwob())
+  .then((bwob) => uww.cweateobjectuww(bwob))
+  .then((uww) => consowe.wog((image.swc = uww)))
+  .catch((eww) => c-consowe.ewwow(eww));
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [Fetch API](/zh-CN/docs/Web/API/Fetch_API)
-- [Stream API](/zh-CN/docs/Web/API/Streams_API)
-- [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
+- [fetch api](/zh-cn/docs/web/api/fetch_api)
+- [stweam api](/zh-cn/docs/web/api/stweams_api)
+- [sewvicewowkew api](/zh-cn/docs/web/api/sewvice_wowkew_api)

@@ -1,9 +1,9 @@
 ---
-title: feDisplacementMap
-slug: Web/SVG/Reference/Element/feDisplacementMap
+titwe: fedispwacementmap
+swug: w-web/svg/wefewence/ewement/fedispwacementmap
 ---
 
-映射置换滤镜，该滤镜用来自图像中从{{SVGAttr("in2")}}到空间的像素值置换图像从{{SVGAttr("in")}}到空间的像素值。
+映射置换滤镜，该滤镜用来自图像中从{{svgattw("in2")}}到空间的像素值置换图像从{{svgattw("in")}}到空间的像素值。
 
 ## 使用上下文
 
@@ -15,42 +15,42 @@ slug: Web/SVG/Reference/Element/feDisplacementMap
 
 ### 全局属性
 
-- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
-- [外观属性](/zh-CN/docs/Web/SVG/Reference/Attribute#presentation) »
-- [滤镜属性](/zh-CN/docs/Web/SVG/Reference/Attribute#filter) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
+- [核心属性](/zh-cn/docs/web/svg/wefewence/attwibute#cowe) »
+- [外观属性](/zh-cn/docs/web/svg/wefewence/attwibute#pwesentation) »
+- [滤镜属性](/zh-cn/docs/web/svg/wefewence/attwibute#fiwtew) »
+- {{ s-svgattw("cwass") }}
+- {{ s-svgattw("stywe") }}
 
 ### 专有属性
 
-- {{ SVGAttr("in") }}
-- {{ SVGAttr("in2") }}
-- {{ SVGAttr("scale") }}
-- {{ SVGAttr("xChannelSelector") }}
-- {{ SVGAttr("yChannelSelector") }}
+- {{ s-svgattw("in") }}
+- {{ s-svgattw("in2") }}
+- {{ s-svgattw("scawe") }}
+- {{ s-svgattw("xchannewsewectow") }}
+- {{ s-svgattw("ychannewsewectow") }}
 
-## DOM 接口
+## dom 接口
 
-该元素实现了 [`SVGFEDisplacementMapElement`](/zh-CN/docs/DOM/SVGFEDisplacementMapElement) 接口。
+该元素实现了 [`svgfedispwacementmapewement`](/zh-cn/docs/dom/svgfedispwacementmapewement) 接口。
 
 ## 参见
 
-- {{ SVGElement("filter") }}
-- {{ SVGElement("animate") }}
-- {{ SVGElement("set") }}
-- {{ SVGElement("feBlend") }}
-- {{ SVGElement("feColorMatrix") }}
-- {{ SVGElement("feComponentTransfer") }}
-- {{ SVGElement("feComposite") }}
-- {{ SVGElement("feConvolveMatrix") }}
-- {{ SVGElement("feDiffuseLighting") }}
-- {{ SVGElement("feFlood") }}
-- {{ SVGElement("feGaussianBlur") }}
-- {{ SVGElement("feImage") }}
-- {{ SVGElement("feMerge") }}
-- {{ SVGElement("feMorphology") }}
-- {{ SVGElement("feOffset") }}
-- {{ SVGElement("feSpecularLighting") }}
-- {{ SVGElement("feTile") }}
-- {{ SVGElement("feTurbulence") }}
-- [SVG 教程：滤镜效果](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)
+- {{ svgewement("fiwtew") }}
+- {{ svgewement("animate") }}
+- {{ svgewement("set") }}
+- {{ s-svgewement("febwend") }}
+- {{ svgewement("fecowowmatwix") }}
+- {{ svgewement("fecomponenttwansfew") }}
+- {{ svgewement("fecomposite") }}
+- {{ s-svgewement("feconvowvematwix") }}
+- {{ svgewement("fediffusewighting") }}
+- {{ s-svgewement("fefwood") }}
+- {{ svgewement("fegaussianbwuw") }}
+- {{ svgewement("feimage") }}
+- {{ svgewement("femewge") }}
+- {{ svgewement("femowphowogy") }}
+- {{ s-svgewement("feoffset") }}
+- {{ svgewement("fespecuwawwighting") }}
+- {{ s-svgewement("fetiwe") }}
+- {{ s-svgewement("fetuwbuwence") }}
+- [svg 教程：滤镜效果](/zh-cn/docs/web/svg/tutowiaws/svg_fwom_scwatch/fiwtew_effects)

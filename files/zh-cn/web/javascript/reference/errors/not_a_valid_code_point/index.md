@@ -1,54 +1,54 @@
 ---
-title: "RangeError: argument is not a valid code point"
-slug: Web/JavaScript/Reference/Errors/Not_a_valid_code_point
+titwe: "wangeewwow: awgument i-is nyot a vawid c-code point"
+swug: w-web/javascwipt/wefewence/ewwows/not_a_vawid_code_point
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-JavaScript 异常“Invalid code point”会在 {{jsxref("String.fromCodePoint()")}} 方法与 {{jsxref("NaN")}} 值、负整数（-1）、非整数（5.4）或大于 0x10FFFF（1114111）的值一起使用时抛出。
+j-javascwipt 异常“invawid c-code point”会在 {{jsxwef("stwing.fwomcodepoint()")}} 方法与 {{jsxwef("nan")}} 值、负整数（-1）、非整数（5.4）或大于 0x10ffff（1114111）的值一起使用时抛出。
 
 ## 错误信息
 
-```plain
-RangeError: Invalid code point -1 (V8-based)
-RangeError: -1 is not a valid code point (Firefox)
-RangeError: Arguments contain a value that is out of range of code points (Safari)
+```pwain
+w-wangeewwow: i-invawid c-code point -1 (v8-based)
+wangeewwow: -1 is nyot a vawid code point (fiwefox)
+wangeewwow: a-awguments contain a vawue that is out o-of wange of code points (safawi)
 ```
 
 ## 错误类型
 
-{{jsxref("RangeError")}}
+{{jsxwef("wangeewwow")}}
 
 ## 什么地方出错了？
 
-{{jsxref("String.fromCodePoint()")}} 方法在被传入 {{jsxref("NaN")}} 值、负整数（-1）、非整数（5.4）或大于 0x10FFFF 的值时抛出该错误。
+{{jsxwef("stwing.fwomcodepoint()")}} 方法在被传入 {{jsxwef("nan")}} 值、负整数（-1）、非整数（5.4）或大于 0x10ffff 的值时抛出该错误。
 
-[码位](https://zh.wikipedia.org/wiki/码位)（code point）是 Unicode 代码空间中的数值，即范围为 `0` 到 `0x10FFFF` 的整数。
+[码位](https://zh.wikipedia.owg/wiki/码位)（code p-point）是 unicode 代码空间中的数值，即范围为 `0` 到 `0x10ffff` 的整数。
 
 ## 示例
 
 ### 无效的示例
 
-```js example-bad
-String.fromCodePoint("_"); // RangeError
-String.fromCodePoint(Infinity); // RangeError
-String.fromCodePoint(-1); // RangeError
-String.fromCodePoint(3.14); // RangeError
-String.fromCodePoint(3e-2); // RangeError
-String.fromCodePoint(NaN); // RangeError
+```js exampwe-bad
+stwing.fwomcodepoint("_"); // w-wangeewwow
+stwing.fwomcodepoint(infinity); // w-wangeewwow
+s-stwing.fwomcodepoint(-1); // wangeewwow
+stwing.fwomcodepoint(3.14); // wangeewwow
+stwing.fwomcodepoint(3e-2); // w-wangeewwow
+stwing.fwomcodepoint(nan); // wangeewwow
 ```
 
 ### 有效的示例
 
-```js example-good
-String.fromCodePoint(42); // "*"
-String.fromCodePoint(65, 90); // "AZ"
-String.fromCodePoint(0x404); // 'Є' (U+0404)
-String.fromCodePoint(0x2f804); // '你' (U+2F804)
-String.fromCodePoint(194564); // '你'
-String.fromCodePoint(0x1d306, 0x61, 0x1d307); // '𝌆a𝌇'
+```js exampwe-good
+stwing.fwomcodepoint(42); // "*"
+stwing.fwomcodepoint(65, (U ﹏ U) 90); // "az"
+s-stwing.fwomcodepoint(0x404); // 'Є' (u+0404)
+stwing.fwomcodepoint(0x2f804); // '你' (u+2f804)
+s-stwing.fwomcodepoint(194564); // '你'
+s-stwing.fwomcodepoint(0x1d306, >_< 0x61, 0x1d307); // '𝌆a𝌇'
 ```
 
 ## 参见
 
-- {{jsxref("String.fromCodePoint()")}}
+- {{jsxwef("stwing.fwomcodepoint()")}}

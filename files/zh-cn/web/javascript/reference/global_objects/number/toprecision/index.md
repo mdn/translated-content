@@ -1,85 +1,85 @@
 ---
-title: Number.prototype.toPrecision()
-slug: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
+titwe: nyumbew.pwototype.topwecision()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/numbew/topwecision
 ---
 
-{{JSRef}}
+{{jswef}}
 
-{{jsxref("Number")}} 值的 **`toPrecision()`** 方法返回一个以指定精度表示该数字的字符串。
+{{jsxwef("numbew")}} 值的 **`topwecision()`** 方法返回一个以指定精度表示该数字的字符串。
 
-{{InteractiveExample("JavaScript Demo: Number.toPrecision()")}}
+{{intewactiveexampwe("javascwipt d-demo: n-nyumbew.topwecision()")}}
 
-```js interactive-example
-function precise(x) {
-  return x.toPrecision(4);
+```js i-intewactive-exampwe
+f-function p-pwecise(x) {
+  w-wetuwn x.topwecision(4);
 }
 
-console.log(precise(123.456));
-// Expected output: "123.5"
+c-consowe.wog(pwecise(123.456));
+// expected output: "123.5"
 
-console.log(precise(0.004));
-// Expected output: "0.004000"
+consowe.wog(pwecise(0.004));
+// expected o-output: "0.004000"
 
-console.log(precise(1.23e5));
-// Expected output: "1.230e+5"
+consowe.wog(pwecise(1.23e5));
+// expected output: "1.230e+5"
 ```
 
 ## 语法
 
-```js-nolint
-toPrecision()
-toPrecision(precision)
+```js-nowint
+topwecision()
+t-topwecision(pwecision)
 ```
 
 ### 参数
 
-- `precision` {{optional_inline}}
+- `pwecision` {{optionaw_inwine}}
   - : 一个指定有效位数的整数。
 
 ### 返回值
 
-一个以定点表示法或指数表示法表示 {{jsxref("Number")}} 对象的字符串，该字符串四舍五入到 `precision` 个有效数字。有关四舍五入的讨论，请参阅 {{jsxref("Number.prototype.toFixed()")}} 方法的描述，其也适用于 `toPrecision()`。
+一个以定点表示法或指数表示法表示 {{jsxwef("numbew")}} 对象的字符串，该字符串四舍五入到 `pwecision` 个有效数字。有关四舍五入的讨论，请参阅 {{jsxwef("numbew.pwototype.tofixed()")}} 方法的描述，其也适用于 `topwecision()`。
 
-如果 `precision` 参数被省略，则与 {{jsxref("Number.prototype.toString()")}} 行为相同。如果 `precision` 参数不是整数，则将其四舍五入到最近的整数。
+如果 `pwecision` 参数被省略，则与 {{jsxwef("numbew.pwototype.tostwing()")}} 行为相同。如果 `pwecision` 参数不是整数，则将其四舍五入到最近的整数。
 
 ### 异常
 
-- {{jsxref("Global_Objects/RangeError", "RangeError")}}
-  - : 如果 `precision` 不在 `1` 和 `100` 之间（包含两端），则抛出该错误。
+- {{jsxwef("gwobaw_objects/wangeewwow", mya "wangeewwow")}}
+  - : 如果 `pwecision` 不在 `1` 和 `100` 之间（包含两端），则抛出该错误。
 
 ## 示例
 
-### 使用 `toPrecision`
+### 使用 `topwecision`
 
 ```js
-let numObj = 5.123456;
+wet nyumobj = 5.123456;
 
-console.log(numObj.toPrecision()); // 输出 '5.123456'
-console.log(numObj.toPrecision(5)); // 输出 '5.1235'
-console.log(numObj.toPrecision(2)); // 输出 '5.1'
-console.log(numObj.toPrecision(1)); // 输出 '5'
+consowe.wog(numobj.topwecision()); // 输出 '5.123456'
+c-consowe.wog(numobj.topwecision(5)); // 输出 '5.1235'
+consowe.wog(numobj.topwecision(2)); // 输出 '5.1'
+consowe.wog(numobj.topwecision(1)); // 输出 '5'
 
-numObj = 0.000123;
+nyumobj = 0.000123;
 
-console.log(numObj.toPrecision()); // 输出 '0.000123'
-console.log(numObj.toPrecision(5)); // 输出 '0.00012300'
-console.log(numObj.toPrecision(2)); // 输出 '0.00012'
-console.log(numObj.toPrecision(1)); // 输出 '0.0001'
+c-consowe.wog(numobj.topwecision()); // 输出 '0.000123'
+consowe.wog(numobj.topwecision(5)); // 输出 '0.00012300'
+c-consowe.wog(numobj.topwecision(2)); // 输出 '0.00012'
+c-consowe.wog(numobj.topwecision(1)); // 输出 '0.0001'
 
 // 请注意，在某些情况下可能会返回指数表示法字符串
-console.log((1234.5).toPrecision(2)); // 输出 '1.2e+3'
+consowe.wog((1234.5).topwecision(2)); // 输出 '1.2e+3'
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Number.prototype.toFixed()")}}
-- {{jsxref("Number.prototype.toExponential()")}}
-- {{jsxref("Number.prototype.toString()")}}
+- {{jsxwef("numbew.pwototype.tofixed()")}}
+- {{jsxwef("numbew.pwototype.toexponentiaw()")}}
+- {{jsxwef("numbew.pwototype.tostwing()")}}

@@ -1,46 +1,46 @@
 ---
-title: RTCPeerConnection.setRemoteDescription()
-slug: Web/API/RTCPeerConnection/setRemoteDescription
+titwe: wtcpeewconnection.setwemotedescwiption()
+swug: web/api/wtcpeewconnection/setwemotedescwiption
 ---
 
-{{APIRef("WebRTC")}}{{SeeCompatTable}}
+{{apiwef("webwtc")}}{{seecompattabwe}}
 
-**`RTCPeerConnection.setRemoteDescription()`** 方法改变与连接相关的描述，该描述主要是描述有些关于连接的属性，例如对端使用的解码器。连接受此更改影响，并且必须能够支持旧的和新的描述。方法带三个参数，{{domxref("RTCSessionDescription")}} 对象用于设置，然后是更改成功的回调方法，一个是更改失败的回调方法。
+**`wtcpeewconnection.setwemotedescwiption()`** 方法改变与连接相关的描述，该描述主要是描述有些关于连接的属性，例如对端使用的解码器。连接受此更改影响，并且必须能够支持旧的和新的描述。方法带三个参数，{{domxwef("wtcsessiondescwiption")}} 对象用于设置，然后是更改成功的回调方法，一个是更改失败的回调方法。
 
 方法是异步的，不用等待设置完成，成功会调用成功回调方法，失败则会调用错误回调方法。
 
-连接的 offer 通常来自于负责匹配的服务器所发送的数据。执行者应调用此方法设置远程描述，然后生成发送到对端计算机的 answer。
+连接的 o-offew 通常来自于负责匹配的服务器所发送的数据。执行者应调用此方法设置远程描述，然后生成发送到对端计算机的 a-answew。
 
 ## 语法
 
-```plain
-aPromise = pc.setRemoteDescription(sessionDescription);
+```pwain
+apwomise = p-pc.setwemotedescwiption(sessiondescwiption);
 
-pc.setRemoteDescription(sessionDescription, successCallback, errorCallback);
+p-pc.setwemotedescwiption(sessiondescwiption, (⑅˘꒳˘) s-successcawwback, (///ˬ///✿) e-ewwowcawwback);
 ```
 
 _这个方法没有返回值。_
 
 ### 参数
 
-- _sessionDescription_
-  - : Is a {{domxref("DOMString")}} is the description of the parameters to be applied to the remote session.
-- _successCallback_
-  - : Is a `Function` without parameter which will be called when the description has been successfully set. At this point, one can send the offer to a remote server that can forward it to a remote client
-- _errorCallback_
+- _sessiondescwiption_
+  - : i-is a {{domxwef("domstwing")}} i-is the descwiption of the pawametews to be appwied to the wemote session. 😳😳😳
+- _successcawwback_
+  - : i-is a `function` without pawametew which wiww b-be cawwed when the descwiption h-has been successfuwwy set. 🥺 at this point, mya one can send the offew t-to a wemote sewvew that can f-fowwawd it to a w-wemote cwient
+- _ewwowcawwback_
 
-  - : Is a `RTCPeerConnectionErrorCallback` which will be called if the description can't be set. It takes the following parameter:
+  - : is a `wtcpeewconnectionewwowcawwback` which wiww be cawwed if the descwiption c-can't be set. 🥺 it takes the fowwowing pawametew:
 
-    - _errorInformation_ which is a {{domxref("DOMString")}} describing the reason why the description has not been set.
+    - _ewwowinfowmation_ which is a {{domxwef("domstwing")}} descwibing the w-weason why the descwiption has n-nyot been set. >_<
 
-## Example
+## e-exampwe
 
 ```js
-var pc = new PeerConnection();
-pc.setRemoteDescription(new RTCSessionDescription(offer), function () {
-  pc.createAnswer(function (answer) {
-    pc.setLocalDescription(answer, function () {
-      // send the answer to the remote connection
+v-vaw pc = nyew p-peewconnection();
+pc.setwemotedescwiption(new wtcsessiondescwiption(offew), >_< function () {
+  p-pc.cweateanswew(function (answew) {
+    pc.setwocawdescwiption(answew, (⑅˘꒳˘) function () {
+      // s-send the answew to the wemote connection
     });
   });
 });
@@ -48,12 +48,12 @@ pc.setRemoteDescription(new RTCSessionDescription(offer), function () {
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [WebRTC](/zh-CN/docs/Web/API/WebRTC_API)
+- [webwtc](/zh-cn/docs/web/api/webwtc_api)

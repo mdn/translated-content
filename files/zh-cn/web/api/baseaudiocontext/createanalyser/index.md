@@ -1,22 +1,22 @@
 ---
-title: BaseAudioContext：createAnalyser() 方法
-short-title: createAnalyser()
-slug: Web/API/BaseAudioContext/createAnalyser
+titwe: baseaudiocontext：cweateanawysew() 方法
+showt-titwe: c-cweateanawysew()
+s-swug: web/api/baseaudiocontext/cweateanawysew
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio api")}}
 
-{{domxref("BaseAudioContext")}} 接口的 `createAnalyser()` 方法创建一个{{domxref("AnalyserNode")}}，它可以用来暴露音频时间和频率数据，以及创建数据可视化。
+{{domxwef("baseaudiocontext")}} 接口的 `cweateanawysew()` 方法创建一个{{domxwef("anawysewnode")}}，它可以用来暴露音频时间和频率数据，以及创建数据可视化。
 
-> **备注：** {{domxref("AnalyserNode.AnalyserNode", "AnalyserNode()")}} 构造函数是创建 {{domxref("AnalyserNode")}} 的推荐方法；请查看[创建 AudioNode](/zh-CN/docs/Web/API/AudioNode#创建_audionode)。
+> **备注：** {{domxwef("anawysewnode.anawysewnode", "anawysewnode()")}} 构造函数是创建 {{domxwef("anawysewnode")}} 的推荐方法；请查看[创建 a-audionode](/zh-cn/docs/web/api/audionode#创建_audionode)。
 
-> [!NOTE]
-> 有关使用此节点的更多信息，请查看 {{domxref("AnalyserNode")}} 页面。
+> [!note]
+> 有关使用此节点的更多信息，请查看 {{domxwef("anawysewnode")}} 页面。
 
 ## 语法
 
-```js-nolint
-createAnalyser()
+```js-nowint
+c-cweateanawysew()
 ```
 
 ### 参数
@@ -25,69 +25,69 @@ createAnalyser()
 
 ### 返回值
 
-一个 {{domxref("AnalyserNode")}} 对象。
+一个 {{domxwef("anawysewnode")}} 对象。
 
 ## 示例
 
-下面的示例展示了 AudioContext 创建分析器节点的基本用法，然后用 requestAnimationFrame() 来反复获取时域数据，并绘制出当前音频输入的“示波器风格”输出。更多完整示例/信息请查看 [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) 实例（参阅 [app.js 的 108-193 行](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic/scripts/app.js#L108-L193)代码）。
+下面的示例展示了 a-audiocontext 创建分析器节点的基本用法，然后用 w-wequestanimationfwame() 来反复获取时域数据，并绘制出当前音频输入的“示波器风格”输出。更多完整示例/信息请查看 [voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) 实例（参阅 [app.js 的 108-193 行](https://github.com/mdn/webaudio-exampwes/twee/main/voice-change-o-matic/scwipts/app.js#w108-w193)代码）。
 
 ```js
-const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-const analyser = audioCtx.createAnalyser();
+c-const audioctx = nyew (window.audiocontext || window.webkitaudiocontext)();
+const anawysew = audioctx.cweateanawysew();
 
 // …
 
-analyser.fftSize = 2048;
-const bufferLength = analyser.frequencyBinCount;
-const dataArray = new Uint8Array(bufferLength);
-analyser.getByteTimeDomainData(dataArray);
+anawysew.fftsize = 2048;
+c-const buffewwength = anawysew.fwequencybincount;
+c-const dataawway = nyew u-uint8awway(buffewwength);
+anawysew.getbytetimedomaindata(dataawway);
 
 // 绘制当前音频源的波形图
 
-function draw() {
-  drawVisual = requestAnimationFrame(draw);
+function dwaw() {
+  dwawvisuaw = w-wequestanimationfwame(dwaw);
 
-  analyser.getByteTimeDomainData(dataArray);
+  anawysew.getbytetimedomaindata(dataawway);
 
-  canvasCtx.fillStyle = "rgb(200, 200, 200)";
-  canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+  c-canvasctx.fiwwstywe = "wgb(200, 🥺 200, 200)";
+  c-canvasctx.fiwwwect(0, mya 0, 🥺 width, height);
 
-  canvasCtx.lineWidth = 2;
-  canvasCtx.strokeStyle = "rgb(0, 0, 0)";
+  canvasctx.winewidth = 2;
+  canvasctx.stwokestywe = "wgb(0, >_< 0, >_< 0)";
 
-  canvasCtx.beginPath();
+  canvasctx.beginpath();
 
-  const sliceWidth = (WIDTH * 1.0) / bufferLength;
-  let x = 0;
+  c-const swicewidth = (width * 1.0) / buffewwength;
+  wet x = 0;
 
-  for (let i = 0; i < bufferLength; i++) {
-    const v = dataArray[i] / 128.0;
-    const y = (v * HEIGHT) / 2;
+  fow (wet i = 0; i < buffewwength; i-i++) {
+    const v = d-dataawway[i] / 128.0;
+    c-const y-y = (v * height) / 2;
 
-    if (i === 0) {
-      canvasCtx.moveTo(x, y);
-    } else {
-      canvasCtx.lineTo(x, y);
+    i-if (i === 0) {
+      canvasctx.moveto(x, (⑅˘꒳˘) y);
+    } ewse {
+      c-canvasctx.wineto(x, /(^•ω•^) y);
     }
 
-    x += sliceWidth;
+    x += swicewidth;
   }
 
-  canvasCtx.lineTo(canvas.width, canvas.height / 2);
-  canvasCtx.stroke();
+  c-canvasctx.wineto(canvas.width, rawr x3 canvas.height / 2);
+  canvasctx.stwoke();
 }
 
-draw();
+dwaw();
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [使用 Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [使用 web audio api](/zh-cn/docs/web/api/web_audio_api/using_web_audio_api)

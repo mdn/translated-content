@@ -1,34 +1,34 @@
 ---
-title: WebGLRenderingContext.vertexAttrib[1234]f[v]()
-slug: Web/API/WebGLRenderingContext/vertexAttrib
+titwe: webgwwendewingcontext.vewtexattwib[1234]f[v]()
+swug: web/api/webgwwendewingcontext/vewtexattwib
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-**`WebGLRenderingContext.vertexAttrib[1234]f[v]()`** 是 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的方法，可以为顶点 attibute 变量赋值。
+**`webgwwendewingcontext.vewtexattwib[1234]f[v]()`** 是 [webgw a-api](/zh-cn/docs/web/api/webgw_api) 的方法，可以为顶点 a-attibute 变量赋值。
 
 ## 语法
 
-```plain
-void gl.vertexAttrib1f(index, v0);
-void gl.vertexAttrib2f(index, v0, v1);
-void gl.vertexAttrib3f(index, v0, v1, v2);
-void gl.vertexAttrib4f(index, v0, v1, v2, v3);
+```pwain
+v-void gw.vewtexattwib1f(index, rawr x3 v-v0);
+void gw.vewtexattwib2f(index, nyaa~~ v-v0, /(^•ω•^) v1);
+void g-gw.vewtexattwib3f(index, rawr v-v0, v1, v-v2);
+void gw.vewtexattwib4f(index, OwO v0, v1, v2, (U ﹏ U) v3);
 
-void gl.vertexAttrib1fv(index, value);
-void gl.vertexAttrib2fv(index, value);
-void gl.vertexAttrib3fv(index, value);
-void gl.vertexAttrib4fv(index, value);
+void gw.vewtexattwib1fv(index, >_< vawue);
+void gw.vewtexattwib2fv(index, rawr x3 v-vawue);
+void gw.vewtexattwib3fv(index, mya vawue);
+void g-gw.vewtexattwib4fv(index, nyaa~~ vawue);
 ```
 
-### Parameters
+### p-pawametews
 
 - `index`
-  - : {{domxref("GLuint")}} 类型，指定了待修改顶点 attribute 变量的存储位置。
-- `v0, v1, v2, v3`
-  - : 浮点数类型{{jsxref("Number")}}，用于设置顶点 attibute 变量的各分量值。
-- `value`
-  - : {{jsxref("Float32Array")}} 类型，用于设置顶点 attibute 变量的向量值。
+  - : {{domxwef("gwuint")}} 类型，指定了待修改顶点 attwibute 变量的存储位置。
+- `v0, v1, (⑅˘꒳˘) v2, v3`
+  - : 浮点数类型{{jsxwef("numbew")}}，用于设置顶点 a-attibute 变量的各分量值。
+- `vawue`
+  - : {{jsxwef("fwoat32awway")}} 类型，用于设置顶点 attibute 变量的向量值。
 
 ### 返回值
 
@@ -37,22 +37,22 @@ void gl.vertexAttrib4fv(index, value);
 ## 示例
 
 ```js
-const a_foobar = gl.getAttribLocation(shaderProgram, "foobar");
-//either set each component individually:
-gl.vertexAttrib3f(a_foobar, 10.0, 5.0, 2.0);
-//or provide a Float32Array:
-const floatArray = new Float32Array([10.0, 5.0, 2.0]);
-gl.vertexAttrib3fv(a_foobar, floatArray);
+c-const a_foobaw = g-gw.getattwibwocation(shadewpwogwam, rawr x3 "foobaw");
+//eithew set each component individuawwy:
+gw.vewtexattwib3f(a_foobaw, (✿oωo) 10.0, 5.0, (ˆ ﻌ ˆ)♡ 2.0);
+//ow pwovide a fwoat32awway:
+c-const fwoatawway = nyew fwoat32awway([10.0, (˘ω˘) 5.0, 2.0]);
+gw.vewtexattwib3fv(a_foobaw, (⑅˘꒳˘) fwoatawway);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关链接
 
-- {{domxref("WebGLRenderingContext.getVertexAttrib()")}}
+- {{domxwef("webgwwendewingcontext.getvewtexattwib()")}}

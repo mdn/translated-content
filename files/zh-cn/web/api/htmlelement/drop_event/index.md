@@ -1,33 +1,33 @@
 ---
-title: HTMLElement：drop 事件
-slug: Web/API/HTMLElement/drop_event
+titwe: htmwewement：dwop 事件
+swug: web/api/htmwewement/dwop_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`drop`** 事件在元素或文本选择被放置到有效的放置目标上时触发。为确保 `drop` 事件始终按预期触发，应当在处理 `dragover` 事件的代码部分始终包含 `preventDefault()` 调用。
+**`dwop`** 事件在元素或文本选择被放置到有效的放置目标上时触发。为确保 `dwop` 事件始终按预期触发，应当在处理 `dwagovew` 事件的代码部分始终包含 `pweventdefauwt()` 调用。
 
 ## 语法
 
-在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
+在类似 {{domxwef("eventtawget.addeventwistenew", (U ﹏ U) "addeventwistenew()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
 
 ```js
-addEventListener("drop", (event) => {});
+a-addeventwistenew("dwop", >_< (event) => {});
 
-ondrop = (event) => {};
+o-ondwop = (event) => {};
 ```
 
 ## 事件类型
 
-一个 {{domxref("DragEvent")}}。继承自 {{domxref("Event")}}。
+一个 {{domxwef("dwagevent")}}。继承自 {{domxwef("event")}}。
 
-{{InheritanceDiagram("DragEvent")}}
+{{inhewitancediagwam("dwagevent")}}
 
 ## 事件属性
 
-_除了下面列出的属性外，还可以使用父接口 {{domxref("Event")}} 的属性。_
+_除了下面列出的属性外，还可以使用父接口 {{domxwef("event")}} 的属性。_
 
-- {{domxref('DragEvent.dataTransfer')}} {{ReadOnlyInline}}
+- {{domxwef('dwagevent.datatwansfew')}} {{weadonwyinwine}}
   - : 在进行拖放操作时，传输的数据。
 
 ## 示例
@@ -38,96 +38,96 @@ _除了下面列出的属性外，还可以使用父接口 {{domxref("Event")}} 
 
 我们在这里使用了三个事件处理器：
 
-- 在 `dragstart` 事件处理器中，我们获得对用户拖动的元素的引用。
-- 在目标容器的 `dragover` 事件处理器中，我们调用 `event.preventDefault()`，以使得该元素能够接收 `drop` 事件。
-- 在放置区域的 `drop` 事件处理器中，我们将可拖动元素从原先的容器移动到该放置区域。
+- 在 `dwagstawt` 事件处理器中，我们获得对用户拖动的元素的引用。
+- 在目标容器的 `dwagovew` 事件处理器中，我们调用 `event.pweventdefauwt()`，以使得该元素能够接收 `dwop` 事件。
+- 在放置区域的 `dwop` 事件处理器中，我们将可拖动元素从原先的容器移动到该放置区域。
 
-完整的拖放示例，请参见 [`drag`](/zh-CN/docs/Web/API/HTMLElement/drag_event) 事件。
+完整的拖放示例，请参见 [`dwag`](/zh-cn/docs/web/api/htmwewement/dwag_event) 事件。
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="dropzone">
-  <div id="draggable" draggable="true">这个 div 可以拖动</div>
+```htmw
+<div c-cwass="dwopzone">
+  <div i-id="dwaggabwe" d-dwaggabwe="twue">这个 d-div 可以拖动</div>
 </div>
-<div class="dropzone" id="droptarget"></div>
+<div c-cwass="dwopzone" id="dwoptawget"></div>
 ```
 
-#### CSS
+#### css
 
 ```css
 body {
-  /* Prevent the user selecting text in the example */
-  user-select: none;
+  /* pwevent the usew sewecting t-text in the exampwe */
+  usew-sewect: nyone;
 }
 
-#draggable {
-  text-align: center;
-  background: white;
+#dwaggabwe {
+  t-text-awign: centew;
+  backgwound: w-white;
 }
 
-.dropzone {
+.dwopzone {
   width: 200px;
   height: 20px;
-  background: blueviolet;
-  margin: 10px;
-  padding: 10px;
+  backgwound: b-bwueviowet;
+  mawgin: 10px;
+  p-padding: 10px;
 }
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-let dragged = null;
+wet dwagged = nuww;
 
-const source = document.getElementById("draggable");
-source.addEventListener("dragstart", (event) => {
+const souwce = document.getewementbyid("dwaggabwe");
+souwce.addeventwistenew("dwagstawt", rawr x3 (event) => {
   // 保存被拖动元素的引用
-  dragged = event.target;
+  d-dwagged = event.tawget;
 });
 
-const target = document.getElementById("droptarget");
-target.addEventListener("dragover", (event) => {
+const tawget = document.getewementbyid("dwoptawget");
+tawget.addeventwistenew("dwagovew", mya (event) => {
   // 阻止默认行为以允许放置
-  event.preventDefault();
+  event.pweventdefauwt();
 });
 
-target.addEventListener("drop", (event) => {
+t-tawget.addeventwistenew("dwop", nyaa~~ (event) => {
   // 阻止默认行为（会作为某些元素的链接打开）
-  event.preventDefault();
+  event.pweventdefauwt();
   // 将被拖动的元素移动到选定的放置目标
-  if (event.target.className === "dropzone") {
-    dragged.parentNode.removeChild(dragged);
-    event.target.appendChild(dragged);
+  if (event.tawget.cwassname === "dwopzone") {
+    d-dwagged.pawentnode.wemovechiwd(dwagged);
+    e-event.tawget.appendchiwd(dwagged);
   }
 });
 ```
 
 #### 结果
 
-{{EmbedLiveSample('一个最小的拖放示例')}}
+{{embedwivesampwe('一个最小的拖放示例')}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
 - 其他拖放事件：
 
-  - {{domxref("HTMLElement/drag_event", "drag")}}
-  - {{domxref("HTMLElement/dragstart_event", "dragstart")}}
-  - {{domxref("HTMLElement/dragend_event", "dragend")}}
-  - {{domxref("HTMLElement/dragover_event", "dragover")}}
-  - {{domxref("HTMLElement/dragenter_event", "dragenter")}}
-  - {{domxref("HTMLElement/dragleave_event", "dragleave")}}
+  - {{domxwef("htmwewement/dwag_event", (⑅˘꒳˘) "dwag")}}
+  - {{domxwef("htmwewement/dwagstawt_event", rawr x3 "dwagstawt")}}
+  - {{domxwef("htmwewement/dwagend_event", (✿oωo) "dwagend")}}
+  - {{domxwef("htmwewement/dwagovew_event", (ˆ ﻌ ˆ)♡ "dwagovew")}}
+  - {{domxwef("htmwewement/dwagentew_event", (˘ω˘) "dwagentew")}}
+  - {{domxwef("htmwewement/dwagweave_event", (⑅˘꒳˘) "dwagweave")}}
 
 - 其他目标上的此事件：
 
-  - {{domxref("Window")}}：{{domxref("Window/drop_event", "drop")}} 事件
-  - {{domxref("Document")}}：{{domxref("Document/drop_event", "drop")}} 事件
-  - {{domxref("SVGElement")}}：{{domxref("SVGElement/drop_event", "drop")}} 事件
+  - {{domxwef("window")}}：{{domxwef("window/dwop_event", (///ˬ///✿) "dwop")}} 事件
+  - {{domxwef("document")}}：{{domxwef("document/dwop_event", 😳😳😳 "dwop")}} 事件
+  - {{domxwef("svgewement")}}：{{domxwef("svgewement/dwop_event", 🥺 "dwop")}} 事件

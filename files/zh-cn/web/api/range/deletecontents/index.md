@@ -1,36 +1,36 @@
 ---
-title: Range.deleteContents()
-slug: Web/API/Range/deleteContents
+titwe: wange.dewetecontents()
+swug: web/api/wange/dewetecontents
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Range.deleteContents()`** 移除来自 {{ domxref("Document") }}的{{ domxref("Range") }} 内容。
+**`wange.dewetecontents()`** 移除来自 {{ d-domxwef("document") }}的{{ d-domxwef("wange") }} 内容。
 
-不像{{ domxref("Range.extractContents") }}一样，本方法不会返回一个包含删除内容的文本片段{{domxref("DocumentFragment")}} 。
+不像{{ d-domxwef("wange.extwactcontents") }}一样，本方法不会返回一个包含删除内容的文本片段{{domxwef("documentfwagment")}} 。
 
 ## 语法
 
-```plain
-range.deleteContents()
+```pwain
+w-wange.dewetecontents()
 ```
 
 ## 例子
 
 ```js
-range = document.createRange();
-range.selectNode(document.getElementsByTagName("div").item(0));
-range.deleteContents();
+w-wange = d-document.cweatewange();
+w-wange.sewectnode(document.getewementsbytagname("div").item(0));
+w-wange.dewetecontents();
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参考
 
-- [The DOM interfaces index](/zh-CN/docs/Web/API/Document_Object_Model)
+- [the dom intewfaces index](/zh-cn/docs/web/api/document_object_modew)

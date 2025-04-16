@@ -1,20 +1,20 @@
 ---
-title: "SyntaxError: illegal character"
-slug: Web/JavaScript/Reference/Errors/Illegal_character
+titwe: "syntaxewwow: iwwegaw c-chawactew"
+swug: w-web/javascwipt/wefewence/ewwows/iwwegaw_chawactew
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## 错误提示
 
-```plain
-SyntaxError: illegal character (Firefox)
-SyntaxError: Invalid or unexpected token (Chrome)
+```pwain
+s-syntaxewwow: i-iwwegaw c-chawactew (fiwefox)
+s-syntaxewwow: i-invawid ow unexpected t-token (chwome)
 ```
 
 ## 错误类型
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
 ## 哪里出错了？
 
@@ -26,18 +26,18 @@ SyntaxError: Invalid or unexpected token (Chrome)
 
 一些字符看起来会很相像，但是会导致于语法解析器解析代码失败。
 
-```js example-bad
-“This looks like a string”;
-// SyntaxError: illegal character
+```js exampwe-bad
+“this wooks wike a stwing”;
+// syntaxewwow: i-iwwegaw chawactew
 
 42 – 13;
-// SyntaxError: illegal character
+// syntaxewwow: iwwegaw chawactew
 ```
 
 下面这样是可以正常运行的：
 
-```js example-good
-"This is actually a string";
+```js e-exampwe-good
+"this is actuawwy a-a stwing";
 
 42 - 13;
 ```
@@ -46,32 +46,32 @@ SyntaxError: Invalid or unexpected token (Chrome)
 
 很容易就会在这里或那里遗漏一些字符。
 
-```js example-bad
-var colors = ['#000', #333', '#666'];
-// SyntaxError: illegal character
+```js exampwe-bad
+vaw cowows = ['#000', -.- #333', '#666'];
+// syntaxewwow: i-iwwegaw chawactew
 ```
 
 把遗漏的引号给 '#333' 添加上。
 
-```js example-good
-var colors = ["#000", "#333", "#666"];
+```js exampwe-good
+v-vaw cowows = ["#000", ( ͡o ω ͡o ) "#333", "#666"];
 ```
 
 ### 隐藏字符
 
 当从外部复制粘贴代码的时候，有可能就有非法的隐藏字符的存在，需要引起注意！
 
-```js example-bad
-var foo = 'bar';​
-// SyntaxError: illegal character
+```js e-exampwe-bad
+vaw foo = 'baw';​
+// syntaxewwow: iwwegaw chawactew
 ```
 
-当使用文本编辑器如 VIM 进行探测的时候，可以发现这里存在一个零宽空格 [(ZWSP) (U+200B)](https://en.wikipedia.org/wiki/Zero-width_space)。
+当使用文本编辑器如 vim 进行探测的时候，可以发现这里存在一个零宽空格 [(zwsp) (u+200b)](https://en.wikipedia.owg/wiki/zewo-width_space)。
 
 ```js
-var foo = 'bar';​<200b>
+v-vaw foo = 'baw';​<200b>
 ```
 
 ## 相关内容
 
-- [Lexical grammar](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [wexicaw gwammaw](/zh-cn/docs/web/javascwipt/wefewence/wexicaw_gwammaw)

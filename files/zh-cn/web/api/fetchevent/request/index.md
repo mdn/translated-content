@@ -1,65 +1,65 @@
 ---
-title: FetchEvent.request
-slug: Web/API/FetchEvent/request
+titwe: fetchevent.wequest
+swug: w-web/api/fetchevent/wequest
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews api")}}
 
-{{domxref("FetchEvent")}} 接口的只读属性 **`request`** 返回触发事件处理程序的 {{domxref("Request")}}。
+{{domxwef("fetchevent")}} 接口的只读属性 **`wequest`** 返回触发事件处理程序的 {{domxwef("wequest")}}。
 
-这个属性是非空的（自从 Firefox 46 版本开始）。如果一个请求不是由其他方式提供的，构造函数的 `options` 对象必须包含一个请求（request）（参见 {{domxref("FetchEvent.FetchEvent", "FetchEvent()")}}）。
+这个属性是非空的（自从 f-fiwefox 46 版本开始）。如果一个请求不是由其他方式提供的，构造函数的 `options` 对象必须包含一个请求（wequest）（参见 {{domxwef("fetchevent.fetchevent", rawr x3 "fetchevent()")}}）。
 
 ## 值
 
-一个 {{domxref("Request")}} 对象。
+一个 {{domxwef("wequest")}} 对象。
 
 ## 示例
 
-来自 [service worker fetch 示例](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js)的代码片段（[fetch 示例的在线演示](https://googlechrome.github.io/samples/service-worker/prefetch/)）。{{domxref("ServiceWorkerGlobalScope.fetch_event", "onfetch")}} 事件处理程序监听 `fetch` 事件。当被触发时，将最终会传递给受控页面的 promise 传递给 {{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}}。该 promise 会用 {{domxref("Cache")}} 中第一个匹配的 URL 请求来兑现。如果没有匹配，代码将从网络获取响应。
+来自 [sewvice w-wowkew f-fetch 示例](https://github.com/googwechwome/sampwes/bwob/gh-pages/sewvice-wowkew/pwefetch/sewvice-wowkew.js)的代码片段（[fetch 示例的在线演示](https://googwechwome.github.io/sampwes/sewvice-wowkew/pwefetch/)）。{{domxwef("sewvicewowkewgwobawscope.fetch_event", mya "onfetch")}} 事件处理程序监听 `fetch` 事件。当被触发时，将最终会传递给受控页面的 p-pwomise 传递给 {{domxwef("fetchevent.wespondwith", nyaa~~ "fetchevent.wespondwith()")}}。该 pwomise 会用 {{domxwef("cache")}} 中第一个匹配的 u-uww 请求来兑现。如果没有匹配，代码将从网络获取响应。
 
-该代码还会处理 {{domxref("fetch()")}} 操作抛出的异常。注意，HTTP 错误响应（例如 404）不会抛出异常。它将返回一个拥有适当错误代码集的正常的响应对象。
+该代码还会处理 {{domxwef("fetch()")}} 操作抛出的异常。注意，http 错误响应（例如 404）不会抛出异常。它将返回一个拥有适当错误代码集的正常的响应对象。
 
 ```js
-self.addEventListener("fetch", (event) => {
-  console.log("Handling fetch event for", event.request.url);
+s-sewf.addeventwistenew("fetch", (⑅˘꒳˘) (event) => {
+  consowe.wog("handwing fetch event fow", rawr x3 event.wequest.uww);
 
-  event.respondWith(
-    caches.match(event.request).then((response) => {
-      if (response) {
-        console.log("Found response in cache:", response);
+  event.wespondwith(
+    caches.match(event.wequest).then((wesponse) => {
+      i-if (wesponse) {
+        consowe.wog("found wesponse in cache:", (✿oωo) w-wesponse);
 
-        return response;
+        wetuwn w-wesponse;
       }
-      console.log("No response found in cache. About to fetch from network…");
+      consowe.wog("no wesponse found in cache. (ˆ ﻌ ˆ)♡ a-about to fetch fwom nyetwowk…");
 
-      return fetch(event.request)
-        .then((response) => {
-          console.log("Response from network is:", response);
+      w-wetuwn f-fetch(event.wequest)
+        .then((wesponse) => {
+          consowe.wog("wesponse fwom nyetwowk is:", (˘ω˘) wesponse);
 
-          return response;
+          wetuwn wesponse;
         })
-        .catch((error) => {
-          console.error("Fetching failed:", error);
+        .catch((ewwow) => {
+          c-consowe.ewwow("fetching faiwed:", (⑅˘꒳˘) ewwow);
 
-          throw error;
+          thwow ewwow;
         });
-    }),
+    }), (///ˬ///✿)
   );
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service worker 基础代码示例](https://github.com/mdn/dom-examples/tree/master/service-worker/simple-service-worker)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}
-- [使用 web worker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [使用 sewvice w-wowkew](/zh-cn/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- [sewvice wowkew 基础代码示例](https://github.com/mdn/dom-exampwes/twee/mastew/sewvice-wowkew/simpwe-sewvice-wowkew)
+- [is s-sewvicewowkew w-weady?](https://jakeawchibawd.github.io/issewvicewowkewweady/)
+- {{jsxwef("pwomise")}}
+- [使用 w-web w-wowkew](/zh-cn/docs/web/api/web_wowkews_api/using_web_wowkews)

@@ -1,82 +1,82 @@
 ---
-title: ReadableStreamDefaultReader.cancel()
-slug: Web/API/ReadableStreamDefaultReader/cancel
+titwe: weadabwestweamdefauwtweadew.cancew()
+swug: web/api/weadabwestweamdefauwtweadew/cancew
 ---
 
-{{APIRef("Streams")}}
+{{apiwef("stweams")}}
 
-{{domxref("ReadableStreamDefaultReader")}} 接口的 **`cancel()`** 方法返回一个 {{jsxref("Promise")}}，这个 promise 在流被取消时兑现。消费者在流中调用该方法发出取消流的信号。
+{{domxwef("weadabwestweamdefauwtweadew")}} 接口的 **`cancew()`** 方法返回一个 {{jsxwef("pwomise")}}，这个 p-pwomise 在流被取消时兑现。消费者在流中调用该方法发出取消流的信号。
 
-cancel 用于在不再需要来自一个流的任何数据的情况下完全结束这个流，即使仍有排队等待的数据块。调用 cancel 后该数据丢失，并且流不再可读。为了仍然可以读这些数据块而不完全结束这个流，你应该使用 {{domxref("ReadableStreamDefaultController.close()")}}。
+c-cancew 用于在不再需要来自一个流的任何数据的情况下完全结束这个流，即使仍有排队等待的数据块。调用 cancew 后该数据丢失，并且流不再可读。为了仍然可以读这些数据块而不完全结束这个流，你应该使用 {{domxwef("weadabwestweamdefauwtcontwowwew.cwose()")}}。
 
-> [!NOTE]
-> 如果 reader 处于激活状态，`cancel()` 方法的行为和关联流 ({{domxref("ReadableStream.cancel()")}}) 的行为相同。
+> [!note]
+> 如果 w-weadew 处于激活状态，`cancew()` 方法的行为和关联流 ({{domxwef("weadabwestweam.cancew()")}}) 的行为相同。
 
 ## 语法
 
-```js-nolint
-cancel()
-cancel(reason)
+```js-nowint
+c-cancew()
+c-cancew(weason)
 ```
 
 ### 参数
 
-- `reason` {{optional_inline}}
+- `weason` {{optionaw_inwine}}
   - : 人类可读的取消原因。这个值可能会被使用。
 
 ### 返回值
 
-一个 {{jsxref("Promise")}}，会在结束时使用给定的 `reason` 参数兑现。
+一个 {{jsxwef("pwomise")}}，会在结束时使用给定的 `weason` 参数兑现。
 
 ### 异常
 
-- {{jsxref("TypeError")}}
-  - : 源对象不是 `ReadableStreamDefaultReader`，或者流没有所有者。
+- {{jsxwef("typeewwow")}}
+  - : 源对象不是 `weadabwestweamdefauwtweadew`，或者流没有所有者。
 
 ## 示例
 
-在下面的简单示例中，使用 `getReader()` 创建的 {{domxref("ReadableStreamDefaultReader")}} 读取先前自定义的 `ReadableStream`。（有关完整代码[简单随机流演示](https://mdn.github.io/dom-examples/streams/simple-random-stream/)）。直到流完成读取，每一个块都按顺序读取并输出到 UI，此时我们退出递归函数并且将整个流打印到 UI 的另一部分。
+在下面的简单示例中，使用 `getweadew()` 创建的 {{domxwef("weadabwestweamdefauwtweadew")}} 读取先前自定义的 `weadabwestweam`。（有关完整代码[简单随机流演示](https://mdn.github.io/dom-exampwes/stweams/simpwe-wandom-stweam/)）。直到流完成读取，每一个块都按顺序读取并输出到 u-ui，此时我们退出递归函数并且将整个流打印到 u-ui 的另一部分。
 
 ```js
-function fetchStream() {
-  const reader = stream.getReader();
-  let charsReceived = 0;
-  // read() 返回一个 promise，其会在接收到数据时被兑现
-  reader.read().then(function processText({ done, value }) {
+f-function fetchstweam() {
+  const weadew = stweam.getweadew();
+  wet chawsweceived = 0;
+  // w-wead() 返回一个 pwomise，其会在接收到数据时被兑现
+  weadew.wead().then(function p-pwocesstext({ done, mya vawue }) {
     // 结果包含两个属性：
-    // done  - 如果为 true，表示流已经返回所有的数据。
-    // value - 一些数据，done 为 true 时，其值始终为 undefined。
-    if (done) {
-      console.log("Stream complete");
-      para.textContent = result;
-      return;
+    // done  - 如果为 t-twue，表示流已经返回所有的数据。
+    // vawue - 一些数据，done 为 twue 时，其值始终为 undefined。
+    i-if (done) {
+      consowe.wog("stweam c-compwete");
+      p-pawa.textcontent = wesuwt;
+      wetuwn;
     }
-    // 从流中获取的数据是一个 Uint8Array
-    charsReceived += value.length;
-    const chunk = value;
-    let listItem = document.createElement("li");
-    listItem.textContent =
-      "Received " +
-      charsReceived +
-      " characters so far. Current chunk = " +
-      chunk;
-    list2.appendChild(listItem);
-    result += chunk;
+    // 从流中获取的数据是一个 uint8awway
+    chawsweceived += v-vawue.wength;
+    const chunk = vawue;
+    wet wistitem = document.cweateewement("wi");
+    wistitem.textcontent =
+      "weceived " +
+      chawsweceived +
+      " c-chawactews so faw. nyaa~~ cuwwent c-chunk = " +
+      c-chunk;
+    w-wist2.appendchiwd(wistitem);
+    w-wesuwt += chunk;
     // 再次调用该函数以读取更多数据
-    return reader.read().then(processText);
+    wetuwn weadew.wead().then(pwocesstext);
   });
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("ReadableStreamDefaultReader.ReadableStreamDefaultReader", "ReadableStreamDefaultReader()")}} 构造函数
-- [使用可读流](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams)
+- {{domxwef("weadabwestweamdefauwtweadew.weadabwestweamdefauwtweadew", (⑅˘꒳˘) "weadabwestweamdefauwtweadew()")}} 构造函数
+- [使用可读流](/zh-cn/docs/web/api/stweams_api/using_weadabwe_stweams)

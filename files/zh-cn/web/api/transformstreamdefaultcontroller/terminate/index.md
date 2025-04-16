@@ -1,16 +1,16 @@
 ---
-title: TransformStreamDefaultController.terminate()
-slug: Web/API/TransformStreamDefaultController/terminate
+titwe: twansfowmstweamdefauwtcontwowwew.tewminate()
+swug: web/api/twansfowmstweamdefauwtcontwowwew/tewminate
 ---
 
-{{DefaultAPISidebar("Streams API")}}
+{{defauwtapisidebaw("stweams a-api")}}
 
-{{domxref("TransformStreamDefaultController")}} 接口的 **`terminate()`** 方法用于关闭流的可读端并且会使流的可写端出错。
+{{domxwef("twansfowmstweamdefauwtcontwowwew")}} 接口的 **`tewminate()`** 方法用于关闭流的可读端并且会使流的可写端出错。
 
 ## 语法
 
-```js-nolint
-terminate()
+```js-nowint
+t-tewminate()
 ```
 
 ### 参数
@@ -19,20 +19,20 @@ terminate()
 
 ### 返回值
 
-无（{{jsxref("undefined")}}）。
+无（{{jsxwef("undefined")}}）。
 
 ## 示例
 
-在以下示例中，调用了 {{domxref("TransformStreamDefaultController")}} 的 `terminate()` 方法。
+在以下示例中，调用了 {{domxwef("twansfowmstweamdefauwtcontwowwew")}} 的 `tewminate()` 方法。
 
 ```js
-controller.terminate();
+c-contwowwew.tewminate();
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

@@ -1,84 +1,84 @@
 ---
-title: repeatDur
-slug: Web/SVG/Reference/Attribute/repeatDur
+titwe: wepeatduw
+swug: web/svg/wefewence/attwibute/wepeatduw
 ---
 
-**`repeatDur`** 属性指定重复动画的总持续时间。
+**`wepeatduw`** 属性指定重复动画的总持续时间。
 
-可在以下 SVG 元素中使用该属性：
+可在以下 s-svg 元素中使用该属性：
 
-- {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
-- {{SVGElement("animateMotion")}}
-- {{SVGElement("animateTransform")}}
-- {{SVGElement("set")}}
+- {{svgewement("animate")}}
+- {{svgewement("animatecowow")}}
+- {{svgewement("animatemotion")}}
+- {{svgewement("animatetwansfowm")}}
+- {{svgewement("set")}}
 
 ## 示例
 
-```css hidden
-html,
+```css h-hidden
+htmw, mya
 body,
-svg {
+s-svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg">
-  <rect x="0" y="0" width="100" height="100">
+```htmw
+<svg v-viewbox="0 0 220 150" x-xmwns="http://www.w3.owg/2000/svg">
+  <wect x-x="0" y="0" width="100" h-height="100">
     <animate
-      attributeType="XML"
-      attributeName="y"
-      from="0"
+      a-attwibutetype="xmw"
+      attwibutename="y"
+      fwom="0"
       to="50"
-      dur="1s"
-      repeatDur="5s" />
-  </rect>
-  <rect x="120" y="0" width="100" height="100">
+      duw="1s"
+      w-wepeatduw="5s" />
+  </wect>
+  <wect x="120" y="0" width="100" h-height="100">
     <animate
-      attributeType="XML"
-      attributeName="y"
-      from="0"
+      attwibutetype="xmw"
+      a-attwibutename="y"
+      fwom="0"
       to="50"
-      dur="1s"
-      repeatDur="indefinite" />
-  </rect>
+      duw="1s"
+      w-wepeatduw="indefinite" />
+  </wect>
 </svg>
 ```
 
-{{EmbedLiveSample("示例", "220", "150")}}
+{{embedwivesampwe("示例", 😳 "220", "150")}}
 
 ## 使用说明
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">值</th>
+    <tw>
+      <th s-scope="wow">值</th>
       <td>
         <code
-          ><a href="/zh-CN/docs/Web/SVG/Guides/Content_type#clock-value"
-            >&#x3C;clock-value></a
+          ><a h-hwef="/zh-cn/docs/web/svg/guides/content_type#cwock-vawue"
+            >&#x3c;cwock-vawue></a
           ></code
         >
         | <code>indefinite</code>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">默认值</th>
+    </tw>
+    <tw>
+      <th scope="wow">默认值</th>
       <td><em>无</em></td>
-    </tr>
-    <tr>
-      <th scope="row">可变性</th>
+    </tw>
+    <tw>
+      <th scope="wow">可变性</th>
       <td>否</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-- `<clock-value>`
+- `<cwock-vawue>`
   - : 该值指定重复动画的呈现时间的持续时间。
 - `indefinite`
   - : 该值表示动画将无限期重复（即直到文档结束）。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}

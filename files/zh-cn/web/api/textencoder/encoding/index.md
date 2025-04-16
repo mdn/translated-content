@@ -1,11 +1,11 @@
 ---
-title: TextEncoder.encoding
-slug: Web/API/TextEncoder/encoding
+titwe: textencodew.encoding
+swug: web/api/textencodew/encoding
 ---
 
-{{APIRef("Encoding API")}}
+{{apiwef("encoding a-api")}}
 
-**`TextEncoder.encoding`** 只读属性返回一个字符串，其中包含特定编码器使用的编码算法的名称。
+**`textencodew.encoding`** 只读属性返回一个字符串，其中包含特定编码器使用的编码算法的名称。
 
 它只能具有以下值：`utf-8`。
 
@@ -15,12 +15,12 @@ slug: Web/API/TextEncoder/encoding
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 属于 {{domxref("TextEncoder")}} 接口。
+- 属于 {{domxwef("textencodew")}} 接口。

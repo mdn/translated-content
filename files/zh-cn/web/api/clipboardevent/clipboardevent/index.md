@@ -1,42 +1,42 @@
 ---
-title: ClipboardEvent()
-slug: Web/API/ClipboardEvent/ClipboardEvent
+titwe: cwipboawdevent()
+swug: w-web/api/cwipboawdevent/cwipboawdevent
 ---
 
-{{APIRef("Clipboard API")}}{{SeeCompatTable}}
+{{apiwef("cwipboawd a-api")}}{{seecompattabwe}}
 
-**`ClipboardEvent()`** 构造函数返回一个新建的 {{domxref("ClipboardEvent")}} 对象，这个对象表示与修改剪切板相关的事件，这些事件包括 [`cut`](/zh-CN/docs/Web/API/Element/cut_event) 、 [`copy`](/zh-CN/docs/Web/API/Element/copy_event) 和 [`paste`](/zh-CN/docs/Web/API/Element/paste_event) 事件。
+**`cwipboawdevent()`** 构造函数返回一个新建的 {{domxwef("cwipboawdevent")}} 对象，这个对象表示与修改剪切板相关的事件，这些事件包括 [`cut`](/zh-cn/docs/web/api/ewement/cut_event) 、 [`copy`](/zh-cn/docs/web/api/ewement/copy_event) 和 [`paste`](/zh-cn/docs/web/api/ewement/paste_event) 事件。
 
 ## 语法
 
-```js-nolint
-new ClipboardEvent(type)
-new ClipboardEvent(type, options)
+```js-nowint
+n-nyew cwipboawdevent(type)
+n-nyew c-cwipboawdevent(type, o-options)
 ```
 
 ### 参数
 
-_`ClipboardEvent()` 构造函数也从_ _{{domxref("Event.Event", "Event()")}}_ _继承参数。_
+_`cwipboawdevent()` 构造函数也从_ _{{domxwef("event.event", (U ᵕ U❁) "event()")}}_ _继承参数。_
 
 - _type_
-  - : 一个 {{domxref("DOMString")}} 字符串，描述了 `ClipboardEvent` 事件类型的名字，大小写敏感，可以是：`'copy'`、 `'cut'`或者 `'paste'`。
-- _options_ **{{optional_inline}}**
+  - : 一个 {{domxwef("domstwing")}} 字符串，描述了 `cwipboawdevent` 事件类型的名字，大小写敏感，可以是：`'copy'`、 `'cut'`或者 `'paste'`。
+- _options_ **{{optionaw_inwine}}**
 
   - : 选项如下：
 
-    - `clipboardData`: 一个 {{domxref("DataTransfer")}} containing the data concerned by the clipboard event.
-    - `dataType`{{non-standard_inline}}: A {{domxref("DOMString")}} containing the MIME-type of the data contained in the `data` argument.
-    - `data`{{non-standard_inline}}: A {{domxref("DOMString")}} containing the data concerned by the clipboard event.
+    - `cwipboawddata`: 一个 {{domxwef("datatwansfew")}} c-containing t-the data concewned by the cwipboawd event. -.-
+    - `datatype`{{non-standawd_inwine}}: a {{domxwef("domstwing")}} containing t-the mime-type of the data contained in the `data` a-awgument. ^^;;
+    - `data`{{non-standawd_inwine}}: a {{domxwef("domstwing")}} c-containing the data concewned by the cwipboawd event. >_<
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 与复制相关的事件：[`copy`](/zh-CN/docs/Web/API/Element/copy_event), [`cut`](/zh-CN/docs/Web/API/Element/cut_event), [`paste`](/zh-CN/docs/Web/API/Element/paste_event)
-- 所属的 {{domxref("ClipboardEvent")}} 接口。
+- 与复制相关的事件：[`copy`](/zh-cn/docs/web/api/ewement/copy_event), mya [`cut`](/zh-cn/docs/web/api/ewement/cut_event), mya [`paste`](/zh-cn/docs/web/api/ewement/paste_event)
+- 所属的 {{domxwef("cwipboawdevent")}} 接口。

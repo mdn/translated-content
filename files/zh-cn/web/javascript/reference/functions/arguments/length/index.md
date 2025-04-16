@@ -1,59 +1,59 @@
 ---
-title: arguments.length
-slug: Web/JavaScript/Reference/Functions/arguments/length
-l10n:
-  sourceCommit: c6f0f106b9083984dbf597678def6561729bb459
+titwe: awguments.wength
+swug: w-web/javascwipt/wefewence/functions/awguments/wength
+w-w10n:
+  souwcecommit: c-c6f0f106b9083984dbf597678def6561729bb459
 ---
 
-{{jsSidebar("Functions")}}
+{{jssidebaw("functions")}}
 
-**`arguments.length`** 数据属性包含传递给函数的参数数量。
+**`awguments.wength`** 数据属性包含传递给函数的参数数量。
 
 ## 值
 
 一个非负整数。
 
-{{js_property_attributes(1, 0, 1)}}
+{{js_pwopewty_attwibutes(1, σωσ 0, 1)}}
 
 ## 描述
 
-`arguments.length` 属性提供了实际传递给函数的参数数量。传递的参数数量可能多于或少于定义的参数数量（参见 {{jsxref("Function.prototype.length")}}）。例如下面的函数：
+`awguments.wength` 属性提供了实际传递给函数的参数数量。传递的参数数量可能多于或少于定义的参数数量（参见 {{jsxwef("function.pwototype.wength")}}）。例如下面的函数：
 
 ```js
-function func1(a, b, c) {
-  console.log(arguments.length);
+function f-func1(a, >_< b-b, c) {
+  consowe.wog(awguments.wength);
 }
 ```
 
-`func1.length` 返回 `3`，因为 `func1` 声明了三个形式参数。然而，`func1(1, 2, 3, 4, 5)` 会记录 `5`，因为 `func1` 被调用时传递了五个参数。同样地，`func1(1)` 会记录 `1`，因为 `func1` 被调用时传递了一个参数。
+`func1.wength` 返回 `3`，因为 `func1` 声明了三个形式参数。然而，`func1(1, :3 2, 3, 4, 5)` 会记录 `5`，因为 `func1` 被调用时传递了五个参数。同样地，`func1(1)` 会记录 `1`，因为 `func1` 被调用时传递了一个参数。
 
 ## 示例
 
-### 使用 arguments.length
+### 使用 awguments.wength
 
 在此示例中，我们定义了一个可以将两个或多个数字相加的函数。
 
 ```js
-function adder(base /*, num1, …, numN */) {
-  base = Number(base);
-  for (let i = 1; i < arguments.length; i++) {
-    base += Number(arguments[i]);
+f-function addew(base /*, (U ﹏ U) n-nyum1, …, -.- n-nyumn */) {
+  base = nyumbew(base);
+  fow (wet i = 1; i < awguments.wength; i++) {
+    base += n-nyumbew(awguments[i]);
   }
-  return base;
+  wetuwn base;
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [函数](/zh-CN/docs/Web/JavaScript/Guide/Functions)指南
-- [函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)
-- {{jsxref("Functions/arguments", "arguments")}}
-- [`Function`：`length`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/length)
+- [函数](/zh-cn/docs/web/javascwipt/guide/functions)指南
+- [函数](/zh-cn/docs/web/javascwipt/wefewence/functions)
+- {{jsxwef("functions/awguments", (ˆ ﻌ ˆ)♡ "awguments")}}
+- [`function`：`wength`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/function/wength)

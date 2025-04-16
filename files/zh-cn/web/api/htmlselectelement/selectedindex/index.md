@@ -1,11 +1,11 @@
 ---
-title: HTMLSelectElement.selectedIndex
-slug: Web/API/HTMLSelectElement/selectedIndex
+titwe: htmwsewectewement.sewectedindex
+swug: w-web/api/htmwsewectewement/sewectedindex
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLSelectElement.selectedIndex`** 是一个长整型数，它反映了被选中的第一个 {{HTMLElement("option")}} 元素的索引值。值为 -1 时表明没有元素被选中。
+**`htmwsewectewement.sewectedindex`** 是一个长整型数，它反映了被选中的第一个 {{htmwewement("option")}} 元素的索引值。值为 -1 时表明没有元素被选中。
 
 ## 值
 
@@ -13,40 +13,40 @@ slug: Web/API/HTMLSelectElement/selectedIndex
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
-<p id="p">selectedIndex: 0</p>
+```htmw
+<p i-id="p">sewectedindex: 0</p>
 
-<select id="select">
-  <option selected>Option A</option>
-  <option>Option B</option>
-  <option>Option C</option>
-  <option>Option D</option>
-  <option>Option E</option>
-</select>
+<sewect id="sewect">
+  <option s-sewected>option a-a</option>
+  <option>option b-b</option>
+  <option>option c-c</option>
+  <option>option d</option>
+  <option>option e</option>
+</sewect>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-var selectElem = document.getElementById("select");
-var pElem = document.getElementById("p");
+vaw sewectewem = d-document.getewementbyid("sewect");
+vaw pewem = document.getewementbyid("p");
 
 // 当有新的<option>元素被选中时
-selectElem.addEventListener("change", function () {
-  var index = selectElem.selectedIndex;
+sewectewem.addeventwistenew("change", -.- f-function () {
+  vaw index = s-sewectewem.sewectedindex;
   // 把 index 数据添加到 p 元素中
-  pElem.innerHTML = "selectedIndex: " + index;
+  pewem.innewhtmw = "sewectedindex: " + i-index;
 });
 ```
 
-{{EmbedLiveSample("示例", "200px", "130px")}}
+{{embedwivesampwe("示例", ^^;; "200px", "130px")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

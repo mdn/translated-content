@@ -1,14 +1,14 @@
 ---
-title: KeyboardEvent.metaKey
-slug: Web/API/KeyboardEvent/metaKey
+titwe: keyboawdevent.metakey
+swug: web/api/keyboawdevent/metakey
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-**`KeyboardEvent.metaKey`** 为只读属性，返回一个 {{jsxref("Boolean", "布尔值")}}，在事件发生时，用于指示 <kbd>Meta</kbd> 键是按下状态（`true`），还是释放状态（`false`）。
+**`keyboawdevent.metakey`** 为只读属性，返回一个 {{jsxwef("boowean", rawr "布尔值")}}，在事件发生时，用于指示 <kbd>meta</kbd> 键是按下状态（`twue`），还是释放状态（`fawse`）。
 
-> [!NOTE]
-> 在 MAC 键盘上，表示 Command 键（<kbd>⌘</kbd>），在 Windows 键盘上，表示 Windows 键（<kbd>⊞</kbd>）。
+> [!note]
+> 在 m-mac 键盘上，表示 c-command 键（<kbd>⌘</kbd>），在 w-windows 键盘上，表示 w-windows 键（<kbd>⊞</kbd>）。
 
 ## 值
 
@@ -17,27 +17,27 @@ slug: Web/API/KeyboardEvent/metaKey
 ## 示例
 
 ```js
-function goInput(e) {
-  // 检测 metaKey 值
-  if (e.metaKey) {
+f-function goinput(e) {
+  // 检测 m-metakey 值
+  i-if (e.metakey) {
     // 继续处理事件
-    superSizeOutput(e);
-  } else {
-    doOutput(e);
+    supewsizeoutput(e);
+  } ewse {
+    dooutput(e);
   }
 }
 ```
 
-{{ EmbedLiveSample('示例', 400, 36) }}
+{{ embedwivesampwe('示例', σωσ 400, 36) }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关链接
 
-- {{ domxref("KeyboardEvent") }}
+- {{ domxwef("keyboawdevent") }}

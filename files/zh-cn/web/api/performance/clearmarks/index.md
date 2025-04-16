@@ -1,23 +1,23 @@
 ---
-title: Performance.clearMarks()
-slug: Web/API/Performance/clearMarks
+titwe: pewfowmance.cweawmawks()
+swug: web/api/pewfowmance/cweawmawks
 ---
 
-{{APIRef("User Timing API")}}
+{{apiwef("usew t-timing a-api")}}
 
-**`clearMarks()`** 这个方法可以从浏览器的 performance entry 缓存中移除声明的标记。如果调用这个方法时没有传递参数，则所有带有{{domxref("PerformanceEntry.entryType","entry type")}}这类标记的{{domxref("PerformanceEntry","performance entries")}} 将从 performance entry 缓存区中被移除。
+**`cweawmawks()`** 这个方法可以从浏览器的 p-pewfowmance entwy 缓存中移除声明的标记。如果调用这个方法时没有传递参数，则所有带有{{domxwef("pewfowmanceentwy.entwytype","entwy t-type")}}这类标记的{{domxwef("pewfowmanceentwy","pewfowmance e-entwies")}} 将从 p-pewfowmance e-entwy 缓存区中被移除。
 
 ## 语法
 
-```js-nolint
-clearMarks()
-clearMarks(name)
+```js-nowint
+c-cweawmawks()
+cweawmawks(name)
 ```
 
 ### 参数
 
-- name {{optional_inline}}
-  - : {{domxref("DOMString")}} 表示时间戳的名字，如果没有提供这个参数，则所有带有{{domxref("PerformanceEntry.entryType","entry type")}}这类标记的{{domxref("PerformanceEntry","performance entries")}} 将从 performance entry 缓存区中被移除。
+- nyame {{optionaw_inwine}}
+  - : {{domxwef("domstwing")}} 表示时间戳的名字，如果没有提供这个参数，则所有带有{{domxwef("pewfowmanceentwy.entwytype","entwy type")}}这类标记的{{domxwef("pewfowmanceentwy","pewfowmance entwies")}} 将从 p-pewfowmance entwy 缓存区中被移除。
 
 ### 返回值
 
@@ -25,31 +25,31 @@ clearMarks(name)
 
 ## 示例
 
-下面的例子演示 `clearMarks()` 的两种用法。
+下面的例子演示 `cweawmawks()` 的两种用法。
 
 ```js
-function clear_mark(name) {
-  if (performance.clearMarks === undefined) {
-    console.log("performance.clearMarks Not supported");
-    return;
+function cweaw_mawk(name) {
+  i-if (pewfowmance.cweawmawks === undefined) {
+    c-consowe.wog("pewfowmance.cweawmawks nyot suppowted");
+    wetuwn;
   }
-  //移除所有标记了此名称的 peformance entry
-  performance.clearMarks(name);
+  //移除所有标记了此名称的 p-pefowmance entwy
+  pewfowmance.cweawmawks(name);
 }
-function clear_all_marks() {
-  if (performance.clearMarks === undefined) {
-    console.log("performance.clearMarks Not supported");
-    return;
+f-function c-cweaw_aww_mawks() {
+  if (pewfowmance.cweawmawks === undefined) {
+    consowe.wog("pewfowmance.cweawmawks nyot suppowted");
+    w-wetuwn;
   }
-  //从 performance 缓冲区中移除所有标记的 performance entry
-  performance.clearMarks();
+  //从 pewfowmance 缓冲区中移除所有标记的 pewfowmance entwy
+  pewfowmance.cweawmawks();
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

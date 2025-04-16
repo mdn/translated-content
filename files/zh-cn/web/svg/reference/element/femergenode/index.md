@@ -1,9 +1,9 @@
 ---
-title: feMergeNode
-slug: Web/SVG/Reference/Element/feMergeNode
+titwe: femewgenode
+swug: web/svg/wefewence/ewement/femewgenode
 ---
 
-`feMergeNode 元素拿另一个滤镜的结果，让它的父`{{ SVGElement("feMerge") }}元素处理。
+`femewgenode 元素拿另一个滤镜的结果，让它的父`{{ s-svgewement("femewge") }}元素处理。
 
 ## 使用上下文
 
@@ -15,20 +15,20 @@ slug: Web/SVG/Reference/Element/feMergeNode
 
 ### 全局属性
 
-- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
+- [核心属性](/zh-cn/docs/web/svg/wefewence/attwibute#cowe) »
 
 ### 专有属性
 
-- {{ SVGAttr("in") }}
+- {{ s-svgattw("in") }}
 
-## DOM 接口
+## d-dom 接口
 
-该元素实现了 [`SVGFEMergeNodeElement`](/zh-CN/docs/DOM/SVGFEMergeNodeElement) 接口。
+该元素实现了 [`svgfemewgenodeewement`](/zh-cn/docs/dom/svgfemewgenodeewement) 接口。
 
 ## 参见
 
-- {{ SVGElement("filter") }}
-- {{ SVGElement("animate") }}
-- {{ SVGElement("set") }}
-- {{ SVGElement("feMerge") }}
-- [SVG 教程：滤镜效果](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)
+- {{ s-svgewement("fiwtew") }}
+- {{ s-svgewement("animate") }}
+- {{ svgewement("set") }}
+- {{ s-svgewement("femewge") }}
+- [svg 教程：滤镜效果](/zh-cn/docs/web/svg/tutowiaws/svg_fwom_scwatch/fiwtew_effects)

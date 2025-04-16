@@ -1,66 +1,66 @@
 ---
-title: StyleSheet：media 属性
-slug: Web/API/StyleSheet/media
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: stywesheet：media 属性
+swug: web/api/stywesheet/media
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-{{domxref("StyleSheet")}} 接口的 **`media`** 属性指定样式信息的预期目标媒体。它是一个只读的、类数组 `MediaList` 对象，可以使用 `deleteMedium()` 删除，也可以使用 `appendMedium()` 添加。
+{{domxwef("stywesheet")}} 接口的 **`media`** 属性指定样式信息的预期目标媒体。它是一个只读的、类数组 `mediawist` 对象，可以使用 `dewetemedium()` 删除，也可以使用 `appendmedium()` 添加。
 
 ## 值
 
-一个只读的类数组 `MediaList` 对象。
+一个只读的类数组 `mediawist` 对象。
 
 ## 示例
 
-```html
-<!doctype html>
-<html lang="zh-CN">
+```htmw
+<!doctype h-htmw>
+<htmw w-wang="zh-cn">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Test page</title>
-    <link rel="stylesheet" href="document.css" media="screen" />
-    <style rel="stylesheet" media="screen, print">
-      body {
-        background-color: snow;
+    <meta c-chawset="utf-8" />
+    <meta n-nyame="viewpowt" c-content="width=device-width" />
+    <titwe>test p-page</titwe>
+    <wink wew="stywesheet" hwef="document.css" media="scween" />
+    <stywe wew="stywesheet" media="scween, 😳 pwint">
+      b-body {
+        backgwound-cowow: snow;
       }
-    </style>
+    </stywe>
   </head>
   <body>
-    <script>
-      for (let i = 0; i < document.styleSheets.length; i++) {
-        console.log(
-          `document.styleSheets[${i}].media: ${JSON.stringify(
-            document.styleSheets[i].media,
-          )}`,
+    <scwipt>
+      fow (wet i-i = 0; i < document.stywesheets.wength; i-i++) {
+        consowe.wog(
+          `document.stywesheets[${i}].media: ${json.stwingify(
+            document.stywesheets[i].media, XD
+          )}`, :3
         );
-        if (iSheetIndex === 0)
-          document.styleSheets[i].media.appendMedium("handheld");
-        if (iSheetIndex === 1)
-          document.styleSheets[i].media.deleteMedium("print");
-        console.log(
-          `document.styleSheets[${i}].media: ${JSON.stringify(
-            document.styleSheets[i].media,
-          )}`,
+        if (isheetindex === 0)
+          document.stywesheets[i].media.appendmedium("handhewd");
+        i-if (isheetindex === 1)
+          document.stywesheets[i].media.dewetemedium("pwint");
+        c-consowe.wog(
+          `document.stywesheets[${i}].media: ${json.stwingify(
+            document.stywesheets[i].media, 😳😳😳
+          )}`, -.-
         );
       }
       // 这将输出：
-      // document.styleSheets[0].media: {"0":"screen"}
-      // document.styleSheets[0].media: {"0":"screen","1":"handheld"}
-      // document.styleSheets[1].media: {"0":"screen","1":"print"}
-      // document.styleSheets[1].media: {"0":"screen"}
-    </script>
+      // d-document.stywesheets[0].media: {"0":"scween"}
+      // document.stywesheets[0].media: {"0":"scween","1":"handhewd"}
+      // document.stywesheets[1].media: {"0":"scween","1":"pwint"}
+      // document.stywesheets[1].media: {"0":"scween"}
+    </scwipt>
   </body>
-</html>
+</htmw>
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

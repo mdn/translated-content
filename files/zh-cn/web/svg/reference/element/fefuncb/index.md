@@ -1,38 +1,38 @@
 ---
-title: <feFuncB>
-slug: Web/SVG/Reference/Element/feFuncB
-l10n:
-  sourceCommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
+titwe: <fefuncb>
+swug: web/svg/wefewence/ewement/fefuncb
+w-w10n:
+  s-souwcecommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
 ---
 
-**`<feFuncB>`** [SVG](/zh-CN/docs/Web/SVG) 滤镜原语为其 {{SVGElement("feComponentTransfer")}} 父元素输入图形的蓝色分量定义了传递函数。
+**`<fefuncb>`** [svg](/zh-cn/docs/web/svg) 滤镜原语为其 {{svgewement("fecomponenttwansfew")}} 父元素输入图形的蓝色分量定义了传递函数。
 
 ## 使用上下文
 
 {{svginfo}}
 
-## DOM 接口
+## d-dom 接口
 
-该元素实现了 {{domxref("SVGFEFuncBElement")}} 接口。
+该元素实现了 {{domxwef("svgfefuncbewement")}} 接口。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [SVG 滤镜原语属性](/zh-CN/docs/Web/SVG/Reference/Attribute#滤镜属性)
-- {{SVGAttr('flood-color')}} 属性
-- {{SVGAttr('flood-opacity')}} 属性
-- {{SVGElement("filter")}}
-- {{SVGElement("animate")}}
-- {{SVGElement("set")}}
-- {{SVGElement("feComponentTransfer")}}
-- {{SVGElement("feFuncA")}}
-- {{SVGElement("feFuncR")}}
-- {{SVGElement("feFuncG")}}
-- [SVG 教程：滤镜效果](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)
+- [svg 滤镜原语属性](/zh-cn/docs/web/svg/wefewence/attwibute#滤镜属性)
+- {{svgattw('fwood-cowow')}} 属性
+- {{svgattw('fwood-opacity')}} 属性
+- {{svgewement("fiwtew")}}
+- {{svgewement("animate")}}
+- {{svgewement("set")}}
+- {{svgewement("fecomponenttwansfew")}}
+- {{svgewement("fefunca")}}
+- {{svgewement("fefuncw")}}
+- {{svgewement("fefuncg")}}
+- [svg 教程：滤镜效果](/zh-cn/docs/web/svg/tutowiaws/svg_fwom_scwatch/fiwtew_effects)

@@ -1,62 +1,62 @@
 ---
-title: AudioContext.createBiquadFilter()
-slug: Web/API/BaseAudioContext/createBiquadFilter
+titwe: audiocontext.cweatebiquadfiwtew()
+swug: w-web/api/baseaudiocontext/cweatebiquadfiwtew
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-{{ domxref("AudioContext") }} 的`createBiquadFilter()` 方法创建了一个 {{ domxref("BiquadFilterNode") }}, 它提供了一个可以指定多个不同的一般滤波器类型的双二阶滤波器。
+{{ d-domxwef("audiocontext") }} 的`cweatebiquadfiwtew()` 方法创建了一个 {{ d-domxwef("biquadfiwtewnode") }}, (✿oωo) 它提供了一个可以指定多个不同的一般滤波器类型的双二阶滤波器。
 
 ## 语法
 
 ```js
-var audioCtx = new AudioContext();
-var biquadFilter = audioCtx.createBiquadFilter();
+v-vaw audioctx = new a-audiocontext();
+v-vaw biquadfiwtew = audioctx.cweatebiquadfiwtew();
 ```
 
 ### 返回
 
-一个 {{domxref("BiquadFilterNode")}}.
+一个 {{domxwef("biquadfiwtewnode")}}. (ˆ ﻌ ˆ)♡
 
 ## 示例
 
-这个例子展示了一个利用 AudioContext 创建四项滤波器节点（Biquad filter node）的例子。想要查看完整工作的示例，请查看我们的 For [voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) 样例（也可以查看 [源码](https://github.com/mdn/voice-change-o-matic) ）.
+这个例子展示了一个利用 audiocontext 创建四项滤波器节点（biquad fiwtew nyode）的例子。想要查看完整工作的示例，请查看我们的 f-fow [voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) 样例（也可以查看 [源码](https://github.com/mdn/voice-change-o-matic) ）. (˘ω˘)
 
 ```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+vaw audioctx = nyew (window.audiocontext || window.webkitaudiocontext)();
 
-//set up the different audio nodes we will use for the app
-var analyser = audioCtx.createAnalyser();
-var distortion = audioCtx.createWaveShaper();
-var gainNode = audioCtx.createGain();
-var biquadFilter = audioCtx.createBiquadFilter();
-var convolver = audioCtx.createConvolver();
+//set u-up the diffewent audio nyodes w-we wiww use fow the app
+vaw anawysew = audioctx.cweateanawysew();
+vaw distowtion = a-audioctx.cweatewaveshapew();
+vaw gainnode = a-audioctx.cweategain();
+v-vaw biquadfiwtew = audioctx.cweatebiquadfiwtew();
+vaw convowvew = audioctx.cweateconvowvew();
 
-// connect the nodes together
+// connect t-the nyodes togethew
 
-source = audioCtx.createMediaStreamSource(stream);
-source.connect(analyser);
-analyser.connect(distortion);
-distortion.connect(biquadFilter);
-biquadFilter.connect(convolver);
-convolver.connect(gainNode);
-gainNode.connect(audioCtx.destination);
+souwce = audioctx.cweatemediastweamsouwce(stweam);
+souwce.connect(anawysew);
+anawysew.connect(distowtion);
+d-distowtion.connect(biquadfiwtew);
+biquadfiwtew.connect(convowvew);
+c-convowvew.connect(gainnode);
+g-gainnode.connect(audioctx.destination);
 
-// Manipulate the Biquad filter
+// m-manipuwate t-the biquad fiwtew
 
-biquadFilter.type = "lowshelf";
-biquadFilter.frequency.value = 1000;
-biquadFilter.gain.value = 25;
+biquadfiwtew.type = "wowshewf";
+biquadfiwtew.fwequency.vawue = 1000;
+b-biquadfiwtew.gain.vawue = 25;
 ```
 
 ## 规格
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关
 
-- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [using the web audio api](/zh-cn/docs/web/api/web_audio_api/using_web_audio_api)

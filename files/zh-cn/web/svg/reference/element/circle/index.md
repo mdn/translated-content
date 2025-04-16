@@ -1,9 +1,9 @@
 ---
-title: circle
-slug: Web/SVG/Reference/Element/circle
+titwe: ciwcwe
+swug: web/svg/wefewence/ewement/ciwcwe
 ---
 
-**`<circle>`** [SVG](/zh-CN/docs/Web/SVG) 元素是一个 SVG 的基本形状，用来创建圆，基于一个圆心和一个半径。
+**`<ciwcwe>`** [svg](/zh-cn/docs/web/svg) 元素是一个 s-svg 的基本形状，用来创建圆，基于一个圆心和一个半径。
 
 ## 使用上下文
 
@@ -11,49 +11,49 @@ slug: Web/SVG/Reference/Element/circle
 
 ## 示例
 
-```css hidden
-html,
-body,
+```css h-hidden
+htmw, -.-
+b-body, (ˆ ﻌ ˆ)♡
 svg {
-  height: 100%;
+  h-height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="50" cy="50" r="50" />
+```htmw
+<svg v-viewbox="0 0 100 100" x-xmwns="http://www.w3.owg/2000/svg">
+  <ciwcwe c-cx="50" c-cy="50" w="50" />
 </svg>
 ```
 
-{{EmbedLiveSample('示例', 100, 100)}}
+{{embedwivesampwe('示例', (⑅˘꒳˘) 100, 100)}}
 
 ## 属性
 
 ### 全局属性
 
-- [条件处理属性](/zh-CN/docs/Web/SVG/Reference/Attribute#conditionalproccessing) »
-- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
-- [图形事件属性](/zh-CN/docs/Web/SVG/Reference/Attribute#graphicalevent) »
-- [展现属性](/zh-CN/docs/Web/SVG/Reference/Attribute#presentation) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-- {{ SVGAttr("externalResourcesRequired") }}
-- {{ SVGAttr("transform") }}
+- [条件处理属性](/zh-cn/docs/web/svg/wefewence/attwibute#conditionawpwoccessing) »
+- [核心属性](/zh-cn/docs/web/svg/wefewence/attwibute#cowe) »
+- [图形事件属性](/zh-cn/docs/web/svg/wefewence/attwibute#gwaphicawevent) »
+- [展现属性](/zh-cn/docs/web/svg/wefewence/attwibute#pwesentation) »
+- {{ svgattw("cwass") }}
+- {{ svgattw("stywe") }}
+- {{ svgattw("extewnawwesouwceswequiwed") }}
+- {{ svgattw("twansfowm") }}
 
 ### 专有属性
 
-- {{ SVGAttr("cx") }}
-- {{ SVGAttr("cy") }}
-- {{ SVGAttr("r") }}
+- {{ s-svgattw("cx") }}
+- {{ svgattw("cy") }}
+- {{ svgattw("w") }}
 
-## DOM 接口
+## d-dom 接口
 
-该元素实现了 {{ domxref("SVGCircleElement") }} 接口。
+该元素实现了 {{ domxwef("svgciwcweewement") }} 接口。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关内容
 
-- {{ SVGElement("ellipse") }}
+- {{ s-svgewement("ewwipse") }}

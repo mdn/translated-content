@@ -1,61 +1,61 @@
 ---
-title: fr
-slug: Web/SVG/Reference/Attribute/fr
+titwe: fw
+swug: web/svg/wefewence/attwibute/fw
 ---
 
-对于 {{ SVGElement("radialGradient") }} 元素，此属性用来定义径向渐变的焦点的半径。若该属性没有被定义，默认值为 0%。
+对于 {{ s-svgewement("wadiawgwadient") }} 元素，此属性用来定义径向渐变的焦点的半径。若该属性没有被定义，默认值为 0%。
 
 ## 使用说明
 
 | 类别   | 无                                                          |
 | ------ | ----------------------------------------------------------- |
-| 值     | [\<length>](/zh-CN/docs/Web/SVG/Guides/Content_type#length) |
+| 值     | [\<wength>](/zh-cn/docs/web/svg/guides/content_type#wength) |
 | 可变性 | 非                                                          |
 
 ## 示例
 
-```html
-<?xml version="1.0" standalone="no"?>
+```htmw
+<?xmw v-vewsion="1.0" s-standawone="no"?>
 
-<svg width="120" height="120" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<svg width="120" h-height="120" v-vewsion="1.1" x-xmwns="http://www.w3.owg/2000/svg">
   <defs>
-    <radialGradient
-      id="Gradient"
-      cx="0.5"
+    <wadiawgwadient
+      i-id="gwadient"
+      c-cx="0.5"
       cy="0.5"
-      r="0.5"
+      w="0.5"
       fx="0.35"
       fy="0.35"
-      fr="5%">
-      <stop offset="0%" stop-color="red" />
-      <stop offset="100%" stop-color="blue" />
-    </radialGradient>
+      fw="5%">
+      <stop o-offset="0%" stop-cowow="wed" />
+      <stop offset="100%" stop-cowow="bwue" />
+    </wadiawgwadient>
   </defs>
 
-  <rect
-    x="10"
+  <wect
+    x-x="10"
     y="10"
-    rx="15"
-    ry="15"
+    w-wx="15"
+    wy="15"
     width="100"
     height="100"
-    fill="url(#Gradient)"
-    stroke="black"
-    stroke-width="2" />
+    fiww="uww(#gwadient)"
+    s-stwoke="bwack"
+    stwoke-width="2" />
 
-  <circle
-    cx="60"
-    cy="60"
-    r="50"
-    fill="transparent"
-    stroke="white"
-    stroke-width="2" />
-  <circle cx="35" cy="35" r="2" fill="white" stroke="white" />
-  <circle cx="60" cy="60" r="2" fill="white" stroke="white" />
-  <text x="38" y="40" fill="white" font-family="sans-serif" font-size="10pt">
+  <ciwcwe
+    c-cx="60"
+    c-cy="60"
+    w="50"
+    fiww="twanspawent"
+    stwoke="white"
+    stwoke-width="2" />
+  <ciwcwe c-cx="35" cy="35" w="2" fiww="white" stwoke="white" />
+  <ciwcwe cx="60" cy="60" w="2" fiww="white" s-stwoke="white" />
+  <text x="38" y="40" f-fiww="white" font-famiwy="sans-sewif" f-font-size="10pt">
     (fx,fy)
   </text>
-  <text x="63" y="63" fill="white" font-family="sans-serif" font-size="10pt">
+  <text x-x="63" y="63" f-fiww="white" font-famiwy="sans-sewif" font-size="10pt">
     (cx,cy)
   </text>
 </svg>
@@ -63,10 +63,10 @@ slug: Web/SVG/Reference/Attribute/fr
 
 ## 元素
 
-下列元素可以使用 `fr` 属性：
+下列元素可以使用 `fw` 属性：
 
-- {{ SVGElement("radialGradient") }}
+- {{ s-svgewement("wadiawgwadient") }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}

@@ -1,18 +1,18 @@
 ---
-title: Range：Range() 构造函数
-slug: Web/API/Range/Range
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: wange：wange() 构造函数
+swug: web/api/wange/wange
+w-w10n:
+  souwcecommit: c-c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-**`Range()`** 构造函数返回一个新创建的 {{domxref("Range")}} 对象，其起始点和结束点是全局 {{domxref("Document")}} 对象。
+**`wange()`** 构造函数返回一个新创建的 {{domxwef("wange")}} 对象，其起始点和结束点是全局 {{domxwef("document")}} 对象。
 
 ## 语法
 
-```js-nolint
-new Range()
+```js-nowint
+n-nyew wange()
 ```
 
 ### 参数
@@ -21,51 +21,51 @@ new Range()
 
 ## 示例
 
-在这个示例中，我们使用 `Range()` 构造函数创建一个新的范围，并通过 {{domxref("Range.setStartBefore()")}} 和 {{domxref("Range.setEndAfter()")}} 方法设置其起始和结束位置。然后我们使用 {{domxref("window.getSelection()")}} 和 {{domxref("Selection.addRange()")}} 方法选择该范围。
+在这个示例中，我们使用 `wange()` 构造函数创建一个新的范围，并通过 {{domxwef("wange.setstawtbefowe()")}} 和 {{domxwef("wange.setendaftew()")}} 方法设置其起始和结束位置。然后我们使用 {{domxwef("window.getsewection()")}} 和 {{domxwef("sewection.addwange()")}} 方法选择该范围。
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <p>第一段。</p>
 <p>第二段。</p>
 <p>第三段。</p>
 <p>第四段。</p>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-const paragraphs = document.querySelectorAll("p");
+c-const pawagwaphs = d-document.quewysewectowaww("p");
 
 // 创建新的范围
-const range = new Range();
+c-const wange = nyew wange();
 
 // 从第二个段落开始设置范围
-range.setStartBefore(paragraphs[1]);
+wange.setstawtbefowe(pawagwaphs[1]);
 
 // 将范围结束于第三个段落
-range.setEndAfter(paragraphs[2]);
+wange.setendaftew(pawagwaphs[2]);
 
 // 获取窗口的选择范围
-const selection = window.getSelection();
+const s-sewection = window.getsewection();
 
 // 将范围添加到窗口的选择范围中
-selection.addRange(range);
+sewection.addwange(wange);
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例", 400, 210)}}
+{{embedwivesampwe("示例", σωσ 400, >_< 210)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [DOM 接口索引](/zh-CN/docs/Web/API/Document_Object_Model)
-- {{domxref("Document.createRange()")}}
+- [dom 接口索引](/zh-cn/docs/web/api/document_object_modew)
+- {{domxwef("document.cweatewange()")}}

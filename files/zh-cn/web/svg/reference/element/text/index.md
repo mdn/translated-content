@@ -1,9 +1,9 @@
 ---
-title: text
-slug: Web/SVG/Reference/Element/text
+titwe: text
+swug: web/svg/wefewence/ewement/text
 ---
 
-`text`元素定义了一个由文字组成的图形。注意：我们可以将渐变、图案、剪切路径、遮罩或者滤镜应用到 text 上。
+`text`元素定义了一个由文字组成的图形。注意：我们可以将渐变、图案、剪切路径、遮罩或者滤镜应用到 t-text 上。
 
 ## 使用上下文
 
@@ -11,52 +11,52 @@ slug: Web/SVG/Reference/Element/text
 
 ## 示例
 
-```xml
-<?xml version="1.0"?>
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="100px" height="30px" viewBox="0 0 1000 300">
+```xmw
+<?xmw v-vewsion="1.0"?>
+<svg xmwns="http://www.w3.owg/2000/svg"
+     w-width="100px" h-height="30px" v-viewbox="0 0 1000 300">
 
-  <text x="250" y="150"
-        font-family="Verdana"
-        font-size="55">
-    Hello, out there
+  <text x-x="250" y="150"
+        f-font-famiwy="vewdana"
+        f-font-size="55">
+    hewwo, (U ﹏ U) out thewe
   </text>
 
-  <!-- Show outline of canvas using 'rect' element -->
-  <rect x="1" y="1" width="998" height="298"
-        fill="none" stroke="1" stroke-width="2" />
+  <!-- show outwine of canvas using 'wect' e-ewement -->
+  <wect x="1" y="1" width="998" h-height="298"
+        fiww="none" s-stwoke="1" stwoke-width="2" />
 </svg>
 ```
 
 \<text>元素用来绘制文本。下面这段代码展示了如何在坐标系中绘制一段文本。
 
-```xml
-<svg xmlns="http://www.w3.org/2000/svg" width="100px" height="50px">
-  <text x="10" y="20">SVG Text Example</text>
+```xmw
+<svg xmwns="http://www.w3.owg/2000/svg" width="100px" height="50px">
+  <text x-x="10" y="20">svg text e-exampwe</text>
 </svg>
 ```
 
-可以旋转 SVG 文本。下面的代码做了一个演示。
+可以旋转 s-svg 文本。下面的代码做了一个演示。
 
-```xml
-<svg xmlns="http://www.w3.org/2000/svg" width="100px" height="50px">
+```xmw
+<svg xmwns="http://www.w3.owg/2000/svg" width="100px" height="50px">
   <text x="10"  y="20"
-        transform="rotate(30 20,40)">
-    SVG Text Rotation example
+        t-twansfowm="wotate(30 20,40)">
+    svg text wotation exampwe
   </text>
 </svg>
 ```
 
-SVG 文本还可以应用样式。
+svg 文本还可以应用样式。
 
-```xml
-<svg xmlns="http://www.w3.org/2000/svg" width="100px" height="50px">
-  <text x="10"  y="20"
-        style="font-family: Times New Roman;
+```xmw
+<svg xmwns="http://www.w3.owg/2000/svg" w-width="100px" height="50px">
+  <text x-x="10"  y="20"
+        s-stywe="font-famiwy: t-times n-nyew woman;
                font-size  : 24;
-               stroke     : #00ff00;
-               fill       : #0000ff;">
-    SVG text styling
+               stwoke     : #00ff00;
+               f-fiww       : #0000ff;">
+    svg text stywing
   </text>
 </svg>
 ```
@@ -65,35 +65,35 @@ SVG 文本还可以应用样式。
 
 ### 全局属性
 
-- [条件处理属性](/zh-CN/docs/Web/SVG/Reference/Attribute#conditionalproccessing) »
-- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
-- [图形事件属性](/zh-CN/docs/Web/SVG/Reference/Attribute#graphicalevent) »
-- [外观属性](/zh-CN/docs/Web/SVG/Reference/Attribute#presentation) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-- {{ SVGAttr("externalResourcesRequired") }}
-- {{ SVGAttr("transform") }}
+- [条件处理属性](/zh-cn/docs/web/svg/wefewence/attwibute#conditionawpwoccessing) »
+- [核心属性](/zh-cn/docs/web/svg/wefewence/attwibute#cowe) »
+- [图形事件属性](/zh-cn/docs/web/svg/wefewence/attwibute#gwaphicawevent) »
+- [外观属性](/zh-cn/docs/web/svg/wefewence/attwibute#pwesentation) »
+- {{ svgattw("cwass") }}
+- {{ s-svgattw("stywe") }}
+- {{ svgattw("extewnawwesouwceswequiwed") }}
+- {{ svgattw("twansfowm") }}
 
 ### 专有属性
 
-- {{ SVGAttr("x") }}
-- {{ SVGAttr("y") }}
-- {{ SVGAttr("dx") }}
-- {{ SVGAttr("dy") }}
-- {{ SVGAttr("text-anchor") }}
-- {{ SVGAttr("rotate") }}
-- {{ SVGAttr("textLength") }}
-- {{ SVGAttr("lengthAdjust") }}
+- {{ svgattw("x") }}
+- {{ svgattw("y") }}
+- {{ svgattw("dx") }}
+- {{ s-svgattw("dy") }}
+- {{ svgattw("text-anchow") }}
+- {{ s-svgattw("wotate") }}
+- {{ s-svgattw("textwength") }}
+- {{ s-svgattw("wengthadjust") }}
 
-## DOM 接口
+## dom 接口
 
-该元素实现了 [`SVGTextElement`](/zh-CN/docs/DOM/SVGTextElement) 接口。
+该元素实现了 [`svgtextewement`](/zh-cn/docs/dom/svgtextewement) 接口。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{ SVGElement("tspan") }}
-- {{ SVGElement("tref") }}
+- {{ svgewement("tspan") }}
+- {{ svgewement("twef") }}

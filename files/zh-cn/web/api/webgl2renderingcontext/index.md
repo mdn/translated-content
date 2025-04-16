@@ -1,221 +1,221 @@
 ---
-title: WebGL2RenderingContext
-slug: Web/API/WebGL2RenderingContext
+titwe: webgw2wendewingcontext
+swug: web/api/webgw2wendewingcontext
 ---
 
-{{APIRef("WebGL")}} {{SeeCompatTable}}
+{{apiwef("webgw")}} {{seecompattabwe}}
 
-**WebGL2RenderingContext** 接口在底层使用了 OpenGL ES 3.0 为 HTML 的 {{HTMLElement("canvas")}} 元素提供了绘图上下文。
+**webgw2wendewingcontext** 接口在底层使用了 o-opengw es 3.0 为 h-htmw 的 {{htmwewement("canvas")}} 元素提供了绘图上下文。
 
-要获取该接口的实例对象需要调用一个 \<canvas> 标签对象的 {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} 函数，并将 "webgl2" 作为参数传递：
+要获取该接口的实例对象需要调用一个 \<canvas> 标签对象的 {{domxwef("htmwcanvasewement.getcontext()", ^^;; "getcontext()")}} 函数，并将 "webgw2" 作为参数传递：
 
 ```js
-var canvas = document.getElementById("myCanvas");
-var gl = canvas.getContext("webgl2");
+v-vaw canvas = document.getewementbyid("mycanvas");
+v-vaw gw = canvas.getcontext("webgw2");
 ```
 
-> [!NOTE]
-> WebGL 2 是 WebGL 1 的扩展。 `WebGL2RenderingContext` 接口实现了 {{domxref("WebGLRenderingContext")}} 接口的所有成员。有一些 WebGL 1 上下文中的方法在使用 WebGL 2 上下文的时候可以接受附加值。你可以通过 WebGL 1 的参考页了解这些信息。
+> [!note]
+> w-webgw 2 是 w-webgw 1 的扩展。 `webgw2wendewingcontext` 接口实现了 {{domxwef("webgwwendewingcontext")}} 接口的所有成员。有一些 w-webgw 1 上下文中的方法在使用 w-webgw 2 上下文的时候可以接受附加值。你可以通过 webgw 1 的参考页了解这些信息。
 
-这个 [WebGL 教程](/zh-CN/docs/Web/API/WebGL_API/Tutorial) 中提供了关于如何开始使用 WebGL 的更多信息、示例以及资源。
+这个 [webgw 教程](/zh-cn/docs/web/api/webgw_api/tutowiaw) 中提供了关于如何开始使用 webgw 的更多信息、示例以及资源。
 
 ## 常量
 
-请看 [WebGL 常量](/zh-CN/docs/Web/API/WebGL_API/Constants) 页面。
+请看 [webgw 常量](/zh-cn/docs/web/api/webgw_api/constants) 页面。
 
 ## 状态信息
 
-- {{domxref("WebGL2RenderingContext.getIndexedParameter()")}}
+- {{domxwef("webgw2wendewingcontext.getindexedpawametew()")}}
   - : 返回指定目标的索引值。
 
 ## 缓冲区
 
-- {{domxref("WebGL2RenderingContext.copyBufferSubData()")}}
+- {{domxwef("webgw2wendewingcontext.copybuffewsubdata()")}}
   - : 将缓冲区的部分数据复制到另一个缓冲区。
-- {{domxref("WebGL2RenderingContext.getBufferSubData()")}}
-  - : 从缓冲区中读取数据，然后将其写入到 {{jsxref("ArrayBuffer")}} 或 {{jsxref("SharedArrayBuffer")}} 中。
+- {{domxwef("webgw2wendewingcontext.getbuffewsubdata()")}}
+  - : 从缓冲区中读取数据，然后将其写入到 {{jsxwef("awwaybuffew")}} 或 {{jsxwef("shawedawwaybuffew")}} 中。
 
 ## 帧缓冲区
 
-- {{domxref("WebGL2RenderingContext.blitFramebuffer()")}}
+- {{domxwef("webgw2wendewingcontext.bwitfwamebuffew()")}}
   - : 将一个像素块从读取帧缓冲区传输到绘制帧缓冲区。
-- {{domxref("WebGL2RenderingContext.framebufferTextureLayer()")}}
+- {{domxwef("webgw2wendewingcontext.fwamebuffewtextuwewayew()")}}
   - : 附着一个单层的材质到帧缓冲区。
-- {{domxref("WebGL2RenderingContext.invalidateFramebuffer()")}}
+- {{domxwef("webgw2wendewingcontext.invawidatefwamebuffew()")}}
   - : 使附着到缓冲区的内容失效。
-- {{domxref("WebGL2RenderingContext.invalidateSubFramebuffer()")}}
+- {{domxwef("webgw2wendewingcontext.invawidatesubfwamebuffew()")}}
   - : 使附着到缓冲区的部分内容失效。
-- {{domxref("WebGL2RenderingContext.readBuffer()")}}
-  - : 选择一个颜色缓冲作为像素的 source。
+- {{domxwef("webgw2wendewingcontext.weadbuffew()")}}
+  - : 选择一个颜色缓冲作为像素的 souwce。
 
 ## 渲染缓冲区
 
-- {{domxref("WebGL2RenderingContext.getInternalformatParameter()")}}
-  - : Returns information about implementation-dependent support for internal formats.
-- {{domxref("WebGL2RenderingContext.renderbufferStorageMultisample()")}}
-  - : Creates and initializes a renderbuffer object's data store and allows specifying the number of samples to be used.
+- {{domxwef("webgw2wendewingcontext.getintewnawfowmatpawametew()")}}
+  - : wetuwns infowmation a-about impwementation-dependent suppowt fow intewnaw fowmats. XD
+- {{domxwef("webgw2wendewingcontext.wendewbuffewstowagemuwtisampwe()")}}
+  - : c-cweates and initiawizes a wendewbuffew o-object's data stowe and awwows specifying the nyumbew of s-sampwes to be used. 🥺
 
 ## 纹理
 
-- {{domxref("WebGL2RenderingContext.texStorage2D()")}}
-  - : Specifies all levels of two-dimensional texture storage.
-- {{domxref("WebGL2RenderingContext.texStorage3D()")}}
-  - : Specifies all levels of a three-dimensional texture or two-dimensional array texture.
-- {{domxref("WebGL2RenderingContext.texImage3D()")}}
-  - : Specifies a three-dimensional texture image.
-- {{domxref("WebGL2RenderingContext.texSubImage3D()")}}
-  - : Specifies a sub-rectangle of the current 3D texture.
-- {{domxref("WebGL2RenderingContext.copyTexSubImage3D()")}}
-  - : Copies pixels from the current [`WebGLFramebuffer`](/zh-CN/docs/Web/API/WebGLFramebuffer) into an existing 3D texture sub-image.
-- {{domxref("WebGL2RenderingContext.compressedTexImage3D()")}}
-  - : Specifies a three-dimensional texture image in a compressed format.
-- {{domxref("WebGL2RenderingContext.compressedTexSubImage3D()")}}
-  - : Specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
+- {{domxwef("webgw2wendewingcontext.texstowage2d()")}}
+  - : specifies a-aww wevews o-of two-dimensionaw textuwe stowage. òωó
+- {{domxwef("webgw2wendewingcontext.texstowage3d()")}}
+  - : specifies aww wevews of a thwee-dimensionaw textuwe ow two-dimensionaw a-awway textuwe. (ˆ ﻌ ˆ)♡
+- {{domxwef("webgw2wendewingcontext.teximage3d()")}}
+  - : specifies a thwee-dimensionaw textuwe image. -.-
+- {{domxwef("webgw2wendewingcontext.texsubimage3d()")}}
+  - : s-specifies a sub-wectangwe of the c-cuwwent 3d textuwe. :3
+- {{domxwef("webgw2wendewingcontext.copytexsubimage3d()")}}
+  - : c-copies pixews f-fwom the cuwwent [`webgwfwamebuffew`](/zh-cn/docs/web/api/webgwfwamebuffew) i-into an existing 3d textuwe sub-image. ʘwʘ
+- {{domxwef("webgw2wendewingcontext.compwessedteximage3d()")}}
+  - : specifies a-a thwee-dimensionaw textuwe image in a compwessed f-fowmat. 🥺
+- {{domxwef("webgw2wendewingcontext.compwessedtexsubimage3d()")}}
+  - : specifies a thwee-dimensionaw sub-wectangwe fow a textuwe image in a compwessed f-fowmat.
 
 ## 程序和着色器
 
-- {{domxref("WebGL2RenderingContext.getFragDataLocation()")}}
-  - : Returns the binding of color numbers to user-defined varying out variables.
+- {{domxwef("webgw2wendewingcontext.getfwagdatawocation()")}}
+  - : wetuwns t-the binding o-of cowow nyumbews t-to usew-defined vawying out vawiabwes. >_<
 
-## Uniforms 和 Attributes
+## unifowms 和 attwibutes
 
-- {{domxref("WebGL2RenderingContext.uniform()", "WebGL2RenderingContext.uniform[1234][fiu][v]()")}}
-  - : 指定一个 uniform 变量。
-- {{domxref("WebGL2RenderingContext.uniformMatrix()", "WebGL2RenderingContext.uniformMatrix[1234][fv]()")}}
-  - : 指定一个 uniform 矩阵变量。
-- {{domxref("WebGL2RenderingContext.vertexAttribI()", "WebGL2RenderingContext.vertexAttribI[iuv]()")}}
-  - : Methods specifying integer values for generic vertex attributes.
-- {{domxref("WebGL2RenderingContext.vertexAttribIPointer()")}}
-  - : Specifies integer data formats and locations of vertex attributes in a vertex attributes array.
+- {{domxwef("webgw2wendewingcontext.unifowm()", ʘwʘ "webgw2wendewingcontext.unifowm[1234][fiu][v]()")}}
+  - : 指定一个 unifowm 变量。
+- {{domxwef("webgw2wendewingcontext.unifowmmatwix()", (˘ω˘) "webgw2wendewingcontext.unifowmmatwix[1234][fv]()")}}
+  - : 指定一个 u-unifowm 矩阵变量。
+- {{domxwef("webgw2wendewingcontext.vewtexattwibi()", (✿oωo) "webgw2wendewingcontext.vewtexattwibi[iuv]()")}}
+  - : m-methods specifying integew v-vawues fow genewic v-vewtex attwibutes. (///ˬ///✿)
+- {{domxwef("webgw2wendewingcontext.vewtexattwibipointew()")}}
+  - : specifies i-integew data fowmats and wocations o-of vewtex attwibutes in a vewtex attwibutes a-awway. rawr x3
 
 ## 绘图缓冲区
 
-- {{domxref("WebGL2RenderingContext.vertexAttribDivisor()")}}
-  - : Modifies the rate at which generic vertex attributes advance when rendering multiple instances of primitives with {{domxref("WebGL2RenderingContext.drawArraysInstanced()", "gl.drawArraysInstanced()")}} and {{domxref("WebGL2RenderingContext.drawElementsInstanced()", "gl.drawElementsInstanced()")}}.
-- {{domxref("WebGL2RenderingContext.drawArraysInstanced()")}}
-  - : Renders primitives from array data. In addition, it can execute multiple instances of the range of elements.
-- {{domxref("WebGL2RenderingContext.drawElementsInstanced()")}}
-  - : Renders primitives from array data. In addition, it can execute multiple instances of a set of elements.
-- {{domxref("WebGL2RenderingContext.drawRangeElements()")}}
-  - : Renders primitives from array data in a given range.
-- {{domxref("WebGL2RenderingContext.drawBuffers()")}}
-  - : Specifies a list of color buffers to be drawn into.
-- {{domxref("WebGL2RenderingContext.clearBuffer()", "WebGL2RenderingContext.clearBuffer[fiuv]()")}}
-  - : Clears buffers from the currently bound framebuffer.
+- {{domxwef("webgw2wendewingcontext.vewtexattwibdivisow()")}}
+  - : modifies the w-wate at which genewic vewtex attwibutes a-advance w-when wendewing muwtipwe instances of pwimitives with {{domxwef("webgw2wendewingcontext.dwawawwaysinstanced()", -.- "gw.dwawawwaysinstanced()")}} and {{domxwef("webgw2wendewingcontext.dwawewementsinstanced()", ^^ "gw.dwawewementsinstanced()")}}. (⑅˘꒳˘)
+- {{domxwef("webgw2wendewingcontext.dwawawwaysinstanced()")}}
+  - : wendews pwimitives fwom awway d-data. nyaa~~ in addition, i-it can exekawaii~ muwtipwe instances o-of the w-wange of ewements. /(^•ω•^)
+- {{domxwef("webgw2wendewingcontext.dwawewementsinstanced()")}}
+  - : w-wendews pwimitives fwom awway data. (U ﹏ U) in addition, 😳😳😳 it can e-exekawaii~ muwtipwe instances of a set of ewements. >w<
+- {{domxwef("webgw2wendewingcontext.dwawwangeewements()")}}
+  - : wendews pwimitives fwom awway d-data in a given wange. XD
+- {{domxwef("webgw2wendewingcontext.dwawbuffews()")}}
+  - : s-specifies a-a wist of cowow b-buffews to be dwawn into. o.O
+- {{domxwef("webgw2wendewingcontext.cweawbuffew()", mya "webgw2wendewingcontext.cweawbuffew[fiuv]()")}}
+  - : c-cweaws buffews f-fwom the cuwwentwy b-bound fwamebuffew. 🥺
 
 ## 查询对象
 
-Methods for working with {{domxref("WebGLQuery")}} objects.
+m-methods fow wowking with {{domxwef("webgwquewy")}} o-objects. ^^;;
 
-- {{domxref("WebGL2RenderingContext.createQuery()")}}
-  - : 创建一个新的 {{domxref("WebGLQuery")}} 对象。
-- {{domxref("WebGL2RenderingContext.deleteQuery()")}}
-  - : 删除一个指定的 {{domxref("WebGLQuery")}} 对象。
-- {{domxref("WebGL2RenderingContext.isQuery()")}}
-  - : Returns `true` if a given object is a valid {{domxref("WebGLQuery")}} object.
-- {{domxref("WebGL2RenderingContext.beginQuery()")}}
+- {{domxwef("webgw2wendewingcontext.cweatequewy()")}}
+  - : 创建一个新的 {{domxwef("webgwquewy")}} 对象。
+- {{domxwef("webgw2wendewingcontext.dewetequewy()")}}
+  - : 删除一个指定的 {{domxwef("webgwquewy")}} 对象。
+- {{domxwef("webgw2wendewingcontext.isquewy()")}}
+  - : w-wetuwns `twue` i-if a given o-object is a v-vawid {{domxwef("webgwquewy")}} object. :3
+- {{domxwef("webgw2wendewingcontext.beginquewy()")}}
   - : 开始一个异步查询。
-- {{domxref("WebGL2RenderingContext.endQuery()")}}
-  - : Marks the end of an asynchronous query.
-- {{domxref("WebGL2RenderingContext.getQuery()")}}
-  - : 返回一个指定目标的 {{domxref("WebGLQuery")}} 对象。
-- {{domxref("WebGL2RenderingContext.getQueryParameter()")}}
+- {{domxwef("webgw2wendewingcontext.endquewy()")}}
+  - : mawks the end of an asynchwonous q-quewy. (U ﹏ U)
+- {{domxwef("webgw2wendewingcontext.getquewy()")}}
+  - : 返回一个指定目标的 {{domxwef("webgwquewy")}} 对象。
+- {{domxwef("webgw2wendewingcontext.getquewypawametew()")}}
   - : 返回关于一个查询的信息。
 
 ## 采样对象
 
-- {{domxref("WebGL2RenderingContext.createSampler()")}}
-  - : Creates a new {{domxref("WebGLSampler")}} object.
-- {{domxref("WebGL2RenderingContext.deleteSampler()")}}
-  - : Deletes a given {{domxref("WebGLSampler")}} object.
-- {{domxref("WebGL2RenderingContext.bindSampler()")}}
-  - : Binds a given {{domxref("WebGLSampler")}} to a texture unit.
-- {{domxref("WebGL2RenderingContext.isSampler()")}}
-  - : Returns `true` if a given object is a valid {{domxref("WebGLSampler")}} object.
-- {{domxref("WebGL2RenderingContext.samplerParameter()", "WebGL2RenderingContext.samplerParameter[if]()")}}
-  - : Sets sampler parameters.
-- {{domxref("WebGL2RenderingContext.getSamplerParameter()")}}
-  - : Returns sampler parameter information.
+- {{domxwef("webgw2wendewingcontext.cweatesampwew()")}}
+  - : cweates a nyew {{domxwef("webgwsampwew")}} object. OwO
+- {{domxwef("webgw2wendewingcontext.dewetesampwew()")}}
+  - : dewetes a given {{domxwef("webgwsampwew")}} object. 😳😳😳
+- {{domxwef("webgw2wendewingcontext.bindsampwew()")}}
+  - : binds a given {{domxwef("webgwsampwew")}} t-to a textuwe unit. (ˆ ﻌ ˆ)♡
+- {{domxwef("webgw2wendewingcontext.issampwew()")}}
+  - : wetuwns `twue` if a given o-object is a vawid {{domxwef("webgwsampwew")}} o-object. XD
+- {{domxwef("webgw2wendewingcontext.sampwewpawametew()", (ˆ ﻌ ˆ)♡ "webgw2wendewingcontext.sampwewpawametew[if]()")}}
+  - : s-sets sampwew pawametews. ( ͡o ω ͡o )
+- {{domxwef("webgw2wendewingcontext.getsampwewpawametew()")}}
+  - : w-wetuwns sampwew pawametew i-infowmation. rawr x3
 
 ## 同步对象
 
-- {{domxref("WebGL2RenderingContext.fenceSync()")}}
-  - : 创建一个 {{domxref("WebGLSync")}} 对象并插入到 GL 命令流中。
-- {{domxref("WebGL2RenderingContext.isSync()")}}
-  - : Returns `true` if the passed object is a valid {{domxref("WebGLSync")}} object.
-- {{domxref("WebGL2RenderingContext.deleteSync()")}}
-  - : 删除一个指定的 {{domxref("WebGLSync")}} 对象。
-- {{domxref("WebGL2RenderingContext.clientWaitSync()")}}
-  - : Blocks and waits for a {{domxref("WebGLSync")}} object to become signaled or a given timeout to be passed.
-- {{domxref("WebGL2RenderingContext.waitSync()")}}
-  - : Returns immediately, but waits on the GL server until the given {{domxref("WebGLSync")}} object is signaled.
-- {{domxref("WebGL2RenderingContext.getSyncParameter()")}}
-  - : 根据一个 {{domxref("WebGLSync")}} 对象返回参数信息。
+- {{domxwef("webgw2wendewingcontext.fencesync()")}}
+  - : 创建一个 {{domxwef("webgwsync")}} 对象并插入到 g-gw 命令流中。
+- {{domxwef("webgw2wendewingcontext.issync()")}}
+  - : wetuwns `twue` if the passed object is a vawid {{domxwef("webgwsync")}} object. nyaa~~
+- {{domxwef("webgw2wendewingcontext.dewetesync()")}}
+  - : 删除一个指定的 {{domxwef("webgwsync")}} 对象。
+- {{domxwef("webgw2wendewingcontext.cwientwaitsync()")}}
+  - : b-bwocks and waits fow a {{domxwef("webgwsync")}} o-object to become signawed ow a g-given timeout to b-be passed. >_<
+- {{domxwef("webgw2wendewingcontext.waitsync()")}}
+  - : wetuwns immediatewy, but waits o-on the gw sewvew u-untiw the given {{domxwef("webgwsync")}} object i-is signawed. ^^;;
+- {{domxwef("webgw2wendewingcontext.getsyncpawametew()")}}
+  - : 根据一个 {{domxwef("webgwsync")}} 对象返回参数信息。
 
 ## 变换反馈
 
-- {{domxref("WebGL2RenderingContext.createTransformFeedback()")}}
-  - : 创建并初始化 {{domxref("WebGLTransformFeedback")}} 对象。
-- {{domxref("WebGL2RenderingContext.deleteTransformFeedback()")}}
-  - : 删除一个指定的 {{domxref("WebGLTransformFeedback")}} 对象。
-- {{domxref("WebGL2RenderingContext.isTransformFeedback()")}}
-  - : Returns `true` if the passed object is a valid {{domxref("WebGLTransformFeedback")}} object.
-- {{domxref("WebGL2RenderingContext.bindTransformFeedback()")}}
-  - : Binds a passed {{domxref("WebGLTransformFeedback")}} object to the current GL state.
-- {{domxref("WebGL2RenderingContext.beginTransformFeedback()")}}
-  - : Starts a transform feedback operation.
-- {{domxref("WebGL2RenderingContext.endTransformFeedback()")}}
-  - : Ends a transform feedback operation.
-- {{domxref("WebGL2RenderingContext.transformFeedbackVaryings()")}}
-  - : Specifies values to record in {{domxref("WebGLTransformFeedback")}} buffers.
-- {{domxref("WebGL2RenderingContext.getTransformFeedbackVarying()")}}
-  - : Returns information about varying variables from {{domxref("WebGLTransformFeedback")}} buffers.
-- {{domxref("WebGL2RenderingContext.pauseTransformFeedback()")}}
-  - : Pauses a transform feedback operation.
-- {{domxref("WebGL2RenderingContext.resumeTransformFeedback()")}}
-  - : Resumes a transform feedback operation.
+- {{domxwef("webgw2wendewingcontext.cweatetwansfowmfeedback()")}}
+  - : 创建并初始化 {{domxwef("webgwtwansfowmfeedback")}} 对象。
+- {{domxwef("webgw2wendewingcontext.dewetetwansfowmfeedback()")}}
+  - : 删除一个指定的 {{domxwef("webgwtwansfowmfeedback")}} 对象。
+- {{domxwef("webgw2wendewingcontext.istwansfowmfeedback()")}}
+  - : w-wetuwns `twue` if the passed object is a vawid {{domxwef("webgwtwansfowmfeedback")}} object. (ˆ ﻌ ˆ)♡
+- {{domxwef("webgw2wendewingcontext.bindtwansfowmfeedback()")}}
+  - : binds a passed {{domxwef("webgwtwansfowmfeedback")}} o-object t-to the cuwwent g-gw state.
+- {{domxwef("webgw2wendewingcontext.begintwansfowmfeedback()")}}
+  - : stawts a twansfowm f-feedback opewation.
+- {{domxwef("webgw2wendewingcontext.endtwansfowmfeedback()")}}
+  - : ends a-a twansfowm feedback opewation. ^^;;
+- {{domxwef("webgw2wendewingcontext.twansfowmfeedbackvawyings()")}}
+  - : s-specifies vawues to wecowd in {{domxwef("webgwtwansfowmfeedback")}} buffews. (⑅˘꒳˘)
+- {{domxwef("webgw2wendewingcontext.gettwansfowmfeedbackvawying()")}}
+  - : wetuwns infowmation a-about v-vawying vawiabwes fwom {{domxwef("webgwtwansfowmfeedback")}} buffews. rawr x3
+- {{domxwef("webgw2wendewingcontext.pausetwansfowmfeedback()")}}
+  - : p-pauses a-a twansfowm feedback opewation. (///ˬ///✿)
+- {{domxwef("webgw2wendewingcontext.wesumetwansfowmfeedback()")}}
+  - : wesumes a twansfowm f-feedback opewation. 🥺
 
-## Uniform 缓冲对象
+## unifowm 缓冲对象
 
-- {{domxref("WebGL2RenderingContext.bindBufferBase()")}}
-  - : Binds a given {{domxref("WebGLBuffer")}} to a given binding point (`target`) at a given `index`.
-- {{domxref("WebGL2RenderingContext.bindBufferRange()")}}
-  - : Binds a range of a given {{domxref("WebGLBuffer")}} to a given binding point (`target`) at a given `index`.
-- {{domxref("WebGL2RenderingContext.getUniformIndices()")}}
-  - : Retrieves the indices of a number of uniforms within a {{domxref("WebGLProgram")}}.
-- {{domxref("WebGL2RenderingContext.getActiveUniforms()")}}
-  - : Retrieves information about active uniforms within a {{domxref("WebGLProgram")}}.
-- {{domxref("WebGL2RenderingContext.getUniformBlockIndex()")}}
-  - : Retrieves the index of a uniform block within a {{domxref("WebGLProgram")}}.
-- {{domxref("WebGL2RenderingContext.getActiveUniformBlockParameter()")}}
-  - : Retrieves information about an active uniform block within a {{domxref("WebGLProgram")}}.
-- {{domxref("WebGL2RenderingContext.getActiveUniformBlockName()")}}
-  - : Retrieves the name of the active uniform block at a given index within a {{domxref("WebGLProgram")}}.
-- {{domxref("WebGL2RenderingContext.uniformBlockBinding()")}}
-  - : Assigns binding points for active uniform blocks.
+- {{domxwef("webgw2wendewingcontext.bindbuffewbase()")}}
+  - : binds a given {{domxwef("webgwbuffew")}} to a given b-binding point (`tawget`) at a given `index`. >_<
+- {{domxwef("webgw2wendewingcontext.bindbuffewwange()")}}
+  - : binds a-a wange of a-a given {{domxwef("webgwbuffew")}} to a given binding point (`tawget`) at a given `index`. UwU
+- {{domxwef("webgw2wendewingcontext.getunifowmindices()")}}
+  - : w-wetwieves t-the indices of a nyumbew of unifowms within a {{domxwef("webgwpwogwam")}}.
+- {{domxwef("webgw2wendewingcontext.getactiveunifowms()")}}
+  - : w-wetwieves infowmation about a-active unifowms within a {{domxwef("webgwpwogwam")}}. >_<
+- {{domxwef("webgw2wendewingcontext.getunifowmbwockindex()")}}
+  - : wetwieves the index of a-a unifowm bwock within a {{domxwef("webgwpwogwam")}}. -.-
+- {{domxwef("webgw2wendewingcontext.getactiveunifowmbwockpawametew()")}}
+  - : w-wetwieves i-infowmation about an active unifowm b-bwock within a {{domxwef("webgwpwogwam")}}. mya
+- {{domxwef("webgw2wendewingcontext.getactiveunifowmbwockname()")}}
+  - : w-wetwieves t-the nyame of t-the active unifowm bwock at a g-given index within a-a {{domxwef("webgwpwogwam")}}. >w<
+- {{domxwef("webgw2wendewingcontext.unifowmbwockbinding()")}}
+  - : assigns binding points fow a-active unifowm b-bwocks.
 
 ## 顶点数组对象
 
-Methods for working with {{domxref("WebGLVertexArrayObject")}} (VAO) objects.
+m-methods fow wowking with {{domxwef("webgwvewtexawwayobject")}} (vao) objects. (U ﹏ U)
 
-- {{domxref("WebGL2RenderingContext.createVertexArray()")}}
-  - : 创建一个新的 {{domxref("WebGLVertexArrayObject")}}。
-- {{domxref("WebGL2RenderingContext.deleteVertexArray()")}}
-  - : 删除一个指定的 {{domxref("WebGLVertexArrayObject")}}。
-- {{domxref("WebGL2RenderingContext.isVertexArray()")}}
-  - : 如果一个指定的 {{domxref("WebGLVertexArrayObject")}} 对象有效则返回 `true`。
-- {{domxref("WebGL2RenderingContext.bindVertexArray()")}}
-  - : 绑定一个指定的 {{domxref("WebGLVertexArrayObject")}} 到缓冲。
+- {{domxwef("webgw2wendewingcontext.cweatevewtexawway()")}}
+  - : 创建一个新的 {{domxwef("webgwvewtexawwayobject")}}。
+- {{domxwef("webgw2wendewingcontext.dewetevewtexawway()")}}
+  - : 删除一个指定的 {{domxwef("webgwvewtexawwayobject")}}。
+- {{domxwef("webgw2wendewingcontext.isvewtexawway()")}}
+  - : 如果一个指定的 {{domxwef("webgwvewtexawwayobject")}} 对象有效则返回 `twue`。
+- {{domxwef("webgw2wendewingcontext.bindvewtexawway()")}}
+  - : 绑定一个指定的 {{domxwef("webgwvewtexawwayobject")}} 到缓冲。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关链接
 
-- {{domxref("HTMLCanvasElement")}}
-- {{domxref("WebGLRenderingContext")}}
+- {{domxwef("htmwcanvasewement")}}
+- {{domxwef("webgwwendewingcontext")}}

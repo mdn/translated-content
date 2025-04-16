@@ -1,61 +1,61 @@
 ---
-title: WebGLRenderingContext.validateProgram()
-slug: Web/API/WebGLRenderingContext/validateProgram
+titwe: webgwwendewingcontext.vawidatepwogwam()
+swug: web/api/webgwwendewingcontext/vawidatepwogwam
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-**`WebGLRenderingContext.validateProgram()`** 是一种 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) ，主要是用来验证 {{domxref("WebGLProgram")}}。它在检查 WebGLProgram 程序是否链接成功的同时还会检查其是否能在当前的 WebGL 中使用。
+**`webgwwendewingcontext.vawidatepwogwam()`** 是一种 [webgw api](/zh-cn/docs/web/api/webgw_api) ，主要是用来验证 {{domxwef("webgwpwogwam")}}。它在检查 w-webgwpwogwam 程序是否链接成功的同时还会检查其是否能在当前的 w-webgw 中使用。
 
 ## 语法
 
-```plain
-void gl.validateProgram(program);
+```pwain
+v-void gw.vawidatepwogwam(pwogwam);
 ```
 
 ### 参数
 
-- program
-  - : 待验证的 {{domxref("WebGLProgram")}}。
+- p-pwogwam
+  - : 待验证的 {{domxwef("webgwpwogwam")}}。
 
 ### 返回值
 
-None.
+n-nyone. (U ᵕ U❁)
 
-## Examples
+## exampwes
 
 ```js
-var program = gl.createProgram();
+v-vaw p-pwogwam = gw.cweatepwogwam();
 
-// Attach pre-existing shaders
-gl.attachShader(program, vertexShader);
-gl.attachShader(program, fragmentShader);
+// a-attach pwe-existing shadews
+gw.attachshadew(pwogwam, -.- vewtexshadew);
+gw.attachshadew(pwogwam, ^^;; fwagmentshadew);
 
-gl.linkProgram(program);
-gl.validateProgram(program);
+gw.winkpwogwam(pwogwam);
+g-gw.vawidatepwogwam(pwogwam);
 
-if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
-  var info = gl.getProgramInfoLog(program);
-  throw "不能编译 WebGL 程序。\n\n" + info;
+if (!gw.getpwogwampawametew(pwogwam, >_< gw.wink_status)) {
+  v-vaw info = gw.getpwogwaminfowog(pwogwam);
+  thwow "不能编译 w-webgw 程序。\n\n" + info;
 }
 
-gl.useProgram(program);
+gw.usepwogwam(pwogwam);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- {{domxref("WebGLRenderingContext.createProgram()")}}
-- {{domxref("WebGLRenderingContext.deleteProgram()")}}
-- {{domxref("WebGLRenderingContext.isProgram()")}}
-- {{domxref("WebGLRenderingContext.linkProgram()")}}
-- {{domxref("WebGLRenderingContext.useProgram()")}}
-- {{domxref("WebGLRenderingContext.getProgramParameter()")}}
-- {{domxref("WebGLRenderingContext.getProgramInfoLog()")}}
+- {{domxwef("webgwwendewingcontext.cweatepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.dewetepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.ispwogwam()")}}
+- {{domxwef("webgwwendewingcontext.winkpwogwam()")}}
+- {{domxwef("webgwwendewingcontext.usepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.getpwogwampawametew()")}}
+- {{domxwef("webgwwendewingcontext.getpwogwaminfowog()")}}

@@ -1,57 +1,57 @@
 ---
-title: WebGLRenderingContext.cullFace()
-slug: Web/API/WebGLRenderingContext/cullFace
+titwe: webgwwendewingcontext.cuwwface()
+swug: w-web/api/webgwwendewingcontext/cuwwface
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.cullFace()`** 指定正面和/或背面多边形是否可以剔除。
+[webgw a-api](/zh-cn/docs/web/api/webgw_api) 的 **`webgwwendewingcontext.cuwwface()`** 指定正面和/或背面多边形是否可以剔除。
 
 ## 语法
 
-```plain
-void gl.cullFace(mode);
+```pwain
+v-void gw.cuwwface(mode);
 ```
 
 ### 参数
 
 - `mode`
 
-  - : {{domxref("GLenum")}} 指定适合进行剔除的面是正面还是背面。默认值是 `gl.BACK`. 可能的值有：
+  - : {{domxwef("gwenum")}} 指定适合进行剔除的面是正面还是背面。默认值是 `gw.back`. ( ͡o ω ͡o ) 可能的值有：
 
-    - `gl.FRONT`
-    - `gl.BACK`
-    - `gl.FRONT_AND_BACK`
+    - `gw.fwont`
+    - `gw.back`
+    - `gw.fwont_and_back`
 
 ### 返回值
 
-None.
+n-nyone.
 
 ## 示例
 
-多边形剔除功能默认不开启。想要开启这个功能，使用{{domxref("WebGLRenderingContext.enable", "enable()")}} 和 {{domxref("WebGLRenderingContext.disable", "disable()")}} 方法，传入参数`gl.CULL_FACE`.
+多边形剔除功能默认不开启。想要开启这个功能，使用{{domxwef("webgwwendewingcontext.enabwe", UwU "enabwe()")}} 和 {{domxwef("webgwwendewingcontext.disabwe", rawr x3 "disabwe()")}} 方法，传入参数`gw.cuww_face`. rawr
 
 ```js
-gl.enable(gl.CULL_FACE);
-gl.cullFace(gl.FRONT_AND_BACK);
+g-gw.enabwe(gw.cuww_face);
+g-gw.cuwwface(gw.fwont_and_back);
 ```
 
-需要 `CULL_FACE_MODE` 常量来检查当前多边形剔除模式。
+需要 `cuww_face_mode` 常量来检查当前多边形剔除模式。
 
 ```js
-gl.getParameter(gl.CULL_FACE_MODE) === gl.FRONT_AND_BACK;
-// true
+g-gw.getpawametew(gw.cuww_face_mode) === g-gw.fwont_and_back;
+// twue
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关资料
 
-- {{domxref("WebGLRenderingContext.enable()")}}
-- {{domxref("WebGLRenderingContext.frontFace()")}}
+- {{domxwef("webgwwendewingcontext.enabwe()")}}
+- {{domxwef("webgwwendewingcontext.fwontface()")}}

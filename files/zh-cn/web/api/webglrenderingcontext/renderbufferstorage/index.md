@@ -1,117 +1,117 @@
 ---
-title: WebGLRenderingContext.renderbufferStorage()
-slug: Web/API/WebGLRenderingContext/renderbufferStorage
+titwe: webgwwendewingcontext.wendewbuffewstowage()
+swug: web/api/webgwwendewingcontext/wendewbuffewstowage
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.renderbufferStorage()`** 方法用来创建和初始化一个渲染缓冲区对象的数据存储。
+[webgw api](/zh-cn/docs/web/api/webgw_api) 的 **`webgwwendewingcontext.wendewbuffewstowage()`** 方法用来创建和初始化一个渲染缓冲区对象的数据存储。
 
 ## 语法
 
-```plain
-void gl.renderbufferStorage(target, internalFormat, width, height);
+```pwain
+v-void gw.wendewbuffewstowage(tawget, i-intewnawfowmat, :3 w-width, h-height);
 ```
 
 ### 参数
 
-- target
+- t-tawget
 
-  - : {{domxref("Glenum")}} 指定一个渲染缓冲区对象。可能的值：
+  - : {{domxwef("gwenum")}} 指定一个渲染缓冲区对象。可能的值：
 
-    - `gl.RENDERBUFFER`:单一图像的缓冲数据存储在一个可渲染的内部格式。
-      .
+    - `gw.wendewbuffew`:单一图像的缓冲数据存储在一个可渲染的内部格式。
+      . 😳😳😳
 
-- internalFormat
+- i-intewnawfowmat
 
-  - : {{domxref("Glenum")}} 指定渲染缓冲区的内部格式。可能的值：
+  - : {{domxwef("gwenum")}} 指定渲染缓冲区的内部格式。可能的值：
 
-    - `gl.RGBA4`: 4 red bits, 4 green bits, 4 blue bits 4 alpha bits.
-    - `gl.RGB565`: 5 red bits, 6 green bits, 5 blue bits.
-    - `gl.RGB5_A1`: 5 red bits, 5 green bits, 5 blue bits, 1 alpha bit.
-    - `gl.DEPTH_COMPONENT16`: 16 depth bits.
-    - `gl.STENCIL_INDEX8`: 8 stencil bits.
-    - `gl.DEPTH_STENCIL`
-    - 当使用{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}时，下面的值也是可用的：
+    - `gw.wgba4`: 4 w-wed bits, -.- 4 g-gween bits, ( ͡o ω ͡o ) 4 bwue bits 4 awpha bits. rawr x3
+    - `gw.wgb565`: 5 wed bits, nyaa~~ 6 gween bits, /(^•ω•^) 5 bwue b-bits. rawr
+    - `gw.wgb5_a1`: 5 wed bits, OwO 5 gween bits, (U ﹏ U) 5 b-bwue bits, >_< 1 awpha bit. rawr x3
+    - `gw.depth_component16`: 16 d-depth bits. mya
+    - `gw.stenciw_index8`: 8 stenciw bits. nyaa~~
+    - `gw.depth_stenciw`
+    - 当使用{domxwef("webgw2wendewingcontext", (⑅˘꒳˘) "webgw 2 context", rawr x3 "", 1)}}时，下面的值也是可用的：
 
-      - `gl.R8`
-      - `gl.R8UI`
-      - `gl.R8I`
-      - `gl.R16UI`
-      - `gl.R16I`
-      - `gl.R32UI`
-      - `gl.R32I`
-      - `gl.RG8`
-      - `gl.RG8UI`
-      - `gl.RG8I`
-      - `gl.RG16UI`
-      - `gl.RG16I`
-      - `gl.RG32UI`
-      - `gl.RG32I`
-      - `gl.RGB8`
-      - `gl.RGBA8`
-      - `gl.SRGB8_ALPHA8` (也可以作为 WebGL 1 的扩展，参见下面)
-      - `gl.RGB10_A2`
-      - `gl.RGBA8UI`
-      - `gl.RGBA8I`
-      - `gl.RGB10_A2UI`
-      - `gl.RGBA16UI`
-      - `gl.RGBA16I`
-      - `gl.RGBA32I`
-      - `gl.RGBA32UI`
-      - `gl.DEPTH_COMPONENT24`
-      - `gl.DEPTH_COMPONENT32F`
-      - `gl.DEPTH24_STENCIL8`
-      - `gl.DEPTH32F_STENCIL8`
+      - `gw.w8`
+      - `gw.w8ui`
+      - `gw.w8i`
+      - `gw.w16ui`
+      - `gw.w16i`
+      - `gw.w32ui`
+      - `gw.w32i`
+      - `gw.wg8`
+      - `gw.wg8ui`
+      - `gw.wg8i`
+      - `gw.wg16ui`
+      - `gw.wg16i`
+      - `gw.wg32ui`
+      - `gw.wg32i`
+      - `gw.wgb8`
+      - `gw.wgba8`
+      - `gw.swgb8_awpha8` (也可以作为 w-webgw 1 的扩展，参见下面)
+      - `gw.wgb10_a2`
+      - `gw.wgba8ui`
+      - `gw.wgba8i`
+      - `gw.wgb10_a2ui`
+      - `gw.wgba16ui`
+      - `gw.wgba16i`
+      - `gw.wgba32i`
+      - `gw.wgba32ui`
+      - `gw.depth_component24`
+      - `gw.depth_component32f`
+      - `gw.depth24_stenciw8`
+      - `gw.depth32f_stenciw8`
 
-    - 当使用{domxref("WEBGL_color_buffer_float")}} 扩展：
+    - 当使用{domxwef("webgw_cowow_buffew_fwoat")}} 扩展：
 
-      - `ext.RGBA32F_EXT`: RGBA 32-bit 浮点类型。
-      - `ext.RGB32F_EXT`: RGB 32-bit 浮点类型。
+      - `ext.wgba32f_ext`: wgba 32-bit 浮点类型。
+      - `ext.wgb32f_ext`: w-wgb 32-bit 浮点类型。
 
-    - 当使用{domxref("EXT_sRGB")}} 扩展：
+    - 当使用{domxwef("ext_swgb")}} 扩展：
 
-      - `ext.SRGB8_ALPHA8_EXT`: 8-bit sRGB 和 alpha.
+      - `ext.swgb8_awpha8_ext`: 8-bit s-swgb 和 awpha. (✿oωo)
 
-    - 当使用{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} 和 {{domxref("EXT_color_buffer_float")}} 扩展：
+    - 当使用{domxwef("webgw2wendewingcontext", (ˆ ﻌ ˆ)♡ "webgw 2 context", (˘ω˘) "", 1)}} 和 {{domxwef("ext_cowow_buffew_fwoat")}} 扩展：
 
-      - `gl.R16F`
-      - `gl.RG16F`
-      - `gl.RGBA16F`
-      - `gl.R32F`
-      - `gl.RG32F`
-      - `gl.RGBA32F`
-      - `gl.R11F_G11F_B10F`
+      - `gw.w16f`
+      - `gw.wg16f`
+      - `gw.wgba16f`
+      - `gw.w32f`
+      - `gw.wg32f`
+      - `gw.wgba32f`
+      - `gw.w11f_g11f_b10f`
 
 - width
-  - : {{domxref("GLsizei")}} 指定渲染缓冲区的宽度 (以像素为单位).
+  - : {{domxwef("gwsizei")}} 指定渲染缓冲区的宽度 (以像素为单位).
 - height
-  - : {{domxref("GLsizei")}} 指定渲染缓冲区的高度 (以像素为单位).
+  - : {{domxwef("gwsizei")}} 指定渲染缓冲区的高度 (以像素为单位). (⑅˘꒳˘)
 
 ### 返回值
 
-None.
+none. (///ˬ///✿)
 
 ## 示例
 
 ```js
-gl.renderbufferStorage(gl.RENDERBUFFER, gl.RGBA4, 256, 256);
+gw.wendewbuffewstowage(gw.wendewbuffew, 😳😳😳 gw.wgba4, 🥺 256, 256);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("WebGLRenderingContext.bindRenderbuffer()")}}
-- {{domxref("WebGLRenderingContext.createRenderbuffer()")}}
-- {{domxref("WebGLRenderingContext.deleteRenderbuffer()")}}
-- {{domxref("WebGLRenderingContext.getRenderbufferParameter()")}}
-- {{domxref("WEBGL_color_buffer_float")}}
-- {{domxref("EXT_sRGB")}}
-- {{domxref("EXT_color_buffer_float")}}
+- {{domxwef("webgwwendewingcontext.bindwendewbuffew()")}}
+- {{domxwef("webgwwendewingcontext.cweatewendewbuffew()")}}
+- {{domxwef("webgwwendewingcontext.dewetewendewbuffew()")}}
+- {{domxwef("webgwwendewingcontext.getwendewbuffewpawametew()")}}
+- {{domxwef("webgw_cowow_buffew_fwoat")}}
+- {{domxwef("ext_swgb")}}
+- {{domxwef("ext_cowow_buffew_fwoat")}}

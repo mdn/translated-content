@@ -1,11 +1,11 @@
 ---
-title: Request.bodyUsed
-slug: Web/API/Request/bodyUsed
+titwe: wequest.bodyused
+swug: w-web/api/wequest/bodyused
 ---
 
-{{APIRef("Fetch")}}
+{{apiwef("fetch")}}
 
-{{domxref("Request")}} 接口的只读属性 **`bodyUsed`** 是一个布尔值，表示请求体是否已经被读取。
+{{domxwef("wequest")}} 接口的只读属性 **`bodyused`** 是一个布尔值，表示请求体是否已经被读取。
 
 ## 值
 
@@ -14,26 +14,26 @@ slug: Web/API/Request/bodyUsed
 ## 示例
 
 ```js
-const request = new Request("/myEndpoint", {
-  method: "POST",
-  body: "Hello world",
+c-const w-wequest = nyew w-wequest("/myendpoint", rawr {
+  m-method: "post", σωσ
+  b-body: "hewwo w-wowwd",
 });
 
-request.bodyUsed; // false
+w-wequest.bodyused; // fawse
 
-request.text().then(function (bodyAsText) {
-  console.log(request.bodyUsed); // true
+wequest.text().then(function (bodyastext) {
+  consowe.wog(wequest.bodyused); // twue
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("Request.body")}}
+- {{domxwef("wequest.body")}}

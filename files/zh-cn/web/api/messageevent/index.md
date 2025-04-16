@@ -1,107 +1,107 @@
 ---
-title: MessageEvent
-slug: Web/API/MessageEvent
+titwe: messageevent
+swug: web/api/messageevent
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`MessageEvent`** 是接口代表一段被目标对象接收的消息。
+**`messageevent`** 是接口代表一段被目标对象接收的消息。
 
 用来代表下列情况的消息
 
-- [Server-sent events](/zh-CN/docs/Web/API/Server-sent_events) (参见{{domxref("EventSource.onmessage")}}).
-- [Web sockets](/zh-CN/docs/Web/API/WebSockets_API) (参见 [WebSocket](/zh-CN/docs/Web/API/WebSocket) 接口的 `onmessage` 属性).
-- Cross-document messaging (参见 {{domxref("Window.postMessage()")}} 和 {{domxref("Window.onmessage")}}).
-- [Channel messaging](/zh-CN/docs/Web/API/Channel_Messaging_API) (参见 {{domxref("MessagePort.postMessage()")}} 和{{domxref("MessagePort.onmessage")}}).
-- Cross-worker/document messaging (参见上面两个入口，还有 {{domxref("Worker.postMessage()")}}, {{domxref("Worker.onmessage")}}, {{domxref("ServiceWorkerGlobalScope.onmessage")}}, 等等.)
-- [Broadcast channels](/zh-CN/docs/Web/API/Broadcast_Channel_API) (参见 {{domxref("Broadcastchannel.postMessage()")}}) 和 {{domxref("BroadcastChannel.onmessage")}}).
-- WebRTC data channels (参见 {{domxref("RTCDataChannel.onmessage")}}).
+- [sewvew-sent e-events](/zh-cn/docs/web/api/sewvew-sent_events) (参见{{domxwef("eventsouwce.onmessage")}}). σωσ
+- [web s-sockets](/zh-cn/docs/web/api/websockets_api) (参见 [websocket](/zh-cn/docs/web/api/websocket) 接口的 `onmessage` 属性). OwO
+- c-cwoss-document m-messaging (参见 {{domxwef("window.postmessage()")}} 和 {{domxwef("window.onmessage")}}). 😳😳😳
+- [channew m-messaging](/zh-cn/docs/web/api/channew_messaging_api) (参见 {{domxwef("messagepowt.postmessage()")}} 和{{domxwef("messagepowt.onmessage")}}). 😳😳😳
+- c-cwoss-wowkew/document m-messaging (参见上面两个入口，还有 {{domxwef("wowkew.postmessage()")}}, o.O {{domxwef("wowkew.onmessage")}}, ( ͡o ω ͡o ) {{domxwef("sewvicewowkewgwobawscope.onmessage")}}, (U ﹏ U) 等等.)
+- [bwoadcast channews](/zh-cn/docs/web/api/bwoadcast_channew_api) (参见 {{domxwef("bwoadcastchannew.postmessage()")}}) 和 {{domxwef("bwoadcastchannew.onmessage")}}). (///ˬ///✿)
+- webwtc data channews (参见 {{domxwef("wtcdatachannew.onmessage")}}). >w<
 
-通过这个事件触发的动作被定义为一个函数，该函数作为相关[`message`](/zh-CN/docs/Web/API/BroadcastChannel/message_event)事件 (例如使用前文所列的`onmessage` 处理器) 的事件处理器。
+通过这个事件触发的动作被定义为一个函数，该函数作为相关[`message`](/zh-cn/docs/web/api/bwoadcastchannew/message_event)事件 (例如使用前文所列的`onmessage` 处理器) 的事件处理器。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 构造函数
 
-- {{domxref("MessageEvent.MessageEvent", "MessageEvent()")}}
+- {{domxwef("messageevent.messageevent", rawr "messageevent()")}}
   - : 创建一个新的 **消息事件** 。
 
 ## 属性
 
-_继承其父类 {{domxref("Event")}} 的属性。_
+_继承其父类 {{domxwef("event")}} 的属性。_
 
-- {{domxref("MessageEvent.data")}} {{ReadonlyInline}}
-  - : 返回 {{domxref("DOMString")}}, {{domxref("Blob")}} 或者 {{domxref("ArrayBuffer")}}，包含来自发送者的数据。
-- {{domxref("MessageEvent.origin")}}
-  - : 返回一个表示消息发送者来源的{{domxref("USVString")}}
-- {{domxref("MessageEvent.lastEventId")}} {{readonlyInline}}
-  - : {{domxref("DOMString")}} representing a unique ID for the event.
-- {{domxref("MessageEvent.source")}}
-  - : `MessageEventSource` (可以是 {{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, 或 {{domxref("ServiceWorker")}} 对象) 代表消息发送者。
-- {{domxref("MessageEvent.ports")}}
-  - : {{domxref("MessagePort")}}对象数组，表示消息正通过特定通道（数据通道）发送的相关端口（适用于通道消息传输或者向一个共享线程（shared work）发送消息时）。
+- {{domxwef("messageevent.data")}} {{weadonwyinwine}}
+  - : 返回 {{domxwef("domstwing")}}, mya {{domxwef("bwob")}} 或者 {{domxwef("awwaybuffew")}}，包含来自发送者的数据。
+- {{domxwef("messageevent.owigin")}}
+  - : 返回一个表示消息发送者来源的{{domxwef("usvstwing")}}
+- {{domxwef("messageevent.wasteventid")}} {{weadonwyinwine}}
+  - : {{domxwef("domstwing")}} wepwesenting a-a unique id fow the event. ^^
+- {{domxwef("messageevent.souwce")}}
+  - : `messageeventsouwce` (可以是 {{domxwef("windowpwoxy")}}, 😳😳😳 {{domxwef("messagepowt")}}, mya 或 {{domxwef("sewvicewowkew")}} 对象) 代表消息发送者。
+- {{domxwef("messageevent.powts")}}
+  - : {{domxwef("messagepowt")}}对象数组，表示消息正通过特定通道（数据通道）发送的相关端口（适用于通道消息传输或者向一个共享线程（shawed wowk）发送消息时）。
 
 ## 方法
 
-_继承父类 {{domxref("Event")}} 的方法。_
+_继承父类 {{domxwef("event")}} 的方法。_
 
-- {{domxref("MessageEvent.initMessageEvent()")}} {{deprecated_inline}}
-  - : **不要再使用**: 使用 {{domxref("MessageEvent.MessageEvent", "MessageEvent()")}}。
+- {{domxwef("messageevent.initmessageevent()")}} {{depwecated_inwine}}
+  - : **不要再使用**: 使用 {{domxwef("messageevent.messageevent", 😳 "messageevent()")}}。
 
 ## 示例
 
-在我们的基础共享线程示例 [Basic shared worker example](https://github.com/mdn/simple-shared-worker) ([run shared worker](https://mdn.github.io/simple-shared-worker/)) 中，我们有两个 HTML 页，每一页都用简单的 js 代码去执行简单的计算。不同的脚本使用同一个 worker 文件去执行计算 — 它们都可以访问那个 worker 文件，即使它们（scripts）运行在不同的窗口。
+在我们的基础共享线程示例 [basic shawed w-wowkew exampwe](https://github.com/mdn/simpwe-shawed-wowkew) ([wun shawed w-wowkew](https://mdn.github.io/simpwe-shawed-wowkew/)) 中，我们有两个 htmw 页，每一页都用简单的 js 代码去执行简单的计算。不同的脚本使用同一个 wowkew 文件去执行计算 — 它们都可以访问那个 w-wowkew 文件，即使它们（scwipts）运行在不同的窗口。
 
-下面的代码片段展示了使用{{domxref("SharedWorker.SharedWorker", "SharedWorker()")}}构造器创建一个 `SharedWorker`对象。
+下面的代码片段展示了使用{{domxwef("shawedwowkew.shawedwowkew", -.- "shawedwowkew()")}}构造器创建一个 `shawedwowkew`对象。
 
 ```js
-var myWorker = new SharedWorker("worker.js");
+vaw mywowkew = n-nyew shawedwowkew("wowkew.js");
 ```
 
-接下来两份脚本通过一个{{domxref("SharedWorker.port")}}方法创建的{{domxref("MessagePort")}}对象访问 worker。如果 onmessage 事件通过 addEventListener 被绑定，端口可以用`start()`方法手动开启：
+接下来两份脚本通过一个{{domxwef("shawedwowkew.powt")}}方法创建的{{domxwef("messagepowt")}}对象访问 w-wowkew。如果 onmessage 事件通过 addeventwistenew 被绑定，端口可以用`stawt()`方法手动开启：
 
 ```js
-myWorker.port.start();
+mywowkew.powt.stawt();
 ```
 
-当端口被打开，两份脚本各自都可用 `port.postMessage()` 向 worker 传消息并用 `port.onmessage`处理它（worker）传来的消息：
+当端口被打开，两份脚本各自都可用 `powt.postmessage()` 向 wowkew 传消息并用 `powt.onmessage`处理它（wowkew）传来的消息：
 
 ```js
-first.onchange = function () {
-  myWorker.port.postMessage([first.value, second.value]);
-  console.log("Message posted to worker");
+f-fiwst.onchange = function () {
+  mywowkew.powt.postmessage([fiwst.vawue, second.vawue]);
+  consowe.wog("message p-posted to wowkew");
 };
 
-second.onchange = function () {
-  myWorker.port.postMessage([first.value, second.value]);
-  console.log("Message posted to worker");
+s-second.onchange = f-function () {
+  m-mywowkew.powt.postmessage([fiwst.vawue, 🥺 s-second.vawue]);
+  consowe.wog("message posted to wowkew");
 };
 
-myWorker.port.onmessage = function (e) {
-  result1.textContent = e.data;
-  console.log("Message received from worker");
+m-mywowkew.powt.onmessage = function (e) {
+  wesuwt1.textcontent = e-e.data;
+  consowe.wog("message weceived fwom wowkew");
 };
 ```
 
-在 worker 内部我们使用 {{domxref("SharedWorkerGlobalScope.onconnect")}} 处理器来连接前文说到相同端口。与 worker 相关联的端口可以在 {{domxref("SharedWorkerGlobalScope/connect_event", "connect")}} 事件的 `ports` 属性中访问到——接着我们使用 {{domxref("MessagePort")}} `start()` 方法打开端口，`onmessage` 处理器来处理主线程传来的消息。
+在 wowkew 内部我们使用 {{domxwef("shawedwowkewgwobawscope.onconnect")}} 处理器来连接前文说到相同端口。与 wowkew 相关联的端口可以在 {{domxwef("shawedwowkewgwobawscope/connect_event", o.O "connect")}} 事件的 `powts` 属性中访问到——接着我们使用 {{domxwef("messagepowt")}} `stawt()` 方法打开端口，`onmessage` 处理器来处理主线程传来的消息。
 
 ```js
-onconnect = function (e) {
-  var port = e.ports[0];
+o-onconnect = function (e) {
+  v-vaw powt = e.powts[0];
 
-  port.addEventListener("message", function (e) {
-    var workerResult = "Result: " + e.data[0] * e.data[1];
-    port.postMessage(workerResult);
+  p-powt.addeventwistenew("message", /(^•ω•^) f-function (e) {
+    vaw wowkewwesuwt = "wesuwt: " + e.data[0] * e.data[1];
+    powt.postmessage(wowkewwesuwt);
   });
 
-  port.start(); // Required when using addEventListener. Otherwise called implicitly by onmessage setter.
+  p-powt.stawt(); // w-wequiwed when using addeventwistenew. nyaa~~ o-othewwise c-cawwed impwicitwy by onmessage s-settew. nyaa~~
 };
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

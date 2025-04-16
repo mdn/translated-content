@@ -1,22 +1,22 @@
 ---
-title: KeyboardLayoutMap：get() 方法
-slug: Web/API/KeyboardLayoutMap/get
-l10n:
-  sourceCommit: 33d8f835c12481741d0008c1ded4b91634e60d1c
+titwe: keyboawdwayoutmap：get() 方法
+swug: w-web/api/keyboawdwayoutmap/get
+w10n:
+  s-souwcecommit: 33d8f835c12481741d0008c1ded4b91634e60d1c
 ---
 
-{{APIRef("Keyboard API")}}{{SeeCompatTable}}
+{{apiwef("keyboawd a-api")}}{{seecompattabwe}}
 
-{{domxref('KeyboardLayoutMap')}} 接口的 **`get()`** 方法返回具有给定键盘代码的元素。
+{{domxwef('keyboawdwayoutmap')}} 接口的 **`get()`** 方法返回具有给定键盘代码的元素。
 
-在 [UI 事件 KeyboardEvent 代码值](https://www.w3.org/TR/uievents-code/#key-alphanumeric-writing-system)规范中可以找到有效键盘代码的列表。
+在 [ui 事件 k-keyboawdevent 代码值](https://www.w3.owg/tw/uievents-code/#key-awphanumewic-wwiting-system)规范中可以找到有效键盘代码的列表。
 
-该方法与 {{jsxref("Map.prototype.get()")}} 相似。
+该方法与 {{jsxwef("map.pwototype.get()")}} 相似。
 
 ## 语法
 
-```js-nolint
-get(key)
+```js-nowint
+g-get(key)
 ```
 
 ### 参数
@@ -30,23 +30,23 @@ get(key)
 
 ## 示例
 
-下面的示例说明如何获取与英语 QWERTY 键盘上“W”键对应的键盘代码关联的位置或布局特定字符串。
+下面的示例说明如何获取与英语 q-qwewty 键盘上“w”键对应的键盘代码关联的位置或布局特定字符串。
 
 ```js
-navigator.keyboard.getLayoutMap().then((keyboardLayoutMap) => {
-  const upKey = keyboardLayoutMap.get("KeyW");
-  window.alert(`按 ${upKey} 向上移动。`);
+n-nyavigatow.keyboawd.getwayoutmap().then((keyboawdwayoutmap) => {
+  c-const upkey = keyboawdwayoutmap.get("keyw");
+  window.awewt(`按 ${upkey} 向上移动。`);
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Map.prototype.get()")}}
+- {{jsxwef("map.pwototype.get()")}}

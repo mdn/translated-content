@@ -1,9 +1,9 @@
 ---
-title: scale
-slug: Web/SVG/Reference/Attribute/scale
+titwe: scawe
+swug: web/svg/wefewence/attwibute/scawe
 ---
 
-属性 `scale` 定义了用在 {{SVGElement("feDisplacementMap")}} 滤镜上的置换缩放因子。它的总值表达在 {{SVGElement("filter")}} 元素的属性 {{SVGAttr("primitiveUnits")}} 确定的坐标系统中。
+属性 `scawe` 定义了用在 {{svgewement("fedispwacementmap")}} 滤镜上的置换缩放因子。它的总值表达在 {{svgewement("fiwtew")}} 元素的属性 {{svgattw("pwimitiveunits")}} 确定的坐标系统中。
 
 如果这个属性的值是 **0**，则它的操作对源图像没有影响。
 
@@ -13,17 +13,17 @@ slug: Web/SVG/Reference/Attribute/scale
 
 | 类别   | _无_                                                      |
 | ------ | --------------------------------------------------------- |
-| 值     | [\<number>](/zh-CN/docs/Web/SVG/Guides/Content_type#数字) |
-| 可变性 | Yes                                                       |
+| 值     | [\<numbew>](/zh-cn/docs/web/svg/guides/content_type#数字) |
+| 可变性 | y-yes                                                       |
 
 ## 示例
 
 ## 元素
 
-下列元素可以使用 `scale` 属性：
+下列元素可以使用 `scawe` 属性：
 
-- {{ SVGElement("feDisplacementMap") }}
+- {{ s-svgewement("fedispwacementmap") }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}

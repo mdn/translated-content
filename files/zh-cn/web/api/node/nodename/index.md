@@ -1,53 +1,53 @@
 ---
-title: Node.nodeName
-slug: Web/API/Node/nodeName
+titwe: nyode.nodename
+swug: web/api/node/nodename
 ---
 
-{{APIRef}}概述
+{{apiwef}}概述
 
 返回当前节点的节点名称
 
 ## 附注
 
-下表列出了所有类型的节点的`nodeName`属性的值。
+下表列出了所有类型的节点的`nodename`属性的值。
 
-| 接口                                                               | nodeName 属性值                                                                                |
+| 接口                                                               | n-nyodename 属性值                                                                                |
 | ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------- |
-| [Attr](/zh-CN/docs/Web/API/Attr)                                   | 等同于 [`Attr.name`](/zh-CN/docs/DOM/Attr.name) 属性的值                                       |
-| [CDATASection](/zh-CN/docs/Web/API/CDATASection)                   | "#cdata-section"                                                                               |
-| [Comment](/zh-CN/docs/Web/API/Comment)                             | "#comment"                                                                                     |
-| [Document](/zh-CN/docs/Web/API/Document)                           | "#document"                                                                                    |
-| [DocumentFragment](/zh-CN/docs/Web/API/DocumentFragment)           | "#document-fragment"                                                                           |
-| [DocumentType](/zh-CN/docs/Web/API/DocumentType)                   | 等同于 [`DocumentType.name`](/zh-CN/docs/DOM/DocumentType.name) 属性的值                       |
-| [Element](/zh-CN/docs/Web/API/Element)                             | 等同于 [`Element.tagName`](/zh-CN/docs/Web/API/Element/tagName) 属性的值                       |
-| [Entity](/zh-CN/docs/DOM/Entity)                                   | 实体名称                                                                                       |
-| [EntityReference](/zh-CN/docs/DOM/EntityReference)                 | 实体引用名称                                                                                   |
-| [Notation](/zh-CN/docs/DOM/Notation)                               | Notation 名称                                                                                  |
-| [ProcessingInstruction](/zh-CN/docs/Web/API/ProcessingInstruction) | 等同于 [`ProcessingInstruction.target`](/zh-CN/docs/DOM/ProcessingInstruction.target) 属性的值 |
-| [text](/zh-CN/docs/Web/API/Text)                                   | "#text"                                                                                        |
+| [attw](/zh-cn/docs/web/api/attw)                                   | 等同于 [`attw.name`](/zh-cn/docs/dom/attw.name) 属性的值                                       |
+| [cdatasection](/zh-cn/docs/web/api/cdatasection)                   | "#cdata-section"                                                                               |
+| [comment](/zh-cn/docs/web/api/comment)                             | "#comment"                                                                                     |
+| [document](/zh-cn/docs/web/api/document)                           | "#document"                                                                                    |
+| [documentfwagment](/zh-cn/docs/web/api/documentfwagment)           | "#document-fwagment"                                                                           |
+| [documenttype](/zh-cn/docs/web/api/documenttype)                   | 等同于 [`documenttype.name`](/zh-cn/docs/dom/documenttype.name) 属性的值                       |
+| [ewement](/zh-cn/docs/web/api/ewement)                             | 等同于 [`ewement.tagname`](/zh-cn/docs/web/api/ewement/tagname) 属性的值                       |
+| [entity](/zh-cn/docs/dom/entity)                                   | 实体名称                                                                                       |
+| [entitywefewence](/zh-cn/docs/dom/entitywefewence)                 | 实体引用名称                                                                                   |
+| [notation](/zh-cn/docs/dom/notation)                               | n-nyotation 名称                                                                                  |
+| [pwocessinginstwuction](/zh-cn/docs/web/api/pwocessinginstwuction) | 等同于 [`pwocessinginstwuction.tawget`](/zh-cn/docs/dom/pwocessinginstwuction.tawget) 属性的值 |
+| [text](/zh-cn/docs/web/api/text)                                   | "#text"                                                                                        |
 
 ## 示例
 
-假设已经存在下面的 HTML:
+假设已经存在下面的 h-htmw:
 
-```html
-<div id="d1">hello world</div>
-<input type="text" id="t" />
+```htmw
+<div i-id="d1">hewwo w-wowwd</div>
+<input t-type="text" i-id="t" />
 ```
 
-以及下面的 JavaScript:
+以及下面的 j-javascwipt:
 
 ```js
-var div1 = document.getElementById("d1");
-var text_field = document.getElementById("t");
+vaw div1 = document.getewementbyid("d1");
+vaw text_fiewd = document.getewementbyid("t");
 
-text_field.value = div1.nodeName;
+t-text_fiewd.vawue = div1.nodename;
 ```
 
-在 XHTML(以及属于 XML 类型的文档) 中，变量 `text_field` 包含的值会是小写的"div".还在 HTML 中，变量 `text_field`包含的值会是大写的"DIV", `nodeName` 和 `tagName` 属性都有这种表现。查看[details on nodeName case sensitivity in different browsers](http://ejohn.org/blog/nodename-case-sensitivity/)一文深入了解。
+在 xhtmw(以及属于 x-xmw 类型的文档) 中，变量 `text_fiewd` 包含的值会是小写的"div".还在 htmw 中，变量 `text_fiewd`包含的值会是大写的"div", (U ᵕ U❁) `nodename` 和 `tagname` 属性都有这种表现。查看[detaiws o-on nyodename case sensitivity in diffewent bwowsews](http://ejohn.owg/bwog/nodename-case-sensitivity/)一文深入了解。
 
-如果是元素节点，`nodeName` 属性和 `tagName` 属性返回相同的值，但如果是文本节点，`nodeName` 属性会返回 `"#text"`，而 `tagName` 属性会返回 `undefined`。
+如果是元素节点，`nodename` 属性和 `tagname` 属性返回相同的值，但如果是文本节点，`nodename` 属性会返回 `"#text"`，而 `tagname` 属性会返回 `undefined`。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}

@@ -1,188 +1,188 @@
 ---
-title: WebGLRenderingContext.getTexParameter()
-slug: Web/API/WebGLRenderingContext/getTexParameter
+titwe: webgwwendewingcontext.gettexpawametew()
+swug: web/api/webgwwendewingcontext/gettexpawametew
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-**`WebGLRenderingContext.getTexParameter()`** 此[WebGL API](/zh-CN/docs/Web/API/WebGL_API)方法返回特定的纹理信息。
+**`webgwwendewingcontext.gettexpawametew()`** 此[webgw a-api](/zh-cn/docs/web/api/webgw_api)方法返回特定的纹理信息。
 
 ## 语法
 
-```js-nolint
-getTexParameter(target, pname)
+```js-nowint
+g-gettexpawametew(tawget, 😳 p-pname)
 ```
 
 ### 参数
 
-- target
+- t-tawget
 
-  - : 一个 {{domxref("GLenum")}} 接口类型的绑定的点 (target). 可能的值有：
+  - : 一个 {{domxwef("gwenum")}} 接口类型的绑定的点 (tawget). XD 可能的值有：
 
-    - `gl.TEXTURE_2D`: 一个二维纹理。
-    - `gl.TEXTURE_CUBE_MAP`: 一个立方体纹理。
-    - 当使用 {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}接口，可能会出现以下值：
+    - `gw.textuwe_2d`: 一个二维纹理。
+    - `gw.textuwe_cube_map`: 一个立方体纹理。
+    - 当使用 {{domxwef("webgw2wendewingcontext", :3 "webgw 2 c-context", 😳😳😳 "", 1)}}接口，可能会出现以下值：
 
-      - `gl.TEXTURE_3D`: 一个三维纹理。
-      - `gl.TEXTURE_2D_ARRAY`: 一个二维纹理数组。
+      - `gw.textuwe_3d`: 一个三维纹理。
+      - `gw.textuwe_2d_awway`: 一个二维纹理数组。
 
-- pname
+- p-pname
 
-  - : 一个{{domxref("Glenum")}}接口类型的要查询的信息。可能的值有：
+  - : 一个{{domxwef("gwenum")}}接口类型的要查询的信息。可能的值有：
 
-    <table class="standard-table">
+    <tabwe c-cwass="standawd-tabwe">
       <thead>
-        <tr>
-          <th scope="col">pname</th>
-          <th scope="col">返回的类型</th>
-          <th scope="col">描述</th>
-          <th scope="col">可能返回的值</th>
-        </tr>
+        <tw>
+          <th s-scope="cow">pname</th>
+          <th scope="cow">返回的类型</th>
+          <th scope="cow">描述</th>
+          <th scope="cow">可能返回的值</th>
+        </tw>
       </thead>
       <tbody>
-        <tr>
-          <th colspan="4">可用的 WebGL 1 的上下文</th>
-        </tr>
-        <tr>
-          <td><code>gl.TEXTURE_MAG_FILTER</code></td>
-          <td>{{domxref("GLenum")}}</td>
+        <tw>
+          <th cowspan="4">可用的 w-webgw 1 的上下文</th>
+        </tw>
+        <tw>
+          <td><code>gw.textuwe_mag_fiwtew</code></td>
+          <td>{{domxwef("gwenum")}}</td>
           <td>纹理的放大滤镜</td>
-          <td><code>gl.LINEAR</code> (default value), <code>gl.NEAREST</code>.</td>
-        </tr>
-        <tr>
-          <td><code>gl.TEXTURE_MIN_FILTER</code></td>
-          <td>{{domxref("GLenum")}}</td>
+          <td><code>gw.wineaw</code> (defauwt vawue), <code>gw.neawest</code>.</td>
+        </tw>
+        <tw>
+          <td><code>gw.textuwe_min_fiwtew</code></td>
+          <td>{{domxwef("gwenum")}}</td>
           <td>纹理的缩小滤镜</td>
           <td>
-            <code>gl.LINEAR</code>, <code>gl.NEAREST</code>,
-            <code>gl.NEAREST_MIPMAP_NEAREST</code>,
-            <code>gl.LINEAR_MIPMAP_NEAREST</code>,
-            <code>gl.NEAREST</code>_MIPMAP_LINEAR (default value),
-            <code>gl.LINEAR_MIPMAP_LINEAR</code>.
+            <code>gw.wineaw</code>, -.- <code>gw.neawest</code>, ( ͡o ω ͡o )
+            <code>gw.neawest_mipmap_neawest</code>, rawr x3
+            <code>gw.wineaw_mipmap_neawest</code>, nyaa~~
+            <code>gw.neawest</code>_mipmap_wineaw (defauwt vawue), /(^•ω•^)
+            <code>gw.wineaw_mipmap_wineaw</code>. rawr
           </td>
-        </tr>
-        <tr>
-          <td><code>gl.TEXTURE_WRAP_S</code></td>
-          <td>{{domxref("GLenum")}}</td>
+        </tw>
+        <tw>
+          <td><code>gw.textuwe_wwap_s</code></td>
+          <td>{{domxwef("gwenum")}}</td>
           <td>
-            <p>封装的纹理坐标方法<code>s（对应 u 坐标）</code></p>
+            <p>封装的纹理坐标方法<code>s（对应 u-u 坐标）</code></p>
           </td>
           <td>
-            <code>gl.REPEAT</code> (default value), <code>gl.CLAMP_TO_EDGE</code>,
-            <code>gl.MIRRORED_REPEAT</code>.
+            <code>gw.wepeat</code> (defauwt vawue), OwO <code>gw.cwamp_to_edge</code>, (U ﹏ U)
+            <code>gw.miwwowed_wepeat</code>. >_<
           </td>
-        </tr>
-        <tr>
-          <td><code>gl.TEXTURE_WRAP_T</code></td>
-          <td>{{domxref("GLenum")}}</td>
-          <td>封装的纹理坐标方法 <code>t（对应 v 坐标）</code></td>
+        </tw>
+        <tw>
+          <td><code>gw.textuwe_wwap_t</code></td>
+          <td>{{domxwef("gwenum")}}</td>
+          <td>封装的纹理坐标方法 <code>t（对应 v-v 坐标）</code></td>
           <td>
-            <code>gl.REPEAT</code> (default value), <code>gl.CLAMP_TO_EDGE</code>,
-            <code>gl.MIRRORED_REPEAT</code>.
+            <code>gw.wepeat</code> (defauwt vawue), rawr x3 <code>gw.cwamp_to_edge</code>, mya
+            <code>gw.miwwowed_wepeat</code>. nyaa~~
           </td>
-        </tr>
-        <tr>
-          <th colspan="4">
-            使用 {{domxref("EXT_texture_filter_anisotropic")}}
+        </tw>
+        <tw>
+          <th cowspan="4">
+            使用 {{domxwef("ext_textuwe_fiwtew_anisotwopic")}}
             接口增加可用的扩展方法/属性
           </th>
-        </tr>
-        <tr>
-          <td><code>ext.TEXTURE_MAX_ANISOTROPY_EXT</code></td>
-          <td>{{domxref("GLfloat")}}</td>
+        </tw>
+        <tw>
+          <td><code>ext.textuwe_max_anisotwopy_ext</code></td>
+          <td>{{domxwef("gwfwoat")}}</td>
           <td>纹理所有方向的最大值</td>
           <td>一个浮点型的任意值。</td>
-        </tr>
-        <tr>
-          <th colspan="4">使用 WebGL 2 上下文之后增加的可用方法/属性</th>
-        </tr>
-        <tr>
-          <td><code>gl.TEXTURE_BASE_LEVEL</code></td>
-          <td>{{domxref("GLint")}}</td>
+        </tw>
+        <tw>
+          <th cowspan="4">使用 w-webgw 2 上下文之后增加的可用方法/属性</th>
+        </tw>
+        <tw>
+          <td><code>gw.textuwe_base_wevew</code></td>
+          <td>{{domxwef("gwint")}}</td>
           <td>纹理贴图层级</td>
           <td>一个整型任意值。</td>
-        </tr>
-        <tr>
-          <td><code>gl.TEXTURE_COMPARE_FUNC</code></td>
-          <td>{{domxref("GLenum")}}</td>
+        </tw>
+        <tw>
+          <td><code>gw.textuwe_compawe_func</code></td>
+          <td>{{domxwef("gwenum")}}</td>
           <td>比较方法</td>
           <td>
-            <code>gl.LEQUAL</code> (default value), <code>gl.GEQUAL</code>,
-            <code>gl.LESS</code>, <code>gl.GREATER</code>, <code>gl.EQUAL</code>,
-            <code>gl.NOTEQUAL</code>, <code>gl.ALWAYS</code>, <code>gl.NEVER</code>.
+            <code>gw.wequaw</code> (defauwt vawue), <code>gw.gequaw</code>, (⑅˘꒳˘)
+            <code>gw.wess</code>, rawr x3 <code>gw.gweatew</code>, (✿oωo) <code>gw.equaw</code>, (ˆ ﻌ ˆ)♡
+            <code>gw.notequaw</code>, <code>gw.awways</code>, (˘ω˘) <code>gw.nevew</code>. (⑅˘꒳˘)
           </td>
-        </tr>
-        <tr>
-          <td><code>gl.TEXTURE_COMPARE_MODE</code></td>
-          <td>{{domxref("GLenum")}}</td>
+        </tw>
+        <tw>
+          <td><code>gw.textuwe_compawe_mode</code></td>
+          <td>{{domxwef("gwenum")}}</td>
           <td>纹理的比较模式</td>
           <td>
-            <code>gl.NONE</code> (default value),
-            <code>gl.COMPARE_REF_TO_TEXTURE</code>.
+            <code>gw.none</code> (defauwt v-vawue), (///ˬ///✿)
+            <code>gw.compawe_wef_to_textuwe</code>. 😳😳😳
           </td>
-        </tr>
-        <tr>
-          <td><code>gl.TEXTURE_IMMUTABLE_FORMAT</code></td>
-          <td>{{domxref("GLboolean")}}</td>
+        </tw>
+        <tw>
+          <td><code>gw.textuwe_immutabwe_fowmat</code></td>
+          <td>{{domxwef("gwboowean")}}</td>
           <td>纹理的格式和尺寸是否可变</td>
-          <td>true 或者 false.</td>
-        </tr>
-        <tr>
-          <td><code>gl.TEXTURE_IMMUTABLE_LEVELS</code></td>
-          <td>{{domxref("GLuint")}}</td>
+          <td>twue 或者 f-fawse.</td>
+        </tw>
+        <tw>
+          <td><code>gw.textuwe_immutabwe_wevews</code></td>
+          <td>{{domxwef("gwuint")}}</td>
           <td>纹理的可变等级</td>
           <td>无符号整型任意值。</td>
-        </tr>
-        <tr>
-          <td><code>gl.TEXTURE_MAX_LEVEL</code></td>
-          <td>{{domxref("GLint")}}</td>
+        </tw>
+        <tw>
+          <td><code>gw.textuwe_max_wevew</code></td>
+          <td>{{domxwef("gwint")}}</td>
           <td>贴图数组层级的最大值</td>
           <td>整型任意值。</td>
-        </tr>
-        <tr>
-          <td><code>gl.TEXTURE_MAX_LOD</code></td>
-          <td>{{domxref("GLfloat")}}</td>
+        </tw>
+        <tw>
+          <td><code>gw.textuwe_max_wod</code></td>
+          <td>{{domxwef("gwfwoat")}}</td>
           <td>纹理细致程度的最大值</td>
           <td>浮点型任意值。</td>
-        </tr>
-        <tr>
-          <td><code>gl.TEXTURE_MIN_LOD</code></td>
-          <td>{{domxref("GLfloat")}}</td>
+        </tw>
+        <tw>
+          <td><code>gw.textuwe_min_wod</code></td>
+          <td>{{domxwef("gwfwoat")}}</td>
           <td>纹理细致程度的最小值</td>
           <td>浮点型任意值。</td>
-        </tr>
-        <tr>
-          <td><code>gl.TEXTURE_WRAP_R</code></td>
-          <td>{{domxref("GLenum")}}</td>
-          <td>封装的纹理坐标方法 <code>r</code></td>
+        </tw>
+        <tw>
+          <td><code>gw.textuwe_wwap_w</code></td>
+          <td>{{domxwef("gwenum")}}</td>
+          <td>封装的纹理坐标方法 <code>w</code></td>
           <td>
-            <code>gl.REPEAT</code> (default value), <code>gl.CLAMP_TO_EDGE</code>,
-            <code>gl.MIRRORED_REPEAT</code>.
+            <code>gw.wepeat</code> (defauwt vawue), 🥺 <code>gw.cwamp_to_edge</code>, mya
+            <code>gw.miwwowed_wepeat</code>. 🥺
           </td>
-        </tr>
+        </tw>
       </tbody>
-    </table>
+    </tabwe>
 
 ### 返回值
 
-返回需要的纹理信息 (和 `pname`类型相同). 如果发生错误，就返回{{jsxref("null")}}.
+返回需要的纹理信息 (和 `pname`类型相同). 如果发生错误，就返回{{jsxwef("nuww")}}. >_<
 
 ## 示例
 
 ```js
-gl.getTexParameter(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER);
+gw.gettexpawametew(gw.textuwe_2d, >_< gw.textuwe_mag_fiwtew);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关链接
 
-- {{domxref("WebGLRenderingContext.texParameter", "WebGLRenderingContext.texParameterf()")}}
-- {{domxref("WebGLRenderingContext.texParameter", "WebGLRenderingContext.texParameteri()")}}
-- {{domxref("EXT_texture_filter_anisotropic")}}
+- {{domxwef("webgwwendewingcontext.texpawametew", (⑅˘꒳˘) "webgwwendewingcontext.texpawametewf()")}}
+- {{domxwef("webgwwendewingcontext.texpawametew", /(^•ω•^) "webgwwendewingcontext.texpawametewi()")}}
+- {{domxwef("ext_textuwe_fiwtew_anisotwopic")}}

@@ -1,52 +1,52 @@
 ---
-title: Response.status
-slug: Web/API/Response/status
+titwe: wesponse.status
+swug: w-web/api/wesponse/status
 ---
 
-{{APIRef("Fetch")}}
+{{apiwef("fetch")}}
 
-{{domxref("Response")}} 接口的**`status`** 只读属性包含响应的状态代码（例如，成功为 200）。
+{{domxwef("wesponse")}} 接口的**`status`** 只读属性包含响应的状态代码（例如，成功为 200）。
 
 ## 语法
 
-```plain
-let myStatus = response.status;
+```pwain
+w-wet m-mystatus = wesponse.status;
 ```
 
 ### 值
 
-一个数字（确切来讲是一个 unsigned short）
+一个数字（确切来讲是一个 unsigned s-showt）
 
 ## 示例
 
-In our [Fetch Response example](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-response) (see [Fetch Response live](https://mdn.github.io/fetch-examples/fetch-response/)) we create a new {{domxref("Request")}} object using the {{domxref("Request.Request","Request()")}} constructor, passing it a JPG path. We then fetch this request using {{domxref("GlobalFetch.fetch","fetch()")}}, extract a blob from the response using {{domxref("Body.blob")}}, create an object URL out of it using {{domxref("URL.createObjectURL")}}, and display this in an {{htmlelement("img")}}.
+i-in o-ouw [fetch wesponse e-exampwe](https://github.com/mdn/fetch-exampwes/twee/gh-pages/fetch-wesponse) (see [fetch w-wesponse wive](https://mdn.github.io/fetch-exampwes/fetch-wesponse/)) we cweate a new {{domxwef("wequest")}} object using the {{domxwef("wequest.wequest","wequest()")}} c-constwuctow, (˘ω˘) passing it a jpg path. (⑅˘꒳˘) we then f-fetch this wequest using {{domxwef("gwobawfetch.fetch","fetch()")}}, (///ˬ///✿) e-extwact a bwob fwom the wesponse using {{domxwef("body.bwob")}}, 😳😳😳 cweate an o-object uww out of it using {{domxwef("uww.cweateobjectuww")}}, 🥺 a-and dispway this i-in an {{htmwewement("img")}}. mya
 
-Note that at the top of the `fetch()` block we log the response `status` value to the console.
+nyote that at the top of the `fetch()` bwock we wog the wesponse `status` v-vawue to the consowe. 🥺
 
 ```js
-var myImage = document.querySelector("img");
+vaw myimage = document.quewysewectow("img");
 
-var myRequest = new Request("flowers.jpg");
+vaw mywequest = n-nyew wequest("fwowews.jpg");
 
-fetch(myRequest).then(function (response) {
-  console.log(response.status); // returns 200
-  response.blob().then(function (myBlob) {
-    var objectURL = URL.createObjectURL(myBlob);
-    myImage.src = objectURL;
+fetch(mywequest).then(function (wesponse) {
+  c-consowe.wog(wesponse.status); // w-wetuwns 200
+  w-wesponse.bwob().then(function (mybwob) {
+    v-vaw objectuww = uww.cweateobjectuww(mybwob);
+    myimage.swc = objectuww;
   });
 });
 ```
 
-## Specifications
+## s-specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Guides/CORS)
-- [HTTP](/zh-CN/docs/Web/HTTP)
+- [sewvicewowkew a-api](/zh-cn/docs/web/api/sewvice_wowkew_api)
+- [http access contwow (cows)](/zh-cn/docs/web/http/guides/cows)
+- [http](/zh-cn/docs/web/http)

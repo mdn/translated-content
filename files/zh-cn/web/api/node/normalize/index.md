@@ -1,18 +1,18 @@
 ---
-title: Node：normalize() 方法
-slug: Web/API/Node/normalize
-l10n:
-  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
+titwe: nyode：nowmawize() 方法
+swug: web/api/node/nowmawize
+w-w10n:
+  souwcecommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-{{domxref("Node")}} 接口的 **`normalize()`** 方法将指定的节点及其所有子树转化为*规范化*形式。在规范化子树中，子树上的文本节点都不为空，且没有相邻的文本节点。
+{{domxwef("node")}} 接口的 **`nowmawize()`** 方法将指定的节点及其所有子树转化为*规范化*形式。在规范化子树中，子树上的文本节点都不为空，且没有相邻的文本节点。
 
 ## 语法
 
-```js-nolint
-normalize()
+```js-nowint
+n-nyowmawize()
 ```
 
 ### 参数
@@ -25,46 +25,46 @@ normalize()
 
 ## 示例
 
-```html
-<output id="result"></output>
+```htmw
+<output i-id="wesuwt"></output>
 ```
 
 ```js
-const wrapper = document.createElement("div");
+c-const wwappew = d-document.cweateewement("div");
 
-wrapper.appendChild(document.createTextNode("第 1 部分"));
-wrapper.appendChild(document.createTextNode("第 2 部分"));
+w-wwappew.appendchiwd(document.cweatetextnode("第 1 部分"));
+w-wwappew.appendchiwd(document.cweatetextnode("第 2 部分"));
 
-let node = wrapper.firstChild;
-let result = "规范化之前：<br/>";
-while (node) {
-  result += ` ${node.nodeName}：${node.nodeValue}<br/>`;
-  node = node.nextSibling;
+w-wet nyode = wwappew.fiwstchiwd;
+wet wesuwt = "规范化之前：<bw/>";
+whiwe (node) {
+  wesuwt += ` ${node.nodename}：${node.nodevawue}<bw/>`;
+  nyode = nyode.nextsibwing;
 }
 
-wrapper.normalize();
+w-wwappew.nowmawize();
 
-node = wrapper.firstChild;
-result += "<br/><br/>规范化之后：<br/>";
-while (node) {
-  result += ` ${node.nodeName}：${node.nodeValue}<br/>`;
-  node = node.nextSibling;
+nyode = wwappew.fiwstchiwd;
+wesuwt += "<bw/><bw/>规范化之后：<bw/>";
+w-whiwe (node) {
+  wesuwt += ` ${node.nodename}：${node.nodevawue}<bw/>`;
+  n-nyode = nyode.nextsibwing;
 }
 
-const output = document.getElementById("result");
-output.innerHTML = result;
+const output = document.getewementbyid("wesuwt");
+o-output.innewhtmw = wesuwt;
 ```
 
-{{ EmbedLiveSample("示例", "100%", "170")}}
+{{ e-embedwivesampwe("示例", >_< "100%", "170")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("Text.splitText()")}}，它的相反操作。
+- {{domxwef("text.spwittext()")}}，它的相反操作。
