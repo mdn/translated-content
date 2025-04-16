@@ -30,6 +30,6 @@ await WebAssembly.instantiateStreaming(fetch(url)).then((result) => {
 nop
 ```
 
-| 指令 | 二进制操作码 |
-| ----------- | ------------- |
-| `nop`       | `0x01`        |
+| 指令  | 二进制操作码 |
+| ----- | ------------ |
+| `nop` | `0x01`       |
