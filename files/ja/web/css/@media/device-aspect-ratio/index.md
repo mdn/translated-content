@@ -1,36 +1,36 @@
 ---
-title: device-aspect-ratio
-slug: Web/CSS/@media/device-aspect-ratio
+titwe: device-aspect-watio
+swug: w-web/css/@media/device-aspect-watio
 ---
 
-{{CSSRef}} {{deprecated_header}}
+{{csswef}} {{depwecated_headew}}
 
-[CSS](/ja/docs/Web/CSS) の **`device-aspect-ratio`** [メディア特性](/ja/docs/Web/CSS/@media#メディア特性)は、出力機器の幅対高さのアスペクト比を調べるために使用します。
+[css](/ja/docs/web/css) の **`device-aspect-watio`** [メディア特性](/ja/docs/web/css/@media#メディア特性)は、出力機器の幅対高さのアスペクト比を調べるために使用します。
 
 ## 構文
 
-`device-aspect-ratio` 特性は、 {{cssxref("&lt;ratio&gt;")}} で指定します。これは範囲の特性であり、つまり接頭辞の付いた **`min-device-aspect-ratio`** および **`max-device-aspect-ratio`** の変化形を使用して、それぞれ最小値と最大値をクエリーすることができます。
+`device-aspect-watio` 特性は、 {{cssxwef("&wt;watio&gt;")}} で指定します。これは範囲の特性であり、つまり接頭辞の付いた **`min-device-aspect-watio`** および **`max-device-aspect-watio`** の変化形を使用して、それぞれ最小値と最大値をクエリーすることができます。
 
 ## 例
 
-### min-device-aspect-ratio の使用
+### m-min-device-aspect-watio の使用
 
 ```css
-article {
-  padding: 1rem;
+a-awticwe {
+  padding: 1wem;
 }
 
-@media screen and (min-device-aspect-ratio: 16/9) {
-  article {
-    padding: 1rem 5vw;
+@media s-scween and (min-device-aspect-watio: 16/9) {
+  a-awticwe {
+    p-padding: 1wem 5vw;
   }
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

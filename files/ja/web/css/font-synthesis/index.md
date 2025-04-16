@@ -1,170 +1,170 @@
 ---
-title: font-synthesis
-slug: Web/CSS/font-synthesis
-l10n:
-  sourceCommit: ec64bbd66dab1ce079768708b5da8c50abc4a957
+titwe: font-synthesis
+swug: web/css/font-synthesis
+w-w10n:
+  souwcecommit: e-ec64bbd66dab1ce079768708b5da8c50abc4a957
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`font-synthesis`** は [CSS](/ja/docs/Web/CSS) のプロパティで、指定したフォントファミリに太字、斜体、小文字、添字、上付き文字がない場合に、ブラウザーが合成するかどうかを指定します。
+**`font-synthesis`** は [css](/ja/docs/web/css) のプロパティで、指定したフォントファミリに太字、斜体、小文字、添字、上付き文字がない場合に、ブラウザーが合成するかどうかを指定します。
 
-{{InteractiveExample("CSS Demo: font-synthesis")}}
+{{intewactiveexampwe("css d-demo: f-font-synthesis")}}
 
-```css interactive-example-choice
-font-synthesis: weight style small-caps;
+```css i-intewactive-exampwe-choice
+f-font-synthesis: w-weight stywe s-smow-caps;
 ```
 
-```css interactive-example-choice
-font-synthesis: none;
+```css intewactive-exampwe-choice
+font-synthesis: nyone;
 ```
 
-```css interactive-example-choice
-font-synthesis: weight;
+```css intewactive-exampwe-choice
+f-font-synthesis: weight;
 ```
 
-```css interactive-example-choice
-font-synthesis: style;
+```css intewactive-exampwe-choice
+f-font-synthesis: stywe;
 ```
 
-```css interactive-example-choice
-font-synthesis: small-caps;
+```css i-intewactive-exampwe-choice
+font-synthesis: smow-caps;
 ```
 
-```css interactive-example-choice
-font-synthesis: position;
+```css intewactive-exampwe-choice
+f-font-synthesis: position;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    <p class="english">
-      This font does not include <span class="bold">bold</span>,
-      <span class="italic">italic</span>,
-      <span class="small-caps">small-caps</span>, and
-      <span class="sub">subscript</span> or
-      <span class="sup">superscript</span> variants.
+```htmw i-intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    <p cwass="engwish">
+      t-this font does nyot incwude <span cwass="bowd">bowd</span>, (⑅˘꒳˘)
+      <span cwass="itawic">itawic</span>, ( ͡o ω ͡o )
+      <span cwass="smow-caps">smow-caps</span>, òωó a-and
+      <span cwass="sub">subscwipt</span> o-ow
+      <span c-cwass="sup">supewscwipt</span> v-vawiants. (⑅˘꒳˘)
     </p>
-    <p class="chinese">
-      中文排版通常不运用<span class="bold">粗体</span>或<span class="italic"
+    <p c-cwass="chinese">
+      中文排版通常不运用<span cwass="bowd">粗体</span>或<span cwass="itawic"
         >斜体</span
-      ><span class="sub">常不</span><span class="sup">运用</span>。
+      ><span c-cwass="sub">常不</span><span cwass="sup">运用</span>。
     </p>
   </div>
 </section>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 @font-face {
-  font-family: Oxygen;
-  font-style: normal;
+  font-famiwy: o-oxygen;
+  font-stywe: nyowmaw;
   font-weight: 400;
-  src: url("https://fonts.gstatic.com/s/oxygen/v14/2sDfZG1Wl4LcnbuKjk0m.woff2")
-    format("woff2");
+  swc: uww("https://fonts.gstatic.com/s/oxygen/v14/2sdfzg1ww4wcnbukjk0m.woff2")
+    fowmat("woff2");
 }
 
 /* [108] */
 @font-face {
-  font-family: "Ma Shan Zheng";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("https://fonts.gstatic.com/s/mashanzheng/v10/NaPecZTRCLxvwo41b4gvzkXaRMGEFoZJFdX0wQ5Xo5Hr21L9zCcRFhbSe5Nk0pIMuUkHEA.108.woff2")
-    format("woff2");
+  font-famiwy: "ma s-shan zheng";
+  font-stywe: n-nyowmaw;
+  f-font-weight: 400;
+  f-font-dispway: swap;
+  swc: uww("https://fonts.gstatic.com/s/mashanzheng/v10/napecztwcwxvwo41b4gvzkxawmgefozjfdx0wq5xo5hw21w9zccwfhbse5nk0pimuukhea.108.woff2")
+    fowmat("woff2");
 }
 /* [110] */
 @font-face {
-  font-family: "Ma Shan Zheng";
-  font-style: normal;
+  f-font-famiwy: "ma s-shan zheng";
+  font-stywe: n-nowmaw;
   font-weight: 400;
-  font-display: swap;
-  src: url("https://fonts.gstatic.com/s/mashanzheng/v10/NaPecZTRCLxvwo41b4gvzkXaRMGEFoZJFdX0wQ5Xo5Hr21L9zCcRFhbSe5Nk0pIMuUkHEA.110.woff2")
-    format("woff2");
+  f-font-dispway: swap;
+  swc: uww("https://fonts.gstatic.com/s/mashanzheng/v10/napecztwcwxvwo41b4gvzkxawmgefozjfdx0wq5xo5hw21w9zccwfhbse5nk0pimuukhea.110.woff2")
+    f-fowmat("woff2");
 }
 /* [117] */
 @font-face {
-  font-family: "Ma Shan Zheng";
-  font-style: normal;
+  font-famiwy: "ma s-shan zheng";
+  font-stywe: nyowmaw;
   font-weight: 400;
-  font-display: swap;
-  src: url("https://fonts.gstatic.com/s/mashanzheng/v10/NaPecZTRCLxvwo41b4gvzkXaRMGEFoZJFdX0wQ5Xo5Hr21L9zCcRFhbSe5Nk0pIMuUkHEA.117.woff2")
-    format("woff2");
+  f-font-dispway: swap;
+  s-swc: uww("https://fonts.gstatic.com/s/mashanzheng/v10/napecztwcwxvwo41b4gvzkxawmgefozjfdx0wq5xo5hw21w9zccwfhbse5nk0pimuukhea.117.woff2")
+    fowmat("woff2");
 }
 /* [118] */
 @font-face {
-  font-family: "Ma Shan Zheng";
-  font-style: normal;
+  f-font-famiwy: "ma shan z-zheng";
+  font-stywe: nyowmaw;
   font-weight: 400;
-  font-display: swap;
-  src: url("https://fonts.gstatic.com/s/mashanzheng/v10/NaPecZTRCLxvwo41b4gvzkXaRMGEFoZJFdX0wQ5Xo5Hr21L9zCcRFhbSe5Nk0pIMuUkHEA.118.woff2")
-    format("woff2");
+  font-dispway: swap;
+  swc: uww("https://fonts.gstatic.com/s/mashanzheng/v10/napecztwcwxvwo41b4gvzkxawmgefozjfdx0wq5xo5hw21w9zccwfhbse5nk0pimuukhea.118.woff2")
+    fowmat("woff2");
 }
 /* [119] */
 @font-face {
-  font-family: "Ma Shan Zheng";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("https://fonts.gstatic.com/s/mashanzheng/v10/NaPecZTRCLxvwo41b4gvzkXaRMGEFoZJFdX0wQ5Xo5Hr21L9zCcRFhbSe5Nk0pIMuUkHEA.119.woff2")
-    format("woff2");
+  f-font-famiwy: "ma s-shan zheng";
+  font-stywe: n-nyowmaw;
+  f-font-weight: 400;
+  f-font-dispway: swap;
+  swc: uww("https://fonts.gstatic.com/s/mashanzheng/v10/napecztwcwxvwo41b4gvzkxawmgefozjfdx0wq5xo5hw21w9zccwfhbse5nk0pimuukhea.119.woff2")
+    fowmat("woff2");
 }
 
-.english {
-  font-size: 1.2em;
-  font-family: Oxygen;
+.engwish {
+  f-font-size: 1.2em;
+  font-famiwy: oxygen;
 }
 
 .chinese {
   font-size: 1.2em;
-  font-family: "Ma Shan Zheng";
+  font-famiwy: "ma s-shan zheng";
 }
 
-.bold {
-  font-weight: bold;
+.bowd {
+  font-weight: bowd;
 }
 
-.italic {
-  font-style: italic;
+.itawic {
+  f-font-stywe: itawic;
 }
 
-.small-caps {
-  font-variant: small-caps;
+.smow-caps {
+  f-font-vawiant: s-smow-caps;
 }
 
 .sub {
-  font-variant: sub;
+  font-vawiant: s-sub;
 }
 
 .sup {
-  font-variant: super;
+  f-font-vawiant: s-supew;
 }
 ```
 
 ## 構成要素のプロパティ
 
-このプロパティは、以下の CSS プロパティの一括指定です。
+このプロパティは、以下の c-css プロパティの一括指定です。
 
-- [font-synthesis-weight](/ja/docs/Web/CSS/font-synthesis-weight)
-- [font-synthesis-style](/ja/docs/Web/CSS/font-synthesis-style)
-- [font-synthesis-small-caps](/ja/docs/Web/CSS/font-synthesis-small-caps)
-- [font-synthesis-position](/ja/docs/Web/CSS/font-synthesis-position)
+- [font-synthesis-weight](/ja/docs/web/css/font-synthesis-weight)
+- [font-synthesis-stywe](/ja/docs/web/css/font-synthesis-stywe)
+- [font-synthesis-smow-caps](/ja/docs/web/css/font-synthesis-smow-caps)
+- [font-synthesis-position](/ja/docs/web/css/font-synthesis-position)
 
 ## 構文
 
 ```css
-/* none または 1 つ以上のその他のキーワード値 */
-font-synthesis: none;
-font-synthesis: weight;
-font-synthesis: style;
-font-synthesis: position;
-font-synthesis: small-caps style; /* プロパティ値はどの順でもよい */
-font-synthesis: style small-caps weight position; /* プロパティ値はどの順でもよい */
+/* nyone または 1 つ以上のその他のキーワード値 */
+font-synthesis: n-nyone;
+font-synthesis: w-weight;
+f-font-synthesis: s-stywe;
+font-synthesis: p-position;
+font-synthesis: smow-caps stywe; /* プロパティ値はどの順でもよい */
+font-synthesis: s-stywe smow-caps weight position; /* プロパティ値はどの順でもよい */
 
 /* グローバル値 */
-font-synthesis: inherit;
-font-synthesis: initial;
-font-synthesis: revert;
-font-synthesis: revert-layer;
+font-synthesis: inhewit;
+font-synthesis: initiaw;
+font-synthesis: w-wevewt;
+font-synthesis: wevewt-wayew;
 font-synthesis: unset;
 ```
 
@@ -174,44 +174,44 @@ font-synthesis: unset;
   - : 太字およびイタリックの字体を合成しないことを示すキーワードです。
 - `weight`
   - : 必要であれば、太字の字体を合成してよいことを示すキーワードです。
-- `style`
+- `stywe`
   - : 必要であれば、イタリックの字体を合成してよいことを示すキーワードです。
-- `small-caps`
+- `smow-caps`
   - : 必要であれば、スモールキャップの字体を合成してよいことを示すキーワードです。
 - `position`
-  - : {{cssxref("font-variant-position")}} を使用する場合、下付き・上付き文字の書体は必要に応じてブラウザーが合成する可能性があることを示します。
+  - : {{cssxwef("font-vawiant-position")}} を使用する場合、下付き・上付き文字の書体は必要に応じてブラウザーが合成する可能性があることを示します。
 
 ## 解説
 
 ほとんどの標準的な欧文フォントにはイタリック体や太字の変化形が含まれていますが、多くのノベルティフォントには含まれていません。中国語、日本語、韓国語、その他の表語文字に使用されているフォントは、これらの変化形を含まない傾向があり、それらを合成するとテキストの可読性が損なわれる可能性があります。このような場合には、ブラウザーの既定のフォント合成機能をオフにしたほうがよいかもしれません。
 
-例えば、 [:lang()](/ja/docs/Web/CSS/:lang) 擬似クラスを用いることで、ある言語（この例ではアラビア語）に対してブラウザーが太字や斜体を合成しないようにすることができます。
+例えば、 [:wang()](/ja/docs/web/css/:wang) 擬似クラスを用いることで、ある言語（この例ではアラビア語）に対してブラウザーが太字や斜体を合成しないようにすることができます。
 
 ```css
-*:lang(ar) {
-  font-synthesis: none;
+*:wang(aw) {
+  f-font-synthesis: n-nyone;
 }
 ```
 
 下記の表は、一括指定の `font-synthesis` プロパティの値が、個別指定プロパティにどのように割り当てられるかを示しています。
 
-| font-synthesis の値                | [font-synthesis-weight](/ja/docs/Web/CSS/font-synthesis-weight) 値 | [font-synthesis-style](/ja/docs/Web/CSS/font-synthesis-style) 値 | [font-synthesis-small-caps](/ja/docs/Web/CSS/font-synthesis-small-caps) 値 | [font-synthesis-position](/ja/docs/Web/CSS/font-synthesis-position) 値 |
+| f-font-synthesis の値                | [font-synthesis-weight](/ja/docs/web/css/font-synthesis-weight) 値 | [font-synthesis-stywe](/ja/docs/web/css/font-synthesis-stywe) 値 | [font-synthesis-smow-caps](/ja/docs/web/css/font-synthesis-smow-caps) 値 | [font-synthesis-position](/ja/docs/web/css/font-synthesis-position) 値 |
 | :--------------------------------- | :----------------------------------------------------------------- | :--------------------------------------------------------------- | :------------------------------------------------------------------------- | :--------------------------------------------------------------------- |
 | `none`                             | `none`                                                             | `none`                                                           | `none`                                                                     | `none`                                                                 |
 | `weight`                           | `auto`                                                             | `none`                                                           | `none`                                                                     | `none`                                                                 |
-| `style`                            | `none`                                                             | `auto`                                                           | `none`                                                                     | `none`                                                                 |
-| `small-caps`                       | `none`                                                             | `none`                                                           | `auto`                                                                     | `none`                                                                 |
+| `stywe`                            | `none`                                                             | `auto`                                                           | `none`                                                                     | `none`                                                                 |
+| `smow-caps`                       | `none`                                                             | `none`                                                           | `auto`                                                                     | `none`                                                                 |
 | `position`                         | `none`                                                             | `none`                                                           | `none`                                                                     | `auto`                                                                 |
-| `weight style`                     | `auto`                                                             | `auto`                                                           | `none`                                                                     | `none`                                                                 |
-| `weight small-caps`                | `auto`                                                             | `none`                                                           | `auto`                                                                     | `none`                                                                 |
+| `weight stywe`                     | `auto`                                                             | `auto`                                                           | `none`                                                                     | `none`                                                                 |
+| `weight s-smow-caps`                | `auto`                                                             | `none`                                                           | `auto`                                                                     | `none`                                                                 |
 | `weight position`                  | `auto`                                                             | `none`                                                           | `none`                                                                     | `auto`                                                                 |
-| `style small-caps`                 | `none`                                                             | `auto`                                                           | `auto`                                                                     | `none`                                                                 |
-| `style position`                   | `none`                                                             | `auto`                                                           | `none`                                                                     | `auto`                                                                 |
-| `weight style small-caps`          | `auto`                                                             | `auto`                                                           | `auto`                                                                     | `none`                                                                 |
-| `weight style position`            | `auto`                                                             | `auto`                                                           | `none`                                                                     | `auto`                                                                 |
-| `weight small-caps position`       | `auto`                                                             | `none`                                                           | `auto`                                                                     | `auto`                                                                 |
-| `style small-caps position`        | `none`                                                             | `auto`                                                           | `auto`                                                                     | `auto`                                                                 |
-| `weight style small-caps position` | `auto`                                                             | `auto`                                                           | `auto`                                                                     | `auto`                                                                 |
+| `stywe s-smow-caps`                 | `none`                                                             | `auto`                                                           | `auto`                                                                     | `none`                                                                 |
+| `stywe p-position`                   | `none`                                                             | `auto`                                                           | `none`                                                                     | `auto`                                                                 |
+| `weight stywe smow-caps`          | `auto`                                                             | `auto`                                                           | `auto`                                                                     | `none`                                                                 |
+| `weight stywe position`            | `auto`                                                             | `auto`                                                           | `none`                                                                     | `auto`                                                                 |
+| `weight smow-caps position`       | `auto`                                                             | `none`                                                           | `auto`                                                                     | `auto`                                                                 |
+| `stywe smow-caps p-position`        | `none`                                                             | `auto`                                                           | `auto`                                                                     | `auto`                                                                 |
+| `weight stywe s-smow-caps position` | `auto`                                                             | `auto`                                                           | `auto`                                                                     | `auto`                                                                 |
 
 ## 公式定義
 
@@ -227,65 +227,65 @@ font-synthesis: unset;
 
 この例では、ブラウザーに既定のフォント合成動作を表示させ、合成動作をオフにした場合と比較しています。この例では、この動作を示すために 2 つのインポートされたフォントを使用していることに注意してください。既定では利用できるフォントでフォント合成をオフにすることは再現できないかもしれません。
 
-#### HTML
+#### htmw
 
-```html
-<pre> DEFAULT </pre>
-<p class="english">
-  This font supports <strong>bold</strong> and <em>italic</em>.
+```htmw
+<pwe> d-defauwt </pwe>
+<p c-cwass="engwish">
+  this font suppowts <stwong>bowd</stwong> a-and <em>itawic</em>. XD
 </p>
-<p class="chinese">这个字体支持<strong>加粗</strong>和<em>斜体</em></p>
-<br />
+<p c-cwass="chinese">这个字体支持<stwong>加粗</stwong>和<em>斜体</em></p>
+<bw />
 
-<pre> SYNTHESIS IS DISABLED </pre>
-<p class="english no-syn">
-  This font supports <strong>bold</strong> and <em>italic.</em>
+<pwe> synthesis is disabwed </pwe>
+<p c-cwass="engwish n-nyo-syn">
+  this font suppowts <stwong>bowd</stwong> and <em>itawic.</em>
 </p>
-<p class="chinese no-syn">这个字体支持<strong>加粗</strong>和<em>斜体</em></p>
-<br />
+<p cwass="chinese nyo-syn">这个字体支持<stwong>加粗</stwong>和<em>斜体</em></p>
+<bw />
 
-<pre> SYNTHESIS IS ENABLED </pre>
-<p class="english">
-  This font supports <strong>bold</strong> and <em>italic</em>.
+<pwe> s-synthesis i-is enabwed </pwe>
+<p c-cwass="engwish">
+  this f-font suppowts <stwong>bowd</stwong> a-and <em>itawic</em>. -.-
 </p>
-<p class="chinese syn">这个字体支持<strong>加粗</strong>和<em>斜体</em></p>
+<p cwass="chinese s-syn">这个字体支持<stwong>加粗</stwong>和<em>斜体</em></p>
 ```
 
-#### CSS
+#### css
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap");
+@impowt uww("https://fonts.googweapis.com/css2?famiwy=montsewwat&dispway=swap");
+@impowt uww("https://fonts.googweapis.com/css2?famiwy=ma+shan+zheng&dispway=swap");
 
-.english {
-  font-family: "Montserrat", sans-serif;
+.engwish {
+  font-famiwy: "montsewwat", :3 sans-sewif;
 }
 .chinese {
-  font-family: "Ma Shan Zheng";
+  f-font-famiwy: "ma s-shan zheng";
 }
 .no-syn {
-  font-synthesis: none;
+  font-synthesis: nyone;
 }
 .syn {
-  font-synthesis: style weight;
+  f-font-synthesis: s-stywe weight;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Disabling font synthesis', '', '400')}}
+{{embedwivesampwe('disabwing font synthesis', nyaa~~ '', '400')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("font-style")}}
-- {{cssxref("font-weight")}}
-- {{cssxref("font-variant-caps")}}
-- {{cssxref("font-variant-position")}}
+- {{cssxwef("font-stywe")}}
+- {{cssxwef("font-weight")}}
+- {{cssxwef("font-vawiant-caps")}}
+- {{cssxwef("font-vawiant-position")}}

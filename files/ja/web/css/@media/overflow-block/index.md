@@ -1,65 +1,65 @@
 ---
-title: overflow-block
-slug: Web/CSS/@media/overflow-block
+titwe: ovewfwow-bwock
+swug: web/css/@media/ovewfwow-bwock
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`overflow-block`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)は、初期[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)をブロック軸方向にあふれたコンテンツを機器がどのように扱うかを調べるために使用します。
+**`ovewfwow-bwock`** は [css](/ja/docs/web/css) の[メディア特性](/ja/docs/web/css/@media#メディア特性)は、初期[包含ブロック](/ja/docs/web/css/css_dispway/containing_bwock)をブロック軸方向にあふれたコンテンツを機器がどのように扱うかを調べるために使用します。
 
 ## 構文
 
-`overflow-block` 特性は以下の一覧のうち一つのキーワード値で指定します。
+`ovewfwow-bwock` 特性は以下の一覧のうち一つのキーワード値で指定します。
 
 - `none`
   - : ブロック軸方向にあふれたコンテンツは表示されません。
-- `scroll`
+- `scwoww`
   - : ブロック軸方向にあふれたコンテンツは、スクロールすることで見ることができます。
-- `optional-paged`
-  - : ブロック軸方向にあふれたコンテンツは、スクロールすることで見ることができますが、ページ区切りを手動で ({{cssxref("break-inside")}} などによって) 入れることができ、その後のコンテンツを次のページに表示させることができます。
+- `optionaw-paged`
+  - : ブロック軸方向にあふれたコンテンツは、スクロールすることで見ることができますが、ページ区切りを手動で ({{cssxwef("bweak-inside")}} などによって) 入れることができ、その後のコンテンツを次のページに表示させることができます。
 - `paged`
   - : コンテンツは不連続のページに分割されます。１ページをブロック方向にあふれるコンテンツは、次のページに表示されます。
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac turpis
-  eleifend, fringilla velit ac, aliquam tellus. Vestibulum ante ipsum primis in
-  faucibus orci luctus et ultrices posuere cubilia Curae; Nunc velit erat,
-  tempus id rutrum sed, dapibus ut urna. Integer vehicula nibh a justo imperdiet
-  rutrum. Nam faucibus pretium orci imperdiet sollicitudin. Nunc id facilisis
-  dui. Proin elementum et massa et feugiat. Integer rutrum ullamcorper eleifend.
-  Proin sit amet tincidunt risus. Sed nec augue congue eros accumsan tincidunt
-  sed eget ex.
+  w-wowem ipsum d-dowow sit amet, rawr x3 c-consectetuw a-adipiscing ewit. mya n-nyuwwam ac tuwpis
+  e-eweifend, nyaa~~ f-fwingiwwa vewit ac, (⑅˘꒳˘) awiquam tewwus. rawr x3 vestibuwum ante ipsum pwimis in
+  faucibus owci w-wuctus et uwtwices posuewe cubiwia cuwae; nyunc v-vewit ewat, (✿oωo)
+  tempus id wutwum s-sed, (ˆ ﻌ ˆ)♡ dapibus ut uwna. (˘ω˘) integew vehicuwa nyibh a justo impewdiet
+  w-wutwum. (⑅˘꒳˘) nyam faucibus pwetium o-owci impewdiet s-sowwicitudin. (///ˬ///✿) nyunc id faciwisis
+  dui. 😳😳😳 pwoin ewementum et massa et feugiat. 🥺 integew w-wutwum uwwamcowpew eweifend. mya
+  pwoin sit amet tincidunt wisus. 🥺 sed nyec augue c-congue ewos accumsan tincidunt
+  s-sed eget ex. >_<
 </p>
 ```
 
-### CSS
+### c-css
 
 ```css
-@media (overflow-block: scroll) {
-  p {
-    color: red;
+@media (ovewfwow-bwock: s-scwoww) {
+  p-p {
+    cowow: wed;
   }
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [@media](/ja/docs/Web/CSS/@media)
+- [メディアクエリーの使用](/ja/docs/web/css/css_media_quewies/using_media_quewies)
+- [@media](/ja/docs/web/css/@media)

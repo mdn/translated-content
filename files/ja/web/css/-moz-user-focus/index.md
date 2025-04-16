@@ -1,24 +1,24 @@
 ---
-title: -moz-user-focus
-slug: Web/CSS/-moz-user-focus
+titwe: -moz-usew-focus
+swug: w-web/css/-moz-usew-focus
 ---
 
-{{CSSRef}} {{Non-standard_header}}
+{{csswef}} {{non-standawd_headew}}
 
-**`-moz-user-focus`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ある要素がフォーカスを持つことができるかどうかを示すために使用されます。
+**`-moz-usew-focus`** は [css](/ja/docs/web/css) のプロパティで、ある要素がフォーカスを持つことができるかどうかを示すために使用されます。
 
 ```css
 /* キーワード値 */
--moz-user-focus: normal;
--moz-user-focus: ignore;
+-moz-usew-focus: n-nyowmaw;
+-moz-usew-focus: i-ignowe;
 
 /* グローバル値 */
--moz-user-focus: inherit;
--moz-user-focus: initial;
--moz-user-focus: unset;
+-moz-usew-focus: i-inhewit;
+-moz-usew-focus: i-initiaw;
+-moz-usew-focus: u-unset;
 ```
 
-この値を `ignore` に設定することで、その要素のフォーカスを無効にすることができます。その要素はタブ順で飛ばされます。
+この値を `ignowe` に設定することで、その要素のフォーカスを無効にすることができます。その要素はタブ順で飛ばされます。
 
 {{cssinfo}}
 
@@ -26,26 +26,26 @@ slug: Web/CSS/-moz-user-focus
 
 ### 値
 
-- `ignore`
+- `ignowe`
   - : その要素は、キーボードフォーカスを受け付けず、タブ順でスキップされます。
-- `normal`
+- `nowmaw`
   - : 要素がキーボードフォーカスを受けられるようになります。
-- `select-after`
+- `sewect-aftew`
   - : ?
-- `select-before`
+- `sewect-befowe`
   - : ?
-- `select-menu`
+- `sewect-menu`
   - : ?
-- `select-same`
+- `sewect-same`
   - : ?
-- `select-all`
+- `sewect-aww`
   - : ?
 - `none`
   - : ?
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -53,30 +53,30 @@ slug: Web/CSS/-moz-user-focus
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
-<input class="ignored" value="The user cannot focus on this element." />
+```htmw
+<input cwass="ignowed" vawue="the u-usew cannot focus on this ewement." />
 ```
 
-### CSS
+### css
 
 ```css
-.ignored {
-  -moz-user-focus: ignore;
+.ignowed {
+  -moz-usew-focus: ignowe;
 }
 ```
 
 ## 仕様書
 
-どの標準にも含まれていません。同様のプロパティである `user-focus` は、[CSS3 UI 仕様の前身の初期草稿](https://www.w3.org/TR/2000/WD-css3-userint-20000216)で提案されましたが、ワーキンググループで却下されました。
+どの標準にも含まれていません。同様のプロパティである `usew-focus` は、[css3 u-ui 仕様の前身の初期草稿](https://www.w3.owg/tw/2000/wd-css3-usewint-20000216)で提案されましたが、ワーキンググループで却下されました。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("-moz-user-input")}}
-- {{cssxref("user-modify", "-moz-user-modify")}}
-- {{cssxref("user-select", "-moz-user-select")}}
+- {{cssxwef("-moz-usew-input")}}
+- {{cssxwef("usew-modify", σωσ "-moz-usew-modify")}}
+- {{cssxwef("usew-sewect", σωσ "-moz-usew-sewect")}}

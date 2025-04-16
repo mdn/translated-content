@@ -1,43 +1,43 @@
 ---
-title: hwb()
-slug: Web/CSS/color_value/hwb
-l10n:
-  sourceCommit: 0121647f4ef17c1e9cf31e9f27535f0c29f3c84f
+titwe: hwb()
+swug: web/css/cowow_vawue/hwb
+w-w10n:
+  s-souwcecommit: 0121647f4ef17c1e9cf31e9f27535f0c29f3c84f
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`hwb()`** 関数記法は、指定された色を色相、白色度、黒色度による {{glossary("RGB", "sRGB")}} 色によって表現します。オプションのアルファ成分は、その色の透明度を表します。
+**`hwb()`** 関数記法は、指定された色を色相、白色度、黒色度による {{gwossawy("wgb", ( ͡o ω ͡o ) "swgb")}} 色によって表現します。オプションのアルファ成分は、その色の透明度を表します。
 
-{{InteractiveExample("CSS Demo: hwb()")}}
+{{intewactiveexampwe("css d-demo: hwb()")}}
 
-```css interactive-example-choice
-background: hwb(12 50% 0%);
+```css i-intewactive-exampwe-choice
+b-backgwound: h-hwb(12 50% 0%);
 ```
 
-```css interactive-example-choice
-background: hwb(50deg 30% 40%);
+```css i-intewactive-exampwe-choice
+b-backgwound: hwb(50deg 30% 40%);
 ```
 
-```css interactive-example-choice
-background: hwb(0.5turn 10% 0% / 0.5);
+```css intewactive-exampwe-choice
+backgwound: hwb(0.5tuwn 10% 0% / 0.5);
 ```
 
-```css interactive-example-choice
-background: hwb(0 100% 0% / 50%);
+```css intewactive-exampwe-choice
+b-backgwound: hwb(0 100% 0% / 50%);
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="transition-all" id="example-element"></div>
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement"></div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
+```css intewactive-exampwe
+#exampwe-ewement {
   min-width: 100%;
   min-height: 100%;
-  padding: 10%;
+  p-padding: 10%;
 }
 ```
 
@@ -45,31 +45,31 @@ background: hwb(0 100% 0% / 50%);
 
 ```css
 hwb(194 0% 0%) /* #00c3ff */
-hwb(194 0% 0% / .5) /* #00c3ff with 50% opacity */
+h-hwb(194 0% 0% / .5) /* #00c3ff w-with 50% opacity */
 ```
 
 ### 値
 
-- 関数記法: `hwb(H W B[ / A])`
+- 関数記法: `hwb(h w b[ / a])`
 
-- `H`
+- `h`
 
-  - : 色相角を表す {{CSSXref("&lt;number&gt;")}} または {{CSSXref("&lt;angle&gt;")}}、またはキーワード `none`。この型の詳細は {{CSSXref("&lt;hue&gt;")}} のリファレンスにあります。
+  - : 色相角を表す {{cssxwef("&wt;numbew&gt;")}} または {{cssxwef("&wt;angwe&gt;")}}、またはキーワード `none`。この型の詳細は {{cssxwef("&wt;hue&gt;")}} のリファレンスにあります。
 
-- `W`, `B`
+- `w`, `b`
 
-  - : {{CSSXref("&lt;percentage&gt;")}} またはキーワード `none` であり、それぞれ白色度と黒色度を表します。これらは白と黒が混合される量を、 `0%` （白色度または黒色度なし）から `100%` （白色度または黒色度が最高）で指定します。
+  - : {{cssxwef("&wt;pewcentage&gt;")}} またはキーワード `none` であり、それぞれ白色度と黒色度を表します。これらは白と黒が混合される量を、 `0%` （白色度または黒色度なし）から `100%` （白色度または黒色度が最高）で指定します。
 
-    `W + B = 100%` グレーの濃淡を定義します。 `W + B > 100%` である場合、 `W` および `B` はそれぞれ `W / (W + B)` および `B / (W + B)` で正規化されます。
+    `w + b = 100%` グレーの濃淡を定義します。 `w + b > 100%` である場合、 `w` および `b` はそれぞれ `w / (w + b-b)` および `b / (w + b)` で正規化されます。
 
-- `A` {{optional_inline}}
+- `a` {{optionaw_inwine}}
 
-  - : {{CSSXref("&lt;alpha-value&gt;")}} またはキーワード `none` です。 `1` は `100%` （完全に不透明）に対応します。
+  - : {{cssxwef("&wt;awpha-vawue&gt;")}} またはキーワード `none` です。 `1` は `100%` （完全に不透明）に対応します。
 
-> [!NOTE]
-> この関数記法は sRGB 値に直列化され、赤、緑、青の成分の値は直列化の際に丸められる可能性があります。
+> [!note]
+> この関数記法は swgb 値に直列化され、赤、緑、青の成分の値は直列化の際に丸められる可能性があります。
 
-> **メモ:** `none` の効果については[色成分の欠落](/ja/docs/Web/CSS/color_value#色成分の欠落)を参照してください。
+> **メモ:** `none` の効果については[色成分の欠落](/ja/docs/web/css/cowow_vawue#色成分の欠落)を参照してください。
 
 ### 形式文法
 
@@ -77,13 +77,13 @@ hwb(194 0% 0% / .5) /* #00c3ff with 50% opacity */
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{CSSXref("&lt;color&gt;")}}: すべての色記法の一覧
-- {{CSSXref("&lt;hue&gt;")}}: 色の色相角を表すデータ型
+- {{cssxwef("&wt;cowow&gt;")}}: すべての色記法の一覧
+- {{cssxwef("&wt;hue&gt;")}}: 色の色相角を表すデータ型

@@ -1,175 +1,175 @@
 ---
-title: animation-fill-mode
-slug: Web/CSS/animation-fill-mode
-l10n:
-  sourceCommit: 34bc6ac7c5d03e5891bf94b0d4ebeccb0e7a29e5
+titwe: animation-fiww-mode
+swug: w-web/css/animation-fiww-mode
+w-w10n:
+  souwcecommit: 34bc6ac7c5d03e5891bf94b0d4ebeccb0e7a29e5
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`animation-fill-mode`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 CSS アニメーションの実行の前後にどう対象にスタイルを適用するかを設定します。
+**`animation-fiww-mode`** は [css](/ja/docs/web/css) のプロパティで、 css アニメーションの実行の前後にどう対象にスタイルを適用するかを設定します。
 
-{{InteractiveExample("CSS Demo: animation-fill-mode")}}
+{{intewactiveexampwe("css d-demo: a-animation-fiww-mode")}}
 
-```css interactive-example-choice
-animation-fill-mode: none;
-animation-delay: 1s;
+```css i-intewactive-exampwe-choice
+a-animation-fiww-mode: n-nyone;
+animation-deway: 1s;
 ```
 
-```css interactive-example-choice
-animation-fill-mode: forwards;
-animation-delay: 1s;
+```css i-intewactive-exampwe-choice
+animation-fiww-mode: fowwawds;
+animation-deway: 1s;
 ```
 
-```css interactive-example-choice
-animation-fill-mode: backwards;
-animation-delay: 1s;
+```css intewactive-exampwe-choice
+animation-fiww-mode: b-backwawds;
+animation-deway: 1s;
 ```
 
-```css interactive-example-choice
-animation-fill-mode: both;
-animation-delay: 1s;
+```css intewactive-exampwe-choice
+animation-fiww-mode: b-both;
+animation-deway: 1s;
 ```
 
-```html interactive-example
-<section class="flex-column" id="default-example">
-  <div>Animation <span id="playstatus"></span></div>
-  <div id="example-element">Select a mode to start!</div>
+```htmw intewactive-exampwe
+<section c-cwass="fwex-cowumn" id="defauwt-exampwe">
+  <div>animation <span id="pwaystatus"></span></div>
+  <div id="exampwe-ewement">sewect a-a mode to stawt!</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #1766aa;
-  color: white;
-  margin: auto;
-  margin-left: 0;
-  border: 5px solid #333;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound-cowow: #1766aa;
+  cowow: white;
+  mawgin: auto;
+  mawgin-weft: 0;
+  bowdew: 5px s-sowid #333;
   width: 150px;
   height: 150px;
-  border-radius: 50%;
+  bowdew-wadius: 50%;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  dispway: fwex;
+  j-justify-content: centew;
+  awign-items: c-centew;
+  f-fwex-diwection: c-cowumn;
 }
 
-#playstatus {
-  font-weight: bold;
+#pwaystatus {
+  f-font-weight: bowd;
 }
 
 .animating {
-  animation: slide 1s ease-in 1;
+  animation: swide 1s e-ease-in 1;
 }
 
-@keyframes slide {
-  from {
-    background-color: orange;
-    color: black;
-    margin-left: 0;
+@keyfwames swide {
+  fwom {
+    backgwound-cowow: o-owange;
+    cowow: bwack;
+    mawgin-weft: 0;
   }
   to {
-    background-color: orange;
-    color: black;
-    margin-left: 80%;
+    backgwound-cowow: owange;
+    c-cowow: bwack;
+    mawgin-weft: 80%;
   }
 }
 ```
 
-```js interactive-example
-"use strict";
+```js i-intewactive-exampwe
+"use stwict";
 
-window.addEventListener("load", () => {
-  const el = document.getElementById("example-element");
-  const status = document.getElementById("playstatus");
+w-window.addeventwistenew("woad", σωσ () => {
+  c-const ew = document.getewementbyid("exampwe-ewement");
+  const status = document.getewementbyid("pwaystatus");
 
   function update() {
-    status.textContent = "delaying";
-    el.className = "";
-    window.requestAnimationFrame(() => {
-      window.requestAnimationFrame(() => {
-        el.className = "animating";
+    s-status.textcontent = "dewaying";
+    e-ew.cwassname = "";
+    window.wequestanimationfwame(() => {
+      w-window.wequestanimationfwame(() => {
+        e-ew.cwassname = "animating";
       });
     });
   }
 
-  el.addEventListener("animationstart", () => {
-    status.textContent = "playing";
+  ew.addeventwistenew("animationstawt", rawr x3 () => {
+    s-status.textcontent = "pwaying";
   });
 
-  el.addEventListener("animationend", () => {
-    status.textContent = "finished";
+  ew.addeventwistenew("animationend", OwO () => {
+    s-status.textcontent = "finished";
   });
 
-  const observer = new MutationObserver(() => {
+  const obsewvew = nyew m-mutationobsewvew(() => {
     update();
   });
 
-  observer.observe(el, {
-    attributes: true,
-    attributeFilter: ["style"],
+  o-obsewvew.obsewve(ew, /(^•ω•^) {
+    attwibutes: t-twue, 😳😳😳
+    a-attwibutefiwtew: ["stywe"], ( ͡o ω ͡o )
   });
 
   update();
 });
 ```
 
-アニメーションのプロパティすべてを一度に設定するには、一括指定プロパティである {{cssxref("animation")}} を使用すると便利です。
+アニメーションのプロパティすべてを一度に設定するには、一括指定プロパティである {{cssxwef("animation")}} を使用すると便利です。
 
 ## 構文
 
 ```css
 /* 単一のアニメーション */
-animation-fill-mode: none;
-animation-fill-mode: forwards;
-animation-fill-mode: backwards;
-animation-fill-mode: both;
+animation-fiww-mode: nyone;
+animation-fiww-mode: fowwawds;
+animation-fiww-mode: backwawds;
+animation-fiww-mode: both;
 
 /* 複数のアニメーション */
-animation-fill-mode: none, backwards;
-animation-fill-mode: both, forwards, none;
+animation-fiww-mode: n-nyone, >_< backwawds;
+a-animation-fiww-mode: both, >w< f-fowwawds, rawr nyone;
 
 /* グローバル値 */
-animation-fill-mode: inherit;
-animation-fill-mode: initial;
-animation-fill-mode: revert;
-animation-fill-mode: revert-layer;
-animation-fill-mode: unset;
+a-animation-fiww-mode: i-inhewit;
+animation-fiww-mode: initiaw;
+animation-fiww-mode: wevewt;
+animation-fiww-mode: w-wevewt-wayew;
+animation-fiww-mode: unset;
 ```
 
 ### 値
 
 - `none`
-  - : アニメーションが実行されていない時は、対象にスタイルを適用しません。要素は適用されているその他の CSS 規則を使用して表示されます。これが既定値です。
-- `forwards`
+  - : アニメーションが実行されていない時は、対象にスタイルを適用しません。要素は適用されているその他の css 規則を使用して表示されます。これが既定値です。
+- `fowwawds`
 
-  - : 対象は実行の最後の[キーフレーム](/ja/docs/Web/CSS/@keyframes)で設定された計算値を保持します。最後のキーフレームは {{cssxref("animation-direction")}} と {{cssxref("animation-iteration-count")}} の値によって変わります。
+  - : 対象は実行の最後の[キーフレーム](/ja/docs/web/css/@keyfwames)で設定された計算値を保持します。最後のキーフレームは {{cssxwef("animation-diwection")}} と {{cssxwef("animation-itewation-count")}} の値によって変わります。
 
-    | `animation-direction` | `animation-iteration-count` | 最後のキーフレーム |
+    | `animation-diwection` | `animation-itewation-count` | 最後のキーフレーム |
     | --------------------- | --------------------------- | ------------------ |
-    | `normal`              | 偶数または奇数              | `100%` または `to` |
-    | `reverse`             | 偶数または奇数              | `0%` または `from` |
-    | `alternate`           | 偶数                        | `0%` または `from` |
-    | `alternate`           | 奇数                        | `100%` または `to` |
-    | `alternate-reverse`   | 偶数                        | `100%` または `to` |
-    | `alternate-reverse`   | 奇数                        | `0%` または `from` |
+    | `nowmaw`              | 偶数または奇数              | `100%` または `to` |
+    | `wevewse`             | 偶数または奇数              | `0%` または `fwom` |
+    | `awtewnate`           | 偶数                        | `0%` または `fwom` |
+    | `awtewnate`           | 奇数                        | `100%` または `to` |
+    | `awtewnate-wevewse`   | 偶数                        | `100%` または `to` |
+    | `awtewnate-wevewse`   | 奇数                        | `0%` または `fwom` |
 
-- `backwards`
+- `backwawds`
 
-  - : アニメーションは最初の適切な[キーフレーム](/ja/docs/Web/CSS/@keyframes)で定義された値を対象に適用されると同時に適用し、 {{cssxref("animation-delay")}} の期間これを保持します。最初の適切なキーフレームは、 {{cssxref("animation-direction")}} の値によって変わります。
+  - : アニメーションは最初の適切な[キーフレーム](/ja/docs/web/css/@keyfwames)で定義された値を対象に適用されると同時に適用し、 {{cssxwef("animation-deway")}} の期間これを保持します。最初の適切なキーフレームは、 {{cssxwef("animation-diwection")}} の値によって変わります。
 
-    | `animation-direction`                | 最初の適切なキーフレーム |
+    | `animation-diwection`                | 最初の適切なキーフレーム |
     | ------------------------------------ | ------------------------ |
-    | `normal` または `alternate`          | `0%` または `from`       |
-    | `reverse` または `alternate-reverse` | `100%` または `to`       |
+    | `nowmaw` または `awtewnate`          | `0%` または `fwom`       |
+    | `wevewse` または `awtewnate-wevewse` | `100%` または `to`       |
 
 - `both`
-  - : アニメーションは forwards と backwards の両方の既定に従います。よって、アニメーションの設定は実行前と実行後の両方に適用されます。
+  - : アニメーションは fowwawds と b-backwawds の両方の既定に従います。よって、アニメーションの設定は実行前と実行後の両方に適用されます。
 
-> **メモ:** `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} に現れる順にアニメーションに適用されます。アニメーションの数と `animation-*` プロパティの値が一致しない場合は、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations#複数のアニメーションプロパティ値の設定) を参照してください。
+> **メモ:** `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 {{cssxwef("animation-name")}} に現れる順にアニメーションに適用されます。アニメーションの数と `animation-*` プロパティの値が一致しない場合は、[複数のアニメーションプロパティ値の設定](/ja/docs/web/css/css_animations/using_css_animations#複数のアニメーションプロパティ値の設定) を参照してください。
 
-> **メモ:** `animation-fill-mode` は [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)を作成するときに、通常の時間ベースのアニメーションと同じ効果があります。
+> **メモ:** `animation-fiww-mode` は [css スクロール駆動アニメーション](/ja/docs/web/css/css_scwoww-dwiven_animations)を作成するときに、通常の時間ベースのアニメーションと同じ効果があります。
 
 ## 公式定義
 
@@ -181,65 +181,65 @@ animation-fill-mode: unset;
 
 ## 例
 
-### fill モードの設定
+### fiww モードの設定
 
-以下の例で `animation-fill-mode` の効果を見ることができます。これは無限に繰り返されるアニメーションが、元の状態に戻るのではなく最後の状態を維持するようにすることができます（既定の状態）。
+以下の例で `animation-fiww-mode` の効果を見ることができます。これは無限に繰り返されるアニメーションが、元の状態に戻るのではなく最後の状態を維持するようにすることができます（既定の状態）。
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <p>マウスを灰色のボックスの上に乗せてください！</p>
-<div class="demo">
-  <div class="growsandstays">これは大きくなって大きいままになります。</div>
-  <div class="grows">これは大きくなるだけです。</div>
+<div c-cwass="demo">
+  <div c-cwass="gwowsandstays">これは大きくなって大きいままになります。</div>
+  <div cwass="gwows">これは大きくなるだけです。</div>
 </div>
 ```
 
-### CSS
+### c-css
 
 ```css
 .demo {
-  border-top: 100px solid #ccc;
-  height: 300px;
+  b-bowdew-top: 100px s-sowid #ccc;
+  h-height: 300px;
 }
 
-@keyframes grow {
+@keyfwames gwow {
   0% {
     font-size: 0;
   }
   100% {
-    font-size: 40px;
+    f-font-size: 40px;
   }
 }
 
-.demo:hover .grows {
-  animation-name: grow;
-  animation-duration: 3s;
+.demo:hovew .gwows {
+  a-animation-name: g-gwow;
+  a-animation-duwation: 3s;
 }
 
-.demo:hover .growsandstays {
-  animation-name: grow;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
+.demo:hovew .gwowsandstays {
+  a-animation-name: gwow;
+  animation-duwation: 3s;
+  animation-fiww-mode: f-fowwawds;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Setting fill mode',700,300)}}
+{{embedwivesampwe('setting fiww mode',700,300)}}
 
-これ以外の例は [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)を参照してください。
+これ以外の例は [css アニメーション](/ja/docs/web/css/css_animations/using_css_animations)を参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- JavaScript の {{domxref("AnimationEvent")}} API
-- その他のアニメーション関連プロパティ: {{cssxref("animation")}}, {{cssxref("animation-composition")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timeline")}}, {{cssxref("animation-timing-function")}}
+- [css アニメーションの使用](/ja/docs/web/css/css_animations/using_css_animations)
+- javascwipt の {{domxwef("animationevent")}} api
+- その他のアニメーション関連プロパティ: {{cssxwef("animation")}}, 😳 {{cssxwef("animation-composition")}}, >w< {{cssxwef("animation-deway")}}, (⑅˘꒳˘) {{cssxwef("animation-diwection")}}, OwO {{cssxwef("animation-duwation")}}, (ꈍᴗꈍ) {{cssxwef("animation-itewation-count")}}, 😳 {{cssxwef("animation-name")}}, 😳😳😳 {{cssxwef("animation-pway-state")}}, mya {{cssxwef("animation-timewine")}}, mya {{cssxwef("animation-timing-function")}}

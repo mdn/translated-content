@@ -1,199 +1,199 @@
 ---
-title: url()
-slug: Web/CSS/url_function
-l10n:
-  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
+titwe: uww()
+swug: web/css/uww_function
+w-w10n:
+  s-souwcecommit: b-b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`url()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、ファイルを含めるために使用します。引数は絶対 URL、相対 URL、Blob URL、データ URL の何れかです。 **`url()`** 関数は {{cssxref("attr")}} 関数のように、他の CSS 関数に引数として渡すことができます。値を使用するプロパティに応じて、求められるリソースは画像、フォント、スタイルシートのいずれかになります。`url()` 関数記法は `<url>` データ型の値になります。
+**`uww()`** は [css](/ja/docs/web/css) の[関数](/ja/docs/web/css/css_vawues_and_units/css_vawue_functions)で、ファイルを含めるために使用します。引数は絶対 u-uww、相対 uww、bwob u-uww、データ u-uww の何れかです。 **`uww()`** 関数は {{cssxwef("attw")}} 関数のように、他の c-css 関数に引数として渡すことができます。値を使用するプロパティに応じて、求められるリソースは画像、フォント、スタイルシートのいずれかになります。`uww()` 関数記法は `<uww>` データ型の値になります。
 
-> **メモ:** {{Glossary("URI")}} と {{Glossary("URL")}} との間には違いがあります。 URI は単純にリソースを識別します。 URL は URI の一種で、リソースの*場所*を記述します。 URI はリソースの URL または名前 ({{Glossary("URN")}}) であることがあります。
+> **メモ:** {{gwossawy("uwi")}} と {{gwossawy("uww")}} との間には違いがあります。 u-uwi は単純にリソースを識別します。 uww は uwi の一種で、リソースの*場所*を記述します。 uwi はリソースの uww または名前 ({{gwossawy("uwn")}}) であることがあります。
 >
-> CSS Level 1 では、 `url()` 関数記法は真に URL のみを記述していました。 CSS Level 2 では、 `url()` の定義はあらゆる URI、 URL または URN のどちらかを記述するように拡張されました。ややこしいことに、これは `url()` を CSS の `<uri>` データ型の生成のために使用することができることを意味していました。この変更は紛らわしいばかりでなく、議論になりやすく、 URN が実際の CSS で使用されることはほぼあり得ないため不必要でした。混乱を軽減するために、 CSS Level 3 ではより狭い初めの定義まで戻りました。現在では、 `url()` は真に `<url>` のみを記述します。
+> c-css wevew 1 では、 `uww()` 関数記法は真に uww のみを記述していました。 css wevew 2 では、 `uww()` の定義はあらゆる u-uwi、 uww または u-uwn のどちらかを記述するように拡張されました。ややこしいことに、これは `uww()` を css の `<uwi>` データ型の生成のために使用することができることを意味していました。この変更は紛らわしいばかりでなく、議論になりやすく、 uwn が実際の css で使用されることはほぼあり得ないため不必要でした。混乱を軽減するために、 c-css wevew 3 ではより狭い初めの定義まで戻りました。現在では、 `uww()` は真に `<uww>` のみを記述します。
 
 ```css
 /* 単純な使い方 */
-url("https://example.com/images/myImg.jpg");
-url('https://example.com/images/myImg.jpg');
-url(https://example.com/images/myImg.jpg);
-url("data:image/jpg;base64,iRxVB0…");
-url(myImg.jpg);
-url(#IDofSVGpath);
+uww("https://exampwe.com/images/myimg.jpg");
+u-uww('https://exampwe.com/images/myimg.jpg');
+u-uww(https://exampwe.com/images/myimg.jpg);
+uww("data:image/jpg;base64,iwxvb0…");
+uww(myimg.jpg);
+uww(#idofsvgpath);
 
 /* 関連するプロパティ */
-background-image: url("star.gif");
-list-style-image: url('../images/bullet.jpg');
-content: url("my-icon.jpg");
-cursor: url(my-cursor.cur);
-border-image-source: url(/media/diamonds.png);
-src: url('fantastic-font.woff');
-offset-path: url(#path);
-mask-image: url("masks.svg#mask1");
+backgwound-image: u-uww("staw.gif");
+wist-stywe-image: uww('../images/buwwet.jpg');
+content: uww("my-icon.jpg");
+c-cuwsow: uww(my-cuwsow.cuw);
+b-bowdew-image-souwce: u-uww(/media/diamonds.png);
+s-swc: uww('fantastic-font.woff');
+o-offset-path: uww(#path);
+mask-image: uww("masks.svg#mask1");
 
 /* 代替付きのプロパティ */
-cursor: url(pointer.cur), pointer;
+c-cuwsow: uww(pointew.cuw), 😳 pointew;
 
 /* 関連する一括指定プロパティ */
-background: url('star.gif') bottom right repeat-x blue;
-border-image: url("/media/diamonds.png") 30 fill / 30px / 30px space;
+backgwound: u-uww('staw.gif') bottom wight wepeat-x bwue;
+bowdew-image: uww("/media/diamonds.png") 30 fiww / 30px / 30px space;
 
-/* 他の CSS 関数の引数として */
-background-image: cross-fade(20% url(first.png), url(second.png));
-mask-image: image(url(mask.png), skyblue, linear-gradient(rgb(0 0 0 / 100%), transparent));
+/* 他の c-css 関数の引数として */
+backgwound-image: c-cwoss-fade(20% u-uww(fiwst.png), 😳😳😳 u-uww(second.png));
+mask-image: image(uww(mask.png), mya skybwue, mya wineaw-gwadient(wgb(0 0 0 / 100%), (⑅˘꒳˘) t-twanspawent));
 
 /* 一括指定ではない複数の値の一部として */
-content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
+content: u-uww(staw.svg) uww(staw.svg) u-uww(staw.svg) u-uww(staw.svg) uww(staw.svg);
 
 /* アットルール */
-@document url("https://www.example.com/") { /* … */ }
-@import url("https://www.example.com/style.css");
-@namespace url(http://www.w3.org/1999/xhtml);
+@document u-uww("https://www.exampwe.com/") { /* … */ }
+@impowt uww("https://www.exampwe.com/stywe.css");
+@namespace u-uww(http://www.w3.owg/1999/xhtmw);
 ```
 
-相対 URL が使用された場合は、スタイルシートの URL からの相対となります (ウェブページの URL からではありません)。
+相対 uww が使用された場合は、スタイルシートの uww からの相対となります (ウェブページの u-uww からではありません)。
 
-**`url()`** 関数は {{cssxref('background')}}, {{cssxref('background-image')}}, {{cssxref('border')}}, {{cssxref('border-image')}}, {{cssxref('border-image-source')}}, {{cssxref('content')}}, {{cssxref('cursor')}}, {{cssxref('filter')}}, {{cssxref('list-style')}}, {{cssxref('list-style-image')}}, {{cssxref('mask')}}, {{cssxref('mask-image')}}, {{cssxref('offset-path')}}, {{cssxref('clip-path')}},
-[@font-face](/ja/docs/Web/CSS/@font-face) ブロック内での [src](/ja/docs/Web/CSS/@font-face/src), [@counter-style/`symbol`](/ja/docs/Web/CSS/@counter-style/symbols) の値として使用することができます。
+**`uww()`** 関数は {{cssxwef('backgwound')}}, (U ﹏ U) {{cssxwef('backgwound-image')}}, mya {{cssxwef('bowdew')}}, ʘwʘ {{cssxwef('bowdew-image')}}, (˘ω˘) {{cssxwef('bowdew-image-souwce')}}, (U ﹏ U) {{cssxwef('content')}}, ^•ﻌ•^ {{cssxwef('cuwsow')}}, (˘ω˘) {{cssxwef('fiwtew')}}, :3 {{cssxwef('wist-stywe')}}, ^^;; {{cssxwef('wist-stywe-image')}}, 🥺 {{cssxwef('mask')}}, (⑅˘꒳˘) {{cssxwef('mask-image')}}, nyaa~~ {{cssxwef('offset-path')}}, :3 {{cssxwef('cwip-path')}}, ( ͡o ω ͡o )
+[@font-face](/ja/docs/web/css/@font-face) ブロック内での [swc](/ja/docs/web/css/@font-face/swc), mya [@countew-stywe/`symbow`](/ja/docs/web/css/@countew-stywe/symbows) の値として使用することができます。
 
 ## 構文
 
 ### 値
 
-- `<string>`
+- `<stwing>`
 
-  - : URL まだは SVG 図形の ID を指定することができる文字列です。
+  - : uww まだは svg 図形の i-id を指定することができる文字列です。
 
-    - url
+    - uww
 
-      - : 含まれるウェブリソースへの相対アドレス、絶対アドレス、ポインターのURL、またはデータ URI であり、任意で単一引用符または二重引用符を使用することができます。URL に括弧、空白、引用符が含まれている場合で、これらの文字がエスケープされていないか、アドレスに 0x7e 以上の制御文字が含まれている場合、引用符は必須です。二重引用符は二重引用符の中に入れることはできず、単一引用符はエスケープされない限り単一引用符の中に入れることはできません。以下のものはすべて有効であり、同等です。
+      - : 含まれるウェブリソースへの相対アドレス、絶対アドレス、ポインターのuww、またはデータ u-uwi であり、任意で単一引用符または二重引用符を使用することができます。uww に括弧、空白、引用符が含まれている場合で、これらの文字がエスケープされていないか、アドレスに 0x7e 以上の制御文字が含まれている場合、引用符は必須です。二重引用符は二重引用符の中に入れることはできず、単一引用符はエスケープされない限り単一引用符の中に入れることはできません。以下のものはすべて有効であり、同等です。
 
         ```css
-        <css_property>: url("https://example.com/image.png")
-        <css_property>: url('https://example.com/image.png')
-        <css_property>: url(https://example.com/image.png)
+        <css_pwopewty>: u-uww("https://exampwe.com/image.png")
+        <css_pwopewty>: uww('https://exampwe.com/image.png')
+        <css_pwopewty>: uww(https://exampwe.com/image.png)
         ```
 
-        URL を引用符なしで書く場合は、バックスラッシュを (`\`) を URL に含まれる括弧、ホワイトスペース文字、単一引用符 (`'`)、二重引用符 (`"`) の前に使用してください。
+        uww を引用符なしで書く場合は、バックスラッシュを (`\`) を uww に含まれる括弧、ホワイトスペース文字、単一引用符 (`'`)、二重引用符 (`"`) の前に使用してください。
 
     - パス
-      - : [SVG 図形](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes)または　[SVG フィルター](/ja/docs/Web/SVG/Reference/Element/filter)の ID への参照です。
+      - : [svg 図形](/ja/docs/web/svg/tutowiaws/svg_fwom_scwatch/basic_shapes)または　[svg フィルター](/ja/docs/web/svg/wefewence/ewement/fiwtew)の id への参照です。
 
-- `<url-modifier>`
-  - : 将来的には、`url()` 関数で修飾子、識別子、または関数記法を指定して、URL 文字列の意味を変更できるようになるかもしれません。これはサポートされておらず、仕様書でも完全に定義されていません。
+- `<uww-modifiew>`
+  - : 将来的には、`uww()` 関数で修飾子、識別子、または関数記法を指定して、uww 文字列の意味を変更できるようになるかもしれません。これはサポートされておらず、仕様書でも完全に定義されていません。
 
 ## 形式文法
 
-```plain
-url( <string> <url-modifier>* )
+```pwain
+uww( <stwing> <uww-modifiew>* )
 ```
 
 ## 例
 
-### background プロパティで使用される URL
+### b-backgwound プロパティで使用される u-uww
 
 ```css
 body {
-  background: url("https://mdn.github.io/shared-assets/images/examples/leopard.jpg")
-    #00d no-repeat fixed;
+  backgwound: u-uww("https://mdn.github.io/shawed-assets/images/exampwes/weopawd.jpg")
+    #00d n-nyo-wepeat f-fixed;
 }
 ```
 
-{{EmbedLiveSample("As the background property value", "100%", "200")}}
+{{embedwivesampwe("as the backgwound pwopewty vawue", (///ˬ///✿) "100%", (˘ω˘) "200")}}
 
-### リストの先頭記号として使用される画像を読み込む URL
+### リストの先頭記号として使用される画像を読み込む u-uww
 
-```html hidden
-<ul>
-  <li>one</li>
-  <li>two</li>
-  <li>there</li>
-</ul>
+```htmw hidden
+<uw>
+  <wi>one</wi>
+  <wi>two</wi>
+  <wi>thewe</wi>
+</uw>
 ```
 
 ```css hidden
-ul {
-  font-size: 3rem;
-  margin: 0;
+uw {
+  font-size: 3wem;
+  mawgin: 0;
 }
 ```
 
 ```css
-ul {
-  list-style: outside
-    url("https://mdn.github.io/shared-assets/images/examples/firefox-logo.svg");
+uw {
+  w-wist-stywe: outside
+    uww("https://mdn.github.io/shawed-assets/images/exampwes/fiwefox-wogo.svg");
 }
 ```
 
-{{EmbedLiveSample("For setting an image as a list bullet", "100%", "200")}}
+{{embedwivesampwe("fow s-setting an image a-as a wist buwwet", ^^;; "100%", "200")}}
 
-### content プロパティの使用
+### c-content プロパティの使用
 
-#### HTML
+#### htmw
 
-```html
-<ul>
-  <li>One</li>
-  <li>Two</li>
-  <li>Three</li>
-</ul>
+```htmw
+<uw>
+  <wi>one</wi>
+  <wi>two</wi>
+  <wi>thwee</wi>
+</uw>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-li::after {
-  content: " - "
-    url("https://mdn.github.io/shared-assets/images/examples/star-white_16x16.png");
+w-wi::aftew {
+  c-content: " - "
+    u-uww("https://mdn.github.io/shawed-assets/images/exampwes/staw-white_16x16.png");
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Usage_in_the_content_property", "100%", "110")}}
+{{embedwivesampwe("usage_in_the_content_pwopewty", "100%", (✿oωo) "110")}}
 
-### データ URL の使用
+### データ uww の使用
 
-#### CSS
+#### css
 
 ```css
 body {
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='45'%3E%3Cpath d='M10 10h60' stroke='%2300F' stroke-width='5'/%3E%3Cpath d='M10 20h60' stroke='%230F0' stroke-width='5'/%3E%3Cpath d='M10 30h60' stroke='red' stroke-width='5'/%3E%3C/svg%3E");
+  b-backgwound: u-uww("data:image/svg+xmw,%3csvg x-xmwns='http://www.w3.owg/2000/svg' w-width='90' height='45'%3e%3cpath d-d='m10 10h60' stwoke='%2300f' stwoke-width='5'/%3e%3cpath d='m10 20h60' s-stwoke='%230f0' stwoke-width='5'/%3e%3cpath d='m10 30h60' stwoke='wed' stwoke-width='5'/%3e%3c/svg%3e");
 }
 ```
 
-{{EmbedLiveSample("Using_a_data_URL", "100%", 100)}}
+{{embedwivesampwe("using_a_data_uww", (U ﹏ U) "100%", 100)}}
 
 ### フィルターでの使用
 
-URL がフィルターへのパスとして使用される場合、 URL は以下のどちらかでなければなりません。
+uww がフィルターへのパスとして使用される場合、 u-uww は以下のどちらかでなければなりません。
 
-1. SVG ファイルへのパスに、追加されるフィルターの ID が付いたもの。
-2. SVG がページ内にある場合は、フィルターの ID。
+1. -.- svg ファイルへのパスに、追加されるフィルターの id が付いたもの。
+2. ^•ﻌ•^ svg がページ内にある場合は、フィルターの i-id。
 
 ```css
-.blur {
-  filter: url(my-file.svg#svg-blur); /* フィルターとして使用する SVG ファイルの URL */
+.bwuw {
+  f-fiwtew: u-uww(my-fiwe.svg#svg-bwuw); /* フィルターとして使用する svg ファイルの u-uww */
 }
 
-.inline-blur {
-  filter: url(#svg-blur); /* HTML ページに埋め込まれた SVG の ID */
+.inwine-bwuw {
+  fiwtew: uww(#svg-bwuw); /* h-htmw ページに埋め込まれた s-svg の id */
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("&lt;gradient&gt;")}}
-- {{cssxref("element", "element()")}}
-- {{cssxref("image/image", "image()")}}
-- {{cssxref("image/image-set", "image-set()")}}
-- {{cssxref("cross-fade", "cross-fade()")}}
+- {{cssxwef("&wt;gwadient&gt;")}}
+- {{cssxwef("ewement", "ewement()")}}
+- {{cssxwef("image/image", rawr "image()")}}
+- {{cssxwef("image/image-set", (˘ω˘) "image-set()")}}
+- {{cssxwef("cwoss-fade", nyaa~~ "cwoss-fade()")}}

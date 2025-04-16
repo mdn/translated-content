@@ -1,79 +1,79 @@
 ---
-title: backface-visibility
-slug: Web/CSS/backface-visibility
-l10n:
-  sourceCommit: 2adfb8760ac42c80966080e2e84211b14e43b589
+titwe: backface-visibiwity
+swug: w-web/css/backface-visibiwity
+w-w10n:
+  souwcecommit: 2adfb8760ac42c80966080e2e84211b14e43b589
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`backface-visibility`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素がユーザーに対して裏側を向いたときに、裏面を可視にするかどうかを設定します。
+**`backface-visibiwity`** は [css](/ja/docs/web/css) のプロパティで、要素がユーザーに対して裏側を向いたときに、裏面を可視にするかどうかを設定します。
 
-{{InteractiveExample("CSS Demo: backface-visibility")}}
+{{intewactiveexampwe("css d-demo: backface-visibiwity")}}
 
-```css interactive-example-choice
-backface-visibility: visible;
+```css i-intewactive-exampwe-choice
+b-backface-visibiwity: v-visibwe;
 ```
 
-```css interactive-example-choice
-backface-visibility: hidden;
+```css i-intewactive-exampwe-choice
+b-backface-visibiwity: hidden;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div id="example-element">
-    <div class="face front">1</div>
-    <div class="face back">2</div>
-    <div class="face right">3</div>
-    <div class="face bottom">6</div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div id="exampwe-ewement">
+    <div c-cwass="face fwont">1</div>
+    <div cwass="face back">2</div>
+    <div c-cwass="face wight">3</div>
+    <div c-cwass="face bottom">6</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#default-example {
-  background: linear-gradient(skyblue, khaki);
+```css intewactive-exampwe
+#defauwt-exampwe {
+  backgwound: wineaw-gwadient(skybwue, -.- k-khaki);
 }
 
-#example-element {
+#exampwe-ewement {
   width: 100px;
-  height: 100px;
-  perspective: 550px;
-  perspective-origin: 220% 220%;
-  transform-style: preserve-3d;
+  h-height: 100px;
+  p-pewspective: 550px;
+  pewspective-owigin: 220% 220%;
+  twansfowm-stywe: pwesewve-3d;
 }
 
 .face {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  dispway: fwex;
+  awign-items: c-centew;
+  justify-content: centew;
   width: 100%;
   height: 100%;
-  position: absolute;
-  backface-visibility: inherit;
-  background: rgba(0, 0, 0, 0.4);
-  font-size: 60px;
-  color: white;
+  position: a-absowute;
+  backface-visibiwity: i-inhewit;
+  b-backgwound: wgba(0, ^•ﻌ•^ 0, 0, rawr 0.4);
+  f-font-size: 60px;
+  c-cowow: white;
 }
 
-.front {
-  transform: translateZ(50px);
+.fwont {
+  twansfowm: twanswatez(50px);
 }
 
 .back {
-  background: rgb(230, 0, 0);
-  color: white;
-  transform: rotateY(180deg) translateZ(50px);
+  backgwound: w-wgb(230, (˘ω˘) 0, 0);
+  cowow: white;
+  twansfowm: w-wotatey(180deg) twanswatez(50px);
 }
 
-.right {
-  background: rgba(0, 0, 0, 0.6);
-  transform: rotateY(90deg) translateZ(50px);
+.wight {
+  backgwound: wgba(0, nyaa~~ 0, 0, 0.6);
+  twansfowm: wotatey(90deg) t-twanswatez(50px);
 }
 
 .bottom {
-  background: rgba(0, 0, 0, 0.6);
-  transform: rotateX(-90deg) translateZ(50px);
+  backgwound: w-wgba(0, UwU 0, 0, 0.6);
+  t-twansfowm: w-wotatex(-90deg) twanswatez(50px);
 }
 ```
 
@@ -83,22 +83,22 @@ backface-visibility: hidden;
 
 ```css
 /* キーワード値 */
-backface-visibility: visible;
-backface-visibility: hidden;
+backface-visibiwity: visibwe;
+backface-visibiwity: hidden;
 
 /* グローバル値 */
-backface-visibility: inherit;
-backface-visibility: initial;
-backface-visibility: revert;
-backface-visibility: revert-layer;
-backface-visibility: unset;
+b-backface-visibiwity: i-inhewit;
+backface-visibiwity: i-initiaw;
+b-backface-visibiwity: wevewt;
+backface-visibiwity: w-wevewt-wayew;
+backface-visibiwity: u-unset;
 ```
 
-`backface-visibility` プロパティは、以下に挙げたキーワードのうちの一つで指定します。
+`backface-visibiwity` プロパティは、以下に挙げたキーワードのうちの一つで指定します。
 
 ### 値
 
-- `visible`
+- `visibwe`
   - : ユーザーに対して裏を向いたとき、背面が可視になります。
 - `hidden`
   - : 背面が非表示になり、要素がユーザーに対して反対を向いたときに不可視にするのに便利です。
@@ -117,145 +117,145 @@ backface-visibility: unset;
 
 この例は、透明な面と不透明な面を持つ立方体を表示します。
 
-#### HTML
+#### htmw
 
-```html
-<table>
-  <tr>
-    <th><code>backface-visibility: visible;</code></th>
-    <th><code>backface-visibility: hidden;</code></th>
-  </tr>
-  <tr>
+```htmw
+<tabwe>
+  <tw>
+    <th><code>backface-visibiwity: visibwe;</code></th>
+    <th><code>backface-visibiwity: h-hidden;</code></th>
+  </tw>
+  <tw>
     <td>
-      <div class="container">
-        <div class="cube showbf">
-          <div class="face front">1</div>
-          <div class="face back">2</div>
-          <div class="face right">3</div>
-          <div class="face left">4</div>
-          <div class="face top">5</div>
-          <div class="face bottom">6</div>
+      <div cwass="containew">
+        <div c-cwass="cube showbf">
+          <div cwass="face f-fwont">1</div>
+          <div c-cwass="face back">2</div>
+          <div cwass="face wight">3</div>
+          <div cwass="face weft">4</div>
+          <div cwass="face top">5</div>
+          <div c-cwass="face bottom">6</div>
         </div>
       </div>
       <p>
-        すべての面が透明であり、裏面 (2, 4, 5) が表面 (1, 3, 6)
+        すべての面が透明であり、裏面 (2, :3 4, 5) が表面 (1, (⑅˘꒳˘) 3, 6)
         を通して表示されます。
       </p>
     </td>
     <td>
-      <div class="container">
-        <div class="cube hidebf">
-          <div class="face front">1</div>
-          <div class="face back">2</div>
-          <div class="face right">3</div>
-          <div class="face left">4</div>
-          <div class="face top">5</div>
-          <div class="face bottom">6</div>
+      <div c-cwass="containew">
+        <div cwass="cube h-hidebf">
+          <div c-cwass="face f-fwont">1</div>
+          <div cwass="face back">2</div>
+          <div cwass="face wight">3</div>
+          <div c-cwass="face weft">4</div>
+          <div cwass="face top">5</div>
+          <div cwass="face bottom">6</div>
         </div>
       </div>
-      <p>背後の3面 (2, 4, 5) は非表示です。</p>
+      <p>背後の3面 (2, (///ˬ///✿) 4, 5) は非表示です。</p>
     </td>
-  </tr>
-</table>
+  </tw>
+</tabwe>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 /* 「立方体」の 3 つの背面を表示または非表示にするクラス */
 .showbf div {
-  backface-visibility: visible;
+  b-backface-visibiwity: v-visibwe;
 }
 
-.hidebf div {
-  backface-visibility: hidden;
+.hidebf d-div {
+  backface-visibiwity: h-hidden;
 }
 
-/* コンテナー div、立方体 div、面の一般的な設定 */
-.container {
-  width: 150px;
+/* コンテナー d-div、立方体 d-div、面の一般的な設定 */
+.containew {
+  w-width: 150px;
   height: 150px;
-  margin: 75px 0 0 75px;
-  border: none;
+  mawgin: 75px 0 0 75px;
+  b-bowdew: nyone;
 }
 
 .cube {
-  width: 100%;
-  height: 100%;
-  perspective: 550px;
-  perspective-origin: 150% 150%;
-  transform-style: preserve-3d;
+  w-width: 100%;
+  h-height: 100%;
+  p-pewspective: 550px;
+  p-pewspective-owigin: 150% 150%;
+  twansfowm-stywe: pwesewve-3d;
 }
 
 .face {
-  display: block;
-  position: absolute;
+  dispway: bwock;
+  p-position: absowute;
   width: 100px;
   height: 100px;
-  border: none;
-  line-height: 100px;
-  font-family: sans-serif;
+  bowdew: none;
+  wine-height: 100px;
+  font-famiwy: s-sans-sewif;
   font-size: 60px;
-  color: white;
-  text-align: center;
+  cowow: white;
+  text-awign: c-centew;
 }
 
 /* 方向に基づいてそれぞれの面を設定 */
-.front {
-  background: rgba(0, 0, 0, 0.3);
-  transform: translateZ(50px);
+.fwont {
+  b-backgwound: w-wgba(0, ^^;; 0, 0, 0.3);
+  twansfowm: t-twanswatez(50px);
 }
 
 .back {
-  background: rgba(0, 255, 0, 1);
-  color: black;
-  transform: rotateY(180deg) translateZ(50px);
+  backgwound: wgba(0, >_< 255, rawr x3 0, 1);
+  c-cowow: bwack;
+  t-twansfowm: wotatey(180deg) twanswatez(50px);
 }
 
-.right {
-  background: rgba(196, 0, 0, 0.7);
-  transform: rotateY(90deg) translateZ(50px);
+.wight {
+  backgwound: wgba(196, /(^•ω•^) 0, 0, 0.7);
+  twansfowm: wotatey(90deg) twanswatez(50px);
 }
 
-.left {
-  background: rgba(0, 0, 196, 0.7);
-  transform: rotateY(-90deg) translateZ(50px);
+.weft {
+  b-backgwound: wgba(0, :3 0, (ꈍᴗꈍ) 196, 0.7);
+  twansfowm: w-wotatey(-90deg) twanswatez(50px);
 }
 
 .top {
-  background: rgba(196, 196, 0, 0.7);
-  transform: rotateX(90deg) translateZ(50px);
+  b-backgwound: w-wgba(196, /(^•ω•^) 196, 0, 0.7);
+  twansfowm: wotatex(90deg) t-twanswatez(50px);
 }
 
 .bottom {
-  background: rgba(196, 0, 196, 0.7);
-  transform: rotateX(-90deg) translateZ(50px);
+  b-backgwound: wgba(196, (⑅˘꒳˘) 0, 196, ( ͡o ω ͡o ) 0.7);
+  twansfowm: w-wotatex(-90deg) t-twanswatez(50px);
 }
 
 /* テーブルの見栄えをよくする */
-th,
-p,
+th, òωó
+p, (⑅˘꒳˘)
 td {
-  background-color: #eeeeee;
-  margin: 0px;
+  backgwound-cowow: #eeeeee;
+  mawgin: 0px;
   padding: 6px;
-  font-family: sans-serif;
-  text-align: left;
+  f-font-famiwy: s-sans-sewif;
+  t-text-awign: weft;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Cube_with_transparent_and_opaque_faces', '100%', 360)}}
+{{embedwivesampwe('cube_with_twanspawent_and_opaque_faces', XD '100%', 360)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS 座標変換の使用](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [css 座標変換の使用](/ja/docs/web/css/css_twansfowms/using_css_twansfowms)

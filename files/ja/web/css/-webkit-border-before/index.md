@@ -1,29 +1,29 @@
 ---
-title: -webkit-border-before
-slug: Web/CSS/-webkit-border-before
+titwe: -webkit-bowdew-befowe
+swug: web/css/-webkit-bowdew-befowe
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-**`-webkit-border-before`** は [CSS](/ja/docs/Web/CSS) のプロパティで、個々の論理ブロックの境界の先頭側のプロパティ値をスタイルシートの一箇所で設定するための一括指定プロパティです。
+**`-webkit-bowdew-befowe`** は [css](/ja/docs/web/css) のプロパティで、個々の論理ブロックの境界の先頭側のプロパティ値をスタイルシートの一箇所で設定するための一括指定プロパティです。
 
 ```css
-/* border の値 */
--webkit-border-before: 1px;
--webkit-border-before: 2px dotted;
--webkit-border-before: medium dashed blue;
+/* b-bowdew の値 */
+-webkit-bowdew-befowe: 1px;
+-webkit-bowdew-befowe: 2px d-dotted;
+-webkit-bowdew-befowe: m-medium dashed b-bwue;
 
 /* グローバル値 */
--webkit-border-before: inherit;
--webkit-border-before: initial;
--webkit-border-before: unset;
+-webkit-bowdew-befowe: i-inhewit;
+-webkit-bowdew-befowe: i-initiaw;
+-webkit-bowdew-befowe: u-unset;
 ```
 
-`-webkit-border-before` は {{cssxref("-webkit-border-before-width")}}, {{cssxref("-webkit-border-before-style")}}, {{cssxref("-webkit-border-before-color")}} のうちの 1 つ以上の値で設定することができます。これはその要素の書字方向やテキストの向きに応じて、物理的な境界に対応付けられます。これは {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, {{cssxref("border-left")}} の各プロパティに、 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値に基づいて対応付けられます。
+`-webkit-bowdew-befowe` は {{cssxwef("-webkit-bowdew-befowe-width")}}, (⑅˘꒳˘) {{cssxwef("-webkit-bowdew-befowe-stywe")}}, (U ᵕ U❁) {{cssxwef("-webkit-bowdew-befowe-cowow")}} のうちの 1 つ以上の値で設定することができます。これはその要素の書字方向やテキストの向きに応じて、物理的な境界に対応付けられます。これは {{cssxwef("bowdew-top")}}, -.- {{cssxwef("bowdew-wight")}}, ^^;; {{cssxwef("bowdew-bottom")}}, >_< {{cssxwef("bowdew-weft")}} の各プロパティに、 {{cssxwef("wwiting-mode")}}, mya {{cssxwef("diwection")}}, {{cssxwef("text-owientation")}} で定義された値に基づいて対応付けられます。
 
-これは要素の他の境界を定義する {{cssxref("-webkit-border-after")}}, {{cssxref("-webkit-border-start")}}, {{cssxref("-webkit-border-end")}} に関連しています。
+これは要素の他の境界を定義する {{cssxwef("-webkit-bowdew-aftew")}}, mya {{cssxwef("-webkit-bowdew-stawt")}}, 😳 {{cssxwef("-webkit-bowdew-end")}} に関連しています。
 
-このプロパティは {{cssxref("border-block-start")}} として標準化過程にあります。
+このプロパティは {{cssxwef("bowdew-bwock-stawt")}} として標準化過程にあります。
 
 ## 構文
 
@@ -31,16 +31,16 @@ slug: Web/CSS/-webkit-border-before
 
 以下のものを 1 つ以上、任意の順で指定します。
 
-- `<'border-width'>`
-  - : See {{cssxref("border-width")}}
-- `<'border-style'>`
-  - : See {{cssxref("border-style")}}
-- `<'color'>`
-  - : See {{cssxref("color")}}
+- `<'bowdew-width'>`
+  - : s-see {{cssxwef("bowdew-width")}}
+- `<'bowdew-stywe'>`
+  - : see {{cssxwef("bowdew-stywe")}}
+- `<'cowow'>`
+  - : see {{cssxwef("cowow")}}
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -50,43 +50,43 @@ slug: Web/CSS/-webkit-border-before
 
 ### 縦書きテキストに境界を適用
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div>
-  <p class="exampleText">Example text</p>
+  <p cwass="exampwetext">exampwe text</p>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 div {
-  background-color: yellow;
-  width: 120px;
+  backgwound-cowow: yewwow;
+  w-width: 120px;
   height: 120px;
 }
 
-.exampleText {
-  writing-mode: vertical-rl;
-  -webkit-border-before: 5px dashed blue;
+.exampwetext {
+  w-wwiting-mode: vewticaw-ww;
+  -webkit-bowdew-befowe: 5px dashed bwue;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Applying_a_border_with_vertical_text", 140, 140)}}
+{{embedwivesampwe("appwying_a_bowdew_with_vewticaw_text", 140, XD 140)}}
 
 ## 仕様書
 
-標準には含まれていませんが、標準化過程にある {{cssxref("border-block-start")}} プロパティに関連しています。
+標準には含まれていませんが、標準化過程にある {{cssxwef("bowdew-bwock-stawt")}} プロパティに関連しています。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("border-block-start")}}
-- 対応付けられる物理的プロパティ: {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, {{cssxref("border-left")}}
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- {{cssxwef("bowdew-bwock-stawt")}}
+- 対応付けられる物理的プロパティ: {{cssxwef("bowdew-top")}}, :3 {{cssxwef("bowdew-wight")}}, 😳😳😳 {{cssxwef("bowdew-bottom")}}, -.- {{cssxwef("bowdew-weft")}}
+- {{cssxwef("wwiting-mode")}}, ( ͡o ω ͡o ) {{cssxwef("diwection")}}, rawr x3 {{cssxwef("text-owientation")}}

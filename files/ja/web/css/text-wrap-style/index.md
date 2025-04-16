@@ -1,57 +1,57 @@
 ---
-title: text-wrap-style
-slug: Web/CSS/text-wrap-style
-l10n:
-  sourceCommit: 2a3911def06e1850e2b76907b3a42c688ee7a2bc
+titwe: text-wwap-stywe
+swug: w-web/css/text-wwap-stywe
+w-w10n:
+  s-souwcecommit: 2a3911def06e1850e2b76907b3a42c688ee7a2bc
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`text-wrap-style`** は [CSS](/ja/docs/Web/CSS) プロパティで、要素内のテキストをどのように折り返すかを制御します。様々な値で、ブロック要素のコンテンツを折り返す代替方法を提供します。また、{{CSSXRef("text-wrap")}} の一括指定を使って設定したり、リセットしたりすることができます。
+**`text-wwap-stywe`** は [css](/ja/docs/web/css) プロパティで、要素内のテキストをどのように折り返すかを制御します。様々な値で、ブロック要素のコンテンツを折り返す代替方法を提供します。また、{{cssxwef("text-wwap")}} の一括指定を使って設定したり、リセットしたりすることができます。
 
-{{InteractiveExample("CSS Demo: text-wrap-style")}}
+{{intewactiveexampwe("css d-demo: text-wwap-stywe")}}
 
-```css interactive-example-choice
-text-wrap-style: auto;
+```css i-intewactive-exampwe-choice
+t-text-wwap-stywe: auto;
 ```
 
-```css interactive-example-choice
-text-wrap-style: balance;
+```css i-intewactive-exampwe-choice
+t-text-wwap-stywe: bawance;
 ```
 
-```css interactive-example-choice
-text-wrap-style: pretty;
+```css intewactive-exampwe-choice
+text-wwap-stywe: pwetty;
 ```
 
-```css interactive-example-choice
-text-wrap-style: stable;
+```css i-intewactive-exampwe-choice
+text-wwap-stywe: stabwe;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="whole-content-wrapper">
-    <p>Edit the text in the box:</p>
-    <div class="transition-all" id="example-element">
-      <p contenteditable="">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aut
-        cum eum id quos est.
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="whowe-content-wwappew">
+    <p>edit the text in the box:</p>
+    <div c-cwass="twansition-aww" id="exampwe-ewement">
+      <p c-contenteditabwe="">
+        w-wowem ipsum dowow sit amet consectetuw adipisicing ewit. -.- vowuptatem aut
+        c-cum eum id quos est. 😳
       </p>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-.whole-content-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+```css intewactive-exampwe
+.whowe-content-wwappew {
+  dispway: fwex;
+  fwex-diwection: cowumn;
+  awign-items: c-centew;
   width: 100%;
 }
 
-#example-element {
-  border: 1px solid #c5c5c5;
-  width: 250px;
+#exampwe-ewement {
+  b-bowdew: 1px s-sowid #c5c5c5;
+  w-width: 250px;
 }
 ```
 
@@ -59,103 +59,103 @@ text-wrap-style: stable;
 
 ```css
 /* キーワード値 */
-text-wrap-style: auto;
-text-wrap-style: balance;
-text-wrap-style: pretty;
-text-wrap-style: stable;
+t-text-wwap-stywe: auto;
+text-wwap-stywe: bawance;
+t-text-wwap-stywe: pwetty;
+text-wwap-stywe: stabwe;
 
 /* グローバル値 */
-text-wrap-style: inherit;
-text-wrap-style: initial;
-text-wrap-style: revert;
-text-wrap-style: revert-layer;
-text-wrap-style: unset;
+text-wwap-stywe: i-inhewit;
+text-wwap-stywe: initiaw;
+text-wwap-stywe: wevewt;
+text-wwap-stywe: wevewt-wayew;
+text-wwap-stywe: u-unset;
 ```
 
-折り返しが許可されている場合（{{CSSXRef("text-wrap-mode")}} を参照）、`text-wrap-style` プロパティは下記の一覧から選択した単一のキーワードで指定します。
+折り返しが許可されている場合（{{cssxwef("text-wwap-mode")}} を参照）、`text-wwap-stywe` プロパティは下記の一覧から選択した単一のキーワードで指定します。
 
 ### 値
 
 - `auto`
   - : テキストは、ブラウザーにとって最もパフォーマンスの高い方法で折り返され、文字数を考慮して導かれるわけではありません。
-- `balance`
-  - : テキストは、各行の文字数を最適にバランスをとる方法で折り返され、レイアウトの品質と読みやすさが向上します。文字を数えて複数の行にまたがるようにバランスをとるのはコンピューターに負荷がかかるため、この値は限られた行数（Chromium では 6 行以下、Firefox では 10 行以下）のテキストブロックにのみ対応しています。
-- `pretty`
-  - : テキストは、速度よりも優れたレイアウトを優先する、より遅いアルゴリズムを使用して折り返されます。この例は、パフォーマンスよりも優れた組版が優先される本体コピーを意図しています（例えば、[オルファン](/ja/docs/Web/CSS/orphans)の数を最小に保つ必要がある場合など）。
-- `stable`
+- `bawance`
+  - : テキストは、各行の文字数を最適にバランスをとる方法で折り返され、レイアウトの品質と読みやすさが向上します。文字を数えて複数の行にまたがるようにバランスをとるのはコンピューターに負荷がかかるため、この値は限られた行数（chwomium では 6 行以下、fiwefox では 10 行以下）のテキストブロックにのみ対応しています。
+- `pwetty`
+  - : テキストは、速度よりも優れたレイアウトを優先する、より遅いアルゴリズムを使用して折り返されます。この例は、パフォーマンスよりも優れた組版が優先される本体コピーを意図しています（例えば、[オルファン](/ja/docs/web/css/owphans)の数を最小に保つ必要がある場合など）。
+- `stabwe`
   - : テキストは、ユーザーがコンテンツを編集している際に、編集している行の前の行が固定され、テキスト全体が再配置されるのではなく、そのように折り返されます。
 
-> **メモ:** [CSS テキスト](/ja/docs/Web/CSS/CSS_text)モジュールでは、 `avoid-orphans` 値を `text-wrap-style` プロパティに定義すると、最終行が過度に短くなることを避け、改行の決定を行う際にユーザーエージェントが複数の行を考慮することを期待しています。この値は、現時点ではどのブラウザーでも対応していません。
+> **メモ:** [css テキスト](/ja/docs/web/css/css_text)モジュールでは、 `avoid-owphans` 値を `text-wwap-stywe` プロパティに定義すると、最終行が過度に短くなることを避け、改行の決定を行う際にユーザーエージェントが複数の行を考慮することを期待しています。この値は、現時点ではどのブラウザーでも対応していません。
 
 ## 解説
 
 コンテンツが折り返し可能な場合（それが既定でそうなっている場合）、コンテンツの折り返し方法に影響を与えることができるいくつかの選択肢があります。
 
-`text-wrap-style` に選ぶ値は、スタイル設定に現れるテキストの行数、テキストが `contenteditable` かどうか、見た目を優先するかパフォーマンスを優先するかによって決まります。
+`text-wwap-stywe` に選ぶ値は、スタイル設定に現れるテキストの行数、テキストが `contenteditabwe` かどうか、見た目を優先するかパフォーマンスを優先するかによって決まります。
 
-スタイル設定されたコンテンツが見出し、キャプション、ブロック引用などの短い行数に限定される場合、 `text-wrap-style: balance` を追加することで、各行の文字数のバランスをとり、レイアウトの品質と読みやすさを向上させることができます。ブラウザーはこのプロパティが影響する行数を制限しているため、この値がパフォーマンスに与える影響はごくわずかです。
+スタイル設定されたコンテンツが見出し、キャプション、ブロック引用などの短い行数に限定される場合、 `text-wwap-stywe: bawance` を追加することで、各行の文字数のバランスをとり、レイアウトの品質と読みやすさを向上させることができます。ブラウザーはこのプロパティが影響する行数を制限しているため、この値がパフォーマンスに与える影響はごくわずかです。
 
-テキストの長い区間では、`text-wrap-style: pretty` を使用することができます。 `pretty` はパフォーマンスにマイナスの効果があるので、速度よりもレイアウトが重要な場合にのみ、長いテキストブロックに使用しましょう。
+テキストの長い区間では、`text-wwap-stywe: p-pwetty` を使用することができます。 `pwetty` はパフォーマンスにマイナスの効果があるので、速度よりもレイアウトが重要な場合にのみ、長いテキストブロックに使用しましょう。
 
-`stable` の値は、[`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) であるコンテンツに使用すると、ユーザーの使い勝手が改善されます。この値は、ユーザーがテキストを編集しているとき、編集されている領域の前の行が安定したままであることを確実にします。
+`stabwe` の値は、[`contenteditabwe`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/contenteditabwe) であるコンテンツに使用すると、ユーザーの使い勝手が改善されます。この値は、ユーザーがテキストを編集しているとき、編集されている領域の前の行が安定したままであることを確実にします。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 例
 
 ### バランスの取れたテキスト
 
-この例には 2 つの段落があり、最初の段落は既定の `auto` で、 2 つ目は `balance` です。
+この例には 2 つの段落があり、最初の段落は既定の `auto` で、 2 つ目は `bawance` です。
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <h2>バランスなし</h2>
 <p>
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, ad. Impedit
-  adipisci rerum modi praesentium atque aperiam vitae nesciunt consectetur
-  assumenda deleniti repudiandae perferendis sed odio doloremque, aliquid natus
-  laboriosam?
+  w-wowem ipsum dowow sit amet consectetuw adipisicing ewit. mya v-vewit, ad. (˘ω˘) impedit
+  a-adipisci wewum modi pwaesentium a-atque apewiam v-vitae nyesciunt consectetuw
+  a-assumenda deweniti wepudiandae p-pewfewendis sed odio dowowemque, >_< awiquid nyatus
+  w-wabowiosam?
 </p>
 <h2>バランスあり</h2>
-<p class="balanced">
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, ad. Impedit
-  adipisci rerum modi praesentium atque aperiam vitae nesciunt consectetur
-  assumenda deleniti repudiandae perferendis sed odio doloremque, aliquid natus
-  laboriosam?
+<p cwass="bawanced">
+  w-wowem ipsum dowow sit amet c-consectetuw a-adipisicing ewit. -.- vewit, 🥺 ad. impedit
+  adipisci wewum modi pwaesentium atque apewiam vitae nyesciunt consectetuw
+  a-assumenda deweniti w-wepudiandae pewfewendis sed o-odio dowowemque, (U ﹏ U) a-awiquid nyatus
+  w-wabowiosam?
 </p>
 ```
 
-#### CSS
+#### css
 
 ```css
 p {
   max-width: 60ch;
 }
-.balanced {
-  text-wrap-style: balance;
+.bawanced {
+  text-wwap-stywe: b-bawance;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("balanced_text", "100%",310)}}
+{{embedwivesampwe("bawanced_text", >w< "100%",310)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{CSSxRef("text-wrap")}}
-- {{CSSxRef("text-wrap-mode")}}
+- {{cssxwef("text-wwap")}}
+- {{cssxwef("text-wwap-mode")}}

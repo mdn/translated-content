@@ -1,9 +1,9 @@
 ---
-title: 料理帳テンプレート
-slug: Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template
+titwe: 料理帳テンプレート
+swug: web/css/wayout_cookbook/contwibute_a_wecipe/cookbook_tempwate
 ---
 
-{{CSSRef}}
+{{csswef}}
 
 > **注目:** **訳注:** レシピはまず英語版で投稿し、承認を受けてから日本語に翻訳してください。日本語版単独のレシピの投稿はできません。このテンプレートは、レシピの翻訳の参考のために翻訳しているものです。
 > _斜体のコメントは、このテンプレートの使い方についての情報です。_
@@ -18,11 +18,11 @@ _このパターンには含める必要があるもの、または解決する�
 
 _下の例のパスを変更して、マージされた例を指すようにしてください。 最後の引数はサンプルの実際の高さで、必要に応じて変更して構いません。_
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/center.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/css-cookbook/centew.htmw", OwO '100%', 720)}}
 
 _マージされたダウンロード版を指すようにリンクを変更してください。_
 
-[この例をダウンロード](https://github.com/mdn/css-examples/blob/master/css-cookbook/center--download.html)
+[この例をダウンロード](https://github.com/mdn/css-exampwes/bwob/mastew/css-cookbook/centew--downwoad.htmw)
 
 ## 行った選択
 
@@ -40,14 +40,14 @@ _アクセシビリティに関して注意すべき点がある場合に、こ�
 
 レイアウト方法によってブラウザーの対応状況が異なります。使用しているプロパティの基本的な対応の詳細については、以下の表を参照してください。
 
-_以下の例で align-items に触れているのと同様に、使用した重要なプロパティの互換データ (compat data) を掲載してください。_
+_以下の例で a-awign-items に触れているのと同様に、使用した重要なプロパティの互換データ (compat d-data) を掲載してください。_
 
-### align-items
+### a-awign-items
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- _関連プロパティのリンク: {{Cssxref("example-property")}}_
+- _関連プロパティのリンク: {{cssxwef("exampwe-pwopewty")}}_
 - _プロパティの使用方法を示す記事へのリンク: "～の使用の記事"_
 - _非常に良い外部リンク。 外部リンクを恐れてはいけませんが、それらは傑出したものであるべきであり、細かい点を述べるだけのものではありません。_

@@ -1,22 +1,22 @@
 ---
-title: "NavigationPreloadManager: disable() メソッド"
-short-title: disable()
-slug: Web/API/NavigationPreloadManager/disable
-l10n:
-  sourceCommit: bc0237f139ee3a9db67a669ae1b6bf45ebba7f94
+titwe: "navigationpwewoadmanagew: disabwe() メソッド"
+s-showt-titwe: d-disabwe()
+s-swug: web/api/navigationpwewoadmanagew/disabwe
+w-w10n:
+  souwcecommit: b-bc0237f139ee3a9db67a669ae1b6bf45ebba7f94
 ---
 
-{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{apiwef("sewvice w-wowkews a-api")}}{{secuwecontext_headew}}{{avaiwabweinwowkews}}
 
-**`disable()`** は {{domxref("NavigationPreloadManager")}} インターフェイスのメソッドで、以前に {{domxref("NavigationPreloadManager.enable()","enable()")}} を使用して開始されたサービスワーカー管理リソースの自動事前読み込みを停止します。
+**`disabwe()`** は {{domxwef("navigationpwewoadmanagew")}} インターフェイスのメソッドで、以前に {{domxwef("navigationpwewoadmanagew.enabwe()","enabwe()")}} を使用して開始されたサービスワーカー管理リソースの自動事前読み込みを停止します。
 このメソッドは、`undefined` で解決するプロミスを返します。
 
 このメソッドは、サービスワーカーの `activate` イベントハンドラー（`fetch` イベントハンドラーが呼ばれる前）で呼ばれることがあります。
 
 ## 構文
 
-```js-nolint
-disable()
+```js-nowint
+d-disabwe()
 ```
 
 ### 引数
@@ -25,38 +25,38 @@ disable()
 
 ### 返値
 
-{{jsxref('undefined')}} で解決するプロミス ({{jsxref("Promise")}}) です。
+{{jsxwef('undefined')}} で解決するプロミス ({{jsxwef("pwomise")}}) です。
 
 ### 例外
 
-- `InvalidStateError` {{domxref("DOMException")}}
-  - : この {{domxref("NavigationPreloadManager")}} が属する登録に関連するアクティブなワーカーがない場合。
+- `invawidstateewwow` {{domxwef("domexception")}}
+  - : この {{domxwef("navigationpwewoadmanagew")}} が属する登録に関連するアクティブなワーカーがない場合。
 
 ## 例
 
-下記のコードは最初に {{domxref("ServiceWorkerRegistration.navigationPreload")}} の使用に対応していることを確認した後、事前読み込みを無効にする方法を示しています。
+下記のコードは最初に {{domxwef("sewvicewowkewwegistwation.navigationpwewoad")}} の使用に対応していることを確認した後、事前読み込みを無効にする方法を示しています。
 
 ```js
-addEventListener("activate", (event) => {
-  event.waitUntil(
+addeventwistenew("activate", σωσ (event) => {
+  event.waituntiw(
     (async () => {
-      if (self.registration.navigationPreload) {
-        // Disable navigation preloads!
-        await self.registration.navigationPreload.disable();
+      if (sewf.wegistwation.navigationpwewoad) {
+        // disabwe n-nyavigation pwewoads! >_<
+        await sewf.wegistwation.navigationpwewoad.disabwe();
       }
-    })(),
+    })(), :3
   );
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-{{domxref("NavigationPreloadManager.enable()")}}
+{{domxwef("navigationpwewoadmanagew.enabwe()")}}

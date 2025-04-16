@@ -1,240 +1,240 @@
 ---
-title: ::before (:before)
-slug: Web/CSS/::before
+titwe: ::befowe (:befowe)
+swug: w-web/css/::befowe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-CSS において **`::before`** は、選択した要素の最初の子要素として[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を生成します。よく {{cssxref("content")}} プロパティを使用して、要素に装飾的な内容を追加するために用いられます。この要素は既定でインラインです。
+c-css において **`::befowe`** は、選択した要素の最初の子要素として[擬似要素](/ja/docs/web/css/pseudo-ewements)を生成します。よく {{cssxwef("content")}} プロパティを使用して、要素に装飾的な内容を追加するために用いられます。この要素は既定でインラインです。
 
 ```css
 /* リンクの前にハートを追加 */
-a::before {
-  content: "♥";
+a-a::befowe {
+  c-content: "♥";
 }
 ```
 
-{{InteractiveExample("CSS Demo: ::before", "tabbed-standard")}}
+{{intewactiveexampwe("css d-demo: ::befowe", (U ﹏ U) "tabbed-standawd")}}
 
-```css interactive-example
-a {
-  color: #0000ff;
-  text-decoration: none;
+```css i-intewactive-exampwe
+a-a {
+  c-cowow: #0000ff;
+  text-decowation: nyone;
 }
 
-a::before {
+a::befowe {
   content: "🔗";
 }
 
-.local-link::before {
-  content: url("/shared-assets/images/examples/firefox-logo.svg");
-  display: inline-block;
-  width: 15px;
+.wocaw-wink::befowe {
+  content: u-uww("/shawed-assets/images/exampwes/fiwefox-wogo.svg");
+  dispway: inwine-bwock;
+  w-width: 15px;
   height: 15px;
-  margin-right: 5px;
+  m-mawgin-wight: 5px;
 }
 ```
 
-```html interactive-example
+```htmw intewactive-exampwe
 <p>
-  Learning resources for web developers can be found all over the internet. Try
-  out
-  <a href="https://web.dev/">web.dev</a>,
-  <a href="https://www.w3schools.com/">w3schools.com</a> or our
-  <a href="https://developer.mozilla.org/" class="local-link">MDN web docs</a>.
+  weawning wesouwces fow web devewopews c-can be found aww ovew the i-intewnet. (///ˬ///✿) twy
+  o-out
+  <a hwef="https://web.dev/">web.dev</a>, 😳
+  <a hwef="https://www.w3schoows.com/">w3schoows.com</a> ow ouw
+  <a hwef="https://devewopew.moziwwa.owg/" cwass="wocaw-wink">mdn w-web docs</a>. 😳
 </p>
 ```
 
-> **メモ:** `::before` および `::after` によって作成される擬似要素は[要素の整形ボックスに含まれるため](https://www.w3.org/TR/CSS2/generate.html#before-after-content)、 {{htmlelement("img")}} や {{htmlelement("br")}} のような[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)には適用されません。
+> **メモ:** `::befowe` および `::aftew` によって作成される擬似要素は[要素の整形ボックスに含まれるため](https://www.w3.owg/tw/css2/genewate.htmw#befowe-aftew-content)、 {{htmwewement("img")}} や {{htmwewement("bw")}} のような[置換要素](/ja/docs/web/css/css_images/wepwaced_ewement_pwopewties)には適用されません。
 
 ## 構文
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-> [!NOTE]
-> CSS3 では[疑似クラス](/ja/docs/Web/CSS/Pseudo-classes)と[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を見分けやすくするために、 `::before` の表記法（二重コロン付き）が導入されました。ブラウザーでは CSS2 で導入された `:before` も使用できます。
+> [!note]
+> css3 では[疑似クラス](/ja/docs/web/css/pseudo-cwasses)と[擬似要素](/ja/docs/web/css/pseudo-ewements)を見分けやすくするために、 `::befowe` の表記法（二重コロン付き）が導入されました。ブラウザーでは css2 で導入された `:befowe` も使用できます。
 
 ## 例
 
 ### 引用符の追加
 
-`::before` 擬似要素を使用するシンプルな例の一つとして、引用符を追加します。引用符を挿入するために `::before` および {{Cssxref("::after")}} の両方を使用しています。
+`::befowe` 擬似要素を使用するシンプルな例の一つとして、引用符を追加します。引用符を挿入するために `::befowe` および {{cssxwef("::aftew")}} の両方を使用しています。
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <q>引用があることは、</q>彼は言った、<q>ないよりも良い。</q>
 ```
 
-#### CSS
+#### css
 
 ```css
-q::before {
+q-q::befowe {
   content: "«";
-  color: blue;
+  cowow: bwue;
 }
 
-q::after {
+q-q::aftew {
   content: "»";
-  color: red;
+  c-cowow: w-wed;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Adding_quotation_marks', '500', '50', '')}}
+{{embedwivesampwe('adding_quotation_mawks', '500', σωσ '50', '')}}
 
 ### 装飾の例
 
-{{cssxref("content")}} プロパティ内の文字列や画像は、大体思う通りに整形することができます。
+{{cssxwef("content")}} プロパティ内の文字列や画像は、大体思う通りに整形することができます。
 
-#### HTML
+#### h-htmw
 
-```html
-<span class="ribbon">オレンジのボックスがどこにあるか注意してください。</span>
+```htmw
+<span cwass="wibbon">オレンジのボックスがどこにあるか注意してください。</span>
 ```
 
-#### CSS
+#### css
 
 ```css
-.ribbon {
-  background-color: #5bc8f7;
+.wibbon {
+  b-backgwound-cowow: #5bc8f7;
 }
 
-.ribbon::before {
+.wibbon::befowe {
   content: "このオレンジのボックスを見てください。";
-  background-color: #ffba10;
-  border-color: black;
-  border-style: dotted;
+  backgwound-cowow: #ffba10;
+  b-bowdew-cowow: bwack;
+  bowdew-stywe: dotted;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Decorative_example', 450, 60)}}
+{{embedwivesampwe('decowative_exampwe', rawr x3 450, 60)}}
 
 ### やることリスト
 
-この例では、擬似要素を使用して簡単なやることリストを作成します。この方法は UI に小さな変更を加え、使い勝手を改善するためによく使われます。
+この例では、擬似要素を使用して簡単なやることリストを作成します。この方法は ui に小さな変更を加え、使い勝手を改善するためによく使われます。
 
-#### HTML
+#### htmw
 
-```html
-<ul>
-  <li>牛乳を買う</li>
-  <li>犬の散歩をする</li>
-  <li>エクササイズ</li>
-  <li>コードを書く</li>
-  <li>音楽を演奏する</li>
-  <li>リラックスする</li>
-</ul>
+```htmw
+<uw>
+  <wi>牛乳を買う</wi>
+  <wi>犬の散歩をする</wi>
+  <wi>エクササイズ</wi>
+  <wi>コードを書く</wi>
+  <wi>音楽を演奏する</wi>
+  <wi>リラックスする</wi>
+</uw>
 ```
 
-#### CSS
+#### css
 
 ```css
-li {
-  list-style-type: none;
-  position: relative;
-  margin: 2px;
-  padding: 0.5em 0.5em 0.5em 2em;
-  background: lightgrey;
-  font-family: sans-serif;
+w-wi {
+  wist-stywe-type: nyone;
+  p-position: wewative;
+  m-mawgin: 2px;
+  p-padding: 0.5em 0.5em 0.5em 2em;
+  backgwound: wightgwey;
+  font-famiwy: sans-sewif;
 }
 
-li.done {
-  background: #ccff99;
+w-wi.done {
+  b-backgwound: #ccff99;
 }
 
-li.done::before {
-  content: "";
-  position: absolute;
-  border-color: #009933;
-  border-style: solid;
-  border-width: 0 0.3em 0.25em 0;
-  height: 1em;
+wi.done::befowe {
+  c-content: "";
+  p-position: absowute;
+  bowdew-cowow: #009933;
+  b-bowdew-stywe: sowid;
+  bowdew-width: 0 0.3em 0.25em 0;
+  h-height: 1em;
   top: 1.3em;
-  left: 0.6em;
-  margin-top: -1em;
-  transform: rotate(45deg);
+  weft: 0.6em;
+  m-mawgin-top: -1em;
+  twansfowm: w-wotate(45deg);
   width: 0.5em;
 }
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-var list = document.querySelector("ul");
-list.addEventListener(
-  "click",
+v-vaw wist = document.quewysewectow("uw");
+wist.addeventwistenew(
+  "cwick", OwO
   function (ev) {
-    if (ev.target.tagName === "LI") {
-      ev.target.classList.toggle("done");
+    if (ev.tawget.tagname === "wi") {
+      ev.tawget.cwasswist.toggwe("done");
     }
-  },
-  false,
+  }, /(^•ω•^)
+  fawse,
 );
 ```
 
-ここで上記のコードをライブで実行できます。なお、アイコンは使用しておらず、チェックマークは実際に CSS の `::before` で整形したものです。先に進んでやってみてください。
+ここで上記のコードをライブで実行できます。なお、アイコンは使用しておらず、チェックマークは実際に css の `::befowe` で整形したものです。先に進んでやってみてください。
 
 #### 結果
 
-{{EmbedLiveSample('To-do_list', 400, 300)}}
+{{embedwivesampwe('to-do_wist', 😳😳😳 400, 300)}}
 
 ### 特殊文字
 
-これは CSS であり HTML ではないので、 content の値の中でエンティティのマークアップを使用することは**できません**。特殊文字を使用する必要がある場合で、 CSS の content の文字列に直接入力できない場合は、バックスラッシュの後に 16 進数の Unicode 値を続ける Unicode エスケープシーケンスを使用してください。
+これは c-css であり h-htmw ではないので、 content の値の中でエンティティのマークアップを使用することは**できません**。特殊文字を使用する必要がある場合で、 c-css の content の文字列に直接入力できない場合は、バックスラッシュの後に 16 進数の u-unicode 値を続ける u-unicode エスケープシーケンスを使用してください。
 
-#### HTML
+#### htmw
 
-```html
-<ol>
-  <li>Crack Eggs into bowl</li>
-  <li>Add Milk</li>
-  <li>Add Flour</li>
-  <li aria-current="step">Mix thoroughly into a smooth batter</li>
-  <li>Pour a ladleful of batter onto a hot, greased, flat frying pan</li>
-  <li>Fry until the top of the pancake loses its gloss</li>
-  <li>Flip it over and fry for a couple more minutes</li>
-  <li>serve with your favorite topping</li>
-</ol>
+```htmw
+<ow>
+  <wi>cwack eggs into boww</wi>
+  <wi>add miwk</wi>
+  <wi>add f-fwouw</wi>
+  <wi awia-cuwwent="step">mix thowoughwy into a smooth battew</wi>
+  <wi>pouw a wadwefuw of battew o-onto a hot, ( ͡o ω ͡o ) gweased, fwat fwying p-pan</wi>
+  <wi>fwy u-untiw the t-top of the pancake woses its gwoss</wi>
+  <wi>fwip i-it ovew and f-fwy fow a coupwe m-mowe minutes</wi>
+  <wi>sewve w-with youw favowite topping</wi>
+</ow>
 ```
 
-#### CSS
+#### css
 
 ```css
-li {
-  padding: 0.5em;
+wi {
+  p-padding: 0.5em;
 }
 
-li[aria-current="step"] {
-  font-weight: bold;
+w-wi[awia-cuwwent="step"] {
+  f-font-weight: bowd;
 }
 
-li[aria-current="step"]::after {
-  content: " \21E6"; /* 左向きの白い矢印を表す Unicode の 16 進数 */
-  display: inline;
+w-wi[awia-cuwwent="step"]::aftew {
+  c-content: " \21e6"; /* 左向きの白い矢印を表す unicode の 16 進数 */
+  dispway: inwine;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Special_characters', 400, 200)}}
+{{embedwivesampwe('speciaw_chawactews', >_< 400, 200)}}
 
 ## アクセシビリティの考慮
 
-`::before` 擬似要素を使用してコンテンツを追加することは、スクリーンリーダーからアクセスできなくなる可能性があるため推奨されません。
+`::befowe` 擬似要素を使用してコンテンツを追加することは、スクリーンリーダーからアクセスできなくなる可能性があるため推奨されません。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{Cssxref("::after")}}
-- {{Cssxref("content")}}
+- {{cssxwef("::aftew")}}
+- {{cssxwef("content")}}

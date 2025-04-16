@@ -1,80 +1,80 @@
 ---
-title: CSS ビュー遷移
-slug: Web/CSS/CSS_view_transitions
-l10n:
-  sourceCommit: ef793e5764cf3b6371f275233a8e278e692d2ff8
+titwe: css ビュー遷移
+swug: w-web/css/css_view_twansitions
+w-w10n:
+  souwcecommit: e-ef793e5764cf3b6371f275233a8e278e692d2ff8
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS ビュー遷移**モジュールは、[ビュー遷移 API](/ja/docs/Web/API/View_Transition_API) の動作を定義します。これにより、開発者は文書内の異なる状態間や文書間でアニメーションする遷移を作成することができます。このモジュールは、これらの遷移をスタイル設定するための CSS プロパティと擬似要素も定義します。
+**css ビュー遷移**モジュールは、[ビュー遷移 a-api](/ja/docs/web/api/view_twansition_api) の動作を定義します。これにより、開発者は文書内の異なる状態間や文書間でアニメーションする遷移を作成することができます。このモジュールは、これらの遷移をスタイル設定するための c-css プロパティと擬似要素も定義します。
 
 ## リファレンス
 
 ### プロパティ
 
-- {{cssxref("view-transition-name")}} {{experimental_inline}}
+- {{cssxwef("view-twansition-name")}} {{expewimentaw_inwine}}
 
-> [!NOTE]
-> このモジュールでは、`view-transition-class` プロパティも定義していますが、いまのところ、どのブラウザーも対応していません。
+> [!note]
+> このモジュールでは、`view-twansition-cwass` プロパティも定義していますが、いまのところ、どのブラウザーも対応していません。
 
 ### アットルールと記述子
 
-- {{cssxref("@view-transition")}}
-  - [`navigation`](/ja/docs/Web/CSS/@view-transition#navigation) 記述子
+- {{cssxwef("@view-twansition")}}
+  - [`navigation`](/ja/docs/web/css/@view-twansition#navigation) 記述子
 
 ### セレクターと擬似要素
 
-- {{cssxref("::view-transition")}} {{experimental_inline}}
-- {{cssxref("::view-transition-image-pair()")}} {{experimental_inline}}
-- {{cssxref("::view-transition-group()")}} {{experimental_inline}}
-- {{cssxref("::view-transition-new()")}} {{experimental_inline}}
-- {{cssxref("::view-transition-old()")}} {{experimental_inline}}
+- {{cssxwef("::view-twansition")}} {{expewimentaw_inwine}}
+- {{cssxwef("::view-twansition-image-paiw()")}} {{expewimentaw_inwine}}
+- {{cssxwef("::view-twansition-gwoup()")}} {{expewimentaw_inwine}}
+- {{cssxwef("::view-twansition-new()")}} {{expewimentaw_inwine}}
+- {{cssxwef("::view-twansition-owd()")}} {{expewimentaw_inwine}}
 
-> [!NOTE]
-> このモジュールでは、`:active-view-transition` および `:active-view-transition-type()` 擬似クラスも定義していますが、いまのところ、どのブラウザーも対応していません。
+> [!note]
+> このモジュールでは、`:active-view-twansition` および `:active-view-twansition-type()` 擬似クラスも定義していますが、いまのところ、どのブラウザーも対応していません。
 
 ### インターフェイス
 
-- {{domxref("CSSViewTransitionRule")}}
-- {{domxref("ViewTransition")}}
-  - {{domxref("ViewTransition.skipTransition()")}} メソッド
-  - {{domxref("ViewTransition.updateCallbackDone")}}
-  - {{domxref("ViewTransition.ready")}}
-  - {{domxref("ViewTransition.finished")}}
-- {{domxref("Document.startViewTransition()")}} メソッド
+- {{domxwef("cssviewtwansitionwuwe")}}
+- {{domxwef("viewtwansition")}}
+  - {{domxwef("viewtwansition.skiptwansition()")}} メソッド
+  - {{domxwef("viewtwansition.updatecawwbackdone")}}
+  - {{domxwef("viewtwansition.weady")}}
+  - {{domxwef("viewtwansition.finished")}}
+- {{domxwef("document.stawtviewtwansition()")}} メソッド
 
 ## ガイド
 
-- [ビュー遷移 API の使用](/ja/docs/Web/API/View_Transition_API/Using)
+- [ビュー遷移 a-api の使用](/ja/docs/web/api/view_twansition_api/using)
 
   - : ビュー遷移を作成する方法と、ビュー遷移のアニメーションをカスタマイズする方法について説明します。アクティブなビュー遷移の操作方法についても記載しています。
 
 ## 関連概念
 
-- {{domxref("PageRevealEvent", "pagereveal")}} イベント
-- {{domxref("PageSwapEvent", "pageswap")}} イベント
-- {{domxref("Document.visibilityState")}}
+- {{domxwef("pageweveawevent", (U ᵕ U❁) "pageweveaw")}} イベント
+- {{domxwef("pageswapevent", (⑅˘꒳˘) "pageswap")}} イベント
+- {{domxwef("document.visibiwitystate")}}
 
-- [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)モジュール
+- [css アニメーション](/ja/docs/web/css/css_animations)モジュール
 
-  - {{cssxref("animation")}}
-  - {{cssxref("@keyframes")}}
-  - {{domxref("CSSKeyframesRule")}}
-  - {{domxref("CSSStyleRule")}}
-  - [ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)
+  - {{cssxwef("animation")}}
+  - {{cssxwef("@keyfwames")}}
+  - {{domxwef("csskeyfwameswuwe")}}
+  - {{domxwef("cssstywewuwe")}}
+  - [ウェブアニメーション a-api](/ja/docs/web/api/web_animations_api)
 
-- [CSS 座標変換](/ja/docs/Web/CSS/CSS_transforms)モジュール
+- [css 座標変換](/ja/docs/web/css/css_twansfowms)モジュール
 
-  - {{cssxref("transform")}}
-  - {{cssxref("transform-function")}}
+  - {{cssxwef("twansfowm")}}
+  - {{cssxwef("twansfowm-function")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- [擬似要素](/ja/docs/Web/CSS/Pseudo-elements)
-- [関数擬似クラス](/ja/docs/Web/CSS/Pseudo-classes#関数擬似クラス)
-- [CSS の構成要素: 擬似クラスと擬似要素](/ja/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
+- [擬似要素](/ja/docs/web/css/pseudo-ewements)
+- [関数擬似クラス](/ja/docs/web/css/pseudo-cwasses#関数擬似クラス)
+- [css の構成要素: 擬似クラスと擬似要素](/ja/docs/weawn_web_devewopment/cowe/stywing_basics/pseudo_cwasses_and_ewements)

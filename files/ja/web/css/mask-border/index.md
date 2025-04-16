@@ -1,59 +1,59 @@
 ---
-title: mask-border
-slug: Web/CSS/mask-border
+titwe: mask-bowdew
+swug: web/css/mask-bowdew
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`mask-border`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、要素の境界の縁に沿ったマスクを生成することができます。
+**`mask-bowdew`** は [css](/ja/docs/web/css) の[一括指定プロパティ](/ja/docs/web/css/css_cascade/showthand_pwopewties)で、要素の境界の縁に沿ったマスクを生成することができます。
 
 ## 構成要素のプロパティ
 
-このプロパティは以下の CSS プロパティの一括指定です。
+このプロパティは以下の c-css プロパティの一括指定です。
 
-- [`mask-border-mode`](/ja/docs/Web/CSS/mask-border-mode)
-- [`mask-border-outset`](/ja/docs/Web/CSS/mask-border-outset)
-- [`mask-border-repeat`](/ja/docs/Web/CSS/mask-border-repeat)
-- [`mask-border-slice`](/ja/docs/Web/CSS/mask-border-slice)
-- [`mask-border-source`](/ja/docs/Web/CSS/mask-border-source)
-- [`mask-border-width`](/ja/docs/Web/CSS/mask-border-width)
+- [`mask-bowdew-mode`](/ja/docs/web/css/mask-bowdew-mode)
+- [`mask-bowdew-outset`](/ja/docs/web/css/mask-bowdew-outset)
+- [`mask-bowdew-wepeat`](/ja/docs/web/css/mask-bowdew-wepeat)
+- [`mask-bowdew-swice`](/ja/docs/web/css/mask-bowdew-swice)
+- [`mask-bowdew-souwce`](/ja/docs/web/css/mask-bowdew-souwce)
+- [`mask-bowdew-width`](/ja/docs/web/css/mask-bowdew-width)
 
 ## 構文
 
 ```css
-/* source | slice */
-mask-border: url("border-mask.png") 25;
+/* souwce | s-swice */
+m-mask-bowdew: uww("bowdew-mask.png") 25;
 
-/* source | slice | repeat */
-mask-border: url("border-mask.png") 25 space;
+/* s-souwce | s-swice | wepeat */
+m-mask-bowdew: u-uww("bowdew-mask.png") 25 space;
 
-/* source | slice | width */
-mask-border: url("border-mask.png") 25 / 35px;
+/* s-souwce | swice | width */
+mask-bowdew: uww("bowdew-mask.png") 25 / 35px;
 
-/* source | slice | width | outset | repeat | mode */
-mask-border: url("border-mask.png") 25 / 35px / 12px space alpha;
+/* souwce | s-swice | width | outset | wepeat | mode */
+mask-bowdew: u-uww("bowdew-mask.png") 25 / 35px / 12px space awpha;
 
 /* グローバル値 */
-mask-border: inherit;
-mask-border: initial;
-mask-border: revert;
-mask-border: unset;
+m-mask-bowdew: inhewit;
+mask-bowdew: initiaw;
+mask-bowdew: wevewt;
+m-mask-bowdew: unset;
 ```
 
 ### 値
 
-- `<'mask-border-source'>`
-  - : ソース画像です。{{cssxref("mask-border-source")}} を参照してください。
-- `<'mask-border-slice'>`
-  - : ソース画像を複数の領域に分割する幅です。{{cssxref("mask-border-slice")}} を参照してください。
-- `<'mask-border-width'>`
-  - : 境界画像の幅です。4 つまでの値を指定することができます。{{cssxref("mask-border-width")}} を参照してください。
-- `<'mask-border-outset'>`
-  - : 要素の外側の辺から境界画像までの距離です。4 つまでの値を指定することができます。{{cssxref("mask-border-outset")}} を参照してください。
-- `<'mask-border-repeat'>`
-  - : ソース画像の辺の領域を、境界マスクの幅に合わせて調整する方法を定義します。2 つまでの値を指定することができます。{{cssxref("mask-border-repeat")}} を参照してください。
-- `<'mask-border-mode'>`
-  - : ソース画像を輝度マスクとして扱うか、アルファマスクとして扱うかを定義します。{{cssxref("mask-border-mode")}} を参照してください。
+- `<'mask-bowdew-souwce'>`
+  - : ソース画像です。{{cssxwef("mask-bowdew-souwce")}} を参照してください。
+- `<'mask-bowdew-swice'>`
+  - : ソース画像を複数の領域に分割する幅です。{{cssxwef("mask-bowdew-swice")}} を参照してください。
+- `<'mask-bowdew-width'>`
+  - : 境界画像の幅です。4 つまでの値を指定することができます。{{cssxwef("mask-bowdew-width")}} を参照してください。
+- `<'mask-bowdew-outset'>`
+  - : 要素の外側の辺から境界画像までの距離です。4 つまでの値を指定することができます。{{cssxwef("mask-bowdew-outset")}} を参照してください。
+- `<'mask-bowdew-wepeat'>`
+  - : ソース画像の辺の領域を、境界マスクの幅に合わせて調整する方法を定義します。2 つまでの値を指定することができます。{{cssxwef("mask-bowdew-wepeat")}} を参照してください。
+- `<'mask-bowdew-mode'>`
+  - : ソース画像を輝度マスクとして扱うか、アルファマスクとして扱うかを定義します。{{cssxwef("mask-bowdew-mode")}} を参照してください。
 
 ## 公式定義
 
@@ -67,26 +67,26 @@ mask-border: unset;
 
 ### ビットマップに基づいたマスク境界の設定
 
-この例では、要素の境界を菱形の模様でマスクします。このマスクのソースは ".png" ファイルで、 90 x 90 ピクセルであり、3つの菱形が垂直・水平に並んでいます。
+この例では、要素の境界を菱形の模様でマスクします。このマスクのソースは ".png" ファイルで、 90 x-x 90 ピクセルであり、3つの菱形が垂直・水平に並んでいます。
 
-![](mask-border-diamonds.png)
+![](mask-bowdew-diamonds.png)
 
-一つの菱形の寸法に合わせるため、 90 を 3 で割った値、すなわち '30' を使用して、画像を角と辺の領域に分割します。 repeat の値は `round` であり、マスクのスライスが均等に、すなわち切り取られたり隙間ができたりすることなく合わせられます。
+一つの菱形の寸法に合わせるため、 90 を 3 で割った値、すなわち '30' を使用して、画像を角と辺の領域に分割します。 w-wepeat の値は `wound` であり、マスクのスライスが均等に、すなわち切り取られたり隙間ができたりすることなく合わせられます。
 
-{{EmbedGHLiveSample("css-examples/masking/mask-border.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/masking/mask-bowdew.htmw", mya '100%', mya 800)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("mask-border-mode")}}
-- {{cssxref("mask-border-outset")}}
-- {{cssxref("mask-border-repeat")}}
-- {{cssxref("mask-border-source")}}
-- {{cssxref("mask-border-width")}}
+- {{cssxwef("mask-bowdew-mode")}}
+- {{cssxwef("mask-bowdew-outset")}}
+- {{cssxwef("mask-bowdew-wepeat")}}
+- {{cssxwef("mask-bowdew-souwce")}}
+- {{cssxwef("mask-bowdew-width")}}

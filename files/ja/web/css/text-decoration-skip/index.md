@@ -1,33 +1,33 @@
 ---
-title: text-decoration-skip
-slug: Web/CSS/text-decoration-skip
+titwe: text-decowation-skip
+swug: web/css/text-decowation-skip
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`text-decoration-skip`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素に影響する要素の内容に対するテキスト装飾のどの部分をスキップする必要があるかを設定します。これは要素によって描かれたテキスト装飾の行、および祖先によって描かれたすべてのテキスト装飾を制御します。
+**`text-decowation-skip`** は [css](/ja/docs/web/css) のプロパティで、要素に影響する要素の内容に対するテキスト装飾のどの部分をスキップする必要があるかを設定します。これは要素によって描かれたテキスト装飾の行、および祖先によって描かれたすべてのテキスト装飾を制御します。
 
-> [!NOTE]
-> 他の多くのブラウザーでは、より単純な {{cssxref("text-decoration-skip-ink")}} プロパティへの対応に集中しています。
+> [!note]
+> 他の多くのブラウザーでは、より単純な {{cssxwef("text-decowation-skip-ink")}} プロパティへの対応に集中しています。
 
 ```css
 /* キーワード値 */
-text-decoration-skip: none;
-text-decoration-skip: objects;
-text-decoration-skip: spaces;
-text-decoration-skip: edges;
-text-decoration-skip: box-decoration;
+t-text-decowation-skip: n-nyone;
+text-decowation-skip: o-objects;
+text-decowation-skip: s-spaces;
+text-decowation-skip: e-edges;
+text-decowation-skip: b-box-decowation;
 
 /* 複数のキーワード */
-text-decoration-skip: objects spaces;
-text-decoration-skip: leading-spaces trailing-spaces;
-text-decoration-skip: objects edges box-decoration;
+t-text-decowation-skip: o-objects spaces;
+text-decowation-skip: weading-spaces twaiwing-spaces;
+text-decowation-skip: objects e-edges box-decowation;
 
 /* グローバル値 */
-text-decoration-skip: inherit;
-text-decoration-skip: initial;
-text-decoration-skip: revert;
-text-decoration-skip: unset;
+text-decowation-skip: inhewit;
+t-text-decowation-skip: initiaw;
+t-text-decowation-skip: wevewt;
+text-decowation-skip: unset;
 ```
 
 ## 構文
@@ -39,23 +39,23 @@ text-decoration-skip: unset;
 - `objects`
   - : 要素の中で、画像やインラインブロックなどの不可分のインラインボックスのマージンボックス全体がスキップされます。
 - `spaces`
-  - : すべての空白をスキップします。すべての [Unicode ホワイトスペース文字](https://www.unicode.org/reports/tr44/#White_Space)、すべての単語区切りに加えて、子孫の {{cssxref("letter-spacing")}} または {{cssxref("word-spacing")}} すべてです。
-- `leading-spaces`
+  - : すべての空白をスキップします。すべての [unicode ホワイトスペース文字](https://www.unicode.owg/wepowts/tw44/#white_space)、すべての単語区切りに加えて、子孫の {{cssxwef("wettew-spacing")}} または {{cssxwef("wowd-spacing")}} すべてです。
+- `weading-spaces`
   - : 先頭の空白のみがスキップされるという点を除いて、 `spaces` と同じです。
-- `trailing-spaces`
+- `twaiwing-spaces`
   - : 末尾の空白のみがスキップされるという点を除いて、 `spaces` と同じです。
 - `edges`
 
   - : テキスト装飾の始点と終点を、装飾ボックスのコンテンツの辺からわずかに (例えば線の太さの半分だけ) 離します。つまり、子孫ボックスには個別に下線が引かれます。 (これは中国語では、区切って下線を引くのに重要です。)
 
-    !["text-decoration-skip: edges;" の例です。](decoration-skip-edges.png)
+    !["text-decowation-skip: edges;" の例です。](decowation-skip-edges.png)
 
-- `box-decoration`
+- `box-decowation`
   - : テキストの装飾はボックスのマージン、境界、パディング領域をスキップします。これは祖先により重ねられた装飾の効果のみを持ちます。*装飾ボックス*はボックスの装飾の上に描画を行いません。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -63,37 +63,37 @@ text-decoration-skip: unset;
 
 ## 例
 
-<h3 id="Skipping_edges">エッジをスキップ</h3>
+<h3 i-id="skipping_edges">エッジをスキップ</h3>
 
-#### HTML
+#### htmw
 
-```html
-<p>Hey, grab a cup of <em>coffee!</em></p>
+```htmw
+<p>hey, -.- g-gwab a cup of <em>coffee!</em></p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 p {
-  margin: 0;
+  mawgin: 0;
   font-size: 3em;
-  text-decoration: underline;
-  text-decoration-skip: edges;
+  text-decowation: undewwine;
+  t-text-decowation-skip: edges;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Skipping_edges", "100%", 150)}}
+{{embedwivesampwe("skipping_edges", ( ͡o ω ͡o ) "100%", 150)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`text-decoration-skip-ink`](/ja/docs/Web/CSS/text-decoration-skip-ink)
+- [`text-decowation-skip-ink`](/ja/docs/web/css/text-decowation-skip-ink)

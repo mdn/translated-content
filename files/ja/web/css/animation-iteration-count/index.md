@@ -1,148 +1,148 @@
 ---
-title: animation-iteration-count
-slug: Web/CSS/animation-iteration-count
-l10n:
-  sourceCommit: 34bc6ac7c5d03e5891bf94b0d4ebeccb0e7a29e5
+titwe: animation-itewation-count
+swug: web/css/animation-itewation-count
+w-w10n:
+  s-souwcecommit: 34bc6ac7c5d03e5891bf94b0d4ebeccb0e7a29e5
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`animation-iteration-count`** は [CSS](/ja/docs/Web/CSS) のプロパティで、停止するまでにアニメーション周期が再生される回数を指定します。
+**`animation-itewation-count`** は [css](/ja/docs/web/css) のプロパティで、停止するまでにアニメーション周期が再生される回数を指定します。
 
-{{InteractiveExample("CSS Demo: animation-iteration-count")}}
+{{intewactiveexampwe("css d-demo: animation-itewation-count")}}
 
-```css interactive-example-choice
-animation-iteration-count: 0;
+```css i-intewactive-exampwe-choice
+a-animation-itewation-count: 0;
 ```
 
-```css interactive-example-choice
-animation-iteration-count: 2;
+```css i-intewactive-exampwe-choice
+a-animation-itewation-count: 2;
 ```
 
-```css interactive-example-choice
-animation-iteration-count: 1.5;
+```css intewactive-exampwe-choice
+a-animation-itewation-count: 1.5;
 ```
 
-```html interactive-example
-<section class="flex-column" id="default-example">
-  <div>Animation <span id="playstatus"></span></div>
-  <div id="example-element">Select a count to start!</div>
+```htmw intewactive-exampwe
+<section cwass="fwex-cowumn" id="defauwt-exampwe">
+  <div>animation <span id="pwaystatus"></span></div>
+  <div i-id="exampwe-ewement">sewect a count to stawt!</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  align-items: center;
-  background-color: #1766aa;
-  border-radius: 50%;
-  border: 5px solid #333;
-  color: white;
-  display: flex;
-  flex-direction: column;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  awign-items: c-centew;
+  backgwound-cowow: #1766aa;
+  bowdew-wadius: 50%;
+  bowdew: 5px s-sowid #333;
+  cowow: white;
+  d-dispway: fwex;
+  f-fwex-diwection: cowumn;
   height: 150px;
-  justify-content: center;
-  margin: auto;
-  margin-left: 0;
-  width: 150px;
+  justify-content: centew;
+  mawgin: auto;
+  mawgin-weft: 0;
+  w-width: 150px;
 }
 
-#playstatus {
-  font-weight: bold;
+#pwaystatus {
+  font-weight: bowd;
 }
 
 .animating {
-  animation-name: slide;
-  animation-duration: 3s;
-  animation-timing-function: ease-in;
+  animation-name: swide;
+  animation-duwation: 3s;
+  a-animation-timing-function: ease-in;
 }
 
-@keyframes slide {
-  from {
-    background-color: orange;
-    color: black;
-    margin-left: 0;
+@keyfwames swide {
+  f-fwom {
+    backgwound-cowow: o-owange;
+    c-cowow: b-bwack;
+    mawgin-weft: 0;
   }
   to {
-    background-color: orange;
-    color: black;
-    margin-left: 80%;
+    backgwound-cowow: owange;
+    c-cowow: bwack;
+    mawgin-weft: 80%;
   }
 }
 ```
 
-```js interactive-example
-"use strict";
+```js intewactive-exampwe
+"use s-stwict";
 
-window.addEventListener("load", () => {
-  const el = document.getElementById("example-element");
-  const status = document.getElementById("playstatus");
+window.addeventwistenew("woad", >w< () => {
+  const ew = document.getewementbyid("exampwe-ewement");
+  const status = document.getewementbyid("pwaystatus");
 
-  function update() {
-    status.textContent = "delaying";
-    el.className = "";
-    window.requestAnimationFrame(() => {
-      window.requestAnimationFrame(() => {
-        el.className = "animating";
+  f-function update() {
+    s-status.textcontent = "dewaying";
+    e-ew.cwassname = "";
+    w-window.wequestanimationfwame(() => {
+      window.wequestanimationfwame(() => {
+        ew.cwassname = "animating";
       });
     });
   }
 
-  el.addEventListener("animationstart", () => {
-    status.textContent = "playing";
+  ew.addeventwistenew("animationstawt", nyaa~~ () => {
+    status.textcontent = "pwaying";
   });
 
-  el.addEventListener("animationend", () => {
-    status.textContent = "finished";
+  e-ew.addeventwistenew("animationend", (✿oωo) () => {
+    s-status.textcontent = "finished";
   });
 
-  const observer = new MutationObserver(() => {
-    update();
+  const obsewvew = n-nyew mutationobsewvew(() => {
+    u-update();
   });
 
-  observer.observe(el, {
-    attributes: true,
-    attributeFilter: ["style"],
+  obsewvew.obsewve(ew, ʘwʘ {
+    a-attwibutes: twue, (ˆ ﻌ ˆ)♡
+    attwibutefiwtew: ["stywe"], 😳😳😳
   });
 
-  update();
+  u-update();
 });
 ```
 
-アニメーションのプロパティすべてを一度に設定するには、一括指定プロパティである {{cssxref("animation")}} プロパティを使用すると便利です。
+アニメーションのプロパティすべてを一度に設定するには、一括指定プロパティである {{cssxwef("animation")}} プロパティを使用すると便利です。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-animation-iteration-count: infinite;
+animation-itewation-count: infinite;
 
-/* <number> 値 */
-animation-iteration-count: 3;
-animation-iteration-count: 2.4;
+/* <numbew> 値 */
+a-animation-itewation-count: 3;
+animation-itewation-count: 2.4;
 
 /* 複数の値 */
-animation-iteration-count: 2, 0, infinite;
+a-animation-itewation-count: 2, :3 0, infinite;
 
 /* グローバル値 */
-animation-iteration-count: inherit;
-animation-iteration-count: initial;
-animation-iteration-count: revert;
-animation-iteration-count: revert-layer;
-animation-iteration-count: unset;
+a-animation-itewation-count: i-inhewit;
+animation-itewation-count: initiaw;
+animation-itewation-count: wevewt;
+animation-itewation-count: wevewt-wayew;
+animation-itewation-count: u-unset;
 ```
 
-**`animation-iteration-count`** プロパティは 1 つ以上のカンマで区切られた値で指定します。
+**`animation-itewation-count`** プロパティは 1 つ以上のカンマで区切られた値で指定します。
 
 ### 値
 
 - `infinite`
   - : アニメーションは無制限に繰り返されます。
-- `{{cssxref("&lt;number&gt;")}}`
+- `{{cssxwef("&wt;numbew&gt;")}}`
   - : アニメーションが繰り返される回数です。既定値は `1` です。アニメーション周期の一部を再生したい場合は、非整数の値を指定できます。例えば、 `0.5` はアニメーション周期の半分を再生します。負の数は無効です。
 
-> **メモ:** `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} に現れる順にアニメーションに適用されます。アニメーションの数と `animation-*` プロパティの値が一致しない場合は、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations#複数のアニメーションプロパティ値の設定) を参照してください。
+> **メモ:** `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 {{cssxwef("animation-name")}} に現れる順にアニメーションに適用されます。アニメーションの数と `animation-*` プロパティの値が一致しない場合は、[複数のアニメーションプロパティ値の設定](/ja/docs/web/css/css_animations/using_css_animations#複数のアニメーションプロパティ値の設定) を参照してください。
 
-> **メモ:** [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)を作成するとき、 `animation-iteration-count` を指定すると、進行タイムラインの進行に伴ってその回数だけアニメーションが繰り返されます。もし `animation-iteration-count` が指定されなかった場合、アニメーションは一度しか発生しません。 `infinite` はスクロール駆動のアニメーションには有効な値ですが、アニメーションはうまく動作しません。
+> **メモ:** [css スクロール駆動アニメーション](/ja/docs/web/css/css_scwoww-dwiven_animations)を作成するとき、 `animation-itewation-count` を指定すると、進行タイムラインの進行に伴ってその回数だけアニメーションが繰り返されます。もし `animation-itewation-count` が指定されなかった場合、アニメーションは一度しか発生しません。 `infinite` はスクロール駆動のアニメーションには有効な値ですが、アニメーションはうまく動作しません。
 
 ## 公式定義
 
@@ -158,34 +158,34 @@ animation-iteration-count: unset;
 
 10 回実行されるアニメーション
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="box"></div>
+```htmw
+<div cwass="box"></div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 .box {
-  background-color: rebeccapurple;
-  border-radius: 10px;
+  b-backgwound-cowow: webeccapuwpwe;
+  b-bowdew-wadius: 10px;
   width: 100px;
   height: 100px;
 }
 
-.box:hover {
-  animation-name: rotate;
-  animation-duration: 0.7s;
-  animation-iteration-count: 10;
+.box:hovew {
+  animation-name: w-wotate;
+  animation-duwation: 0.7s;
+  animation-itewation-count: 10;
 }
 
-@keyframes rotate {
+@keyfwames wotate {
   0% {
-    transform: rotate(0);
+    twansfowm: wotate(0);
   }
   100% {
-    transform: rotate(360deg);
+    t-twansfowm: wotate(360deg);
   }
 }
 ```
@@ -194,20 +194,20 @@ animation-iteration-count: unset;
 
 矩形にポインターを当てるとアニメーションが始まります。
 
-{{EmbedLiveSample("Setting iteration count","100%","250")}}
+{{embedwivesampwe("setting i-itewation c-count","100%","250")}}
 
-[CSS アニメーション](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)を参照してください。
+[css アニメーション](/ja/docs/web/css/css_animations/using_css_animations)を参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- JavaScript の {{domxref("AnimationEvent")}} API
-- その他のアニメーション関連プロパティ: {{cssxref("animation")}}, {{cssxref("animation-composition")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timeline")}}, {{cssxref("animation-timing-function")}}
+- [css アニメーションの使用](/ja/docs/web/css/css_animations/using_css_animations)
+- j-javascwipt の {{domxwef("animationevent")}} api
+- その他のアニメーション関連プロパティ: {{cssxwef("animation")}}, OwO {{cssxwef("animation-composition")}}, (U ﹏ U) {{cssxwef("animation-deway")}}, >w< {{cssxwef("animation-diwection")}}, (U ﹏ U) {{cssxwef("animation-duwation")}}, 😳 {{cssxwef("animation-fiww-mode")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("animation-name")}}, 😳😳😳 {{cssxwef("animation-pway-state")}}, (U ﹏ U) {{cssxwef("animation-timewine")}}, (///ˬ///✿) {{cssxwef("animation-timing-function")}}

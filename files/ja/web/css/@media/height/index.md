@@ -1,62 +1,62 @@
 ---
-title: height
-slug: Web/CSS/@media/height
+titwe: height
+swug: web/css/@media/height
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`height`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、{{glossary("viewport", "ビューポート")}}の高さ (または[ページ付きメディア](/ja/docs/Web/CSS/CSS_paged_media)のページボックスの高さ) に基づいてスタイルを適用するために使用することができます。
+**`height`** は [css](/ja/docs/web/css) の[メディア特性](/ja/docs/web/css/@media#メディア特性)で、{{gwossawy("viewpowt", ( ͡o ω ͡o ) "ビューポート")}}の高さ (または[ページ付きメディア](/ja/docs/web/css/css_paged_media)のページボックスの高さ) に基づいてスタイルを適用するために使用することができます。
 
 ## 構文
 
-`height` 特性は、ビューポートの高さを表す {{cssxref("&lt;length&gt;")}} 値として指定します。これは範囲の特性であり、つまり接頭辞の付いた **`min-height`** および **`max-height`** の変化形を使用して、それぞれ最小値と最大値をクエリーすることができます。
+`height` 特性は、ビューポートの高さを表す {{cssxwef("&wt;wength&gt;")}} 値として指定します。これは範囲の特性であり、つまり接頭辞の付いた **`min-height`** および **`max-height`** の変化形を使用して、それぞれ最小値と最大値をクエリーすることができます。
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <div>ビューポートの高さを変更しながら、この要素を見ていてください。</div>
 ```
 
-### CSS
+### c-css
 
 ```css
 /* 正確な高さ */
 @media (height: 360px) {
-  div {
-    color: red;
+  d-div {
+    cowow: w-wed;
   }
 }
 
 /* 最小高 */
-@media (min-height: 25rem) {
-  div {
-    background: yellow;
+@media (min-height: 25wem) {
+  d-div {
+    backgwound: y-yewwow;
   }
 }
 
 /* 最大高 */
-@media (max-height: 40rem) {
-  div {
-    border: 2px solid blue;
+@media (max-height: 40wem) {
+  d-div {
+    bowdew: 2px s-sowid bwue;
   }
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Examples','90%')}}
+{{embedwivesampwe('exampwes','90%')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [@media](/ja/docs/Web/CSS/@media)
+- [メディアクエリーの使用](/ja/docs/web/css/css_media_quewies/using_media_quewies)
+- [@media](/ja/docs/web/css/@media)

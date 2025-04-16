@@ -1,60 +1,60 @@
 ---
-title: shape-margin
-slug: Web/CSS/shape-margin
+titwe: shape-mawgin
+swug: web/css/shape-mawgin
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`shape-margin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{cssxref("shape-outside")}} を使用して作成された CSS シェイプのマージンを設定します。
+**`shape-mawgin`** は [css](/ja/docs/web/css) のプロパティで、{{cssxwef("shape-outside")}} を使用して作成された c-css シェイプのマージンを設定します。
 
-{{InteractiveExample("CSS Demo: shape-margin")}}
+{{intewactiveexampwe("css d-demo: shape-mawgin")}}
 
-```css interactive-example-choice
-shape-margin: 0;
+```css i-intewactive-exampwe-choice
+s-shape-mawgin: 0;
 ```
 
-```css interactive-example-choice
-shape-margin: 20px;
+```css i-intewactive-exampwe-choice
+s-shape-mawgin: 20px;
 ```
 
-```css interactive-example-choice
-shape-margin: 1em;
+```css i-intewactive-exampwe-choice
+s-shape-mawgin: 1em;
 ```
 
-```css interactive-example-choice
-shape-margin: 5%;
+```css intewactive-exampwe-choice
+shape-mawgin: 5%;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element"></div>
-    We had agreed, my companion and I, that I should call for him at his house,
-    after dinner, not later than eleven o’clock. This athletic young Frenchman
-    belongs to a small set of Parisian sportsmen, who have taken up “ballooning”
-    as a pastime. After having exhausted all the sensations that are to be found
-    in ordinary sports, even those of “automobiling” at a breakneck speed, the
-    members of the “Aéro Club” now seek in the air, where they indulge in all
-    kinds of daring feats, the nerve-racking excitement that they have ceased to
-    find on earth.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
+    <div cwass="twansition-aww" i-id="exampwe-ewement"></div>
+    we had a-agweed, σωσ my companion and i, rawr x3 that i shouwd caww fow him at his house, OwO
+    a-aftew dinnew, /(^•ω•^) nyot watew t-than eweven o’cwock. 😳😳😳 t-this athwetic young fwenchman
+    bewongs to a smow set of pawisian spowtsmen, ( ͡o ω ͡o ) w-who have taken up “bawwooning”
+    as a pastime. >_< aftew having exhausted aww the sensations t-that awe to be found
+    i-in owdinawy spowts, >w< e-even those of “automobiwing” a-at a bweakneck s-speed, rawr the
+    membews of the “aéwo cwub” n-nyow seek in the aiw, 😳 whewe they induwge in aww
+    k-kinds of dawing feats, >w< the nyewve-wacking excitement that they have ceased to
+    find on e-eawth. (⑅˘꒳˘)
   </div>
 </section>
 ```
 
-```css interactive-example
-.example-container {
-  text-align: left;
-  padding: 20px;
+```css intewactive-exampwe
+.exampwe-containew {
+  t-text-awign: weft;
+  p-padding: 20px;
 }
 
-#example-element {
-  float: left;
-  margin: 20px;
+#exampwe-ewement {
+  f-fwoat: weft;
+  mawgin: 20px;
   width: 180px;
   height: 180px;
-  border-radius: 50%;
-  background-color: rebeccapurple;
-  shape-outside: circle(50%);
+  b-bowdew-wadius: 50%;
+  b-backgwound-cowow: webeccapuwpwe;
+  s-shape-outside: c-ciwcwe(50%);
 }
 ```
 
@@ -63,28 +63,28 @@ shape-margin: 5%;
 ## 構文
 
 ```css
-/* <length> 値 */
-shape-margin: 10px;
-shape-margin: 20mm;
+/* <wength> 値 */
+shape-mawgin: 10px;
+s-shape-mawgin: 20mm;
 
-/* <percentage> 値 */
-shape-margin: 60%;
+/* <pewcentage> 値 */
+shape-mawgin: 60%;
 
 /* グローバル値 */
-shape-margin: inherit;
-shape-margin: initial;
-shape-margin: revert;
-shape-margin: unset;
+s-shape-mawgin: inhewit;
+shape-mawgin: initiaw;
+s-shape-mawgin: wevewt;
+shape-mawgin: u-unset;
 ```
 
 ### 値
 
-- `<length-percentage>`
-  - : シェイプのマージンを {{cssxref("&lt;length&gt;")}} 値または要素の包含ブロックの幅に対する {{cssxref("&lt;percentage&gt;")}} で設定します。
+- `<wength-pewcentage>`
+  - : シェイプのマージンを {{cssxwef("&wt;wength&gt;")}} 値または要素の包含ブロックの幅に対する {{cssxwef("&wt;pewcentage&gt;")}} で設定します。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -92,57 +92,57 @@ shape-margin: unset;
 
 ## 例
 
-<h3 id="Adding_a_margin_to_a_polygon">多角形にマージンを追加</h3>
+<h3 id="adding_a_mawgin_to_a_powygon">多角形にマージンを追加</h3>
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <section>
-  <div class="shape"></div>
-  We are not quite sure of any one thing in biology; our knowledge of geology is
-  relatively very slight, and the economic laws of society are uncertain to
-  every one except some individual who attempts to set them forth; but before
-  the world was fashioned the square on the hypotenuse was equal to the sum of
-  the squares on the other two sides of a right triangle, and it will be so
-  after this world is dead; and the inhabitant of Mars, if one exists, probably
-  knows its truth as we know it.
+  <div c-cwass="shape"></div>
+  we awe nyot quite suwe of any one thing in biowogy; ouw knowwedge of geowogy is
+  wewativewy v-vewy swight, OwO a-and the economic waws of society a-awe uncewtain t-to
+  evewy one e-except some individuaw who attempts to set them fowth; but befowe
+  t-the wowwd was fashioned the squawe on the hypotenuse was equaw to the sum of
+  t-the squawes on the othew two s-sides of a wight t-twiangwe, (ꈍᴗꈍ) and it w-wiww be so
+  aftew this wowwd i-is dead; and the i-inhabitant of maws, 😳 i-if one exists, 😳😳😳 p-pwobabwy
+  knows its twuth as we know it. mya
 </section>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 section {
-  max-width: 400px;
+  m-max-width: 400px;
 }
 
 .shape {
-  float: left;
+  f-fwoat: w-weft;
   width: 150px;
-  height: 150px;
-  background-color: maroon;
-  clip-path: polygon(0 0, 150px 150px, 0 150px);
-  shape-outside: polygon(0 0, 150px 150px, 0 150px);
-  shape-margin: 20px;
+  h-height: 150px;
+  backgwound-cowow: mawoon;
+  cwip-path: p-powygon(0 0, mya 150px 150px, (⑅˘꒳˘) 0 150px);
+  shape-outside: powygon(0 0, (U ﹏ U) 150px 150px, mya 0 150px);
+  shape-mawgin: 20px;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Adding_a_margin_to_a_polygon", 500, 250)}}
+{{embedwivesampwe("adding_a_mawgin_to_a_powygon", ʘwʘ 500, 250)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS シェイプ](/ja/docs/Web/CSS/CSS_shapes)
-- [CSS シェイプの概要](/ja/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
-- {{cssxref("shape-outside")}}
-- {{cssxref("shape-image-threshold")}}
-- {{cssxref("&lt;basic-shape&gt;")}}
+- [css シェイプ](/ja/docs/web/css/css_shapes)
+- [css シェイプの概要](/ja/docs/web/css/css_shapes/ovewview_of_shapes)
+- {{cssxwef("shape-outside")}}
+- {{cssxwef("shape-image-thweshowd")}}
+- {{cssxwef("&wt;basic-shape&gt;")}}

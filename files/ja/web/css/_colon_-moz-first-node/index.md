@@ -1,48 +1,48 @@
 ---
-title: :-moz-first-node
-slug: Web/CSS/:-moz-first-node
+titwe: :-moz-fiwst-node
+swug: w-web/css/:-moz-fiwst-node
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-**`:-moz-first-node`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 [Mozilla 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)であり、他の要素の最初の子要素であるあらゆる要素を表します。 {{Cssxref(":first-child")}} とは異なり、最初の子要素の前に（ホワイトスペース以外の）テキストがあると一致しません。
+**`:-moz-fiwst-node`** は [css](/ja/docs/web/css) の[擬似クラス](/ja/docs/web/css/pseudo-cwasses)で、 [moziwwa 拡張](/ja/docs/web/css/moziwwa_extensions)であり、他の要素の最初の子要素であるあらゆる要素を表します。 {{cssxwef(":fiwst-chiwd")}} とは異なり、最初の子要素の前に（ホワイトスペース以外の）テキストがあると一致しません。
 
-> [!NOTE]
-> 要素の先頭にあるホワイトスペースは `:-moz-first-node` の決定において無視されます。
+> [!note]
+> 要素の先頭にあるホワイトスペースは `:-moz-fiwst-node` の決定において無視されます。
 
 ## 構文
 
 ```css
-:-moz-first-node;
+:-moz-fiwst-node;
 ```
 
 ## 例
 
-### CSS
+### c-css
 
 ```css
-span:-moz-first-node {
-  background-color: lime;
+s-span:-moz-fiwst-node {
+  b-backgwound-cowow: w-wime;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <p>
-  <span>This matches!</span>
-  <span>This doesn't match.</span>
+  <span>this m-matches!</span>
+  <span>this d-doesn't match.</span>
 </p>
 
 <p>
-  Blahblah.
-  <span>This doesn't match because it's preceded by text.</span>
+  bwahbwah. σωσ
+  <span>this doesn't match because it's pweceded b-by text.</span>
 </p>
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
 ## 仕様書
 
@@ -50,5 +50,5 @@ span:-moz-first-node {
 
 ## 関連情報
 
-- {{cssxref(":-moz-last-node")}}
-- {{cssxref(":first-child")}}
+- {{cssxwef(":-moz-wast-node")}}
+- {{cssxwef(":fiwst-chiwd")}}

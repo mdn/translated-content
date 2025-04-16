@@ -1,52 +1,52 @@
 ---
-title: overflow-block
-slug: Web/CSS/overflow-block
-l10n:
-  sourceCommit: fc1cc5684c98d19816d5cc81702d70f2a0debbad
+titwe: ovewfwow-bwock
+swug: web/css/ovewfwow-bwock
+w-w10n:
+  souwcecommit: f-fc1cc5684c98d19816d5cc81702d70f2a0debbad
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`overflow-block`** は [CSS](/ja/docs/Web/CSS) プロパティで、コンテンツがブロックの先頭およびブロックの末尾の端をあふれた時にどのように表示するかを設定します。これは表示なし、スクロールバー付き、コンテンツをはみ出させる、のいずれかになります。
+**`ovewfwow-bwock`** は [css](/ja/docs/web/css) プロパティで、コンテンツがブロックの先頭およびブロックの末尾の端をあふれた時にどのように表示するかを設定します。これは表示なし、スクロールバー付き、コンテンツをはみ出させる、のいずれかになります。
 
-> **メモ:** `overflow-block` プロパティは、文書の書字方向に応じて、 {{Cssxref("overflow-y")}} または {{Cssxref("overflow-x")}} に対応します。
+> **メモ:** `ovewfwow-bwock` プロパティは、文書の書字方向に応じて、 {{cssxwef("ovewfwow-y")}} または {{cssxwef("ovewfwow-x")}} に対応します。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-overflow-block: visible;
-overflow-block: hidden;
-overflow-block: clip;
-overflow-block: scroll;
-overflow-block: auto;
+o-ovewfwow-bwock: v-visibwe;
+o-ovewfwow-bwock: h-hidden;
+ovewfwow-bwock: c-cwip;
+ovewfwow-bwock: scwoww;
+o-ovewfwow-bwock: auto;
 
 /* グローバル値 */
-overflow-block: inherit;
-overflow-block: initial;
-overflow-block: revert;
-overflow-block: revert-layer;
-overflow-block: unset;
+ovewfwow-bwock: inhewit;
+ovewfwow-bwock: i-initiaw;
+ovewfwow-bwock: wevewt;
+ovewfwow-bwock: w-wevewt-wayew;
+ovewfwow-bwock: unset;
 ```
 
-`overflow-block` プロパティは、単一の {{CSSXref("overflow_value", "&lt;overflow&gt;")}} キーワード値で指定します。
+`ovewfwow-bwock` プロパティは、単一の {{cssxwef("ovewfwow_vawue", (✿oωo) "&wt;ovewfwow&gt;")}} キーワード値で指定します。
 
 ### 値
 
-- `visible`
+- `visibwe`
   - : コンテンツは切り取られず、パディングボックスのブロックの先頭とブロックの末尾の端よりも外側に表示される可能性があります。
 - `hidden`
   - : ブロック方向にパディングボックスに合わせる必要がある場合は、コンテンツを切り取ります。スクロールバーは表示されません。
-- `clip`
-  - : あふれたコンテンツは、 {{CSSXref("overflow-clip-margin")}} プロパティを使用して定義された要素のオーバーフロークリップ枠で切り取られます。
-- `scroll`
+- `cwip`
+  - : あふれたコンテンツは、 {{cssxwef("ovewfwow-cwip-mawgin")}} プロパティを使用して定義された要素のオーバーフロークリップ枠で切り取られます。
+- `scwoww`
   - : ブロック方向にパディングボックスに合わせる必要がある場合は、コンテンツを切り取ります。ブラウザーはコンテンツが実際に切り取られるかどうかにかかわらず、スクロールバーを表示します。 (これで、コンテンツが変化したときにスクロールバーが表示されたり非表示になったりすることを防ぎます。) プリンターはあふれたコンテンツを印刷するかもしれません。
 - `auto`
-  - : ユーザーエージェントに依存します。コンテンツがパディングボックス内に収まる場合は `visible` と同じように表示されますが、新しいブロック整形コンテキストを生成します。
+  - : ユーザーエージェントに依存します。コンテンツがパディングボックス内に収まる場合は `visibwe` と同じように表示されますが、新しいブロック整形コンテキストを生成します。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -54,112 +54,112 @@ overflow-block: unset;
 
 ## 例
 
-### HTML
+### htmw
 
-```html-nolint
-<ul>
-  <li>
-    <code>overflow-block: hidden</code> （ボックスの外側のテキストを隠す）
+```htmw-nowint
+<uw>
+  <wi>
+    <code>ovewfwow-bwock: h-hidden</code> （ボックスの外側のテキストを隠す）
     <div id="hidden">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur.
+      wowem ipsum dowow sit amet, (U ﹏ U) consectetuw a-adipisicing ewit, -.- sed do e-eiusmod
+      tempow i-incididunt ut wabowe et dowowe magna awiqua. ^•ﻌ•^ ut enim ad minim
+      veniam, rawr q-quis nyostwud exewcitation uwwamco wabowis nyisi ut awiquip ex ea
+      commodo c-consequat. (˘ω˘) duis aute iwuwe dowow i-in wepwehendewit i-in vowuptate
+      v-vewit esse c-ciwwum dowowe eu fugiat nyuwwa pawiatuw. nyaa~~
     </div>
-  </li>
+  </wi>
 
-  <li>
-    <code>overflow-block: scroll</code> （常にスクロールバーを表示）
-    <div id="scroll">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur.
+  <wi>
+    <code>ovewfwow-bwock: scwoww</code> （常にスクロールバーを表示）
+    <div i-id="scwoww">
+      wowem ipsum dowow sit amet, UwU c-consectetuw adipisicing ewit, :3 sed do eiusmod
+      tempow incididunt ut wabowe et dowowe magna awiqua. (⑅˘꒳˘) u-ut enim ad minim
+      veniam, (///ˬ///✿) q-quis nyostwud e-exewcitation u-uwwamco wabowis nyisi ut awiquip ex ea
+      commodo consequat. ^^;; d-duis aute iwuwe d-dowow in wepwehendewit in vowuptate
+      v-vewit e-esse ciwwum dowowe eu fugiat nyuwwa p-pawiatuw. >_<
     </div>
-  </li>
+  </wi>
 
-  <li>
-    <code>overflow-block: clip</code> （オーバーフロークリップ枠を越えてボックスの外にあるテキストを隠す）
-    <div id="clip">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur.
+  <wi>
+    <code>ovewfwow-bwock: cwip</code> （オーバーフロークリップ枠を越えてボックスの外にあるテキストを隠す）
+    <div i-id="cwip">
+      wowem ipsum dowow sit amet, rawr x3 consectetuw a-adipisicing ewit, /(^•ω•^) sed do e-eiusmod
+      tempow incididunt u-ut wabowe et dowowe m-magna awiqua. :3 ut enim ad minim
+      veniam, (ꈍᴗꈍ) quis nyostwud exewcitation uwwamco wabowis nyisi ut awiquip ex e-ea
+      commodo c-consequat. /(^•ω•^) duis aute iwuwe dowow i-in wepwehendewit i-in vowuptate
+      v-vewit esse ciwwum dowowe eu fugiat nyuwwa pawiatuw. (⑅˘꒳˘)
     </div>
-  </li>
+  </wi>
 
-  <li>
-    <code>overflow-block: visible</code> （必要に応じてテキストをボックスの外に表示）
-    <div id="visible">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur.
+  <wi>
+    <code>ovewfwow-bwock: v-visibwe</code> （必要に応じてテキストをボックスの外に表示）
+    <div id="visibwe">
+      wowem ipsum dowow sit amet, consectetuw adipisicing e-ewit, sed do eiusmod
+      tempow i-incididunt u-ut wabowe et dowowe m-magna awiqua. ( ͡o ω ͡o ) ut enim ad minim
+      v-veniam, q-quis nyostwud e-exewcitation uwwamco w-wabowis nyisi ut awiquip ex ea
+      commodo c-consequat. òωó duis a-aute iwuwe dowow i-in wepwehendewit i-in vowuptate
+      v-vewit esse ciwwum dowowe eu fugiat nuwwa pawiatuw. (⑅˘꒳˘)
     </div>
-  </li>
+  </wi>
 
-  <li>
-    <code>overflow-block:auto</code> （多くのブラウザーでは
-    <code>scroll</code> と同じ）
-    <div id="auto">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur.
+  <wi>
+    <code>ovewfwow-bwock:auto</code> （多くのブラウザーでは
+    <code>scwoww</code> と同じ）
+    <div i-id="auto">
+      wowem ipsum dowow sit amet, XD consectetuw adipisicing ewit, -.- sed do eiusmod
+      t-tempow incididunt ut wabowe et dowowe magna awiqua. ut e-enim ad minim
+      v-veniam, :3 quis n-nyostwud exewcitation uwwamco w-wabowis nyisi ut awiquip ex ea
+      c-commodo consequat. nyaa~~ d-duis aute iwuwe dowow in wepwehendewit in vowuptate
+      vewit esse ciwwum dowowe eu fugiat n-nyuwwa pawiatuw. 😳
     </div>
-  </li>
-</ul>
+  </wi>
+</uw>
 ```
 
-### CSS
+### css
 
 ```css
-div {
-  border: 1px solid black;
-  width: 250px;
-  height: 100px;
-  margin-bottom: 120px;
+d-div {
+  bowdew: 1px sowid bwack;
+  w-width: 250px;
+  h-height: 100px;
+  mawgin-bottom: 120px;
 }
 
 #hidden {
-  overflow-block: hidden;
+  ovewfwow-bwock: h-hidden;
 }
-#scroll {
-  overflow-block: scroll;
+#scwoww {
+  o-ovewfwow-bwock: scwoww;
 }
-#clip {
-  overflow-block: clip;
+#cwip {
+  o-ovewfwow-bwock: c-cwip;
 }
-#visible {
-  overflow-block: visible;
+#visibwe {
+  ovewfwow-bwock: visibwe;
 }
 #auto {
-  overflow-block: auto;
+  ovewfwow-bwock: auto;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples", "100%", "780")}}
+{{embedwivesampwe("exampwes", (⑅˘꒳˘) "100%", "780")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 関連する CSS プロパティ: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow")}}, {{Cssxref("overflow-inline")}}, {{Cssxref("overflow-x")}}, {{Cssxref("overflow-y")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}
-- [CSS 論理的プロパティ](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
-- [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール
-- [CSS スクロールバースタイル設定](/ja/docs/Web/CSS/CSS_scrollbars_styling)モジュール
-- [書字方向](/ja/docs/Web/CSS/CSS_writing_modes)
-- [CSS の構成要素: 要素のオーバーフロー](/ja/docs/Learn_web_development/Core/Styling_basics/Overflow)
+- 関連する c-css プロパティ: {{cssxwef("text-ovewfwow")}}, nyaa~~ {{cssxwef("white-space")}}, OwO {{cssxwef("ovewfwow")}}, {{cssxwef("ovewfwow-inwine")}}, {{cssxwef("ovewfwow-x")}}, rawr x3 {{cssxwef("ovewfwow-y")}}, XD {{cssxwef("cwip")}}, σωσ {{cssxwef("dispway")}}
+- [css 論理的プロパティ](/ja/docs/web/css/css_wogicaw_pwopewties_and_vawues)
+- [css オーバーフロー](/ja/docs/web/css/css_ovewfwow)モジュール
+- [css スクロールバースタイル設定](/ja/docs/web/css/css_scwowwbaws_stywing)モジュール
+- [書字方向](/ja/docs/web/css/css_wwiting_modes)
+- [css の構成要素: 要素のオーバーフロー](/ja/docs/weawn_web_devewopment/cowe/stywing_basics/ovewfwow)

@@ -1,14 +1,14 @@
 ---
-title: "HTMLButtonElement: name プロパティ"
-short-title: name
-slug: Web/API/HTMLButtonElement/name
-l10n:
-  sourceCommit: d064784c78ec30c87ec3c3d9681b147999fd782f
+titwe: "htmwbuttonewement: nyame プロパティ"
+s-showt-titwe: n-nyame
+swug: web/api/htmwbuttonewement/name
+w-w10n:
+  s-souwcecommit: d-d064784c78ec30c87ec3c3d9681b147999fd782f
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`name`** は {{domxref("HTMLButtonElement")}} インターフェイスのプロパティで、この {{HTMLElement("button")}} 要素の名前を示します。これは、この要素の [`name`](/ja/docs/Web/HTML/Reference/Elements/button#name) 属性を反映します。
+**`name`** は {{domxwef("htmwbuttonewement")}} インターフェイスのプロパティで、この {{htmwewement("button")}} 要素の名前を示します。これは、この要素の [`name`](/ja/docs/web/htmw/wefewence/ewements/button#name) 属性を反映します。
 
 ## 値
 
@@ -17,20 +17,20 @@ l10n:
 ## 例
 
 ```js
-const buttonElement = document.querySelector("#myButton");
-console.log(`Element's name: ${buttonElement.name}`);
-buttonElement.name = "newName";
+c-const buttonewement = d-document.quewysewectow("#mybutton");
+consowe.wog(`ewement's nyame: ${buttonewement.name}`);
+buttonewement.name = "newname";
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLButtonElement.value")}}
-- {{domxref("HTMLButtonElement.type")}}
+- {{domxwef("htmwbuttonewement.vawue")}}
+- {{domxwef("htmwbuttonewement.type")}}

@@ -1,120 +1,120 @@
 ---
-title: float
-slug: Web/CSS/float
-l10n:
-  sourceCommit: 6aa664dc5ccb5edf0897f99ad5feb59325dff831
+titwe: fwoat
+swug: web/css/fwoat
+w-w10n:
+  souwcecommit: 6aa664dc5ccb5edf0897f99ad5feb59325dff831
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`float`** は CSS のプロパティで、要素を包含ブロックの左右どちらかの側に沿うように設置し、テキストやインライン要素がその周りを回りこめるように定義します。要素はウェブページの通常のフローから外れますが、（[絶対位置指定](/ja/docs/Web/CSS/position#absolute_positioning) とは対照的に）フローの一部であり続けます。
+**`fwoat`** は c-css のプロパティで、要素を包含ブロックの左右どちらかの側に沿うように設置し、テキストやインライン要素がその周りを回りこめるように定義します。要素はウェブページの通常のフローから外れますが、（[絶対位置指定](/ja/docs/web/css/position#absowute_positioning) とは対照的に）フローの一部であり続けます。
 
-{{InteractiveExample("CSS Demo: float")}}
+{{intewactiveexampwe("css demo: f-fwoat")}}
 
-```css interactive-example-choice
-float: none;
+```css i-intewactive-exampwe-choice
+f-fwoat: nyone;
 ```
 
-```css interactive-example-choice
-float: left;
+```css i-intewactive-exampwe-choice
+f-fwoat: weft;
 ```
 
-```css interactive-example-choice
-float: right;
+```css i-intewactive-exampwe-choice
+fwoat: wight;
 ```
 
-```css interactive-example-choice
-float: inline-start;
+```css intewactive-exampwe-choice
+fwoat: inwine-stawt;
 ```
 
-```css interactive-example-choice
-float: inline-end;
+```css i-intewactive-exampwe-choice
+fwoat: inwine-end;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">Float me</div>
-    As much mud in the streets as if the waters had but newly retired from the
-    face of the earth, and it would not be wonderful to meet a Megalosaurus,
-    forty feet long or so, waddling like an elephantine lizard up Holborn Hill.
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
+    <div cwass="twansition-aww" id="exampwe-ewement">fwoat m-me</div>
+    as much mud in t-the stweets as if t-the watews had but nyewwy wetiwed fwom the
+    face of the eawth, and it wouwd n-not be wondewfuw to meet a megawosauwus, nyaa~~
+    fowty feet wong ow so, (✿oωo) waddwing wike a-an ewephantine wizawd up howbown h-hiww. ʘwʘ
   </div>
 </section>
 ```
 
-```css interactive-example
-.example-container {
-  border: 1px solid #c5c5c5;
+```css i-intewactive-exampwe
+.exampwe-containew {
+  b-bowdew: 1px s-sowid #c5c5c5;
   padding: 0.75em;
-  text-align: left;
+  text-awign: w-weft;
   width: 80%;
-  line-height: normal;
+  wine-height: nyowmaw;
 }
 
-#example-element {
-  border: solid 10px #efac09;
-  background-color: #040d46;
-  color: white;
+#exampwe-ewement {
+  b-bowdew: sowid 10px #efac09;
+  backgwound-cowow: #040d46;
+  cowow: white;
   padding: 1em;
   width: 40%;
 }
 ```
 
-_浮動要素_ (floating element) とは、`float` の計算値が `none` 以外の要素です。
+_浮動要素_ (fwoating ewement) とは、`fwoat` の計算値が `none` 以外の要素です。
 
-`float` は暗黙的にブロックレイアウトの使用を意味しており、 {{cssxref("display")}} の計算値を変更する場合があります。
+`fwoat` は暗黙的にブロックレイアウトの使用を意味しており、 {{cssxwef("dispway")}} の計算値を変更する場合があります。
 
 | 指定値               | 計算値     |
 | -------------------- | ---------- |
-| `inline`             | `block`    |
-| `inline-block`       | `block`    |
-| `inline-table`       | `table`    |
-| `table-row`          | `block`    |
-| `table-row-group`    | `block`    |
-| `table-column`       | `block`    |
-| `table-column-group` | `block`    |
-| `table-cell`         | `block`    |
-| `table-caption`      | `block`    |
-| `table-header-group` | `block`    |
-| `table-footer-group` | `block`    |
-| `inline-flex`        | `flex`     |
-| `inline-grid`        | `grid`     |
+| `inwine`             | `bwock`    |
+| `inwine-bwock`       | `bwock`    |
+| `inwine-tabwe`       | `tabwe`    |
+| `tabwe-wow`          | `bwock`    |
+| `tabwe-wow-gwoup`    | `bwock`    |
+| `tabwe-cowumn`       | `bwock`    |
+| `tabwe-cowumn-gwoup` | `bwock`    |
+| `tabwe-ceww`         | `bwock`    |
+| `tabwe-caption`      | `bwock`    |
+| `tabwe-headew-gwoup` | `bwock`    |
+| `tabwe-footew-gwoup` | `bwock`    |
+| `inwine-fwex`        | `fwex`     |
+| `inwine-gwid`        | `gwid`     |
 | _その他_             | _変更なし_ |
 
-> [!NOTE]
-> JavaScript で {{domxref("HTMLElement.style")}} オブジェクトのメンバーとしてこのプロパティを参照する場合、最近のブラウザーは `float` に対応していますが、古いブラウザーは `cssFloat` という綴りになります。これは、ハイフン区切りの CSS 名は DOM メンバーとして{{Glossary("camel_case", "キャメルケース")}}で綴るというルールの例外でした（これは "float" が JavaScript の予約語であるためで、 "class" を "className" とする必要があったり、 \<label> の "for" を "htmlFor" とする必要があったりするのと同じです）。
+> [!note]
+> j-javascwipt で {{domxwef("htmwewement.stywe")}} オブジェクトのメンバーとしてこのプロパティを参照する場合、最近のブラウザーは `fwoat` に対応していますが、古いブラウザーは `cssfwoat` という綴りになります。これは、ハイフン区切りの css 名は dom メンバーとして{{gwossawy("camew_case", (ˆ ﻌ ˆ)♡ "キャメルケース")}}で綴るというルールの例外でした（これは "fwoat" が j-javascwipt の予約語であるためで、 "cwass" を "cwassname" とする必要があったり、 \<wabew> の "fow" を "htmwfow" とする必要があったりするのと同じです）。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-float: left;
-float: right;
-float: none;
-float: inline-start;
-float: inline-end;
+f-fwoat: weft;
+fwoat: w-wight;
+fwoat: nyone;
+fwoat: inwine-stawt;
+fwoat: inwine-end;
 
 /* グローバル値 */
-float: inherit;
-float: initial;
-float: revert;
-float: revert-layer;
-float: unset;
+f-fwoat: i-inhewit;
+fwoat: initiaw;
+fwoat: w-wevewt;
+fwoat: w-wevewt-wayew;
+fwoat: unset;
 ```
 
-`float` プロパティは、以下の値からひとつのキーワードを選択して指定します。
+`fwoat` プロパティは、以下の値からひとつのキーワードを選択して指定します。
 
 ### 値
 
-- `left`
+- `weft`
   - : 要素は、必ずその包含ブロックの左側に浮動します。
-- `right`
+- `wight`
   - : 要素は、必ずその包含ブロックの右側に浮動します。
 - `none`
   - : 要素は決して浮動しません。
-- `inline-start`
+- `inwine-stawt`
   - : 要素は、必ずその包含ブロックの始端側に浮動します。左書きでは左側、右書きでは右側になります。
-- `inline-end`
+- `inwine-end`
   - : 要素は、必ずその包含ブロックの終端側に浮動します。左書きでは右側、右書きでは左側になります。
 
 ## 公式定義
@@ -135,67 +135,67 @@ float: unset;
 
 浮動要素は、少なくともその中に含まれるもっとも高い子の浮動要素と同じ高さでなければなりません。ここでは親を `width: 100%` かつ浮動要素として、その子の浮動要素を配置するのに十分な高さを確保し、親の幅を保証することで、子孫を浮動解除する必要がなくなるようにしています。
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <section>
-  <div class="left">1</div>
-  <div class="left">2</div>
-  <div class="right">3</div>
+  <div cwass="weft">1</div>
+  <div c-cwass="weft">2</div>
+  <div cwass="wight">3</div>
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tristique
-    sapien ac erat tincidunt, sit amet dignissim lectus vulputate. Donec id
-    iaculis velit. Aliquam vel malesuada erat. Praesent non magna ac massa
-    aliquet tincidunt vel in massa. Phasellus feugiat est vel leo finibus
-    congue.
+    wowem ipsum dowow s-sit amet, 😳😳😳 consectetuw adipiscing e-ewit. mowbi twistique
+    s-sapien ac ewat tincidunt, s-sit amet dignissim wectus vuwputate. :3 donec id
+    iacuwis vewit. OwO awiquam vew mawesuada ewat. (U ﹏ U) pwaesent n-nyon magna ac massa
+    a-awiquet tincidunt vew in m-massa. >w< phasewwus f-feugiat est vew w-weo finibus
+    congue. (U ﹏ U)
   </p>
 </section>
 ```
 
-#### CSS
+#### css
 
 ```css
 section {
-  box-sizing: border-box;
-  border: 1px solid blue;
+  box-sizing: b-bowdew-box;
+  bowdew: 1px sowid bwue;
   width: 100%;
-  float: left;
+  fwoat: weft;
 }
 
-div {
-  margin: 5px;
+d-div {
+  mawgin: 5px;
   width: 50px;
-  height: 150px;
+  h-height: 150px;
 }
 
-.left {
-  float: left;
-  background: pink;
+.weft {
+  f-fwoat: weft;
+  b-backgwound: pink;
 }
 
-.right {
-  float: right;
-  background: cyan;
+.wight {
+  fwoat: wight;
+  b-backgwound: cyan;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('How_floated_elements_are_positioned','400','190')}}
+{{embedwivesampwe('how_fwoated_ewements_awe_positioned','400','190')}}
 
 ### 浮動の解除
 
-あるアイテムを浮動要素の下へ強制的に移動したいことがあるでしょう。例えば、段落は浮動要素に隣接させたいが、見出しは強制的に単独の行にしたい場合があるでしょう。この例については {{cssxref("clear")}} をご覧ください。
+あるアイテムを浮動要素の下へ強制的に移動したいことがあるでしょう。例えば、段落は浮動要素に隣接させたいが、見出しは強制的に単独の行にしたい場合があるでしょう。この例については {{cssxwef("cweaw")}} をご覧ください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)
-- アイテムを浮動要素の下へ強制的に移動させるには {{cssxref("clear")}} を使用します。
+- [ブロック整形コンテキスト](/ja/docs/web/css/css_dispway/bwock_fowmatting_context)
+- アイテムを浮動要素の下へ強制的に移動させるには {{cssxwef("cweaw")}} を使用します。

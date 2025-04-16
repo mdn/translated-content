@@ -1,80 +1,80 @@
 ---
-title: any-pointer
-slug: Web/CSS/@media/any-pointer
+titwe: any-pointew
+swug: web/css/@media/any-pointew
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`any-pointer`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、ユーザーが (マウスなどの) *何らかの*ポインティングデバイスを持っているか、もしそうならば、どれだけの正確性を持っているかを調べます。
+**`any-pointew`** は [css](/ja/docs/web/css) の[メディア特性](/ja/docs/web/css/@media#メディア特性)で、ユーザーが (マウスなどの) *何らかの*ポインティングデバイスを持っているか、もしそうならば、どれだけの正確性を持っているかを調べます。
 
-> **メモ:** *第一の*ポインティングデバイスの正確性を調べたい場合は、代わりに [`pointer`](/ja/docs/Web/CSS/@media/pointer) を使用してください。
+> **メモ:** *第一の*ポインティングデバイスの正確性を調べたい場合は、代わりに [`pointew`](/ja/docs/web/css/@media/pointew) を使用してください。
 
 ## 構文
 
-`any-pointer` 特性は、以下の一覧の中から一つのキーワード値で指定します。
+`any-pointew` 特性は、以下の一覧の中から一つのキーワード値で指定します。
 
 - `none`
   - : 利用できるポインティングデバイスがありません。
-- `coarse`
+- `coawse`
   - : 正確性が限定されたポインティングデバイスが、少なくとも一つ含まれています。
 - `fine`
   - : 正確性が高いポインティングデバイスが、少なくとも一つ含まれています。
 
-> [!NOTE]
+> [!note]
 > 異なる性質を持つ複数の機器が利用できる場合は、複数の値に一致することがありますが、 `none` はポインティングデバイスがない場合のみ一致します。
 
 ## 例
 
 この例は、精度の高いポインターを持つユーザーには小さなチェックボックスを、精度の低いポインターを持つユーザーには大きなチェックボックスを生成します。大きなチェックボックスは小さなチェックボックスよりも後に宣言されているので優先されます。
 
-### HTML
+### h-htmw
 
-```html
-<input id="test" type="checkbox" /> <label for="test">Look at me!</label>
+```htmw
+<input id="test" t-type="checkbox" /> <wabew f-fow="test">wook a-at me!</wabew>
 ```
 
-### CSS
+### c-css
 
 ```css
-input[type="checkbox"]:checked {
-  background: gray;
+i-input[type="checkbox"]:checked {
+  b-backgwound: g-gway;
 }
 
-@media (any-pointer: fine) {
+@media (any-pointew: fine) {
   input[type="checkbox"] {
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
+    -moz-appeawance: nyone;
+    -webkit-appeawance: nyone;
+    appeawance: n-nyone;
     width: 15px;
     height: 15px;
-    border: 1px solid blue;
+    bowdew: 1px sowid b-bwue;
   }
 }
 
-@media (any-pointer: coarse) {
-  input[type="checkbox"] {
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
+@media (any-pointew: coawse) {
+  i-input[type="checkbox"] {
+    -moz-appeawance: nyone;
+    -webkit-appeawance: nyone;
+    appeawance: n-none;
     width: 30px;
     height: 30px;
-    border: 2px solid red;
+    bowdew: 2px sowid w-wed;
   }
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`pointer` メディア特性](/ja/docs/Web/CSS/@media/pointer)
+- [`pointew` メディア特性](/ja/docs/web/css/@media/pointew)

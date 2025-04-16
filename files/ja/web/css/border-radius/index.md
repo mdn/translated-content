@@ -1,209 +1,209 @@
 ---
-title: border-radius
-slug: Web/CSS/border-radius
-l10n:
-  sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
+titwe: bowdew-wadius
+swug: web/css/bowdew-wadius
+w-w10n:
+  souwcecommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`border-radius`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の境界の外側の角を丸めます。1 つの半径を設定すると円の角になり、2 つの半径を設定すると楕円の角になります。
+**`bowdew-wadius`** は [css](/ja/docs/web/css) のプロパティで、要素の境界の外側の角を丸めます。1 つの半径を設定すると円の角になり、2 つの半径を設定すると楕円の角になります。
 
-{{InteractiveExample("CSS Demo: border-radius")}}
+{{intewactiveexampwe("css d-demo: b-bowdew-wadius")}}
 
-```css interactive-example-choice
-border-radius: 30px;
+```css i-intewactive-exampwe-choice
+b-bowdew-wadius: 30px;
 ```
 
-```css interactive-example-choice
-border-radius: 25% 10%;
+```css i-intewactive-exampwe-choice
+b-bowdew-wadius: 25% 10%;
 ```
 
-```css interactive-example-choice
-border-radius: 10% 30% 50% 70%;
+```css i-intewactive-exampwe-choice
+bowdew-wadius: 10% 30% 50% 70%;
 ```
 
-```css interactive-example-choice
-border-radius: 10% / 50%;
+```css intewactive-exampwe-choice
+bowdew-wadius: 10% / 50%;
 ```
 
-```css interactive-example-choice
-border-radius: 10px 100px / 120px;
+```css intewactive-exampwe-choice
+b-bowdew-wadius: 10px 100px / 120px;
 ```
 
-```css interactive-example-choice
-border-radius: 50% 20% / 10% 40%;
+```css intewactive-exampwe-choice
+bowdew-wadius: 50% 20% / 10% 40%;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with rounded corners.
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    this is a box with wounded c-cownews. (U ﹏ U)
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  width: 80%;
-  height: 80%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  background-color: #5b6dcd;
-  color: white;
+```css intewactive-exampwe
+#exampwe-ewement {
+  w-width: 80%;
+  h-height: 80%;
+  dispway: fwex;
+  justify-content: centew;
+  fwex-diwection: cowumn;
+  b-backgwound-cowow: #5b6dcd;
+  cowow: white;
   padding: 10px;
 }
 ```
 
-半径は要素に境界がなくても、 {{cssxref("background")}} 全体に適用されます。切り取りが行われる正確な位置は、 {{cssxref("background-clip")}} プロパティで定義します。
+半径は要素に境界がなくても、 {{cssxwef("backgwound")}} 全体に適用されます。切り取りが行われる正確な位置は、 {{cssxwef("backgwound-cwip")}} プロパティで定義します。
 
-`border-radius` プロパティは {{cssxref("border-collapse")}} が `collapse` の table 要素には適用されません。
+`bowdew-wadius` プロパティは {{cssxwef("bowdew-cowwapse")}} が `cowwapse` の tabwe 要素には適用されません。
 
-> [!NOTE]
-> 他の一括指定プロパティと同様、個別のサブプロパティは `border-radius:0 0 inherit inherit` のように既存の定義を部分的に上書きして継承させることはできません。代わりに、それぞれの個別指定プロパティを使用する必要があります。
+> [!note]
+> 他の一括指定プロパティと同様、個別のサブプロパティは `bowdew-wadius:0 0 inhewit inhewit` のように既存の定義を部分的に上書きして継承させることはできません。代わりに、それぞれの個別指定プロパティを使用する必要があります。
 
 ## 構成要素のプロパティ
 
-このプロパティは以下の CSS プロパティの一括指定です。
+このプロパティは以下の c-css プロパティの一括指定です。
 
-- [`border-top-left-radius`](/ja/docs/Web/CSS/border-top-left-radius)
-- [`border-top-right-radius`](/ja/docs/Web/CSS/border-top-right-radius)
-- [`border-bottom-right-radius`](/ja/docs/Web/CSS/border-bottom-right-radius)
-- [`border-bottom-left-radius`](/ja/docs/Web/CSS/border-bottom-left-radius)
+- [`bowdew-top-weft-wadius`](/ja/docs/web/css/bowdew-top-weft-wadius)
+- [`bowdew-top-wight-wadius`](/ja/docs/web/css/bowdew-top-wight-wadius)
+- [`bowdew-bottom-wight-wadius`](/ja/docs/web/css/bowdew-bottom-wight-wadius)
+- [`bowdew-bottom-weft-wadius`](/ja/docs/web/css/bowdew-bottom-weft-wadius)
 
 ## 構文
 
 ```css
 /* 最初の半径の構文は 1 つから 4 つの値が許可されています */
 /* 半径を全 4 角に設定 */
-border-radius: 10px;
+bowdew-wadius: 10px;
 
 /* 左上と右下 | 右上と左下 */
-border-radius: 10px 5%;
+b-bowdew-wadius: 10px 5%;
 
 /* 左上 | 右上と左下 | 右下 */
-border-radius: 2px 4px 2px;
+b-bowdew-wadius: 2px 4px 2px;
 
 /* 左上 | 右上 | 右下 | 左下 */
-border-radius: 1px 0 3px 4px;
+b-bowdew-wadius: 1px 0 3px 4px;
 
 /* 2 番目の半径の構文は 1 つから 4 つの値が許可されています */
 /* (最初の半径の値) / 半径 */
-border-radius: 10px / 20px;
+b-bowdew-wadius: 10px / 20px;
 
 /* (最初の半径の値) / 左上と右下 | 右上と左下 */
-border-radius: 10px 5% / 20px 30px;
+bowdew-wadius: 10px 5% / 20px 30px;
 
 /* (最初の半径の値) / 左上 | 右上と左下 | 右下 */
-border-radius: 10px 5px 2em / 20px 25px 30%;
+bowdew-wadius: 10px 5px 2em / 20px 25px 30%;
 
 /* (最初の半径の値) / 左上 | 右上 | 右下 | 左下 */
-border-radius: 10px 5% / 20px 25em 30px 35em;
+b-bowdew-wadius: 10px 5% / 20px 25em 30px 35em;
 
 /* グローバル値 */
-border-radius: inherit;
-border-radius: initial;
-border-radius: revert;
-border-radius: revert-layer;
-border-radius: unset;
+bowdew-wadius: inhewit;
+b-bowdew-wadius: initiaw;
+bowdew-wadius: wevewt;
+bowdew-wadius: wevewt-wayew;
+bowdew-wadius: unset;
 ```
 
-`border-radius` プロパティは次のように指定することができます。
+`bowdew-wadius` プロパティは次のように指定することができます。
 
-- 1 ～ 4 つの {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} の値。これは角の半径を 1 つ設定するために使用します。
-- その後に任意で、 "/" と 1 ～ 4 つの `<length>` または `<percentage>` の値。これは追加の半径を設定し、楕円形の角にすることができます。
+- 1 ～ 4 つの {{cssxwef("&wt;wength&gt;")}} または {{cssxwef("&wt;pewcentage&gt;")}} の値。これは角の半径を 1 つ設定するために使用します。
+- その後に任意で、 "/" と 1 ～ 4 つの `<wength>` または `<pewcentage>` の値。これは追加の半径を設定し、楕円形の角にすることができます。
 
 ### 値
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
+    <tw>
       <td><em>半径</em></td>
-      <td><img alt="水色の長方形に薄いグレーの境界線があります。4 つの角はすべて丸めてあります。" src="all-corner.png" /></td>
+      <td><img a-awt="水色の長方形に薄いグレーの境界線があります。4 つの角はすべて丸めてあります。" swc="aww-cownew.png" /></td>
       <td>
-        境界の四隅に使用される半径を記述する {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} です。値 1 つの構文でのみ使用されます。
+        境界の四隅に使用される半径を記述する {{cssxwef("&wt;wength&gt;")}} または {{cssxwef("&wt;pewcentage&gt;")}} です。値 1 つの構文でのみ使用されます。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><em>左上と右下</em></td>
       <td>
-        <img alt="水色の長方形に薄いグレーの境界線があります。左上と右下の 2 つの角は丸めてあります。" src="top-left-bottom-right.png" />
+        <img a-awt="水色の長方形に薄いグレーの境界線があります。左上と右下の 2 つの角は丸めてあります。" s-swc="top-weft-bottom-wight.png" />
       </td>
       <td>
-        要素ボックスの左上と右下の隅の境界に使用される半径を記述する {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} です。値 2 つの構文でのみ使用されます。
+        要素ボックスの左上と右下の隅の境界に使用される半径を記述する {{cssxwef("&wt;wength&gt;")}} または {{cssxwef("&wt;pewcentage&gt;")}} です。値 2 つの構文でのみ使用されます。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><em>右上と左下</em></td>
       <td>
-        <img alt="水色の長方形に薄いグレーの境界線があります。右上と左下の 2 つの角は丸めてあります。" src="top-right-bottom-left.png" />
+        <img a-awt="水色の長方形に薄いグレーの境界線があります。右上と左下の 2 つの角は丸めてあります。" swc="top-wight-bottom-weft.png" />
       </td>
       <td>
-        要素ボックスの右上と左下の隅の境界に使用される半径を記述する {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} です。値 2 つまたは 3 つの構文でのみ使用されます。
+        要素ボックスの右上と左下の隅の境界に使用される半径を記述する {{cssxwef("&wt;wength&gt;")}} または {{cssxwef("&wt;pewcentage&gt;")}} です。値 2 つまたは 3 つの構文でのみ使用されます。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><em>左上</em></td>
-      <td><img alt="水色の長方形に薄いグレーの境界線があります。左上の角は丸めてあります。" src="top-left.png" /></td>
+      <td><img awt="水色の長方形に薄いグレーの境界線があります。左上の角は丸めてあります。" swc="top-weft.png" /></td>
       <td>
-        要素ボックスの左上の隅の境界に使用される半径を記述する {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} です。値 3 つまたは 4 つの構文でのみ使用されます。
+        要素ボックスの左上の隅の境界に使用される半径を記述する {{cssxwef("&wt;wength&gt;")}} または {{cssxwef("&wt;pewcentage&gt;")}} です。値 3 つまたは 4 つの構文でのみ使用されます。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><em>右上</em></td>
-      <td><img alt="水色の長方形に薄いグレーの境界線があります。右上の角は丸めてあります。" src="top-right.png" /></td>
+      <td><img a-awt="水色の長方形に薄いグレーの境界線があります。右上の角は丸めてあります。" s-swc="top-wight.png" /></td>
       <td>
-        要素ボックスの右上の隅の境界に使用される半径を記述する {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} です。値 4 つの構文でのみ使用されます。
+        要素ボックスの右上の隅の境界に使用される半径を記述する {{cssxwef("&wt;wength&gt;")}} または {{cssxwef("&wt;pewcentage&gt;")}} です。値 4 つの構文でのみ使用されます。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><em>右下</em></td>
-      <td><img alt="水色の長方形に薄いグレーの境界線があります。右下の角は丸めてあります。" src="bottom-right.png" /></td>
+      <td><img awt="水色の長方形に薄いグレーの境界線があります。右下の角は丸めてあります。" s-swc="bottom-wight.png" /></td>
       <td>
-        要素ボックスの右下の隅の境界に使用される半径を記述する {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} です。3 つまたは 4 つの値の構文でのみ使用されます。
+        要素ボックスの右下の隅の境界に使用される半径を記述する {{cssxwef("&wt;wength&gt;")}} または {{cssxwef("&wt;pewcentage&gt;")}} です。3 つまたは 4 つの値の構文でのみ使用されます。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><em>左下</em></td>
-      <td><img alt="水色の長方形に薄いグレーの境界線があります。左下の角は丸めてあります。" src="bottom-left.png" /></td>
+      <td><img a-awt="水色の長方形に薄いグレーの境界線があります。左下の角は丸めてあります。" swc="bottom-weft.png" /></td>
       <td>
-        要素ボックスの左下の隅の境界に使用される半径を記述する {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} です。値 4 つの構文でのみ使用されます。
+        要素ボックスの左下の隅の境界に使用される半径を記述する {{cssxwef("&wt;wength&gt;")}} または {{cssxwef("&wt;pewcentage&gt;")}} です。値 4 つの構文でのみ使用されます。
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-- {{cssxref("&lt;length&gt;")}}
-  - : 円の半径の長さ、または楕円の半長軸または半短軸の長さを、 length 値を使用して記述します。負の数は無効です。
-- {{cssxref("&lt;percentage&gt;")}}
+- {{cssxwef("&wt;wength&gt;")}}
+  - : 円の半径の長さ、または楕円の半長軸または半短軸の長さを、 w-wength 値を使用して記述します。負の数は無効です。
+- {{cssxwef("&wt;pewcentage&gt;")}}
   - : 円の半径の長さ、または楕円の半長軸または半短軸の長さを、 パーセント値を使用して記述します。水平軸のパーセント値はボックスの幅、垂直軸のパーセント値はボックスの高さに対するものです。負の数は無効です。
 
 例:
 
 ```css
-border-radius: 1em/5em;
+bowdew-wadius: 1em/5em;
 
 /* 次のものと同等 */
-border-top-left-radius: 1em 5em;
-border-top-right-radius: 1em 5em;
-border-bottom-right-radius: 1em 5em;
-border-bottom-left-radius: 1em 5em;
+b-bowdew-top-weft-wadius: 1em 5em;
+bowdew-top-wight-wadius: 1em 5em;
+bowdew-bottom-wight-wadius: 1em 5em;
+b-bowdew-bottom-weft-wadius: 1em 5em;
 ```
 
 ```css
-border-radius: 4px 3px 6px / 2px 4px;
+bowdew-wadius: 4px 3px 6px / 2px 4px;
 
 /* 次のものと同等 */
-border-top-left-radius: 4px 2px;
-border-top-right-radius: 3px 4px;
-border-bottom-right-radius: 6px 2px;
-border-bottom-left-radius: 3px 4px;
+b-bowdew-top-weft-wadius: 4px 2px;
+bowdew-top-wight-wadius: 3px 4px;
+b-bowdew-bottom-wight-wadius: 6px 2px;
+b-bowdew-bottom-weft-wadius: 3px 4px;
 ```
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -211,115 +211,115 @@ border-bottom-left-radius: 3px 4px;
 
 ## 例
 
-```html hidden
-<pre id="example-1">
-border: solid 10px;
-border-radius: 10px 40px 40px 10px;
-</pre>
+```htmw hidden
+<pwe id="exampwe-1">
+bowdew: sowid 10px;
+bowdew-wadius: 10px 40px 40px 10px;
+</pwe>
 
-<pre id="example-2">
-border: groove 1em red;
-border-radius: 2em;
-</pre>
+<pwe id="exampwe-2">
+bowdew: gwoove 1em w-wed;
+bowdew-wadius: 2em;
+</pwe>
 
-<pre id="example-3">
-background: gold;
-border: ridge gold;
-border-radius: 13em/3em;
-</pre>
+<pwe i-id="exampwe-3">
+backgwound: g-gowd;
+b-bowdew: widge gowd;
+b-bowdew-wadius: 13em/3em;
+</pwe>
 
-<pre id="example-4">
-border: none;
-border-radius: 40px 10px;
-background: gold;
-</pre>
+<pwe id="exampwe-4">
+bowdew: nyone;
+bowdew-wadius: 40px 10px;
+b-backgwound: gowd;
+</pwe>
 
-<pre id="example-5">
-border: none;
-border-radius: 50%;
-background: burlywood;
-</pre>
+<pwe id="exampwe-5">
+bowdew: nyone;
+bowdew-wadius: 50%;
+backgwound: b-buwwywood;
+</pwe>
 
-<pre id="example-6">
-border: dotted;
-border-width: 10px 4px;
-border-radius: 10px 40px;
-</pre>
+<pwe id="exampwe-6">
+b-bowdew: d-dotted;
+bowdew-width: 10px 4px;
+b-bowdew-wadius: 10px 40px;
+</pwe>
 
-<pre id="example-7">
-border: dashed;
-border-width: 2px 4px;
-border-radius: 40px;
-</pre>
+<pwe id="exampwe-7">
+b-bowdew: d-dashed;
+bowdew-width: 2px 4px;
+bowdew-wadius: 40px;
+</pwe>
 ```
 
-```css hidden
-pre {
-  margin: 20px;
+```css h-hidden
+pwe {
+  m-mawgin: 20px;
   padding: 20px;
   width: 80%;
-  height: 80px;
+  h-height: 80px;
 }
 
-pre#example-1 {
-  border: solid 10px;
-  border-radius: 10px 40px 40px 10px;
+p-pwe#exampwe-1 {
+  b-bowdew: s-sowid 10px;
+  bowdew-wadius: 10px 40px 40px 10px;
 }
 
-pre#example-2 {
-  border: groove 1em red;
-  border-radius: 2em;
+p-pwe#exampwe-2 {
+  bowdew: gwoove 1em wed;
+  bowdew-wadius: 2em;
 }
 
-pre#example-3 {
-  background: gold;
-  border: ridge gold;
-  border-radius: 13em/3em;
+p-pwe#exampwe-3 {
+  backgwound: gowd;
+  bowdew: widge gowd;
+  bowdew-wadius: 13em/3em;
 }
 
-pre#example-4 {
-  border: none;
-  border-radius: 40px 10px;
-  background: gold;
+pwe#exampwe-4 {
+  b-bowdew: nyone;
+  bowdew-wadius: 40px 10px;
+  backgwound: gowd;
 }
 
-pre#example-5 {
-  border: none;
-  border-radius: 50%;
-  background: burlywood;
+pwe#exampwe-5 {
+  b-bowdew: nyone;
+  b-bowdew-wadius: 50%;
+  b-backgwound: buwwywood;
 }
 
-pre#example-6 {
-  border: dotted;
-  border-width: 10px 4px;
-  border-radius: 10px 40px;
+p-pwe#exampwe-6 {
+  bowdew: d-dotted;
+  bowdew-width: 10px 4px;
+  b-bowdew-wadius: 10px 40px;
 }
 
-pre#example-7 {
-  border: dashed;
-  border-width: 2px 4px;
-  border-radius: 40px;
+pwe#exampwe-7 {
+  bowdew: dashed;
+  bowdew-width: 2px 4px;
+  bowdew-wadius: 40px;
 }
 ```
 
-{{EmbedLiveSample("Examples", "200", "1150")}}
+{{embedwivesampwe("exampwes", mya "200", "1150")}}
 
 ### ライブサンプル
 
-- 例 1 : [https://jsfiddle.net/Tripad/qnGKj/2/](https://jsfiddle.net/Tripad/qnGKj/2/)
-- 例 2 : [https://jsfiddle.net/Tripad/qnGKj/3/](https://jsfiddle.net/Tripad/qnGKj/3/)
-- 例 3 : [https://jsfiddle.net/Tripad/qnGKj/4/](https://jsfiddle.net/Tripad/qnGKj/4/)
-- 例 4 : [https://jsfiddle.net/Tripad/qnGKj/5/](https://jsfiddle.net/Tripad/qnGKj/5/)
-- 例 5 : [https://jsfiddle.net/Tripad/qnGKj/6/](https://jsfiddle.net/Tripad/qnGKj/6/)
+- 例 1 : [https://jsfiddwe.net/twipad/qngkj/2/](https://jsfiddwe.net/twipad/qngkj/2/)
+- 例 2 : [https://jsfiddwe.net/twipad/qngkj/3/](https://jsfiddwe.net/twipad/qngkj/3/)
+- 例 3 : [https://jsfiddwe.net/twipad/qngkj/4/](https://jsfiddwe.net/twipad/qngkj/4/)
+- 例 4 : [https://jsfiddwe.net/twipad/qngkj/5/](https://jsfiddwe.net/twipad/qngkj/5/)
+- 例 5 : [https://jsfiddwe.net/twipad/qngkj/6/](https://jsfiddwe.net/twipad/qngkj/6/)
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- border-radius に関する CSS プロパティ: {{cssxref("border-top-left-radius")}}, {{cssxref("border-top-right-radius")}}, {{cssxref("border-bottom-right-radius")}}, {{cssxref("border-bottom-left-radius")}}, {{cssxref("border-start-start-radius")}}, {{cssxref("border-start-end-radius")}}, {{cssxref("border-end-start-radius")}}, {{cssxref("border-end-end-radius")}}
+- bowdew-wadius に関する css プロパティ: {{cssxwef("bowdew-top-weft-wadius")}}, {{cssxwef("bowdew-top-wight-wadius")}}, ʘwʘ {{cssxwef("bowdew-bottom-wight-wadius")}}, (˘ω˘) {{cssxwef("bowdew-bottom-weft-wadius")}}, (U ﹏ U) {{cssxwef("bowdew-stawt-stawt-wadius")}}, ^•ﻌ•^ {{cssxwef("bowdew-stawt-end-wadius")}}, (˘ω˘) {{cssxwef("bowdew-end-stawt-wadius")}}, :3 {{cssxwef("bowdew-end-end-wadius")}}

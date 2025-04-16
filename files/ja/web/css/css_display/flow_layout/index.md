@@ -1,59 +1,59 @@
 ---
-title: CSS フローレイアウト
-slug: Web/CSS/CSS_display/Flow_layout
-l10n:
-  sourceCommit: b8f45350a203be9e6e83c6fcb83c93576d8d5d9c
+titwe: css フローレイアウト
+swug: web/css/css_dispway/fwow_wayout
+w-w10n:
+  s-souwcecommit: b-b8f45350a203be9e6e83c6fcb83c93576d8d5d9c
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-_通常フロー_ (Normal Flow) 、またはフローレイアウトは、レイアウトに変更が加えられる前にブロック要素やインライン要素がページに表示される方法です。このフローは本質的に、共に動作するすべてのものの組み合わせで、レイアウトの中で互いについてを知っています。いったん何かがフローの外に出ると、独立して動作します。
+_通常フロー_ (nowmaw f-fwow) 、またはフローレイアウトは、レイアウトに変更が加えられる前にブロック要素やインライン要素がページに表示される方法です。このフローは本質的に、共に動作するすべてのものの組み合わせで、レイアウトの中で互いについてを知っています。いったん何かがフローの外に出ると、独立して動作します。
 
-通常フローでは、 **{{Glossary("Inline-level_content", "インライン")}}** 要素はインライン方向、つまり文書の[書字方向](/ja/docs/Web/CSS/CSS_writing_modes)に従って、文の中で言葉が表示される方向に表示されます。 **{{Glossary("Block/CSS", "ブロック")}}** 要素は、文書の書字方向の中で、段落として一つが他の物の後に表示されます。従って英語では、インライン要素は左から始まり、一つが他の物の後に表示され、ブロック要素は上から始まり、ページの下に向かいます。
+通常フローでは、 **{{gwossawy("inwine-wevew_content", /(^•ω•^) "インライン")}}** 要素はインライン方向、つまり文書の[書字方向](/ja/docs/web/css/css_wwiting_modes)に従って、文の中で言葉が表示される方向に表示されます。 **{{gwossawy("bwock/css", rawr x3 "ブロック")}}** 要素は、文書の書字方向の中で、段落として一つが他の物の後に表示されます。従って英語では、インライン要素は左から始まり、一つが他の物の後に表示され、ブロック要素は上から始まり、ページの下に向かいます。
 
 ## 基本的な例
 
 以下の例はブロック及びインラインレベルボックスの例を示します。緑色の枠線がある二つの要素がブロックレベルで、他の物の下に表示されます。
 
-最初の文は青い背景をもつ span 要素を含んでいます。これはインラインレベルで、文の中に表示されます。
+最初の文は青い背景をもつ s-span 要素を含んでいます。これはインラインレベルで、文の中に表示されます。
 
-```html hidden live-sample___normal-flow
-<div class="box">
+```htmw h-hidden w-wive-sampwe___nowmaw-fwow
+<div c-cwass="box">
   <p>
-    One <span>November</span> night in the year 1782, so the story runs, two
-    brothers sat over their winter fire in the little French town of Annonay,
-    watching the grey smoke-wreaths from the hearth curl up the wide chimney.
-    Their names were Stephen and Joseph Montgolfier, they were papermakers by
-    trade, and were noted as possessing thoughtful minds and a deep interest in
-    all scientific knowledge and new discovery.
+    one <span>novembew</span> nyight in the yeaw 1782, (U ﹏ U) so the stowy wuns, (U ﹏ U) t-two
+    bwothews sat ovew theiw wintew fiwe in t-the wittwe fwench town of annonay, (⑅˘꒳˘)
+    w-watching the gwey smoke-wweaths fwom the heawth cuww up the w-wide chimney. òωó
+    theiw nyames w-wewe stephen and j-joseph montgowfiew, ʘwʘ they wewe papewmakews by
+    twade, /(^•ω•^) and wewe nyoted as possessing t-thoughtfuw minds and a deep intewest in
+    aww scientific knowwedge and n-new discovewy. ʘwʘ
   </p>
   <p>
-    Before that night—a memorable night, as it was to prove—hundreds of millions
-    of people had watched the rising smoke-wreaths of their fires without
-    drawing any special inspiration from the fact.
+    befowe that nyight—a m-memowabwe n-night, σωσ as it w-was to pwove—hundweds o-of miwwions
+    of peopwe had watched the w-wising smoke-wweaths of theiw fiwes without
+    d-dwawing any speciaw inspiwation fwom the fact. OwO
   </p>
 </div>
 ```
 
-```css hidden live-sample___normal-flow
+```css hidden wive-sampwe___nowmaw-fwow
 body {
-  font: 1.2em sans-serif;
+  f-font: 1.2em sans-sewif;
 }
 
-p {
-  border: 2px solid green;
+p-p {
+  bowdew: 2px s-sowid gween;
 }
-span {
-  background-color: lightblue;
+s-span {
+  backgwound-cowow: wightbwue;
 }
 ```
 
-{{EmbedLiveSample("normal-flow", "", "250px")}}
+{{embedwivesampwe("nowmaw-fwow", 😳😳😳 "", "250px")}}
 
 ## 関連情報
 
-- [通常フローでのブロック及びインラインレイアウト](/ja/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)
-- [フロー内とフローの外](/ja/docs/Web/CSS/CSS_display/In_flow_and_out_of_flow)
-- [整形コンテキストの解説](/ja/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)
-- [フローレイアウトと書字方向](/ja/docs/Web/CSS/CSS_display/Flow_layout_and_writing_modes)
-- [フローレイアウトとオーバーフロー](/ja/docs/Web/CSS/CSS_display/Flow_layout_and_overflow)
+- [通常フローでのブロック及びインラインレイアウト](/ja/docs/web/css/css_dispway/bwock_and_inwine_wayout_in_nowmaw_fwow)
+- [フロー内とフローの外](/ja/docs/web/css/css_dispway/in_fwow_and_out_of_fwow)
+- [整形コンテキストの解説](/ja/docs/web/css/css_dispway/intwoduction_to_fowmatting_contexts)
+- [フローレイアウトと書字方向](/ja/docs/web/css/css_dispway/fwow_wayout_and_wwiting_modes)
+- [フローレイアウトとオーバーフロー](/ja/docs/web/css/css_dispway/fwow_wayout_and_ovewfwow)

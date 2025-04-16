@@ -1,73 +1,73 @@
 ---
-title: empty-cells
-slug: Web/CSS/empty-cells
+titwe: empty-cewws
+swug: web/css/empty-cewws
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`empty-cells`** は CSS のプロパティで、{{htmlelement("table", "表")}}のセルが目に見える内容を持たない場合に、周囲の境界と背景を{{glossary("user agent", "ユーザーエージェント")}}がどのように描画するかを指定します。
+**`empty-cewws`** は c-css のプロパティで、{{htmwewement("tabwe", >_< "表")}}のセルが目に見える内容を持たない場合に、周囲の境界と背景を{{gwossawy("usew a-agent", rawr x3 "ユーザーエージェント")}}がどのように描画するかを指定します。
 
-{{InteractiveExample("CSS Demo: empty-cells")}}
+{{intewactiveexampwe("css d-demo: empty-cewws")}}
 
-```css interactive-example-choice
-empty-cells: show;
+```css i-intewactive-exampwe-choice
+e-empty-cewws: show;
 ```
 
-```css interactive-example-choice
-empty-cells: hide;
+```css intewactive-exampwe-choice
+e-empty-cewws: h-hide;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <table class="transition-all" id="example-element">
-    <tr>
-      <th>Client Name</th>
-      <th>Age</th>
-    </tr>
-    <tr>
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <tabwe cwass="twansition-aww" id="exampwe-ewement">
+    <tw>
+      <th>cwient nyame</th>
+      <th>age</th>
+    </tw>
+    <tw>
       <td></td>
       <td>25</td>
-    </tr>
-    <tr>
-      <td>Louise Q.</td>
+    </tw>
+    <tw>
+      <td>wouise q-q.</td>
       <td></td>
-    </tr>
-    <tr>
-      <td>Owen B.</td>
+    </tw>
+    <tw>
+      <td>owen b.</td>
       <td></td>
-    </tr>
-    <tr>
-      <td>Stan L.</td>
+    </tw>
+    <tw>
+      <td>stan w.</td>
       <td>71</td>
-    </tr>
-  </table>
+    </tw>
+  </tabwe>
 </section>
 ```
 
-```css interactive-example
-th,
+```css i-intewactive-exampwe
+th, mya
 td {
-  border: 2px solid #a19;
-  padding: 0.25rem 0.5rem;
+  b-bowdew: 2px sowid #a19;
+  padding: 0.25wem 0.5wem;
 }
 ```
 
-このプロパティは、 {{cssxref("border-collapse")}} プロパティが `separate` であった場合のみ効果があります。
+このプロパティは、 {{cssxwef("bowdew-cowwapse")}} プロパティが `sepawate` であった場合のみ効果があります。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-empty-cells: show;
-empty-cells: hide;
+empty-cewws: show;
+empty-cewws: h-hide;
 
 /* グローバル値 */
-empty-cells: inherit;
-empty-cells: initial;
-empty-cells: unset;
+empty-cewws: i-inhewit;
+empty-cewws: i-initiaw;
+empty-cewws: unset;
 ```
 
-`empty-cells` プロパティは、以下のキーワード値のうちの一つで指定します。
+`empty-cewws` プロパティは、以下のキーワード値のうちの一つで指定します。
 
 ### 値
 
@@ -86,65 +86,65 @@ empty-cells: unset;
 
 ## 例
 
-<h3 id="Showing_and_hiding_empty_table_cells">表の空のセルの表示・非表示</h3>
+<h3 id="showing_and_hiding_empty_tabwe_cewws">表の空のセルの表示・非表示</h3>
 
-#### HTML
+#### htmw
 
-```html
-<table class="table_1">
-  <tr>
-    <td>Moe</td>
-    <td>Larry</td>
-  </tr>
-  <tr>
-    <td>Curly</td>
+```htmw
+<tabwe cwass="tabwe_1">
+  <tw>
+    <td>moe</td>
+    <td>wawwy</td>
+  </tw>
+  <tw>
+    <td>cuwwy</td>
     <td></td>
-  </tr>
-</table>
-<br />
-<table class="table_2">
-  <tr>
-    <td>Moe</td>
-    <td>Larry</td>
-  </tr>
-  <tr>
-    <td>Curly</td>
+  </tw>
+</tabwe>
+<bw />
+<tabwe c-cwass="tabwe_2">
+  <tw>
+    <td>moe</td>
+    <td>wawwy</td>
+  </tw>
+  <tw>
+    <td>cuwwy</td>
     <td></td>
-  </tr>
-</table>
+  </tw>
+</tabwe>
 ```
 
-#### CSS
+#### css
 
 ```css
-.table_1 {
-  empty-cells: show;
+.tabwe_1 {
+  empty-cewws: show;
 }
 
-.table_2 {
-  empty-cells: hide;
+.tabwe_2 {
+  empty-cewws: h-hide;
 }
 
-td,
+td, nyaa~~
 th {
-  border: 1px solid gray;
-  padding: 0.5rem;
+  bowdew: 1px s-sowid gway;
+  p-padding: 0.5wem;
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Showing_and_hiding_empty_table_cells', '100%', '200') }}
+{{ e-embedwivesampwe('showing_and_hiding_empty_tabwe_cewws', (⑅˘꒳˘) '100%', '200') }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("border-collapse")}}
-- [表のスタイル付け](/ja/docs/Learn_web_development/Core/Styling_basics/Tables)
+- {{cssxwef("bowdew-cowwapse")}}
+- [表のスタイル付け](/ja/docs/weawn_web_devewopment/cowe/stywing_basics/tabwes)

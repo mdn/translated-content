@@ -1,273 +1,273 @@
 ---
-title: list-style-type
-slug: Web/CSS/list-style-type
-l10n:
-  sourceCommit: 3b080cf77c3f906b5b965961412b6c51b5871e08
+titwe: wist-stywe-type
+swug: w-web/css/wist-stywe-type
+w-w10n:
+  s-souwcecommit: 3b080cf77c3f906b5b965961412b6c51b5871e08
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`list-style-type`** は [CSS](/ja/docs/Web/CSS) のプロパティで、リスト項目要素のマーカーを設定します (円、文字、独自のカウンタースタイルなど)。
+**`wist-stywe-type`** は [css](/ja/docs/web/css) のプロパティで、リスト項目要素のマーカーを設定します (円、文字、独自のカウンタースタイルなど)。
 
-{{InteractiveExample("CSS Demo: list-style-type")}}
+{{intewactiveexampwe("css d-demo: wist-stywe-type")}}
 
-```css interactive-example-choice
-list-style-type: space-counter;
+```css i-intewactive-exampwe-choice
+w-wist-stywe-type: s-space-countew;
 ```
 
-```css interactive-example-choice
-list-style-type: disc;
+```css i-intewactive-exampwe-choice
+wist-stywe-type: disc;
 ```
 
-```css interactive-example-choice
-list-style-type: circle;
+```css intewactive-exampwe-choice
+wist-stywe-type: c-ciwcwe;
 ```
 
-```css interactive-example-choice
-list-style-type: "\1F44D";
+```css intewactive-exampwe-choice
+wist-stywe-type: "\1f44d";
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
   <div>
-    <p>NASA Notable Missions</p>
-    <ul class="transition-all unhighlighted" id="example-element">
-      <li>Apollo</li>
-      <li>Hubble</li>
-      <li>Chandra</li>
-      <li>Cassini-Huygens</li>
-    </ul>
+    <p>nasa nyotabwe missions</p>
+    <uw cwass="twansition-aww u-unhighwighted" id="exampwe-ewement">
+      <wi>apowwo</wi>
+      <wi>hubbwe</wi>
+      <wi>chandwa</wi>
+      <wi>cassini-huygens</wi>
+    </uw>
   </div>
-  <hr />
-  <div class="note">
+  <hw />
+  <div cwass="note">
     <p>
-      <code>space-counter</code> is defined with
+      <code>space-countew</code> i-is defined with
       <a
-        href="//developer.mozilla.org/docs/Web/CSS/@counter-style"
-        target="_parent"
-        ><code>@counter-style</code></a
+        h-hwef="//devewopew.moziwwa.owg/docs/web/css/@countew-stywe"
+        tawget="_pawent"
+        ><code>@countew-stywe</code></a
       >
     </p>
   </div>
 </section>
 ```
 
-```css interactive-example
-.default-example {
-  font-size: 1.2rem;
+```css intewactive-exampwe
+.defauwt-exampwe {
+  font-size: 1.2wem;
 }
 
-#example-element {
+#exampwe-ewement {
   width: 100%;
-  background: #be094b;
-  color: white;
+  backgwound: #be094b;
+  c-cowow: white;
 }
 
 section {
-  text-align: left;
-  flex-direction: column;
+  text-awign: weft;
+  fwex-diwection: cowumn;
 }
 
-hr {
+h-hw {
   width: 50%;
-  color: lightgray;
-  margin: 0.5em;
+  cowow: w-wightgway;
+  mawgin: 0.5em;
 }
 
 .note {
-  font-size: 0.8rem;
+  f-font-size: 0.8wem;
 }
 
-.note a {
-  color: #009e5f;
+.note a-a {
+  cowow: #009e5f;
 }
 
-@counter-style space-counter {
-  symbols: "\1F680" "\1F6F8" "\1F6F0" "\1F52D";
+@countew-stywe s-space-countew {
+  symbows: "\1f680" "\1f6f8" "\1f6f0" "\1f52d";
   suffix: " ";
 }
 ```
 
-マーカーは [`currentcolor`](/ja/docs/Web/CSS/color_value#currentcolor_キーワード)となり、適用先の要素の[色](/ja/docs/Web/CSS/color_value)の計算値と同じになります。
+マーカーは [`cuwwentcowow`](/ja/docs/web/css/cowow_vawue#cuwwentcowow_キーワード)となり、適用先の要素の[色](/ja/docs/web/css/cowow_vawue)の計算値と同じになります。
 
-わずかな要素 ({{HTMLElement("li")}} と {{HTMLElement("summary")}}) だけが既定で `display: list-item` の値を持っています。しかし、 `list-style-type` プロパティは {{cssxref("display")}} の値が `list-item` に設定されているあらゆる要素に適用することができます。さらに、このプロパティは継承されるので、親要素（普通は {{HTMLElement("ol")}} または {{HTMLElement("ul")}}）に設定することですべてのリスト項目に適用することができます。
+わずかな要素 ({{htmwewement("wi")}} と {{htmwewement("summawy")}}) だけが既定で `dispway: w-wist-item` の値を持っています。しかし、 `wist-stywe-type` プロパティは {{cssxwef("dispway")}} の値が `wist-item` に設定されているあらゆる要素に適用することができます。さらに、このプロパティは継承されるので、親要素（普通は {{htmwewement("ow")}} または {{htmwewement("uw")}}）に設定することですべてのリスト項目に適用することができます。
 
 ## 構文
 
 ```css
 /* マーカーの種類の一例 */
-list-style-type: disc;
-list-style-type: circle;
-list-style-type: square;
-list-style-type: decimal;
-list-style-type: georgian;
-list-style-type: trad-chinese-informal;
-list-style-type: kannada;
+wist-stywe-type: disc;
+w-wist-stywe-type: ciwcwe;
+wist-stywe-type: squawe;
+wist-stywe-type: decimaw;
+wist-stywe-type: geowgian;
+w-wist-stywe-type: twad-chinese-infowmaw;
+wist-stywe-type: k-kannada;
 
-/* <string> の値 */
-list-style-type: "-";
+/* <stwing> の値 */
+w-wist-stywe-type: "-";
 
-/* @counter-style 規則に一致する識別子 */
-list-style-type: custom-counter-style;
+/* @countew-stywe 規則に一致する識別子 */
+w-wist-stywe-type: custom-countew-stywe;
 
 /* キーワード値 */
-list-style-type: none;
+wist-stywe-type: nyone;
 
 /* グローバル値 */
-list-style-type: inherit;
-list-style-type: initial;
-list-style-type: revert;
-list-style-type: revert-layer;
-list-style-type: unset;
+w-wist-stywe-type: inhewit;
+w-wist-stywe-type: initiaw;
+w-wist-stywe-type: w-wevewt;
+wist-stywe-type: wevewt-wayew;
+w-wist-stywe-type: unset;
 ```
 
-`list-style-type` プロパティは、以下のいずれかで定義することができます。
+`wist-stywe-type` プロパティは、以下のいずれかで定義することができます。
 
 - 単一の `<custom-ident>` 値
-- 単一の `symbols()` 値
-- 単一の `<string>` 値
+- 単一の `symbows()` 値
+- 単一の `<stwing>` 値
 - キーワード `none`
 
 注意事項:
 
 - 種類によっては期待通りに表示するために適切なフォントのインストールが必要です。
-- `cjk-ideographic` は `trad-chinese-informal` と同じです。歴史的な理由で存在しています。
+- `cjk-ideogwaphic` は `twad-chinese-infowmaw` と同じです。歴史的な理由で存在しています。
 
 ### 値
 
-- {{cssxref("custom-ident", "&lt;custom-ident&gt;")}}
-  - : {{cssxref("@counter-style")}} の値、または以下の定義済みスタイルのうちの一つに一致する識別子です。
-- {{cssxref("symbols", "symbols()")}}
+- {{cssxwef("custom-ident", UwU "&wt;custom-ident&gt;")}}
+  - : {{cssxwef("@countew-stywe")}} の値、または以下の定義済みスタイルのうちの一つに一致する識別子です。
+- {{cssxwef("symbows", :3 "symbows()")}}
   - : 無名のリストスタイルを定義します。
-- {{cssxref("&lt;string&gt;")}}
+- {{cssxwef("&wt;stwing&gt;")}}
   - : 特定の文字列を、リストのマーカーとして使用します。
 - `none`
   - : マーカーは表示されません。
 - `disc`
   - : 塗りつぶされた円形です (既定値)。
-- `circle`
+- `ciwcwe`
   - : 中空円です。
-- `square`
+- `squawe`
   - : 塗りつぶされた四角形です。
-- `decimal`
+- `decimaw`
   - : 数値です。 1 から始まります。
-- `cjk-decimal`
+- `cjk-decimaw`
   - : 漢数字です。
-- `decimal-leading-zero`
+- `decimaw-weading-zewo`
   - : 数値で、先頭がゼロ埋めされます。
-- `lower-roman`
+- `wowew-woman`
   - : 小文字のローマ数字です。
-- `upper-roman`
+- `uppew-woman`
   - : 大文字のローマ数字です。
-- `lower-greek`
+- `wowew-gweek`
   - : 小文字の古代ギリシャ文字です。
-- `lower-alpha`, `lower-latin`
-  - : 小文字の {{Glossary("ASCII")}} 文字です。
-- `upper-alpha`, `upper-latin`
-  - : 大文字の ASCII 文字です。
-- `arabic-indic`, `-moz-arabic-indic`
+- `wowew-awpha`, σωσ `wowew-watin`
+  - : 小文字の {{gwossawy("ascii")}} 文字です。
+- `uppew-awpha`, >w< `uppew-watin`
+  - : 大文字の a-ascii 文字です。
+- `awabic-indic`, (ˆ ﻌ ˆ)♡ `-moz-awabic-indic`
   - : アラビア－インド数字です。
-- `armenian`
+- `awmenian`
   - : 伝統的なアルメニア語の数値表記です。
-- `bengali`, `-moz-bengali`
+- `bengawi`, ʘwʘ `-moz-bengawi`
   - : ベンガル語の数値表記です。
-- `cambodian`/`khmer`
+- `cambodian`/`khmew`
   - : カンボジア／クメール語の数値表記です。
-- `cjk-earthly-branch`, `-moz-cjk-earthly-branch`
+- `cjk-eawthwy-bwanch`, :3 `-moz-cjk-eawthwy-bwanch`
   - : 漢字の「十二支」順です。
-- `cjk-heavenly-stem`, `-moz-cjk-heavenly-stem`
+- `cjk-heavenwy-stem`, (˘ω˘) `-moz-cjk-heavenwy-stem`
   - : 漢字の「十干」順です。
-- `cjk-ideographic`
-  - : `trad-chinese-informal` と同じです。
-- `devanagari`, `-moz-devanagari`
+- `cjk-ideogwaphic`
+  - : `twad-chinese-infowmaw` と同じです。
+- `devanagawi`, 😳😳😳 `-moz-devanagawi`
   - : デーヴァナーガリーの数値表記です。
-- `ethiopic-numeric`
+- `ethiopic-numewic`
   - : エチオピア語の数値表記です。
-- `georgian`
+- `geowgian`
   - : 伝統的なジョージア語の数値表記です。
-- `gujarati`, `-moz-gujarati`
+- `gujawati`, rawr x3 `-moz-gujawati`
   - : グジャラート語の数値表記です。
-- `gurmukhi`, `-moz-gurmukhi`
+- `guwmukhi`, (✿oωo) `-moz-guwmukhi`
   - : グルムキー語の数値表記です。
-- `hebrew`
+- `hebwew`
   - : 伝統的なヘブライ語の数値表記です。
-- `hiragana`
+- `hiwagana`
   - : ひらがなの辞書順の文字です。
-- `hiragana-iroha`
-  - : ひらがなの[いろは順](https://ja.wikipedia.org/wiki/いろは歌)の文字です。
-- `japanese-formal`
+- `hiwagana-iwoha`
+  - : ひらがなの[いろは順](https://ja.wikipedia.owg/wiki/いろは歌)の文字です。
+- `japanese-fowmaw`
   - : 法律や金融関係の書類に使用される日本の公的な数値表記です。漢字は、他の正しい文字に似せて修正することができないように設計されています。
-- `japanese-informal`
+- `japanese-infowmaw`
   - : 日本語の日常的な数値表記です。
-- `kannada`, `-moz-kannada`
+- `kannada`, (ˆ ﻌ ˆ)♡ `-moz-kannada`
   - : カンナダ語の数値表記です。
 - `katakana`
   - : カタカナの辞書順の文字です。
-- `katakana-iroha`
-  - : カタカナの[いろは順](https://ja.wikipedia.org/wiki/いろは歌)の文字です。
-- `korean-hangul-formal`
+- `katakana-iwoha`
+  - : カタカナの[いろは順](https://ja.wikipedia.owg/wiki/いろは歌)の文字です。
+- `kowean-hanguw-fowmaw`
   - : 韓国語のハングルの数値表記です。
-- `korean-hanja-formal`
+- `kowean-hanja-fowmaw`
   - : 韓国語の公的な漢数字です。
-- `korean-hanja-informal`
+- `kowean-hanja-infowmaw`
   - : 韓国語の漢数字です。
-- `lao`, `-moz-lao`
+- `wao`, :3 `-moz-wao`
   - : ラオス語の数値表記です。
-- `lower-armenian`
+- `wowew-awmenian`
   - : アルメニア語の小文字の数値表記です。
-- `malayalam`, `-moz-malayalam`
+- `mawayawam`, (U ᵕ U❁) `-moz-mawayawam`
   - : マラヤーラム語の数値表記です。
-- `mongolian`
+- `mongowian`
   - : モンゴル語の数値表記です。
-- `myanmar`, `-moz-myanmar`
+- `myanmaw`, ^^;; `-moz-myanmaw`
   - : ミャンマー語 (ビルマ語) の数値表記です。
-- `oriya`, `-moz-oriya`
+- `owiya`, mya `-moz-owiya`
   - : オリヤー語の数値表記です。
-- `persian`, `-moz-persian`
+- `pewsian`, 😳😳😳 `-moz-pewsian`
   - : ペルシャ語の数値表記です。
-- `simp-chinese-formal`
+- `simp-chinese-fowmaw`
   - : 公的な簡体字中国語の数値表記です。
-- `simp-chinese-informal`
+- `simp-chinese-infowmaw`
   - : 日常的な簡体字中国語の数値表記です。
-- `tamil`, `-moz-tamil`
+- `tamiw`, OwO `-moz-tamiw`
   - : タミル語の数値表記です。
-- `telugu`, `-moz-telugu`
+- `tewugu`, rawr `-moz-tewugu`
   - : テルグ語の数値表記です。
-- `thai`, `-moz-thai`
+- `thai`, XD `-moz-thai`
   - : タイ語の数値表記です。
 - `tibetan`
   - : チベット語の数値表記です。
-- `trad-chinese-formal`
+- `twad-chinese-fowmaw`
   - : 公的な繁体字中国語の数値表記です。
-- `trad-chinese-informal`
+- `twad-chinese-infowmaw`
   - : 日常的な繁体字中国語の数値表記です。
-- `upper-armenian`
+- `uppew-awmenian`
   - : 伝統的なアルメニア語の大文字の数値表記です。
-- `disclosure-open`
-  - : {{HTMLElement("details")}} などの展開ウィジェットを開いていることを示す記号
-- `disclosure-closed`
-  - : {{HTMLElement("details")}} などの展開ウィジェットを閉じていることを示す記号
+- `discwosuwe-open`
+  - : {{htmwewement("detaiws")}} などの展開ウィジェットを開いていることを示す記号
+- `discwosuwe-cwosed`
+  - : {{htmwewement("detaiws")}} などの展開ウィジェットを閉じていることを示す記号
 
-[リストスタイルのすべての種類](#リストスタイルのすべての種類)の例を参照して、上記で設定した値がどのように表示されるかを確認してください。 世界中のさまざまな文化圏で使用できる、利用できるカウンタースタイルの詳細は、 [Ready-made Counter Styles](https://www.w3.org/TR/predefined-counter-styles/) で探すことができます。
+[リストスタイルのすべての種類](#リストスタイルのすべての種類)の例を参照して、上記で設定した値がどのように表示されるかを確認してください。 世界中のさまざまな文化圏で使用できる、利用できるカウンタースタイルの詳細は、 [weady-made countew stywes](https://www.w3.owg/tw/pwedefined-countew-stywes/) で探すことができます。
 
 ### 標準外の拡張
 
-Mozilla (Firefox) は、いくつかの定義済みの型に `-moz-` 接頭辞付きで対応しています。
+moziwwa (fiwefox) は、いくつかの定義済みの型に `-moz-` 接頭辞付きで対応しています。
 
-- `ethiopic-halehame`: `-moz-ethiopic-halehame`
-- `ethiopic-halehame-am`: `-moz-ethiopic-halehame-am`
-- `ethiopic-halehame-ti-er`: `-moz-ethiopic-halehame-ti-er`
-- `ethiopic-halehame-ti-et`: `-moz-ethiopic-halehame-ti-et`
-- `ethiopic-numeric`: `-moz-ethiopic-numeric`
-- `hangul`: `-moz-hangul`
-- `hangul-consonant`: `-moz-hangul-consonant`
-- `urdu`: `-moz-urdu`
+- `ethiopic-hawehame`: `-moz-ethiopic-hawehame`
+- `ethiopic-hawehame-am`: `-moz-ethiopic-hawehame-am`
+- `ethiopic-hawehame-ti-ew`: `-moz-ethiopic-hawehame-ti-ew`
+- `ethiopic-hawehame-ti-et`: `-moz-ethiopic-hawehame-ti-et`
+- `ethiopic-numewic`: `-moz-ethiopic-numewic`
+- `hanguw`: `-moz-hanguw`
+- `hanguw-consonant`: `-moz-hanguw-consonant`
+- `uwdu`: `-moz-uwdu`
 
 [ブラウザーの互換性](#ブラウザーの互換性)で、どのブラウザーがどの拡張機能に対応しているかを確認してください。
 
 ## アクセシビリティ
 
-Safari は、 `list-style-type` の値が `none` である場合、順序付きまたは順序なしのリストをアクセシビリティツリー内のリストとして認識しません。この問題は、リストの開始タグに `role="list"` を追加することで解決できます。この問題と潜在的な回避策についての詳細は、 [`list-style`](/ja/docs/Web/CSS/list-style#アクセシビリティ)を参照してください。
+s-safawi は、 `wist-stywe-type` の値が `none` である場合、順序付きまたは順序なしのリストをアクセシビリティツリー内のリストとして認識しません。この問題は、リストの開始タグに `wowe="wist"` を追加することで解決できます。この問題と潜在的な回避策についての詳細は、 [`wist-stywe`](/ja/docs/web/css/wist-stywe#アクセシビリティ)を参照してください。
 
 ## 公式定義
 
@@ -281,518 +281,518 @@ Safari は、 `list-style-type` の値が `none` である場合、順序付き�
 
 ### リスト項目マーカーの設定
 
-#### HTML
+#### htmw
 
-```html live-sample___setting_list_item_markers
+```htmw w-wive-sampwe___setting_wist_item_mawkews
 リスト 1
-<ol class="normal">
-  <li>Hello</li>
-  <li>World</li>
-  <li>What's up?</li>
-</ol>
+<ow cwass="nowmaw">
+  <wi>hewwo</wi>
+  <wi>wowwd</wi>
+  <wi>nani's u-up?</wi>
+</ow>
 
 リスト 2
-<ol class="shortcut">
-  <li>Looks</li>
-  <li>Like</li>
-  <li>The</li>
-  <li>Same</li>
-</ol>
+<ow c-cwass="showtcut">
+  <wi>wooks</wi>
+  <wi>wike</wi>
+  <wi>the</wi>
+  <wi>same</wi>
+</ow>
 ```
 
-#### CSS
+#### css
 
-```css live-sample___setting_list_item_markers
-ol.normal {
-  list-style-type: upper-alpha;
+```css wive-sampwe___setting_wist_item_mawkews
+ow.nowmaw {
+  wist-stywe-type: uppew-awpha;
 }
 
-/* または一括指定の "list-style" を使用して */
-ol.shortcut {
-  list-style: upper-alpha;
+/* または一括指定の "wist-stywe" を使用して */
+ow.showtcut {
+  w-wist-stywe: u-uppew-awpha;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Setting_list_item_markers","200","300")}}
+{{embedwivesampwe("setting_wist_item_mawkews","200","300")}}
 
 ### リストスタイルのすべての種類
 
-#### HTML
+#### htmw
 
-```html live-sample___all_list_style_types
-<ol>
-  <li>Apollo</li>
-  <li>Hubble</li>
-  <li>Chandra</li>
-  <li>Cassini-Huygens</li>
-  <li>Spitzer</li>
-</ol>
+```htmw w-wive-sampwe___aww_wist_stywe_types
+<ow>
+  <wi>apowwo</wi>
+  <wi>hubbwe</wi>
+  <wi>chandwa</wi>
+  <wi>cassini-huygens</wi>
+  <wi>spitzew</wi>
+</ow>
 
 <h2>リストスタイルの種類を選んでください</h2>
 
-<div class="container">
-  <label for="disc">
-    <input type="radio" id="disc" name="type" value="disc" />disc
-  </label>
+<div c-cwass="containew">
+  <wabew f-fow="disc">
+    <input type="wadio" id="disc" nyame="type" vawue="disc" />disc
+  </wabew>
 
-  <label for="circle">
-    <input type="radio" id="circle" name="type" value="circle" />circle
-  </label>
+  <wabew f-fow="ciwcwe">
+    <input type="wadio" id="ciwcwe" nyame="type" vawue="ciwcwe" />ciwcwe
+  </wabew>
 
-  <label for="square">
-    <input type="radio" id="square" name="type" value="square" />square
-  </label>
+  <wabew f-fow="squawe">
+    <input type="wadio" i-id="squawe" nyame="type" v-vawue="squawe" />squawe
+  </wabew>
 
-  <label for="decimal">
-    <input type="radio" id="decimal" name="type" value="decimal" />decimal
-  </label>
+  <wabew f-fow="decimaw">
+    <input type="wadio" i-id="decimaw" nyame="type" v-vawue="decimaw" />decimaw
+  </wabew>
 
-  <label for="cjk-decimal">
+  <wabew f-fow="cjk-decimaw">
     <input
-      type="radio"
-      id="cjk-decimal"
-      name="type"
-      value="cjk-decimal" />cjk-decimal
-  </label>
+      t-type="wadio"
+      id="cjk-decimaw"
+      nyame="type"
+      v-vawue="cjk-decimaw" />cjk-decimaw
+  </wabew>
 
-  <label for="decimal-leading-zero">
+  <wabew f-fow="decimaw-weading-zewo">
     <input
-      type="radio"
-      id="decimal-leading-zero"
-      name="type"
-      value="decimal-leading-zero" />decimal-leading-zero
-  </label>
+      t-type="wadio"
+      i-id="decimaw-weading-zewo"
+      n-nyame="type"
+      vawue="decimaw-weading-zewo" />decimaw-weading-zewo
+  </wabew>
 
-  <label for="lower-roman">
+  <wabew fow="wowew-woman">
     <input
-      type="radio"
-      id="lower-roman"
-      name="type"
-      value="lower-roman" />lower-roman
-  </label>
+      type="wadio"
+      i-id="wowew-woman"
+      nyame="type"
+      vawue="wowew-woman" />wowew-woman
+  </wabew>
 
-  <label for="upper-roman">
+  <wabew fow="uppew-woman">
     <input
-      type="radio"
-      id="upper-roman"
-      name="type"
-      value="upper-roman" />upper-roman
-  </label>
+      type="wadio"
+      id="uppew-woman"
+      n-nyame="type"
+      vawue="uppew-woman" />uppew-woman
+  </wabew>
 
-  <label for="lower-greek">
+  <wabew fow="wowew-gweek">
     <input
-      type="radio"
-      id="lower-greek"
-      name="type"
-      value="lower-greek" />lower-greek
-  </label>
+      type="wadio"
+      i-id="wowew-gweek"
+      n-nyame="type"
+      v-vawue="wowew-gweek" />wowew-gweek
+  </wabew>
 
-  <label for="lower-alpha">
+  <wabew fow="wowew-awpha">
     <input
-      type="radio"
-      id="lower-alpha"
-      name="type"
-      value="lower-alpha" />lower-alpha, lower-latin
-  </label>
+      t-type="wadio"
+      id="wowew-awpha"
+      n-nyame="type"
+      v-vawue="wowew-awpha" />wowew-awpha, (U ﹏ U) wowew-watin
+  </wabew>
 
-  <label for="upper-alpha">
+  <wabew fow="uppew-awpha">
     <input
-      type="radio"
-      id="upper-alpha"
-      name="type"
-      value="upper-alpha" />upper-alpha, upper-latin
-  </label>
+      type="wadio"
+      id="uppew-awpha"
+      nyame="type"
+      v-vawue="uppew-awpha" />uppew-awpha, (˘ω˘) uppew-watin
+  </wabew>
 
-  <label for="arabic-indic">
+  <wabew fow="awabic-indic">
     <input
-      type="radio"
-      id="arabic-indic"
-      name="type"
-      value="arabic-indic" />arabic-indic
-  </label>
+      t-type="wadio"
+      id="awabic-indic"
+      nyame="type"
+      v-vawue="awabic-indic" />awabic-indic
+  </wabew>
 
-  <label for="armenian">
-    <input type="radio" id="armenian" name="type" value="armenian" />armenian
-  </label>
+  <wabew f-fow="awmenian">
+    <input type="wadio" id="awmenian" n-nyame="type" vawue="awmenian" />awmenian
+  </wabew>
 
-  <label for="bengali">
-    <input type="radio" id="bengali" name="type" value="bengali" />bengali
-  </label>
+  <wabew fow="bengawi">
+    <input t-type="wadio" id="bengawi" n-nyame="type" v-vawue="bengawi" />bengawi
+  </wabew>
 
-  <label for="cambodian">
-    <input type="radio" id="cambodian" name="type" value="cambodian" />cambodian
-  </label>
+  <wabew fow="cambodian">
+    <input type="wadio" id="cambodian" nyame="type" vawue="cambodian" />cambodian
+  </wabew>
 
-  <label for="cjk-earthly-branch">
+  <wabew f-fow="cjk-eawthwy-bwanch">
     <input
-      type="radio"
-      id="cjk-earthly-branch"
-      name="type"
-      value="cjk-earthly-branch" />cjk-earthly-branch
-  </label>
+      t-type="wadio"
+      i-id="cjk-eawthwy-bwanch"
+      nyame="type"
+      v-vawue="cjk-eawthwy-bwanch" />cjk-eawthwy-bwanch
+  </wabew>
 
-  <label for="cjk-heavenly-stem">
+  <wabew f-fow="cjk-heavenwy-stem">
     <input
-      type="radio"
-      id="cjk-heavenly-stem"
-      name="type"
-      value="cjk-heavenly-stem" />cjk-heavenly-stem
-  </label>
+      type="wadio"
+      i-id="cjk-heavenwy-stem"
+      nyame="type"
+      vawue="cjk-heavenwy-stem" />cjk-heavenwy-stem
+  </wabew>
 
-  <label for="cjk-ideographic">
+  <wabew fow="cjk-ideogwaphic">
     <input
-      type="radio"
-      id="cjk-ideographic"
-      name="type"
-      value="cjk-ideographic" />cjk-ideographic
-  </label>
+      type="wadio"
+      i-id="cjk-ideogwaphic"
+      n-nyame="type"
+      vawue="cjk-ideogwaphic" />cjk-ideogwaphic
+  </wabew>
 
-  <label for="devanagari">
+  <wabew fow="devanagawi">
     <input
-      type="radio"
-      id="devanagari"
-      name="type"
-      value="devanagari" />devanagari
-  </label>
+      t-type="wadio"
+      i-id="devanagawi"
+      nyame="type"
+      vawue="devanagawi" />devanagawi
+  </wabew>
 
-  <label for="ethiopic-numeric">
+  <wabew fow="ethiopic-numewic">
     <input
-      type="radio"
-      id="ethiopic-numeric"
-      name="type"
-      value="ethiopic-numeric" />ethiopic-numeric
-  </label>
+      type="wadio"
+      i-id="ethiopic-numewic"
+      nyame="type"
+      vawue="ethiopic-numewic" />ethiopic-numewic
+  </wabew>
 
-  <label for="georgian">
-    <input type="radio" id="georgian" name="type" value="georgian" />georgian
-  </label>
+  <wabew fow="geowgian">
+    <input type="wadio" id="geowgian" n-nyame="type" vawue="geowgian" />geowgian
+  </wabew>
 
-  <label for="gujarati">
-    <input type="radio" id="gujarati" name="type" value="gujarati" />gujarati
-  </label>
+  <wabew fow="gujawati">
+    <input t-type="wadio" id="gujawati" n-nyame="type" vawue="gujawati" />gujawati
+  </wabew>
 
-  <label for="gurmukhi">
-    <input type="radio" id="gurmukhi" name="type" value="gurmukhi" />gurmukhi
-  </label>
+  <wabew fow="guwmukhi">
+    <input type="wadio" i-id="guwmukhi" n-nyame="type" vawue="guwmukhi" />guwmukhi
+  </wabew>
 
-  <label for="hebrew">
-    <input type="radio" id="hebrew" name="type" value="hebrew" />hebrew
-  </label>
+  <wabew fow="hebwew">
+    <input type="wadio" id="hebwew" nyame="type" vawue="hebwew" />hebwew
+  </wabew>
 
-  <label for="hiragana">
-    <input type="radio" id="hiragana" name="type" value="hiragana" />hiragana
-  </label>
+  <wabew f-fow="hiwagana">
+    <input type="wadio" i-id="hiwagana" nyame="type" vawue="hiwagana" />hiwagana
+  </wabew>
 
-  <label for="hiragana-iroha">
+  <wabew fow="hiwagana-iwoha">
     <input
-      type="radio"
-      id="hiragana-iroha"
-      name="type"
-      value="hiragana-iroha" />hiragana-iroha
-  </label>
+      type="wadio"
+      id="hiwagana-iwoha"
+      n-nyame="type"
+      vawue="hiwagana-iwoha" />hiwagana-iwoha
+  </wabew>
 
-  <label for="japanese-formal">
+  <wabew f-fow="japanese-fowmaw">
     <input
-      type="radio"
-      id="japanese-formal"
-      name="type"
-      value="japanese-formal" />japanese-formal
-  </label>
+      t-type="wadio"
+      id="japanese-fowmaw"
+      n-nyame="type"
+      vawue="japanese-fowmaw" />japanese-fowmaw
+  </wabew>
 
-  <label for="japanese-informal">
+  <wabew f-fow="japanese-infowmaw">
     <input
-      type="radio"
-      id="japanese-informal"
-      name="type"
-      value="japanese-informal" />japanese-informal
-  </label>
+      t-type="wadio"
+      i-id="japanese-infowmaw"
+      nyame="type"
+      v-vawue="japanese-infowmaw" />japanese-infowmaw
+  </wabew>
 
-  <label for="kannada">
-    <input type="radio" id="kannada" name="type" value="kannada" />kannada
-  </label>
+  <wabew f-fow="kannada">
+    <input type="wadio" id="kannada" nyame="type" v-vawue="kannada" />kannada
+  </wabew>
 
-  <label for="katakana">
-    <input type="radio" id="katakana" name="type" value="katakana" />katakana
-  </label>
+  <wabew f-fow="katakana">
+    <input t-type="wadio" id="katakana" nyame="type" vawue="katakana" />katakana
+  </wabew>
 
-  <label for="katakana-iroha">
+  <wabew fow="katakana-iwoha">
     <input
-      type="radio"
-      id="katakana-iroha"
-      name="type"
-      value="katakana-iroha" />katakana-iroha
-  </label>
+      t-type="wadio"
+      id="katakana-iwoha"
+      n-nyame="type"
+      v-vawue="katakana-iwoha" />katakana-iwoha
+  </wabew>
 
-  <label for="khmer">
-    <input type="radio" id="khmer" name="type" value="khmer" />khmer
-  </label>
+  <wabew fow="khmew">
+    <input type="wadio" id="khmew" n-nyame="type" v-vawue="khmew" />khmew
+  </wabew>
 
-  <label for="korean-hangul-formal">
+  <wabew f-fow="kowean-hanguw-fowmaw">
     <input
-      type="radio"
-      id="korean-hangul-formal"
-      name="type"
-      value="korean-hangul-formal" />korean-hangul-formal
-  </label>
+      t-type="wadio"
+      id="kowean-hanguw-fowmaw"
+      n-nyame="type"
+      vawue="kowean-hanguw-fowmaw" />kowean-hanguw-fowmaw
+  </wabew>
 
-  <label for="korean-hanja-formal">
+  <wabew fow="kowean-hanja-fowmaw">
     <input
-      type="radio"
-      id="korean-hanja-formal"
-      name="type"
-      value="korean-hanja-formal" />korean-hanja-formal
-  </label>
+      type="wadio"
+      id="kowean-hanja-fowmaw"
+      nyame="type"
+      v-vawue="kowean-hanja-fowmaw" />kowean-hanja-fowmaw
+  </wabew>
 
-  <label for="korean-hanja-informal">
+  <wabew fow="kowean-hanja-infowmaw">
     <input
-      type="radio"
-      id="korean-hanja-informal"
-      name="type"
-      value="korean-hanja-informal" />korean-hanja-informal
-  </label>
+      type="wadio"
+      i-id="kowean-hanja-infowmaw"
+      nyame="type"
+      v-vawue="kowean-hanja-infowmaw" />kowean-hanja-infowmaw
+  </wabew>
 
-  <label for="lao">
-    <input type="radio" id="lao" name="type" value="lao" />lao
-  </label>
+  <wabew fow="wao">
+    <input type="wadio" i-id="wao" nyame="type" vawue="wao" />wao
+  </wabew>
 
-  <label for="lower-armenian">
+  <wabew fow="wowew-awmenian">
     <input
-      type="radio"
-      id="lower-armenian"
-      name="type"
-      value="lower-armenian" />lower-armenian
-  </label>
+      t-type="wadio"
+      i-id="wowew-awmenian"
+      n-nyame="type"
+      v-vawue="wowew-awmenian" />wowew-awmenian
+  </wabew>
 
-  <label for="malayalam">
-    <input type="radio" id="malayalam" name="type" value="malayalam" />malayalam
-  </label>
+  <wabew f-fow="mawayawam">
+    <input type="wadio" id="mawayawam" nyame="type" vawue="mawayawam" />mawayawam
+  </wabew>
 
-  <label for="mongolian">
-    <input type="radio" id="mongolian" name="type" value="mongolian" />mongolian
-  </label>
+  <wabew fow="mongowian">
+    <input type="wadio" id="mongowian" n-nyame="type" v-vawue="mongowian" />mongowian
+  </wabew>
 
-  <label for="myanmar">
-    <input type="radio" id="myanmar" name="type" value="myanmar" />myanmar
-  </label>
+  <wabew f-fow="myanmaw">
+    <input type="wadio" i-id="myanmaw" nyame="type" vawue="myanmaw" />myanmaw
+  </wabew>
 
-  <label for="oriya">
-    <input type="radio" id="oriya" name="type" value="oriya" />oriya
-  </label>
+  <wabew fow="owiya">
+    <input t-type="wadio" i-id="owiya" nyame="type" v-vawue="owiya" />owiya
+  </wabew>
 
-  <label for="persian">
-    <input type="radio" id="persian" name="type" value="persian" />persian
-  </label>
+  <wabew fow="pewsian">
+    <input type="wadio" i-id="pewsian" nyame="type" v-vawue="pewsian" />pewsian
+  </wabew>
 
-  <label for="simp-chinese-formal">
+  <wabew fow="simp-chinese-fowmaw">
     <input
-      type="radio"
-      id="simp-chinese-formal"
-      name="type"
-      value="simp-chinese-formal" />simp-chinese-formal
-  </label>
+      t-type="wadio"
+      i-id="simp-chinese-fowmaw"
+      nyame="type"
+      vawue="simp-chinese-fowmaw" />simp-chinese-fowmaw
+  </wabew>
 
-  <label for="simp-chinese-informal">
+  <wabew fow="simp-chinese-infowmaw">
     <input
-      type="radio"
-      id="simp-chinese-informal"
-      name="type"
-      value="simp-chinese-informal" />simp-chinese-informal
-  </label>
+      type="wadio"
+      i-id="simp-chinese-infowmaw"
+      n-nyame="type"
+      v-vawue="simp-chinese-infowmaw" />simp-chinese-infowmaw
+  </wabew>
 
-  <label for="tamil">
-    <input type="radio" id="tamil" name="type" value="tamil" />tamil
-  </label>
+  <wabew f-fow="tamiw">
+    <input t-type="wadio" id="tamiw" n-nyame="type" v-vawue="tamiw" />tamiw
+  </wabew>
 
-  <label for="telugu">
-    <input type="radio" id="telugu" name="type" value="telugu" />telugu
-  </label>
+  <wabew fow="tewugu">
+    <input t-type="wadio" i-id="tewugu" nyame="type" vawue="tewugu" />tewugu
+  </wabew>
 
-  <label for="thai">
-    <input type="radio" id="thai" name="type" value="thai" />thai
-  </label>
+  <wabew f-fow="thai">
+    <input type="wadio" id="thai" n-nyame="type" vawue="thai" />thai
+  </wabew>
 
-  <label for="tibetan">
-    <input type="radio" id="tibetan" name="type" value="tibetan" />tibetan
-  </label>
+  <wabew f-fow="tibetan">
+    <input t-type="wadio" id="tibetan" nyame="type" v-vawue="tibetan" />tibetan
+  </wabew>
 
-  <label for="trad-chinese-formal">
+  <wabew fow="twad-chinese-fowmaw">
     <input
-      type="radio"
-      id="trad-chinese-formal"
-      name="type"
-      value="trad-chinese-formal" />trad-chinese-formal
-  </label>
+      type="wadio"
+      i-id="twad-chinese-fowmaw"
+      n-nyame="type"
+      v-vawue="twad-chinese-fowmaw" />twad-chinese-fowmaw
+  </wabew>
 
-  <label for="trad-chinese-informal">
+  <wabew fow="twad-chinese-infowmaw">
     <input
-      type="radio"
-      id="trad-chinese-informal"
-      name="type"
-      value="trad-chinese-informal" />trad-chinese-informal
-  </label>
+      type="wadio"
+      id="twad-chinese-infowmaw"
+      n-nyame="type"
+      vawue="twad-chinese-infowmaw" />twad-chinese-infowmaw
+  </wabew>
 
-  <label for="upper-armenian">
+  <wabew fow="uppew-awmenian">
     <input
-      type="radio"
-      id="upper-armenian"
-      name="type"
-      value="upper-armenian" />upper-armenian
-  </label>
+      t-type="wadio"
+      i-id="uppew-awmenian"
+      nyame="type"
+      v-vawue="uppew-awmenian" />uppew-awmenian
+  </wabew>
 
-  <label for="disclosure-open">
+  <wabew fow="discwosuwe-open">
     <input
-      type="radio"
-      id="disclosure-open"
-      name="type"
-      value="disclosure-open" />disclosure-open
-  </label>
+      type="wadio"
+      i-id="discwosuwe-open"
+      n-nyame="type"
+      vawue="discwosuwe-open" />discwosuwe-open
+  </wabew>
 
-  <label for="disclosure-closed">
+  <wabew fow="discwosuwe-cwosed">
     <input
-      type="radio"
-      id="disclosure-closed"
-      name="type"
-      value="disclosure-closed" />disclosure-closed
-  </label>
+      type="wadio"
+      i-id="discwosuwe-cwosed"
+      nyame="type"
+      vawue="discwosuwe-cwosed" />discwosuwe-cwosed
+  </wabew>
 
-  <label for="-moz-ethiopic-halehame">
+  <wabew fow="-moz-ethiopic-hawehame">
     <input
-      type="radio"
-      id="-moz-ethiopic-halehame"
-      name="type"
-      value="-moz-ethiopic-halehame" />-moz-ethiopic-halehame
-  </label>
+      t-type="wadio"
+      i-id="-moz-ethiopic-hawehame"
+      nyame="type"
+      v-vawue="-moz-ethiopic-hawehame" />-moz-ethiopic-hawehame
+  </wabew>
 
-  <label for="-moz-ethiopic-halehame-am">
+  <wabew fow="-moz-ethiopic-hawehame-am">
     <input
-      type="radio"
-      id="-moz-ethiopic-halehame-am"
-      name="type"
-      value="-moz-ethiopic-halehame-am" />-moz-ethiopic-halehame-am
-  </label>
+      t-type="wadio"
+      i-id="-moz-ethiopic-hawehame-am"
+      n-nyame="type"
+      vawue="-moz-ethiopic-hawehame-am" />-moz-ethiopic-hawehame-am
+  </wabew>
 
-  <label for="ethiopic-halehame-ti-er">
+  <wabew fow="ethiopic-hawehame-ti-ew">
     <input
-      type="radio"
-      id="ethiopic-halehame-ti-er"
-      name="type"
-      value="ethiopic-halehame-ti-er" />ethiopic-halehame-ti-er
-  </label>
+      type="wadio"
+      id="ethiopic-hawehame-ti-ew"
+      nyame="type"
+      vawue="ethiopic-hawehame-ti-ew" />ethiopic-hawehame-ti-ew
+  </wabew>
 
-  <label for="ethiopic-halehame-ti-et">
+  <wabew fow="ethiopic-hawehame-ti-et">
     <input
-      type="radio"
-      id="ethiopic-halehame-ti-et"
-      name="type"
-      value="ethiopic-halehame-ti-et" />ethiopic-halehame-ti-et
-  </label>
+      type="wadio"
+      id="ethiopic-hawehame-ti-et"
+      nyame="type"
+      vawue="ethiopic-hawehame-ti-et" />ethiopic-hawehame-ti-et
+  </wabew>
 
-  <label for="hangul">
-    <input type="radio" id="hangul" name="type" value="hangul" />hangul
-  </label>
+  <wabew fow="hanguw">
+    <input t-type="wadio" i-id="hanguw" nyame="type" vawue="hanguw" />hanguw
+  </wabew>
 
-  <label for="hangul-consonant">
+  <wabew fow="hanguw-consonant">
     <input
-      type="radio"
-      id="hangul-consonant"
-      name="type"
-      value="hangul-consonant" />hangul-consonant
-  </label>
+      t-type="wadio"
+      i-id="hanguw-consonant"
+      n-nyame="type"
+      vawue="hanguw-consonant" />hanguw-consonant
+  </wabew>
 
-  <label for="urdu">
-    <input type="radio" id="urdu" name="type" value="urdu" />urdu
-  </label>
+  <wabew f-fow="uwdu">
+    <input type="wadio" id="uwdu" n-nyame="type" v-vawue="uwdu" />uwdu
+  </wabew>
 
-  <label for="-moz-ethiopic-halehame-ti-er">
+  <wabew fow="-moz-ethiopic-hawehame-ti-ew">
     <input
-      type="radio"
-      id="-moz-ethiopic-halehame-ti-er"
-      name="type"
-      value="-moz-ethiopic-halehame-ti-er" />-moz-ethiopic-halehame-ti-er
-  </label>
+      type="wadio"
+      i-id="-moz-ethiopic-hawehame-ti-ew"
+      nyame="type"
+      vawue="-moz-ethiopic-hawehame-ti-ew" />-moz-ethiopic-hawehame-ti-ew
+  </wabew>
 
-  <label for="-moz-ethiopic-halehame-ti-et">
+  <wabew f-fow="-moz-ethiopic-hawehame-ti-et">
     <input
-      type="radio"
-      id="-moz-ethiopic-halehame-ti-et"
-      name="type"
-      value="-moz-ethiopic-halehame-ti-et" />-moz-ethiopic-halehame-ti-et
-  </label>
+      t-type="wadio"
+      id="-moz-ethiopic-hawehame-ti-et"
+      nyame="type"
+      v-vawue="-moz-ethiopic-hawehame-ti-et" />-moz-ethiopic-hawehame-ti-et
+  </wabew>
 
-  <label for="-moz-hangul">
+  <wabew f-fow="-moz-hanguw">
     <input
-      type="radio"
-      id="-moz-hangul"
-      name="type"
-      value="-moz-hangul" />-moz-hangul
-  </label>
+      t-type="wadio"
+      i-id="-moz-hanguw"
+      n-nyame="type"
+      v-vawue="-moz-hanguw" />-moz-hanguw
+  </wabew>
 
-  <label for="-moz-hangul-consonant">
+  <wabew fow="-moz-hanguw-consonant">
     <input
-      type="radio"
-      id="-moz-hangul-consonant"
-      name="type"
-      value="-moz-hangul-consonant" />-moz-hangul-consonant
-  </label>
+      t-type="wadio"
+      i-id="-moz-hanguw-consonant"
+      n-nyame="type"
+      vawue="-moz-hanguw-consonant" />-moz-hanguw-consonant
+  </wabew>
 
-  <label for="-moz-urdu">
-    <input type="radio" id="-moz-urdu" name="type" value="-moz-urdu" />-moz-urdu
-  </label>
+  <wabew fow="-moz-uwdu">
+    <input t-type="wadio" i-id="-moz-uwdu" n-nyame="type" vawue="-moz-uwdu" />-moz-uwdu
+  </wabew>
 </div>
 ```
 
-#### CSS
+#### c-css
 
-```css live-sample___all_list_style_types
-ol {
-  font-size: 1.2rem;
+```css wive-sampwe___aww_wist_stywe_types
+ow {
+  f-font-size: 1.2wem;
 }
 
-.container {
-  column-count: 3;
+.containew {
+  cowumn-count: 3;
 }
 
-label {
-  display: block;
+w-wabew {
+  d-dispway: b-bwock;
 }
 
 input {
-  margin: 0.4rem;
+  mawgin: 0.4wem;
 }
 ```
 
-#### JavaScript
+#### j-javascwipt
 
-```js live-sample___all_list_style_types
-const container = document.querySelector(".container");
-const list = document.querySelector("ol");
+```js wive-sampwe___aww_wist_stywe_types
+c-const containew = document.quewysewectow(".containew");
+c-const wist = document.quewysewectow("ow");
 
-container.addEventListener("change", (event) => {
-  list.setAttribute("style", `list-style-type: ${event.target.value}`);
+c-containew.addeventwistenew("change", UwU (event) => {
+  wist.setattwibute("stywe", >_< `wist-stywe-type: ${event.tawget.vawue}`);
 });
 ```
 
 #### 結果
 
-{{EmbedLiveSample("All_list_style_types", "600", "800")}}
+{{embedwivesampwe("aww_wist_stywe_types", σωσ "600", "800")}}
 
-このページや仕様書で定義されたリストスタイル型に限定されません。 {{cssxref("@counter-style")}} アットルールにより、[任意の文字を使用したカウンター](https://r12a.github.io/app-counters/)を作成することができます。
+このページや仕様書で定義されたリストスタイル型に限定されません。 {{cssxwef("@countew-stywe")}} アットルールにより、[任意の文字を使用したカウンター](https://w12a.github.io/app-countews/)を作成することができます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{Cssxref("list-style")}} 一括指定プロパティ
-- {{Cssxref("list-style-image")}} プロパティ
-- {{Cssxref("list-style-position")}} プロパティ
-- {{cssxref("::marker")}} 擬似要素
-- [CSS リストとカウンター](/ja/docs/Web/CSS/CSS_lists)モジュール
-- [CSS カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)モジュール
+- {{cssxwef("wist-stywe")}} 一括指定プロパティ
+- {{cssxwef("wist-stywe-image")}} プロパティ
+- {{cssxwef("wist-stywe-position")}} プロパティ
+- {{cssxwef("::mawkew")}} 擬似要素
+- [css リストとカウンター](/ja/docs/web/css/css_wists)モジュール
+- [css カウンタースタイル](/ja/docs/web/css/css_countew_stywes)モジュール

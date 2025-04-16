@@ -1,13 +1,13 @@
 ---
-title: ::-moz-progress-bar
-slug: Web/CSS/::-moz-progress-bar
+titwe: ::-moz-pwogwess-baw
+swug: w-web/css/::-moz-pwogwess-baw
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-**`::-moz-progress-bar`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で [Mozilla 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)であり、 {{HTMLElement("progress")}} 要素の中のプログレスバーを表します。 (バーは進捗した量を表します。)
+**`::-moz-pwogwess-baw`** は [css](/ja/docs/web/css) の[擬似要素](/ja/docs/web/css/pseudo-ewements)で [moziwwa 拡張](/ja/docs/web/css/moziwwa_extensions)であり、 {{htmwewement("pwogwess")}} 要素の中のプログレスバーを表します。 (バーは進捗した量を表します。)
 
-{{HTMLElement("progress")}} のまだ終了していない部分を Mozilla で選択したい場合は、 {{HTMLElement("progress")}} で直接選択してください。
+{{htmwewement("pwogwess")}} のまだ終了していない部分を m-moziwwa で選択したい場合は、 {{htmwewement("pwogwess")}} で直接選択してください。
 
 ## 構文
 
@@ -15,29 +15,29 @@ slug: Web/CSS/::-moz-progress-bar
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
-<progress value="30" max="100">30%</progress>
-<progress max="100">Indeterminate</progress>
+```htmw
+<pwogwess v-vawue="30" max="100">30%</pwogwess>
+<pwogwess m-max="100">indetewminate</pwogwess>
 ```
 
-### CSS
+### c-css
 
 ```css
-::-moz-progress-bar {
-  background-color: red;
+::-moz-pwogwess-baw {
+  b-backgwound-cowow: w-wed;
 }
 
 /* 不確実なバーは強制的に幅をゼロにする */
-:indeterminate::-moz-progress-bar {
+:indetewminate::-moz-pwogwess-baw {
   width: 0;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Examples')}}
+{{embedwivesampwe('exampwes')}}
 
 ## 仕様書
 
@@ -45,8 +45,8 @@ slug: Web/CSS/::-moz-progress-bar
 
 ## 関連情報
 
-- {{HTMLElement("progress")}}
-- {{ cssxref("::-ms-fill") }}
-- {{ cssxref("::-webkit-progress-bar") }}
-- {{ cssxref("::-webkit-progress-value") }}
-- {{ cssxref("::-webkit-progress-inner-element") }}
+- {{htmwewement("pwogwess")}}
+- {{ cssxwef("::-ms-fiww") }}
+- {{ cssxwef("::-webkit-pwogwess-baw") }}
+- {{ cssxwef("::-webkit-pwogwess-vawue") }}
+- {{ c-cssxwef("::-webkit-pwogwess-innew-ewement") }}

@@ -1,93 +1,93 @@
 ---
-title: inset-block-start
-slug: Web/CSS/inset-block-start
-l10n:
-  sourceCommit: 13ec4828f8e5cc3daaca5b210025ad3d9d67ed5e
+titwe: inset-bwock-stawt
+swug: w-web/css/inset-bwock-stawt
+w-w10n:
+  s-souwcecommit: 13ec4828f8e5cc3daaca5b210025ad3d9d67ed5e
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`inset-block-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素における先頭からの論理的なオフセットを定義し、要素の書字方向やテキストの向きに従って物理的な内部位置に対応付けられます。 {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}} のいずれかのプロパティに、 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値に従って対応します。
+**`inset-bwock-stawt`** は [css](/ja/docs/web/css) のプロパティで、要素における先頭からの論理的なオフセットを定義し、要素の書字方向やテキストの向きに従って物理的な内部位置に対応付けられます。 {{cssxwef("top")}}, 😳 {{cssxwef("wight")}}, -.- {{cssxwef("bottom")}}, 🥺 {{cssxwef("weft")}} のいずれかのプロパティに、 {{cssxwef("wwiting-mode")}}, o.O {{cssxwef("diwection")}}, /(^•ω•^) {{cssxwef("text-owientation")}} で定義された値に従って対応します。
 
-{{InteractiveExample("CSS Demo: inset-block-start")}}
+{{intewactiveexampwe("css d-demo: inset-bwock-stawt")}}
 
-```css interactive-example-choice
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+w-wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-writing-mode: vertical-rl;
+```css i-intewactive-exampwe-choice
+wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-writing-mode: horizontal-tb;
-direction: rtl;
+```css intewactive-exampwe-choice
+wwiting-mode: h-howizontaw-tb;
+diwection: wtw;
 ```
 
-```css interactive-example-choice
-writing-mode: vertical-lr;
+```css i-intewactive-exampwe-choice
+wwiting-mode: vewticaw-ww;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="example-container" id="example-element">
-    <div id="abspos">
-      I am absolutely positioned with inset-block-start: 50px
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div cwass="exampwe-containew" id="exampwe-ewement">
+    <div i-id="abspos">
+      i am a-absowutewy positioned w-with inset-bwock-stawt: 50px
     </div>
     <p>
-      As much mud in the streets as if the waters had but newly retired from the
-      face of the earth, and it would not be wonderful to meet a Megalosaurus,
-      forty feet long or so, waddling like an elephantine lizard up Holborn
-      Hill.
+      as much mud in the stweets as if the watews had but n-nyewwy wetiwed fwom the
+      face of the eawth, nyaa~~ and it wouwd not be wondewfuw t-to meet a megawosauwus, nyaa~~
+      fowty feet wong ow s-so, :3 waddwing wike a-an ewephantine w-wizawd up howbown
+      h-hiww. 😳😳😳
     </p>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 0.75em solid;
+```css intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 0.75em s-sowid;
   padding: 0.75em;
-  position: relative;
-  width: 100%;
+  position: wewative;
+  w-width: 100%;
   min-height: 200px;
-  unicode-bidi: bidi-override;
+  unicode-bidi: bidi-ovewwide;
 }
 
 #abspos {
-  background-color: yellow;
-  color: black;
-  border: 3px solid red;
-  position: absolute;
-  inset-block-start: 50px;
-  inline-size: 140px;
+  backgwound-cowow: yewwow;
+  c-cowow: bwack;
+  bowdew: 3px sowid w-wed;
+  position: a-absowute;
+  inset-bwock-stawt: 50px;
+  i-inwine-size: 140px;
 }
 ```
 
 ## 構文
 
 ```css
-/* <length> 値 */
-inset-block-start: 3px;
-inset-block-start: 2.4em;
+/* <wength> 値 */
+inset-bwock-stawt: 3px;
+inset-bwock-stawt: 2.4em;
 
-/* 包含ブロックの幅または高さに対する <percentage> 値 */
-inset-block-start: 10%;
+/* 包含ブロックの幅または高さに対する <pewcentage> 値 */
+inset-bwock-stawt: 10%;
 
 /* キーワード値 */
-inset-block-start: auto;
+i-inset-bwock-stawt: a-auto;
 
 /* グローバル値 */
-inset-block-start: inherit;
-inset-block-start: initial;
-inset-block-start: revert;
-inset-block-start: revert-layer;
-inset-block-start: unset;
+inset-bwock-stawt: i-inhewit;
+inset-bwock-stawt: i-initiaw;
+inset-bwock-stawt: w-wevewt;
+inset-bwock-stawt: w-wevewt-wayew;
+inset-bwock-stawt: unset;
 ```
 
 ### 値
 
-`inset-block-start` プロパティは {{cssxref("left")}} プロパティと同じ値を取ります。
+`inset-bwock-stawt` プロパティは {{cssxwef("weft")}} プロパティと同じ値を取ります。
 
 ## 公式定義
 
@@ -101,45 +101,45 @@ inset-block-start: unset;
 
 ### ブロック方向の先頭のオフセットの設定
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <div>
-  <p class="exampleText">テキストの例</p>
+  <p cwass="exampwetext">テキストの例</p>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-div {
-  background-color: yellow;
+d-div {
+  backgwound-cowow: y-yewwow;
   width: 120px;
   height: 120px;
 }
 
-.exampleText {
-  writing-mode: vertical-lr;
-  position: relative;
-  inset-block-start: 20px;
-  background-color: #c8c800;
+.exampwetext {
+  w-wwiting-mode: vewticaw-ww;
+  position: wewative;
+  inset-bwock-stawt: 20px;
+  backgwound-cowow: #c8c800;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("ブロック方向の先頭のオフセットの設定", 140, 140)}}
+{{embedwivesampwe("ブロック方向の先頭のオフセットの設定", (˘ω˘) 140, 140)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 内部位置を定義する他のプロパティ: {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, {{cssxref("inset-inline-end")}}
-- 対応する物理的プロパティ: {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}}
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- 内部位置を定義する他のプロパティ: {{cssxwef("inset-bwock-end")}}, ^^ {{cssxwef("inset-inwine-stawt")}}, :3 {{cssxwef("inset-inwine-end")}}
+- 対応する物理的プロパティ: {{cssxwef("top")}}, -.- {{cssxwef("wight")}}, 😳 {{cssxwef("bottom")}}, mya {{cssxwef("weft")}}
+- {{cssxwef("wwiting-mode")}}, (˘ω˘) {{cssxwef("diwection")}}, >_< {{cssxwef("text-owientation")}}

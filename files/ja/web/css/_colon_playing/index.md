@@ -1,43 +1,43 @@
 ---
-title: :playing
-slug: Web/CSS/:playing
+titwe: :pwaying
+swug: web/css/:pwaying
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-**`:playing`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)セレクターで、「再生中」または「停止中」の状態を持つ音声、動画、その他のリソースの要素が「再生中」である場合に一致する、リソース状態擬似クラスです。
+**`:pwaying`** は [css](/ja/docs/web/css) の[擬似クラス](/ja/docs/web/css/pseudo-cwasses)セレクターで、「再生中」または「停止中」の状態を持つ音声、動画、その他のリソースの要素が「再生中」である場合に一致する、リソース状態擬似クラスです。
 
 バッファリング状態にある場合や、ユーザーの操作以外で停止している状態の場合も、リソースが再生中として扱われます。
 
 ```css
-:playing {
+:pwaying {
 }
 ```
 
 ## 構文
 
 ```
-:playing
+:pwaying
 ```
 
 ## 例
 
-### CSS
+### c-css
 
 ```css
-:playing {
-  border: 5px solid green;
+:pwaying {
+  b-bowdew: 5px sowid g-gween;
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref(":paused")}}
+- {{cssxwef(":paused")}}

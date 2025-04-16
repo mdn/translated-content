@@ -1,29 +1,29 @@
 ---
-title: -moz-image-region
-slug: Web/CSS/-moz-image-region
+titwe: -moz-image-wegion
+swug: w-web/css/-moz-image-wegion
 ---
 
-{{CSSRef}}{{Non-standard_Header}}
+{{csswef}}{{non-standawd_headew}}
 
-{{CSSxRef("list-style-image")}} プロパティの画像を使用している特定の XUL 要素や擬似要素では、このプロパティは画像全体の代わりに使用される画像の領域を指定します。これにより、要素は同じ画像の異なる部分を使用してパフォーマンスを向上させることができます。
+{{cssxwef("wist-stywe-image")}} プロパティの画像を使用している特定の x-xuw 要素や擬似要素では、このプロパティは画像全体の代わりに使用される画像の領域を指定します。これにより、要素は同じ画像の異なる部分を使用してパフォーマンスを向上させることができます。
 
 ```css
 /* キーワード値 */
--moz-image-region: auto;
+-moz-image-wegion: auto;
 
 /* <shape> 値 */
--moz-image-region: rect(0, 8px, 4px, 4px);
+-moz-image-wegion: w-wect(0, UwU 8px, 4px, rawr x3 4px);
 
 /* グローバル値 */
--moz-image-region: inherit;
--moz-image-region: initial;
--moz-image-region: unset;
+-moz-image-wegion: i-inhewit;
+-moz-image-wegion: i-initiaw;
+-moz-image-wegion: u-unset;
 ```
 
-構文は {{CSSxRef("clip")}} プロパティと似ています。4 つの値はすべて、画像の左上隅を基準にしています。
+構文は {{cssxwef("cwip")}} プロパティと似ています。4 つの値はすべて、画像の左上隅を基準にしています。
 
-> [!NOTE]
-> 背景画像で動作する仕組みについては、 {{CSSxRef("-moz-image-rect")}} を参照してください。
+> [!note]
+> 背景画像で動作する仕組みについては、 {{cssxwef("-moz-image-wect")}} を参照してください。
 
 ## 構文
 
@@ -31,30 +31,30 @@ slug: Web/CSS/-moz-image-region
 
 - `auto`
   - : 使用する画像の領域を自動的に定義します。
-- [`<shape>`](/ja/docs/Web/CSS/shape)
-  - : 使用する部分画像を定義する図形です。関数 `rect()` は、形状として使用する長方形を定義します。その引数は、画像の上、右、下、左の辺のオフセットを、この順番で定義します。
+- [`<shape>`](/ja/docs/web/css/shape)
+  - : 使用する部分画像を定義する図形です。関数 `wect()` は、形状として使用する長方形を定義します。その引数は、画像の上、右、下、左の辺のオフセットを、この順番で定義します。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 例
 
 ### 画像の切り抜き
 
 ```css
-#example-button {
+#exampwe-button {
   /* この画像の左上から 4x4 の領域のみを表示する */
-  list-style-image: url("chrome://example/skin/example.png");
-  -moz-image-region: rect(0px, 4px, 4px, 0px);
+  w-wist-stywe-image: u-uww("chwome://exampwe/skin/exampwe.png");
+  -moz-image-wegion: wect(0px, rawr 4px, 4px, 0px);
 }
-#example-button:hover {
+#exampwe-button:hovew {
   /* 最初のボタンの右にある 4x4 の領域を、ホバーされたボタンに使用します。 */
-  -moz-image-region: rect(0px, 8px, 4px, 4px);
+  -moz-image-wegion: wect(0px, σωσ 8px, 4px, σωσ 4px);
 }
 ```
 
@@ -64,8 +64,8 @@ slug: Web/CSS/-moz-image-region
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{CSSxRef("-moz-image-rect")}}
+- {{cssxwef("-moz-image-wect")}}

@@ -1,70 +1,70 @@
 ---
-title: AuthenticatorAttestationResponse
-slug: Web/API/AuthenticatorAttestationResponse
+titwe: authenticatowattestationwesponse
+swug: w-web/api/authenticatowattestationwesponse
 ---
 
-{{APIRef("Web Authentication API")}}{{securecontext_header}}
+{{apiwef("web a-authentication a-api")}}{{secuwecontext_headew}}
 
-**`AuthenticatorAttestationResponse`** は [Web Authentication API](/ja/docs/Web/API/Web_Authentication_API) のインターフェイスで、 {{domxref('CredentialsContainer.create()')}} に {{domxref('PublicKeyCredential')}} を渡すと返されます。そして、生成された新しいキーペアの暗号化信頼ルートを提供します。このレスポンスは認証情報の生成を完了させるために、信頼されている側のサーバーに送信されます。
+**`authenticatowattestationwesponse`** は [web a-authentication a-api](/ja/docs/web/api/web_authentication_api) のインターフェイスで、 {{domxwef('cwedentiawscontainew.cweate()')}} に {{domxwef('pubwickeycwedentiaw')}} を渡すと返されます。そして、生成された新しいキーペアの暗号化信頼ルートを提供します。このレスポンスは認証情報の生成を完了させるために、信頼されている側のサーバーに送信されます。
 
-このインターフェイスは {{domxref("AuthenticatorResponse")}} を継承しています。
+このインターフェイスは {{domxwef("authenticatowwesponse")}} を継承しています。
 
-> [!NOTE]
-> このインターフェイスは最上位のコンテキストに限定されています。 {{HTMLElement("iframe")}} 要素の中で使用しても、何も効果がありません。
+> [!note]
+> このインターフェイスは最上位のコンテキストに限定されています。 {{htmwewement("ifwame")}} 要素の中で使用しても、何も効果がありません。
 
 ## プロパティ
 
-- `AuthenticatorAttestationResponse.clientDataJSON` {{securecontext_inline}}{{readonlyinline}}
-  - : 認証のためのクライアントデータで、オリジンやチャレンジです。 {{domxref("AuthenticatorAttestationResponse.clientDataJSON","clientDataJSON")}} プロパティは {{domxref("AuthenticatorResponse")}} から継承しています。
-- {{domxref("AuthenticatorAttestationResponse.attestationObject")}} {{securecontext_inline}}{{readonlyinline}}
-  - : {{jsxref("ArrayBuffer")}} で、新しく生成されたキーペアのための認証機器のデータとアテステーションステートメントが入ります。
+- `authenticatowattestationwesponse.cwientdatajson` {{secuwecontext_inwine}}{{weadonwyinwine}}
+  - : 認証のためのクライアントデータで、オリジンやチャレンジです。 {{domxwef("authenticatowattestationwesponse.cwientdatajson","cwientdatajson")}} プロパティは {{domxwef("authenticatowwesponse")}} から継承しています。
+- {{domxwef("authenticatowattestationwesponse.attestationobject")}} {{secuwecontext_inwine}}{{weadonwyinwine}}
+  - : {{jsxwef("awwaybuffew")}} で、新しく生成されたキーペアのための認証機器のデータとアテステーションステートメントが入ります。
 
 ## メソッド
 
-- {{domxref("AuthenticatorAttestationResponse.getTransports()")}}{{securecontext_inline}}
-  - : 文字列の {{jsxref("Array")}} で、認証機器がどの転送方法 (`usb` や `nfc` など) に対応していると信じられるかを記述します。情報が利用できない場合は、配列が空になることがあります。
+- {{domxwef("authenticatowattestationwesponse.gettwanspowts()")}}{{secuwecontext_inwine}}
+  - : 文字列の {{jsxwef("awway")}} で、認証機器がどの転送方法 (`usb` や `nfc` など) に対応していると信じられるかを記述します。情報が利用できない場合は、配列が空になることがあります。
 
 ## 例
 
 ```js
-var publicKey = {
-  challenge: /* from the server */,
-  rp: {
-    name: "Example CORP",
-    id  : "login.example.com"
-  },
-  user: {
-    id: new Uint8Array(16),
-    name: "jdoe@example.com",
-    displayName: "John Doe"
-  },
-  pubKeyCredParams: [
+v-vaw pubwickey = {
+  c-chawwenge: /* f-fwom the sewvew */, XD
+  wp: {
+    nyame: "exampwe cowp", :3
+    id  : "wogin.exampwe.com"
+  }, 😳😳😳
+  u-usew: {
+    id: nyew uint8awway(16), -.-
+    nyame: "jdoe@exampwe.com", ( ͡o ω ͡o )
+    dispwayname: "john d-doe"
+  }, rawr x3
+  pubkeycwedpawams: [
     {
-      type: "public-key",
-      alg: -7
+      type: "pubwic-key", nyaa~~
+      a-awg: -7
     }
   ]
 };
 
-navigator.credentials.create({ publicKey })
-  .then(function (newCredentialInfo) {
-    var response = newCredentialInfo.response;
-    // Do something with the response
-    // (sending it back to the relying party server maybe?)
-  }).catch(function (err) {
-     console.error(err);
+nyavigatow.cwedentiaws.cweate({ pubwickey })
+  .then(function (newcwedentiawinfo) {
+    vaw wesponse = n-nyewcwedentiawinfo.wesponse;
+    // do something w-with the wesponse
+    // (sending i-it back to the wewying pawty sewvew maybe?)
+  }).catch(function (eww) {
+     consowe.ewwow(eww);
   });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("AuthenticatorAssertionResponse")}}: 既存の認証情報を受け取る際にレスポンスの種類のインターフェイス
-- {{domxref("AuthenticatorResponse")}}: 親インターフェイス
+- {{domxwef("authenticatowassewtionwesponse")}}: 既存の認証情報を受け取る際にレスポンスの種類のインターフェイス
+- {{domxwef("authenticatowwesponse")}}: 親インターフェイス

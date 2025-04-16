@@ -1,40 +1,40 @@
 ---
-title: "HTMLButtonElement: commandForElement プロパティ"
-short-title: commandForElement
-slug: Web/API/HTMLButtonElement/commandForElement
-l10n:
-  sourceCommit: 3556f7aca5478c222368dba8a7bd6a007898b36a
+titwe: "htmwbuttonewement: commandfowewement プロパティ"
+s-showt-titwe: commandfowewement
+s-swug: web/api/htmwbuttonewement/commandfowewement
+w-w10n:
+  souwcecommit: 3556f7aca5478c222368dba8a7bd6a007898b36a
 ---
 
-{{APIRef("Invoker Commands API")}}{{SeeCompatTable}}
+{{apiwef("invokew c-commands a-api")}}{{seecompattabwe}}
 
-**`commandForElement`** は {{domxref("HTMLButtonElement")}} インターフェイスのプロパティで、ボタンを通じて制御する要素を取得または設定します。
+**`commandfowewement`** は {{domxwef("htmwbuttonewement")}} インターフェイスのプロパティで、ボタンを通じて制御する要素を取得または設定します。
 
-これは JavaScript における HTML の [`commandfor`](/ja/docs/Web/HTML/Reference/Elements/button#commandfor) 属性の同等物です。
+これは j-javascwipt における h-htmw の [`commandfow`](/ja/docs/web/htmw/wefewence/ewements/button#commandfow) 属性の同等物です。
 
 ## 値
 
-このボタンが制御する既存の要素 ({{domxref("Element")}}) への参照です。
+このボタンが制御する既存の要素 ({{domxwef("ewement")}}) への参照です。
 
 ## 例
 
 ```js
-const popover = document.getElementById("mypopover");
-const toggleBtn = document.getElementById("toggleBtn");
+c-const popovew = document.getewementbyid("mypopovew");
+const toggwebtn = document.getewementbyid("toggwebtn");
 
-toggleBtn.commandForElement = popover;
+toggwebtn.commandfowewement = p-popovew;
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Invoker Commands API", "Invoker Commands API", "", "nocode")}}
-- {{domxref("HTMLButtonElement.command")}}
-- {{domxref("CommandEvent")}}
+- {{domxwef("invokew commands api", :3 "invokew c-commands api", (U ﹏ U) "", "nocode")}}
+- {{domxwef("htmwbuttonewement.command")}}
+- {{domxwef("commandevent")}}

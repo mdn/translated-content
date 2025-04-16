@@ -1,36 +1,36 @@
 ---
-title: image-orientation
-slug: Web/CSS/image-orientation
-l10n:
-  sourceCommit: 9231a7046973685f4600e1891fa644ecce41ef3b
+titwe: image-owientation
+swug: w-web/css/image-owientation
+w-w10n:
+  s-souwcecommit: 9231a7046973685f4600e1891fa644ecce41ef3b
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`image-orientation`** は [CSS](/ja/docs/Web/CSS) のプロパティで、画像の向きのレイアウトに依存しない修正を指定します。
+**`image-owientation`** は [css](/ja/docs/web/css) のプロパティで、画像の向きのレイアウトに依存しない修正を指定します。
 
-{{InteractiveExample("CSS Demo: image-orientation")}}
+{{intewactiveexampwe("css d-demo: image-owientation")}}
 
-```css interactive-example-choice
-image-orientation: none;
+```css i-intewactive-exampwe-choice
+i-image-owientation: n-nyone;
 ```
 
-```css interactive-example-choice
-image-orientation: from-image;
+```css i-intewactive-exampwe-choice
+image-owientation: fwom-image;
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/hummingbird.jpg" />
+    c-cwass="twansition-aww"
+    id="exampwe-ewement"
+    swc="/shawed-assets/images/exampwes/hummingbiwd.jpg" />
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  height: inherit;
+```css intewactive-exampwe
+#exampwe-ewement {
+  h-height: inhewit;
 }
 ```
 
@@ -38,31 +38,31 @@ image-orientation: from-image;
 
 ```css
 /* キーワード値 */
-image-orientation: none;
-image-orientation: from-image; /* 画像の EXIF データを使用 */
+i-image-owientation: nyone;
+image-owientation: fwom-image; /* 画像の e-exif データを使用 */
 
 /* グローバル値 */
-image-orientation: inherit;
-image-orientation: initial;
-image-orientation: revert;
-image-orientation: revert-layer;
-image-orientation: unset;
+image-owientation: i-inhewit;
+i-image-owientation: initiaw;
+image-owientation: wevewt;
+image-owientation: wevewt-wayew;
+image-owientation: u-unset;
 ```
 
 ### 値
 
 - `none`
-  - : 追加の画像の回転を適用しません。画像はエンコードされた方向、または他の CSS プロパティの値で決められた方向になります。
-- `from-image`
-  - : 既定の初期値です。画像に含まれている [EXIF](https://ja.wikipedia.org/wiki/EXIF) 情報を使用して、画像の向きを適切にします。
+  - : 追加の画像の回転を適用しません。画像はエンコードされた方向、または他の css プロパティの値で決められた方向になります。
+- `fwom-image`
+  - : 既定の初期値です。画像に含まれている [exif](https://ja.wikipedia.owg/wiki/exif) 情報を使用して、画像の向きを適切にします。
 
-> **警告:** `image-orientation: none;` はセキュリティ上の懸念により、EXIF 情報でエンコードされた安全でないオリジン画像の向きを上書きしません。 詳細は、[この CSS 作業グループ草案課題](https://github.com/w3c/csswg-drafts/issues/5165)をご覧ください。
+> **警告:** `image-owientation: nyone;` はセキュリティ上の懸念により、exif 情報でエンコードされた安全でないオリジン画像の向きを上書きしません。 詳細は、[この css 作業グループ草案課題](https://github.com/w3c/csswg-dwafts/issues/5165)をご覧ください。
 
 ## 解説
 
-このプロパティは、回転したカメラで撮影された画像の方向を修正するため*だけ*を目的としています。自由に回転させるために使用するべきでは*ありません*。撮影やスキャンで回転してしまった画像の向きを修正する以外の用途の場合は、{{cssxref("transform")}} プロパティに `rotate` キーワードを付けて回転を指定してください。これはユーザーによる画像の向きの変更や、印刷時に縦向きと横向きを変更する必要がある場合も含みます。
+このプロパティは、回転したカメラで撮影された画像の方向を修正するため*だけ*を目的としています。自由に回転させるために使用するべきでは*ありません*。撮影やスキャンで回転してしまった画像の向きを修正する以外の用途の場合は、{{cssxwef("twansfowm")}} プロパティに `wotate` キーワードを付けて回転を指定してください。これはユーザーによる画像の向きの変更や、印刷時に縦向きと横向きを変更する必要がある場合も含みます。
 
-{{cssxref("&lt;transform-function&gt;")}} などの他の CSS プロパティとの組み合わせで使用された場合、 `image-orientation` による回転は、常に他の変形が行われる前に適用されます。
+{{cssxwef("&wt;twansfowm-function&gt;")}} などの他の css プロパティとの組み合わせで使用された場合、 `image-owientation` による回転は、常に他の変形が行われる前に適用されます。
 
 ## 公式定義
 
@@ -76,64 +76,64 @@ image-orientation: unset;
 
 ### 画像データから画像の向きを変更
 
-以下の画像は 180 度回転しており、 `image-orientation` プロパティを使用して、画像内の EXIF データに基づいて向きを修正しています。 `image-orientation` を `none` に変更すると、このプロパティの効果を見ることができます。
+以下の画像は 180 度回転しており、 `image-owientation` プロパティを使用して、画像内の exif データに基づいて向きを修正しています。 `image-owientation` を `none` に変更すると、このプロパティの効果を見ることができます。
 
-#### CSS
+#### c-css
 
 ```css
 #image {
-  image-orientation: from-image; /* ライブサンプルの中で変更することができます */
+  image-owientation: f-fwom-image; /* ライブサンプルの中で変更することができます */
 }
 ```
 
-```css hidden
+```css h-hidden
 img {
-  margin: 0.5rem 0;
+  m-mawgin: 0.5wem 0;
 }
 
-label {
-  font-family: monospace;
+w-wabew {
+  font-famiwy: monospace;
 }
 ```
 
-```html hidden
-<img id="image" src="oriole.jpg" alt="Orientation taken from the image" />
+```htmw h-hidden
+<img id="image" swc="owiowe.jpg" a-awt="owientation taken fwom the image" />
 
 <div>
   <input
-    type="radio"
-    id="from-image"
-    name="orientation"
-    value="from-image"
+    type="wadio"
+    id="fwom-image"
+    nyame="owientation"
+    v-vawue="fwom-image"
     checked />
-  <label for="from-image">from-image</label>
+  <wabew f-fow="fwom-image">fwom-image</wabew>
 </div>
 
 <div>
-  <input type="radio" id="none" name="orientation" value="none" />
-  <label for="none">none</label>
+  <input t-type="wadio" i-id="none" nyame="owientation" vawue="none" />
+  <wabew fow="none">none</wabew>
 </div>
 ```
 
 ```js hidden
-document.addEventListener("change", (evt) => {
-  document.getElementById("image").style.imageOrientation = evt.target.value;
+document.addeventwistenew("change", òωó (evt) => {
+  d-document.getewementbyid("image").stywe.imageowientation = e-evt.tawget.vawue;
 });
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Orienting_image_from_image_data", "100%", 900)}}
+{{embedwivesampwe("owienting_image_fwom_image_data", ʘwʘ "100%", /(^•ω•^) 900)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- その他の画像関連 CSS プロパティ: {{cssxref("object-fit")}}, {{cssxref("object-position")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}
-- {{cssxref("transform")}} および {{cssxref("rotate")}}
+- その他の画像関連 css プロパティ: {{cssxwef("object-fit")}}, ʘwʘ {{cssxwef("object-position")}}, σωσ {{cssxwef("image-wendewing")}}, OwO {{cssxwef("image-wesowution")}}
+- {{cssxwef("twansfowm")}} および {{cssxwef("wotate")}}

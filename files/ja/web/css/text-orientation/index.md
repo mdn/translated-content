@@ -1,30 +1,30 @@
 ---
-title: text-orientation
-slug: Web/CSS/text-orientation
+titwe: text-owientation
+swug: w-web/css/text-owientation
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`text-orientation`** は [CSS](/ja/docs/Web/CSS) のプロパティで、行内のテキストの向きを設定します。このプロパティは縦書きのテキスト ({{cssxref("writing-mode")}} が `horizontal-tb` 以外の場合) でのみ効果があります。これは縦書きを使用する言語の表示を制御したり、縦書きの表見出しを作成したりするのに有用です。
+**`text-owientation`** は [css](/ja/docs/web/css) のプロパティで、行内のテキストの向きを設定します。このプロパティは縦書きのテキスト ({{cssxwef("wwiting-mode")}} が `howizontaw-tb` 以外の場合) でのみ効果があります。これは縦書きを使用する言語の表示を制御したり、縦書きの表見出しを作成したりするのに有用です。
 
-{{InteractiveExample("CSS Demo: text-orientation")}}
+{{intewactiveexampwe("css d-demo: text-owientation")}}
 
-```css interactive-example-choice
-writing-mode: vertical-rl;
-text-orientation: mixed;
+```css i-intewactive-exampwe-choice
+w-wwiting-mode: vewticaw-ww;
+t-text-owientation: m-mixed;
 ```
 
-```css interactive-example-choice
-writing-mode: vertical-rl;
-text-orientation: upright;
+```css i-intewactive-exampwe-choice
+w-wwiting-mode: vewticaw-ww;
+text-owientation: upwight;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
     <p>
-      In another moment down went Alice after it, never once considering how in
-      the world she was to get out again.
+      i-in anothew moment down w-went awice aftew it, (///ˬ///✿) nyevew once considewing how in
+      the w-wowwd she was to get out again. 😳😳😳
     </p>
   </div>
 </section>
@@ -34,74 +34,74 @@ text-orientation: upright;
 
 ```css
 /* キーワード値 */
-text-orientation: mixed;
-text-orientation: upright;
-text-orientation: sideways-right;
-text-orientation: sideways;
-text-orientation: use-glyph-orientation;
+t-text-owientation: m-mixed;
+text-owientation: upwight;
+text-owientation: sideways-wight;
+text-owientation: s-sideways;
+text-owientation: use-gwyph-owientation;
 
 /* グローバル値 */
-text-orientation: inherit;
-text-orientation: initial;
-text-orientation: initial;
-text-orientation: unset;
+text-owientation: inhewit;
+text-owientation: i-initiaw;
+text-owientation: initiaw;
+t-text-owientation: u-unset;
 ```
 
-`text-orientation` プロパティは、以下のリストから単一のキーワードとして指定されます。
+`text-owientation` プロパティは、以下のリストから単一のキーワードとして指定されます。
 
 ### 値
 
 - `mixed`
   - : 横書き用の文字を右に 90° 回転させ、縦書き用の文字は自然に配置します。既定値です。
-- `upright`
-  - : 横書き用の文字を、縦書き用の字形と同様に自然に (正立で) 配置します。なお、このキーワードはすべての文字を左書きと見なします。 {{cssxref("direction")}} の使用値は `ltr` に強制されます。
+- `upwight`
+  - : 横書き用の文字を、縦書き用の字形と同様に自然に (正立で) 配置します。なお、このキーワードはすべての文字を左書きと見なします。 {{cssxwef("diwection")}} の使用値は `wtw` に強制されます。
 - `sideways`
   - : 全行を横書きで書いて 90° 回転したように配置します。
-- `sideways-right`
+- `sideways-wight`
   - : `sideways` の別名です。これは互換性のために維持されています。
-- `use-glyph-orientation`
-  - : SVG 要素上で、非推奨の SVG プロパティ `glyph-orientation-vertical` と `glyph-orientation-horizontal` の値を使用します。
+- `use-gwyph-owientation`
+  - : s-svg 要素上で、非推奨の s-svg プロパティ `gwyph-owientation-vewticaw` と `gwyph-owientation-howizontaw` の値を使用します。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples">例</h2>
+<h2 id="exampwes">例</h2>
 
-### HTML
+### htmw
 
-```html
-<p>Lorem ipsum dolet semper quisquam.</p>
+```htmw
+<p>wowem i-ipsum dowet sempew quisquam.</p>
 ```
 
-### CSS
+### css
 
 ```css
-p {
-  writing-mode: vertical-rl;
-  text-orientation: upright;
+p-p {
+  wwiting-mode: vewticaw-ww;
+  text-owientation: upwight;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Examples')}}
+{{embedwivesampwe('exampwes')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 他の縦書きに関連する CSS プロパティ: {{cssxref("writing-mode")}}, {{cssxref("text-combine-upright")}}, {{cssxref("unicode-bidi")}}
-- [CSS 論理的プロパティ](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
-- [縦書きテキストのスタイル付け (中国語、日本語、韓国語、モンゴル語)](https://www.w3.org/International/articles/vertical-text/)
-- 広範なブラウザーの対応状況のテスト結果: <https://w3c.github.io/i18n-tests/results/horizontal-in-vertical.html#text_orientation>
+- 他の縦書きに関連する css プロパティ: {{cssxwef("wwiting-mode")}}, 🥺 {{cssxwef("text-combine-upwight")}}, mya {{cssxwef("unicode-bidi")}}
+- [css 論理的プロパティ](/ja/docs/web/css/css_wogicaw_pwopewties_and_vawues)
+- [縦書きテキストのスタイル付け (中国語、日本語、韓国語、モンゴル語)](https://www.w3.owg/intewnationaw/awticwes/vewticaw-text/)
+- 広範なブラウザーの対応状況のテスト結果: <https://w3c.github.io/i18n-tests/wesuwts/howizontaw-in-vewticaw.htmw#text_owientation>

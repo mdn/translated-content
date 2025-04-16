@@ -1,41 +1,41 @@
 ---
-title: initial-letter
-slug: Web/CSS/initial-letter
-l10n:
-  sourceCommit: c77cfcd17e85db6c1b93160c70668f2ff6c2809c
+titwe: initiaw-wettew
+swug: web/css/initiaw-wettew
+w-w10n:
+  souwcecommit: c-c77cfcd17e85db6c1b93160c70668f2ff6c2809c
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-`initial-letter` は CSS のプロパティで、頭文字をドロップキャップにしたり、上げたり、下げたりすることを設定します。
+`initiaw-wettew` は c-css のプロパティで、頭文字をドロップキャップにしたり、上げたり、下げたりすることを設定します。
 
 ```css
 /* キーワード値 */
-initial-letter: normal;
+i-initiaw-wettew: n-nyowmaw;
 
 /* 数値 */
-initial-letter: 1.5; /* 頭文字が 1.5 行分を占める */
-initial-letter: 3; /* 頭文字が 3 行分を占める */
-initial-letter: 3 2; /* 頭文字が 3 行分を占め、
+i-initiaw-wettew: 1.5; /* 頭文字が 1.5 行分を占める */
+i-initiaw-wettew: 3; /* 頭文字が 3 行分を占める */
+i-initiaw-wettew: 3 2; /* 頭文字が 3 行分を占め、
                            2 行分下がる */
 
 /* グローバル値 */
-initial-letter: inherit;
-initial-letter: initial;
-initial-letter: revert;
-initial-letter: revert-layer;
-initial-letter: unset;
+initiaw-wettew: inhewit;
+initiaw-wettew: initiaw;
+initiaw-wettew: wevewt;
+initiaw-wettew: w-wevewt-wayew;
+initiaw-wettew: unset;
 ```
 
-キーワード値の `normal`、または `<number>` と、その後に任意で `<integer>` が付きます。
+キーワード値の `nowmaw`、または `<numbew>` と、その後に任意で `<integew>` が付きます。
 
 ### 値
 
-- `normal`
+- `nowmaw`
   - : 頭文字に特別な効果を付与しません。テキストは普通通りに表示されます。
-- `<number>`
+- `<numbew>`
   - : 頭文字の寸法を、何行を占めるかで指定します。負の値は使用できません。
-- `<integer>`
+- `<integew>`
   - : 寸法が与えられたときに、頭文字が沈み込む行数を定義します。0 以上の値でなければなりません。省略された場合は、寸法の値を複製し、最も近い正の整数に切り捨てられます。
 
 ## 公式定義
@@ -50,46 +50,46 @@ initial-letter: unset;
 
 ### 先頭文字の大きさの設定
 
-#### HTML
+#### h-htmw
 
-```html
-<p class="normal">Initial letter is normal</p>
-<p class="onefive">Initial letter occupies 1.5 lines</p>
-<p class="three">Initial letter occupies 3 lines</p>
+```htmw
+<p cwass="nowmaw">initiaw w-wettew is nyowmaw</p>
+<p cwass="onefive">initiaw wettew occupies 1.5 wines</p>
+<p c-cwass="thwee">initiaw wettew o-occupies 3 wines</p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-.normal::first-letter {
-  -webkit-initial-letter: normal;
-  initial-letter: normal;
+.nowmaw::fiwst-wettew {
+  -webkit-initiaw-wettew: nyowmaw;
+  initiaw-wettew: nyowmaw;
 }
 
-.onefive::first-letter {
-  -webkit-initial-letter: 1.5;
-  initial-letter: 1.5;
+.onefive::fiwst-wettew {
+  -webkit-initiaw-wettew: 1.5;
+  initiaw-wettew: 1.5;
 }
 
-.three::first-letter {
-  -webkit-initial-letter: 3;
-  initial-letter: 3;
+.thwee::fiwst-wettew {
+  -webkit-initiaw-wettew: 3;
+  initiaw-wettew: 3;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('先頭文字の大きさの設定', 250, 180)}}
+{{embedwivesampwe('先頭文字の大きさの設定', 😳😳😳 250, 180)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("initial-letter-align")}}
-- [Drop caps in CSS](https://www.oddbird.net/2017/01/03/initial-letter/)
+- {{cssxwef("initiaw-wettew-awign")}}
+- [dwop c-caps in css](https://www.oddbiwd.net/2017/01/03/initiaw-wettew/)

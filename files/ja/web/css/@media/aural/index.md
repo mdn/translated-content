@@ -1,46 +1,46 @@
 ---
-title: aural
-slug: Web/CSS/@media/aural
+titwe: auwaw
+swug: web/css/@media/auwaw
 ---
 
-{{CSSRef}} {{deprecated_header}}
+{{csswef}} {{depwecated_headew}}
 
-`aural` は [CSS](/ja/docs/Web/CSS) の[メディア種別](/ja/docs/Web/CSS/@media#メディア種別)で、音声出力の能力を持った機器に使用されます。
+`auwaw` は [css](/ja/docs/web/css) の[メディア種別](/ja/docs/web/css/@media#メディア種別)で、音声出力の能力を持った機器に使用されます。
 
-> [!NOTE]
-> このメディア種別は [`speech`](/ja/docs/Web/CSS/@media#speech) に置き換えられ、非推奨になりました。
+> [!note]
+> このメディア種別は [`speech`](/ja/docs/web/css/@media#speech) に置き換えられ、非推奨になりました。
 
 ## 構文
 
-CSS の `aural` メディア種別は — [`speech`](/ja/docs/Web/CSS/@media#speech) メディア種別に置き換えられて非推奨になりましたが — 音声合成装置を使ってコンテンツを表示する場合にのみ適用される CSS のブロックを指定するために使用されていました。
+c-css の `auwaw` メディア種別は — [`speech`](/ja/docs/web/css/@media#speech) メディア種別に置き換えられて非推奨になりましたが — 音声合成装置を使ってコンテンツを表示する場合にのみ適用される c-css のブロックを指定するために使用されていました。
 
 ```css
-@media aural {
+@media a-auwaw {
   /* ここで音声に関するスタイルを定義 */
 }
 ```
 
-既存の CSS を `speech` メディアタイプを使用するように更新するのは、`aural` を `speech` に置き換えるだけの簡単な作業です。
+既存の c-css を `speech` メディアタイプを使用するように更新するのは、`auwaw` を `speech` に置き換えるだけの簡単な作業です。
 
 ## 例
 
 ### 基本的な例
 
 ```css
-@media aural {
-  body {
-    voice-family: Paul;
+@media a-auwaw {
+  b-body {
+    voice-famiwy: p-pauw;
   }
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)
-- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [`@media`](/ja/docs/Web/CSS/@media)
-- [`speech`](/ja/docs/Web/CSS/@media#speech)
+- [メディアクエリー](/ja/docs/web/css/css_media_quewies)
+- [メディアクエリーの使用](/ja/docs/web/css/css_media_quewies/using_media_quewies)
+- [`@media`](/ja/docs/web/css/@media)
+- [`speech`](/ja/docs/web/css/@media#speech)

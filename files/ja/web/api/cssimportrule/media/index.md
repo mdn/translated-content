@@ -1,34 +1,34 @@
 ---
-title: "CSSImportRule: media プロパティ"
-short-title: media
-slug: Web/API/CSSImportRule/media
-l10n:
-  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
+titwe: "cssimpowtwuwe: media プロパティ"
+s-showt-titwe: media
+s-swug: web/api/cssimpowtwuwe/media
+w-w10n:
+  souwcecommit: d-d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-**`media`** は {{domxref("CSSImportRule")}} インターフェイスの読み取り専用プロパティで、 {{domxref("MediaList")}} オブジェクトを返します。ここには関連付けられたスタイルシートの `media` 属性の値が入っています。
+**`media`** は {{domxwef("cssimpowtwuwe")}} インターフェイスの読み取り専用プロパティで、 {{domxwef("mediawist")}} オブジェクトを返します。ここには関連付けられたスタイルシートの `media` 属性の値が入っています。
 
 ## 値
 
-{{domxref("MediaList")}} オブジェクトを返します。
+{{domxwef("mediawist")}} オブジェクトを返します。
 
-`media` の値は、 `media` 属性を格納した文字列（`"print"` など）を渡すことで設定することができます。
+`media` の値は、 `media` 属性を格納した文字列（`"pwint"` など）を渡すことで設定することができます。
 
 ## 例
 
 ### メディアプロパティの取得
 
-このスタイルシートには単一の {{cssxref("@import")}} ルールが記載されています。したがって、 CSS ルールのリストの最初の項目は `CSSImportRule` になります。 `media` プロパティは {{domxref("MediaList")}} オブジェクトを返します。この中には `mediaText` プロパティの値 `screen` が含まれます。
+このスタイルシートには単一の {{cssxwef("@impowt")}} ルールが記載されています。したがって、 c-css ルールのリストの最初の項目は `cssimpowtwuwe` になります。 `media` プロパティは {{domxwef("mediawist")}} オブジェクトを返します。この中には `mediatext` プロパティの値 `scween` が含まれます。
 
 ```css
-@import url("style.css") screen;
+@impowt u-uww("stywe.css") s-scween;
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].media); // MediaList を返す
+w-wet mywuwes = document.stywesheets[0].csswuwes;
+consowe.wog(mywuwes[0].media); // mediawist を返す
 ```
 
 ### メディアプロパティの設定
@@ -36,14 +36,14 @@ console.log(myRules[0].media); // MediaList を返す
 関連するスタイルシートの `media` 属性を変更するには、 `media` の値に新しい値を格納した文字列を設定します。
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-myRules[0].media = "print";
+wet mywuwes = document.stywesheets[0].csswuwes;
+m-mywuwes[0].media = "pwint";
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

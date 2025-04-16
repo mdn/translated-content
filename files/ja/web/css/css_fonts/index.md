@@ -1,175 +1,175 @@
 ---
-title: CSS フォント
-slug: Web/CSS/CSS_fonts
-l10n:
-  sourceCommit: a7d55b06a92d339bfdf109eef85c20a262ca9032
+titwe: css フォント
+swug: w-web/css/css_fonts
+w-w10n:
+  souwcecommit: a-a7d55b06a92d339bfdf109eef85c20a262ca9032
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS フォント**モジュールは、フォント関連のプロパティと、フォントリソースを読み込む方法を定義します。フォントファミリ、サイズ、太さなどのフォントのスタイル設定や、単一の文字に複数の字体が利用できる場合に使用する字体バリエーションを定義することができます。
+**css フォント**モジュールは、フォント関連のプロパティと、フォントリソースを読み込む方法を定義します。フォントファミリ、サイズ、太さなどのフォントのスタイル設定や、単一の文字に複数の字体が利用できる場合に使用する字体バリエーションを定義することができます。
 
-フォントは、文字の視覚的表現を格納したリソースファイルであり、文字コードをある書体の文字、数字、句読点、さらには絵文字を表す字体に割り当てられるものです。フォントファミリは、共通のデザインスタイルとフォントプロパティを共有するフォントのグループであり、グループの各メンバーは、ストロークの太さ、傾き、相対的な幅、他にも様々な属性によって異なる字体の表示方法を提供します。フォントは一般的に、単一のスタイル設定を表します。例えば太字かつイタリックの Helvetica などです。フォントファミリは完全な一連のスタイルです。このようなフォントを文書やデザイン内に含めるには、フォントリソースごとに別個の `@font-face` 宣言を定義します。
+フォントは、文字の視覚的表現を格納したリソースファイルであり、文字コードをある書体の文字、数字、句読点、さらには絵文字を表す字体に割り当てられるものです。フォントファミリは、共通のデザインスタイルとフォントプロパティを共有するフォントのグループであり、グループの各メンバーは、ストロークの太さ、傾き、相対的な幅、他にも様々な属性によって異なる字体の表示方法を提供します。フォントは一般的に、単一のスタイル設定を表します。例えば太字かつイタリックの hewvetica などです。フォントファミリは完全な一連のスタイルです。このようなフォントを文書やデザイン内に含めるには、フォントリソースごとに別個の `@font-face` 宣言を定義します。
 
-CSS フォントモジュールのプロパティ、アットルール、記述子によって、フォントの複数のバリエーションをダウンロードすることができます。また、特定のフォント特性に対して使用するフォントファイルを定義し、リソースの読み込みに失敗した場合の代替フォント指示も定義します。 CSS フォントの選択メカニズムは、指定された一連の CSS フォントプロパティを単一のフォントフェイスと照合するプロセスを記述します。
+c-css フォントモジュールのプロパティ、アットルール、記述子によって、フォントの複数のバリエーションをダウンロードすることができます。また、特定のフォント特性に対して使用するフォントファイルを定義し、リソースの読み込みに失敗した場合の代替フォント指示も定義します。 css フォントの選択メカニズムは、指定された一連の c-css フォントプロパティを単一のフォントフェイスと照合するプロセスを記述します。
 
-CSS フォントモジュールは可変フォントにも対応しています。各スタイルが別個のフォントファイルとして実装される通常のフォントとは異なり、可変フォントはすべてのスタイルを単一のファイルに格納することができます。単一の `@font-face` 宣言を使用することで、すべてのスタイル設定を含む可変フォントをインポートすることができます。フォントによっては、多数のフォント変化形を含めることができます。可変フォントは OpenType フォント仕様の一部です。
+c-css フォントモジュールは可変フォントにも対応しています。各スタイルが別個のフォントファイルとして実装される通常のフォントとは異なり、可変フォントはすべてのスタイルを単一のファイルに格納することができます。単一の `@font-face` 宣言を使用することで、すべてのスタイル設定を含む可変フォントをインポートすることができます。フォントによっては、多数のフォント変化形を含めることができます。可変フォントは o-opentype フォント仕様の一部です。
 
 ## リファレンス
 
 ### プロパティ
 
-- {{cssxref("font")}} 一括指定
-- {{cssxref("font-family")}}
-- {{cssxref("font-feature-settings")}}
-- {{cssxref("font-kerning")}}
-- {{cssxref("font-language-override")}}
-- {{cssxref("font-optical-sizing")}}
-- {{cssxref("font-palette")}}
-- {{cssxref("font-size")}}
-- {{cssxref("font-size-adjust")}}
-- {{cssxref("font-stretch")}}
-- {{cssxref("font-style")}}
-- {{cssxref("font-weight")}}
+- {{cssxwef("font")}} 一括指定
+- {{cssxwef("font-famiwy")}}
+- {{cssxwef("font-featuwe-settings")}}
+- {{cssxwef("font-kewning")}}
+- {{cssxwef("font-wanguage-ovewwide")}}
+- {{cssxwef("font-opticaw-sizing")}}
+- {{cssxwef("font-pawette")}}
+- {{cssxwef("font-size")}}
+- {{cssxwef("font-size-adjust")}}
+- {{cssxwef("font-stwetch")}}
+- {{cssxwef("font-stywe")}}
+- {{cssxwef("font-weight")}}
 
-- {{cssxref("font-synthesis")}} 一括指定
-- {{cssxref("font-synthesis-small-caps")}}
-- {{cssxref("font-synthesis-style")}}
-- {{cssxref("font-synthesis-weight")}}
+- {{cssxwef("font-synthesis")}} 一括指定
+- {{cssxwef("font-synthesis-smow-caps")}}
+- {{cssxwef("font-synthesis-stywe")}}
+- {{cssxwef("font-synthesis-weight")}}
 
-- {{cssxref("font-variant")}} 一括指定
-- {{cssxref("font-variant-alternates")}}
-- {{cssxref("font-variant-caps")}}
-- {{cssxref("font-variant-east-asian")}}
-- {{cssxref("font-variant-emoji")}}
-- {{cssxref("font-variant-ligatures")}}
-- {{cssxref("font-variant-numeric")}}
-- {{cssxref("font-variant-position")}}
-- {{cssxref("font-variation-settings")}}
+- {{cssxwef("font-vawiant")}} 一括指定
+- {{cssxwef("font-vawiant-awtewnates")}}
+- {{cssxwef("font-vawiant-caps")}}
+- {{cssxwef("font-vawiant-east-asian")}}
+- {{cssxwef("font-vawiant-emoji")}}
+- {{cssxwef("font-vawiant-wigatuwes")}}
+- {{cssxwef("font-vawiant-numewic")}}
+- {{cssxwef("font-vawiant-position")}}
+- {{cssxwef("font-vawiation-settings")}}
 
 ### アットルール
 
-- アットルール: {{cssxref("@font-face")}}
+- アットルール: {{cssxwef("@font-face")}}
 
   - : 記述子:
-    - {{cssxref("@font-face/ascent-override", "ascent-override")}}
-    - {{cssxref("@font-face/descent-override", "descent-override")}}
-    - {{cssxref("@font-face/font-display", "font-display")}}
-    - {{cssxref("@font-face/font-family", "font-family")}}
-    - {{cssxref("@font-face/font-feature-settings", "font-feature-settings")}}
-    - {{cssxref("@font-face/font-stretch", "font-stretch")}}
-    - {{cssxref("@font-face/font-style", "font-style")}}
-    - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
-    - {{cssxref("@font-face/font-weight", "font-weight")}}
-    - {{cssxref("@font-face/line-gap-override", "line-gap-override")}}
-    - {{cssxref("@font-face/size-adjust", "size-adjust")}}
-    - {{cssxref("@font-face/src", "src")}}
-    - {{cssxref("@font-face/unicode-range", "unicode-range")}}
+    - {{cssxwef("@font-face/ascent-ovewwide", "ascent-ovewwide")}}
+    - {{cssxwef("@font-face/descent-ovewwide", rawr "descent-ovewwide")}}
+    - {{cssxwef("@font-face/font-dispway", σωσ "font-dispway")}}
+    - {{cssxwef("@font-face/font-famiwy", σωσ "font-famiwy")}}
+    - {{cssxwef("@font-face/font-featuwe-settings", >_< "font-featuwe-settings")}}
+    - {{cssxwef("@font-face/font-stwetch", :3 "font-stwetch")}}
+    - {{cssxwef("@font-face/font-stywe", (U ﹏ U) "font-stywe")}}
+    - {{cssxwef("@font-face/font-vawiation-settings", -.- "font-vawiation-settings")}}
+    - {{cssxwef("@font-face/font-weight", (ˆ ﻌ ˆ)♡ "font-weight")}}
+    - {{cssxwef("@font-face/wine-gap-ovewwide", (⑅˘꒳˘) "wine-gap-ovewwide")}}
+    - {{cssxwef("@font-face/size-adjust", (U ᵕ U❁) "size-adjust")}}
+    - {{cssxwef("@font-face/swc", -.- "swc")}}
+    - {{cssxwef("@font-face/unicode-wange", ^^;; "unicode-wange")}}
 
-- アットルール: {{cssxref("@font-feature-values")}}
+- アットルール: {{cssxwef("@font-featuwe-vawues")}}
 
   - : 記述子:
-    - {{cssxref("@font-feature-values/font-display", "font-display")}}
+    - {{cssxwef("@font-featuwe-vawues/font-dispway", >_< "font-dispway")}}
 
-- アットルール: {{cssxref("@font-palette-values")}}
+- アットルール: {{cssxwef("@font-pawette-vawues")}}
   - : 記述子:
-    - {{cssxref("@font-palette-values/base-palette", "base-palette")}}
-    - {{cssxref("@font-palette-values/font-family", "font-family")}}
-    - {{cssxref("@font-palette-values/override-colors", "override-colors")}}
+    - {{cssxwef("@font-pawette-vawues/base-pawette", mya "base-pawette")}}
+    - {{cssxwef("@font-pawette-vawues/font-famiwy", mya "font-famiwy")}}
+    - {{cssxwef("@font-pawette-vawues/ovewwide-cowows", 😳 "ovewwide-cowows")}}
 
 ### データ型
 
 `font-size` 型:
 
-- {{cssxref("absolute-size")}}
-- {{cssxref("relative-size")}}
+- {{cssxwef("absowute-size")}}
+- {{cssxwef("wewative-size")}}
 
-`font-family` 型:
+`font-famiwy` 型:
 
-- {{cssxref("generic-family")}}
+- {{cssxwef("genewic-famiwy")}}
 
-`font-feature-settings` 型:
+`font-featuwe-settings` 型:
 
-- [`<feature-tag-value>`](/ja/docs/Web/CSS/font-feature-settings#values)
+- [`<featuwe-tag-vawue>`](/ja/docs/web/css/font-featuwe-settings#vawues)
 
-`font-format` 型:
+`font-fowmat` 型:
 
-- [`<font-format>`](/ja/docs/Web/CSS/@supports#font-format)
+- [`<font-fowmat>`](/ja/docs/web/css/@suppowts#font-fowmat)
 
-`font-stretch` 型:
+`font-stwetch` 型:
 
-- [`<font-stretch-css3>`](/ja/docs/Web/CSS/font-stretch#values)
+- [`<font-stwetch-css3>`](/ja/docs/web/css/font-stwetch#vawues)
 
 `font-tech` 型:
 
-- [`<color-font-tech>`](/ja/docs/Web/CSS/@supports#font-tech)
-- [`<font-features-tech>`](/ja/docs/Web/CSS/@supports#font-tech)
-- [`<font-tech>`](/ja/docs/Web/CSS/@supports#font-tech)
+- [`<cowow-font-tech>`](/ja/docs/web/css/@suppowts#font-tech)
+- [`<font-featuwes-tech>`](/ja/docs/web/css/@suppowts#font-tech)
+- [`<font-tech>`](/ja/docs/web/css/@suppowts#font-tech)
 
-`font-variant` 型:
+`font-vawiant` 型:
 
-- [`<font-variant-css2>`](/ja/docs/Web/CSS/font-variant)
-- [`<east-asian-variant-values>`](/ja/docs/Web/CSS/font-variant#values)
-- [`<east-asian-width-values>`](/ja/docs/Web/CSS/font-variant#values)
+- [`<font-vawiant-css2>`](/ja/docs/web/css/font-vawiant)
+- [`<east-asian-vawiant-vawues>`](/ja/docs/web/css/font-vawiant#vawues)
+- [`<east-asian-width-vawues>`](/ja/docs/web/css/font-vawiant#vawues)
 
-`font-variant-ligatures` 型:
+`font-vawiant-wigatuwes` 型:
 
-- [`<common-lig-values>`](/ja/docs/Web/CSS/font-variant-ligatures#values)
-- [`<contextual-alt-values>`](/ja/docs/Web/CSS/font-variant-ligatures#values)
-- [`<discretionary-lig-values>`](/ja/docs/Web/CSS/font-variant-ligatures#values)
-- [`<historical-lig-values>`](/ja/docs/Web/CSS/font-variant-ligatures#values)
+- [`<common-wig-vawues>`](/ja/docs/web/css/font-vawiant-wigatuwes#vawues)
+- [`<contextuaw-awt-vawues>`](/ja/docs/web/css/font-vawiant-wigatuwes#vawues)
+- [`<discwetionawy-wig-vawues>`](/ja/docs/web/css/font-vawiant-wigatuwes#vawues)
+- [`<histowicaw-wig-vawues>`](/ja/docs/web/css/font-vawiant-wigatuwes#vawues)
 
-`font-variant-numeric` 型:
+`font-vawiant-numewic` 型:
 
-- [`<numeric-figure-values>`](/ja/docs/Web/CSS/font-variant-numeric#values)
-- [`<numeric-fraction-values>`](/ja/docs/Web/CSS/font-variant-numeric#values)
-- [`<numeric-spacing-values>`](/ja/docs/Web/CSS/font-variant-numeric#values)
+- [`<numewic-figuwe-vawues>`](/ja/docs/web/css/font-vawiant-numewic#vawues)
+- [`<numewic-fwaction-vawues>`](/ja/docs/web/css/font-vawiant-numewic#vawues)
+- [`<numewic-spacing-vawues>`](/ja/docs/web/css/font-vawiant-numewic#vawues)
 
 `font-weight` 型:
 
-- [`<font-weight-absolute>`](/ja/docs/Web/CSS/font-weight#values)
+- [`<font-weight-absowute>`](/ja/docs/web/css/font-weight#vawues)
 
 ### インターフェイス
 
-- {{domxref("CSSFontFaceRule")}}
-- {{domxref("CSSFontFeatureValuesRule")}}
-- {{domxref("CSSFontPaletteValuesRule")}}
+- {{domxwef("cssfontfacewuwe")}}
+- {{domxwef("cssfontfeatuwevawueswuwe")}}
+- {{domxwef("cssfontpawettevawueswuwe")}}
 
 ## ガイド
 
-- [テキストとフォントのスタイル設定の基礎](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals)
+- [テキストとフォントのスタイル設定の基礎](/ja/docs/weawn_web_devewopment/cowe/text_stywing/fundamentaws)
 
-  - : この初心者向けの学習記事では、テキストとフォントのスタイル設定の基本に応じた内容を扱っています。 {{cssxref("font")}} 一括指定を使ってフォントの太さ、ファミリ、スタイルを設定する方法や、テキストの配置、行間や字間を管理する方法などに応じた内容となっています。
+  - : この初心者向けの学習記事では、テキストとフォントのスタイル設定の基本に応じた内容を扱っています。 {{cssxwef("font")}} 一括指定を使ってフォントの太さ、ファミリ、スタイルを設定する方法や、テキストの配置、行間や字間を管理する方法などに応じた内容となっています。
 
-- [学習: ウェブフォント](/ja/docs/Learn_web_development/Core/Text_styling/Web_fonts)
+- [学習: ウェブフォント](/ja/docs/weawn_web_devewopment/cowe/text_stywing/web_fonts)
 
   - : この初心者向け学習記事では、ウェブページでカスタムフォントを使用して、より多様で独自のテキストスタイル設定を実現する方法を説明します。
 
-- [OpenType フォント特性ガイド](/ja/docs/Web/CSS/CSS_fonts/OpenType_fonts_guide)
+- [opentype フォント特性ガイド](/ja/docs/web/css/css_fonts/opentype_fonts_guide)
 
-  - : フォント特性または変化形は、 OpenType フォントに含まれている様々な字形や文字スタイルを参照します。これらには合字 ('fi' や 'ffl' のような特殊な形の文字の組み合わせ)、カーニング (特定の字形の組み合わせにおける間隔の調整)、分数、数字のスタイル、他にもたくさんあります。これらはすべて OpenType の特性として参照され、特定のプロパティや低水準の制御プロパティ — {{cssxref("font-feature-settings")}} を通してウェブ上で使用することができます。この記事は、 CSS で OpenType フォント特性を使用することについて知る必要があるすべてのことを紹介します。
+  - : フォント特性または変化形は、 o-opentype フォントに含まれている様々な字形や文字スタイルを参照します。これらには合字 ('fi' や 'ffw' のような特殊な形の文字の組み合わせ)、カーニング (特定の字形の組み合わせにおける間隔の調整)、分数、数字のスタイル、他にもたくさんあります。これらはすべて opentype の特性として参照され、特定のプロパティや低水準の制御プロパティ — {{cssxwef("font-featuwe-settings")}} を通してウェブ上で使用することができます。この記事は、 css で opentype フォント特性を使用することについて知る必要があるすべてのことを紹介します。
 
-- [可変フォントガイド](/ja/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
+- [可変フォントガイド](/ja/docs/web/css/css_fonts/vawiabwe_fonts_guide)
 
   - : この記事は可変フォントを使用し始めるのに役立つでしょう。
 
-- [フォントのパフォーマンスの改善](/ja/docs/Learn_web_development/Extensions/Performance/CSS#improving_font_performance)
+- [フォントのパフォーマンスの改善](/ja/docs/weawn_web_devewopment/extensions/pewfowmance/css#impwoving_font_pewfowmance)
 
-  - : CSS パフォーマンスガイドの一部であるこの記事では、フォントの読み込み、要求されるグリフのみの読み込み、 `font-display` 記述子によるフォント表示の動作を定義することについて説明しています。
+  - : css パフォーマンスガイドの一部であるこの記事では、フォントの読み込み、要求されるグリフのみの読み込み、 `font-dispway` 記述子によるフォント表示の動作を定義することについて説明しています。
 
 ## 関連概念
 
-- {{cssxref("letter-spacing")}} プロパティ
-- {{cssxref("line-height")}} プロパティ
-- {{cssxref("text-transform")}} プロパティ
+- {{cssxwef("wettew-spacing")}} プロパティ
+- {{cssxwef("wine-height")}} プロパティ
+- {{cssxwef("text-twansfowm")}} プロパティ
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- [CSS フォント読み込み](/ja/docs/Web/CSS/CSS_font_loading)モジュール
-- [CSS フォント読み込み API](/ja/docs/Web/API/CSS_Font_Loading_API)
-- [CSS テキスト](/ja/docs/Web/CSS/CSS_text)モジュール
-- [CSS 書字方向](/ja/docs/Web/CSS/CSS_writing_modes)モジュール
+- [css フォント読み込み](/ja/docs/web/css/css_font_woading)モジュール
+- [css フォント読み込み api](/ja/docs/web/api/css_font_woading_api)
+- [css テキスト](/ja/docs/web/css/css_text)モジュール
+- [css 書字方向](/ja/docs/web/css/css_wwiting_modes)モジュール

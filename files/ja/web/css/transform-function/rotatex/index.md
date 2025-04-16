@@ -1,84 +1,84 @@
 ---
-title: rotateX()
-slug: Web/CSS/transform-function/rotateX
-l10n:
-  sourceCommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
+titwe: wotatex()
+swug: web/css/twansfowm-function/wotatex
+w-w10n:
+  s-souwcecommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`rotateX()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、要素の形を変化させずに横座標 (水平軸) の周りを回転させる座標変換を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
+**`wotatex()`** は [css](/ja/docs/web/css) の[関数](/ja/docs/web/css/css_vawues_and_units/css_vawue_functions)で、要素の形を変化させずに横座標 (水平軸) の周りを回転させる座標変換を定義します。結果は {{cssxwef("&wt;twansfowm-function&gt;")}} データ型になります。
 
-{{InteractiveExample("CSS Demo: rotateX()")}}
+{{intewactiveexampwe("css d-demo: wotatex()")}}
 
-```css interactive-example-choice
-transform: rotateX(0);
+```css i-intewactive-exampwe-choice
+t-twansfowm: w-wotatex(0);
 ```
 
-```css interactive-example-choice
-transform: rotateX(45deg);
+```css i-intewactive-exampwe-choice
+t-twansfowm: wotatex(45deg);
 ```
 
-```css interactive-example-choice
-transform: rotateX(-0.2turn);
+```css intewactive-exampwe-choice
+twansfowm: wotatex(-0.2tuwn);
 ```
 
-```css interactive-example-choice
-transform: rotateX(3.142rad);
+```css i-intewactive-exampwe-choice
+twansfowm: wotatex(3.142wad);
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/firefox-logo.svg"
+    cwass="twansition-aww"
+    i-id="exampwe-ewement"
+    swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
     width="200" />
 </section>
 ```
 
-回転軸は、CSS の {{ cssxref("transform-origin") }} プロパティで定義される原点を通ります。
+回転軸は、css の {{ cssxwef("twansfowm-owigin") }} プロパティで定義される原点を通ります。
 
-> **メモ:** `rotateX(a)` は `rotate3d(1, 0, 0, a)` と等価です。
+> **メモ:** `wotatex(a)` は `wotate3d(1, (✿oωo) 0, (ˆ ﻌ ˆ)♡ 0, a)` と等価です。
 
-> [!NOTE]
-> 2D 平面での回転とは異なり、 3D での回転はふつう交換可能ではありません。言い換えれば、回転の順番が結果に影響を与えます。
+> [!note]
+> 2d 平面での回転とは異なり、 3d での回転はふつう交換可能ではありません。言い換えれば、回転の順番が結果に影響を与えます。
 
 ## 構文
 
-`rotateX()` で生成される回転の量は、 {{cssxref("&lt;angle&gt;")}} で指定します。正の数であれば、移動は時計回りです。負の数であれば、反時計回りになります。
+`wotatex()` で生成される回転の量は、 {{cssxwef("&wt;angwe&gt;")}} で指定します。正の数であれば、移動は時計回りです。負の数であれば、反時計回りになります。
 
 ```css
-rotateX(a)
+w-wotatex(a)
 ```
 
 ### 値
 
 - `a`
-  - : {{ cssxref("&lt;angle&gt;") }} で、回転する角度を表します。正の数の角度は時計回りの回転を、負の数の角度は反時計回りの回転を表します。
+  - : {{ cssxwef("&wt;angwe&gt;") }} で、回転する角度を表します。正の数の角度は時計回りの回転を、負の数の角度は反時計回りの回転を表します。
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col"><a href="/ja/docs/Web/CSS/transform-function#直交座標系">直交座標系</a> (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^2</a>)</th>
-      <th scope="col"><a href="https://en.wikipedia.org/wiki/Homogeneous_coordinates">同次座標系</a> (<a href="https://en.wikipedia.org/wiki/Real_projective_plane">ℝℙ^2</a>)</th>
-      <th scope="col">直交座標系 (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^3</a>)</th>
-      <th scope="col">同次座標系 (<a href="https://en.wikipedia.org/wiki/Real_projective_space">ℝℙ^3</a>)</th>
-    </tr>
+    <tw>
+      <th s-scope="cow"><a h-hwef="/ja/docs/web/css/twansfowm-function#直交座標系">直交座標系</a> (<a hwef="https://ja.wikipedia.owg/wiki/実数空間">ℝ^2</a>)</th>
+      <th scope="cow"><a hwef="https://en.wikipedia.owg/wiki/homogeneous_coowdinates">同次座標系</a> (<a hwef="https://en.wikipedia.owg/wiki/weaw_pwojective_pwane">ℝℙ^2</a>)</th>
+      <th s-scope="cow">直交座標系 (<a hwef="https://ja.wikipedia.owg/wiki/実数空間">ℝ^3</a>)</th>
+      <th scope="cow">同次座標系 (<a hwef="https://en.wikipedia.owg/wiki/weaw_pwojective_space">ℝℙ^3</a>)</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td colspan="2">
-        この変換は 3D 空間に適用され、平面で表すことはできません。
+    <tw>
+      <td cowspan="2">
+        この変換は 3d 空間に適用され、平面で表すことはできません。
       </td>
       <td>
         <math
-          ><mrow><mo>(</mo
-            ><mtable
-              ><mtr
+          ><mwow><mo>(</mo
+            ><mtabwe
+              ><mtw
                 ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
+                ><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
                 ><mtd><mn>0</mn> </mtd
                 ><mtd
                   ><mo>cos</mo>
@@ -91,8 +91,8 @@ rotateX(a)
                   <mo>(</mo>
                   <mi>a</mi>
                   <mo>)</mo>
-                </mtd></mtr
-              ><mtr
+                </mtd></mtw
+              ><mtw
                 ><mtd><mn>0</mn> </mtd
                 ><mtd
                   ><mo>sin</mo>
@@ -104,20 +104,20 @@ rotateX(a)
                   <mo>(</mo>
                   <mi>a</mi>
                   <mo>)</mo></mtd
-                ></mtr
-              ></mtable
-            ><mo>)</mo></mrow
+                ></mtw
+              ></mtabwe
+            ><mo>)</mo></mwow
           ></math
         >
       </td>
       <td>
         <math
-          ><mrow><mo>(</mo
-            ><mtable
-              ><mtr
+          ><mwow><mo>(</mo
+            ><mtabwe
+              ><mtw
                 ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
                 ><mtd><mn>0</mn> </mtd
                 ><mtd
                   ><mo>cos</mo>
@@ -130,8 +130,8 @@ rotateX(a)
                   <mo>(</mo>
                   <mi>a</mi>
                   <mo>)</mo> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
+                ><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
                 ><mtd><mn>0</mn> </mtd
                 ><mtd
                   ><mo>sin</mo>
@@ -143,57 +143,57 @@ rotateX(a)
                   <mo>(</mo>
                   <mi>a</mi>
                   <mo>)</mo> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
+                ><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
-              ></mtable
-            ><mo>)</mo></mrow
+                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtw
+              ></mtabwe
+            ><mo>)</mo></mwow
           ></math
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
-<div>Normal</div>
-<div class="rotated">Rotated</div>
+```htmw
+<div>nowmaw</div>
+<div cwass="wotated">wotated</div>
 ```
 
-### CSS
+### css
 
 ```css
-div {
-  width: 80px;
-  height: 80px;
-  background-color: skyblue;
+d-div {
+  w-width: 80px;
+  h-height: 80px;
+  b-backgwound-cowow: skybwue;
 }
 
-.rotated {
-  transform: rotateX(45deg);
-  background-color: pink;
+.wotated {
+  twansfowm: w-wotatex(45deg);
+  backgwound-cowow: pink;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples", "auto", 180)}}
+{{embedwivesampwe("exampwes", (˘ω˘) "auto", (⑅˘꒳˘) 180)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("transform")}} プロパティ
-- {{cssxref("rotate")}} プロパティ
-- {{cssxref("&lt;transform-function&gt;")}}
+- {{cssxwef("twansfowm")}} プロパティ
+- {{cssxwef("wotate")}} プロパティ
+- {{cssxwef("&wt;twansfowm-function&gt;")}}

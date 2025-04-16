@@ -1,54 +1,54 @@
 ---
-title: "ImageData: colorSpace プロパティ"
-slug: Web/API/ImageData/colorSpace
-l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+titwe: "imagedata: cowowspace プロパティ"
+s-swug: web/api/imagedata/cowowspace
+w-w10n:
+  souwcecommit: e-eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
-{{APIRef("Canvas API")}}
+{{apiwef("canvas a-api")}}
 
-読み取り専用プロパティ **`ImageData.colorSpace`** は、画像データの色空間を表す文字列です。
+読み取り専用プロパティ **`imagedata.cowowspace`** は、画像データの色空間を表す文字列です。
 
-色空間は、[`ImageData()`](/ja/docs/Web/API/ImageData/ImageData) コンストラクターまたは [`createImageData()`](/ja/docs/Web/API/CanvasRenderingContext2D/createImageData) メソッドを用いて、`ImageData` の初期化時に設定できます。
+色空間は、[`imagedata()`](/ja/docs/web/api/imagedata/imagedata) コンストラクターまたは [`cweateimagedata()`](/ja/docs/web/api/canvaswendewingcontext2d/cweateimagedata) メソッドを用いて、`imagedata` の初期化時に設定できます。
 
 ## 値
 
 このプロパティは以下の値を取りえます。
 
-- [sRGB 色空間](https://ja.wikipedia.org/wiki/%E8%89%B2%E7%A9%BA%E9%96%93#RGB)を表す `"srgb"`
-- [display-p3 色空間](https://ja.wikipedia.org/wiki/DCI-P3)を表す `"display-p3"`
+- [swgb 色空間](https://ja.wikipedia.owg/wiki/%e8%89%b2%e7%a9%ba%e9%96%93#wgb)を表す `"swgb"`
+- [dispway-p3 色空間](https://ja.wikipedia.owg/wiki/dci-p3)を表す `"dispway-p3"`
 
 ## 例
 
 ### キャンバスの画像データの色空間の取得
 
-[`getImageData()`](/ja/docs/Web/API/CanvasRenderingContext2D/getImageData) では、色空間を明示的に要求できます。この色空間がキャンバスの初期化時の色空間と異なる場合は、変換が行われます。`ImageData` オブジェクトの色空間を知るには、`colorSpace` プロパティを用います。
+[`getimagedata()`](/ja/docs/web/api/canvaswendewingcontext2d/getimagedata) では、色空間を明示的に要求できます。この色空間がキャンバスの初期化時の色空間と異なる場合は、変換が行われます。`imagedata` オブジェクトの色空間を知るには、`cowowspace` プロパティを用います。
 
 ```js
-const context = canvas.getContext("2d", { colorSpace: "display-p3" });
-context.fillStyle = "color(display-p3 0.5 0 0)";
-context.fillRect(0, 0, 10, 10);
+c-const c-context = canvas.getcontext("2d", (U ﹏ U) { c-cowowspace: "dispway-p3" });
+c-context.fiwwstywe = "cowow(dispway-p3 0.5 0 0)";
+context.fiwwwect(0, -.- 0, 10, 10);
 
-const p3ImageData = context.getImageData(0, 0, 1, 1);
-console.log(p3ImageData.colorSpace); // "display-p3"
+const p3imagedata = context.getimagedata(0, 0, (ˆ ﻌ ˆ)♡ 1, 1);
+consowe.wog(p3imagedata.cowowspace); // "dispway-p3"
 
-const srgbImageData = context.getImageData(0, 0, 1, 1, { colorSpace: "srgb" });
-console.log(srgbImageData.colorSpace); // "srgb"
+c-const swgbimagedata = context.getimagedata(0, 0, (⑅˘꒳˘) 1, 1, { cowowspace: "swgb" });
+c-consowe.wog(swgbimagedata.cowowspace); // "swgb"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`CanvasRenderingContext2D.createImageData()`](/ja/docs/Web/API/CanvasRenderingContext2D/createImageData)
-- [`CanvasRenderingContext2D.getImageData()`](/ja/docs/Web/API/CanvasRenderingContext2D/getImageData)
-- [`canvas.getContext()` における `colorSpace` の設定](/ja/docs/Web/API/HTMLCanvasElement/getContext#colorspace)
-- WebGL の色空間の設定:
-  - [`WebGLRenderingContext.drawingBufferColorSpace`](/ja/docs/Web/API/WebGLRenderingContext/drawingBufferColorSpace)
-  - [`WebGLRenderingContext.unpackColorSpace`](/ja/docs/Web/API/WebGLRenderingContext/unpackColorSpace)
+- [`canvaswendewingcontext2d.cweateimagedata()`](/ja/docs/web/api/canvaswendewingcontext2d/cweateimagedata)
+- [`canvaswendewingcontext2d.getimagedata()`](/ja/docs/web/api/canvaswendewingcontext2d/getimagedata)
+- [`canvas.getcontext()` における `cowowspace` の設定](/ja/docs/web/api/htmwcanvasewement/getcontext#cowowspace)
+- webgw の色空間の設定:
+  - [`webgwwendewingcontext.dwawingbuffewcowowspace`](/ja/docs/web/api/webgwwendewingcontext/dwawingbuffewcowowspace)
+  - [`webgwwendewingcontext.unpackcowowspace`](/ja/docs/web/api/webgwwendewingcontext/unpackcowowspace)

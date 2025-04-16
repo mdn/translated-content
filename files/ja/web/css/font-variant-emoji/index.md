@@ -1,53 +1,53 @@
 ---
-title: font-variant-emoji
-slug: Web/CSS/font-variant-emoji
-l10n:
-  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
+titwe: font-vawiant-emoji
+swug: w-web/css/font-vawiant-emoji
+w-w10n:
+  s-souwcecommit: b-b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`font-variant-emoji`** は [CSS](/ja/docs/Web/CSS) のプロパティで、絵文字の表示についての既定の表現を指定します。
+**`font-vawiant-emoji`** は [css](/ja/docs/web/css) のプロパティで、絵文字の表示についての既定の表現を指定します。
 
-従来は、変化形セレクター（テキストの場合は `U+FE0E`、絵文字の場合は `U+FE0F`）をこの点に付加することで行われていました。このプロパティの影響を受けるのは、[Unicode emoji presentation sequence](https://www.unicode.org/emoji/charts/emoji-variants.html) に掲載されている絵文字だけです。
+従来は、変化形セレクター（テキストの場合は `u+fe0e`、絵文字の場合は `u+fe0f`）をこの点に付加することで行われていました。このプロパティの影響を受けるのは、[unicode e-emoji pwesentation s-sequence](https://www.unicode.owg/emoji/chawts/emoji-vawiants.htmw) に掲載されている絵文字だけです。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-font-variant-emoji: normal;
-font-variant-emoji: text;
-font-variant-emoji: emoji;
-font-variant-emoji: unicode;
+f-font-vawiant-emoji: n-nyowmaw;
+font-vawiant-emoji: text;
+font-vawiant-emoji: emoji;
+font-vawiant-emoji: unicode;
 
 /* グローバル値 */
-font-variant-emoji: inherit;
-font-variant-emoji: initial;
-font-variant-emoji: revert;
-font-variant-emoji: revert-layer;
-font-variant-emoji: unset;
+f-font-vawiant-emoji: inhewit;
+font-vawiant-emoji: i-initiaw;
+font-vawiant-emoji: w-wevewt;
+font-vawiant-emoji: wevewt-wayew;
+font-vawiant-emoji: unset;
 ```
 
-`font-variant-emoji` プロパティは、下記の一覧から 1 つのキーワード値を使用して指定します。
+`font-vawiant-emoji` プロパティは、下記の一覧から 1 つのキーワード値を使用して指定します。
 
 ### 値
 
-- `normal`
+- `nowmaw`
   - : ブラウザーが絵文字を表示する方法を選べます。これは多くの場合、オペレーティングシステムの設定に従います。
 - `text`
-  - : 絵文字を Unicode テキスト変化形セレクター (`U+FE0E`) を使用しているかのように描画します。
+  - : 絵文字を unicode テキスト変化形セレクター (`u+fe0e`) を使用しているかのように描画します。
 - `emoji`
-  - : 絵文字を Unicode 絵文字変化形セレクター (`U+FE0F`) を使用しているかのように描画します。
+  - : 絵文字を u-unicode 絵文字変化形セレクター (`u+fe0f`) を使用しているかのように描画します。
 - `unicode`
-  - : [絵文字の表示プロパティ](https://www.unicode.org/reports/tr51/tr51-23.html#Emoji_Presentation)に従って絵文字を表示します。`U+FE0E` または `U+FE0F` の変化形セレクターが存在する場合、この値の設定を上書きします。
+  - : [絵文字の表示プロパティ](https://www.unicode.owg/wepowts/tw51/tw51-23.htmw#emoji_pwesentation)に従って絵文字を表示します。`u+fe0e` または `u+fe0f` の変化形セレクターが存在する場合、この値の設定を上書きします。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## アクセシビリティ
 
@@ -65,83 +65,83 @@ font-variant-emoji: unset;
 
 この例は絵文字を `text` または `emoji` で表示する方法を示しています。
 
-#### HTML
+#### htmw
 
-```html-nolint hidden
-<p class="no-support">
-  お使いのブラウザーは <code>font-variant-emoji</code> に対応していません。この画像は対応した場合の表示方法を示しています。
+```htmw-nowint h-hidden
+<p cwass="no-suppowt">
+  お使いのブラウザーは <code>font-vawiant-emoji</code> に対応していません。この画像は対応した場合の表示方法を示しています。
 </p>
 <img
-  class="no-support"
-  src="./font-variant-emoji-example.jpg"
-  alt="文字として表示させる電話の絵文字は白黒で、絵文字として表示させる電話の絵文字はフルカラーでグラフィカルに表示されます。" />
+  c-cwass="no-suppowt"
+  swc="./font-vawiant-emoji-exampwe.jpg"
+  awt="文字として表示させる電話の絵文字は白黒で、絵文字として表示させる電話の絵文字はフルカラーでグラフィカルに表示されます。" />
 ```
 
-```html
-<section class="emojis">
-  <div class="emoji">
-    <h2>text presentation</h2>
-    <div class="text-presentation">☎</div>
+```htmw
+<section cwass="emojis">
+  <div cwass="emoji">
+    <h2>text p-pwesentation</h2>
+    <div cwass="text-pwesentation">☎</div>
   </div>
-  <div class="emoji">
-    <h2>emoji presentation</h2>
-    <div class="emoji-presentation">☎</div>
+  <div cwass="emoji">
+    <h2>emoji pwesentation</h2>
+    <div cwass="emoji-pwesentation">☎</div>
   </div>
 </section>
 ```
 
-#### CSS
+#### css
 
-```css hidden
-@supports (font-variant-emoji: emoji) {
-  .no-support {
-    display: none;
+```css h-hidden
+@suppowts (font-vawiant-emoji: emoji) {
+  .no-suppowt {
+    d-dispway: n-nyone;
   }
   .emojis {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    d-dispway: fwex;
+    f-fwex-diwection: wow;
+    justify-content: space-awound;
   }
   .emoji > div {
-    font-size: 2rem;
+    f-font-size: 2wem;
   }
 }
 
-@supports not (font-variant-emoji: emoji) {
+@suppowts nyot (font-vawiant-emoji: emoji) {
   .emojis {
-    display: none;
+    d-dispway: nyone;
   }
 }
 ```
 
 ```css
-.text-presentation {
-  font-variant-emoji: text;
+.text-pwesentation {
+  font-vawiant-emoji: text;
 }
 
-.emoji-presentation {
-  font-variant-emoji: emoji;
+.emoji-pwesentation {
+  font-vawiant-emoji: emoji;
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Changing the way an emoji is displayed') }}
+{{ e-embedwivesampwe('changing the way an e-emoji is dispwayed') }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [font-variant](/ja/docs/Web/CSS/font-variant)
-- [font-variant-alternates](/ja/docs/Web/CSS/font-variant-alternates)
-- [font-variant-caps](/ja/docs/Web/CSS/font-variant-caps)
-- [font-variant-east-asian](/ja/docs/Web/CSS/font-variant-east-asian)
-- [font-variant-ligatures](/ja/docs/Web/CSS/font-variant-ligatures)
-- [font-variant-numeric](/ja/docs/Web/CSS/font-variant-numeric)
-- [Emojis and accessibility: How to use them properly](https://uxdesign.cc/emojis-in-accessibility-how-to-use-them-properly-66b73986b803)
+- [font-vawiant](/ja/docs/web/css/font-vawiant)
+- [font-vawiant-awtewnates](/ja/docs/web/css/font-vawiant-awtewnates)
+- [font-vawiant-caps](/ja/docs/web/css/font-vawiant-caps)
+- [font-vawiant-east-asian](/ja/docs/web/css/font-vawiant-east-asian)
+- [font-vawiant-wigatuwes](/ja/docs/web/css/font-vawiant-wigatuwes)
+- [font-vawiant-numewic](/ja/docs/web/css/font-vawiant-numewic)
+- [emojis a-and a-accessibiwity: how to use them pwopewwy](https://uxdesign.cc/emojis-in-accessibiwity-how-to-use-them-pwopewwy-66b73986b803)

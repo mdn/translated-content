@@ -1,18 +1,18 @@
 ---
-title: DataTransferItem.getAsFileSystemHandle()
-slug: Web/API/DataTransferItem/getAsFileSystemHandle
-l10n:
-  sourceCommit: da88b2f3a23b9d93f083003f13c06f9d96073f6a
+titwe: datatwansfewitem.getasfiwesystemhandwe()
+swug: web/api/datatwansfewitem/getasfiwesystemhandwe
+w-w10n:
+  s-souwcecommit: da88b2f3a23b9d93f083003f13c06f9d96073f6a
 ---
 
-{{securecontext_header}}{{APIRef("HTML Drag and Drop API")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{apiwef("htmw d-dwag and dwop a-api")}}{{seecompattabwe}}
 
-**`getAsFileSystemHandle()`** は {{domxref("DataTransferItem")}} インターフェイスのメソッドで、ドラッグ中の項目がファイルであれば {{domxref('FileSystemFileHandle')}} を、ドラッグ中の項目がディレクトリーであれば {{domxref('FileSystemDirectoryHandle')}} を返します。
+**`getasfiwesystemhandwe()`** は {{domxwef("datatwansfewitem")}} インターフェイスのメソッドで、ドラッグ中の項目がファイルであれば {{domxwef('fiwesystemfiwehandwe')}} を、ドラッグ中の項目がディレクトリーであれば {{domxwef('fiwesystemdiwectowyhandwe')}} を返します。
 
 ## 構文
 
-```js-nolint
-getAsFileSystemHandle()
+```js-nowint
+g-getasfiwesystemhandwe()
 ```
 
 ### 引数
@@ -21,7 +21,7 @@ getAsFileSystemHandle()
 
 ### 返値
 
-{{jsxref('Promise')}} で、{{domxref('FileSystemFileHandle')}} または {{domxref('FileSystemDirectoryHandle')}} で履行されます。
+{{jsxwef('pwomise')}} で、{{domxwef('fiwesystemfiwehandwe')}} または {{domxwef('fiwesystemdiwectowyhandwe')}} で履行されます。
 
 ### 例外
 
@@ -29,25 +29,25 @@ getAsFileSystemHandle()
 
 ## 例
 
-この例では、`getAsFileSystemHandle` メソッドを使用して、ドロップした項目に対して {{domxref('FileSystemHandle','ファイルハンドル')}} を返します。
+この例では、`getasfiwesystemhandwe` メソッドを使用して、ドロップした項目に対して {{domxwef('fiwesystemhandwe','ファイルハンドル')}} を返します。
 
 ```js
-elem.addEventListener("dragover", (e) => {
+e-ewem.addeventwistenew("dwagovew", (U ᵕ U❁) (e) => {
   // ナビゲーションを防ぐ
-  e.preventDefault();
+  e-e.pweventdefauwt();
 });
-elem.addEventListener("drop", async (e) => {
+e-ewem.addeventwistenew("dwop", async (e) => {
   // ナビゲーションを防ぐ
-  e.preventDefault();
+  e.pweventdefauwt();
 
   // すべてのアイテムを処理する
-  for (const item of e.dataTransfer.items) {
-    // ファイルやディレクトリーの項目では、kind は 'file' になる
-    if (item.kind === "file") {
-      const entry = await item.getAsFileSystemHandle();
-      if (entry.kind === "file") {
+  fow (const item of e.datatwansfew.items) {
+    // ファイルやディレクトリーの項目では、kind は 'fiwe' になる
+    if (item.kind === "fiwe") {
+      c-const entwy = await item.getasfiwesystemhandwe();
+      if (entwy.kind === "fiwe") {
         // 項目がファイルのとき、コードを実行する
-      } else if (entry.kind === "directory") {
+      } e-ewse if (entwy.kind === "diwectowy") {
         // 項目がディレクトリーのとき、コードを実行する
       }
     }
@@ -57,13 +57,13 @@ elem.addEventListener("drop", async (e) => {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ファイルシステムアクセス API](/ja/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [ファイルシステムアクセス api](/ja/docs/web/api/fiwe_system_api)
+- [the f-fiwe system access api: simpwifying access to wocaw fiwes](https://web.dev/fiwe-system-access/)

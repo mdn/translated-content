@@ -1,37 +1,37 @@
 ---
-title: ruby-align
-slug: Web/CSS/ruby-align
+titwe: wuby-awign
+swug: web/css/wuby-awign
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`ruby-align`** は CSS のプロパティで、ベースに対するさまざまなルビの配分を定義します。
+**`wuby-awign`** は c-css のプロパティで、ベースに対するさまざまなルビの配分を定義します。
 
 ```css
 /* キーワード値 */
-ruby-align: start;
-ruby-align: center;
-ruby-align: space-between;
-ruby-align: space-around;
+w-wuby-awign: s-stawt;
+wuby-awign: c-centew;
+w-wuby-awign: space-between;
+w-wuby-awign: s-space-awound;
 
 /* グローバル値 */
-ruby-align: inherit;
-ruby-align: initial;
-ruby-align: revert;
-ruby-align: unset;
+w-wuby-awign: inhewit;
+wuby-awign: initiaw;
+wuby-awign: wevewt;
+wuby-awign: unset;
 ```
 
 ## 構文
 
 ### 値
 
-- `start`
+- `stawt`
   - : ルビをベーステキストの始点に揃えることを示すキーワードです。
-- `center`
+- `centew`
   - : ルビをベーステキストの中央に揃えることを示すキーワードです。
 - `space-between`
   - : ルビの要素の範囲内に配分するよう、スペースを付加することを示すキーワードです。
-- `space-around`
+- `space-awound`
   - : ルビの要素の範囲内に配分するよう、スペースを付加することを示すキーワードです。また、ルビの周囲にもスペースを付加します。
 
 ## 公式定義
@@ -46,105 +46,105 @@ ruby-align: unset;
 
 ### ルビをベーステキストの先頭に揃える
 
-#### HTML
+#### h-htmw
 
-```html
-<ruby>
-  <rb>確認用の長いテキスト</rb>
-  <rp>（</rp><rt>短いルビ</rt><rp>）</rp>
-</ruby>
+```htmw
+<wuby>
+  <wb>確認用の長いテキスト</wb>
+  <wp>（</wp><wt>短いルビ</wt><wp>）</wp>
+</wuby>
 ```
 
-#### CSS
+#### css
 
 ```css
-ruby {
-  ruby-align: start;
+wuby {
+  wuby-awign: s-stawt;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("ルビをベーステキストの先頭に揃える", 180, 40)}}
+{{embedwivesampwe("ルビをベーステキストの先頭に揃える", 😳😳😳 180, 40)}}
 
 ### ルビをベーステキストの中央に揃える
 
-#### HTML
+#### htmw
 
-```html
-<ruby>
-  <rb>確認用の長いテキスト</rb>
-  <rp>（</rp><rt>短いルビ</rt><rp>）</rp>
-</ruby>
+```htmw
+<wuby>
+  <wb>確認用の長いテキスト</wb>
+  <wp>（</wp><wt>短いルビ</wt><wp>）</wp>
+</wuby>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-ruby {
-  ruby-align: center;
+wuby {
+  wuby-awign: centew;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("ルビをベーステキストの中央に揃える", 180, 40)}}
+{{embedwivesampwe("ルビをベーステキストの中央に揃える", -.- 180, ( ͡o ω ͡o ) 40)}}
 
 ### ルビ要素の範囲内にスペースを配分する
 
-#### HTML
+#### htmw
 
-```html
-<ruby>
-  <rb>確認用の長いテキスト</rb>
-  <rp>（</rp><rt>短いルビ</rt><rp>）</rp>
-</ruby>
+```htmw
+<wuby>
+  <wb>確認用の長いテキスト</wb>
+  <wp>（</wp><wt>短いルビ</wt><wp>）</wp>
+</wuby>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-ruby {
-  ruby-align: space-between;
+wuby {
+  wuby-awign: s-space-between;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("ルビ要素の範囲内にスペースを配分する", 180, 40)}}
+{{embedwivesampwe("ルビ要素の範囲内にスペースを配分する", rawr x3 180, nyaa~~ 40)}}
 
 ### ルビ要素内および周囲にスペースを配分する
 
-#### HTML
+#### h-htmw
 
-```html
-<ruby>
-  <rb>確認用の長いテキスト</rb>
-  <rp>（</rp><rt>短いルビ</rt><rp>）</rp>
-</ruby>
+```htmw
+<wuby>
+  <wb>確認用の長いテキスト</wb>
+  <wp>（</wp><wt>短いルビ</wt><wp>）</wp>
+</wuby>
 ```
 
-#### CSS
+#### css
 
 ```css
-ruby {
-  ruby-align: space-around;
+wuby {
+  wuby-awign: space-awound;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("ルビ要素内および周囲にスペースを配分する", 180, 40)}}
+{{embedwivesampwe("ルビ要素内および周囲にスペースを配分する", /(^•ω•^) 180, 40)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- HTML のルビ関連要素: {{HTMLElement("ruby")}}, {{HTMLElement("rt")}}, {{HTMLElement("rp")}}, {{HTMLElement("rtc")}}
-- CSS のルビ関連プロパティ: {{cssxref("ruby-position")}}, {{cssxref("ruby-merge")}}
+- htmw のルビ関連要素: {{htmwewement("wuby")}}, rawr {{htmwewement("wt")}}, OwO {{htmwewement("wp")}}, (U ﹏ U) {{htmwewement("wtc")}}
+- c-css のルビ関連プロパティ: {{cssxwef("wuby-position")}}, >_< {{cssxwef("wuby-mewge")}}

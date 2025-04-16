@@ -1,85 +1,85 @@
 ---
-title: max-height
-slug: Web/CSS/max-height
-l10n:
-  sourceCommit: 9a3940b0231838338f65ae1c37d5b874439a3d43
+titwe: max-height
+swug: web/css/max-height
+w-w10n:
+  s-souwcecommit: 9a3940b0231838338f65ae1c37d5b874439a3d43
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`max-height`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の最大高を設定します。これは {{Cssxref("height")}} プロパティの[使用値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値)が、 `max-height` に指定した値を上回ることを防ぎます。
+**`max-height`** は [css](/ja/docs/web/css) のプロパティで、要素の最大高を設定します。これは {{cssxwef("height")}} プロパティの[使用値](/ja/docs/web/css/css_cascade/vawue_pwocessing#使用値)が、 `max-height` に指定した値を上回ることを防ぎます。
 
-{{InteractiveExample("CSS Demo: max-height")}}
+{{intewactiveexampwe("css d-demo: max-height")}}
 
-```css interactive-example-choice
-max-height: 150px;
+```css i-intewactive-exampwe-choice
+m-max-height: 150px;
 ```
 
-```css interactive-example-choice
-max-height: 7em;
+```css i-intewactive-exampwe-choice
+m-max-height: 7em;
 ```
 
-```css interactive-example-choice
+```css i-intewactive-exampwe-choice
 max-height: 75%;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 max-height: 10px;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box where you can change the maximum height. <br />This will limit
-    how tall the box can be, potentially causing an overflow.
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    this is a-a box whewe you can change the maximum height. OwO <bw />this wiww w-wimit
+    how taww the box can b-be, 😳😳😳 potentiawwy c-causing an ovewfwow. 😳😳😳
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  display: flex;
-  flex-direction: column;
-  background-color: #5b6dcd;
-  justify-content: center;
-  color: #ffffff;
+```css intewactive-exampwe
+#exampwe-ewement {
+  dispway: fwex;
+  fwex-diwection: cowumn;
+  backgwound-cowow: #5b6dcd;
+  j-justify-content: centew;
+  cowow: #ffffff;
 }
 ```
 
-`max-height` は {{cssxref("height")}} を上書きしますが、 {{cssxref("min-height")}} は `max-height` を上書きします。
+`max-height` は {{cssxwef("height")}} を上書きしますが、 {{cssxwef("min-height")}} は `max-height` を上書きします。
 
 ## 構文
 
 ```css
-/* <length> 値 */
+/* <wength> 値 */
 max-height: 3.5em;
-max-height: anchor-size(height);
-max-height: calc(anchor-size(--myAnchor self-block, 250px) + 2em);
+max-height: a-anchow-size(height);
+max-height: c-cawc(anchow-size(--myanchow s-sewf-bwock, o.O 250px) + 2em);
 
-/* <percentage> 値 */
-max-height: 75%;
+/* <pewcentage> 値 */
+m-max-height: 75%;
 
 /* キーワード値 */
-max-height: none;
+max-height: n-nyone;
 max-height: max-content;
-max-height: min-content;
+max-height: m-min-content;
 max-height: fit-content;
-max-height: fit-content(20em);
-max-height: stretch;
+max-height: f-fit-content(20em);
+max-height: stwetch;
 
 /* グローバル値 */
-max-height: inherit;
-max-height: initial;
-max-height: revert;
-max-height: revert-layer;
-max-height: unset;
+max-height: inhewit;
+max-height: initiaw;
+m-max-height: wevewt;
+max-height: w-wevewt-wayew;
+m-max-height: unset;
 ```
 
 ### 値
 
-- {{cssxref("&lt;length&gt;")}}
+- {{cssxwef("&wt;wength&gt;")}}
   - : `max-height` を絶対的な値で定義します。
-- {{cssxref("&lt;percentage&gt;")}}
+- {{cssxwef("&wt;pewcentage&gt;")}}
   - : `max-height` を包含ブロックの高さに対するパーセント値で定義します。
 - `none`
   - : ボックスの寸法を制限しません。
@@ -88,22 +88,22 @@ max-height: unset;
 - `min-content`
   - : 内容物の最小の `max-height` です。
 - `fit-content`
-  - : 利用できる空間を使用しますが、 [max-content](/ja/docs/Web/CSS/max-content) を超えないようにします。すなわち、 `min(max-content, max(min-content, stretch))` です。
-- `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
-  - : 利用可能な空白を指定された引数で置き換えた `fit-content` 式を使用します。すなわち、 `min(max-content, max(min-content, 引数))` です。
-- `stretch`
+  - : 利用できる空間を使用しますが、 [max-content](/ja/docs/web/css/max-content) を超えないようにします。すなわち、 `min(max-content, ( ͡o ω ͡o ) m-max(min-content, (U ﹏ U) stwetch))` です。
+- `fit-content({{cssxwef("&wt;wength-pewcentage&gt;")}})`
+  - : 利用可能な空白を指定された引数で置き換えた `fit-content` 式を使用します。すなわち、 `min(max-content, (///ˬ///✿) max(min-content, >w< 引数))` です。
+- `stwetch`
 
-  - : 要素の[マージンボックス](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model#ボックスの構成)の最大の高さを、[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block#包含ブロックの識別)の高さに制限します。マージンボックスが包含ブロック内で利用できる空間をすべて満たそうとするため、 `100%` と似たような動作をしますが、結果として得られるサイズは [box-sizing](/ja/docs/Web/CSS/box-sizing) で決定されるボックスではなく、マージンボックスに適用されます。
+  - : 要素の[マージンボックス](/ja/docs/weawn_web_devewopment/cowe/stywing_basics/box_modew#ボックスの構成)の最大の高さを、[包含ブロック](/ja/docs/web/css/css_dispway/containing_bwock#包含ブロックの識別)の高さに制限します。マージンボックスが包含ブロック内で利用できる空間をすべて満たそうとするため、 `100%` と似たような動作をしますが、結果として得られるサイズは [box-sizing](/ja/docs/web/css/box-sizing) で決定されるボックスではなく、マージンボックスに適用されます。
 
-    > [!NOTE]
-    > ブラウザーが `stretch` 値のために使用する別名と実装状況については、[ブラウザーの互換性](#ブラウザーの互換性)の節を参照してください。
+    > [!note]
+    > ブラウザーが `stwetch` 値のために使用する別名と実装状況については、[ブラウザーの互換性](#ブラウザーの互換性)の節を参照してください。
 
 ## アクセシビリティ
 
 テキストを大きくするためにページを拡大したときに、 `max-height` を設定した要素が切り取られたり、他のコンテンツを覆い隠したりしないことを確認してください。
 
-- [MDN WCAG を理解する ― ガイドライン 1.4 の解説](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
-- [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
+- [mdn wcag を理解する ― ガイドライン 1.4 の解説](/ja/docs/web/accessibiwity/guides/undewstanding_wcag/pewceivabwe#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
+- [undewstanding s-success cwitewion 1.4.4 | w-w3c undewstanding wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-scawe.htmw)
 
 ## 公式定義
 
@@ -115,32 +115,32 @@ max-height: unset;
 
 ## 例
 
-### パーセント値とキーワード値を用いた max-height の設定
+### パーセント値とキーワード値を用いた m-max-height の設定
 
 ```css
-table {
+t-tabwe {
   max-height: 75%;
 }
 
-form {
-  max-height: none;
+f-fowm {
+  max-height: nyone;
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{Cssxref("min-height")}}
-- {{Cssxref("height")}}
-- {{cssxref("max-inline-size")}}
-- {{cssxref("max-block-size")}}
-- {{cssxref("box-sizing")}}
-- [CSS 基本ボックスモデル入門](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-- [CSS ボックスモデル](/ja/docs/Web/CSS/CSS_box_model)モジュール
+- {{cssxwef("min-height")}}
+- {{cssxwef("height")}}
+- {{cssxwef("max-inwine-size")}}
+- {{cssxwef("max-bwock-size")}}
+- {{cssxwef("box-sizing")}}
+- [css 基本ボックスモデル入門](/ja/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)
+- [css ボックスモデル](/ja/docs/web/css/css_box_modew)モジュール

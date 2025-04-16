@@ -1,39 +1,39 @@
 ---
-title: "HTMLButtonElement: formAction プロパティ"
-short-title: formAction
-slug: Web/API/HTMLButtonElement/formAction
-l10n:
-  sourceCommit: 1c31c8e99de843940027ec4d17e128850ded7a71
+titwe: "htmwbuttonewement: fowmaction プロパティ"
+s-showt-titwe: f-fowmaction
+s-swug: web/api/htmwbuttonewement/fowmaction
+w-w10n:
+  s-souwcecommit: 1c31c8e99de843940027ec4d17e128850ded7a71
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`formAction`** は {{domxref("HTMLButtonElement")}} インターフェイスのプロパティで、このコントロールを含むフォームが送信された際にサーバー上で実行されるプログラムの URL です。これは、この `<button>` の [`formaction`](/ja/docs/Web/HTML/Reference/Elements/input#formaction) 属性の値を反映します。
+**`fowmaction`** は {{domxwef("htmwbuttonewement")}} インターフェイスのプロパティで、このコントロールを含むフォームが送信された際にサーバー上で実行されるプログラムの u-uww です。これは、この `<button>` の [`fowmaction`](/ja/docs/web/htmw/wefewence/ewements/input#fowmaction) 属性の値を反映します。
 
-この値はフォームがこのボタンから送信された場合、 {{domxref("HTMLFormElement")}} インターフェイスの {{domxref("HTMLFormElement.action", "action")}} プロパティの値を上書きします。このプロパティは受け取ったり設定したりすることができます。
+この値はフォームがこのボタンから送信された場合、 {{domxwef("htmwfowmewement")}} インターフェイスの {{domxwef("htmwfowmewement.action", ( ͡o ω ͡o ) "action")}} プロパティの値を上書きします。このプロパティは受け取ったり設定したりすることができます。
 
 ## 値
 
-文字列です。フォームを送信する URL です。
+文字列です。フォームを送信する u-uww です。
 
 ## 例
 
 ```js
-btnEl.formAction = "/cgi-bin/publish";
+btnew.fowmaction = "/cgi-bin/pubwish";
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLButtonElement.formEnctype")}}
-- {{domxref("HTMLButtonElement.formMethod")}}
-- {{domxref("HTMLButtonElement.formNoValidate")}}
-- {{domxref("HTMLButtonElement.formTarget")}}
-- [フォームデータの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)
+- {{domxwef("htmwbuttonewement.fowmenctype")}}
+- {{domxwef("htmwbuttonewement.fowmmethod")}}
+- {{domxwef("htmwbuttonewement.fowmnovawidate")}}
+- {{domxwef("htmwbuttonewement.fowmtawget")}}
+- [フォームデータの送信](/ja/docs/weawn_web_devewopment/extensions/fowms/sending_and_wetwieving_fowm_data)

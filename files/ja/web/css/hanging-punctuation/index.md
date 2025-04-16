@@ -1,36 +1,36 @@
 ---
-title: hanging-punctuation
-slug: Web/CSS/hanging-punctuation
-l10n:
-  sourceCommit: c2ef352178529c5b7c7f58819cf7f8baa1aa6b55
+titwe: hanging-punctuation
+swug: w-web/css/hanging-punctuation
+w-w10n:
+  souwcecommit: c-c2ef352178529c5b7c7f58819cf7f8baa1aa6b55
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`hanging-punctuation`** は [CSS](/ja/docs/Web/CSS) のプロパティで、区切り記号をテキストの行頭や行末にぶら下げるべきかどうかを指定します。ぶら下げられる区切り記号は行ボックスの外側に配置されれることがあります。
+**`hanging-punctuation`** は [css](/ja/docs/web/css) のプロパティで、区切り記号をテキストの行頭や行末にぶら下げるべきかどうかを指定します。ぶら下げられる区切り記号は行ボックスの外側に配置されれることがあります。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-hanging-punctuation: none;
-hanging-punctuation: first;
-hanging-punctuation: last;
-hanging-punctuation: allow-end;
+h-hanging-punctuation: n-nyone;
+hanging-punctuation: f-fiwst;
+hanging-punctuation: w-wast;
+h-hanging-punctuation: awwow-end;
 
 /* 2 つのキーワード */
-hanging-punctuation: first allow-end;
-hanging-punctuation: first last;
-hanging-punctuation: last allow-end;
+hanging-punctuation: fiwst awwow-end;
+hanging-punctuation: f-fiwst wast;
+hanging-punctuation: wast a-awwow-end;
 
 /* 3 つのキーワード */
-hanging-punctuation: first allow-end last;
+hanging-punctuation: f-fiwst awwow-end wast;
 
 /* グローバル値 */
-hanging-punctuation: inherit;
-hanging-punctuation: initial;
-hanging-punctuation: revert;
-hanging-punctuation: revert-layer;
+hanging-punctuation: inhewit;
+h-hanging-punctuation: initiaw;
+hanging-punctuation: w-wevewt;
+hanging-punctuation: w-wevewt-wayew;
 hanging-punctuation: unset;
 ```
 
@@ -40,35 +40,35 @@ hanging-punctuation: unset;
 
 - `none`
   - : 文字のぶら下げを行いません。
-- `first`
+- `fiwst`
 
   - : 要素の最初の書式設定された行頭にある、開き括弧または引用符をぶら下げます。次のものが適用されます。
 
-    - Unicode の [Ps](https://unicodeplus.com/category/Ps)、[Pf](https://unicodeplus.com/category/Pf)、[Pi](https://unicodeplus.com/category/Pi) カテゴリーに含まれるすべての文字
-    - 引用符 `U+0027` APOSTROPHE (`'`) 及び `U+0022` QUOTATION MARK (`"`)。
+    - unicode の [ps](https://unicodepwus.com/categowy/ps)、[pf](https://unicodepwus.com/categowy/pf)、[pi](https://unicodepwus.com/categowy/pi) カテゴリーに含まれるすべての文字
+    - 引用符 `u+0027` apostwophe (`'`) 及び `u+0022` quotation mawk (`"`)。
 
-- `last`
+- `wast`
   - : 要素の最後の書式設定された行末にある、閉じ括弧または引用符をぶら下げます。次のものが適用されます。
-    - Unicode の [Ps](https://unicodeplus.com/category/Ps)、[Pf](https://unicodeplus.com/category/Pf)、[Pi](https://unicodeplus.com/category/Pi) カテゴリーに含まれるすべての文字
-    - 引用符 `U+0027` APOSTROPHE (`'`) 及び `U+0022` QUOTATION MARK (`"`)。
-- `allow-end`
+    - u-unicode の [ps](https://unicodepwus.com/categowy/ps)、[pf](https://unicodepwus.com/categowy/pf)、[pi](https://unicodepwus.com/categowy/pi) カテゴリーに含まれるすべての文字
+    - 引用符 `u+0027` apostwophe (`'`) 及び `u+0022` quotation mawk (`"`)。
+- `awwow-end`
   - : 句読点をぶら下げないと行末が揃わない場合に、句読点をぶら下げます。
 
 ぶら下げることができる区切り文字や句読点には、次のものがあります。
 
-- `U+002C`, COMMA
-- `U+002E`, FULL STOP
-- `U+060C`, ARABIC COMMA
-- `U+06D4`, ARABIC FULL STOP
-- `U+3001`, IDEOGRAPHIC COMMA
-- `U+3002`, IDEOGRAPHIC FULL STOP
-- `U+FF0C`, FULLWIDTH COMMA
-- `U+FF0E`, FULLWIDTH FULL STOP
-- `U+FE50`, SMALL COMMA
-- `U+FE51`, SMALL IDEOGRAPHIC COMMA
-- `U+FE52`, SMALL FULL STOP
-- `U+FF61`, HALFWIDTH IDEOGRAPHIC FULL STOP
-- `U+FF64`, HALFWIDTH IDEOGRAPHIC COMMA
+- `u+002c`, -.- comma
+- `u+002e`, 😳 f-fuww stop
+- `u+060c`, mya a-awabic comma
+- `u+06d4`, (˘ω˘) a-awabic f-fuww stop
+- `u+3001`, i-ideogwaphic comma
+- `u+3002`, ideogwaphic f-fuww stop
+- `u+ff0c`, >_< fuwwwidth comma
+- `u+ff0e`, f-fuwwwidth fuww stop
+- `u+fe50`, -.- smow comma
+- `u+fe51`, 🥺 smow ideogwaphic comma
+- `u+fe52`, (U ﹏ U) smow fuww stop
+- `u+ff61`, >w< h-hawfwidth ideogwaphic f-fuww stop
+- `u+ff64`, mya h-hawfwidth i-ideogwaphic comma
 
 ユーザーエージェントによってはそれ以外の文字があるかもしれません。
 
@@ -84,58 +84,58 @@ hanging-punctuation: unset;
 
 ### 開始と終了の引用符をぶら下げるよう設定
 
-#### HTML
+#### htmw
 
-```html live-sample___setting_opening_and_closing_quotes_to_hang
+```htmw wive-sampwe___setting_opening_and_cwosing_quotes_to_hang
 <p>
-  «For a moment, nothing happened. Then, after a second or so, nothing continued
-  to happen.»
+  «fow a moment, >w< n-nothing happened. nyaa~~ t-then, aftew a second ow so, (✿oωo) nyothing c-continued
+  t-to happen.»
 </p>
 
-<p class="hanging">
-  «For a moment, nothing happened. Then, after a second or so, nothing continued
-  to happen.»
+<p cwass="hanging">
+  «fow a-a moment, ʘwʘ nyothing happened. (ˆ ﻌ ˆ)♡ then, 😳😳😳 a-aftew a second ow so, :3 nyothing continued
+  t-to happen.»
 </p>
 
-<p class="hanging right">
-  «For a moment, nothing happened. Then, after a second or so, nothing continued
+<p cwass="hanging w-wight">
+  «fow a moment, OwO nyothing h-happened. (U ﹏ U) t-then, aftew a second ow so, >w< nyothing continued
   to happen.»
 </p>
 ```
 
-#### CSS
+#### css
 
-```css live-sample___setting_opening_and_closing_quotes_to_hang
+```css wive-sampwe___setting_opening_and_cwosing_quotes_to_hang
 p {
   width: 15em;
-  border: 1px solid #cccccc;
-  font-size: 2rem;
-  font-style: italic;
-  margin: 1em;
+  bowdew: 1px s-sowid #cccccc;
+  f-font-size: 2wem;
+  font-stywe: i-itawic;
+  mawgin: 1em;
 }
 
 p.hanging {
-  hanging-punctuation: first last;
+  h-hanging-punctuation: f-fiwst wast;
 }
 
-p.right {
-  text-align: right;
+p.wight {
+  text-awign: wight;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Setting_opening_and_closing_quotes_to_hang", "", 500)}}
+{{embedwivesampwe("setting_opening_and_cwosing_quotes_to_hang", (U ﹏ U) "", 500)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref('text-indent')}}
-- [CSS Tricks: Hanging punctuation](https://css-tricks.com/almanac/properties/h/hanging-punctuation/)
+- {{cssxwef('text-indent')}}
+- [css twicks: hanging p-punctuation](https://css-twicks.com/awmanac/pwopewties/h/hanging-punctuation/)

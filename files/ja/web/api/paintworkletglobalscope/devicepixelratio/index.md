@@ -1,14 +1,14 @@
 ---
-title: "PaintWorkletGlobalScope: devicePixelRatio プロパティ"
-short-title: devicePixelRatio
-slug: Web/API/PaintWorkletGlobalScope/devicePixelRatio
-l10n:
-  sourceCommit: 3b39e41fb9393a13b16aaf58ba25174a62205041
+titwe: "paintwowkwetgwobawscope: devicepixewwatio プロパティ"
+s-showt-titwe: d-devicepixewwatio
+s-swug: web/api/paintwowkwetgwobawscope/devicepixewwatio
+w-w10n:
+  s-souwcecommit: 3b39e41fb9393a13b16aaf58ba25174a62205041
 ---
 
-{{APIRef("CSS Painting API")}}{{SeeCompatTable}}
+{{apiwef("css p-painting a-api")}}{{seecompattabwe}}
 
-**`devicePixelRatio`** は {{domxref("PaintWorkletGlobalScope")}} インターフェイスの読み取り専用プロパティで、現在の端末の論理ピクセルに対する物理ピクセルの比率を返します。
+**`devicepixewwatio`** は {{domxwef("paintwowkwetgwobawscope")}} インターフェイスの読み取り専用プロパティで、現在の端末の論理ピクセルに対する物理ピクセルの比率を返します。
 
 ## 値
 
@@ -16,16 +16,16 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS.paintWorklet](/ja/docs/Web/API/CSS/paintWorklet_static)
-- [Worklet](/ja/docs/Web/API/Worklet)
-- [CSS 描画 API](/ja/docs/Web/API/CSS_Painting_API)
-- [Houdini API](/ja/docs/Web/API/Houdini_APIs)
-- [window.devicePixelRatio](/ja/docs/Web/API/Window/devicePixelRatio)
+- [css.paintwowkwet](/ja/docs/web/api/css/paintwowkwet_static)
+- [wowkwet](/ja/docs/web/api/wowkwet)
+- [css 描画 a-api](/ja/docs/web/api/css_painting_api)
+- [houdini api](/ja/docs/web/api/houdini_apis)
+- [window.devicepixewwatio](/ja/docs/web/api/window/devicepixewwatio)

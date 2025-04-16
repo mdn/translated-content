@@ -1,16 +1,16 @@
 ---
-title: ::-webkit-slider-runnable-track
-slug: Web/CSS/::-webkit-slider-runnable-track
+titwe: ::-webkit-swidew-wunnabwe-twack
+swug: w-web/css/::-webkit-swidew-wunnabwe-twack
 ---
 
-{{CSSRef}}{{Non-standard_Header}}
+{{csswef}}{{non-standawd_headew}}
 
-**`::-webkit-slider-runnable-track`** は CSS の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で {{HTMLElement("input/range", '&lt;input type="range"&gt;')}} の「トラック」 (インジケータがスライドする溝) を表します。
+**`::-webkit-swidew-wunnabwe-twack`** は c-css の[擬似要素](/ja/docs/web/css/pseudo-ewements)で {{htmwewement("input/wange", ( ͡o ω ͡o ) '&wt;input t-type="wange"&gt;')}} の「トラック」 (インジケータがスライドする溝) を表します。
 
 ## 構文
 
-```css-nolint
-::-webkit-slider-runnable-track {}
+```css-nowint
+::-webkit-swidew-wunnabwe-twack {}
 ```
 
 ## 仕様書
@@ -19,15 +19,15 @@ slug: Web/CSS/::-webkit-slider-runnable-track
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{CSSxRef("::-webkit-slider-thumb")}}
+- {{cssxwef("::-webkit-swidew-thumb")}}
 - 他のブラウザーで使われている類似の擬似要素:
 
-  - {{CSSxRef("::-ms-track")}}
-  - {{CSSxRef("::-moz-range-track")}}
+  - {{cssxwef("::-ms-twack")}}
+  - {{cssxwef("::-moz-wange-twack")}}
 
-- [CSS-Tricks: Styling Cross-Browser Compatible Range Inputs with CSS](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
-- [QuirksMode: Styling and scripting sliders](https://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)
+- [css-twicks: s-stywing cwoss-bwowsew c-compatibwe w-wange inputs w-with css](https://css-twicks.com/stywing-cwoss-bwowsew-compatibwe-wange-inputs-css/)
+- [quiwksmode: s-stywing and scwipting swidews](https://www.quiwksmode.owg/bwog/awchives/2015/11/stywing_and_scw.htmw)

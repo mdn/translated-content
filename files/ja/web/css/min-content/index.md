@@ -1,11 +1,11 @@
 ---
-title: min-content
-slug: Web/CSS/min-content
-l10n:
-  sourceCommit: 3d8560ff659dea02550ce8b7e4633cf76a389131
+titwe: min-content
+swug: web/css/min-content
+w-w10n:
+  souwcecommit: 3d8560ff659dea02550ce8b7e4633cf76a389131
 ---
 
-{{CSSRef}}
+{{csswef}}
 
 `min-content` は大きさのキーワードで、コンテンツの内在的な最小幅を表しています。テキストコンテンツの場合は、コンテンツがすべてのソフトラッピングの機会を使用した場合に、最も長い単語と同じくらい小さくなることを意味します。
 
@@ -13,85 +13,85 @@ l10n:
 
 ```css
 /* 長さとして使用 */
-width: min-content;
-inline-size: min-content;
-height: min-content;
-block-size: min-content;
+w-width: min-content;
+i-inwine-size: m-min-content;
+h-height: min-content;
+b-bwock-size: m-min-content;
 
 /* グリッドトラックで使用 */
-grid-template-columns: 200px 1fr min-content;
+g-gwid-tempwate-cowumns: 200px 1fw min-content;
 ```
 
 ## 例
 
 ### min-content をボックスの大きさに使用
 
-#### HTML
+#### htmw
 
-```html
-<div class="item">Item</div>
-<div class="item">Item with more text in it.</div>
+```htmw
+<div cwass="item">item</div>
+<div c-cwass="item">item with mowe text in it.</div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 .item {
-  width: min-content;
-  background-color: #8ca0ff;
+  width: m-min-content;
+  backgwound-cowow: #8ca0ff;
   padding: 5px;
-  margin-bottom: 1em;
+  mawgin-bottom: 1em;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Using_min-content_for_box_sizing", "100%", 200)}}
+{{embedwivesampwe("using_min-content_fow_box_sizing", rawr x3 "100%", 200)}}
 
 ### min-content をグリッド列の大きさに使用
 
-#### HTML
+#### htmw
 
-```html
-<div id="container">
-  <div>Item</div>
-  <div>Item with more text in it.</div>
-  <div>Flexible item</div>
+```htmw
+<div i-id="containew">
+  <div>item</div>
+  <div>item with m-mowe text in it.</div>
+  <div>fwexibwe i-item</div>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-#container {
-  display: grid;
-  grid-template-columns: min-content min-content 1fr;
-  grid-gap: 5px;
-  box-sizing: border-box;
+#containew {
+  dispway: gwid;
+  gwid-tempwate-cowumns: min-content m-min-content 1fw;
+  gwid-gap: 5px;
+  box-sizing: bowdew-box;
   height: 200px;
-  width: 100%;
-  background-color: #8cffa0;
-  padding: 10px;
+  w-width: 100%;
+  backgwound-cowow: #8cffa0;
+  p-padding: 10px;
 }
 
-#container > div {
-  background-color: #8ca0ff;
-  padding: 5px;
+#containew > d-div {
+  b-backgwound-cowow: #8ca0ff;
+  p-padding: 5px;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Sizing_grid_columns_with_min-content", "100%", 200)}}
+{{embedwivesampwe("sizing_gwid_cowumns_with_min-content", mya "100%", 200)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 関連する大きさのキーワード: {{cssxref("max-content")}}, {{cssxref("fit-content")}}
+- 関連する大きさのキーワード: {{cssxwef("max-content")}}, nyaa~~ {{cssxwef("fit-content")}}

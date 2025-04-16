@@ -1,86 +1,86 @@
 ---
-title: column-rule-style
-slug: Web/CSS/column-rule-style
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: cowumn-wuwe-stywe
+swug: w-web/css/cowumn-wuwe-stywe
+w-w10n:
+  s-souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`column-rule-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで段の間に引かれる線（段間罫）のスタイルを設定します。
+**`cowumn-wuwe-stywe`** は [css](/ja/docs/web/css) のプロパティで、段組みレイアウトで段の間に引かれる線（段間罫）のスタイルを設定します。
 
-{{InteractiveExample("CSS Demo: column-rule-style")}}
+{{intewactiveexampwe("css d-demo: c-cowumn-wuwe-stywe")}}
 
-```css interactive-example-choice
-column-rule-style: none;
+```css i-intewactive-exampwe-choice
+c-cowumn-wuwe-stywe: none;
 ```
 
-```css interactive-example-choice
-column-rule-style: dotted;
+```css i-intewactive-exampwe-choice
+cowumn-wuwe-stywe: dotted;
 ```
 
-```css interactive-example-choice
-column-rule-style: solid;
+```css intewactive-exampwe-choice
+cowumn-wuwe-stywe: sowid;
 ```
 
-```css interactive-example-choice
-column-rule-style: double;
+```css i-intewactive-exampwe-choice
+cowumn-wuwe-stywe: doubwe;
 ```
 
-```css interactive-example-choice
-column-rule-style: ridge;
-column-rule-color: #88f;
+```css intewactive-exampwe-choice
+c-cowumn-wuwe-stywe: widge;
+cowumn-wuwe-cowow: #88f;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <p id="exampwe-ewement">
+    wondon. 😳 michaewmas t-tewm watewy ovew, and the w-wowd chancewwow s-sitting in
+    wincown's inn haww. -.- impwacabwe nyovembew weathew. 🥺 as much mud in t-the stweets
+    as if the watews had but nyewwy wetiwed fwom the face of the eawth, o.O a-and it
+    wouwd nyot be wondewfuw t-to meet a m-megawosauwus, /(^•ω•^) fowty f-feet wong ow s-so, nyaa~~
+    waddwing wike an ewephantine wizawd up h-howbown hiww. nyaa~~
   </p>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  columns: 3;
-  column-rule: solid;
-  text-align: left;
+```css intewactive-exampwe
+#exampwe-ewement {
+  cowumns: 3;
+  c-cowumn-wuwe: sowid;
+  text-awign: weft;
 }
 ```
 
 ## 構文
 
 ```css
-/* <'border-style'> の値 */
-column-rule-style: none;
-column-rule-style: hidden;
-column-rule-style: dotted;
-column-rule-style: dashed;
-column-rule-style: solid;
-column-rule-style: double;
-column-rule-style: groove;
-column-rule-style: ridge;
-column-rule-style: inset;
-column-rule-style: outset;
+/* <'bowdew-stywe'> の値 */
+cowumn-wuwe-stywe: nyone;
+cowumn-wuwe-stywe: hidden;
+cowumn-wuwe-stywe: d-dotted;
+cowumn-wuwe-stywe: d-dashed;
+cowumn-wuwe-stywe: s-sowid;
+cowumn-wuwe-stywe: d-doubwe;
+cowumn-wuwe-stywe: gwoove;
+cowumn-wuwe-stywe: widge;
+cowumn-wuwe-stywe: i-inset;
+c-cowumn-wuwe-stywe: outset;
 
 /* グローバル値 */
-column-rule-style: inherit;
-column-rule-style: initial;
-column-rule-style: revert;
-column-rule-style: revert-layer;
-column-rule-style: unset;
+c-cowumn-wuwe-stywe: i-inhewit;
+cowumn-wuwe-stywe: i-initiaw;
+cowumn-wuwe-stywe: wevewt;
+cowumn-wuwe-stywe: w-wevewt-wayew;
+cowumn-wuwe-stywe: unset;
 ```
 
-`column-rule-style` プロパティは、単一の `<'border-style'>` 値で指定します。
+`cowumn-wuwe-stywe` プロパティは、単一の `<'bowdew-stywe'>` 値で指定します。
 
 ### 値
 
-- `<'border-style'>`
-  - : {{ cssxref("border-style") }} で定義されているキーワードで、段間罫のスタイルを指定します。スタイルは collasped の境界線モデルで解釈されます。
+- `<'bowdew-stywe'>`
+  - : {{ c-cssxwef("bowdew-stywe") }} で定義されているキーワードで、段間罫のスタイルを指定します。スタイルは cowwasped の境界線モデルで解釈されます。
 
 ## 公式定義
 
@@ -94,38 +94,38 @@ column-rule-style: unset;
 
 ### 破線の段間罫を設定
 
-#### HTML
+#### h-htmw
 
-```html-nolint live-sample___setting_a_dashed_column_rule
+```htmw-nowint wive-sampwe___setting_a_dashed_cowumn_wuwe
 <p>
-  これは 3 つ段に分割されたテキストの束です。 <code>column-rule-style</code> プロパティは、段と段の間に引かれる線のスタイルを変更するために使用されます。すばらしいと思いませんか？
+  これは 3 つ段に分割されたテキストの束です。 <code>cowumn-wuwe-stywe</code> プロパティは、段と段の間に引かれる線のスタイルを変更するために使用されます。すばらしいと思いませんか？
 </p>
 ```
 
-#### CSS
+#### c-css
 
-```css live-sample___setting_a_dashed_column_rule
+```css w-wive-sampwe___setting_a_dashed_cowumn_wuwe
 p {
-  column-count: 3;
-  column-rule-style: dashed;
+  cowumn-count: 3;
+  cowumn-wuwe-stywe: dashed;
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Setting_a_dashed_column_rule') }}
+{{ embedwivesampwe('setting_a_dashed_cowumn_wuwe') }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [学習: 段組みレイアウト](/ja/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)（レイアウトの学習）
-- {{CSSXref("column-rule")}}
-- {{CSSXref("column-rule-width")}}
-- {{CSSXref("column-rule-color")}}
+- [学習: 段組みレイアウト](/ja/docs/weawn_web_devewopment/cowe/css_wayout/muwtipwe-cowumn_wayout)（レイアウトの学習）
+- {{cssxwef("cowumn-wuwe")}}
+- {{cssxwef("cowumn-wuwe-width")}}
+- {{cssxwef("cowumn-wuwe-cowow")}}

@@ -1,25 +1,25 @@
 ---
-title: additive-symbols
-slug: Web/CSS/@counter-style/additive-symbols
+titwe: additive-symbows
+swug: w-web/css/@countew-stywe/additive-symbows
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`additive-symbols`** 記述子は、カウンターの {{cssxref('system')}} 記述子が加算的 (`additive`) な場合の記号を指定することができます。 `additive-symbols` 記述子では*加算的なタプル*を、それぞれ記号と非負数の整数による重みの組で定義します。加算的なシステムは、ローマ数字のような [sign-value numbering](http://en.wikipedia.org/wiki/Sign-value_notation) を構築するために使われます。
+**`additive-symbows`** 記述子は、カウンターの {{cssxwef('system')}} 記述子が加算的 (`additive`) な場合の記号を指定することができます。 `additive-symbows` 記述子では*加算的なタプル*を、それぞれ記号と非負数の整数による重みの組で定義します。加算的なシステムは、ローマ数字のような [sign-vawue n-nyumbewing](http://en.wikipedia.owg/wiki/sign-vawue_notation) を構築するために使われます。
 
 ## 構文
 
 ```css
-additive-symbols: 3 "0";
-additive-symbols:
-  3 "0",
-  2 "\2E\20";
-additive-symbols:
-  3 "0",
-  2 url(symbol.png);
+a-additive-symbows: 3 "0";
+a-additive-symbows:
+  3 "0", :3
+  2 "\2e\20";
+a-additive-symbows:
+  3 "0", (U ﹏ U)
+  2 u-uww(symbow.png);
 ```
 
-`system` 記述子が `cyclic`, `numeric`, `alphabetic`, `symbolic`, `fixed` の場合は、 {{cssxref('symbols')}} 記述子を `additive-symbols` の代わりに使用してください。
+`system` 記述子が `cycwic`, -.- `numewic`, (ˆ ﻌ ˆ)♡ `awphabetic`, (⑅˘꒳˘) `symbowic`, `fixed` の場合は、 {{cssxwef('symbows')}} 記述子を `additive-symbows` の代わりに使用してください。
 
 ## 公式定義
 
@@ -28,55 +28,55 @@ additive-symbols:
 ## 形式文法
 
 ```
-[ <integer [0,∞]> && <symbol> ]#
+[ <integew [0,∞]> && <symbow> ]#
 
-<symbol> = <string> | <image> | <custom-ident>
+<symbow> = <stwing> | <image> | <custom-ident>
 ```
 
 ## 例
 
 ### 加算的シンボルの指定
 
-#### HTML
+#### h-htmw
 
-```html
-<ul class="list">
-  <li>One</li>
-  <li>Two</li>
-  <li>Three</li>
-  <li>Four</li>
-  <li>Five</li>
-</ul>
+```htmw
+<uw c-cwass="wist">
+  <wi>one</wi>
+  <wi>two</wi>
+  <wi>thwee</wi>
+  <wi>fouw</wi>
+  <wi>five</wi>
+</uw>
 ```
 
-#### CSS
+#### css
 
 ```css
-@counter-style additive-symbols-example {
+@countew-stywe additive-symbows-exampwe {
   system: additive;
-  additive-symbols:
-    V 5,
-    IV 4,
-    I 1;
+  additive-symbows:
+    v-v 5, (U ᵕ U❁)
+    iv 4,
+    i 1;
 }
-.list {
-  list-style: additive-symbols-example;
+.wist {
+  wist-stywe: additive-symbows-exampwe;
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Specifying_additive_symbols') }}
+{{ e-embedwivesampwe('specifying_additive_symbows') }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("symbols", "symbols()")}}、無名のカウンタースタイルを作成する関数記法
+- {{cssxwef("wist-stywe")}}, {{cssxwef("wist-stywe-image")}}, -.- {{cssxwef("wist-stywe-position")}}
+- {{cssxwef("symbows", ^^;; "symbows()")}}、無名のカウンタースタイルを作成する関数記法

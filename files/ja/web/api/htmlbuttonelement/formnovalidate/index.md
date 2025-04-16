@@ -1,16 +1,16 @@
 ---
-title: "HTMLButtonElement: formNoValidate プロパティ"
-short-title: formNoValidate
-slug: Web/API/HTMLButtonElement/formNoValidate
-l10n:
-  sourceCommit: d7ac54d009f0c200d612dee1d1f2a1c633791706
+titwe: "htmwbuttonewement: fowmnovawidate プロパティ"
+s-showt-titwe: f-fowmnovawidate
+s-swug: w-web/api/htmwbuttonewement/fowmnovawidate
+w-w10n:
+  s-souwcecommit: d7ac54d009f0c200d612dee1d1f2a1c633791706
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`formNoValidate`** は {{domxref("HTMLButtonElement")}} インターフェイスのプロパティで、{{htmlelement("form")}} がこの {{htmlelement("button")}} から送信されたとき、[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)を回避するかどうかを示す論理値です。この `<button>` 要素の [`formnovalidate`](/ja/docs/Web/HTML/Reference/Elements/button#formnovalidate) 属性を反映します。
+**`fowmnovawidate`** は {{domxwef("htmwbuttonewement")}} インターフェイスのプロパティで、{{htmwewement("fowm")}} がこの {{htmwewement("button")}} から送信されたとき、[制約検証](/ja/docs/web/htmw/guides/constwaint_vawidation)を回避するかどうかを示す論理値です。この `<button>` 要素の [`fowmnovawidate`](/ja/docs/web/htmw/wefewence/ewements/button#fowmnovawidate) 属性を反映します。
 
-この値は、このボタンからフォームを送信する場合、 {{domxref("HTMLFormElement")}} インターフェイスの {{domxref("HTMLFormElement.noValidate", "noValidate")}} プロパティを上書きします。このプロパティは値を受け取ったり設定したりすることができます。
+この値は、このボタンからフォームを送信する場合、 {{domxwef("htmwfowmewement")}} インターフェイスの {{domxwef("htmwfowmewement.novawidate", UwU "novawidate")}} プロパティを上書きします。このプロパティは値を受け取ったり設定したりすることができます。
 
 ## 値
 
@@ -19,28 +19,28 @@ l10n:
 ## 例
 
 ```js
-const buttonElement = document.getElementById("myButton");
-console.log(buttonElement.formNoValidate);
+c-const buttonewement = document.getewementbyid("mybutton");
+consowe.wog(buttonewement.fowmnovawidate);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLButtonElement.reportValidity()")}}
-- {{domxref("HTMLButtonElement.checkValidity()")}}
-- {{domxref("HTMLButtonElement.formAction")}}
-- {{domxref("HTMLButtonElement.formEnctype")}}
-- {{domxref("HTMLButtonElement.formMethod")}}
-- {{domxref("HTMLButtonElement.formTarget")}}
-- {{HTMLElement("form")}}
-- {{domxref("HTMLFormElement.noValidate")}}
-- {{domxref("HTMLInputElement.formNoValidate")}}
-- [学習: クライアント側フォーム検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
-- [ガイド: 制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)
+- {{domxwef("htmwbuttonewement.wepowtvawidity()")}}
+- {{domxwef("htmwbuttonewement.checkvawidity()")}}
+- {{domxwef("htmwbuttonewement.fowmaction")}}
+- {{domxwef("htmwbuttonewement.fowmenctype")}}
+- {{domxwef("htmwbuttonewement.fowmmethod")}}
+- {{domxwef("htmwbuttonewement.fowmtawget")}}
+- {{htmwewement("fowm")}}
+- {{domxwef("htmwfowmewement.novawidate")}}
+- {{domxwef("htmwinputewement.fowmnovawidate")}}
+- [学習: クライアント側フォーム検証](/ja/docs/weawn_web_devewopment/extensions/fowms/fowm_vawidation)
+- [ガイド: 制約検証](/ja/docs/web/htmw/guides/constwaint_vawidation)

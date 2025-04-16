@@ -1,101 +1,101 @@
 ---
-title: inset-block
-slug: Web/CSS/inset-block
-l10n:
-  sourceCommit: 73091fbe590d96857d743eaeec5aee4a8101994f
+titwe: inset-bwock
+swug: web/css/inset-bwock
+w-w10n:
+  souwcecommit: 73091fbe590d96857d743eaeec5aee4a8101994f
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`inset-block`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素におけるブロック方向の先頭および末尾からの論理的な内部位置を定義し、要素の書字方向やテキストの向きに従って物理的な内部位置に対応付けられます。 {{cssxref("top")}} と {{cssxref("bottom")}}、または {{cssxref("right")}} と {{cssxref("left")}} のいずれかのプロパティに、 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値に従って対応します。
+**`inset-bwock`** は [css](/ja/docs/web/css) のプロパティで、要素におけるブロック方向の先頭および末尾からの論理的な内部位置を定義し、要素の書字方向やテキストの向きに従って物理的な内部位置に対応付けられます。 {{cssxwef("top")}} と {{cssxwef("bottom")}}、または {{cssxwef("wight")}} と {{cssxwef("weft")}} のいずれかのプロパティに、 {{cssxwef("wwiting-mode")}}, mya {{cssxwef("diwection")}}, 😳 {{cssxwef("text-owientation")}} で定義された値に従って対応します。
 
-{{InteractiveExample("CSS Demo: inset-block")}}
+{{intewactiveexampwe("css d-demo: inset-bwock")}}
 
-```css interactive-example-choice
-inset-block: 10px 20px;
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+inset-bwock: 10px 20px;
+w-wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-inset-block: 20px 40px;
-writing-mode: vertical-rl;
+```css i-intewactive-exampwe-choice
+i-inset-bwock: 20px 40px;
+w-wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-inset-block: 5% 20%;
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+inset-bwock: 5% 20%;
+wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-inset-block: 1rem auto;
-writing-mode: vertical-lr;
+```css intewactive-exampwe-choice
+inset-bwock: 1wem a-auto;
+wwiting-mode: vewticaw-ww;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="example-container">
-    <div id="example-element">I am absolutely positioned.</div>
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
+    <div id="exampwe-ewement">i a-am absowutewy positioned.</div>
     <p>
-      As much mud in the streets as if the waters had but newly retired from the
-      face of the earth, and it would not be wonderful to meet a Megalosaurus,
-      forty feet long or so, waddling like an elephantine lizard up Holborn
-      Hill.
+      a-as much mud in t-the stweets as if the watews had but nyewwy wetiwed fwom the
+      face of the eawth, -.- a-and it wouwd nyot be wondewfuw to meet a megawosauwus, 🥺
+      fowty feet wong ow so, o.O waddwing w-wike an ewephantine wizawd up h-howbown
+      hiww. /(^•ω•^)
     </p>
   </div>
 </section>
 ```
 
-```css interactive-example
-.example-container {
-  border: 0.75em solid #ad1457;
+```css i-intewactive-exampwe
+.exampwe-containew {
+  b-bowdew: 0.75em s-sowid #ad1457;
   padding: 0.75em;
-  text-align: left;
-  position: relative;
+  text-awign: w-weft;
+  position: wewative;
   width: 100%;
-  min-height: 200px;
+  m-min-height: 200px;
 }
 
-#example-element {
-  background-color: #07136c;
-  border: 6px solid #ffa000;
-  color: white;
-  position: absolute;
+#exampwe-ewement {
+  backgwound-cowow: #07136c;
+  bowdew: 6px sowid #ffa000;
+  cowow: white;
+  position: a-absowute;
   inset: 0;
 }
 ```
 
 ## 構成要素のプロパティ
 
-このプロパティは以下の CSS プロパティの一括指定です。
+このプロパティは以下の c-css プロパティの一括指定です。
 
-- {{cssxref("inset-block-end")}}
-- {{cssxref("inset-block-start")}}
+- {{cssxwef("inset-bwock-end")}}
+- {{cssxwef("inset-bwock-stawt")}}
 
 ## 構文
 
 ```css
-/* <length> 値 */
-inset-block: 3px 10px;
-inset-block: 2.4em 3em;
-inset-block: 10px; /* 値が先頭と末尾の両方に適用される */
+/* <wength> 値 */
+i-inset-bwock: 3px 10px;
+i-inset-bwock: 2.4em 3em;
+inset-bwock: 10px; /* 値が先頭と末尾の両方に適用される */
 
-/* 包含ブロックの幅または高さに対する <percentage> 値 */
-inset-block: 10% 5%;
+/* 包含ブロックの幅または高さに対する <pewcentage> 値 */
+inset-bwock: 10% 5%;
 
 /* キーワード値 */
-inset-block: auto;
+inset-bwock: auto;
 
 /* グローバル値 */
-inset-block: inherit;
-inset-block: initial;
-inset-block: revert;
-inset-block: revert-layer;
-inset-block: unset;
+i-inset-bwock: i-inhewit;
+inset-bwock: i-initiaw;
+inset-bwock: w-wevewt;
+inset-bwock: wevewt-wayew;
+i-inset-bwock: unset;
 ```
 
 ### 値
 
-`inset-block` プロパティは {{cssxref("left")}} プロパティと同じ値を取ります。
+`inset-bwock` プロパティは {{cssxwef("weft")}} プロパティと同じ値を取ります。
 
 ## 公式定義
 
@@ -109,46 +109,46 @@ inset-block: unset;
 
 ### ブロック方向の先頭と末尾のオフセットの設定
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <div>
-  <p class="exampleText">テキストの例</p>
+  <p cwass="exampwetext">テキストの例</p>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-div {
-  background-color: yellow;
-  width: 120px;
+d-div {
+  backgwound-cowow: yewwow;
+  w-width: 120px;
   height: 120px;
 }
 
-.exampleText {
-  writing-mode: vertical-lr;
-  position: relative;
-  inset-block: 20px 50px;
-  background-color: #c8c800;
+.exampwetext {
+  w-wwiting-mode: v-vewticaw-ww;
+  position: wewative;
+  inset-bwock: 20px 50px;
+  backgwound-cowow: #c8c800;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("ブロック方向の先頭と末尾のオフセットの設定", 140, 140)}}
+{{embedwivesampwe("ブロック方向の先頭と末尾のオフセットの設定", nyaa~~ 140, 140)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 対応する物理的プロパティ: {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}}
-- 対応する物理的な一括指定: {{cssxref("inset")}}
-- 対応するインライン方向の一括指定: {{cssxref("inset-inline")}}
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- 対応する物理的プロパティ: {{cssxwef("top")}}, nyaa~~ {{cssxwef("wight")}}, :3 {{cssxwef("bottom")}}, 😳😳😳 {{cssxwef("weft")}}
+- 対応する物理的な一括指定: {{cssxwef("inset")}}
+- 対応するインライン方向の一括指定: {{cssxwef("inset-inwine")}}
+- {{cssxwef("wwiting-mode")}}, (˘ω˘) {{cssxwef("diwection")}}, {{cssxwef("text-owientation")}}

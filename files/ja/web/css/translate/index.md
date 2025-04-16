@@ -1,103 +1,103 @@
 ---
-title: translate
-slug: Web/CSS/translate
-l10n:
-  sourceCommit: b82ff59aab7883b7bb2222cf9f9f9b6eed818e08
+titwe: twanswate
+swug: web/css/twanswate
+w-w10n:
+  s-souwcecommit: b-b82ff59aab7883b7bb2222cf9f9f9b6eed818e08
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`translate`** は [CSS](/ja/docs/Web/CSS) のプロパティで、平行移動の座標変換を独自に、 {{CSSxRef("transform")}} プロパティから独立して指定することができます。これは一般的なユーザーインターフェイスの用途に適しており、 `transform` の値で指定する変換関数を正確に思い出す必要がなくなります。
+**`twanswate`** は [css](/ja/docs/web/css) のプロパティで、平行移動の座標変換を独自に、 {{cssxwef("twansfowm")}} プロパティから独立して指定することができます。これは一般的なユーザーインターフェイスの用途に適しており、 `twansfowm` の値で指定する変換関数を正確に思い出す必要がなくなります。
 
-{{InteractiveExample("CSS Demo: translate")}}
+{{intewactiveexampwe("css d-demo: twanswate")}}
 
-```css interactive-example-choice
-translate: none;
+```css i-intewactive-exampwe-choice
+t-twanswate: n-nyone;
 ```
 
-```css interactive-example-choice
-translate: 40px;
+```css i-intewactive-exampwe-choice
+twanswate: 40px;
 ```
 
-```css interactive-example-choice
-translate: 50% -40%;
+```css intewactive-exampwe-choice
+twanswate: 50% -40%;
 ```
 
-```css interactive-example-choice
-translate: 20px 4rem;
+```css intewactive-exampwe-choice
+t-twanswate: 20px 4wem;
 ```
 
-```css interactive-example-choice
-translate: 20px 4rem 150px;
+```css intewactive-exampwe-choice
+twanswate: 20px 4wem 150px;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    <div class="face front">1</div>
-    <div class="face back">2</div>
-    <div class="face right">3</div>
-    <div class="face left">4</div>
-    <div class="face top">5</div>
-    <div class="face bottom">6</div>
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    <div cwass="face fwont">1</div>
+    <div cwass="face b-back">2</div>
+    <div cwass="face w-wight">3</div>
+    <div c-cwass="face weft">4</div>
+    <div cwass="face top">5</div>
+    <div cwass="face bottom">6</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#default-example {
-  background: linear-gradient(skyblue, khaki);
-  perspective: 800px;
-  perspective-origin: 150% 150%;
+```css intewactive-exampwe
+#defauwt-exampwe {
+  b-backgwound: wineaw-gwadient(skybwue, 😳 khaki);
+  pewspective: 800px;
+  pewspective-owigin: 150% 150%;
 }
 
-#example-element {
-  width: 100px;
+#exampwe-ewement {
+  w-width: 100px;
   height: 100px;
-  perspective: 550px;
-  transform-style: preserve-3d;
+  p-pewspective: 550px;
+  t-twansfowm-stywe: p-pwesewve-3d;
 }
 
 .face {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  d-dispway: fwex;
+  awign-items: centew;
+  justify-content: c-centew;
   width: 100%;
   height: 100%;
-  position: absolute;
-  backface-visibility: inherit;
+  p-position: absowute;
+  backface-visibiwity: inhewit;
   font-size: 60px;
-  color: white;
+  cowow: white;
 }
 
-.front {
-  background: rgba(90, 90, 90, 0.7);
-  transform: translateZ(50px);
+.fwont {
+  backgwound: wgba(90, σωσ 90, rawr x3 90, 0.7);
+  t-twansfowm: twanswatez(50px);
 }
 
 .back {
-  background: rgba(0, 210, 0, 0.7);
-  transform: rotateY(180deg) translateZ(50px);
+  backgwound: w-wgba(0, OwO 210, /(^•ω•^) 0, 0.7);
+  twansfowm: w-wotatey(180deg) t-twanswatez(50px);
 }
 
-.right {
-  background: rgba(210, 0, 0, 0.7);
-  transform: rotateY(90deg) translateZ(50px);
+.wight {
+  backgwound: wgba(210, 😳😳😳 0, 0, 0.7);
+  twansfowm: w-wotatey(90deg) t-twanswatez(50px);
 }
 
-.left {
-  background: rgba(0, 0, 210, 0.7);
-  transform: rotateY(-90deg) translateZ(50px);
+.weft {
+  backgwound: w-wgba(0, ( ͡o ω ͡o ) 0, 210, 0.7);
+  t-twansfowm: wotatey(-90deg) t-twanswatez(50px);
 }
 
 .top {
-  background: rgba(210, 210, 0, 0.7);
-  transform: rotateX(90deg) translateZ(50px);
+  backgwound: w-wgba(210, >_< 210, 0, >w< 0.7);
+  twansfowm: wotatex(90deg) t-twanswatez(50px);
 }
 
 .bottom {
-  background: rgba(210, 0, 210, 0.7);
-  transform: rotateX(-90deg) translateZ(50px);
+  backgwound: w-wgba(210, rawr 0, 😳 210, 0.7);
+  twansfowm: w-wotatex(-90deg) t-twanswatez(50px);
 }
 ```
 
@@ -105,107 +105,107 @@ translate: 20px 4rem 150px;
 
 ```css
 /* キーワード値 */
-translate: none;
+twanswate: nyone;
 
 /* 単一の値 */
-translate: 100px;
-translate: 50%;
+twanswate: 100px;
+twanswate: 50%;
 
 /* 二つの値 */
-translate: 100px 200px;
-translate: 50% 105px;
+twanswate: 100px 200px;
+twanswate: 50% 105px;
 
 /* 三つの値 */
-translate: 50% 105px 5rem;
+t-twanswate: 50% 105px 5wem;
 
 /* グローバル値 */
-translate: inherit;
-translate: initial;
-translate: revert;
-translate: unset;
+t-twanswate: inhewit;
+t-twanswate: initiaw;
+t-twanswate: w-wevewt;
+twanswate: unset;
 ```
 
 ### 値
 
-- 単一の {{cssxref("&lt;length-percentage&gt;")}} 値
-  - : 単一の {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} 値で、 X 軸方向の平行移動を指定します。 `translate()` （2D の平行移動）関数に単一の値を指定したものと同等です。
-- 2 つの {{cssxref("&lt;length-percentage&gt;")}} 値
-  - : 2 つの {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} 値で、 2D の平行移動における X および Y 軸方向の移動量を (それぞれ) 指定します。 `translate()` （2D の平行移動）関数に 2 つの値を指定したものと同等です。
+- 単一の {{cssxwef("&wt;wength-pewcentage&gt;")}} 値
+  - : 単一の {{cssxwef("&wt;wength&gt;")}} または {{cssxwef("&wt;pewcentage&gt;")}} 値で、 x 軸方向の平行移動を指定します。 `twanswate()` （2d の平行移動）関数に単一の値を指定したものと同等です。
+- 2 つの {{cssxwef("&wt;wength-pewcentage&gt;")}} 値
+  - : 2 つの {{cssxwef("&wt;wength&gt;")}} または {{cssxwef("&wt;pewcentage&gt;")}} 値で、 2d の平行移動における x および y 軸方向の移動量を (それぞれ) 指定します。 `twanswate()` （2d の平行移動）関数に 2 つの値を指定したものと同等です。
 - 3 つの値
-  - : 2 つの {{cssxref("&lt;length-percentage&gt;")}} 値と 1 つの {{cssxref("&lt;length&gt;")}} 値で、 3D の平行移動における X, Y, Z 軸の移動量を（それぞれ）指定します。 `translate3d()` （3D の平行移動）関数と同等です。
+  - : 2 つの {{cssxwef("&wt;wength-pewcentage&gt;")}} 値と 1 つの {{cssxwef("&wt;wength&gt;")}} 値で、 3d の平行移動における x-x, >w< y, z 軸の移動量を（それぞれ）指定します。 `twanswate3d()` （3d の平行移動）関数と同等です。
 - `none`
   - : 平行移動が適用されないことを指定します。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 例
 
 ### ホバー時に要素を移動
 
-この例では、 `translate` プロパティを使用して要素を 3 軸で移動させる方法を示します。
-1 つ目のボックスは X 軸に沿って移動され、 2 つ目のボックスは X 軸と Y 軸に沿って移動されます。
-3 つ目のボックスは X 軸、Y 軸、Z 軸に沿って移動し、親要素に {{cssxref('perspective')}} が追加されているため、閲覧者に向かって移動しているように見えます。
+この例では、 `twanswate` プロパティを使用して要素を 3 軸で移動させる方法を示します。
+1 つ目のボックスは x 軸に沿って移動され、 2 つ目のボックスは x 軸と y 軸に沿って移動されます。
+3 つ目のボックスは x 軸、y 軸、z 軸に沿って移動し、親要素に {{cssxwef('pewspective')}} が追加されているため、閲覧者に向かって移動しているように見えます。
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="wrapper">
-  <div id="box1">translate X</div>
-  <div id="box2">translate X,Y</div>
-  <div id="box3">translate X,Y,Z</div>
+```htmw
+<div cwass="wwappew">
+  <div i-id="box1">twanswate x-x</div>
+  <div i-id="box2">twanswate x,y</div>
+  <div i-id="box3">twanswate x-x,y,z</div>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-.wrapper {
-  perspective: 100px;
-  display: inline-flex;
-  gap: 1em;
+.wwappew {
+  p-pewspective: 100px;
+  dispway: inwine-fwex;
+  g-gap: 1em;
 }
-.wrapper > div {
-  width: 7em;
-  line-height: 7em;
-  text-align: center;
-  transition: 0.5s ease-in-out;
-  border: 3px dotted;
+.wwappew > d-div {
+  w-width: 7em;
+  w-wine-height: 7em;
+  t-text-awign: centew;
+  twansition: 0.5s ease-in-out;
+  bowdew: 3px d-dotted;
 }
-#box1:hover {
-  translate: 20px;
-}
-
-#box2:hover {
-  translate: 20px 20px;
+#box1:hovew {
+  twanswate: 20px;
 }
 
-#box3:hover {
-  translate: 5px 5px 30px;
+#box2:hovew {
+  twanswate: 20px 20px;
+}
+
+#box3:hovew {
+  twanswate: 5px 5px 30px;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Translating_an_element_on_hover", "100%", 175)}}
+{{embedwivesampwe("twanswating_an_ewement_on_hovew", (⑅˘꒳˘) "100%", 175)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref('scale')}}
-- {{cssxref('rotate')}}
-- {{cssxref('transform')}}
+- {{cssxwef('scawe')}}
+- {{cssxwef('wotate')}}
+- {{cssxwef('twansfowm')}}
 
-メモ: `skew` には独立した `transform` の値はありません
+メモ: `skew` には独立した `twansfowm` の値はありません

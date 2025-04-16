@@ -1,127 +1,127 @@
 ---
-title: break-after
-slug: Web/CSS/break-after
+titwe: bweak-aftew
+swug: web/css/bweak-aftew
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`break-after`** は [CSS](/ja/docs/Web/CSS) のプロパティで、生成されたボックスの後で、ページ、段、領域をどのように区切るかを設定します。ボックスが生成されない場合は、このプロパティは無視されます。
+**`bweak-aftew`** は [css](/ja/docs/web/css) のプロパティで、生成されたボックスの後で、ページ、段、領域をどのように区切るかを設定します。ボックスが生成されない場合は、このプロパティは無視されます。
 
 ```css
 /* 一般の区切り値 */
-break-after: auto;
-break-after: avoid;
-break-after: always;
-break-after: all;
+b-bweak-aftew: a-auto;
+bweak-aftew: a-avoid;
+bweak-aftew: a-awways;
+b-bweak-aftew: a-aww;
 
 /* 改ページ値 */
-break-after: avoid-page;
-break-after: page;
-break-after: left;
-break-after: right;
-break-after: recto;
-break-after: verso;
+b-bweak-aftew: a-avoid-page;
+bweak-aftew: page;
+bweak-aftew: weft;
+bweak-aftew: wight;
+b-bweak-aftew: wecto;
+bweak-aftew: vewso;
 
 /* 段区切り値 */
-break-after: avoid-column;
-break-after: column;
+bweak-aftew: a-avoid-cowumn;
+bweak-aftew: c-cowumn;
 
 /* 領域区切り値 */
-break-after: avoid-region;
-break-after: region;
+bweak-aftew: avoid-wegion;
+bweak-aftew: w-wegion;
 
 /* グローバル値 */
-break-after: inherit;
-break-after: initial;
-break-after: revert;
-break-after: unset;
+bweak-aftew: i-inhewit;
+bweak-aftew: i-initiaw;
+bweak-aftew: wevewt;
+bweak-aftew: unset;
 ```
 
-{{InteractiveExample("CSS Demo: break-after")}}
+{{intewactiveexampwe("css demo: bweak-aftew")}}
 
-```css interactive-example-choice
-break-after: auto;
+```css i-intewactive-exampwe-choice
+bweak-aftew: auto;
 ```
 
-```css interactive-example-choice
-break-after: page;
+```css intewactive-exampwe-choice
+bweak-aftew: page;
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
   <div>
     <p>
-      The effect of this property can be noticed when the document is being
-      printed or a preview of a print is displayed.
+      the effect of t-this pwopewty can b-be nyoticed when t-the document i-is being
+      pwinted ow a pweview of a pwint i-is dispwayed. nyaa~~
     </p>
-    <button id="print-btn">Show Print Preview</button>
-    <div class="box-container">
-      <div class="box">Content before the property</div>
-      <div class="box" id="example-element">Content with 'break-after'</div>
-      <div class="box">Content after the property</div>
+    <button id="pwint-btn">show pwint pweview</button>
+    <div c-cwass="box-containew">
+      <div cwass="box">content befowe the pwopewty</div>
+      <div cwass="box" id="exampwe-ewement">content with 'bweak-aftew'</div>
+      <div cwass="box">content a-aftew the pwopewty</div>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 .box {
-  border: solid #5b6dcd 5px;
-  background-color: #5b6dcd;
-  margin: 10px 0;
+  b-bowdew: sowid #5b6dcd 5px;
+  b-backgwound-cowow: #5b6dcd;
+  m-mawgin: 10px 0;
   padding: 5px;
 }
 
-#example-element {
-  border: solid 5px #ffc129;
-  background-color: #ffc129;
-  color: black;
+#exampwe-ewement {
+  bowdew: sowid 5px #ffc129;
+  backgwound-cowow: #ffc129;
+  c-cowow: bwack;
 }
 
-.hide-element {
-  display: none;
+.hide-ewement {
+  d-dispway: nyone;
 }
 ```
 
-```js interactive-example
-const btn = document.getElementById("print-btn");
-const editorContainer = document.getElementsByClassName(
-  "css-editor-container",
+```js intewactive-exampwe
+c-const btn = d-document.getewementbyid("pwint-btn");
+const editowcontainew = d-document.getewementsbycwassname(
+  "css-editow-containew", 😳
 )[0];
-const exampleHTMLElement = document.getElementById("default-example");
+const exampwehtmwewement = d-document.getewementbyid("defauwt-exampwe");
 
-const printableSection = document.createElement("div");
-printableSection.setAttribute("id", "printable-section");
-printableSection.classList.add("hide-element");
-document.body.appendChild(printableSection);
+const pwintabwesection = document.cweateewement("div");
+pwintabwesection.setattwibute("id", (⑅˘꒳˘) "pwintabwe-section");
+p-pwintabwesection.cwasswist.add("hide-ewement");
+document.body.appendchiwd(pwintabwesection);
 
-btn.addEventListener("click", () => {
-  const exampleContent = exampleHTMLElement.innerHTML;
+b-btn.addeventwistenew("cwick", nyaa~~ () => {
+  const exampwecontent = e-exampwehtmwewement.innewhtmw;
 
-  editorContainer.classList.add("hide-element");
-  printableSection.innerHTML = exampleContent;
-  printableSection.classList.remove("hide-element");
+  e-editowcontainew.cwasswist.add("hide-ewement");
+  pwintabwesection.innewhtmw = exampwecontent;
+  pwintabwesection.cwasswist.wemove("hide-ewement");
 
-  window.print();
+  window.pwint();
 
-  printableSection.classList.add("hide-element");
-  printableSection.innerHTML = "";
-  editorContainer.classList.remove("hide-element");
+  pwintabwesection.cwasswist.add("hide-ewement");
+  pwintabwesection.innewhtmw = "";
+  e-editowcontainew.cwasswist.wemove("hide-ewement");
 });
 ```
 
-区切り位置になる可能性のある場所 (言い換えれば、要素の境界) は、3 つのプロパティに影響されます。前の要素の `break-after` の値、次の要素の {{cssxref("break-before")}} の値、包含要素の {{cssxref("break-inside")}} の値です。
+区切り位置になる可能性のある場所 (言い換えれば、要素の境界) は、3 つのプロパティに影響されます。前の要素の `bweak-aftew` の値、次の要素の {{cssxwef("bweak-befowe")}} の値、包含要素の {{cssxwef("bweak-inside")}} の値です。
 
 分割が行われるかどうかを判断するためには、以下の規則が適用されます。
 
-1. 考慮される 3 つの値の中の何れかに*区切りを強制する値* (`always`, `left`, `right`, `page`, `column`, `region` の何れか) がある場合、それが優先されます。そのような区切りが複数ある場合は、フローの中で最も後に現れる要素のものが使用されます (つまり、 `break-before` の値は `break-after` の値より優先し、それは更に `break-inside` よりも優先します)。
-2. 考慮される 3 つの値の中に*区切りを防止する値* (`avoid`, `avoid-page`, `avoid-region`, `avoid-column` の何れか) が含まれていた場合は、その場所で区切りは適用されません。
+1. OwO 考慮される 3 つの値の中の何れかに*区切りを強制する値* (`awways`, rawr x3 `weft`, `wight`, XD `page`, `cowumn`, σωσ `wegion` の何れか) がある場合、それが優先されます。そのような区切りが複数ある場合は、フローの中で最も後に現れる要素のものが使用されます (つまり、 `bweak-befowe` の値は `bweak-aftew` の値より優先し、それは更に `bweak-inside` よりも優先します)。
+2. (U ᵕ U❁) 考慮される 3 つの値の中に*区切りを防止する値* (`avoid`, (U ﹏ U) `avoid-page`, :3 `avoid-wegion`, ( ͡o ω ͡o ) `avoid-cowumn` の何れか) が含まれていた場合は、その場所で区切りは適用されません。
 
 強制的な区切りが適用されると、必要に応じてソフトな区切りが追加される場合がありますが、 `avoid` に関する値に解決される要素の境界には追加されません。
 
 ## 構文
 
-`break-after` プロパティは、以下の一覧にあるキーワード値のうちの一つで指定します。
+`bweak-aftew` プロパティは、以下の一覧にあるキーワード値のうちの一つで指定します。
 
 ### 値
 
@@ -131,9 +131,9 @@ btn.addEventListener("click", () => {
   - : 該当するボックスの直後に何らかの (ページ、段、領域の) 区切りを挿入することを許可しますが、強制はしません。
 - `avoid`
   - : 該当するボックスの直後に何らかの (ページ、段、領域の) 区切りを挿入することを禁止します。
-- `always` {{experimental_inline}}
+- `awways` {{expewimentaw_inwine}}
   - : 該当するボックスの直後で強制的に改ページを行います。この区切りの種類は断片化のコンテキストを直接含むものです。段組みコンテナーの中であれば強制的な段区切りとなり、ページ付きメディアの (ただし段組みコンテナーの中ではない) 場合はページ区切りになります。
-- `all` {{experimental_inline}}
+- `aww` {{expewimentaw_inwine}}
   - : 該当するボックスの直後で強制的に改ページを行います。すべての分断しうるコンテキストを通して区切ります。よって、段組みコンテナーの中での区切りは、ページコンテナーの中であれば強制的に段組みとページを区切ります。
 
 #### 改ページ値
@@ -142,43 +142,43 @@ btn.addEventListener("click", () => {
   - : 該当するボックスの直後の改ページを禁止します。
 - `page`
   - : 該当するボックスの直後で改ページを行います。
-- `left`
+- `weft`
   - : 該当するボックスの直後で一つまたは二つの改ページを行い、次のページが左ページになるようにします。
-- `right`
+- `wight`
   - : 該当するボックスの直後で一つまたは二つの改ページを行い、次のページが右ページになるようにします。
-- `recto` {{experimental_inline}}
+- `wecto` {{expewimentaw_inwine}}
   - : 該当するボックスの直後で一つまたは二つの改ページを行い、次のページが奇数ページになるようにします。 (奇数ページは左から右に開く場合は右ページになり、右から左に開く場合は左ページになります。)
-- `verso` {{experimental_inline}}
+- `vewso` {{expewimentaw_inwine}}
   - : 該当するボックスの直後で一つまたは二つの改ページを行い、次のページが偶数ページになるようにします。 (奇数ページは左から右に開く場合は左ページになり、右から左に開く場合は右ページになります。)
 
 #### 段区切り値
 
-- `avoid-column`
+- `avoid-cowumn`
   - : 該当するボックスの直後の段区切りを禁止します。
-- `column`
+- `cowumn`
   - : 該当するボックスの直後で段区切りを行います。
 
 #### 領域区切り値
 
-- `avoid-region` {{experimental_inline}}
+- `avoid-wegion` {{expewimentaw_inwine}}
   - : 該当するボックスの直後の領域区切りを禁止します。
-- `region` {{experimental_inline}}
+- `wegion` {{expewimentaw_inwine}}
   - : 該当するボックスの直後で領域区切りを行います。
 
 ## 改ページの別名
 
-互換性のため、古い {{cssxref("page-break-after")}} はブラウザーから `break-after` の別名として扱われます。これにより、 `page-break-after` を使用しているサイトが引き続き設計通りに動作することを保証します。値のサブセットは次のような別名になります。
+互換性のため、古い {{cssxwef("page-bweak-aftew")}} はブラウザーから `bweak-aftew` の別名として扱われます。これにより、 `page-bweak-aftew` を使用しているサイトが引き続き設計通りに動作することを保証します。値のサブセットは次のような別名になります。
 
-| page-break-after | break-after |
+| p-page-bweak-aftew | bweak-aftew |
 | ---------------- | ----------- |
 | `auto`           | `auto`      |
-| `left`           | `left`      |
-| `right`          | `right`     |
+| `weft`           | `weft`      |
+| `wight`          | `wight`     |
 | `avoid`          | `avoid`     |
-| `always`         | `page`      |
+| `awways`         | `page`      |
 
-> [!NOTE]
-> ブラウザーにおいては `always` の値は `page-break-*` において、段区切りではなくページ区切りとして実装されています。したがって、 Level 4 の仕様書では `always` の値ではなく `page` の別名となっています。
+> [!note]
+> ブラウザーにおいては `awways` の値は `page-bweak-*` において、段区切りではなくページ区切りとして実装されています。したがって、 w-wevew 4 の仕様書では `awways` の値ではなく `page` の別名となっています。
 
 ## 公式定義
 
@@ -192,98 +192,98 @@ btn.addEventListener("click", () => {
 
 ### きれいに段に分割
 
-次の例では、すべての段にまたがる `<h1>` (`column-span: all` を使用して実現) と、一連の `<h2>` と段落を `column-width: 200px` を使用して段組みレイアウトしたコンテナーを用意しています。
+次の例では、すべての段にまたがる `<h1>` (`cowumn-span: a-aww` を使用して実現) と、一連の `<h2>` と段落を `cowumn-width: 200px` を使用して段組みレイアウトしたコンテナーを用意しています。
 
-既定では、小見出しと段落は、見出しの位置が統一されていないため、かなり乱雑にレイアウトされていました。しかし、 `break-after: column` を `<p>` 要素に使うことで、それぞれの要素の後に強制的に改行するようにしたので、各段の先頭に `<h2>` がきちんと配置されます。
+既定では、小見出しと段落は、見出しの位置が統一されていないため、かなり乱雑にレイアウトされていました。しかし、 `bweak-aftew: c-cowumn` を `<p>` 要素に使うことで、それぞれの要素の後に強制的に改行するようにしたので、各段の先頭に `<h2>` がきちんと配置されます。
 
-#### HTML
+#### htmw
 
-```html
-<article>
+```htmw
+<awticwe>
   <h1>大見出し</h1>
 
   <h2>小見出し</h2>
 
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae
-    fringilla mauris. Quisque commodo eget nisi sed pretium. Mauris luctus nec
-    lacus in ultricies. Mauris vitae hendrerit arcu, ac scelerisque lacus.
-    Aliquam lobortis in lacus sit amet posuere. Fusce iaculis urna id neque
-    dapibus, eu lacinia lectus dictum.
+    wowem ipsum dowow sit amet, σωσ consectetuw a-adipiscing ewit. >w< nyuwwa vitae
+    fwingiwwa mauwis. 😳😳😳 quisque commodo eget n-nyisi sed pwetium. OwO mauwis wuctus n-nyec
+    wacus i-in uwtwicies. 😳 mauwis v-vitae hendwewit awcu, 😳😳😳 ac scewewisque w-wacus. (˘ω˘)
+    a-awiquam wobowtis i-in wacus sit a-amet posuewe. ʘwʘ fusce iacuwis uwna id nyeque
+    d-dapibus, ( ͡o ω ͡o ) eu wacinia w-wectus dictum. o.O
   </p>
 
   <h2>小見出し</h2>
 
   <p>
-    Praesent condimentum dui dui, sit amet rutrum diam tincidunt eu. Cras
-    suscipit porta leo sit amet rutrum. Sed vehicula ornare tincidunt. Curabitur
-    a ipsum ac diam mattis volutpat ac ut elit. Nullam luctus justo non
-    vestibulum gravida. Morbi metus libero, pharetra non porttitor a, molestie
-    nec nisi.
+    p-pwaesent condimentum d-dui dui, >w< sit a-amet wutwum diam tincidunt eu. 😳 cwas
+    suscipit powta weo sit a-amet wutwum. 🥺 sed vehicuwa ownawe tincidunt. rawr x3 cuwabituw
+    a ipsum ac diam mattis vowutpat ac ut e-ewit. o.O nyuwwam wuctus justo nyon
+    vestibuwum gwavida. rawr mowbi metus w-wibewo, ʘwʘ phawetwa n-nyon powttitow a-a, mowestie
+    nyec nyisi. 😳😳😳
   </p>
 
   <h2>小見出し</h2>
 
   <p>
-    Vivamus eleifend metus vitae neque placerat, eget interdum elit mattis.
-    Donec eu vulputate nibh. Ut turpis leo, malesuada quis nisl nec, volutpat
-    egestas tellus.
+    v-vivamus eweifend metus v-vitae nyeque p-pwacewat, ^^;; eget intewdum ewit mattis. o.O
+    donec eu vuwputate nyibh. (///ˬ///✿) ut tuwpis weo, mawesuada quis n-nyisw nyec, σωσ vowutpat
+    egestas t-tewwus. nyaa~~
   </p>
 
   <h2>小見出し</h2>
 
   <p>
-    In finibus viverra enim vel suscipit. Quisque consequat velit eu orci
-    malesuada, ut interdum tortor molestie. Proin sed pellentesque augue. Nam
-    risus justo, faucibus non porta a, congue vel massa. Cras luctus lacus nisl,
-    sed tincidunt velit pharetra ac. Duis suscipit faucibus dui sed ultricies.
+    in finibus v-vivewwa enim vew s-suscipit. ^^;; quisque consequat vewit eu owci
+    mawesuada, u-ut intewdum t-towtow mowestie. ^•ﻌ•^ pwoin sed p-pewwentesque augue. σωσ n-nyam
+    wisus justo, -.- faucibus nyon powta a, congue vew massa. ^^;; cwas wuctus w-wacus nyisw, XD
+    s-sed tincidunt vewit p-phawetwa ac. 🥺 duis suscipit f-faucibus dui sed u-uwtwicies. òωó
   </p>
-</article>
+</awticwe>
 ```
 
-#### CSS
+#### css
 
 ```css
-html {
-  font-family: helvetica, arial, sans-serif;
+h-htmw {
+  font-famiwy: hewvetica, (ˆ ﻌ ˆ)♡ awiaw, -.- sans-sewif;
 }
 
 h1 {
-  font-size: 3rem;
-  letter-spacing: 2px;
-  column-span: all;
+  font-size: 3wem;
+  w-wettew-spacing: 2px;
+  c-cowumn-span: aww;
 }
 
 h2 {
-  font-size: 1.2rem;
-  color: red;
-  letter-spacing: 1px;
+  font-size: 1.2wem;
+  c-cowow: w-wed;
+  wettew-spacing: 1px;
 }
 
 p {
-  line-height: 1.5;
-  break-after: column;
+  wine-height: 1.5;
+  bweak-aftew: cowumn;
 }
 
-article {
-  column-width: 200px;
+a-awticwe {
+  cowumn-width: 200px;
   gap: 20px;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Breaking_into_neat_columns', '100%', 600)}}
+{{embedwivesampwe('bweaking_into_neat_cowumns', :3 '100%', ʘwʘ 600)}}
 
 ## 仕様書
 
-{{Specifications("css.properties.break-after.multicol_context")}}
+{{specifications("css.pwopewties.bweak-aftew.muwticow_context")}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [段組みレイアウト](/ja/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
-- [Breaking Boxes With CSS Fragmentation](https://www.smashingmagazine.com/2019/02/css-fragmentation/)
+- [段組みレイアウト](/ja/docs/weawn_web_devewopment/cowe/css_wayout/muwtipwe-cowumn_wayout)
+- [bweaking boxes with css fwagmentation](https://www.smashingmagazine.com/2019/02/css-fwagmentation/)

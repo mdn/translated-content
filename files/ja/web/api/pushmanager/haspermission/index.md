@@ -1,22 +1,22 @@
 ---
-title: "PushManager: hasPermission() メソッド"
-short-title: hasPermission()
-slug: Web/API/PushManager/hasPermission
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: "pushmanagew: haspewmission() メソッド"
+s-showt-titwe: h-haspewmission()
+s-swug: web/api/pushmanagew/haspewmission
+w-w10n:
+  s-souwcecommit: c-c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{deprecated_header}}{{ApiRef("Push API")}}
+{{depwecated_headew}}{{apiwef("push a-api")}}
 
-**`PushManager.hasPermission()`** は {{domxref("PushManager")}} インターフェイスのメソッドで、 {{jsxref("Promise")}} を返します。このプロミスは、ウェブアプリへのリクエストの `PushPermissionStatus` に解決し、 `granted`, `denied`, `default` のいずれかになります。
+**`pushmanagew.haspewmission()`** は {{domxwef("pushmanagew")}} インターフェイスのメソッドで、 {{jsxwef("pwomise")}} を返します。このプロミスは、ウェブアプリへのリクエストの `pushpewmissionstatus` に解決し、 `gwanted`, (⑅˘꒳˘) `denied`, `defauwt` のいずれかになります。
 
-> [!NOTE]
-> この機能は {{domxref("PushManager.permissionState()")}} メソッドに置き換えられました。
+> [!note]
+> この機能は {{domxwef("pushmanagew.pewmissionstate()")}} メソッドに置き換えられました。
 
 ## 構文
 
-```js-nolint
-hasPermission()
+```js-nowint
+haspewmission()
 ```
 
 ### 引数
@@ -25,12 +25,12 @@ hasPermission()
 
 ### 返値
 
-{{jsxref("Promise")}} で、このプロミスは `PushPermissionStatus` に解決します。
+{{jsxwef("pwomise")}} で、このプロミスは `pushpewmissionstatus` に解決します。
 
 ## 例
 
 ```js
-// TBD
+// t-tbd
 ```
 
 ## 仕様書
@@ -39,4 +39,4 @@ hasPermission()
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

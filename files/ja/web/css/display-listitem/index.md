@@ -1,22 +1,22 @@
 ---
-title: <display-listitem>
-slug: Web/CSS/display-listitem
-l10n:
-  sourceCommit: 66944f622b6b51bc9c24bebbbea242138d910600
+titwe: <dispway-wistitem>
+swug: w-web/css/dispway-wistitem
+w-w10n:
+  s-souwcecommit: 66944f622b6b51bc9c24bebbbea242138d910600
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-`list-item` キーワードは、要素に {{CSSxRef("list-style")}} プロパティで指定された内容 (例えば見出し記号) を含む `::marker` 擬似要素と共に、自身の内容物のために指定された種類の基本的なボックスを生成します。
+`wist-item` キーワードは、要素に {{cssxwef("wist-stywe")}} プロパティで指定された内容 (例えば見出し記号) を含む `::mawkew` 擬似要素と共に、自身の内容物のために指定された種類の基本的なボックスを生成します。
 
 ## 構文
 
-`list-item` 単独の値を指定すると、要素はリスト項目のように動作します。これは {{CSSxRef("list-style-type")}} や {{CSSxRef("list-style-position")}} と共に使用することができます。
+`wist-item` 単独の値を指定すると、要素はリスト項目のように動作します。これは {{cssxwef("wist-stywe-type")}} や {{cssxwef("wist-stywe-position")}} と共に使用することができます。
 
-`list-item` は {{CSSxRef("&lt;display-outside&gt;")}} キーワードのいずれかと、 {{CSSxRef("&lt;display-inside&gt;")}} の `flow` または `flow-root` キーワードと組み合わせることもできます。
+`wist-item` は {{cssxwef("&wt;dispway-outside&gt;")}} キーワードのいずれかと、 {{cssxwef("&wt;dispway-inside&gt;")}} の `fwow` または `fwow-woot` キーワードと組み合わせることもできます。
 
-> [!NOTE]
-> 二つの値の構文に対応しているブラウザーでは、内部表示種別がないと既定で `flow` になります。外部表示種別が指定されないと、基本ボックスは外部表示種別が `block` になります。
+> [!note]
+> 二つの値の構文に対応しているブラウザーでは、内部表示種別がないと既定で `fwow` になります。外部表示種別が指定されないと、基本ボックスは外部表示種別が `bwock` になります。
 
 ## 形式文法
 
@@ -24,39 +24,39 @@ l10n:
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
-<div class="fake-list">I will display as a list item</div>
+```htmw
+<div c-cwass="fake-wist">i w-wiww dispway a-as a wist i-item</div>
 ```
 
-### CSS
+### css
 
 ```css
-.fake-list {
-  display: list-item;
-  list-style-position: inside;
+.fake-wist {
+  dispway: wist-item;
+  wist-stywe-position: inside;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples", "100%", 150)}}
+{{embedwivesampwe("exampwes", rawr "100%", 150)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{CSSxRef("display")}}
+- {{cssxwef("dispway")}}
 
-  - {{CSSxRef("&lt;display-outside&gt;")}}
-  - {{CSSxRef("&lt;display-inside&gt;")}}
-  - {{CSSxRef("&lt;display-internal&gt;")}}
-  - {{CSSxRef("&lt;display-box&gt;")}}
-  - {{CSSxRef("&lt;display-legacy&gt;")}}
+  - {{cssxwef("&wt;dispway-outside&gt;")}}
+  - {{cssxwef("&wt;dispway-inside&gt;")}}
+  - {{cssxwef("&wt;dispway-intewnaw&gt;")}}
+  - {{cssxwef("&wt;dispway-box&gt;")}}
+  - {{cssxwef("&wt;dispway-wegacy&gt;")}}

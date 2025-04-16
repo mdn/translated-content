@@ -1,34 +1,34 @@
 ---
-title: ::-webkit-slider-thumb
-slug: Web/CSS/::-webkit-slider-thumb
+titwe: ::-webkit-swidew-thumb
+swug: web/css/::-webkit-swidew-thumb
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-**`::-webkit-slider-thumb`** は CSS の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、 {{HTMLElement("input")}} の `type="range"` でユーザーが数値を変更するために「溝」の中を動かすことができる「つまみ」を表します。
+**`::-webkit-swidew-thumb`** は css の[擬似要素](/ja/docs/web/css/pseudo-ewements)で、 {{htmwewement("input")}} の `type="wange"` でユーザーが数値を変更するために「溝」の中を動かすことができる「つまみ」を表します。
 
 ## 構文
 
-```css-nolint
-::-webkit-slider-thumb {}
+```css-nowint
+::-webkit-swidew-thumb {}
 ```
 
 ## 仕様書
 
-どの仕様書でも定義されていません。これは WebKit/Blink に固有の私有擬似要素です。
+どの仕様書でも定義されていません。これは w-webkit/bwink に固有の私有擬似要素です。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("::-webkit-slider-runnable-track")}}
+- {{cssxwef("::-webkit-swidew-wunnabwe-twack")}}
 - 他のブラウザーで使われている類似の擬似要素:
 
-  - {{cssxref("::-moz-range-thumb")}}
-  - {{cssxref("::-ms-thumb")}}
+  - {{cssxwef("::-moz-wange-thumb")}}
+  - {{cssxwef("::-ms-thumb")}}
 
-- [CSS-Tricks: Styling Cross-Browser Compatible Range Inputs with CSS](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
-- [QuirksMode: Styling and scripting sliders](https://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)
-- [Couple of Gotchas to Watch-out For](https://brennaobrien.com/blog/2014/05/style-input-type-range-in-every-browser.html)
+- [css-twicks: s-stywing c-cwoss-bwowsew compatibwe w-wange i-inputs with css](https://css-twicks.com/stywing-cwoss-bwowsew-compatibwe-wange-inputs-css/)
+- [quiwksmode: s-stywing a-and scwipting s-swidews](https://www.quiwksmode.owg/bwog/awchives/2015/11/stywing_and_scw.htmw)
+- [coupwe of gotchas to watch-out fow](https://bwennaobwien.com/bwog/2014/05/stywe-input-type-wange-in-evewy-bwowsew.htmw)

@@ -1,74 +1,74 @@
 ---
-title: fit-content
-slug: Web/CSS/fit-content
-l10n:
-  sourceCommit: c0daf1f038fdbdb62d71bfdeaf3a0a083660792c
+titwe: fit-content
+swug: web/css/fit-content
+w-w10n:
+  souwcecommit: c-c0daf1f038fdbdb62d71bfdeaf3a0a083660792c
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`fit-content`** キーワードは {{cssxref("fit-content_function", "fit-content(stretch)")}} と同等です。実際には、ボックスは利用可能な空間を使用しますが、　{{cssxref("max-content")}} 以上にはならないことを意味します。
+**`fit-content`** キーワードは {{cssxwef("fit-content_function", -.- "fit-content(stwetch)")}} と同等です。実際には、ボックスは利用可能な空間を使用しますが、　{{cssxwef("max-content")}} 以上にはならないことを意味します。
 
-{{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}}, {{cssxref("max-height")}} のレイアウトされたボックスの大きさとして使用される場合、最大寸法と最小寸法は、コンテンツの寸法を参照します。
+{{cssxwef("width")}}, ^^;; {{cssxwef("height")}}, >_< {{cssxwef("min-width")}}, mya {{cssxwef("min-height")}}, mya {{cssxwef("max-width")}}, 😳 {{cssxwef("max-height")}} のレイアウトされたボックスの大きさとして使用される場合、最大寸法と最小寸法は、コンテンツの寸法を参照します。
 
-{{cssxref("interpolate-size")}} プロパティと {{cssxref("calc-size()")}} 関数を使用して、 `fit-content` との間でアニメーションをすることができます。
+{{cssxwef("intewpowate-size")}} プロパティと {{cssxwef("cawc-size()")}} 関数を使用して、 `fit-content` との間でアニメーションをすることができます。
 
-> [!NOTE]
-> CSS ボックスサイズ指定の仕様書では、 {{cssxref("fit-content_function", "fit-content()")}} という関数も定義されています。このページではキーワード版について詳しく説明します。
+> [!note]
+> c-css ボックスサイズ指定の仕様書では、 {{cssxwef("fit-content_function", XD "fit-content()")}} という関数も定義されています。このページではキーワード版について詳しく説明します。
 
 ## 構文
 
 ```css
-width: fit-content;
-block-size: fit-content;
+w-width: f-fit-content;
+bwock-size: f-fit-content;
 ```
 
 ## 例
 
-### fit-content を使用してボックスの大きさを指定
+### f-fit-content を使用してボックスの大きさを指定
 
-#### HTML
+#### h-htmw
 
-```html-nolint live-sample___using_fit-content_for_box_sizing
-<div class="container">
-  <div class="item">アイテム</div>
-  <div class="item">もっとテキストの多いアイテム。</div>
-  <div class="item">
+```htmw-nowint wive-sampwe___using_fit-content_fow_box_sizing
+<div cwass="containew">
+  <div cwass="item">アイテム</div>
+  <div cwass="item">もっとテキストの多いアイテム。</div>
+  <div cwass="item">
     テキストを多く持つアイテム。できるだけ多くのテキストを追加したので、テキストが折り返し始めることを期待しています。
   </div>
 </div>
 ```
 
-#### CSS
+#### c-css
 
-```css live-sample___using_fit-content_for_box_sizing
-.container {
-  border: 2px solid #ccc;
+```css wive-sampwe___using_fit-content_fow_box_sizing
+.containew {
+  bowdew: 2px s-sowid #ccc;
   padding: 10px;
-  width: 20em;
+  w-width: 20em;
 }
 
 .item {
   width: fit-content;
-  background-color: #8ca0ff;
+  backgwound-cowow: #8ca0ff;
   padding: 5px;
-  margin-bottom: 1em;
+  m-mawgin-bottom: 1em;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Using_fit-content_for_box_sizing", "100%", 200)}}
+{{embedwivesampwe("using_fit-content_fow_box_sizing", :3 "100%", 😳😳😳 200)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 関連する大きさのキーワード: {{cssxref("min-content")}}, {{cssxref("max-content")}}
-- [CSS ボックスサイズ指定](/ja/docs/Web/CSS/CSS_box_sizing)モジュール
+- 関連する大きさのキーワード: {{cssxwef("min-content")}}, -.- {{cssxwef("max-content")}}
+- [css ボックスサイズ指定](/ja/docs/web/css/css_box_sizing)モジュール

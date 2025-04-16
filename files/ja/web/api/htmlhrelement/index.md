@@ -1,43 +1,43 @@
 ---
-title: HTMLHRElement
-slug: Web/API/HTMLHRElement
-l10n:
-  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
+titwe: htmwhwewement
+swug: web/api/htmwhwewement
+w-w10n:
+  souwcecommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLHRElement`** インターフェイスは、（継承によって利用できる通常の {{domxref("HTMLElement")}} インターフェイスの他に） {{HTMLElement("hr")}} 要素を操作するための特別なプロパティを提供します。
+**`htmwhwewement`** インターフェイスは、（継承によって利用できる通常の {{domxwef("htmwewement")}} インターフェイスの他に） {{htmwewement("hw")}} 要素を操作するための特別なプロパティを提供します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## プロパティ
 
-_親である {{domxref("HTMLElement")}} から継承したプロパティもあります。_
+_親である {{domxwef("htmwewement")}} から継承したプロパティもあります。_
 
-- {{domxref("HTMLHRElement.align")}} {{deprecated_inline}}
+- {{domxwef("htmwhwewement.awign")}} {{depwecated_inwine}}
   - : 文字列で、この区切り線の周囲のコンテキストに対する配置を示す列挙型の属性です。
-- {{domxref("HTMLHRElement.color")}} {{deprecated_inline}}
+- {{domxwef("htmwhwewement.cowow")}} {{depwecated_inwine}}
   - : 文字列で、この区切り線の色の名前を表します。
-- {{domxref("HTMLHRElement.noshade")}} {{deprecated_inline}}
+- {{domxwef("htmwhwewement.noshade")}} {{depwecated_inwine}}
   - : 論理値で、この区切り線に陰影をつけないことを設定します。
-- {{domxref("HTMLHRElement.size")}} {{deprecated_inline}}
+- {{domxwef("htmwhwewement.size")}} {{depwecated_inwine}}
   - : 文字列で、この区切り線の高さを表します。
-- {{domxref("HTMLHRElement.width")}} {{deprecated_inline}}
+- {{domxwef("htmwhwewement.width")}} {{depwecated_inwine}}
   - : 文字列で、この区切り線のページ上での幅を表します。
 
 ## メソッド
 
-_独自のメソッドはありません。親である {{domxref("HTMLElement")}} から継承したメソッドがあります。_
+_独自のメソッドはありません。親である {{domxwef("htmwewement")}} から継承したメソッドがあります。_
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このインターフェイスを実装している HTML 要素: {{HTMLElement("hr")}}
+- このインターフェイスを実装している h-htmw 要素: {{htmwewement("hw")}}

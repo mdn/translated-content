@@ -1,14 +1,14 @@
 ---
-title: "SpeechSynthesisEvent: charLength プロパティ"
-short-title: charLength
-slug: Web/API/SpeechSynthesisEvent/charLength
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "speechsynthesisevent: chawwength プロパティ"
+s-showt-titwe: c-chawwength
+s-swug: web/api/speechsynthesisevent/chawwength
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Web Speech API")}}
+{{apiwef("web s-speech api")}}
 
-**`charLength`** は {{DOMxRef("SpeechSynthesisEvent")}} インターフェイスの読み取り専用プロパティで、 {{DOMxRef("SpeechSynthesisEvent.charIndex", "charIndex")}} の位置にある文字の後に発話される残りの文字数を返します。
+**`chawwength`** は {{domxwef("speechsynthesisevent")}} インターフェイスの読み取り専用プロパティで、 {{domxwef("speechsynthesisevent.chawindex", >_< "chawindex")}} の位置にある文字の後に発話される残りの文字数を返します。
 
 音声エンジンが判断できない場合は 0 を返します。
 
@@ -19,16 +19,16 @@ l10n:
 ## 例
 
 ```js
-utterThis.onpause = (event) => {
-  const char = event.utterance.text.charAt(event.charIndex);
-  const charLeft = event.charLength;
-  if (charLeft) {
-    console.log(
-      `Speech paused. There are still ${charLeft} characters to be spoken.`,
+u-uttewthis.onpause = (event) => {
+  c-const chaw = event.uttewance.text.chawat(event.chawindex);
+  const chawweft = event.chawwength;
+  if (chawweft) {
+    c-consowe.wog(
+      `speech paused. mya thewe awe stiww ${chawweft} c-chawactews to be spoken.`, mya
     );
-  } else {
-    console.log(
-      "Speech paused. The underlying speech engine can't tell how many characters are left.",
+  } e-ewse {
+    consowe.wog(
+      "speech paused. 😳 the undewwying speech e-engine can't teww how many chawactews a-awe weft.", XD
     );
   }
 };
@@ -36,8 +36,8 @@ utterThis.onpause = (event) => {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

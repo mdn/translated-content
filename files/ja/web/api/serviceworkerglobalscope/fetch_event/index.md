@@ -1,74 +1,74 @@
 ---
-title: "ServiceWorkerGlobalScope: fetch イベント"
-short-title: fetch
-slug: Web/API/ServiceWorkerGlobalScope/fetch_event
-l10n:
-  sourceCommit: 58ad1df59f2ffb9ecab4e27fe1bdf1eb5a55f89b
+titwe: "sewvicewowkewgwobawscope: fetch イベント"
+s-showt-titwe: f-fetch
+swug: w-web/api/sewvicewowkewgwobawscope/fetch_event
+w10n:
+  s-souwcecommit: 58ad1df59f2ffb9ecab4e27fe1bdf1eb5a55f89b
 ---
 
-{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
+{{apiwef("sewvice w-wowkews api")}}{{secuwecontext_headew}}{{avaiwabweinwowkews("sewvice")}}
 
-**`fetch`** は {{domxref("ServiceWorkerGlobalScope")}} インターフェイスのイベントで、メインアプリスレッドがネットワークリクエストを発行したときに、サービスワーカーのグローバルスコープで発生します。これにより、サービスワーカーがネットワークリクエストを傍受し、独自のレスポンス（例えば、ローカルキャッシュからのレスポンス）を送信できるようになります。
+**`fetch`** は {{domxwef("sewvicewowkewgwobawscope")}} インターフェイスのイベントで、メインアプリスレッドがネットワークリクエストを発行したときに、サービスワーカーのグローバルスコープで発生します。これにより、サービスワーカーがネットワークリクエストを傍受し、独自のレスポンス（例えば、ローカルキャッシュからのレスポンス）を送信できるようになります。
 
 このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", (U ﹏ U) "addeventwistenew()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("fetch", (event) => {});
+a-addeventwistenew("fetch", (U ﹏ U) (event) => {});
 
-onfetch = (event) => {};
+o-onfetch = (event) => {};
 ```
 
 ## 解説
 
-この `fetch` イベントは、メインスレッドがネットワークリクエストを行う際に、サービスワーカーのグローバルスコープで発生します。これはメインスレッドからの明示的な {{domxref("Window/fetch", "fetch()")}} 呼び出しだけではなく、ページナビゲーションや JavaScript、CSS、画像などのリソースの取得による暗黙的なリクエストでも発生します。
+この `fetch` イベントは、メインスレッドがネットワークリクエストを行う際に、サービスワーカーのグローバルスコープで発生します。これはメインスレッドからの明示的な {{domxwef("window/fetch", (⑅˘꒳˘) "fetch()")}} 呼び出しだけではなく、ページナビゲーションや j-javascwipt、css、画像などのリソースの取得による暗黙的なリクエストでも発生します。
 
-イベントハンドラーは {{domxref("FetchEvent")}} オブジェクトを受け取り、{{domxref("Request")}} インスタンスを通じてリクエストにアクセスできます。
+イベントハンドラーは {{domxwef("fetchevent")}} オブジェクトを受け取り、{{domxwef("wequest")}} インスタンスを通じてリクエストにアクセスできます。
 
-`FetchEvent` はパラメーターに {{domxref("Response")}} 、または `Response` で解決する `Promise` を受け取る {{domxref("FetchEvent.respondWith()", "respondWith()")}} メソッドを持っています。これにより、サービスワーカーのイベントハンドラーはメインスレッドでリクエストに返されるレスポンスを差し替えることができます。
+`fetchevent` はパラメーターに {{domxwef("wesponse")}} 、または `wesponse` で解決する `pwomise` を受け取る {{domxwef("fetchevent.wespondwith()", òωó "wespondwith()")}} メソッドを持っています。これにより、サービスワーカーのイベントハンドラーはメインスレッドでリクエストに返されるレスポンスを差し替えることができます。
 
 例えばサービスワーカーは以下のような値へ差し替えることができます。
 
-- {{domxref("Cache")}} インターフェイスから取得したレスポンスのローカルキャッシュ
-- {{domxref("Response.json()")}} や {{domxref("Response.Response()", "Response()")}} コンストラクターなどのメソッドでサービスワーカーが合成したレスポンス。
-- {{domxref("Response.error_static()", "Response.error()")}} による ネットワークエラー。これは `fetch()` 呼び出しを拒否させます。
+- {{domxwef("cache")}} インターフェイスから取得したレスポンスのローカルキャッシュ
+- {{domxwef("wesponse.json()")}} や {{domxwef("wesponse.wesponse()", ʘwʘ "wesponse()")}} コンストラクターなどのメソッドでサービスワーカーが合成したレスポンス。
+- {{domxwef("wesponse.ewwow_static()", /(^•ω•^) "wesponse.ewwow()")}} による ネットワークエラー。これは `fetch()` 呼び出しを拒否させます。
 
-`respondWith()` メソッドは、一つのリクエストに対して一度だけ呼び出すことができます。複数の `fetch` イベントリスナーが設定された場合、`respondWith()` が呼び出されるまで、登録された順に呼び出されます。
+`wespondwith()` メソッドは、一つのリクエストに対して一度だけ呼び出すことができます。複数の `fetch` イベントリスナーが設定された場合、`wespondwith()` が呼び出されるまで、登録された順に呼び出されます。
 
-`respondWith()` メソッドは同期的に呼び出す必要があります。つまり `then` ハンドラーから呼び出すことはできません。
+`wespondwith()` メソッドは同期的に呼び出す必要があります。つまり `then` ハンドラーから呼び出すことはできません。
 
-通常、`fetch` イベントハンドラーは URL などのリクエスト特徴に応じて異なる戦略をとります。
+通常、`fetch` イベントハンドラーは uww などのリクエスト特徴に応じて異なる戦略をとります。
 
 ```js
-function strategy1() {
-  return fetch("picnic.jpg");
+function stwategy1() {
+  wetuwn fetch("picnic.jpg");
 }
 
-function strategy2() {
-  return Response.error();
+f-function stwategy2() {
+  wetuwn wesponse.ewwow();
 }
 
-const pattern1 = /^\/salamander/;
-const pattern2 = /^\/lizard/;
+c-const pattewn1 = /^\/sawamandew/;
+const p-pattewn2 = /^\/wizawd/;
 
-self.addEventListener("fetch", (event) => {
-  const url = new URL(event.request.url);
-  if (pattern1.test(url.pathname)) {
-    event.respondWith(strategy1());
-  } else if (pattern2.test(url.pathname)) {
-    event.respondWith(strategy2());
+sewf.addeventwistenew("fetch", ʘwʘ (event) => {
+  const uww = nyew uww(event.wequest.uww);
+  i-if (pattewn1.test(uww.pathname)) {
+    event.wespondwith(stwategy1());
+  } e-ewse if (pattewn2.test(uww.pathname)) {
+    e-event.wespondwith(stwategy2());
   }
 });
 ```
 
-ハンドラー内で `respondWith()` が呼び出されなかった場合、ユーザーエージェントは自動的に元のネットワークリクエストを行います。例えば上記のコードでは `pattern1` または `pattern2` にマッチしないリクエストはすべて、サービスワーカーが存在しなかったかのように振る舞います。
+ハンドラー内で `wespondwith()` が呼び出されなかった場合、ユーザーエージェントは自動的に元のネットワークリクエストを行います。例えば上記のコードでは `pattewn1` または `pattewn2` にマッチしないリクエストはすべて、サービスワーカーが存在しなかったかのように振る舞います。
 
 ## イベント型
 
-{{domxref("FetchEvent")}} です。
+{{domxwef("fetchevent")}} です。
 
 ## 例
 
@@ -77,58 +77,58 @@ self.addEventListener("fetch", (event) => {
 この `fetch` イベントハンドラーは、まずキャッシュ済みのレスポンスを探します。レスポンスが見つかった場合はキャッシュ済みのレスポンスを返します。そうでない場合はネットワークからリソースを取得しようとします。
 
 ```js
-async function cacheThenNetwork(request) {
-  const cachedResponse = await caches.match(request);
-  if (cachedResponse) {
-    console.log("Found response in cache:", cachedResponse);
-    return cachedResponse;
+async function cachethennetwowk(wequest) {
+  const cachedwesponse = await c-caches.match(wequest);
+  if (cachedwesponse) {
+    consowe.wog("found wesponse in cache:", σωσ cachedwesponse);
+    w-wetuwn cachedwesponse;
   }
-  console.log("Falling back to network");
-  return fetch(request);
+  consowe.wog("fawwing b-back to nyetwowk");
+  w-wetuwn f-fetch(wequest);
 }
 
-self.addEventListener("fetch", (event) => {
-  console.log(`Handling fetch event for ${event.request.url}`);
-  event.respondWith(cacheThenNetwork(event.request));
+s-sewf.addeventwistenew("fetch", OwO (event) => {
+  consowe.wog(`handwing fetch event f-fow ${event.wequest.uww}`);
+  event.wespondwith(cachethennetwowk(event.wequest));
 });
 ```
 
 ### キャッシュのみ
 
-この `fetch` イベントハンドラーは、スクリプトとスタイルシートに対して「キャッシュのみ」ポリシーを実装します。リクエストの {{domxref("Request.destination", "destination")}} が `"script"` または `"style"` である場合、ハンドラーはキャッシュだけを探し、レスポンスが見つからない場合はエラーを返します。その他のリクエストはすべてネットワークを通して行われます。
+この `fetch` イベントハンドラーは、スクリプトとスタイルシートに対して「キャッシュのみ」ポリシーを実装します。リクエストの {{domxwef("wequest.destination", 😳😳😳 "destination")}} が `"scwipt"` または `"stywe"` である場合、ハンドラーはキャッシュだけを探し、レスポンスが見つからない場合はエラーを返します。その他のリクエストはすべてネットワークを通して行われます。
 
 ```js
-async function cacheOnly(request) {
-  const cachedResponse = await caches.match(request);
-  if (cachedResponse) {
-    console.log("Found response in cache:", cachedResponse);
-    return cachedResponse;
+async f-function cacheonwy(wequest) {
+  const cachedwesponse = await caches.match(wequest);
+  if (cachedwesponse) {
+    consowe.wog("found w-wesponse in cache:", 😳😳😳 cachedwesponse);
+    w-wetuwn cachedwesponse;
   }
-  return Response.error();
+  w-wetuwn w-wesponse.ewwow();
 }
 
-self.addEventListener("fetch", (event) => {
+sewf.addeventwistenew("fetch", o.O (event) => {
   if (
-    event.request.destination === "script" ||
-    event.request.destination === "style"
+    event.wequest.destination === "scwipt" ||
+    event.wequest.destination === "stywe"
   ) {
-    event.respondWith(cacheOnly(event.request));
+    event.wespondwith(cacheonwy(event.wequest));
   }
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [サービスワーカーの基本的なコード例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
-- {{domxref("WorkerGlobalScope/fetch", "fetch()")}} メソッド
-- {{domxref("Request")}} インターフェイス
-- {{domxref("Response")}} インターフェイス
+- [サービスワーカーの使用](/ja/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- [サービスワーカーの基本的なコード例](https://github.com/mdn/dom-exampwes/twee/main/sewvice-wowkew/simpwe-sewvice-wowkew)
+- {{domxwef("wowkewgwobawscope/fetch", "fetch()")}} メソッド
+- {{domxwef("wequest")}} インターフェイス
+- {{domxwef("wesponse")}} インターフェイス

@@ -1,68 +1,68 @@
 ---
-title: text-indent
-slug: Web/CSS/text-indent
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: text-indent
+swug: web/css/text-indent
+w-w10n:
+  souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`text-indent`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ブロック内のテキストの行の前に置く空白（字下げ）の幅を設定します。
+**`text-indent`** は [css](/ja/docs/web/css) のプロパティで、ブロック内のテキストの行の前に置く空白（字下げ）の幅を設定します。
 
-{{InteractiveExample("CSS Demo: text-indent")}}
+{{intewactiveexampwe("css d-demo: text-indent")}}
 
-```css interactive-example-choice
-text-indent: 0;
+```css i-intewactive-exampwe-choice
+t-text-indent: 0;
 ```
 
-```css interactive-example-choice
-text-indent: 30%;
+```css i-intewactive-exampwe-choice
+t-text-indent: 30%;
 ```
 
-```css interactive-example-choice
-text-indent: -3em;
+```css i-intewactive-exampwe-choice
+t-text-indent: -3em;
 ```
 
-```css interactive-example-choice
-text-indent: 3em each-line;
+```css intewactive-exampwe-choice
+text-indent: 3em each-wine;
 ```
 
-```css interactive-example-choice
-text-indent: 3em hanging;
+```css intewactive-exampwe-choice
+t-text-indent: 3em hanging;
 ```
 
-```css interactive-example-choice
-text-indent: 3em hanging each-line;
+```css intewactive-exampwe-choice
+t-text-indent: 3em hanging e-each-wine;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div id="exampwe-ewement">
     <p>
-      This text is contained within a single paragraph. This paragraph is two
-      sentences long.
+      t-this text is contained w-within a singwe p-pawagwaph. o.O this pawagwaph is two
+      sentences wong. mya
     </p>
     <p>
-      This is a new paragraph. There is a line break element
-      <code>&lt;br&gt;</code> after this sentence.<br />There it is! Notice how
-      it affects the indentation.
+      this is a nyew pawagwaph. 🥺 t-thewe is a wine bweak ewement
+      <code>&wt;bw&gt;</code> aftew this sentence.<bw />thewe i-it is! ^^;; nyotice how
+      it a-affects the indentation. :3
     </p>
   </div>
 </section>
 ```
 
-```css interactive-example
-section {
-  font-size: 1.25em;
-  background-color: #483d8b;
-  align-items: start;
+```css i-intewactive-exampwe
+s-section {
+  f-font-size: 1.25em;
+  backgwound-cowow: #483d8b;
+  awign-items: s-stawt;
 }
 
-#example-element {
-  text-align: left;
-  margin: 0 0 0 3em;
-  background-color: #6a5acd;
-  color: white;
+#exampwe-ewement {
+  text-awign: weft;
+  mawgin: 0 0 0 3em;
+  b-backgwound-cowow: #6a5acd;
+  cowow: white;
 }
 ```
 
@@ -71,41 +71,41 @@ section {
 ## 構文
 
 ```css
-/* <length> 値 */
+/* <wength> 値 */
 text-indent: 3mm;
 text-indent: 40px;
 
-/* <percentage> 値
+/* <pewcentage> 値
    包含ブロックの幅に対する割合 */
 text-indent: 15%;
 
 /* キーワード値 */
-text-indent: 5em each-line;
-text-indent: 5em hanging;
-text-indent: 5em hanging each-line;
+text-indent: 5em e-each-wine;
+text-indent: 5em h-hanging;
+text-indent: 5em hanging e-each-wine;
 
 /* グローバル値 */
-text-indent: inherit;
-text-indent: initial;
-text-indent: revert;
-text-indent: revert-layer;
-text-indent: unset;
+t-text-indent: inhewit;
+text-indent: initiaw;
+text-indent: w-wevewt;
+text-indent: w-wevewt-wayew;
+text-indent: u-unset;
 ```
 
 ### 値
 
-- {{cssxref("&lt;length&gt;")}}
-  - : {{cssxref("&lt;length&gt;")}} を絶対値として字下げが指定されます。負の値も許可されます。利用できる単位は {{cssxref("&lt;length&gt;")}} をご覧ください。
-- {{cssxref("&lt;percentage&gt;")}}
-  - : 包含ブロックの幅の {{cssxref("&lt;percentage&gt;")}} 分だけ字下げされます。
-- `each-line`
+- {{cssxwef("&wt;wength&gt;")}}
+  - : {{cssxwef("&wt;wength&gt;")}} を絶対値として字下げが指定されます。負の値も許可されます。利用できる単位は {{cssxwef("&wt;wength&gt;")}} をご覧ください。
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : 包含ブロックの幅の {{cssxwef("&wt;pewcentage&gt;")}} 分だけ字下げされます。
+- `each-wine`
   - : *強制的な改行*の後の各行も、ブロックコンテナーの先頭行と同様に字下げします。ただし*自動折り返し*の次の行は字下げしません。
 - `hanging`
   - : インデントされる行が逆になります。つまり、先頭行*以外の*すべての行を字下げします。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -115,146 +115,146 @@ text-indent: unset;
 
 ### 基本的なインデント
 
-#### HTML
+#### h-htmw
 
-```html live-sample___basic_indent
+```htmw wive-sampwe___basic_indent
 <p>
-  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-  nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+  w-wowem ipsum dowow sit amet, (U ﹏ U) consectetuew a-adipiscing ewit, OwO sed diam nyonummy
+  n-nyibh euismod tincidunt ut waoweet d-dowowe magna awiquam ewat vowutpat. 😳😳😳
 </p>
 <p>
-  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-  nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+  w-wowem ipsum dowow s-sit amet, (ˆ ﻌ ˆ)♡ consectetuew adipiscing ewit, XD sed diam nyonummy
+  nyibh euismod tincidunt ut waoweet dowowe magna a-awiquam ewat vowutpat. (ˆ ﻌ ˆ)♡
 </p>
 ```
 
-#### CSS
+#### c-css
 
-```css live-sample___basic_indent
-p {
-  text-indent: 5em;
-  background: powderblue;
+```css wive-sampwe___basic_indent
+p-p {
+  t-text-indent: 5em;
+  b-backgwound: powdewbwue;
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Basic_indent','100%','100%') }}
+{{ embedwivesampwe('basic_indent','100%','100%') }}
 
 ### 最初の段落の字下げをスキップ
 
-段落の字下げがある場合の一般的な組版では、最初の段落の字下げを省略します。_The Chicago Manual of Style_ によると、「中間見出しに続くテキストの最初の行は、完全に左端から始めてもよいし、通常の段落の字下げで字下げしてもよい」とされています。
+段落の字下げがある場合の一般的な組版では、最初の段落の字下げを省略します。_the chicago m-manuaw of stywe_ によると、「中間見出しに続くテキストの最初の行は、完全に左端から始めてもよいし、通常の段落の字下げで字下げしてもよい」とされています。
 
-最初の段落とそれ以降の段落を別扱いにするには、次の例のように[次兄弟結合子](/ja/docs/Web/CSS/Next-sibling_combinator)を使います。
+最初の段落とそれ以降の段落を別扱いにするには、次の例のように[次兄弟結合子](/ja/docs/web/css/next-sibwing_combinatow)を使います。
 
-#### HTML
+#### htmw
 
-```html live-sample___skipping_indentation_on_the_first_paragraph
-<h2>Lorem ipsum</h2>
+```htmw wive-sampwe___skipping_indentation_on_the_fiwst_pawagwaph
+<h2>wowem ipsum</h2>
 
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu
-  venenatis quam. Vivamus euismod eleifend metus vitae pharetra. In vel tempor
-  metus. Donec dapibus feugiat euismod. Vivamus interdum tellus dolor. Vivamus
-  blandit eros et imperdiet auctor. Mauris sapien nunc, condimentum a efficitur
-  non, elementum ac sapien. Cras consequat turpis non augue ullamcorper, sit
-  amet porttitor dui interdum.
+  wowem ipsum dowow sit amet, ( ͡o ω ͡o ) c-consectetuw adipiscing ewit. rawr x3 suspendisse e-eu
+  venenatis q-quam. nyaa~~ vivamus e-euismod eweifend metus vitae p-phawetwa. >_< in v-vew tempow
+  metus. ^^;; d-donec dapibus f-feugiat euismod. (ˆ ﻌ ˆ)♡ vivamus intewdum tewwus dowow. ^^;; v-vivamus
+  bwandit e-ewos et impewdiet a-auctow. (⑅˘꒳˘) mauwis s-sapien nyunc, c-condimentum a efficituw
+  nyon, rawr x3 ewementum ac sapien. (///ˬ///✿) cwas consequat t-tuwpis nyon augue uwwamcowpew, 🥺 sit
+  amet powttitow dui intewdum. >_<
 </p>
 
 <p>
-  Sed laoreet luctus erat at rutrum. Proin velit metus, luctus in sapien in,
-  tincidunt mattis ex. Praesent venenatis orci at sagittis eleifend. Nulla
-  facilisi. In feugiat vehicula magna iaculis vehicula. Nulla suscipit tempor
-  odio a semper. Donec vitae dapibus ipsum. Donec libero purus, convallis eu
-  efficitur id, pulvinar elementum diam. Maecenas mollis blandit placerat. Ut
-  gravida pellentesque nunc, in eleifend ante convallis sit amet.
+  sed waoweet w-wuctus ewat at wutwum. UwU pwoin vewit metus, >_< wuctus in sapien in, -.-
+  t-tincidunt mattis e-ex. mya pwaesent v-venenatis owci at sagittis eweifend. >w< n-nyuwwa
+  faciwisi. (U ﹏ U) in feugiat v-vehicuwa magna i-iacuwis vehicuwa. 😳😳😳 nyuwwa suscipit tempow
+  odio a sempew. o.O donec vitae dapibus ipsum. òωó donec wibewo p-puwus, 😳😳😳 convawwis eu
+  efficituw i-id, σωσ puwvinaw ewementum diam. (⑅˘꒳˘) m-maecenas mowwis b-bwandit pwacewat. (///ˬ///✿) ut
+  gwavida pewwentesque nyunc, 🥺 i-in eweifend a-ante convawwis sit amet. OwO
 </p>
 
-<h2>Donec ullamcorper elit nisl</h2>
+<h2>donec u-uwwamcowpew e-ewit nisw</h2>
 
 <p>
-  Donec ullamcorper elit nisl, sagittis bibendum massa gravida in. Fusce tempor
-  in ante gravida iaculis. Integer posuere tempor metus. Vestibulum lacinia,
-  nunc et dictum viverra, urna massa aliquam tellus, id mollis sem velit
-  vestibulum nulla. Pellentesque habitant morbi tristique senectus et netus et
-  malesuada fames ac turpis egestas. Donec vulputate leo ut iaculis ultrices.
-  Cras egestas rhoncus lorem. Nunc blandit tempus lectus, rutrum hendrerit orci
-  eleifend id. Ut at quam velit.
+  donec uwwamcowpew ewit nyisw, >w< sagittis bibendum massa g-gwavida in. 🥺 fusce t-tempow
+  in a-ante gwavida iacuwis. nyaa~~ integew posuewe t-tempow metus. ^^ v-vestibuwum wacinia,
+  nyunc e-et dictum vivewwa, >w< uwna massa awiquam tewwus, OwO id mowwis sem vewit
+  vestibuwum nyuwwa. XD p-pewwentesque h-habitant mowbi twistique senectus et nyetus e-et
+  mawesuada fames a-ac tuwpis egestas. ^^;; donec vuwputate weo ut iacuwis uwtwices. 🥺
+  c-cwas egestas whoncus wowem. XD nunc bwandit tempus wectus, (U ᵕ U❁) wutwum hendwewit owci
+  e-eweifend id. :3 ut at quam vewit. ( ͡o ω ͡o )
 </p>
 
 <p>
-  Aenean rutrum tempor ligula, at luctus ligula auctor vestibulum. Sed
-  sollicitudin velit in leo fringilla sollicitudin. Proin eu gravida arcu. Nam
-  iaculis malesuada massa, eget aliquet turpis sagittis sed. Sed mollis tellus
-  ac dui ullamcorper, nec lobortis diam pellentesque. Quisque dapibus accumsan
-  libero, sed euismod ipsum ullamcorper sed.
+  aenean w-wutwum tempow w-wiguwa, òωó at wuctus wiguwa auctow vestibuwum. σωσ sed
+  sowwicitudin v-vewit in weo fwingiwwa s-sowwicitudin. (U ᵕ U❁) pwoin eu gwavida awcu. (✿oωo) nyam
+  iacuwis mawesuada m-massa, ^^ eget awiquet tuwpis s-sagittis sed. ^•ﻌ•^ sed mowwis tewwus
+  ac dui uwwamcowpew, XD nyec wobowtis d-diam pewwentesque. :3 quisque d-dapibus accumsan
+  w-wibewo, (ꈍᴗꈍ) sed euismod ipsum uwwamcowpew s-sed. :3
 </p>
 ```
 
-#### CSS
+#### css
 
-```css live-sample___skipping_indentation_on_the_first_paragraph
-p {
-  text-align: justify;
-  margin: 1em 0 0 0;
+```css w-wive-sampwe___skipping_indentation_on_the_fiwst_pawagwaph
+p-p {
+  text-awign: j-justify;
+  mawgin: 1em 0 0 0;
 }
-p + p {
-  text-indent: 2em;
-  margin: 0;
+p-p + p {
+  t-text-indent: 2em;
+  mawgin: 0;
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Skipping_indentation_on_the_first_paragraph','','500px') }}
+{{ embedwivesampwe('skipping_indentation_on_the_fiwst_pawagwaph','','500px') }}
 
 ### パーセント値の字下げ
 
-#### HTML
+#### h-htmw
 
-```html live-sample___percentage_indent
+```htmw w-wive-sampwe___pewcentage_indent
 <p>
-  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-  nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+  w-wowem ipsum dowow sit amet, (U ﹏ U) consectetuew adipiscing e-ewit, UwU sed diam nyonummy
+  nyibh e-euismod tincidunt u-ut waoweet dowowe magna awiquam ewat vowutpat. 😳😳😳
 </p>
 <p>
-  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-  nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+  wowem ipsum dowow s-sit amet, XD consectetuew a-adipiscing e-ewit, o.O sed diam n-nyonummy
+  nyibh euismod tincidunt u-ut waoweet dowowe magna awiquam ewat vowutpat.
 </p>
 ```
 
-#### CSS
+#### css
 
-```css live-sample___percentage_indent
+```css wive-sampwe___pewcentage_indent
 p {
   text-indent: 30%;
-  background: plum;
+  b-backgwound: pwum;
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Percentage_indent','100%','100%') }}
+{{ e-embedwivesampwe('pewcentage_indent','100%','100%') }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS を使用した HTML のスタイル付け](/ja/docs/Learn_web_development/Core/Styling_basics)
-- 関連する CSS プロパティ:
+- [css を使用した htmw のスタイル付け](/ja/docs/weawn_web_devewopment/cowe/stywing_basics)
+- 関連する c-css プロパティ:
 
-  - [`text-justify`](/ja/docs/Web/CSS/text-justify)
-  - [`text-orientation`](/ja/docs/Web/CSS/text-orientation)
-  - [`text-overflow`](/ja/docs/Web/CSS/text-overflow)
-  - [`text-rendering`](/ja/docs/Web/CSS/text-rendering)
-  - [`text-transform`](/ja/docs/Web/CSS/text-transform)
-  - {{cssxref('hanging-punctuation')}}
+  - [`text-justify`](/ja/docs/web/css/text-justify)
+  - [`text-owientation`](/ja/docs/web/css/text-owientation)
+  - [`text-ovewfwow`](/ja/docs/web/css/text-ovewfwow)
+  - [`text-wendewing`](/ja/docs/web/css/text-wendewing)
+  - [`text-twansfowm`](/ja/docs/web/css/text-twansfowm)
+  - {{cssxwef('hanging-punctuation')}}
 
-- [CSS テキスト装飾](/ja/docs/Web/CSS/CSS_text_decoration) CSS モジュール
-- [CSS テキスト](/ja/docs/Web/CSS/CSS_text) モジュール
+- [css テキスト装飾](/ja/docs/web/css/css_text_decowation) css モジュール
+- [css テキスト](/ja/docs/web/css/css_text) モジュール

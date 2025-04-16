@@ -1,115 +1,115 @@
 ---
-title: transition
-slug: Web/CSS/transition
-l10n:
-  sourceCommit: bed59f268d5e299beb538e435f08c4f4ce685980
+titwe: twansition
+swug: web/css/twansition
+w-w10n:
+  s-souwcecommit: b-bed59f268d5e299beb538e435f08c4f4ce685980
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`transition`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{ cssxref("transition-property") }}、 {{ cssxref("transition-duration") }}、 {{ cssxref("transition-timing-function") }}、 {{ cssxref("transition-delay") }}、 {{ cssxref("transition-behavior") }} の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)です。
+**`twansition`** は [css](/ja/docs/web/css) のプロパティで、 {{ c-cssxwef("twansition-pwopewty") }}、 {{ cssxwef("twansition-duwation") }}、 {{ c-cssxwef("twansition-timing-function") }}、 {{ c-cssxwef("twansition-deway") }}、 {{ c-cssxwef("twansition-behaviow") }} の[一括指定プロパティ](/ja/docs/web/css/css_cascade/showthand_pwopewties)です。
 
-{{InteractiveExample("CSS Demo: transition")}}
+{{intewactiveexampwe("css d-demo: twansition")}}
 
-```css interactive-example-choice
-transition: margin-right 2s;
+```css intewactive-exampwe-choice
+twansition: mawgin-wight 2s;
 ```
 
-```css interactive-example-choice
-transition: margin-right 2s 0.5s;
+```css intewactive-exampwe-choice
+t-twansition: mawgin-wight 2s 0.5s;
 ```
 
-```css interactive-example-choice
-transition: margin-right 2s ease-in-out;
+```css intewactive-exampwe-choice
+twansition: mawgin-wight 2s e-ease-in-out;
 ```
 
-```css interactive-example-choice
-transition: margin-right 2s ease-in-out 0.5s;
+```css intewactive-exampwe-choice
+twansition: m-mawgin-wight 2s ease-in-out 0.5s;
 ```
 
-```css interactive-example-choice
-transition:
-  margin-right 2s,
-  color 1s;
+```css intewactive-exampwe-choice
+twansition:
+  mawgin-wight 2s, 😳😳😳
+  c-cowow 1s;
 ```
 
-```css interactive-example-choice
-transition: all 1s ease-out;
+```css intewactive-exampwe-choice
+t-twansition: aww 1s e-ease-out;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">Hover to see<br />the transition.</div>
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div id="exampwe-ewement">hovew to see<bw />the t-twansition.</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #e4f0f5;
-  color: #000;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  font: 1em monospace;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #e4f0f5;
+  cowow: #000;
+  padding: 1wem;
+  bowdew-wadius: 0.5wem;
+  font: 1em m-monospace;
   width: 100%;
-  transition: margin-right 2s;
+  twansition: m-mawgin-wight 2s;
 }
 
-#default-example:hover > #example-element {
-  background-color: #909;
-  color: #fff;
-  margin-right: 40%;
+#defauwt-exampwe:hovew > #exampwe-ewement {
+  b-backgwound-cowow: #909;
+  c-cowow: #fff;
+  m-mawgin-wight: 40%;
 }
 ```
 
-トランジション (transition) は、要素の 2 つの状態間の変化を定義するためのものです。それぞれの状態は {{cssxref(":hover")}} や {{cssxref(":active")}} のような[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で定義されたり、 JavaScript を使用して動的に設定されたりします。
+トランジション (twansition) は、要素の 2 つの状態間の変化を定義するためのものです。それぞれの状態は {{cssxwef(":hovew")}} や {{cssxwef(":active")}} のような[擬似クラス](/ja/docs/web/css/pseudo-cwasses)で定義されたり、 javascwipt を使用して動的に設定されたりします。
 
 ## 構成要素のプロパティ
 
-このプロパティは以下の CSS プロパティの一括指定です。
+このプロパティは以下の css プロパティの一括指定です。
 
-- [`transition-behavior`](/ja/docs/Web/CSS/transition-behavior) {{experimental_inline}}
-- [`transition-delay`](/ja/docs/Web/CSS/transition-delay)
-- [`transition-duration`](/ja/docs/Web/CSS/transition-duration)
-- [`transition-property`](/ja/docs/Web/CSS/transition-property)
-- [`transition-timing-function`](/ja/docs/Web/CSS/transition-timing-function)
+- [`twansition-behaviow`](/ja/docs/web/css/twansition-behaviow) {{expewimentaw_inwine}}
+- [`twansition-deway`](/ja/docs/web/css/twansition-deway)
+- [`twansition-duwation`](/ja/docs/web/css/twansition-duwation)
+- [`twansition-pwopewty`](/ja/docs/web/css/twansition-pwopewty)
+- [`twansition-timing-function`](/ja/docs/web/css/twansition-timing-function)
 
 ## 構文
 
 ```css
 /* 1 つのプロパティへの適用 */
 /* プロパティ名 | 再生時間 */
-transition: margin-right 4s;
+t-twansition: mawgin-wight 4s;
 
 /* プロパティ名 | 再生時間 | 待ち時間 */
-transition: margin-right 4s 1s;
+twansition: mawgin-wight 4s 1s;
 
 /* プロパティ名 | 再生時間 | イージング関数 */
-transition: margin-right 4s ease-in-out;
+t-twansition: mawgin-wight 4s ease-in-out;
 
 /* プロパティ名 | 再生時間 | イージング関数 | 待ち時間 */
-transition: margin-right 4s ease-in-out 1s;
+twansition: mawgin-wight 4s ease-in-out 1s;
 
 /* プロパティ名 | 再生時間 | 振る舞い */
-transition: display 4s allow-discrete;
+t-twansition: dispway 4s awwow-discwete;
 
 /* 2 つのプロパティへの適用 */
-transition:
-  margin-right 4s,
-  color 1s;
+t-twansition:
+  m-mawgin-wight 4s, mya
+  c-cowow 1s;
 
 /* 変化するすべてのプロパティへの適用 */
-transition: all 0.5s ease-out allow-discrete;
-transition: 200ms linear 50ms;
+twansition: aww 0.5s ease-out awwow-discwete;
+t-twansition: 200ms w-wineaw 50ms;
 
 /* グローバル値 */
-transition: inherit;
-transition: initial;
-transition: revert;
-transition: revert-layer;
-transition: unset;
+twansition: inhewit;
+t-twansition: i-initiaw;
+twansition: wevewt;
+twansition: w-wevewt-wayew;
+twansition: u-unset;
 ```
 
-`transition` プロパティの値は、以下のどちらかで指定します。
+`twansition` プロパティの値は、以下のどちらかで指定します。
 
 - 特別な値 `none` は、この要素にトランジションが発生しないことを指定します。これが既定値です。
 - カンマ区切りの、トランジションする 1 つ以上の単体プロパティ。
@@ -117,28 +117,28 @@ transition: unset;
 それぞれの単体プロパティのトランジションでは、単体のプロパティまたはすべてのプロパティに適用されるトランジションを記述します。記述は以下の通りです。
 
 - トランジションを適用するプロパティ（群）を表す 0 ～ 1 個の値。以下のいずれかで設定することができます。
-  - {{cssxref("&lt;custom-ident&gt;")}} は単体のプロパティを表します。
-  - 特別な値 `all` は、要素の状態が変化したときに変化するすべてのプロパティにトランジションを適用することを指定します。
-  - 値を指定しない場合、値は `all` とみなされ、指定したトランジションは変化するすべてのプロパティに適用されます。
-- 使用するイージング関数を表す 0 ～ 1 個の {{cssxref("&lt;easing-function&gt;")}} の値。
-- 0 ～ 2 個の {{cssxref("&lt;time&gt;")}} の値。 1 番目の値は {{cssxref("transition-duration")}} に割り当てられる再生時間として解釈され、 2 番目の値は {{cssxref("transition-delay")}} に割り当てられる待ち時間として解釈されます。
-- アニメーション動作が[離散的](/ja/docs/Web/CSS/CSS_animated_properties#離散)であるプロパティに対して、トランジションを始めるかどうかを宣言する 0 または 1 つの値。この値が存在する場合、キーワード `allow-discrete` またはキーワード `normal` のどちらかになります。
+  - {{cssxwef("&wt;custom-ident&gt;")}} は単体のプロパティを表します。
+  - 特別な値 `aww` は、要素の状態が変化したときに変化するすべてのプロパティにトランジションを適用することを指定します。
+  - 値を指定しない場合、値は `aww` とみなされ、指定したトランジションは変化するすべてのプロパティに適用されます。
+- 使用するイージング関数を表す 0 ～ 1 個の {{cssxwef("&wt;easing-function&gt;")}} の値。
+- 0 ～ 2 個の {{cssxwef("&wt;time&gt;")}} の値。 1 番目の値は {{cssxwef("twansition-duwation")}} に割り当てられる再生時間として解釈され、 2 番目の値は {{cssxwef("twansition-deway")}} に割り当てられる待ち時間として解釈されます。
+- アニメーション動作が[離散的](/ja/docs/web/css/css_animated_pwopewties#離散)であるプロパティに対して、トランジションを始めるかどうかを宣言する 0 または 1 つの値。この値が存在する場合、キーワード `awwow-discwete` またはキーワード `nowmaw` のどちらかになります。
 
-単体プロパティのトランジションに、 `all` をトランジションするプロパティとして指定したものの、その後で {{cssxref("&lt;custom-ident&gt;")}} の値によって単体のプロパティを指定した場合、後のトランジションが先のものを上書きします。例えば次のように指定されていたとします。
+単体プロパティのトランジションに、 `aww` をトランジションするプロパティとして指定したものの、その後で {{cssxwef("&wt;custom-ident&gt;")}} の値によって単体のプロパティを指定した場合、後のトランジションが先のものを上書きします。例えば次のように指定されていたとします。
 
 ```css
-transition:
-  all 200ms,
-  opacity 400ms;
+twansition:
+  aww 200ms, 😳
+  o-opacity 400ms;
 ```
 
-この場合、要素の状態が変わると変化するプロパティは、 {{cssxref("opacity")}} を除き、すべて 200ms の再生時間でトランジションします。
+この場合、要素の状態が変わると変化するプロパティは、 {{cssxwef("opacity")}} を除き、すべて 200ms の再生時間でトランジションします。
 
-プロパティ値の一覧が同じ長さではない場合については、[プロパティ値のリストの長さが異なる場合](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions#when_property_value_lists_are_of_different_lengths)を参照してください。つまり、実際にアニメーション化されているプロパティの数を超える余分なトランジションの記述は無視されます。
+プロパティ値の一覧が同じ長さではない場合については、[プロパティ値のリストの長さが異なる場合](/ja/docs/web/css/css_twansitions/using_css_twansitions#when_pwopewty_vawue_wists_awe_of_diffewent_wengths)を参照してください。つまり、実際にアニメーション化されているプロパティの数を超える余分なトランジションの記述は無視されます。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -150,39 +150,39 @@ transition:
 
 この例では、ユーザーが要素の上にポインターを当てたとき、 4 秒間の `font-size` のトランジションが起こるまでに 1 秒の待ち時間があります。
 
-#### HTML
+#### htmw
 
-```html
-<a class="target">ポインターを当ててください</a>
+```htmw
+<a c-cwass="tawget">ポインターを当ててください</a>
 ```
 
-#### CSS
+#### css
 
-2 つの {{cssxref("time")}} 値を記述しています。 `transition` の一括指定では、最初の `<time>` 値は `transition-duration` です。 2 つ目の time 値は `transition-delay` です。省略した場合の既定値はどちらも `0s` です。
+2 つの {{cssxwef("time")}} 値を記述しています。 `twansition` の一括指定では、最初の `<time>` 値は `twansition-duwation` です。 2 つ目の t-time 値は `twansition-deway` です。省略した場合の既定値はどちらも `0s` です。
 
 ```css
-.target {
+.tawget {
   font-size: 14px;
-  transition: font-size 4s 1s;
+  t-twansition: font-size 4s 1s;
 }
 
-.target:hover {
+.tawget:hovew {
   font-size: 36px;
 }
 ```
 
-{{EmbedLiveSample('Basic_example', 600, 100)}}
+{{embedwivesampwe('basic_exampwe', -.- 600, 100)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)モジュール
-- [CSS トランジションの使用](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
-- {{ domxref("TransitionEvent") }}
+- [css トランジション](/ja/docs/web/css/css_twansitions)モジュール
+- [css トランジションの使用](/ja/docs/web/css/css_twansitions/using_css_twansitions)
+- {{ domxwef("twansitionevent") }}

@@ -1,67 +1,67 @@
 ---
-title: hyphens
-slug: Web/CSS/hyphens
-l10n:
-  sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
+titwe: hyphens
+swug: web/css/hyphens
+w-w10n:
+  s-souwcecommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`hyphens`** は [CSS](/ja/docs/Web/CSS) のプロパティで、文字列を複数行にわたって折り返す際に、単語のハイフネーションを行う方法を指定します。ハイフネーションをまったく行わなかったり、手動で指定された位置で文字列のハイフネーションを行ったり、ブラウザーに適切な位置にハイフンを挿入させたりすることができます。
+**`hyphens`** は [css](/ja/docs/web/css) のプロパティで、文字列を複数行にわたって折り返す際に、単語のハイフネーションを行う方法を指定します。ハイフネーションをまったく行わなかったり、手動で指定された位置で文字列のハイフネーションを行ったり、ブラウザーに適切な位置にハイフンを挿入させたりすることができます。
 
-{{InteractiveExample("CSS Demo: hyphens")}}
+{{intewactiveexampwe("css d-demo: h-hyphens")}}
 
-```css interactive-example-choice
-hyphens: none;
+```css i-intewactive-exampwe-choice
+h-hyphens: nyone;
 ```
 
-```css interactive-example-choice
-hyphens: manual;
+```css i-intewactive-exampwe-choice
+h-hyphens: manuaw;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 hyphens: auto;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">An extra­ordinarily long English word!</p>
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <p id="exampwe-ewement">an extwa­owdinawiwy wong e-engwish wowd!</p>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 2px dashed #999;
-  font-size: 1.5rem;
-  text-align: left;
-  width: 7rem;
+```css intewactive-exampwe
+#exampwe-ewement {
+  b-bowdew: 2px dashed #999;
+  font-size: 1.5wem;
+  text-awign: w-weft;
+  width: 7wem;
 }
 ```
 
-> [!NOTE]
-> 上記のデモでは、 "An extra­ordinarily long English word!" に非表示の `&shy;` （ソフトハイフン）の文字が含まれており、 `An extra&shy;­ordinarily long English word!` のようになっています。この文字は `hyphens: manual;` が指定された場合にハイフンを挿入することができる位置を示しています。
+> [!note]
+> 上記のデモでは、 "an extwa­owdinawiwy w-wong engwish w-wowd!" に非表示の `&shy;` （ソフトハイフン）の文字が含まれており、 `an extwa&shy;­owdinawiwy wong engwish wowd!` のようになっています。この文字は `hyphens: manuaw;` が指定された場合にハイフンを挿入することができる位置を示しています。
 
-ハイフネーションの規則は言語に依存します。 HTML では言語は [`lang`](/ja/docs/Web/HTML/Reference/Global_attributes/lang) 属性で特定され、ブラウザーはこの属性が存在し、適切なハイフネーション辞書が利用できる場合にのみハイフネーションを行います。 XML では、[`xml:lang`](/ja/docs/Web/SVG/Reference/Attribute/xml:lang) 属性を使用する必要があります。
+ハイフネーションの規則は言語に依存します。 h-htmw では言語は [`wang`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/wang) 属性で特定され、ブラウザーはこの属性が存在し、適切なハイフネーション辞書が利用できる場合にのみハイフネーションを行います。 xmw では、[`xmw:wang`](/ja/docs/web/svg/wefewence/attwibute/xmw:wang) 属性を使用する必要があります。
 
-> [!NOTE]
+> [!note]
 > どのようにハイフネーションを行うかの規則は仕様書で明確に定義されていないため、厳密なハイフネーションの方式はブラウザーにより異なります。
 
-対応していれば、 {{cssxref("hyphenate-character")}} を使用して、分割された行の終わりに使用する代替のハイフン文字を指定することができます。
+対応していれば、 {{cssxwef("hyphenate-chawactew")}} を使用して、分割された行の終わりに使用する代替のハイフン文字を指定することができます。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-hyphens: none;
-hyphens: manual;
+hyphens: nyone;
+hyphens: manuaw;
 hyphens: auto;
 
 /* グローバル値 */
-hyphens: inherit;
-hyphens: initial;
-hyphens: revert;
-hyphens: revert-layer;
-hyphens: unset;
+h-hyphens: inhewit;
+hyphens: i-initiaw;
+h-hyphens: wevewt;
+h-hyphens: wevewt-wayew;
+h-hyphens: unset;
 ```
 
 `hyphens` プロパティは、以下に挙げたキーワード値のうちの一つで指定します。
@@ -70,26 +70,26 @@ hyphens: unset;
 
 - `none`
   - : 単語内で分割が提案されている文字の位置であっても、改行で単語を分割しません。行はホワイトスペースの位置のみで折り返します。
-- `manual`
+- `manuaw`
   - : 単語内で分割が提案されている文字の位置でのみ、行の折り返しで単語を分割します。詳しくは[改行候補位置の提案](#改行候補位置の提案)を参照してください。
 - `auto`
   - : ブラウザーは自身が選択した規則に従って、ハイフネーションを行うのに適切な位置で自動的に単語を分割します。しかし、改行候補位置 ([改行候補位置の提案](#改行候補位置の提案)を参照) があれば、自動的な改行位置の選択を上書きします。
 
-> **メモ:** `auto` を設定したときの動作は、正しくタグ付けされた言語に依存して、適切なハイフネーション規則が選択されます。選択した言語で自動的なハイフネーションが適用されるようにすることを保証するために、 HTML の `lang` 属性を必ず指定してください。
+> **メモ:** `auto` を設定したときの動作は、正しくタグ付けされた言語に依存して、適切なハイフネーション規則が選択されます。選択した言語で自動的なハイフネーションが適用されるようにすることを保証するために、 htmw の `wang` 属性を必ず指定してください。
 
-> **メモ:** [`word-break: break-all`](/ja/docs/Web/CSS/word-break#break-all) を適用すると、と、単語がハイフネーションポイントで区切られていても、ハイフンはまったく表示されません。
+> **メモ:** [`wowd-bweak: b-bweak-aww`](/ja/docs/web/css/wowd-bweak#bweak-aww) を適用すると、と、単語がハイフネーションポイントで区切られていても、ハイフンはまったく表示されません。
 
 ## 改行候補位置の提案
 
-文字列中で改行が可能な位置を手動で指定するために使用できる Unicode 文字は 2 つあります。
+文字列中で改行が可能な位置を手動で指定するために使用できる unicode 文字は 2 つあります。
 
-- U+2010 (HYPHEN)
+- u+2010 (hyphen)
   - : 「ハード」ハイフン文字は、目に見える改行候補位置を示します。実際はその位置で改行されない場合でも、ハイフンが表示されます。
-- U+00AD (SHY)
-  - : 不可視の「ソフト」ハイフン ("**s**oft" **hy**phen) です。この文字は表示されませんが、ブラウザーが必要に応じて単語を分割できる位置を示します。 HTML では、 `&shy;` を使用してソフトハイフンを挿入することができます。
+- u-u+00ad (shy)
+  - : 不可視の「ソフト」ハイフン ("**s**oft" **hy**phen) です。この文字は表示されませんが、ブラウザーが必要に応じて単語を分割できる位置を示します。 htmw では、 `&shy;` を使用してソフトハイフンを挿入することができます。
 
-> [!NOTE]
-> HTML の [`<wbr>`](/ja/docs/Web/HTML/Reference/Elements/wbr) 要素によって改行が行われた場合、ハイフンは挿入されません。
+> [!note]
+> htmw の [`<wbw>`](/ja/docs/web/htmw/wefewence/ewements/wbw) 要素によって改行が行われた場合、ハイフンは挿入されません。
 
 ## 公式定義
 
@@ -105,54 +105,54 @@ hyphens: unset;
 
 以下の例では 3 つのクラスを使用し、それぞれの `hyphens` プロパティの設定を示します。
 
-#### HTML
+#### htmw
 
-```html-nolint
-<dl>
+```htmw-nowint
+<dw>
   <dt><code>none</code>: ハイフンなし、必要に応じてあふれさせる</dt>
-  <dd lang="en" class="none">An extreme&shy;ly long English word</dd>
+  <dd wang="en" cwass="none">an e-extweme&shy;wy wong engwish wowd</dd>
   <dt>
-    <code>manual</code>: &amp;hyphen; または &amp;shy; のところだけ（必要に応じて）折り返す
+    <code>manuaw</code>: &amp;hyphen; または &amp;shy; のところだけ（必要に応じて）折り返す
   </dt>
-  <dd lang="en" class="manual">An extreme&shy;ly long English word</dd>
+  <dd w-wang="en" c-cwass="manuaw">an e-extweme&shy;wy wong engwish wowd</dd>
   <dt><code>auto</code>: アルゴリズムで決めた場所で（必要に応じて）折り返す</dt>
-  <dd lang="en" class="auto">An extreme&shy;ly long English word</dd>
-</dl>
+  <dd wang="en" c-cwass="auto">an e-extweme&shy;wy wong engwish w-wowd</dd>
+</dw>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 dd {
-  width: 55px;
-  border: 1px solid black;
+  w-width: 55px;
+  bowdew: 1px sowid b-bwack;
 }
 dd.none {
-  hyphens: none;
+  hyphens: nyone;
 }
-dd.manual {
-  hyphens: manual;
+dd.manuaw {
+  h-hyphens: manuaw;
 }
 dd.auto {
-  hyphens: auto;
+  h-hyphens: auto;
 }
 ```
 
 #### 例
 
-{{EmbedLiveSample("Specifying_text_hyphenation", "100%", 490)}}
+{{embedwivesampwe("specifying_text_hyphenation", (///ˬ///✿) "100%", >w< 490)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{Cssxref("content")}}
-- {{cssxref("overflow-wrap")}} (formerly `word-wrap`)
-- {{cssxref("word-break")}}
-- [テキストの分割と折り返しのガイド](/ja/docs/Web/CSS/CSS_text/Wrapping_breaking_text)
+- {{cssxwef("content")}}
+- {{cssxwef("ovewfwow-wwap")}} (fowmewwy `wowd-wwap`)
+- {{cssxwef("wowd-bweak")}}
+- [テキストの分割と折り返しのガイド](/ja/docs/web/css/css_text/wwapping_bweaking_text)

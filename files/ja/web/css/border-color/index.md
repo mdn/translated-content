@@ -1,92 +1,92 @@
 ---
-title: border-color
-slug: Web/CSS/border-color
-l10n:
-  sourceCommit: 5f13cbe7517ce96deeb521d4c8e6923266a22913
+titwe: bowdew-cowow
+swug: web/css/bowdew-cowow
+w-w10n:
+  souwcecommit: 5f13cbe7517ce96deeb521d4c8e6923266a22913
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`border-color`** は[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)を行う [CSS](/ja/docs/Web/CSS) のプロパティで、要素の境界の色を設定します。
+**`bowdew-cowow`** は[一括指定](/ja/docs/web/css/css_cascade/showthand_pwopewties)を行う [css](/ja/docs/web/css) のプロパティで、要素の境界の色を設定します。
 
-{{InteractiveExample("CSS Demo: border-color")}}
+{{intewactiveexampwe("css d-demo: bowdew-cowow")}}
 
-```css interactive-example-choice
-border-color: red;
+```css i-intewactive-exampwe-choice
+b-bowdew-cowow: w-wed;
 ```
 
-```css interactive-example-choice
-border-color: red #32a1ce;
+```css i-intewactive-exampwe-choice
+b-bowdew-cowow: w-wed #32a1ce;
 ```
 
-```css interactive-example-choice
-border-color: red rgba(170, 50, 220, 0.6) green;
+```css intewactive-exampwe-choice
+bowdew-cowow: wed wgba(170, >w< 50, 220, mya 0.6) gween;
 ```
 
-```css interactive-example-choice
-border-color: red yellow green hsla(60, 90%, 50%, 0.8);
+```css i-intewactive-exampwe-choice
+bowdew-cowow: wed yewwow g-gween hswa(60, >w< 90%, 50%, 0.8);
 ```
 
-```css interactive-example-choice
-border-color: red yellow green transparent;
+```css intewactive-exampwe-choice
+b-bowdew-cowow: wed yewwow gween twanspawent;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    t-this is a box with a bowdew awound it. nyaa~~
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #000;
-  border: 0.75em solid;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #eee;
+  c-cowow: #000;
+  bowdew: 0.75em sowid;
   padding: 0.75em;
   width: 80%;
-  height: 100px;
+  h-height: 100px;
 }
 ```
 
-各辺を個々に設定する場合は、 {{CSSxRef("border-top-color")}}、 {{CSSxRef("border-right-color")}}、 {{CSSxRef("border-bottom-color")}}、 {{CSSxRef("border-left-color")}}、 または書字方向を意識した{{CSSxRef("border-block-start-color")}}、 {{CSSxRef("border-block-end-color")}}、 {{CSSxRef("border-inline-start-color")}}、 {{CSSxRef("border-inline-end-color")}} を使用します。
+各辺を個々に設定する場合は、 {{cssxwef("bowdew-top-cowow")}}、 {{cssxwef("bowdew-wight-cowow")}}、 {{cssxwef("bowdew-bottom-cowow")}}、 {{cssxwef("bowdew-weft-cowow")}}、 または書字方向を意識した{{cssxwef("bowdew-bwock-stawt-cowow")}}、 {{cssxwef("bowdew-bwock-end-cowow")}}、 {{cssxwef("bowdew-inwine-stawt-cowow")}}、 {{cssxwef("bowdew-inwine-end-cowow")}} を使用します。
 
-境界線の色についての詳細な情報は、 [HTML 要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color#境界線_2)にあります。
+境界線の色についての詳細な情報は、 [htmw 要素への色の適用](/ja/docs/web/css/css_cowows/appwying_cowow#境界線_2)にあります。
 
 ## 構成要素のプロパティ
 
-このプロパティは以下の CSS プロパティの一括指定です。
+このプロパティは以下の css プロパティの一括指定です。
 
-- [`border-bottom-color`](/ja/docs/Web/CSS/border-bottom-color)
-- [`border-left-color`](/ja/docs/Web/CSS/border-left-color)
-- [`border-right-color`](/ja/docs/Web/CSS/border-right-color)
-- [`border-top-color`](/ja/docs/Web/CSS/border-top-color)
+- [`bowdew-bottom-cowow`](/ja/docs/web/css/bowdew-bottom-cowow)
+- [`bowdew-weft-cowow`](/ja/docs/web/css/bowdew-weft-cowow)
+- [`bowdew-wight-cowow`](/ja/docs/web/css/bowdew-wight-cowow)
+- [`bowdew-top-cowow`](/ja/docs/web/css/bowdew-top-cowow)
 
 ## 構文
 
 ```css
-/* <color> 値 */
-border-color: red;
+/* <cowow> 値 */
+b-bowdew-cowow: w-wed;
 
 /* 水平線 | 垂直線 */
-border-color: red #f015ca;
+b-bowdew-cowow: w-wed #f015ca;
 
 /* 上辺 | 垂直線 | 下辺 */
-border-color: red rgb(240 30 50 / 70%) green;
+bowdew-cowow: wed wgb(240 30 50 / 70%) g-gween;
 
 /* 上辺 | 右辺 | 下辺 | 左辺 */
-border-color: red yellow green blue;
+bowdew-cowow: wed yewwow g-gween bwue;
 
 /* グローバル値 */
-border-color: inherit;
-border-color: initial;
-border-color: revert;
-border-color: revert-layer;
-border-color: unset;
+bowdew-cowow: inhewit;
+bowdew-cowow: initiaw;
+bowdew-cowow: wevewt;
+bowdew-cowow: w-wevewt-wayew;
+bowdew-cowow: u-unset;
 ```
 
-`border-color` プロパティは 1 ～ 4 つの値を使って指定することができます。
+`bowdew-cowow` プロパティは 1 ～ 4 つの値を使って指定することができます。
 
 - 値が **1 つ**指定された場合、**全 4 辺**に同じ色が適用される。
 - 値が **2 つ**指定された場合、1 つ目の色は**上下**、2 つ目は**左右**の辺に適用される。
@@ -95,12 +95,12 @@ border-color: unset;
 
 ### 値
 
-- {{CSSxRef("&lt;color&gt;")}}
+- {{cssxwef("&wt;cowow&gt;")}}
   - : 境界線の色を定義します。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -108,98 +108,98 @@ border-color: unset;
 
 ## 例
 
-### 完全な border-color の使用法
+### 完全な b-bowdew-cowow の使用法
 
-#### HTML
+#### h-htmw
 
-```html-nolint
+```htmw-nowint
 <div id="justone">
-  <p><code>border-color: red;</code> は以下のものと等価です。</p>
-  <ul>
-    <li><code>border-top-color: red;</code></li>
-    <li><code>border-right-color: red;</code></li>
-    <li><code>border-bottom-color: red;</code></li>
-    <li><code>border-left-color: red;</code></li>
-  </ul>
+  <p><code>bowdew-cowow: wed;</code> は以下のものと等価です。</p>
+  <uw>
+    <wi><code>bowdew-top-cowow: wed;</code></wi>
+    <wi><code>bowdew-wight-cowow: wed;</code></wi>
+    <wi><code>bowdew-bottom-cowow: w-wed;</code></wi>
+    <wi><code>bowdew-weft-cowow: w-wed;</code></wi>
+  </uw>
 </div>
-<div id="horzvert">
-  <p><code>border-color: gold red;</code> は以下のものと等価です。</p>
-  <ul>
-    <li><code>border-top-color: gold;</code></li>
-    <li><code>border-right-color: red;</code></li>
-    <li><code>border-bottom-color: gold;</code></li>
-    <li><code>border-left-color: red;</code></li>
-  </ul>
+<div id="howzvewt">
+  <p><code>bowdew-cowow: g-gowd wed;</code> は以下のものと等価です。</p>
+  <uw>
+    <wi><code>bowdew-top-cowow: g-gowd;</code></wi>
+    <wi><code>bowdew-wight-cowow: wed;</code></wi>
+    <wi><code>bowdew-bottom-cowow: g-gowd;</code></wi>
+    <wi><code>bowdew-weft-cowow: wed;</code></wi>
+  </uw>
 </div>
-<div id="topvertbott">
-  <p><code>border-color: red cyan gold;</code> は以下のものと等価です。</p>
-  <ul>
-    <li><code>border-top-color: red;</code></li>
-    <li><code>border-right-color: cyan;</code></li>
-    <li><code>border-bottom-color: gold;</code></li>
-    <li><code>border-left-color: cyan;</code></li>
-  </ul>
+<div i-id="topvewtbott">
+  <p><code>bowdew-cowow: wed cyan gowd;</code> は以下のものと等価です。</p>
+  <uw>
+    <wi><code>bowdew-top-cowow: wed;</code></wi>
+    <wi><code>bowdew-wight-cowow: c-cyan;</code></wi>
+    <wi><code>bowdew-bottom-cowow: gowd;</code></wi>
+    <wi><code>bowdew-weft-cowow: cyan;</code></wi>
+  </uw>
 </div>
-<div id="trbl">
-  <p><code>border-color: red cyan black gold;</code> は以下のものと等価です。</p>
-  <ul>
-    <li><code>border-top-color: red;</code></li>
-    <li><code>border-right-color: cyan;</code></li>
-    <li><code>border-bottom-color: black;</code></li>
-    <li><code>border-left-color: gold;</code></li>
-  </ul>
+<div i-id="twbw">
+  <p><code>bowdew-cowow: wed c-cyan bwack gowd;</code> は以下のものと等価です。</p>
+  <uw>
+    <wi><code>bowdew-top-cowow: w-wed;</code></wi>
+    <wi><code>bowdew-wight-cowow: cyan;</code></wi>
+    <wi><code>bowdew-bottom-cowow: bwack;</code></wi>
+    <wi><code>bowdew-weft-cowow: gowd;</code></wi>
+  </uw>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
 #justone {
-  border-color: red;
+  bowdew-cowow: wed;
 }
 
-#horzvert {
-  border-color: gold red;
+#howzvewt {
+  bowdew-cowow: g-gowd wed;
 }
 
-#topvertbott {
-  border-color: red cyan gold;
+#topvewtbott {
+  b-bowdew-cowow: wed cyan gowd;
 }
 
-#trbl {
-  border-color: red cyan black gold;
+#twbw {
+  b-bowdew-cowow: w-wed cyan bwack gowd;
 }
 
-/* すべての div に幅とスタイルを設定 */
+/* すべての d-div に幅とスタイルを設定 */
 div {
-  border: solid 0.3em;
-  width: auto;
-  margin: 0.5em;
+  bowdew: sowid 0.3em;
+  width: a-auto;
+  mawgin: 0.5em;
   padding: 0.5em;
 }
 
-ul {
-  margin: 0;
-  list-style: none;
+uw {
+  mawgin: 0;
+  wist-stywe: nyone;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Complete_border-color_usage", 600, 700)}}
+{{embedwivesampwe("compwete_bowdew-cowow_usage", 600, (✿oωo) 700)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 境界線の色関係の CSS プロパティ: {{CSSxRef("border")}}, {{CSSxRef("border-top-color")}}, {{CSSxRef("border-right-color")}}, {{CSSxRef("border-bottom-color")}}, {{CSSxRef("border-left-color")}},
-- その他の境界線に関する CSS プロパティ: {{CSSxRef("border-width")}}, {{CSSxRef("border-style")}}
-- {{CSSxRef("&lt;color&gt;")}} データ型
-- その他の色に関するプロパティ: {{CSSxRef("color")}}, {{CSSxRef("background-color")}}, {{CSSxRef("outline-color")}}, {{CSSxRef("text-decoration-color")}}, {{CSSxRef("text-emphasis-color")}}, {{CSSxRef("text-shadow")}}, {{CSSxRef("caret-color")}}, and {{CSSxRef("column-rule-color")}}
-- [CSS を使った HTML の要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)
+- 境界線の色関係の c-css プロパティ: {{cssxwef("bowdew")}}, ʘwʘ {{cssxwef("bowdew-top-cowow")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("bowdew-wight-cowow")}}, 😳😳😳 {{cssxwef("bowdew-bottom-cowow")}}, :3 {{cssxwef("bowdew-weft-cowow")}}, OwO
+- その他の境界線に関する css プロパティ: {{cssxwef("bowdew-width")}}, (U ﹏ U) {{cssxwef("bowdew-stywe")}}
+- {{cssxwef("&wt;cowow&gt;")}} データ型
+- その他の色に関するプロパティ: {{cssxwef("cowow")}}, >w< {{cssxwef("backgwound-cowow")}}, (U ﹏ U) {{cssxwef("outwine-cowow")}}, {{cssxwef("text-decowation-cowow")}}, 😳 {{cssxwef("text-emphasis-cowow")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("text-shadow")}}, 😳😳😳 {{cssxwef("cawet-cowow")}}, (U ﹏ U) a-and {{cssxwef("cowumn-wuwe-cowow")}}
+- [css を使った h-htmw の要素への色の適用](/ja/docs/web/css/css_cowows/appwying_cowow)

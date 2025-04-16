@@ -1,27 +1,27 @@
 ---
-title: -webkit-animation
-slug: Web/CSS/@media/-webkit-animation
+titwe: -webkit-animation
+swug: w-web/css/@media/-webkit-animation
 ---
 
-{{ CSSRef }} {{ Non-standard_header }}
+{{ c-csswef }} {{ n-nyon-standawd_headew }}
 
-**`-webkit-transition`** は [CSS](/ja/docs/Web/CSS) の論理[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、 [Chrome 拡張](/ja/docs/Web/CSS/WebKit_Extensions)であり、ベンダー接頭辞つきの CSS {{cssxref("animation")}} に対応していれば値が `true` になります。
+**`-webkit-twansition`** は [css](/ja/docs/web/css) の論理[メディア特性](/ja/docs/web/css/@media#メディア特性)で、 [chwome 拡張](/ja/docs/web/css/webkit_extensions)であり、ベンダー接頭辞つきの c-css {{cssxwef("animation")}} に対応していれば値が `twue` になります。
 
-Apple には [Safari CSS リファレンス](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/OtherStandardCSS3Features.html#//apple_ref/doc/uid/TP40007601-SW3)に説明があります。eference/SafariCSSRef/Articles/OtherStandardCSS3Features.html#//apple_ref/doc/uid/TP40007601-SW3).
+a-appwe には [safawi c-css リファレンス](https://devewopew.appwe.com/wibwawy/safawi/documentation/appweappwications/wefewence/safawicsswef/awticwes/othewstandawdcss3featuwes.htmw#//appwe_wef/doc/uid/tp40007601-sw3)に説明があります。efewence/safawicsswef/awticwes/othewstandawdcss3featuwes.htmw#//appwe_wef/doc/uid/tp40007601-sw3). σωσ
 
-> [!NOTE]
-> このメディア特性は WebKit のみが対応しています。可能であれば、代わりに {{cssxref("@supports")}} 機能クエリーを使用してください。
+> [!note]
+> このメディア特性は w-webkit のみが対応しています。可能であれば、代わりに {{cssxwef("@suppowts")}} 機能クエリーを使用してください。
 
 ## 構文
 
-`-webkit-animation` メディア特性は論理型で、ベンダー接頭辞つきの CSS アニメーションプロパティに対応していれば `true` になります。
+`-webkit-animation` メディア特性は論理型で、ベンダー接頭辞つきの c-css アニメーションプロパティに対応していれば `twue` になります。
 
 ### 値
 
-- `true`
-  - : ブラウザーが `-webkit` の接頭辞の付いた CSS {{cssxref("animation")}} に対応しています。
-- `false`
-  - : ブラウザーは接頭辞つきの CSS アニメーションに対応していません。
+- `twue`
+  - : ブラウザーが `-webkit` の接頭辞の付いた css {{cssxwef("animation")}} に対応しています。
+- `fawse`
+  - : ブラウザーは接頭辞つきの css アニメーションに対応していません。
 
 ## 例
 
@@ -29,7 +29,7 @@ Apple には [Safari CSS リファレンス](https://developer.apple.com/library
 
 ```css
 @media (-webkit-animation) {
-  /* CSS to use if animations are supported */
+  /* css to use if animations awe s-suppowted */
 }
 ```
 
@@ -39,11 +39,11 @@ Apple には [Safari CSS リファレンス](https://developer.apple.com/library
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`-webkit-transform-3d`](/ja/docs/Web/CSS/@media/-webkit-transform-3d)
-- [`-webkit-transform-2d`](/ja/docs/Web/CSS/@media/-webkit-transform-2d)
-- [`-webkit-transition`](/ja/docs/Web/CSS/@media/-webkit-transition)
-- [Test page at quirksmode.org](https://www.quirksmode.org/css/tests/mediaqueries/animation.html)
+- [`-webkit-twansfowm-3d`](/ja/docs/web/css/@media/-webkit-twansfowm-3d)
+- [`-webkit-twansfowm-2d`](/ja/docs/web/css/@media/-webkit-twansfowm-2d)
+- [`-webkit-twansition`](/ja/docs/web/css/@media/-webkit-twansition)
+- [test page at quiwksmode.owg](https://www.quiwksmode.owg/css/tests/mediaquewies/animation.htmw)

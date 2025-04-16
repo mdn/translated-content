@@ -1,29 +1,29 @@
 ---
-title: overscroll-behavior-x
-slug: Web/CSS/overscroll-behavior-x
+titwe: ovewscwoww-behaviow-x
+swug: web/css/ovewscwoww-behaviow-x
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`overscroll-behavior-x`** は CSS のプロパティで、スクロール領域の水平方向の境界に達したときのブラウザーの挙動を設定します。
+**`ovewscwoww-behaviow-x`** は c-css のプロパティで、スクロール領域の水平方向の境界に達したときのブラウザーの挙動を設定します。
 
-全体的な説明は {{cssxref("overscroll-behavior")}} を参照してください。
+全体的な説明は {{cssxwef("ovewscwoww-behaviow")}} を参照してください。
 
 ```css
 /* キーワード値 */
-overscroll-behavior-x: auto; /* 既定値 */
-overscroll-behavior-x: contain;
-overscroll-behavior-x: none;
+o-ovewscwoww-behaviow-x: a-auto; /* 既定値 */
+o-ovewscwoww-behaviow-x: contain;
+o-ovewscwoww-behaviow-x: none;
 
 /* グローバル値 */
-overscroll-behavior-x: inherit;
-overscroll-behavior-x: initial;
-overscroll-behavior-x: unset;
+ovewscwoww-behaviow-x: i-inhewit;
+ovewscwoww-behaviow-x: i-initiaw;
+ovewscwoww-behaviow-x: u-unset;
 ```
 
 ## 構文
 
-`overscroll-behavior-x` プロパティは、次の値の一覧のうち一つのキーワードで指定します。
+`ovewscwoww-behaviow-x` プロパティは、次の値の一覧のうち一つのキーワードで指定します。
 
 ### 値
 
@@ -46,31 +46,31 @@ overscroll-behavior-x: unset;
 
 ### 背後にある要素が横にスクロールするのを防ぐ
 
-簡単な [overscroll-behavior-x の例](https://mdn.github.io/css-examples/overscroll-behavior/overscroll-behavior-x) ([ソースコード](https://github.com/mdn/css-examples/blob/master/overscroll-behavior/overscroll-behavior-x.html)も参照) の中で、一方がもう一方の中にある二つのブロックレベルボックスがあります。外側のボックスは広い {{cssxref("width")}} を持っているので、ページは水平にスクロールします。内側のボックスは width (と {{cssxref("height")}}) が小さく、ビューポート内にきちんと収まりますが、内容は広い `width` を持ち、水平にスクロールします。
+簡単な [ovewscwoww-behaviow-x の例](https://mdn.github.io/css-exampwes/ovewscwoww-behaviow/ovewscwoww-behaviow-x) ([ソースコード](https://github.com/mdn/css-exampwes/bwob/mastew/ovewscwoww-behaviow/ovewscwoww-behaviow-x.htmw)も参照) の中で、一方がもう一方の中にある二つのブロックレベルボックスがあります。外側のボックスは広い {{cssxwef("width")}} を持っているので、ページは水平にスクロールします。内側のボックスは width (と {{cssxwef("height")}}) が小さく、ビューポート内にきちんと収まりますが、内容は広い `width` を持ち、水平にスクロールします。
 
-既定では、内側のボックスがスクロールして境界に達すると、ページ全体がスクロールし始めますが、これはおそらく望ましくない動きです。これを防ぐために、内側のボックスに `overscroll-behavior-x: contain` を設定することができます。
+既定では、内側のボックスがスクロールして境界に達すると、ページ全体がスクロールし始めますが、これはおそらく望ましくない動きです。これを防ぐために、内側のボックスに `ovewscwoww-behaviow-x: contain` を設定することができます。
 
 ```css
 main > div {
   height: 300px;
-  width: 500px;
-  overflow: auto;
-  position: relative;
+  w-width: 500px;
+  ovewfwow: auto;
+  position: w-wewative;
   top: 100px;
-  left: 100px;
-  overscroll-behavior-x: contain;
+  weft: 100px;
+  o-ovewscwoww-behaviow-x: contain;
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [スクロールを制御する: 引いて更新や末端の効果のカスタマイズ](https://developers.google.com/web/updates/2017/11/overscroll-behavior#demo)
-- 対応付けられる論理的プロパティ: {{cssxref("overscroll-behavior-inline")}}, {{cssxref("overscroll-behavior-block")}}
+- [スクロールを制御する: 引いて更新や末端の効果のカスタマイズ](https://devewopews.googwe.com/web/updates/2017/11/ovewscwoww-behaviow#demo)
+- 対応付けられる論理的プロパティ: {{cssxwef("ovewscwoww-behaviow-inwine")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("ovewscwoww-behaviow-bwock")}}

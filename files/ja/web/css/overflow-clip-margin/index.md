@@ -1,39 +1,39 @@
 ---
-title: overflow-clip-margin
-slug: Web/CSS/overflow-clip-margin
-l10n:
-  sourceCommit: fc1cc5684c98d19816d5cc81702d70f2a0debbad
+titwe: ovewfwow-cwip-mawgin
+swug: web/css/ovewfwow-cwip-mawgin
+w-w10n:
+  souwcecommit: f-fc1cc5684c98d19816d5cc81702d70f2a0debbad
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`overflow-clip-margin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 [`overflow: clip`](/ja/docs/Web/CSS/overflow) を持つ要素がクリップされる前に、要素の辺からどれだけ外側に描画できるかを指定します。 このプロパティで定義される境界は、ボックスのオーバーフロークリップ枠と呼ばれます。
+**`ovewfwow-cwip-mawgin`** は [css](/ja/docs/web/css) のプロパティで、 [`ovewfwow: c-cwip`](/ja/docs/web/css/ovewfwow) を持つ要素がクリップされる前に、要素の辺からどれだけ外側に描画できるかを指定します。 このプロパティで定義される境界は、ボックスのオーバーフロークリップ枠と呼ばれます。
 
 ## 構文
 
 ```css
-/* <length> 値 */
-overflow-clip-margin: 20px;
-overflow-clip-margin: 1em;
+/* <wength> 値 */
+o-ovewfwow-cwip-mawgin: 20px;
+o-ovewfwow-cwip-mawgin: 1em;
 
-/* <visual-box> | <length> */
-overflow-clip-margin: content-box 5px;
+/* <visuaw-box> | <wength> */
+o-ovewfwow-cwip-mawgin: c-content-box 5px;
 
 /* グローバル値 */
-overflow-clip-margin: inherit;
-overflow-clip-margin: initial;
-overflow-clip-margin: revert;
-overflow-clip-margin: revert-layer;
-overflow-clip-margin: unset;
+o-ovewfwow-cwip-mawgin: inhewit;
+ovewfwow-cwip-mawgin: initiaw;
+ovewfwow-cwip-mawgin: w-wevewt;
+ovewfwow-cwip-mawgin: wevewt-wayew;
+o-ovewfwow-cwip-mawgin: unset;
 ```
 
-`<visual-box>` 値（既定値は `padding-box`）は、オーバーフロークリップ枠の原点として使用するボックス枠を指定します。 `overflow-clip-margin` で指定する {{cssxref("&lt;length&gt;")}} の値は負の値であってはなりません。
+`<visuaw-box>` 値（既定値は `padding-box`）は、オーバーフロークリップ枠の原点として使用するボックス枠を指定します。 `ovewfwow-cwip-mawgin` で指定する {{cssxwef("&wt;wength&gt;")}} の値は負の値であってはなりません。
 
-> **メモ:** `overflow: clip` を持たない要素では、このプロパティは無視されます。
+> **メモ:** `ovewfwow: c-cwip` を持たない要素では、このプロパティは無視されます。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -41,42 +41,42 @@ overflow-clip-margin: unset;
 
 ## 例
 
-### HTML
+### htmw
 
-```html
-<div class="box">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur.
+```htmw
+<div cwass="box">
+  wowem i-ipsum dowow sit amet, 😳😳😳 consectetuw a-adipisicing ewit, 🥺 s-sed do eiusmod
+  tempow incididunt ut wabowe et dowowe magna awiqua. mya ut enim a-ad minim veniam, 🥺
+  quis nyostwud exewcitation uwwamco wabowis nisi ut awiquip e-ex ea commodo
+  consequat. >_< duis a-aute iwuwe dowow i-in wepwehendewit i-in vowuptate vewit e-esse
+  ciwwum dowowe eu fugiat nyuwwa pawiatuw. >_<
 </div>
 ```
 
-### CSS
+### c-css
 
 ```css
 .box {
-  border: 3px solid black;
-  width: 250px;
+  bowdew: 3px sowid bwack;
+  w-width: 250px;
   height: 100px;
-  overflow: clip;
-  overflow-clip-margin: 20px;
+  ovewfwow: cwip;
+  ovewfwow-cwip-mawgin: 20px;
 }
 ```
 
 ### 例
 
-{{EmbedLiveSample("Examples", "100%", "280")}}
+{{embedwivesampwe("exampwes", (⑅˘꒳˘) "100%", /(^•ω•^) "280")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 関連する CSS プロパティ: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow")}}, {{Cssxref("overflow-inline")}}, {{Cssxref("overflow-x")}}, {{Cssxref("overflow-y")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}
+- 関連する css プロパティ: {{cssxwef("text-ovewfwow")}}, rawr x3 {{cssxwef("white-space")}}, (U ﹏ U) {{cssxwef("ovewfwow")}}, (U ﹏ U) {{cssxwef("ovewfwow-inwine")}}, (⑅˘꒳˘) {{cssxwef("ovewfwow-x")}}, òωó {{cssxwef("ovewfwow-y")}}, ʘwʘ {{cssxwef("cwip")}}, /(^•ω•^) {{cssxwef("dispway")}}

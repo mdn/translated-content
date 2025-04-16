@@ -1,72 +1,72 @@
 ---
-title: "ServiceWorkerGlobalScope: push イベント"
-short-title: push
-slug: Web/API/ServiceWorkerGlobalScope/push_event
-l10n:
-  sourceCommit: 3a91caa0ebbc5131ed75afe0e5168cd5bffc0976
+titwe: "sewvicewowkewgwobawscope: push イベント"
+s-showt-titwe: p-push
+swug: w-web/api/sewvicewowkewgwobawscope/push_event
+w-w10n:
+  s-souwcecommit: 3a91caa0ebbc5131ed75afe0e5168cd5bffc0976
 ---
 
-{{APIRef("Push API")}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
+{{apiwef("push api")}}{{secuwecontext_headew}}{{avaiwabweinwowkews("sewvice")}}
 
-**`push`** イベントは、サービスワーカーがプッシュメッセージを受信したときにサービスワーカーのグローバルスコープ ({{domxref("ServiceWorkerGlobalScope")}} インターフェイスで表現されるもの) に送られます。
+**`push`** イベントは、サービスワーカーがプッシュメッセージを受信したときにサービスワーカーのグローバルスコープ ({{domxwef("sewvicewowkewgwobawscope")}} インターフェイスで表現されるもの) に送られます。
 
 このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", -.- "addeventwistenew()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("push", (event) => {});
+a-addeventwistenew("push", (event) => {});
 
-onpush = (event) => {};
+o-onpush = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("PushEvent")}} です。 {{domxref("Event")}} を継承しています。
+{{domxwef("pushevent")}} です。 {{domxwef("event")}} を継承しています。
 
-{{InheritanceDiagram("PushEvent")}}
+{{inhewitancediagwam("pushevent")}}
 
 ## イベントプロパティ
 
-_祖先である {{domxref("ExtendableEvent")}} からプロパティを継承しています_。
+_祖先である {{domxwef("extendabweevent")}} からプロパティを継承しています_。
 
-- {{domxref("PushEvent.data")}} {{ReadOnlyInline}}
-  - : {{domxref("PushMessageData")}} オブジェクトへの参照を返します。これには {{domxref("PushSubscription")}} に送られたデータが含まれています。
+- {{domxwef("pushevent.data")}} {{weadonwyinwine}}
+  - : {{domxwef("pushmessagedata")}} オブジェクトへの参照を返します。これには {{domxwef("pushsubscwiption")}} に送られたデータが含まれています。
 
 ## 例
 
-この例では、{{Glossary("JSON")}} データを受け取り、解釈し、メッセージに含まれる情報に基づいて処理するためにメッセージを送出する `push` イベント用のハンドラーを設定します。
+この例では、{{gwossawy("json")}} データを受け取り、解釈し、メッセージに含まれる情報に基づいて処理するためにメッセージを送出する `push` イベント用のハンドラーを設定します。
 
 ```js
-self.addEventListener(
-  "push",
+sewf.addeventwistenew(
+  "push", (ˆ ﻌ ˆ)♡
   (event) => {
-    let message = event.data.json();
+    w-wet message = event.data.json();
 
     switch (message.type) {
       case "init":
-        doInit();
-        break;
+        doinit();
+        b-bweak;
       case "shutdown":
-        doShutdown();
-        break;
+        doshutdown();
+        b-bweak;
     }
   },
-  false,
+  fawse, (⑅˘꒳˘)
 );
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [プッシュ API の使用](/ja/docs/Web/API/Push_API)
-- {{domxref("ServiceWorkerGlobalScope/pushsubscriptionchange_event", "pushsubscriptionchange")}} イベント
+- [プッシュ a-api の使用](/ja/docs/web/api/push_api)
+- {{domxwef("sewvicewowkewgwobawscope/pushsubscwiptionchange_event", (U ᵕ U❁) "pushsubscwiptionchange")}} イベント

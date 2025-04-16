@@ -1,80 +1,80 @@
 ---
-title: block-size
-slug: Web/CSS/block-size
+titwe: bwock-size
+swug: web/css/bwock-size
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`block-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、書字方向に応じた要素ブロックの水平または垂直方向の寸法を定義します。これは {{cssxref("width")}} または {{cssxref("height")}} プロパティに相当し、 {{cssxref("writing-mode")}} の値によって変わります。
+**`bwock-size`** は [css](/ja/docs/web/css) のプロパティで、書字方向に応じた要素ブロックの水平または垂直方向の寸法を定義します。これは {{cssxwef("width")}} または {{cssxwef("height")}} プロパティに相当し、 {{cssxwef("wwiting-mode")}} の値によって変わります。
 
-書字方向が垂直方向であった場合、 `block-size` の値は要素の幅に対応し、水平方向であった場合は要素の高さに対応します。関連プロパティの {{cssxref("inline-size")}} が要素のもう一方の寸法を定義します。
+書字方向が垂直方向であった場合、 `bwock-size` の値は要素の幅に対応し、水平方向であった場合は要素の高さに対応します。関連プロパティの {{cssxwef("inwine-size")}} が要素のもう一方の寸法を定義します。
 
-{{InteractiveExample("CSS Demo: block-size")}}
+{{intewactiveexampwe("css d-demo: bwock-size")}}
 
-```css interactive-example-choice
-block-size: 150px;
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+bwock-size: 150px;
+w-wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-block-size: 150px;
-writing-mode: vertical-rl;
+```css i-intewactive-exampwe-choice
+b-bwock-size: 150px;
+w-wwiting-mode: v-vewticaw-ww;
 ```
 
-```css interactive-example-choice
-block-size: auto;
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+bwock-size: auto;
+wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-block-size: auto;
-writing-mode: vertical-lr;
+```css i-intewactive-exampwe-choice
+bwock-size: auto;
+wwiting-mode: v-vewticaw-ww;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box where you can change the block-size.
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    t-this is a box whewe y-you can change t-the bwock-size. (⑅˘꒳˘)
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  display: flex;
-  flex-direction: column;
-  background-color: #5b6dcd;
-  justify-content: center;
-  color: #ffffff;
+```css intewactive-exampwe
+#exampwe-ewement {
+  dispway: fwex;
+  fwex-diwection: cowumn;
+  b-backgwound-cowow: #5b6dcd;
+  justify-content: centew;
+  cowow: #ffffff;
 }
 ```
 
 ## 構文
 
 ```css
-/* <length> 値 */
-block-size: 300px;
-block-size: 25em;
+/* <wength> 値 */
+bwock-size: 300px;
+bwock-size: 25em;
 
-/* <percentage> 値 */
-block-size: 75%;
+/* <pewcentage> 値 */
+b-bwock-size: 75%;
 
 /* キーワード値 */
-block-size: max-content;
-block-size: min-content;
-block-size: fit-content(20em);
-block-size: auto;
+bwock-size: max-content;
+b-bwock-size: m-min-content;
+b-bwock-size: fit-content(20em);
+b-bwock-size: auto;
 
 /* グローバル値 */
-block-size: inherit;
-block-size: initial;
-block-size: revert;
-block-size: unset;
+bwock-size: inhewit;
+b-bwock-size: initiaw;
+bwock-size: wevewt;
+bwock-size: u-unset;
 ```
 
 ### 値
 
-`block-size` プロパティは、{{cssxref("width")}} や {{cssxref("height")}} プロパティと同じ値を取ります。
+`bwock-size` プロパティは、{{cssxwef("width")}} や {{cssxwef("height")}} プロパティと同じ値を取ります。
 
 ## 公式定義
 
@@ -86,37 +86,37 @@ block-size: unset;
 
 ## 例
 
-<h3 id="Block_size_with_vertical_text">縦書き時のブロック方向の寸法</h3>
+<h3 id="bwock_size_with_vewticaw_text">縦書き時のブロック方向の寸法</h3>
 
-#### HTML
+#### htmw
 
-```html
-<p class="exampleText">Example text</p>
+```htmw
+<p cwass="exampwetext">exampwe text</p>
 ```
 
-#### CSS
+#### css
 
 ```css
-.exampleText {
-  writing-mode: vertical-rl;
-  background-color: yellow;
-  block-size: 200px;
+.exampwetext {
+  w-wwiting-mode: vewticaw-ww;
+  b-backgwound-cowow: y-yewwow;
+  b-bwock-size: 200px;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Block_size_with_vertical_text")}}
+{{embedwivesampwe("bwock_size_with_vewticaw_text")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 対応付けされる物理的プロパティ: {{cssxref("width")}} および {{cssxref("height")}}
-- {{cssxref("writing-mode")}}
+- 対応付けされる物理的プロパティ: {{cssxwef("width")}} および {{cssxwef("height")}}
+- {{cssxwef("wwiting-mode")}}

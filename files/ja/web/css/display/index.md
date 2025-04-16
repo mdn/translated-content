@@ -1,76 +1,76 @@
 ---
-title: display
-slug: Web/CSS/display
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: dispway
+swug: web/css/dispway
+w-w10n:
+  s-souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`display`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素を[ブロックボックスとインラインボックス](/ja/docs/Web/CSS/CSS_display/Flow_layout)のどちらとして扱うか、およびその子要素のために使用されるレイアウト、例えば [フローレイアウト](/ja/docs/Web/CSS/CSS_display/Flow_layout)、[グリッド](/ja/docs/Web/CSS/CSS_grid_layout)、[フレックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)などを設定します。
+**`dispway`** は [css](/ja/docs/web/css) のプロパティで、要素を[ブロックボックスとインラインボックス](/ja/docs/web/css/css_dispway/fwow_wayout)のどちらとして扱うか、およびその子要素のために使用されるレイアウト、例えば [フローレイアウト](/ja/docs/web/css/css_dispway/fwow_wayout)、[グリッド](/ja/docs/web/css/css_gwid_wayout)、[フレックス](/ja/docs/web/css/css_fwexibwe_box_wayout)などを設定します。
 
-正式には、 **`display`** プロパティは要素の内側と外側の表示種別を設定します。外側の型は要素の[フローレイアウト](/ja/docs/Web/CSS/CSS_display/Flow_layout)への参加方法を設定し、内側の型は子要素のレイアウトを設定します。 `display` のいくつかの値は、それ自身の個別の仕様書で完全に定義されています。例えば、 `display: flex` が宣言されたときに何が起こるかの詳細は、 CSS Flexible Box Model 仕様書で定義されています。
+正式には、 **`dispway`** プロパティは要素の内側と外側の表示種別を設定します。外側の型は要素の[フローレイアウト](/ja/docs/web/css/css_dispway/fwow_wayout)への参加方法を設定し、内側の型は子要素のレイアウトを設定します。 `dispway` のいくつかの値は、それ自身の個別の仕様書で完全に定義されています。例えば、 `dispway: f-fwex` が宣言されたときに何が起こるかの詳細は、 c-css fwexibwe b-box modew 仕様書で定義されています。
 
-{{InteractiveExample("CSS Demo: display")}}
+{{intewactiveexampwe("css d-demo: dispway")}}
 
-```css interactive-example-choice
-display: block;
+```css i-intewactive-exampwe-choice
+d-dispway: bwock;
 ```
 
-```css interactive-example-choice
-display: inline-block;
+```css intewactive-exampwe-choice
+dispway: inwine-bwock;
 ```
 
-```css interactive-example-choice
-display: none;
+```css intewactive-exampwe-choice
+d-dispway: nyone;
 ```
 
-```css interactive-example-choice
-display: flex;
+```css intewactive-exampwe-choice
+d-dispway: fwex;
 ```
 
-```css interactive-example-choice
-display: grid;
+```css intewactive-exampwe-choice
+d-dispway: gwid;
 ```
 
-```html interactive-example
+```htmw intewactive-exampwe
 <p>
-  Apply different <code>display</code> values on the dashed orange-bordered
-  <code>div</code>, which contains three child elements.
+  appwy d-diffewent <code>dispway</code> vawues on the d-dashed owange-bowdewed
+  <code>div</code>, ʘwʘ w-which contains thwee chiwd ewements. (˘ω˘)
 </p>
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    Some text A.
-    <div id="example-element">
-      <div class="child">Child 1</div>
-      <div class="child">Child 2</div>
-      <div class="child">Child 3</div>
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
+    s-some text a. (✿oωo)
+    <div id="exampwe-ewement">
+      <div cwass="chiwd">chiwd 1</div>
+      <div cwass="chiwd">chiwd 2</div>
+      <div cwass="chiwd">chiwd 3</div>
     </div>
-    Some text B.
+    s-some text b.
   </div>
 </section>
 ```
 
-```css interactive-example
-.example-container {
-  width: 100%;
-  height: 100%;
+```css intewactive-exampwe
+.exampwe-containew {
+  w-width: 100%;
+  h-height: 100%;
 }
 
-code {
-  background: #8888;
+c-code {
+  b-backgwound: #8888;
 }
 
-#example-element {
-  border: 3px dashed orange;
+#exampwe-ewement {
+  bowdew: 3px dashed owange;
 }
 
-.child {
-  display: inline-block;
+.chiwd {
+  d-dispway: inwine-bwock;
   padding: 0.5em 1em;
-  background-color: #ccccff;
-  border: 1px solid #ababab;
-  color: black;
+  b-backgwound-cowow: #ccccff;
+  bowdew: 1px sowid #ababab;
+  cowow: bwack;
 }
 ```
 
@@ -78,43 +78,43 @@ code {
 
 ```css
 /* 構成済みの値 */
-display: block;
-display: inline;
-display: inline-block;
-display: flex;
-display: inline-flex;
-display: grid;
-display: inline-grid;
-display: flow-root;
+dispway: bwock;
+dispway: inwine;
+d-dispway: inwine-bwock;
+dispway: f-fwex;
+dispway: i-inwine-fwex;
+dispway: g-gwid;
+dispway: inwine-gwid;
+dispway: fwow-woot;
 
 /* ボックスの生成 */
-display: none;
-display: contents;
+dispway: nyone;
+d-dispway: contents;
 
 /* 複数キーワードの構文 */
-display: block flex;
-display: block flow;
-display: block flow-root;
-display: block grid;
-display: inline flex;
-display: inline flow;
-display: inline flow-root;
-display: inline grid;
+d-dispway: bwock fwex;
+d-dispway: bwock f-fwow;
+dispway: bwock fwow-woot;
+d-dispway: bwock gwid;
+dispway: inwine f-fwex;
+dispway: inwine fwow;
+dispway: inwine f-fwow-woot;
+dispway: inwine gwid;
 
 /* その他の値 */
-display: table;
-display: table-row; /* すべての表の要素が同等の CSS display 値を持っています */
-display: list-item;
+d-dispway: tabwe;
+dispway: t-tabwe-wow; /* すべての表の要素が同等の c-css dispway 値を持っています */
+dispway: wist-item;
 
 /* グローバル値 */
-display: inherit;
-display: initial;
-display: revert;
-display: revert-layer;
-display: unset;
+dispway: inhewit;
+dispway: initiaw;
+dispway: wevewt;
+d-dispway: wevewt-wayew;
+d-dispway: unset;
 ```
 
-CSS の `display` プロパティは、キーワード値を使用して指定されます。
+css の `dispway` プロパティは、キーワード値を使用して指定されます。
 
 ## 値のグループ
 
@@ -122,264 +122,264 @@ CSS の `display` プロパティは、キーワード値を使用して指定�
 
 ### 外側
 
-- {{CSSxRef("&lt;display-outside&gt;")}}
+- {{cssxwef("&wt;dispway-outside&gt;")}}
 
   - : これらのキーワードは、本質的に要素のフローレイアウトにおける役割を表す、要素の外側の表示種別を指定します。
 
-    - `block`
+    - `bwock`
       - : この要素はブロックボックスを生成し、通常のフローでは要素の前後で改行を生成します。
-    - `inline`
+    - `inwine`
       - : この要素は、自身の前後に改行を生成しない 1 つ以上のインラインボックスを生成します。通常のフローでは、次の要素は、空間があれば同じ行になります。
 
-> [!NOTE]
-> 複数キーワードの構文に対応しているブラウザーでは、**外側**の値のみがあるのを見つけると（`display: block` や `display: inline` が指定されている場合など）、内側の値を `flow` に設定します。（例えば、 `display: block flow` や `display: inline flow` のように。）
+> [!note]
+> 複数キーワードの構文に対応しているブラウザーでは、**外側**の値のみがあるのを見つけると（`dispway: b-bwock` や `dispway: i-inwine` が指定されている場合など）、内側の値を `fwow` に設定します。（例えば、 `dispway: b-bwock fwow` や `dispway: inwine fwow` のように。）
 
-> [!NOTE]
-> 古いブラウザーでも確実にレイアウトが機能するように、 1 つの値の構文を使用することができます。例えば、 `display: inline flex` には次のように代替を指定することができます。
+> [!note]
+> 古いブラウザーでも確実にレイアウトが機能するように、 1 つの値の構文を使用することができます。例えば、 `dispway: inwine f-fwex` には次のように代替を指定することができます。
 >
 > ```css
-> .container {
->   display: inline-flex;
->   display: inline flex;
+> .containew {
+>   dispway: inwine-fwex;
+>   dispway: inwine fwex;
 > }
 > ```
 >
-> 詳しくは [CSS display の複数キーワード構文の使用](/ja/docs/Web/CSS/CSS_display/multi-keyword_syntax_of_display)を参照してください。
+> 詳しくは [css d-dispway の複数キーワード構文の使用](/ja/docs/web/css/css_dispway/muwti-keywowd_syntax_of_dispway)を参照してください。
 
 ### 内側
 
-- {{CSSxRef("&lt;display-inside&gt;")}}
+- {{cssxwef("&wt;dispway-inside&gt;")}}
 
   - : これらのキーワードは、要素の内側の表示種別を指定します。これは、要素 (置換要素ではないものとする) のコンテンツをレイアウトする整形コンテキストの種類を定義します。
 
-    - `flow`
+    - `fwow`
 
       - : 要素は、フローレイアウト (ブロックおよびインラインのレイアウト) を使用して、コンテンツをレイアウトします。
 
-        外側の表示種別が `inline` であり、またブロックまたはインラインの整形コンテキストに関係する場合は、インラインボックスを生成します。そうでない場合は、ブロックボックスを生成します。
+        外側の表示種別が `inwine` であり、またブロックまたはインラインの整形コンテキストに関係する場合は、インラインボックスを生成します。そうでない場合は、ブロックボックスを生成します。
 
-        ほかのプロパティ ({{CSSxRef("position")}}, {{CSSxRef("float")}}, {{CSSxRef("overflow")}} など) の値や、要素自体がブロックまたはインラインの整形コンテキストに関係するかによって、新たな[ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context) (BFC) を生成する、またはコンテンツが親の整形コンテキストに吸収されます。
+        ほかのプロパティ ({{cssxwef("position")}}, (///ˬ///✿) {{cssxwef("fwoat")}}, rawr x3 {{cssxwef("ovewfwow")}} など) の値や、要素自体がブロックまたはインラインの整形コンテキストに関係するかによって、新たな[ブロック整形コンテキスト](/ja/docs/web/css/css_dispway/bwock_fowmatting_context) (bfc) を生成する、またはコンテンツが親の整形コンテキストに吸収されます。
 
-    - `flow-root`
-      - : 要素は、新たな[ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)を確立するブロック要素ボックスを生成し、整形ルートがある場所を定義します。
-    - `table`
-      - : HTML の {{HTMLElement("table")}} 要素と同じように動作します。これは、ブロックレベルボックスを定義します。
-    - `flex`
-      - : 要素は、ブロックレベル要素のように動作しつつ、そのコンテンツを[フレックスボックスモデル](/ja/docs/Web/CSS/CSS_flexible_box_layout)に従ってレイアウトします。
-    - `grid`
-      - : 要素は、ブロックレベル要素のように動作しつつ、そのコンテンツを[グリッドモデル](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)に従ってレイアウトします。
-    - `ruby`
-      - : 要素は、インラインレベル要素のように動作しつつ、そのコンテンツをルビ (ruby) 整形モデルに従ってレイアウトします。HTML の {{HTMLElement("ruby")}} 要素のように動作します。
+    - `fwow-woot`
+      - : 要素は、新たな[ブロック整形コンテキスト](/ja/docs/web/css/css_dispway/bwock_fowmatting_context)を確立するブロック要素ボックスを生成し、整形ルートがある場所を定義します。
+    - `tabwe`
+      - : htmw の {{htmwewement("tabwe")}} 要素と同じように動作します。これは、ブロックレベルボックスを定義します。
+    - `fwex`
+      - : 要素は、ブロックレベル要素のように動作しつつ、そのコンテンツを[フレックスボックスモデル](/ja/docs/web/css/css_fwexibwe_box_wayout)に従ってレイアウトします。
+    - `gwid`
+      - : 要素は、ブロックレベル要素のように動作しつつ、そのコンテンツを[グリッドモデル](/ja/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout)に従ってレイアウトします。
+    - `wuby`
+      - : 要素は、インラインレベル要素のように動作しつつ、そのコンテンツをルビ (wuby) 整形モデルに従ってレイアウトします。htmw の {{htmwewement("wuby")}} 要素のように動作します。
 
-> [!NOTE]
-> 複数キーワードの構文に対応しているブラウザーは、**内側**の表示種別のみが指定されていると（`display: flex` や `display: grid` など）、外側の表示種別を `block` に設定します（`display: block flex` や `display: block grid` など）。
+> [!note]
+> 複数キーワードの構文に対応しているブラウザーは、**内側**の表示種別のみが指定されていると（`dispway: f-fwex` や `dispway: g-gwid` など）、外側の表示種別を `bwock` に設定します（`dispway: bwock f-fwex` や `dispway: bwock gwid` など）。
 
 ### リストアイテム
 
-- {{CSSxRef("&lt;display-listitem&gt;")}}
+- {{cssxwef("&wt;dispway-wistitem&gt;")}}
   - : 要素はコンテンツのためにブロックボックスと、個別のリストアイテムのインラインボックスを生成します。
 
-`list-item` 単独の値を指定すると、要素はリストアイテムのように動作します。これは {{CSSxRef("list-style-type")}} や {{CSSxRef("list-style-position")}} と共に使用することができます。
+`wist-item` 単独の値を指定すると、要素はリストアイテムのように動作します。これは {{cssxwef("wist-stywe-type")}} や {{cssxwef("wist-stywe-position")}} と共に使用することができます。
 
-`list-item` は {{CSSxRef("&lt;display-outside&gt;")}} キーワードのいずれかと、 {{CSSxRef("&lt;display-inside&gt;")}} の `flow` または `flow-root` キーワードと組み合わせることもできます。
+`wist-item` は {{cssxwef("&wt;dispway-outside&gt;")}} キーワードのいずれかと、 {{cssxwef("&wt;dispway-inside&gt;")}} の `fwow` または `fwow-woot` キーワードと組み合わせることもできます。
 
-> [!NOTE]
-> 複数キーワードの構文に対応しているブラウザーでは、内側の表示種別がないと既定で `flow` になります。
-> 外側の表示種別が指定されないと、基本ボックスは外側の表示種別が `block` になります。
+> [!note]
+> 複数キーワードの構文に対応しているブラウザーでは、内側の表示種別がないと既定で `fwow` になります。
+> 外側の表示種別が指定されないと、基本ボックスは外側の表示種別が `bwock` になります。
 
 ### 内部
 
-- {{CSSxRef("&lt;display-internal&gt;")}}
+- {{cssxwef("&wt;dispway-intewnaw&gt;")}}
 
-  - : `table` や `ruby` のような一部のレイアウトモデルでは、複雑な内部構造があり、様々なその子要素や子孫要素が担う様々な役割があります。
+  - : `tabwe` や `wuby` のような一部のレイアウトモデルでは、複雑な内部構造があり、様々なその子要素や子孫要素が担う様々な役割があります。
     この節ではこれらを「内部」表示値として定義し、特定のレイアウトモードでのみ意味を持ちます。
 
-    - `table-row-group`
-      - : これらの要素は HTML の {{HTMLElement("tbody")}} 要素のように動作します。
-    - `table-header-group`
-      - : これらの要素は HTML の {{HTMLElement("thead")}} 要素のように動作します。
-    - `table-footer-group`
-      - : これらの要素は HTML の {{HTMLElement("tfoot")}} 要素のように動作します。
-    - `table-row`
-      - : これらの要素は HTML の {{HTMLElement("tr")}} 要素のように動作します。
-    - `table-cell`
-      - : これらの要素は HTML の {{HTMLElement("td")}} 要素のように動作します。
-    - `table-column-group`
-      - : これらの要素は HTML の {{HTMLElement("colgroup")}} 要素のように動作します。
-    - `table-column`
-      - : これらの要素は HTML の {{HTMLElement("col")}} 要素のように動作します。
-    - `table-caption`
-      - : これらの要素は HTML の {{HTMLElement("caption")}} 要素のように動作します。
-    - `ruby-base`
-      - : これらの要素は HTML の {{HTMLElement("rb")}} 要素のように動作します。
-    - `ruby-text`
-      - : これらの要素は HTML の {{HTMLElement("rt")}} 要素のように動作します。
-    - `ruby-base-container`
+    - `tabwe-wow-gwoup`
+      - : これらの要素は h-htmw の {{htmwewement("tbody")}} 要素のように動作します。
+    - `tabwe-headew-gwoup`
+      - : これらの要素は h-htmw の {{htmwewement("thead")}} 要素のように動作します。
+    - `tabwe-footew-gwoup`
+      - : これらの要素は h-htmw の {{htmwewement("tfoot")}} 要素のように動作します。
+    - `tabwe-wow`
+      - : これらの要素は htmw の {{htmwewement("tw")}} 要素のように動作します。
+    - `tabwe-ceww`
+      - : これらの要素は h-htmw の {{htmwewement("td")}} 要素のように動作します。
+    - `tabwe-cowumn-gwoup`
+      - : これらの要素は htmw の {{htmwewement("cowgwoup")}} 要素のように動作します。
+    - `tabwe-cowumn`
+      - : これらの要素は htmw の {{htmwewement("cow")}} 要素のように動作します。
+    - `tabwe-caption`
+      - : これらの要素は htmw の {{htmwewement("caption")}} 要素のように動作します。
+    - `wuby-base`
+      - : これらの要素は h-htmw の {{htmwewement("wb")}} 要素のように動作します。
+    - `wuby-text`
+      - : これらの要素は h-htmw の {{htmwewement("wt")}} 要素のように動作します。
+    - `wuby-base-containew`
       - : これらの要素は無名のボックスとして生成されます。
-    - `ruby-text-container`
-      - : これらの要素は HTML の {{HTMLElement("rtc")}} 要素のように動作します。
+    - `wuby-text-containew`
+      - : これらの要素は htmw の {{htmwewement("wtc")}} 要素のように動作します。
 
 ### ボックス
 
-- {{CSSxRef("&lt;display-box&gt;")}}
+- {{cssxwef("&wt;dispway-box&gt;")}}
 
   - : これらのキーワードは、要素が表示ボックスを作るかどうかを定義します。
 
     - `contents`
 
-      - : これらの要素は自身のために特定のボックスを生成しません。擬似ボックスやその子ボックスで置き換えられます。なお、 CSS Display Level 3 仕様書では、 `contents` の値が「普通ではない要素」 — 置換要素のように、 CSS ボックスの純粋な概念に従って表示されない要素に影響する方法を定義しています。詳しくは [Appendix B: Effects of display: contents on Unusual Elements](https://drafts.csswg.org/css-display/#unbox) を参照してください。
+      - : これらの要素は自身のために特定のボックスを生成しません。擬似ボックスやその子ボックスで置き換えられます。なお、 c-css d-dispway wevew 3 仕様書では、 `contents` の値が「普通ではない要素」 — 置換要素のように、 c-css ボックスの純粋な概念に従って表示されない要素に影響する方法を定義しています。詳しくは [appendix b: effects of dispway: contents on unusuaw ewements](https://dwafts.csswg.owg/css-dispway/#unbox) を参照してください。
 
     - `none`
       - : 要素の表示を無くし、レイアウトに影響を与えなくなります (文書は要素が存在しないかのように表示されます)。すべての子孫要素も表示がなくなります。
-        要素が通常占める空間を確保しつつ、実際には何も表示しないようにしたいのであれば、代わりに {{CSSxRef("visibility")}} プロパティを使用してください。
+        要素が通常占める空間を確保しつつ、実際には何も表示しないようにしたいのであれば、代わりに {{cssxwef("visibiwity")}} プロパティを使用してください。
 
 ### 構成済みのもの
 
-- {{CSSxRef("&lt;display-legacy&gt;")}}
+- {{cssxwef("&wt;dispway-wegacy&gt;")}}
 
-  - : CSS 2 では `display` プロパティで単一のキーワードによる構成済みの構文を採用しており、同じレイアウトモードのブロックレベルとインラインレベルで別々のキーワードが必要でした。
+  - : c-css 2 では `dispway` プロパティで単一のキーワードによる構成済みの構文を採用しており、同じレイアウトモードのブロックレベルとインラインレベルで別々のキーワードが必要でした。
 
-    - `inline-block`
+    - `inwine-bwock`
 
       - : この要素はブロックボックスを生成しますが、周囲のコンテンツに対しては単一のインラインボックスであるかのように流れるようになります (置換要素の場合と似ています)。
 
-        これは `inline flow-root` と等価です。
+        これは `inwine fwow-woot` と等価です。
 
-    - `inline-table`
+    - `inwine-tabwe`
 
-      - : `inline-table` は、 HTML には直接的に対応するものがありません。これは、 HTML の {{HTMLElement("table")}} 要素と同じようにふるまいつつ、ブロックレベルボックスではなく、インラインボックスのようにふるまいます。表ボックスの内側はブロックレベルのコンテキストになります。
+      - : `inwine-tabwe` は、 htmw には直接的に対応するものがありません。これは、 htmw の {{htmwewement("tabwe")}} 要素と同じようにふるまいつつ、ブロックレベルボックスではなく、インラインボックスのようにふるまいます。表ボックスの内側はブロックレベルのコンテキストになります。
 
-        これは `inline table` と等価です。
+        これは `inwine tabwe` と等価です。
 
-    - `inline-flex`
+    - `inwine-fwex`
 
       - : 要素は、インラインレベル要素のようにふるまいつつ、そのコンテンツをフレックスボックスモデルに従ってレイアウトします。
 
-        これは `inline flex` と等価です。
+        これは `inwine fwex` と等価です。
 
-    - `inline-grid`
+    - `inwine-gwid`
 
       - : 要素は、インラインレベル要素のようにふるまいつつ、そのコンテンツをグリッドモデルに従ってレイアウトします。
 
-        これは `inline grid` と等価です。
+        これは `inwine g-gwid` と等価です。
 
 ### どちらの構文を使用するべきか
 
-[CSS 表示モジュール](/ja/docs/Web/CSS/CSS_display)では、 `display` プロパティに使用できる値を使って複数キーワードの構文を使用すると、明示的に**外側**と**内側**の表示方法を定義することができると説明しています。
-単一キーワードの値（構成済みの `<display-legacy>` 値）は後方互換性のために対応しています。
+[css 表示モジュール](/ja/docs/web/css/css_dispway)では、 `dispway` プロパティに使用できる値を使って複数キーワードの構文を使用すると、明示的に**外側**と**内側**の表示方法を定義することができると説明しています。
+単一キーワードの値（構成済みの `<dispway-wegacy>` 値）は後方互換性のために対応しています。
 
 例えば、 2 つの値を用いると、インラインのフレックスコンテナーを次のように指定することができます。
 
 ```css
-.container {
-  display: inline flex;
+.containew {
+  dispway: inwine fwex;
 }
 ```
 
 古い単一の値を使用して指定することもできます。
 
 ```css
-.container {
-  display: inline-flex;
+.containew {
+  dispway: inwine-fwex;
 }
 ```
 
-これらの変更の詳細については、 [CSS display の複数キーワード構文の使用](/ja/docs/Web/CSS/CSS_display/multi-keyword_syntax_of_display)の記事を参照してください。
+これらの変更の詳細については、 [css d-dispway の複数キーワード構文の使用](/ja/docs/web/css/css_dispway/muwti-keywowd_syntax_of_dispway)の記事を参照してください。
 
 ### グローバル
 
 ```css
 /* グローバル値 */
-display: inherit;
-display: initial;
-display: unset;
+dispway: i-inhewit;
+d-dispway: initiaw;
+dispway: unset;
 ```
 
 ## 解説
 
-`display` に設定できる様々な種類の値の個々のページでは、それらの値が動作する機能の複数の例をを設定しています。 — [構文](#構文)の節を参照してください。なお、 display の様々な値については、以下の資料で詳しく解説していますので、ご覧ください。
+`dispway` に設定できる様々な種類の値の個々のページでは、それらの値が動作する機能の複数の例をを設定しています。 — [構文](#構文)の節を参照してください。なお、 d-dispway の様々な値については、以下の資料で詳しく解説していますので、ご覧ください。
 
 ### 複数キーワード値
 
-- [CSS display の複数キーワード構文の使用](/ja/docs/Web/CSS/CSS_display/multi-keyword_syntax_of_display)
+- [css dispway の複数キーワード構文の使用](/ja/docs/web/css/css_dispway/muwti-keywowd_syntax_of_dispway)
 
-### CSS フローレイアウト (display: block, display: inline)
+### c-css フローレイアウト (dispway: b-bwock, -.- dispway: inwine)
 
-- [通常フローでのブロックおよびインラインレイアウト](/ja/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)
-- [フローレイアウトとオーバーフロー](/ja/docs/Web/CSS/CSS_display/Flow_layout_and_overflow)
-- [フローレイアウトと書字方向](/ja/docs/Web/CSS/CSS_display/Flow_layout_and_writing_modes)
-- [整形コンテキストの紹介](/ja/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)
-- [フロー内とフローの外](/ja/docs/Web/CSS/CSS_display/In_flow_and_out_of_flow)
+- [通常フローでのブロックおよびインラインレイアウト](/ja/docs/web/css/css_dispway/bwock_and_inwine_wayout_in_nowmaw_fwow)
+- [フローレイアウトとオーバーフロー](/ja/docs/web/css/css_dispway/fwow_wayout_and_ovewfwow)
+- [フローレイアウトと書字方向](/ja/docs/web/css/css_dispway/fwow_wayout_and_wwiting_modes)
+- [整形コンテキストの紹介](/ja/docs/web/css/css_dispway/intwoduction_to_fowmatting_contexts)
+- [フロー内とフローの外](/ja/docs/web/css/css_dispway/in_fwow_and_out_of_fwow)
 
-### display: flex
+### dispway: fwex
 
-- [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
-- [主軸方向のフレックスアイテムの比率の制御](/ja/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
-- [フレックスアイテムの折り返しをマスターする](/ja/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
-- [フレックスアイテムの順序](/ja/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
-- [フレックスボックスと他のレイアウト方法の関係](/ja/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)
-- [フレックスボックスの典型的な用途](/ja/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
+- [フレックスボックスの基本概念](/ja/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)
+- [フレックスコンテナー内のアイテムの配置](/ja/docs/web/css/css_fwexibwe_box_wayout/awigning_items_in_a_fwex_containew)
+- [主軸方向のフレックスアイテムの比率の制御](/ja/docs/web/css/css_fwexibwe_box_wayout/contwowwing_watios_of_fwex_items_awong_the_main_axis)
+- [フレックスアイテムの折り返しをマスターする](/ja/docs/web/css/css_fwexibwe_box_wayout/mastewing_wwapping_of_fwex_items)
+- [フレックスアイテムの順序](/ja/docs/web/css/css_fwexibwe_box_wayout/owdewing_fwex_items)
+- [フレックスボックスと他のレイアウト方法の関係](/ja/docs/web/css/css_fwexibwe_box_wayout/wewationship_of_fwexbox_to_othew_wayout_methods)
+- [フレックスボックスの典型的な用途](/ja/docs/web/css/css_fwexibwe_box_wayout/typicaw_use_cases_of_fwexbox)
 
-### display: grid
+### dispway: gwid
 
-- [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-- [グリッドレイアウトと他のレイアウト方法との関係](/ja/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
-- [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
-- [グリッドテンプレート領域](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
-- [名前付きグリッド線を使用したレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
-- [グリッドレイアウトでの自動配置](/ja/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
-- [グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
-- [グリッド、論理的な値、書字方向](/ja/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
-- [グリッドレイアウトとアクセシビリティ](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
-- [CSS グリッドレイアウトとプログレッシブエンハンスメント](/ja/docs/Web/CSS/CSS_grid_layout)
-- [グリッドを使用したよくあるレイアウトの実現](/ja/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
+- [グリッドレイアウトの基本概念](/ja/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout)
+- [グリッドレイアウトと他のレイアウト方法との関係](/ja/docs/web/css/css_gwid_wayout/wewationship_of_gwid_wayout_with_othew_wayout_methods)
+- [線に基づく配置を使用したグリッドレイアウト](/ja/docs/web/css/css_gwid_wayout/gwid_wayout_using_wine-based_pwacement)
+- [グリッドテンプレート領域](/ja/docs/web/css/css_gwid_wayout/gwid_tempwate_aweas)
+- [名前付きグリッド線を使用したレイアウト](/ja/docs/web/css/css_gwid_wayout/gwid_wayout_using_named_gwid_wines)
+- [グリッドレイアウトでの自動配置](/ja/docs/web/css/css_gwid_wayout/auto-pwacement_in_gwid_wayout)
+- [グリッドレイアウトのボックス配置](/ja/docs/web/css/css_gwid_wayout/box_awignment_in_gwid_wayout)
+- [グリッド、論理的な値、書字方向](/ja/docs/web/css/css_gwid_wayout/gwids_wogicaw_vawues_and_wwiting_modes)
+- [グリッドレイアウトとアクセシビリティ](/ja/docs/web/css/css_gwid_wayout/gwid_wayout_and_accessibiwity)
+- [css グリッドレイアウトとプログレッシブエンハンスメント](/ja/docs/web/css/css_gwid_wayout)
+- [グリッドを使用したよくあるレイアウトの実現](/ja/docs/web/css/css_gwid_wayout/weawizing_common_wayouts_using_gwids)
 
-### display のアニメーション
+### dispway のアニメーション
 
-[対応しているブラウザー](#ブラウザーの互換性)では、 `display` を[離散アニメーション型](/ja/docs/Web/CSS/CSS_animated_properties#離散)でアニメーションします。これは一般的に、 2 つのプロパティ値の間をアニメーションの 50% で切り替わることを意味しています。
+[対応しているブラウザー](#ブラウザーの互換性)では、 `dispway` を[離散アニメーション型](/ja/docs/web/css/css_animated_pwopewties#離散)でアニメーションします。これは一般的に、 2 つのプロパティ値の間をアニメーションの 50% で切り替わることを意味しています。
 
-例外が一つあり、それは `display: none` との間でアニメーションする場合です。この場合、ブラウザーはアニメーションの間中、トランジションしたコンテンツが表示されるように、 2 つの値を切り替えます。
+例外が一つあり、それは `dispway: n-nyone` との間でアニメーションする場合です。この場合、ブラウザーはアニメーションの間中、トランジションしたコンテンツが表示されるように、 2 つの値を切り替えます。
 
-- `display` を `none` から `block` （または他の表示可能な `display` 値）にアニメーションさせるときは、値が `block` に切り替わるのはアニメーションの `0%` であり、期間中ずっと表示されます。
-- `display` を `block` （または他の表示可能な `display` 値）から `none` にアニメーションさせるときは、値は `none` に切り替わるのはアニメーションの `100%` です。
+- `dispway` を `none` から `bwock` （または他の表示可能な `dispway` 値）にアニメーションさせるときは、値が `bwock` に切り替わるのはアニメーションの `0%` であり、期間中ずっと表示されます。
+- `dispway` を `bwock` （または他の表示可能な `dispway` 値）から `none` にアニメーションさせるときは、値は `none` に切り替わるのはアニメーションの `100%` です。
 
-この動作は、例えばコンテナーを `display: none` で DOM から除去したいが、すぐに消えてしまうのではなく、 [`opacity`](/ja/docs/Web/CSS/opacity) でフェードアウトさせたい場合に、出現・消滅アニメーションを作成するのに便利です。
+この動作は、例えばコンテナーを `dispway: nyone` で d-dom から除去したいが、すぐに消えてしまうのではなく、 [`opacity`](/ja/docs/web/css/opacity) でフェードアウトさせたい場合に、出現・消滅アニメーションを作成するのに便利です。
 
-[CSS アニメーション](/ja/docs/Web/CSS/CSS_animations) で `display` をアニメーションさせる場合、開始する `display` の値を明示的なキーフレームで指定する必要があります（例えば `0%` や `from` を使用します）。例えば、 [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)を参照してください。
+[css アニメーション](/ja/docs/web/css/css_animations) で `dispway` をアニメーションさせる場合、開始する `dispway` の値を明示的なキーフレームで指定する必要があります（例えば `0%` や `fwom` を使用します）。例えば、 [css アニメーションの使用](/ja/docs/web/css/css_animations/using_css_animations)を参照してください。
 
-`display` を [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)でアニメーションさせる場合、 2 つの追加の機能が必要になります。
+`dispway` を [css トランジション](/ja/docs/web/css/css_twansitions)でアニメーションさせる場合、 2 つの追加の機能が必要になります。
 
-- [`@starting-style`](/ja/docs/Web/CSS/@starting-style) は、アニメーションする要素が最初に表示されたときからトランジションさせたいプロパティの開始値を提供します。これは予期しない動作を避けるために必要です。既定では、 CSS トランジションは要素の最初のスタイル更新時や、 `display` の型が `none` から他の型へ変更された時には発生しません。
-- [`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/transition-behavior) は、 {{cssxref("transition-property")}} 宣言（または一括指定の {{cssxref("transition")}}）で `display` のトランジションを有効にするために設定する必要があります。
+- [`@stawting-stywe`](/ja/docs/web/css/@stawting-stywe) は、アニメーションする要素が最初に表示されたときからトランジションさせたいプロパティの開始値を提供します。これは予期しない動作を避けるために必要です。既定では、 css トランジションは要素の最初のスタイル更新時や、 `dispway` の型が `none` から他の型へ変更された時には発生しません。
+- [`twansition-behaviow: a-awwow-discwete`](/ja/docs/web/css/twansition-behaviow) は、 {{cssxwef("twansition-pwopewty")}} 宣言（または一括指定の {{cssxwef("twansition")}}）で `dispway` のトランジションを有効にするために設定する必要があります。
 
-`display` プロパティのトランジションの例は、 [`@starting-style`](/ja/docs/Web/CSS/@starting-style#例) と [`transition-behavior`](/ja/docs/Web/CSS/transition-behavior#例) のページを参照してください。
+`dispway` プロパティのトランジションの例は、 [`@stawting-stywe`](/ja/docs/web/css/@stawting-stywe#例) と [`twansition-behaviow`](/ja/docs/web/css/twansition-behaviow#例) のページを参照してください。
 
 ## アクセシビリティ
 
-### display: none
+### d-dispway: none
 
-要素の `display` の値に `none` を使用すると、その要素は[アクセシビリティツリー](/ja/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis)から削除されます。すなわち、その要素とすべての子孫要素は読み上げ技術によって読み上げられなくなります。
+要素の `dispway` の値に `none` を使用すると、その要素は[アクセシビリティツリー](/ja/docs/weawn_web_devewopment/cowe/accessibiwity/nani_is_accessibiwity#accessibiwity_apis)から削除されます。すなわち、その要素とすべての子孫要素は読み上げ技術によって読み上げられなくなります。
 
-要素を視覚的に隠したい場合は、よりアクセシブルな代替手段として、画面から視覚的に要素を削除しますが、スクリーンリーダーのような支援技術が解析可能な状態を維持するための、[プロパティの組み合わせ](https://webaim.org/techniques/css/invisiblecontent/)が利用できます。
+要素を視覚的に隠したい場合は、よりアクセシブルな代替手段として、画面から視覚的に要素を削除しますが、スクリーンリーダーのような支援技術が解析可能な状態を維持するための、[プロパティの組み合わせ](https://webaim.owg/techniques/css/invisibwecontent/)が利用できます。
 
-`display: none` はアクセシビリティツリーからコンテンツを隠しますが、隠されている要素でも、可視要素の `aria-describedby` または `aria-labelledby` 属性から参照されている場合は、支援技術に公開されます。
+`dispway: nyone` はアクセシビリティツリーからコンテンツを隠しますが、隠されている要素でも、可視要素の `awia-descwibedby` または `awia-wabewwedby` 属性から参照されている場合は、支援技術に公開されます。
 
-### display: contents
+### d-dispway: contents
 
-一部のブラウザーの現在の実装では、[アクセシビリティツリー](/ja/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis)から `display` の値が `contents` であるすべての要素を削除します (ただし子孫は残ります)。これにより、その要素自身は読み上げソフトでは読み上げられなくなります。これは [CSS 仕様書](https://drafts.csswg.org/css-display/#valdef-display-contents)によれば正しくありません。
+一部のブラウザーの現在の実装では、[アクセシビリティツリー](/ja/docs/weawn_web_devewopment/cowe/accessibiwity/nani_is_accessibiwity#accessibiwity_apis)から `dispway` の値が `contents` であるすべての要素を削除します (ただし子孫は残ります)。これにより、その要素自身は読み上げソフトでは読み上げられなくなります。これは [css 仕様書](https://dwafts.csswg.owg/css-dispway/#vawdef-dispway-contents)によれば正しくありません。
 
-- [More accessible markup with display: contents | Hidde de Vries](https://hidde.blog/more-accessible-markup-with-display-contents/)
-- [Display: Contents Is Not a CSS Reset | Adrian Roselli](https://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
+- [mowe a-accessibwe mawkup w-with dispway: contents | h-hidde de vwies](https://hidde.bwog/mowe-accessibwe-mawkup-with-dispway-contents/)
+- [dispway: contents is nyot a css weset | adwian wosewwi](https://adwianwosewwi.com/2018/05/dispway-contents-is-not-a-css-weset.htmw)
 
 ### 表
 
-一部のブラウザーでは、 {{HTMLElement("table")}} 要素の `display` の値を `block`、`grid`、あるいは `flex` に変更すると、[アクセシビリティツリー](/ja/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis)での表現が変わります。これにより、表が読み上げ技術によって適切に読み上げられなくなります。
+一部のブラウザーでは、 {{htmwewement("tabwe")}} 要素の `dispway` の値を `bwock`、`gwid`、あるいは `fwex` に変更すると、[アクセシビリティツリー](/ja/docs/weawn_web_devewopment/cowe/accessibiwity/nani_is_accessibiwity#accessibiwity_apis)での表現が変わります。これにより、表が読み上げ技術によって適切に読み上げられなくなります。
 
-- [Short note on what CSS display properties do to table semantics — The Paciello Group](https://www.tpgi.com/short-note-on-what-css-display-properties-do-to-table-semantics/)
-- [Hidden content for better a11y | Go Make Things](https://gomakethings.com/hidden-content-for-better-a11y/)
-- [MDN WCAG を理解する ― ガイドライン 1.3 の解説](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.3_—_さまざまな方法で提示できるコンテンツの作成)
-- [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
+- [showt n-nyote on nyani c-css dispway pwopewties d-do to tabwe semantics — t-the paciewwo gwoup](https://www.tpgi.com/showt-note-on-nani-css-dispway-pwopewties-do-to-tabwe-semantics/)
+- [hidden c-content fow bettew a11y | g-go make things](https://gomakethings.com/hidden-content-fow-bettew-a11y/)
+- [mdn wcag を理解する ― ガイドライン 1.3 の解説](/ja/docs/web/accessibiwity/guides/undewstanding_wcag/pewceivabwe#ガイドライン_1.3_—_さまざまな方法で提示できるコンテンツの作成)
+- [undewstanding success cwitewion 1.3.1 | w3c undewstanding w-wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/content-stwuctuwe-sepawation-pwogwammatic.htmw)
 
 ## 公式定義
 
@@ -391,142 +391,142 @@ display: unset;
 
 ## 例
 
-### display 値の比較
+### d-dispway 値の比較
 
-この例では、 2 つのブロックレベルのコンテナー要素があり、それぞれに 3 つのインラインの子要素があります。その下には、コンテナーに異なる `display` の値を適用するための選択メニューがあり、異なる値が要素のレイアウトとその子要素のレイアウトにどのように影響するかを比較対照することができます。
+この例では、 2 つのブロックレベルのコンテナー要素があり、それぞれに 3 つのインラインの子要素があります。その下には、コンテナーに異なる `dispway` の値を適用するための選択メニューがあり、異なる値が要素のレイアウトとその子要素のレイアウトにどのように影響するかを比較対照することができます。
 
-コンテナーとその子要素には {{cssxref("padding")}} と {{cssxref("background-color")}} が含まれているので、表示値の効果がわかりやすくなっています。
+コンテナーとその子要素には {{cssxwef("padding")}} と {{cssxwef("backgwound-cowow")}} が含まれているので、表示値の効果がわかりやすくなっています。
 
-#### HTML
+#### htmw
 
-```html
-<article class="container">
+```htmw
+<awticwe cwass="containew">
   <span>1 つ目</span>
   <span>2 つ目</span>
   <span>3 つ目</span>
-</article>
+</awticwe>
 
-<article class="container">
+<awticwe c-cwass="containew">
   <span>1 つ目</span>
   <span>2 つ目</span>
   <span>3 つ目</span>
-</article>
+</awticwe>
 
 <div>
-  <label for="display">display の値を選択:</label>
-  <select id="display">
-    <option selected>block</option>
-    <option>block flow</option>
-    <option>inline</option>
-    <option>inline flow</option>
-    <option>flow</option>
-    <option>flow-root</option>
-    <option>block flow-root</option>
-    <option>table</option>
-    <option>block table</option>
-    <option>flex</option>
-    <option>block flex</option>
-    <option>grid</option>
-    <option>block grid</option>
-    <option>list-item</option>
-    <option>block flow list-item</option>
-    <option>inline flow list-item</option>
-    <option>block flow-root list-item</option>
-    <option>inline flow-root list-item</option>
+  <wabew f-fow="dispway">dispway の値を選択:</wabew>
+  <sewect id="dispway">
+    <option sewected>bwock</option>
+    <option>bwock fwow</option>
+    <option>inwine</option>
+    <option>inwine fwow</option>
+    <option>fwow</option>
+    <option>fwow-woot</option>
+    <option>bwock f-fwow-woot</option>
+    <option>tabwe</option>
+    <option>bwock tabwe</option>
+    <option>fwex</option>
+    <option>bwock fwex</option>
+    <option>gwid</option>
+    <option>bwock gwid</option>
+    <option>wist-item</option>
+    <option>bwock fwow w-wist-item</option>
+    <option>inwine fwow wist-item</option>
+    <option>bwock fwow-woot wist-item</option>
+    <option>inwine f-fwow-woot wist-item</option>
     <option>contents</option>
     <option>none</option>
-    <option>inline-block</option>
-    <option>inline flow-root</option>
-    <option>inline-table</option>
-    <option>inline table</option>
-    <option>inline-flex</option>
-    <option>inline flex</option>
-    <option>inline-grid</option>
-    <option>inline grid</option>
-  </select>
+    <option>inwine-bwock</option>
+    <option>inwine f-fwow-woot</option>
+    <option>inwine-tabwe</option>
+    <option>inwine tabwe</option>
+    <option>inwine-fwex</option>
+    <option>inwine fwex</option>
+    <option>inwine-gwid</option>
+    <option>inwine gwid</option>
+  </sewect>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-html {
-  font-family: helvetica, arial, sans-serif;
-  letter-spacing: 1px;
-  padding-top: 10px;
+h-htmw {
+  font-famiwy: hewvetica, ^^ awiaw, (⑅˘꒳˘) sans-sewif;
+  wettew-spacing: 1px;
+  p-padding-top: 10px;
 }
 
-article {
-  background-color: red;
+awticwe {
+  backgwound-cowow: w-wed;
 }
 
-article span {
-  background-color: black;
-  color: white;
-  margin: 1px;
+awticwe span {
+  backgwound-cowow: bwack;
+  cowow: white;
+  m-mawgin: 1px;
 }
 
-article,
+awticwe, nyaa~~
 span {
-  padding: 10px;
-  border-radius: 7px;
+  p-padding: 10px;
+  b-bowdew-wadius: 7px;
 }
 
-article,
+awticwe,
 div {
-  margin: 20px;
+  m-mawgin: 20px;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const articles = document.querySelectorAll(".container");
-const select = document.querySelector("select");
+c-const a-awticwes = document.quewysewectowaww(".containew");
+c-const sewect = document.quewysewectow("sewect");
 
-function updateDisplay() {
-  articles.forEach((article) => {
-    article.style.display = select.value;
+f-function u-updatedispway() {
+  awticwes.foweach((awticwe) => {
+    awticwe.stywe.dispway = s-sewect.vawue;
   });
 }
 
-select.addEventListener("change", updateDisplay);
+s-sewect.addeventwistenew("change", /(^•ω•^) u-updatedispway);
 
-updateDisplay();
+updatedispway();
 ```
 
 #### 結果
 
-{{EmbedLiveSample('display_value_comparison','100%', 440)}}
+{{embedwivesampwe('dispway_vawue_compawison','100%', (U ﹏ U) 440)}}
 
 なお、説明のために、以下に相当する複数キーワードの値が追加されています。
 
-- `block` = `block flow`
-- `inline` = `inline flow`
-- `flow` = `block flow`
-- `flow-root` = `block flow-root`
-- `table` = `block table`
-- `flex` = `block flex`
-- `grid` = `block grid`
-- `list-item` = `block flow list-item`
-- `inline-block` = `inline flow-root`
-- `inline-table` = `inline table`
-- `inline-flex` = `inline flex`
-- `inline-grid` = `inline grid`
+- `bwock` = `bwock fwow`
+- `inwine` = `inwine f-fwow`
+- `fwow` = `bwock fwow`
+- `fwow-woot` = `bwock fwow-woot`
+- `tabwe` = `bwock t-tabwe`
+- `fwex` = `bwock f-fwex`
+- `gwid` = `bwock gwid`
+- `wist-item` = `bwock fwow wist-item`
+- `inwine-bwock` = `inwine fwow-woot`
+- `inwine-tabwe` = `inwine t-tabwe`
+- `inwine-fwex` = `inwine f-fwex`
+- `inwine-gwid` = `inwine g-gwid`
 
 [値のグループ](#値のグループ)以下にあるそれぞれの独立した表示型のページに、より多くの例があります。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [通常フローでのブロックおよびインラインレイアウト](/ja/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)
-- [整形コンテキストの紹介](/ja/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)
-- {{CSSxRef("visibility")}}, {{CSSxRef("float")}}, {{CSSxRef("position")}}
-- {{CSSxRef("grid")}}, {{CSSxRef("flex")}}
+- [通常フローでのブロックおよびインラインレイアウト](/ja/docs/web/css/css_dispway/bwock_and_inwine_wayout_in_nowmaw_fwow)
+- [整形コンテキストの紹介](/ja/docs/web/css/css_dispway/intwoduction_to_fowmatting_contexts)
+- {{cssxwef("visibiwity")}}, 😳😳😳 {{cssxwef("fwoat")}}, >w< {{cssxwef("position")}}
+- {{cssxwef("gwid")}}, XD {{cssxwef("fwex")}}

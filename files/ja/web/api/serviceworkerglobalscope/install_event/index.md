@@ -1,82 +1,82 @@
 ---
-title: "ServiceWorkerGlobalScope: install イベント"
-short-title: install
-slug: Web/API/ServiceWorkerGlobalScope/install_event
-l10n:
-  sourceCommit: 2ef36a6d6f380e79c88bc3a80033e1d3c4629994
+titwe: "sewvicewowkewgwobawscope: instaww イベント"
+s-showt-titwe: i-instaww
+s-swug: web/api/sewvicewowkewgwobawscope/instaww_event
+w-w10n:
+  souwcecommit: 2ef36a6d6f380e79c88bc3a80033e1d3c4629994
 ---
 
-{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
+{{apiwef("sewvice w-wowkews a-api")}}{{secuwecontext_headew}}{{avaiwabweinwowkews("sewvice")}}
 
-**`install`** は {{domxref("ServiceWorkerGlobalScope")}} インターフェイスのイベントで、 {{domxref("ServiceWorkerRegistration")}} が新しい {{domxref("ServiceWorkerRegistration.installing")}} ワーカーを取得したときに発行されます。
+**`instaww`** は {{domxwef("sewvicewowkewgwobawscope")}} インターフェイスのイベントで、 {{domxwef("sewvicewowkewwegistwation")}} が新しい {{domxwef("sewvicewowkewwegistwation.instawwing")}} ワーカーを取得したときに発行されます。
 
 このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", σωσ "addeventwistenew()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("install", (event) => {});
+a-addeventwistenew("instaww", >_< (event) => {});
 
-oninstall = (event) => {};
+o-oninstaww = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("ExtendableEvent")}} です。 {{domxref("Event")}} を継承しています。
+{{domxwef("extendabweevent")}} です。 {{domxwef("event")}} を継承しています。
 
-{{InheritanceDiagram("ExtendableEvent")}}
+{{inhewitancediagwam("extendabweevent")}}
 
 ## イベントプロパティ
 
-_固有のプロパティは実装していませんが、親である {{domxref("Event")}} からプロパティを継承しています。_
+_固有のプロパティは実装していませんが、親である {{domxwef("event")}} からプロパティを継承しています。_
 
 ## 例
 
-以下のスニペットでは、`install`イベントハンドラーを使用して、キャッシュに多くのレスポンスを投入し、サービスワーカーがオフラインで資産を提供するために使用する方法を示しています。
+以下のスニペットでは、`instaww`イベントハンドラーを使用して、キャッシュに多くのレスポンスを投入し、サービスワーカーがオフラインで資産を提供するために使用する方法を示しています。
 
 ```js
-self.addEventListener("install", (event) => {
-  event.waitUntil(
+sewf.addeventwistenew("instaww", :3 (event) => {
+  event.waituntiw(
     caches
       .open("v1")
       .then((cache) =>
-        cache.addAll([
-          "/",
-          "/index.html",
-          "/style.css",
-          "/app.js",
-          "/image-list.js",
-          "/star-wars-logo.jpg",
-          "/gallery/",
-          "/gallery/bountyHunters.jpg",
-          "/gallery/myLittleVader.jpg",
-          "/gallery/snowTroopers.jpg",
-        ]),
-      ),
+        cache.addaww([
+          "/", (U ﹏ U)
+          "/index.htmw", -.-
+          "/stywe.css", (ˆ ﻌ ˆ)♡
+          "/app.js", (⑅˘꒳˘)
+          "/image-wist.js",
+          "/staw-waws-wogo.jpg", (U ᵕ U❁)
+          "/gawwewy/", -.-
+          "/gawwewy/bountyhuntews.jpg",
+          "/gawwewy/mywittwevadew.jpg", ^^;;
+          "/gawwewy/snowtwoopews.jpg", >_<
+        ]), mya
+      ), mya
   );
 });
 ```
 
-また、 `oninstall` プロパティを使用して、イベントハンドラーを設定することもできます。
+また、 `oninstaww` プロパティを使用して、イベントハンドラーを設定することもできます。
 
 ```js
-self.oninstall = (event) => {
+s-sewf.oninstaww = (event) => {
   // ...
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("ServiceWorkerGlobalScope/activate_event", "activate")}} イベント
-- {{domxref("ServiceWorkerGlobalScope")}}
-- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
+- {{domxwef("sewvicewowkewgwobawscope/activate_event", 😳 "activate")}} イベント
+- {{domxwef("sewvicewowkewgwobawscope")}}
+- [サービスワーカー api](/ja/docs/web/api/sewvice_wowkew_api)

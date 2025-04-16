@@ -1,96 +1,96 @@
 ---
-title: order
-slug: Web/CSS/order
+titwe: owdew
+swug: web/css/owdew
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`order`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フレックスコンテナーやグリッドコンテナーの中で、アイテムを並べる順序を設定します。コンテナー内のアイテムは `order` の値の昇順に配置され、さらにソースコード内の順序で配置されます。
+**`owdew`** は [css](/ja/docs/web/css) のプロパティで、フレックスコンテナーやグリッドコンテナーの中で、アイテムを並べる順序を設定します。コンテナー内のアイテムは `owdew` の値の昇順に配置され、さらにソースコード内の順序で配置されます。
 
-{{InteractiveExample("CSS Demo: order")}}
+{{intewactiveexampwe("css d-demo: owdew")}}
 
-```css interactive-example-choice
-order: 0;
+```css i-intewactive-exampwe-choice
+o-owdew: 0;
 ```
 
-```css interactive-example-choice
-order: 3;
+```css i-intewactive-exampwe-choice
+o-owdew: 3;
 ```
 
-```css interactive-example-choice
-order: -1;
+```css i-intewactive-exampwe-choice
+o-owdew: -1;
 ```
 
-```css interactive-example-choice
-order: 2;
+```css i-intewactive-exampwe-choice
+owdew: 2;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">Box 1:</div>
-  <div style="order: 1">Box 2: <code>order: 1;</code></div>
-  <div style="order: 2">Box 3: <code>order: 2;</code></div>
-  <div style="order: 2">Box 4: <code>order: 2;</code></div>
-  <div style="order: 3">Box 5: <code>order: 3;</code></div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">box 1:</div>
+  <div stywe="owdew: 1">box 2: <code>owdew: 1;</code></div>
+  <div s-stywe="owdew: 2">box 3: <code>owdew: 2;</code></div>
+  <div stywe="owdew: 2">box 4: <code>owdew: 2;</code></div>
+  <div s-stywe="owdew: 3">box 5: <code>owdew: 3;</code></div>
 </section>
 ```
 
-```css interactive-example
-.default-example {
+```css intewactive-exampwe
+.defauwt-exampwe {
   max-height: 300px;
-  display: flex;
-  flex-flow: column;
+  dispway: f-fwex;
+  fwex-fwow: cowumn;
 }
 
-.default-example > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
-  margin: 0.5rem;
-  padding: 0.5rem;
-  flex: 1;
+.defauwt-exampwe > d-div {
+  backgwound-cowow: w-wgba(0, ( ͡o ω ͡o ) 0, (U ﹏ U) 255, 0.2);
+  bowdew: 3px sowid bwue;
+  mawgin: 0.5wem;
+  padding: 0.5wem;
+  fwex: 1;
 }
 
-#example-element {
-  background-color: rgba(255, 0, 200, 0.2);
-  border: 3px solid rebeccapurple;
+#exampwe-ewement {
+  backgwound-cowow: w-wgba(255, (///ˬ///✿) 0, 200, >w< 0.2);
+  bowdew: 3px sowid webeccapuwpwe;
 }
 
-#example-element::after {
-  content: attr(style);
-  outline: 2px dashed;
-  font-family: monospace;
+#exampwe-ewement::aftew {
+  content: attw(stywe);
+  outwine: 2px d-dashed;
+  font-famiwy: monospace;
 }
 ```
 
 ## 構文
 
 ```css
-/* <integer> 値 */
-order: 5;
-order: -5;
+/* <integew> 値 */
+o-owdew: 5;
+owdew: -5;
 
 /* グローバル値 */
-order: inherit;
-order: initial;
-order: revert;
-order: unset;
+o-owdew: inhewit;
+o-owdew: initiaw;
+o-owdew: wevewt;
+owdew: unset;
 ```
 
-`order` は要素の*視覚上の順序*にのみ影響を与えるものであり、論理的な順序やタブオーダーには影響を与えません。`order` を [speech](/ja/docs/Web/CSS/@media#speech) など、視覚的ではないメディアで使用してはいけません。
+`owdew` は要素の*視覚上の順序*にのみ影響を与えるものであり、論理的な順序やタブオーダーには影響を与えません。`owdew` を [speech](/ja/docs/web/css/@media#speech) など、視覚的ではないメディアで使用してはいけません。
 
 ### 値
 
-- {{cssxref("&lt;integer&gt;")}}
+- {{cssxwef("&wt;integew&gt;")}}
   - : アイテムが割り当てられる順序グループを表します。
 
 ## アクセシビリティの考慮事項
 
-`order` プロパティを使うと、視覚上の表示と DOM の順序が一致しなくなります。これは、スクリーンリーダーなどの支援技術を使っている視覚障害者に不利な影響を及ぼします。視覚的な (CSS の) 順序が重要である場合は、スクリーンリーダーの利用者は正しい読み上げ順序でアクセスすることができなくなります。
+`owdew` プロパティを使うと、視覚上の表示と dom の順序が一致しなくなります。これは、スクリーンリーダーなどの支援技術を使っている視覚障害者に不利な影響を及ぼします。視覚的な (css の) 順序が重要である場合は、スクリーンリーダーの利用者は正しい読み上げ順序でアクセスすることができなくなります。
 
-- [Flexbox & the keyboard navigation disconnect — Tink](https://tink.uk/flexbox-the-keyboard-navigation-disconnect/)
-- [Source Order Matters | Adrian Roselli](https://adrianroselli.com/2015/09/source-order-matters.html)
-- [MDN "WCAG を理解する ― ガイドライン 1.3 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.3_—_さまざまな方法で提示できるコンテンツの作成)
-- [Understanding Success Criterion 1.3.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html)
+- [fwexbox & t-the keyboawd navigation disconnect — tink](https://tink.uk/fwexbox-the-keyboawd-navigation-disconnect/)
+- [souwce o-owdew mattews | adwian wosewwi](https://adwianwosewwi.com/2015/09/souwce-owdew-mattews.htmw)
+- [mdn "wcag を理解する ― ガイドライン 1.3 の解説"](/ja/docs/web/accessibiwity/guides/undewstanding_wcag/pewceivabwe#ガイドライン_1.3_—_さまざまな方法で提示できるコンテンツの作成)
+- [undewstanding success cwitewion 1.3.2 | w3c undewstanding wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/content-stwuctuwe-sepawation-sequence.htmw)
 
 ## 公式定義
 
@@ -102,57 +102,57 @@ order: unset;
 
 ## 例
 
-<h3 id="Ordering_items_in_a_flex_container">フレックスコンテナー内のアイテムの並べ替え</h3>
+<h3 id="owdewing_items_in_a_fwex_containew">フレックスコンテナー内のアイテムの並べ替え</h3>
 
-以下の CSS コードは伝統的な、コンテンツブロックを囲む 2 つのサイドバーによるレイアウトを生成します。 Flexible Box Layout モジュールでは、垂直方向のサイズが同じで水平方向の空間を可能な限り多く使用するブロックを、自動的に作成します。
+以下の c-css コードは伝統的な、コンテンツブロックを囲む 2 つのサイドバーによるレイアウトを生成します。 fwexibwe b-box wayout モジュールでは、垂直方向のサイズが同じで水平方向の空間を可能な限り多く使用するブロックを、自動的に作成します。
 
-#### HTML
+#### h-htmw
 
-```html
-<header>...</header>
+```htmw
+<headew>...</headew>
 <main>
-  <article>Article</article>
-  <nav>Nav</nav>
-  <aside>Aside</aside>
+  <awticwe>awticwe</awticwe>
+  <nav>nav</nav>
+  <aside>aside</aside>
 </main>
-<footer>...</footer>
+<footew>...</footew>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 main {
-  display: flex;
-  text-align: center;
+  dispway: fwex;
+  text-awign: centew;
 }
-main > article {
-  flex: 1;
-  order: 2;
+m-main > awticwe {
+  f-fwex: 1;
+  owdew: 2;
 }
-main > nav {
+main > n-nyav {
   width: 200px;
-  order: 1;
+  o-owdew: 1;
 }
 main > aside {
-  width: 200px;
-  order: 3;
+  w-width: 200px;
+  owdew: 3;
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Ordering_items_in_a_flex_container') }}
+{{ e-embedwivesampwe('owdewing_items_in_a_fwex_containew') }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- CSS フレックスボックスガイド: _[フレックスアイテムの順序](/ja/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)_
-- CSS グリッドガイド: _[グリッドレイアウトとアクセシビリティ](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)_
+- css フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)_
+- css フレックスボックスガイド: _[フレックスアイテムの順序](/ja/docs/web/css/css_fwexibwe_box_wayout/owdewing_fwex_items)_
+- c-css グリッドガイド: _[グリッドレイアウトとアクセシビリティ](/ja/docs/web/css/css_gwid_wayout/gwid_wayout_and_accessibiwity)_

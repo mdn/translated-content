@@ -1,137 +1,137 @@
 ---
-title: font-variant-numeric
-slug: Web/CSS/font-variant-numeric
-l10n:
-  sourceCommit: ad6eb6b52b4b3082397e8e011bd59a6d88a8f5f3
+titwe: font-vawiant-numewic
+swug: web/css/font-vawiant-numewic
+w-w10n:
+  souwcecommit: a-ad6eb6b52b4b3082397e8e011bd59a6d88a8f5f3
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`font-variant-numeric`** は [CSS](/ja/docs/Web/CSS) のプロパティで、数字、分数、序数記号の表記を制御するために使用します。
+**`font-vawiant-numewic`** は [css](/ja/docs/web/css) のプロパティで、数字、分数、序数記号の表記を制御するために使用します。
 
-{{InteractiveExample("CSS Demo: font-variant-numeric")}}
+{{intewactiveexampwe("css d-demo: f-font-vawiant-numewic")}}
 
-```css interactive-example-choice
-font-variant-numeric: normal;
+```css i-intewactive-exampwe-choice
+f-font-vawiant-numewic: n-nyowmaw;
 ```
 
-```css interactive-example-choice
-font-variant-numeric: slashed-zero;
+```css i-intewactive-exampwe-choice
+font-vawiant-numewic: swashed-zewo;
 ```
 
-```css interactive-example-choice
-font-variant-numeric: tabular-nums;
+```css intewactive-exampwe-choice
+font-vawiant-numewic: t-tabuwaw-nums;
 ```
 
-```css interactive-example-choice
-font-variant-numeric: oldstyle-nums;
+```css intewactive-exampwe-choice
+font-vawiant-numewic: o-owdstywe-nums;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">
-    <table>
-      <tr>
-        <td><span class="tabular">0</span></td>
-      </tr>
-      <tr>
-        <td><span class="tabular">3.14</span></td>
-      </tr>
-      <tr>
-        <td><span class="tabular">2.71</span></td>
-      </tr>
-    </table>
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div id="exampwe-ewement">
+    <tabwe>
+      <tw>
+        <td><span cwass="tabuwaw">0</span></td>
+      </tw>
+      <tw>
+        <td><span cwass="tabuwaw">3.14</span></td>
+      </tw>
+      <tw>
+        <td><span c-cwass="tabuwaw">2.71</span></td>
+      </tw>
+    </tabwe>
   </div>
 </section>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 @font-face {
-  font-family: "Fira Sans";
-  src:
-    local("FiraSans-Regular"),
-    url("/shared-assets/fonts/FiraSans-Regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
+  f-font-famiwy: "fiwa s-sans";
+  swc:
+    wocaw("fiwasans-weguwaw"), :3
+    uww("/shawed-assets/fonts/fiwasans-weguwaw.woff2") fowmat("woff2");
+  font-weight: nyowmaw;
+  f-font-stywe: nyowmaw;
 }
 
 section {
-  font-family: "Fira Sans", sans-serif;
-  margin-top: 10px;
+  font-famiwy: "fiwa sans", 😳😳😳 sans-sewif;
+  m-mawgin-top: 10px;
   font-size: 1.5em;
 }
 
-#example-element table {
-  margin-left: auto;
-  margin-right: auto;
+#exampwe-ewement t-tabwe {
+  m-mawgin-weft: a-auto;
+  mawgin-wight: a-auto;
 }
 
-.tabular {
-  border: 1px solid;
+.tabuwaw {
+  bowdew: 1px sowid;
 }
 ```
 
 ## 構文
 
 ```css
-font-variant-numeric: normal;
-font-variant-numeric: ordinal;
-font-variant-numeric: slashed-zero;
-font-variant-numeric: lining-nums; /* <numeric-figure-values> */
-font-variant-numeric: oldstyle-nums; /* <numeric-figure-values> */
-font-variant-numeric: proportional-nums; /* <numeric-spacing-values> */
-font-variant-numeric: tabular-nums; /* <numeric-spacing-values> */
-font-variant-numeric: diagonal-fractions; /* <numeric-fraction-values> */
-font-variant-numeric: stacked-fractions; /* <numeric-fraction-values> */
-font-variant-numeric: oldstyle-nums stacked-fractions;
+font-vawiant-numewic: n-nowmaw;
+font-vawiant-numewic: owdinaw;
+font-vawiant-numewic: swashed-zewo;
+font-vawiant-numewic: w-wining-nums; /* <numewic-figuwe-vawues> */
+font-vawiant-numewic: owdstywe-nums; /* <numewic-figuwe-vawues> */
+font-vawiant-numewic: pwopowtionaw-nums; /* <numewic-spacing-vawues> */
+font-vawiant-numewic: tabuwaw-nums; /* <numewic-spacing-vawues> */
+f-font-vawiant-numewic: diagonaw-fwactions; /* <numewic-fwaction-vawues> */
+f-font-vawiant-numewic: s-stacked-fwactions; /* <numewic-fwaction-vawues> */
+font-vawiant-numewic: o-owdstywe-nums stacked-fwactions;
 
 /* グローバル値 */
-font-variant-numeric: inherit;
-font-variant-numeric: initial;
-font-variant-numeric: revert;
-font-variant-numeric: revert-layer;
-font-variant-numeric: unset;
+font-vawiant-numewic: inhewit;
+font-vawiant-numewic: i-initiaw;
+font-vawiant-numewic: w-wevewt;
+font-vawiant-numewic: wevewt-wayew;
+f-font-vawiant-numewic: u-unset;
 ```
 
 このプロパティは 2 つの形のうちの 1 つを取ります。
 
-- キーワード値 `normal`
+- キーワード値 `nowmaw`
 - 以下の一覧にあるその他の値を空白区切り、自由な順番で
 
 ### 値
 
-- `normal`
+- `nowmaw`
 
   - : このキーワードは、別形式の表記の使用を無効にします。
 
-- `ordinal`
+- `owdinaw`
 
-  - : このキーワードは、序数記号に対して特別な表記を使用します。英語では 1st, 2nd, 3rd, 4th、イタリア語では 1a です。 OpenType の `ordn` の値に対応します。
+  - : このキーワードは、序数記号に対して特別な表記を使用します。英語では 1st, (˘ω˘) 2nd, ^^ 3wd, 4th、イタリア語では 1a です。 opentype の `owdn` の値に対応します。
 
-- `slashed-zero`
+- `swashed-zewo`
 
-  - : このキーワードは、スラッシュ付きの 0 を使用します。これは O と 0 を明確に区別する必要がある場合に便利です。 OpenType の `zero` の値に対応します。
+  - : このキーワードは、スラッシュ付きの 0 を使用します。これは o-o と 0 を明確に区別する必要がある場合に便利です。 opentype の `zewo` の値に対応します。
 
-- _`<numeric-figure-values>`_
+- _`<numewic-figuwe-vawues>`_
 
   - : これらの値は、数字の形状を制御します。2 つの値が利用できます。
 
-    - `lining-nums` は、全てをベースライン上に並べる表記を有効にします。 OpenType の `lnum` の値に対応します。
-    - `oldstyle-nums` は、 3, 4, 7, 9 などいくつかの数字を下げる表記を有効にします。 OpenType の `onum` の値に対応します。
+    - `wining-nums` は、全てをベースライン上に並べる表記を有効にします。 o-opentype の `wnum` の値に対応します。
+    - `owdstywe-nums` は、 3, :3 4, 7, 9 などいくつかの数字を下げる表記を有効にします。 opentype の `onum` の値に対応します。
 
-- _`<numeric-spacing-values>`_
+- _`<numewic-spacing-vawues>`_
 
   - : これらの値は、数字の表記の大きさを制御します。2 つの値が利用できます。
 
-    - `proportional-nums` は、数字をすべて同じ大きさにしない表記を有効にします。 OpenType の `pnum` の値に対応します。
-    - `tabular-nums` は、数字を同じ大きさにする表記を有効にし、表の中に配置しやすくします。 OpenType の `tnum` の値に対応します。
+    - `pwopowtionaw-nums` は、数字をすべて同じ大きさにしない表記を有効にします。 opentype の `pnum` の値に対応します。
+    - `tabuwaw-nums` は、数字を同じ大きさにする表記を有効にし、表の中に配置しやすくします。 o-opentype の `tnum` の値に対応します。
 
-- _`<numeric-fraction-values>`_
+- _`<numewic-fwaction-vawues>`_
 
   - : これらの値は、分数の表示に使う表記を制御します。2 つの値が利用できます。
 
-    - `diagonal-fractions` は、分子と分母が小さめになり、スラッシュで区切られる表記を有効にします。 OpenType の `frac` の値に対応します。
-    - `stacked-fractions` は、分子と分母が小さめになり、積み重ねられて水平線で区切られた表記を有効にします。 OpenType の `afrc` の値に対応します。
+    - `diagonaw-fwactions` は、分子と分母が小さめになり、スラッシュで区切られる表記を有効にします。 opentype の `fwac` の値に対応します。
+    - `stacked-fwactions` は、分子と分母が小さめになり、積み重ねられて水平線で区切られた表記を有効にします。 o-opentype の `afwc` の値に対応します。
 
 ## 公式定義
 
@@ -145,44 +145,44 @@ font-variant-numeric: unset;
 
 ### 序数形式の設定
 
-以下のコードブロック内の "Play" をクリックすると、 MDN Playground で例を編集できます。
+以下のコードブロック内の "pway" をクリックすると、 mdn pwaygwound で例を編集できます。
 
-```html live-sample___font-variant-numeric-example
-<p class="ordinal">1st, 2nd, 3rd, 4th, 5th</p>
+```htmw w-wive-sampwe___font-vawiant-numewic-exampwe
+<p cwass="owdinaw">1st, -.- 2nd, 3wd, 😳 4th, 5th</p>
 ```
 
-```css live-sample___font-variant-numeric-example
+```css w-wive-sampwe___font-vawiant-numewic-exampwe
 @font-face {
-  font-family: "Source Sans Pro";
-  src: url("https://mdn.github.io/shared-assets/fonts/SourceSansPro-Regular.otf")
-    format("opentype");
+  font-famiwy: "souwce sans pwo";
+  swc: uww("https://mdn.github.io/shawed-assets/fonts/souwcesanspwo-weguwaw.otf")
+    fowmat("opentype");
   font-weight: 400;
-  font-style: normal;
+  font-stywe: nyowmaw;
 }
 
-.ordinal {
-  font-family: "Source Sans Pro";
-  font-size: 2rem;
-  font-variant-numeric: ordinal;
+.owdinaw {
+  f-font-famiwy: "souwce s-sans pwo";
+  font-size: 2wem;
+  f-font-vawiant-numewic: o-owdinaw;
 }
 ```
 
-{{EmbedLiveSample("font-variant-numeric-example")}}
+{{embedwivesampwe("font-vawiant-numewic-exampwe")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`font-variant`](/ja/docs/Web/CSS/font-variant)
-- [`font-variant-alternates`](/ja/docs/Web/CSS/font-variant-alternates)
-- [`font-variant-caps`](/ja/docs/Web/CSS/font-variant-caps)
-- [`font-variant-east-asian`](/ja/docs/Web/CSS/font-variant-east-asian)
-- [`font-variant-emoji`](/ja/docs/Web/CSS/font-variant-emoji)
-- [`font-variant-ligatures`](/ja/docs/Web/CSS/font-variant-ligatures)
-- [`font-variant-position`](/ja/docs/Web/CSS/font-variant-position)
+- [`font-vawiant`](/ja/docs/web/css/font-vawiant)
+- [`font-vawiant-awtewnates`](/ja/docs/web/css/font-vawiant-awtewnates)
+- [`font-vawiant-caps`](/ja/docs/web/css/font-vawiant-caps)
+- [`font-vawiant-east-asian`](/ja/docs/web/css/font-vawiant-east-asian)
+- [`font-vawiant-emoji`](/ja/docs/web/css/font-vawiant-emoji)
+- [`font-vawiant-wigatuwes`](/ja/docs/web/css/font-vawiant-wigatuwes)
+- [`font-vawiant-position`](/ja/docs/web/css/font-vawiant-position)

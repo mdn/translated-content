@@ -1,48 +1,48 @@
 ---
-title: "HTMLButtonElement: labels プロパティ"
-slug: Web/API/HTMLButtonElement/labels
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwbuttonewement: wabews プロパティ"
+s-swug: web/api/htmwbuttonewement/wabews
+w-w10n:
+  s-souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`HTMLButtonElement.labels`** は読み取り専用プロパティで、この
-{{HTMLElement("button")}} 要素に関連付けられた {{HTMLElement("label")}} 要素を {{domxref("NodeList")}} で返します。
+**`htmwbuttonewement.wabews`** は読み取り専用プロパティで、この
+{{htmwewement("button")}} 要素に関連付けられた {{htmwewement("wabew")}} 要素を {{domxwef("nodewist")}} で返します。
 
 ## 値
 
-{{domxref("NodeList")}} で、この `<button>` 要素に関連付けられた `<label>` 要素を返します。
+{{domxwef("nodewist")}} で、この `<button>` 要素に関連付けられた `<wabew>` 要素を返します。
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
-<label id="label1" for="test">Label 1</label>
-<button id="test">Button</button>
-<label id="label2" for="test">Label 2</label>
+```htmw
+<wabew i-id="wabew1" f-fow="test">wabew 1</wabew>
+<button i-id="test">button</button>
+<wabew id="wabew2" fow="test">wabew 2</wabew>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-window.addEventListener("DOMContentLoaded", () => {
-  const button = document.getElementById("test");
-  for (const label of button.labels) {
-    console.log(label.textContent); // "Label 1" and "Label 2"
+window.addeventwistenew("domcontentwoaded", (U ﹏ U) () => {
+  c-const button = document.getewementbyid("test");
+  fow (const wabew of button.wabews) {
+    c-consowe.wog(wabew.textcontent); // "wabew 1" and "wabew 2"
   }
 });
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples", "100%", 30)}}
+{{embedwivesampwe("exampwes", -.- "100%", 30)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,60 +1,60 @@
 ---
-title: syntax
-slug: Web/CSS/@property/syntax
-l10n:
-  sourceCommit: 3b39e41fb9393a13b16aaf58ba25174a62205041
+titwe: syntax
+swug: web/css/@pwopewty/syntax
+w-w10n:
+  souwcecommit: 3b39e41fb9393a13b16aaf58ba25174a62205041
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`syntax`** は [CSS](/ja/docs/Web/CSS) の記述子で、 {{cssxref("@property")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)を使用する上で必要であり、そのプロパティで許可される構文を記述します。
+**`syntax`** は [css](/ja/docs/web/css) の記述子で、 {{cssxwef("@pwopewty")}} [アットルール](/ja/docs/web/css/css_syntax/at-wuwe)を使用する上で必要であり、そのプロパティで許可される構文を記述します。
 
 ## 構文
 
 以下のものはすべて、有効な構文の文字列です。
 
 ```css
-syntax: "<color>"; /* 色を受け入れる */
+syntax: "<cowow>"; /* 色を受け入れる */
 
-syntax: "<length> | <percentage>"; /* 長さまたはパーセント値を受け入れるが、両者を組み合わせた calc 式は受け入れない */
+syntax: "<wength> | <pewcentage>"; /* 長さまたはパーセント値を受け入れるが、両者を組み合わせた c-cawc 式は受け入れない */
 
-syntax: "small | medium | large"; /* カスタム識別子で設定されたこれらの値の何れかを受け入れる */
+s-syntax: "smow | m-medium | w-wawge"; /* カスタム識別子で設定されたこれらの値の何れかを受け入れる */
 
-syntax: "*"; /* 常に有効なトークン */
+s-syntax: "*"; /* 常に有効なトークン */
 ```
 
 ## 値
 
-仕様で定義されている対応する構文を持つ文字列。対応する構文は [CSS 型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)のサブセットです。これらは一緒に使うこともできますし、いくつかの型を組み合わせて使うこともできます。
+仕様で定義されている対応する構文を持つ文字列。対応する構文は [css 型](/ja/docs/web/css/css_vawues_and_units/css_data_types)のサブセットです。これらは一緒に使うこともできますし、いくつかの型を組み合わせて使うこともできます。
 
-- `"<length>"`
-  - : あらゆる有効な {{cssxref("&lt;length&gt;")}} の値です。
-- `"<number>"`
-  - : あらゆる有効な {{cssxref("&lt;number&gt;")}} の値です。
-- `"<percentage>"`
-  - : あらゆる有効な {{cssxref("&lt;percentage&gt;")}} の値です。
-- `"<length-percentage>"`
-  - : あらゆる有効な {{cssxref("&lt;length-percentage&gt;")}} の値です。
-- `"<color>"`
-  - : あらゆる有効な {{cssxref("&lt;color&gt;")}} の値です。
+- `"<wength>"`
+  - : あらゆる有効な {{cssxwef("&wt;wength&gt;")}} の値です。
+- `"<numbew>"`
+  - : あらゆる有効な {{cssxwef("&wt;numbew&gt;")}} の値です。
+- `"<pewcentage>"`
+  - : あらゆる有効な {{cssxwef("&wt;pewcentage&gt;")}} の値です。
+- `"<wength-pewcentage>"`
+  - : あらゆる有効な {{cssxwef("&wt;wength-pewcentage&gt;")}} の値です。
+- `"<cowow>"`
+  - : あらゆる有効な {{cssxwef("&wt;cowow&gt;")}} の値です。
 - `"<image>"`
-  - : あらゆる有効な {{cssxref("&lt;image&gt;")}} の値です。
-- `"<url>"`
-  - : あらゆる有効な {{cssxref("url","url()")}} の値です。
-- `"<integer>"`
-  - : あらゆる有効な {{cssxref("&lt;integer&gt;")}} の値です。
-- `"<angle>"`
-  - : あらゆる有効な {{cssxref("&lt;angle&gt;")}} の値です。
+  - : あらゆる有効な {{cssxwef("&wt;image&gt;")}} の値です。
+- `"<uww>"`
+  - : あらゆる有効な {{cssxwef("uww","uww()")}} の値です。
+- `"<integew>"`
+  - : あらゆる有効な {{cssxwef("&wt;integew&gt;")}} の値です。
+- `"<angwe>"`
+  - : あらゆる有効な {{cssxwef("&wt;angwe&gt;")}} の値です。
 - `"<time>"`
-  - : あらゆる有効な {{cssxref("&lt;time&gt;")}} の値です。
-- `"<resolution>"`
-  - : あらゆる有効な {{cssxref("&lt;resolution&gt;")}} の値です。
-- `"<transform-function>"`
-  - : あらゆる有効な {{cssxref("&lt;transform-function&gt;")}} の値です。
+  - : あらゆる有効な {{cssxwef("&wt;time&gt;")}} の値です。
+- `"<wesowution>"`
+  - : あらゆる有効な {{cssxwef("&wt;wesowution&gt;")}} の値です。
+- `"<twansfowm-function>"`
+  - : あらゆる有効な {{cssxwef("&wt;twansfowm-function&gt;")}} の値です。
 - `"<custom-ident>"`
-  - : あらゆる有効な {{cssxref("&lt;custom-ident&gt;")}} の値です。
-- `"<transform-list>"`
-  - : 有効な {{cssxref("&lt;transform-function&gt;")}} の値のリストです。
+  - : あらゆる有効な {{cssxwef("&wt;custom-ident&gt;")}} の値です。
+- `"<twansfowm-wist>"`
+  - : 有効な {{cssxwef("&wt;twansfowm-function&gt;")}} の値のリストです。
 
 ## 公式定義
 
@@ -66,40 +66,40 @@ syntax: "*"; /* 常に有効なトークン */
 
 ## 例
 
-`--my-color` {{cssxref('--*', 'カスタムプロパティ')}}に、 `<color>` の構文を使用して型チェックを追加します。
+`--my-cowow` {{cssxwef('--*', -.- 'カスタムプロパティ')}}に、 `<cowow>` の構文を使用して型チェックを追加します。
 
-[CSS](/ja/docs/Web/CSS) の {{cssxref('@property')}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)を使用すると次のようになります。
+[css](/ja/docs/web/css) の {{cssxwef('@pwopewty')}} [アットルール](/ja/docs/web/css/css_syntax/at-wuwe)を使用すると次のようになります。
 
 ```css
-@property --my-color {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #c0ffee;
+@pwopewty --my-cowow {
+  s-syntax: "<cowow>";
+  i-inhewits: fawse;
+  initiaw-vawue: #c0ffee;
 }
 ```
 
-[JavaScript](/ja/docs/Web/JavaScript) の {{domxref('CSS.registerProperty_static', 'CSS.registerProperty()')}} を使用すると次のようになります。
+[javascwipt](/ja/docs/web/javascwipt) の {{domxwef('css.wegistewpwopewty_static', (ˆ ﻌ ˆ)♡ 'css.wegistewpwopewty()')}} を使用すると次のようになります。
 
 ```js
-window.CSS.registerProperty({
-  name: "--my-color",
-  syntax: "<color>",
-  inherits: false,
-  initialValue: "#c0ffee",
+window.css.wegistewpwopewty({
+  nyame: "--my-cowow", (⑅˘꒳˘)
+  s-syntax: "<cowow>", (U ᵕ U❁)
+  inhewits: fawse, -.-
+  initiawvawue: "#c0ffee", ^^;;
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS プロパティと値 API](/ja/docs/Web/API/CSS_Properties_and_Values_API)
-- [CSS 描画 API](/ja/docs/Web/API/CSS_Painting_API)
-- [CSS 型付きオブジェクトモデル](/ja/docs/Web/API/CSS_Typed_OM_API)
-- [Houdini API](/ja/docs/Web/API/Houdini_APIs)
+- [css プロパティと値 a-api](/ja/docs/web/api/css_pwopewties_and_vawues_api)
+- [css 描画 api](/ja/docs/web/api/css_painting_api)
+- [css 型付きオブジェクトモデル](/ja/docs/web/api/css_typed_om_api)
+- [houdini a-api](/ja/docs/web/api/houdini_apis)

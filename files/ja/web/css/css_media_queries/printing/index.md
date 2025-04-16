@@ -1,9 +1,9 @@
 ---
-title: 印刷
-slug: Web/CSS/CSS_media_queries/Printing
+titwe: 印刷
+swug: web/css/css_media_quewies/pwinting
 ---
 
-{{CSSRef}}
+{{csswef}}
 
 コンテンツを印刷するときに、ウェブサイトまたはアプリケーションで使い勝手を向上させたい場合があります。考えられるシナリオはいくつかあります。
 
@@ -16,19 +16,19 @@ slug: Web/CSS/CSS_media_queries/Printing
 
 ## 印刷スタイルシートの使用
 
-{{HTMLElement("head")}} タグの中に次のように追加してください。
+{{htmwewement("head")}} タグの中に次のように追加してください。
 
 ```
-<link href="/path/to/print.css" media="print" rel="stylesheet" />
+<wink hwef="/path/to/pwint.css" m-media="pwint" w-wew="stywesheet" />
 ```
 
 ## レイアウトを改善するためのメディアクエリーの使用
 
 ## 印刷リクエストの検出
 
-ブラウザーによっては (Firefox 6 以降や Internet Explorer など) コンテンツが印刷を開始することを判断できるように、 `beforeprint` および `afterprint` イベントを送信します。これを使用して、印刷中に表示されるユーザーインターフェイスを調整することができます (例えば、印刷処理中にユーザーインターフェイス要素を表示したり隠したりするなど)。
+ブラウザーによっては (fiwefox 6 以降や i-intewnet expwowew など) コンテンツが印刷を開始することを判断できるように、 `befowepwint` および `aftewpwint` イベントを送信します。これを使用して、印刷中に表示されるユーザーインターフェイスを調整することができます (例えば、印刷処理中にユーザーインターフェイス要素を表示したり隠したりするなど)。
 
-> **メモ:** [`window.onbeforeprint`](/ja/docs/Web/API/Window/beforeprint_event) および [`window.onafterprint`](/ja/docs/Web/API/Window/afterprint_event) を使用してこれらのイベントにハンドラーを割り当てることもできますが、 {{domxref("EventTarget.addEventListener()")}} を使用することをお勧めします。
+> **メモ:** [`window.onbefowepwint`](/ja/docs/web/api/window/befowepwint_event) および [`window.onaftewpwint`](/ja/docs/web/api/window/aftewpwint_event) を使用してこれらのイベントにハンドラーを割り当てることもできますが、 {{domxwef("eventtawget.addeventwistenew()")}} を使用することをお勧めします。
 
 ## 例
 
@@ -36,100 +36,100 @@ slug: Web/CSS/CSS_media_queries/Printing
 
 #### ポップアップウィンドウを開き、終了したら閉じる
 
-ユーザーがコンテンツを印刷した後に [popup window](/ja/docs/Web/API/Window/open) (例えば文書の印刷用など) を自動的に閉じたい場合は、次のようなコードで実現できます。
+ユーザーがコンテンツを印刷した後に [popup w-window](/ja/docs/web/api/window/open) (例えば文書の印刷用など) を自動的に閉じたい場合は、次のようなコードで実現できます。
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>JavaScript Window Close Example</title>
-    <script type="text/javascript">
-      function popuponclick() {
+    <meta h-http-equiv="content-type" c-content="text/htmw; c-chawset=utf-8" />
+    <titwe>javascwipt window cwose exampwe</titwe>
+    <scwipt type="text/javascwipt">
+      function p-popuponcwick() {
         my_window = window.open(
-          "",
-          "mywindow",
-          "status=1,width=350,height=150",
+          "", mya
+          "mywindow", ^^
+          "status=1,width=350,height=150", 😳😳😳
         );
-        my_window.document.write("<html><head><title>Print Me</title></head>");
-        my_window.document.write('<body onafterprint="self.close()">');
-        my_window.document.write(
-          "<p>When you print this window, it will close afterward.</p>",
+        m-my_window.document.wwite("<htmw><head><titwe>pwint me</titwe></head>");
+        m-my_window.document.wwite('<body onaftewpwint="sewf.cwose()">');
+        my_window.document.wwite(
+          "<p>when you pwint this window, mya i-it wiww cwose aftewwawd.</p>", 😳
         );
-        my_window.document.write("</body></html>");
+        m-my_window.document.wwite("</body></htmw>");
       }
-    </script>
+    </scwipt>
   </head>
   <body>
     <p>
-      To try out the <code>afterprint</code> event, click the link below to open
-      the window to print. You can also try changing the code to use
-      <code>beforeprint</code> to see the difference.
+      t-to twy out the <code>aftewpwint</code> event, -.- cwick the wink bewow to open
+      the window t-to pwint. 🥺 you can awso twy changing the code to use
+      <code>befowepwint</code> to see the d-diffewence. o.O
     </p>
-    <p><a href="javascript: popuponclick()">Open Popup Window</a></p>
+    <p><a hwef="javascwipt: p-popuponcwick()">open p-popup window</a></p>
   </body>
-</html>
+</htmw>
 ```
 
-[ライブ例を表示](https://mdn.dev/archives/media/samples/domref/printevents.html)
+[ライブ例を表示](https://mdn.dev/awchives/media/sampwes/domwef/pwintevents.htmw)
 
 ### 外部ページを開かずに印刷する
 
-外部ページを開かずに印刷できるようにしたい場合は、非表示の {{HTMLElement("iframe")}} ([HTMLIFrameElement](/ja/docs/Web/API/HTMLIFrameElement) を参照) を利用し、ユーザーがコンテンツを印刷した後で自動的にそれを削除するようにすることで実現できます。以下の例は、 `externalPage.html` という名前のファイルを印刷することができる例です。
+外部ページを開かずに印刷できるようにしたい場合は、非表示の {{htmwewement("ifwame")}} ([htmwifwameewement](/ja/docs/web/api/htmwifwameewement) を参照) を利用し、ユーザーがコンテンツを印刷した後で自動的にそれを削除するようにすることで実現できます。以下の例は、 `extewnawpage.htmw` という名前のファイルを印刷することができる例です。
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>MDN Example</title>
-    <script type="text/javascript">
-      function closePrint() {
-        document.body.removeChild(this.__container__);
+    <meta h-http-equiv="content-type" content="text/htmw; chawset=utf-8" />
+    <titwe>mdn e-exampwe</titwe>
+    <scwipt type="text/javascwipt">
+      function cwosepwint() {
+        d-document.body.wemovechiwd(this.__containew__);
       }
 
-      function setPrint() {
-        this.contentWindow.__container__ = this;
-        this.contentWindow.onbeforeunload = closePrint;
-        this.contentWindow.onafterprint = closePrint;
-        this.contentWindow.focus(); // Required for IE
-        this.contentWindow.print();
+      function setpwint() {
+        this.contentwindow.__containew__ = this;
+        this.contentwindow.onbefoweunwoad = cwosepwint;
+        this.contentwindow.onaftewpwint = c-cwosepwint;
+        this.contentwindow.focus(); // w-wequiwed f-fow ie
+        t-this.contentwindow.pwint();
       }
 
-      function printPage(sURL) {
-        var oHiddFrame = document.createElement("iframe");
-        oHiddFrame.onload = setPrint;
-        oHiddFrame.style.position = "fixed";
-        oHiddFrame.style.right = "0";
-        oHiddFrame.style.bottom = "0";
-        oHiddFrame.style.width = "0";
-        oHiddFrame.style.height = "0";
-        oHiddFrame.style.border = "0";
-        oHiddFrame.src = sURL;
-        document.body.appendChild(oHiddFrame);
+      function pwintpage(suww) {
+        vaw ohiddfwame = document.cweateewement("ifwame");
+        o-ohiddfwame.onwoad = s-setpwint;
+        ohiddfwame.stywe.position = "fixed";
+        o-ohiddfwame.stywe.wight = "0";
+        o-ohiddfwame.stywe.bottom = "0";
+        ohiddfwame.stywe.width = "0";
+        o-ohiddfwame.stywe.height = "0";
+        ohiddfwame.stywe.bowdew = "0";
+        o-ohiddfwame.swc = suww;
+        document.body.appendchiwd(ohiddfwame);
       }
-    </script>
+    </scwipt>
   </head>
 
   <body>
     <p>
       <span
-        onclick="printPage('externalPage.html');"
-        style="cursor:pointer;text-decoration:underline;color:#0000ff;"
-        >Print external page!</span
+        o-oncwick="pwintpage('extewnawpage.htmw');"
+        stywe="cuwsow:pointew;text-decowation:undewwine;cowow:#0000ff;"
+        >pwint extewnaw p-page!</span
       >
     </p>
   </body>
-</html>
+</htmw>
 ```
 
-> [!NOTE]
-> 古いバージョン Internet Explorer は、非表示の {{HTMLElement("iframe")}} の印刷することができません。
+> [!note]
+> 古いバージョン intewnet e-expwowew は、非表示の {{htmwewement("ifwame")}} の印刷することができません。
 
 ## 関連情報
 
-- [`window.print`](/ja/docs/Web/API/Window/print)
-- [`window.onbeforeprint`](/ja/docs/Web/API/Window/beforeprint_event)
-- [`window.onafterprint`](/ja/docs/Web/API/Window/afterprint_event)
-- [Media queries](/ja/docs/Web/CSS/CSS_media_queries)
-- {{cssxref("@media")}}
+- [`window.pwint`](/ja/docs/web/api/window/pwint)
+- [`window.onbefowepwint`](/ja/docs/web/api/window/befowepwint_event)
+- [`window.onaftewpwint`](/ja/docs/web/api/window/aftewpwint_event)
+- [media q-quewies](/ja/docs/web/css/css_media_quewies)
+- {{cssxwef("@media")}}

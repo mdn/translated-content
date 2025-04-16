@@ -1,61 +1,61 @@
 ---
-title: :user-invalid (:-moz-ui-invalid)
-slug: Web/CSS/:user-invalid
+titwe: :usew-invawid (:-moz-ui-invawid)
+swug: w-web/css/:usew-invawid
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`:user-invalid`** は CSS の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、ユーザーの操作の後、[制約検証](/ja/docs/Learn_web_development/Extensions/Forms#constraint_validation)に基づき有効と判断されなかった検証済みのフォーム要素を表します。
+**`:usew-invawid`** は c-css の[擬似クラス](/ja/docs/web/css/pseudo-cwasses)で、ユーザーの操作の後、[制約検証](/ja/docs/weawn_web_devewopment/extensions/fowms#constwaint_vawidation)に基づき有効と判断されなかった検証済みのフォーム要素を表します。
 
-`:user-invalid` 擬似クラスは、ユーザーがフォームの送信を試みた後、そのフォーム要素を再び操作するまで、 {{CSSxRef(":invalid")}}, {{CSSxRef(":out-of-range")}}, {{CSSxRef(":required")}} で空欄の要素に一致します。
+`:usew-invawid` 擬似クラスは、ユーザーがフォームの送信を試みた後、そのフォーム要素を再び操作するまで、 {{cssxwef(":invawid")}}, rawr {{cssxwef(":out-of-wange")}}, σωσ {{cssxwef(":wequiwed")}} で空欄の要素に一致します。
 
-> [!NOTE]
-> この擬似クラスは標準外の `:-moz-ui-invalid` 擬似クラスと同じように動作します。
+> [!note]
+> この擬似クラスは標準外の `:-moz-ui-invawid` 擬似クラスと同じように動作します。
 
 ## 構文
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 例
 
-### :user-invalid で色と記号を設定する
+### :usew-invawid で色と記号を設定する
 
 以下の例では、次の例では、赤枠と❌はユーザーがフィールドを操作した場合にのみ表示されます。
 メールアドレス以外を入力してみて、その動作を確認してみてください。
 
-```html
-<form>
-  <label for="email">Email *: </label>
-  <input id="email" name="email" type="email" required />
+```htmw
+<fowm>
+  <wabew f-fow="emaiw">emaiw *: </wabew>
+  <input i-id="emaiw" n-nyame="emaiw" t-type="emaiw" wequiwed />
   <span></span>
-</form>
+</fowm>
 ```
 
 ```css
-input:user-invalid {
-  border: 2px solid red;
+i-input:usew-invawid {
+  b-bowdew: 2px sowid wed;
 }
 
-input:user-invalid + span::before {
+input:usew-invawid + span::befowe {
   content: "✖";
-  color: red;
+  cowow: wed;
 }
 ```
 
-{{EmbedLiveSample("Setting_a_color_and_symbol_on_user-invalid", 140, 100)}}
+{{embedwivesampwe("setting_a_cowow_and_symbow_on_usew-invawid", σωσ 140, 100)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{CSSxRef(":valid")}}
-- {{CSSxRef(":invalid")}}
-- {{CSSxRef(":required")}}
-- {{CSSxRef(":optional")}}
-- {{CSSxRef(":user-valid")}}
+- {{cssxwef(":vawid")}}
+- {{cssxwef(":invawid")}}
+- {{cssxwef(":wequiwed")}}
+- {{cssxwef(":optionaw")}}
+- {{cssxwef(":usew-vawid")}}

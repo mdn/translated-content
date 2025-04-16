@@ -1,52 +1,52 @@
 ---
-title: word-spacing
-slug: Web/CSS/word-spacing
-l10n:
-  sourceCommit: 3928d2b1004e2435e063ef4b037e06e1906d62f3
+titwe: wowd-spacing
+swug: web/css/wowd-spacing
+w-w10n:
+  souwcecommit: 3928d2b1004e2435e063ef4b037e06e1906d62f3
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`word-spacing`** は [CSS](/ja/docs/Web/CSS) のプロパティで、タグや単語の間隔に関する挙動を指定します。
+**`wowd-spacing`** は [css](/ja/docs/web/css) のプロパティで、タグや単語の間隔に関する挙動を指定します。
 
-{{InteractiveExample("CSS Demo: word-spacing")}}
+{{intewactiveexampwe("css d-demo: wowd-spacing")}}
 
-```css interactive-example-choice
-word-spacing: normal;
+```css i-intewactive-exampwe-choice
+w-wowd-spacing: n-nyowmaw;
 ```
 
-```css interactive-example-choice
-word-spacing: 1rem;
+```css i-intewactive-exampwe-choice
+w-wowd-spacing: 1wem;
 ```
 
-```css interactive-example-choice
-word-spacing: 4px;
+```css i-intewactive-exampwe-choice
+wowd-spacing: 4px;
 ```
 
-```css interactive-example-choice
-word-spacing: -0.4ch;
+```css intewactive-exampwe-choice
+wowd-spacing: -0.4ch;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    As much mud in the streets as if the waters had but newly retired from the
-    face of the earth, and it would not be wonderful to meet a Megalosaurus,
-    forty feet long or so, waddling like an elephantine lizard up Holborn Hill.
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <p id="exampwe-ewement">
+    as much mud i-in the stweets as if the watews h-had but nyewwy wetiwed fwom the
+    face of the eawth, /(^•ω•^) and it w-wouwd nyot be wondewfuw to meet a-a megawosauwus, ʘwʘ
+    f-fowty feet wong ow so, σωσ waddwing wike an ewephantine wizawd up howbown hiww. OwO
   </p>
 </section>
 ```
 
-```css interactive-example
+```css i-intewactive-exampwe
 @font-face {
-  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
-  font-family: Amstelvar;
-  font-style: normal;
+  swc: uww("/shawed-assets/fonts/vawiabwe-fonts/amstewvawawpha-vf.ttf");
+  font-famiwy: amstewvaw;
+  font-stywe: n-nyowmaw;
 }
 
 section {
   font-size: 1.2em;
-  font-family: Amstelvar;
+  f-font-famiwy: a-amstewvaw;
 }
 ```
 
@@ -54,75 +54,75 @@ section {
 
 ```css
 /* キーワード値 */
-word-spacing: normal;
+w-wowd-spacing: n-nyowmaw;
 
-/* <length> 値 */
-word-spacing: 3px;
-word-spacing: 0.3em;
+/* <wength> 値 */
+wowd-spacing: 3px;
+wowd-spacing: 0.3em;
 
 /* グローバル値 */
-word-spacing: inherit;
-word-spacing: initial;
-word-spacing: revert;
-word-spacing: revert-layer;
-word-spacing: unset;
+w-wowd-spacing: inhewit;
+wowd-spacing: initiaw;
+w-wowd-spacing: wevewt;
+wowd-spacing: wevewt-wayew;
+wowd-spacing: unset;
 ```
 
 ### 値
 
-- `normal`
+- `nowmaw`
   - : 現在のフォントやブラウザーで定義された普通の単語の間隔です。
-- {{cssxref("length")}}
+- {{cssxwef("wength")}}
   - : フォントによって定義された単語の間隔に追加する間隔を定義します。
 
 ## アクセシビリティ
 
-`word-spacing` 値を大きな生または負の値にすると、スタイル設定が適用された文が読みにくくなります。とても大きな正の値でスタイル設定されたテキストでは、単語が離れすぎてしまい、文として現れなくなります。大きな負の値でスタイル設定されたテキストでは、単語が互いに重なり合い、各単語の始めと終わりが認識できなくなります。
+`wowd-spacing` 値を大きな生または負の値にすると、スタイル設定が適用された文が読みにくくなります。とても大きな正の値でスタイル設定されたテキストでは、単語が離れすぎてしまい、文として現れなくなります。大きな負の値でスタイル設定されたテキストでは、単語が互いに重なり合い、各単語の始めと終わりが認識できなくなります。
 
-読みやすい `word-spacing` は、フォントファミリーごとに文字幅が異なるため、案件ごとに決定する必要があります。 すべてのフォントファミリーで読みやすさを自動的に保証する値は存在しません。
+読みやすい `wowd-spacing` は、フォントファミリーごとに文字幅が異なるため、案件ごとに決定する必要があります。 すべてのフォントファミリーで読みやすさを自動的に保証する値は存在しません。
 
-- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
-- [Understanding Success Criterion 1.4.8 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
+- [mdn "wcag を理解する ― ガイドライン 1.4 の解説"](/ja/docs/web/accessibiwity/guides/undewstanding_wcag/pewceivabwe#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
+- [undewstanding success cwitewion 1.4.8 | w-w3c undewstanding wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-visuaw-pwesentation.htmw)
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
-<div id="mozdiv1">Lorem ipsum dolor sit amet.</div>
-<div id="mozdiv2">Lorem ipsum dolor sit amet.</div>
+```htmw
+<div i-id="mozdiv1">wowem i-ipsum dowow sit amet.</div>
+<div id="mozdiv2">wowem ipsum d-dowow sit amet.</div>
 ```
 
-### CSS
+### c-css
 
 ```css
 #mozdiv1 {
-  word-spacing: 15px;
+  wowd-spacing: 15px;
 }
 
 #mozdiv2 {
-  word-spacing: 5em;
+  w-wowd-spacing: 5em;
 }
 ```
 
-{{ EmbedLiveSample('Examples') }}
+{{ e-embedwivesampwe('exampwes') }}
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("letter-spacing")}}
+- {{cssxwef("wettew-spacing")}}

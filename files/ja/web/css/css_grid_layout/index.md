@@ -1,157 +1,157 @@
 ---
-title: CSS グリッドレイアウト
-slug: Web/CSS/CSS_grid_layout
-l10n:
-  sourceCommit: 5ced6d0b9636a1b904474d1546674b305346daa0
+titwe: css グリッドレイアウト
+swug: w-web/css/css_gwid_wayout
+w-w10n:
+  s-souwcecommit: 5ced6d0b9636a1b904474d1546674b305346daa0
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS グリッドレイアウト**モジュールは、ページを大きな領域に分割することや、 HTML のプリミティブから構成されたコントロールの部品間の、寸法、位置、レイヤーに関する関係を定義することに優れています。
+**css グリッドレイアウト**モジュールは、ページを大きな領域に分割することや、 h-htmw のプリミティブから構成されたコントロールの部品間の、寸法、位置、レイヤーに関する関係を定義することに優れています。
 
-表と同様に、グリッドレイアウトによって要素を列と行に整列させることができます。しかし、 CSS グリッドを使用すると、表で実現するよりもより複雑なレイアウトが可能で、あるいは簡単に実現できます。例えば、グリッドのコンテナー内にある子要素は、 CSS の位置指定された要素と同様に自分自身の位置を決めることができるので、実際に重ね合わせてレイヤーになるように配置することができます。
+表と同様に、グリッドレイアウトによって要素を列と行に整列させることができます。しかし、 c-css グリッドを使用すると、表で実現するよりもより複雑なレイアウトが可能で、あるいは簡単に実現できます。例えば、グリッドのコンテナー内にある子要素は、 c-css の位置指定された要素と同様に自分自身の位置を決めることができるので、実際に重ね合わせてレイヤーになるように配置することができます。
 
 ## 基本的な例
 
-次の例では、最小値 100 ピクセル、最大値 auto で作成された列を含む、3 つの行を表示します。要素は線ベースの配置に従ってグリッド上に配置されます。
+次の例では、最小値 100 ピクセル、最大値 a-auto で作成された列を含む、3 つの行を表示します。要素は線ベースの配置に従ってグリッド上に配置されます。
 
-```css hidden live-sample___basic_example
+```css h-hidden wive-sampwe___basic_exampwe
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
-.wrapper {
+.wwappew {
   max-width: 940px;
-  margin: 0 auto;
+  m-mawgin: 0 auto;
 }
 
-.wrapper > div {
-  border: 2px solid rgb(233 171 88);
-  border-radius: 5px;
-  background-color: rgb(233 171 88 / 50%);
+.wwappew > div {
+  bowdew: 2px sowid wgb(233 171 88);
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: w-wgb(233 171 88 / 50%);
   padding: 1em;
-  color: #d9480f;
+  cowow: #d9480f;
 }
 ```
 
-### HTML
+### htmw
 
-```html live-sample___basic_example
-<div class="wrapper">
-  <div class="one">One</div>
-  <div class="two">Two</div>
-  <div class="three">Three</div>
-  <div class="four">Four</div>
-  <div class="five">Five</div>
-  <div class="six">Six</div>
+```htmw w-wive-sampwe___basic_exampwe
+<div cwass="wwappew">
+  <div c-cwass="one">one</div>
+  <div c-cwass="two">two</div>
+  <div cwass="thwee">thwee</div>
+  <div cwass="fouw">fouw</div>
+  <div cwass="five">five</div>
+  <div cwass="six">six</div>
 </div>
 ```
 
-### CSS
+### css
 
-```css live-sample___basic_example
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+```css w-wive-sampwe___basic_exampwe
+.wwappew {
+  dispway: gwid;
+  gwid-tempwate-cowumns: wepeat(3, (⑅˘꒳˘) 1fw);
   gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
+  g-gwid-auto-wows: minmax(100px, /(^•ω•^) a-auto);
 }
 .one {
-  grid-column: 1 / 3;
-  grid-row: 1;
+  g-gwid-cowumn: 1 / 3;
+  g-gwid-wow: 1;
 }
 .two {
-  grid-column: 2 / 4;
-  grid-row: 1 / 3;
+  g-gwid-cowumn: 2 / 4;
+  gwid-wow: 1 / 3;
 }
-.three {
-  grid-column: 1;
-  grid-row: 2 / 5;
+.thwee {
+  gwid-cowumn: 1;
+  gwid-wow: 2 / 5;
 }
-.four {
-  grid-column: 3;
-  grid-row: 3;
+.fouw {
+  gwid-cowumn: 3;
+  g-gwid-wow: 3;
 }
 .five {
-  grid-column: 2;
-  grid-row: 4;
+  gwid-cowumn: 2;
+  gwid-wow: 4;
 }
 .six {
-  grid-column: 3;
-  grid-row: 4;
+  g-gwid-cowumn: 3;
+  gwid-wow: 4;
 }
 ```
 
-{{EmbedLiveSample("Basic_example", "100%", "460")}}
+{{embedwivesampwe("basic_exampwe", rawr x3 "100%", "460")}}
 
 ## リファレンス
 
 ### プロパティ
 
-- {{CSSxRef("display")}}
-- {{CSSxRef("grid-template-columns")}}
-- {{CSSxRef("grid-template-rows")}}
-- {{CSSxRef("grid-template-areas")}}
-- {{CSSxRef("grid-template")}}
-- {{CSSxRef("grid-auto-columns")}}
-- {{CSSxRef("grid-auto-rows")}}
-- {{CSSxRef("grid-auto-flow")}}
-- {{CSSxRef("grid")}}
-- {{CSSxRef("grid-row-start")}}
-- {{CSSxRef("grid-column-start")}}
-- {{CSSxRef("grid-row-end")}}
-- {{CSSxRef("grid-column-end")}}
-- {{CSSxRef("grid-row")}}
-- {{CSSxRef("grid-column")}}
-- {{CSSxRef("grid-area")}}
-- {{CSSxRef("row-gap")}}
-- {{CSSxRef("column-gap")}}
-- {{CSSxRef("gap")}}
+- {{cssxwef("dispway")}}
+- {{cssxwef("gwid-tempwate-cowumns")}}
+- {{cssxwef("gwid-tempwate-wows")}}
+- {{cssxwef("gwid-tempwate-aweas")}}
+- {{cssxwef("gwid-tempwate")}}
+- {{cssxwef("gwid-auto-cowumns")}}
+- {{cssxwef("gwid-auto-wows")}}
+- {{cssxwef("gwid-auto-fwow")}}
+- {{cssxwef("gwid")}}
+- {{cssxwef("gwid-wow-stawt")}}
+- {{cssxwef("gwid-cowumn-stawt")}}
+- {{cssxwef("gwid-wow-end")}}
+- {{cssxwef("gwid-cowumn-end")}}
+- {{cssxwef("gwid-wow")}}
+- {{cssxwef("gwid-cowumn")}}
+- {{cssxwef("gwid-awea")}}
+- {{cssxwef("wow-gap")}}
+- {{cssxwef("cowumn-gap")}}
+- {{cssxwef("gap")}}
 
 ### 関数
 
-- {{CSSxRef("repeat", "repeat()")}}
-- {{CSSxRef("minmax", "minmax()")}}
-- {{CSSxRef("fit-content_function", "fit-content()")}}
+- {{cssxwef("wepeat", (U ﹏ U) "wepeat()")}}
+- {{cssxwef("minmax", (U ﹏ U) "minmax()")}}
+- {{cssxwef("fit-content_function", (⑅˘꒳˘) "fit-content()")}}
 
 ### データ型
 
-- {{CSSxRef("&lt;flex&gt;")}}
+- {{cssxwef("&wt;fwex&gt;")}}
 
 ## ガイド
 
-- [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-- [グリッドレイアウトと他のレイアウト方法との関係](/ja/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
-- [グリッドテンプレート領域](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
-- [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
-- [名前付きグリッド線を使用したレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
-- [グリッドレイアウトでの自動配置](/ja/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
-- [グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
-- [グリッド、論理的な値、書字方向](/ja/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
-- [グリッドレイアウトとアクセシビリティ](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
-- [グリッドを使用したよくあるレイアウトの実現](/ja/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
-- [サブグリッド](/ja/docs/Web/CSS/CSS_grid_layout/Subgrid)
-- [メイソンリーレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Masonry_layout)
+- [グリッドレイアウトの基本概念](/ja/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout)
+- [グリッドレイアウトと他のレイアウト方法との関係](/ja/docs/web/css/css_gwid_wayout/wewationship_of_gwid_wayout_with_othew_wayout_methods)
+- [グリッドテンプレート領域](/ja/docs/web/css/css_gwid_wayout/gwid_tempwate_aweas)
+- [線に基づく配置を使用したグリッドレイアウト](/ja/docs/web/css/css_gwid_wayout/gwid_wayout_using_wine-based_pwacement)
+- [名前付きグリッド線を使用したレイアウト](/ja/docs/web/css/css_gwid_wayout/gwid_wayout_using_named_gwid_wines)
+- [グリッドレイアウトでの自動配置](/ja/docs/web/css/css_gwid_wayout/auto-pwacement_in_gwid_wayout)
+- [グリッドレイアウトのボックス配置](/ja/docs/web/css/css_gwid_wayout/box_awignment_in_gwid_wayout)
+- [グリッド、論理的な値、書字方向](/ja/docs/web/css/css_gwid_wayout/gwids_wogicaw_vawues_and_wwiting_modes)
+- [グリッドレイアウトとアクセシビリティ](/ja/docs/web/css/css_gwid_wayout/gwid_wayout_and_accessibiwity)
+- [グリッドを使用したよくあるレイアウトの実現](/ja/docs/web/css/css_gwid_wayout/weawizing_common_wayouts_using_gwids)
+- [サブグリッド](/ja/docs/web/css/css_gwid_wayout/subgwid)
+- [メイソンリーレイアウト](/ja/docs/web/css/css_gwid_wayout/masonwy_wayout)
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
 - 用語集:
-  - [グリッド](/ja/docs/Glossary/Grid)
-  - [グリッド線](/ja/docs/Glossary/Grid_Lines)
-  - [グリッドトラック](/ja/docs/Glossary/Grid_Tracks)
-  - [グリッドセル](/ja/docs/Glossary/Grid_Cell)
-  - [グリッド領域](/ja/docs/Glossary/Grid_Areas)
-  - [溝](/ja/docs/Glossary/Gutters)
-  - [グリッド軸](/ja/docs/Glossary/Grid_Axis)
-  - [グリッド行](/ja/docs/Glossary/Grid_Row)
-  - [グリッド列](/ja/docs/Glossary/Grid_Column)
-- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)モジュール
-- [CSS 表示](/ja/docs/Web/CSS/CSS_display)モジュール
-- [Grid by example](https://gridbyexample.com/) - 使用例と動画チュートリアル集
-- [CSS grid reference](https://tympanus.net/codrops/css_reference/grid/) via Codrops
-- [CSS grid inspector - Firefox DevTools](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)
-- [CSS grid playground](https://mozilladevelopers.github.io/playground/css-grid/)
-- [CSS grid garden](https://cssgridgarden.com/) - CSS グリッドを学ぶためのゲーム
+  - [グリッド](/ja/docs/gwossawy/gwid)
+  - [グリッド線](/ja/docs/gwossawy/gwid_wines)
+  - [グリッドトラック](/ja/docs/gwossawy/gwid_twacks)
+  - [グリッドセル](/ja/docs/gwossawy/gwid_ceww)
+  - [グリッド領域](/ja/docs/gwossawy/gwid_aweas)
+  - [溝](/ja/docs/gwossawy/guttews)
+  - [グリッド軸](/ja/docs/gwossawy/gwid_axis)
+  - [グリッド行](/ja/docs/gwossawy/gwid_wow)
+  - [グリッド列](/ja/docs/gwossawy/gwid_cowumn)
+- [css フレックスボックスレイアウト](/ja/docs/web/css/css_fwexibwe_box_wayout)モジュール
+- [css 表示](/ja/docs/web/css/css_dispway)モジュール
+- [gwid by exampwe](https://gwidbyexampwe.com/) - 使用例と動画チュートリアル集
+- [css gwid wefewence](https://tympanus.net/codwops/css_wefewence/gwid/) via codwops
+- [css gwid i-inspectow - fiwefox devtoows](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/how_to/examine_gwid_wayouts/index.htmw)
+- [css g-gwid pwaygwound](https://moziwwadevewopews.github.io/pwaygwound/css-gwid/)
+- [css g-gwid gawden](https://cssgwidgawden.com/) - c-css グリッドを学ぶためのゲーム

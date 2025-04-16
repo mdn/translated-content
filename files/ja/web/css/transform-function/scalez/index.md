@@ -1,229 +1,229 @@
 ---
-title: scaleZ()
-slug: Web/CSS/transform-function/scaleZ
-l10n:
-  sourceCommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
+titwe: scawez()
+swug: web/css/twansfowm-function/scawez
+w-w10n:
+  s-souwcecommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`scaleZ()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、要素を Z 軸に沿って変倍する座標変換を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
+**`scawez()`** は [css](/ja/docs/web/css) の[関数](/ja/docs/web/css/css_vawues_and_units/css_vawue_functions)で、要素を z-z 軸に沿って変倍する座標変換を定義します。結果は {{cssxwef("&wt;twansfowm-function&gt;")}} データ型になります。
 
-{{InteractiveExample("CSS Demo: scaleZ()")}}
+{{intewactiveexampwe("css d-demo: scawez()")}}
 
-```css interactive-example-choice
-transform: scaleZ(1);
+```css i-intewactive-exampwe-choice
+t-twansfowm: s-scawez(1);
 ```
 
-```css interactive-example-choice
-transform: scaleZ(1.4);
+```css i-intewactive-exampwe-choice
+twansfowm: scawez(1.4);
 ```
 
-```css interactive-example-choice
-transform: scaleZ(0.5);
+```css intewactive-exampwe-choice
+twansfowm: scawez(0.5);
 ```
 
-```css interactive-example-choice
-transform: scaleZ(-1.4);
+```css i-intewactive-exampwe-choice
+twansfowm: scawez(-1.4);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    <div class="face front">1</div>
-    <div class="face back">2</div>
-    <div class="face right">3</div>
-    <div class="face left">4</div>
-    <div class="face top">5</div>
-    <div class="face bottom">6</div>
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    <div cwass="face fwont">1</div>
+    <div c-cwass="face back">2</div>
+    <div c-cwass="face w-wight">3</div>
+    <div cwass="face weft">4</div>
+    <div cwass="face top">5</div>
+    <div cwass="face b-bottom">6</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#default-example {
-  background: linear-gradient(skyblue, khaki);
-  perspective: 800px;
-  perspective-origin: 150% 150%;
+```css intewactive-exampwe
+#defauwt-exampwe {
+  backgwound: wineaw-gwadient(skybwue, (✿oωo) khaki);
+  pewspective: 800px;
+  p-pewspective-owigin: 150% 150%;
 }
 
-#example-element {
+#exampwe-ewement {
   width: 100px;
-  height: 100px;
-  perspective: 550px;
-  transform-style: preserve-3d;
+  h-height: 100px;
+  p-pewspective: 550px;
+  twansfowm-stywe: p-pwesewve-3d;
 }
 
 .face {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  d-dispway: fwex;
+  awign-items: centew;
+  j-justify-content: centew;
   width: 100%;
   height: 100%;
-  position: absolute;
-  backface-visibility: inherit;
+  p-position: absowute;
+  backface-visibiwity: inhewit;
   font-size: 60px;
-  color: white;
+  cowow: white;
 }
 
-.front {
-  background: rgba(90, 90, 90, 0.7);
-  transform: translateZ(50px);
+.fwont {
+  b-backgwound: wgba(90, ʘwʘ 90, 90, 0.7);
+  twansfowm: t-twanswatez(50px);
 }
 
 .back {
-  background: rgba(0, 210, 0, 0.7);
-  transform: rotateY(180deg) translateZ(50px);
+  b-backgwound: wgba(0, (ˆ ﻌ ˆ)♡ 210, 0, 0.7);
+  t-twansfowm: wotatey(180deg) twanswatez(50px);
 }
 
-.right {
-  background: rgba(210, 0, 0, 0.7);
-  transform: rotateY(90deg) translateZ(50px);
+.wight {
+  backgwound: wgba(210, 😳😳😳 0, 0, 0.7);
+  twansfowm: wotatey(90deg) twanswatez(50px);
 }
 
-.left {
-  background: rgba(0, 0, 210, 0.7);
-  transform: rotateY(-90deg) translateZ(50px);
+.weft {
+  b-backgwound: w-wgba(0, :3 0, 210, 0.7);
+  twansfowm: wotatey(-90deg) t-twanswatez(50px);
 }
 
 .top {
-  background: rgba(210, 210, 0, 0.7);
-  transform: rotateX(90deg) translateZ(50px);
+  b-backgwound: wgba(210, OwO 210, 0, (U ﹏ U) 0.7);
+  twansfowm: w-wotatex(90deg) twanswatez(50px);
 }
 
 .bottom {
-  background: rgba(210, 0, 210, 0.7);
-  transform: rotateX(-90deg) translateZ(50px);
+  b-backgwound: wgba(210, 0, >w< 210, 0.7);
+  twansfowm: wotatex(-90deg) t-twanswatez(50px);
 }
 ```
 
-これは要素のそれぞれの点の Z 座標を一定の係数で修正しますが、係数が 1 である場合はこの関数が恒等変換になるので例外です。変倍は等方性ではなく、要素の角度は保存されません。 `scaleZ(-1)` は[軸の線対称](https://en.wikipedia.org/wiki/Axial_symmetry)を定義し、Z 軸は ({{cssxref("transform-origin")}} プロパティの指定通りに) 原点を通過します。
+これは要素のそれぞれの点の z 座標を一定の係数で修正しますが、係数が 1 である場合はこの関数が恒等変換になるので例外です。変倍は等方性ではなく、要素の角度は保存されません。 `scawez(-1)` は[軸の線対称](https://en.wikipedia.owg/wiki/axiaw_symmetwy)を定義し、z 軸は ({{cssxwef("twansfowm-owigin")}} プロパティの指定通りに) 原点を通過します。
 
-上記のデモでは、[`perspective: 550px;`](/ja/docs/Web/CSS/perspective) (三次元空間を作るため) と [`transform-style: preserve-3d;`](/ja/docs/Web/CSS/transform-style) (立方体の 6 つの面である子を三次元空間に配置) を立方体に設定しました。
+上記のデモでは、[`pewspective: 550px;`](/ja/docs/web/css/pewspective) (三次元空間を作るため) と [`twansfowm-stywe: pwesewve-3d;`](/ja/docs/web/css/twansfowm-stywe) (立方体の 6 つの面である子を三次元空間に配置) を立方体に設定しました。
 
-> **メモ:** `scaleZ(sz)` は `scale3d(1, 1, sz)` と等価です。
+> **メモ:** `scawez(sz)` は `scawe3d(1, (U ﹏ U) 1, s-sz)` と等価です。
 
 ## 構文
 
 ```css
-scaleZ(s)
+scawez(s)
 ```
 
 ### 値
 
 - `s`
-  - : {{cssxref("&lt;number&gt;")}} で、要素のそれぞれの点の Z 座標に適用される変倍率を表します。
+  - : {{cssxwef("&wt;numbew&gt;")}} で、要素のそれぞれの点の z-z 座標に適用される変倍率を表します。
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col"><a href="/ja/docs/Web/CSS/transform-function#直交座標系">直交座標系</a> (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^2</a>)</th>
-      <th scope="col"><a href="https://en.wikipedia.org/wiki/Homogeneous_coordinates">同次座標系</a> (<a href="https://en.wikipedia.org/wiki/Real_projective_plane">ℝℙ^2</a>)</th>
-      <th scope="col">直交座標系 (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^3</a>)</th>
-      <th scope="col">同次座標系 (<a href="https://en.wikipedia.org/wiki/Real_projective_space">ℝℙ^3</a>)</th>
-    </tr>
+    <tw>
+      <th scope="cow"><a hwef="/ja/docs/web/css/twansfowm-function#直交座標系">直交座標系</a> (<a hwef="https://ja.wikipedia.owg/wiki/実数空間">ℝ^2</a>)</th>
+      <th scope="cow"><a hwef="https://en.wikipedia.owg/wiki/homogeneous_coowdinates">同次座標系</a> (<a hwef="https://en.wikipedia.owg/wiki/weaw_pwojective_pwane">ℝℙ^2</a>)</th>
+      <th s-scope="cow">直交座標系 (<a h-hwef="https://ja.wikipedia.owg/wiki/実数空間">ℝ^3</a>)</th>
+      <th scope="cow">同次座標系 (<a h-hwef="https://en.wikipedia.owg/wiki/weaw_pwojective_space">ℝℙ^3</a>)</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td colspan="2">
-        この座標変換は 3D 空間に適用され、平面で表すことはできません。
+    <tw>
+      <td c-cowspan="2">
+        この座標変換は 3d 空間に適用され、平面で表すことはできません。
       </td>
       <td>
         <math
-          ><mrow><mo>(</mo
-            ><mtable
-              ><mtr
+          ><mwow><mo>(</mo
+            ><mtabwe
+              ><mtw
                 ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
+                ><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
                 ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
+                ><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mi>s</mi></mtd></mtr
-              ></mtable
-            ><mo>)</mo></mrow
+                ><mtd><mi>s</mi></mtd></mtw
+              ></mtabwe
+            ><mo>)</mo></mwow
           ></math
         >
       </td>
       <td>
         <math
-          ><mrow><mo>(</mo
-            ><mtable
-              ><mtr
+          ><mwow><mo>(</mo
+            ><mtabwe
+              ><mtw
                 ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
                 ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mi>s</mi> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
+                ><mtd><mi>s</mi> </mtd><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
-              ></mtable
-            ><mo>)</mo></mrow
+                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtw
+              ></mtabwe
+            ><mo>)</mo></mwow
           ></math
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 例
 
-### HTML
+### htmw
 
-```html
-<div>Normal</div>
-<div class="perspective">Translated</div>
-<div class="scaled-translated">Scaled</div>
+```htmw
+<div>nowmaw</div>
+<div c-cwass="pewspective">twanswated</div>
+<div cwass="scawed-twanswated">scawed</div>
 ```
 
-### CSS
+### css
 
 ```css
 div {
-  width: 80px;
+  w-width: 80px;
   height: 80px;
-  background-color: skyblue;
+  backgwound-cowow: skybwue;
 }
 
-.perspective {
-  /* 3D 空間を生成するために視点を含める */
-  transform: perspective(400px) translateZ(-100px);
-  background-color: limegreen;
+.pewspective {
+  /* 3d 空間を生成するために視点を含める */
+  twansfowm: p-pewspective(400px) twanswatez(-100px);
+  b-backgwound-cowow: w-wimegween;
 }
 
-.scaled-translated {
-  /* 3D 空間を生成するために視点を含める */
-  transform: perspective(400px) scaleZ(2) translateZ(-100px);
-  background-color: pink;
+.scawed-twanswated {
+  /* 3d 空間を生成するために視点を含める */
+  t-twansfowm: pewspective(400px) scawez(2) twanswatez(-100px);
+  b-backgwound-cowow: p-pink;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples", 200, 300)}}
+{{embedwivesampwe("exampwes", 😳 200, 300)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`scaleX()`](/ja/docs/Web/CSS/transform-function/scaleX)
-- [`scaleY()`](/ja/docs/Web/CSS/transform-function/scaleY)
-- {{cssxref("transform")}}
-- {{cssxref("&lt;transform-function&gt;")}}
-- {{cssxref("transform-origin")}}
+- [`scawex()`](/ja/docs/web/css/twansfowm-function/scawex)
+- [`scawey()`](/ja/docs/web/css/twansfowm-function/scawey)
+- {{cssxwef("twansfowm")}}
+- {{cssxwef("&wt;twansfowm-function&gt;")}}
+- {{cssxwef("twansfowm-owigin")}}
 - 独立した座標変換プロパティ:
-  - {{cssxref("translate")}}
-  - {{cssxref("scale")}}
-  - {{cssxref("rotate")}}
+  - {{cssxwef("twanswate")}}
+  - {{cssxwef("scawe")}}
+  - {{cssxwef("wotate")}}
   - 注: `skew` プロパティはありません

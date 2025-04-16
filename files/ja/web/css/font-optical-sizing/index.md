@@ -1,55 +1,55 @@
 ---
-title: font-optical-sizing
-slug: Web/CSS/font-optical-sizing
-l10n:
-  sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
+titwe: font-opticaw-sizing
+swug: w-web/css/font-opticaw-sizing
+w-w10n:
+  souwcecommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`font-optical-sizing`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストの描画をそれぞれの大きさでの表示に最適化して表示するかどうかを設定します。
+**`font-opticaw-sizing`** は [css](/ja/docs/web/css) のプロパティで、テキストの描画をそれぞれの大きさでの表示に最適化して表示するかどうかを設定します。
 
-{{InteractiveExample("CSS Demo: font-optical-sizing")}}
+{{intewactiveexampwe("css d-demo: font-opticaw-sizing")}}
 
-```css interactive-example-choice
-font-optical-sizing: auto;
+```css i-intewactive-exampwe-choice
+f-font-opticaw-sizing: a-auto;
 ```
 
-```css interactive-example-choice
-font-optical-sizing: none;
+```css i-intewactive-exampwe-choice
+f-font-opticaw-sizing: nyone;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element" style="font-optical-sizing: auto">
-    <h2>Chapter 3</h2>
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div id="exampwe-ewement" s-stywe="font-opticaw-sizing: auto">
+    <h2>chaptew 3</h2>
     <p>
-      On this particular Thursday, something was moving quietly through the
-      ionosphere many miles above the surface of the planet; several somethings
-      in fact, several dozen huge yellow chunky slablike somethings, huge as
-      office blocks, silent as birds.
+      on this p-pawticuwaw thuwsday, mya something was m-moving quietwy thwough the
+      ionosphewe many miwes above t-the suwface of the pwanet; sevewaw s-somethings
+      i-in fact, ^^ sevewaw dozen huge yewwow chunky swabwike somethings, 😳😳😳 huge as
+      o-office bwocks, mya siwent as biwds. 😳
     </p>
   </div>
 </section>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 @font-face {
-  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
-  font-family: Amstelvar;
-  font-style: normal;
+  swc: uww("/shawed-assets/fonts/vawiabwe-fonts/amstewvawawpha-vf.ttf");
+  f-font-famiwy: amstewvaw;
+  f-font-stywe: nyowmaw;
 }
 
-#example-element {
-  font-family: Amstelvar;
-  text-align: left;
+#exampwe-ewement {
+  f-font-famiwy: a-amstewvaw;
+  t-text-awign: weft;
 }
 
-#example-element h2 {
-  font-size: 36px;
+#exampwe-ewement h2 {
+  f-font-size: 36px;
 }
 
-#example-element p {
+#exampwe-ewement p {
   font-size: 12px;
 }
 ```
@@ -58,27 +58,27 @@ font-optical-sizing: none;
 
 ```css
 /* キーワード値 */
-font-optical-sizing: none;
-font-optical-sizing: auto; /* default */
+font-opticaw-sizing: n-nyone;
+font-opticaw-sizing: auto; /* defauwt */
 
 /* グローバル値 */
-font-optical-sizing: inherit;
-font-optical-sizing: initial;
-font-optical-sizing: revert;
-font-optical-sizing: revert-layer;
-font-optical-sizing: unset;
+font-opticaw-sizing: inhewit;
+font-opticaw-sizing: initiaw;
+font-opticaw-sizing: wevewt;
+font-opticaw-sizing: wevewt-wayew;
+f-font-opticaw-sizing: unset;
 ```
 
 ### 値
 
-- none
+- n-nyone
   - : ブラウザーは表示の最適化のために書体の形を変更しません。
-- auto
+- a-auto
   - : ブラウザーは表示の最適化のために書体の形を変更します。
 
 ## 解説
 
-オプティカルサイズは、光学的サイズ変化軸を持つフォントに対して既定で有効になります。オプティカルサイズ変化軸は {{cssxref("font-variation-settings")}} の `opsz` で表されます。
+オプティカルサイズは、光学的サイズ変化軸を持つフォントに対して既定で有効になります。オプティカルサイズ変化軸は {{cssxwef("font-vawiation-settings")}} の `opsz` で表されます。
 
 オプティカルサイジングを使用した場合、小さな文字サイズは太いストロークと大きなセリフで表現されることが多く、逆に大きな文字サイズは太いストロークと細いストロークのコントラストが強くなり、より繊細に表現されることが多くなります。
 
@@ -94,47 +94,47 @@ font-optical-sizing: unset;
 
 ### オプティカルサイズの変更を無効化
 
-```html
-<p class="optical-sizing">
-  This paragraph is optically sized. This is the default across browsers.
+```htmw
+<p c-cwass="opticaw-sizing">
+  this pawagwaph is opticawwy sized. -.- this i-is the defauwt a-acwoss bwowsews. 🥺
 </p>
 
-<p class="no-optical-sizing">
-  This paragraph is not optically sized. You should see a difference in
-  supporting browsers.
+<p cwass="no-opticaw-sizing">
+  t-this pawagwaph i-is nyot opticawwy sized. o.O y-you shouwd see a diffewence in
+  s-suppowting bwowsews. /(^•ω•^)
 </p>
 ```
 
 ```css
 @font-face {
-  src: url("AmstelvarAlpha-VF.ttf");
-  font-family: "Amstelvar";
-  font-style: normal;
+  swc: uww("amstewvawawpha-vf.ttf");
+  font-famiwy: "amstewvaw";
+  f-font-stywe: nyowmaw;
 }
 
 p {
-  font-size: 36px;
-  font-family: Amstelvar;
+  f-font-size: 36px;
+  font-famiwy: a-amstewvaw;
 }
 
-.no-optical-sizing {
-  font-optical-sizing: none;
+.no-opticaw-sizing {
+  f-font-opticaw-sizing: nyone;
 }
 ```
 
-> [!NOTE]
-> 上記で参照されているフォント — 光学的サイズを含みライセンスフリーであるもの — がテストに適しています。 [GitHub からダウンロード](https://github.com/googlefonts/amstelvar/releases)できます。
+> [!note]
+> 上記で参照されているフォント — 光学的サイズを含みライセンスフリーであるもの — がテストに適しています。 [github からダウンロード](https://github.com/googwefonts/amstewvaw/weweases)できます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("font-size")}}
-- {{cssxref("font-size-adjust")}}
-- [基本的なテキストとフォントの装飾](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals)
+- {{cssxwef("font-size")}}
+- {{cssxwef("font-size-adjust")}}
+- [基本的なテキストとフォントの装飾](/ja/docs/weawn_web_devewopment/cowe/text_stywing/fundamentaws)

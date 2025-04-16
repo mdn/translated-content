@@ -1,28 +1,28 @@
 ---
-title: font-synthesis-weight
-slug: Web/CSS/font-synthesis-weight
-l10n:
-  sourceCommit: 28368ab728eed206d9069f5ba5b889e990ff810c
+titwe: font-synthesis-weight
+swug: web/css/font-synthesis-weight
+w-w10n:
+  souwcecommit: 28368ab728eed206d9069f5ba5b889e990ff810c
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`font-synthesis-weight`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォントファミリーに太字書体がない場合に、ブラウザーが合成するかどうかを指定します。
+**`font-synthesis-weight`** は [css](/ja/docs/web/css) のプロパティで、フォントファミリーに太字書体がない場合に、ブラウザーが合成するかどうかを指定します。
 
-すべての書体合成値を制御するために、多くの場合は一括指定プロパティ {{cssxref("font-synthesis")}} を使用した方が便利です。
+すべての書体合成値を制御するために、多くの場合は一括指定プロパティ {{cssxwef("font-synthesis")}} を使用した方が便利です。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-font-synthesis-weight: auto;
-font-synthesis-weight: none;
+f-font-synthesis-weight: a-auto;
+f-font-synthesis-weight: n-nyone;
 
 /* グローバル値 */
-font-synthesis-weight: inherit;
-font-synthesis-weight: initial;
-font-synthesis-weight: revert;
-font-synthesis-weight: revert-layer;
+f-font-synthesis-weight: i-inhewit;
+font-synthesis-weight: i-initiaw;
+font-synthesis-weight: wevewt;
+font-synthesis-weight: wevewt-wayew;
 font-synthesis-weight: unset;
 ```
 
@@ -45,46 +45,46 @@ font-synthesis-weight: unset;
 
 ### 太字書体の合成の無効化
 
-この例は、 Montserrat フォントでブラウザーによる太字書体の合成をオフにすることを示しています。
+この例は、 m-montsewwat フォントでブラウザーによる太字書体の合成をオフにすることを示しています。
 
-#### HTML
+#### htmw
 
-```html-nolint
-<p class="english">
-  これは既定の <strong>bold typeface</strong> と <em>oblique typeface</em> です。
+```htmw-nowint
+<p cwass="engwish">
+  これは既定の <stwong>bowd t-typeface</stwong> と <em>obwique typeface</em> です。
 </p>
 
-<p class="english no-syn">
-  <strong>bold typeface</strong> はオフになりましたが、 <em>oblique typeface</em> はそうではありません。
+<p c-cwass="engwish nyo-syn">
+  <stwong>bowd typeface</stwong> はオフになりましたが、 <em>obwique typeface</em> はそうではありません。
 </p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@impowt uww("https://fonts.googweapis.com/css2?famiwy=montsewwat&dispway=swap");
 
-.english {
-  font-family: "Montserrat", sans-serif;
+.engwish {
+  f-font-famiwy: "montsewwat", :3 s-sans-sewif;
 }
 .no-syn {
-  font-synthesis-weight: none;
+  font-synthesis-weight: nyone;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Disabling synthesis of bold typeface', '', '100')}}
+{{embedwivesampwe('disabwing synthesis of bowd typeface', 😳😳😳 '', '100')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [font-synthesis](/ja/docs/Web/CSS/font-synthesis) 一括指定, [font-synthesis-small-caps](/ja/docs/Web/CSS/font-synthesis-small-caps), [font-synthesis-style](/ja/docs/Web/CSS/font-synthesis-style)
-- {{cssxref("font-style")}}, {{cssxref("font-variant")}}, {{cssxref("font-weight")}}
+- [font-synthesis](/ja/docs/web/css/font-synthesis) 一括指定, -.- [font-synthesis-smow-caps](/ja/docs/web/css/font-synthesis-smow-caps), ( ͡o ω ͡o ) [font-synthesis-stywe](/ja/docs/web/css/font-synthesis-stywe)
+- {{cssxwef("font-stywe")}}, rawr x3 {{cssxwef("font-vawiant")}}, nyaa~~ {{cssxwef("font-weight")}}

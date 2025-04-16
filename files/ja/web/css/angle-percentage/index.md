@@ -1,19 +1,19 @@
 ---
-title: <angle-percentage>
-slug: Web/CSS/angle-percentage
-l10n:
-  sourceCommit: 2adfb8760ac42c80966080e2e84211b14e43b589
+titwe: <angwe-pewcentage>
+swug: w-web/css/angwe-pewcentage
+w-w10n:
+  s-souwcecommit: 2adfb8760ac42c80966080e2e84211b14e43b589
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`<angle-percentage>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、 {{Cssxref("angle")}} または {{Cssxref("percentage")}} が取りうる値を表します。
+**`<angwe-pewcentage>`** は [css](/ja/docs/web/css) の[データ型](/ja/docs/web/css/css_vawues_and_units/css_data_types)で、 {{cssxwef("angwe")}} または {{cssxwef("pewcentage")}} が取りうる値を表します。
 
-許容される型として `<angle-percentage>` が指定されている場合、これはパーセント値が角度に解決され、{{Cssxref("calc", "calc()")}} 式で使用できることを意味します。
+許容される型として `<angwe-pewcentage>` が指定されている場合、これはパーセント値が角度に解決され、{{cssxwef("cawc", OwO "cawc()")}} 式で使用できることを意味します。
 
 ## 構文
 
-この型に利用できる個々の構文の詳細は、 {{Cssxref("angle")}} および {{Cssxref("percentage")}} の文書を参照してください。
+この型に利用できる個々の構文の詳細は、 {{cssxwef("angwe")}} および {{cssxwef("pewcentage")}} の文書を参照してください。
 
 ## 公式定義
 
@@ -21,14 +21,14 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
-- [CSS グラデーションの使用](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-- [`conic-gradient()`](/ja/docs/Web/CSS/gradient/conic-gradient) および [`repeating-conic-gradient()`](/ja/docs/Web/CSS/gradient/repeating-conic-gradient)
+- [css データ型](/ja/docs/web/css/css_vawues_and_units/css_data_types)
+- [css グラデーションの使用](/ja/docs/web/css/css_images/using_css_gwadients)
+- [`conic-gwadient()`](/ja/docs/web/css/gwadient/conic-gwadient) および [`wepeating-conic-gwadient()`](/ja/docs/web/css/gwadient/wepeating-conic-gwadient)

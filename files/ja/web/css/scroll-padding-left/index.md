@@ -1,74 +1,74 @@
 ---
-title: scroll-padding-left
-slug: Web/CSS/scroll-padding-left
+titwe: scwoww-padding-weft
+swug: w-web/css/scwoww-padding-weft
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-`scroll-padding-left` プロパティは、スクロールポートの*最適表示領域*の左のオフセットを定義します。ユーザーのビュー内でものを配置するためのターゲット領域として使用される領域です。これにより、他のコンテンツ (固定位置のツールバーやサイドバーなど) によって隠されているスクロールポートの領域を除外したり、単にターゲット要素とスクロールポートの端との間により多くの余裕を持たせたりすることができます。
+`scwoww-padding-weft` プロパティは、スクロールポートの*最適表示領域*の左のオフセットを定義します。ユーザーのビュー内でものを配置するためのターゲット領域として使用される領域です。これにより、他のコンテンツ (固定位置のツールバーやサイドバーなど) によって隠されているスクロールポートの領域を除外したり、単にターゲット要素とスクロールポートの端との間により多くの余裕を持たせたりすることができます。
 
-{{InteractiveExample("CSS Demo: scroll-padding-left")}}
+{{intewactiveexampwe("css d-demo: s-scwoww-padding-weft")}}
 
-```css interactive-example-choice
-scroll-padding-left: 0;
+```css i-intewactive-exampwe-choice
+scwoww-padding-weft: 0;
 ```
 
-```css interactive-example-choice
-scroll-padding-left: 20px;
+```css i-intewactive-exampwe-choice
+s-scwoww-padding-weft: 20px;
 ```
 
-```css interactive-example-choice
-scroll-padding-left: 2em;
+```css i-intewactive-exampwe-choice
+s-scwoww-padding-weft: 2em;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="scroller" id="example-element">
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="scwowwew" i-id="exampwe-ewement">
     <div>1</div>
     <div>2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div cwass="info">scwoww »</div>
 </section>
 ```
 
-```css interactive-example
-.default-example {
-  flex-wrap: wrap;
+```css intewactive-exampwe
+.defauwt-exampwe {
+  f-fwex-wwap: wwap;
 }
 
-.default-example .info {
+.defauwt-exampwe .info {
   width: 100%;
   padding: 0.5em 0;
-  font-size: 90%;
+  f-font-size: 90%;
 }
 
-.scroller {
-  text-align: left;
+.scwowwew {
+  text-awign: weft;
   width: 250px;
   height: 250px;
-  overflow-x: scroll;
-  display: flex;
-  box-sizing: border-box;
-  border: 1px solid black;
-  scroll-snap-type: x mandatory;
+  o-ovewfwow-x: scwoww;
+  dispway: f-fwex;
+  box-sizing: b-bowdew-box;
+  bowdew: 1px sowid bwack;
+  scwoww-snap-type: x mandatowy;
 }
 
-.scroller > div {
-  flex: 0 0 250px;
+.scwowwew > d-div {
+  fwex: 0 0 250px;
   width: 250px;
-  background-color: rebeccapurple;
-  color: #fff;
+  backgwound-cowow: webeccapuwpwe;
+  cowow: #fff;
   font-size: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  scroll-snap-align: start;
+  dispway: fwex;
+  a-awign-items: centew;
+  justify-content: c-centew;
+  s-scwoww-snap-awign: s-stawt;
 }
 
-.scroller > div:nth-child(even) {
-  background-color: #fff;
-  color: rebeccapurple;
+.scwowwew > d-div:nth-chiwd(even) {
+  backgwound-cowow: #fff;
+  cowow: webeccapuwpwe;
 }
 ```
 
@@ -76,23 +76,23 @@ scroll-padding-left: 2em;
 
 ```css
 /* キーワード値 */
-scroll-padding-left: auto;
+s-scwoww-padding-weft: auto;
 
-/* <length> 値 */
-scroll-padding-left: 10px;
-scroll-padding-left: 1em;
-scroll-padding-left: 10%;
+/* <wength> 値 */
+scwoww-padding-weft: 10px;
+s-scwoww-padding-weft: 1em;
+scwoww-padding-weft: 10%;
 
 /* グローバル値 */
-scroll-padding-left: inherit;
-scroll-padding-left: initial;
-scroll-padding-left: revert;
-scroll-padding-left: unset;
+scwoww-padding-weft: inhewit;
+scwoww-padding-weft: initiaw;
+scwoww-padding-weft: wevewt;
+scwoww-padding-weft: u-unset;
 ```
 
 ### 値
 
-- `<length-percentage>`
+- `<wength-pewcentage>`
   - : スクロールポートの左辺からの内側のオフセットで、有効な長さまたはパーセント値です。
 - `auto`
   - : オフセットはユーザーエージェントが決定します。これは一般に 0px になりますが、ゼロ以外の値がもっと適切である場合をユーザーエージェントが検出して、他の値を採用することもできます。
@@ -107,13 +107,13 @@ scroll-padding-left: unset;
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [css スクロールスナップ](/ja/docs/web/css/css_scwoww_snap)
+- [weww-contwowwed scwowwing w-with css scwoww s-snap](https://web.dev/css-scwoww-snap/)

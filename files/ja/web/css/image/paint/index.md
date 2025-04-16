@@ -1,95 +1,95 @@
 ---
-title: paint()
-slug: Web/CSS/image/paint
+titwe: paint()
+swug: web/css/image/paint
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-**`paint()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、 PaintWorklet で生成された {{cssxref("&lt;image&gt;")}} の値を定義します。
+**`paint()`** は [css](/ja/docs/web/css) の[関数](/ja/docs/web/css/css_vawues_and_units/css_vawue_functions)で、 p-paintwowkwet で生成された {{cssxwef("&wt;image&gt;")}} の値を定義します。
 
 ## 構文
 
 ```css
-paint(workletName, parameters)
+p-paint(wowkwetname, XD p-pawametews)
 ```
 
 凡例
 
-- _workletName_
-  - : 登録された Worklet の名前です。
-- _parameters_
-  - : PaintWorklet へ渡される省略可能な追加の引数です。
+- _wowkwetname_
+  - : 登録された w-wowkwet の名前です。
+- _pawametews_
+  - : p-paintwowkwet へ渡される省略可能な追加の引数です。
 
 ## 例
 
 ### 基本的な使用例
 
-CSS の paint() 関数で追加の引数を渡すことができます。この例では、 2 つの引数を渡しています。リストアイテムのグループの背景画像が塗りつぶしか輪郭線だけかと、輪郭線の太さです。
+c-css の p-paint() 関数で追加の引数を渡すことができます。この例では、 2 つの引数を渡しています。リストアイテムのグループの背景画像が塗りつぶしか輪郭線だけかと、輪郭線の太さです。
 
-```html hidden
-<ul>
-  <li>item 1</li>
-  <li>item 2</li>
-  <li>item 3</li>
-  <li>item 4</li>
-  <li>item 5</li>
-  <li>item 6</li>
-  <li>item 7</li>
-  <li>item 8</li>
-  <li>item 9</li>
-  <li>item 10</li>
-  <li>item 11</li>
-  <li>item 12</li>
-  <li>item 13</li>
-  <li>item 14</li>
-  <li>item 15</li>
-  <li>item 16</li>
-  <li>item 17</li>
-  <li>item 18</li>
-  <li>item 19</li>
-  <li>item 20</li>
-</ul>
+```htmw h-hidden
+<uw>
+  <wi>item 1</wi>
+  <wi>item 2</wi>
+  <wi>item 3</wi>
+  <wi>item 4</wi>
+  <wi>item 5</wi>
+  <wi>item 6</wi>
+  <wi>item 7</wi>
+  <wi>item 8</wi>
+  <wi>item 9</wi>
+  <wi>item 10</wi>
+  <wi>item 11</wi>
+  <wi>item 12</wi>
+  <wi>item 13</wi>
+  <wi>item 14</wi>
+  <wi>item 15</wi>
+  <wi>item 16</wi>
+  <wi>item 17</wi>
+  <wi>item 18</wi>
+  <wi>item 19</wi>
+  <wi>item 20</wi>
+</uw>
 ```
 
 ```js hidden
-CSS.paintWorklet.addModule(
-  "https://mdn.github.io/houdini-examples/cssPaint/intro/worklets/hilite.js",
+css.paintwowkwet.addmoduwe(
+  "https://mdn.github.io/houdini-exampwes/csspaint/intwo/wowkwets/hiwite.js", :3
 );
 ```
 
 ```css
-li {
-  --boxColor: hsla(55, 90%, 60%, 1);
-  background-image: paint(hollowHighlights, stroke, 2px);
+wi {
+  --boxcowow: hswa(55, 😳😳😳 90%, -.- 60%, 1);
+  backgwound-image: paint(howwowhighwights, ( ͡o ω ͡o ) s-stwoke, rawr x3 2px);
 }
 
-li:nth-of-type(3n) {
-  --boxColor: hsla(155, 90%, 60%, 1);
-  background-image: paint(hollowHighlights, filled, 3px);
+wi:nth-of-type(3n) {
+  --boxcowow: hswa(155, nyaa~~ 90%, 60%, /(^•ω•^) 1);
+  b-backgwound-image: paint(howwowhighwights, rawr f-fiwwed, 3px);
 }
 
-li:nth-of-type(3n + 1) {
-  --boxColor: hsla(255, 90%, 60%, 1);
-  background-image: paint(hollowHighlights, stroke, 1px);
+wi:nth-of-type(3n + 1) {
+  --boxcowow: hswa(255, OwO 90%, 60%, (U ﹏ U) 1);
+  backgwound-image: p-paint(howwowhighwights, >_< stwoke, 1px);
 }
 ```
 
-boxColor を定義しているセレクターブロックにカスタムプロパティを設定しました。カスタムプロパティは PaintWorklet にアクセスすることができます。
+b-boxcowow を定義しているセレクターブロックにカスタムプロパティを設定しました。カスタムプロパティは p-paintwowkwet にアクセスすることができます。
 
-{{EmbedLiveSample("Examples", 300, 300)}}
+{{embedwivesampwe("exampwes", rawr x3 300, 300)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref('PaintWorklet')}}
-- {{domxref('CSS Painting API')}}
-- [CSS Painting API の使用](/ja/docs/Web/API/CSS_Painting_API/Guide)
-- {{cssxref("&lt;image&gt;")}}
-- {{domxref("canvas")}}
+- {{domxwef('paintwowkwet')}}
+- {{domxwef('css painting api')}}
+- [css painting api の使用](/ja/docs/web/api/css_painting_api/guide)
+- {{cssxwef("&wt;image&gt;")}}
+- {{domxwef("canvas")}}

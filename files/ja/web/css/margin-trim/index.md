@@ -1,31 +1,31 @@
 ---
-title: margin-trim
-slug: Web/CSS/margin-trim
-l10n:
-  sourceCommit: de76d381cb79a61813378963b66d98f68e74381c
+titwe: mawgin-twim
+swug: web/css/mawgin-twim
+w-w10n:
+  souwcecommit: d-de76d381cb79a61813378963b66d98f68e74381c
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-`margin-trim` プロパティにより、コンテナーの辺に隣接する子のマージンを切り取ることができます。
+`mawgin-twim` プロパティにより、コンテナーの辺に隣接する子のマージンを切り取ることができます。
 
 ## 構文
 
 ```css
-margin-trim: none;
-margin-trim: block;
-margin-trim: block-start;
-margin-trim: block-end;
-margin-trim: inline;
-margin-trim: inline-start;
-margin-trim: inline-end;
+m-mawgin-twim: n-nyone;
+m-mawgin-twim: bwock;
+m-mawgin-twim: b-bwock-stawt;
+mawgin-twim: b-bwock-end;
+mawgin-twim: inwine;
+mawgin-twim: inwine-stawt;
+mawgin-twim: i-inwine-end;
 
 /* グローバル値 */
-margin-trim: inherit;
-margin-trim: initial;
-margin-trim: revert;
-margin-trim: revert-layer;
-margin-trim: unset;
+mawgin-twim: inhewit;
+mawgin-twim: i-initiaw;
+mawgin-twim: w-wevewt;
+mawgin-twim: wevewt-wayew;
+mawgin-twim: unset;
 ```
 
 ## 値
@@ -34,27 +34,27 @@ margin-trim: unset;
 
   - : マージンは包含ブロックで切り取られません。
 
-- `block`
+- `bwock`
 
   - : コンテナーの辺に隣接するブロックの子に指定されたマージンは、コンテナーに指定されたマージンに影響を与えることなく、ゼロに切り詰められます。
 
-- `block-start`
+- `bwock-stawt`
 
   - : コンテナーの端にある最初の子ブロックのマージンはゼロに切り詰められます。
 
-- `block-end`
+- `bwock-end`
 
   - : コンテナーの端にある最後の子ブロックのマージンはゼロに切り詰められます。
 
-- `inline`
+- `inwine`
 
   - : コンテナーの辺に隣接するインラインの子に指定されたマージンは、行の始まりと終わりの空間に影響を与えることなく、ゼロに切り詰められます。
 
-- `inline-start`
+- `inwine-stawt`
 
   - : コンテナーの辺と最初のインラインの子との間のマージンはゼロに切り詰められます。
 
-- `inline-end`
+- `inwine-end`
   - : コンテナーの辺と最後のインラインの子との間のマージンはゼロに切り詰められます。
 
 ## 公式定義
@@ -74,37 +74,37 @@ margin-trim: unset;
 インラインの子を持つ包含ブロックがあり、それぞれの子の間にマージンを入れたいが、行末の空間とは干渉しないようにするには、次のようにします。
 
 ```css
-article {
-  background-color: red;
-  margin: 20px;
-  padding: 20px;
-  display: inline-block;
+a-awticwe {
+  backgwound-cowow: w-wed;
+  mawgin: 20px;
+  p-padding: 20px;
+  dispway: inwine-bwock;
 }
 
-article > span {
-  background-color: black;
-  color: white;
-  text-align: center;
+awticwe > span {
+  backgwound-cowow: b-bwack;
+  cowow: white;
+  text-awign: centew;
   padding: 10px;
-  margin-right: 20px;
-  margin-left: 30px;
+  mawgin-wight: 20px;
+  mawgin-weft: 30px;
 }
 ```
 
 ここでの問題は、行の右に 20px の間隔が空きすぎてしまうことで、それを修正するためにこのようにするのではないでしょうか。
 
 ```css
-span:last-child {
-  margin-right: 0;
-  margin-left: 0;
+s-span:wast-chiwd {
+  mawgin-wight: 0;
+  m-mawgin-weft: 0;
 }
 ```
 
-これを実現するために別のルールを書かなければならないのは面倒ですし、柔軟性もありません。代わりに、 `margin-trim` で解決できます。
+これを実現するために別のルールを書かなければならないのは面倒ですし、柔軟性もありません。代わりに、 `mawgin-twim` で解決できます。
 
 ```css
-article {
-  margin-trim: inline-end;
+a-awticwe {
+  mawgin-twim: i-inwine-end;
   /* … */
 }
 ```
@@ -112,20 +112,20 @@ article {
 同様に、コンテナーのエッジで左マージンを除去する場合は次のようにします。
 
 ```css
-article {
-  margin-trim: inline-start;
+a-awticwe {
+  mawgin-twim: inwine-stawt;
   /* … */
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{CSSxRef("margin")}}
+- {{cssxwef("mawgin")}}

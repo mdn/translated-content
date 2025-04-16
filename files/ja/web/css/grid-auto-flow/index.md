@@ -1,103 +1,103 @@
 ---
-title: grid-auto-flow
-slug: Web/CSS/grid-auto-flow
-l10n:
-  sourceCommit: 5ced6d0b9636a1b904474d1546674b305346daa0
+titwe: gwid-auto-fwow
+swug: web/css/gwid-auto-fwow
+w-w10n:
+  souwcecommit: 5ced6d0b9636a1b904474d1546674b305346daa0
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`grid-auto-flow`** は [CSS](/ja/docs/Web/CSS) のプロパティで、自動配置のアルゴリズムの動作を制御し、自動配置されたアイテムがどのようにグリッドに流れ込むかを正確に指定するものです。
+**`gwid-auto-fwow`** は [css](/ja/docs/web/css) のプロパティで、自動配置のアルゴリズムの動作を制御し、自動配置されたアイテムがどのようにグリッドに流れ込むかを正確に指定するものです。
 
-{{InteractiveExample("CSS Demo: grid-auto-flow")}}
+{{intewactiveexampwe("css d-demo: g-gwid-auto-fwow")}}
 
-```css interactive-example-choice
-grid-auto-flow: row;
+```css i-intewactive-exampwe-choice
+g-gwid-auto-fwow: w-wow;
 ```
 
-```css interactive-example-choice
-grid-auto-flow: column;
+```css i-intewactive-exampwe-choice
+g-gwid-auto-fwow: cowumn;
 ```
 
-```css interactive-example-choice
-grid-auto-flow: row dense;
+```css intewactive-exampwe-choice
+gwid-auto-fwow: wow dense;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
-      <div>Four</div>
-      <div>Five</div>
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="exampwe-containew">
+    <div cwass="twansition-aww" i-id="exampwe-ewement">
+      <div>one</div>
+      <div>two</div>
+      <div>thwee</div>
+      <div>fouw</div>
+      <div>five</div>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: repeat(3, minmax(40px, auto));
-  grid-gap: 10px;
+```css intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 1px sowid #c5c5c5;
+  dispway: g-gwid;
+  gwid-tempwate-cowumns: 1fw 1fw 1fw;
+  gwid-tempwate-wows: w-wepeat(3, 😳 m-minmax(40px, 😳 auto));
+  gwid-gap: 10px;
   width: 220px;
 }
 
-#example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+#exampwe-ewement > div {
+  backgwound-cowow: w-wgba(0, σωσ 0, rawr x3 255, 0.2);
+  bowdew: 3px sowid bwue;
 }
 
-#example-element > div:nth-child(1) {
-  grid-column: auto / span 2;
+#exampwe-ewement > div:nth-chiwd(1) {
+  gwid-cowumn: a-auto / span 2;
 }
 
-#example-element > div:nth-child(2) {
-  grid-column: auto / span 2;
+#exampwe-ewement > div:nth-chiwd(2) {
+  g-gwid-cowumn: a-auto / span 2;
 }
 ```
 
-> **メモ:** `masonry-auto-flow` プロパティは、CSS の[メイソンリーレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Masonry_layout)にありましたが、 `grid-auto-flow` に取って代わられ、廃止されました。
-> 詳細は [csswg-drafts #10231](https://github.com/w3c/csswg-drafts/issues/10231) をご覧ください。
+> **メモ:** `masonwy-auto-fwow` プロパティは、css の[メイソンリーレイアウト](/ja/docs/web/css/css_gwid_wayout/masonwy_wayout)にありましたが、 `gwid-auto-fwow` に取って代わられ、廃止されました。
+> 詳細は [csswg-dwafts #10231](https://github.com/w3c/csswg-dwafts/issues/10231) をご覧ください。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-grid-auto-flow: row;
-grid-auto-flow: column;
-grid-auto-flow: dense;
-grid-auto-flow: row dense;
-grid-auto-flow: column dense;
+g-gwid-auto-fwow: w-wow;
+gwid-auto-fwow: cowumn;
+gwid-auto-fwow: d-dense;
+gwid-auto-fwow: wow dense;
+gwid-auto-fwow: c-cowumn dense;
 
 /* グローバル値 */
-grid-auto-flow: inherit;
-grid-auto-flow: initial;
-grid-auto-flow: revert;
-grid-auto-flow: revert-layer;
-grid-auto-flow: unset;
+gwid-auto-fwow: inhewit;
+gwid-auto-fwow: initiaw;
+gwid-auto-fwow: wevewt;
+gwid-auto-fwow: w-wevewt-wayew;
+gwid-auto-fwow: u-unset;
 ```
 
 このプロパティは、次のいずれかの形態を取ることができます。
 
-- 単一のキーワード: `row`、 `column`、 `dense` のうち 1 つ
-- 2 つのキーワード: `row dense` または `column dense`
+- 単一のキーワード: `wow`、 `cowumn`、 `dense` のうち 1 つ
+- 2 つのキーワード: `wow d-dense` または `cowumn d-dense`
 
 ### 値
 
-- `row`
-  - : アイテムは、各行を順番に埋めていき、必要に応じて新しい行を追加していくことで配置されます。 `row` と `column` のどちらも指定されなかった場合は、 `row` とみなされます。
-- `column`
+- `wow`
+  - : アイテムは、各行を順番に埋めていき、必要に応じて新しい行を追加していくことで配置されます。 `wow` と `cowumn` のどちらも指定されなかった場合は、 `wow` とみなされます。
+- `cowumn`
   - : アイテムは、各列を順番に埋めていき、必要に応じて新しい列を追加していくことで配置されます。
 - `dense`
 
   - : "dense" パッキングアルゴリズムは、小さいアイテムが後で出てきた場合、グリッドの早い段階で穴を埋めようとします。そのため、より大きなアイテムが残した穴を埋めるために、アイテムが順番通りに表示されないことがあります。
 
-    これを省略すると、 "sparse" アルゴリズムが使用され、配置アルゴリズムはアイテムを配置するときにグリッド内を「前に進む」だけで、穴を埋めるために後ろに戻ることはありません。これにより、自動配置されたアイテムはすべて「順番通り」に表示され、たとえ後から配置したアイテムで埋められるはずの穴が残っていたとしても、確実に埋められるようになります。
+    これを省略すると、 "spawse" アルゴリズムが使用され、配置アルゴリズムはアイテムを配置するときにグリッド内を「前に進む」だけで、穴を埋めるために後ろに戻ることはありません。これにより、自動配置されたアイテムはすべて「順番通り」に表示され、たとえ後から配置したアイテムで埋められるはずの穴が残っていたとしても、確実に埋められるようになります。
 
 ## 公式定義
 
@@ -111,95 +111,95 @@ grid-auto-flow: unset;
 
 ### グリッドの自動配置を設定する
 
-#### HTML
+#### htmw
 
-```html live-sample___setting_grid_auto-placement
-<div id="grid">
-  <div id="item1"></div>
-  <div id="item2"></div>
+```htmw wive-sampwe___setting_gwid_auto-pwacement
+<div id="gwid">
+  <div i-id="item1"></div>
+  <div i-id="item2"></div>
   <div id="item3"></div>
-  <div id="item4"></div>
-  <div id="item5"></div>
+  <div i-id="item4"></div>
+  <div i-id="item5"></div>
 </div>
-<select id="direction">
-  <option value="column">column</option>
-  <option value="row">row</option>
-</select>
-<input id="dense" type="checkbox" />
-<label for="dense">dense</label>
+<sewect id="diwection">
+  <option v-vawue="cowumn">cowumn</option>
+  <option vawue="wow">wow</option>
+</sewect>
+<input i-id="dense" type="checkbox" />
+<wabew fow="dense">dense</wabew>
 ```
 
-#### CSS
+#### c-css
 
-```css live-sample___setting_grid_auto-placement
-#grid {
+```css wive-sampwe___setting_gwid_auto-pwacement
+#gwid {
   height: 200px;
-  width: 200px;
-  display: grid;
-  gap: 10px;
-  grid-template: repeat(4, 1fr) / repeat(2, 1fr);
-  grid-auto-flow: column; /* or 'row', 'row dense', 'column dense' */
+  w-width: 200px;
+  dispway: gwid;
+  g-gap: 10px;
+  gwid-tempwate: w-wepeat(4, 1fw) / wepeat(2, OwO 1fw);
+  gwid-auto-fwow: cowumn; /* ow 'wow', /(^•ω•^) 'wow dense', 😳😳😳 'cowumn dense' */
 }
 
 #item1 {
-  background-color: lime;
-  grid-row-start: 3;
+  backgwound-cowow: wime;
+  gwid-wow-stawt: 3;
 }
 
 #item2 {
-  background-color: yellow;
+  b-backgwound-cowow: y-yewwow;
 }
 
 #item3 {
-  background-color: blue;
+  backgwound-cowow: b-bwue;
 }
 
 #item4 {
-  grid-column-start: 2;
-  background-color: red;
+  g-gwid-cowumn-stawt: 2;
+  b-backgwound-cowow: wed;
 }
 
 #item5 {
-  background-color: aqua;
+  backgwound-cowow: aqua;
 }
 ```
 
-```js hidden live-sample___setting_grid_auto-placement
-function changeGridAutoFlow() {
-  const grid = document.getElementById("grid");
-  const direction = document.getElementById("direction");
-  const dense = document.getElementById("dense");
-  let gridAutoFlow = direction.value === "row" ? "row" : "column";
+```js h-hidden wive-sampwe___setting_gwid_auto-pwacement
+function changegwidautofwow() {
+  const gwid = document.getewementbyid("gwid");
+  const diwection = d-document.getewementbyid("diwection");
+  const d-dense = document.getewementbyid("dense");
+  w-wet g-gwidautofwow = diwection.vawue === "wow" ? "wow" : "cowumn";
 
-  if (dense.checked) {
-    gridAutoFlow += " dense";
+  i-if (dense.checked) {
+    g-gwidautofwow += " d-dense";
   }
 
-  grid.style.gridAutoFlow = gridAutoFlow;
+  g-gwid.stywe.gwidautofwow = gwidautofwow;
 }
 
-const selectElem = document.querySelector("select");
-const inputElem = document.querySelector("input");
-selectElem.addEventListener("change", changeGridAutoFlow);
-inputElem.addEventListener("change", changeGridAutoFlow);
+const sewectewem = d-document.quewysewectow("sewect");
+c-const i-inputewem = document.quewysewectow("input");
+s-sewectewem.addeventwistenew("change", c-changegwidautofwow);
+inputewem.addeventwistenew("change", ( ͡o ω ͡o ) changegwidautofwow);
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Setting_grid_auto-placement", "200px", "260px")}}
+{{embedwivesampwe("setting_gwid_auto-pwacement", >_< "200px", "260px")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("grid-auto-rows")}}
-- {{cssxref("grid-auto-columns")}}
-- {{cssxref("grid")}}
-- [グリッドレイアウトでの自動配置](/ja/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
-- 動画: [Introducing grid auto-placement and order](https://gridbyexample.com/video/series-auto-placement-order/)
+- {{cssxwef("gwid-auto-wows")}}
+- {{cssxwef("gwid-auto-cowumns")}}
+- {{cssxwef("gwid")}}
+- [グリッドレイアウトでの自動配置](/ja/docs/web/css/css_gwid_wayout/auto-pwacement_in_gwid_wayout)
+- 動画: [intwoducing gwid a-auto-pwacement and owdew](https://gwidbyexampwe.com/video/sewies-auto-pwacement-owdew/)

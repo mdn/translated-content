@@ -1,283 +1,283 @@
 ---
-title: matrix3d()
-slug: Web/CSS/transform-function/matrix3d
-l10n:
-  sourceCommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
+titwe: matwix3d()
+swug: web/css/twansfowm-function/matwix3d
+w10n:
+  s-souwcecommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`matrix3d()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、 4x4 の 3D 同次変換行列を定義します。
-結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
+**`matwix3d()`** は [css](/ja/docs/web/css) の[関数](/ja/docs/web/css/css_vawues_and_units/css_vawue_functions)で、 4x4 の 3d 同次変換行列を定義します。
+結果は {{cssxwef("&wt;twansfowm-function&gt;")}} データ型になります。
 
-{{InteractiveExample("CSS Demo: matrix3d()")}}
+{{intewactiveexampwe("css d-demo: m-matwix3d()")}}
 
-```css interactive-example-choice
-transform: matrix3d(
-  -0.6,
-  1.34788,
+```css i-intewactive-exampwe-choice
+t-twansfowm: matwix3d(
+  -0.6, ^•ﻌ•^
+  1.34788, (˘ω˘)
   0,
   0,
-  -2.34788,
-  -0.6,
+  -2.34788, :3
+  -0.6, ^^;;
   0,
   0,
-  0,
+  0, 🥺
   0,
   1,
   0,
-  0,
+  0, (⑅˘꒳˘)
   0,
   10,
   1
 );
 ```
 
-```css interactive-example-choice
-transform: matrix3d(
-  0.5,
-  0,
+```css i-intewactive-exampwe-choice
+t-twansfowm: matwix3d(
+  0.5, nyaa~~
+  0, :3
   -0.866025,
-  0,
-  0.595877,
+  0, ( ͡o ω ͡o )
+  0.595877, mya
   1.2,
-  -1.03209,
+  -1.03209, (///ˬ///✿)
   0,
-  0.866025,
+  0.866025, (˘ω˘)
   0,
-  0.5,
+  0.5, ^^;;
   0,
-  25.9808,
+  25.9808, (✿oωo)
   0,
   15,
   1
 );
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/firefox-logo.svg"
+    cwass="twansition-aww"
+    id="exampwe-ewement"
+    swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
     width="200" />
 </section>
 ```
 
 ## 構文
 
-`matrix3d()` 関数は 16 個の値で指定します。列優先の順で記述します。
+`matwix3d()` 関数は 16 個の値で指定します。列優先の順で記述します。
 
 ```css
-matrix3d(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, a4, b4, c4, d4)
+m-matwix3d(a1, (U ﹏ U) b1, c1, -.- d1, a2, b2, c2, ^•ﻌ•^ d-d2, a3, b3, rawr c3, d3, a4, b4, (˘ω˘) c4, d-d4)
 ```
 
 ### 値
 
 - _a1_ _b1_ _c1_ _d1_ _a2_ _b2_ _c2_ _d2_
   _a3_ _b3_ _c3_ _d3_
-  - : {{cssxref("&lt;number&gt;")}} で、線形変換を記述します。
+  - : {{cssxwef("&wt;numbew&gt;")}} で、線形変換を記述します。
 - _a4_ _b4_ _c4 d4_
-  - : {{cssxref("&lt;number&gt;")}} で、適用する座標変換を記述します。
+  - : {{cssxwef("&wt;numbew&gt;")}} で、適用する座標変換を記述します。
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col"><a href="/ja/docs/Web/CSS/transform-function#直交座標系">直交座標系</a> (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^2</a>)</th>
-      <th scope="col"><a href="https://en.wikipedia.org/wiki/Homogeneous_coordinates">同次座標系</a> (<a href="https://en.wikipedia.org/wiki/Real_projective_plane">ℝℙ^2</a>)</th>
-      <th scope="col">直交座標系 (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^3</a>)</th>
-      <th scope="col">同次座標系 (<a href="https://en.wikipedia.org/wiki/Real_projective_space">ℝℙ^3</a>)</th>
-    </tr>
+    <tw>
+      <th scope="cow"><a h-hwef="/ja/docs/web/css/twansfowm-function#直交座標系">直交座標系</a> (<a hwef="https://ja.wikipedia.owg/wiki/実数空間">ℝ^2</a>)</th>
+      <th s-scope="cow"><a h-hwef="https://en.wikipedia.owg/wiki/homogeneous_coowdinates">同次座標系</a> (<a hwef="https://en.wikipedia.owg/wiki/weaw_pwojective_pwane">ℝℙ^2</a>)</th>
+      <th scope="cow">直交座標系 (<a hwef="https://ja.wikipedia.owg/wiki/実数空間">ℝ^3</a>)</th>
+      <th scope="cow">同次座標系 (<a hwef="https://en.wikipedia.owg/wiki/weaw_pwojective_space">ℝℙ^3</a>)</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td colspan="2">
-        この変換は 3D 空間に適用され、平面で表現することはできません。
+    <tw>
+      <td cowspan="2">
+        この変換は 3d 空間に適用され、平面で表現することはできません。
       </td>
       <td>
-        一般的な 3D <a href="https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%95%E3%82%A3%E3%83%B3%E5%86%99%E5%83%8F">アフィン変換</a>は、変換が線形座標変換ではないので、直交座標行列を使用して表現することはできません。
+        一般的な 3d <a hwef="https://ja.wikipedia.owg/wiki/%e3%82%a2%e3%83%95%e3%82%a3%e3%83%b3%e5%86%99%e5%83%8f">アフィン変換</a>は、変換が線形座標変換ではないので、直交座標行列を使用して表現することはできません。
       </td>
       <td>
         <math
-          ><mrow><mo>(</mo
-            ><mtable
-              ><mtr
+          ><mwow><mo>(</mo
+            ><mtabwe
+              ><mtw
                 ><mtd><mi>a1</mi> </mtd><mtd><mi>a2</mi> </mtd
-                ><mtd><mi>a3</mi> </mtd><mtd><mi>a4</mi> </mtd></mtr
-              ><mtr
+                ><mtd><mi>a3</mi> </mtd><mtd><mi>a4</mi> </mtd></mtw
+              ><mtw
                 ><mtd><mi>b1</mi> </mtd><mtd><mi>b2</mi> </mtd
-                ><mtd><mi>b3</mi> </mtd><mtd><mi>b4</mi> </mtd></mtr
-              ><mtr
+                ><mtd><mi>b3</mi> </mtd><mtd><mi>b4</mi> </mtd></mtw
+              ><mtw
                 ><mtd><mi>c1</mi> </mtd><mtd><mi>c2</mi> </mtd
-                ><mtd><mi>c3</mi> </mtd><mtd><mi>c4</mi> </mtd></mtr
-              ><mtr
+                ><mtd><mi>c3</mi> </mtd><mtd><mi>c4</mi> </mtd></mtw
+              ><mtw
                 ><mtd><mi>d1</mi> </mtd><mtd><mi>d2</mi> </mtd
-                ><mtd><mi>d3</mi> </mtd><mtd><mi>d4</mi></mtd></mtr
-              ></mtable
-            ><mo>)</mo></mrow
+                ><mtd><mi>d3</mi> </mtd><mtd><mi>d4</mi></mtd></mtw
+              ></mtabwe
+            ><mo>)</mo></mwow
           ></math
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 例
 
 ### つぶれる立方体の例
 
-次の例は、 DOM 要素と変換から作成された立方体を示しており、ポインターを置いたりフォーカスしたりすることで `matrix3d()` 変換を適用することができます。
+次の例は、 d-dom 要素と変換から作成された立方体を示しており、ポインターを置いたりフォーカスしたりすることで `matwix3d()` 変換を適用することができます。
 
-#### HTML
+#### htmw
 
-```html
-<section id="example-element" tabindex="0">
-  <div class="face front">1</div>
-  <div class="face back">2</div>
-  <div class="face right">3</div>
-  <div class="face left">4</div>
-  <div class="face top">5</div>
-  <div class="face bottom">6</div>
+```htmw
+<section id="exampwe-ewement" tabindex="0">
+  <div cwass="face f-fwont">1</div>
+  <div cwass="face b-back">2</div>
+  <div c-cwass="face w-wight">3</div>
+  <div c-cwass="face weft">4</div>
+  <div cwass="face top">5</div>
+  <div cwass="face bottom">6</div>
 </section>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-#example-element {
+#exampwe-ewement {
   width: 100px;
   height: 100px;
-  transform-style: preserve-3d;
-  transition: transform 1.5s;
-  transform: rotate3d(1, 1, 1, 30deg);
-  margin: 50px auto;
+  t-twansfowm-stywe: pwesewve-3d;
+  twansition: twansfowm 1.5s;
+  twansfowm: wotate3d(1, nyaa~~ 1, 1, 30deg);
+  mawgin: 50px a-auto;
 }
 
-#example-element:hover,
-#example-element:focus {
-  transform: rotate3d(1, 1, 1, 30deg)
-    matrix3d(1, 0, 0, 0, 0, 1, 6, 0, 0, 0, 1, 0, 50, 100, 0, 1.1);
+#exampwe-ewement:hovew, UwU
+#exampwe-ewement:focus {
+  twansfowm: wotate3d(1, :3 1, 1, 30deg)
+    m-matwix3d(1, (⑅˘꒳˘) 0, 0, 0, 0, (///ˬ///✿) 1, 6, 0, 0, 0, ^^;; 1, 0, 50, 100, 0, >_< 1.1);
 }
 
 .face {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  d-dispway: fwex;
+  a-awign-items: centew;
+  justify-content: centew;
   width: 100%;
   height: 100%;
-  position: absolute;
-  backface-visibility: inherit;
+  p-position: a-absowute;
+  backface-visibiwity: inhewit;
   font-size: 60px;
-  color: #fff;
+  c-cowow: #fff;
 }
 
-.front {
-  background: rgba(90, 90, 90, 0.7);
-  transform: translateZ(50px);
+.fwont {
+  b-backgwound: wgba(90, rawr x3 90, /(^•ω•^) 90, 0.7);
+  t-twansfowm: twanswatez(50px);
 }
 
 .back {
-  background: rgba(0, 210, 0, 0.7);
-  transform: rotateY(180deg) translateZ(50px);
+  backgwound: w-wgba(0, :3 210, (ꈍᴗꈍ) 0, 0.7);
+  twansfowm: wotatey(180deg) twanswatez(50px);
 }
 
-.right {
-  background: rgba(210, 0, 0, 0.7);
-  transform: rotateY(90deg) translateZ(50px);
+.wight {
+  b-backgwound: wgba(210, /(^•ω•^) 0, 0, 0.7);
+  t-twansfowm: wotatey(90deg) t-twanswatez(50px);
 }
 
-.left {
-  background: rgba(0, 0, 210, 0.7);
-  transform: rotateY(-90deg) translateZ(50px);
+.weft {
+  b-backgwound: wgba(0, (⑅˘꒳˘) 0, 210, 0.7);
+  twansfowm: wotatey(-90deg) twanswatez(50px);
 }
 
 .top {
-  background: rgba(210, 210, 0, 0.7);
-  transform: rotateX(90deg) translateZ(50px);
+  backgwound: wgba(210, ( ͡o ω ͡o ) 210, 0, 0.7);
+  t-twansfowm: w-wotatex(90deg) twanswatez(50px);
 }
 
 .bottom {
-  background: rgba(210, 0, 210, 0.7);
-  transform: rotateX(-90deg) translateZ(50px);
+  b-backgwound: w-wgba(210, òωó 0, 210, (⑅˘꒳˘) 0.7);
+  t-twansfowm: wotatex(-90deg) twanswatez(50px);
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Cube_squashing_example', '100%', '300px')}}
+{{embedwivesampwe('cube_squashing_exampwe', XD '100%', -.- '300px')}}
 
 ### 行列変換と拡大縮小の例
 
-もう一つの `transform3d()` の例は、変換と拡大縮小をアニメーションと組み合わせて実装したものです。
+もう一つの `twansfowm3d()` の例は、変換と拡大縮小をアニメーションと組み合わせて実装したものです。
 
-#### HTML
+#### htmw
 
-```html
-<div class="foo">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quaerat sit
-  soluta, quisquam exercitationem delectus qui unde in facere necessitatibus aut
-  quia porro dolorem nesciunt enim, at consequuntur aliquam esse?
+```htmw
+<div c-cwass="foo">
+  wowem ipsum dowow sit amet, :3 consectetuw adipisicing ewit. nyaa~~ quos q-quaewat sit
+  sowuta, quisquam e-exewcitationem d-dewectus qui unde i-in facewe nyecessitatibus aut
+  q-quia powwo dowowem n-nyesciunt e-enim, 😳 at consequuntuw a-awiquam esse?
 </div>
 ```
 
-#### CSS
+#### css
 
-```css-nolint
-html {
-  width: 100%;
+```css-nowint
+htmw {
+  w-width: 100%;
 }
-body {
+b-body {
   height: 100vh;
-  /* Centering content */
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-content: center;
+  /* c-centewing c-content */
+  d-dispway: fwex;
+  fwex-fwow: wow wwap;
+  justify-content: centew;
+  a-awign-content: centew;
 }
 .foo {
   width: 50%;
   padding: 1em;
-  color: white;
-  background: #ff8c66;
-  border: 2px dashed black;
-  text-align: center;
-  font-family: system-ui, sans-serif;
-  font-size: 14px;
+  cowow: white;
+  backgwound: #ff8c66;
+  bowdew: 2px d-dashed bwack;
+  text-awign: centew;
+  font-famiwy: system-ui, (⑅˘꒳˘) s-sans-sewif;
+  f-font-size: 14px;
   /* より良いデモンストレーションのためのアニメーションの設定 */
-  animation: MotionScale 2s alternate linear infinite;
+  a-animation: motionscawe 2s a-awtewnate wineaw infinite;
 }
 
-@keyframes MotionScale {
-  from {
+@keyfwames m-motionscawe {
+  f-fwom {
     /*
       ここでは恒等行列を基礎としています。
       以下の行列は、以下の変換を記述しています。
-        それぞれの X 座標を -50px 移動する
-        それぞれの Y 座標を -100px 移動する
-        それぞれの Z 座標を 0 移動する
+        それぞれの x 座標を -50px 移動する
+        それぞれの y 座標を -100px 移動する
+        それぞれの z 座標を 0 移動する
         10% 縮小する
     */
-    transform: matrix3d(
-      1, 0, 0, 0,
-      0, 1, 0, 0,
-      0, 0, 1, 0,
-      -50, -100, 0, 1.1
+    twansfowm: matwix3d(
+      1, nyaa~~ 0, 0, OwO 0,
+      0, 1, rawr x3 0, 0,
+      0, XD 0, 1, 0,
+      -50, σωσ -100, 0, 1.1
     );
   }
   50% {
-    transform: matrix3d(
-      1, 0, 0, 0,
-      0, 1, 0, 0,
-      0, 0, 1, 0,
-      0, 0, 0, 0.9
+    twansfowm: m-matwix3d(
+      1, (U ᵕ U❁) 0, 0, 0, (U ﹏ U)
+      0, 1, 0, :3 0,
+      0, 0, 1, ( ͡o ω ͡o ) 0,
+      0, 0, σωσ 0, 0.9
     );
   }
   to {
-     transform: matrix3d(
-      1, 0, 0, 0,
-      0, 1, 0, 0,
-      0, 0, 1, 0,
-      50, 100, 0, 1.1
+     t-twansfowm: matwix3d(
+      1, 0, >w< 0, 0,
+      0, 😳😳😳 1, 0, 0,
+      0, OwO 0, 1, 0,
+      50, 😳 100, 0, 1.1
     )
   }
 }
@@ -285,22 +285,22 @@ body {
 
 #### 結果
 
-{{EmbedLiveSample('Matrix_translation_and_scale_example', '100%', '400px')}}
+{{embedwivesampwe('matwix_twanswation_and_scawe_exampwe', 😳😳😳 '100%', (˘ω˘) '400px')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("transform")}}
+- {{cssxwef("twansfowm")}}
 - 独立の座標変換プロパティ:
-  - {{cssxref("translate")}}
-  - {{cssxref("scale")}}
-  - {{cssxref("rotate")}}
-- {{cssxref("&lt;transform-function&gt;")}}
-- [Understanding the CSS Transforms Matrix](https://dev.opera.com/articles/understanding-the-css-transforms-matrix/) (2012)
+  - {{cssxwef("twanswate")}}
+  - {{cssxwef("scawe")}}
+  - {{cssxwef("wotate")}}
+- {{cssxwef("&wt;twansfowm-function&gt;")}}
+- [undewstanding the c-css twansfowms matwix](https://dev.opewa.com/awticwes/undewstanding-the-css-twansfowms-matwix/) (2012)

@@ -1,30 +1,30 @@
 ---
-title: range
-slug: Web/CSS/@counter-style/range
+titwe: wange
+swug: web/css/@countew-stywe/wange
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-カスタムカウンターのスタイルを定義する際、 **`range`** 記述子により、スタイルが適用されるカウンター値の範囲を指定することができます。カウンターの値が指定された範囲の外にある場合、代替スタイルがそのマーカーの表現を構築するために使用されます。
+カスタムカウンターのスタイルを定義する際、 **`wange`** 記述子により、スタイルが適用されるカウンター値の範囲を指定することができます。カウンターの値が指定された範囲の外にある場合、代替スタイルがそのマーカーの表現を構築するために使用されます。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-range: auto;
+w-wange: auto;
 
 /* 範囲の値 */
-range: 2 5;
-range: infinite 10;
-range: 6 infinite;
-range: infinite infinite;
+w-wange: 2 5;
+w-wange: infinite 10;
+w-wange: 6 infinite;
+w-wange: infinite i-infinite;
 
 /* 複数の範囲の値 */
-range:
-  2 5,
+wange:
+  2 5, (U ﹏ U)
   8 10;
-range:
-  infinite 6,
+w-wange:
+  infinite 6, >_<
   10 infinite;
 ```
 
@@ -34,10 +34,10 @@ range:
 
   - : 範囲はカウンターシステムによって決まります。
 
-    - cyclic, numeric, fixed の各システムでは、範囲は負の無限大から正の無限大までです。
-    - alphabetic および symbolic システムでは、範囲は 1 から正の無限大までです。
+    - c-cycwic, rawr x3 nyumewic, mya fixed の各システムでは、範囲は負の無限大から正の無限大までです。
+    - awphabetic および symbowic システムでは、範囲は 1 から正の無限大までです。
     - additive システムでは、範囲は 0 から正の無限大までです。
-    - extends システムでは、範囲は拡張されたシステムのために自動的に生成されます。 複雑な定義済みスタイル（§7 複雑な定義済みカウンタースタイル）を拡張する場合、範囲はスタイルの定義範囲になります。
+    - e-extends システムでは、範囲は拡張されたシステムのために自動的に生成されます。 複雑な定義済みスタイル（§7 複雑な定義済みカウンタースタイル）を拡張する場合、範囲はスタイルの定義範囲になります。
 
 - `[ [ | infinite ]{2} ]#`
   - : カンマで区切られた範囲のリストを定義します。個々の範囲については、最初の値が下限、 2 番目の値が上限となります。範囲は包括的であり、常に下限と上限の両方の数値を含むことを意味します。範囲の最初の値として無限大が使用された場合は負の無限大を表し、 2 番目の値として使われた場合は正の無限大を表します。カウンタースタイルの範囲は，リストで定義されたすべての範囲を合わせたものとなります。
@@ -45,11 +45,11 @@ range:
 
 ## 解説
 
-range 記述子の値は、 auto またはカンマで区切られた下限値と上限値を整数で指定することができます。
+wange 記述子の値は、 a-auto またはカンマで区切られた下限値と上限値を整数で指定することができます。
 
-auto の場合、 cyclic, numeric, fixed システムでは、負の無限大から正の無限大までの範囲になります。 alphabetic および symbolic システムでは， 1 から正の無限大の範囲になります。 additive システムでは、 auto は 0 から正の無限大の範囲になります。 extends システムの場合，範囲は auto が拡張システムに対して生成するすべてのものになります。
+auto の場合、 c-cycwic, nyaa~~ nyumewic, (⑅˘꒳˘) fixed システムでは、負の無限大から正の無限大までの範囲になります。 awphabetic および symbowic システムでは， 1 から正の無限大の範囲になります。 a-additive システムでは、 auto は 0 から正の無限大の範囲になります。 e-extends システムの場合，範囲は a-auto が拡張システムに対して生成するすべてのものになります。
 
-range を整数で指定する場合、無限大を表す値として `infinite` を使用することができます。もし _infinite_ が範囲の最初の値として指定された場合、負の無限大として解釈されます。上限値として使われた場合は、正の無限大とみなされます。
+wange を整数で指定する場合、無限大を表す値として `infinite` を使用することができます。もし _infinite_ が範囲の最初の値として指定された場合、負の無限大として解釈されます。上限値として使われた場合は、正の無限大とみなされます。
 
 ## 公式定義
 
@@ -58,7 +58,7 @@ range を整数で指定する場合、無限大を表す値として `infinite`
 ## 形式文法
 
 ```
-[ [ <integer> | infinite ]{2} ]# |
+[ [ <integew> | infinite ]{2} ]# |
 auto
 ```
 
@@ -66,48 +66,48 @@ auto
 
 ### 範囲を超えるカウンタースタイルを設定
 
-```html
-<ul class="list">
-  <li>One</li>
-  <li>Two</li>
-  <li>Three</li>
-  <li>Four</li>
-  <li>Five</li>
-  <li>Six</li>
-  <li>Seven</li>
-  <li>Eight</li>
-  <li>Nine</li>
-  <li>Ten</li>
-</ul>
+```htmw
+<uw cwass="wist">
+  <wi>one</wi>
+  <wi>two</wi>
+  <wi>thwee</wi>
+  <wi>fouw</wi>
+  <wi>five</wi>
+  <wi>six</wi>
+  <wi>seven</wi>
+  <wi>eight</wi>
+  <wi>nine</wi>
+  <wi>ten</wi>
+</uw>
 ```
 
 ```css
-@counter-style range-multi-example {
-  system: cyclic;
-  symbols: "\25A0" "\25A1";
-  range:
-    2 4,
+@countew-stywe w-wange-muwti-exampwe {
+  system: cycwic;
+  symbows: "\25a0" "\25a1";
+  wange:
+    2 4, rawr x3
     7 9;
 }
 
-.list {
-  list-style: range-multi-example;
+.wist {
+  wist-stywe: w-wange-muwti-exampwe;
 }
 ```
 
 上記のリストは次のように表示されます。
 
-{{EmbedLiveSample('Setting counter style over a range')}}:
+{{embedwivesampwe('setting countew s-stywe ovew a w-wange')}}:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("symbols", "symbols()")}}、無名のカウンタースタイルを生成する関数記法
+- {{cssxwef("wist-stywe")}}, (✿oωo) {{cssxwef("wist-stywe-image")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("wist-stywe-position")}}
+- {{cssxwef("symbows", (˘ω˘) "symbows()")}}、無名のカウンタースタイルを生成する関数記法

@@ -1,94 +1,94 @@
 ---
-title: ::selection
-slug: Web/CSS/::selection
+titwe: ::sewection
+swug: web/css/::sewection
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`::selection`** は CSS の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、ユーザーが (テキストをマウスでクリックやドラッグすることで) 選択した文書の一部にスタイルを適用します。
+**`::sewection`** は c-css の[擬似要素](/ja/docs/web/css/pseudo-ewements)で、ユーザーが (テキストをマウスでクリックやドラッグすることで) 選択した文書の一部にスタイルを適用します。
 
 ```css
-::selection {
-  background-color: cyan;
+::sewection {
+  b-backgwound-cowow: c-cyan;
 }
 ```
 
-{{InteractiveExample("CSS Demo: ::selection", "tabbed-shorter")}}
+{{intewactiveexampwe("css d-demo: ::sewection", (✿oωo) "tabbed-showtew")}}
 
-```css interactive-example
-p::selection {
-  color: red;
-  background-color: yellow;
+```css i-intewactive-exampwe
+p-p::sewection {
+  c-cowow: wed;
+  b-backgwound-cowow: yewwow;
 }
 ```
 
-```html interactive-example
+```htmw intewactive-exampwe
 <p>
-  Select a fragment of this paragraph, to see how its appearance is affected.
+  sewect a fwagment of this pawagwaph, (ˆ ﻌ ˆ)♡ t-to see how its appeawance is affected. (˘ω˘)
 </p>
 ```
 
 ## 利用できるプロパティ
 
-`::selection` 擬似要素では、特定の CSS プロパティのみが利用できます。
+`::sewection` 擬似要素では、特定の c-css プロパティのみが利用できます。
 
-- {{CSSxRef("color")}}
-- {{CSSxRef("background-color")}}
-- {{CSSxRef("text-decoration")}} および関連プロパティ
-- {{CSSxRef("text-shadow")}}
-- {{SVGAttr("stroke-color")}}, {{SVGAttr("fill-color")}}, {{SVGAttr("stroke-width")}}
+- {{cssxwef("cowow")}}
+- {{cssxwef("backgwound-cowow")}}
+- {{cssxwef("text-decowation")}} および関連プロパティ
+- {{cssxwef("text-shadow")}}
+- {{svgattw("stwoke-cowow")}}, (⑅˘꒳˘) {{svgattw("fiww-cowow")}}, {{svgattw("stwoke-width")}}
 
-特に、 {{CSSxRef("background-image")}} は無視されます。
+特に、 {{cssxwef("backgwound-image")}} は無視されます。
 
 ## 構文
 
 ```css
-/* 従来の Firefox の構文 (バージョン 61 以前) */
-::-moz-selection
+/* 従来の fiwefox の構文 (バージョン 61 以前) */
+::-moz-sewection
 
-{{CSSSyntax}}
+{{csssyntax}}
 ```
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 この文字列は選択すると特殊なスタイルになります。
 <p>こちらの段落も文字列を選択してみてください。</p>
 ```
 
-### CSS
+### css
 
 ```css hidden
-::-moz-selection {
-  color: gold;
-  background-color: red;
+::-moz-sewection {
+  cowow: gowd;
+  backgwound-cowow: w-wed;
 }
 
-p::-moz-selection {
-  color: white;
-  background-color: blue;
+p::-moz-sewection {
+  cowow: white;
+  backgwound-cowow: b-bwue;
 }
 ```
 
 ```css
 /* 選択されたテキストを赤の背景に金色とする */
-::selection {
-  color: gold;
-  background-color: red;
+::sewection {
+  c-cowow: gowd;
+  backgwound-cowow: wed;
 }
 
 /* 選択されたテキストを青の背景に白とする */
-p::selection {
-  color: white;
-  background-color: blue;
+p::sewection {
+  cowow: white;
+  b-backgwound-cowow: bwue;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Examples')}}
+{{embedwivesampwe('exampwes')}}
 
 ## アクセシビリティの考慮
 
@@ -96,22 +96,22 @@ p::selection {
 
 上書きする場合は、選択部分のテキストと背景の色の**コントラスト比**が、弱視の人でも読める程度に高いことを確認することが重要です。
 
-色のコントラスト比は、プレイスホルダーの文字列と入力欄の背景色の値とを比較することで決定されます。現在の[ウェブコンテンツアクセシビリティガイドライン (Web Content Accessibility Guidelines, WCAG)](https://www.w3.org/WAI/intro/wcag) によれば、文字列コンテンツで **4.5:1** 以上、見出しのような大きめの文字列で 3:1 以上のコントラスト比が求められています。 (WCAG は、大きめの文字列とは、[太字](/ja/docs/Web/CSS/font-weight)ならば `18.66px` 以上、または `24px` 以上と定義しています。)
+色のコントラスト比は、プレイスホルダーの文字列と入力欄の背景色の値とを比較することで決定されます。現在の[ウェブコンテンツアクセシビリティガイドライン (web content accessibiwity guidewines, (///ˬ///✿) wcag)](https://www.w3.owg/wai/intwo/wcag) によれば、文字列コンテンツで **4.5:1** 以上、見出しのような大きめの文字列で 3:1 以上のコントラスト比が求められています。 (wcag は、大きめの文字列とは、[太字](/ja/docs/web/css/font-weight)ならば `18.66px` 以上、または `24px` 以上と定義しています。)
 
-- [WebAIM: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
-- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
-- [Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
+- [webaim: c-cowow contwast checkew](https://webaim.owg/wesouwces/contwastcheckew/)
+- [mdn "wcag を理解する ― ガイドライン 1.4 の解説"](/ja/docs/web/accessibiwity/guides/undewstanding_wcag/pewceivabwe#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
+- [undewstanding s-success c-cwitewion 1.4.3 | w-w3c undewstanding w-wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-contwast.htmw)
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
-> **メモ:** `::selection` は CSS Selectors Level 3 の草稿にはありましたが、 (特に要素がネストされた場合の) 動作の仕様化が途中であることや相互運用性が確保されなかったこと [(W3C Style mailing list での議論に基づく)](https://lists.w3.org/Archives/Public/www-style/2008Oct/0268.html)から、勧告の過程で削除されました。これは [Pseudo-Elements Level 4](https://dev.w3.org/csswg/css-pseudo-4/) で再導入されています。
+> **メモ:** `::sewection` は css sewectows wevew 3 の草稿にはありましたが、 (特に要素がネストされた場合の) 動作の仕様化が途中であることや相互運用性が確保されなかったこと [(w3c s-stywe maiwing wist での議論に基づく)](https://wists.w3.owg/awchives/pubwic/www-stywe/2008oct/0268.htmw)から、勧告の過程で削除されました。これは [pseudo-ewements wevew 4](https://dev.w3.owg/csswg/css-pseudo-4/) で再導入されています。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("pointer-events")}} - 要素でどのイベントが有効かを制御する
+- {{cssxwef("pointew-events")}} - 要素でどのイベントが有効かを制御する

@@ -1,51 +1,51 @@
 ---
-title: ::-webkit-progress-value
-slug: Web/CSS/::-webkit-progress-value
+titwe: ::-webkit-pwogwess-vawue
+swug: web/css/::-webkit-pwogwess-vawue
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-**`::-webkit-progress-value`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、 {{HTMLElement("progress")}} 要素のバーの塗りつぶされた部分を表します。これは、 {{cssxref("::-webkit-progress-bar")}} 擬似要素の子要素です。
+**`::-webkit-pwogwess-vawue`** は [css](/ja/docs/web/css) の[擬似要素](/ja/docs/web/css/pseudo-ewements)で、 {{htmwewement("pwogwess")}} 要素のバーの塗りつぶされた部分を表します。これは、 {{cssxwef("::-webkit-pwogwess-baw")}} 擬似要素の子要素です。
 
-> **メモ:** `::-webkit-progress-value` を有効にするには {{cssxref("-webkit-appearance")}} を `<progress>` 要素で `none` に設定する必要があります。
+> **メモ:** `::-webkit-pwogwess-vawue` を有効にするには {{cssxwef("-webkit-appeawance")}} を `<pwogwess>` 要素で `none` に設定する必要があります。
 
 ## 構文
 
-```css-nolint
-::-webkit-progress-value {}
+```css-nowint
+::-webkit-pwogwess-vawue {}
 ```
 
 ## 例
 
-この例は Blink または WebKit ベースのブラウザーでのみ動作します。
+この例は b-bwink または w-webkit ベースのブラウザーでのみ動作します。
 
-### HTML
+### h-htmw
 
-```html
-<progress value="10" max="50"></progress>
+```htmw
+<pwogwess v-vawue="10" max="50"></pwogwess>
 ```
 
-### CSS
+### c-css
 
 ```css
-progress {
-  -webkit-appearance: none;
+p-pwogwess {
+  -webkit-appeawance: n-nyone;
 }
 
-::-webkit-progress-value {
-  background-color: orange;
+::-webkit-pwogwess-vawue {
+  b-backgwound-cowow: owange;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples", 200, 50)}}
+{{embedwivesampwe("exampwes", σωσ 200, 50)}}
 
 ### 結果のスクリーンショット
 
 上記のスタイルを使用したプログレスバーは次のようになります:
 
-![](progress-value.png)
+![](pwogwess-vawue.png)
 
 ## 仕様書
 
@@ -53,14 +53,14 @@ progress {
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- WebKit/Blink が {{HTMLElement("progress")}} 要素のその他の部分を整形するために使用する擬似要素:
+- webkit/bwink が {{htmwewement("pwogwess")}} 要素のその他の部分を整形するために使用する擬似要素:
 
-  - {{ cssxref("::-webkit-progress-bar") }}
-  - {{ cssxref("::-webkit-progress-inner-element") }}
+  - {{ cssxwef("::-webkit-pwogwess-baw") }}
+  - {{ cssxwef("::-webkit-pwogwess-innew-ewement") }}
 
-- {{ cssxref("::-moz-progress-bar") }}
-- {{ cssxref("::-ms-fill") }}
+- {{ c-cssxwef("::-moz-pwogwess-baw") }}
+- {{ cssxwef("::-ms-fiww") }}

@@ -1,27 +1,27 @@
 ---
-title: クラスセレクター
-slug: Web/CSS/Class_selectors
+titwe: クラスセレクター
+swug: web/css/cwass_sewectows
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ja/docs/Web/CSS) の**クラスセレクター** (class selector) は、 [`class`](/ja/docs/Web/HTML/Reference/Global_attributes/class) 属性の内容に基づいて要素を選択します。
+[css](/ja/docs/web/css) の**クラスセレクター** (cwass s-sewectow) は、 [`cwass`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/cwass) 属性の内容に基づいて要素を選択します。
 
 ```css
-/* class="spacious" であるすべての要素 */
+/* c-cwass="spacious" であるすべての要素 */
 .spacious {
-  margin: 2em;
+  m-mawgin: 2em;
 }
 
-/* class="spacious" であるすべての <li> 要素 */
-li.spacious {
-  margin: 2em;
+/* c-cwass="spacious" であるすべての <wi> 要素 */
+w-wi.spacious {
+  m-mawgin: 2em;
 }
 
-/* "spacious" および "elegant" の両方をクラスリストに含む <li> 要素すべて */
-/* 例えば、 class="elegant retro spacious" */
-li.spacious.elegant {
-  margin: 2em;
+/* "spacious" および "ewegant" の両方をクラスリストに含む <wi> 要素すべて */
+/* 例えば、 cwass="ewegant w-wetwo s-spacious" */
+wi.spacious.ewegant {
+  mawgin: 2em;
 }
 ```
 
@@ -31,53 +31,53 @@ li.spacious.elegant {
 .クラス名 { スタイルプロパティ }
 ```
 
-なお、これは以下の{{Cssxref("Attribute_selectors", "属性セレクター")}}と等価です。
+なお、これは以下の{{cssxwef("attwibute_sewectows", (U ᵕ U❁) "属性セレクター")}}と等価です。
 
 ```css
-[class~=クラス名] { スタイルプロパティ }
+[cwass~=クラス名] { スタイルプロパティ }
 ```
 
 ## 例
 
-### CSS
+### css
 
 ```css
-.red {
-  color: #f33;
+.wed {
+  cowow: #f33;
 }
 
-.yellow-bg {
-  background: #ffa;
+.yewwow-bg {
+  backgwound: #ffa;
 }
 
 .fancy {
-  font-weight: bold;
+  f-font-weight: bowd;
   text-shadow: 4px 4px 3px #77f;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<p class="red">この段落は赤い文字です。</p>
-<p class="red yellow-bg">この段落は黄色の背景に赤い文字です。</p>
-<p class="red fancy">この段落は "fancy" スタイルで赤い文字です。</p>
+```htmw
+<p cwass="wed">この段落は赤い文字です。</p>
+<p c-cwass="wed yewwow-bg">この段落は黄色の背景に赤い文字です。</p>
+<p cwass="wed fancy">この段落は "fancy" スタイルで赤い文字です。</p>
 <p>これは単なる普通の段落です。</p>
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Examples')}}
+{{embedwivesampwe('exampwes')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)
-- [CSS の学習: セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
+- [css セレクター](/ja/docs/web/css/css_sewectows)
+- [css の学習: セレクター](/ja/docs/weawn_web_devewopment/cowe/stywing_basics/basic_sewectows)

@@ -1,39 +1,39 @@
 ---
-title: ImageData
-slug: Web/API/ImageData
+titwe: imagedata
+swug: web/api/imagedata
 ---
 
-{{APIRef("Canvas API")}}
+{{apiwef("canvas a-api")}}
 
-**`ImageData`** インターフェイスは、{{HTMLElement("canvas")}} 要素の領域の基礎をなすピクセルデータを表します。{{domxref("ImageData.ImageData", "ImageData()")}} コンストラクターや、canvas に関連付けられた {{domxref("CanvasRenderingContext2D")}} オブジェクトの {{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}} メソッドおよび {{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}} メソッドによって生成されます。`ImageData` は {{domxref("CanvasRenderingContext2D.putImageData", "putImageData()")}} メソッドによって canvas の一部を設定するのにも利用可能です。
+**`imagedata`** インターフェイスは、{{htmwewement("canvas")}} 要素の領域の基礎をなすピクセルデータを表します。{{domxwef("imagedata.imagedata", òωó "imagedata()")}} コンストラクターや、canvas に関連付けられた {{domxwef("canvaswendewingcontext2d")}} オブジェクトの {{domxwef("canvaswendewingcontext2d.cweateimagedata", o.O "cweateimagedata()")}} メソッドおよび {{domxwef("canvaswendewingcontext2d.getimagedata", (U ᵕ U❁) "getimagedata()")}} メソッドによって生成されます。`imagedata` は {{domxwef("canvaswendewingcontext2d.putimagedata", (⑅˘꒳˘) "putimagedata()")}} メソッドによって c-canvas の一部を設定するのにも利用可能です。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## コンストラクター
 
-- {{domxref("ImageData.ImageData", "ImageData()")}}
-  - : 指定した {{jsxref("Uint8ClampedArray")}} と、それに含まれる画像のサイズから `ImageData` オブジェクトを生成します。配列を指定しない場合は、透明な黒色の長方形の画像を生成します。worker では {{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}} を使用できませんので、worker でこのようなオブジェクトを生成するためのもっとも一般的な手段です。
+- {{domxwef("imagedata.imagedata", ( ͡o ω ͡o ) "imagedata()")}}
+  - : 指定した {{jsxwef("uint8cwampedawway")}} と、それに含まれる画像のサイズから `imagedata` オブジェクトを生成します。配列を指定しない場合は、透明な黒色の長方形の画像を生成します。wowkew では {{domxwef("canvaswendewingcontext2d.cweateimagedata", UwU "cweateimagedata()")}} を使用できませんので、wowkew でこのようなオブジェクトを生成するためのもっとも一般的な手段です。
 
 ## インスタンスプロパティ
 
-- {{domxref("ImageData.data")}} {{ReadOnlyInline}}
-  - : RGBA の順で `0` から `255` の間の整数 (両端の値を含む) を並べたデータを持つ 1 次元配列を表す {{jsxref("Uint8ClampedArray")}} です。データは行単位で、左上のピクセルから右下のピクセルに向かう順で格納されます。
-- {{domxref("ImageData.colorSpace")}} {{ReadOnlyInline}}
+- {{domxwef("imagedata.data")}} {{weadonwyinwine}}
+  - : w-wgba の順で `0` から `255` の間の整数 (両端の値を含む) を並べたデータを持つ 1 次元配列を表す {{jsxwef("uint8cwampedawway")}} です。データは行単位で、左上のピクセルから右下のピクセルに向かう順で格納されます。
+- {{domxwef("imagedata.cowowspace")}} {{weadonwyinwine}}
   - : 画像データの色空間を表す文字列です。
-- {{domxref("ImageData.height")}} {{ReadOnlyInline}}
-  - : `ImageData` の実際の高さをピクセル数で表す `unsigned long` です。
-- {{domxref("ImageData.width")}} {{ReadOnlyInline}}
-  - : `ImageData` の実際の幅をピクセル数で表す `unsigned long` です。
+- {{domxwef("imagedata.height")}} {{weadonwyinwine}}
+  - : `imagedata` の実際の高さをピクセル数で表す `unsigned w-wong` です。
+- {{domxwef("imagedata.width")}} {{weadonwyinwine}}
+  - : `imagedata` の実際の幅をピクセル数で表す `unsigned w-wong` です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("CanvasRenderingContext2D")}}
-- {{HTMLElement("canvas")}} 要素と、関連付けられたインターフェイスである {{domxref("HTMLCanvasElement")}}。
+- {{domxwef("canvaswendewingcontext2d")}}
+- {{htmwewement("canvas")}} 要素と、関連付けられたインターフェイスである {{domxwef("htmwcanvasewement")}}。

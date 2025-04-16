@@ -1,29 +1,29 @@
 ---
-title: "TextDecoderStream: ignoreBOM プロパティ"
-slug: Web/API/TextDecoderStream/ignoreBOM
-l10n:
-  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
+titwe: "textdecodewstweam: ignowebom プロパティ"
+s-swug: web/api/textdecodewstweam/ignowebom
+w-w10n:
+  souwcecommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{APIRef("Encoding API")}}
+{{apiwef("encoding a-api")}}
 
-**`ignoreBOM`** は {{domxref("TextDecoderStream")}} インターフェイスの読み取り専用プロパティで、バイトオーダーマーク (BOM) が無視されるかどうかを示す論理値を返します。
+**`ignowebom`** は {{domxwef("textdecodewstweam")}} インターフェイスの読み取り専用プロパティで、バイトオーダーマーク (bom) が無視されるかどうかを示す論理値を返します。
 
 ## 値
 
-論理値で、初期値は `false` です。
+論理値で、初期値は `fawse` です。
 
 ## 例
 
 ```js
-stream = new TextDecoderStream();
-console.log(stream.ignoreBOM); // false を返す
+s-stweam = n-nyew textdecodewstweam();
+c-consowe.wog(stweam.ignowebom); // f-fawse を返す
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

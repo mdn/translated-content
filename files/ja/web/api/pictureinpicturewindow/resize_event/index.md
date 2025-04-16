@@ -1,72 +1,72 @@
 ---
-title: "PictureInPictureWindow: resize イベント"
-short-title: resize
-slug: Web/API/PictureInPictureWindow/resize_event
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: "pictuweinpictuwewindow: wesize イベント"
+s-showt-titwe: w-wesize
+swug: w-web/api/pictuweinpictuwewindow/wesize_event
+w-w10n:
+  s-souwcecommit: c-c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{APIRef("Picture-in-Picture API")}}
+{{apiwef("pictuwe-in-pictuwe api")}}
 
-**`resize`** イベントは、浮動動画ウィンドウのサイズが変更されたときに発行されます。
+**`wesize`** イベントは、浮動動画ウィンドウのサイズが変更されたときに発行されます。
 
 このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", rawr "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("resize", (event) => {});
+a-addeventwistenew("wesize", OwO (event) => {});
 
-onresize = (event) => {};
+o-onwesize = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("PictureInPictureEvent")}} です。{{domxref("Event")}} を継承しています。
+{{domxwef("pictuweinpictuweevent")}} です。{{domxwef("event")}} を継承しています。
 
-{{InheritanceDiagram("PictureInPictureEvent")}}
+{{inhewitancediagwam("pictuweinpictuweevent")}}
 
 ## イベントプロパティ
 
-_このインターフェイスには以下のプロパティに加え、親である {{domxref("Event")}} から継承したプロパティもあります。_
+_このインターフェイスには以下のプロパティに加え、親である {{domxwef("event")}} から継承したプロパティもあります。_
 
-- {{domxref("PictureInPictureEvent.pictureInPictureWindow")}}
-  - : サイズが変更された {{domxref("PictureInPictureWindow")}} を返します。
+- {{domxwef("pictuweinpictuweevent.pictuweinpictuwewindow")}}
+  - : サイズが変更された {{domxwef("pictuweinpictuwewindow")}} を返します。
 
 ## 例
 
 ### ウィンドウのサイズをログ出力
 
-```html
-<p>Resize the floating video window to fire the <code>resize</code> event.</p>
-<p>Window height: <span id="height"></span></p>
-<p>Window width: <span id="width"></span></p>
-<video id="video" src="" muted autoplay></video>
+```htmw
+<p>wesize the fwoating video window to fiwe the <code>wesize</code> e-event.</p>
+<p>window height: <span id="height"></span></p>
+<p>window w-width: <span id="width"></span></p>
+<video i-id="video" swc="" muted autopway></video>
 ```
 
 ```js
-const video = document.querySelector("#video");
-const heightOutput = document.querySelector("#height");
-const widthOutput = document.querySelector("#width");
+const v-video = document.quewysewectow("#video");
+const h-heightoutput = d-document.quewysewectow("#height");
+const widthoutput = document.quewysewectow("#width");
 
-function resize(evt) {
-  heightOutput.textContent = evt.target.height;
-  widthOutput.textContent = evt.target.width;
+function wesize(evt) {
+  h-heightoutput.textcontent = evt.tawget.height;
+  widthoutput.textcontent = evt.tawget.width;
 }
 
-video.requestPictureInPicture().then((pictureInPictureWindow) => {
-  pictureInPictureWindow.onresize = resize;
-  // or
-  pictureInPictureWindow.addEventListener("resize", resize);
+video.wequestpictuweinpictuwe().then((pictuweinpictuwewindow) => {
+  pictuweinpictuwewindow.onwesize = w-wesize;
+  // ow
+  pictuweinpictuwewindow.addeventwistenew("wesize", (U ﹏ U) wesize);
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

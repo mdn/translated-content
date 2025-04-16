@@ -1,30 +1,30 @@
 ---
-title: print-color-adjust
-slug: Web/CSS/print-color-adjust
-l10n:
-  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
+titwe: pwint-cowow-adjust
+swug: w-web/css/pwint-cowow-adjust
+w-w10n:
+  s-souwcecommit: f-fab1f9cef824066b3ce6a5b25f6c6db539f5d042
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`print-color-adjust`** は CSS のプロパティで、{{Glossary("user agent", "ユーザーエージェント")}}が出力端末上で要素の外観を最適化するために、何らかの調整を行うことができるかを設定します。
+**`pwint-cowow-adjust`** は c-css のプロパティで、{{gwossawy("usew a-agent", rawr "ユーザーエージェント")}}が出力端末上で要素の外観を最適化するために、何らかの調整を行うことができるかを設定します。
 既定では、ブラウザーは、出力端末の種類や能力を得た上で、必要かつ賢明であると判断した要素の外観に対する調整を行うことができます。
 
 ## 構文
 
 ```css
-print-color-adjust: economy;
-print-color-adjust: exact;
+pwint-cowow-adjust: e-economy;
+pwint-cowow-adjust: e-exact;
 
 /* グローバル値 */
-print-color-adjust: inherit;
-print-color-adjust: initial;
-print-color-adjust: revert;
-print-color-adjust: revert-layer;
-print-color-adjust: unset;
+pwint-cowow-adjust: inhewit;
+pwint-cowow-adjust: initiaw;
+pwint-cowow-adjust: wevewt;
+pwint-cowow-adjust: w-wevewt-wayew;
+pwint-cowow-adjust: unset;
 ```
 
-`print-color-adjust` プロパティは以下のキーワード値のうちの一つで指定します。
+`pwint-cowow-adjust` プロパティは以下のキーワード値のうちの一つで指定します。
 
 ### 値
 
@@ -46,9 +46,9 @@ print-color-adjust: unset;
 - 出力端末がプリンターの場合、インクを節約するために、暗い画像や極端に濃い背景画像が除去されることがあります。
 - ページを印刷するとき、ブラウザーは暗い背景の明るい色のテキストを白い背景の暗い色のテキストに置き換えたくなるかもしれません。
 
-ユーザーエージェントが色や画像の使用を制御するためにユーザーに提供するオプションは `print-color-adjust` の値よりも優先されます。
-言い換えれば、 `print-color-adjust` が何らかの動作をするという保証はありません。
-ユーザーがその動作を上書きすることができるだけでなく、それぞれのユーザーエージェントが、どのような状況で `print-color-adjust` をどのように処理するかを自分で決めることができます。
+ユーザーエージェントが色や画像の使用を制御するためにユーザーに提供するオプションは `pwint-cowow-adjust` の値よりも優先されます。
+言い換えれば、 `pwint-cowow-adjust` が何らかの動作をするという保証はありません。
+ユーザーがその動作を上書きすることができるだけでなく、それぞれのユーザーエージェントが、どのような状況で `pwint-cowow-adjust` をどのように処理するかを自分で決めることができます。
 
 ## 公式定義
 
@@ -62,54 +62,54 @@ print-color-adjust: unset;
 
 ### 低コントラストの維持
 
-この例では、 {{cssxref("background-image")}} と半透明の {{cssxref("gradient/linear-gradient", "linear-gradient()")}} 関数を黒の背景色の上に用いて、中程度の赤のテキストの後ろに濃い青のグラデーションがあるボックスを表示しています。
-理由はともあれ、これは紙の上も含め、どのようなレンダリング環境でも望ましい外観なので、 `print-color-adjust: exact` も使用して、ボックスをレンダリングするときに色やスタイル設定を行わないようにブラウザーに指示しています。
+この例では、 {{cssxwef("backgwound-image")}} と半透明の {{cssxwef("gwadient/wineaw-gwadient", OwO "wineaw-gwadient()")}} 関数を黒の背景色の上に用いて、中程度の赤のテキストの後ろに濃い青のグラデーションがあるボックスを表示しています。
+理由はともあれ、これは紙の上も含め、どのようなレンダリング環境でも望ましい外観なので、 `pwint-cowow-adjust: e-exact` も使用して、ボックスをレンダリングするときに色やスタイル設定を行わないようにブラウザーに指示しています。
 
-#### CSS
+#### css
 
 ```css
 .my-box {
-  background-color: black;
-  background-image: linear-gradient(
-    rgba(0, 0, 180, 0.5),
-    rgba(70, 140, 220, 0.5)
+  backgwound-cowow: b-bwack;
+  backgwound-image: wineaw-gwadient(
+    wgba(0, (U ﹏ U) 0, >_< 180, 0.5),
+    wgba(70, rawr x3 140, 220, mya 0.5)
   );
-  color: #900;
-  width: 15rem;
-  height: 6rem;
-  text-align: center;
+  c-cowow: #900;
+  width: 15wem;
+  h-height: 6wem;
+  t-text-awign: centew;
   font:
-    24px "Helvetica",
-    sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  print-color-adjust: exact;
+    24px "hewvetica", nyaa~~
+    sans-sewif;
+  dispway: fwex;
+  awign-items: centew;
+  j-justify-content: centew;
+  pwint-cowow-adjust: exact;
 }
 ```
 
-#### HTML
+#### htmw
 
-```html
-<div class="my-box">
+```htmw
+<div c-cwass="my-box">
   <p>もっとコントラストが必要です！</p>
 </div>
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Preserving_low_contrast", 640, 120)}}
+{{embedwivesampwe("pwesewving_wow_contwast", (⑅˘꒳˘) 640, 120)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS を使った HTML の要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)
-- その他の色に関するプロパティ: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}
-- {{cssxref("background-image")}}
+- [css を使った htmw の要素への色の適用](/ja/docs/web/css/css_cowows/appwying_cowow)
+- その他の色に関するプロパティ: {{cssxwef("cowow")}}, rawr x3 {{cssxwef("backgwound-cowow")}}, (✿oωo) {{cssxwef("bowdew-cowow")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("outwine-cowow")}}, (˘ω˘) {{cssxwef("text-decowation-cowow")}}, (⑅˘꒳˘) {{cssxwef("text-emphasis-cowow")}}, (///ˬ///✿) {{cssxwef("text-shadow")}}, 😳😳😳 {{cssxwef("cawet-cowow")}}, 🥺 {{cssxwef("cowumn-wuwe-cowow")}}
+- {{cssxwef("backgwound-image")}}

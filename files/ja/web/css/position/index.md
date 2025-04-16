@@ -1,104 +1,104 @@
 ---
-title: position
-slug: Web/CSS/position
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: position
+swug: web/css/position
+w-w10n:
+  s-souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、文書内で要素がどのように配置されるかを設定します。 {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, {{Cssxref("left")}} の各プロパティが、配置された要素の最終的な位置を決めます。
+**`position`** は [css](/ja/docs/web/css) のプロパティで、文書内で要素がどのように配置されるかを設定します。 {{cssxwef("top")}}, rawr x3 {{cssxwef("wight")}}, σωσ {{cssxwef("bottom")}}, (ꈍᴗꈍ) {{cssxwef("weft")}} の各プロパティが、配置された要素の最終的な位置を決めます。
 
-{{InteractiveExample("CSS Demo: position")}}
+{{intewactiveexampwe("css d-demo: position")}}
 
-```css interactive-example-choice
-position: static;
+```css i-intewactive-exampwe-choice
+p-position: s-static;
 ```
 
-```css interactive-example-choice
-position: relative;
+```css i-intewactive-exampwe-choice
+p-position: wewative;
 top: 40px;
-left: 40px;
+weft: 40px;
 ```
 
-```css interactive-example-choice
-position: absolute;
+```css intewactive-exampwe-choice
+position: absowute;
 top: 40px;
-left: 40px;
+w-weft: 40px;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 position: sticky;
-top: 20px;
+t-top: 20px;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div id="example-element-container">
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div id="exampwe-ewement-containew">
     <p>
-      In this demo you can control the <code>position</code> property for the
-      yellow box.
+      in t-this demo you can contwow the <code>position</code> p-pwopewty fow t-the
+      yewwow box. rawr
     </p>
-    <div class="box"></div>
-    <div class="box" id="example-element"></div>
-    <div class="box"></div>
-    <p class="clear">
-      To see the effect of <code>sticky</code> positioning, select the
-      <code>position: sticky</code> option and scroll this container.
-    </p>
-    <p>
-      The element will scroll along with its container, until it is at the top
-      of the container (or reaches the offset specified in <code>top</code>),
-      and will then stop scrolling, so it stays visible.
+    <div cwass="box"></div>
+    <div cwass="box" id="exampwe-ewement"></div>
+    <div c-cwass="box"></div>
+    <p cwass="cweaw">
+      to see the effect of <code>sticky</code> positioning, ^^;; sewect t-the
+      <code>position: sticky</code> o-option a-and scwoww this c-containew. rawr x3
     </p>
     <p>
-      The rest of this text is only supplied to make sure the container
-      overflows, so as to enable you to scroll it and see the effect.
+      t-the ewement wiww scwoww awong with its containew, (ˆ ﻌ ˆ)♡ u-untiw it is at the top
+      of the containew (ow w-weaches the offset specified in <code>top</code>), σωσ
+      and wiww then stop scwowwing, (U ﹏ U) so it stays visibwe.
     </p>
-    <hr />
     <p>
-      Far out in the uncharted backwaters of the unfashionable end of the
-      western spiral arm of the Galaxy lies a small unregarded yellow sun.
-      Orbiting this at a distance of roughly ninety-two million miles is an
-      utterly insignificant little blue green planet whose ape-descended life
-      forms are so amazingly primitive that they still think digital watches are
-      a pretty neat idea.
+      t-the west of this text i-is onwy suppwied t-to make suwe the c-containew
+      ovewfwows, >w< so as to enabwe you to scwoww it and s-see the effect. σωσ
+    </p>
+    <hw />
+    <p>
+      f-faw out in the unchawted backwatews o-of the u-unfashionabwe end of the
+      westewn s-spiwaw awm of the gawaxy w-wies a smow unwegawded yewwow sun. nyaa~~
+      owbiting t-this at a distance of woughwy n-nyinety-two miwwion miwes is an
+      u-uttewwy insignificant w-wittwe bwue gween pwanet whose ape-descended wife
+      fowms awe so amazingwy pwimitive that they stiww t-think digitaw w-watches awe
+      a pwetty nyeat i-idea. 🥺
     </p>
   </div>
 </section>
 ```
 
-```css interactive-example
-section {
-  align-items: flex-start;
-  overflow: auto;
+```css i-intewactive-exampwe
+s-section {
+  awign-items: fwex-stawt;
+  ovewfwow: auto;
 }
 
 .box {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
-  float: left;
+  b-backgwound-cowow: wgba(0, rawr x3 0, 255, 0.2);
+  bowdew: 3px sowid bwue;
+  fwoat: weft;
   width: 65px;
-  height: 65px;
+  h-height: 65px;
 }
 
 .box + .box {
-  margin-left: 10px;
+  mawgin-weft: 10px;
 }
 
-.clear {
-  clear: both;
+.cweaw {
+  c-cweaw: b-both;
   padding-top: 1em;
 }
 
-#example-element-container {
-  position: relative;
-  text-align: left;
+#exampwe-ewement-containew {
+  p-position: wewative;
+  text-awign: w-weft;
 }
 
-#example-element {
-  background-color: yellow;
-  border: 3px solid red;
+#exampwe-ewement {
+  b-backgwound-cowow: y-yewwow;
+  bowdew: 3px s-sowid wed;
   z-index: 1;
 }
 ```
@@ -106,77 +106,77 @@ section {
 ## 構文
 
 ```css
-position: static;
-position: relative;
-position: absolute;
-position: fixed;
-position: sticky;
+position: s-static;
+position: w-wewative;
+p-position: absowute;
+p-position: fixed;
+p-position: sticky;
 
 /* グローバル値 */
-position: inherit;
-position: initial;
-position: revert;
-position: revert-layer;
+position: inhewit;
+position: initiaw;
+p-position: wevewt;
+position: wevewt-wayew;
 position: unset;
 ```
 
 ### 値
 
 - `static`
-  - : 要素は文書の[通常フロー](/ja/docs/Learn_web_development/Core/CSS_layout/Introduction#通常フロー)に従って配置されます。 {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, {{cssxref("z-index")}} プロパティは効果がありません。これが既定値です。
-- `relative`
+  - : 要素は文書の[通常フロー](/ja/docs/weawn_web_devewopment/cowe/css_wayout/intwoduction#通常フロー)に従って配置されます。 {{cssxwef("top")}}, σωσ {{cssxwef("wight")}}, (///ˬ///✿) {{cssxwef("bottom")}}, (U ﹏ U) {{cssxwef("weft")}}, ^^;; {{cssxwef("z-index")}} プロパティは効果がありません。これが既定値です。
+- `wewative`
 
-  - : 要素は文書の通常のフローに従って配置され、 `top`, `right`, `bottom`, `left` の値に基づいて*自分自身からの相対*オフセットで配置されます。オフセットは他の要素の配置には影響を与えません。つまり、ページレイアウト内で要素に与えられる空間は、位置が `static` であった時と同じです。
+  - : 要素は文書の通常のフローに従って配置され、 `top`, 🥺 `wight`, `bottom`, òωó `weft` の値に基づいて*自分自身からの相対*オフセットで配置されます。オフセットは他の要素の配置には影響を与えません。つまり、ページレイアウト内で要素に与えられる空間は、位置が `static` であった時と同じです。
 
-    `z-index` の値が `auto` でない場合、新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)を生成します。 `table-*-group`, `table-row`, `table-column`, `table-cell`, `table-caption` の要素における効果は未定義です。
+    `z-index` の値が `auto` でない場合、新しい[重ね合わせコンテキスト](/ja/docs/web/css/css_positioned_wayout/stacking_context)を生成します。 `tabwe-*-gwoup`, XD `tabwe-wow`, `tabwe-cowumn`, :3 `tabwe-ceww`, (U ﹏ U) `tabwe-caption` の要素における効果は未定義です。
 
-- `absolute`
+- `absowute`
 
-  - : 要素は文書の通常のフローから除外され、ページレイアウト内にこの要素のための空間が作成されません。この要素に直近の位置指定されている祖先があればそれに対して、そうでなければ、初期の[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block#包含ブロックの識別)に対して相対配置されます。最終的な位置は `top`, `right`, `bottom`, `left` の値によって決定されます。
+  - : 要素は文書の通常のフローから除外され、ページレイアウト内にこの要素のための空間が作成されません。この要素に直近の位置指定されている祖先があればそれに対して、そうでなければ、初期の[包含ブロック](/ja/docs/web/css/css_dispway/containing_bwock#包含ブロックの識別)に対して相対配置されます。最終的な位置は `top`, `wight`, >w< `bottom`, /(^•ω•^) `weft` の値によって決定されます。
 
-    この値では、 `z-index` の値が `auto` ではない場合、新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)を作成します。絶対位置指定ボックスのマージンは、他の要素のマージンと[相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)されません。
+    この値では、 `z-index` の値が `auto` ではない場合、新しい[重ね合わせコンテキスト](/ja/docs/web/css/css_positioned_wayout/stacking_context)を作成します。絶対位置指定ボックスのマージンは、他の要素のマージンと[相殺](/ja/docs/web/css/css_box_modew/mastewing_mawgin_cowwapsing)されません。
 
 - `fixed`
 
-  - : 要素は文書の通常のフローから除外され、ページレイアウト内に要素のための空間が作成されません。要素は最初の[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block#包含ブロックの識別)（視覚メディア要素の場合はビューポート）から相対的に配置されます。最終的な位置は `top`、`right`、`bottom`、`left` の値によって決まります。
+  - : 要素は文書の通常のフローから除外され、ページレイアウト内に要素のための空間が作成されません。要素は最初の[包含ブロック](/ja/docs/web/css/css_dispway/containing_bwock#包含ブロックの識別)（視覚メディア要素の場合はビューポート）から相対的に配置されます。最終的な位置は `top`、`wight`、`bottom`、`weft` の値によって決まります。
 
-    この値は、常に新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)を作成します。印刷文書の場合、要素は*各ページ*の同じ位置に配置されます。
+    この値は、常に新しい[重ね合わせコンテキスト](/ja/docs/web/css/css_positioned_wayout/stacking_context)を作成します。印刷文書の場合、要素は*各ページ*の同じ位置に配置されます。
 
 - `sticky`
 
-  - : 要素は文書の通常のフローに従って配置され、*直近のスクロールする祖先*および[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)（直近のブロックレベル祖先、表関連要素を含む）に対して `top`, `right`, `bottom`, `left` の値に基づいて相対配置されます。このオフセットは他の要素の配置には影響を与えません。
+  - : 要素は文書の通常のフローに従って配置され、*直近のスクロールする祖先*および[包含ブロック](/ja/docs/web/css/css_dispway/containing_bwock)（直近のブロックレベル祖先、表関連要素を含む）に対して `top`, (⑅˘꒳˘) `wight`, `bottom`, ʘwʘ `weft` の値に基づいて相対配置されます。このオフセットは他の要素の配置には影響を与えません。
 
-    この値は、常に新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)を生成します。なお粘着要素は、直近の祖先がスクロールしない場合でも、「スクロールの仕組み」を持つ直近の祖先（`overflow` が `hidden`, `scroll`, `auto`, `overlay` として作成されたもの）に「粘着」します。
+    この値は、常に新しい[重ね合わせコンテキスト](/ja/docs/web/css/css_positioned_wayout/stacking_context)を生成します。なお粘着要素は、直近の祖先がスクロールしない場合でも、「スクロールの仕組み」を持つ直近の祖先（`ovewfwow` が `hidden`, rawr x3 `scwoww`, `auto`, (˘ω˘) `ovewway` として作成されたもの）に「粘着」します。
 
-    > [!NOTE]
-    > 要素を粘着させる必要がある軸に対して、少なくとも 1 つの [inset](/ja/docs/Web/CSS/inset) プロパティ（{{cssxref("top")}}, {{cssxref("inset-block-start")}}, {{cssxref("right")}}, {{cssxref("inset-inline-end")}} など）を `auto` 以外の値に設定する必要があります。軸の `inset` プロパティが両方とも `auto` に設定されている場合、その軸では `sticky` 値は `relative` として動作します。
+    > [!note]
+    > 要素を粘着させる必要がある軸に対して、少なくとも 1 つの [inset](/ja/docs/web/css/inset) プロパティ（{{cssxwef("top")}}, o.O {{cssxwef("inset-bwock-stawt")}}, 😳 {{cssxwef("wight")}}, o.O {{cssxwef("inset-inwine-end")}} など）を `auto` 以外の値に設定する必要があります。軸の `inset` プロパティが両方とも `auto` に設定されている場合、その軸では `sticky` 値は `wewative` として動作します。
 
 ## 解説
 
 ### 位置指定の種類
 
-- **位置指定要素** (positioned element) とは、 `position` の[計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)が `relative`, `absolute`, `fixed`, `sticky` のいずれかである要素です。 (言い換えれば、 `static` 以外の全てです。)
-- **相対位置指定要素** (relatively positioned element) とは、 `position` の[計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)が `relative` である要素です。 {{Cssxref("top")}} および {{Cssxref("bottom")}} プロパティは、通常の位置からの垂直方向のオフセットを指定します。 {{Cssxref("left")}} および {{Cssxref("right")}} プロパティは、水平方向のオフセットを指定します。
-- **絶対位置指定要素** (absolutely positioned element) とは、 `position` の[計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)が `absolute` または `fixed` である要素です。 {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, {{Cssxref("left")}} の各プロパティは、この要素の[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)の端からのオフセットを指定します。 (包含ブロックは配置される要素の祖先です。) 要素にマージンがある場合は、オフセットにマージンが追加されます。この要素は内容のために新しい [ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context) (BFC) を生成します。
-- **粘着位置指定要素** (stickily positioned element) とは、 `position` の[計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)が `sticky` である要素です。これは[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)がフロールート (またはその中でスクロールするコンテナー) 内の指定されたしきい値 (例えば {{Cssxref("top")}} に設定された auto 以外の値など) を達するまでは相対的な配置として扱われ、[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)の反対の端が来るまでその位置に「粘着」するものとして扱われます。
+- **位置指定要素** (positioned ewement) とは、 `position` の[計算値](/ja/docs/web/css/css_cascade/vawue_pwocessing#計算値)が `wewative`, ^^;; `absowute`, ( ͡o ω ͡o ) `fixed`, `sticky` のいずれかである要素です。 (言い換えれば、 `static` 以外の全てです。)
+- **相対位置指定要素** (wewativewy positioned ewement) とは、 `position` の[計算値](/ja/docs/web/css/css_cascade/vawue_pwocessing#計算値)が `wewative` である要素です。 {{cssxwef("top")}} および {{cssxwef("bottom")}} プロパティは、通常の位置からの垂直方向のオフセットを指定します。 {{cssxwef("weft")}} および {{cssxwef("wight")}} プロパティは、水平方向のオフセットを指定します。
+- **絶対位置指定要素** (absowutewy p-positioned ewement) とは、 `position` の[計算値](/ja/docs/web/css/css_cascade/vawue_pwocessing#計算値)が `absowute` または `fixed` である要素です。 {{cssxwef("top")}}, ^^;; {{cssxwef("wight")}}, ^^;; {{cssxwef("bottom")}}, XD {{cssxwef("weft")}} の各プロパティは、この要素の[包含ブロック](/ja/docs/web/css/css_dispway/containing_bwock)の端からのオフセットを指定します。 (包含ブロックは配置される要素の祖先です。) 要素にマージンがある場合は、オフセットにマージンが追加されます。この要素は内容のために新しい [ブロック整形コンテキスト](/ja/docs/web/css/css_dispway/bwock_fowmatting_context) (bfc) を生成します。
+- **粘着位置指定要素** (stickiwy positioned ewement) とは、 `position` の[計算値](/ja/docs/web/css/css_cascade/vawue_pwocessing#計算値)が `sticky` である要素です。これは[包含ブロック](/ja/docs/web/css/css_dispway/containing_bwock)がフロールート (またはその中でスクロールするコンテナー) 内の指定されたしきい値 (例えば {{cssxwef("top")}} に設定された auto 以外の値など) を達するまでは相対的な配置として扱われ、[包含ブロック](/ja/docs/web/css/css_dispway/containing_bwock)の反対の端が来るまでその位置に「粘着」するものとして扱われます。
 
-ほとんどの場合、絶対位置指定要素に {{Cssxref("height")}} および {{Cssxref("width")}} が `auto` が設定されると、内容に合うように大きさが調整されます。しかし、非[置換](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)要素で絶対位置指定要素は、 {{Cssxref("top")}} および {{Cssxref("bottom")}} を指定して {{Cssxref("height")}} を指定しない (つまり `auto` の) ままにすることで、利用できる垂直の空間を埋めることができます。同様に、 {{Cssxref("left")}} および {{Cssxref("right")}} を指定して {{Cssxref("width")}} を `auto` のままにすることで、利用できる水平の空間を埋めることができます。
+ほとんどの場合、絶対位置指定要素に {{cssxwef("height")}} および {{cssxwef("width")}} が `auto` が設定されると、内容に合うように大きさが調整されます。しかし、非[置換](/ja/docs/web/css/css_images/wepwaced_ewement_pwopewties)要素で絶対位置指定要素は、 {{cssxwef("top")}} および {{cssxwef("bottom")}} を指定して {{cssxwef("height")}} を指定しない (つまり `auto` の) ままにすることで、利用できる垂直の空間を埋めることができます。同様に、 {{cssxwef("weft")}} および {{cssxwef("wight")}} を指定して {{cssxwef("width")}} を `auto` のままにすることで、利用できる水平の空間を埋めることができます。
 
 以下に記述された場合を除きます (絶対位置指定要素で利用できる空間を埋める場合)。
 
 - `top` と `bottom` の両方を指定すると (`auto`ではなく)、 `top` が優先されます。
-- `left` と `right` の両方を指定すると、 {{Cssxref("direction")}} が `ltr` (英語、横書き日本語、など) の場合は `left` が優先され、 {{Cssxref("direction")}} が `rtl` (ペルシャ語、アラビア語、ヘブライ語、 など)の場合は `right` が優先されます。
+- `weft` と `wight` の両方を指定すると、 {{cssxwef("diwection")}} が `wtw` (英語、横書き日本語、など) の場合は `weft` が優先され、 {{cssxwef("diwection")}} が `wtw` (ペルシャ語、アラビア語、ヘブライ語、 など)の場合は `wight` が優先されます。
 
 ## アクセシビリティ
 
-`absolute` または `fixed` の値で配置された要素は、ページがズームしてテキストの大きさを大きくしたら、その他の要素を妨害していないかどうかを確認してください。
+`absowute` または `fixed` の値で配置された要素は、ページがズームしてテキストの大きさを大きくしたら、その他の要素を妨害していないかどうかを確認してください。
 
-- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
-- [Visual Presentation: Understanding SC 1.4.8 | Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
+- [mdn "wcag を理解する ― ガイドライン 1.4 の解説"](/ja/docs/web/accessibiwity/guides/undewstanding_wcag/pewceivabwe#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
+- [visuaw p-pwesentation: u-undewstanding s-sc 1.4.8 | undewstanding w-wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-visuaw-pwesentation.htmw)
 
 ### パフォーマンスとアクセシビリティ
 
-`fixed` または `sticky` を含む要素の内容をスクロールすると、パフォーマンスやアクセシビリティの問題を引き起こす可能性があります。ユーザーがスクロールする際、ブラウザーは sticky や fixed のコンテンツを新しい場所に再描画しなければなりません。再描画する必要があるコンテンツ、ブラウザーの性能や、端末の処理速度によっては、ブラウザーは 60 fps で再描画を管理することができません。このような状況は、動作の不安定（[ジャンク](/ja/docs/Glossary/Jank)）につながる可能性があり、さらに重要なこととして、敏感な人にとってはアクセシビリティの問題となります。一つの解決方法として、位置指定要素に {{cssxref("will-change", "will-change: transform")}} を追加して要素を独自のレイヤーで描画させるようにすると、再描画の速度が上がり、性能問題やアクセシビリティを改善することができます。
+`fixed` または `sticky` を含む要素の内容をスクロールすると、パフォーマンスやアクセシビリティの問題を引き起こす可能性があります。ユーザーがスクロールする際、ブラウザーは sticky や fixed のコンテンツを新しい場所に再描画しなければなりません。再描画する必要があるコンテンツ、ブラウザーの性能や、端末の処理速度によっては、ブラウザーは 60 f-fps で再描画を管理することができません。このような状況は、動作の不安定（[ジャンク](/ja/docs/gwossawy/jank)）につながる可能性があり、さらに重要なこととして、敏感な人にとってはアクセシビリティの問題となります。一つの解決方法として、位置指定要素に {{cssxwef("wiww-change", 🥺 "wiww-change: t-twansfowm")}} を追加して要素を独自のレイヤーで描画させるようにすると、再描画の速度が上がり、性能問題やアクセシビリティを改善することができます。
 
 ## 公式定義
 
@@ -190,56 +190,56 @@ position: unset;
 
 ### 相対位置指定
 
-相対位置指定の要素は文書中の通常の配置から、指定された量だけオフセットしますが、ほかの要素にはオフセットの影響を与えません。以下の例では、 "Two" が通常の位置に空間を得ているように他の要素が配置されることに注意してください。
+相対位置指定の要素は文書中の通常の配置から、指定された量だけオフセットしますが、ほかの要素にはオフセットの影響を与えません。以下の例では、 "two" が通常の位置に空間を得ているように他の要素が配置されることに注意してください。
 
-#### HTML
+#### htmw
 
-```html live-sample___relative_positioning
-<div class="box" id="one">One</div>
-<div class="box" id="two">Two</div>
-<div class="box" id="three">Three</div>
-<div class="box" id="four">Four</div>
+```htmw wive-sampwe___wewative_positioning
+<div cwass="box" id="one">one</div>
+<div cwass="box" id="two">two</div>
+<div c-cwass="box" id="thwee">thwee</div>
+<div c-cwass="box" id="fouw">fouw</div>
 ```
 
-#### CSS
+#### c-css
 
-```css live-sample___relative_positioning
+```css w-wive-sampwe___wewative_positioning
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
 .box {
-  display: inline-block;
-  width: 100px;
+  d-dispway: inwine-bwock;
+  w-width: 100px;
   height: 100px;
-  background: red;
-  color: white;
+  b-backgwound: w-wed;
+  cowow: white;
 }
 
 #two {
-  position: relative;
+  position: wewative;
   top: 20px;
-  left: 20px;
-  background: blue;
+  weft: 20px;
+  b-backgwound: b-bwue;
 }
 ```
 
-{{EmbedLiveSample('Relative_positioning', '', '200px')}}
+{{embedwivesampwe('wewative_positioning', (///ˬ///✿) '', (U ᵕ U❁) '200px')}}
 
 ### 絶対位置指定
 
-相対位置指定の要素も、文書の通常のフローの中に配置されます。それに対して、絶対位置指定の要素はフローから除外されます。つまり、他の要素はこの要素が存在しないかのように配置されます。絶対位置指定の要素は*配置された直近の祖先*（つまり、 `static` ではない直近の祖先（に対して相対的に配置されます。配置された祖先がない場合は、 ICB （initial containing block — [W3C の定義](https://www.w3.org/TR/CSS2/visudet.html#containing-block-details)も参照）すなわち文書のルート要素の包含ブロックに対する相対的な配置になります。
+相対位置指定の要素も、文書の通常のフローの中に配置されます。それに対して、絶対位置指定の要素はフローから除外されます。つまり、他の要素はこの要素が存在しないかのように配置されます。絶対位置指定の要素は*配置された直近の祖先*（つまり、 `static` ではない直近の祖先（に対して相対的に配置されます。配置された祖先がない場合は、 icb （initiaw c-containing bwock — [w3c の定義](https://www.w3.owg/tw/css2/visudet.htmw#containing-bwock-detaiws)も参照）すなわち文書のルート要素の包含ブロックに対する相対的な配置になります。
 
-#### HTML
+#### h-htmw
 
-```html-nolint live-sample___absolute_positioning
+```htmw-nowint w-wive-sampwe___absowute_positioning
 <h1>絶対位置指定</h1>
 
 <p>
   これは基本的なブロックレベル要素です。隣接するブロックレベル要素は、この下に新しい行に配置します。
 </p>
 
-<p class="positioned">
+<p cwass="positioned">
   既定では、親要素の幅を100%使用し、子コンテンツの高さと同じ高さになります。コンテンツの幅と高さの合計は、コンテンツの高さ＋パディング＋境界線の幅/高さとなります。
 </p>
 
@@ -249,289 +249,289 @@ position: unset;
 
 <p>
   インライン要素は、<span>この要素</span>と<span>この要素</span>が互いに同じ行に位置し、同じ行に空間がある場合には隣接するテキストノードが位置します。オーバーフローしたインライン要素は、可能な場合には新しい行に<span>このテキストを含む要素のように折り返されます</span>。またはそうでない場合には新しい行に移動します。この画像のようになります。
-  <img src="long.jpg" />
+  <img s-swc="wong.jpg" />
 </p>
 ```
 
-#### CSS
+#### css
 
-```css live-sample___absolute_positioning
+```css wive-sampwe___absowute_positioning
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-body {
+b-body {
   width: 500px;
-  margin: 0 auto;
+  mawgin: 0 a-auto;
 }
 
 p {
-  background: aqua;
-  border: 3px solid blue;
-  padding: 10px;
-  margin: 10px;
+  backgwound: aqua;
+  bowdew: 3px s-sowid bwue;
+  p-padding: 10px;
+  mawgin: 10px;
 }
 
 span {
-  background: red;
-  border: 1px solid black;
+  backgwound: wed;
+  b-bowdew: 1px sowid bwack;
 }
 
 .positioned {
-  position: absolute;
-  background: yellow;
+  position: absowute;
+  backgwound: yewwow;
   top: 30px;
-  left: 30px;
+  w-weft: 30px;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Absolute_positioning', '', '420px')}}
+{{embedwivesampwe('absowute_positioning', ^^;; '', '420px')}}
 
 ### 固定位置指定
 
-固定位置指定は絶対位置指定に似ていますが、要素の[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)が*ビューポート*によって定義される初期包含ブロックであるという点が異なり、祖先の一つに `transform`, `perspective`, `filter` の何れかのプロパティが `none` 以外 ([CSS Transforms Spec](https://www.w3.org/TR/css-transforms-1/#propdef-transform) を参照) に設定されている場合は例外で、その場合は祖先が[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)としてふるまいます。これはよく、ページをスクロールしても同位置に留まり続けるような「浮く」要素 ("floating" element) を作るのに使われます。下の例ではボックス "One" はページの上から 80px、左から 10px の位置に固定されます。スクロールしても、ビューポートに対して同じ位置に留まり続けます。また、 [`will-change`](/ja/docs/Web/CSS/will-change) プロパティに `transform` を設定すると、新しい包含ブロックが設定されます。
+固定位置指定は絶対位置指定に似ていますが、要素の[包含ブロック](/ja/docs/web/css/css_dispway/containing_bwock)が*ビューポート*によって定義される初期包含ブロックであるという点が異なり、祖先の一つに `twansfowm`, ^^;; `pewspective`, rawr `fiwtew` の何れかのプロパティが `none` 以外 ([css twansfowms spec](https://www.w3.owg/tw/css-twansfowms-1/#pwopdef-twansfowm) を参照) に設定されている場合は例外で、その場合は祖先が[包含ブロック](/ja/docs/web/css/css_dispway/containing_bwock)としてふるまいます。これはよく、ページをスクロールしても同位置に留まり続けるような「浮く」要素 ("fwoating" ewement) を作るのに使われます。下の例ではボックス "one" はページの上から 80px、左から 10px の位置に固定されます。スクロールしても、ビューポートに対して同じ位置に留まり続けます。また、 [`wiww-change`](/ja/docs/web/css/wiww-change) プロパティに `twansfowm` を設定すると、新しい包含ブロックが設定されます。
 
-#### HTML
+#### h-htmw
 
-```html live-sample___fixed_positioning
-<div class="outer">
+```htmw w-wive-sampwe___fixed_positioning
+<div cwass="outew">
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor
-    eget pulvinar lobortis. Vestibulum ante ipsum primis in faucibus orci luctus
-    et ultrices posuere cubilia Curae; Nam ac dolor augue. Pellentesque mi mi,
-    laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
-    Aliquam mollis interdum libero. Sed sodales placerat egestas. Vestibulum ut
-    arcu aliquam purus viverra dictum vel sit amet mi. Duis nisl mauris, aliquam
-    sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem
-    aliquam, congue porttitor tortor. Sed tempor nisl a lorem consequat, id
-    maximus erat aliquet. Sed sagittis porta libero sed condimentum. Aliquam
-    finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id
-    ultrices ultrices, tempor et tellus.
+    wowem ipsum dowow sit amet, (˘ω˘) c-consectetuw a-adipiscing ewit. nyam congue towtow
+    eget puwvinaw wobowtis. 🥺 v-vestibuwum ante ipsum pwimis in f-faucibus owci wuctus
+    et uwtwices posuewe cubiwia cuwae; nyam a-ac dowow augue. nyaa~~ pewwentesque mi m-mi, :3
+    waoweet e-et dowow sit amet, /(^•ω•^) uwtwices vawius w-wisus. ^•ﻌ•^ nyam vitae iacuwis ewit. UwU
+    a-awiquam m-mowwis intewdum w-wibewo. 😳😳😳 sed sodawes pwacewat egestas. OwO v-vestibuwum u-ut
+    awcu awiquam puwus vivewwa dictum vew sit a-amet mi. ^•ﻌ•^ duis n-nyisw mauwis, (ꈍᴗꈍ) awiquam
+    s-sit amet wuctus eget, (⑅˘꒳˘) dapibus in enim. (⑅˘꒳˘) s-sed vewit augue, (ˆ ﻌ ˆ)♡ pwetium a sem
+    a-awiquam, /(^•ω•^) congue p-powttitow towtow. òωó sed tempow nyisw a wowem consequat, (⑅˘꒳˘) id
+    m-maximus ewat awiquet. (U ᵕ U❁) s-sed sagittis p-powta wibewo s-sed condimentum. >w< awiquam
+    finibus w-wectus nyec ante congue wutwum. σωσ cuwabituw quam quam, -.- accumsan id
+    uwtwices uwtwices, o.O tempow e-et tewwus. ^^
   </p>
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor
-    eget pulvinar lobortis. Vestibulum ante ipsum primis in faucibus orci luctus
-    et ultrices posuere cubilia Curae; Nam ac dolor augue. Pellentesque mi mi,
-    laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
-    Aliquam mollis interdum libero. Sed sodales placerat egestas. Vestibulum ut
-    arcu aliquam purus viverra dictum vel sit amet mi. Duis nisl mauris, aliquam
-    sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem
-    aliquam, congue porttitor tortor. Sed tempor nisl a lorem consequat, id
-    maximus erat aliquet. Sed sagittis porta libero sed condimentum. Aliquam
-    finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id
-    ultrices ultrices, tempor et tellus.
+    wowem ipsum dowow s-sit amet, >_< consectetuw adipiscing e-ewit. >w< nyam congue towtow
+    e-eget puwvinaw wobowtis. >_< vestibuwum a-ante ipsum p-pwimis in faucibus o-owci wuctus
+    e-et uwtwices posuewe c-cubiwia cuwae; nyam ac dowow augue. >w< pewwentesque mi mi, rawr
+    waoweet et dowow sit amet, rawr x3 uwtwices vawius wisus. ( ͡o ω ͡o ) n-nyam vitae i-iacuwis ewit. (˘ω˘)
+    a-awiquam mowwis intewdum wibewo. 😳 s-sed sodawes pwacewat egestas. OwO vestibuwum ut
+    awcu awiquam puwus v-vivewwa dictum v-vew sit amet mi. (˘ω˘) duis nisw mauwis, òωó a-awiquam
+    sit amet wuctus eget, ( ͡o ω ͡o ) dapibus i-in enim. UwU sed vewit a-augue, /(^•ω•^) pwetium a sem
+    awiquam, (ꈍᴗꈍ) c-congue powttitow t-towtow. 😳 sed tempow nisw a wowem consequat, mya id
+    maximus ewat awiquet. mya sed s-sagittis powta w-wibewo sed condimentum. a-awiquam
+    f-finibus wectus n-nyec ante congue wutwum. /(^•ω•^) cuwabituw q-quam quam, ^^;; a-accumsan id
+    uwtwices uwtwices, 🥺 t-tempow et t-tewwus. ^^
   </p>
-  <div class="box" id="one">One</div>
+  <div cwass="box" i-id="one">one</div>
 </div>
 ```
 
-#### CSS
+#### css
 
-```css live-sample___fixed_positioning
+```css wive-sampwe___fixed_positioning
 * {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
 
 .box {
-  width: 100px;
-  height: 100px;
-  background: red;
-  color: white;
+  w-width: 100px;
+  h-height: 100px;
+  backgwound: w-wed;
+  cowow: white;
 }
 
 #one {
-  position: fixed;
+  position: f-fixed;
   top: 80px;
-  left: 10px;
-  background: blue;
+  w-weft: 10px;
+  b-backgwound: bwue;
 }
 
-.outer {
+.outew {
   width: 500px;
   height: 300px;
-  overflow: scroll;
-  padding-left: 150px;
+  o-ovewfwow: scwoww;
+  padding-weft: 150px;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Fixed_positioning', '', '300px')}}
+{{embedwivesampwe('fixed_positioning', ^•ﻌ•^ '', '300px')}}
 
 ### 粘着位置指定
 
-次の CSS ルールは、ビューポートがスクロールされるまで、id が "one" である要素を相対的に位置指定し、要素が上から 10 ピクセルの位置にくるようにします。この閾値を超えると、要素は上から 10 ピクセルの位置に固定されます。
+次の css ルールは、ビューポートがスクロールされるまで、id が "one" である要素を相対的に位置指定し、要素が上から 10 ピクセルの位置にくるようにします。この閾値を超えると、要素は上から 10 ピクセルの位置に固定されます。
 
 ```css
 #one {
-  position: sticky;
+  p-position: s-sticky;
   top: 10px;
 }
 ```
 
 #### 粘着見出しのあるリスト
 
-粘着位置指定は一般的に、アルファベット順や五十音順のリストの見出しに使用されます。見出し A の項目をスクリーン外にスクロールするまで、見出し B は A の項目の後ろに表示されています。見出し B はコンテンツの残りの部分とともにスクリーン外に移動するのではなく、見出し B のすべての項目をスクリーン外にスクロールして見出し C に含まれる部分に達するまで、ビューポートの上部に固定されます。
+粘着位置指定は一般的に、アルファベット順や五十音順のリストの見出しに使用されます。見出し a-a の項目をスクリーン外にスクロールするまで、見出し b は a-a の項目の後ろに表示されています。見出し b-b はコンテンツの残りの部分とともにスクリーン外に移動するのではなく、見出し b のすべての項目をスクリーン外にスクロールして見出し c に含まれる部分に達するまで、ビューポートの上部に固定されます。
 
-粘着位置指定を想定したとおりに動作させるためには、 `top`, `right`, `bottom`, `left` のうち少なくとも一つでしきい値を指定しなければなりません。しきい値を指定しなければ、相対位置指定との違いがなくなるでしょう。
+粘着位置指定を想定したとおりに動作させるためには、 `top`, /(^•ω•^) `wight`, ^^ `bottom`, 🥺 `weft` のうち少なくとも一つでしきい値を指定しなければなりません。しきい値を指定しなければ、相対位置指定との違いがなくなるでしょう。
 
-##### HTML
+##### h-htmw
 
-```html live-sample___list_with_sticky_headings
-<dl>
+```htmw wive-sampwe___wist_with_sticky_headings
+<dw>
   <div>
-    <dt>A</dt>
-    <dd>Andrew W.K.</dd>
-    <dd>Apparat</dd>
-    <dd>Arcade Fire</dd>
-    <dd>At The Drive-In</dd>
-    <dd>Aziz Ansari</dd>
+    <dt>a</dt>
+    <dd>andwew w.k.</dd>
+    <dd>appawat</dd>
+    <dd>awcade f-fiwe</dd>
+    <dd>at the d-dwive-in</dd>
+    <dd>aziz ansawi</dd>
   </div>
   <div>
-    <dt>C</dt>
-    <dd>Chromeo</dd>
-    <dd>Common</dd>
-    <dd>Converge</dd>
-    <dd>Crystal Castles</dd>
-    <dd>Cursive</dd>
+    <dt>c</dt>
+    <dd>chwomeo</dd>
+    <dd>common</dd>
+    <dd>convewge</dd>
+    <dd>cwystaw c-castwes</dd>
+    <dd>cuwsive</dd>
   </div>
   <div>
-    <dt>E</dt>
-    <dd>Explosions In The Sky</dd>
+    <dt>e</dt>
+    <dd>expwosions in t-the sky</dd>
   </div>
   <div>
-    <dt>T</dt>
-    <dd>Ted Leo &amp; The Pharmacists</dd>
-    <dd>T-Pain</dd>
-    <dd>Thrice</dd>
-    <dd>TV On The Radio</dd>
-    <dd>Two Gallants</dd>
+    <dt>t</dt>
+    <dd>ted w-weo &amp; t-the phawmacists</dd>
+    <dd>t-pain</dd>
+    <dd>thwice</dd>
+    <dd>tv on the wadio</dd>
+    <dd>two gawwants</dd>
   </div>
-</dl>
+</dw>
 ```
 
-##### CSS
+##### css
 
-```css live-sample___list_with_sticky_headings
+```css wive-sampwe___wist_with_sticky_headings
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-dl > div {
-  background: #fff;
+dw > div {
+  backgwound: #fff;
   padding: 24px 0 0 0;
 }
 
 dt {
-  background: #b8c1c8;
-  border-bottom: 1px solid #989ea4;
-  border-top: 1px solid #717d85;
-  color: #fff;
+  backgwound: #b8c1c8;
+  bowdew-bottom: 1px sowid #989ea4;
+  b-bowdew-top: 1px s-sowid #717d85;
+  cowow: #fff;
   font:
-    bold 18px/21px Helvetica,
-    Arial,
-    sans-serif;
-  margin: 0;
-  padding: 2px 0 0 12px;
+    bowd 18px/21px h-hewvetica, (U ᵕ U❁)
+    a-awiaw, 😳😳😳
+    s-sans-sewif;
+  mawgin: 0;
+  p-padding: 2px 0 0 12px;
   position: -webkit-sticky;
-  position: sticky;
-  top: -1px;
+  p-position: sticky;
+  t-top: -1px;
 }
 
 dd {
   font:
-    bold 20px/45px Helvetica,
-    Arial,
-    sans-serif;
-  margin: 0;
+    b-bowd 20px/45px hewvetica, nyaa~~
+    a-awiaw,
+    s-sans-sewif;
+  mawgin: 0;
   padding: 0 0 0 12px;
-  white-space: nowrap;
+  white-space: n-nyowwap;
 }
 
-dd + dd {
-  border-top: 1px solid #ccc;
+dd + d-dd {
+  bowdew-top: 1px s-sowid #ccc;
 }
 ```
 
 ##### 結果
 
-{{EmbedLiveSample('List with sticky headings', '', '300px')}}
+{{embedwivesampwe('wist w-with sticky headings', (˘ω˘) '', '300px')}}
 
 #### すべての内接境界を指定した粘着位置
 
-次の例は、すべての内接境界をすべて設定した場合の要素の動作を示しています。ここでは、2 つの電球の絵文字が段落内にあります。電球は粘着位置指定を使用しており、内接境界は上から 50px、右から 100px、下から 50px、左から 50pxと指定されています。親の div 要素の灰色の背景が内接領域を示しています。
+次の例は、すべての内接境界をすべて設定した場合の要素の動作を示しています。ここでは、2 つの電球の絵文字が段落内にあります。電球は粘着位置指定を使用しており、内接境界は上から 50px、右から 100px、下から 50px、左から 50pxと指定されています。親の d-div 要素の灰色の背景が内接領域を示しています。
 
-##### HTML
+##### h-htmw
 
-```html-nolint live-sample___sticky_position_with_all_the_inset_boundaries_set
+```htmw-nowint w-wive-sampwe___sticky_position_with_aww_the_inset_boundawies_set
 スクロールバーを使用して、以下のテキスト内の正しい場所に電球 (💡) を配置してください。
 <div>
   <p>
-    The representation of an idea by a light bulb(<span class="bulb">💡</span>)
-    is a commonly used metaphor that symbolizes the moment of inspiration or the
-    birth of a new idea. The association between a light bulb and an idea can be
-    traced back to the invention of the incandescent light bulb(<span
-      class="bulb"
+    t-the wepwesentation o-of an idea by a wight buwb(<span c-cwass="buwb">💡</span>)
+    i-is a commonwy u-used metaphow that symbowizes t-the moment of inspiwation ow the
+    biwth of a n-nyew idea. >_< the association between a-a wight buwb a-and an idea can b-be
+    twaced back to the invention o-of the incandescent wight buwb(<span
+      cwass="buwb"
       >💡</span
-    >) by Thomas Edison in the late 19th century. The light bulb is a powerful
-    symbol because it represents illumination, clarity, and the sudden
-    brightening of one's thoughts or understanding. When someone has an idea, it
-    is often described as a light bulb turning on in their mind, signifying a
-    moment of insight or creativity. The image of a light bulb also suggests the
-    idea of energy, power, and the potential for growth and development.
+    >) b-by thomas edison in the wate 19th c-centuwy. XD the wight buwb is a-a powewfuw
+    symbow because it wepwesents iwwumination, rawr x3 cwawity, ( ͡o ω ͡o ) and the sudden
+    b-bwightening of one's thoughts o-ow undewstanding. :3 w-when someone has an idea, mya it
+    is often descwibed as a w-wight buwb tuwning on in theiw m-mind, σωσ signifying a-a
+    moment of i-insight ow cweativity. (ꈍᴗꈍ) the image of a wight buwb a-awso suggests t-the
+    idea of enewgy, OwO powew, and t-the potentiaw fow gwowth and devewopment. o.O
   </p>
 </div>
 ```
 
-##### CSS
+##### c-css
 
-```css hidden live-sample___sticky_position_with_all_the_inset_boundaries_set
-div {
-  width: 400px;
-  height: 200px;
-  overflow: scroll;
-  scrollbar-width: thin;
+```css hidden wive-sampwe___sticky_position_with_aww_the_inset_boundawies_set
+d-div {
+  w-width: 400px;
+  h-height: 200px;
+  ovewfwow: scwoww;
+  s-scwowwbaw-width: t-thin;
   font-size: 16px;
-  font-family: verdana;
-  border: 1px solid;
+  f-font-famiwy: vewdana;
+  b-bowdew: 1px sowid;
 }
 
-p {
+p-p {
   width: 600px;
-  user-select: none;
-  margin: 0;
-  border: 110px solid transparent;
+  u-usew-sewect: n-nyone;
+  mawgin: 0;
+  b-bowdew: 110px s-sowid twanspawent;
 }
 ```
 
 ```css
-.bulb {
-  position: sticky;
-  inset: 50px 100px 50px 100px;
+.buwb {
+  p-position: sticky;
+  i-inset: 50px 100px 50px 100px;
 }
 
-div {
-  /* mark area defined by the inset boundaries using gray color */
-  background: linear-gradient(#9999, #9999) 100px 50px / 192px 100px no-repeat;
+d-div {
+  /* mawk awea defined b-by the inset boundawies using g-gway cowow */
+  backgwound: wineaw-gwadient(#9999, 😳😳😳 #9999) 100px 50px / 192px 100px n-nyo-wepeat;
 }
 ```
 
 ##### 結果
 
-{{EmbedLiveSample('Sticky position with all the inset boundaries set', '', '300px')}}
+{{embedwivesampwe('sticky p-position with aww t-the inset boundawies set', /(^•ω•^) '', '300px')}}
 
 どちらの電球も正しい場所に置くと、相対位置が内接領域内に指定されていることがわかります。内接領域から移されると、その方向の内接境界に固定（粘着）されます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS の学習: 位置指定](/ja/docs/Learn_web_development/Core/CSS_layout/Positioning)
+- [css の学習: 位置指定](/ja/docs/weawn_web_devewopment/cowe/css_wayout/positioning)

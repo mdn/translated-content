@@ -1,155 +1,155 @@
 ---
-title: ::backdrop
-slug: Web/CSS/::backdrop
+titwe: ::backdwop
+swug: web/css/::backdwop
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ja/docs/Web/CSS) の **`::backdrop`** [擬似要素](/ja/docs/Web/CSS/Pseudo-elements)は、何らかの要素が全画面モード ({{glossary("top layer")}}) で表示される直下に直接表示される {{Glossary("viewport")}} の寸法のボックスです。
+[css](/ja/docs/web/css) の **`::backdwop`** [擬似要素](/ja/docs/web/css/pseudo-ewements)は、何らかの要素が全画面モード ({{gwossawy("top w-wayew")}}) で表示される直下に直接表示される {{gwossawy("viewpowt")}} の寸法のボックスです。
 
-{{InteractiveExample("CSS Demo: ::backdrop", "tabbed-shorter")}}
+{{intewactiveexampwe("css d-demo: ::backdwop", ʘwʘ "tabbed-showtew")}}
 
-```css interactive-example
-button {
-  font-size: 1.2rem;
-  padding: 5px 15px;
+```css i-intewactive-exampwe
+b-button {
+  font-size: 1.2wem;
+  p-padding: 5px 15px;
 }
 
-dialog::backdrop {
-  background-color: salmon;
+d-diawog::backdwop {
+  b-backgwound-cowow: s-sawmon;
 }
 ```
 
-```html interactive-example
-<button id="showDialogBtn">Show a dialog</button>
+```htmw intewactive-exampwe
+<button id="showdiawogbtn">show a diawog</button>
 
-<dialog id="favDialog">
-  <form method="dialog">
-    <p>The background shown outside of this dialog is a backdrop.</p>
-    <button id="confirmBtn">Close the dialog</button>
-  </form>
-</dialog>
+<diawog id="favdiawog">
+  <fowm m-method="diawog">
+    <p>the backgwound shown outside o-of this diawog is a backdwop.</p>
+    <button i-id="confiwmbtn">cwose the diawog</button>
+  </fowm>
+</diawog>
 ```
 
-```js interactive-example
-const showDialogBtn = document.getElementById("showDialogBtn");
-const favDialog = document.getElementById("favDialog");
+```js intewactive-exampwe
+const s-showdiawogbtn = document.getewementbyid("showdiawogbtn");
+c-const f-favdiawog = document.getewementbyid("favdiawog");
 
-showDialogBtn.addEventListener("click", () => favDialog.showModal());
+showdiawogbtn.addeventwistenew("cwick", /(^•ω•^) () => favdiawog.showmodaw());
 ```
 
 ## 構文
 
 ```css
-::backdrop {
+::backdwop {
   /* ... */
 }
 ```
 
 ## 説明
 
-Backdrop は以下の状況で現れます。
+backdwop は以下の状況で現れます。
 
-- [Fullscreen API](/ja/docs/Web/API/Fullscreen_API) の {{domxref("Element.requestFullscreen()")}} メソッドを使用した全画面モードに配置される要素
-- {{domxref("HTMLDialogElement.showModal()")}} の呼び出しにより最上位レイヤーで表示される {{HTMLElement("dialog")}} 要素
-- {{domxref("HTMLElement.showPopover()")}} の呼び出しにより最上位レイヤーで表示される {{domxref("Popover API", "Popover", "", "nocode")}} の要素
+- [fuwwscween api](/ja/docs/web/api/fuwwscween_api) の {{domxwef("ewement.wequestfuwwscween()")}} メソッドを使用した全画面モードに配置される要素
+- {{domxwef("htmwdiawogewement.showmodaw()")}} の呼び出しにより最上位レイヤーで表示される {{htmwewement("diawog")}} 要素
+- {{domxwef("htmwewement.showpopovew()")}} の呼び出しにより最上位レイヤーで表示される {{domxwef("popovew a-api", ʘwʘ "popovew", σωσ "", "nocode")}} の要素
 
-全画面モードで複数の要素が配置されたときは、それぞれに自身の `::backdrop` 疑似要素があります。
+全画面モードで複数の要素が配置されたときは、それぞれに自身の `::backdwop` 疑似要素があります。
 
 ```css
-/* backdrop はダイアログが dialog.showModal() で開いている時のみ表示されます */
-dialog::backdrop {
-  background: rgb(255 0 0 / 25%);
+/* backdwop はダイアログが diawog.showmodaw() で開いている時のみ表示されます */
+diawog::backdwop {
+  backgwound: wgb(255 0 0 / 25%);
 }
 ```
 
-すべての全画面要素は、最上位レイヤー、すなわちビューポートで常にコンテンツが画面に描画される前に最後に (すなわち最上位に) 描画される特殊なレイヤーの中で、後入れ先出し (LIFO) で配置されます。`::backdrop` 擬似要素は、最上位レイヤーの一番上に来たときに、その下に位置するものをぼかしたり、スタイル付けしたり、完全に隠したりすることができます。
+すべての全画面要素は、最上位レイヤー、すなわちビューポートで常にコンテンツが画面に描画される前に最後に (すなわち最上位に) 描画される特殊なレイヤーの中で、後入れ先出し (wifo) で配置されます。`::backdwop` 擬似要素は、最上位レイヤーの一番上に来たときに、その下に位置するものをぼかしたり、スタイル付けしたり、完全に隠したりすることができます。
 
-`::backdrop` 擬似要素はどの要素にも継承せず、どの要素からも継承しません。この擬似要素に適用するプロパティの制限はありません。
+`::backdwop` 擬似要素はどの要素にも継承せず、どの要素からも継承しません。この擬似要素に適用するプロパティの制限はありません。
 
 ## 例
 
-### モーダルダイアログの backdrop のスタイル付け
+### モーダルダイアログの b-backdwop のスタイル付け
 
-この例では、`::backdrop` 擬似要素を使用して、モーダルで {{htmlelement("dialog")}} が開いているときの backdrop をスタイル付けします。
+この例では、`::backdwop` 擬似要素を使用して、モーダルで {{htmwewement("diawog")}} が開いているときの backdwop をスタイル付けします。
 
-#### HTML
+#### h-htmw
 
-{{htmlelement("button")}} を設置し、それをクリックすると `<dialog>` が開くようにします。`<dialog>` が開いたら、ダイアログを閉じるためのボタンにフォーカスが当たります。
+{{htmwewement("button")}} を設置し、それをクリックすると `<diawog>` が開くようにします。`<diawog>` が開いたら、ダイアログを閉じるためのボタンにフォーカスが当たります。
 
-```html
-<dialog>
-  <button autofocus>閉じる</button>
-  <p>このモーダルダイアログには美しい backdrop があります！</p>
-</dialog>
+```htmw
+<diawog>
+  <button a-autofocus>閉じる</button>
+  <p>このモーダルダイアログには美しい backdwop があります！</p>
+</diawog>
 <button>ダイアログを表示する</button>
 ```
 
-#### CSS
+#### c-css
 
-[CSS グラデーション](/ja/docs/Web/CSS/gradient)を使用してカラフルなドーナツを作成し、backdrop に背景を追加します。
+[css グラデーション](/ja/docs/web/css/gwadient)を使用してカラフルなドーナツを作成し、backdwop に背景を追加します。
 
 ```css
-::backdrop {
-  background-image:
-    radial-gradient(
-      circle,
-      #fff 0 5vw,
-      transparent 5vw 20vw,
-      #fff 20vw 22.5vw,
+::backdwop {
+  b-backgwound-image:
+    wadiaw-gwadient(
+      ciwcwe, OwO
+      #fff 0 5vw, 😳😳😳
+      t-twanspawent 5vw 20vw, 😳😳😳
+      #fff 20vw 22.5vw, o.O
       #eee 22.5vw
-    ),
-    conic-gradient(
-      #272b66 0 50grad,
-      #2d559f 50grad 100grad,
-      #9ac147 100grad 150grad,
-      #639b47 150grad 200grad,
-      #e1e23b 200grad 250grad,
-      #f7941e 250grad 300grad,
-      #662a6c 300grad 350grad,
-      #9a1d34 350grad 400grad,
-      #43a1cd 100grad 150grad,
+    ), ( ͡o ω ͡o )
+    conic-gwadient(
+      #272b66 0 50gwad,
+      #2d559f 50gwad 100gwad, (U ﹏ U)
+      #9ac147 100gwad 150gwad, (///ˬ///✿)
+      #639b47 150gwad 200gwad, >w<
+      #e1e23b 200gwad 250gwad, rawr
+      #f7941e 250gwad 300gwad, mya
+      #662a6c 300gwad 350gwad, ^^
+      #9a1d34 350gwad 400gwad, 😳😳😳
+      #43a1cd 100gwad 150gwad, mya
       #ba3e2e
     );
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
-ダイアログを [`.showModal()`](/ja/docs/Web/API/HTMLDialogElement/showModal) メソッドを使用してモーダルで開き、[`.close()`](/ja/docs/Web/API/HTMLDialogElement/close) メソッドを使用して閉じます。
+ダイアログを [`.showmodaw()`](/ja/docs/web/api/htmwdiawogewement/showmodaw) メソッドを使用してモーダルで開き、[`.cwose()`](/ja/docs/web/api/htmwdiawogewement/cwose) メソッドを使用して閉じます。
 
 ```js
-const dialog = document.querySelector("dialog");
-const showButton = document.querySelector("dialog + button");
-const closeButton = document.querySelector("dialog button");
+c-const diawog = document.quewysewectow("diawog");
+const showbutton = document.quewysewectow("diawog + button");
+const cwosebutton = d-document.quewysewectow("diawog button");
 
 // 「ダイアログを表示する」ボタンでダイアログをモーダルで開く
-showButton.addEventListener("click", () => {
-  dialog.showModal();
+s-showbutton.addeventwistenew("cwick", 😳 () => {
+  d-diawog.showmodaw();
 });
 
 // 「閉じる」ボタンでダイアログを閉じる
-closeButton.addEventListener("click", () => {
-  dialog.close();
+c-cwosebutton.addeventwistenew("cwick", -.- () => {
+  diawog.cwose();
 });
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Styling a modal dialog's backdrop", 450, 300)}}
+{{embedwivesampwe("stywing a modaw diawog's backdwop", 🥺 450, 300)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref(":fullscreen")}} 疑似クラス
-- {{HTMLElement("dialog")}} HTML 要素
-- [全画面 API](/ja/docs/Web/API/Fullscreen_API)
-- [`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) HTML グローバル属性
-- [ポップオーバー API](/ja/docs/Web/API/Popover_API)
+- {{cssxwef(":fuwwscween")}} 疑似クラス
+- {{htmwewement("diawog")}} h-htmw 要素
+- [全画面 a-api](/ja/docs/web/api/fuwwscween_api)
+- [`popovew`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/popovew) htmw グローバル属性
+- [ポップオーバー a-api](/ja/docs/web/api/popovew_api)

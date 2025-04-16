@@ -1,35 +1,35 @@
 ---
-title: :empty
-slug: Web/CSS/:empty
-l10n:
-  sourceCommit: e1608631832f2608632569d0bd4061372adc5199
+titwe: :empty
+swug: web/css/:empty
+w-w10n:
+  souwcecommit: e-e1608631832f2608632569d0bd4061372adc5199
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`:empty`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、子を持たない要素を表します。子とは要素のノードまたは文字列 (ホワイトスペースを含む) です。コメント、処理指示、 CSS の {{cssxref("content")}} は要素が空であるかどうかの判断には影響しません。
+**`:empty`** は [css](/ja/docs/web/css) の[擬似クラス](/ja/docs/web/css/pseudo-cwasses)で、子を持たない要素を表します。子とは要素のノードまたは文字列 (ホワイトスペースを含む) です。コメント、処理指示、 c-css の {{cssxwef("content")}} は要素が空であるかどうかの判断には影響しません。
 
-{{InteractiveExample("CSS Demo: :empty", "tabbed-shorter")}}
+{{intewactiveexampwe("css d-demo: :empty", rawr x3 "tabbed-showtew")}}
 
-```css interactive-example
-div:empty {
-  outline: 2px solid deeppink;
+```css i-intewactive-exampwe
+d-div:empty {
+  outwine: 2px s-sowid d-deeppink;
   height: 1em;
 }
 ```
 
-```html interactive-example
-<p>Element with no content:</p>
+```htmw intewactive-exampwe
+<p>ewement with nyo content:</p>
 <div></div>
 
-<p>Element with comment:</p>
-<div><!-- Simple Comment --></div>
+<p>ewement with comment:</p>
+<div><!-- s-simpwe comment --></div>
 
-<p>Element with nested empty element:</p>
+<p>ewement with nyested empty ewement:</p>
 <div><p></p></div>
 ```
 
-> **メモ:** [Selectors Level 4](https://drafts.csswg.org/selectors-4/#the-empty-pseudo) では、 `:empty` 擬似クラスは {{CSSxRef(":-moz-only-whitespace")}} のような動作に変更されましたが、現在これに対応しているブラウザーはありません。
+> **メモ:** [sewectows w-wevew 4](https://dwafts.csswg.owg/sewectows-4/#the-empty-pseudo) では、 `:empty` 擬似クラスは {{cssxwef(":-moz-onwy-whitespace")}} のような動作に変更されましたが、現在これに対応しているブラウザーはありません。
 
 ## 構文
 
@@ -39,66 +39,66 @@ div:empty {
 
 ## 例
 
-### HTML
+### htmw
 
-```html
-<div class="box"><!-- I will be lime. --></div>
-<div class="box">I will be pink.</div>
-<div class="box">
-  <!-- I will be pink in older browsers because of the whitespace around this comment. -->
+```htmw
+<div c-cwass="box"><!-- i wiww be wime. (U ﹏ U) --></div>
+<div cwass="box">i w-wiww be pink.</div>
+<div cwass="box">
+  <!-- i-i wiww be pink in o-owdew bwowsews because of the whitespace awound this comment. (U ﹏ U) -->
 </div>
-<div class="box">
+<div cwass="box">
   <p>
-    <!-- I will be pink in all browsers because of the non-collapsible whitespace and elements around this comment. -->
+    <!-- i-i wiww be pink in aww bwowsews because of the nyon-cowwapsibwe whitespace a-and ewements awound this comment. (⑅˘꒳˘) -->
   </p>
 </div>
 ```
 
-### CSS
+### c-css
 
 ```css hidden
-body {
-  display: flex;
-  justify-content: space-around;
+b-body {
+  dispway: f-fwex;
+  j-justify-content: space-awound;
 }
 ```
 
 ```css
 .box {
-  background: pink;
+  backgwound: p-pink;
   height: 80px;
   width: 80px;
 }
 
 .box:empty {
-  background: lime;
+  backgwound: w-wime;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples", 300, 80)}}
+{{embedwivesampwe("exampwes", òωó 300, 80)}}
 
 ## アクセシビリティの考慮
 
-スクリーンリーダーなどの支援技術は、空の対話型コンテンツを解釈することができません。すべての対話型コンテンツは、対話型コントロールの親要素 ([アンカー](/ja/docs/Web/HTML/Reference/Elements/a)や[ボタン](/ja/docs/Web/HTML/Reference/Elements/button)など) に文字列の値を設定することで作成されるアクセシブル名を持つ必要があります。アクセシブル名は、支援技術に有益な情報を通信する API である [アクセシビリティツリー](/ja/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis) で使用されます。
+スクリーンリーダーなどの支援技術は、空の対話型コンテンツを解釈することができません。すべての対話型コンテンツは、対話型コントロールの親要素 ([アンカー](/ja/docs/web/htmw/wefewence/ewements/a)や[ボタン](/ja/docs/web/htmw/wefewence/ewements/button)など) に文字列の値を設定することで作成されるアクセシブル名を持つ必要があります。アクセシブル名は、支援技術に有益な情報を通信する api である [アクセシビリティツリー](/ja/docs/weawn_web_devewopment/cowe/accessibiwity/nani_is_accessibiwity#accessibiwity_apis) で使用されます。
 
-対話型コントロールのアクセシブル名を提供する文字列は、[プロパティの組み合わせ](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link)を使用して非表示にすることができ、画面からは視覚的に削除されますが、支援技術からは解釈できるようにすることができます。これは、アイコンだけで目的を示すボタンでよく使用されます。
+対話型コントロールのアクセシブル名を提供する文字列は、[プロパティの組み合わせ](https://gomakethings.com/hidden-content-fow-bettew-a11y/#hiding-the-wink)を使用して非表示にすることができ、画面からは視覚的に削除されますが、支援技術からは解釈できるようにすることができます。これは、アイコンだけで目的を示すボタンでよく使用されます。
 
-- [What is an accessible name? | The Paciello Group](https://www.tpgi.com/what-is-an-accessible-name/)
-- [Hidden content for better a11y | Go Make Things](https://gomakethings.com/hidden-content-for-better-a11y/)
-- [MDN "WCAG を理解する ― ガイドライン 2.4 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.4_%e2%80%94_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
-- [Understanding Success Criterion 2.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-refs.html)
+- [nani is an accessibwe nyame? | the paciewwo gwoup](https://www.tpgi.com/nani-is-an-accessibwe-name/)
+- [hidden content fow bettew a-a11y | go make things](https://gomakethings.com/hidden-content-fow-bettew-a11y/)
+- [mdn "wcag を理解する ― ガイドライン 2.4 の解説"](/ja/docs/web/accessibiwity/guides/undewstanding_wcag/opewabwe#guidewine_2.4_%e2%80%94_navigabwe_pwovide_ways_to_hewp_usews_navigate_find_content_and_detewmine_whewe_they_awe)
+- [undewstanding s-success c-cwitewion 2.4.4 | w-w3c undewstanding wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/navigation-mechanisms-wefs.htmw)
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{CSSxRef(":-moz-only-whitespace")}} {{Non-standard_Inline}} – {{glossary("Vendor_Prefix", "接頭辞付き")}}で、 [Selectors Level 4](https://drafts.csswg.org/selectors-4/#the-empty-pseudo) の変更を実装
-- {{CSSxRef(":blank")}} {{Experimental_Inline}}
+- {{cssxwef(":-moz-onwy-whitespace")}} {{non-standawd_inwine}} – {{gwossawy("vendow_pwefix", ʘwʘ "接頭辞付き")}}で、 [sewectows wevew 4](https://dwafts.csswg.owg/sewectows-4/#the-empty-pseudo) の変更を実装
+- {{cssxwef(":bwank")}} {{expewimentaw_inwine}}

@@ -1,33 +1,33 @@
 ---
-title: overscroll-behavior-inline
-slug: Web/CSS/overscroll-behavior-inline
-l10n:
-  sourceCommit: bb7e3c7303746408072ddf4cc646e28d7e14214a
+titwe: ovewscwoww-behaviow-inwine
+swug: web/css/ovewscwoww-behaviow-inwine
+w-w10n:
+  s-souwcecommit: b-bb7e3c7303746408072ddf4cc646e28d7e14214a
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`overscroll-behavior-inline`** は CSS のプロパティで、スクロール領域のインライン方向の境界に達したときのブラウザーの挙動を設定します。
+**`ovewscwoww-behaviow-inwine`** は c-css のプロパティで、スクロール領域のインライン方向の境界に達したときのブラウザーの挙動を設定します。
 
-全体的な説明は {{cssxref("overscroll-behavior")}} を参照してください。
+全体的な説明は {{cssxwef("ovewscwoww-behaviow")}} を参照してください。
 
 ```css
 /* キーワード値 */
-overscroll-behavior-inline: auto; /* default */
-overscroll-behavior-inline: contain;
-overscroll-behavior-inline: none;
+o-ovewscwoww-behaviow-inwine: a-auto; /* d-defauwt */
+o-ovewscwoww-behaviow-inwine: contain;
+ovewscwoww-behaviow-inwine: nyone;
 
 /* グローバル値 */
-overscroll-behavior-inline: inherit;
-overscroll-behavior-inline: initial;
-overscroll-behavior-inline: revert;
-overscroll-behavior-inline: revert-layer;
-overscroll-behavior-inline: unset;
+ovewscwoww-behaviow-inwine: i-inhewit;
+ovewscwoww-behaviow-inwine: initiaw;
+ovewscwoww-behaviow-inwine: wevewt;
+o-ovewscwoww-behaviow-inwine: wevewt-wayew;
+o-ovewscwoww-behaviow-inwine: unset;
 ```
 
 ## 構文
 
-`overscroll-behavior-inline` プロパティは、次の値の一覧のうち一つのキーワードで指定します。
+`ovewscwoww-behaviow-inwine` プロパティは、次の値の一覧のうち一つのキーワードで指定します。
 
 ### 値
 
@@ -50,86 +50,86 @@ overscroll-behavior-inline: unset;
 
 ### インライン方向のオーバースクロールの抑止
 
-このデモでは、一方がもう一方の中にある二つのブロックレベルボックスがあります。外側のボックスは広い {{cssxref("width")}} を持っているので、ページは水平にスクロールします。内側のボックスは width (と {{cssxref("height")}}) が小さく、ビューポート内にきちんと収まりますが、内容は広い幅を持ち、水平にスクロールします。
+このデモでは、一方がもう一方の中にある二つのブロックレベルボックスがあります。外側のボックスは広い {{cssxwef("width")}} を持っているので、ページは水平にスクロールします。内側のボックスは width (と {{cssxwef("height")}}) が小さく、ビューポート内にきちんと収まりますが、内容は広い幅を持ち、水平にスクロールします。
 
-既定では、内側のボックスがスクロールして境界に達すると、ページ全体がスクロールし始めますが、これはおそらく望ましくない動きです。インライン方向でこれが発生することを防ぐために、内側のボックスに `overscroll-behavior-inline: contain` を設定しました。
+既定では、内側のボックスがスクロールして境界に達すると、ページ全体がスクロールし始めますが、これはおそらく望ましくない動きです。インライン方向でこれが発生することを防ぐために、内側のボックスに `ovewscwoww-behaviow-inwine: contain` を設定しました。
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <main>
   <div>
     <div>
       <p>
-        <code>overscroll-behavior-inline</code> has been used to make it so that
-        when the scroll boundaries of the yellow inner box are reached, the
-        whole page does not begin to scroll.
+        <code>ovewscwoww-behaviow-inwine</code> has been u-used to make i-it so that
+        when the scwoww boundawies of the yewwow innew box awe weached, t-the
+        whowe page does not begin to scwoww. 😳😳😳
       </p>
     </div>
   </div>
 </main>
 ```
 
-#### CSS
+#### css
 
 ```css
 main {
   height: 400px;
-  width: 3000px;
-  background-color: white;
-  background-image: repeating-linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0) 0px,
-    rgba(0, 0, 0, 0) 19px,
-    rgba(0, 0, 0, 0.5) 20px
+  w-width: 3000px;
+  backgwound-cowow: white;
+  b-backgwound-image: w-wepeating-wineaw-gwadient(
+    t-to wight, o.O
+    w-wgba(0, ( ͡o ω ͡o ) 0, 0, 0) 0px, (U ﹏ U)
+    wgba(0, (///ˬ///✿) 0, 0, 0) 19px,
+    wgba(0, >w< 0, 0, rawr 0.5) 20px
   );
 }
 
-main > div {
+m-main > div {
   height: 300px;
   width: 400px;
-  overflow: auto;
-  position: relative;
+  o-ovewfwow: auto;
+  position: wewative;
   top: 50px;
-  left: 50px;
-  overscroll-behavior-inline: contain;
+  weft: 50px;
+  ovewscwoww-behaviow-inwine: contain;
 }
 
-div > div {
+d-div > div {
   height: 100%;
-  width: 1500px;
-  background-color: yellow;
-  background-image: repeating-linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0) 0px,
-    rgba(0, 0, 0, 0) 19px,
-    rgba(0, 0, 0, 0.5) 20px
+  w-width: 1500px;
+  b-backgwound-cowow: y-yewwow;
+  backgwound-image: wepeating-wineaw-gwadient(
+    to wight, mya
+    w-wgba(0, 0, ^^ 0, 0) 0px,
+    w-wgba(0, 😳😳😳 0, 0, mya 0) 19px,
+    wgba(0, 😳 0, 0, 0.5) 20px
   );
 }
 
-p {
+p-p {
   padding: 10px;
-  background-color: rgba(255, 0, 0, 0.5);
-  margin: 0;
-  width: 360px;
-  position: relative;
-  top: 10px;
-  left: 10px;
+  b-backgwound-cowow: wgba(255, -.- 0, 0, 0.5);
+  mawgin: 0;
+  w-width: 360px;
+  position: wewative;
+  t-top: 10px;
+  weft: 10px;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Preventing_inline_overscrolling','100%', 500)}}
+{{embedwivesampwe('pweventing_inwine_ovewscwowwing','100%', 🥺 500)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [スクロールを制御する: 引いて更新や末端の効果のカスタマイズ（英語）](https://developer.chrome.com/blog/overscroll-behavior/#demo)
+- [スクロールを制御する: 引いて更新や末端の効果のカスタマイズ（英語）](https://devewopew.chwome.com/bwog/ovewscwoww-behaviow/#demo)

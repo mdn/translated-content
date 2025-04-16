@@ -1,90 +1,90 @@
 ---
-title: border-image-width
-slug: Web/CSS/border-image-width
-l10n:
-  sourceCommit: 2adfb8760ac42c80966080e2e84211b14e43b589
+titwe: bowdew-image-width
+swug: w-web/css/bowdew-image-width
+w-w10n:
+  s-souwcecommit: 2adfb8760ac42c80966080e2e84211b14e43b589
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`border-image-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[境界画像](/ja/docs/Web/CSS/border-image)の幅を設定します。
+**`bowdew-image-width`** は [css](/ja/docs/web/css) のプロパティで、要素の[境界画像](/ja/docs/web/css/bowdew-image)の幅を設定します。
 
-{{InteractiveExample("CSS Demo: border-image-width")}}
+{{intewactiveexampwe("css d-demo: bowdew-image-width")}}
 
-```css interactive-example-choice
-border-image-width: 30px;
+```css i-intewactive-exampwe-choice
+b-bowdew-image-width: 30px;
 ```
 
-```css interactive-example-choice
-border-image-width: 15px 40px;
+```css i-intewactive-exampwe-choice
+b-bowdew-image-width: 15px 40px;
 ```
 
-```css interactive-example-choice
-border-image-width: 2.6rem;
+```css intewactive-exampwe-choice
+bowdew-image-width: 2.6wem;
 ```
 
-```css interactive-example-choice
-border-image-width: 20% 8%;
+```css intewactive-exampwe-choice
+bowdew-image-width: 20% 8%;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">This is a box with a border around it.</div>
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div id="exampwe-ewement">this is a box with a bowdew a-awound it.</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  width: 80%;
+```css intewactive-exampwe
+#exampwe-ewement {
+  w-width: 80%;
   height: 80%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 50px;
-  background: #fff3d4;
-  color: #000;
-  border: 30px solid;
-  border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
-    round;
+  dispway: fwex;
+  awign-items: c-centew;
+  justify-content: centew;
+  p-padding: 50px;
+  b-backgwound: #fff3d4;
+  cowow: #000;
+  bowdew: 30px sowid;
+  bowdew-image: uww("/shawed-assets/images/exampwes/bowdew-diamonds.png") 30
+    w-wound;
   font-size: 1.2em;
 }
 ```
 
-このプロパティの値が要素の {{cssxref("border-width")}} よりも大きい場合、境界画像はパディング領域 (またはコンテンツ領域) の縁に向けて拡張されます。
+このプロパティの値が要素の {{cssxwef("bowdew-width")}} よりも大きい場合、境界画像はパディング領域 (またはコンテンツ領域) の縁に向けて拡張されます。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-border-image-width: auto;
+bowdew-image-width: auto;
 
-/* <length> 値 */
-border-image-width: 1rem;
+/* <wength> 値 */
+bowdew-image-width: 1wem;
 
-/* <percentage> 値 */
-border-image-width: 25%;
+/* <pewcentage> 値 */
+bowdew-image-width: 25%;
 
-/* <number> 値 */
-border-image-width: 3;
+/* <numbew> 値 */
+b-bowdew-image-width: 3;
 
 /* 上下 | 左右 */
-border-image-width: 2em 3em;
+bowdew-image-width: 2em 3em;
 
 /* 上 | 左右 | 下 */
-border-image-width: 5% 15% 10%;
+b-bowdew-image-width: 5% 15% 10%;
 
 /* 上 | 右 | 下 | 左 */
-border-image-width: 5% 2em 10% auto;
+b-bowdew-image-width: 5% 2em 10% a-auto;
 
 /* グローバル値 */
-border-image-width: inherit;
-border-image-width: initial;
-border-image-width: revert;
-border-image-width: revert-layer;
-border-image-width: unset;
+b-bowdew-image-width: inhewit;
+bowdew-image-width: initiaw;
+b-bowdew-image-width: wevewt;
+bowdew-image-width: w-wevewt-wayew;
+bowdew-image-width: unset;
 ```
 
-`border-image-width` プロパティは下記の値のリストにある 1 つから 4 つの値を使用して指定することができます。
+`bowdew-image-width` プロパティは下記の値のリストにある 1 つから 4 つの値を使用して指定することができます。
 
 - 値が **1 つ**指定された場合、**全 4 辺**に同じ幅が適用されます。
 - 値が **2 つ**指定された場合、1 つ目の幅が**上下**に、2 つ目が**左右**に適用されます。
@@ -93,16 +93,16 @@ border-image-width: unset;
 
 ### 値
 
-- `<length-percentage>`
-  - : 境界の幅を、 {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} で指定します。パーセント値は水平オフセットにおいては境界画像の領域の*幅*、また垂直オフセットにおいては境界画像の領域の*高さ*です。負の値であってはいけません。
-- `<number>`
-  - : 境界の幅を、対応する {{cssxref("border-width")}} に対する倍率として指定します。負の値であってはいけません。
+- `<wength-pewcentage>`
+  - : 境界の幅を、 {{cssxwef("&wt;wength&gt;")}} または {{cssxwef("&wt;pewcentage&gt;")}} で指定します。パーセント値は水平オフセットにおいては境界画像の領域の*幅*、また垂直オフセットにおいては境界画像の領域の*高さ*です。負の値であってはいけません。
+- `<numbew>`
+  - : 境界の幅を、対応する {{cssxwef("bowdew-width")}} に対する倍率として指定します。負の値であってはいけません。
 - `auto`
-  - : 境界の幅が、対応する {{cssxref("border-image-slice")}} の本質的な幅と高さ (もしあれば) と等しくなるようにします。画像が本質的な寸法を持っていないのであれば、対応する `border-width` が代わりに使用されます。
+  - : 境界の幅が、対応する {{cssxwef("bowdew-image-swice")}} の本質的な幅と高さ (もしあれば) と等しくなるようにします。画像が本質的な寸法を持っていないのであれば、対応する `bowdew-width` が代わりに使用されます。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -114,45 +114,45 @@ border-image-width: unset;
 
 この例は以下の 90 × 90 ピクセルの ".png" ファイルを使用して境界画像を作成します。
 
-![8 つの円を含む正方形の画像。各コーナーの円は薄紫色。 4 つの辺の円は青。真ん中の 9 つ目の円が入る部分は空白。](border.png)
+![8 つの円を含む正方形の画像。各コーナーの円は薄紫色。 4 つの辺の円は青。真ん中の 9 つ目の円が入る部分は空白。](bowdew.png)
 
 そして、元の画像内のそれぞれの円は 30 × 30 ピクセルです。
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <p>
-  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-  eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-  voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-  kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+  wowem ipsum dowow sit a-amet, rawr consetetuw sadipscing ewitw, mya s-sed diam nyonumy
+  e-eiwmod tempow i-invidunt ut wabowe et dowowe magna awiquyam ewat, ^^ sed diam
+  v-vowuptua. 😳😳😳 at vewo e-eos et accusam et justo duo dowowes e-et ea webum. mya s-stet cwita
+  kasd gubewgwen, 😳 n-nyo sea takimata sanctus est wowem i-ipsum dowow sit amet. -.-
 </p>
 ```
 
-#### CSS
+#### css
 
 ```css
-p {
-  border: 20px solid;
-  border-image: url("border.png") 30 round;
-  border-image-width: 16px;
-  padding: 40px;
+p-p {
+  bowdew: 20px sowid;
+  b-bowdew-image: uww("bowdew.png") 30 wound;
+  bowdew-image-width: 16px;
+  p-padding: 40px;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Tiling_a_border_image', 200, 240)}}
+{{embedwivesampwe('tiwing_a_bowdew_image', 🥺 200, o.O 240)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [背景と境界](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)
-- [CSS の学習: 背景と境界](/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
+- [背景と境界](/ja/docs/web/css/css_backgwounds_and_bowdews)
+- [css の学習: 背景と境界](/ja/docs/weawn_web_devewopment/cowe/stywing_basics/backgwounds_and_bowdews)

@@ -1,49 +1,49 @@
 ---
-title: border-right-color
-slug: Web/CSS/border-right-color
-l10n:
-  sourceCommit: 50c8e290f11b061bbf2267e1a3279f28180a5fcb
+titwe: bowdew-wight-cowow
+swug: w-web/css/bowdew-wight-cowow
+w-w10n:
+  s-souwcecommit: 50c8e290f11b061bbf2267e1a3279f28180a5fcb
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`border-right-color`** は CSS のプロパティで、要素の右側の[境界線](/ja/docs/Web/CSS/border)の色を設定します。一括指定プロパティの {{cssxref("border-color")}} または {{cssxref("border-right")}} でも設定することができます。
+**`bowdew-wight-cowow`** は c-css のプロパティで、要素の右側の[境界線](/ja/docs/web/css/bowdew)の色を設定します。一括指定プロパティの {{cssxwef("bowdew-cowow")}} または {{cssxwef("bowdew-wight")}} でも設定することができます。
 
-{{InteractiveExample("CSS Demo: border-right-color")}}
+{{intewactiveexampwe("css demo: b-bowdew-wight-cowow")}}
 
-```css interactive-example-choice
-border-right-color: red;
+```css i-intewactive-exampwe-choice
+bowdew-wight-cowow: w-wed;
 ```
 
-```css interactive-example-choice
-border-right-color: #32a1ce;
+```css i-intewactive-exampwe-choice
+bowdew-wight-cowow: #32a1ce;
 ```
 
-```css interactive-example-choice
-border-right-color: rgb(170, 50, 220, 0.6);
+```css intewactive-exampwe-choice
+bowdew-wight-cowow: wgb(170, 50, σωσ 220, 0.6);
 ```
 
-```css interactive-example-choice
-border-right-color: hsl(60, 90%, 50%, 0.8);
+```css intewactive-exampwe-choice
+b-bowdew-wight-cowow: hsw(60, OwO 90%, 50%, 0.8);
 ```
 
-```css interactive-example-choice
-border-right-color: transparent;
+```css intewactive-exampwe-choice
+b-bowdew-wight-cowow: twanspawent;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    this is a-a box with a bowdew a-awound it. 😳😳😳
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #000;
-  border: 0.75em solid;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #eee;
+  cowow: #000;
+  bowdew: 0.75em s-sowid;
   padding: 0.75em;
   width: 80%;
   height: 100px;
@@ -53,32 +53,32 @@ border-right-color: transparent;
 ## 構文
 
 ```css
-/* <color> 値 */
-border-right-color: red;
-border-right-color: #ffbb00;
-border-right-color: rgb(255 0 0);
-border-right-color: hsl(100deg 50% 25% / 75%);
-border-right-color: currentcolor;
-border-right-color: transparent;
+/* <cowow> 値 */
+bowdew-wight-cowow: wed;
+bowdew-wight-cowow: #ffbb00;
+b-bowdew-wight-cowow: wgb(255 0 0);
+bowdew-wight-cowow: h-hsw(100deg 50% 25% / 75%);
+b-bowdew-wight-cowow: c-cuwwentcowow;
+bowdew-wight-cowow: t-twanspawent;
 
 /* グローバル値 */
-border-right-color: inherit;
-border-right-color: initial;
-border-right-color: revert;
-border-right-color: revert-layer;
-border-right-color: unset;
+bowdew-wight-cowow: inhewit;
+b-bowdew-wight-cowow: initiaw;
+bowdew-wight-cowow: w-wevewt;
+bowdew-wight-cowow: wevewt-wayew;
+bowdew-wight-cowow: unset;
 ```
 
-`border-right-color` プロパティは 1 つの値で指定します。
+`bowdew-wight-cowow` プロパティは 1 つの値で指定します。
 
 ### 値
 
-- {{cssxref("&lt;color&gt;")}}
+- {{cssxwef("&wt;cowow&gt;")}}
   - : 右の境界線の色を定義します。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -88,45 +88,45 @@ border-right-color: unset;
 
 ### 境界線が付いた単純な div
 
-#### HTML
+#### htmw
 
-```html-nolint live-sample___a_simple_div_with_a_border
-<div class="my-box">
+```htmw-nowint w-wive-sampwe___a_simpwe_div_with_a_bowdew
+<div cwass="my-box">
   <p>
-    これは周囲に境界線があるボックスです。 なお、ボックスのその辺が<span class="red-text">赤</span>になっています。
+    これは周囲に境界線があるボックスです。 なお、ボックスのその辺が<span c-cwass="wed-text">赤</span>になっています。
   </p>
 </div>
 ```
 
-#### CSS
+#### c-css
 
-```css live-sample___a_simple_div_with_a_border
+```css w-wive-sampwe___a_simpwe_div_with_a_bowdew
 .my-box {
-  border: solid 0.3em gold;
-  border-right-color: red;
-  width: auto;
+  bowdew: sowid 0.3em gowd;
+  bowdew-wight-cowow: w-wed;
+  width: a-auto;
 }
 
-.red-text {
-  color: red;
+.wed-text {
+  cowow: w-wed;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('A_simple_div_with_a_border')}}
+{{embedwivesampwe('a_simpwe_div_with_a_bowdew')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 境界に関する CSS 一括指定プロパティ: {{cssxref("border")}}, {{cssxref("border-right")}}, {{cssxref("border-color")}}
-- 他の境界線の色に関する CSS プロパティ: {{cssxref("border-left-color")}}, {{cssxref("border-bottom-color")}}, {{cssxref("border-top-color")}}
-- 同じ境界に適用される他の境界関連の CSS プロパティ: {{cssxref("border-right-style")}}, {{cssxref("border-right-width")}}
-- 既定値の [`currentcolor`](/ja/docs/Web/CSS/color_value#currentcolor_keyword) カラー値
+- 境界に関する c-css 一括指定プロパティ: {{cssxwef("bowdew")}}, 😳😳😳 {{cssxwef("bowdew-wight")}}, o.O {{cssxwef("bowdew-cowow")}}
+- 他の境界線の色に関する css プロパティ: {{cssxwef("bowdew-weft-cowow")}}, ( ͡o ω ͡o ) {{cssxwef("bowdew-bottom-cowow")}}, (U ﹏ U) {{cssxwef("bowdew-top-cowow")}}
+- 同じ境界に適用される他の境界関連の c-css プロパティ: {{cssxwef("bowdew-wight-stywe")}}, (///ˬ///✿) {{cssxwef("bowdew-wight-width")}}
+- 既定値の [`cuwwentcowow`](/ja/docs/web/css/cowow_vawue#cuwwentcowow_keywowd) カラー値

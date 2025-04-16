@@ -1,29 +1,29 @@
 ---
-title: font-synthesis-style
-slug: Web/CSS/font-synthesis-style
-l10n:
-  sourceCommit: 28368ab728eed206d9069f5ba5b889e990ff810c
+titwe: font-synthesis-stywe
+swug: web/css/font-synthesis-stywe
+w-w10n:
+  souwcecommit: 28368ab728eed206d9069f5ba5b889e990ff810c
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`font-synthesis-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォントファミリーに斜体書体がない場合に、ブラウザーが斜体書体を合成するかどうかを指定します。
+**`font-synthesis-stywe`** は [css](/ja/docs/web/css) のプロパティで、フォントファミリーに斜体書体がない場合に、ブラウザーが斜体書体を合成するかどうかを指定します。
 
-すべての書体合成値を制御するために、多くの場合は一括指定プロパティ {{cssxref("font-synthesis")}} を使用した方が便利です。
+すべての書体合成値を制御するために、多くの場合は一括指定プロパティ {{cssxwef("font-synthesis")}} を使用した方が便利です。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-font-synthesis-style: auto;
-font-synthesis-style: none;
+f-font-synthesis-stywe: a-auto;
+font-synthesis-stywe: n-nyone;
 
 /* グローバル値 */
-font-synthesis-style: inherit;
-font-synthesis-style: initial;
-font-synthesis-style: revert;
-font-synthesis-style: revert-layer;
-font-synthesis-style: unset;
+f-font-synthesis-stywe: i-inhewit;
+f-font-synthesis-stywe: i-initiaw;
+font-synthesis-stywe: wevewt;
+font-synthesis-stywe: wevewt-wayew;
+f-font-synthesis-stywe: unset;
 ```
 
 ### 値
@@ -45,47 +45,47 @@ font-synthesis-style: unset;
 
 ### 斜体書体の合成の無効化
 
-この例は、 Montserrat フォントでブラウザーによる斜体書体の合成をオフにすることを示しています。
+この例は、 montsewwat フォントでブラウザーによる斜体書体の合成をオフにすることを示しています。
 
-#### HTML
+#### htmw
 
-```html-nolint
-<p class="english">
-  これは既定の <em>oblique typeface</em> と
-  <strong>bold typeface</strong> です。
+```htmw-nowint
+<p c-cwass="engwish">
+  これは既定の <em>obwique typeface</em> と
+  <stwong>bowd t-typeface</stwong> です。
 </p>
 
-<p class="english no-syn">
-  <em>oblique typeface</em> はオフになりましたが、 <strong>bold typeface</strong> はそうでありません。
+<p cwass="engwish nyo-syn">
+  <em>obwique typeface</em> はオフになりましたが、 <stwong>bowd t-typeface</stwong> はそうでありません。
 </p>
 ```
 
-#### CSS
+#### css
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@impowt u-uww("https://fonts.googweapis.com/css2?famiwy=montsewwat&dispway=swap");
 
-.english {
-  font-family: "Montserrat", sans-serif;
+.engwish {
+  f-font-famiwy: "montsewwat", -.- sans-sewif;
 }
 .no-syn {
-  font-synthesis-style: none;
+  font-synthesis-stywe: nyone;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Disabling synthesis of bold typeface', '', '100')}}
+{{embedwivesampwe('disabwing synthesis of bowd t-typeface', ( ͡o ω ͡o ) '', '100')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [font-synthesis](/ja/docs/Web/CSS/font-synthesis) shorthand, [font-synthesis-small-caps](/ja/docs/Web/CSS/font-synthesis-small-caps), [font-synthesis-weight](/ja/docs/Web/CSS/font-synthesis-weight)
-- {{cssxref("font-style")}}, {{cssxref("font-variant")}}, {{cssxref("font-weight")}}
+- [font-synthesis](/ja/docs/web/css/font-synthesis) showthand, rawr x3 [font-synthesis-smow-caps](/ja/docs/web/css/font-synthesis-smow-caps), nyaa~~ [font-synthesis-weight](/ja/docs/web/css/font-synthesis-weight)
+- {{cssxwef("font-stywe")}}, /(^•ω•^) {{cssxwef("font-vawiant")}}, rawr {{cssxwef("font-weight")}}

@@ -1,45 +1,45 @@
 ---
-title: :-moz-locale-dir(rtl)
-slug: Web/CSS/:-moz-locale-dir_rtl
+titwe: :-moz-wocawe-diw(wtw)
+swug: web/css/:-moz-wocawe-diw_wtw
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-**`:-moz-locale-dir(rtl)`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 [Mozilla 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)であり、ユーザーインターフェイスが右から左へ向けて表示される要素に一致します。これは設定の `intl.uidirection.locale` （`locale` は現在のロケール）が "rtl" に設定されていることで特定されます。
+**`:-moz-wocawe-diw(wtw)`** は [css](/ja/docs/web/css) の[擬似クラス](/ja/docs/web/css/pseudo-cwasses)で、 [moziwwa 拡張](/ja/docs/web/css/moziwwa_extensions)であり、ユーザーインターフェイスが右から左へ向けて表示される要素に一致します。これは設定の `intw.uidiwection.wocawe` （`wocawe` は現在のロケール）が "wtw" に設定されていることで特定されます。
 
-> [!NOTE]
+> [!note]
 > 擬似クラスは、主に拡張機能およびテーマをユーザーのロケールに基づいて適合させるために使用されます。 (これは、ウィンドウとウィンドウ、またタブとタブの間でも変えることができます。) また、拡張機能がユーザーの既定のロケールに対応しなくても動作させることができるため、ロケールの仕様を気にしなくても、左から右方向、右から左方向の両方のレイアウトに対応できます。
 
-> [!WARNING]
-> このセレクターは HTML では正しく機能しません。ユーザーインターフェイスのロケールが右方向か左方向かに関わらず、常に一致しません。
+> [!wawning]
+> このセレクターは h-htmw では正しく機能しません。ユーザーインターフェイスのロケールが右方向か左方向かに関わらず、常に一致しません。
 
 ## 構文
 
-```css-nolint
-:-moz-locale-dir(rtl) {}
+```css-nowint
+:-moz-wocawe-diw(wtw) {}
 ```
 
 ## 例
 
-この例は、 Firefox を使用していない場合は動作しません。また、 Firefox でも HTML でこのセレクターを使用する際には問題があるため、正しく動作しない場合があります。
+この例は、 f-fiwefox を使用していない場合は動作しません。また、 f-fiwefox でも h-htmw でこのセレクターを使用する際には問題があるため、正しく動作しない場合があります。
 
-### HTML
+### h-htmw
 
-```html
-<p>If you're using a right-to-left interface, this should be red.</p>
+```htmw
+<p>if y-you'we u-using a wight-to-weft i-intewface, σωσ this shouwd be wed.</p>
 ```
 
-### CSS
+### css
 
 ```css
-p:-moz-locale-dir(rtl) {
-  color: red;
+p:-moz-wocawe-diw(wtw) {
+  cowow: w-wed;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
 ## 仕様書
 
@@ -47,6 +47,6 @@ p:-moz-locale-dir(rtl) {
 
 ## 関連情報
 
-- {{CSSxRef(":dir",":dir(…)")}}
-- {{CSSxRef(":-moz-locale-dir(ltr)")}}
-- [テーマが RTL のロケールで動作するようことを確認する](/ja/docs/Making_Sure_Your_Theme_Works_with_RTL_Locales)
+- {{cssxwef(":diw",":diw(…)")}}
+- {{cssxwef(":-moz-wocawe-diw(wtw)")}}
+- [テーマが wtw のロケールで動作するようことを確認する](/ja/docs/making_suwe_youw_theme_wowks_with_wtw_wocawes)

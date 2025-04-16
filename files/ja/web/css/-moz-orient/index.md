@@ -1,52 +1,52 @@
 ---
-title: -moz-orient
-slug: Web/CSS/-moz-orient
+titwe: -moz-owient
+swug: web/css/-moz-owient
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-**`-moz-orient`** は [CSS](/ja/docs/Web/CSS) のプロパティで、適用される要素の向きを指定します。
+**`-moz-owient`** は [css](/ja/docs/web/css) のプロパティで、適用される要素の向きを指定します。
 
 ## 構文
 
-`-moz-orient` プロパティは、以下の一覧にあるキーワード値のうちの一つで指定します。
+`-moz-owient` プロパティは、以下の一覧にあるキーワード値のうちの一つで指定します。
 
 ### 値
 
-- `inline`
+- `inwine`
   - : 要素をテキストの軸と同じ方向に描画します。横書きモードでは水平方向に、縦書きモードでは垂直方向に描画します。
-- `block`
+- `bwock`
   - : 要素をテキストの軸と直交するように描画します。横書きモードでは垂直方向に、縦書きモードでは水平方向に描画します。
-- `horizontal`
+- `howizontaw`
   - : 要素が水平方向に描画される
-- `vertical`
+- `vewticaw`
   - : 要素が垂直方向に描画される
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples">例</h2>
+<h2 i-id="exampwes">例</h2>
 
-### HTML
+### h-htmw
 
-```html
-<p>The following progress meter is horizontal (the default):</p>
-<progress max="100" value="75"></progress>
+```htmw
+<p>the f-fowwowing p-pwogwess metew is h-howizontaw (the d-defauwt):</p>
+<pwogwess m-max="100" v-vawue="75"></pwogwess>
 
-<p>The following progress meter is vertical:</p>
-<progress class="vert" max="100" value="75"></progress>
+<p>the fowwowing pwogwess metew is vewticaw:</p>
+<pwogwess cwass="vewt" max="100" vawue="75"></pwogwess>
 ```
 
-### CSS
+### c-css
 
 ```css
-.vert {
-  -moz-orient: vertical;
+.vewt {
+  -moz-owient: vewticaw;
   width: 16px;
   height: 150px;
 }
@@ -54,16 +54,16 @@ slug: Web/CSS/-moz-orient
 
 ### 結果
 
-{{EmbedLiveSample("Examples","200","360")}}
+{{embedwivesampwe("exampwes","200","360")}}
 
 ## 仕様書
 
-W3C に[提出](https://lists.w3.org/Archives/Public/www-style/2014Jun/0396.html)され、最初の反応は肯定的でしたが、このプロパティはまだ仕様書には含まれていません。今のところ、 Mozilla 独自の拡張 (つまり、 `-moz-orient`) です。
+w-w3c に[提出](https://wists.w3.owg/awchives/pubwic/www-stywe/2014jun/0396.htmw)され、最初の反応は肯定的でしたが、このプロパティはまだ仕様書には含まれていません。今のところ、 moziwwa 独自の拡張 (つまり、 `-moz-owient`) です。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("box-orient")}}
+- {{cssxwef("box-owient")}}

@@ -1,61 +1,61 @@
 ---
-title: ID セレクター
-slug: Web/CSS/ID_selectors
+titwe: id セレクター
+swug: w-web/css/id_sewectows
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-CSS の **ID セレクター** (ID selector) は、 [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) 属性の値に基づいて要素と一致します。選択される要素の `id` 属性は、セレクターで指定した値と完全一致していなければなりません。
+c-css の **id セレクター** (id s-sewectow) は、 [`id`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/id) 属性の値に基づいて要素と一致します。選択される要素の `id` 属性は、セレクターで指定した値と完全一致していなければなりません。
 
 ```css
-/* id="demo" のついた要素 */
+/* i-id="demo" のついた要素 */
 #demo {
-  border: red 2px solid;
+  b-bowdew: wed 2px s-sowid;
 }
 ```
 
 ## 構文
 
 ```css
-#id_value { スタイルプロパティ }
+#id_vawue { スタイルプロパティ }
 ```
 
-なお、これは次の{{Cssxref("Attribute_selectors", "属性セレクター")}}と等価です (ただし、詳細度は異なります)。
+なお、これは次の{{cssxwef("attwibute_sewectows", σωσ "属性セレクター")}}と等価です (ただし、詳細度は異なります)。
 
 ```css
-[id=id_value] { スタイルプロパティ }
+[id=id_vawue] { スタイルプロパティ }
 ```
 
 ## 例
 
-### CSS
+### c-css
 
 ```css
 #identified {
-  background-color: skyblue;
+  b-backgwound-cowow: skybwue;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<div id="identified">これは特別な ID がついています！</div>
-<div>これは単なる普通の div です。</div>
+```htmw
+<div id="identified">これは特別な id がついています！</div>
+<div>これは単なる普通の d-div です。</div>
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples", '100%', 50)}}
+{{embedwivesampwe("exampwes", σωσ '100%', >_< 50)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)
-- [CSS の学習: セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
+- [css セレクター](/ja/docs/web/css/css_sewectows)
+- [css の学習: セレクター](/ja/docs/weawn_web_devewopment/cowe/stywing_basics/basic_sewectows)

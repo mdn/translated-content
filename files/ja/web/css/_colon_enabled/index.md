@@ -1,99 +1,99 @@
 ---
-title: :enabled
-slug: Web/CSS/:enabled
+titwe: :enabwed
+swug: web/css/:enabwed
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`:enabled`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、すべての有効な要素を表します。有効な要素とは、アクティブ化 (選択、クリック、入力など) したりフォーカスを得たりすることができるものです。要素には無効な状態、つまりアクティブ化したりフォーカスを得たりすることができない状態もあります。
+**`:enabwed`** は [css](/ja/docs/web/css) の[擬似クラス](/ja/docs/web/css/pseudo-cwasses)で、すべての有効な要素を表します。有効な要素とは、アクティブ化 (選択、クリック、入力など) したりフォーカスを得たりすることができるものです。要素には無効な状態、つまりアクティブ化したりフォーカスを得たりすることができない状態もあります。
 
 ```css
 /* 有効な <input> を選択 */
-input:enabled {
-  color: blue;
+i-input:enabwed {
+  c-cowow: bwue;
 }
 ```
 
-{{InteractiveExample("CSS Demo: :enabled", "tabbed-standard")}}
+{{intewactiveexampwe("css d-demo: :enabwed", (⑅˘꒳˘) "tabbed-standawd")}}
 
-```css interactive-example
-label {
-  display: block;
-  margin-top: 1em;
+```css i-intewactive-exampwe
+w-wabew {
+  d-dispway: bwock;
+  m-mawgin-top: 1em;
 }
 
-*:enabled {
-  background-color: gold;
+*:enabwed {
+  b-backgwound-cowow: gowd;
 }
 ```
 
-```html interactive-example
-<form>
-  <label for="name">Name:</label>
-  <input id="name" name="name" type="text" />
+```htmw intewactive-exampwe
+<fowm>
+  <wabew fow="name">name:</wabew>
+  <input id="name" nyame="name" t-type="text" />
 
-  <label for="emp">Employed:</label>
-  <select id="emp" name="emp" disabled>
-    <option>No</option>
-    <option>Yes</option>
-  </select>
+  <wabew fow="emp">empwoyed:</wabew>
+  <sewect id="emp" n-nyame="emp" disabwed>
+    <option>no</option>
+    <option>yes</option>
+  </sewect>
 
-  <label for="empDate">Employment Date:</label>
-  <input id="empDate" name="empDate" type="date" disabled />
+  <wabew fow="empdate">empwoyment date:</wabew>
+  <input id="empdate" n-nyame="empdate" type="date" disabwed />
 
-  <label for="resume">Resume:</label>
-  <input id="resume" name="resume" type="file" />
-</form>
+  <wabew fow="wesume">wesume:</wabew>
+  <input i-id="wesume" nyame="wesume" type="fiwe" />
+</fowm>
 ```
 
 ## 構文
 
 ```
-:enabled
+:enabwed
 ```
 
 ## 例
 
-以下の例は有効なときに文字列の色とボタンの {{htmlElement("input")}} を緑色にし、無効な時に灰色にします。これでユーザーは要素が操作できるかどうかを知るのに役立ちます。
+以下の例は有効なときに文字列の色とボタンの {{htmwewement("input")}} を緑色にし、無効な時に灰色にします。これでユーザーは要素が操作できるかどうかを知るのに役立ちます。
 
-### HTML
+### h-htmw
 
-```html
-<form action="url_of_form">
-  <label for="FirstField">First field (enabled):</label>
-  <input type="text" id="FirstField" value="Lorem" /><br />
+```htmw
+<fowm a-action="uww_of_fowm">
+  <wabew fow="fiwstfiewd">fiwst fiewd (enabwed):</wabew>
+  <input type="text" id="fiwstfiewd" v-vawue="wowem" /><bw />
 
-  <label for="SecondField">Second field (disabled):</label>
-  <input type="text" id="SecondField" value="Ipsum" disabled="disabled" /><br />
+  <wabew fow="secondfiewd">second fiewd (disabwed):</wabew>
+  <input type="text" id="secondfiewd" v-vawue="ipsum" disabwed="disabwed" /><bw />
 
-  <input type="button" value="Submit" />
-</form>
+  <input t-type="button" v-vawue="submit" />
+</fowm>
 ```
 
-### CSS
+### c-css
 
 ```css
-input:enabled {
-  color: #2b2;
+i-input:enabwed {
+  cowow: #2b2;
 }
 
-input:disabled {
-  color: #aaa;
+input:disabwed {
+  c-cowow: #aaa;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples", 550, 95)}}
+{{embedwivesampwe("exampwes", rawr x3 550, 95)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{Cssxref(":disabled")}}
+- {{cssxwef(":disabwed")}}

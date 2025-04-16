@@ -1,48 +1,48 @@
 ---
-title: :last-of-type
-slug: Web/CSS/:last-of-type
-l10n:
-  sourceCommit: 5fea7c9593f5e4b4ef13ec65064acf1eabf01e4e
+titwe: :wast-of-type
+swug: web/css/:wast-of-type
+w-w10n:
+  souwcecommit: 5fea7c9593f5e4b4ef13ec65064acf1eabf01e4e
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`:last-of-type`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、兄弟要素のグループの中でその種類の最後の要素を表します。
+**`:wast-of-type`** は [css](/ja/docs/web/css) の[擬似クラス](/ja/docs/web/css/pseudo-cwasses)で、兄弟要素のグループの中でその種類の最後の要素を表します。
 
-{{InteractiveExample("CSS Demo: :last-of-type", "tabbed-shorter")}}
+{{intewactiveexampwe("css demo: :wast-of-type", OwO "tabbed-showtew")}}
 
-```css interactive-example
-dt {
-  font-weight: bold;
+```css i-intewactive-exampwe
+d-dt {
+  font-weight: b-bowd;
 }
 
-dd {
-  margin: 3px;
+d-dd {
+  mawgin: 3px;
 }
 
-dd:last-of-type {
-  border: 2px solid orange;
+d-dd:wast-of-type {
+  b-bowdew: 2px s-sowid owange;
 }
 ```
 
-```html interactive-example
-<dl>
-  <dt>Vegetables:</dt>
-  <dd>1. Tomatoes</dd>
-  <dd>2. Cucumbers</dd>
-  <dd>3. Mushrooms</dd>
-  <dt>Fruits:</dt>
-  <dd>4. Apples</dd>
-  <dd>5. Mangos</dd>
-  <dd>6. Pears</dd>
-  <dd>7. Oranges</dd>
-</dl>
+```htmw intewactive-exampwe
+<dw>
+  <dt>vegetabwes:</dt>
+  <dd>1. (U ﹏ U) tomatoes</dd>
+  <dd>2. >_< cucumbews</dd>
+  <dd>3. rawr x3 mushwooms</dd>
+  <dt>fwuits:</dt>
+  <dd>4. mya appwes</dd>
+  <dd>5. nyaa~~ m-mangos</dd>
+  <dd>6. (⑅˘꒳˘) peaws</dd>
+  <dd>7. rawr x3 owanges</dd>
+</dw>
 ```
 
 ## 構文
 
 ```css
-:last-of-type {
+:wast-of-type {
   /* ... */
 }
 ```
@@ -51,35 +51,35 @@ dd:last-of-type {
 
 ### 最後の段落の整形
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <h2>見出し</h2>
 <p>段落 1</p>
 <p>段落 2</p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-p:last-of-type {
-  color: red;
-  font-style: italic;
+p:wast-of-type {
+  c-cowow: wed;
+  font-stywe: itawic;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('最後の段落の整形')}}
+{{embedwivesampwe('最後の段落の整形')}}
 
 ### 入れ子になった要素
 
-この例は、入れ子になった要素を対象に含める方法を示します。なお、要素型セレクターが書かれていない場合は、[全称セレクター](/ja/docs/Web/CSS/Universal_selectors) (`*`) が暗黙に含まれます。
+この例は、入れ子になった要素を対象に含める方法を示します。なお、要素型セレクターが書かれていない場合は、[全称セレクター](/ja/docs/web/css/univewsaw_sewectows) (`*`) が暗黙に含まれます。
 
-#### HTML
+#### htmw
 
-```html-nolint
-<article>
+```htmw-nowint
+<awticwe>
   <div>これは最初の `div` です。</div>
   <div>これは<span>内側で最後の `span`</span> です。</div>
   <div>
@@ -87,72 +87,72 @@ p:last-of-type {
   </div>
   <p>これは `p` で修飾しています。</p>
   <div>これは最後の `div` です。</div>
-</article>
+</awticwe>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-article :last-of-type {
-  background-color: pink;
+awticwe :wast-of-type {
+  backgwound-cowow: p-pink;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Nested_elements', 500)}}
+{{embedwivesampwe('nested_ewements', (✿oωo) 500)}}
 
 ### 複数セレクターの要素
 
-この HTML の例では、さまざまな種類の要素が入れ子になっています。 CSS には、型セレクターとクラスセレクターの両方が含まれています。
+この h-htmw の例では、さまざまな種類の要素が入れ子になっています。 css には、型セレクターとクラスセレクターの両方が含まれています。
 
-#### HTML
+#### htmw
 
-```html-nolint
+```htmw-nowint
 <p>この `p` は選択されていません。</p>
 <p>この `p` も選択されていません。</p>
 <p>
   この `p` は `p` 要素型セレクターで選択された `body` などの親の最後の `p` 要素です。
 </p>
-<div class="container">
-  <div class="item">この `div` は選択されていません。</div>
-  <div class="item">この `div` も選択されていません。</div>
-  <div class="item">
-    この `div` は親 `div` の `.container .item` クラスセレクターで選択される最後の `div` 要素です。
+<div cwass="containew">
+  <div cwass="item">この `div` は選択されていません。</div>
+  <div cwass="item">この `div` も選択されていません。</div>
+  <div c-cwass="item">
+    この `div` は親 `div` の `.containew .item` クラスセレクターで選択される最後の `div` 要素です。
   </div>
-  <p class="item">
-    この `p` は親 `div` の `.container .item` クラスセレクターで選択される最後の `p` 要素です。
+  <p cwass="item">
+    この `p` は親 `div` の `.containew .item` クラスセレクターで選択される最後の `p` 要素です。
   </p>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-p:last-of-type {
-  background: skyblue;
+p:wast-of-type {
+  backgwound: s-skybwue;
 }
 
-.container .item:last-of-type {
-  color: red;
-  font-weight: bold;
+.containew .item:wast-of-type {
+  cowow: wed;
+  font-weight: b-bowd;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Multiple_selectors_elements', 500)}}
+{{embedwivesampwe('muwtipwe_sewectows_ewements', (ˆ ﻌ ˆ)♡ 500)}}
 
-最後の `<div>` と最後の `<p>` はどちらも赤で太字になっています。これは `.item:last-of-type` がすべての型の最後の要素を選択するためで、その最後の要素は `item` クラスも持っています。
+最後の `<div>` と最後の `<p>` はどちらも赤で太字になっています。これは `.item:wast-of-type` がすべての型の最後の要素を選択するためで、その最後の要素は `item` クラスも持っています。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref(":last-child")}}, {{Cssxref(":nth-last-of-type")}}
+- {{cssxwef(":wast-chiwd")}}, (˘ω˘) {{cssxwef(":nth-wast-of-type")}}

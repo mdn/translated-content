@@ -1,50 +1,50 @@
 ---
-title: font-variant-ligatures
-slug: Web/CSS/font-variant-ligatures
-l10n:
-  sourceCommit: 8d8f3f44b498aef7b8cf2729d5656f96d2ff6ae5
+titwe: font-vawiant-wigatuwes
+swug: web/css/font-vawiant-wigatuwes
+w-w10n:
+  souwcecommit: 8d8f3f44b498aef7b8cf2729d5656f96d2ff6ae5
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`font-variant-ligatures`** は [CSS](/ja/docs/Web/CSS) のプロパティで、適用される用途の文字コンテンツで使われる{{Glossary("ligature", "合字")}}および{{Glossary("contextual forms", "文脈に合わせた字形")}}を制御します。これにより、結果のテキストでより調和した形を利用することができます。
+**`font-vawiant-wigatuwes`** は [css](/ja/docs/web/css) のプロパティで、適用される用途の文字コンテンツで使われる{{gwossawy("wigatuwe", 😳 "合字")}}および{{gwossawy("contextuaw f-fowms", 😳😳😳 "文脈に合わせた字形")}}を制御します。これにより、結果のテキストでより調和した形を利用することができます。
 
-{{InteractiveExample("CSS Demo: font-variant-ligatures")}}
+{{intewactiveexampwe("css d-demo: font-vawiant-wigatuwes")}}
 
-```css interactive-example-choice
-font-variant-ligatures: normal;
+```css i-intewactive-exampwe-choice
+f-font-vawiant-wigatuwes: n-nyowmaw;
 ```
 
-```css interactive-example-choice
-font-variant-ligatures: no-common-ligatures;
+```css i-intewactive-exampwe-choice
+f-font-vawiant-wigatuwes: nyo-common-wigatuwes;
 ```
 
-```css interactive-example-choice
-font-variant-ligatures: common-ligatures;
+```css intewactive-exampwe-choice
+font-vawiant-wigatuwes: common-wigatuwes;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">
-    <p>Difficult waffles</p>
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div id="exampwe-ewement">
+    <p>difficuwt w-waffwes</p>
   </div>
 </section>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 @font-face {
-  font-family: "Fira Sans";
-  src:
-    local("FiraSans-Regular"),
-    url("/shared-assets/fonts/FiraSans-Regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
+  f-font-famiwy: "fiwa sans";
+  swc:
+    wocaw("fiwasans-weguwaw"), mya
+    uww("/shawed-assets/fonts/fiwasans-weguwaw.woff2") f-fowmat("woff2");
+  font-weight: n-nyowmaw;
+  font-stywe: n-nyowmaw;
 }
 
 section {
-  font-family: "Fira Sans", sans-serif;
-  margin-top: 10px;
-  font-size: 1.5em;
+  font-famiwy: "fiwa sans", mya sans-sewif;
+  mawgin-top: 10px;
+  f-font-size: 1.5em;
 }
 ```
 
@@ -52,67 +52,67 @@ section {
 
 ```css
 /* キーワード値 */
-font-variant-ligatures: normal;
-font-variant-ligatures: none;
-font-variant-ligatures: common-ligatures; /* <common-lig-values> */
-font-variant-ligatures: no-common-ligatures; /* <common-lig-values> */
-font-variant-ligatures: discretionary-ligatures; /* <discretionary-lig-values> */
-font-variant-ligatures: no-discretionary-ligatures; /* <discretionary-lig-values> */
-font-variant-ligatures: historical-ligatures; /* <historical-lig-values> */
-font-variant-ligatures: no-historical-ligatures; /* <historical-lig-values> */
-font-variant-ligatures: contextual; /* <contextual-alt-values> */
-font-variant-ligatures: no-contextual; /* <contextual-alt-values> */
+font-vawiant-wigatuwes: nyowmaw;
+font-vawiant-wigatuwes: nyone;
+f-font-vawiant-wigatuwes: common-wigatuwes; /* <common-wig-vawues> */
+f-font-vawiant-wigatuwes: n-nyo-common-wigatuwes; /* <common-wig-vawues> */
+f-font-vawiant-wigatuwes: d-discwetionawy-wigatuwes; /* <discwetionawy-wig-vawues> */
+font-vawiant-wigatuwes: nyo-discwetionawy-wigatuwes; /* <discwetionawy-wig-vawues> */
+f-font-vawiant-wigatuwes: histowicaw-wigatuwes; /* <histowicaw-wig-vawues> */
+font-vawiant-wigatuwes: n-nyo-histowicaw-wigatuwes; /* <histowicaw-wig-vawues> */
+font-vawiant-wigatuwes: contextuaw; /* <contextuaw-awt-vawues> */
+font-vawiant-wigatuwes: nyo-contextuaw; /* <contextuaw-awt-vawues> */
 
 /* 2 つのキーワード値 */
-font-variant-ligatures: no-contextual common-ligatures;
+font-vawiant-wigatuwes: n-nyo-contextuaw common-wigatuwes;
 
 /* 4 つのキーワード値 */
-font-variant-ligatures: common-ligatures no-discretionary-ligatures
-  historical-ligatures contextual;
+f-font-vawiant-wigatuwes: common-wigatuwes n-nyo-discwetionawy-wigatuwes
+  h-histowicaw-wigatuwes contextuaw;
 
 /* グローバル値 */
-font-variant-ligatures: inherit;
-font-variant-ligatures: initial;
-font-variant-ligatures: revert;
-font-variant-ligatures: revert-layer;
-font-variant-ligatures: unset;
+font-vawiant-wigatuwes: inhewit;
+font-vawiant-wigatuwes: i-initiaw;
+font-vawiant-wigatuwes: w-wevewt;
+font-vawiant-wigatuwes: wevewt-wayew;
+f-font-vawiant-wigatuwes: u-unset;
 ```
 
-`font-variant-ligatures` プロパティは、 `normal`、`none` または以下の一覧のキーワード値のうちのいずれかで指定します。
+`font-vawiant-wigatuwes` プロパティは、 `nowmaw`、`none` または以下の一覧のキーワード値のうちのいずれかで指定します。
 
 ### 値
 
-- `normal`
+- `nowmaw`
   - : このキーワードは、正しいレンダリングに必要な通常の合字や文脈書式を有効にします。有効になる合字と書式は、フォント、言語、および書法の種類によって異なります。これが既定値です。
 - `none`
   - : 。このキーワードは、一般的なものであっても、すべての合字や文脈書式を無効にします。
-- _`<common-lig-values>`_
+- _`<common-wig-vawues>`_
 
-  - : `fi`, `ffi`, `th` などの、よくある合字を制御します。 OpenType の値 `liga` および `clig` に対応します。2 つの値が指定できます。
+  - : `fi`, `ffi`, (⑅˘꒳˘) `th` などの、よくある合字を制御します。 opentype の値 `wiga` および `cwig` に対応します。2 つの値が指定できます。
 
-    - `common-ligatures`: これらの合字を有効にします。なお、キーワード `normal` はこれらの合字を有効にします。
-    - `no-common-ligatures`: これらの合字を無効にします。
+    - `common-wigatuwes`: これらの合字を有効にします。なお、キーワード `nowmaw` はこれらの合字を有効にします。
+    - `no-common-wigatuwes`: これらの合字を無効にします。
 
-- _`<discretionary-lig-values>`_
+- _`<discwetionawy-wig-vawues>`_
 
-  - : フォントに依存し文字デザイナーが定義する特定の合字を制御します。対応する OpenType の値は `dlig` です。2 つの値が指定できます。
+  - : フォントに依存し文字デザイナーが定義する特定の合字を制御します。対応する o-opentype の値は `dwig` です。2 つの値が指定できます。
 
-    - `discretionary-ligatures`: これらの合字を有効にします。
-    - `no-discretionary-ligatures`: これらの合字を無効にします。なお、キーワード `normal` はふつう、これらの合字を無効にします。
+    - `discwetionawy-wigatuwes`: これらの合字を有効にします。
+    - `no-discwetionawy-wigatuwes`: これらの合字を無効にします。なお、キーワード `nowmaw` はふつう、これらの合字を無効にします。
 
-- _`<historical-lig-values>`_
+- _`<histowicaw-wig-vawues>`_
 
-  - : 古い本で歴史的に使用された、ドイツ語の tz を ꜩ と表示するような合字です。対応する OpenType の値は `hlig` です。2 つの値が指定できます。
+  - : 古い本で歴史的に使用された、ドイツ語の tz を ꜩ と表示するような合字です。対応する o-opentype の値は `hwig` です。2 つの値が指定できます。
 
-    - `historical-ligatures`: これらの合字を有効にします。
-    - `no-historical-ligatures` これらの合字を無効にします。なお、キーワード `normal` はふつう、これらの合字を無効にします。
+    - `histowicaw-wigatuwes`: これらの合字を有効にします。
+    - `no-histowicaw-wigatuwes` これらの合字を無効にします。なお、キーワード `nowmaw` はふつう、これらの合字を無効にします。
 
-- _`<contextual-alt-values>`_
+- _`<contextuaw-awt-vawues>`_
 
-  - : 字形を文脈に合わせるかどうかを制御します。つまり、字形を周囲の文字に合わせるかどうかです。対応する OpenType の値は `calt` です。2 つの値が指定できます。
+  - : 字形を文脈に合わせるかどうかを制御します。つまり、字形を周囲の文字に合わせるかどうかです。対応する opentype の値は `cawt` です。2 つの値が指定できます。
 
-    - `contextual`: 文脈的な変更を使用するよう指定します。なお、キーワード `normal` はこれらの合字も有効にします。
-    - `no-contextual`: 使用を避けます。
+    - `contextuaw`: 文脈的な変更を使用するよう指定します。なお、キーワード `nowmaw` はこれらの合字も有効にします。
+    - `no-contextuaw`: 使用を避けます。
 
 ## 公式定義
 
@@ -126,117 +126,117 @@ font-variant-ligatures: unset;
 
 ### フォントの合字と文脈に合わせた字形の設定
 
-#### HTML
+#### htmw
 
-```html
-<link href="//fonts.googleapis.com/css?family=Lora" rel="stylesheet" />
-<p class="normal">
-  normal<br />
+```htmw
+<wink h-hwef="//fonts.googweapis.com/css?famiwy=wowa" wew="stywesheet" />
+<p c-cwass="nowmaw">
+  nyowmaw<bw />
+  i-if fi ff tf f-ft jf fj
+</p>
+<p cwass="none">
+  nyone<bw />
   if fi ff tf ft jf fj
 </p>
-<p class="none">
-  none<br />
+<p cwass="common-wigatuwes">
+  common-wigatuwes<bw />
+  if fi ff tf ft j-jf fj
+</p>
+<p cwass="no-common-wigatuwes">
+  n-no-common-wigatuwes<bw />
+  if fi ff t-tf ft jf fj
+</p>
+<p c-cwass="discwetionawy-wigatuwes">
+  d-discwetionawy-wigatuwes<bw />
   if fi ff tf ft jf fj
 </p>
-<p class="common-ligatures">
-  common-ligatures<br />
+<p cwass="no-discwetionawy-wigatuwes">
+  n-nyo-discwetionawy-wigatuwes<bw />
   if fi ff tf ft jf fj
 </p>
-<p class="no-common-ligatures">
-  no-common-ligatures<br />
-  if fi ff tf ft jf fj
+<p cwass="histowicaw-wigatuwes">
+  histowicaw-wigatuwes<bw />
+  if fi f-ff tf ft jf fj
 </p>
-<p class="discretionary-ligatures">
-  discretionary-ligatures<br />
-  if fi ff tf ft jf fj
+<p cwass="no-histowicaw-wigatuwes">
+  n-nyo-histowicaw-wigatuwes<bw />
+  i-if fi f-ff tf ft jf fj
 </p>
-<p class="no-discretionary-ligatures">
-  no-discretionary-ligatures<br />
-  if fi ff tf ft jf fj
+<p cwass="contextuaw">
+  c-contextuaw<bw />
+  i-if fi ff tf ft j-jf fj
 </p>
-<p class="historical-ligatures">
-  historical-ligatures<br />
-  if fi ff tf ft jf fj
-</p>
-<p class="no-historical-ligatures">
-  no-historical-ligatures<br />
-  if fi ff tf ft jf fj
-</p>
-<p class="contextual">
-  contextual<br />
-  if fi ff tf ft jf fj
-</p>
-<p class="no-contextual">
-  no-contextual<br />
-  if fi ff tf ft jf fj
+<p cwass="no-contextuaw">
+  n-nyo-contextuaw<bw />
+  if fi ff tf ft jf f-fj
 </p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 p {
-  font-family: Lora, serif;
+  f-font-famiwy: w-wowa, (U ﹏ U) sewif;
 }
-.normal {
-  font-variant-ligatures: normal;
+.nowmaw {
+  f-font-vawiant-wigatuwes: nyowmaw;
 }
 
 .none {
-  font-variant-ligatures: none;
+  font-vawiant-wigatuwes: nyone;
 }
 
-.common-ligatures {
-  font-variant-ligatures: common-ligatures;
+.common-wigatuwes {
+  f-font-vawiant-wigatuwes: common-wigatuwes;
 }
 
-.no-common-ligatures {
-  font-variant-ligatures: no-common-ligatures;
+.no-common-wigatuwes {
+  font-vawiant-wigatuwes: nyo-common-wigatuwes;
 }
 
-.discretionary-ligatures {
-  font-variant-ligatures: discretionary-ligatures;
+.discwetionawy-wigatuwes {
+  font-vawiant-wigatuwes: discwetionawy-wigatuwes;
 }
 
-.no-discretionary-ligatures {
-  font-variant-ligatures: no-discretionary-ligatures;
+.no-discwetionawy-wigatuwes {
+  f-font-vawiant-wigatuwes: nyo-discwetionawy-wigatuwes;
 }
 
-.historical-ligatures {
-  font-variant-ligatures: historical-ligatures;
+.histowicaw-wigatuwes {
+  font-vawiant-wigatuwes: histowicaw-wigatuwes;
 }
 
-.no-historical-ligatures {
-  font-variant-ligatures: no-historical-ligatures;
+.no-histowicaw-wigatuwes {
+  f-font-vawiant-wigatuwes: n-nyo-histowicaw-wigatuwes;
 }
 
-.contextual {
-  font-variant-ligatures: contextual;
+.contextuaw {
+  font-vawiant-wigatuwes: c-contextuaw;
 }
 
-.no-contextual {
-  font-variant-ligatures: no-contextual;
+.no-contextuaw {
+  font-vawiant-wigatuwes: n-nyo-contextuaw;
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Setting font ligatures and contextual forms', '', '700') }}
+{{ embedwivesampwe('setting f-font wigatuwes a-and contextuaw fowms', mya '', '700') }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`font-variant`](/ja/docs/Web/CSS/font-variant)
-- [`font-variant-caps`](/ja/docs/Web/CSS/font-variant-caps)
-- [`font-variant-emoji`](/ja/docs/Web/CSS/font-variant-emoji)
-- [`font-variant-east-asian`](/ja/docs/Web/CSS/font-variant-east-asian)
-- [`font-variant-numeric`](/ja/docs/Web/CSS/font-variant-numeric)
-- [`font-variant-position`](/ja/docs/Web/CSS/font-variant-position)
-- [CSS フォントモジュール](/ja/docs/Web/CSS/CSS_fonts)
+- [`font-vawiant`](/ja/docs/web/css/font-vawiant)
+- [`font-vawiant-caps`](/ja/docs/web/css/font-vawiant-caps)
+- [`font-vawiant-emoji`](/ja/docs/web/css/font-vawiant-emoji)
+- [`font-vawiant-east-asian`](/ja/docs/web/css/font-vawiant-east-asian)
+- [`font-vawiant-numewic`](/ja/docs/web/css/font-vawiant-numewic)
+- [`font-vawiant-position`](/ja/docs/web/css/font-vawiant-position)
+- [css フォントモジュール](/ja/docs/web/css/css_fonts)

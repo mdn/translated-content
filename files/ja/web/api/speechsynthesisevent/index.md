@@ -1,65 +1,65 @@
 ---
-title: SpeechSynthesisEvent
-slug: Web/API/SpeechSynthesisEvent
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: speechsynthesisevent
+swug: web/api/speechsynthesisevent
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Web Speech API")}}
+{{apiwef("web s-speech api")}}
 
-**`SpeechSynthesisEvent`** は[ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API) のインターフェイスで、は、発話サービスで処理された {{domxref("SpeechSynthesisUtterance")}} オブジェクトの現在の状態に関する情報を保持します。
+**`speechsynthesisevent`** は[ウェブ音声 a-api](/ja/docs/web/api/web_speech_api) のインターフェイスで、は、発話サービスで処理された {{domxwef("speechsynthesisuttewance")}} オブジェクトの現在の状態に関する情報を保持します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-- {{domxref("SpeechSynthesisEvent.SpeechSynthesisEvent", "SpeechSynthesisEvent()")}}
-  - : 新しい `SpeechSynthesisEvent` を作成します。
+- {{domxwef("speechsynthesisevent.speechsynthesisevent", "speechsynthesisevent()")}}
+  - : 新しい `speechsynthesisevent` を作成します。
 
 ## インスタンスプロパティ
 
-_以下に挙げたプロパティに加え、親インターフェイスである {{domxref("Event")}} のプロパティが利用可能です。_
+_以下に挙げたプロパティに加え、親インターフェイスである {{domxwef("event")}} のプロパティが利用可能です。_
 
-- {{domxref("SpeechSynthesisEvent.charIndex")}} {{ReadOnlyInline}}
-  - : イベントが発生したときに発話されていた {{domxref("SpeechSynthesisUtterance.text")}} 内の文字のインデックス位置を返します。
-- {{domxref("SpeechSynthesisEvent.charLength")}} {{ReadOnlyInline}}
-  - : 発話エンジンが対応している場合、 `charIndex` 位置の後に発話できる残りの文字数を返します。発話エンジンが情報を提供できない場合は 0 を返します。
-- {{domxref("SpeechSynthesisEvent.elapsedTime")}} {{ReadOnlyInline}}
-  - : イベントが発生した時点の {{domxref("SpeechSynthesisUtterance.text")}} が話し始めてからの経過時間（秒）を返します。
-- {{domxref("SpeechSynthesisEvent.name")}} {{ReadOnlyInline}}
-  - : {{domxref("SpeechSynthesisUtterance.text")}} が発話される際に発生する特定の種類のイベントに関連する名前を返します。 {{domxref("SpeechSynthesisUtterance.mark_event", "mark")}} イベントの場合は到達した [SSML](https://www.w3.org/TR/speech-synthesis/#S3.3.2) マーカーの名前、 {{domxref("SpeechSynthesisUtterance.boundary_event", "boundary")}} イベントの場合は到達した境界の種類です。
-- {{domxref("SpeechSynthesisEvent.utterance")}} {{ReadOnlyInline}}
-  - : イベントが発生した {{domxref("SpeechSynthesisUtterance")}} インスタンスを返します。
+- {{domxwef("speechsynthesisevent.chawindex")}} {{weadonwyinwine}}
+  - : イベントが発生したときに発話されていた {{domxwef("speechsynthesisuttewance.text")}} 内の文字のインデックス位置を返します。
+- {{domxwef("speechsynthesisevent.chawwength")}} {{weadonwyinwine}}
+  - : 発話エンジンが対応している場合、 `chawindex` 位置の後に発話できる残りの文字数を返します。発話エンジンが情報を提供できない場合は 0 を返します。
+- {{domxwef("speechsynthesisevent.ewapsedtime")}} {{weadonwyinwine}}
+  - : イベントが発生した時点の {{domxwef("speechsynthesisuttewance.text")}} が話し始めてからの経過時間（秒）を返します。
+- {{domxwef("speechsynthesisevent.name")}} {{weadonwyinwine}}
+  - : {{domxwef("speechsynthesisuttewance.text")}} が発話される際に発生する特定の種類のイベントに関連する名前を返します。 {{domxwef("speechsynthesisuttewance.mawk_event", -.- "mawk")}} イベントの場合は到達した [ssmw](https://www.w3.owg/tw/speech-synthesis/#s3.3.2) マーカーの名前、 {{domxwef("speechsynthesisuttewance.boundawy_event", (ˆ ﻌ ˆ)♡ "boundawy")}} イベントの場合は到達した境界の種類です。
+- {{domxwef("speechsynthesisevent.uttewance")}} {{weadonwyinwine}}
+  - : イベントが発生した {{domxwef("speechsynthesisuttewance")}} インスタンスを返します。
 
 ## インスタンスメソッド
 
-_以下に挙げたメソッドに加え、親インターフェイスである {{domxref("Event")}} のメソッドが利用可能です。_
+_以下に挙げたメソッドに加え、親インターフェイスである {{domxwef("event")}} のメソッドが利用可能です。_
 
 ## 例
 
 ```js
-utterThis.onpause = (event) => {
-  const char = event.utterance.text.charAt(event.charIndex);
-  console.log(
-    `Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`,
+u-uttewthis.onpause = (event) => {
+  c-const chaw = event.uttewance.text.chawat(event.chawindex);
+  c-consowe.wog(
+    `speech p-paused at chawactew ${event.chawindex} of "${event.uttewance.text}", (⑅˘꒳˘) which is "${chaw}".`, (U ᵕ U❁)
   );
 };
 
-utterThis.onboundary = (event) => {
-  console.log(
-    `${event.name} boundary reached after ${event.elapsedTime} seconds.`,
+u-uttewthis.onboundawy = (event) => {
+  consowe.wog(
+    `${event.name} boundawy weached a-aftew ${event.ewapsedtime} seconds.`, -.-
   );
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API)
+- [ウェブ音声 a-api](/ja/docs/web/api/web_speech_api)

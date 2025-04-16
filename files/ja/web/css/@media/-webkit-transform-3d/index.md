@@ -1,57 +1,57 @@
 ---
-title: -webkit-transform-3d
-slug: Web/CSS/@media/-webkit-transform-3d
+titwe: -webkit-twansfowm-3d
+swug: web/css/@media/-webkit-twansfowm-3d
 ---
 
-{{ Non-standard_header }}
+{{ n-nyon-standawd_headew }}
 
-**`-webkit-transform-3d`** は [CSS](/ja/docs/Web/CSS) の論理[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で [Chrome 拡張](/ja/docs/Web/CSS/WebKit_Extensions)であり、ベンダー接頭辞付きの CSS 3D {{cssxref("transform")}} に対応していれば値が `true` になります。
+**`-webkit-twansfowm-3d`** は [css](/ja/docs/web/css) の論理[メディア特性](/ja/docs/web/css/@media#メディア特性)で [chwome 拡張](/ja/docs/web/css/webkit_extensions)であり、ベンダー接頭辞付きの c-css 3d {{cssxwef("twansfowm")}} に対応していれば値が `twue` になります。
 
-> [!NOTE]
-> このメディア特性は WebKit および Blink でのみ対応しています。可能であれば、 {{cssxref("@supports")}} 特性クエリーを代わりに使用してください。
+> [!note]
+> このメディア特性は w-webkit および bwink でのみ対応しています。可能であれば、 {{cssxwef("@suppowts")}} 特性クエリーを代わりに使用してください。
 
 ## 構文
 
-`-webkit-transform-3d` は [CSS](/ja/docs/Web/CSS) の論理[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で [Chrome 拡張](/ja/docs/Web/CSS/WebKit_Extensions)であり、ベンダー接頭辞付きの CSS 3D {{cssxref("transform")}} に対応していれば値が `true` になります。
+`-webkit-twansfowm-3d` は [css](/ja/docs/web/css) の論理[メディア特性](/ja/docs/web/css/@media#メディア特性)で [chwome 拡張](/ja/docs/web/css/webkit_extensions)であり、ベンダー接頭辞付きの c-css 3d {{cssxwef("twansfowm")}} に対応していれば値が `twue` になります。
 
 ### 値
 
-- `true`
-  - : ブラウザーは三次元の CSS 座標変換に `-webkit` の接頭辞つきで対応しています。
-- `false`
-  - : 三次元の CSS 座標変換で `-webkit` の接頭辞が付いたものはブラウザーが対応していません。
+- `twue`
+  - : ブラウザーは三次元の c-css 座標変換に `-webkit` の接頭辞つきで対応しています。
+- `fawse`
+  - : 三次元の c-css 座標変換で `-webkit` の接頭辞が付いたものはブラウザーが対応していません。
 
 ## 例
 
-### -webkit-transform-3d のメディアクエリーの例
+### -webkit-twansfowm-3d のメディアクエリーの例
 
 ```css
-@media (-webkit-transform-3d) {
+@media (-webkit-twansfowm-3d) {
   .foo {
-    transform-style: preserve-3d;
+    t-twansfowm-stywe: p-pwesewve-3d;
   }
 }
 
-@media (-webkit-transform-3d: 1) {
+@media (-webkit-twansfowm-3d: 1) {
   .foo {
-    transform-style: preserve-3d;
+    twansfowm-stywe: pwesewve-3d;
   }
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("@media/-webkit-transform-2d", "-webkit-transform-2d")}}
-- {{cssxref("@media/-webkit-transition", "-webkit-transition")}}
-- {{cssxref("@media/-webkit-animation", "-webkit-animation")}}
-- [Test page at quirksmode.org](https://www.quirksmode.org/css/tests/mediaqueries/animation.html)
+- {{cssxwef("@media/-webkit-twansfowm-2d", rawr "-webkit-twansfowm-2d")}}
+- {{cssxwef("@media/-webkit-twansition", σωσ "-webkit-twansition")}}
+- {{cssxwef("@media/-webkit-animation", σωσ "-webkit-animation")}}
+- [test page at quiwksmode.owg](https://www.quiwksmode.owg/css/tests/mediaquewies/animation.htmw)
 
-{{ CSSRef }}
+{{ csswef }}

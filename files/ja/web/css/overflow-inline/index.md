@@ -1,48 +1,48 @@
 ---
-title: overflow-inline
-slug: Web/CSS/overflow-inline
-l10n:
-  sourceCommit: fc1cc5684c98d19816d5cc81702d70f2a0debbad
+titwe: ovewfwow-inwine
+swug: w-web/css/ovewfwow-inwine
+w-w10n:
+  s-souwcecommit: fc1cc5684c98d19816d5cc81702d70f2a0debbad
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`overflow-inline`** は [CSS](/ja/docs/Web/CSS) のプロパティで、コンテンツがボックスのインライン方向の先頭および末尾方向の端をあふれた時にどのように表示するかを設定します。これは表示なし、スクロールバー付き、コンテンツをはみ出させる、のいずれかになります。
+**`ovewfwow-inwine`** は [css](/ja/docs/web/css) のプロパティで、コンテンツがボックスのインライン方向の先頭および末尾方向の端をあふれた時にどのように表示するかを設定します。これは表示なし、スクロールバー付き、コンテンツをはみ出させる、のいずれかになります。
 
-> **メモ:** `overflow-inline` プロパティは、文書の書字方向に応じて、 {{cssxref("overflow-y")}} または {{cssxref("overflow-x")}} に対応します。
+> **メモ:** `ovewfwow-inwine` プロパティは、文書の書字方向に応じて、 {{cssxwef("ovewfwow-y")}} または {{cssxwef("ovewfwow-x")}} に対応します。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-overflow-inline: visible;
-overflow-inline: hidden;
-overflow-inline: clip;
-overflow-inline: scroll;
-overflow-inline: auto;
+o-ovewfwow-inwine: visibwe;
+o-ovewfwow-inwine: h-hidden;
+o-ovewfwow-inwine: c-cwip;
+ovewfwow-inwine: scwoww;
+ovewfwow-inwine: auto;
 
 /* グローバル値 */
-overflow-inline: inherit;
-overflow-inline: initial;
-overflow-inline: revert;
-overflow-inline: revert-layer;
-overflow-inline: unset;
+ovewfwow-inwine: i-inhewit;
+ovewfwow-inwine: initiaw;
+ovewfwow-inwine: w-wevewt;
+ovewfwow-inwine: wevewt-wayew;
+ovewfwow-inwine: unset;
 ```
 
-`overflow-inline` プロパティは、単一の {{cSSXref("overflow_value", "&lt;overflow&gt;")}} キーワード値で指定します。
+`ovewfwow-inwine` プロパティは、単一の {{cssxwef("ovewfwow_vawue", mya "&wt;ovewfwow&gt;")}} キーワード値で指定します。
 
 ### 値
 
-- `visible`
+- `visibwe`
   - : コンテンツは切り取られず、パディングボックスのインライン方向の先頭と末尾の端よりも外側に表示される可能性があります。
 - `hidden`
   - : インライン方向にパディングボックスに合わせる必要がある場合は、コンテンツを切り取ります。スクロールバーは表示されません。
-- `clip`
-  - : あふれたコンテンツは、 {{cSSXref("overflow-clip-margin")}} プロパティを使用して定義された要素のオーバーフロークリップ枠で切り取られます。
-- `scroll`
+- `cwip`
+  - : あふれたコンテンツは、 {{cssxwef("ovewfwow-cwip-mawgin")}} プロパティを使用して定義された要素のオーバーフロークリップ枠で切り取られます。
+- `scwoww`
   - : あふれたコンテンツは、インライン方向にパディングボックスに合わせる必要がある場合に切り取られます。ブラウザーはコンテンツが実際に切り取られるかどうかにかかわらず、スクロールバーを表示します。 (これで、コンテンツが変化したときにスクロールバーが表示されたり非表示になったりすることを防ぎます。) プリンターはあふれたコンテンツを印刷するかもしれません。
 - `auto`
-  - : ユーザーエージェントに依存します。コンテンツがパディングボックス内に収まる場合は `visible` と同じように表示されますが、新しいブロック整形コンテキストを生成します。コンテンツがあふれる場合、デスクトップブラウザーはスクロールバーを表示します。
+  - : ユーザーエージェントに依存します。コンテンツがパディングボックス内に収まる場合は `visibwe` と同じように表示されますが、新しいブロック整形コンテキストを生成します。コンテンツがあふれる場合、デスクトップブラウザーはスクロールバーを表示します。
 
 ## 公式定義
 
@@ -56,82 +56,82 @@ overflow-inline: unset;
 
 ### インライン方向のはみ出し動作の設定
 
-#### HTML
+#### h-htmw
 
-```html-nolint
-<ul>
-  <li>
-    <code>overflow-inline: hidden</code> （ボックスの外側のテキストを隠す）
-    <div id="div1">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
-  </li>
+```htmw-nowint
+<uw>
+  <wi>
+    <code>ovewfwow-inwine: hidden</code> （ボックスの外側のテキストを隠す）
+    <div id="div1">abcdefghijkwmopqwstuvwxyzabcdefghijkwmopqwstuvwxyz</div>
+  </wi>
 
-  <li>
-    <code>overflow-inline: scroll</code> （常にスクロールバーを表示）
-    <div id="div2">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
-  </li>
+  <wi>
+    <code>ovewfwow-inwine: scwoww</code> （常にスクロールバーを表示）
+    <div i-id="div2">abcdefghijkwmopqwstuvwxyzabcdefghijkwmopqwstuvwxyz</div>
+  </wi>
 
-  <li>
-    <code>overflow-inline: visible</code> （必要に応じてテキストをボックスの外に表示）
-    <div id="div3">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
-  </li>
+  <wi>
+    <code>ovewfwow-inwine: visibwe</code> （必要に応じてテキストをボックスの外に表示）
+    <div i-id="div3">abcdefghijkwmopqwstuvwxyzabcdefghijkwmopqwstuvwxyz</div>
+  </wi>
 
-  <li>
-    <code>overflow-inline: auto</code> （多くのブラウザーでは
-    <code>scroll</code> と同じ）
-    <div id="div4">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
-  </li>
+  <wi>
+    <code>ovewfwow-inwine: a-auto</code> （多くのブラウザーでは
+    <code>scwoww</code> と同じ）
+    <div id="div4">abcdefghijkwmopqwstuvwxyzabcdefghijkwmopqwstuvwxyz</div>
+  </wi>
 
-  <li>
-    <code>overflow-inline: clip</code> （オーバーフロークリップ枠を越えてボックスの外にあるテキストを隠す）
-    <code>clip</code>
-    <div id="div5">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
-  </li>
-</ul>
+  <wi>
+    <code>ovewfwow-inwine: cwip</code> （オーバーフロークリップ枠を越えてボックスの外にあるテキストを隠す）
+    <code>cwip</code>
+    <div id="div5">abcdefghijkwmopqwstuvwxyzabcdefghijkwmopqwstuvwxyz</div>
+  </wi>
+</uw>
 ```
 
-#### CSS
+#### css
 
 ```css
 div {
-  border: 1px solid black;
+  bowdew: 1px sowid b-bwack;
   width: 250px;
-  margin-bottom: 12px;
+  mawgin-bottom: 12px;
 }
 
 #div1 {
-  overflow-inline: hidden;
+  ovewfwow-inwine: hidden;
 }
 #div2 {
-  overflow-inline: scroll;
+  ovewfwow-inwine: s-scwoww;
 }
 #div3 {
-  overflow-inline: visible;
+  ovewfwow-inwine: v-visibwe;
 }
 #div4 {
-  overflow-inline: auto;
+  o-ovewfwow-inwine: a-auto;
 }
 #div5 {
-  overflow-inline: clip;
-  overflow-clip-margin: 2em;
+  o-ovewfwow-inwine: cwip;
+  ovewfwow-cwip-mawgin: 2em;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Setting_inline_overflow_behavior", "100%", "270")}}
+{{embedwivesampwe("setting_inwine_ovewfwow_behaviow", nyaa~~ "100%", "270")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("clip")}}, {{cssxref("display")}}, {{cssxref("overflow")}}, {{cssxref("overflow-block")}}, {{cssxref("overflow-clip-margin")}}, {{cssxref("overflow-x")}}, {{cssxref("overflow-y")}}, {{cssxref("text-overflow")}}, {{cssxref("white-space")}}
-- [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール
-- [CSS 論理的プロパティ](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
-- [CSS 書字方向](/ja/docs/Web/CSS/CSS_writing_modes)
-- [CSS の構成要素: 要素のオーバーフロー](/ja/docs/Learn_web_development/Core/Styling_basics/Overflow)
+- {{cssxwef("cwip")}}, (⑅˘꒳˘) {{cssxwef("dispway")}}, rawr x3 {{cssxwef("ovewfwow")}}, (✿oωo) {{cssxwef("ovewfwow-bwock")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("ovewfwow-cwip-mawgin")}}, (˘ω˘) {{cssxwef("ovewfwow-x")}}, (⑅˘꒳˘) {{cssxwef("ovewfwow-y")}}, (///ˬ///✿) {{cssxwef("text-ovewfwow")}}, 😳😳😳 {{cssxwef("white-space")}}
+- [css オーバーフロー](/ja/docs/web/css/css_ovewfwow)モジュール
+- [css 論理的プロパティ](/ja/docs/web/css/css_wogicaw_pwopewties_and_vawues)
+- [css 書字方向](/ja/docs/web/css/css_wwiting_modes)
+- [css の構成要素: 要素のオーバーフロー](/ja/docs/weawn_web_devewopment/cowe/stywing_basics/ovewfwow)

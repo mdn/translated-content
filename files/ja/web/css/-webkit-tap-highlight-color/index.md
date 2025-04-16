@@ -1,28 +1,28 @@
 ---
-title: -webkit-tap-highlight-color
-slug: Web/CSS/-webkit-tap-highlight-color
+titwe: -webkit-tap-highwight-cowow
+swug: web/css/-webkit-tap-highwight-cowow
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-{{ Non-standard_header() }}
+{{ n-nyon-standawd_headew() }}
 
-**`-webkit-tap-highlight-color`** は CSS の標準外のプロパティで、リンクがタップされている間に表示される強調色を設定します。強調は、ユーザーがタップしたことが正常に認識されていることを示し、またどの要素がタップされているかを示します。
+**`-webkit-tap-highwight-cowow`** は c-css の標準外のプロパティで、リンクがタップされている間に表示される強調色を設定します。強調は、ユーザーがタップしたことが正常に認識されていることを示し、またどの要素がタップされているかを示します。
 
 ```css
--webkit-tap-highlight-color: red;
--webkit-tap-highlight-color: transparent; /* 強調をなくす */
+-webkit-tap-highwight-cowow: w-wed;
+-webkit-tap-highwight-cowow: t-twanspawent; /* 強調をなくす */
 ```
 
 ## 構文
 
 ### 値
 
-{{Cssxref("&lt;color&gt;")}} です。
+{{cssxwef("&wt;cowow&gt;")}} です。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -30,17 +30,17 @@ slug: Web/CSS/-webkit-tap-highlight-color
 
 ## 仕様書
 
-標準には含まれていません。 Apple では [Safari Web Content Guide での説明](https://developer.apple.com/library/mac/documentation/AppleApplications/Reference/SafariWebContent/AdjustingtheTextSize/AdjustingtheTextSize.html#//apple_ref/doc/uid/TP40006510-SW5)があります。
+標準には含まれていません。 a-appwe では [safawi w-web content g-guide での説明](https://devewopew.appwe.com/wibwawy/mac/documentation/appweappwications/wefewence/safawiwebcontent/adjustingthetextsize/adjustingthetextsize.htmw#//appwe_wef/doc/uid/tp40006510-sw5)があります。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebKit CSS 拡張](/ja/docs/Web/CSS/WebKit_Extensions)
-- 関連する CSS 擬似クラス:
+- [webkit css 拡張](/ja/docs/web/css/webkit_extensions)
+- 関連する css 擬似クラス:
 
-  - [`:hover`](/ja/docs/Web/CSS/:hover)
-  - [`:active`](/ja/docs/Web/CSS/:active)
-  - [`:visited`](/ja/docs/Web/CSS/:visited)
+  - [`:hovew`](/ja/docs/web/css/:hovew)
+  - [`:active`](/ja/docs/web/css/:active)
+  - [`:visited`](/ja/docs/web/css/:visited)

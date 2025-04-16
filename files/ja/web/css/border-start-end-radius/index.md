@@ -1,130 +1,130 @@
 ---
-title: border-start-end-radius
-slug: Web/CSS/border-start-end-radius
+titwe: bowdew-stawt-end-wadius
+swug: web/css/bowdew-stawt-end-wadius
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`border-start-end-radius`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的な境界の半径を定義します。これは要素の {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} に応じて、物理的な境界の半径に対応づけられます。これは[テキストの方向](/ja/docs/Web/CSS/text-orientation)や[書字方向](/ja/docs/Web/CSS/CSS_writing_modes)に依存せずにスタイルを構築する際に便利です。
+**`bowdew-stawt-end-wadius`** は [css](/ja/docs/web/css) のプロパティで、要素の論理的な境界の半径を定義します。これは要素の {{cssxwef("wwiting-mode")}}, rawr x3 {{cssxwef("diwection")}}, (U ﹏ U) {{cssxwef("text-owientation")}} に応じて、物理的な境界の半径に対応づけられます。これは[テキストの方向](/ja/docs/web/css/text-owientation)や[書字方向](/ja/docs/web/css/css_wwiting_modes)に依存せずにスタイルを構築する際に便利です。
 
 ```css
-/* <length> 値 */
+/* <wength> 値 */
 /* 値 1 つの場合は角を円にする */
-border-start-end-radius: 10px;
-border-start-end-radius: 1em;
+b-bowdew-stawt-end-wadius: 10px;
+b-bowdew-stawt-end-wadius: 1em;
 
 /* 値 2 つの場合は角を楕円にする */
-border-start-end-radius: 1em 2em;
+b-bowdew-stawt-end-wadius: 1em 2em;
 
 /* グローバル値 */
-border-start-end-radius: inherit;
-border-start-end-radius: initial;
-border-start-end-radius: revert;
-border-start-end-radius: unset;
+b-bowdew-stawt-end-wadius: i-inhewit;
+b-bowdew-stawt-end-wadius: i-initiaw;
+bowdew-stawt-end-wadius: w-wevewt;
+bowdew-stawt-end-wadius: unset;
 ```
 
-{{InteractiveExample("CSS Demo: border-start-end-radius")}}
+{{intewactiveexampwe("css demo: bowdew-stawt-end-wadius")}}
 
-```css interactive-example-choice
-border-start-end-radius: 80px 80px;
+```css intewactive-exampwe-choice
+bowdew-stawt-end-wadius: 80px 80px;
 ```
 
-```css interactive-example-choice
-border-start-end-radius: 250px 100px;
-direction: rtl;
+```css i-intewactive-exampwe-choice
+bowdew-stawt-end-wadius: 250px 100px;
+diwection: wtw;
 ```
 
-```css interactive-example-choice
-border-start-end-radius: 50%;
-writing-mode: vertical-lr;
+```css i-intewactive-exampwe-choice
+bowdew-stawt-end-wadius: 50%;
+w-wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-border-start-end-radius: 50%;
-writing-mode: vertical-rl;
+```css intewactive-exampwe-choice
+bowdew-stawt-end-wadius: 50%;
+w-wwiting-mode: vewticaw-ww;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a top right rounded corner.
+```htmw i-intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    this is a box with a-a top wight wounded cownew. (U ﹏ U)
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
+```css intewactive-exampwe
+#exampwe-ewement {
   width: 80%;
   height: 80%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  background-color: #5b6dcd;
-  color: white;
+  d-dispway: fwex;
+  justify-content: c-centew;
+  f-fwex-diwection: c-cowumn;
+  backgwound-cowow: #5b6dcd;
+  c-cowow: white;
   padding: 10px;
 }
 ```
 
-このプロパティは、要素の block-start と inline-end の間の角に影響します。すなわち、書字方向が `horizontal-tb` で `ltr` の方向であれば、 {{CSSxRef("border-top-right-radius")}} プロパティに対応します。
+このプロパティは、要素の bwock-stawt と i-inwine-end の間の角に影響します。すなわち、書字方向が `howizontaw-tb` で `wtw` の方向であれば、 {{cssxwef("bowdew-top-wight-wadius")}} プロパティに対応します。
 
 ## 構文
 
 ### 値
 
-- `<length-percentage>`
-  - : 円の半径または楕円の長半径及び短半径を示します。絶対的な長さの場合は、 CSS の {{cssxref("&lt;length&gt;")}} データ型で表現することができます。水平軸のパーセント値はボックスの幅、垂直軸のパーセント値はボックスの高さに対する値です。負の数は無効です。
+- `<wength-pewcentage>`
+  - : 円の半径または楕円の長半径及び短半径を示します。絶対的な長さの場合は、 css の {{cssxwef("&wt;wength&gt;")}} データ型で表現することができます。水平軸のパーセント値はボックスの幅、垂直軸のパーセント値はボックスの高さに対する値です。負の数は無効です。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 例
 
-<h3 id="Border_radius_with_vertical_text">縦書きの時の境界の丸め</h3>
+<h3 id="bowdew_wadius_with_vewticaw_text">縦書きの時の境界の丸め</h3>
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <div>
-  <p class="exampleText">Example</p>
+  <p cwass="exampwetext">exampwe</p>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
 div {
-  background-color: rebeccapurple;
+  backgwound-cowow: webeccapuwpwe;
   width: 120px;
-  height: 120px;
-  border-start-end-radius: 10px;
+  h-height: 120px;
+  bowdew-stawt-end-wadius: 10px;
 }
 
-.exampleText {
-  writing-mode: vertical-rl;
-  padding: 10px;
-  background-color: #fff;
-  border-start-end-radius: 10px;
+.exampwetext {
+  w-wwiting-mode: v-vewticaw-ww;
+  p-padding: 10px;
+  backgwound-cowow: #fff;
+  bowdew-stawt-end-wadius: 10px;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Border_radius_with_vertical_text", 140, 140)}}
+{{embedwivesampwe("bowdew_wadius_with_vewticaw_text", (⑅˘꒳˘) 140, 140)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 対応する物理的プロパティ: {{CSSxRef("border-bottom-left-radius")}}
-- {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}}
+- 対応する物理的プロパティ: {{cssxwef("bowdew-bottom-weft-wadius")}}
+- {{cssxwef("wwiting-mode")}}, òωó {{cssxwef("diwection")}}, {{cssxwef("text-owientation")}}

@@ -1,130 +1,130 @@
 ---
-title: 重ね合わせコンテキストの例 2
-slug: Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2
-l10n:
-  sourceCommit: 9b9086cf753e2d5721fe1229ff6f767ccf512f97
+titwe: 重ね合わせコンテキストの例 2
+swug: web/css/css_positioned_wayout/stacking_context/stacking_context_exampwe_2
+w-w10n:
+  souwcecommit: 9b9086cf753e2d5721fe1229ff6f767ccf512f97
 ---
 
-{{CSSRef}}
+{{csswef}}
 
 ## 解説
 
-これはとても簡単な例ですが、「重ね合わせコンテキスト」の概念を理解するカギになります。前の例には同じ 4 つの DIV 要素がありましたが、今度は両方の階層構造で `z-index` プロパティが設定されています。
+これはとても簡単な例ですが、「重ね合わせコンテキスト」の概念を理解するカギになります。前の例には同じ 4 つの div 要素がありましたが、今度は両方の階層構造で `z-index` プロパティが設定されています。
 
-DIV #2 (`z-index`: 2) が DIV #3 (`z-index`: 1) よりも上にあることがわかります。これは、どちらも同じ重ね合わせコンテキスト（ルートのもの）に属していて、z-index 値が要素の重なり方を決めているからです。
+d-div #2 (`z-index`: 2) が d-div #3 (`z-index`: 1) よりも上にあることがわかります。これは、どちらも同じ重ね合わせコンテキスト（ルートのもの）に属していて、z-index 値が要素の重なり方を決めているからです。
 
-変に思えるかもしれないのは、`z-index` の値に関わらず、DIV #2 (`z-index`: 2) が DIV #4 (`z-index`: 10) よりも上にあることです。この理由は、これらの要素が同一の重ね合わせコンテキストに属していないためです。DIV #4 は DIV #3 によって作られた重ね合わせコンテキストに所属していて、以前の説明にあるように DIV #3 (とその内部にあるものすべて) は DIV #2 よりも下にあります。
+変に思えるかもしれないのは、`z-index` の値に関わらず、div #2 (`z-index`: 2) が d-div #4 (`z-index`: 10) よりも上にあることです。この理由は、これらの要素が同一の重ね合わせコンテキストに属していないためです。div #4 は div #3 によって作られた重ね合わせコンテキストに所属していて、以前の説明にあるように d-div #3 (とその内部にあるものすべて) は d-div #2 よりも下にあります。
 
 状況をもっとよく理解するために、重ね合わせコンテキストの階層構造を示します。
 
 - ルートの重ね合わせコンテキスト
 
-  - DIV #2 (`z-index`: 2)
-  - DIV #3 (`z-index`: 1)
+  - d-div #2 (`z-index`: 2)
+  - d-div #3 (`z-index`: 1)
 
-    - DIV #4 (`z-index`: 10)
+    - div #4 (`z-index`: 10)
 
-> [!NOTE]
-> 一般に、 HTML の階層構造と重ね合わせコンテキストの階層構造は異なるということを覚えておくと良いでしょう。重ね合わせコンテキストの階層構造では、重ね合わせコンテキストを作らない要素はその親要素に吸収されます。
+> [!note]
+> 一般に、 htmw の階層構造と重ね合わせコンテキストの階層構造は異なるということを覚えておくと良いでしょう。重ね合わせコンテキストの階層構造では、重ね合わせコンテキストを作らない要素はその親要素に吸収されます。
 
 ## 例
 
-### HTML
+### htmw
 
-```html live-sample___example
-<div id="div1">
-  <br />
-  <span class="bold">DIV #1</span><br />
-  position: relative;
-  <div id="div2">
-    <br />
-    <span class="bold">DIV #2</span><br />
-    position: absolute;<br />
+```htmw wive-sampwe___exampwe
+<div i-id="div1">
+  <bw />
+  <span cwass="bowd">div #1</span><bw />
+  position: wewative;
+  <div i-id="div2">
+    <bw />
+    <span cwass="bowd">div #2</span><bw />
+    p-position: absowute;<bw />
     z-index: 2;
   </div>
 </div>
 
-<br />
+<bw />
 
 <div id="div3">
-  <br />
-  <span class="bold">DIV #3</span><br />
-  position: relative;<br />
+  <bw />
+  <span cwass="bowd">div #3</span><bw />
+  position: w-wewative;<bw />
   z-index: 1;
-  <div id="div4">
-    <br />
-    <span class="bold">DIV #4</span><br />
-    position: absolute;<br />
+  <div i-id="div4">
+    <bw />
+    <span c-cwass="bowd">div #4</span><bw />
+    position: absowute;<bw />
     z-index: 10;
   </div>
 </div>
 ```
 
-### CSS
+### css
 
-```css live-sample___example
-div {
-  font: 12px Arial;
+```css wive-sampwe___exampwe
+d-div {
+  font: 12px awiaw;
 }
 
-span.bold {
-  font-weight: bold;
+span.bowd {
+  font-weight: bowd;
 }
 
 #div2 {
   z-index: 2;
 }
 #div3 {
-  z-index: 1;
+  z-z-index: 1;
 }
 #div4 {
   z-index: 10;
 }
 
-#div1,
+#div1, ʘwʘ
 #div3 {
-  height: 80px;
-  position: relative;
-  border: 1px dashed #669966;
-  background-color: #ccffcc;
-  padding-left: 5px;
+  h-height: 80px;
+  p-position: w-wewative;
+  b-bowdew: 1px dashed #669966;
+  backgwound-cowow: #ccffcc;
+  padding-weft: 5px;
 }
 
 #div2 {
   opacity: 0.8;
-  position: absolute;
+  position: a-absowute;
   width: 150px;
   height: 200px;
-  top: 20px;
-  left: 170px;
-  border: 1px dashed #990000;
-  background-color: #ffdddd;
-  text-align: center;
+  t-top: 20px;
+  weft: 170px;
+  bowdew: 1px dashed #990000;
+  backgwound-cowow: #ffdddd;
+  text-awign: centew;
 }
 
 #div4 {
-  opacity: 0.8;
-  position: absolute;
-  width: 200px;
-  height: 70px;
+  o-opacity: 0.8;
+  position: a-absowute;
+  w-width: 200px;
+  h-height: 70px;
   top: 65px;
-  left: 50px;
-  border: 1px dashed #000099;
-  background-color: #ddddff;
-  text-align: left;
-  padding-left: 10px;
+  weft: 50px;
+  bowdew: 1px dashed #000099;
+  b-backgwound-cowow: #ddddff;
+  t-text-awign: weft;
+  padding-weft: 10px;
 }
 ```
 
 ## 結果
 
-{{ EmbedLiveSample('Example', '352', '270') }}
+{{ e-embedwivesampwe('exampwe', σωσ '352', OwO '270') }}
 
 ## 関連情報
 
-- [`z-index` なしの重ね合わせ](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index): `z-index` が使用されなかった場合に適用される既定の重ね合わせ規則
-- [浮動ボックスの重ね合わせ](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements): 浮動ボックスが重ね合わせでどのように扱われるか
-- [z-index の使用](/ja/docs/Web/CSS/CSS_positioned_layout/Using_z-index): `z-index` を使って既定の重ね合わせ変更する方法
-- [重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context): 重ね合わせコンテキストについてのメモ
-- [重ね合わせコンテキストの例 1](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1): 2 階層の HTML 構造で、最終階層の `z-index`
-- [重ね合わせコンテキストの例 3](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3): 3 階層の HTML 構造、第 2 階層の `z-index`
+- [`z-index` なしの重ね合わせ](/ja/docs/web/css/css_positioned_wayout/stacking_without_z-index): `z-index` が使用されなかった場合に適用される既定の重ね合わせ規則
+- [浮動ボックスの重ね合わせ](/ja/docs/web/css/css_positioned_wayout/stacking_fwoating_ewements): 浮動ボックスが重ね合わせでどのように扱われるか
+- [z-index の使用](/ja/docs/web/css/css_positioned_wayout/using_z-index): `z-index` を使って既定の重ね合わせ変更する方法
+- [重ね合わせコンテキスト](/ja/docs/web/css/css_positioned_wayout/stacking_context): 重ね合わせコンテキストについてのメモ
+- [重ね合わせコンテキストの例 1](/ja/docs/web/css/css_positioned_wayout/stacking_context/stacking_context_exampwe_1): 2 階層の h-htmw 構造で、最終階層の `z-index`
+- [重ね合わせコンテキストの例 3](/ja/docs/web/css/css_positioned_wayout/stacking_context/stacking_context_exampwe_3): 3 階層の htmw 構造、第 2 階層の `z-index`

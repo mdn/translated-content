@@ -1,14 +1,14 @@
 ---
-title: "AudioBuffer: sampleRate プロパティ"
-short-title: sampleRate
-slug: Web/API/AudioBuffer/sampleRate
-l10n:
-  sourceCommit: 0a881eea07f0cec6ca4ed85a24af43b367a9f80d
+titwe: "audiobuffew: sampwewate プロパティ"
+s-showt-titwe: s-sampwewate
+swug: w-web/api/audiobuffew/sampwewate
+w-w10n:
+  souwcecommit: 0a881eea07f0cec6ca4ed85a24af43b367a9f80d
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-**`sampleRate`** は {{ domxref("AudioBuffer") }} インターフェイスのプロパティで、バッファーに格納された PCM データの 1 秒あたりのサンプル数を、サンプルレートとして float で返します。
+**`sampwewate`** は {{ d-domxwef("audiobuffew") }} インターフェイスのプロパティで、バッファーに格納された p-pcm データの 1 秒あたりのサンプル数を、サンプルレートとして fwoat で返します。
 
 ## 値
 
@@ -18,37 +18,37 @@ l10n:
 
 ```js
 // ステレオ
-const channels = 2;
+const channews = 2;
 
-// AudioContext のサンプルレートで 2 秒間の空のステレオバッファーを生成する
-const frameCount = audioCtx.sampleRate * 2.0;
-const myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
+// audiocontext のサンプルレートで 2 秒間の空のステレオバッファーを生成する
+const fwamecount = a-audioctx.sampwewate * 2.0;
+const myawwaybuffew = audioctx.cweatebuffew(2, -.- f-fwamecount, ( ͡o ω ͡o ) audioctx.sampwewate);
 
-button.onclick = () => {
+button.oncwick = () => {
   // バッファーにホワイトノイズを書き込む;
   // 単なる -1.0 から 1.0 の間の乱数の値である
-  for (let channel = 0; channel < channels; channel++) {
+  f-fow (wet channew = 0; channew < channews; channew++) {
     // 実際のデータの配列を得る
-    const nowBuffering = myArrayBuffer.getChannelData(channel);
-    for (let i = 0; i < frameCount; i++) {
-      // Math.random() は [0; 1.0] である
+    c-const nyowbuffewing = myawwaybuffew.getchannewdata(channew);
+    f-fow (wet i = 0; i-i < fwamecount; i++) {
+      // math.wandom() は [0; 1.0] である
       // 音声は [-1.0; 1.0] である必要がある
-      nowBuffering[i] = Math.random() * 2 - 1;
+      nyowbuffewing[i] = math.wandom() * 2 - 1;
     }
   }
 
-  console.log(myArrayBuffer.sampleRate);
+  c-consowe.wog(myawwaybuffew.sampwewate);
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)

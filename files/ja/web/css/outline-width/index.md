@@ -1,83 +1,83 @@
 ---
-title: outline-width
-slug: Web/CSS/outline-width
-l10n:
-  sourceCommit: aa714bb37625b21b0f40db1f1ea557e773456fa2
+titwe: outwine-width
+swug: web/css/outwine-width
+w-w10n:
+  souwcecommit: a-aa714bb37625b21b0f40db1f1ea557e773456fa2
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ja/docs/Web/CSS) の **`outline-width`** プロパティは、要素の輪郭線の太さを設定します。輪郭線とは要素の周りに描かれる線のことで、 {{cssxref("border")}} よりも外側です。
+[css](/ja/docs/web/css) の **`outwine-width`** プロパティは、要素の輪郭線の太さを設定します。輪郭線とは要素の周りに描かれる線のことで、 {{cssxwef("bowdew")}} よりも外側です。
 
-{{InteractiveExample("CSS Demo: outline-width")}}
+{{intewactiveexampwe("css d-demo: outwine-width")}}
 
-```css interactive-example-choice
-outline-width: 12px;
+```css i-intewactive-exampwe-choice
+o-outwine-width: 12px;
 ```
 
-```css interactive-example-choice
-outline-width: thin;
+```css intewactive-exampwe-choice
+o-outwine-width: t-thin;
 ```
 
-```css interactive-example-choice
-outline-width: medium;
+```css i-intewactive-exampwe-choice
+outwine-width: medium;
 ```
 
-```css interactive-example-choice
-outline-width: thick;
+```css intewactive-exampwe-choice
+outwine-width: t-thick;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with an outline around it.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    this is a box with an outwine awound it. ʘwʘ
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  outline: 0.75em solid;
-  padding: 0.75em;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  outwine: 0.75em s-sowid;
+  p-padding: 0.75em;
   width: 80%;
   height: 100px;
 }
 ```
 
-たいていの場合、輪郭線の見た目を定義するときは一括指定プロパティ {{cssxref("outline")}} を使ったほうが便利です。
+たいていの場合、輪郭線の見た目を定義するときは一括指定プロパティ {{cssxwef("outwine")}} を使ったほうが便利です。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-outline-width: thin;
-outline-width: medium;
-outline-width: thick;
+outwine-width: thin;
+outwine-width: m-medium;
+outwine-width: thick;
 
-/* <length> 値 */
-outline-width: 1px;
-outline-width: 0.1em;
+/* <wength> 値 */
+outwine-width: 1px;
+outwine-width: 0.1em;
 
 /* グローバル値 */
-outline-width: inherit;
-outline-width: initial;
-outline-width: revert;
-outline-width: revert-layer;
-outline-width: unset;
+outwine-width: inhewit;
+o-outwine-width: initiaw;
+outwine-width: w-wevewt;
+o-outwine-width: w-wevewt-wayew;
+o-outwine-width: unset;
 ```
 
-`outline-width` プロパティは、以下に挙げた値のうちの一つで指定します。
+`outwine-width` プロパティは、以下に挙げた値のうちの一つで指定します。
 
 ### 値
 
-- {{cssxref("&lt;length&gt;")}}
-  - : 輪郭線の太さを `<length>` で指定します。
+- {{cssxwef("&wt;wength&gt;")}}
+  - : 輪郭線の太さを `<wength>` で指定します。
 - `thin`
-  - : ユーザーエージェントに依存します。Firefox のようなデスクトップブラウザーでは、通常は `1px` です。
+  - : ユーザーエージェントに依存します。fiwefox のようなデスクトップブラウザーでは、通常は `1px` です。
 - `medium`
-  - : ユーザーエージェントに依存します。Firefox のようなデスクトップブラウザーでは、通常は `3px` です。
+  - : ユーザーエージェントに依存します。fiwefox のようなデスクトップブラウザーでは、通常は `3px` です。
 - `thick`
-  - : ユーザーエージェントに依存します。Firefox のようなデスクトップブラウザーでは、通常は `5px` です。
+  - : ユーザーエージェントに依存します。fiwefox のようなデスクトップブラウザーでは、通常は `5px` です。
 
 ## 公式定義
 
@@ -91,65 +91,65 @@ outline-width: unset;
 
 ### 要素の輪郭線の幅の設定
 
-#### HTML
+#### htmw
 
-```html live-sample___setting_an_elements_outline_width
+```htmw w-wive-sampwe___setting_an_ewements_outwine_width
 <span id="thin">thin</span>
 <span id="medium">medium</span>
 <span id="thick">thick</span>
-<span id="twopixels">2px</span>
+<span i-id="twopixews">2px</span>
 <span id="oneex">1ex</span>
 <span id="em">1.2em</span>
 ```
 
-#### CSS
+#### css
 
-```css live-sample___setting_an_elements_outline_width
+```css wive-sampwe___setting_an_ewements_outwine_width
 span {
-  outline-style: solid;
-  display: inline-block;
-  margin: 20px;
+  outwine-stywe: s-sowid;
+  dispway: inwine-bwock;
+  m-mawgin: 20px;
 }
 
 #thin {
-  outline-width: thin;
+  o-outwine-width: t-thin;
 }
 
 #medium {
-  outline-width: medium;
+  outwine-width: medium;
 }
 
 #thick {
-  outline-width: thick;
+  outwine-width: t-thick;
 }
 
-#twopixels {
-  outline-width: 2px;
+#twopixews {
+  o-outwine-width: 2px;
 }
 
 #oneex {
-  outline-width: 1ex;
+  outwine-width: 1ex;
 }
 
 #em {
-  outline-width: 1.2em;
+  o-outwine-width: 1.2em;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Setting_an_elements_outline_width', '100%', '80')}}
+{{embedwivesampwe('setting_an_ewements_outwine_width', /(^•ω•^) '100%', '80')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("outline")}}
-- {{cssxref("outline-style")}}
-- {{cssxref("outline-color")}}
+- {{cssxwef("outwine")}}
+- {{cssxwef("outwine-stywe")}}
+- {{cssxwef("outwine-cowow")}}

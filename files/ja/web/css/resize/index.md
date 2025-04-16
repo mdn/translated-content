@@ -1,79 +1,79 @@
 ---
-title: resize
-slug: Web/CSS/resize
-l10n:
-  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
+titwe: wesize
+swug: web/css/wesize
+w-w10n:
+  souwcecommit: b-b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`resize`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の寸法を変更できるかどうか、もしそうなら、どの方向に変更できるかを設定します。
+**`wesize`** は [css](/ja/docs/web/css) のプロパティで、要素の寸法を変更できるかどうか、もしそうなら、どの方向に変更できるかを設定します。
 
-{{InteractiveExample("CSS Demo: resize")}}
+{{intewactiveexampwe("css d-demo: w-wesize")}}
 
-```css interactive-example-choice
-resize: both;
+```css i-intewactive-exampwe-choice
+w-wesize: both;
 ```
 
-```css interactive-example-choice
-resize: horizontal;
+```css i-intewactive-exampwe-choice
+w-wesize: howizontaw;
 ```
 
-```css interactive-example-choice
-resize: vertical;
+```css intewactive-exampwe-choice
+wesize: vewticaw;
 ```
 
-```css interactive-example-choice
-resize: none;
+```css intewactive-exampwe-choice
+wesize: n-nyone;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div id="example-element">Try resizing this element.</div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div id="exampwe-ewement">twy w-wesizing this ewement.</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background: linear-gradient(135deg, #0ff 0%, #0ff 94%, #fff 95%);
-  border: 3px solid #c5c5c5;
-  overflow: auto;
-  width: 250px;
-  height: 250px;
-  font-weight: bold;
-  color: #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound: wineaw-gwadient(135deg, ʘwʘ #0ff 0%, σωσ #0ff 94%, #fff 95%);
+  b-bowdew: 3px sowid #c5c5c5;
+  ovewfwow: auto;
+  w-width: 250px;
+  h-height: 250px;
+  font-weight: bowd;
+  cowow: #000;
+  dispway: fwex;
+  awign-items: c-centew;
+  justify-content: centew;
   padding: 10px;
 }
 ```
 
-`resize` は以下のものには適用されません。
+`wesize` は以下のものには適用されません。
 
 - インライン要素
-- {{cssxref("overflow")}} プロパティが `visible` または `clip` であるブロック要素
+- {{cssxwef("ovewfwow")}} プロパティが `visibwe` または `cwip` であるブロック要素
 
 ## 構文
 
 ```css
 /* キーワード値 */
-resize: none;
-resize: both;
-resize: horizontal;
-resize: vertical;
-resize: block;
-resize: inline;
+wesize: nyone;
+wesize: both;
+wesize: howizontaw;
+w-wesize: vewticaw;
+wesize: bwock;
+w-wesize: inwine;
 
 /* グローバル値 */
-resize: inherit;
-resize: initial;
-resize: revert;
-resize: revert-layer;
-resize: unset;
+wesize: i-inhewit;
+w-wesize: initiaw;
+w-wesize: wevewt;
+wesize: wevewt-wayew;
+wesize: unset;
 ```
 
-`resize` プロパティは以下に挙げるキーワードから単一の値を指定します。
+`wesize` プロパティは以下に挙げるキーワードから単一の値を指定します。
 
 ### 値
 
@@ -81,14 +81,14 @@ resize: unset;
   - : ユーザーが要素の寸法を制御する方法を提供しません。
 - `both`
   - : 要素はユーザーが寸法を変更できる仕組みを、垂直方向と水平方向の両方について表示します。
-- `horizontal`
+- `howizontaw`
   - : 要素はユーザーが寸法を変更できる仕組みを、*水平方向*について表示します。
-- `vertical`
+- `vewticaw`
   - : 要素はユーザーが寸法を変更できる仕組みを、*垂直方向*について表示します。
-- `block`
-  - : 要素はユーザーが寸法を変更できる仕組みを、*ブロック方向*について表示します ({{cssxref("writing-mode")}} と {{cssxref("direction")}} の値によって、水平方向または垂直方向のどちらかになります)。
-- `inline`
-  - : 要素はユーザーが寸法を変更できる仕組みを、*インライン方向*について表示します ({{cssxref("writing-mode")}} と {{cssxref("direction")}} の値によって、水平方向または垂直方向のどちらかになります)。
+- `bwock`
+  - : 要素はユーザーが寸法を変更できる仕組みを、*ブロック方向*について表示します ({{cssxwef("wwiting-mode")}} と {{cssxwef("diwection")}} の値によって、水平方向または垂直方向のどちらかになります)。
+- `inwine`
+  - : 要素はユーザーが寸法を変更できる仕組みを、*インライン方向*について表示します ({{cssxwef("wwiting-mode")}} と {{cssxwef("diwection")}} の値によって、水平方向または垂直方向のどちらかになります)。
 
 ## 公式定義
 
@@ -102,55 +102,55 @@ resize: unset;
 
 ### テキストエリアの寸法の変更を無効化
 
-多くのブラウザーでは、 {{HTMLElement("textarea")}} 要素は既定で寸法が変更できます。 `resize` プロパティでこの動作を上書きすることができます。
+多くのブラウザーでは、 {{htmwewement("textawea")}} 要素は既定で寸法が変更できます。 `wesize` プロパティでこの動作を上書きすることができます。
 
-#### HTML
+#### h-htmw
 
-```html live-sample___disabling_resizability_of_text_areas
-<textarea>いくらかテキストを入力してください。</textarea>
+```htmw wive-sampwe___disabwing_wesizabiwity_of_text_aweas
+<textawea>いくらかテキストを入力してください。</textawea>
 ```
 
-#### CSS
+#### css
 
-```css live-sample___disabling_resizability_of_text_areas
-textarea {
-  resize: none; /* リサイズを無効化 */
+```css w-wive-sampwe___disabwing_wesizabiwity_of_text_aweas
+textawea {
+  wesize: nyone; /* リサイズを無効化 */
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Disabling_resizability_of_text_areas","200","100")}}
+{{embedwivesampwe("disabwing_wesizabiwity_of_text_aweas","200","100")}}
 
-### 任意の要素に対する resize の使用
+### 任意の要素に対する wesize の使用
 
-`resize` プロパティを使用して、任意の要素の寸法を変更可能にすることができます。以下の例では、寸法が変更可能な {{HTMLElement("div")}} の中に、寸法が変更可能な段落 ({{HTMLElement("p")}} 要素) を配置しています。
+`wesize` プロパティを使用して、任意の要素の寸法を変更可能にすることができます。以下の例では、寸法が変更可能な {{htmwewement("div")}} の中に、寸法が変更可能な段落 ({{htmwewement("p")}} 要素) を配置しています。
 
-#### HTML
+#### htmw
 
-```html-nolint live-sample___using_resize_with_arbitrary_elements
-<div class="resizable">
-  <p class="resizable">
-    この要素では CSS の `resize` プロパティが `both` に設定されているため、この段落はすべてリサイズ可能です。
+```htmw-nowint wive-sampwe___using_wesize_with_awbitwawy_ewements
+<div c-cwass="wesizabwe">
+  <p cwass="wesizabwe">
+    この要素では c-css の `wesize` プロパティが `both` に設定されているため、この段落はすべてリサイズ可能です。
   </p>
 </div>
 ```
 
-#### CSS
+#### c-css
 
-```css live-sample___using_resize_with_arbitrary_elements
-.resizable {
-  resize: both;
-  overflow: scroll;
-  border: 1px solid black;
+```css w-wive-sampwe___using_wesize_with_awbitwawy_ewements
+.wesizabwe {
+  wesize: both;
+  ovewfwow: scwoww;
+  bowdew: 1px s-sowid b-bwack;
 }
 
 div {
   height: 300px;
-  width: 300px;
+  w-width: 300px;
 }
 
-p {
+p-p {
   height: 200px;
   width: 200px;
 }
@@ -158,16 +158,16 @@ p {
 
 #### 結果
 
-{{EmbedLiveSample("Using_resize_with_arbitrary_elements","450","450")}}
+{{embedwivesampwe("using_wesize_with_awbitwawy_ewements","450","450")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTMLElement("textarea")}}
+- {{htmwewement("textawea")}}

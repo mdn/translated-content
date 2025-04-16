@@ -1,64 +1,64 @@
 ---
-title: ::first-letter
-slug: Web/CSS/::first-letter
-l10n:
-  sourceCommit: 5fea7c9593f5e4b4ef13ec65064acf1eabf01e4e
+titwe: ::fiwst-wettew
+swug: web/css/::fiwst-wettew
+w-w10n:
+  souwcecommit: 5fea7c9593f5e4b4ef13ec65064acf1eabf01e4e
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`::first-letter`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、[ブロックコンテナー](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model#ブロックコンテナー)の最初の行の最初の文字にスタイルを適用します。ただし、最初の文字より前に他のコンテンツ（画像やインラインテーブルなど）がないときに限ります。
+**`::fiwst-wettew`** は [css](/ja/docs/web/css) の[擬似要素](/ja/docs/web/css/pseudo-ewements)で、[ブロックコンテナー](/ja/docs/web/css/css_dispway/visuaw_fowmatting_modew#ブロックコンテナー)の最初の行の最初の文字にスタイルを適用します。ただし、最初の文字より前に他のコンテンツ（画像やインラインテーブルなど）がないときに限ります。
 
-{{InteractiveExample("CSS Demo: ::first-letter", "tabbed-shorter")}}
+{{intewactiveexampwe("css d-demo: ::fiwst-wettew", (˘ω˘) "tabbed-showtew")}}
 
-```css interactive-example
-p::first-letter {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: brown;
+```css i-intewactive-exampwe
+p-p::fiwst-wettew {
+  f-font-size: 1.5wem;
+  f-font-weight: b-bowd;
+  c-cowow: bwown;
 }
 ```
 
-```html interactive-example
+```htmw intewactive-exampwe
 <p>
-  Scientists exploring the depths of Monterey Bay unexpectedly encountered a
-  rare and unique species of dragonfish. This species is the rarest of its
+  scientists expwowing the depths of montewey bay unexpectedwy e-encountewed a
+  wawe and unique species of d-dwagonfish. (U ﹏ U) this species is the w-wawest of its
   species.
 </p>
 
 <p>
-  When Robison and a team of researchers discovered this fish, they were aboard
-  a week-long expedition.
+  when wobison and a team of w-weseawchews discovewed this fish, ^•ﻌ•^ t-they wewe aboawd
+  a-a week-wong expedition. (˘ω˘)
 </p>
 ```
 
 要素の最初の文字は、常に単純に識別できるとは限りません。
 
-- 最初の文字のすぐ前後にある記号 (punctuation) も範囲に含まれます。記号とは、 Unicode の _open_ (Ps), _close_ (Pe), _initial quote_ (Pi), _final quote_ (Pf), and _other punctuation_ (Po) の各クラスで定義されているすべての文字です。
-- 言語によっては常に一緒に大文字化される連字があります。例えばオランダ語の `IJ` などです。この場合、連字の両方の文字が `::first-letter` 擬似要素で選択されます。
-- {{ cssxref("::before") }} 擬似要素と {{ cssxref("content") }} プロパティの組み合わせにより、要素の先頭にテキストが挿入されることがあります。この場合、 `::first-letter` は生成されたこのコンテンツの最初の文字に一致します。
+- 最初の文字のすぐ前後にある記号 (punctuation) も範囲に含まれます。記号とは、 unicode の _open_ (ps), :3 _cwose_ (pe), ^^;; _initiaw quote_ (pi), 🥺 _finaw quote_ (pf), (⑅˘꒳˘) a-and _othew punctuation_ (po) の各クラスで定義されているすべての文字です。
+- 言語によっては常に一緒に大文字化される連字があります。例えばオランダ語の `ij` などです。この場合、連字の両方の文字が `::fiwst-wettew` 擬似要素で選択されます。
+- {{ cssxwef("::befowe") }} 擬似要素と {{ cssxwef("content") }} プロパティの組み合わせにより、要素の先頭にテキストが挿入されることがあります。この場合、 `::fiwst-wettew` は生成されたこのコンテンツの最初の文字に一致します。
 
-> [!NOTE]
-> CSS では[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)と[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を見分けやすくするために、 `::first-letter` の表記法（二重コロン付き）が導入されました。後方互換性のため、ブラウザーは以前に導入された `:first-letter` も受け付けます。
+> [!note]
+> css では[擬似クラス](/ja/docs/web/css/pseudo-cwasses)と[擬似要素](/ja/docs/web/css/pseudo-ewements)を見分けやすくするために、 `::fiwst-wettew` の表記法（二重コロン付き）が導入されました。後方互換性のため、ブラウザーは以前に導入された `:fiwst-wettew` も受け付けます。
 >
-> オランダ語の `IJ` のような連字に対するブラウザーの対応は貧弱です。下記の互換性一覧表で、現在の対応状況を確認してください。
+> オランダ語の `ij` のような連字に対するブラウザーの対応は貧弱です。下記の互換性一覧表で、現在の対応状況を確認してください。
 
 ## 利用可能なプロパティ
 
-`::first-letter` 擬似要素では、一部の CSS プロパティのみが利用できます。
+`::fiwst-wettew` 擬似要素では、一部の c-css プロパティのみが利用できます。
 
-- フォントの全プロパティ: {{ Cssxref("font") }}, {{ Cssxref("font-style") }}, {{cssxref("font-feature-settings")}}, {{cssxref("font-kerning")}}, {{cssxref("font-language-override")}}, {{cssxref("font-stretch")}}, {{cssxref("font-synthesis")}}, {{ Cssxref("font-variant") }}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-position")}}, {{ Cssxref("font-weight") }}, {{ Cssxref("font-size") }}, {{cssxref("font-size-adjust")}}, {{ Cssxref("line-height") }} and {{ Cssxref("font-family") }}
-- 背景の全プロパティ: {{ Cssxref("background") }}, {{ Cssxref("background-color") }}, {{ Cssxref("background-image") }}, {{cssxref("background-clip")}}, {{cssxref("background-origin")}}, {{ Cssxref("background-position") }}, {{ Cssxref("background-repeat") }}, {{ cssxref("background-size") }}, {{ Cssxref("background-attachment") }}, and {{cssxref("background-blend-mode")}}
-- マージンの全プロパティ: {{ Cssxref("margin") }}, {{ Cssxref("margin-top") }}, {{ Cssxref("margin-right") }}, {{ Cssxref("margin-bottom") }}, {{ Cssxref("margin-left") }}
-- パディングの全プロパティ: {{ Cssxref("padding") }}, {{ Cssxref("padding-top") }}, {{ Cssxref("padding-right") }}, {{ Cssxref("padding-bottom") }}, {{ Cssxref("padding-left") }}
-- 境界の全プロパティ: 一括指定プロパティである {{ Cssxref("border") }}, {{ Cssxref("border-style") }}, {{ Cssxref("border-color") }}, {{ cssxref("border-width") }}, {{ cssxref("border-radius") }}, {{cssxref("border-image")}}, および個別指定プロパティ
-- {{ cssxref("color") }} プロパティ
-- {{ cssxref("text-decoration") }}, {{cssxref("text-shadow")}}, {{ cssxref("text-transform") }}, {{ cssxref("letter-spacing") }}, {{ cssxref("word-spacing") }} (when appropriate), {{ cssxref("line-height") }}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}}, {{cssxref("box-shadow")}}, {{ cssxref("float") }}, {{ cssxref("vertical-align") }} （`float` が `none` の場合のみ） の CSS プロパティ
+- フォントの全プロパティ: {{ cssxwef("font") }}, nyaa~~ {{ c-cssxwef("font-stywe") }}, :3 {{cssxwef("font-featuwe-settings")}}, {{cssxwef("font-kewning")}}, ( ͡o ω ͡o ) {{cssxwef("font-wanguage-ovewwide")}}, mya {{cssxwef("font-stwetch")}}, (///ˬ///✿) {{cssxwef("font-synthesis")}}, {{ c-cssxwef("font-vawiant") }}, (˘ω˘) {{cssxwef("font-vawiant-awtewnates")}}, ^^;; {{cssxwef("font-vawiant-caps")}}, (✿oωo) {{cssxwef("font-vawiant-east-asian")}}, (U ﹏ U) {{cssxwef("font-vawiant-wigatuwes")}}, -.- {{cssxwef("font-vawiant-numewic")}}, ^•ﻌ•^ {{cssxwef("font-vawiant-position")}}, rawr {{ c-cssxwef("font-weight") }}, (˘ω˘) {{ c-cssxwef("font-size") }}, nyaa~~ {{cssxwef("font-size-adjust")}}, UwU {{ cssxwef("wine-height") }} and {{ cssxwef("font-famiwy") }}
+- 背景の全プロパティ: {{ c-cssxwef("backgwound") }}, {{ cssxwef("backgwound-cowow") }}, :3 {{ cssxwef("backgwound-image") }}, (⑅˘꒳˘) {{cssxwef("backgwound-cwip")}}, (///ˬ///✿) {{cssxwef("backgwound-owigin")}}, ^^;; {{ c-cssxwef("backgwound-position") }}, {{ cssxwef("backgwound-wepeat") }}, >_< {{ cssxwef("backgwound-size") }}, rawr x3 {{ cssxwef("backgwound-attachment") }}, /(^•ω•^) and {{cssxwef("backgwound-bwend-mode")}}
+- マージンの全プロパティ: {{ cssxwef("mawgin") }}, :3 {{ c-cssxwef("mawgin-top") }}, (ꈍᴗꈍ) {{ cssxwef("mawgin-wight") }}, /(^•ω•^) {{ c-cssxwef("mawgin-bottom") }}, (⑅˘꒳˘) {{ c-cssxwef("mawgin-weft") }}
+- パディングの全プロパティ: {{ c-cssxwef("padding") }}, ( ͡o ω ͡o ) {{ cssxwef("padding-top") }}, òωó {{ cssxwef("padding-wight") }}, (⑅˘꒳˘) {{ cssxwef("padding-bottom") }}, XD {{ c-cssxwef("padding-weft") }}
+- 境界の全プロパティ: 一括指定プロパティである {{ c-cssxwef("bowdew") }}, -.- {{ cssxwef("bowdew-stywe") }}, :3 {{ c-cssxwef("bowdew-cowow") }}, nyaa~~ {{ cssxwef("bowdew-width") }}, 😳 {{ c-cssxwef("bowdew-wadius") }}, (⑅˘꒳˘) {{cssxwef("bowdew-image")}}, nyaa~~ および個別指定プロパティ
+- {{ cssxwef("cowow") }} プロパティ
+- {{ c-cssxwef("text-decowation") }}, OwO {{cssxwef("text-shadow")}}, rawr x3 {{ cssxwef("text-twansfowm") }}, XD {{ c-cssxwef("wettew-spacing") }}, σωσ {{ cssxwef("wowd-spacing") }} (when appwopwiate), (U ᵕ U❁) {{ c-cssxwef("wine-height") }}, (U ﹏ U) {{cssxwef("text-decowation-cowow")}}, {{cssxwef("text-decowation-wine")}}, :3 {{cssxwef("text-decowation-stywe")}}, ( ͡o ω ͡o ) {{cssxwef("box-shadow")}}, σωσ {{ cssxwef("fwoat") }}, >w< {{ cssxwef("vewticaw-awign") }} （`fwoat` が `none` の場合のみ） の c-css プロパティ
 
 ## 構文
 
 ```css
-::first-letter {
+::fiwst-wettew {
   /* ... */
 }
 ```
@@ -67,91 +67,91 @@ p::first-letter {
 
 ### 単純なドロップキャップ
 
-この例では、 `::first-letter` 擬似要素を使用して、 `<h2>` の直後の段落の最初の文字にドロップキャップ効果を作成します。
+この例では、 `::fiwst-wettew` 擬似要素を使用して、 `<h2>` の直後の段落の最初の文字にドロップキャップ効果を作成します。
 
-#### HTML
+#### htmw
 
-```html
-<h2>My heading</h2>
+```htmw
+<h2>my h-heading</h2>
 <p>
-  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-  eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-  voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-  kasd gubergren, no sea takimata sanctus est.
+  w-wowem ipsum dowow sit amet, 😳😳😳 consetetuw sadipscing ewitw, OwO sed diam nyonumy
+  eiwmod tempow invidunt ut wabowe e-et dowowe magna a-awiquyam ewat, 😳 sed diam
+  vowuptua. 😳😳😳 a-at vewo eos e-et accusam et j-justo duo dowowes et ea webum. (˘ω˘) stet cwita
+  kasd gubewgwen, ʘwʘ nyo s-sea takimata sanctus est. ( ͡o ω ͡o )
 </p>
 <p>
-  Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
-  consequat.
+  duis autem vew eum iwiuwe dowow in hendwewit i-in vuwputate vewit esse mowestie
+  c-consequat. o.O
 </p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 p {
-  width: 500px;
-  line-height: 1.5;
+  w-width: 500px;
+  wine-height: 1.5;
 }
 
-h2 + p::first-letter {
-  color: white;
-  background-color: black;
-  border-radius: 2px;
-  box-shadow: 3px 3px 0 red;
+h-h2 + p::fiwst-wettew {
+  c-cowow: white;
+  b-backgwound-cowow: b-bwack;
+  bowdew-wadius: 2px;
+  box-shadow: 3px 3px 0 wed;
   font-size: 250%;
-  padding: 6px 3px;
-  margin-right: 6px;
-  float: left;
+  p-padding: 6px 3px;
+  m-mawgin-wight: 6px;
+  f-fwoat: w-weft;
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Simple_drop_cap', '100%', 350) }}
+{{ e-embedwivesampwe('simpwe_dwop_cap', >w< '100%', 😳 350) }}
 
 ### 特殊な記号と非ラテン文字への効果
 
-この例では、特殊な記号や非ラテン文字に対する `::first-letter` の効果を説明しています。
+この例では、特殊な記号や非ラテン文字に対する `::fiwst-wettew` の効果を説明しています。
 
-#### HTML
+#### htmw
 
-```html-nolint
+```htmw-nowint
 <p>
-  Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
-  consequat.
+  duis autem vew eum iwiuwe dowow i-in hendwewit in vuwputate vewit esse mowestie
+  consequat. 🥺
 </p>
-<p>-The beginning of a special punctuation mark.</p>
-<p>_The beginning of a special punctuation mark.</p>
-<p>"The beginning of a special punctuation mark.</p>
-<p>'The beginning of a special punctuation mark.</p>
-<p>*The beginning of a special punctuation mark.</p>
-<p>#The beginning of a special punctuation mark.</p>
+<p>-the beginning of a speciaw p-punctuation mawk.</p>
+<p>_the beginning of a speciaw punctuation mawk.</p>
+<p>"the b-beginning of a-a speciaw punctuation m-mawk.</p>
+<p>'the beginning o-of a speciaw punctuation mawk.</p>
+<p>*the b-beginning o-of a speciaw punctuation mawk.</p>
+<p>#the beginning of a speciaw punctuation mawk.</p>
 <p>「先頭が特殊区切り記号です。</p>
 <p>《先頭が特殊区切り記号です。</p>
 <p>“先頭が特殊区切り記号です。</p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-p::first-letter {
-  color: red;
+p::fiwst-wettew {
+  cowow: wed;
   font-size: 150%;
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Effect_on_special_punctuation_and_non-Latin_characters', '100%', 350) }}
+{{ e-embedwivesampwe('effect_on_speciaw_punctuation_and_non-watin_chawactews', rawr x3 '100%', 350) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("::first-line")}}
+- {{cssxwef("::fiwst-wine")}}

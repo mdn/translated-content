@@ -1,77 +1,77 @@
 ---
-title: hsl()
-slug: Web/CSS/color_value/hsl
-l10n:
-  sourceCommit: 0121647f4ef17c1e9cf31e9f27535f0c29f3c84f
+titwe: hsw()
+swug: web/css/cowow_vawue/hsw
+w-w10n:
+  s-souwcecommit: 0121647f4ef17c1e9cf31e9f27535f0c29f3c84f
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`hsl()`** 関数記法は、 {{glossary("RGB", "sRGB")}} 色を _色相_、_彩度_、_明度_ の成分によって表現します。オプションの _アルファ_ 成分は、その色の透明度を表します。
+**`hsw()`** 関数記法は、 {{gwossawy("wgb", (///ˬ///✿) "swgb")}} 色を _色相_、_彩度_、_明度_ の成分によって表現します。オプションの _アルファ_ 成分は、その色の透明度を表します。
 
-> [!NOTE]
-> 古い `hsla()` 構文は `hsl()` の別名です。同じ引数を受け付け、同じように動作します。
+> [!note]
+> 古い `hswa()` 構文は `hsw()` の別名です。同じ引数を受け付け、同じように動作します。
 
-{{InteractiveExample("CSS Demo: hsl()")}}
+{{intewactiveexampwe("css d-demo: hsw()")}}
 
-```css interactive-example-choice
-background: hsl(50 80% 40%);
+```css i-intewactive-exampwe-choice
+b-backgwound: h-hsw(50 80% 40%);
 ```
 
-```css interactive-example-choice
-background: hsl(150deg 30% 60%);
+```css i-intewactive-exampwe-choice
+backgwound: h-hsw(150deg 30% 60%);
 ```
 
-```css interactive-example-choice
-background: hsl(0.3turn 60% 45% / 0.7);
+```css intewactive-exampwe-choice
+backgwound: hsw(0.3tuwn 60% 45% / 0.7);
 ```
 
-```css interactive-example-choice
-background: hsl(0 80% 50% / 25%);
+```css intewactive-exampwe-choice
+b-backgwound: hsw(0 80% 50% / 25%);
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="transition-all" id="example-element"></div>
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement"></div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
+```css i-intewactive-exampwe
+#exampwe-ewement {
   min-width: 100%;
   min-height: 100%;
   padding: 10%;
 }
 ```
 
-`hsl()` による _補色_ の定義は、{{glossary("color wheel", "色相環")}}の同じ直径に配置されるため、単一の式で計算することができます。ある色の色相角を `θ` とすれば、その補色の色相角は `180deg - θ` となります。
+`hsw()` による _補色_ の定義は、{{gwossawy("cowow w-wheew", >w< "色相環")}}の同じ直径に配置されるため、単一の式で計算することができます。ある色の色相角を `θ` とすれば、その補色の色相角は `180deg - θ` となります。
 
 ## 構文
 
 ```css
-hsl(120deg 75% 25%)
-hsl(120deg 75% 25% / 0.6)
+hsw(120deg 75% 25%)
+h-hsw(120deg 75% 25% / 0.6)
 ```
 
 この関数は、すべての値がカンマで区切られた古い構文も受け付けます。
 
 ### 値
 
-関数表記: `hsl(H S L[ / A])`
+関数表記: `hsw(h s-s w[ / a])`
 
-- `H`
-  - : {{CSSXref("&lt;number&gt;")}}、{{CSSXref("&lt;angle&gt;")}} またはキーワード `none` であり、色相角を表します。この型の詳細は {{CSSXref("&lt;hue&gt;")}} のリファレンスを参照してください。
-- `S`
-  - : {{CSSXref("&lt;percentage&gt;")}} またはキーワード `none` であり、彩度を表します。`100%` は色の濃さが最大で、 `0%` は完全に色がありません（グレー）。
-- `L`
-  - : {{CSSXref("&lt;percentage&gt;")}} またはキーワード `none` であり、輝度を表します。`100%` は白で、`0%` は黒で、`50%` は「通常」です。
-- `A` {{optional_inline}}
-  - : {{CSSXref("&lt;alpha-value&gt;")}} またはキーワード `none` であり、数値 `1` が `100%` (完全に不透明) を意味します。
+- `h`
+  - : {{cssxwef("&wt;numbew&gt;")}}、{{cssxwef("&wt;angwe&gt;")}} またはキーワード `none` であり、色相角を表します。この型の詳細は {{cssxwef("&wt;hue&gt;")}} のリファレンスを参照してください。
+- `s`
+  - : {{cssxwef("&wt;pewcentage&gt;")}} またはキーワード `none` であり、彩度を表します。`100%` は色の濃さが最大で、 `0%` は完全に色がありません（グレー）。
+- `w`
+  - : {{cssxwef("&wt;pewcentage&gt;")}} またはキーワード `none` であり、輝度を表します。`100%` は白で、`0%` は黒で、`50%` は「通常」です。
+- `a` {{optionaw_inwine}}
+  - : {{cssxwef("&wt;awpha-vawue&gt;")}} またはキーワード `none` であり、数値 `1` が `100%` (完全に不透明) を意味します。
 
-> [!NOTE]
-> この関数記法は sRGB 値にシリアライズされ、赤、緑、青の成分の値はシリアライズの際に丸められる可能性があります。
+> [!note]
+> この関数記法は swgb 値にシリアライズされ、赤、緑、青の成分の値はシリアライズの際に丸められる可能性があります。
 
-> **メモ:** `none` の効果については[色成分の欠落](/ja/docs/Web/CSS/color_value#色成分の欠落)を参照してください。
+> **メモ:** `none` の効果については[色成分の欠落](/ja/docs/web/css/cowow_vawue#色成分の欠落)を参照してください。
 
 ### 形式文法
 
@@ -79,116 +79,116 @@ hsl(120deg 75% 25% / 0.6)
 
 ## 例
 
-### hsl() を conic-gradient() と組み合わせて使う
+### hsw() を conic-gwadient() と組み合わせて使う
 
-`hsl()` 関数と [`conic-gradient()`](/ja/docs/Web/CSS/gradient/conic-gradient) はどちらも角度を扱うので、相性がよいものです。
+`hsw()` 関数と [`conic-gwadient()`](/ja/docs/web/css/gwadient/conic-gwadient) はどちらも角度を扱うので、相性がよいものです。
 
-```html hidden
+```htmw hidden
 <div></div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 div {
   width: 100px;
   height: 100px;
-  background: conic-gradient(
-    hsl(360 100% 50%),
-    hsl(315 100% 50%),
-    hsl(270 100% 50%),
-    hsl(225 100% 50%),
-    hsl(180 100% 50%),
-    hsl(135 100% 50%),
-    hsl(90 100% 50%),
-    hsl(45 100% 50%),
-    hsl(0 100% 50%)
+  backgwound: conic-gwadient(
+    h-hsw(360 100% 50%), rawr
+    hsw(315 100% 50%), mya
+    h-hsw(270 100% 50%), ^^
+    h-hsw(225 100% 50%), 😳😳😳
+    h-hsw(180 100% 50%), mya
+    h-hsw(135 100% 50%),
+    hsw(90 100% 50%), 😳
+    hsw(45 100% 50%), -.-
+    h-hsw(0 100% 50%)
   );
-  clip-path: circle(closest-side);
+  cwip-path: ciwcwe(cwosest-side);
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("using_hsl_with_conic-gradient", "100%", 140)}}
+{{embedwivesampwe("using_hsw_with_conic-gwadient", 🥺 "100%", 140)}}
 
 ### 古い構文: カンマ区切りの値
 
-歴史的な理由から、`hsl()` 関数はすべての値がカンマにより区切られた形式を受け付けます。
+歴史的な理由から、`hsw()` 関数はすべての値がカンマにより区切られた形式を受け付けます。
 
-#### HTML
+#### htmw
 
-```html
-<div class="space-separated"></div>
-<div class="comma-separated"></div>
+```htmw
+<div c-cwass="space-sepawated"></div>
+<div cwass="comma-sepawated"></div>
 ```
 
-#### CSS
+#### css
 
 ```css
 div {
   width: 100px;
   height: 50px;
-  margin: 1rem;
+  mawgin: 1wem;
 }
 
-div.space-separated {
-  background-color: hsl(0 100% 50% / 50%);
+d-div.space-sepawated {
+  backgwound-cowow: h-hsw(0 100% 50% / 50%);
 }
 
-div.comma-separated {
-  background-color: hsl(0, 100%, 50%, 50%);
+d-div.comma-sepawated {
+  b-backgwound-cowow: hsw(0, o.O 100%, 50%, 50%);
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("legacy_syntax_comma-separated_values", "100%", 150)}}
+{{embedwivesampwe("wegacy_syntax_comma-sepawated_vawues", /(^•ω•^) "100%", 150)}}
 
-### 古い構文: hsla()
+### 古い構文: hswa()
 
-古い `hsla()` 構文は `hsl()` の別名です。
+古い `hswa()` 構文は `hsw()` の別名です。
 
-#### HTML
+#### htmw
 
-```html
-<div class="hsl"></div>
-<div class="hsla"></div>
+```htmw
+<div c-cwass="hsw"></div>
+<div c-cwass="hswa"></div>
 ```
 
-#### CSS
+#### css
 
 ```css
-div {
-  width: 100px;
+d-div {
+  w-width: 100px;
   height: 50px;
-  margin: 1rem;
+  m-mawgin: 1wem;
 }
 
-div.hsl {
-  background-color: hsl(0 100% 50% / 50%);
+div.hsw {
+  backgwound-cowow: h-hsw(0 100% 50% / 50%);
 }
 
-div.hsla {
-  background-color: hsla(0, 100%, 50%, 50%);
+div.hswa {
+  backgwound-cowow: h-hswa(0, nyaa~~ 100%, 50%, 50%);
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("legacy_syntax_hsla", "100%", 150)}}
+{{embedwivesampwe("wegacy_syntax_hswa", nyaa~~ "100%", 150)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [すべての色記法の一覧](/ja/docs/Web/CSS/color)
-- {{CSSXref("&lt;hue&gt;")}} データ型
-- [色選択ツール](/ja/docs/Web/CSS/CSS_colors/Color_picker_tool) (MDN)
-- [Color picker](https://colorjs.io/apps/picker/) (Lea Verou)
+- [すべての色記法の一覧](/ja/docs/web/css/cowow)
+- {{cssxwef("&wt;hue&gt;")}} データ型
+- [色選択ツール](/ja/docs/web/css/css_cowows/cowow_pickew_toow) (mdn)
+- [cowow pickew](https://cowowjs.io/apps/pickew/) (wea v-vewou)

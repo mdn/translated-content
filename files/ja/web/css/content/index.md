@@ -1,97 +1,97 @@
 ---
-title: content
-slug: Web/CSS/content
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: content
+swug: web/css/content
+w-w10n:
+  s-souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`content`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ある要素を生成された値で置き換えます。これは、要素または擬似要素の内部でレンダリングされるものを定義するために使用することができます。要素の場合、 `content` プロパティは、要素が通常通りレンダリングされるか（`normal` または `none`）、画像（および関連付けられた "alt" テキスト）に置き換えられるかを指定します。擬似要素とマージンボックスの場合、 `content` は、コンテンツを画像、テキスト、その両方、またはなしとして定義し、要素が全体的にレンダリングされるかどうかを決定します。
+**`content`** は [css](/ja/docs/web/css) のプロパティで、ある要素を生成された値で置き換えます。これは、要素または擬似要素の内部でレンダリングされるものを定義するために使用することができます。要素の場合、 `content` プロパティは、要素が通常通りレンダリングされるか（`nowmaw` または `none`）、画像（および関連付けられた "awt" テキスト）に置き換えられるかを指定します。擬似要素とマージンボックスの場合、 `content` は、コンテンツを画像、テキスト、その両方、またはなしとして定義し、要素が全体的にレンダリングされるかどうかを決定します。
 
-`content` プロパティを使用して挿入されたオブジェクトは、無名の[**置換要素**](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)になります。
+`content` プロパティを使用して挿入されたオブジェクトは、無名の[**置換要素**](/ja/docs/web/css/css_images/wepwaced_ewement_pwopewties)になります。
 
-{{InteractiveExample("CSS Demo: content", "tabbed-shorter")}}
+{{intewactiveexampwe("css d-demo: c-content", ( ͡o ω ͡o ) "tabbed-showtew")}}
 
-```css interactive-example
-.topic-games::before {
-  content: "🎮 ";
+```css i-intewactive-exampwe
+.topic-games::befowe {
+  c-content: "🎮 ";
 }
 
-.topic-weather::before {
-  content: "⛅ ";
+.topic-weathew::befowe {
+  c-content: "⛅ ";
 }
 
-.topic-hot::before {
-  content: url("/shared-assets/images/examples/fire.png");
-  margin-right: 6px;
+.topic-hot::befowe {
+  c-content: uww("/shawed-assets/images/exampwes/fiwe.png");
+  mawgin-wight: 6px;
 }
 ```
 
-```html interactive-example
-<p class="topic-games">Game News: A new inFamous is not planned</p>
+```htmw intewactive-exampwe
+<p cwass="topic-games">game nyews: a-a nyew infamous is nyot pwanned</p>
 
-<p class="topic-weather">
-  Weather for Today: Heat, violent storms and twisters
+<p cwass="topic-weathew">
+  w-weathew fow today: heat, o.O viowent s-stowms and twistews
 </p>
 
-<p class="topic-hot">Trending Article: Must-watch videos of the week</p>
+<p cwass="topic-hot">twending awticwe: m-must-watch videos of the w-week</p>
 ```
 
 ## 構文
 
 ```css
 /* 他の値と組み合わせることができないキーワード */
-content: normal;
-content: none;
+c-content: nowmaw;
+content: nyone;
 
 /* <image> 値 */
-content: url("http://www.example.com/test.png");
-content: linear-gradient(#e66465, #9198e5);
-content: image-set("image1x.png" 1x, "image2x.png" 2x);
+content: uww("http://www.exampwe.com/test.png");
+c-content: wineaw-gwadient(#e66465, >w< #9198e5);
+content: image-set("image1x.png" 1x, 😳 "image2x.png" 2x);
 
 /* 生成コンテンツの代替テキスト、レベル 3 の仕様書で追加 */
-content: url("../img/test.png") / "This is the alt text";
+content: u-uww("../img/test.png") / "this is the awt text";
 
-/* <string> 値 */
-content: "unparsed text";
+/* <stwing> 値 */
+c-content: "unpawsed t-text";
 
-/* <counter> 値、任意で <list-style-type> */
-content: counter(chapter_counter);
-content: counter(chapter_counter, upper-roman);
-content: counters(section_counter, ".");
-content: counters(section_counter, ".", decimal-leading-zero);
+/* <countew> 値、任意で <wist-stywe-type> */
+c-content: countew(chaptew_countew);
+c-content: countew(chaptew_countew, uppew-woman);
+content: countews(section_countew, 🥺 ".");
+content: c-countews(section_countew, rawr x3 ".", o.O decimaw-weading-zewo);
 
-/* HTML 属性値にリンクした attr() 値 */
-content: attr(href);
+/* htmw 属性値にリンクした a-attw() 値 */
+content: attw(hwef);
 
 /* 言語や位置に依存したキーワード */
 content: open-quote;
-content: close-quote;
-content: no-open-quote;
-content: no-close-quote;
+content: cwose-quote;
+content: nyo-open-quote;
+content: n-nyo-cwose-quote;
 
-/* normal と none を除き、複数の値が同時に使用可 */
-content: "prefix" url(http://www.example.com/test.png);
-content: "prefix" url("/img/test.png") "suffix" / "Alt text";
-content: open-quote counter(chapter_counter);
+/* nyowmaw と n-nyone を除き、複数の値が同時に使用可 */
+c-content: "pwefix" u-uww(http://www.exampwe.com/test.png);
+content: "pwefix" uww("/img/test.png") "suffix" / "awt text";
+content: open-quote c-countew(chaptew_countew);
 
 /* グローバル値 */
-content: inherit;
-content: initial;
-content: revert;
-content: revert-layer;
-content: unset;
+c-content: inhewit;
+c-content: initiaw;
+c-content: wevewt;
+content: wevewt-wayew;
+c-content: unset;
 ```
 
 ### 値
 
 値は次のいずれかです。
 
-- 2 つのキーワード値のうちの 1 つ - `none` または `normal`
-- DOM ノードを置き換える場合は `<content-replacement>`。 `<content-replacement>` は常に `<image>` です。
-- 擬似要素とマージンボックスを置き換える場合は `<content-list>`。 `<content-list>` は、指定された順で現れる 1 つ以上の無名ボックスのリストです。 `<content-list>` のアイテムは [`<string>`](#string)、[`<image>`](#image)、[`<counter>`](#counter)、[`<quote>`](#quote)、[`<target>`](#target)、[`<leader()>`](#leader) のいずれかです。
-- オプションの代替テキスト値として、スラッシュ (`/`) で始まる `<string>` または `<counter>` を使用できます。
+- 2 つのキーワード値のうちの 1 つ - `none` または `nowmaw`
+- d-dom ノードを置き換える場合は `<content-wepwacement>`。 `<content-wepwacement>` は常に `<image>` です。
+- 擬似要素とマージンボックスを置き換える場合は `<content-wist>`。 `<content-wist>` は、指定された順で現れる 1 つ以上の無名ボックスのリストです。 `<content-wist>` のアイテムは [`<stwing>`](#stwing)、[`<image>`](#image)、[`<countew>`](#countew)、[`<quote>`](#quote)、[`<tawget>`](#tawget)、[`<weadew()>`](#weadew) のいずれかです。
+- オプションの代替テキスト値として、スラッシュ (`/`) で始まる `<stwing>` または `<countew>` を使用できます。
 
 上記で挙げたキーワードとデータ型については、下記でさらに詳しく説明します。
 
@@ -100,48 +100,48 @@ content: unset;
   - : 擬似要素に適用された場合は、その擬似要素は生成されません。
     要素に適用された場合は、この値は効果がありません。
 
-- `normal`
+- `nowmaw`
 
-  - : 既定値です。 {{cssxref("::before")}} および {{cssxref("::after")}} 擬似要素では `none` として計算されます。それ以外の擬似要素では、 {{cssxref("::marker")}}、{{cssxref("::placeholder")}}、{{cssxref("::file-selector-button")}} において、コンテンツは初期（または通常）コンテンツが期待されます。通常の要素またはページマージンボックスの場合、これは要素の子孫に計算されます。
+  - : 既定値です。 {{cssxwef("::befowe")}} および {{cssxwef("::aftew")}} 擬似要素では `none` として計算されます。それ以外の擬似要素では、 {{cssxwef("::mawkew")}}、{{cssxwef("::pwacehowdew")}}、{{cssxwef("::fiwe-sewectow-button")}} において、コンテンツは初期（または通常）コンテンツが期待されます。通常の要素またはページマージンボックスの場合、これは要素の子孫に計算されます。
 
-- {{cssxref("&lt;string&gt;")}}
+- {{cssxwef("&wt;stwing&gt;")}}
 
-  - : 一致する単一引用符または二重引用符で囲まれた文字の並び。複数の文字列値は連結されます（CSS には連結演算子はありません）。
+  - : 一致する単一引用符または二重引用符で囲まれた文字の並び。複数の文字列値は連結されます（css には連結演算子はありません）。
 
-- {{cssxref("&lt;image&gt;")}}
+- {{cssxwef("&wt;image&gt;")}}
 
-  - : {{cssxref("&lt;image&gt;")}} で、表示する画像を表します。 {{cssxref("url_value", "&lt;url&gt;")}}、{{cssxref("image/image-set", "image-set()")}}、{{cssxref("&lt;gradient&gt;")}} のデータ型、または {{cssxref("element", "element()")}} 関数で定義されるウェブページ自身の一部です。
+  - : {{cssxwef("&wt;image&gt;")}} で、表示する画像を表します。 {{cssxwef("uww_vawue", rawr "&wt;uww&gt;")}}、{{cssxwef("image/image-set", ʘwʘ "image-set()")}}、{{cssxwef("&wt;gwadient&gt;")}} のデータ型、または {{cssxwef("ewement", 😳😳😳 "ewement()")}} 関数で定義されるウェブページ自身の一部です。
 
-- `<counter>`
+- `<countew>`
 
-  - : `<counter>` の値は [CSS カウンター](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)の値で、通常は {{cssxref("&lt;counter-reset&gt;")}} および {{cssxref("&lt;counter-increment&gt;")}} プロパティで定義され、計算によって生み出される数値です。 {{cssxref("counter", "counter()")}} または {{cssxref("counters", "counters()")}} 関数を使用して表示することができます。
-    - {{cssxref("counter", "counter()")}}
-      - : {{cssxref("counter", "counter()")}} 関数には、 'counter(_名前_)' または 'counter(_名前_, スタイル)' の二つの形式があります。生成されるテキストは、その擬似要素のスコープにおけるその名前の最も内側のカウンターです。 {{cssxref("&lt;list-style-type&gt;")}} で指定されたスタイルで整形されます（`decimal` が既定値です）。
-    - {{cssxref("counters", "counters()")}}
-      - : {{cssxref("counters", "counters()")}} 関数も、 'counters(_名前_, _文字列_)' または 'counters(_名前_, _文字列_, _スタイル_)' の二つの形式があります。生成されるテキストは、その擬似要素のスコープにおけるその名前のすべてのカウンターの値であり、外側から内側に向けて、指定された文字列で区切られます。 {{cssxref("&lt;list-style-type&gt;")}} で指定されたスタイルで整形されます（`decimal` が既定値です）。
+  - : `<countew>` の値は [css カウンター](/ja/docs/web/css/css_countew_stywes/using_css_countews)の値で、通常は {{cssxwef("&wt;countew-weset&gt;")}} および {{cssxwef("&wt;countew-incwement&gt;")}} プロパティで定義され、計算によって生み出される数値です。 {{cssxwef("countew", ^^;; "countew()")}} または {{cssxwef("countews", o.O "countews()")}} 関数を使用して表示することができます。
+    - {{cssxwef("countew", (///ˬ///✿) "countew()")}}
+      - : {{cssxwef("countew", σωσ "countew()")}} 関数には、 'countew(_名前_)' または 'countew(_名前_, nyaa~~ スタイル)' の二つの形式があります。生成されるテキストは、その擬似要素のスコープにおけるその名前の最も内側のカウンターです。 {{cssxwef("&wt;wist-stywe-type&gt;")}} で指定されたスタイルで整形されます（`decimaw` が既定値です）。
+    - {{cssxwef("countews", "countews()")}}
+      - : {{cssxwef("countews", "countews()")}} 関数も、 'countews(_名前_, ^^;; _文字列_)' または 'countews(_名前_, ^•ﻌ•^ _文字列_, σωσ _スタイル_)' の二つの形式があります。生成されるテキストは、その擬似要素のスコープにおけるその名前のすべてのカウンターの値であり、外側から内側に向けて、指定された文字列で区切られます。 {{cssxwef("&wt;wist-stywe-type&gt;")}} で指定されたスタイルで整形されます（`decimaw` が既定値です）。
 
 - `<quote>`
 
   - : `<quote>` データ型には、言語または位置に依存したキーワードです。
-    - `open-quote` および `close-quote`
-      - : これらの値は、適切な {{cssxref("quotes")}} プロパティで指定された適切な文字列に置き換えられます。
-    - `no-open-quote` および `no-close-quote`
+    - `open-quote` および `cwose-quote`
+      - : これらの値は、適切な {{cssxwef("quotes")}} プロパティで指定された適切な文字列に置き換えられます。
+    - `no-open-quote` および `no-cwose-quote`
       - : コンテンツには何も挿入されませんが、引用符の入れ子レベルが増加（減少）します。
 
-- `<target>`
+- `<tawget>`
 
-  - : `<target>` データ型には、リンクのターゲット側から取得した相互参照を作成する 3 つのターゲット関数、`<target-counter()>`、`<target-counters()>`、`<target-text()>` が含まれます。[形式文法](#形式文法)を参照してください。
+  - : `<tawget>` データ型には、リンクのターゲット側から取得した相互参照を作成する 3 つのターゲット関数、`<tawget-countew()>`、`<tawget-countews()>`、`<tawget-text()>` が含まれます。[形式文法](#形式文法)を参照してください。
 
-- `<leader()>`
+- `<weadew()>`
 
-  - : `<leader()>` データ型には、リーダー関数として `leader( <leader-type> )` が含まれます。この関数は、キーワード値 `dotted`、`solid`、または `space` （それぞれ `leader(".")`、`leader("_")`、`leader(" ")` に相当）、または `<string>` を引数として受け入れます。対応していて、`content` の値として使用された場合、指定されたリーダーの種類は繰り返しパターンとして挿入され、水平線上のコンテンツを視覚的に接続します。
+  - : `<weadew()>` データ型には、リーダー関数として `weadew( <weadew-type> )` が含まれます。この関数は、キーワード値 `dotted`、`sowid`、または `space` （それぞれ `weadew(".")`、`weadew("_")`、`weadew(" ")` に相当）、または `<stwing>` を引数として受け入れます。対応していて、`content` の値として使用された場合、指定されたリーダーの種類は繰り返しパターンとして挿入され、水平線上のコンテンツを視覚的に接続します。
 
-- `attr(x)`
+- `attw(x)`
 
-  - : CSS 関数 `attr(x)` は、選択された要素、または擬似要素の元となる要素の属性値を取得します。要素の属性 `x` の値は、属性名を表す解釈前の文字列です。属性 `x` が存在しない場合は、空文字列が返値として返されます。 属性名引数の大文字小文字の区別は、文書内の言語に依存します。
+  - : css 関数 `attw(x)` は、選択された要素、または擬似要素の元となる要素の属性値を取得します。要素の属性 `x` の値は、属性名を表す解釈前の文字列です。属性 `x` が存在しない場合は、空文字列が返値として返されます。 属性名引数の大文字小文字の区別は、文書内の言語に依存します。
 
-- 代替テキスト: `/ <string> | <counter>`
-  - : 画像や `<content-list>` アイテムには、スラッシュとテキスト文字列またはカウンターを追加することで代替テキストが指定できます。代替テキストは、スクリーンリーダーによる音声出力に意図通りに機能しますが、一部のブラウザーでも表示される場合があります。ブラウザーが代替テキストに対応していない場合、 `content` 宣言は不正なものと見なされ、無視されますのでご注意ください。 {{cssxref("string", "/ &lt;string>")}} または {{cssxref("counter", "/ &lt;counter>")}} データ型で、この要素の「代替テキスト」を表します。
+- 代替テキスト: `/ <stwing> | <countew>`
+  - : 画像や `<content-wist>` アイテムには、スラッシュとテキスト文字列またはカウンターを追加することで代替テキストが指定できます。代替テキストは、スクリーンリーダーによる音声出力に意図通りに機能しますが、一部のブラウザーでも表示される場合があります。ブラウザーが代替テキストに対応していない場合、 `content` 宣言は不正なものと見なされ、無視されますのでご注意ください。 {{cssxwef("stwing", -.- "/ &wt;stwing>")}} または {{cssxwef("countew", ^^;; "/ &wt;countew>")}} データ型で、この要素の「代替テキスト」を表します。
 
 ## 公式定義
 
@@ -153,274 +153,274 @@ content: unset;
 
 ## アクセシビリティ
 
-CSS で生成されるコンテンツは、 [DOM](/ja/docs/Web/API/Document_Object_Model/Introduction) には含まれません。そのため、これは[アクセシビリティツリー](/ja/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#アクセシビリティの_api_群)では表現されず、支援技術とブラウザーの組み合わせによってはアナウンスされないことがあります。そのコンテンツがページの目的を理解する上で重要な情報を含んでいるのであれば、メイン文書に含めたほうが適切です。
+css で生成されるコンテンツは、 [dom](/ja/docs/web/api/document_object_modew/intwoduction) には含まれません。そのため、これは[アクセシビリティツリー](/ja/docs/weawn_web_devewopment/cowe/accessibiwity/nani_is_accessibiwity#アクセシビリティの_api_群)では表現されず、支援技術とブラウザーの組み合わせによってはアナウンスされないことがあります。そのコンテンツがページの目的を理解する上で重要な情報を含んでいるのであれば、メイン文書に含めたほうが適切です。
 
-挿入されたコンテンツが装飾的なものでない場合は、支援技術に情報が指定され、 CSS が無効の場合にも利用できることを確認してください。
+挿入されたコンテンツが装飾的なものでない場合は、支援技術に情報が指定され、 c-css が無効の場合にも利用できることを確認してください。
 
-- [Accessibility support for CSS generated content – Tink](https://tink.uk/accessibility-support-for-css-generated-content/) (2015)
-- [WCAG の解説、ガイドライン 1.3 – MDN](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.3_—_さまざまな方法で提示できるコンテンツの作成)
-- [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
-- [Failure of Success Criterion 1.3.1: inserting non-decorative generated content](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/F87) Techniques for WCAG 2.0
+- [accessibiwity suppowt f-fow css genewated content – t-tink](https://tink.uk/accessibiwity-suppowt-fow-css-genewated-content/) (2015)
+- [wcag の解説、ガイドライン 1.3 – m-mdn](/ja/docs/web/accessibiwity/guides/undewstanding_wcag/pewceivabwe#ガイドライン_1.3_—_さまざまな方法で提示できるコンテンツの作成)
+- [undewstanding success cwitewion 1.3.1 | w3c undewstanding wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/content-stwuctuwe-sepawation-pwogwammatic.htmw)
+- [faiwuwe of success cwitewion 1.3.1: insewting n-nyon-decowative g-genewated content](https://www.w3.owg/tw/2016/note-wcag20-techs-20161007/f87) t-techniques fow w-wcag 2.0
 
 ## 例
 
-最初の 5 つの例は、擬似要素に生成コンテンツを生成させるものです。残りの 3 つは[要素の置換の例](#url_による要素の置換)です。
+最初の 5 つの例は、擬似要素に生成コンテンツを生成させるものです。残りの 3 つは[要素の置換の例](#uww_による要素の置換)です。
 
 ### 要素のクラスに基づいて文字列を追加
 
 例えば、この例では、特定のクラス名を持つ要素のテキストの後に、生成されたテキストが挿入されます。テキストは赤色で表示されます。
 
-#### HTML
+#### h-htmw
 
-```html
-<h2>Paperback Best Sellers</h2>
-<ol>
-  <li>Political Thriller</li>
-  <li class="new-entry">Halloween Stories</li>
-  <li>My Biography</li>
-  <li class="new-entry">Vampire Romance</li>
-</ol>
+```htmw
+<h2>papewback best sewwews</h2>
+<ow>
+  <wi>powiticaw thwiwwew</wi>
+  <wi cwass="new-entwy">hawwoween s-stowies</wi>
+  <wi>my biogwaphy</wi>
+  <wi cwass="new-entwy">vampiwe womance</wi>
+</ow>
 ```
 
-#### CSS
+#### css
 
 ```css
-.new-entry::after {
-  content: " New!"; /* 先頭の空白は、 DOM ノードのコンテンツと
+.new-entwy::aftew {
+  c-content: " nyew!"; /* 先頭の空白は、 d-dom ノードのコンテンツと
                        追加する生成コンテンツを分離するための
                        ものです。 */
-  color: red;
+  c-cowow: wed;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Appending_strings_based_on_an_elements_class', '100%', 160)}}
+{{embedwivesampwe('appending_stwings_based_on_an_ewements_cwass', XD '100%', 160)}}
 
 ### 引用符
 
 この例では、引用部分の周りに異なる色の引用符を挿入します。
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <p>
-  According to Sir Tim Berners-Lee,
-  <q cite="http://www.w3.org/People/Berners-Lee/FAQ.html#Internet">
-    I was lucky enough to invent the Web at the time when the Internet already
-    existed - and had for a decade and a half.
+  accowding t-to siw tim b-bewnews-wee, 🥺
+  <q c-cite="http://www.w3.owg/peopwe/bewnews-wee/faq.htmw#intewnet">
+    i-i was wucky enough to invent the web at the t-time when the intewnet a-awweady
+    e-existed - and h-had fow a decade a-and a hawf. òωó
   </q>
-  We must understand that there is nothing fundamentally wrong with building on
-  the contributions of others.
+  we must undewstand that thewe is nothing f-fundamentawwy wwong with buiwding on
+  the contwibutions of othews. (ˆ ﻌ ˆ)♡
 </p>
-<p lang="fr-fr">
-  Mais c'est Magritte qui a dit,
-  <q lang="fr-fr"> Ceci n'est pas une pipe. </q>.
+<p wang="fw-fw">
+  mais c-c'est magwitte qui a dit, -.-
+  <q wang="fw-fw"> ceci ny'est pas une p-pipe. :3 </q>. ʘwʘ
 </p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-q {
-  color: #00f;
+q-q {
+  cowow: #00f;
 }
 
-q::before,
-q::after {
-  font-size: larger;
-  color: #f00;
-  background: #ccc;
+q-q::befowe, 🥺
+q::aftew {
+  font-size: w-wawgew;
+  cowow: #f00;
+  b-backgwound: #ccc;
 }
 
-q::before {
+q::befowe {
   content: open-quote;
 }
 
-q::after {
-  content: close-quote;
+q::aftew {
+  content: cwose-quote;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Quotes', '100%', 200)}}
+{{embedwivesampwe('quotes', >_< '100%', 200)}}
 
-[生成される引用符の種類](/ja/docs/Web/CSS/quotes#自動引用符)は、言語によって異なります。 ブラウザーは既定では、 {{HTMLElement("q")}} 要素の前後に開始引用符と終了引用符を追加します。例えば、この例の引用符は、明示的に設定されていない場合でも表示されます。 `content` プロパティの値をそれぞれ `no-open-quote` と `no-close-quote` に設定するか、または両方を `none` に設定することで、引用符を無効にすることができます。 また、代わりに {{cssxref("quotes")}} プロパティを `none` に設定することで、引用符を無効にすることもできます。
+[生成される引用符の種類](/ja/docs/web/css/quotes#自動引用符)は、言語によって異なります。 ブラウザーは既定では、 {{htmwewement("q")}} 要素の前後に開始引用符と終了引用符を追加します。例えば、この例の引用符は、明示的に設定されていない場合でも表示されます。 `content` プロパティの値をそれぞれ `no-open-quote` と `no-cwose-quote` に設定するか、または両方を `none` に設定することで、引用符を無効にすることができます。 また、代わりに {{cssxwef("quotes")}} プロパティを `none` に設定することで、引用符を無効にすることもできます。
 
 ### テキストをリストアイテムカウンターに追加
 
-この例では、すべてのリストアイテムの先頭に追加された 2 つの文字列で挟まれたカウンターを結合し、順序なしリスト ({{HTMLElement("ol")}}) 内のリストアイテム ({{HTMLElement("li")}}) に対して、より詳細なマーカーを作成します。
+この例では、すべてのリストアイテムの先頭に追加された 2 つの文字列で挟まれたカウンターを結合し、順序なしリスト ({{htmwewement("ow")}}) 内のリストアイテム ({{htmwewement("wi")}}) に対して、より詳細なマーカーを作成します。
 
-#### HTML
+#### htmw
 
-```html
-<ol>
-  <li>犬</li>
-  <li>猫</li>
-  <li>
+```htmw
+<ow>
+  <wi>犬</wi>
+  <wi>猫</wi>
+  <wi>
     鳥
-    <ol>
-      <li>フクロウ</li>
-      <li>オウム</li>
-      <li>飛べない鳥</li>
-    </ol>
-  <li>有袋類</li>
-  </li>
-</ol>
+    <ow>
+      <wi>フクロウ</wi>
+      <wi>オウム</wi>
+      <wi>飛べない鳥</wi>
+    </ow>
+  <wi>有袋類</wi>
+  </wi>
+</ow>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-ol {
-  counter-reset: items;
-  margin-left: 2em;
+ow {
+  countew-weset: i-items;
+  mawgin-weft: 2em;
 }
-li {
-  counter-increment: items;
+wi {
+  countew-incwement: i-items;
 }
-li::marker {
-  content: "item " counters(items, ".", numeric) ": ";
+w-wi::mawkew {
+  content: "item " countews(items, ʘwʘ ".", n-nyumewic) ": ";
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Adding_text_to_list_item_counters', '100%', 200)}}
+{{embedwivesampwe('adding_text_to_wist_item_countews', (˘ω˘) '100%', (✿oωo) 200)}}
 
-各リストアイテムのマーカーで生成されたコンテンツには、接頭辞として "item" というテキストが追加され、接頭辞とカウンターを区切る空白が含まれ、次の ": "、コロン、さらに空白が続きます。 {{cssxref("counters", "counters()")}} 関数は、数値アイテムカウンターを定義し、その数値は、ほとんどのブラウザーではピリオド (`.`) で区切られます。
+各リストアイテムのマーカーで生成されたコンテンツには、接頭辞として "item" というテキストが追加され、接頭辞とカウンターを区切る空白が含まれ、次の ": "、コロン、さらに空白が続きます。 {{cssxwef("countews", (///ˬ///✿) "countews()")}} 関数は、数値アイテムカウンターを定義し、その数値は、ほとんどのブラウザーではピリオド (`.`) で区切られます。
 
 ### 属性値の文字列
 
-この例は、印刷用スタイルで有用です。このスタイルシートは[属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)を使用して、完全修飾された保護されたリンクをすべて選択し、リンクテキストの後に `href` 属性の値を {{cssxref("::after")}} 擬似要素のコンテンツとして追加します。
+この例は、印刷用スタイルで有用です。このスタイルシートは[属性セレクター](/ja/docs/web/css/attwibute_sewectows)を使用して、完全修飾された保護されたリンクをすべて選択し、リンクテキストの後に `hwef` 属性の値を {{cssxwef("::aftew")}} 擬似要素のコンテンツとして追加します。
 
-#### HTML
+#### h-htmw
 
-```html
-<ul>
-  <li><a href="https://mozilla.com">Mozilla</a></li>
-  <li><a href="/">MDN</a></li>
-  <li><a href="https://openwebdocs.org">OpenWebDocs</a></li>
-</ul>
+```htmw
+<uw>
+  <wi><a hwef="https://moziwwa.com">moziwwa</a></wi>
+  <wi><a h-hwef="/">mdn</a></wi>
+  <wi><a h-hwef="https://openwebdocs.owg">openwebdocs</a></wi>
+</uw>
 ```
 
-#### CSS
+#### css
 
 ```css
-a[href^="https://"]::after
+a[hwef^="https://"]::aftew
 {
-  content: " (URL: " attr(href) ")";
-  color: darkgreen;
+  content: " (uww: " attw(hwef) ")";
+  c-cowow: dawkgween;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Strings_with_attribute_values', '100%', 200)}}
+{{embedwivesampwe('stwings_with_attwibute_vawues', rawr x3 '100%', -.- 200)}}
 
-生成されたコンテンツは、空白付きの "URL: " と `href` 属性の値の全体を括弧で囲んだものです。
+生成されたコンテンツは、空白付きの "uww: " と `hwef` 属性の値の全体を括弧で囲んだものです。
 
 ### 代替テキスト付きの画像を追加
 
-この例では、すべてのリンクの前に画像を挿入します。2つの`content`値が提供されています。後の方の`content`値には、スクリーンリーダーが音声として出力できる代替テキスト付きの画像が記載されています。ブラウザーが代替テキストに対応していない場合、この宣言は無効と見なされ、前の`content`値が表示されます。この代替コンテンツのリストには、画像と「- alt テキストに対応していません - 」というメッセージが含まれています。
+この例では、すべてのリンクの前に画像を挿入します。2つの`content`値が提供されています。後の方の`content`値には、スクリーンリーダーが音声として出力できる代替テキスト付きの画像が記載されています。ブラウザーが代替テキストに対応していない場合、この宣言は無効と見なされ、前の`content`値が表示されます。この代替コンテンツのリストには、画像と「- a-awt テキストに対応していません - 」というメッセージが含まれています。
 
-#### HTML
+#### h-htmw
 
-```html
-<a href="https://www.mozilla.org/ja/">Mozilla Home Page</a>
+```htmw
+<a hwef="https://www.moziwwa.owg/ja/">moziwwa h-home page</a>
 ```
 
-#### CSS
+#### c-css
 
-画像を表示させ、代替テキストを設定するCSSは下記に示します。
+画像を表示させ、代替テキストを設定するcssは下記に示します。
 また、コンテンツのフォントと色も設定します。
 これは、代替テキストを「表示」するブラウザーで使われ、代替テキストに対応していないブラウザーでは、代替の `content` 値を表示します。
 
 ```css
-a::before {
+a::befowe {
   /* 代替コンテンツ */
-  content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico")
-    " - alt テキストに対応していません - ";
+  content: u-uww("https://mozowg.cdn.moziwwa.net/media/img/favicon.ico")
+    " - awt テキストに対応していません - ";
   /* 代替テキスト付きのコンテンツ */
-  content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico") /
-    " MOZILLA: ";
+  content: uww("https://mozowg.cdn.moziwwa.net/media/img/favicon.ico") /
+    " moziwwa: ";
   font:
-    x-small Arial,
-    sans-serif;
-  color: gray;
+    x-smow awiaw, ^^
+    s-sans-sewif;
+  c-cowow: gway;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Adding_an_image_with_alternative_text', '100%', 60)}}
+{{embedwivesampwe('adding_an_image_with_awtewnative_text', (⑅˘꒳˘) '100%', 60)}}
 
-> [!NOTE]
+> [!note]
 > 代替テキストの構文に対応している場合、値はブラウザーのアクセシビリティツリーに公開されます。ブラウザーごとのアクセシビリティパネルについては、[関連情報](#関連情報)の節を参照してください。
 
-スクリーンリーダーを使用している場合は、画像に到達したときに "MOZILLA" という単語が読み上げられるはずです。対応している場合場合（「alt テキストに対応していません」と表示されていない場合）、開発者ツールの選択ツールで `::before` 擬似要素を選択し、アクセシビリティパネルで{{glossary("accessible name", "アクセシブル名")}}を表示することができます。
+スクリーンリーダーを使用している場合は、画像に到達したときに "moziwwa" という単語が読み上げられるはずです。対応している場合場合（「awt テキストに対応していません」と表示されていない場合）、開発者ツールの選択ツールで `::befowe` 擬似要素を選択し、アクセシビリティパネルで{{gwossawy("accessibwe nyame", nyaa~~ "アクセシブル名")}}を表示することができます。
 
 代替テキストの構文に対応していないブラウザーでは、代替テキストを含む宣言全体が無効となります。この場合、前の `content` 値が使用され、画像と「代替テキストに対応していません」というテキストが表示されます。
 
-### URL による要素の置換
+### uww による要素の置換
 
-この例では、通常の要素が置き換えられます。要素のコンテンツは、 {{cssxref("url_value", "&lt;url&gt;")}} 型を使用して SVG に置き換えられます。
+この例では、通常の要素が置き換えられます。要素のコンテンツは、 {{cssxwef("uww_vawue", "&wt;uww&gt;")}} 型を使用して svg に置き換えられます。
 
-擬似要素は置換要素ではレンダリングされません。この要素が置換されるため、`::after` または `::before` と一致するものは生成も適用もされません。これを示すために、 `::after` 宣言ブロックを記載し、生成コンテンツとして `id` を追加しようとします。この擬似要素は、要素が置換されるため生成されません。
+擬似要素は置換要素ではレンダリングされません。この要素が置換されるため、`::aftew` または `::befowe` と一致するものは生成も適用もされません。これを示すために、 `::aftew` 宣言ブロックを記載し、生成コンテンツとして `id` を追加しようとします。この擬似要素は、要素が置換されるため生成されません。
 
-#### HTML
+#### h-htmw
 
-```html
-<div id="replaced">このコンテンツが置き換えられます。</div>
+```htmw
+<div i-id="wepwaced">このコンテンツが置き換えられます。</div>
 ```
 
-#### CSS
+#### css
 
 ```css
-#replaced {
-  content: url("mdn.svg");
+#wepwaced {
+  content: uww("mdn.svg");
 }
 
 /* 要素の置き換えに対応している場合は表示されない */
-div::after {
-  content: " (" attr(id) ")";
+div::aftew {
+  c-content: " (" attw(id) ")";
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Element_replacement_with_url', '100%',400)}}
+{{embedwivesampwe('ewement_wepwacement_with_uww', /(^•ω•^) '100%',400)}}
 
-（擬似要素ではなく）通常の要素でコンテンツを生成する場合、要素全体が置き換えられます。すなわち、 `::before` および `::after` 擬似要素が生成されないということを意味しています。
+（擬似要素ではなく）通常の要素でコンテンツを生成する場合、要素全体が置き換えられます。すなわち、 `::befowe` および `::aftew` 擬似要素が生成されないということを意味しています。
 
-### `<gradient>` による要素の置換
+### `<gwadient>` による要素の置換
 
-この例では、要素のコンテンツを任意の種類の `<image>` （この場合は CSS グラデーション）に置き換える方法を示しています。 要素のコンテンツは {{cssxref("gradient/linear-gradient", "linear-gradient()")}} に置き換えられています。 {{cssxref("@supports")}} により、代替テキストの対応と、 alt テキストに対応しているブラウザー用の {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} が指定されています。
+この例では、要素のコンテンツを任意の種類の `<image>` （この場合は css グラデーション）に置き換える方法を示しています。 要素のコンテンツは {{cssxwef("gwadient/wineaw-gwadient", (U ﹏ U) "wineaw-gwadient()")}} に置き換えられています。 {{cssxwef("@suppowts")}} により、代替テキストの対応と、 awt テキストに対応しているブラウザー用の {{cssxwef("gwadient/wepeating-wineaw-gwadient", 😳😳😳 "wepeating-wineaw-gwadient()")}} が指定されています。
 
-#### HTML
+#### htmw
 
-```html
-<div id="replaced">ここは消えます</div>
+```htmw
+<div i-id="wepwaced">ここは消えます</div>
 ```
 
-#### CSS
+#### css
 
 ```css
 div {
-  border: 1px solid;
-  background-color: #ccc;
+  bowdew: 1px s-sowid;
+  b-backgwound-cowow: #ccc;
   min-height: 100px;
   min-width: 100px;
 }
 
-#replaced {
-  content: linear-gradient(#639f, #c96a);
+#wepwaced {
+  content: wineaw-gwadient(#639f, >w< #c96a);
 }
 
-@supports (content: linear-gradient(#000, #fff) / "代替テキスト") {
-  #replaced {
-    content: repeating-linear-gradient(blue 0, orange 10%) /
+@suppowts (content: w-wineaw-gwadient(#000, XD #fff) / "代替テキスト") {
+  #wepwaced {
+    c-content: wepeating-wineaw-gwadient(bwue 0, o.O owange 10%) /
       "グラデーションと代替テキストに対応しています";
   }
 }
@@ -428,33 +428,33 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample('Element_replacement_with_gradient', '100%', 200)}}
+{{embedwivesampwe('ewement_wepwacement_with_gwadient', mya '100%', 🥺 200)}}
 
 [ブラウザーの互換性一覧表](#ブラウザーの互換性)を確認してください。 すべてのブラウザーがグラデーションに対応しており、また、すべてのブラウザーが要素を画像で置き換えることができますが、コンテンツ値としてグラデーションに対応しているブラウザーは限られており、また、代替テキストつきで要素を置き換えることに対応しているブラウザーも限られています。グラデーションのないボックスが表示されるブラウザーでは、要素の置き換えは対応していますが、コンテンツの置き換え値としてグラデーションは対応していません。 要素が縞模様のグラデーションで置き換えられている場合、ブラウザーはどちらにも対応しています。
 
 ### `image-set()` による要素の置換
 
-この例では、要素のコンテンツを {{cssxref("image/image-set", "image-set()")}} で置き換えます。ユーザーの画面の解像度が標準であれば、 `1x.png` が画面に表示され、高解像度の画面では `2x.png` の画像が表示されます。
+この例では、要素のコンテンツを {{cssxwef("image/image-set", ^^;; "image-set()")}} で置き換えます。ユーザーの画面の解像度が標準であれば、 `1x.png` が画面に表示され、高解像度の画面では `2x.png` の画像が表示されます。
 
-#### HTML
+#### htmw
 
-```html
-<div id="replaced">Mozilla</div>
+```htmw
+<div i-id="wepwaced">moziwwa</div>
 ```
 
-#### CSS
+#### css
 
 ```css hidden
-div {
+d-div {
   width: 100px;
-  border: 1px solid lightgrey;
+  bowdew: 1px sowid wightgwey;
 }
 ```
 
-```css-nolint
-#replaced {
-  content: image-set(
-    "1x.png" 1x,
+```css-nowint
+#wepwaced {
+  content: i-image-set(
+    "1x.png" 1x, :3
     "2x.png" 2x
   );
 }
@@ -462,28 +462,28 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample('Element_replacement_with_image-set', '100%', 110)}}
+{{embedwivesampwe('ewement_wepwacement_with_image-set', (U ﹏ U) '100%', 110)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{Cssxref("::after")}}
-- {{Cssxref("::before")}}
-- {{Cssxref("::marker")}}
-- {{Cssxref("contain")}}
-- {{Cssxref("quotes")}}
-- {{cssxref("gradient", "&lt;gradient&gt;")}}
-- {{cssxref("image/image-set", "image-set()")}}
-- {{cssxref("url_value", "&lt;url&gt;")}}
-- [置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)
-- [CSS 生成コンテンツ](/ja/docs/Web/CSS/CSS_generated_content)モジュール
-- [CSS リストとカウンター](/ja/docs/Web/CSS/CSS_lists)モジュール
+- {{cssxwef("::aftew")}}
+- {{cssxwef("::befowe")}}
+- {{cssxwef("::mawkew")}}
+- {{cssxwef("contain")}}
+- {{cssxwef("quotes")}}
+- {{cssxwef("gwadient", OwO "&wt;gwadient&gt;")}}
+- {{cssxwef("image/image-set", "image-set()")}}
+- {{cssxwef("uww_vawue", 😳😳😳 "&wt;uww&gt;")}}
+- [置換要素](/ja/docs/web/css/css_images/wepwaced_ewement_pwopewties)
+- [css 生成コンテンツ](/ja/docs/web/css/css_genewated_content)モジュール
+- [css リストとカウンター](/ja/docs/web/css/css_wists)モジュール
 
-- ブラウザーのアクセシビリティパネル: [Firefox アクセシビリティインスペクター](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/)、[Chrome のアクセシビリティパネル](https://developer.chrome.com/docs/devtools/accessibility/reference#pane)、[Safari のアクセシビリティツリー](https://webflow.com/glossary/accessibility-tree#:~:text=To%20view%20a%20website%E2%80%99s%20accessibility%20tree%20in%20Safari)
+- ブラウザーのアクセシビリティパネル: [fiwefox アクセシビリティインスペクター](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/accessibiwity_inspectow/)、[chwome のアクセシビリティパネル](https://devewopew.chwome.com/docs/devtoows/accessibiwity/wefewence#pane)、[safawi のアクセシビリティツリー](https://webfwow.com/gwossawy/accessibiwity-twee#:~:text=to%20view%20a%20website%e2%80%99s%20accessibiwity%20twee%20in%20safawi)

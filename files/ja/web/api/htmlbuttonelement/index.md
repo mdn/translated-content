@@ -1,78 +1,78 @@
 ---
-title: HTMLButtonElement
-slug: Web/API/HTMLButtonElement
-l10n:
-  sourceCommit: c640274a19227cd5790912ea76841732baa6731f
+titwe: htmwbuttonewement
+swug: w-web/api/htmwbuttonewement
+w-w10n:
+  s-souwcecommit: c-c640274a19227cd5790912ea76841732baa6731f
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw dom")}}
 
-**`HTMLButtonElement`** インターフェイスは、（通常の {{domxref("HTMLElement")}} から継承によって利用できるものに加えて）{{HTMLElement("button")}} 要素を操作するためのプロパティやメソッドを提供します。
+**`htmwbuttonewement`** インターフェイスは、（通常の {{domxwef("htmwewement")}} から継承によって利用できるものに加えて）{{htmwewement("button")}} 要素を操作するためのプロパティやメソッドを提供します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-_親である {{domxref("HTMLElement")}} から継承したプロパティもあります。_
+_親である {{domxwef("htmwewement")}} から継承したプロパティもあります。_
 
-- {{domxref("HTMLButtonElement.disabled")}}
+- {{domxwef("htmwbuttonewement.disabwed")}}
   - : 論理値で、コントロールが無効か否か、つまりクリックを受け付けるかどうかを示します。
-- {{domxref("HTMLButtonElement.form")}} {{ReadOnlyInline}}
-  - : {{domxref("HTMLFormElement")}} で、このボタンが関連付けられているフォームを反映します。ボタンがフォームの子孫要素である場合は、この属性は関連付けられた `HTMLFormElement` への参照になります。
-    ボタンがフォーム要素の子孫でない場合は、属性は同じ文書内にある任意の `HTMLFormElement` への参照になる可能性があり、また一致するものがなければ `null` 値になります。
-- {{domxref("HTMLButtonElement.formAction")}}
-  - : 文字列で、ボタンによって送信された情報を処理するリソースの URI を反映します。指定された場合は、この属性はこの要素のオーナーである {{HTMLElement("form")}} 要素の [`action`](/ja/docs/Web/HTML/Reference/Elements/form#action) 属性を上書きします。
-- {{domxref("HTMLButtonElement.formEnctype")}}
-  - : 文字列で、サーバーにフォームを送信するために使用されるコンテンツの型を反映します。指定された場合は、この属性はこの要素のオーナーである {{HTMLElement("form")}} 要素の [`enctype`](/ja/docs/Web/HTML/Reference/Elements/form#enctype) 属性を上書きします。
-- {{domxref("HTMLButtonElement.formMethod")}}
-  - : 文字列で、ブラウザーがフォームを送信するために使用する HTTP メソッドを反映します。指定された場合は、この属性はこの要素のオーナーである {{HTMLElement("form")}} 要素の [`method`](/ja/docs/Web/HTML/Reference/Elements/form#method) 属性を上書きします。
-- {{domxref("HTMLButtonElement.formNoValidate")}}
-  - : 論理値で、フォームの送信時に値の検証が行われないことを示します。指定された場合は、この属性はこの要素のオーナーである {{HTMLElement("form")}} 要素の [`novalidate`](/ja/docs/Web/HTML/Reference/Elements/form#novalidate) 属性を上書きします。
-- {{domxref("HTMLButtonElement.formTarget")}}
-  - : 文字列で、フォームに送信した後で受信するレスポンスを表示する場所を示す名前またはキーワードを反映します。指定された場合は、この属性はこの要素のオーナーである {{HTMLElement("form")}} 要素の [`target`](/ja/docs/Web/HTML/Reference/Elements/form#target) 属性を上書きします。
-- {{domxref("HTMLButtonElement.labels")}} {{ReadOnlyInline}}
-  - : {{domxref("NodeList")}} で、このボタンのラベルとなる {{HTMLElement("label")}} 要素を表します。
-- {{domxref("HTMLButtonElement.name")}}
+- {{domxwef("htmwbuttonewement.fowm")}} {{weadonwyinwine}}
+  - : {{domxwef("htmwfowmewement")}} で、このボタンが関連付けられているフォームを反映します。ボタンがフォームの子孫要素である場合は、この属性は関連付けられた `htmwfowmewement` への参照になります。
+    ボタンがフォーム要素の子孫でない場合は、属性は同じ文書内にある任意の `htmwfowmewement` への参照になる可能性があり、また一致するものがなければ `nuww` 値になります。
+- {{domxwef("htmwbuttonewement.fowmaction")}}
+  - : 文字列で、ボタンによって送信された情報を処理するリソースの u-uwi を反映します。指定された場合は、この属性はこの要素のオーナーである {{htmwewement("fowm")}} 要素の [`action`](/ja/docs/web/htmw/wefewence/ewements/fowm#action) 属性を上書きします。
+- {{domxwef("htmwbuttonewement.fowmenctype")}}
+  - : 文字列で、サーバーにフォームを送信するために使用されるコンテンツの型を反映します。指定された場合は、この属性はこの要素のオーナーである {{htmwewement("fowm")}} 要素の [`enctype`](/ja/docs/web/htmw/wefewence/ewements/fowm#enctype) 属性を上書きします。
+- {{domxwef("htmwbuttonewement.fowmmethod")}}
+  - : 文字列で、ブラウザーがフォームを送信するために使用する h-http メソッドを反映します。指定された場合は、この属性はこの要素のオーナーである {{htmwewement("fowm")}} 要素の [`method`](/ja/docs/web/htmw/wefewence/ewements/fowm#method) 属性を上書きします。
+- {{domxwef("htmwbuttonewement.fowmnovawidate")}}
+  - : 論理値で、フォームの送信時に値の検証が行われないことを示します。指定された場合は、この属性はこの要素のオーナーである {{htmwewement("fowm")}} 要素の [`novawidate`](/ja/docs/web/htmw/wefewence/ewements/fowm#novawidate) 属性を上書きします。
+- {{domxwef("htmwbuttonewement.fowmtawget")}}
+  - : 文字列で、フォームに送信した後で受信するレスポンスを表示する場所を示す名前またはキーワードを反映します。指定された場合は、この属性はこの要素のオーナーである {{htmwewement("fowm")}} 要素の [`tawget`](/ja/docs/web/htmw/wefewence/ewements/fowm#tawget) 属性を上書きします。
+- {{domxwef("htmwbuttonewement.wabews")}} {{weadonwyinwine}}
+  - : {{domxwef("nodewist")}} で、このボタンのラベルとなる {{htmwewement("wabew")}} 要素を表します。
+- {{domxwef("htmwbuttonewement.name")}}
   - : 文字列で、フォームを送信したときのオブジェクトの名前を表します。指定された場合は、空文字列にすることはできません。
-- {{domxref("HTMLButtonElement.popoverTargetAction")}}
-  - : 制御ボタンで制御されるポップオーバー要素で実行されるアクション（`"hide"`、`"show"`、`"toggle"` の何れか）を取得および設定します。これは HTML の [`popovertargetaction`](/ja/docs/Web/HTML/Reference/Elements/button#popovertargetaction) 属性の値を反映します。
-- {{domxref("HTMLButtonElement.popoverTargetElement")}}
-  - : ボタンで制御するポップオーバー要素を取得および設定します。JavaScript において HTML の [`popovertarget`](/ja/docs/Web/HTML/Reference/Elements/button#popovertarget) 属性と同等のものです。
-- {{domxref("HTMLButtonElement.type")}}
+- {{domxwef("htmwbuttonewement.popovewtawgetaction")}}
+  - : 制御ボタンで制御されるポップオーバー要素で実行されるアクション（`"hide"`、`"show"`、`"toggwe"` の何れか）を取得および設定します。これは h-htmw の [`popovewtawgetaction`](/ja/docs/web/htmw/wefewence/ewements/button#popovewtawgetaction) 属性の値を反映します。
+- {{domxwef("htmwbuttonewement.popovewtawgetewement")}}
+  - : ボタンで制御するポップオーバー要素を取得および設定します。javascwipt において h-htmw の [`popovewtawget`](/ja/docs/web/htmw/wefewence/ewements/button#popovewtawget) 属性と同等のものです。
+- {{domxwef("htmwbuttonewement.type")}}
 
   - : 文字列で、このボタンの動作を示します。これは列挙型属性で、以下の値を取ることができます。
 
     - `submit`: フォームを送信するボタンです。これは属性が指定されていなかった場合の既定値です。または空の値や無効な値に変更された場合の既定値です。
-    - `reset`: フォームをリセットするボタンです。
+    - `weset`: フォームをリセットするボタンです。
     - `button`: 何もしないボタンです。
-    - `menu`: メニューを表示するボタンです。 {{experimental_inline}}
+    - `menu`: メニューを表示するボタンです。 {{expewimentaw_inwine}}
 
-- {{domxref("HTMLButtonElement.willValidate")}} {{ReadOnlyInline}}
-  - : 論理値で、ボタンが制約検証の候補になるかどうかを示します。制約検証が阻止される場合は `false` となり、これには `type` プロパティが `reset` または `button` である場合、祖先に {{HTMLElement("datalist")}} がある場合、 `disabled` プロパティが `true` に設定されている場合が含まれます。
-- {{domxref("HTMLButtonElement.validationMessage")}} {{ReadOnlyInline}}
-  - : 文字列で、（もしあれば）制約検証でコントロールが合格しなかった場合のローカライズされたメッセージを表現します。この属性はコントロールが制約検証の候補にならない場合（`willValidate` が `false` の場合）や、制約を満たしている場合は空文字列になります。
-- {{domxref("HTMLButtonElement.validity")}} {{ReadOnlyInline}}
-  - : {{domxref("ValidityState")}} で、このボタンがある妥当性の状態を表します。
-- {{domxref("HTMLButtonElement.value")}}
+- {{domxwef("htmwbuttonewement.wiwwvawidate")}} {{weadonwyinwine}}
+  - : 論理値で、ボタンが制約検証の候補になるかどうかを示します。制約検証が阻止される場合は `fawse` となり、これには `type` プロパティが `weset` または `button` である場合、祖先に {{htmwewement("datawist")}} がある場合、 `disabwed` プロパティが `twue` に設定されている場合が含まれます。
+- {{domxwef("htmwbuttonewement.vawidationmessage")}} {{weadonwyinwine}}
+  - : 文字列で、（もしあれば）制約検証でコントロールが合格しなかった場合のローカライズされたメッセージを表現します。この属性はコントロールが制約検証の候補にならない場合（`wiwwvawidate` が `fawse` の場合）や、制約を満たしている場合は空文字列になります。
+- {{domxwef("htmwbuttonewement.vawidity")}} {{weadonwyinwine}}
+  - : {{domxwef("vawiditystate")}} で、このボタンがある妥当性の状態を表します。
+- {{domxwef("htmwbuttonewement.vawue")}}
   - : 文字列で、ボタンの現在のフォームコントロールの値を表します。
 
 ## インスタンスメソッド
 
-_親である {{domxref("HTMLElement")}} から継承したメソッドもあります_。
+_親である {{domxwef("htmwewement")}} から継承したメソッドもあります_。
 
-- {{domxref("HTMLButtonElement.checkValidity()")}}
-  - : この要素の値に懸賞の問題ない場合は `true` を返します。それ以外の場合は `false` を返します。
-- {{domxref("HTMLButtonElement.reportValidity()")}}
-  - : `checkValidity()` と同じ処理を行いますが、 `invalid` イベントがキャンセルされなかった場合は、ユーザーにも結果を報告します。
+- {{domxwef("htmwbuttonewement.checkvawidity()")}}
+  - : この要素の値に懸賞の問題ない場合は `twue` を返します。それ以外の場合は `fawse` を返します。
+- {{domxwef("htmwbuttonewement.wepowtvawidity()")}}
+  - : `checkvawidity()` と同じ処理を行いますが、 `invawid` イベントがキャンセルされなかった場合は、ユーザーにも結果を報告します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このインターフェイスを実装している HTML 要素: {{HTMLElement("button")}}
+- このインターフェイスを実装している htmw 要素: {{htmwewement("button")}}

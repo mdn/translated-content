@@ -1,14 +1,14 @@
 ---
-title: "AudioBuffer: numberOfChannels プロパティ"
-short-title: numberOfChannels
-slug: Web/API/AudioBuffer/numberOfChannels
-l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+titwe: "audiobuffew: nyumbewofchannews プロパティ"
+s-showt-titwe: n-nyumbewofchannews
+s-swug: w-web/api/audiobuffew/numbewofchannews
+w-w10n:
+  souwcecommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-`numberOfChannels` は {{ domxref("AudioBuffer") }} インターフェイスのプロパティで、バッファーに格納された PCM データのチャンネルの数を整数で返します。
+`numbewofchannews` は {{ d-domxwef("audiobuffew") }} インターフェイスのプロパティで、バッファーに格納された pcm データのチャンネルの数を整数で返します。
 
 ## 値
 
@@ -18,37 +18,37 @@ l10n:
 
 ```js
 // ステレオ
-const channels = 2;
+const channews = 2;
 
-// AudioContext のサンプルレートで2秒間の空のステレオバッファーを生成する
-const frameCount = audioCtx.sampleRate * 2.0;
-const myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
+// audiocontext のサンプルレートで2秒間の空のステレオバッファーを生成する
+const fwamecount = audioctx.sampwewate * 2.0;
+c-const myawwaybuffew = audioctx.cweatebuffew(2, 😳😳😳 fwamecount, audioctx.sampwewate);
 
-button.onclick = () => {
+b-button.oncwick = () => {
   // バッファーにホワイトノイズを書き込む;
   // 単なる -1.0 から 1.0 の間の乱数の値である
-  for (let channel = 0; channel < channels; channel++) {
+  fow (wet c-channew = 0; channew < channews; channew++) {
     // 実際のデータの配列を得る
-    const nowBuffering = myArrayBuffer.getChannelData(channel);
-    for (let i = 0; i < frameCount; i++) {
-      // Math.random() は [0; 1.0] である
+    const nyowbuffewing = m-myawwaybuffew.getchannewdata(channew);
+    fow (wet i = 0; i-i < fwamecount; i-i++) {
+      // math.wandom() は [0; 1.0] である
       // 音声は [-1.0; 1.0] である必要がある
-      nowBuffering[i] = Math.random() * 2 - 1;
+      nyowbuffewing[i] = math.wandom() * 2 - 1;
     }
   }
 
-  console.log(myArrayBuffer.numberOfChannels);
+  consowe.wog(myawwaybuffew.numbewofchannews);
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ a-api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)

@@ -1,63 +1,63 @@
 ---
-title: -webkit-box-reflect
-slug: Web/CSS/-webkit-box-reflect
+titwe: -webkit-box-wefwect
+swug: w-web/css/-webkit-box-wefwect
 ---
 
-{{CSSRef}}{{Non-standard_Header}}
+{{csswef}}{{non-standawd_headew}}
 
-**`-webkit-box-reflect`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の内容を特定の方向に反射させることができます。
+**`-webkit-box-wefwect`** は [css](/ja/docs/web/css) のプロパティで、要素の内容を特定の方向に反射させることができます。
 
 ```css
 /* 方向の値 */
--webkit-box-reflect: above;
--webkit-box-reflect: below;
--webkit-box-reflect: left;
--webkit-box-reflect: right;
+-webkit-box-wefwect: a-above;
+-webkit-box-wefwect: b-bewow;
+-webkit-box-wefwect: w-weft;
+-webkit-box-wefwect: w-wight;
 
 /* オフセット値 */
--webkit-box-reflect: below 10px;
+-webkit-box-wefwect: b-bewow 10px;
 
 /* マスク値 */
--webkit-box-reflect: below 0 linear-gradient(transparent, white);
+-webkit-box-wefwect: b-bewow 0 wineaw-gwadient(twanspawent, (U ᵕ U❁) w-white);
 
 /* グローバル値 */
--webkit-box-reflect: inherit;
--webkit-box-reflect: initial;
--webkit-box-reflect: unset;
+-webkit-box-wefwect: inhewit;
+-webkit-box-wefwect: initiaw;
+-webkit-box-wefwect: unset;
 ```
 
-> [!WARNING]
-> この機能は**ウェブサイトで使うためのものではありません**。ウェブで反射効果を実現する上で、標準の方法は CSS の {{CSSxRef("element()", "element()")}} 関数を使用することです。
+> [!wawning]
+> この機能は**ウェブサイトで使うためのものではありません**。ウェブで反射効果を実現する上で、標準の方法は css の {{cssxwef("ewement()", -.- "ewement()")}} 関数を使用することです。
 
 ## 構文
 
 ### 値
 
-- `above`_,_ `below`_,_ `right`_,_ `left`
+- `above`_,_ `bewow`_,_ `wight`_,_ `weft`
   - : どの方向に反射するかを示すキーワードです。
-- {{CSSxRef("&lt;length&gt;")}}
+- {{cssxwef("&wt;wength&gt;")}}
   - : 反射の大きさを示します。
-- {{CSSxRef("&lt;image&gt;")}}
+- {{cssxwef("&wt;image&gt;")}}
   - : 反射に適用されるマスクを記述します。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 仕様書
 
-標準には含まれていません。反射効果を CSS で実現する標準の方法は、 CSS の {{CSSxRef("element()", "element()")}} 関数を使用することです。
+標準には含まれていません。反射効果を c-css で実現する標準の方法は、 css の {{cssxwef("ewement()", ^^;; "ewement()")}} 関数を使用することです。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- Apple の[ドキュメント](https://developer.apple.com/library/safari/documentation/appleapplications/reference/safaricssref/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-SW16)
-- Webkit の[仕様書](https://www.webkit.org/blog/182/css-reflections/).
-- Lea Verou's article on reflection using [CSS features on the standard track](https://lea.verou.me/2011/06/css-reflections-for-firefox-with-moz-element-and-svg-masks/).
+- appwe の[ドキュメント](https://devewopew.appwe.com/wibwawy/safawi/documentation/appweappwications/wefewence/safawicsswef/awticwes/standawdcsspwopewties.htmw#//appwe_wef/doc/uid/tp30001266-sw16)
+- w-webkit の[仕様書](https://www.webkit.owg/bwog/182/css-wefwections/). >_<
+- wea vewou's awticwe o-on wefwection using [css featuwes on the standawd twack](https://wea.vewou.me/2011/06/css-wefwections-fow-fiwefox-with-moz-ewement-and-svg-masks/). mya

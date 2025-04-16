@@ -1,81 +1,81 @@
 ---
-title: min-block-size
-slug: Web/CSS/min-block-size
+titwe: min-bwock-size
+swug: web/css/min-bwock-size
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`min-block-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、書字方向に応じて要素ブロックの水平または垂直方向の最小の寸法を定義します。これは {{cssxref("min-width")}} または {{cssxref("min-height")}} のどちらかのプロパティと、 {{cssxref("writing-mode")}} の値に応じて対応します。
+**`min-bwock-size`** は [css](/ja/docs/web/css) のプロパティで、書字方向に応じて要素ブロックの水平または垂直方向の最小の寸法を定義します。これは {{cssxwef("min-width")}} または {{cssxwef("min-height")}} のどちらかのプロパティと、 {{cssxwef("wwiting-mode")}} の値に応じて対応します。
 
-書字方向が垂直方向であった場合、 `min-block-size` の値は要素の最小幅に対応します。そうでなければ、要素の最小の高さに対応します。関連プロパティの {{cssxref("min-inline-size")}} が要素のもう一方の寸法を定義します。
+書字方向が垂直方向であった場合、 `min-bwock-size` の値は要素の最小幅に対応します。そうでなければ、要素の最小の高さに対応します。関連プロパティの {{cssxwef("min-inwine-size")}} が要素のもう一方の寸法を定義します。
 
-{{InteractiveExample("CSS Demo: min-block-size")}}
+{{intewactiveexampwe("css d-demo: min-bwock-size")}}
 
-```css interactive-example-choice
-min-block-size: 150px;
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+m-min-bwock-size: 150px;
+w-wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-min-block-size: 150px;
-writing-mode: vertical-rl;
+```css i-intewactive-exampwe-choice
+m-min-bwock-size: 150px;
+wwiting-mode: v-vewticaw-ww;
 ```
 
-```css interactive-example-choice
-min-block-size: 20px;
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+min-bwock-size: 20px;
+wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-min-block-size: 15em;
-writing-mode: vertical-lr;
+```css i-intewactive-exampwe-choice
+min-bwock-size: 15em;
+wwiting-mode: vewticaw-ww;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box where you can change the minimum block size. <br />If there is
-    more content than the minimum the box will grow in the block dimension as
-    needed by the content.
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    this i-is a box whewe you can change the m-minimum bwock s-size. (⑅˘꒳˘) <bw />if thewe is
+    mowe content than the minimum the box wiww gwow in t-the bwock dimension as
+    nyeeded by the content. òωó
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  display: flex;
-  flex-direction: column;
-  background-color: #5b6dcd;
-  justify-content: center;
-  color: #ffffff;
+```css intewactive-exampwe
+#exampwe-ewement {
+  dispway: f-fwex;
+  fwex-diwection: cowumn;
+  b-backgwound-cowow: #5b6dcd;
+  j-justify-content: c-centew;
+  cowow: #ffffff;
 }
 ```
 
 ## 構文
 
 ```css
-/* <length> 値 */
-min-block-size: 100px;
-min-block-size: 5em;
+/* <wength> 値 */
+m-min-bwock-size: 100px;
+min-bwock-size: 5em;
 
-/* <percentage> 値 */
-min-block-size: 10%;
+/* <pewcentage> 値 */
+min-bwock-size: 10%;
 
 /* キーワード値 */
-min-block-size: max-content;
-min-block-size: min-content;
-min-block-size: fit-content(20em);
+min-bwock-size: m-max-content;
+min-bwock-size: min-content;
+m-min-bwock-size: fit-content(20em);
 
 /* グローバル値 */
-min-block-size: inherit;
-min-block-size: initial;
-min-block-size: revert;
-min-block-size: unset;
+min-bwock-size: inhewit;
+min-bwock-size: initiaw;
+min-bwock-size: w-wevewt;
+min-bwock-size: unset;
 ```
 
 ### 値
 
-`min-block-size` プロパティは {{cssxref("min-width")}} および {{cssxref("min-height")}} の各プロパティと同じ値を取ります。
+`min-bwock-size` プロパティは {{cssxwef("min-width")}} および {{cssxwef("min-height")}} の各プロパティと同じ値を取ります。
 
 ## 公式定義
 
@@ -87,37 +87,37 @@ min-block-size: unset;
 
 ## 例
 
-<h3 id="Setting_minimum_block_size_for_vertical_text">縦書きでブロック方向の最小寸法を設定</h3>
+<h3 id="setting_minimum_bwock_size_fow_vewticaw_text">縦書きでブロック方向の最小寸法を設定</h3>
 
-#### HTML
+#### h-htmw
 
-```html
-<p class="exampleText">Example text</p>
+```htmw
+<p c-cwass="exampwetext">exampwe t-text</p>
 ```
 
-#### CSS
+#### css
 
 ```css
-.exampleText {
-  writing-mode: vertical-rl;
-  background-color: yellow;
-  min-block-size: 200px;
+.exampwetext {
+  wwiting-mode: vewticaw-ww;
+  b-backgwound-cowow: y-yewwow;
+  min-bwock-size: 200px;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Setting_minimum_block_size_for_vertical_text")}}
+{{embedwivesampwe("setting_minimum_bwock_size_fow_vewticaw_text")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 対応付けされる物理的プロパティ: {{cssxref("min-width")}} および {{cssxref("min-height")}}
-- {{cssxref("writing-mode")}}
+- 対応付けされる物理的プロパティ: {{cssxwef("min-width")}} および {{cssxwef("min-height")}}
+- {{cssxwef("wwiting-mode")}}

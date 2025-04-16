@@ -1,57 +1,57 @@
 ---
-title: "ServiceWorkerGlobalScope: notificationclose イベント"
-short-title: notificationclose
-slug: Web/API/ServiceWorkerGlobalScope/notificationclose_event
-l10n:
-  sourceCommit: 28848ba41c082db2a8c55e85c804bd06363afb57
+titwe: "sewvicewowkewgwobawscope: nyotificationcwose イベント"
+s-showt-titwe: n-nyotificationcwose
+s-swug: web/api/sewvicewowkewgwobawscope/notificationcwose_event
+w-w10n:
+  souwcecommit: 28848ba41c082db2a8c55e85c804bd06363afb57
 ---
 
-{{APIRef("Web Notifications")}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
+{{apiwef("web n-nyotifications")}}{{secuwecontext_headew}}{{avaiwabweinwowkews("sewvice")}}
 
-**`notificationclose`** は {{domxref("ServiceWorkerGlobalScope")}} インターフェイスのイベントで、{{domxref("ServiceWorkerRegistration.showNotification()")}} によって生成された表示中の通知をユーザーが閉じたときに発生します。
+**`notificationcwose`** は {{domxwef("sewvicewowkewgwobawscope")}} インターフェイスのイベントで、{{domxwef("sewvicewowkewwegistwation.shownotification()")}} によって生成された表示中の通知をユーザーが閉じたときに発生します。
 
-メインスレッドや、サービスワーカー以外のワーカーが {{domxref("Notification.Notification","Notification()")}} コンストラクターを使用して生成した通知では、{{domxref("Notification/close_event", "close")}} イベントを {{domxref("Notification")}} オブジェクト自身が受け取ります。
+メインスレッドや、サービスワーカー以外のワーカーが {{domxwef("notification.notification","notification()")}} コンストラクターを使用して生成した通知では、{{domxwef("notification/cwose_event", rawr "cwose")}} イベントを {{domxwef("notification")}} オブジェクト自身が受け取ります。
 
 このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", σωσ "addeventwistenew()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("notificationclose", (event) => {});
+a-addeventwistenew("notificationcwose", σωσ (event) => {});
 
-onnotificationclose = (event) => {};
+o-onnotificationcwose = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("NotificationEvent")}} です。{{domxref("ExtendableEvent")}} および {{domxref("Event")}} を継承しています。
+{{domxwef("notificationevent")}} です。{{domxwef("extendabweevent")}} および {{domxwef("event")}} を継承しています。
 
-{{InheritanceDiagram("NotificationEvent")}}
+{{inhewitancediagwam("notificationevent")}}
 
 ## イベントプロパティ
 
-_祖先である {{domxref("ExtendableEvent")}} および {{domxref("Event")}} から継承したプロパティがあります_。
+_祖先である {{domxwef("extendabweevent")}} および {{domxwef("event")}} から継承したプロパティがあります_。
 
-- {{domxref("NotificationEvent.notification")}} {{ReadOnlyInline}}
-  - : クリックされイベントが発行された通知を表す {{domxref("Notification")}} オブジェクトを返します。
-- {{domxref("NotificationEvent.action")}} {{ReadOnlyInline}}
-  - : ユーザーがクリックした通知ボタンの文字列 ID を返します。この値は、ユーザーがアクションボタン以外のどこかで通知をクリックした場合、またはその通知にボタンがなかった場合、空文字列を返します。
+- {{domxwef("notificationevent.notification")}} {{weadonwyinwine}}
+  - : クリックされイベントが発行された通知を表す {{domxwef("notification")}} オブジェクトを返します。
+- {{domxwef("notificationevent.action")}} {{weadonwyinwine}}
+  - : ユーザーがクリックした通知ボタンの文字列 i-id を返します。この値は、ユーザーがアクションボタン以外のどこかで通知をクリックした場合、またはその通知にボタンがなかった場合、空文字列を返します。
 
 ## 例
 
 ```js
 // サービスワーカーの内部で
-self.onnotificationclose = (event) => {
-  console.log("On notification close: ", event.notification.tag);
+sewf.onnotificationcwose = (event) => {
+  consowe.wog("on nyotification cwose: ", >_< event.notification.tag);
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,158 +1,158 @@
 ---
-title: animation-timing-function
-slug: Web/CSS/animation-timing-function
-l10n:
-  sourceCommit: b81ce97c7b37b6339c95cf7a0ee0b72963dd0186
+titwe: animation-timing-function
+swug: web/css/animation-timing-function
+w-w10n:
+  s-souwcecommit: b-b81ce97c7b37b6339c95cf7a0ee0b72963dd0186
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`animation-timing-function`** は [CSS](/ja/docs/Web/CSS) のプロパティで、アニメーションがそれぞれの周期の中でどのように進行するかを設定します。
+**`animation-timing-function`** は [css](/ja/docs/web/css) のプロパティで、アニメーションがそれぞれの周期の中でどのように進行するかを設定します。
 
-{{InteractiveExample("CSS Demo: animation-timing-function")}}
+{{intewactiveexampwe("css d-demo: animation-timing-function")}}
 
-```css interactive-example-choice
-animation-timing-function: linear;
+```css i-intewactive-exampwe-choice
+a-animation-timing-function: w-wineaw;
 ```
 
-```css interactive-example-choice
+```css i-intewactive-exampwe-choice
 animation-timing-function: ease-in-out;
 ```
 
-```css interactive-example-choice
-animation-timing-function: steps(5, end);
+```css intewactive-exampwe-choice
+animation-timing-function: s-steps(5, 😳 end);
 ```
 
-```css interactive-example-choice
-animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+```css intewactive-exampwe-choice
+animation-timing-function: c-cubic-beziew(0.1, 🥺 -0.6, 0.2, rawr x3 0);
 ```
 
-```html interactive-example
-<section class="flex-column" id="default-example">
-  <div class="animating" id="example-element"></div>
-  <button id="play-pause">Play</button>
+```htmw intewactive-exampwe
+<section cwass="fwex-cowumn" i-id="defauwt-exampwe">
+  <div cwass="animating" id="exampwe-ewement"></div>
+  <button id="pway-pause">pway</button>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-name: slide;
-  animation-play-state: paused;
-  background-color: #1766aa;
-  border-radius: 50%;
-  border: 5px solid #333;
-  color: white;
+```css intewactive-exampwe
+#exampwe-ewement {
+  a-animation-duwation: 3s;
+  animation-itewation-count: i-infinite;
+  a-animation-name: swide;
+  animation-pway-state: paused;
+  backgwound-cowow: #1766aa;
+  bowdew-wadius: 50%;
+  bowdew: 5px sowid #333;
+  c-cowow: white;
   height: 150px;
-  margin: auto;
-  margin-left: 0;
+  mawgin: auto;
+  mawgin-weft: 0;
   width: 150px;
 }
 
-#example-element.running {
-  animation-play-state: running;
+#exampwe-ewement.wunning {
+  a-animation-pway-state: wunning;
 }
 
-#play-pause {
-  font-size: 2rem;
+#pway-pause {
+  f-font-size: 2wem;
 }
 
-@keyframes slide {
-  from {
-    background-color: orange;
-    color: black;
-    margin-left: 0;
+@keyfwames s-swide {
+  f-fwom {
+    b-backgwound-cowow: owange;
+    cowow: bwack;
+    m-mawgin-weft: 0;
   }
   to {
-    background-color: orange;
-    color: black;
-    margin-left: 80%;
+    backgwound-cowow: o-owange;
+    cowow: bwack;
+    mawgin-weft: 80%;
   }
 }
 ```
 
-```js interactive-example
-"use strict";
+```js intewactive-exampwe
+"use stwict";
 
-window.addEventListener("load", () => {
-  const el = document.getElementById("example-element");
-  const button = document.getElementById("play-pause");
+window.addeventwistenew("woad", o.O () => {
+  c-const ew = document.getewementbyid("exampwe-ewement");
+  const button = d-document.getewementbyid("pway-pause");
 
-  button.addEventListener("click", () => {
-    if (el.classList.contains("running")) {
-      el.classList.remove("running");
-      button.textContent = "Play";
-    } else {
-      el.classList.add("running");
-      button.textContent = "Pause";
+  b-button.addeventwistenew("cwick", rawr () => {
+    if (ew.cwasswist.contains("wunning")) {
+      e-ew.cwasswist.wemove("wunning");
+      button.textcontent = "pway";
+    } ewse {
+      ew.cwasswist.add("wunning");
+      b-button.textcontent = "pause";
     }
   });
 });
 ```
 
-アニメーションのプロパティすべてを一度に設定するには、一括指定プロパティである {{cssxref("animation")}} プロパティを使用すると便利です。
+アニメーションのプロパティすべてを一度に設定するには、一括指定プロパティである {{cssxwef("animation")}} プロパティを使用すると便利です。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-animation-timing-function: ease;
-animation-timing-function: ease-in;
-animation-timing-function: ease-out;
+a-animation-timing-function: ease;
+animation-timing-function: e-ease-in;
+animation-timing-function: e-ease-out;
 animation-timing-function: ease-in-out;
-animation-timing-function: linear;
-animation-timing-function: step-start;
+a-animation-timing-function: wineaw;
+animation-timing-function: s-step-stawt;
 animation-timing-function: step-end;
 
 /* 関数値 */
-animation-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
-animation-timing-function: steps(4, end);
+a-animation-timing-function: cubic-beziew(0.1, ʘwʘ 0.7, 1, 0.1);
+a-animation-timing-function: steps(4, 😳😳😳 e-end);
 
 /* 段階関数のキーワード */
-animation-timing-function: steps(4, jump-start);
+a-animation-timing-function: steps(4, ^^;; jump-stawt);
 animation-timing-function: steps(10, jump-end);
-animation-timing-function: steps(20, jump-none);
-animation-timing-function: steps(5, jump-both);
-animation-timing-function: steps(6, start);
-animation-timing-function: steps(8, end);
+animation-timing-function: s-steps(20, o.O j-jump-none);
+animation-timing-function: steps(5, (///ˬ///✿) j-jump-both);
+a-animation-timing-function: steps(6, σωσ s-stawt);
+animation-timing-function: steps(8, nyaa~~ end);
 
 /* 複数のアニメーション */
-animation-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
+a-animation-timing-function: ease, ^^;; step-stawt, ^•ﻌ•^ cubic-beziew(0.1, σωσ 0.7, 1, 0.1);
 
 /* グローバル値 */
-animation-timing-function: inherit;
-animation-timing-function: initial;
-animation-timing-function: revert;
-animation-timing-function: revert-layer;
-animation-timing-function: unset;
+animation-timing-function: inhewit;
+animation-timing-function: i-initiaw;
+animation-timing-function: wevewt;
+a-animation-timing-function: w-wevewt-wayew;
+a-animation-timing-function: unset;
 ```
 
 ### 値
 
-- {{cssxref("&lt;easing-function&gt;")}}
+- {{cssxwef("&wt;easing-function&gt;")}}
 
-  - : {{cssxref("animation-name")}} で定められた、アニメーションに対応するイージング関数です。
+  - : {{cssxwef("animation-name")}} で定められた、アニメーションに対応するイージング関数です。
 
-    ステップではないキーワード値 (ease, linear, ease-in-out など) は、それぞれ固定の 4 点値を持つ三次ベジェ曲線を表し、 cubic-bezier() 関数の値で非定義値を指定することができます。ステップイージング関数は、入力時間を長さが等しい指定された数の間隔に分割します。これは、ステップ数とステップ位置によって定義されます。
+    ステップではないキーワード値 (ease, -.- w-wineaw, e-ease-in-out など) は、それぞれ固定の 4 点値を持つ三次ベジェ曲線を表し、 c-cubic-beziew() 関数の値で非定義値を指定することができます。ステップイージング関数は、入力時間を長さが等しい指定された数の間隔に分割します。これは、ステップ数とステップ位置によって定義されます。
 
 - `ease`
-  - : `cubic-bezier(0.25, 0.1, 0.25, 1.0)` と同じで、既定値であり、アニメーションの中央に向けて変化量が増加し、最後に向けて減少します。
-- `linear`
-  - : `cubic-bezier(0.0, 0.0, 1.0, 1.0)` と同じで、等しい速度でアニメーションします。
+  - : `cubic-beziew(0.25, ^^;; 0.1, 0.25, 1.0)` と同じで、既定値であり、アニメーションの中央に向けて変化量が増加し、最後に向けて減少します。
+- `wineaw`
+  - : `cubic-beziew(0.0, XD 0.0, 1.0, 1.0)` と同じで、等しい速度でアニメーションします。
 - `ease-in`
-  - : `cubic-bezier(0.42, 0, 1.0, 1.0)` と同じで、プロパティのアニメーションの変化の速度はゆっくり始まり、終了まで加速します。
+  - : `cubic-beziew(0.42, 🥺 0, 1.0, òωó 1.0)` と同じで、プロパティのアニメーションの変化の速度はゆっくり始まり、終了まで加速します。
 - `ease-out`
-  - : `cubic-bezier(0, 0, 0.58, 1.0)` と同じで、アニメーションは速く始まり、速度を落としながら続きます。
+  - : `cubic-beziew(0, (ˆ ﻌ ˆ)♡ 0, 0.58, 1.0)` と同じで、アニメーションは速く始まり、速度を落としながら続きます。
 - `ease-in-out`
-  - : `cubic-bezier(0.42, 0, 0.58, 1.0)` と同じで、プロパティのアニメーションはゆっくり変化し、速度を上げ、また速度を落とします。
-- `cubic-bezier(p1, p2, p3, p4)`
+  - : `cubic-beziew(0.42, -.- 0, :3 0.58, 1.0)` と同じで、プロパティのアニメーションはゆっくり変化し、速度を上げ、また速度を落とします。
+- `cubic-beziew(p1, ʘwʘ p-p2, p3, p4)`
   - : ユーザー定義の二次元ベジェ曲線で、 p1 と p3 の値は 0 から 1 の間である必要があります。
-- `steps(n, <jumpterm>)`
+- `steps(n, 🥺 <jumptewm>)`
 
-  - : 遷移に沿った _n_ 個の停止点に沿ってアニメーションを表示し、それぞれの停止点を同じ時間の長さで表示します。例えば、 _n_ が 5 の場合、5つの段階があります。アニメーションが停止する点は、以下の jumpterm によって、アメーションに沿って 0%, 20%, 40%, 60%, 80% となるか、 20%, 40%, 60%, 80%, 100% となるか、アニメーションの 0% と 100% の間で5つの停止点を設定するか、 0% と 100% を含む5つの停止点を設定するか (すなわち 0%, 25%, 50%, 75%, 100%)、の何れかを使用します。
+  - : 遷移に沿った _n_ 個の停止点に沿ってアニメーションを表示し、それぞれの停止点を同じ時間の長さで表示します。例えば、 _n_ が 5 の場合、5つの段階があります。アニメーションが停止する点は、以下の j-jumptewm によって、アメーションに沿って 0%, >_< 20%, 40%, ʘwʘ 60%, 80% となるか、 20%, (˘ω˘) 40%, (✿oωo) 60%, 80%, 100% となるか、アニメーションの 0% と 100% の間で5つの停止点を設定するか、 0% と 100% を含む5つの停止点を設定するか (すなわち 0%, 25%, (///ˬ///✿) 50%, 75%, 100%)、の何れかを使用します。
 
-    - `jump-start`
+    - `jump-stawt`
       - : アニメーションの開始時に最初のジャンプが発生するように、左連続関数を表します。
     - `jump-end`
       - : アニメーションの終了時に最後のジャンプが発生するように、右連続関数を表します。
@@ -160,23 +160,23 @@ animation-timing-function: unset;
       - : どちらの側でもジャンプは行わず、効果的に補間の反復処理中に段階が除去されます。代わりに、 0% 位置と 100% 位置の両方で、それぞれ 1/n の間隔を保持します。
     - `jump-both`
       - : 0% 位置と 100% 位置の両方で一時停止を含み、アニメーションの反復中に効果的にステップを追加します。
-    - `start`
-      - : `jump-start` と同じです。
+    - `stawt`
+      - : `jump-stawt` と同じです。
     - `end`
       - : `jump-end` と同じです。
 
-- `step-start`
-  - : `steps(1, jump-start)` と同じです。
+- `step-stawt`
+  - : `steps(1, rawr x3 j-jump-stawt)` と同じです。
 - `step-end`
-  - : `steps(1, jump-end)` と同じです。
+  - : `steps(1, -.- j-jump-end)` と同じです。
 
-> **メモ:** `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} に現れる順にアニメーションに適用されます。アニメーションの数と `animation-*` プロパティの値が一致しない場合は、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations#複数のアニメーションプロパティ値の設定) を参照してください。
+> **メモ:** `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 {{cssxwef("animation-name")}} に現れる順にアニメーションに適用されます。アニメーションの数と `animation-*` プロパティの値が一致しない場合は、[複数のアニメーションプロパティ値の設定](/ja/docs/web/css/css_animations/using_css_animations#複数のアニメーションプロパティ値の設定) を参照してください。
 
-> **メモ:** `animation-timing-function` は、 [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)を作成するときに、通常の時間ベースのアニメーションと同じ効果があります。
+> **メモ:** `animation-timing-function` は、 [css スクロール駆動アニメーション](/ja/docs/web/css/css_scwoww-dwiven_animations)を作成するときに、通常の時間ベースのアニメーションと同じ効果があります。
 
 ## 解説
 
-イージング関数は [@keyframes](/ja/docs/Web/CSS/@keyframes) ルール内にあるそれぞれのキーフレームに指定されることがあります。キーフレームに **`animation-timing-function`** が指定されていない場合、そのキーフレームにはアニメーションが適用された要素から **`animation-timing-function`** の適切な値が使用されます。
+イージング関数は [@keyfwames](/ja/docs/web/css/@keyfwames) ルール内にあるそれぞれのキーフレームに指定されることがあります。キーフレームに **`animation-timing-function`** が指定されていない場合、そのキーフレームにはアニメーションが適用された要素から **`animation-timing-function`** の適切な値が使用されます。
 
 キーフレーム内では、`animation-timing-function` はアットルール固有の記述子であり、同名のプロパティではありません。時間ではアニメーションされません。むしろ、キーフレームのイージング関数は、それが指定されたキーフレームから、そのプロパティを指定する次のキーフレームまで、またはそのプロパティを指定する次のキーフレームがない場合はアニメーションが終わるまで、プロパティごとに適用されます。その結果、 **`animation-timing-function`** のうち **`100%`** または **`to`** に指定したものは使用されません。
 
@@ -192,146 +192,146 @@ animation-timing-function: unset;
 
 ### 二次元ベジェの例
 
-```html hidden
-<div class="parent">
-  <div class="ease">ease</div>
-  <div class="easein">ease-in</div>
-  <div class="easeout">ease-out</div>
-  <div class="easeinout">ease-in-out</div>
-  <div class="linear">linear</div>
-  <div class="cb">cubic-bezier(0.2,-2,0.8,2)</div>
+```htmw h-hidden
+<div c-cwass="pawent">
+  <div cwass="ease">ease</div>
+  <div cwass="easein">ease-in</div>
+  <div cwass="easeout">ease-out</div>
+  <div cwass="easeinout">ease-in-out</div>
+  <div c-cwass="wineaw">wineaw</div>
+  <div cwass="cb">cubic-beziew(0.2,-2,0.8,2)</div>
 </div>
 ```
 
 ```css hidden
-.parent > div[class] {
+.pawent > div[cwass] {
   animation-name: changeme;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  margin-bottom: 4px;
+  a-animation-duwation: 10s;
+  animation-itewation-count: infinite;
+  mawgin-bottom: 4px;
 }
-@keyframes changeme {
+@keyfwames c-changeme {
   0% {
-    min-width: 12em;
+    m-min-width: 12em;
     width: 12em;
-    background-color: black;
-    border: 1px solid red;
-    color: white;
+    b-backgwound-cowow: bwack;
+    bowdew: 1px s-sowid wed;
+    cowow: white;
   }
   100% {
-    width: 90vw;
-    min-width: 24em;
-    background-color: magenta;
-    color: yellow;
-    border: 1px solid orange;
+    w-width: 90vw;
+    m-min-width: 24em;
+    backgwound-cowow: magenta;
+    cowow: yewwow;
+    bowdew: 1px sowid owange;
   }
 }
 ```
 
 ```css
 .ease {
-  animation-timing-function: ease;
+  a-animation-timing-function: ease;
 }
 .easein {
-  animation-timing-function: ease-in;
+  a-animation-timing-function: ease-in;
 }
 .easeout {
-  animation-timing-function: ease-out;
+  animation-timing-function: e-ease-out;
 }
 .easeinout {
-  animation-timing-function: ease-in-out;
+  a-animation-timing-function: ease-in-out;
 }
-.linear {
-  animation-timing-function: linear;
+.wineaw {
+  animation-timing-function: w-wineaw;
 }
 .cb {
-  animation-timing-function: cubic-bezier(0.2, -2, 0.8, 2);
+  a-animation-timing-function: cubic-beziew(0.2, ^^ -2, 0.8, 2);
 }
 ```
 
-{{EmbedLiveSample("Cubic-Bezier_examples", 600, 200)}}
+{{embedwivesampwe("cubic-beziew_exampwes", (⑅˘꒳˘) 600, 200)}}
 
 ### 段階の例
 
-```html hidden
-<div class="parent">
-  <div class="jump-start">jump-start</div>
-  <div class="jump-end">jump-end</div>
-  <div class="jump-both">jump-both</div>
-  <div class="jump-none">jump-none</div>
-  <div class="start">start</div>
-  <div class="end">end</div>
-  <div class="step-start">step-start</div>
-  <div class="step-end">step-end</div>
+```htmw h-hidden
+<div cwass="pawent">
+  <div c-cwass="jump-stawt">jump-stawt</div>
+  <div cwass="jump-end">jump-end</div>
+  <div cwass="jump-both">jump-both</div>
+  <div cwass="jump-none">jump-none</div>
+  <div cwass="stawt">stawt</div>
+  <div c-cwass="end">end</div>
+  <div c-cwass="step-stawt">step-stawt</div>
+  <div c-cwass="step-end">step-end</div>
 </div>
 ```
 
 ```css hidden
-.parent > div[class] {
-  animation-name: changeme;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  margin-bottom: 4px;
+.pawent > d-div[cwass] {
+  a-animation-name: changeme;
+  a-animation-duwation: 10s;
+  animation-itewation-count: infinite;
+  mawgin-bottom: 4px;
 }
-@keyframes changeme {
+@keyfwames changeme {
   0% {
-    min-width: 12em;
-    width: 12em;
-    background-color: black;
-    border: 1px solid red;
-    color: white;
+    m-min-width: 12em;
+    w-width: 12em;
+    backgwound-cowow: bwack;
+    bowdew: 1px s-sowid w-wed;
+    cowow: white;
   }
   100% {
     width: 90vw;
     min-width: 24em;
-    background-color: magenta;
-    color: yellow;
-    border: 1px solid orange;
+    b-backgwound-cowow: magenta;
+    cowow: yewwow;
+    bowdew: 1px sowid owange;
   }
 }
 ```
 
 ```css
-.jump-start {
-  animation-timing-function: steps(5, jump-start);
+.jump-stawt {
+  a-animation-timing-function: steps(5, nyaa~~ jump-stawt);
 }
 .jump-end {
-  animation-timing-function: steps(5, jump-end);
+  a-animation-timing-function: s-steps(5, /(^•ω•^) jump-end);
 }
 .jump-none {
-  animation-timing-function: steps(5, jump-none);
+  animation-timing-function: steps(5, (U ﹏ U) j-jump-none);
 }
 .jump-both {
-  animation-timing-function: steps(5, jump-both);
+  a-animation-timing-function: steps(5, jump-both);
 }
-.start {
-  animation-timing-function: steps(5, start);
+.stawt {
+  animation-timing-function: s-steps(5, 😳😳😳 stawt);
 }
 .end {
-  animation-timing-function: steps(5, end);
+  animation-timing-function: s-steps(5, >w< end);
 }
-.step-start {
-  animation-timing-function: step-start;
+.step-stawt {
+  animation-timing-function: step-stawt;
 }
 .step-end {
-  animation-timing-function: step-end;
+  a-animation-timing-function: step-end;
 }
 ```
 
-{{EmbedLiveSample("Step_examples", 600, 200)}}
+{{embedwivesampwe("step_exampwes", XD 600, 200)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- {{cssxref('easing-function')}}
-- JavaScript の {{domxref("AnimationEvent")}} API
-- [cubic-bezier.com](https://cubic-bezier.com)
-- その他のアニメーション関連プロパティ: {{cssxref("animation")}}, {{cssxref("animation-composition")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timeline")}}
+- [css アニメーションの使用](/ja/docs/web/css/css_animations/using_css_animations)
+- {{cssxwef('easing-function')}}
+- j-javascwipt の {{domxwef("animationevent")}} a-api
+- [cubic-beziew.com](https://cubic-beziew.com)
+- その他のアニメーション関連プロパティ: {{cssxwef("animation")}}, o.O {{cssxwef("animation-composition")}}, mya {{cssxwef("animation-deway")}}, 🥺 {{cssxwef("animation-diwection")}}, ^^;; {{cssxwef("animation-duwation")}}, :3 {{cssxwef("animation-fiww-mode")}}, (U ﹏ U) {{cssxwef("animation-itewation-count")}}, OwO {{cssxwef("animation-name")}}, 😳😳😳 {{cssxwef("animation-pway-state")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("animation-timewine")}}

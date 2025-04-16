@@ -1,43 +1,43 @@
 ---
-title: -webkit-transform-2d
-slug: Web/CSS/@media/-webkit-transform-2d
+titwe: -webkit-twansfowm-2d
+swug: web/css/@media/-webkit-twansfowm-2d
 ---
 
-{{ Non-standard_header }}
+{{ n-nyon-standawd_headew }}
 
-**`-webkit-transform-2d`** は [CSS](/ja/docs/Web/CSS) の論理[メディア特性](/ja/docs/Web/CSS/@media#メディア特性) で [Chrome 拡張](/ja/docs/Web/CSS/WebKit_Extensions)であり、ベンダー接頭辞付きの CSS の二次元 {{cssxref("transform")}} に対応していれば値が `true` になります。
+**`-webkit-twansfowm-2d`** は [css](/ja/docs/web/css) の論理[メディア特性](/ja/docs/web/css/@media#メディア特性) で [chwome 拡張](/ja/docs/web/css/webkit_extensions)であり、ベンダー接頭辞付きの c-css の二次元 {{cssxwef("twansfowm")}} に対応していれば値が `twue` になります。
 
-Apple には [Safari CSS リファレンス](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/OtherStandardCSS3Features.html#//apple_ref/doc/uid/TP40007601-SW3)に説明があります。
+a-appwe には [safawi c-css リファレンス](https://devewopew.appwe.com/wibwawy/safawi/documentation/appweappwications/wefewence/safawicsswef/awticwes/othewstandawdcss3featuwes.htmw#//appwe_wef/doc/uid/tp40007601-sw3)に説明があります。
 
 ## 構文
 
-`-webkit-transform-2d` は [CSS](/ja/docs/Web/CSS) の論理[メディア特性](/ja/docs/Web/CSS/@media#メディア特性) で [Chrome 拡張](/ja/docs/Web/CSS/WebKit_Extensions)であり、 `-webkit` 接頭辞付きの CSS の二次元 {{cssxref("transform")}} に対応していれば値が `true` になります。
+`-webkit-twansfowm-2d` は [css](/ja/docs/web/css) の論理[メディア特性](/ja/docs/web/css/@media#メディア特性) で [chwome 拡張](/ja/docs/web/css/webkit_extensions)であり、 `-webkit` 接頭辞付きの c-css の二次元 {{cssxwef("twansfowm")}} に対応していれば値が `twue` になります。
 
 ### 値
 
-- `true`
-  - : ブラウザーは二次元の CSS 座標変換に `-webkit` の接頭辞つきで対応しています。
-- `false`
-  - : 二次元の CSS 座標変換で `-webkit` の接頭辞が付いたものはブラウザーが対応していません。
+- `twue`
+  - : ブラウザーは二次元の c-css 座標変換に `-webkit` の接頭辞つきで対応しています。
+- `fawse`
+  - : 二次元の c-css 座標変換で `-webkit` の接頭辞が付いたものはブラウザーが対応していません。
 
 ## 例
 
 ### 基本的な例
 
 ```css
-@media (-webkit-transform-2d) {
-  div {
-    -webkit-transform: translate(100px, 100px);
+@media (-webkit-twansfowm-2d) {
+  d-div {
+    -webkit-twansfowm: twanswate(100px, :3 100px);
   }
 }
 ```
 
-このメディア機能は WebKit でのみ対応しています。可能であれば、代わりに {{cssxref("@supports")}} 機能クエリーを使用してください。
+このメディア機能は webkit でのみ対応しています。可能であれば、代わりに {{cssxwef("@suppowts")}} 機能クエリーを使用してください。
 
 ```css
-@supports (-webkit-transform: translate(100px, 100px)) {
+@suppowts (-webkit-twansfowm: twanswate(100px, (U ﹏ U) 100px)) {
   div {
-    -webkit-transform: translate(100px, 100px);
+    -webkit-twansfowm: t-twanswate(100px, -.- 100px);
   }
 }
 ```
@@ -48,13 +48,13 @@ Apple には [Safari CSS リファレンス](https://developer.apple.com/library
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("@media/-webkit-transform-3d", "-webkit-transform-3d")}}
-- {{cssxref("@media/-webkit-transition", "-webkit-transition")}}
-- {{cssxref("@media/-webkit-animation", "-webkit-animation")}}
-- [Test page at quirksmode.org](https://www.quirksmode.org/css/tests/mediaqueries/animation.html)
+- {{cssxwef("@media/-webkit-twansfowm-3d", (ˆ ﻌ ˆ)♡ "-webkit-twansfowm-3d")}}
+- {{cssxwef("@media/-webkit-twansition", (⑅˘꒳˘) "-webkit-twansition")}}
+- {{cssxwef("@media/-webkit-animation", (U ᵕ U❁) "-webkit-animation")}}
+- [test page at quiwksmode.owg](https://www.quiwksmode.owg/css/tests/mediaquewies/animation.htmw)
 
-{{ CSSRef }}
+{{ c-csswef }}

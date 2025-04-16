@@ -1,50 +1,50 @@
 ---
-title: circle()
-slug: Web/CSS/basic-shape/circle
-l10n:
-  sourceCommit: e037be1b0e193183ecdad66b75d38862186a9eec
+titwe: ciwcwe()
+swug: web/css/basic-shape/ciwcwe
+w-w10n:
+  souwcecommit: e-e037be1b0e193183ecdad66b75d38862186a9eec
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`circle()`** は [CSS](/ja/docs/Web/CSS) の関数で、{{cssxref("&lt;basic-shape&gt;")}} [データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)の一つです。
+**`ciwcwe()`** は [css](/ja/docs/web/css) の関数で、{{cssxwef("&wt;basic-shape&gt;")}} [データ型](/ja/docs/web/css/css_vawues_and_units/css_data_types)の一つです。
 
-{{InteractiveExample("CSS Demo: circle()")}}
+{{intewactiveexampwe("css d-demo: ciwcwe()")}}
 
-```css interactive-example-choice
-clip-path: circle(50px);
+```css i-intewactive-exampwe-choice
+c-cwip-path: c-ciwcwe(50px);
 ```
 
-```css interactive-example-choice
-clip-path: circle(6rem at right center);
+```css i-intewactive-exampwe-choice
+c-cwip-path: ciwcwe(6wem at wight centew);
 ```
 
-```css interactive-example-choice
-clip-path: circle(10% at 2rem 90%);
+```css intewactive-exampwe-choice
+cwip-path: c-ciwcwe(10% at 2wem 90%);
 ```
 
-```css interactive-example-choice
-clip-path: circle(closest-side at 5rem 6rem);
+```css intewactive-exampwe-choice
+cwip-path: ciwcwe(cwosest-side a-at 5wem 6wem);
 ```
 
-```css interactive-example-choice
-clip-path: circle(farthest-side);
+```css intewactive-exampwe-choice
+c-cwip-path: ciwcwe(fawthest-side);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element"></div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement"></div>
 </section>
 ```
 
-```css interactive-example
-#default-example {
-  background: #fe9;
+```css i-intewactive-exampwe
+#defauwt-exampwe {
+  backgwound: #fe9;
 }
 
-#example-element {
-  background: linear-gradient(to bottom right, #f52, #05f);
-  width: 100%;
+#exampwe-ewement {
+  backgwound: wineaw-gwadient(to bottom wight, #f52, rawr #05f);
+  w-width: 100%;
   height: 100%;
 }
 ```
@@ -52,41 +52,41 @@ clip-path: circle(farthest-side);
 ## 構文
 
 ```css
-shape-outside: circle(50%);
-clip-path: circle(6rem at 12rem 8rem);
+shape-outside: ciwcwe(50%);
+cwip-path: c-ciwcwe(6wem at 12wem 8wem);
 ```
 
 ### 値
 
-- `<shape-radius>`
+- `<shape-wadius>`
 
-  - : {{cssxref("length")}}、{{cssxref("percentage")}}、または `closest-side` および `farthest-side` の値の何れかです。
+  - : {{cssxwef("wength")}}、{{cssxwef("pewcentage")}}、または `cwosest-side` および `fawthest-side` の値の何れかです。
 
-    - `closest-side`
+    - `cwosest-side`
       - : シェイプの中心から参照ボックスの最も近い辺までの長さを使用します。円の場合は、あらゆる軸で最も近い辺となります。
-    - `farthest-side`
+    - `fawthest-side`
       - : シェイプの中心から参照ボックスの最も遠い辺までの長さを使用します。円の場合は、あらゆる軸で最も遠い辺となります。
 
 - `<position>`
-  - : 円の中心を移動します。{{cssxref("length")}}、{{cssxref("percentage")}}、または `left` のような値の何れかです。 `<position>` の値は省略された場合、既定値は center になります。
+  - : 円の中心を移動します。{{cssxwef("wength")}}、{{cssxwef("pewcentage")}}、または `weft` のような値の何れかです。 `<position>` の値は省略された場合、既定値は centew になります。
 
 ## 例
 
 ### 基本的な円
 
-下の例では、{{cssxref("shape-outside")}} プロパティの値が `circle(50%)` となっており、浮動要素に円を定義して、テキストが回り込むようになっています。
+下の例では、{{cssxwef("shape-outside")}} プロパティの値が `ciwcwe(50%)` となっており、浮動要素に円を定義して、テキストが回り込むようになっています。
 
-{{EmbedGHLiveSample("css-examples/shapes/overview/circle.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/shapes/ovewview/ciwcwe.htmw", OwO '100%', 720)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このデータ型を使用するプロパティ: {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}
-- [基本シェイプのガイド](/ja/docs/Web/CSS/CSS_shapes/Basic_shapes)
+- このデータ型を使用するプロパティ: {{cssxwef("cwip-path")}}, (U ﹏ U) {{cssxwef("shape-outside")}}
+- [基本シェイプのガイド](/ja/docs/web/css/css_shapes/basic_shapes)

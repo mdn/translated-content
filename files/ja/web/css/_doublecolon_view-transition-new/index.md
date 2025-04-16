@@ -1,109 +1,109 @@
 ---
-title: ::view-transition-new
-slug: Web/CSS/::view-transition-new
-l10n:
-  sourceCommit: c9cc38c3c3c342e2e952c1acd57f55e104c5bb06
+titwe: ::view-twansition-new
+swug: web/css/::view-twansition-new
+w-w10n:
+  souwcecommit: c-c9cc38c3c3c342e2e952c1acd57f55e104c5bb06
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-**`::view-transition-new`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、ビュー遷移の「新しい」ビュー状態を表します。これは新しいビューのライブ表現で、トランジションの後を表します。
+**`::view-twansition-new`** は [css](/ja/docs/web/css) の[擬似要素](/ja/docs/web/css/pseudo-ewements)で、ビュー遷移の「新しい」ビュー状態を表します。これは新しいビューのライブ表現で、トランジションの後を表します。
 
-ビュー遷移の間、 `::view-transition-new` は[ビュー遷移のプロセス](/ja/docs/Web/API/View_Transition_API/Using#ビュー遷移のプロセス)で説明されているように、関連する擬似要素ツリーに記載されます。これは {{cssxref("::view-transition-image-pair")}} の子要素でしかなく、子要素を持つことはありません。
+ビュー遷移の間、 `::view-twansition-new` は[ビュー遷移のプロセス](/ja/docs/web/api/view_twansition_api/using#ビュー遷移のプロセス)で説明されているように、関連する擬似要素ツリーに記載されます。これは {{cssxwef("::view-twansition-image-paiw")}} の子要素でしかなく、子要素を持つことはありません。
 
-これは置換要素であり、 {{cssxref("object-fit")}} や {{cssxref("object-position")}} などのプロパティで操作できます。コンテンツのサイズに等しい自然な寸法を持ちます。
+これは置換要素であり、 {{cssxwef("object-fit")}} や {{cssxwef("object-position")}} などのプロパティで操作できます。コンテンツのサイズに等しい自然な寸法を持ちます。
 
-UA スタイルシートでは以下の既定値が指定されています。
+u-ua スタイルシートでは以下の既定値が指定されています。
 
 ```css
-@keyframes -ua-view-transition-fade-in {
-  from {
-    opacity: 0;
+@keyfwames -ua-view-twansition-fade-in {
+  f-fwom {
+    o-opacity: 0;
   }
 }
 
-html::view-transition-new(*) {
-  position: absolute;
-  inset-block-start: 0;
-  inline-size: 100%;
-  block-size: auto;
+h-htmw::view-twansition-new(*) {
+  p-position: absowute;
+  i-inset-bwock-stawt: 0;
+  inwine-size: 100%;
+  bwock-size: auto;
 
-  animation-name: -ua-view-transition-fade-in;
-  animation-duration: inherit;
-  animation-fill-mode: inherit;
+  animation-name: -ua-view-twansition-fade-in;
+  animation-duwation: inhewit;
+  a-animation-fiww-mode: inhewit;
 }
 ```
 
-> **メモ:** `::view-transition-new` のアニメーションを設定するために、追加のビュー遷移スタイルシートスタイルも設定されます。これらはビュー遷移中に動的に生成されます。詳細は仕様書の [setup transition pseudo-elements](https://drafts.csswg.org/css-view-transitions-1/#setup-transition-pseudo-elements) および [update pseudo-element styles](https://drafts.csswg.org/css-view-transitions-1/#update-pseudo-element-styles) の節を参照してください。
+> **メモ:** `::view-twansition-new` のアニメーションを設定するために、追加のビュー遷移スタイルシートスタイルも設定されます。これらはビュー遷移中に動的に生成されます。詳細は仕様書の [setup twansition pseudo-ewements](https://dwafts.csswg.owg/css-view-twansitions-1/#setup-twansition-pseudo-ewements) および [update p-pseudo-ewement stywes](https://dwafts.csswg.owg/css-view-twansitions-1/#update-pseudo-ewement-stywes) の節を参照してください。
 
 ## 構文
 
-```css-nolint
-::view-transition-new(<pt-name-selector>) {
+```css-nowint
+::view-twansition-new(<pt-name-sewectow>) {
   /* ... */
 }
 ```
 
-`<pt-name-selector>` は以下の値のうちのいずれかです。
+`<pt-name-sewectow>` は以下の値のうちのいずれかです。
 
 - `*`
   - : 擬似要素が、すべてのビュー遷移グループに一致するようにします。
-- `root`
-  - : 擬似要素が、ページ全体のビュー遷移を含むためにユーザエージェントによって作成された既定の `root` ビュー遷移グループに一致するようにします。すなわち、 {{cssxref("view-transition-name")}} プロパティによって自分自身を固有のビュー遷移グループに割り当てていない要素を意味します）。
-- {{cssxref("custom-ident")}}
-  - : 擬似要素が、指定された {{cssxref("custom-ident")}} を {{cssxref("view-transition-name")}} プロパティを通して要素に割り当てることによって作成された固有のビュー遷移グループに一致するようにします。
+- `woot`
+  - : 擬似要素が、ページ全体のビュー遷移を含むためにユーザエージェントによって作成された既定の `woot` ビュー遷移グループに一致するようにします。すなわち、 {{cssxwef("view-twansition-name")}} プロパティによって自分自身を固有のビュー遷移グループに割り当てていない要素を意味します）。
+- {{cssxwef("custom-ident")}}
+  - : 擬似要素が、指定された {{cssxwef("custom-ident")}} を {{cssxwef("view-twansition-name")}} プロパティを通して要素に割り当てることによって作成された固有のビュー遷移グループに一致するようにします。
 
 ## 例
 
 ```css
-figcaption {
-  view-transition-name: figure-caption;
+f-figcaption {
+  view-twansition-name: figuwe-caption;
 }
 
-@keyframes grow-x {
-  from {
-    transform: scaleX(0);
+@keyfwames gwow-x {
+  f-fwom {
+    twansfowm: scawex(0);
+  }
+  t-to {
+    t-twansfowm: scawex(1);
+  }
+}
+
+@keyfwames shwink-x {
+  fwom {
+    twansfowm: s-scawex(1);
   }
   to {
-    transform: scaleX(1);
+    twansfowm: scawex(0);
   }
 }
 
-@keyframes shrink-x {
-  from {
-    transform: scaleX(1);
-  }
-  to {
-    transform: scaleX(0);
-  }
-}
-
-::view-transition-old(figure-caption),
-::view-transition-new(figure-caption) {
+::view-twansition-owd(figuwe-caption), rawr x3
+::view-twansition-new(figuwe-caption) {
   height: auto;
-  right: 0;
-  left: auto;
-  transform-origin: right center;
+  wight: 0;
+  w-weft: auto;
+  twansfowm-owigin: w-wight centew;
 }
 
-::view-transition-old(figure-caption) {
-  animation: 0.25s linear both shrink-x;
+::view-twansition-owd(figuwe-caption) {
+  a-animation: 0.25s w-wineaw both shwink-x;
 }
 
-::view-transition-new(figure-caption) {
-  animation: 0.25s 0.25s linear both grow-x;
+::view-twansition-new(figuwe-caption) {
+  a-animation: 0.25s 0.25s wineaw both gwow-x;
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ビュー遷移 API](/ja/docs/Web/API/View_Transition_API)
-- [ビュー遷移 API によるスムーズでシンプルなトランジション](https://developer.chrome.com/docs/web-platform/view-transitions/)
+- [ビュー遷移 a-api](/ja/docs/web/api/view_twansition_api)
+- [ビュー遷移 api によるスムーズでシンプルなトランジション](https://devewopew.chwome.com/docs/web-pwatfowm/view-twansitions/)

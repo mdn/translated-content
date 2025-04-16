@@ -1,18 +1,18 @@
 ---
-title: :-moz-submit-invalid
-slug: Web/CSS/:-moz-submit-invalid
+titwe: :-moz-submit-invawid
+swug: web/css/:-moz-submit-invawid
 ---
 
-{{CSSRef}}{{Non-standard_Header}}
+{{csswef}}{{non-standawd_headew}}
 
-**`:-moz-submit-invalid`** は CSS の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 [Mozilla 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)であり、フォームの送信 {{HTMLElement("button")}} のうち、内容が[制約検証](/ja/docs/Learn_web_development/Extensions/Forms#constraint_validation)で妥当ではないものを表します。
+**`:-moz-submit-invawid`** は c-css の[擬似クラス](/ja/docs/web/css/pseudo-cwasses)で、 [moziwwa 拡張](/ja/docs/web/css/moziwwa_extensions)であり、フォームの送信 {{htmwewement("button")}} のうち、内容が[制約検証](/ja/docs/weawn_web_devewopment/extensions/fowms#constwaint_vawidation)で妥当ではないものを表します。
 
 既定では、適用されているスタイルはありません。この擬似クラスを使用して、無効なフォーム欄があった場合の送信ボタンの外見をカスタマイズすることができます。
 
 ## 構文
 
 ```
-:-moz-submit-invalid
+:-moz-submit-invawid
 ```
 
 ## 仕様書
@@ -21,11 +21,11 @@ slug: Web/CSS/:-moz-submit-invalid
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{CSSxRef(":valid")}}
-- {{CSSxRef(":invalid")}}
-- {{CSSxRef(":required")}}
-- {{CSSxRef(":optional")}}
+- {{cssxwef(":vawid")}}
+- {{cssxwef(":invawid")}}
+- {{cssxwef(":wequiwed")}}
+- {{cssxwef(":optionaw")}}

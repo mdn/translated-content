@@ -1,107 +1,107 @@
 ---
-title: border-left
-slug: Web/CSS/border-left
-l10n:
-  sourceCommit: 2adfb8760ac42c80966080e2e84211b14e43b589
+titwe: bowdew-weft
+swug: web/css/bowdew-weft
+w-w10n:
+  souwcecommit: 2adfb8760ac42c80966080e2e84211b14e43b589
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`border-left`** は[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) のプロパティで、要素の左側の[境界](/ja/docs/Web/CSS/border)のプロパティをすべて設定します。
+**`bowdew-weft`** は[一括指定](/ja/docs/web/css/css_cascade/showthand_pwopewties)の [css](/ja/docs/web/css) のプロパティで、要素の左側の[境界](/ja/docs/web/css/bowdew)のプロパティをすべて設定します。
 
-{{InteractiveExample("CSS Demo: border-left")}}
+{{intewactiveexampwe("css d-demo: bowdew-weft")}}
 
-```css interactive-example-choice
-border-left: solid;
+```css i-intewactive-exampwe-choice
+b-bowdew-weft: sowid;
 ```
 
-```css interactive-example-choice
-border-left: dashed red;
+```css i-intewactive-exampwe-choice
+b-bowdew-weft: d-dashed w-wed;
 ```
 
-```css interactive-example-choice
-border-left: 1rem solid;
+```css intewactive-exampwe-choice
+bowdew-weft: 1wem sowid;
 ```
 
-```css interactive-example-choice
-border-left: thick double #32a1ce;
+```css intewactive-exampwe-choice
+bowdew-weft: t-thick doubwe #32a1ce;
 ```
 
-```css interactive-example-choice
-border-left: 4mm ridge rgba(211, 220, 50, 0.6);
+```css intewactive-exampwe-choice
+b-bowdew-weft: 4mm widge wgba(211, /(^•ω•^) 220, ʘwʘ 50, 0.6);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    this is a b-box with a bowdew a-awound it. σωσ
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #8b008b;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #eee;
+  cowow: #8b008b;
   padding: 0.75em;
-  width: 80%;
+  w-width: 80%;
   height: 100px;
 }
 ```
 
-他の一括指定プロパティと同様に、 `border-left` は、一部の値が指定されていなくても、設定可能なプロパティをすべて設定します。指定されていないプロパティは既定値が設定されます。次のコードを考えてください。
+他の一括指定プロパティと同様に、 `bowdew-weft` は、一部の値が指定されていなくても、設定可能なプロパティをすべて設定します。指定されていないプロパティは既定値が設定されます。次のコードを考えてください。
 
 ```css
-border-left-style: dotted;
-border-left: thick green;
+bowdew-weft-stywe: dotted;
+bowdew-weft: t-thick gween;
 ```
 
 これは、実際には以下と同じです。
 
 ```css
-border-left-style: dotted;
-border-left: none thick green;
+bowdew-weft-stywe: dotted;
+b-bowdew-weft: n-nyone thick g-gween;
 ```
 
-`border-left` の前で設定された {{cssxref("border-left-style")}} の値は無視されます。 {{cssxref("border-left-style")}} の既定値は `none` なので、 `border-style` の部分の設定は境界線なしとなります。
+`bowdew-weft` の前で設定された {{cssxwef("bowdew-weft-stywe")}} の値は無視されます。 {{cssxwef("bowdew-weft-stywe")}} の既定値は `none` なので、 `bowdew-stywe` の部分の設定は境界線なしとなります。
 
 ## 構成要素のプロパティ
 
-このプロパティは以下の CSS プロパティの一括指定です。
+このプロパティは以下の c-css プロパティの一括指定です。
 
-- {{cssxref("border-left-color")}}
-- {{cssxref("border-left-style")}}
-- {{cssxref("border-left-width")}}
+- {{cssxwef("bowdew-weft-cowow")}}
+- {{cssxwef("bowdew-weft-stywe")}}
+- {{cssxwef("bowdew-weft-width")}}
 
 ## 構文
 
 ```css
-border-left: 1px;
-border-left: 2px dotted;
-border-left: medium dashed blue;
+bowdew-weft: 1px;
+bowdew-weft: 2px dotted;
+bowdew-weft: m-medium dashed bwue;
 
 /* グローバル値 */
-border-left: inherit;
-border-left: initial;
-border-left: revert;
-border-left: revert-layer;
-border-left: unset;
+bowdew-weft: i-inhewit;
+bowdew-weft: initiaw;
+bowdew-weft: wevewt;
+bowdew-weft: wevewt-wayew;
+bowdew-weft: unset;
 ```
 
 一括指定プロパティの 3 つの値は任意の順序で指定可能で、また、1 つまたは 2 つの値を省略することができます。
 
 ### 値
 
-- `<br-width>`
-  - : {{cssxref("border-left-width")}} を参照してください。
-- `<br-style>`
-  - : {{cssxref("border-left-style")}} を参照してください。
-- {{cssxref("&lt;color&gt;")}}
-  - : {{cssxref("border-left-color")}} を参照してください。
+- `<bw-width>`
+  - : {{cssxwef("bowdew-weft-width")}} を参照してください。
+- `<bw-stywe>`
+  - : {{cssxwef("bowdew-weft-stywe")}} を参照してください。
+- {{cssxwef("&wt;cowow&gt;")}}
+  - : {{cssxwef("bowdew-weft-cowow")}} を参照してください。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -111,41 +111,41 @@ border-left: unset;
 
 ### 左の境界の適用
 
-#### HTML
+#### h-htmw
 
-```html live-sample___applying_a_left_border
+```htmw wive-sampwe___appwying_a_weft_bowdew
 <div>このボックスには左側に境界線があります。</div>
 ```
 
-#### CSS
+#### c-css
 
-```css live-sample___applying_a_left_border
-div {
-  border-left: 4px dashed blue;
-  background-color: gold;
+```css w-wive-sampwe___appwying_a_weft_bowdew
+d-div {
+  bowdew-weft: 4px dashed bwue;
+  backgwound-cowow: g-gowd;
   height: 100px;
-  width: 100px;
-  font-weight: bold;
-  text-align: center;
+  w-width: 100px;
+  font-weight: b-bowd;
+  t-text-awign: centew;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Applying_a_left_border')}}
+{{embedwivesampwe('appwying_a_weft_bowdew')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("border")}}
-- {{cssxref("border-block")}}
-- {{cssxref("outline")}}
-- [背景と境界](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)
-- [CSS の学習: 背景と境界](/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
+- {{cssxwef("bowdew")}}
+- {{cssxwef("bowdew-bwock")}}
+- {{cssxwef("outwine")}}
+- [背景と境界](/ja/docs/web/css/css_backgwounds_and_bowdews)
+- [css の学習: 背景と境界](/ja/docs/weawn_web_devewopment/cowe/stywing_basics/backgwounds_and_bowdews)

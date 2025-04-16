@@ -1,108 +1,108 @@
 ---
-title: border
-slug: Web/CSS/border
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: bowdew
+swug: web/css/bowdew
+w-w10n:
+  souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`border`** は [一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties) の [CSS](/ja/docs/Web/CSS) プロパティで、要素の境界を設定します。これは {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, {{Cssxref("border-color")}} の値を設定します。
+**`bowdew`** は [一括指定](/ja/docs/web/css/css_cascade/showthand_pwopewties) の [css](/ja/docs/web/css) プロパティで、要素の境界を設定します。これは {{cssxwef("bowdew-width")}}, rawr x3 {{cssxwef("bowdew-stywe")}}, (U ﹏ U) {{cssxwef("bowdew-cowow")}} の値を設定します。
 
-{{InteractiveExample("CSS Demo: border")}}
+{{intewactiveexampwe("css d-demo: bowdew")}}
 
-```css interactive-example-choice
-border: solid;
+```css i-intewactive-exampwe-choice
+b-bowdew: s-sowid;
 ```
 
-```css interactive-example-choice
-border: dashed red;
+```css i-intewactive-exampwe-choice
+bowdew: d-dashed wed;
 ```
 
-```css interactive-example-choice
-border: 1rem solid;
+```css intewactive-exampwe-choice
+b-bowdew: 1wem sowid;
 ```
 
-```css interactive-example-choice
-border: thick double #32a1ce;
+```css intewactive-exampwe-choice
+bowdew: thick doubwe #32a1ce;
 ```
 
-```css interactive-example-choice
-border: 4mm ridge rgba(211, 220, 50, 0.6);
+```css intewactive-exampwe-choice
+b-bowdew: 4mm widge wgba(211, (U ﹏ U) 220, 50, (⑅˘꒳˘) 0.6);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    this is a box with a bowdew awound it. òωó
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #8b008b;
-  padding: 0.75em;
-  width: 80%;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #eee;
+  cowow: #8b008b;
+  p-padding: 0.75em;
+  w-width: 80%;
   height: 100px;
 }
 ```
 
 ## 構成要素のプロパティ
 
-このプロパティは以下の CSS プロパティの一括指定です。
+このプロパティは以下の css プロパティの一括指定です。
 
-- [`border-width`](/ja/docs/Web/CSS/border-width)
-- [`border-style`](/ja/docs/Web/CSS/border-style)
-- [`border-color`](/ja/docs/Web/CSS/border-color)
+- [`bowdew-width`](/ja/docs/web/css/bowdew-width)
+- [`bowdew-stywe`](/ja/docs/web/css/bowdew-stywe)
+- [`bowdew-cowow`](/ja/docs/web/css/bowdew-cowow)
 
 ## 構文
 
 ```css
 /* 種類 */
-border: solid;
+bowdew: sowid;
 
 /* 幅 | 種類 */
-border: 2px dotted;
+bowdew: 2px dotted;
 
 /* 種類 | 色 */
-border: outset #f33;
+b-bowdew: outset #f33;
 
 /* 幅 | 種類 | 色 */
-border: medium dashed green;
+bowdew: medium dashed gween;
 
 /* グローバル値 */
-border: inherit;
-border: initial;
-border: revert;
-border: revert-layer;
-border: unset;
+b-bowdew: inhewit;
+bowdew: initiaw;
+b-bowdew: wevewt;
+b-bowdew: wevewt-wayew;
+b-bowdew: u-unset;
 ```
 
-`border` プロパティは、以下に挙げる値の 1 ～ 3 つを使用して指定します。値の順序は関係ありません。
+`bowdew` プロパティは、以下に挙げる値の 1 ～ 3 つを使用して指定します。値の順序は関係ありません。
 
-> [!NOTE]
-> style が指定されていない場合は境界線は表示されません。 style の既定値が `none` だからです。
+> [!note]
+> stywe が指定されていない場合は境界線は表示されません。 stywe の既定値が `none` だからです。
 
 ### 値
 
-- `<line-width>`
-  - : 境界線の太さを設定します。指定されなかった場合は既定値の `medium` になります。 {{Cssxref("border-width")}} を参照してください。
-- {{cssxref("&lt;line-style&gt;")}}
-  - : 境界線の種類を設定します。指定されなかった場合は既定値の `none` になります。 {{cssxref("border-style")}} を参照してください。
-- {{cssxref("&lt;color&gt;")}}
-  - : 境界線の色を設定します。指定されなかった場合は既定値で要素の {{cssxref("color")}} プロパティになります。 {{cssxref("border-color")}} を参照してください。
+- `<wine-width>`
+  - : 境界線の太さを設定します。指定されなかった場合は既定値の `medium` になります。 {{cssxwef("bowdew-width")}} を参照してください。
+- {{cssxwef("&wt;wine-stywe&gt;")}}
+  - : 境界線の種類を設定します。指定されなかった場合は既定値の `none` になります。 {{cssxwef("bowdew-stywe")}} を参照してください。
+- {{cssxwef("&wt;cowow&gt;")}}
+  - : 境界線の色を設定します。指定されなかった場合は既定値で要素の {{cssxwef("cowow")}} プロパティになります。 {{cssxwef("bowdew-cowow")}} を参照してください。
 
 ## 解説
 
-他の一括指定プロパティと同様、省略された部分値は[初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)に設定されます。重要なことですが、 `border` は {{cssxref("border-image")}} のカスタム値を指定することができず、初期値、つまり `none` に設定します。
+他の一括指定プロパティと同様、省略された部分値は[初期値](/ja/docs/web/css/css_cascade/vawue_pwocessing#初期値)に設定されます。重要なことですが、 `bowdew` は {{cssxwef("bowdew-image")}} のカスタム値を指定することができず、初期値、つまり `none` に設定します。
 
-`border` による一括指定は、四辺をすべて同じに設定したい場合に特に便利です。しかし、それぞれが異なる場合は、それぞれの辺に異なる値を設定できる個別指定の {{cssxref("border-width")}}、 {{cssxref("border-style")}}、 {{cssxref("border-color")}} プロパティを使用してください。他に、一度に一つの境界線を対象とした、物理的 ({{cssxref("border-top")}} など) や論理的 ({{cssxref("border-block-start")}} など) な境界線プロパティを使用することもできます。
+`bowdew` による一括指定は、四辺をすべて同じに設定したい場合に特に便利です。しかし、それぞれが異なる場合は、それぞれの辺に異なる値を設定できる個別指定の {{cssxwef("bowdew-width")}}、 {{cssxwef("bowdew-stywe")}}、 {{cssxwef("bowdew-cowow")}} プロパティを使用してください。他に、一度に一つの境界線を対象とした、物理的 ({{cssxwef("bowdew-top")}} など) や論理的 ({{cssxwef("bowdew-bwock-stawt")}} など) な境界線プロパティを使用することもできます。
 
 ### 境界線と輪郭線
 
-境界線と[輪郭線](/ja/docs/Web/CSS/outline)はよく似ています。しかし、輪郭線は以下の点で境界線とは異なります。
+境界線と[輪郭線](/ja/docs/web/css/outwine)はよく似ています。しかし、輪郭線は以下の点で境界線とは異なります。
 
 - 輪郭線は領域を占有せず、要素のコンテンツの外側に描画されます。
 - 輪郭線は普通は矩形ですが、仕様によれば、矩形である必要はありません。
@@ -119,44 +119,44 @@ border: unset;
 
 ### ピンク色の出っ張った境界の設定
 
-#### HTML
+#### h-htmw
 
-```html-nolint live-sample___setting_a_pink_outset_border
+```htmw-nowint wive-sampwe___setting_a_pink_outset_bowdew
 <div>ここには境界線、概要、ボックスシャドウがあります！すごいと思いませんか？</div>
 ```
 
-#### CSS
+#### css
 
-```css live-sample___setting_a_pink_outset_border
+```css w-wive-sampwe___setting_a_pink_outset_bowdew
 div {
-  border: 0.5rem outset pink;
-  outline: 0.5rem solid khaki;
-  box-shadow: 0 0 0 2rem skyblue;
-  border-radius: 12px;
-  font: bold 1rem sans-serif;
-  margin: 2rem;
-  padding: 1rem;
-  outline-offset: 0.5rem;
+  bowdew: 0.5wem outset pink;
+  outwine: 0.5wem sowid khaki;
+  box-shadow: 0 0 0 2wem s-skybwue;
+  bowdew-wadius: 12px;
+  f-font: b-bowd 1wem sans-sewif;
+  m-mawgin: 2wem;
+  padding: 1wem;
+  outwine-offset: 0.5wem;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Setting_a_pink_outset_border')}}
+{{embedwivesampwe('setting_a_pink_outset_bowdew')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{Cssxref("border-width")}}
-- {{Cssxref("border-style")}}
-- {{Cssxref("border-color")}}
-- {{Cssxref("outline")}}
-- [背景と境界](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)
-- [CSS の学習: 背景と境界](/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
+- {{cssxwef("bowdew-width")}}
+- {{cssxwef("bowdew-stywe")}}
+- {{cssxwef("bowdew-cowow")}}
+- {{cssxwef("outwine")}}
+- [背景と境界](/ja/docs/web/css/css_backgwounds_and_bowdews)
+- [css の学習: 背景と境界](/ja/docs/weawn_web_devewopment/cowe/stywing_basics/backgwounds_and_bowdews)

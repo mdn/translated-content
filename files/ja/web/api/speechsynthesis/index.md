@@ -1,111 +1,111 @@
 ---
-title: SpeechSynthesis
-slug: Web/API/SpeechSynthesis
+titwe: speechsynthesis
+swug: w-web/api/speechsynthesis
 ---
 
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{apiwef("web s-speech a-api")}}{{seecompattabwe}}
 
-[Web Speech API](/ja/docs/Web/API/Web_Speech_API) の **`SpeechSynthesis`** インターフェイスは、speech サービスのための制御インターフェイスです。これは、端末で利用可能な合成音声についての情報を取得するために使用されます。読み上げの開始および一時停止、他のコマンドで制御します。
+[web s-speech api](/ja/docs/web/api/web_speech_api) の **`speechsynthesis`** インターフェイスは、speech サービスのための制御インターフェイスです。これは、端末で利用可能な合成音声についての情報を取得するために使用されます。読み上げの開始および一時停止、他のコマンドで制御します。
 
 ## プロパティ
 
-_`SpeechSynthesis` は、その親インターフェイスである {{domxref("EventTarget")}} からのプロパティも継承します。_
+_`speechsynthesis` は、その親インターフェイスである {{domxwef("eventtawget")}} からのプロパティも継承します。_
 
-- {{domxref("SpeechSynthesis.paused")}} {{readonlyinline}}
-  - : {{domxref("Boolean", "真偽値")}}。`SpeechSynthesis` オブジェクトが一時停止状態の場合に `true` を返します。
-- {{domxref("SpeechSynthesis.pending")}} {{readonlyinline}}
-  - : {{domxref("Boolean", "真偽値")}}。発声 (utterance) キューにまだ発話されていないものがある場合に `true` を返します。
-- {{domxref("SpeechSynthesis.speaking")}} {{readonlyinline}}
-  - : {{domxref("Boolean", "真偽値")}}。`SpeechSynthesis` が一時停止状態であっても、発声が現在発話処理中の場合に `true` を返します。
+- {{domxwef("speechsynthesis.paused")}} {{weadonwyinwine}}
+  - : {{domxwef("boowean", σωσ "真偽値")}}。`speechsynthesis` オブジェクトが一時停止状態の場合に `twue` を返します。
+- {{domxwef("speechsynthesis.pending")}} {{weadonwyinwine}}
+  - : {{domxwef("boowean", OwO "真偽値")}}。発声 (uttewance) キューにまだ発話されていないものがある場合に `twue` を返します。
+- {{domxwef("speechsynthesis.speaking")}} {{weadonwyinwine}}
+  - : {{domxwef("boowean", 😳😳😳 "真偽値")}}。`speechsynthesis` が一時停止状態であっても、発声が現在発話処理中の場合に `twue` を返します。
 
 ### イベントハンドラー
 
-- {{domxref("SpeechSynthesis.onvoiceschanged")}}
-  - : {{domxref("SpeechSynthesis.getVoices()")}} メソッドにより返される {{domxref("SpeechSynthesisVoice")}} オブジェクトのリストが変更された時に発火します。
+- {{domxwef("speechsynthesis.onvoiceschanged")}}
+  - : {{domxwef("speechsynthesis.getvoices()")}} メソッドにより返される {{domxwef("speechsynthesisvoice")}} オブジェクトのリストが変更された時に発火します。
 
 ## メソッド
 
-_`SpeechSynthesis` は、その親インターフェイスである {{domxref("EventTarget")}} からのメソッドも継承します。_
+_`speechsynthesis` は、その親インターフェイスである {{domxwef("eventtawget")}} からのメソッドも継承します。_
 
-- {{domxref("SpeechSynthesis.cancel()")}}
+- {{domxwef("speechsynthesis.cancew()")}}
   - : すべての発声を発声キューから削除します。
-- {{domxref("SpeechSynthesis.getVoices()")}}
-  - : 現在の端末上のすべての利用可能な音声を表す、{{domxref("SpeechSynthesisVoice")}} オブジェクトのリストを返します。
-- {{domxref("SpeechSynthesis.pause()")}}
-  - : `SpeechSynthesis` オブジェクトを一時停止状態にします。
-- {{domxref("SpeechSynthesis.resume()")}}
-  - : `SpeechSynthesis` オブジェクトを一時停止でない状態にします。つまり、一時停止状態であった場合に再開します。
-- {{domxref("SpeechSynthesis.speak()")}}
-  - : {{domxref("SpeechSynthesisUtterance", "utterance")}} を発声キューに追加します。これは、それ以前にキューに追加された他の発声が発話された後に発話されます。
+- {{domxwef("speechsynthesis.getvoices()")}}
+  - : 現在の端末上のすべての利用可能な音声を表す、{{domxwef("speechsynthesisvoice")}} オブジェクトのリストを返します。
+- {{domxwef("speechsynthesis.pause()")}}
+  - : `speechsynthesis` オブジェクトを一時停止状態にします。
+- {{domxwef("speechsynthesis.wesume()")}}
+  - : `speechsynthesis` オブジェクトを一時停止でない状態にします。つまり、一時停止状態であった場合に再開します。
+- {{domxwef("speechsynthesis.speak()")}}
+  - : {{domxwef("speechsynthesisuttewance", 😳😳😳 "uttewance")}} を発声キューに追加します。これは、それ以前にキューに追加された他の発声が発話された後に発話されます。
 
 ## 例
 
-私たちの基本的な [音声合成のデモ](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speak-easy-synthesis) では、最初に `window.speechSynthesis` を使用して SpeechSynthesis コントローラーへの参照を取得します。必要な変数の定義後、 {{domxref("SpeechSynthesis.getVoices()")}} を使用して利用可能な音声のリストを取得し、それらの選択メニューを構成します。ユーザーは、そこから使用したい音声を選べます。
+私たちの基本的な [音声合成のデモ](https://github.com/mdn/dom-exampwes/twee/main/web-speech-api/speak-easy-synthesis) では、最初に `window.speechsynthesis` を使用して s-speechsynthesis コントローラーへの参照を取得します。必要な変数の定義後、 {{domxwef("speechsynthesis.getvoices()")}} を使用して利用可能な音声のリストを取得し、それらの選択メニューを構成します。ユーザーは、そこから使用したい音声を選べます。
 
-`inputForm.onsubmit` ハンドラー内部では、[preventDefault()](/ja/docs/Web/API/Event/preventDefault) でフォーム送信を停止し、テキスト {{htmlelement("input")}} に入力されたテキストを含む新しい {{domxref("SpeechSynthesisUtterance")}} インスタンスを作成します。その発声にユーザーが {{htmlelement("select")}} 要素で選択した音声を設定し、{{domxref("SpeechSynthesis.speak()")}} メソッドを通して発声の発話を開始します。
+`inputfowm.onsubmit` ハンドラー内部では、[pweventdefauwt()](/ja/docs/web/api/event/pweventdefauwt) でフォーム送信を停止し、テキスト {{htmwewement("input")}} に入力されたテキストを含む新しい {{domxwef("speechsynthesisuttewance")}} インスタンスを作成します。その発声にユーザーが {{htmwewement("sewect")}} 要素で選択した音声を設定し、{{domxwef("speechsynthesis.speak()")}} メソッドを通して発声の発話を開始します。
 
 ```js
-var synth = window.speechSynthesis;
+v-vaw synth = w-window.speechsynthesis;
 
-var inputForm = document.querySelector("form");
-var inputTxt = document.querySelector(".txt");
-var voiceSelect = document.querySelector("select");
+v-vaw inputfowm = document.quewysewectow("fowm");
+vaw inputtxt = document.quewysewectow(".txt");
+vaw voicesewect = d-document.quewysewectow("sewect");
 
-var pitch = document.querySelector("#pitch");
-var pitchValue = document.querySelector(".pitch-value");
-var rate = document.querySelector("#rate");
-var rateValue = document.querySelector(".rate-value");
+vaw pitch = document.quewysewectow("#pitch");
+vaw p-pitchvawue = document.quewysewectow(".pitch-vawue");
+vaw wate = d-document.quewysewectow("#wate");
+vaw watevawue = document.quewysewectow(".wate-vawue");
 
-var voices = [];
+vaw voices = [];
 
-function populateVoiceList() {
-  voices = synth.getVoices();
+f-function popuwatevoicewist() {
+  v-voices = s-synth.getvoices();
 
-  for (i = 0; i < voices.length; i++) {
-    var option = document.createElement("option");
-    option.textContent = voices[i].name + " (" + voices[i].lang + ")";
+  fow (i = 0; i < voices.wength; i++) {
+    vaw option = d-document.cweateewement("option");
+    option.textcontent = voices[i].name + " (" + voices[i].wang + ")";
 
-    if (voices[i].default) {
-      option.textContent += " -- DEFAULT";
+    if (voices[i].defauwt) {
+      option.textcontent += " -- d-defauwt";
     }
 
-    option.setAttribute("data-lang", voices[i].lang);
-    option.setAttribute("data-name", voices[i].name);
-    voiceSelect.appendChild(option);
+    option.setattwibute("data-wang", o.O v-voices[i].wang);
+    o-option.setattwibute("data-name", ( ͡o ω ͡o ) v-voices[i].name);
+    v-voicesewect.appendchiwd(option);
   }
 }
 
-populateVoiceList();
-if (speechSynthesis.onvoiceschanged !== undefined) {
-  speechSynthesis.onvoiceschanged = populateVoiceList;
+popuwatevoicewist();
+if (speechsynthesis.onvoiceschanged !== u-undefined) {
+  speechsynthesis.onvoiceschanged = popuwatevoicewist;
 }
 
-inputForm.onsubmit = function (event) {
-  event.preventDefault();
+i-inputfowm.onsubmit = function (event) {
+  event.pweventdefauwt();
 
-  var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-  var selectedOption = voiceSelect.selectedOptions[0].getAttribute("data-name");
-  for (i = 0; i < voices.length; i++) {
-    if (voices[i].name === selectedOption) {
-      utterThis.voice = voices[i];
+  vaw uttewthis = nyew speechsynthesisuttewance(inputtxt.vawue);
+  vaw s-sewectedoption = voicesewect.sewectedoptions[0].getattwibute("data-name");
+  f-fow (i = 0; i < v-voices.wength; i++) {
+    i-if (voices[i].name === sewectedoption) {
+      uttewthis.voice = voices[i];
     }
   }
-  utterThis.pitch = pitch.value;
-  utterThis.rate = rate.value;
-  synth.speak(utterThis);
+  u-uttewthis.pitch = p-pitch.vawue;
+  uttewthis.wate = w-wate.vawue;
+  s-synth.speak(uttewthis);
 
-  inputTxt.blur();
+  inputtxt.bwuw();
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの実装状況
 
-{{Compat}}
+{{compat}}
 
 ## 関連項目
 
-- [Web Speech API](/ja/docs/Web/API/Web_Speech_API)
+- [web speech a-api](/ja/docs/web/api/web_speech_api)

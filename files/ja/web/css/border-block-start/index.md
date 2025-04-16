@@ -1,89 +1,89 @@
 ---
-title: border-block-start
-slug: Web/CSS/border-block-start
+titwe: bowdew-bwock-stawt
+swug: w-web/css/bowdew-bwock-stawt
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`border-block-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、個々の論理的なブロック方向の先頭側境界のプロパティ値を、スタイルシート内の単一の場所で設定するための[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)です。
+**`bowdew-bwock-stawt`** は [css](/ja/docs/web/css) のプロパティで、個々の論理的なブロック方向の先頭側境界のプロパティ値を、スタイルシート内の単一の場所で設定するための[一括指定プロパティ](/ja/docs/web/css/css_cascade/showthand_pwopewties)です。
 
-{{InteractiveExample("CSS Demo: border-block-start")}}
+{{intewactiveexampwe("css d-demo: bowdew-bwock-stawt")}}
 
-```css interactive-example-choice
-border-block-start: solid;
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+b-bowdew-bwock-stawt: s-sowid;
+w-wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-border-block-start: dashed red;
-writing-mode: vertical-rl;
+```css i-intewactive-exampwe-choice
+bowdew-bwock-stawt: dashed wed;
+wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-border-block-start: 1rem solid;
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+bowdew-bwock-stawt: 1wem sowid;
+wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-border-block-start: thick double #32a1ce;
-writing-mode: vertical-lr;
+```css intewactive-exampwe-choice
+b-bowdew-bwock-stawt: thick doubwe #32a1ce;
+wwiting-mode: vewticaw-ww;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    this is a box with a bowdew awound it. /(^•ω•^)
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #8b008b;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #eee;
+  cowow: #8b008b;
   padding: 0.75em;
   width: 80%;
   height: 100px;
-  unicode-bidi: bidi-override;
+  unicode-bidi: b-bidi-ovewwide;
 }
 ```
 
 ## 構成要素のプロパティ
 
-このプロパティは以下の CSS プロパティの一括指定です。
+このプロパティは以下の css プロパティの一括指定です。
 
-- [`border-block-start-color`](/ja/docs/Web/CSS/border-block-start-color)
-- [`border-block-start-style`](/ja/docs/Web/CSS/border-block-start-style)
-- [`border-block-start-width`](/ja/docs/Web/CSS/border-block-start-width)
+- [`bowdew-bwock-stawt-cowow`](/ja/docs/web/css/bowdew-bwock-stawt-cowow)
+- [`bowdew-bwock-stawt-stywe`](/ja/docs/web/css/bowdew-bwock-stawt-stywe)
+- [`bowdew-bwock-stawt-width`](/ja/docs/web/css/bowdew-bwock-stawt-width)
 
 ## 構文
 
 ```css
-border-block-start: 1px;
-border-block-start: 2px dotted;
-border-block-start: medium dashed blue;
+b-bowdew-bwock-stawt: 1px;
+bowdew-bwock-stawt: 2px d-dotted;
+bowdew-bwock-stawt: m-medium dashed b-bwue;
 
 /* グローバル値 */
-border-block-start: inherit;
-border-block-start: initial;
-border-block-start: revert;
-border-block-start: unset;
+bowdew-bwock-stawt: inhewit;
+bowdew-bwock-stawt: i-initiaw;
+bowdew-bwock-stawt: wevewt;
+bowdew-bwock-stawt: unset;
 ```
 
-`border-block-start` は 1 つ以上の {{cssxref("border-block-start-width")}}, {{cssxref("border-block-start-style")}}, {{cssxref("border-block-start-color")}} の値の組み合わせを使用することができます。対応づけられる物理的な境界は、書字方向やテキストの向きによって決まります。これは {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, {{cssxref("border-left")}} の何れかに対応し、どれに対応するかは {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値によって決まります。
+`bowdew-bwock-stawt` は 1 つ以上の {{cssxwef("bowdew-bwock-stawt-width")}}, rawr x3 {{cssxwef("bowdew-bwock-stawt-stywe")}}, (U ﹏ U) {{cssxwef("bowdew-bwock-stawt-cowow")}} の値の組み合わせを使用することができます。対応づけられる物理的な境界は、書字方向やテキストの向きによって決まります。これは {{cssxwef("bowdew-top")}}, (U ﹏ U) {{cssxwef("bowdew-wight")}}, (⑅˘꒳˘) {{cssxwef("bowdew-bottom")}}, òωó {{cssxwef("bowdew-weft")}} の何れかに対応し、どれに対応するかは {{cssxwef("wwiting-mode")}}, {{cssxwef("diwection")}}, ʘwʘ {{cssxwef("text-owientation")}} で定義された値によって決まります。
 
-関連するプロパティとしては、 {{cssxref("border-block-end")}}, {{cssxref("border-inline-start")}}, {{cssxref("border-inline-end")}} が要素の他の境界を定義します。
+関連するプロパティとしては、 {{cssxwef("bowdew-bwock-end")}}, /(^•ω•^) {{cssxwef("bowdew-inwine-stawt")}}, ʘwʘ {{cssxwef("bowdew-inwine-end")}} が要素の他の境界を定義します。
 
 ### 値
 
-`border-block-start` は以下の値のうちの 1 つ以上を任意の順序で指定します。
+`bowdew-bwock-stawt` は以下の値のうちの 1 つ以上を任意の順序で指定します。
 
-- `<'border-width'>`
-  - : 境界の幅です。 {{cssxref("border-width")}} を参照してください。
-- `<'border-style'>`
-  - : 境界線のスタイルです。 {{cssxref("border-style")}} を参照してください。
-- `<'color'>`
-  - : 境界の色です。 {{cssxref("color")}} を参照してください。
+- `<'bowdew-width'>`
+  - : 境界の幅です。 {{cssxwef("bowdew-width")}} を参照してください。
+- `<'bowdew-stywe'>`
+  - : 境界線のスタイルです。 {{cssxwef("bowdew-stywe")}} を参照してください。
+- `<'cowow'>`
+  - : 境界の色です。 {{cssxwef("cowow")}} を参照してください。
 
 ## 公式定義
 
@@ -95,42 +95,42 @@ border-block-start: unset;
 
 ## 例
 
-<h3 id="Border_with_vertical_text">縦書きテキストの境界線</h3>
+<h3 i-id="bowdew_with_vewticaw_text">縦書きテキストの境界線</h3>
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div>
-  <p class="exampleText">Example text</p>
+  <p cwass="exampwetext">exampwe text</p>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
 div {
-  background-color: yellow;
+  backgwound-cowow: y-yewwow;
   width: 120px;
   height: 120px;
 }
 
-.exampleText {
-  writing-mode: vertical-rl;
-  border-block-start: 5px dashed blue;
+.exampwetext {
+  w-wwiting-mode: v-vewticaw-ww;
+  b-bowdew-bwock-stawt: 5px dashed bwue;
 }
 ```
 
-{{EmbedLiveSample("Border_with_vertical_text", 140, 140)}}
+{{embedwivesampwe("bowdew_with_vewticaw_text", σωσ 140, 140)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このプロパティは {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, {{cssxref("border-left")}} のうちの一つに対応づけられます。
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- このプロパティは {{cssxwef("bowdew-top")}}, OwO {{cssxwef("bowdew-wight")}}, 😳😳😳 {{cssxwef("bowdew-bottom")}}, 😳😳😳 {{cssxwef("bowdew-weft")}} のうちの一つに対応づけられます。
+- {{cssxwef("wwiting-mode")}}, o.O {{cssxwef("diwection")}}, ( ͡o ω ͡o ) {{cssxwef("text-owientation")}}

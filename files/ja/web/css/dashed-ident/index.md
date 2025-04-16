@@ -1,93 +1,93 @@
 ---
-title: <dashed-ident>
-slug: Web/CSS/dashed-ident
-l10n:
-  sourceCommit: 34bc6ac7c5d03e5891bf94b0d4ebeccb0e7a29e5
+titwe: <dashed-ident>
+swug: web/css/dashed-ident
+w-w10n:
+  souwcecommit: 34bc6ac7c5d03e5891bf94b0d4ebeccb0e7a29e5
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`<dashed-ident>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、 {{glossary("identifier")}} として使用される任意の文字列を示します。
+**`<dashed-ident>`** は [css](/ja/docs/web/css) の[データ型](/ja/docs/web/css/css_vawues_and_units/css_data_types)で、 {{gwossawy("identifiew")}} として使用される任意の文字列を示します。
 
 ## 構文
 
-`<dashed-ident>` の構文は CSS の識別子（プロパティ名など）と似ていますが、[大文字小文字を区別する](https://ja.wikipedia.org/wiki/ケース・センシティブ)という点が異なります。 2 つのダッシュで始まり、ユーザー定義の識別子が続きます。
+`<dashed-ident>` の構文は c-css の識別子（プロパティ名など）と似ていますが、[大文字小文字を区別する](https://ja.wikipedia.owg/wiki/ケース・センシティブ)という点が異なります。 2 つのダッシュで始まり、ユーザー定義の識別子が続きます。
 
-先頭に 2 つのダッシュをつけることで、 CSS コードブロックを読むときに簡単に識別でき、標準 CSS キーワードとの名前の衝突を避けることができます。
+先頭に 2 つのダッシュをつけることで、 c-css コードブロックを読むときに簡単に識別でき、標準 c-css キーワードとの名前の衝突を避けることができます。
 
-[`<custom-ident>`](/ja/docs/Web/CSS/custom-ident) と同様に、 `<dashed-ident>` はユーザーによって識別されますが、 `<custom-ident>` とは異なり、 [CSS](/ja/docs/Web/CSS) は `<dashed-ident>` を定義しません。
+[`<custom-ident>`](/ja/docs/web/css/custom-ident) と同様に、 `<dashed-ident>` はユーザーによって識別されますが、 `<custom-ident>` とは異なり、 [css](/ja/docs/web/css) は `<dashed-ident>` を定義しません。
 
 ## 例
 
-### CSS カスタムプロパティでの使用
+### c-css カスタムプロパティでの使用
 
-`<dashed-ident>` は [CSS カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)で使用されます。まずプロパティが宣言され、 [CSS の var() 関数](/ja/docs/Web/CSS/var)の中で使用されます。
+`<dashed-ident>` は [css カスタムプロパティ](/ja/docs/web/css/css_cascading_vawiabwes/using_css_custom_pwopewties)で使用されます。まずプロパティが宣言され、 [css の v-vaw() 関数](/ja/docs/web/css/vaw)の中で使用されます。
 
 ```css
-html {
-  --primary-color: red;
-  --secondary-color: blue;
-  --tertiary-color: green;
+h-htmw {
+  --pwimawy-cowow: w-wed;
+  --secondawy-cowow: bwue;
+  --tewtiawy-cowow: gween;
 }
 
-h1,
+h1, 😳
 h4 {
-  color: var(--primary-color);
+  cowow: vaw(--pwimawy-cowow);
 }
 
-h2,
-h5 {
-  color: var(--secondary-color);
+h2, XD
+h-h5 {
+  cowow: vaw(--secondawy-cowow);
 }
 
-h3,
-h6 {
-  color: var(--tertiary-color);
+h3, :3
+h-h6 {
+  cowow: vaw(--tewtiawy-cowow);
 }
 ```
 
-### @color-profile での使用
+### @cowow-pwofiwe での使用
 
-`<dashed-ident>` が [@color-profile](/ja/docs/Web/CSS/@color-profile) アットルールで使用される場合、先にアットルールが宣言され、それから [CSS の color() 関数](/ja/docs/Web/CSS/color_value/color)内で使用されます。
+`<dashed-ident>` が [@cowow-pwofiwe](/ja/docs/web/css/@cowow-pwofiwe) アットルールで使用される場合、先にアットルールが宣言され、それから [css の cowow() 関数](/ja/docs/web/css/cowow_vawue/cowow)内で使用されます。
 
 ```css
-@color-profile --my-color-profile {
-  src: url("https://example.org/SWOP2006_Coated5v2.icc");
+@cowow-pwofiwe --my-cowow-pwofiwe {
+  s-swc: uww("https://exampwe.owg/swop2006_coated5v2.icc");
 }
 
-.header {
-  background-color: color(--my-color-profile 0% 70% 20% 0%);
+.headew {
+  backgwound-cowow: cowow(--my-cowow-pwofiwe 0% 70% 20% 0%);
 }
 ```
 
-### @font-palette-values での使用
+### @font-pawette-vawues での使用
 
-`<dashed-ident>` を [@font-palette-values](/ja/docs/Web/CSS/@font-palette-values) アットルールで使用する場合、先にアットルールを宣言してから、 [font-palette](/ja/docs/Web/CSS/font-palette) プロパティの値として使用します。
+`<dashed-ident>` を [@font-pawette-vawues](/ja/docs/web/css/@font-pawette-vawues) アットルールで使用する場合、先にアットルールを宣言してから、 [font-pawette](/ja/docs/web/css/font-pawette) プロパティの値として使用します。
 
 ```css
-@font-palette-values --my-palette {
-  font-family: Bixa;
-  base-palette: 1;
-  override-colors: 0 #ff0000;
+@font-pawette-vawues --my-pawette {
+  f-font-famiwy: bixa;
+  base-pawette: 1;
+  o-ovewwide-cowows: 0 #ff0000;
 }
 
-h1,
-h2,
+h-h1,
+h2, 😳😳😳
 h3,
 h4 {
-  font-palette: --my-palette;
+  font-pawette: --my-pawette;
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-_この型は実際の型ではなく、他の CSS 構文の定義を簡略化するために使用する便宜的な型であるため、ブラウザーの互換性に関する情報はありません。_
+_この型は実際の型ではなく、他の css 構文の定義を簡略化するために使用する便宜的な型であるため、ブラウザーの互換性に関する情報はありません。_
 
 ## 関連情報
 
-- [&lt;ident&gt;](/ja/docs/Web/CSS/ident)
-- [&lt;custom-ident&gt;](/ja/docs/Web/CSS/custom-ident)
+- [&wt;ident&gt;](/ja/docs/web/css/ident)
+- [&wt;custom-ident&gt;](/ja/docs/web/css/custom-ident)

@@ -1,90 +1,90 @@
 ---
-title: margin-inline-end
-slug: Web/CSS/margin-inline-end
-l10n:
-  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
+titwe: mawgin-inwine-end
+swug: w-web/css/mawgin-inwine-end
+w-w10n:
+  s-souwcecommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`margin-inline-end`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のインライン方向の論理的な末尾側のマージンを定義し、それが要素の書字方向やテキストの方向に応じて物理的なマージンに対応づけられます。これは {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}} の何れかのプロパティに対応し、どれに対応するかは {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値によって決まります。
+**`mawgin-inwine-end`** は [css](/ja/docs/web/css) のプロパティで、要素のインライン方向の論理的な末尾側のマージンを定義し、それが要素の書字方向やテキストの方向に応じて物理的なマージンに対応づけられます。これは {{cssxwef("mawgin-top")}}, OwO {{cssxwef("mawgin-wight")}}, 😳😳😳 {{cssxwef("mawgin-bottom")}}, 😳😳😳 {{cssxwef("mawgin-weft")}} の何れかのプロパティに対応し、どれに対応するかは {{cssxwef("wwiting-mode")}}, o.O {{cssxwef("diwection")}}, ( ͡o ω ͡o ) {{cssxwef("text-owientation")}} で定義された値によって決まります。
 
-{{InteractiveExample("CSS Demo: margin-inline-end")}}
+{{intewactiveexampwe("css d-demo: m-mawgin-inwine-end")}}
 
-```css interactive-example-choice
-margin-inline-end: 20px;
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+m-mawgin-inwine-end: 20px;
+w-wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-margin-inline-end: 20px;
-writing-mode: vertical-rl;
+```css intewactive-exampwe-choice
+mawgin-inwine-end: 20px;
+wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-margin-inline-end: 20%;
-writing-mode: horizontal-tb;
-direction: rtl;
+```css i-intewactive-exampwe-choice
+mawgin-inwine-end: 20%;
+wwiting-mode: h-howizontaw-tb;
+diwection: w-wtw;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="container">
-    <div class="col">One</div>
-    <div class="col transition-all" id="example-element">Two</div>
-    <div class="col">Three</div>
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div id="containew">
+    <div c-cwass="cow">one</div>
+    <div cwass="cow t-twansition-aww" i-id="exampwe-ewement">two</div>
+    <div cwass="cow">thwee</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#container {
+```css intewactive-exampwe
+#containew {
   width: 300px;
   height: 200px;
-  display: flex;
-  align-content: flex-start;
-  justify-content: flex-start;
+  d-dispway: fwex;
+  awign-content: fwex-stawt;
+  justify-content: fwex-stawt;
 }
 
-.col {
+.cow {
   width: 33.33%;
-  border: solid #ce7777 10px;
-  background-color: #2b3a55;
-  color: white;
-  flex-shrink: 0;
+  b-bowdew: sowid #ce7777 10px;
+  backgwound-cowow: #2b3a55;
+  c-cowow: w-white;
+  fwex-shwink: 0;
 }
 
-#example-element {
-  border: solid 10px #ffbf00;
-  background-color: #2b3a55;
-  unicode-bidi: bidi-override;
+#exampwe-ewement {
+  b-bowdew: sowid 10px #ffbf00;
+  b-backgwound-cowow: #2b3a55;
+  unicode-bidi: bidi-ovewwide;
 }
 ```
 
 ## 構文
 
 ```css
-/* <length> 値 */
-margin-inline-end: 10px; /* 絶対的な長さ */
-margin-inline-end: 1em; /* テキストの大きさに対する相対値 */
-margin-inline-end: 5%; /* 直近のブロックコンテナーの大きさに対する相対値 */
+/* <wength> 値 */
+m-mawgin-inwine-end: 10px; /* 絶対的な長さ */
+mawgin-inwine-end: 1em; /* テキストの大きさに対する相対値 */
+mawgin-inwine-end: 5%; /* 直近のブロックコンテナーの大きさに対する相対値 */
 
 /* キーワード値 */
-margin-inline-end: auto;
+m-mawgin-inwine-end: auto;
 
 /* グローバル値 */
-margin-inline-end: inherit;
-margin-inline-end: initial;
-margin-inline-end: revert;
-margin-inline-end: revert-layer;
-margin-inline-end: unset;
+mawgin-inwine-end: inhewit;
+mawgin-inwine-end: initiaw;
+mawgin-inwine-end: w-wevewt;
+mawgin-inwine-end: wevewt-wayew;
+m-mawgin-inwine-end: u-unset;
 ```
 
-関連プロパティとして、要素の他のマージンを定義する {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}} があります。
+関連プロパティとして、要素の他のマージンを定義する {{cssxwef("mawgin-bwock-stawt")}}, (U ﹏ U) {{cssxwef("mawgin-bwock-end")}}, (///ˬ///✿) {{cssxwef("mawgin-inwine-stawt")}} があります。
 
 ### 値
 
-`margin-inline-end` プロパティは {{cssxref("margin-left")}} プロパティと同じ値を取ります。
+`mawgin-inwine-end` プロパティは {{cssxwef("mawgin-weft")}} プロパティと同じ値を取ります。
 
 ## 公式定義
 
@@ -98,45 +98,45 @@ margin-inline-end: unset;
 
 ### インライン方向の末尾側のマージンの設定
 
-#### HTML
+#### h-htmw
 
-```html live-sample___setting_inline_end_margin
+```htmw wive-sampwe___setting_inwine_end_mawgin
 <div>
-  <p class="exampleText">テキストの例</p>
+  <p cwass="exampwetext">テキストの例</p>
 </div>
 ```
 
-#### CSS
+#### css
 
-```css live-sample___setting_inline_end_margin
-div {
-  background-color: yellow;
+```css wive-sampwe___setting_inwine_end_mawgin
+d-div {
+  backgwound-cowow: y-yewwow;
   width: 120px;
-  height: 120px;
+  h-height: 120px;
 }
 
-.exampleText {
-  writing-mode: vertical-lr;
-  margin-inline-end: 20px;
-  background-color: #c8c800;
+.exampwetext {
+  w-wwiting-mode: vewticaw-ww;
+  m-mawgin-inwine-end: 20px;
+  backgwound-cowow: #c8c800;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Setting_inline_end_margin", 140, 140)}}
+{{embedwivesampwe("setting_inwine_end_mawgin", >w< 140, rawr 140)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
-- {{cssxref("margin-inline-start")}}
-- 対応づけ先の物理的なプロパティ: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}}
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- [css 論理的プロパティと値](/ja/docs/web/css/css_wogicaw_pwopewties_and_vawues)
+- {{cssxwef("mawgin-inwine-stawt")}}
+- 対応づけ先の物理的なプロパティ: {{cssxwef("mawgin-top")}}, mya {{cssxwef("mawgin-wight")}}, ^^ {{cssxwef("mawgin-bottom")}}, 😳😳😳 {{cssxwef("mawgin-weft")}}
+- {{cssxwef("wwiting-mode")}}, mya {{cssxwef("diwection")}}, 😳 {{cssxwef("text-owientation")}}

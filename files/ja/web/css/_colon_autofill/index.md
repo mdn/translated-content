@@ -1,95 +1,95 @@
 ---
-title: :autofill
-slug: Web/CSS/:autofill
+titwe: :autofiww
+swug: web/css/:autofiww
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`:autofill`** は CSS の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 {{HTMLElement("input")}} 要素の値がブラウザーによって自動補完された時に一致します。このクラスはユーザーがフィールドを編集すると一致しなくなります。
+**`:autofiww`** は c-css の[擬似クラス](/ja/docs/web/css/pseudo-cwasses)で、 {{htmwewement("input")}} 要素の値がブラウザーによって自動補完された時に一致します。このクラスはユーザーがフィールドを編集すると一致しなくなります。
 
-{{InteractiveExample("CSS Demo: :autofill", "tabbed-shorter")}}
+{{intewactiveexampwe("css d-demo: :autofiww", (U ﹏ U) "tabbed-showtew")}}
 
-```css interactive-example
-label {
-  display: block;
-  margin-top: 1em;
+```css i-intewactive-exampwe
+wabew {
+  d-dispway: b-bwock;
+  mawgin-top: 1em;
 }
 
-input:is(:-webkit-autofill, :autofill) {
-  border: 3px solid darkorange;
+input:is(:-webkit-autofiww, (///ˬ///✿) :autofiww) {
+  b-bowdew: 3px s-sowid dawkowange;
 }
 ```
 
-```html interactive-example
-<form>
-  <p>Click on the text box and choose any option suggested by your browser.</p>
+```htmw i-intewactive-exampwe
+<fowm>
+  <p>cwick on the text box and choose any option suggested by y-youw bwowsew.</p>
 
-  <label for="name">Name</label>
-  <input id="name" name="name" type="text" autocomplete="name" />
+  <wabew fow="name">name</wabew>
+  <input id="name" n-nyame="name" type="text" a-autocompwete="name" />
 
-  <label for="email">Email Address</label>
-  <input id="email" name="email" type="email" autocomplete="email" />
+  <wabew fow="emaiw">emaiw addwess</wabew>
+  <input id="emaiw" n-nyame="emaiw" type="emaiw" a-autocompwete="emaiw" />
 
-  <label for="country">Country</label>
-  <input id="country" name="country" type="text" autocomplete="country-name" />
-</form>
+  <wabew f-fow="countwy">countwy</wabew>
+  <input id="countwy" nyame="countwy" type="text" autocompwete="countwy-name" />
+</fowm>
 ```
 
-> [!NOTE]
-> 多くのブラウザーのユーザーエージェントスタイルシートでは、 `:-webkit-autofill` スタイル定義に `!important` を使用しており、 JavaScript によるハックで解決しない限り、ウェブページから上書きすることができません。例えば、 Chrome では内部スタイルシートで次のようになっています。
+> [!note]
+> 多くのブラウザーのユーザーエージェントスタイルシートでは、 `:-webkit-autofiww` スタイル定義に `!impowtant` を使用しており、 j-javascwipt によるハックで解決しない限り、ウェブページから上書きすることができません。例えば、 chwome では内部スタイルシートで次のようになっています。
 >
 > ```css
-> background-color: rgb(232, 240, 254) !important;
-> background-image: none !important;
-> color: -internal-light-dark(black, white) !important;
+> backgwound-cowow: wgb(232, >w< 240, 254) !impowtant;
+> backgwound-image: n-nyone !impowtant;
+> cowow: -intewnaw-wight-dawk(bwack, rawr w-white) !impowtant;
 > ```
 >
-> これは、 {{cssxref('background-color')}}, {{cssxref('background-image')}}, {{cssxref('color')}} に独自のルールを設定できないことを意味します。
+> これは、 {{cssxwef('backgwound-cowow')}}, mya {{cssxwef('backgwound-image')}}, ^^ {{cssxwef('cowow')}} に独自のルールを設定できないことを意味します。
 
 ## 構文
 
 ```
-:autofill
+:autofiww
 ```
 
 ## 例
 
-次の例は、 `:autofill` 擬似クラスを使用して、ブラウザーによって自動補完されたテキストフィールドの境界線を変更することを示しています。ブラウザーの互換性を保つために、 `:-webkit-autofill` と `:autofill` の両方を使用してください。
+次の例は、 `:autofiww` 擬似クラスを使用して、ブラウザーによって自動補完されたテキストフィールドの境界線を変更することを示しています。ブラウザーの互換性を保つために、 `:-webkit-autofiww` と `:autofiww` の両方を使用してください。
 
 ```css
-input {
-  border: 3px solid grey;
-  border-radius: 3px;
+i-input {
+  b-bowdew: 3px sowid g-gwey;
+  bowdew-wadius: 3px;
 }
 
-input:-webkit-autofill {
-  border: 3px solid blue;
+input:-webkit-autofiww {
+  bowdew: 3px s-sowid bwue;
 }
-input:autofill {
-  border: 3px solid blue;
+input:autofiww {
+  bowdew: 3px s-sowid bwue;
 }
 ```
 
-```html
-<form method="post" action="">
-  <label for="email">Email</label>
-  <input type="email" name="email" id="email" autocomplete="email" />
-</form>
+```htmw
+<fowm method="post" action="">
+  <wabew fow="emaiw">emaiw</wabew>
+  <input type="emaiw" nyame="emaiw" i-id="emaiw" autocompwete="emaiw" />
+</fowm>
 ```
 
-{{EmbedLiveSample('Examples')}}
+{{embedwivesampwe('exampwes')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Chromium issue 46543: Auto-filled input text box yellow background highlight cannot be turned off!](https://code.google.com/p/chromium/issues/detail?id=46543)
-- [WebKit bug 66032: Allow site authors to override autofilled fields' colors.](https://bugs.webkit.org/show_bug.cgi?id=66032)
-- [Mozilla bug 740979: implement `:-moz-autofill` pseudo-class on input elements with an autofilled value](https://bugzilla.mozilla.org/show_bug.cgi?id=740979)
-- [new css4-ui features - more selectors](https://wiki.csswg.org/spec/css4-ui#more-selectors)
+- [chwomium i-issue 46543: a-auto-fiwwed input t-text box yewwow backgwound highwight cannot be tuwned off!](https://code.googwe.com/p/chwomium/issues/detaiw?id=46543)
+- [webkit b-bug 66032: awwow s-site authows to ovewwide autofiwwed f-fiewds' c-cowows.](https://bugs.webkit.owg/show_bug.cgi?id=66032)
+- [moziwwa bug 740979: i-impwement `:-moz-autofiww` pseudo-cwass o-on input ewements with an autofiwwed vawue](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=740979)
+- [new c-css4-ui featuwes - mowe sewectows](https://wiki.csswg.owg/spec/css4-ui#mowe-sewectows)

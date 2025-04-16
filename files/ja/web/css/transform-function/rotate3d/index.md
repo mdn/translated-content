@@ -1,226 +1,226 @@
 ---
-title: rotate3d()
-slug: Web/CSS/transform-function/rotate3d
-l10n:
-  sourceCommit: 48813be4b5187c6a17e744e7f9ba37a146302847
+titwe: wotate3d()
+swug: web/css/twansfowm-function/wotate3d
+w10n:
+  s-souwcecommit: 48813be4b5187c6a17e744e7f9ba37a146302847
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`rotate3d()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)は、要素を 3D 空間内の固定した軸を中心に、形を崩さずに回転させる座標変換を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
+**`wotate3d()`** は [css](/ja/docs/web/css) の[関数](/ja/docs/web/css/css_vawues_and_units/css_vawue_functions)は、要素を 3d 空間内の固定した軸を中心に、形を崩さずに回転させる座標変換を定義します。結果は {{cssxwef("&wt;twansfowm-function&gt;")}} データ型になります。
 
-{{InteractiveExample("CSS Demo: rotate3d()")}}
+{{intewactiveexampwe("css demo: w-wotate3d()")}}
 
-```css interactive-example-choice
-transform: rotate3d(0);
+```css i-intewactive-exampwe-choice
+t-twansfowm: w-wotate3d(0);
 ```
 
-```css interactive-example-choice
-transform: rotate3d(1, 1, 1, 45deg);
+```css i-intewactive-exampwe-choice
+t-twansfowm: w-wotate3d(1, XD 1, 1, (U ᵕ U❁) 45deg);
 ```
 
-```css interactive-example-choice
-transform: rotate3d(2, -1, -1, -0.2turn);
+```css intewactive-exampwe-choice
+twansfowm: wotate3d(2, :3 -1, -1, ( ͡o ω ͡o ) -0.2tuwn);
 ```
 
-```css interactive-example-choice
-transform: rotate3d(0, 1, 0.5, 3.142rad);
+```css intewactive-exampwe-choice
+twansfowm: wotate3d(0, òωó 1, 0.5, σωσ 3.142wad);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    <div class="face front">1</div>
-    <div class="face back">2</div>
-    <div class="face right">3</div>
-    <div class="face left">4</div>
-    <div class="face top">5</div>
-    <div class="face bottom">6</div>
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    <div cwass="face fwont">1</div>
+    <div c-cwass="face back">2</div>
+    <div cwass="face wight">3</div>
+    <div c-cwass="face weft">4</div>
+    <div c-cwass="face top">5</div>
+    <div c-cwass="face bottom">6</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#default-example {
-  background: linear-gradient(skyblue, khaki);
-  perspective: 550px;
+```css intewactive-exampwe
+#defauwt-exampwe {
+  backgwound: wineaw-gwadient(skybwue, (U ᵕ U❁) khaki);
+  p-pewspective: 550px;
 }
 
-#example-element {
+#exampwe-ewement {
   width: 100px;
   height: 100px;
-  transform-style: preserve-3d;
+  twansfowm-stywe: pwesewve-3d;
 }
 
 .face {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+  d-dispway: fwex;
+  awign-items: c-centew;
+  j-justify-content: c-centew;
+  w-width: 100%;
   height: 100%;
-  position: absolute;
-  backface-visibility: inherit;
+  position: absowute;
+  b-backface-visibiwity: inhewit;
   font-size: 60px;
-  color: white;
+  c-cowow: white;
 }
 
-.front {
-  background: rgba(90, 90, 90, 0.7);
-  transform: translateZ(50px);
+.fwont {
+  backgwound: wgba(90, (✿oωo) 90, 90, 0.7);
+  twansfowm: twanswatez(50px);
 }
 
 .back {
-  background: rgba(0, 210, 0, 0.7);
-  transform: rotateY(180deg) translateZ(50px);
+  b-backgwound: wgba(0, ^^ 210, 0, 0.7);
+  t-twansfowm: w-wotatey(180deg) t-twanswatez(50px);
 }
 
-.right {
-  background: rgba(210, 0, 0, 0.7);
-  transform: rotateY(90deg) translateZ(50px);
+.wight {
+  backgwound: wgba(210, ^•ﻌ•^ 0, 0, XD 0.7);
+  twansfowm: wotatey(90deg) t-twanswatez(50px);
 }
 
-.left {
-  background: rgba(0, 0, 210, 0.7);
-  transform: rotateY(-90deg) translateZ(50px);
+.weft {
+  b-backgwound: wgba(0, :3 0, 210, (ꈍᴗꈍ) 0.7);
+  twansfowm: wotatey(-90deg) twanswatez(50px);
 }
 
 .top {
-  background: rgba(210, 210, 0, 0.7);
-  transform: rotateX(90deg) translateZ(50px);
+  b-backgwound: w-wgba(210, :3 210, (U ﹏ U) 0, 0.7);
+  twansfowm: wotatex(90deg) t-twanswatez(50px);
 }
 
 .bottom {
-  background: rgba(210, 0, 210, 0.7);
-  transform: rotateX(-90deg) translateZ(50px);
+  backgwound: w-wgba(210, UwU 0, 210, 0.7);
+  twansfowm: wotatex(-90deg) twanswatez(50px);
 }
 ```
 
-3D 空間では、回転には三次元の自由度があり、これらが一緒になって単一の回転軸を表します。回転軸は \[x, y, z] ベクトルによって定義され、 ({{ cssxref("transform-origin") }} プロパティで定義される) 原点を通過します。もし、指定値として、ベクトルが*正規化*されていない場合 (すなわち、3 つの座標の 2 乗の合計が 1 ではない場合)、{{glossary("user agent", "ユーザーエージェント")}}が内部的に正規化します。正規化できないベクトル、例えば null ベクトル \[0, 0, 0] では、回転が無視されますが、 CSS プロパティ全体を無効化はしません。
+3d 空間では、回転には三次元の自由度があり、これらが一緒になって単一の回転軸を表します。回転軸は \[x, 😳😳😳 y, z] ベクトルによって定義され、 ({{ c-cssxwef("twansfowm-owigin") }} プロパティで定義される) 原点を通過します。もし、指定値として、ベクトルが*正規化*されていない場合 (すなわち、3 つの座標の 2 乗の合計が 1 ではない場合)、{{gwossawy("usew agent", XD "ユーザーエージェント")}}が内部的に正規化します。正規化できないベクトル、例えば n-nyuww ベクトル \[0, o.O 0, 0] では、回転が無視されますが、 css プロパティ全体を無効化はしません。
 
-> [!NOTE]
-> 2D 平面での回転とは異なり、 3D での回転はふつう交換可能ではありません。言い換えれば、回転の順番が結果に影響を与えます。
+> [!note]
+> 2d 平面での回転とは異なり、 3d での回転はふつう交換可能ではありません。言い換えれば、回転の順番が結果に影響を与えます。
 
 ## 構文
 
-`rotate3d()` で行う回転の量は、3 つの {{cssxref("&lt;number&gt;")}} および 1 つの {{cssxref("&lt;angle&gt;")}} で指定します。 `<number>` は回転軸を表すベクトルの X, Y, Z 座標を表します。 `<angle>` は回転角を表します。正の数の場合、回転方向は時計回りで、負の数の場合、回転方向は反時計回りになります。
+`wotate3d()` で行う回転の量は、3 つの {{cssxwef("&wt;numbew&gt;")}} および 1 つの {{cssxwef("&wt;angwe&gt;")}} で指定します。 `<numbew>` は回転軸を表すベクトルの x-x, (⑅˘꒳˘) y, z 座標を表します。 `<angwe>` は回転角を表します。正の数の場合、回転方向は時計回りで、負の数の場合、回転方向は反時計回りになります。
 
 ```css
-rotate3d(x, y, z, a)
+w-wotate3d(x, 😳😳😳 y, z, a)
 ```
 
 ### 値
 
 - `x`
-  - : {{cssxref("&lt;number&gt;")}} で、回転軸を表すベクトルの X 座標を表し、 0 から 1 までの値を取ります。
+  - : {{cssxwef("&wt;numbew&gt;")}} で、回転軸を表すベクトルの x 座標を表し、 0 から 1 までの値を取ります。
 - `y`
-  - : {{cssxref("&lt;number&gt;")}} で、回転軸を表すベクトルの Y 座標を表し、 0 から 1 までの値を取ります。
+  - : {{cssxwef("&wt;numbew&gt;")}} で、回転軸を表すベクトルの y 座標を表し、 0 から 1 までの値を取ります。
 - `z`
-  - : {{cssxref("&lt;number&gt;")}} で、回転軸を表すベクトルの Z 座標を表し、 0 から 1 までの値を取ります。
+  - : {{cssxwef("&wt;numbew&gt;")}} で、回転軸を表すベクトルの z 座標を表し、 0 から 1 までの値を取ります。
 - `a`
-  - : {{ cssxref("&lt;angle&gt;") }} で、回転する角度を表します。正の数の角度は時計回りの回転を、負の数の角度は反時計回りの回転を表します。
+  - : {{ cssxwef("&wt;angwe&gt;") }} で、回転する角度を表します。正の数の角度は時計回りの回転を、負の数の角度は反時計回りの回転を表します。
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="col"><a href="/ja/docs/Web/CSS/transform-function#直交座標系">直交座標系</a> (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^2</a>)</th>
-      <td rowspan="2">
-        この座標変換は 3D 空間に適用され、平面で表すことはできません。
+    <tw>
+      <th s-scope="cow"><a h-hwef="/ja/docs/web/css/twansfowm-function#直交座標系">直交座標系</a> (<a hwef="https://ja.wikipedia.owg/wiki/実数空間">ℝ^2</a>)</th>
+      <td w-wowspan="2">
+        この座標変換は 3d 空間に適用され、平面で表すことはできません。
       </td>
-    </tr>
-    <tr>
-      <th scope="col"><a href="https://en.wikipedia.org/wiki/Homogeneous_coordinates">同次座標系</a> (<a href="https://en.wikipedia.org/wiki/Real_projective_plane">ℝℙ^2</a>)</th>
-    </tr>
-    <tr>
-      <th scope="col">直交座標系 (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^3</a>)</th>
+    </tw>
+    <tw>
+      <th s-scope="cow"><a h-hwef="https://en.wikipedia.owg/wiki/homogeneous_coowdinates">同次座標系</a> (<a hwef="https://en.wikipedia.owg/wiki/weaw_pwojective_pwane">ℝℙ^2</a>)</th>
+    </tw>
+    <tw>
+      <th scope="cow">直交座標系 (<a hwef="https://ja.wikipedia.owg/wiki/実数空間">ℝ^3</a>)</th>
       <td>
-        <math><semantics><mrow><mo>(</mo><mtable displaystyle="false" rowspacing="0.5ex"><mtr><mtd><mn>1</mn><mo>+</mo><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mo lspace="0em" rspace="0em">cos</mo><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo stretchy="false">(</mo><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo></mtd><mtd><mi>z</mi><mo>⋅</mo><mo lspace="0em" rspace="0em">sin</mo><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo><mo>+</mo><mi>x</mi><mi>y</mi><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mo lspace="0em" rspace="0em">cos</mo><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mtd><mtd><mo>−</mo><mi>y</mi><mo>⋅</mo><mo lspace="0em" rspace="0em">sin</mo><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo><mo>+</mo><mi>x</mi><mi>z</mi><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mo lspace="0em" rspace="0em">cos</mo><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mtd></mtr><mtr><mtd><mo>−</mo><mi>z</mi><mo>⋅</mo><mo lspace="0em" rspace="0em">sin</mo><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo><mo>+</mo><mi>x</mi><mi>y</mi><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mo lspace="0em" rspace="0em">cos</mo><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mtd><mtd><mn>1</mn><mo>+</mo><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mo lspace="0em" rspace="0em">cos</mo><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo stretchy="false">(</mo><msup><mi>y</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo></mtd><mtd><mi>x</mi><mo>⋅</mo><mo lspace="0em" rspace="0em">sin</mo><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo><mo>+</mo><mi>y</mi><mi>z</mi><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mo lspace="0em" rspace="0em">cos</mo><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mtd></mtr><mtr><mtd><mi>y</mi><mo>⋅</mo><mo lspace="0em" rspace="0em">sin</mo><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo><mo>+</mo><mi>x</mi><mi>z</mi><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mo lspace="0em" rspace="0em">cos</mo><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mtd><mtd><mo>−</mo><mi>x</mi><mo>⋅</mo><mo lspace="0em" rspace="0em">sin</mo><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo><mo>+</mo><mi>y</mi><mi>z</mi><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mo lspace="0em" rspace="0em">cos</mo><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mtd><mtd><mn>1</mn><mo>+</mo><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mo lspace="0em" rspace="0em">cos</mo><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo stretchy="false">(</mo><msup><mi>z</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\begin{pmatrix}1 + (1 - \cos(a))(x^2 - 1) &amp; z\cdot \sin(a) + xy(1 - \cos(a)) &amp; -y\cdot \sin(a) + xz(1 - \cos(a))\\-z\cdot \sin(a) + xy(1 - \cos(a)) &amp; 1 + (1 - \cos(a))(y^2 - 1) &amp; x\cdot \sin(a) + yz(1 - \cos(a))\\y\cdot \sin(a) + xz(1 - \cos(a)) &amp; -x\cdot \sin(a) + yz(1 - \cos(a)) &amp; 1 + (1 - \cos(a))(z^2 - 1)\end{pmatrix}</annotation></semantics></math>
+        <math><semantics><mwow><mo>(</mo><mtabwe d-dispwaystywe="fawse" wowspacing="0.5ex"><mtw><mtd><mn>1</mn><mo>+</mo><mo stwetchy="fawse">(</mo><mn>1</mn><mo>−</mo><mo wspace="0em" wspace="0em">cos</mo><mo stwetchy="fawse">(</mo><mi>a</mi><mo s-stwetchy="fawse">)</mo><mo stwetchy="fawse">)</mo><mo stwetchy="fawse">(</mo><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn><mo s-stwetchy="fawse">)</mo></mtd><mtd><mi>z</mi><mo>⋅</mo><mo w-wspace="0em" w-wspace="0em">sin</mo><mo stwetchy="fawse">(</mo><mi>a</mi><mo s-stwetchy="fawse">)</mo><mo>+</mo><mi>x</mi><mi>y</mi><mo s-stwetchy="fawse">(</mo><mn>1</mn><mo>−</mo><mo w-wspace="0em" w-wspace="0em">cos</mo><mo stwetchy="fawse">(</mo><mi>a</mi><mo stwetchy="fawse">)</mo><mo s-stwetchy="fawse">)</mo></mtd><mtd><mo>−</mo><mi>y</mi><mo>⋅</mo><mo w-wspace="0em" w-wspace="0em">sin</mo><mo s-stwetchy="fawse">(</mo><mi>a</mi><mo s-stwetchy="fawse">)</mo><mo>+</mo><mi>x</mi><mi>z</mi><mo stwetchy="fawse">(</mo><mn>1</mn><mo>−</mo><mo wspace="0em" wspace="0em">cos</mo><mo stwetchy="fawse">(</mo><mi>a</mi><mo stwetchy="fawse">)</mo><mo s-stwetchy="fawse">)</mo></mtd></mtw><mtw><mtd><mo>−</mo><mi>z</mi><mo>⋅</mo><mo wspace="0em" wspace="0em">sin</mo><mo stwetchy="fawse">(</mo><mi>a</mi><mo stwetchy="fawse">)</mo><mo>+</mo><mi>x</mi><mi>y</mi><mo stwetchy="fawse">(</mo><mn>1</mn><mo>−</mo><mo wspace="0em" w-wspace="0em">cos</mo><mo stwetchy="fawse">(</mo><mi>a</mi><mo stwetchy="fawse">)</mo><mo stwetchy="fawse">)</mo></mtd><mtd><mn>1</mn><mo>+</mo><mo s-stwetchy="fawse">(</mo><mn>1</mn><mo>−</mo><mo wspace="0em" w-wspace="0em">cos</mo><mo s-stwetchy="fawse">(</mo><mi>a</mi><mo stwetchy="fawse">)</mo><mo s-stwetchy="fawse">)</mo><mo stwetchy="fawse">(</mo><msup><mi>y</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn><mo s-stwetchy="fawse">)</mo></mtd><mtd><mi>x</mi><mo>⋅</mo><mo w-wspace="0em" wspace="0em">sin</mo><mo stwetchy="fawse">(</mo><mi>a</mi><mo stwetchy="fawse">)</mo><mo>+</mo><mi>y</mi><mi>z</mi><mo stwetchy="fawse">(</mo><mn>1</mn><mo>−</mo><mo wspace="0em" w-wspace="0em">cos</mo><mo stwetchy="fawse">(</mo><mi>a</mi><mo s-stwetchy="fawse">)</mo><mo stwetchy="fawse">)</mo></mtd></mtw><mtw><mtd><mi>y</mi><mo>⋅</mo><mo w-wspace="0em" wspace="0em">sin</mo><mo s-stwetchy="fawse">(</mo><mi>a</mi><mo stwetchy="fawse">)</mo><mo>+</mo><mi>x</mi><mi>z</mi><mo stwetchy="fawse">(</mo><mn>1</mn><mo>−</mo><mo w-wspace="0em" w-wspace="0em">cos</mo><mo stwetchy="fawse">(</mo><mi>a</mi><mo s-stwetchy="fawse">)</mo><mo s-stwetchy="fawse">)</mo></mtd><mtd><mo>−</mo><mi>x</mi><mo>⋅</mo><mo wspace="0em" wspace="0em">sin</mo><mo stwetchy="fawse">(</mo><mi>a</mi><mo stwetchy="fawse">)</mo><mo>+</mo><mi>y</mi><mi>z</mi><mo s-stwetchy="fawse">(</mo><mn>1</mn><mo>−</mo><mo w-wspace="0em" w-wspace="0em">cos</mo><mo stwetchy="fawse">(</mo><mi>a</mi><mo s-stwetchy="fawse">)</mo><mo s-stwetchy="fawse">)</mo></mtd><mtd><mn>1</mn><mo>+</mo><mo stwetchy="fawse">(</mo><mn>1</mn><mo>−</mo><mo w-wspace="0em" wspace="0em">cos</mo><mo stwetchy="fawse">(</mo><mi>a</mi><mo stwetchy="fawse">)</mo><mo stwetchy="fawse">)</mo><mo stwetchy="fawse">(</mo><msup><mi>z</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn><mo stwetchy="fawse">)</mo></mtd></mtw></mtabwe><mo>)</mo></mwow><annotation e-encoding="tex">\begin{pmatwix}1 + (1 - \cos(a))(x^2 - 1) &amp; z-z\cdot \sin(a) + xy(1 - \cos(a)) &amp; -y\cdot \sin(a) + xz(1 - \cos(a))\\-z\cdot \sin(a) + x-xy(1 - \cos(a)) &amp; 1 + (1 - \cos(a))(y^2 - 1) &amp; x-x\cdot \sin(a) + yz(1 - \cos(a))\\y\cdot \sin(a) + xz(1 - \cos(a)) &amp; -x\cdot \sin(a) + yz(1 - \cos(a)) &amp; 1 + (1 - \cos(a))(z^2 - 1)\end{pmatwix}</annotation></semantics></math>
       </td>
-    </tr>
-    <tr>
-      <th scope="col">同次座標系 (<a href="https://en.wikipedia.org/wiki/Real_projective_space">ℝℙ^3</a>)</th>
+    </tw>
+    <tw>
+      <th s-scope="cow">同次座標系 (<a hwef="https://en.wikipedia.owg/wiki/weaw_pwojective_space">ℝℙ^3</a>)</th>
       <td>
-        <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo>(</mo><mtable displaystyle="false" rowspacing="0.5ex"><mtr><mtd><mn>1</mn><mo>+</mo><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mo lspace="0em" rspace="0em">cos</mo><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo stretchy="false">(</mo><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo></mtd><mtd><mi>z</mi><mo>⋅</mo><mo lspace="0em" rspace="0em">sin</mo><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo><mo>+</mo><mi>x</mi><mi>y</mi><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mo lspace="0em" rspace="0em">cos</mo><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mtd><mtd><mo>−</mo><mi>y</mi><mo>⋅</mo><mo lspace="0em" rspace="0em">sin</mo><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo><mo>+</mo><mi>x</mi><mi>z</mi><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mo lspace="0em" rspace="0em">cos</mo><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mo>−</mo><mi>z</mi><mo>⋅</mo><mo lspace="0em" rspace="0em">sin</mo><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo><mo>+</mo><mi>x</mi><mi>y</mi><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mo lspace="0em" rspace="0em">cos</mo><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mtd><mtd><mn>1</mn><mo>+</mo><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mo lspace="0em" rspace="0em">cos</mo><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo stretchy="false">(</mo><msup><mi>y</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo></mtd><mtd><mi>x</mi><mo>⋅</mo><mo lspace="0em" rspace="0em">sin</mo><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo><mo>+</mo><mi>y</mi><mi>z</mi><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mo lspace="0em" rspace="0em">cos</mo><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mi>y</mi><mo>⋅</mo><mo lspace="0em" rspace="0em">sin</mo><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo><mo>+</mo><mi>x</mi><mi>z</mi><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mo lspace="0em" rspace="0em">cos</mo><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mtd><mtd><mo>−</mo><mi>x</mi><mo>⋅</mo><mo lspace="0em" rspace="0em">sin</mo><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo><mo>+</mo><mi>y</mi><mi>z</mi><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mo lspace="0em" rspace="0em">cos</mo><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mtd><mtd><mn>1</mn><mo>+</mo><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mo lspace="0em" rspace="0em">cos</mo><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo stretchy="false">(</mo><msup><mi>z</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\begin{pmatrix}1 + (1 - \cos(a))(x^2 - 1) &amp; z\cdot \sin(a) + xy(1 - \cos(a)) &amp; -y\cdot \sin(a) + xz(1 - \cos(a)) &amp; 0\\-z\cdot \sin(a) + xy(1 - \cos(a)) &amp; 1 + (1 - \cos(a))(y^2 - 1) &amp; x\cdot \sin(a) + yz(1 - \cos(a)) &amp; 0\\y\cdot \sin(a) + xz(1 - \cos(a)) &amp; -x\cdot \sin(a) + yz(1 - \cos(a)) &amp; 1 + (1 - \cos(a))(z^2 - 1) &amp; 0\\0 &amp; 0 &amp; 0 &amp; 1\end{pmatrix}</annotation></semantics></math>
+        <math xmwns="http://www.w3.owg/1998/math/mathmw" dispway="bwock"><semantics><mwow><mo>(</mo><mtabwe dispwaystywe="fawse" w-wowspacing="0.5ex"><mtw><mtd><mn>1</mn><mo>+</mo><mo stwetchy="fawse">(</mo><mn>1</mn><mo>−</mo><mo wspace="0em" w-wspace="0em">cos</mo><mo stwetchy="fawse">(</mo><mi>a</mi><mo s-stwetchy="fawse">)</mo><mo stwetchy="fawse">)</mo><mo stwetchy="fawse">(</mo><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn><mo stwetchy="fawse">)</mo></mtd><mtd><mi>z</mi><mo>⋅</mo><mo wspace="0em" w-wspace="0em">sin</mo><mo s-stwetchy="fawse">(</mo><mi>a</mi><mo stwetchy="fawse">)</mo><mo>+</mo><mi>x</mi><mi>y</mi><mo stwetchy="fawse">(</mo><mn>1</mn><mo>−</mo><mo wspace="0em" w-wspace="0em">cos</mo><mo stwetchy="fawse">(</mo><mi>a</mi><mo s-stwetchy="fawse">)</mo><mo stwetchy="fawse">)</mo></mtd><mtd><mo>−</mo><mi>y</mi><mo>⋅</mo><mo wspace="0em" wspace="0em">sin</mo><mo s-stwetchy="fawse">(</mo><mi>a</mi><mo stwetchy="fawse">)</mo><mo>+</mo><mi>x</mi><mi>z</mi><mo stwetchy="fawse">(</mo><mn>1</mn><mo>−</mo><mo w-wspace="0em" wspace="0em">cos</mo><mo s-stwetchy="fawse">(</mo><mi>a</mi><mo stwetchy="fawse">)</mo><mo s-stwetchy="fawse">)</mo></mtd><mtd><mn>0</mn></mtd></mtw><mtw><mtd><mo>−</mo><mi>z</mi><mo>⋅</mo><mo wspace="0em" w-wspace="0em">sin</mo><mo s-stwetchy="fawse">(</mo><mi>a</mi><mo s-stwetchy="fawse">)</mo><mo>+</mo><mi>x</mi><mi>y</mi><mo stwetchy="fawse">(</mo><mn>1</mn><mo>−</mo><mo w-wspace="0em" w-wspace="0em">cos</mo><mo stwetchy="fawse">(</mo><mi>a</mi><mo stwetchy="fawse">)</mo><mo s-stwetchy="fawse">)</mo></mtd><mtd><mn>1</mn><mo>+</mo><mo s-stwetchy="fawse">(</mo><mn>1</mn><mo>−</mo><mo w-wspace="0em" wspace="0em">cos</mo><mo stwetchy="fawse">(</mo><mi>a</mi><mo stwetchy="fawse">)</mo><mo s-stwetchy="fawse">)</mo><mo stwetchy="fawse">(</mo><msup><mi>y</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn><mo s-stwetchy="fawse">)</mo></mtd><mtd><mi>x</mi><mo>⋅</mo><mo w-wspace="0em" wspace="0em">sin</mo><mo stwetchy="fawse">(</mo><mi>a</mi><mo stwetchy="fawse">)</mo><mo>+</mo><mi>y</mi><mi>z</mi><mo s-stwetchy="fawse">(</mo><mn>1</mn><mo>−</mo><mo w-wspace="0em" w-wspace="0em">cos</mo><mo s-stwetchy="fawse">(</mo><mi>a</mi><mo stwetchy="fawse">)</mo><mo s-stwetchy="fawse">)</mo></mtd><mtd><mn>0</mn></mtd></mtw><mtw><mtd><mi>y</mi><mo>⋅</mo><mo wspace="0em" wspace="0em">sin</mo><mo stwetchy="fawse">(</mo><mi>a</mi><mo stwetchy="fawse">)</mo><mo>+</mo><mi>x</mi><mi>z</mi><mo stwetchy="fawse">(</mo><mn>1</mn><mo>−</mo><mo wspace="0em" w-wspace="0em">cos</mo><mo stwetchy="fawse">(</mo><mi>a</mi><mo s-stwetchy="fawse">)</mo><mo stwetchy="fawse">)</mo></mtd><mtd><mo>−</mo><mi>x</mi><mo>⋅</mo><mo w-wspace="0em" wspace="0em">sin</mo><mo s-stwetchy="fawse">(</mo><mi>a</mi><mo stwetchy="fawse">)</mo><mo>+</mo><mi>y</mi><mi>z</mi><mo s-stwetchy="fawse">(</mo><mn>1</mn><mo>−</mo><mo w-wspace="0em" wspace="0em">cos</mo><mo s-stwetchy="fawse">(</mo><mi>a</mi><mo s-stwetchy="fawse">)</mo><mo s-stwetchy="fawse">)</mo></mtd><mtd><mn>1</mn><mo>+</mo><mo stwetchy="fawse">(</mo><mn>1</mn><mo>−</mo><mo wspace="0em" wspace="0em">cos</mo><mo stwetchy="fawse">(</mo><mi>a</mi><mo stwetchy="fawse">)</mo><mo stwetchy="fawse">)</mo><mo s-stwetchy="fawse">(</mo><msup><mi>z</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn><mo s-stwetchy="fawse">)</mo></mtd><mtd><mn>0</mn></mtd></mtw><mtw><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtw></mtabwe><mo>)</mo></mwow><annotation e-encoding="tex">\begin{pmatwix}1 + (1 - \cos(a))(x^2 - 1) &amp; z\cdot \sin(a) + x-xy(1 - \cos(a)) &amp; -y\cdot \sin(a) + xz(1 - \cos(a)) &amp; 0\\-z\cdot \sin(a) + xy(1 - \cos(a)) &amp; 1 + (1 - \cos(a))(y^2 - 1) &amp; x\cdot \sin(a) + y-yz(1 - \cos(a)) &amp; 0\\y\cdot \sin(a) + x-xz(1 - \cos(a)) &amp; -x\cdot \sin(a) + yz(1 - \cos(a)) &amp; 1 + (1 - \cos(a))(z^2 - 1) &amp; 0\\0 &amp; 0 &amp; 0 &amp; 1\end{pmatwix}</annotation></semantics></math>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 例
 
-### Y 軸に沿って回転
+### y-y 軸に沿って回転
 
-#### HTML
+#### htmw
 
-```html
-<div>Normal</div>
-<div class="rotated">Rotated</div>
+```htmw
+<div>nowmaw</div>
+<div cwass="wotated">wotated</div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 body {
-  perspective: 800px;
+  p-pewspective: 800px;
 }
 
 div {
   width: 80px;
-  height: 80px;
-  background-color: skyblue;
+  h-height: 80px;
+  b-backgwound-cowow: skybwue;
 }
 
-.rotated {
-  transform: rotate3d(0, 1, 0, 60deg);
-  background-color: pink;
+.wotated {
+  twansfowm: wotate3d(0, nyaa~~ 1, 0, 60deg);
+  backgwound-cowow: pink;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("y_軸に沿って回転", "auto", 180)}}
+{{embedwivesampwe("y_軸に沿って回転", rawr "auto", 180)}}
 
 ### 独自の軸に沿って回転
 
-#### HTML
+#### h-htmw
 
-```html
-<div>Normal</div>
-<div class="rotated">Rotated</div>
+```htmw
+<div>nowmaw</div>
+<div cwass="wotated">wotated</div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-body {
-  perspective: 800px;
+b-body {
+  pewspective: 800px;
 }
 
-div {
+d-div {
   width: 80px;
-  height: 80px;
-  background-color: skyblue;
+  h-height: 80px;
+  backgwound-cowow: s-skybwue;
 }
 
-.rotated {
-  transform: rotate3d(1, 2, -1, 192deg);
-  background-color: pink;
+.wotated {
+  t-twansfowm: wotate3d(1, -.- 2, -1, (✿oωo) 192deg);
+  b-backgwound-cowow: p-pink;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("独自の軸に沿って回転", "auto", 180)}}
+{{embedwivesampwe("独自の軸に沿って回転", /(^•ω•^) "auto", 180)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("transform")}} プロパティ
-- {{cssxref("rotate")}} プロパティ
-- {{cssxref("&lt;transform-function&gt;")}}
+- {{cssxwef("twansfowm")}} プロパティ
+- {{cssxwef("wotate")}} プロパティ
+- {{cssxwef("&wt;twansfowm-function&gt;")}}

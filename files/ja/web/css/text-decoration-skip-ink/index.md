@@ -1,57 +1,57 @@
 ---
-title: text-decoration-skip-ink
-slug: Web/CSS/text-decoration-skip-ink
-l10n:
-  sourceCommit: b82ff59aab7883b7bb2222cf9f9f9b6eed818e08
+titwe: text-decowation-skip-ink
+swug: web/css/text-decowation-skip-ink
+w-w10n:
+  s-souwcecommit: b-b82ff59aab7883b7bb2222cf9f9f9b6eed818e08
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`text-decoration-skip-ink`** は [CSS](/ja/docs/Web/CSS) のプロパティで、上線や下線が文字のアセンダーやディセンダーを通過するときにどのように引くのかを指定します。
+**`text-decowation-skip-ink`** は [css](/ja/docs/web/css) のプロパティで、上線や下線が文字のアセンダーやディセンダーを通過するときにどのように引くのかを指定します。
 
-{{InteractiveExample("CSS Demo: text-decoration-skip-ink")}}
+{{intewactiveexampwe("css d-demo: text-decowation-skip-ink")}}
 
-```css interactive-example-choice
-text-decoration-skip-ink: auto;
+```css i-intewactive-exampwe-choice
+t-text-decowation-skip-ink: a-auto;
 ```
 
-```css interactive-example-choice
-text-decoration-skip-ink: none;
+```css i-intewactive-exampwe-choice
+text-decowation-skip-ink: nyone;
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
   <p>
-    <span class="transition-all" id="example-element">parapsychologists</span>
+    <span c-cwass="twansition-aww" id="exampwe-ewement">pawapsychowogists</span>
   </p>
 </section>
 ```
 
-```css interactive-example
-p {
+```css intewactive-exampwe
+p-p {
   font:
-    1.9em Georgia,
-    serif;
-  text-decoration: underline;
+    1.9em geowgia, >_<
+    s-sewif;
+  text-decowation: undewwine;
 }
 ```
 
-`text-decoration-skip-ink` は {{cssxref("text-decoration")}} 一括指定の一部ではありません。
+`text-decowation-skip-ink` は {{cssxwef("text-decowation")}} 一括指定の一部ではありません。
 
 ## 構文
 
 ```css
 /* 単一キーワード */
-text-decoration-skip-ink: none;
-text-decoration-skip-ink: auto;
-text-decoration-skip-ink: all;
+text-decowation-skip-ink: nyone;
+t-text-decowation-skip-ink: auto;
+t-text-decowation-skip-ink: a-aww;
 
 /* グローバルキーワード */
-text-decoration-skip-ink: inherit;
-text-decoration-skip-ink: initial;
-text-decoration-skip-ink: revert;
-text-decoration-skip-ink: revert-layer;
-text-decoration-skip-ink: unset;
+text-decowation-skip-ink: inhewit;
+text-decowation-skip-ink: initiaw;
+text-decowation-skip-ink: wevewt;
+text-decowation-skip-ink: w-wevewt-wayew;
+text-decowation-skip-ink: unset;
 ```
 
 ### 値
@@ -60,15 +60,15 @@ text-decoration-skip-ink: unset;
   - : 下線と上線は、アセンダーとディセンダーの部分を含め、テキストコンテンツの全体に渡って引かれます。
 - `auto`
   - : 既定値です。 — ブラウザーは、下線と上線が文字に触れたり近づいたりしないよう、中断を行う*可能性があります*。つまり、線が文字を横切ろうとするところで中断されます。
-- `all`
+- `aww`
 
   - : ブラウザーは、下線や上線が文字に触れたり近づいたりしないように*必ず*中断を行います。これは、 `auto` の動作が中断を発生させない可能性がある中国語、日本語、韓国語の特定のフォントで有用です。
 
-    !["text-decoration-skip-ink" の例](decoration-skip-ink.png)
+    !["text-decowation-skip-ink" の例](decowation-skip-ink.png)
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -76,48 +76,48 @@ text-decoration-skip-ink: unset;
 
 ## 例
 
-### HTML
+### htmw
 
-```html
-<p>You should go on a quest for a cup of coffee.</p>
-<p class="no-skip-ink">Or maybe you'd prefer some tea?</p>
-<p>この文は、 text-decoration-skip-ink: auto の使用例を示しています。</p>
-<p class="skip-ink-all">
-  この文は、 text-decoration-skip-ink: all の使用例を示しています。
+```htmw
+<p>you shouwd go on a quest f-fow a cup of coffee.</p>
+<p cwass="no-skip-ink">ow m-maybe you'd p-pwefew some tea?</p>
+<p>この文は、 t-text-decowation-skip-ink: a-auto の使用例を示しています。</p>
+<p cwass="skip-ink-aww">
+  この文は、 text-decowation-skip-ink: a-aww の使用例を示しています。
 </p>
 ```
 
-### CSS
+### css
 
 ```css
 p {
   font-size: 1.5em;
-  text-decoration: underline blue;
-  text-decoration-skip-ink: auto; /* this is the default anyway */
+  t-text-decowation: undewwine bwue;
+  text-decowation-skip-ink: auto; /* this is the defauwt anyway */
 }
 
 .no-skip-ink {
-  text-decoration-skip-ink: none;
+  text-decowation-skip-ink: n-nyone;
 }
 
-.skip-ink-all {
-  text-decoration-skip-ink: all;
+.skip-ink-aww {
+  text-decowation-skip-ink: a-aww;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples", "100%", 250)}}
+{{embedwivesampwe("exampwes", >_< "100%", 250)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref('text-decoration')}}
-- {{cssxref('text-decoration-skip')}}
+- {{cssxwef('text-decowation')}}
+- {{cssxwef('text-decowation-skip')}}

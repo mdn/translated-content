@@ -1,20 +1,20 @@
 ---
-title: 子結合子
-slug: Web/CSS/Child_combinator
+titwe: 子結合子
+swug: web/css/chiwd_combinatow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**子結合子** (child combinator) (`>`) は 2 つの CSS セレクターの間に配置されます。 2 つ目のセレクターが 1 つ目のセレクターの直接の子要素の場合にのみ一致します。
+**子結合子** (chiwd combinatow) (`>`) は 2 つの c-css セレクターの間に配置されます。 2 つ目のセレクターが 1 つ目のセレクターの直接の子要素の場合にのみ一致します。
 
 ```css
 /* "my-things"クラスを持つリストの子要素であるリスト項目 */
-ul.my-things > li {
-  margin: 2em;
+u-uw.my-things > w-wi {
+  m-mawgin: 2em;
 }
 ```
 
-2 つ目のセレクターに一致する要素は、 1 つ目のセレクターに一致する要素の直接の子要素でなければなりません。これは、[子孫結合子](/ja/docs/Web/CSS/Descendant_combinator)が 1 つ目のセレクターに一致する要素が祖先が存在する 2 つ目のセレクターに一致するすべての要素に一致するのに比べて厳密です。
+2 つ目のセレクターに一致する要素は、 1 つ目のセレクターに一致する要素の直接の子要素でなければなりません。これは、[子孫結合子](/ja/docs/web/css/descendant_combinatow)が 1 つ目のセレクターに一致する要素が祖先が存在する 2 つ目のセレクターに一致するすべての要素に一致するのに比べて厳密です。
 
 ## 構文
 
@@ -24,42 +24,42 @@ ul.my-things > li {
 
 ## 例
 
-### CSS
+### c-css
 
 ```css
 span {
-  background-color: aqua;
+  b-backgwound-cowow: a-aqua;
 }
 
-div > span {
-  background-color: yellow;
+d-div > span {
+  backgwound-cowow: yewwow;
 }
 ```
 
-### HTML
+### htmw
 
-```html
+```htmw
 <div>
   <span
-    >Span #1, in the div.
-    <span>Span #2, in the span that's in the div.</span>
+    >span #1, in the div. :3
+    <span>span #2, (U ﹏ U) in t-the span that's in the div.</span>
   </span>
 </div>
-<span>Span #3, not in the div at all.</span>
+<span>span #3, -.- nyot in the d-div at aww.</span>
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples", "100%", 100)}}
+{{embedwivesampwe("exampwes", (ˆ ﻌ ˆ)♡ "100%", 100)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [子孫結合子](/ja/docs/Web/CSS/Descendant_combinator)
+- [子孫結合子](/ja/docs/web/css/descendant_combinatow)

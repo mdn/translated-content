@@ -1,907 +1,907 @@
 ---
-title: <named-color>
-slug: Web/CSS/named-color
-l10n:
-  sourceCommit: 1c4eb0bfb5f72a26fcc21a83fac91aa3e66c2fb8
+titwe: <named-cowow>
+swug: web/css/named-cowow
+w-w10n:
+  souwcecommit: 1c4eb0bfb5f72a26fcc21a83fac91aa3e66c2fb8
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`<named-color>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、 `red`, `blue`, `black`, `lightseagreen` のような色の名前です。文法的には、 `<named-color>` は [`<ident>`](/ja/docs/Web/CSS/ident) の一種です。
+**`<named-cowow>`** は [css](/ja/docs/web/css) の[データ型](/ja/docs/web/css/css_vawues_and_units/css_data_types)で、 `wed`, mya `bwue`, (U ᵕ U❁) `bwack`, `wightseagween` のような色の名前です。文法的には、 `<named-cowow>` は [`<ident>`](/ja/docs/web/css/ident) の一種です。
 
-`<named-color>` 値は [`<color>`](/ja/docs/Web/CSS/color_value) が使用できる場所ならどこでも使用できます。
+`<named-cowow>` 値は [`<cowow>`](/ja/docs/web/css/cowow_vawue) が使用できる場所ならどこでも使用できます。
 
 ## 構文
 
 ```css
-color: red;
-color: orange;
-color: tan;
-color: rebeccapurple;
-color: transparent;
+c-cowow: w-wed;
+cowow: owange;
+c-cowow: tan;
+c-cowow: webeccapuwpwe;
+c-cowow: t-twanspawent;
 ```
 
 ### 値
 
-名前付きの色は標準色、[`transparent`](#transparent)、[`currentcolor`](/ja/docs/Web/CSS/color_value#currentcolor_keyword) のキーワードです。
+名前付きの色は標準色、[`twanspawent`](#twanspawent)、[`cuwwentcowow`](/ja/docs/web/css/cowow_vawue#cuwwentcowow_keywowd) のキーワードです。
 
 #### 標準色
 
 基本色には、標準的で覚えやすい名前があります。
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th scope="col">キーワード</th>
-      <th scope="col">RGB 16 進値</th>
-      <th scope="col">サンプル</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">キーワード</th>
+      <th scope="cow">wgb 16 進値</th>
+      <th scope="cow">サンプル</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>black</code></td>
+    <tw>
+      <td><code>bwack</code></td>
       <td><code>#000000</code></td>
-      <td style="background: black"></td>
-    </tr>
-    <tr>
-      <td><code>silver</code></td>
+      <td stywe="backgwound: bwack"></td>
+    </tw>
+    <tw>
+      <td><code>siwvew</code></td>
       <td><code>#c0c0c0</code></td>
-      <td style="background: silver"></td>
-    </tr>
-    <tr>
-      <td><code>gray</code></td>
+      <td s-stywe="backgwound: siwvew"></td>
+    </tw>
+    <tw>
+      <td><code>gway</code></td>
       <td><code>#808080</code></td>
-      <td style="background: gray"></td>
-    </tr>
-    <tr>
+      <td stywe="backgwound: g-gway"></td>
+    </tw>
+    <tw>
       <td><code>white</code></td>
       <td><code>#ffffff</code></td>
-      <td style="background: white"></td>
-    </tr>
-    <tr>
-      <td><code>maroon</code></td>
+      <td stywe="backgwound: white"></td>
+    </tw>
+    <tw>
+      <td><code>mawoon</code></td>
       <td><code>#800000</code></td>
-      <td style="background: maroon"></td>
-    </tr>
-    <tr>
-      <td><code>red</code></td>
+      <td s-stywe="backgwound: mawoon"></td>
+    </tw>
+    <tw>
+      <td><code>wed</code></td>
       <td><code>#ff0000</code></td>
-      <td style="background: red"></td>
-    </tr>
-    <tr>
-      <td><code>purple</code></td>
+      <td stywe="backgwound: wed"></td>
+    </tw>
+    <tw>
+      <td><code>puwpwe</code></td>
       <td><code>#800080</code></td>
-      <td style="background: purple"></td>
-    </tr>
-    <tr>
+      <td s-stywe="backgwound: puwpwe"></td>
+    </tw>
+    <tw>
       <td><code>fuchsia</code></td>
       <td><code>#ff00ff</code></td>
-      <td style="background: fuchsia"></td>
-    </tr>
-    <tr>
-      <td><code>green</code></td>
+      <td s-stywe="backgwound: f-fuchsia"></td>
+    </tw>
+    <tw>
+      <td><code>gween</code></td>
       <td><code>#008000</code></td>
-      <td style="background: green"></td>
-    </tr>
-    <tr>
-      <td><code>lime</code></td>
+      <td stywe="backgwound: gween"></td>
+    </tw>
+    <tw>
+      <td><code>wime</code></td>
       <td><code>#00ff00</code></td>
-      <td style="background: lime"></td>
-    </tr>
-    <tr>
-      <td><code>olive</code></td>
+      <td stywe="backgwound: wime"></td>
+    </tw>
+    <tw>
+      <td><code>owive</code></td>
       <td><code>#808000</code></td>
-      <td style="background: olive"></td>
-    </tr>
-    <tr>
-      <td><code>yellow</code></td>
+      <td stywe="backgwound: o-owive"></td>
+    </tw>
+    <tw>
+      <td><code>yewwow</code></td>
       <td><code>#ffff00</code></td>
-      <td style="background: yellow"></td>
-    </tr>
-    <tr>
+      <td stywe="backgwound: yewwow"></td>
+    </tw>
+    <tw>
       <td><code>navy</code></td>
       <td><code>#000080</code></td>
-      <td style="background: navy"></td>
-    </tr>
-    <tr>
-      <td><code>blue</code></td>
+      <td stywe="backgwound: nyavy"></td>
+    </tw>
+    <tw>
+      <td><code>bwue</code></td>
       <td><code>#0000ff</code></td>
-      <td style="background: blue"></td>
-    </tr>
-    <tr>
-      <td><code>teal</code></td>
+      <td s-stywe="backgwound: bwue"></td>
+    </tw>
+    <tw>
+      <td><code>teaw</code></td>
       <td><code>#008080</code></td>
-      <td style="background: teal"></td>
-    </tr>
-    <tr>
+      <td stywe="backgwound: t-teaw"></td>
+    </tw>
+    <tw>
       <td><code>aqua</code></td>
       <td><code>#00ffff</code></td>
-      <td style="background: aqua"></td>
-    </tr>
+      <td s-stywe="backgwound: a-aqua"></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 この 16 色に加えて、これに関する約 150 色にキーワードがあります。
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th scope="col">キーワード</th>
-      <th scope="col">RGB 16 進値</th>
-      <th scope="col">サンプル</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">キーワード</th>
+      <th scope="cow">wgb 16 進値</th>
+      <th scope="cow">サンプル</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>aliceblue</code></td>
+    <tw>
+      <td><code>awicebwue</code></td>
       <td><code>#f0f8ff</code></td>
-      <td style="background: aliceblue"></td>
-    </tr>
-    <tr>
+      <td s-stywe="backgwound: awicebwue"></td>
+    </tw>
+    <tw>
       <td><code>antiquewhite</code></td>
       <td><code>#faebd7</code></td>
-      <td style="background: antiquewhite"></td>
-    </tr>
-    <tr>
+      <td stywe="backgwound: antiquewhite"></td>
+    </tw>
+    <tw>
       <td><code>aqua</code></td>
       <td><code>#00ffff</code></td>
-      <td style="background: aqua"></td>
-    </tr>
-    <tr>
-      <td><code>aquamarine</code></td>
+      <td s-stywe="backgwound: aqua"></td>
+    </tw>
+    <tw>
+      <td><code>aquamawine</code></td>
       <td><code>#7fffd4</code></td>
-      <td style="background: aquamarine"></td>
-    </tr>
-    <tr>
-      <td><code>azure</code></td>
+      <td stywe="backgwound: aquamawine"></td>
+    </tw>
+    <tw>
+      <td><code>azuwe</code></td>
       <td><code>#f0ffff</code></td>
-      <td style="background: azure"></td>
-    </tr>
-    <tr>
+      <td stywe="backgwound: azuwe"></td>
+    </tw>
+    <tw>
       <td><code>beige</code></td>
       <td><code>#f5f5dc</code></td>
-      <td style="background: beige"></td>
-    </tr>
-    <tr>
+      <td stywe="backgwound: b-beige"></td>
+    </tw>
+    <tw>
       <td><code>bisque</code></td>
       <td><code>#ffe4c4</code></td>
-      <td style="background: bisque"></td>
-    </tr>
-    <tr>
-      <td><code>black</code></td>
+      <td stywe="backgwound: b-bisque"></td>
+    </tw>
+    <tw>
+      <td><code>bwack</code></td>
       <td><code>#000000</code></td>
-      <td style="background: black"></td>
-    </tr>
-    <tr>
-      <td><code>blanchedalmond</code></td>
+      <td stywe="backgwound: b-bwack"></td>
+    </tw>
+    <tw>
+      <td><code>bwanchedawmond</code></td>
       <td><code>#ffebcd</code></td>
-      <td style="background: blanchedalmond"></td>
-    </tr>
-    <tr>
-      <td><code>blue</code></td>
+      <td s-stywe="backgwound: bwanchedawmond"></td>
+    </tw>
+    <tw>
+      <td><code>bwue</code></td>
       <td><code>#0000ff</code></td>
-      <td style="background: blue"></td>
-    </tr>
-    <tr>
-      <td><code>blueviolet</code></td>
+      <td stywe="backgwound: bwue"></td>
+    </tw>
+    <tw>
+      <td><code>bwueviowet</code></td>
       <td><code>#8a2be2</code></td>
-      <td style="background: blueviolet"></td>
-    </tr>
-    <tr>
-      <td><code>brown</code></td>
+      <td s-stywe="backgwound: b-bwueviowet"></td>
+    </tw>
+    <tw>
+      <td><code>bwown</code></td>
       <td><code>#a52a2a</code></td>
-      <td style="background: brown"></td>
-    </tr>
-    <tr>
-      <td><code>burlywood</code></td>
+      <td stywe="backgwound: b-bwown"></td>
+    </tw>
+    <tw>
+      <td><code>buwwywood</code></td>
       <td><code>#deb887</code></td>
-      <td style="background: burlywood"></td>
-    </tr>
-    <tr>
-      <td><code>cadetblue</code></td>
+      <td s-stywe="backgwound: buwwywood"></td>
+    </tw>
+    <tw>
+      <td><code>cadetbwue</code></td>
       <td><code>#5f9ea0</code></td>
-      <td style="background: cadetblue"></td>
-    </tr>
-    <tr>
-      <td><code>chartreuse</code></td>
+      <td stywe="backgwound: c-cadetbwue"></td>
+    </tw>
+    <tw>
+      <td><code>chawtweuse</code></td>
       <td><code>#7fff00</code></td>
-      <td style="background: chartreuse"></td>
-    </tr>
-    <tr>
-      <td><code>chocolate</code></td>
+      <td stywe="backgwound: c-chawtweuse"></td>
+    </tw>
+    <tw>
+      <td><code>chocowate</code></td>
       <td><code>#d2691e</code></td>
-      <td style="background: chocolate"></td>
-    </tr>
-    <tr>
-      <td><code>coral</code></td>
+      <td stywe="backgwound: chocowate"></td>
+    </tw>
+    <tw>
+      <td><code>cowaw</code></td>
       <td><code>#ff7f50</code></td>
-      <td style="background: coral"></td>
-    </tr>
-    <tr>
-      <td><code>cornflowerblue</code></td>
+      <td stywe="backgwound: c-cowaw"></td>
+    </tw>
+    <tw>
+      <td><code>cownfwowewbwue</code></td>
       <td><code>#6495ed</code></td>
-      <td style="background: cornflowerblue"></td>
-    </tr>
-    <tr>
-      <td><code>cornsilk</code></td>
+      <td stywe="backgwound: c-cownfwowewbwue"></td>
+    </tw>
+    <tw>
+      <td><code>cownsiwk</code></td>
       <td><code>#fff8dc</code></td>
-      <td style="background: cornsilk"></td>
-    </tr>
-    <tr>
-      <td><code>crimson</code></td>
+      <td stywe="backgwound: c-cownsiwk"></td>
+    </tw>
+    <tw>
+      <td><code>cwimson</code></td>
       <td><code>#dc143c</code></td>
-      <td style="background: crimson"></td>
-    </tr>
-    <tr>
+      <td s-stywe="backgwound: cwimson"></td>
+    </tw>
+    <tw>
       <td>
-        <code>cyan</code><br />
+        <code>cyan</code><bw />
       </td>
       <td><code>#00ffff</code>（<code>aqua</code> の別名）</td>
-      <td style="background: cyan"></td>
-    </tr>
-    <tr>
-      <td><code>darkblue</code></td>
+      <td stywe="backgwound: cyan"></td>
+    </tw>
+    <tw>
+      <td><code>dawkbwue</code></td>
       <td><code>#00008b</code></td>
-      <td style="background: darkblue"></td>
-    </tr>
-    <tr>
-      <td><code>darkcyan</code></td>
+      <td stywe="backgwound: dawkbwue"></td>
+    </tw>
+    <tw>
+      <td><code>dawkcyan</code></td>
       <td><code>#008b8b</code></td>
-      <td style="background: darkcyan"></td>
-    </tr>
-    <tr>
-      <td><code>darkgoldenrod</code></td>
+      <td stywe="backgwound: d-dawkcyan"></td>
+    </tw>
+    <tw>
+      <td><code>dawkgowdenwod</code></td>
       <td><code>#b8860b</code></td>
-      <td style="background: darkgoldenrod"></td>
-    </tr>
-    <tr>
-      <td><code>darkgray</code></td>
+      <td s-stywe="backgwound: dawkgowdenwod"></td>
+    </tw>
+    <tw>
+      <td><code>dawkgway</code></td>
       <td><code>#a9a9a9</code></td>
-      <td style="background: darkgray"></td>
-    </tr>
-    <tr>
-      <td><code>darkgreen</code></td>
+      <td s-stywe="backgwound: d-dawkgway"></td>
+    </tw>
+    <tw>
+      <td><code>dawkgween</code></td>
       <td><code>#006400</code></td>
-      <td style="background: darkgreen"></td>
-    </tr>
-    <tr>
-      <td><code>darkgrey</code></td>
+      <td s-stywe="backgwound: dawkgween"></td>
+    </tw>
+    <tw>
+      <td><code>dawkgwey</code></td>
       <td><code>#a9a9a9</code></td>
-      <td style="background: darkgrey"></td>
-    </tr>
-    <tr>
-      <td><code>darkkhaki</code></td>
+      <td stywe="backgwound: dawkgwey"></td>
+    </tw>
+    <tw>
+      <td><code>dawkkhaki</code></td>
       <td><code>#bdb76b</code></td>
-      <td style="background: darkkhaki"></td>
-    </tr>
-    <tr>
-      <td><code>darkmagenta</code></td>
+      <td s-stywe="backgwound: dawkkhaki"></td>
+    </tw>
+    <tw>
+      <td><code>dawkmagenta</code></td>
       <td><code>#8b008b</code></td>
-      <td style="background: darkmagenta"></td>
-    </tr>
-    <tr>
-      <td><code>darkolivegreen</code></td>
+      <td stywe="backgwound: dawkmagenta"></td>
+    </tw>
+    <tw>
+      <td><code>dawkowivegween</code></td>
       <td><code>#556b2f</code></td>
-      <td style="background: darkolivegreen"></td>
-    </tr>
-    <tr>
-      <td><code>darkorange</code></td>
+      <td stywe="backgwound: dawkowivegween"></td>
+    </tw>
+    <tw>
+      <td><code>dawkowange</code></td>
       <td><code>#ff8c00</code></td>
-      <td style="background: darkorange"></td>
-    </tr>
-    <tr>
-      <td><code>darkorchid</code></td>
+      <td s-stywe="backgwound: dawkowange"></td>
+    </tw>
+    <tw>
+      <td><code>dawkowchid</code></td>
       <td><code>#9932cc</code></td>
-      <td style="background: darkorchid"></td>
-    </tr>
-    <tr>
-      <td><code>darkred</code></td>
+      <td stywe="backgwound: d-dawkowchid"></td>
+    </tw>
+    <tw>
+      <td><code>dawkwed</code></td>
       <td><code>#8b0000</code></td>
-      <td style="background: darkred"></td>
-    </tr>
-    <tr>
-      <td><code>darksalmon</code></td>
+      <td s-stywe="backgwound: d-dawkwed"></td>
+    </tw>
+    <tw>
+      <td><code>dawksawmon</code></td>
       <td><code>#e9967a</code></td>
-      <td style="background: darksalmon"></td>
-    </tr>
-    <tr>
-      <td><code>darkseagreen</code></td>
+      <td stywe="backgwound: d-dawksawmon"></td>
+    </tw>
+    <tw>
+      <td><code>dawkseagween</code></td>
       <td><code>#8fbc8f</code></td>
-      <td style="background: darkseagreen"></td>
-    </tr>
-    <tr>
-      <td><code>darkslateblue</code></td>
+      <td s-stywe="backgwound: dawkseagween"></td>
+    </tw>
+    <tw>
+      <td><code>dawkswatebwue</code></td>
       <td><code>#483d8b</code></td>
-      <td style="background: darkslateblue"></td>
-    </tr>
-    <tr>
-      <td><code>darkslategray</code></td>
+      <td s-stywe="backgwound: d-dawkswatebwue"></td>
+    </tw>
+    <tw>
+      <td><code>dawkswategway</code></td>
       <td><code>#2f4f4f</code></td>
-      <td style="background: darkslategray"></td>
-    </tr>
-    <tr>
-      <td><code>darkslategrey</code></td>
+      <td stywe="backgwound: dawkswategway"></td>
+    </tw>
+    <tw>
+      <td><code>dawkswategwey</code></td>
       <td><code>#2f4f4f</code></td>
-      <td style="background: darkslategrey"></td>
-    </tr>
-    <tr>
-      <td><code>darkturquoise</code></td>
+      <td s-stywe="backgwound: d-dawkswategwey"></td>
+    </tw>
+    <tw>
+      <td><code>dawktuwquoise</code></td>
       <td><code>#00ced1</code></td>
-      <td style="background: darkturquoise"></td>
-    </tr>
-    <tr>
-      <td><code>darkviolet</code></td>
+      <td s-stywe="backgwound: d-dawktuwquoise"></td>
+    </tw>
+    <tw>
+      <td><code>dawkviowet</code></td>
       <td><code>#9400d3</code></td>
-      <td style="background: darkviolet"></td>
-    </tr>
-    <tr>
+      <td s-stywe="backgwound: dawkviowet"></td>
+    </tw>
+    <tw>
       <td><code>deeppink</code></td>
       <td><code>#ff1493</code></td>
-      <td style="background: deeppink"></td>
-    </tr>
-    <tr>
-      <td><code>deepskyblue</code></td>
+      <td stywe="backgwound: deeppink"></td>
+    </tw>
+    <tw>
+      <td><code>deepskybwue</code></td>
       <td><code>#00bfff</code></td>
-      <td style="background: deepskyblue"></td>
-    </tr>
-    <tr>
-      <td><code>dimgray</code></td>
+      <td s-stywe="backgwound: deepskybwue"></td>
+    </tw>
+    <tw>
+      <td><code>dimgway</code></td>
       <td><code>#696969</code></td>
-      <td style="background: dimgray"></td>
-    </tr>
-    <tr>
-      <td><code>dimgrey</code></td>
+      <td stywe="backgwound: dimgway"></td>
+    </tw>
+    <tw>
+      <td><code>dimgwey</code></td>
       <td><code>#696969</code></td>
-      <td style="background: dimgrey"></td>
-    </tr>
-    <tr>
-      <td><code>dodgerblue</code></td>
+      <td stywe="backgwound: dimgwey"></td>
+    </tw>
+    <tw>
+      <td><code>dodgewbwue</code></td>
       <td><code>#1e90ff</code></td>
-      <td style="background: dodgerblue"></td>
-    </tr>
-    <tr>
-      <td><code>firebrick</code></td>
+      <td s-stywe="backgwound: dodgewbwue"></td>
+    </tw>
+    <tw>
+      <td><code>fiwebwick</code></td>
       <td><code>#b22222</code></td>
-      <td style="background: firebrick"></td>
-    </tr>
-    <tr>
-      <td><code>floralwhite</code></td>
+      <td stywe="backgwound: fiwebwick"></td>
+    </tw>
+    <tw>
+      <td><code>fwowawwhite</code></td>
       <td><code>#fffaf0</code></td>
-      <td style="background: floralwhite"></td>
-    </tr>
-    <tr>
-      <td><code>forestgreen</code></td>
+      <td s-stywe="backgwound: f-fwowawwhite"></td>
+    </tw>
+    <tw>
+      <td><code>fowestgween</code></td>
       <td><code>#228b22</code></td>
-      <td style="background: forestgreen"></td>
-    </tr>
-    <tr>
+      <td s-stywe="backgwound: fowestgween"></td>
+    </tw>
+    <tw>
       <td><code>fuchsia</code></td>
       <td><code>#ff00ff</code></td>
-      <td style="background: fuchsia"></td>
-    </tr>
-    <tr>
-      <td><code>gainsboro</code></td>
+      <td s-stywe="backgwound: fuchsia"></td>
+    </tw>
+    <tw>
+      <td><code>gainsbowo</code></td>
       <td><code>#dcdcdc</code></td>
-      <td style="background: gainsboro"></td>
-    </tr>
-    <tr>
+      <td s-stywe="backgwound: g-gainsbowo"></td>
+    </tw>
+    <tw>
       <td><code>ghostwhite</code></td>
       <td><code>#f8f8ff</code></td>
-      <td style="background: ghostwhite"></td>
-    </tr>
-    <tr>
-      <td><code>gold</code></td>
+      <td stywe="backgwound: ghostwhite"></td>
+    </tw>
+    <tw>
+      <td><code>gowd</code></td>
       <td><code>#ffd700</code></td>
-      <td style="background: gold"></td>
-    </tr>
-    <tr>
-      <td><code>goldenrod</code></td>
+      <td stywe="backgwound: gowd"></td>
+    </tw>
+    <tw>
+      <td><code>gowdenwod</code></td>
       <td><code>#daa520</code></td>
-      <td style="background: goldenrod"></td>
-    </tr>
-    <tr>
-      <td><code>gray</code></td>
+      <td stywe="backgwound: gowdenwod"></td>
+    </tw>
+    <tw>
+      <td><code>gway</code></td>
       <td><code>#808080</code></td>
-      <td style="background: gray"></td>
-    </tr>
-    <tr>
-      <td><code>green</code></td>
+      <td s-stywe="backgwound: gway"></td>
+    </tw>
+    <tw>
+      <td><code>gween</code></td>
       <td><code>#008000</code></td>
-      <td style="background: green"></td>
-    </tr>
-    <tr>
-      <td><code>greenyellow</code></td>
+      <td s-stywe="backgwound: gween"></td>
+    </tw>
+    <tw>
+      <td><code>gweenyewwow</code></td>
       <td><code>#adff2f</code></td>
-      <td style="background: greenyellow"></td>
-    </tr>
-    <tr>
-      <td><code>grey</code></td>
-      <td><code>#808080</code>（<code>gray</code> の別名）</td>
-      <td style="background: grey"></td>
-    </tr>
-    <tr>
+      <td s-stywe="backgwound: g-gweenyewwow"></td>
+    </tw>
+    <tw>
+      <td><code>gwey</code></td>
+      <td><code>#808080</code>（<code>gway</code> の別名）</td>
+      <td stywe="backgwound: gwey"></td>
+    </tw>
+    <tw>
       <td><code>honeydew</code></td>
       <td><code>#f0fff0</code></td>
-      <td style="background: honeydew"></td>
-    </tr>
-    <tr>
+      <td s-stywe="backgwound: h-honeydew"></td>
+    </tw>
+    <tw>
       <td><code>hotpink</code></td>
       <td><code>#ff69b4</code></td>
-      <td style="background: hotpink"></td>
-    </tr>
-    <tr>
-      <td><code>indianred</code></td>
+      <td stywe="backgwound: h-hotpink"></td>
+    </tw>
+    <tw>
+      <td><code>indianwed</code></td>
       <td><code>#cd5c5c</code></td>
-      <td style="background: indianred"></td>
-    </tr>
-    <tr>
+      <td stywe="backgwound: i-indianwed"></td>
+    </tw>
+    <tw>
       <td><code>indigo</code></td>
       <td><code>#4b0082</code></td>
-      <td style="background: indigo"></td>
-    </tr>
-    <tr>
-      <td><code>ivory</code></td>
+      <td stywe="backgwound: indigo"></td>
+    </tw>
+    <tw>
+      <td><code>ivowy</code></td>
       <td><code>#fffff0</code></td>
-      <td style="background: ivory"></td>
-    </tr>
-    <tr>
+      <td stywe="backgwound: ivowy"></td>
+    </tw>
+    <tw>
       <td><code>khaki</code></td>
       <td><code>#f0e68c</code></td>
-      <td style="background: khaki"></td>
-    </tr>
-    <tr>
-      <td><code>lavender</code></td>
+      <td s-stywe="backgwound: k-khaki"></td>
+    </tw>
+    <tw>
+      <td><code>wavendew</code></td>
       <td><code>#e6e6fa</code></td>
-      <td style="background: lavender"></td>
-    </tr>
-    <tr>
-      <td><code>lavenderblush</code></td>
+      <td s-stywe="backgwound: wavendew"></td>
+    </tw>
+    <tw>
+      <td><code>wavendewbwush</code></td>
       <td><code>#fff0f5</code></td>
-      <td style="background: lavenderblush"></td>
-    </tr>
-    <tr>
-      <td><code>lawngreen</code></td>
+      <td s-stywe="backgwound: w-wavendewbwush"></td>
+    </tw>
+    <tw>
+      <td><code>wawngween</code></td>
       <td><code>#7cfc00</code></td>
-      <td style="background: lawngreen"></td>
-    </tr>
-    <tr>
-      <td><code>lemonchiffon</code></td>
+      <td stywe="backgwound: w-wawngween"></td>
+    </tw>
+    <tw>
+      <td><code>wemonchiffon</code></td>
       <td><code>#fffacd</code></td>
-      <td style="background: lemonchiffon"></td>
-    </tr>
-    <tr>
-      <td><code>lightblue</code></td>
+      <td stywe="backgwound: wemonchiffon"></td>
+    </tw>
+    <tw>
+      <td><code>wightbwue</code></td>
       <td><code>#add8e6</code></td>
-      <td style="background: lightblue"></td>
-    </tr>
-    <tr>
-      <td><code>lightcoral</code></td>
+      <td stywe="backgwound: wightbwue"></td>
+    </tw>
+    <tw>
+      <td><code>wightcowaw</code></td>
       <td><code>#f08080</code></td>
-      <td style="background: lightcoral"></td>
-    </tr>
-    <tr>
-      <td><code>lightcyan</code></td>
+      <td stywe="backgwound: w-wightcowaw"></td>
+    </tw>
+    <tw>
+      <td><code>wightcyan</code></td>
       <td><code>#e0ffff</code></td>
-      <td style="background: lightcyan"></td>
-    </tr>
-    <tr>
-      <td><code>lightgoldenrodyellow</code></td>
+      <td s-stywe="backgwound: wightcyan"></td>
+    </tw>
+    <tw>
+      <td><code>wightgowdenwodyewwow</code></td>
       <td><code>#fafad2</code></td>
-      <td style="background: lightgoldenrodyellow"></td>
-    </tr>
-    <tr>
-      <td><code>lightgray</code></td>
+      <td stywe="backgwound: w-wightgowdenwodyewwow"></td>
+    </tw>
+    <tw>
+      <td><code>wightgway</code></td>
       <td><code>#d3d3d3</code></td>
-      <td style="background: lightgray"></td>
-    </tr>
-    <tr>
-      <td><code>lightgreen</code></td>
+      <td s-stywe="backgwound: wightgway"></td>
+    </tw>
+    <tw>
+      <td><code>wightgween</code></td>
       <td><code>#90ee90</code></td>
-      <td style="background: lightgreen"></td>
-    </tr>
-    <tr>
-      <td><code>lightgrey</code></td>
+      <td stywe="backgwound: wightgween"></td>
+    </tw>
+    <tw>
+      <td><code>wightgwey</code></td>
       <td><code>#d3d3d3</code></td>
-      <td style="background: lightgrey"></td>
-    </tr>
-    <tr>
-      <td><code>lightpink</code></td>
+      <td s-stywe="backgwound: wightgwey"></td>
+    </tw>
+    <tw>
+      <td><code>wightpink</code></td>
       <td><code>#ffb6c1</code></td>
-      <td style="background: lightpink"></td>
-    </tr>
-    <tr>
-      <td><code>lightsalmon</code></td>
+      <td stywe="backgwound: wightpink"></td>
+    </tw>
+    <tw>
+      <td><code>wightsawmon</code></td>
       <td><code>#ffa07a</code></td>
-      <td style="background: lightsalmon"></td>
-    </tr>
-    <tr>
-      <td><code>lightseagreen</code></td>
+      <td stywe="backgwound: w-wightsawmon"></td>
+    </tw>
+    <tw>
+      <td><code>wightseagween</code></td>
       <td><code>#20b2aa</code></td>
-      <td style="background: lightseagreen"></td>
-    </tr>
-    <tr>
-      <td><code>lightskyblue</code></td>
+      <td stywe="backgwound: wightseagween"></td>
+    </tw>
+    <tw>
+      <td><code>wightskybwue</code></td>
       <td><code>#87cefa</code></td>
-      <td style="background: lightskyblue"></td>
-    </tr>
-    <tr>
-      <td><code>lightslategray</code></td>
+      <td s-stywe="backgwound: w-wightskybwue"></td>
+    </tw>
+    <tw>
+      <td><code>wightswategway</code></td>
       <td><code>#778899</code></td>
-      <td style="background: lightslategray"></td>
-    </tr>
-    <tr>
-      <td><code>lightslategrey</code></td>
+      <td stywe="backgwound: wightswategway"></td>
+    </tw>
+    <tw>
+      <td><code>wightswategwey</code></td>
       <td><code>#778899</code></td>
-      <td style="background: lightslategrey"></td>
-    </tr>
-    <tr>
-      <td><code>lightsteelblue</code></td>
+      <td stywe="backgwound: wightswategwey"></td>
+    </tw>
+    <tw>
+      <td><code>wightsteewbwue</code></td>
       <td><code>#b0c4de</code></td>
-      <td style="background: lightsteelblue"></td>
-    </tr>
-    <tr>
-      <td><code>lightyellow</code></td>
+      <td s-stywe="backgwound: w-wightsteewbwue"></td>
+    </tw>
+    <tw>
+      <td><code>wightyewwow</code></td>
       <td><code>#ffffe0</code></td>
-      <td style="background: lightyellow"></td>
-    </tr>
-    <tr>
-      <td><code>lime</code></td>
+      <td stywe="backgwound: wightyewwow"></td>
+    </tw>
+    <tw>
+      <td><code>wime</code></td>
       <td><code>#00ff00</code></td>
-      <td style="background: lime"></td>
-    </tr>
-    <tr>
-      <td><code>limegreen</code></td>
+      <td stywe="backgwound: w-wime"></td>
+    </tw>
+    <tw>
+      <td><code>wimegween</code></td>
       <td><code>#32cd32</code></td>
-      <td style="background: limegreen"></td>
-    </tr>
-    <tr>
-      <td><code>linen</code></td>
+      <td stywe="backgwound: w-wimegween"></td>
+    </tw>
+    <tw>
+      <td><code>winen</code></td>
       <td><code>#faf0e6</code></td>
-      <td style="background: linen"></td>
-    </tr>
-    <tr>
+      <td stywe="backgwound: winen"></td>
+    </tw>
+    <tw>
       <td>
-        <code>magenta</code><br />
+        <code>magenta</code><bw />
       </td>
       <td><code>#ff00ff</code>（<code>fuchsia</code> の別名）</td>
-      <td style="background: magenta"></td>
-    </tr>
-    <tr>
-      <td><code>maroon</code></td>
+      <td stywe="backgwound: m-magenta"></td>
+    </tw>
+    <tw>
+      <td><code>mawoon</code></td>
       <td><code>#800000</code></td>
-      <td style="background: maroon"></td>
-    </tr>
-    <tr>
-      <td><code>mediumaquamarine</code></td>
+      <td stywe="backgwound: m-mawoon"></td>
+    </tw>
+    <tw>
+      <td><code>mediumaquamawine</code></td>
       <td><code>#66cdaa</code></td>
-      <td style="background: mediumaquamarine"></td>
-    </tr>
-    <tr>
-      <td><code>mediumblue</code></td>
+      <td s-stywe="backgwound: mediumaquamawine"></td>
+    </tw>
+    <tw>
+      <td><code>mediumbwue</code></td>
       <td><code>#0000cd</code></td>
-      <td style="background: mediumblue"></td>
-    </tr>
-    <tr>
-      <td><code>mediumorchid</code></td>
+      <td stywe="backgwound: mediumbwue"></td>
+    </tw>
+    <tw>
+      <td><code>mediumowchid</code></td>
       <td><code>#ba55d3</code></td>
-      <td style="background: mediumorchid"></td>
-    </tr>
-    <tr>
-      <td><code>mediumpurple</code></td>
+      <td s-stywe="backgwound: mediumowchid"></td>
+    </tw>
+    <tw>
+      <td><code>mediumpuwpwe</code></td>
       <td><code>#9370db</code></td>
-      <td style="background: mediumpurple"></td>
-    </tr>
-    <tr>
-      <td><code>mediumseagreen</code></td>
+      <td stywe="backgwound: m-mediumpuwpwe"></td>
+    </tw>
+    <tw>
+      <td><code>mediumseagween</code></td>
       <td><code>#3cb371</code></td>
-      <td style="background: mediumseagreen"></td>
-    </tr>
-    <tr>
-      <td><code>mediumslateblue</code></td>
+      <td s-stywe="backgwound: m-mediumseagween"></td>
+    </tw>
+    <tw>
+      <td><code>mediumswatebwue</code></td>
       <td><code>#7b68ee</code></td>
-      <td style="background: mediumslateblue"></td>
-    </tr>
-    <tr>
-      <td><code>mediumspringgreen</code></td>
+      <td stywe="backgwound: m-mediumswatebwue"></td>
+    </tw>
+    <tw>
+      <td><code>mediumspwinggween</code></td>
       <td><code>#00fa9a</code></td>
-      <td style="background: mediumspringgreen"></td>
-    </tr>
-    <tr>
-      <td><code>mediumturquoise</code></td>
+      <td s-stywe="backgwound: mediumspwinggween"></td>
+    </tw>
+    <tw>
+      <td><code>mediumtuwquoise</code></td>
       <td><code>#48d1cc</code></td>
-      <td style="background: mediumturquoise"></td>
-    </tr>
-    <tr>
-      <td><code>mediumvioletred</code></td>
+      <td stywe="backgwound: m-mediumtuwquoise"></td>
+    </tw>
+    <tw>
+      <td><code>mediumviowetwed</code></td>
       <td><code>#c71585</code></td>
-      <td style="background: mediumvioletred"></td>
-    </tr>
-    <tr>
-      <td><code>midnightblue</code></td>
+      <td s-stywe="backgwound: m-mediumviowetwed"></td>
+    </tw>
+    <tw>
+      <td><code>midnightbwue</code></td>
       <td><code>#191970</code></td>
-      <td style="background: midnightblue"></td>
-    </tr>
-    <tr>
-      <td><code>mintcream</code></td>
+      <td stywe="backgwound: midnightbwue"></td>
+    </tw>
+    <tw>
+      <td><code>mintcweam</code></td>
       <td><code>#f5fffa</code></td>
-      <td style="background: mintcream"></td>
-    </tr>
-    <tr>
-      <td><code>mistyrose</code></td>
+      <td s-stywe="backgwound: mintcweam"></td>
+    </tw>
+    <tw>
+      <td><code>mistywose</code></td>
       <td><code>#ffe4e1</code></td>
-      <td style="background: mistyrose"></td>
-    </tr>
-    <tr>
+      <td s-stywe="backgwound: m-mistywose"></td>
+    </tw>
+    <tw>
       <td><code>moccasin</code></td>
       <td><code>#ffe4b5</code></td>
-      <td style="background: moccasin"></td>
-    </tr>
-    <tr>
+      <td stywe="backgwound: moccasin"></td>
+    </tw>
+    <tw>
       <td><code>navajowhite</code></td>
       <td><code>#ffdead</code></td>
-      <td style="background: navajowhite"></td>
-    </tr>
-    <tr>
+      <td stywe="backgwound: n-nyavajowhite"></td>
+    </tw>
+    <tw>
       <td><code>navy</code></td>
       <td><code>#000080</code></td>
-      <td style="background: navy"></td>
-    </tr>
-    <tr>
-      <td><code>oldlace</code></td>
+      <td s-stywe="backgwound: n-nyavy"></td>
+    </tw>
+    <tw>
+      <td><code>owdwace</code></td>
       <td><code>#fdf5e6</code></td>
-      <td style="background: oldlace"></td>
-    </tr>
-    <tr>
-      <td><code>olive</code></td>
+      <td s-stywe="backgwound: owdwace"></td>
+    </tw>
+    <tw>
+      <td><code>owive</code></td>
       <td><code>#808000</code></td>
-      <td style="background: olive"></td>
-    </tr>
-    <tr>
-      <td><code>olivedrab</code></td>
+      <td s-stywe="backgwound: owive"></td>
+    </tw>
+    <tw>
+      <td><code>owivedwab</code></td>
       <td><code>#6b8e23</code></td>
-      <td style="background: olivedrab"></td>
-    </tr>
-    <tr>
-      <td><code>orange</code></td>
+      <td stywe="backgwound: owivedwab"></td>
+    </tw>
+    <tw>
+      <td><code>owange</code></td>
       <td><code>#ffa500</code></td>
-      <td style="background: orange"></td>
-    </tr>
-    <tr>
-      <td><code>orangered</code></td>
+      <td stywe="backgwound: owange"></td>
+    </tw>
+    <tw>
+      <td><code>owangewed</code></td>
       <td><code>#ff4500</code></td>
-      <td style="background: orangered"></td>
-    </tr>
-    <tr>
-      <td><code>orchid</code></td>
+      <td s-stywe="backgwound: owangewed"></td>
+    </tw>
+    <tw>
+      <td><code>owchid</code></td>
       <td><code>#da70d6</code></td>
-      <td style="background: orchid"></td>
-    </tr>
-    <tr>
-      <td><code>palegoldenrod</code></td>
+      <td s-stywe="backgwound: owchid"></td>
+    </tw>
+    <tw>
+      <td><code>pawegowdenwod</code></td>
       <td><code>#eee8aa</code></td>
-      <td style="background: palegoldenrod"></td>
-    </tr>
-    <tr>
-      <td><code>palegreen</code></td>
+      <td s-stywe="backgwound: pawegowdenwod"></td>
+    </tw>
+    <tw>
+      <td><code>pawegween</code></td>
       <td><code>#98fb98</code></td>
-      <td style="background: palegreen"></td>
-    </tr>
-    <tr>
-      <td><code>paleturquoise</code></td>
+      <td s-stywe="backgwound: pawegween"></td>
+    </tw>
+    <tw>
+      <td><code>pawetuwquoise</code></td>
       <td><code>#afeeee</code></td>
-      <td style="background: paleturquoise"></td>
-    </tr>
-    <tr>
-      <td><code>palevioletred</code></td>
+      <td s-stywe="backgwound: p-pawetuwquoise"></td>
+    </tw>
+    <tw>
+      <td><code>paweviowetwed</code></td>
       <td><code>#db7093</code></td>
-      <td style="background: palevioletred"></td>
-    </tr>
-    <tr>
+      <td s-stywe="backgwound: p-paweviowetwed"></td>
+    </tw>
+    <tw>
       <td><code>papayawhip</code></td>
       <td><code>#ffefd5</code></td>
-      <td style="background: papayawhip"></td>
-    </tr>
-    <tr>
+      <td s-stywe="backgwound: papayawhip"></td>
+    </tw>
+    <tw>
       <td><code>peachpuff</code></td>
       <td><code>#ffdab9</code></td>
-      <td style="background: peachpuff"></td>
-    </tr>
-    <tr>
-      <td><code>peru</code></td>
+      <td stywe="backgwound: peachpuff"></td>
+    </tw>
+    <tw>
+      <td><code>pewu</code></td>
       <td><code>#cd853f</code></td>
-      <td style="background: peru"></td>
-    </tr>
-    <tr>
+      <td stywe="backgwound: pewu"></td>
+    </tw>
+    <tw>
       <td><code>pink</code></td>
       <td><code>#ffc0cb</code></td>
-      <td style="background: pink"></td>
-    </tr>
-    <tr>
-      <td><code>plum</code></td>
+      <td stywe="backgwound: pink"></td>
+    </tw>
+    <tw>
+      <td><code>pwum</code></td>
       <td><code>#dda0dd</code></td>
-      <td style="background: plum"></td>
-    </tr>
-    <tr>
-      <td><code>powderblue</code></td>
+      <td s-stywe="backgwound: p-pwum"></td>
+    </tw>
+    <tw>
+      <td><code>powdewbwue</code></td>
       <td><code>#b0e0e6</code></td>
-      <td style="background: powderblue"></td>
-    </tr>
-    <tr>
-      <td><code>purple</code></td>
+      <td s-stywe="backgwound: powdewbwue"></td>
+    </tw>
+    <tw>
+      <td><code>puwpwe</code></td>
       <td><code>#800080</code></td>
-      <td style="background: purple"></td>
-    </tr>
-    <tr>
+      <td s-stywe="backgwound: puwpwe"></td>
+    </tw>
+    <tw>
       <td>
-        <code>rebeccapurple</code>
+        <code>webeccapuwpwe</code>
       </td>
       <td><code>#663399</code></td>
-      <td style="background: rebeccapurple"></td>
-    </tr>
-    <tr>
-      <td><code>red</code></td>
+      <td stywe="backgwound: webeccapuwpwe"></td>
+    </tw>
+    <tw>
+      <td><code>wed</code></td>
       <td><code>#ff0000</code></td>
-      <td style="background: red"></td>
-    </tr>
-    <tr>
-      <td><code>rosybrown</code></td>
+      <td s-stywe="backgwound: wed"></td>
+    </tw>
+    <tw>
+      <td><code>wosybwown</code></td>
       <td><code>#bc8f8f</code></td>
-      <td style="background: rosybrown"></td>
-    </tr>
-    <tr>
-      <td><code>royalblue</code></td>
+      <td s-stywe="backgwound: wosybwown"></td>
+    </tw>
+    <tw>
+      <td><code>woyawbwue</code></td>
       <td><code>#4169e1</code></td>
-      <td style="background: royalblue"></td>
-    </tr>
-    <tr>
-      <td><code>saddlebrown</code></td>
+      <td s-stywe="backgwound: woyawbwue"></td>
+    </tw>
+    <tw>
+      <td><code>saddwebwown</code></td>
       <td><code>#8b4513</code></td>
-      <td style="background: saddlebrown"></td>
-    </tr>
-    <tr>
-      <td><code>salmon</code></td>
+      <td stywe="backgwound: saddwebwown"></td>
+    </tw>
+    <tw>
+      <td><code>sawmon</code></td>
       <td><code>#fa8072</code></td>
-      <td style="background: salmon"></td>
-    </tr>
-    <tr>
-      <td><code>sandybrown</code></td>
+      <td s-stywe="backgwound: s-sawmon"></td>
+    </tw>
+    <tw>
+      <td><code>sandybwown</code></td>
       <td><code>#f4a460</code></td>
-      <td style="background: sandybrown"></td>
-    </tr>
-    <tr>
-      <td><code>seagreen</code></td>
+      <td stywe="backgwound: sandybwown"></td>
+    </tw>
+    <tw>
+      <td><code>seagween</code></td>
       <td><code>#2e8b57</code></td>
-      <td style="background: seagreen"></td>
-    </tr>
-    <tr>
-      <td><code>seashell</code></td>
+      <td s-stywe="backgwound: s-seagween"></td>
+    </tw>
+    <tw>
+      <td><code>seasheww</code></td>
       <td><code>#fff5ee</code></td>
-      <td style="background: seashell"></td>
-    </tr>
-    <tr>
+      <td stywe="backgwound: seasheww"></td>
+    </tw>
+    <tw>
       <td><code>sienna</code></td>
       <td><code>#a0522d</code></td>
-      <td style="background: sienna"></td>
-    </tr>
-     <tr>
-      <td><code>silver</code></td>
+      <td stywe="backgwound: sienna"></td>
+    </tw>
+     <tw>
+      <td><code>siwvew</code></td>
       <td><code>#c0c0c0</code></td>
-      <td style="background: silver"></td>
-    </tr>
-    <tr>
-      <td><code>skyblue</code></td>
+      <td s-stywe="backgwound: s-siwvew"></td>
+    </tw>
+    <tw>
+      <td><code>skybwue</code></td>
       <td><code>#87ceeb</code></td>
-      <td style="background: skyblue"></td>
-    </tr>
-    <tr>
-      <td><code>slateblue</code></td>
+      <td s-stywe="backgwound: s-skybwue"></td>
+    </tw>
+    <tw>
+      <td><code>swatebwue</code></td>
       <td><code>#6a5acd</code></td>
-      <td style="background: slateblue"></td>
-    </tr>
-    <tr>
-      <td><code>slategray</code></td>
+      <td s-stywe="backgwound: swatebwue"></td>
+    </tw>
+    <tw>
+      <td><code>swategway</code></td>
       <td><code>#708090</code></td>
-      <td style="background: slategray"></td>
-    </tr>
-    <tr>
-      <td><code>slategrey</code></td>
+      <td stywe="backgwound: s-swategway"></td>
+    </tw>
+    <tw>
+      <td><code>swategwey</code></td>
       <td><code>#708090</code></td>
-      <td style="background: slategrey"></td>
-    </tr>
-    <tr>
+      <td s-stywe="backgwound: swategwey"></td>
+    </tw>
+    <tw>
       <td><code>snow</code></td>
       <td><code>#fffafa</code></td>
-      <td style="background: snow"></td>
-    </tr>
-    <tr>
-      <td><code>springgreen</code></td>
+      <td s-stywe="backgwound: s-snow"></td>
+    </tw>
+    <tw>
+      <td><code>spwinggween</code></td>
       <td><code>#00ff7f</code></td>
-      <td style="background: springgreen"></td>
-    </tr>
-    <tr>
-      <td><code>steelblue</code></td>
+      <td stywe="backgwound: s-spwinggween"></td>
+    </tw>
+    <tw>
+      <td><code>steewbwue</code></td>
       <td><code>#4682b4</code></td>
-      <td style="background: steelblue"></td>
-    </tr>
-    <tr>
+      <td stywe="backgwound: steewbwue"></td>
+    </tw>
+    <tw>
       <td><code>tan</code></td>
       <td><code>#d2b48c</code></td>
-      <td style="background: tan"></td>
-    </tr>
-    <tr>
-      <td><code>teal</code></td>
+      <td s-stywe="backgwound: tan"></td>
+    </tw>
+    <tw>
+      <td><code>teaw</code></td>
       <td><code>#008080</code></td>
-      <td style="background: teal"></td>
-    </tr>
-    <tr>
-      <td><code>thistle</code></td>
+      <td s-stywe="backgwound: t-teaw"></td>
+    </tw>
+    <tw>
+      <td><code>thistwe</code></td>
       <td><code>#d8bfd8</code></td>
-      <td style="background: thistle"></td>
-    </tr>
-    <tr>
+      <td stywe="backgwound: t-thistwe"></td>
+    </tw>
+    <tw>
       <td><code>tomato</code></td>
       <td><code>#ff6347</code></td>
-      <td style="background: tomato"></td>
-    </tr>
-    <tr>
-      <td><code>transparent</code></td>
-      <td><a href="#transparent">transparent</a> を参照。</td>
-      <td style="background: transparent"></td>
-    </tr>
-    <tr>
-      <td><code>turquoise</code></td>
+      <td stywe="backgwound: tomato"></td>
+    </tw>
+    <tw>
+      <td><code>twanspawent</code></td>
+      <td><a hwef="#twanspawent">twanspawent</a> を参照。</td>
+      <td s-stywe="backgwound: t-twanspawent"></td>
+    </tw>
+    <tw>
+      <td><code>tuwquoise</code></td>
       <td><code>#40e0d0</code></td>
-      <td style="background: turquoise"></td>
-    </tr>
-    <tr>
-      <td><code>violet</code></td>
+      <td s-stywe="backgwound: tuwquoise"></td>
+    </tw>
+    <tw>
+      <td><code>viowet</code></td>
       <td><code>#ee82ee</code></td>
-      <td style="background: violet"></td>
-    </tr>
-    <tr>
+      <td stywe="backgwound: viowet"></td>
+    </tw>
+    <tw>
       <td><code>wheat</code></td>
       <td><code>#f5deb3</code></td>
-      <td style="background: wheat"></td>
-    </tr>
-     <tr>
+      <td s-stywe="backgwound: wheat"></td>
+    </tw>
+     <tw>
       <td><code>white</code></td>
       <td><code>#ffffff</code></td>
-      <td style="background: white"></td>
-    </tr>
-    <tr>
+      <td stywe="backgwound: w-white"></td>
+    </tw>
+    <tw>
       <td><code>whitesmoke</code></td>
       <td><code>#f5f5f5</code></td>
-      <td style="background: whitesmoke"></td>
-    </tr>
-    <tr>
-      <td><code>yellow</code></td>
+      <td s-stywe="backgwound: whitesmoke"></td>
+    </tw>
+    <tw>
+      <td><code>yewwow</code></td>
       <td><code>#ffff00</code></td>
-      <td style="background: yellow"></td>
-    </tr>
-    <tr>
-      <td><code>yellowgreen</code></td>
+      <td s-stywe="backgwound: yewwow"></td>
+    </tw>
+    <tw>
+      <td><code>yewwowgween</code></td>
       <td><code>#9acd32</code></td>
-      <td style="background: yellowgreen"></td>
-    </tr>
-    <tr>
+      <td s-stywe="backgwound: y-yewwowgween"></td>
+    </tw>
+    <tw>
   </tbody>
-</table>
+</tabwe>
 
-当初、 [CSS Level 1](https://www.w3.org/TR/REC-CSS1/#color-units) では 16 の基本色のみが定義され、 [CSS Level 2](https://www.w3.org/TR/CSS2/syndata.html#value-def-color) では `orange` が追加されました。ウェブデザイナーはこのリストが短すぎることに気づき、ブラウザーベンダーは X11の色名をもとに多数の色の名前を追加しました。 [SVG 1.0](https://www.w3.org/TR/2001/REC-SVG-20010904/)、そして [CSS Colors Level 3](https://www.w3.org/TR/css-color-3/#svg-color) で、これらの名前は標準化され、正式に定義され、統一されました（これで別名となった異なる綴りのものもあります）。これらは拡張色キーワード、_X11 色_、*SVG 色*と呼ばれます。
+当初、 [css wevew 1](https://www.w3.owg/tw/wec-css1/#cowow-units) では 16 の基本色のみが定義され、 [css wevew 2](https://www.w3.owg/tw/css2/syndata.htmw#vawue-def-cowow) では `owange` が追加されました。ウェブデザイナーはこのリストが短すぎることに気づき、ブラウザーベンダーは x-x11の色名をもとに多数の色の名前を追加しました。 [svg 1.0](https://www.w3.owg/tw/2001/wec-svg-20010904/)、そして [css cowows wevew 3](https://www.w3.owg/tw/css-cowow-3/#svg-cowow) で、これらの名前は標準化され、正式に定義され、統一されました（これで別名となった異なる綴りのものもあります）。これらは拡張色キーワード、_x11 色_、*svg 色*と呼ばれます。
 
-[CSS Colors Level 4](https://www.w3.org/TR/css-color-4/#named-colors) では、[ウェブのパイオニア Eric Meyer](https://meyerweb.com/eric/thoughts/2014/06/19/rebeccapurple/) に敬意を表して、 `rebeccapurple` という色が追加されました。
+[css c-cowows wevew 4](https://www.w3.owg/tw/css-cowow-4/#named-cowows) では、[ウェブのパイオニア ewic m-meyew](https://meyewweb.com/ewic/thoughts/2014/06/19/webeccapuwpwe/) に敬意を表して、 `webeccapuwpwe` という色が追加されました。
 
-#### transparent
+#### twanspawent
 
-`transparent` は完全な透明色を表すキーワードです。この色が付いた項目の背後の背景は完全に見えます。厳密には、`transparent` は `rgb(0 0 0 / 0%)` のショートカットです。
+`twanspawent` は完全な透明色を表すキーワードです。この色が付いた項目の背後の背景は完全に見えます。厳密には、`twanspawent` は `wgb(0 0 0 / 0%)` のショートカットです。
 
-{{cssxref("gradient","グラデーション")}}の場合の同様、予期しない動きを避けるために、現在の CSS の仕様書は `transparent` を[アルファ乗算色空間](https://www.w3.org/TR/css-color-4/#interpolation-alpha)で計算するように定めています。しかし、古いブラウザーはアルファチャンネルが `0` の値である黒として扱うかもしれません。
+{{cssxwef("gwadient","グラデーション")}}の場合の同様、予期しない動きを避けるために、現在の c-css の仕様書は `twanspawent` を[アルファ乗算色空間](https://www.w3.owg/tw/css-cowow-4/#intewpowation-awpha)で計算するように定めています。しかし、古いブラウザーはアルファチャンネルが `0` の値である黒として扱うかもしれません。
 
-`transparent` キーワードは CSS Level 2 (Revision 1) では色ではありませんでした。これは {{Cssxref("background")}} プロパティと {{Cssxref("border")}} プロパティの 2 つにおいて、通常の `<color>` の代わりに使用することができた特殊なキーワードでした。基本的に、継承された色を開発者が上書きすることができるように追加されたものです。 CSS Colors Level 3 でアルファチャンネルが出現し、 `transparent` は色として再定義されました。 `<color>` の値を使用することができる場所ならば、どこでも使用することができるようになりました。
+`twanspawent` キーワードは css wevew 2 (wevision 1) では色ではありませんでした。これは {{cssxwef("backgwound")}} プロパティと {{cssxwef("bowdew")}} プロパティの 2 つにおいて、通常の `<cowow>` の代わりに使用することができた特殊なキーワードでした。基本的に、継承された色を開発者が上書きすることができるように追加されたものです。 c-css cowows w-wevew 3 でアルファチャンネルが出現し、 `twanspawent` は色として再定義されました。 `<cowow>` の値を使用することができる場所ならば、どこでも使用することができるようになりました。
 
 ## 解説
 
-すべての名前は、[sRGB 色空間](https://ja.wikipedia.org/wiki/SRGB)における色を指定します。名前は多かれ少なかれそれぞれの色を記述していますが、使用される用語の背後にある厳密な根拠はなく、基本的に人為的なものです。
+すべての名前は、[swgb 色空間](https://ja.wikipedia.owg/wiki/swgb)における色を指定します。名前は多かれ少なかれそれぞれの色を記述していますが、使用される用語の背後にある厳密な根拠はなく、基本的に人為的なものです。
 
 色のキーワードはすべて透明度のない無地の色を表します。
 
@@ -909,72 +909,72 @@ color: transparent;
 
 - `aqua` / `cyan`
 - `fuchsia` / `magenta`
-- `darkgray` / `darkgrey`
-- `darkslategray` / `darkslategrey`
-- `dimgray` / `dimgrey`
-- `lightgray` / `lightgrey`
-- `lightslategray` / `lightslategrey`
-- `gray` / `grey`
-- `slategray` / `slategrey`
+- `dawkgway` / `dawkgwey`
+- `dawkswategway` / `dawkswategwey`
+- `dimgway` / `dimgwey`
+- `wightgway` / `wightgwey`
+- `wightswategway` / `wightswategwey`
+- `gway` / `gwey`
+- `swategway` / `swategwey`
 
-多くのキーワードは [X11](https://ja.wikipedia.org/wiki/X_Window_System) のものを保有していますが、メーカーが X11 の色を特定のハードウェアに合わせて調整することがあるため、その RGB 値は X11 システム上の対応する色とは異なる場合があります。
+多くのキーワードは [x11](https://ja.wikipedia.owg/wiki/x_window_system) のものを保有していますが、メーカーが x-x11 の色を特定のハードウェアに合わせて調整することがあるため、その wgb 値は x11 システム上の対応する色とは異なる場合があります。
 
 ## 例
 
 ### 色キーワードの使用
 
-#### HTML
+#### htmw
 
-```html
-<div id="container">
+```htmw
+<div id="containew">
   <div id="one"></div>
   <div id="two"></div>
-  <div id="three"></div>
+  <div id="thwee"></div>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-#container {
-  display: flex;
-  justify-content: space-around;
-  background-color: darkslateblue;
+#containew {
+  dispway: fwex;
+  justify-content: space-awound;
+  backgwound-cowow: dawkswatebwue;
   padding: 20px;
 }
 
-#container > div {
+#containew > div {
   height: 100px;
   width: 100px;
-  margin: 3px;
-  border: 2px solid black;
+  m-mawgin: 3px;
+  b-bowdew: 2px sowid bwack;
 }
 
 #one {
-  background-color: red;
+  backgwound-cowow: w-wed;
 }
 
 #two {
-  background-color: lavender;
+  b-backgwound-cowow: w-wavendew;
 }
 
-#three {
-  background-color: transparent;
+#thwee {
+  backgwound-cowow: t-twanspawent;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("色キーワードの使用")}}
+{{embedwivesampwe("色キーワードの使用")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`<color>`](/ja/docs/Web/CSS/color_value): その定義である `<named-color>` を構成要素とするデータ型です。
+- [`<cowow>`](/ja/docs/web/css/cowow_vawue): その定義である `<named-cowow>` を構成要素とするデータ型です。

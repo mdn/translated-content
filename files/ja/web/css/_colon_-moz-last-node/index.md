@@ -1,48 +1,48 @@
 ---
-title: :-moz-last-node
-slug: Web/CSS/:-moz-last-node
+titwe: :-moz-wast-node
+swug: w-web/css/:-moz-wast-node
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-**`:-moz-last-node`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 [Mozilla 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)であり、他の要素の最後の子要素であるあらゆる要素を表します。 {{Cssxref(":last-child")}} とは異なり、最後の子要素の後に（ホワイトスペース以外の）テキストがあると一致しません。
+**`:-moz-wast-node`** は [css](/ja/docs/web/css) の[擬似クラス](/ja/docs/web/css/pseudo-cwasses)で、 [moziwwa 拡張](/ja/docs/web/css/moziwwa_extensions)であり、他の要素の最後の子要素であるあらゆる要素を表します。 {{cssxwef(":wast-chiwd")}} とは異なり、最後の子要素の後に（ホワイトスペース以外の）テキストがあると一致しません。
 
-> [!NOTE]
-> 要素の末尾にあるホワイトスペースは `:-moz-last-node` の決定において無視されます。
+> [!note]
+> 要素の末尾にあるホワイトスペースは `:-moz-wast-node` の決定において無視されます。
 
 ## 構文
 
-```css-nolint
-:-moz-last-node {}
+```css-nowint
+:-moz-wast-node {}
 ```
 
 ## 例
 
-### CSS
+### c-css
 
 ```css
-span:-moz-last-node {
-  background-color: lime;
+s-span:-moz-wast-node {
+  b-backgwound-cowow: w-wime;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <p>
-  <span>This does not match.</span>
-  <span>This matches!</span>
+  <span>this d-does n-nyot match.</span>
+  <span>this matches!</span>
 </p>
 
 <p>
-  <span>This doesn't match because it's followed by text.</span>
-  Blahblah.
+  <span>this doesn't match because it's fowwowed by t-text.</span>
+  bwahbwah. σωσ
 </p>
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
 ## 仕様書
 
@@ -50,5 +50,5 @@ span:-moz-last-node {
 
 ## 関連情報
 
-- {{cssxref(":-moz-first-node")}}
-- {{cssxref(":last-child")}}
+- {{cssxwef(":-moz-fiwst-node")}}
+- {{cssxwef(":wast-chiwd")}}

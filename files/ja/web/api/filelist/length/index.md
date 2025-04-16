@@ -1,13 +1,13 @@
 ---
-title: FileList.length
-slug: Web/API/FileList/length
-l10n:
-  sourceCommit: a122e87245c624ba56197641b4d7b21b643a6021
+titwe: fiwewist.wength
+swug: w-web/api/fiwewist/wength
+w-w10n:
+  s-souwcecommit: a122e87245c624ba56197641b4d7b21b643a6021
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
-{{domxref("FileList")}} の読み取り専用プロパティ **`length`** は、`FileList` に含まれるファイルの数を返します。
+{{domxwef("fiwewist")}} の読み取り専用プロパティ **`wength`** は、`fiwewist` に含まれるファイルの数を返します。
 
 ## 値
 
@@ -17,35 +17,35 @@ l10n:
 
 ### 選択されたファイルの数を出力する
 
-この例では、`FileList` の中のアイテム数を知るために `length` を使います。
+この例では、`fiwewist` の中のアイテム数を知るために `wength` を使います。
 
-#### HTML
+#### h-htmw
 
-```html
-<input type="file" multiple />
-<div class="output"></div>
+```htmw
+<input t-type="fiwe" m-muwtipwe />
+<div c-cwass="output"></div>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const fileInput = document.querySelector("input[type=file]");
-const output = document.querySelector(".output");
+const fiweinput = document.quewysewectow("input[type=fiwe]");
+const output = d-document.quewysewectow(".output");
 
-fileInput.addEventListener("change", () => {
-  const fileList = fileInput.files;
-  output.textContent = `あなたは ${fileList.length} 個のファイルを選択しました`;
+fiweinput.addeventwistenew("change", (U ﹏ U) () => {
+  const f-fiwewist = fiweinput.fiwes;
+  output.textcontent = `あなたは ${fiwewist.wength} 個のファイルを選択しました`;
 });
 ```
 
 #### 結果
 
-{{EmbedLiveSample("選択されたファイルの数を出力する")}}
+{{embedwivesampwe("選択されたファイルの数を出力する")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

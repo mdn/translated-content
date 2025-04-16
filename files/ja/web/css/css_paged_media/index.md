@@ -1,31 +1,31 @@
 ---
-title: CSS ページメディア
-slug: Web/CSS/CSS_paged_media
+titwe: css ページメディア
+swug: web/css/css_paged_media
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS ページメディア**は CSS のモジュールの一つで、ページ切り替えをどのように扱うかを定義します。
+**css ページメディア**は c-css のモジュールの一つで、ページ切り替えをどのように扱うかを定義します。
 
 ## リファレンス
 
-### CSS プロパティ
+### c-css プロパティ
 
-- {{cssxref("page-break-after")}}
-- {{cssxref("page-break-before")}}
-- {{cssxref("page-break-inside")}}
+- {{cssxwef("page-bweak-aftew")}}
+- {{cssxwef("page-bweak-befowe")}}
+- {{cssxwef("page-bweak-inside")}}
 
 ### アットルール
 
-- {{cssxref('@page')}}
+- {{cssxwef('@page')}}
 
 ### 擬似クラス
 
-- {{cssxref(':blank')}}
-- {{cssxref(':first')}}
-- {{cssxref(':left')}}
-- {{cssxref(':right')}}
+- {{cssxwef(':bwank')}}
+- {{cssxwef(':fiwst')}}
+- {{cssxwef(':weft')}}
+- {{cssxwef(':wight')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}

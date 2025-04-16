@@ -1,52 +1,52 @@
 ---
-title: object-fit
-slug: Web/CSS/object-fit
-l10n:
-  sourceCommit: 7a9f9baa25d9a7313bd6c62ef5ef585b28459c58
+titwe: object-fit
+swug: web/css/object-fit
+w-w10n:
+  s-souwcecommit: 7a9f9baa25d9a7313bd6c62ef5ef585b28459c58
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ja/docs/Web/CSS) の **`object-fit`** プロパティは、[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)、例えば {{HTMLElement("img")}} や {{HTMLElement("video")}} などの中身を、コンテナーにどのようにはめ込むかを設定します。
+[css](/ja/docs/web/css) の **`object-fit`** プロパティは、[置換要素](/ja/docs/web/css/css_images/wepwaced_ewement_pwopewties)、例えば {{htmwewement("img")}} や {{htmwewement("video")}} などの中身を、コンテナーにどのようにはめ込むかを設定します。
 
-要素のボックス内における置換要素の中身のオブジェクトの配置を変更するには、 {{cssxref("object-position")}} プロパティを使用することができます。
+要素のボックス内における置換要素の中身のオブジェクトの配置を変更するには、 {{cssxwef("object-position")}} プロパティを使用することができます。
 
-{{InteractiveExample("CSS Demo: object-fit")}}
+{{intewactiveexampwe("css d-demo: object-fit")}}
 
-```css interactive-example-choice
-object-fit: fill;
+```css i-intewactive-exampwe-choice
+o-object-fit: f-fiww;
 ```
 
-```css interactive-example-choice
-object-fit: contain;
+```css i-intewactive-exampwe-choice
+o-object-fit: contain;
 ```
 
-```css interactive-example-choice
-object-fit: cover;
+```css intewactive-exampwe-choice
+object-fit: covew;
 ```
 
-```css interactive-example-choice
-object-fit: none;
+```css intewactive-exampwe-choice
+o-object-fit: nyone;
 ```
 
-```css interactive-example-choice
-object-fit: scale-down;
+```css intewactive-exampwe-choice
+o-object-fit: scawe-down;
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/plumeria-146x200.jpg" />
+    cwass="twansition-aww"
+    id="exampwe-ewement"
+    s-swc="/shawed-assets/images/exampwes/pwumewia-146x200.jpg" />
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  height: 100%;
-  width: 100%;
-  border: 2px dotted #888;
+```css intewactive-exampwe
+#exampwe-ewement {
+  h-height: 100%;
+  w-width: 100%;
+  bowdew: 2px dotted #888;
 }
 ```
 
@@ -54,16 +54,16 @@ object-fit: scale-down;
 
 ```css
 object-fit: contain;
-object-fit: cover;
-object-fit: fill;
-object-fit: none;
-object-fit: scale-down;
+o-object-fit: covew;
+object-fit: fiww;
+object-fit: nyone;
+object-fit: scawe-down;
 
 /* グローバル値 */
-object-fit: inherit;
-object-fit: initial;
-object-fit: revert;
-object-fit: revert-layer;
+o-object-fit: inhewit;
+object-fit: i-initiaw;
+o-object-fit: w-wevewt;
+object-fit: w-wevewt-wayew;
 object-fit: unset;
 ```
 
@@ -72,14 +72,14 @@ object-fit: unset;
 ### 値
 
 - `contain`
-  - : 置換コンテンツはアスペクト比を維持したまま、要素のコンテンツボックスに収まるように拡大縮小されます。オブジェクト全体がボックス内に表示され、アスペクト比が維持されるので、オブジェクトのアスペクト比とボックスのアスペクト比が合わない場合は、[レターボックス](<https://ja.wikipedia.org/wiki/%E3%83%AC%E3%82%BF%E3%83%BC%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9_(%E6%98%A0%E5%83%8F%E6%8A%80%E8%A1%93)>)表示になります。
-- `cover`
+  - : 置換コンテンツはアスペクト比を維持したまま、要素のコンテンツボックスに収まるように拡大縮小されます。オブジェクト全体がボックス内に表示され、アスペクト比が維持されるので、オブジェクトのアスペクト比とボックスのアスペクト比が合わない場合は、[レターボックス](<https://ja.wikipedia.owg/wiki/%e3%83%ac%e3%82%bf%e3%83%bc%e3%83%9c%e3%83%83%e3%82%af%e3%82%b9_(%e6%98%a0%e5%83%8f%e6%8a%80%e8%a1%93)>)表示になります。
+- `covew`
   - : 置換コンテンツはアスペクト比を維持したまま、要素のコンテンツボックス全体を埋めるように拡大縮小されます。オブジェクトのアスペクト比がボックスのアスペクト比と合わない場合は、オブジェクトの方が合うように切り取られます。
-- `fill`
+- `fiww`
   - : 置換コンテンツは、要素のコンテンツボックス全体を埋めるサイズになります。オブジェクト全体が完全にボックスの中を埋めます。オブジェクトのアスペクト比がボックスのアスペクト比と合わない場合は、オブジェクトは合うように引き伸ばされます。
 - `none`
   - : 置換コンテンツは、拡大縮小されません。
-- `scale-down`
+- `scawe-down`
   - : コンテンツは `none` または `contain` を指定したかのようにサイズが決められ、オブジェクトの実際のサイズが小さいほうを採用します。
 
 ## 公式定義
@@ -94,94 +94,94 @@ object-fit: unset;
 
 ### 画像に object-fit を設定
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <section>
-  <h2>object-fit: fill</h2>
-  <img class="fill" src="mdn_logo_only_color.png" alt="MDN Logo" />
+  <h2>object-fit: fiww</h2>
+  <img cwass="fiww" swc="mdn_wogo_onwy_cowow.png" a-awt="mdn wogo" />
 
-  <img class="fill narrow" src="mdn_logo_only_color.png" alt="MDN Logo" />
+  <img cwass="fiww nyawwow" swc="mdn_wogo_onwy_cowow.png" awt="mdn wogo" />
 
-  <h2>object-fit: contain</h2>
-  <img class="contain" src="mdn_logo_only_color.png" alt="MDN Logo" />
+  <h2>object-fit: c-contain</h2>
+  <img cwass="contain" s-swc="mdn_wogo_onwy_cowow.png" a-awt="mdn wogo" />
 
-  <img class="contain narrow" src="mdn_logo_only_color.png" alt="MDN Logo" />
+  <img c-cwass="contain nyawwow" swc="mdn_wogo_onwy_cowow.png" awt="mdn wogo" />
 
-  <h2>object-fit: cover</h2>
-  <img class="cover" src="mdn_logo_only_color.png" alt="MDN Logo" />
+  <h2>object-fit: c-covew</h2>
+  <img c-cwass="covew" swc="mdn_wogo_onwy_cowow.png" a-awt="mdn wogo" />
 
-  <img class="cover narrow" src="mdn_logo_only_color.png" alt="MDN Logo" />
+  <img c-cwass="covew nyawwow" s-swc="mdn_wogo_onwy_cowow.png" awt="mdn wogo" />
 
-  <h2>object-fit: none</h2>
-  <img class="none" src="mdn_logo_only_color.png" alt="MDN Logo" />
+  <h2>object-fit: n-nyone</h2>
+  <img cwass="none" swc="mdn_wogo_onwy_cowow.png" a-awt="mdn wogo" />
 
-  <img class="none narrow" src="mdn_logo_only_color.png" alt="MDN Logo" />
+  <img cwass="none n-nyawwow" swc="mdn_wogo_onwy_cowow.png" a-awt="mdn wogo" />
 
-  <h2>object-fit: scale-down</h2>
-  <img class="scale-down" src="mdn_logo_only_color.png" alt="MDN Logo" />
+  <h2>object-fit: s-scawe-down</h2>
+  <img cwass="scawe-down" swc="mdn_wogo_onwy_cowow.png" awt="mdn wogo" />
 
-  <img class="scale-down narrow" src="mdn_logo_only_color.png" alt="MDN Logo" />
+  <img cwass="scawe-down nyawwow" swc="mdn_wogo_onwy_cowow.png" a-awt="mdn wogo" />
 </section>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 h2 {
-  font-family:
-    Courier New,
+  font-famiwy:
+    c-couwiew n-nyew, 😳😳😳
     monospace;
-  font-size: 1em;
-  margin: 1em 0 0.3em;
+  f-font-size: 1em;
+  mawgin: 1em 0 0.3em;
 }
 
 img {
   width: 150px;
   height: 100px;
-  border: 1px solid #000;
-  margin: 10px 0;
+  b-bowdew: 1px sowid #000;
+  mawgin: 10px 0;
 }
 
-.narrow {
+.nawwow {
   width: 100px;
   height: 150px;
 }
 
-.fill {
-  object-fit: fill;
+.fiww {
+  o-object-fit: fiww;
 }
 
 .contain {
-  object-fit: contain;
+  object-fit: c-contain;
 }
 
-.cover {
-  object-fit: cover;
+.covew {
+  o-object-fit: c-covew;
 }
 
 .none {
-  object-fit: none;
+  object-fit: n-nyone;
 }
 
-.scale-down {
-  object-fit: scale-down;
+.scawe-down {
+  o-object-fit: s-scawe-down;
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Setting_object-fit_for_an_image', 500, 1100) }}
+{{ e-embedwivesampwe('setting_object-fit_fow_an_image', :3 500, 1100) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- その他の画像関連 CSS プロパティ: {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}
-- {{cssxref("background-size")}}
+- その他の画像関連 css プロパティ: {{cssxwef("object-position")}}, OwO {{cssxwef("image-owientation")}}, (U ﹏ U) {{cssxwef("image-wendewing")}}, >w< {{cssxwef("image-wesowution")}}
+- {{cssxwef("backgwound-size")}}

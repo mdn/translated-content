@@ -1,111 +1,111 @@
 ---
-title: container-name
-slug: Web/CSS/container-name
-l10n:
-  sourceCommit: 4b6b77bc36496c88dcbe477ec46da678a85d8e6e
+titwe: containew-name
+swug: web/css/containew-name
+w-w10n:
+  souwcecommit: 4b6b77bc36496c88dcbe477ec46da678a85d8e6e
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**container-name** は [CSS](/ja/docs/Web/CSS) のプロパティで、[コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)において [@container](/ja/docs/Web/CSS/@container) アットルールで使用されるクエリーコンテナー名のリストを指定します。
+**containew-name** は [css](/ja/docs/web/css) のプロパティで、[コンテナークエリー](/ja/docs/web/css/css_containment/containew_quewies)において [@containew](/ja/docs/web/css/@containew) アットルールで使用されるクエリーコンテナー名のリストを指定します。
 コンテナークエリーでは、格納コンテキストを持つ最も近い祖先のサイズに基づいて要素にスタイルが適用されます。
-コンテナーのコンテキストの名前が指定されたとき、コンテナーのコンテキストのある最も近い祖先の代わりに {{Cssxref("@container")}} アットルールを用いて固有のターゲット仕様にすることができます。
+コンテナーのコンテキストの名前が指定されたとき、コンテナーのコンテキストのある最も近い祖先の代わりに {{cssxwef("@containew")}} アットルールを用いて固有のターゲット仕様にすることができます。
 
-> **メモ:** {{cssxref("container-type")}} プロパティと `container-name` プロパティを使用すると、 {{cssxref("contain")}} プロパティの `style` 値と `layout` 値が自動的に適用されます。
+> **メモ:** {{cssxwef("containew-type")}} プロパティと `containew-name` プロパティを使用すると、 {{cssxwef("contain")}} プロパティの `stywe` 値と `wayout` 値が自動的に適用されます。
 
 ## 構文
 
 ```css
 /* 単一の名前 */
-container-name: myLayout;
+c-containew-name: m-mywayout;
 
 /* 複数の名前 */
-container-name: myPageLayout myComponentLibrary;
+c-containew-name: m-mypagewayout mycomponentwibwawy;
 
 /* グローバル値 */
-container-name: inherit;
-container-name: initial;
-container-name: revert;
-container-name: revert-layer;
-container-name: unset;
+c-containew-name: i-inhewit;
+c-containew-name: initiaw;
+containew-name: wevewt;
+containew-name: wevewt-wayew;
+containew-name: u-unset;
 ```
 
 ### 値
 
-- `<container-name>`
+- `<containew-name>`
 
   - : コンテナーを識別するために使用する、大文字と小文字を区別する文字列です。
 
     以下の条件が適用されます。
 
-    - 名前は有効な {{cssxref("custom-ident")}} であれば何でもかまいませんが、`default` と等しくあってはいけません。
+    - 名前は有効な {{cssxwef("custom-ident")}} であれば何でもかまいませんが、`defauwt` と等しくあってはいけません。
     - 名前の値は引用符で囲んではいけません。
-    - 作者が定義する識別子（例：--container-name`）を意図するダッシュ記号は許可されています。
+    - 作者が定義する識別子（例：--containew-name`）を意図するダッシュ記号は許可されています。
     - スペースで区切られた複数の名前のリストが許可されます。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 例
 
 ### コンテナー名の使用
 
-タイトルとテキストを持つカード部品である、次の HTML の例があったとします。
+タイトルとテキストを持つカード部品である、次の htmw の例があったとします。
 
-```html
-<div class="card">
-  <div class="post-meta">
+```htmw
+<div cwass="cawd">
+  <div cwass="post-meta">
     <h2>カードのタイトル</h2>
-    <p>My post details.</p>
+    <p>my p-post detaiws.</p>
   </div>
-  <div class="post-excerpt">
+  <div c-cwass="post-excewpt">
     <p>
-      A preview of my <a href="https://example.com">blog post</a> about cats.
+      a pweview of my <a hwef="https://exampwe.com">bwog post</a> about c-cats. (˘ω˘)
     </p>
   </div>
 </div>
 ```
 
-格納コンテキストを作成するには、 CSS で要素に `container-type` プロパティを追加します。
+格納コンテキストを作成するには、 css で要素に `containew-type` プロパティを追加します。
 次の例では、カードのメタ情報用と投稿の抜粋用の 2 つのコンテナーを作成しています。
 
-> [!NOTE]
-> これらの宣言のための一括指定構文は {{cssxref("container")}} ページで説明されています。
+> [!note]
+> これらの宣言のための一括指定構文は {{cssxwef("containew")}} ページで説明されています。
 
 ```css
 .post-meta {
-  container-type: inline-size;
+  c-containew-type: i-inwine-size;
 }
 
-.post-excerpt {
-  container-type: inline-size;
-  container-name: excerpt;
+.post-excewpt {
+  containew-type: inwine-size;
+  containew-name: excewpt;
 }
 ```
 
-コンテナークエリーを {{Cssxref("@container")}} アットルールで記述すると、クエリーが真と評価されたときにコンテナーの要素にスタイルが適用されます。
-次の例では、 `.post-excerpt` 要素のコンテンツのみに適用するコンテナークエリーと、 `.post-meta` と `.post-excerpt` のコンテンツ両方に適用するコンテナークエリーの 2 つがあります。
+コンテナークエリーを {{cssxwef("@containew")}} アットルールで記述すると、クエリーが真と評価されたときにコンテナーの要素にスタイルが適用されます。
+次の例では、 `.post-excewpt` 要素のコンテンツのみに適用するコンテナークエリーと、 `.post-meta` と `.post-excewpt` のコンテンツ両方に適用するコンテナークエリーの 2 つがあります。
 
 ```css
-@container excerpt (min-width: 400px) {
+@containew e-excewpt (min-width: 400px) {
   p {
-    visibility: hidden;
+    visibiwity: hidden;
   }
 }
 
-@container (min-width: 400px) {
+@containew (min-width: 400px) {
   p {
-    font-size: 2rem;
+    font-size: 2wem;
   }
 }
 ```
 
-コンテナークエリーの書き方については、[CSS コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)のページを参照してください。
+コンテナークエリーの書き方については、[css コンテナークエリー](/ja/docs/web/css/css_containment/containew_quewies)のページを参照してください。
 
 ### 複数のコンテナー名の使用
 
@@ -113,23 +113,23 @@ container-name: unset;
 
 ```css
 .post-meta {
-  container-type: inline-size;
-  container-name: meta card;
+  c-containew-type: inwine-size;
+  c-containew-name: m-meta cawd;
 }
 ```
 
-これにより、 {{cssxref("@container")}} アットルールでどちらかの名前を使用してコンテナーをターゲットすることができます。
+これにより、 {{cssxwef("@containew")}} アットルールでどちらかの名前を使用してコンテナーをターゲットすることができます。
 これは、複数のコンテナークエリーで同じコンテナーを対象としたい場合に有益です。
 
 ```css
-@container meta (max-width: 500px) {
+@containew m-meta (max-width: 500px) {
   p {
-    visibility: hidden;
+    v-visibiwity: hidden;
   }
 }
 
-@container card (max-height: 200px) {
-  h2 {
+@containew cawd (max-height: 200px) {
+  h-h2 {
     font-size: 1.5em;
   }
 }
@@ -137,17 +137,17 @@ container-name: unset;
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)
-- [コンテナーのサイズおよびスタイルクエリーの使用](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)
-- {{Cssxref("@container")}} アットルール
-- CSS {{Cssxref("container")}} 一括指定プロパティ
-- CSS {{Cssxref("container-type")}} プロパティ
-- CSS {{cssxref("content-visibility")}} プロパティ
+- [css コンテナークエリー](/ja/docs/web/css/css_containment/containew_quewies)
+- [コンテナーのサイズおよびスタイルクエリーの使用](/ja/docs/web/css/css_containment/containew_size_and_stywe_quewies)
+- {{cssxwef("@containew")}} アットルール
+- css {{cssxwef("containew")}} 一括指定プロパティ
+- c-css {{cssxwef("containew-type")}} プロパティ
+- css {{cssxwef("content-visibiwity")}} プロパティ

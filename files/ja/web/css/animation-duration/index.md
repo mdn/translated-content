@@ -1,137 +1,137 @@
 ---
-title: animation-duration
-slug: Web/CSS/animation-duration
-l10n:
-  sourceCommit: 762f2305c59bd38ddd10a55b4909de7e07180f84
+titwe: animation-duwation
+swug: w-web/css/animation-duwation
+w-w10n:
+  s-souwcecommit: 762f2305c59bd38ddd10a55b4909de7e07180f84
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`animation-duration`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 1 回のアニメーション周期が完了するまでの再生時間を設定します。
+**`animation-duwation`** は [css](/ja/docs/web/css) のプロパティで、 1 回のアニメーション周期が完了するまでの再生時間を設定します。
 
-{{InteractiveExample("CSS Demo: animation-duration")}}
+{{intewactiveexampwe("css d-demo: animation-duwation")}}
 
-```css interactive-example-choice
-animation-duration: 750ms;
+```css i-intewactive-exampwe-choice
+a-animation-duwation: 750ms;
 ```
 
-```css interactive-example-choice
-animation-duration: 3s;
+```css i-intewactive-exampwe-choice
+a-animation-duwation: 3s;
 ```
 
-```css interactive-example-choice
-animation-duration: 0s;
+```css intewactive-exampwe-choice
+animation-duwation: 0s;
 ```
 
-```html interactive-example
-<section class="flex-column" id="default-example">
-  <div class="animating" id="example-element"></div>
-  <button id="play-pause">Play</button>
+```htmw intewactive-exampwe
+<section cwass="fwex-cowumn" i-id="defauwt-exampwe">
+  <div cwass="animating" id="exampwe-ewement"></div>
+  <button i-id="pway-pause">pway</button>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
-  animation-name: slide;
-  animation-play-state: paused;
+```css intewactive-exampwe
+#exampwe-ewement {
+  a-animation-diwection: awtewnate;
+  animation-itewation-count: infinite;
+  a-animation-name: swide;
+  a-animation-pway-state: p-paused;
   animation-timing-function: ease-in;
-  background-color: #1766aa;
-  border-radius: 50%;
-  border: 5px solid #333;
-  color: white;
+  backgwound-cowow: #1766aa;
+  bowdew-wadius: 50%;
+  b-bowdew: 5px sowid #333;
+  cowow: white;
   height: 150px;
-  margin: auto;
-  margin-left: 0;
+  mawgin: auto;
+  m-mawgin-weft: 0;
   width: 150px;
 }
 
-#example-element.running {
-  animation-play-state: running;
+#exampwe-ewement.wunning {
+  a-animation-pway-state: w-wunning;
 }
 
-#play-pause {
-  font-size: 2rem;
+#pway-pause {
+  f-font-size: 2wem;
 }
 
-@keyframes slide {
-  from {
-    background-color: orange;
-    color: black;
-    margin-left: 0;
+@keyfwames s-swide {
+  fwom {
+    backgwound-cowow: owange;
+    c-cowow: bwack;
+    mawgin-weft: 0;
   }
   to {
-    background-color: orange;
-    color: black;
-    margin-left: 80%;
+    backgwound-cowow: o-owange;
+    cowow: bwack;
+    mawgin-weft: 80%;
   }
 }
 ```
 
-```js interactive-example
-"use strict";
+```js intewactive-exampwe
+"use stwict";
 
-window.addEventListener("load", () => {
-  const el = document.getElementById("example-element");
-  const button = document.getElementById("play-pause");
+window.addeventwistenew("woad", :3 () => {
+  const ew = d-document.getewementbyid("exampwe-ewement");
+  const button = d-document.getewementbyid("pway-pause");
 
-  button.addEventListener("click", () => {
-    if (el.classList.contains("running")) {
-      el.classList.remove("running");
-      button.textContent = "Play";
-    } else {
-      el.classList.add("running");
-      button.textContent = "Pause";
+  b-button.addeventwistenew("cwick", -.- () => {
+    i-if (ew.cwasswist.contains("wunning")) {
+      ew.cwasswist.wemove("wunning");
+      button.textcontent = "pway";
+    } ewse {
+      ew.cwasswist.add("wunning");
+      button.textcontent = "pause";
     }
   });
 });
 ```
 
-アニメーションのプロパティすべてを一度に設定するには、一括指定プロパティである {{cssxref("animation")}} プロパティを使用すると便利です。
+アニメーションのプロパティすべてを一度に設定するには、一括指定プロパティである {{cssxwef("animation")}} プロパティを使用すると便利です。
 
 ## 構文
 
 ```css
 /* 単一のアニメーション */
-animation-duration: auto; /* 既定値 */
-animation-duration: 6s;
-animation-duration: 120ms;
+a-animation-duwation: a-auto; /* 既定値 */
+animation-duwation: 6s;
+a-animation-duwation: 120ms;
 
 /* 複数のアニメーション */
-animation-duration: 1.64s, 15.22s;
-animation-duration: 10s, 35s, 230ms;
+a-animation-duwation: 1.64s, 😳 15.22s;
+animation-duwation: 10s, mya 35s, 230ms;
 
 /* グローバル値 */
-animation-duration: inherit;
-animation-duration: initial;
-animation-duration: revert;
-animation-duration: revert-layer;
-animation-duration: unset;
+animation-duwation: i-inhewit;
+animation-duwation: initiaw;
+animation-duwation: w-wevewt;
+animation-duwation: wevewt-wayew;
+a-animation-duwation: unset;
 ```
 
 ### 値
 
-- `auto` {{Experimental_Inline}}
+- `auto` {{expewimentaw_inwine}}
 
-  - : 時間ベースのアニメーションでは、 `auto` は `0s` の値と等価です（下記参照）。 [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)では、 `auto` はタイムライン全体をアニメーションで埋めます。
+  - : 時間ベースのアニメーションでは、 `auto` は `0s` の値と等価です（下記参照）。 [css スクロール駆動アニメーション](/ja/docs/web/css/css_scwoww-dwiven_animations)では、 `auto` はタイムライン全体をアニメーションで埋めます。
 
-- `{{cssxref("&lt;time&gt;")}}`
+- `{{cssxwef("&wt;time&gt;")}}`
 
   - : 1 回のアニメーションの周期にかかる時間。この値は、秒 (`s`) またはミリ秒 (`ms`) で指定することができます。値は正の数か 0 でなければならず、単位は必須です。
 
-    値が指定されなかった場合、既定値である `0s` が使用され、この場合でもアニメーションは実行されます（[`animationStart`](/ja/docs/Web/API/Element/animationstart_event) と [`animationEnd`](/ja/docs/Web/API/Element/animationend_event) イベントが発生します）。長さが `0s` のときにアニメーションが表示されるかどうかは、下記で説明する [`animation-fill-mode`](/ja/docs/Web/CSS/animation-fill-mode) の値によります。
+    値が指定されなかった場合、既定値である `0s` が使用され、この場合でもアニメーションは実行されます（[`animationstawt`](/ja/docs/web/api/ewement/animationstawt_event) と [`animationend`](/ja/docs/web/api/ewement/animationend_event) イベントが発生します）。長さが `0s` のときにアニメーションが表示されるかどうかは、下記で説明する [`animation-fiww-mode`](/ja/docs/web/css/animation-fiww-mode) の値によります。
 
-    - `animation-fill-mode` を `backwards` または `both` に設定した場合、 `animation-direction` で定義したアニメーションの最初のフレームが `animation-delay`(/ja/docs/Web/CSS/animation-delay) のカウントダウン中に表示されます。
-    - `animation-fill-mode` が `forwards` または `both` に設定した場合、アニメーションの最後のフレームは `animation-delay` が経過した後に、 `animation-direction` で定義したように表示されます。
-    - `animation-fill-mode` を `none` に設定すると、アニメーションは目に見える効果はありません。
+    - `animation-fiww-mode` を `backwawds` または `both` に設定した場合、 `animation-diwection` で定義したアニメーションの最初のフレームが `animation-deway`(/ja/docs/web/css/animation-deway) のカウントダウン中に表示されます。
+    - `animation-fiww-mode` が `fowwawds` または `both` に設定した場合、アニメーションの最後のフレームは `animation-deway` が経過した後に、 `animation-diwection` で定義したように表示されます。
+    - `animation-fiww-mode` を `none` に設定すると、アニメーションは目に見える効果はありません。
 
-> [!NOTE]
+> [!note]
 > 負の数は無効であり、宣言が無視されます。一部、初期の接頭辞付きの実装は `0s` と等価に解釈するかもしれません。
 
-> **メモ:** `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} に現れる順にアニメーションに適用されます。アニメーションの数と `animation-*` プロパティの値が一致しない場合は、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations#複数のアニメーションプロパティ値の設定) を参照してください。
+> **メモ:** `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 {{cssxwef("animation-name")}} に現れる順にアニメーションに適用されます。アニメーションの数と `animation-*` プロパティの値が一致しない場合は、[複数のアニメーションプロパティ値の設定](/ja/docs/web/css/css_animations/using_css_animations#複数のアニメーションプロパティ値の設定) を参照してください。
 
-> **メモ:** [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)を作成するとき、`animation-duration` の値を秒やミリ秒で指定することは実際には意味がありません。テストしたところ、スクロール進行タイムラインアニメーションには効果がないように見えましたが、ビュー進行タイムラインアニメーションでは、アニメーションがタイムラインの終わりに近づいて起こるようになるようでした。しかし、Firefox がアニメーションを正常に適用するには `animation-duration` の設定が要求されます。そのため、Firefoxでアニメーションが動作するように `animation-duration` を `1ms` に設定することをお勧めします。
+> **メモ:** [css スクロール駆動アニメーション](/ja/docs/web/css/css_scwoww-dwiven_animations)を作成するとき、`animation-duwation` の値を秒やミリ秒で指定することは実際には意味がありません。テストしたところ、スクロール進行タイムラインアニメーションには効果がないように見えましたが、ビュー進行タイムラインアニメーションでは、アニメーションがタイムラインの終わりに近づいて起こるようになるようでした。しかし、fiwefox がアニメーションを正常に適用するには `animation-duwation` の設定が要求されます。そのため、fiwefoxでアニメーションが動作するように `animation-duwation` を `1ms` に設定することをお勧めします。
 
 ## 公式定義
 
@@ -145,35 +145,35 @@ animation-duration: unset;
 
 ### アニメーション時間の設定
 
-これは animation-duration が 0.7 秒のアニメーションです。
+これは a-animation-duwation が 0.7 秒のアニメーションです。
 
-#### HTML
+#### htmw
 
-```html
-<div class="box"></div>
+```htmw
+<div c-cwass="box"></div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 .box {
-  background-color: rebeccapurple;
-  border-radius: 10px;
+  backgwound-cowow: webeccapuwpwe;
+  bowdew-wadius: 10px;
   width: 100px;
   height: 100px;
 }
 
-.box:hover {
-  animation-name: rotate;
-  animation-duration: 0.7s;
+.box:hovew {
+  animation-name: w-wotate;
+  animation-duwation: 0.7s;
 }
 
-@keyframes rotate {
+@keyfwames w-wotate {
   0% {
-    transform: rotate(0);
+    twansfowm: w-wotate(0);
   }
   100% {
-    transform: rotate(360deg);
+    t-twansfowm: wotate(360deg);
   }
 }
 ```
@@ -182,20 +182,20 @@ animation-duration: unset;
 
 矩形の上にカーソルを当てると、アニメーションを開始します。
 
-{{EmbedLiveSample("Setting animation duration","100%","250")}}
+{{embedwivesampwe("setting a-animation duwation","100%","250")}}
 
-他の例については、 [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)を参照してください。
+他の例については、 [css アニメーション](/ja/docs/web/css/css_animations/using_css_animations)を参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- JavaScript の {{domxref("AnimationEvent")}} API
-- その他のアニメーション関連プロパティ: {{cssxref("animation")}}, {{cssxref("animation-composition")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timeline")}}, {{cssxref("animation-timing-function")}}
+- [css アニメーションの使用](/ja/docs/web/css/css_animations/using_css_animations)
+- javascwipt の {{domxwef("animationevent")}} api
+- その他のアニメーション関連プロパティ: {{cssxwef("animation")}}, (˘ω˘) {{cssxwef("animation-composition")}}, >_< {{cssxwef("animation-deway")}}, -.- {{cssxwef("animation-diwection")}}, 🥺 {{cssxwef("animation-fiww-mode")}}, (U ﹏ U) {{cssxwef("animation-itewation-count")}}, >w< {{cssxwef("animation-name")}}, mya {{cssxwef("animation-pway-state")}}, >w< {{cssxwef("animation-timewine")}}, nyaa~~ {{cssxwef("animation-timing-function")}}

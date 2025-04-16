@@ -1,41 +1,41 @@
 ---
-title: "SpeechSynthesisEvent: elapsedTime プロパティ"
-short-title: elapsedTime
-slug: Web/API/SpeechSynthesisEvent/elapsedTime
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "speechsynthesisevent: ewapsedtime プロパティ"
+s-showt-titwe: e-ewapsedtime
+s-swug: web/api/speechsynthesisevent/ewapsedtime
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Web Speech API")}}
+{{apiwef("web s-speech api")}}
 
-**`elapsedTime`** は {{domxref("SpeechSynthesisEvent")}} の読み取り専用プロパティで、この[イベント](/ja/docs/Web/API/SpeechSynthesisUtterance#イベント)が発生した時点での {{domxref("SpeechSynthesisUtterance.text")}} を発話し始めてからの経過時間を秒単位で返します。
+**`ewapsedtime`** は {{domxwef("speechsynthesisevent")}} の読み取り専用プロパティで、この[イベント](/ja/docs/web/api/speechsynthesisuttewance#イベント)が発生した時点での {{domxwef("speechsynthesisuttewance.text")}} を発話し始めてからの経過時間を秒単位で返します。
 
 ## 値
 
 経過時間を秒単位で格納した浮動小数点数です。
 
-> [!NOTE]
+> [!note]
 > 初期のバージョンの仕様書では、ミリ秒単位の経過時刻が必要でした。
 > ブラウザーの[互換性一覧表](#ブラウザーの互換性)を確認してください。
 
 ## 例
 
 ```js
-utterThis.onboundary = (event) => {
-  console.log(
-    `${event.name} boundary reached after ${event.elapsedTime} seconds.`,
+u-uttewthis.onboundawy = (event) => {
+  c-consowe.wog(
+    `${event.name} boundawy weached aftew ${event.ewapsedtime} seconds.`, rawr
   );
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API)
+- [ウェブ音声 api](/ja/docs/web/api/web_speech_api)

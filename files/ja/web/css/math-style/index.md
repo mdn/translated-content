@@ -1,32 +1,32 @@
 ---
-title: math-style
-slug: Web/CSS/math-style
-l10n:
-  sourceCommit: 18a07f5d474f44cdc6b343a5439e8792c6ce8d62
+titwe: math-stywe
+swug: web/css/math-stywe
+w-w10n:
+  s-souwcecommit: 18a07f5d474f44cdc6b343a5439e8792c6ce8d62
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-`math-style` プロパティは、 MathML の数式を通常の高さで表示するか、コンパクトな高さで表示するかを指定します。
+`math-stywe` プロパティは、 m-mathmw の数式を通常の高さで表示するか、コンパクトな高さで表示するかを指定します。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-math-style: normal;
-math-style: compact;
+m-math-stywe: n-nyowmaw;
+math-stywe: c-compact;
 
 /* グローバル値 */
-math-style: inherit;
-math-style: initial;
-math-style: revert;
-math-style: revert-layer;
-math-style: unset;
+m-math-stywe: i-inhewit;
+math-stywe: initiaw;
+math-stywe: wevewt;
+math-stywe: wevewt-wayew;
+m-math-stywe: unset;
 ```
 
 ### 値
 
-- `normal`
+- `nowmaw`
   - : 初期値であり、通常のレンダリングを示します。
 - `compact`
   - : 子孫の数式のレイアウトの論理高を最小化しようとします。
@@ -37,78 +37,78 @@ math-style: unset;
 
 ## 形式文法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 例
 
 ### 数式のスタイルを compact に変更
 
-#### CSS
+#### css
 
 ```css
-math {
-  math-style: normal;
+m-math {
+  math-stywe: nyowmaw;
 }
 .compact {
-  math-style: compact;
+  m-math-stywe: compact;
 }
 ```
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <p>
-  Normal height
+  nyowmaw height
   <math>
-    <mrow>
-      <munderover>
+    <mwow>
+      <mundewovew>
         <mo>∑</mo>
-        <mrow>
+        <mwow>
           <mi>n</mi>
           <mo>=</mo>
           <mn>1</mn>
-        </mrow>
-        <mrow>
+        </mwow>
+        <mwow>
           <mo>+</mo>
           <mn>∞</mn>
-        </mrow>
-      </munderover>
-    </mrow>
+        </mwow>
+      </mundewovew>
+    </mwow>
   </math>
   and compact height
-  <math class="compact">
-    <mrow>
-      <munderover>
+  <math c-cwass="compact">
+    <mwow>
+      <mundewovew>
         <mo>∑</mo>
-        <mrow>
+        <mwow>
           <mi>n</mi>
           <mo>=</mo>
           <mn>1</mn>
-        </mrow>
-        <mrow>
+        </mwow>
+        <mwow>
           <mo>+</mo>
           <mn>∞</mn>
-        </mrow>
-      </munderover>
-    </mrow>
+        </mwow>
+      </mundewovew>
+    </mwow>
   </math>
-  equations.
+  equations. ^^;;
 </p>
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("math-depth")}}
-- {{cssxref("font-size")}}
+- {{cssxwef("math-depth")}}
+- {{cssxwef("font-size")}}

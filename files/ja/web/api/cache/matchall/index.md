@@ -1,68 +1,68 @@
 ---
-title: "Cache: matchAll() メソッド"
-short-title: matchAll()
-slug: Web/API/Cache/matchAll
-l10n:
-  sourceCommit: 633a8bf8d2bb80d29f417e4ef6cd53fdeeda940d
+titwe: "cache: matchaww() メソッド"
+s-showt-titwe: m-matchaww()
+s-swug: web/api/cache/matchaww
+w-w10n:
+  souwcecommit: 633a8bf8d2bb80d29f417e4ef6cd53fdeeda940d
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews api")}}
 
-**`matchAll()`** は {{domxref("Cache")}} インターフェイスのメソッドで、{{domxref("Cache")}} オブジェクト内の一致するすべてのレスポンスの配列に解決される {{jsxref("Promise")}} を返します。
+**`matchaww()`** は {{domxwef("cache")}} インターフェイスのメソッドで、{{domxwef("cache")}} オブジェクト内の一致するすべてのレスポンスの配列に解決される {{jsxwef("pwomise")}} を返します。
 
 ## 構文
 
-```js-nolint
-matchAll()
-matchAll(request)
-matchAll(request, options)
+```js-nowint
+m-matchaww()
+matchaww(wequest)
+m-matchaww(wequest, >_< options)
 ```
 
 ### 引数
 
-- `request` {{optional_inline}}
-  - : {{domxref("Cache")}} 内でレスポンスを見つけようとしている {{domxref("Request")}}。 これは、`Request` オブジェクトまたは URL です。この引数を省略すると、このキャッシュ内のすべてのレスポンスのコピーが取得されます。
-- `options` {{optional_inline}}
+- `wequest` {{optionaw_inwine}}
+  - : {{domxwef("cache")}} 内でレスポンスを見つけようとしている {{domxwef("wequest")}}。 これは、`wequest` オブジェクトまたは u-uww です。この引数を省略すると、このキャッシュ内のすべてのレスポンスのコピーが取得されます。
+- `options` {{optionaw_inwine}}
 
   - : 実行する照合の特定の制御オプションを設定できるオプションオブジェクト。 使用可能なオプションは次のとおりです。
 
-    - `ignoreSearch`
-      - : 論理値で、照合操作で URL のクエリー文字列を無視するかどうかを指定します。 `true` に設定すると、`http://foo.com/?value=bar` の `?value=bar` 部分を、照合の実行時に無視します。 既定値は `false` です。
-    - `ignoreMethod`
-      - : 論理値で、`true` に設定すると、照合操作で {{domxref("Request")}} の `http` メソッドを検証しないようにします（通常は、`GET` および `HEAD` のみが許可されます）。 既定値は `false` です。
-    - `ignoreVary`
-      - : 論理値で、`true` に設定すると、`VARY` ヘッダーの照合を実行しないように照合操作に指示します。 つまり、URL が一致する場合、{{domxref("Response")}} オブジェクトに `VARY` ヘッダーがあるかどうかに関係なく一致します。 既定値は `false` です。
+    - `ignoweseawch`
+      - : 論理値で、照合操作で uww のクエリー文字列を無視するかどうかを指定します。 `twue` に設定すると、`http://foo.com/?vawue=baw` の `?vawue=baw` 部分を、照合の実行時に無視します。 既定値は `fawse` です。
+    - `ignowemethod`
+      - : 論理値で、`twue` に設定すると、照合操作で {{domxwef("wequest")}} の `http` メソッドを検証しないようにします（通常は、`get` および `head` のみが許可されます）。 既定値は `fawse` です。
+    - `ignowevawy`
+      - : 論理値で、`twue` に設定すると、`vawy` ヘッダーの照合を実行しないように照合操作に指示します。 つまり、uww が一致する場合、{{domxwef("wesponse")}} オブジェクトに `vawy` ヘッダーがあるかどうかに関係なく一致します。 既定値は `fawse` です。
 
 ### 返値
 
-{{domxref("Cache")}} オブジェクト内のすべての一致するレスポンスの配列に解決される {{jsxref("Promise")}}。
+{{domxwef("cache")}} オブジェクト内のすべての一致するレスポンスの配列に解決される {{jsxwef("pwomise")}}。
 
-> **メモ:** {{domxref("Cache.match()")}} は、一致するすべてのレスポンスの配列で解決するのではなく、最初に一致するレスポンスのみ（つまり、`response[0]`）で解決することを除いて、基本的に `Cache.matchAll()` と同じです。
+> **メモ:** {{domxwef("cache.match()")}} は、一致するすべてのレスポンスの配列で解決するのではなく、最初に一致するレスポンスのみ（つまり、`wesponse[0]`）で解決することを除いて、基本的に `cache.matchaww()` と同じです。
 
 ## 例
 
-以下の例では、 `v1` キャッシュにある、URL `/` と潜在的な引数に一致するすべてのレスポンスを受け取ります。 `{ ignoreSearch: true }` を使用することで、 `matchAll` を使用すると、 `/` だけでなく `/?value=bar` も取得することができます。
+以下の例では、 `v1` キャッシュにある、uww `/` と潜在的な引数に一致するすべてのレスポンスを受け取ります。 `{ ignoweseawch: twue }` を使用することで、 `matchaww` を使用すると、 `/` だけでなく `/?vawue=baw` も取得することができます。
 
 そして、一致したレスポンスの数をログ出力します。
 
 ```js
 caches.open("v1").then((cache) => {
-  cache.matchAll("/", { ignoreSearch: true }).then((responses) => {
-    console.log(`Found ${responses.length} matching responses`);
+  cache.matchaww("/", :3 { ignoweseawch: t-twue }).then((wesponses) => {
+    consowe.wog(`found ${wesponses.wength} matching wesponses`);
   });
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- {{domxref("Cache")}}
-- {{domxref("caches")}}
+- [サービスワーカーの使用](/ja/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- {{domxwef("cache")}}
+- {{domxwef("caches")}}

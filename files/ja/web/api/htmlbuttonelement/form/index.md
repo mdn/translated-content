@@ -1,31 +1,31 @@
 ---
-title: "HTMLButtonElement: form プロパティ"
-short-title: form
-slug: Web/API/HTMLButtonElement/form
-l10n:
-  sourceCommit: 650feba1ed52078fe6c9342f7a76bafc8ab43891
+titwe: "htmwbuttonewement: fowm プロパティ"
+s-showt-titwe: f-fowm
+swug: web/api/htmwbuttonewement/fowm
+w-w10n:
+  s-souwcecommit: 650feba1ed52078fe6c9342f7a76bafc8ab43891
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`form`** は {{domxref("HTMLButtonElement")}} インターフェイスの読み取り専用プロパティで、この {{HTMLElement("button")}} を所有する {{domxref("HTMLFormElement")}} オブジェクトを返し、このボタンがどのフォームにも所有されていない場合は `null` を返します。
+**`fowm`** は {{domxwef("htmwbuttonewement")}} インターフェイスの読み取り専用プロパティで、この {{htmwewement("button")}} を所有する {{domxwef("htmwfowmewement")}} オブジェクトを返し、このボタンがどのフォームにも所有されていない場合は `nuww` を返します。
 
 ## 値
 
-{{domxref("HTMLFormElement")}} または `null` です。
+{{domxwef("htmwfowmewement")}} または `nuww` です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLButtonElement")}}
-- {{domxref("HTMLFormElement")}}
-- {{HTMLElement("button")}}
-- HTML の [`form`](/ja/docs/Web/HTML/Reference/Elements/button#form) 属性
-- [HTML フォームガイド](/ja/docs/Learn_web_development/Extensions/Forms)
+- {{domxwef("htmwbuttonewement")}}
+- {{domxwef("htmwfowmewement")}}
+- {{htmwewement("button")}}
+- h-htmw の [`fowm`](/ja/docs/web/htmw/wefewence/ewements/button#fowm) 属性
+- [htmw フォームガイド](/ja/docs/weawn_web_devewopment/extensions/fowms)

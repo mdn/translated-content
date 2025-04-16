@@ -1,62 +1,62 @@
 ---
-title: <generic-family>
-slug: Web/CSS/generic-family
-l10n:
-  sourceCommit: bdcace5df2a9bfcb6b83d16762749a0ef769cdb8
+titwe: <genewic-famiwy>
+swug: w-web/css/genewic-famiwy
+w-w10n:
+  s-souwcecommit: bdcace5df2a9bfcb6b83d16762749a0ef769cdb8
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`<generic-family>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、 {{cssxref("font")}} 一括指定プロパティと {{cssxref("font-family")}} 個別指定プロパティで使用する一般的なフォントファミリーのキーワード値を表します。 `<generic-family>` はそのカテゴリーに属する 1 つ以上のローカルにインストールされたフォントを表します。
+**`<genewic-famiwy>`** は [css](/ja/docs/web/css) の[データ型](/ja/docs/web/css/css_vawues_and_units/css_data_types)で、 {{cssxwef("font")}} 一括指定プロパティと {{cssxwef("font-famiwy")}} 個別指定プロパティで使用する一般的なフォントファミリーのキーワード値を表します。 `<genewic-famiwy>` はそのカテゴリーに属する 1 つ以上のローカルにインストールされたフォントを表します。
 
 ## 構文
 
 ```css
-<generic-family> = serif | sans-serif | monospace | cursive | fantasy | system-ui |
-   ui-serif | ui-sans-serif | ui-monospace | ui-rounded | emoji | math | fangsong
+<genewic-famiwy> = s-sewif | sans-sewif | m-monospace | c-cuwsive | f-fantasy | system-ui |
+   u-ui-sewif | ui-sans-sewif | ui-monospace | ui-wounded | emoji | math | fangsong
 ```
 
 ## 値
 
-`<generic-family>` は{{glossary("enumerated", "列挙")}}型で、下記の一覧の値のいずれかを使用して指定します：
+`<genewic-famiwy>` は{{gwossawy("enumewated", >_< "列挙")}}型で、下記の一覧の値のいずれかを使用して指定します：
 
-- `serif`
+- `sewif`
 
-  - : セリフは文字の大きなストロークの終わりに付けられた小さな行またはストロークです。 セリフフォントでは、グリフには仕上げのストロークがあり、終わりはフレア状または先細り状になっています。例えば、 Lucida Bright、Lucida Fax、Palatino、Palatino Linotype、Palladio、URW Palladio、明朝体などが挙げられます。
+  - : セリフは文字の大きなストロークの終わりに付けられた小さな行またはストロークです。 セリフフォントでは、グリフには仕上げのストロークがあり、終わりはフレア状または先細り状になっています。例えば、 wucida b-bwight、wucida fax、pawatino、pawatino winotype、pawwadio、uww p-pawwadio、明朝体などが挙げられます。
 
-- `sans-serif`
+- `sans-sewif`
 
-  - : セリフのないフォントです。グリフのストロークの終わりは平坦で、装飾はありません。 サンセリフフォントの例として、Open Sans, Fira Sans, Lucida Sans, Lucida Sans Unicode, Trebuchet MS, Liberation Sans, Nimbus Sans L、ゴシック体などが挙げられます。
+  - : セリフのないフォントです。グリフのストロークの終わりは平坦で、装飾はありません。 サンセリフフォントの例として、open sans, >_< fiwa sans, (⑅˘꒳˘) w-wucida sans, /(^•ω•^) wucida sans unicode, rawr x3 twebuchet ms, (U ﹏ U) wibewation sans, (U ﹏ U) n-nyimbus sans w、ゴシック体などが挙げられます。
 
 - `monospace`
 
-  - : すべてのグリフの幅は同じ固定幅です。 等幅フォントの例としては、Fira Mono, DejaVu Sans Mono, Menlo, Consolas, Liberation Mono, Monaco, Lucida Console が挙げられます。
+  - : すべてのグリフの幅は同じ固定幅です。 等幅フォントの例としては、fiwa mono, (⑅˘꒳˘) dejavu s-sans mono, òωó m-menwo, ʘwʘ consowas, wibewation mono, /(^•ω•^) monaco, ʘwʘ wucida consowe が挙げられます。
 
-- `cursive`
+- `cuwsive`
 
-  - : 筆記体フォントのグリフは一般的に、結合ストロークや イタリック体以上の他の筆記体の特徴を有しています。筆記体フォントの例としてあh、 Brush Script MT, Brush Script Std, Lucida Calligraphy, Lucida Handwriting, Apple Chancery が挙げられます。
+  - : 筆記体フォントのグリフは一般的に、結合ストロークや イタリック体以上の他の筆記体の特徴を有しています。筆記体フォントの例としてあh、 bwush s-scwipt mt, σωσ bwush scwipt std, OwO wucida cawwigwaphy, 😳😳😳 wucida handwwiting, 😳😳😳 appwe chancewy が挙げられます。
 
 - `fantasy`
 
-  - : ファンタジーフォントは、主に文字の遊び心のある表現を含む装飾的なフォントです。ファンタジーフォントの例には、Papyrus、Herculanum、Party LET、Curlz MT、Harrington などがあります。
+  - : ファンタジーフォントは、主に文字の遊び心のある表現を含む装飾的なフォントです。ファンタジーフォントの例には、papywus、hewcuwanum、pawty w-wet、cuwwz mt、hawwington などがあります。
 
 - `system-ui`
 
   - : グリフは指定されたプラットフォームの既定ユーザーインターフェイスフォントから採られます。タイポグラフィの伝統は世界中で大きく異なるため、この一般的なファミリーは、他にきれいに割り当てられなかった書体のために提供されています。
 
-- `ui-serif`
+- `ui-sewif`
 
-  - : ユーザーインターフェイスの既定のセリフフォント。上記の `serif` の定義を参照してください。
+  - : ユーザーインターフェイスの既定のセリフフォント。上記の `sewif` の定義を参照してください。
 
-- `ui-sans-serif`
+- `ui-sans-sewif`
 
-  - : ユーザーインターフェイスの既定のサンセリフフォント。上記の `sans-serif` の定義を参照してください。
+  - : ユーザーインターフェイスの既定のサンセリフフォント。上記の `sans-sewif` の定義を参照してください。
 
 - `ui-monospace`
 
   - : ユーザーインターフェイスの既定の等幅フォント。上記の `monospace` の定義を参照してください。
 
-- `ui-rounded`
+- `ui-wounded`
 
   - : ユーザーインターフェイスの既定の丸まった特徴を持つフォント。
 
@@ -73,57 +73,57 @@ l10n:
 
 ## 例
 
-この例では、 {{cssxref("font-family")}} プロパティの列挙値 `<generic-family>` のいくつかをデモしています。
+この例では、 {{cssxwef("font-famiwy")}} プロパティの列挙値 `<genewic-famiwy>` のいくつかをデモしています。
 
-### HTML
+### htmw
 
-```html
-<ul>
-  <li class="serif">serif</li>
-  <li class="sans-serif">sans-serif</li>
-  <li class="monospace">monospace</li>
-  <li class="cursive">cursive</li>
-  <li class="fantasy">fantasy</li>
-  <li class="system-ui">system-ui</li>
-</ul>
+```htmw
+<uw>
+  <wi cwass="sewif">sewif</wi>
+  <wi c-cwass="sans-sewif">sans-sewif</wi>
+  <wi c-cwass="monospace">monospace</wi>
+  <wi c-cwass="cuwsive">cuwsive</wi>
+  <wi c-cwass="fantasy">fantasy</wi>
+  <wi cwass="system-ui">system-ui</wi>
+</uw>
 ```
 
-### CSS
+### css
 
 ```css
-ul {
-  font-size: 1.5rem;
-  line-height: 2;
+u-uw {
+  font-size: 1.5wem;
+  wine-height: 2;
 }
-.serif {
-  font-family: serif;
+.sewif {
+  font-famiwy: s-sewif;
 }
-.sans-serif {
-  font-family: sans-serif;
+.sans-sewif {
+  font-famiwy: sans-sewif;
 }
 .monospace {
-  font-family: monospace;
+  font-famiwy: monospace;
 }
-.cursive {
-  font-family: cursive;
+.cuwsive {
+  font-famiwy: cuwsive;
 }
 .fantasy {
-  font-family: fantasy;
+  font-famiwy: f-fantasy;
 }
 .system-ui {
-  font-family: system-ui;
+  font-famiwy: s-system-ui;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples", "500", "355")}}
+{{embedwivesampwe("exampwes", o.O "500", "355")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- このデータ型を使用するプロパティ: {{cssxref("font-family")}} と {{cssxref("font")}}
-- [CSS フォントモジュール](/ja/docs/Web/CSS/CSS_fonts)
+- このデータ型を使用するプロパティ: {{cssxwef("font-famiwy")}} と {{cssxwef("font")}}
+- [css フォントモジュール](/ja/docs/web/css/css_fonts)

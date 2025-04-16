@@ -1,14 +1,14 @@
 ---
-title: "PushManager: supportedContentEncodings 静的プロパティ"
-short-title: supportedContentEncodings
-slug: Web/API/PushManager/supportedContentEncodings_static
-l10n:
-  sourceCommit: 3a91caa0ebbc5131ed75afe0e5168cd5bffc0976
+titwe: "pushmanagew: suppowtedcontentencodings 静的プロパティ"
+s-showt-titwe: s-suppowtedcontentencodings
+s-swug: web/api/pushmanagew/suppowtedcontentencodings_static
+w-w10n:
+  s-souwcecommit: 3a91caa0ebbc5131ed75afe0e5168cd5bffc0976
 ---
 
-{{APIRef("Push API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{apiwef("push a-api")}}{{secuwecontext_headew}}{{avaiwabweinwowkews}}
 
-**`supportedContentEncodings`** は {{domxref("PushManager")}} インターフェイスの静的な読み取り専用プロパティで、プッシュメッセージのペイロードを暗号化するために使用できる、対応しているコンテンツコードの配列を返します。
+**`suppowtedcontentencodings`** は {{domxwef("pushmanagew")}} インターフェイスの静的な読み取り専用プロパティで、プッシュメッセージのペイロードを暗号化するために使用できる、対応しているコンテンツコードの配列を返します。
 
 ## 値
 
@@ -16,8 +16,8 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,50 +1,50 @@
 ---
-title: border-left-width
-slug: Web/CSS/border-left-width
-l10n:
-  sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
+titwe: bowdew-weft-width
+swug: w-web/css/bowdew-weft-width
+w-w10n:
+  s-souwcecommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`border-left-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の左側の境界の幅を設定します。
+**`bowdew-weft-width`** は [css](/ja/docs/web/css) のプロパティで、要素の左側の境界の幅を設定します。
 
-{{InteractiveExample("CSS Demo: border-left-width")}}
+{{intewactiveexampwe("css d-demo: bowdew-weft-width")}}
 
-```css interactive-example-choice
-border-left-width: thick;
+```css i-intewactive-exampwe-choice
+b-bowdew-weft-width: t-thick;
 ```
 
-```css interactive-example-choice
-border-left-width: 2em;
+```css i-intewactive-exampwe-choice
+bowdew-weft-width: 2em;
 ```
 
-```css interactive-example-choice
-border-left-width: 4px;
+```css intewactive-exampwe-choice
+bowdew-weft-width: 4px;
 ```
 
-```css interactive-example-choice
-border-left-width: 2ex;
+```css intewactive-exampwe-choice
+b-bowdew-weft-width: 2ex;
 ```
 
-```css interactive-example-choice
-border-left-width: 0;
+```css intewactive-exampwe-choice
+bowdew-weft-width: 0;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    this is a-a box with a bowdew awound it. (⑅˘꒳˘)
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: palegreen;
-  color: #000;
-  border: 0 solid crimson;
-  padding: 0.75em;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound-cowow: pawegween;
+  cowow: #000;
+  bowdew: 0 sowid cwimson;
+  p-padding: 0.75em;
   width: 80%;
   height: 100px;
 }
@@ -54,39 +54,39 @@ border-left-width: 0;
 
 ```css
 /* キーワード値 */
-border-left-width: thin;
-border-left-width: medium;
-border-left-width: thick;
+bowdew-weft-width: thin;
+bowdew-weft-width: m-medium;
+bowdew-weft-width: thick;
 
-/* <length> 値 */
-border-left-width: 10em;
-border-left-width: 3vmax;
-border-left-width: 6px;
+/* <wength> 値 */
+b-bowdew-weft-width: 10em;
+b-bowdew-weft-width: 3vmax;
+b-bowdew-weft-width: 6px;
 
 /* グローバル値 */
-border-left-width: inherit;
-border-left-width: initial;
-border-left-width: revert;
-border-left-width: revert-layer;
-border-left-width: unset;
+b-bowdew-weft-width: inhewit;
+bowdew-weft-width: initiaw;
+b-bowdew-weft-width: wevewt;
+bowdew-weft-width: wevewt-wayew;
+b-bowdew-weft-width: unset;
 ```
 
 ### 値
 
-- `<line-width>`
+- `<wine-width>`
 
-  - : 境界の幅を、明示的な非負の {{cssxref("&lt;length&gt;")}} またはキーワードで定義します。キーワードの場合、以下の値のいずれかでなければなりません。
+  - : 境界の幅を、明示的な非負の {{cssxwef("&wt;wength&gt;")}} またはキーワードで定義します。キーワードの場合、以下の値のいずれかでなければなりません。
 
     - `thin`
     - `medium`
     - `thick`
 
-> [!NOTE]
+> [!note]
 > 仕様書ではそれぞれのキーワードで示される正確な太さを定義していないため、いずれかを使用した場合の詳細な結果は、実装に依存します。とは言っても、常に `thin ≤ medium ≤ thick` というパターンに従い、値は同じ文書の中では一貫しています。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -96,42 +96,42 @@ border-left-width: unset;
 
 ### 境界線の太さの比較
 
-#### HTML
+#### htmw
 
-```html live-sample___comparing_border_widths
-<div>Element 1</div>
-<div>Element 2</div>
+```htmw wive-sampwe___compawing_bowdew_widths
+<div>ewement 1</div>
+<div>ewement 2</div>
 ```
 
-#### CSS
+#### css
 
-```css live-sample___comparing_border_widths
+```css w-wive-sampwe___compawing_bowdew_widths
 div {
-  border: 1px solid red;
-  margin: 1em 0;
+  b-bowdew: 1px sowid w-wed;
+  mawgin: 1em 0;
 }
 
-div:nth-child(1) {
-  border-left-width: thick;
+d-div:nth-chiwd(1) {
+  bowdew-weft-width: thick;
 }
-div:nth-child(2) {
-  border-left-width: 2em;
+div:nth-chiwd(2) {
+  bowdew-weft-width: 2em;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Comparing_border_widths', '100%')}}
+{{embedwivesampwe('compawing_bowdew_widths', '100%')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 境界の太さに関する他の CSS プロパティ: {{Cssxref("border-top-width")}}, {{Cssxref("border-right-width")}}, {{Cssxref("border-bottom-width")}}, {{Cssxref("border-width")}}
-- 左の境界に関する他の CSS プロパティ: {{Cssxref("border")}}, {{Cssxref("border-left")}}, {{Cssxref("border-left-style")}}, {{Cssxref("border-left-color")}}
+- 境界の太さに関する他の c-css プロパティ: {{cssxwef("bowdew-top-width")}}, òωó {{cssxwef("bowdew-wight-width")}}, ʘwʘ {{cssxwef("bowdew-bottom-width")}}, /(^•ω•^) {{cssxwef("bowdew-width")}}
+- 左の境界に関する他の c-css プロパティ: {{cssxwef("bowdew")}}, ʘwʘ {{cssxwef("bowdew-weft")}}, σωσ {{cssxwef("bowdew-weft-stywe")}}, OwO {{cssxwef("bowdew-weft-cowow")}}

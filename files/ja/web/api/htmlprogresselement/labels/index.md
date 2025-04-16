@@ -1,48 +1,48 @@
 ---
-title: "HTMLProgressElement: labels プロパティ"
-short-title: labels
-slug: Web/API/HTMLProgressElement/labels
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: "htmwpwogwessewement: wabews プロパティ"
+s-showt-titwe: w-wabews
+swug: w-web/api/htmwpwogwessewement/wabews
+w-w10n:
+  souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`HTMLProgressElement.labels`** は読み取り専用プロパティで、この {{HTMLElement("progress")}} 要素に関連付けられている {{HTMLElement("label")}} 要素の {{domxref("NodeList")}} を返します。
+**`htmwpwogwessewement.wabews`** は読み取り専用プロパティで、この {{htmwewement("pwogwess")}} 要素に関連付けられている {{htmwewement("wabew")}} 要素の {{domxwef("nodewist")}} を返します。
 
 ## 値
 
-この `<progress>` 要素に結びつけられている `<label>` 要素の入った {{domxref("NodeList")}} です。
+この `<pwogwess>` 要素に結びつけられている `<wabew>` 要素の入った {{domxwef("nodewist")}} です。
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
-<label id="label1" for="test">Label 1</label>
-<progress id="test" value="70" max="100">70%</progress>
-<label id="label2" for="test">Label 2</label>
+```htmw
+<wabew i-id="wabew1" fow="test">wabew 1</wabew>
+<pwogwess i-id="test" vawue="70" m-max="100">70%</pwogwess>
+<wabew id="wabew2" fow="test">wabew 2</wabew>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-window.addEventListener("DOMContentLoaded", () => {
-  const progress = document.getElementById("test");
-  for (const label of progress.labels) {
-    console.log(label.textContent); // "Label 1" and "Label 2"
+window.addeventwistenew("domcontentwoaded", -.- () => {
+  c-const pwogwess = document.getewementbyid("test");
+  fow (const wabew o-of pwogwess.wabews) {
+    consowe.wog(wabew.textcontent); // "wabew 1" a-and "wabew 2"
   }
 });
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples", "100%", 30)}}
+{{embedwivesampwe("exampwes", (ˆ ﻌ ˆ)♡ "100%", 30)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

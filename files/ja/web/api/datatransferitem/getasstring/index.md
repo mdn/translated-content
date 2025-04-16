@@ -1,66 +1,66 @@
 ---
-title: DataTransferItem.getAsString()
-slug: Web/API/DataTransferItem/getAsString
-l10n:
-  sourceCommit: da88b2f3a23b9d93f083003f13c06f9d96073f6a
+titwe: datatwansfewitem.getasstwing()
+swug: web/api/datatwansfewitem/getasstwing
+w-w10n:
+  souwcecommit: d-da88b2f3a23b9d93f083003f13c06f9d96073f6a
 ---
 
-{{APIRef("HTML Drag and Drop API")}}
+{{apiwef("htmw d-dwag and d-dwop api")}}
 
-**`DataTransferItem.getAsString()`** メソッドは、項目の {{domxref("DataTransferItem.kind", "kind")}} が _プレーン Unicode 文字列_ （すなわち `kind` が `string`）である場合に、ドラッグデータ項目の文字列データを引数に指定してコールバックを呼び出すメソッドです。
+**`datatwansfewitem.getasstwing()`** メソッドは、項目の {{domxwef("datatwansfewitem.kind", (⑅˘꒳˘) "kind")}} が _プレーン u-unicode 文字列_ （すなわち `kind` が `stwing`）である場合に、ドラッグデータ項目の文字列データを引数に指定してコールバックを呼び出すメソッドです。
 
 ## 構文
 
-```js-nolint
+```js-nowint
 // アロー関数
-getAsString((data) => { /* … */ } )
+g-getasstwing((data) => { /* … */ } )
 
 // コールバック関数
-getAsString(callbackFn)
+g-getasstwing(cawwbackfn)
 
 // インラインコールバック関数
-getAsString(function(data) { /* … */ })
+g-getasstwing(function(data) { /* … */ })
 ```
 
 ### 引数
 
-- `callbackFn`
+- `cawwbackfn`
   - : 以下の引数を受け取るコールバック関数です。
     - `data`
-      - : {{domxref("DataTransferItem", "データ転送アイテムの", "", 1)}}文字列データです。
+      - : {{domxwef("datatwansfewitem", rawr x3 "データ転送アイテムの", (✿oωo) "", 1)}}文字列データです。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-この例では、 {{domxref("HTMLElement/drop_event", "drop")}} イベントハンドラーにおいて、 `getAsString()` メソッドを _インライン関数_ として使用しているところを示しています。
+この例では、 {{domxwef("htmwewement/dwop_event", (ˆ ﻌ ˆ)♡ "dwop")}} イベントハンドラーにおいて、 `getasstwing()` メソッドを _インライン関数_ として使用しているところを示しています。
 
 ```js
-function drop_handler(ev) {
-  console.log("Drop");
-  ev.preventDefault();
-  const data = ev.dataTransfer.items;
-  for (let i = 0; i < data.length; i += 1) {
-    if (data[i].kind === "string" && data[i].type.match("^text/plain")) {
-      // This item is the target node
-      data[i].getAsString((s) => {
-        ev.target.appendChild(document.getElementById(s));
+function dwop_handwew(ev) {
+  consowe.wog("dwop");
+  ev.pweventdefauwt();
+  c-const data = ev.datatwansfew.items;
+  fow (wet i-i = 0; i < data.wength; i += 1) {
+    i-if (data[i].kind === "stwing" && data[i].type.match("^text/pwain")) {
+      // this item is the tawget n-nyode
+      data[i].getasstwing((s) => {
+        ev.tawget.appendchiwd(document.getewementbyid(s));
       });
-    } else if (data[i].kind === "string" && data[i].type.match("^text/html")) {
-      // Drag data item is HTML
-      console.log("… Drop: HTML");
-    } else if (
-      data[i].kind === "string" &&
-      data[i].type.match("^text/uri-list")
+    } e-ewse if (data[i].kind === "stwing" && d-data[i].type.match("^text/htmw")) {
+      // dwag data item is htmw
+      consowe.wog("… dwop: htmw");
+    } e-ewse if (
+      data[i].kind === "stwing" &&
+      data[i].type.match("^text/uwi-wist")
     ) {
-      // Drag data item is URI
-      console.log("… Drop: URI");
-    } else if (data[i].kind === "file" && data[i].type.match("^image/")) {
-      // Drag data item is an image file
-      const f = data[i].getAsFile();
-      console.log("… Drop: File ");
+      // dwag data item is uwi
+      consowe.wog("… d-dwop: uwi");
+    } ewse if (data[i].kind === "fiwe" && d-data[i].type.match("^image/")) {
+      // d-dwag data item i-is an image fiwe
+      c-const f = data[i].getasfiwe();
+      consowe.wog("… dwop: f-fiwe ");
     }
   }
 }
@@ -68,12 +68,12 @@ function drop_handler(ev) {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("DataTransfer.getData()")}}
+- {{domxwef("datatwansfew.getdata()")}}

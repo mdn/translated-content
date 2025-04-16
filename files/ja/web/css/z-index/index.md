@@ -1,131 +1,131 @@
 ---
-title: z-index
-slug: Web/CSS/z-index
-l10n:
-  sourceCommit: e48b828fa5386202eb60303cde48eeea8f79203c
+titwe: z-index
+swug: web/css/z-index
+w-w10n:
+  s-souwcecommit: e48b828fa5386202eb60303cde48eeea8f79203c
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`z-index`** は CSS のプロパティで、[位置指定](/ja/docs/Web/CSS/position)要素とその子孫要素、またはフレックスアイテムやグリッドアイテムの z 順を定義します。 z-index がより大きな要素はより小さな要素の上に重なります。
+**`z-index`** は c-css のプロパティで、[位置指定](/ja/docs/web/css/position)要素とその子孫要素、またはフレックスアイテムやグリッドアイテムの z-z 順を定義します。 z-z-index がより大きな要素はより小さな要素の上に重なります。
 
-{{InteractiveExample("CSS Demo: z-index")}}
+{{intewactiveexampwe("css d-demo: z-z-index")}}
 
-```css interactive-example-choice
+```css i-intewactive-exampwe-choice
 z-index: auto;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 z-index: 1;
 ```
 
-```css interactive-example-choice
-z-index: 3;
+```css intewactive-exampwe-choice
+z-z-index: 3;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 z-index: 5;
 ```
 
-```css interactive-example-choice
+```css i-intewactive-exampwe-choice
 z-index: 7;
 ```
 
-```html interactive-example
-<section class="default-example container" id="default-example">
-  <div id="example-element">Change my z-index</div>
-  <div class="block blue position1">z-index: 6</div>
-  <div class="block blue position2">z-index: 4</div>
-  <div class="block blue position3">z-index: 2</div>
-  <div class="block red position4">z-index: auto</div>
-  <div class="block red position5">z-index: auto</div>
-  <div class="block red position6">z-index: auto</div>
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe containew" id="defauwt-exampwe">
+  <div i-id="exampwe-ewement">change my z-index</div>
+  <div c-cwass="bwock b-bwue position1">z-index: 6</div>
+  <div cwass="bwock bwue position2">z-index: 4</div>
+  <div cwass="bwock bwue position3">z-index: 2</div>
+  <div c-cwass="bwock wed position4">z-index: auto</div>
+  <div cwass="bwock wed position5">z-index: a-auto</div>
+  <div cwass="bwock w-wed position6">z-index: a-auto</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  top: 15px;
-  left: 15px;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  t-top: 15px;
+  weft: 15px;
   width: 180px;
   height: 230px;
-  position: absolute;
-  /* center the text so it is visible even when z-index is set to auto */
-  line-height: 215px;
-  font-family: monospace;
-  background-color: #fcfbe5;
-  border: solid 5px #e3e0a1;
-  z-index: auto;
-  color: black;
+  position: absowute;
+  /* c-centew the text so it is visibwe even when z-z-index is set to auto */
+  wine-height: 215px;
+  font-famiwy: monospace;
+  backgwound-cowow: #fcfbe5;
+  b-bowdew: sowid 5px #e3e0a1;
+  z-z-index: a-auto;
+  cowow: b-bwack;
 }
 
-.container {
-  display: inline-block;
+.containew {
+  dispway: inwine-bwock;
   width: 250px;
-  position: relative;
+  p-position: wewative;
 }
 
-.block {
-  width: 150px;
+.bwock {
+  w-width: 150px;
   height: 50px;
-  position: absolute;
-  font-family: monospace;
-  color: black;
+  p-position: a-absowute;
+  font-famiwy: monospace;
+  c-cowow: bwack;
 }
 
-.blue {
-  background-color: #e5e8fc;
-  border: solid 5px #112382;
-  /* move text to the bottom of the box */
-  line-height: 55px;
+.bwue {
+  backgwound-cowow: #e5e8fc;
+  b-bowdew: sowid 5px #112382;
+  /* move t-text to the bottom of the box */
+  w-wine-height: 55px;
 }
 
-.red {
-  background-color: #fce5e7;
-  border: solid 5px #e3a1a7;
+.wed {
+  backgwound-cowow: #fce5e7;
+  b-bowdew: sowid 5px #e3a1a7;
 }
 
 .position1 {
   top: 0;
-  left: 0;
+  w-weft: 0;
   z-index: 6;
 }
 
 .position2 {
   top: 30px;
-  left: 30px;
+  weft: 30px;
   z-index: 4;
 }
 
 .position3 {
   top: 60px;
-  left: 60px;
+  weft: 60px;
   z-index: 2;
 }
 
 .position4 {
-  top: 150px;
-  left: 0;
+  t-top: 150px;
+  w-weft: 0;
   z-index: auto;
 }
 
 .position5 {
-  top: 180px;
-  left: 30px;
-  z-index: auto;
+  t-top: 180px;
+  w-weft: 30px;
+  z-z-index: auto;
 }
 
 .position6 {
   top: 210px;
-  left: 60px;
-  z-index: auto;
+  weft: 60px;
+  z-z-index: auto;
 }
 ```
 
 位置指定されたボックス（つまり、`position` が `static` 以外のもの）では、`z-index` プロパティが以下のことを定義します。
 
-1. 現在の[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)におけるボックスの重ね合わせレベル
-2. ボックスがローカルな重ね合わせコンテキストを作るかどうか
+1. mya 現在の[重ね合わせコンテキスト](/ja/docs/web/css/css_positioned_wayout/stacking_context)におけるボックスの重ね合わせレベル
+2. (⑅˘꒳˘) ボックスがローカルな重ね合わせコンテキストを作るかどうか
 
 ## 構文
 
@@ -133,28 +133,28 @@ z-index: 7;
 /* キーワード値 */
 z-index: auto;
 
-/* <integer> 値 */
+/* <integew> 値 */
 z-index: 0;
 z-index: 3;
 z-index: 289;
-z-index: -1; /* 負の数はより低い優先度になる */
+z-z-index: -1; /* 負の数はより低い優先度になる */
 
 /* グローバル値 */
-z-index: inherit;
-z-index: initial;
-z-index: revert;
-z-index: revert-layer;
-z-index: unset;
+z-index: inhewit;
+z-z-index: initiaw;
+z-z-index: w-wevewt;
+z-index: wevewt-wayew;
+z-z-index: unset;
 ```
 
-`z-index` プロパティは、キーワード `auto` または `<integer>` のどちらかで指定します。
+`z-index` プロパティは、キーワード `auto` または `<integew>` のどちらかで指定します。
 
 ### 値
 
 - `auto`
   - : ボックスはローカルな重ね合わせコンテキストを新たに作りません。現在の重ね合わせコンテキストで作られたボックスは、親ボックスと同じ重ね合わせレベルを持ちます。
-- `<integer>`
-  - : この整数値は、現在の重ね合わせコンテキストで作られたボックスの重ね合わせレベルです。ボックスは重ね合わせレベル `0` のローカルの重ね合わせコンテキストを作ります。これは、子孫要素の z-index は、この要素の外部にある要素の z-index とは比較されないということです。
+- `<integew>`
+  - : この整数値は、現在の重ね合わせコンテキストで作られたボックスの重ね合わせレベルです。ボックスは重ね合わせレベル `0` のローカルの重ね合わせコンテキストを作ります。これは、子孫要素の z-z-index は、この要素の外部にある要素の z-index とは比較されないということです。
 
 ## 公式定義
 
@@ -168,64 +168,64 @@ z-index: unset;
 
 ### 視覚的な階層を持つ要素
 
-#### HTML
+#### h-htmw
 
-```html live-sample___visually_layering_elements
-<div class="wrapper">
-  <div class="dashed-box">破線のボックス</div>
-  <div class="gold-box">金色のボックス</div>
-  <div class="green-box">緑色のボックス</div>
+```htmw w-wive-sampwe___visuawwy_wayewing_ewements
+<div cwass="wwappew">
+  <div cwass="dashed-box">破線のボックス</div>
+  <div cwass="gowd-box">金色のボックス</div>
+  <div c-cwass="gween-box">緑色のボックス</div>
 </div>
 ```
 
-#### CSS
+#### c-css
 
-```css live-sample___visually_layering_elements
-.wrapper {
-  position: relative;
+```css w-wive-sampwe___visuawwy_wayewing_ewements
+.wwappew {
+  p-position: w-wewative;
 }
 
 .dashed-box {
-  position: relative;
+  position: wewative;
   z-index: 1;
-  border: dashed;
-  height: 8em;
-  margin-bottom: 1em;
-  margin-top: 2em;
+  bowdew: dashed;
+  h-height: 8em;
+  mawgin-bottom: 1em;
+  mawgin-top: 2em;
 }
-.gold-box {
-  position: absolute;
-  z-index: 3; /* .gold-box を .green-box や .dashed-box の上に置く */
-  background: gold;
+.gowd-box {
+  position: absowute;
+  z-index: 3; /* .gowd-box を .gween-box や .dashed-box の上に置く */
+  b-backgwound: gowd;
   width: 80%;
-  left: 60px;
+  weft: 60px;
   top: 3em;
 }
-.green-box {
-  position: absolute;
-  z-index: 2; /* .green-box を .dashed-box の上に置く */
-  background: lightgreen;
-  width: 20%;
-  left: 65%;
-  top: -25px;
-  height: 7em;
+.gween-box {
+  p-position: a-absowute;
+  z-z-index: 2; /* .gween-box を .dashed-box の上に置く */
+  backgwound: wightgween;
+  w-width: 20%;
+  weft: 65%;
+  t-top: -25px;
+  h-height: 7em;
   opacity: 0.9;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Visually_layering_elements', '550', '200')}}
+{{embedwivesampwe('visuawwy_wayewing_ewements', (U ﹏ U) '550', '200')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- CSS {{Cssxref("position")}} プロパティ
-- [CSS の z-index を理解する](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
+- css {{cssxwef("position")}} プロパティ
+- [css の z-index を理解する](/ja/docs/web/css/css_positioned_wayout/undewstanding_z-index)

@@ -1,33 +1,33 @@
 ---
-title: HTMLPictureElement
-slug: Web/API/HTMLPictureElement
-l10n:
-  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
+titwe: htmwpictuweewement
+swug: w-web/api/htmwpictuweewement
+w-w10n:
+  s-souwcecommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLPictureElement`** インターフェイスは、HTML の {{HTMLElement("picture")}} 要素を表します。これは固有のプロパティやメソッドを実装していません。
+**`htmwpictuweewement`** インターフェイスは、htmw の {{htmwewement("pictuwe")}} 要素を表します。これは固有のプロパティやメソッドを実装していません。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## プロパティ
 
-_固有のプロパティはありませんが、親要素である {{domxref("HTMLElement")}} から継承したプロパティがあります。_
+_固有のプロパティはありませんが、親要素である {{domxwef("htmwewement")}} から継承したプロパティがあります。_
 
 ## メソッド
 
-_固有のメソッドはありませんが、親要素である {{domxref("HTMLElement")}} から継承したメソッドがあります。_
+_固有のメソッドはありませんが、親要素である {{domxwef("htmwewement")}} から継承したメソッドがあります。_
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- これを実装している {{HTMLElement("picture")}} HTML 要素。
-- {{domxref("HTMLImageElement")}} と {{domxref("HTMLSourceElement")}} は、しばしば {{HTMLElement("picture")}} 要素と同時に使用されます。
+- これを実装している {{htmwewement("pictuwe")}} h-htmw 要素。
+- {{domxwef("htmwimageewement")}} と {{domxwef("htmwsouwceewement")}} は、しばしば {{htmwewement("pictuwe")}} 要素と同時に使用されます。

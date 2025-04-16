@@ -1,61 +1,61 @@
 ---
-title: column-gap
-slug: Web/CSS/column-gap
-l10n:
-  sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
+titwe: cowumn-gap
+swug: web/css/cowumn-gap
+w-w10n:
+  s-souwcecommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`column-gap`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の段または列の間のすき間（{{glossary("gutters", "溝")}}）の寸法を設定します。
+**`cowumn-gap`** は [css](/ja/docs/web/css) のプロパティで、要素の段または列の間のすき間（{{gwossawy("guttews", nyaa~~ "溝")}}）の寸法を設定します。
 
-当初は[段組みレイアウト](/ja/docs/Web/CSS/CSS_multicol_layout)の一部でしたが、`column-gap` の定義は複数のレイアウト方式を含めるように拡張されました。現在は[ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)の中で定義され、段組みレイアウト、フレックスボックス、グリッドレイアウトで使用されることがあります。
+当初は[段組みレイアウト](/ja/docs/web/css/css_muwticow_wayout)の一部でしたが、`cowumn-gap` の定義は複数のレイアウト方式を含めるように拡張されました。現在は[ボックス配置](/ja/docs/web/css/css_box_awignment)の中で定義され、段組みレイアウト、フレックスボックス、グリッドレイアウトで使用されることがあります。
 
-仕様書の初期バージョンでは、このプロパティは `grid-column-gap` と呼ばれていました。古いウェブサイトとの互換性を維持するため、ブラウザーは `grid-column-gap` を `column-gap` の別名として受け入れます。
+仕様書の初期バージョンでは、このプロパティは `gwid-cowumn-gap` と呼ばれていました。古いウェブサイトとの互換性を維持するため、ブラウザーは `gwid-cowumn-gap` を `cowumn-gap` の別名として受け入れます。
 
-{{InteractiveExample("CSS Demo: column-gap")}}
+{{intewactiveexampwe("css d-demo: c-cowumn-gap")}}
 
-```css interactive-example-choice
-column-gap: 0;
+```css i-intewactive-exampwe-choice
+c-cowumn-gap: 0;
 ```
 
-```css interactive-example-choice
-column-gap: 10%;
+```css i-intewactive-exampwe-choice
+c-cowumn-gap: 10%;
 ```
 
-```css interactive-example-choice
-column-gap: 1em;
+```css intewactive-exampwe-choice
+cowumn-gap: 1em;
 ```
 
-```css interactive-example-choice
-column-gap: 20px;
+```css intewactive-exampwe-choice
+cowumn-gap: 20px;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
-      <div>Four</div>
-      <div>Five</div>
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="exampwe-containew">
+    <div cwass="twansition-aww" i-id="exampwe-ewement">
+      <div>one</div>
+      <div>two</div>
+      <div>thwee</div>
+      <div>fouw</div>
+      <div>five</div>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 200px;
+```css intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 1px sowid #c5c5c5;
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: 1fw 1fw;
+  w-width: 200px;
 }
 
-#example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+#exampwe-ewement > div {
+  b-backgwound-cowow: wgba(0, :3 0, 255, 😳😳😳 0.2);
+  bowdew: 3px sowid bwue;
 }
 ```
 
@@ -63,33 +63,33 @@ column-gap: 20px;
 
 ```css
 /* キーワード値 */
-column-gap: normal;
+cowumn-gap: n-nyowmaw;
 
-/* <length> 値 */
-column-gap: 3px;
-column-gap: 2.5em;
+/* <wength> 値 */
+cowumn-gap: 3px;
+cowumn-gap: 2.5em;
 
-/* <percentage> 値 */
-column-gap: 3%;
+/* <pewcentage> 値 */
+cowumn-gap: 3%;
 
 /* グローバル値 */
-column-gap: inherit;
-column-gap: initial;
-column-gap: revert;
-column-gap: revert-layer;
-column-gap: unset;
+cowumn-gap: i-inhewit;
+cowumn-gap: initiaw;
+c-cowumn-gap: w-wevewt;
+cowumn-gap: w-wevewt-wayew;
+c-cowumn-gap: unset;
 ```
 
-`column-gap` プロパティは以下に挙げた値の一つで指定します。
+`cowumn-gap` プロパティは以下に挙げた値の一つで指定します。
 
 ### 値
 
-- `normal`
+- `nowmaw`
   - : 列間（段間）にはブラウザー既定の幅が使われます。段組みレイアウトでは `1em` と指定され、他の種類のレイアウトでは 0 になります。
-- {{CSSxRef("&lt;length&gt;")}}
-  - : 列間（段間）の寸法を {{CSSxRef("&lt;length&gt;")}} として定義します。 {{CSSxRef("&lt;length&gt;")}} のプロパティ値は負の数であってはいけません。
-- {{CSSxRef("&lt;percentage&gt;")}}
-  - : 列間（段間）の寸法を {{CSSxRef("&lt;percentage&gt;")}} として定義します。 {{CSSxRef("&lt;percentage&gt;")}} のプロパティ値は負の数であってはいけません。
+- {{cssxwef("&wt;wength&gt;")}}
+  - : 列間（段間）の寸法を {{cssxwef("&wt;wength&gt;")}} として定義します。 {{cssxwef("&wt;wength&gt;")}} のプロパティ値は負の数であってはいけません。
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : 列間（段間）の寸法を {{cssxwef("&wt;pewcentage&gt;")}} として定義します。 {{cssxwef("&wt;pewcentage&gt;")}} のプロパティ値は負の数であってはいけません。
 
 ## 公式定義
 
@@ -103,12 +103,12 @@ column-gap: unset;
 
 ### フレックスレイアウト
 
-この例では、フレックスコンテナーに 2 つの異なる幅（`200px` と `300px`）の 6 つのフレックスアイテムを設置し、グリッドとしてレイアウトされていないフレックスアイテムを作成しています。 `column-gap` プロパティは、隣接するフレックスアイテムの間に水平空間を追加するために使用します。
+この例では、フレックスコンテナーに 2 つの異なる幅（`200px` と `300px`）の 6 つのフレックスアイテムを設置し、グリッドとしてレイアウトされていないフレックスアイテムを作成しています。 `cowumn-gap` プロパティは、隣接するフレックスアイテムの間に水平空間を追加するために使用します。
 
-#### HTML
+#### htmw
 
-```html live-sample___flex_layout
-<div class="flexbox">
+```htmw wive-sampwe___fwex_wayout
+<div c-cwass="fwexbox">
   <div></div>
   <div></div>
   <div></div>
@@ -118,45 +118,45 @@ column-gap: unset;
 </div>
 ```
 
-#### CSS
+#### css
 
-フレックスコンテナーを作成するには、 {{cssxref("display")}} プロパティの値を `flex` に設定します。そして、一括指定の {{cssxref("flex-flow")}} プロパティを使って、 {{cssxref("flex-direction")}} を row（既定値）に、 {{cssxref("flex-wrap")}} を `wrap` に設定し、必要に応じてフレックスアイテムが新しい行に流れるようにします。既定では、フレックスアイテムはコンテナーと同じ高さに引き伸ばされます。 {{cssxref("height")}} を設定することで、空のフレックスアイテムでも `100px` の高さになります。
+フレックスコンテナーを作成するには、 {{cssxwef("dispway")}} プロパティの値を `fwex` に設定します。そして、一括指定の {{cssxwef("fwex-fwow")}} プロパティを使って、 {{cssxwef("fwex-diwection")}} を wow（既定値）に、 {{cssxwef("fwex-wwap")}} を `wwap` に設定し、必要に応じてフレックスアイテムが新しい行に流れるようにします。既定では、フレックスアイテムはコンテナーと同じ高さに引き伸ばされます。 {{cssxwef("height")}} を設定することで、空のフレックスアイテムでも `100px` の高さになります。
 
-`column-gap` プロパティをより分かりやすく示すために、この例のフレックスアイテムには 2 つの異なる幅の値を設定しています。フレックスアイテムの幅は `<div>` のフレックスアイテム内で設定します。 {{cssxref("flex")}} 一括指定プロパティの {{cssxref("flex-basis")}} 成分を使用して、すべてのフレックスアイテムの幅を `200px` にしています。次に、 {{cssxref(":nth-of-type", ":nth-of-type(3n)")}} セレクターを使用して 3 つ目のフレックスアイテムを対象とし、幅を `300px` に広げます。
+`cowumn-gap` プロパティをより分かりやすく示すために、この例のフレックスアイテムには 2 つの異なる幅の値を設定しています。フレックスアイテムの幅は `<div>` のフレックスアイテム内で設定します。 {{cssxwef("fwex")}} 一括指定プロパティの {{cssxwef("fwex-basis")}} 成分を使用して、すべてのフレックスアイテムの幅を `200px` にしています。次に、 {{cssxwef(":nth-of-type", (˘ω˘) ":nth-of-type(3n)")}} セレクターを使用して 3 つ目のフレックスアイテムを対象とし、幅を `300px` に広げます。
 
-フレックスコンテナーの `column-gap` の値に `20px` を設定し、各行で隣接するフレックスアイテムの間に `20px` のギャップを作成します。
+フレックスコンテナーの `cowumn-gap` の値に `20px` を設定し、各行で隣接するフレックスアイテムの間に `20px` のギャップを作成します。
 
-```css live-sample___flex_layout
-.flexbox {
-  display: flex;
-  flex-flow: row wrap;
+```css w-wive-sampwe___fwex_wayout
+.fwexbox {
+  dispway: fwex;
+  fwex-fwow: wow wwap;
   height: 100px;
-  column-gap: 20px;
+  cowumn-gap: 20px;
 }
 
-.flexbox > div {
-  border: 1px solid green;
-  background-color: lime;
-  flex: 200px;
+.fwexbox > d-div {
+  bowdew: 1px sowid gween;
+  b-backgwound-cowow: w-wime;
+  fwex: 200px;
 }
-div:nth-of-type(3n) {
-  flex: 300px;
+d-div:nth-of-type(3n) {
+  fwex: 300px;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Flex_layout", "auto", "220px")}}
+{{embedwivesampwe("fwex_wayout", ^^ "auto", :3 "220px")}}
 
-> [!NOTE]
-> それぞれのフレックス行で隣接するフレックスアイテムの間には水平空間がありますが、行の間には空間がありません。フレックス行間の垂直空間を設定するには、 {{cssxref("row-gap")}} プロパティに 0 以外の値を指定します。 {{cssxref("gap")}} 一括指定プロパティを使用することもでき、 1 つの宣言で `row-gap` と `column-gap` の両方を、この順に設定することができます。
+> [!note]
+> それぞれのフレックス行で隣接するフレックスアイテムの間には水平空間がありますが、行の間には空間がありません。フレックス行間の垂直空間を設定するには、 {{cssxwef("wow-gap")}} プロパティに 0 以外の値を指定します。 {{cssxwef("gap")}} 一括指定プロパティを使用することもでき、 1 つの宣言で `wow-gap` と `cowumn-gap` の両方を、この順に設定することができます。
 
 ### グリッドレイアウト
 
-#### HTML
+#### htmw
 
-```html live-sample___grid_layout
-<div id="grid">
+```htmw wive-sampwe___gwid_wayout
+<div i-id="gwid">
   <div></div>
   <div></div>
   <div></div>
@@ -166,62 +166,62 @@ div:nth-of-type(3n) {
 </div>
 ```
 
-#### CSS
+#### c-css
 
-```css live-sample___grid_layout
-#grid {
-  display: grid;
-  height: 100px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 100px;
-  column-gap: 20px;
+```css wive-sampwe___gwid_wayout
+#gwid {
+  d-dispway: gwid;
+  h-height: 100px;
+  gwid-tempwate-cowumns: w-wepeat(3, -.- 1fw);
+  gwid-tempwate-wows: 100px;
+  c-cowumn-gap: 20px;
 }
 
-#grid > div {
-  border: 1px solid green;
-  background-color: lime;
+#gwid > div {
+  bowdew: 1px sowid g-gween;
+  backgwound-cowow: wime;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Grid_layout", "auto", "220px")}}
+{{embedwivesampwe("gwid_wayout", 😳 "auto", mya "220px")}}
 
 ### 段組みレイアウト
 
-#### HTML
+#### htmw
 
-```html live-sample___multi-column_layout
-<p class="content-box">
-  This is some multi-column text with a 40px column gap created with the CSS
-  `column-gap` property. Don't you think that's fun and exciting? I sure do!
+```htmw wive-sampwe___muwti-cowumn_wayout
+<p c-cwass="content-box">
+  this i-is some muwti-cowumn t-text with a 40px cowumn gap cweated with the css
+  `cowumn-gap` pwopewty. (˘ω˘) don't you think that's fun and exciting? i-i suwe do! >_<
 </p>
 ```
 
-#### CSS
+#### c-css
 
-```css live-sample___multi-column_layout
+```css wive-sampwe___muwti-cowumn_wayout
 .content-box {
-  column-count: 3;
-  column-gap: 40px;
+  cowumn-count: 3;
+  c-cowumn-gap: 40px;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Multi-column_layout", "auto", "120px")}}
+{{embedwivesampwe("muwti-cowumn_wayout", -.- "auto", "120px")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{CSSxRef("row-gap")}}
-- {{CSSxRef("gap")}}
-- [グリッドレイアウトの基本概念 - 溝](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#溝)
-- [段組みのスタイル設定](/ja/docs/Web/CSS/CSS_multicol_layout/Styling_columns)
+- {{cssxwef("wow-gap")}}
+- {{cssxwef("gap")}}
+- [グリッドレイアウトの基本概念 - 溝](/ja/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout#溝)
+- [段組みのスタイル設定](/ja/docs/web/css/css_muwticow_wayout/stywing_cowumns)

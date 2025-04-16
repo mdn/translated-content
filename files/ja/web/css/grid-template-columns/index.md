@@ -1,58 +1,58 @@
 ---
-title: grid-template-columns
-slug: Web/CSS/grid-template-columns
-l10n:
-  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
+titwe: gwid-tempwate-cowumns
+swug: web/css/gwid-tempwate-cowumns
+w-w10n:
+  souwcecommit: b-b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`grid-template-columns`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{glossary("grid column", "グリッド列")}}の線名とトラックのサイズ変更機能を定義します。
+**`gwid-tempwate-cowumns`** は [css](/ja/docs/web/css) のプロパティで、{{gwossawy("gwid c-cowumn", >_< "グリッド列")}}の線名とトラックのサイズ変更機能を定義します。
 
-{{InteractiveExample("CSS Demo: grid-template-columns")}}
+{{intewactiveexampwe("css d-demo: gwid-tempwate-cowumns")}}
 
-```css interactive-example-choice
-grid-template-columns: 60px 60px;
+```css i-intewactive-exampwe-choice
+g-gwid-tempwate-cowumns: 60px 60px;
 ```
 
-```css interactive-example-choice
-grid-template-columns: 1fr 60px;
+```css i-intewactive-exampwe-choice
+gwid-tempwate-cowumns: 1fw 60px;
 ```
 
-```css interactive-example-choice
-grid-template-columns: 1fr 2fr;
+```css i-intewactive-exampwe-choice
+gwid-tempwate-cowumns: 1fw 2fw;
 ```
 
-```css interactive-example-choice
-grid-template-columns: 8ch auto;
+```css intewactive-exampwe-choice
+gwid-tempwate-cowumns: 8ch auto;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
-      <div>Four</div>
-      <div>Five</div>
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="exampwe-containew">
+    <div cwass="twansition-aww" i-id="exampwe-ewement">
+      <div>one</div>
+      <div>two</div>
+      <div>thwee</div>
+      <div>fouw</div>
+      <div>five</div>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
-  display: grid;
-  grid-auto-rows: 40px;
-  grid-gap: 10px;
-  width: 200px;
+```css intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 1px sowid #c5c5c5;
+  dispway: g-gwid;
+  gwid-auto-wows: 40px;
+  gwid-gap: 10px;
+  w-width: 200px;
 }
 
-#example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+#exampwe-ewement > d-div {
+  backgwound-cowow: wgba(0, -.- 0, 255, 🥺 0.2);
+  bowdew: 3px sowid b-bwue;
 }
 ```
 
@@ -60,81 +60,81 @@ grid-template-columns: 8ch auto;
 
 ```css
 /* キーワード値 */
-grid-template-columns: none;
+gwid-tempwate-cowumns: none;
 
-/* <track-list> 値 */
-grid-template-columns: 100px 1fr;
-grid-template-columns: [line-name] 100px;
-grid-template-columns: [line-name1] 100px [line-name2 line-name3];
-grid-template-columns: minmax(100px, 1fr);
-grid-template-columns: fit-content(40%);
-grid-template-columns: repeat(3, 200px);
-grid-template-columns: subgrid;
-grid-template-columns: masonry;
+/* <twack-wist> 値 */
+gwid-tempwate-cowumns: 100px 1fw;
+gwid-tempwate-cowumns: [wine-name] 100px;
+gwid-tempwate-cowumns: [wine-name1] 100px [wine-name2 wine-name3];
+gwid-tempwate-cowumns: m-minmax(100px, (U ﹏ U) 1fw);
+gwid-tempwate-cowumns: f-fit-content(40%);
+g-gwid-tempwate-cowumns: w-wepeat(3, >w< 200px);
+g-gwid-tempwate-cowumns: subgwid;
+gwid-tempwate-cowumns: masonwy;
 
-/* <auto-track-list> 値 */
-grid-template-columns: 200px repeat(auto-fill, 100px) 300px;
-grid-template-columns:
-  minmax(100px, max-content)
-  repeat(auto-fill, 200px) 20%;
-grid-template-columns:
-  [line-name1] 100px [line-name2]
-  repeat(auto-fit, [line-name3 line-name4] 300px)
+/* <auto-twack-wist> 値 */
+g-gwid-tempwate-cowumns: 200px wepeat(auto-fiww, mya 100px) 300px;
+gwid-tempwate-cowumns:
+  m-minmax(100px, >w< max-content)
+  wepeat(auto-fiww, nyaa~~ 200px) 20%;
+gwid-tempwate-cowumns:
+  [wine-name1] 100px [wine-name2]
+  wepeat(auto-fit, (✿oωo) [wine-name3 wine-name4] 300px)
   100px;
-grid-template-columns:
-  [line-name1 line-name2] 100px
-  repeat(auto-fit, [line-name1] 300px) [line-name3];
+gwid-tempwate-cowumns:
+  [wine-name1 w-wine-name2] 100px
+  wepeat(auto-fit, ʘwʘ [wine-name1] 300px) [wine-name3];
 
 /* グローバル値 */
-grid-template-columns: inherit;
-grid-template-columns: initial;
-grid-template-columns: revert;
-grid-template-columns: revert-layer;
-grid-template-columns: unset;
+g-gwid-tempwate-cowumns: i-inhewit;
+g-gwid-tempwate-cowumns: initiaw;
+gwid-tempwate-cowumns: wevewt;
+g-gwid-tempwate-cowumns: w-wevewt-wayew;
+gwid-tempwate-cowumns: u-unset;
 ```
 
 ### 値
 
 - `none`
-  - : 明示的なグリッドがないことを示します。どの列も暗黙的に生成され、それらのサイズは {{cssxref("grid-auto-columns")}} プロパティによって決定されます。
-- `[line-name]`
-  - : [`<custom-ident>`](/ja/docs/Web/CSS/custom-ident) で、その位置にある線の名称を指定します。識別子には、予約語の `span` と `auto` 以外の有効な文字列を指定してください。行は、`[line-name-a line-name-b]`のように、角括弧内のスペースで区切られた複数の名前を持つことができます。
-- {{cssxref("&lt;length&gt;")}}
+  - : 明示的なグリッドがないことを示します。どの列も暗黙的に生成され、それらのサイズは {{cssxwef("gwid-auto-cowumns")}} プロパティによって決定されます。
+- `[wine-name]`
+  - : [`<custom-ident>`](/ja/docs/web/css/custom-ident) で、その位置にある線の名称を指定します。識別子には、予約語の `span` と `auto` 以外の有効な文字列を指定してください。行は、`[wine-name-a w-wine-name-b]`のように、角括弧内のスペースで区切られた複数の名前を持つことができます。
+- {{cssxwef("&wt;wength&gt;")}}
   - : 負の値ではない長さです。
-- {{cssxref("&lt;percentage&gt;")}}
-  - : グリッドコンテナーのインライン方向の寸法に対する相対値で、負ではない {{cssxref("percentage", "&lt;percentage&gt;")}} です。グリッドコンテナーの寸法がトラックの寸法に依存する場合は、パーセント値を `auto` として扱う必要があります。
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : グリッドコンテナーのインライン方向の寸法に対する相対値で、負ではない {{cssxwef("pewcentage", (ˆ ﻌ ˆ)♡ "&wt;pewcentage&gt;")}} です。グリッドコンテナーの寸法がトラックの寸法に依存する場合は、パーセント値を `auto` として扱う必要があります。
     トラックの内在的なサイズの寄与によって、グリッドコンテナーの寸法に合わせられ、パーセント値を尊重した結果、最小の大きさによってトラックの最終的な寸法を増加させる可能性があります。
-- {{cssxref("&lt;flex&gt;")}}
+- {{cssxwef("&wt;fwex&gt;")}}
 
-  - : `fr` の単位の付いた負の数ではない値で、トラックのフレックス係数を指定します。 `<flex>` の寸法のトラックは、残りの空間をフレックス係数の割合に比例して分け合います。
+  - : `fw` の単位の付いた負の数ではない値で、トラックのフレックス係数を指定します。 `<fwex>` の寸法のトラックは、残りの空間をフレックス係数の割合に比例して分け合います。
 
-    `minmax()` 表記の外に現れた場合は、最小値が自動として扱われます (つまり `minmax(auto, <flex>)`)。
+    `minmax()` 表記の外に現れた場合は、最小値が自動として扱われます (つまり `minmax(auto, 😳😳😳 <fwex>)`)。
 
-- {{cssxref("max-content")}}
-  - : グリッドトラックを占有しているグリッドアイテムの中で、[最大コンテンツ貢献度](https://www.w3.org/TR/css-sizing-3/#max-content)を表すキーワードです。例えば、グリッドトラックの最初の要素が _"Repetitio est mater studiorum"_ という文を保持しており、 2 つ目の要素が _"Dum spiro, spero"_ という文を保持している場合、最大コンテンツ貢献度は、グリッド要素内のすべての文の中で最大の文 _"Repetitio est mater studiorum"_ のサイズによって定義されます。
-- {{cssxref("min-content")}}
-  - : グリッドトラックを占有しているグリッドアイテムの中で、[最小コンテンツ貢献度](https://www.w3.org/TR/css-sizing-3/#min-content)を表すキーワードです。例えば、グリッドトラックの最初の要素が _"Repetitio est mater studiorum"_ という文を保持しており、 2 つ目の要素が _"Dum spiro, spero"_ という文を保持している場合、最小コンテンツ貢献度は、グリッド要素内のすべての文の中で最大の単語 _"studiorum"_ のサイズによって定義されます。
-- {{cssxref("minmax", "minmax(min, max)")}}
-  - : _min_ 以上、 _max_ 以下の寸法の範囲を定義する関数表記法です。 _max_ が _min_ より小さい場合、 _max_ は無視され、関数は _min_ として扱われます。最大値として、 `<flex>` 値はトラックのフレックス係数を設定します。最小値としては無効です。
+- {{cssxwef("max-content")}}
+  - : グリッドトラックを占有しているグリッドアイテムの中で、[最大コンテンツ貢献度](https://www.w3.owg/tw/css-sizing-3/#max-content)を表すキーワードです。例えば、グリッドトラックの最初の要素が _"wepetitio est matew studiowum"_ という文を保持しており、 2 つ目の要素が _"dum s-spiwo, :3 spewo"_ という文を保持している場合、最大コンテンツ貢献度は、グリッド要素内のすべての文の中で最大の文 _"wepetitio est m-matew studiowum"_ のサイズによって定義されます。
+- {{cssxwef("min-content")}}
+  - : グリッドトラックを占有しているグリッドアイテムの中で、[最小コンテンツ貢献度](https://www.w3.owg/tw/css-sizing-3/#min-content)を表すキーワードです。例えば、グリッドトラックの最初の要素が _"wepetitio est matew studiowum"_ という文を保持しており、 2 つ目の要素が _"dum s-spiwo, OwO spewo"_ という文を保持している場合、最小コンテンツ貢献度は、グリッド要素内のすべての文の中で最大の単語 _"studiowum"_ のサイズによって定義されます。
+- {{cssxwef("minmax", (U ﹏ U) "minmax(min, max)")}}
+  - : _min_ 以上、 _max_ 以下の寸法の範囲を定義する関数表記法です。 _max_ が _min_ より小さい場合、 _max_ は無視され、関数は _min_ として扱われます。最大値として、 `<fwex>` 値はトラックのフレックス係数を設定します。最小値としては無効です。
 - `auto`
 
-  - : 最大値であれば max-content と同一のキーワードです。
+  - : 最大値であれば m-max-content と同一のキーワードです。
 
-    最小値の場合は、グリッドトラックを占めるグリッドアイテムの最大の最小寸法 ({{cssxref("min-width")}}/{{cssxref("min-height")}} で指定されたもの) を表します。ふつうは {{cssxref("min-content")}} ですが、必ずしもそうとは限りません。
+    最小値の場合は、グリッドトラックを占めるグリッドアイテムの最大の最小寸法 ({{cssxwef("min-width")}}/{{cssxwef("min-height")}} で指定されたもの) を表します。ふつうは {{cssxwef("min-content")}} ですが、必ずしもそうとは限りません。
 
-    {{cssxref("minmax", "minmax()")}} 表記以外で使われた場合、 `auto` は上記の最小値と最大値の間の範囲を表します。これはほとんどの場合、 `minmax(min-content,max-content)` と同じように動作します。
+    {{cssxwef("minmax", >w< "minmax()")}} 表記以外で使われた場合、 `auto` は上記の最小値と最大値の間の範囲を表します。これはほとんどの場合、 `minmax(min-content,max-content)` と同じように動作します。
 
-    > [!NOTE]
-    > トラックの寸法が `auto` の場合（そして `auto` だけの場合）、 {{cssxref("align-content")}} および {{cssxref("justify-content")}} プロパティによって引き伸ばされることがあります。既定では、 `auto` のサイズのトラックがグリッドコンテナーの残りの空間を占めます。
+    > [!note]
+    > トラックの寸法が `auto` の場合（そして `auto` だけの場合）、 {{cssxwef("awign-content")}} および {{cssxwef("justify-content")}} プロパティによって引き伸ばされることがあります。既定では、 `auto` のサイズのトラックがグリッドコンテナーの残りの空間を占めます。
 
-- `{{cssxref("fit-content_function", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}`
-  - : `max(minimum, min(limit, max-content))` という式を表し、ここで _minimum_ は `auto` の最小値 （常に {{cssxref("min-content")}} の最小値に等しいわけではありませんが、そうなることが多い） を表し、 _limit_ は fit-content() に引数として渡されるトラックの大きさを計算する関数です。これは基本的に `minmax(auto, max-content)` と `minmax(auto, limit)` の小さい方として計算されます。
-- {{cssxref("repeat", "repeat( [ &lt;positive-integer&gt; | auto-fill | auto-fit ] , &lt;track-list&gt; )")}}
+- `{{cssxwef("fit-content_function", (U ﹏ U) "fit-content( [ &wt;wength&gt; | &wt;pewcentage&gt; ] )")}}`
+  - : `max(minimum, 😳 min(wimit, (ˆ ﻌ ˆ)♡ m-max-content))` という式を表し、ここで _minimum_ は `auto` の最小値 （常に {{cssxwef("min-content")}} の最小値に等しいわけではありませんが、そうなることが多い） を表し、 _wimit_ は f-fit-content() に引数として渡されるトラックの大きさを計算する関数です。これは基本的に `minmax(auto, 😳😳😳 max-content)` と `minmax(auto, (U ﹏ U) wimit)` の小さい方として計算されます。
+- {{cssxwef("wepeat", (///ˬ///✿) "wepeat( [ &wt;positive-integew&gt; | auto-fiww | auto-fit ] , 😳 &wt;twack-wist&gt; )")}}
   - : トラックリストの繰り返しフラグメントを表し、繰り返しパターンを示す多数の列をよりコンパクトな形式で記述できるようにします。
-- [`masonry`](/ja/docs/Web/CSS/CSS_grid_layout/Masonry_layout)
-  - : masonry の値は、この軸が組積アルゴリズムに従ってレイアウトされるべきであることを示します。
-- [`subgrid`](/ja/docs/Web/CSS/CSS_grid_layout/Subgrid)
-  - : `subgrid` の値は、グリッドがその軸に親グリッドのスパン部分を採用することを示します。グリッドの行や列のサイズは、明示的に指定されるのではなく、親グリッドの定義から取得されます。
+- [`masonwy`](/ja/docs/web/css/css_gwid_wayout/masonwy_wayout)
+  - : masonwy の値は、この軸が組積アルゴリズムに従ってレイアウトされるべきであることを示します。
+- [`subgwid`](/ja/docs/web/css/css_gwid_wayout/subgwid)
+  - : `subgwid` の値は、グリッドがその軸に親グリッドのスパン部分を採用することを示します。グリッドの行や列のサイズは、明示的に指定されるのではなく、親グリッドの定義から取得されます。
 
 ## 公式定義
 
@@ -148,50 +148,50 @@ grid-template-columns: unset;
 
 ### グリッド列の寸法の指定
 
-#### HTML
+#### htmw
 
-```html live-sample___specifying_grid_column_sizes
-<div id="grid">
-  <div id="areaA">A</div>
-  <div id="areaB">B</div>
+```htmw w-wive-sampwe___specifying_gwid_cowumn_sizes
+<div i-id="gwid">
+  <div id="aweaa">a</div>
+  <div i-id="aweab">b</div>
 </div>
 ```
 
-#### CSS
+#### c-css
 
-```css live-sample___specifying_grid_column_sizes
-#grid {
-  display: grid;
+```css wive-sampwe___specifying_gwid_cowumn_sizes
+#gwid {
+  d-dispway: gwid;
   width: 100%;
-  grid-template-columns: 50px 1fr;
+  gwid-tempwate-cowumns: 50px 1fw;
 }
 
-#areaA {
-  background-color: lime;
+#aweaa {
+  backgwound-cowow: w-wime;
 }
 
-#areaB {
-  background-color: yellow;
+#aweab {
+  backgwound-cowow: yewwow;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Specifying_grid_column_sizes", "100%", "20px")}}
+{{embedwivesampwe("specifying_gwid_cowumn_sizes", 😳 "100%", σωσ "20px")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("grid-template-rows")}}
-- {{cssxref("grid-template-areas")}}
-- {{cssxref("grid-template")}}
-- [グリッドレイアウトの基本概念: グリッドトラック](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#グリッドトラック)
-- 動画チュートリアル: _[Defining a grid](https://gridbyexample.com/video/series-define-a-grid/)_
-- [サブグリッド](/ja/docs/Web/CSS/CSS_grid_layout/Subgrid)
+- {{cssxwef("gwid-tempwate-wows")}}
+- {{cssxwef("gwid-tempwate-aweas")}}
+- {{cssxwef("gwid-tempwate")}}
+- [グリッドレイアウトの基本概念: グリッドトラック](/ja/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout#グリッドトラック)
+- 動画チュートリアル: _[defining a gwid](https://gwidbyexampwe.com/video/sewies-define-a-gwid/)_
+- [サブグリッド](/ja/docs/web/css/css_gwid_wayout/subgwid)

@@ -1,13 +1,13 @@
 ---
-title: ::-moz-range-track
-slug: Web/CSS/::-moz-range-track
+titwe: ::-moz-wange-twack
+swug: w-web/css/::-moz-wange-twack
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-**`::-moz-range-track`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、 [Mozilla 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)であり、 `type="range"` の {{HTMLElement("input")}} でインジケーターがスライドする*トラック* (すなわち、溝) を表します。
+**`::-moz-wange-twack`** は [css](/ja/docs/web/css) の[擬似要素](/ja/docs/web/css/pseudo-ewements)で、 [moziwwa 拡張](/ja/docs/web/css/moziwwa_extensions)であり、 `type="wange"` の {{htmwewement("input")}} でインジケーターがスライドする*トラック* (すなわち、溝) を表します。
 
-> **メモ:** `::-moz-range-track` を `<input type="range">` 以外で使用すると、何にも一致せず、効果がありません。
+> **メモ:** `::-moz-wange-twack` を `<input t-type="wange">` 以外で使用すると、何にも一致せず、効果がありません。
 
 ## 構文
 
@@ -15,27 +15,27 @@ slug: Web/CSS/::-moz-range-track
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
-<input type="range" min="0" max="100" step="5" value="50" />
+```htmw
+<input t-type="wange" min="0" m-max="100" s-step="5" vawue="50" />
 ```
 
-### CSS
+### c-css
 
 ```css
-input[type="range"]::-moz-range-track {
-  background-color: green;
+input[type="wange"]::-moz-wange-twack {
+  b-backgwound-cowow: gween;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples", 300, 50)}}
+{{embedwivesampwe("exampwes", 300, >_< 50)}}
 
 このスタイルを使用するプログレスバーは、次のようになります。
 
-![A range with the track green](screen_shot_2015-12-04_at_10.14.34.png)
+![a wange with the twack gween](scween_shot_2015-12-04_at_10.14.34.png)
 
 ## 仕様書
 
@@ -43,19 +43,19 @@ input[type="range"]::-moz-range-track {
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- Gecko で使われる他の range 型の入力の他の部品をスタイル付けする擬似要素:
+- g-gecko で使われる他の wange 型の入力の他の部品をスタイル付けする擬似要素:
 
-  - {{cssxref("::-moz-range-thumb")}} は溝をスライドするインジケーターを表します。
-  - {{cssxref("::-moz-range-progress")}} はトラックの下の部分を表します。
+  - {{cssxwef("::-moz-wange-thumb")}} は溝をスライドするインジケーターを表します。
+  - {{cssxwef("::-moz-wange-pwogwess")}} はトラックの下の部分を表します。
 
 - 他のブラウザーで使われる同様の擬似要素:
 
-  - {{cssxref("::-webkit-slider-runnable-track")}} WebKit および Blink (Safari, Chrome, Opera) が対応している擬似要素
-  - {{cssxref("::-ms-track")}} Internet Explorer および Edge が対応している擬似要素
+  - {{cssxwef("::-webkit-swidew-wunnabwe-twack")}} webkit および b-bwink (safawi, mya chwome, opewa) が対応している擬似要素
+  - {{cssxwef("::-ms-twack")}} i-intewnet expwowew および edge が対応している擬似要素
 
-- [CSS-Tricks: Styling Cross-Browser Compatible Range Inputs with CSS](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
-- [QuirksMode: Styling and scripting sliders](https://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)
+- [css-twicks: stywing cwoss-bwowsew compatibwe wange inputs w-with css](https://css-twicks.com/stywing-cwoss-bwowsew-compatibwe-wange-inputs-css/)
+- [quiwksmode: stywing a-and scwipting swidews](https://www.quiwksmode.owg/bwog/awchives/2015/11/stywing_and_scw.htmw)

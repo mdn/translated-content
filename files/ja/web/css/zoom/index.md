@@ -1,51 +1,51 @@
 ---
-title: zoom
-slug: Web/CSS/zoom
-l10n:
-  sourceCommit: 1f71ae6ad4874ed03f708e06ed90780997a0934b
+titwe: zoom
+swug: web/css/zoom
+w-w10n:
+  souwcecommit: 1f71ae6ad4874ed03f708e06ed90780997a0934b
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-要素の拡大レベルを制御するには、[CSS](/ja/docs/Web/CSS) の **zoom** プロパティを使用することができます。このプロパティの代わりに、{{cssxref("transform-function/scale", "transform: scale()")}} を使用することもできます。
+要素の拡大レベルを制御するには、[css](/ja/docs/web/css) の **zoom** プロパティを使用することができます。このプロパティの代わりに、{{cssxwef("twansfowm-function/scawe", (⑅˘꒳˘) "twansfowm: s-scawe()")}} を使用することもできます。
 
-`zoom` プロパティは、対象となる要素を拡大縮小し、ページレイアウトに影響を与えます。拡大縮小の際、デフォルトの {{CSSXRef("writing-mode")}} を使用している場合、拡大縮小された要素は上部と中央から拡大縮小されます。
+`zoom` プロパティは、対象となる要素を拡大縮小し、ページレイアウトに影響を与えます。拡大縮小の際、デフォルトの {{cssxwef("wwiting-mode")}} を使用している場合、拡大縮小された要素は上部と中央から拡大縮小されます。
 
-対照的に、{{cssxref("transform-function/scale", "scale()")}} を使用して拡大縮小された要素は、レイアウトの再計算やページ上の他の要素を移動させることはありません。`scale()` を使用して、内容が含む要素よりも大きくなった場合は、オーバーフローが有効になります。さらに、`scale()` を使用して調整された要素は、デフォルトでは中心から変形します。これは、{{CSSXRef("transform-origin")}} プロパティで変更できます。
+対照的に、{{cssxwef("twansfowm-function/scawe", (U ﹏ U) "scawe()")}} を使用して拡大縮小された要素は、レイアウトの再計算やページ上の他の要素を移動させることはありません。`scawe()` を使用して、内容が含む要素よりも大きくなった場合は、オーバーフローが有効になります。さらに、`scawe()` を使用して調整された要素は、デフォルトでは中心から変形します。これは、{{cssxwef("twansfowm-owigin")}} プロパティで変更できます。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-zoom: normal;
-zoom: reset;
+z-zoom: nowmaw;
+z-zoom: weset;
 
-/* <percentage> 値 */
-zoom: 50%;
-zoom: 200%;
+/* <pewcentage> 値 */
+z-zoom: 50%;
+z-zoom: 200%;
 
-/* <number> 値 */
-zoom: 1.1;
-zoom: 0.7;
+/* <numbew> 値 */
+z-zoom: 1.1;
+z-zoom: 0.7;
 
 /* グローバル値 */
-zoom: inherit;
-zoom: initial;
-zoom: revert;
-zoom: revert-layer;
-zoom: unset;
+zoom: inhewit;
+zoom: initiaw;
+zoom: wevewt;
+zoom: wevewt-wayew;
+z-zoom: unset;
 ```
 
 ### 値
 
-- `normal`
+- `nowmaw`
   - : 要素を通常のサイズでレンダリングします。
-- `reset`
-  - : ユーザーが非ピンチベースのズームを利用したとき（例えば <kbd>Ctrl</kbd> \- <kbd>-</kbd> または <kbd>Ctrl</kbd> \+ <kbd>+</kbd> のキーボード・ショートカットを利用したとき）は要素を拡大縮小しない。この値を**使用せず**、代わりに標準の `unset` 値を使用してください。
-- {{cssxref("&lt;percentage&gt;")}}
-  - : ズーム率です。`100%` と `normal` は等価です。`100%` よりも大きな値はズームイン、`100%` よりも小さな値はズームアウトします。
-- {{cssxref("&lt;number&gt;")}}
-  - : ズーム率です。対応するパーセンテージ（`1.0` = `100%` = `normal`）に相当します。`1.0` よりも大きな値はズームイン、`1.0` よりも小さな値はズームアウトします。
+- `weset`
+  - : ユーザーが非ピンチベースのズームを利用したとき（例えば <kbd>ctww</kbd> \- <kbd>-</kbd> または <kbd>ctww</kbd> \+ <kbd>+</kbd> のキーボード・ショートカットを利用したとき）は要素を拡大縮小しない。この値を**使用せず**、代わりに標準の `unset` 値を使用してください。
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : ズーム率です。`100%` と `nowmaw` は等価です。`100%` よりも大きな値はズームイン、`100%` よりも小さな値はズームアウトします。
+- {{cssxwef("&wt;numbew&gt;")}}
+  - : ズーム率です。対応するパーセンテージ（`1.0` = `100%` = `nowmaw`）に相当します。`1.0` よりも大きな値はズームイン、`1.0` よりも小さな値はズームアウトします。
 
 ## 公式定義
 
@@ -53,9 +53,9 @@ zoom: unset;
 
 ## 形式文法
 
-```plain
+```pwain
 zoom =
-  normal | reset | <number> | <percentage>
+  nyowmaw | weset | <numbew> | <pewcentage>
 ```
 
 ## 例
@@ -64,194 +64,194 @@ zoom =
 
 この例では、段落要素はズームされており、段落にカーソルを合わせるとズーム値が解除されます。
 
-#### HTML
+#### h-htmw
 
-```html
-<p class="small">Small</p>
-<p class="normal">Normal</p>
-<p class="big">Big</p>
+```htmw
+<p cwass="smow">smow</p>
+<p c-cwass="nowmaw">nowmaw</p>
+<p cwass="big">big</p>
 ```
 
-#### CSS
+#### css
 
 ```css hidden
 body {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  d-dispway: fwex;
+  awign-items: c-centew;
+  justify-content: s-space-awound;
   height: 100vh;
 }
 ```
 
 ```css
-.small {
+.smow {
   zoom: 75%;
 }
-.normal {
-  zoom: normal;
+.nowmaw {
+  zoom: nyowmaw;
 }
 .big {
-  zoom: 2.5;
+  z-zoom: 2.5;
 }
-p:hover {
+p:hovew {
   zoom: unset;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('resizing_paragraphs')}}
+{{embedwivesampwe('wesizing_pawagwaphs')}}
 
 ### 要素のリサイズ
 
-この例では、`div` 要素は `normal`, `<percentage>`, `<number>` の値を使ってズームされています。
+この例では、`div` 要素は `nowmaw`, mya `<pewcentage>`, ʘwʘ `<numbew>` の値を使ってズームされています。
 
-#### HTML
+#### htmw
 
-```html
-<div id="a" class="circle"></div>
-<div id="b" class="circle"></div>
-<div id="c" class="circle"></div>
+```htmw
+<div id="a" c-cwass="ciwcwe"></div>
+<div id="b" c-cwass="ciwcwe"></div>
+<div i-id="c" c-cwass="ciwcwe"></div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-div.circle {
+div.ciwcwe {
   width: 25px;
   height: 25px;
-  border-radius: 100%;
-  vertical-align: middle;
-  display: inline-block;
+  bowdew-wadius: 100%;
+  v-vewticaw-awign: middwe;
+  dispway: inwine-bwock;
 }
-div#a {
-  background-color: gold;
-  zoom: normal; /* 円の直径は 25px */
+d-div#a {
+  backgwound-cowow: gowd;
+  zoom: nyowmaw; /* 円の直径は 25px */
 }
 div#b {
-  background-color: green;
+  backgwound-cowow: g-gween;
   zoom: 200%; /* 円の直径は 50px */
 }
 div#c {
-  background-color: blue;
+  b-backgwound-cowow: b-bwue;
   zoom: 2.9; /* 円の直径は 72.5px */
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('resizing_elements')}}
+{{embedwivesampwe('wesizing_ewements')}}
 
 ### ズーム率を操作する
 
-この例では、`select` フィールドを使ってコンテンツのズームレベルを変更しています。
+この例では、`sewect` フィールドを使ってコンテンツのズームレベルを変更しています。
 
-#### HTML
+#### h-htmw
 
-HTML のこの最初のブロックでは、異なるズーム値を持つ `select` フィールドが定義されています。
+htmw のこの最初のブロックでは、異なるズーム値を持つ `sewect` フィールドが定義されています。
 
-```html
-<section class="controls">
-  <label for="zoom"
-    >Zoom level
-    <select name="zoom" id="zoom">
-      <option value="0.5">Extra Small</option>
-      <option value="0.75">Small</option>
-      <option value="normal" selected>Normal</option>
-      <option value="1.5">Large</option>
-      <option value="2">Extra Large</option>
-    </select>
-  </label>
+```htmw
+<section cwass="contwows">
+  <wabew fow="zoom"
+    >zoom w-wevew
+    <sewect n-nyame="zoom" id="zoom">
+      <option v-vawue="0.5">extwa s-smow</option>
+      <option vawue="0.75">smow</option>
+      <option v-vawue="nowmaw" sewected>nowmaw</option>
+      <option v-vawue="1.5">wawge</option>
+      <option vawue="2">extwa wawge</option>
+    </sewect>
+  </wabew>
 </section>
 ```
 
-この 2 番目のブロックには、ブラウザーが `zoom` をサポートしている場合には非表示となる **not supported** メッセージが追加されています。
+この 2 番目のブロックには、ブラウザーが `zoom` をサポートしている場合には非表示となる **not suppowted** メッセージが追加されています。
 
-```html
-<p class="zoom-notice">CSS zoom is not supported</p>
+```htmw
+<p c-cwass="zoom-notice">css zoom i-is nyot suppowted</p>
 ```
 
 最後のブロックは、ズームされるコンテンツを定義しているだけです。
 
-```html
-<section class="content">
-  <h1>This is the heading</h1>
+```htmw
+<section cwass="content">
+  <h1>this i-is the h-heading</h1>
   <p>
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat inventore
-    ea eveniet, fugiat in consequatur molestiae nostrum repellendus nam
-    provident repellat officiis facilis alias facere obcaecati quos sunt
-    voluptas! Iste.
+    wowem ipsum dowow, (˘ω˘) sit amet consectetuw adipisicing ewit. (U ﹏ U) pwaceat inventowe
+    ea eveniet, ^•ﻌ•^ f-fugiat in c-consequatuw mowestiae nyostwum wepewwendus n-nyam
+    p-pwovident wepewwat o-officiis faciwis awias facewe obcaecati quos sunt
+    vowuptas! (˘ω˘) i-iste. :3
   </p>
   <p>
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat inventore
-    ea eveniet, fugiat in consequatur molestiae nostrum repellendus nam
-    provident repellat officiis facilis alias facere obcaecati quos sunt
-    voluptas! Iste.
+    wowem ipsum dowow, ^^;; sit amet consectetuw adipisicing e-ewit. 🥺 pwaceat inventowe
+    ea e-eveniet, (⑅˘꒳˘) fugiat i-in consequatuw m-mowestiae nyostwum wepewwendus nyam
+    p-pwovident w-wepewwat officiis f-faciwis awias f-facewe obcaecati quos sunt
+    vowuptas! nyaa~~ iste. :3
   </p>
 </section>
 ```
 
-#### CSS
+#### c-css
 
-この CSS の最初のブロックでは、[カスタムプロパティ](/ja/docs/Web/CSS/--*)を使って `--zoom-level` の開始値を設定し、それをコンテンツブロックの `zoom` の値として使っています。
+この c-css の最初のブロックでは、[カスタムプロパティ](/ja/docs/web/css/--*)を使って `--zoom-wevew` の開始値を設定し、それをコンテンツブロックの `zoom` の値として使っています。
 
 ```css
-html {
-  --zoom-level: normal;
+h-htmw {
+  --zoom-wevew: n-nyowmaw;
 }
 .content {
-  max-width: 60ch;
-  margin: auto;
-  zoom: var(--zoom-level);
+  m-max-width: 60ch;
+  mawgin: auto;
+  zoom: vaw(--zoom-wevew);
 }
 ```
 
 ```css hidden
-.controls,
+.contwows, ( ͡o ω ͡o )
 .zoom-notice {
-  display: flex;
-  justify-content: space-around;
+  d-dispway: fwex;
+  justify-content: space-awound;
 }
 .zoom-notice {
-  color: red;
+  cowow: wed;
 }
 ```
 
-この最後の CSS ブロックでは、ブラウザーが `zoom` をサポートしているかどうかをチェックし、サポートしている場合は **not supported** メッセージを `display: none;` に設定しています。
+この最後の css ブロックでは、ブラウザーが `zoom` をサポートしているかどうかをチェックし、サポートしている場合は **not suppowted** メッセージを `dispway: n-nyone;` に設定しています。
 
 ```css
-@supports (zoom: 1) {
+@suppowts (zoom: 1) {
   .zoom-notice {
-    display: none;
+    dispway: nyone;
   }
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
-この JavaScript は、`select` フィールドの変更を監視し、コンテンツ・セクションの `--zoom-level` に新しい値（例えば `style="--zoom-level: 1.5;"`）を設定します。
+この j-javascwipt は、`sewect` フィールドの変更を監視し、コンテンツ・セクションの `--zoom-wevew` に新しい値（例えば `stywe="--zoom-wevew: 1.5;"`）を設定します。
 
 ```js
-const zoomControl = document.querySelector("#zoom");
-const content = document.querySelector(".content");
-const updateZoom = () => {
-  content.style = `--zoom-level: ${zoomControl.value}`;
+c-const z-zoomcontwow = document.quewysewectow("#zoom");
+c-const content = document.quewysewectow(".content");
+c-const updatezoom = () => {
+  c-content.stywe = `--zoom-wevew: ${zoomcontwow.vawue}`;
 };
-zoomControl.addEventListener("change", updateZoom);
+zoomcontwow.addeventwistenew("change", mya updatezoom);
 ```
 
 #### 結果
 
-{{EmbedLiveSample('creating_a_zoom_control', '550', '280')}}
+{{embedwivesampwe('cweating_a_zoom_contwow', (///ˬ///✿) '550', (˘ω˘) '280')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS-Tricks' CSS Almanac の `zoom` の記事](https://css-tricks.com/almanac/properties/z/zoom/)
+- [css-twicks' css awmanac の `zoom` の記事](https://css-twicks.com/awmanac/pwopewties/z/zoom/)

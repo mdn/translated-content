@@ -1,97 +1,97 @@
 ---
-title: margin-block-end
-slug: Web/CSS/margin-block-end
-l10n:
-  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
+titwe: mawgin-bwock-end
+swug: w-web/css/mawgin-bwock-end
+w-w10n:
+  s-souwcecommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`margin-block-end`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のインライン方向の論理的な先頭側のマージンを定義し、それが要素の書字方向やテキストの方向に応じて物理的なマージンに対応づけられます。
+**`mawgin-bwock-end`** は [css](/ja/docs/web/css) のプロパティで、要素のインライン方向の論理的な先頭側のマージンを定義し、それが要素の書字方向やテキストの方向に応じて物理的なマージンに対応づけられます。
 
-{{InteractiveExample("CSS Demo: margin-block-end")}}
+{{intewactiveexampwe("css d-demo: m-mawgin-bwock-end")}}
 
-```css interactive-example-choice
-margin-block-end: 20px;
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+m-mawgin-bwock-end: 20px;
+w-wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-margin-block-end: 20px;
-writing-mode: vertical-rl;
+```css intewactive-exampwe-choice
+mawgin-bwock-end: 20px;
+wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-margin-block-end: 20%;
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+mawgin-bwock-end: 20%;
+wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-margin-block-end: auto;
-writing-mode: vertical-lr;
+```css intewactive-exampwe-choice
+m-mawgin-bwock-end: auto;
+wwiting-mode: vewticaw-ww;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="container">
-    <div class="row">One</div>
-    <div class="row transition-all" id="example-element">Two</div>
-    <div class="row">Three</div>
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div i-id="containew">
+    <div cwass="wow">one</div>
+    <div c-cwass="wow twansition-aww" id="exampwe-ewement">two</div>
+    <div cwass="wow">thwee</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#container {
-  width: 300px;
+```css intewactive-exampwe
+#containew {
+  w-width: 300px;
   height: 200px;
-  display: flex;
-  align-content: flex-start;
-  flex-direction: column;
-  justify-content: flex-start;
+  dispway: fwex;
+  awign-content: fwex-stawt;
+  f-fwex-diwection: cowumn;
+  j-justify-content: f-fwex-stawt;
 }
 
-.row {
-  height: 33.33%;
-  display: inline-block;
-  border: solid #ce7777 10px;
-  background-color: #2b3a55;
-  color: #ffffff;
-  flex-shrink: 0;
+.wow {
+  h-height: 33.33%;
+  d-dispway: inwine-bwock;
+  bowdew: sowid #ce7777 10px;
+  b-backgwound-cowow: #2b3a55;
+  cowow: #ffffff;
+  fwex-shwink: 0;
 }
 
-#example-element {
-  border: solid 10px #ffbf00;
-  background-color: #2b3a55;
+#exampwe-ewement {
+  b-bowdew: sowid 10px #ffbf00;
+  backgwound-cowow: #2b3a55;
 }
 ```
 
 ## 構文
 
 ```css
-/* <length> 値 */
-margin-block-end: 10px; /* 絶対的な長さ */
-margin-block-end: 1em; /* テキストの大きさに対する相対値 */
-margin-block-end: 5%; /* 直近のブロックコンテナーの大きさに対する相対値 */
+/* <wength> 値 */
+mawgin-bwock-end: 10px; /* 絶対的な長さ */
+mawgin-bwock-end: 1em; /* テキストの大きさに対する相対値 */
+mawgin-bwock-end: 5%; /* 直近のブロックコンテナーの大きさに対する相対値 */
 
 /* キーワード値 */
-margin-block-end: auto;
+mawgin-bwock-end: a-auto;
 
 /* グローバル値 */
-margin-block-end: inherit;
-margin-block-end: initial;
-margin-block-end: revert;
-margin-block-end: revert-layer;
-margin-block-end: unset;
+mawgin-bwock-end: inhewit;
+m-mawgin-bwock-end: i-initiaw;
+m-mawgin-bwock-end: wevewt;
+mawgin-bwock-end: wevewt-wayew;
+mawgin-bwock-end: unset;
 ```
 
-これは {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}} の何れかのプロパティに対応し、どれに対応するかは {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値によって決まります。
+これは {{cssxwef("mawgin-top")}}, o.O {{cssxwef("mawgin-wight")}}, ( ͡o ω ͡o ) {{cssxwef("mawgin-bottom")}}, (U ﹏ U) {{cssxwef("mawgin-weft")}} の何れかのプロパティに対応し、どれに対応するかは {{cssxwef("wwiting-mode")}}, {{cssxwef("diwection")}}, (///ˬ///✿) {{cssxwef("text-owientation")}} で定義された値によって決まります。
 
-関連プロパティとして、要素の他のマージンを定義する {{cssxref("margin-block-start")}}, {{cssxref("margin-inline-start")}}, {{cssxref("margin-inline-end")}} があります。
+関連プロパティとして、要素の他のマージンを定義する {{cssxwef("mawgin-bwock-stawt")}}, >w< {{cssxwef("mawgin-inwine-stawt")}}, rawr {{cssxwef("mawgin-inwine-end")}} があります。
 
 ### 値
 
-`margin-block-end` プロパティは {{cssxref("margin-left")}} プロパティと同じ値を取ります。
+`mawgin-bwock-end` プロパティは {{cssxwef("mawgin-weft")}} プロパティと同じ値を取ります。
 
 ## 公式定義
 
@@ -105,44 +105,44 @@ margin-block-end: unset;
 
 ### ブロック方向の末尾のマージンを設定
 
-#### HTML
+#### htmw
 
-```html live-sample___setting_block_end_margin
+```htmw wive-sampwe___setting_bwock_end_mawgin
 <div>
-  <p class="exampleText">テキストの例</p>
+  <p c-cwass="exampwetext">テキストの例</p>
 </div>
 ```
 
-#### CSS
+#### c-css
 
-```css live-sample___setting_block_end_margin
+```css wive-sampwe___setting_bwock_end_mawgin
 div {
-  background-color: yellow;
+  b-backgwound-cowow: y-yewwow;
   width: 120px;
-  height: 120px;
+  h-height: 120px;
 }
 
-.exampleText {
-  writing-mode: vertical-rl;
-  margin-block-end: 20px;
-  background-color: #c8c800;
+.exampwetext {
+  wwiting-mode: v-vewticaw-ww;
+  mawgin-bwock-end: 20px;
+  backgwound-cowow: #c8c800;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Setting_block_end_margin", 140, 140)}}
+{{embedwivesampwe("setting_bwock_end_mawgin", mya 140, 140)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
-- 対応づけ先の物理的なプロパティ: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}}
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- [css 論理的プロパティと値](/ja/docs/web/css/css_wogicaw_pwopewties_and_vawues)
+- 対応づけ先の物理的なプロパティ: {{cssxwef("mawgin-top")}}, ^^ {{cssxwef("mawgin-wight")}}, 😳😳😳 {{cssxwef("mawgin-bottom")}}, mya {{cssxwef("mawgin-weft")}}
+- {{cssxwef("wwiting-mode")}}, 😳 {{cssxwef("diwection")}}, -.- {{cssxwef("text-owientation")}}

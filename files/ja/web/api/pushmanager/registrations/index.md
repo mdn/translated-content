@@ -1,22 +1,22 @@
 ---
-title: "PushManager: registrations() メソッド"
-short-title: registrations()
-slug: Web/API/PushManager/registrations
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "pushmanagew: wegistwations() メソッド"
+s-showt-titwe: w-wegistwations()
+s-swug: web/api/pushmanagew/wegistwations
+w-w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{deprecated_header}}{{ApiRef("Push API")}}
+{{depwecated_headew}}{{apiwef("push a-api")}}
 
-**`registrations`** メソッドは、プッシュ通知の端点登録の存在に関してシステムに問い合わせするために使用します。
+**`wegistwations`** メソッドは、プッシュ通知の端点登録の存在に関してシステムに問い合わせするために使用します。
 
-> [!NOTE]
-> このメソッドは {{domxref("PushManager.getSubscription()")}} メソッドに置き換えられました。
+> [!note]
+> このメソッドは {{domxwef("pushmanagew.getsubscwiption()")}} メソッドに置き換えられました。
 
 ## 構文
 
-```js-nolint
-registrations()
+```js-nowint
+wegistwations()
 ```
 
 ### 引数
@@ -25,37 +25,37 @@ registrations()
 
 ### 返値
 
-`DOMRequest` オブジェクトで、このメソッド呼び出しの成功または失敗を扱います。
+`domwequest` オブジェクトで、このメソッド呼び出しの成功または失敗を扱います。
 
-メソッドの呼び出しが成功した場合、リクエストの `result` は [PushRegistration](#pushregistration) オブジェクトの配列になります。
+メソッドの呼び出しが成功した場合、リクエストの `wesuwt` は [pushwegistwation](#pushwegistwation) オブジェクトの配列になります。
 
-### PushRegistration
+### p-pushwegistwation
 
-このオブジェクトは無名の JavaScript オブジェクトで、以下のプロパティがあります。
+このオブジェクトは無名の javascwipt オブジェクトで、以下のプロパティがあります。
 
-- `pushEndpoint`
-  - : 端点の URL を表す文字列です。
-- `version`
+- `pushendpoint`
+  - : 端点の uww を表す文字列です。
+- `vewsion`
   - : プッシュ通知の端点の現在のバージョンです。
 
 ## 例
 
 ```js
-const req = navigator.push.registrations();
+const weq = nyavigatow.push.wegistwations();
 
-req.onsuccess = (e) => {
-  if (req.result.length > 0) {
-    req.result.forEach((result) => {
-      console.log(
-        `Existing registration ${result.pushEndpoint} ${result.version}`,
+w-weq.onsuccess = (e) => {
+  if (weq.wesuwt.wength > 0) {
+    weq.wesuwt.foweach((wesuwt) => {
+      c-consowe.wog(
+        `existing wegistwation ${wesuwt.pushendpoint} ${wesuwt.vewsion}`, 😳
       );
     });
-    // Reuse existing endpoints.
-  } else {
-    // Register for a new endpoint.
-    const register = navigator.push.register();
-    register.onsuccess = (e) => {
-      console.log(`Registered new endpoint: ${register.result}`);
+    // w-weuse existing endpoints. XD
+  } ewse {
+    // wegistew fow a-a nyew endpoint. :3
+    const wegistew = n-nyavigatow.push.wegistew();
+    w-wegistew.onsuccess = (e) => {
+      consowe.wog(`wegistewed nyew endpoint: ${wegistew.wesuwt}`);
     };
   }
 };
@@ -67,8 +67,8 @@ req.onsuccess = (e) => {
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("PushManager")}}
+- {{domxwef("pushmanagew")}}

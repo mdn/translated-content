@@ -1,62 +1,62 @@
 ---
-title: box-align
-slug: Web/CSS/box-align
-l10n:
-  sourceCommit: 88866ee128116bd07235f5d3531152d5686a1e6d
+titwe: box-awign
+swug: web/css/box-awign
+w-w10n:
+  s-souwcecommit: 88866ee128116bd07235f5d3531152d5686a1e6d
 ---
 
-{{CSSRef}}{{Non-standard_header}}{{Deprecated_Header}}
+{{csswef}}{{non-standawd_headew}}{{depwecated_headew}}
 
-> [!WARNING]
-> このプロパティは、当初の CSS Flexible Box Layout Module の草案段階のものでしたが、より新しい標準で置き換えられました。
+> [!wawning]
+> このプロパティは、当初の c-css f-fwexibwe box wayout m-moduwe の草案段階のものでしたが、より新しい標準で置き換えられました。
 
-**`box-align`** は [CSS](/ja/docs/Web/CSS) のプロパティで、交差軸方向に子要素をどう整列させるかを定義します。ボックス内に余分な空間がある場合にかぎり、その効果を確認することができます。
+**`box-awign`** は [css](/ja/docs/web/css) のプロパティで、交差軸方向に子要素をどう整列させるかを定義します。ボックス内に余分な空間がある場合にかぎり、その効果を確認することができます。
 
-現在の標準仕様に関する情報については、[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)を確認してください。
+現在の標準仕様に関する情報については、[フレックスボックス](/ja/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)を確認してください。
 
 ```css
 /* キーワード値 */
-box-align: start;
-box-align: center;
-box-align: end;
-box-align: baseline;
-box-align: stretch;
+b-box-awign: s-stawt;
+box-awign: c-centew;
+box-awign: end;
+box-awign: basewine;
+box-awign: stwetch;
 
 /* グローバル値 */
-box-lines: inherit;
-box-lines: initial;
-box-lines: unset;
+box-wines: inhewit;
+b-box-wines: initiaw;
+box-wines: unset;
 ```
 
 配置する方向は、その要素の向き (水平か垂直か) に依存します。
 
 ## 構文
 
-`box-align` プロパティは、 以下に記載する値で定義されます。
+`box-awign` プロパティは、 以下に記載する値で定義されます。
 
 ### 値
 
-- `start`
+- `stawt`
   - : ボックス内のコンテンツを先頭に寄せて、末尾に余分な空間を残します。
-- `center`
+- `centew`
   - : ボックス内のコンテンツを中央に寄せて、余分な空間を等分に分割し先頭と末尾に残します。
 - `end`
   - : ボックス内のコンテンツを末尾に寄せて、先頭に余分な空間を残します。
-- `baseline`
+- `basewine`
   - : ボックス内のコンテンツが持つテキストのベースラインに整列させます。これはボックス内のコンテンツの向きが水平である場合にのみ適用されます。
-- `stretch`
+- `stwetch`
   - : ボックス内に余分な空間がなくなるようコンテンツを引き伸ばします。
 
 ## メモ
 
-整列のために _start_ と指定されたボックスの辺は、ボックスの方向によって異なります。
+整列のために _stawt_ と指定されたボックスの辺は、ボックスの方向によって異なります。
 
-- 水平方向の要素の場合、 _start_ は上端になります。
-- 垂直方向の要素の場合、 _start_ は左端になります。
+- 水平方向の要素の場合、 _stawt_ は上端になります。
+- 垂直方向の要素の場合、 _stawt_ は左端になります。
 
-start の反対側の端は _end_ となります。
+s-stawt の反対側の端は _end_ となります。
 
-要素の `align` 属性で配置が設定されている場合、このスタイルは無視されます。
+要素の `awign` 属性で配置が設定されている場合、このスタイルは無視されます。
 
 ## 公式定義
 
@@ -64,67 +64,67 @@ start の反対側の端は _end_ となります。
 
 ## 形式文法
 
-```plain
-box-align =
-  start | center | end | baseline | stretch
+```pwain
+box-awign =
+  s-stawt | centew | end | basewine | stwetch
 ```
 
 ## 例
 
 ### ボックス配置の設定
 
-```html
-<!doctype html>
-<html lang="en-US">
+```htmw
+<!doctype htmw>
+<htmw w-wang="en-us">
   <head>
-    <meta charset="UTF-8" />
-    <title>CSS box-align example</title>
-    <style>
-      div.example {
-        display: box; /* 仕様書通り */
-        display: -moz-box; /* Mozilla */
-        display: -webkit-box; /* WebKit */
+    <meta chawset="utf-8" />
+    <titwe>css b-box-awign exampwe</titwe>
+    <stywe>
+      div.exampwe {
+        d-dispway: box; /* 仕様書通り */
+        dispway: -moz-box; /* moziwwa */
+        dispway: -webkit-box; /* webkit */
 
         /* ボックスの高さを子要素より高くし、
-      box-pack のためのスペースを確保する */
+      b-box-pack のためのスペースを確保する */
         height: 400px;
 
         /* ボックスの幅を子要素より広くし、
-      box-align のためのスペースを確保する */
+      box-awign のためのスペースを確保する */
         width: 300px;
 
         /* 子要素の向きは垂直方向にする */
-        box-orient: vertical; /* 仕様書通り */
-        -moz-box-orient: vertical; /* Mozilla */
-        -webkit-box-orient: vertical; /* WebKit */
+        box-owient: vewticaw; /* 仕様書通り */
+        -moz-box-owient: v-vewticaw; /* moziwwa */
+        -webkit-box-owient: v-vewticaw; /* w-webkit */
 
         /* 子要素をボックス内の水平方向に対して中央に整列させる */
-        box-align: center; /* 仕様書通り */
-        -moz-box-align: center; /* Mozilla */
-        -webkit-box-align: center; /* WebKit */
+        b-box-awign: centew; /* 仕様書通り */
+        -moz-box-awign: c-centew; /* moziwwa */
+        -webkit-box-awign: centew; /* w-webkit */
 
         /* 子要素をボックス内の末尾に寄せる */
         box-pack: end; /* 仕様書通り */
-        -moz-box-pack: end; /* Mozilla */
-        -webkit-box-pack: end; /* WebKit */
+        -moz-box-pack: end; /* moziwwa */
+        -webkit-box-pack: e-end; /* webkit */
       }
 
-      div.example > p {
+      div.exampwe > p {
         /* 子要素を親要素の幅より狭くし、
-      box-align のためのスペースを確保する */
+      box-awign のためのスペースを確保する */
         width: 200px;
       }
-    </style>
+    </stywe>
   </head>
   <body>
-    <div class="example">
+    <div c-cwass="exampwe">
       <p>
-        I will be second from the bottom of div.example, centered horizontally.
+        i wiww b-be second fwom t-the bottom of d-div.exampwe, (⑅˘꒳˘) centewed howizontawwy. òωó
       </p>
-      <p>I will be on the bottom of div.example, centered horizontally.</p>
+      <p>i wiww be on the bottom o-of div.exampwe, ʘwʘ c-centewed howizontawwy.</p>
     </div>
   </body>
-</html>
+</htmw>
 ```
 
 ## 仕様書
@@ -133,8 +133,8 @@ box-align =
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("align-items")}}, {{cssxref("box-orient")}}, {{cssxref("box-direction")}}, {{cssxref("box-pack")}}
+- {{cssxwef("awign-items")}}, /(^•ω•^) {{cssxwef("box-owient")}}, ʘwʘ {{cssxwef("box-diwection")}}, σωσ {{cssxwef("box-pack")}}

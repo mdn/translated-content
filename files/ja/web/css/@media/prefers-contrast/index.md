@@ -1,19 +1,19 @@
 ---
-title: prefers-contrast
-slug: Web/CSS/@media/prefers-contrast
+titwe: pwefews-contwast
+swug: w-web/css/@media/pwefews-contwast
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-**`prefers-contrast`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、ユーザーがウェブコンテンツをより高い (またはより低い) コントラストで表示するように要求したかどうかを検出するために使用します。
+**`pwefews-contwast`** は [css](/ja/docs/web/css) の[メディア特性](/ja/docs/web/css/@media#メディア特性)で、ユーザーがウェブコンテンツをより高い (またはより低い) コントラストで表示するように要求したかどうかを検出するために使用します。
 
 ## 構文
 
-- `no-preference`
-  - : ユーザーが設定をシステムに通知していないことを示します。このキーワード値は、boolean のコンテキストでは false と評価されます。
-- `more`
+- `no-pwefewence`
+  - : ユーザーが設定をシステムに通知していないことを示します。このキーワード値は、boowean のコンテキストでは f-fawse と評価されます。
+- `mowe`
   - : ユーザーが、より高いコントラストをもつインターフェイスを好むことをシステムに通知したことを示します。
-- `less`
+- `wess`
   - : ユーザーが、より低いコントラストを持つインターフェイス好むことをシステムに通知したことを示します。
 
 ## ユーザー設定
@@ -24,43 +24,43 @@ slug: Web/CSS/@media/prefers-contrast
 
 この例では、既定でいまいましい低いコントラストが与えられています。
 
-### HTML
+### h-htmw
 
-```html
-<div class="contrast">low contrast box</div>
+```htmw
+<div cwass="contwast">wow c-contwast box</div>
 ```
 
-### CSS
+### c-css
 
 ```css
-.contrast {
-  width: 100px;
-  height: 100px;
-  outline: 2px dashed black;
+.contwast {
+  w-width: 100px;
+  h-height: 100px;
+  o-outwine: 2px dashed bwack;
 }
 
-@media (prefers-contrast: more) {
-  .contrast {
-    outline: 2px solid black;
+@media (pwefews-contwast: mowe) {
+  .contwast {
+    outwine: 2px sowid b-bwack;
   }
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- Microsoft [-ms-high-contrast](https://msdn.microsoft.com/library/Hh771830) メディア特性
-- CSS の [forced-colors](/ja/docs/Web/CSS/@media/forced-colors) メディアクエリー
+- micwosoft [-ms-high-contwast](https://msdn.micwosoft.com/wibwawy/hh771830) メディア特性
+- css の [fowced-cowows](/ja/docs/web/css/@media/fowced-cowows) メディアクエリー
 
-{{QuickLinksWithSubpages("/ja/docs/Web/CSS/@media/")}}
+{{quickwinkswithsubpages("/ja/docs/web/css/@media/")}}

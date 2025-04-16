@@ -1,95 +1,95 @@
 ---
-title: scroll-snap-stop
-slug: Web/CSS/scroll-snap-stop
+titwe: scwoww-snap-stop
+swug: w-web/css/scwoww-snap-stop
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`scroll-snap-stop`** は [CSS](/ja/docs/Web/CSS) のプロパティで、スクロールコンテナーが可能なスナップ位置を「通り過ぎる」ことを許可するかどうかを定義します。
+**`scwoww-snap-stop`** は [css](/ja/docs/web/css) のプロパティで、スクロールコンテナーが可能なスナップ位置を「通り過ぎる」ことを許可するかどうかを定義します。
 
 ```css
 /* キーワード値 */
-scroll-snap-stop: normal;
-scroll-snap-stop: always;
+s-scwoww-snap-stop: n-nyowmaw;
+scwoww-snap-stop: awways;
 
 /* グローバル値 */
-scroll-snap-type: inherit;
-scroll-snap-type: initial;
-scroll-snap-type: unset;
+s-scwoww-snap-type: i-inhewit;
+scwoww-snap-type: i-initiaw;
+s-scwoww-snap-type: u-unset;
 ```
 
-{{InteractiveExample("CSS Demo: scroll-snap-stop")}}
+{{intewactiveexampwe("css demo: scwoww-snap-stop")}}
 
-```css interactive-example-choice
-scroll-snap-stop: normal;
+```css intewactive-exampwe-choice
+scwoww-snap-stop: nyowmaw;
 ```
 
-```css interactive-example-choice
-scroll-snap-stop: always;
+```css intewactive-exampwe-choice
+scwoww-snap-stop: a-awways;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <p class="explanation">
-    The effect of this property can be noticed on devices with a touchpad. Try
-    to scroll through all items with a single swing. Value
-    <b class="keyword">'normal'</b> should pass through all pages, while
-    <b class="keyword">'always'</b> will stop at the second page.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <p cwass="expwanation">
+    the e-effect of this pwopewty can be nyoticed on devices with a touchpad. /(^•ω•^) t-twy
+    to scwoww thwough a-aww items with a-a singwe swing. :3 vawue
+    <b cwass="keywowd">'nowmaw'</b> shouwd pass thwough aww pages, (ꈍᴗꈍ) whiwe
+    <b c-cwass="keywowd">'awways'</b> wiww stop at the second page. /(^•ω•^)
   </p>
-  <div class="snap-container">
+  <div cwass="snap-containew">
     <div>1</div>
-    <div id="example-element">2</div>
+    <div id="exampwe-ewement">2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div cwass="info">scwoww »</div>
 </section>
 ```
 
-```css interactive-example
-.default-example {
-  flex-direction: column;
+```css intewactive-exampwe
+.defauwt-exampwe {
+  f-fwex-diwection: cowumn;
 }
 
-.explanation {
-  margin-top: 0;
+.expwanation {
+  m-mawgin-top: 0;
 }
 
-.keyword {
-  color: darkorange;
+.keywowd {
+  c-cowow: dawkowange;
 }
 
-.default-example .info {
-  width: 100%;
-  padding: 0.5em 0;
+.defauwt-exampwe .info {
+  w-width: 100%;
+  p-padding: 0.5em 0;
   font-size: 90%;
 }
 
-.snap-container {
-  text-align: left;
-  width: 250px;
+.snap-containew {
+  text-awign: weft;
+  w-width: 250px;
   height: 250px;
-  overflow-x: scroll;
-  display: flex;
-  box-sizing: border-box;
-  border: 1px solid black;
-  scroll-snap-type: x mandatory;
+  ovewfwow-x: s-scwoww;
+  dispway: fwex;
+  box-sizing: bowdew-box;
+  bowdew: 1px sowid bwack;
+  scwoww-snap-type: x-x mandatowy;
 }
 
-.snap-container > div {
-  flex: 0 0 250px;
-  width: 250px;
-  background-color: rebeccapurple;
-  color: #fff;
+.snap-containew > div {
+  fwex: 0 0 250px;
+  w-width: 250px;
+  b-backgwound-cowow: w-webeccapuwpwe;
+  cowow: #fff;
   font-size: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  scroll-snap-align: start;
+  dispway: f-fwex;
+  awign-items: c-centew;
+  justify-content: centew;
+  scwoww-snap-awign: s-stawt;
 }
 
-.snap-container > div:nth-child(even) {
-  background-color: #fff;
-  color: rebeccapurple;
+.snap-containew > d-div:nth-chiwd(even) {
+  backgwound-cowow: #fff;
+  c-cowow: webeccapuwpwe;
 }
 ```
 
@@ -97,14 +97,14 @@ scroll-snap-stop: always;
 
 ### 値
 
-- `normal`
-  - : スクロールコンテナーの視覚{{Glossary("viewport", "ビューポート")}}がスクロールされた時、可能なスナップ位置を「通り過ぎる」ことを許可します。
-- `always`
+- `nowmaw`
+  - : スクロールコンテナーの視覚{{gwossawy("viewpowt", (⑅˘꒳˘) "ビューポート")}}がスクロールされた時、可能なスナップ位置を「通り過ぎる」ことを許可します。
+- `awways`
   - : スクロールコンテナーは可能なスナップ位置を「通り過ぎる」ことを許可しません。最初の要素のスナップ位置にスナップします。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -112,160 +112,160 @@ scroll-snap-stop: always;
 
 ## 例
 
-<h3 id="Snapping_in_different_axes">様々な軸でのスナップ</h3>
+<h3 i-id="snapping_in_diffewent_axes">様々な軸でのスナップ</h3>
 
-この例は {{cssxref("scroll-snap-type")}} から複製したものに多少の修正を加えたものです。
+この例は {{cssxwef("scwoww-snap-type")}} から複製したものに多少の修正を加えたものです。
 
-#### CSS
+#### css
 
 ```css
 /* setup */
-:root,
-body {
+:woot, ( ͡o ω ͡o )
+b-body {
   height: 100%;
-  display: flex;
-  align-items: center;
+  d-dispway: fwex;
+  awign-items: c-centew;
   justify-content: space-between;
-  flex-flow: column nowrap;
-  font-family: monospace;
+  f-fwex-fwow: cowumn nowwap;
+  font-famiwy: monospace;
 }
-.container {
-  display: flex;
-  overflow: auto;
-  outline: 1px dashed lightgray;
-  flex: none;
+.containew {
+  dispway: fwex;
+  ovewfwow: auto;
+  outwine: 1px dashed wightgway;
+  f-fwex: nyone;
 }
 
-.container.x {
-  width: 100%;
+.containew.x {
+  w-width: 100%;
   height: 128px;
-  flex-flow: row nowrap;
+  f-fwex-fwow: w-wow nyowwap;
 }
 
-.container.y {
-  width: 256px;
+.containew.y {
+  w-width: 256px;
   height: 256px;
-  flex-flow: column nowrap;
+  fwex-fwow: cowumn nyowwap;
 }
-/* definite scroll snap */
-.mandatory-scroll-snapping > div {
-  scroll-snap-stop: always;
+/* d-definite scwoww snap */
+.mandatowy-scwoww-snapping > div {
+  scwoww-snap-stop: awways;
 }
-.proximity-scroll-snapping > div {
-  scroll-snap-stop: normal;
+.pwoximity-scwoww-snapping > d-div {
+  scwoww-snap-stop: n-nyowmaw;
 }
-/* scroll-snap */
-.x.mandatory-scroll-snapping {
-  scroll-snap-type: x mandatory;
-}
-
-.y.mandatory-scroll-snapping {
-  scroll-snap-type: y mandatory;
+/* s-scwoww-snap */
+.x.mandatowy-scwoww-snapping {
+  s-scwoww-snap-type: x mandatowy;
 }
 
-.x.proximity-scroll-snapping {
-  scroll-snap-type: x proximity;
+.y.mandatowy-scwoww-snapping {
+  s-scwoww-snap-type: y-y mandatowy;
 }
 
-.y.proximity-scroll-snapping {
-  scroll-snap-type: y proximity;
+.x.pwoximity-scwoww-snapping {
+  s-scwoww-snap-type: x-x pwoximity;
 }
 
-.container > div {
-  text-align: center;
-  scroll-snap-align: center;
-  flex: none;
+.y.pwoximity-scwoww-snapping {
+  scwoww-snap-type: y pwoximity;
 }
 
-.x.container > div {
-  line-height: 128px;
+.containew > d-div {
+  t-text-awign: c-centew;
+  scwoww-snap-awign: c-centew;
+  f-fwex: nyone;
+}
+
+.x.containew > div {
+  wine-height: 128px;
   font-size: 64px;
   width: 100%;
-  height: 128px;
+  h-height: 128px;
 }
 
-.y.container > div {
-  line-height: 256px;
+.y.containew > div {
+  wine-height: 256px;
   font-size: 128px;
   width: 256px;
   height: 256px;
 }
-/* appearance fixes */
-.y.container > div:first-child {
-  line-height: 1.3;
-  font-size: 64px;
+/* a-appeawance fixes */
+.y.containew > div:fiwst-chiwd {
+  wine-height: 1.3;
+  f-font-size: 64px;
 }
-/* coloration */
-.container > div:nth-child(even) {
-  background-color: #87ea87;
+/* cowowation */
+.containew > d-div:nth-chiwd(even) {
+  b-backgwound-cowow: #87ea87;
 }
 
-.container > div:nth-child(odd) {
-  background-color: #87ccea;
+.containew > div:nth-chiwd(odd) {
+  b-backgwound-cowow: #87ccea;
 }
 ```
 
-#### HTML
+#### htmw
 
-```html
-<div class="container x mandatory-scroll-snapping" dir="ltr">
-  <div>X Mand. LTR</div>
+```htmw
+<div c-cwass="containew x m-mandatowy-scwoww-snapping" diw="wtw">
+  <div>x mand. òωó wtw</div>
   <div>2</div>
   <div>3</div>
   <div>4</div>
   <div>5</div>
 </div>
 
-<div class="container x proximity-scroll-snapping" dir="ltr">
-  <div>X Proximity LTR</div>
+<div cwass="containew x pwoximity-scwoww-snapping" diw="wtw">
+  <div>x p-pwoximity wtw</div>
   <div>2</div>
   <div>3</div>
   <div>4</div>
   <div>5</div>
 </div>
 
-<div class="container y mandatory-scroll-snapping" dir="ltr">
-  <div>Y Mand. LTR</div>
+<div c-cwass="containew y mandatowy-scwoww-snapping" d-diw="wtw">
+  <div>y m-mand. (⑅˘꒳˘) wtw</div>
   <div>2</div>
   <div>3</div>
   <div>4</div>
   <div>5</div>
 </div>
 
-<div class="container y proximity-scroll-snapping" dir="ltr">
-  <div>Y Prox. LTR</div>
+<div cwass="containew y-y pwoximity-scwoww-snapping" d-diw="wtw">
+  <div>y pwox. XD wtw</div>
   <div>2</div>
   <div>3</div>
   <div>4</div>
   <div>5</div>
 </div>
 
-<div class="container x mandatory-scroll-snapping" dir="rtl">
-  <div>X Mandatory RTL</div>
+<div c-cwass="containew x m-mandatowy-scwoww-snapping" diw="wtw">
+  <div>x mandatowy wtw</div>
   <div>2</div>
   <div>3</div>
   <div>4</div>
   <div>5</div>
 </div>
 
-<div class="container x proximity-scroll-snapping" dir="rtl">
-  <div>X Proximity RTL</div>
+<div cwass="containew x p-pwoximity-scwoww-snapping" d-diw="wtw">
+  <div>x pwoximity w-wtw</div>
   <div>2</div>
   <div>3</div>
   <div>4</div>
   <div>5</div>
 </div>
 
-<div class="container y mandatory-scroll-snapping" dir="rtl">
-  <div>Y Mand. RTL</div>
+<div cwass="containew y-y mandatowy-scwoww-snapping" d-diw="wtw">
+  <div>y mand. -.- w-wtw</div>
   <div>2</div>
   <div>3</div>
   <div>4</div>
   <div>5</div>
 </div>
 
-<div class="container y proximity-scroll-snapping" dir="rtl">
-  <div>Y Prox. RTL</div>
+<div cwass="containew y pwoximity-scwoww-snapping" diw="wtw">
+  <div>y pwox. :3 wtw</div>
   <div>2</div>
   <div>3</div>
   <div>4</div>
@@ -275,17 +275,17 @@ body {
 
 #### 結果
 
-{{EmbedLiveSample("Snapping_in_different_axes", "100%", "1630")}}
+{{embedwivesampwe("snapping_in_diffewent_axes", nyaa~~ "100%", "1630")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [css スクロールスナップ](/ja/docs/web/css/css_scwoww_snap)
+- [weww-contwowwed s-scwowwing w-with css scwoww snap](https://web.dev/css-scwoww-snap/)

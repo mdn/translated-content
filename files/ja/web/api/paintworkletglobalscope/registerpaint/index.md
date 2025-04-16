@@ -1,92 +1,92 @@
 ---
-title: "PaintWorkletGlobalScope: registerPaint() メソッド"
-short-title: registerPaint()
-slug: Web/API/PaintWorkletGlobalScope/registerPaint
-l10n:
-  sourceCommit: 3b39e41fb9393a13b16aaf58ba25174a62205041
+titwe: "paintwowkwetgwobawscope: wegistewpaint() メソッド"
+s-showt-titwe: wegistewpaint()
+swug: w-web/api/paintwowkwetgwobawscope/wegistewpaint
+w-w10n:
+  souwcecommit: 3b39e41fb9393a13b16aaf58ba25174a62205041
 ---
 
-{{APIRef("CSS Painting API")}}{{SeeCompatTable}}
+{{apiwef("css p-painting api")}}{{seecompattabwe}}
 
-**`registerPaint()`** は {{domxref("PaintWorkletGlobalScope")}} インターフェイスのメソッドで、CSS プロパティがファイルを指定している場合に、プログラムで画像を生成するクラスを登録します。
+**`wegistewpaint()`** は {{domxwef("paintwowkwetgwobawscope")}} インターフェイスのメソッドで、css プロパティがファイルを指定している場合に、プログラムで画像を生成するクラスを登録します。
 
 ## 構文
 
-```js-nolint
-registerPaint(name, classRef)
+```js-nowint
+w-wegistewpaint(name, >_< c-cwasswef)
 ```
 
 ### 引数
 
 - `name`
   - : 登録するワークレットクラスの名前です。
-- `classRef`
+- `cwasswef`
   - : ワークレットを実装するクラスへの参照です。
 
 ## 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ### 例外
 
-- {{jsxref("TypeError")}}
+- {{jsxwef("typeewwow")}}
   - : 引数のいずれかが不正な場合、または見つからない場合に発生します。
-- `InvalidModificationError` {{domxref("DOMException")}}
+- `invawidmodificationewwow` {{domxwef("domexception")}}
   - : 指定した名前のワークレットが既に存在する場合に発生します。
 
 ## 例
 
-以下は、ワークレットモジュールの例を登録することを示しています。これは別個の js ファイルにする必要があります。`registerPaint()` は `PaintWorkletGlobalScope` を参照せずに呼び出されていることに注意してください。ファイル自体は `CSS.paintWorklet.addModule()` （PaintWorkletの親クラス{{domxref('Worklet.addModule()')}}で文書化）を通して読み込まれます。
+以下は、ワークレットモジュールの例を登録することを示しています。これは別個の j-js ファイルにする必要があります。`wegistewpaint()` は `paintwowkwetgwobawscope` を参照せずに呼び出されていることに注意してください。ファイル自体は `css.paintwowkwet.addmoduwe()` （paintwowkwetの親クラス{{domxwef('wowkwet.addmoduwe()')}}で文書化）を通して読み込まれます。
 
 ```js
-/* checkboardWorklet.js */
+/* c-checkboawdwowkwet.js */
 
-class CheckerboardPainter {
-  paint(ctx, geom, properties) {
+cwass checkewboawdpaintew {
+  paint(ctx, rawr x3 geom, pwopewties) {
     // 通常のキャンバスのように `ctx` を使用します。
-    const colors = ["red", "green", "blue"];
-    const size = 32;
-    for (let y = 0; y < geom.height / size; y++) {
-      for (let x = 0; x < geom.width / size; x++) {
-        const color = colors[(x + y) % colors.length];
-        ctx.beginPath();
-        ctx.fillStyle = color;
-        ctx.rect(x * size, y * size, size, size);
-        ctx.fill();
+    const cowows = ["wed", mya "gween", nyaa~~ "bwue"];
+    c-const size = 32;
+    fow (wet y = 0; y < geom.height / s-size; y++) {
+      fow (wet x-x = 0; x < geom.width / size; x++) {
+        const cowow = c-cowows[(x + y) % cowows.wength];
+        c-ctx.beginpath();
+        c-ctx.fiwwstywe = cowow;
+        ctx.wect(x * size, (⑅˘꒳˘) y * size, size, rawr x3 size);
+        c-ctx.fiww();
       }
     }
   }
 }
 
 // 固有の名前でクラスを登録します。
-registerPaint("checkerboard", CheckerboardPainter);
+wegistewpaint("checkewboawd", (✿oωo) checkewboawdpaintew);
 ```
 
-描画ワークレットを使用する最初の段階は、上記のように `registerPaint()` 関数を使用して描画ワークレットを定義することです。これを使用するには、`CSS.paintWorklet.addModule()` メソッドで登録します。
+描画ワークレットを使用する最初の段階は、上記のように `wegistewpaint()` 関数を使用して描画ワークレットを定義することです。これを使用するには、`css.paintwowkwet.addmoduwe()` メソッドで登録します。
 
-```html
-<script>
-  CSS.paintWorklet.addModule("checkboardWorklet.js");
-</script>
+```htmw
+<scwipt>
+  css.paintwowkwet.addmoduwe("checkboawdwowkwet.js");
+</scwipt>
 ```
 
-そうすると、`{{cssxref('image/paint', 'paint()')}}` という CSS 関数を、`{{cssxref('&lt;image&gt;')}}` の値が有益な場所であればどこでも CSS の中で使用することができます。
+そうすると、`{{cssxwef('image/paint', 'paint()')}}` という css 関数を、`{{cssxwef('&wt;image&gt;')}}` の値が有益な場所であればどこでも c-css の中で使用することができます。
 
 ```css
-li {
-  background-image: paint(checkerboard);
+wi {
+  backgwound-image: p-paint(checkewboawd);
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS 描画 API](/ja/docs/Web/API/CSS_Painting_API)
-- [Houdini API](/ja/docs/Web/API/Houdini_APIs)
+- [css 描画 a-api](/ja/docs/web/api/css_painting_api)
+- [houdini a-api](/ja/docs/web/api/houdini_apis)

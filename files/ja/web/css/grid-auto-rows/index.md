@@ -1,146 +1,146 @@
 ---
-title: grid-auto-rows
-slug: Web/CSS/grid-auto-rows
-l10n:
-  sourceCommit: fb409b8972e7c03d7eb284466433a28efb850ef5
+titwe: gwid-auto-wows
+swug: web/css/gwid-auto-wows
+w-w10n:
+  souwcecommit: f-fb409b8972e7c03d7eb284466433a28efb850ef5
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`grid-auto-rows`** は [CSS](/ja/docs/Web/CSS) のプロパティで、暗黙的に生成されたグリッドの行{{glossary("grid tracks", "トラック")}}またはトラックのパターンの大きさを指定します。
+**`gwid-auto-wows`** は [css](/ja/docs/web/css) のプロパティで、暗黙的に生成されたグリッドの行{{gwossawy("gwid t-twacks", (ˆ ﻌ ˆ)♡ "トラック")}}またはトラックのパターンの大きさを指定します。
 
-{{InteractiveExample("CSS Demo: grid-auto-rows")}}
+{{intewactiveexampwe("css d-demo: gwid-auto-wows")}}
 
-```css interactive-example-choice
-grid-auto-rows: auto;
+```css i-intewactive-exampwe-choice
+g-gwid-auto-wows: a-auto;
 ```
 
-```css interactive-example-choice
-grid-auto-rows: 50px;
+```css i-intewactive-exampwe-choice
+gwid-auto-wows: 50px;
 ```
 
-```css interactive-example-choice
-grid-auto-rows: min-content;
+```css intewactive-exampwe-choice
+gwid-auto-wows: min-content;
 ```
 
-```css interactive-example-choice
-grid-auto-rows: minmax(30px, auto);
+```css i-intewactive-exampwe-choice
+gwid-auto-wows: minmax(30px, 😳😳😳 auto);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
-      <div>Four</div>
-      <div>Five</div>
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
+    <div cwass="twansition-aww" id="exampwe-ewement">
+      <div>one</div>
+      <div>two</div>
+      <div>thwee</div>
+      <div>fouw</div>
+      <div>five</div>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 40px;
-  grid-gap: 10px;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 1px s-sowid #c5c5c5;
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: 1fw 1fw;
+  gwid-auto-wows: 40px;
+  gwid-gap: 10px;
   width: 220px;
 }
 
-#example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+#exampwe-ewement > div {
+  backgwound-cowow: wgba(0, :3 0, 255, 0.2);
+  b-bowdew: 3px sowid bwue;
   font-size: 22px;
 }
 
-#example-element div:last-child {
+#exampwe-ewement div:wast-chiwd {
   font-size: 13px;
 }
 ```
 
-グリッドアイテムが {{cssxref("grid-template-rows")}} で明示的に大きさが指定されていない行に配置された場合、暗黙的に{{glossary("grid", "グリッド")}}トラックが作成され、そのアイテムを保持します。これには、範囲外の行に明示的に配置する場合と、自動配置アルゴリズムによって追加の行が作成される場合があります。
+グリッドアイテムが {{cssxwef("gwid-tempwate-wows")}} で明示的に大きさが指定されていない行に配置された場合、暗黙的に{{gwossawy("gwid", OwO "グリッド")}}トラックが作成され、そのアイテムを保持します。これには、範囲外の行に明示的に配置する場合と、自動配置アルゴリズムによって追加の行が作成される場合があります。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-grid-auto-rows: min-content;
-grid-auto-rows: max-content;
-grid-auto-rows: auto;
+g-gwid-auto-wows: min-content;
+g-gwid-auto-wows: m-max-content;
+g-gwid-auto-wows: a-auto;
 
-/* <length> 値 */
-grid-auto-rows: 100px;
-grid-auto-rows: 20cm;
-grid-auto-rows: 50vmax;
+/* <wength> 値 */
+gwid-auto-wows: 100px;
+gwid-auto-wows: 20cm;
+g-gwid-auto-wows: 50vmax;
 
-/* <percentage> 値 */
-grid-auto-rows: 10%;
-grid-auto-rows: 33.3%;
+/* <pewcentage> 値 */
+gwid-auto-wows: 10%;
+gwid-auto-wows: 33.3%;
 
-/* <flex> 値 */
-grid-auto-rows: 0.5fr;
-grid-auto-rows: 3fr;
+/* <fwex> 値 */
+g-gwid-auto-wows: 0.5fw;
+gwid-auto-wows: 3fw;
 
 /* minmax() 値 */
-grid-auto-rows: minmax(100px, auto);
-grid-auto-rows: minmax(max-content, 2fr);
-grid-auto-rows: minmax(20%, 80vmax);
+gwid-auto-wows: minmax(100px, auto);
+gwid-auto-wows: m-minmax(max-content, (U ﹏ U) 2fw);
+gwid-auto-wows: m-minmax(20%, >w< 80vmax);
 
-/* fit-content() 値 */
-grid-auto-rows: fit-content(400px);
-grid-auto-rows: fit-content(5cm);
-grid-auto-rows: fit-content(20%);
+/* f-fit-content() 値 */
+g-gwid-auto-wows: fit-content(400px);
+gwid-auto-wows: fit-content(5cm);
+g-gwid-auto-wows: f-fit-content(20%);
 
-/* multiple track-size 値 */
-grid-auto-rows: min-content max-content auto;
-grid-auto-rows: 100px 150px 390px;
-grid-auto-rows: 10% 33.3%;
-grid-auto-rows: 0.5fr 3fr 1fr;
-grid-auto-rows: minmax(100px, auto) minmax(max-content, 2fr) minmax(20%, 80vmax);
-grid-auto-rows: 100px minmax(100px, auto) 10% 0.5fr fit-content(400px);
+/* muwtipwe twack-size 値 */
+g-gwid-auto-wows: m-min-content max-content a-auto;
+gwid-auto-wows: 100px 150px 390px;
+gwid-auto-wows: 10% 33.3%;
+g-gwid-auto-wows: 0.5fw 3fw 1fw;
+gwid-auto-wows: minmax(100px, (U ﹏ U) a-auto) minmax(max-content, 😳 2fw) minmax(20%, 80vmax);
+g-gwid-auto-wows: 100px minmax(100px, (ˆ ﻌ ˆ)♡ a-auto) 10% 0.5fw f-fit-content(400px);
 
 /* グローバル値 */
-grid-auto-rows: inherit;
-grid-auto-rows: initial;
-grid-auto-rows: revert;
-grid-auto-rows: revert-layer;
-grid-auto-rows: unset;
+gwid-auto-wows: inhewit;
+gwid-auto-wows: initiaw;
+gwid-auto-wows: wevewt;
+gwid-auto-wows: w-wevewt-wayew;
+g-gwid-auto-wows: unset;
 ```
 
 ### 値
 
-- {{cssxref("&lt;length&gt;")}}
+- {{cssxwef("&wt;wength&gt;")}}
   - : 負の値ではない長さです。
-- {{cssxref("&lt;percentage&gt;")}}
-  - : グリッドコンテナーのブロック方向の寸法に対する相対値で、負ではない {{cssxref("percentage", "&lt;percentage&gt;")}} です。グリッドコンテナーのブロック方向の寸法が不定の場合は、パーセント値は `auto` のように扱われます。
-- {{cssxref("&lt;flex&gt;")}}
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : グリッドコンテナーのブロック方向の寸法に対する相対値で、負ではない {{cssxwef("pewcentage", 😳😳😳 "&wt;pewcentage&gt;")}} です。グリッドコンテナーのブロック方向の寸法が不定の場合は、パーセント値は `auto` のように扱われます。
+- {{cssxwef("&wt;fwex&gt;")}}
 
-  - : `fr` の単位の付いた負の数ではない値で、トラックのフレックス係数を指定します。 `<flex>` の寸法のトラックは、残りの空間をフレックス係数の割合に比例して分け合います。
+  - : `fw` の単位の付いた負の数ではない値で、トラックのフレックス係数を指定します。 `<fwex>` の寸法のトラックは、残りの空間をフレックス係数の割合に比例して分け合います。
 
-    `minmax()` 記法の外で使用された場合は、最小値が自動として扱われます（つまり `minmax(auto, <flex>)`）。
+    `minmax()` 記法の外で使用された場合は、最小値が自動として扱われます（つまり `minmax(auto, (U ﹏ U) <fwex>)`）。
 
-- {{cssxref("max-content")}}
+- {{cssxwef("max-content")}}
   - : グリッドトラックを占有しているグリッドアイテムの中で、コンテンツ貢献度の最大値を表すキーワードです。
-- {{cssxref("min-content")}}
+- {{cssxwef("min-content")}}
   - : グリッドトラックを占有しているグリッドアイテムの中で、コンテンツ貢献度の最小値を表すキーワードです。
-- {{cssxref("minmax", "minmax(min, max)")}}
-  - : _min_ 以上、_max_ 以下の寸法の範囲を定義する関数記法です。 _max_ が _min_ より小さい場合は、 _max_ は無視され、 _min_ として扱われます。`<flex>` の値は、最大値として、トラックのフレックス係数を設定します。最小値としては、ゼロ（または、グリッドコンテナーの寸法が最小コンテンツの制約を受けている場合は、最小コンテンツ）として扱われます。
-- {{cssxref("fit-content_function", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}
-  - : `min(max-content, max(auto, argument))` という式を表します。この式は、トラックの寸法が `auto` の最小値よりも大きい場合に _argument_ で固定されることを除いて、`auto` と同様（すなわち `minmax(auto, max-content)`）に計算されます。
+- {{cssxwef("minmax", (///ˬ///✿) "minmax(min, 😳 m-max)")}}
+  - : _min_ 以上、_max_ 以下の寸法の範囲を定義する関数記法です。 _max_ が _min_ より小さい場合は、 _max_ は無視され、 _min_ として扱われます。`<fwex>` の値は、最大値として、トラックのフレックス係数を設定します。最小値としては、ゼロ（または、グリッドコンテナーの寸法が最小コンテンツの制約を受けている場合は、最小コンテンツ）として扱われます。
+- {{cssxwef("fit-content_function", 😳 "fit-content( [ &wt;wength&gt; | &wt;pewcentage&gt; ] )")}}
+  - : `min(max-content, σωσ m-max(auto, awgument))` という式を表します。この式は、トラックの寸法が `auto` の最小値よりも大きい場合に _awgument_ で固定されることを除いて、`auto` と同様（すなわち `minmax(auto, rawr x3 max-content)`）に計算されます。
 - `auto`
 
-  - : 最大値として使用された場合は、トラック内のアイテムのうち最大の {{cssxref("max-content")}} の寸法を表します。
+  - : 最大値として使用された場合は、トラック内のアイテムのうち最大の {{cssxwef("max-content")}} の寸法を表します。
 
-    最小値として使用された場合は、そのトラック内のアイテムのうち最大の最小寸法を（各アイテムの {{cssxref("min-width")}}/{{cssxref("min-height")}} で指定された寸法）を表します。これは通常、常にとは限りませんが、 {{cssxref("min-content")}} の寸法です。
+    最小値として使用された場合は、そのトラック内のアイテムのうち最大の最小寸法を（各アイテムの {{cssxwef("min-width")}}/{{cssxwef("min-height")}} で指定された寸法）を表します。これは通常、常にとは限りませんが、 {{cssxwef("min-content")}} の寸法です。
 
-    {{cssxref("minmax", "minmax()")}} 記法の外で使用された場合、 `auto` は上記の最小値と最大値の間の範囲を表します。多くの場合は `minmax(min-content,max-content)` のように動作します。
+    {{cssxwef("minmax", OwO "minmax()")}} 記法の外で使用された場合、 `auto` は上記の最小値と最大値の間の範囲を表します。多くの場合は `minmax(min-content,max-content)` のように動作します。
 
-    > [!NOTE]
-    > トラックの寸法が `auto` の場合（かつ `auto` だけの場合）は、 {{cssxref("align-content")}} および {{cssxref("justify-content")}} プロパティによって引き伸ばすことができます。
+    > [!note]
+    > トラックの寸法が `auto` の場合（かつ `auto` だけの場合）は、 {{cssxwef("awign-content")}} および {{cssxwef("justify-content")}} プロパティによって引き伸ばすことができます。
     > 従って既定では、トラックの寸法が `auto` の場合、グリッドコンテナー内の残りの空間を占有します。
 
 ## 公式定義
@@ -155,48 +155,48 @@ grid-auto-rows: unset;
 
 ### グリッド行の寸法を設定
 
-#### HTML
+#### h-htmw
 
-```html live-sample___setting_grid_row_size
-<div id="grid">
+```htmw wive-sampwe___setting_gwid_wow_size
+<div id="gwid">
   <div id="item1"></div>
-  <div id="item2"></div>
+  <div i-id="item2"></div>
   <div id="item3"></div>
 </div>
 ```
 
-#### CSS
+#### css
 
-```css live-sample___setting_grid_row_size
-#grid {
+```css wive-sampwe___setting_gwid_wow_size
+#gwid {
   width: 200px;
-  display: grid;
-  grid-template-areas: "a a";
-  gap: 10px;
-  grid-auto-rows: 100px;
+  d-dispway: gwid;
+  gwid-tempwate-aweas: "a a-a";
+  g-gap: 10px;
+  g-gwid-auto-wows: 100px;
 }
 
-#grid > div {
-  background-color: lime;
+#gwid > div {
+  backgwound-cowow: w-wime;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Setting_grid_row_size", "210px", "210px")}}
+{{embedwivesampwe("setting_gwid_wow_size", /(^•ω•^) "210px", 😳😳😳 "210px")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("grid-auto-columns")}}
-- {{cssxref("grid-auto-flow")}}
-- {{cssxref("grid")}}
-- [CSS グリッドレイアウトでの自動配置: 暗黙のグリッド内での行の大きさ](/ja/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout#暗黙のグリッド内での行の大きさ)
-- 動画: [Introducing Grid auto-placement and order](https://gridbyexample.com/video/series-auto-placement-order/)
+- {{cssxwef("gwid-auto-cowumns")}}
+- {{cssxwef("gwid-auto-fwow")}}
+- {{cssxwef("gwid")}}
+- [css グリッドレイアウトでの自動配置: 暗黙のグリッド内での行の大きさ](/ja/docs/web/css/css_gwid_wayout/auto-pwacement_in_gwid_wayout#暗黙のグリッド内での行の大きさ)
+- 動画: [intwoducing g-gwid auto-pwacement a-and o-owdew](https://gwidbyexampwe.com/video/sewies-auto-pwacement-owdew/)

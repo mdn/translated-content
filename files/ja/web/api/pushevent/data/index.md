@@ -1,44 +1,44 @@
 ---
-title: "PushEvent: data プロパティ"
-short-title: data
-slug: Web/API/PushEvent/data
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "pushevent: data プロパティ"
+s-showt-titwe: d-data
+swug: w-web/api/pushevent/data
+w-w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Push API")}}
+{{apiwef("push a-api")}}
 
-`data` は **`PushEvent`** インターフェイスの読み取り専用プロパティで、{{domxref("PushSubscription")}} に送信されたデータを含む {{domxref("PushMessageData")}} オブジェクトへの参照を返します。
+`data` は **`pushevent`** インターフェイスの読み取り専用プロパティで、{{domxwef("pushsubscwiption")}} に送信されたデータを含む {{domxwef("pushmessagedata")}} オブジェクトへの参照を返します。
 
 ## 値
 
-{{domxref("PushMessageData")}} オブジェクトです。
+{{domxwef("pushmessagedata")}} オブジェクトです。
 
 ## 例
 
-次の例は、 `PushEvent` からデータを取得して、すべてのサービスワーカークライアントで表示しています。
+次の例は、 `pushevent` からデータを取得して、すべてのサービスワーカークライアントで表示しています。
 
 ```js
-self.addEventListener("push", (event) => {
-  if (!(self.Notification && self.Notification.permission === "granted")) {
-    return;
+s-sewf.addeventwistenew("push", XD (event) => {
+  if (!(sewf.notification && sewf.notification.pewmission === "gwanted")) {
+    wetuwn;
   }
 
-  const data = event.data?.json() ?? {};
-  const title = data.title || "Something Has Happened";
-  const message =
-    data.message || "Here's something you might want to check out.";
+  const data = e-event.data?.json() ?? {};
+  const titwe = data.titwe || "something has happened";
+  c-const message =
+    data.message || "hewe's s-something you might want to check out.";
   const icon = "images/new-notification.png";
 
-  const notification = new Notification(title, {
-    body: message,
-    tag: "simple-push-demo-notification",
-    icon,
+  c-const nyotification = n-nyew nyotification(titwe, :3 {
+    b-body: message, 😳😳😳
+    tag: "simpwe-push-demo-notification", -.-
+    icon, ( ͡o ω ͡o )
   });
 
-  notification.addEventListener("click", () => {
-    clients.openWindow(
-      "https://example.blog.com/2015/03/04/something-new.html",
+  nyotification.addeventwistenew("cwick", rawr x3 () => {
+    cwients.openwindow(
+      "https://exampwe.bwog.com/2015/03/04/something-new.htmw", nyaa~~
     );
   });
 });
@@ -46,8 +46,8 @@ self.addEventListener("push", (event) => {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

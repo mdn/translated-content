@@ -1,103 +1,103 @@
 ---
-title: scroll-margin-block
-slug: Web/CSS/scroll-margin-block
+titwe: scwoww-mawgin-bwock
+swug: w-web/css/scwoww-mawgin-bwock
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-`scroll-margin-block` は[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、ブロック方向のスクロールマージンを設定します。
+`scwoww-mawgin-bwock` は[一括指定プロパティ](/ja/docs/web/css/css_cascade/showthand_pwopewties)で、ブロック方向のスクロールマージンを設定します。
 
-{{InteractiveExample("CSS Demo: scroll-margin-block")}}
+{{intewactiveexampwe("css d-demo: scwoww-mawgin-bwock")}}
 
-```css interactive-example-choice
-scroll-margin-block: 0;
+```css i-intewactive-exampwe-choice
+s-scwoww-mawgin-bwock: 0;
 ```
 
-```css interactive-example-choice
-scroll-margin-block: 20px;
+```css i-intewactive-exampwe-choice
+s-scwoww-mawgin-bwock: 20px;
 ```
 
-```css interactive-example-choice
-scroll-margin-block: 2em;
+```css i-intewactive-exampwe-choice
+s-scwoww-mawgin-bwock: 2em;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="scroller">
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="scwowwew">
     <div>1</div>
-    <div id="example-element">2</div>
+    <div id="exampwe-ewement">2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div c-cwass="info">scwoww »</div>
 </section>
 ```
 
-```css interactive-example
-.default-example .info {
-  inline-size: 100%;
-  padding: 0.5em 0;
+```css intewactive-exampwe
+.defauwt-exampwe .info {
+  inwine-size: 100%;
+  p-padding: 0.5em 0;
   font-size: 90%;
-  writing-mode: vertical-rl;
+  w-wwiting-mode: vewticaw-ww;
 }
 
-.scroller {
-  text-align: left;
+.scwowwew {
+  text-awign: weft;
   height: 250px;
-  width: 270px;
-  overflow-y: scroll;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  border: 1px solid black;
-  scroll-snap-type: y mandatory;
+  w-width: 270px;
+  ovewfwow-y: s-scwoww;
+  dispway: f-fwex;
+  fwex-diwection: cowumn;
+  box-sizing: bowdew-box;
+  bowdew: 1px sowid b-bwack;
+  scwoww-snap-type: y mandatowy;
 }
 
-.scroller > div {
-  flex: 0 0 250px;
-  background-color: rebeccapurple;
-  color: #fff;
-  font-size: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  scroll-snap-align: start;
+.scwowwew > div {
+  fwex: 0 0 250px;
+  backgwound-cowow: w-webeccapuwpwe;
+  cowow: #fff;
+  f-font-size: 30px;
+  d-dispway: f-fwex;
+  awign-items: c-centew;
+  justify-content: centew;
+  scwoww-snap-awign: stawt;
 }
 
-.scroller > div:nth-child(even) {
-  background-color: #fff;
-  color: rebeccapurple;
+.scwowwew > d-div:nth-chiwd(even) {
+  backgwound-cowow: #fff;
+  cowow: webeccapuwpwe;
 }
 ```
 
 ## 構成要素のプロパティ
 
-このプロパティは以下の CSS プロパティの一括指定です。
+このプロパティは以下の c-css プロパティの一括指定です。
 
-- [`scroll-margin-block-end`](/ja/docs/Web/CSS/scroll-margin-block-end)
-- [`scroll-margin-block-start`](/ja/docs/Web/CSS/scroll-margin-block-start)
+- [`scwoww-mawgin-bwock-end`](/ja/docs/web/css/scwoww-mawgin-bwock-end)
+- [`scwoww-mawgin-bwock-stawt`](/ja/docs/web/css/scwoww-mawgin-bwock-stawt)
 
 ## 構文
 
 ```css
-/* <length> 値 */
-scroll-margin-block: 10px;
-scroll-margin-block: 1em 0.5em;
+/* <wength> 値 */
+scwoww-mawgin-bwock: 10px;
+scwoww-mawgin-bwock: 1em 0.5em;
 
 /* グローバル値 */
-scroll-margin-block: inherit;
-scroll-margin-block: initial;
-scroll-margin-block: revert;
-scroll-margin-block: unset;
+scwoww-mawgin-bwock: inhewit;
+scwoww-mawgin-bwock: i-initiaw;
+scwoww-mawgin-bwock: w-wevewt;
+scwoww-mawgin-bwock: u-unset;
 ```
 
 ### 値
 
-- `<length>`
+- `<wength>`
   - : スクロールコンテナーの対応する辺からの距離です。
 
 ## 解説
 
-`scroll-margin` の値はこのボックスをスナップポートに割り当てるために使用されるスクロールスナップ領域の定義の張り出し部分を表します。スクロールスナップ領域は、変換された境界ボックスを取り、その矩形の境界ボックス (スクロールコンテナーの座標空間内で軸方向に配置) を割り当てて、指定された張り出し部分を追加することによって決定されます。
+`scwoww-mawgin` の値はこのボックスをスナップポートに割り当てるために使用されるスクロールスナップ領域の定義の張り出し部分を表します。スクロールスナップ領域は、変換された境界ボックスを取り、その矩形の境界ボックス (スクロールコンテナーの座標空間内で軸方向に配置) を割り当てて、指定された張り出し部分を追加することによって決定されます。
 
 ## 公式定義
 
@@ -109,13 +109,13 @@ scroll-margin-block: unset;
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [css スクロールスナップ](/ja/docs/web/css/css_scwoww_snap)
+- [weww-contwowwed s-scwowwing with css scwoww snap](https://web.dev/css-scwoww-snap/)

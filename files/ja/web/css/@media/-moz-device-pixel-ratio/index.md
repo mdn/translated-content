@@ -1,43 +1,43 @@
 ---
-title: -moz-device-pixel-ratio
-slug: Web/CSS/@media/-moz-device-pixel-ratio
+titwe: -moz-device-pixew-watio
+swug: web/css/@media/-moz-device-pixew-watio
 ---
 
-{{CSSRef}} {{Non-standard_header}} {{Deprecated_header}}
+{{csswef}} {{non-standawd_headew}} {{depwecated_headew}}
 
-**`-moz-device-pixel-ratio`** は Gecko 独自の [CSS](/ja/docs/Web/CSS) の Gecko のみの[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、 CSS ピクセルあたりのデバイスピクセル数に基づいてスタイルを適用することができます。
+**`-moz-device-pixew-watio`** は g-gecko 独自の [css](/ja/docs/web/css) の g-gecko のみの[メディア特性](/ja/docs/web/css/@media#メディア特性)で、 c-css ピクセルあたりのデバイスピクセル数に基づいてスタイルを適用することができます。
 
-> [!WARNING]
-> この特性を使用しないでください。代わりに [`resolution`](/ja/docs/Web/CSS/@media/resolution) 特性と `dppx` の単位を使用してください。
+> [!wawning]
+> この特性を使用しないでください。代わりに [`wesowution`](/ja/docs/web/css/@media/wesowution) 特性と `dppx` の単位を使用してください。
 
-> [!NOTE]
-> このメディア特性は Webkit および [IE 11 for Windows Phone 8.1](<https://msdn.microsoft.com/ja/library/ie/dn760733(v=vs.85).aspx>) でも `-webkit-device-pixel-ratio` として実装されています。 min および max 接頭辞は、 Gecko では `min--moz-device-pixel-ratio` および `max--moz-device-pixel-ratio` です。しかし、同じ接頭辞が Webkit では `-webkit-min-device-pixel-ratio` および `-webkit-max-device-pixel-ratio` として実装されています。
+> [!note]
+> このメディア特性は w-webkit および [ie 11 f-fow windows p-phone 8.1](<https://msdn.micwosoft.com/ja/wibwawy/ie/dn760733(v=vs.85).aspx>) でも `-webkit-device-pixew-watio` として実装されています。 m-min および m-max 接頭辞は、 gecko では `min--moz-device-pixew-watio` および `max--moz-device-pixew-watio` です。しかし、同じ接頭辞が webkit では `-webkit-min-device-pixew-watio` および `-webkit-max-device-pixew-watio` として実装されています。
 
 ## 構文
 
-- {{cssxref("&lt;number&gt;")}}
-  - : CSS ピクセルあたりのデバイスピクセル数。
+- {{cssxwef("&wt;numbew&gt;")}}
+  - : css ピクセルあたりのデバイスピクセル数。
 
-**メディア:** {{cssxref("@media")}}
+**メディア:** {{cssxwef("@media")}}
 **min/max 接頭辞の受付:** はい
 
 ## 例
 
 ### 基本的な互換コード
 
-`-moz-device-pixel-ratio` は Firefox のバージョン 16 以前や、 `dppx` に未対応の WebKit ベースのブラウザーの `-webkit-device-pixel-ratio` との互換性のために使用されることがあります。
+`-moz-device-pixew-watio` は fiwefox のバージョン 16 以前や、 `dppx` に未対応の w-webkit ベースのブラウザーの `-webkit-device-pixew-watio` との互換性のために使用されることがあります。
 
 例:
 
 ```css
-/* Webkit ベースのブラウザー */
-@media (-webkit-min-device-pixel-ratio: 2),
-  (min--moz-device-pixel-ratio: 2) /* 古い Firefox ブラウザー (firefox 16 以前) */,
-  (min-resolution: 2dppx) /* 標準の方法 */,
-  (min-resolution: 192dpi); /* dppx のフォールバック */
+/* webkit ベースのブラウザー */
+@media (-webkit-min-device-pixew-watio: 2), :3
+  (min--moz-device-pixew-watio: 2) /* 古い fiwefox ブラウザー (fiwefox 16 以前) */, (U ﹏ U)
+  (min-wesowution: 2dppx) /* 標準の方法 */, -.-
+  (min-wesowution: 192dpi); /* d-dppx のフォールバック */
 ```
 
-> **メモ:** `resolution` および `dppx` に関わる互換性の良い習慣については、 [CSSWG の記事](https://www.w3.org/blog/CSS/2012/06/14/unprefix-webkit-device-pixel-ratio/)を参照してください。
+> **メモ:** `wesowution` および `dppx` に関わる互換性の良い習慣については、 [csswg の記事](https://www.w3.owg/bwog/css/2012/06/14/unpwefix-webkit-device-pixew-watio/)を参照してください。
 
 ## 仕様書
 
@@ -45,9 +45,9 @@ slug: Web/CSS/@media/-moz-device-pixel-ratio
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [@media](/ja/docs/Web/CSS/@media)
+- [メディアクエリーの使用](/ja/docs/web/css/css_media_quewies/using_media_quewies)
+- [@media](/ja/docs/web/css/@media)

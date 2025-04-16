@@ -1,121 +1,121 @@
 ---
-title: color
-slug: Web/CSS/color
+titwe: cowow
+swug: web/css/cowow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-CSS の **`color`** プロパティは、要素のテキストや[テキスト装飾](/ja/docs/Web/CSS/text-decoration)における前景色の[色の値](/ja/docs/Web/CSS/color_value)を設定し、 {{cssxref("color_value#currentcolor_keyword", "currentcolor")}} の値を設定します。`currentcolor` は*他の*プロパティの間接的な値として使用される可能性があり、 {{cssxref("border-color")}} のような他の色に関するプロパティの既定値にもなったりします。
+c-css の **`cowow`** プロパティは、要素のテキストや[テキスト装飾](/ja/docs/web/css/text-decowation)における前景色の[色の値](/ja/docs/web/css/cowow_vawue)を設定し、 {{cssxwef("cowow_vawue#cuwwentcowow_keywowd", mya "cuwwentcowow")}} の値を設定します。`cuwwentcowow` は*他の*プロパティの間接的な値として使用される可能性があり、 {{cssxwef("bowdew-cowow")}} のような他の色に関するプロパティの既定値にもなったりします。
 
-{{InteractiveExample("CSS Demo: color")}}
+{{intewactiveexampwe("css d-demo: cowow")}}
 
-```css interactive-example-choice
-color: rebeccapurple;
+```css i-intewactive-exampwe-choice
+c-cowow: webeccapuwpwe;
 ```
 
-```css interactive-example-choice
-color: #00a400;
+```css i-intewactive-exampwe-choice
+c-cowow: #00a400;
 ```
 
-```css interactive-example-choice
-color: rgb(214, 122, 127);
+```css intewactive-exampwe-choice
+c-cowow: w-wgb(214, (˘ω˘) 122, 127);
 ```
 
-```css interactive-example-choice
-color: hsl(30deg 82% 43%);
+```css intewactive-exampwe-choice
+cowow: hsw(30deg 82% 43%);
 ```
 
-```css interactive-example-choice
-color: hsla(237deg 74% 33% / 61%);
+```css intewactive-exampwe-choice
+c-cowow: hswa(237deg 74% 33% / 61%);
 ```
 
-```css interactive-example-choice
-color: hwb(152deg 0% 58% / 70%);
+```css intewactive-exampwe-choice
+c-cowow: hwb(152deg 0% 58% / 70%);
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="example-container">
-    <p id="example-element">
-      London. Michaelmas term lately over, and the Lord Chancellor sitting in
-      Lincoln's Inn Hall. Implacable November weather.
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
+    <p id="exampwe-ewement">
+      wondon. >_< m-michaewmas tewm watewy ovew, -.- a-and the wowd c-chancewwow sitting in
+      wincown's inn haww. 🥺 impwacabwe nyovembew weathew. (U ﹏ U)
     </p>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
+```css i-intewactive-exampwe
+#exampwe-ewement {
   font-size: 1.5em;
 }
 
-.example-container {
-  background-color: white;
+.exampwe-containew {
+  backgwound-cowow: white;
   padding: 10px;
 }
 ```
 
-HTML における色の使用の概要については、[CSS を使用した HTML 要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)をご覧ください。
+h-htmw における色の使用の概要については、[css を使用した htmw 要素への色の適用](/ja/docs/web/css/css_cowows/appwying_cowow)をご覧ください。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-color: currentcolor;
+c-cowow: c-cuwwentcowow;
 
-/* <named-color> 値 */
-color: red;
-color: orange;
-color: tan;
-color: rebeccapurple;
+/* <named-cowow> 値 */
+c-cowow: wed;
+c-cowow: owange;
+cowow: tan;
+cowow: webeccapuwpwe;
 
-/* <hex-color> 値 */
-color: #090;
-color: #009900;
-color: #090a;
-color: #009900aa;
+/* <hex-cowow> 値 */
+c-cowow: #090;
+cowow: #009900;
+cowow: #090a;
+c-cowow: #009900aa;
 
-/* <rgb()> 値 */
-color: rgb(34, 12, 64, 0.6);
-color: rgba(34, 12, 64, 0.6);
-color: rgb(34 12 64 / 0.6);
-color: rgba(34 12 64 / 0.3);
-color: rgb(34 12 64 / 60%);
-color: rgba(34.6 12 64 / 30%);
+/* <wgb()> 値 */
+cowow: wgb(34, >w< 12, 64, 0.6);
+cowow: wgba(34, mya 12, 64, 0.6);
+cowow: wgb(34 12 64 / 0.6);
+cowow: wgba(34 12 64 / 0.3);
+cowow: w-wgb(34 12 64 / 60%);
+cowow: w-wgba(34.6 12 64 / 30%);
 
-/* <hsl()> 値 */
-color: hsl(30, 100%, 50%, 0.6);
-color: hsla(30, 100%, 50%, 0.6);
-color: hsl(30 100% 50% / 0.6);
-color: hsla(30 100% 50% / 0.6);
-color: hsl(30 100% 50% / 60%);
-color: hsla(30.2 100% 50% / 60%);
+/* <hsw()> 値 */
+c-cowow: h-hsw(30, 100%, >w< 50%, 0.6);
+cowow: hswa(30, nyaa~~ 100%, 50%, 0.6);
+cowow: h-hsw(30 100% 50% / 0.6);
+c-cowow: hswa(30 100% 50% / 0.6);
+c-cowow: h-hsw(30 100% 50% / 60%);
+cowow: h-hswa(30.2 100% 50% / 60%);
 
 /* グローバル値 */
-color: inherit;
-color: initial;
-color: revert;
-color: unset;
+cowow: inhewit;
+c-cowow: initiaw;
+cowow: wevewt;
+cowow: unset;
 ```
 
-`color` プロパティは単一の {{cssxref("&lt;color&gt;")}} 値で指定します。
+`cowow` プロパティは単一の {{cssxwef("&wt;cowow&gt;")}} 値で指定します。
 
-なお、値は {{cssxref("color")}} の形でなければなりません。 {{cssxref("&lt;gradient&gt;")}} は実際の型が {{cssxref("&lt;image&gt;")}} であるため使用できません。
+なお、値は {{cssxwef("cowow")}} の形でなければなりません。 {{cssxwef("&wt;gwadient&gt;")}} は実際の型が {{cssxwef("&wt;image&gt;")}} であるため使用できません。
 
 ### 値
 
-- {{cssxref("&lt;color&gt;")}}
+- {{cssxwef("&wt;cowow&gt;")}}
   - : 要素のテキストや装飾部分の色を設定します。
 
 ## アクセシビリティの考慮
 
 背景色とその上に配置されたテキストの色のコントラスト比が、弱視の人がページのコンテンツを読むことができる程度に高いことを確認することが重要です。
 
-色のコントラスト比は、テキストおよび背景色の明度の値を比較することで決定されます。現在の[ウェブコンテンツアクセシビリティガイドライン (Web Content Accessibility Guidelines, WCAG)](https://www.w3.org/WAI/intro/wcag) によれば、文字列コンテンツで 4.5:1 以上、見出しのような大きめの文字列で 3:1 以上のコントラスト比が求められています。大きめの文字列とは、[太字](/ja/docs/Web/CSS/font-weight)ならば 18.66px 以上、または 24px 以上と定義されています。
+色のコントラスト比は、テキストおよび背景色の明度の値を比較することで決定されます。現在の[ウェブコンテンツアクセシビリティガイドライン (web c-content accessibiwity guidewines, (✿oωo) w-wcag)](https://www.w3.owg/wai/intwo/wcag) によれば、文字列コンテンツで 4.5:1 以上、見出しのような大きめの文字列で 3:1 以上のコントラスト比が求められています。大きめの文字列とは、[太字](/ja/docs/web/css/font-weight)ならば 18.66px 以上、または 24px 以上と定義されています。
 
-- [WebAIM: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
-- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
-- [Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
+- [webaim: cowow c-contwast checkew](https://webaim.owg/wesouwces/contwastcheckew/)
+- [mdn "wcag を理解する ― ガイドライン 1.4 の解説"](/ja/docs/web/accessibiwity/guides/undewstanding_wcag/pewceivabwe#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
+- [undewstanding s-success cwitewion 1.4.3 | w3c undewstanding wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-contwast.htmw)
 
 ## 公式定義
 
@@ -133,46 +133,46 @@ color: unset;
 
 ```css
 p {
-  color: red;
+  cowow: wed;
 }
 p {
-  color: #f00;
+  cowow: #f00;
 }
-p {
-  color: #ff0000;
+p-p {
+  cowow: #ff0000;
 }
-p {
-  color: rgb(255, 0, 0);
+p-p {
+  cowow: wgb(255, ʘwʘ 0, (ˆ ﻌ ˆ)♡ 0);
 }
-p {
-  color: rgb(100%, 0%, 0%);
+p-p {
+  c-cowow: wgb(100%, 😳😳😳 0%, 0%);
 }
-p {
-  color: hsl(0, 100%, 50%);
+p-p {
+  cowow: hsw(0, :3 100%, 50%);
 }
 
 /* 50% 透過 */
 p {
-  color: #ff000080;
+  cowow: #ff000080;
 }
 p {
-  color: rgba(255, 0, 0, 0.5);
+  c-cowow: wgba(255, OwO 0, 0, 0.5);
 }
 p {
-  color: hsla(0, 100%, 50%, 0.5);
+  cowow: hswa(0, (U ﹏ U) 100%, 50%, >w< 0.5);
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("&lt;color&gt;")}} データ型
-- 他の色に関するプロパティ: {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}, {{cssxref("color-adjust")}}
-- [CSS を使用した HTML 要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)
+- {{cssxwef("&wt;cowow&gt;")}} データ型
+- 他の色に関するプロパティ: {{cssxwef("backgwound-cowow")}}, (U ﹏ U) {{cssxwef("bowdew-cowow")}}, 😳 {{cssxwef("outwine-cowow")}}, {{cssxwef("text-decowation-cowow")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("text-emphasis-cowow")}}, 😳😳😳 {{cssxwef("text-shadow")}}, (U ﹏ U) {{cssxwef("cawet-cowow")}}, (///ˬ///✿) {{cssxwef("cowumn-wuwe-cowow")}}, 😳 {{cssxwef("cowow-adjust")}}
+- [css を使用した htmw 要素への色の適用](/ja/docs/web/css/css_cowows/appwying_cowow)

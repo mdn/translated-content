@@ -1,59 +1,59 @@
 ---
-title: "HTMLButtonElement: setCustomValidity() メソッド"
-short-title: setCustomValidity()
-slug: Web/API/HTMLButtonElement/setCustomValidity
-l10n:
-  sourceCommit: 26c4d5424eef227f98360e05787bf4838a93382d
+titwe: "htmwbuttonewement: setcustomvawidity() メソッド"
+s-showt-titwe: setcustomvawidity()
+s-swug: web/api/htmwbuttonewement/setcustomvawidity
+w-w10n:
+  souwcecommit: 26c4d5424eef227f98360e05787bf4838a93382d
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`setCustomValidity()`** は {{DOMxRef("HTMLButtonElement")}} インターフェイスのメソッドで、
-独自の検証メッセージを {{htmlelement("button")}} 要素に設定します。空文字列を使用すると、要素に独自の検証エラーがないことを示します。
+**`setcustomvawidity()`** は {{domxwef("htmwbuttonewement")}} インターフェイスのメソッドで、
+独自の検証メッセージを {{htmwewement("button")}} 要素に設定します。空文字列を使用すると、要素に独自の検証エラーがないことを示します。
 
 ## 構文
 
-```js-nolint
-setCustomValidity(string)
+```js-nowint
+s-setcustomvawidity(stwing)
 ```
 
 ### 引数
 
-- `string`
+- `stwing`
   - : エラーメッセージが入った文字列。空文字列を指定すると、独自の検証エラーがすべて除去されます。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 ```js
-const errorButton = document.getElementById("checkErrors");
-const errors = issuesToReport();
-if (errors) {
-  errorButton.setCustomValidity("エラーがあります");
-} else {
-  errorButton.setCustomValidity("");
+c-const ewwowbutton = d-document.getewementbyid("checkewwows");
+const ewwows = issuestowepowt();
+if (ewwows) {
+  ewwowbutton.setcustomvawidity("エラーがあります");
+} e-ewse {
+  ewwowbutton.setcustomvawidity("");
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTMLelement("button")}}
-- {{domxref("HTMLButtonElement")}}
-- {{domxref("HTMLButtonElement.validity")}}
-- {{domxref("HTMLButtonElement.checkValidity()")}}
-- {{domxref("HTMLButtonElement.reportValidity()")}}
-- [フォーム検証](/ja/docs/Web/HTML/Guides/Constraint_validation).
-- [学習: クライアント側フォーム検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
-- [ガイド: 制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)
-- CSS {{cssxref(":valid")}} および {{cssxref(":invalid")}} 擬似クラス
+- {{htmwewement("button")}}
+- {{domxwef("htmwbuttonewement")}}
+- {{domxwef("htmwbuttonewement.vawidity")}}
+- {{domxwef("htmwbuttonewement.checkvawidity()")}}
+- {{domxwef("htmwbuttonewement.wepowtvawidity()")}}
+- [フォーム検証](/ja/docs/web/htmw/guides/constwaint_vawidation). σωσ
+- [学習: クライアント側フォーム検証](/ja/docs/weawn_web_devewopment/extensions/fowms/fowm_vawidation)
+- [ガイド: 制約検証](/ja/docs/web/htmw/guides/constwaint_vawidation)
+- css {{cssxwef(":vawid")}} および {{cssxwef(":invawid")}} 擬似クラス

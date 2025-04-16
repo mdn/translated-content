@@ -1,123 +1,123 @@
 ---
-title: "CanvasPattern: setTransform() メソッド"
-short-title: setTransform()
-slug: Web/API/CanvasPattern/setTransform
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: "canvaspattewn: settwansfowm() メソッド"
+s-showt-titwe: s-settwansfowm()
+s-swug: web/api/canvaspattewn/settwansfowm
+w-w10n:
+  s-souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef("Canvas API")}}
+{{apiwef("canvas a-api")}}
 
-**`CanvasPattern.setTransform()`** メソッドは、パターンの変換行列として {{domxref("DOMMatrix")}} オブジェクトを使用し、パターンにこれを実行します。
+**`canvaspattewn.settwansfowm()`** メソッドは、パターンの変換行列として {{domxwef("dommatwix")}} オブジェクトを使用し、パターンにこれを実行します。
 
 ## 構文
 
-```js-nolint
-setTransform(matrix)
+```js-nowint
+s-settwansfowm(matwix)
 ```
 
 ### 引数
 
-- `matrix`
-  - : パターンの変換行列として使用する {{domxref("DOMMatrix")}} です。
+- `matwix`
+  - : パターンの変換行列として使用する {{domxwef("dommatwix")}} です。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-### `setTransform` メソッドの使用
+### `settwansfowm` メソッドの使用
 
-これは `setTransform` メソッドを使用して {{domxref("DOMMatrix")}} によるパターンの座標変換を指定して {{domxref("CanvasPattern")}} を生成する簡単なコードスニペットです。たとえば、パターンが現在の {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} として適用され、{{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} メソッドを使用すると、キャンバスに描画されます。
+これは `settwansfowm` メソッドを使用して {{domxwef("dommatwix")}} によるパターンの座標変換を指定して {{domxwef("canvaspattewn")}} を生成する簡単なコードスニペットです。たとえば、パターンが現在の {{domxwef("canvaswendewingcontext2d.fiwwstywe", (///ˬ///✿) "fiwwstywe")}} として適用され、{{domxwef("canvaswendewingcontext2d.fiwwwect", >w< "fiwwwect()")}} メソッドを使用すると、キャンバスに描画されます。
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+const canvas = document.getewementbyid("canvas");
+c-const ctx = canvas.getcontext("2d");
 
-const matrix = new DOMMatrix([1, 0.2, 0.8, 1, 0, 0]);
+const matwix = nyew dommatwix([1, rawr 0.2, 0.8, mya 1, 0, 0]);
 
-const img = new Image();
-img.src =
-  "/en-US/docs/Web/API/CanvasPattern/setTransform/canvas_createpattern.png";
+c-const img = nyew image();
+i-img.swc =
+  "/en-us/docs/web/api/canvaspattewn/settwansfowm/canvas_cweatepattewn.png";
 
-img.onload = () => {
-  const pattern = ctx.createPattern(img, "repeat");
-  pattern.setTransform(matrix.rotate(-45).scale(1.5));
-  ctx.fillStyle = pattern;
-  ctx.fillRect(0, 0, 400, 400);
+img.onwoad = () => {
+  const pattewn = ctx.cweatepattewn(img, ^^ "wepeat");
+  p-pattewn.settwansfowm(matwix.wotate(-45).scawe(1.5));
+  ctx.fiwwstywe = p-pattewn;
+  ctx.fiwwwect(0, 😳😳😳 0, 400, 400);
 };
 ```
 
 #### 編集可能なデモ
 
-上のコードスニペットの編集可能なデモです。 `SetTransform()` の引数を変更して、その効果を確認してみてください。
+上のコードスニペットの編集可能なデモです。 `settwansfowm()` の引数を変更して、その効果を確認してみてください。
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+```htmw h-hidden
+<canvas id="canvas" width="400" height="200" cwass="pwayabwe-canvas"></canvas>
+<div cwass="pwayabwe-buttons">
+  <input i-id="edit" type="button" vawue="edit" />
+  <input id="weset" type="button" vawue="weset" />
 </div>
-<textarea id="code" class="playable-code" style="height:120px">
-const img = new Image();
-img.src = '/en-US/docs/Web/API/CanvasPattern/setTransform/canvas_createpattern.png';
-img.onload = () => {
-  const pattern = ctx.createPattern(img, 'repeat');
-  pattern.setTransform(matrix.rotate(-45).scale(1.5));
-  ctx.fillStyle = pattern;
-  ctx.fillRect(0, 0, 400, 400);
+<textawea id="code" cwass="pwayabwe-code" stywe="height:120px">
+c-const img = new image();
+img.swc = '/en-us/docs/web/api/canvaspattewn/settwansfowm/canvas_cweatepattewn.png';
+i-img.onwoad = () => {
+  c-const p-pattewn = ctx.cweatepattewn(img, mya 'wepeat');
+  p-pattewn.settwansfowm(matwix.wotate(-45).scawe(1.5));
+  ctx.fiwwstywe = pattewn;
+  c-ctx.fiwwwect(0, 😳 0, 400, -.- 400);
 };
-</textarea>
+</textawea>
 ```
 
 ```js hidden
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
-const textarea = document.getElementById("code");
-const reset = document.getElementById("reset");
-const edit = document.getElementById("edit");
-const code = textarea.value;
+const canvas = document.getewementbyid("canvas");
+c-const ctx = canvas.getcontext("2d");
+const textawea = document.getewementbyid("code");
+const weset = document.getewementbyid("weset");
+const edit = d-document.getewementbyid("edit");
+const code = t-textawea.vawue;
 
-const matrix = new DOMMatrix([1, 0.2, 0.8, 1, 0, 0]);
+c-const matwix = n-nyew dommatwix([1, 🥺 0.2, 0.8, o.O 1, 0, 0]);
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+function dwawcanvas() {
+  ctx.cweawwect(0, /(^•ω•^) 0, c-canvas.width, nyaa~~ c-canvas.height);
+  evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", () => {
-  textarea.value = code;
-  drawCanvas();
+w-weset.addeventwistenew("cwick", nyaa~~ () => {
+  t-textawea.vawue = code;
+  d-dwawcanvas();
 });
 
-edit.addEventListener("click", () => {
-  textarea.focus();
+edit.addeventwistenew("cwick", :3 () => {
+  t-textawea.focus();
 });
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+textawea.addeventwistenew("input", 😳😳😳 dwawcanvas);
+w-window.addeventwistenew("woad", (˘ω˘) dwawcanvas);
 ```
 
-{{ EmbedLiveSample('編集可能なデモ', 700, 400) }}
+{{ e-embedwivesampwe('編集可能なデモ', ^^ 700, 400) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このメソッドを定義しているインターフェイス: {{domxref("CanvasPattern")}}
-- {{domxref("DOMMatrix")}}
+- このメソッドを定義しているインターフェイス: {{domxwef("canvaspattewn")}}
+- {{domxwef("dommatwix")}}

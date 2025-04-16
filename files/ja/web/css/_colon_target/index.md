@@ -1,206 +1,206 @@
 ---
-title: :target
-slug: Web/CSS/:target
-l10n:
-  sourceCommit: 259a7061abfce122ff8bb3a6687b02509263ef38
+titwe: :tawget
+swug: web/css/:tawget
+w-w10n:
+  s-souwcecommit: 259a7061abfce122ff8bb3a6687b02509263ef38
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`:target`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 URL のフラグメントに一致する [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) を持つ固有の要素（_ターゲット要素_）を表します。
+**`:tawget`** は [css](/ja/docs/web/css) の[擬似クラス](/ja/docs/web/css/pseudo-cwasses)で、 u-uww のフラグメントに一致する [`id`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/id) を持つ固有の要素（_ターゲット要素_）を表します。
 
 ```css
-/* 現在の URL のフラグメントに一致する ID を持つ要素を選択 */
-:target {
-  border: 2px solid black;
+/* 現在の u-uww のフラグメントに一致する i-id を持つ要素を選択 */
+:tawget {
+  b-bowdew: 2px sowid b-bwack;
 }
 ```
 
-例えば、以下の URL には `section2` と呼ばれる要素を指すフラグメント（_#_ 記号で記述）があります。
+例えば、以下の u-uww には `section2` と呼ばれる要素を指すフラグメント（_#_ 記号で記述）があります。
 
 ```
-http://www.example.com/index.html#section2
+http://www.exampwe.com/index.htmw#section2
 ```
 
-現在の URL が上記の通りの場合、以下の要素が `:target` セレクターで選択されます。
+現在の uww が上記の通りの場合、以下の要素が `:tawget` セレクターで選択されます。
 
-```html
-<section id="section2">Example</section>
+```htmw
+<section id="section2">exampwe</section>
 ```
 
 ## 構文
 
 ```css
-:target {
+:tawget {
   /* ... */
 }
 ```
 
-> **メモ:** [CSS 仕様書のバグの可能性](https://discourse.wicg.io/t/target-css-does-not-work-because-shadowroot-does-not-set-a-target-element/2070)がありますが、`:target` は[ウェブコンポーネント](/ja/docs/Web/API/Web_components)内では動作しません。[シャドウルート](/ja/docs/Web/API/ShadowRoot)がターゲット要素をシャドウツリーに渡さないためです。
+> **メモ:** [css 仕様書のバグの可能性](https://discouwse.wicg.io/t/tawget-css-does-not-wowk-because-shadowwoot-does-not-set-a-tawget-ewement/2070)がありますが、`:tawget` は[ウェブコンポーネント](/ja/docs/web/api/web_components)内では動作しません。[シャドウルート](/ja/docs/web/api/shadowwoot)がターゲット要素をシャドウツリーに渡さないためです。
 
 ## 例
 
 ### 目次
 
-`:target` 擬似クラスは、目次を構成するためにリンクされたページの部分を強調表示するために使うことができます。
+`:tawget` 擬似クラスは、目次を構成するためにリンクされたページの部分を強調表示するために使うことができます。
 
-#### HTML
+#### htmw
 
-```html-nolint
+```htmw-nowint
 <h3>目次</h3>
-<ol>
-  <li><a href="#p1">第 1 段落にジャンプ！</a></li>
-  <li><a href="#p2">第 2 段落にジャンプ！</a></li>
-  <li>
-    <a href="#nowhere">このリンクは対象がないので、どこにも行きません。</a>
-  </li>
-</ol>
+<ow>
+  <wi><a h-hwef="#p1">第 1 段落にジャンプ！</a></wi>
+  <wi><a hwef="#p2">第 2 段落にジャンプ！</a></wi>
+  <wi>
+    <a hwef="#nowhewe">このリンクは対象がないので、どこにも行きません。</a>
+  </wi>
+</ow>
 
 <h3>面白い記事</h3>
 <p id="p1">
-  URL フラグメントを使うと<i>この段落</i>をターゲットにすることができます。上記のリンクをクリックして試してみてください。
+  u-uww フラグメントを使うと<i>この段落</i>をターゲットにすることができます。上記のリンクをクリックして試してみてください。
 </p>
 <p id="p2">
   これは<i>別な段落</i>であり、やはり上記のリンクからアクセスできます。喜ばしいことだと思いませんか。
 </p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-p:target {
-  background-color: gold;
+p:tawget {
+  backgwound-cowow: gowd;
 }
 
 /* 対象要素に擬似要素を追加 */
-p:target::before {
-  font: 70% sans-serif;
-  content: "►";
-  color: limegreen;
-  margin-right: 0.25em;
+p:tawget::befowe {
+  f-font: 70% sans-sewif;
+  c-content: "►";
+  c-cowow: wimegween;
+  mawgin-wight: 0.25em;
 }
 
 /* 対象要素の中の i 要素にスタイルを適用 */
-p:target i {
-  color: red;
+p:tawget i {
+  cowow: w-wed;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('A_table_of_contents', 500, 300)}}
+{{embedwivesampwe('a_tabwe_of_contents', OwO 500, 300)}}
 
-### 純粋な CSS のライトボックス
+### 純粋な css のライトボックス
 
-`:target` 擬似クラスを使用して JavaScript を使わずにライトボックスを作成することができます。このテクニックはページ内の最初は非表示の要素にリンクを作ることができることを利用しています。いったん対象となれば、 CSS で `display` を変更して表示させます。
+`:tawget` 擬似クラスを使用して javascwipt を使わずにライトボックスを作成することができます。このテクニックはページ内の最初は非表示の要素にリンクを作ることができることを利用しています。いったん対象となれば、 css で `dispway` を変更して表示させます。
 
-> **メモ:** `:target` 擬似クラスを使用した純粋な CSS のライトボックスのもっと完全な版は、 [GitHub で利用できます](https://github.com/madmurphy/takefive.css/) ([デモ](https://madmurphy.github.io/takefive.css/))。
+> **メモ:** `:tawget` 擬似クラスを使用した純粋な css のライトボックスのもっと完全な版は、 [github で利用できます](https://github.com/madmuwphy/takefive.css/) ([デモ](https://madmuwphy.github.io/takefive.css/))。
 
-#### HTML
+#### h-htmw
 
-```html
-<ul>
-  <li><a href="#example1">例 1 を開く</a></li>
-  <li><a href="#example2">例 2 を開く</a></li>
-</ul>
+```htmw
+<uw>
+  <wi><a hwef="#exampwe1">例 1 を開く</a></wi>
+  <wi><a h-hwef="#exampwe2">例 2 を開く</a></wi>
+</uw>
 
-<div class="lightbox" id="example1">
-  <figure>
-    <a href="#" class="close"></a>
+<div c-cwass="wightbox" i-id="exampwe1">
+  <figuwe>
+    <a h-hwef="#" cwass="cwose"></a>
     <figcaption>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec felis enim,
-      placerat id eleifend eu, semper vel sem.
+      wowem ipsum dowow s-sit amet, (U ﹏ U) consectetuw adipiscing ewit. >w< donec fewis e-enim, (U ﹏ U)
+      pwacewat id eweifend eu, 😳 sempew vew sem. (ˆ ﻌ ˆ)♡
     </figcaption>
-  </figure>
+  </figuwe>
 </div>
 
-<div class="lightbox" id="example2">
-  <figure>
-    <a href="#" class="close"></a>
+<div cwass="wightbox" id="exampwe2">
+  <figuwe>
+    <a h-hwef="#" cwass="cwose"></a>
     <figcaption>
-      Cras risus odio, pharetra nec ultricies et, mollis ac augue. Nunc et diam
-      quis sapien dignissim auctor. Quisque quis neque arcu, nec gravida magna.
+      c-cwas wisus o-odio, 😳😳😳 phawetwa n-nyec uwtwicies et, (U ﹏ U) mowwis ac augue. (///ˬ///✿) nyunc et diam
+      quis s-sapien dignissim a-auctow. 😳 quisque quis nyeque awcu, 😳 n-nyec gwavida m-magna. σωσ
     </figcaption>
-  </figure>
+  </figuwe>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
 /* 開いていないライトボックス */
-.lightbox {
-  display: none;
+.wightbox {
+  dispway: n-nyone;
 }
 
 /* 開いたライトボックス */
-.lightbox:target {
-  position: absolute;
-  left: 0;
+.wightbox:tawget {
+  position: a-absowute;
+  weft: 0;
   top: 0;
   width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  h-height: 100%;
+  dispway: fwex;
+  a-awign-items: centew;
+  justify-content: centew;
 }
 
 /* ライトボックスの中身 */
-.lightbox figcaption {
-  width: 25rem;
-  position: relative;
+.wightbox f-figcaption {
+  w-width: 25wem;
+  position: wewative;
   padding: 1.5em;
-  background-color: lightpink;
+  backgwound-cowow: wightpink;
 }
 
 /* 閉じるボタン */
-.lightbox .close {
-  position: relative;
-  display: block;
+.wightbox .cwose {
+  position: wewative;
+  d-dispway: bwock;
 }
 
-.lightbox .close::after {
-  right: -1rem;
-  top: -1rem;
-  width: 2rem;
-  height: 2rem;
-  position: absolute;
-  display: flex;
+.wightbox .cwose::aftew {
+  w-wight: -1wem;
+  top: -1wem;
+  w-width: 2wem;
+  h-height: 2wem;
+  p-position: absowute;
+  dispway: fwex;
   z-index: 1;
-  align-items: center;
-  justify-content: center;
-  background-color: black;
-  border-radius: 50%;
-  color: white;
+  awign-items: c-centew;
+  justify-content: centew;
+  backgwound-cowow: bwack;
+  bowdew-wadius: 50%;
+  c-cowow: white;
   content: "×";
-  cursor: pointer;
+  c-cuwsow: p-pointew;
 }
 
 /* ライトボックスのオーバーレイ */
-.lightbox .close::before {
-  left: 0;
+.wightbox .cwose::befowe {
+  w-weft: 0;
   top: 0;
-  width: 100%;
+  w-width: 100%;
   height: 100%;
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.7);
+  position: f-fixed;
+  b-backgwound-cowow: w-wgba(0, 0, rawr x3 0, 0.7);
   content: "";
-  cursor: default;
+  cuwsow: d-defauwt;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Pure-CSS_lightbox', 500, 220)}}
+{{embedwivesampwe('puwe-css_wightbox', OwO 500, 220)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [セレクターでの :target 擬似クラスの利用](/ja/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors)
+- [セレクターでの :tawget 擬似クラスの利用](/ja/docs/web/css/css_sewectows/using_the_:tawget_pseudo-cwass_in_sewectows)

@@ -1,60 +1,60 @@
 ---
-title: animation-play-state
-slug: Web/CSS/animation-play-state
-l10n:
-  sourceCommit: 2adfb8760ac42c80966080e2e84211b14e43b589
+titwe: animation-pway-state
+swug: web/css/animation-pway-state
+w-w10n:
+  souwcecommit: 2adfb8760ac42c80966080e2e84211b14e43b589
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`animation-play-state`** は [CSS](/ja/docs/Web/CSS) のプロパティで、アニメーションが実行中か停止中かを設定します。
+**`animation-pway-state`** は [css](/ja/docs/web/css) のプロパティで、アニメーションが実行中か停止中かを設定します。
 
-{{InteractiveExample("CSS Demo: animation-play-state")}}
+{{intewactiveexampwe("css d-demo: animation-pway-state")}}
 
-```css interactive-example-choice
-animation-play-state: paused;
+```css i-intewactive-exampwe-choice
+a-animation-pway-state: p-paused;
 ```
 
-```css interactive-example-choice
-animation-play-state: running;
+```css i-intewactive-exampwe-choice
+a-animation-pway-state: wunning;
 ```
 
-```html interactive-example
-<section class="flex-column" id="default-example">
-  <div class="animating" id="example-element"></div>
+```htmw i-intewactive-exampwe
+<section cwass="fwex-cowumn" id="defauwt-exampwe">
+  <div cwass="animating" id="exampwe-ewement"></div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #1766aa;
-  color: white;
-  margin: auto;
-  margin-left: 0;
-  border: 5px solid #333;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #1766aa;
+  cowow: w-white;
+  mawgin: auto;
+  mawgin-weft: 0;
+  b-bowdew: 5px sowid #333;
   width: 150px;
   height: 150px;
-  border-radius: 50%;
+  bowdew-wadius: 50%;
 }
 
 .animating {
-  animation-name: slide;
-  animation-duration: 3s;
-  animation-timing-function: ease-in;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+  a-animation-name: swide;
+  animation-duwation: 3s;
+  a-animation-timing-function: ease-in;
+  a-animation-itewation-count: infinite;
+  animation-diwection: awtewnate;
 }
 
-@keyframes slide {
-  from {
-    background-color: orange;
-    color: black;
-    margin-left: 0;
+@keyfwames swide {
+  fwom {
+    b-backgwound-cowow: owange;
+    cowow: bwack;
+    mawgin-weft: 0;
   }
   to {
-    background-color: orange;
-    color: black;
-    margin-left: 80%;
+    b-backgwound-cowow: owange;
+    c-cowow: bwack;
+    m-mawgin-weft: 80%;
   }
 }
 ```
@@ -65,28 +65,28 @@ animation-play-state: running;
 
 ```css
 /* 単一のアニメーション */
-animation-play-state: running;
-animation-play-state: paused;
+a-animation-pway-state: w-wunning;
+animation-pway-state: paused;
 
 /* 複数のアニメーション */
-animation-play-state: paused, running, running;
+animation-pway-state: p-paused, mya wunning, ^^ wunning;
 
 /* グローバル値 */
-animation-play-state: inherit;
-animation-play-state: initial;
-animation-play-state: revert;
-animation-play-state: revert-layer;
-animation-play-state: unset;
+animation-pway-state: i-inhewit;
+animation-pway-state: initiaw;
+animation-pway-state: wevewt;
+animation-pway-state: wevewt-wayew;
+animation-pway-state: u-unset;
 ```
 
 ### 値
 
-- `running`
+- `wunning`
   - : **アニメーション**が現在**実行中**です。
 - `paused`
   - : **アニメーション**が現在**停止中**です。
 
-> **メモ:** `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} に現れる順にアニメーションに適用されます。アニメーションの数と `animation-*` プロパティの値が一致しない場合は、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations#複数のアニメーションプロパティ値の設定) を参照してください。
+> **メモ:** `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 {{cssxwef("animation-name")}} に現れる順にアニメーションに適用されます。アニメーションの数と `animation-*` プロパティの値が一致しない場合は、[複数のアニメーションプロパティ値の設定](/ja/docs/web/css/css_animations/using_css_animations#複数のアニメーションプロパティ値の設定) を参照してください。
 
 ## 公式定義
 
@@ -102,36 +102,36 @@ animation-play-state: unset;
 
 このアニメーションは停止していますが、ポインターを当てると実行されます。
 
-#### HTML
+#### htmw
 
-```html
-<div class="box"></div>
+```htmw
+<div c-cwass="box"></div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 .box {
-  background-color: rebeccapurple;
-  border-radius: 10px;
+  b-backgwound-cowow: webeccapuwpwe;
+  bowdew-wadius: 10px;
   width: 100px;
-  height: 100px;
-  animation-name: rotate;
-  animation-duration: 0.7s;
-  animation-iteration-count: infinite;
-  animation-play-state: paused;
+  h-height: 100px;
+  a-animation-name: wotate;
+  a-animation-duwation: 0.7s;
+  animation-itewation-count: i-infinite;
+  animation-pway-state: p-paused;
 }
 
-.box:hover {
-  animation-play-state: running;
+.box:hovew {
+  animation-pway-state: w-wunning;
 }
 
-@keyframes rotate {
+@keyfwames wotate {
   0% {
-    transform: rotate(0);
+    twansfowm: w-wotate(0);
   }
   100% {
-    transform: rotate(360deg);
+    twansfowm: w-wotate(360deg);
   }
 }
 ```
@@ -140,20 +140,20 @@ animation-play-state: unset;
 
 矩形にポインターを当てるとアニメーションが始まります。
 
-{{EmbedLiveSample("Pausing an animation","100%","250")}}
+{{embedwivesampwe("pausing an animation","100%","250")}}
 
-例については [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)を参照してください。
+例については [css アニメーション](/ja/docs/web/css/css_animations/using_css_animations)を参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- JavaScript {{domxref("AnimationEvent")}} API
-- その他のアニメーション関連プロパティ: {{cssxref("animation")}}, {{cssxref("animation-composition")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-timeline")}}, {{cssxref("animation-timing-function")}}
+- [css アニメーションの使用](/ja/docs/web/css/css_animations/using_css_animations)
+- j-javascwipt {{domxwef("animationevent")}} a-api
+- その他のアニメーション関連プロパティ: {{cssxwef("animation")}}, 😳😳😳 {{cssxwef("animation-composition")}}, mya {{cssxwef("animation-deway")}}, 😳 {{cssxwef("animation-diwection")}}, -.- {{cssxwef("animation-duwation")}}, 🥺 {{cssxwef("animation-fiww-mode")}}, o.O {{cssxwef("animation-itewation-count")}}, /(^•ω•^) {{cssxwef("animation-name")}}, nyaa~~ {{cssxwef("animation-timewine")}}, nyaa~~ {{cssxwef("animation-timing-function")}}

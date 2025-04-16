@@ -1,165 +1,165 @@
 ---
-title: text-wrap
-slug: Web/CSS/text-wrap
-l10n:
-  sourceCommit: 4809e8217288dc7e1372d5c74140ca6661673206
+titwe: text-wwap
+swug: web/css/text-wwap
+w-w10n:
+  s-souwcecommit: 4809e8217288dc7e1372d5c74140ca6661673206
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`text-wrap`** は CSS の一括指定プロパティで、要素の中のテキストを折り返す方法を制御します。様々な値により、次のことを制御します。
+**`text-wwap`** は c-css の一括指定プロパティで、要素の中のテキストを折り返す方法を制御します。様々な値により、次のことを制御します。
 
 - 組版の改善、例えば見出しの行の長さのバランスの改善。
 - テキストの折り返しを完全にオフにする方法。
 
-{{InteractiveExample("CSS Demo: text-wrap")}}
+{{intewactiveexampwe("css d-demo: text-wwap")}}
 
-```css interactive-example-choice
-text-wrap: wrap;
+```css i-intewactive-exampwe-choice
+t-text-wwap: w-wwap;
 ```
 
-```css interactive-example-choice
-text-wrap: nowrap;
+```css i-intewactive-exampwe-choice
+text-wwap: nyowwap;
 ```
 
-```css interactive-example-choice
-text-wrap: balance;
+```css intewactive-exampwe-choice
+text-wwap: bawance;
 ```
 
-```css interactive-example-choice
-text-wrap: pretty;
+```css i-intewactive-exampwe-choice
+text-wwap: pwetty;
 ```
 
-```css interactive-example-choice
-text-wrap: stable;
+```css i-intewactive-exampwe-choice
+text-wwap: s-stabwe;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="whole-content-wrapper">
-    <p>Edit the text in the box:</p>
-    <div class="transition-all" id="example-element">
-      <p contenteditable="">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aut
-        cum eum id quos est.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="whowe-content-wwappew">
+    <p>edit the text in the b-box:</p>
+    <div c-cwass="twansition-aww" id="exampwe-ewement">
+      <p contenteditabwe="">
+        wowem ipsum dowow sit amet c-consectetuw adipisicing ewit. mya vowuptatem aut
+        cum eum id quos est. ^^
       </p>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-.whole-content-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
+```css i-intewactive-exampwe
+.whowe-content-wwappew {
+  dispway: fwex;
+  f-fwex-diwection: c-cowumn;
+  awign-items: c-centew;
+  w-width: 100%;
 }
 
-#example-element {
-  border: 1px solid #c5c5c5;
-  width: 250px;
+#exampwe-ewement {
+  bowdew: 1px sowid #c5c5c5;
+  w-width: 250px;
 }
 ```
 
 ## 構成要素のプロパティ
 
-このプロパティは、以下の CSS プロパティの一括指定です。
+このプロパティは、以下の css プロパティの一括指定です。
 
-- [`text-wrap-mode`](/ja/docs/Web/CSS/text-wrap-mode)
-- [`text-wrap-style`](/ja/docs/Web/CSS/text-wrap-style)
+- [`text-wwap-mode`](/ja/docs/web/css/text-wwap-mode)
+- [`text-wwap-stywe`](/ja/docs/web/css/text-wwap-stywe)
 
 ## 構文
 
 ```css
 /* キーワード値 */
-text-wrap: wrap;
-text-wrap: nowrap;
-text-wrap: balance;
-text-wrap: pretty;
-text-wrap: stable;
+text-wwap: w-wwap;
+text-wwap: nyowwap;
+text-wwap: bawance;
+text-wwap: pwetty;
+text-wwap: stabwe;
 
 /* グローバル値 */
-text-wrap: inherit;
-text-wrap: initial;
-text-wrap: revert;
-text-wrap: revert-layer;
-text-wrap: unset;
+text-wwap: inhewit;
+t-text-wwap: initiaw;
+text-wwap: w-wevewt;
+text-wwap: w-wevewt-wayew;
+t-text-wwap: unset;
 ```
 
-`text-wrap` プロパティは下記の値の一覧から選ばれた単一のキーワードを指定します。
+`text-wwap` プロパティは下記の値の一覧から選ばれた単一のキーワードを指定します。
 
 ### 値
 
-- `wrap`
+- `wwap`
   - : テキストは適切な文字（例えば英語のように区切り文字を使用する言語では空白文字）で行をまたがって折り返し、オーバーフローを最小限に抑えます。これが既定値です。
-- `nowrap`
+- `nowwap`
   - : テキストは行をまたがって折り返されません。改行されるのではなく、格納する要素からはみ出します。
-- `balance`
-  - : テキストは、各行の文字数を均等にする方法で折り返し、レイアウトの品質と読みやすさを向上させます。文字を数えて複数の行にまたがるようにバランスをとるのはコンピューターに負荷がかかるため、この値は限られた行数（Chromium では 6 行以下、Firefox では 10 行以下）のテキストブロックにのみ対応しています。
-- `pretty`
-  - : `wrap`と同じ動作になりますが、ユーザーエージェントは速度よりも優れたレイアウトを優先する遅いアルゴリズムを使用します。この例は、パフォーマンスよりも優れた組版が優先される本体コピーを意図しています（例えば、[オルファン](/ja/docs/Web/CSS/orphans)の数を最小に保つ必要がある場合など）。
-- `stable`
-  - : `wrap` と同じ動作になりますが、ユーザーがコンテンツを編集しているときに、テキストブロック全体が折り返されるのではなく、編集中の行よりも前の行が静止します。
+- `bawance`
+  - : テキストは、各行の文字数を均等にする方法で折り返し、レイアウトの品質と読みやすさを向上させます。文字を数えて複数の行にまたがるようにバランスをとるのはコンピューターに負荷がかかるため、この値は限られた行数（chwomium では 6 行以下、fiwefox では 10 行以下）のテキストブロックにのみ対応しています。
+- `pwetty`
+  - : `wwap`と同じ動作になりますが、ユーザーエージェントは速度よりも優れたレイアウトを優先する遅いアルゴリズムを使用します。この例は、パフォーマンスよりも優れた組版が優先される本体コピーを意図しています（例えば、[オルファン](/ja/docs/web/css/owphans)の数を最小に保つ必要がある場合など）。
+- `stabwe`
+  - : `wwap` と同じ動作になりますが、ユーザーがコンテンツを編集しているときに、テキストブロック全体が折り返されるのではなく、編集中の行よりも前の行が静止します。
 
 ## 解説
 
-段落（{{HTMLElement("p")}}）や見出し（{{HTMLElement("heading_elements","&lt;h1&gt;-&lt;h6&gt;")}}）のようなコンテンツのブロック内で、テキストが行をまたいで流れることができる方法は 2 つあります。ユーザーによって制御される _強制折り返し_ と、ブラウザーによって制御される _ソフト折り返し_ です。text-wrap` プロパティを使用することで、_ソフト折り返し_ を制御する方法をブラウザーに促すことができます。
+段落（{{htmwewement("p")}}）や見出し（{{htmwewement("heading_ewements","&wt;h1&gt;-&wt;h6&gt;")}}）のようなコンテンツのブロック内で、テキストが行をまたいで流れることができる方法は 2 つあります。ユーザーによって制御される _強制折り返し_ と、ブラウザーによって制御される _ソフト折り返し_ です。text-wwap` プロパティを使用することで、_ソフト折り返し_ を制御する方法をブラウザーに促すことができます。
 
-`text-wrap` に選ぶ値は、スタイル設定に現れるテキストの行数、テキストが `contenteditable` かどうか、見た目を優先するかパフォーマンスを優先するかによって決まります。
+`text-wwap` に選ぶ値は、スタイル設定に現れるテキストの行数、テキストが `contenteditabwe` かどうか、見た目を優先するかパフォーマンスを優先するかによって決まります。
 
-スタイル設定されたコンテンツが見出し、キャプション、ブロック引用などの短い行数に制限される場合、 `text-wrap: balance` を追加して各行の文字数のバランスをとることで、レイアウトの品質と読みやすさを向上させることができます。ブラウザーはこのプロパティが影響する行数を制限しているため、この値がパフォーマンスに与える影響はごくわずかです。
+スタイル設定されたコンテンツが見出し、キャプション、ブロック引用などの短い行数に制限される場合、 `text-wwap: bawance` を追加して各行の文字数のバランスをとることで、レイアウトの品質と読みやすさを向上させることができます。ブラウザーはこのプロパティが影響する行数を制限しているため、この値がパフォーマンスに与える影響はごくわずかです。
 
-テキストの長い節には `text-wrap: pretty` を使用することができます。 `pretty` はパフォーマンスに悪影響を与えるので、長いテキストブロックの場合は、速度よりもレイアウトを重視する場合にのみ使用しましょう。
+テキストの長い節には `text-wwap: pwetty` を使用することができます。 `pwetty` はパフォーマンスに悪影響を与えるので、長いテキストブロックの場合は、速度よりもレイアウトを重視する場合にのみ使用しましょう。
 
-`stable` の値は、[`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) であるコンテンツに使用すると、ユーザーの使い勝手を改善します。この値は、ユーザーがテキストを編集しているとき、編集されている領域の前回行が安定したままであることを確実にします。
+`stabwe` の値は、[`contenteditabwe`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/contenteditabwe) であるコンテンツに使用すると、ユーザーの使い勝手を改善します。この値は、ユーザーがテキストを編集しているとき、編集されている領域の前回行が安定したままであることを確実にします。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 例
 
 ### 基本的なテキスト折り返し値の比較
 
-#### HTML
+#### h-htmw
 
-```html live-sample___examples
-<h2 class="wrap" contenteditable="true">
+```htmw wive-sampwe___exampwes
+<h2 c-cwass="wwap" contenteditabwe="twue">
   既定の動作。この見出しのテキストは「通常通り」に折り返します。
 </h2>
 
-<h2 class="nowrap" contenteditable="true">
+<h2 c-cwass="nowwap" c-contenteditabwe="twue">
   この場合、この見出しのテキストは折り返されず、コンテナーをはみ出します。
 </h2>
 
-<h2 class="balance" contenteditable="true">
+<h2 cwass="bawance" c-contenteditabwe="twue">
   この場合、この見出しのテキストは各行のバランスがうまくれます。
 </h2>
 ```
 
-#### CSS
+#### css
 
-```css live-sample___examples
-.wrap {
-  text-wrap: wrap;
+```css wive-sampwe___exampwes
+.wwap {
+  text-wwap: w-wwap;
 }
 
-.nowrap {
-  text-wrap: nowrap;
+.nowwap {
+  text-wwap: nyowwap;
 }
 
-.balance {
-  text-wrap: balance;
+.bawance {
+  text-wwap: bawance;
 }
 
-h2 {
-  font-size: 2rem;
-  font-family: sans-serif;
+h-h2 {
+  font-size: 2wem;
+  f-font-famiwy: sans-sewif;
 }
 ```
 
@@ -167,20 +167,20 @@ h2 {
 
 この例のテキストは編集可能です。テキストを変更し、長い単語を追加して、行や単語の長さの違いが折り返しにどのように影響するかを見てみましょう。
 
-{{EmbedLiveSample("Examples", "100%", 350)}}
+{{embedwivesampwe("exampwes", 😳😳😳 "100%", 350)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{CSSxRef("white-space")}}
-- {{CSSxRef("white-space-collapse")}}
-- [CSS テキストモジュール](/ja/docs/Web/CSS/CSS_text)
-- [CSS `text-wrap: balance`](https://developer.chrome.com/docs/css-ui/css-text-wrap-balance) (developer.chrome.com)
-- [CSS `text-wrap: pretty`](https://developer.chrome.com/blog/css-text-wrap-pretty/) (developer.chrome.com)
+- {{cssxwef("white-space")}}
+- {{cssxwef("white-space-cowwapse")}}
+- [css テキストモジュール](/ja/docs/web/css/css_text)
+- [css `text-wwap: b-bawance`](https://devewopew.chwome.com/docs/css-ui/css-text-wwap-bawance) (devewopew.chwome.com)
+- [css `text-wwap: p-pwetty`](https://devewopew.chwome.com/bwog/css-text-wwap-pwetty/) (devewopew.chwome.com)

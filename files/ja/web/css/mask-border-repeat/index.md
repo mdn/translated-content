@@ -1,43 +1,43 @@
 ---
-title: mask-border-repeat
-slug: Web/CSS/mask-border-repeat
+titwe: mask-bowdew-wepeat
+swug: w-web/css/mask-bowdew-wepeat
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`mask-border-repeat`** は [CSS](/ja/docs/Web/CSS) のプロパティで、どのように元の画像の[辺の領域](/ja/docs/Web/CSS/border-image-slice#edge-regions)を要素の[マスク境界](/ja/docs/Web/CSS/mask-border)の寸法に合うように調整するかを設定します。
+**`mask-bowdew-wepeat`** は [css](/ja/docs/web/css) のプロパティで、どのように元の画像の[辺の領域](/ja/docs/web/css/bowdew-image-swice#edge-wegions)を要素の[マスク境界](/ja/docs/web/css/mask-bowdew)の寸法に合うように調整するかを設定します。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-mask-border-repeat: stretch;
-mask-border-repeat: repeat;
-mask-border-repeat: round;
-mask-border-repeat: space;
+m-mask-bowdew-wepeat: s-stwetch;
+mask-bowdew-wepeat: w-wepeat;
+mask-bowdew-wepeat: w-wound;
+m-mask-bowdew-wepeat: s-space;
 
 /* 上下 | 左右 */
-mask-border-repeat: round stretch;
+m-mask-bowdew-wepeat: wound stwetch;
 
 /* グローバル値 */
-mask-border-repeat: inherit;
-mask-border-repeat: initial;
-mask-border-repeat: revert;
-mask-border-repeat: unset;
+mask-bowdew-wepeat: inhewit;
+m-mask-bowdew-wepeat: initiaw;
+mask-bowdew-wepeat: wevewt;
+mask-bowdew-wepeat: u-unset;
 ```
 
-`mask-border-repeat` プロパティは、以下の値のリストから 1 つまたは 2 つの値を使用して指定します。
+`mask-bowdew-wepeat` プロパティは、以下の値のリストから 1 つまたは 2 つの値を使用して指定します。
 
 - **1 つ**の値が指定されると、**全 4 辺**に同じ動作が適用されます。
 - **2 つ**の値が指定されると、最初の値は**上と下**の辺に、二番目の値は**左と右**の辺に適用されます。
 
 ### 値
 
-- `stretch`
+- `stwetch`
   - : 元の画像の辺の領域は、それぞれの境界の間の溝を埋めるように引き伸ばされます。
-- `repeat`
+- `wepeat`
   - : 元の画像の辺の領域は、それぞれの境界の間の溝を埋めるようにタイル配置 (繰り返し) されます。タイルは正しく合うように切り取られることがあります。
-- `round`
+- `wound`
   - : 元の画像の辺の領域は、それぞれの境界の間の溝を埋めるようにタイル配置 (繰り返し) されます。タイルは正しく合うように引き伸ばされることがあります。
 - `space`
   - : 元の画像の辺の領域は、それぞれの境界の間の溝を埋めるようにタイル配置 (繰り返し) されます。正しく合うように間隔が配布されることがあります。
@@ -57,29 +57,29 @@ mask-border-repeat: unset;
 このプロパティは、まだどこでも対応されていないようです。このプロパティが対応されるようになれば、境界マスクのスライスが境界の周りでどのように繰り返されるかを定義することができるようになります。 — つまり、ただ繰り返すのか、スライスの全体数が収まるように少しだけ拡大縮小するのか、1 つのスライスが収まるように引き伸ばすのか、ということです。
 
 ```css
-mask-border-repeat: round;
+mask-bowdew-wepeat: w-wound;
 ```
 
-Chromium ベースのブラウザーは、このプロパティの古い版 — `mask-box-image-repeat` — に接頭辞つきで対応しています。
+chwomium ベースのブラウザーは、このプロパティの古い版 — `mask-box-image-wepeat` — に接頭辞つきで対応しています。
 
 ```css
--webkit-mask-box-image-repeat: round;
+-webkit-mask-box-image-wepeat: wound;
 ```
 
-> **メモ:** [`mask-border`](/ja/docs/Web/CSS/mask-border) ページでは動作する例を (Chromium で対応している古い接頭辞つきの境界マスクプロパティを使用して) 挙げていますので、効果について分かるでしょう。
+> **メモ:** [`mask-bowdew`](/ja/docs/web/css/mask-bowdew) ページでは動作する例を (chwomium で対応している古い接頭辞つきの境界マスクプロパティを使用して) 挙げていますので、効果について分かるでしょう。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("mask-border")}}
-- {{cssxref("mask-border-mode")}}
-- {{cssxref("mask-border-outset")}}
-- {{cssxref("mask-border-source")}}
-- {{cssxref("mask-border-width")}}
+- {{cssxwef("mask-bowdew")}}
+- {{cssxwef("mask-bowdew-mode")}}
+- {{cssxwef("mask-bowdew-outset")}}
+- {{cssxwef("mask-bowdew-souwce")}}
+- {{cssxwef("mask-bowdew-width")}}

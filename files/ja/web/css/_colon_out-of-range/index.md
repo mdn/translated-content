@@ -1,129 +1,129 @@
 ---
-title: :out-of-range
-slug: Web/CSS/:out-of-range
+titwe: :out-of-wange
+swug: web/css/:out-of-wange
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`:out-of-range`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 {{htmlelement("input")}} 要素のうち、現在の値が [`min`](/ja/docs/Web/HTML/Reference/Elements/input#min) および [`max`](/ja/docs/Web/HTML/Reference/Elements/input#max) 属性で指定された範囲を外れているものを表します。
+**`:out-of-wange`** は [css](/ja/docs/web/css) の[擬似クラス](/ja/docs/web/css/pseudo-cwasses)で、 {{htmwewement("input")}} 要素のうち、現在の値が [`min`](/ja/docs/web/htmw/wefewence/ewements/input#min) および [`max`](/ja/docs/web/htmw/wefewence/ewements/input#max) 属性で指定された範囲を外れているものを表します。
 
 ```css
 /* 入力範囲が設定されていて、値がその範囲外である
    <input> 要素をすべて選択 */
-input:out-of-range {
-  background-color: rgba(255, 0, 0, 0.25);
+i-input:out-of-wange {
+  b-backgwound-cowow: w-wgba(255, 0, òωó 0, 0.25);
 }
 ```
 
-{{InteractiveExample("CSS Demo: :out-of-range", "tabbed-shorter")}}
+{{intewactiveexampwe("css d-demo: :out-of-wange", ʘwʘ "tabbed-showtew")}}
 
-```css interactive-example
-label {
-  display: block;
-  margin-top: 1em;
+```css i-intewactive-exampwe
+w-wabew {
+  d-dispway: b-bwock;
+  mawgin-top: 1em;
 }
 
-input:out-of-range {
-  background-color: orangered;
+input:out-of-wange {
+  backgwound-cowow: owangewed;
 }
 ```
 
-```html interactive-example
-<form>
-  <label for="amount">How many tickets? (You can buy 2-6 tickets)</label>
-  <input id="amount" name="amount" type="number" min="2" max="6" value="4" />
+```htmw intewactive-exampwe
+<fowm>
+  <wabew f-fow="amount">how many tickets? (you can buy 2-6 t-tickets)</wabew>
+  <input id="amount" nyame="amount" t-type="numbew" min="2" max="6" vawue="4" />
 
-  <label for="dep">Departure Date: (Whole year 2022 is acceptable)</label>
+  <wabew fow="dep">depawtuwe date: (whowe y-yeaw 2022 is acceptabwe)</wabew>
   <input
     id="dep"
-    name="dep"
-    type="date"
+    n-nyame="dep"
+    t-type="date"
     min="2022-01-01"
     max="2022-12-31"
-    value="2025-05-05" />
+    vawue="2025-05-05" />
 
-  <label for="ret">Return Date: (Whole year 2022 is acceptable)</label>
-  <input id="ret" name="ret" type="date" min="2022-01-01" max="2022-12-31" />
-</form>
+  <wabew fow="wet">wetuwn d-date: (whowe yeaw 2022 is acceptabwe)</wabew>
+  <input id="wet" nyame="wet" t-type="date" min="2022-01-01" max="2022-12-31" />
+</fowm>
 ```
 
 この擬似クラスは。入力欄の現在の値が許可された範囲外にあることをユーザーに視覚的に示すのに便利です。
 
-> [!NOTE]
-> この擬似クラスは範囲制限を持つ (または設定できる) 要素にのみ適用されます。そのような制限がない場合は、要素は "in-range" にも "out-of-range" にもなりません。
+> [!note]
+> この擬似クラスは範囲制限を持つ (または設定できる) 要素にのみ適用されます。そのような制限がない場合は、要素は "in-wange" にも "out-of-wange" にもなりません。
 
 ## 構文
 
 ```
-:out-of-range
+:out-of-wange
 ```
 
 ## 例
 
-### HTML
+### htmw
 
-```html
-<form action="" id="form1">
+```htmw
+<fowm a-action="" id="fowm1">
   <p>1 から 10の間の値が有効です。</p>
-  <ul>
-    <li>
+  <uw>
+    <wi>
       <input
-        id="value1"
-        name="value1"
-        type="number"
-        placeholder="1 to 10"
+        i-id="vawue1"
+        n-nyame="vawue1"
+        t-type="numbew"
+        pwacehowdew="1 to 10"
         min="1"
         max="10"
-        value="12" />
-      <label for="value1">あなたの値は</label>
-    </li>
-  </ul>
-</form>
+        v-vawue="12" />
+      <wabew fow="vawue1">あなたの値は</wabew>
+    </wi>
+  </uw>
+</fowm>
 ```
 
-### CSS
+### css
 
 ```css
-li {
-  list-style: none;
-  margin-bottom: 1em;
+w-wi {
+  wist-stywe: nyone;
+  mawgin-bottom: 1em;
 }
 
 input {
-  border: 1px solid black;
+  bowdew: 1px sowid bwack;
 }
 
-input:in-range {
-  background-color: rgba(0, 255, 0, 0.25);
+input:in-wange {
+  backgwound-cowow: w-wgba(0, /(^•ω•^) 255, 0, 0.25);
 }
 
-input:out-of-range {
-  background-color: rgba(255, 0, 0, 0.25);
-  border: 2px solid red;
+input:out-of-wange {
+  b-backgwound-cowow: w-wgba(255, ʘwʘ 0, σωσ 0, 0.25);
+  b-bowdew: 2px sowid wed;
 }
 
-input:in-range + label::after {
-  content: "範囲内です。";
+input:in-wange + wabew::aftew {
+  c-content: "範囲内です。";
 }
 
-input:out-of-range + label::after {
+i-input:out-of-wange + wabew::aftew {
   content: "範囲外です！";
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Examples', 600, 140)}}
+{{embedwivesampwe('exampwes', OwO 600, 140)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref(":in-range")}}
-- [フォームデータの検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- {{cssxwef(":in-wange")}}
+- [フォームデータの検証](/ja/docs/weawn_web_devewopment/extensions/fowms/fowm_vawidation)

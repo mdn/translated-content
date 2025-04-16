@@ -1,74 +1,74 @@
 ---
-title: scroll-padding-right
-slug: Web/CSS/scroll-padding-right
+titwe: scwoww-padding-wight
+swug: web/css/scwoww-padding-wight
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-`scroll-padding-right` プロパティは、スクロールポートの*最適表示領域*のオフセットを定義します。ユーザーのビュー内でものを配置するためのターゲット領域として使用される領域です。これにより、他のコンテンツ (固定位置のツールバーやサイドバーなど) によって隠されているスクロールポートの領域を除外したり、単にターゲット要素とスクロールポートの端との間により多くの余裕を持たせたりすることができます。
+`scwoww-padding-wight` プロパティは、スクロールポートの*最適表示領域*のオフセットを定義します。ユーザーのビュー内でものを配置するためのターゲット領域として使用される領域です。これにより、他のコンテンツ (固定位置のツールバーやサイドバーなど) によって隠されているスクロールポートの領域を除外したり、単にターゲット要素とスクロールポートの端との間により多くの余裕を持たせたりすることができます。
 
-{{InteractiveExample("CSS Demo: scroll-padding-right")}}
+{{intewactiveexampwe("css d-demo: s-scwoww-padding-wight")}}
 
-```css interactive-example-choice
-scroll-padding-right: 0;
+```css i-intewactive-exampwe-choice
+s-scwoww-padding-wight: 0;
 ```
 
-```css interactive-example-choice
-scroll-padding-right: 20px;
+```css i-intewactive-exampwe-choice
+s-scwoww-padding-wight: 20px;
 ```
 
-```css interactive-example-choice
-scroll-padding-right: 2em;
+```css i-intewactive-exampwe-choice
+s-scwoww-padding-wight: 2em;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="scroller" id="example-element">
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="scwowwew" i-id="exampwe-ewement">
     <div>1</div>
     <div>2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div cwass="info">scwoww »</div>
 </section>
 ```
 
-```css interactive-example
-.default-example {
-  flex-wrap: wrap;
+```css intewactive-exampwe
+.defauwt-exampwe {
+  f-fwex-wwap: wwap;
 }
 
-.default-example .info {
+.defauwt-exampwe .info {
   width: 100%;
   padding: 0.5em 0;
-  font-size: 90%;
+  f-font-size: 90%;
 }
 
-.scroller {
-  text-align: left;
+.scwowwew {
+  text-awign: weft;
   width: 250px;
   height: 250px;
-  overflow-x: scroll;
-  display: flex;
-  box-sizing: border-box;
-  border: 1px solid black;
-  scroll-snap-type: x mandatory;
+  o-ovewfwow-x: scwoww;
+  dispway: f-fwex;
+  b-box-sizing: bowdew-box;
+  bowdew: 1px sowid bwack;
+  scwoww-snap-type: x mandatowy;
 }
 
-.scroller > div {
-  flex: 0 0 250px;
+.scwowwew > d-div {
+  fwex: 0 0 250px;
   width: 250px;
-  background-color: rebeccapurple;
-  color: #fff;
-  font-size: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  scroll-snap-align: end;
+  backgwound-cowow: webeccapuwpwe;
+  cowow: #fff;
+  f-font-size: 30px;
+  dispway: fwex;
+  a-awign-items: c-centew;
+  justify-content: c-centew;
+  s-scwoww-snap-awign: end;
 }
 
-.scroller > div:nth-child(even) {
-  background-color: #fff;
-  color: rebeccapurple;
+.scwowwew > div:nth-chiwd(even) {
+  b-backgwound-cowow: #fff;
+  cowow: webeccapuwpwe;
 }
 ```
 
@@ -76,23 +76,23 @@ scroll-padding-right: 2em;
 
 ```css
 /* キーワード値 */
-scroll-padding-right: auto;
+scwoww-padding-wight: a-auto;
 
-/* <length> 値 */
-scroll-padding-right: 10px;
-scroll-padding-right: 1em;
-scroll-padding-right: 10%;
+/* <wength> 値 */
+scwoww-padding-wight: 10px;
+scwoww-padding-wight: 1em;
+scwoww-padding-wight: 10%;
 
 /* グローバル値 */
-scroll-padding-right: inherit;
-scroll-padding-right: initial;
-scroll-padding-right: revert;
-scroll-padding-right: unset;
+scwoww-padding-wight: inhewit;
+s-scwoww-padding-wight: initiaw;
+s-scwoww-padding-wight: w-wevewt;
+scwoww-padding-wight: u-unset;
 ```
 
 ### 値
 
-- `<length-percentage>`
+- `<wength-pewcentage>`
   - : スクロールポートの上辺からの内側のオフセットで、有効な長さまたはパーセント値です。
 - `auto`
   - : オフセットはユーザーエージェントが決定します。これは一般に 0px になりますが、ゼロ以外の値がもっと適切である場合をユーザーエージェントが検出して、他の値を採用することもできます。
@@ -107,13 +107,13 @@ scroll-padding-right: unset;
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [css スクロールスナップ](/ja/docs/web/css/css_scwoww_snap)
+- [weww-contwowwed scwowwing with css scwoww snap](https://web.dev/css-scwoww-snap/)

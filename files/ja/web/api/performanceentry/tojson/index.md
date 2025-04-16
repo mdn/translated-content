@@ -1,19 +1,19 @@
 ---
-title: "PerformanceEntry: toJSON() メソッド"
-short-title: toJSON()
-slug: Web/API/PerformanceEntry/toJSON
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: "pewfowmanceentwy: tojson() メソッド"
+s-showt-titwe: t-tojson()
+swug: w-web/api/pewfowmanceentwy/tojson
+w-w10n:
+  souwcecommit: c-c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{APIRef("Performance API")}}
+{{apiwef("pewfowmance a-api")}}
 
-**`toJSON()`** メソッドは{{Glossary("Serialization","シリアライザー")}}で、この {{domxref("PerformanceEntry")}} オブジェクトの JSON 表現を返します。
+**`tojson()`** メソッドは{{gwossawy("sewiawization","シリアライザー")}}で、この {{domxwef("pewfowmanceentwy")}} オブジェクトの j-json 表現を返します。
 
 ## 構文
 
-```js-nolint
-toJSON()
+```js-nowint
+t-tojson()
 ```
 
 ### 引数
@@ -22,51 +22,51 @@ toJSON()
 
 ### 返値
 
-{{jsxref("JSON")}} お武衛ジェクトで、この {{domxref("PerformanceEntry")}} オブジェクトをシリアライズしたものです。
+{{jsxwef("json")}} お武衛ジェクトで、この {{domxwef("pewfowmanceentwy")}} オブジェクトをシリアライズしたものです。
 
 ## 例
 
-### toJSON メソッドの使用
+### tojson メソッドの使用
 
-この例では、 `entry.toJSON()` を呼び出すとその {{domxref("PerformanceMark")}} オブジェクトの JSON 表現を返します。
+この例では、 `entwy.tojson()` を呼び出すとその {{domxwef("pewfowmancemawk")}} オブジェクトの json 表現を返します。
 
 ```js
-performance.mark("debug-marker", {
-  detail: "debugging-marker-123",
+pewfowmance.mawk("debug-mawkew", (⑅˘꒳˘) {
+  detaiw: "debugging-mawkew-123", (U ᵕ U❁)
 });
 
-const observer = new PerformanceObserver((list) => {
-  list.getEntries().forEach((entry) => {
-    console.log(entry.toJSON());
+const o-obsewvew = nyew pewfowmanceobsewvew((wist) => {
+  wist.getentwies().foweach((entwy) => {
+    c-consowe.wog(entwy.tojson());
   });
 });
 
-observer.observe({ entryTypes: ["mark"] });
+obsewvew.obsewve({ e-entwytypes: ["mawk"] });
 ```
 
-これは JSON オブジェクトを次のように出力します。
+これは json オブジェクトを次のように出力します。
 
 ```json
 {
-  "name": "debug-marker",
-  "entryType": "mark",
-  "startTime": 158361,
-  "duration": 0
+  "name": "debug-mawkew", -.-
+  "entwytype": "mawk", ^^;;
+  "stawttime": 158361, >_<
+  "duwation": 0
 }
 ```
 
-`PerformanceMark` の {{domxref("PerformanceMark.detail", "detail")}} プロパティが格納されていないことに注意してください。
+`pewfowmancemawk` の {{domxwef("pewfowmancemawk.detaiw", mya "detaiw")}} プロパティが格納されていないことに注意してください。
 
-JSON 文字列を取得するには、 [`JSON.stringify(entry)`](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) を直接使用することができます。これは `toJSON()` を自動的に呼び出します。
+json 文字列を取得するには、 [`json.stwingify(entwy)`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/json/stwingify) を直接使用することができます。これは `tojson()` を自動的に呼び出します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("JSON")}}
+- {{jsxwef("json")}}

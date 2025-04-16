@@ -1,89 +1,89 @@
 ---
-title: columns
-slug: Web/CSS/columns
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: cowumns
+swug: web/css/cowumns
+w-w10n:
+  s-souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`columns`** は [CSS](/ja/docs/Web/CSS) 一括指定プロパティで、要素の内容物を描画する際に使用する段数や段の幅を設定します。
+**`cowumns`** は [css](/ja/docs/web/css) 一括指定プロパティで、要素の内容物を描画する際に使用する段数や段の幅を設定します。
 
-{{InteractiveExample("CSS Demo: columns")}}
+{{intewactiveexampwe("css d-demo: cowumns")}}
 
-```css interactive-example-choice
-columns: 2;
+```css i-intewactive-exampwe-choice
+c-cowumns: 2;
 ```
 
-```css interactive-example-choice
-columns: 6rem auto;
+```css i-intewactive-exampwe-choice
+c-cowumns: 6wem auto;
 ```
 
-```css interactive-example-choice
-columns: 12em;
+```css i-intewactive-exampwe-choice
+cowumns: 12em;
 ```
 
-```css interactive-example-choice
-columns: 3;
+```css intewactive-exampwe-choice
+cowumns: 3;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <p id="exampwe-ewement">
+    wondon. ʘwʘ m-michaewmas tewm watewy ovew, /(^•ω•^) a-and the wowd chancewwow sitting in
+    wincown's inn haww. ʘwʘ impwacabwe n-nyovembew weathew. σωσ as much m-mud in the stweets
+    a-as if the watews had but nyewwy wetiwed fwom the face of the eawth, OwO and i-it
+    wouwd nyot be wondewfuw to meet a megawosauwus, 😳😳😳 fowty feet wong ow so, 😳😳😳
+    w-waddwing wike an ewephantine w-wizawd up howbown h-hiww. o.O
   </p>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  min-width: 21rem;
-  text-align: left;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  m-min-width: 21wem;
+  text-awign: weft;
 }
 ```
 
 ## 構成要素のプロパティ
 
-このプロパティは以下の CSS プロパティの一括指定です。
+このプロパティは以下の c-css プロパティの一括指定です。
 
-- [`column-count`](/ja/docs/Web/CSS/column-count)
-- [`column-width`](/ja/docs/Web/CSS/column-width)
+- [`cowumn-count`](/ja/docs/web/css/cowumn-count)
+- [`cowumn-width`](/ja/docs/web/css/cowumn-width)
 
 ## 構文
 
 ```css
 /* 段の幅 */
-columns: 18em;
+cowumns: 18em;
 
 /* 段数 */
-columns: auto;
-columns: 2;
+cowumns: auto;
+c-cowumns: 2;
 
 /* 段の幅と段数の両方 */
-columns: 2 auto;
-columns: auto 12em;
-columns: auto auto;
+cowumns: 2 auto;
+cowumns: auto 12em;
+cowumns: auto auto;
 
 /* グローバル値 */
-columns: inherit;
-columns: initial;
-columns: revert;
-columns: revert-layer;
-columns: unset;
+cowumns: inhewit;
+c-cowumns: initiaw;
+cowumns: w-wevewt;
+cowumns: w-wevewt-wayew;
+c-cowumns: unset;
 ```
 
-`columns` プロパティは以下に挙げる値を 1 つまたは 2 つで、順不同で指定します。
+`cowumns` プロパティは以下に挙げる値を 1 つまたは 2 つで、順不同で指定します。
 
 ### 値
 
-- `<'column-width'>`
-  - : 理想的な段の幅であり、 {{cssxref("&lt;length&gt;")}} または `auto` キーワードで定義されます。実際の段の幅は、実際の空間に合わせて広くなったり狭くなったりします。 {{cssxref("column-width")}} を参照してください。
-- `<'column-count'>`
-  - : 要素の内容物が流れる理想的な段の数であり、 {{cssxref("&lt;integer&gt;")}} または `auto` キーワードで定義します。この値と段の幅の両方が `auto` でない場合は、最大の段数を示します。 {{cssxref("column-count")}} を参照してください。
+- `<'cowumn-width'>`
+  - : 理想的な段の幅であり、 {{cssxwef("&wt;wength&gt;")}} または `auto` キーワードで定義されます。実際の段の幅は、実際の空間に合わせて広くなったり狭くなったりします。 {{cssxwef("cowumn-width")}} を参照してください。
+- `<'cowumn-count'>`
+  - : 要素の内容物が流れる理想的な段の数であり、 {{cssxwef("&wt;integew&gt;")}} または `auto` キーワードで定義します。この値と段の幅の両方が `auto` でない場合は、最大の段数を示します。 {{cssxwef("cowumn-count")}} を参照してください。
 
 ## 公式定義
 
@@ -97,37 +97,37 @@ columns: unset;
 
 ### 3 つの等しい段の設定
 
-#### HTML
+#### htmw
 
-```html-nolint live-sample___setting_three_equal_columns
-<p class="content-box">
-  これは、 CSS の `columns` プロパティを使用して 3 つの列に分割されたテキストの束です。テキストは各カラムに均等に配置されている。
+```htmw-nowint wive-sampwe___setting_thwee_equaw_cowumns
+<p cwass="content-box">
+  これは、 c-css の `cowumns` プロパティを使用して 3 つの列に分割されたテキストの束です。テキストは各カラムに均等に配置されている。
 </p>
 ```
 
-#### CSS
+#### c-css
 
-```css live-sample___setting_three_equal_columns
+```css wive-sampwe___setting_thwee_equaw_cowumns
 .content-box {
-  columns: 3 auto;
+  c-cowumns: 3 auto;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Setting_three_equal_columns', 'auto', 120)}}
+{{embedwivesampwe('setting_thwee_equaw_cowumns', 'auto', ( ͡o ω ͡o ) 120)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("widows")}}
-- {{cssxref("orphans")}}
-- [ページ化メディア](/ja/docs/Web/CSS/CSS_paged_media)
-- [学習: 段組みレイアウト](/ja/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
+- {{cssxwef("widows")}}
+- {{cssxwef("owphans")}}
+- [ページ化メディア](/ja/docs/web/css/css_paged_media)
+- [学習: 段組みレイアウト](/ja/docs/weawn_web_devewopment/cowe/css_wayout/muwtipwe-cowumn_wayout)

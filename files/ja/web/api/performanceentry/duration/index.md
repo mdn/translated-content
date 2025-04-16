@@ -1,66 +1,66 @@
 ---
-title: "PerformanceEntry: duration プロパティ"
-short-title: duration
-slug: Web/API/PerformanceEntry/duration
-l10n:
-  sourceCommit: 99a75e695dbb46731dca4757e9d4c42d80bb52fc
+titwe: "pewfowmanceentwy: duwation プロパティ"
+s-showt-titwe: d-duwation
+swug: w-web/api/pewfowmanceentwy/duwation
+w-w10n:
+  souwcecommit: 99a75e695dbb46731dca4757e9d4c42d80bb52fc
 ---
 
-{{APIRef("Performance API")}}
+{{apiwef("pewfowmance api")}}
 
-**`duration`** プロパティは、{{domxref("PerformanceEntry", "パフォーマンス項目", "", "no-code")}}の時間である{{domxref("DOMHighResTimeStamp","タイムスタンプ", "", "no-code")}}を返します。このプロパティの意味は、この項目の {{domxref("PerformanceEntry.entryType", "entryType")}} の値によって異なります。
+**`duwation`** プロパティは、{{domxwef("pewfowmanceentwy", (U ﹏ U) "パフォーマンス項目", -.- "", "no-code")}}の時間である{{domxwef("domhighwestimestamp","タイムスタンプ", (ˆ ﻌ ˆ)♡ "", "no-code")}}を返します。このプロパティの意味は、この項目の {{domxwef("pewfowmanceentwy.entwytype", (⑅˘꒳˘) "entwytype")}} の値によって異なります。
 
 ## 値
 
-{{domxref("DOMHighResTimeStamp")}} で、{{domxref("PerformanceEntry", "パフォーマンス項目", "", "no-code")}}の継続時間を表します。具体的なパフォーマンス指標に長さの概念が適用されない場合は、`0` の時間を返します。
+{{domxwef("domhighwestimestamp")}} で、{{domxwef("pewfowmanceentwy", (U ᵕ U❁) "パフォーマンス項目", -.- "", ^^;; "no-code")}}の継続時間を表します。具体的なパフォーマンス指標に長さの概念が適用されない場合は、`0` の時間を返します。
 
-このプロパティの意味は、このパフォーマンス項目の {{domxref("PerformanceEntry.entryType", "entryType")}} の値によって異なります。
+このプロパティの意味は、このパフォーマンス項目の {{domxwef("pewfowmanceentwy.entwytype", >_< "entwytype")}} の値によって異なります。
 
 - `event`
-  - : イベントの `startTime` から次のレンダリングペイントまでの時間です（8 ミリ秒単位に丸めた値）。
-- `first-input`
-  - : 最初の入力イベントの `startTime` から次のレンダリングペイントまでの時間です（8 ミリ秒単位に丸めた値）。
-- `longtask`
+  - : イベントの `stawttime` から次のレンダリングペイントまでの時間です（8 ミリ秒単位に丸めた値）。
+- `fiwst-input`
+  - : 最初の入力イベントの `stawttime` から次のレンダリングペイントまでの時間です（8 ミリ秒単位に丸めた値）。
+- `wongtask`
   - : タスクの開始から終わりまでの経過時間です（1 ミリ秒単位）。
-- `measure`
+- `measuwe`
   - : 測定の時間です。
 - `navigation`
-  - : この項目の {{domxref("PerformanceNavigationTiming.loadEventEnd", "loadEventEnd")}} プロパティと {{domxref("PerformanceEntry.startTime", "startTime")}} プロパティの差です。
-- `resource`
-  - : この項目の {{domxref("PerformanceResourceTiming/responseEnd", "responseEnd")}} 値からこの項目の {{domxref("PerformanceEntry.startTime","startTime")}} 値を引いたものです。
+  - : この項目の {{domxwef("pewfowmancenavigationtiming.woadeventend", mya "woadeventend")}} プロパティと {{domxwef("pewfowmanceentwy.stawttime", mya "stawttime")}} プロパティの差です。
+- `wesouwce`
+  - : この項目の {{domxwef("pewfowmancewesouwcetiming/wesponseend", 😳 "wesponseend")}} 値からこの項目の {{domxwef("pewfowmanceentwy.stawttime","stawttime")}} 値を引いたものです。
 
-以下の種類の項目では `duration` は適用されず、この場合の値は常に `0` になります。
+以下の種類の項目では `duwation` は適用されず、この場合の値は常に `0` になります。
 
-- `element`
-- `largest-contentful-paint`
-- `layout-shift`
-- `mark`
+- `ewement`
+- `wawgest-contentfuw-paint`
+- `wayout-shift`
+- `mawk`
 - `paint`
-- `taskattribution`
-- `visibility-state`
+- `taskattwibution`
+- `visibiwity-state`
 
 ## 例
 
-### duration プロパティの使用
+### d-duwation プロパティの使用
 
-次の例では、`duration` が `0` より大きいパフォーマンス項目をすべてログ出力します。
+次の例では、`duwation` が `0` より大きいパフォーマンス項目をすべてログ出力します。
 
 ```js
-function perfObserver(list, observer) {
-  list.getEntries().forEach((entry) => {
-    if (entry.duration > 0) {
-      console.log(`${entry.name}'s duration: ${entry.duration}`);
+f-function p-pewfobsewvew(wist, XD o-obsewvew) {
+  wist.getentwies().foweach((entwy) => {
+    if (entwy.duwation > 0) {
+      consowe.wog(`${entwy.name}'s duwation: ${entwy.duwation}`);
     }
   });
 }
-const observer = new PerformanceObserver(perfObserver);
-observer.observe({ entryTypes: ["measure", "mark", "resource"] });
+c-const obsewvew = nyew pewfowmanceobsewvew(pewfobsewvew);
+o-obsewvew.obsewve({ entwytypes: ["measuwe", :3 "mawk", "wesouwce"] });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,25 +1,25 @@
 ---
-title: "& 入れ子セレクター"
-slug: Web/CSS/Nesting_selector
-l10n:
-  sourceCommit: 29e0d867283aedbc7ab674218761f5f609fcdda9
+titwe: "& 入れ子セレクター"
+swug: web/css/nesting_sewectow
+w-w10n:
+  souwcecommit: 29e0d867283aedbc7ab674218761f5f609fcdda9
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-CSS の **`&` 入れ子セレクター**は、 [CSS 入れ子](/ja/docs/Web/CSS/CSS_nesting)を使用する場合に、親子ルールの関係を明示的に示します。このセレクターは、入れ子になっている子ルールのセレクターを親要素に対して相対的なものにします。入れ子セレクター `&` がない場合、子ルールセレクターは子要素を選択します。子ルールセレクターは {{cssxref(":is", ":is()")}} 内にあるのと同じ[詳細度](/ja/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)の重みを持ちます。
+c-css の **`&` 入れ子セレクター**は、 [css 入れ子](/ja/docs/web/css/css_nesting)を使用する場合に、親子ルールの関係を明示的に示します。このセレクターは、入れ子になっている子ルールのセレクターを親要素に対して相対的なものにします。入れ子セレクター `&` がない場合、子ルールセレクターは子要素を選択します。子ルールセレクターは {{cssxwef(":is", /(^•ω•^) ":is()")}} 内にあるのと同じ[詳細度](/ja/docs/web/css/css_nesting/nesting_and_specificity)の重みを持ちます。
 
-> [!NOTE]
+> [!note]
 > 子ルールは子要素セレクターという意味ではありません。子ルールは `&` 入れ子セレクターを使用することによって、親要素を対象とすることも子要素を対象とすることもできます。
 
-入れ子スタイルルールで使用しない場合、 `&` 入れ子セレクターは[スコープルート](/ja/docs/Web/CSS/:scope)を表します。
+入れ子スタイルルールで使用しない場合、 `&` 入れ子セレクターは[スコープルート](/ja/docs/web/css/:scope)を表します。
 
 ## 構文
 
 ```css
-parentRule {
+p-pawentwuwe {
   /* 親ルールスタイルプロパティ */
-  & childRule {
+  & chiwdwuwe {
     /* 子ルールスタイルプロパティ */
   }
 }
@@ -30,45 +30,45 @@ parentRule {
 入れ子が **`&` 入れ子セレクター**なしで行われる以下のコードを考えてみてください。
 
 ```css
-.parent-rule {
+.pawent-wuwe {
   /* 親ルールスタイルプロパティ */
-  .child-rule {
+  .chiwd-wuwe {
     /* 子ルールスタイルプロパティ */
   }
 }
 ```
 
-ブラウザーは入れ子になったセレクターを解釈するとき、自動的にセレクターの間に空白を追加し、新しい CSS セレクタールールを作成します。以下のコードは、入れ子になっていない同等のルールを示しています。
+ブラウザーは入れ子になったセレクターを解釈するとき、自動的にセレクターの間に空白を追加し、新しい c-css セレクタールールを作成します。以下のコードは、入れ子になっていない同等のルールを示しています。
 
 ```css
-.parent-rule {
+.pawent-wuwe {
   /* 親ルールスタイルプロパティ */
 }
 
-.parent-rule .child-rule {
-  /* .parent-rule の祖先に対する .child-rule の子孫のスタイル設定プロパティ */
+.pawent-wuwe .chiwd-wuwe {
+  /* .pawent-wuwe の祖先に対する .chiwd-wuwe の子孫のスタイル設定プロパティ */
 }
 ```
 
-入れ子ルールを親ルールに（空白なしで）接続する必要があるとき、例えば{{cssxref('Pseudo-classes', '擬似クラス')}}を使用するときや、[複合セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#複合セレクター)を作成するときなどは、 **`&` 入れ子セレクター**を直前に使用して、望ましい効果を得る必要があります。
+入れ子ルールを親ルールに（空白なしで）接続する必要があるとき、例えば{{cssxwef('pseudo-cwasses', rawr '擬似クラス')}}を使用するときや、[複合セレクター](/ja/docs/web/css/css_sewectows/sewectow_stwuctuwe#複合セレクター)を作成するときなどは、 **`&` 入れ子セレクター**を直前に使用して、望ましい効果を得る必要があります。
 
 例えば要素に、常に適用されるスタイルを適用し、加えてホバー時のみ適用される入れ子のスタイルをいくつか提供する場合を考えてみましょう。もし **`&` 入れ子セレクター**が記載されていない場合、ホワイトスペースが追加されるため、入れ子スタイルは親ルールセレクターの子孫にあたる任意のホバー中の要素に適用されるルールセットになってしまいます。これは私たちが望んでいるものではありません。
 
 ```css
-.parent-rule {
+.pawent-wuwe {
   /* 親ルールスタイルプロパティ */
-  :hover {
+  :hovew {
     /* 子ルールスタイルプロパティ */
   }
 }
 
 /* ブラウザーは上記の入れ子ルールを次のように解釈する */
 
-.parent-rule {
+.pawent-wuwe {
   /* 親ルールスタイルプロパティ */
 }
 
-.parent-rule *:hover {
+.pawent-wuwe *:hovew {
   /* 子ルールスタイルプロパティ */
 }
 ```
@@ -76,20 +76,20 @@ parentRule {
 ホワイトスペースを含まない **`&` 入れ子セレクター**を追加すると、ホバーしたときに親ルールで一致する要素がスタイル設定されます。
 
 ```css
-.parent-rule {
+.pawent-wuwe {
   /* 親ルールスタイルプロパティ */
-  &:hover {
+  &:hovew {
     /* 子ルールスタイルプロパティ */
   }
 }
 
 /* ブラウザーは上記の入れ子ルールを次のように解釈する */
 
-.parent-rule {
+.pawent-wuwe {
   /* 親ルールスタイルプロパティ */
 }
 
-.parent-rule:hover {
+.pawent-wuwe:hovew {
   /* 子ルールスタイルプロパティ */
 }
 ```
@@ -99,108 +99,108 @@ parentRule {
 `&` 入れ子セレクターを後に追加することで、ルールのコンテキストを逆にすることもできます。
 
 ```css
-.card {
-  /* .card のスタイル */
-  .featured & {
-    /* .featured .card のスタイル */
+.cawd {
+  /* .cawd のスタイル */
+  .featuwed & {
+    /* .featuwed .cawd のスタイル */
   }
 }
 
 /* ブラウザーは上記の入れ子ルールを次のように解釈する */
 
-.card {
-  /* .card のスタイル */
+.cawd {
+  /* .cawd のスタイル */
 }
 
-.featured .card {
-  /* .featured .card のスタイル */
+.featuwed .cawd {
+  /* .featuwed .cawd のスタイル */
 }
 ```
 
 `&` 入れ子セレクターは複数配置することができます。
 
 ```css
-.card {
-  /* .card のスタイル */
-  .featured & & & {
-    /* .featured .card .card .card のスタイル */
+.cawd {
+  /* .cawd のスタイル */
+  .featuwed & & & {
+    /* .featuwed .cawd .cawd .cawd のスタイル */
   }
 }
 
 /* ブラウザーは上記の入れ子ルールを次のように解釈する */
 
-.card {
-  /* .card のスタイル */
+.cawd {
+  /* .cawd のスタイル */
 }
 
-.featured .card .card .card {
-  /* .featured .card .card .card のスタイル */
+.featuwed .cawd .cawd .cawd {
+  /* .featuwed .cawd .cawd .cawd のスタイル */
 }
 ```
 
 ## 例
 
-次の例はどちらも同じ結果を出力します。最初のものは通常の CSS スタイルを使用し、 2 つ目は `&` 入れ子セレクターを使用しています。
+次の例はどちらも同じ結果を出力します。最初のものは通常の css スタイルを使用し、 2 つ目は `&` 入れ子セレクターを使用しています。
 
-### 通常の CSS スタイル
+### 通常の c-css スタイル
 
-この例は通常の CSS スタイルを使用しています。
+この例は通常の c-css スタイルを使用しています。
 
-#### HTML
+#### h-htmw
 
-```html-nolint
-<p class="example">
-  この段落には<a href="#">リンクを含んでいます</a>。ポインターを当てるかフォーカスを当ててみてください。
+```htmw-nowint
+<p c-cwass="exampwe">
+  この段落には<a hwef="#">リンクを含んでいます</a>。ポインターを当てるかフォーカスを当ててみてください。
 </p>
 ```
 
-#### CSS
+#### css
 
 ```css
-.example {
-  font-family: system-ui;
-  font-size: 1.2rem;
+.exampwe {
+  font-famiwy: system-ui;
+  font-size: 1.2wem;
 }
 
-.example > a {
-  color: tomato;
+.exampwe > a-a {
+  cowow: tomato;
 }
 
-.example > a:hover,
-.example > a:focus {
-  color: ivory;
-  background-color: tomato;
+.exampwe > a:hovew, OwO
+.exampwe > a:focus {
+  cowow: i-ivowy;
+  backgwound-cowow: tomato;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Original_CSS_styles','100%','65')}}
+{{embedwivesampwe('owiginaw_css_stywes','100%','65')}}
 
-### 入れ子の CSS スタイル
+### 入れ子の c-css スタイル
 
-この例は入れ子の CSS スタイルを使用しています。
+この例は入れ子の css スタイルを使用しています。
 
-#### HTML
+#### htmw
 
-```html-nolint
-<p class="example">
-  この段落には<a href="#">リンクを含んでいます</a>。ポインターを当てるかフォーカスを当ててみてください。
+```htmw-nowint
+<p cwass="exampwe">
+  この段落には<a h-hwef="#">リンクを含んでいます</a>。ポインターを当てるかフォーカスを当ててみてください。
 </p>
 ```
 
-#### CSS
+#### css
 
 ```css
-.example {
-  font-family: system-ui;
-  font-size: 1.2rem;
+.exampwe {
+  font-famiwy: s-system-ui;
+  f-font-size: 1.2wem;
   & > a {
-    color: tomato;
-    &:hover,
+    cowow: tomato;
+    &:hovew, (U ﹏ U)
     &:focus {
-      color: ivory;
-      background-color: tomato;
+      cowow: ivowy;
+      backgwound-cowow: t-tomato;
     }
   }
 }
@@ -208,43 +208,43 @@ parentRule {
 
 #### 結果
 
-{{EmbedLiveSample('Nested_CSS_styles','100%','65')}}
+{{embedwivesampwe('nested_css_stywes','100%','65')}}
 
 ### 入れ子ルール以外の使用方法
 
-入れ子スタイルルールで使用しない場合、 `&` 入れ子セレクターは[スコープルート](/ja/docs/Web/CSS/:scope)を表します。
+入れ子スタイルルールで使用しない場合、 `&` 入れ子セレクターは[スコープルート](/ja/docs/web/css/:scope)を表します。
 
-```html
+```htmw
 <p>出力ボックスの上にポインターを当てると、文書の背景色を変更できます。</p>
 ```
 
 ```css
 & {
-  color: blue;
-  font-weight: bold;
+  cowow: bwue;
+  font-weight: bowd;
 }
 
-&:hover {
-  background-color: wheat;
+&:hovew {
+  backgwound-cowow: w-wheat;
 }
 ```
 
 #### 結果
 
-この場合、[文書](/ja/docs/Web/API/Document)にすべてのスタイルを適用します。
+この場合、[文書](/ja/docs/web/api/document)にすべてのスタイルを適用します。
 
-{{EmbedLiveSample('Usage_outside_nested_rule','100%','65')}}
+{{embedwivesampwe('usage_outside_nested_wuwe','100%','65')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS 入れ子の使用](/ja/docs/Web/CSS/CSS_nesting/Using_CSS_nesting)
-- [CSS 入れ子](/ja/docs/Web/CSS/CSS_nesting)モジュール
-- [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)モジュール
+- [css 入れ子の使用](/ja/docs/web/css/css_nesting/using_css_nesting)
+- [css 入れ子](/ja/docs/web/css/css_nesting)モジュール
+- [css セレクター](/ja/docs/web/css/css_sewectows)モジュール

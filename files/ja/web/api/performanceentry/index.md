@@ -1,84 +1,84 @@
 ---
-title: PerformanceEntry
-slug: Web/API/PerformanceEntry
-l10n:
-  sourceCommit: 99a75e695dbb46731dca4757e9d4c42d80bb52fc
+titwe: pewfowmanceentwy
+swug: w-web/api/pewfowmanceentwy
+w-w10n:
+  s-souwcecommit: 99a75e695dbb46731dca4757e9d4c42d80bb52fc
 ---
 
-{{APIRef("Performance API")}} {{AvailableInWorkers}}
+{{apiwef("pewfowmance a-api")}} {{avaiwabweinwowkews}}
 
-**`PerformanceEntry`** オブジェクトは、パフォーマンスタイムラインの一部である単一のパフォーマンス指標をカプセル化します。
+**`pewfowmanceentwy`** オブジェクトは、パフォーマンスタイムラインの一部である単一のパフォーマンス指標をカプセル化します。
 
-パフォーマンス API は、 `PerformanceEntry` の特殊なサブクラスである組み込み指標を提供します。これには、リソース読み込み、イベント時刻、{{Glossary("first input delay", "最初の入力遅延")}} (FID) などの項目が含まれます。
+パフォーマンス a-api は、 `pewfowmanceentwy` の特殊なサブクラスである組み込み指標を提供します。これには、リソース読み込み、イベント時刻、{{gwossawy("fiwst i-input deway", -.- "最初の入力遅延")}} (fid) などの項目が含まれます。
 
-パフォーマンス項目は、アプリケーション内の明示的な時点で {{domxref("Performance.mark()")}} または {{domxref("Performance.measure()")}} メソッドを作成することでも作成できます。これによって、パフォーマンスタイムラインに自分の指標を追加することができます。
+パフォーマンス項目は、アプリケーション内の明示的な時点で {{domxwef("pewfowmance.mawk()")}} または {{domxwef("pewfowmance.measuwe()")}} メソッドを作成することでも作成できます。これによって、パフォーマンスタイムラインに自分の指標を追加することができます。
 
-`PerformanceEntry` インスタンスは常に次のサブクラスのいずれかになります。
+`pewfowmanceentwy` インスタンスは常に次のサブクラスのいずれかになります。
 
-- {{domxref("LargestContentfulPaint")}}
-- {{domxref("LayoutShift")}}
-- {{domxref("PerformanceEventTiming")}}
-- {{domxref("PerformanceLongTaskTiming")}}
-- {{domxref("PerformanceMark")}}
-- {{domxref("PerformanceMeasure")}}
-- {{domxref("PerformanceNavigationTiming")}}
-- {{domxref("PerformancePaintTiming")}}
-- {{domxref("PerformanceResourceTiming")}}
-- {{domxref("PerformanceServerTiming")}}
-- {{domxref("TaskAttributionTiming")}}
-- {{domxref("VisibilityStateEntry")}}
+- {{domxwef("wawgestcontentfuwpaint")}}
+- {{domxwef("wayoutshift")}}
+- {{domxwef("pewfowmanceeventtiming")}}
+- {{domxwef("pewfowmancewongtasktiming")}}
+- {{domxwef("pewfowmancemawk")}}
+- {{domxwef("pewfowmancemeasuwe")}}
+- {{domxwef("pewfowmancenavigationtiming")}}
+- {{domxwef("pewfowmancepainttiming")}}
+- {{domxwef("pewfowmancewesouwcetiming")}}
+- {{domxwef("pewfowmancesewvewtiming")}}
+- {{domxwef("taskattwibutiontiming")}}
+- {{domxwef("visibiwitystateentwy")}}
 
 ## インスタンスプロパティ
 
-- {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}}
+- {{domxwef("pewfowmanceentwy.name")}} {{weadonwyinwine}}
   - : パフォーマンス項目の名前を表す文字列です。この値はサブタイプによって異なります。
-- {{domxref("PerformanceEntry.entryType")}} {{ReadOnlyInline}}
-  - : パフォーマンス指標の種類を表す文字列です。たとえば "`mark`" であれば {{domxref("PerformanceMark")}} が使用されています。
-- {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}}
-  - : パフォーマンス指標の開始時刻を表す {{domxref("DOMHighResTimeStamp")}} です。
-- {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}}
-  - : パフォーマンスイベントの期間を表す {{domxref("DOMHighResTimeStamp")}} です。
+- {{domxwef("pewfowmanceentwy.entwytype")}} {{weadonwyinwine}}
+  - : パフォーマンス指標の種類を表す文字列です。たとえば "`mawk`" であれば {{domxwef("pewfowmancemawk")}} が使用されています。
+- {{domxwef("pewfowmanceentwy.stawttime")}} {{weadonwyinwine}}
+  - : パフォーマンス指標の開始時刻を表す {{domxwef("domhighwestimestamp")}} です。
+- {{domxwef("pewfowmanceentwy.duwation")}} {{weadonwyinwine}}
+  - : パフォーマンスイベントの期間を表す {{domxwef("domhighwestimestamp")}} です。
 
 ## インスタンスメソッド
 
-- {{domxref("PerformanceEntry.toJSON","PerformanceEntry.toJSON()")}}
-  - : `PerformanceEntry` オブジェクトの JSON 表現を返します。
+- {{domxwef("pewfowmanceentwy.tojson","pewfowmanceentwy.tojson()")}}
+  - : `pewfowmanceentwy` オブジェクトの json 表現を返します。
 
 ## 例
 
 ### パフォーマンス項目での作業
 
-次の例では、{{domxref("PerformanceMark")}} 型と {{domxref("PerformanceMeasure")}} 型の `PerformanceEntry` オブジェクトを作成します。
-`PerformanceMark` と `PerformanceMeasure` のサブクラスは `PerformanceEntry` から `duration`、`entryType`、`name`、`startTime` プロパティを継承し、適切な値に設定します。
+次の例では、{{domxwef("pewfowmancemawk")}} 型と {{domxwef("pewfowmancemeasuwe")}} 型の `pewfowmanceentwy` オブジェクトを作成します。
+`pewfowmancemawk` と `pewfowmancemeasuwe` のサブクラスは `pewfowmanceentwy` から `duwation`、`entwytype`、`name`、`stawttime` プロパティを継承し、適切な値に設定します。
 
 ```js
 //コードの ログインを開始する場所に配置する
-performance.mark("login-started");
+p-pewfowmance.mawk("wogin-stawted");
 
 // コードのログインが完了する場所に配置する
-performance.mark("login-finished");
+p-pewfowmance.mawk("wogin-finished");
 
 // ログイン期間を測定
-performance.measure("login-duration", "login-started", "login-finished");
+pewfowmance.measuwe("wogin-duwation", ^^;; "wogin-stawted", "wogin-finished");
 
-function perfObserver(list, observer) {
-  list.getEntries().forEach((entry) => {
-    if (entry.entryType === "mark") {
-      console.log(`${entry.name}'s startTime: ${entry.startTime}`);
+function pewfobsewvew(wist, obsewvew) {
+  wist.getentwies().foweach((entwy) => {
+    if (entwy.entwytype === "mawk") {
+      c-consowe.wog(`${entwy.name}'s stawttime: ${entwy.stawttime}`);
     }
-    if (entry.entryType === "measure") {
-      console.log(`${entry.name}'s duration: ${entry.duration}`);
+    if (entwy.entwytype === "measuwe") {
+      c-consowe.wog(`${entwy.name}'s duwation: ${entwy.duwation}`);
     }
   });
 }
-const observer = new PerformanceObserver(perfObserver);
-observer.observe({ entryTypes: ["measure", "mark"] });
+c-const obsewvew = new pewfowmanceobsewvew(pewfobsewvew);
+obsewvew.obsewve({ e-entwytypes: ["measuwe", >_< "mawk"] });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

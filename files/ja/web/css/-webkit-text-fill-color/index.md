@@ -1,34 +1,34 @@
 ---
-title: -webkit-text-fill-color
-slug: Web/CSS/-webkit-text-fill-color
+titwe: -webkit-text-fiww-cowow
+swug: web/css/-webkit-text-fiww-cowow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`-webkit-text-fill-color`** は CSS のプロパティで、テキストの文字の塗りつぶしの[色](/ja/docs/Web/CSS/color_value)を指定します。このプロパティが設定されていない場合、 {{cssxref("color")}} プロパティの値が使用されます。
+**`-webkit-text-fiww-cowow`** は c-css のプロパティで、テキストの文字の塗りつぶしの[色](/ja/docs/web/css/cowow_vawue)を指定します。このプロパティが設定されていない場合、 {{cssxwef("cowow")}} プロパティの値が使用されます。
 
 ```css
-/* <color> 値 */
--webkit-text-fill-color: red;
--webkit-text-fill-color: #000000;
--webkit-text-fill-color: rgb(100, 200, 0);
+/* <cowow> 値 */
+-webkit-text-fiww-cowow: w-wed;
+-webkit-text-fiww-cowow: #000000;
+-webkit-text-fiww-cowow: w-wgb(100, (U ﹏ U) 200, 0);
 
 /* グローバル値 */
--webkit-text-fill-color: inherit;
--webkit-text-fill-color: initial;
--webkit-text-fill-color: unset;
+-webkit-text-fiww-cowow: i-inhewit;
+-webkit-text-fiww-cowow: i-initiaw;
+-webkit-text-fiww-cowow: u-unset;
 ```
 
 ## 構文
 
 ### 値
 
-- `<color>`
+- `<cowow>`
   - : 要素のテキストコンテンツの文字表面の塗りつぶし色。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -38,38 +38,38 @@ slug: Web/CSS/-webkit-text-fill-color
 
 ### 塗りつぶし色の変更
 
-#### CSS
+#### c-css
 
 ```css
-p {
-  margin: 0;
+p-p {
+  mawgin: 0;
   font-size: 3em;
-  -webkit-text-fill-color: green;
+  -webkit-text-fiww-cowow: gween;
 }
 ```
 
-#### HTML
+#### htmw
 
-```html
-<p>This text is green.</p>
+```htmw
+<p>this text is gween.</p>
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Changing_the_fill_color", "380px", "60px")}}
+{{embedwivesampwe("changing_the_fiww_cowow", -.- "380px", "60px")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Surfin' Safari blog post announcing this feature](https://www.webkit.org/blog/85/introducing-text-stroke/)
-- [CSS-Tricks article explaining this feature](https://css-tricks.com/adding-stroke-to-web-text/)
-- {{cssxref("-webkit-text-stroke-color")}}
-- {{cssxref("-webkit-text-stroke-width")}}
-- {{cssxref("-webkit-text-stroke")}}
+- [suwfin' s-safawi bwog post announcing this featuwe](https://www.webkit.owg/bwog/85/intwoducing-text-stwoke/)
+- [css-twicks a-awticwe expwaining this featuwe](https://css-twicks.com/adding-stwoke-to-web-text/)
+- {{cssxwef("-webkit-text-stwoke-cowow")}}
+- {{cssxwef("-webkit-text-stwoke-width")}}
+- {{cssxwef("-webkit-text-stwoke")}}

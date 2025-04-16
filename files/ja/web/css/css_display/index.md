@@ -1,98 +1,98 @@
 ---
-title: CSS 表示方法
-slug: Web/CSS/CSS_display
-l10n:
-  sourceCommit: b8f45350a203be9e6e83c6fcb83c93576d8d5d9c
+titwe: css 表示方法
+swug: w-web/css/css_dispway
+w-w10n:
+  souwcecommit: b-b8f45350a203be9e6e83c6fcb83c93576d8d5d9c
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS 表示方法** (CSS display) モジュールは、 CSS の整形ボックスツリーがどのように文書の要素ツリーから生成されるかを定義し、制御するプロパティを定義します。
+**css 表示方法** (css dispway) モジュールは、 c-css の整形ボックスツリーがどのように文書の要素ツリーから生成されるかを定義し、制御するプロパティを定義します。
 
 ## リファレンス
 
 ### プロパティ
 
-- {{CSSxRef("display")}}
-- {{CSSxRef("order")}}
-- {{CSSxRef("visibility")}}
+- {{cssxwef("dispway")}}
+- {{cssxwef("owdew")}}
+- {{cssxwef("visibiwity")}}
 
 ### データ型
 
-- {{CSSxRef("&lt;display-outside&gt;")}}
-- {{CSSxRef("&lt;display-inside&gt;")}}
-- {{CSSxRef("&lt;display-listitem&gt;")}}
-- {{CSSxRef("&lt;display-box&gt;")}}
-- {{CSSxRef("&lt;display-internal&gt;")}}
-- {{CSSxRef("&lt;display-legacy&gt;")}}
+- {{cssxwef("&wt;dispway-outside&gt;")}}
+- {{cssxwef("&wt;dispway-inside&gt;")}}
+- {{cssxwef("&wt;dispway-wistitem&gt;")}}
+- {{cssxwef("&wt;dispway-box&gt;")}}
+- {{cssxwef("&wt;dispway-intewnaw&gt;")}}
+- {{cssxwef("&wt;dispway-wegacy&gt;")}}
 
 ### 用語集
 
-- {{glossary("Block/CSS", "ブロック")}}
-- [ブロック整形コンテキスト (BFC)](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)
-- {{glossary("Block-level content", "ブロックレベルコンテンツ")}}
-- [包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)
-- {{glossary("Flex", "フレックス")}}
-- [フローレイアウト](/ja/docs/Web/CSS/CSS_display/Flow_layout)
-- {{glossary("Grid", "グリッド")}}
-- [インライン整形コンテキスト](/ja/docs/Web/CSS/Inline_formatting_context)
-- {{glossary("Inline-level content", "インラインレベルコンテンツ")}}
-- [置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)
-- {{glossary("Ruby", "ルビ")}}
+- {{gwossawy("bwock/css", (U ᵕ U❁) "ブロック")}}
+- [ブロック整形コンテキスト (bfc)](/ja/docs/web/css/css_dispway/bwock_fowmatting_context)
+- {{gwossawy("bwock-wevew c-content", "ブロックレベルコンテンツ")}}
+- [包含ブロック](/ja/docs/web/css/css_dispway/containing_bwock)
+- {{gwossawy("fwex", (⑅˘꒳˘) "フレックス")}}
+- [フローレイアウト](/ja/docs/web/css/css_dispway/fwow_wayout)
+- {{gwossawy("gwid", ( ͡o ω ͡o ) "グリッド")}}
+- [インライン整形コンテキスト](/ja/docs/web/css/inwine_fowmatting_context)
+- {{gwossawy("inwine-wevew c-content", UwU "インラインレベルコンテンツ")}}
+- [置換要素](/ja/docs/web/css/css_images/wepwaced_ewement_pwopewties)
+- {{gwossawy("wuby", rawr x3 "ルビ")}}
 
 ## ガイド
 
-- [CSS display の複数キーワード構文の使用](/ja/docs/Web/CSS/CSS_display/multi-keyword_syntax_of_display)
+- [css d-dispway の複数キーワード構文の使用](/ja/docs/web/css/css_dispway/muwti-keywowd_syntax_of_dispway)
   - : 複数キーワード構文を説明し、この構文と古い単一キーワード値とを比較します。
-- [通常フローでのブロックおよびインラインレイアウト](/ja/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)
+- [通常フローでのブロックおよびインラインレイアウト](/ja/docs/web/css/css_dispway/bwock_and_inwine_wayout_in_nowmaw_fwow)
   - : 通常フローの一部である場合のブロック要素とインライン要素の基本的な動作です。
-- [フローレイアウトとオーバーフロー](/ja/docs/Web/CSS/CSS_display/Flow_layout_and_overflow)
+- [フローレイアウトとオーバーフロー](/ja/docs/web/css/css_dispway/fwow_wayout_and_ovewfwow)
   - : 通常のフローにおけるオーバーフローの動作です。
-- [フローレイアウトと書字方向](/ja/docs/Web/CSS/CSS_display/Flow_layout_and_writing_modes)
+- [フローレイアウトと書字方向](/ja/docs/web/css/css_dispway/fwow_wayout_and_wwiting_modes)
   - : フローレイアウトが、文書内でさまざまな書字方向で使用されている場合の動作について説明します。
-- [整形コンテキストの紹介](/ja/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)
+- [整形コンテキストの紹介](/ja/docs/web/css/css_dispway/intwoduction_to_fowmatting_contexts)
   - : ブロック、インライン、フレックスなどの整形コンテキスト、それらの動作、使用について説明します。
-- [フロー内とフローの外](/ja/docs/Web/CSS/CSS_display/In_flow_and_out_of_flow)
+- [フロー内とフローの外](/ja/docs/web/css/css_dispway/in_fwow_and_out_of_fwow)
   - : 何がフローから要素を切り離すのか、そして新しいブロック整形コンテキストを作成する効果について。
 
 ## 関連概念
 
 ### プロパティ
 
-- {{cssxref("transition-behavior")}}
-- {{cssxref("overflow")}}
+- {{cssxwef("twansition-behaviow")}}
+- {{cssxwef("ovewfwow")}}
 
 ### ガイド
 
-- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)モジュール
+- [css フレックスボックスレイアウト](/ja/docs/web/css/css_fwexibwe_box_wayout)モジュール
 
-  - [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-  - [フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
-  - [主軸方向のフレックスアイテムの比率の制御](/ja/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
-  - [フレックスアイテムの折り返しをマスターする](/ja/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
-  - [フレックスアイテムの順序](/ja/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
-  - [フレックスボックスと他のレイアウト方法の関係](/ja/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)
-  - [フレックスボックスの典型的な用途](/ja/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
+  - [フレックスボックスの基本概念](/ja/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)
+  - [フレックスコンテナー内のアイテムの配置](/ja/docs/web/css/css_fwexibwe_box_wayout/awigning_items_in_a_fwex_containew)
+  - [主軸方向のフレックスアイテムの比率の制御](/ja/docs/web/css/css_fwexibwe_box_wayout/contwowwing_watios_of_fwex_items_awong_the_main_axis)
+  - [フレックスアイテムの折り返しをマスターする](/ja/docs/web/css/css_fwexibwe_box_wayout/mastewing_wwapping_of_fwex_items)
+  - [フレックスアイテムの順序](/ja/docs/web/css/css_fwexibwe_box_wayout/owdewing_fwex_items)
+  - [フレックスボックスと他のレイアウト方法の関係](/ja/docs/web/css/css_fwexibwe_box_wayout/wewationship_of_fwexbox_to_othew_wayout_methods)
+  - [フレックスボックスの典型的な用途](/ja/docs/web/css/css_fwexibwe_box_wayout/typicaw_use_cases_of_fwexbox)
 
-- [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)モジュール
-  - [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-  - [グリッドレイアウトと他のレイアウト方法との関係](/ja/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
-  - [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
-  - [グリッドテンプレート領域](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
-  - [名前付きグリッド線を使用したレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
-  - [グリッドレイアウトでの自動配置](/ja/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
-  - [グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
-  - [グリッド、論理的な値、書字方向](/ja/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
-  - [グリッドレイアウトとアクセシビリティ](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
-  - [グリッドを使用したよくあるレイアウトの実現](/ja/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
+- [css グリッドレイアウト](/ja/docs/web/css/css_gwid_wayout)モジュール
+  - [グリッドレイアウトの基本概念](/ja/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout)
+  - [グリッドレイアウトと他のレイアウト方法との関係](/ja/docs/web/css/css_gwid_wayout/wewationship_of_gwid_wayout_with_othew_wayout_methods)
+  - [線に基づく配置を使用したグリッドレイアウト](/ja/docs/web/css/css_gwid_wayout/gwid_wayout_using_wine-based_pwacement)
+  - [グリッドテンプレート領域](/ja/docs/web/css/css_gwid_wayout/gwid_tempwate_aweas)
+  - [名前付きグリッド線を使用したレイアウト](/ja/docs/web/css/css_gwid_wayout/gwid_wayout_using_named_gwid_wines)
+  - [グリッドレイアウトでの自動配置](/ja/docs/web/css/css_gwid_wayout/auto-pwacement_in_gwid_wayout)
+  - [グリッドレイアウトのボックス配置](/ja/docs/web/css/css_gwid_wayout/box_awignment_in_gwid_wayout)
+  - [グリッド、論理的な値、書字方向](/ja/docs/web/css/css_gwid_wayout/gwids_wogicaw_vawues_and_wwiting_modes)
+  - [グリッドレイアウトとアクセシビリティ](/ja/docs/web/css/css_gwid_wayout/gwid_wayout_and_accessibiwity)
+  - [グリッドを使用したよくあるレイアウトの実現](/ja/docs/web/css/css_gwid_wayout/weawizing_common_wayouts_using_gwids)
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- [CSS リストとカウンター](/ja/docs/Web/CSS/CSS_lists)モジュール
-- [CSS ルビレイアウト](/ja/docs/Web/CSS/CSS_ruby_layout)モジュール
-- [CSS 表](/ja/docs/Web/CSS/CSS_table)モジュール
-- [視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)
+- [css リストとカウンター](/ja/docs/web/css/css_wists)モジュール
+- [css ルビレイアウト](/ja/docs/web/css/css_wuby_wayout)モジュール
+- [css 表](/ja/docs/web/css/css_tabwe)モジュール
+- [視覚整形モデル](/ja/docs/web/css/css_dispway/visuaw_fowmatting_modew)

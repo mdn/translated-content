@@ -1,47 +1,47 @@
 ---
-title: CSSValue.cssValueType
-slug: Web/API/CSSValue/cssValueType
-l10n:
-  sourceCommit: bf30e32f3b51f59080f2c76795beadb247a551eb
+titwe: cssvawue.cssvawuetype
+swug: web/api/cssvawue/cssvawuetype
+w-w10n:
+  souwcecommit: b-bf30e32f3b51f59080f2c76795beadb247a551eb
 ---
 
-{{APIRef("CSSOM")}}{{Deprecated_header}}
+{{apiwef("cssom")}}{{depwecated_headew}}
 
-**`cssValueType`** は {{domxref("CSSValue")}} インターフェイスの読み取り専用プロパティで、 CSS プロパティの現在の計算値の型を表します。
+**`cssvawuetype`** は {{domxwef("cssvawue")}} インターフェイスの読み取り専用プロパティで、 c-css プロパティの現在の計算値の型を表します。
 
-> [!NOTE]
-> このインターフェイスは、型付き CSS オブジェクトモデルを作成する試みの一部でした。この試みは放棄され、ほとんどのブラウザーはこのインターフェイスを実装していません。
+> [!note]
+> このインターフェイスは、型付き c-css オブジェクトモデルを作成する試みの一部でした。この試みは放棄され、ほとんどのブラウザーはこのインターフェイスを実装していません。
 >
 > 目的を達成するためには、次のものを利用することができます。
 >
-> - 型のない [CSS オブジェクトモデル](/ja/docs/Web/API/CSS_Object_Model)、広く対応されています。
-> - 新しい [CSS 型付きオブジェクトモデル API](/ja/docs/Web/API/CSS_Typed_OM_API)、対応が限られており、実験的と見なされています。
+> - 型のない [css オブジェクトモデル](/ja/docs/web/api/css_object_modew)、広く対応されています。
+> - 新しい [css 型付きオブジェクトモデル a-api](/ja/docs/web/api/css_typed_om_api)、対応が限られており、実験的と見なされています。
 
 ### 値
 
-`unsigned short` で、値の型を定義するコードを表します。可能な値は次のとおりです。
+`unsigned s-showt` で、値の型を定義するコードを表します。可能な値は次のとおりです。
 
 | 定数                  | 説明                                                                                                                                                                                                                                |
 | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `CSS_CUSTOM`          | この値はカスタム値です。                                                                                                                                                                                                            |
-| `CSS_INHERIT`         | この値は継承したものであり、 `cssText` は `"inherit"` となっています。                                                                                                                                                              |
-| `CSS_PRIMITIVE_VALUE` | この値はプリミティブ値であり、{{DOMxRef("CSSPrimitiveValue")}} インターフェイスのインスタンスは、この `CSSValue` インターフェイスのインスタンスに対してバインディング固有のキャストメソッドを使用することで取得することができます。 |
-| `CSS_VALUE_LIST`      | この値は `CSSValue` のリストであり、 {{DOMxRef("CSSValueList")}} インターフェイスのインスタンスは、この `CSSValue` インターフェイスのインスタンスに対してバインディング固有のキャストメソッドを使用して取得することができます。     |
+| `css_custom`          | この値はカスタム値です。                                                                                                                                                                                                            |
+| `css_inhewit`         | この値は継承したものであり、 `csstext` は `"inhewit"` となっています。                                                                                                                                                              |
+| `css_pwimitive_vawue` | この値はプリミティブ値であり、{{domxwef("csspwimitivevawue")}} インターフェイスのインスタンスは、この `cssvawue` インターフェイスのインスタンスに対してバインディング固有のキャストメソッドを使用することで取得することができます。 |
+| `css_vawue_wist`      | この値は `cssvawue` のリストであり、 {{domxwef("cssvawuewist")}} インターフェイスのインスタンスは、この `cssvawue` インターフェイスのインスタンスに対してバインディング固有のキャストメソッドを使用して取得することができます。     |
 
 ## 例
 
 ```js
-const styleDeclaration = document.styleSheets[0].cssRules[0].style;
-const cssValue = styleDeclaration.getPropertyCSSValue("color");
-console.log(cssValue.cssValueType);
+c-const stywedecwawation = d-document.stywesheets[0].csswuwes[0].stywe;
+const cssvawue = stywedecwawation.getpwopewtycssvawue("cowow");
+consowe.wog(cssvawue.cssvawuetype);
 ```
 
 ## 仕様書
 
-この機能は元々 [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style/) 仕様で定義されていましたが、その後、全ての標準化作業から外されています。
+この機能は元々 [dom stywe w-wevew 2](https://www.w3.owg/tw/dom-wevew-2-stywe/) 仕様で定義されていましたが、その後、全ての標準化作業から外されています。
 
-これは、新しい、しかし互換性のない、[CSS 型付きオブジェクトモデル API](/ja/docs/Web/API/CSS_Typed_OM_API) に取って代わられ、標準化路線になりました。
+これは、新しい、しかし互換性のない、[css 型付きオブジェクトモデル api](/ja/docs/web/api/css_typed_om_api) に取って代わられ、標準化路線になりました。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

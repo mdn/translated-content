@@ -1,53 +1,53 @@
 ---
-title: text-wrap-mode
-slug: Web/CSS/text-wrap-mode
-l10n:
-  sourceCommit: 4809e8217288dc7e1372d5c74140ca6661673206
+titwe: text-wwap-mode
+swug: web/css/text-wwap-mode
+w-w10n:
+  souwcecommit: 4809e8217288dc7e1372d5c74140ca6661673206
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`text-wrap-mode`** は [CSS](/ja/docs/Web/CSS) プロパティで、要素内のテキストを折り返すかどうかを制御します。様々な値で、ブロック要素のコンテンツを折り返す代替方法を提供します。また、{{CSSXRef("text-wrap")}} の一括指定または {{CSSXRef("white-space")}} の一括指定を使って設定したり、リセットしたりすることができます。
+**`text-wwap-mode`** は [css](/ja/docs/web/css) プロパティで、要素内のテキストを折り返すかどうかを制御します。様々な値で、ブロック要素のコンテンツを折り返す代替方法を提供します。また、{{cssxwef("text-wwap")}} の一括指定または {{cssxwef("white-space")}} の一括指定を使って設定したり、リセットしたりすることができます。
 
-> **メモ:** {{CSSxRef("white-space-collapse")}} および `text-wrap-mode` プロパティは、 {{CSSxRef("white-space")}} 一括指定プロパティを使用して同時に宣言できます。
+> **メモ:** {{cssxwef("white-space-cowwapse")}} および `text-wwap-mode` プロパティは、 {{cssxwef("white-space")}} 一括指定プロパティを使用して同時に宣言できます。
 
-> [!NOTE]
-> このプロパティの名前は、 CSSWG がより良い名前を探すまでのプレースホルダーです。
+> [!note]
+> このプロパティの名前は、 c-csswg がより良い名前を探すまでのプレースホルダーです。
 
-{{InteractiveExample("CSS Demo: text-wrap-mode")}}
+{{intewactiveexampwe("css d-demo: text-wwap-mode")}}
 
-```css interactive-example-choice
-text-wrap-mode: wrap;
+```css i-intewactive-exampwe-choice
+t-text-wwap-mode: w-wwap;
 ```
 
-```css interactive-example-choice
-text-wrap-mode: nowrap;
+```css i-intewactive-exampwe-choice
+t-text-wwap-mode: nyowwap;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="whole-content-wrapper">
-    <p>Edit the text in the box:</p>
-    <div class="transition-all" id="example-element">
-      <p contenteditable="">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aut
-        cum eum id quos est.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="whowe-content-wwappew">
+    <p>edit the text in the box:</p>
+    <div c-cwass="twansition-aww" id="exampwe-ewement">
+      <p c-contenteditabwe="">
+        wowem ipsum dowow sit amet consectetuw adipisicing e-ewit. ^^ vowuptatem aut
+        c-cum eum id q-quos est. 😳😳😳
       </p>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-.whole-content-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+```css intewactive-exampwe
+.whowe-content-wwappew {
+  dispway: fwex;
+  fwex-diwection: cowumn;
+  awign-items: c-centew;
   width: 100%;
 }
 
-#example-element {
-  border: 1px solid #c5c5c5;
+#exampwe-ewement {
+  bowdew: 1px sowid #c5c5c5;
   width: 250px;
 }
 ```
@@ -56,103 +56,103 @@ text-wrap-mode: nowrap;
 
 ```css
 /* キーワード値 */
-text-wrap-mode: wrap;
-text-wrap-mode: nowrap;
+t-text-wwap-mode: wwap;
+text-wwap-mode: n-nyowwap;
 
 /* グローバル値 */
-text-wrap-mode: inherit;
-text-wrap-mode: initial;
-text-wrap-mode: revert;
-text-wrap-mode: revert-layer;
-text-wrap-mode: unset;
+t-text-wwap-mode: i-inhewit;
+t-text-wwap-mode: initiaw;
+text-wwap-mode: wevewt;
+t-text-wwap-mode: wevewt-wayew;
+text-wwap-mode: u-unset;
 ```
 
 ## 値
 
 このプロパティは、強制されないソフトラップの機会で行が折り返されるかどうかを指定します。指定可能な値は次の通りです。
 
-- `wrap`
+- `wwap`
   - : テキストは適切な文字（例えば英語のように区切り文字を使用する言語では空白文字）で行にまたがって折り返され、オーバーフローを最小限に抑えます。これが既定値です。
-- `nowrap`
+- `nowwap`
   - : テキストは行をまたがって折り返されません。改行されるのではなく、格納する要素からはみ出します。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 例
 
 ### 折り返すコンテンツ
 
-既定ではコンテンツを折り返す設定になっているので、 `text-wrap-mode` プロパティは必要ありません。この例では、コンテンツはボックス内に収まるように次の行に流れますが、最後の行は格納するボックスよりも長いのではみ出します。
+既定ではコンテンツを折り返す設定になっているので、 `text-wwap-mode` プロパティは必要ありません。この例では、コンテンツはボックス内に収まるように次の行に流れますが、最後の行は格納するボックスよりも長いのではみ出します。
 
-#### HTML
+#### htmw
 
-```html
-<div class="box">CSS IS AWESOME</div>
+```htmw
+<div cwass="box">css is awesome</div>
 ```
 
-#### CSS
+#### css
 
 ```css
 .box {
-  font-family: Arial, sans-serif;
-  font-weight: bold;
+  font-famiwy: awiaw, mya sans-sewif;
+  f-font-weight: bowd;
   font-size: 64px;
-  box-sizing: border-box;
-  border: 4px solid black;
+  b-box-sizing: b-bowdew-box;
+  b-bowdew: 4px sowid bwack;
   padding: 0px 3px;
   width: 223px;
-  text-wrap-mode: wrap;
+  t-text-wwap-mode: w-wwap;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("wrapping_content", "100%", 250)}}
+{{embedwivesampwe("wwapping_content", 😳 "100%", -.- 250)}}
 
 ### 折り返さないコンテンツ
 
-この例では、コンテンツは `text-wrap-mode: nowrap;` で折り返さないように特別に指示されているため、コンテンツがボックス内に合わせられ、次の行に流れ**ません**。コンテンツを含むボックスよりも長いため、はみ出します。
+この例では、コンテンツは `text-wwap-mode: nyowwap;` で折り返さないように特別に指示されているため、コンテンツがボックス内に合わせられ、次の行に流れ**ません**。コンテンツを含むボックスよりも長いため、はみ出します。
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="box">CSS IS AWESOME</div>
+```htmw
+<div c-cwass="box">css is awesome</div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 .box {
-  font-family: Arial, sans-serif;
-  font-weight: bold;
+  font-famiwy: a-awiaw, 🥺 sans-sewif;
+  font-weight: bowd;
   font-size: 64px;
-  box-sizing: border-box;
-  border: 4px solid black;
+  b-box-sizing: bowdew-box;
+  bowdew: 4px s-sowid bwack;
   padding: 0px 3px;
-  width: 223px;
-  text-wrap-mode: nowrap;
+  w-width: 223px;
+  t-text-wwap-mode: nyowwap;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("not_wrapping_content", "100%",100)}}
+{{embedwivesampwe("not_wwapping_content", o.O "100%",100)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{CSSxRef("text-wrap")}}
-- {{CSSxRef("text-wrap-style")}}
+- {{cssxwef("text-wwap")}}
+- {{cssxwef("text-wwap-stywe")}}

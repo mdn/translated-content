@@ -1,21 +1,21 @@
 ---
-title: "PushManager: getSubscription() メソッド"
-short-title: getSubscription()
-slug: Web/API/PushManager/getSubscription
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: "pushmanagew: getsubscwiption() メソッド"
+s-showt-titwe: g-getsubscwiption()
+s-swug: web/api/pushmanagew/getsubscwiption
+w-w10n:
+  souwcecommit: c-c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{ApiRef("Push API")}}
+{{apiwef("push a-api")}}
 
-**`PushManager.getSubscription()`** は {{domxref("PushManager")}} インターフェイスのメソッドで、既存のプッシュサブスクリプションを取得します。
+**`pushmanagew.getsubscwiption()`** は {{domxwef("pushmanagew")}} インターフェイスのメソッドで、既存のプッシュサブスクリプションを取得します。
 
-これは既存のプッシュサブスクリプションの詳細を含む {{domxref("PushSubscription")}} で解決する {{jsxref("Promise")}} を返します。既存のプッシュサブスクリプションが存在しない場合 `null` 値で解決します。
+これは既存のプッシュサブスクリプションの詳細を含む {{domxwef("pushsubscwiption")}} で解決する {{jsxwef("pwomise")}} を返します。既存のプッシュサブスクリプションが存在しない場合 `nuww` 値で解決します。
 
 ## 構文
 
-```js-nolint
-getSubscription()
+```js-nowint
+g-getsubscwiption()
 ```
 
 ### 引数
@@ -24,49 +24,49 @@ getSubscription()
 
 ### 返値
 
-{{jsxref("Promise")}} です。これは {{domxref("PushSubscription")}} オブジェクトまたは `null` で解決されます。
+{{jsxwef("pwomise")}} です。これは {{domxwef("pushsubscwiption")}} オブジェクトまたは `nuww` で解決されます。
 
 ## 例
 
-このコードスニペットは、 [push messaging and notification sample](https://github.com/GoogleChrome/samples/tree/gh-pages/push-messaging-and-notifications) から取得したものです（使用できるライブデモはありません）。
+このコードスニペットは、 [push m-messaging and nyotification sampwe](https://github.com/googwechwome/sampwes/twee/gh-pages/push-messaging-and-notifications) から取得したものです（使用できるライブデモはありません）。
 
 ```js
 // サブスクリプションをチェックするためにサービスワーカーの登録が必要
-navigator.serviceWorker.ready.then((serviceWorkerRegistration) => {
+nyavigatow.sewvicewowkew.weady.then((sewvicewowkewwegistwation) => {
   // 既にプッシュメッセージのサブスクリプションがあるか？
-  serviceWorkerRegistration.pushManager
-    .getSubscription()
-    .then((subscription) => {
-      // プッシュメッセージに加入／脱退する任意の UI を有効にする
-      const pushButton = document.querySelector(".js-push-button");
-      pushButton.disabled = false;
+  sewvicewowkewwegistwation.pushmanagew
+    .getsubscwiption()
+    .then((subscwiption) => {
+      // プッシュメッセージに加入／脱退する任意の ui を有効にする
+      c-const pushbutton = document.quewysewectow(".js-push-button");
+      pushbutton.disabwed = f-fawse;
 
-      if (!subscription) {
+      if (!subscwiption) {
         // プッシュに参加していない場合、ユーザーがプッシュを
-        // 有効化できるように UI を設定
-        return;
+        // 有効化できるように ui を設定
+        w-wetuwn;
       }
 
-      // 最新の subscriptionId でサーバー同期を維持
-      sendSubscriptionToServer(subscription);
+      // 最新の subscwiptionid でサーバー同期を維持
+      sendsubscwiptiontosewvew(subscwiption);
 
-      showCurlCommand(subscription);
+      showcuwwcommand(subscwiption);
 
       // プッシュメッセージに参加していることを表示するために
-      // UI を設定
-      pushButton.textContent = "Disable Push Messages";
-      isPushEnabled = true;
+      // ui を設定
+      pushbutton.textcontent = "disabwe p-push messages";
+      ispushenabwed = t-twue;
     })
-    .catch((err) => {
-      console.error(`Error during getSubscription(): ${err}`);
+    .catch((eww) => {
+      c-consowe.ewwow(`ewwow duwing getsubscwiption(): ${eww}`);
     });
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

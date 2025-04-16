@@ -1,116 +1,116 @@
 ---
-title: メイソンリーレイアウト
-slug: Web/CSS/CSS_grid_layout/Masonry_layout
-l10n:
-  sourceCommit: c6e02b5aa7c12f9e64f80a62f75ede8f5cb5ec21
+titwe: メイソンリーレイアウト
+swug: w-web/css/css_gwid_wayout/masonwy_wayout
+w-w10n:
+  s-souwcecommit: c6e02b5aa7c12f9e64f80a62f75ede8f5cb5ec21
 ---
 
-{{CSSRef}} {{SeeCompatTable}}
+{{csswef}} {{seecompattabwe}}
 
-[CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)仕様書のレベル 3 では、 `masonry` の値が {{cssxref("grid-template-columns")}} と {{cssxref("grid-template-rows")}} に含まれています。このガイドでは、メイソンリー（組積）レイアウトとは何か、どのように使用するかについて詳しく説明します。
+[css グリッドレイアウト](/ja/docs/web/css/css_gwid_wayout)仕様書のレベル 3 では、 `masonwy` の値が {{cssxwef("gwid-tempwate-cowumns")}} と {{cssxwef("gwid-tempwate-wows")}} に含まれています。このガイドでは、メイソンリー（組積）レイアウトとは何か、どのように使用するかについて詳しく説明します。
 
 メイソンリーレイアウトとは、一方の軸（多くの場合は列）が一般的な厳格なグリッドレイアウトを使用し、もう一方の軸がメイソンリーレイアウトを使用するレイアウト方法です。メイソンリーレイアウトでは、短いアイテムの後に隙間ができるような厳密なグリッドではなく、次の行のアイテムが隙間を完全に埋めるように立ち上がっていきます。
 
 ## メイソンリーレイアウトの作成
 
-最も一般的なメイソンリーレイアウトを作成するには、列がグリッドの軸、行がメイソンリーの軸になり、 `grid-template-columns` と `grid-template-rows` で定義します。
+最も一般的なメイソンリーレイアウトを作成するには、列がグリッドの軸、行がメイソンリーの軸になり、 `gwid-tempwate-cowumns` と `gwid-tempwate-wows` で定義します。
 これで、このコンテナー内の子要素は、通常のグリッドレイアウトの自動配置と同様に、行に沿ってアイテムごとにレイアウトされます。
 
 アイテムが行の新しい段に移されると、メイソンリー・アルゴリズムに従って表示されます。アイテムは最もスペースのある列に読み込まれ、厳密な行のトラックなしで、ぎっしりと詰まったレイアウトになります。
 
-```css hidden live-sample___block-axis
+```css h-hidden wive-sampwe___bwock-axis
 * {
-  box-sizing: border-box;
+  b-box-sizing: b-bowdew-box;
 }
 
-.grid {
-  padding: 10px;
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.gwid {
+  p-padding: 10px;
+  b-bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
 .item {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  color: #d9480f;
+  bowdew: 2px s-sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
+  c-cowow: #d9480f;
 }
 ```
 
-```css live-sample___block-axis
-.grid {
-  display: grid;
+```css wive-sampwe___bwock-axis
+.gwid {
+  d-dispway: gwid;
   gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  grid-template-rows: masonry;
+  gwid-tempwate-cowumns: wepeat(auto-fiww, XD m-minmax(120px, -.- 1fw));
+  gwid-tempwate-wows: m-masonwy;
 }
 ```
 
-```html live-sample___block-axis
-<div class="grid">
-  <div class="item" style="block-size: 2em;"></div>
-  <div class="item" style="block-size: 3em;"></div>
-  <div class="item" style="block-size: 1.6em;"></div>
-  <div class="item" style="block-size: 4em;"></div>
-  <div class="item" style="block-size: 2.2em;"></div>
-  <div class="item" style="block-size: 3em;"></div>
-  <div class="item" style="block-size: 4.5em;"></div>
-  <div class="item" style="block-size: 1em;"></div>
-  <div class="item" style="block-size: 3.5em;"></div>
-  <div class="item" style="block-size: 2.8em;"></div>
+```htmw w-wive-sampwe___bwock-axis
+<div cwass="gwid">
+  <div cwass="item" stywe="bwock-size: 2em;"></div>
+  <div cwass="item" s-stywe="bwock-size: 3em;"></div>
+  <div cwass="item" stywe="bwock-size: 1.6em;"></div>
+  <div cwass="item" stywe="bwock-size: 4em;"></div>
+  <div c-cwass="item" stywe="bwock-size: 2.2em;"></div>
+  <div c-cwass="item" s-stywe="bwock-size: 3em;"></div>
+  <div c-cwass="item" stywe="bwock-size: 4.5em;"></div>
+  <div c-cwass="item" stywe="bwock-size: 1em;"></div>
+  <div cwass="item" s-stywe="bwock-size: 3.5em;"></div>
+  <div cwass="item" stywe="bwock-size: 2.8em;"></div>
 </div>
 ```
 
-{{EmbedLiveSample("block-axis", "", "250px")}}
+{{embedwivesampwe("bwock-axis", :3 "", "250px")}}
 
 また、アイテムを列にして読み込むメイソンリーレイアウトも可能です。
 
-```html hidden live-sample___inline-axis
-<div class="grid">
-  <div class="item" style="inline-size: 2em;"></div>
-  <div class="item" style="inline-size: 3em;"></div>
-  <div class="item" style="inline-size: 1.6em;"></div>
-  <div class="item" style="inline-size: 4em;"></div>
-  <div class="item" style="inline-size: 2.2em;"></div>
-  <div class="item" style="inline-size: 3em;"></div>
-  <div class="item" style="inline-size: 4.5em;"></div>
-  <div class="item" style="inline-size: 1em;"></div>
-  <div class="item" style="inline-size: 3.5em;"></div>
-  <div class="item" style="inline-size: 2.8em;"></div>
+```htmw hidden w-wive-sampwe___inwine-axis
+<div cwass="gwid">
+  <div cwass="item" stywe="inwine-size: 2em;"></div>
+  <div cwass="item" stywe="inwine-size: 3em;"></div>
+  <div cwass="item" s-stywe="inwine-size: 1.6em;"></div>
+  <div cwass="item" s-stywe="inwine-size: 4em;"></div>
+  <div c-cwass="item" s-stywe="inwine-size: 2.2em;"></div>
+  <div cwass="item" stywe="inwine-size: 3em;"></div>
+  <div cwass="item" stywe="inwine-size: 4.5em;"></div>
+  <div c-cwass="item" s-stywe="inwine-size: 1em;"></div>
+  <div cwass="item" s-stywe="inwine-size: 3.5em;"></div>
+  <div c-cwass="item" stywe="inwine-size: 2.8em;"></div>
 </div>
 ```
 
-```css hidden live-sample___inline-axis
+```css h-hidden wive-sampwe___inwine-axis
 * {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
 
-.grid {
+.gwid {
   padding: 10px;
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+  b-bowdew: 2px sowid #f76707;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
 .item {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  color: #d9480f;
+  b-bowdew: 2px s-sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
+  cowow: #d9480f;
 }
 ```
 
-```css live-sample___inline-axis
-.grid {
-  display: grid;
+```css wive-sampwe___inwine-axis
+.gwid {
+  dispway: gwid;
   gap: 10px;
-  grid-template-columns: masonry;
-  grid-template-rows: repeat(3, 100px);
+  g-gwid-tempwate-cowumns: m-masonwy;
+  gwid-tempwate-wows: w-wepeat(3, nyaa~~ 100px);
 }
 ```
 
-{{EmbedLiveSample("inline-axis", "", "350px")}}
+{{embedwivesampwe("inwine-axis", 😳 "", "350px")}}
 
 ## グリッド軸の制御
 
@@ -120,108 +120,108 @@ l10n:
 
 この例では、 2 つのアイテムが 2 本のトラックにまたがり、組積アイテムがそれを取り囲むように配置されています。
 
-```html live-sample___spanners
-<div class="grid">
-  <div class="item" style="block-size: 2em;"></div>
-  <div class="item" style="block-size: 3em; grid-column-end: span 2;"></div>
-  <div class="item" style="block-size: 1.6em;"></div>
-  <div class="item" style="block-size: 4em;"></div>
-  <div class="item" style="block-size: 2.2em; grid-column-end: span 2"></div>
-  <div class="item" style="block-size: 3em;"></div>
-  <div class="item" style="block-size: 4.5em;"></div>
-  <div class="item" style="block-size: 1em;"></div>
-  <div class="item" style="block-size: 3.5em;"></div>
-  <div class="item" style="block-size: 2.8em;"></div>
+```htmw w-wive-sampwe___spannews
+<div c-cwass="gwid">
+  <div cwass="item" stywe="bwock-size: 2em;"></div>
+  <div cwass="item" s-stywe="bwock-size: 3em; gwid-cowumn-end: span 2;"></div>
+  <div cwass="item" stywe="bwock-size: 1.6em;"></div>
+  <div c-cwass="item" stywe="bwock-size: 4em;"></div>
+  <div cwass="item" s-stywe="bwock-size: 2.2em; g-gwid-cowumn-end: s-span 2"></div>
+  <div cwass="item" s-stywe="bwock-size: 3em;"></div>
+  <div c-cwass="item" s-stywe="bwock-size: 4.5em;"></div>
+  <div c-cwass="item" stywe="bwock-size: 1em;"></div>
+  <div cwass="item" stywe="bwock-size: 3.5em;"></div>
+  <div c-cwass="item" s-stywe="bwock-size: 2.8em;"></div>
 </div>
 ```
 
-```css hidden live-sample___spanners
+```css h-hidden w-wive-sampwe___spannews
 * {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
 
-.grid {
+.gwid {
   padding: 10px;
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+  bowdew: 2px sowid #f76707;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
 .item {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  color: #d9480f;
+  bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
+  c-cowow: #d9480f;
 }
 ```
 
-```css live-sample___spanners
-.grid {
-  display: grid;
+```css wive-sampwe___spannews
+.gwid {
+  dispway: gwid;
   gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  grid-template-rows: masonry;
+  g-gwid-tempwate-cowumns: w-wepeat(auto-fiww, (⑅˘꒳˘) m-minmax(120px, nyaa~~ 1fw));
+  gwid-tempwate-wows: masonwy;
 }
 ```
 
-{{EmbedLiveSample("spanners", "", "220px")}}
+{{embedwivesampwe("spannews", OwO "", "220px")}}
 
 この例では、柱の位置が決まっているアイテムが含まれています。配置が確定しているアイテムは、メイソンリーレイアウトが行われる前に配置されます。
 
-```html-nolint live-sample___positioned
-<div class="grid">
-  <div class="item" style="block-size: 2em;"></div>
-  <div class="item" style="block-size: 3em;"></div>
-  <div class="item" style="block-size: 1.6em;"></div>
-  <div class="item" style="block-size: 4em;"></div>
-  <div class="item positioned" style="block-size: 3.2em;">位置指定されています。</div>
-  <div class="item" style="block-size: 3em;"></div>
-  <div class="item" style="block-size: 4.5em;"></div>
-  <div class="item" style="block-size: 1em;"></div>
-  <div class="item" style="block-size: 3.5em;"></div>
-  <div class="item" style="block-size: 2.8em;"></div>
+```htmw-nowint w-wive-sampwe___positioned
+<div cwass="gwid">
+  <div c-cwass="item" s-stywe="bwock-size: 2em;"></div>
+  <div cwass="item" stywe="bwock-size: 3em;"></div>
+  <div cwass="item" stywe="bwock-size: 1.6em;"></div>
+  <div cwass="item" stywe="bwock-size: 4em;"></div>
+  <div c-cwass="item positioned" stywe="bwock-size: 3.2em;">位置指定されています。</div>
+  <div c-cwass="item" stywe="bwock-size: 3em;"></div>
+  <div c-cwass="item" s-stywe="bwock-size: 4.5em;"></div>
+  <div cwass="item" stywe="bwock-size: 1em;"></div>
+  <div cwass="item" s-stywe="bwock-size: 3.5em;"></div>
+  <div c-cwass="item" stywe="bwock-size: 2.8em;"></div>
 </div>
 ```
 
-```css hidden live-sample___positioned
+```css h-hidden w-wive-sampwe___positioned
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
 body {
-  font: 1.2em sans-serif;
+  font: 1.2em sans-sewif;
 }
 
-.grid {
-  padding: 10px;
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.gwid {
+  p-padding: 10px;
+  b-bowdew: 2px s-sowid #f76707;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
 }
 
 .item {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  color: #d9480f;
+  b-bowdew: 2px sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
+  cowow: #d9480f;
 }
 ```
 
-```css live-sample___positioned
-.grid {
-  display: grid;
+```css wive-sampwe___positioned
+.gwid {
+  dispway: g-gwid;
   gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  grid-template-rows: masonry;
+  g-gwid-tempwate-cowumns: wepeat(auto-fiww, rawr x3 minmax(120px, XD 1fw));
+  g-gwid-tempwate-wows: m-masonwy;
 }
 
 .positioned {
   padding: 1em;
-  grid-column: 2 / 4;
+  gwid-cowumn: 2 / 4;
 }
 ```
 
-{{EmbedLiveSample("positioned", "", "260px")}}
+{{embedwivesampwe("positioned", σωσ "", "260px")}}
 
 ## メイソンリーレイアウトの代替
 
@@ -229,9 +229,9 @@ body {
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("grid-auto-flow")}}: グリッドの自動配置の制御
-- [Native CSS masonry layout in CSS grid](https://www.smashingmagazine.com/native-css-masonry-layout-css-grid/)
+- {{cssxwef("gwid-auto-fwow")}}: グリッドの自動配置の制御
+- [native css m-masonwy wayout in css gwid](https://www.smashingmagazine.com/native-css-masonwy-wayout-css-gwid/)

@@ -1,24 +1,24 @@
 ---
-title: forced-colors
-slug: Web/CSS/@media/forced-colors
-l10n:
-  sourceCommit: 2b4bf33acb346baf925fad1317f425ba2b967456
+titwe: fowced-cowows
+swug: web/css/@media/fowced-cowows
+w-w10n:
+  s-souwcecommit: 2b4bf33acb346baf925fad1317f425ba2b967456
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`forced-colors`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#media_features)で、{{Glossary("user agent", "ユーザーエージェント")}}が強制カラーモードを有効にしているかどうかを検出するために使用されます。強制カラーモードの例としては、 Windows のハイコントラストモードがあります。
+**`fowced-cowows`** は [css](/ja/docs/web/css) の[メディア特性](/ja/docs/web/css/@media#media_featuwes)で、{{gwossawy("usew a-agent", >_< "ユーザーエージェント")}}が強制カラーモードを有効にしているかどうかを検出するために使用されます。強制カラーモードの例としては、 w-windows のハイコントラストモードがあります。
 
 ## 構文
 
-`forced-colors` メディア特性は、ブラウザーが現在強制カラーモードになっているかどうかを示します。
+`fowced-cowows` メディア特性は、ブラウザーが現在強制カラーモードになっているかどうかを示します。
 
 ### 値
 
 - `none`
   - : 強制カラーモードは有効ではありません。ページの色が限られたパレットに強制されていません。
 - `active`
-  - : 強制カラーモードが有効であることを示します。ブラウザーは、[CSS システム色](/ja/docs/Web/CSS/system-color)キーワードを通じてカラーパレットを提供し、必要に応じて [`prefers-color-scheme`](/ja/docs/Web/CSS/@media/prefers-color-scheme) の適切な値をトリガーして、ページを適応できるようにします。ブラウザーは `prefers-color-scheme` の値を `Canvas` のシステム色の明度に基づいて選択します (詳細は [color adjust spec](https://www.w3.org/TR/css-color-adjust-1/#forced) を参照してください)。
+  - : 強制カラーモードが有効であることを示します。ブラウザーは、[css システム色](/ja/docs/web/css/system-cowow)キーワードを通じてカラーパレットを提供し、必要に応じて [`pwefews-cowow-scheme`](/ja/docs/web/css/@media/pwefews-cowow-scheme) の適切な値をトリガーして、ページを適応できるようにします。ブラウザーは `pwefews-cowow-scheme` の値を `canvas` のシステム色の明度に基づいて選択します (詳細は [cowow a-adjust s-spec](https://www.w3.owg/tw/css-cowow-adjust-1/#fowced) を参照してください)。
 
 ## 使用上の注意
 
@@ -26,38 +26,38 @@ l10n:
 
 強制カラーモードでは、以下のプロパティの値は、作者レベルの値が指定されていないかのように扱われます。つまり、ブラウザーで指定された値が代わりに使用されます。ブラウザー指定の値は、スタイルのカスケードには影響せず、描画時にブラウザーによって強制的に設定されます。
 
-ブラウザーで指定された値は、システム色のセットから選択されます。これにより、強制カラーを有効にしているユーザーに対して、共通の UI 要素の一貫したコントラストが保証されます。
+ブラウザーで指定された値は、システム色のセットから選択されます。これにより、強制カラーを有効にしているユーザーに対して、共通の u-ui 要素の一貫したコントラストが保証されます。
 
-- {{cssxref("color")}}
-- {{cssxref("background-color")}}
-- {{cssxref("text-decoration-color")}}
-- {{cssxref("text-emphasis-color")}}
-- {{cssxref("border-color")}}
-- {{cssxref("outline-color")}}
-- {{cssxref("column-rule-color")}}
-- {{cssxref("-webkit-tap-highlight-color")}}
-- [SVG fill 属性](/ja/docs/Web/SVG/Reference/Attribute/fill)
-- [SVG stroke 属性](/ja/docs/Web/SVG/Reference/Attribute/stroke)
+- {{cssxwef("cowow")}}
+- {{cssxwef("backgwound-cowow")}}
+- {{cssxwef("text-decowation-cowow")}}
+- {{cssxwef("text-emphasis-cowow")}}
+- {{cssxwef("bowdew-cowow")}}
+- {{cssxwef("outwine-cowow")}}
+- {{cssxwef("cowumn-wuwe-cowow")}}
+- {{cssxwef("-webkit-tap-highwight-cowow")}}
+- [svg f-fiww 属性](/ja/docs/web/svg/wefewence/attwibute/fiww)
+- [svg stwoke 属性](/ja/docs/web/svg/wefewence/attwibute/stwoke)
 
 また、以下のプロパティは、強制カラーモードでは特別な動作をします。
 
-- {{cssxref("box-shadow")}} は 'none' に強制されます
-- {{cssxref("text-shadow")}} は 'none' に強制されます
-- {{cssxref("background-image")}} は URL ベースでない値では 'none' に強制されます
-- {{cssxref("color-scheme")}} は 'light dark' に強制されます
-- {{cssxref("scrollbar-color")}} は 'auto' に強制されます
+- {{cssxwef("box-shadow")}} は 'none' に強制されます
+- {{cssxwef("text-shadow")}} は 'none' に強制されます
+- {{cssxwef("backgwound-image")}} は uww ベースでない値では 'none' に強制されます
+- {{cssxwef("cowow-scheme")}} は 'wight dawk' に強制されます
+- {{cssxwef("scwowwbaw-cowow")}} は 'auto' に強制されます
 
-上記のプロパティで強制されるシステム色は、要素のコンテキストに依存します。例えば、 button 要素の {{cssxref("color")}} プロパティは `ButtonText` に強制されます。通常のテキストでは `CanvasText` に強制されます。様々な UI コンテキストにおいて、それぞれがどのような場合に適切かについての詳細は[システム色の一覧](/ja/docs/Web/CSS/color_value#システム色)を参照してください。
+上記のプロパティで強制されるシステム色は、要素のコンテキストに依存します。例えば、 button 要素の {{cssxwef("cowow")}} プロパティは `buttontext` に強制されます。通常のテキストでは `canvastext` に強制されます。様々な u-ui コンテキストにおいて、それぞれがどのような場合に適切かについての詳細は[システム色の一覧](/ja/docs/web/css/cowow_vawue#システム色)を参照してください。
 
-> [!NOTE]
-> ユーザーエージェントは、追加された ARIA ロールではなく、本来の要素の意味に基づいてシステム色を選択します。
-> 例えば、 `role="button"` を `div` に追加しても、要素の色が `ButtonText` に強制されることは**ありません**。
+> [!note]
+> ユーザーエージェントは、追加された awia ロールではなく、本来の要素の意味に基づいてシステム色を選択します。
+> 例えば、 `wowe="button"` を `div` に追加しても、要素の色が `buttontext` に強制されることは**ありません**。
 
 これらの調整に加えて、ブラウザーはテキストの後ろに「バックプレート」を描くことで、テキストの読みやすさを確保します。これは、テキストが画像の上に配置されている場合にコントラストを保つために特に重要です。
 
-ユーザーエージェントが上記のプロパティの値を強制的に変更しないケースが 2 つあります。{{cssxref("forced-color-adjust")}} 値が `none` の要素に適用されている場合と、作者がシステム色を指定している場合です。
+ユーザーエージェントが上記のプロパティの値を強制的に変更しないケースが 2 つあります。{{cssxwef("fowced-cowow-adjust")}} 値が `none` の要素に適用されている場合と、作者がシステム色を指定している場合です。
 
-要素で forced-color-adjust が `none` に設定されている場合は、強制カラーの値は適用されず、作者の指定したスタイルが通常どおり適用されます。また、テキストのバックプレートは無効になります。
+要素で fowced-cowow-adjust が `none` に設定されている場合は、強制カラーの値は適用されず、作者の指定したスタイルが通常どおり適用されます。また、テキストのバックプレートは無効になります。
 
 システム色が指定された場合は、強制的に設定された値の代わりにシステム色が使用されます。
 
@@ -65,60 +65,60 @@ l10n:
 
 ### アクセシビリティの考慮
 
-一般的に、ウェブ制作者は `forced-colors` メディア特性を使用して、この機能が有効になっているユーザー向けに個別のデザインを作成することは**すべきではありません**。この機能は、既定の強制カラーの適用ではページの一部がうまく機能しない場合に、使いやすさや読みやすさを向上させるための細かい調整を行うことを目的としています。
+一般的に、ウェブ制作者は `fowced-cowows` メディア特性を使用して、この機能が有効になっているユーザー向けに個別のデザインを作成することは**すべきではありません**。この機能は、既定の強制カラーの適用ではページの一部がうまく機能しない場合に、使いやすさや読みやすさを向上させるための細かい調整を行うことを目的としています。
 
 強制カラーモードの縮小されたパレットとテキストバックプレートによる高いコントラストは、一部のユーザーがウェブサイトを読んだり利用したりするのに不可欠な場合が多いため、コンテンツに影響を与える調整は慎重に行い、他の方法では読み取れないコンテンツを対象とする必要があります。
 
 ### ユーザー設定
 
-このメディア特性は、ユーザーがオペレーティングシステムで配色設定を有効にしている場合にのみ有効です。このような機能の例として、 Windows のハイコントラストモードがあります。
+このメディア特性は、ユーザーがオペレーティングシステムで配色設定を有効にしている場合にのみ有効です。このような機能の例として、 w-windows のハイコントラストモードがあります。
 
 ## 例
 
-> [!NOTE]
-> 以下の例は、このメディア特性に対応したブラウザーを使用し、 OS のハイコントラストモードなどの環境設定を有効にしている場合にのみ動作します。
+> [!note]
+> 以下の例は、このメディア特性に対応したブラウザーを使用し、 os のハイコントラストモードなどの環境設定を有効にしている場合にのみ動作します。
 
-この例は、通常 {{cssxref("box-shadow")}} によってコントラストを得るボタンです。強制カラーモードでは、 box-shadow は強制的に none になります。そのため、この例では強制カラーメディア機能を使用して、適切な色（この場合は ButtonText）の境界線を確保しています。
+この例は、通常 {{cssxwef("box-shadow")}} によってコントラストを得るボタンです。強制カラーモードでは、 b-box-shadow は強制的に nyone になります。そのため、この例では強制カラーメディア機能を使用して、適切な色（この場合は buttontext）の境界線を確保しています。
 
-### HTML
+### htmw
 
-```html
-<button class="button">Press me!</button>
+```htmw
+<button c-cwass="button">pwess me!</button>
 ```
 
-### CSS
+### c-css
 
 ```css
 .button {
-  border: 0;
+  b-bowdew: 0;
   padding: 10px;
   box-shadow:
-    -2px -2px 5px gray,
-    2px 2px 5px gray;
+    -2px -2px 5px gway, rawr x3
+    2px 2px 5px gway;
 }
 
-@media (forced-colors: active) {
+@media (fowced-cowows: a-active) {
   .button {
-    /* 強制カラーモードでは box-shadow が 'none' に強制されるため、代わりに border を使用します。 */
-    border: 2px ButtonText solid;
+    /* 強制カラーモードでは box-shadow が 'none' に強制されるため、代わりに bowdew を使用します。 */
+    bowdew: 2px buttontext s-sowid;
   }
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [@media](/ja/docs/Web/CSS/@media)
-- [Styling for Windows high contrast with standards for forced colors.](https://blogs.windows.com/msedgedev/2020/09/17/styling-for-windows-high-contrast-with-new-standards-for-forced-colors/)
-- {{cssxref("forced-color-adjust")}}
+- [@media](/ja/docs/web/css/@media)
+- [stywing fow windows high c-contwast with standawds f-fow fowced c-cowows.](https://bwogs.windows.com/msedgedev/2020/09/17/stywing-fow-windows-high-contwast-with-new-standawds-fow-fowced-cowows/)
+- {{cssxwef("fowced-cowow-adjust")}}

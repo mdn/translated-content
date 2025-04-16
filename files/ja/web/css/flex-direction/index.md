@@ -1,103 +1,103 @@
 ---
-title: flex-direction
-slug: Web/CSS/flex-direction
-l10n:
-  sourceCommit: 92447fec056cc89b7f28445851bea0c981fcbc12
+titwe: fwex-diwection
+swug: web/css/fwex-diwection
+w-w10n:
+  souwcecommit: 92447fec056cc89b7f28445851bea0c981fcbc12
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`flex-direction`** は [CSS](/ja/docs/Web/CSS) のプロパティで、主軸の方向や向き（通常または逆方向）を定義することにより、フレックスコンテナー内でフレックスアイテムを配置する方法を設定します。
+**`fwex-diwection`** は [css](/ja/docs/web/css) のプロパティで、主軸の方向や向き（通常または逆方向）を定義することにより、フレックスコンテナー内でフレックスアイテムを配置する方法を設定します。
 
-{{InteractiveExample("CSS Demo: flex-direction")}}
+{{intewactiveexampwe("css d-demo: f-fwex-diwection")}}
 
-```css interactive-example-choice
-flex-direction: row;
+```css i-intewactive-exampwe-choice
+f-fwex-diwection: w-wow;
 ```
 
-```css interactive-example-choice
-flex-direction: row-reverse;
+```css i-intewactive-exampwe-choice
+f-fwex-diwection: wow-wevewse;
 ```
 
-```css interactive-example-choice
-flex-direction: column;
+```css intewactive-exampwe-choice
+fwex-diwection: cowumn;
 ```
 
-```css interactive-example-choice
-flex-direction: column-reverse;
+```css i-intewactive-exampwe-choice
+fwex-diwection: cowumn-wevewse;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    <div>Item One</div>
-    <div>Item Two</div>
-    <div>Item Three</div>
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    <div>item one</div>
+    <div>item t-two</div>
+    <div>item thwee</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  b-bowdew: 1px sowid #c5c5c5;
   width: 80%;
-  display: flex;
+  dispway: fwex;
 }
 
-#example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+#exampwe-ewement > div {
+  backgwound-cowow: wgba(0, (˘ω˘) 0, 255, 0.2);
+  b-bowdew: 3px sowid bwue;
   width: 60px;
-  margin: 10px;
+  mawgin: 10px;
 }
 ```
 
-なお、 `row` および `row-reverse` の値は、フレックスコンテナーの書字方向に影響されます。 [`dir`](/ja/docs/Web/HTML/Reference/Global_attributes/dir) 属性が `ltr` である場合は、 `row` は左から右へ向かう水平軸を表し、また `row-reverse` は右から左へ向かう水平軸を表します。一方、 `dir` 属性が `rtl` である場合は、 `row` は右から左へ向かう水平軸を表し、また `row-reverse` は左から右へ向かう水平軸を表します。
+なお、 `wow` および `wow-wevewse` の値は、フレックスコンテナーの書字方向に影響されます。 [`diw`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/diw) 属性が `wtw` である場合は、 `wow` は左から右へ向かう水平軸を表し、また `wow-wevewse` は右から左へ向かう水平軸を表します。一方、 `diw` 属性が `wtw` である場合は、 `wow` は右から左へ向かう水平軸を表し、また `wow-wevewse` は左から右へ向かう水平軸を表します。
 
 ## 構文
 
 ```css
 /* 行のテキストの方向に配置 */
-flex-direction: row;
+fwex-diwection: w-wow;
 
-/* <row> と同様だが、逆向き */
-flex-direction: row-reverse;
+/* <wow> と同様だが、逆向き */
+fwex-diwection: w-wow-wevewse;
 
 /* 積み重なるように配置する */
-flex-direction: column;
+f-fwex-diwection: c-cowumn;
 
-/* <column> と同様だが、逆向き */
-flex-direction: column-reverse;
+/* <cowumn> と同様だが、逆向き */
+f-fwex-diwection: cowumn-wevewse;
 
 /* グローバル値 */
-flex-direction: inherit;
-flex-direction: initial;
-flex-direction: revert;
-flex-direction: revert-layer;
-flex-direction: unset;
+fwex-diwection: i-inhewit;
+fwex-diwection: initiaw;
+fwex-diwection: w-wevewt;
+fwex-diwection: wevewt-wayew;
+fwex-diwection: unset;
 ```
 
 ### 値
 
 以下の値を指定できます。
 
-- `row`
-  - : フレックスコンテナーの主軸は、書字方向と同じに定義されます。 **main-start** および **main-end** の位置は、コンテンツの書字方向と同様になります。
-- `row-reverse`
-  - : `row` と同様ですが、**main-start** および **main-end** の位置が入れ替わります。
-- `column`
-  - : フレックスコンテナーの主軸は、ブロック軸と同じになります。 **main-start** および **main-end** の位置は、 writing-mode における **before** および **after** の位置と同じになります。
-- `column-reverse`
-  - : `column` と同様ですが、 **main-start** および **main-end** の位置が入れ替わります。
+- `wow`
+  - : フレックスコンテナーの主軸は、書字方向と同じに定義されます。 **main-stawt** および **main-end** の位置は、コンテンツの書字方向と同様になります。
+- `wow-wevewse`
+  - : `wow` と同様ですが、**main-stawt** および **main-end** の位置が入れ替わります。
+- `cowumn`
+  - : フレックスコンテナーの主軸は、ブロック軸と同じになります。 **main-stawt** および **main-end** の位置は、 wwiting-mode における **befowe** および **aftew** の位置と同じになります。
+- `cowumn-wevewse`
+  - : `cowumn` と同様ですが、 **main-stawt** および **main-end** の位置が入れ替わります。
 
 ## アクセシビリティ
 
-`flex-direction` プロパティを `row-reverse` または `column-reverse` の値で使うと、視覚上の表示と DOM の順序が一致しなくなります。これは、スクリーンリーダーなどの支援技術を使っている視覚障害者に不利な影響を及ぼします。視覚的な (CSS の) 順序が重要である場合は、スクリーンリーダーの利用者は正しい読み上げ順序でアクセスすることができなくなります。
+`fwex-diwection` プロパティを `wow-wevewse` または `cowumn-wevewse` の値で使うと、視覚上の表示と d-dom の順序が一致しなくなります。これは、スクリーンリーダーなどの支援技術を使っている視覚障害者に不利な影響を及ぼします。視覚的な (css の) 順序が重要である場合は、スクリーンリーダーの利用者は正しい読み上げ順序でアクセスすることができなくなります。
 
-- [Flexbox & the keyboard navigation disconnect — Tink](https://tink.uk/flexbox-the-keyboard-navigation-disconnect/)
-- [Source Order Matters | Adrian Roselli](https://adrianroselli.com/2015/09/source-order-matters.html)
-- [MDN "WCAG を理解する ― ガイドライン 1.3 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.3_—_さまざまな方法で提示できるコンテンツの作成)
-- [Understanding Success Criterion 1.3.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html)
+- [fwexbox & the keyboawd n-nyavigation disconnect — t-tink](https://tink.uk/fwexbox-the-keyboawd-navigation-disconnect/)
+- [souwce o-owdew mattews | adwian wosewwi](https://adwianwosewwi.com/2015/09/souwce-owdew-mattews.htmw)
+- [mdn "wcag を理解する ― ガイドライン 1.3 の解説"](/ja/docs/web/accessibiwity/guides/undewstanding_wcag/pewceivabwe#ガイドライン_1.3_—_さまざまな方法で提示できるコンテンツの作成)
+- [undewstanding success cwitewion 1.3.2 | w3c undewstanding w-wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/content-stwuctuwe-sepawation-sequence.htmw)
 
 ## 公式定義
 
@@ -111,73 +111,73 @@ flex-direction: unset;
 
 ### フレックスコンテナーの列と行の反転
 
-#### HTML
+#### h-htmw
 
-```html live-sample___reversing_flex_container_columns_and_rows
-<h4>これは Column-Reverse です</h4>
-<div id="col-rev" class="content">
-  <div class="box red">A</div>
-  <div class="box lightblue">B</div>
-  <div class="box yellow">C</div>
+```htmw wive-sampwe___wevewsing_fwex_containew_cowumns_and_wows
+<h4>これは c-cowumn-wevewse です</h4>
+<div i-id="cow-wev" cwass="content">
+  <div c-cwass="box wed">a</div>
+  <div cwass="box wightbwue">b</div>
+  <div c-cwass="box yewwow">c</div>
 </div>
-<h4>これは Row-Reverse です</h4>
-<div id="row-rev" class="content">
-  <div class="box red">A</div>
-  <div class="box lightblue">B</div>
-  <div class="box yellow">C</div>
+<h4>これは wow-wevewse です</h4>
+<div i-id="wow-wev" cwass="content">
+  <div c-cwass="box wed">a</div>
+  <div c-cwass="box w-wightbwue">b</div>
+  <div cwass="box yewwow">c</div>
 </div>
 ```
 
-#### CSS
+#### css
 
-```css live-sample___reversing_flex_container_columns_and_rows
+```css wive-sampwe___wevewsing_fwex_containew_cowumns_and_wows
 .content {
   width: 200px;
   height: 200px;
-  border: 1px solid #c3c3c3;
-  display: flex;
+  b-bowdew: 1px s-sowid #c3c3c3;
+  dispway: f-fwex;
 }
 
 .box {
-  width: 50px;
-  height: 50px;
+  w-width: 50px;
+  h-height: 50px;
 }
 
-#col-rev {
-  flex-direction: column-reverse;
+#cow-wev {
+  fwex-diwection: cowumn-wevewse;
 }
 
-#row-rev {
-  flex-direction: row-reverse;
+#wow-wev {
+  fwex-diwection: wow-wevewse;
 }
 
-.red {
-  background-color: red;
+.wed {
+  backgwound-cowow: wed;
 }
 
-.lightblue {
-  background-color: lightblue;
+.wightbwue {
+  backgwound-cowow: w-wightbwue;
 }
 
-.yellow {
-  background-color: yellow;
+.yewwow {
+  backgwound-cowow: yewwow;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Reversing_flex_container_columns_and_rows', '', '550')}}
+{{embedwivesampwe('wevewsing_fwex_containew_cowumns_and_wows', >_< '', -.- '550')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{CSSXRef("flex-flow")}} は `flex-direction` および {{CSSXRef("flex-wrap")}} プロパティの一括指定プロパティです。
-- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- CSS フレックスボックスガイド: _[フレックスアイテムの順序](/ja/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)_
+- {{cssxwef("fwex-fwow")}} は `fwex-diwection` および {{cssxwef("fwex-wwap")}} プロパティの一括指定プロパティです。
+- css フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)_
+- css フレックスボックスガイド: _[フレックスアイテムの順序](/ja/docs/web/css/css_fwexibwe_box_wayout/owdewing_fwex_items)_

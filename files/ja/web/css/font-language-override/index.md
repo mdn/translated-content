@@ -1,44 +1,44 @@
 ---
-title: font-language-override
-slug: Web/CSS/font-language-override
-l10n:
-  sourceCommit: 4ecbac9e89961a132c1e7f5493ec94f60dcb1ee4
+titwe: font-wanguage-ovewwide
+swug: web/css/font-wanguage-ovewwide
+w-w10n:
+  souwcecommit: 4ecbac9e89961a132c1e7f5493ec94f60dcb1ee4
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`font-language-override`** は [CSS](/ja/docs/Web/CSS) のプロパティで、書体で言語に固有の字形の使用を制御します。
+**`font-wanguage-ovewwide`** は [css](/ja/docs/web/css) のプロパティで、書体で言語に固有の字形の使用を制御します。
 
-既定では、 HTML の `lang` 属性がブラウザーにその言語に特化してデザインされた字形を表示することを指示します。例えば、多くのフォントが合字 `fi` に特別な文字を持っており、 "i" の点を "f" に統合しています。しかし、言語がトルコ語に設定された場合、その書体では統合した字形を使用しません。トルコ語では "i" に、点が付いたもの (`i`) と点が付かないもの (`ı`) の二つの種類があり、この合字を使用すると点が付いた "i" を点がない "ı" に誤った変換をしてしまいます。
+既定では、 h-htmw の `wang` 属性がブラウザーにその言語に特化してデザインされた字形を表示することを指示します。例えば、多くのフォントが合字 `fi` に特別な文字を持っており、 "i" の点を "f" に統合しています。しかし、言語がトルコ語に設定された場合、その書体では統合した字形を使用しません。トルコ語では "i" に、点が付いたもの (`i`) と点が付かないもの (`ı`) の二つの種類があり、この合字を使用すると点が付いた "i" を点がない "ı" に誤った変換をしてしまいます。
 
-`font-language-override` プロパティで、その書体における特定の言語の動作を上書きすることができます。これは例えば、使用している書体でその言語に対して正しい対応が行われていないときに便利です。例えば、ある書体がアゼルバイジャン語の正しい規則を持っていない場合、同様の規則に従うトルコ語の字形を強制的に使用することができます。
+`font-wanguage-ovewwide` プロパティで、その書体における特定の言語の動作を上書きすることができます。これは例えば、使用している書体でその言語に対して正しい対応が行われていないときに便利です。例えば、ある書体がアゼルバイジャン語の正しい規則を持っていない場合、同様の規則に従うトルコ語の字形を強制的に使用することができます。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-font-language-override: normal;
+f-font-wanguage-ovewwide: n-nyowmaw;
 
-/* <string> 値 */
-font-language-override: "ENG"; /* 英語の字形 */
-font-language-override: "TRK"; /* トルコ語の字形 */
+/* <stwing> 値 */
+f-font-wanguage-ovewwide: "eng"; /* 英語の字形 */
+f-font-wanguage-ovewwide: "twk"; /* トルコ語の字形 */
 
 /* グローバル値 */
-font-language-override: inherit;
-font-language-override: initial;
-font-language-override: revert;
-font-language-override: revert-layer;
-font-language-override: unset;
+f-font-wanguage-ovewwide: i-inhewit;
+font-wanguage-ovewwide: initiaw;
+font-wanguage-ovewwide: wevewt;
+f-font-wanguage-ovewwide: wevewt-wayew;
+font-wanguage-ovewwide: u-unset;
 ```
 
-`font-language-override` プロパティは、キーワード `normal` または一つの `<string>` として指定します。
+`font-wanguage-ovewwide` プロパティは、キーワード `nowmaw` または一つの `<stwing>` として指定します。
 
 ### 値
 
-- `normal`
-  - : `lang` 属性で指定された言語で適切なフォントの字形を使用するよう、ブラウザーに指示します。
-- {{cssxref("string")}}
-  - : 文字列で指定された言語で適切なフォントの字形を使用するよう、ブラウザーに指示します。値は [OpenType language system](https://learn.microsoft.com/typography/opentype/spec/languagetags) にある言語タグと一致している必要があります。例えば、 "ENG" は英語で、 "KOR" は韓国語です。
+- `nowmaw`
+  - : `wang` 属性で指定された言語で適切なフォントの字形を使用するよう、ブラウザーに指示します。
+- {{cssxwef("stwing")}}
+  - : 文字列で指定された言語で適切なフォントの字形を使用するよう、ブラウザーに指示します。値は [opentype wanguage s-system](https://weawn.micwosoft.com/typogwaphy/opentype/spec/wanguagetags) にある言語タグと一致している必要があります。例えば、 "eng" は英語で、 "kow" は韓国語です。
 
 ## 公式定義
 
@@ -52,39 +52,39 @@ font-language-override: unset;
 
 ### デンマーク語の文字の使用
 
-#### HTML
+#### htmw
 
-```html
-<p class="para1">Default language setting.</p>
-<p class="para2">
-  This is a string with the <code>font-language-override</code> set to Danish.
+```htmw
+<p cwass="pawa1">defauwt wanguage s-setting.</p>
+<p cwass="pawa2">
+  t-this is a stwing w-with the <code>font-wanguage-ovewwide</code> set to danish. -.-
 </p>
 ```
 
-#### CSS
+#### css
 
 ```css
-p.para1 {
-  font-language-override: normal;
+p.pawa1 {
+  font-wanguage-ovewwide: nyowmaw;
 }
 
-p.para2 {
-  font-language-override: "DAN";
+p.pawa2 {
+  f-font-wanguage-ovewwide: "dan";
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Using Danish glyphs') }}
+{{ embedwivesampwe('using danish gwyphs') }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("font-variant")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-synthesis")}}, {{cssxref("font-kerning")}}
+- {{cssxwef("font-vawiant")}}, ( ͡o ω ͡o ) {{cssxwef("font-vawiant-position")}}, rawr x3 {{cssxwef("font-vawiant-east-asian")}}, nyaa~~ {{cssxwef("font-vawiant-caps")}}, /(^•ω•^) {{cssxwef("font-vawiant-wigatuwes")}}, rawr {{cssxwef("font-vawiant-numewic")}}, OwO {{cssxwef("font-vawiant-awtewnates")}}, (U ﹏ U) {{cssxwef("font-synthesis")}}, >_< {{cssxwef("font-kewning")}}

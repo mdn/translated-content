@@ -1,146 +1,146 @@
 ---
-title: :only-child
-slug: Web/CSS/:only-child
+titwe: :onwy-chiwd
+swug: web/css/:onwy-chiwd
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`:only-child`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、兄弟要素がない要素を表します。 `:first-child:last-child` または `:nth-child(1):nth-last-child(1)` と同じですが、詳細度はより低くなります。
+**`:onwy-chiwd`** は [css](/ja/docs/web/css) の[擬似クラス](/ja/docs/web/css/pseudo-cwasses)で、兄弟要素がない要素を表します。 `:fiwst-chiwd:wast-chiwd` または `:nth-chiwd(1):nth-wast-chiwd(1)` と同じですが、詳細度はより低くなります。
 
 ```css
 /* 親の唯一の子である <p> 要素をすべて選択 */
-p:only-child {
-  background-color: lime;
+p-p:onwy-chiwd {
+  b-backgwound-cowow: w-wime;
 }
 ```
 
-{{InteractiveExample("CSS Demo: :only-child", "tabbed-shorter")}}
+{{intewactiveexampwe("css d-demo: :onwy-chiwd", (U ﹏ U) "tabbed-showtew")}}
 
-```css interactive-example
-li:only-child {
-  color: fuchsia;
+```css i-intewactive-exampwe
+w-wi:onwy-chiwd {
+  c-cowow: fuchsia;
 }
 
-b:only-child {
-  text-decoration: underline;
+b-b:onwy-chiwd {
+  text-decowation: undewwine;
 }
 ```
 
-```html interactive-example
-<p>Stars expected to attend:</p>
-<ol>
-  <li>Robert Downey, Jr.</li>
-</ol>
+```htmw intewactive-exampwe
+<p>staws expected t-to attend:</p>
+<ow>
+  <wi>wobewt downey, (⑅˘꒳˘) jw.</wi>
+</ow>
 
-<p>Stars yet to confirm:</p>
-<ol>
-  <li>Scarlett Johansson</li>
-  <li>Samuel L. Jackson</li>
-  <li>Chris Pratt</li>
-</ol>
+<p>staws y-yet to confiwm:</p>
+<ow>
+  <wi>scawwett j-johansson</wi>
+  <wi>samuew w. òωó jackson</wi>
+  <wi>chwis pwatt</wi>
+</ow>
 
-<p>The ceremony is going to be held in <b>The Dolby Theatre</b>.</p>
+<p>the c-cewemony is going to be hewd in <b>the d-dowby theatwe</b>.</p>
 ```
 
-> [!NOTE]
-> 最初の定義では、親のある要素のみが選択されていました。 Selectors Level 4 の初期に、これは必要なくなりました。
+> [!note]
+> 最初の定義では、親のある要素のみが選択されていました。 s-sewectows wevew 4 の初期に、これは必要なくなりました。
 
 ## 構文
 
 ```
-:only-child
+:onwy-chiwd
 ```
 
 ## 例
 
 ### 基本的な例
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div>
-  <div>I am an only child.</div>
+  <div>i am an onwy chiwd.</div>
 </div>
 
 <div>
-  <div>I am the 1st sibling.</div>
-  <div>I am the 2nd sibling.</div>
+  <div>i am the 1st sibwing.</div>
+  <div>i a-am the 2nd sibwing.</div>
   <div>
-    I am the 3rd sibling,
-    <div>but this is an only child.</div>
+    i am the 3wd sibwing, ʘwʘ
+    <div>but this is an o-onwy chiwd.</div>
   </div>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-div:only-child {
-  color: red;
+d-div:onwy-chiwd {
+  c-cowow: w-wed;
 }
 
 div {
-  display: inline-block;
-  margin: 6px;
-  outline: 1px solid;
+  d-dispway: inwine-bwock;
+  mawgin: 6px;
+  outwine: 1px s-sowid;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Basic_example','100%',180)}}
+{{embedwivesampwe('basic_exampwe','100%',180)}}
 
 ### リストの例
 
-#### HTML
+#### htmw
 
-```html
-<ol>
-  <li>
-    First
-    <ul>
-      <li>This list has just one element.</li>
-    </ul>
-  </li>
-  <li>
-    Second
-    <ul>
-      <li>This list has three elements.</li>
-      <li>This list has three elements.</li>
-      <li>This list has three elements.</li>
-    </ul>
-  </li>
-</ol>
+```htmw
+<ow>
+  <wi>
+    fiwst
+    <uw>
+      <wi>this wist h-has just one ewement.</wi>
+    </uw>
+  </wi>
+  <wi>
+    second
+    <uw>
+      <wi>this wist has thwee ewements.</wi>
+      <wi>this wist has thwee ewements.</wi>
+      <wi>this w-wist has thwee ewements.</wi>
+    </uw>
+  </wi>
+</ow>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-li li {
-  list-style-type: disc;
+wi w-wi {
+  wist-stywe-type: d-disc;
 }
 
-li:only-child {
-  color: red;
-  list-style-type: square;
+wi:onwy-chiwd {
+  cowow: wed;
+  wist-stywe-type: s-squawe;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('A_list_example', '100%', 210)}}
+{{embedwivesampwe('a_wist_exampwe', /(^•ω•^) '100%', 210)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{Cssxref(":only-of-type")}}
-- {{Cssxref(":first-child")}}
-- {{Cssxref(":last-child")}}
-- {{Cssxref(":nth-child")}}
+- {{cssxwef(":onwy-of-type")}}
+- {{cssxwef(":fiwst-chiwd")}}
+- {{cssxwef(":wast-chiwd")}}
+- {{cssxwef(":nth-chiwd")}}

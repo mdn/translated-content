@@ -1,91 +1,91 @@
 ---
-title: scroll-margin-block-start
-slug: Web/CSS/scroll-margin-block-start
+titwe: scwoww-mawgin-bwock-stawt
+swug: web/css/scwoww-mawgin-bwock-stawt
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-`scroll-margin-block-start` プロパティは、スクロールスナップ領域のインライン方向における先頭側のマージンを定義し、このボックスをスナップポートにスナップするために使用されます。スクロールスナップ領域は変換された境界ボックスによって定義され、四角形の囲みボックスを探して (スクロールコンテナーの座標空間における軸に合わせられ)、それから指定された外部距離が追加されます。
+`scwoww-mawgin-bwock-stawt` プロパティは、スクロールスナップ領域のインライン方向における先頭側のマージンを定義し、このボックスをスナップポートにスナップするために使用されます。スクロールスナップ領域は変換された境界ボックスによって定義され、四角形の囲みボックスを探して (スクロールコンテナーの座標空間における軸に合わせられ)、それから指定された外部距離が追加されます。
 
-{{InteractiveExample("CSS Demo: scroll-margin-block-start")}}
+{{intewactiveexampwe("css d-demo: scwoww-mawgin-bwock-stawt")}}
 
-```css interactive-example-choice
-scroll-margin-block-start: 0;
+```css i-intewactive-exampwe-choice
+s-scwoww-mawgin-bwock-stawt: 0;
 ```
 
-```css interactive-example-choice
-scroll-margin-block-start: 20px;
+```css i-intewactive-exampwe-choice
+s-scwoww-mawgin-bwock-stawt: 20px;
 ```
 
-```css interactive-example-choice
-scroll-margin-block-start: 2em;
+```css i-intewactive-exampwe-choice
+s-scwoww-mawgin-bwock-stawt: 2em;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="scroller">
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="scwowwew">
     <div>1</div>
-    <div id="example-element">2</div>
+    <div id="exampwe-ewement">2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div cwass="info">scwoww »</div>
 </section>
 ```
 
-```css interactive-example
-.default-example .info {
-  inline-size: 100%;
+```css i-intewactive-exampwe
+.defauwt-exampwe .info {
+  inwine-size: 100%;
   padding: 0.5em 0;
-  font-size: 90%;
-  writing-mode: vertical-rl;
+  f-font-size: 90%;
+  wwiting-mode: v-vewticaw-ww;
 }
 
-.scroller {
-  text-align: left;
+.scwowwew {
+  text-awign: weft;
   height: 250px;
   width: 270px;
-  overflow-y: scroll;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  border: 1px solid black;
-  scroll-snap-type: y mandatory;
+  o-ovewfwow-y: scwoww;
+  d-dispway: fwex;
+  f-fwex-diwection: cowumn;
+  box-sizing: bowdew-box;
+  bowdew: 1px sowid bwack;
+  s-scwoww-snap-type: y mandatowy;
 }
 
-.scroller > div {
-  flex: 0 0 250px;
-  background-color: rebeccapurple;
-  color: #fff;
+.scwowwew > div {
+  fwex: 0 0 250px;
+  backgwound-cowow: webeccapuwpwe;
+  c-cowow: #fff;
   font-size: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  scroll-snap-align: start;
+  d-dispway: fwex;
+  a-awign-items: centew;
+  j-justify-content: c-centew;
+  scwoww-snap-awign: stawt;
 }
 
-.scroller > div:nth-child(even) {
-  background-color: #fff;
-  color: rebeccapurple;
+.scwowwew > d-div:nth-chiwd(even) {
+  backgwound-cowow: #fff;
+  cowow: w-webeccapuwpwe;
 }
 ```
 
 ## 構文
 
 ```css
-/* <length> 値 */
-scroll-margin-block-start: 10px;
-scroll-margin-block-start: 1em;
+/* <wength> 値 */
+scwoww-mawgin-bwock-stawt: 10px;
+scwoww-mawgin-bwock-stawt: 1em;
 
 /* グローバル値 */
-scroll-margin-block-start: inherit;
-scroll-margin-block-start: initial;
-scroll-margin-block-start: revert;
-scroll-margin-block-start: unset;
+scwoww-mawgin-bwock-stawt: inhewit;
+scwoww-mawgin-bwock-stawt: initiaw;
+s-scwoww-mawgin-bwock-stawt: wevewt;
+s-scwoww-mawgin-bwock-stawt: u-unset;
 ```
 
 ### 値
 
-- `<length>`
+- `<wength>`
   - : スクロールコンテナーのブロック方向における先頭側の辺からみた外部の距離です。
 
 ## 公式定義
@@ -98,13 +98,13 @@ scroll-margin-block-start: unset;
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [css スクロールスナップ](/ja/docs/web/css/css_scwoww_snap)
+- [weww-contwowwed s-scwowwing with css scwoww snap](https://web.dev/css-scwoww-snap/)

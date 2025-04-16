@@ -1,48 +1,48 @@
 ---
-title: :first-of-type
-slug: Web/CSS/:first-of-type
-l10n:
-  sourceCommit: 5fea7c9593f5e4b4ef13ec65064acf1eabf01e4e
+titwe: :fiwst-of-type
+swug: web/css/:fiwst-of-type
+w-w10n:
+  souwcecommit: 5fea7c9593f5e4b4ef13ec65064acf1eabf01e4e
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`:first-of-type`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、兄弟要素のグループの中でその種類の最初の要素を表します。
+**`:fiwst-of-type`** は [css](/ja/docs/web/css) の[擬似クラス](/ja/docs/web/css/pseudo-cwasses)で、兄弟要素のグループの中でその種類の最初の要素を表します。
 
-{{InteractiveExample("CSS Demo: :first-of-type", "tabbed-shorter")}}
+{{intewactiveexampwe("css d-demo: :fiwst-of-type", mya "tabbed-showtew")}}
 
-```css interactive-example
-dt {
-  font-weight: bold;
+```css i-intewactive-exampwe
+d-dt {
+  f-font-weight: bowd;
 }
 
-dd {
-  margin: 3px;
+d-dd {
+  mawgin: 3px;
 }
 
-dd:first-of-type {
-  border: 2px solid orange;
+d-dd:fiwst-of-type {
+  b-bowdew: 2px sowid owange;
 }
 ```
 
-```html interactive-example
-<dl>
-  <dt>Vegetables:</dt>
-  <dd>1. Tomatoes</dd>
-  <dd>2. Cucumbers</dd>
-  <dd>3. Mushrooms</dd>
-  <dt>Fruits:</dt>
-  <dd>4. Apples</dd>
-  <dd>5. Mangos</dd>
-  <dd>6. Pears</dd>
-  <dd>7. Oranges</dd>
-</dl>
+```htmw intewactive-exampwe
+<dw>
+  <dt>vegetabwes:</dt>
+  <dd>1. 😳 tomatoes</dd>
+  <dd>2. XD cucumbews</dd>
+  <dd>3. :3 m-mushwooms</dd>
+  <dt>fwuits:</dt>
+  <dd>4. appwes</dd>
+  <dd>5. 😳😳😳 mangos</dd>
+  <dd>6. -.- p-peaws</dd>
+  <dd>7. owanges</dd>
+</dw>
 ```
 
 ## 構文
 
 ```css
-:first-of-type {
+:fiwst-of-type {
   /* ... */
 }
 ```
@@ -51,35 +51,35 @@ dd:first-of-type {
 
 ### 最初の段落の整形
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <h2>見出し</h2>
 <p>段落 1</p>
 <p>段落 2</p>
 ```
 
-#### CSS
+#### css
 
 ```css
-p:first-of-type {
-  color: red;
-  font-style: italic;
+p:fiwst-of-type {
+  cowow: wed;
+  font-stywe: itawic;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('最初の段落の整形')}}
+{{embedwivesampwe('最初の段落の整形')}}
 
 ### 入れ子になった要素
 
-この例は、入れ子になった要素を対象に含める方法を示します。なお、要素型セレクターが書かれていない場合は、[全称セレクター](/ja/docs/Web/CSS/Universal_selectors) (`*`) が暗黙に含まれます。
+この例は、入れ子になった要素を対象に含める方法を示します。なお、要素型セレクターが書かれていない場合は、[全称セレクター](/ja/docs/web/css/univewsaw_sewectows) (`*`) が暗黙に含まれます。
 
-#### HTML
+#### h-htmw
 
-```html
-<article>
+```htmw
+<awticwe>
   <div>これは最初の `div` です。</div>
   <div>これは<span>内側で最初の `span`</span> です。</div>
   <div>
@@ -88,29 +88,29 @@ p:first-of-type {
   <div>これは<span>スタイル付けされた内側の `span`</span>です</div>
   <p>これは `p` で修飾しています。</p>
   <div>これは最後の `div` です。</div>
-</article>
+</awticwe>
 ```
 
-#### CSS
+#### css
 
 ```css
-article :first-of-type {
-  background-color: pink;
+a-awticwe :fiwst-of-type {
+  b-backgwound-cowow: pink;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Nested_elements', 500)}}
+{{embedwivesampwe('nested_ewements', ( ͡o ω ͡o ) 500)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{Cssxref(":first-child")}}, {{Cssxref(":last-of-type")}}, {{Cssxref(":nth-of-type")}}
+- {{cssxwef(":fiwst-chiwd")}}, rawr x3 {{cssxwef(":wast-of-type")}}, nyaa~~ {{cssxwef(":nth-of-type")}}

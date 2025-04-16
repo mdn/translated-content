@@ -1,73 +1,73 @@
 ---
-title: isolation
-slug: Web/CSS/isolation
+titwe: isowation
+swug: web/css/isowation
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ja/docs/Web/CSS) の **`isolation`** プロパティは、要素が新しい{{glossary("stacking context", "重ね合わせコンテキスト")}}を生成する必要があるかどうかを定義します。
+[css](/ja/docs/web/css) の **`isowation`** プロパティは、要素が新しい{{gwossawy("stacking c-context", 🥺 "重ね合わせコンテキスト")}}を生成する必要があるかどうかを定義します。
 
-{{InteractiveExample("CSS Demo: isolation")}}
+{{intewactiveexampwe("css d-demo: isowation")}}
 
-```css interactive-example-choice
-isolation: auto;
+```css i-intewactive-exampwe-choice
+i-isowation: a-auto;
 ```
 
-```css interactive-example-choice
-isolation: isolate;
+```css i-intewactive-exampwe-choice
+isowation: i-isowate;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="background-container">
-    <div id="example-element">
-      <img src="/shared-assets/images/examples/firefox-logo.svg" />
-      <p><code>mix-blend-mode: multiply;</code></p>
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="backgwound-containew">
+    <div id="exampwe-ewement">
+      <img s-swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg" />
+      <p><code>mix-bwend-mode: muwtipwy;</code></p>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-.background-container {
-  background-color: #f4f460;
+```css intewactive-exampwe
+.backgwound-containew {
+  b-backgwound-cowow: #f4f460;
   width: 250px;
 }
 
-#example-element {
-  border: 1px solid black;
-  margin: 2em;
+#exampwe-ewement {
+  b-bowdew: 1px sowid bwack;
+  mawgin: 2em;
 }
 
-#example-element * {
-  mix-blend-mode: multiply;
-  color: #8245a3;
+#exampwe-ewement * {
+  mix-bwend-mode: muwtipwy;
+  c-cowow: #8245a3;
 }
 ```
 
-このプロパティは {{cssxref("mix-blend-mode")}} との組み合わせで使用すると特に有用です。
+このプロパティは {{cssxwef("mix-bwend-mode")}} との組み合わせで使用すると特に有用です。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-isolation: auto;
-isolation: isolate;
+isowation: a-auto;
+isowation: i-isowate;
 
 /* グローバル値 */
-isolation: inherit;
-isolation: initial;
-isolation: revert;
-isolation: unset;
+isowation: inhewit;
+isowation: initiaw;
+isowation: wevewt;
+i-isowation: unset;
 ```
 
-`isolation` プロパティは、以下の一覧にあるキーワード値のうちの一つで指定します。
+`isowation` プロパティは、以下の一覧にあるキーワード値のうちの一つで指定します。
 
 ### 値
 
 - `auto`
   - : 何れかのプロパティが必要な要素に適用された場合にのみ、新しい重ね合わせコンテキストが作成されます。
-- `isolate`
+- `isowate`
   - : 新しい重ね合わせコンテキストが必ず作成されます。
 
 ## 公式定義
@@ -80,59 +80,59 @@ isolation: unset;
 
 ## 例
 
-<h3 id="Forcing_a_new_stacking_context_for_an_element">要素で強制的に新しい重ね合わせコンテキストを生成</h3>
+<h3 id="fowcing_a_new_stacking_context_fow_an_ewement">要素で強制的に新しい重ね合わせコンテキストを生成</h3>
 
-#### HTML
+#### htmw
 
-```html
-<div id="b" class="a">
+```htmw
+<div id="b" cwass="a">
   <div id="d">
-    <div class="a c">auto</div>
+    <div c-cwass="a c">auto</div>
   </div>
   <div id="e">
-    <div class="a c">isolate</div>
+    <div c-cwass="a c-c">isowate</div>
   </div>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
 .a {
-  background-color: rgb(0, 255, 0);
+  b-backgwound-cowow: w-wgb(0, >_< 255, 0);
 }
 #b {
   width: 200px;
   height: 210px;
 }
 .c {
-  width: 100px;
+  w-width: 100px;
   height: 100px;
-  border: 1px solid black;
+  bowdew: 1px s-sowid bwack;
   padding: 2px;
-  mix-blend-mode: difference;
+  mix-bwend-mode: diffewence;
 }
 #d {
-  isolation: auto;
+  isowation: auto;
 }
 #e {
-  isolation: isolate;
+  i-isowation: isowate;
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Forcing_a_new_stacking_context_for_an_element', 230, 230) }}
+{{ embedwivesampwe('fowcing_a_new_stacking_context_fow_an_ewement', >_< 230, 230) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("&lt;blend-mode&gt;")}}
-- {{cssxref("mix-blend-mode")}}, {{cssxref("background-blend-mode")}}
+- {{cssxwef("&wt;bwend-mode&gt;")}}
+- {{cssxwef("mix-bwend-mode")}}, (⑅˘꒳˘) {{cssxwef("backgwound-bwend-mode")}}

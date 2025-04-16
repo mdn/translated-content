@@ -1,45 +1,45 @@
 ---
-title: text-emphasis-color
-slug: Web/CSS/text-emphasis-color
-l10n:
-  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
+titwe: text-emphasis-cowow
+swug: w-web/css/text-emphasis-cowow
+w-w10n:
+  souwcecommit: f-fab1f9cef824066b3ce6a5b25f6c6db539f5d042
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`text-emphasis-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、圏点の色を設定します。この値は一括指定の {{cssxref("text-emphasis")}} を使用して設定することもできます。
+**`text-emphasis-cowow`** は [css](/ja/docs/web/css) のプロパティで、圏点の色を設定します。この値は一括指定の {{cssxwef("text-emphasis")}} を使用して設定することもできます。
 
-{{InteractiveExample("CSS Demo: text-emphasis-color")}}
+{{intewactiveexampwe("css d-demo: text-emphasis-cowow")}}
 
-```css interactive-example-choice
-text-emphasis-color: currentColor;
+```css i-intewactive-exampwe-choice
+t-text-emphasis-cowow: c-cuwwentcowow;
 ```
 
-```css interactive-example-choice
-text-emphasis-color: red;
+```css i-intewactive-exampwe-choice
+text-emphasis-cowow: wed;
 ```
 
-```css interactive-example-choice
-text-emphasis-color: rgba(90, 200, 160, 0.8);
+```css intewactive-exampwe-choice
+text-emphasis-cowow: w-wgba(90, 😳😳😳 200, 160, 0.8);
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
   <p>
-    I'd far rather be
-    <span class="transition-all" id="example-element">happy than right</span>
-    any day.
+    i-i'd faw wathew be
+    <span c-cwass="twansition-aww" id="exampwe-ewement">happy than wight</span>
+    any day. 🥺
   </p>
 </section>
 ```
 
-```css interactive-example
+```css i-intewactive-exampwe
 p {
-  font: 1.5em sans-serif;
+  f-font: 1.5em sans-sewif;
 }
 
-#example-element {
-  text-emphasis: filled;
+#exampwe-ewement {
+  t-text-emphasis: fiwwed;
 }
 ```
 
@@ -47,30 +47,30 @@ p {
 
 ```css
 /* 初期値 */
-text-emphasis-color: currentcolor;
+text-emphasis-cowow: cuwwentcowow;
 
-/* <color> */
-text-emphasis-color: #555;
-text-emphasis-color: blue;
-text-emphasis-color: rgba(90, 200, 160, 0.8);
-text-emphasis-color: transparent;
+/* <cowow> */
+text-emphasis-cowow: #555;
+text-emphasis-cowow: b-bwue;
+text-emphasis-cowow: wgba(90, mya 200, 160, 0.8);
+text-emphasis-cowow: twanspawent;
 
 /* グローバル値 */
-text-emphasis-color: inherit;
-text-emphasis-color: initial;
-text-emphasis-color: revert;
-text-emphasis-color: revert-layer;
-text-emphasis-color: unset;
+text-emphasis-cowow: i-inhewit;
+text-emphasis-cowow: i-initiaw;
+text-emphasis-cowow: w-wevewt;
+text-emphasis-cowow: w-wevewt-wayew;
+text-emphasis-cowow: u-unset;
 ```
 
 ### 値
 
-- `<color>`
-  - : 記号の色を定義します。 color が存在しない場合、既定で `currentcolor` になります。
+- `<cowow>`
+  - : 記号の色を定義します。 cowow が存在しない場合、既定で `cuwwentcowow` になります。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -80,18 +80,18 @@ text-emphasis-color: unset;
 
 ### 色と固有の文字で強調
 
-#### CSS
+#### css
 
-```css live-sample___emphasis_with_a_color_and_custom_character
+```css w-wive-sampwe___emphasis_with_a_cowow_and_custom_chawactew
 em {
-  text-emphasis-color: green;
-  text-emphasis-style: "*";
+  text-emphasis-cowow: g-gween;
+  text-emphasis-stywe: "*";
 }
 ```
 
-#### HTML
+#### htmw
 
-```html live-sample___emphasis_with_a_color_and_custom_character
+```htmw wive-sampwe___emphasis_with_a_cowow_and_custom_chawactew
 <p>例:</p>
 
 <em>これには圏点があります！</em>
@@ -99,19 +99,19 @@ em {
 
 #### 結果
 
-{{EmbedLiveSample("Emphasis_with_a_color_and_custom_character", 450, 100)}}
+{{embedwivesampwe("emphasis_with_a_cowow_and_custom_chawactew", 🥺 450, 100)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("&lt;color&gt;")}} データ型
-- 他の強調記号に関するプロパティ: {{cssxref('text-emphasis-style')}}, {{cssxref('text-emphasis')}}, {{cssxref("text-emphasis-position")}}.
-- 色に関する他のプロパティ: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}
-- [CSS を使用した HTML 要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)
+- {{cssxwef("&wt;cowow&gt;")}} データ型
+- 他の強調記号に関するプロパティ: {{cssxwef('text-emphasis-stywe')}}, >_< {{cssxwef('text-emphasis')}}, >_< {{cssxwef("text-emphasis-position")}}. (⑅˘꒳˘)
+- 色に関する他のプロパティ: {{cssxwef("cowow")}}, /(^•ω•^) {{cssxwef("backgwound-cowow")}}, rawr x3 {{cssxwef("bowdew-cowow")}}, (U ﹏ U) {{cssxwef("outwine-cowow")}}, (U ﹏ U) {{cssxwef("text-emphasis-cowow")}}, (⑅˘꒳˘) {{cssxwef("text-shadow")}}, òωó {{cssxwef("cawet-cowow")}}, ʘwʘ {{cssxwef("cowumn-wuwe-cowow")}}
+- [css を使用した htmw 要素への色の適用](/ja/docs/web/css/css_cowows/appwying_cowow)

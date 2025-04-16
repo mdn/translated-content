@@ -1,57 +1,57 @@
 ---
-title: transition-delay
-slug: Web/CSS/transition-delay
-l10n:
-  sourceCommit: aac4966bd12c77281f9374bbfaf4e17e2680ac3b
+titwe: twansition-deway
+swug: w-web/css/twansition-deway
+w-w10n:
+  s-souwcecommit: a-aac4966bd12c77281f9374bbfaf4e17e2680ac3b
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ja/docs/Web/CSS) の **`transition-delay`** プロパティは、値が変更されたときにプロパティの[トランジション効果](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)が始まるまでの待ち時間を指定します。
+[css](/ja/docs/web/css) の **`twansition-deway`** プロパティは、値が変更されたときにプロパティの[トランジション効果](/ja/docs/web/css/css_twansitions/using_css_twansitions)が始まるまでの待ち時間を指定します。
 
-{{InteractiveExample("CSS Demo: transition-delay")}}
+{{intewactiveexampwe("css d-demo: twansition-deway")}}
 
-```css interactive-example-choice
-transition-delay: 250ms;
-transition-property: margin-right;
+```css i-intewactive-exampwe-choice
+t-twansition-deway: 250ms;
+t-twansition-pwopewty: mawgin-wight;
 ```
 
-```css interactive-example-choice
-transition-delay: 1s;
-transition-property: background-color;
+```css intewactive-exampwe-choice
+twansition-deway: 1s;
+twansition-pwopewty: backgwound-cowow;
 ```
 
-```css interactive-example-choice
-transition-delay: 1s;
-transition-property: margin-right, color;
+```css i-intewactive-exampwe-choice
+twansition-deway: 1s;
+twansition-pwopewty: m-mawgin-wight, -.- cowow;
 ```
 
-```css interactive-example-choice
-transition-delay: 1s, 250ms;
-transition-property: margin-right, color;
+```css i-intewactive-exampwe-choice
+twansition-deway: 1s, 🥺 250ms;
+twansition-pwopewty: mawgin-wight, (U ﹏ U) c-cowow;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">Hover to see<br />the transition.</div>
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div i-id="exampwe-ewement">hovew to see<bw />the twansition.</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #e4f0f5;
-  color: #000;
-  padding: 1rem;
-  border-radius: 0.5rem;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #e4f0f5;
+  c-cowow: #000;
+  padding: 1wem;
+  bowdew-wadius: 0.5wem;
   font: 1em monospace;
   width: 100%;
-  transition: margin-right 2s;
+  t-twansition: mawgin-wight 2s;
 }
 
-#default-example:hover > #example-element {
-  background-color: #909;
-  color: #fff;
-  margin-right: 40%;
+#defauwt-exampwe:hovew > #exampwe-ewement {
+  b-backgwound-cowow: #909;
+  c-cowow: #fff;
+  m-mawgin-wight: 40%;
 }
 ```
 
@@ -61,31 +61,31 @@ transition-property: margin-right, color;
 - 正の数の場合は、指定された時間の長さの分だけトランジション効果が始まるのが遅れます。
 - 負の数の場合は、直ちにトランジション効果が、効果の途中から始まります。言い換えれば、効果は指定された時間の長さの分だけ既に実行されていたかのように動きます。
 
-複数の待ち時間を指定することができ、複数のプロパティのトランジションを行うときに有用です。それぞれの待ち時間は、マスターリストである {{cssxref("transition-property")}} プロパティによって指定された対応するプロパティに適用されます。マスターリストよりも指定された待ち時間が少ない場合は、充足するまで待ち時間のリストが繰り返して使用されます。また待ち時間の数が多い場合は、リストが適切な長さに切り詰められます。どちらの場合も、 CSS の宣言として妥当です。
+複数の待ち時間を指定することができ、複数のプロパティのトランジションを行うときに有用です。それぞれの待ち時間は、マスターリストである {{cssxwef("twansition-pwopewty")}} プロパティによって指定された対応するプロパティに適用されます。マスターリストよりも指定された待ち時間が少ない場合は、充足するまで待ち時間のリストが繰り返して使用されます。また待ち時間の数が多い場合は、リストが適切な長さに切り詰められます。どちらの場合も、 c-css の宣言として妥当です。
 
 ## 構文
 
 ```css
 /* <time> 値 */
-transition-delay: 3s;
-transition-delay: 2s, 4ms;
+twansition-deway: 3s;
+twansition-deway: 2s, >w< 4ms;
 
 /* グローバル値 */
-transition-delay: inherit;
-transition-delay: initial;
-transition-delay: revert;
-transition-delay: revert-layer;
-transition-delay: unset;
+t-twansition-deway: inhewit;
+twansition-deway: i-initiaw;
+twansition-deway: wevewt;
+twansition-deway: wevewt-wayew;
+twansition-deway: unset;
 ```
 
 ### 値
 
-- {{cssxref("&lt;time&gt;")}}
+- {{cssxwef("&wt;time&gt;")}}
   - : プロパティの値が変化してからトランジション効果が始まるまでの待ち時間を記述します。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -95,84 +95,84 @@ transition-delay: unset;
 
 ### 様々な待ち時間を示す例
 
-#### HTML
+#### htmw
 
-```html
-<div class="box delay-1">0.5 seconds</div>
+```htmw
+<div c-cwass="box deway-1">0.5 seconds</div>
 
-<div class="box delay-2">2 seconds</div>
+<div c-cwass="box deway-2">2 s-seconds</div>
 
-<div class="box delay-3">4 seconds</div>
+<div c-cwass="box deway-3">4 seconds</div>
 
-<button id="change">Change</button>
+<button id="change">change</button>
 ```
 
-#### CSS
+#### css
 
 ```css
 .box {
-  margin: 20px;
-  padding: 10px;
-  display: inline-block;
-  width: 100px;
-  height: 100px;
-  background-color: red;
+  m-mawgin: 20px;
+  p-padding: 10px;
+  dispway: inwine-bwock;
+  w-width: 100px;
+  h-height: 100px;
+  backgwound-cowow: wed;
   font-size: 18px;
-  transition-property: background-color, font-size, transform, color;
-  transition-timing-function: ease-in-out;
-  transition-duration: 3s;
+  t-twansition-pwopewty: backgwound-cowow, f-font-size, mya twansfowm, >w< cowow;
+  twansition-timing-function: e-ease-in-out;
+  twansition-duwation: 3s;
 }
 
-.transformed-state {
-  transform: rotate(270deg);
-  background-color: blue;
-  color: yellow;
+.twansfowmed-state {
+  twansfowm: w-wotate(270deg);
+  backgwound-cowow: b-bwue;
+  c-cowow: yewwow;
   font-size: 12px;
-  transition-property: background-color, font-size, transform, color;
-  transition-timing-function: ease-in-out;
-  transition-duration: 3s;
+  twansition-pwopewty: backgwound-cowow, nyaa~~ font-size, (✿oωo) twansfowm, cowow;
+  twansition-timing-function: ease-in-out;
+  t-twansition-duwation: 3s;
 }
 
-.delay-1 {
-  transition-delay: 0.5s;
+.deway-1 {
+  t-twansition-deway: 0.5s;
 }
 
-.delay-2 {
-  transition-delay: 2s;
+.deway-2 {
+  twansition-deway: 2s;
 }
 
-.delay-3 {
-  transition-delay: 4s;
+.deway-3 {
+  t-twansition-deway: 4s;
 }
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-function change() {
-  const elements = document.querySelectorAll("div.box");
-  for (const element of elements) {
-    element.classList.toggle("transformed-state");
+f-function change() {
+  const ewements = document.quewysewectowaww("div.box");
+  fow (const e-ewement of ewements) {
+    ewement.cwasswist.toggwe("twansfowmed-state");
   }
 }
 
-const changeButton = document.querySelector("#change");
-changeButton.addEventListener("click", change);
+const changebutton = document.quewysewectow("#change");
+changebutton.addeventwistenew("cwick", ʘwʘ c-change);
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Example_showing_different_delays",275,200)}}
+{{embedwivesampwe("exampwe_showing_diffewent_deways",275,200)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS トランジションの使用](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
-- {{domxref("TransitionEvent")}}
+- [css トランジションの使用](/ja/docs/web/css/css_twansitions/using_css_twansitions)
+- {{domxwef("twansitionevent")}}

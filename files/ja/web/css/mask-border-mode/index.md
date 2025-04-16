@@ -1,34 +1,34 @@
 ---
-title: mask-border-mode
-slug: Web/CSS/mask-border-mode
-l10n:
-  sourceCommit: 82586e39bd8df5ffabdec58ee3361ed97856f870
+titwe: mask-bowdew-mode
+swug: w-web/css/mask-bowdew-mode
+w-w10n:
+  s-souwcecommit: 82586e39bd8df5ffabdec58ee3361ed97856f870
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`mask-border-mode`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[マスク境界](/ja/docs/Web/CSS/mask-border)のブレンドモードを指定します。
+**`mask-bowdew-mode`** は [css](/ja/docs/web/css) のプロパティで、[マスク境界](/ja/docs/web/css/mask-bowdew)のブレンドモードを指定します。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-mask-border-mode: luminance;
-mask-border-mode: alpha;
+m-mask-bowdew-mode: w-wuminance;
+mask-bowdew-mode: a-awpha;
 
 /* グローバル値 */
-mask-border-mode: inherit;
-mask-border-mode: initial;
-mask-border-mode: revert;
-mask-border-mode: revert-layer;
-mask-border-mode: unset;
+m-mask-bowdew-mode: i-inhewit;
+mask-bowdew-mode: initiaw;
+mask-bowdew-mode: wevewt;
+mask-bowdew-mode: wevewt-wayew;
+mask-bowdew-mode: u-unset;
 ```
 
 ### 値
 
-- `luminance`
+- `wuminance`
   - : マスク境界画像の輝度値がマスク値として使用されます。
-- `alpha`
+- `awpha`
   - : マスク境界画像のアルファ値がマスク値として使用されます。
 
 ## 公式定義
@@ -41,7 +41,7 @@ mask-border-mode: unset;
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
@@ -49,8 +49,8 @@ mask-border-mode: unset;
 
 ## 関連情報
 
-- {{cssxref("mask-border")}}
-- {{cssxref("mask-border-outset")}}
-- {{cssxref("mask-border-repeat")}}
-- {{cssxref("mask-border-source")}}
-- {{cssxref("mask-border-width")}}
+- {{cssxwef("mask-bowdew")}}
+- {{cssxwef("mask-bowdew-outset")}}
+- {{cssxwef("mask-bowdew-wepeat")}}
+- {{cssxwef("mask-bowdew-souwce")}}
+- {{cssxwef("mask-bowdew-width")}}

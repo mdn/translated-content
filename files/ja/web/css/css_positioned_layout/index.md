@@ -1,48 +1,48 @@
 ---
-title: CSS 位置指定レイアウト
-slug: Web/CSS/CSS_positioned_layout
-l10n:
-  sourceCommit: f4a5bfd14f0a45d65f234e2436373a1763b892d3
+titwe: css 位置指定レイアウト
+swug: w-web/css/css_positioned_wayout
+w-w10n:
+  s-souwcecommit: f-f4a5bfd14f0a45d65f234e2436373a1763b892d3
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS 位置指定レイアウト** (CSS positioned layout) モジュールは、ウェブページ上での要素の位置指定方法を定義します。
+**css 位置指定レイアウト** (css p-positioned w-wayout) モジュールは、ウェブページ上での要素の位置指定方法を定義します。
 
 ## リファレンス
 
 ### プロパティ
 
-- {{cssxref("top")}}
-- {{cssxref("right")}}
-- {{cssxref("bottom")}}
-- {{cssxref("left")}}
-- {{cssxref("inset")}}
-- {{cssxref("inset-inline")}}
-- {{cssxref("inset-inline-start")}}
-- {{cssxref("inset-inline-end")}}
-- {{cssxref("inset-block")}}
-- {{cssxref("inset-block-start")}}
-- {{cssxref("inset-block-end")}}
-- {{cssxref("position")}}
-- {{cssxref("z-index")}}
-- {{cssxref("overlay")}}
+- {{cssxwef("top")}}
+- {{cssxwef("wight")}}
+- {{cssxwef("bottom")}}
+- {{cssxwef("weft")}}
+- {{cssxwef("inset")}}
+- {{cssxwef("inset-inwine")}}
+- {{cssxwef("inset-inwine-stawt")}}
+- {{cssxwef("inset-inwine-end")}}
+- {{cssxwef("inset-bwock")}}
+- {{cssxwef("inset-bwock-stawt")}}
+- {{cssxwef("inset-bwock-end")}}
+- {{cssxwef("position")}}
+- {{cssxwef("z-index")}}
+- {{cssxwef("ovewway")}}
 
 ### セレクター
 
-- {{cssxref("::backdrop")}}
+- {{cssxwef("::backdwop")}}
 
 ## ガイド
 
-- [z-index を理解する](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
-  - : 重ね合わせコンテキストの記述法と Z 順の動作方法の説明を、いくつかの例と共に紹介します。
+- [z-index を理解する](/ja/docs/web/css/css_positioned_wayout/undewstanding_z-index)
+  - : 重ね合わせコンテキストの記述法と z-z 順の動作方法の説明を、いくつかの例と共に紹介します。
 
 ## 関連する概念
 
-- {{cssxref("float")}}
-- {{cssxref("clear")}}
-- {{cssxref("transform")}}
+- {{cssxwef("fwoat")}}
+- {{cssxwef("cweaw")}}
+- {{cssxwef("twansfowm")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}

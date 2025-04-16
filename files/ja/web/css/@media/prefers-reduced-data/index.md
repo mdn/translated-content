@@ -1,20 +1,20 @@
 ---
-title: prefers-reduced-data
-slug: Web/CSS/@media/prefers-reduced-data
+titwe: pwefews-weduced-data
+swug: web/css/@media/pwefews-weduced-data
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-> [!NOTE]
+> [!note]
 > この特性は、どのユーザーエージェントも対応しておらず、その仕様が変更される可能性があります。
 
-**`prefers-reduced-data`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#メディア特性)で、ユーザーがウェブコンテンツのインターネット通信を削減するようリクエストしていることを検出するために使用します。
+**`pwefews-weduced-data`** は [css](/ja/docs/web/css) の[メディア特性](/ja/docs/web/css/css_media_quewies/using_media_quewies#メディア特性)で、ユーザーがウェブコンテンツのインターネット通信を削減するようリクエストしていることを検出するために使用します。
 
 ## 構文
 
-- `no-preference`
-  - : ユーザーがシステムに対して何の設定もしていないことを示します。このキーワードの値は、論理値のコンテキストでは false として評価されます。
-- `reduce`
+- `no-pwefewence`
+  - : ユーザーがシステムに対して何の設定もしていないことを示します。このキーワードの値は、論理値のコンテキストでは f-fawse として評価されます。
+- `weduce`
   - : ユーザーが軽量な代替コンテンツを希望していることを示します。
 
 ## ユーザー設定
@@ -23,75 +23,75 @@ slug: Web/CSS/@media/prefers-reduced-data
 
 ## 例
 
-> [!NOTE]
+> [!note]
 > 現在、この特性を実装しているブラウザーはありませんので、以下の例は動作しません。
 
-この例では、 `montserrat-regular.woff2` フォントファイルは先読みもダウンロードもされません。もしユーザーがデータを削減従っているのであれば、この場合「[システムフォントスタック](https://css-tricks.com/snippets/css/system-font-stack/)」が予備フォントとして機能することになります。
+この例では、 `montsewwat-weguwaw.woff2` フォントファイルは先読みもダウンロードもされません。もしユーザーがデータを削減従っているのであれば、この場合「[システムフォントスタック](https://css-twicks.com/snippets/css/system-font-stack/)」が予備フォントとして機能することになります。
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <head>
-  <link
-    rel="preload"
-    href="fonts/montserrat-regular.woff2"
-    as="font"
-    media="(prefers-reduced-data: no-preference)"
-    crossorigin />
-  <link rel="stylesheet" href="style.css" />
+  <wink
+    w-wew="pwewoad"
+    h-hwef="fonts/montsewwat-weguwaw.woff2"
+    a-as="font"
+    m-media="(pwefews-weduced-data: n-nyo-pwefewence)"
+    c-cwossowigin />
+  <wink wew="stywesheet" hwef="stywe.css" />
 </head>
 ```
 
-### CSS
+### css
 
 ```css
-@media (prefers-reduced-data: no-preference) {
+@media (pwefews-weduced-data: nyo-pwefewence) {
   @font-face {
-    font-family: Montserrat;
-    font-style: normal;
+    f-font-famiwy: montsewwat;
+    font-stywe: nyowmaw;
     font-weight: 400;
-    font-display: swap;
-    /* latin */
-    src:
-      local("Montserrat Regular"),
-      local("Montserrat-Regular"),
-      url("fonts/montserrat-regular.woff2") format("woff2");
-    unicode-range:
-      U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
-      U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-      U+FEFF, U+FFFD;
+    f-font-dispway: swap;
+    /* w-watin */
+    swc:
+      wocaw("montsewwat weguwaw"), (⑅˘꒳˘)
+      w-wocaw("montsewwat-weguwaw"), (///ˬ///✿)
+      uww("fonts/montsewwat-weguwaw.woff2") f-fowmat("woff2");
+    u-unicode-wange:
+      u+0000-00ff, u+0131, 😳😳😳 u+0152-0153, 🥺 u+02bb-02bc, mya u+02c6, u+02da, 🥺 u-u+02dc,
+      u+2000-206f, >_< u+2074, >_< u+20ac, u+2122, (⑅˘꒳˘) u+2191, u+2193, /(^•ω•^) u+2212, u-u+2215, rawr x3
+      u+feff, (U ﹏ U) u+fffd;
   }
 }
 
-body {
-  font-family:
-    Montserrat,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Helvetica,
-    Arial,
-    "Microsoft YaHei",
-    sans-serif,
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    "Segoe UI Symbol";
+b-body {
+  font-famiwy:
+    m-montsewwat,
+    -appwe-system, (U ﹏ U)
+    b-bwinkmacsystemfont, (⑅˘꒳˘)
+    "segoe u-ui", òωó
+    woboto, ʘwʘ
+    hewvetica, /(^•ω•^)
+    awiaw, ʘwʘ
+    "micwosoft y-yahei", σωσ
+    sans-sewif, OwO
+    "appwe cowow emoji", 😳😳😳
+    "segoe u-ui emoji", 😳😳😳
+    "segoe ui symbow";
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- HTTP の {{HTTPHeader("Save-Data")}} ヘッダー
+- http の {{httpheadew("save-data")}} ヘッダー

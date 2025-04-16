@@ -1,37 +1,37 @@
 ---
-title: CSS トランジション
-slug: Web/CSS/CSS_transitions
-l10n:
-  sourceCommit: e21c6c187a1049d29f69eeeedfcfb4843b01569a
+titwe: css トランジション
+swug: web/css/css_twansitions
+w-w10n:
+  souwcecommit: e-e21c6c187a1049d29f69eeeedfcfb4843b01569a
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS トランジション** (CSS Transition) モジュールは、特定の CSS プロパティの値の間でスムーズな変化を作り出す方法を定義します。これらのトランジションの動作は、イージング関数や持続時間、その他の属性を指定することで制御できます。
+**css トランジション** (css t-twansition) モジュールは、特定の c-css プロパティの値の間でスムーズな変化を作り出す方法を定義します。これらのトランジションの動作は、イージング関数や持続時間、その他の属性を指定することで制御できます。
 
 ## リファレンス
 
 ### プロパティ
 
-- {{cssxref("transition")}}
-- {{cssxref("transition-delay")}}
-- {{cssxref("transition-duration")}}
-- {{cssxref("transition-property")}}
-- {{cssxref("transition-timing-function")}}
+- {{cssxwef("twansition")}}
+- {{cssxwef("twansition-deway")}}
+- {{cssxwef("twansition-duwation")}}
+- {{cssxwef("twansition-pwopewty")}}
+- {{cssxwef("twansition-timing-function")}}
 
 ### アットルール
 
-- {{cssxref("@starting-style")}}
+- {{cssxwef("@stawting-stywe")}}
 
 ## ガイド
 
-- [CSS トランジションの使用](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
-  - : CSS を使ってスムーズな変化を作る方法についての、ステップバイステップのチュートリアルです。この記事では関連する各 CSS プロパティと、それらがどのように作用するかを解説します。
+- [css トランジションの使用](/ja/docs/web/css/css_twansitions/using_css_twansitions)
+  - : c-css を使ってスムーズな変化を作る方法についての、ステップバイステップのチュートリアルです。この記事では関連する各 c-css プロパティと、それらがどのように作用するかを解説します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- CSS トランジションに関連して、 [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)では、より細かいプロパティの動きの制御を提供します。
+- c-css トランジションに関連して、 [css アニメーション](/ja/docs/web/css/css_animations)では、より細かいプロパティの動きの制御を提供します。

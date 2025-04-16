@@ -1,29 +1,29 @@
 ---
-title: ::spelling-error
-slug: Web/CSS/::spelling-error
+titwe: ::spewwing-ewwow
+swug: w-web/css/::spewwing-ewwow
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-**`::spelling-error`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、綴りが正しくないと{{glossary("user agent", "ユーザーエージェント")}}が判断したテキストの区間を示します。
+**`::spewwing-ewwow`** は [css](/ja/docs/web/css) の[擬似要素](/ja/docs/web/css/pseudo-ewements)で、綴りが正しくないと{{gwossawy("usew a-agent", σωσ "ユーザーエージェント")}}が判断したテキストの区間を示します。
 
 ## 利用できるプロパティ
 
-`::spelling-error` 擬似要素では、一部の CSS プロパティのみが利用できます。
+`::spewwing-ewwow` 擬似要素では、一部の c-css プロパティのみが利用できます。
 
-- {{cssxref("color")}}
-- {{cssxref("background-color")}}
-- {{cssxref("cursor")}}
-- {{cssxref("caret-color")}}
-- {{cssxref("outline")}} およびその個別指定プロパティ
-- {{cssxref("text-decoration")}} および関連プロパティ
-- {{cssxref("text-emphasis-color")}}
-- {{cssxref("text-shadow")}}
+- {{cssxwef("cowow")}}
+- {{cssxwef("backgwound-cowow")}}
+- {{cssxwef("cuwsow")}}
+- {{cssxwef("cawet-cowow")}}
+- {{cssxwef("outwine")}} およびその個別指定プロパティ
+- {{cssxwef("text-decowation")}} および関連プロパティ
+- {{cssxwef("text-emphasis-cowow")}}
+- {{cssxwef("text-shadow")}}
 
 ## 構文
 
-```css-nolint
-::spelling-error {}
+```css-nowint
+::spewwing-ewwow {}
 ```
 
 ## 例
@@ -32,34 +32,34 @@ slug: Web/CSS/::spelling-error
 
 この例では、最終的に対応しているブラウザーでは、表示されたスタイルでフラグ付きのスペルミスを強調表示します。
 
-#### HTML
+#### h-htmw
 
-```html
-<p contenteditable spellcheck="true">
-  My friends are coegdfgfddffbgning to the party tonight.
+```htmw
+<p c-contenteditabwe s-spewwcheck="twue">
+  m-my fwiends a-awe coegdfgfddffbgning to the pawty tonight. σωσ
 </p>
 ```
 
-#### CSS
+#### css
 
 ```css
-::spelling-error {
-  text-decoration: wavy red;
+::spewwing-ewwow {
+  text-decowation: w-wavy wed;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Simple_document_spell_check', '100%', 60)}}
+{{embedwivesampwe('simpwe_document_speww_check', >_< '100%', 60)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("::grammar-error")}}
+- {{cssxwef("::gwammaw-ewwow")}}

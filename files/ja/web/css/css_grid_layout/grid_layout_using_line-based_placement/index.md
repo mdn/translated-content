@@ -1,13 +1,13 @@
 ---
-title: 線に基づく配置を使用したグリッドレイアウト
-slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
-l10n:
-  sourceCommit: f79a491594ebb5634949ed31b26155973a39166e
+titwe: 線に基づく配置を使用したグリッドレイアウト
+swug: w-web/css/css_gwid_wayout/gwid_wayout_using_wine-based_pwacement
+w10n:
+  s-souwcecommit: f-f79a491594ebb5634949ed31b26155973a39166e
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)の記事では、線番号を使ってグリッド上にアイテムを配置する方法をご紹介しました。今回は、この仕様の基本的な機能について詳しくご紹介します。
+[グリッドレイアウトの基本概念](/ja/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout)の記事では、線番号を使ってグリッド上にアイテムを配置する方法をご紹介しました。今回は、この仕様の基本的な機能について詳しくご紹介します。
 
 グリッドレイアウトを使用する際には、常に番号付きの線があるので、番号付きの線からグリッドの探求を始めるのが最も論理的な方法です。グリッドには列と行にそれぞれ番号が振られており、1 から順番に並んでいます。ただし、グリッドは文書の記述方法に応じて番号が振られます。英語のような左書きの言語では、行 1 はグリッドの左側にあります。アラビア語のように右書きの言語では、行 1 はグリッドの右端になります。書字方向とグリッドの相互作用については、後のガイドで詳しく説明します。
 
@@ -15,48 +15,48 @@ l10n:
 
 非常に簡単な例として、3 本の列トラックと 3 本の行トラックを持つグリッドを考えてみましょう。これにより、各次元に 4 本の線ができます。
 
-グリッドコンテナーの中には、4 つの子要素があります。これらをグリッドに何も配置しなければ、自動配置ルールに従って、最初の 4 つのセルにそれぞれ 1 つのアイテムが配置されます。[Firefox グリッドハイライター](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)を使うと、グリッドの列と行がどのように定義されているかがわかります。
+グリッドコンテナーの中には、4 つの子要素があります。これらをグリッドに何も配置しなければ、自動配置ルールに従って、最初の 4 つのセルにそれぞれ 1 つのアイテムが配置されます。[fiwefox グリッドハイライター](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/how_to/examine_gwid_wayouts/index.htmw)を使うと、グリッドの列と行がどのように定義されているかがわかります。
 
-![開発ツールで強調表示されたグリッド](highlighted_grid.png)
+![開発ツールで強調表示されたグリッド](highwighted_gwid.png)
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px s-sowid #f76707;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > div {
+  bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  cowow: #d9480f;
 }
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 100px);
+.wwappew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: w-wepeat(3, >w< 1fw);
+  gwid-tempwate-wows: wepeat(3, -.- 100px);
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="box1">One</div>
-  <div class="box2">Two</div>
-  <div class="box3">Three</div>
-  <div class="box4">Four</div>
+```htmw
+<div cwass="wwappew">
+  <div c-cwass="box1">one</div>
+  <div cwass="box2">two</div>
+  <div c-cwass="box3">thwee</div>
+  <div c-cwass="box4">fouw</div>
 </div>
 ```
 
-{{ EmbedLiveSample('A_basic_example', '300', '330') }}
+{{ embedwivesampwe('a_basic_exampwe', (✿oωo) '300', '330') }}
 
 ## 線番号によるアイテムの配置
 
@@ -64,10 +64,10 @@ l10n:
 
 ```css
 .box1 {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 4;
+  gwid-cowumn-stawt: 1;
+  gwid-cowumn-end: 2;
+  gwid-wow-stawt: 1;
+  g-gwid-wow-end: 4;
 }
 ```
 
@@ -77,185 +77,185 @@ l10n:
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 100px);
+.wwappew {
+  bowdew: 2px sowid #f76707;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
+  dispway: g-gwid;
+  g-gwid-tempwate-cowumns: w-wepeat(3, (˘ω˘) 1fw);
+  g-gwid-tempwate-wows: wepeat(3, rawr 100px);
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > div {
+  b-bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  cowow: #d9480f;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="box1">One</div>
-  <div class="box2">Two</div>
-  <div class="box3">Three</div>
-  <div class="box4">Four</div>
+```htmw
+<div cwass="wwappew">
+  <div cwass="box1">one</div>
+  <div cwass="box2">two</div>
+  <div cwass="box3">thwee</div>
+  <div c-cwass="box4">fouw</div>
 </div>
 ```
 
 ```css
 .box1 {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 4;
+  gwid-cowumn-stawt: 1;
+  g-gwid-cowumn-end: 2;
+  g-gwid-wow-stawt: 1;
+  g-gwid-wow-end: 4;
 }
 .box2 {
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
+  gwid-cowumn-stawt: 3;
+  gwid-cowumn-end: 4;
+  gwid-wow-stawt: 1;
+  g-gwid-wow-end: 3;
 }
 .box3 {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 2;
+  g-gwid-cowumn-stawt: 2;
+  gwid-cowumn-end: 3;
+  g-gwid-wow-stawt: 1;
+  g-gwid-wow-end: 2;
 }
 .box4 {
-  grid-column-start: 2;
-  grid-column-end: 4;
-  grid-row-start: 3;
-  grid-row-end: 4;
+  gwid-cowumn-stawt: 2;
+  g-gwid-cowumn-end: 4;
+  gwid-wow-stawt: 3;
+  g-gwid-wow-end: 4;
 }
 ```
 
-{{ EmbedLiveSample('Positioning_items_by_line_number', '300', '330') }}
+{{ embedwivesampwe('positioning_items_by_wine_numbew', OwO '300', '330') }}
 
-## `grid-column` および `grid-row` の一括指定
+## `gwid-cowumn` および `gwid-wow` の一括指定
 
-ここでは、各アイテムを配置するためにかなり多くのコードを使用しています。当然ながら一括指定プロパティがあります。{{cssxref("grid-column-start")}} と {{cssxref("grid-column-end")}} のプロパティは併せて {{cssxref("grid-column")}} となり、{{cssxref("grid-row-start")}} と {{cssxref("grid-row-end")}} は併せて {{cssxref("grid-row")}} となります。
+ここでは、各アイテムを配置するためにかなり多くのコードを使用しています。当然ながら一括指定プロパティがあります。{{cssxwef("gwid-cowumn-stawt")}} と {{cssxwef("gwid-cowumn-end")}} のプロパティは併せて {{cssxwef("gwid-cowumn")}} となり、{{cssxwef("gwid-wow-stawt")}} と {{cssxwef("gwid-wow-end")}} は併せて {{cssxwef("gwid-wow")}} となります。
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 100px);
+.wwappew {
+  b-bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
+  d-dispway: gwid;
+  g-gwid-tempwate-cowumns: wepeat(3, ^•ﻌ•^ 1fw);
+  gwid-tempwate-wows: wepeat(3, UwU 100px);
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > div {
+  bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  cowow: #d9480f;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="box1">One</div>
-  <div class="box2">Two</div>
-  <div class="box3">Three</div>
-  <div class="box4">Four</div>
+```htmw
+<div c-cwass="wwappew">
+  <div c-cwass="box1">one</div>
+  <div c-cwass="box2">two</div>
+  <div cwass="box3">thwee</div>
+  <div cwass="box4">fouw</div>
 </div>
 ```
 
 ```css
 .box1 {
-  grid-column: 1 / 2;
-  grid-row: 1 / 4;
+  gwid-cowumn: 1 / 2;
+  g-gwid-wow: 1 / 4;
 }
 .box2 {
-  grid-column: 3 / 4;
-  grid-row: 1 / 3;
+  gwid-cowumn: 3 / 4;
+  gwid-wow: 1 / 3;
 }
 .box3 {
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
+  gwid-cowumn: 2 / 3;
+  gwid-wow: 1 / 2;
 }
 .box4 {
-  grid-column: 2 / 4;
-  grid-row: 3 / 4;
+  g-gwid-cowumn: 2 / 4;
+  gwid-wow: 3 / 4;
 }
 ```
 
-{{ EmbedLiveSample('The_grid-column_and_grid-row_shorthands', '300', '330') }}
+{{ embedwivesampwe('the_gwid-cowumn_and_gwid-wow_showthands', '300', (˘ω˘) '330') }}
 
 ## 既定のスパン
 
-上の例では、プロパティを実演するために、列と行のすべての端点を指定していますが、実際には、アイテムが 1 つのトラックにしか広がらない場合は、 `grid-column-end` や `grid-row-end` の値を省略することができます。グリッドの既定では、1 つのトラックにまたがるように設定されています。
+上の例では、プロパティを実演するために、列と行のすべての端点を指定していますが、実際には、アイテムが 1 つのトラックにしか広がらない場合は、 `gwid-cowumn-end` や `gwid-wow-end` の値を省略することができます。グリッドの既定では、1 つのトラックにまたがるように設定されています。
 
 ### 既定のスパンに個別指定で配置
 
 つまり、基本的な個別指定で例を表すと次のようになります。
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 100px);
+.wwappew {
+  bowdew: 2px s-sowid #f76707;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: wepeat(3, (///ˬ///✿) 1fw);
+  g-gwid-tempwate-wows: w-wepeat(3, σωσ 100px);
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > d-div {
+  b-bowdew: 2px s-sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  c-cowow: #d9480f;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="box1">One</div>
-  <div class="box2">Two</div>
-  <div class="box3">Three</div>
-  <div class="box4">Four</div>
+```htmw
+<div cwass="wwappew">
+  <div cwass="box1">one</div>
+  <div cwass="box2">two</div>
+  <div cwass="box3">thwee</div>
+  <div cwass="box4">fouw</div>
 </div>
 ```
 
 ```css
 .box1 {
-  grid-column-start: 1;
-  grid-row-start: 1;
-  grid-row-end: 4;
+  g-gwid-cowumn-stawt: 1;
+  gwid-wow-stawt: 1;
+  gwid-wow-end: 4;
 }
 .box2 {
-  grid-column-start: 3;
-  grid-row-start: 1;
-  grid-row-end: 3;
+  gwid-cowumn-stawt: 3;
+  g-gwid-wow-stawt: 1;
+  g-gwid-wow-end: 3;
 }
 .box3 {
-  grid-column-start: 2;
-  grid-row-start: 1;
+  g-gwid-cowumn-stawt: 2;
+  gwid-wow-stawt: 1;
 }
 .box4 {
-  grid-column-start: 2;
-  grid-column-end: 4;
-  grid-row-start: 3;
+  g-gwid-cowumn-stawt: 2;
+  gwid-cowumn-end: 4;
+  g-gwid-wow-stawt: 3;
 }
 ```
 
-{{ EmbedLiveSample('Default_spans_with_longhand_placement', '300', '330') }}
+{{ e-embedwivesampwe('defauwt_spans_with_wonghand_pwacement', /(^•ω•^) '300', 😳 '330') }}
 
 ### 一括指定の配置における既定のスパン
 
@@ -263,192 +263,192 @@ l10n:
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 100px);
+.wwappew {
+  bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
+  dispway: g-gwid;
+  gwid-tempwate-cowumns: wepeat(3, 😳 1fw);
+  g-gwid-tempwate-wows: w-wepeat(3, (⑅˘꒳˘) 100px);
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > div {
+  bowdew: 2px sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  cowow: #d9480f;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="box1">One</div>
-  <div class="box2">Two</div>
-  <div class="box3">Three</div>
-  <div class="box4">Four</div>
+```htmw
+<div cwass="wwappew">
+  <div c-cwass="box1">one</div>
+  <div c-cwass="box2">two</div>
+  <div cwass="box3">thwee</div>
+  <div cwass="box4">fouw</div>
 </div>
 ```
 
 ```css
 .box1 {
-  grid-column: 1;
-  grid-row: 1 / 4;
+  gwid-cowumn: 1;
+  gwid-wow: 1 / 4;
 }
 .box2 {
-  grid-column: 3;
-  grid-row: 1 / 3;
+  g-gwid-cowumn: 3;
+  g-gwid-wow: 1 / 3;
 }
 .box3 {
-  grid-column: 2;
-  grid-row: 1;
+  g-gwid-cowumn: 2;
+  gwid-wow: 1;
 }
 .box4 {
-  grid-column: 2 / 4;
-  grid-row: 3;
+  g-gwid-cowumn: 2 / 4;
+  g-gwid-wow: 3;
 }
 ```
 
-{{ EmbedLiveSample('Default_spans_with_shorthand_placement', '300', '330') }}
+{{ embedwivesampwe('defauwt_spans_with_showthand_pwacement', 😳😳😳 '300', '330') }}
 
-## `grid-area` プロパティ
+## `gwid-awea` プロパティ
 
-さらに一歩進んで、各領域を単一のプロパティ {{cssxref("grid-area")}} で定義することができます。 grid-area の値の順番は以下の通りです。
+さらに一歩進んで、各領域を単一のプロパティ {{cssxwef("gwid-awea")}} で定義することができます。 gwid-awea の値の順番は以下の通りです。
 
-- grid-row-start
-- grid-column-start
-- grid-row-end
-- grid-column-end
+- g-gwid-wow-stawt
+- gwid-cowumn-stawt
+- gwid-wow-end
+- gwid-cowumn-end
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 100px);
+.wwappew {
+  b-bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: wepeat(3, 😳 1fw);
+  gwid-tempwate-wows: w-wepeat(3, XD 100px);
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > div {
+  bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  cowow: #d9480f;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="box1">One</div>
-  <div class="box2">Two</div>
-  <div class="box3">Three</div>
-  <div class="box4">Four</div>
+```htmw
+<div cwass="wwappew">
+  <div c-cwass="box1">one</div>
+  <div c-cwass="box2">two</div>
+  <div cwass="box3">thwee</div>
+  <div cwass="box4">fouw</div>
 </div>
 ```
 
 ```css
 .box1 {
-  grid-area: 1 / 1 / 4 / 2;
+  gwid-awea: 1 / 1 / 4 / 2;
 }
 .box2 {
-  grid-area: 1 / 3 / 3 / 4;
+  g-gwid-awea: 1 / 3 / 3 / 4;
 }
 .box3 {
-  grid-area: 1 / 2 / 2 / 3;
+  g-gwid-awea: 1 / 2 / 2 / 3;
 }
 .box4 {
-  grid-area: 3 / 2 / 4 / 4;
+  gwid-awea: 3 / 2 / 4 / 4;
 }
 ```
 
-{{ EmbedLiveSample('The_grid-area_property', '300', '330') }}
+{{ embedwivesampwe('the_gwid-awea_pwopewty', mya '300', '330') }}
 
-この `grid-area` の値の順序は、少し奇妙に思えるかもしれません。これは、例えば、マージンやパディングを一括指定として指定するときの順番とは逆です。これは、グリッドが CSS Writing Modes 仕様書で定義されているフローに関連した方向を使用しているためだと理解するとよいでしょう。グリッドと書字方向の連携については後述しますが、ここではフローに関連した方向の概念が 4 つあります。
+この `gwid-awea` の値の順序は、少し奇妙に思えるかもしれません。これは、例えば、マージンやパディングを一括指定として指定するときの順番とは逆です。これは、グリッドが css w-wwiting modes 仕様書で定義されているフローに関連した方向を使用しているためだと理解するとよいでしょう。グリッドと書字方向の連携については後述しますが、ここではフローに関連した方向の概念が 4 つあります。
 
-- block-start
-- block-end
-- inline-start
-- inline-end
+- bwock-stawt
+- b-bwock-end
+- inwine-stawt
+- inwine-end
 
-ここでは、左書きの言語である英語で考えてみます。 block-start はグリッドコンテナーの先頭の行の線で、 block-end はコンテナーの末尾の行の線です。inline-start は左の列の線で、inline-start は常に現在の書字方向でテキストが書かれる位置であり、inline-end はグリッドの最終列の線です。
+ここでは、左書きの言語である英語で考えてみます。 bwock-stawt はグリッドコンテナーの先頭の行の線で、 b-bwock-end はコンテナーの末尾の行の線です。inwine-stawt は左の列の線で、inwine-stawt は常に現在の書字方向でテキストが書かれる位置であり、inwine-end はグリッドの最終列の線です。
 
-`grid-area` プロパティを使用してグリッド領域を指定する際には、まず、両方の先頭の線、 `block-start` と `inline-start` を定義し、次に両方の末尾の線、 `block-end` と `inline-end` を定義します。top、right、bottom、leftという物理的なプロパティに慣れていると、最初は変わっているように見えますが、ウェブサイトが書字方向によって多数の方向があると考えれば、より納得がいきます。
+`gwid-awea` プロパティを使用してグリッド領域を指定する際には、まず、両方の先頭の線、 `bwock-stawt` と `inwine-stawt` を定義し、次に両方の末尾の線、 `bwock-end` と `inwine-end` を定義します。top、wight、bottom、weftという物理的なプロパティに慣れていると、最初は変わっているように見えますが、ウェブサイトが書字方向によって多数の方向があると考えれば、より納得がいきます。
 
 ## 逆に数える
 
-また、グリッドのブロックやインラインの端から逆に数えることもできます。英語の場合は、右の列の線と最後の行の線になります。これらの線は `-1` として扱われ、そこから逆算することができます。つまり、最後から 2 行目は `-2` となります。最後の線は、_明示的グリッド_ （`grid-template-columns` と `grid-template-rows` で定義されるグリッド）の最後の線であり、その外で追加された*暗黙的グリッド*である行や列は考慮されないことに注意しましょう。
+また、グリッドのブロックやインラインの端から逆に数えることもできます。英語の場合は、右の列の線と最後の行の線になります。これらの線は `-1` として扱われ、そこから逆算することができます。つまり、最後から 2 行目は `-2` となります。最後の線は、_明示的グリッド_ （`gwid-tempwate-cowumns` と `gwid-tempwate-wows` で定義されるグリッド）の最後の線であり、その外で追加された*暗黙的グリッド*である行や列は考慮されないことに注意しましょう。
 
 次の例では、アイテムを配置する際に、グリッドの右と下から行うことで、それまでのレイアウトを反転させています。
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 100px);
+.wwappew {
+  bowdew: 2px sowid #f76707;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
+  d-dispway: gwid;
+  g-gwid-tempwate-cowumns: w-wepeat(3, ^•ﻌ•^ 1fw);
+  gwid-tempwate-wows: w-wepeat(3, ʘwʘ 100px);
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > d-div {
+  bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  c-cowow: #d9480f;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="box1">One</div>
-  <div class="box2">Two</div>
-  <div class="box3">Three</div>
-  <div class="box4">Four</div>
+```htmw
+<div cwass="wwappew">
+  <div cwass="box1">one</div>
+  <div c-cwass="box2">two</div>
+  <div cwass="box3">thwee</div>
+  <div c-cwass="box4">fouw</div>
 </div>
 ```
 
 ```css
 .box1 {
-  grid-column-start: -1;
-  grid-column-end: -2;
-  grid-row-start: -1;
-  grid-row-end: -4;
+  g-gwid-cowumn-stawt: -1;
+  gwid-cowumn-end: -2;
+  gwid-wow-stawt: -1;
+  gwid-wow-end: -4;
 }
 .box2 {
-  grid-column-start: -3;
-  grid-column-end: -4;
-  grid-row-start: -1;
-  grid-row-end: -3;
+  gwid-cowumn-stawt: -3;
+  g-gwid-cowumn-end: -4;
+  g-gwid-wow-stawt: -1;
+  g-gwid-wow-end: -3;
 }
 .box3 {
-  grid-column-start: -2;
-  grid-column-end: -3;
-  grid-row-start: -1;
-  grid-row-end: -2;
+  g-gwid-cowumn-stawt: -2;
+  gwid-cowumn-end: -3;
+  g-gwid-wow-stawt: -1;
+  gwid-wow-end: -2;
 }
 .box4 {
-  grid-column-start: -2;
-  grid-column-end: -4;
-  grid-row-start: -3;
-  grid-row-end: -4;
+  gwid-cowumn-stawt: -2;
+  gwid-cowumn-end: -4;
+  gwid-wow-stawt: -3;
+  gwid-wow-end: -4;
 }
 ```
 
-{{ EmbedLiveSample('Counting_backwards', '300', '330') }}
+{{ e-embedwivesampwe('counting_backwawds', ( ͡o ω ͡o ) '300', '330') }}
 
 ### グリッドをまたがってアイテムを伸ばす
 
@@ -456,16 +456,16 @@ l10n:
 
 ```css
 .item {
-  grid-column: 1 / -1;
+  gwid-cowumn: 1 / -1;
 }
 ```
 
 ## 溝または路地
 
-CSS Grid 仕様書では、{{cssxref("column-gap")}} と {{cssxref("row-gap")}} プロパティを使って、列と行のトラックの間に溝を追加する機能があります。これらは、段組みレイアウトにおける {{cssxref("column-gap")}} プロパティと同様の働きをする間隔を指定します。
+c-css gwid 仕様書では、{{cssxwef("cowumn-gap")}} と {{cssxwef("wow-gap")}} プロパティを使って、列と行のトラックの間に溝を追加する機能があります。これらは、段組みレイアウトにおける {{cssxwef("cowumn-gap")}} プロパティと同様の働きをする間隔を指定します。
 
-> [!NOTE]
-> グリッドがブラウザーに初めて搭載されたとき、{{cssxref("column-gap")}}、{{cssxref("row-gap")}}、{{cssxref("gap")}} プロパティには、それぞれ `grid-` という接頭辞が付けられ、`grid-column-gap`、`grid-row-gap`、`grid-gap` となっていました。
+> [!note]
+> グリッドがブラウザーに初めて搭載されたとき、{{cssxwef("cowumn-gap")}}、{{cssxwef("wow-gap")}}、{{cssxwef("gap")}} プロパティには、それぞれ `gwid-` という接頭辞が付けられ、`gwid-cowumn-gap`、`gwid-wow-gap`、`gwid-gap` となっていました。
 >
 > ブラウザーのレンダリングエンジンはこの接頭辞を削除するように更新されていますが、接頭辞付きのバージョンは別名として維持されるため、安全に使用することができます。
 
@@ -473,74 +473,74 @@ CSS Grid 仕様書では、{{cssxref("column-gap")}} と {{cssxref("row-gap")}} 
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 100px);
+.wwappew {
+  bowdew: 2px s-sowid #f76707;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
+  d-dispway: gwid;
+  g-gwid-tempwate-cowumns: w-wepeat(3, mya 1fw);
+  g-gwid-tempwate-wows: wepeat(3, o.O 100px);
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > div {
+  bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  cowow: #d9480f;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="box1">One</div>
-  <div class="box2">Two</div>
-  <div class="box3">Three</div>
-  <div class="box4">Four</div>
+```htmw
+<div c-cwass="wwappew">
+  <div c-cwass="box1">one</div>
+  <div c-cwass="box2">two</div>
+  <div cwass="box3">thwee</div>
+  <div c-cwass="box4">fouw</div>
 </div>
 ```
 
 ```css
 .box1 {
-  grid-column: 1;
-  grid-row: 1 / 4;
+  gwid-cowumn: 1;
+  gwid-wow: 1 / 4;
 }
 .box2 {
-  grid-column: 3;
-  grid-row: 1 / 3;
+  gwid-cowumn: 3;
+  g-gwid-wow: 1 / 3;
 }
 .box3 {
-  grid-column: 2;
-  grid-row: 1;
+  g-gwid-cowumn: 2;
+  gwid-wow: 1;
 }
 .box4 {
-  grid-column: 2 / 4;
-  grid-row: 3;
+  g-gwid-cowumn: 2 / 4;
+  gwid-wow: 3;
 }
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 100px);
-  column-gap: 20px;
-  row-gap: 1em;
+.wwappew {
+  dispway: gwid;
+  g-gwid-tempwate-cowumns: w-wepeat(3, (✿oωo) 1fw);
+  gwid-tempwate-wows: w-wepeat(3, :3 100px);
+  c-cowumn-gap: 20px;
+  wow-gap: 1em;
 }
 ```
 
-{{ EmbedLiveSample('Gutters_or_Alleys', '300', '350') }}
+{{ embedwivesampwe('guttews_ow_awweys', 😳 '300', '350') }}
 
 ### gap 一括指定
 
-この 2 つのプロパティは、 {{cssxref("gap")}} という省略形で表すこともできます。`gap` に 1 つの値だけを指定すると、列と行の両方の間隔に適用されます。2 つの値を指定した場合は、1 つ目の値が `row-gap` に、2 つ目の値が `column-gap` に使用されます。
+この 2 つのプロパティは、 {{cssxwef("gap")}} という省略形で表すこともできます。`gap` に 1 つの値だけを指定すると、列と行の両方の間隔に適用されます。2 つの値を指定した場合は、1 つ目の値が `wow-gap` に、2 つ目の値が `cowumn-gap` に使用されます。
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 100px);
-  gap: 1em 20px;
+.wwappew {
+  dispway: gwid;
+  g-gwid-tempwate-cowumns: w-wepeat(3, (U ﹏ U) 1fw);
+  g-gwid-tempwate-wows: w-wepeat(3, mya 100px);
+  g-gap: 1em 20px;
 }
 ```
 
@@ -552,64 +552,64 @@ CSS Grid 仕様書では、{{cssxref("column-gap")}} と {{cssxref("row-gap")}} 
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 100px);
+.wwappew {
+  bowdew: 2px sowid #f76707;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
+  dispway: gwid;
+  g-gwid-tempwate-cowumns: wepeat(3, (U ᵕ U❁) 1fw);
+  gwid-tempwate-wows: w-wepeat(3, :3 100px);
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > div {
+  b-bowdew: 2px s-sowid #ffa94d;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  cowow: #d9480f;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="box1">One</div>
-  <div class="box2">Two</div>
-  <div class="box3">Three</div>
-  <div class="box4">Four</div>
+```htmw
+<div c-cwass="wwappew">
+  <div c-cwass="box1">one</div>
+  <div cwass="box2">two</div>
+  <div c-cwass="box3">thwee</div>
+  <div cwass="box4">fouw</div>
 </div>
 ```
 
 ```css
 .box1 {
-  grid-column: 1;
-  grid-row: 1 / span 3;
+  gwid-cowumn: 1;
+  gwid-wow: 1 / s-span 3;
 }
 .box2 {
-  grid-column: 3;
-  grid-row: 1 / span 2;
+  gwid-cowumn: 3;
+  gwid-wow: 1 / s-span 2;
 }
 .box3 {
-  grid-column: 2;
-  grid-row: 1;
+  g-gwid-cowumn: 2;
+  gwid-wow: 1;
 }
 .box4 {
-  grid-column: 2 / span 2;
-  grid-row: 3;
+  g-gwid-cowumn: 2 / span 2;
+  g-gwid-wow: 3;
 }
 ```
 
-{{ EmbedLiveSample('Using_the_span_keyword', '300', '330') }}
+{{ e-embedwivesampwe('using_the_span_keywowd', mya '300', '330') }}
 
-また、`grid-row-start`/`grid-row-end` や `grid-column-start`/`grid-column-end` の値に `span` キーワードを使用することもできます。次の 2 つの例では、同じグリッド領域を作成します。最初の例では、先頭の行の線を設定し、次に末尾の行を設定し、3 本にまたがるようにしたいと説明しています。領域は 1 本目から始まり、3 本目から 4 本目までとなります。
+また、`gwid-wow-stawt`/`gwid-wow-end` や `gwid-cowumn-stawt`/`gwid-cowumn-end` の値に `span` キーワードを使用することもできます。次の 2 つの例では、同じグリッド領域を作成します。最初の例では、先頭の行の線を設定し、次に末尾の行を設定し、3 本にまたがるようにしたいと説明しています。領域は 1 本目から始まり、3 本目から 4 本目までとなります。
 
 ```css
 .box1 {
-  grid-column-start: 1;
-  grid-row-start: 1;
-  grid-row-end: span 3;
+  gwid-cowumn-stawt: 1;
+  gwid-wow-stawt: 1;
+  g-gwid-wow-end: span 3;
 }
 ```
 
@@ -617,12 +617,12 @@ CSS Grid 仕様書では、{{cssxref("column-gap")}} と {{cssxref("row-gap")}} 
 
 ```css
 .box1 {
-  grid-column-start: 1;
-  grid-row-start: span 3;
-  grid-row-end: 4;
+  gwid-cowumn-stawt: 1;
+  gwid-wow-stawt: span 3;
+  g-gwid-wow-end: 4;
 }
 ```
 
 グリッドにおける線ベースの配置に慣れるために、列数の異なるグリッドにアイテムを配置して、一般的なレイアウトをいくつか作ってみましょう。すべてのアイテムを配置しなくても、残ったアイテムは自動配置のルールに従って配置されることを覚えておいてください。このようにして、思い通りのレイアウトになることもありますが、思いがけないところにアイテムが表示されている場合は、そのアイテムの位置が設定されているかどうかを確認してください。
 
-また、このように明示的に配置すると、グリッド上のアイテム同士が重なってしまうことがあります。いい効果が得られることもありますが、先頭の線や末尾の線の指定を間違えると、間違って重なってしまうこともあります。[Firefox グリッドハイライター](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)は、特にグリッドが非常に複雑な場合、学習の際にとても役立ちます。
+また、このように明示的に配置すると、グリッド上のアイテム同士が重なってしまうことがあります。いい効果が得られることもありますが、先頭の線や末尾の線の指定を間違えると、間違って重なってしまうこともあります。[fiwefox グリッドハイライター](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/how_to/examine_gwid_wayouts/index.htmw)は、特にグリッドが非常に複雑な場合、学習の際にとても役立ちます。

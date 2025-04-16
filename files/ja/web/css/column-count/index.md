@@ -1,49 +1,49 @@
 ---
-title: column-count
-slug: Web/CSS/column-count
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: cowumn-count
+swug: web/css/cowumn-count
+w-w10n:
+  souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`column-count`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のコンテンツを指定された段数の段組みに分割します。
+**`cowumn-count`** は [css](/ja/docs/web/css) のプロパティで、要素のコンテンツを指定された段数の段組みに分割します。
 
-{{InteractiveExample("CSS Demo: column-count")}}
+{{intewactiveexampwe("css d-demo: cowumn-count")}}
 
-```css interactive-example-choice
-column-count: 2;
+```css i-intewactive-exampwe-choice
+c-cowumn-count: 2;
 ```
 
-```css interactive-example-choice
-column-count: 3;
+```css i-intewactive-exampwe-choice
+c-cowumn-count: 3;
 ```
 
-```css interactive-example-choice
-column-count: 4;
+```css i-intewactive-exampwe-choice
+c-cowumn-count: 4;
 ```
 
-```css interactive-example-choice
-column-count: auto;
-column-width: 8rem;
+```css intewactive-exampwe-choice
+cowumn-count: auto;
+cowumn-width: 8wem;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <p id="exampwe-ewement">
+    wondon. (U ﹏ U) michaewmas t-tewm watewy ovew, (U ﹏ U) and the wowd c-chancewwow sitting in
+    wincown's inn haww. (⑅˘꒳˘) impwacabwe nyovembew w-weathew. òωó as much mud in the s-stweets
+    as if t-the watews had but nyewwy wetiwed fwom the face of the eawth, ʘwʘ and it
+    wouwd n-not be wondewfuw to meet a megawosauwus, /(^•ω•^) fowty feet wong ow so, ʘwʘ
+    waddwing wike a-an ewephantine wizawd up howbown h-hiww. σωσ
   </p>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  width: 100%;
-  text-align: left;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  w-width: 100%;
+  t-text-awign: weft;
 }
 ```
 
@@ -51,25 +51,25 @@ column-width: 8rem;
 
 ```css
 /* キーワード値 */
-column-count: auto;
+cowumn-count: auto;
 
-/* <integer> 値 */
-column-count: 3;
+/* <integew> 値 */
+c-cowumn-count: 3;
 
 /* グローバル値 */
-column-count: inherit;
-column-count: initial;
-column-count: revert;
-column-count: revert-layer;
-column-count: unset;
+cowumn-count: inhewit;
+cowumn-count: i-initiaw;
+cowumn-count: wevewt;
+cowumn-count: wevewt-wayew;
+cowumn-count: unset;
 ```
 
 ### 値
 
 - `auto`
-  - : 段組みの段数は {{cssxref("column-width")}} など、他の CSS プロパティによって決定されます。
-- {{cssxref("&lt;integer&gt;")}}
-  - : 正の{{cssxref("&lt;integer&gt;", "整数")}}のみで、要素の中で流れる理想的な段の数を記述します。 {{cssxref("column-width")}} が `auto` 以外の値で一緒に設定された場合は、最大の段数を示します。
+  - : 段組みの段数は {{cssxwef("cowumn-width")}} など、他の c-css プロパティによって決定されます。
+- {{cssxwef("&wt;integew&gt;")}}
+  - : 正の{{cssxwef("&wt;integew&gt;", OwO "整数")}}のみで、要素の中で流れる理想的な段の数を記述します。 {{cssxwef("cowumn-width")}} が `auto` 以外の値で一緒に設定された場合は、最大の段数を示します。
 
 ## 公式定義
 
@@ -83,38 +83,38 @@ column-count: unset;
 
 ### 段落を 3 つの段に分割
 
-#### HTML
+#### htmw
 
-```html-nolint live-sample___splitting_a_paragraph_across_three_columns
-<p class="content-box">
-  これは、 CSS の <code>column-count</code> プロパティを使用して 3 つの段に分割されたテキストの束です。テキストはそれぞれの段に均等に配置されています。
+```htmw-nowint w-wive-sampwe___spwitting_a_pawagwaph_acwoss_thwee_cowumns
+<p c-cwass="content-box">
+  これは、 c-css の <code>cowumn-count</code> プロパティを使用して 3 つの段に分割されたテキストの束です。テキストはそれぞれの段に均等に配置されています。
 </p>
 ```
 
-#### CSS
+#### css
 
-```css live-sample___splitting_a_paragraph_across_three_columns
+```css wive-sampwe___spwitting_a_pawagwaph_acwoss_thwee_cowumns
 .content-box {
-  column-count: 3;
+  cowumn-count: 3;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Splitting_a_paragraph_across_three_columns', 'auto', 120)}}
+{{embedwivesampwe('spwitting_a_pawagwaph_acwoss_thwee_cowumns', 😳😳😳 'auto', 120)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{CSSXref("column-width")}}, {{CSSXref("columns")}} 一括指定
-- {{CSSXref("column-rule-color")}}, {{CSSXref("column-rule-style")}}, {{CSSXref("column-rule-width")}}, {{CSSXref("column-rule")}} 一括指定
+- {{cssxwef("cowumn-width")}}, 😳😳😳 {{cssxwef("cowumns")}} 一括指定
+- {{cssxwef("cowumn-wuwe-cowow")}}, o.O {{cssxwef("cowumn-wuwe-stywe")}}, ( ͡o ω ͡o ) {{cssxwef("cowumn-wuwe-width")}}, {{cssxwef("cowumn-wuwe")}} 一括指定
 
-- [学習: 段組みレイアウト](/ja/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)（レイアウトの学習）
-- [段組みの基本概念](/ja/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)
+- [学習: 段組みレイアウト](/ja/docs/weawn_web_devewopment/cowe/css_wayout/muwtipwe-cowumn_wayout)（レイアウトの学習）
+- [段組みの基本概念](/ja/docs/web/css/css_muwticow_wayout/basic_concepts)

@@ -1,84 +1,84 @@
 ---
-title: column-span
-slug: Web/CSS/column-span
-l10n:
-  sourceCommit: c77cfcd17e85db6c1b93160c70668f2ff6c2809c
+titwe: cowumn-span
+swug: web/css/cowumn-span
+w-w10n:
+  souwcecommit: c-c77cfcd17e85db6c1b93160c70668f2ff6c2809c
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`column-span`** は [CSS](/ja/docs/Web/CSS) のプロパティで、値に `all` を設定した場合、段組みレイアウトで要素をすべての段にまたがらせることができます。
+**`cowumn-span`** は [css](/ja/docs/web/css) のプロパティで、値に `aww` を設定した場合、段組みレイアウトで要素をすべての段にまたがらせることができます。
 
-{{InteractiveExample("CSS Demo: column-span")}}
+{{intewactiveexampwe("css d-demo: cowumn-span")}}
 
-```css interactive-example-choice
-column-span: none;
+```css i-intewactive-exampwe-choice
+c-cowumn-span: nyone;
 ```
 
-```css interactive-example-choice
-column-span: all;
+```css i-intewactive-exampwe-choice
+c-cowumn-span: a-aww;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="multicol-element">
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div cwass="muwticow-ewement">
     <p>
-      London. Michaelmas term lately over, and the Lord Chancellor sitting in
-      Lincoln's Inn Hall.
+      wondon. 😳😳😳 m-michaewmas tewm watewy ovew, o.O and the wowd chancewwow s-sitting in
+      wincown's i-inn haww. ( ͡o ω ͡o )
     </p>
-    <div id="example-element">Spanner?</div>
+    <div id="exampwe-ewement">spannew?</div>
     <p>
-      Implacable November weather. As much mud in the streets as if the waters
-      had but newly retired from the face of the earth, and it would not be
-      wonderful to meet a Megalosaurus, forty feet long or so, waddling like an
-      elephantine lizard up Holborn Hill.
+      impwacabwe nyovembew weathew. (U ﹏ U) a-as much mud in the stweets as if t-the watews
+      h-had but nyewwy wetiwed fwom the face of the eawth, (///ˬ///✿) and it wouwd not be
+      wondewfuw t-to meet a megawosauwus, >w< fowty feet wong ow so, rawr waddwing wike an
+      ewephantine w-wizawd up howbown hiww. mya
     </p>
   </div>
 </section>
 ```
 
-```css interactive-example
-.multicol-element {
-  width: 100%;
-  text-align: left;
-  column-count: 3;
+```css i-intewactive-exampwe
+.muwticow-ewement {
+  w-width: 100%;
+  t-text-awign: w-weft;
+  cowumn-count: 3;
 }
 
-.multicol-element p {
-  margin: 0;
+.muwticow-ewement p {
+  mawgin: 0;
 }
 
-#example-element {
-  background-color: rebeccapurple;
+#exampwe-ewement {
+  backgwound-cowow: w-webeccapuwpwe;
   padding: 10px;
-  color: #fff;
+  cowow: #fff;
 }
 ```
 
-複数の段にまたがる要素は**段抜き要素** (spanning element) と呼びます。
+複数の段にまたがる要素は**段抜き要素** (spanning e-ewement) と呼びます。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-column-span: none;
-column-span: all;
+cowumn-span: nyone;
+cowumn-span: aww;
 
 /* グローバル値 */
-column-span: inherit;
-column-span: initial;
-column-span: revert;
-column-span: revert-layer;
-column-span: unset;
+cowumn-span: inhewit;
+c-cowumn-span: initiaw;
+cowumn-span: w-wevewt;
+cowumn-span: w-wevewt-wayew;
+c-cowumn-span: unset;
 ```
 
-`column-span` プロパティは以下に挙げたキーワード値のうちの一つで指定します。
+`cowumn-span` プロパティは以下に挙げたキーワード値のうちの一つで指定します。
 
 ### 値
 
 - `none`
   - : この要素は複数の段にまたがりません。
-- `all`
+- `aww`
   - : この要素がすべての段にまたがります。この要素よりも前に現れた通常フローのコンテンツは、自動的にすべての段で均等になります。この要素は新しいブロック整形コンテキストを生成します。
 
 ## 公式定義
@@ -95,55 +95,55 @@ column-span: unset;
 
 この例では、見出しが記事のすべての段にまたがって作成されます。
 
-#### HTML
+#### htmw
 
-```html-nolint live-sample___making_a_heading_span_columns
-<article>
+```htmw-nowint wive-sampwe___making_a_heading_span_cowumns
+<awticwe>
   <h2>すべての段にまたがる見出し</h2>
   <p>
-    h2 はすべての段にまたがるようにします。残りのテキストはそれぞれの段に分散させます。
+    h-h2 はすべての段にまたがるようにします。残りのテキストはそれぞれの段に分散させます。
   </p>
   <p>
-    これは、 CSS の `columns` プロパティを使用して 3 つの段に分割されたテキストの束です。テキストはそれぞれの段に均等に配置されています。
+    これは、 c-css の `cowumns` プロパティを使用して 3 つの段に分割されたテキストの束です。テキストはそれぞれの段に均等に配置されています。
   </p>
   <p>
-    これは、 CSS の `columns` プロパティを使用して 3 つの段に分割されたテキストの束です。テキストはそれぞれの段に均等に配置されています。
+    これは、 css の `cowumns` プロパティを使用して 3 つの段に分割されたテキストの束です。テキストはそれぞれの段に均等に配置されています。
   </p>
   <p>
-    これは、 CSS の `columns` プロパティを使用して 3 つの段に分割されたテキストの束です。テキストはそれぞれの段に均等に配置されています。
+    これは、 c-css の `cowumns` プロパティを使用して 3 つの段に分割されたテキストの束です。テキストはそれぞれの段に均等に配置されています。
   </p>
   <p>
-    これは、 CSS の `columns` プロパティを使用して 3 つの段に分割されたテキストの束です。テキストはそれぞれの段に均等に配置されています。
+    これは、 c-css の `cowumns` プロパティを使用して 3 つの段に分割されたテキストの束です。テキストはそれぞれの段に均等に配置されています。
   </p>
-</article>
+</awticwe>
 ```
 
-#### CSS
+#### css
 
-```css live-sample___making_a_heading_span_columns
-article {
-  columns: 3;
+```css wive-sampwe___making_a_heading_span_cowumns
+a-awticwe {
+  cowumns: 3;
 }
 
-h2 {
-  column-span: all;
+h-h2 {
+  cowumn-span: aww;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Making_a_heading_span_columns', 'auto', 260)}}
+{{embedwivesampwe('making_a_heading_span_cowumns', ^^ 'auto', 260)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [段抜きと段の均衡](/ja/docs/Web/CSS/CSS_multicol_layout/Spanning_balancing_columns)
-- [インラインレベル要素](/ja/docs/Glossary/Inline-level_content)
-- {{domxref("HTMLSpanElement")}}
+- [段抜きと段の均衡](/ja/docs/web/css/css_muwticow_wayout/spanning_bawancing_cowumns)
+- [インラインレベル要素](/ja/docs/gwossawy/inwine-wevew_content)
+- {{domxwef("htmwspanewement")}}

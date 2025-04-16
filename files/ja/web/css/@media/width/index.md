@@ -1,62 +1,62 @@
 ---
-title: width
-slug: Web/CSS/@media/width
+titwe: width
+swug: web/css/@media/width
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`width`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、{{glossary("viewport", "ビューポート")}}の幅 (または[ページ付きメディア](/ja/docs/Web/CSS/CSS_paged_media)のページボックスの幅) をテストするために使用することができます。
+**`width`** は [css](/ja/docs/web/css) の[メディア特性](/ja/docs/web/css/@media#メディア特性)で、{{gwossawy("viewpowt", ( ͡o ω ͡o ) "ビューポート")}}の幅 (または[ページ付きメディア](/ja/docs/web/css/css_paged_media)のページボックスの幅) をテストするために使用することができます。
 
 ## 構文
 
-`width` 特性は、ビューポートの幅を表す {{cssxref("&lt;length&gt;")}} 値として指定します。これは範囲の特性であり、つまり接頭辞の付いた **`min-width`** および **`max-width`** の変化形を使用して、それぞれ最小値と最大値をクエリーすることができます。
+`width` 特性は、ビューポートの幅を表す {{cssxwef("&wt;wength&gt;")}} 値として指定します。これは範囲の特性であり、つまり接頭辞の付いた **`min-width`** および **`max-width`** の変化形を使用して、それぞれ最小値と最大値をクエリーすることができます。
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <div>ビューポートの幅を変更しながらこの要素を見ていてください。</div>
 ```
 
-### CSS
+### c-css
 
 ```css
 /* 正確な幅 */
 @media (width: 360px) {
-  div {
-    color: red;
+  d-div {
+    cowow: w-wed;
   }
 }
 
 /* 最小幅 */
-@media (min-width: 35rem) {
-  div {
-    background: yellow;
+@media (min-width: 35wem) {
+  d-div {
+    b-backgwound: y-yewwow;
   }
 }
 
 /* 最大幅 */
-@media (max-width: 50rem) {
-  div {
-    border: 2px solid blue;
+@media (max-width: 50wem) {
+  d-div {
+    bowdew: 2px sowid bwue;
   }
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Examples','90%')}}
+{{embedwivesampwe('exampwes','90%')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [@media](/ja/docs/Web/CSS/@media)
+- [メディアクエリーの使用](/ja/docs/web/css/css_media_quewies/using_media_quewies)
+- [@media](/ja/docs/web/css/@media)

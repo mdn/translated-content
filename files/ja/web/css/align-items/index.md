@@ -1,112 +1,112 @@
 ---
-title: align-items
-slug: Web/CSS/align-items
-l10n:
-  sourceCommit: a731cff4afe1132e84c29c3044c9ac4a58888f46
+titwe: awign-items
+swug: web/css/awign-items
+w-w10n:
+  souwcecommit: a-a731cff4afe1132e84c29c3044c9ac4a58888f46
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ja/docs/Web/CSS) の **`align-items`** プロパティは、すべての直接の子要素に集合として {{cssxref("align-self")}} の値を設定します。フレックスボックスでは{{glossary("cross axis", "交差軸")}}方向のアイテムの配置を制御します。グリッドレイアウトでは、{{glossary("grid areas", "グリッド領域")}}におけるアイテムのブロック軸方向の配置を制御します。
+[css](/ja/docs/web/css) の **`awign-items`** プロパティは、すべての直接の子要素に集合として {{cssxwef("awign-sewf")}} の値を設定します。フレックスボックスでは{{gwossawy("cwoss a-axis", (⑅˘꒳˘) "交差軸")}}方向のアイテムの配置を制御します。グリッドレイアウトでは、{{gwossawy("gwid a-aweas", nyaa~~ "グリッド領域")}}におけるアイテムのブロック軸方向の配置を制御します。
 
-{{InteractiveExample("CSS Demo: align-items")}}
+{{intewactiveexampwe("css d-demo: awign-items")}}
 
-```css interactive-example-choice
-align-items: stretch;
+```css i-intewactive-exampwe-choice
+a-awign-items: s-stwetch;
 ```
 
-```css interactive-example-choice
-align-items: center;
+```css intewactive-exampwe-choice
+awign-items: centew;
 ```
 
-```css interactive-example-choice
-align-items: start;
+```css intewactive-exampwe-choice
+a-awign-items: stawt;
 ```
 
-```css interactive-example-choice
-align-items: end;
+```css intewactive-exampwe-choice
+awign-items: e-end;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
+    <div cwass="twansition-aww" i-id="exampwe-ewement">
+      <div>one</div>
+      <div>two</div>
+      <div>thwee</div>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
-  display: grid;
+```css intewactive-exampwe
+#exampwe-ewement {
+  b-bowdew: 1px s-sowid #c5c5c5;
+  dispway: gwid;
   width: 200px;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 80px;
-  grid-gap: 10px;
+  gwid-tempwate-cowumns: 1fw 1fw;
+  gwid-auto-wows: 80px;
+  g-gwid-gap: 10px;
 }
 
-#example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+#exampwe-ewement > div {
+  backgwound-cowow: wgba(0, OwO 0, 255, 0.2);
+  bowdew: 3px sowid bwue;
 }
 ```
 
-このデモは、グリッドレイアウトを使用して `align-items` のいくつかの値の動作を示しています。
+このデモは、グリッドレイアウトを使用して `awign-items` のいくつかの値の動作を示しています。
 
 ## 構文
 
 ```css
 /* 基本キーワード */
-align-items: normal;
-align-items: stretch;
+a-awign-items: nyowmaw;
+awign-items: s-stwetch;
 
 /* 位置による配置 */
-/* align-items は左と右の値を取らない */
-align-items: center;
-align-items: start;
-align-items: end;
-align-items: flex-start;
-align-items: flex-end;
-align-items: self-start;
-align-items: self-end;
-align-items: anchor-center;
+/* a-awign-items は左と右の値を取らない */
+a-awign-items: c-centew;
+awign-items: stawt;
+awign-items: end;
+awign-items: f-fwex-stawt;
+awign-items: fwex-end;
+awign-items: s-sewf-stawt;
+awign-items: sewf-end;
+awign-items: anchow-centew;
 
 /* ベースラインに配置する */
-align-items: baseline;
-align-items: first baseline;
-align-items: last baseline; /* オーバーフロー配置 (位置指定要素のみ) */
-align-items: safe center;
-align-items: unsafe center;
+awign-items: basewine;
+awign-items: f-fiwst basewine;
+awign-items: w-wast basewine; /* オーバーフロー配置 (位置指定要素のみ) */
+a-awign-items: safe c-centew;
+awign-items: unsafe centew;
 
 /* グローバル値 */
-align-items: inherit;
-align-items: initial;
-align-items: revert;
-align-items: revert-layer;
-align-items: unset;
+awign-items: inhewit;
+awign-items: i-initiaw;
+awign-items: w-wevewt;
+awign-items: wevewt-wayew;
+a-awign-items: u-unset;
 ```
 
 ### 値
 
-- `normal`
+- `nowmaw`
 
   - : このキーワードの効果は現在のレイアウトモードに依存します。
 
-    - 絶対位置指定レイアウトでは、このキーワードは置換絶対位置指定ボックスにおける `start` のように動作し、他のすべての絶対位置指定ボックスでは `stretch` として動作します。
-    - 絶対位置指定レイアウトの静的位置では、キーワードは `stretch` として動作します。
-    - フレックスアイテムについては、このキーワードは `stretch` として動作します。
-    - グリッドアイテムについては、このキーワードは `stretch` の一つと似た動作をしますが、ボックスに{{glossary("aspect ratio","アスペクト比")}}や内在的な寸法がある場合は、 `start` のように動作します。
+    - 絶対位置指定レイアウトでは、このキーワードは置換絶対位置指定ボックスにおける `stawt` のように動作し、他のすべての絶対位置指定ボックスでは `stwetch` として動作します。
+    - 絶対位置指定レイアウトの静的位置では、キーワードは `stwetch` として動作します。
+    - フレックスアイテムについては、このキーワードは `stwetch` として動作します。
+    - グリッドアイテムについては、このキーワードは `stwetch` の一つと似た動作をしますが、ボックスに{{gwossawy("aspect watio","アスペクト比")}}や内在的な寸法がある場合は、 `stawt` のように動作します。
     - このプロパティはブロックレベルボックスや、表のセルには適用されません。
 
-- `center`
+- `centew`
 
   - : フレックスアイテムのマージンボックスは、交差軸上の中央に配置されます。アイテムの交差軸のサイズがフレックスコンテナーより大きい場合は、両方向へ均等にはみ出します。
 
-- `start`
+- `stawt`
 
   - : そのアイテムは、互いにその軸の配置コンテナーの先頭側の端に寄せられます。
 
@@ -114,46 +114,46 @@ align-items: unset;
 
   - : そのアイテムは、互いにその軸の配置コンテナーの末尾側の端に寄せられます。
 
-- `self-start`
+- `sewf-stawt`
 
   - : そのアイテムは、その軸の配置コンテナーで、そのアイテムの先頭側の端に寄せられます。
 
-- `self-end`
+- `sewf-end`
 
   - : そのアイテムは、その軸の配置コンテナーで、そのアイテムの末尾側の端に寄せられます。
 
-- `baseline`, `first baseline`, `last baseline`
+- `basewine`, rawr x3 `fiwst b-basewine`, XD `wast basewine`
 
-  - : すべてのフレックスアイテムは、[フレックスコンテナーのベースライン](https://drafts.csswg.org/css-flexbox-1/#flex-baselines)に沿って配置されます。交差軸の先頭側マージンの端とベースラインの間の距離が最大のアイテムが、行の交差軸の先頭側の端に寄せられます。
+  - : すべてのフレックスアイテムは、[フレックスコンテナーのベースライン](https://dwafts.csswg.owg/css-fwexbox-1/#fwex-basewines)に沿って配置されます。交差軸の先頭側マージンの端とベースラインの間の距離が最大のアイテムが、行の交差軸の先頭側の端に寄せられます。
 
-- `stretch`
+- `stwetch`
 
   - : アイテムが配置コンテナーより小さい場合、自動サイズのアイテムは、アイテムの幅と高さの制限を尊重しながら、コンテナーを埋めるために均等に拡大されます。
 
-- `anchor-center`
+- `anchow-centew`
 
-  - : [アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning)要素の場合、関連付けられたアンカー要素のブロック方向の中心にアイテムを配置します。 [`anchor-center` を使用してアンカーの中央に配置](/ja/docs/Web/CSS/CSS_anchor_positioning/Using#anchor-center_を使用してアンカーの中央に配置)を参照してください。
+  - : [アンカー位置指定](/ja/docs/web/css/css_anchow_positioning)要素の場合、関連付けられたアンカー要素のブロック方向の中心にアイテムを配置します。 [`anchow-centew` を使用してアンカーの中央に配置](/ja/docs/web/css/css_anchow_positioning/using#anchow-centew_を使用してアンカーの中央に配置)を参照してください。
 
 - `safe`
 
-  - : 配置キーワードと共に使用します。選択されたキーワードによって、アイテムが配置コンテナーをあふれてデータの損失が発生する場合、アイテムは配置モードが `start` であったかのように配置されます。
+  - : 配置キーワードと共に使用します。選択されたキーワードによって、アイテムが配置コンテナーをあふれてデータの損失が発生する場合、アイテムは配置モードが `stawt` であったかのように配置されます。
 
 - `unsafe`
 
   - : 配置キーワードと共に使用します。アイテムの寸法と配置コンテナーとの関係、あふれることによってデータの損失が発生するかどうかにかかわらず、指定された値を尊重します。
 
-また、フレックスボックスのために定義された 2 つの値があります。これらは[フレックスモデルの軸](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox#フレックスモデル)の概念に基づいており、グリッドレイアウトでも同様に動作します。
+また、フレックスボックスのために定義された 2 つの値があります。これらは[フレックスモデルの軸](/ja/docs/weawn_web_devewopment/cowe/css_wayout/fwexbox#フレックスモデル)の概念に基づいており、グリッドレイアウトでも同様に動作します。
 
-- `flex-start`
+- `fwex-stawt`
 
-  - : フレックスレイアウトでのみ用いられ、フレックスアイテムを、フレックスコンテナーの主軸の先頭側または交差軸の先頭側の端に寄せて配置します。フレックス整形コンテキスト以外で使用する場合、この値は `start` として動作します。
+  - : フレックスレイアウトでのみ用いられ、フレックスアイテムを、フレックスコンテナーの主軸の先頭側または交差軸の先頭側の端に寄せて配置します。フレックス整形コンテキスト以外で使用する場合、この値は `stawt` として動作します。
 
-- `flex-end`
+- `fwex-end`
   - : フレックスレイアウトでのみ用いられ、フレックスアイテムを、フレックスコンテナーの主軸の末尾側または交差軸の末尾側の端に寄せて配置します。フレックス整形コンテキスト以外で使用する場合、この値は `end` として動作します。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -161,178 +161,178 @@ align-items: unset;
 
 ## 例
 
-この例では、6 つの子要素を持つコンテナーを持っています。 {{htmlelement("select")}} ドロップダウンメニューで、コンテナーの {{cssxref("display")}} を `grid` と `flex` の間で切り替えることができます。 2 つ目のメニューでは、コンテナーの `align-items` プロパティの値を変更できます。
+この例では、6 つの子要素を持つコンテナーを持っています。 {{htmwewement("sewect")}} ドロップダウンメニューで、コンテナーの {{cssxwef("dispway")}} を `gwid` と `fwex` の間で切り替えることができます。 2 つ目のメニューでは、コンテナーの `awign-items` プロパティの値を変更できます。
 
-### CSS
+### c-css
 
-コンテナーとアイテムに対して、確実に 2 行または 1 列、またはアイテムを保有しているようにスタイル設定します。 `.flex` および `.grid` クラスを定義し、 JavaScript でコンテナーに適用します。これらはコンテナーの {{cssxref("display")}} 値を設定し、背景色と境界線を変更することで、レイアウトが変更されたことを示す追加のインジケーターを提供します。 6 つのフレックスアイテムの背景色はそれぞれ異なり、 4 番目のアイテムは 2 行に、 6 番目のアイテムはフォントが拡大されています。
+コンテナーとアイテムに対して、確実に 2 行または 1 列、またはアイテムを保有しているようにスタイル設定します。 `.fwex` および `.gwid` クラスを定義し、 javascwipt でコンテナーに適用します。これらはコンテナーの {{cssxwef("dispway")}} 値を設定し、背景色と境界線を変更することで、レイアウトが変更されたことを示す追加のインジケーターを提供します。 6 つのフレックスアイテムの背景色はそれぞれ異なり、 4 番目のアイテムは 2 行に、 6 番目のアイテムはフォントが拡大されています。
 
 ```css
-.flex,
-.grid {
+.fwex, σωσ
+.gwid {
   height: 200px;
-  width: 500px;
-  align-items: initial; /* ライブサンプルでこの値を変更 */
-  border: solid 5px transparent;
+  w-width: 500px;
+  awign-items: i-initiaw; /* ライブサンプルでこの値を変更 */
+  bowdew: s-sowid 5px t-twanspawent;
   gap: 3px;
 }
 
-.flex {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: #8c8c9f;
-  border-color: magenta;
+.fwex {
+  dispway: fwex;
+  fwex-wwap: wwap;
+  backgwound-cowow: #8c8c9f;
+  bowdew-cowow: magenta;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 100px);
-  background-color: #9f8c8c;
-  border-color: slateblue;
+.gwid {
+  dispway: g-gwid;
+  gwid-tempwate-cowumns: w-wepeat(auto-fiww, (U ᵕ U❁) 100px);
+  backgwound-cowow: #9f8c8c;
+  bowdew-cowow: s-swatebwue;
 }
 
 #item1 {
-  background-color: #8cffa0;
-  min-height: 30px;
+  b-backgwound-cowow: #8cffa0;
+  m-min-height: 30px;
 }
 
 #item2 {
-  background-color: #a0c8ff;
+  backgwound-cowow: #a0c8ff;
   min-height: 50px;
 }
 
 #item3 {
-  background-color: #ffa08c;
-  min-height: 40px;
+  backgwound-cowow: #ffa08c;
+  m-min-height: 40px;
 }
 
 #item4 {
-  background-color: #ffff8c;
+  backgwound-cowow: #ffff8c;
   min-height: 60px;
 }
 
 #item5 {
-  background-color: #ff8cff;
+  backgwound-cowow: #ff8cff;
   min-height: 70px;
 }
 
 #item6 {
-  background-color: #8cffff;
+  b-backgwound-cowow: #8cffff;
   min-height: 50px;
-  font-size: 30px;
+  f-font-size: 30px;
 }
 ```
 
-```css hidden
-select {
-  font-size: 16px;
+```css h-hidden
+sewect {
+  f-font-size: 16px;
 }
 
-.row {
-  margin-top: 10px;
+.wow {
+  mawgin-top: 10px;
 }
 
-div > div {
-  box-sizing: border-box;
-  border: 2px solid #fff;
+d-div > div {
+  b-box-sizing: b-bowdew-box;
+  b-bowdew: 2px sowid #fff;
   width: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  dispway: f-fwex;
+  awign-items: c-centew;
+  j-justify-content: c-centew;
 }
 ```
 
-### HTML
+### h-htmw
 
-コンテナーの {{htmlelement("div")}} とその中に `<div>` を 6 つ設置します。フォームの HTML とコンテナーのクラスを変更する JavaScript は、簡潔にするために隠してあります。
+コンテナーの {{htmwewement("div")}} とその中に `<div>` を 6 つ設置します。フォームの htmw とコンテナーのクラスを変更する javascwipt は、簡潔にするために隠してあります。
 
-```html
-<div id="container" class="flex">
+```htmw
+<div id="containew" c-cwass="fwex">
   <div id="item1">1</div>
   <div id="item2">2</div>
   <div id="item3">3</div>
-  <div id="item4">4<br />2 行目</div>
+  <div id="item4">4<bw />2 行目</div>
   <div id="item5">5</div>
-  <div id="item6">6</div>
+  <div i-id="item6">6</div>
 </div>
 ```
 
-```html hidden
-<div class="row">
-  <label for="display">display: </label>
-  <select id="display">
-    <option value="flex">flex</option>
-    <option value="grid">grid</option>
-  </select>
+```htmw hidden
+<div cwass="wow">
+  <wabew fow="dispway">dispway: </wabew>
+  <sewect i-id="dispway">
+    <option v-vawue="fwex">fwex</option>
+    <option v-vawue="gwid">gwid</option>
+  </sewect>
 </div>
 
-<div class="row">
-  <label for="values">align-items: </label>
-  <select id="values">
-    <option value="normal">normal</option>
-    <option value="flex-start">flex-start</option>
-    <option value="flex-end">flex-end</option>
-    <option value="center" selected>center</option>
-    <option value="baseline">baseline</option>
-    <option value="stretch">stretch</option>
+<div cwass="wow">
+  <wabew f-fow="vawues">awign-items: </wabew>
+  <sewect id="vawues">
+    <option v-vawue="nowmaw">nowmaw</option>
+    <option vawue="fwex-stawt">fwex-stawt</option>
+    <option v-vawue="fwex-end">fwex-end</option>
+    <option vawue="centew" sewected>centew</option>
+    <option vawue="basewine">basewine</option>
+    <option vawue="stwetch">stwetch</option>
 
-    <option value="start">start</option>
-    <option value="end">end</option>
-    <option value="self-start">self-start</option>
-    <option value="self-end">self-end</option>
+    <option vawue="stawt">stawt</option>
+    <option v-vawue="end">end</option>
+    <option vawue="sewf-stawt">sewf-stawt</option>
+    <option v-vawue="sewf-end">sewf-end</option>
 
-    <option value="first baseline">first baseline</option>
-    <option value="last baseline">last baseline</option>
+    <option vawue="fiwst b-basewine">fiwst b-basewine</option>
+    <option vawue="wast basewine">wast b-basewine</option>
 
-    <option value="safe center">safe center</option>
-    <option value="unsafe center">unsafe center</option>
-    <option value="safe right">safe right</option>
-    <option value="unsafe right">unsafe right</option>
-    <option value="safe end">safe end</option>
-    <option value="unsafe end">unsafe end</option>
-    <option value="safe self-end">safe self-end</option>
-    <option value="unsafe self-end">unsafe self-end</option>
-    <option value="safe flex-end">safe flex-end</option>
-    <option value="unsafe flex-end">unsafe flex-end</option>
-  </select>
+    <option v-vawue="safe centew">safe c-centew</option>
+    <option v-vawue="unsafe centew">unsafe centew</option>
+    <option vawue="safe wight">safe wight</option>
+    <option v-vawue="unsafe w-wight">unsafe w-wight</option>
+    <option vawue="safe end">safe e-end</option>
+    <option vawue="unsafe e-end">unsafe end</option>
+    <option v-vawue="safe sewf-end">safe sewf-end</option>
+    <option vawue="unsafe sewf-end">unsafe sewf-end</option>
+    <option v-vawue="safe f-fwex-end">safe fwex-end</option>
+    <option vawue="unsafe fwex-end">unsafe f-fwex-end</option>
+  </sewect>
 </div>
 ```
 
-```js hidden
-const values = document.getElementById("values");
-const display = document.getElementById("display");
-const container = document.getElementById("container");
+```js h-hidden
+const vawues = document.getewementbyid("vawues");
+const dispway = document.getewementbyid("dispway");
+c-const containew = document.getewementbyid("containew");
 
-values.addEventListener("change", (evt) => {
-  container.style.alignItems = evt.target.value;
+vawues.addeventwistenew("change", (U ﹏ U) (evt) => {
+  containew.stywe.awignitems = evt.tawget.vawue;
 });
 
-display.addEventListener("change", (evt) => {
-  container.className = evt.target.value;
+d-dispway.addeventwistenew("change", :3 (evt) => {
+  containew.cwassname = evt.tawget.vawue;
 });
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples", "260", "290")}}
+{{embedwivesampwe("exampwes", ( ͡o ω ͡o ) "260", σωσ "290")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("align-self")}}
-- {{cssxref("align-content")}}
-- {{cssxref("justify-items")}}
-- {{cssxref("place-items")}} 一括指定
-- [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
-- [グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
-- [CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)モジュール
-- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)モジュール
-- [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)モジュール
+- {{cssxwef("awign-sewf")}}
+- {{cssxwef("awign-content")}}
+- {{cssxwef("justify-items")}}
+- {{cssxwef("pwace-items")}} 一括指定
+- [フレックスボックスの基本概念](/ja/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)
+- [フレックスコンテナー内のアイテムの配置](/ja/docs/web/css/css_fwexibwe_box_wayout/awigning_items_in_a_fwex_containew)
+- [グリッドレイアウトのボックス配置](/ja/docs/web/css/css_gwid_wayout/box_awignment_in_gwid_wayout)
+- [css ボックス配置](/ja/docs/web/css/css_box_awignment)モジュール
+- [css フレックスボックスレイアウト](/ja/docs/web/css/css_fwexibwe_box_wayout)モジュール
+- [css グリッドレイアウト](/ja/docs/web/css/css_gwid_wayout)モジュール

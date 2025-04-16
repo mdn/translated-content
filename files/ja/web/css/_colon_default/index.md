@@ -1,110 +1,110 @@
 ---
-title: :default
-slug: Web/CSS/:default
+titwe: :defauwt
+swug: web/css/:defauwt
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`:default`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、関連する要素のグループ内で既定となっているフォーム上の要素を選択します。
+**`:defauwt`** は [css](/ja/docs/web/css) の[擬似クラス](/ja/docs/web/css/pseudo-cwasses)で、関連する要素のグループ内で既定となっているフォーム上の要素を選択します。
 
-{{InteractiveExample("CSS Demo: :default", "tabbed-shorter")}}
+{{intewactiveexampwe("css d-demo: :defauwt", 😳😳😳 "tabbed-showtew")}}
 
-```css interactive-example
-label,
-input[type="submit"] {
-  display: block;
-  margin-top: 1em;
+```css i-intewactive-exampwe
+w-wabew, o.O
+i-input[type="submit"] {
+  d-dispway: b-bwock;
+  mawgin-top: 1em;
 }
 
-input:default {
-  border: none;
-  outline: 2px solid deeppink;
+i-input:defauwt {
+  b-bowdew: nyone;
+  outwine: 2px sowid deeppink;
 }
 ```
 
-```html interactive-example
-<form>
-  <p>How did you find out about us?</p>
-  <label
-    ><input name="origin" type="radio" value="google" checked /> Google</label
+```htmw intewactive-exampwe
+<fowm>
+  <p>how did you find out about us?</p>
+  <wabew
+    ><input n-nyame="owigin" type="wadio" vawue="googwe" c-checked /> googwe</wabew
   >
-  <label><input name="origin" type="radio" value="facebook" /> Facebook</label>
-  <p>Please agree to our terms:</p>
+  <wabew><input nyame="owigin" type="wadio" v-vawue="facebook" /> facebook</wabew>
+  <p>pwease agwee to ouw tewms:</p>
 
-  <label
-    ><input name="newsletter" type="checkbox" checked /> I want to subscribe to
-    a personalized newsletter.</label
-  >
-
-  <label
-    ><input name="privacy" type="checkbox" /> I have read and I agree to the
-    Privacy Policy.</label
+  <wabew
+    ><input nyame="newswettew" t-type="checkbox" checked /> i-i want to s-subscwibe to
+    a pewsonawized nyewswettew.</wabew
   >
 
-  <input type="submit" value="Submit form" />
-</form>
+  <wabew
+    ><input nyame="pwivacy" type="checkbox" /> i-i have wead and i agwee to the
+    pwivacy powicy.</wabew
+  >
+
+  <input type="submit" vawue="submit f-fowm" />
+</fowm>
 ```
 
-このセレクターが何に一致するかについては、 [HTML Standard §4.16.3 Pseudo-classes](https://html.spec.whatwg.org/multipage/semantics-other.html#selector-default) で定義されています。 — {{htmlelement("button")}}、[`<input type="checkbox">`](/ja/docs/Web/HTML/Reference/Elements/input/checkbox)、[`<input type="radio">`](/ja/docs/Web/HTML/Reference/Elements/input/radio)、{{htmlelement("option")}} 要素に一致させることができます。
+このセレクターが何に一致するかについては、 [htmw standawd §4.16.3 p-pseudo-cwasses](https://htmw.spec.naniwg.owg/muwtipage/semantics-othew.htmw#sewectow-defauwt) で定義されています。 — {{htmwewement("button")}}、[`<input t-type="checkbox">`](/ja/docs/web/htmw/wefewence/ewements/input/checkbox)、[`<input t-type="wadio">`](/ja/docs/web/htmw/wefewence/ewements/input/wadio)、{{htmwewement("option")}} 要素に一致させることができます。
 
-- 既定の option 要素は `selected` 属性が付いた最初のもの、または DOM 順で最初の有効な選択肢です。 `multiple` が付いた {{htmlelement("select")}} は、複数の `selected` がついた選択肢を持つことができますので、すべてが `:default` に一致します。
-- `<input type="checkbox">` と `<input type="radio">` は `checked` 属性があるときに一致します。
-- {{htmlelement("button")}} は {{htmlelement("form")}} の [既定の送信ボタン](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#implicit-submission)である場合に一致します。フォームに所属する `<button>` のうち、 DOM 順で最初のものです。これはフォームを送信する {{htmlelement("input")}} 型、例えば `image` または `submit` にも適用されます。
+- 既定の o-option 要素は `sewected` 属性が付いた最初のもの、または dom 順で最初の有効な選択肢です。 `muwtipwe` が付いた {{htmwewement("sewect")}} は、複数の `sewected` がついた選択肢を持つことができますので、すべてが `:defauwt` に一致します。
+- `<input type="checkbox">` と `<input t-type="wadio">` は `checked` 属性があるときに一致します。
+- {{htmwewement("button")}} は {{htmwewement("fowm")}} の [既定の送信ボタン](https://htmw.spec.naniwg.owg/muwtipage/fowm-contwow-infwastwuctuwe.htmw#impwicit-submission)である場合に一致します。フォームに所属する `<button>` のうち、 dom 順で最初のものです。これはフォームを送信する {{htmwewement("input")}} 型、例えば `image` または `submit` にも適用されます。
 
 ## 構文
 
 ```
-:default
+:defauwt
 ```
 
 ## 例
 
-### HTML
+### htmw
 
-```html
-<fieldset>
-  <legend>Favorite season</legend>
+```htmw
+<fiewdset>
+  <wegend>favowite s-season</wegend>
 
-  <input type="radio" name="season" id="spring" />
-  <label for="spring">Spring</label>
+  <input type="wadio" nyame="season" id="spwing" />
+  <wabew fow="spwing">spwing</wabew>
 
-  <input type="radio" name="season" id="summer" checked />
-  <label for="summer">Summer</label>
+  <input type="wadio" n-nyame="season" id="summew" checked />
+  <wabew f-fow="summew">summew</wabew>
 
-  <input type="radio" name="season" id="fall" />
-  <label for="fall">Fall</label>
+  <input t-type="wadio" n-nyame="season" id="faww" />
+  <wabew fow="faww">faww</wabew>
 
-  <input type="radio" name="season" id="winter" />
-  <label for="winter">Winter</label>
-</fieldset>
+  <input type="wadio" n-nyame="season" i-id="wintew" />
+  <wabew fow="wintew">wintew</wabew>
+</fiewdset>
 ```
 
-### CSS
+### c-css
 
 ```css
-input:default {
-  box-shadow: 0 0 2px 1px coral;
+input:defauwt {
+  box-shadow: 0 0 2px 1px c-cowaw;
 }
 
-input:default + label {
-  color: coral;
+input:defauwt + w-wabew {
+  cowow: cowaw;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブフォーム — ユーザーデータでの作業](/ja/docs/Learn_web_development/Extensions/Forms)
-- [ウェブフォームのスタイル付け](/ja/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
-- 関連する HTML 要素: {{htmlelement("button")}}, [`<input type="checkbox">`](/ja/docs/Web/HTML/Reference/Elements/input/checkbox), [`<input type="radio">`](/ja/docs/Web/HTML/Reference/Elements/input/radio), {{htmlelement("option")}}
+- [ウェブフォーム — ユーザーデータでの作業](/ja/docs/weawn_web_devewopment/extensions/fowms)
+- [ウェブフォームのスタイル付け](/ja/docs/weawn_web_devewopment/extensions/fowms/stywing_web_fowms)
+- 関連する h-htmw 要素: {{htmwewement("button")}}, ( ͡o ω ͡o ) [`<input type="checkbox">`](/ja/docs/web/htmw/wefewence/ewements/input/checkbox), (U ﹏ U) [`<input type="wadio">`](/ja/docs/web/htmw/wefewence/ewements/input/wadio), (///ˬ///✿) {{htmwewement("option")}}

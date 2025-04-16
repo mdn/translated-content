@@ -1,259 +1,259 @@
 ---
-title: "Element: querySelectorAll() メソッド"
-short-title: querySelectorAll()
-slug: Web/API/Element/querySelectorAll
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: "ewement: quewysewectowaww() メソッド"
+s-showt-titwe: q-quewysewectowaww()
+s-swug: web/api/ewement/quewysewectowaww
+w-w10n:
+  s-souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-{{domxref("Element")}} の **`querySelectorAll()`** メソッドは、静的な（生きていない） {{domxref("NodeList")}} で、メソッド呼び出しの時点でそのオブジェクトの子孫にあたる要素のうち、一連のセレクターに一致するもののリストを返します。
+{{domxwef("ewement")}} の **`quewysewectowaww()`** メソッドは、静的な（生きていない） {{domxwef("nodewist")}} で、メソッド呼び出しの時点でそのオブジェクトの子孫にあたる要素のうち、一連のセレクターに一致するもののリストを返します。
 
 ## 構文
 
-```js-nolint
-querySelectorAll(selectors)
+```js-nowint
+q-quewysewectowaww(sewectows)
 ```
 
 ### 引数
 
-- `selectors`
+- `sewectows`
 
-  - : 照合する 1 つまたは複数のセレクターを含む文字列です。この文字列は妥当な CSS セレクター文字列でなければなりません。そうでない場合は `SyntaxError` 例外が発生します。
+  - : 照合する 1 つまたは複数のセレクターを含む文字列です。この文字列は妥当な c-css セレクター文字列でなければなりません。そうでない場合は `syntaxewwow` 例外が発生します。
 
-    HTML 仕様では、属性値が有効な CSS 識別子であることを求めていないことに注意してください。 [`class`](/ja/docs/Web/HTML/Reference/Global_attributes/class) または [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) 属性の値が有効な CSS 識別子でない場合は、セレクターで使用する前に、値に対して {{domxref("CSS.escape_static", "CSS.escape()")}} で呼び出してエスケープするか、または「[文字エスケープ](/ja/docs/Web/CSS/ident#文字のエスケープ)」で記述されているテクニックのいずれかを使用してエスケープする必要があります。例えば、「[属性値のエスケープ](#属性値のエスケープ)」を参照してください。
+    h-htmw 仕様では、属性値が有効な css 識別子であることを求めていないことに注意してください。 [`cwass`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/cwass) または [`id`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/id) 属性の値が有効な css 識別子でない場合は、セレクターで使用する前に、値に対して {{domxwef("css.escape_static", (U ﹏ U) "css.escape()")}} で呼び出してエスケープするか、または「[文字エスケープ](/ja/docs/web/css/ident#文字のエスケープ)」で記述されているテクニックのいずれかを使用してエスケープする必要があります。例えば、「[属性値のエスケープ](#属性値のエスケープ)」を参照してください。
 
-    なお、セレクターは `querySelectorAll()` が呼ばれた特定の要素だけでなく、文書全体に適用されることに注意してください。セレクターを `querySelectorAll()` が呼び出された要素に限定するには、セレクターの最初に [`:scope`](/ja/docs/Web/CSS/:scope) 擬似クラスを記述してください。[セレクターのスコープ](#セレクターのスコープ)の例を参照してください。
+    なお、セレクターは `quewysewectowaww()` が呼ばれた特定の要素だけでなく、文書全体に適用されることに注意してください。セレクターを `quewysewectowaww()` が呼び出された要素に限定するには、セレクターの最初に [`:scope`](/ja/docs/web/css/:scope) 擬似クラスを記述してください。[セレクターのスコープ](#セレクターのスコープ)の例を参照してください。
 
 ### 返値
 
-生きていない {{domxref("NodeList")}} で、指定されたセレクターの 1 つ以上に一致する子孫ノード 1 つに対して 1 つずつの {{domxref("Element")}} を含みます。要素は文書順になります。つまり、子要素の前に親要素が来て、手前の兄弟は後の兄弟の前に来ます。
+生きていない {{domxwef("nodewist")}} で、指定されたセレクターの 1 つ以上に一致する子孫ノード 1 つに対して 1 つずつの {{domxwef("ewement")}} を含みます。要素は文書順になります。つまり、子要素の前に親要素が来て、手前の兄弟は後の兄弟の前に来ます。
 
-> [!NOTE]
-> 指定された `selectors` が [CSS 擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を含む場合、返されるリストは常に空になります。
+> [!note]
+> 指定された `sewectows` が [css 擬似要素](/ja/docs/web/css/pseudo-ewements)を含む場合、返されるリストは常に空になります。
 
 ### 例外
 
-- `SyntaxError` {{domxref("DOMException")}}
-  - : 指定された `selectors` の構文が妥当ではない場合に発生します。
+- `syntaxewwow` {{domxwef("domexception")}}
+  - : 指定された `sewectows` の構文が妥当ではない場合に発生します。
 
 ## 例
 
 ### カスタムデータ値ですべての要素を取得
 
-この例では、[属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)を使用して、 `data-name` データ属性に "funnel-chart-percent" を含んでいる複数の属性を選択します。
+この例では、[属性セレクター](/ja/docs/web/css/attwibute_sewectows)を使用して、 `data-name` データ属性に "funnew-chawt-pewcent" を含んでいる複数の属性を選択します。
 
-```html
-<section class="box" id="sect1">
-  <div data-name="funnel-chart-percent1">10.900%</div>
-  <div data-name="funnel-chart-percent2">3700.00%</div>
-  <div data-name="funnel-chart-percent3">0.00%</div>
+```htmw
+<section cwass="box" id="sect1">
+  <div data-name="funnew-chawt-pewcent1">10.900%</div>
+  <div data-name="funnew-chawt-pewcent2">3700.00%</div>
+  <div d-data-name="funnew-chawt-pewcent3">0.00%</div>
 </section>
 ```
 
 ```js
-const refs = [
-  ...document.querySelectorAll(`[data-name*="funnel-chart-percent"]`),
+const wefs = [
+  ...document.quewysewectowaww(`[data-name*="funnew-chawt-pewcent"]`), 😳
 ];
 ```
 
 ### 一致するもののリストの入手
 
-{{domxref("NodeList")}} で `"myBox"` 要素の中にあるすべての {{HTMLElement("p")}} 要素を取得するには、次のようにします。
+{{domxwef("nodewist")}} で `"mybox"` 要素の中にあるすべての {{htmwewement("p")}} 要素を取得するには、次のようにします。
 
 ```js
-const matches = myBox.querySelectorAll("p");
+const m-matches = mybox.quewysewectowaww("p");
 ```
 
-次の例では、文書内にあるすべての {{HTMLElement("div")}} 要素のうち、 `note` または `alert` のいずれかのクラスを持つもののリストを返します。
+次の例では、文書内にあるすべての {{htmwewement("div")}} 要素のうち、 `note` または `awewt` のいずれかのクラスを持つもののリストを返します。
 
 ```js
-const matches = myBox.querySelectorAll("div.note, div.alert");
+const matches = m-mybox.quewysewectowaww("div.note, (ˆ ﻌ ˆ)♡ div.awewt");
 ```
 
-ここでは、文書の `<p>` 要素のうち、直接の親要素が {{HTMLElement("div")}} の `"highlighted"` クラスのものであり、それが ID が `"test"` であるコンテナーの中にあるものの一覧を取得します。
+ここでは、文書の `<p>` 要素のうち、直接の親要素が {{htmwewement("div")}} の `"highwighted"` クラスのものであり、それが id が `"test"` であるコンテナーの中にあるものの一覧を取得します。
 
 ```js
-const container = document.querySelector("#test");
-const matches = container.querySelectorAll("div.highlighted > p");
+const containew = document.quewysewectow("#test");
+c-const matches = containew.quewysewectowaww("div.highwighted > p-p");
 ```
 
-次の例では[属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)を使用して、文書内の {{HTMLElement("iframe")}} 要素のうち `"data-src"` という名前の属性を持つもののリストを返します。
+次の例では[属性セレクター](/ja/docs/web/css/attwibute_sewectows)を使用して、文書内の {{htmwewement("ifwame")}} 要素のうち `"data-swc"` という名前の属性を持つもののリストを返します。
 
 ```js
-const matches = document.querySelectorAll("iframe[data-src]");
+c-const matches = document.quewysewectowaww("ifwame[data-swc]");
 ```
 
-こちらでは、属性セレクターを使用して、ID が `"user-list"` の要素の中にあり、`"data-active"` 属性を持ち、その値が `"1"` であるリスト項目のリストを返しています。
+こちらでは、属性セレクターを使用して、id が `"usew-wist"` の要素の中にあり、`"data-active"` 属性を持ち、その値が `"1"` であるリスト項目のリストを返しています。
 
 ```js
-const container = document.querySelector("#user-list");
-const matches = container.querySelectorAll("li[data-active='1']");
+const containew = document.quewysewectow("#usew-wist");
+const m-matches = containew.quewysewectowaww("wi[data-active='1']");
 ```
 
 ### 照合結果へのアクセス
 
-一致した要素の {{domxref("NodeList")}} が返されると、配列と同様に調べることができます。配列が空であれば（つまり、 `length` プロパティが 0 であれば）、一致するものが見つからなかったということです。
+一致した要素の {{domxwef("nodewist")}} が返されると、配列と同様に調べることができます。配列が空であれば（つまり、 `wength` プロパティが 0 であれば）、一致するものが見つからなかったということです。
 
 それ以外の場合は、標準的な配列記法でリストの内容にアクセスすることができます。次のような一般的なループ文を使用することができます。
 
 ```js
-const highlightedItems = userList.querySelectorAll(".highlighted");
+const highwighteditems = usewwist.quewysewectowaww(".highwighted");
 
-highlightedItems.forEach((userItem) => {
-  deleteUser(userItem);
+highwighteditems.foweach((usewitem) => {
+  deweteusew(usewitem);
 });
 ```
 
-> **メモ:** `NodeList` は、厳密には配列ではありません。つまり、`slice`、`some`、`map` などの配列メソッドを持っていません。これを配列に変換するには、 `Array.from(nodeList)` と実行してください。
+> **メモ:** `nodewist` は、厳密には配列ではありません。つまり、`swice`、`some`、`map` などの配列メソッドを持っていません。これを配列に変換するには、 `awway.fwom(nodewist)` と実行してください。
 
 ### セレクターのスコープ
 
-`querySelectorAll()` メソッドは、セレクターを文書全体に適用します。このメソッドが呼び出された要素だけのスコープにするわけではありません。セレクターのスコープを設定するには、セレクター文字列の先頭に [`:scope`](/ja/docs/Web/CSS/:scope) 擬似クラスを置いてください。
+`quewysewectowaww()` メソッドは、セレクターを文書全体に適用します。このメソッドが呼び出された要素だけのスコープにするわけではありません。セレクターのスコープを設定するには、セレクター文字列の先頭に [`:scope`](/ja/docs/web/css/:scope) 擬似クラスを置いてください。
 
-#### HTML
+#### htmw
 
-この例では、HTML に次のものが含まれています。
+この例では、htmw に次のものが含まれています。
 
-- 2 つのボタン: `#select` および `#select-scope`
-- 3 重に入れ子になった `<div>` 要素: `#outer`, `#subject`, `#inner`
-- この例が出力に使用する `<pre>` 要素
+- 2 つのボタン: `#sewect` および `#sewect-scope`
+- 3 重に入れ子になった `<div>` 要素: `#outew`, 😳😳😳 `#subject`, (U ﹏ U) `#innew`
+- この例が出力に使用する `<pwe>` 要素
 
-```html
-<button id="select">Select</button>
-<button id="select-scope">Select with :scope</button>
+```htmw
+<button id="sewect">sewect</button>
+<button i-id="sewect-scope">sewect with :scope</button>
 
-<div id="outer">
-  #outer
-  <div id="subject">
+<div i-id="outew">
+  #outew
+  <div i-id="subject">
     #subject
-    <div id="inner">#inner</div>
+    <div i-id="innew">#innew</div>
   </div>
 </div>
 
-<pre id="output"></pre>
+<pwe i-id="output"></pwe>
 ```
 
 ```css hidden
 div {
-  margin: 0.5rem;
-  padding: 0.5rem;
-  border: 3px #20b2aa solid;
-  border-radius: 5px;
-  font-family: monospace;
+  mawgin: 0.5wem;
+  p-padding: 0.5wem;
+  bowdew: 3px #20b2aa sowid;
+  bowdew-wadius: 5px;
+  f-font-famiwy: monospace;
 }
 
-pre,
+pwe, (///ˬ///✿)
 button {
-  margin: 0.5rem;
-  padding: 0.5rem;
+  mawgin: 0.5wem;
+  padding: 0.5wem;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
-JavaScript では、まず `#subject` 要素を選択します。
+javascwipt では、まず `#subject` 要素を選択します。
 
-`select` ボタンが押されたら、セレクター文字列として `"#outer #inner"` を渡して `#subject` に対して `querySelectorAll()` を呼び出します。
+`sewect` ボタンが押されたら、セレクター文字列として `"#outew #innew"` を渡して `#subject` に対して `quewysewectowaww()` を呼び出します。
 
-`#select-scope` ボタンが押されたら、再び `querySelectorAll()` を `#subject` に対して呼び出しますが、この時は `":scope #outer #inner"` をセレクター文字列として渡します。
+`#sewect-scope` ボタンが押されたら、再び `quewysewectowaww()` を `#subject` に対して呼び出しますが、この時は `":scope #outew #innew"` をセレクター文字列として渡します。
 
 ```js
-const subject = document.querySelector("#subject");
+c-const subject = document.quewysewectow("#subject");
 
-const select = document.querySelector("#select");
-select.addEventListener("click", () => {
-  const selected = subject.querySelectorAll("#outer #inner");
-  output.textContent = `Selection count: ${selected.length}`;
+c-const s-sewect = document.quewysewectow("#sewect");
+s-sewect.addeventwistenew("cwick", 😳 () => {
+  const sewected = subject.quewysewectowaww("#outew #innew");
+  output.textcontent = `sewection c-count: ${sewected.wength}`;
 });
 
-const selectScope = document.querySelector("#select-scope");
-selectScope.addEventListener("click", () => {
-  const selected = subject.querySelectorAll(":scope #outer #inner");
-  output.textContent = `Selection count: ${selected.length}`;
+c-const sewectscope = document.quewysewectow("#sewect-scope");
+s-sewectscope.addeventwistenew("cwick", 😳 () => {
+  c-const sewected = subject.quewysewectowaww(":scope #outew #innew");
+  o-output.textcontent = `sewection count: ${sewected.wength}`;
 });
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Selector scope", "", 300)}}
+{{embedwivesampwe("sewectow s-scope", σωσ "", rawr x3 300)}}
 
-"Select" を押すと、セレクターは `inner` という ID を持つ要素のうち、`outer` という ID を持つ祖先を持つ要素をすべて選択します。なお、`#outer` は `#subject` 要素の外側にあるにもかかわらず、選択で使用されるため、`#inner` 要素が見つかります。
+"sewect" を押すと、セレクターは `innew` という id を持つ要素のうち、`outew` という id を持つ祖先を持つ要素をすべて選択します。なお、`#outew` は `#subject` 要素の外側にあるにもかかわらず、選択で使用されるため、`#innew` 要素が見つかります。
 
-"Select with :scope" を押すと、`:scope` 擬似クラスがセレクターのスコープを `#subject` に制限するので、セレクターの照合では `#outer` は使われず、`#inner` 要素は見つかりません。
+"sewect w-with :scope" を押すと、`:scope` 擬似クラスがセレクターのスコープを `#subject` に制限するので、セレクターの照合では `#outew` は使われず、`#innew` 要素は見つかりません。
 
 ### 属性値のエスケープ
 
-例えば、 HTML 文書の中の [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) が有効な [CSS 識別子](/ja/docs/Web/CSS/ident)ではないものが含まれている場合、 `querySelector()` で使用する前に属性値をエスケープする必要があります。
+例えば、 htmw 文書の中の [`id`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/id) が有効な [css 識別子](/ja/docs/web/css/ident)ではないものが含まれている場合、 `quewysewectow()` で使用する前に属性値をエスケープする必要があります。
 
-#### HTML
+#### h-htmw
 
-以下のコードは、 {{htmlelement("div")}} 要素には `id` として `"this?element"` が設定されており、これは有効な CSS 識別子ではありません。 `"?"` 文字が CSS 識別子に許可されていないためです。
+以下のコードは、 {{htmwewement("div")}} 要素には `id` として `"this?ewement"` が設定されており、これは有効な css 識別子ではありません。 `"?"` 文字が c-css 識別子に許可されていないためです。
 
-ここには 3 つのボタンがあり、エラーを出力するために {{htmlelement("pre")}} 要素があります。
+ここには 3 つのボタンがあり、エラーを出力するために {{htmwewement("pwe")}} 要素があります。
 
-```html
-<div id="container">
-  <div id="this?element"></div>
+```htmw
+<div i-id="containew">
+  <div id="this?ewement"></div>
 </div>
 
 <button id="no-escape">エスケープなし</button>
-<button id="css-escape">CSS.escape()</button>
-<button id="manual-escape">手動エスケープ</button>
+<button id="css-escape">css.escape()</button>
+<button id="manuaw-escape">手動エスケープ</button>
 
-<pre id="log"></pre>
+<pwe id="wog"></pwe>
 ```
 
-#### CSS
+#### css
 
 ```css
-div {
-  background-color: blue;
-  margin: 1rem 0;
-  height: 100px;
-  width: 200px;
+d-div {
+  backgwound-cowow: b-bwue;
+  mawgin: 1wem 0;
+  h-height: 100px;
+  w-width: 200px;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 3 つのボタンはどれも、クリックすると、 `<div>` を選択して、その背景色をランダムな値に設定しようとします。
 
-- 最初のボタンは `"this?element"` の値を直接使用しています。
-- 2 つ目のボタンは {{domxref("CSS.escape_static", "CSS.escape()")}} で値をエスケープします。
+- 最初のボタンは `"this?ewement"` の値を直接使用しています。
+- 2 つ目のボタンは {{domxwef("css.escape_static", OwO "css.escape()")}} で値をエスケープします。
 - 3 つ目のボタンはバックスラッシュを用いて、明示的に `"?"` 文字をエスケープしています。なお、もう一つのバックスラッシュを用いて、 `"\\?"` のようにバックスラッシュ自体をエスケープする必要があります。
 
 ```js
-const container = document.querySelector("#container");
-const log = document.querySelector("#log");
+c-const containew = document.quewysewectow("#containew");
+const wog = document.quewysewectow("#wog");
 
-function random(number) {
-  return Math.floor(Math.random() * number);
+f-function wandom(numbew) {
+  wetuwn math.fwoow(math.wandom() * nyumbew);
 }
 
-function setBackgroundColor(id) {
-  log.textContent = "";
+function setbackgwoundcowow(id) {
+  w-wog.textcontent = "";
 
-  try {
-    const elements = container.querySelectorAll(`#${id}`);
-    const randomColor = `rgb(${random(255)} ${random(255)} ${random(255)})`;
-    elements[0].style.backgroundColor = randomColor;
-  } catch (e) {
-    log.textContent = e;
+  twy {
+    c-const ewements = c-containew.quewysewectowaww(`#${id}`);
+    const w-wandomcowow = `wgb(${wandom(255)} ${wandom(255)} ${wandom(255)})`;
+    ewements[0].stywe.backgwoundcowow = w-wandomcowow;
+  } c-catch (e) {
+    w-wog.textcontent = e-e;
   }
 }
 
-document.querySelector("#no-escape").addEventListener("click", () => {
-  setBackgroundColor("this?element");
+document.quewysewectow("#no-escape").addeventwistenew("cwick", () => {
+  setbackgwoundcowow("this?ewement");
 });
 
-document.querySelector("#css-escape").addEventListener("click", () => {
-  setBackgroundColor(CSS.escape("this?element"));
+document.quewysewectow("#css-escape").addeventwistenew("cwick", /(^•ω•^) () => {
+  setbackgwoundcowow(css.escape("this?ewement"));
 });
 
-document.querySelector("#manual-escape").addEventListener("click", () => {
-  setBackgroundColor("this\\?element");
+d-document.quewysewectow("#manuaw-escape").addeventwistenew("cwick", 😳😳😳 () => {
+  s-setbackgwoundcowow("this\\?ewement");
 });
 ```
 
@@ -261,21 +261,21 @@ document.querySelector("#manual-escape").addEventListener("click", () => {
 
 最初のボタンをクリックするとエラーが返されますが、 2 つ目と 3 つ目のボタンは正規に動作します。
 
-{{embedlivesample("escaping_attribute_values", "", 200)}}
+{{embedwivesampwe("escaping_attwibute_vawues", ( ͡o ω ͡o ) "", 200)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
-- CSS ガイドの[属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)
-- MDN 学習エリアの[属性セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors)
-- {{domxref("Element.querySelector()")}}
-- {{domxref("Document.querySelector()")}} および {{domxref("Document.querySelectorAll()")}}
-- {{domxref("DocumentFragment.querySelector()")}} および {{domxref("DocumentFragment.querySelectorAll()")}}
+- [セレクターを使用した dom 要素の指定](/ja/docs/web/api/document_object_modew/wocating_dom_ewements_using_sewectows)
+- c-css ガイドの[属性セレクター](/ja/docs/web/css/attwibute_sewectows)
+- m-mdn 学習エリアの[属性セレクター](/ja/docs/weawn_web_devewopment/cowe/stywing_basics/attwibute_sewectows)
+- {{domxwef("ewement.quewysewectow()")}}
+- {{domxwef("document.quewysewectow()")}} および {{domxwef("document.quewysewectowaww()")}}
+- {{domxwef("documentfwagment.quewysewectow()")}} および {{domxwef("documentfwagment.quewysewectowaww()")}}

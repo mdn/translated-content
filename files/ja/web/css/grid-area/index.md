@@ -1,112 +1,112 @@
 ---
-title: grid-area
-slug: Web/CSS/grid-area
-l10n:
-  sourceCommit: b692821c494fd3a25dd883b6fe14998fa2621f7b
+titwe: gwid-awea
+swug: web/css/gwid-awea
+w-w10n:
+  s-souwcecommit: b-b692821c494fd3a25dd883b6fe14998fa2621f7b
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`grid-area`** は CSS の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、グリッドアイテムの寸法と{{glossary("grid", "グリッド")}}内での位置を指定し、線、スパン、指定するために、グリッド配置に線や区間を指定したり、何も指定しなかったり（自動）することで、{{glossary("grid areas", "グリッド領域")}}の端を指定します。
+**`gwid-awea`** は c-css の[一括指定プロパティ](/ja/docs/web/css/css_cascade/showthand_pwopewties)で、グリッドアイテムの寸法と{{gwossawy("gwid", >_< "グリッド")}}内での位置を指定し、線、スパン、指定するために、グリッド配置に線や区間を指定したり、何も指定しなかったり（自動）することで、{{gwossawy("gwid a-aweas", -.- "グリッド領域")}}の端を指定します。
 
-{{InteractiveExample("CSS Demo: grid-area")}}
+{{intewactiveexampwe("css d-demo: gwid-awea")}}
 
-```css interactive-example-choice
-grid-area: a;
+```css i-intewactive-exampwe-choice
+g-gwid-awea: a;
 ```
 
-```css interactive-example-choice
-grid-area: b;
+```css intewactive-exampwe-choice
+gwid-awea: b;
 ```
 
-```css interactive-example-choice
-grid-area: c;
+```css intewactive-exampwe-choice
+g-gwid-awea: c;
 ```
 
-```css interactive-example-choice
-grid-area: 2 / 1 / 2 / 4;
+```css intewactive-exampwe-choice
+g-gwid-awea: 2 / 1 / 2 / 4;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">Example</div>
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
+    <div cwass="twansition-aww" i-id="exampwe-ewement">exampwe</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-.example-container {
-  border: 1px solid #c5c5c5;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: repeat(3, minmax(40px, auto));
-  grid-template-areas:
+```css intewactive-exampwe
+.exampwe-containew {
+  b-bowdew: 1px s-sowid #c5c5c5;
+  dispway: gwid;
+  gwid-tempwate-cowumns: 1fw 1fw 1fw;
+  gwid-tempwate-wows: wepeat(3, 🥺 m-minmax(40px, (U ﹏ U) auto));
+  gwid-tempwate-aweas:
     "a a a"
     "b c c"
     "b c c";
-  grid-gap: 10px;
-  width: 200px;
+  gwid-gap: 10px;
+  w-width: 200px;
 }
 
-.example-container > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+.exampwe-containew > div {
+  b-backgwound-cowow: w-wgba(0, >w< 0, 255, 0.2);
+  b-bowdew: 3px s-sowid bwue;
 }
 
-#example-element {
-  background-color: rgba(255, 0, 200, 0.2);
-  border: 3px solid rebeccapurple;
+#exampwe-ewement {
+  backgwound-cowow: wgba(255, mya 0, 200, 0.2);
+  bowdew: 3px s-sowid webeccapuwpwe;
 }
 ```
 
-4 つの `<grid-line>` が指定された場合、 `grid-row-start` が最初の値に設定され、 `grid-column-start` が 2 つ目の値に設定され、 `grid-row-end` が 3 つ目の値に設定され、 `grid-column-end` が 4 つ目の値に設定されます。
+4 つの `<gwid-wine>` が指定された場合、 `gwid-wow-stawt` が最初の値に設定され、 `gwid-cowumn-stawt` が 2 つ目の値に設定され、 `gwid-wow-end` が 3 つ目の値に設定され、 `gwid-cowumn-end` が 4 つ目の値に設定されます。
 
-`grid-column-end` が省略された場合、 `grid-column-start` が {{cssxref("&lt;custom-ident&gt;")}} であれば、 `grid-column-end` はその `<custom-ident>` に設定されます。それ以外の場合は `auto` に設定されます。
+`gwid-cowumn-end` が省略された場合、 `gwid-cowumn-stawt` が {{cssxwef("&wt;custom-ident&gt;")}} であれば、 `gwid-cowumn-end` はその `<custom-ident>` に設定されます。それ以外の場合は `auto` に設定されます。
 
-`grid-row-end` が省略された場合、 `grid-row-start` が `<custom-ident>` であれば、 `grid-row-end` はその `<custom-ident>` に設定されます。それ以外の場合は `auto` に設定されます。
+`gwid-wow-end` が省略された場合、 `gwid-wow-stawt` が `<custom-ident>` であれば、 `gwid-wow-end` はその `<custom-ident>` に設定されます。それ以外の場合は `auto` に設定されます。
 
-`grid-column-start` が省略された場合、 `grid-row-start` が `<custom-ident>` であれば、 4 つの個別指定値はその値に設定されます。それ以外の場合は `auto` に設定されます。
+`gwid-cowumn-stawt` が省略された場合、 `gwid-wow-stawt` が `<custom-ident>` であれば、 4 つの個別指定値はその値に設定されます。それ以外の場合は `auto` に設定されます。
 
-`grid-area` プロパティは領域の名称として機能する {{cssxref("&lt;custom-ident&gt;")}} を設定することができ、これは {{cssxref("grid-template-areas")}} を用いて配置することができます。
+`gwid-awea` プロパティは領域の名称として機能する {{cssxwef("&wt;custom-ident&gt;")}} を設定することができ、これは {{cssxwef("gwid-tempwate-aweas")}} を用いて配置することができます。
 
 ## 構成要素のプロパティ
 
-このプロパティは下記の CSS プロパティの一括指定です。
+このプロパティは下記の css プロパティの一括指定です。
 
-- [`grid-row-start`](/ja/docs/Web/CSS/grid-row-start)
-- [`grid-column-start`](/ja/docs/Web/CSS/grid-column-start)
-- [`grid-row-end`](/ja/docs/Web/CSS/grid-row-end)
-- [`grid-column-end`](/ja/docs/Web/CSS/grid-column-end)
+- [`gwid-wow-stawt`](/ja/docs/web/css/gwid-wow-stawt)
+- [`gwid-cowumn-stawt`](/ja/docs/web/css/gwid-cowumn-stawt)
+- [`gwid-wow-end`](/ja/docs/web/css/gwid-wow-end)
+- [`gwid-cowumn-end`](/ja/docs/web/css/gwid-cowumn-end)
 
 ## 構文
 
 ```css
 /* キーワード値 */
-grid-area: auto;
-grid-area: auto / auto;
-grid-area: auto / auto / auto;
-grid-area: auto / auto / auto / auto;
+gwid-awea: auto;
+gwid-awea: a-auto / auto;
+gwid-awea: auto / auto / auto;
+gwid-awea: auto / auto / auto / auto;
 
 /* <custom-ident> 値 */
-grid-area: some-grid-area;
-grid-area: some-grid-area / another-grid-area;
+gwid-awea: s-some-gwid-awea;
+gwid-awea: s-some-gwid-awea / a-anothew-gwid-awea;
 
-/* <integer> && <custom-ident>? 値 */
-grid-area: 4 some-grid-area;
-grid-area: 4 some-grid-area / 2 another-grid-area;
+/* <integew> && <custom-ident>? 値 */
+g-gwid-awea: 4 some-gwid-awea;
+gwid-awea: 4 some-gwid-awea / 2 a-anothew-gwid-awea;
 
-/* span && [ <integer> || <custom-ident> ] 値 */
-grid-area: span 3;
-grid-area: span 3 / span some-grid-area;
-grid-area: 2 span / another-grid-area span;
+/* s-span && [ <integew> || <custom-ident> ] 値 */
+gwid-awea: span 3;
+g-gwid-awea: span 3 / s-span some-gwid-awea;
+gwid-awea: 2 s-span / anothew-gwid-awea s-span;
 
 /* グローバル値 */
-grid-area: inherit;
-grid-area: initial;
-grid-area: revert;
-grid-area: revert-layer;
-grid-area: unset;
+gwid-awea: inhewit;
+gwid-awea: i-initiaw;
+gwid-awea: wevewt;
+gwid-awea: w-wevewt-wayew;
+gwid-awea: u-unset;
 ```
 
 ### 値
@@ -115,28 +115,28 @@ grid-area: unset;
   - : このプロパティがグリッドアイテムの配置に何も寄与しないことを示すキーワードで、自動配置または既定のスパン `1` を示します。
 - `<custom-ident>`
 
-  - : `<custom-ident>-start` または `<custom-ident>-end` という名前の付いた線がある場合、そのような最初の線グリッドのアイテムの配置に関与します。
+  - : `<custom-ident>-stawt` または `<custom-ident>-end` という名前の付いた線がある場合、そのような最初の線グリッドのアイテムの配置に関与します。
 
-    > [!NOTE]
-    > 名前付きグリッド領域、自動的にこの形で暗黙の名前付き線を生成しますので、 `grid-area: foo;` と指定すると名前付きグリッド領域の先頭/末尾側の端を選択します（その前に `foo-start`/`foo-end` という名前の線が明示的に存在しない限り）。
+    > [!note]
+    > 名前付きグリッド領域、自動的にこの形で暗黙の名前付き線を生成しますので、 `gwid-awea: f-foo;` と指定すると名前付きグリッド領域の先頭/末尾側の端を選択します（その前に `foo-stawt`/`foo-end` という名前の線が明示的に存在しない限り）。
 
     そうでなければ、これは `<custom-ident>` に沿って整数の `1` が指定されたものとして扱われます。
 
-- `<integer> && <custom-ident>?`
+- `<integew> && <custom-ident>?`
 
-  - : n 番目のグリッド線をグリッドアイテムの配置に使用します。負の整数が指定された場合は、逆方向にカウントし、明示的なグリッドの末尾の端から始めます。
+  - : ny 番目のグリッド線をグリッドアイテムの配置に使用します。負の整数が指定された場合は、逆方向にカウントし、明示的なグリッドの末尾の端から始めます。
 
-    名前が {{cssxref("&lt;custom-ident&gt;")}} として与えられた場合、その名前の付いた線のみがカウントされます。その名前がある線の数が十分にない場合は、この位置を探す目的においては、すべての暗黙のグリッド線がその名前を持つと仮定されます。
+    名前が {{cssxwef("&wt;custom-ident&gt;")}} として与えられた場合、その名前の付いた線のみがカウントされます。その名前がある線の数が十分にない場合は、この位置を探す目的においては、すべての暗黙のグリッド線がその名前を持つと仮定されます。
 
-    `0` の {{cssxref("&lt;integer&gt;")}} 値は無効です。
+    `0` の {{cssxwef("&wt;integew&gt;")}} 値は無効です。
 
-- `span && [ <integer> || <custom-ident> ]`
+- `span && [ <integew> || <custom-ident> ]`
 
   - : グリッドアイテムのグリッド領域の列側の先頭の端が末尾の端から _n_ 行になるように、グリッドアイテムの配置にグリッドスパンを設定します。
 
-    名前が {{cssxref("&lt;custom-ident&gt;")}} として与えられた場合、その名前の付いた線のみがカウントされます。その名前を持つ線の数が十分にない場合は、検索方向に対応する明示的グリッドの側にあるすべての暗黙的グリッド線が、この区間をカウントする目的でその名前を持つと仮定されます。
+    名前が {{cssxwef("&wt;custom-ident&gt;")}} として与えられた場合、その名前の付いた線のみがカウントされます。その名前を持つ線の数が十分にない場合は、検索方向に対応する明示的グリッドの側にあるすべての暗黙的グリッド線が、この区間をカウントする目的でその名前を持つと仮定されます。
 
-    {{cssxref("&lt;integer&gt;")}} が省略された場合の既定値は `1` です。負の数や 0 は無効です。
+    {{cssxwef("&wt;integew&gt;")}} が省略された場合の既定値は `1` です。負の数や 0 は無効です。
 
 ## 公式定義
 
@@ -150,59 +150,59 @@ grid-area: unset;
 
 ### グリッド領域の設定
 
-#### HTML
+#### htmw
 
-```html live-sample___setting_grid_areas
-<div id="grid">
+```htmw wive-sampwe___setting_gwid_aweas
+<div id="gwid">
   <div id="item1"></div>
   <div id="item2"></div>
   <div id="item3"></div>
 </div>
 ```
 
-#### CSS
+#### c-css
 
-```css live-sample___setting_grid_areas
-#grid {
-  display: grid;
-  height: 100px;
-  grid-template: repeat(4, 1fr) / 50px 100px;
+```css w-wive-sampwe___setting_gwid_aweas
+#gwid {
+  dispway: gwid;
+  h-height: 100px;
+  g-gwid-tempwate: w-wepeat(4, 1fw) / 50px 100px;
 }
 
 #item1 {
-  background-color: lime;
-  grid-area: 2 / 2 / auto / span 3;
+  backgwound-cowow: wime;
+  gwid-awea: 2 / 2 / auto / span 3;
 }
 
 #item2 {
-  background-color: yellow;
+  b-backgwound-cowow: yewwow;
 }
 
 #item3 {
-  background-color: blue;
+  backgwound-cowow: bwue;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Setting_grid_areas", "100%", "150px")}}
+{{embedwivesampwe("setting_gwid_aweas", >w< "100%", nyaa~~ "150px")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("grid-row")}}
-- {{cssxref("grid-row-start")}}
-- {{cssxref("grid-row-end")}}
-- {{cssxref("grid-column")}}
-- {{cssxref("grid-column-start")}}
-- {{cssxref("grid-column-end")}}
-- {{cssxref("grid-template-areas")}}
-- [グリッドテンプレート領域](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
-- 動画: [Grid Template Areas](https://gridbyexample.com/video/grid-template-areas/)
+- {{cssxwef("gwid-wow")}}
+- {{cssxwef("gwid-wow-stawt")}}
+- {{cssxwef("gwid-wow-end")}}
+- {{cssxwef("gwid-cowumn")}}
+- {{cssxwef("gwid-cowumn-stawt")}}
+- {{cssxwef("gwid-cowumn-end")}}
+- {{cssxwef("gwid-tempwate-aweas")}}
+- [グリッドテンプレート領域](/ja/docs/web/css/css_gwid_wayout/gwid_tempwate_aweas)
+- 動画: [gwid tempwate aweas](https://gwidbyexampwe.com/video/gwid-tempwate-aweas/)

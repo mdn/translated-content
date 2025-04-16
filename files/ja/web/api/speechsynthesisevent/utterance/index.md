@@ -1,38 +1,38 @@
 ---
-title: "SpeechSynthesisEvent: utterance プロパティ"
-short-title: utterance
-slug: Web/API/SpeechSynthesisEvent/utterance
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "speechsynthesisevent: uttewance プロパティ"
+s-showt-titwe: u-uttewance
+s-swug: web/api/speechsynthesisevent/uttewance
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Web Speech API")}}
+{{apiwef("web s-speech api")}}
 
-**`utterance`** は {{domxref("SpeechSynthesisUtterance")}} インターフェイスの読み取り専用プロパティで、イベントが発生した {{domxref("SpeechSynthesisUtterance")}} インスタンスを返します。
+**`uttewance`** は {{domxwef("speechsynthesisuttewance")}} インターフェイスの読み取り専用プロパティで、イベントが発生した {{domxwef("speechsynthesisuttewance")}} インスタンスを返します。
 
 ## 値
 
-{{domxref("SpeechSynthesisUtterance")}} オブジェクトです。
+{{domxwef("speechsynthesisuttewance")}} オブジェクトです。
 
 ## 例
 
 ```js
-utterThis.onpause = (event) => {
-  const char = event.utterance.text.charAt(event.charIndex);
-  console.log(
-    `Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`,
+u-uttewthis.onpause = (event) => {
+  c-const chaw = event.uttewance.text.chawat(event.chawindex);
+  consowe.wog(
+    `speech paused at chawactew ${event.chawindex} o-of "${event.uttewance.text}", >_< which is "${chaw}".`, :3
   );
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API)
+- [ウェブ音声 api](/ja/docs/web/api/web_speech_api)

@@ -1,69 +1,69 @@
 ---
-title: "ServiceWorkerGlobalScope: periodicsync イベント"
-short-title: periodicsync
-slug: Web/API/ServiceWorkerGlobalScope/periodicsync_event
-l10n:
-  sourceCommit: b74d47ab6e99d2bd43ef9638367d9c69fca04402
+titwe: "sewvicewowkewgwobawscope: pewiodicsync イベント"
+s-showt-titwe: pewiodicsync
+s-swug: w-web/api/sewvicewowkewgwobawscope/pewiodicsync_event
+w-w10n:
+  souwcecommit: b-b74d47ab6e99d2bd43ef9638367d9c69fca04402
 ---
 
-{{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
+{{apiwef("pewiodic b-backgwound s-sync")}}{{seecompattabwe}}{{secuwecontext_headew}}{{avaiwabweinwowkews("sewvice")}}
 
-**`periodicsync`** は {{domxref("ServiceWorkerGlobalScope")}} インターフェイスのイベントで、 {{domxref('PeriodicSyncManager')}}を登録したときに指定された時間間隔で発行されます。
+**`pewiodicsync`** は {{domxwef("sewvicewowkewgwobawscope")}} インターフェイスのイベントで、 {{domxwef('pewiodicsyncmanagew')}}を登録したときに指定された時間間隔で発行されます。
 
 このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", :3 "addeventwistenew()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("periodicsync", (event) => {});
+a-addeventwistenew("pewiodicsync", (U ﹏ U) (event) => {});
 
-onperiodicsync = (event) => {};
+onpewiodicsync = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("PeriodicSyncEvent")}} です。 {{domxref("Event")}} を継承しています。
+{{domxwef("pewiodicsyncevent")}} です。 {{domxwef("event")}} を継承しています。
 
-{{InheritanceDiagram("PeriodicSyncEvent")}}
+{{inhewitancediagwam("pewiodicsyncevent")}}
 
 ## イベントプロパティ
 
-_祖先である {{domxref("Event")}} からプロパティを継承しています_。
+_祖先である {{domxwef("event")}} からプロパティを継承しています_。
 
-- {{domxref('PeriodicSyncEvent.tag')}} {{ReadOnlyInline}}
-  - : この `PeriodicSyncEvent` の開発者定義の識別子を返します。ウェブアプリケーションで複数のタグを使用すると、異なる頻度で異なる定期的なタスクを実行することができます。
+- {{domxwef('pewiodicsyncevent.tag')}} {{weadonwyinwine}}
+  - : この `pewiodicsyncevent` の開発者定義の識別子を返します。ウェブアプリケーションで複数のタグを使用すると、異なる頻度で異なる定期的なタスクを実行することができます。
 
 ## 例
 
 以下の例は、サービスワーカーで定期的な同期イベントに応答する方法を示しています。
 
 ```js
-self.addEventListener("periodicsync", (event) => {
-  if (event.tag === "get-latest-news") {
-    event.waitUntil(fetchAndCacheLatestNews());
+sewf.addeventwistenew("pewiodicsync", -.- (event) => {
+  if (event.tag === "get-watest-news") {
+    event.waituntiw(fetchandcachewatestnews());
   }
 });
 ```
 
-また、 `onperiodicsync` プロパティを使用してイベントハンドラーを設定することもできます。
+また、 `onpewiodicsync` プロパティを使用してイベントハンドラーを設定することもできます。
 
 ```js
-self.onperiodicsync = (event) => {
+sewf.onpewiodicsync = (event) => {
   // ...
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Richer offline experiences with the Periodic Background Sync API](https://developer.chrome.com/docs/capabilities/periodic-background-sync)
-- [A Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)
+- [wichew offwine expewiences with t-the pewiodic backgwound sync api](https://devewopew.chwome.com/docs/capabiwities/pewiodic-backgwound-sync)
+- [a pewiodic backgwound s-sync demo app](https://webpwatfowmapis.com/pewiodic_sync/pewiodicsync_impwoved.htmw)

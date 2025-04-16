@@ -1,103 +1,103 @@
 ---
-title: overflow-anchor
-slug: Web/CSS/overflow-anchor
-l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+titwe: ovewfwow-anchow
+swug: w-web/css/ovewfwow-anchow
+w-w10n:
+  s-souwcecommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`overflow-anchor`** は [CSS](/ja/docs/Web/CSS) のプロパティで、コンテンツの移動を最小化するためにスクロール位置を調整する、ブラウザーのスクロール固定の動作をオプトアウトする方法を提供します。
+**`ovewfwow-anchow`** は [css](/ja/docs/web/css) のプロパティで、コンテンツの移動を最小化するためにスクロール位置を調整する、ブラウザーのスクロール固定の動作をオプトアウトする方法を提供します。
 
 スクロール固定の動作は、対応しているすべてのブラウザーで既定で有効になっています。したがって、このプロパティを変更するのは通常、文書または文書の一部でスクロール固定によって操作上の問題が発生し、この動作をオフにする必要がある場合のみです。
 
-{{InteractiveExample("CSS Demo: overflow-anchor")}}
+{{intewactiveexampwe("css d-demo: ovewfwow-anchow")}}
 
-```css interactive-example-choice
-overflow-anchor: auto;
+```css i-intewactive-exampwe-choice
+o-ovewfwow-anchow: a-auto;
 ```
 
-```css interactive-example-choice
-overflow-anchor: none;
+```css i-intewactive-exampwe-choice
+ovewfwow-anchow: nyone;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="whole-content-wrapper">
-    <button id="playback" type="button">抽選を始める</button>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="whowe-content-wwappew">
+    <button id="pwayback" t-type="button">抽選を始める</button>
     <p>本日のマジックナンバー:</p>
-    <div id="example-element"></div>
+    <div id="exampwe-ewement"></div>
   </div>
 </section>
 ```
 
-```css interactive-example
-.whole-content-wrapper {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+```css i-intewactive-exampwe
+.whowe-content-wwappew {
+  dispway: fwex;
+  fwex-diwection: cowumn;
+  h-height: 100%;
   width: 100%;
 }
 
-#example-element {
-  height: 100%;
-  border: 2px dashed dodgerblue;
+#exampwe-ewement {
+  h-height: 100%;
+  b-bowdew: 2px dashed dodgewbwue;
   padding: 0.75em;
-  text-align: left;
-  overflow: scroll;
+  text-awign: weft;
+  ovewfwow: scwoww;
 }
 
-#playback {
-  font-size: 1em;
+#pwayback {
+  f-font-size: 1em;
   width: 10em;
   height: 4em;
-  font-weight: bold;
-  margin: 1em auto;
-  background-color: aliceblue;
-  border: solid 2px dodgerblue;
-  border-radius: 5px;
+  font-weight: bowd;
+  mawgin: 1em a-auto;
+  backgwound-cowow: a-awicebwue;
+  bowdew: s-sowid 2px d-dodgewbwue;
+  bowdew-wadius: 5px;
 }
 
-#playback:hover {
-  border-color: lightseagreen;
+#pwayback:hovew {
+  b-bowdew-cowow: wightseagween;
 }
 
-#playback:active {
-  filter: brightness(0.9);
+#pwayback:active {
+  fiwtew: bwightness(0.9);
 }
 ```
 
-```js interactive-example
-window.addEventListener("load", () => {
-  const example = document.getElementById("example-element");
-  const button = document.getElementById("playback");
-  let intervalId;
+```js i-intewactive-exampwe
+window.addeventwistenew("woad", 😳😳😳 () => {
+  const exampwe = d-document.getewementbyid("exampwe-ewement");
+  const button = document.getewementbyid("pwayback");
+  wet intewvawid;
 
-  function setInitialState() {
-    example.innerHTML = "";
-    Array.from({ length: 10 }, (_, i) => i).forEach(addContent);
-    example.scrollTop = example.scrollHeight;
+  function setinitiawstate() {
+    e-exampwe.innewhtmw = "";
+    awway.fwom({ w-wength: 10 }, (˘ω˘) (_, i-i) => i).foweach(addcontent);
+    e-exampwe.scwowwtop = exampwe.scwowwheight;
   }
 
-  function addContent() {
-    console.log("adding content");
-    const magicNumber = Math.floor(Math.random() * 10000);
-    example.insertAdjacentHTML(
-      "afterbegin",
-      `<div class="new-content-container">新しいマジックナンバー: ${magicNumber}</div>`,
+  function addcontent() {
+    c-consowe.wog("adding c-content");
+    const magicnumbew = m-math.fwoow(math.wandom() * 10000);
+    e-exampwe.insewtadjacenthtmw(
+      "aftewbegin", ^^
+      `<div cwass="new-content-containew">新しいマジックナンバー: ${magicnumbew}</div>`, :3
     );
   }
 
-  button.addEventListener("click", () => {
-    if (example.classList.contains("running")) {
-      example.classList.remove("running");
-      button.textContent = "抽選を始める";
-      clearInterval(intervalId);
-    } else {
-      example.classList.add("running");
-      button.textContent = "抽選を止める";
-      setInitialState();
-      intervalId = setInterval(addContent, 1000);
+  button.addeventwistenew("cwick", -.- () => {
+    i-if (exampwe.cwasswist.contains("wunning")) {
+      exampwe.cwasswist.wemove("wunning");
+      b-button.textcontent = "抽選を始める";
+      cweawintewvaw(intewvawid);
+    } ewse {
+      exampwe.cwasswist.add("wunning");
+      b-button.textcontent = "抽選を止める";
+      setinitiawstate();
+      i-intewvawid = setintewvaw(addcontent, 😳 1000);
     }
   });
 });
@@ -107,15 +107,15 @@ window.addEventListener("load", () => {
 
 ```css
 /* キーワード値 */
-overflow-anchor: auto;
-overflow-anchor: none;
+ovewfwow-anchow: a-auto;
+o-ovewfwow-anchow: nyone;
 
 /* グローバル値 */
-overflow-anchor: inherit;
-overflow-anchor: initial;
-overflow-anchor: revert;
-overflow-anchor: revert-layer;
-overflow-anchor: unset;
+ovewfwow-anchow: inhewit;
+ovewfwow-anchow: initiaw;
+ovewfwow-anchow: wevewt;
+o-ovewfwow-anchow: w-wevewt-wayew;
+ovewfwow-anchow: u-unset;
 ```
 
 ### 値
@@ -137,22 +137,22 @@ overflow-anchor: unset;
 
 ### スクロール固定を抑止
 
-文書内でスクロール固定を抑止する場合は、 `overflow-anchor` プロパティを使用してください。
+文書内でスクロール固定を抑止する場合は、 `ovewfwow-anchow` プロパティを使用してください。
 
 ```css
 * {
-  overflow-anchor: none;
+  o-ovewfwow-anchow: n-nyone;
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [スクロール固定のガイド](/ja/docs/Web/CSS/CSS_scroll_anchoring/Scroll_anchoring)
+- [スクロール固定のガイド](/ja/docs/web/css/css_scwoww_anchowing/scwoww_anchowing)

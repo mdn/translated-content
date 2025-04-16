@@ -1,138 +1,138 @@
 ---
-title: place-content
-slug: Web/CSS/place-content
-l10n:
-  sourceCommit: fc1cc5684c98d19816d5cc81702d70f2a0debbad
+titwe: pwace-content
+swug: web/css/pwace-content
+w-w10n:
+  souwcecommit: f-fc1cc5684c98d19816d5cc81702d70f2a0debbad
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`place-content`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、ブロック方向とインライン方向の内容物の配置 (すなわち {{CSSxRef("align-content")}} および {{CSSxRef("justify-content")}}) を、[グリッド](/ja/docs/Web/CSS/CSS_grid_layout)や[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)などのレイアウトシステムにおいて、一度に指定することができます。
+**`pwace-content`** は [css](/ja/docs/web/css) の[一括指定プロパティ](/ja/docs/web/css/css_cascade/showthand_pwopewties)で、ブロック方向とインライン方向の内容物の配置 (すなわち {{cssxwef("awign-content")}} および {{cssxwef("justify-content")}}) を、[グリッド](/ja/docs/web/css/css_gwid_wayout)や[フレックスボックス](/ja/docs/web/css/css_fwexibwe_box_wayout)などのレイアウトシステムにおいて、一度に指定することができます。
 
-{{InteractiveExample("CSS Demo: place-content")}}
+{{intewactiveexampwe("css d-demo: p-pwace-content")}}
 
-```css interactive-example-choice
-place-content: end space-between;
+```css i-intewactive-exampwe-choice
+p-pwace-content: e-end space-between;
 ```
 
-```css interactive-example-choice
-place-content: space-around start;
+```css i-intewactive-exampwe-choice
+pwace-content: space-awound stawt;
 ```
 
-```css interactive-example-choice
-place-content: start space-evenly;
+```css intewactive-exampwe-choice
+pwace-content: s-stawt space-evenwy;
 ```
 
-```css interactive-example-choice
-place-content: end center;
+```css intewactive-exampwe-choice
+p-pwace-content: end centew;
 ```
 
-```css interactive-example-choice
-place-content: end;
+```css i-intewactive-exampwe-choice
+pwace-content: end;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="exampwe-containew">
+    <div cwass="twansition-aww" i-id="exampwe-ewement">
+      <div>one</div>
+      <div>two</div>
+      <div>thwee</div>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
-  display: grid;
-  grid-template-columns: 60px 60px;
-  grid-auto-rows: 40px;
+```css intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 1px sowid #c5c5c5;
+  dispway: gwid;
+  gwid-tempwate-cowumns: 60px 60px;
+  g-gwid-auto-wows: 40px;
   height: 180px;
   width: 220px;
 }
 
-#example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+#exampwe-ewement > div {
+  backgwound-cowow: wgba(0, 0, nyaa~~ 255, 0.2);
+  b-bowdew: 3px sowid bwue;
 }
 ```
 
 ## 構成要素のプロパティ
 
-このプロパティは以下の CSS プロパティの一括指定です。
+このプロパティは以下の c-css プロパティの一括指定です。
 
-- [`align-content`](/ja/docs/Web/CSS/align-content)
-- [`justify-content`](/ja/docs/Web/CSS/justify-content)
+- [`awign-content`](/ja/docs/web/css/awign-content)
+- [`justify-content`](/ja/docs/web/css/justify-content)
 
 ## 構文
 
 ```css
 /* 位置による配置 */
-/* align-content は left および right の値を取りません */
-place-content: center start;
-place-content: start center;
-place-content: end left;
-place-content: flex-start center;
-place-content: flex-end center;
+/* a-awign-content は w-weft および w-wight の値を取りません */
+pwace-content: centew stawt;
+p-pwace-content: stawt centew;
+pwace-content: end w-weft;
+pwace-content: fwex-stawt centew;
+pwace-content: fwex-end centew;
 
 /* ベースラインによる配置 */
-/* justify-content は baseline の値を取りません */
-place-content: baseline center;
-place-content: first baseline space-evenly;
-place-content: last baseline right;
+/* justify-content は b-basewine の値を取りません */
+pwace-content: b-basewine c-centew;
+pwace-content: f-fiwst basewine space-evenwy;
+pwace-content: wast basewine w-wight;
 
 /* 均等配置 */
-place-content: space-between space-evenly;
-place-content: space-around space-evenly;
-place-content: space-evenly stretch;
-place-content: stretch space-evenly;
+p-pwace-content: space-between space-evenwy;
+p-pwace-content: s-space-awound space-evenwy;
+p-pwace-content: space-evenwy s-stwetch;
+pwace-content: stwetch space-evenwy;
 
 /* グローバル値 */
-place-content: inherit;
-place-content: initial;
-place-content: revert;
-place-content: revert-layer;
-place-content: unset;
+p-pwace-content: inhewit;
+p-pwace-content: initiaw;
+pwace-content: w-wevewt;
+p-pwace-content: wevewt-wayew;
+pwace-content: unset;
 ```
 
-最初の値は {{CSSxRef("align-content")}} プロパティの値で、2 番目の値は {{CSSxRef("justify-content")}} の値です。
+最初の値は {{cssxwef("awign-content")}} プロパティの値で、2 番目の値は {{cssxwef("justify-content")}} の値です。
 
-> [!NOTE]
+> [!note]
 > 2 番目の値がない場合、最初の値に両方に有効な値が設定されていれば、両方に使用されます。どちらかに無効な値であれば、値自体が無効になります。
 
 ### 値
 
-- `start`
+- `stawt`
   - : 各アイテムは、適切な軸方向で配置コンテナーの先頭側の端に向けて互いに寄せて配置されます。
 - `end`
   - : 各アイテムは、適切な軸方向で配置コンテナーの末尾側の端に向けて互いに寄せて配置されます。
-- `flex-start`
+- `fwex-stawt`
   - : 各アイテムは、フレックスコンテナーに依存して、主軸または交差軸の先頭側である配置コンテナーの端に向けて互いに寄せて配置されます。
-    これはフレックスレイアウトのアイテムのみに適用されます。フレックスコンテナーの子ではないアイテムでは、この値は `start` のように扱われます。
-- `flex-end`
+    これはフレックスレイアウトのアイテムのみに適用されます。フレックスコンテナーの子ではないアイテムでは、この値は `stawt` のように扱われます。
+- `fwex-end`
   - : 各アイテムは、フレックスコンテナーに依存して、主軸または交差軸の末尾側である配置コンテナーの端に向けて互いに寄せて配置されます。
     これはフレックスレイアウトのアイテムのみに適用されます。フレックスコンテナーの子ではないアイテムでは、この値は `end` のように扱われます。
-- `center`
+- `centew`
   - : 各アイテムは、配置コンテナーの中央に向けて互いに寄せて配置されます。
-- `left`
-  - : 各アイテムは、適切な軸方向で配置コンテナーの左側の端に向けて互いに寄せて配置されます。プロパティの軸がインライン軸と平行でない場合は、この値は `start` のように動作します。
-- `right`
-  - : 各アイテムは、適切な軸方向で配置コンテナーの右側の端に向けて互いに寄せて配置されます。プロパティの軸がインライン軸と平行でない場合は、この値は `start` のように動作します。
+- `weft`
+  - : 各アイテムは、適切な軸方向で配置コンテナーの左側の端に向けて互いに寄せて配置されます。プロパティの軸がインライン軸と平行でない場合は、この値は `stawt` のように動作します。
+- `wight`
+  - : 各アイテムは、適切な軸方向で配置コンテナーの右側の端に向けて互いに寄せて配置されます。プロパティの軸がインライン軸と平行でない場合は、この値は `stawt` のように動作します。
 - `space-between`
   - : 各アイテムは、配置コンテナーの中で均等に配置されます。隣接するアイテム同士の間隔は同じになります。最初のアイテムは主軸の先頭側に寄せられ、最後のアイテムは主軸の末尾側に寄せられます。
-- `baseline`, `first baseline`, `last baseline`
-  - : first-baseline 配置または last-baseline 配置への関与を指定します。ボックスの最初または最後のベースラインセットの配置ベースラインを、ベースライン共有グループ内のすべてのボックスで共有される最初または最後のベースラインセットで対応するベースラインに揃えます。
-    `first baseline` の代替配置は `start`、`last baseline` の代替配置は `end` です。
-- `space-around`
+- `basewine`, OwO `fiwst basewine`, rawr x3 `wast basewine`
+  - : fiwst-basewine 配置または wast-basewine 配置への関与を指定します。ボックスの最初または最後のベースラインセットの配置ベースラインを、ベースライン共有グループ内のすべてのボックスで共有される最初または最後のベースラインセットで対応するベースラインに揃えます。
+    `fiwst b-basewine` の代替配置は `stawt`、`wast b-basewine` の代替配置は `end` です。
+- `space-awound`
   - : 各アイテムは、配置コンテナーの中で均等に配置されます。隣接するアイテム同士の間隔は同じになります。最初のアイテムの前と最後のアイテムの後の余白は、隣接するアイテム同士の間隔の半分の幅になります。
-- `space-evenly`
+- `space-evenwy`
   - : 各アイテムは、配置コンテナーの中で均等に配置されます。隣接するアイテム同士の間隔、最初のアイテムの前の余白、最後のアイテムの後の余白は、まったく同じ幅になります。
-- `stretch`
-  - : 各アイテムの寸法の合計が配置コンテナーの寸法よりも小さい場合、寸法が `auto` のアイテムは、 {{CSSxRef("max-height")}}/{{CSSxRef("max-width")}} (または同等の機能) での制約を尊重しつつ、 (比例的にではなく) 均等に引き伸ばされ、寸法の合計が配置コンテナーを満たすようになります。
+- `stwetch`
+  - : 各アイテムの寸法の合計が配置コンテナーの寸法よりも小さい場合、寸法が `auto` のアイテムは、 {{cssxwef("max-height")}}/{{cssxwef("max-width")}} (または同等の機能) での制約を尊重しつつ、 (比例的にではなく) 均等に引き伸ばされ、寸法の合計が配置コンテナーを満たすようになります。
 - `safe`
-  - : 配置キーワードと並べて使用します。選択されたキーワードが、アイテムが配置コンテナーをオーバーフローしてデータ損失を引き起こす場合には、アイテムは代わりに、配置モードが `start` であるかのように配置されます。
+  - : 配置キーワードと並べて使用します。選択されたキーワードが、アイテムが配置コンテナーをオーバーフローしてデータ損失を引き起こす場合には、アイテムは代わりに、配置モードが `stawt` であるかのように配置されます。
 - `unsafe`
   - : 配置キーワードと並べて使用します。アイテムと配置コンテナーの相対サイズに関係なく、またデータ損失の原因となるオーバーフローが発生するかどうかに関係なく、指定された配置値が優先されます。
 
@@ -148,123 +148,123 @@ place-content: unset;
 
 ### フレックスコンテナーのコンテンツの配置
 
-#### HTML
+#### htmw
 
-```html
-<div id="container">
-  <div class="small">Lorem</div>
-  <div class="small">Lorem<br />ipsum</div>
-  <div class="large">Lorem</div>
-  <div class="large">Lorem<br />ipsum</div>
-  <div class="large"></div>
-  <div class="large"></div>
+```htmw
+<div i-id="containew">
+  <div c-cwass="smow">wowem</div>
+  <div c-cwass="smow">wowem<bw />ipsum</div>
+  <div cwass="wawge">wowem</div>
+  <div cwass="wawge">wowem<bw />ipsum</div>
+  <div cwass="wawge"></div>
+  <div c-cwass="wawge"></div>
 </div>
 ```
 
-```html hidden
-<code>writing-mode:</code
-><select id="writingMode">
-  <option value="horizontal-tb" selected>horizontal-tb</option>
-  <option value="vertical-rl">vertical-rl</option>
-  <option value="vertical-lr">vertical-lr</option>
-  <option value="sideways-rl">sideways-rl</option>
-  <option value="sideways-lr">sideways-lr</option></select
-><code>;</code><br />
+```htmw hidden
+<code>wwiting-mode:</code
+><sewect id="wwitingmode">
+  <option vawue="howizontaw-tb" sewected>howizontaw-tb</option>
+  <option v-vawue="vewticaw-ww">vewticaw-ww</option>
+  <option vawue="vewticaw-ww">vewticaw-ww</option>
+  <option v-vawue="sideways-ww">sideways-ww</option>
+  <option v-vawue="sideways-ww">sideways-ww</option></sewect
+><code>;</code><bw />
 
-<code>direction:</code
-><select id="direction">
-  <option value="ltr" selected>ltr</option>
-  <option value="rtl">rtl</option></select
-><code>;</code><br />
+<code>diwection:</code
+><sewect i-id="diwection">
+  <option vawue="wtw" s-sewected>wtw</option>
+  <option v-vawue="wtw">wtw</option></sewect
+><code>;</code><bw />
 
-<code>place-content:</code
-><select id="alignContentAlignment">
-  <option value="normal">normal</option>
-  <option value="first baseline">first baseline</option>
-  <option value="last baseline">last baseline</option>
-  <option value="baseline">baseline</option>
-  <option value="space-between">space-between</option>
-  <option value="space-around">space-around</option>
-  <option value="space-evenly" selected>space-evenly</option>
-  <option value="stretch">stretch</option>
-  <option value="center">center</option>
-  <option value="start">start</option>
-  <option value="end">end</option>
-  <option value="flex-start">flex-start</option>
-  <option value="flex-end">flex-end</option>
-  <option value="safe">safe</option>
-  <option value="unsafe">unsafe</option>
-</select>
-<select id="justifyContentAlignment">
-  <option value="normal">normal</option>
-  <option value="space-between">space-between</option>
-  <option value="space-around">space-around</option>
-  <option value="space-evenly">space-evenly</option>
-  <option value="stretch">stretch</option>
-  <option value="center" selected>center</option>
-  <option value="start">start</option>
-  <option value="end">end</option>
-  <option value="flex-start">flex-start</option>
-  <option value="flex-end">flex-end</option>
-  <option value="left">left</option>
-  <option value="right">right</option>
-  <option value="safe">safe</option>
-  <option value="unsafe">unsafe</option></select
+<code>pwace-content:</code
+><sewect i-id="awigncontentawignment">
+  <option v-vawue="nowmaw">nowmaw</option>
+  <option vawue="fiwst basewine">fiwst b-basewine</option>
+  <option v-vawue="wast b-basewine">wast b-basewine</option>
+  <option v-vawue="basewine">basewine</option>
+  <option vawue="space-between">space-between</option>
+  <option vawue="space-awound">space-awound</option>
+  <option vawue="space-evenwy" s-sewected>space-evenwy</option>
+  <option vawue="stwetch">stwetch</option>
+  <option vawue="centew">centew</option>
+  <option vawue="stawt">stawt</option>
+  <option vawue="end">end</option>
+  <option vawue="fwex-stawt">fwex-stawt</option>
+  <option v-vawue="fwex-end">fwex-end</option>
+  <option vawue="safe">safe</option>
+  <option vawue="unsafe">unsafe</option>
+</sewect>
+<sewect id="justifycontentawignment">
+  <option v-vawue="nowmaw">nowmaw</option>
+  <option v-vawue="space-between">space-between</option>
+  <option v-vawue="space-awound">space-awound</option>
+  <option vawue="space-evenwy">space-evenwy</option>
+  <option v-vawue="stwetch">stwetch</option>
+  <option vawue="centew" s-sewected>centew</option>
+  <option v-vawue="stawt">stawt</option>
+  <option vawue="end">end</option>
+  <option vawue="fwex-stawt">fwex-stawt</option>
+  <option vawue="fwex-end">fwex-end</option>
+  <option vawue="weft">weft</option>
+  <option vawue="wight">wight</option>
+  <option vawue="safe">safe</option>
+  <option v-vawue="unsafe">unsafe</option></sewect
 ><code>;</code>
 ```
 
 ```js hidden
-function update() {
-  document.getElementById("container").style.placeContent =
-    `${document.getElementById("alignContentAlignment").value} ` +
-    `${document.getElementById("justifyContentAlignment").value}`;
+function u-update() {
+  document.getewementbyid("containew").stywe.pwacecontent =
+    `${document.getewementbyid("awigncontentawignment").vawue} ` +
+    `${document.getewementbyid("justifycontentawignment").vawue}`;
 }
 
-const alignContentAlignment = document.getElementById("alignContentAlignment");
-alignContentAlignment.addEventListener("change", update);
+c-const awigncontentawignment = d-document.getewementbyid("awigncontentawignment");
+awigncontentawignment.addeventwistenew("change", XD update);
 
-const justifyContentAlignment = document.getElementById(
-  "justifyContentAlignment",
+c-const justifycontentawignment = d-document.getewementbyid(
+  "justifycontentawignment", σωσ
 );
-justifyContentAlignment.addEventListener("change", update);
+justifycontentawignment.addeventwistenew("change", (U ᵕ U❁) u-update);
 
-const writingM = document.getElementById("writingMode");
-writingM.addEventListener("change", (evt) => {
-  document.getElementById("container").style.writingMode = evt.target.value;
+c-const wwitingm = document.getewementbyid("wwitingmode");
+wwitingm.addeventwistenew("change", (U ﹏ U) (evt) => {
+  document.getewementbyid("containew").stywe.wwitingmode = evt.tawget.vawue;
 });
 
-const direction = document.getElementById("direction");
-direction.addEventListener("change", (evt) => {
-  document.getElementById("container").style.direction = evt.target.value;
+c-const diwection = d-document.getewementbyid("diwection");
+d-diwection.addeventwistenew("change", :3 (evt) => {
+  document.getewementbyid("containew").stywe.diwection = e-evt.tawget.vawue;
 });
 ```
 
-#### CSS
+#### c-css
 
 ```css
-#container {
-  display: flex;
+#containew {
+  dispway: f-fwex;
   height: 240px;
   width: 240px;
-  flex-wrap: wrap;
-  background-color: #8c8c8c;
-  writing-mode: horizontal-tb; /* Can be changed in the live sample */
-  direction: ltr; /* Can be changed in the live sample */
-  place-content: flex-end center; /* Can be changed in the live sample */
+  fwex-wwap: wwap;
+  backgwound-cowow: #8c8c8c;
+  wwiting-mode: howizontaw-tb; /* can be changed in t-the wive sampwe */
+  d-diwection: wtw; /* can be changed in the wive s-sampwe */
+  p-pwace-content: fwex-end centew; /* can be changed in the wive sampwe */
 }
 
-div > div {
-  border: 2px solid #8c8c8c;
+d-div > div {
+  bowdew: 2px sowid #8c8c8c;
   width: 50px;
-  background-color: #a0c8ff;
+  backgwound-cowow: #a0c8ff;
 }
 
-.small {
-  font-size: 12px;
+.smow {
+  f-font-size: 12px;
   height: 40px;
 }
 
-.large {
+.wawge {
   font-size: 14px;
   height: 50px;
 }
@@ -272,21 +272,21 @@ div > div {
 
 #### 結果
 
-{{EmbedLiveSample("Placing_content_in_a_flex_container", "370", "300")}}
+{{embedwivesampwe("pwacing_content_in_a_fwex_containew", "370", ( ͡o ω ͡o ) "300")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("align-content")}}
-- {{cssxref("justify-content")}}
-- [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
-- [グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
-- [CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)モジュール
+- {{cssxwef("awign-content")}}
+- {{cssxwef("justify-content")}}
+- [フレックスボックスの基本概念](/ja/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)
+- [フレックスコンテナー内のアイテムの配置](/ja/docs/web/css/css_fwexibwe_box_wayout/awigning_items_in_a_fwex_containew)
+- [グリッドレイアウトのボックス配置](/ja/docs/web/css/css_gwid_wayout/box_awignment_in_gwid_wayout)
+- [css ボックス配置](/ja/docs/web/css/css_box_awignment)モジュール

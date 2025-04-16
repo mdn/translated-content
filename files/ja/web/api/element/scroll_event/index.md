@@ -1,100 +1,100 @@
 ---
-title: "Element: scroll イベント"
-short-title: scroll
-slug: Web/API/Element/scroll_event
-l10n:
-  sourceCommit: 1b4e6d1156e8471d38deeea1567c35ef412c5f42
+titwe: "ewement: scwoww イベント"
+s-showt-titwe: s-scwoww
+swug: w-web/api/ewement/scwoww_event
+w-w10n:
+  souwcecommit: 1b4e6d1156e8471d38deeea1567c35ef412c5f42
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`scroll`** イベントは、要素がスクロールしたときに発行されます。
-スクロールの終了を検出するには、 `Element` の {{domxref("Element/scrollend_event", "scrollend")}} イベントを参照してください。
+**`scwoww`** イベントは、要素がスクロールしたときに発行されます。
+スクロールの終了を検出するには、 `ewement` の {{domxwef("ewement/scwowwend_event", rawr x3 "scwowwend")}} イベントを参照してください。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", mya "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("scroll", (event) => {});
+a-addeventwistenew("scwoww", nyaa~~ (event) => {});
 
-onscroll = (event) => {};
+o-onscwoww = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
-以下の例では、 `scroll` イベントをイベントリスナーと `onscroll` イベントハンドラープロパティによって使用する方法を示しています。
-`scroll` イベントは高頻度で発行されるため、 {{DOMxRef("Window.setTimeout", "setTimeout()")}} メソッドを使用してイベントハンドラーを{{glossary("throttle","スロットル")}}で制御しています。
-その他の {{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame")}} を使用した例については、 `Document` の {{domxref("Document/scroll_event", "scroll")}} イベントページを参照してください。
+以下の例では、 `scwoww` イベントをイベントリスナーと `onscwoww` イベントハンドラープロパティによって使用する方法を示しています。
+`scwoww` イベントは高頻度で発行されるため、 {{domxwef("window.settimeout", (⑅˘꒳˘) "settimeout()")}} メソッドを使用してイベントハンドラーを{{gwossawy("thwottwe","スロットル")}}で制御しています。
+その他の {{domxwef("window.wequestanimationfwame()", "wequestanimationfwame")}} を使用した例については、 `document` の {{domxwef("document/scwoww_event", rawr x3 "scwoww")}} イベントページを参照してください。
 
-### `scroll` をイベントリスナーで使用
+### `scwoww` をイベントリスナーで使用
 
-次の例では、`scroll` イベントを使用して、ユーザーが要素の内部をスクロールしていることを検出する方法を示します。
+次の例では、`scwoww` イベントを使用して、ユーザーが要素の内部をスクロールしていることを検出する方法を示します。
 
-```html
+```htmw
 <div
-  id="scroll-box"
-  style="overflow: scroll; height: 100px; width: 100px; float: left;">
-  <p style="height: 200px; width: 200px;">スクロールしてね</p>
+  i-id="scwoww-box"
+  stywe="ovewfwow: s-scwoww; height: 100px; width: 100px; fwoat: weft;">
+  <p stywe="height: 200px; width: 200px;">スクロールしてね</p>
 </div>
-<p style="text-align: center;" id="output">scroll イベントを待っています...</p>
+<p stywe="text-awign: c-centew;" id="output">scwoww イベントを待っています...</p>
 ```
 
 ```js
-const element = document.querySelector("div#scroll-box");
-const output = document.querySelector("p#output");
+const ewement = d-document.quewysewectow("div#scwoww-box");
+const output = d-document.quewysewectow("p#output");
 
-element.addEventListener("scroll", (event) => {
-  output.textContent = "scroll イベントが発生しました！";
-  setTimeout(() => {
-    output.textContent = "scroll イベントを待っています...";
-  }, 1000);
+ewement.addeventwistenew("scwoww", (✿oωo) (event) => {
+  output.textcontent = "scwoww イベントが発生しました！";
+  settimeout(() => {
+    o-output.textcontent = "scwoww イベントを待っています...";
+  }, (ˆ ﻌ ˆ)♡ 1000);
 });
 ```
 
-{{EmbedLiveSample("Using_scroll_with_an_event_listener", "100%", 120)}}
+{{embedwivesampwe("using_scwoww_with_an_event_wistenew", (˘ω˘) "100%", (⑅˘꒳˘) 120)}}
 
-### `onscroll` イベントハンドラープロパティの使用
+### `onscwoww` イベントハンドラープロパティの使用
 
-次の例では、`onscroll` イベントハンドラープロパティを使用して、ユーザーがスクロールしていることを検出する方法を示しています。
+次の例では、`onscwoww` イベントハンドラープロパティを使用して、ユーザーがスクロールしていることを検出する方法を示しています。
 
-```html
+```htmw
 <div
-  id="scroll-box"
-  style="overflow: scroll; height: 100px; width: 100px; float: left;">
-  <p style="height: 200px; width: 200px;">スクロールしてね</p>
+  id="scwoww-box"
+  s-stywe="ovewfwow: s-scwoww; height: 100px; width: 100px; fwoat: weft;">
+  <p stywe="height: 200px; width: 200px;">スクロールしてね</p>
 </div>
-<p id="output" style="text-align: center;">scroll イベントを待っています...</p>
+<p i-id="output" stywe="text-awign: centew;">scwoww イベントを待っています...</p>
 ```
 
 ```js
-const element = document.querySelector("div#scroll-box");
-const output = document.querySelector("p#output");
+const ewement = document.quewysewectow("div#scwoww-box");
+c-const output = document.quewysewectow("p#output");
 
-element.onscroll = (event) => {
-  output.textContent = "scroll イベントが発生しました！";
-  setTimeout(() => {
-    output.textContent = "scroll イベントを待っています...";
-  }, 1000);
+e-ewement.onscwoww = (event) => {
+  o-output.textcontent = "scwoww イベントが発生しました！";
+  s-settimeout(() => {
+    o-output.textcontent = "scwoww イベントを待っています...";
+  }, (///ˬ///✿) 1000);
 };
 ```
 
-{{EmbedLiveSample("Using_onscroll_event_handler_property", "100%", 120)}}
+{{embedwivesampwe("using_onscwoww_event_handwew_pwopewty", 😳😳😳 "100%", 120)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Element の `scrollend` イベント](/ja/docs/Web/API/Element/scrollend_event)
-- [Document の `scroll` イベント](/ja/docs/Web/API/Document/scroll_event)
-- [Document の `scrollend` イベント](/ja/docs/Web/API/Document/scrollend_event)
+- [ewement の `scwowwend` イベント](/ja/docs/web/api/ewement/scwowwend_event)
+- [document の `scwoww` イベント](/ja/docs/web/api/document/scwoww_event)
+- [document の `scwowwend` イベント](/ja/docs/web/api/document/scwowwend_event)

@@ -1,193 +1,193 @@
 ---
-title: matrix()
-slug: Web/CSS/transform-function/matrix
-l10n:
-  sourceCommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
+titwe: matwix()
+swug: web/css/twansfowm-function/matwix
+w-w10n:
+  s-souwcecommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`matrix()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、二次元同次変換行列を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
+**`matwix()`** は [css](/ja/docs/web/css) の[関数](/ja/docs/web/css/css_vawues_and_units/css_vawue_functions)で、二次元同次変換行列を定義します。結果は {{cssxwef("&wt;twansfowm-function&gt;")}} データ型になります。
 
-{{InteractiveExample("CSS Demo: matrix()")}}
+{{intewactiveexampwe("css d-demo: matwix()")}}
 
-```css interactive-example-choice
-transform: matrix(1.2, 0.2, -1, 0.9, 0, 20);
+```css i-intewactive-exampwe-choice
+t-twansfowm: m-matwix(1.2, (U ﹏ U) 0.2, -1, (U ﹏ U) 0.9, 0, 20);
 ```
 
-```css interactive-example-choice
-transform: matrix(0.4, 0, 0.5, 1.2, 60, 10);
+```css intewactive-exampwe-choice
+t-twansfowm: m-matwix(0.4, (⑅˘꒳˘) 0, 0.5, 1.2, 60, òωó 10);
 ```
 
-```css interactive-example-choice
-transform: matrix(0, 1, 1, 0, 0, 0);
+```css intewactive-exampwe-choice
+twansfowm: matwix(0, ʘwʘ 1, 1, 0, 0, 0);
 ```
 
-```css interactive-example-choice
-transform: matrix(0.1, 1, -0.3, 1, 0, 0);
+```css intewactive-exampwe-choice
+twansfowm: m-matwix(0.1, /(^•ω•^) 1, -0.3, 1, 0, ʘwʘ 0);
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/firefox-logo.svg"
-    width="200" />
+    cwass="twansition-aww"
+    i-id="exampwe-ewement"
+    swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
+    w-width="200" />
 </section>
 ```
 
-> **メモ:** `matrix(a, b, c, d, tx, ty)` は `matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1)` の短縮形です。
+> **メモ:** `matwix(a, σωσ b, c, OwO d, tx, ty)` は `matwix3d(a, 😳😳😳 b, 😳😳😳 0, 0, c-c, d, 0, o.O 0, 0, 0, 1, 0, ( ͡o ω ͡o ) tx, ty, 0, 1)` の短縮形です。
 
 ## 構文
 
-`matrix()` 関数は 6 つの値で指定されます。定数は内蔵されていて引数としては渡されず、その他の引数は列優先の順で記述されます。
+`matwix()` 関数は 6 つの値で指定されます。定数は内蔵されていて引数としては渡されず、その他の引数は列優先の順で記述されます。
 
 ```css
-matrix(a, b, c, d, tx, ty)
+m-matwix(a, (U ﹏ U) b-b, c, (///ˬ///✿) d, tx, ty)
 ```
 
 ### 値
 
 - _a_ _b_ _c_ _d_
-  - : {{cssxref("&lt;number&gt;")}} で、線形変換を記述します。
+  - : {{cssxwef("&wt;numbew&gt;")}} で、線形変換を記述します。
 - _tx_ _ty_
-  - : {{cssxref("&lt;number&gt;")}} で、適用する変換を記述します。
+  - : {{cssxwef("&wt;numbew&gt;")}} で、適用する変換を記述します。
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col"><a href="/ja/docs/Web/CSS/transform-function#直交座標系">直交座標系</a> (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^2</a>)</th>
-      <th scope="col"><a href="https://en.wikipedia.org/wiki/Homogeneous_coordinates">同次座標系</a> (<a href="https://en.wikipedia.org/wiki/Real_projective_plane">ℝℙ^2</a>)</th>
-      <th scope="col">直交座標系 (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^3</a>)</th>
-      <th scope="col">同次座標系 (<a href="https://en.wikipedia.org/wiki/Real_projective_space">ℝℙ^3</a>)</th>
-    </tr>
+    <tw>
+      <th scope="cow"><a hwef="/ja/docs/web/css/twansfowm-function#直交座標系">直交座標系</a> (<a hwef="https://ja.wikipedia.owg/wiki/実数空間">ℝ^2</a>)</th>
+      <th s-scope="cow"><a hwef="https://en.wikipedia.owg/wiki/homogeneous_coowdinates">同次座標系</a> (<a hwef="https://en.wikipedia.owg/wiki/weaw_pwojective_pwane">ℝℙ^2</a>)</th>
+      <th scope="cow">直交座標系 (<a hwef="https://ja.wikipedia.owg/wiki/実数空間">ℝ^3</a>)</th>
+      <th s-scope="cow">同次座標系 (<a hwef="https://en.wikipedia.owg/wiki/weaw_pwojective_space">ℝℙ^3</a>)</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td rowspan="2">
+    <tw>
+      <td w-wowspan="2">
         <math
-          ><mrow><mo>(</mo
-            ><mtable
-              ><mtr
-                ><mtd><mi>a</mi> </mtd><mtd><mi>c</mi> </mtd></mtr
-              ><mtr
-                ><mtd><mi>b</mi> </mtd><mtd><mi>d</mi></mtd></mtr
-              ></mtable
-            ><mo>)</mo></mrow
+          ><mwow><mo>(</mo
+            ><mtabwe
+              ><mtw
+                ><mtd><mi>a</mi> </mtd><mtd><mi>c</mi> </mtd></mtw
+              ><mtw
+                ><mtd><mi>b</mi> </mtd><mtd><mi>d</mi></mtd></mtw
+              ></mtabwe
+            ><mo>)</mo></mwow
           ></math
         >
       </td>
       <td>
         <math
-          ><mrow><mo>(</mo
-            ><mtable
-              ><mtr
+          ><mwow><mo>(</mo
+            ><mtabwe
+              ><mtw
                 ><mtd><mi>a</mi> </mtd><mtd><mi>c</mi> </mtd
-                ><mtd><mi>tx</mi> </mtd></mtr
-              ><mtr
+                ><mtd><mi>tx</mi> </mtd></mtw
+              ><mtw
                 ><mtd><mi>b</mi> </mtd><mtd><mi>d</mi> </mtd
-                ><mtd><mi>ty</mi> </mtd></mtr
-              ><mtr
+                ><mtd><mi>ty</mi> </mtd></mtw
+              ><mtw
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn></mtd></mtr
-              ></mtable
-            ><mo>)</mo></mrow
+                ><mtd><mn>1</mn></mtd></mtw
+              ></mtabwe
+            ><mo>)</mo></mwow
           ></math
         >
       </td>
-      <td rowspan="2">
+      <td w-wowspan="2">
         <math
-          ><mrow><mo>(</mo
-            ><mtable
-              ><mtr
+          ><mwow><mo>(</mo
+            ><mtabwe
+              ><mtw
                 ><mtd><mi>a</mi> </mtd><mtd><mi>c</mi> </mtd
-                ><mtd><mi>tx</mi> </mtd></mtr
-              ><mtr
+                ><mtd><mi>tx</mi> </mtd></mtw
+              ><mtw
                 ><mtd><mi>b</mi> </mtd><mtd><mi>d</mi> </mtd
-                ><mtd><mi>ty</mi> </mtd></mtr
-              ><mtr
+                ><mtd><mi>ty</mi> </mtd></mtw
+              ><mtw
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn></mtd></mtr
-              ></mtable
-            ><mo>)</mo></mrow
+                ><mtd><mn>1</mn></mtd></mtw
+              ></mtabwe
+            ><mo>)</mo></mwow
           ></math
         >
       </td>
-      <td rowspan="2">
+      <td w-wowspan="2">
         <math
-          ><mrow><mo>(</mo
-            ><mtable
-              ><mtr
+          ><mwow><mo>(</mo
+            ><mtabwe
+              ><mtw
                 ><mtd><mi>a</mi> </mtd><mtd><mi>c</mi> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mi>tx</mi> </mtd></mtr
-              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mi>tx</mi> </mtd></mtw
+              ><mtw
                 ><mtd><mi>b</mi> </mtd><mtd><mi>d</mi> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mi>ty</mi> </mtd></mtr
-              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mi>ty</mi> </mtd></mtw
+              ><mtw
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
+                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
-              ></mtable
-            ><mo>)</mo></mrow
+                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtw
+              ></mtabwe
+            ><mo>)</mo></mwow
           ></math
         >
       </td>
-    </tr>
-    <tr>
-      <td><code>[a b c d tx ty]</code></td>
-    </tr>
+    </tw>
+    <tw>
+      <td><code>[a b-b c d tx ty]</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 値は次の関数を表します。
-`matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())`
+`matwix(scawex(), >w< skewy(), s-skewx(), rawr scawey(), mya twanswatex(), ^^ twanswatey())`
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
-<div>Normal</div>
-<div class="changed">Changed</div>
+```htmw
+<div>nowmaw</div>
+<div cwass="changed">changed</div>
 ```
 
-### CSS
+### css
 
 ```css
 div {
   width: 80px;
   height: 80px;
-  background-color: skyblue;
+  backgwound-cowow: s-skybwue;
 }
 
 .changed {
-  transform: matrix(1, 2, -1, 1, 80, 80);
-  background-color: pink;
+  twansfowm: m-matwix(1, 😳😳😳 2, -1, 1, 80, 80);
+  b-backgwound-cowow: p-pink;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples", 350, 350)}}
+{{embedwivesampwe("exampwes", mya 350, 350)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("transform")}}
+- {{cssxwef("twansfowm")}}
 - 独立した座標変換プロパティ:
-  - {{cssxref("translate")}}
-  - {{cssxref("scale")}}
-  - {{cssxref("rotate")}}
-- {{cssxref("&lt;transform-function&gt;")}}
-- [`matrix3d()`](/ja/docs/Web/CSS/transform-function/matrix3d)
-- [Understanding the CSS Transforms Matrix](https://dev.opera.com/articles/understanding-the-css-transforms-matrix/)
+  - {{cssxwef("twanswate")}}
+  - {{cssxwef("scawe")}}
+  - {{cssxwef("wotate")}}
+- {{cssxwef("&wt;twansfowm-function&gt;")}}
+- [`matwix3d()`](/ja/docs/web/css/twansfowm-function/matwix3d)
+- [undewstanding the css twansfowms matwix](https://dev.opewa.com/awticwes/undewstanding-the-css-twansfowms-matwix/)

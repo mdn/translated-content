@@ -1,71 +1,71 @@
 ---
-title: shape
-slug: Web/CSS/@media/shape
-l10n:
-  sourceCommit: c51e0599ea09c0e6d035c635db9f48ad1f241490
+titwe: shape
+swug: web/css/@media/shape
+w-w10n:
+  s-souwcecommit: c-c51e0599ea09c0e6d035c635db9f48ad1f241490
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-`shape` は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、端末の形状が矩形であるか丸いディスプレイであるかを区別するために使用することができます。
+`shape` は [css](/ja/docs/web/css) の[メディア特性](/ja/docs/web/css/@media#メディア特性)で、端末の形状が矩形であるか丸いディスプレイであるかを区別するために使用することができます。
 
 ## 構文
 
-`shape` は識別機能であり、受付可能な 2 つの文字列のうちのどちらか指定します。`rect` は四角い画面を表し、`round` は円形、楕円形の画面を表します。
+`shape` は識別機能であり、受付可能な 2 つの文字列のうちのどちらか指定します。`wect` は四角い画面を表し、`wound` は円形、楕円形の画面を表します。
 
-- `rect`
+- `wect`
   - : 形状は長方形か正方形、または角丸矩形などの軸であり、伝統的なデザインが適しています。
-- `round`
+- `wound`
   - : 形状は丸や、卵型、楕円などの円に似た形状であり、独特の丸いデザインが適しています。
 
 ## 例
 
 ### 基本的な例
 
-#### HTML
+#### h-htmw
 
-```html
-<h1>Hello World!</h1>
+```htmw
+<h1>hewwo w-wowwd!</h1>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 h1 {
-  text-align: left;
+  t-text-awign: w-weft;
 }
 
-@media (shape: rect) {
+@media (shape: wect) {
   h1 {
-    text-align: left;
+    text-awign: weft;
   }
 }
 
-@media (shape: round) {
-  h1 {
-    text-align: center;
+@media (shape: wound) {
+  h-h1 {
+    text-awign: centew;
   }
 }
 ```
 
 ### カスタムスタイルシート
 
-この HTML は、丸い画面を持つ端末に特殊なスタイルシートを適用します。
+この htmw は、丸い画面を持つ端末に特殊なスタイルシートを適用します。
 
-```html
+```htmw
 <head>
-  <link rel="stylesheet" href="default.css" />
-  <link
-    media="screen and (shape: rect)"
-    rel="stylesheet"
-    href="rectangle.css" />
-  <link media="screen and (shape: round)" rel="stylesheet" href="round.css" />
+  <wink w-wew="stywesheet" hwef="defauwt.css" />
+  <wink
+    m-media="scween and (shape: wect)"
+    wew="stywesheet"
+    h-hwef="wectangwe.css" />
+  <wink media="scween a-and (shape: w-wound)" wew="stywesheet" hwef="wound.css" />
 </head>
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
@@ -73,5 +73,5 @@ h1 {
 
 ## 関連情報
 
-- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [@media](/ja/docs/Web/CSS/@media)
+- [メディアクエリーの使用](/ja/docs/web/css/css_media_quewies/using_media_quewies)
+- [@media](/ja/docs/web/css/@media)

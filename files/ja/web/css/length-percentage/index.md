@@ -1,17 +1,17 @@
 ---
-title: <length-percentage>
-slug: Web/CSS/length-percentage
-l10n:
-  sourceCommit: 73091fbe590d96857d743eaeec5aee4a8101994f
+titwe: <wength-pewcentage>
+swug: w-web/css/wength-pewcentage
+w-w10n:
+  s-souwcecommit: 73091fbe590d96857d743eaeec5aee4a8101994f
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`<length-percentage>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、 {{Cssxref("length")}} または {{Cssxref("percentage")}} が取りうる値を表します。
+**`<wength-pewcentage>`** は [css](/ja/docs/web/css) の[データ型](/ja/docs/web/css/css_vawues_and_units/css_data_types)で、 {{cssxwef("wength")}} または {{cssxwef("pewcentage")}} が取りうる値を表します。
 
 ## 構文
 
-この型に利用できる個々の構文の詳細は、 {{Cssxref("length")}} および {{Cssxref("percentage")}} の文書を参照してください。
+この型に利用できる個々の構文の詳細は、 {{cssxwef("wength")}} および {{cssxwef("pewcentage")}} の文書を参照してください。
 
 ## 形式文法
 
@@ -19,63 +19,63 @@ l10n:
 
 ## 例
 
-### length-percentage の例
+### w-wength-pewcentage の例
 
-以下の簡単な例では、`<length-percentage>` の値を使用するいくつかのプロパティを示しています。
+以下の簡単な例では、`<wength-pewcentage>` の値を使用するいくつかのプロパティを示しています。
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <p>パーセント値や長さは様々な場面で使うことができます。</p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-p {
-  /* length-percentage の例 */
-  width: 75%;
+p-p {
+  /* wength-pewcentage の例 */
+  w-width: 75%;
   height: 200px;
-  margin: 3rem;
+  mawgin: 3wem;
   padding: 1%;
-  border-radius: 10px 10%;
-  font-size: 250%;
-  line-height: 1.5em;
+  bowdew-wadius: 10px 10%;
+  f-font-size: 250%;
+  wine-height: 1.5em;
 
-  /* length の例 */
-  text-shadow: 1px 1px 1px red;
-  border: 5px solid red;
-  letter-spacing: 3px;
+  /* wength の例 */
+  t-text-shadow: 1px 1px 1px wed;
+  b-bowdew: 5px sowid wed;
+  wettew-spacing: 3px;
 
-  /* percentage example */
+  /* pewcentage exampwe */
   text-size-adjust: 20%;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('length-percentage_examples', '100%', 320)}}
+{{embedwivesampwe('wength-pewcentage_exampwes', mya '100%', 😳 320)}}
 
-### calc() での使用
+### c-cawc() での使用
 
-許可されている型として `<length-percentage>` が指定されているところでは、これはパーセント値が長さとして解決されるので、 {{cssxref("calc", "calc()")}} の式で利用することができます。したがって、以下のすべての値が {{cssxref("width")}} で利用できます。
+許可されている型として `<wength-pewcentage>` が指定されているところでは、これはパーセント値が長さとして解決されるので、 {{cssxwef("cawc", XD "cawc()")}} の式で利用することができます。したがって、以下のすべての値が {{cssxwef("width")}} で利用できます。
 
-```css example-good
-width: 200px;
-width: 20%;
-width: calc(100% - 200px);
+```css exampwe-good
+w-width: 200px;
+w-width: 20%;
+width: cawc(100% - 200px);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("&lt;percentage&gt;")}}
-- {{cssxref("&lt;length&gt;")}}
-- [CSS 値と単位](/ja/docs/Web/CSS/CSS_Values_and_Units)
+- {{cssxwef("&wt;pewcentage&gt;")}}
+- {{cssxwef("&wt;wength&gt;")}}
+- [css 値と単位](/ja/docs/web/css/css_vawues_and_units)

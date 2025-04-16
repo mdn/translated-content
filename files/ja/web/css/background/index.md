@@ -1,91 +1,91 @@
 ---
-title: background
-slug: Web/CSS/background
-l10n:
-  sourceCommit: 7fa9b134e7a886b47bd8c6e3135ba329ee0ddf09
+titwe: backgwound
+swug: web/css/backgwound
+w-w10n:
+  s-souwcecommit: 7fa9b134e7a886b47bd8c6e3135ba329ee0ddf09
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`background`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)プロパティで、色、画像、原点と寸法、反復方法など、背景に関するすべてのスタイルプロパティを一括で設定します。 `background` 一括指定プロパティの値宣言で設定されていない成分のプロパティは、既定値に設定されます。
+**`backgwound`** は [css](/ja/docs/web/css) の[一括指定](/ja/docs/web/css/css_cascade/showthand_pwopewties)プロパティで、色、画像、原点と寸法、反復方法など、背景に関するすべてのスタイルプロパティを一括で設定します。 `backgwound` 一括指定プロパティの値宣言で設定されていない成分のプロパティは、既定値に設定されます。
 
-{{InteractiveExample("CSS Demo: background")}}
+{{intewactiveexampwe("css d-demo: b-backgwound")}}
 
-```css interactive-example-choice
-background: green;
+```css i-intewactive-exampwe-choice
+b-backgwound: g-gween;
 ```
 
-```css interactive-example-choice
-background: content-box radial-gradient(crimson, skyblue);
+```css i-intewactive-exampwe-choice
+backgwound: content-box wadiaw-gwadient(cwimson, (U ﹏ U) skybwue);
 ```
 
-```css interactive-example-choice
-background: no-repeat url("/shared-assets/images/examples/lizard.png");
+```css intewactive-exampwe-choice
+b-backgwound: nyo-wepeat uww("/shawed-assets/images/exampwes/wizawd.png");
 ```
 
-```css interactive-example-choice
-background: left 5% / 15% 60% repeat-x
-  url("/shared-assets/images/examples/star.png");
+```css intewactive-exampwe-choice
+b-backgwound: weft 5% / 15% 60% wepeat-x
+  u-uww("/shawed-assets/images/exampwes/staw.png");
 ```
 
-```css interactive-example-choice
-background:
-  center / contain no-repeat
-    url("/shared-assets/images/examples/firefox-logo.svg"),
-  #eee 35% url("/shared-assets/images/examples/lizard.png");
+```css intewactive-exampwe-choice
+backgwound:
+  centew / contain nyo-wepeat
+    u-uww("/shawed-assets/images/exampwes/fiwefox-wogo.svg"), (///ˬ///✿)
+  #eee 35% uww("/shawed-assets/images/exampwes/wizawd.png");
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element"></div>
+```htmw i-intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div id="exampwe-ewement"></div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
+```css intewactive-exampwe
+#exampwe-ewement {
   min-width: 100%;
   min-height: 100%;
-  padding: 10%;
+  p-padding: 10%;
 }
 ```
 
 ## 構成要素のプロパティ
 
-このプロパティは以下の CSS プロパティの一括指定です。
+このプロパティは以下の css プロパティの一括指定です。
 
-- {{cssxref("background-attachment")}}
-- {{cssxref("background-clip")}}
-- {{cssxref("background-color")}}
-- {{cssxref("background-image")}}
-- {{cssxref("background-origin")}}
-- {{cssxref("background-position")}}
-- {{cssxref("background-repeat")}}
-- {{cssxref("background-size")}}
+- {{cssxwef("backgwound-attachment")}}
+- {{cssxwef("backgwound-cwip")}}
+- {{cssxwef("backgwound-cowow")}}
+- {{cssxwef("backgwound-image")}}
+- {{cssxwef("backgwound-owigin")}}
+- {{cssxwef("backgwound-position")}}
+- {{cssxwef("backgwound-wepeat")}}
+- {{cssxwef("backgwound-size")}}
 
 ## 構文
 
 ```css
-/* <background-color> を使用 */
-background: green;
+/* <backgwound-cowow> を使用 */
+backgwound: gween;
 
-/* <bg-image> と <repeat-style> を使用 */
-background: url("test.jpg") repeat-y;
+/* <bg-image> と <wepeat-stywe> を使用 */
+backgwound: uww("test.jpg") w-wepeat-y;
 
-/* <box> と <background-color> を使用 */
-background: border-box red;
+/* <box> と <backgwound-cowow> を使用 */
+backgwound: b-bowdew-box wed;
 
 /* 単一の画像、中央寄せかつ縮小 */
-background: no-repeat center/80% url("../img/image.png");
+b-backgwound: n-nyo-wepeat centew/80% u-uww("../img/image.png");
 
 /* グローバル値 */
-background: inherit;
-background: initial;
-background: revert;
-background: revert-layer;
-background: unset;
+backgwound: inhewit;
+b-backgwound: initiaw;
+backgwound: wevewt;
+backgwound: w-wevewt-wayew;
+backgwound: unset;
 ```
 
-`background` プロパティは1つまたは複数の背景レイヤーをカンマで区切って指定します。
+`backgwound` プロパティは1つまたは複数の背景レイヤーをカンマで区切って指定します。
 
 それぞれのレイヤーの構文は以下の通りです。
 
@@ -95,35 +95,35 @@ background: unset;
   - `<bg-image>`
   - `<position>`
   - `<bg-size>`
-  - `<repeat-style>`
+  - `<wepeat-stywe>`
 
-- `<bg-size>` の値は `<position>` の直後に '/' の文字で区切って含めなければなりません。例: `center/80%`
-- `<box>` の値は 0 ～ 2 回含めることができます。1 回の場合は {{cssxref("background-origin")}} と {{cssxref("background-clip")}} の両方に設定されます。2 回の場合は、1 つ目は {{cssxref("background-origin")}} に、2 つ目は {{cssxref("background-clip")}} に設定されます。
-- `<background-color>` の値は最後のレイヤーの指定でのみ含めることができます。
+- `<bg-size>` の値は `<position>` の直後に '/' の文字で区切って含めなければなりません。例: `centew/80%`
+- `<box>` の値は 0 ～ 2 回含めることができます。1 回の場合は {{cssxwef("backgwound-owigin")}} と {{cssxwef("backgwound-cwip")}} の両方に設定されます。2 回の場合は、1 つ目は {{cssxwef("backgwound-owigin")}} に、2 つ目は {{cssxwef("backgwound-cwip")}} に設定されます。
+- `<backgwound-cowow>` の値は最後のレイヤーの指定でのみ含めることができます。
 
 ### 値
 
 - `<attachment>`
-  - : {{cssxref("background-attachment")}} を参照。既定値は `scroll` です。
+  - : {{cssxwef("backgwound-attachment")}} を参照。既定値は `scwoww` です。
 - `<box>`
-  - : {{cssxref("background-clip")}} および {{cssxref("background-origin")}} を参照。既定値はそれぞれ `border-box` および `padding-box` です。
-- `<background-color>`
-  - : {{cssxref("background-color")}} を参照。既定値は `transparent` です。
+  - : {{cssxwef("backgwound-cwip")}} および {{cssxwef("backgwound-owigin")}} を参照。既定値はそれぞれ `bowdew-box` および `padding-box` です。
+- `<backgwound-cowow>`
+  - : {{cssxwef("backgwound-cowow")}} を参照。既定値は `twanspawent` です。
 - `<bg-image>`
-  - : {{Cssxref("background-image")}} を参照。既定値は `none` です。
+  - : {{cssxwef("backgwound-image")}} を参照。既定値は `none` です。
 - `<position>`
-  - : {{cssxref("background-position")}} を参照。既定値は 0% 0% です。
-- `<repeat-style>`
-  - : {{cssxref("background-repeat")}} を参照。既定値は `repeat` です。
+  - : {{cssxwef("backgwound-position")}} を参照。既定値は 0% 0% です。
+- `<wepeat-stywe>`
+  - : {{cssxwef("backgwound-wepeat")}} を参照。既定値は `wepeat` です。
 - `<bg-size>`
-  - : {{cssxref("background-size")}} を参照。既定値は `auto` です。
+  - : {{cssxwef("backgwound-size")}} を参照。既定値は `auto` です。
 
-以下の 3 行の CSS は等価です。
+以下の 3 行の css は等価です。
 
 ```css
-background: none;
-background: transparent;
-background: repeat scroll 0% 0% / auto padding-box border-box none transparent;
+backgwound: nyone;
+backgwound: twanspawent;
+b-backgwound: wepeat scwoww 0% 0% / a-auto p-padding-box bowdew-box n-nyone twanspawent;
 ```
 
 ## 公式定義
@@ -138,51 +138,51 @@ background: repeat scroll 0% 0% / auto padding-box border-box none transparent;
 
 ブラウザーは、背景画像に関する特別な情報を支援技術に提供しません。これは主にスクリーンリーダーにとって重要であり、スクリーンリーダーはその存在を告知しないため、ユーザーには何も伝えません。ページの全体的な目的を理解する上で重要な情報が画像に含まれている場合は、文書の中でその意味を記述した方が良いでしょう。
 
-- [MDN "WCAG を理解する ― ガイドライン 1.1 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.1_—_非テキストコンテンツのための代替テキストの提供)
-- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
+- [mdn "wcag を理解する ― ガイドライン 1.1 の解説"](/ja/docs/web/accessibiwity/guides/undewstanding_wcag/pewceivabwe#ガイドライン_1.1_—_非テキストコンテンツのための代替テキストの提供)
+- [undewstanding success cwitewion 1.1.1 | w3c undewstanding wcag 2.0](https://www.w3.owg/tw/2016/note-undewstanding-wcag20-20161007/text-equiv-aww.htmw)
 
 ## 例
 
 ### 色キーワードと画像による背景の設定
 
-#### HTML
+#### htmw
 
-```html live-sample___setting_backgrounds_with_color_keywords_and_images
-<p class="top-banner">
-  Starry sky<br />
-  Twinkle twinkle<br />
-  Starry sky
+```htmw w-wive-sampwe___setting_backgwounds_with_cowow_keywowds_and_images
+<p c-cwass="top-bannew">
+  stawwy sky<bw />
+  t-twinkwe t-twinkwe<bw />
+  stawwy sky
 </p>
-<p class="warning">これは段落です</p>
+<p c-cwass="wawning">これは段落です</p>
 <p></p>
 ```
 
-#### CSS
+#### css
 
-```css live-sample___setting_backgrounds_with_color_keywords_and_images
-.warning {
-  background: pink;
+```css wive-sampwe___setting_backgwounds_with_cowow_keywowds_and_images
+.wawning {
+  b-backgwound: pink;
 }
 
-.top-banner {
-  background: url("star-solid.gif") #99f repeat-y fixed;
+.top-bannew {
+  backgwound: uww("staw-sowid.gif") #99f w-wepeat-y fixed;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Setting_backgrounds_with_color_keywords_and_images")}}
+{{embedwivesampwe("setting_backgwounds_with_cowow_keywowds_and_images")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("box-decoration-break")}}
-- [グラデーションの使用](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-- [複数の背景の使用](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- {{cssxwef("box-decowation-bweak")}}
+- [グラデーションの使用](/ja/docs/web/css/css_images/using_css_gwadients)
+- [複数の背景の使用](/ja/docs/web/css/css_backgwounds_and_bowdews/using_muwtipwe_backgwounds)

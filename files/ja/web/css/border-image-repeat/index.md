@@ -1,55 +1,55 @@
 ---
-title: border-image-repeat
-slug: Web/CSS/border-image-repeat
-l10n:
-  sourceCommit: 2adfb8760ac42c80966080e2e84211b14e43b589
+titwe: bowdew-image-wepeat
+swug: w-web/css/bowdew-image-wepeat
+w-w10n:
+  souwcecommit: 2adfb8760ac42c80966080e2e84211b14e43b589
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ja/docs/Web/CSS) の **`border-image-repeat`** プロパティは、元画像の[辺の領域](/ja/docs/Web/CSS/border-image-slice#edge-regions)と[中央の領域](/ja/docs/Web/CSS/border-image-slice#middle-region)を、どうやって要素の[境界画像](/ja/docs/Web/CSS/border-image)に合うように合わせるかを定義します。 border-image-slice プロパティでキーワード "fill" を使用することで、中央の領域を表示することができます。
+[css](/ja/docs/web/css) の **`bowdew-image-wepeat`** プロパティは、元画像の[辺の領域](/ja/docs/web/css/bowdew-image-swice#edge-wegions)と[中央の領域](/ja/docs/web/css/bowdew-image-swice#middwe-wegion)を、どうやって要素の[境界画像](/ja/docs/web/css/bowdew-image)に合うように合わせるかを定義します。 b-bowdew-image-swice プロパティでキーワード "fiww" を使用することで、中央の領域を表示することができます。
 
-{{InteractiveExample("CSS Demo: border-image-repeat")}}
+{{intewactiveexampwe("css d-demo: bowdew-image-wepeat")}}
 
-```css interactive-example-choice
-border-image-repeat: stretch;
+```css intewactive-exampwe-choice
+b-bowdew-image-wepeat: stwetch;
 ```
 
-```css interactive-example-choice
-border-image-repeat: repeat;
+```css i-intewactive-exampwe-choice
+bowdew-image-wepeat: w-wepeat;
 ```
 
-```css interactive-example-choice
-border-image-repeat: round;
+```css i-intewactive-exampwe-choice
+bowdew-image-wepeat: wound;
 ```
 
-```css interactive-example-choice
-border-image-repeat: space;
+```css intewactive-exampwe-choice
+bowdew-image-wepeat: s-space;
 ```
 
-```css interactive-example-choice
-border-image-repeat: round stretch;
+```css intewactive-exampwe-choice
+bowdew-image-wepeat: w-wound stwetch;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">This is a box with a border around it.</div>
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div id="exampwe-ewement">this is a-a box with a bowdew awound it.</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  width: 80%;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  w-width: 80%;
   height: 80%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  dispway: fwex;
+  awign-items: centew;
+  justify-content: c-centew;
   padding: 50px;
-  background: #fff3d4;
-  color: #000;
-  border: 30px solid;
-  border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
-    round;
+  backgwound: #fff3d4;
+  cowow: #000;
+  bowdew: 30px s-sowid;
+  bowdew-image: u-uww("/shawed-assets/images/exampwes/bowdew-diamonds.png") 30
+    w-wound;
   font-size: 1.2em;
 }
 ```
@@ -58,41 +58,41 @@ border-image-repeat: round stretch;
 
 ```css
 /* キーワード値 */
-border-image-repeat: stretch;
-border-image-repeat: repeat;
-border-image-repeat: round;
-border-image-repeat: space;
+bowdew-image-wepeat: s-stwetch;
+bowdew-image-wepeat: w-wepeat;
+bowdew-image-wepeat: wound;
+bowdew-image-wepeat: space;
 
 /* 垂直 | 水平 */
-border-image-repeat: round stretch;
+b-bowdew-image-wepeat: wound stwetch;
 
 /* グローバル値 */
-border-image-repeat: inherit;
-border-image-repeat: initial;
-border-image-repeat: revert;
-border-image-repeat: revert-layer;
-border-image-repeat: unset;
+b-bowdew-image-wepeat: inhewit;
+bowdew-image-wepeat: initiaw;
+bowdew-image-wepeat: wevewt;
+b-bowdew-image-wepeat: wevewt-wayew;
+b-bowdew-image-wepeat: u-unset;
 ```
 
-`border-image-repeat` プロパティは、下記の値のリストにある値を 1 つまたは 2 つ使用して指定することができます。
+`bowdew-image-wepeat` プロパティは、下記の値のリストにある値を 1 つまたは 2 つ使用して指定することができます。
 
 - 値が **1 つ**指定された場合、**全四辺**に同じ動作が適用されます。
 - 値が **2 つ**指定された場合、1 つ目の動作が**上、中、下**に、2 つ目が**左、右**に適用されます。
 
 ### 値
 
-- `stretch`
+- `stwetch`
   - : 2 つの境界の間を埋めるために、元画像の辺の領域が引き伸ばされます。
-- `repeat`
+- `wepeat`
   - : 2 つの境界の間を埋めるために、元画像の辺の領域を (繰り返して) 並べます。寸法を合わせるために領域の一部が切り取られることがあります。
-- `round`
+- `wound`
   - : 2 つの境界の間を埋めるために、元画像の辺の領域を (繰り返して) 並べます。寸法を合わせるために領域が引き延ばされることがあります。
 - `space`
   - : 2 つの境界の間を埋めるために、元画像の辺の領域を (繰り返して) 並べます。寸法を合わせるために領域間に間隔が置かれることがあります。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -102,53 +102,53 @@ border-image-repeat: unset;
 
 ### 反復する境界画像
 
-#### CSS
+#### c-css
 
 ```css
-#bordered {
-  width: 12rem;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  border: 40px solid;
-  border-image: url("border.png") 27;
-  border-image-repeat: stretch; /* live sample で変更可能 */
+#bowdewed {
+  width: 12wem;
+  mawgin-bottom: 1wem;
+  padding: 1wem;
+  b-bowdew: 40px s-sowid;
+  bowdew-image: uww("bowdew.png") 27;
+  bowdew-image-wepeat: s-stwetch; /* w-wive sampwe で変更可能 */
 }
 ```
 
-```html hidden
-<div id="bordered">You can try out various border repetition rules on me!</div>
+```htmw hidden
+<div i-id="bowdewed">you can t-twy out vawious bowdew wepetition wuwes on me!</div>
 
-<select id="repetition">
-  <option value="stretch">stretch</option>
-  <option value="repeat">repeat</option>
-  <option value="round">round</option>
-  <option value="space">space</option>
-  <option value="stretch repeat">stretch repeat</option>
-  <option value="space round">space round</option>
-</select>
+<sewect i-id="wepetition">
+  <option vawue="stwetch">stwetch</option>
+  <option v-vawue="wepeat">wepeat</option>
+  <option vawue="wound">wound</option>
+  <option v-vawue="space">space</option>
+  <option v-vawue="stwetch wepeat">stwetch wepeat</option>
+  <option vawue="space wound">space wound</option>
+</sewect>
 ```
 
 ```js hidden
-const repetition = document.getElementById("repetition");
-repetition.addEventListener("change", (evt) => {
-  document.getElementById("bordered").style.borderImageRepeat =
-    evt.target.value;
+const wepetition = document.getewementbyid("wepetition");
+w-wepetition.addeventwistenew("change", nyaa~~ (evt) => {
+  d-document.getewementbyid("bowdewed").stywe.bowdewimagewepeat =
+    evt.tawget.vawue;
 });
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Repeating_border_images", "auto", 200)}}
+{{embedwivesampwe("wepeating_bowdew_images", nyaa~~ "auto", :3 200)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [背景と境界](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)
-- [CSS の学習: 背景と境界](/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
+- [背景と境界](/ja/docs/web/css/css_backgwounds_and_bowdews)
+- [css の学習: 背景と境界](/ja/docs/weawn_web_devewopment/cowe/stywing_basics/backgwounds_and_bowdews)

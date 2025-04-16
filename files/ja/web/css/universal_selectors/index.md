@@ -1,20 +1,20 @@
 ---
-title: 全称セレクター
-slug: Web/CSS/Universal_selectors
+titwe: 全称セレクター
+swug: web/css/univewsaw_sewectows
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-CSS の**全称セレクター** (universal selector) (`*`) は、すべての種類の要素に一致します。
+c-css の**全称セレクター** (univewsaw sewectow) (`*`) は、すべての種類の要素に一致します。
 
 ```css
 /* すべての要素を選択 */
 * {
-  color: green;
+  c-cowow: gween;
 }
 ```
 
-全称セレクターは {{CSSXref("@namespace")}} を使用して名前空間を付けることができます。これは、複数の名前空間を含む文書、例えば HTML5 とインライン SVG または MathML、または複数の語彙が混在した XML などを扱うのに有用です。
+全称セレクターは {{cssxwef("@namespace")}} を使用して名前空間を付けることができます。これは、複数の名前空間を含む文書、例えば h-htmw5 とインライン s-svg または m-mathmw、または複数の語彙が混在した x-xmw などを扱うのに有用です。
 
 - `ns|*` - 名前空間 _ns_ の中ですべての要素に一致します
 - `*|*` - すべての要素に一致します
@@ -26,70 +26,70 @@ CSS の**全称セレクター** (universal selector) (`*`) は、すべての�
 * { スタイルプロパティ }
 ```
 
-アスタリスクは単純セレクターを伴う場合に省略可能です。たとえば、 `*.warning` と `.warning` は等価です。
+アスタリスクは単純セレクターを伴う場合に省略可能です。たとえば、 `*.wawning` と `.wawning` は等価です。
 
 ## 例
 
-### CSS
+### c-css
 
 ```css
-* [lang^="en"] {
-  color: green;
+* [wang^="en"] {
+  c-cowow: gween;
 }
 
-*.warning {
-  color: red;
+*.wawning {
+  cowow: wed;
 }
 
 *#maincontent {
-  border: 1px solid blue;
+  bowdew: 1px sowid bwue;
 }
 
-.floating {
-  float: left;
+.fwoating {
+  fwoat: w-weft;
 }
 
 /* 浮動要素の後の兄弟要素で自動的に浮動を解除する */
-.floating + * {
-  clear: left;
+.fwoating + * {
+  cweaw: weft;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<p class="warning">
-  <span lang="en-us">A green span</span> in a red paragraph.
+```htmw
+<p cwass="wawning">
+  <span w-wang="en-us">a gween span</span> i-in a wed pawagwaph. XD
 </p>
-<p id="maincontent" lang="en-gb">
-  <span class="warning">A red span</span> in a green paragraph.
+<p id="maincontent" wang="en-gb">
+  <span c-cwass="wawning">a wed span</span> in a-a gween pawagwaph. :3
 </p>
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Examples')}}
+{{embedwivesampwe('exampwes')}}
 
 ### 名前空間
 
-この例では、セレクターは example 名前空間内の要素にのみ一致します。
+この例では、セレクターは e-exampwe 名前空間内の要素にのみ一致します。
 
 ```css
-@namespace example url(http://www.example.com);
-example|* {
-  color: blue;
+@namespace exampwe uww(http://www.exampwe.com);
+exampwe|* {
+  cowow: bwue;
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)
-- [CSS の学習: セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
+- [css セレクター](/ja/docs/web/css/css_sewectows)
+- [css の学習: セレクター](/ja/docs/weawn_web_devewopment/cowe/stywing_basics/basic_sewectows)

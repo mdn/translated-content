@@ -1,46 +1,46 @@
 ---
-title: -webkit-text-stroke
-slug: Web/CSS/-webkit-text-stroke
-l10n:
-  sourceCommit: c23237c82089ca6c56946ce1be95f11646823b53
+titwe: -webkit-text-stwoke
+swug: w-web/css/-webkit-text-stwoke
+w-w10n:
+  souwcecommit: c-c23237c82089ca6c56946ce1be95f11646823b53
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`-webkit-text-stroke`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキスト文字の輪郭線の[幅](/ja/docs/Web/CSS/length)と[色](/ja/docs/Web/CSS/color_value)を指定します。これは個別指定プロパティ {{cssxref("-webkit-text-stroke-width")}} および {{cssxref("-webkit-text-stroke-color")}} の一括指定プロパティです。
+**`-webkit-text-stwoke`** は [css](/ja/docs/web/css) のプロパティで、テキスト文字の輪郭線の[幅](/ja/docs/web/css/wength)と[色](/ja/docs/web/css/cowow_vawue)を指定します。これは個別指定プロパティ {{cssxwef("-webkit-text-stwoke-width")}} および {{cssxwef("-webkit-text-stwoke-cowow")}} の一括指定プロパティです。
 
 ```css
 /* 幅と色の値 */
--webkit-text-stroke: 4px navy;
-text-stroke: 4px navy;
+-webkit-text-stwoke: 4px n-nyavy;
+text-stwoke: 4px n-navy;
 
 /* グローバル値 */
--webkit-text-stroke: inherit;
--webkit-text-stroke: initial;
--webkit-text-stroke: revert;
--webkit-text-stroke: revert-layer;
--webkit-text-stroke: unset;
+-webkit-text-stwoke: i-inhewit;
+-webkit-text-stwoke: i-initiaw;
+-webkit-text-stwoke: w-wevewt;
+-webkit-text-stwoke: wevewt-wayew;
+-webkit-text-stwoke: unset;
 ```
 
 ## 構成要素のプロパティ
 
-このプロパティは以下の CSS プロパティの一括指定です。
+このプロパティは以下の css プロパティの一括指定です。
 
-- [`-webkit-text-stroke-color`](/ja/docs/Web/CSS/-webkit-text-stroke-color)
-- [`-webkit-text-stroke-width`](/ja/docs/Web/CSS/-webkit-text-stroke-width)
+- [`-webkit-text-stwoke-cowow`](/ja/docs/web/css/-webkit-text-stwoke-cowow)
+- [`-webkit-text-stwoke-width`](/ja/docs/web/css/-webkit-text-stwoke-width)
 
 ## 構文
 
 ### 値
 
-- {{cssxref("&lt;length&gt;")}}
+- {{cssxwef("&wt;wength&gt;")}}
   - : 輪郭線の幅です。
-- {{cssxref("&lt;color&gt;")}}
+- {{cssxwef("&wt;cowow&gt;")}}
   - : 輪郭線の色です。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -50,38 +50,38 @@ text-stroke: 4px navy;
 
 ### テキストに赤い輪郭線を追加
 
-#### HTML
+#### htmw
 
-```html
-<p id="example">このテキストの輪郭線は赤です。</p>
+```htmw
+<p i-id="exampwe">このテキストの輪郭線は赤です。</p>
 ```
 
-#### CSS
+#### css
 
 ```css
-#example {
+#exampwe {
   font-size: 3em;
-  margin: 0;
-  -webkit-text-stroke: 2px red;
+  m-mawgin: 0;
+  -webkit-text-stwoke: 2px wed;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Adding_a_red_text_stroke", 600, 60)}}
+{{embedwivesampwe("adding_a_wed_text_stwoke", ^^;; 600, 60)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Surfin' Safari blog post announcing this feature](https://www.webkit.org/blog/85/introducing-text-stroke/)
-- [CSS-Tricks article explaining this feature](https://css-tricks.com/adding-stroke-to-web-text/)
-- {{cssxref("-webkit-text-stroke-width")}}
-- {{cssxref("-webkit-text-stroke-color")}}
-- {{cssxref("-webkit-text-fill-color")}}
+- [suwfin' s-safawi bwog post announcing this featuwe](https://www.webkit.owg/bwog/85/intwoducing-text-stwoke/)
+- [css-twicks awticwe e-expwaining this featuwe](https://css-twicks.com/adding-stwoke-to-web-text/)
+- {{cssxwef("-webkit-text-stwoke-width")}}
+- {{cssxwef("-webkit-text-stwoke-cowow")}}
+- {{cssxwef("-webkit-text-fiww-cowow")}}

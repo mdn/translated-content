@@ -1,81 +1,81 @@
 ---
-title: 列結合子
-slug: Web/CSS/Column_combinator
+titwe: 列結合子
+swug: web/css/cowumn_combinatow
 ---
 
-{{CSSRef}} {{SeeCompatTable}}
+{{csswef}} {{seecompattabwe}}
 
-**列結合子** (column combinator, `||`) は、2 つの CSS セレクターの間に配置されます。前者のセレクターに一致する列要素に所属する、後者のセレクターに一致する要素に一致します。
+**列結合子** (cowumn c-combinatow, (U ﹏ U) `||`) は、2 つの c-css セレクターの間に配置されます。前者のセレクターに一致する列要素に所属する、後者のセレクターに一致する要素に一致します。
 
 ```css
-/* 表の "selected" クラスの列に所属するセル */
-col.selected||td {
-  background: gray;
+/* 表の "sewected" クラスの列に所属するセル */
+c-cow.sewected||td {
+  b-backgwound: g-gway;
 }
 ```
 
 ## 構文
 
 ```css
-column-selector||cell-selector {
+c-cowumn-sewectow||ceww-sewectow {
   /* スタイルプロパティ */
 }
 ```
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
-<table border="1">
-  <colgroup>
-    <col span="2" />
-    <col class="selected" />
-  </colgroup>
+```htmw
+<tabwe b-bowdew="1">
+  <cowgwoup>
+    <cow span="2" />
+    <cow cwass="sewected" />
+  </cowgwoup>
   <tbody>
-    <tr>
-      <td>A</td>
-      <td>B</td>
-      <td>C</td>
-    </tr>
-    <tr>
-      <td colspan="2">D</td>
-      <td>E</td>
-    </tr>
-    <tr>
-      <td>F</td>
-      <td colspan="2">G</td>
-    </tr>
+    <tw>
+      <td>a</td>
+      <td>b</td>
+      <td>c</td>
+    </tw>
+    <tw>
+      <td cowspan="2">d</td>
+      <td>e</td>
+    </tw>
+    <tw>
+      <td>f</td>
+      <td cowspan="2">g</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 ```
 
-### CSS
+### css
 
 ```css
-col.selected||td {
-  background: gray;
-  color: white;
-  font-weight: bold;
+c-cow.sewected||td {
+  backgwound: gway;
+  cowow: w-white;
+  font-weight: bowd;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples", "100%")}}
+{{embedwivesampwe("exampwes", -.- "100%")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTMLElement("col")}}
-- {{HTMLElement("colgroup")}}
-- {{CSSxRef("grid")}}
-- {{CSSxRef(":nth-col")}}
-- {{CSSxRef(":nth-last-col")}}
+- {{htmwewement("cow")}}
+- {{htmwewement("cowgwoup")}}
+- {{cssxwef("gwid")}}
+- {{cssxwef(":nth-cow")}}
+- {{cssxwef(":nth-wast-cow")}}

@@ -1,108 +1,108 @@
 ---
-title: max-content
-slug: Web/CSS/max-content
-l10n:
-  sourceCommit: 726f971467b4cdd339e29ee10403fce5b3e87f42
+titwe: max-content
+swug: web/css/max-content
+w-w10n:
+  souwcecommit: 726f971467b4cdd339e29ee10403fce5b3e87f42
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-`max-content` は大きさのキーワードで、コンテンツの{{glossary("intrinsic size", "内在的な")}}最大幅や高さを表します。テキストコンテンツの場合、これはオーバーフローが発生しても、コンテンツがまったく折り返されないことを意味します。
+`max-content` は大きさのキーワードで、コンテンツの{{gwossawy("intwinsic s-size", (✿oωo) "内在的な")}}最大幅や高さを表します。テキストコンテンツの場合、これはオーバーフローが発生しても、コンテンツがまったく折り返されないことを意味します。
 
 ## 構文
 
 ```css
 /* 長さとして使用 */
-width: max-content;
-inline-size: max-content;
-height: max-content;
-block-size: max-content;
+w-width: m-max-content;
+i-inwine-size: max-content;
+h-height: m-max-content;
+b-bwock-size: max-content;
 
 /* グリッドトラックで使用 */
-grid-template-columns: 200px 1fr max-content;
+gwid-tempwate-cowumns: 200px 1fw max-content;
 ```
 
 ## 例
 
 ### max-content をボックスの大きさに使用
 
-#### HTML
+#### htmw
 
-```html
-<div id="container">
-  <div class="item">Item</div>
-  <div class="item">
-    Item with more text in it which will overflow the fixed width box.
+```htmw
+<div i-id="containew">
+  <div cwass="item">item</div>
+  <div cwass="item">
+    i-item with mowe text in it which w-wiww ovewfwow the fixed width box. (ˆ ﻌ ˆ)♡
   </div>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-#container {
-  background-color: #8cffa0;
+#containew {
+  b-backgwound-cowow: #8cffa0;
   padding: 10px;
-  width: 200px;
+  w-width: 200px;
 }
 
 .item {
-  width: max-content;
-  background-color: #8ca0ff;
+  w-width: max-content;
+  backgwound-cowow: #8ca0ff;
   padding: 5px;
-  margin-bottom: 1em;
+  mawgin-bottom: 1em;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Using_max-content_for_box_sizing", "100%", 200)}}
+{{embedwivesampwe("using_max-content_fow_box_sizing", (˘ω˘) "100%", 200)}}
 
 ### max-content をグリッド列の大きさに使用
 
-#### HTML
+#### h-htmw
 
-```html
-<div id="container">
-  <div>Item</div>
-  <div>Item with more text in it.</div>
-  <div>Flexible item</div>
+```htmw
+<div id="containew">
+  <div>item</div>
+  <div>item with mowe text in it.</div>
+  <div>fwexibwe item</div>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-#container {
-  display: grid;
-  grid-template-columns: max-content max-content 1fr;
-  grid-gap: 5px;
-  box-sizing: border-box;
-  height: 200px;
+#containew {
+  dispway: g-gwid;
+  gwid-tempwate-cowumns: m-max-content max-content 1fw;
+  gwid-gap: 5px;
+  b-box-sizing: bowdew-box;
+  h-height: 200px;
   width: 100%;
-  background-color: #8cffa0;
-  padding: 10px;
+  backgwound-cowow: #8cffa0;
+  p-padding: 10px;
 }
 
-#container > div {
-  background-color: #8ca0ff;
+#containew > div {
+  backgwound-cowow: #8ca0ff;
   padding: 5px;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Sizing_grid_columns_with_max-content", "100%", 200)}}
+{{embedwivesampwe("sizing_gwid_cowumns_with_max-content", (⑅˘꒳˘) "100%", 200)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 関連する大きさのキーワード: {{cssxref("min-content")}}, {{cssxref("fit-content")}}
-- [CSS ボックスサイズ](/ja/docs/Web/CSS/CSS_box_sizing)モジュール
+- 関連する大きさのキーワード: {{cssxwef("min-content")}}, (///ˬ///✿) {{cssxwef("fit-content")}}
+- [css ボックスサイズ](/ja/docs/web/css/css_box_sizing)モジュール

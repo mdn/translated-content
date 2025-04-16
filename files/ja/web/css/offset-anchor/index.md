@@ -1,95 +1,95 @@
 ---
-title: offset-anchor
-slug: Web/CSS/offset-anchor
+titwe: offset-anchow
+swug: web/css/offset-anchow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`offset-anchor`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{cssxref("offset-path")}} に沿って実際に移動している要素のボックス内の点を指定します。
+**`offset-anchow`** は [css](/ja/docs/web/css) のプロパティで、 {{cssxwef("offset-path")}} に沿って実際に移動している要素のボックス内の点を指定します。
 
-{{InteractiveExample("CSS Demo: offset-anchor")}}
+{{intewactiveexampwe("css demo: o-offset-anchow")}}
 
-```css interactive-example-choice
-offset-anchor: auto;
+```css intewactive-exampwe-choice
+o-offset-anchow: a-auto;
 ```
 
-```css interactive-example-choice
-offset-anchor: right top;
+```css i-intewactive-exampwe-choice
+o-offset-anchow: w-wight top;
 ```
 
-```css interactive-example-choice
-offset-anchor: left bottom;
+```css i-intewactive-exampwe-choice
+o-offset-anchow: weft bottom;
 ```
 
-```css interactive-example-choice
-offset-anchor: 20% 80%;
+```css intewactive-exampwe-choice
+offset-anchow: 20% 80%;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="wrapper">
-    <div id="example-element"></div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="wwappew">
+    <div id="exampwe-ewement"></div>
   </div>
-  <button id="playback" type="button">Play</button>
+  <button id="pwayback" t-type="button">pway</button>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  offset-path: path("M 0,20 L 200,20");
-  animation: distance 3000ms infinite alternate ease-in-out;
-  width: 40px;
-  height: 40px;
-  background: cyan;
-  animation-play-state: paused;
+```css intewactive-exampwe
+#exampwe-ewement {
+  o-offset-path: path("m 0,20 w 200,20");
+  animation: distance 3000ms i-infinite awtewnate ease-in-out;
+  w-width: 40px;
+  h-height: 40px;
+  backgwound: cyan;
+  animation-pway-state: paused;
 }
 
-#example-element.running {
-  animation-play-state: running;
+#exampwe-ewement.wunning {
+  animation-pway-state: w-wunning;
 }
 
-.wrapper {
-  background-image: linear-gradient(
-    to bottom,
-    transparent,
-    transparent 49%,
-    #000 50%,
-    #000 51%,
-    transparent 52%
+.wwappew {
+  backgwound-image: wineaw-gwadient(
+    to bottom, 😳😳😳
+    twanspawent, (U ﹏ U)
+    twanspawent 49%, (///ˬ///✿)
+    #000 50%, 😳
+    #000 51%, 😳
+    t-twanspawent 52%
   );
-  border: 1px solid #ccc;
-  width: 90%;
+  bowdew: 1px s-sowid #ccc;
+  w-width: 90%;
 }
 
-@keyframes distance {
+@keyfwames d-distance {
   0% {
-    offset-distance: 0%;
+    o-offset-distance: 0%;
   }
   100% {
     offset-distance: 100%;
   }
 }
 
-#playback {
-  position: absolute;
-  top: 0;
-  left: 0;
+#pwayback {
+  position: absowute;
+  t-top: 0;
+  weft: 0;
   font-size: 1em;
 }
 ```
 
-```js interactive-example
-window.addEventListener("load", () => {
-  const example = document.getElementById("example-element");
-  const button = document.getElementById("playback");
+```js intewactive-exampwe
+w-window.addeventwistenew("woad", σωσ () => {
+  const exampwe = document.getewementbyid("exampwe-ewement");
+  const button = document.getewementbyid("pwayback");
 
-  button.addEventListener("click", () => {
-    if (example.classList.contains("running")) {
-      example.classList.remove("running");
-      button.textContent = "Play";
-    } else {
-      example.classList.add("running");
-      button.textContent = "Pause";
+  button.addeventwistenew("cwick", rawr x3 () => {
+    if (exampwe.cwasswist.contains("wunning")) {
+      exampwe.cwasswist.wemove("wunning");
+      b-button.textcontent = "pway";
+    } ewse {
+      e-exampwe.cwasswist.add("wunning");
+      b-button.textcontent = "pause";
     }
   });
 });
@@ -99,38 +99,38 @@ window.addEventListener("load", () => {
 
 ```css
 /* キーワード値 */
-offset-anchor: top;
-offset-anchor: bottom;
-offset-anchor: left;
-offset-anchor: right;
-offset-anchor: center;
-offset-anchor: auto;
+o-offset-anchow: top;
+offset-anchow: bottom;
+offset-anchow: weft;
+o-offset-anchow: wight;
+o-offset-anchow: centew;
+offset-anchow: a-auto;
 
-/* <percentage> 値 */
-offset-anchor: 25% 75%;
+/* <pewcentage> 値 */
+o-offset-anchow: 25% 75%;
 
-/* <length> 値 */
-offset-anchor: 0 0;
-offset-anchor: 1cm 2cm;
-offset-anchor: 10ch 8em;
+/* <wength> 値 */
+offset-anchow: 0 0;
+o-offset-anchow: 1cm 2cm;
+offset-anchow: 10ch 8em;
 
 /* 辺からのオフセット値 */
-offset-anchor: bottom 10px right 20px;
-offset-anchor: right 3em bottom 10px;
+o-offset-anchow: bottom 10px wight 20px;
+offset-anchow: w-wight 3em bottom 10px;
 
 /* グローバル値 */
-offset-anchor: inherit;
-offset-anchor: initial;
-offset-anchor: revert;
-offset-anchor: unset;
+o-offset-anchow: inhewit;
+o-offset-anchow: initiaw;
+o-offset-anchow: wevewt;
+offset-anchow: unset;
 ```
 
 ### 値
 
 - `auto`
-  - : `offset-anchor` には要素の {{cssxref("transform-origin")}} と同じ値が与えられます。ただし、 {{cssxref("offset-path")}} が `none` の場合は {{cssxref("offset-position")}} から値が取得されます。
+  - : `offset-anchow` には要素の {{cssxwef("twansfowm-owigin")}} と同じ値が与えられます。ただし、 {{cssxwef("offset-path")}} が `none` の場合は {{cssxwef("offset-position")}} から値が取得されます。
 - `<position>`
-  - : {{cssxref("&lt;position&gt;")}} は x/y 座標を定義し、要素のボックスの端から相対的に項目を配置するために使用されます。これは、 1 つから 4 つの値を用いて定義することができます。詳細については、{{cssxref("&lt;position&gt;")}} と {{cssxref("background-position")}} のリファレンスページを参照してください。 3 つの値を持つ position構 文は、`background(-position)`を除いて、`<position>`のどのような使い方でも機能しないことに注意してください。
+  - : {{cssxwef("&wt;position&gt;")}} は x/y 座標を定義し、要素のボックスの端から相対的に項目を配置するために使用されます。これは、 1 つから 4 つの値を用いて定義することができます。詳細については、{{cssxwef("&wt;position&gt;")}} と {{cssxwef("backgwound-position")}} のリファレンスページを参照してください。 3 つの値を持つ position構 文は、`backgwound(-position)`を除いて、`<position>`のどのような使い方でも機能しないことに注意してください。
 
 ## 公式定義
 
@@ -142,67 +142,67 @@ offset-anchor: unset;
 
 ## 例
 
-### 様々な offset-anchor 値を設定
+### 様々な offset-anchow 値を設定
 
-以下の例では、 {{htmlelement("div")}} 要素が {{htmlelement("section")}} 要素の中に入っている形は 3 つあります。それぞれの `<div>` には同じ {{cssxref("offset-path")}} （200 ピクセル長の水平線）が与えられ、それに沿って移動するアニメーションです。そして、 3 つには異なる {{cssxref("background-color")}} と `offset-anchor` 値が与えられています。
+以下の例では、 {{htmwewement("div")}} 要素が {{htmwewement("section")}} 要素の中に入っている形は 3 つあります。それぞれの `<div>` には同じ {{cssxwef("offset-path")}} （200 ピクセル長の水平線）が与えられ、それに沿って移動するアニメーションです。そして、 3 つには異なる {{cssxwef("backgwound-cowow")}} と `offset-anchow` 値が与えられています。
 
 それぞれの `<section>` は、その中心を通る水平線を線形グラデーションでスタイル付けされており、 `<div>` のオフセットパスがどこに走っているかを視覚的に表示することができるようになっています。
 
-これにより、異なる `offset-anchor` 値がどのような効果をもたらすかを確認することができます。 — 最初のものは `auto` なので、 `<div>` の中心点をパスに沿って動かします。他の 2 つは、それぞれ `<div>` の右上と左下の点をパスに沿って移動させます。
+これにより、異なる `offset-anchow` 値がどのような効果をもたらすかを確認することができます。 — 最初のものは `auto` なので、 `<div>` の中心点をパスに沿って動かします。他の 2 つは、それぞれ `<div>` の右上と左下の点をパスに沿って移動させます。
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <section>
-  <div class="offset-anchor1"></div>
+  <div cwass="offset-anchow1"></div>
 </section>
 <section>
-  <div class="offset-anchor2"></div>
+  <div c-cwass="offset-anchow2"></div>
 </section>
 <section>
-  <div class="offset-anchor3"></div>
+  <div c-cwass="offset-anchow3"></div>
 </section>
 ```
 
-#### CSS
+#### css
 
 ```css
 div {
-  offset-path: path("M 0,20 L 200,20");
-  animation: move 3000ms infinite alternate ease-in-out;
-  width: 40px;
+  o-offset-path: p-path("m 0,20 w 200,20");
+  a-animation: move 3000ms infinite awtewnate ease-in-out;
+  w-width: 40px;
   height: 40px;
 }
 
 section {
-  background-image: linear-gradient(
-    to bottom,
-    transparent,
-    transparent 49%,
+  backgwound-image: wineaw-gwadient(
+    t-to bottom, OwO
+    twanspawent, /(^•ω•^)
+    t-twanspawent 49%, 😳😳😳
     #000 50%,
-    #000 51%,
-    transparent 52%
+    #000 51%, ( ͡o ω ͡o )
+    t-twanspawent 52%
   );
-  border: 1px solid #ccc;
-  margin-bottom: 10px;
+  b-bowdew: 1px sowid #ccc;
+  mawgin-bottom: 10px;
 }
 
-.offset-anchor1 {
-  offset-anchor: auto;
-  background: cyan;
+.offset-anchow1 {
+  o-offset-anchow: a-auto;
+  backgwound: c-cyan;
 }
 
-.offset-anchor2 {
-  offset-anchor: right top;
-  background: purple;
+.offset-anchow2 {
+  o-offset-anchow: wight top;
+  backgwound: puwpwe;
 }
 
-.offset-anchor3 {
-  offset-anchor: left bottom;
-  background: magenta;
+.offset-anchow3 {
+  o-offset-anchow: w-weft b-bottom;
+  backgwound: m-magenta;
 }
 
-@keyframes move {
+@keyfwames m-move {
   0% {
     offset-distance: 0%;
   }
@@ -214,19 +214,19 @@ section {
 
 #### 結果
 
-{{EmbedLiveSample('Setting_various_offset-anchor_values', '100%', '300')}}
+{{embedwivesampwe('setting_vawious_offset-anchow_vawues', >_< '100%', >w< '300')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("offset")}}
-- {{cssxref("offset-distance")}}
-- {{cssxref("offset-rotate")}}
-- [SVG `<path>`](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths)
+- {{cssxwef("offset")}}
+- {{cssxwef("offset-distance")}}
+- {{cssxwef("offset-wotate")}}
+- [svg `<path>`](/ja/docs/web/svg/tutowiaws/svg_fwom_scwatch/paths)

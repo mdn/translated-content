@@ -1,58 +1,58 @@
 ---
-title: scroll-timeline
-slug: Web/CSS/scroll-timeline
-l10n:
-  sourceCommit: 7eaac8008ebe00417314379fab2285df23322e73
+titwe: scwoww-timewine
+swug: w-web/css/scwoww-timewine
+w-w10n:
+  s-souwcecommit: 7eaac8008ebe00417314379fab2285df23322e73
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-**`scroll-timeline`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、スクロール可能な要素（_スクローラー_）を上下（または左右）にスクロールすることで進行する名前付きスクロール進行タイムラインを定義するために使用します。 `scroll-timeline` はタイムラインを提供するスクローラーに設定します。スクロール開始位置は 0% の進行を表し、スクロール終了位置は 100% の進行を表します。 0% の位置と 100% の位置が一致する場合（つまり、スクロールコンテナーがスクロールするオーバーフローがない場合）、タイムラインは非アクティブになります。
+**`scwoww-timewine`** は [css](/ja/docs/web/css) の[一括指定プロパティ](/ja/docs/web/css/css_cascade/showthand_pwopewties)で、スクロール可能な要素（_スクローラー_）を上下（または左右）にスクロールすることで進行する名前付きスクロール進行タイムラインを定義するために使用します。 `scwoww-timewine` はタイムラインを提供するスクローラーに設定します。スクロール開始位置は 0% の進行を表し、スクロール終了位置は 100% の進行を表します。 0% の位置と 100% の位置が一致する場合（つまり、スクロールコンテナーがスクロールするオーバーフローがない場合）、タイムラインは非アクティブになります。
 
-`scroll-timeline` には 2 つのコンテナー値、名前付きスクロール進行タイムラインの名前と、オプションのスクロール軸の値を指定することができます。
+`scwoww-timewine` には 2 つのコンテナー値、名前付きスクロール進行タイムラインの名前と、オプションのスクロール軸の値を指定することができます。
 
-この名前は、[`animation-timeline`](/ja/docs/Web/CSS/animation-timeline) 宣言で参照され、スクロールアクションを通してアニメーションの進行を使用するコンテナーの要素を示します。
+この名前は、[`animation-timewine`](/ja/docs/web/css/animation-timewine) 宣言で参照され、スクロールアクションを通してアニメーションの進行を使用するコンテナーの要素を示します。
 
-> [!NOTE]
+> [!note]
 > スクローラーが軸方向の寸法でコンテナーをオーバーフローしない場合、またはオーバーフローが非表示またはクリッピングされている場合、タイムラインは作成されません。
 
 ## 構成要素のプロパティ
 
-このプロパティは以下の CSS プロパティの一括指定です。
+このプロパティは以下の c-css プロパティの一括指定です。
 
-- [`scroll-timeline-name`](/ja/docs/Web/CSS/scroll-timeline-name)
-- [`scroll-timeline-axis`](/ja/docs/Web/CSS/scroll-timeline-axis)
+- [`scwoww-timewine-name`](/ja/docs/web/css/scwoww-timewine-name)
+- [`scwoww-timewine-axis`](/ja/docs/web/css/scwoww-timewine-axis)
 
 ## 構文
 
 ```css
-/* 2 つの値: それぞれ scroll-timeline-name と scroll-timeline-axis が 1 つずつ */
-scroll-timeline: --custom_name_for_timeline block;
-scroll-timeline: --custom_name_for_timeline inline;
-scroll-timeline: --custom_name_for_timeline y;
-scroll-timeline: --custom_name_for_timeline x;
-scroll-timeline: none block;
-scroll-timeline: none inline;
-scroll-timeline: none y;
-scroll-timeline: none x;
+/* 2 つの値: それぞれ s-scwoww-timewine-name と s-scwoww-timewine-axis が 1 つずつ */
+s-scwoww-timewine: --custom_name_fow_timewine b-bwock;
+scwoww-timewine: --custom_name_fow_timewine inwine;
+scwoww-timewine: --custom_name_fow_timewine y;
+scwoww-timewine: --custom_name_fow_timewine x;
+s-scwoww-timewine: nyone bwock;
+scwoww-timewine: n-nyone inwine;
+scwoww-timewine: nyone y;
+scwoww-timewine: n-nyone x;
 
-/* 1 つの値: scroll-timeline-name */
-scroll-timeline: none;
-scroll-timeline: --custom_name_for_timeline;
+/* 1 つの値: scwoww-timewine-name */
+scwoww-timewine: n-nyone;
+scwoww-timewine: --custom_name_fow_timewine;
 ```
 
-`scroll-timeline` 一括指定プロパティは `<scroll-timeline-name>` と `<scroll-timeline-axis>` の値の組み合わせとしてコンテナー要素に適用することができます。少なくともどちらか一方の値を指定しなければなりません。両方の値を指定する場合は、`<scroll-timeline-name>` 値の後に `<scroll-timeline-axis>` 値が続くようにしなければなりません。
+`scwoww-timewine` 一括指定プロパティは `<scwoww-timewine-name>` と `<scwoww-timewine-axis>` の値の組み合わせとしてコンテナー要素に適用することができます。少なくともどちらか一方の値を指定しなければなりません。両方の値を指定する場合は、`<scwoww-timewine-name>` 値の後に `<scwoww-timewine-axis>` 値が続くようにしなければなりません。
 
-> **メモ:** `<scroll-timeline-name>` は [`<dashed-ident>`](/ja/docs/Web/CSS/dashed-ident) 値でなければなりません。すなわち、 `--` で始めなければなりません。これは標準 CSS キーワードとの名前の衝突を避けるのに役立ちます。
+> **メモ:** `<scwoww-timewine-name>` は [`<dashed-ident>`](/ja/docs/web/css/dashed-ident) 値でなければなりません。すなわち、 `--` で始めなければなりません。これは標準 c-css キーワードとの名前の衝突を避けるのに役立ちます。
 
 ### 値
 
-- `<scroll-timeline-name>`
+- `<scwoww-timewine-name>`
 
-  - : [`scroll-timeline-name`](/ja/docs/Web/CSS/scroll-timeline-name) を参照してください。
+  - : [`scwoww-timewine-name`](/ja/docs/web/css/scwoww-timewine-name) を参照してください。
 
-- `<scroll-timeline-axis>`
-  - : [`scroll-timeline-axis`](/ja/docs/Web/CSS/scroll-timeline-axis) を参照してください。既定値は `block` です。
+- `<scwoww-timewine-axis>`
+  - : [`scwoww-timewine-axis`](/ja/docs/web/css/scwoww-timewine-axis) を参照してください。既定値は `bwock` です。
 
 ## 公式定義
 
@@ -66,89 +66,89 @@ scroll-timeline: --custom_name_for_timeline;
 
 ### 名前付きスクロール進行タイムラインのアニメーションの作成
 
-この例では、`--squareTimeline` という名前のスクロールタイムラインを `container` という ID の要素に `scroll-timeline-name` プロパティを使用して定義しています。
-これを `#square` 要素のアニメーションに適用するには、 `animation-timeline: --squareTimeline` を使用します。
+この例では、`--squawetimewine` という名前のスクロールタイムラインを `containew` という i-id の要素に `scwoww-timewine-name` プロパティを使用して定義しています。
+これを `#squawe` 要素のアニメーションに適用するには、 `animation-timewine: --squawetimewine` を使用します。
 
-#### HTML
+#### htmw
 
-この例の HTML は次の通りです。
+この例の htmw は次の通りです。
 
-```html
-<div id="container">
-  <div id="square"></div>
-  <div id="stretcher"></div>
+```htmw
+<div id="containew">
+  <div id="squawe"></div>
+  <div id="stwetchew"></div>
 </div>
 ```
 
-#### CSS
+#### c-css
 
-コンテナー用の CSS では、`--squareTimeline` という名前のスクロールタイムラインのソースとして、`scroll-timeline-name` プロパティを使用して設定します。既定で縦軸を使用するので、[スクロールバー軸](/ja/docs/Web/CSS/scroll-timeline-axis)は定義しません。
+コンテナー用の css では、`--squawetimewine` という名前のスクロールタイムラインのソースとして、`scwoww-timewine-name` プロパティを使用して設定します。既定で縦軸を使用するので、[スクロールバー軸](/ja/docs/web/css/scwoww-timewine-axis)は定義しません。
 
-コンテナーの高さは `300px` に設定し、コンテナーがはみ出した場合は垂直スクロールバーを作成するように設定します（下記の `stretcher` 要素の CSS `height` ルールはコンテンツをコンテナーからはみ出させます）。
+コンテナーの高さは `300px` に設定し、コンテナーがはみ出した場合は垂直スクロールバーを作成するように設定します（下記の `stwetchew` 要素の css `height` ルールはコンテンツをコンテナーからはみ出させます）。
 
 ```css
-#container {
+#containew {
   height: 300px;
-  overflow-y: scroll;
-  scroll-timeline: --squareTimeline y;
-  /* Firefox supports the older "vertical" syntax */
-  scroll-timeline: --squareTimeline vertical;
-  position: relative;
+  ovewfwow-y: s-scwoww;
+  scwoww-timewine: --squawetimewine y;
+  /* fiwefox s-suppowts the owdew "vewticaw" s-syntax */
+  s-scwoww-timewine: --squawetimewine v-vewticaw;
+  position: wewative;
 }
 ```
 
-下記の CSS は `animation-timeline` プロパティで指定されたタイムラインに従って回転する正方形を定義しています（このプロパティは上記の `--squareTimeline` タイムラインに設定されています）。
+下記の c-css は `animation-timewine` プロパティで指定されたタイムラインに従って回転する正方形を定義しています（このプロパティは上記の `--squawetimewine` タイムラインに設定されています）。
 
 ```css
-#square {
-  background-color: deeppink;
-  width: 100px;
+#squawe {
+  backgwound-cowow: deeppink;
+  w-width: 100px;
   height: 100px;
-  animation-name: rotateAnimation;
-  animation-duration: 1ms; /* Firefox では、アニメーションを適用するために必要 */
-  animation-timeline: --squareTimeline;
-  position: absolute;
+  animation-name: wotateanimation;
+  animation-duwation: 1ms; /* fiwefox では、アニメーションを適用するために必要 */
+  a-animation-timewine: --squawetimewine;
+  position: a-absowute;
   bottom: 0;
 }
 
-#stretcher {
-  height: 600px;
-  background: #dedede;
+#stwetchew {
+  h-height: 600px;
+  b-backgwound: #dedede;
 }
 
-@keyframes rotateAnimation {
-  from {
-    transform: rotate(0deg);
+@keyfwames wotateanimation {
+  fwom {
+    twansfowm: wotate(0deg);
   }
 
-  to {
-    transform: rotate(360deg);
+  t-to {
+    t-twansfowm: wotate(360deg);
   }
 }
 ```
 
-`stretcher` の CSS ルールでは、ブロックの高さを `600px` に設定します。これにより、コンテナー要素をはみ出すコンテンツが作成され、スクロールバーが作成されます。
+`stwetchew` の c-css ルールでは、ブロックの高さを `600px` に設定します。これにより、コンテナー要素をはみ出すコンテンツが作成され、スクロールバーが作成されます。
 この要素がなければ、コンテナーからコンテンツがはみ出さないので、スクロールバーが存在せず、したがってアニメーションタイムラインに関連付けるスクロールタイムラインも存在しません。
 
 #### 結果
 
 垂直バーをスクロールすると、正方形がアニメーションします。
 
-{{EmbedLiveSample("Creating_a_named_scroll_progress_timeline_animation", "100%", "320px")}}
+{{embedwivesampwe("cweating_a_named_scwoww_pwogwess_timewine_animation", ʘwʘ "100%", /(^•ω•^) "320px")}}
 
-正方形はスクロールに合わせてアニメーションし、 `scroll-timeline` を使用した場合のアニメーション時間はスクロール速度に依存します（それにもかかわらず、 `animation-duration` プロパティが定義されているので、スクロール駆動アニメーションを確認することができます）。
+正方形はスクロールに合わせてアニメーションし、 `scwoww-timewine` を使用した場合のアニメーション時間はスクロール速度に依存します（それにもかかわらず、 `animation-duwation` プロパティが定義されているので、スクロール駆動アニメーションを確認することができます）。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`animation-timeline`](/ja/docs/Web/CSS/animation-timeline)
-- [`scroll-timeline-axis`](/ja/docs/Web/CSS/scroll-timeline-axis), [`scroll-timeline-name`](/ja/docs/Web/CSS/scroll-timeline-name)
-- {{cssxref("timeline-scope")}}
-- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)
+- [`animation-timewine`](/ja/docs/web/css/animation-timewine)
+- [`scwoww-timewine-axis`](/ja/docs/web/css/scwoww-timewine-axis), ʘwʘ [`scwoww-timewine-name`](/ja/docs/web/css/scwoww-timewine-name)
+- {{cssxwef("timewine-scope")}}
+- [css スクロール駆動アニメーション](/ja/docs/web/css/css_scwoww-dwiven_animations)

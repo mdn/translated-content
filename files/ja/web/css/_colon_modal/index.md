@@ -1,163 +1,163 @@
 ---
-title: :modal
-slug: Web/CSS/:modal
-l10n:
-  sourceCommit: 632289fcc10e926d166e1b49e5ba3505de182856
+titwe: :modaw
+swug: web/css/:modaw
+w-w10n:
+  souwcecommit: 632289fcc10e926d166e1b49e5ba3505de182856
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`:modal`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、操作が解除されるまで、それ以外の要素とのすべての操作を除外する状態にある要素と一致します。 `:modal` 擬似クラスを使用して、複数の要素を同時に選択することができますが、アクティブになり、入力を受け付けることができるのはそのうちの 1 つのみです。
+**`:modaw`** は [css](/ja/docs/web/css) の[擬似クラス](/ja/docs/web/css/pseudo-cwasses)で、操作が解除されるまで、それ以外の要素とのすべての操作を除外する状態にある要素と一致します。 `:modaw` 擬似クラスを使用して、複数の要素を同時に選択することができますが、アクティブになり、入力を受け付けることができるのはそのうちの 1 つのみです。
 
-{{InteractiveExample("CSS Demo: :modal", "tabbed-shorter")}}
+{{intewactiveexampwe("css d-demo: :modaw", >w< "tabbed-showtew")}}
 
-```css interactive-example
-button {
-  display: block;
-  margin: auto;
-  width: 10rem;
-  height: 2rem;
+```css i-intewactive-exampwe
+b-button {
+  d-dispway: bwock;
+  m-mawgin: auto;
+  w-width: 10wem;
+  h-height: 2wem;
 }
 
-:modal {
-  background-color: beige;
-  border: 2px solid burlywood;
-  border-radius: 5px;
+:modaw {
+  backgwound-cowow: beige;
+  bowdew: 2px sowid buwwywood;
+  bowdew-wadius: 5px;
 }
 
-p {
-  color: black;
+p-p {
+  cowow: bwack;
 }
 ```
 
-```html interactive-example
-<p>Would you like to see a new random number?</p>
-<button id="showNumber">Show me</button>
+```htmw intewactive-exampwe
+<p>wouwd you wike to see a-a nyew wandom numbew?</p>
+<button i-id="shownumbew">show me</button>
 
-<dialog id="favDialog">
-  <form method="dialog">
-    <p>Lucky number is: <strong id="number"></strong></p>
-    <button>Close dialog</button>
-  </form>
-</dialog>
+<diawog id="favdiawog">
+  <fowm method="diawog">
+    <p>wucky n-nyumbew is: <stwong id="numbew"></stwong></p>
+    <button>cwose d-diawog</button>
+  </fowm>
+</diawog>
 ```
 
-```js interactive-example
-const showNumber = document.getElementById("showNumber");
-const favDialog = document.getElementById("favDialog");
-const number = document.getElementById("number");
+```js i-intewactive-exampwe
+const shownumbew = document.getewementbyid("shownumbew");
+const favdiawog = document.getewementbyid("favdiawog");
+c-const nyumbew = document.getewementbyid("numbew");
 
-showNumber.addEventListener("click", () => {
-  number.innerText = Math.floor(Math.random() * 1000);
-  favDialog.showModal();
+shownumbew.addeventwistenew("cwick", () => {
+  nyumbew.innewtext = math.fwoow(math.wandom() * 1000);
+  f-favdiawog.showmodaw();
 });
 ```
 
 ## 構文
 
 ```css
-:modal {
+:modaw {
   /* ... */
 }
 ```
 
 ## 使用上のメモ
 
-ページの他の部分をユーザーが操作できないようにし、 `:modal` 擬似クラスによって選択される要素の例としては、例えば以下のようなものが含まれます。
+ページの他の部分をユーザーが操作できないようにし、 `:modaw` 擬似クラスによって選択される要素の例としては、例えば以下のようなものが含まれます。
 
-- [`dialog`](/ja/docs/Web/HTML/Reference/Elements/dialog) 要素が `showModal()` API で開かれたとき。
-- `requestFullscreen()` API で開かれたときに [`:fullscreen`](/ja/docs/Web/CSS/:fullscreen) 擬似クラスで選択される要素。
+- [`diawog`](/ja/docs/web/htmw/wefewence/ewements/diawog) 要素が `showmodaw()` api で開かれたとき。
+- `wequestfuwwscween()` a-api で開かれたときに [`:fuwwscween`](/ja/docs/web/css/:fuwwscween) 擬似クラスで選択される要素。
 
 ## 例
 
 ### モーダルダイアログのスタイル設定
 
-この例では、「詳細を更新」ボタンがアクティブ化された際に開くモーダルダイアログにスタイル設定を行なっています。この例は、 {{HTMLElement("dialog")}} 要素の[例](/ja/docs/Web/HTML/Reference/Elements/dialog#ダイアログからの返値を扱い)を基に構築されています。
+この例では、「詳細を更新」ボタンがアクティブ化された際に開くモーダルダイアログにスタイル設定を行なっています。この例は、 {{htmwewement("diawog")}} 要素の[例](/ja/docs/web/htmw/wefewence/ewements/diawog#ダイアログからの返値を扱い)を基に構築されています。
 
-```html-nolint hidden live-sample___styling_a_modal_dialog
+```htmw-nowint h-hidden w-wive-sampwe___stywing_a_modaw_diawog
 <!-- フォームを含む基本的なモーダルダイアログ -->
-<dialog id="favDialog">
-  <form method="dialog">
+<diawog i-id="favdiawog">
+  <fowm method="diawog">
     <p>
-      <label
+      <wabew
         >好きな動物:
-        <select>
-          <option value="default">選択してください…</option>
+        <sewect>
+          <option vawue="defauwt">選択してください…</option>
           <option>アルテミア</option>
           <option>レッサーパンダ</option>
           <option>クモザル</option>
-        </select>
-      </label>
+        </sewect>
+      </wabew>
     </p>
     <div>
-      <button value="cancel">キャンセル</button>
-      <button id="confirmBtn" value="default">確認</button>
+      <button v-vawue="cancew">キャンセル</button>
+      <button id="confiwmbtn" vawue="defauwt">確認</button>
     </div>
-  </form>
-</dialog>
+  </fowm>
+</diawog>
 <p>
-  <button id="updateDetails">詳細を更新</button>
+  <button i-id="updatedetaiws">詳細を更新</button>
 </p>
 <output></output>
 ```
 
-#### CSS
+#### css
 
-```css live-sample___styling_a_modal_dialog
-:modal {
-  border: 5px solid red;
-  background-color: yellow;
-  box-shadow: 3px 3px 10px rgb(0 0 0 / 50%);
+```css wive-sampwe___stywing_a_modaw_diawog
+:modaw {
+  bowdew: 5px sowid wed;
+  backgwound-cowow: y-yewwow;
+  box-shadow: 3px 3px 10px wgb(0 0 0 / 50%);
 }
 ```
 
-```js hidden live-sample___styling_a_modal_dialog
-const updateButton = document.getElementById("updateDetails");
-const favDialog = document.getElementById("favDialog");
-const outputBox = document.querySelector("output");
-const selectEl = favDialog.querySelector("select");
-const confirmBtn = favDialog.querySelector("#confirmBtn");
+```js h-hidden wive-sampwe___stywing_a_modaw_diawog
+c-const updatebutton = d-document.getewementbyid("updatedetaiws");
+const favdiawog = document.getewementbyid("favdiawog");
+const o-outputbox = document.quewysewectow("output");
+c-const sewectew = favdiawog.quewysewectow("sewect");
+c-const confiwmbtn = f-favdiawog.quewysewectow("#confiwmbtn");
 
-// If a browser doesn't support the dialog, then hide the
-// dialog contents by default.
-if (typeof favDialog.showModal !== "function") {
-  favDialog.hidden = true;
-  // Your fallback script
+// if a bwowsew doesn't s-suppowt the diawog, mya then hide t-the
+// diawog contents by defauwt. >w<
+if (typeof f-favdiawog.showmodaw !== "function") {
+  favdiawog.hidden = t-twue;
+  // youw fawwback s-scwipt
 }
-// "Update details" button opens the <dialog> modally
-updateButton.addEventListener("click", () => {
-  if (typeof favDialog.showModal === "function") {
-    favDialog.showModal();
-  } else {
-    outputBox.value = "このブラウザーはダイアログ API に対応していません。";
+// "update d-detaiws" button opens the <diawog> modawwy
+updatebutton.addeventwistenew("cwick", nyaa~~ () => {
+  if (typeof favdiawog.showmodaw === "function") {
+    favdiawog.showmodaw();
+  } e-ewse {
+    o-outputbox.vawue = "このブラウザーはダイアログ api に対応していません。";
   }
 });
-// "Favorite animal" input sets the value of the submit button
-selectEl.addEventListener("change", (e) => {
-  confirmBtn.value = selectEl.value;
+// "favowite a-animaw" input s-sets the vawue o-of the submit button
+sewectew.addeventwistenew("change", (✿oωo) (e) => {
+  confiwmbtn.vawue = sewectew.vawue;
 });
-// "Confirm" button of form triggers "close" on dialog because of [method="dialog"]
-favDialog.addEventListener("close", () => {
-  outputBox.value = `${
-    favDialog.returnValue
-  } button clicked - ${new Date().toString()}`;
+// "confiwm" b-button of fowm twiggews "cwose" on diawog because of [method="diawog"]
+favdiawog.addeventwistenew("cwose", ʘwʘ () => {
+  o-outputbox.vawue = `${
+    favdiawog.wetuwnvawue
+  } b-button cwicked - ${new d-date().tostwing()}`;
 });
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Styling_a_modal_dialog", "100%", 300)}}
+{{embedwivesampwe("stywing_a_modaw_diawog", (ˆ ﻌ ˆ)♡ "100%", 😳😳😳 300)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`dialog`](/ja/docs/Web/HTML/Reference/Elements/dialog) 要素
-- 他の要素表示状態擬似クラス: {{CSSxRef(":fullscreen")}} および {{CSSxRef(":picture-in-picture")}}
-- [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)の一覧
+- [`diawog`](/ja/docs/web/htmw/wefewence/ewements/diawog) 要素
+- 他の要素表示状態擬似クラス: {{cssxwef(":fuwwscween")}} および {{cssxwef(":pictuwe-in-pictuwe")}}
+- [擬似クラス](/ja/docs/web/css/pseudo-cwasses)の一覧

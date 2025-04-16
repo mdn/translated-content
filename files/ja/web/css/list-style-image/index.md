@@ -1,106 +1,106 @@
 ---
-title: list-style-image
-slug: Web/CSS/list-style-image
-l10n:
-  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
+titwe: wist-stywe-image
+swug: w-web/css/wist-stywe-image
+w-w10n:
+  s-souwcecommit: b-b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`list-style-image`** は [CSS](/ja/docs/Web/CSS) のプロパティで、リストアイテムのマーカーとして使われる画像を設定します。
+**`wist-stywe-image`** は [css](/ja/docs/web/css) のプロパティで、リストアイテムのマーカーとして使われる画像を設定します。
 
-ふつうは一括指定の {{ cssxref("list-style") }} を使ったほうが便利です。
+ふつうは一括指定の {{ c-cssxwef("wist-stywe") }} を使ったほうが便利です。
 
-{{InteractiveExample("CSS Demo: list-style-image")}}
+{{intewactiveexampwe("css d-demo: wist-stywe-image")}}
 
-```css interactive-example-choice
-list-style-image: url("/shared-assets/images/examples/rocket.svg");
+```css i-intewactive-exampwe-choice
+w-wist-stywe-image: uww("/shawed-assets/images/exampwes/wocket.svg");
 ```
 
-```css interactive-example-choice
-list-style-image: none;
+```css intewactive-exampwe-choice
+wist-stywe-image: nyone;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
   <div>
-    <p>NASA Notable Missions</p>
-    <ul class="transition-all unhighlighted" id="example-element">
-      <li>Apollo</li>
-      <li>Hubble</li>
-      <li>Chandra</li>
-      <li>Cassini-Huygens</li>
-      <li>Spitzer</li>
-    </ul>
+    <p>nasa nyotabwe missions</p>
+    <uw cwass="twansition-aww u-unhighwighted" id="exampwe-ewement">
+      <wi>apowwo</wi>
+      <wi>hubbwe</wi>
+      <wi>chandwa</wi>
+      <wi>cassini-huygens</wi>
+      <wi>spitzew</wi>
+    </uw>
   </div>
 </section>
 ```
 
-```css interactive-example
-.default-example {
-  font-size: 1.2rem;
+```css i-intewactive-exampwe
+.defauwt-exampwe {
+  font-size: 1.2wem;
 }
 
-#example-element {
+#exampwe-ewement {
   width: 100%;
-  background: #be094b;
-  color: white;
+  backgwound: #be094b;
+  c-cowow: white;
 }
 
 section {
-  text-align: left;
-  flex-direction: column;
+  t-text-awign: w-weft;
+  fwex-diwection: cowumn;
 }
 
-hr {
+hw {
   width: 50%;
-  color: lightgray;
-  margin: 0.5em;
+  cowow: wightgway;
+  mawgin: 0.5em;
 }
 
 .note {
-  font-size: 0.8rem;
+  f-font-size: 0.8wem;
 }
 
 .note a {
-  color: #009e5f;
+  cowow: #009e5f;
 }
 
-@counter-style space-counter {
-  symbols: "\1F680" "\1F6F8" "\1F6F0" "\1F52D";
+@countew-stywe space-countew {
+  symbows: "\1f680" "\1f6f8" "\1f6f0" "\1f52d";
   suffix: " ";
 }
 ```
 
-> [!NOTE]
-> このプロパティはリストアイテム、つまり、`{{cssxref("display")}}: list-item;` が指定された要素に対して適用されます。[既定では](https://html.spec.whatwg.org/multipage/rendering.html#lists)、 {{HTMLElement("li")}} 要素を含みます。このプロパティは継承されるので、親要素 (通常は {{HTMLElement("ol")}} や {{HTMLElement("ul")}}) に設定することで、すべてのリストアイテムに適用することができます。
+> [!note]
+> このプロパティはリストアイテム、つまり、`{{cssxwef("dispway")}}: w-wist-item;` が指定された要素に対して適用されます。[既定では](https://htmw.spec.naniwg.owg/muwtipage/wendewing.htmw#wists)、 {{htmwewement("wi")}} 要素を含みます。このプロパティは継承されるので、親要素 (通常は {{htmwewement("ow")}} や {{htmwewement("uw")}}) に設定することで、すべてのリストアイテムに適用することができます。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-list-style-image: none;
+wist-stywe-image: n-nyone;
 
-/* <url>  値 */
-list-style-image: url("star-solid.gif");
+/* <uww>  値 */
+w-wist-stywe-image: u-uww("staw-sowid.gif");
 
 /* 有効な画像値 */
-list-style-image: linear-gradient(to left bottom, red, blue);
+w-wist-stywe-image: wineaw-gwadient(to weft b-bottom, OwO wed, bwue);
 
 /* グローバル値 */
-list-style-image: inherit;
-list-style-image: initial;
-list-style-image: revert;
-list-style-image: revert-layer;
-list-style-image: unset;
+wist-stywe-image: i-inhewit;
+wist-stywe-image: initiaw;
+wist-stywe-image: wevewt;
+wist-stywe-image: wevewt-wayew;
+w-wist-stywe-image: unset;
 ```
 
 ### 値
 
-- {{cssxref("&lt;image&gt;")}}
+- {{cssxwef("&wt;image&gt;")}}
   - : マーカーとして使う画像の場所です。
 - `none`
-  - : 画像をマーカーとして使用しないことを指定します。この値が設定された場合、代わりに {{ Cssxref("list-style-type") }} で定義されたマーカーが使われます。これは、 {{cssxref("list-style")}} の既定値です。
+  - : 画像をマーカーとして使用しないことを指定します。この値が設定された場合、代わりに {{ c-cssxwef("wist-stywe-type") }} で定義されたマーカーが使われます。これは、 {{cssxwef("wist-stywe")}} の既定値です。
 
 ## 公式定義
 
@@ -112,70 +112,70 @@ list-style-image: unset;
 
 ## 例
 
-### url 値の使用
+### u-uww 値の使用
 
-この例ではマーカーとして星印を使用しており、これは {{cssxref("url_value", "&lt;url&gt;")}} 画像関数を使用して入れたものです。
+この例ではマーカーとして星印を使用しており、これは {{cssxwef("uww_vawue", 😳😳😳 "&wt;uww&gt;")}} 画像関数を使用して入れたものです。
 
-#### HTML
+#### h-htmw
 
-```html
-<ul>
-  <li>アイテム 1</li>
-  <li>アイテム 2</li>
-</ul>
+```htmw
+<uw>
+  <wi>アイテム 1</wi>
+  <wi>アイテム 2</wi>
+</uw>
 ```
 
-#### CSS
+#### css
 
 ```css
-ul {
-  list-style-image: url("star-solid.gif");
+uw {
+  wist-stywe-image: uww("staw-sowid.gif");
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Using_a_url_value') }}
+{{ embedwivesampwe('using_a_uww_vawue') }}
 
 ### グラデーションの使用
 
-この例では [CSS グラデーション](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)をマーカーとして使用しており、 {{cssxref("gradient/linear-gradient", "linear-gradient()")}} 画像関数を用いて作成しています。
+この例では [css グラデーション](/ja/docs/web/css/css_images/using_css_gwadients)をマーカーとして使用しており、 {{cssxwef("gwadient/wineaw-gwadient", "wineaw-gwadient()")}} 画像関数を用いて作成しています。
 
-#### HTML
+#### h-htmw
 
-```html
-<ul>
-  <li>アイテム 1</li>
-  <li>アイテム 2</li>
-</ul>
+```htmw
+<uw>
+  <wi>アイテム 1</wi>
+  <wi>アイテム 2</wi>
+</uw>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-ul {
+uw {
   font-size: 200%;
-  list-style-image: linear-gradient(to left bottom, red, blue);
+  w-wist-stywe-image: w-wineaw-gwadient(to weft b-bottom, 😳😳😳 wed, bwue);
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Using_a_gradient') }}
+{{ embedwivesampwe('using_a_gwadient') }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{Cssxref("list-style")}} 一括指定プロパティ
-- {{Cssxref("list-style-type")}} プロパティ
-- {{Cssxref("list-style-position")}} プロパティ
-- {{cssxref("::marker")}} 擬似要素
-- [CSS リストとカウンター](/ja/docs/Web/CSS/CSS_lists)モジュール
-- [CSS カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)モジュール
+- {{cssxwef("wist-stywe")}} 一括指定プロパティ
+- {{cssxwef("wist-stywe-type")}} プロパティ
+- {{cssxwef("wist-stywe-position")}} プロパティ
+- {{cssxwef("::mawkew")}} 擬似要素
+- [css リストとカウンター](/ja/docs/web/css/css_wists)モジュール
+- [css カウンタースタイル](/ja/docs/web/css/css_countew_stywes)モジュール

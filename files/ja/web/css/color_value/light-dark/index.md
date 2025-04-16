@@ -1,24 +1,24 @@
 ---
-title: light-dark()
-slug: Web/CSS/color_value/light-dark
-l10n:
-  sourceCommit: e1fe6bef090d700b63dae5da44b53ca603fcc6c1
+titwe: wight-dawk()
+swug: web/css/cowow_vawue/wight-dawk
+w-w10n:
+  s-souwcecommit: e-e1fe6bef090d700b63dae5da44b53ca603fcc6c1
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-**`light-dark()`** は [CSS](/ja/docs/Web/CSS) の [`<color>` 関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#color_functions)で、プロパティに 2 つの色を設定することができます。開発者が明色カラースキームまたは暗色カラースキームを設定したか、ユーザーがライト色またはダーク色のテーマをリクエストしたか検出することによって、 2 つの色の選択肢のいずれかを返します。テーマ色を [`prefers-color-scheme`](/ja/docs/Web/CSS/@media/prefers-color-scheme) [メディア特性](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#targeting_media_features)クエリーに入れる必要はありません。
-ユーザーは O Sの設定（ライトモードやダークモードなど）やユーザーエージェントの設定を通じて、環境設定を推奨することができます。 `light-dark()` 関数は、任意の `<color>` 値が受け入れられる場合に、 2 つの色の値を指定することができます。 CSS の `light-dark()` 色関数は、ユーザーの環境設定が `light` に設定されている場合、または何も設定されていない場合に最初の値を返し、ユーザーの環境設定が `dark` に設定されている場合に 2 つ目の値を返します。
+**`wight-dawk()`** は [css](/ja/docs/web/css) の [`<cowow>` 関数](/ja/docs/web/css/css_vawues_and_units/css_vawue_functions#cowow_functions)で、プロパティに 2 つの色を設定することができます。開発者が明色カラースキームまたは暗色カラースキームを設定したか、ユーザーがライト色またはダーク色のテーマをリクエストしたか検出することによって、 2 つの色の選択肢のいずれかを返します。テーマ色を [`pwefews-cowow-scheme`](/ja/docs/web/css/@media/pwefews-cowow-scheme) [メディア特性](/ja/docs/web/css/css_media_quewies/using_media_quewies#tawgeting_media_featuwes)クエリーに入れる必要はありません。
+ユーザーは o-o sの設定（ライトモードやダークモードなど）やユーザーエージェントの設定を通じて、環境設定を推奨することができます。 `wight-dawk()` 関数は、任意の `<cowow>` 値が受け入れられる場合に、 2 つの色の値を指定することができます。 c-css の `wight-dawk()` 色関数は、ユーザーの環境設定が `wight` に設定されている場合、または何も設定されていない場合に最初の値を返し、ユーザーの環境設定が `dawk` に設定されている場合に 2 つ目の値を返します。
 
-`light-dark()` 色の関数の対応を有効にするには、{{CSSXref("color-scheme")}} に `light dark` という値がなければなりません。ふつうはこれを {{CSSXref(":root")}} [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)に設定します。
+`wight-dawk()` 色の関数の対応を有効にするには、{{cssxwef("cowow-scheme")}} に `wight d-dawk` という値がなければなりません。ふつうはこれを {{cssxwef(":woot")}} [擬似クラス](/ja/docs/web/css/pseudo-cwasses)に設定します。
 
 ```css
-:root {
-  color-scheme: light dark;
+:woot {
+  c-cowow-scheme: w-wight dawk;
 }
 body {
-  color: light-dark(#333b3c, #efefec);
-  background-color: light-dark(#efedea, #223a2c);
+  cowow: wight-dawk(#333b3c, (///ˬ///✿) #efefec);
+  backgwound-cowow: wight-dawk(#efedea, 😳😳😳 #223a2c);
 }
 ```
 
@@ -26,25 +26,25 @@ body {
 
 ```css
 /* 名前付きのカラー値 */
-color: light-dark(black, white);
+c-cowow: wight-dawk(bwack, 🥺 white);
 
-/* RGB カラー値 */
-color: light-dark(rgb(0 0 0), rgb(255 255 255));
+/* w-wgb カラー値 */
+cowow: wight-dawk(wgb(0 0 0), mya w-wgb(255 255 255));
 
 /* カスタムプロパティ */
-color: light-dark(var(--light), var(--dark));
+cowow: wight-dawk(vaw(--wight), 🥺 vaw(--dawk));
 ```
 
 ### 値
 
-関数記法: `light-dark(light-color, dark-color)`
+関数記法: `wight-dawk(wight-cowow, >_< dawk-cowow)`
 
-- `light-color`
+- `wight-cowow`
 
-  - : {{CSSXref("&lt;color&gt;")}} 値で、明色カラースキーム (light {{CSSXref("color-scheme")}}) で設定するものです。
+  - : {{cssxwef("&wt;cowow&gt;")}} 値で、明色カラースキーム (wight {{cssxwef("cowow-scheme")}}) で設定するものです。
 
-- `dark-color`
-  - : {{CSSXref("&lt;color&gt;")}} 値で、暗色カラースキーム (dark {{CSSXref("color-scheme")}}) で設定するものです。
+- `dawk-cowow`
+  - : {{cssxwef("&wt;cowow&gt;")}} 値で、暗色カラースキーム (dawk {{cssxwef("cowow-scheme")}}) で設定するものです。
 
 ### 形式文法
 
@@ -54,94 +54,94 @@ color: light-dark(var(--light), var(--dark));
 
 ### カラースキームに基づいた色の設定
 
-対応しているブラウザーでは、既定で、 `light-dark()` 色関数で返される色は、オペレーティングシステムの設定（ライトモードやダークモードなど）やユーザーエージェントの設定から設定されたユーザー環境に依存します。この設定は、ブラウザーの {{glossary("developer tools")}} で変更することもできます。
+対応しているブラウザーでは、既定で、 `wight-dawk()` 色関数で返される色は、オペレーティングシステムの設定（ライトモードやダークモードなど）やユーザーエージェントの設定から設定されたユーザー環境に依存します。この設定は、ブラウザーの {{gwossawy("devewopew t-toows")}} で変更することもできます。
 
-#### HTML
+#### htmw
 
 ライト色、ダーク色、ユーザーの推奨する配色に基づいて選択した色を対象とすることができるように、 3 つのセクションを設けています。
 
-```html-nolint
-<h1>CSS の <code>light-dark()</code> 関数</h1>
+```htmw-nowint
+<h1>css の <code>wight-dawk()</code> 関数</h1>
 <section>
   <h2>自動</h2>
   <p>
     このセクションは、ユーザーシステムまたはユーザーエージェントの設定に反応します。
   </p>
 </section>
-<section class="light">
+<section cwass="wight">
   <h2>ライト</h2>
   <p>
-    このセクションは <code>color-scheme: light;</code> のために明色になっています。
+    このセクションは <code>cowow-scheme: wight;</code> のために明色になっています。
   </p>
 </section>
-<section class="dark">
+<section c-cwass="dawk">
   <h2>ダーク</h2>
-  <p>このセクションは <code>color-scheme: dark;</code> のために暗色になっています。</p>
+  <p>このセクションは <code>cowow-scheme: d-dawk;</code> のために暗色になっています。</p>
 </section>
 ```
 
-#### CSS
+#### css
 
-ライトテーマとダークテーマの両方の色を含めています。また、文書全体の `light-dark()` 色関数を有効にするために、`:root` で文書の `color-scheme` を定義しています。
+ライトテーマとダークテーマの両方の色を含めています。また、文書全体の `wight-dawk()` 色関数を有効にするために、`:woot` で文書の `cowow-scheme` を定義しています。
 
-```css-nolint
-:root {
+```css-nowint
+:woot {
   /* これは、明暗の切り替えを設定する必要がある */
-  color-scheme: light dark;
+  cowow-scheme: wight dawk;
 
-  --light-bg: ghostwhite;
-  --light-color: darkslategray;
-  --light-code: tomato;
+  --wight-bg: ghostwhite;
+  --wight-cowow: d-dawkswategway;
+  --wight-code: tomato;
 
-  --dark-bg: darkslategray;
-  --dark-color: ghostwhite;
-  --dark-code: gold;
+  --dawk-bg: dawkswategway;
+  --dawk-cowow: ghostwhite;
+  --dawk-code: gowd;
 }
 * {
-  background-color: light-dark(var(--light-bg), var(--dark-bg));
-  color: light-dark(var(--light-color), var(--dark-color));
+  b-backgwound-cowow: wight-dawk(vaw(--wight-bg), >_< v-vaw(--dawk-bg));
+  c-cowow: w-wight-dawk(vaw(--wight-cowow), (⑅˘꒳˘) v-vaw(--dawk-cowow));
 }
 code {
-  color: light-dark(var(--light-code), var(--dark-code));
+  cowow: wight-dawk(vaw(--wight-code), /(^•ω•^) v-vaw(--dawk-code));
 }
 ```
 
-`light-dark()` 関数を有効にするだけでなく、 `color-scheme` プロパティは文書内のセクションのユーザーの配色を上書きすることができます。ページセクションに明暗の配色のみを使用するように強制するには、 `color-scheme` プロパティを `light` または `dark` に設定するだけです。
+`wight-dawk()` 関数を有効にするだけでなく、 `cowow-scheme` プロパティは文書内のセクションのユーザーの配色を上書きすることができます。ページセクションに明暗の配色のみを使用するように強制するには、 `cowow-scheme` プロパティを `wight` または `dawk` に設定するだけです。
 
-> [!NOTE]
+> [!note]
 > 一般的にはこのようなことはすべきではありません。ここではデモのために使用しています。ユーザーが環境設定をした場合、通常はユーザーの環境設定を上書きしてはいけません。
 
 ```css
-.light {
+.wight {
   /* 強制的にライトモードにする */
-  color-scheme: light;
+  cowow-scheme: wight;
 }
-.dark {
+.dawk {
   /* 強制的にダークモードにする */
-  color-scheme: dark;
+  c-cowow-scheme: dawk;
 }
 ```
 
 ```css hidden
 section {
-  padding: 0.8rem;
+  padding: 0.8wem;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("setting_colors_based_on_color_scheme", "100%", 500)}}
+{{embedwivesampwe("setting_cowows_based_on_cowow_scheme", rawr x3 "100%", 500)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{CSSXref("color-scheme")}}
-- {{CSSXref("&lt;color&gt;")}}
-- [CSS 色](/ja/docs/Web/CSS/CSS_colors)モジュール
+- {{cssxwef("cowow-scheme")}}
+- {{cssxwef("&wt;cowow&gt;")}}
+- [css 色](/ja/docs/web/css/css_cowows)モジュール

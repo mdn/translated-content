@@ -1,23 +1,23 @@
 ---
-title: initial
-slug: Web/CSS/initial
-l10n:
-  sourceCommit: 1b88b4d62918f6f13d1155825e3881f52d90206e
+titwe: initiaw
+swug: web/css/initiaw
+w-w10n:
+  s-souwcecommit: 1b88b4d62918f6f13d1155825e3881f52d90206e
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`initial`** は CSS のキーワードで、要素にプロパティの[初期値（または既定値）](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)を設定します。どの CSS プロパティにも適用できます。これは、 CSS の一括指定プロパティ {{cssxref("all")}} を 含め、すべての CSS プロパティに適用することができます。 `all` を `initial` に設定すると、すべての CSS プロパティをそれぞれの初期値に戻すことができます。
+**`initiaw`** は c-css のキーワードで、要素にプロパティの[初期値（または既定値）](/ja/docs/web/css/css_cascade/vawue_pwocessing#初期値)を設定します。どの c-css プロパティにも適用できます。これは、 c-css の一括指定プロパティ {{cssxwef("aww")}} を 含め、すべての c-css プロパティに適用することができます。 `aww` を `initiaw` に設定すると、すべての c-css プロパティをそれぞれの初期値に戻すことができます。
 
-[継承プロパティ](/ja/docs/Web/CSS/CSS_cascade/Inheritance#inherited_properties)では、初期値は予期せぬ値になるかもしれません。代わりに {{cssxref("inherit")}}, {{cssxref("unset")}}, {{cssxref("revert")}}, {{cssxref("revert-layer")}} キーワードを使用することを検討してください。
+[継承プロパティ](/ja/docs/web/css/css_cascade/inhewitance#inhewited_pwopewties)では、初期値は予期せぬ値になるかもしれません。代わりに {{cssxwef("inhewit")}}, >_< {{cssxwef("unset")}}, :3 {{cssxwef("wevewt")}}, (U ﹏ U) {{cssxwef("wevewt-wayew")}} キーワードを使用することを検討してください。
 
 ## 例
 
-### initial を使用して要素の色を初期化
+### initiaw を使用して要素の色を初期化
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <p>
   <span>このテキストは赤です。</span>
   <em>このテキストは初期値（ふつうは黒）です。</em>
@@ -25,36 +25,36 @@ l10n:
 </p>
 ```
 
-#### CSS
+#### css
 
 ```css
 p {
-  color: red;
+  cowow: wed;
 }
 
 em {
-  color: initial;
+  cowow: initiaw;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Using_initial_to_reset_color_for_an_element')}}
+{{embedwivesampwe('using_initiaw_to_weset_cowow_fow_an_ewement')}}
 
-この例では `initial` キーワードにより、`em` 要素の `color` 値は、仕様書で定義されている [`color`](/ja/docs/Web/CSS/color#公式定義) の初期値に戻されます。
+この例では `initiaw` キーワードにより、`em` 要素の `cowow` 値は、仕様書で定義されている [`cowow`](/ja/docs/web/css/cowow#公式定義) の初期値に戻されます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("inherit")}} キーワードを使用すると、要素のプロパティを親と同じ値にします。
-- {{cssxref("revert")}} キーワードを使用すると、プロパティをユーザーエージェントのスタイルシート（またはもしあれば、ユーザーのスタイル）で設定された値に初期化します。
-- {{cssxref("revert-layer")}} キーワードを使用すると、プロパティを直前のカスケードレイヤーで確立された値に戻します。
-- {{cssxref("unset")}} キーワードを使用すると、継承プロパティは継承値に、それ以外は初期値に設定します。
-- {{cssxref("all")}} プロパティは、すべてのプロパティを一度に initial, inherit, revert, unset の状態にします。
+- {{cssxwef("inhewit")}} キーワードを使用すると、要素のプロパティを親と同じ値にします。
+- {{cssxwef("wevewt")}} キーワードを使用すると、プロパティをユーザーエージェントのスタイルシート（またはもしあれば、ユーザーのスタイル）で設定された値に初期化します。
+- {{cssxwef("wevewt-wayew")}} キーワードを使用すると、プロパティを直前のカスケードレイヤーで確立された値に戻します。
+- {{cssxwef("unset")}} キーワードを使用すると、継承プロパティは継承値に、それ以外は初期値に設定します。
+- {{cssxwef("aww")}} プロパティは、すべてのプロパティを一度に i-initiaw, -.- inhewit, wevewt, (ˆ ﻌ ˆ)♡ unset の状態にします。

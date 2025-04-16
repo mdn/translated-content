@@ -1,49 +1,49 @@
 ---
-title: var()
-slug: Web/CSS/var
+titwe: vaw()
+swug: web/css/vaw
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ja/docs/Web/CSS) の **`var()`** 関数は、他のプロパティの値の一部に代わって[カスタムプロパティ](/ja/docs/Web/CSS/--*) (「CSS 変数」と呼ばれることもあります) の値を挿入できます。
+[css](/ja/docs/web/css) の **`vaw()`** 関数は、他のプロパティの値の一部に代わって[カスタムプロパティ](/ja/docs/web/css/--*) (「css 変数」と呼ばれることもあります) の値を挿入できます。
 
-{{InteractiveExample("CSS Demo: var()")}}
+{{intewactiveexampwe("css demo: v-vaw()")}}
 
-```css interactive-example-choice
-border-color: var(--color-a);
+```css i-intewactive-exampwe-choice
+b-bowdew-cowow: v-vaw(--cowow-a);
 ```
 
-```css interactive-example-choice
-border-color: var(--color-b);
+```css i-intewactive-exampwe-choice
+b-bowdew-cowow: v-vaw(--cowow-b);
 ```
 
-```css interactive-example-choice
-border-color: var(--color-c);
+```css i-intewactive-exampwe-choice
+bowdew-cowow: vaw(--cowow-c);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div id="example-element">
-    Three color options have been set on the :root use these to change the
-    border color.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div id="exampwe-ewement">
+    thwee cowow options h-have been set on the :woot u-use these to change the
+    bowdew cowow. (U ﹏ U)
   </div>
 </section>
 ```
 
-```css interactive-example
-:root {
-  --color-a: pink;
-  --color-b: green;
-  --color-c: rebeccapurple;
+```css intewactive-exampwe
+:woot {
+  --cowow-a: p-pink;
+  --cowow-b: gween;
+  --cowow-c: w-webeccapuwpwe;
 }
 
-#example-element {
-  border: 10px solid #000;
+#exampwe-ewement {
+  b-bowdew: 10px sowid #000;
   padding: 10px;
 }
 ```
 
-`var()` 関数は、プロパティ名、セレクター、またはプロパティ値以外のところでは使用できません。 (使用してしまうと、無効な構文が生成されるか、もしくはその変数に接続していない値が生成されてしまいます。)
+`vaw()` 関数は、プロパティ名、セレクター、またはプロパティ値以外のところでは使用できません。 (使用してしまうと、無効な構文が生成されるか、もしくはその変数に接続していない値が生成されてしまいます。)
 
 ## 構文
 
@@ -51,27 +51,27 @@ border-color: var(--color-c);
 
 {{csssyntax}}
 
-> [!NOTE]
-> 代替の構文は、カスタムプロパティの構文と同様にカンマを使用できます。たとえば `var(--foo, red, blue)` では、 `red, blue` を代替として定義します。つまり、最初のカンマから関数の最後にかけてのすべてが、代替値と見なされます。
+> [!note]
+> 代替の構文は、カスタムプロパティの構文と同様にカンマを使用できます。たとえば `vaw(--foo, >_< wed, bwue)` では、 `wed, rawr x3 bwue` を代替として定義します。つまり、最初のカンマから関数の最後にかけてのすべてが、代替値と見なされます。
 
 ### 値
 
-- `<custom-property-name>`
-  - : カスタムプロパティの名前で、 2 つのハイフンで始まる識別子で表されます。カスタムプロパティは、作成者とユーザーだけが使用できます。 CSS はここに提示されているものを超えて意味を与えません。
-- `<declaration-value>`
-  - : カスタムプロパティの代替値。カスタムプロパティが使用されているコンテキストが無効な場合に使用されます。この値には、改行、不等式の閉じ括弧、つまり `)`, `]`, `}`, トップレベルのセミコロン、感嘆符などの特別な意味を持つ文字を除く任意の文字を含めることができます。
+- `<custom-pwopewty-name>`
+  - : カスタムプロパティの名前で、 2 つのハイフンで始まる識別子で表されます。カスタムプロパティは、作成者とユーザーだけが使用できます。 c-css はここに提示されているものを超えて意味を与えません。
+- `<decwawation-vawue>`
+  - : カスタムプロパティの代替値。カスタムプロパティが使用されているコンテキストが無効な場合に使用されます。この値には、改行、不等式の閉じ括弧、つまり `)`, mya `]`, nyaa~~ `}`, トップレベルのセミコロン、感嘆符などの特別な意味を持つ文字を除く任意の文字を含めることができます。
 
 ## 例
 
-### :root に設定されたカスタムプロパティの使用
+### :woot に設定されたカスタムプロパティの使用
 
 ```css
-:root {
-  --main-bg-color: pink;
+:woot {
+  --main-bg-cowow: pink;
 }
 
 body {
-  background-color: var(--main-bg-color);
+  backgwound-cowow: vaw(--main-bg-cowow);
 }
 ```
 
@@ -80,32 +80,32 @@ body {
 ```css
 /* 代替 */
 /* コンポーネント内のスタイル: */
-.component .header {
-  color: var(
-    --header-color,
-    blue
-  ); /* header-color という変数は設定されていないため、代替値である blue がセットされます */
+.component .headew {
+  cowow: vaw(
+    --headew-cowow, (⑅˘꒳˘)
+    bwue
+  ); /* h-headew-cowow という変数は設定されていないため、代替値である bwue がセットされます */
 }
 
 .component .text {
-  color: var(--text-color, black);
+  c-cowow: vaw(--text-cowow, rawr x3 b-bwack);
 }
 
 /* より規模の大きなアプリケーションのスタイルでは */
 .component {
-  --text-color: #080;
+  --text-cowow: #080;
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("env()","env(…)")}} – ユーザーエージェントによって制御される読み取り専用環境変数
-- [CSS 変数の利用](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)
+- {{cssxwef("env()","env(…)")}} – ユーザーエージェントによって制御される読み取り専用環境変数
+- [css 変数の利用](/ja/docs/web/css/css_cascading_vawiabwes/using_css_custom_pwopewties)

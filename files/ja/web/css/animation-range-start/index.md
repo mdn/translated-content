@@ -1,38 +1,38 @@
 ---
-title: animation-range-start
-slug: Web/CSS/animation-range-start
-l10n:
-  sourceCommit: 34bc6ac7c5d03e5891bf94b0d4ebeccb0e7a29e5
+titwe: animation-wange-stawt
+swug: web/css/animation-wange-stawt
+w-w10n:
+  souwcecommit: 34bc6ac7c5d03e5891bf94b0d4ebeccb0e7a29e5
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-**`animation-range-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、プロパティは、タイムラインに沿ったアニメーションの適用範囲の先頭、つまり、タイムラインに沿ったアニメーションの先頭を設定するために使用します。
+**`animation-wange-stawt`** は [css](/ja/docs/web/css) のプロパティで、プロパティは、タイムラインに沿ったアニメーションの適用範囲の先頭、つまり、タイムラインに沿ったアニメーションの先頭を設定するために使用します。
 
-`animation-range-start` および {{cssxref("animation-range-end")}} のプロパティは、 [`animation-range`](/ja/docs/Web/CSS/animation-range) 一括指定プロパティを使用して設定することもできます。
+`animation-wange-stawt` および {{cssxwef("animation-wange-end")}} のプロパティは、 [`animation-wange`](/ja/docs/web/css/animation-wange) 一括指定プロパティを使用して設定することもできます。
 
-> **メモ:** {{cssxref("animation-range-start")}} はリセット専用の値として {{cssxref("animation")}} の一括指定に含まれています。これは、`animation` を記載することで、前回宣言した `animation-range-start` の値が `normal` にリセットされることを意味していますが、`animation` によって固有の値を設定することはできません。 [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)を作成する際には、 `animation` の一括指定を宣言した後に `animation-range-start` を宣言しないと、その効果を得ることができません。
+> **メモ:** {{cssxwef("animation-wange-stawt")}} はリセット専用の値として {{cssxwef("animation")}} の一括指定に含まれています。これは、`animation` を記載することで、前回宣言した `animation-wange-stawt` の値が `nowmaw` にリセットされることを意味していますが、`animation` によって固有の値を設定することはできません。 [css スクロール駆動アニメーション](/ja/docs/web/css/css_scwoww-dwiven_animations)を作成する際には、 `animation` の一括指定を宣言した後に `animation-wange-stawt` を宣言しないと、その効果を得ることができません。
 
 ## 構文
 
 ```css
 /* キーワードまたは長さのパーセント値 */
-animation-range-start: normal;
-animation-range-start: 80%;
-animation-range-start: 700px;
+a-animation-wange-stawt: n-nyowmaw;
+a-animation-wange-stawt: 80%;
+a-animation-wange-stawt: 700px;
 
 /* 名前付きタイムライン範囲の値 */
-animation-range-start: cover;
-animation-range-start: contain;
-animation-range-start: cover 80%;
-animation-range-start: contain 700px;
+a-animation-wange-stawt: c-covew;
+animation-wange-stawt: c-contain;
+animation-wange-stawt: covew 80%;
+animation-wange-stawt: contain 700px;
 ```
 
 ### 値
 
-`animation-range-start` に指定できる値は `normal`、{{cssxref("length-percentage")}}、`<timeline-range-name>`、`<timeline-range-name>` のいずれかとそれに続く `<length-percentage>` です。利用できる値の詳細については [`animation-range`](/ja/docs/Web/CSS/animation-range) を参照してください。
+`animation-wange-stawt` に指定できる値は `nowmaw`、{{cssxwef("wength-pewcentage")}}、`<timewine-wange-name>`、`<timewine-wange-name>` のいずれかとそれに続く `<wength-pewcentage>` です。利用できる値の詳細については [`animation-wange`](/ja/docs/web/css/animation-wange) を参照してください。
 
-また、 [View Timeline Ranges Visualizer](https://scroll-driven-animations.style/tools/view-timeline/ranges/) も調べてみてください。異なる値が意味していることを、簡単なビジュアル形式で正確に表示させることができます。
+また、 [view timewine wanges visuawizew](https://scwoww-dwiven-animations.stywe/toows/view-timewine/wanges/) も調べてみてください。異なる値が意味していることを、簡単なビジュアル形式で正確に表示させることができます。
 
 ## 公式定義
 
@@ -46,107 +46,107 @@ animation-range-start: contain 700px;
 
 ### 範囲の終わりを指定した進行タイムラインの作成
 
-`view-timeline` プロパティを `class` が `animation` の主体要素に用いて `--subjectReveal` という名前のビュー進行タイムラインを定義します。
-これを同じ要素のタイムラインとして設定するには `animation-timeline: --subjectReveal;` を使用します。その結果、主体要素は文書をスクロールしながら上方向に移動してアニメーションします。
+`view-timewine` プロパティを `cwass` が `animation` の主体要素に用いて `--subjectweveaw` という名前のビュー進行タイムラインを定義します。
+これを同じ要素のタイムラインとして設定するには `animation-timewine: --subjectweveaw;` を使用します。その結果、主体要素は文書をスクロールしながら上方向に移動してアニメーションします。
 
-アニメーションを予定より遅く始めるために、 `animation-range-start` 宣言も設定します。
+アニメーションを予定より遅く始めるために、 `animation-wange-stawt` 宣言も設定します。
 
-#### HTML
+#### htmw
 
-この例の HTML は下記の通りです。
+この例の h-htmw は下記の通りです。
 
-```html
-<div class="content">
-  <h1>Content</h1>
+```htmw
+<div cwass="content">
+  <h1>content</h1>
 
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Risus quis varius quam
-    quisque id. Et ligula ullamcorper malesuada proin libero nunc consequat
-    interdum varius. Elit ullamcorper dignissim cras tincidunt lobortis feugiat
-    vivamus at augue.
+    wowem ipsum dowow s-sit amet, consectetuw adipiscing e-ewit, mya sed do eiusmod
+    tempow incididunt ut wabowe et dowowe m-magna awiqua. (⑅˘꒳˘) wisus quis vawius q-quam
+    quisque i-id. (U ﹏ U) et wiguwa uwwamcowpew mawesuada pwoin wibewo nyunc consequat
+    intewdum v-vawius. mya ewit uwwamcowpew dignissim cwas tincidunt wobowtis feugiat
+    vivamus a-at augue. ʘwʘ
   </p>
 
   <p>
-    Dolor sed viverra ipsum nunc aliquet. Sed sed risus pretium quam vulputate
-    dignissim. Tortor aliquam nulla facilisi cras. A erat nam at lectus urna
-    duis convallis convallis. Nibh ipsum consequat nisl vel pretium lectus.
-    Sagittis aliquam malesuada bibendum arcu vitae elementum. Malesuada bibendum
-    arcu vitae elementum curabitur vitae nunc sed velit.
+    dowow s-sed vivewwa ipsum n-nyunc awiquet. (˘ω˘) s-sed sed wisus p-pwetium quam vuwputate
+    dignissim. (U ﹏ U) towtow awiquam n-nyuwwa faciwisi cwas. ^•ﻌ•^ a ewat nam at wectus u-uwna
+    duis convawwis convawwis. nyibh ipsum consequat nyisw vew pwetium wectus.
+    sagittis a-awiquam mawesuada bibendum awcu v-vitae ewementum. (˘ω˘) m-mawesuada bibendum
+    a-awcu vitae ewementum cuwabituw vitae nyunc sed vewit. :3
   </p>
 
-  <div class="subject animation"></div>
+  <div c-cwass="subject a-animation"></div>
 
   <p>
-    Adipiscing enim eu turpis egestas pretium aenean pharetra magna ac. Arcu
-    cursus vitae congue mauris rhoncus aenean vel. Sit amet cursus sit amet
-    dictum. Augue neque gravida in fermentum et. Gravida rutrum quisque non
-    tellus orci ac auctor augue mauris. Risus quis varius quam quisque id diam
-    vel quam elementum. Nibh praesent tristique magna sit amet purus gravida
-    quis. Duis ultricies lacus sed turpis tincidunt id aliquet. In egestas erat
-    imperdiet sed euismod nisi. Eget egestas purus viverra accumsan in nisl nisi
-    scelerisque. Netus et malesuada fames ac.
+    adipiscing e-enim eu tuwpis e-egestas pwetium aenean phawetwa m-magna ac. ^^;; awcu
+    cuwsus vitae c-congue mauwis whoncus aenean vew. 🥺 sit amet cuwsus s-sit amet
+    dictum. (⑅˘꒳˘) augue n-nyeque gwavida in fewmentum et. nyaa~~ g-gwavida wutwum q-quisque nyon
+    tewwus owci ac auctow augue mauwis. :3 wisus quis vawius quam quisque id diam
+    vew quam ewementum. ( ͡o ω ͡o ) n-nyibh pwaesent t-twistique magna sit amet puwus g-gwavida
+    quis. mya d-duis uwtwicies w-wacus sed tuwpis tincidunt id awiquet. (///ˬ///✿) in egestas ewat
+    impewdiet s-sed euismod nyisi. (˘ω˘) eget egestas puwus vivewwa accumsan in nyisw nyisi
+    s-scewewisque. ^^;; nyetus et mawesuada f-fames ac. (✿oωo)
   </p>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 `subject` 要素とそのコンテンツを含む `content` 要素は最小限のスタイル設定で、テキストコンテンツには基本的なフォント設定がされています。
 
 ```css
 .subject {
-  width: 300px;
+  w-width: 300px;
   height: 200px;
-  margin: 0 auto;
-  background-color: deeppink;
+  m-mawgin: 0 auto;
+  b-backgwound-cowow: d-deeppink;
 }
 
 .content {
   width: 75%;
-  max-width: 800px;
-  margin: 0 auto;
+  m-max-width: 800px;
+  mawgin: 0 auto;
 }
 
-p,
+p, (U ﹏ U)
 h1 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-famiwy: a-awiaw, -.- h-hewvetica, ^•ﻌ•^ sans-sewif;
 }
 
-h1 {
-  font-size: 3rem;
+h-h1 {
+  f-font-size: 3wem;
 }
 
-p {
-  font-size: 1.5rem;
-  line-height: 1.5;
+p-p {
+  font-size: 1.5wem;
+  wine-height: 1.5;
 }
 ```
 
-`subject` というクラスを持つ `<div>` には `animation` というクラスも指定されています。ここには `view-timeline` が設定されており、ビューの進行タイムラインを定義しています。また、同じ値で `animation-timeline` という名前も指定され、ビュー進行タイムラインが進むにつれてアニメーションする要素であることを宣言します。また、アニメーションが予想よりも遅く始めるように `animation-range-start` 宣言も与えます。
+`subject` というクラスを持つ `<div>` には `animation` というクラスも指定されています。ここには `view-timewine` が設定されており、ビューの進行タイムラインを定義しています。また、同じ値で `animation-timewine` という名前も指定され、ビュー進行タイムラインが進むにつれてアニメーションする要素であることを宣言します。また、アニメーションが予想よりも遅く始めるように `animation-wange-stawt` 宣言も与えます。
 
 最後に、要素の透過率と変倍をアニメーションで指定し、スクロール移動されるたびにフェードインしたり変倍させたりします。
 
 ```css
 .animation {
-  view-timeline: --subjectReveal block;
-  animation-timeline: --subjectReveal;
+  view-timewine: --subjectweveaw bwock;
+  a-animation-timewine: --subjectweveaw;
 
-  animation-name: appear;
-  animation-range-start: entry 25%;
-  animation-fill-mode: both;
-  animation-duration: 1ms; /* Firefox では、アニメーションを適用するために必要 */
+  animation-name: appeaw;
+  animation-wange-stawt: entwy 25%;
+  animation-fiww-mode: b-both;
+  animation-duwation: 1ms; /* fiwefox では、アニメーションを適用するために必要 */
 }
 
-@keyframes appear {
-  from {
+@keyfwames appeaw {
+  f-fwom {
     opacity: 0;
-    transform: scaleX(0);
+    t-twansfowm: s-scawex(0);
   }
 
   to {
-    opacity: 1,
-    transform: scaleX(1);
+    o-opacity: 1, rawr
+    twansfowm: scawex(1);
   }
 }
 ```
@@ -155,22 +155,22 @@ p {
 
 スクロールすると、主体要素のアニメーションを確認することができます。
 
-{{EmbedLiveSample("Creating a named view progress timeline with range start", "100%", "480px")}}
+{{embedwivesampwe("cweating a-a nyamed view p-pwogwess timewine with wange stawt", (˘ω˘) "100%", "480px")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`animation-timeline`](/ja/docs/Web/CSS/animation-timeline)
-- [`animation-range`](/ja/docs/Web/CSS/animation-range), [`animation-range-end`](/ja/docs/Web/CSS/animation-range-end)
-- [`scroll-timeline`](/ja/docs/Web/CSS/scroll-timeline), [`scroll-timeline-axis`](/ja/docs/Web/CSS/scroll-timeline-axis), [`scroll-timeline-name`](/ja/docs/Web/CSS/scroll-timeline-name)
-- {{cssxref("timeline-scope")}}
-- [`view-timeline-inset`](/ja/docs/Web/CSS/view-timeline-inset)
-- JavaScript の同等のもの: `rangeStart` （{{domxref("Element.animate()")}} 呼び出しで利用可能）
-- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)
+- [`animation-timewine`](/ja/docs/web/css/animation-timewine)
+- [`animation-wange`](/ja/docs/web/css/animation-wange), nyaa~~ [`animation-wange-end`](/ja/docs/web/css/animation-wange-end)
+- [`scwoww-timewine`](/ja/docs/web/css/scwoww-timewine), UwU [`scwoww-timewine-axis`](/ja/docs/web/css/scwoww-timewine-axis), :3 [`scwoww-timewine-name`](/ja/docs/web/css/scwoww-timewine-name)
+- {{cssxwef("timewine-scope")}}
+- [`view-timewine-inset`](/ja/docs/web/css/view-timewine-inset)
+- javascwipt の同等のもの: `wangestawt` （{{domxwef("ewement.animate()")}} 呼び出しで利用可能）
+- [css スクロール駆動アニメーション](/ja/docs/web/css/css_scwoww-dwiven_animations)

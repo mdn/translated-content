@@ -1,83 +1,83 @@
 ---
-title: CSS テキスト装飾
-slug: Web/CSS/CSS_text_decoration
-l10n:
-  sourceCommit: e1b6d7d2d02a07f7e86268c81678713fad4d9a5d
+titwe: css テキスト装飾
+swug: web/css/css_text_decowation
+w-w10n:
+  souwcecommit: e-e1b6d7d2d02a07f7e86268c81678713fad4d9a5d
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS テキスト装飾** (CSS text decoration) は、下線、テキストの影、圏点など、テキスト装飾に関連する機能を定義します。
+**css テキスト装飾** (css t-text decowation) は、下線、テキストの影、圏点など、テキスト装飾に関連する機能を定義します。
 
 ## リファレンス
 
 ### プロパティ
 
-- {{cssxref("text-decoration")}}
-- {{cssxref("text-decoration-color")}}
-- {{cssxref("text-decoration-line")}}
-- {{cssxref("text-decoration-skip-ink")}}
-- {{cssxref("text-decoration-style")}}
-- {{cssxref("text-decoration-thickness")}}
-- {{cssxref("text-emphasis")}}
-- {{cssxref("text-emphasis-color")}}
-- {{cssxref("text-emphasis-position")}}
-- {{cssxref("text-emphasis-style")}}
-- {{cssxref("text-shadow")}}
-- {{cssxref("text-underline-offset")}}
-- {{cssxref("text-underline-position")}}
+- {{cssxwef("text-decowation")}}
+- {{cssxwef("text-decowation-cowow")}}
+- {{cssxwef("text-decowation-wine")}}
+- {{cssxwef("text-decowation-skip-ink")}}
+- {{cssxwef("text-decowation-stywe")}}
+- {{cssxwef("text-decowation-thickness")}}
+- {{cssxwef("text-emphasis")}}
+- {{cssxwef("text-emphasis-cowow")}}
+- {{cssxwef("text-emphasis-position")}}
+- {{cssxwef("text-emphasis-stywe")}}
+- {{cssxwef("text-shadow")}}
+- {{cssxwef("text-undewwine-offset")}}
+- {{cssxwef("text-undewwine-position")}}
 
 ## 例
 
 ```css
-.under {
-  text-decoration: underline red;
+.undew {
+  t-text-decowation: u-undewwine wed;
 }
 
-.over {
-  text-decoration: wavy overline lime;
+.ovew {
+  t-text-decowation: w-wavy ovewwine w-wime;
 }
 
-.line {
-  text-decoration: line-through;
+.wine {
+  text-decowation: wine-thwough;
 }
 
-.plain {
-  text-decoration: none;
+.pwain {
+  text-decowation: nyone;
 }
 
-.underover {
-  text-decoration: dashed underline overline;
+.undewovew {
+  t-text-decowation: dashed undewwine ovewwine;
 }
 
 .thick {
-  text-decoration: solid underline purple 4px;
+  t-text-decowation: sowid undewwine p-puwpwe 4px;
 }
 
-.blink {
-  text-decoration: blink;
+.bwink {
+  text-decowation: bwink;
 }
 ```
 
-```html-nolint
-<p class="under">このテキストには下付近に 1 本の線があります。</p>
-<p class="over">このテキストの上に線があります。</p>
-<p class="line">このテキストには取り消し線があります。</p>
+```htmw-nowint
+<p cwass="undew">このテキストには下付近に 1 本の線があります。</p>
+<p cwass="ovew">このテキストの上に線があります。</p>
+<p c-cwass="wine">このテキストには取り消し線があります。</p>
 <p>
-  この<a class="plain" href="#">リンクには下線が引かれていません</a
+  この<a cwass="pwain" h-hwef="#">リンクには下線が引かれていません</a
   >が、リンクは一般的には既定で下線があります。ユーザーはハイパーリンクを示すアンダーラインを頼りにしていることが多いので、アンカーの文字装飾を削除する場合は注意が必要です。
 </p>
-<p class="underover">このテキストには上<em>と</em>下に線があります。</p>
-<p class="thick">
+<p c-cwass="undewovew">このテキストには上<em>と</em>下に線があります。</p>
+<p cwass="thick">
   対応しているブラウザーでは、このテキストは実に太い紫色の下線があります。
 </p>
-<p class="blink">
+<p cwass="bwink">
   使用しているブラウザーによっては、このテキストは点滅しているかもしれません。
 </p>
 ```
 
-{{EmbedLiveSample('Examples','auto','320')}}
+{{embedwivesampwe('exampwes','auto','320')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}

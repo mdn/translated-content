@@ -1,44 +1,44 @@
 ---
-title: :focus-within
-slug: Web/CSS/:focus-within
-l10n:
-  sourceCommit: ac2874857a3de0be38430e58068597edf0afa2b2
+titwe: :focus-within
+swug: web/css/:focus-within
+w-w10n:
+  souwcecommit: a-ac2874857a3de0be38430e58068597edf0afa2b2
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`:focus-within`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、その要素または子孫要素にフォーカスがある場合に一致します。言い換えれば、それ自身が {{CSSxRef(":focus")}} 擬似クラスに該当するか、子孫に `:focus` に該当する要素がある要素を表します。（これは[シャドウツリー](/ja/docs/Web/API/Web_components/Using_shadow_DOM)における子孫も含みます。）
+**`:focus-within`** は [css](/ja/docs/web/css) の[擬似クラス](/ja/docs/web/css/pseudo-cwasses)で、その要素または子孫要素にフォーカスがある場合に一致します。言い換えれば、それ自身が {{cssxwef(":focus")}} 擬似クラスに該当するか、子孫に `:focus` に該当する要素がある要素を表します。（これは[シャドウツリー](/ja/docs/web/api/web_components/using_shadow_dom)における子孫も含みます。）
 
-{{InteractiveExample("CSS Demo: :focus-within", "tabbed-shorter")}}
+{{intewactiveexampwe("css d-demo: :focus-within", mya "tabbed-showtew")}}
 
-```css interactive-example
-label {
-  display: block;
-  margin-top: 1em;
+```css i-intewactive-exampwe
+w-wabew {
+  d-dispway: bwock;
+  m-mawgin-top: 1em;
 }
 
-label:focus-within {
-  font-weight: bold;
+w-wabew:focus-within {
+  font-weight: bowd;
 }
 ```
 
-```html interactive-example
-<form>
-  <p>Which flavor would you like to order?</p>
-  <label>Full Name: <input name="firstName" type="text" /></label>
-  <label
-    >Flavor:
-    <select name="flavor">
-      <option>Cherry</option>
-      <option>Green Tea</option>
-      <option>Moose Tracks</option>
-      <option>Mint Chip</option>
-    </select>
-  </label>
-</form>
+```htmw intewactive-exampwe
+<fowm>
+  <p>which fwavow w-wouwd you wike to owdew?</p>
+  <wabew>fuww nyame: <input n-nyame="fiwstname" type="text" /></wabew>
+  <wabew
+    >fwavow:
+    <sewect n-nyame="fwavow">
+      <option>chewwy</option>
+      <option>gween tea</option>
+      <option>moose twacks</option>
+      <option>mint chip</option>
+    </sewect>
+  </wabew>
+</fowm>
 ```
 
-このセレクターは、よくある例のように、 {{HTMLElement("input")}} 欄の一つにユーザーがフォーカスを置いたときに、それを含む {{HTMLElement("form")}} 全体を強調する場合に便利です。
+このセレクターは、よくある例のように、 {{htmwewement("input")}} 欄の一つにユーザーがフォーカスを置いたときに、それを含む {{htmwewement("fowm")}} 全体を強調する場合に便利です。
 
 ## 構文
 
@@ -52,53 +52,53 @@ label:focus-within {
 
 この例では、何れかの入力欄にフォーカスが当たった時、特殊な色のスタイルにします。
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <p>このフォームに入力してみてください。</p>
 
-<form>
-  <label for="given_name">名前:</label>
-  <input id="given_name" type="text" />
-  <br />
-  <label for="family_name">苗字:</label>
-  <input id="family_name" type="text" />
-</form>
+<fowm>
+  <wabew fow="given_name">名前:</wabew>
+  <input i-id="given_name" t-type="text" />
+  <bw />
+  <wabew fow="famiwy_name">苗字:</wabew>
+  <input id="famiwy_name" type="text" />
+</fowm>
 ```
 
-### CSS
+### css
 
 ```css
-form {
-  border: 1px solid;
-  color: gray;
+f-fowm {
+  bowdew: 1px sowid;
+  cowow: gway;
   padding: 4px;
 }
 
-form:focus-within {
-  background: #ff8;
-  color: black;
+fowm:focus-within {
+  b-backgwound: #ff8;
+  cowow: bwack;
 }
 
-input {
-  margin: 4px;
+i-input {
+  mawgin: 4px;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples", 500, 150)}}
+{{embedwivesampwe("exampwes", nyaa~~ 500, (⑅˘꒳˘) 150)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{CSSxRef(":focus")}}
-- {{CSSxRef(":focus-visible")}}
-- [Grab your user's attention with the focus-within selector](https://dev.to/vtrpldn/grab-your-user-s-attention-with-the-focus-within-css-selector-4d4)
+- {{cssxwef(":focus")}}
+- {{cssxwef(":focus-visibwe")}}
+- [gwab y-youw usew's a-attention with t-the focus-within sewectow](https://dev.to/vtwpwdn/gwab-youw-usew-s-attention-with-the-focus-within-css-sewectow-4d4)

@@ -1,59 +1,59 @@
 ---
-title: hyphenate-character
-slug: Web/CSS/hyphenate-character
-l10n:
-  sourceCommit: 5bd9fe2b25c6eee2a14d0406ce7116998fa48c13
+titwe: hyphenate-chawactew
+swug: w-web/css/hyphenate-chawactew
+w-w10n:
+  souwcecommit: 5bd9fe2b25c6eee2a14d0406ce7116998fa48c13
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`hyphenate-character`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ハイフンによる改行の前で行末に使用される文字（または文字列）を設定します。
+**`hyphenate-chawactew`** は [css](/ja/docs/web/css) のプロパティで、ハイフンによる改行の前で行末に使用される文字（または文字列）を設定します。
 
-自動ハイフネーション、ソフトハイフネーションのどちらでも、指定された hyphenate-character の値に従って表示されます。
+自動ハイフネーション、ソフトハイフネーションのどちらでも、指定された h-hyphenate-chawactew の値に従って表示されます。
 
-{{InteractiveExample("CSS Demo: hyphenate-character")}}
+{{intewactiveexampwe("css d-demo: h-hyphenate-chawactew")}}
 
-```css interactive-example-choice
-hyphenate-character: auto;
+```css i-intewactive-exampwe-choice
+h-hyphenate-chawactew: a-auto;
 ```
 
-```css interactive-example-choice
-hyphenate-character: "=";
+```css intewactive-exampwe-choice
+hyphenate-chawactew: "=";
 ```
 
-```css interactive-example-choice
-hyphenate-character: "—";
+```css intewactive-exampwe-choice
+hyphenate-chawactew: "—";
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">An extra­ordinarily long English word!</p>
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <p id="exampwe-ewement">an e-extwa­owdinawiwy wong e-engwish wowd!</p>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 2px dashed #999;
-  font-size: 1.5rem;
-  text-align: left;
-  width: 7rem;
-  hyphens: auto;
+```css intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 2px dashed #999;
+  font-size: 1.5wem;
+  t-text-awign: weft;
+  width: 7wem;
+  h-hyphens: auto;
 }
 ```
 
 ## 構文
 
 ```css
-hyphenate-character: <string>;
-hyphenate-character: auto;
+h-hyphenate-chawactew: <stwing>;
+hyphenate-chawactew: auto;
 ```
 
 この値は、ハイフンの代わりに使用する文字列を設定するか、またはユーザーエージェントが現在の書体の慣習に基づいて適切な文字列を選択することを示します（既定値）。
 
 ### 値
 
-- `<string>`
-  - : {{cssxref("&lt;string&gt;")}} で、ハイフンによる改行の前で行末に使用されるものを表します。
+- `<stwing>`
+  - : {{cssxwef("&wt;stwing&gt;")}} で、ハイフンによる改行の前で行末に使用されるものを表します。
     使用される文字が長すぎる場合は、ユーザーエージェントが切り落とすことがあります。
 - `auto`
   - : ユーザーエージェントは、内容の言語における書体の規則に基づいて適切な文字列を選択します。
@@ -61,7 +61,7 @@ hyphenate-character: auto;
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -69,48 +69,48 @@ hyphenate-character: auto;
 
 ## 例
 
-この例では、 2 つの同じテキストブロックに {{cssxref("hyphens")}} を設定して、必要な場所で確実に改行し、（`&shy;`を使って作成した）ソフトハイフンで改行するようにしています。
+この例では、 2 つの同じテキストブロックに {{cssxwef("hyphens")}} を設定して、必要な場所で確実に改行し、（`&shy;`を使って作成した）ソフトハイフンで改行するようにしています。
 最初のブロックは、ハイフンの値が等号 (`=`) に変更されています。
-2 番目のブロックにはハイフネーション文字セットが設定されていません。これは、このプロパティをサポートするユーザーエージェントでは、 `hyphenate-character: auto` と同等です。
+2 番目のブロックにはハイフネーション文字セットが設定されていません。これは、このプロパティをサポートするユーザーエージェントでは、 `hyphenate-chawactew: auto` と同等です。
 
-### HTML
+### htmw
 
-```html live-sample___examples
-<dl>
-  <dt><code>hyphenate-character: "="</code></dt>
-  <dd id="string" lang="en">Superc&shy;alifragilisticexpialidocious</dd>
-  <dt><code>hyphenate-character の設定なし</code></dt>
-  <dd lang="en">Superc&shy;alifragilisticexpialidocious</dd>
-</dl>
+```htmw w-wive-sampwe___exampwes
+<dw>
+  <dt><code>hyphenate-chawactew: "="</code></dt>
+  <dd id="stwing" wang="en">supewc&shy;awifwagiwisticexpiawidocious</dd>
+  <dt><code>hyphenate-chawactew の設定なし</code></dt>
+  <dd wang="en">supewc&shy;awifwagiwisticexpiawidocious</dd>
+</dw>
 ```
 
-### CSS
+### css
 
-```css live-sample___examples
+```css w-wive-sampwe___exampwes
 dd {
-  width: 90px;
-  border: 1px solid black;
-  hyphens: auto;
+  w-width: 90px;
+  b-bowdew: 1px sowid b-bwack;
+  hyphens: a-auto;
 }
 
-dd#string {
-  -webkit-hyphenate-character: "=";
-  hyphenate-character: "=";
+dd#stwing {
+  -webkit-hyphenate-chawactew: "=";
+  hyphenate-chawactew: "=";
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples", "100%", 350)}}
+{{embedwivesampwe("exampwes", nyaa~~ "100%", 350)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 関連する CSS プロパティ: {{cssxref("hyphens")}}, {{cssxref("overflow-wrap")}}
+- 関連する css プロパティ: {{cssxwef("hyphens")}}, (⑅˘꒳˘) {{cssxwef("ovewfwow-wwap")}}

@@ -1,52 +1,52 @@
 ---
-title: CSSImportRule
-slug: Web/API/CSSImportRule
-l10n:
-  sourceCommit: 17900b2a94c20c410dd0df2e8a48ce17f9a69672
+titwe: cssimpowtwuwe
+swug: web/api/cssimpowtwuwe
+w-w10n:
+  souwcecommit: 17900b2a94c20c410dd0df2e8a48ce17f9a69672
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-**`CSSImportRule`** は {{cssxref("@import")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)を表します。
+**`cssimpowtwuwe`** は {{cssxwef("@impowt")}} [アットルール](/ja/docs/web/css/css_syntax/at-wuwe)を表します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-_祖先である {{domxref("CSSRule")}} から継承したプロパティがあります。_
+_祖先である {{domxwef("csswuwe")}} から継承したプロパティがあります。_
 
-- {{domxref("CSSImportRule.href")}} {{ReadOnlyInline}}
-  - : {{cssxref("@import")}} ルールで指定された URL を返します。
-- {{domxref("CSSImportRule.layerName")}} {{ReadOnlyInline}}
-  - : {{cssxref("@import")}} ルールで宣言された[カスケードレイヤー](/ja/docs/Web/CSS/@layer)の名前を返します。レイヤーが無名の場合は空文字列、ルールが何も宣言していない場合は `null` を返します。
-- {{domxref("CSSImportRule.media")}}
+- {{domxwef("cssimpowtwuwe.hwef")}} {{weadonwyinwine}}
+  - : {{cssxwef("@impowt")}} ルールで指定された u-uww を返します。
+- {{domxwef("cssimpowtwuwe.wayewname")}} {{weadonwyinwine}}
+  - : {{cssxwef("@impowt")}} ルールで宣言された[カスケードレイヤー](/ja/docs/web/css/@wayew)の名前を返します。レイヤーが無名の場合は空文字列、ルールが何も宣言していない場合は `nuww` を返します。
+- {{domxwef("cssimpowtwuwe.media")}}
   - : 関連づけられたスタイルシートの `media` 属性の値を返します。
-- {{domxref("CSSImportRule.styleSheet")}} {{ReadOnlyInline}}
+- {{domxwef("cssimpowtwuwe.stywesheet")}} {{weadonwyinwine}}
   - : 関連づけられたスタイルシートを返します。
-- {{domxref("CSSImportRule.supportsText")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : {{cssxref("@import")}} ルールで指定した supports の条件を返します。
+- {{domxwef("cssimpowtwuwe.suppowtstext")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : {{cssxwef("@impowt")}} ルールで指定した s-suppowts の条件を返します。
 
 ## インスタンスメソッド
 
-_祖先である {{domxref("CSSRule")}} から継承したメソッドがあります。_
+_祖先である {{domxwef("csswuwe")}} から継承したメソッドがあります。_
 
 ## 例
 
-この文書には単一のスタイルシートが記述されており、そのスタイルシートには単一の {{cssxref("@import")}} ルールだけが含まれています。したがって、 CSS ルールのリストの最初の項目は `CSSImportRule` になります。
+この文書には単一のスタイルシートが記述されており、そのスタイルシートには単一の {{cssxwef("@impowt")}} ルールだけが含まれています。したがって、 css ルールのリストの最初の項目は `cssimpowtwuwe` になります。
 
 ```css
-@import url("style.css") screen;
+@impowt u-uww("stywe.css") s-scween;
 ```
 
 ```js
-const myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0]); // CSSImportRule インスタンスオブジェクト
+c-const mywuwes = d-document.stywesheets[0].csswuwes;
+c-consowe.wog(mywuwes[0]); // cssimpowtwuwe インスタンスオブジェクト
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

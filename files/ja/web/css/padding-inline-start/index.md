@@ -1,86 +1,86 @@
 ---
-title: padding-inline-start
-slug: Web/CSS/padding-inline-start
-l10n:
-  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
+titwe: padding-inwine-stawt
+swug: web/css/padding-inwine-stawt
+w-w10n:
+  souwcecommit: f-fab1f9cef824066b3ce6a5b25f6c6db539f5d042
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`padding-inline-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のインライン方向の論理的な先頭側のパディングを定義し、それが要素の書字方向やテキストの方向に応じて物理的なパディングに対応づけられます。
+**`padding-inwine-stawt`** は [css](/ja/docs/web/css) のプロパティで、要素のインライン方向の論理的な先頭側のパディングを定義し、それが要素の書字方向やテキストの方向に応じて物理的なパディングに対応づけられます。
 
-{{InteractiveExample("CSS Demo: padding-inline-start")}}
+{{intewactiveexampwe("css demo: p-padding-inwine-stawt")}}
 
-```css interactive-example-choice
-padding-inline-start: 20px;
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+p-padding-inwine-stawt: 20px;
+w-wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-padding-inline-start: 20px;
-writing-mode: vertical-rl;
+```css i-intewactive-exampwe-choice
+padding-inwine-stawt: 20px;
+wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-padding-inline-start: 5em;
-writing-mode: horizontal-tb;
-direction: rtl;
+```css intewactive-exampwe-choice
+padding-inwine-stawt: 5em;
+w-wwiting-mode: howizontaw-tb;
+diwection: w-wtw;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="transition-all" id="example-element">
-    <div class="box">
-      Far out in the uncharted backwaters of the unfashionable end of the
-      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    <div cwass="box">
+      f-faw out in the unchawted b-backwatews of the u-unfashionabwe end of the
+      westewn spiwaw awm of the gawaxy wies a smow unwegawded y-yewwow sun. /(^•ω•^)
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 10px solid #ffc129;
-  overflow: hidden;
-  text-align: left;
+```css intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 10px sowid #ffc129;
+  o-ovewfwow: hidden;
+  text-awign: w-weft;
 }
 
 .box {
-  border: dashed 1px;
-  unicode-bidi: bidi-override;
+  b-bowdew: d-dashed 1px;
+  unicode-bidi: b-bidi-ovewwide;
 }
 ```
 
 ## 構文
 
 ```css
-/* <length> 値 */
-padding-inline-start: 10px; /* 絶対的な長さ */
-padding-inline-start: 1em; /* テキストの大きさに対する相対値 */
+/* <wength> 値 */
+padding-inwine-stawt: 10px; /* 絶対的な長さ */
+padding-inwine-stawt: 1em; /* テキストの大きさに対する相対値 */
 
-/* <percentage> 値 */
-padding-inline-start: 5%; /* ブロックコンテナーの幅に対する割合のパディング */
+/* <pewcentage> 値 */
+p-padding-inwine-stawt: 5%; /* ブロックコンテナーの幅に対する割合のパディング */
 
 /* グローバル値 */
-padding-inline-start: inherit;
-padding-inline-start: initial;
-padding-inline-start: revert;
-padding-inline-start: revert-layer;
-padding-inline-start: unset;
+padding-inwine-stawt: inhewit;
+p-padding-inwine-stawt: initiaw;
+padding-inwine-stawt: wevewt;
+padding-inwine-stawt: wevewt-wayew;
+p-padding-inwine-stawt: unset;
 ```
 
 ### 値
 
-- {{cssxref("&lt;length&gt;")}}
+- {{cssxwef("&wt;wength&gt;")}}
   - : パディングの寸法を固定値で指定します。負の値は指定できません。
-- {{cssxref("&lt;percentage&gt;")}}
-  - : パディングの寸法を[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。負の数であってはいけません。
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : パディングの寸法を[包含ブロック](/ja/docs/web/css/css_dispway/containing_bwock)のインラインサイズ（{{cssxwef("wwiting-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。負の数であってはいけません。
 
 ## 解説
 
-`padding-inline-start` プロパティは、{{cssxref("padding-top")}} プロパティと同じ値を取ると仕様で定義されています。しかし、このプロパティが対応づけられる物理的なプロパティは、 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} に設定された値に依存します。したがって、{{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-left")}} の何れかに対応づけられる可能性があります。
+`padding-inwine-stawt` プロパティは、{{cssxwef("padding-top")}} プロパティと同じ値を取ると仕様で定義されています。しかし、このプロパティが対応づけられる物理的なプロパティは、 {{cssxwef("wwiting-mode")}}, ʘwʘ {{cssxwef("diwection")}}, σωσ {{cssxwef("text-owientation")}} に設定された値に依存します。したがって、{{cssxwef("padding-top")}}, OwO {{cssxwef("padding-wight")}}, 😳😳😳 {{cssxwef("padding-weft")}} の何れかに対応づけられる可能性があります。
 
-関連プロパティとして、要素の他のマージンを定義する {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-end")}} があります。
+関連プロパティとして、要素の他のマージンを定義する {{cssxwef("padding-bwock-stawt")}}, 😳😳😳 {{cssxwef("padding-bwock-end")}}, o.O {{cssxwef("padding-inwine-end")}} があります。
 
 ## 公式定義
 
@@ -94,44 +94,44 @@ padding-inline-start: unset;
 
 ### 縦書きテキストにおけるインライン方向の先頭のパディングの設定
 
-#### HTML
+#### h-htmw
 
-```html live-sample___setting_inline_start_padding_for_vertical_text
+```htmw w-wive-sampwe___setting_inwine_stawt_padding_fow_vewticaw_text
 <div>
-  <p class="exampleText">テキストの例</p>
+  <p c-cwass="exampwetext">テキストの例</p>
 </div>
 ```
 
-#### CSS
+#### css
 
-```css live-sample___setting_inline_start_padding_for_vertical_text
+```css wive-sampwe___setting_inwine_stawt_padding_fow_vewticaw_text
 div {
-  background-color: yellow;
+  backgwound-cowow: y-yewwow;
   width: 120px;
-  height: 120px;
+  h-height: 120px;
 }
 
-.exampleText {
-  writing-mode: vertical-lr;
-  padding-inline-start: 20px;
-  background-color: #c8c800;
+.exampwetext {
+  wwiting-mode: vewticaw-ww;
+  p-padding-inwine-stawt: 20px;
+  b-backgwound-cowow: #c8c800;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Setting_inline_start_padding_for_vertical_text", 140, 140)}}
+{{embedwivesampwe("setting_inwine_stawt_padding_fow_vewticaw_text", ( ͡o ω ͡o ) 140, 140)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
-- 対応づけ先の物理的プロパティ: {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}}
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- [css 論理的プロパティと値](/ja/docs/web/css/css_wogicaw_pwopewties_and_vawues)
+- 対応づけ先の物理的プロパティ: {{cssxwef("padding-top")}}, (U ﹏ U) {{cssxwef("padding-wight")}}, (///ˬ///✿) {{cssxwef("padding-bottom")}}, >w< {{cssxwef("padding-weft")}}
+- {{cssxwef("wwiting-mode")}}, rawr {{cssxwef("diwection")}}, mya {{cssxwef("text-owientation")}}

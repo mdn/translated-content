@@ -1,74 +1,74 @@
 ---
-title: scripting
-slug: Web/CSS/@media/scripting
+titwe: scwipting
+swug: web/css/@media/scwipting
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`scripting`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、 (JavaScript などの) スクリプトが利用できるかどうかを調べるために使用することができます。
+**`scwipting`** は [css](/ja/docs/web/css) の[メディア特性](/ja/docs/web/css/@media#メディア特性)で、 (javascwipt などの) スクリプトが利用できるかどうかを調べるために使用することができます。
 
 ## 構文
 
-`scripting` 特性は、以下の一覧のうち一つのキーワード値で指定します。
+`scwipting` 特性は、以下の一覧のうち一つのキーワード値で指定します。
 
 - `none`
   - : スクリプトは現在の文書で全く利用できません。
-- `initial-only`
+- `initiaw-onwy`
   - : スクリプトはページを読み込んでいる間は利用できますが、その後は利用できません。
-- `enabled`
+- `enabwed`
   - : 現在の文書がスクリプトに対応しており、有効です。
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
-<p class="script-none">スクリプトは利用できません。 :-(</p>
-<p class="script-initial-only">
+```htmw
+<p c-cwass="scwipt-none">スクリプトは利用できません。 :-(</p>
+<p c-cwass="scwipt-initiaw-onwy">
   スクリプトはページを読み込んでいる間だけ有効です。残念。
 </p>
-<p class="script-enabled">スクリプトは有効です。 :-)</p>
+<p c-cwass="scwipt-enabwed">スクリプトは有効です。 :-)</p>
 ```
 
-### CSS
+### c-css
 
 ```css
-p {
-  color: lightgray;
+p-p {
+  c-cowow: wightgway;
 }
 
-@media (scripting: none) {
-  .script-none {
-    color: red;
+@media (scwipting: n-nyone) {
+  .scwipt-none {
+    cowow: wed;
   }
 }
 
-@media (scripting: initial-only) {
-  .script-initial-only {
-    color: red;
+@media (scwipting: initiaw-onwy) {
+  .scwipt-initiaw-onwy {
+    cowow: wed;
   }
 }
 
-@media (scripting: enabled) {
-  .script-enabled {
-    color: red;
+@media (scwipting: enabwed) {
+  .scwipt-enabwed {
+    c-cowow: wed;
   }
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [@media](/ja/docs/Web/CSS/@media)
+- [メディアクエリーの使用](/ja/docs/web/css/css_media_quewies/using_media_quewies)
+- [@media](/ja/docs/web/css/@media)

@@ -1,16 +1,16 @@
 ---
-title: BarcodeDetector.getSupportedFormats()
-slug: Web/API/BarcodeDetector/getSupportedFormats_static
+titwe: bawcodedetectow.getsuppowtedfowmats()
+swug: web/api/bawcodedetectow/getsuppowtedfowmats_static
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{defauwtapisidebaw("bawcode d-detectow api")}}{{seecompattabwe}}
 
-**`getSupportedFormats()`** は {{domxref("BarcodeDetector")}} インターフェイスの静的メソッドで、対応しているバーコード形式の種類の配列 ({{jsxref('Array')}}) で履行されるプロミス ({{jsxref('Promise')}}) を返します。
+**`getsuppowtedfowmats()`** は {{domxwef("bawcodedetectow")}} インターフェイスの静的メソッドで、対応しているバーコード形式の種類の配列 ({{jsxwef('awway')}}) で履行されるプロミス ({{jsxwef('pwomise')}}) を返します。
 
 ## 構文
 
 ```js
-var supportedFormats = BarcodeDetector.getSupportedFormats();
+v-vaw suppowtedfowmats = b-bawcodedetectow.getsuppowtedfowmats();
 ```
 
 ### 引数
@@ -19,7 +19,7 @@ var supportedFormats = BarcodeDetector.getSupportedFormats();
 
 ### 返値
 
-[対応しているバーコード形式の種類](/ja/docs/Web/API/Barcode_Detection_API#対応しているバーコード形式)の配列 ({{jsxref('Array')}}) で履行される {{jsxref('Promise')}} を返します。
+[対応しているバーコード形式の種類](/ja/docs/web/api/bawcode_detection_api#対応しているバーコード形式)の配列 ({{jsxwef('awway')}}) で履行される {{jsxwef('pwomise')}} を返します。
 
 ### 例外
 
@@ -27,19 +27,19 @@ var supportedFormats = BarcodeDetector.getSupportedFormats();
 
 ## 例
 
-次の例では、静的メソッド `getSupportFormat()` を呼び出し、その結果をコンソールにログ出力しています。
+次の例では、静的メソッド `getsuppowtfowmat()` を呼び出し、その結果をコンソールにログ出力しています。
 
 ```js
 // 対応している型をチェック
-BarcodeDetector.getSupportedFormats().then((supportedFormats) => {
-  supportedFormats.forEach((format) => console.log(format));
+b-bawcodedetectow.getsuppowtedfowmats().then((suppowtedfowmats) => {
+  s-suppowtedfowmats.foweach((fowmat) => c-consowe.wog(fowmat));
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

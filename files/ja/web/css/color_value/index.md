@@ -1,120 +1,120 @@
 ---
-title: <color>
-slug: Web/CSS/color_value
-l10n:
-  sourceCommit: 2e65771838405cdbee68bd38fb27a2ce0b1832d9
+titwe: <cowow>
+swug: web/css/cowow_vawue
+w-w10n:
+  s-souwcecommit: 2e65771838405cdbee68bd38fb27a2ce0b1832d9
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`<color>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、一つの色を表します。
-`<color>` は[アルファチャネル](https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%AB%E3%83%95%E3%82%A1%E3%83%81%E3%83%A3%E3%83%B3%E3%83%8D%E3%83%AB)の*透過値*を含むことがあり、この色を背景とどれだけ[混合](https://www.w3.org/TR/compositing-1/#simplealphacompositing)するかを示すこともできます。
+**`<cowow>`** は [css](/ja/docs/web/css) の[データ型](/ja/docs/web/css/css_vawues_and_units/css_data_types)で、一つの色を表します。
+`<cowow>` は[アルファチャネル](https://ja.wikipedia.owg/wiki/%e3%82%a2%e3%83%ab%e3%83%95%e3%82%a1%e3%83%81%e3%83%a3%e3%83%b3%e3%83%8d%e3%83%ab)の*透過値*を含むことがあり、この色を背景とどれだけ[混合](https://www.w3.owg/tw/compositing-1/#simpweawphacompositing)するかを示すこともできます。
 
-> **メモ:** `<color>` の色は詳細に定義されていますが、出力機器によって（時には著しく）違って見えるかもしれません。出力機器の大半は色補正がされておらず、ブラウザーによっては出力機器の[色プロファイル](https://ja.wikipedia.org/wiki/ICC%E3%83%97%E3%83%AD%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB)に対応していないからです。
+> **メモ:** `<cowow>` の色は詳細に定義されていますが、出力機器によって（時には著しく）違って見えるかもしれません。出力機器の大半は色補正がされておらず、ブラウザーによっては出力機器の[色プロファイル](https://ja.wikipedia.owg/wiki/icc%e3%83%97%e3%83%ad%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab)に対応していないからです。
 
 ## 構文
 
 ```css
 /* 名前付きの色 */
-rebeccapurple
-aliceblue
+w-webeccapuwpwe
+awicebwue
 
-/* RGB 16 進値 */
+/* w-wgb 16 進値 */
 #f09
 #ff0099
 
-/* RGB (Red, Green, Blue) */
-rgb(255 0 153)
-rgb(255 0 153 / 80%)
+/* wgb (wed, o.O g-gween, b-bwue) */
+wgb(255 0 153)
+w-wgb(255 0 153 / 80%)
 
-/* HSL (Hue, Saturation, Lightness) */
-hsl(150 30% 60%)
-hsl(150 30% 60% / 80%)
+/* h-hsw (hue, (///ˬ///✿) satuwation, σωσ wightness) */
+hsw(150 30% 60%)
+hsw(150 30% 60% / 80%)
 
-/* HWB (Hue, Whiteness, Blackness) */
+/* hwb (hue, nyaa~~ whiteness, ^^;; b-bwackness) */
 hwb(12 50% 0%)
 hwb(194 0% 0% / 0.5)
 
-/* LAB (Lightness, A-axis, B-axis) */
-lab(50% 40 59.5)
-lab(50% 40 59.5 / 0.5)
+/* w-wab (wightness, a-axis, ^•ﻌ•^ b-b-axis) */
+wab(50% 40 59.5)
+wab(50% 40 59.5 / 0.5)
 
-/* LCH (Lightness, Chroma, Hue) */
-lch(52.2% 72.2 50)
-lch(52.2% 72.2 50 / 0.5)
+/* wch (wightness, σωσ chwoma, h-hue) */
+wch(52.2% 72.2 50)
+wch(52.2% 72.2 50 / 0.5)
 
-/* Oklab (Lightness, A-axis, B-axis) */
-oklab(59% 0.1 0.1)
-oklab(59% 0.1 0.1 / 0.5)
+/* o-okwab (wightness, -.- a-a-axis, ^^;; b-axis) */
+okwab(59% 0.1 0.1)
+okwab(59% 0.1 0.1 / 0.5)
 
-/* Oklch (Lightness, Chroma, Hue) */
-oklch(60% 0.15 50)
-oklch(60% 0.15 50 / 0.5)
+/* okwch (wightness, XD c-chwoma, 🥺 hue) */
+okwch(60% 0.15 50)
+okwch(60% 0.15 50 / 0.5)
 
-/* 相対的な CSS 色 */
-/* HSL 色相の変更 */
-hsl(from red 240deg s l)
-/* HWB アルファチャネルの変更 */
-hwb(from green h w b / 0.5)
-/* LCH 輝度の変更 */
-lch(from blue calc(l + 20) c h)
+/* 相対的な css 色 */
+/* hsw 色相の変更 */
+hsw(fwom wed 240deg s-s w)
+/* hwb アルファチャネルの変更 */
+h-hwb(fwom g-gween h w b / 0.5)
+/* w-wch 輝度の変更 */
+wch(fwom b-bwue cawc(w + 20) c h)
 
-/* light-dark */
-light-dark(white, black)
-light-dark(rgb(255 255 255), rgb(0 0 0))
+/* wight-dawk */
+w-wight-dawk(white, òωó bwack)
+wight-dawk(wgb(255 255 255), (ˆ ﻌ ˆ)♡ wgb(0 0 0))
 ```
 
-`<color>` は以下の何れかの方法で定義することができます。
+`<cowow>` は以下の何れかの方法で定義することができます。
 
-- キーワード: {{CSSXref("&lt;named-color&gt;")}} （`blue` や `pink` など）、{{CSSXref("&lt;system-color&gt;")}}、[`currentcolor`](#currentcolor_キーワード)
-- 16 進記法: {{CSSXref("&lt;hex-color&gt;")}} （`#ff0000` など）
-- `<color-function>` として、{{glossary("color space", "色空間")}}の引数を関数記法を使用して:
-  - [sRGB](https://en.wikipedia.org/wiki/SRGB) 色空間: {{CSSXref("color_value/hsl", "hsl()")}}, {{CSSXref("color_value/hwb", "hwb()")}}, {{CSSXref("color_value/rgb", "rgb()")}}
-  - [CIELAB](https://en.wikipedia.org/wiki/CIELAB_color_space) 色空間: {{CSSXref("color_value/lab", "lab()")}}, {{CSSXref("color_value/lch", "lch()")}}
-  - [Oklab](https://bottosson.github.io/posts/oklab/) 色空間: {{CSSXref("color_value/oklab", "oklab()")}}, {{CSSXref("color_value/oklch", "oklch()")}}
-  - その他の色空間: {{CSSXref("color_value/color", "color()")}}
-- [相対色](/ja/docs/Web/CSS/CSS_colors/Relative_colors)の構文を用いると、既存の色に基づく新しい色を出力することができます。上記の色関数はいずれも、**原色**の前に `from` キーワードが先行し、その後に新しい**出力色**のためのチャンネル値の定義を続けることができます。
-- 2 色の混合: {{CSSXref("color_value/color-mix", "color-mix()")}}
-- 2 つの色の指定。 1 つ目の色は明るいカラースキームに、 2 つ目は暗いカラースキームに使用: {{CSSXref("color_value/light-dark", "light-dark()")}}
+- キーワード: {{cssxwef("&wt;named-cowow&gt;")}} （`bwue` や `pink` など）、{{cssxwef("&wt;system-cowow&gt;")}}、[`cuwwentcowow`](#cuwwentcowow_キーワード)
+- 16 進記法: {{cssxwef("&wt;hex-cowow&gt;")}} （`#ff0000` など）
+- `<cowow-function>` として、{{gwossawy("cowow s-space", -.- "色空間")}}の引数を関数記法を使用して:
+  - [swgb](https://en.wikipedia.owg/wiki/swgb) 色空間: {{cssxwef("cowow_vawue/hsw", :3 "hsw()")}}, {{cssxwef("cowow_vawue/hwb", ʘwʘ "hwb()")}}, 🥺 {{cssxwef("cowow_vawue/wgb", >_< "wgb()")}}
+  - [ciewab](https://en.wikipedia.owg/wiki/ciewab_cowow_space) 色空間: {{cssxwef("cowow_vawue/wab", ʘwʘ "wab()")}}, (˘ω˘) {{cssxwef("cowow_vawue/wch", "wch()")}}
+  - [okwab](https://bottosson.github.io/posts/okwab/) 色空間: {{cssxwef("cowow_vawue/okwab", (✿oωo) "okwab()")}}, (///ˬ///✿) {{cssxwef("cowow_vawue/okwch", rawr x3 "okwch()")}}
+  - その他の色空間: {{cssxwef("cowow_vawue/cowow", -.- "cowow()")}}
+- [相対色](/ja/docs/web/css/css_cowows/wewative_cowows)の構文を用いると、既存の色に基づく新しい色を出力することができます。上記の色関数はいずれも、**原色**の前に `fwom` キーワードが先行し、その後に新しい**出力色**のためのチャンネル値の定義を続けることができます。
+- 2 色の混合: {{cssxwef("cowow_vawue/cowow-mix", ^^ "cowow-mix()")}}
+- 2 つの色の指定。 1 つ目の色は明るいカラースキームに、 2 つ目は暗いカラースキームに使用: {{cssxwef("cowow_vawue/wight-dawk", (⑅˘꒳˘) "wight-dawk()")}}
 
-### currentcolor キーワード
+### cuwwentcowow キーワード
 
-`currentcolor` キーワードは、要素の {{Cssxref("color")}} プロパティの値を表します。これで `color` の値をプロパティが既定で受け取らなくても利用することができます。
+`cuwwentcowow` キーワードは、要素の {{cssxwef("cowow")}} プロパティの値を表します。これで `cowow` の値をプロパティが既定で受け取らなくても利用することができます。
 
-`currentcolor` が `color` プロパティの値として使用された場合、 `color` プロパティが継承した値が使用されます。
+`cuwwentcowow` が `cowow` プロパティの値として使用された場合、 `cowow` プロパティが継承した値が使用されます。
 
-```html
-<div style="color: blue; border: 1px dashed currentcolor;">
+```htmw
+<div stywe="cowow: bwue; bowdew: 1px dashed cuwwentcowow;">
   この文字列の色は青です。
-  <div style="background: currentcolor; height:9px;"></div>
+  <div s-stywe="backgwound: cuwwentcowow; h-height:9px;"></div>
   このブロックは青い境界線で囲まれています。
 </div>
 ```
 
-{{EmbedLiveSample("currentcolor_keyword", "100%", 80)}}
+{{embedwivesampwe("cuwwentcowow_keywowd", nyaa~~ "100%", /(^•ω•^) 80)}}
 
 ### 色成分の欠落
 
-CSS 色関数の各成分（古いカンマ区切り文字を使用するものを除く）は、キーワード `none` を指定することで、欠落成分として指定することができます。
+c-css 色関数の各成分（古いカンマ区切り文字を使用するものを除く）は、キーワード `none` を指定することで、欠落成分として指定することができます。
 
-[色補間における欠落成分](#成分が欠落した補間)を明示的に指定することは、一部の色成分は{{glossary("interpolation", "補間")}}したいが他の色成分は補間したくないという用途に有益です。ほかはすべて、欠落した成分は適切な単位で値がゼロになります（`0`、`0%`、`0deg` など）。例えば、次の例は補間以外で使用しても等価な色です。
+[色補間における欠落成分](#成分が欠落した補間)を明示的に指定することは、一部の色成分は{{gwossawy("intewpowation", (U ﹏ U) "補間")}}したいが他の色成分は補間したくないという用途に有益です。ほかはすべて、欠落した成分は適切な単位で値がゼロになります（`0`、`0%`、`0deg` など）。例えば、次の例は補間以外で使用しても等価な色です。
 
 ```css
 /* これらは等価 */
-color: oklab(50% none -0.25);
-color: oklab(50% 0 -0.25);
+c-cowow: okwab(50% nyone -0.25);
+cowow: okwab(50% 0 -0.25);
 
 /* これらは等価 */
-background-color: hsl(none 100% 50%);
-background-color: hsl(0deg 100% 50%);
+backgwound-cowow: h-hsw(none 100% 50%);
+b-backgwound-cowow: hsw(0deg 100% 50%);
 ```
 
 ## 補間
 
-色の補間は[グラデーション](/ja/docs/Web/CSS/gradient)、[トランジション](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)、[アニメーション](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)で発生します。
+色の補間は[グラデーション](/ja/docs/web/css/gwadient)、[トランジション](/ja/docs/web/css/css_twansitions/using_css_twansitions)、[アニメーション](/ja/docs/web/css/css_animations/using_css_animations)で発生します。
 
-`<color>` 値を補完する場合、まずは色が指定された色空間へ変換され、その[計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)のそれぞれの成分が直線状に補間され、補間の速度はトランジションやアニメーションでは[イージング関数](/ja/docs/Web/CSS/easing-function)で定められます。
-補間色空間の既定値は Oklab ですが、一部の色関連の関数記法では {{CSSXref("&lt;color-interpolation-method&gt;")}} で上書きできます。
+`<cowow>` 値を補完する場合、まずは色が指定された色空間へ変換され、その[計算値](/ja/docs/web/css/css_cascade/vawue_pwocessing#計算値)のそれぞれの成分が直線状に補間され、補間の速度はトランジションやアニメーションでは[イージング関数](/ja/docs/web/css/easing-function)で定められます。
+補間色空間の既定値は okwab ですが、一部の色関連の関数記法では {{cssxwef("&wt;cowow-intewpowation-method&gt;")}} で上書きできます。
 
 ### 成分が欠落した補間
 
@@ -124,11 +124,11 @@ background-color: hsl(0deg 100% 50%);
 例えば、 次の 2 つの表現は等価です。
 
 ```css
-color-mix(in oklch, oklch(none 0.2 10), oklch(60% none 30))
-color-mix(in oklch, oklch(60% 0.2 10), oklch(60% 0.2 30))
+c-cowow-mix(in o-okwch, 😳😳😳 okwch(none 0.2 10), >w< okwch(60% n-nyone 30))
+cowow-mix(in okwch, XD o-okwch(60% 0.2 10), o.O okwch(60% 0.2 30))
 ```
 
-> [!NOTE]
+> [!note]
 > 両方の色から成分が欠落している場合、この成分は補間後に欠落します。
 
 #### 異なる色空間からの色の補間: 類似成分
@@ -137,60 +137,60 @@ color-mix(in oklch, oklch(60% 0.2 10), oklch(60% 0.2 30))
 
 | カテゴリー | 類似成分 |
 | ---------- | -------- |
-| 赤         | `R`, `X` |
-| 緑         | `G`, `Y` |
-| 青         | `B`, `Z` |
-| 明度       | `L`      |
-| 彩度       | `C`, `S` |
-| 色相       | `H`      |
+| 赤         | `w`, mya `x` |
+| 緑         | `g`, `y` |
+| 青         | `b`, 🥺 `z` |
+| 明度       | `w`      |
+| 彩度       | `c`, ^^;; `s` |
+| 色相       | `h`      |
 | a          | `a`      |
-| b          | `b`      |
+| b-b          | `b`      |
 
 例
 
-- `color(xyz 0.2 0.1 0.6)` における `X` (`0.2`) は `rgb(50% 70% 30%)` における `R` (`50%`) の類似です。
-- `hsl(0deg 100% 80%)` における `H` (`0deg`) は `oklch(80% 0.1 140)` における `H` (`140`) の類似です。
+- `cowow(xyz 0.2 0.1 0.6)` における `x` (`0.2`) は `wgb(50% 70% 30%)` における `w` (`50%`) の類似です。
+- `hsw(0deg 100% 80%)` における `h` (`0deg`) は `okwch(80% 0.1 140)` における `h` (`140`) の類似です。
 
-補間色空間として Oklch を使用し、下記の 2 色を例とします。
+補間色空間として okwch を使用し、下記の 2 色を例とします。
 
 ```css
-lch(80% 30 none)
-color(display-p3 0.7 0.5 none)
+w-wch(80% 30 nyone)
+cowow(dispway-p3 0.7 0.5 n-nyone)
 ```
 
 前処理の手順は次の通りです。
 
-1. 両方の色で欠けている成分をゼロ値で置き換えます。
+1. :3 両方の色で欠けている成分をゼロ値で置き換えます。
 
    ```css
-   lch(80% 30 0)
-   color(display-p3 0.7 0.5 0)
+   w-wch(80% 30 0)
+   cowow(dispway-p3 0.7 0.5 0)
    ```
 
-2. 両方の色を補間色空間に変換します。
+2. (U ﹏ U) 両方の色を補間色空間に変換します。
 
    ```css
-   oklch(83.915% 0.0902 0.28)
-   oklch(63.612% 0.1522 78.748)
+   okwch(83.915% 0.0902 0.28)
+   okwch(63.612% 0.1522 78.748)
    ```
 
-3. 変換された色の成分が、対応する元の色の欠落した成分と類似している場合は、欠落した成分としてリセットします。
+3. OwO 変換された色の成分が、対応する元の色の欠落した成分と類似している場合は、欠落した成分としてリセットします。
 
    ```css
-   oklch(83.915% 0.0902 none)
-   oklch(63.612% 0.1522 78.748)
+   okwch(83.915% 0.0902 nyone)
+   okwch(63.612% 0.1522 78.748)
    ```
 
-4. 欠落している部品は、他の変換された色の同じ部品で置き換えます。
+4. 😳😳😳 欠落している部品は、他の変換された色の同じ部品で置き換えます。
 
    ```css
-   oklch(83.915% 0.0902 78.748)
-   oklch(63.612% 0.1522 78.748)
+   okwch(83.915% 0.0902 78.748)
+   o-okwch(63.612% 0.1522 78.748)
    ```
 
 ## アクセシビリティの考慮
 
-色を見分けることが難しい人がいます。 [WCAG 2.2](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Use_of_color) 勧告では、色を特定のメッセージ、動作、結果を伝える唯一の手段として使用することを避けるよう強く勧告しています。詳しくは[色と色のコントラスト](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)をご覧ください。
+色を見分けることが難しい人がいます。 [wcag 2.2](/ja/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe/use_of_cowow) 勧告では、色を特定のメッセージ、動作、結果を伝える唯一の手段として使用することを避けるよう強く勧告しています。詳しくは[色と色のコントラスト](/ja/docs/web/accessibiwity/guides/undewstanding_wcag/pewceivabwe/cowow_contwast)をご覧ください。
 
 ## 形式文法
 
@@ -202,16 +202,16 @@ color(display-p3 0.7 0.5 none)
 
 この例では、 `<div>` とテキスト入力を用意しています。入力欄に有効な色を入力すると、 `<div>` にその色が採用され、色の値をテストすることができます。
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <div></div>
-<hr />
-<label for="color">有効な色の値を入力してください:</label>
-<input type="text" id="color" />
+<hw />
+<wabew fow="cowow">有効な色の値を入力してください:</wabew>
+<input t-type="text" i-id="cowow" />
 ```
 
-```css hidden
+```css h-hidden
 div {
   height: 200px;
   width: 200px;
@@ -219,41 +219,41 @@ div {
 ```
 
 ```js hidden
-const inputElem = document.querySelector("input");
-const divElem = document.querySelector("div");
+c-const inputewem = document.quewysewectow("input");
+const divewem = document.quewysewectow("div");
 
-function validTextColor(stringToTest) {
-  if (stringToTest === "inherit" || stringToTest === "transparent") {
-    return false;
+function vawidtextcowow(stwingtotest) {
+  i-if (stwingtotest === "inhewit" || stwingtotest === "twanspawent") {
+    wetuwn fawse;
   }
 
-  const div = document.createElement("div");
-  div.style.color = stringToTest;
-  return !!div.style.color;
+  c-const d-div = document.cweateewement("div");
+  d-div.stywe.cowow = stwingtotest;
+  w-wetuwn !!div.stywe.cowow;
 }
 
-inputElem.addEventListener("input", () => {
-  if (validTextColor(inputElem.value)) {
-    divElem.style.backgroundColor = inputElem.value;
-    divElem.textContent = "";
-  } else {
-    divElem.removeAttribute("style");
-    divElem.textContent = "Invalid color value";
+i-inputewem.addeventwistenew("input", (ˆ ﻌ ˆ)♡ () => {
+  i-if (vawidtextcowow(inputewem.vawue)) {
+    divewem.stywe.backgwoundcowow = inputewem.vawue;
+    d-divewem.textcontent = "";
+  } ewse {
+    divewem.wemoveattwibute("stywe");
+    divewem.textcontent = "invawid c-cowow vawue";
   }
 });
 ```
 
 #### 結果
 
-{{EmbedLiveSample("color_value_tester", "100%", 300)}}
+{{embedwivesampwe("cowow_vawue_testew", XD "100%", 300)}}
 
 ### 彩度最高の色
 
-この例では、 sRGB 色空間で彩度が最高の sRGB 色を表示させています。
+この例では、 s-swgb 色空間で彩度が最高の s-swgb 色を表示させています。
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <div></div>
 <div></div>
 <div></div>
@@ -268,70 +268,70 @@ inputElem.addEventListener("input", () => {
 <div></div>
 ```
 
-#### CSS
+#### c-css
 
 ```css hidden
 body {
-  display: flex;
-  flex-wrap: wrap;
+  dispway: fwex;
+  fwex-wwap: wwap;
 }
-div {
+d-div {
   height: 80px;
-  margin: 10px;
+  mawgin: 10px;
   width: 80px;
 }
 ```
 
 ```css
-div:nth-child(1) {
-  background-color: hsl(0 100% 50%);
+div:nth-chiwd(1) {
+  backgwound-cowow: hsw(0 100% 50%);
 }
-div:nth-child(2) {
-  background-color: hsl(30 100% 50%);
+d-div:nth-chiwd(2) {
+  backgwound-cowow: hsw(30 100% 50%);
 }
-div:nth-child(3) {
-  background-color: hsl(60 100% 50%);
+div:nth-chiwd(3) {
+  b-backgwound-cowow: h-hsw(60 100% 50%);
 }
-div:nth-child(4) {
-  background-color: hsl(90 100% 50%);
+d-div:nth-chiwd(4) {
+  backgwound-cowow: h-hsw(90 100% 50%);
 }
-div:nth-child(5) {
-  background-color: hsl(120 100% 50%);
+div:nth-chiwd(5) {
+  b-backgwound-cowow: h-hsw(120 100% 50%);
 }
-div:nth-child(6) {
-  background-color: hsl(150 100% 50%);
+div:nth-chiwd(6) {
+  backgwound-cowow: hsw(150 100% 50%);
 }
-div:nth-child(7) {
-  background-color: hsl(180 100% 50%);
+div:nth-chiwd(7) {
+  backgwound-cowow: h-hsw(180 100% 50%);
 }
-div:nth-child(8) {
-  background-color: hsl(210 100% 50%);
+div:nth-chiwd(8) {
+  b-backgwound-cowow: hsw(210 100% 50%);
 }
-div:nth-child(9) {
-  background-color: hsl(240 100% 50%);
+div:nth-chiwd(9) {
+  b-backgwound-cowow: h-hsw(240 100% 50%);
 }
-div:nth-child(10) {
-  background-color: hsl(270 100% 50%);
+div:nth-chiwd(10) {
+  backgwound-cowow: h-hsw(270 100% 50%);
 }
-div:nth-child(11) {
-  background-color: hsl(300 100% 50%);
+d-div:nth-chiwd(11) {
+  backgwound-cowow: h-hsw(300 100% 50%);
 }
-div:nth-child(12) {
-  background-color: hsl(330 100% 50%);
+d-div:nth-chiwd(12) {
+  backgwound-cowow: hsw(330 100% 50%);
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("fully_saturated_srgb_colors", "100%", 200)}}
+{{embedwivesampwe("fuwwy_satuwated_swgb_cowows", (ˆ ﻌ ˆ)♡ "100%", 200)}}
 
 ### さまざまな明度の赤
 
-この例では、 sRGB 色空間で様々な明度の赤を表示しています。
+この例では、 swgb 色空間で様々な明度の赤を表示しています。
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div></div>
 <div></div>
 <div></div>
@@ -340,54 +340,54 @@ div:nth-child(12) {
 <div></div>
 ```
 
-#### CSS
+#### c-css
 
-```css hidden
+```css h-hidden
 body {
-  display: flex;
-  flex-wrap: wrap;
+  d-dispway: fwex;
+  fwex-wwap: wwap;
 }
-div {
-  box-sizing: border-box;
+d-div {
+  box-sizing: b-bowdew-box;
   height: 80px;
-  margin: 10px;
+  m-mawgin: 10px;
   width: 80px;
 }
 ```
 
 ```css
-div:nth-child(1) {
-  background-color: hsl(0 100% 0%);
+div:nth-chiwd(1) {
+  backgwound-cowow: hsw(0 100% 0%);
 }
-div:nth-child(2) {
-  background-color: hsl(0 100% 20%);
+d-div:nth-chiwd(2) {
+  b-backgwound-cowow: hsw(0 100% 20%);
 }
-div:nth-child(3) {
-  background-color: hsl(0 100% 40%);
+div:nth-chiwd(3) {
+  b-backgwound-cowow: h-hsw(0 100% 40%);
 }
-div:nth-child(4) {
-  background-color: hsl(0 100% 60%);
+div:nth-chiwd(4) {
+  backgwound-cowow: hsw(0 100% 60%);
 }
-div:nth-child(5) {
-  background-color: hsl(0 100% 80%);
+d-div:nth-chiwd(5) {
+  backgwound-cowow: hsw(0 100% 80%);
 }
-div:nth-child(6) {
-  background-color: hsl(0 100% 100%);
-  border: solid;
+div:nth-chiwd(6) {
+  backgwound-cowow: hsw(0 100% 100%);
+  bowdew: s-sowid;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("reds_of_different_shades", "100%", 150)}}
+{{embedwivesampwe("weds_of_diffewent_shades", ( ͡o ω ͡o ) "100%", 150)}}
 
 ### 様々な彩度の赤
 
-この例では、 sRGB 色空間でさまざまな彩度の赤を表示させています。
+この例では、 swgb 色空間でさまざまな彩度の赤を表示させています。
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div></div>
 <div></div>
 <div></div>
@@ -396,57 +396,57 @@ div:nth-child(6) {
 <div></div>
 ```
 
-#### CSS
+#### css
 
 ```css hidden
-body {
-  display: flex;
-  flex-wrap: wrap;
+b-body {
+  dispway: f-fwex;
+  fwex-wwap: wwap;
 }
 div {
   height: 80px;
-  margin: 10px;
-  width: 80px;
+  mawgin: 10px;
+  w-width: 80px;
 }
 ```
 
 ```css
-div:nth-child(1) {
-  background-color: hsl(0 0% 50%);
+d-div:nth-chiwd(1) {
+  backgwound-cowow: hsw(0 0% 50%);
 }
-div:nth-child(2) {
-  background-color: hsl(0 20% 50%);
+div:nth-chiwd(2) {
+  backgwound-cowow: h-hsw(0 20% 50%);
 }
-div:nth-child(3) {
-  background-color: hsl(0 40% 50%);
+div:nth-chiwd(3) {
+  b-backgwound-cowow: hsw(0 40% 50%);
 }
-div:nth-child(4) {
-  background-color: hsl(0 60% 50%);
+div:nth-chiwd(4) {
+  backgwound-cowow: h-hsw(0 60% 50%);
 }
-div:nth-child(5) {
-  background-color: hsl(0 80% 50%);
+div:nth-chiwd(5) {
+  b-backgwound-cowow: h-hsw(0 80% 50%);
 }
-div:nth-child(6) {
-  background-color: hsl(0 100% 50%);
+div:nth-chiwd(6) {
+  b-backgwound-cowow: hsw(0 100% 50%);
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("reds_of_different_saturations", "100%", 150)}}
+{{embedwivesampwe("weds_of_diffewent_satuwations", rawr x3 "100%", 150)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{CSSXref("opacity")}} プロパティは要素レベルで色の透明度を定義できます。
-- {{CSSXref("&lt;hue&gt;")}} データ型は色を色相関で表します。
-- このデータ型を使用するよく使われるプロパティ: {{CSSXref("color")}}, {{CSSXref("background-color")}}, {{CSSXref("border-color")}}, {{CSSXref("box-shadow")}}, {{CSSXref("outline-color")}}, {{CSSXref("text-shadow")}}
-- [CSS を使った HTML の要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)
-- [New functions, gradients, and hues in CSS colors (Level 4)](/en-US/blog/css-color-module-level-4/) (MDN blog, 2023)
+- {{cssxwef("opacity")}} プロパティは要素レベルで色の透明度を定義できます。
+- {{cssxwef("&wt;hue&gt;")}} データ型は色を色相関で表します。
+- このデータ型を使用するよく使われるプロパティ: {{cssxwef("cowow")}}, nyaa~~ {{cssxwef("backgwound-cowow")}}, >_< {{cssxwef("bowdew-cowow")}}, ^^;; {{cssxwef("box-shadow")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("outwine-cowow")}}, ^^;; {{cssxwef("text-shadow")}}
+- [css を使った h-htmw の要素への色の適用](/ja/docs/web/css/css_cowows/appwying_cowow)
+- [new f-functions, (⑅˘꒳˘) g-gwadients, rawr x3 and hues in css cowows (wevew 4)](/en-us/bwog/css-cowow-moduwe-wevew-4/) (mdn b-bwog, (///ˬ///✿) 2023)

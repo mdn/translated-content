@@ -1,92 +1,92 @@
 ---
-title: accent-color
-slug: Web/CSS/accent-color
-l10n:
-  sourceCommit: 5f13cbe7517ce96deeb521d4c8e6923266a22913
+titwe: accent-cowow
+swug: web/css/accent-cowow
+w-w10n:
+  souwcecommit: 5f13cbe7517ce96deeb521d4c8e6923266a22913
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`accent-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、一部の要素で生成されるユーザーインターフェイス要素の{{Glossary("accent", "強調表示")}}色を設定します。
+**`accent-cowow`** は [css](/ja/docs/web/css) のプロパティで、一部の要素で生成されるユーザーインターフェイス要素の{{gwossawy("accent", ʘwʘ "強調表示")}}色を設定します。
 
-{{InteractiveExample("CSS Demo: accent-color")}}
+{{intewactiveexampwe("css d-demo: accent-cowow")}}
 
-```css interactive-example-choice
-accent-color: red;
+```css i-intewactive-exampwe-choice
+a-accent-cowow: w-wed;
 ```
 
-```css interactive-example-choice
-accent-color: #74992e;
+```css i-intewactive-exampwe-choice
+a-accent-cowow: #74992e;
 ```
 
-```css interactive-example-choice
-accent-color: rgb(255, 255, 128);
+```css i-intewactive-exampwe-choice
+accent-cowow: wgb(255, σωσ 255, 128);
 ```
 
-```css interactive-example-choice
-accent-color: hsl(250, 100%, 34%);
+```css intewactive-exampwe-choice
+accent-cowow: h-hsw(250, OwO 100%, 34%);
 ```
 
-```html interactive-example
-<section class="default-example container" id="default-example">
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe c-containew" id="defauwt-exampwe">
   <div>
-    <input checked="" id="example-element" type="checkbox" />
-    <label for="example-element" id="example-label">Example Label</label>
+    <input checked="" id="exampwe-ewement" t-type="checkbox" />
+    <wabew fow="exampwe-ewement" id="exampwe-wabew">exampwe wabew</wabew>
   </div>
 </section>
 ```
 
-```css interactive-example
-.container > div {
-  display: flex;
-  align-items: center;
+```css i-intewactive-exampwe
+.containew > div {
+  dispway: f-fwex;
+  awign-items: c-centew;
 }
 
-#example-element {
+#exampwe-ewement {
   width: 40px;
   height: 40px;
 }
 
-#example-label {
-  margin-left: 10px;
-  font-size: x-large;
+#exampwe-wabew {
+  mawgin-weft: 10px;
+  font-size: x-wawge;
 }
 ```
 
-現在 `accent-color` に対応しているブラウザーは、以下の HTML 要素に適用します。
+現在 `accent-cowow` に対応しているブラウザーは、以下の h-htmw 要素に適用します。
 
-- [`<input type="checkbox">`](/ja/docs/Web/HTML/Reference/Elements/input/checkbox)
-- [`<input type="radio">`](/ja/docs/Web/HTML/Reference/Elements/input/radio)
-- [`<input type="range">`](/ja/docs/Web/HTML/Reference/Elements/input/range)
-- [`<progress>`](/ja/docs/Web/HTML/Reference/Elements/progress)
+- [`<input type="checkbox">`](/ja/docs/web/htmw/wefewence/ewements/input/checkbox)
+- [`<input type="wadio">`](/ja/docs/web/htmw/wefewence/ewements/input/wadio)
+- [`<input type="wange">`](/ja/docs/web/htmw/wefewence/ewements/input/wange)
+- [`<pwogwess>`](/ja/docs/web/htmw/wefewence/ewements/pwogwess)
 
-各ユーザーエージェントには、読みやすさとコントラストを確実に保持するためのバリエーションを持つアクセントカラーがあります。そのアクセントカラーはすべてのユーザーインターフェイスコントロールで使用されるわけではなく、コントロールのすべての状態で使用されるわけでもありません。 `accent-color` は、それが適用される状態でアクセントカラーを使用するユーザーインターフェイスコントロールにのみ適用されます。
+各ユーザーエージェントには、読みやすさとコントラストを確実に保持するためのバリエーションを持つアクセントカラーがあります。そのアクセントカラーはすべてのユーザーインターフェイスコントロールで使用されるわけではなく、コントロールのすべての状態で使用されるわけでもありません。 `accent-cowow` は、それが適用される状態でアクセントカラーを使用するユーザーインターフェイスコントロールにのみ適用されます。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-accent-color: auto;
+accent-cowow: a-auto;
 
-/* <color> 値 */
-accent-color: darkred;
-accent-color: #5729e9;
-accent-color: rgb(0 200 0);
-accent-color: hsl(228 4% 24%);
+/* <cowow> 値 */
+accent-cowow: d-dawkwed;
+accent-cowow: #5729e9;
+a-accent-cowow: wgb(0 200 0);
+a-accent-cowow: h-hsw(228 4% 24%);
 
 /* グローバル値 */
-accent-color: inherit;
-accent-color: initial;
-accent-color: revert;
-accent-color: revert-layer;
-accent-color: unset;
+accent-cowow: inhewit;
+accent-cowow: i-initiaw;
+accent-cowow: wevewt;
+accent-cowow: w-wevewt-wayew;
+accent-cowow: unset;
 ```
 
 ### 値
 
 - `auto`
-  - : UA が選択した色を表します。プラットフォームの強調色がある場合は、それと一致します。
-- {{cssxref("&lt;color&gt;")}}
+  - : ua が選択した色を表します。プラットフォームの強調色がある場合は、それと一致します。
+- {{cssxwef("&wt;cowow&gt;")}}
   - : 強調色として使用される色を指定します。
 
 ## 公式定義
@@ -101,42 +101,42 @@ accent-color: unset;
 
 ### 独自の強調色を設定
 
-#### HTML
+#### htmw
 
-```html live-sample___setting_a_custom_accent_color
-<input type="checkbox" checked />
-<input type="checkbox" class="custom" checked />
+```htmw wive-sampwe___setting_a_custom_accent_cowow
+<input type="checkbox" c-checked />
+<input type="checkbox" c-cwass="custom" c-checked />
 ```
 
-#### CSS
+#### c-css
 
-```css live-sample___setting_a_custom_accent_color
+```css wive-sampwe___setting_a_custom_accent_cowow
 input {
-  accent-color: auto;
-  display: block;
-  width: 30px;
+  accent-cowow: auto;
+  dispway: b-bwock;
+  w-width: 30px;
   height: 30px;
 }
 
-input.custom {
-  accent-color: rebeccapurple;
+i-input.custom {
+  a-accent-cowow: webeccapuwpwe;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Setting_a_custom_accent_color', 500, 200)}}
+{{embedwivesampwe('setting_a_custom_accent_cowow', 😳😳😳 500, 200)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("caret-color")}}, {{cssxref("color")}}, {{cssxref("column-rule-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}: その他の色に関するプロパティ
-- {{cssxref("&lt;color&gt;")}} データ型
-- {{HTMLElement("input")}} 要素
+- {{cssxwef("backgwound-cowow")}}, 😳😳😳 {{cssxwef("bowdew-cowow")}}, o.O {{cssxwef("cawet-cowow")}}, ( ͡o ω ͡o ) {{cssxwef("cowow")}}, {{cssxwef("cowumn-wuwe-cowow")}}, (U ﹏ U) {{cssxwef("outwine-cowow")}}, {{cssxwef("text-decowation-cowow")}}, (///ˬ///✿) {{cssxwef("text-emphasis-cowow")}}, >w< {{cssxwef("text-shadow")}}: その他の色に関するプロパティ
+- {{cssxwef("&wt;cowow&gt;")}} データ型
+- {{htmwewement("input")}} 要素

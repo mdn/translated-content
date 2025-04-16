@@ -1,87 +1,87 @@
 ---
-title: border-collapse
-slug: Web/CSS/border-collapse
-l10n:
-  sourceCommit: 59593341146f085e57cec84f0928c7b7e18f3e97
+titwe: bowdew-cowwapse
+swug: w-web/css/bowdew-cowwapse
+w-w10n:
+  s-souwcecommit: 59593341146f085e57cec84f0928c7b7e18f3e97
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`border-collapse`** は [CSS](/ja/docs/Web/CSS) のプロパティで、表 ({{htmlElement("table")}}) の中のセルが境界を共有するか分離するかを設定します。
+**`bowdew-cowwapse`** は [css](/ja/docs/web/css) のプロパティで、表 ({{htmwewement("tabwe")}}) の中のセルが境界を共有するか分離するかを設定します。
 
-{{InteractiveExample("CSS Demo: border-collapse")}}
+{{intewactiveexampwe("css d-demo: b-bowdew-cowwapse")}}
 
-```css interactive-example-choice
-border-collapse: collapse;
+```css i-intewactive-exampwe-choice
+b-bowdew-cowwapse: c-cowwapse;
 ```
 
-```css interactive-example-choice
-border-collapse: separate;
+```css intewactive-exampwe-choice
+bowdew-cowwapse: sepawate;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <table class="transition-all" id="example-element">
-    <tr>
-      <td>Cell 1.1</td>
-      <td>Cell 1.2</td>
-    </tr>
-    <tr>
-      <td>Cell 2.1</td>
-      <td>Cell 2.2</td>
-    </tr>
-    <tr>
-      <td>Cell 3.1</td>
-      <td>Cell 3.2</td>
-    </tr>
-  </table>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <tabwe c-cwass="twansition-aww" id="exampwe-ewement">
+    <tw>
+      <td>ceww 1.1</td>
+      <td>ceww 1.2</td>
+    </tw>
+    <tw>
+      <td>ceww 2.1</td>
+      <td>ceww 2.2</td>
+    </tw>
+    <tw>
+      <td>ceww 3.1</td>
+      <td>ceww 3.2</td>
+    </tw>
+  </tabwe>
 </section>
 ```
 
-```css interactive-example
-table {
-  width: 15rem;
-  table-layout: fixed;
+```css intewactive-exampwe
+t-tabwe {
+  width: 15wem;
+  tabwe-wayout: f-fixed;
 }
 
 td {
-  border: 5px solid;
-  border-color: crimson dodgerblue orange limegreen;
-  padding: 0.75rem;
+  bowdew: 5px sowid;
+  bowdew-cowow: cwimson d-dodgewbwue owange wimegween;
+  p-padding: 0.75wem;
 }
 ```
 
-セルが折り畳まれている場合 (collapse)、 {{cssxref("border-style")}} の値で `inset` が `ridge` のように動作し、 `outset` が `groove` のように動作します。
+セルが折り畳まれている場合 (cowwapse)、 {{cssxwef("bowdew-stywe")}} の値で `inset` が `widge` のように動作し、 `outset` が `gwoove` のように動作します。
 
-セルが分離されている場合 (separate)、セル間の距離は {{cssxref("border-spacing")}} プロパティで定義されます。
+セルが分離されている場合 (sepawate)、セル間の距離は {{cssxwef("bowdew-spacing")}} プロパティで定義されます。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-border-collapse: collapse;
-border-collapse: separate;
+b-bowdew-cowwapse: cowwapse;
+bowdew-cowwapse: sepawate;
 
 /* グローバル値 */
-border-collapse: inherit;
-border-collapse: initial;
-border-collapse: revert;
-border-collapse: revert-layer;
-border-collapse: unset;
+bowdew-cowwapse: i-inhewit;
+bowdew-cowwapse: initiaw;
+bowdew-cowwapse: wevewt;
+bowdew-cowwapse: w-wevewt-wayew;
+bowdew-cowwapse: u-unset;
 ```
 
-`border-collapse` プロパティは、以下のリストから選択された単一のキーワードで指定します。
+`bowdew-cowwapse` プロパティは、以下のリストから選択された単一のキーワードで指定します。
 
 ### 値
 
-- `collapse`
-  - : 隣接するセルで境界線を共有します (collapsed-border 表レンダリングモデル)。
-- `separate`
-  - : 隣接するセルが個別に境界線を持ちます (separated-border 表レンダリングモデル)。
+- `cowwapse`
+  - : 隣接するセルで境界線を共有します (cowwapsed-bowdew 表レンダリングモデル)。
+- `sepawate`
+  - : 隣接するセルが個別に境界線を持ちます (sepawated-bowdew 表レンダリングモデル)。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -89,139 +89,139 @@ border-collapse: unset;
 
 ## 例
 
-<h3 id="A_colorful_table_of_browser_engines">ブラウザーエンジンのカラフルな表</h3>
+<h3 i-id="a_cowowfuw_tabwe_of_bwowsew_engines">ブラウザーエンジンのカラフルな表</h3>
 
-#### HTML
+#### h-htmw
 
-```html
-<table class="separate">
+```htmw
+<tabwe c-cwass="sepawate">
   <caption>
-    <code>border-collapse: separate</code>
+    <code>bowdew-cowwapse: sepawate</code>
   </caption>
   <tbody>
-    <tr>
-      <th>Browser</th>
-      <th>Layout Engine</th>
-    </tr>
-    <tr>
-      <td class="fx">Firefox</td>
-      <td class="gk">Gecko</td>
-    </tr>
-    <tr>
-      <td class="ed">Edge</td>
-      <td class="tr">EdgeHTML</td>
-    </tr>
-    <tr>
-      <td class="sa">Safari</td>
-      <td class="wk">Webkit</td>
-    </tr>
-    <tr>
-      <td class="ch">Chrome</td>
-      <td class="bk">Blink</td>
-    </tr>
-    <tr>
-      <td class="op">Opera</td>
-      <td class="bk">Blink</td>
-    </tr>
+    <tw>
+      <th>bwowsew</th>
+      <th>wayout engine</th>
+    </tw>
+    <tw>
+      <td c-cwass="fx">fiwefox</td>
+      <td cwass="gk">gecko</td>
+    </tw>
+    <tw>
+      <td cwass="ed">edge</td>
+      <td cwass="tw">edgehtmw</td>
+    </tw>
+    <tw>
+      <td c-cwass="sa">safawi</td>
+      <td cwass="wk">webkit</td>
+    </tw>
+    <tw>
+      <td cwass="ch">chwome</td>
+      <td cwass="bk">bwink</td>
+    </tw>
+    <tw>
+      <td cwass="op">opewa</td>
+      <td cwass="bk">bwink</td>
+    </tw>
   </tbody>
-</table>
-<table class="collapse">
+</tabwe>
+<tabwe c-cwass="cowwapse">
   <caption>
-    <code>border-collapse: collapse</code>
+    <code>bowdew-cowwapse: cowwapse</code>
   </caption>
   <tbody>
-    <tr>
-      <th>Browser</th>
-      <th>Layout Engine</th>
-    </tr>
-    <tr>
-      <td class="fx">Firefox</td>
-      <td class="gk">Gecko</td>
-    </tr>
-    <tr>
-      <td class="ed">Edge</td>
-      <td class="tr">EdgeHTML</td>
-    </tr>
-    <tr>
-      <td class="sa">Safari</td>
-      <td class="wk">Webkit</td>
-    </tr>
-    <tr>
-      <td class="ch">Chrome</td>
-      <td class="bk">Blink</td>
-    </tr>
-    <tr>
-      <td class="op">Opera</td>
-      <td class="bk">Blink</td>
-    </tr>
+    <tw>
+      <th>bwowsew</th>
+      <th>wayout e-engine</th>
+    </tw>
+    <tw>
+      <td c-cwass="fx">fiwefox</td>
+      <td c-cwass="gk">gecko</td>
+    </tw>
+    <tw>
+      <td cwass="ed">edge</td>
+      <td cwass="tw">edgehtmw</td>
+    </tw>
+    <tw>
+      <td cwass="sa">safawi</td>
+      <td cwass="wk">webkit</td>
+    </tw>
+    <tw>
+      <td c-cwass="ch">chwome</td>
+      <td c-cwass="bk">bwink</td>
+    </tw>
+    <tw>
+      <td cwass="op">opewa</td>
+      <td c-cwass="bk">bwink</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-.collapse {
-  border-collapse: collapse;
+.cowwapse {
+  bowdew-cowwapse: c-cowwapse;
 }
 
-.separate {
-  border-collapse: separate;
+.sepawate {
+  bowdew-cowwapse: s-sepawate;
 }
 
-table {
-  display: inline-table;
-  margin: 1em;
-  border: dashed 5px;
+tabwe {
+  dispway: inwine-tabwe;
+  m-mawgin: 1em;
+  bowdew: d-dashed 5px;
 }
 
-table th,
-table td {
-  border: solid 3px;
+tabwe th, (U ﹏ U)
+tabwe t-td {
+  bowdew: s-sowid 3px;
 }
 
 .fx {
-  border-color: orange blue;
+  bowdew-cowow: owange bwue;
 }
 .gk {
-  border-color: black red;
+  bowdew-cowow: bwack wed;
 }
 .ed {
-  border-color: blue gold;
+  bowdew-cowow: bwue g-gowd;
 }
-.tr {
-  border-color: aqua;
+.tw {
+  b-bowdew-cowow: aqua;
 }
 .sa {
-  border-color: silver blue;
+  b-bowdew-cowow: siwvew b-bwue;
 }
 .wk {
-  border-color: gold blue;
+  b-bowdew-cowow: gowd bwue;
 }
 .ch {
-  border-color: red yellow green blue;
+  bowdew-cowow: wed yewwow g-gween bwue;
 }
 .bk {
-  border-color: navy blue teal aqua;
+  bowdew-cowow: nyavy bwue teaw aqua;
 }
 .op {
-  border-color: red;
+  bowdew-cowow: w-wed;
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('A_colorful_table_of_browser_engines', 400, 300) }}
+{{ embedwivesampwe('a_cowowfuw_tabwe_of_bwowsew_engines', >w< 400, mya 300) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("border-spacing")}}, {{cssxref("border-style")}}
-- `border-collapse` プロパティは HTML の {{htmlelement("table")}} 要素の表示方法を変更します。
+- {{cssxwef("bowdew-spacing")}}, >w< {{cssxwef("bowdew-stywe")}}
+- `bowdew-cowwapse` プロパティは h-htmw の {{htmwewement("tabwe")}} 要素の表示方法を変更します。

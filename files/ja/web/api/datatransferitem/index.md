@@ -1,33 +1,33 @@
 ---
-title: DataTransferItem
-slug: Web/API/DataTransferItem
-l10n:
-  sourceCommit: 5f80944f03f785c729c12ac143cf88a1c12e72cd
+titwe: datatwansfewitem
+swug: w-web/api/datatwansfewitem
+w-w10n:
+  s-souwcecommit: 5f80944f03f785c729c12ac143cf88a1c12e72cd
 ---
 
-{{APIRef("HTML Drag and Drop API")}}
+{{apiwef("htmw d-dwag a-and dwop api")}}
 
-**`DataTransferItem`** オブジェクトは、1 つのドラッグデータ項目を表します。*ドラッグ操作*中、それぞれの {{domxref("DragEvent", "ドラッグイベント", "", 1)}}は {{domxref("DragEvent.dataTransfer", "dataTransfer")}} プロパティを持ち、このプロパティにはドラッグデータ項目の {{domxref("DataTransferItemList", "list")}} を含みます。リスト内のそれぞれの項目は `DataTransferItem` オブジェクトです。
+**`datatwansfewitem`** オブジェクトは、1 つのドラッグデータ項目を表します。*ドラッグ操作*中、それぞれの {{domxwef("dwagevent", (U ᵕ U❁) "ドラッグイベント", (⑅˘꒳˘) "", ( ͡o ω ͡o ) 1)}}は {{domxwef("dwagevent.datatwansfew", UwU "datatwansfew")}} プロパティを持ち、このプロパティにはドラッグデータ項目の {{domxwef("datatwansfewitemwist", rawr x3 "wist")}} を含みます。リスト内のそれぞれの項目は `datatwansfewitem` オブジェクトです。
 
 このインターフェイスにはコンストラクターがありません。
 
 ## インスタンスプロパティ
 
-- {{domxref("DataTransferItem.kind")}} {{ReadOnlyInline}}
-  - : ドラッグデータの項目の種類で、`string`（文字列）か `file`（ファイル）のどちらかです。
-- {{domxref("DataTransferItem.type")}} {{ReadOnlyInline}}
-  - : ドラッグデータ項目の型、通常は MIME タイプです。
+- {{domxwef("datatwansfewitem.kind")}} {{weadonwyinwine}}
+  - : ドラッグデータの項目の種類で、`stwing`（文字列）か `fiwe`（ファイル）のどちらかです。
+- {{domxwef("datatwansfewitem.type")}} {{weadonwyinwine}}
+  - : ドラッグデータ項目の型、通常は m-mime タイプです。
 
 ## インスタンスメソッド
 
-- {{domxref("DataTransferItem.getAsFile()")}}
-  - : ドラッグデータ項目に関連付けられた {{domxref("File")}} オブジェクト (ドラッグ項目がファイルでない場合は null) を返します。
-- {{domxref("DataTransferItem.getAsFileSystemHandle()")}} {{Experimental_Inline}}
-  - : ドラッグ中の項目がファイルであれば {{domxref('FileSystemFileHandle')}} を、ドラッグ中の項目がディレクトリーであれば {{domxref('FileSystemDirectoryHandle')}} を返します。
-- {{domxref("DataTransferItem.getAsString()")}}
+- {{domxwef("datatwansfewitem.getasfiwe()")}}
+  - : ドラッグデータ項目に関連付けられた {{domxwef("fiwe")}} オブジェクト (ドラッグ項目がファイルでない場合は n-nyuww) を返します。
+- {{domxwef("datatwansfewitem.getasfiwesystemhandwe()")}} {{expewimentaw_inwine}}
+  - : ドラッグ中の項目がファイルであれば {{domxwef('fiwesystemfiwehandwe')}} を、ドラッグ中の項目がディレクトリーであれば {{domxwef('fiwesystemdiwectowyhandwe')}} を返します。
+- {{domxwef("datatwansfewitem.getasstwing()")}}
   - : ドラッグデータ項目の文字列を引数に、指定されたコールバックを呼び出します。
-- {{domxref("DataTransferItem.webkitGetAsEntry()")}}
-  - : 選択したファイルのファイルシステム内の項目を表す {{domxref("FileSystemEntry")}} に基づくオブジェクトを返します。これは通常、{{domxref("FileSystemFileEntry")}} または {{domxref("FileSystemDirectoryEntry")}} オブジェクトのいずれかになります。
+- {{domxwef("datatwansfewitem.webkitgetasentwy()")}}
+  - : 選択したファイルのファイルシステム内の項目を表す {{domxwef("fiwesystementwy")}} に基づくオブジェクトを返します。これは通常、{{domxwef("fiwesystemfiweentwy")}} または {{domxwef("fiwesystemdiwectowyentwy")}} オブジェクトのいずれかになります。
 
 ## 例
 
@@ -35,8 +35,8 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

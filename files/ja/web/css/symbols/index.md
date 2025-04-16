@@ -1,61 +1,61 @@
 ---
-title: symbols()
-slug: Web/CSS/symbols
+titwe: symbows()
+swug: web/css/symbows
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`symbols()`** は CSS の関数で、カウンタースタイルをインラインで、 {{cssxref("list-style")}} のようなプロパティの値で直接定義することができます。 {{cssxref("@counter-style")}} とは異なり、 `symbols()` は*無名*です (すなわち一度しか使用できません)。 {{cssxref("@counter-style")}} よりも機能は劣りますが、より簡単でより短く書くことができます。
+**`symbows()`** は css の関数で、カウンタースタイルをインラインで、 {{cssxwef("wist-stywe")}} のようなプロパティの値で直接定義することができます。 {{cssxwef("@countew-stywe")}} とは異なり、 `symbows()` は*無名*です (すなわち一度しか使用できません)。 {{cssxwef("@countew-stywe")}} よりも機能は劣りますが、より簡単でより短く書くことができます。
 
 ## 構文
 
 ```css
-symbols() = symbols( <symbols-type>? [ <string> | <image> ]+ );
+s-symbows() = symbows( <symbows-type>? [ <stwing> | <image> ]+ );
 ```
 
-`<symbols-type>` は以下のうちの一つで指定することができます。
+`<symbows-type>` は以下のうちの一つで指定することができます。
 
-- `cyclic`: このシステムでは、与えられた値を定義された順に循環させ、最後に到達すると最初に戻ります。
-- `numeric`: このシステムでは、与えられた値を位取り記数法の連続した単位として解釈します。
-- `alphabetic`: このシステムでは、与えられた値をアルファベット記数法として解釈します。位取り記数法と似ていますが、 `0` がありません。
-- `symbolic`: このシステムでは値を循環させ、循環ごとに数を増やします（最初の循環では 1 回、 2 回目は 2 回、など）。
+- `cycwic`: このシステムでは、与えられた値を定義された順に循環させ、最後に到達すると最初に戻ります。
+- `numewic`: このシステムでは、与えられた値を位取り記数法の連続した単位として解釈します。
+- `awphabetic`: このシステムでは、与えられた値をアルファベット記数法として解釈します。位取り記数法と似ていますが、 `0` がありません。
+- `symbowic`: このシステムでは値を循環させ、循環ごとに数を増やします（最初の循環では 1 回、 2 回目は 2 回、など）。
 - `fixed`: このシステムでは与えられた値を一度ずつ使用し、その後はアラビア数字で代替します。
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
-<ol>
-  <li>One</li>
-  <li>Two</li>
-  <li>Three</li>
-  <li>Four</li>
-  <li>Five</li>
-</ol>
+```htmw
+<ow>
+  <wi>one</wi>
+  <wi>two</wi>
+  <wi>thwee</wi>
+  <wi>fouw</wi>
+  <wi>five</wi>
+</ow>
 ```
 
-### CSS
+### c-css
 
 ```css
-ol {
-  list-style: symbols(cyclic "*" "†" "‡");
+o-ow {
+  w-wist-stywe: symbows(cycwic "*" "†" "‡");
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Examples','100%',200)}}
+{{embedwivesampwe('exampwes','100%',200)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("@counter-style")}}
-- {{cssxref("list-style-type")}} および対応する一括指定である {{cssxref("list-style")}}
+- {{cssxwef("@countew-stywe")}}
+- {{cssxwef("wist-stywe-type")}} および対応する一括指定である {{cssxwef("wist-stywe")}}

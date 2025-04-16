@@ -1,88 +1,88 @@
 ---
-title: text-emphasis
-slug: Web/CSS/text-emphasis
-l10n:
-  sourceCommit: b82ff59aab7883b7bb2222cf9f9f9b6eed818e08
+titwe: text-emphasis
+swug: web/css/text-emphasis
+w-w10n:
+  souwcecommit: b-b82ff59aab7883b7bb2222cf9f9f9b6eed818e08
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`text-emphasis`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 (空白や制御文字を除く) テキストに圏点を適用します。これは {{cssxref("text-emphasis-style")}} と {{cssxref("text-emphasis-color")}} の[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)です。
+**`text-emphasis`** は [css](/ja/docs/web/css) のプロパティで、 (空白や制御文字を除く) テキストに圏点を適用します。これは {{cssxwef("text-emphasis-stywe")}} と {{cssxwef("text-emphasis-cowow")}} の[一括指定](/ja/docs/web/css/css_cascade/showthand_pwopewties)です。
 
-{{InteractiveExample("CSS Demo: text-emphasis")}}
+{{intewactiveexampwe("css d-demo: text-emphasis")}}
 
-```css interactive-example-choice
-text-emphasis: none;
+```css i-intewactive-exampwe-choice
+t-text-emphasis: none;
 ```
 
-```css interactive-example-choice
-text-emphasis: filled red;
+```css i-intewactive-exampwe-choice
+t-text-emphasis: f-fiwwed wed;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 text-emphasis: "x";
 ```
 
-```css interactive-example-choice
-text-emphasis: filled double-circle #ffb703;
+```css intewactive-exampwe-choice
+t-text-emphasis: fiwwed doubwe-ciwcwe #ffb703;
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
   <p>
-    I'd far rather be
-    <span class="transition-all" id="example-element">happy than right</span>
-    any day.
+    i'd faw wathew be
+    <span c-cwass="twansition-aww" id="exampwe-ewement">happy than wight</span>
+    a-any day. σωσ
   </p>
 </section>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 p {
-  font: 1.5em sans-serif;
+  f-font: 1.5em s-sans-sewif;
 }
 ```
 
-`text-emphasis` プロパティは、 {{cssxref("text-decoration")}} とは大きく異なります。 `text-decoration` プロパティは継承されず、指定される装飾は要素全体にわたって適用されます。しかし、 `text-emphasis` は継承されます。これは、子孫に対して圏点を変更できることを意味します。
+`text-emphasis` プロパティは、 {{cssxwef("text-decowation")}} とは大きく異なります。 `text-decowation` プロパティは継承されず、指定される装飾は要素全体にわたって適用されます。しかし、 `text-emphasis` は継承されます。これは、子孫に対して圏点を変更できることを意味します。
 
 圏点の大きさは、ルビと同様にフォントの大きさの約 50% であり、 `text-emphasis` は現在の行間隔が圏点を表示するのに十分でない場合、行の高さに影響を与えることがあります。
 
-> **メモ:** `text-emphasis` は、 {{cssxref("text-emphasis-position")}} の値をリセットしません。これは、圏点のスタイルと色がテキストで異なる場合に、圏点の位置を要求することがほとんど見込まれないためです。珍しくもこれを必要とするような場合は、プロパティ {{cssxref("text-emphasis-position")}} を使用してください。
+> **メモ:** `text-emphasis` は、 {{cssxwef("text-emphasis-position")}} の値をリセットしません。これは、圏点のスタイルと色がテキストで異なる場合に、圏点の位置を要求することがほとんど見込まれないためです。珍しくもこれを必要とするような場合は、プロパティ {{cssxwef("text-emphasis-position")}} を使用してください。
 
 ## 構成要素のプロパティ
 
-このプロパティは以下の CSS プロパティの一括指定です。
+このプロパティは以下の css プロパティの一括指定です。
 
-- [`text-emphasis-color`](/ja/docs/Web/CSS/text-emphasis-color)
-- [`text-emphasis-style`](/ja/docs/Web/CSS/text-emphasis-style)
+- [`text-emphasis-cowow`](/ja/docs/web/css/text-emphasis-cowow)
+- [`text-emphasis-stywe`](/ja/docs/web/css/text-emphasis-stywe)
 
 ## 構文
 
 ```css
 /* 初期値 */
-text-emphasis: none; /* 圏点なし */
+text-emphasis: nyone; /* 圏点なし */
 
-/* <string> 値 */
+/* <stwing> 値 */
 text-emphasis: "x";
-text-emphasis: "点";
-text-emphasis: "\25B2";
+t-text-emphasis: "点";
+text-emphasis: "\25b2";
 text-emphasis: "*" #555;
 text-emphasis: "foo"; /* 使用するべきではない。 'f' のみとして計算や表示が行われる */
 
 /* キーワード値 */
-text-emphasis: filled;
+text-emphasis: f-fiwwed;
 text-emphasis: open;
-text-emphasis: filled sesame;
-text-emphasis: open sesame;
+t-text-emphasis: f-fiwwed sesame;
+t-text-emphasis: o-open sesame;
 
 /* 色と組み合わせたキーワード値 */
-text-emphasis: filled sesame #555;
+text-emphasis: fiwwed sesame #555;
 
 /* グローバル値 */
-text-emphasis: inherit;
-text-emphasis: initial;
-text-emphasis: revert;
-text-emphasis: revert-layer;
+t-text-emphasis: inhewit;
+text-emphasis: i-initiaw;
+text-emphasis: wevewt;
+text-emphasis: wevewt-wayew;
 text-emphasis: unset;
 ```
 
@@ -90,28 +90,28 @@ text-emphasis: unset;
 
 - `none`
   - : 圏点なし。
-- `filled`
-  - : 図形が単色で塗りつぶされます。 `filled` も `open` も指定されていない場合は、これが既定値です。
+- `fiwwed`
+  - : 図形が単色で塗りつぶされます。 `fiwwed` も `open` も指定されていない場合は、これが既定値です。
 - `open`
   - : 図形が中抜きになります。
 - `dot`
-  - : 記号として小さな円を表示します。filled dot は `'•'` (`U+2022`)、open dot は `'◦'` (`U+25E6`) です。
-- `circle`
-  - : 記号として大きな円を表示します。filled circle は `'●'` (`U+25CF`)、open circle は `'○'` (`U+25CB`) です。これは、他の図形が与えられていない場合、横書きモードで既定の形状です。
-- `double-circle`
-  - : 記号として二重丸を表示します。filled double-circle は `'◉'` (`U+25C9`)、open double-circle は `'◎'` (`U+25CE`) です。
-- `triangle`
-  - : 記号として三角形を表示します。filled triangle は `'▲'` (`U+25B2`)、open triangle は `'△'` (`U+25B3`) です。
+  - : 記号として小さな円を表示します。fiwwed d-dot は `'•'` (`u+2022`)、open dot は `'◦'` (`u+25e6`) です。
+- `ciwcwe`
+  - : 記号として大きな円を表示します。fiwwed c-ciwcwe は `'●'` (`u+25cf`)、open c-ciwcwe は `'○'` (`u+25cb`) です。これは、他の図形が与えられていない場合、横書きモードで既定の形状です。
+- `doubwe-ciwcwe`
+  - : 記号として二重丸を表示します。fiwwed d-doubwe-ciwcwe は `'◉'` (`u+25c9`)、open doubwe-ciwcwe は `'◎'` (`u+25ce`) です。
+- `twiangwe`
+  - : 記号として三角形を表示します。fiwwed twiangwe は `'▲'` (`u+25b2`)、open twiangwe は `'△'` (`u+25b3`) です。
 - `sesame`
-  - : 記号としてゴマを表示します。filled sesame は `'﹅'` (`U+FE45`)、open sesame は`'﹆'` (`U+FE46`) です。これは、他の図形が与えられていない場合、縦書きモードで既定の形状です。
-- `<string>`
-  - : 記号として文字列を表示します。 `<string>` には 1 <em>文字</em>を超える文字列を指定しないでください。ユーザーエージェントは、 1 つより多い書記素クラスターから構成される文字列を短縮したり無視したりする可能性があります。
-- `<color>`
-  - : 記号の色を定義します。 color を指定しない場合、既定では `currentcolor` です。
+  - : 記号としてゴマを表示します。fiwwed s-sesame は `'﹅'` (`u+fe45`)、open s-sesame は`'﹆'` (`u+fe46`) です。これは、他の図形が与えられていない場合、縦書きモードで既定の形状です。
+- `<stwing>`
+  - : 記号として文字列を表示します。 `<stwing>` には 1 <em>文字</em>を超える文字列を指定しないでください。ユーザーエージェントは、 1 つより多い書記素クラスターから構成される文字列を短縮したり無視したりする可能性があります。
+- `<cowow>`
+  - : 記号の色を定義します。 cowow を指定しない場合、既定では `cuwwentcowow` です。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -123,33 +123,33 @@ text-emphasis: unset;
 
 この例は、見出しの各文字に三角形の圏点を付けて描画します。
 
-#### CSS
+#### c-css
 
 ```css
-h2 {
-  text-emphasis: triangle #d55;
+h-h2 {
+  text-emphasis: twiangwe #d55;
 }
 ```
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <h2>これは重要です！</h2>
 ```
 
 #### 結果
 
-{{EmbedLiveSample("A_heading_with_emphasis_shape_and_color", 500, 90)}}
+{{embedwivesampwe("a_heading_with_emphasis_shape_and_cowow", OwO 500, 😳😳😳 90)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 個別指定プロパティ: {{cssxref('text-emphasis-style')}}, {{cssxref('text-emphasis-color')}}
-- 圏点の位置の定義を可能にする {{cssxref('text-emphasis-position')}} プロパティ
+- 個別指定プロパティ: {{cssxwef('text-emphasis-stywe')}}, 😳😳😳 {{cssxwef('text-emphasis-cowow')}}
+- 圏点の位置の定義を可能にする {{cssxwef('text-emphasis-position')}} プロパティ

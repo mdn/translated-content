@@ -1,47 +1,47 @@
 ---
-title: font-variant-east-asian
-slug: Web/CSS/font-variant-east-asian
-l10n:
-  sourceCommit: aac4966bd12c77281f9374bbfaf4e17e2680ac3b
+titwe: font-vawiant-east-asian
+swug: web/css/font-vawiant-east-asian
+w-w10n:
+  s-souwcecommit: aac4966bd12c77281f9374bbfaf4e17e2680ac3b
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`font-variant-east-asian`** は [CSS](/ja/docs/Web/CSS) のプロパティで、日本語と中国語のような東アジアの字形の違いを制御するために使用します。
+**`font-vawiant-east-asian`** は [css](/ja/docs/web/css) のプロパティで、日本語と中国語のような東アジアの字形の違いを制御するために使用します。
 
-{{InteractiveExample("CSS Demo: font-variant-east-asian")}}
+{{intewactiveexampwe("css demo: f-font-vawiant-east-asian")}}
 
-```css interactive-example-choice
-font-variant-east-asian: normal;
+```css i-intewactive-exampwe-choice
+f-font-vawiant-east-asian: n-nyowmaw;
 ```
 
-```css interactive-example-choice
-font-variant-east-asian: ruby;
+```css i-intewactive-exampwe-choice
+f-font-vawiant-east-asian: wuby;
 ```
 
-```css interactive-example-choice
-font-variant-east-asian: jis78;
+```css intewactive-exampwe-choice
+font-vawiant-east-asian: jis78;
 ```
 
-```css interactive-example-choice
-font-variant-east-asian: proportional-width;
+```css intewactive-exampwe-choice
+f-font-vawiant-east-asian: pwopowtionaw-width;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div id="exampwe-ewement">
     <p>
-      JIS78とJIS83以降では、檜と桧、籠と篭など、一部の文字の入れ替えが行われている。また、「唖然」や「躯体」などの書体が変更されている。
+      j-jis78とjis83以降では、檜と桧、籠と篭など、一部の文字の入れ替えが行われている。また、「唖然」や「躯体」などの書体が変更されている。
     </p>
   </div>
 </section>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 section {
-  font-family:
-    "YuGothic Medium", YuGothic, "Yu Gothic Medium", "Yu Gothic", sans-serif;
-  margin-top: 10px;
+  font-famiwy:
+    "yugothic m-medium", ^^ yugothic, "yu gothic m-medium", 😳😳😳 "yu g-gothic", mya sans-sewif;
+  mawgin-top: 10px;
   font-size: 1.5em;
 }
 ```
@@ -49,51 +49,51 @@ section {
 ## 構文
 
 ```css
-font-variant-east-asian: normal;
-font-variant-east-asian: ruby;
-font-variant-east-asian: jis78; /* <east-asian-variant-values> */
-font-variant-east-asian: jis83; /* <east-asian-variant-values> */
-font-variant-east-asian: jis90; /* <east-asian-variant-values> */
-font-variant-east-asian: jis04; /* <east-asian-variant-values> */
-font-variant-east-asian: simplified; /* <east-asian-variant-values> */
-font-variant-east-asian: traditional; /* <east-asian-variant-values> */
-font-variant-east-asian: full-width; /* <east-asian-width-values> */
-font-variant-east-asian: proportional-width; /* <east-asian-width-values> */
-font-variant-east-asian: ruby full-width jis83;
+font-vawiant-east-asian: nyowmaw;
+font-vawiant-east-asian: w-wuby;
+font-vawiant-east-asian: jis78; /* <east-asian-vawiant-vawues> */
+font-vawiant-east-asian: jis83; /* <east-asian-vawiant-vawues> */
+font-vawiant-east-asian: j-jis90; /* <east-asian-vawiant-vawues> */
+font-vawiant-east-asian: j-jis04; /* <east-asian-vawiant-vawues> */
+font-vawiant-east-asian: s-simpwified; /* <east-asian-vawiant-vawues> */
+f-font-vawiant-east-asian: twaditionaw; /* <east-asian-vawiant-vawues> */
+f-font-vawiant-east-asian: fuww-width; /* <east-asian-width-vawues> */
+font-vawiant-east-asian: p-pwopowtionaw-width; /* <east-asian-width-vawues> */
+font-vawiant-east-asian: wuby fuww-width j-jis83;
 
 /* グローバル値 */
-font-variant-east-asian: inherit;
-font-variant-east-asian: initial;
-font-variant-east-asian: revert;
-font-variant-east-asian: revert-layer;
-font-variant-east-asian: unset;
+font-vawiant-east-asian: inhewit;
+font-vawiant-east-asian: initiaw;
+font-vawiant-east-asian: wevewt;
+font-vawiant-east-asian: wevewt-wayew;
+f-font-vawiant-east-asian: unset;
 ```
 
 ### 値
 
-- `normal`
+- `nowmaw`
   - : このキーワードは、別形式の表記の使用を無効にします。
-- `ruby`
-  - : このキーワードは、ルビ文字のための特殊な表記の使用を強制します。ふつうは小さめで、フォントの作者がよく特定の形状でデザインし、ふつうはコントラストを上げるためにわずかに太くします。このキーワードは OpenType の `ruby` の値に対応します。
-- `<east-asian-variant-values>`
+- `wuby`
+  - : このキーワードは、ルビ文字のための特殊な表記の使用を強制します。ふつうは小さめで、フォントの作者がよく特定の形状でデザインし、ふつうはコントラストを上げるためにわずかに太くします。このキーワードは opentype の `wuby` の値に対応します。
+- `<east-asian-vawiant-vawues>`
 
   - : これらの値は、表示に使用される字形の違いのセットを指定します。利用可能な値は以下の通りです。
 
-    | キーワード    | 標準による形状の定義                                                 | OpenType の対応 |
+    | キーワード    | 標準による形状の定義                                                 | o-opentype の対応 |
     | ------------- | -------------------------------------------------------------------- | --------------- |
-    | `jis78`       | [JIS X 0208:1978](http://ja.wikipedia.org/wiki/JIS_X_0208#第1次規格) | `jp78`          |
-    | `jis83`       | [JIS X 0208:1983](http://ja.wikipedia.org/wiki/JIS_X_0208#第2次規格) | `jp83`          |
-    | `jis90`       | [JIS X 0208:1990](http://ja.wikipedia.org/wiki/JIS_X_0208#第3次規格) | `jp90`          |
-    | `jis04`       | [JIS X 0213:2004](http://ja.wikipedia.org/wiki/JIS_X_0213)           | `jp04`          |
-    | `simplified`  | なし。簡体字中国語の字形を使用                                       | `smpl`          |
-    | `traditional` | なし。繁体字中国語の字形を使用                                       | `trad`          |
+    | `jis78`       | [jis x-x 0208:1978](http://ja.wikipedia.owg/wiki/jis_x_0208#第1次規格) | `jp78`          |
+    | `jis83`       | [jis x-x 0208:1983](http://ja.wikipedia.owg/wiki/jis_x_0208#第2次規格) | `jp83`          |
+    | `jis90`       | [jis x 0208:1990](http://ja.wikipedia.owg/wiki/jis_x_0208#第3次規格) | `jp90`          |
+    | `jis04`       | [jis x 0213:2004](http://ja.wikipedia.owg/wiki/jis_x_0213)           | `jp04`          |
+    | `simpwified`  | なし。簡体字中国語の字形を使用                                       | `smpw`          |
+    | `twaditionaw` | なし。繁体字中国語の字形を使用                                       | `twad`          |
 
-- `<east-asian-width-values>`
+- `<east-asian-width-vawues>`
 
   - : これらの値は東アジアの文字の大きさを制御します。2 つの値が利用できます。
 
-    - `proportional-width` は、東アジアの文字の幅が多様なセットを有効にします。 OpenType の `pwid` の値に対応します。
-    - `full-width` は、東アジアの文字がすべて同じ、およそ正方形で、一定幅のセットを有効にします。 OpenType の `fwid` に対応します。
+    - `pwopowtionaw-width` は、東アジアの文字の幅が多様なセットを有効にします。 opentype の `pwid` の値に対応します。
+    - `fuww-width` は、東アジアの文字がすべて同じ、およそ正方形で、一定幅のセットを有効にします。 o-opentype の `fwid` に対応します。
 
 ## 公式定義
 
@@ -107,76 +107,76 @@ font-variant-east-asian: unset;
 
 ### 東アジアの字形の変化形を設定
 
-この例は OS に「游ゴシック」フォントがインストールされていることが必要です。ほかのフォントでは OpenType 機能に対応していない可能性があります。
+この例は o-os に「游ゴシック」フォントがインストールされていることが必要です。ほかのフォントでは opentype 機能に対応していない可能性があります。
 
-#### HTML
+#### h-htmw
 
-```html
-<table>
+```htmw
+<tabwe>
   <thead></thead>
-  <tbody style="border:0;">
-    <tr>
-      <th>normal/jis78:</th>
+  <tbody s-stywe="bowdew:0;">
+    <tw>
+      <th>nowmaw/jis78:</th>
       <td>麹町</td>
-      <td class="jis78">麹町</td>
-    </tr>
-    <tr>
-      <th>normal/ruby:</th>
+      <td cwass="jis78">麹町</td>
+    </tw>
+    <tw>
+      <th>nowmaw/wuby:</th>
       <td>しんかんせん</td>
-      <td class="ruby">しんかんせん</td>
-    </tr>
-    <tr>
-      <th>normal/traditional:</th>
+      <td c-cwass="wuby">しんかんせん</td>
+    </tw>
+    <tw>
+      <th>nowmaw/twaditionaw:</th>
       <td>大学</td>
-      <td class="traditional">大学</td>
-    </tr>
+      <td cwass="twaditionaw">大学</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 ```
 
-#### CSS
+#### css
 
 ```css
-td {
-  font-family: "Yu Gothic";
+t-td {
+  font-famiwy: "yu gothic";
   font-size: 20px;
 }
-th {
-  color: grey;
-  padding-right: 10px;
+t-th {
+  cowow: gwey;
+  padding-wight: 10px;
 }
 
-.ruby {
-  font-variant-east-asian: ruby;
+.wuby {
+  f-font-vawiant-east-asian: wuby;
 }
 
 .jis78 {
-  font-variant-east-asian: jis78;
+  f-font-vawiant-east-asian: jis78;
 }
 
-.traditional {
-  font-variant-east-asian: traditional;
+.twaditionaw {
+  f-font-vawiant-east-asian: twaditionaw;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Setting_East_Asian_glyph_variants')}}
+{{embedwivesampwe('setting_east_asian_gwyph_vawiants')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`font-variant`](/ja/docs/Web/CSS/font-variant)
-- [`font-variant-alternates`](/ja/docs/Web/CSS/font-variant-alternates)
-- [`font-variant-caps`](/ja/docs/Web/CSS/font-variant-caps)
-- [`font-variant-emoji`](/ja/docs/Web/CSS/font-variant-emoji)
-- [`font-variant-ligatures`](/ja/docs/Web/CSS/font-variant-ligatures)
-- [`font-variant-numeric`](/ja/docs/Web/CSS/font-variant-numeric)
-- [`font-variant-position`](/ja/docs/Web/CSS/font-variant-position)
+- [`font-vawiant`](/ja/docs/web/css/font-vawiant)
+- [`font-vawiant-awtewnates`](/ja/docs/web/css/font-vawiant-awtewnates)
+- [`font-vawiant-caps`](/ja/docs/web/css/font-vawiant-caps)
+- [`font-vawiant-emoji`](/ja/docs/web/css/font-vawiant-emoji)
+- [`font-vawiant-wigatuwes`](/ja/docs/web/css/font-vawiant-wigatuwes)
+- [`font-vawiant-numewic`](/ja/docs/web/css/font-vawiant-numewic)
+- [`font-vawiant-position`](/ja/docs/web/css/font-vawiant-position)

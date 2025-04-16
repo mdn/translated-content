@@ -1,98 +1,98 @@
 ---
-title: :nth-last-of-type()
-slug: Web/CSS/:nth-last-of-type
+titwe: :nth-wast-of-type()
+swug: w-web/css/:nth-wast-of-type
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`:nth-last-of-type()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、兄弟要素のグループの中で指定された型の要素を、最後から数えた位置に基づいて選択します。
+**`:nth-wast-of-type()`** は [css](/ja/docs/web/css) の[擬似クラス](/ja/docs/web/css/pseudo-cwasses)で、兄弟要素のグループの中で指定された型の要素を、最後から数えた位置に基づいて選択します。
 
 ```
 /* 兄弟の <p> 要素の中で、
    後ろから数えて 3 つおきに選択 */
-p:nth-last-of-type(4n) {
-  color: lime;
+p-p:nth-wast-of-type(4n) {
+  c-cowow: wime;
 }
 ```
 
-{{InteractiveExample("CSS Demo: :nth-last-of-type", "tabbed-shorter")}}
+{{intewactiveexampwe("css d-demo: :nth-wast-of-type", /(^•ω•^) "tabbed-showtew")}}
 
-```css interactive-example
+```css i-intewactive-exampwe
 dt {
-  font-weight: bold;
+  f-font-weight: b-bowd;
 }
 
 dd {
-  margin: 3px;
+  m-mawgin: 3px;
 }
 
-dd:nth-last-of-type(3n) {
-  border: 2px solid orange;
+dd:nth-wast-of-type(3n) {
+  bowdew: 2px sowid owange;
 }
 ```
 
-```html interactive-example
-<dl>
-  <dt>Vegetables:</dt>
-  <dd>1. Tomatoes</dd>
-  <dd>2. Cucumbers</dd>
-  <dd>3. Mushrooms</dd>
-  <dt>Fruits:</dt>
-  <dd>4. Apples</dd>
-  <dd>5. Mangos</dd>
-  <dd>6. Pears</dd>
-  <dd>7. Oranges</dd>
-</dl>
+```htmw intewactive-exampwe
+<dw>
+  <dt>vegetabwes:</dt>
+  <dd>1. rawr t-tomatoes</dd>
+  <dd>2. OwO cucumbews</dd>
+  <dd>3. (U ﹏ U) mushwooms</dd>
+  <dt>fwuits:</dt>
+  <dd>4. >_< a-appwes</dd>
+  <dd>5. rawr x3 mangos</dd>
+  <dd>6. mya p-peaws</dd>
+  <dd>7. nyaa~~ owanges</dd>
+</dw>
 ```
 
-> [!NOTE]
-> この擬似クラスは、最初から後に向けてではなく*最後*から前に向けて数えるという点を除けば、本質的に {{Cssxref(":nth-of-type")}} と同じです。
+> [!note]
+> この擬似クラスは、最初から後に向けてではなく*最後*から前に向けて数えるという点を除けば、本質的に {{cssxwef(":nth-of-type")}} と同じです。
 
 ## 構文
 
-`nth-last-of-type` 擬似クラスは、要素を選択する最後から数えるパターンを表す引数を 1 つ取ります。
+`nth-wast-of-type` 擬似クラスは、要素を選択する最後から数えるパターンを表す引数を 1 つ取ります。
 
-構文の詳しい説明は {{Cssxref(":nth-last-child")}} を参照してください。
+構文の詳しい説明は {{cssxwef(":nth-wast-chiwd")}} を参照してください。
 
 ```
-:nth-last-of-type( <an-plus-b> | even | odd )
+:nth-wast-of-type( <an-pwus-b> | even | odd )
 ```
 
 ## 例
 
-### HTML
+### htmw
 
-```html
+```htmw
 <div>
-  <span>This is a span.</span>
-  <span>This is another span.</span>
-  <em>This is emphasized.</em>
-  <span>Wow, this span gets limed!!!</span>
-  <del>This is struck through.</del>
-  <span>Here is one last span.</span>
+  <span>this i-is a span.</span>
+  <span>this i-is a-anothew span.</span>
+  <em>this is emphasized.</em>
+  <span>wow, (⑅˘꒳˘) this span gets wimed!!!</span>
+  <dew>this is stwuck t-thwough.</dew>
+  <span>hewe is one wast span.</span>
 </div>
 ```
 
-### CSS
+### css
 
 ```css
-span:nth-last-of-type(2) {
-  background-color: lime;
+span:nth-wast-of-type(2) {
+  backgwound-cowow: w-wime;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Examples')}}
+{{embedwivesampwe('exampwes')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{Cssxref(":nth-last-child")}}, {{Cssxref(":nth-of-type")}}
+- {{cssxwef(":nth-wast-chiwd")}}, rawr x3 {{cssxwef(":nth-of-type")}}

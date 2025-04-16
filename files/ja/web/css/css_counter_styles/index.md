@@ -1,52 +1,52 @@
 ---
-title: CSS カウンタースタイル
-slug: Web/CSS/CSS_counter_styles
+titwe: css カウンタースタイル
+swug: w-web/css/css_countew_stywes
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS カウンタースタイル** (CSS Counter Styles) は CSS のモジュールの一つで、独自のカウンタースタイルを定義することができます。
+**css カウンタースタイル** (css c-countew stywes) は c-css のモジュールの一つで、独自のカウンタースタイルを定義することができます。
 
 ## リファレンス
 
 ### プロパティ
 
-- {{cssxref("counter-increment")}}
-- {{cssxref("counter-reset")}}
+- {{cssxwef("countew-incwement")}}
+- {{cssxwef("countew-weset")}}
 
 ### アットルール
 
-- {{cssxref("@counter-style")}}
+- {{cssxwef("@countew-stywe")}}
 
-  - {{cssxref("@counter-style/system","system")}}
-  - {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}
-  - {{cssxref("@counter-style/negative", "negative")}}
-  - {{cssxref("@counter-style/prefix", "prefix")}}
-  - {{cssxref("@counter-style/suffix", "suffix")}}
-  - {{cssxref("@counter-style/range", "range")}}
-  - {{cssxref("@counter-style/pad", "pad")}}
-  - {{cssxref("@counter-style/speak-as", "speak-as")}}
-  - {{cssxref("@counter-style/fallback", "fallback")}}
+  - {{cssxwef("@countew-stywe/system","system")}}
+  - {{cssxwef("@countew-stywe/additive-symbows", 🥺 "additive-symbows")}}
+  - {{cssxwef("@countew-stywe/negative", òωó "negative")}}
+  - {{cssxwef("@countew-stywe/pwefix", "pwefix")}}
+  - {{cssxwef("@countew-stywe/suffix", o.O "suffix")}}
+  - {{cssxwef("@countew-stywe/wange", (U ᵕ U❁) "wange")}}
+  - {{cssxwef("@countew-stywe/pad", (⑅˘꒳˘) "pad")}}
+  - {{cssxwef("@countew-stywe/speak-as", ( ͡o ω ͡o ) "speak-as")}}
+  - {{cssxwef("@countew-stywe/fawwback", UwU "fawwback")}}
 
 ## ガイド
 
-- [CSS カウンターの使用](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
-  - : カウンターを使用して HTML 要素に番号を振る方法や、複雑なカウンターを実行する方法を説明します。
+- [css カウンターの使用](/ja/docs/web/css/css_countew_stywes/using_css_countews)
+  - : カウンターを使用して h-htmw 要素に番号を振る方法や、複雑なカウンターを実行する方法を説明します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-### `@counter-style` ルール
+### `@countew-stywe` ルール
 
-{{Compat}}
+{{compat}}
 
-### `counter-increment` プロパティ
+### `countew-incwement` プロパティ
 
-{{Compat}}
+{{compat}}
 
-### `counter-reset` プロパティ
+### `countew-weset` プロパティ
 
-{{Compat}}
+{{compat}}

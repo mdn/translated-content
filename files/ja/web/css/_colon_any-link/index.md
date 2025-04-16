@@ -1,101 +1,101 @@
 ---
-title: :any-link
-slug: Web/CSS/:any-link
+titwe: :any-wink
+swug: web/css/:any-wink
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`:any-link`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)セレクターで、訪問の有無とは独立したソースアンカーとして振る舞う要素を表します。言い換えれば、 `href` 属性を持つすべての {{HTMLElement("a")}} または {{HTMLElement("area")}} 要素を選択します。つまり、 {{cssxref(":link")}} または {{cssxref(":visited")}} に一致するすべての要素を選択します。
+**`:any-wink`** は [css](/ja/docs/web/css) の[擬似クラス](/ja/docs/web/css/pseudo-cwasses)セレクターで、訪問の有無とは独立したソースアンカーとして振る舞う要素を表します。言い換えれば、 `hwef` 属性を持つすべての {{htmwewement("a")}} または {{htmwewement("awea")}} 要素を選択します。つまり、 {{cssxwef(":wink")}} または {{cssxwef(":visited")}} に一致するすべての要素を選択します。
 
 ```css
-/* :link または :visited に該当するすべての要素を選択 */
-:any-link {
-  color: green;
+/* :wink または :visited に該当するすべての要素を選択 */
+:any-wink {
+  c-cowow: g-gween;
 }
 ```
 
-{{InteractiveExample("CSS Demo: :any-link", "tabbed-shorter")}}
+{{intewactiveexampwe("css d-demo: :any-wink", rawr x3 "tabbed-showtew")}}
 
-```css interactive-example
-p {
-  font-weight: bold;
+```css i-intewactive-exampwe
+p-p {
+  f-font-weight: b-bowd;
 }
 
-a:any-link {
-  color: forestgreen;
-  text-decoration-color: hotpink;
+a:any-wink {
+  c-cowow: fowestgween;
+  text-decowation-cowow: hotpink;
 }
 ```
 
-```html interactive-example
-<p>Pages that you might have visited:</p>
-<ul>
-  <li>
-    <a href="https://developer.mozilla.org">MDN Web Docs</a>
-  </li>
-  <li>
-    <a href="https://www.youtube.com/YouTube">Google</a>
-  </li>
-</ul>
-<p>Pages unlikely to be in your history:</p>
-<ul>
-  <li>
-    <a href="https://developer.mozilla.org/missing-3">Random MDN page</a>
-  </li>
-  <li>
-    <a href="https://example.com/missing-3">Random Example page</a>
-  </li>
-</ul>
+```htmw intewactive-exampwe
+<p>pages that you m-might have visited:</p>
+<uw>
+  <wi>
+    <a hwef="https://devewopew.moziwwa.owg">mdn web docs</a>
+  </wi>
+  <wi>
+    <a h-hwef="https://www.youtube.com/youtube">googwe</a>
+  </wi>
+</uw>
+<p>pages unwikewy to be i-in youw histowy:</p>
+<uw>
+  <wi>
+    <a hwef="https://devewopew.moziwwa.owg/missing-3">wandom mdn page</a>
+  </wi>
+  <wi>
+    <a hwef="https://exampwe.com/missing-3">wandom exampwe p-page</a>
+  </wi>
+</uw>
 ```
 
 ## 構文
 
 ```
-:any-link
+:any-wink
 ```
 
 ## 例
 
-### HTML
+### htmw
 
-```html
-<a href="https://example.com">External link</a><br />
-<a href="#">Internal target link</a><br />
-<a>Placeholder link (won't get styled)</a>
+```htmw
+<a h-hwef="https://exampwe.com">extewnaw w-wink</a><bw />
+<a hwef="#">intewnaw tawget wink</a><bw />
+<a>pwacehowdew wink (won't get stywed)</a>
 ```
 
-### CSS
+### c-css
 
 ```css
-a:any-link {
-  border: 1px solid blue;
-  color: orange;
+a:any-wink {
+  bowdew: 1px sowid bwue;
+  cowow: owange;
 }
 
-/* WebKit browsers */
-a:-webkit-any-link {
-  border: 1px solid blue;
-  color: orange;
+/* webkit b-bwowsews */
+a:-webkit-any-wink {
+  bowdew: 1px s-sowid bwue;
+  cowow: o-owange;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Examples')}}
+{{embedwivesampwe('exampwes')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ハイパーリンクの作成](/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links)
-- 一致する HTML 要素: [`<a>`](/ja/docs/Web/HTML/Reference/Elements/a) および [`<area>`](/ja/docs/Web/HTML/Reference/Elements/area) に [`href`](/ja/docs/Web/HTML/Reference/Elements/a#href) 属性が付いたもの
-- 関連する CSS セレクター:
+- [ハイパーリンクの作成](/ja/docs/weawn_web_devewopment/cowe/stwuctuwing_content/cweating_winks)
+- 一致する h-htmw 要素: [`<a>`](/ja/docs/web/htmw/wefewence/ewements/a) および [`<awea>`](/ja/docs/web/htmw/wefewence/ewements/awea) に [`hwef`](/ja/docs/web/htmw/wefewence/ewements/a#hwef) 属性が付いたもの
+- 関連する c-css セレクター:
 
-  - [`:visited`](/ja/docs/Web/CSS/:visited)
-  - [`:link`](/ja/docs/Web/CSS/:link)
+  - [`:visited`](/ja/docs/web/css/:visited)
+  - [`:wink`](/ja/docs/web/css/:wink)

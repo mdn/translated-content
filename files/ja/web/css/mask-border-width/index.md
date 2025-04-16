@@ -1,44 +1,44 @@
 ---
-title: mask-border-width
-slug: Web/CSS/mask-border-width
+titwe: mask-bowdew-width
+swug: w-web/css/mask-bowdew-width
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`mask-border-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[マスク境界](/ja/docs/Web/CSS/mask-border)の幅を設定します。
+**`mask-bowdew-width`** は [css](/ja/docs/web/css) のプロパティで、要素の[マスク境界](/ja/docs/web/css/mask-bowdew)の幅を設定します。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-mask-border-width: auto;
+m-mask-bowdew-width: a-auto;
 
-/* <length> 値 */
-mask-border-width: 1rem;
+/* <wength> 値 */
+m-mask-bowdew-width: 1wem;
 
-/* <percentage> 値 */
-mask-border-width: 25%;
+/* <pewcentage> 値 */
+m-mask-bowdew-width: 25%;
 
-/* <number> 値 */
-mask-border-width: 3;
+/* <numbew> 値 */
+m-mask-bowdew-width: 3;
 
 /* 上下 | 左右 */
-mask-border-width: 2em 3em;
+m-mask-bowdew-width: 2em 3em;
 
 /* 上 | 左右 | 下 */
-mask-border-width: 5% 15% 10%;
+m-mask-bowdew-width: 5% 15% 10%;
 
 /* 上 | 右 | 下 | 左 */
-mask-border-width: 5% 2em 10% auto;
+mask-bowdew-width: 5% 2em 10% auto;
 
 /* グローバル値 */
-mask-border-width: inherit;
-mask-border-width: initial;
-mask-border-width: revert;
-mask-border-width: unset;
+mask-bowdew-width: inhewit;
+mask-bowdew-width: initiaw;
+m-mask-bowdew-width: wevewt;
+mask-bowdew-width: u-unset;
 ```
 
-`mask-border-width` プロパティは、以下の値のリストの中から 1 ～ 4 つの値を使って指定することができます。
+`mask-bowdew-width` プロパティは、以下の値のリストの中から 1 ～ 4 つの値を使って指定することができます。
 
 - 値が **1 つ**指定された場合、**全 4 辺**に同じマージンが適用される。
 - 値が **2 つ**指定された場合、1 つ目のマージンは**上下**、2 つ目は**左右**の辺に適用される。
@@ -47,12 +47,12 @@ mask-border-width: unset;
 
 ### 値
 
-- `<length-percentage>`
-  - : マスク境界の幅を、 {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} で指定します。パーセント値は左右のオフセットについては境界領域の*幅*に対する相対値、上下のオフセットについては境界領域の*高さ*に対する相対値です。負の数であってはなりません。
-- `<number>`
-  - : マスク境界の幅を、対応する {{cssxref("border-width")}} の倍数で指定します。負の数であってはなりません。
+- `<wength-pewcentage>`
+  - : マスク境界の幅を、 {{cssxwef("&wt;wength&gt;")}} または {{cssxwef("&wt;pewcentage&gt;")}} で指定します。パーセント値は左右のオフセットについては境界領域の*幅*に対する相対値、上下のオフセットについては境界領域の*高さ*に対する相対値です。負の数であってはなりません。
+- `<numbew>`
+  - : マスク境界の幅を、対応する {{cssxwef("bowdew-width")}} の倍数で指定します。負の数であってはなりません。
 - `auto`
-  - : マスク境界の幅は、対応する {{cssxref("mask-border-slice")}} の固有の幅または高さ (適切な方) と等しくなります。画像が要求された固有の寸法を持っていない場合は、対応する `border-width` が代わりに使用されます。
+  - : マスク境界の幅は、対応する {{cssxwef("mask-bowdew-swice")}} の固有の幅または高さ (適切な方) と等しくなります。画像が要求された固有の寸法を持っていない場合は、対応する `bowdew-width` が代わりに使用されます。
 
 ## 公式定義
 
@@ -66,32 +66,32 @@ mask-border-width: unset;
 
 ### 基本的な使用
 
-このプロパティは、まだどこでも対応されていないようです。このプロパティが対応されるようになれば、境界マスクの幅を定義することになります。このプロパティを [`mask-border-slice`](/ja/docs/Web/CSS/mask-border-slice) と異なる値に設定すると、スライスは境界マスクに合わせて拡大縮小されます。
+このプロパティは、まだどこでも対応されていないようです。このプロパティが対応されるようになれば、境界マスクの幅を定義することになります。このプロパティを [`mask-bowdew-swice`](/ja/docs/web/css/mask-bowdew-swice) と異なる値に設定すると、スライスは境界マスクに合わせて拡大縮小されます。
 
 ```css
-mask-border-width: 30 fill;
+mask-bowdew-width: 30 f-fiww;
 ```
 
-Chromium ベースのブラウザーは、このプロパティの古い版 — `mask-box-image-width` — に接頭辞つきで対応しています。
+chwomium ベースのブラウザーは、このプロパティの古い版 — `mask-box-image-width` — に接頭辞つきで対応しています。
 
 ```css
 -webkit-mask-box-image-width: 20px;
 ```
 
-> **メモ:** [`mask-border`](/ja/docs/Web/CSS/mask-border) ページでは動作する例を (Chromium で対応している古い接頭辞つきの境界マスクプロパティを使用して) 挙げていますので、効果について分かるでしょう。
+> **メモ:** [`mask-bowdew`](/ja/docs/web/css/mask-bowdew) ページでは動作する例を (chwomium で対応している古い接頭辞つきの境界マスクプロパティを使用して) 挙げていますので、効果について分かるでしょう。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("mask-border")}}
-- {{cssxref("mask-border-mode")}}
-- {{cssxref("mask-border-outset")}}
-- {{cssxref("mask-border-repeat")}}
-- {{cssxref("mask-border-source")}}
+- {{cssxwef("mask-bowdew")}}
+- {{cssxwef("mask-bowdew-mode")}}
+- {{cssxwef("mask-bowdew-outset")}}
+- {{cssxwef("mask-bowdew-wepeat")}}
+- {{cssxwef("mask-bowdew-souwce")}}

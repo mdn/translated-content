@@ -1,13 +1,13 @@
 ---
-title: "ImageData: width プロパティ"
-slug: Web/API/ImageData/width
-l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+titwe: "imagedata: width プロパティ"
+s-swug: w-web/api/imagedata/width
+w-w10n:
+  s-souwcecommit: e-eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
-{{APIRef("Canvas API")}}
+{{apiwef("canvas a-api")}}
 
-読み取り専用プロパティ **`ImageData.width`** は、{{domxref("ImageData")}} オブジェクトの 1 行あたりのピクセル数を返します。
+読み取り専用プロパティ **`imagedata.width`** は、{{domxwef("imagedata")}} オブジェクトの 1 行あたりのピクセル数を返します。
 
 ## 値
 
@@ -15,22 +15,22 @@ l10n:
 
 ## 例
 
-この例では、幅 200 ピクセル、高さ 100 ピクセルの `ImageData` オブジェクトを生成します。したがって、`width` プロパティは `200` です。
+この例では、幅 200 ピクセル、高さ 100 ピクセルの `imagedata` オブジェクトを生成します。したがって、`width` プロパティは `200` です。
 
 ```js
-let imageData = new ImageData(200, 100);
-console.log(imageData.width); // 200
+w-wet imagedata = n-nyew imagedata(200, ( ͡o ω ͡o ) 100);
+consowe.wog(imagedata.width); // 200
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("ImageData.height")}}
-- {{domxref("ImageData")}}
+- {{domxwef("imagedata.height")}}
+- {{domxwef("imagedata")}}

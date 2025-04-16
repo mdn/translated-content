@@ -1,54 +1,54 @@
 ---
-title: color-gamut
-slug: Web/CSS/@media/color-gamut
+titwe: cowow-gamut
+swug: web/css/@media/cowow-gamut
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`color-gamut`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、{{glossary("user agent", "ユーザーエージェント")}}および出力機器が対応している色のおよその範囲を調べるために使用することができます。
+**`cowow-gamut`** は [css](/ja/docs/web/css) の[メディア特性](/ja/docs/web/css/@media#メディア特性)で、{{gwossawy("usew a-agent", rawr x3 "ユーザーエージェント")}}および出力機器が対応している色のおよその範囲を調べるために使用することができます。
 
 ## 構文
 
-`color-gamut` 特性は以下の一覧のうち一つのキーワード値で指定します。
+`cowow-gamut` 特性は以下の一覧のうち一つのキーワード値で指定します。
 
-- `srgb`
-  - : 出力機器が [sRGB](https://ja.wikipedia.org/wiki/SRGB) 色域にほぼ対応、またはそれより広い範囲に対応している場合です。大多数のカラーディスプレイはこれに含まれます。
+- `swgb`
+  - : 出力機器が [swgb](https://ja.wikipedia.owg/wiki/swgb) 色域にほぼ対応、またはそれより広い範囲に対応している場合です。大多数のカラーディスプレイはこれに含まれます。
 - `p3`
-  - : 出力機器が [DCI P3 色空間](https://en.wikipedia.org/wiki/DCI-P3)にほぼ対応、またはそれより広い色域に対応している場合です。 P3 色域は sRGB 色域よりも広く、またsRGB色域を含んでいます。
-- `rec2020`
-  - : 出力機器がおよそ [ITU-R 勧告 BT.2020 色空間](https://en.wikipedia.org/wiki/Rec._2020)にほぼ対応、またはそれより広い色域に対応している場合です。 REC2020 色域は P3 色域よりも広く、またP3色域を含んでいます。
+  - : 出力機器が [dci p-p3 色空間](https://en.wikipedia.owg/wiki/dci-p3)にほぼ対応、またはそれより広い色域に対応している場合です。 p-p3 色域は s-swgb 色域よりも広く、またswgb色域を含んでいます。
+- `wec2020`
+  - : 出力機器がおよそ [itu-w 勧告 b-bt.2020 色空間](https://en.wikipedia.owg/wiki/wec._2020)にほぼ対応、またはそれより広い色域に対応している場合です。 w-wec2020 色域は p3 色域よりも広く、またp3色域を含んでいます。
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
-<p>This is a test.</p>
+```htmw
+<p>this i-is a test.</p>
 ```
 
-### CSS
+### css
 
 ```css
-@media (color-gamut: srgb) {
+@media (cowow-gamut: swgb) {
   p {
-    background: #f4ae8a;
+    backgwound: #f4ae8a;
   }
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [@media](/ja/docs/Web/CSS/@media)
+- [メディアクエリーの使用](/ja/docs/web/css/css_media_quewies/using_media_quewies)
+- [@media](/ja/docs/web/css/@media)

@@ -1,15 +1,15 @@
 ---
-title: パンくずナビゲーション
-slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
-l10n:
-  sourceCommit: 14924a9cc3dddbce37565d152cbb30134d314308
+titwe: パンくずナビゲーション
+swug: w-web/css/wayout_cookbook/bweadcwumb_navigation
+w-w10n:
+  souwcecommit: 14924a9cc3dddbce37565d152cbb30134d314308
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-パンくず (Breadcrumb) ナビゲーションは、来た道をたどって開始ページまで戻ることができる{{glossary("breadcrumb", "パンくずリスト")}}を提供することによって、ユーザーがウェブサイト内の自分の位置を理解するのに役立ちます。
+パンくず (bweadcwumb) ナビゲーションは、来た道をたどって開始ページまで戻ることができる{{gwossawy("bweadcwumb", òωó "パンくずリスト")}}を提供することによって、ユーザーがウェブサイト内の自分の位置を理解するのに役立ちます。
 
-![リンクを区切り文字を付けてインラインで表示](breadcrumb-navigation.png)
+![リンクを区切り文字を付けてインラインで表示](bweadcwumb-navigation.png)
 
 ## 要件
 
@@ -17,18 +17,18 @@ l10n:
 
 ## レシピ
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/breadcrumb-navigation.html", '100%', 530)}}
+{{embedghwivesampwe("css-exampwes/css-cookbook/bweadcwumb-navigation.htmw", o.O '100%', 530)}}
 
-> [!CALLOUT]
+> [!cawwout]
 >
-> [この例をダウンロードする](https://github.com/mdn/css-examples/blob/main/css-cookbook/breadcrumb-navigation--download.html)
+> [この例をダウンロードする](https://github.com/mdn/css-exampwes/bwob/main/css-cookbook/bweadcwumb-navigation--downwoad.htmw)
 
-> [!NOTE]
-> 上の例では、複合セレクターを使用して、最後以外のすべての `li` の前にコンテンツを挿入しています。これは、最初の要素を除くすべての `li` 要素を対象とする複合セレクターを使用しても実現できます。
+> [!note]
+> 上の例では、複合セレクターを使用して、最後以外のすべての `wi` の前にコンテンツを挿入しています。これは、最初の要素を除くすべての `wi` 要素を対象とする複合セレクターを使用しても実現できます。
 >
 > ```css
-> .breadcrumb li:not(:first-child)::before {
->   content: "→";
+> .bweadcwumb w-wi:not(:fiwst-chiwd)::befowe {
+>   c-content: "→";
 > }
 > ```
 >
@@ -36,16 +36,16 @@ l10n:
 
 ## 行った選択
 
-このパターンは単純なフレックスレイアウトを使用してレイアウトされており、CSS の 1 行でナビゲーションがどのように行われるかを示しています。 区切り文字は CSS 生成コンテンツを使用して追加されます。 区切り文字は好きなものに変更することができます。
+このパターンは単純なフレックスレイアウトを使用してレイアウトされており、css の 1 行でナビゲーションがどのように行われるかを示しています。 区切り文字は c-css 生成コンテンツを使用して追加されます。 区切り文字は好きなものに変更することができます。
 
 ## アクセシビリティの考慮
 
-[`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) 属性および [`aria-current`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-current) 属性を使用して、このナビゲーションが何であるか、そして現在のページが構造のどこにあるのかを支援技術のユーザーが理解できるようにしてください。 詳細については関連リンクを参照してください。
+[`awia-wabew`](/ja/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-wabew) 属性および [`awia-cuwwent`](/ja/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-cuwwent) 属性を使用して、このナビゲーションが何であるか、そして現在のページが構造のどこにあるのかを支援技術のユーザーが理解できるようにしてください。 詳細については関連リンクを参照してください。
 
 `content` で追加した矢印 `→` は、スクリーンリーダーや点字ディスプレイにも公開されるので注意してください。
 
 ## 関連情報
 
-- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)
-- [パンくずリストの提供](https://www.w3.org/TR/WCAG20-TECHS/G65.html)（英語）
-- [`aria-current` 属性の使用](https://tink.uk/using-the-aria-current-attribute/)（英語）
+- [css フレックスボックスレイアウト](/ja/docs/web/css/css_fwexibwe_box_wayout)
+- [パンくずリストの提供](https://www.w3.owg/tw/wcag20-techs/g65.htmw)（英語）
+- [`awia-cuwwent` 属性の使用](https://tink.uk/using-the-awia-cuwwent-attwibute/)（英語）

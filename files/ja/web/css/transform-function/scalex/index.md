@@ -1,190 +1,190 @@
 ---
-title: scaleX()
-slug: Web/CSS/transform-function/scaleX
-l10n:
-  sourceCommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
+titwe: scawex()
+swug: web/css/twansfowm-function/scawex
+w-w10n:
+  s-souwcecommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`scaleX()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、要素を X 軸に沿って (水平に) 変倍する座標変換を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
+**`scawex()`** は [css](/ja/docs/web/css) の[関数](/ja/docs/web/css/css_vawues_and_units/css_vawue_functions)で、要素を x-x 軸に沿って (水平に) 変倍する座標変換を定義します。結果は {{cssxwef("&wt;twansfowm-function&gt;")}} データ型になります。
 
-{{InteractiveExample("CSS Demo: scaleX()")}}
+{{intewactiveexampwe("css d-demo: scawex()")}}
 
-```css interactive-example-choice
-transform: scaleX(1);
+```css i-intewactive-exampwe-choice
+t-twansfowm: s-scawex(1);
 ```
 
-```css interactive-example-choice
-transform: scaleX(0.7);
+```css i-intewactive-exampwe-choice
+twansfowm: scawex(0.7);
 ```
 
-```css interactive-example-choice
-transform: scaleX(1.3);
+```css intewactive-exampwe-choice
+twansfowm: s-scawex(1.3);
 ```
 
-```css interactive-example-choice
-transform: scaleX(-0.5);
+```css intewactive-exampwe-choice
+twansfowm: s-scawex(-0.5);
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/firefox-logo.svg"
-    width="200" />
+    cwass="twansition-aww"
+    id="exampwe-ewement"
+    swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
+    w-width="200" />
 </section>
 ```
 
-これは要素のそれぞれの点の横座標（水平座標、 X 座標）を一定の係数で修正しますが、係数が 1 である場合はこの関数が恒等変換になるので例外です。変倍は等方性ではなく、要素の角度は保存されません。 `scaleX(-1)` は[軸の線対称](https://en.wikipedia.org/wiki/Axial_symmetry)を定義し、垂直軸は ({{cssxref("transform-origin")}} プロパティの指定通りに) 原点を通過します。
+これは要素のそれぞれの点の横座標（水平座標、 x 座標）を一定の係数で修正しますが、係数が 1 である場合はこの関数が恒等変換になるので例外です。変倍は等方性ではなく、要素の角度は保存されません。 `scawex(-1)` は[軸の線対称](https://en.wikipedia.owg/wiki/axiaw_symmetwy)を定義し、垂直軸は ({{cssxwef("twansfowm-owigin")}} プロパティの指定通りに) 原点を通過します。
 
-> **メモ:** `scaleX(sx)` は `scale(sx, 1)` または `scale3d(sx, 1, 1)` と等価です。
+> **メモ:** `scawex(sx)` は `scawe(sx, 1)` または `scawe3d(sx, (˘ω˘) 1, 1)` と等価です。
 
 ## 構文
 
 ```css
-scaleX(s)
+s-scawex(s)
 ```
 
 ### 値
 
 - `s`
-  - : {{cssxref("&lt;number&gt;")}} で、要素のそれぞれの点の横座標に適用される変倍率を表します。
+  - : {{cssxwef("&wt;numbew&gt;")}} で、要素のそれぞれの点の横座標に適用される変倍率を表します。
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col"><a href="/ja/docs/Web/CSS/transform-function#直交座標系">直交座標系</a> (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^2</a>)</th>
-      <th scope="col"><a href="https://en.wikipedia.org/wiki/Homogeneous_coordinates">同次座標系</a> (<a href="https://en.wikipedia.org/wiki/Real_projective_plane">ℝℙ^2</a>)</th>
-      <th scope="col">直交座標系 (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^3</a>)</th>
-      <th scope="col">同次座標系 (<a href="https://en.wikipedia.org/wiki/Real_projective_space">ℝℙ^3</a>)</th>
-    </tr>
+    <tw>
+      <th scope="cow"><a hwef="/ja/docs/web/css/twansfowm-function#直交座標系">直交座標系</a> (<a hwef="https://ja.wikipedia.owg/wiki/実数空間">ℝ^2</a>)</th>
+      <th scope="cow"><a h-hwef="https://en.wikipedia.owg/wiki/homogeneous_coowdinates">同次座標系</a> (<a hwef="https://en.wikipedia.owg/wiki/weaw_pwojective_pwane">ℝℙ^2</a>)</th>
+      <th scope="cow">直交座標系 (<a hwef="https://ja.wikipedia.owg/wiki/実数空間">ℝ^3</a>)</th>
+      <th scope="cow">同次座標系 (<a h-hwef="https://en.wikipedia.owg/wiki/weaw_pwojective_space">ℝℙ^3</a>)</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td rowspan="2">
+    <tw>
+      <td wowspan="2">
         <math
-          ><mrow><mo>(</mo
-            ><mtable
-              ><mtr
-                ><mtd><mi>s</mi> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
-              ></mtable
-            ><mo>)</mo></mrow
+          ><mwow><mo>(</mo
+            ><mtabwe
+              ><mtw
+                ><mtd><mi>s</mi> </mtd><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
+                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtw
+              ></mtabwe
+            ><mo>)</mo></mwow
           ></math
         >
       </td>
       <td>
         <math
-          ><mrow><mo>(</mo
-            ><mtable
-              ><mtr
+          ><mwow><mo>(</mo
+            ><mtabwe
+              ><mtw
                 ><mtd><mi>s</mi> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
+                ><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
                 ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
+                ><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn></mtd></mtr
-              ></mtable
-            ><mo>)</mo></mrow
+                ><mtd><mn>1</mn></mtd></mtw
+              ></mtabwe
+            ><mo>)</mo></mwow
           ></math
         >
       </td>
-      <td rowspan="2">
+      <td w-wowspan="2">
         <math
-          ><mrow><mo>(</mo
-            ><mtable
-              ><mtr
+          ><mwow><mo>(</mo
+            ><mtabwe
+              ><mtw
                 ><mtd><mi>s</mi> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
+                ><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
                 ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
+                ><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn></mtd></mtr
-              ></mtable
-            ><mo>)</mo></mrow
+                ><mtd><mn>1</mn></mtd></mtw
+              ></mtabwe
+            ><mo>)</mo></mwow
           ></math
         >
       </td>
-      <td rowspan="2">
+      <td w-wowspan="2">
         <math
-          ><mrow><mo>(</mo
-            ><mtable
-              ><mtr
+          ><mwow><mo>(</mo
+            ><mtabwe
+              ><mtw
                 ><mtd><mi>s</mi> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
                 ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
+                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
-              ></mtable
-            ><mo>)</mo></mrow
+                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtw
+              ></mtabwe
+            ><mo>)</mo></mwow
           ></math
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>[s 0 0 1 0 0]</code></td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
-<div>Normal</div>
-<div class="scaled">Scaled</div>
+```htmw
+<div>nowmaw</div>
+<div c-cwass="scawed">scawed</div>
 ```
 
-### CSS
+### css
 
 ```css
 div {
   width: 80px;
-  height: 80px;
-  background-color: skyblue;
+  h-height: 80px;
+  backgwound-cowow: skybwue;
 }
 
-.scaled {
-  transform: scaleX(0.6);
-  background-color: pink;
+.scawed {
+  t-twansfowm: scawex(0.6);
+  backgwound-cowow: pink;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples","200","200")}}
+{{embedwivesampwe("exampwes","200","200")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`scaleY()`](/ja/docs/Web/CSS/transform-function/scaleY)
-- [`scaleZ()`](/ja/docs/Web/CSS/transform-function/scaleZ)
-- {{cssxref("transform")}}
-- {{cssxref("scale")}}
-- {{cssxref("&lt;transform-function&gt;")}}
-- {{cssxref("transform-origin")}}
+- [`scawey()`](/ja/docs/web/css/twansfowm-function/scawey)
+- [`scawez()`](/ja/docs/web/css/twansfowm-function/scawez)
+- {{cssxwef("twansfowm")}}
+- {{cssxwef("scawe")}}
+- {{cssxwef("&wt;twansfowm-function&gt;")}}
+- {{cssxwef("twansfowm-owigin")}}
 - 他の独立した座標変換プロパティ:
-  - {{cssxref("translate")}}
-  - {{cssxref("rotate")}}
+  - {{cssxwef("twanswate")}}
+  - {{cssxwef("wotate")}}
   - 注: `skew` プロパティはありません

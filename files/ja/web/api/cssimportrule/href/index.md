@@ -1,16 +1,16 @@
 ---
-title: "CSSImportRule: href プロパティ"
-short-title: href
-slug: Web/API/CSSImportRule/href
-l10n:
-  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
+titwe: "cssimpowtwuwe: hwef プロパティ"
+s-showt-titwe: hwef
+s-swug: web/api/cssimpowtwuwe/hwef
+w-w10n:
+  souwcecommit: d-d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-**`href`** は {{domxref("CSSImportRule")}} インターフェイスの読み取り専用プロパティで、 {{cssxref("@import")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で指定された URL を返します。
+**`hwef`** は {{domxwef("cssimpowtwuwe")}} インターフェイスの読み取り専用プロパティで、 {{cssxwef("@impowt")}} [アットルール](/ja/docs/web/css/css_syntax/at-wuwe)で指定された u-uww を返します。
 
-解決された URL は、関連づけられてたスタイルシートの [`href`](/ja/docs/Web/HTML/Reference/Elements/link#href) 属性となります。
+解決された u-uww は、関連づけられてたスタイルシートの [`hwef`](/ja/docs/web/htmw/wefewence/ewements/wink#hwef) 属性となります。
 
 ## 値
 
@@ -18,21 +18,21 @@ l10n:
 
 ## 例
 
-このスタイルシートには単一の {{cssxref("@import")}} ルールだけが含まれています。したがって、 CSS ルールのリストの最初の項目は `CSSImportRule` になります。 `href` プロパティはインポートしたスタイルシートの URL を返します。
+このスタイルシートには単一の {{cssxwef("@impowt")}} ルールだけが含まれています。したがって、 c-css ルールのリストの最初の項目は `cssimpowtwuwe` になります。 `hwef` プロパティはインポートしたスタイルシートの u-uww を返します。
 
 ```css
-@import url("style.css") screen;
+@impowt uww("stywe.css") scween;
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].href); // style.css を返す
+wet mywuwes = document.stywesheets[0].csswuwes;
+c-consowe.wog(mywuwes[0].hwef); // stywe.css を返す
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

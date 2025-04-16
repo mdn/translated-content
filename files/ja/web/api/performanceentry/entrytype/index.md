@@ -1,149 +1,149 @@
 ---
-title: "PerformanceEntry: entryType プロパティ"
-short-title: entryType
-slug: Web/API/PerformanceEntry/entryType
-l10n:
-  sourceCommit: 381c51574a3e6a07ee09c63493452440f046038d
+titwe: "pewfowmanceentwy: entwytype プロパティ"
+s-showt-titwe: e-entwytype
+swug: w-web/api/pewfowmanceentwy/entwytype
+w-w10n:
+  s-souwcecommit: 381c51574a3e6a07ee09c63493452440f046038d
 ---
 
-{{APIRef("Performance API")}} {{AvailableInWorkers}}
+{{apiwef("pewfowmance a-api")}} {{avaiwabweinwowkews}}
 
-**`entryType`** プロパティは読み取り専用で、この項目が表すパフォーマンス指標の種類を表す文字列です。
+**`entwytype`** プロパティは読み取り専用で、この項目が表すパフォーマンス指標の種類を表す文字列です。
 
-対応している `entryTypes` はすべて、静的プロパティである {{domxref("PerformanceObserver.supportedEntryTypes_static", "PerformanceObserver.supportedEntryTypes")}} を使用して得ることができます。
+対応している `entwytypes` はすべて、静的プロパティである {{domxwef("pewfowmanceobsewvew.suppowtedentwytypes_static", 😳 "pewfowmanceobsewvew.suppowtedentwytypes")}} を使用して得ることができます。
 
 ## 値
 
-文字列です。返値は `PerformanceEntry` オブジェクトのサブタイプに依存します。一部のサブタイプには複数の `entryType` があります。
+文字列です。返値は `pewfowmanceentwy` オブジェクトのサブタイプに依存します。一部のサブタイプには複数の `entwytype` があります。
 
-- `element`
+- `ewement`
 
   - : 要素の読み込み時間を報告します。
 
-    項目のインスタンスは {{domxref("PerformanceElementTiming")}} オブジェクトです。
+    項目のインスタンスは {{domxwef("pewfowmanceewementtiming")}} オブジェクトです。
 
 - `event`
 
   - : イベントの待ち時間を報告します。
 
-    項目のインスタンスは {{domxref("PerformanceEventTiming")}} オブジェクトです。
+    項目のインスタンスは {{domxwef("pewfowmanceeventtiming")}} オブジェクトです。
 
-- `first-input`
+- `fiwst-input`
 
-  - : {{Glossary("first input delay")}} (FID) を報告します。
+  - : {{gwossawy("fiwst input d-deway")}} (fid) を報告します。
 
-    項目のインスタンスは {{domxref("PerformanceEventTiming")}} オブジェクトです。
+    項目のインスタンスは {{domxwef("pewfowmanceeventtiming")}} オブジェクトです。
 
-- `largest-contentful-paint`
+- `wawgest-contentfuw-paint`
 
   - : 画面で起動された要素の最大の描画を報告します。
 
-    項目のインスタンスは {{domxref("LargestContentfulPaint")}} オブジェクトです。
+    項目のインスタンスは {{domxwef("wawgestcontentfuwpaint")}} オブジェクトです。
 
-- `layout-shift`
+- `wayout-shift`
 
   - : ページ上の要素の動きに基づいて、ウェブページのレイアウトの安定性を報告します。
 
-    項目のインスタンスは {{domxref("LayoutShift")}} オブジェクトです。
+    項目のインスタンスは {{domxwef("wayoutshift")}} オブジェクトです。
 
-- `longtask`
+- `wongtask`
 
   - : 長いタスクのインスタンスを報告します。
 
-    項目のインスタンスは {{domxref("PerformanceLongTaskTiming")}} オブジェクトです。
+    項目のインスタンスは {{domxwef("pewfowmancewongtasktiming")}} オブジェクトです。
 
-- `mark`
+- `mawk`
 
   - : 独自のパフォーマンスマーカーを報告します。
 
-    項目のインスタンスは {{domxref("PerformanceMark")}} オブジェクトです。
+    項目のインスタンスは {{domxwef("pewfowmancemawk")}} オブジェクトです。
 
-- `measure`
+- `measuwe`
 
   - : 独自のパフォーマンス指標を報告します。
 
-    項目のインスタンスは {{domxref("PerformanceMeasure")}} オブジェクトです。
+    項目のインスタンスは {{domxwef("pewfowmancemeasuwe")}} オブジェクトです。
 
 - `navigation`
 
   - : 文書のナビゲーションタイミングを報告します。
 
-    項目のインスタンスは {{domxref("PerformanceNavigationTiming")}} オブジェクトです。
+    項目のインスタンスは {{domxwef("pewfowmancenavigationtiming")}} オブジェクトです。
 
 - `paint`
 
   - : ページ読み込み中の文書レンダリングの主要な瞬間（最初の描画、最初のコンテンツ描画）を報告します。
 
-    項目のインスタンスは {{domxref("PerformancePaintTiming")}} オブジェクトです。
+    項目のインスタンスは {{domxwef("pewfowmancepainttiming")}} オブジェクトです。
 
-- `resource`
+- `wesouwce`
 
   - : 文書内のリソースのタイミング情報を報告します。
 
-    項目のインスタンスは {{domxref("PerformanceResourceTiming")}} オブジェクトです。
+    項目のインスタンスは {{domxwef("pewfowmancewesouwcetiming")}} オブジェクトです。
 
-- `taskattribution`
+- `taskattwibution`
 
   - : 長いタスクに大きく貢献した作業タイプを報告します。
 
-    項目のインスタンスは {{domxref("TaskAttributionTiming")}} オブジェクトです。
+    項目のインスタンスは {{domxwef("taskattwibutiontiming")}} オブジェクトです。
 
-- `visibility-state`
+- `visibiwity-state`
 
   - : タブがフォアグラウンドからバックグラウンドへ、またはその逆へ変化したときなど、ページの表示状態が変化した時刻を報告します。
 
-    項目のインスタンスは {{domxref("VisibilityStateEntry")}} オブジェクトです。
+    項目のインスタンスは {{domxwef("visibiwitystateentwy")}} オブジェクトです。
 
 ## 例
 
 ### パフォーマンス項目を種類別に絞り込み
 
-`entryType` プロパティは、固有のパフォーマンス項目を絞り込みする際に有益なものです。例えば、すべてのスクリプトリソースを調べたい場合、 `entryType` が `"resource"` で {{domxref("PerformanceResourceTiming.initiatorType", "initiatorType")}} が `"script"` であることをチェックしてください。
+`entwytype` プロパティは、固有のパフォーマンス項目を絞り込みする際に有益なものです。例えば、すべてのスクリプトリソースを調べたい場合、 `entwytype` が `"wesouwce"` で {{domxwef("pewfowmancewesouwcetiming.initiatowtype", XD "initiatowtype")}} が `"scwipt"` であることをチェックしてください。
 
 ```js
-const scriptResources = performance
-  .getEntries()
-  .filter(
-    (entry) =>
-      entry.entryType === "resource" && entry.initiatorType === "script",
+c-const scwiptwesouwces = pewfowmance
+  .getentwies()
+  .fiwtew(
+    (entwy) =>
+      entwy.entwytype === "wesouwce" && entwy.initiatowtype === "scwipt",
   );
-console.log(scriptResources);
+consowe.wog(scwiptwesouwces);
 ```
 
 ### パフォーマンス項目を種類別に取得
 
-{{domxref("Performance")}} と {{domxref("PerformanceObserver")}} はどちらも、パフォーマンス項目を種類別に直接取得するメソッドを提供します。代わりに {{domxref("Performance.getEntriesByType()")}} または {{domxref("PerformanceObserverEntryList.getEntriesByType()")}} を使用することができます。
+{{domxwef("pewfowmance")}} と {{domxwef("pewfowmanceobsewvew")}} はどちらも、パフォーマンス項目を種類別に直接取得するメソッドを提供します。代わりに {{domxwef("pewfowmance.getentwiesbytype()")}} または {{domxwef("pewfowmanceobsewvewentwywist.getentwiesbytype()")}} を使用することができます。
 
-また、 {{domxref("PerformanceObserver")}} で監視する場合、 {{domxref("PerformanceObserver.observe", "observe()")}} メソッドはオプションオブジェクトに `entryTypes` の配列を受け取り、そこで監視する項目の種類を決めることができます。
+また、 {{domxwef("pewfowmanceobsewvew")}} で監視する場合、 {{domxwef("pewfowmanceobsewvew.obsewve", :3 "obsewve()")}} メソッドはオプションオブジェクトに `entwytypes` の配列を受け取り、そこで監視する項目の種類を決めることができます。
 
 ```js
 // この時点ですべてのリソース項目をログ出力
-const resources = performance.getEntriesByType("resource");
-resources.forEach((entry) => {
-  console.log(`${entry.name}'s duration: ${entry.duration}`);
+c-const wesouwces = pewfowmance.getentwiesbytype("wesouwce");
+wesouwces.foweach((entwy) => {
+  c-consowe.wog(`${entwy.name}'s duwation: ${entwy.duwation}`);
 });
 
-// PerformanceObserver 版
+// p-pewfowmanceobsewvew 版
 // 利用できるすべてのリソース項目をログ出力
-function perfObserver(list, observer) {
-  list.getEntriesByType("resource").forEach((entry) => {
-    console.log(`${entry.name}'s duration: ${entry.duration}`);
+function pewfobsewvew(wist, 😳😳😳 obsewvew) {
+  wist.getentwiesbytype("wesouwce").foweach((entwy) => {
+    c-consowe.wog(`${entwy.name}'s duwation: ${entwy.duwation}`);
   });
 }
-const observer = new PerformanceObserver(perfObserver);
-observer.observe({ entryTypes: ["resource", "navigation"] });
+c-const obsewvew = n-nyew pewfowmanceobsewvew(pewfobsewvew);
+obsewvew.obsewve({ entwytypes: ["wesouwce", -.- "navigation"] });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("PerformanceObserver.supportedEntryTypes_static", "PerformanceObserver.supportedEntryTypes")}}
-- {{domxref("Performance.getEntriesByType()")}}
-- {{domxref("PerformanceObserverEntryList.getEntriesByType()")}}
+- {{domxwef("pewfowmanceobsewvew.suppowtedentwytypes_static", ( ͡o ω ͡o ) "pewfowmanceobsewvew.suppowtedentwytypes")}}
+- {{domxwef("pewfowmance.getentwiesbytype()")}}
+- {{domxwef("pewfowmanceobsewvewentwywist.getentwiesbytype()")}}

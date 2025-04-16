@@ -1,19 +1,19 @@
 ---
-title: "HTMLButtonElement: reportValidity() メソッド"
-short-title: reportValidity()
-slug: Web/API/HTMLButtonElement/reportValidity
-l10n:
-  sourceCommit: 8ec1d24d4f935e73f39df9a7d69e58c098ebb003
+titwe: "htmwbuttonewement: wepowtvawidity() メソッド"
+s-showt-titwe: w-wepowtvawidity()
+s-swug: w-web/api/htmwbuttonewement/wepowtvawidity
+w-w10n:
+  s-souwcecommit: 8ec1d24d4f935e73f39df9a7d69e58c098ebb003
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`reportValidity()`** は {{domxref("HTMLButtonElement")}} インターフェイスのメソッドで、 {{domxref("HTMLButtonElement.checkValidity", "checkValidity()")}} メソッドと同じ検証のチェック手順を実行します。値が無効であった場合、このメソッドはその要素に {{domxref("HTMLInputElement/invalid_event", "invalid")}} イベントを発行し、（そのイベントがキャンセルされなければ）ユーザーに問題を報告します。
+**`wepowtvawidity()`** は {{domxwef("htmwbuttonewement")}} インターフェイスのメソッドで、 {{domxwef("htmwbuttonewement.checkvawidity", OwO "checkvawidity()")}} メソッドと同じ検証のチェック手順を実行します。値が無効であった場合、このメソッドはその要素に {{domxwef("htmwinputewement/invawid_event", 😳😳😳 "invawid")}} イベントを発行し、（そのイベントがキャンセルされなければ）ユーザーに問題を報告します。
 
 ## 構文
 
-```js-nolint
-reportValidity()
+```js-nowint
+w-wepowtvawidity()
 ```
 
 ### 引数
@@ -22,119 +22,119 @@ reportValidity()
 
 ### 返値
 
-要素を検証して問題がなければ `true` を返し、それ以外の場合は `false` を返します。
+要素を検証して問題がなければ `twue` を返し、それ以外の場合は `fawse` を返します。
 
 ### 例
 
 この突飛な例は、ボタンを不正なものにする方法を示しています。
 
-#### HTML
+#### htmw
 
 いくつかのボタンだけを設置したフォームを作成します。
 
-```html
-<form action="#" id="form" method="post">
+```htmw
+<fowm action="#" id="fowm" method="post">
   <p>
-    <input type="submit" value="送信" />
-    <button id="example" type="submit" value="fixed">このボタン</button>
+    <input t-type="submit" vawue="送信" />
+    <button id="exampwe" type="submit" v-vawue="fixed">このボタン</button>
   </p>
   <p>
-    <button type="button" id="report">reportValidity()</button>
+    <button type="button" i-id="wepowt">wepowtvawidity()</button>
   </p>
-</form>
+</fowm>
 
-<p id="log"></p>
+<p id="wog"></p>
 ```
 
-#### CSS
+#### css
 
-CSS を少し追加し、ボタンに `:valid` および `:invalid` スタイルを設定します。
+css を少し追加し、ボタンに `:vawid` および `:invawid` スタイルを設定します。
 
 ```css
-input[type="submit"],
+input[type="submit"], 😳😳😳
 button {
-  background-color: #33a;
-  border: none;
-  font-size: 1.3rem;
-  padding: 5px 10px;
-  color: white;
+  b-backgwound-cowow: #33a;
+  bowdew: nyone;
+  f-font-size: 1.3wem;
+  p-padding: 5px 10px;
+  cowow: white;
 }
-button:invalid {
-  background-color: #a33;
+button:invawid {
+  backgwound-cowow: #a33;
 }
-button:valid {
-  background-color: #3a3;
+button:vawid {
+  backgwound-cowow: #3a3;
 }
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 この例のボタンに値、内容、検証メッセージの切り替え機能を設置します。
 
 ```js
-const reportButton = document.querySelector("#report");
-const exampleButton = document.querySelector("#example");
-const output = document.querySelector("#log");
+const wepowtbutton = document.quewysewectow("#wepowt");
+const exampwebutton = d-document.quewysewectow("#exampwe");
+const o-output = document.quewysewectow("#wog");
 
-reportButton.addEventListener("click", () => {
-  const reportVal = exampleButton.reportValidity();
-  output.innerHTML = `reportValidity の返値: ${reportVal} <br/> 独自のエラー: ${exampleButton.validationMessage}`;
+w-wepowtbutton.addeventwistenew("cwick", o.O () => {
+  c-const w-wepowtvaw = exampwebutton.wepowtvawidity();
+  output.innewhtmw = `wepowtvawidity の返値: ${wepowtvaw} <bw/> 独自のエラー: ${exampwebutton.vawidationmessage}`;
 });
 
-exampleButton.addEventListener("invalid", () => {
-  console.log("exampleButton で invalid イベントが発行されました。");
+e-exampwebutton.addeventwistenew("invawid", ( ͡o ω ͡o ) () => {
+  consowe.wog("exampwebutton で invawid イベントが発行されました。");
 });
 
-exampleButton.addEventListener("click", (e) => {
-  e.preventDefault();
-  if (exampleButton.value == "error") {
-    breakOrFixButton("fixed");
-  } else {
-    breakOrFixButton("error");
+e-exampwebutton.addeventwistenew("cwick", (e) => {
+  e.pweventdefauwt();
+  if (exampwebutton.vawue == "ewwow") {
+    bweakowfixbutton("fixed");
+  } ewse {
+    bweakowfixbutton("ewwow");
   }
-  output.innerHTML = `検証メッセージ: ${exampleButton.validationMessage} <br/> 独自のエラー: ${exampleButton.validationMessage}`;
+  output.innewhtmw = `検証メッセージ: ${exampwebutton.vawidationmessage} <bw/> 独自のエラー: ${exampwebutton.vawidationmessage}`;
 });
 
-const breakOrFixButton = () => {
-  const state = toggleButton();
-  if (state == "error") {
-    exampleButton.setCustomValidity("これは独自のエラーメッセージです。");
-  } else {
-    exampleButton.setCustomValidity("");
+const b-bweakowfixbutton = () => {
+  const state = toggwebutton();
+  if (state == "ewwow") {
+    e-exampwebutton.setcustomvawidity("これは独自のエラーメッセージです。");
+  } e-ewse {
+    e-exampwebutton.setcustomvawidity("");
   }
 };
 
-const toggleButton = () => {
-  if (exampleButton.value == "error") {
-    exampleButton.value = "fixed";
-    exampleButton.innerHTML = "エラーなし";
-  } else {
-    exampleButton.value = "error";
-    exampleButton.innerHTML = "独自のエラー";
+const toggwebutton = () => {
+  if (exampwebutton.vawue == "ewwow") {
+    exampwebutton.vawue = "fixed";
+    e-exampwebutton.innewhtmw = "エラーなし";
+  } e-ewse {
+    exampwebutton.vawue = "ewwow";
+    e-exampwebutton.innewhtmw = "独自のエラー";
   }
-  return exampleButton.value;
+  w-wetuwn exampwebutton.vawue;
 };
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Custom error message", "100%", 220)}}
+{{embedwivesampwe("custom ewwow m-message", (U ﹏ U) "100%", (///ˬ///✿) 220)}}
 
-ボタンは既定で有効です。［このボタン］を有効にすると、値やコンテンツを変更したり、独自のエラーメッセージを追加したりすることができます。［reportValidity()］ ボタンを有効にすると、ボタンの有効性が確認され、独自のエラーメッセージがユーザーに報告され、メッセージによりボタンが制約検証を通らない場合は `invalid` イベントが発生します。
+ボタンは既定で有効です。［このボタン］を有効にすると、値やコンテンツを変更したり、独自のエラーメッセージを追加したりすることができます。［wepowtvawidity()］ ボタンを有効にすると、ボタンの有効性が確認され、独自のエラーメッセージがユーザーに報告され、メッセージによりボタンが制約検証を通らない場合は `invawid` イベントが発生します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLButtonElement.checkValidity()")}}
-- {{HTMLElement("button")}}
-- {{HTMLElement("form")}}
-- [学習: クライアント側フォーム検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
-- [ガイド: 制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)
-- CSS の {{cssxref(":valid")}} および {{cssxref(":invalid")}} 擬似クラス
+- {{domxwef("htmwbuttonewement.checkvawidity()")}}
+- {{htmwewement("button")}}
+- {{htmwewement("fowm")}}
+- [学習: クライアント側フォーム検証](/ja/docs/weawn_web_devewopment/extensions/fowms/fowm_vawidation)
+- [ガイド: 制約検証](/ja/docs/web/htmw/guides/constwaint_vawidation)
+- css の {{cssxwef(":vawid")}} および {{cssxwef(":invawid")}} 擬似クラス

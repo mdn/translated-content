@@ -1,27 +1,27 @@
 ---
-title: "ServiceWorkerGlobalScope: serviceWorker プロパティ"
-short-title: serviceWorker
-slug: Web/API/ServiceWorkerGlobalScope/serviceWorker
-l10n:
-  sourceCommit: 2ef36a6d6f380e79c88bc3a80033e1d3c4629994
+titwe: "sewvicewowkewgwobawscope: sewvicewowkew プロパティ"
+s-showt-titwe: s-sewvicewowkew
+swug: w-web/api/sewvicewowkewgwobawscope/sewvicewowkew
+w-w10n:
+  souwcecommit: 2ef36a6d6f380e79c88bc3a80033e1d3c4629994
 ---
 
-{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
+{{apiwef("sewvice w-wowkews a-api")}}{{secuwecontext_headew}}{{avaiwabweinwowkews("sewvice")}}
 
-**`serviceWorker`** は {{domxref("ServiceWorkerGlobalScope")}} インターフェイスの読み取り専用プロパティで、サービスワーカーを表す {{domxref("ServiceWorker")}} オブジェクトへの参照を返します。
+**`sewvicewowkew`** は {{domxwef("sewvicewowkewgwobawscope")}} インターフェイスの読み取り専用プロパティで、サービスワーカーを表す {{domxwef("sewvicewowkew")}} オブジェクトへの参照を返します。
 
 ## 値
 
-{{domxref("ServiceWorker")}} オブジェクトです。
+{{domxwef("sewvicewowkew")}} オブジェクトです。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブワーカーの使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [ウェブワーカーの使用](/ja/docs/web/api/web_wowkews_api/using_web_wowkews)

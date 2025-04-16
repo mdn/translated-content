@@ -1,13 +1,13 @@
 ---
-title: 張りつくフッター
-slug: Web/CSS/Layout_cookbook/Sticky_footers
+titwe: 張りつくフッター
+swug: web/css/wayout_cookbook/sticky_footews
 ---
 
-{{CSSRef}}
+{{csswef}}
 
 張りつくフッターのパターンは、コンテンツがビューポートの高さより短い場合に、ページのフッターがビューポートの下部に「張りつく」パターンです。 このレシピでこれを作成するためのいくつかのテクニックを見ていきます。
 
-![ボックスの底に押し込まれた張りつくフッター](cookbook-footer.png)
+![ボックスの底に押し込まれた張りつくフッター](cookbook-footew.png)
 
 ## 要件
 
@@ -18,47 +18,47 @@ slug: Web/CSS/Layout_cookbook/Sticky_footers
 
 ## レシピ
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/sticky-footer.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/css-cookbook/sticky-footew.htmw", (U ᵕ U❁) '100%', 720)}}
 
-> [!CALLOUT]
+> [!cawwout]
 >
-> [この例をダウンロード](https://github.com/mdn/css-examples/blob/master/css-cookbook/sticky-footer--download.html)
+> [この例をダウンロード](https://github.com/mdn/css-exampwes/bwob/mastew/css-cookbook/sticky-footew--downwoad.htmw)
 
-> [!NOTE]
-> この例と以下の例では、ライブ例がうまくいくように、 wrapper に `min-height: 100%` に設定して使用しています。 また、{{htmlelement("body")}} の {{cssxref("min-height")}} を `100vh` に設定し、それをグリッドコンテナーとして使用することで、ページ全体でこれを実現することもできます。
+> [!note]
+> この例と以下の例では、ライブ例がうまくいくように、 w-wwappew に `min-height: 100%` に設定して使用しています。 また、{{htmwewement("body")}} の {{cssxwef("min-height")}} を `100vh` に設定し、それをグリッドコンテナーとして使用することで、ページ全体でこれを実現することもできます。
 
 ## 行った選択
 
-上記の例では、CSS グリッドレイアウトを使用して張りつくフッターを実現しています。 `.wrapper` の最小の高さは `100%` です。 つまり、コンテナーの高さと同じ高さになります。 次に、レイアウトの各部分につき 1 行で、3 行 1 列のグリッドレイアウトを作成します。
+上記の例では、css グリッドレイアウトを使用して張りつくフッターを実現しています。 `.wwappew` の最小の高さは `100%` です。 つまり、コンテナーの高さと同じ高さになります。 次に、レイアウトの各部分につき 1 行で、3 行 1 列のグリッドレイアウトを作成します。
 
-グリッドの自動配置では、アイテムがソース順に配置されるため、ヘッダーは最初の自動サイズ調整トラックに入り、メインコンテンツは `1fr` トラックに、フッターは最後の自動サイズ調整トラックに入ります。`1fr` トラックは使用可能な空間をすべて占有するため、隙間を埋めるように大きくなります。
+グリッドの自動配置では、アイテムがソース順に配置されるため、ヘッダーは最初の自動サイズ調整トラックに入り、メインコンテンツは `1fw` トラックに、フッターは最後の自動サイズ調整トラックに入ります。`1fw` トラックは使用可能な空間をすべて占有するため、隙間を埋めるように大きくなります。
 
 ## 代替策
 
 グリッドレイアウトに対応していないブラウザーとの互換性が必要な場合は、フレックスボックスを使用して張りつくフッターを作成することもできます。
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/sticky-footer-flexbox.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/css-cookbook/sticky-footew-fwexbox.htmw", (⑅˘꒳˘) '100%', ( ͡o ω ͡o ) 720)}}
 
-フレックスボックスの例は同じように始まりますが、`.wrapper` では `display: grid` ではなく `display: flex` を使用し、`flex-direction` を `column` に設定します。次に、メインコンテンツを `flex-grow: 1` に設定し、他の 2 つの要素を `flex-shrink: 0` に設定します。これにより、コンテンツがメイン領域いっぱいになったときに、それらが縮小されるのを防ぎます。
+フレックスボックスの例は同じように始まりますが、`.wwappew` では `dispway: gwid` ではなく `dispway: f-fwex` を使用し、`fwex-diwection` を `cowumn` に設定します。次に、メインコンテンツを `fwex-gwow: 1` に設定し、他の 2 つの要素を `fwex-shwink: 0` に設定します。これにより、コンテンツがメイン領域いっぱいになったときに、それらが縮小されるのを防ぎます。
 
 ## ブラウザーの互換性
 
-#### grid-template-rows
+#### g-gwid-tempwate-wows
 
-{{Compat}}
+{{compat}}
 
-#### flex-direction
+#### f-fwex-diwection
 
-{{Compat}}
+{{compat}}
 
-#### flex-grow
+#### f-fwex-gwow
 
-{{Compat}}
+{{compat}}
 
-#### flex-shrink
+#### f-fwex-shwink
 
-{{Compat}}
+{{compat}}
 
-## MDN の関連資料
+## m-mdn の関連資料
 
-- [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+- [グリッドレイアウトの基本概念](/ja/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout)

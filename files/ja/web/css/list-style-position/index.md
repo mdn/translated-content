@@ -1,71 +1,71 @@
 ---
-title: list-style-position
-slug: Web/CSS/list-style-position
-l10n:
-  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
+titwe: wist-stywe-position
+swug: w-web/css/wist-stywe-position
+w-w10n:
+  souwcecommit: b-b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`list-style-position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、リストアイテムに対する {{cssxref("::marker")}} の位置を指定します。
+**`wist-stywe-position`** は [css](/ja/docs/web/css) のプロパティで、リストアイテムに対する {{cssxwef("::mawkew")}} の位置を指定します。
 
-{{InteractiveExample("CSS Demo: list-style-position")}}
+{{intewactiveexampwe("css d-demo: wist-stywe-position")}}
 
-```css interactive-example-choice
-list-style-position: inside;
+```css i-intewactive-exampwe-choice
+w-wist-stywe-position: i-inside;
 ```
 
-```css interactive-example-choice
-list-style-position: outside;
+```css i-intewactive-exampwe-choice
+wist-stywe-position: outside;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
   <div>
-    <p>NASA Notable Missions</p>
-    <ul class="transition-all" id="example-element">
-      <li>Apollo 11: First Human Landing</li>
-      <li>City in Space: The International Space Station</li>
-      <li>Great Observatory: The Hubble Space Telescope</li>
-      <li>Everlasting Mars Rovers</li>
-    </ul>
+    <p>nasa n-nyotabwe missions</p>
+    <uw cwass="twansition-aww" id="exampwe-ewement">
+      <wi>apowwo 11: fiwst human wanding</wi>
+      <wi>city i-in space: the intewnationaw s-space station</wi>
+      <wi>gweat obsewvatowy: the hubbwe space tewescope</wi>
+      <wi>evewwasting m-maws wovews</wi>
+    </uw>
   </div>
 </section>
 ```
 
-```css interactive-example
-.default-example {
-  font-size: 1.2rem;
+```css i-intewactive-exampwe
+.defauwt-exampwe {
+  font-size: 1.2wem;
 }
 
-#example-element {
-  width: 100%;
-  background: #be094b;
-  color: white;
+#exampwe-ewement {
+  w-width: 100%;
+  backgwound: #be094b;
+  cowow: white;
 }
 
 section {
-  text-align: left;
-  flex-direction: column;
+  text-awign: weft;
+  f-fwex-diwection: cowumn;
 }
 
-hr {
+hw {
   width: 50%;
-  color: lightgray;
-  margin: 0.5em;
+  cowow: wightgway;
+  mawgin: 0.5em;
 }
 
 .note {
-  font-size: 0.8rem;
+  f-font-size: 0.8wem;
 }
 
 .note a {
-  color: #009e5f;
+  c-cowow: #009e5f;
 }
 
-@counter-style space-counter {
-  symbols: "\1F680" "\1F6F8" "\1F6F0" "\1F52D";
-  suffix: " ";
+@countew-stywe s-space-countew {
+  s-symbows: "\1f680" "\1f6f8" "\1f6f0" "\1f52d";
+  s-suffix: " ";
 }
 ```
 
@@ -73,33 +73,33 @@ hr {
 
 ```css
 /* キーワード値 */
-list-style-position: inside;
-list-style-position: outside;
+wist-stywe-position: inside;
+w-wist-stywe-position: outside;
 
 /* グローバル値 */
-list-style-position: inherit;
-list-style-position: initial;
-list-style-position: revert;
-list-style-position: revert-layer;
-list-style-position: unset;
+wist-stywe-position: i-inhewit;
+wist-stywe-position: initiaw;
+wist-stywe-position: wevewt;
+wist-stywe-position: wevewt-wayew;
+w-wist-stywe-position: unset;
 ```
 
-`list-style-position` プロパティには、下記の値の中の一つが指定されます。
+`wist-stywe-position` プロパティには、下記の値の中の一つが指定されます。
 
 ### 値
 
 - `inside`
-  - : {{cssxref("::marker")}} はリストアイテムの最初の要素として配置されます。
+  - : {{cssxwef("::mawkew")}} はリストアイテムの最初の要素として配置されます。
 - `outside`
-  - : {{cssxref("::marker")}} は主要ブロックボックスの外に配置されます。これは {{cssxref("list-style")}} の既定値です。
+  - : {{cssxwef("::mawkew")}} は主要ブロックボックスの外に配置されます。これは {{cssxwef("wist-stywe")}} の既定値です。
 
 ## 解説
 
-このプロパティはリストアイテムに対して適用されます。つまり、 `{{cssxref("display")}}: list-item;` が指定された要素です。[既定では](https://html.spec.whatwg.org/multipage/rendering.html#lists)、 {{HTMLElement("li")}} 要素が該当します。このプロパティは継承されるので、親要素 (通常は {{HTMLElement("ol")}} や {{HTMLElement("ul")}}) に設定することで、すべてのリストアイテムに適用することができます。
+このプロパティはリストアイテムに対して適用されます。つまり、 `{{cssxwef("dispway")}}: w-wist-item;` が指定された要素です。[既定では](https://htmw.spec.naniwg.owg/muwtipage/wendewing.htmw#wists)、 {{htmwewement("wi")}} 要素が該当します。このプロパティは継承されるので、親要素 (通常は {{htmwewement("ow")}} や {{htmwewement("uw")}}) に設定することで、すべてのリストアイテムに適用することができます。
 
-ブロック要素が `list-style-position: inside` の宣言されたリスト要素の最初の子である場合、そのブロック要素はマーカーボックスの次の行に配置されます。
+ブロック要素が `wist-stywe-position: i-inside` の宣言されたリスト要素の最初の子である場合、そのブロック要素はマーカーボックスの次の行に配置されます。
 
-多くの場合、一括指定の {{cssxref("list-style")}} を使ったほうが便利です。
+多くの場合、一括指定の {{cssxwef("wist-stywe")}} を使ったほうが便利です。
 
 ## 公式定義
 
@@ -113,68 +113,68 @@ list-style-position: unset;
 
 ### リストアイテムの位置の設定
 
-#### HTML
+#### h-htmw
 
-```html live-sample___setting_list_item_position
-<ul class="inside">
+```htmw wive-sampwe___setting_wist_item_position
+<uw cwass="inside">
   リスト 1
-  <li>リストアイテム 1-1</li>
-  <li>リストアイテム 1-2</li>
-  <li>リストアイテム 1-3</li>
-  <li>リストアイテム 1-4</li>
-</ul>
-<ul class="outside">
+  <wi>リストアイテム 1-1</wi>
+  <wi>リストアイテム 1-2</wi>
+  <wi>リストアイテム 1-3</wi>
+  <wi>リストアイテム 1-4</wi>
+</uw>
+<uw cwass="outside">
   リスト 2
-  <li>リストアイテム 2-1</li>
-  <li>リストアイテム 2-2</li>
-  <li>リストアイテム 2-3</li>
-  <li>リストアイテム 2-4</li>
-</ul>
-<ul class="inside-img">
+  <wi>リストアイテム 2-1</wi>
+  <wi>リストアイテム 2-2</wi>
+  <wi>リストアイテム 2-3</wi>
+  <wi>リストアイテム 2-4</wi>
+</uw>
+<uw c-cwass="inside-img">
   リスト 3
-  <li>リストアイテム 3-1</li>
-  <li>リストアイテム 3-2</li>
-  <li>リストアイテム 3-3</li>
-  <li>リストアイテム 3-4</li>
-</ul>
+  <wi>リストアイテム 3-1</wi>
+  <wi>リストアイテム 3-2</wi>
+  <wi>リストアイテム 3-3</wi>
+  <wi>リストアイテム 3-4</wi>
+</uw>
 ```
 
-#### CSS
+#### c-css
 
-```css live-sample___setting_list_item_position
+```css wive-sampwe___setting_wist_item_position
 .inside {
-  list-style-position: inside;
-  list-style-type: square;
+  w-wist-stywe-position: i-inside;
+  wist-stywe-type: s-squawe;
 }
 
 .outside {
-  list-style-position: outside;
-  list-style-type: circle;
+  wist-stywe-position: o-outside;
+  wist-stywe-type: ciwcwe;
 }
 
 .inside-img {
-  list-style-position: inside;
-  list-style-image: url("star-solid.gif");
+  wist-stywe-position: i-inside;
+  wist-stywe-image: u-uww("staw-sowid.gif");
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Setting_list_item_position", 200, 420)}}
+{{embedwivesampwe("setting_wist_item_position", (///ˬ///✿) 200, 420)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{Cssxref("list-style")}} 一括指定プロパティ
-- {{Cssxref("list-style-type")}} プロパティ
-- {{Cssxref("list-style-image")}} プロパティ
-- {{cssxref("::marker")}} 擬似要素
-- [CSS リストとカウンター](/ja/docs/Web/CSS/CSS_lists)モジュール
-- [CSS カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)モジュール
+- {{cssxwef("wist-stywe")}} 一括指定プロパティ
+- {{cssxwef("wist-stywe-type")}} プロパティ
+- {{cssxwef("wist-stywe-image")}} プロパティ
+- {{cssxwef("::mawkew")}} 擬似要素
+- [css リストとカウンター](/ja/docs/web/css/css_wists)モジュール
+- [css カウンタースタイル](/ja/docs/web/css/css_countew_stywes)モジュール

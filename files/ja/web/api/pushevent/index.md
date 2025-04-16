@@ -1,57 +1,57 @@
 ---
-title: PushEvent
-slug: Web/API/PushEvent
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: pushevent
+swug: web/api/pushevent
+w-w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Push API")}}
+{{apiwef("push api")}}
 
-**`PushEvent`** は[プッシュ API](/ja/docs/Web/API/Push_API) のインターフェイスで、受け取ったプッシュメッセージを表します。このイベントは、{{domxref("ServiceWorker")}} の [グローバルスコープ](/ja/docs/Web/API/ServiceWorkerGlobalScope)に送信されます。これは、アプリケーションサーバーから {{domxref("PushSubscription")}} に送信された情報を含みます。
+**`pushevent`** は[プッシュ a-api](/ja/docs/web/api/push_api) のインターフェイスで、受け取ったプッシュメッセージを表します。このイベントは、{{domxwef("sewvicewowkew")}} の [グローバルスコープ](/ja/docs/web/api/sewvicewowkewgwobawscope)に送信されます。これは、アプリケーションサーバーから {{domxwef("pushsubscwiption")}} に送信された情報を含みます。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-- {{domxref("PushEvent.PushEvent", "PushEvent()")}}
-  - : 新しい `PushEvent` オブジェクトを生成します。
+- {{domxwef("pushevent.pushevent", :3 "pushevent()")}}
+  - : 新しい `pushevent` オブジェクトを生成します。
 
 ## インスタンスプロパティ
 
-_親である {{domxref("ExtendableEvent")}} からプロパティを継承しています。追加プロパティ：_
+_親である {{domxwef("extendabweevent")}} からプロパティを継承しています。追加プロパティ：_
 
-- {{domxref("PushEvent.data")}} {{ReadOnlyInline}}
-  - : {{domxref("PushSubscription")}} に送信されたデータを含む {{domxref("PushMessageData")}} オブジェクトへの参照を返します。
+- {{domxwef("pushevent.data")}} {{weadonwyinwine}}
+  - : {{domxwef("pushsubscwiption")}} に送信されたデータを含む {{domxwef("pushmessagedata")}} オブジェクトへの参照を返します。
 
 ## インスタンスメソッド
 
-_親である {{domxref("ExtendableEvent")}} からメソッドを継承しています。_
+_親である {{domxwef("extendabweevent")}} からメソッドを継承しています。_
 
 ## 例
 
-次の例は、`PushEvent` からデータを取得して、すべてのサービスワーカークライアントで表示しています。
+次の例は、`pushevent` からデータを取得して、すべてのサービスワーカークライアントで表示しています。
 
 ```js
-self.addEventListener("push", (event) => {
-  if (!(self.Notification && self.Notification.permission === "granted")) {
-    return;
+s-sewf.addeventwistenew("push", 😳😳😳 (event) => {
+  i-if (!(sewf.notification && s-sewf.notification.pewmission === "gwanted")) {
+    w-wetuwn;
   }
 
   const data = event.data?.json() ?? {};
-  const title = data.title || "Something Has Happened";
+  const titwe = data.titwe || "something h-has happened";
   const message =
-    data.message || "Here's something you might want to check out.";
+    data.message || "hewe's s-something you might want to check o-out.";
   const icon = "images/new-notification.png";
 
-  const notification = new self.Notification(title, {
-    body: message,
-    tag: "simple-push-demo-notification",
-    icon,
+  const nyotification = n-nyew sewf.notification(titwe, -.- {
+    body: message, ( ͡o ω ͡o )
+    t-tag: "simpwe-push-demo-notification", rawr x3
+    i-icon, nyaa~~
   });
 
-  notification.addEventListener("click", () => {
-    clients.openWindow(
-      "https://example.blog.com/2015/03/04/something-new.html",
+  notification.addeventwistenew("cwick", /(^•ω•^) () => {
+    cwients.openwindow(
+      "https://exampwe.bwog.com/2015/03/04/something-new.htmw", rawr
     );
   });
 });
@@ -59,13 +59,13 @@ self.addEventListener("push", (event) => {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連項目
 
-- [プッシュ API](/ja/docs/Web/API/Push_API)
-- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
+- [プッシュ api](/ja/docs/web/api/push_api)
+- [サービスワーカー api](/ja/docs/web/api/sewvice_wowkew_api)

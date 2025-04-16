@@ -1,45 +1,45 @@
 ---
-title: font-variant-position
-slug: Web/CSS/font-variant-position
-l10n:
-  sourceCommit: aac4966bd12c77281f9374bbfaf4e17e2680ac3b
+titwe: font-vawiant-position
+swug: web/css/font-vawiant-position
+w-w10n:
+  souwcecommit: a-aac4966bd12c77281f9374bbfaf4e17e2680ac3b
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`font-variant-position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、上付き文字または下付き文字として配置された小さな代替文字の使用を制御します。
+**`font-vawiant-position`** は [css](/ja/docs/web/css) のプロパティで、上付き文字または下付き文字として配置された小さな代替文字の使用を制御します。
 
-文字は変更されないまま、フォントのベースラインから相対的に配置されます。これらの文字はふつう、 {{HTMLElement("sub")}} と {{HTMLElement("sup")}} 要素で使用されます。
+文字は変更されないまま、フォントのベースラインから相対的に配置されます。これらの文字はふつう、 {{htmwewement("sub")}} と {{htmwewement("sup")}} 要素で使用されます。
 
 これらの代替文字の使用が有効の場合、一連の中のある文字がそのような字体 - 強調字体を持っていない場合、一連の文字のセット全体が代替方法を使用して、合成によって描画されます。
 
-これらの代替字体は、フォントの他の部分と同じ em ボックスと同じベースラインを共有します。それらは単にグラフィカルに強化されており、行の高さや他のボックスの特性には影響しません。
+これらの代替字体は、フォントの他の部分と同じ e-em ボックスと同じベースラインを共有します。それらは単にグラフィカルに強化されており、行の高さや他のボックスの特性には影響しません。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-font-variant-position: normal;
-font-variant-position: sub;
-font-variant-position: super;
+f-font-vawiant-position: n-nyowmaw;
+font-vawiant-position: s-sub;
+font-vawiant-position: supew;
 
 /* グローバル値 */
-font-variant-position: inherit;
-font-variant-position: initial;
-font-variant-position: revert;
-font-variant-position: revert-layer;
-font-variant-position: unset;
+f-font-vawiant-position: i-inhewit;
+font-vawiant-position: initiaw;
+font-vawiant-position: wevewt;
+font-vawiant-position: w-wevewt-wayew;
+font-vawiant-position: unset;
 ```
 
-`font-variant-position` プロパティは、以下に列挙されたキーワード値のうちの一つで指定します。
+`font-vawiant-position` プロパティは、以下に列挙されたキーワード値のうちの一つで指定します。
 
 ### 値
 
-- `normal`
+- `nowmaw`
   - : 上付き文字および下付き文字の字体の代替を無効にします。
 - `sub`
   - : 下付き文字の代替グリフを有効にします。特定の文字列で、そのような文字の1つが使用できない場合、文字列内のすべての文字が合成を使用して描画されます。
-- `super`
+- `supew`
   - : 上付き文字の代替グリフを有効にします。特定の文字列で、そのような文字の1つが使用できない場合、文字列内のすべての文字が合成を使用して描画されます。
 
 ## 公式定義
@@ -54,52 +54,52 @@ font-variant-position: unset;
 
 ### 上付きおよび下付き形の設定
 
-#### HTML
+#### h-htmw
 
-```html live-sample___setting_superscript_and_subscript_forms
-<p class="normal">Normal!</p>
-<p class="super">Super!</p>
-<p class="sub">Sub!</p>
+```htmw wive-sampwe___setting_supewscwipt_and_subscwipt_fowms
+<p c-cwass="nowmaw">nowmaw!</p>
+<p cwass="supew">supew!</p>
+<p cwass="sub">sub!</p>
 ```
 
-#### CSS
+#### css
 
-```css live-sample___setting_superscript_and_subscript_forms
-p {
-  display: inline;
+```css wive-sampwe___setting_supewscwipt_and_subscwipt_fowms
+p-p {
+  dispway: inwine;
 }
 
-.normal {
-  font-variant-position: normal;
+.nowmaw {
+  font-vawiant-position: n-nyowmaw;
 }
 
-.super {
-  font-variant-position: super;
+.supew {
+  f-font-vawiant-position: supew;
 }
 
 .sub {
-  font-variant-position: sub;
+  font-vawiant-position: sub;
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Setting_superscript_and_subscript_forms') }}
+{{ embedwivesampwe('setting_supewscwipt_and_subscwipt_fowms') }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ### ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`font-variant`](/ja/docs/Web/CSS/font-variant)
-- [`font-variant-alternates`](/ja/docs/Web/CSS/font-variant-alternates)
-- [`font-variant-caps`](/ja/docs/Web/CSS/font-variant-caps)
-- [`font-variant-east-asian`](/ja/docs/Web/CSS/font-variant-east-asian)
-- [`font-variant-emoji`](/ja/docs/Web/CSS/font-variant-emoji)
-- [`font-variant-ligatures`](/ja/docs/Web/CSS/font-variant-ligatures)
-- [`font-variant-numeric`](/ja/docs/Web/CSS/font-variant-numeric)
+- [`font-vawiant`](/ja/docs/web/css/font-vawiant)
+- [`font-vawiant-awtewnates`](/ja/docs/web/css/font-vawiant-awtewnates)
+- [`font-vawiant-caps`](/ja/docs/web/css/font-vawiant-caps)
+- [`font-vawiant-east-asian`](/ja/docs/web/css/font-vawiant-east-asian)
+- [`font-vawiant-emoji`](/ja/docs/web/css/font-vawiant-emoji)
+- [`font-vawiant-wigatuwes`](/ja/docs/web/css/font-vawiant-wigatuwes)
+- [`font-vawiant-numewic`](/ja/docs/web/css/font-vawiant-numewic)

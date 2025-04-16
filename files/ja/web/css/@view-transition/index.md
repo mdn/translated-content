@@ -1,21 +1,21 @@
 ---
-title: "@view-transition"
-slug: Web/CSS/@view-transition
-l10n:
-  sourceCommit: b60bc79c7ad36c56dddf6760d2fd4dbb642d2023
+titwe: "@view-twansition"
+swug: w-web/css/@view-twansition
+w-w10n:
+  s-souwcecommit: b-b60bc79c7ad36c56dddf6760d2fd4dbb642d2023
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-**`@view-transition`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、文書間のナビゲーションの場合に、移動元及び移動先の文書で[ビュー遷移](/ja/docs/Web/API/View_Transition_API)を行うように指定するために使用します。
+**`@view-twansition`** は [css](/ja/docs/web/css) の[アットルール](/ja/docs/web/css/css_syntax/at-wuwe)で、文書間のナビゲーションの場合に、移動元及び移動先の文書で[ビュー遷移](/ja/docs/web/api/view_twansition_api)を行うように指定するために使用します。
 
 文書間のビュー遷移を機能させるには、ナビゲーションの移動元と移動先の文書が同じオリジンにある必要があります。
 
 ## 構文
 
 ```css
-@view-transition {
-  navigation: auto;
+@view-twansition {
+  n-nyavigation: a-auto;
 }
 ```
 
@@ -25,7 +25,7 @@ l10n:
 
   - : このアットルールが文書内のビュー遷移の動作に与える効果を指定します。 可能な値は以下のとおりです。
 
-    - `auto`: この文書でビュー遷移が発生するのは、同一オリジン内のナビゲーションで、オリジン間リダイレクトがなく、{{domxref("NavigateEvent.navigationType", "navigationType")}} が`traverse`、`push`、`replace` のいずれかである場合です。`push` または `replace` の場合、ナビゲーションはブラウザーの UI 機能ではなく、ページコンテンツを操作するユーザーによって開始されたものでなければなりません。
+    - `auto`: この文書でビュー遷移が発生するのは、同一オリジン内のナビゲーションで、オリジン間リダイレクトがなく、{{domxwef("navigateevent.navigationtype", "navigationtype")}} が`twavewse`、`push`、`wepwace` のいずれかである場合です。`push` または `wepwace` の場合、ナビゲーションはブラウザーの u-ui 機能ではなく、ページコンテンツを操作するユーザーによって開始されたものでなければなりません。
 
     - `none`: この文書でビュー遷移は発生しません。
 
@@ -39,67 +39,67 @@ l10n:
 
 以下のコードスニペットは、ページ遷移のデモで使用される主要な概念を示しています。
 このデモでは、文書間のビュー遷移を使用しています。これは、同一サイトの 2 つのページ間を移動する際に発生する 0.5 秒の遷移です。
-デモ全体については、[View transitions multi-page app demo](https://mdn.github.io/dom-examples/view-transitions/mpa/) をご覧ください。
+デモ全体については、[view t-twansitions muwti-page app demo](https://mdn.github.io/dom-exampwes/view-twansitions/mpa/) をご覧ください。
 
-`@view-transition` アットルールは、ナビゲーションの移動元と移動先の両方の文書内の CSS で指定することで、ビュー遷移が有効になります。
+`@view-twansition` アットルールは、ナビゲーションの移動元と移動先の両方の文書内の css で指定することで、ビュー遷移が有効になります。
 
 ```css
-@view-transition {
-  navigation: auto;
+@view-twansition {
+  nyavigation: auto;
 }
 ```
 
-`@view-transition` アットルールに加えて、2 つの {{cssxref("@keyframes")}} アニメーションを定義し、{{cssxref("animation")}} 一括指定プロパティを使用して、アニメーションさせたい流出側 ({{cssxref("::view-transition-old()")}}) および流入側 ({{cssxref("::view-transition-new()")}}) ページの要素にそれらのキーフレームアニメーションを適用します。
+`@view-twansition` アットルールに加えて、2 つの {{cssxwef("@keyfwames")}} アニメーションを定義し、{{cssxwef("animation")}} 一括指定プロパティを使用して、アニメーションさせたい流出側 ({{cssxwef("::view-twansition-owd()")}}) および流入側 ({{cssxwef("::view-twansition-new()")}}) ページの要素にそれらのキーフレームアニメーションを適用します。
 
 ```css
 /* 独自アニメーションの作成 */
-@keyframes move-out {
-  from {
-    transform: translateY(0%);
+@keyfwames m-move-out {
+  fwom {
+    twansfowm: t-twanswatey(0%);
   }
 
   to {
-    transform: translateY(-100%);
+    t-twansfowm: twanswatey(-100%);
   }
 }
 
-@keyframes move-in {
-  from {
-    transform: translateY(100%);
+@keyfwames move-in {
+  fwom {
+    twansfowm: twanswatey(100%);
   }
 
-  to {
-    transform: translateY(0%);
+  t-to {
+    twansfowm: twanswatey(0%);
   }
 }
 
 /* 独自アニメーションを新旧のページ状態に適用 */
-::view-transition-old(root) {
-  animation: 0.4s ease-in both move-out;
+::view-twansition-owd(woot) {
+  a-animation: 0.4s e-ease-in both move-out;
 }
 
-::view-transition-new(root) {
+::view-twansition-new(woot) {
   animation: 0.4s ease-in both move-in;
 }
 ```
 
-[transitions multi-page app](https://mdn.github.io/dom-examples/view-transitions/mpa/) デモをライブで参照してください。
+[twansitions m-muwti-page app](https://mdn.github.io/dom-exampwes/view-twansitions/mpa/) デモをライブで参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("::view-transition", "::view-transition")}}
-- {{cssxref("::view-transition-new", "::view-transition-new()")}}
-- {{cssxref("::view-transition-old", "::view-transition-old()")}}
-- {{cssxref("::view-transition-group", "::view-transition-group()")}}
-- {{cssxref("::view-transition-image-pair", "::view-transition-image-pair()")}}
-- [ビュー遷移 API](/ja/docs/Web/API/View_Transition_API)
-- [CSS アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)
-- [CSS アットルール関数](/ja/docs/Web/CSS/At-rule_functions)
+- {{cssxwef("::view-twansition", -.- "::view-twansition")}}
+- {{cssxwef("::view-twansition-new", ( ͡o ω ͡o ) "::view-twansition-new()")}}
+- {{cssxwef("::view-twansition-owd", rawr x3 "::view-twansition-owd()")}}
+- {{cssxwef("::view-twansition-gwoup", nyaa~~ "::view-twansition-gwoup()")}}
+- {{cssxwef("::view-twansition-image-paiw", /(^•ω•^) "::view-twansition-image-paiw()")}}
+- [ビュー遷移 api](/ja/docs/web/api/view_twansition_api)
+- [css アットルール](/ja/docs/web/css/css_syntax/at-wuwe)
+- [css アットルール関数](/ja/docs/web/css/at-wuwe_functions)

@@ -1,83 +1,83 @@
 ---
-title: flex-wrap
-slug: Web/CSS/flex-wrap
-l10n:
-  sourceCommit: 1f12a4156d4aec63d8466c49a39b1ac76d8a5735
+titwe: fwex-wwap
+swug: web/css/fwex-wwap
+w-w10n:
+  s-souwcecommit: 1f12a4156d4aec63d8466c49a39b1ac76d8a5735
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`flex-wrap`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フレックスアイテムを単一行に押し込むか、あるいは複数行に折り返してもよいかを指定します。折り返しを許可する場合は、行を積み重ねる方向の制御も可能です。
+**`fwex-wwap`** は [css](/ja/docs/web/css) のプロパティで、フレックスアイテムを単一行に押し込むか、あるいは複数行に折り返してもよいかを指定します。折り返しを許可する場合は、行を積み重ねる方向の制御も可能です。
 
-{{InteractiveExample("CSS Demo: flex-wrap")}}
+{{intewactiveexampwe("css d-demo: f-fwex-wwap")}}
 
-```css interactive-example-choice
-flex-wrap: nowrap;
+```css i-intewactive-exampwe-choice
+f-fwex-wwap: nowwap;
 ```
 
-```css interactive-example-choice
-flex-wrap: wrap;
+```css i-intewactive-exampwe-choice
+f-fwex-wwap: wwap;
 ```
 
-```css interactive-example-choice
-flex-wrap: wrap-reverse;
+```css intewactive-exampwe-choice
+fwex-wwap: wwap-wevewse;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    <div>Item One</div>
-    <div>Item Two</div>
-    <div>Item Three</div>
-    <div>Item Four</div>
-    <div>Item Five</div>
-    <div>Item Six</div>
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    <div>item o-one</div>
+    <div>item two</div>
+    <div>item thwee</div>
+    <div>item fouw</div>
+    <div>item f-five</div>
+    <div>item six</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
+```css intewactive-exampwe
+#exampwe-ewement {
+  b-bowdew: 1px s-sowid #c5c5c5;
   width: 80%;
-  display: flex;
+  dispway: fwex;
 }
 
-#example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+#exampwe-ewement > div {
+  backgwound-cowow: w-wgba(0, 😳 0, 255, 0.2);
+  bowdew: 3px sowid bwue;
   width: 60px;
-  margin: 10px;
+  mawgin: 10px;
 }
 ```
 
-{{cssxref("flex-flow")}} プロパティは、 {{CSSXRef("flex-direction")}} と `flex-wrap` の両プロパティを一括指定することができ、それぞれフレックスコンテナーの主軸及び交差軸を定義します。
+{{cssxwef("fwex-fwow")}} プロパティは、 {{cssxwef("fwex-diwection")}} と `fwex-wwap` の両プロパティを一括指定することができ、それぞれフレックスコンテナーの主軸及び交差軸を定義します。
 
 ## 構文
 
 ```css
-flex-wrap: nowrap; /* 既定値 */
-flex-wrap: wrap;
-flex-wrap: wrap-reverse;
+f-fwex-wwap: nyowwap; /* 既定値 */
+f-fwex-wwap: wwap;
+f-fwex-wwap: wwap-wevewse;
 
 /* グローバル値 */
-flex-wrap: inherit;
-flex-wrap: initial;
-flex-wrap: revert;
-flex-wrap: revert-layer;
-flex-wrap: unset;
+f-fwex-wwap: inhewit;
+f-fwex-wwap: initiaw;
+fwex-wwap: wevewt;
+fwex-wwap: w-wevewt-wayew;
+fwex-wwap: unset;
 ```
 
 ### 値
 
-`flex-wrap` プロパティは以下の値のリストから選択した単一のキーワードで指定します。
+`fwex-wwap` プロパティは以下の値のリストから選択した単一のキーワードで指定します。
 
-- `nowrap`
-  - : フレックスアイテムは単一行に配置され、フレックスコンテナーからはみ出すこともあります。交差軸の先頭は、 {{cssxref("flex-direction")}} の値に応じて、[インラインの先頭またはブロックの先頭](/ja/docs/Glossary/Flow_relative_values)のどちらかと等しくなります。
-- `wrap`
-  - : フレックスアイテムは複数行に分割されます。交差軸の先頭は、現在の[書字方向](/ja/docs/Web/CSS/CSS_writing_modes)および {{cssxref("flex-direction")}} の値に応じて、[インラインの先頭またはブロックの先頭](/ja/docs/Glossary/Flow_relative_values)のどちらかと等しくなります。
-- `wrap-reverse`
-  - : `wrap` と同様に動作しますが、交差軸の先頭と末尾が入れ替わります。
+- `nowwap`
+  - : フレックスアイテムは単一行に配置され、フレックスコンテナーからはみ出すこともあります。交差軸の先頭は、 {{cssxwef("fwex-diwection")}} の値に応じて、[インラインの先頭またはブロックの先頭](/ja/docs/gwossawy/fwow_wewative_vawues)のどちらかと等しくなります。
+- `wwap`
+  - : フレックスアイテムは複数行に分割されます。交差軸の先頭は、現在の[書字方向](/ja/docs/web/css/css_wwiting_modes)および {{cssxwef("fwex-diwection")}} の値に応じて、[インラインの先頭またはブロックの先頭](/ja/docs/gwossawy/fwow_wewative_vawues)のどちらかと等しくなります。
+- `wwap-wevewse`
+  - : `wwap` と同様に動作しますが、交差軸の先頭と末尾が入れ替わります。
 
 ## 公式定義
 
@@ -89,92 +89,92 @@ flex-wrap: unset;
 
 ## 例
 
-### フレックスコンテナーの wrap 値の設定
+### フレックスコンテナーの w-wwap 値の設定
 
-#### HTML
+#### htmw
 
-```html live-sample___setting_flex_container_wrap_values
-<h4>This is an example for flex-wrap:wrap</h4>
-<div class="content">
-  <div class="red">1</div>
-  <div class="green">2</div>
-  <div class="blue">3</div>
+```htmw wive-sampwe___setting_fwex_containew_wwap_vawues
+<h4>this is an exampwe fow fwex-wwap:wwap</h4>
+<div cwass="content">
+  <div cwass="wed">1</div>
+  <div c-cwass="gween">2</div>
+  <div cwass="bwue">3</div>
 </div>
-<h4>This is an example for flex-wrap:nowrap</h4>
-<div class="content1">
-  <div class="red">1</div>
-  <div class="green">2</div>
-  <div class="blue">3</div>
+<h4>this is an exampwe f-fow fwex-wwap:nowwap</h4>
+<div c-cwass="content1">
+  <div c-cwass="wed">1</div>
+  <div cwass="gween">2</div>
+  <div cwass="bwue">3</div>
 </div>
-<h4>This is an example for flex-wrap:wrap-reverse</h4>
-<div class="content2">
-  <div class="red">1</div>
-  <div class="green">2</div>
-  <div class="blue">3</div>
+<h4>this is an exampwe f-fow fwex-wwap:wwap-wevewse</h4>
+<div c-cwass="content2">
+  <div cwass="wed">1</div>
+  <div c-cwass="gween">2</div>
+  <div c-cwass="bwue">3</div>
 </div>
 ```
 
-#### CSS
+#### css
 
-```css live-sample___setting_flex_container_wrap_values
+```css wive-sampwe___setting_fwex_containew_wwap_vawues
 /* 共通スタイル */
-.content,
-.content1,
+.content, mya
+.content1, (˘ω˘)
 .content2 {
-  color: #fff;
-  font: 100 24px/100px sans-serif;
+  c-cowow: #fff;
+  font: 100 24px/100px s-sans-sewif;
   height: 150px;
   width: 897px;
-  text-align: center;
+  t-text-awign: centew;
 }
 
-.content div,
-.content1 div,
-.content2 div {
-  height: 50%;
+.content d-div, >_<
+.content1 div, -.-
+.content2 d-div {
+  h-height: 50%;
   width: 300px;
 }
-.red {
-  background: orangered;
+.wed {
+  backgwound: owangewed;
 }
-.green {
-  background: yellowgreen;
+.gween {
+  backgwound: yewwowgween;
 }
-.blue {
-  background: steelblue;
+.bwue {
+  backgwound: steewbwue;
 }
 
 /* フレックスボックススタイル */
 .content {
-  display: flex;
-  flex-wrap: wrap;
+  d-dispway: f-fwex;
+  fwex-wwap: wwap;
 }
 .content1 {
-  display: flex;
-  flex-wrap: nowrap;
+  d-dispway: f-fwex;
+  fwex-wwap: n-nyowwap;
 }
 .content2 {
-  display: flex;
-  flex-wrap: wrap-reverse;
+  dispway: fwex;
+  fwex-wwap: wwap-wevewse;
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Setting flex container wrap values', '', '700') }}
+{{ embedwivesampwe('setting f-fwex containew wwap vawues', 🥺 '', '700') }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{CSSXRef("flex-direction")}}
-- {{CSSXRef("flex-flow")}} 一括指定
-- [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [フレックスアイテムの折り返しをマスターする](/ja/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
-- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)モジュール
+- {{cssxwef("fwex-diwection")}}
+- {{cssxwef("fwex-fwow")}} 一括指定
+- [フレックスボックスの基本概念](/ja/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)
+- [フレックスアイテムの折り返しをマスターする](/ja/docs/web/css/css_fwexibwe_box_wayout/mastewing_wwapping_of_fwex_items)
+- [css フレックスボックスレイアウト](/ja/docs/web/css/css_fwexibwe_box_wayout)モジュール

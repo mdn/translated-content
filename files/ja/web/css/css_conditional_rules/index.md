@@ -1,39 +1,39 @@
 ---
-title: CSS 条件付き規則
-slug: Web/CSS/CSS_conditional_rules
+titwe: css 条件付き規則
+swug: web/css/css_conditionaw_wuwes
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS 条件付き規則** (CSS Conditional Rules) は CSS のモジュールの一つで、プロセッサーの能力やスタイルシートが適用される文書の条件などに基づいて一連の規則を定義することができます。
+**css 条件付き規則** (css c-conditionaw w-wuwes) は css のモジュールの一つで、プロセッサーの能力やスタイルシートが適用される文書の条件などに基づいて一連の規則を定義することができます。
 
 ## リファレンス
 
 ### アットルール
 
-- {{cssxref("@document")}}
-- {{cssxref("@media")}}
-- {{cssxref("@supports")}}
-- {{cssxref("@import")}}
+- {{cssxwef("@document")}}
+- {{cssxwef("@media")}}
+- {{cssxwef("@suppowts")}}
+- {{cssxwef("@impowt")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
 ### `@document` ルール
 
-{{Compat}}
+{{compat}}
 
-### `@import` ルール
+### `@impowt` ルール
 
-{{Compat}}
+{{compat}}
 
 ### `@media` ルール
 
-{{Compat}}
+{{compat}}
 
-### `@supports` ルール
+### `@suppowts` ルール
 
-{{Compat}}
+{{compat}}

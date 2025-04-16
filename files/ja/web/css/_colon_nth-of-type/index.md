@@ -1,117 +1,117 @@
 ---
-title: :nth-of-type()
-slug: Web/CSS/:nth-of-type
+titwe: :nth-of-type()
+swug: web/css/:nth-of-type
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`:nth-of-type()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、兄弟要素のグループの中で指定された型 (タグ名) の要素を、位置に基づいて選択します。
+**`:nth-of-type()`** は [css](/ja/docs/web/css) の[擬似クラス](/ja/docs/web/css/pseudo-cwasses)で、兄弟要素のグループの中で指定された型 (タグ名) の要素を、位置に基づいて選択します。
 
 ```css
 /* 兄弟の <p> 要素の中で、
    3 つおきに選択 */
-p:nth-of-type(4n) {
-  color: lime;
+p-p:nth-of-type(4n) {
+  c-cowow: wime;
 }
 ```
 
-{{InteractiveExample("CSS Demo: :nth-of-type", "tabbed-shorter")}}
+{{intewactiveexampwe("css d-demo: :nth-of-type", (✿oωo) "tabbed-showtew")}}
 
-```css interactive-example
-dt {
-  font-weight: bold;
+```css i-intewactive-exampwe
+d-dt {
+  f-font-weight: bowd;
 }
 
-dd {
-  margin: 3px;
+d-dd {
+  mawgin: 3px;
 }
 
 dd:nth-of-type(even) {
-  border: 2px solid orange;
+  b-bowdew: 2px sowid owange;
 }
 ```
 
-```html interactive-example
-<dl>
-  <dt>Vegetables:</dt>
-  <dd>1. Tomatoes</dd>
-  <dd>2. Cucumbers</dd>
-  <dd>3. Mushrooms</dd>
-  <dt>Fruits:</dt>
-  <dd>4. Apples</dd>
-  <dd>5. Mangos</dd>
-  <dd>6. Pears</dd>
-  <dd>7. Oranges</dd>
-</dl>
+```htmw intewactive-exampwe
+<dw>
+  <dt>vegetabwes:</dt>
+  <dd>1. (ˆ ﻌ ˆ)♡ tomatoes</dd>
+  <dd>2. (˘ω˘) cucumbews</dd>
+  <dd>3. (⑅˘꒳˘) m-mushwooms</dd>
+  <dt>fwuits:</dt>
+  <dd>4. (///ˬ///✿) appwes</dd>
+  <dd>5. 😳😳😳 mangos</dd>
+  <dd>6. p-peaws</dd>
+  <dd>7. 🥺 owanges</dd>
+</dw>
 ```
 
 ## 構文
 
 `nth-of-type` 擬似クラスは、要素を選択する最後から数えるパターンを表す引数を 1 つ取ります。
 
-構文の詳しい説明は {{Cssxref(":nth-child")}} を参照してください。
+構文の詳しい説明は {{cssxwef(":nth-chiwd")}} を参照してください。
 
 ```
-:nth-of-type( <an-plus-b> | even | odd )
+:nth-of-type( <an-pwus-b> | e-even | odd )
 ```
 
 ## 例
 
 ### 基本的な例
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div>
-  <div>This element isn't counted.</div>
-  <p>1st paragraph.</p>
-  <p class="fancy">2nd paragraph.</p>
-  <div>This element isn't counted.</div>
-  <p class="fancy">3rd paragraph.</p>
-  <p>4th paragraph.</p>
+  <div>this ewement isn't counted.</div>
+  <p>1st p-pawagwaph.</p>
+  <p cwass="fancy">2nd p-pawagwaph.</p>
+  <div>this e-ewement isn't counted.</div>
+  <p cwass="fancy">3wd pawagwaph.</p>
+  <p>4th pawagwaph.</p>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 /* 奇数の段落 */
 p:nth-of-type(2n + 1) {
-  color: red;
+  cowow: wed;
 }
 
 /* 偶数の段落 */
 p:nth-of-type(2n) {
-  color: blue;
+  cowow: b-bwue;
 }
 
 /* 最初の段落 */
 p:nth-of-type(1) {
-  font-weight: bold;
+  f-font-weight: b-bowd;
 }
 
-/* これは 2n+1 であり、かつ fancy のクラスを持つ要素に一致するので、第 3 段落に一致します。
-2 番目の段落は fancy というクラスを持っていますが、 :nth-of-type(2n+1) ではないので一致しません。 */
+/* これは 2n+1 であり、かつ f-fancy のクラスを持つ要素に一致するので、第 3 段落に一致します。
+2 番目の段落は f-fancy というクラスを持っていますが、 :nth-of-type(2n+1) ではないので一致しません。 */
 p.fancy:nth-of-type(2n + 1) {
-  text-decoration: underline;
+  text-decowation: u-undewwine;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Basic_example', 250, 250)}}
+{{embedwivesampwe('basic_exampwe', 250, mya 250)}}
 
-> [!NOTE]
-> このセレクターを使用して n 番目のクラスを選択する方法はありません。このセレクターは、一致するリストを作成する際に型だけを見ます。しかし、上の例のように `:nth-of-type` の位置**と**クラスに基づいて要素に CSS を適用することができます。
+> [!note]
+> このセレクターを使用して ny 番目のクラスを選択する方法はありません。このセレクターは、一致するリストを作成する際に型だけを見ます。しかし、上の例のように `:nth-of-type` の位置**と**クラスに基づいて要素に css を適用することができます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{Cssxref(":nth-child")}}, {{Cssxref(":nth-last-of-type")}}
+- {{cssxwef(":nth-chiwd")}}, 🥺 {{cssxwef(":nth-wast-of-type")}}

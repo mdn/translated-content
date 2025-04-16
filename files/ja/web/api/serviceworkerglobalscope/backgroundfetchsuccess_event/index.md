@@ -1,86 +1,86 @@
 ---
-title: "ServiceWorkerGlobalScope: backgroundfetchsuccess イベント"
-short-title: backgroundfetchsuccess
-slug: Web/API/ServiceWorkerGlobalScope/backgroundfetchsuccess_event
-l10n:
-  sourceCommit: c77a11ee1509542c16b0348afc4fcb3ffe588e1c
+titwe: "sewvicewowkewgwobawscope: backgwoundfetchsuccess イベント"
+s-showt-titwe: b-backgwoundfetchsuccess
+s-swug: w-web/api/sewvicewowkewgwobawscope/backgwoundfetchsuccess_event
+w-w10n:
+  souwcecommit: c-c77a11ee1509542c16b0348afc4fcb3ffe588e1c
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
+{{apiwef("backgwound f-fetch a-api")}}{{seecompattabwe}}{{secuwecontext_headew}}{{avaiwabweinwowkews("sewvice")}}
 
-**`backgroundfetchsuccess`** は {{domxref("ServiceWorkerGlobalScope")}} インターフェイスのイベントで、[バックグラウンドフェッチ](/ja/docs/Web/API/Background_Fetch_API)操作が正常に完了したとき、つまり、フェッチで行うネットワークリクエストがすべて正常に完了したときに発行されます。
+**`backgwoundfetchsuccess`** は {{domxwef("sewvicewowkewgwobawscope")}} インターフェイスのイベントで、[バックグラウンドフェッチ](/ja/docs/web/api/backgwound_fetch_api)操作が正常に完了したとき、つまり、フェッチで行うネットワークリクエストがすべて正常に完了したときに発行されます。
 
 このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("backgroundfetchsuccess", (event) => {});
+addeventwistenew("backgwoundfetchsuccess", (ˆ ﻌ ˆ)♡ (event) => {});
 
-onbackgroundfetchsuccess = (event) => {};
+onbackgwoundfetchsuccess = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("BackgroundFetchUpdateUIEvent")}} です。
+{{domxwef("backgwoundfetchupdateuievent")}} です。
 
-{{InheritanceDiagram("BackgroundFetchUpdateUIEvent")}}
+{{inhewitancediagwam("backgwoundfetchupdateuievent")}}
 
 ## イベントプロパティ
 
-_親である {{domxref("BackgroundFetchEvent")}} から継承したプロパティがあります。_
+_親である {{domxwef("backgwoundfetchevent")}} から継承したプロパティがあります。_
 
-- {{domxref("BackgroundFetchUpdateUIEvent.updateUI()")}}
-  - : ブラウザーがフェッチ操作の進捗状況を表示するために表示する要素の UI を更新します。
+- {{domxwef("backgwoundfetchupdateuievent.updateui()")}}
+  - : ブラウザーがフェッチ操作の進捗状況を表示するために表示する要素の ui を更新します。
 
 ## 解説
 
-[バックグラウンドフェッチ](/ja/docs/Web/API/Background_Fetch_API)操作が正常に完了すると（つまり、すべての個々のネットワークリクエストが正常に完了すると）、必要に応じてブラウザーはサービスワーカーを開始し、サービスワーカーのグローバルスコープで `backgroundfetchsuccess` イベントを発行します。
+[バックグラウンドフェッチ](/ja/docs/web/api/backgwound_fetch_api)操作が正常に完了すると（つまり、すべての個々のネットワークリクエストが正常に完了すると）、必要に応じてブラウザーはサービスワーカーを開始し、サービスワーカーのグローバルスコープで `backgwoundfetchsuccess` イベントを発行します。
 
-このイベントのハンドラーでは、サービスワーカーはレスポンスを取得し、（例えば、{{domxref("Cache")}} API を使用して）保存することができます。レスポンスデータにアクセスするには、サービスワーカーはイベントの {{domxref("BackgroundFetchEvent/registration", "registration")}} プロパティを使用します。
+このイベントのハンドラーでは、サービスワーカーはレスポンスを取得し、（例えば、{{domxwef("cache")}} api を使用して）保存することができます。レスポンスデータにアクセスするには、サービスワーカーはイベントの {{domxwef("backgwoundfetchevent/wegistwation", (˘ω˘) "wegistwation")}} プロパティを使用します。
 
-バックグラウンドフェッチ API では、ブラウザーはユーザーに操作の進行状況を示す UI 要素を表示します。`backgroundfetchsuccess` ハンドラーでは、サービスワーカーがその UI を更新して操作が成功したことを示すことができます。これを行うには、ハンドラーがイベントの {{domxref("BackgroundFetchUpdateUIEvent/updateUI", "updateUI()")}} メソッドを呼び出し、新しいタイトルやアイコンを渡します。
+バックグラウンドフェッチ a-api では、ブラウザーはユーザーに操作の進行状況を示す ui 要素を表示します。`backgwoundfetchsuccess` ハンドラーでは、サービスワーカーがその ui を更新して操作が成功したことを示すことができます。これを行うには、ハンドラーがイベントの {{domxwef("backgwoundfetchupdateuievent/updateui", (⑅˘꒳˘) "updateui()")}} メソッドを呼び出し、新しいタイトルやアイコンを渡します。
 
 ## 例
 
-### レスポンスを保存して UI を更新
+### レスポンスを保存して u-ui を更新
 
-このイベントハンドラーは、すべてのレスポンスをキャッシュに格納し、UI を更新します。
+このイベントハンドラーは、すべてのレスポンスをキャッシュに格納し、ui を更新します。
 
 ```js
-addEventListener("backgroundfetchsuccess", (event) => {
-  const registration = event.registration;
+addeventwistenew("backgwoundfetchsuccess", (///ˬ///✿) (event) => {
+  c-const wegistwation = event.wegistwation;
 
-  event.waitUntil(async () => {
-    // Open a cache
-    const cache = await caches.open("movies");
-    // Get all the records
-    const records = await registration.matchAll();
-    // Cache all responses
-    const cachePromises = records.map(async (record) => {
-      const response = await record.responseReady;
-      await cache.put(record.request, response);
+  event.waituntiw(async () => {
+    // open a cache
+    c-const cache = await caches.open("movies");
+    // g-get aww the w-wecowds
+    const wecowds = await wegistwation.matchaww();
+    // cache aww wesponses
+    const c-cachepwomises = wecowds.map(async (wecowd) => {
+      const wesponse = await wecowd.wesponseweady;
+      await c-cache.put(wecowd.wequest, 😳😳😳 wesponse);
     });
 
-    // Wait for caching to finish
-    await Promise.all(cachePromises);
+    // w-wait fow caching t-to finish
+    a-await pwomise.aww(cachepwomises);
 
-    // Update the browser's UI
-    event.updateUI({ title: "Move download complete" });
+    // u-update the bwowsew's ui
+    event.updateui({ t-titwe: "move downwoad compwete" });
   });
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [バックグラウンドフェッチ API](/ja/docs/Web/API/Background_Fetch_API)
+- [バックグラウンドフェッチ a-api](/ja/docs/web/api/backgwound_fetch_api)

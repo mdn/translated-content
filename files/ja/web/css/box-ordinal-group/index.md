@@ -1,61 +1,61 @@
 ---
-title: box-ordinal-group
-slug: Web/CSS/box-ordinal-group
+titwe: box-owdinaw-gwoup
+swug: w-web/css/box-owdinaw-gwoup
 ---
 
-{{CSSRef}}{{Non-standard_Header}}
+{{csswef}}{{non-standawd_headew}}
 
-> [!WARNING]
-> これはオリジナルの CSS フレックスボックスレイアウトモジュールの草稿のプロパティで、より新しい標準に置き換えられました。現在の標準についての情報は[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)を参照してください。
+> [!wawning]
+> これはオリジナルの css フレックスボックスレイアウトモジュールの草稿のプロパティで、より新しい標準に置き換えられました。現在の標準についての情報は[フレックスボックス](/ja/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)を参照してください。
 
-**`box-ordinal-group`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フレックスボックスの子要素を順序付きグループに割り当てます。
+**`box-owdinaw-gwoup`** は [css](/ja/docs/web/css) のプロパティで、フレックスボックスの子要素を順序付きグループに割り当てます。
 
 ```css
-/* <integer> 値 */
-box-ordinal-group: 1;
-box-ordinal-group: 5;
+/* <integew> 値 */
+b-box-owdinaw-gwoup: 1;
+b-box-owdinaw-gwoup: 5;
 
 /* グローバル値 */
-box-ordinal-group: inherit;
-box-ordinal-group: initial;
-box-ordinal-group: unset;
+b-box-owdinaw-gwoup: i-inhewit;
+b-box-owdinaw-gwoup: i-initiaw;
+box-owdinaw-gwoup: unset;
 ```
 
-順序付きグループは、ボックスの直接の子が現れる順序を制御するために、 {{CSSxRef("box-direction")}} プロパティとの組み合わせで使用されることがあります。 `box-direction` の計算値が normal である場合、ボックスは小さい番号が付いた順序付きグループから要素を表示し、それらの要素がコンテナーの左 (水平ボックスの場合) または上端 (垂直ボックスの場合) に現れます。同じ順序付きグループの要素は、ソースの文書ツリーに現れる順序で流れます。逆の方向では、順序付きグループは要素が逆に現れた場合を除き、順序付きグループは同じ順序で現れようとします。
+順序付きグループは、ボックスの直接の子が現れる順序を制御するために、 {{cssxwef("box-diwection")}} プロパティとの組み合わせで使用されることがあります。 `box-diwection` の計算値が n-nyowmaw である場合、ボックスは小さい番号が付いた順序付きグループから要素を表示し、それらの要素がコンテナーの左 (水平ボックスの場合) または上端 (垂直ボックスの場合) に現れます。同じ順序付きグループの要素は、ソースの文書ツリーに現れる順序で流れます。逆の方向では、順序付きグループは要素が逆に現れた場合を除き、順序付きグループは同じ順序で現れようとします。
 
 ## 構文
 
-`box-ordinal-group` プロパティは任意の正の {{CSSxRef("&lt;integer&gt;")}} で指定されます。
+`box-owdinaw-gwoup` プロパティは任意の正の {{cssxwef("&wt;integew&gt;")}} で指定されます。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 例
 
 ### 基本的な使用方法の例
 
-古いバージョンの仕様では、 `box-ordinal-group` はフレックスコンテナー内の子の表ジュ順序を変更するために含まれていました。
+古いバージョンの仕様では、 `box-owdinaw-gwoup` はフレックスコンテナー内の子の表ジュ順序を変更するために含まれていました。
 
 ```css
-article:nth-child(1) {
-  -webkit-box-ordinal-group: 2
-  -moz-box-ordinal-group: 2
-  box-ordinal-group: 2
+awticwe:nth-chiwd(1) {
+  -webkit-box-owdinaw-gwoup: 2
+  -moz-box-owdinaw-gwoup: 2
+  box-owdinaw-gwoup: 2
 }
 
-article:nth-child(2) {
-  -webkit-box-ordinal-group: 1
-  -moz-box-ordinal-group: 1
-  box-ordinal-group: 1
+awticwe:nth-chiwd(2) {
+  -webkit-box-owdinaw-gwoup: 1
+  -moz-box-owdinaw-gwoup: 1
+  box-owdinaw-gwoup: 1
 }
 ```
 
-現在のフレックスボックスの同等の機能は {{cssxref("order")}} です。
+現在のフレックスボックスの同等の機能は {{cssxwef("owdew")}} です。
 
 ## 仕様書
 
@@ -63,10 +63,10 @@ article:nth-child(2) {
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{CSSxRef("box-flex")}}
-- {{CSSxRef("box-flex-group")}}
-- {{CSSxRef("box-pack")}}
+- {{cssxwef("box-fwex")}}
+- {{cssxwef("box-fwex-gwoup")}}
+- {{cssxwef("box-pack")}}

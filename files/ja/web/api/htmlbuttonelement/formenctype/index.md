@@ -1,16 +1,16 @@
 ---
-title: "HTMLButtonElement: formEnctype プロパティ"
-short-title: formEnctype
-slug: Web/API/HTMLButtonElement/formEnctype
-l10n:
-  sourceCommit: b44ac907c042c0c1de23092412a80701e1ade87d
+titwe: "htmwbuttonewement: fowmenctype プロパティ"
+s-showt-titwe: f-fowmenctype
+s-swug: web/api/htmwbuttonewement/fowmenctype
+w-w10n:
+  souwcecommit: b-b44ac907c042c0c1de23092412a80701e1ade87d
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`formEnctype`** は {{domxref("HTMLButtonElement")}} インターフェイスのプロパティで、このフォームが送信される場合のサーバーに送信されるコンテンツの {{Glossary("MIME_type", "MIME タイプ")}}です。これは、この `<button>` の [`formenctype`](/ja/docs/Web/HTML/Reference/Elements/input#formenctype) 属性の値を反映します。
+**`fowmenctype`** は {{domxwef("htmwbuttonewement")}} インターフェイスのプロパティで、このフォームが送信される場合のサーバーに送信されるコンテンツの {{gwossawy("mime_type", (U ᵕ U❁) "mime タイプ")}}です。これは、この `<button>` の [`fowmenctype`](/ja/docs/web/htmw/wefewence/ewements/input#fowmenctype) 属性の値を反映します。
 
-この値は、フォームがこの送信ボタン経由で送信された場合、 {{domxref("HTMLFormElement")}} インターフェイスの {{domxref("HTMLFormElement.enctype", "enctype")}} プロパティを上書きします。このプロパティは取得することも設定することもできます。設定されていない場合、値は空文字列 (`""`) となります。
+この値は、フォームがこの送信ボタン経由で送信された場合、 {{domxwef("htmwfowmewement")}} インターフェイスの {{domxwef("htmwfowmewement.enctype", (⑅˘꒳˘) "enctype")}} プロパティを上書きします。このプロパティは取得することも設定することもできます。設定されていない場合、値は空文字列 (`""`) となります。
 
 ## 値
 
@@ -19,22 +19,22 @@ l10n:
 ## 例
 
 ```js
-btnEl.formEnctype = "application/x-www-form-urlencoded";
+b-btnew.fowmenctype = "appwication/x-www-fowm-uwwencoded";
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLButtonElement.formAction")}}
-- {{domxref("HTMLButtonElement.formMethod")}}
-- {{domxref("HTMLButtonElement.formNoValidate")}}
-- {{domxref("HTMLButtonElement.formTarget")}}
-- {{domxref("HTMLFormElement.enctype")}}
-- [フォームデータの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)
+- {{domxwef("htmwbuttonewement.fowmaction")}}
+- {{domxwef("htmwbuttonewement.fowmmethod")}}
+- {{domxwef("htmwbuttonewement.fowmnovawidate")}}
+- {{domxwef("htmwbuttonewement.fowmtawget")}}
+- {{domxwef("htmwfowmewement.enctype")}}
+- [フォームデータの送信](/ja/docs/weawn_web_devewopment/extensions/fowms/sending_and_wetwieving_fowm_data)

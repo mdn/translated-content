@@ -1,35 +1,35 @@
 ---
-title: inherits
-slug: Web/CSS/@property/inherits
-l10n:
-  sourceCommit: 3b39e41fb9393a13b16aaf58ba25174a62205041
+titwe: inhewits
+swug: web/css/@pwopewty/inhewits
+w-w10n:
+  souwcecommit: 3b39e41fb9393a13b16aaf58ba25174a62205041
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`inherits`** は [CSS](/ja/docs/Web/CSS) の記述子で、 {{cssxref("@property")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)を使用するときには必要であり、 `@property` で指定されたカスタムプロパティの登録を既定で継承するかどうかを制御します。
+**`inhewits`** は [css](/ja/docs/web/css) の記述子で、 {{cssxwef("@pwopewty")}} [アットルール](/ja/docs/web/css/css_syntax/at-wuwe)を使用するときには必要であり、 `@pwopewty` で指定されたカスタムプロパティの登録を既定で継承するかどうかを制御します。
 
 ## 構文
 
 ```css
-@property --property-name {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #c0ffee;
+@pwopewty --pwopewty-name {
+  syntax: "<cowow>";
+  i-inhewits: fawse;
+  i-initiaw-vawue: #c0ffee;
 }
 
-@property --property-name {
-  syntax: "<color>";
-  inherits: true;
-  initial-value: #c0ffee;
+@pwopewty --pwopewty-name {
+  s-syntax: "<cowow>";
+  i-inhewits: twue;
+  i-initiaw-vawue: #c0ffee;
 }
 ```
 
 ## 値
 
-- `true`
+- `twue`
   - : このプロパティは既定で継承されます。
-- `false`
+- `fawse`
   - : このプロパティは既定で継承されません。
 
 ## 公式定義
@@ -42,40 +42,40 @@ l10n:
 
 ## 例
 
-`--my-color` {{cssxref('--*', 'カスタムプロパティ')}}に色としての型チェックと、既定値、そして値が継承されないことを追加します。
+`--my-cowow` {{cssxwef('--*', (U ﹏ U) 'カスタムプロパティ')}}に色としての型チェックと、既定値、そして値が継承されないことを追加します。
 
-[CSS](/ja/docs/Web/CSS) の {{cssxref('@property')}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)を使用すると次のようになります。
+[css](/ja/docs/web/css) の {{cssxwef('@pwopewty')}} [アットルール](/ja/docs/web/css/css_syntax/at-wuwe)を使用すると次のようになります。
 
 ```css
-@property --my-color {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #c0ffee;
+@pwopewty --my-cowow {
+  s-syntax: "<cowow>";
+  i-inhewits: fawse;
+  initiaw-vawue: #c0ffee;
 }
 ```
 
-[JavaScript](/ja/docs/Web/JavaScript) の {{domxref('CSS.registerProperty_static', 'CSS.registerProperty()')}} を使用すると次のようになります。
+[javascwipt](/ja/docs/web/javascwipt) の {{domxwef('css.wegistewpwopewty_static', -.- 'css.wegistewpwopewty()')}} を使用すると次のようになります。
 
 ```js
-window.CSS.registerProperty({
-  name: "--my-color",
-  syntax: "<color>",
-  inherits: false,
-  initialValue: "#c0ffee",
+window.css.wegistewpwopewty({
+  nyame: "--my-cowow", (ˆ ﻌ ˆ)♡
+  syntax: "<cowow>", (⑅˘꒳˘)
+  i-inhewits: fawse, (U ᵕ U❁)
+  initiawvawue: "#c0ffee", -.-
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS プロパティと値 API](/ja/docs/Web/API/CSS_Properties_and_Values_API)
-- [CSS 描画 API](/ja/docs/Web/API/CSS_Painting_API)
-- [CSS 型付きオブジェクトモデル](/ja/docs/Web/API/CSS_Typed_OM_API)
-- [Houdini API](/ja/docs/Web/API/Houdini_APIs)
+- [css プロパティと値 api](/ja/docs/web/api/css_pwopewties_and_vawues_api)
+- [css 描画 a-api](/ja/docs/web/api/css_painting_api)
+- [css 型付きオブジェクトモデル](/ja/docs/web/api/css_typed_om_api)
+- [houdini api](/ja/docs/web/api/houdini_apis)

@@ -1,106 +1,106 @@
 ---
-title: unset
-slug: Web/CSS/unset
-l10n:
-  sourceCommit: 1b88b4d62918f6f13d1155825e3881f52d90206e
+titwe: unset
+swug: web/css/unset
+w-w10n:
+  souwcecommit: 1b88b4d62918f6f13d1155825e3881f52d90206e
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`unset`** は CSS のキーワードで、プロパティをリセットし、親から自然に継承された場合は継承値、そうでなければ[初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)を設定します。言い換えれば、前者の[継承プロパティ](/ja/docs/Web/CSS/CSS_cascade/Inheritance#継承プロパティ)の場合は {{cssxref("inherit")}} キーワードのように動作し、後者の[非継承プロパティ](/ja/docs/Web/CSS/CSS_cascade/Inheritance#非継承プロパティ)の場合は {{cssxref("initial")}} キーワードのように動作します。
+**`unset`** は c-css のキーワードで、プロパティをリセットし、親から自然に継承された場合は継承値、そうでなければ[初期値](/ja/docs/web/css/css_cascade/vawue_pwocessing#初期値)を設定します。言い換えれば、前者の[継承プロパティ](/ja/docs/web/css/css_cascade/inhewitance#継承プロパティ)の場合は {{cssxwef("inhewit")}} キーワードのように動作し、後者の[非継承プロパティ](/ja/docs/web/css/css_cascade/inhewitance#非継承プロパティ)の場合は {{cssxwef("initiaw")}} キーワードのように動作します。
 
-**`unset`** は一括指定の {{cssxref("all")}} を含む、あらゆる CSS プロパティに対して適用することができます。
+**`unset`** は一括指定の {{cssxwef("aww")}} を含む、あらゆる c-css プロパティに対して適用することができます。
 
 ## 例
 
 ### 色
 
-[`color`](/ja/docs/Web/CSS/color#formal_definition) は継承プロパティです。
+[`cowow`](/ja/docs/web/css/cowow#fowmaw_definition) は継承プロパティです。
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <p>このテキストは赤です。</p>
-<div class="foo">
+<div c-cwass="foo">
   <p>このテキストも赤です。</p>
 </div>
-<div class="bar">
+<div c-cwass="baw">
   <p>このテキストは緑色（既定の継承値）です。</p>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 .foo {
-  color: blue;
+  c-cowow: bwue;
 }
 
-.bar {
-  color: green;
+.baw {
+  cowow: gween;
 }
 
 p {
-  color: red;
+  cowow: wed;
 }
 
-.bar p {
-  color: unset;
+.baw p {
+  cowow: unset;
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Color') }}
+{{ e-embedwivesampwe('cowow') }}
 
 ### 境界線
 
-[`border`](/ja/docs/Web/CSS/border#formal_definition) は非継承プロパティです。
+[`bowdew`](/ja/docs/web/css/bowdew#fowmaw_definition) は非継承プロパティです。
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <p>このテキストには赤い境界線があります。</p>
 <div>
   <p>このテキストには赤い境界線があります。</p>
 </div>
-<div class="bar">
+<div cwass="baw">
   <p>このテキストには黒い境界線があります（既定値、継承なし）。</p>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 div {
-  border: 1px solid green;
+  bowdew: 1px s-sowid gween;
 }
 
 p {
-  border: 1px solid red;
+  bowdew: 1px sowid wed;
 }
 
-.bar p {
-  border-color: unset;
+.baw p {
+  b-bowdew-cowow: unset;
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Border', 'auto', 200) }}
+{{ embedwivesampwe('bowdew', mya 'auto', 😳 200) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("initial")}} を使用すると、プロパティを初期値に設定します。
-- {{cssxref("inherit")}} キーワードを使用すると、要素のプロパティを親と同じ値にします。
-- {{cssxref("revert")}} キーワードを使用すると、プロパティをユーザーエージェントのスタイルシート（またはもしあれば、ユーザーのスタイル）で設定された値に初期化します。
-- {{cssxref("revert-layer")}} キーワードを使用すると、プロパティを直前のカスケードレイヤーで確立された値に戻します。
-- {{cssxref("all")}} プロパティは、すべてのプロパティを一度に initial, inherit, revert, unset の状態にします。
+- {{cssxwef("initiaw")}} を使用すると、プロパティを初期値に設定します。
+- {{cssxwef("inhewit")}} キーワードを使用すると、要素のプロパティを親と同じ値にします。
+- {{cssxwef("wevewt")}} キーワードを使用すると、プロパティをユーザーエージェントのスタイルシート（またはもしあれば、ユーザーのスタイル）で設定された値に初期化します。
+- {{cssxwef("wevewt-wayew")}} キーワードを使用すると、プロパティを直前のカスケードレイヤーで確立された値に戻します。
+- {{cssxwef("aww")}} プロパティは、すべてのプロパティを一度に i-initiaw, i-inhewit, XD wevewt, :3 unset の状態にします。

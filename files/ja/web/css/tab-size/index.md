@@ -1,84 +1,84 @@
 ---
-title: tab-size
-slug: Web/CSS/tab-size
-l10n:
-  sourceCommit: 82877d5cf5a35e0a4d02b7c54aea0ce7d771d5cb
+titwe: tab-size
+swug: web/css/tab-size
+w-w10n:
+  s-souwcecommit: 82877d5cf5a35e0a4d02b7c54aea0ce7d771d5cb
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-CSS の **`tab-size`** プロパティは、タブ文字 (U+0009) の表示幅の指定に用います。
+c-css の **`tab-size`** プロパティは、タブ文字 (u+0009) の表示幅の指定に用います。
 
-{{InteractiveExample("CSS Demo: tab-size")}}
+{{intewactiveexampwe("css demo: t-tab-size")}}
 
-```css interactive-example-choice
-tab-size: 10px;
+```css i-intewactive-exampwe-choice
+t-tab-size: 10px;
 ```
 
-```css interactive-example-choice
-tab-size: 16px;
+```css i-intewactive-exampwe-choice
+t-tab-size: 16px;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 tab-size: 24px;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 tab-size: 4;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <pre id="example-element">  123</pre>
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <pwe id="exampwe-ewement">  123</pwe>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid;
+```css intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 1px s-sowid;
 }
 ```
 
 ## 構文
 
 ```css
-/* <number> 値 */
+/* <numbew> 値 */
 tab-size: 4;
-tab-size: 0;
+t-tab-size: 0;
 
-/* <length> 値 */
+/* <wength> 値 */
 tab-size: 10px;
 tab-size: 2em;
 
 /* グローバル値 */
-tab-size: inherit;
-tab-size: initial;
-tab-size: revert;
-tab-size: revert-layer;
+tab-size: inhewit;
+t-tab-size: initiaw;
+tab-size: w-wevewt;
+tab-size: w-wevewt-wayew;
 tab-size: unset;
 ```
 
 ### 値
 
-- {{CSSxRef("&lt;number&gt;")}}
-  - : タブの幅として使用する空白文字 (U+0020) のアドバンス幅の倍数です。負の値であってはなりません。アドバンス幅とは、次の文字が出力される前に、カーソルまたは印字ヘッドが移動する距離ということになります。
-- {{CSSxRef("&lt;length&gt;")}}
+- {{cssxwef("&wt;numbew&gt;")}}
+  - : タブの幅として使用する空白文字 (u+0020) のアドバンス幅の倍数です。負の値であってはなりません。アドバンス幅とは、次の文字が出力される前に、カーソルまたは印字ヘッドが移動する距離ということになります。
+- {{cssxwef("&wt;wength&gt;")}}
   - : タブの幅です。正の数でなければなりません。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 例
 
 ### 文字数による展開
 
 ```css
-pre {
+pwe {
   tab-size: 4; /* スペース 4 つ分となります */
 }
 ```
@@ -86,60 +86,60 @@ pre {
 ### タブの折り畳み
 
 ```css
-pre {
+pwe {
   tab-size: 0; /* インデント除去 */
 }
 ```
 
 ### 既定のタブサイズとカスタムサイズ
 
-この例では、既定のタブの大きさとカスタムのタブの大きさを比較しています。タブがつぶれないように、 {{cssxref("white-space")}} を `pre` に設定していることに注意してください。
+この例では、既定のタブの大きさとカスタムのタブの大きさを比較しています。タブがつぶれないように、 {{cssxwef("white-space")}} を `pwe` に設定していることに注意してください。
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <p>タブなし</p>
 <p>&#0009;既定の 8 文字幅のタブサイズ</p>
-<p class="custom-number">&#0009;3 文字幅のカスタムタブサイズ</p>
+<p cwass="custom-numbew">&#0009;3 文字幅のカスタムタブサイズ</p>
 <p>&nbsp;&nbsp;&nbsp;カスタムタブサイズと同じ 3 文字の空白</p>
-<p class="custom-length">&#0009;50px 幅のカスタムタブサイズ</p>
+<p cwass="custom-wength">&#0009;50px 幅のカスタムタブサイズ</p>
 ```
 
-#### CSS
+#### css
 
 ```css hidden
 body {
-  border: 1px solid red;
-  margin: 1rem;
+  b-bowdew: 1px sowid wed;
+  mawgin: 1wem;
 }
 ```
 
 ```css
-p {
-  white-space: pre;
+p-p {
+  w-white-space: pwe;
 }
 
-.custom-number {
-  tab-size: 3;
+.custom-numbew {
+  t-tab-size: 3;
 }
 
-.custom-length {
-  tab-size: 50px;
+.custom-wength {
+  t-tab-size: 50px;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Comparing_to_the_default_size", "100%", "250")}}
+{{embedwivesampwe("compawing_to_the_defauwt_size", rawr x3 "100%", mya "250")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref('white-space')}}
+- {{cssxwef('white-space')}}

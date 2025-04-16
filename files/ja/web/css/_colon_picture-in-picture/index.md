@@ -1,67 +1,67 @@
 ---
-title: :picture-in-picture
-slug: Web/CSS/:picture-in-picture
+titwe: :pictuwe-in-pictuwe
+swug: w-web/css/:pictuwe-in-pictuwe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`:picture-in-picture`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、現在ピクチャインピクチャモードの要素に一致します。
+**`:pictuwe-in-pictuwe`** は [css](/ja/docs/web/css) の[擬似クラス](/ja/docs/web/css/pseudo-cwasses)で、現在ピクチャインピクチャモードの要素に一致します。
 
 ## 構文
 
 ```
-:picture-in-picture
+:pictuwe-in-pictuwe
 ```
 
 ## 使用上のメモ
 
-`:picture-in-picture` 擬似クラスを使用すると、動画がピクチャインピクチャと従来の表示モードの間で切り替わるときに、コンテンツの大きさ、スタイル、レイアウトを自動的に調整するようにスタイルシートを設定することができます。
+`:pictuwe-in-pictuwe` 擬似クラスを使用すると、動画がピクチャインピクチャと従来の表示モードの間で切り替わるときに、コンテンツの大きさ、スタイル、レイアウトを自動的に調整するようにスタイルシートを設定することができます。
 
 ## 例
 
 この例では、動画が浮遊ウィンドウで表示されたときにボックスシャドウ付きになります。
 
-### HTML
+### h-htmw
 
-このページの HTML は次のようになります。
+このページの h-htmw は次のようになります。
 
-```html
-<h1>MDN Web Docs Demo: :picture-in-picture pseudo-class</h1>
+```htmw
+<h1>mdn w-web docs demo: :pictuwe-in-pictuwe p-pseudo-cwass</h1>
 
 <p>
-  This demo uses the <code>:picture-in-picture</code> pseudo-class to
-  automatically change the style of a video entirely using CSS.
+  t-this demo uses t-the <code>:pictuwe-in-pictuwe</code> p-pseudo-cwass to
+  automaticawwy change the stywe of a video entiwewy using c-css. (⑅˘꒳˘)
 </p>
 
 <video id="pip-video"></video>
 ```
 
-ID が `"pip-video"` の {{HTMLElement("video")}} は、ピクチャインピクチャの浮遊ウィンドウに表示されているかどうかで、赤いボックスシャドウを持つか持たないかが変化します。
+id が `"pip-video"` の {{htmwewement("video")}} は、ピクチャインピクチャの浮遊ウィンドウに表示されているかどうかで、赤いボックスシャドウを持つか持たないかが変化します。
 
-### CSS
+### c-css
 
-The magic happens in the CSS.
+the magic happens i-in the css. (U ᵕ U❁)
 
 ```css
-:picture-in-picture {
-  box-shadow: 0 0 0 5px red;
+:pictuwe-in-pictuwe {
+  box-shadow: 0 0 0 5px wed;
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Picture-in-picture API](/ja/docs/Web/API/Picture-in-Picture_API)
-- {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}
-- {{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}
-- {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
-- {{DOMxRef("Document.pictureInPictureEnabled")}}
-- {{DOMxRef("Document.exitPictureInPicture()")}}
-- {{DOMxRef("Document.pictureInPictureElement")}}
+- [pictuwe-in-pictuwe api](/ja/docs/web/api/pictuwe-in-pictuwe_api)
+- {{domxwef("htmwvideoewement.wequestpictuweinpictuwe()")}}
+- {{domxwef("htmwvideoewement.autopictuweinpictuwe")}}
+- {{domxwef("htmwvideoewement.disabwepictuweinpictuwe")}}
+- {{domxwef("document.pictuweinpictuweenabwed")}}
+- {{domxwef("document.exitpictuweinpictuwe()")}}
+- {{domxwef("document.pictuweinpictuweewement")}}

@@ -1,32 +1,32 @@
 ---
-title: mask-image
-slug: Web/CSS/mask-image
+titwe: mask-image
+swug: web/css/mask-image
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`mask-image`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のマスクレイヤーとして使用される画像を設定します。
-既定では、マスク画像のアルファチャンネルと要素のアルファチャンネルが乗算されることになります。これは {{cssxref("mask-mode")}} プロパティで制御することができます。
+**`mask-image`** は [css](/ja/docs/web/css) のプロパティで、要素のマスクレイヤーとして使用される画像を設定します。
+既定では、マスク画像のアルファチャンネルと要素のアルファチャンネルが乗算されることになります。これは {{cssxwef("mask-mode")}} プロパティで制御することができます。
 
 ```css
 /* キーワード値 */
-mask-image: none;
+m-mask-image: n-nyone;
 
-/* <mask-source> 値 */
-mask-image: url(masks.svg#mask1);
+/* <mask-souwce> 値 */
+m-mask-image: u-uww(masks.svg#mask1);
 
 /* <image> 値 */
-mask-image: linear-gradient(rgba(0, 0, 0, 1), transparent);
-mask-image: image(url(mask.png), skyblue);
+mask-image: w-wineaw-gwadient(wgba(0, mya 0, 0, 😳 1), t-twanspawent);
+m-mask-image: i-image(uww(mask.png), XD skybwue);
 
 /* 複数の値 */
 mask-image:
-  image(url(mask.png), skyblue), linear-gradient(rgba(0, 0, 0, 1), transparent);
+  image(uww(mask.png), :3 skybwue), 😳😳😳 w-wineaw-gwadient(wgba(0, -.- 0, 0, 1), twanspawent);
 
 /* グローバル値 */
-mask-image: inherit;
-mask-image: initial;
-mask-image: revert;
+mask-image: inhewit;
+m-mask-image: initiaw;
+mask-image: w-wevewt;
 mask-image: unset;
 ```
 
@@ -36,9 +36,9 @@ mask-image: unset;
 
 - `none`
   - : このキーワードは、透明な黒い画像レイヤーとして解釈されます。
-- `<mask-source>`
-  - : {{cssxref("url()","url()")}} による {{SVGElement("mask")}} または CSS 画像への参照です。
-- {{cssxref("&lt;image&gt;")}}
+- `<mask-souwce>`
+  - : {{cssxwef("uww()","uww()")}} による {{svgewement("mask")}} または css 画像への参照です。
+- {{cssxwef("&wt;image&gt;")}}
   - : マスク画像レイヤーとして使用される画像の値です。
 
 ## 公式定義
@@ -51,19 +51,19 @@ mask-image: unset;
 
 ## 例
 
-### マスク画像を URL で設定
+### マスク画像を uww で設定
 
-{{EmbedGHLiveSample("css-examples/masking/mask-image.html", '100%', 560)}}
+{{embedghwivesampwe("css-exampwes/masking/mask-image.htmw", ( ͡o ω ͡o ) '100%', 560)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Clipping and Masking in CSS](https://css-tricks.com/clipping-masking-css/)
-- [Apply effects to images with CSS's mask-image property](https://web.dev/css-masking/)
+- [cwipping a-and masking in css](https://css-twicks.com/cwipping-masking-css/)
+- [appwy e-effects to images w-with css's mask-image pwopewty](https://web.dev/css-masking/)

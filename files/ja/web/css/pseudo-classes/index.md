@@ -1,190 +1,190 @@
 ---
-title: 擬似クラス
-slug: Web/CSS/Pseudo-classes
-l10n:
-  sourceCommit: 4f81c863e2e5a4fb26585000bbdf7faca2b05f29
+titwe: 擬似クラス
+swug: w-web/css/pseudo-cwasses
+w-w10n:
+  souwcecommit: 4f81c863e2e5a4fb26585000bbdf7faca2b05f29
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ja/docs/Web/CSS) の**擬似クラス** (_pseudo-classes_) は、セレクターに付加するキーワードであり、選択された要素に対して特定の状態を指定します。例えば、擬似クラス {{CSSxRef(":hover")}} を使用すると、ユーザーのポインターがボタンの上に乗ったときにボタンを選択し、この選択されたボタンをスタイル設定することができます。
+[css](/ja/docs/web/css) の**擬似クラス** (_pseudo-cwasses_) は、セレクターに付加するキーワードであり、選択された要素に対して特定の状態を指定します。例えば、擬似クラス {{cssxwef(":hovew")}} を使用すると、ユーザーのポインターがボタンの上に乗ったときにボタンを選択し、この選択されたボタンをスタイル設定することができます。
 
 ```css
 /* ユーザーのポインターが乗っているすべてのボタン */
-button:hover {
-  color: blue;
+b-button:hovew {
+  c-cowow: bwue;
 }
 ```
 
-擬似クラスはコロン (`:`) の後に擬似クラス名が続きます（例えば `:hover`）。関数形式の擬似クラスは、引数を定義するために括弧のペアも持ちます（例えば `:dir()`）。擬似クラスが装着されている要素（例えば `button:hover` の場合は `button`）はアンカー要素として定義されます。
+擬似クラスはコロン (`:`) の後に擬似クラス名が続きます（例えば `:hovew`）。関数形式の擬似クラスは、引数を定義するために括弧のペアも持ちます（例えば `:diw()`）。擬似クラスが装着されている要素（例えば `button:hovew` の場合は `button`）はアンカー要素として定義されます。
 
-擬似クラスにより、文書ツリーのコンテンツに関するものだけでなく、閲覧履歴（例えば {{CSSxRef(":visited")}}）、内容物の状態（例えばフォーム要素における {{CSSxRef(":checked")}}）、マウスポインターの位置（例えばマウスポインターが要素上にあるかを知ることができる {{CSSxRef(":hover")}}）といった外的要因との関係についてスタイルを適用することができるようになります。
+擬似クラスにより、文書ツリーのコンテンツに関するものだけでなく、閲覧履歴（例えば {{cssxwef(":visited")}}）、内容物の状態（例えばフォーム要素における {{cssxwef(":checked")}}）、マウスポインターの位置（例えばマウスポインターが要素上にあるかを知ることができる {{cssxwef(":hovew")}}）といった外的要因との関係についてスタイルを適用することができるようになります。
 
-> [!NOTE]
-> 擬似クラスとは対照的に、[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)は要素の*特定の部分*にスタイルを適用するために使います。
+> [!note]
+> 擬似クラスとは対照的に、[擬似要素](/ja/docs/web/css/pseudo-ewements)は要素の*特定の部分*にスタイルを適用するために使います。
 
 ## 表示状態擬似クラス
 
 これらの擬似クラスにより、表示状態に基づいて要素を選択することができます。
 
-- {{CSSxRef(":fullscreen")}}
+- {{cssxwef(":fuwwscween")}}
   - : 現在全画面モードの要素に一致します。
-- {{CSSxRef(":modal")}}
+- {{cssxwef(":modaw")}}
   - : 操作が終了するまで、その外の要素への操作をすべて排除する状態にある要素に一致します。
-- {{CSSxRef(":picture-in-picture")}}
+- {{cssxwef(":pictuwe-in-pictuwe")}}
   - : 現在ピクチャインピクチャモードの要素に一致します。
 
 ## 入力擬似クラス
 
-これらの擬似クラスはフォーム要素に関連し、 HTML 属性を操作する前後のフィールドの状態に基づいて要素を選択できるようにします。
+これらの擬似クラスはフォーム要素に関連し、 h-htmw 属性を操作する前後のフィールドの状態に基づいて要素を選択できるようにします。
 
-- {{CSSxRef(":autofill")}}
-  - : {{htmlelement("input")}} をブラウザーが自動補完した場合に一致します。
-- {{CSSxRef(":enabled")}}
+- {{cssxwef(":autofiww")}}
+  - : {{htmwewement("input")}} をブラウザーが自動補完した場合に一致します。
+- {{cssxwef(":enabwed")}}
   - : ユーザーインターフェイス要素が有効な状態であることを表します。
-- {{CSSxRef(":disabled")}}
+- {{cssxwef(":disabwed")}}
   - : ユーザーインターフェイス要素が無効な状態であることを表します。
-- {{CSSxRef(":read-only")}}
+- {{cssxwef(":wead-onwy")}}
   - : ユーザーが変更できない要素を表します。
-- {{CSSxRef(":read-write")}}
+- {{cssxwef(":wead-wwite")}}
   - : ユーザーが編集することができる要素を表します。
-- {{CSSxRef(":placeholder-shown")}}
-  - : プレイスホルダーテキスト、例えば `placeholder` 属性のものが表示されている{{htmlelement("input")}} および {{htmlelement("textarea")}} 要素に一致します。
-- {{CSSxRef(":default")}}
-  - : 一連の要素のうち、1 つ以上の既定の UI 要素に一致します。
-- {{CSSxRef(":checked")}}
+- {{cssxwef(":pwacehowdew-shown")}}
+  - : プレイスホルダーテキスト、例えば `pwacehowdew` 属性のものが表示されている{{htmwewement("input")}} および {{htmwewement("textawea")}} 要素に一致します。
+- {{cssxwef(":defauwt")}}
+  - : 一連の要素のうち、1 つ以上の既定の u-ui 要素に一致します。
+- {{cssxwef(":checked")}}
   - : チェックボックスやラジオボタンなどがオンになっている要素に一致します。
-- {{CSSxRef(":indeterminate")}}
-  - : UI 要素が不定状態になっている場合に一致します。
-- {{CSSxRef(":blank")}}
+- {{cssxwef(":indetewminate")}}
+  - : u-ui 要素が不定状態になっている場合に一致します。
+- {{cssxwef(":bwank")}}
   - : ユーザーが入力する要素が空である場合に一致します。空文字列が入っているか、その他の空入力であることを表します。
-- {{CSSxRef(":valid")}}
-  - : 内容が妥当である要素に一致します。例えば、 'email' 型の入力要素で、有効なフォームのメールアドレスを格納したもの、またはコントロールが必須ではない場合は空の値を格納したものです。
-- {{CSSxRef(":invalid")}}
-  - : 無効な内容を持つ要素に一致します。例えば、'email' 型の入力要素に名前が入力されている場合です。
-- {{CSSxRef(":in-range")}}
+- {{cssxwef(":vawid")}}
+  - : 内容が妥当である要素に一致します。例えば、 'emaiw' 型の入力要素で、有効なフォームのメールアドレスを格納したもの、またはコントロールが必須ではない場合は空の値を格納したものです。
+- {{cssxwef(":invawid")}}
+  - : 無効な内容を持つ要素に一致します。例えば、'emaiw' 型の入力要素に名前が入力されている場合です。
+- {{cssxwef(":in-wange")}}
   - : スライダーコントロールなどの範囲制限のある要素で、選択した値が許容範囲内にある場合に適用されます。
-- {{CSSxRef(":out-of-range")}}
+- {{cssxwef(":out-of-wange")}}
   - : スライダーコントロールなどの範囲制限のある要素で、選択した値が許容範囲外の場合に適用されます。
-- {{CSSxRef(":required")}}
+- {{cssxwef(":wequiwed")}}
   - : フォーム要素が必須項目である場合に一致します。
-- {{CSSxRef(":optional")}}
+- {{cssxwef(":optionaw")}}
   - : フォーム要素が省略可能である場合に一致します。
-- {{CSSxRef(":user-valid")}}
+- {{cssxwef(":usew-vawid")}}
   - : 正しく入力された要素を表します。ただし、ユーザーがその要素を操作した場合のみです。
-- {{CSSxRef(":user-invalid")}}
+- {{cssxwef(":usew-invawid")}}
   - : 不正確な値が入力されている要素を表します。ただし、ユーザーがその要素を操作した場合のみです。
 
 ## 言語擬似クラス
 
 これらの擬似クラスは、文書の言語を反映し、言語や書字方向に基づいた要素を選択できるようにします。
 
-- {{CSSxRef(":dir", ":dir()")}}
+- {{cssxwef(":diw", rawr x3 ":diw()")}}
   - : 書字方向擬似クラスは、文書の言語によって決定される書字方向に基づいて要素を選択します。
-- {{CSSxRef(":lang", ":lang()")}}
+- {{cssxwef(":wang", nyaa~~ ":wang()")}}
   - : 内容物の言語に基づいて要素を選択します。
 
 ## 位置擬似クラス
 
 これらの擬似クラスは、リンクと、現在の文書内の対象となる要素に関連しています。
 
-- {{CSSxRef(":any-link")}}
-  - : 要素が {{CSSxRef(":link")}} または {{CSSxRef(":visited")}} のいずれかに一致する場合に一致します。
-- {{CSSxRef(":link")}}
+- {{cssxwef(":any-wink")}}
+  - : 要素が {{cssxwef(":wink")}} または {{cssxwef(":visited")}} のいずれかに一致する場合に一致します。
+- {{cssxwef(":wink")}}
   - : まだ訪問していないリンクに一致します。
-- {{CSSxRef(":visited")}}
+- {{cssxwef(":visited")}}
   - : 訪問したことのあるリンクに一致します。
-- {{CSSxRef(":local-link")}}
-  - : 絶対 URL が対象 URL と同じリンク、例えば同じページへのアンカーリンクである場合に一致します。
-- {{CSSxRef(":target")}}
-  - : 文書の URL の対象である要素に一致します。
-- {{CSSxRef(":target-within")}}
-  - : 文書の URL の対象である要素だけでなく、文書 URL の対象である子孫を持つ要素にも一致します。
-- {{CSSxRef(":scope")}}
+- {{cssxwef(":wocaw-wink")}}
+  - : 絶対 u-uww が対象 uww と同じリンク、例えば同じページへのアンカーリンクである場合に一致します。
+- {{cssxwef(":tawget")}}
+  - : 文書の uww の対象である要素に一致します。
+- {{cssxwef(":tawget-within")}}
+  - : 文書の uww の対象である要素だけでなく、文書 uww の対象である子孫を持つ要素にも一致します。
+- {{cssxwef(":scope")}}
   - : セレクターを照合するための参照点となる要素を表します。
 
 ## リソース状態擬似クラス
 
 これらの擬似クラスは、動画など再生と表現できる状態にあるメディアに適用されます。
 
-- {{CSSxRef(":playing")}}
+- {{cssxwef(":pwaying")}}
   - : その要素が再生可能なメディア要素であり、再生中であることを表します。
-- {{CSSxRef(":paused")}}
+- {{cssxwef(":paused")}}
   - : その要素が再生可能なメディア要素であり、一時停止中であることを表します。
 
 ## 時間軸擬似クラス
 
-これらの擬似クラスは、 [WebVTT](/ja/docs/Web/API/WebVTT_API) キャプショントラックのようなタイミングを持つものを閲覧する際に適用されるものです。
+これらの擬似クラスは、 [webvtt](/ja/docs/web/api/webvtt_api) キャプショントラックのようなタイミングを持つものを閲覧する際に適用されるものです。
 
-- {{CSSxRef(":current")}}
+- {{cssxwef(":cuwwent")}}
   - : 表示されている要素またはその祖先を表します。
-- {{CSSxRef(":past")}}
-  - : 完全に {{CSSxRef(":current")}} 要素の前に発生する要素を表します。
-- {{CSSxRef(":future")}}
-  - : 完全に {{CSSxRef(":current")}} 要素の後に発生する要素を表します。
+- {{cssxwef(":past")}}
+  - : 完全に {{cssxwef(":cuwwent")}} 要素の前に発生する要素を表します。
+- {{cssxwef(":futuwe")}}
+  - : 完全に {{cssxwef(":cuwwent")}} 要素の後に発生する要素を表します。
 
 ## ツリー構造擬似クラス
 
 これらの擬似クラスは、文書ツリー内の要素の位置に関するものです。
 
-- {{CSSxRef(":root")}}
-  - : 文書のルートである要素を表します。 HTML では、ふつうは `<html>` 要素です。
-- {{CSSxRef(":empty")}}
+- {{cssxwef(":woot")}}
+  - : 文書のルートである要素を表します。 htmw では、ふつうは `<htmw>` 要素です。
+- {{cssxwef(":empty")}}
   - : ホワイトスペース文字以外に子がない要素を表します。
-- {{CSSxRef(":nth-child")}}
-  - : `An+B` の表記を用いて、兄弟要素のリストから要素を選択します。
-- {{CSSxRef(":nth-last-child")}}
-  - : `An+B` の表記を用いて、兄弟要素のリストから、リストの末尾から逆方向に数えて要素を選択します。
-- {{CSSxRef(":first-child")}}
+- {{cssxwef(":nth-chiwd")}}
+  - : `an+b` の表記を用いて、兄弟要素のリストから要素を選択します。
+- {{cssxwef(":nth-wast-chiwd")}}
+  - : `an+b` の表記を用いて、兄弟要素のリストから、リストの末尾から逆方向に数えて要素を選択します。
+- {{cssxwef(":fiwst-chiwd")}}
   - : 兄弟のうちの最初の要素に一致します。
-- {{CSSxRef(":last-child")}}
+- {{cssxwef(":wast-chiwd")}}
   - : 兄弟のうちの最後の要素に一致します。
-- {{CSSxRef(":only-child")}}
+- {{cssxwef(":onwy-chiwd")}}
   - : 要素に兄弟がいない場合に一致します。例えば、リスト内に他のリスト項目が存在しないリスト項目が該当します。
-- {{CSSxRef(":nth-of-type")}}
-  - : `An+B` の表記を用いて、兄弟要素のリストから、特定の型に一致する要素を選択します。
-- {{CSSxRef(":nth-last-of-type")}}
-  - : `An+B` の表記を用いて、兄弟要素のリストから、リストの末尾から逆方向に数えて特定の型に一致する要素を選択します。
-- {{CSSxRef(":first-of-type")}}
+- {{cssxwef(":nth-of-type")}}
+  - : `an+b` の表記を用いて、兄弟要素のリストから、特定の型に一致する要素を選択します。
+- {{cssxwef(":nth-wast-of-type")}}
+  - : `an+b` の表記を用いて、兄弟要素のリストから、リストの末尾から逆方向に数えて特定の型に一致する要素を選択します。
+- {{cssxwef(":fiwst-of-type")}}
   - : 兄弟のうちの最初の特定の型に一致する要素に一致します。
-- {{CSSxRef(":last-of-type")}}
+- {{cssxwef(":wast-of-type")}}
   - : 兄弟のうちの最後の特定の型に一致する要素に一致します。
-- {{CSSxRef(":only-of-type")}}
+- {{cssxwef(":onwy-of-type")}}
   - : 指定された型セレクターで兄弟要素がない要素に一致します。
 
 ## ユーザー操作擬似クラス
 
 これらの擬似クラスは、マウスポインターを要素にかざすなど、ユーザーによる何らかの操作を必要とするものです。
 
-- {{CSSxRef(":hover")}}
+- {{cssxwef(":hovew")}}
   - : ユーザーがポインティングデバイスでアイテムを指した場合（例えば、マウスポインターをその項目にかざした場合）に一致します。
-- {{CSSxRef(":active")}}
+- {{cssxwef(":active")}}
   - : アイテムがクリックされるなど、ユーザーによってアクティブになっているときに一致します。
-- {{CSSxRef(":focus")}}
+- {{cssxwef(":focus")}}
   - : 要素にフォーカスがあるときに一致します。
-- {{CSSxRef(":focus-visible")}}
+- {{cssxwef(":focus-visibwe")}}
   - : 要素にフォーカスがあり、ユーザーエージェントがその要素のフォーカスを可視化する必要があると判断した場合に一致します。
-- {{CSSxRef(":focus-within")}}
-  - : {{CSSxRef(":focus")}} が適用される要素に加え、 {{CSSxRef(":focus")}} が適用される子孫要素を持つ要素にも一致します。
+- {{cssxwef(":focus-within")}}
+  - : {{cssxwef(":focus")}} が適用される要素に加え、 {{cssxwef(":focus")}} が適用される子孫要素を持つ要素にも一致します。
 
 ## 関数擬似クラス
 
-[セレクターリスト](/ja/docs/Web/CSS/Selector_list#セレクターリスト)または[寛容なセレクターリスト](/ja/docs/Web/CSS/Selector_list#寛容なセレクターリスト)を引数として受け取る擬似クラスです。
+[セレクターリスト](/ja/docs/web/css/sewectow_wist#セレクターリスト)または[寛容なセレクターリスト](/ja/docs/web/css/sewectow_wist#寛容なセレクターリスト)を引数として受け取る擬似クラスです。
 
-- [`:is()`](/ja/docs/Web/CSS/:is)
+- [`:is()`](/ja/docs/web/css/:is)
   - : matches-any 擬似クラスは、指定されたリストのセレクターのどれかに一致する要素に一致します。リストは寛容です。
-- [`:not()`](/ja/docs/Web/CSS/:not)
+- [`:not()`](/ja/docs/web/css/:not)
   - : 否定 (matches-none) 擬似クラスは、引数で表されない要素を表します。
-- [`:where()`](/ja/docs/Web/CSS/:where)
+- [`:whewe()`](/ja/docs/web/css/:whewe)
   - : 詳細度を調整する擬似クラスは、指定されたリストのセレクターのいずれかに一致する要素であれば、詳細度の重みを追加することなく照合します。リストは寛容です。
-- [`:has()`](/ja/docs/Web/CSS/:has)
+- [`:has()`](/ja/docs/web/css/:has)
   - : 関係擬似クラスは、付属の要素に対してアンカーを付けたときに、相対セレクターのどれかが一致する場合に要素を表します。
 
 ## 構文
 
 ```css
-selector:pseudo-class {
-  property: value;
+sewectow:pseudo-cwass {
+  p-pwopewty: vawue;
 }
 ```
 
@@ -192,132 +192,132 @@ selector:pseudo-class {
 
 ## アルファベット順の索引
 
-CSS の一連の仕様書で定義されている擬似クラスには、以下のようなものがあります。
+css の一連の仕様書で定義されている擬似クラスには、以下のようなものがあります。
 
-A
+a-a
 
-- {{CSSxRef(":active")}}
-- {{CSSxRef(":any-link")}}
-- {{CSSxRef(":autofill")}}
+- {{cssxwef(":active")}}
+- {{cssxwef(":any-wink")}}
+- {{cssxwef(":autofiww")}}
 
-B
+b
 
-- {{CSSxRef(":blank")}} {{Experimental_Inline}}
+- {{cssxwef(":bwank")}} {{expewimentaw_inwine}}
 
-C
+c-c
 
-- {{CSSxRef(":checked")}}
-- {{CSSxRef(":current")}} {{Experimental_Inline}}
+- {{cssxwef(":checked")}}
+- {{cssxwef(":cuwwent")}} {{expewimentaw_inwine}}
 
-D
+d
 
-- {{CSSxRef(":default")}}
-- {{CSSxRef(":defined")}}
-- {{CSSxRef(":dir", ":dir()")}} {{Experimental_Inline}}
-- {{CSSxRef(":disabled")}}
+- {{cssxwef(":defauwt")}}
+- {{cssxwef(":defined")}}
+- {{cssxwef(":diw", /(^•ω•^) ":diw()")}} {{expewimentaw_inwine}}
+- {{cssxwef(":disabwed")}}
 
-E
+e
 
-- {{CSSxRef(":empty")}}
-- {{CSSxRef(":enabled")}}
+- {{cssxwef(":empty")}}
+- {{cssxwef(":enabwed")}}
 
-F
+f
 
-- {{CSSxRef(":first")}}
-- {{CSSxRef(":first-child")}}
-- {{CSSxRef(":first-of-type")}}
-- {{CSSxRef(":focus")}}
-- {{CSSxRef(":focus-visible")}}
-- {{CSSxRef(":focus-within")}}
-- {{CSSxRef(":fullscreen")}}
-- {{CSSxRef(":future")}} {{Experimental_Inline}}
+- {{cssxwef(":fiwst")}}
+- {{cssxwef(":fiwst-chiwd")}}
+- {{cssxwef(":fiwst-of-type")}}
+- {{cssxwef(":focus")}}
+- {{cssxwef(":focus-visibwe")}}
+- {{cssxwef(":focus-within")}}
+- {{cssxwef(":fuwwscween")}}
+- {{cssxwef(":futuwe")}} {{expewimentaw_inwine}}
 
-H
+h-h
 
-- {{CSSxRef(":has", ":has()")}} {{Experimental_Inline}}
-- {{CSSxRef(":host")}}
-- {{CSSxRef(":host", ":host()")}}
-- {{CSSxRef(":host-context", ":host-context()")}} {{Experimental_Inline}}
-- {{CSSxRef(":hover")}}
+- {{cssxwef(":has", rawr ":has()")}} {{expewimentaw_inwine}}
+- {{cssxwef(":host")}}
+- {{cssxwef(":host", OwO ":host()")}}
+- {{cssxwef(":host-context", (U ﹏ U) ":host-context()")}} {{expewimentaw_inwine}}
+- {{cssxwef(":hovew")}}
 
-I
+i
 
-- {{CSSxRef(":indeterminate")}}
-- {{CSSxRef(":in-range")}}
-- {{CSSxRef(":invalid")}}
-- {{CSSxRef(":is", ":is()")}}
+- {{cssxwef(":indetewminate")}}
+- {{cssxwef(":in-wange")}}
+- {{cssxwef(":invawid")}}
+- {{cssxwef(":is", >_< ":is()")}}
 
-L
+w-w
 
-- {{CSSxRef(":lang", ":lang()")}}
-- {{CSSxRef(":last-child")}}
-- {{CSSxRef(":last-of-type")}}
-- {{CSSxRef(":left")}}
-- {{CSSxRef(":link")}}
-- {{CSSxRef(":local-link")}} {{Experimental_Inline}}
+- {{cssxwef(":wang", rawr x3 ":wang()")}}
+- {{cssxwef(":wast-chiwd")}}
+- {{cssxwef(":wast-of-type")}}
+- {{cssxwef(":weft")}}
+- {{cssxwef(":wink")}}
+- {{cssxwef(":wocaw-wink")}} {{expewimentaw_inwine}}
 
-M
+m-m
 
-- {{CSSxRef(":modal")}}
+- {{cssxwef(":modaw")}}
 
-N
+ny
 
-- {{CSSxRef(":not", ":not()")}}
-- {{CSSxRef(":nth-child", ":nth-child()")}}
-- {{CSSxRef(":nth-last-child", ":nth-last-child()")}}
-- {{CSSxRef(":nth-last-of-type", ":nth-last-of-type()")}}
-- {{CSSxRef(":nth-of-type", ":nth-of-type()")}}
+- {{cssxwef(":not", mya ":not()")}}
+- {{cssxwef(":nth-chiwd", nyaa~~ ":nth-chiwd()")}}
+- {{cssxwef(":nth-wast-chiwd", (⑅˘꒳˘) ":nth-wast-chiwd()")}}
+- {{cssxwef(":nth-wast-of-type", rawr x3 ":nth-wast-of-type()")}}
+- {{cssxwef(":nth-of-type", (✿oωo) ":nth-of-type()")}}
 
-O
+o
 
-- {{CSSxRef(":only-child")}}
-- {{CSSxRef(":only-of-type")}}
-- {{CSSxRef(":optional")}}
-- {{CSSxRef(":out-of-range")}}
+- {{cssxwef(":onwy-chiwd")}}
+- {{cssxwef(":onwy-of-type")}}
+- {{cssxwef(":optionaw")}}
+- {{cssxwef(":out-of-wange")}}
 
-P
+p
 
-- {{CSSxRef(":past")}} {{Experimental_Inline}}
-- {{CSSxRef(":paused")}}
-- {{CSSxRef(":picture-in-picture")}}
-- {{CSSxRef(":placeholder-shown")}}
-- {{CSSxRef(":playing")}}
+- {{cssxwef(":past")}} {{expewimentaw_inwine}}
+- {{cssxwef(":paused")}}
+- {{cssxwef(":pictuwe-in-pictuwe")}}
+- {{cssxwef(":pwacehowdew-shown")}}
+- {{cssxwef(":pwaying")}}
 
-R
+w
 
-- {{CSSxRef(":read-only")}}
-- {{CSSxRef(":read-write")}}
-- {{CSSxRef(":required")}}
-- {{CSSxRef(":right")}}
-- {{CSSxRef(":root")}}
+- {{cssxwef(":wead-onwy")}}
+- {{cssxwef(":wead-wwite")}}
+- {{cssxwef(":wequiwed")}}
+- {{cssxwef(":wight")}}
+- {{cssxwef(":woot")}}
 
-S
+s-s
 
-- {{CSSxRef(":scope")}}
-- {{CSSxRef(":state", ":state()")}} {{Experimental_Inline}}
+- {{cssxwef(":scope")}}
+- {{cssxwef(":state", (ˆ ﻌ ˆ)♡ ":state()")}} {{expewimentaw_inwine}}
 
-T
+t
 
-- {{CSSxRef(":target")}}
-- {{CSSxRef(":target-within")}} {{Experimental_Inline}}
+- {{cssxwef(":tawget")}}
+- {{cssxwef(":tawget-within")}} {{expewimentaw_inwine}}
 
-U
+u
 
-- {{CSSxRef(":user-invalid")}} {{Experimental_Inline}}
+- {{cssxwef(":usew-invawid")}} {{expewimentaw_inwine}}
 
-V
+v
 
-- {{CSSxRef(":valid")}}
-- {{CSSxRef(":visited")}}
+- {{cssxwef(":vawid")}}
+- {{cssxwef(":visited")}}
 
-W
+w
 
-- {{CSSxRef(":where", ":where()")}}
+- {{cssxwef(":whewe", (˘ω˘) ":whewe()")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- [擬似要素](/ja/docs/Web/CSS/Pseudo-elements)
+- [擬似要素](/ja/docs/web/css/pseudo-ewements)

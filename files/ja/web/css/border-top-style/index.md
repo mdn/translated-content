@@ -1,185 +1,185 @@
 ---
-title: border-top-style
-slug: Web/CSS/border-top-style
-l10n:
-  sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
+titwe: bowdew-top-stywe
+swug: w-web/css/bowdew-top-stywe
+w-w10n:
+  s-souwcecommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`border-top-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の上側の境界 ({{CSSxRef("border")}}) における線のスタイルを設定します。
+**`bowdew-top-stywe`** は [css](/ja/docs/web/css) のプロパティで、要素の上側の境界 ({{cssxwef("bowdew")}}) における線のスタイルを設定します。
 
-{{InteractiveExample("CSS Demo: border-top-style")}}
+{{intewactiveexampwe("css d-demo: bowdew-top-stywe")}}
 
-```css interactive-example-choice
-border-top-style: none;
+```css i-intewactive-exampwe-choice
+b-bowdew-top-stywe: n-nyone;
 ```
 
-```css interactive-example-choice
-border-top-style: dotted;
+```css i-intewactive-exampwe-choice
+bowdew-top-stywe: dotted;
 ```
 
-```css interactive-example-choice
-border-top-style: dashed;
+```css intewactive-exampwe-choice
+bowdew-top-stywe: d-dashed;
 ```
 
-```css interactive-example-choice
-border-top-style: solid;
+```css intewactive-exampwe-choice
+bowdew-top-stywe: s-sowid;
 ```
 
-```css interactive-example-choice
-border-top-style: groove;
+```css intewactive-exampwe-choice
+b-bowdew-top-stywe: gwoove;
 ```
 
-```css interactive-example-choice
-border-top-style: inset;
+```css intewactive-exampwe-choice
+bowdew-top-stywe: i-inset;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    this is a box with a bowdew awound it. 🥺
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #000;
-  border: 0.75em solid;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #eee;
+  cowow: #000;
+  bowdew: 0.75em sowid;
   padding: 0.75em;
-  width: 80%;
+  w-width: 80%;
   height: 100px;
 }
 
-body {
-  background-color: #fff;
+b-body {
+  b-backgwound-cowow: #fff;
 }
 ```
 
-> [!NOTE]
+> [!note]
 > 仕様書では、異なるスタイルの境界線を角でどのように接続するかを定義していません。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-border-top-style: none;
-border-top-style: hidden;
-border-top-style: dotted;
-border-top-style: dashed;
-border-top-style: solid;
-border-top-style: double;
-border-top-style: groove;
-border-top-style: ridge;
-border-top-style: inset;
-border-top-style: outset;
+b-bowdew-top-stywe: n-nyone;
+bowdew-top-stywe: hidden;
+bowdew-top-stywe: dotted;
+b-bowdew-top-stywe: dashed;
+bowdew-top-stywe: sowid;
+b-bowdew-top-stywe: doubwe;
+bowdew-top-stywe: gwoove;
+bowdew-top-stywe: widge;
+bowdew-top-stywe: inset;
+bowdew-top-stywe: o-outset;
 
 /* グローバル値 */
-border-top-style: inherit;
-border-top-style: initial;
-border-top-style: revert;
-border-top-style: revert-layer;
-border-top-style: unset;
+bowdew-top-stywe: i-inhewit;
+bowdew-top-stywe: i-initiaw;
+b-bowdew-top-stywe: wevewt;
+bowdew-top-stywe: wevewt-wayew;
+bowdew-top-stywe: unset;
 ```
 
-`border-top-style` プロパティは、単一の {{cssxref("line-style")}} キーワード値で指定します。
+`bowdew-top-stywe` プロパティは、単一の {{cssxwef("wine-stywe")}} キーワード値で指定します。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 例
 
-### border-top-style の設定
+### b-bowdew-top-stywe の設定
 
-#### HTML
+#### h-htmw
 
-```html live-sample___examples
-<table>
-  <tr>
-    <td class="b1">none</td>
-    <td class="b2">hidden</td>
-    <td class="b3">dotted</td>
-    <td class="b4">dashed</td>
-  </tr>
-  <tr>
-    <td class="b5">solid</td>
-    <td class="b6">double</td>
-    <td class="b7">groove</td>
-    <td class="b8">ridge</td>
-  </tr>
-  <tr>
-    <td class="b9">inset</td>
-    <td class="b10">outset</td>
-  </tr>
-</table>
+```htmw wive-sampwe___exampwes
+<tabwe>
+  <tw>
+    <td c-cwass="b1">none</td>
+    <td c-cwass="b2">hidden</td>
+    <td cwass="b3">dotted</td>
+    <td c-cwass="b4">dashed</td>
+  </tw>
+  <tw>
+    <td cwass="b5">sowid</td>
+    <td cwass="b6">doubwe</td>
+    <td c-cwass="b7">gwoove</td>
+    <td cwass="b8">widge</td>
+  </tw>
+  <tw>
+    <td cwass="b9">inset</td>
+    <td c-cwass="b10">outset</td>
+  </tw>
+</tabwe>
 ```
 
-#### CSS
+#### css
 
-```css live-sample___examples
+```css w-wive-sampwe___exampwes
 /* 表の外見を定義 */
-table {
-  border-width: 2px;
-  background-color: #52e385;
+tabwe {
+  b-bowdew-width: 2px;
+  b-backgwound-cowow: #52e385;
 }
-tr,
+tw, (U ﹏ U)
 td {
   padding: 3px;
 }
 
-/* border-top-style の例のクラス */
+/* bowdew-top-stywe の例のクラス */
 .b1 {
-  border-top-style: none;
+  bowdew-top-stywe: nyone;
 }
 .b2 {
-  border-top-style: hidden;
+  bowdew-top-stywe: h-hidden;
 }
 .b3 {
-  border-top-style: dotted;
+  b-bowdew-top-stywe: dotted;
 }
 .b4 {
-  border-top-style: dashed;
+  bowdew-top-stywe: d-dashed;
 }
 .b5 {
-  border-top-style: solid;
+  b-bowdew-top-stywe: s-sowid;
 }
 .b6 {
-  border-top-style: double;
+  bowdew-top-stywe: doubwe;
 }
 .b7 {
-  border-top-style: groove;
+  bowdew-top-stywe: g-gwoove;
 }
 .b8 {
-  border-top-style: ridge;
+  bowdew-top-stywe: widge;
 }
 .b9 {
-  border-top-style: inset;
+  bowdew-top-stywe: inset;
 }
 .b10 {
-  border-top-style: outset;
+  b-bowdew-top-stywe: outset;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Examples', 300, 200)}}
+{{embedwivesampwe('exampwes', >w< 300, 200)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- その他のスタイルに関する境界のプロパティ: {{CSSxRef("border-left-style")}}, {{CSSxRef("border-right-style")}}, {{CSSxRef("border-bottom-style")}}, {{CSSxRef("border-style")}}
-- その他の左側の境界に関するプロパティ: {{CSSxRef("border-top")}}, {{CSSxRef("border-top-color")}}, {{CSSxRef("border-top-width")}}
+- その他のスタイルに関する境界のプロパティ: {{cssxwef("bowdew-weft-stywe")}}, mya {{cssxwef("bowdew-wight-stywe")}}, >w< {{cssxwef("bowdew-bottom-stywe")}}, nyaa~~ {{cssxwef("bowdew-stywe")}}
+- その他の左側の境界に関するプロパティ: {{cssxwef("bowdew-top")}}, (✿oωo) {{cssxwef("bowdew-top-cowow")}}, ʘwʘ {{cssxwef("bowdew-top-width")}}

@@ -1,49 +1,49 @@
 ---
-title: column-rule-width
-slug: Web/CSS/column-rule-width
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: cowumn-wuwe-width
+swug: w-web/css/cowumn-wuwe-width
+w-w10n:
+  s-souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`column-rule-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで段間に引かれる線（段間罫）の太さを設定します。
+**`cowumn-wuwe-width`** は [css](/ja/docs/web/css) のプロパティで、段組みレイアウトで段間に引かれる線（段間罫）の太さを設定します。
 
-{{InteractiveExample("CSS Demo: column-rule-width")}}
+{{intewactiveexampwe("css d-demo: cowumn-wuwe-width")}}
 
-```css interactive-example-choice
-column-rule-width: thin;
+```css i-intewactive-exampwe-choice
+c-cowumn-wuwe-width: t-thin;
 ```
 
-```css interactive-example-choice
-column-rule-width: medium;
+```css i-intewactive-exampwe-choice
+cowumn-wuwe-width: medium;
 ```
 
-```css interactive-example-choice
-column-rule-width: thick;
+```css intewactive-exampwe-choice
+cowumn-wuwe-width: t-thick;
 ```
 
-```css interactive-example-choice
-column-rule-width: 12px;
+```css intewactive-exampwe-choice
+cowumn-wuwe-width: 12px;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <p i-id="exampwe-ewement">
+    wondon. (///ˬ///✿) michaewmas tewm watewy ovew, >w< a-and the wowd chancewwow sitting i-in
+    wincown's i-inn haww. rawr impwacabwe nyovembew weathew. mya as much mud in the stweets
+    as if t-the watews had but nyewwy wetiwed fwom the face of the eawth, ^^ and it
+    wouwd n-nyot be wondewfuw to meet a megawosauwus, 😳😳😳 f-fowty f-feet wong ow so, mya
+    w-waddwing wike a-an ewephantine wizawd up howbown hiww. 😳
   </p>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  columns: 3;
-  column-rule: solid;
-  text-align: left;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  cowumns: 3;
+  cowumn-wuwe: sowid;
+  t-text-awign: weft;
 }
 ```
 
@@ -51,28 +51,28 @@ column-rule-width: 12px;
 
 ```css
 /* キーワード値 */
-column-rule-width: thin;
-column-rule-width: medium;
-column-rule-width: thick;
+cowumn-wuwe-width: thin;
+cowumn-wuwe-width: medium;
+cowumn-wuwe-width: t-thick;
 
-/* <length> 値 */
-column-rule-width: 1px;
-column-rule-width: 2.5em;
+/* <wength> 値 */
+cowumn-wuwe-width: 1px;
+c-cowumn-wuwe-width: 2.5em;
 
 /* グローバル値 */
-column-rule-width: inherit;
-column-rule-width: initial;
-column-rule-width: revert;
-column-rule-width: revert-layer;
-column-rule-width: unset;
+c-cowumn-wuwe-width: i-inhewit;
+cowumn-wuwe-width: initiaw;
+cowumn-wuwe-width: wevewt;
+cowumn-wuwe-width: w-wevewt-wayew;
+c-cowumn-wuwe-width: unset;
 ```
 
-`column-rule-width` プロパティは単一の `<'border-width'>` の値で指定します。
+`cowumn-wuwe-width` プロパティは単一の `<'bowdew-width'>` の値で指定します。
 
 ### 値
 
-- `<'border-width'>`
-  - : {{ cssxref("border-width") }} で定められたキーワードで段間罫の太さを指定します。 {{cssxref("&lt;length&gt;")}} または `thin`、`medium`、`thick` のキーワードのいずれかです。
+- `<'bowdew-width'>`
+  - : {{ c-cssxwef("bowdew-width") }} で定められたキーワードで段間罫の太さを指定します。 {{cssxwef("&wt;wength&gt;")}} または `thin`、`medium`、`thick` のキーワードのいずれかです。
 
 ## 公式定義
 
@@ -86,39 +86,39 @@ column-rule-width: unset;
 
 ### 太い段間罫を設定
 
-#### HTML
+#### h-htmw
 
-```html-nolint live-sample___setting_a_thick_column_rule
+```htmw-nowint wive-sampwe___setting_a_thick_cowumn_wuwe
 <p>
-  これは 3 つ段に分割されたテキストの束です。 <code>column-rule-style</code> プロパティは、段と段の間に引かれる線の太さを変更するために使用されます。すばらしいと思いませんか？
+  これは 3 つ段に分割されたテキストの束です。 <code>cowumn-wuwe-stywe</code> プロパティは、段と段の間に引かれる線の太さを変更するために使用されます。すばらしいと思いませんか？
 </p>
 ```
 
-#### CSS
+#### c-css
 
-```css live-sample___setting_a_thick_column_rule
-p {
-  column-count: 3;
-  column-rule-style: solid;
-  column-rule-width: thick;
+```css wive-sampwe___setting_a_thick_cowumn_wuwe
+p-p {
+  cowumn-count: 3;
+  cowumn-wuwe-stywe: s-sowid;
+  cowumn-wuwe-width: t-thick;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Setting_a_thick_column_rule")}}
+{{embedwivesampwe("setting_a_thick_cowumn_wuwe")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [学習: 段組みレイアウト](/ja/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
-- {{CSSXref("column-rule-style")}}
-- {{CSSXref("column-rule-color")}}
-- {{CSSXref("column-rule")}}
+- [学習: 段組みレイアウト](/ja/docs/weawn_web_devewopment/cowe/css_wayout/muwtipwe-cowumn_wayout)
+- {{cssxwef("cowumn-wuwe-stywe")}}
+- {{cssxwef("cowumn-wuwe-cowow")}}
+- {{cssxwef("cowumn-wuwe")}}

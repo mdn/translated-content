@@ -1,62 +1,62 @@
 ---
-title: ::after (:after)
-slug: Web/CSS/::after
+titwe: ::aftew (:aftew)
+swug: w-web/css/::aftew
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-CSS において **`::after`** は、選択した要素の最後の子要素として[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を生成します。よく {{cssxref("content")}} プロパティを使用して、要素に装飾的な内容を追加するために用いられます。この要素は既定でインラインです。
+c-css において **`::aftew`** は、選択した要素の最後の子要素として[擬似要素](/ja/docs/web/css/pseudo-ewements)を生成します。よく {{cssxwef("content")}} プロパティを使用して、要素に装飾的な内容を追加するために用いられます。この要素は既定でインラインです。
 
 ```css
 /* リンクの後に矢印を追加 */
-a::after {
-  content: "→";
+a-a::aftew {
+  c-content: "→";
 }
 ```
 
-{{InteractiveExample("CSS Demo: ::after", "tabbed-standard")}}
+{{intewactiveexampwe("css d-demo: ::aftew", (˘ω˘) "tabbed-standawd")}}
 
-```css interactive-example
-a::after {
-  content: " (" attr(href) ")";
+```css intewactive-exampwe
+a-a::aftew {
+  c-content: " (" attw(hwef) ")";
 }
 
-.dead-link {
-  text-decoration: line-through;
+.dead-wink {
+  t-text-decowation: wine-thwough;
 }
 
-.dead-link::after {
-  content: url("/shared-assets/images/examples/warning.svg");
-  display: inline-block;
+.dead-wink::aftew {
+  content: uww("/shawed-assets/images/exampwes/wawning.svg");
+  dispway: inwine-bwock;
   width: 12px;
-  height: 12px;
+  h-height: 12px;
 }
 ```
 
-```html interactive-example
+```htmw intewactive-exampwe
 <p>
-  The sailfish is named for its sail-like dorsal fin and is widely considered
-  the fastest fish in the ocean.
-  <a href="https://en.wikipedia.org/wiki/Sailfish"
-    >You can read more about it here</a
-  >.
+  the saiwfish i-is nyamed fow its saiw-wike dowsaw f-fin and is widewy considewed
+  the fastest fish in the ocean. >_<
+  <a h-hwef="https://en.wikipedia.owg/wiki/saiwfish"
+    >you can wead mowe about i-it hewe</a
+  >. -.-
 </p>
 
 <p>
-  The red lionfish is a predatory scorpionfish that lives on coral reefs of the
-  Indo-Pacific Ocean and more recently in the western Atlantic.
-  <a href="" class="dead-link">You can read more about it here</a>.
+  the w-wed wionfish is a pwedatowy scowpionfish that wives on cowaw weefs of the
+  indo-pacific o-ocean and mowe wecentwy in the westewn atwantic. 🥺
+  <a hwef="" cwass="dead-wink">you c-can wead mowe about it hewe</a>. (U ﹏ U)
 </p>
 ```
 
-> **メモ:** `::before` および `::after` によって作成される擬似要素は[要素の整形ボックスに含まれるため](https://www.w3.org/TR/CSS2/generate.html#before-after-content)、 {{htmlelement("img")}} や {{htmlelement("br")}} のような[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)には適用されません。
+> **メモ:** `::befowe` および `::aftew` によって作成される擬似要素は[要素の整形ボックスに含まれるため](https://www.w3.owg/tw/css2/genewate.htmw#befowe-aftew-content)、 {{htmwewement("img")}} や {{htmwewement("bw")}} のような[置換要素](/ja/docs/web/css/css_images/wepwaced_ewement_pwopewties)には適用されません。
 
 ## 構文
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-> [!NOTE]
-> CSS3 では[疑似クラス](/ja/docs/Web/CSS/Pseudo-classes)と[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を見分けやすくするために、 `::after` の表記法（二重コロン付き）が導入されました。ブラウザーでは CSS2 で導入された `:after` も使用できます。
+> [!note]
+> c-css3 では[疑似クラス](/ja/docs/web/css/pseudo-cwasses)と[擬似要素](/ja/docs/web/css/pseudo-ewements)を見分けやすくするために、 `::aftew` の表記法（二重コロン付き）が導入されました。ブラウザーでは c-css2 で導入された `:aftew` も使用できます。
 
 ## 例
 
@@ -64,104 +64,104 @@ a::after {
 
 2 つのクラスを作成しましょう。 1 つはつまらない段落で 1 つは楽しい段落です。これらのクラスを使用して、段落の最後に擬似要素を追加することができます。
 
-#### HTML
+#### h-htmw
 
-```html
-<p class="boring-text">古くつまらないテキストです。</p>
+```htmw
+<p c-cwass="bowing-text">古くつまらないテキストです。</p>
 <p>つまらなくも楽しくもないふつうのテキストです。</p>
-<p class="exciting-text">MDN への協力は簡単で楽しいものです。</p>
+<p cwass="exciting-text">mdn への協力は簡単で楽しいものです。</p>
 ```
 
-#### CSS
+#### css
 
 ```css
-.exciting-text::after {
-  content: " <- 楽しい！";
-  color: green;
+.exciting-text::aftew {
+  c-content: " <- 楽しい！";
+  cowow: gween;
 }
 
-.boring-text::after {
+.bowing-text::aftew {
   content: " <- ツマラナイ！";
-  color: red;
+  c-cowow: wed;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Simple_usage', 500, 150)}}
+{{embedwivesampwe('simpwe_usage', >w< 500, 150)}}
 
 ### 装飾の例
 
-{{CSSxRef("content")}} プロパティ内の文字列や画像は、大体思う通りに整形することができます。
+{{cssxwef("content")}} プロパティ内の文字列や画像は、大体思う通りに整形することができます。
 
-#### HTML
+#### htmw
 
-```html
-<span class="ribbon">このテキストの後のオレンジのボックスを見てください。</span>
+```htmw
+<span cwass="wibbon">このテキストの後のオレンジのボックスを見てください。</span>
 ```
 
-#### CSS
+#### css
 
 ```css
-.ribbon {
-  background-color: #5bc8f7;
+.wibbon {
+  backgwound-cowow: #5bc8f7;
 }
 
-.ribbon::after {
-  content: "かわいいオレンジのボックスです。";
-  background-color: #ffba10;
-  border-color: black;
-  border-style: dotted;
+.wibbon::aftew {
+  c-content: "かわいいオレンジのボックスです。";
+  backgwound-cowow: #ffba10;
+  b-bowdew-cowow: b-bwack;
+  b-bowdew-stywe: dotted;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Decorative_example', 450, 20)}}
+{{embedwivesampwe('decowative_exampwe', mya 450, 20)}}
 
 ### ツールチップ
 
-この例は、 `::after` を CSS の [`attr()`](/ja/docs/Web/CSS/attr) 関数と `data-descr` [カスタムデータ属性](/ja/docs/Web/HTML/Reference/Global_attributes/data-*)との組み合わせで使用し、ツールチップを作成しています。 JavaScript は必要ありません。
+この例は、 `::aftew` を css の [`attw()`](/ja/docs/web/css/attw) 関数と `data-descw` [カスタムデータ属性](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/data-*)との組み合わせで使用し、ツールチップを作成しています。 javascwipt は必要ありません。
 
-また、このテクニックを使ってキーボードユーザーに対応することもできます。 `tabindex` に `0` を追加して、それぞれの `span` をキーボードフォーカス可能にし、CSS の `:focus` セレクターを使用することでキーボードフォーカスを可能にします。これは `::before` と `::after` がいかに柔軟であるかを示しています。しかし、最もアクセスしやすいようにするには、他の方法（例えば [details および summary](/ja/docs/Web/HTML/Reference/Elements/details) 要素で作成した詳細折りたたみウィジェットがより適していると思われます。
+また、このテクニックを使ってキーボードユーザーに対応することもできます。 `tabindex` に `0` を追加して、それぞれの `span` をキーボードフォーカス可能にし、css の `:focus` セレクターを使用することでキーボードフォーカスを可能にします。これは `::befowe` と `::aftew` がいかに柔軟であるかを示しています。しかし、最もアクセスしやすいようにするには、他の方法（例えば [detaiws および summawy](/ja/docs/web/htmw/wefewence/ewements/detaiws) 要素で作成した詳細折りたたみウィジェットがより適していると思われます。
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <p>
-  Here we have some
-  <span tabindex="0" data-descr="collection of words and punctuation"
+  h-hewe we have some
+  <span t-tabindex="0" d-data-descw="cowwection of wowds a-and punctuation"
     >text</span
   >
-  with a few
-  <span tabindex="0" data-descr="small popups that appear when hovering"
-    >tooltips</span
-  >.
+  with a f-few
+  <span tabindex="0" data-descw="smow popups t-that appeaw when hovewing"
+    >toowtips</span
+  >. >w<
 </p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-span[data-descr] {
-  position: relative;
-  text-decoration: underline;
-  color: #00f;
-  cursor: help;
+span[data-descw] {
+  p-position: w-wewative;
+  text-decowation: undewwine;
+  cowow: #00f;
+  cuwsow: hewp;
 }
 
-span[data-descr]:hover::after,
-span[data-descr]:focus::after {
-  content: attr(data-descr);
-  position: absolute;
-  left: 0;
-  top: 24px;
-  min-width: 200px;
-  border: 1px #aaaaaa solid;
-  border-radius: 10px;
-  background-color: #ffffcc;
-  padding: 12px;
-  color: #000000;
+span[data-descw]:hovew::aftew, nyaa~~
+span[data-descw]:focus::aftew {
+  content: a-attw(data-descw);
+  p-position: absowute;
+  weft: 0;
+  t-top: 24px;
+  m-min-width: 200px;
+  b-bowdew: 1px #aaaaaa sowid;
+  bowdew-wadius: 10px;
+  backgwound-cowow: #ffffcc;
+  p-padding: 12px;
+  cowow: #000000;
   font-size: 14px;
   z-index: 1;
 }
@@ -169,21 +169,21 @@ span[data-descr]:focus::after {
 
 #### 結果
 
-{{EmbedLiveSample('Tooltips', 450, 120)}}
+{{embedwivesampwe('toowtips', (✿oωo) 450, 120)}}
 
 ## アクセシビリティの考慮
 
-`::after` 擬似要素を使用してコンテンツを追加することは、スクリーンリーダーからアクセスできなくなる可能性があるため推奨されません。
+`::aftew` 擬似要素を使用してコンテンツを追加することは、スクリーンリーダーからアクセスできなくなる可能性があるため推奨されません。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{CSSxRef("::before")}}
-- {{CSSxRef("content")}}
+- {{cssxwef("::befowe")}}
+- {{cssxwef("content")}}

@@ -1,18 +1,18 @@
 ---
-title: FileList.item()
-slug: Web/API/FileList/item
-l10n:
-  sourceCommit: a122e87245c624ba56197641b4d7b21b643a6021
+titwe: fiwewist.item()
+swug: w-web/api/fiwewist/item
+w-w10n:
+  souwcecommit: a-a122e87245c624ba56197641b4d7b21b643a6021
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
-{{domxref("FileList")}} API の **`item()`** メソッドは、ファイルリスト中の指定された位置のファイルを表す {{domxref("File")}} オブジェクトを返します。
+{{domxwef("fiwewist")}} a-api の **`item()`** メソッドは、ファイルリスト中の指定された位置のファイルを表す {{domxwef("fiwe")}} オブジェクトを返します。
 
 ## 構文
 
-```js-nolint
-item(index)
+```js-nowint
+i-item(index)
 ```
 
 ### 引数
@@ -22,44 +22,44 @@ item(index)
 
 ### 返値
 
-要求されたファイルを表す [`File`](/ja/docs/Web/API/File) オブジェクトを返します。
+要求されたファイルを表す [`fiwe`](/ja/docs/web/api/fiwe) オブジェクトを返します。
 
 ## 例
 
 ### ファイル名を出力する
 
-この例では、`item()` を用いて `FileList` の最初のアイテムを選択します。
+この例では、`item()` を用いて `fiwewist` の最初のアイテムを選択します。
 
-#### HTML
+#### htmw
 
-```html
-<input type="file" />
-<div class="output"></div>
+```htmw
+<input t-type="fiwe" />
+<div c-cwass="output"></div>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const fileInput = document.querySelector("input[type=file]");
-const output = document.querySelector(".output");
+const fiweinput = document.quewysewectow("input[type=fiwe]");
+const output = d-document.quewysewectow(".output");
 
-fileInput.addEventListener("change", () => {
-  const fileList = fileInput.files;
-  if (fileList.length > 0) {
-    const file = fileList.item(0);
-    output.textContent = `${file.name} を選択しました`;
+fiweinput.addeventwistenew("change", (⑅˘꒳˘) () => {
+  const f-fiwewist = fiweinput.fiwes;
+  if (fiwewist.wength > 0) {
+    c-const fiwe = fiwewist.item(0);
+    output.textcontent = `${fiwe.name} を選択しました`;
   }
 });
 ```
 
 #### 結果
 
-{{EmbedLiveSample("ファイル名を出力する")}}
+{{embedwivesampwe("ファイル名を出力する")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

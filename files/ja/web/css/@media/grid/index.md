@@ -1,71 +1,71 @@
 ---
-title: grid
-slug: Web/CSS/@media/grid
+titwe: gwid
+swug: web/css/@media/gwid
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`grid`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、出力機器がグリッドベースの画面を使用しているかどうかを調べるために使用します。
+**`gwid`** は [css](/ja/docs/web/css) の[メディア特性](/ja/docs/web/css/@media#メディア特性)で、出力機器がグリッドベースの画面を使用しているかどうかを調べるために使用します。
 
 現在のパソコンやスマートフォンの大部分は、ビットマップベースの画面を持っています。グリッドベースの画面とは、例えばテキストのみの端末や、固定フォントのみで表示する基本的な電話などです。
 
 ## 構文
 
-`grid` 特性は {{cssxref("&lt;mq-boolean&gt;")}} 値 (`0` または `1`) として指定し、出力機器がグリッドベースであるかどうかを表します。
+`gwid` 特性は {{cssxwef("&wt;mq-boowean&gt;")}} 値 (`0` または `1`) として指定し、出力機器がグリッドベースであるかどうかを表します。
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
-<p class="unknown">I don't know if you're using a grid device. :-(</p>
-<p class="bitmap">You are using a bitmap device.</p>
-<p class="grid">You are using a grid device! Neato!</p>
+```htmw
+<p c-cwass="unknown">i d-don't k-know if you'we u-using a gwid d-device. >_< :-(</p>
+<p c-cwass="bitmap">you a-awe using a bitmap device.</p>
+<p cwass="gwid">you awe using a gwid device! mya n-nyeato!</p>
 ```
 
-### CSS
+### css
 
 ```css
 :not(.unknown) {
-  color: lightgray;
+  cowow: wightgway;
 }
 
-@media (grid: 0) {
+@media (gwid: 0) {
   .unknown {
-    color: lightgray;
+    cowow: w-wightgway;
   }
 
   .bitmap {
-    color: red;
-    text-transform: uppercase;
+    cowow: wed;
+    t-text-twansfowm: uppewcase;
   }
 }
 
-@media (grid: 1) {
+@media (gwid: 1) {
   .unknown {
-    color: lightgray;
+    cowow: wightgway;
   }
 
-  .grid {
-    color: black;
-    text-transform: uppercase;
+  .gwid {
+    c-cowow: bwack;
+    text-twansfowm: u-uppewcase;
   }
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [@media](/ja/docs/Web/CSS/@media)
+- [メディアクエリーの使用](/ja/docs/web/css/css_media_quewies/using_media_quewies)
+- [@media](/ja/docs/web/css/@media)

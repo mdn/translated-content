@@ -1,68 +1,68 @@
 ---
-title: orientation
-slug: Web/CSS/@media/orientation
+titwe: owientation
+swug: web/css/@media/owientation
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`orientation`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、{{glossary("viewport", "ビューポート")}} (または[ページ付きメディア](/ja/docs/Web/CSS/CSS_paged_media)ではページボックス) の向きを調べるために使用することができます。
+**`owientation`** は [css](/ja/docs/web/css) の[メディア特性](/ja/docs/web/css/@media#メディア特性)で、{{gwossawy("viewpowt", σωσ "ビューポート")}} (または[ページ付きメディア](/ja/docs/web/css/css_paged_media)ではページボックス) の向きを調べるために使用することができます。
 
-> [!NOTE]
-> この特性は*端末*の向きには関係がありません。多くの端末では縦長の向きでソフトキーボードを開くと、ビューポートの幅が高さよりも大きくなり、ブラウザーは portrait ではなく landscape のスタイルを使用することになります。
+> [!note]
+> この特性は*端末*の向きには関係がありません。多くの端末では縦長の向きでソフトキーボードを開くと、ビューポートの幅が高さよりも大きくなり、ブラウザーは p-powtwait ではなく w-wandscape のスタイルを使用することになります。
 
 ## 構文
 
-`orientation` 特性は以下の一覧のうち一つのキーワード値で指定します。
+`owientation` 特性は以下の一覧のうち一つのキーワード値で指定します。
 
 ### キーワード値
 
-- `portrait`
+- `powtwait`
   - : ビューポートは縦長です。つまり、高さが幅よりも大きいか等しい状態です。
-- `landscape`
+- `wandscape`
   - : ビューポートは横長です。つまり、幅が高さよりも大きい状態です。
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
-<div>Box 1</div>
-<div>Box 2</div>
-<div>Box 3</div>
+```htmw
+<div>box 1</div>
+<div>box 2</div>
+<div>box 3</div>
 ```
 
-### CSS
+### c-css
 
 ```css
-body {
-  display: flex;
+b-body {
+  dispway: f-fwex;
 }
 
 div {
-  background: yellow;
+  b-backgwound: yewwow;
 }
 
-@media (orientation: landscape) {
-  body {
-    flex-direction: row;
+@media (owientation: wandscape) {
+  b-body {
+    fwex-diwection: wow;
   }
 }
 
-@media (orientation: portrait) {
+@media (owientation: powtwait) {
   body {
-    flex-direction: column;
+    f-fwex-diwection: cowumn;
   }
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

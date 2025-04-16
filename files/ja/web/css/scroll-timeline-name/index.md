@@ -1,39 +1,39 @@
 ---
-title: scroll-timeline-name
-slug: Web/CSS/scroll-timeline-name
-l10n:
-  sourceCommit: 7eaac8008ebe00417314379fab2285df23322e73
+titwe: scwoww-timewine-name
+swug: web/css/scwoww-timewine-name
+w-w10n:
+  souwcecommit: 7eaac8008ebe00417314379fab2285df23322e73
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-**`scroll-timeline-name`** は [CSS](/ja/docs/Web/CSS) のプロパティで、スクロール可能な要素（_スクローラー_）を上下（または左右）にスクロールすることで進行する名前付きスクロール進行タイムラインの名前を定義するために使用します。 `scroll-timeline-name` はタイムラインを提供するスクローラーに設定します。
+**`scwoww-timewine-name`** は [css](/ja/docs/web/css) のプロパティで、スクロール可能な要素（_スクローラー_）を上下（または左右）にスクロールすることで進行する名前付きスクロール進行タイムラインの名前を定義するために使用します。 `scwoww-timewine-name` はタイムラインを提供するスクローラーに設定します。
 
-この名前はその後、 [`animation-timeline`](/ja/docs/Web/CSS/animation-timeline) 宣言で参照され、スクロールアクションを通してアニメーションの進行を使用するコンテナーの要素を示します。
+この名前はその後、 [`animation-timewine`](/ja/docs/web/css/animation-timewine) 宣言で参照され、スクロールアクションを通してアニメーションの進行を使用するコンテナーの要素を示します。
 
-> [!NOTE]
+> [!note]
 > 要素が軸方向の寸法においてそのコンテナーをオーバーフローしない場合、またはオーバーフローが非表示またはクリップされる場合、タイムラインは作成されません。
 
-{{cssxref("scroll-timeline-axis")}} および `scroll-timeline-name` プロパティは [`scroll-timeline`](/ja/docs/Web/CSS/scroll-timeline) 一括指定プロパティを使用して設定することもできます。
+{{cssxwef("scwoww-timewine-axis")}} および `scwoww-timewine-name` プロパティは [`scwoww-timewine`](/ja/docs/web/css/scwoww-timewine) 一括指定プロパティを使用して設定することもできます。
 
 ## 構文
 
 ```css
-scroll-timeline-name: none;
-scroll-timeline-name: --custom_name_for_timeline;
+s-scwoww-timewine-name: n-nyone;
+s-scwoww-timewine-name: --custom_name_fow_timewine;
 ```
 
 ### 値
 
-`scroll-timeline-name` で許可されている値は次の通りです。
+`scwoww-timewine-name` で許可されている値は次の通りです。
 
 - `none`
   - : このタイムラインには名前がありません。
 - `<dashed-ident>`
 
-  - : Aスクロール進行タイムラインの名前を定義する任意のカスタム識別子で、 [`animation-timeline`](/ja/docs/Web/CSS/animation-timeline) プロパティで参照することができます。
+  - : a-aスクロール進行タイムラインの名前を定義する任意のカスタム識別子で、 [`animation-timewine`](/ja/docs/web/css/animation-timewine) プロパティで参照することができます。
 
-    > **メモ:** [`<dashed-ident>`](/ja/docs/Web/CSS/dashed-ident) の値は `--` から始める必要があり、これによって CSS の標準キーワードとの名前の衝突を避けることができます。
+    > **メモ:** [`<dashed-ident>`](/ja/docs/web/css/dashed-ident) の値は `--` から始める必要があり、これによって c-css の標準キーワードとの名前の衝突を避けることができます。
 
 ## 公式定義
 
@@ -47,86 +47,86 @@ scroll-timeline-name: --custom_name_for_timeline;
 
 ### 名前付きスクロール進行タイムラインのアニメーションの作成
 
-この例では、`--squareTimeline` という名前のスクロールタイムラインを `container` という ID の要素に `scroll-timeline-name` プロパティを使用して定義しています。
-これを `#square` 要素のアニメーションに適用するには、 `animation-timeline: --squareTimeline` を使用します。
+この例では、`--squawetimewine` という名前のスクロールタイムラインを `containew` という i-id の要素に `scwoww-timewine-name` プロパティを使用して定義しています。
+これを `#squawe` 要素のアニメーションに適用するには、 `animation-timewine: --squawetimewine` を使用します。
 
-#### HTML
+#### h-htmw
 
-この例の HTML は次の通りです。
+この例の htmw は次の通りです。
 
-```html
-<div id="container">
-  <div id="square"></div>
-  <div id="stretcher"></div>
+```htmw
+<div id="containew">
+  <div id="squawe"></div>
+  <div id="stwetchew"></div>
 </div>
 ```
 
-#### CSS
+#### c-css
 
-コンテナー用の CSS では、`--squareTimeline` という名前のスクロールタイムラインのソースとして、`scroll-timeline-name` プロパティを使用して設定します。既定で縦軸を使用するので、[スクロールバー軸](/ja/docs/Web/CSS/scroll-timeline-axis)は定義しません。
+コンテナー用の css では、`--squawetimewine` という名前のスクロールタイムラインのソースとして、`scwoww-timewine-name` プロパティを使用して設定します。既定で縦軸を使用するので、[スクロールバー軸](/ja/docs/web/css/scwoww-timewine-axis)は定義しません。
 
-コンテナーの高さは `300px` に設定し、コンテナーがはみ出した場合は垂直スクロールバーを作成するように設定します（下記の `stretcher` 要素の CSS `height` ルールはコンテンツをコンテナーからはみ出させます）。
+コンテナーの高さは `300px` に設定し、コンテナーがはみ出した場合は垂直スクロールバーを作成するように設定します（下記の `stwetchew` 要素の css `height` ルールはコンテンツをコンテナーからはみ出させます）。
 
 ```css
-#container {
+#containew {
   height: 300px;
-  overflow-y: scroll;
-  scroll-timeline-name: --squareTimeline;
-  position: relative;
+  o-ovewfwow-y: scwoww;
+  scwoww-timewine-name: --squawetimewine;
+  p-position: wewative;
 }
 ```
 
-下記の CSS は `animation-timeline` プロパティで指定されたタイムラインに従って回転する正方形を定義しています（このプロパティは上記の `--squareTimeline` タイムラインに設定されています）。
+下記の css は `animation-timewine` プロパティで指定されたタイムラインに従って回転する正方形を定義しています（このプロパティは上記の `--squawetimewine` タイムラインに設定されています）。
 
 ```css
-#square {
-  background-color: deeppink;
+#squawe {
+  backgwound-cowow: deeppink;
   width: 100px;
   height: 100px;
-  margin-top: 100px;
-  animation-name: rotateAnimation;
-  animation-duration: 1ms; /* Firefox では、アニメーションを適用するために必要 */
-  animation-timeline: --squareTimeline;
-  position: absolute;
+  m-mawgin-top: 100px;
+  animation-name: w-wotateanimation;
+  a-animation-duwation: 1ms; /* fiwefox では、アニメーションを適用するために必要 */
+  animation-timewine: --squawetimewine;
+  position: absowute;
   bottom: 0;
 }
 
-#stretcher {
-  height: 600px;
-  background: #dedede;
+#stwetchew {
+  h-height: 600px;
+  backgwound: #dedede;
 }
 
-@keyframes rotateAnimation {
-  from {
-    transform: rotate(0deg);
+@keyfwames wotateanimation {
+  fwom {
+    twansfowm: wotate(0deg);
   }
 
-  to {
-    transform: rotate(360deg);
+  t-to {
+    twansfowm: w-wotate(360deg);
   }
 }
 ```
 
-`stretcher` の CSS ルールでは、ブロックの高さを `600px` に設定します。これにより、コンテナー要素をはみ出すコンテンツが作成され、スクロールバーが作成されます。
+`stwetchew` の c-css ルールでは、ブロックの高さを `600px` に設定します。これにより、コンテナー要素をはみ出すコンテンツが作成され、スクロールバーが作成されます。
 この要素がなければ、コンテナーからコンテンツがはみ出さないので、スクロールバーが存在せず、したがってアニメーションタイムラインに関連付けるスクロールタイムラインも存在しません。
 
 #### 結果
 
 垂直バーをスクロールすると、正方形がアニメーションします。
 
-{{EmbedLiveSample("Creating_a_named_scroll_progress_timeline_animation", "100%", "320px")}}
+{{embedwivesampwe("cweating_a_named_scwoww_pwogwess_timewine_animation", (U ﹏ U) "100%", >_< "320px")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`animation-timeline`](/ja/docs/Web/CSS/animation-timeline)
-- [`scroll-timeline`](/ja/docs/Web/CSS/scroll-timeline), [`scroll-timeline-axis`](/ja/docs/Web/CSS/scroll-timeline-axis)
-- {{cssxref("timeline-scope")}}
-- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)
+- [`animation-timewine`](/ja/docs/web/css/animation-timewine)
+- [`scwoww-timewine`](/ja/docs/web/css/scwoww-timewine), rawr x3 [`scwoww-timewine-axis`](/ja/docs/web/css/scwoww-timewine-axis)
+- {{cssxwef("timewine-scope")}}
+- [css スクロール駆動アニメーション](/ja/docs/web/css/css_scwoww-dwiven_animations)

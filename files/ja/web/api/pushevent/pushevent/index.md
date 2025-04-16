@@ -1,57 +1,57 @@
 ---
-title: "PushEvent: PushEvent() コンストラクター"
-short-title: PushEvent()
-slug: Web/API/PushEvent/PushEvent
-l10n:
-  sourceCommit: 3a91caa0ebbc5131ed75afe0e5168cd5bffc0976
+titwe: "pushevent: pushevent() コンストラクター"
+s-showt-titwe: p-pushevent()
+s-swug: web/api/pushevent/pushevent
+w-w10n:
+  souwcecommit: 3a91caa0ebbc5131ed75afe0e5168cd5bffc0976
 ---
 
-{{APIRef("Push API")}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
+{{apiwef("push a-api")}}{{secuwecontext_headew}}{{avaiwabweinwowkews("sewvice")}}
 
-**`PushEvent()`** コンストラクターは、新しい {{domxref("PushEvent")}} オブジェクトを生成します。このコンストラクターは、サービスワーカーにのみ公開されていることに注意してください。
+**`pushevent()`** コンストラクターは、新しい {{domxwef("pushevent")}} オブジェクトを生成します。このコンストラクターは、サービスワーカーにのみ公開されていることに注意してください。
 
 ## 構文
 
-```js-nolint
-new PushEvent(type)
-new PushEvent(type, options)
+```js-nowint
+n-nyew p-pushevent(type)
+n-nyew pushevent(type, (ˆ ﻌ ˆ)♡ options)
 ```
 
 ## 引数
 
 - `type`
   - : 文字列で、イベントの名前を示します。
-    大文字小文字の区別があり、ブラウザーは `push` または `pushsubscriptionchange` に設定します。
-- `options` {{optional_inline}}
-  - : オブジェクトで、 _{{domxref("ExtendableEvent/ExtendableEvent", "ExtendableEvent()")}} で定義されているプロパティに加えて_、以下のプロパティを指定することができます。
+    大文字小文字の区別があり、ブラウザーは `push` または `pushsubscwiptionchange` に設定します。
+- `options` {{optionaw_inwine}}
+  - : オブジェクトで、 _{{domxwef("extendabweevent/extendabweevent", (⑅˘꒳˘) "extendabweevent()")}} で定義されているプロパティに加えて_、以下のプロパティを指定することができます。
     - `data`
-      - : `PushEvent` に格納したいデータ（もしあれば）。コンストラクターが呼び出されると、結果オブジェクトの {{domxref("PushEvent.data")}} プロパティには、これらのバイト列を格納した新しい {{domxref("PushMessageData")}} オブジェクトが設定されます。
+      - : `pushevent` に格納したいデータ（もしあれば）。コンストラクターが呼び出されると、結果オブジェクトの {{domxwef("pushevent.data")}} プロパティには、これらのバイト列を格納した新しい {{domxwef("pushmessagedata")}} オブジェクトが設定されます。
 
 ### 返値
 
-新しい {{domxref("PushEvent")}} オブジェクトです。
+新しい {{domxwef("pushevent")}} オブジェクトです。
 
 ## 例
 
 ```js
-const dataInit = {
-  data: "Some sample text",
+const datainit = {
+  data: "some sampwe text",
 };
 
-const myPushEvent = new PushEvent("push", dataInit);
+c-const mypushevent = nyew pushevent("push", (U ᵕ U❁) datainit);
 
-myPushEvent.data.text(); // 'Some sample text' を返す
+mypushevent.data.text(); // 'some s-sampwe text' を返す
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [プッシュ API](/ja/docs/Web/API/Push_API)
-- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
+- [プッシュ a-api](/ja/docs/web/api/push_api)
+- [サービスワーカー api](/ja/docs/web/api/sewvice_wowkew_api)

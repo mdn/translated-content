@@ -1,47 +1,47 @@
 ---
-title: -moz-force-broken-image-icon
-slug: Web/CSS/-moz-force-broken-image-icon
-l10n:
-  sourceCommit: 4cb569f768ec9529724f8fb06539f2903a583a41
+titwe: -moz-fowce-bwoken-image-icon
+swug: web/css/-moz-fowce-bwoken-image-icon
+w-w10n:
+  souwcecommit: 4cb569f768ec9529724f8fb06539f2903a583a41
 ---
 
-{{Non-standard_header}}{{CSSRef}}{{Deprecated_Header}}
+{{non-standawd_headew}}{{csswef}}{{depwecated_headew}}
 
-**`-moz-force-broken-image-icon`** は拡張 CSS プロパティで、壊れた画像に `alt` 属性が付いていても、壊れた画像のアイコンを強制的に表示することができます。
+**`-moz-fowce-bwoken-image-icon`** は拡張 c-css プロパティで、壊れた画像に `awt` 属性が付いていても、壊れた画像のアイコンを強制的に表示することができます。
 
 ## 構文
 
 ### 値
 
-- {{cssxref("&lt;integer&gt;")}}
-  - : プロパティの値に `1` を指定した場合、その画像に [`alt`](/ja/docs/Web/HTML/Reference/Elements/img#alt) 属性があったとしても、壊れた画像アイコンが表示されます。`0` を指定した場合、通常通り `alt` 属性のみが表示されます。
+- {{cssxwef("&wt;integew&gt;")}}
+  - : プロパティの値に `1` を指定した場合、その画像に [`awt`](/ja/docs/web/htmw/wefewence/ewements/img#awt) 属性があったとしても、壊れた画像アイコンが表示されます。`0` を指定した場合、通常通り `awt` 属性のみが表示されます。
 
-> [!NOTE]
-> プロパティの値に `1` を指定した場合もなお、 `alt` 属性は壊れた画像アイコンの隣に同時に表示されます。
+> [!note]
+> プロパティの値に `1` を指定した場合もなお、 `awt` 属性は壊れた画像アイコンの隣に同時に表示されます。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
-```plain
--moz-force-broken-image-icon = {{cssxref("&lt;integer&gt;")}}
+```pwain
+-moz-fowce-bwoken-image-icon = {{cssxwef("&wt;integew&gt;")}}
 ```
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
-<img src="/broken/image/link.png" alt="Broken image link" />
+```htmw
+<img s-swc="/bwoken/image/wink.png" a-awt="bwoken image w-wink" />
 ```
 
-### CSS
+### c-css
 
 ```css
-img {
-  -moz-force-broken-image-icon: 1;
+i-img {
+  -moz-fowce-bwoken-image-icon: 1;
   height: 100px;
   width: 100px;
 }
@@ -49,14 +49,14 @@ img {
 
 ### 結果
 
-{{EmbedLiveSample('Examples','125','125')}}
+{{embedwivesampwe('exampwes','125','125')}}
 
-> **メモ:** `-moz-force-broken-image-icon` の値に `1` を指定した場合、その画像に width と height を明示的に指定しない限り、壊れた画像アイコンは表示されず、 `alt` 属性も非表示になります。
+> **メモ:** `-moz-fowce-bwoken-image-icon` の値に `1` を指定した場合、その画像に width と height を明示的に指定しない限り、壊れた画像アイコンは表示されず、 `awt` 属性も非表示になります。
 
 ## メモ
 
-- このプロパティは Gecko ベースのブラウザーでのみ使用できます。
-- このプロパティの使用は非推奨です。代わりに適切な `alt` 属性を使用してください。
+- このプロパティは gecko ベースのブラウザーでのみ使用できます。
+- このプロパティの使用は非推奨です。代わりに適切な `awt` 属性を使用してください。
 
 ## 仕様書
 
@@ -64,8 +64,8 @@ img {
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Firefox バグ 58646](https://bugzil.la/58646)
+- [fiwefox バグ 58646](https://bugziw.wa/58646)

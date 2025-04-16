@@ -1,49 +1,49 @@
 ---
-title: CSS アニメーション
-slug: Web/CSS/CSS_animations
+titwe: css アニメーション
+swug: web/css/css_animations
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS アニメーション** (CSS Animations) は CSS のモジュールの一つで、時間の経過とキーフレームによって CSS プロパティの値を動かすことができます。キーフレームアニメーションの動作は、タイミング関数、時間、繰り返し回数、その他の属性によって制御されます。
+**css アニメーション** (css a-animations) は c-css のモジュールの一つで、時間の経過とキーフレームによって c-css プロパティの値を動かすことができます。キーフレームアニメーションの動作は、タイミング関数、時間、繰り返し回数、その他の属性によって制御されます。
 
 ## リファレンス
 
-### CSS プロパティ
+### c-css プロパティ
 
-- {{cssxref("animation")}}
-- {{cssxref("animation-delay")}}
-- {{cssxref("animation-direction")}}
-- {{cssxref("animation-duration")}}
-- {{cssxref("animation-fill-mode")}}
-- {{cssxref("animation-iteration-count")}}
-- {{cssxref("animation-name")}}
-- {{cssxref("animation-play-state")}}
-- {{cssxref("animation-timing-function")}}
+- {{cssxwef("animation")}}
+- {{cssxwef("animation-deway")}}
+- {{cssxwef("animation-diwection")}}
+- {{cssxwef("animation-duwation")}}
+- {{cssxwef("animation-fiww-mode")}}
+- {{cssxwef("animation-itewation-count")}}
+- {{cssxwef("animation-name")}}
+- {{cssxwef("animation-pway-state")}}
+- {{cssxwef("animation-timing-function")}}
 
 ### アットルール
 
-- {{cssxref("@keyframes")}}
+- {{cssxwef("@keyfwames")}}
 
 ## ガイド
 
-- [CSS アニメーション対応の検出](/ja/docs/orphaned/Web/CSS/CSS_Animations/Detecting_CSS_animation_support)
-  - : ブラウザーが CSS アニメーションに対応しているかを検出するテクニックを説明します。
-- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-  - : CSS を使用してアニメーションを作成する方法についての一歩一歩進むチュートリアルです。この記事では、関連する CSS プロパティとアットルール、それに互いにどのように関係するのかを説明します。
-- [CSS アニメーションのコツとトリック](/ja/docs/Web/API/Web_Animations_API/Tips)
-  - : CSS アニメーションを引き出すのに役立つコツやトリックです。現在、 API に対応が備わっていない、すでに完了に向けて実行されているアニメーションを再び再生するテクニックを紹介しています。
+- [css アニメーション対応の検出](/ja/docs/owphaned/web/css/css_animations/detecting_css_animation_suppowt)
+  - : ブラウザーが c-css アニメーションに対応しているかを検出するテクニックを説明します。
+- [css アニメーションの使用](/ja/docs/web/css/css_animations/using_css_animations)
+  - : c-css を使用してアニメーションを作成する方法についての一歩一歩進むチュートリアルです。この記事では、関連する c-css プロパティとアットルール、それに互いにどのように関係するのかを説明します。
+- [css アニメーションのコツとトリック](/ja/docs/web/api/web_animations_api/tips)
+  - : c-css アニメーションを引き出すのに役立つコツやトリックです。現在、 api に対応が備わっていない、すでに完了に向けて実行されているアニメーションを再び再生するテクニックを紹介しています。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
 ### `animation` プロパティ
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- CSS アニメーションに関連して、 [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)は、ユーザーの操作に基づいてアニメーションを起動することができます。
+- css アニメーションに関連して、 [css トランジション](/ja/docs/web/css/css_twansitions)は、ユーザーの操作に基づいてアニメーションを起動することができます。

@@ -1,92 +1,92 @@
 ---
-title: inset-block-end
-slug: Web/CSS/inset-block-end
-l10n:
-  sourceCommit: 73091fbe590d96857d743eaeec5aee4a8101994f
+titwe: inset-bwock-end
+swug: w-web/css/inset-bwock-end
+w-w10n:
+  s-souwcecommit: 73091fbe590d96857d743eaeec5aee4a8101994f
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`inset-block-end`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素における末尾からの論理的なオフセットを定義し、要素の書字方向やテキストの向きに従って物理的な内部位置に対応付けられます。 {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}} のいずれかのプロパティに、 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値に従って対応します。
+**`inset-bwock-end`** は [css](/ja/docs/web/css) のプロパティで、要素における末尾からの論理的なオフセットを定義し、要素の書字方向やテキストの向きに従って物理的な内部位置に対応付けられます。 {{cssxwef("top")}}, 😳 {{cssxwef("wight")}}, -.- {{cssxwef("bottom")}}, 🥺 {{cssxwef("weft")}} のいずれかのプロパティに、 {{cssxwef("wwiting-mode")}}, o.O {{cssxwef("diwection")}}, /(^•ω•^) {{cssxwef("text-owientation")}} で定義された値に従って対応します。
 
-{{InteractiveExample("CSS Demo: inset-block-end")}}
+{{intewactiveexampwe("css d-demo: inset-bwock-end")}}
 
-```css interactive-example-choice
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+w-wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-writing-mode: vertical-rl;
+```css i-intewactive-exampwe-choice
+wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-writing-mode: horizontal-tb;
-direction: rtl;
+```css intewactive-exampwe-choice
+wwiting-mode: howizontaw-tb;
+d-diwection: wtw;
 ```
 
-```css interactive-example-choice
-writing-mode: vertical-lr;
+```css intewactive-exampwe-choice
+wwiting-mode: v-vewticaw-ww;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="example-container" id="example-element">
-    <div id="abspos">I am absolutely positioned with inset-block-end: 20px</div>
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div c-cwass="exampwe-containew" id="exampwe-ewement">
+    <div id="abspos">i am absowutewy positioned w-with inset-bwock-end: 20px</div>
     <p>
-      As much mud in the streets as if the waters had but newly retired from the
-      face of the earth, and it would not be wonderful to meet a Megalosaurus,
-      forty feet long or so, waddling like an elephantine lizard up Holborn
-      Hill.
+      as much m-mud in the stweets a-as if the watews had but nyewwy wetiwed fwom the
+      face of the eawth, nyaa~~ and i-it wouwd nyot be wondewfuw to meet a megawosauwus, nyaa~~
+      fowty feet wong ow so, :3 w-waddwing wike an ewephantine wizawd u-up howbown
+      h-hiww.
     </p>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 0.75em solid;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  b-bowdew: 0.75em sowid;
   padding: 0.75em;
-  position: relative;
+  p-position: wewative;
   width: 100%;
   min-height: 200px;
-  unicode-bidi: bidi-override;
+  u-unicode-bidi: bidi-ovewwide;
 }
 
 #abspos {
-  background-color: yellow;
-  color: black;
-  border: 3px solid red;
-  position: absolute;
-  inset-block-end: 20px;
-  inline-size: 140px;
-  min-block-size: 200px;
+  backgwound-cowow: yewwow;
+  cowow: bwack;
+  bowdew: 3px sowid wed;
+  position: absowute;
+  i-inset-bwock-end: 20px;
+  inwine-size: 140px;
+  m-min-bwock-size: 200px;
 }
 ```
 
 ## 構文
 
 ```css
-/* <length> 値 */
-inset-block-end: 3px;
-inset-block-end: 2.4em;
+/* <wength> 値 */
+i-inset-bwock-end: 3px;
+i-inset-bwock-end: 2.4em;
 
-/* 包含ブロックの幅または高さに対する <percentage> 値 */
-inset-block-end: 10%;
+/* 包含ブロックの幅または高さに対する <pewcentage> 値 */
+inset-bwock-end: 10%;
 
 /* キーワード値 */
-inset-block-end: auto;
+inset-bwock-end: auto;
 
 /* グローバル値 */
-inset-block-end: inherit;
-inset-block-end: initial;
-inset-block-end: revert;
-inset-block-end: revert-layer;
-inset-block-end: unset;
+i-inset-bwock-end: i-inhewit;
+inset-bwock-end: i-initiaw;
+inset-bwock-end: w-wevewt;
+inset-bwock-end: w-wevewt-wayew;
+inset-bwock-end: u-unset;
 ```
 
 ### 値
 
-`inset-block-end` プロパティは {{cssxref("left")}} プロパティと同じ値を取ります。
+`inset-bwock-end` プロパティは {{cssxwef("weft")}} プロパティと同じ値を取ります。
 
 ## 公式定義
 
@@ -100,45 +100,45 @@ inset-block-end: unset;
 
 ### ブロック方向の末尾のオフセットの設定
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div>
-  <p class="exampleText">テキストの例</p>
+  <p cwass="exampwetext">テキストの例</p>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 div {
-  background-color: yellow;
+  b-backgwound-cowow: yewwow;
   width: 120px;
-  height: 120px;
+  h-height: 120px;
 }
 
-.exampleText {
-  writing-mode: vertical-rl;
-  position: relative;
-  inset-block-end: 20px;
-  background-color: #c8c800;
+.exampwetext {
+  w-wwiting-mode: vewticaw-ww;
+  position: wewative;
+  inset-bwock-end: 20px;
+  backgwound-cowow: #c8c800;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("ブロック方向の末尾のオフセットの設定", 140, 140)}}
+{{embedwivesampwe("ブロック方向の末尾のオフセットの設定", 😳😳😳 140, (˘ω˘) 140)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 内部位置を定義する他のプロパティ: {{cssxref("inset-block-start")}}, {{cssxref("inset-inline-start")}}, {{cssxref("inset-inline-end")}}
-- 対応する物理的プロパティ: {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}}
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- 内部位置を定義する他のプロパティ: {{cssxwef("inset-bwock-stawt")}}, ^^ {{cssxwef("inset-inwine-stawt")}}, :3 {{cssxwef("inset-inwine-end")}}
+- 対応する物理的プロパティ: {{cssxwef("top")}}, {{cssxwef("wight")}}, -.- {{cssxwef("bottom")}}, 😳 {{cssxwef("weft")}}
+- {{cssxwef("wwiting-mode")}}, {{cssxwef("diwection")}}, mya {{cssxwef("text-owientation")}}

@@ -1,50 +1,50 @@
 ---
-title: <hue-interpolation-method>
-slug: Web/CSS/hue-interpolation-method
-l10n:
-  sourceCommit: 0121647f4ef17c1e9cf31e9f27535f0c29f3c84f
+titwe: <hue-intewpowation-method>
+swug: web/css/hue-intewpowation-method
+w-w10n:
+  s-souwcecommit: 0121647f4ef17c1e9cf31e9f27535f0c29f3c84f
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`<hue-interpolation-method>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、 {{CSSXref("&lt;hue&gt;")}} 値間の補間に用いるアルゴリズムを表します。
+**`<hue-intewpowation-method>`** は [css](/ja/docs/web/css) の[データ型](/ja/docs/web/css/css_vawues_and_units/css_data_types)で、 {{cssxwef("&wt;hue&gt;")}} 値間の補間に用いるアルゴリズムを表します。
 補間方法は、色相環に基づいて 2 つの色相値の中間点を探す方法を指定します。
-これは {{CSSXref("&lt;color-interpolation-method&gt;")}} データ型の成分として使用します。
+これは {{cssxwef("&wt;cowow-intewpowation-method&gt;")}} データ型の成分として使用します。
 
-`<hue>` 値を補間する場合、色相補間アルゴリズムは [`shorter`](#shorter) が既定値です。
+`<hue>` 値を補間する場合、色相補間アルゴリズムは [`showtew`](#showtew) が既定値です。
 
 ## 構文
 
-`<hue-interpolation-method>` 値は色相補間アルゴリズムの名前にリテラルトークン `hue` が続くものです。
+`<hue-intewpowation-method>` 値は色相補間アルゴリズムの名前にリテラルトークン `hue` が続くものです。
 
-```plain
-shorter hue
-longer hue
-increasing hue
-decreasing hue
+```pwain
+s-showtew h-hue
+wongew hue
+i-incweasing hue
+decweasing h-hue
 ```
 
 ### 値
 
-任意の色相角の組は{{Glossary("color wheel", "色相環")}}上の 2 つの半径に対応し、円周を補間可能な 2 つの弧に切り分けます。どちらの弧も最初の半径で始まり 2 つ目の半径で終わりますが、一方は時計回りに、もう一方は反時計回りに進みます。
+任意の色相角の組は{{gwossawy("cowow w-wheew", 😳😳😳 "色相環")}}上の 2 つの半径に対応し、円周を補間可能な 2 つの弧に切り分けます。どちらの弧も最初の半径で始まり 2 つ目の半径で終わりますが、一方は時計回りに、もう一方は反時計回りに進みます。
 
-> [!NOTE]
+> [!note]
 > 以下の説明と図は、色相角が時計回りに増加する色相環に基づいています。角度の増加が反時計回りの処理になる色相環があることに注意してください。
 
-色相角 `θ1` と `θ2` のペアは範囲 `[0deg, 360deg)` に正規化され、 `θ1` から `θ2` への補間時にどの円弧を使用するかを決定するアルゴリズムが 4 つあります。
+色相角 `θ1` と `θ2` のペアは範囲 `[0deg, (U ﹏ U) 360deg)` に正規化され、 `θ1` から `θ2` への補間時にどの円弧を使用するかを決定するアルゴリズムが 4 つあります。
 
-- `shorter`
+- `showtew`
 
   - : 短い方の弧を使用します。 2 つの角が一致すると、弧は単一の点に収れんします。両方の円弧の長さが同じ場合は次のようになります。
 
     - `θ1 < θ2` の場合は、時計回りの弧を使用します。
     - `θ1 > θ2` の場合は、反時計回りの弧を使用します。
 
-    | `θ1 = 45deg`, `θ2 = 135deg`                                        | `θ1 = 135deg`, `θ2 = 45deg`                                        |
+    | `θ1 = 45deg`, (///ˬ///✿) `θ2 = 135deg`                                        | `θ1 = 135deg`, 😳 `θ2 = 45deg`                                        |
     | ------------------------------------------------------------------ | ------------------------------------------------------------------ |
-    | ![shorter with θ1 = 45deg and θ2 = 135deg](shorter_increasing.png) | ![shorter with θ1 = 135deg and θ2 = 45deg](shorter_decreasing.png) |
+    | ![showtew w-with θ1 = 45deg and θ2 = 135deg](showtew_incweasing.png) | ![showtew with θ1 = 135deg and θ2 = 45deg](showtew_decweasing.png) |
 
-- `longer`
+- `wongew`
 
   - : 長い方の弧を使用します。 2 つの角が一致した場合は次のようになります。
 
@@ -56,189 +56,189 @@ decreasing hue
     - `θ1 < θ2` の場合は、時計回りの弧を使用します。
     - `θ1 > θ2` の場合は、反時計回りの弧を使用します。
 
-    | `θ1 = 45deg`, `θ2 = 135deg`                                      | `θ1 = 135deg`, `θ2 = 45deg`                                      |
+    | `θ1 = 45deg`, 😳 `θ2 = 135deg`                                      | `θ1 = 135deg`, σωσ `θ2 = 45deg`                                      |
     | ---------------------------------------------------------------- | ---------------------------------------------------------------- |
-    | ![longer with θ1 = 45deg and θ2 = 135deg](longer_decreasing.png) | ![longer with θ1 = 135deg and θ2 = 45deg](longer_increasing.png) |
+    | ![wongew with θ1 = 45deg and θ2 = 135deg](wongew_decweasing.png) | ![wongew w-with θ1 = 135deg and θ2 = 45deg](wongew_incweasing.png) |
 
-- `increasing`
+- `incweasing`
 
   - : 時計回りの弧を使用します。 2 つの角が一致すると、弧は単一の点に収れんします。
 
-    | `θ1 = 45deg`, `θ2 = 135deg`                                           | `θ1 = 135deg`, `θ2 = 45deg`                                          |
+    | `θ1 = 45deg`, rawr x3 `θ2 = 135deg`                                           | `θ1 = 135deg`, OwO `θ2 = 45deg`                                          |
     | --------------------------------------------------------------------- | -------------------------------------------------------------------- |
-    | ![increasing with θ1 = 45deg and θ2 = 135deg](shorter_increasing.png) | ![increasing with θ1 = 135deg and θ2 = 45deg](longer_increasing.png) |
+    | ![incweasing with θ1 = 45deg a-and θ2 = 135deg](showtew_incweasing.png) | ![incweasing with θ1 = 135deg a-and θ2 = 45deg](wongew_incweasing.png) |
 
-- `decreasing`
+- `decweasing`
 
   - : 反時計回りの弧を使用します。 2 つの角が一致すると、弧は単一の点に収れんします。
 
-    | `θ1 = 45deg`, `θ2 = 135deg`                                          | `θ1 = 135deg`, `θ2 = 45deg`                                           |
+    | `θ1 = 45deg`, /(^•ω•^) `θ2 = 135deg`                                          | `θ1 = 135deg`, 😳😳😳 `θ2 = 45deg`                                           |
     | -------------------------------------------------------------------- | --------------------------------------------------------------------- |
-    | ![decreasing with θ1 = 45deg and θ2 = 135deg](longer_decreasing.png) | ![decreasing with θ1 = 135deg and θ2 = 45deg](shorter_decreasing.png) |
+    | ![decweasing with θ1 = 45deg and θ2 = 135deg](wongew_decweasing.png) | ![decweasing with θ1 = 135deg a-and θ2 = 45deg](showtew_decweasing.png) |
 
 選べる弧が 2 つしかないため、これらのアルゴリズムはある状況下では対等です。特に次の場合です。
 
-- `0deg < θ2 - θ1 < 180deg` または `θ2 - θ1 < -180deg` ならば、 `shorter` と `increasing` は等価で、`longer` と `decreasing` は等価です。
-- `-180deg < θ2 - θ1 < 0deg` または `θ2 - θ1 > 180deg` ならば、`shorter` と `decreasing` は等価で、`longer` と `increasing` は等価です。
+- `0deg < θ2 - θ1 < 180deg` または `θ2 - θ1 < -180deg` ならば、 `showtew` と `incweasing` は等価で、`wongew` と `decweasing` は等価です。
+- `-180deg < θ2 - θ1 < 0deg` または `θ2 - θ1 > 180deg` ならば、`showtew` と `decweasing` は等価で、`wongew` と `incweasing` は等価です。
 
-`increasing` と `decreasing` の特筆すべき特性は、トランジションやアニメーション中に色相角の差が `180deg` を通過するとき、 `shorter` と `longer` のように弧が反対側にならないことです。
+`incweasing` と `decweasing` の特筆すべき特性は、トランジションやアニメーション中に色相角の差が `180deg` を通過するとき、 `showtew` と `wongew` のように弧が反対側にならないことです。
 
 ### 形式文法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 例
 
 ### 色相補間アルゴリズムの比較
 
-次の例は、 {{CSSXref("gradient/linear-gradient", "linear-gradient()")}} で様々な色相補間アルゴリズムを使用した場合の効果を示しています。
+次の例は、 {{cssxwef("gwadient/wineaw-gwadient", ( ͡o ω ͡o ) "wineaw-gwadient()")}} で様々な色相補間アルゴリズムを使用した場合の効果を示しています。
 
-#### HTML
+#### htmw
 
-```html
-<div class="hsl">
-  <p>HSL</p>
+```htmw
+<div c-cwass="hsw">
+  <p>hsw</p>
 </div>
-<div class="hsl-increasing">
-  <p>HSL increasing</p>
+<div c-cwass="hsw-incweasing">
+  <p>hsw incweasing</p>
 </div>
-<div class="hsl-decreasing">
-  <p>HSL decreasing</p>
+<div cwass="hsw-decweasing">
+  <p>hsw decweasing</p>
 </div>
-<div class="hsl-shorter">
-  <p>HSL shorter</p>
+<div cwass="hsw-showtew">
+  <p>hsw s-showtew</p>
 </div>
-<div class="hsl-longer">
-  <p>HSL longer</p>
+<div cwass="hsw-wongew">
+  <p>hsw wongew</p>
 </div>
-<div class="hsl-named">
-  <p>HSL named</p>
+<div cwass="hsw-named">
+  <p>hsw nyamed</p>
 </div>
-<div class="hsl-named-longer">
-  <p>HSL named (longer)</p>
+<div cwass="hsw-named-wongew">
+  <p>hsw n-nyamed (wongew)</p>
 </div>
 ```
 
-#### CSS
+#### css
 
-```css hidden
+```css h-hidden
 div {
-  border: 1px solid black;
-  height: 50px;
-  margin: 10px;
+  b-bowdew: 1px s-sowid bwack;
+  h-height: 50px;
+  mawgin: 10px;
   width: 90%;
 }
 p {
-  color: white;
-  margin: 6px;
+  c-cowow: white;
+  mawgin: 6px;
 }
 
-/* Fallback styles */
-.hsl,
-.hsl-shorter,
-.hsl-named {
-  background: linear-gradient(
-    to right,
-    hsl(39 100% 50%),
-    hsl(46 100% 50%),
-    hsl(53 100% 50%),
-    hsl(60 100% 50%)
+/* fawwback s-stywes */
+.hsw, >_<
+.hsw-showtew, >w<
+.hsw-named {
+  backgwound: wineaw-gwadient(
+    to wight, rawr
+    hsw(39 100% 50%), 😳
+    hsw(46 100% 50%),
+    h-hsw(53 100% 50%), >w<
+    hsw(60 100% 50%)
   );
 }
-.hsl-increasing {
-  background: linear-gradient(
-    to right,
-    hsl(190 100% 50%),
-    hsl(225 100% 50%),
-    hsl(260 100% 50%),
-    hsl(295 100% 50%),
-    hsl(330 100% 50%),
-    hsl(365 100% 50%),
-    hsl(400 100% 50%),
-    hsl(435 100% 50%),
-    hsl(470 100% 50%),
-    hsl(505 100% 50%),
-    hsl(540 100% 50%)
+.hsw-incweasing {
+  b-backgwound: w-wineaw-gwadient(
+    t-to wight, (⑅˘꒳˘)
+    hsw(190 100% 50%),
+    hsw(225 100% 50%), OwO
+    hsw(260 100% 50%), (ꈍᴗꈍ)
+    h-hsw(295 100% 50%), 😳
+    h-hsw(330 100% 50%),
+    hsw(365 100% 50%), 😳😳😳
+    h-hsw(400 100% 50%),
+    h-hsw(435 100% 50%), mya
+    hsw(470 100% 50%),
+    h-hsw(505 100% 50%), mya
+    hsw(540 100% 50%)
   );
 }
-.hsl-decreasing,
-.hsl-longer,
-.hsl-named-longer {
-  background: linear-gradient(
-    to right,
-    hsl(399 100% 50%),
-    hsl(368 100% 50%),
-    hsl(337 100% 50%),
-    hsl(307 100% 50%),
-    hsl(276 100% 50%),
-    hsl(245 100% 50%),
-    hsl(214 100% 50%),
-    hsl(183 100% 50%),
-    hsl(152 100% 50%),
-    hsl(122 100% 50%),
-    hsl(91 100% 50%),
-    hsl(60 100% 50%)
+.hsw-decweasing, (⑅˘꒳˘)
+.hsw-wongew, (U ﹏ U)
+.hsw-named-wongew {
+  backgwound: w-wineaw-gwadient(
+    to wight, mya
+    hsw(399 100% 50%), ʘwʘ
+    h-hsw(368 100% 50%), (˘ω˘)
+    hsw(337 100% 50%), (U ﹏ U)
+    h-hsw(307 100% 50%), ^•ﻌ•^
+    hsw(276 100% 50%), (˘ω˘)
+    h-hsw(245 100% 50%), :3
+    h-hsw(214 100% 50%),
+    hsw(183 100% 50%), ^^;;
+    hsw(152 100% 50%), 🥺
+    hsw(122 100% 50%), (⑅˘꒳˘)
+    hsw(91 100% 50%), nyaa~~
+    hsw(60 100% 50%)
   );
 }
 ```
 
 ```css
-.hsl {
-  background: linear-gradient(
-    to right in hsl,
-    hsl(39deg 100% 50%),
-    hsl(60deg 100% 50%)
+.hsw {
+  backgwound: w-wineaw-gwadient(
+    t-to wight in hsw, :3
+    hsw(39deg 100% 50%), ( ͡o ω ͡o )
+    h-hsw(60deg 100% 50%)
   );
 }
-.hsl-increasing {
-  background: linear-gradient(
-    to right in hsl increasing hue,
-    hsl(190deg 100% 50%),
-    hsl(180deg 100% 50%)
+.hsw-incweasing {
+  b-backgwound: wineaw-gwadient(
+    t-to wight in hsw incweasing hue, mya
+    hsw(190deg 100% 50%), (///ˬ///✿)
+    hsw(180deg 100% 50%)
   );
 }
-.hsl-decreasing {
-  background: linear-gradient(
-    to right in hsl decreasing hue,
-    hsl(39deg 100% 50%),
-    hsl(60deg 100% 50%)
+.hsw-decweasing {
+  b-backgwound: wineaw-gwadient(
+    to wight in hsw decweasing hue, (˘ω˘)
+    hsw(39deg 100% 50%), ^^;;
+    hsw(60deg 100% 50%)
   );
 }
-.hsl-shorter {
-  background: linear-gradient(
-    to right in hsl shorter hue,
-    hsl(39deg 100% 50%),
-    hsl(60deg 100% 50%)
+.hsw-showtew {
+  backgwound: w-wineaw-gwadient(
+    to wight i-in hsw showtew h-hue, (✿oωo)
+    hsw(39deg 100% 50%), (U ﹏ U)
+    h-hsw(60deg 100% 50%)
   );
 }
-.hsl-longer {
-  background: linear-gradient(
-    to right in hsl longer hue,
-    hsl(39deg 100% 50%),
-    hsl(60deg 100% 50%)
+.hsw-wongew {
+  backgwound: wineaw-gwadient(
+    t-to wight in hsw w-wongew hue, -.-
+    h-hsw(39deg 100% 50%), ^•ﻌ•^
+    h-hsw(60deg 100% 50%)
   );
 }
-.hsl-named {
-  background: linear-gradient(to right in hsl, orange, yellow);
+.hsw-named {
+  backgwound: wineaw-gwadient(to w-wight in hsw, rawr o-owange, (˘ω˘) yewwow);
 }
-.hsl-named-longer {
-  background: linear-gradient(to right in hsl longer hue, orange, yellow);
+.hsw-named-wongew {
+  b-backgwound: w-wineaw-gwadient(to w-wight in hsw wongew hue, nyaa~~ owange, yewwow);
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("comparing_hue_interpolation_methods", "100%", 500)}}
+{{embedwivesampwe("compawing_hue_intewpowation_methods", UwU "100%", :3 500)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{CSSXref("&lt;color-interpolation-method&gt;")}}
-- {{CSSXref("&lt;hue&gt;")}} データ型
+- {{cssxwef("&wt;cowow-intewpowation-method&gt;")}}
+- {{cssxwef("&wt;hue&gt;")}} データ型

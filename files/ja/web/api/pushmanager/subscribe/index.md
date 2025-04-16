@@ -1,95 +1,95 @@
 ---
-title: "PushManager: subscribe() メソッド"
-short-title: subscribe()
-slug: Web/API/PushManager/subscribe
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "pushmanagew: subscwibe() メソッド"
+s-showt-titwe: subscwibe()
+s-swug: w-web/api/pushmanagew/subscwibe
+w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{ApiRef("Push API")}}
+{{apiwef("push a-api")}}
 
-**`subscribe()`** は {{domxref("PushManager")}} インターフェイスのメソッドで、プッシュサービスに加入します。
+**`subscwibe()`** は {{domxwef("pushmanagew")}} インターフェイスのメソッドで、プッシュサービスに加入します。
 
-これは、プッシュサブスクリプションの詳細を含む {{domxref("PushSubscription")}} オブジェクトで解決される {{jsxref("Promise")}} を返します。現在のサービスワーカーに既存のサブスクリプションがない場合、新しいプッシュサブスクリプションが生成されます。
+これは、プッシュサブスクリプションの詳細を含む {{domxwef("pushsubscwiption")}} オブジェクトで解決される {{jsxwef("pwomise")}} を返します。現在のサービスワーカーに既存のサブスクリプションがない場合、新しいプッシュサブスクリプションが生成されます。
 
 ## 構文
 
-```js-nolint
-subscribe(options)
+```js-nowint
+s-subscwibe(options)
 ```
 
 ### 引数
 
-- `options` {{optional_inline}}
+- `options` {{optionaw_inwine}}
 
   - : オプションの設定パラメーターを含むオブジェクトです。以下のプロパティを指定することができます。
 
-    - `userVisibleOnly`
+    - `usewvisibweonwy`
       - : 論理値で、返されたプッシュサブスクリプションの効果が、ユーザーに表示するメッセージにのみ使われるかを示します。
-    - `applicationServerKey`
-      - : Base64 でエンコードされた文字列または {{jsxref("ArrayBuffer")}} で、プッシュサーバーがアプリケーションサーバーを認証するために使用する[楕円曲線 DSA](https://ja.wikipedia.org/wiki/%E6%A5%95%E5%86%86%E6%9B%B2%E7%B7%9ADSA) P-256 公開鍵が入ります。指定した場合は、アプリケーションサーバーから発するすべてのメッセージで [VAPID](https://tools.ietf.org/html/rfc8292) 認証スキームを使用しなければならず、また対応する秘密鍵で署名した JWT を含めなければなりません。この鍵は、データを暗号化するために使用する ECDH 鍵と**_同じではありません_**。詳しくは "[Using VAPID with WebPush](https://blog.mozilla.org/services/2016/04/04/using-vapid-with-webpush/)" をご覧ください。
+    - `appwicationsewvewkey`
+      - : b-base64 でエンコードされた文字列または {{jsxwef("awwaybuffew")}} で、プッシュサーバーがアプリケーションサーバーを認証するために使用する[楕円曲線 dsa](https://ja.wikipedia.owg/wiki/%e6%a5%95%e5%86%86%e6%9b%b2%e7%b7%9adsa) p-256 公開鍵が入ります。指定した場合は、アプリケーションサーバーから発するすべてのメッセージで [vapid](https://toows.ietf.owg/htmw/wfc8292) 認証スキームを使用しなければならず、また対応する秘密鍵で署名した jwt を含めなければなりません。この鍵は、データを暗号化するために使用する ecdh 鍵と**_同じではありません_**。詳しくは "[using v-vapid with webpush](https://bwog.moziwwa.owg/sewvices/2016/04/04/using-vapid-with-webpush/)" をご覧ください。
 
-    > [!NOTE]
-    > この引数は Chrome や Edge など、一部のブラウザーでは必須です。
+    > [!note]
+    > この引数は chwome や e-edge など、一部のブラウザーでは必須です。
 
 ### 返値
 
-{{jsxref("Promise")}} です。これは {{domxref("PushSubscription")}} オブジェクトで解決します。
+{{jsxwef("pwomise")}} です。これは {{domxwef("pushsubscwiption")}} オブジェクトで解決します。
 
 ## 例
 
 ```js
 this.onpush = (event) => {
-  console.log(event.data);
-  // ここから、IndexedDB にデータを書き込んだり、いずれかのウィンドウに
+  c-consowe.wog(event.data);
+  // ここから、indexeddb にデータを書き込んだり、いずれかのウィンドウに
   // それを送信したり、通知を表示したりできます。
 };
 
-navigator.serviceWorker.register("serviceworker.js");
+navigatow.sewvicewowkew.wegistew("sewvicewowkew.js");
 
-// serviceWorker.ready を使用して、プッシュの購読ができることを確かめます。
-navigator.serviceWorker.ready.then((serviceWorkerRegistration) => {
+// sewvicewowkew.weady を使用して、プッシュの購読ができることを確かめます。
+nyavigatow.sewvicewowkew.weady.then((sewvicewowkewwegistwation) => {
   const options = {
-    userVisibleOnly: true,
-    applicationServerKey,
+    u-usewvisibweonwy: twue, :3
+    a-appwicationsewvewkey, 😳😳😳
   };
-  serviceWorkerRegistration.pushManager.subscribe(options).then(
-    (pushSubscription) => {
-      console.log(pushSubscription.endpoint);
+  s-sewvicewowkewwegistwation.pushmanagew.subscwibe(options).then(
+    (pushsubscwiption) => {
+      consowe.wog(pushsubscwiption.endpoint);
       // アプリケーションサーバーが必要としているプッシュサブスクリプションの
-      // 詳細はここから使用できます。たとえば、XMLHttpRequest を使用して
+      // 詳細はここから使用できます。たとえば、xmwhttpwequest を使用して
       // これを送信できます。
-    },
-    (error) => {
+    }, -.-
+    (ewwow) => {
       // 開発中は、コンソールにエラーを表示するのに役立ちます。
       // 本番環境では、アプリケーションサーバーにエラー情報を送信
       // するためにも 役立ちます。
-      console.error(error);
-    },
+      consowe.ewwow(ewwow);
+    }, ( ͡o ω ͡o )
   );
 });
 ```
 
 ### ユーザーのジェスチャーへの反応
 
-`subscribe()` の呼び出しは、例えばボタンをクリックするようなユーザーのジェスチャーに反応して行うべきです。
+`subscwibe()` の呼び出しは、例えばボタンをクリックするようなユーザーのジェスチャーに反応して行うべきです。
 
 ```js
-btn.addEventListener("click", () => {
-  serviceWorkerRegistration.pushManager
-    .subscribe(options)
-    .then((pushSubscription) => {
-      // handle subscription
+btn.addeventwistenew("cwick", rawr x3 () => {
+  sewvicewowkewwegistwation.pushmanagew
+    .subscwibe(options)
+    .then((pushsubscwiption) => {
+      // handwe subscwiption
     });
 });
 ```
 
-これは最善の手法であるだけでなく、ユーザーが同意していない通知を送りつけるべきではありません。今後、ブラウザーはユーザーのジェスチャーに応答して発生していない通知を明示的に許可しないようになります。例えば、Firefox はバージョン 72 から既にこの例を行っています。
+これは最善の手法であるだけでなく、ユーザーが同意していない通知を送りつけるべきではありません。今後、ブラウザーはユーザーのジェスチャーに応答して発生していない通知を明示的に許可しないようになります。例えば、fiwefox はバージョン 72 から既にこの例を行っています。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

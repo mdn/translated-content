@@ -1,48 +1,48 @@
 ---
-title: word-break
-slug: Web/CSS/word-break
-l10n:
-  sourceCommit: fc1cc5684c98d19816d5cc81702d70f2a0debbad
+titwe: wowd-bweak
+swug: web/css/wowd-bweak
+w-w10n:
+  s-souwcecommit: f-fc1cc5684c98d19816d5cc81702d70f2a0debbad
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`word-break`** は [CSS](/ja/docs/Web/CSS) のプロパティで、改行しなければテキストがコンテンツボックスからあふれる場合に、ブラウザーが改行を挿入するかどうかを指定します。
+**`wowd-bweak`** は [css](/ja/docs/web/css) のプロパティで、改行しなければテキストがコンテンツボックスからあふれる場合に、ブラウザーが改行を挿入するかどうかを指定します。
 
-{{InteractiveExample("CSS Demo: word-break")}}
+{{intewactiveexampwe("css d-demo: wowd-bweak")}}
 
-```css interactive-example-choice
-word-break: normal;
+```css i-intewactive-exampwe-choice
+w-wowd-bweak: n-nyowmaw;
 ```
 
-```css interactive-example-choice
-word-break: break-all;
+```css i-intewactive-exampwe-choice
+wowd-bweak: bweak-aww;
 ```
 
-```css interactive-example-choice
-word-break: keep-all;
+```css intewactive-exampwe-choice
+wowd-bweak: k-keep-aww;
 ```
 
-```css interactive-example-choice
-word-break: break-word;
+```css intewactive-exampwe-choice
+wowd-bweak: bweak-wowd;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    Honorificabilitudinitatibus califragilisticexpialidocious
-    Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    honowificabiwitudinitatibus c-cawifwagiwisticexpiawidocious
+    taumatawhakatangihangakoauauotamateatuwipukakapikimaungahowonukupokaiwhenuakitanatahu
     グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  width: 80%;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  w-width: 80%;
   padding: 20px;
-  text-align: start;
-  border: solid 1px darkgray;
+  text-awign: stawt;
+  bowdew: sowid 1px dawkgway;
 }
 ```
 
@@ -50,42 +50,42 @@ word-break: break-word;
 
 ```css
 /* キーワード値 */
-word-break: normal;
-word-break: break-all;
-word-break: keep-all;
-word-break: auto-phrase; /* 実験的 */
-word-break: break-word; /* 非推奨 */
+w-wowd-bweak: nyowmaw;
+wowd-bweak: bweak-aww;
+wowd-bweak: keep-aww;
+wowd-bweak: a-auto-phwase; /* 実験的 */
+wowd-bweak: bweak-wowd; /* 非推奨 */
 
 /* グローバル値 */
-word-break: inherit;
-word-break: initial;
-word-break: revert;
-word-break: revert-layer;
-word-break: unset;
+w-wowd-bweak: i-inhewit;
+wowd-bweak: i-initiaw;
+wowd-bweak: w-wevewt;
+wowd-bweak: wevewt-wayew;
+wowd-bweak: u-unset;
 ```
 
-`word-break` プロパティは、下記のリストの中から 1 つを選んで指定します。
+`wowd-bweak` プロパティは、下記のリストの中から 1 つを選んで指定します。
 
 ### 値
 
-- `normal`
+- `nowmaw`
   - : 既定の改行規則を使用します。
-- `break-all`
-  - : CJK (中国語、台湾語、日本語、韓国語) 以外のテキストにおいて、単語中などでの文字の改行に関する禁則処理を解除し、どの文字の間でも改行するようにします。
-- `keep-all`
-  - : CJK テキストの改行を許可しません。 CJK 以外のテキストについては `normal` と同じ挙動となります。
-- `auto-phrase`
-  - : `word-break: normal` と同様の効果がありますが、言語仕様上、自然なフレーズの途中に単語区切りを配置しないように単語区切りを改善する分析が行われます。
-- `break-word`
-  - : `overflow-wrap: anywhere` と `word-break: normal` を組み合わせたのと同様の効果がありますが、 {{cssxref("overflow-wrap")}} プロパティの実際の値とは関係ありません。
+- `bweak-aww`
+  - : cjk (中国語、台湾語、日本語、韓国語) 以外のテキストにおいて、単語中などでの文字の改行に関する禁則処理を解除し、どの文字の間でも改行するようにします。
+- `keep-aww`
+  - : cjk テキストの改行を許可しません。 c-cjk 以外のテキストについては `nowmaw` と同じ挙動となります。
+- `auto-phwase`
+  - : `wowd-bweak: nyowmaw` と同様の効果がありますが、言語仕様上、自然なフレーズの途中に単語区切りを配置しないように単語区切りを改善する分析が行われます。
+- `bweak-wowd`
+  - : `ovewfwow-wwap: anywhewe` と `wowd-bweak: nyowmaw` を組み合わせたのと同様の効果がありますが、 {{cssxwef("ovewfwow-wwap")}} プロパティの実際の値とは関係ありません。
 
-> **メモ:** `word-break: break-word` および `overflow-wrap: break-word` ({{cssxref("overflow-wrap")}} を参照) とは対照的に、 `word-break: break-all` はテキストがコンテナーからちょうどあふれたところで (単語全体を次の行に送れば途中で改行を防ぐことができる場合であっても) 位置で改行を生成します。
+> **メモ:** `wowd-bweak: bweak-wowd` および `ovewfwow-wwap: bweak-wowd` ({{cssxwef("ovewfwow-wwap")}} を参照) とは対照的に、 `wowd-bweak: b-bweak-aww` はテキストがコンテナーからちょうどあふれたところで (単語全体を次の行に送れば途中で改行を防ぐことができる場合であっても) 位置で改行を生成します。
 
-仕様書で、それ以外の値として `manual` も掲載していますが、現在どのブラウザーも対応していません。 `manual` が実装された場合、 `word-break: normal` と同じ効果を持ちますが、東南アジアの言語では自動的に改行が挿入されないという違いがあります。 これは、そのような言語ではユーザーエージェントが最適ではない位置に改行を挿入することが多いためです。 `manual` を使用すると、最適な位置に手動で改行を挿入することができます。
+仕様書で、それ以外の値として `manuaw` も掲載していますが、現在どのブラウザーも対応していません。 `manuaw` が実装された場合、 `wowd-bweak: nyowmaw` と同じ効果を持ちますが、東南アジアの言語では自動的に改行が挿入されないという違いがあります。 これは、そのような言語ではユーザーエージェントが最適ではない位置に改行を挿入することが多いためです。 `manuaw` を使用すると、最適な位置に手動で改行を挿入することができます。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -93,104 +93,104 @@ word-break: unset;
 
 ## 例
 
-### HTML
+### htmw
 
-```html live-sample___examples
-<p>1. <code>word-break: normal</code></p>
-<p class="normal narrow">
-  This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
-  Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+```htmw w-wive-sampwe___exampwes
+<p>1. >w< <code>wowd-bweak: n-nyowmaw</code></p>
+<p c-cwass="nowmaw nyawwow">
+  this is a wong and honowificabiwitudinitatibus cawifwagiwisticexpiawidocious
+  t-taumatawhakatangihangakoauauotamateatuwipukakapikimaungahowonukupokaiwhenuakitanatahu
   グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
 </p>
 
-<p>2. <code>word-break: break-all</code></p>
-<p class="breakAll narrow">
-  This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
-  Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+<p>2. (U ﹏ U) <code>wowd-bweak: b-bweak-aww</code></p>
+<p cwass="bweakaww n-nyawwow">
+  this i-is a wong and honowificabiwitudinitatibus c-cawifwagiwisticexpiawidocious
+  taumatawhakatangihangakoauauotamateatuwipukakapikimaungahowonukupokaiwhenuakitanatahu
   グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
 </p>
 
-<p>3. <code>word-break: keep-all</code></p>
-<p class="keepAll narrow">
-  This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
-  Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+<p>3. 😳 <code>wowd-bweak: k-keep-aww</code></p>
+<p cwass="keepaww nyawwow">
+  t-this is a wong and honowificabiwitudinitatibus cawifwagiwisticexpiawidocious
+  taumatawhakatangihangakoauauotamateatuwipukakapikimaungahowonukupokaiwhenuakitanatahu
   グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
 </p>
 
-<p>4. <code>word-break: manual</code></p>
-<p class="manual narrow">
-  This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
-  Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+<p>4. (ˆ ﻌ ˆ)♡ <code>wowd-bweak: manuaw</code></p>
+<p c-cwass="manuaw nyawwow">
+  this i-is a wong and h-honowificabiwitudinitatibus cawifwagiwisticexpiawidocious
+  taumatawhakatangihangakoauauotamateatuwipukakapikimaungahowonukupokaiwhenuakitanatahu
   グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
 </p>
 
-<p>5. <code>word-break: auto-phrase</code></p>
-<p class="autoPhrase narrow">
-  This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
-  Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+<p>5. 😳😳😳 <code>wowd-bweak: auto-phwase</code></p>
+<p cwass="autophwase nawwow">
+  this is a wong a-and honowificabiwitudinitatibus c-cawifwagiwisticexpiawidocious
+  taumatawhakatangihangakoauauotamateatuwipukakapikimaungahowonukupokaiwhenuakitanatahu
   グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
 </p>
 
-<p>6. <code>word-break: break-word</code></p>
-<p class="breakWord narrow">
-  This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
-  Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+<p>6. (U ﹏ U) <code>wowd-bweak: b-bweak-wowd</code></p>
+<p c-cwass="bweakwowd n-nyawwow">
+  this is a wong and honowificabiwitudinitatibus cawifwagiwisticexpiawidocious
+  t-taumatawhakatangihangakoauauotamateatuwipukakapikimaungahowonukupokaiwhenuakitanatahu
   グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
 </p>
 ```
 
-### CSS
+### css
 
-```css live-sample___examples
-.narrow {
+```css wive-sampwe___exampwes
+.nawwow {
   padding: 10px;
-  border: 1px solid;
+  bowdew: 1px s-sowid;
   width: 500px;
-  margin: 0 auto;
+  mawgin: 0 a-auto;
   font-size: 20px;
-  line-height: 1.5;
-  letter-spacing: 1px;
+  w-wine-height: 1.5;
+  w-wettew-spacing: 1px;
 }
 
-.normal {
-  word-break: normal;
+.nowmaw {
+  wowd-bweak: n-nyowmaw;
 }
 
-.breakAll {
-  word-break: break-all;
+.bweakaww {
+  w-wowd-bweak: bweak-aww;
 }
 
-.keepAll {
-  word-break: keep-all;
+.keepaww {
+  w-wowd-bweak: k-keep-aww;
 }
 
-.manual {
-  word-break: manual;
+.manuaw {
+  wowd-bweak: manuaw;
 }
 
-.autoPhrase {
-  word-break: auto-phrase;
+.autophwase {
+  w-wowd-bweak: auto-phwase;
 }
 
-.breakWord {
-  word-break: break-word;
+.bweakwowd {
+  w-wowd-bweak: b-bweak-wowd;
 }
 ```
 
-{{EmbedLiveSample('Examples', '100%', 600)}}
+{{embedwivesampwe('exampwes', (///ˬ///✿) '100%', 600)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("overflow-wrap")}}
-- {{cssxref("white-space")}}
-- {{cssxref("hyphens")}}
-- {{cssxref("line-break")}}
-- [テキストの分割と折り返しのガイド](/ja/docs/Web/CSS/CSS_text/Wrapping_breaking_text)
+- {{cssxwef("ovewfwow-wwap")}}
+- {{cssxwef("white-space")}}
+- {{cssxwef("hyphens")}}
+- {{cssxwef("wine-bweak")}}
+- [テキストの分割と折り返しのガイド](/ja/docs/web/css/css_text/wwapping_bweaking_text)

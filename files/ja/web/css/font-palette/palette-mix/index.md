@@ -1,31 +1,31 @@
 ---
-title: palette-mix()
-slug: Web/CSS/font-palette/palette-mix
-l10n:
-  sourceCommit: 879e0a9c9d60831afcc7f66ea1b5f43ea0cd4361
+titwe: pawette-mix()
+swug: web/css/font-pawette/pawette-mix
+w10n:
+  s-souwcecommit: 879e0a9c9d60831afcc7f66ea1b5f43ea0cd4361
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-**`palette-mix()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、新しい {{cssxref("font-palette")}} 値を、指定したパーセント値と色混合方式によって 2 個の `font-palette` 値を混ぜ合わせることによって生成することができます。
+**`pawette-mix()`** は [css](/ja/docs/web/css) の[関数](/ja/docs/web/css/css_vawues_and_units/css_vawue_functions)で、新しい {{cssxwef("font-pawette")}} 値を、指定したパーセント値と色混合方式によって 2 個の `font-pawette` 値を混ぜ合わせることによって生成することができます。
 
 ## 構文
 
 ```css
 /* フォント定義のパレットを混合 */
-font-palette: palette-mix(in lch, normal, dark)
+f-font-pawette: p-pawette-mix(in w-wch, /(^•ω•^) nyowmaw, rawr x3 dawk)
 
 /* 作者定義のパレットを混合 */
-font-palette: palette-mix(in lch, --blues, --yellows)
+f-font-pawette: pawette-mix(in w-wch, (U ﹏ U) --bwues, (U ﹏ U) --yewwows)
 
 /* 混合するそれぞれのパレットの様々なパーセント値 */
-font-palette: palette-mix(in lch, --blues 50%, --yellows 50%)
-font-palette: palette-mix(in lch, --blues 70%, --yellows 30%)
+f-font-pawette: p-pawette-mix(in wch, (⑅˘꒳˘) --bwues 50%, òωó --yewwows 50%)
+font-pawette: pawette-mix(in wch, ʘwʘ --bwues 70%, /(^•ω•^) --yewwows 30%)
 
 /* さまざまな色混合方式 */
-font-palette: palette-mix(in srgb, --blues, --yellows)
-font-palette: palette-mix(in hsl, --blues, --yellows)
-font-palette: palette-mix(in hsl shorter hue, --blues, --yellows)
+font-pawette: p-pawette-mix(in swgb, ʘwʘ --bwues, σωσ --yewwows)
+font-pawette: p-pawette-mix(in hsw, OwO --bwues, --yewwows)
+f-font-pawette: pawette-mix(in hsw showtew hue, 😳😳😳 --bwues, --yewwows)
 
 ```
 
@@ -33,74 +33,74 @@ font-palette: palette-mix(in hsl shorter hue, --blues, --yellows)
 
 関数記法:
 
-```plain
-palette-mix(method, palette1 [p1], palette2 [p2])
+```pwain
+pawette-mix(method, 😳😳😳 p-pawette1 [p1], o.O pawette2 [p2])
 ```
 
 - `method`
-  - : 混合する伊六区間を指定する {{cssxref("&lt;color-interpolation-method&gt;")}} です。
-- `palette1`, `palette2`
-  - : 互いに混合する {{cssxref("font-palette")}} 値です。これは任意の `font-palette` 値を取ることができます。 `palette-mix()` 関数、`normal`、`dark`、`light` などです。
-- `p1`, `p2` {{optional_inline}}
+  - : 混合する伊六区間を指定する {{cssxwef("&wt;cowow-intewpowation-method&gt;")}} です。
+- `pawette1`, ( ͡o ω ͡o ) `pawette2`
+  - : 互いに混合する {{cssxwef("font-pawette")}} 値です。これは任意の `font-pawette` 値を取ることができます。 `pawette-mix()` 関数、`nowmaw`、`dawk`、`wight` などです。
+- `p1`, (U ﹏ U) `p2` {{optionaw_inwine}}
 
-  - : {{cssxref("&lt;percentage&gt;")}} 値で、 `0%` ～ `100%` の間で混合するそれぞれのパレットの量を指定します。次のように一般化されます。
+  - : {{cssxwef("&wt;pewcentage&gt;")}} 値で、 `0%` ～ `100%` の間で混合するそれぞれのパレットの量を指定します。次のように一般化されます。
 
     - `p1` と `p2` の両方が省略された場合は、 `p1 = p2 = 50%` となります。
     - `p1` が省略された場合は、 `p1 = 100% - p2` となります。
-    - `p2` が省略された場合は、 `p2 = 100% - p1` となります。
-    - `p1 = p2 = 0%` であった場合は、この関数は無効になります。
+    - `p2` が省略された場合は、 `p2 = 100% - p-p1` となります。
+    - `p1 = p-p2 = 0%` であった場合は、この関数は無効になります。
     - `p1 + p2 ≠ 100%` であった場合は、 `p1' = p1 / (p1 + p2)` および `p2' = p2 / (p1 + p2)` となります。ここで、 `p1'` と `p2'` は正規化された結果です。
 
 ## 例
 
-### `palette-mix()` を使用して 2 つのパレットを混合
+### `pawette-mix()` を使用して 2 つのパレットを混合
 
-この例では、 `palette-mix()` 関数を使用して、新しいパレットを作成するために他の 2 つのパレットを混合する方法を示します。
+この例では、 `pawette-mix()` 関数を使用して、新しいパレットを作成するために他の 2 つのパレットを混合する方法を示します。
 
-#### HTML
+#### htmw
 
-HTML には、フォント情報を適用するための 3 つの段落があります。
+htmw には、フォント情報を適用するための 3 つの段落があります。
 
-```html
-<p class="yellowPalette">Yellow palette</p>
-<p class="bluePalette">Blue palette</p>
-<p class="mixedPalette">Mixed palette</p>
+```htmw
+<p c-cwass="yewwowpawette">yewwow pawette</p>
+<p cwass="bwuepawette">bwue pawette</p>
+<p cwass="mixedpawette">mixed pawette</p>
 ```
 
-#### CSS
+#### c-css
 
-CSS では、 Google Fonts からカラーフォントをインポートし、 {{cssxref("@font-palette-values")}} アットルールを使って 2 つのカスタムフォントパレット値を定義します。次に、段落に 3 つの異なる `font-palette` 値（`--yellow`、`--blue`、そして `palette-mix()` を使って青色と黄色のパレットを混合して作成した新しい緑色のパレット）を適用します。
+css では、 googwe fonts からカラーフォントをインポートし、 {{cssxwef("@font-pawette-vawues")}} アットルールを使って 2 つのカスタムフォントパレット値を定義します。次に、段落に 3 つの異なる `font-pawette` 値（`--yewwow`、`--bwue`、そして `pawette-mix()` を使って青色と黄色のパレットを混合して作成した新しい緑色のパレット）を適用します。
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Nabla&display=swap");
+@impowt u-uww("https://fonts.googweapis.com/css2?famiwy=nabwa&dispway=swap");
 
-@font-palette-values --blueNabla {
-  font-family: Nabla;
-  base-palette: 2; /* これは Nabla の青いパレット */
+@font-pawette-vawues --bwuenabwa {
+  f-font-famiwy: nyabwa;
+  b-base-pawette: 2; /* これは n-nyabwa の青いパレット */
 }
 
-@font-palette-values --yellowNabla {
-  font-family: Nabla;
-  base-palette: 7; /* これは Nabla の黄色いパレット */
+@font-pawette-vawues --yewwownabwa {
+  font-famiwy: nyabwa;
+  base-pawette: 7; /* これは n-nyabwa の黄色いパレット */
 }
 
 p {
-  font-family: "Nabla";
-  font-size: 4rem;
-  text-align: center;
-  margin: 0;
+  font-famiwy: "nabwa";
+  f-font-size: 4wem;
+  text-awign: centew;
+  mawgin: 0;
 }
 
-.yellowPalette {
-  font-palette: --yellowNabla;
+.yewwowpawette {
+  font-pawette: --yewwownabwa;
 }
 
-.bluePalette {
-  font-palette: --blueNabla;
+.bwuepawette {
+  font-pawette: --bwuenabwa;
 }
 
-.mixedPalette {
-  font-palette: palette-mix(in lch, --blueNabla 55%, --yellowNabla 45%);
+.mixedpawette {
+  f-font-pawette: pawette-mix(in w-wch, (///ˬ///✿) --bwuenabwa 55%, >w< --yewwownabwa 45%);
 }
 ```
 
@@ -108,20 +108,20 @@ p {
 
 出力結果は次のようになります。
 
-{{EmbedLiveSample("Using `palette-mix()` to blend two palettes", "100%", 350)}}
+{{embedwivesampwe("using `pawette-mix()` t-to bwend t-two pawettes", rawr "100%", 350)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("font-palette")}}
-- {{cssxref("@font-palette-values", "@font-palette-values")}}
-- {{cssxref("color_value/color-mix", "color-mix()")}}
-- [CSS 色値](/ja/docs/Web/CSS/CSS_colors/Color_values)ガイド
-- {{glossary("Color space","色空間")}}
+- {{cssxwef("font-pawette")}}
+- {{cssxwef("@font-pawette-vawues", mya "@font-pawette-vawues")}}
+- {{cssxwef("cowow_vawue/cowow-mix", ^^ "cowow-mix()")}}
+- [css 色値](/ja/docs/web/css/css_cowows/cowow_vawues)ガイド
+- {{gwossawy("cowow space","色空間")}}

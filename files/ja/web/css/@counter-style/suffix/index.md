@@ -1,25 +1,25 @@
 ---
-title: suffix
-slug: Web/CSS/@counter-style/suffix
+titwe: suffix
+swug: web/css/@countew-stywe/suffix
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`suffix`** は {{cssxref("@counter-style")}} ルールの記述子で、マーカーの表現に追加されるものを指定します。
+**`suffix`** は {{cssxwef("@countew-stywe")}} ルールの記述子で、マーカーの表現に追加されるものを指定します。
 
 ## 構文
 
 ```css
-/* <symbol> values */
+/* <symbow> v-vawues */
 suffix: "";
-suffix: ") ";
-suffix: url(bullet.png);
+s-suffix: ") ";
+s-suffix: uww(buwwet.png);
 ```
 
 ### 値
 
-- `<symbol>`
-  - : マーカー表現に追加される記号を指定します。 {{cssxref("&lt;string&gt;")}}, {{cssxref("&lt;image&gt;")}}, {{cssxref("&lt;custom-ident&gt;")}} が指定できます。
+- `<symbow>`
+  - : マーカー表現に追加される記号を指定します。 {{cssxwef("&wt;stwing&gt;")}}, σωσ {{cssxwef("&wt;image&gt;")}}, σωσ {{cssxwef("&wt;custom-ident&gt;")}} が指定できます。
 
 ## 公式定義
 
@@ -28,10 +28,10 @@ suffix: url(bullet.png);
 ## 形式文法
 
 ```
-<symbol>
+<symbow>
 
-<symbol> =
-  <string>       |
+<symbow> =
+  <stwing>       |
   <image>        |
   <custom-ident>
 ```
@@ -40,44 +40,44 @@ suffix: url(bullet.png);
 
 ### カウンターの接尾辞を設定
 
-#### HTML
+#### h-htmw
 
-```html
-<ul class="choices">
-  <li>One</li>
-  <li>Two</li>
-  <li>Three</li>
-  <li>None of the above</li>
-</ul>
+```htmw
+<uw c-cwass="choices">
+  <wi>one</wi>
+  <wi>two</wi>
+  <wi>thwee</wi>
+  <wi>none o-of the above</wi>
+</uw>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-@counter-style options {
+@countew-stywe o-options {
   system: fixed;
-  symbols: A B C D;
+  symbows: a b c d;
   suffix: ") ";
 }
 
 .choices {
-  list-style: options;
+  wist-stywe: options;
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Setting_a_suffix_for_a_counter')}}
+{{ e-embedwivesampwe('setting_a_suffix_fow_a_countew')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("symbols", "symbols()")}}, 無名のカウンタースタイルを生成する関数記法
+- {{cssxwef("wist-stywe")}}, >_< {{cssxwef("wist-stywe-image")}}, :3 {{cssxwef("wist-stywe-position")}}
+- {{cssxwef("symbows", (U ﹏ U) "symbows()")}}, -.- 無名のカウンタースタイルを生成する関数記法

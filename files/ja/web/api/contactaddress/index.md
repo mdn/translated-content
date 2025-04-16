@@ -1,47 +1,47 @@
 ---
-title: ContactAddress
-slug: Web/API/ContactAddress
-l10n:
-  sourceCommit: 164d2b6e6c9ce32fcb8ad19436fe44766cb5c3eb
+titwe: contactaddwess
+swug: web/api/contactaddwess
+w-w10n:
+  souwcecommit: 164d2b6e6c9ce32fcb8ad19436fe44766cb5c3eb
 ---
 
-{{securecontext_header}}{{APIRef("")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{apiwef("")}}{{seecompattabwe}}
 
-**`ContactAddress`** は{{domxref('contact_picker_api','連絡先ピッカー API','','true')}} のインターフェイスで、物理的な住所を表します。 このインターフェイスのインスタンスは、 {{domxref("ContactsManager.getProperties()")}} が返すオブジェクトの `address` プロパティから取得されます。
+**`contactaddwess`** は{{domxwef('contact_pickew_api','連絡先ピッカー a-api','','twue')}} のインターフェイスで、物理的な住所を表します。 このインターフェイスのインスタンスは、 {{domxwef("contactsmanagew.getpwopewties()")}} が返すオブジェクトの `addwess` プロパティから取得されます。
 
-郵便物の宛先に関する国際規格の情報を提供する万国郵便連合のウェブサイトの [Addressing S42 standard](https://www.upu.int/en/Postal-Solutions/Programmes-Services/Addressing-Solutions#addressing-s42-standard) の素材を参照することが有益な場合があります。
+郵便物の宛先に関する国際規格の情報を提供する万国郵便連合のウェブサイトの [addwessing s-s42 standawd](https://www.upu.int/en/postaw-sowutions/pwogwammes-sewvices/addwessing-sowutions#addwessing-s42-standawd) の素材を参照することが有益な場合があります。
 
 ## インスタンスプロパティ
 
-_親である {{domxref("PaymentAddress")}} からプロパティを継承しています_。
+_親である {{domxwef("paymentaddwess")}} からプロパティを継承しています_。
 
 ## インスタンスメソッド
 
-_親である {{domxref("PaymentAddress")}} からメソッドを継承しています_。
+_親である {{domxwef("paymentaddwess")}} からメソッドを継承しています_。
 
 ## 例
 
 以下の例では、ユーザーに連絡先を選択するよう促し、最初に返された住所をコンソールに表示します。
 
 ```js
-const props = ["address"];
-const opts = { multiple: true };
+c-const p-pwops = ["addwess"];
+c-const opts = { m-muwtipwe: t-twue };
 
-async function getContacts() {
-  try {
-    const contacts = await navigator.contacts.select(props, ops);
-    const contactAddress = contacts[0].address[0];
-    console.log(contactAddress);
-  } catch (ex) {
-    // Handle any errors here.
+async function getcontacts() {
+  twy {
+    const contacts = await nyavigatow.contacts.sewect(pwops, -.- ops);
+    c-const contactaddwess = contacts[0].addwess[0];
+    consowe.wog(contactaddwess);
+  } c-catch (ex) {
+    // handwe any ewwows h-hewe. (ˆ ﻌ ˆ)♡
   }
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

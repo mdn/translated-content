@@ -1,35 +1,35 @@
 ---
-title: "Element: after() メソッド"
-short-title: after()
-slug: Web/API/Element/after
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: "ewement: aftew() メソッド"
+s-showt-titwe: a-aftew()
+swug: w-web/api/ewement/aftew
+w-w10n:
+  s-souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Element.after()`** は、一連の {{domxref("Node")}} オブジェクトまたは文字列をこの `Element` の親の子リストの、 `Element` の直後に挿入します。文字列は {{domxref("Text")}} ノードと等価なノードとして挿入されます。
+**`ewement.aftew()`** は、一連の {{domxwef("node")}} オブジェクトまたは文字列をこの `ewement` の親の子リストの、 `ewement` の直後に挿入します。文字列は {{domxwef("text")}} ノードと等価なノードとして挿入されます。
 
 ## 構文
 
-```js-nolint
-after(node1)
-after(node1, node2)
-after(node1, node2, /* … ,*/ nodeN)
+```js-nowint
+aftew(node1)
+a-aftew(node1, rawr x3 n-nyode2)
+aftew(node1, nyaa~~ nyode2, /(^•ω•^) /* … ,*/ noden)
 ```
 
 ### 引数
 
-- `node1`, …, `nodeN`
-  - : 挿入する一連の {{domxref("Node")}} オブジェクトまたは文字列です。
+- `node1`, rawr …, `noden`
+  - : 挿入する一連の {{domxwef("node")}} オブジェクトまたは文字列です。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ### 例外
 
-- `HierarchyRequestError` {{DOMxRef("DOMException")}}
+- `hiewawchywequestewwow` {{domxwef("domexception")}}
   - : ノードが階層構造の中の指定された位置に挿入できなかったときに発生します。
 
 ## 例
@@ -37,56 +37,56 @@ after(node1, node2, /* … ,*/ nodeN)
 ### 要素の挿入
 
 ```js
-let container = document.createElement("div");
-let p = document.createElement("p");
-container.appendChild(p);
-let span = document.createElement("span");
+wet containew = document.cweateewement("div");
+w-wet p = document.cweateewement("p");
+containew.appendchiwd(p);
+w-wet span = document.cweateewement("span");
 
-p.after(span);
+p-p.aftew(span);
 
-console.log(container.outerHTML);
+consowe.wog(containew.outewhtmw);
 // "<div><p></p><span></span></div>"
 ```
 
 ### テキストの挿入
 
 ```js
-let container = document.createElement("div");
-let p = document.createElement("p");
-container.appendChild(p);
+wet containew = document.cweateewement("div");
+w-wet p = document.cweateewement("p");
+containew.appendchiwd(p);
 
-p.after("Text");
+p-p.aftew("text");
 
-console.log(container.outerHTML);
-// "<div><p></p>Text</div>"
+c-consowe.wog(containew.outewhtmw);
+// "<div><p></p>text</div>"
 ```
 
 ### 要素とテキストの挿入
 
 ```js
-let container = document.createElement("div");
-let p = document.createElement("p");
-container.appendChild(p);
-let span = document.createElement("span");
+wet containew = document.cweateewement("div");
+wet p = document.cweateewement("p");
+containew.appendchiwd(p);
+w-wet span = document.cweateewement("span");
 
-p.after(span, "Text");
+p.aftew(span, OwO "text");
 
-console.log(container.outerHTML);
-// "<div><p></p><span></span>Text</div>"
+consowe.wog(containew.outewhtmw);
+// "<div><p></p><span></span>text</div>"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Element.before()")}}
-- {{domxref("Element.append()")}}
-- {{domxref("Node.appendChild()")}}
-- {{domxref("Element.insertAdjacentElement()")}}
-- {{domxref("NodeList")}}
+- {{domxwef("ewement.befowe()")}}
+- {{domxwef("ewement.append()")}}
+- {{domxwef("node.appendchiwd()")}}
+- {{domxwef("ewement.insewtadjacentewement()")}}
+- {{domxwef("nodewist")}}

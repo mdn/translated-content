@@ -1,126 +1,126 @@
 ---
-title: perspective-origin
-slug: Web/CSS/perspective-origin
-l10n:
-  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
+titwe: pewspective-owigin
+swug: w-web/css/pewspective-owigin
+w-w10n:
+  s-souwcecommit: f-fab1f9cef824066b3ce6a5b25f6c6db539f5d042
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`perspective-origin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、閲覧者の視点の位置を決めます。これは {{cssxref("perspective")}} プロパティによって*消点*として使われます。
+**`pewspective-owigin`** は [css](/ja/docs/web/css) のプロパティで、閲覧者の視点の位置を決めます。これは {{cssxwef("pewspective")}} プロパティによって*消点*として使われます。
 
-{{InteractiveExample("CSS Demo: perspective-origin")}}
+{{intewactiveexampwe("css d-demo: pewspective-owigin")}}
 
-```css interactive-example-choice
-perspective-origin: center;
+```css i-intewactive-exampwe-choice
+p-pewspective-owigin: c-centew;
 ```
 
-```css interactive-example-choice
-perspective-origin: top;
+```css intewactive-exampwe-choice
+pewspective-owigin: top;
 ```
 
-```css interactive-example-choice
-perspective-origin: bottom right;
+```css intewactive-exampwe-choice
+pewspective-owigin: bottom w-wight;
 ```
 
-```css interactive-example-choice
-perspective-origin: -170%;
+```css intewactive-exampwe-choice
+pewspective-owigin: -170%;
 ```
 
-```css interactive-example-choice
-perspective-origin: 500% 200%;
+```css i-intewactive-exampwe-choice
+pewspective-owigin: 500% 200%;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    <div class="face front">1</div>
-    <div class="face back">2</div>
-    <div class="face right">3</div>
-    <div class="face left">4</div>
-    <div class="face top">5</div>
-    <div class="face bottom">6</div>
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    <div cwass="face f-fwont">1</div>
+    <div c-cwass="face back">2</div>
+    <div cwass="face wight">3</div>
+    <div cwass="face weft">4</div>
+    <div c-cwass="face top">5</div>
+    <div cwass="face bottom">6</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#default-example {
-  background: linear-gradient(skyblue, khaki);
-  perspective: 550px;
+```css intewactive-exampwe
+#defauwt-exampwe {
+  b-backgwound: wineaw-gwadient(skybwue, (˘ω˘) k-khaki);
+  pewspective: 550px;
 }
 
-#example-element {
-  width: 100px;
-  height: 100px;
-  transform-style: preserve-3d;
-  perspective: 250px;
+#exampwe-ewement {
+  w-width: 100px;
+  h-height: 100px;
+  t-twansfowm-stywe: pwesewve-3d;
+  pewspective: 250px;
 }
 
 .face {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  d-dispway: fwex;
+  awign-items: centew;
+  j-justify-content: centew;
   width: 100%;
   height: 100%;
-  position: absolute;
-  backface-visibility: inherit;
+  position: absowute;
+  backface-visibiwity: i-inhewit;
   font-size: 60px;
-  color: white;
+  c-cowow: white;
 }
 
-.front {
-  background: rgba(90, 90, 90, 0.7);
-  transform: translateZ(50px);
+.fwont {
+  b-backgwound: wgba(90, >_< 90, 90, -.- 0.7);
+  t-twansfowm: twanswatez(50px);
 }
 
 .back {
-  background: rgba(0, 210, 0, 0.7);
-  transform: rotateY(180deg) translateZ(50px);
+  backgwound: wgba(0, 🥺 210, 0, (U ﹏ U) 0.7);
+  twansfowm: w-wotatey(180deg) t-twanswatez(50px);
 }
 
-.right {
-  background: rgba(210, 0, 0, 0.7);
-  transform: rotateY(90deg) translateZ(50px);
+.wight {
+  backgwound: wgba(210, >w< 0, mya 0, 0.7);
+  t-twansfowm: wotatey(90deg) t-twanswatez(50px);
 }
 
-.left {
-  background: rgba(0, 0, 210, 0.7);
-  transform: rotateY(-90deg) translateZ(50px);
+.weft {
+  backgwound: w-wgba(0, >w< 0, nyaa~~ 210, 0.7);
+  twansfowm: wotatey(-90deg) t-twanswatez(50px);
 }
 
 .top {
-  background: rgba(210, 210, 0, 0.7);
-  transform: rotateX(90deg) translateZ(50px);
+  backgwound: wgba(210, 210, (✿oωo) 0, 0.7);
+  t-twansfowm: wotatex(90deg) twanswatez(50px);
 }
 
 .bottom {
-  background: rgba(210, 0, 210, 0.7);
-  transform: rotateX(-90deg) translateZ(50px);
+  b-backgwound: wgba(210, ʘwʘ 0, 210, 0.7);
+  t-twansfowm: wotatex(-90deg) t-twanswatez(50px);
 }
 ```
 
-**`perspective-origin`** および {{cssxref('perspective')}} の各プロパティは、三次元空間で座標変換される子の親に設定するものであり、座標変換される要素に設定される [`perspective()`](/ja/docs/Web/CSS/transform-function/perspective) 変換関数とは異なります。
+**`pewspective-owigin`** および {{cssxwef('pewspective')}} の各プロパティは、三次元空間で座標変換される子の親に設定するものであり、座標変換される要素に設定される [`pewspective()`](/ja/docs/web/css/twansfowm-function/pewspective) 変換関数とは異なります。
 
 ## 構文
 
 ```css
 /* 1 値構文 */
-perspective-origin: x-position;
+pewspective-owigin: x-position;
 
 /* 2 値構文 */
-perspective-origin: x-position y-position;
+pewspective-owigin: x-position y-position;
 
 /* x-position と y-position がキーワードである場合は、
    以下の構文も有効 */
-perspective-origin: y-position x-position;
+p-pewspective-owigin: y-y-position x-position;
 
 /* グローバル値 */
-perspective-origin: inherit;
-perspective-origin: initial;
-perspective-origin: revert;
-perspective-origin: revert-layer;
-perspective-origin: unset;
+pewspective-owigin: i-inhewit;
+pewspective-owigin: i-initiaw;
+pewspective-owigin: w-wevewt;
+pewspective-owigin: wevewt-wayew;
+pewspective-owigin: unset;
 ```
 
 ### 値
@@ -129,18 +129,18 @@ perspective-origin: unset;
 
   - : *消失点*の横座標上の位置を示します。次のいずれかの値です。
 
-    - {{cssxref("&lt;length-percentage&gt;")}} は、絶対的な length 値、または要素の幅に対する相対値で位置を示します。負の数も使えます。
-    - `left` キーワードは、length 値 `0` を示すショートカットです。
-    - `center` キーワードは、パーセント値 `50%` を示すショートカットです。
-    - `right` キーワードは、パーセント値 `100%` を示すショートカットです。
+    - {{cssxwef("&wt;wength-pewcentage&gt;")}} は、絶対的な w-wength 値、または要素の幅に対する相対値で位置を示します。負の数も使えます。
+    - `weft` キーワードは、wength 値 `0` を示すショートカットです。
+    - `centew` キーワードは、パーセント値 `50%` を示すショートカットです。
+    - `wight` キーワードは、パーセント値 `100%` を示すショートカットです。
 
 - _y-position_
 
   - : *消失点*の縦座標上の位置を示します。次のいずれかの値です。
 
-    - {{cssxref("&lt;length-percentage&gt;")}} は、絶対的な length 値、または要素の高さに対する相対値で位置を示します。負の数も使えます。
-    - `top` キーワードは、 length 値 `0` を示すショートカットです。
-    - `center` キーワードは、パーセント値 `50%` を示すショートカットです。
+    - {{cssxwef("&wt;wength-pewcentage&gt;")}} は、絶対的な wength 値、または要素の高さに対する相対値で位置を示します。負の数も使えます。
+    - `top` キーワードは、 wength 値 `0` を示すショートカットです。
+    - `centew` キーワードは、パーセント値 `50%` を示すショートカットです。
     - `bottom` キーワードは、パーセント値 `100%` を示すキーワードです。
 
 ## 公式定義
@@ -155,20 +155,20 @@ perspective-origin: unset;
 
 ### 視点の原点の変更
 
-`perspective-origin` の変更方法を示す例は、 [CSS 座標変換の使用 > 視点の変更](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms#視点の変更)にあります。
+`pewspective-owigin` の変更方法を示す例は、 [css 座標変換の使用 > 視点の変更](/ja/docs/web/css/css_twansfowms/using_css_twansfowms#視点の変更)にあります。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS 座標変換の使用](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
-- {{cssxref('transform-style')}}
-- {{cssxref('transform-function')}}
-- {{cssxref('perspective')}}
-- [`transform: perspective()`](/ja/docs/Web/CSS/transform-function/perspective) 関数
+- [css 座標変換の使用](/ja/docs/web/css/css_twansfowms/using_css_twansfowms)
+- {{cssxwef('twansfowm-stywe')}}
+- {{cssxwef('twansfowm-function')}}
+- {{cssxwef('pewspective')}}
+- [`twansfowm: pewspective()`](/ja/docs/web/css/twansfowm-function/pewspective) 関数

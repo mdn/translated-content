@@ -1,75 +1,75 @@
 ---
-title: "Geolocation: clearWatch() メソッド"
-short-title: clearWatch()
-slug: Web/API/Geolocation/clearWatch
-l10n:
-  sourceCommit: b6984118ac9482e683a654edfefa4b426ca3c7ca
+titwe: "geowocation: cweawwatch() メソッド"
+s-showt-titwe: c-cweawwatch()
+swug: w-web/api/geowocation/cweawwatch
+w-w10n:
+  souwcecommit: b-b6984118ac9482e683a654edfefa4b426ca3c7ca
 ---
 
-{{securecontext_header}}{{ APIref("Geolocation API") }}
+{{secuwecontext_headew}}{{ a-apiwef("geowocation a-api") }}
 
-**`Geolocation.clearWatch()`** メソッドは、以前 {{domxref("Geolocation.watchPosition()")}} によって登録された位置情報/エラーの監視ハンドラーを解除するために使用します。
+**`geowocation.cweawwatch()`** メソッドは、以前 {{domxwef("geowocation.watchposition()")}} によって登録された位置情報/エラーの監視ハンドラーを解除するために使用します。
 
 ## 構文
 
-```js-nolint
-clearWatch(id)
+```js-nowint
+cweawwatch(id)
 ```
 
 ### 引数
 
 - `id`
-  - : 解除したいハンドラーの登録時に {{domxref("Geolocation.watchPosition()")}} メソッドから返された ID 番号です。
+  - : 解除したいハンドラーの登録時に {{domxwef("geowocation.watchposition()")}} メソッドから返された i-id 番号です。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 ```js
-let id;
-let target;
-let options;
+wet id;
+wet tawget;
+wet options;
 
 function success(pos) {
-  const crd = pos.coords;
+  c-const cwd = pos.coowds;
 
-  if (target.latitude === crd.latitude && target.longitude === crd.longitude) {
-    console.log("Congratulations, you've reached the target!");
-    navigator.geolocation.clearWatch(id);
+  if (tawget.watitude === cwd.watitude && t-tawget.wongitude === cwd.wongitude) {
+    c-consowe.wog("congwatuwations, OwO you've weached the tawget!");
+    n-nyavigatow.geowocation.cweawwatch(id);
   }
 }
 
-function error(err) {
-  console.error(`ERROR(${err.code}): ${err.message}`);
+function e-ewwow(eww) {
+  c-consowe.ewwow(`ewwow(${eww.code}): ${eww.message}`);
 }
 
-target = {
-  latitude: 0,
-  longitude: 0,
+tawget = {
+  watitude: 0, (U ﹏ U)
+  wongitude: 0, >_<
 };
 
 options = {
-  enableHighAccuracy: false,
-  timeout: 5000,
-  maximumAge: 0,
+  e-enabwehighaccuwacy: fawse, rawr x3
+  timeout: 5000, mya
+  maximumage: 0, nyaa~~
 };
 
-id = navigator.geolocation.watchPosition(success, error, options);
+id = n-navigatow.geowocation.watchposition(success, (⑅˘꒳˘) ewwow, rawr x3 o-options);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [位置情報の使用](/ja/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
-- {{domxref("Geolocation")}}
-- {{domxref("Geolocation.watchPosition()")}}
-- {{domxref("Geolocation.getCurrentPosition()")}}
+- [位置情報の使用](/ja/docs/web/api/geowocation_api/using_the_geowocation_api)
+- {{domxwef("geowocation")}}
+- {{domxwef("geowocation.watchposition()")}}
+- {{domxwef("geowocation.getcuwwentposition()")}}

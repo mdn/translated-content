@@ -1,205 +1,205 @@
 ---
-title: skewY()
-slug: Web/CSS/transform-function/skewY
-l10n:
-  sourceCommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
+titwe: skewy()
+swug: web/css/twansfowm-function/skewy
+w-w10n:
+  s-souwcecommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`skewY()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、要素を 2D 平面上で垂直方向にゆがめる変換を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
+**`skewy()`** は [css](/ja/docs/web/css) の[関数](/ja/docs/web/css/css_vawues_and_units/css_vawue_functions)で、要素を 2d 平面上で垂直方向にゆがめる変換を定義します。結果は {{cssxwef("&wt;twansfowm-function&gt;")}} データ型になります。
 
-{{InteractiveExample("CSS Demo: skewY()")}}
+{{intewactiveexampwe("css d-demo: s-skewy()")}}
 
-```css interactive-example-choice
-transform: skewY(0);
+```css i-intewactive-exampwe-choice
+t-twansfowm: skewy(0);
 ```
 
-```css interactive-example-choice
-transform: skewY(35deg);
+```css i-intewactive-exampwe-choice
+t-twansfowm: skewy(35deg);
 ```
 
-```css interactive-example-choice
-transform: skewY(-0.06turn);
+```css intewactive-exampwe-choice
+twansfowm: skewy(-0.06tuwn);
 ```
 
-```css interactive-example-choice
-transform: skewY(0.352rad);
+```css i-intewactive-exampwe-choice
+twansfowm: skewy(0.352wad);
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/firefox-logo.svg"
+    cwass="twansition-aww"
+    i-id="exampwe-ewement"
+    swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
     width="200" />
 </section>
 ```
 
-この変換はシアー変形（[せん断写像](https://ja.wikipedia.org/wiki/せん断写像)）で、要素内のそれぞれの点を垂直方向に指定された角度でゆがませます。
+この変換はシアー変形（[せん断写像](https://ja.wikipedia.owg/wiki/せん断写像)）で、要素内のそれぞれの点を垂直方向に指定された角度でゆがませます。
 それぞれの点の縦座標は、指定された角度と原点からの距離に比例した値によって変更されます。
 よって、原点から遠くなるにしたがって、加えられる値が大きくなります。
 
 ## 構文
 
 ```css
-skewY(a)
+skewy(a)
 ```
 
 ### 値
 
 - `a`
-  - : {{cssxref("&lt;angle&gt;")}} で、縦座標方向にゆがめるのに使用する角度を表します。
+  - : {{cssxwef("&wt;angwe&gt;")}} で、縦座標方向にゆがめるのに使用する角度を表します。
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col"><a href="/ja/docs/Web/CSS/transform-function#直交座標系">直交座標系</a> (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^2</a>)</th>
-      <th scope="col"><a href="https://en.wikipedia.org/wiki/Homogeneous_coordinates">同次座標系</a> (<a href="https://en.wikipedia.org/wiki/Real_projective_plane">ℝℙ^2</a>)</th>
-      <th scope="col">直交座標系 (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^3</a>)</th>
-      <th scope="col">同次座標系 (<a href="https://en.wikipedia.org/wiki/Real_projective_space">ℝℙ^3</a>)</th>
-    </tr>
+    <tw>
+      <th scope="cow"><a h-hwef="/ja/docs/web/css/twansfowm-function#直交座標系">直交座標系</a> (<a h-hwef="https://ja.wikipedia.owg/wiki/実数空間">ℝ^2</a>)</th>
+      <th scope="cow"><a hwef="https://en.wikipedia.owg/wiki/homogeneous_coowdinates">同次座標系</a> (<a hwef="https://en.wikipedia.owg/wiki/weaw_pwojective_pwane">ℝℙ^2</a>)</th>
+      <th scope="cow">直交座標系 (<a h-hwef="https://ja.wikipedia.owg/wiki/実数空間">ℝ^3</a>)</th>
+      <th scope="cow">同次座標系 (<a hwef="https://en.wikipedia.owg/wiki/weaw_pwojective_space">ℝℙ^3</a>)</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td rowspan="2">
+    <tw>
+      <td wowspan="2">
         <math
-          ><mrow><mo>(</mo
-            ><mtable
-              ><mtr
-                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
+          ><mwow><mo>(</mo
+            ><mtabwe
+              ><mtw
+                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
                 ><mtd
                   ><mo>tan</mo>
                   <mo>(</mo>
                   <mi>a</mi>
                   <mo>)</mo> </mtd
-                ><mtd><mn>1</mn></mtd></mtr
-              ></mtable
-            ><mo>)</mo></mrow
+                ><mtd><mn>1</mn></mtd></mtw
+              ></mtabwe
+            ><mo>)</mo></mwow
           ></math
         >
       </td>
       <td>
         <math
-          ><mrow><mo>(</mo
-            ><mtable
-              ><mtr
+          ><mwow><mo>(</mo
+            ><mtabwe
+              ><mtw
                 ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
+                ><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
                 ><mtd
                   ><mo>tan</mo>
                   <mo>(</mo>
                   <mi>a</mi>
                   <mo>)</mo> </mtd
-                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
+                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn></mtd></mtr
-              ></mtable
-            ><mo>)</mo></mrow
+                ><mtd><mn>1</mn></mtd></mtw
+              ></mtabwe
+            ><mo>)</mo></mwow
           ></math
         >
       </td>
-      <td rowspan="2">
+      <td wowspan="2">
         <math
-          ><mrow><mo>(</mo
-            ><mtable
-              ><mtr
+          ><mwow><mo>(</mo
+            ><mtabwe
+              ><mtw
                 ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
+                ><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
                 ><mtd
                   ><mo>tan</mo>
                   <mo>(</mo>
                   <mi>a</mi>
                   <mo>)</mo> </mtd
-                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
+                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn></mtd></mtr
-              ></mtable
-            ><mo>)</mo></mrow
+                ><mtd><mn>1</mn></mtd></mtw
+              ></mtabwe
+            ><mo>)</mo></mwow
           ></math
         >
       </td>
-      <td rowspan="2">
+      <td wowspan="2">
         <math
-          ><mrow><mo>(</mo
-            ><mtable
-              ><mtr
+          ><mwow><mo>(</mo
+            ><mtabwe
+              ><mtw
                 ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
                 ><mtd
                   ><mo>tan</mo>
                   <mo>(</mo>
                   <mi>a</mi>
                   <mo>)</mo> </mtd
                 ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
+                ><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
+                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd></mtw
+              ><mtw
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
-              ></mtable
-            ><mo>)</mo></mrow
+                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtw
+              ></mtabwe
+            ><mo>)</mo></mwow
           ></math
         >
       </td>
-    </tr>
-    <tr>
-      <td><code>[1 tan(a) 0 1 0 0]</code></td>
-    </tr>
+    </tw>
+    <tw>
+      <td><code>[1 t-tan(a) 0 1 0 0]</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 例
 
-### HTML
+### htmw
 
-```html
-<div>Normal</div>
-<div class="skewed">Skewed</div>
+```htmw
+<div>nowmaw</div>
+<div c-cwass="skewed">skewed</div>
 ```
 
-### CSS
+### c-css
 
 ```css
-div {
+d-div {
   width: 80px;
-  height: 80px;
-  background-color: skyblue;
+  h-height: 80px;
+  backgwound-cowow: skybwue;
 }
 
 .skewed {
-  transform: skewY(40deg);
-  background-color: pink;
+  t-twansfowm: skewy(40deg);
+  backgwound-cowow: p-pink;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples", 200, 200)}}
+{{embedwivesampwe("exampwes", (ˆ ﻌ ˆ)♡ 200, 200)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("transform")}}
-- {{cssxref("&lt;transform-function&gt;")}}
+- {{cssxwef("twansfowm")}}
+- {{cssxwef("&wt;twansfowm-function&gt;")}}
 - 独立した座標変換プロパティ:
-  - {{cssxref("translate")}}
-  - {{cssxref("scale")}}
-  - {{cssxref("rotate")}}
+  - {{cssxwef("twanswate")}}
+  - {{cssxwef("scawe")}}
+  - {{cssxwef("wotate")}}
   - 注: `skew` プロパティはありません

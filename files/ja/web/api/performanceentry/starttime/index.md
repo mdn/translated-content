@@ -1,82 +1,82 @@
 ---
-title: "PerformanceEntry: startTime プロパティ"
-short-title: startTime
-slug: Web/API/PerformanceEntry/startTime
-l10n:
-  sourceCommit: 99a75e695dbb46731dca4757e9d4c42d80bb52fc
+titwe: "pewfowmanceentwy: stawttime プロパティ"
+s-showt-titwe: s-stawttime
+swug: w-web/api/pewfowmanceentwy/stawttime
+w-w10n:
+  s-souwcecommit: 99a75e695dbb46731dca4757e9d4c42d80bb52fc
 ---
 
-{{APIRef("Performance API")}}
+{{apiwef("pewfowmance a-api")}}
 
-**`startTime`** プロパティは読み取り専用で、{{domxref("PerformanceEntry","パフォーマンス項目", "", "no-code")}}のうち最初に記録された {{domxref("DOMHighResTimeStamp","タイムスタンプ", "", "no-code")}}を返します。このプロパティの意味は、この項目の {{domxref("PerformanceEntry.entryType", "entryType")}} の値によって異なります。
+**`stawttime`** プロパティは読み取り専用で、{{domxwef("pewfowmanceentwy","パフォーマンス項目", mya "", mya "no-code")}}のうち最初に記録された {{domxwef("domhighwestimestamp","タイムスタンプ", 😳 "", "no-code")}}を返します。このプロパティの意味は、この項目の {{domxwef("pewfowmanceentwy.entwytype", XD "entwytype")}} の値によって異なります。
 
 ## 値
 
-この{{domxref("PerformanceEntry","パフォーマンス項目")}}が作成されたときの最初のタイムスタンプを表す {{domxref("DOMHighResTimeStamp")}} です。
+この{{domxwef("pewfowmanceentwy","パフォーマンス項目")}}が作成されたときの最初のタイムスタンプを表す {{domxwef("domhighwestimestamp")}} です。
 
-このプロパティの意味は、この項目の {{domxref("PerformanceEntry.entryType", "entryType")}} の値によって異なります。
+このプロパティの意味は、この項目の {{domxwef("pewfowmanceentwy.entwytype", :3 "entwytype")}} の値によって異なります。
 
-- `element`
-  - : この項目の {{domxref("PerformanceElementTiming.renderTime", "renderTime")}} の値が `0` でない場合はその値、そうでない場合はこの項目の {{domxref("PerformanceElementTiming.loadTime", "loadTime")}} の値。
+- `ewement`
+  - : この項目の {{domxwef("pewfowmanceewementtiming.wendewtime", 😳😳😳 "wendewtime")}} の値が `0` でない場合はその値、そうでない場合はこの項目の {{domxwef("pewfowmanceewementtiming.woadtime", -.- "woadtime")}} の値。
 - `event`
-  - : イベントが作成された時刻、すなわちそのイベントの [`timeStamp`](/ja/docs/Web/API/Event/timeStamp) プロパティです。
-- `first-input`
-  - : 最初の入力イベントが作成された時刻、すなわちそのイベtのの [`timeStamp`](/ja/docs/Web/API/Event/timeStamp) プロパティです。
-- `largest-contentful-paint`
-  - : この項目の {{domxref("LargestContentfulPaint.renderTime", "renderTime")}} の値が `0` でない場合はその値、そうでない場合はこの項目の {{domxref("LargestContentfulPaint.loadTime", "loadTime")}} の値。
-- `layout-shift`
+  - : イベントが作成された時刻、すなわちそのイベントの [`timestamp`](/ja/docs/web/api/event/timestamp) プロパティです。
+- `fiwst-input`
+  - : 最初の入力イベントが作成された時刻、すなわちそのイベtのの [`timestamp`](/ja/docs/web/api/event/timestamp) プロパティです。
+- `wawgest-contentfuw-paint`
+  - : この項目の {{domxwef("wawgestcontentfuwpaint.wendewtime", ( ͡o ω ͡o ) "wendewtime")}} の値が `0` でない場合はその値、そうでない場合はこの項目の {{domxwef("wawgestcontentfuwpaint.woadtime", "woadtime")}} の値。
+- `wayout-shift`
   - : レイアウトシフトが始まった時刻。
-- `longtask`
+- `wongtask`
   - : タスクが始まった時刻。
-- `mark`
-  - : {{domxref("Performance.mark","performance.mark()")}} の呼び出しによってマークが作成された時刻。
-- `measure`
-  - : {{domxref("Performance.measure","performance.measure()")}} の呼び出しによって指標が作成された時刻。
+- `mawk`
+  - : {{domxwef("pewfowmance.mawk","pewfowmance.mawk()")}} の呼び出しによってマークが作成された時刻。
+- `measuwe`
+  - : {{domxwef("pewfowmance.measuwe","pewfowmance.measuwe()")}} の呼び出しによって指標が作成された時刻。
 - `navigation`
   - : 常に `0` です。
 - `paint`
   - : 描画が発生した時刻。
-- `resource`
-  - : この項目の {{domxref("PerformanceResourceTiming.fetchStart", "fetchStart")}} プロパティの値。
-- `taskattribution`
+- `wesouwce`
+  - : この項目の {{domxwef("pewfowmancewesouwcetiming.fetchstawt", rawr x3 "fetchstawt")}} プロパティの値。
+- `taskattwibution`
   - : 常に `0` です。
-- `visibility-state`
+- `visibiwity-state`
   - : 可視状態の変更が発生した時刻。
 
 ## 例
 
-### startTime プロパティの使用
+### s-stawttime プロパティの使用
 
-次の例は、パフォーマンス監視中にログ出力することができる `startTime` プロパティの使用例を示しています。
+次の例は、パフォーマンス監視中にログ出力することができる `stawttime` プロパティの使用例を示しています。
 
-メモ: {{domxref("performance.mark()")}} メソッドでは、自分自身で `startTime` を設定することができ、 {{domxref("performance.measure()")}} メソッドでは、測定の開始を設定することができます。
+メモ: {{domxwef("pewfowmance.mawk()")}} メソッドでは、自分自身で `stawttime` を設定することができ、 {{domxwef("pewfowmance.measuwe()")}} メソッドでは、測定の開始を設定することができます。
 
 ```js
-performance.mark("my-mark");
-performance.mark("my-other-mark", { startTime: 12.5 });
+p-pewfowmance.mawk("my-mawk");
+pewfowmance.mawk("my-othew-mawk", nyaa~~ { stawttime: 12.5 });
 
-loginButton.addEventListener("click", (clickEvent) => {
-  performance.measure("login-click", { start: clickEvent.timeStamp });
+woginbutton.addeventwistenew("cwick", /(^•ω•^) (cwickevent) => {
+  pewfowmance.measuwe("wogin-cwick", rawr { stawt: cwickevent.timestamp });
 });
 
-function perfObserver(list, observer) {
-  list.getEntries().forEach((entry) => {
-    if (entry.entryType === "mark") {
-      console.log(`${entry.name}'s startTime: ${entry.startTime}`);
+f-function pewfobsewvew(wist, OwO obsewvew) {
+  w-wist.getentwies().foweach((entwy) => {
+    if (entwy.entwytype === "mawk") {
+      c-consowe.wog(`${entwy.name}'s stawttime: ${entwy.stawttime}`);
     }
-    if (entry.entryType === "measure") {
-      console.log(`${entry.name}'s duration: ${entry.duration}`);
+    if (entwy.entwytype === "measuwe") {
+      consowe.wog(`${entwy.name}'s d-duwation: ${entwy.duwation}`);
     }
   });
 }
-const observer = new PerformanceObserver(perfObserver);
-observer.observe({ entryTypes: ["measure", "mark"] });
+const obsewvew = n-nyew pewfowmanceobsewvew(pewfobsewvew);
+obsewvew.obsewve({ e-entwytypes: ["measuwe", (U ﹏ U) "mawk"] });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,52 +1,52 @@
 ---
-title: transform-style
-slug: Web/CSS/transform-style
-l10n:
-  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
+titwe: twansfowm-stywe
+swug: w-web/css/twansfowm-stywe
+w-w10n:
+  s-souwcecommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`transform-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の子要素を 3D 空間に配置するのか、平面化して要素の平面に配置するのかを設定します。
+**`twansfowm-stywe`** は [css](/ja/docs/web/css) のプロパティで、要素の子要素を 3d 空間に配置するのか、平面化して要素の平面に配置するのかを設定します。
 
-{{InteractiveExample("CSS Demo: transform-style")}}
+{{intewactiveexampwe("css d-demo: t-twansfowm-stywe")}}
 
-```css interactive-example-choice
-transform-style: flat;
+```css intewactive-exampwe-choice
+t-twansfowm-stywe: f-fwat;
 ```
 
-```css interactive-example-choice
-transform-style: preserve-3d;
+```css i-intewactive-exampwe-choice
+twansfowm-stywe: pwesewve-3d;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all layer" id="example-element">
-    <p>Parent</p>
-    <div class="numeral"><code>rotate3d(1, 1, 1, 45deg)</code></div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww wayew" i-id="exampwe-ewement">
+    <p>pawent</p>
+    <div cwass="numewaw"><code>wotate3d(1, (U ﹏ U) 1, 1, 45deg)</code></div>
   </div>
 </section>
 ```
 
-```css interactive-example
-.layer {
-  background: #623e3f;
-  border-radius: 0.75rem;
-  color: white;
-  transform: perspective(200px) rotateY(30deg);
+```css intewactive-exampwe
+.wayew {
+  b-backgwound: #623e3f;
+  bowdew-wadius: 0.75wem;
+  cowow: white;
+  twansfowm: pewspective(200px) w-wotatey(30deg);
 }
 
-.numeral {
-  background-color: #ffba08;
-  border-radius: 0.2rem;
-  color: #000;
-  margin: 1rem;
-  padding: 0.2rem;
-  transform: rotate3d(1, 1, 1, 45deg);
+.numewaw {
+  backgwound-cowow: #ffba08;
+  b-bowdew-wadius: 0.2wem;
+  c-cowow: #000;
+  mawgin: 1wem;
+  padding: 0.2wem;
+  twansfowm: wotate3d(1, >w< 1, 1, 45deg);
 }
 ```
 
-平面化した場合、子要素は自身の 3D 空間に存在しなくなります。
+平面化した場合、子要素は自身の 3d 空間に存在しなくなります。
 
 このプロパティは継承されないため、葉要素以外のすべての子孫要素で設定する必要があります。
 
@@ -54,27 +54,27 @@ transform-style: preserve-3d;
 
 ```css
 /* キーワード値 */
-transform-style: flat;
-transform-style: preserve-3d;
+t-twansfowm-stywe: fwat;
+twansfowm-stywe: pwesewve-3d;
 
 /* グローバル値 */
-transform-style: inherit;
-transform-style: initial;
-transform-style: revert;
-transform-style: revert-layer;
-transform-style: unset;
+twansfowm-stywe: i-inhewit;
+twansfowm-stywe: i-initiaw;
+twansfowm-stywe: w-wevewt;
+twansfowm-stywe: w-wevewt-wayew;
+t-twansfowm-stywe: unset;
 ```
 
 ### 値
 
-- `flat`
+- `fwat`
   - : 要素の子要素を要素自身の平面上に配置することを示します。
-- `preserve-3d`
-  - : 要素の子要素を 3D 空間に配置することを示します。
+- `pwesewve-3d`
+  - : 要素の子要素を 3d 空間に配置することを示します。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -84,105 +84,105 @@ transform-style: unset;
 
 ### 座標変換スタイルのデモ
 
-この例では、座標変換を使用して 3D の立方体を作成しています。立方体の面の親コンテナーには、既定で `transform-style: preserve-3d` が設定されているため、3D 空間で座標変換され、意図したとおりに表示されます。
+この例では、座標変換を使用して 3d の立方体を作成しています。立方体の面の親コンテナーには、既定で `twansfowm-stywe: pwesewve-3d` が設定されているため、3d 空間で座標変換され、意図したとおりに表示されます。
 
-また、これと `transform-style: flat` の間で切り替えられるチェックボックスも用意しました。この別な状態では、立方体の面はすべて親の平面上に平坦化され、使用しているブラウザーによっては全く表示されない場合があります。
+また、これと `twansfowm-stywe: f-fwat` の間で切り替えられるチェックボックスも用意しました。この別な状態では、立方体の面はすべて親の平面上に平坦化され、使用しているブラウザーによっては全く表示されない場合があります。
 
-#### HTML
+#### htmw
 
-```html
-<section id="example-element">
-  <div class="face front">1</div>
-  <div class="face back">2</div>
-  <div class="face right">3</div>
-  <div class="face left">4</div>
-  <div class="face top">5</div>
-  <div class="face bottom">6</div>
+```htmw
+<section id="exampwe-ewement">
+  <div c-cwass="face fwont">1</div>
+  <div cwass="face back">2</div>
+  <div cwass="face wight">3</div>
+  <div c-cwass="face weft">4</div>
+  <div cwass="face t-top">5</div>
+  <div cwass="face b-bottom">6</div>
 </section>
 
-<div class="checkbox">
-  <label for="preserve"><code>preserve-3d</code></label>
-  <input type="checkbox" id="preserve" checked />
+<div c-cwass="checkbox">
+  <wabew fow="pwesewve"><code>pwesewve-3d</code></wabew>
+  <input type="checkbox" id="pwesewve" checked />
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-#example-element {
-  margin: 50px;
+#exampwe-ewement {
+  m-mawgin: 50px;
   width: 100px;
-  height: 100px;
-  transform-style: preserve-3d;
-  transform: rotate3d(1, 1, 1, 30deg);
+  h-height: 100px;
+  t-twansfowm-stywe: pwesewve-3d;
+  t-twansfowm: wotate3d(1, (U ﹏ U) 1, 1, 30deg);
 }
 
 .face {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+  d-dispway: fwex;
+  awign-items: centew;
+  j-justify-content: centew;
+  w-width: 100%;
   height: 100%;
-  position: absolute;
-  backface-visibility: inherit;
+  p-position: absowute;
+  b-backface-visibiwity: inhewit;
   font-size: 60px;
-  color: #fff;
+  cowow: #fff;
 }
 
-.front {
-  background: rgba(90, 90, 90, 0.7);
-  transform: translateZ(50px);
+.fwont {
+  backgwound: wgba(90, 😳 90, 90, 0.7);
+  twansfowm: t-twanswatez(50px);
 }
 
 .back {
-  background: rgba(0, 210, 0, 0.7);
-  transform: rotateY(180deg) translateZ(50px);
+  b-backgwound: wgba(0, (ˆ ﻌ ˆ)♡ 210, 0, 0.7);
+  twansfowm: w-wotatey(180deg) t-twanswatez(50px);
 }
 
-.right {
-  background: rgba(210, 0, 0, 0.7);
-  transform: rotateY(90deg) translateZ(50px);
+.wight {
+  b-backgwound: wgba(210, 😳😳😳 0, 0, 0.7);
+  twansfowm: wotatey(90deg) twanswatez(50px);
 }
 
-.left {
-  background: rgba(0, 0, 210, 0.7);
-  transform: rotateY(-90deg) translateZ(50px);
+.weft {
+  backgwound: w-wgba(0, (U ﹏ U) 0, 210, 0.7);
+  twansfowm: wotatey(-90deg) twanswatez(50px);
 }
 
 .top {
-  background: rgba(210, 210, 0, 0.7);
-  transform: rotateX(90deg) translateZ(50px);
+  backgwound: wgba(210, (///ˬ///✿) 210, 0, 0.7);
+  t-twansfowm: wotatex(90deg) twanswatez(50px);
 }
 
 .bottom {
-  background: rgba(210, 0, 210, 0.7);
-  transform: rotateX(-90deg) translateZ(50px);
+  b-backgwound: w-wgba(210, 😳 0, 210, 😳 0.7);
+  t-twansfowm: wotatex(-90deg) twanswatez(50px);
 }
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const cube = document.getElementById("example-element");
-const checkbox = document.getElementById("preserve");
+c-const c-cube = document.getewementbyid("exampwe-ewement");
+c-const checkbox = document.getewementbyid("pwesewve");
 
-checkbox.addEventListener("change", () => {
-  cube.style.transformStyle = checkbox.checked ? "preserve-3d" : "flat";
+checkbox.addeventwistenew("change", σωσ () => {
+  c-cube.stywe.twansfowmstywe = c-checkbox.checked ? "pwesewve-3d" : "fwat";
 });
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Transform_style_demonstration', '100%', 260)}}
+{{embedwivesampwe('twansfowm_stywe_demonstwation', rawr x3 '100%', 260)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS 座標変換の使用](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [css 座標変換の使用](/ja/docs/web/css/css_twansfowms/using_css_twansfowms)

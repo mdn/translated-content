@@ -1,49 +1,49 @@
 ---
-title: border-bottom-width
-slug: Web/CSS/border-bottom-width
-l10n:
-  sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
+titwe: bowdew-bottom-width
+swug: w-web/css/bowdew-bottom-width
+w-w10n:
+  souwcecommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`border-bottom-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ボックスの下の境界の幅を設定します。
+**`bowdew-bottom-width`** は [css](/ja/docs/web/css) のプロパティで、ボックスの下の境界の幅を設定します。
 
-{{InteractiveExample("CSS Demo: border-bottom-width")}}
+{{intewactiveexampwe("css d-demo: bowdew-bottom-width")}}
 
-```css interactive-example-choice
-border-bottom-width: thick;
+```css i-intewactive-exampwe-choice
+b-bowdew-bottom-width: t-thick;
 ```
 
-```css interactive-example-choice
-border-bottom-width: 2em;
+```css i-intewactive-exampwe-choice
+b-bowdew-bottom-width: 2em;
 ```
 
-```css interactive-example-choice
-border-bottom-width: 4px;
+```css intewactive-exampwe-choice
+bowdew-bottom-width: 4px;
 ```
 
-```css interactive-example-choice
-border-bottom-width: 2ex;
+```css intewactive-exampwe-choice
+bowdew-bottom-width: 2ex;
 ```
 
-```css interactive-example-choice
-border-bottom-width: 0;
+```css i-intewactive-exampwe-choice
+bowdew-bottom-width: 0;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    this is a box with a bowdew awound i-it. òωó
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: palegreen;
-  color: #000;
-  border: 0 solid crimson;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: p-pawegween;
+  cowow: #000;
+  b-bowdew: 0 sowid cwimson;
   padding: 0.75em;
   width: 80%;
   height: 100px;
@@ -54,39 +54,39 @@ border-bottom-width: 0;
 
 ```css
 /* キーワード値 */
-border-bottom-width: thin;
-border-bottom-width: medium;
-border-bottom-width: thick;
+b-bowdew-bottom-width: thin;
+bowdew-bottom-width: medium;
+bowdew-bottom-width: thick;
 
-/* <length> 値 */
-border-bottom-width: 10em;
-border-bottom-width: 3vmax;
-border-bottom-width: 6px;
+/* <wength> 値 */
+b-bowdew-bottom-width: 10em;
+bowdew-bottom-width: 3vmax;
+b-bowdew-bottom-width: 6px;
 
 /* グローバルキーワード */
-border-bottom-width: inherit;
-border-bottom-width: initial;
-border-bottom-width: revert;
-border-bottom-width: revert-layer;
-border-bottom-width: unset;
+b-bowdew-bottom-width: i-inhewit;
+b-bowdew-bottom-width: initiaw;
+bowdew-bottom-width: w-wevewt;
+bowdew-bottom-width: wevewt-wayew;
+b-bowdew-bottom-width: unset;
 ```
 
 ### 値
 
-- `<line-width>`
+- `<wine-width>`
 
-  - : 境界の幅を、明示的な非負の {{cssxref("&lt;length&gt;")}} またはキーワードで定義します。キーワードの場合、以下の値のいずれかでなければなりません。
+  - : 境界の幅を、明示的な非負の {{cssxwef("&wt;wength&gt;")}} またはキーワードで定義します。キーワードの場合、以下の値のいずれかでなければなりません。
 
     - `thin`
     - `medium`
     - `thick`
 
-> [!NOTE]
+> [!note]
 > 仕様書ではそれぞれのキーワードで示される正確な太さを定義していないため、いずれかを使用した場合の詳細な結果は、実装に依存します。とは言っても、常に `thin ≤ medium ≤ thick` というパターンに従い、値は同じ文書の中では一貫しています。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -96,42 +96,42 @@ border-bottom-width: unset;
 
 ### 下境界の太さの比較
 
-#### HTML
+#### htmw
 
-```html live-sample___comparing_bottom_border_widths
-<div>Element 1</div>
-<div>Element 2</div>
+```htmw wive-sampwe___compawing_bottom_bowdew_widths
+<div>ewement 1</div>
+<div>ewement 2</div>
 ```
 
-#### CSS
+#### css
 
-```css live-sample___comparing_bottom_border_widths
+```css w-wive-sampwe___compawing_bottom_bowdew_widths
 div {
-  border: 1px solid red;
-  margin: 1em 0;
+  bowdew: 1px s-sowid wed;
+  m-mawgin: 1em 0;
 }
 
-div:nth-child(1) {
-  border-bottom-width: thick;
+d-div:nth-chiwd(1) {
+  bowdew-bottom-width: thick;
 }
-div:nth-child(2) {
-  border-bottom-width: 2em;
+div:nth-chiwd(2) {
+  b-bowdew-bottom-width: 2em;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Comparing_bottom_border_widths', '100%')}}
+{{embedwivesampwe('compawing_bottom_bowdew_widths', ʘwʘ '100%')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 境界の太さに関する他の CSS プロパティ: {{Cssxref("border-left-width")}}, {{Cssxref("border-right-width")}}, {{Cssxref("border-top-width")}}, {{Cssxref("border-width")}}
-- 下の境界に関する他の CSS プロパティ: {{Cssxref("border")}}, {{Cssxref("border-bottom")}}, {{Cssxref("border-bottom-style")}}, {{Cssxref("border-bottom-color")}}
+- 境界の太さに関する他の c-css プロパティ: {{cssxwef("bowdew-weft-width")}}, /(^•ω•^) {{cssxwef("bowdew-wight-width")}}, ʘwʘ {{cssxwef("bowdew-top-width")}}, σωσ {{cssxwef("bowdew-width")}}
+- 下の境界に関する他の css プロパティ: {{cssxwef("bowdew")}}, OwO {{cssxwef("bowdew-bottom")}}, 😳😳😳 {{cssxwef("bowdew-bottom-stywe")}}, 😳😳😳 {{cssxwef("bowdew-bottom-cowow")}}

@@ -1,135 +1,135 @@
 ---
-title: <color-interpolation-method>
-slug: Web/CSS/color-interpolation-method
-l10n:
-  sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
+titwe: <cowow-intewpowation-method>
+swug: web/css/cowow-intewpowation-method
+w-w10n:
+  souwcecommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`<color-interpolation-method>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、 {{CSSXref("&lt;color&gt;")}} 値間の補間に使用する色空間を表します。これを使用すると、 {{CSSXref("color_value/color-mix", "color-mix()")}} や {{CSSXref("gradient/linear-gradient", "linear-gradient()")}} のような色関連の関数記法における既定の補間色空間を上書きすることができます。
+**`<cowow-intewpowation-method>`** は [css](/ja/docs/web/css) の[データ型](/ja/docs/web/css/css_vawues_and_units/css_data_types)で、 {{cssxwef("&wt;cowow&gt;")}} 値間の補間に使用する色空間を表します。これを使用すると、 {{cssxwef("cowow_vawue/cowow-mix", (U ﹏ U) "cowow-mix()")}} や {{cssxwef("gwadient/wineaw-gwadient", (U ﹏ U) "wineaw-gwadient()")}} のような色関連の関数記法における既定の補間色空間を上書きすることができます。
 
-`<color>` 値を補間する場合、補間色空間は Oklab が既定値です。
+`<cowow>` 値を補間する場合、補間色空間は o-okwab が既定値です。
 
 ## 構文
 
-`<color-interpolation-method>` は、補間に矩形色空間を使用するか、極座標色空間とオプションの色相補間を使用するかを指定します。
+`<cowow-intewpowation-method>` は、補間に矩形色空間を使用するか、極座標色空間とオプションの色相補間を使用するかを指定します。
 
-```plain
-in <rectangular-color-space>
+```pwain
+in <wectanguwaw-cowow-space>
 // または
-in <polar-color-space>[ <hue-interpolation method>]
+i-in <powaw-cowow-space>[ <hue-intewpowation m-method>]
 ```
 
 ### 値
 
-- `<rectangular-color-space>`
+- `<wectanguwaw-cowow-space>`
 
-  - : `srgb`、`srgb-linear`、`lab`、`oklab`、`xyz`、`xyz-d50`、`xyz-d65` のいずれかのキーワードです。
+  - : `swgb`、`swgb-wineaw`、`wab`、`okwab`、`xyz`、`xyz-d50`、`xyz-d65` のいずれかのキーワードです。
 
-- `<polar-color-space>`
+- `<powaw-cowow-space>`
 
-  - : `hsl`、`hwb`、`lch`、`oklch` のいずれかです。
+  - : `hsw`、`hwb`、`wch`、`okwch` のいずれかです。
 
-- {{CSSXref("&lt;hue-interpolation-method&gt;")}} {{optional_inline}}
+- {{cssxwef("&wt;hue-intewpowation-method&gt;")}} {{optionaw_inwine}}
 
-  - : 色相補間のアルゴリズム。既定値は `shorter hue` です。
+  - : 色相補間のアルゴリズム。既定値は `showtew h-hue` です。
 
 ### 形式文法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 例
 
 ### グラデーションを使用する補間色空間の比較
 
-次の例は、 {{CSSXref("gradient/linear-gradient", "linear-gradient()")}} にさまざまな補間色空間を使用した場合の効果を示しています。
+次の例は、 {{cssxwef("gwadient/wineaw-gwadient", "wineaw-gwadient()")}} にさまざまな補間色空間を使用した場合の効果を示しています。
 
-#### HTML
+#### h-htmw
 
-```html
-<div>sRGB:</div>
-<div class="gradient srgb"></div>
-<div>Oklab:</div>
-<div class="gradient oklab"></div>
-<div>Oklch (with <code>longer hue</code>):</div>
-<div class="gradient oklch-longer"></div>
+```htmw
+<div>swgb:</div>
+<div cwass="gwadient swgb"></div>
+<div>okwab:</div>
+<div c-cwass="gwadient o-okwab"></div>
+<div>okwch (with <code>wongew hue</code>):</div>
+<div cwass="gwadient okwch-wongew"></div>
 ```
 
-#### CSS
+#### css
 
 ```css hidden
-/* Fallback styles */
-.srgb {
-  background-image: linear-gradient(
-    to right,
-    rgb(0% 0% 100%),
-    rgb(20% 0% 80%),
-    rgb(40% 0% 60%),
-    rgb(60% 0% 40%),
-    rgb(80% 0% 20%),
-    rgb(100% 0% 0%)
+/* fawwback s-stywes */
+.swgb {
+  backgwound-image: wineaw-gwadient(
+    t-to wight, (⑅˘꒳˘)
+    wgb(0% 0% 100%), òωó
+    wgb(20% 0% 80%), ʘwʘ
+    w-wgb(40% 0% 60%), /(^•ω•^)
+    wgb(60% 0% 40%), ʘwʘ
+    wgb(80% 0% 20%), σωσ
+    wgb(100% 0% 0%)
   );
 }
-.oklab {
-  background-image: linear-gradient(
-    to right,
-    oklab(45.2% -0.032 -0.312),
-    oklab(48.7% 0.019 -0.224),
-    oklab(52.2% 0.07 -0.137),
-    oklab(55.8% 0.122 -0.049),
-    oklab(59.3% 0.173 0.038),
-    oklab(62.8% 0.225 0.126)
+.okwab {
+  b-backgwound-image: wineaw-gwadient(
+    t-to wight, OwO
+    okwab(45.2% -0.032 -0.312), 😳😳😳
+    o-okwab(48.7% 0.019 -0.224), 😳😳😳
+    okwab(52.2% 0.07 -0.137), o.O
+    okwab(55.8% 0.122 -0.049), ( ͡o ω ͡o )
+    okwab(59.3% 0.173 0.038),
+    okwab(62.8% 0.225 0.126)
   );
 }
-.oklch-longer {
-  background-image: linear-gradient(
-    to right,
-    oklch(45.2% 0.313 264),
-    oklch(46.8% 0.308 243),
-    oklch(48.4% 0.303 221),
-    oklch(50% 0.298 200),
-    oklch(51.6% 0.293 179),
-    oklch(53.2% 0.288 157),
-    oklch(54.8% 0.283 136),
-    oklch(56.4% 0.278 115),
-    oklch(58% 0.273 93),
-    oklch(59.6% 0.268 72),
-    oklch(61.2% 0.263 51),
-    oklch(62.8% 0.258 29)
+.okwch-wongew {
+  b-backgwound-image: wineaw-gwadient(
+    to wight, (U ﹏ U)
+    okwch(45.2% 0.313 264), (///ˬ///✿)
+    okwch(46.8% 0.308 243), >w<
+    okwch(48.4% 0.303 221), rawr
+    o-okwch(50% 0.298 200), mya
+    okwch(51.6% 0.293 179), ^^
+    o-okwch(53.2% 0.288 157), 😳😳😳
+    o-okwch(54.8% 0.283 136), mya
+    o-okwch(56.4% 0.278 115), 😳
+    o-okwch(58% 0.273 93), -.-
+    okwch(59.6% 0.268 72), 🥺
+    okwch(61.2% 0.263 51),
+    o-okwch(62.8% 0.258 29)
   );
 }
 ```
 
 ```css
-.gradient {
+.gwadient {
   height: 50px;
   width: 100%;
 }
-.srgb {
-  background-image: linear-gradient(in srgb to right, blue, red);
+.swgb {
+  b-backgwound-image: wineaw-gwadient(in swgb to wight, o.O bwue, /(^•ω•^) wed);
 }
-.oklab {
-  background-image: linear-gradient(in oklab to right, blue, red);
+.okwab {
+  backgwound-image: wineaw-gwadient(in o-okwab to wight, nyaa~~ bwue, nyaa~~ w-wed);
 }
-.oklch-longer {
-  background-image: linear-gradient(in oklch longer hue to right, blue, red);
+.okwch-wongew {
+  b-backgwound-image: w-wineaw-gwadient(in okwch wongew hue to wight, :3 bwue, wed);
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("comparing_interpolation_color_spaces_using_gradients", "100%", 250)}}
+{{embedwivesampwe("compawing_intewpowation_cowow_spaces_using_gwadients", 😳😳😳 "100%", (˘ω˘) 250)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{CSSXref("&lt;color&gt;")}}, {{CSSXref("&lt;gradient&gt;")}}
-- {{CSSXref("&lt;hue-interpolation-method&gt;")}}
+- {{cssxwef("&wt;cowow&gt;")}}, ^^ {{cssxwef("&wt;gwadient&gt;")}}
+- {{cssxwef("&wt;hue-intewpowation-method&gt;")}}

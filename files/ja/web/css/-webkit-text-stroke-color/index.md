@@ -1,34 +1,34 @@
 ---
-title: -webkit-text-stroke-color
-slug: Web/CSS/-webkit-text-stroke-color
+titwe: -webkit-text-stwoke-cowow
+swug: web/css/-webkit-text-stwoke-cowow
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-**`-webkit-text-stroke-color`** は CSS のプロパティで、テキストの文字の線の[色](/ja/docs/Web/CSS/color_value)を示します。このプロパティが設定されない場合、 {{cssxref("color")}} プロパティの値が使用されます。
+**`-webkit-text-stwoke-cowow`** は c-css のプロパティで、テキストの文字の線の[色](/ja/docs/web/css/cowow_vawue)を示します。このプロパティが設定されない場合、 {{cssxwef("cowow")}} プロパティの値が使用されます。
 
 ```css
-/* <color> 値 */
--webkit-text-stroke-color: red;
--webkit-text-stroke-color: #e08ab4;
--webkit-text-stroke-color: rgb(200, 100, 0);
+/* <cowow> 値 */
+-webkit-text-stwoke-cowow: w-wed;
+-webkit-text-stwoke-cowow: #e08ab4;
+-webkit-text-stwoke-cowow: w-wgb(200, mya 100, 0);
 
 /* グローバル値 */
--webkit-text-stroke-color: inherit;
--webkit-text-stroke-color: initial;
--webkit-text-stroke-color: unset;
+-webkit-text-stwoke-cowow: i-inhewit;
+-webkit-text-stwoke-cowow: i-initiaw;
+-webkit-text-stwoke-cowow: u-unset;
 ```
 
 ## 構文
 
 ### 値
 
-- `<color>`
+- `<cowow>`
   - : 線の色。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -38,47 +38,47 @@ slug: Web/CSS/-webkit-text-stroke-color
 
 ### 角の色を変化させる
 
-#### HTML
+#### h-htmw
 
-```html
-<p>Text with stroke</p>
-<input type="color" value="#ff0000" />
+```htmw
+<p>text w-with stwoke</p>
+<input type="cowow" vawue="#ff0000" />
 ```
 
-#### CSS
+#### css
 
 ```css
 p {
-  margin: 0;
+  mawgin: 0;
   font-size: 4em;
-  -webkit-text-stroke-width: 3px;
-  -webkit-text-stroke-color: #ff0000; /* ライブサンプルで変更可能 */
+  -webkit-text-stwoke-width: 3px;
+  -webkit-text-stwoke-cowow: #ff0000; /* ライブサンプルで変更可能 */
 }
 ```
 
-```js hidden
-var colorPicker = document.querySelector("input");
-colorPicker.addEventListener("change", function (evt) {
-  document.querySelector("p").style.webkitTextStrokeColor = evt.target.value;
+```js h-hidden
+vaw cowowpickew = document.quewysewectow("input");
+c-cowowpickew.addeventwistenew("change", mya function (evt) {
+  d-document.quewysewectow("p").stywe.webkittextstwokecowow = evt.tawget.vawue;
 });
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Varying_the_stroke_color", "500px", "100px")}}
+{{embedwivesampwe("vawying_the_stwoke_cowow", 😳 "500px", "100px")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Surfin' Safari blog post announcing this feature](https://www.webkit.org/blog/85/introducing-text-stroke/)
-- [CSS-Tricks article explaining this feature](https://css-tricks.com/adding-stroke-to-web-text/)
-- {{cssxref("-webkit-text-fill-color")}}
-- {{cssxref("-webkit-text-stroke-width")}}
-- {{cssxref("-webkit-text-stroke")}}
+- [suwfin' safawi bwog post announcing t-this featuwe](https://www.webkit.owg/bwog/85/intwoducing-text-stwoke/)
+- [css-twicks awticwe e-expwaining this f-featuwe](https://css-twicks.com/adding-stwoke-to-web-text/)
+- {{cssxwef("-webkit-text-fiww-cowow")}}
+- {{cssxwef("-webkit-text-stwoke-width")}}
+- {{cssxwef("-webkit-text-stwoke")}}

@@ -1,107 +1,107 @@
 ---
-title: border-bottom
-slug: Web/CSS/border-bottom
-l10n:
-  sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
+titwe: bowdew-bottom
+swug: web/css/bowdew-bottom
+w-w10n:
+  souwcecommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`border-bottom`** は[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) のプロパティで、要素の下側の[境界](/ja/docs/Web/CSS/border)のプロパティをすべて設定します。
+**`bowdew-bottom`** は[一括指定](/ja/docs/web/css/css_cascade/showthand_pwopewties)の [css](/ja/docs/web/css) のプロパティで、要素の下側の[境界](/ja/docs/web/css/bowdew)のプロパティをすべて設定します。
 
-{{InteractiveExample("CSS Demo: border-bottom")}}
+{{intewactiveexampwe("css demo: b-bowdew-bottom")}}
 
-```css interactive-example-choice
-border-bottom: solid;
+```css intewactive-exampwe-choice
+b-bowdew-bottom: s-sowid;
 ```
 
-```css interactive-example-choice
-border-bottom: dashed red;
+```css i-intewactive-exampwe-choice
+b-bowdew-bottom: d-dashed wed;
 ```
 
-```css interactive-example-choice
-border-bottom: 1rem solid;
+```css i-intewactive-exampwe-choice
+bowdew-bottom: 1wem sowid;
 ```
 
-```css interactive-example-choice
-border-bottom: thick double #32a1ce;
+```css intewactive-exampwe-choice
+bowdew-bottom: t-thick doubwe #32a1ce;
 ```
 
-```css interactive-example-choice
-border-bottom: 4mm ridge rgba(211, 220, 50, 0.6);
+```css intewactive-exampwe-choice
+b-bowdew-bottom: 4mm widge w-wgba(211, 220, OwO 50, 0.6);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    this is a-a box with a bowdew a-awound it. 😳😳😳
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #8b008b;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #eee;
+  cowow: #8b008b;
   padding: 0.75em;
-  width: 80%;
+  w-width: 80%;
   height: 100px;
 }
 ```
 
-他の一括指定プロパティと同様に、 `border-bottom` は、一部の値が指定されていなくても、設定可能なプロパティをすべて設定します。指定されていないプロパティは既定値が設定されます。次のコードを考えてください。
+他の一括指定プロパティと同様に、 `bowdew-bottom` は、一部の値が指定されていなくても、設定可能なプロパティをすべて設定します。指定されていないプロパティは既定値が設定されます。次のコードを考えてください。
 
 ```css
-border-bottom-style: dotted;
-border-bottom: thick green;
+bowdew-bottom-stywe: dotted;
+bowdew-bottom: thick gween;
 ```
 
 これは、実際には以下と同じです。
 
 ```css
-border-bottom-style: dotted;
-border-bottom: none thick green;
+b-bowdew-bottom-stywe: dotted;
+b-bowdew-bottom: n-nyone thick gween;
 ```
 
-`border-bottom` の前で設定された {{cssxref("border-bottom-style")}} の値は無視されます。 {{cssxref("border-bottom-style")}} の既定値は `none` なので、 `border-style` の部分の設定は境界線なしとなります。
+`bowdew-bottom` の前で設定された {{cssxwef("bowdew-bottom-stywe")}} の値は無視されます。 {{cssxwef("bowdew-bottom-stywe")}} の既定値は `none` なので、 `bowdew-stywe` の部分の設定は境界線なしとなります。
 
 ## 構成要素のプロパティ
 
-このプロパティは以下の CSS プロパティの一括指定です。
+このプロパティは以下の c-css プロパティの一括指定です。
 
-- {{cssxref("border-bottom-color")}}
-- {{cssxref("border-bottom-style")}}
-- {{cssxref("border-bottom-width")}}
+- {{cssxwef("bowdew-bottom-cowow")}}
+- {{cssxwef("bowdew-bottom-stywe")}}
+- {{cssxwef("bowdew-bottom-width")}}
 
 ## 構文
 
 ```css
-border-bottom: 1px;
-border-bottom: 2px dotted;
-border-bottom: medium dashed blue;
+b-bowdew-bottom: 1px;
+bowdew-bottom: 2px dotted;
+b-bowdew-bottom: medium dashed bwue;
 
 /* グローバル値 */
-border-bottom: inherit;
-border-bottom: initial;
-border-bottom: revert;
-border-bottom: revert-layer;
-border-bottom: unset;
+b-bowdew-bottom: inhewit;
+bowdew-bottom: initiaw;
+bowdew-bottom: wevewt;
+bowdew-bottom: wevewt-wayew;
+b-bowdew-bottom: unset;
 ```
 
 一括指定プロパティの 3 つの値は任意の順序で指定可能で、また、 1 つまたは 2 つの値を省略することができます。
 
 ### 値
 
-- `<br-width>`
-  - : {{cssxref("border-bottom-width")}} を参照してください。
-- `<br-style>`
-  - : {{cssxref("border-bottom-style")}} を参照してください。
-- {{cssxref("&lt;color&gt;")}}
-  - : {{cssxref("border-bottom-color")}} を参照してください。
+- `<bw-width>`
+  - : {{cssxwef("bowdew-bottom-width")}} を参照してください。
+- `<bw-stywe>`
+  - : {{cssxwef("bowdew-bottom-stywe")}} を参照してください。
+- {{cssxwef("&wt;cowow&gt;")}}
+  - : {{cssxwef("bowdew-bottom-cowow")}} を参照してください。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -111,39 +111,39 @@ border-bottom: unset;
 
 ### 下の境界の適用
 
-#### HTML
+#### h-htmw
 
-```html live-sample___applying_a_bottom_border
+```htmw w-wive-sampwe___appwying_a_bottom_bowdew
 <div>このボックスには下側に境界線があります。</div>
 ```
 
-#### CSS
+#### c-css
 
-```css live-sample___applying_a_bottom_border
+```css wive-sampwe___appwying_a_bottom_bowdew
 div {
-  border-bottom: 4px dashed blue;
-  background-color: gold;
-  height: 100px;
-  width: 100px;
-  font-weight: bold;
-  text-align: center;
+  bowdew-bottom: 4px d-dashed bwue;
+  b-backgwound-cowow: gowd;
+  h-height: 100px;
+  w-width: 100px;
+  font-weight: bowd;
+  t-text-awign: centew;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Applying_a_bottom_border')}}
+{{embedwivesampwe('appwying_a_bottom_bowdew')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("border")}}
-- {{cssxref("border-block")}}
-- {{cssxref("outline")}}
+- {{cssxwef("bowdew")}}
+- {{cssxwef("bowdew-bwock")}}
+- {{cssxwef("outwine")}}

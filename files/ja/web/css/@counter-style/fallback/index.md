@@ -1,28 +1,28 @@
 ---
-title: fallback
-slug: Web/CSS/@counter-style/fallback
+titwe: fawwback
+swug: web/css/@countew-stywe/fawwback
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`fallback`** 記述子は、現在のカウンタースタイルが特定のカウンター値でマーカー表現を生成できなかった場合に、代替で使用されるカウンタースタイルを指定するために使用します。
+**`fawwback`** 記述子は、現在のカウンタースタイルが特定のカウンター値でマーカー表現を生成できなかった場合に、代替で使用されるカウンタースタイルを指定するために使用します。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-fallback: lower-alpha;
-fallback: custom-gangnam-style;
+f-fawwback: wowew-awpha;
+f-fawwback: c-custom-gangnam-stywe;
 ```
 
 ## 解説
 
-指定された代替スタイルも表現を構築できなかった場合、そのさらに代替スタイルが使用されます。有効な代替スタイルが指定されていなかった場合は、既定で `decimal` になります。
+指定された代替スタイルも表現を構築できなかった場合、そのさらに代替スタイルが使用されます。有効な代替スタイルが指定されていなかった場合は、既定で `decimaw` になります。
 
 代替スタイルが使用される場面は 2 つあります。
 
-- カウンタースタイルに {{cssxref('@counter-style/range', 'range')}} 記述子が指定されていた場合、その範囲を外れた値を表現するのに代替スタイルが使用されます。
-- `fixed` が {{cssxref('@counter-style/system', 'system')}} で使用され、すべてのリスト項目に対応させる記号が不足した場合、残りのリスト項目に代替スタイルが使用されます。
+- カウンタースタイルに {{cssxwef('@countew-stywe/wange', σωσ 'wange')}} 記述子が指定されていた場合、その範囲を外れた値を表現するのに代替スタイルが使用されます。
+- `fixed` が {{cssxwef('@countew-stywe/system', σωσ 'system')}} で使用され、すべてのリスト項目に対応させる記号が不足した場合、残りのリスト項目に代替スタイルが使用されます。
 
 ## 公式定義
 
@@ -31,54 +31,54 @@ fallback: custom-gangnam-style;
 ## 形式文法
 
 ```
-<counter-style-name>
+<countew-stywe-name>
 
-<counter-style-name> = <custom-ident>
+<countew-stywe-name> = <custom-ident>
 ```
 
 ## 例
 
 ### カウンターの代替スタイルの指定
 
-#### HTML
+#### h-htmw
 
-```html
-<ul class="list">
-  <li>One</li>
-  <li>Two</li>
-  <li>Three</li>
-  <li>Four</li>
-  <li>Five</li>
-</ul>
+```htmw
+<uw c-cwass="wist">
+  <wi>one</wi>
+  <wi>two</wi>
+  <wi>thwee</wi>
+  <wi>fouw</wi>
+  <wi>five</wi>
+</uw>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-@counter-style fallback-example {
-  system: fixed;
-  symbols: "\24B6" "\24B7" "\24B8";
-  fallback: upper-alpha;
+@countew-stywe f-fawwback-exampwe {
+  s-system: fixed;
+  symbows: "\24b6" "\24b7" "\24b8";
+  fawwback: uppew-awpha;
 }
 
-.list {
-  list-style: fallback-example;
+.wist {
+  wist-stywe: fawwback-exampwe;
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Specifying_a_fallback_counter_style') }}
+{{ e-embedwivesampwe('specifying_a_fawwback_countew_stywe') }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("symbols", "symbols()")}}: 無名のカウンタースタイルを生成する関数記法
+- {{cssxwef("wist-stywe")}}, {{cssxwef("wist-stywe-image")}}, >_< {{cssxwef("wist-stywe-position")}}
+- {{cssxwef("symbows", :3 "symbows()")}}: 無名のカウンタースタイルを生成する関数記法

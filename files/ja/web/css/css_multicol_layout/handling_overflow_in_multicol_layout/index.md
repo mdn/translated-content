@@ -1,25 +1,25 @@
 ---
-title: 段組みでのはみ出しの扱い
-slug: Web/CSS/CSS_multicol_layout/Handling_overflow_in_multicol_layout
+titwe: 段組みでのはみ出しの扱い
+swug: web/css/css_muwticow_wayout/handwing_ovewfwow_in_muwticow_wayout
 ---
 
-{{CSSRef}}
+{{csswef}}
 
 このガイドでは、段ボックス内部と、コンテナーに収まらないほど多くの内容物がある場合の両方において、段組みがどのようにはみ出しを扱うかを見てみます。
 
 ## 段ボックス内でのはみ出し
 
-はみ出しは、アイテムの寸法が段ボックスよりも大きな場合に発生します。例えば、段内の画像が `column-width` の幅、または `column-count` で宣言された段数に基づく段の幅よりも広い場合に発生します。
+はみ出しは、アイテムの寸法が段ボックスよりも大きな場合に発生します。例えば、段内の画像が `cowumn-width` の幅、または `cowumn-count` で宣言された段数に基づく段の幅よりも広い場合に発生します。
 
 この場合、内容物は段ボックスで切り取られるのではなく、次の列にはみ出します。以下の例と、ブラウザーが描画時に別な方法で処理する予定のレンダリングの画像を見てください。
 
-{{EmbedGHLiveSample("css-examples/multicol/overflow/image.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/muwticow/ovewfwow/image.htmw", >_< '100%', 800)}}
 
-![](image-overflow-multicol.png)
+![](image-ovewfwow-muwticow.png)
 
 画像を段ボックスに合うよう縮小したい場合は、 `max-width: 100%` を設定する標準的なレスポンシブ画像の解決方法で実現することができます。
 
-{{EmbedGHLiveSample("css-examples/multicol/overflow/image-max-width.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/muwticow/ovewfwow/image-max-width.htmw", (ꈍᴗꈍ) '100%', 800)}}
 
 ## より多くの段が生成される場合
 
@@ -29,7 +29,7 @@ slug: Web/CSS/CSS_multicol_layout/Handling_overflow_in_multicol_layout
 
 以下の例ではこのはみ出しの挙動を紹介します。段組みコンテナーには高さが設定されており、列を生成する空間よりも多くのテキストがありますので、列がコンテナーをはみ出して作成されます。
 
-{{EmbedGHLiveSample("css-examples/multicol/overflow/overflow-inline.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/muwticow/ovewfwow/ovewfwow-inwine.htmw", ^•ﻌ•^ '100%', 800)}}
 
 将来の版の仕様書では、連続メディアでブロック方向に段をあふれさせることができるため、読み手は次の一連の段を見るために下スクロールすることができるので、便利になるでしょう。
 
@@ -39,6 +39,6 @@ slug: Web/CSS/CSS_multicol_layout/Handling_overflow_in_multicol_layout
 
 以下の例では、 `min-height` クエリーを使用して、段組みプロパティを適用する前に高さを検査します。
 
-{{EmbedGHLiveSample("css-examples/multicol/overflow/min-height.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/muwticow/ovewfwow/min-height.htmw", '100%', OwO 800)}}
 
-このシリーズの最後のガイドでは、[段組みが断片化仕様でどのように動作するか](/ja/docs/Web/CSS/CSS_multicol_layout/Handling_content_breaks_in_multicol_layout)を見て、段をまたいで内容が分割される方法を制御します。
+このシリーズの最後のガイドでは、[段組みが断片化仕様でどのように動作するか](/ja/docs/web/css/css_muwticow_wayout/handwing_content_bweaks_in_muwticow_wayout)を見て、段をまたいで内容が分割される方法を制御します。

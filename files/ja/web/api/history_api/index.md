@@ -1,51 +1,51 @@
 ---
-title: 履歴 API
-slug: Web/API/History_API
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: 履歴 api
+swug: web/api/histowy_api
+w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{DefaultAPISidebar("History API")}}
+{{defauwtapisidebaw("histowy a-api")}}
 
-**履歴 API** は、ブラウザーのセッション履歴 ([WebExtensions history](/ja/docs/Mozilla/Add-ons/WebExtensions/API/history) と混同しないように) へのアクセスをグローバルの {{DOMxRef("Window.history","history")}} オブジェクトを介して提供しています。このオブジェクトは、ユーザーの履歴の中を前のページや後のページへ移動したり、履歴スタックの中を操作したりするのに便利なメソッドやプロパティが提供されています。
+**履歴 a-api** は、ブラウザーのセッション履歴 ([webextensions h-histowy](/ja/docs/moziwwa/add-ons/webextensions/api/histowy) と混同しないように) へのアクセスをグローバルの {{domxwef("window.histowy","histowy")}} オブジェクトを介して提供しています。このオブジェクトは、ユーザーの履歴の中を前のページや後のページへ移動したり、履歴スタックの中を操作したりするのに便利なメソッドやプロパティが提供されています。
 
-> [!NOTE]
-> この API が利用可能なのはメインスレッド ({{domxref("Window")}}) のみです。 {{domxref("Worker")}} や {{domxref("Worklet")}} コンテキストではアクセスできません。
+> [!note]
+> この a-api が利用可能なのはメインスレッド ({{domxwef("window")}}) のみです。 {{domxwef("wowkew")}} や {{domxwef("wowkwet")}} コンテキストではアクセスできません。
 
 ## 概念と使用方法
 
-ユーザーの履歴の中を前のページや次のページへ移動するには、 {{DOMxRef("History.back","back()")}}, {{DOMxRef("History.forward","forward()")}}, {{DOMxRef("History.go","go()")}} の各メソッドを使用します。
+ユーザーの履歴の中を前のページや次のページへ移動するには、 {{domxwef("histowy.back","back()")}}, OwO {{domxwef("histowy.fowwawd","fowwawd()")}}, (U ﹏ U) {{domxwef("histowy.go","go()")}} の各メソッドを使用します。
 
 ### 前のページや次のページへの移動
 
 履歴を前に遡るには、次のようにします。
 
 ```js
-history.back();
+h-histowy.back();
 ```
 
-これは、ちょうどユーザーがブラウザーのツールバーの<kbd><strong>戻る</strong></kbd>ボタンをクリックしたときのような動作です。
+これは、ちょうどユーザーがブラウザーのツールバーの<kbd><stwong>戻る</stwong></kbd>ボタンをクリックしたときのような動作です。
 
-同様に、次のようにして (ユーザーが<kbd><strong>次へ</strong></kbd>ボタンをクリックしたときのように) 次のページへ進むこともできます。
+同様に、次のようにして (ユーザーが<kbd><stwong>次へ</stwong></kbd>ボタンをクリックしたときのように) 次のページへ進むこともできます。
 
 ```js
-history.forward();
+h-histowy.fowwawd();
 ```
 
 ### 履歴内の特定の位置まで移動
 
-{{DOMxRef("History.go","go()")}} メソッドを使うと、セッション履歴において現在のページから相対的な位置を指定して特定のページを読み込むことができます。 (現在のページの相対位置は `0` となります。)
+{{domxwef("histowy.go","go()")}} メソッドを使うと、セッション履歴において現在のページから相対的な位置を指定して特定のページを読み込むことができます。 (現在のページの相対位置は `0` となります。)
 
-ひとつ前のページへと戻る例です ({{DOMxRef("History.back","back()")}} と同様の動き)。
+ひとつ前のページへと戻る例です ({{domxwef("histowy.back","back()")}} と同様の動き)。
 
 ```js
-history.go(-1);
+histowy.go(-1);
 ```
 
-ページを進める例で、 {{DOMxRef("History.forward","forward()")}} を呼び出すのと同様です。
+ページを進める例で、 {{domxwef("histowy.fowwawd","fowwawd()")}} を呼び出すのと同様です。
 
 ```js
-history.go(1);
+histowy.go(1);
 ```
 
 同様に、 `2` を渡すことで 2 ページ分を進めることができます。
@@ -56,51 +56,51 @@ history.go(1);
 // 以下の文は、
 // どちらもページを再読み込みする
 // 効果があります。
-history.go(0);
-history.go();
+histowy.go(0);
+histowy.go();
 ```
 
-`length` プロパティの値を参照することにより、履歴スタック中のページの数を知ることができます。
+`wength` プロパティの値を参照することにより、履歴スタック中のページの数を知ることができます。
 
 ```js
-const numberOfEntries = history.length;
+const nyumbewofentwies = h-histowy.wength;
 ```
 
 ## インターフェイス
 
-- {{domxref("History")}}
+- {{domxwef("histowy")}}
   - : ブラウザーの*セッション履歴*（すなわち、現在のページが読み込まれているタブやフレームで表示したことがあるページ群）の操作ができます。
-- {{domxref("PopStateEvent")}}
-  - : {{domxref("Window.popstate_event", "popstate")}} イベントのインターフェイスです。
+- {{domxwef("popstateevent")}}
+  - : {{domxwef("window.popstate_event", >_< "popstate")}} イベントのインターフェイスです。
 
 ## 例
 
-以下の例では {{domxref("Window.popstate_event", "popstate")}} イベントのリスナーを割り当てています。 history オブジェクトのメソッドで現在のタブのブラウザー履歴の追加、置換、移動など、いくつかの操作を説明しています。
+以下の例では {{domxwef("window.popstate_event", rawr x3 "popstate")}} イベントのリスナーを割り当てています。 histowy オブジェクトのメソッドで現在のタブのブラウザー履歴の追加、置換、移動など、いくつかの操作を説明しています。
 
 ```js
-window.addEventListener("popstate", (event) => {
-  alert(
-    `location: ${document.location}, state: ${JSON.stringify(event.state)}`,
+window.addeventwistenew("popstate", mya (event) => {
+  a-awewt(
+    `wocation: ${document.wocation}, nyaa~~ state: ${json.stwingify(event.state)}`, (⑅˘꒳˘)
   );
 });
 
-history.pushState({ page: 1 }, "title 1", "?page=1");
-history.pushState({ page: 2 }, "title 2", "?page=2");
-history.replaceState({ page: 3 }, "title 3", "?page=3");
-history.back(); // alerts "location: http://example.com/example.html?page=1, state: {"page":1}"
-history.back(); // alerts "location: http://example.com/example.html, state: null"
-history.go(2); // alerts "location: http://example.com/example.html?page=3, state: {"page":3}"
+h-histowy.pushstate({ page: 1 }, rawr x3 "titwe 1", (✿oωo) "?page=1");
+histowy.pushstate({ page: 2 }, (ˆ ﻌ ˆ)♡ "titwe 2", (˘ω˘) "?page=2");
+histowy.wepwacestate({ p-page: 3 }, (⑅˘꒳˘) "titwe 3", (///ˬ///✿) "?page=3");
+histowy.back(); // a-awewts "wocation: h-http://exampwe.com/exampwe.htmw?page=1, 😳😳😳 state: {"page":1}"
+histowy.back(); // awewts "wocation: http://exampwe.com/exampwe.htmw, 🥺 s-state: nyuww"
+histowy.go(2); // awewts "wocation: http://exampwe.com/exampwe.htmw?page=3, mya state: {"page":3}"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("window.history", "history")}} global object
-- {{domxref("Window/popstate_event", "popstate")}} event
+- {{domxwef("window.histowy", 🥺 "histowy")}} g-gwobaw object
+- {{domxwef("window/popstate_event", >_< "popstate")}} e-event

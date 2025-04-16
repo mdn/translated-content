@@ -1,35 +1,35 @@
 ---
-title: CSSSkew()
-slug: Web/API/CSSSkew/CSSSkew
-l10n:
-  sourceCommit: bf30e32f3b51f59080f2c76795beadb247a551eb
+titwe: cssskew()
+swug: web/api/cssskew/cssskew
+w-w10n:
+  souwcecommit: b-bf30e32f3b51f59080f2c76795beadb247a551eb
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{apiwef("css t-typed om")}}{{seecompattabwe}}
 
-**`CSSSkew()`** コンストラクターは、新しい {{domxref("CSSSkew")}} オブジェクトを返します。これは、CSS の {{CSSXRef('transform')}} プロパティの [`skew()`](/ja/docs/Web/CSS/transform-function/skew) の値を表します。
+**`cssskew()`** コンストラクターは、新しい {{domxwef("cssskew")}} オブジェクトを返します。これは、css の {{cssxwef('twansfowm')}} プロパティの [`skew()`](/ja/docs/web/css/twansfowm-function/skew) の値を表します。
 
 ## 構文
 
-```js-nolint
-new CSSSkew(ax, ay)
+```js-nowint
+n-nyew c-cssskew(ax, o.O ay)
 ```
 
 ### 引数
 
-- {{domxref('CSSSkew.ax','ax')}}
-  - : 構築される {{domxref('CSSSkew')}} オブジェクトの `ax` (X 軸) 角度を表す値です。これは {{domxref('CSSNumericValue')}} である必要があります。
-- {{domxref('CSSSkew.ay','ay')}}
-  - : 構築される {{domxref('CSSSkew')}} オブジェクトの `ay` (Y 軸) 角度を表す値です。これは {{domxref('CSSNumericValue')}} である必要があります。
+- {{domxwef('cssskew.ax','ax')}}
+  - : 構築される {{domxwef('cssskew')}} オブジェクトの `ax` (x 軸) 角度を表す値です。これは {{domxwef('cssnumewicvawue')}} である必要があります。
+- {{domxwef('cssskew.ay','ay')}}
+  - : 構築される {{domxwef('cssskew')}} オブジェクトの `ay` (y 軸) 角度を表す値です。これは {{domxwef('cssnumewicvawue')}} である必要があります。
 
 ## 例
 
-To do
+t-to do
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

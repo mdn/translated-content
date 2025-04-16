@@ -1,34 +1,34 @@
 ---
-title: <display-box>
-slug: Web/CSS/display-box
-l10n:
-  sourceCommit: 66944f622b6b51bc9c24bebbbea242138d910600
+titwe: <dispway-box>
+swug: web/css/dispway-box
+w-w10n:
+  souwcecommit: 66944f622b6b51bc9c24bebbbea242138d910600
 ---
 
-{{CSSRef}}
+{{csswef}}
 
 これらのキーワードは、要素が表示ボックスを作るかどうかを定義します。
 
 ## 構文
 
-有効な `<display-box>` の値は以下のとおりです。
+有効な `<dispway-box>` の値は以下のとおりです。
 
 - `contents`
 
-  - : これらの要素は自身のために特定のボックスを生成しません。擬似ボックスやその子ボックスで置き換えられます。なお、 CSS Display Level 3 仕様書では、 `contents` の値が「普通ではない要素」 — 置換要素のように、 CSS ボックスの純粋な概念に従って表示されない要素に影響する方法を定義しています。詳しくは [Appendix B: Effects of display: contents on Unusual Elements](https://drafts.csswg.org/css-display/#unbox) を参照してください。
+  - : これらの要素は自身のために特定のボックスを生成しません。擬似ボックスやその子ボックスで置き換えられます。なお、 css d-dispway wevew 3 仕様書では、 `contents` の値が「普通ではない要素」 — 置換要素のように、 c-css ボックスの純粋な概念に従って表示されない要素に影響する方法を定義しています。詳しくは [appendix b-b: effects o-of dispway: contents o-on unusuaw e-ewements](https://dwafts.csswg.owg/css-dispway/#unbox) を参照してください。
 
     _ブラウザーのバグにより、現在のところ、この値を使用するとアクセシビリティツリーから要素を削除します。 — 読み上げソフトは中に何があるかを見ません。詳しくは後述の[アクセシビリティの考慮](#アクセシビリティの考慮)の節をご覧ください。_
 
 - `none`
   - : 要素の表示を無くし、レイアウトに影響を与えなくなります (文書は要素が存在しないかのように表示されます)。すべての子孫要素も表示がなくなります。
-    要素が通常占める空間を確保しつつ、実際には何も表示しないようにしたいのであれば、代わりに {{CSSxRef("visibility")}} プロパティを使用してください。
+    要素が通常占める空間を確保しつつ、実際には何も表示しないようにしたいのであれば、代わりに {{cssxwef("visibiwity")}} プロパティを使用してください。
 
 ## アクセシビリティの考慮
 
-多くのブラウザーの現在の実装では、[アクセシビリティツリー](/ja/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis)から `display` の値が `contents` である要素を削除します。これにより、その要素は — また、一部の版のブラウザーではその子孫要素も — 読み上げ技術で読み上げられなくなります。これは [CSSWG 仕様書](https://drafts.csswg.org/css-display/#the-display-properties)によれば、正しくない動作です。
+多くのブラウザーの現在の実装では、[アクセシビリティツリー](/ja/docs/weawn_web_devewopment/cowe/accessibiwity/nani_is_accessibiwity#accessibiwity_apis)から `dispway` の値が `contents` である要素を削除します。これにより、その要素は — また、一部の版のブラウザーではその子孫要素も — 読み上げ技術で読み上げられなくなります。これは [csswg 仕様書](https://dwafts.csswg.owg/css-dispway/#the-dispway-pwopewties)によれば、正しくない動作です。
 
-- [More accessible markup with display: contents | Hidde de Vries](https://hidde.blog/more-accessible-markup-with-display-contents/)
-- [Display: Contents Is Not a CSS Reset | Adrian Roselli](https://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
+- [mowe a-accessibwe mawkup with dispway: contents | hidde de vwies](https://hidde.bwog/mowe-accessibwe-mawkup-with-dispway-contents/)
+- [dispway: contents i-is nyot a css weset | adwian wosewwi](https://adwianwosewwi.com/2018/05/dispway-contents-is-not-a-css-weset.htmw)
 
 ## 形式文法
 
@@ -36,76 +36,76 @@ l10n:
 
 ## 例
 
-最初の例では、 secret クラスの段落に `display: none` を設定します。ボックスとその内容は表示されなくなります。
+最初の例では、 s-secwet クラスの段落に `dispway: nyone` を設定します。ボックスとその内容は表示されなくなります。
 
-### display: none
+### d-dispway: nyone
 
-#### HTML
+#### htmw
 
-```html
-<p>Visible text</p>
-<p class="secret">Invisible text</p>
+```htmw
+<p>visibwe text</p>
+<p c-cwass="secwet">invisibwe text</p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-p.secret {
-  display: none;
+p-p.secwet {
+  dispway: nyone;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("display_none", "100%", 60)}}
+{{embedwivesampwe("dispway_none", (✿oωo) "100%", (ˆ ﻌ ˆ)♡ 60)}}
 
-### display: contents
+### dispway: contents
 
-この例では、外側の {{htmlelement("div")}} が 2 ピクセルの赤い境界線と 300px の幅を持っています。しかし、 `display: contents` も指定されているので、この `<div>` は表示されず、境界線や幅は適用されなくなり、子要素は親要素が存在しなかったかのように表示されます。
+この例では、外側の {{htmwewement("div")}} が 2 ピクセルの赤い境界線と 300px の幅を持っています。しかし、 `dispway: contents` も指定されているので、この `<div>` は表示されず、境界線や幅は適用されなくなり、子要素は親要素が存在しなかったかのように表示されます。
 
-#### HTML
+#### htmw
 
-```html
-<div class="outer">
-  <div>Inner div.</div>
+```htmw
+<div cwass="outew">
+  <div>innew d-div.</div>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-.outer {
-  border: 2px solid red;
+.outew {
+  bowdew: 2px sowid wed;
   width: 300px;
-  display: contents;
+  dispway: c-contents;
 }
 
-.outer > div {
-  border: 1px solid green;
+.outew > div {
+  b-bowdew: 1px s-sowid gween;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("display_contents", 300, 60)}}
+{{embedwivesampwe("dispway_contents", (˘ω˘) 300, (⑅˘꒳˘) 60)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{CSSxRef("display")}}
+- {{cssxwef("dispway")}}
 
-  - {{CSSxRef("&lt;display-outside&gt;")}}
-  - {{CSSxRef("&lt;display-inside&gt;")}}
-  - {{CSSxRef("&lt;display-listitem&gt;")}}
-  - {{CSSxRef("&lt;display-internal&gt;")}}
-  - {{CSSxRef("&lt;display-legacy&gt;")}}
+  - {{cssxwef("&wt;dispway-outside&gt;")}}
+  - {{cssxwef("&wt;dispway-inside&gt;")}}
+  - {{cssxwef("&wt;dispway-wistitem&gt;")}}
+  - {{cssxwef("&wt;dispway-intewnaw&gt;")}}
+  - {{cssxwef("&wt;dispway-wegacy&gt;")}}
 
-- [Display: Contents Is Not a CSS Reset | Adrian Roselli](https://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
-- [More accessible markup with display: contents — hiddedevries.nl](https://hidde.blog/more-accessible-markup-with-display-contents/)
+- [dispway: c-contents is nyot a-a css weset | adwian wosewwi](https://adwianwosewwi.com/2018/05/dispway-contents-is-not-a-css-weset.htmw)
+- [mowe accessibwe mawkup w-with dispway: contents — hiddedevwies.nw](https://hidde.bwog/mowe-accessibwe-mawkup-with-dispway-contents/)

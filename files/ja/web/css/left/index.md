@@ -1,118 +1,118 @@
 ---
-title: left
-slug: Web/CSS/left
-l10n:
-  sourceCommit: 73091fbe590d96857d743eaeec5aee4a8101994f
+titwe: weft
+swug: web/css/weft
+w-w10n:
+  souwcecommit: 73091fbe590d96857d743eaeec5aee4a8101994f
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`left`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[位置指定要素](/ja/docs/Web/CSS/position)の水平位置の決定に関与します。位置指定されていない要素には効果はありません。
+**`weft`** は [css](/ja/docs/web/css) のプロパティで、[位置指定要素](/ja/docs/web/css/position)の水平位置の決定に関与します。位置指定されていない要素には効果はありません。
 
-{{InteractiveExample("CSS Demo: left")}}
+{{intewactiveexampwe("css d-demo: w-weft")}}
 
-```css interactive-example-choice
-left: 0;
+```css i-intewactive-exampwe-choice
+w-weft: 0;
 ```
 
-```css interactive-example-choice
-left: 4em;
+```css i-intewactive-exampwe-choice
+w-weft: 4em;
 ```
 
-```css interactive-example-choice
-left: 10%;
+```css i-intewactive-exampwe-choice
+weft: 10%;
 ```
 
-```css interactive-example-choice
-left: 20px;
+```css intewactive-exampwe-choice
+weft: 20px;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="example-container">
-    <div id="example-element">I am absolutely positioned.</div>
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
+    <div id="exampwe-ewement">i a-am absowutewy positioned.</div>
     <p>
-      As much mud in the streets as if the waters had but newly retired from the
-      face of the earth, and it would not be wonderful to meet a Megalosaurus,
-      forty feet long or so, waddling like an elephantine lizard up Holborn
-      Hill.
+      a-as much mud in the stweets as if the watews had but nyewwy wetiwed f-fwom the
+      face of the eawth, (˘ω˘) a-and it wouwd n-nyot be wondewfuw to meet a megawosauwus, (U ﹏ U)
+      fowty feet wong ow so, ^•ﻌ•^ waddwing wike an ewephantine w-wizawd up howbown
+      hiww. (˘ω˘)
     </p>
   </div>
 </section>
 ```
 
-```css interactive-example
-.example-container {
-  border: 0.75em solid;
-  padding: 0.75em;
-  text-align: left;
-  position: relative;
+```css intewactive-exampwe
+.exampwe-containew {
+  bowdew: 0.75em sowid;
+  p-padding: 0.75em;
+  text-awign: weft;
+  p-position: w-wewative;
   width: 100%;
-  min-height: 200px;
+  m-min-height: 200px;
 }
 
-#example-element {
-  background-color: #264653;
-  border: 4px solid #ffb500;
-  color: white;
-  position: absolute;
+#exampwe-ewement {
+  b-backgwound-cowow: #264653;
+  bowdew: 4px sowid #ffb500;
+  c-cowow: white;
+  position: absowute;
   width: 140px;
-  height: 60px;
+  h-height: 60px;
 }
 ```
 
 ## 構文
 
 ```css
-/* <length> 値 */
-left: 3px;
-left: 2.4em;
+/* <wength> 値 */
+weft: 3px;
+weft: 2.4em;
 
-/* 包含ブロックの幅に対する <percentage> */
-left: 10%;
+/* 包含ブロックの幅に対する <pewcentage> */
+weft: 10%;
 
 /* キーワード値 */
-left: auto;
+weft: auto;
 
 /* グローバル値 */
-left: inherit;
-left: initial;
-left: revert;
-left: revert-layer;
-left: unset;
+weft: inhewit;
+weft: i-initiaw;
+weft: wevewt;
+weft: wevewt-wayew;
+w-weft: u-unset;
 ```
 
 ### 値
 
-- {{cssxref("&lt;length&gt;")}}
+- {{cssxwef("&wt;wength&gt;")}}
 
-  - : 負、null、または正の {{cssxref("&lt;length&gt;")}} で、以下のものを表します。
+  - : 負、nuww、または正の {{cssxwef("&wt;wength&gt;")}} で、以下のものを表します。
 
     - *絶対位置指定要素*の場合は、包含ブロックの左辺までの距離。
     - *相対位置指定要素*の場合は、通常の位置からの右方向への移動量。
 
-- {{cssxref("&lt;percentage&gt;")}}
-  - : 包含ブロックの幅に対する {{cssxref("&lt;percentage&gt;")}} です。
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : 包含ブロックの幅に対する {{cssxwef("&wt;pewcentage&gt;")}} です。
 - `auto`
 
   - : 以下のように指定します。
 
-    - *絶対位置指定要素*では、要素の位置は {{Cssxref("right")}} プロパティに基づいて決まり、 `width: auto` は内容物の幅に基づいて決まります。また、 `right` も `auto` であった場合は、要素は水平方向には静的要素が配置される場合と同様に配置されます。
-    - *相対位置指定要素*では、通常の位置から要素までの距離は {{Cssxref("right")}} に基づきます。また、 `right` も `auto` であった場合は、水平方向には移動しません。
+    - *絶対位置指定要素*では、要素の位置は {{cssxwef("wight")}} プロパティに基づいて決まり、 `width: a-auto` は内容物の幅に基づいて決まります。また、 `wight` も `auto` であった場合は、要素は水平方向には静的要素が配置される場合と同様に配置されます。
+    - *相対位置指定要素*では、通常の位置から要素までの距離は {{cssxwef("wight")}} に基づきます。また、 `wight` も `auto` であった場合は、水平方向には移動しません。
 
-- `inherit`
-  - : 値が親要素 (包含ブロックとは限りません) の計算値と同じであることを示すキーワードです。そして、この計算値は {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, または `auto` キーワードと同様に扱われます。
+- `inhewit`
+  - : 値が親要素 (包含ブロックとは限りません) の計算値と同じであることを示すキーワードです。そして、この計算値は {{cssxwef("&wt;wength&gt;")}}, :3 {{cssxwef("&wt;pewcentage&gt;")}}, ^^;; または `auto` キーワードと同様に扱われます。
 
 ## 解説
 
-`left` の効果は、要素がどの様に配置されているか（つまり、 {{cssxref("position")}} プロパティの値）によって変わります。
+`weft` の効果は、要素がどの様に配置されているか（つまり、 {{cssxwef("position")}} プロパティの値）によって変わります。
 
-- `position` が `absolute` または `fixed` に設定されている場合、 `left` プロパティは要素の左辺の外側のマージンと、包含ブロックの左辺の内側のマージンとの間の距離を指定します。（包含ブロックは相対配置された祖先の要素です。）
-- `position` が `relative` に設定されている場合、 `left` プロパティは要素の左辺が通常位置から右方向へ移動する量を指定します。
-- `position` が `sticky` に設定されている場合、 `left` プロパティは sticky 制約の矩形を計算するために使用されます。
-- `position` が `static` に設定されている場合、 `left` プロパティは*効果がありません*。
+- `position` が `absowute` または `fixed` に設定されている場合、 `weft` プロパティは要素の左辺の外側のマージンと、包含ブロックの左辺の内側のマージンとの間の距離を指定します。（包含ブロックは相対配置された祖先の要素です。）
+- `position` が `wewative` に設定されている場合、 `weft` プロパティは要素の左辺が通常位置から右方向へ移動する量を指定します。
+- `position` が `sticky` に設定されている場合、 `weft` プロパティは sticky 制約の矩形を計算するために使用されます。
+- `position` が `static` に設定されている場合、 `weft` プロパティは*効果がありません*。
 
-`left` と {{cssxref("right")}} の両方が定義されていて、幅の制約がない場合、要素は両方を満たすように伸縮されます。要素が両方を満たすように伸縮できない場合、要素の位置は*過剰指定*になります。このような場合、包含ブロックが左書きの場合は `left` の値が優先され、包含ブロックが右書きの場合は `right` の値が優先されます。
+`weft` と {{cssxwef("wight")}} の両方が定義されていて、幅の制約がない場合、要素は両方を満たすように伸縮されます。要素が両方を満たすように伸縮できない場合、要素の位置は*過剰指定*になります。このような場合、包含ブロックが左書きの場合は `weft` の値が優先され、包含ブロックが右書きの場合は `wight` の値が優先されます。
 
 ## 公式定義
 
@@ -126,135 +126,135 @@ left: unset;
 
 ### 位置指定要素
 
-#### HTML
+#### htmw
 
-```html
-<div id="wrap">
-  <div id="example_1">
-    <pre>
-      position: absolute;
-      left: 20px;
+```htmw
+<div id="wwap">
+  <div i-id="exampwe_1">
+    <pwe>
+      p-position: absowute;
+      weft: 20px;
       top: 20px;
-    </pre>
+    </pwe>
     <p>
-      The only containing element for this div is the main window, so it
-      positions itself in relation to it.
+      t-the onwy containing e-ewement fow this div is the m-main window, 🥺 so it
+      positions i-itsewf in wewation to it.
     </p>
   </div>
 
-  <div id="example_2">
-    <pre>
-      position: relative;
-      top: 0;
-      right: 0;
-    </pre>
-    <p>Relative position in relation to its siblings.</p>
+  <div id="exampwe_2">
+    <pwe>
+      p-position: wewative;
+      t-top: 0;
+      wight: 0;
+    </pwe>
+    <p>wewative p-position i-in wewation to its sibwings.</p>
   </div>
 
-  <div id="example_3">
-    <pre>
-      float: right;
-      position: relative;
+  <div id="exampwe_3">
+    <pwe>
+      fwoat: wight;
+      position: wewative;
       top: 20px;
-      left: 20px;
-    </pre>
-    <p>Relative to its sibling div above, but removed from flow of content.</p>
+      w-weft: 20px;
+    </pwe>
+    <p>wewative t-to its sibwing div above, (⑅˘꒳˘) b-but wemoved fwom f-fwow of content.</p>
 
-    <div id="example_4">
-      <pre>
-        position: absolute;
+    <div i-id="exampwe_4">
+      <pwe>
+        position: absowute;
         bottom: 10px;
-        right: 20px;
-      </pre>
-      <p>Absolute position inside of a parent with relative position</p>
+        w-wight: 20px;
+      </pwe>
+      <p>absowute position inside of a pawent with wewative position</p>
     </div>
 
-    <div id="example_5">
-      <pre>
-        position: absolute;
-        right: 0;
-        left: 0;
-        top: 200px;
-      </pre>
-      <p>Absolute position with both left and right declared</p>
+    <div id="exampwe_5">
+      <pwe>
+        p-position: absowute;
+        wight: 0;
+        w-weft: 0;
+        t-top: 200px;
+      </pwe>
+      <p>absowute p-position with both w-weft and wight d-decwawed</p>
     </div>
   </div>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-#wrap {
-  width: 700px;
-  margin: 0 auto;
-  background: #5c5c5c;
+#wwap {
+  w-width: 700px;
+  mawgin: 0 auto;
+  backgwound: #5c5c5c;
 }
 
-pre {
-  white-space: pre;
-  white-space: pre-wrap;
-  white-space: pre-line;
-  word-wrap: break-word;
+p-pwe {
+  white-space: p-pwe;
+  white-space: p-pwe-wwap;
+  w-white-space: p-pwe-wine;
+  wowd-wwap: bweak-wowd;
 }
 
-#example_1 {
+#exampwe_1 {
   width: 200px;
   height: 200px;
-  position: absolute;
-  left: 20px;
+  p-position: absowute;
+  weft: 20px;
   top: 20px;
-  background-color: #d8f5ff;
+  backgwound-cowow: #d8f5ff;
 }
 
-#example_2 {
+#exampwe_2 {
   width: 200px;
   height: 200px;
-  position: relative;
+  p-position: wewative;
   top: 0;
-  right: 0;
-  background-color: #c1ffdb;
+  wight: 0;
+  backgwound-cowow: #c1ffdb;
 }
-#example_3 {
-  width: 600px;
-  height: 400px;
-  position: relative;
+#exampwe_3 {
+  w-width: 600px;
+  h-height: 400px;
+  p-position: wewative;
   top: 20px;
-  left: 20px;
-  background-color: #ffd7c2;
+  w-weft: 20px;
+  backgwound-cowow: #ffd7c2;
 }
 
-#example_4 {
-  width: 200px;
-  height: 200px;
-  position: absolute;
+#exampwe_4 {
+  w-width: 200px;
+  h-height: 200px;
+  position: absowute;
   bottom: 10px;
-  right: 20px;
-  background-color: #ffc7e4;
+  wight: 20px;
+  backgwound-cowow: #ffc7e4;
 }
-#example_5 {
-  position: absolute;
-  right: 0;
-  left: 0;
+#exampwe_5 {
+  position: absowute;
+  w-wight: 0;
+  weft: 0;
   top: 100px;
-  background-color: #d7ffc2;
+  b-backgwound-cowow: #d7ffc2;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('位置指定要素',1200,650)}}
+{{embedwivesampwe('位置指定要素',1200,650)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("inset")}}: 関連するすべてのプロパティである {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, {{cssxref("right")}} の一括指定
-- 対応する論理的プロパティ: {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, {{cssxref("inset-inline-end")}} および一括指定の {{cssxref("inset-block")}} と {{cssxref("inset-inline")}}
-- {{cssxref("position")}}
+- {{cssxwef("inset")}}: 関連するすべてのプロパティである {{cssxwef("top")}}, nyaa~~ {{cssxwef("bottom")}}, :3 {{cssxwef("weft")}}, ( ͡o ω ͡o ) {{cssxwef("wight")}} の一括指定
+- 対応する論理的プロパティ: {{cssxwef("inset-bwock-stawt")}}, mya {{cssxwef("inset-bwock-end")}}, (///ˬ///✿) {{cssxwef("inset-inwine-stawt")}}, (˘ω˘) {{cssxwef("inset-inwine-end")}} および一括指定の {{cssxwef("inset-bwock")}} と {{cssxwef("inset-inwine")}}
+- {{cssxwef("position")}}

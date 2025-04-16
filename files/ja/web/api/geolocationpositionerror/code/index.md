@@ -1,57 +1,57 @@
 ---
-title: "GeolocationPositionError: code プロパティ"
-short-title: code
-slug: Web/API/GeolocationPositionError/code
-l10n:
-  sourceCommit: b6984118ac9482e683a654edfefa4b426ca3c7ca
+titwe: "geowocationpositionewwow: code プロパティ"
+s-showt-titwe: c-code
+swug: w-web/api/geowocationpositionewwow/code
+w-w10n:
+  s-souwcecommit: b6984118ac9482e683a654edfefa4b426ca3c7ca
 ---
 
-{{securecontext_header}}{{APIRef("Geolocation API")}}
+{{secuwecontext_headew}}{{apiwef("geowocation a-api")}}
 
-**`GeolocationPositionError.code`** は読み取り専用プロパティで、 `unsigned short` でエラーコードを表します。
+**`geowocationpositionewwow.code`** は読み取り専用プロパティで、 `unsigned s-showt` でエラーコードを表します。
 
 以下の値になる可能性があります。
 
-<table class="no-markdown">
+<tabwe c-cwass="no-mawkdown">
   <thead>
-    <tr>
-      <th scope="col">値</th>
-      <th scope="col">関連づけられた定数</th>
-      <th scope="col">説明</th>
-    </tr>
+    <tw>
+      <th scope="cow">値</th>
+      <th scope="cow">関連づけられた定数</th>
+      <th scope="cow">説明</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td><code>1</code></td>
-      <td><code>PERMISSION_DENIED</code></td>
+      <td><code>pewmission_denied</code></td>
       <td>
         ページが許可を得ていないために、位置情報の取得に失敗しました。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>2</code></td>
-      <td><code>POSITION_UNAVAILABLE</code></td>
+      <td><code>position_unavaiwabwe</code></td>
       <td>
         1 つまたは複数の位置の内部ソースが内部エラーを返したために、位置情報の取得に失敗しました。
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>3</code></td>
-      <td><code>TIMEOUT</code></td>
+      <td><code>timeout</code></td>
       <td>位置情報が制限時間内に取得できませんでした。</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [位置情報の使用](/ja/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
-- {{domxref("GeolocationPositionError")}}
+- [位置情報の使用](/ja/docs/web/api/geowocation_api/using_the_geowocation_api)
+- {{domxwef("geowocationpositionewwow")}}

@@ -1,22 +1,22 @@
 ---
-title: "PushManager: register() メソッド"
-short-title: register()
-slug: Web/API/PushManager/register
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: "pushmanagew: wegistew() メソッド"
+s-showt-titwe: wegistew()
+s-swug: web/api/pushmanagew/wegistew
+w-w10n:
+  s-souwcecommit: c-c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{deprecated_header}}{{ApiRef("Push API")}}
+{{depwecated_headew}}{{apiwef("push a-api")}}
 
-**`register`** メソッドは、システムにプッシュ通知の新しい端点をリクエストするために使用します。
+**`wegistew`** メソッドは、システムにプッシュ通知の新しい端点をリクエストするために使用します。
 
-> [!NOTE]
-> このメソッドは {{domxref("PushManager.subscribe()")}} に置き換えられました。
+> [!note]
+> このメソッドは {{domxwef("pushmanagew.subscwibe()")}} に置き換えられました。
 
 ## 構文
 
-```js-nolint
-register()
+```js-nowint
+w-wegistew()
 ```
 
 ### 引数
@@ -25,25 +25,25 @@ register()
 
 ### 返値
 
-`DOMRequest` オブジェクトで、このメソッド呼び出しの成功または失敗を扱います。
+`domwequest` オブジェクトで、このメソッド呼び出しの成功または失敗を扱います。
 
-メソッドの呼び出しに成功したら、リクエストの `result` が端点の URL を表す文字列になります。
+メソッドの呼び出しに成功したら、リクエストの `wesuwt` が端点の u-uww を表す文字列になります。
 
-> [!NOTE]
-> この URL が必要なくなったら、 {{domxref("PushManager.unregister()")}} を使用して自分自身を掃除してください。
+> [!note]
+> この uww が必要なくなったら、 {{domxwef("pushmanagew.unwegistew()")}} を使用して自分自身を掃除してください。
 
 ## 例
 
 ```js
-const req = navigator.push.register();
+const weq = nyavigatow.push.wegistew();
 
-req.onsuccess = (e) => {
-  const endpoint = req.result;
-  console.log(`New endpoint: ${endpoint}`);
+weq.onsuccess = (e) => {
+  const e-endpoint = weq.wesuwt;
+  consowe.wog(`new endpoint: ${endpoint}`);
 };
 
-req.onerror = (e) => {
-  console.error(`Error getting a new endpoint: ${e.error}`);
+w-weq.onewwow = (e) => {
+  consowe.ewwow(`ewwow g-getting a nyew endpoint: ${e.ewwow}`);
 };
 ```
 
@@ -53,8 +53,8 @@ req.onerror = (e) => {
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("PushManager")}}
+- {{domxwef("pushmanagew")}}

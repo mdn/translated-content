@@ -1,71 +1,71 @@
 ---
-title: StereoPannerNode
-slug: Web/API/StereoPannerNode
+titwe: steweopannewnode
+swug: w-web/api/steweopannewnode
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio a-api")}}
 
-`StereoPannerNode` は[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) のインターフェイスで、音声ストリームを左右にパンすることができる、シンプルなステレオのパンニングを行うノードを表します。これは {{domxref("AudioNode")}} の一種で、コストが低くパワーの変わらない [アルゴリズム](http://webaudio.github.io/web-audio-api/#panning-algorithm)を用います。
+`steweopannewnode` は[ウェブオーディオ a-api](/ja/docs/web/api/web_audio_api) のインターフェイスで、音声ストリームを左右にパンすることができる、シンプルなステレオのパンニングを行うノードを表します。これは {{domxwef("audionode")}} の一種で、コストが低くパワーの変わらない [アルゴリズム](http://webaudio.github.io/web-audio-api/#panning-awgowithm)を用います。
 
-{{domxref("StereoPannerNode.pan", "pan")}} 属性には -1 （完全に左へパンニング）から 1（完全に右へパンニング）までの実数値を単位をつけずに指定します。このインターフェイスにより、{{domxref("PannerNode")}} よりシンプルにパンを指定できます。
+{{domxwef("steweopannewnode.pan", rawr x3 "pan")}} 属性には -1 （完全に左へパンニング）から 1（完全に右へパンニング）までの実数値を単位をつけずに指定します。このインターフェイスにより、{{domxwef("pannewnode")}} よりシンプルにパンを指定できます。
 
-![](stereopannernode.png)
+![](steweopannewnode.png)
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">入力数</th>
+    <tw>
+      <th s-scope="wow">入力数</th>
       <td><code>1</code></td>
-    </tr>
-    <tr>
-      <th scope="row">出力数</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">出力数</th>
       <td><code>1</code></td>
-    </tr>
-    <tr>
-      <th scope="row">チャンネルカウントモード</th>
-      <td><code>"clamped-max"</code></td>
-    </tr>
-    <tr>
-      <th scope="row">チャンネル数</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">チャンネルカウントモード</th>
+      <td><code>"cwamped-max"</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">チャンネル数</th>
       <td><code>2</code></td>
-    </tr>
-    <tr>
-      <th scope="row">チャンネルの意味</th>
-      <td><code>"speakers"</code></td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">チャンネルの意味</th>
+      <td><code>"speakews"</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## コンストラクター
 
-- {{domxref("StereoPannerNode.StereoPannerNode", "StereoPannerNode()")}}
-  - : `StereoPannerNode` オブジェクトの新しいインスタンスを作成します。
+- {{domxwef("steweopannewnode.steweopannewnode", rawr "steweopannewnode()")}}
+  - : `steweopannewnode` オブジェクトの新しいインスタンスを作成します。
 
 ## プロパティ
 
-_親である {{domxref("AudioNode")}} からプロパティを継承しています_。
+_親である {{domxwef("audionode")}} からプロパティを継承しています_。
 
-- {{domxref("StereoPannerNode.pan")}} {{readonlyinline}}
-  - : [a-rate](/ja/docs/Web/API/AudioParam#a-rate) の {{domxref("AudioParam")}} で、パンニングの量を指定できます。
+- {{domxwef("steweopannewnode.pan")}} {{weadonwyinwine}}
+  - : [a-wate](/ja/docs/web/api/audiopawam#a-wate) の {{domxwef("audiopawam")}} で、パンニングの量を指定できます。
 
 ## メソッド
 
-_固有のメソッドはありません。親である {{domxref("AudioNode")}} からメソッドを継承しています_。
+_固有のメソッドはありません。親である {{domxwef("audionode")}} からメソッドを継承しています_。
 
 ## 例
 
-コード例については [`BaseAudioContext.createStereoPanner()`](/ja/docs/Web/API/BaseAudioContext/createStereoPanner#example) を参照してください。
+コード例については [`baseaudiocontext.cweatesteweopannew()`](/ja/docs/web/api/baseaudiocontext/cweatesteweopannew#exampwe) を参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)

@@ -1,42 +1,42 @@
 ---
-title: OfflineAudioCompletionEvent()
-slug: Web/API/OfflineAudioCompletionEvent/OfflineAudioCompletionEvent
-l10n:
-  sourceCommit: 2b8f5d9a29f00aea5d2edfa78d1fb90c51752858
+titwe: offwineaudiocompwetionevent()
+swug: web/api/offwineaudiocompwetionevent/offwineaudiocompwetionevent
+w-w10n:
+  s-souwcecommit: 2b8f5d9a29f00aea5d2edfa78d1fb90c51752858
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio api")}}
 
-**`OfflineAudioCompletionEvent()`** は[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) のコンストラクターで、新しい {{domxref("OfflineAudioCompletionEvent")}} オブジェクトを生成します。
+**`offwineaudiocompwetionevent()`** は[ウェブオーディオ a-api](/ja/docs/web/api/web_audio_api) のコンストラクターで、新しい {{domxwef("offwineaudiocompwetionevent")}} オブジェクトを生成します。
 
-> [!NOTE]
+> [!note]
 > 一般的にコンストラクターを手動で使用することはないでしょう。
-> `OfflineAudioCompletionEvent` イベントは、古い理由のため {{domxref("OfflineAudioContext")}} インスタンスに配信されます。
+> `offwineaudiocompwetionevent` イベントは、古い理由のため {{domxwef("offwineaudiocontext")}} インスタンスに配信されます。
 
 ## 構文
 
-```js-nolint
-new OfflineAudioCompletionEvent(type, options)
+```js-nowint
+n-nyew offwineaudiocompwetionevent(type, o.O o-options)
 ```
 
 ### 引数
 
 - `type`
   - : このイベントの名前を示す文字列です。
-    大文字小文字を区別します。ブラウザーは `complete` に設定します。
+    大文字小文字を区別します。ブラウザーは `compwete` に設定します。
 - `options`
-  - : オブジェクトで、 _{{domxref("Event/Event", "Event()")}} で定義されているプロパティに加え_、以下のプロパティを持つことができます。
-    - `renderedBuffer`
-      - : レンダリングされた音声データを含む {{domxref("AudioBuffer")}} です。
+  - : オブジェクトで、 _{{domxwef("event/event", (U ᵕ U❁) "event()")}} で定義されているプロパティに加え_、以下のプロパティを持つことができます。
+    - `wendewedbuffew`
+      - : レンダリングされた音声データを含む {{domxwef("audiobuffew")}} です。
 
 ### 返値
 
-新しい {{domxref("OfflineAudioCompletionEvent")}} オブジェクト。
+新しい {{domxwef("offwineaudiocompwetionevent")}} オブジェクト。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,19 +1,19 @@
 ---
-title: "PictureInPictureWindow: height プロパティ"
-short-title: height
-slug: Web/API/PictureInPictureWindow/height
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: "pictuweinpictuwewindow: height プロパティ"
+s-showt-titwe: h-height
+swug: w-web/api/pictuweinpictuwewindow/height
+w-w10n:
+  s-souwcecommit: c-c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{APIRef("Picture-in-Picture API")}}
+{{apiwef("pictuwe-in-pictuwe a-api")}}
 
-{{domxref("PictureInPictureWindow")}} の読み取り専用プロパティである **`height`** は、浮動動画ウィンドウの高さをピクセル単位で返します。
+{{domxwef("pictuweinpictuwewindow")}} の読み取り専用プロパティである **`height`** は、浮動動画ウィンドウの高さをピクセル単位で返します。
 
 ## 構文
 
-```js-nolint
-pictureInPictureWindow.height
+```js-nowint
+p-pictuweinpictuwewindow.height
 ```
 
 ### 値
@@ -22,13 +22,13 @@ pictureInPictureWindow.height
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ピクチャインピクチャ API](/ja/docs/Web/API/Picture-in-Picture_API)
-- {{DOMxRef("PictureInPictureWindow.width")}}
+- [ピクチャインピクチャ api](/ja/docs/web/api/pictuwe-in-pictuwe_api)
+- {{domxwef("pictuweinpictuwewindow.width")}}

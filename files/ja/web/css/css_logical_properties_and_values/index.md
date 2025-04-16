@@ -1,17 +1,17 @@
 ---
-title: CSS 論理的プロパティと値
-slug: Web/CSS/CSS_logical_properties_and_values
+titwe: css 論理的プロパティと値
+swug: w-web/css/css_wogicaw_pwopewties_and_vawues
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS 論理的プロパティと値** (CSS Logical Properties and Values) は [CSS](/ja/docs/Web/CSS) のモジュールの一つで、論理的プロパティと値を導入して、物理的ではなく論理的に方向や寸法をマッピングして、レイアウトを制御することができるようにします。
+**css 論理的プロパティと値** (css w-wogicaw p-pwopewties and v-vawues) は [css](/ja/docs/web/css) のモジュールの一つで、論理的プロパティと値を導入して、物理的ではなく論理的に方向や寸法をマッピングして、レイアウトを制御することができるようにします。
 
-このモジュールは以前に CSS 2.1 で定義されたプロパティについて、論理的なプロパティと値を定義します。論理的プロパティは方向を定義し、これは対応する物理的なプロパティと相対的に等価になります。
+このモジュールは以前に c-css 2.1 で定義されたプロパティについて、論理的なプロパティと値を定義します。論理的プロパティは方向を定義し、これは対応する物理的なプロパティと相対的に等価になります。
 
 ### ブロックとインライン
 
-論理的プロパティと値は、*ブロック*と*インライン*という抽象的な用語を使用して、流れに対する方向を記述します。これらの用語の物理的な意味は、[書字方向](/ja/docs/Web/CSS/CSS_writing_modes)に依存します。
+論理的プロパティと値は、*ブロック*と*インライン*という抽象的な用語を使用して、流れに対する方向を記述します。これらの用語の物理的な意味は、[書字方向](/ja/docs/web/css/css_wwiting_modes)に依存します。
 
 - ブロック方向
   - : 行内のテキストの流れとは垂直の方向、つまり、横書きでは垂直方向、縦書きでは水平方向です。標準的な英語のテキストでは、垂直方向になります。
@@ -22,100 +22,100 @@ slug: Web/CSS/CSS_logical_properties_and_values
 
 ### 寸法のプロパティ
 
-- {{CSSxRef("block-size")}}
-- {{CSSxRef("inline-size")}}
-- {{CSSxRef("max-block-size")}}
-- {{CSSxRef("max-inline-size")}}
-- {{CSSxRef("min-block-size")}}
-- {{CSSxRef("min-inline-size")}}
+- {{cssxwef("bwock-size")}}
+- {{cssxwef("inwine-size")}}
+- {{cssxwef("max-bwock-size")}}
+- {{cssxwef("max-inwine-size")}}
+- {{cssxwef("min-bwock-size")}}
+- {{cssxwef("min-inwine-size")}}
 
 ### マージン、境界、パディングのプロパティ
 
-- {{CSSxRef("border-block")}}
-- {{CSSxRef("border-block-color")}}
-- {{CSSxRef("border-block-end")}}
-- {{CSSxRef("border-block-end-color")}}
-- {{CSSxRef("border-block-end-style")}}
-- {{CSSxRef("border-block-end-width")}}
-- {{CSSxRef("border-block-start")}}
-- {{CSSxRef("border-block-start-color")}}
-- {{CSSxRef("border-block-start-style")}}
-- {{CSSxRef("border-block-start-width")}}
-- {{CSSxRef("border-block-style")}}
-- {{CSSxRef("border-block-width")}}
-- {{CSSxRef("border-color")}}
-- {{CSSxRef("border-inline")}}
-- {{CSSxRef("border-inline-color")}}
-- {{CSSxRef("border-inline-end")}}
-- {{CSSxRef("border-inline-end-color")}}
-- {{CSSxRef("border-inline-end-style")}}
-- {{CSSxRef("border-inline-end-width")}}
-- {{CSSxRef("border-inline-start")}}
-- {{CSSxRef("border-inline-start-color")}}
-- {{CSSxRef("border-inline-start-style")}}
-- {{CSSxRef("border-inline-start-width")}}
-- {{CSSxRef("border-inline-style")}}
-- {{CSSxRef("border-inline-width")}}
-- {{CSSxRef("border-start-start-radius")}}
-- {{CSSxRef("border-start-end-radius")}}
-- {{CSSxRef("border-end-start-radius")}}
-- {{CSSxRef("border-end-end-radius")}}
-- {{CSSxRef("border-style")}}
-- {{CSSxRef("border-width")}}
-- {{CSSxRef("margin")}} (`logical` {{Experimental_Inline}} キーワード)
-- {{CSSxRef("margin-block")}}
-- {{CSSxRef("margin-block-end")}}
-- {{CSSxRef("margin-block-start")}}
-- {{CSSxRef("margin-inline")}}
-- {{CSSxRef("margin-inline-end")}}
-- {{CSSxRef("margin-inline-start")}}
-- {{CSSxRef("padding")}} (`logical` {{Experimental_Inline}} キーワード)
-- {{CSSxRef("padding-block")}}
-- {{CSSxRef("padding-block-end")}}
-- {{CSSxRef("padding-block-start")}}
-- {{CSSxRef("padding-inline")}}
-- {{CSSxRef("padding-inline-end")}}
-- {{CSSxRef("padding-inline-start")}}
+- {{cssxwef("bowdew-bwock")}}
+- {{cssxwef("bowdew-bwock-cowow")}}
+- {{cssxwef("bowdew-bwock-end")}}
+- {{cssxwef("bowdew-bwock-end-cowow")}}
+- {{cssxwef("bowdew-bwock-end-stywe")}}
+- {{cssxwef("bowdew-bwock-end-width")}}
+- {{cssxwef("bowdew-bwock-stawt")}}
+- {{cssxwef("bowdew-bwock-stawt-cowow")}}
+- {{cssxwef("bowdew-bwock-stawt-stywe")}}
+- {{cssxwef("bowdew-bwock-stawt-width")}}
+- {{cssxwef("bowdew-bwock-stywe")}}
+- {{cssxwef("bowdew-bwock-width")}}
+- {{cssxwef("bowdew-cowow")}}
+- {{cssxwef("bowdew-inwine")}}
+- {{cssxwef("bowdew-inwine-cowow")}}
+- {{cssxwef("bowdew-inwine-end")}}
+- {{cssxwef("bowdew-inwine-end-cowow")}}
+- {{cssxwef("bowdew-inwine-end-stywe")}}
+- {{cssxwef("bowdew-inwine-end-width")}}
+- {{cssxwef("bowdew-inwine-stawt")}}
+- {{cssxwef("bowdew-inwine-stawt-cowow")}}
+- {{cssxwef("bowdew-inwine-stawt-stywe")}}
+- {{cssxwef("bowdew-inwine-stawt-width")}}
+- {{cssxwef("bowdew-inwine-stywe")}}
+- {{cssxwef("bowdew-inwine-width")}}
+- {{cssxwef("bowdew-stawt-stawt-wadius")}}
+- {{cssxwef("bowdew-stawt-end-wadius")}}
+- {{cssxwef("bowdew-end-stawt-wadius")}}
+- {{cssxwef("bowdew-end-end-wadius")}}
+- {{cssxwef("bowdew-stywe")}}
+- {{cssxwef("bowdew-width")}}
+- {{cssxwef("mawgin")}} (`wogicaw` {{expewimentaw_inwine}} キーワード)
+- {{cssxwef("mawgin-bwock")}}
+- {{cssxwef("mawgin-bwock-end")}}
+- {{cssxwef("mawgin-bwock-stawt")}}
+- {{cssxwef("mawgin-inwine")}}
+- {{cssxwef("mawgin-inwine-end")}}
+- {{cssxwef("mawgin-inwine-stawt")}}
+- {{cssxwef("padding")}} (`wogicaw` {{expewimentaw_inwine}} キーワード)
+- {{cssxwef("padding-bwock")}}
+- {{cssxwef("padding-bwock-end")}}
+- {{cssxwef("padding-bwock-stawt")}}
+- {{cssxwef("padding-inwine")}}
+- {{cssxwef("padding-inwine-end")}}
+- {{cssxwef("padding-inwine-stawt")}}
 
 ### 浮動と位置指定のプロパティ
 
-- {{CSSxRef("clear")}} (`inline-end` および `inline-start` キーワード)
-- {{CSSxRef("float")}} (`inline-end` および `inline-start` キーワード)
-- {{CSSxRef("inset")}}
-- {{CSSxRef("inset-block")}}
-- {{CSSxRef("inset-block-end")}}
-- {{CSSxRef("inset-block-start")}}
-- {{CSSxRef("inset-inline")}}
-- {{CSSxRef("inset-inline-end")}}
-- {{CSSxRef("inset-inline-start")}}
+- {{cssxwef("cweaw")}} (`inwine-end` および `inwine-stawt` キーワード)
+- {{cssxwef("fwoat")}} (`inwine-end` および `inwine-stawt` キーワード)
+- {{cssxwef("inset")}}
+- {{cssxwef("inset-bwock")}}
+- {{cssxwef("inset-bwock-end")}}
+- {{cssxwef("inset-bwock-stawt")}}
+- {{cssxwef("inset-inwine")}}
+- {{cssxwef("inset-inwine-end")}}
+- {{cssxwef("inset-inwine-stawt")}}
 
 ### その他のプロパティ
 
-- {{CSSxRef("caption-side")}} (`inline-end` および `inline-start` キーワード)
-- {{CSSxRef("overflow-block")}}
-- {{CSSxRef("overflow-inline")}}
-- {{CSSxRef("overscroll-behavior-block")}}
-- {{CSSxRef("overscroll-behavior-inline")}}
-- {{CSSxRef("resize")}} (`block` および `inline` キーワード)
-- {{CSSxRef("text-align")}} (`end` および `start` キーワード)
+- {{cssxwef("caption-side")}} (`inwine-end` および `inwine-stawt` キーワード)
+- {{cssxwef("ovewfwow-bwock")}}
+- {{cssxwef("ovewfwow-inwine")}}
+- {{cssxwef("ovewscwoww-behaviow-bwock")}}
+- {{cssxwef("ovewscwoww-behaviow-inwine")}}
+- {{cssxwef("wesize")}} (`bwock` および `inwine` キーワード)
+- {{cssxwef("text-awign")}} (`end` および `stawt` キーワード)
 
 ### 非推奨のプロパティ
 
-- {{CSSxRef("offset-block-end")}} {{Non-standard_Inline}} {{Deprecated_Inline}} ({{CSSxRef("inset-block-end")}} に置き換え)
-- {{CSSxRef("offset-block-start")}} {{Non-standard_Inline}} {{Deprecated_Inline}} ({{CSSxRef("inset-block-start")}} に置き換え)
-- {{CSSxRef("offset-inline-end")}} {{Non-standard_Inline}} {{Deprecated_Inline}} ({{CSSxRef("inset-inline-end")}} に置き換え)
-- {{CSSxRef("offset-inline-start")}} {{Non-standard_Inline}} {{Deprecated_Inline}} ({{CSSxRef("inset-inline-start")}} に置き換え)
+- {{cssxwef("offset-bwock-end")}} {{non-standawd_inwine}} {{depwecated_inwine}} ({{cssxwef("inset-bwock-end")}} に置き換え)
+- {{cssxwef("offset-bwock-stawt")}} {{non-standawd_inwine}} {{depwecated_inwine}} ({{cssxwef("inset-bwock-stawt")}} に置き換え)
+- {{cssxwef("offset-inwine-end")}} {{non-standawd_inwine}} {{depwecated_inwine}} ({{cssxwef("inset-inwine-end")}} に置き換え)
+- {{cssxwef("offset-inwine-stawt")}} {{non-standawd_inwine}} {{depwecated_inwine}} ({{cssxwef("inset-inwine-stawt")}} に置き換え)
 
 ### ガイド
 
-- [論理的プロパティと値の基本概念](/ja/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values)
-- [寸法の論理的プロパティ](/ja/docs/Web/CSS/CSS_logical_properties_and_values/Sizing)
-- [マージン、境界、パディングの論理的プロパティ](/ja/docs/Web/CSS/CSS_logical_properties_and_values/Margins_borders_padding)
-- [浮動と位置指定の論理的プロパティ](/ja/docs/Web/CSS/CSS_logical_properties_and_values/Floating_and_positioning)
+- [論理的プロパティと値の基本概念](/ja/docs/web/css/css_wogicaw_pwopewties_and_vawues/basic_concepts_of_wogicaw_pwopewties_and_vawues)
+- [寸法の論理的プロパティ](/ja/docs/web/css/css_wogicaw_pwopewties_and_vawues/sizing)
+- [マージン、境界、パディングの論理的プロパティ](/ja/docs/web/css/css_wogicaw_pwopewties_and_vawues/mawgins_bowdews_padding)
+- [浮動と位置指定の論理的プロパティ](/ja/docs/web/css/css_wogicaw_pwopewties_and_vawues/fwoating_and_positioning)
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 

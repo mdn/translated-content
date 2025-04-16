@@ -1,44 +1,44 @@
 ---
-title: text-decoration-thickness
-slug: Web/CSS/text-decoration-thickness
-l10n:
-  sourceCommit: fc1cc5684c98d19816d5cc81702d70f2a0debbad
+titwe: text-decowation-thickness
+swug: web/css/text-decowation-thickness
+w-w10n:
+  s-souwcecommit: f-fc1cc5684c98d19816d5cc81702d70f2a0debbad
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`text-decoration-thickness`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素内のテキストに用いられる装飾線、例えば取り消し線、下線、上線の太さを設定します。
+**`text-decowation-thickness`** は [css](/ja/docs/web/css) のプロパティで、要素内のテキストに用いられる装飾線、例えば取り消し線、下線、上線の太さを設定します。
 
-{{InteractiveExample("CSS Demo: text-decoration-thickness")}}
+{{intewactiveexampwe("css d-demo: t-text-decowation-thickness")}}
 
-```css interactive-example-choice
-text-decoration-line: underline;
-text-decoration-thickness: 3px;
+```css i-intewactive-exampwe-choice
+t-text-decowation-wine: u-undewwine;
+text-decowation-thickness: 3px;
 ```
 
-```css interactive-example-choice
-text-decoration-line: line-through;
-text-decoration-thickness: 0.4rem;
+```css intewactive-exampwe-choice
+text-decowation-wine: wine-thwough;
+text-decowation-thickness: 0.4wem;
 ```
 
-```css interactive-example-choice
-text-decoration-line: underline overline;
-text-decoration-thickness: from-font;
-font-size: 2rem;
+```css i-intewactive-exampwe-choice
+text-decowation-wine: undewwine o-ovewwine;
+text-decowation-thickness: f-fwom-font;
+font-size: 2wem;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    Confusion kissed me on the cheek, and left a taste so bittersweet
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <p i-id="exampwe-ewement">
+    confusion k-kissed me on the c-cheek, σωσ and weft a taste so bittewsweet
   </p>
 </section>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 p {
-  font: 1.5em sans-serif;
-  text-decoration-color: #ff0000;
+  font: 1.5em sans-sewif;
+  t-text-decowation-cowow: #ff0000;
 }
 ```
 
@@ -46,38 +46,38 @@ p {
 
 ```css
 /* 単独のキーワード */
-text-decoration-thickness: auto;
-text-decoration-thickness: from-font;
+text-decowation-thickness: auto;
+text-decowation-thickness: fwom-font;
 
 /* 長さ */
-text-decoration-thickness: 0.1em;
-text-decoration-thickness: 3px;
+text-decowation-thickness: 0.1em;
+t-text-decowation-thickness: 3px;
 
 /* パーセント値 */
-text-decoration-thickness: 10%;
+text-decowation-thickness: 10%;
 
 /* グローバル値 */
-text-decoration-thickness: inherit;
-text-decoration-thickness: initial;
-text-decoration-thickness: revert;
-text-decoration-thickness: revert-layer;
-text-decoration-thickness: unset;
+t-text-decowation-thickness: i-inhewit;
+t-text-decowation-thickness: i-initiaw;
+text-decowation-thickness: wevewt;
+text-decowation-thickness: w-wevewt-wayew;
+text-decowation-thickness: unset;
 ```
 
 ### 値
 
 - `auto`
   - : ブラウザーがテキスト装飾線の適切な太さを選択します。
-- `from-font`
+- `fwom-font`
   - : フォントファイルに推奨する太さの情報が含まれている場合は、その値を使用します。フォントファイルにこの情報が含まれていない場合は、 `auto` が設定されているのと同様に動作し、ブラウザーが適切な太さを選択します。
-- `<length>`
-  - : テキスト装飾線の太さを {{cssxref('length')}} として指定し、フォントファイルの推奨値やブラウザーの既定値を無視します。
-- `<percentage>`
-  - : テキスト装飾線の太さを現在のフォントの **1em** に対する {{cssxref('percentage')}} で指定します。パーセント値は相対値として継承されるので、フォントが変わるとそれに合わせて変わります。ブラウザーは最小でも 1 デバイスピクセルを使用しなければなりません。このプロパティを適用した場合、フォントの大きさが異なる子要素があっても、適用されたボックス全体で太さが一定になります。
+- `<wength>`
+  - : テキスト装飾線の太さを {{cssxwef('wength')}} として指定し、フォントファイルの推奨値やブラウザーの既定値を無視します。
+- `<pewcentage>`
+  - : テキスト装飾線の太さを現在のフォントの **1em** に対する {{cssxwef('pewcentage')}} で指定します。パーセント値は相対値として継承されるので、フォントが変わるとそれに合わせて変わります。ブラウザーは最小でも 1 デバイスピクセルを使用しなければなりません。このプロパティを適用した場合、フォントの大きさが異なる子要素があっても、適用されたボックス全体で太さが一定になります。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -87,52 +87,52 @@ text-decoration-thickness: unset;
 
 ### 様々な太さ
 
-#### HTML
+#### h-htmw
 
-```html
-<p class="thin">赤い 1px の下線を引いたテキストです。</p>
-<p class="thick">赤い 5px の下線を引いたテキストです。</p>
-<p class="shorthand">これは同等の一括指定を使用しています。</p>
+```htmw
+<p cwass="thin">赤い 1px の下線を引いたテキストです。</p>
+<p cwass="thick">赤い 5px の下線を引いたテキストです。</p>
+<p cwass="showthand">これは同等の一括指定を使用しています。</p>
 ```
 
-#### CSS
+#### css
 
 ```css
 .thin {
-  text-decoration-line: underline;
-  text-decoration-style: solid;
-  text-decoration-color: red;
-  text-decoration-thickness: 1px;
+  text-decowation-wine: u-undewwine;
+  text-decowation-stywe: s-sowid;
+  t-text-decowation-cowow: w-wed;
+  text-decowation-thickness: 1px;
 }
 
 .thick {
-  text-decoration-line: underline;
-  text-decoration-style: solid;
-  text-decoration-color: red;
-  text-decoration-thickness: 5px;
+  text-decowation-wine: undewwine;
+  text-decowation-stywe: s-sowid;
+  t-text-decowation-cowow: wed;
+  t-text-decowation-thickness: 5px;
 }
 
-.shorthand {
-  text-decoration: underline solid red 5px;
+.showthand {
+  t-text-decowation: undewwine sowid w-wed 5px;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Varying_thickness')}}
+{{embedwivesampwe('vawying_thickness')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
-> [!NOTE]
-> このプロパティは `text-decoration-width` と呼ばれていましたが、 2019 年に `text-decoration-thickness` に更新されました。
+> [!note]
+> このプロパティは `text-decowation-width` と呼ばれていましたが、 2019 年に `text-decowation-thickness` に更新されました。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("text-decoration")}}
-- {{cssxref("text-underline-offset")}}
+- {{cssxwef("text-decowation")}}
+- {{cssxwef("text-undewwine-offset")}}

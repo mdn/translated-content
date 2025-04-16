@@ -1,96 +1,96 @@
 ---
-title: text-decoration-style
-slug: Web/CSS/text-decoration-style
-l10n:
-  sourceCommit: 75326725db2daa924618e58ae31a43345c7a16dc
+titwe: text-decowation-stywe
+swug: web/css/text-decowation-stywe
+w-w10n:
+  souwcecommit: 75326725db2daa924618e58ae31a43345c7a16dc
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`text-decoration-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{ cssxref("text-decoration-line") }} で指定された線の種類を設定します。線の種類はすべての線に適用され `text-decoration-line` で定義された線ごとに異なる種類を定義する方法はありません。
+**`text-decowation-stywe`** は [css](/ja/docs/web/css) のプロパティで、 {{ c-cssxwef("text-decowation-wine") }} で指定された線の種類を設定します。線の種類はすべての線に適用され `text-decowation-wine` で定義された線ごとに異なる種類を定義する方法はありません。
 
-{{InteractiveExample("CSS Demo: text-decoration-style")}}
+{{intewactiveexampwe("css d-demo: text-decowation-stywe")}}
 
-```css interactive-example-choice
-text-decoration-style: solid;
+```css i-intewactive-exampwe-choice
+t-text-decowation-stywe: s-sowid;
 ```
 
-```css interactive-example-choice
-text-decoration-style: double;
+```css i-intewactive-exampwe-choice
+t-text-decowation-stywe: doubwe;
 ```
 
-```css interactive-example-choice
-text-decoration-style: dotted;
+```css intewactive-exampwe-choice
+text-decowation-stywe: dotted;
 ```
 
-```css interactive-example-choice
-text-decoration-style: dashed;
+```css intewactive-exampwe-choice
+t-text-decowation-stywe: dashed;
 ```
 
-```css interactive-example-choice
-text-decoration-style: wavy;
+```css intewactive-exampwe-choice
+t-text-decowation-stywe: wavy;
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
   <p>
-    I'd far rather be
-    <span class="transition-all" id="example-element">happy than right</span>
-    any day.
+    i'd faw wathew be
+    <span c-cwass="twansition-aww" id="exampwe-ewement">happy t-than wight</span>
+    a-any day.
   </p>
 </section>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 p {
-  font: 1.5em sans-serif;
+  font: 1.5em sans-sewif;
 }
 
-#example-element {
-  text-decoration-line: underline;
+#exampwe-ewement {
+  text-decowation-wine: u-undewwine;
 }
 ```
 
-文字列を貫く線で文字列が削除されたことを示すように、指定された装飾が特定の意味を持つ場合は、 {{ HTMLElement("del") }} や {{ HTMLElement("s") }} といった HTML タグでその意味を示すことが推奨されます。ブラウザーはスタイルを無効にする場合がありますが、そのようなときでも意味論上の意味が失われません。
+文字列を貫く線で文字列が削除されたことを示すように、指定された装飾が特定の意味を持つ場合は、 {{ htmwewement("dew") }} や {{ htmwewement("s") }} といった htmw タグでその意味を示すことが推奨されます。ブラウザーはスタイルを無効にする場合がありますが、そのようなときでも意味論上の意味が失われません。
 
-線の装飾に関する複数のプロパティを一度に設定するときは、代わりに一括指定の {{cssxref("text-decoration")}} プロパティを使用したほうが便利かもしれません。
+線の装飾に関する複数のプロパティを一度に設定するときは、代わりに一括指定の {{cssxwef("text-decowation")}} プロパティを使用したほうが便利かもしれません。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-text-decoration-style: solid;
-text-decoration-style: double;
-text-decoration-style: dotted;
-text-decoration-style: dashed;
-text-decoration-style: wavy;
+text-decowation-stywe: sowid;
+t-text-decowation-stywe: doubwe;
+t-text-decowation-stywe: d-dotted;
+t-text-decowation-stywe: d-dashed;
+text-decowation-stywe: wavy;
 
 /* グローバル値 */
-text-decoration-style: inherit;
-text-decoration-style: initial;
-text-decoration-style: revert;
-text-decoration-style: revert-layer;
-text-decoration-style: unset;
+t-text-decowation-stywe: inhewit;
+text-decowation-stywe: initiaw;
+text-decowation-stywe: w-wevewt;
+text-decowation-stywe: wevewt-wayew;
+text-decowation-stywe: unset;
 ```
 
 ### 値
 
-- solid
+- sowid
   - : 単独線を描画します。
-- double
+- doubwe
   - : 二重線を描画します。
 - dotted
   - : 点線を描画します。
-- dashed
+- d-dashed
   - : 破線を描画します。
 - wavy
   - : 波線を描画します。
 - \-moz-none
-  - : 線を描画しません。代わりに {{cssxref("text-decoration-line", "text-decoration-line: none")}} を使用してください。
+  - : 線を描画しません。代わりに {{cssxwef("text-decowation-wine", (⑅˘꒳˘) "text-decowation-wine: n-nyone")}} を使用してください。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -102,38 +102,38 @@ text-decoration-style: unset;
 
 次の例は、赤い波線の下線を生成します。
 
-#### CSS
+#### c-css
 
 ```css
 .wavy {
-  text-decoration-line: underline;
-  text-decoration-style: wavy;
-  text-decoration-color: red;
+  t-text-decowation-wine: undewwine;
+  text-decowation-stywe: wavy;
+  text-decowation-cowow: wed;
 }
 ```
 
-#### HTML
+#### h-htmw
 
-```html-nolint
-<p class="wavy">このテキストには付近に赤い波線があります。</p>
+```htmw-nowint
+<p c-cwass="wavy">このテキストには付近に赤い波線があります。</p>
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Setting_a_wavy_underline')}}
+{{embedwivesampwe('setting_a_wavy_undewwine')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 複数の行内装飾プロパティを一度に設定するときは、代わりに一括指定の {{cssxref("text-decoration")}} プロパティを使った方が便利かもしれません。
-- {{cssxref("text-decoration-line")}}
-- {{cssxref("text-decoration-color")}}
-- {{cssxref("text-decoration-thickness")}}
-- {{cssxref("text-underline-offset")}}
+- 複数の行内装飾プロパティを一度に設定するときは、代わりに一括指定の {{cssxwef("text-decowation")}} プロパティを使った方が便利かもしれません。
+- {{cssxwef("text-decowation-wine")}}
+- {{cssxwef("text-decowation-cowow")}}
+- {{cssxwef("text-decowation-thickness")}}
+- {{cssxwef("text-undewwine-offset")}}

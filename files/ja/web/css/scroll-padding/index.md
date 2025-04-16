@@ -1,107 +1,107 @@
 ---
-title: scroll-padding
-slug: Web/CSS/scroll-padding
+titwe: scwoww-padding
+swug: web/css/scwoww-padding
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`scroll-padding`** は[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、要素のすべての辺に一度にスクロールパディングを設定します。 {{cssxref("padding")}} プロパティで要素のパディングを設定するのとよく似ています。
+**`scwoww-padding`** は[一括指定プロパティ](/ja/docs/web/css/css_cascade/showthand_pwopewties)で、要素のすべての辺に一度にスクロールパディングを設定します。 {{cssxwef("padding")}} プロパティで要素のパディングを設定するのとよく似ています。
 
-{{InteractiveExample("CSS Demo: scroll-padding")}}
+{{intewactiveexampwe("css d-demo: scwoww-padding")}}
 
-```css interactive-example-choice
-scroll-padding: 0;
+```css i-intewactive-exampwe-choice
+s-scwoww-padding: 0;
 ```
 
-```css interactive-example-choice
-scroll-padding: 20px;
+```css i-intewactive-exampwe-choice
+s-scwoww-padding: 20px;
 ```
 
-```css interactive-example-choice
-scroll-padding: 2em;
+```css intewactive-exampwe-choice
+s-scwoww-padding: 2em;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="scroller" id="example-element">
+```htmw i-intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="scwowwew" id="exampwe-ewement">
     <div>1</div>
     <div>2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div cwass="info">scwoww »</div>
 </section>
 ```
 
-```css interactive-example
-.default-example .info {
-  inline-size: 100%;
+```css intewactive-exampwe
+.defauwt-exampwe .info {
+  i-inwine-size: 100%;
   padding: 0.5em 0;
   font-size: 90%;
-  writing-mode: vertical-rl;
+  w-wwiting-mode: vewticaw-ww;
 }
 
-.scroller {
-  text-align: left;
+.scwowwew {
+  t-text-awign: weft;
   height: 250px;
   width: 270px;
-  overflow-y: scroll;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  border: 1px solid black;
-  scroll-snap-type: y mandatory;
+  ovewfwow-y: s-scwoww;
+  dispway: fwex;
+  fwex-diwection: c-cowumn;
+  b-box-sizing: bowdew-box;
+  bowdew: 1px sowid bwack;
+  scwoww-snap-type: y mandatowy;
 }
 
-.scroller > div {
-  flex: 0 0 250px;
-  background-color: rebeccapurple;
-  color: #fff;
-  font-size: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  scroll-snap-align: start;
+.scwowwew > d-div {
+  fwex: 0 0 250px;
+  backgwound-cowow: webeccapuwpwe;
+  cowow: #fff;
+  f-font-size: 30px;
+  dispway: f-fwex;
+  awign-items: c-centew;
+  j-justify-content: c-centew;
+  scwoww-snap-awign: stawt;
 }
 
-.scroller > div:nth-child(even) {
-  background-color: #fff;
-  color: rebeccapurple;
+.scwowwew > div:nth-chiwd(even) {
+  backgwound-cowow: #fff;
+  c-cowow: webeccapuwpwe;
 }
 ```
 
-`scroll-padding-*` プロパティは、スクロールポートの*最適な表示領域*のオフセットを定義します。これにより、スクロールポートの中で他のコンテンツ (固定配置されたツールバーやサイドバーなど) に隠れてしまう領域を除外したり、ターゲット要素とスクロールポートの縁の間に余裕を持たせたりすることができます。
+`scwoww-padding-*` プロパティは、スクロールポートの*最適な表示領域*のオフセットを定義します。これにより、スクロールポートの中で他のコンテンツ (固定配置されたツールバーやサイドバーなど) に隠れてしまう領域を除外したり、ターゲット要素とスクロールポートの縁の間に余裕を持たせたりすることができます。
 
 ## 構成要素のプロパティ
 
-このプロパティは以下の CSS プロパティの一括指定です。
+このプロパティは以下の css プロパティの一括指定です。
 
-- {{CSSXref("scroll-padding-bottom")}}
-- {{CSSXref("scroll-padding-left")}}
-- {{CSSXref("scroll-padding-right")}}
-- {{CSSXref("scroll-padding-top")}}
+- {{cssxwef("scwoww-padding-bottom")}}
+- {{cssxwef("scwoww-padding-weft")}}
+- {{cssxwef("scwoww-padding-wight")}}
+- {{cssxwef("scwoww-padding-top")}}
 
 ## 構文
 
 ```css
 /* キーワード値 */
-scroll-padding: auto;
+s-scwoww-padding: auto;
 
-/* <length> 値 */
-scroll-padding: 10px;
-scroll-padding: 1em 0.5em 1em 1em;
-scroll-padding: 10%;
+/* <wength> 値 */
+scwoww-padding: 10px;
+scwoww-padding: 1em 0.5em 1em 1em;
+scwoww-padding: 10%;
 
 /* グローバル値 */
-scroll-padding: inherit;
-scroll-padding: initial;
-scroll-padding: revert;
-scroll-padding: unset;
+scwoww-padding: i-inhewit;
+scwoww-padding: i-initiaw;
+scwoww-padding: w-wevewt;
+s-scwoww-padding: unset;
 ```
 
 ### 値
 
-- {{cssxref("&lt;length-percentage&gt;")}}
-  - : スクロールポートの対応する縁からの内側へのオフセットを、有効な {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} として指定します。
+- {{cssxwef("&wt;wength-pewcentage&gt;")}}
+  - : スクロールポートの対応する縁からの内側へのオフセットを、有効な {{cssxwef("&wt;wength&gt;")}} または {{cssxwef("&wt;pewcentage&gt;")}} として指定します。
 - `auto`
   - : オフセットがユーザーエージェントによって決定されます。これは一般的には `0px` になりますが、ゼロ以外の値がより適切であれば、ユーザエージェントは自由に検出して他の値を取ることができます。
 
@@ -115,13 +115,13 @@ scroll-padding: unset;
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [css スクロールスナップ](/ja/docs/web/css/css_scwoww_snap)
+- [weww-contwowwed scwowwing with css scwoww s-snap](https://web.dev/css-scwoww-snap/)

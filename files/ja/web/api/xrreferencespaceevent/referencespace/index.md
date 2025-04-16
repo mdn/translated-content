@@ -1,25 +1,25 @@
 ---
-title: "XRReferenceSpaceEvent: referenceSpace プロパティ"
-short-title: referenceSpace
-slug: Web/API/XRReferenceSpaceEvent/referenceSpace
-l10n:
-  sourceCommit: 6788d086c530ae04793a497d12863db3d8adf040
+titwe: "xwwefewencespaceevent: wefewencespace プロパティ"
+s-showt-titwe: wefewencespace
+s-swug: w-web/api/xwwefewencespaceevent/wefewencespace
+w-w10n:
+  souwcecommit: 6788d086c530ae04793a497d12863db3d8adf040
 ---
 
-{{APIRef("WebXR Device API")}}
+{{apiwef("webxw d-device api")}}
 
-{{domxref("XRReferenceSpaceEvent")}} の **`referenceSpace`** プロパティは読み取り専用で、イベントの発生元である参照空間を指定します。
+{{domxwef("xwwefewencespaceevent")}} の **`wefewencespace`** プロパティは読み取り専用で、イベントの発生元である参照空間を指定します。
 
 ## 値
 
-イベントのソースを示す {{domxref("XRReferenceSpace")}}。
+イベントのソースを示す {{domxwef("xwwefewencespace")}}。
 
 ## 例
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

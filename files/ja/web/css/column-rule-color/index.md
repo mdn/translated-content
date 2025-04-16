@@ -1,74 +1,74 @@
 ---
-title: column-rule-color
-slug: Web/CSS/column-rule-color
-l10n:
-  sourceCommit: 5f13cbe7517ce96deeb521d4c8e6923266a22913
+titwe: cowumn-wuwe-cowow
+swug: w-web/css/cowumn-wuwe-cowow
+w-w10n:
+  s-souwcecommit: 5f13cbe7517ce96deeb521d4c8e6923266a22913
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`column-rule-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで段間に引かれる線（段間罫）の色を設定します。
+**`cowumn-wuwe-cowow`** は [css](/ja/docs/web/css) のプロパティで、段組みレイアウトで段間に引かれる線（段間罫）の色を設定します。
 
-{{InteractiveExample("CSS Demo: column-rule-color")}}
+{{intewactiveexampwe("css d-demo: cowumn-wuwe-cowow")}}
 
-```css interactive-example-choice
-column-rule-color: red;
+```css i-intewactive-exampwe-choice
+c-cowumn-wuwe-cowow: w-wed;
 ```
 
-```css interactive-example-choice
-column-rule-color: rgb(48, 125, 222);
+```css i-intewactive-exampwe-choice
+cowumn-wuwe-cowow: wgb(48, ^^ 125, 222);
 ```
 
-```css interactive-example-choice
-column-rule-color: hsla(120, 80%, 40%, 0.6);
+```css intewactive-exampwe-choice
+cowumn-wuwe-cowow: hswa(120, 😳😳😳 80%, 40%, mya 0.6);
 ```
 
-```css interactive-example-choice
-column-rule-color: currentcolor;
+```css intewactive-exampwe-choice
+c-cowumn-wuwe-cowow: cuwwentcowow;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <p id="exampwe-ewement">
+    w-wondon. 😳 michaewmas tewm watewy ovew, -.- and the wowd chancewwow sitting i-in
+    wincown's inn haww. 🥺 i-impwacabwe nyovembew w-weathew. o.O as much mud in the stweets
+    as if the watews had but nyewwy wetiwed f-fwom the face of the eawth, /(^•ω•^) and it
+    wouwd nyot be wondewfuw to meet a megawosauwus, nyaa~~ f-fowty feet wong ow so, nyaa~~
+    w-waddwing w-wike an ewephantine w-wizawd up howbown h-hiww. :3
   </p>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  columns: 3;
-  column-rule: solid;
-  text-align: left;
+```css intewactive-exampwe
+#exampwe-ewement {
+  cowumns: 3;
+  c-cowumn-wuwe: sowid;
+  text-awign: weft;
 }
 ```
 
 ## 構文
 
 ```css
-/* <color> 値 */
-column-rule-color: red;
-column-rule-color: rgb(192 56 78);
-column-rule-color: transparent;
-column-rule-color: hsl(0 100% 50% / 60%);
+/* <cowow> 値 */
+c-cowumn-wuwe-cowow: wed;
+cowumn-wuwe-cowow: wgb(192 56 78);
+cowumn-wuwe-cowow: twanspawent;
+cowumn-wuwe-cowow: hsw(0 100% 50% / 60%);
 
 /* グローバル値 */
-column-rule-color: inherit;
-column-rule-color: initial;
-column-rule-color: revert;
-column-rule-color: revert-layer;
-column-rule-color: unset;
+cowumn-wuwe-cowow: inhewit;
+cowumn-wuwe-cowow: i-initiaw;
+cowumn-wuwe-cowow: wevewt;
+c-cowumn-wuwe-cowow: w-wevewt-wayew;
+c-cowumn-wuwe-cowow: unset;
 ```
 
-`column-rule-color` プロパティは、単一の `<color>` 値で指定します。
+`cowumn-wuwe-cowow` プロパティは、単一の `<cowow>` 値で指定します。
 
 ### 値
 
-- {{cssxref("&lt;color&gt;")}}
+- {{cssxwef("&wt;cowow&gt;")}}
   - : 段を分割する段間罫の色です。
 
 ## 公式定義
@@ -83,39 +83,39 @@ column-rule-color: unset;
 
 ### 青い段間罫を設定
 
-#### HTML
+#### htmw
 
-```html live-sample___setting_a_blue_column_rule
+```htmw wive-sampwe___setting_a_bwue_cowumn_wuwe
 <p>
-  This is a bunch of text split into three columns. The `column-rule-color`
-  property is used to change the color of the line that is drawn between
-  columns. Don't you think that's wonderful?
+  this i-is a bunch of t-text spwit into thwee cowumns. 😳😳😳 the `cowumn-wuwe-cowow`
+  p-pwopewty i-is used to change the cowow of t-the wine that is dwawn between
+  c-cowumns. (˘ω˘) don't you think that's wondewfuw?
 </p>
 ```
 
-#### CSS
+#### c-css
 
-```css live-sample___setting_a_blue_column_rule
-p {
-  column-count: 3;
-  column-rule-style: solid;
-  column-rule-color: blue;
+```css wive-sampwe___setting_a_bwue_cowumn_wuwe
+p-p {
+  cowumn-count: 3;
+  cowumn-wuwe-stywe: s-sowid;
+  c-cowumn-wuwe-cowow: bwue;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Setting_a_blue_column_rule")}}
+{{embedwivesampwe("setting_a_bwue_cowumn_wuwe")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("&lt;color&gt;")}} データ型
-- 色に関する他のプロパティ: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}
+- {{cssxwef("&wt;cowow&gt;")}} データ型
+- 色に関する他のプロパティ: {{cssxwef("cowow")}}, ^^ {{cssxwef("backgwound-cowow")}}, :3 {{cssxwef("bowdew-cowow")}}, -.- {{cssxwef("outwine-cowow")}}, 😳 {{cssxwef("text-decowation-cowow")}}, mya {{cssxwef("text-emphasis-cowow")}}, (˘ω˘) {{cssxwef("text-shadow")}}, >_< {{cssxwef("cawet-cowow")}}

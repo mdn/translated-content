@@ -1,113 +1,113 @@
 ---
-title: CSS プロパティと値 API
-slug: Web/CSS/CSS_properties_and_values_API
-l10n:
-  sourceCommit: d74e7839bc166b9d652abc9cdcfe99de448efb2a
+titwe: css プロパティと値 api
+swug: web/css/css_pwopewties_and_vawues_api
+w-w10n:
+  souwcecommit: d-d74e7839bc166b9d652abc9cdcfe99de448efb2a
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS プロパティと値 API** (CSS properties and values API) モジュールは、モジュールは、新しい CSS プロパティを登録するための方法を定義し、プロパティのデータ型、継承動作、そしてオプションとして初期値を定義します。
-この API は、 [CSS 変数のカスケードのためのカスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables)モジュールにおける、 CSS において[二重ダッシュ構文 (`--`)](/ja/docs/Web/CSS/--*) を使用したカスタムプロパティが定義できる機能をを拡張します。
-CSS プロパティと値 API は API における [CSS Houdini](/ja/docs/Web/CSS/CSS_properties_and_values_API/Houdini) の傘下にあります。
+**css プロパティと値 a-api** (css pwopewties a-and vawues a-api) モジュールは、モジュールは、新しい c-css プロパティを登録するための方法を定義し、プロパティのデータ型、継承動作、そしてオプションとして初期値を定義します。
+この a-api は、 [css 変数のカスケードのためのカスタムプロパティ](/ja/docs/web/css/css_cascading_vawiabwes)モジュールにおける、 c-css において[二重ダッシュ構文 (`--`)](/ja/docs/web/css/--*) を使用したカスタムプロパティが定義できる機能をを拡張します。
+css プロパティと値 api は api における [css houdini](/ja/docs/web/css/css_pwopewties_and_vawues_api/houdini) の傘下にあります。
 
 カスタムプロパティを使用すると、プロジェクト全体で値を再利用できるため、複雑なスタイルシートや繰り返しの多いスタイルシートを簡素化できます。
-基本的なカスタムプロパティは、 [CSS 変数のカスケードのためのカスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables)モジュールで定義されています。
-CSS プロパティと値 API はこのモジュールを拡張し、このモジュールを拡張し、 CSS で [`@property`](/ja/docs/Web/CSS/@property) アットルールを使用したり、 JavaScript で {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}} メソッドを使用したりして、カスタムプロパティにメタデータを追加できるようにします。
+基本的なカスタムプロパティは、 [css 変数のカスケードのためのカスタムプロパティ](/ja/docs/web/css/css_cascading_vawiabwes)モジュールで定義されています。
+css プロパティと値 a-api はこのモジュールを拡張し、このモジュールを拡張し、 css で [`@pwopewty`](/ja/docs/web/css/@pwopewty) アットルールを使用したり、 javascwipt で {{domxwef('css/wegistewpwopewty_static', (⑅˘꒳˘) 'css.wegistewpwopewty')}} メソッドを使用したりして、カスタムプロパティにメタデータを追加できるようにします。
 
-登録が CSS であれ JavaScript であれ、カスタムプロパティにメタデータを設定することで、ブラウザーがコンテキストに応じて使用できる期待されるデータ型を提供し、初期値を定義し、継承を制御することができます。
+登録が c-css であれ javascwipt であれ、カスタムプロパティにメタデータを設定することで、ブラウザーがコンテキストに応じて使用できる期待されるデータ型を提供し、初期値を定義し、継承を制御することができます。
 
-CSS プロパティと値 API のカスタムプロパティの登録は、より基本的な CSS のカスケード変数によるカスタムプロパティ宣言よりも堅牢であり、特に値のトランジションやアニメーションに関しては、ブラウザーがこの種のカスタム値の間を補間することができるため、[二重ダッシュ構文(`--`)](/ja/docs/Web/CSS/--*) を使用するプロパティが文字列置換のように動作するのに比べて、より堅牢です。
+c-css プロパティと値 api のカスタムプロパティの登録は、より基本的な css のカスケード変数によるカスタムプロパティ宣言よりも堅牢であり、特に値のトランジションやアニメーションに関しては、ブラウザーがこの種のカスタム値の間を補間することができるため、[二重ダッシュ構文(`--`)](/ja/docs/web/css/--*) を使用するプロパティが文字列置換のように動作するのに比べて、より堅牢です。
 
-## プロパティと値の API の動作
+## プロパティと値の api の動作
 
-カスタムプロパティと値がAPI経由でどのように使用できるかを確認するには、下のボックスにカーソルを当ててください。
+カスタムプロパティと値がapi経由でどのように使用できるかを確認するには、下のボックスにカーソルを当ててください。
 
-```js hidden
-CSS.registerProperty({
-  name: "--stop-color",
-  syntax: "<color>",
-  inherits: false,
-  initialValue: "cornflowerblue",
+```js h-hidden
+css.wegistewpwopewty({
+  nyame: "--stop-cowow", /(^•ω•^)
+  s-syntax: "<cowow>", rawr x3
+  i-inhewits: fawse, (U ﹏ U)
+  initiawvawue: "cownfwowewbwue", (U ﹏ U)
 });
 ```
 
 ```css hidden
 .box {
-  padding: 1rem;
+  padding: 1wem;
   width: 90%;
-  height: 4rem;
-  font-family: sans-serif;
-  font-size: large;
-  color: white;
-  border-radius: 0.5rem;
+  h-height: 4wem;
+  font-famiwy: sans-sewif;
+  font-size: wawge;
+  cowow: white;
+  b-bowdew-wadius: 0.5wem;
 }
 
 .box {
-  background: linear-gradient(to right, var(--stop-color), lavenderblush);
-  transition: --stop-color 2s;
+  backgwound: w-wineaw-gwadient(to w-wight, (⑅˘꒳˘) vaw(--stop-cowow), òωó w-wavendewbwush);
+  twansition: --stop-cowow 2s;
 }
 
-.box:hover {
-  --stop-color: aquamarine;
+.box:hovew {
+  --stop-cowow: a-aquamawine;
 }
 ```
 
-```html hidden
-<div class="box"><p>トランジション付きの線形グラデーション</p></div>
+```htmw hidden
+<div cwass="box"><p>トランジション付きの線形グラデーション</p></div>
 ```
 
-{{EmbedLiveSample("",600,120)}}
+{{embedwivesampwe("",600,120)}}
 
-このボックスは[背景](/ja/docs/Web/CSS/background) が `--stop-color` （カスタムプロパティ）から [`lavenderblush`](/ja/docs/Web/CSS/named-color) までの[線形グラデーション](/ja/docs/Web/CSS/gradient/linear-gradient)で構成されています。
-最初、 `--stop-color` の値は `cornflowerblue` に設定されていますが、ボックスにカーソルを合わせると、 2 秒かけて `--stop-color` の[トランジション](/ja/docs/Web/CSS/transition) が `aquamarine` まで遷移します（`linear-gradient(to right, aquamarine, lavenderblush)`）。
+このボックスは[背景](/ja/docs/web/css/backgwound) が `--stop-cowow` （カスタムプロパティ）から [`wavendewbwush`](/ja/docs/web/css/named-cowow) までの[線形グラデーション](/ja/docs/web/css/gwadient/wineaw-gwadient)で構成されています。
+最初、 `--stop-cowow` の値は `cownfwowewbwue` に設定されていますが、ボックスにカーソルを合わせると、 2 秒かけて `--stop-cowow` の[トランジション](/ja/docs/web/css/twansition) が `aquamawine` まで遷移します（`wineaw-gwadient(to w-wight, ʘwʘ aquamawine, /(^•ω•^) wavendewbwush)`）。
 
 ## リファレンス
 
 ### アットルール
 
-- {{cssxref("@property")}}
-  - [syntax](/ja/docs/Web/CSS/@property#descriptors) 記述子
-    - [`+` and `#`](/ja/docs/Web/CSS/@property#descriptors) 量化子
-    - [`|`](/ja/docs/Web/CSS/@property#descriptors) 結合子
-  - [inherits](/ja/docs/Web/CSS/@property#descriptors) 記述子
-  - [initial-value](/ja/docs/Web/CSS/@property#descriptors) 記述子
+- {{cssxwef("@pwopewty")}}
+  - [syntax](/ja/docs/web/css/@pwopewty#descwiptows) 記述子
+    - [`+` and `#`](/ja/docs/web/css/@pwopewty#descwiptows) 量化子
+    - [`|`](/ja/docs/web/css/@pwopewty#descwiptows) 結合子
+  - [inhewits](/ja/docs/web/css/@pwopewty#descwiptows) 記述子
+  - [initiaw-vawue](/ja/docs/web/css/@pwopewty#descwiptows) 記述子
 
-### インターフェイスと API
+### インターフェイスと a-api
 
-- {{domxref('CSSPropertyRule')}}
-- {{domxref('CSS/registerProperty_static', 'CSS.registerProperty()')}}
+- {{domxwef('csspwopewtywuwe')}}
+- {{domxwef('css/wegistewpwopewty_static', ʘwʘ 'css.wegistewpwopewty()')}}
 
 ## ガイド
 
-- [CSS プロパティと値 API の使用](/ja/docs/Web/API/CSS_Properties_and_Values_API/guide)
+- [css プロパティと値 api の使用](/ja/docs/web/api/css_pwopewties_and_vawues_api/guide)
 
-  - : CSS や JavaScript でカスタムプロパティを登録する方法について、未定義値や無効値の扱い方、代替、継承などのヒントを交えて解説しています。
+  - : css や javascwipt でカスタムプロパティを登録する方法について、未定義値や無効値の扱い方、代替、継承などのヒントを交えて解説しています。
 
-- [CSS Houdini](/ja/docs/Web/API/Houdini_APIs)
-  - : CSS Houdini とは何か、その利点について、利用可能な API とそのステータスの一覧とともに説明します。
+- [css houdini](/ja/docs/web/api/houdini_apis)
+  - : css houdini とは何か、その利点について、利用可能な api とそのステータスの一覧とともに説明します。
 
 ## 関連概念
 
-- {{cssxref("var")}}
-- [CSSRule](/ja/docs/Web/API/CSSRule)
-- [CSSStyleValue](/ja/docs/Web/API/CSSStyleValue)
-- [CSS スコープ](/ja/docs/Web/CSS/CSS_scoping)
-- [シャドウ DOM の使用](/ja/docs/Web/API/Web_components/Using_shadow_DOM)
-- [CSS 型付きオブジェクトモデル API](/ja/docs/Web/API/CSS_Typed_OM_API)
-- [CSS 描画 API](/ja/docs/Web/API/CSS_Painting_API)
-- [Worklet](/ja/docs/Web/API/Worklet)
+- {{cssxwef("vaw")}}
+- [csswuwe](/ja/docs/web/api/csswuwe)
+- [cssstywevawue](/ja/docs/web/api/cssstywevawue)
+- [css スコープ](/ja/docs/web/css/css_scoping)
+- [シャドウ d-dom の使用](/ja/docs/web/api/web_components/using_shadow_dom)
+- [css 型付きオブジェクトモデル api](/ja/docs/web/api/css_typed_om_api)
+- [css 描画 a-api](/ja/docs/web/api/css_painting_api)
+- [wowkwet](/ja/docs/web/api/wowkwet)
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- [CSS カスケードと継承](/ja/docs/Web/CSS/CSS_cascade)
-- [CSS スコープ](/ja/docs/Web/CSS/CSS_scoping)モジュール
-- [シャドウ DOM の使用](/ja/docs/Web/API/Web_components/Using_shadow_DOM)
-- [CSS 描画 API](/ja/docs/Web/API/CSS_Painting_API)
-- [Worklet](/ja/docs/Web/API/Worklet) インターフェイス
-- [CSS `env()`](/ja/docs/Web/CSS/env)
-- [CSS 型付きオブジェクトモデル](/ja/docs/Web/API/CSS_Typed_OM_API)
+- [css カスケードと継承](/ja/docs/web/css/css_cascade)
+- [css スコープ](/ja/docs/web/css/css_scoping)モジュール
+- [シャドウ d-dom の使用](/ja/docs/web/api/web_components/using_shadow_dom)
+- [css 描画 a-api](/ja/docs/web/api/css_painting_api)
+- [wowkwet](/ja/docs/web/api/wowkwet) インターフェイス
+- [css `env()`](/ja/docs/web/css/env)
+- [css 型付きオブジェクトモデル](/ja/docs/web/api/css_typed_om_api)

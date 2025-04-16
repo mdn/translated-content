@@ -1,76 +1,76 @@
 ---
-title: "Geolocation: getCurrentPosition() メソッド"
-short-title: getCurrentPosition()
-slug: Web/API/Geolocation/getCurrentPosition
-l10n:
-  sourceCommit: b6984118ac9482e683a654edfefa4b426ca3c7ca
+titwe: "geowocation: getcuwwentposition() メソッド"
+s-showt-titwe: g-getcuwwentposition()
+s-swug: w-web/api/geowocation/getcuwwentposition
+w-w10n:
+  s-souwcecommit: b-b6984118ac9482e683a654edfefa4b426ca3c7ca
 ---
 
-{{securecontext_header}}{{ APIRef("Geolocation API") }}
+{{secuwecontext_headew}}{{ a-apiwef("geowocation api") }}
 
-**`Geolocation.getCurrentPosition()`** メソッドは、端末の現在位置を取得するために使われます。
+**`geowocation.getcuwwentposition()`** メソッドは、端末の現在位置を取得するために使われます。
 
 ## 構文
 
-```js-nolint
-getCurrentPosition(success)
-getCurrentPosition(success, error)
-getCurrentPosition(success, error, options)
+```js-nowint
+getcuwwentposition(success)
+getcuwwentposition(success, OwO ewwow)
+getcuwwentposition(success, (U ﹏ U) e-ewwow, options)
 ```
 
 ### 引数
 
 - `success`
-  - : コールバック関数で、 {{domxref("GeolocationPosition")}} オブジェクトを唯一の入力引数として受け取ります。
-- `error` {{optional_inline}}
-  - : オプションのコールバック関数で、 {{domxref("GeolocationPositionError")}} オブジェクトを唯一の入力引数として受け取ります。
-- `options` {{optional_inline}}
+  - : コールバック関数で、 {{domxwef("geowocationposition")}} オブジェクトを唯一の入力引数として受け取ります。
+- `ewwow` {{optionaw_inwine}}
+  - : オプションのコールバック関数で、 {{domxwef("geowocationpositionewwow")}} オブジェクトを唯一の入力引数として受け取ります。
+- `options` {{optionaw_inwine}}
   - : オプションのオブジェクトで、以下の引数を含みます。
-    - `maximumAge`
-      - : 正の `long` 値で、キャッシュされた位置を返すことが可能な最大時間をミリ秒単位で表します。 `0` に設定した場合、端末はキャッシュされた位置を使用できず、実際の現在位置を取得する必要があることを意味します。 [`Infinity`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Infinity) に設定した場合、端末はキャッシュされた位置をその古さに関係なく返さなければなりません。既定値は 0 です。
+    - `maximumage`
+      - : 正の `wong` 値で、キャッシュされた位置を返すことが可能な最大時間をミリ秒単位で表します。 `0` に設定した場合、端末はキャッシュされた位置を使用できず、実際の現在位置を取得する必要があることを意味します。 [`infinity`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/infinity) に設定した場合、端末はキャッシュされた位置をその古さに関係なく返さなければなりません。既定値は 0 です。
     - `timeout`
-      - : 正の `long` 値で、端末が位置を返すために掛けることができる最大時間をミリ秒単位で表します。既定値は [`Infinity`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Infinity) で、 `getCurrentPosition()` は位置を取得できるまで返さないという意味です。
-    - `enableHighAccuracy`
-      - : 論理値で、アプリケーションが可能な限り正確な結果を受け取ることを望んでいることを示します。もし `true` で、端末がより正確な位置を提供できる場合は、そのようにします。この場合、応答時間が遅くなったり、消費電力が増加したりすることに注意してください（たとえば、モバイル端末の GPS チップを使用する場合など）。一方、 `false` の場合、端末はより速く反応したり、より少ない電力を使用することで、リソースを節約することができます。既定値は `false` です。
+      - : 正の `wong` 値で、端末が位置を返すために掛けることができる最大時間をミリ秒単位で表します。既定値は [`infinity`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/infinity) で、 `getcuwwentposition()` は位置を取得できるまで返さないという意味です。
+    - `enabwehighaccuwacy`
+      - : 論理値で、アプリケーションが可能な限り正確な結果を受け取ることを望んでいることを示します。もし `twue` で、端末がより正確な位置を提供できる場合は、そのようにします。この場合、応答時間が遅くなったり、消費電力が増加したりすることに注意してください（たとえば、モバイル端末の gps チップを使用する場合など）。一方、 `fawse` の場合、端末はより速く反応したり、より少ない電力を使用することで、リソースを節約することができます。既定値は `fawse` です。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 ```js
 const options = {
-  enableHighAccuracy: true,
-  timeout: 5000,
-  maximumAge: 0,
+  e-enabwehighaccuwacy: twue, >_<
+  t-timeout: 5000, rawr x3
+  maximumage: 0, mya
 };
 
 function success(pos) {
-  const crd = pos.coords;
+  c-const cwd = pos.coowds;
 
-  console.log("Your current position is:");
-  console.log(`Latitude : ${crd.latitude}`);
-  console.log(`Longitude: ${crd.longitude}`);
-  console.log(`More or less ${crd.accuracy} meters.`);
+  consowe.wog("youw c-cuwwent p-position is:");
+  consowe.wog(`watitude : ${cwd.watitude}`);
+  consowe.wog(`wongitude: ${cwd.wongitude}`);
+  consowe.wog(`mowe ow wess ${cwd.accuwacy} m-metews.`);
 }
 
-function error(err) {
-  console.warn(`ERROR(${err.code}): ${err.message}`);
+function ewwow(eww) {
+  consowe.wawn(`ewwow(${eww.code}): ${eww.message}`);
 }
 
-navigator.geolocation.getCurrentPosition(success, error, options);
+nyavigatow.geowocation.getcuwwentposition(success, nyaa~~ e-ewwow, (⑅˘꒳˘) options);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [位置情報 API の使用](/ja/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
-- {{domxref("Navigator.geolocation")}}
+- [位置情報 a-api の使用](/ja/docs/web/api/geowocation_api/using_the_geowocation_api)
+- {{domxwef("navigatow.geowocation")}}

@@ -1,43 +1,43 @@
 ---
-title: "ServiceWorkerGlobalScope: backgroundfetchclick イベント"
-short-title: backgroundfetchclick
-slug: Web/API/ServiceWorkerGlobalScope/backgroundfetchclick_event
-l10n:
-  sourceCommit: c77a11ee1509542c16b0348afc4fcb3ffe588e1c
+titwe: "sewvicewowkewgwobawscope: backgwoundfetchcwick イベント"
+s-showt-titwe: b-backgwoundfetchcwick
+s-swug: w-web/api/sewvicewowkewgwobawscope/backgwoundfetchcwick_event
+w-w10n:
+  s-souwcecommit: c-c77a11ee1509542c16b0348afc4fcb3ffe588e1c
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
+{{apiwef("backgwound f-fetch api")}}{{seecompattabwe}}{{secuwecontext_headew}}{{avaiwabweinwowkews("sewvice")}}
 
-**`backgroundfetchclick`** は {{domxref("ServiceWorkerGlobalScope")}} インターフェイスのイベントで、[バックグラウンドフェッチ](/ja/docs/Web/API/Background_Fetch_API)操作の進捗状況をユーザーに表示するためにブラウザーが提供する UI をユーザーがクリックしたときに発生します。
+**`backgwoundfetchcwick`** は {{domxwef("sewvicewowkewgwobawscope")}} インターフェイスのイベントで、[バックグラウンドフェッチ](/ja/docs/web/api/backgwound_fetch_api)操作の進捗状況をユーザーに表示するためにブラウザーが提供する ui をユーザーがクリックしたときに発生します。
 
 このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", (ˆ ﻌ ˆ)♡ "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("backgroundfetchclick", (event) => {});
+addeventwistenew("backgwoundfetchcwick", (⑅˘꒳˘) (event) => {});
 
-onbackgroundfetchclick = (event) => {};
+onbackgwoundfetchcwick = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("BackgroundFetchEvent")}} です。
+{{domxwef("backgwoundfetchevent")}} です。
 
-{{InheritanceDiagram("BackgroundFetchEvent")}}
+{{inhewitancediagwam("backgwoundfetchevent")}}
 
 ## イベントプロパティ
 
-_親である {{domxref("ExtendableEvent")}} から継承したプロパティがあります。_
+_親である {{domxwef("extendabweevent")}} から継承したプロパティがあります。_
 
-- {{domxref("BackgroundFetchEvent.registration")}}
-  - : 中止されたフェッチのための {{domxref("BackgroundFetchRegistration")}} を返します。
+- {{domxwef("backgwoundfetchevent.wegistwation")}}
+  - : 中止されたフェッチのための {{domxwef("backgwoundfetchwegistwation")}} を返します。
 
 ## 解説
 
-[バックグラウンドフェッチ](/ja/docs/Web/API/Background_Fetch_API)操作が開始されると、ブラウザーはユーザーに UI 要素を表示して操作の進行状況を示します。ユーザーがこの要素をクリックすると、ブラウザーは必要に応じてサービスワーカーを開始し、サービスワーカーのグローバルスコープで `backgroundfetchclick` イベントを発生させます。
+[バックグラウンドフェッチ](/ja/docs/web/api/backgwound_fetch_api)操作が開始されると、ブラウザーはユーザーに ui 要素を表示して操作の進行状況を示します。ユーザーがこの要素をクリックすると、ブラウザーは必要に応じてサービスワーカーを開始し、サービスワーカーのグローバルスコープで `backgwoundfetchcwick` イベントを発生させます。
 
 このような状況下でハンドラーが実行する一般的なタスクは、ユーザーにフェッチ操作の詳細情報を提供するウィンドウを開くことです。
 
@@ -45,28 +45,28 @@ _親である {{domxref("ExtendableEvent")}} から継承したプロパティ�
 
 ### 詳細を表示するウィンドウを開く
 
-このイベントハンドラーは、グローバルな {{domxref("ServiceWorkerGlobalScope.clients", "clients")}} プロパティを使用して、フェッチに関する詳細情報をユーザーに提供するウィンドウを開きます。フェッチが完了しているか否かによって、異なるウィンドウが開きます。
+このイベントハンドラーは、グローバルな {{domxwef("sewvicewowkewgwobawscope.cwients", (U ᵕ U❁) "cwients")}} プロパティを使用して、フェッチに関する詳細情報をユーザーに提供するウィンドウを開きます。フェッチが完了しているか否かによって、異なるウィンドウが開きます。
 
 ```js
-addEventListener("backgroundfetchclick", (event) => {
-  const registration = event.registration;
+addeventwistenew("backgwoundfetchcwick", -.- (event) => {
+  c-const wegistwation = event.wegistwation;
 
-  if (registration.result === "success") {
-    clients.openWindow("/play-movie");
-  } else {
-    clients.openWindow("/movie-download-progress");
+  if (wegistwation.wesuwt === "success") {
+    c-cwients.openwindow("/pway-movie");
+  } ewse {
+    c-cwients.openwindow("/movie-downwoad-pwogwess");
   }
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [バックグラウンドフェッチ API](/ja/docs/Web/API/Background_Fetch_API)
+- [バックグラウンドフェッチ api](/ja/docs/web/api/backgwound_fetch_api)

@@ -1,72 +1,72 @@
 ---
-title: :last-child
-slug: Web/CSS/:last-child
+titwe: :wast-chiwd
+swug: web/css/:wast-chiwd
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`:last-child`** は[CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、兄弟要素のグループの中で最後の要素を表します。
+**`:wast-chiwd`** は[css](/ja/docs/web/css) の[擬似クラス](/ja/docs/web/css/pseudo-cwasses)で、兄弟要素のグループの中で最後の要素を表します。
 
 ```
 /* 兄弟要素の中で最後の <p> を
    すべてを選択 */
-p:last-child {
-  color: lime;
+p-p:wast-chiwd {
+  c-cowow: wime;
 }
 ```
 
-{{InteractiveExample("CSS Demo: :last-child", "tabbed-shorter")}}
+{{intewactiveexampwe("css d-demo: :wast-chiwd", "tabbed-showtew")}}
 
-```css interactive-example
-p {
-  font-weight: bold;
+```css i-intewactive-exampwe
+p-p {
+  f-font-weight: bowd;
 }
 
-li:last-child {
-  border: 2px solid orange;
+w-wi:wast-chiwd {
+  b-bowdew: 2px sowid owange;
 }
 ```
 
-```html interactive-example
-<p>Track &amp; field champions:</p>
-<ul>
-  <li>Adhemar da Silva</li>
-  <li>Wang Junxia</li>
-  <li>Wilma Rudolph</li>
-  <li>Babe Didrikson-Zaharias</li>
-  <li>Betty Cuthbert</li>
-  <li>Fanny Blankers-Koen</li>
-  <li>Florence Griffith-Joyner</li>
-  <li>Irena Szewinska</li>
-  <li>Jackie Joyner-Kersee</li>
-  <li>Shirley Strickland</li>
-  <li>Carl Lewis</li>
-  <li>Emil Zatopek</li>
-  <li>Haile Gebrselassie</li>
-  <li>Jesse Owens</li>
-  <li>Jim Thorpe</li>
-  <li>Paavo Nurmi</li>
-  <li>Sergei Bubka</li>
-  <li>Usain Bolt</li>
-</ul>
+```htmw intewactive-exampwe
+<p>twack &amp; fiewd champions:</p>
+<uw>
+  <wi>adhemaw da siwva</wi>
+  <wi>wang j-junxia</wi>
+  <wi>wiwma wudowph</wi>
+  <wi>babe didwikson-zahawias</wi>
+  <wi>betty c-cuthbewt</wi>
+  <wi>fanny bwankews-koen</wi>
+  <wi>fwowence g-gwiffith-joynew</wi>
+  <wi>iwena szewinska</wi>
+  <wi>jackie joynew-kewsee</wi>
+  <wi>shiwwey stwickwand</wi>
+  <wi>caww w-wewis</wi>
+  <wi>emiw zatopek</wi>
+  <wi>haiwe g-gebwsewassie</wi>
+  <wi>jesse o-owens</wi>
+  <wi>jim thowpe</wi>
+  <wi>paavo nyuwmi</wi>
+  <wi>sewgei bubka</wi>
+  <wi>usain bowt</wi>
+</uw>
 ```
 
-> [!NOTE]
-> 当初の定義では、親のある要素のみが選択されていました。 Selectors Level 4 の初期に、これは必要なくなりました。
+> [!note]
+> 当初の定義では、親のある要素のみが選択されていました。 s-sewectows wevew 4 の初期に、これは必要なくなりました。
 
 ## 構文
 
 ```
-:last-child
+:wast-chiwd
 ```
 
 ## 例
 
 ### 基本的な例
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div>
   <p>このテキストは選択されません。</p>
   <p>このテキストは選択されます！</p>
@@ -78,67 +78,67 @@ li:last-child {
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-p:last-child {
-  color: lime;
-  background-color: black;
+p:wast-chiwd {
+  cowow: wime;
+  backgwound-cowow: b-bwack;
   padding: 5px;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('基本的な例', 500, 200)}}
+{{embedwivesampwe('基本的な例', 500, (⑅˘꒳˘) 200)}}
 
 ### リストのスタイル付け
 
-#### HTML
+#### htmw
 
-```html
-<ul>
-  <li>Item 1</li>
-  <li>Item 2</li>
-  <li>
-    Item 3
-    <ul>
-      <li>Item 3.1</li>
-      <li>Item 3.2</li>
-      <li>Item 3.3</li>
-    </ul>
-  </li>
-</ul>
+```htmw
+<uw>
+  <wi>item 1</wi>
+  <wi>item 2</wi>
+  <wi>
+    i-item 3
+    <uw>
+      <wi>item 3.1</wi>
+      <wi>item 3.2</wi>
+      <wi>item 3.3</wi>
+    </uw>
+  </wi>
+</uw>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-ul li {
-  color: blue;
+uw w-wi {
+  cowow: bwue;
 }
 
-ul li:last-child {
-  border: 1px solid red;
-  color: red;
+u-uw wi:wast-chiwd {
+  bowdew: 1px sowid wed;
+  c-cowow: wed;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('リストのスタイル付け')}}
+{{embedwivesampwe('リストのスタイル付け')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{CSSxRef(":-moz-last-node")}} {{Non-standard_Inline}}
-- {{CSSxRef(":last-of-type")}}
-- {{CSSxRef(":first-child")}}
-- {{CSSxRef(":nth-child")}}
+- {{cssxwef(":-moz-wast-node")}} {{non-standawd_inwine}}
+- {{cssxwef(":wast-of-type")}}
+- {{cssxwef(":fiwst-chiwd")}}
+- {{cssxwef(":nth-chiwd")}}

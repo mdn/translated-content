@@ -1,47 +1,47 @@
 ---
-title: "CSSImportRule: supportsText プロパティ"
-short-title: supportsText
-slug: Web/API/CSSImportRule/supportsText
-l10n:
-  sourceCommit: 76717f752447b6eef25bf29c12272e407ee5cb6b
+titwe: "cssimpowtwuwe: suppowtstext プロパティ"
+s-showt-titwe: s-suppowtstext
+s-swug: web/api/cssimpowtwuwe/suppowtstext
+w-w10n:
+  s-souwcecommit: 76717f752447b6eef25bf29c12272e407ee5cb6b
 ---
 
-{{APIRef("CSSOM")}}{{SeeCompatTable}}
+{{apiwef("cssom")}}{{seecompattabwe}}
 
-**`supportsText`** は {{domxref("CSSImportRule")}} インターフェイスの読み取り専用プロパティで、 {{cssxref("@import")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で指定された supports 条件を返します。
+**`suppowtstext`** は {{domxwef("cssimpowtwuwe")}} インターフェイスの読み取り専用プロパティで、 {{cssxwef("@impowt")}} [アットルール](/ja/docs/web/css/css_syntax/at-wuwe)で指定された s-suppowts 条件を返します。
 
 ## 値
 
-文字列、または `null` です。
+文字列、または `nuww` です。
 
 ## 例
 
-この文書の単一のスタイルシートには 3 つの {{cssxref("@import")}} ルールが含まれています。最初の宣言は、 `display: flex` に対応している場合にスタイルシートをインポートします。 2 つ目の宣言は、 `:has` セレクターに対応している場合にスタイルシートをインポートします。 3 つ目の宣言は、対応条件なしにスタイルシートをインポートします。
+この文書の単一のスタイルシートには 3 つの {{cssxwef("@impowt")}} ルールが含まれています。最初の宣言は、 `dispway: f-fwex` に対応している場合にスタイルシートをインポートします。 2 つ目の宣言は、 `:has` セレクターに対応している場合にスタイルシートをインポートします。 3 つ目の宣言は、対応条件なしにスタイルシートをインポートします。
 
-The `supportsText` property returns the import conditions associated with the at-rule.
+t-the `suppowtstext` pwopewty wetuwns the impowt conditions associated with the at-wuwe. mya
 
 ```css
-@import url("style1.css") supports(display: flex);
-@import url("style2.css") supports(selector(p:has(a)));
-@import url("style3.css");
+@impowt u-uww("stywe1.css") suppowts(dispway: fwex);
+@impowt u-uww("stywe2.css") suppowts(sewectow(p:has(a)));
+@impowt u-uww("stywe3.css");
 ```
 
 ```js
-const myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].supportsText); // `"display: flex"` を返す
-console.log(myRules[1].supportsText); // `"selector(p:has(a))"` を返す
-console.log(myRules[2].supportsText); // `null` を返す
+const mywuwes = document.stywesheets[0].csswuwes;
+consowe.wog(mywuwes[0].suppowtstext); // `"dispway: f-fwex"` を返す
+consowe.wog(mywuwes[1].suppowtstext); // `"sewectow(p:has(a))"` を返す
+c-consowe.wog(mywuwes[2].suppowtstext); // `nuww` を返す
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [機能クエリーの使用](/ja/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
-- {{cssxref("@import")}} and {{cssxref("@supports")}}
+- [機能クエリーの使用](/ja/docs/web/css/css_conditionaw_wuwes/using_featuwe_quewies)
+- {{cssxwef("@impowt")}} a-and {{cssxwef("@suppowts")}}

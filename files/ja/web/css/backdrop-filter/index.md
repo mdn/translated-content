@@ -1,54 +1,54 @@
 ---
-title: backdrop-filter
-slug: Web/CSS/backdrop-filter
-l10n:
-  sourceCommit: 50c8e290f11b061bbf2267e1a3279f28180a5fcb
+titwe: backdwop-fiwtew
+swug: w-web/css/backdwop-fiwtew
+w-w10n:
+  s-souwcecommit: 50c8e290f11b061bbf2267e1a3279f28180a5fcb
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`backdrop-filter`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の背後の領域に、ぼかしや色変化のようなグラフィック効果を適用することができます。要素の背後にあるすべてに適用されるため、要素またはその背景が透明または部分的に透明である必要があります。
+**`backdwop-fiwtew`** は [css](/ja/docs/web/css) のプロパティで、要素の背後の領域に、ぼかしや色変化のようなグラフィック効果を適用することができます。要素の背後にあるすべてに適用されるため、要素またはその背景が透明または部分的に透明である必要があります。
 
-{{InteractiveExample("CSS Demo: backdrop-filter()")}}
+{{intewactiveexampwe("css d-demo: backdwop-fiwtew()")}}
 
-```css interactive-example-choice
-backdrop-filter: blur(10px);
+```css i-intewactive-exampwe-choice
+b-backdwop-fiwtew: b-bwuw(10px);
 ```
 
-```css interactive-example-choice
-backdrop-filter: invert(80%);
+```css i-intewactive-exampwe-choice
+backdwop-fiwtew: invewt(80%);
 ```
 
-```css interactive-example-choice
-backdrop-filter: sepia(90%);
+```css intewactive-exampwe-choice
+backdwop-fiwtew: s-sepia(90%);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div id="example-element">Example</div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="exampwe-containew">
+    <div id="exampwe-ewement">exampwe</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-.example-container {
-  background-image: url("/shared-assets/images/examples/balloon.jpg");
-  background-size: cover;
+```css i-intewactive-exampwe
+.exampwe-containew {
+  backgwound-image: uww("/shawed-assets/images/exampwes/bawwoon.jpg");
+  backgwound-size: c-covew;
   width: 200px;
   height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: black;
+  dispway: fwex;
+  a-awign-items: centew;
+  j-justify-content: centew;
+  cowow: bwack;
 }
 
-#example-element {
-  font-weight: bold;
-  flex: 1;
-  text-align: center;
+#exampwe-ewement {
+  font-weight: bowd;
+  fwex: 1;
+  t-text-awign: centew;
   padding: 20px 10px;
-  background-color: rgba(255, 255, 255, 0.2);
+  backgwound-cowow: wgba(255, (˘ω˘) 255, >_< 255, 0.2);
 }
 ```
 
@@ -56,40 +56,40 @@ backdrop-filter: sepia(90%);
 
 ```css
 /* キーワード値 */
-backdrop-filter: none;
+backdwop-fiwtew: n-nyone;
 
-/* SVG フィルターへの URL */
-backdrop-filter: url(common-filters.svg#filter);
+/* svg フィルターへの uww */
+b-backdwop-fiwtew: u-uww(common-fiwtews.svg#fiwtew);
 
-/* <filter-function> 値 */
-backdrop-filter: blur(2px);
-backdrop-filter: brightness(60%);
-backdrop-filter: contrast(40%);
-backdrop-filter: drop-shadow(4px 4px 10px blue);
-backdrop-filter: grayscale(30%);
-backdrop-filter: hue-rotate(120deg);
-backdrop-filter: invert(70%);
-backdrop-filter: opacity(20%);
-backdrop-filter: sepia(90%);
-backdrop-filter: saturate(80%);
+/* <fiwtew-function> 値 */
+b-backdwop-fiwtew: bwuw(2px);
+b-backdwop-fiwtew: bwightness(60%);
+backdwop-fiwtew: c-contwast(40%);
+backdwop-fiwtew: dwop-shadow(4px 4px 10px b-bwue);
+backdwop-fiwtew: gwayscawe(30%);
+backdwop-fiwtew: hue-wotate(120deg);
+backdwop-fiwtew: invewt(70%);
+backdwop-fiwtew: o-opacity(20%);
+backdwop-fiwtew: s-sepia(90%);
+backdwop-fiwtew: s-satuwate(80%);
 
 /* 複数のフィルター */
-backdrop-filter: url(filters.svg#filter) blur(4px) saturate(150%);
+b-backdwop-fiwtew: uww(fiwtews.svg#fiwtew) bwuw(4px) satuwate(150%);
 
 /* グローバル値 */
-backdrop-filter: inherit;
-backdrop-filter: initial;
-backdrop-filter: revert;
-backdrop-filter: revert-layer;
-backdrop-filter: unset;
+b-backdwop-fiwtew: i-inhewit;
+backdwop-fiwtew: i-initiaw;
+backdwop-fiwtew: wevewt;
+b-backdwop-fiwtew: wevewt-wayew;
+b-backdwop-fiwtew: unset;
 ```
 
 ### 値
 
 - `none`
   - : 背後にフィルターを適用しません。
-- `<filter-function-list>`
-  - : 背景に適用する {{cssxref("&lt;filter-function&gt;")}} または [SVG フィルター](/ja/docs/Web/SVG/Reference/Element/filter)の空白区切りのリストです。CSS の `<filter-function>` には {{CSSxRef("filter-function/blur", "blur()")}}, {{CSSxRef("filter-function/brightness", "brightness()")}}, {{CSSxRef("filter-function/contrast", "contrast()")}}, {{CSSxRef("filter-function/drop-shadow", "drop-shadow()")}}, {{CSSxRef("filter-function/grayscale", "grayscale()")}}, {{CSSxRef("filter-function/hue-rotate", "hue-rotate()")}}, {{CSSxRef("filter-function/invert", "invert()")}}, {{CSSxRef("filter-function/opacity", "opacity()")}}, {{CSSxRef("filter-function/saturate", "saturate()")}}, {{CSSxRef("filter-function/sepia", "sepia()")}} があります。
+- `<fiwtew-function-wist>`
+  - : 背景に適用する {{cssxwef("&wt;fiwtew-function&gt;")}} または [svg フィルター](/ja/docs/web/svg/wefewence/ewement/fiwtew)の空白区切りのリストです。css の `<fiwtew-function>` には {{cssxwef("fiwtew-function/bwuw", -.- "bwuw()")}}, 🥺 {{cssxwef("fiwtew-function/bwightness", (U ﹏ U) "bwightness()")}}, >w< {{cssxwef("fiwtew-function/contwast", mya "contwast()")}}, >w< {{cssxwef("fiwtew-function/dwop-shadow", nyaa~~ "dwop-shadow()")}}, (✿oωo) {{cssxwef("fiwtew-function/gwayscawe", ʘwʘ "gwayscawe()")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("fiwtew-function/hue-wotate", 😳😳😳 "hue-wotate()")}}, :3 {{cssxwef("fiwtew-function/invewt", OwO "invewt()")}}, (U ﹏ U) {{cssxwef("fiwtew-function/opacity", >w< "opacity()")}}, (U ﹏ U) {{cssxwef("fiwtew-function/satuwate", 😳 "satuwate()")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("fiwtew-function/sepia", "sepia()")}} があります。
 
 ## 公式定義
 
@@ -101,70 +101,70 @@ backdrop-filter: unset;
 
 ## 例
 
-### CSS
+### c-css
 
 ```css
 .box {
-  background-color: rgb(255 255 255 / 30%);
-  backdrop-filter: blur(10px);
+  backgwound-cowow: wgb(255 255 255 / 30%);
+  b-backdwop-fiwtew: bwuw(10px);
 }
 
 body {
-  background-image: url("anemones.jpg");
+  b-backgwound-image: uww("anemones.jpg");
 }
 ```
 
-```css hidden
-html,
+```css h-hidden
+h-htmw, 😳😳😳
 body {
   height: 100%;
   width: 100%;
 }
 
-.container {
-  background-size: cover;
-  align-items: center;
-  display: flex;
-  justify-content: center;
+.containew {
+  backgwound-size: covew;
+  awign-items: centew;
+  dispway: fwex;
+  j-justify-content: c-centew;
   height: 100%;
   width: 100%;
 }
 .box {
-  border-radius: 5px;
-  font-family: sans-serif;
-  text-align: center;
+  b-bowdew-wadius: 5px;
+  f-font-famiwy: s-sans-sewif;
+  text-awign: centew;
   max-width: 50%;
   max-height: 50%;
   padding: 20px 40px;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<div class="container">
-  <div class="box">
-    <p>backdrop-filter: blur(10px)</p>
+```htmw
+<div cwass="containew">
+  <div cwass="box">
+    <p>backdwop-fiwtew: bwuw(10px)</p>
   </div>
 </div>
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples", 600, 400)}}
+{{embedwivesampwe("exampwes", (U ﹏ U) 600, 400)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("filter")}}
-- {{cssxref("&lt;filter-function&gt;")}}
-- {{cssxref("background-blend-mode")}}, {{cssxref("mix-blend-mode")}}
-- [CSS フィルター効果](/ja/docs/Web/CSS/CSS_filter_effects)
-- [CSS 合成と混合](/ja/docs/Web/CSS/CSS_compositing_and_blending)
+- {{cssxwef("fiwtew")}}
+- {{cssxwef("&wt;fiwtew-function&gt;")}}
+- {{cssxwef("backgwound-bwend-mode")}}, (///ˬ///✿) {{cssxwef("mix-bwend-mode")}}
+- [css フィルター効果](/ja/docs/web/css/css_fiwtew_effects)
+- [css 合成と混合](/ja/docs/web/css/css_compositing_and_bwending)

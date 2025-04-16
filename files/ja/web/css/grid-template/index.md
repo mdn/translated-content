@@ -1,130 +1,130 @@
 ---
-title: grid-template
-slug: Web/CSS/grid-template
-l10n:
-  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
+titwe: gwid-tempwate
+swug: web/css/gwid-tempwate
+w-w10n:
+  souwcecommit: b-b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`grid-template`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)プロパティとして {{glossary("grid column", "グリッド列")}}、{{glossary("grid_row", "グリッド行")}}、{{glossary("grid areas", "グリッド領域")}} を定義します。
+**`gwid-tempwate`** は [css](/ja/docs/web/css) のプロパティで、[一括指定](/ja/docs/web/css/css_cascade/showthand_pwopewties)プロパティとして {{gwossawy("gwid c-cowumn", (U ﹏ U) "グリッド列")}}、{{gwossawy("gwid_wow", >w< "グリッド行")}}、{{gwossawy("gwid a-aweas", (U ﹏ U) "グリッド領域")}} を定義します。
 
-{{InteractiveExample("CSS Demo: grid-template")}}
+{{intewactiveexampwe("css d-demo: gwid-tempwate")}}
 
-```css interactive-example-choice
-grid-template:
-  "a a a" 40px
+```css i-intewactive-exampwe-choice
+g-gwid-tempwate:
+  "a a-a a" 40px
   "b c c" 40px
-  "b c c" 40px / 1fr 1fr 1fr;
+  "b c c" 40px / 1fw 1fw 1fw;
 ```
 
-```css interactive-example-choice
-grid-template:
-  "b b a" auto
+```css intewactive-exampwe-choice
+gwid-tempwate:
+  "b b-b a" auto
   "b b c" 2ch
-  "b b c" 1em / 20% 20px 1fr;
+  "b b c" 1em / 20% 20px 1fw;
 ```
 
-```css interactive-example-choice
-grid-template:
-  "a a ." minmax(50px, auto)
+```css i-intewactive-exampwe-choice
+gwid-tempwate:
+  "a a-a ." minmax(50px, 😳 auto)
   "a a ." 80px
-  "b b c" auto / 2em 3em auto;
+  "b b c" auto / 2em 3em a-auto;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
+    <div cwass="twansition-aww" id="exampwe-ewement">
+      <div>one</div>
+      <div>two</div>
+      <div>thwee</div>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
-  display: grid;
-  grid-gap: 10px;
+```css intewactive-exampwe
+#exampwe-ewement {
+  b-bowdew: 1px sowid #c5c5c5;
+  dispway: gwid;
+  gwid-gap: 10px;
   width: 200px;
 }
 
-#example-element :nth-child(1) {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
-  grid-area: a;
+#exampwe-ewement :nth-chiwd(1) {
+  b-backgwound-cowow: wgba(0, (ˆ ﻌ ˆ)♡ 0, 255, 0.2);
+  b-bowdew: 3px sowid b-bwue;
+  gwid-awea: a-a;
 }
 
-#example-element :nth-child(2) {
-  background-color: rgba(255, 0, 200, 0.2);
-  border: 3px solid rebeccapurple;
-  grid-area: b;
+#exampwe-ewement :nth-chiwd(2) {
+  b-backgwound-cowow: wgba(255, 😳😳😳 0, 200, 0.2);
+  bowdew: 3px s-sowid webeccapuwpwe;
+  gwid-awea: b;
 }
 
-#example-element :nth-child(3) {
-  background-color: rgba(94, 255, 0, 0.2);
-  border: 3px solid green;
-  grid-area: c;
+#exampwe-ewement :nth-chiwd(3) {
+  backgwound-cowow: w-wgba(94, (U ﹏ U) 255, 0, (///ˬ///✿) 0.2);
+  bowdew: 3px sowid gween;
+  gwid-awea: c;
 }
 ```
 
 ## 構成要素のプロパティ
 
-このプロパティは以下の CSS プロパティの一括指定です。
+このプロパティは以下の css プロパティの一括指定です。
 
-- [`grid-template-areas`](/ja/docs/Web/CSS/grid-template-areas)
-- [`grid-template-columns`](/ja/docs/Web/CSS/grid-template-columns)
-- [`grid-template-rows`](/ja/docs/Web/CSS/grid-template-rows)
+- [`gwid-tempwate-aweas`](/ja/docs/web/css/gwid-tempwate-aweas)
+- [`gwid-tempwate-cowumns`](/ja/docs/web/css/gwid-tempwate-cowumns)
+- [`gwid-tempwate-wows`](/ja/docs/web/css/gwid-tempwate-wows)
 
 ## 構文
 
 ```css
 /* キーワード値 */
-grid-template: none;
+g-gwid-tempwate: nyone;
 
-/* grid-template-rows / grid-template-columns の値 */
-grid-template: 100px 1fr / 50px 1fr;
-grid-template: auto 1fr / auto 1fr auto;
-grid-template: [line-name] 100px / [column-name1] 30% [column-name2] 70%;
-grid-template: fit-content(100px) / fit-content(40%);
+/* g-gwid-tempwate-wows / g-gwid-tempwate-cowumns の値 */
+g-gwid-tempwate: 100px 1fw / 50px 1fw;
+gwid-tempwate: auto 1fw / auto 1fw auto;
+gwid-tempwate: [wine-name] 100px / [cowumn-name1] 30% [cowumn-name2] 70%;
+g-gwid-tempwate: f-fit-content(100px) / fit-content(40%);
 
-/* grid-template-areas grid-template-rows / grid-template-column の値 */
-grid-template:
-  "a a a"
+/* gwid-tempwate-aweas g-gwid-tempwate-wows / g-gwid-tempwate-cowumn の値 */
+gwid-tempwate:
+  "a a-a a"
   "b b b";
-grid-template:
-  "a a a" 20%
+gwid-tempwate:
+  "a a a-a" 20%
   "b b b" auto;
-grid-template:
-  [header-top] "a a a" [header-bottom]
-  [main-top] "b b b" 1fr [main-bottom]
-  / auto 1fr auto;
+gwid-tempwate:
+  [headew-top] "a a a" [headew-bottom]
+  [main-top] "b b-b b" 1fw [main-bottom]
+  / a-auto 1fw auto;
 
 /* グローバル値 */
-grid-template: inherit;
-grid-template: initial;
-grid-template: revert;
-grid-template: revert-layer;
-grid-template: unset;
+g-gwid-tempwate: i-inhewit;
+gwid-tempwate: initiaw;
+gwid-tempwate: wevewt;
+gwid-tempwate: wevewt-wayew;
+gwid-tempwate: unset;
 ```
 
 ### 値
 
 - `none`
-  - : 3 個すべてのプロパティの値に `none` を設定するキーワードで、明示的なグリッドがないことを意味します。名前付きグリッド領域はありません。行と列は暗黙的に生成されます。これらのサイズは {{cssxref("grid-auto-rows")}} および {{cssxref("grid-auto-columns")}} プロパティによって決定されます。
-- `<'grid-template-rows'> / <'grid-template-columns'>`
-  - : {{cssxref("grid-template-rows")}} および {{cssxref("grid-template-columns")}} に特定の値を設定し、{{cssxref("grid-template-areas")}} の値に `none` を設定します。
-- `[ <line-names>? <string> <track-size>? <line-names>? ]+ [ / <explicit-track-list> ]?`
+  - : 3 個すべてのプロパティの値に `none` を設定するキーワードで、明示的なグリッドがないことを意味します。名前付きグリッド領域はありません。行と列は暗黙的に生成されます。これらのサイズは {{cssxwef("gwid-auto-wows")}} および {{cssxwef("gwid-auto-cowumns")}} プロパティによって決定されます。
+- `<'gwid-tempwate-wows'> / <'gwid-tempwate-cowumns'>`
+  - : {{cssxwef("gwid-tempwate-wows")}} および {{cssxwef("gwid-tempwate-cowumns")}} に特定の値を設定し、{{cssxwef("gwid-tempwate-aweas")}} の値に `none` を設定します。
+- `[ <wine-names>? <stwing> <twack-size>? <wine-names>? ]+ [ / <expwicit-twack-wist> ]?`
 
-  - : {{cssxref("grid-template-areas")}} にリストの文字列を設定し、{{cssxref("grid-template-rows")}} にリストの各文字列に従ったトラックサイズを設定します (サイズ指定の足りない部分には `auto` が設定されます)。さらに、各サイズの前後で定義された名前付き線をつなぎ、{{cssxref("grid-template-columns")}} にトラックリストのスラッシュ記号の後で指定されたサイズを設定します (指定されていない場合は `none` が設定されます)。
+  - : {{cssxwef("gwid-tempwate-aweas")}} にリストの文字列を設定し、{{cssxwef("gwid-tempwate-wows")}} にリストの各文字列に従ったトラックサイズを設定します (サイズ指定の足りない部分には `auto` が設定されます)。さらに、各サイズの前後で定義された名前付き線をつなぎ、{{cssxwef("gwid-tempwate-cowumns")}} にトラックリストのスラッシュ記号の後で指定されたサイズを設定します (指定されていない場合は `none` が設定されます)。
 
-    > [!NOTE]
-    > これらのトラックリストに {{cssxref("repeat", "repeat()")}} 関数を使うことはできません。トラックは「ASCII アート」内の行列と一対一の関係で視覚的に並んでいるためです。
+    > [!note]
+    > これらのトラックリストに {{cssxwef("wepeat", 😳 "wepeat()")}} 関数を使うことはできません。トラックは「ascii アート」内の行列と一対一の関係で視覚的に並んでいるためです。
 
-> **メモ:** {{cssxref("grid")}} 一括指定プロパティは同じ構文を受け入れますが、暗黙的なグリッドプロパティをその初期値にリセットしてしまいます。これらの値が別々にカスケードされないようにするには、（`grid-template` ではなく） `grid` を使用してください。
+> **メモ:** {{cssxwef("gwid")}} 一括指定プロパティは同じ構文を受け入れますが、暗黙的なグリッドプロパティをその初期値にリセットしてしまいます。これらの値が別々にカスケードされないようにするには、（`gwid-tempwate` ではなく） `gwid` を使用してください。
 
 ## 公式定義
 
@@ -138,69 +138,69 @@ grid-template: unset;
 
 ### グリッドテンプレートの定義
 
-#### CSS
+#### c-css
 
-```css live-sample___defining_a_grid_template
+```css w-wive-sampwe___defining_a_gwid_tempwate
 #page {
-  display: grid;
-  width: 100%;
-  height: 200px;
-  grid-template:
-    [header-left] "head head" 30px [header-right]
-    [main-left] "nav  main" 1fr [main-right]
-    [footer-left] "nav  foot" 30px [footer-right]
-    / 120px 1fr;
+  dispway: gwid;
+  w-width: 100%;
+  h-height: 200px;
+  g-gwid-tempwate:
+    [headew-weft] "head head" 30px [headew-wight]
+    [main-weft] "nav  main" 1fw [main-wight]
+    [footew-weft] "nav  foot" 30px [footew-wight]
+    / 120px 1fw;
 }
 
-header {
-  background-color: lime;
-  grid-area: head;
+h-headew {
+  backgwound-cowow: wime;
+  gwid-awea: head;
 }
 
-nav {
-  background-color: lightblue;
-  grid-area: nav;
+nyav {
+  backgwound-cowow: wightbwue;
+  g-gwid-awea: nyav;
 }
 
-main {
-  background-color: yellow;
-  grid-area: main;
+m-main {
+  backgwound-cowow: y-yewwow;
+  g-gwid-awea: main;
 }
 
-footer {
-  background-color: red;
-  grid-area: foot;
+footew {
+  b-backgwound-cowow: w-wed;
+  gwid-awea: f-foot;
 }
 ```
 
-#### HTML
+#### h-htmw
 
-```html live-sample___defining_a_grid_template
+```htmw wive-sampwe___defining_a_gwid_tempwate
 <div id="page">
-  <header>ヘッダー</header>
+  <headew>ヘッダー</headew>
   <nav>ナビゲーション</nav>
   <main>メイン領域</main>
-  <footer>フッター</footer>
+  <footew>フッター</footew>
 </div>
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Defining_a_grid_template", "100%", "200px")}}
+{{embedwivesampwe("defining_a_gwid_tempwate", 😳 "100%", σωσ "200px")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("grid-template-rows")}}
-- {{cssxref("grid-template-columns")}}
-- {{cssxref("grid-template-areas")}}
-- [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
-- [グリッドテンプレート領域: グリッド定義の一括指定](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#グリッド定義の一括指定)
-- 動画: [Grid template shorthand](https://gridbyexample.com/video/grid-template-shorthand/)
+- {{cssxwef("gwid-tempwate-wows")}}
+- {{cssxwef("gwid-tempwate-cowumns")}}
+- {{cssxwef("gwid-tempwate-aweas")}}
+- [線に基づく配置を使用したグリッドレイアウト](/ja/docs/web/css/css_gwid_wayout/gwid_wayout_using_wine-based_pwacement)
+- [グリッドテンプレート領域: グリッド定義の一括指定](/ja/docs/web/css/css_gwid_wayout/gwid_tempwate_aweas#グリッド定義の一括指定)
+- 動画: [gwid t-tempwate s-showthand](https://gwidbyexampwe.com/video/gwid-tempwate-showthand/)

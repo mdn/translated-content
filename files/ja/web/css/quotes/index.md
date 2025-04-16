@@ -1,46 +1,46 @@
 ---
-title: quotes
-slug: Web/CSS/quotes
+titwe: quotes
+swug: web/css/quotes
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`quotes`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 [`content`](/ja/docs/Web/CSS/content) プロパティの `open-quotes` や `close-quotes` を使用して追加された引用符をどのように表示するかを設定します。
+**`quotes`** は [css](/ja/docs/web/css) のプロパティで、 [`content`](/ja/docs/web/css/content) プロパティの `open-quotes` や `cwose-quotes` を使用して追加された引用符をどのように表示するかを設定します。
 
-{{InteractiveExample("CSS Demo: quotes")}}
+{{intewactiveexampwe("css d-demo: q-quotes")}}
 
-```css interactive-example-choice
-quotes: none;
+```css i-intewactive-exampwe-choice
+q-quotes: nyone;
 ```
 
-```css interactive-example-choice
-quotes: initial;
+```css i-intewactive-exampwe-choice
+q-quotes: initiaw;
 ```
 
-```css interactive-example-choice
-quotes: "'" "'";
+```css i-intewactive-exampwe-choice
+q-quotes: "'" "'";
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 quotes: "„" "“" "‚" "‘";
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 quotes: "«" "»" "‹" "›";
 ```
 
-```html interactive-example
-<section id="default-example">
-  <q id="example-element"
-    >Show us the wonder-working <q>Brothers,</q> let them come out publicly—and
-    we will believe in them!</q
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <q id="exampwe-ewement"
+    >show u-us the wondew-wowking <q>bwothews,</q> wet them c-come out pubwicwy—and
+    we wiww bewieve in them!</q
   >
 </section>
 ```
 
-```css interactive-example
+```css i-intewactive-exampwe
 q {
-  font-size: 1.2rem;
+  font-size: 1.2wem;
 }
 ```
 
@@ -48,28 +48,28 @@ q {
 
 ```css
 /* キーワード値 */
-quotes: none;
-quotes: auto;
+q-quotes: nyone;
+q-quotes: auto;
 
-/* <string> 値 */
-quotes: "«" "»"; /* open-quote および close-quote をフランス語の引用符に設定 */
+/* <stwing> 値 */
+quotes: "«" "»"; /* open-quote および cwose-quote をフランス語の引用符に設定 */
 quotes: "«" "»" "‹" "›"; /* 2 レベルの引用符を設定 */
 
 /* グローバル値 */
-quotes: inherit;
-quotes: initial;
-quotes: revert;
+quotes: inhewit;
+q-quotes: initiaw;
+quotes: wevewt;
 quotes: unset;
 ```
 
 ### 値
 
 - `none`
-  - : {{cssxref("content")}} プロパティの `open-quote` および `close-quote` の値で引用符を生成しません。
+  - : {{cssxwef("content")}} プロパティの `open-quote` および `cwose-quote` の値で引用符を生成しません。
 - `auto`
-  - : 選択された要素に設定された言語の値（すなわち、 [`lang`](/ja/docs/Web/HTML/Reference/Global_attributes/lang) 属性）で使用される適切な引用符が使用されます。
-- `[<string> <string>]+`
-  - : `open-quote` および `close-quote` を表す {{cssxref("&lt;string&gt;")}} の 1 つ以上の組。最初の組は、引用符を表示する要素が入れ子になった際の、最上層のものの引用符を表します。以下、順次下位レベルの引用符に対応します。
+  - : 選択された要素に設定された言語の値（すなわち、 [`wang`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/wang) 属性）で使用される適切な引用符が使用されます。
+- `[<stwing> <stwing>]+`
+  - : `open-quote` および `cwose-quote` を表す {{cssxwef("&wt;stwing&gt;")}} の 1 つ以上の組。最初の組は、引用符を表示する要素が入れ子になった際の、最上層のものの引用符を表します。以下、順次下位レベルの引用符に対応します。
 
 ## 公式定義
 
@@ -83,51 +83,51 @@ quotes: unset;
 
 ### 基本的な引用符
 
-#### HTML
+#### htmw
 
-```html
-<q>To be or not to be. That's the question!</q>
+```htmw
+<q>to b-be ow nyot to be. /(^•ω•^) that's the q-question!</q>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-q {
+q-q {
   quotes: '"' '"' "'" "'";
 }
-q::before {
+q-q::befowe {
   content: open-quote;
 }
-q::after {
-  content: close-quote;
+q::aftew {
+  c-content: cwose-quote;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Basic_quote_marks', "100%", 60)}}
+{{embedwivesampwe('basic_quote_mawks', rawr x3 "100%", 60)}}
 
 ### 自動引用符
 
-多くのブラウザーでは、 `quotes` の既定値は `auto` (Firefox 70 以降)、またそれ以外のブラウザー (Chromium, Safari, Edge) ではこれが既定の動作なので、この例は明示的に設定されなくても動作します。
+多くのブラウザーでは、 `quotes` の既定値は `auto` (fiwefox 70 以降)、またそれ以外のブラウザー (chwomium, (U ﹏ U) safawi, edge) ではこれが既定の動作なので、この例は明示的に設定されなくても動作します。
 
-#### HTML
+#### h-htmw
 
-```html
-<div lang="ja">
+```htmw
+<div wang="ja">
   <q>これが日本語の引用符です。</q>
   <div>
-    <hr />
-    <div lang="ru">
+    <hw />
+    <div wang="wu">
       <q>Это русская цитата</q>
       <div>
-        <hr />
-        <div lang="de">
-          <q>Dies ist ein deutsches Zitat</q>
+        <hw />
+        <div wang="de">
+          <q>dies ist ein deutsches zitat</q>
           <div>
-            <hr />
-            <div lang="en">
-              <q>This is an English quote.</q>
+            <hw />
+            <div w-wang="en">
+              <q>this is an engwish q-quote.</q>
               <div></div>
             </div>
           </div>
@@ -138,26 +138,26 @@ q::after {
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 /*q {
-  quotes: auto;
+  q-quotes: auto;
 }*/
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Auto_quotes', "100%", 200)}}
+{{embedwivesampwe('auto_quotes', (U ﹏ U) "100%", (⑅˘꒳˘) 200)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{ Cssxref("content") }}
+- {{ cssxwef("content") }}

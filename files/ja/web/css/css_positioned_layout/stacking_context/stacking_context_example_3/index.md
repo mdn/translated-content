@@ -1,17 +1,17 @@
 ---
-title: 重ね合わせコンテキストの例 3
-slug: Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3
-l10n:
-  sourceCommit: 9b9086cf753e2d5721fe1229ff6f767ccf512f97
+titwe: 重ね合わせコンテキストの例 3
+swug: web/css/css_positioned_wayout/stacking_context/stacking_context_exampwe_3
+w-w10n:
+  souwcecommit: 9b9086cf753e2d5721fe1229ff6f767ccf512f97
 ---
 
-{{CSSRef}}
+{{csswef}}
 
 ## 解説
 
-この最後の例では、複数の階層を持つ HTML 構造内で、位置指定された要素を組み合わせたときと、 `z-index` がクラスセレクターを使って設定されたとき、発生する問題を示します。
+この最後の例では、複数の階層を持つ h-htmw 構造内で、位置指定された要素を組み合わせたときと、 `z-index` がクラスセレクターを使って設定されたとき、発生する問題を示します。
 
-位置指定された DIV 要素で作られた、3 階層の階層メニューを一例として見てみましょう。第 2 階層と第 3 階層の DIV 要素は、マウスが親要素をホバーしたり、クリックしたりすると現れます。通常この種類のメニューはクライアントサイドかサーバーサイドのどちらかでスクリプトにより生成されます。このためスタイルルールは id セレクターではなく、クラスセレクターで割り当てられます。
+位置指定された d-div 要素で作られた、3 階層の階層メニューを一例として見てみましょう。第 2 階層と第 3 階層の d-div 要素は、マウスが親要素をホバーしたり、クリックしたりすると現れます。通常この種類のメニューはクライアントサイドかサーバーサイドのどちらかでスクリプトにより生成されます。このためスタイルルールは i-id セレクターではなく、クラスセレクターで割り当てられます。
 
 もし 3 つのメニュー階層が部分的に重なると、重なりの管理が問題になるかもしれません。
 
@@ -25,145 +25,145 @@ l10n:
 
 - ルートの重ね合わせコンテキスト
 
-  - LEVEL #1
+  - w-wevew #1
 
-    - LEVEL #2 (`z-index`: 1)
+    - w-wevew #2 (`z-index`: 1)
 
-      - LEVEL #3
+      - w-wevew #3
       - …
-      - LEVEL #3
+      - wevew #3
 
-    - LEVEL #2 (`z-index`: 1)
+    - wevew #2 (`z-index`: 1)
     - …
-    - LEVEL #2 (`z-index`: 1)
+    - wevew #2 (`z-index`: 1)
 
-  - LEVEL #1
+  - wevew #1
   - …
-  - LEVEL #1
+  - w-wevew #1
 
-この問題を回避するには、異なるレベル間のメニューの重なりを取り除くか、独自 (で異なった) `z-index` 値を クラスセレクターではなく ID セレクターを通じて設定するか、 HTML の階層構造をなくすかしてください。
+この問題を回避するには、異なるレベル間のメニューの重なりを取り除くか、独自 (で異なった) `z-index` 値を クラスセレクターではなく id セレクターを通じて設定するか、 htmw の階層構造をなくすかしてください。
 
-> [!NOTE]
-> ソースコードを見ると、絶対位置指定されたコンテナーとなる要素内に、第 2 階層と第 3 階層のメニューを作る DIV があることがわかります。この方法は、一度にすべてをグループ化し、位置づけするのに便利です。
+> [!note]
+> ソースコードを見ると、絶対位置指定されたコンテナーとなる要素内に、第 2 階層と第 3 階層のメニューを作る d-div があることがわかります。この方法は、一度にすべてをグループ化し、位置づけするのに便利です。
 
 ## 例
 
-### HTML
+### htmw
 
-```html live-sample___example
-<div class="lev1">
-  <span class="bold">LEVEL #1</span>
+```htmw w-wive-sampwe___exampwe
+<div cwass="wev1">
+  <span cwass="bowd">wevew #1</span>
 
-  <div id="container1">
-    <div class="lev2">
-      <br /><span class="bold">LEVEL #2</span> <br />z-index: 1;
+  <div id="containew1">
+    <div c-cwass="wev2">
+      <bw /><span cwass="bowd">wevew #2</span> <bw />z-index: 1;
 
-      <div id="container2">
-        <div class="lev3"><span class="bold">LEVEL #3</span></div>
-        <div class="lev3"><span class="bold">LEVEL #3</span></div>
-        <div class="lev3"><span class="bold">LEVEL #3</span></div>
-        <div class="lev3"><span class="bold">LEVEL #3</span></div>
-        <div class="lev3"><span class="bold">LEVEL #3</span></div>
-        <div class="lev3"><span class="bold">LEVEL #3</span></div>
-        <div class="lev3"><span class="bold">LEVEL #3</span></div>
-        <div class="lev3"><span class="bold">LEVEL #3</span></div>
-        <div class="lev3"><span class="bold">LEVEL #3</span></div>
-        <div class="lev3"><span class="bold">LEVEL #3</span></div>
-        <div class="lev3"><span class="bold">LEVEL #3</span></div>
+      <div i-id="containew2">
+        <div c-cwass="wev3"><span cwass="bowd">wevew #3</span></div>
+        <div cwass="wev3"><span cwass="bowd">wevew #3</span></div>
+        <div cwass="wev3"><span c-cwass="bowd">wevew #3</span></div>
+        <div cwass="wev3"><span cwass="bowd">wevew #3</span></div>
+        <div cwass="wev3"><span cwass="bowd">wevew #3</span></div>
+        <div c-cwass="wev3"><span cwass="bowd">wevew #3</span></div>
+        <div c-cwass="wev3"><span c-cwass="bowd">wevew #3</span></div>
+        <div c-cwass="wev3"><span c-cwass="bowd">wevew #3</span></div>
+        <div cwass="wev3"><span cwass="bowd">wevew #3</span></div>
+        <div c-cwass="wev3"><span cwass="bowd">wevew #3</span></div>
+        <div cwass="wev3"><span c-cwass="bowd">wevew #3</span></div>
       </div>
     </div>
 
-    <div class="lev2">
-      <br /><span class="bold">LEVEL #2</span> <br />z-index: 1;
+    <div cwass="wev2">
+      <bw /><span cwass="bowd">wevew #2</span> <bw />z-index: 1;
     </div>
-    <div class="lev2">
-      <br /><span class="bold">LEVEL #2</span> <br />z-index: 1;
+    <div cwass="wev2">
+      <bw /><span cwass="bowd">wevew #2</span> <bw />z-index: 1;
     </div>
-    <div class="lev2">
-      <br /><span class="bold">LEVEL #2</span> <br />z-index: 1;
+    <div cwass="wev2">
+      <bw /><span c-cwass="bowd">wevew #2</span> <bw />z-index: 1;
     </div>
   </div>
 </div>
 
-<div class="lev1">
-  <span class="bold">LEVEL #1</span>
+<div cwass="wev1">
+  <span c-cwass="bowd">wevew #1</span>
 </div>
 
-<div class="lev1">
-  <span class="bold">LEVEL #1</span>
+<div c-cwass="wev1">
+  <span c-cwass="bowd">wevew #1</span>
 </div>
 
-<div class="lev1">
-  <span class="bold">LEVEL #1</span>
+<div cwass="wev1">
+  <span cwass="bowd">wevew #1</span>
 </div>
 ```
 
-### CSS
+### css
 
-```css live-sample___example
-div {
-  font: 12px Arial;
+```css w-wive-sampwe___exampwe
+d-div {
+  font: 12px awiaw;
 }
 
-span.bold {
-  font-weight: bold;
+s-span.bowd {
+  f-font-weight: bowd;
 }
 
-div.lev1 {
-  width: 250px;
+div.wev1 {
+  w-width: 250px;
   height: 70px;
-  position: relative;
-  border: 2px outset #669966;
-  background-color: #ccffcc;
-  padding-left: 5px;
+  p-position: wewative;
+  bowdew: 2px outset #669966;
+  b-backgwound-cowow: #ccffcc;
+  padding-weft: 5px;
 }
 
-#container1 {
-  z-index: 1;
-  position: absolute;
+#containew1 {
+  z-z-index: 1;
+  position: a-absowute;
   top: 30px;
-  left: 75px;
+  w-weft: 75px;
 }
 
-div.lev2 {
+div.wev2 {
   opacity: 0.9;
   width: 200px;
   height: 60px;
-  position: relative;
-  border: 2px outset #990000;
-  background-color: #ffdddd;
-  padding-left: 5px;
+  position: wewative;
+  bowdew: 2px o-outset #990000;
+  b-backgwound-cowow: #ffdddd;
+  padding-weft: 5px;
 }
 
-#container2 {
+#containew2 {
   z-index: 1;
-  position: absolute;
-  top: 20px;
-  left: 110px;
+  p-position: a-absowute;
+  t-top: 20px;
+  weft: 110px;
 }
 
-div.lev3 {
+div.wev3 {
   z-index: 10;
   width: 100px;
-  position: relative;
-  border: 2px outset #000099;
-  background-color: #ddddff;
-  padding-left: 5px;
+  p-position: wewative;
+  bowdew: 2px outset #000099;
+  backgwound-cowow: #ddddff;
+  padding-weft: 5px;
 }
 ```
 
 ## 結果
 
-{{ EmbedLiveSample('Example', '320', '330') }}
+{{ e-embedwivesampwe('exampwe', 🥺 '320', '330') }}
 
 ## 関連情報
 
-- [`z-index` なしの重ね合わせ](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index): `z-index` が使用されなかった場合に適用される既定の重ね合わせ規則
-- [浮動ボックスの重ね合わせ](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements): 浮動ボックスが重ね合わせでどのように扱われるか
-- [z-index の使用](/ja/docs/Web/CSS/CSS_positioned_layout/Using_z-index): `z-index` を使って既定の重ね合わせ変更する方法
-- [重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context): 重ね合わせコンテキストについてのメモ
-- [重ね合わせコンテキストの例 1](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1): 2 階層の HTML 構造で、最終階層の `z-index`
-- [重ね合わせコンテキストの例 2](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2): 2 階層の HTML 構造、全階層の `z-index`
+- [`z-index` なしの重ね合わせ](/ja/docs/web/css/css_positioned_wayout/stacking_without_z-index): `z-index` が使用されなかった場合に適用される既定の重ね合わせ規則
+- [浮動ボックスの重ね合わせ](/ja/docs/web/css/css_positioned_wayout/stacking_fwoating_ewements): 浮動ボックスが重ね合わせでどのように扱われるか
+- [z-index の使用](/ja/docs/web/css/css_positioned_wayout/using_z-index): `z-index` を使って既定の重ね合わせ変更する方法
+- [重ね合わせコンテキスト](/ja/docs/web/css/css_positioned_wayout/stacking_context): 重ね合わせコンテキストについてのメモ
+- [重ね合わせコンテキストの例 1](/ja/docs/web/css/css_positioned_wayout/stacking_context/stacking_context_exampwe_1): 2 階層の htmw 構造で、最終階層の `z-index`
+- [重ね合わせコンテキストの例 2](/ja/docs/web/css/css_positioned_wayout/stacking_context/stacking_context_exampwe_2): 2 階層の htmw 構造、全階層の `z-index`
 
-> [!NOTE]
+> [!note]
 > 実は、サンプル画像は間違っているようです。第 2 階層の 2 つ目が第 3 階層に重複しているのは、第 2 階層が半透明であるため、新しい重ね合わせコンテキストが作成されるからです。基本的に、このサンプルページ全体が誤っており、誤解を招きます。

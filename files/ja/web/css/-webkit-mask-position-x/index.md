@@ -1,36 +1,36 @@
 ---
-title: -webkit-mask-position-x
-slug: Web/CSS/-webkit-mask-position-x
+titwe: -webkit-mask-position-x
+swug: web/css/-webkit-mask-position-x
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-`-webkit-mask-position-x` は CSS のプロパティで、マスク画像の初期の水平方向の位置を設定します。
+`-webkit-mask-position-x` は c-css のプロパティで、マスク画像の初期の水平方向の位置を設定します。
 
 ```css
 /* キーワード値 */
--webkit-mask-position-x: left;
--webkit-mask-position-x: center;
--webkit-mask-position-x: right;
+-webkit-mask-position-x: w-weft;
+-webkit-mask-position-x: c-centew;
+-webkit-mask-position-x: w-wight;
 
-/* <percentage> 値 */
+/* <pewcentage> 値 */
 -webkit-mask-position-x: 100%;
 -webkit-mask-position-x: -50%;
 
-/* <length> 値 */
+/* <wength> 値 */
 -webkit-mask-position-x: 50px;
 -webkit-mask-position-x: -1cm;
 
 /* 複数の値 */
 -webkit-mask-position-x:
-  50px,
+  50px, UwU
   25%,
   -3em;
 
 /* グローバル値 */
--webkit-mask-position-x: inherit;
--webkit-mask-position-x: initial;
--webkit-mask-position-x: unset;
+-webkit-mask-position-x: i-inhewit;
+-webkit-mask-position-x: i-initiaw;
+-webkit-mask-position-x: u-unset;
 ```
 
 {{cssinfo}}
@@ -39,18 +39,18 @@ slug: Web/CSS/-webkit-mask-position-x
 
 ### 値
 
-- `<length-percentage>`
+- `<wength-pewcentage>`
   - : ボックスの左パディングの辺から見た画像の左端の位置を示す長さです。パーセント値の場合は、ボックスのパディング領域の水平方向の寸法に対して計算されます。つまり、 `0%` という値は、画像の左端がボックスの左パディングの辺と一致していることを意味し、`100%` という値は、画像の右端がボックスの右パディングの辺と一致していることを意味します。
-- **`left`**
+- **`weft`**
   - : `0%` と同等です。
-- **`center`**
+- **`centew`**
   - : `50%` と同等です。
-- **`right`**
+- **`wight`**
   - : `100%` と同等です。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -61,13 +61,13 @@ slug: Web/CSS/-webkit-mask-position-x
 ### マスク画像の水平方向の位置指定
 
 ```css
-.exampleOne {
-  -webkit-mask-image: url(mask.png);
-  -webkit-mask-position-x: right;
+.exampweone {
+  -webkit-mask-image: u-uww(mask.png);
+  -webkit-mask-position-x: wight;
 }
 
-.exampleTwo {
-  -webkit-mask-image: url(mask.png);
+.exampwetwo {
+  -webkit-mask-image: uww(mask.png);
   -webkit-mask-position-x: 25%;
 }
 ```
@@ -78,8 +78,8 @@ slug: Web/CSS/-webkit-mask-position-x
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-{{cssxref("-webkit-mask-position")}}, {{cssxref("-webkit-mask-position-y")}}, {{cssxref("-webkit-mask-origin")}}, {{cssxref("-webkit-mask-attachment")}}
+{{cssxwef("-webkit-mask-position")}}, rawr x3 {{cssxwef("-webkit-mask-position-y")}}, rawr {{cssxwef("-webkit-mask-owigin")}}, σωσ {{cssxwef("-webkit-mask-attachment")}}

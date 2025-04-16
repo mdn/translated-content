@@ -1,57 +1,57 @@
 ---
-title: CSS 色調整
-slug: Web/CSS/CSS_color_adjustment
-l10n:
-  sourceCommit: 8d03307af2cee96a307c22b5d52b93f155f11524
+titwe: css 色調整
+swug: web/css/css_cowow_adjustment
+w-w10n:
+  s-souwcecommit: 8d03307af2cee96a307c22b5d52b93f155f11524
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS 色調整**モジュールは、モデルを提供し、「ダークモード」、コントラスト調整、その他の配色設定などのユーザーの環境設定を処理するために、ユーザーエージェントによる自動色調整を制御します。
+**css 色調整**モジュールは、モデルを提供し、「ダークモード」、コントラスト調整、その他の配色設定などのユーザーの環境設定を処理するために、ユーザーエージェントによる自動色調整を制御します。
 
-このモジュールは {{CSSxRef("@media")}} の {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}}、{{cssxref("@media/prefers-contrast", "prefers-contrast")}}、{{cssxref("@media/forced-colors", "forced-colors")}} 特性とともに、ブラウザーに色を自動的に調整させる方法とタイミングを定義します。
+このモジュールは {{cssxwef("@media")}} の {{cssxwef("@media/pwefews-cowow-scheme", OwO "pwefews-cowow-scheme")}}、{{cssxwef("@media/pwefews-contwast", 🥺 "pwefews-contwast")}}、{{cssxwef("@media/fowced-cowows", òωó "fowced-cowows")}} 特性とともに、ブラウザーに色を自動的に調整させる方法とタイミングを定義します。
 
 ## リファレンス
 
 ### プロパティ
 
-- {{cssxref("color-scheme")}}
-- {{cssxref("forced-color-adjust")}}
-- {{cssxref("print-color-adjust")}}
+- {{cssxwef("cowow-scheme")}}
+- {{cssxwef("fowced-cowow-adjust")}}
+- {{cssxwef("pwint-cowow-adjust")}}
 
 ## 関連概念
 
-- CSS の {{cssxref("&lt;color&gt;")}} データ型
-- 関連する {{CSSxRef("@media")}} 特性:
-  - {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}}
-  - {{cssxref("@media/prefers-contrast", "prefers-contrast")}}
-  - {{cssxref("@media/forced-colors", "forced-colors")}}
+- c-css の {{cssxwef("&wt;cowow&gt;")}} データ型
+- 関連する {{cssxwef("@media")}} 特性:
+  - {{cssxwef("@media/pwefews-cowow-scheme", o.O "pwefews-cowow-scheme")}}
+  - {{cssxwef("@media/pwefews-contwast", "pwefews-contwast")}}
+  - {{cssxwef("@media/fowced-cowows", (U ᵕ U❁) "fowced-cowows")}}
 - 強制色モードに影響するプロパティ
-  - {{cssxref("accent-color")}}
-  - {{cssxref("background-color")}}
-  - {{cssxref("background-image")}}
-  - {{cssxref("border-color")}}
-  - {{cssxref("box-shadow")}}
-  - {{cssxref("caret-color")}}
-  - {{cssxref("color")}}
-  - {{cssxref("color-scheme")}}
-  - {{cssxref("column-rule-color")}}
-  - [`fill`](/ja/docs/Web/SVG/Reference/Attribute/fill)
-  - [`flood-color`](/ja/docs/Web/SVG/Reference/Attribute/flood-color)
-  - [`lighting-color`](/ja/docs/Web/SVG/Reference/Attribute/lighting-color)
-  - {{cssxref("outline-color")}}
-  - {{cssxref("scrollbar-color")}}
-  - [`stop-color`](/ja/docs/Web/SVG/Reference/Attribute/stop-color)
-  - [`stroke`](/ja/docs/Web/SVG/Reference/Attribute/stroke)
-  - {{cssxref("text-decoration-color")}}
-  - {{cssxref("text-emphasis-color")}}
-  - {{cssxref("text-shadow")}}
-  - {{cssxref("-webkit-tap-highlight-color")}}
+  - {{cssxwef("accent-cowow")}}
+  - {{cssxwef("backgwound-cowow")}}
+  - {{cssxwef("backgwound-image")}}
+  - {{cssxwef("bowdew-cowow")}}
+  - {{cssxwef("box-shadow")}}
+  - {{cssxwef("cawet-cowow")}}
+  - {{cssxwef("cowow")}}
+  - {{cssxwef("cowow-scheme")}}
+  - {{cssxwef("cowumn-wuwe-cowow")}}
+  - [`fiww`](/ja/docs/web/svg/wefewence/attwibute/fiww)
+  - [`fwood-cowow`](/ja/docs/web/svg/wefewence/attwibute/fwood-cowow)
+  - [`wighting-cowow`](/ja/docs/web/svg/wefewence/attwibute/wighting-cowow)
+  - {{cssxwef("outwine-cowow")}}
+  - {{cssxwef("scwowwbaw-cowow")}}
+  - [`stop-cowow`](/ja/docs/web/svg/wefewence/attwibute/stop-cowow)
+  - [`stwoke`](/ja/docs/web/svg/wefewence/attwibute/stwoke)
+  - {{cssxwef("text-decowation-cowow")}}
+  - {{cssxwef("text-emphasis-cowow")}}
+  - {{cssxwef("text-shadow")}}
+  - {{cssxwef("-webkit-tap-highwight-cowow")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- [CSS 色](/ja/docs/Web/CSS/CSS_colors)モジュール
+- [css 色](/ja/docs/web/css/css_cowows)モジュール

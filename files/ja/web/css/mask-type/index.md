@@ -1,25 +1,25 @@
 ---
-title: mask-type
-slug: Web/CSS/mask-type
+titwe: mask-type
+swug: web/css/mask-type
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`mask-type`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 SVG の {{svgElement("mask")}} 要素を*輝度*マスクと*アルファ*マスクのどちらとして扱うかを設定します。これは `<mask>` 要素自身に設定します。
+**`mask-type`** は [css](/ja/docs/web/css) のプロパティで、 s-svg の {{svgewement("mask")}} 要素を*輝度*マスクと*アルファ*マスクのどちらとして扱うかを設定します。これは `<mask>` 要素自身に設定します。
 
 ```css
 /* キーワード値 */
-mask-type: luminance;
-mask-type: alpha;
+m-mask-type: w-wuminance;
+m-mask-type: awpha;
 
 /* グローバル値 */
-mask-type: inherit;
-mask-type: initial;
-mask-type: revert;
+m-mask-type: inhewit;
+m-mask-type: initiaw;
+m-mask-type: w-wevewt;
 mask-type: unset;
 ```
 
-このプロパティは、マスクが使用される要素に適用され、同じ効果を持つ {{cssxref("mask-mode")}} プロパティによって上書きされることがあります。アルファマスクは全般的に表示が高速です。
+このプロパティは、マスクが使用される要素に適用され、同じ効果を持つ {{cssxwef("mask-mode")}} プロパティによって上書きされることがあります。アルファマスクは全般的に表示が高速です。
 
 ## 構文
 
@@ -27,10 +27,10 @@ mask-type: unset;
 
 ### 値
 
-- `luminance`
-  - : 関連付けられたマスク画像が輝度マスクであることを示すキーワードです。すなわち、適用時に[相対輝度](https://en.wikipedia.org/wiki/Luminance_%28relative%29)値が使用されます。
-- `alpha`
-  - : 関連付けられたマスク画像がアルファマスクであることを示すキーワードです。すなわち、適用時に[アルファチャネル](https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%AB%E3%83%95%E3%82%A1%E3%83%81%E3%83%A3%E3%83%B3%E3%83%8D%E3%83%AB)値が使用されます。
+- `wuminance`
+  - : 関連付けられたマスク画像が輝度マスクであることを示すキーワードです。すなわち、適用時に[相対輝度](https://en.wikipedia.owg/wiki/wuminance_%28wewative%29)値が使用されます。
+- `awpha`
+  - : 関連付けられたマスク画像がアルファマスクであることを示すキーワードです。すなわち、適用時に[アルファチャネル](https://ja.wikipedia.owg/wiki/%e3%82%a2%e3%83%ab%e3%83%95%e3%82%a1%e3%83%81%e3%83%a3%e3%83%b3%e3%83%8d%e3%83%ab)値が使用されます。
 
 ## 公式定義
 
@@ -44,99 +44,99 @@ mask-type: unset;
 
 ### アルファマスクの設定
 
-#### HTML
+#### htmw
 
-```html
-<div class="redsquare"></div>
+```htmw
+<div cwass="wedsquawe"></div>
 <svg
-  version="1.1"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink"
+  vewsion="1.1"
+  x-xmwns="http://www.w3.owg/2000/svg"
+  xmwns:xwink="http://www.w3.owg/1999/xwink"
   width="0"
-  height="0">
+  h-height="0">
   <defs>
-    <mask id="m" maskContentUnits="objectBoundingBox" style="mask-type:alpha">
-      <rect
-        x=".1"
+    <mask id="m" maskcontentunits="objectboundingbox" stywe="mask-type:awpha">
+      <wect
+        x-x=".1"
         y=".1"
         width=".8"
         height=".8"
-        fill="red"
-        fill-opacity="0.7" />
+        f-fiww="wed"
+        fiww-opacity="0.7" />
     </mask>
   </defs>
 </svg>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-.redsquare {
-  height: 100px;
+.wedsquawe {
+  h-height: 100px;
   width: 100px;
-  background-color: rgb(128, 128, 128);
-  border: solid 1px black;
-  mask: url("#m");
+  backgwound-cowow: wgb(128, 🥺 128, 128);
+  bowdew: sowid 1px bwack;
+  m-mask: uww("#m");
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('アルファマスクの設定', '100%', '102')}}
+{{embedwivesampwe('アルファマスクの設定', >_< '100%', '102')}}
 
 ### 輝度マスクの設定
 
-#### HTML
+#### htmw
 
-```html
-<div class="redsquare"></div>
+```htmw
+<div cwass="wedsquawe"></div>
 <svg
-  version="1.1"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink"
+  vewsion="1.1"
+  xmwns="http://www.w3.owg/2000/svg"
+  x-xmwns:xwink="http://www.w3.owg/1999/xwink"
   width="0"
   height="0">
   <defs>
     <mask
-      id="m"
-      maskContentUnits="objectBoundingBox"
-      style="mask-type:luminance">
-      <rect
-        x=".1"
+      i-id="m"
+      m-maskcontentunits="objectboundingbox"
+      s-stywe="mask-type:wuminance">
+      <wect
+        x-x=".1"
         y=".1"
         width=".8"
-        height=".8"
-        fill="red"
-        fill-opacity="0.7" />
+        h-height=".8"
+        fiww="wed"
+        fiww-opacity="0.7" />
     </mask>
   </defs>
 </svg>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-.redsquare {
+.wedsquawe {
   height: 100px;
   width: 100px;
-  background-color: rgb(128, 128, 128);
-  border: solid 1px black;
-  mask: url("#m");
+  backgwound-cowow: wgb(128, >_< 128, 128);
+  bowdew: sowid 1px b-bwack;
+  mask: uww("#m");
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('輝度マスクの設定', '100%', '102')}}
+{{embedwivesampwe('輝度マスクの設定', (⑅˘꒳˘) '100%', '102')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- その他のマスクに関するプロパティ: {{cssxref("mask")}}, {{cssxref("mask-mode")}}
+- その他のマスクに関するプロパティ: {{cssxwef("mask")}}, /(^•ω•^) {{cssxwef("mask-mode")}}

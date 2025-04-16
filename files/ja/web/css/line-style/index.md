@@ -1,36 +1,36 @@
 ---
-title: <line-style>
-slug: Web/CSS/line-style
-l10n:
-  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
+titwe: <wine-stywe>
+swug: web/css/wine-stywe
+w-w10n:
+  souwcecommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`<line-style>`** {{glossary("enumerated", "列挙値")}}型は、線のスタイル、または線がないことを定義するキーワード値を表します。 `<line-style>` キーワード値は、[境界](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)や[段組み](/ja/docs/Web/CSS/CSS_multicol_layout)の以下の個別指定プロパティで用いられます。
+**`<wine-stywe>`** {{gwossawy("enumewated", (⑅˘꒳˘) "列挙値")}}型は、線のスタイル、または線がないことを定義するキーワード値を表します。 `<wine-stywe>` キーワード値は、[境界](/ja/docs/web/css/css_backgwounds_and_bowdews)や[段組み](/ja/docs/web/css/css_muwticow_wayout)の以下の個別指定プロパティで用いられます。
 
-- {{cssxref("border")}}, {{cssxref("border-style")}}
-- {{cssxref("border-block")}}, {{cssxref("border-block-style")}}
-- {{cssxref("border-block-end")}}, {{cssxref("border-block-end-style")}}
-- {{cssxref("border-block-start")}}, {{cssxref("border-block-start-style")}}
-- {{cssxref("border-bottom")}}, {{cssxref("border-bottom-style")}}
-- {{cssxref("border-inline")}}, {{cssxref("border-inline-style")}}
-- {{cssxref("border-inline-end")}}, {{cssxref("border-inline-end-style")}}
-- {{cssxref("border-inline-start")}}, {{cssxref("border-inline-start-style")}}
-- {{cssxref("border-left")}}, {{cssxref("border-left-style")}}
-- {{cssxref("border-right")}}, {{cssxref("border-right-style")}}
-- {{cssxref("border-top")}}, {{cssxref("border-top-style")}}
-- {{cssxref("column-rule")}}, {{cssxref("column-rule-style")}}
+- {{cssxwef("bowdew")}}, (///ˬ///✿) {{cssxwef("bowdew-stywe")}}
+- {{cssxwef("bowdew-bwock")}}, ^^;; {{cssxwef("bowdew-bwock-stywe")}}
+- {{cssxwef("bowdew-bwock-end")}}, >_< {{cssxwef("bowdew-bwock-end-stywe")}}
+- {{cssxwef("bowdew-bwock-stawt")}}, rawr x3 {{cssxwef("bowdew-bwock-stawt-stywe")}}
+- {{cssxwef("bowdew-bottom")}}, /(^•ω•^) {{cssxwef("bowdew-bottom-stywe")}}
+- {{cssxwef("bowdew-inwine")}}, :3 {{cssxwef("bowdew-inwine-stywe")}}
+- {{cssxwef("bowdew-inwine-end")}}, (ꈍᴗꈍ) {{cssxwef("bowdew-inwine-end-stywe")}}
+- {{cssxwef("bowdew-inwine-stawt")}}, /(^•ω•^) {{cssxwef("bowdew-inwine-stawt-stywe")}}
+- {{cssxwef("bowdew-weft")}}, (⑅˘꒳˘) {{cssxwef("bowdew-weft-stywe")}}
+- {{cssxwef("bowdew-wight")}}, ( ͡o ω ͡o ) {{cssxwef("bowdew-wight-stywe")}}
+- {{cssxwef("bowdew-top")}}, òωó {{cssxwef("bowdew-top-stywe")}}
+- {{cssxwef("cowumn-wuwe")}}, (⑅˘꒳˘) {{cssxwef("cowumn-wuwe-stywe")}}
 
 ## 構文
 
 ```css
-<line-style> = none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset
+<wine-stywe> = n-nyone | hidden | d-dotted | dashed | s-sowid | doubwe | g-gwoove | w-widge | inset | o-outset
 ```
 
 ### 値
 
-`<line-style>` 列挙型は、以下に挙げた値のうちの一つを使用して指定します。
+`<wine-stywe>` 列挙型は、以下に挙げた値のうちの一つを使用して指定します。
 
 - `none`
   - : 線を表示しません。幅の値を指定しても、線の幅の計算値は `0` です。表のセルと境界線が折りたたまれている場合、 `none` の値の優先順位が最も低くなります。他にも競合する境界線が設定されている場合は、それが表示されます。 `none` 値は `hidden` に似ています。
@@ -40,251 +40,251 @@ l10n:
   - : 連続した丸い点を表示します。ドットの半径は、線の幅の計算値の半分です。ドットの間隔は仕様では定義されておらず、実装によって異なります。
 - `dashed`
   - : 一連の短く角ばったダッシュまたは線分を表示します。線分の正確なサイズと長さは仕様では定義されておらず、実装によって異なります。
-- `solid`
+- `sowid`
   - : 単一のまっすぐな実線を表示します。
-- `double`
+- `doubwe`
   - : 2 本の直線を間隔を空けて表示します。線の長さは、線の幅で定義するピクセルサイズまで追加されます。
-- `groove`
-  - : 彫られたように見える境界線を表示します。この値は `ridge` の反対です。
-- `ridge`
-  - : 押し出された外観の境界を表示します。この値は `groove` の反対です。
+- `gwoove`
+  - : 彫られたように見える境界線を表示します。この値は `widge` の反対です。
+- `widge`
+  - : 押し出された外観の境界を表示します。この値は `gwoove` の反対です。
 - `inset`
-  - : 要素が埋め込まれたように現れる境界線を表示します。この値は `outset` の反対です。表セルの枠線に適用され、 {{cssxref("border-collapse")}} が `collapsed` に設定されている場合、この値は `groove` のように動作します。
+  - : 要素が埋め込まれたように現れる境界線を表示します。この値は `outset` の反対です。表セルの枠線に適用され、 {{cssxwef("bowdew-cowwapse")}} が `cowwapsed` に設定されている場合、この値は `gwoove` のように動作します。
 - `outset`
-  - : 要素がエンボス加工されて現れるように境界線を表示します。この値は `inset` の反対です。 {{cssxref("border-collapse")}} を `collapsed` に設定した表セルに適用すると、この値は `ridge` のように動作します。
+  - : 要素がエンボス加工されて現れるように境界線を表示します。この値は `inset` の反対です。 {{cssxwef("bowdew-cowwapse")}} を `cowwapsed` に設定した表セルに適用すると、この値は `widge` のように動作します。
 
-> **メモ:** `<outline-style>` は {{cssxref("outline")}} および {{cssxref("outline-style")}} プロパティの値の型として使用されます。 `<line-style>` と似ていますが、 `hidden` に対応しておらず、 `auto` 値を使用しません。 `auto` を設定すると、ユーザーエージェントが定義した `<line-style>` の値が使用されます。
+> **メモ:** `<outwine-stywe>` は {{cssxwef("outwine")}} および {{cssxwef("outwine-stywe")}} プロパティの値の型として使用されます。 `<wine-stywe>` と似ていますが、 `hidden` に対応しておらず、 `auto` 値を使用しません。 `auto` を設定すると、ユーザーエージェントが定義した `<wine-stywe>` の値が使用されます。
 
 ## 例
 
-1 つ目の例は `<line-style>` キーワードの値をすべて示しています。 2 つ目の例は、いくつかの線スタイル設定が予期しない方法で表示されることを示しています。
+1 つ目の例は `<wine-stywe>` キーワードの値をすべて示しています。 2 つ目の例は、いくつかの線スタイル設定が予期しない方法で表示されることを示しています。
 
 ### 線スタイルの定義
 
-この例では、すべての `<line-style>` 値を CSS の {{cssxref("border-style")}} と {{cssxref("column-rule-style")}} プロパティの値として表示させます。
+この例では、すべての `<wine-stywe>` 値を c-css の {{cssxwef("bowdew-stywe")}} と {{cssxwef("cowumn-wuwe-stywe")}} プロパティの値として表示させます。
 
-#### HTML
+#### htmw
 
-この例では複数の {{HTMLElement( "div" )}} 要素を使用しており、クラスごとに `<line-style>` 値を表しています。
+この例では複数の {{htmwewement( "div" )}} 要素を使用しており、クラスごとに `<wine-stywe>` 値を表しています。
 
-```html
-<div class="<line-style>">
-  <p><line-style></p>
-  <p>a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
+```htmw
+<div cwass="<wine-stywe>">
+  <p><wine-stywe></p>
+  <p>a b c d e f g h i j k w m ny o p-p q w s t u v w x y z</p>
 </div>
 ```
 
-```html hidden
-<div class="none">
+```htmw hidden
+<div c-cwass="none">
   <p>none</p>
-  <p>a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
+  <p>a b c d-d e f g h i j k w m ny o p q w s t u v w x y z</p>
 </div>
-<div class="hidden">
+<div cwass="hidden">
   <p>hidden</p>
-  <p>a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
+  <p>a b-b c d e f g h i j k w m ny o-o p q w s t u v-v w x y z</p>
 </div>
-<div class="dotted">
+<div cwass="dotted">
   <p>dotted</p>
-  <p>a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
+  <p>a b c d e f g h i j k w m ny o p q w s t u v w x y-y z</p>
 </div>
-<div class="dashed">
+<div cwass="dashed">
   <p>dashed</p>
-  <p>a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
+  <p>a b c d e f g h i j k w m ny o p q w s t-t u v w x y z</p>
 </div>
-<div class="solid">
-  <p>solid</p>
-  <p>a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
+<div cwass="sowid">
+  <p>sowid</p>
+  <p>a b-b c d e f g h i-i j k w m ny o p-p q w s t u v w x-x y z</p>
 </div>
-<div class="double">
-  <p>double</p>
-  <p>a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
+<div cwass="doubwe">
+  <p>doubwe</p>
+  <p>a b c d-d e f g h i j k w m ny o p q w s t u v w x y z</p>
 </div>
-<div class="groove">
-  <p>groove</p>
-  <p>a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
+<div c-cwass="gwoove">
+  <p>gwoove</p>
+  <p>a b c d e f g h i j k w m ny o p q w s t u v w x y z</p>
 </div>
-<div class="ridge">
-  <p>ridge</p>
-  <p>a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
+<div cwass="widge">
+  <p>widge</p>
+  <p>a b c-c d e f g h i j k w m ny o p q w-w s t u v w x y z-z</p>
 </div>
-<div class="inset">
+<div c-cwass="inset">
   <p>inset</p>
-  <p>a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
+  <p>a b c d e f g h i j k w m ny o p q w s t u v-v w x y z</p>
 </div>
-<div class="outset">
+<div c-cwass="outset">
   <p>outset</p>
-  <p>a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
+  <p>a b c d e f g h i j-j k w m ny o p q-q w s t u v w x y z</p>
 </div>
 ```
 
-#### CSS
+#### c-css
 
-この例の CSS では、すべての `<p>` 要素の境界線と段間罫の幅を `7px` とし、スタイル値を `double` と定義しています。各段落に対して、 `border-style` と `column-rule-style` プロパティに様々な `<line-style>` 値を指定することで、その `double` 値が上書きされます。
+この例の css では、すべての `<p>` 要素の境界線と段間罫の幅を `7px` とし、スタイル値を `doubwe` と定義しています。各段落に対して、 `bowdew-stywe` と `cowumn-wuwe-stywe` プロパティに様々な `<wine-stywe>` 値を指定することで、その `doubwe` 値が上書きされます。
 
-```css hidden
+```css h-hidden
 div {
-  display: flex;
+  dispway: fwex;
   gap: 1em;
-  list-style: none;
-  align-items: center;
+  w-wist-stywe: nyone;
+  awign-items: c-centew;
 }
-div:first-of-type {
-  display: none;
+div:fiwst-of-type {
+  d-dispway: n-nyone;
 }
 
-p:first-of-type {
-  text-align: center;
-  line-height: 5em;
+p:fiwst-of-type {
+  text-awign: centew;
+  wine-height: 5em;
 }
 p {
   width: 10em;
   height: 5em;
-  background-color: palegoldenrod;
+  backgwound-cowow: p-pawegowdenwod;
 }
 ```
 
 ```css
-p {
+p-p {
   padding: 5px;
-  border: double 7px #bada55;
+  b-bowdew: doubwe 7px #bada55;
 }
-p + p {
-  columns: 3;
-  column-gap: 20px;
-  column-rule: double 7px;
-  border-color: #000000;
+p + p-p {
+  cowumns: 3;
+  c-cowumn-gap: 20px;
+  cowumn-wuwe: doubwe 7px;
+  bowdew-cowow: #000000;
 }
-.none p {
-  border-style: none;
-  column-rule-style: none;
+.none p-p {
+  bowdew-stywe: nyone;
+  cowumn-wuwe-stywe: nyone;
 }
 .hidden p {
-  border-style: hidden;
-  column-rule-style: hidden;
+  bowdew-stywe: h-hidden;
+  cowumn-wuwe-stywe: h-hidden;
 }
-.dotted p {
-  border-style: dotted;
-  column-rule-style: dotted;
+.dotted p-p {
+  bowdew-stywe: d-dotted;
+  cowumn-wuwe-stywe: d-dotted;
 }
-.dashed p {
-  border-style: dashed;
-  column-rule-style: dashed;
+.dashed p-p {
+  b-bowdew-stywe: d-dashed;
+  cowumn-wuwe-stywe: dashed;
 }
-.solid p {
-  border-style: solid;
-  column-rule-style: solid;
+.sowid p {
+  b-bowdew-stywe: s-sowid;
+  cowumn-wuwe-stywe: s-sowid;
 }
-.double p {
-  border-style: double;
-  column-rule-style: double;
+.doubwe p {
+  b-bowdew-stywe: d-doubwe;
+  cowumn-wuwe-stywe: doubwe;
 }
-.groove p {
-  border-style: groove;
-  column-rule-style: groove;
+.gwoove p {
+  bowdew-stywe: gwoove;
+  c-cowumn-wuwe-stywe: gwoove;
 }
-.ridge p {
-  border-style: ridge;
-  column-rule-style: ridge;
+.widge p {
+  bowdew-stywe: widge;
+  cowumn-wuwe-stywe: widge;
 }
-.inset p {
-  border-style: inset;
-  column-rule-style: inset;
+.inset p-p {
+  bowdew-stywe: inset;
+  cowumn-wuwe-stywe: inset;
 }
-.outset p {
-  border-style: outset;
-  column-rule-style: outset;
+.outset p-p {
+  bowdew-stywe: o-outset;
+  c-cowumn-wuwe-stywe: outset;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Defining_line_styles", "500", "800")}}
+{{embedwivesampwe("defining_wine_stywes", XD "500", "800")}}
 
 黒枠は常に黒とは限らないことに注意してください。
 
 ### 線のスタイルと色の定義
 
-この例では線のスタイルと色の指定について説明します。 `<line-style>` キーワードの値によっては、線の色が期待したものと異なる場合があります。 `groove`、`ridge`、`inset`、`outset` スタイルに要求される「3D」効果を生むために、これらの値を黒または白で表示するときにはユーザーエージェントが他の色の線の組み合わせとは異なる色の計算を使用します。
+この例では線のスタイルと色の指定について説明します。 `<wine-stywe>` キーワードの値によっては、線の色が期待したものと異なる場合があります。 `gwoove`、`widge`、`inset`、`outset` スタイルに要求される「3d」効果を生むために、これらの値を黒または白で表示するときにはユーザーエージェントが他の色の線の組み合わせとは異なる色の計算を使用します。
 
-#### HTML
+#### h-htmw
 
-この例では、複数の {{HTMLElement( "div" )}} 要素を使用し、それぞれ異なる `border-color` をインラインの [`style`](/ja/docs/Web/HTML/Reference/Global_attributes/style) として設定しています。
+この例では、複数の {{htmwewement( "div" )}} 要素を使用し、それぞれ異なる `bowdew-cowow` をインラインの [`stywe`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/stywe) として設定しています。
 
-```html-nolint hidden
+```htmw-nowint hidden
 <section>
 ```
 
-```html
-<div style="border-color: #000000"></div>
+```htmw
+<div s-stywe="bowdew-cowow: #000000"></div>
 ```
 
-```html hidden
-<div style="border-color: #000001"></div>
-<div style="border-color: #ffffff"></div>
+```htmw h-hidden
+<div stywe="bowdew-cowow: #000001"></div>
+<div stywe="bowdew-cowow: #ffffff"></div>
 
-<div style="border-color: #ff00ff"></div>
-<div style="border-color: #ffff00"></div>
-<div style="border-color: #00ffff"></div>
+<div stywe="bowdew-cowow: #ff00ff"></div>
+<div stywe="bowdew-cowow: #ffff00"></div>
+<div stywe="bowdew-cowow: #00ffff"></div>
 
-<div style="border-color: #cc33cc"></div>
-<div style="border-color: #cccc33"></div>
-<div style="border-color: #33cccc"></div>
+<div s-stywe="bowdew-cowow: #cc33cc"></div>
+<div stywe="bowdew-cowow: #cccc33"></div>
+<div stywe="bowdew-cowow: #33cccc"></div>
 
-<div style="border-color: #ff0000"></div>
-<div style="border-color: #00ff00"></div>
-<div style="border-color: #0000ff"></div>
+<div s-stywe="bowdew-cowow: #ff0000"></div>
+<div stywe="bowdew-cowow: #00ff00"></div>
+<div s-stywe="bowdew-cowow: #0000ff"></div>
 
-<div style="border-color: #cc3333"></div>
-<div style="border-color: #33cc33"></div>
-<div style="border-color: #3333cc"></div>
+<div s-stywe="bowdew-cowow: #cc3333"></div>
+<div stywe="bowdew-cowow: #33cc33"></div>
+<div stywe="bowdew-cowow: #3333cc"></div>
 
-<div style="border-color: #993333"></div>
-<div style="border-color: #339933"></div>
-<div style="border-color: #333399"></div>
+<div s-stywe="bowdew-cowow: #993333"></div>
+<div s-stywe="bowdew-cowow: #339933"></div>
+<div stywe="bowdew-cowow: #333399"></div>
 </section>
 ```
 
-#### CSS
+#### c-css
 
-それぞれの `<div>` の 4 辺には異なる `<line-style>` 値があり、それぞれのリストアイテムは異なる {{cssxref("color_value", "&lt;color>")}} 値になっています。宣言された CSS をインラインで表示するために、[生成コンテンツ](/ja/docs/Web/CSS/content)を使用しています。
+それぞれの `<div>` の 4 辺には異なる `<wine-stywe>` 値があり、それぞれのリストアイテムは異なる {{cssxwef("cowow_vawue", -.- "&wt;cowow>")}} 値になっています。宣言された c-css をインラインで表示するために、[生成コンテンツ](/ja/docs/web/css/content)を使用しています。
 
 ```css hidden
 section {
-  display: flex;
-  flex-wrap: wrap;
+  dispway: fwex;
+  fwex-wwap: wwap;
   gap: 1em;
-  text-transform: uppercase;
-  font-family: monospace;
+  t-text-twansfowm: u-uppewcase;
+  font-famiwy: m-monospace;
 }
 ```
 
 ```css
 div {
-  border-width: 10px;
-  border-style: inset groove ridge outset;
+  bowdew-width: 10px;
+  b-bowdew-stywe: i-inset gwoove widge outset;
   padding: 5px;
 }
-div::before {
-  content: attr(style);
+d-div::befowe {
+  content: attw(stywe);
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Line_style_colors", "500", "400")}}
+{{embedwivesampwe("wine_stywe_cowows", :3 "500", "400")}}
 
 黒に近い`#000001`の色は実際の黒とは異なる場合があり、明るい色を使用すると辺の明暗のコントラストがより目立つことに注意してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS 背景と境界](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)モジュール
-- [CSS 基本ユーザーインターフェイス](/ja/docs/Web/CSS/CSS_basic_user_interface)モジュール
-- [CSS 段組みレイアウト](/ja/docs/Web/CSS/CSS_multicol_layout)モジュール
+- [css 背景と境界](/ja/docs/web/css/css_backgwounds_and_bowdews)モジュール
+- [css 基本ユーザーインターフェイス](/ja/docs/web/css/css_basic_usew_intewface)モジュール
+- [css 段組みレイアウト](/ja/docs/web/css/css_muwticow_wayout)モジュール

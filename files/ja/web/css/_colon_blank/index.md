@@ -1,55 +1,55 @@
 ---
-title: :blank
-slug: Web/CSS/:blank
+titwe: :bwank
+swug: web/css/:bwank
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-> [!NOTE]
-> セレクターは、CSSWG が変更を続けているため、使用するリスクを考慮する必要があります。
+> [!note]
+> セレクターは、csswg が変更を続けているため、使用するリスクを考慮する必要があります。
 >
-> [CSSWG issue #1967](https://github.com/w3c/csswg-drafts/issues/1967) を参照してください。
+> [csswg i-issue #1967](https://github.com/w3c/csswg-dwafts/issues/1967) を参照してください。
 
-**`:blank`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、空のユーザー入力要素 (例えば {{HTMLElement("input")}} や {{HTMLElement("textarea")}}) を選択します。
+**`:bwank`** は [css](/ja/docs/web/css) の[擬似クラス](/ja/docs/web/css/pseudo-cwasses)で、空のユーザー入力要素 (例えば {{htmwewement("input")}} や {{htmwewement("textawea")}}) を選択します。
 
 ## 構文
 
 ```
-:blank
+:bwank
 ```
 
 ## 例
 
-<h3 id="Simple_blank_example">単純な :blank の例</h3>
+<h3 i-id="simpwe_bwank_exampwe">単純な :bwank の例</h3>
 
-最終的に対応しているブラウザーでは、 `:blank` 擬似クラスを使用することで、開発者は、必須ではないが、まだ何も記入されていない入力コントロールを、何らかの方法で強調表示することができるようになります。
+最終的に対応しているブラウザーでは、 `:bwank` 擬似クラスを使用することで、開発者は、必須ではないが、まだ何も記入されていない入力コントロールを、何らかの方法で強調表示することができるようになります。
 
-#### HTML
+#### h-htmw
 
-```html
-<textarea></textarea>
+```htmw
+<textawea></textawea>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-textarea:blank {
-  border: 3px solid red;
+textawea:bwank {
+  b-bowdew: 3px sowid w-wed;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Simple_blank_example', '100%', 150)}}
+{{embedwivesampwe('simpwe_bwank_exampwe', o.O '100%', 150)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{CSSxRef(":empty")}}
+- {{cssxwef(":empty")}}

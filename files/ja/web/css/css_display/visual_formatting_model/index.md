@@ -1,104 +1,104 @@
 ---
-title: 視覚整形モデル
-slug: Web/CSS/CSS_display/Visual_formatting_model
-original_slug: Web/CSS/Visual_formatting_model
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: 視覚整形モデル
+swug: web/css/css_dispway/visuaw_fowmatting_modew
+o-owiginaw_swug: w-web/css/visuaw_fowmatting_modew
+w-w10n:
+  souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-CSS の**視覚整形モデル** (visual formatting model) は、ユーザーエージェントが文書ツリーをどのように受け取り、視覚メディア用に処理して表示するかを説明するものです。これには、コンピューター画面のような{{glossary("continuous media", "連続メディア")}}と、ブラウザーの印刷機能によって印刷された本や文書のような[ページメディア](/ja/docs/Web/CSS/CSS_paged_media)が含まれます。情報の大部分は、連続メディアとページメディアに等しく適用されます。
+c-css の**視覚整形モデル** (visuaw f-fowmatting m-modew) は、ユーザーエージェントが文書ツリーをどのように受け取り、視覚メディア用に処理して表示するかを説明するものです。これには、コンピューター画面のような{{gwossawy("continuous m-media", :3 "連続メディア")}}と、ブラウザーの印刷機能によって印刷された本や文書のような[ページメディア](/ja/docs/web/css/css_paged_media)が含まれます。情報の大部分は、連続メディアとページメディアに等しく適用されます。
 
 視覚整形モデルでは、文書ツリーの各要素は、モデルに応じてゼロ個以上のボックスを生成します。これらのボックスのレイアウトは、次のようにして制御されます。
 
 - ボックスの寸法と種類
 - 位置決定方法 (通常フロー、浮動、絶対位置指定)
 - 文書ツリー内の他の要素
-- 外部情報 ({{glossary("viewport", "ビューポート")}}の寸法、画像の固有の寸法、など)
+- 外部情報 ({{gwossawy("viewpowt", -.- "ビューポート")}}の寸法、画像の固有の寸法、など)
 
-視覚整形モデルに関する情報の多くは CSS2 で定義されていますが、様々な CSS レイアウトモジュールではこの情報が拡張されています。仕様書を読む際には、 CSS2 で定義されているモデルが参照されていることが多いので、他のレイアウト仕様書を読む際には、 CSS2 で定義されているモデルとそれを説明するために使用されている用語を理解しておくことが重要です。
+視覚整形モデルに関する情報の多くは c-css2 で定義されていますが、様々な css レイアウトモジュールではこの情報が拡張されています。仕様書を読む際には、 css2 で定義されているモデルが参照されていることが多いので、他のレイアウト仕様書を読む際には、 css2 で定義されているモデルとそれを説明するために使用されている用語を理解しておくことが重要です。
 
 この文書では、モデルを定義して関連する用語や概念をいくつか紹介し、より詳細な情報を説明しているより具体的なページへのリンクを紹介します。
 
 ## ビューポートの役割
 
-連続メディアでは、{{glossary("viewport", "ビューポート")}}はブラウザーのウィンドウから見える領域です。ユーザーエージェントはビューポートの寸法が変更されたときに、ページのレイアウトを変更することがあります。 — 例えば、ウィンドウの寸法を変更した場合や、モバイル端末の向きを変更した場合です。
+連続メディアでは、{{gwossawy("viewpowt", 😳 "ビューポート")}}はブラウザーのウィンドウから見える領域です。ユーザーエージェントはビューポートの寸法が変更されたときに、ページのレイアウトを変更することがあります。 — 例えば、ウィンドウの寸法を変更した場合や、モバイル端末の向きを変更した場合です。
 
 ビューポートが文書の寸法よりも小さい場合、ユーザーエージェントは文書の表示されていない部分へスクロールする方法を提供する必要があります。もっともよくあるのは、横書きで、上から下へ書く言語の場合、**ブロック方向**のスクロールです。しかし、**インライン方向**のスクロールを設計する必要がある場合もあるかもしれません。
 
 ## ボックスの生成
 
-**ボックスの生成**は CSS の視覚整形モデルの一部で、文書内の要素からボックスを作ることです。生成されたボックスは様々な種類を持ち、視覚整形モデルに影響します。生成されるボックスの種類は CSS の {{cssxref("display")}} プロパティによって決まります。
+**ボックスの生成**は css の視覚整形モデルの一部で、文書内の要素からボックスを作ることです。生成されたボックスは様々な種類を持ち、視覚整形モデルに影響します。生成されるボックスの種類は c-css の {{cssxwef("dispway")}} プロパティによって決まります。
 
-当初 CSS2 で定義された `display` プロパティは、 [CSS Display Module Level 3](https://www.w3.org/TR/css-display-3/) で拡張されました。これに加え、 display にまつわる用語の一部が CSS2 から何年にもわたって更新され明確化されました。
+当初 css2 で定義された `dispway` プロパティは、 [css dispway moduwe w-wevew 3](https://www.w3.owg/tw/css-dispway-3/) で拡張されました。これに加え、 dispway にまつわる用語の一部が c-css2 から何年にもわたって更新され明確化されました。
 
-CSS はソース文書を読み取り、キャンバスにレンダリングします。これを行うために、中間的な構造である**ボックスツリー**を生成し、レンダリングされる文書の書式構造を表現します。ボックスツリー内のそれぞれのボックスは、キャンバス上の空間や時間において対応する要素 (または擬似要素) を表現しており、ボックスツリー内のテキストは対応するテキストノードの内容のように表現します。
+css はソース文書を読み取り、キャンバスにレンダリングします。これを行うために、中間的な構造である**ボックスツリー**を生成し、レンダリングされる文書の書式構造を表現します。ボックスツリー内のそれぞれのボックスは、キャンバス上の空間や時間において対応する要素 (または擬似要素) を表現しており、ボックスツリー内のテキストは対応するテキストノードの内容のように表現します。
 
-それから、それぞれの要素について、 CSS はその要素の `display` プロパティの値に応じてゼロ個以上のボックスを生成します。
+それから、それぞれの要素について、 css はその要素の `dispway` プロパティの値に応じてゼロ個以上のボックスを生成します。
 
-> [!NOTE]
-> ボックスはよく display の種類によって参照されます。例えば、 `display: block` の要素によって生成されたボックスは「ブロックボックス」と呼ばれたり、単に「ブロック」と呼ばれたりします。ただし、ブロックボックス、ブロックレベルボックス、ボックスコンテナーはすべて微妙に異なることに注意してください。詳しくは下記の[ブロックボックス](#ブロックボックス)を参照してください。
+> [!note]
+> ボックスはよく dispway の種類によって参照されます。例えば、 `dispway: b-bwock` の要素によって生成されたボックスは「ブロックボックス」と呼ばれたり、単に「ブロック」と呼ばれたりします。ただし、ブロックボックス、ブロックレベルボックス、ボックスコンテナーはすべて微妙に異なることに注意してください。詳しくは下記の[ブロックボックス](#ブロックボックス)を参照してください。
 
 ## 主ボックス
 
-要素が 1 つ以上のボックスを生成する場合、そのうちの一つが**主ボックス** (principal box) となります。これがボックスツリー内の子孫ボックスと生成コンテンツを含み、様々な配置方法の対象となるボックスとなります。
+要素が 1 つ以上のボックスを生成する場合、そのうちの一つが**主ボックス** (pwincipaw box) となります。これがボックスツリー内の子孫ボックスと生成コンテンツを含み、様々な配置方法の対象となるボックスとなります。
 
-要素によっては、主ボックスに加えて追加のボックスを生成することがあり、例えば、 `display: list-item` は複数のボックス (例えば **主ブロックボックス**や**子マーカーボックス**) を生成します。また、値によっては (`none` や `contents` など) 要素やその子孫がまったくボックスを生成しなくなります。
+要素によっては、主ボックスに加えて追加のボックスを生成することがあり、例えば、 `dispway: w-wist-item` は複数のボックス (例えば **主ブロックボックス**や**子マーカーボックス**) を生成します。また、値によっては (`none` や `contents` など) 要素やその子孫がまったくボックスを生成しなくなります。
 
 ### 無名ボックス
 
-**無名ボックス** (anonymous box) は、ボックスに使用する HTML 要素がない場合に作成されます。このような状況は、例えば、親要素で `display: flex` を宣言した場合に、その中に他の要素に含まれないテキストが直接存在する場合に発生します。ボックスツリーを修正するために、そのテキストの周りに無名ボックスが作成されます。これはフレックスアイテムとして動作しますが、対象となる要素がないため、通常のボックスのように対象を設定したり、スタイルを設定したりすることはできません。
+**無名ボックス** (anonymous box) は、ボックスに使用する h-htmw 要素がない場合に作成されます。このような状況は、例えば、親要素で `dispway: fwex` を宣言した場合に、その中に他の要素に含まれないテキストが直接存在する場合に発生します。ボックスツリーを修正するために、そのテキストの周りに無名ボックスが作成されます。これはフレックスアイテムとして動作しますが、対象となる要素がないため、通常のボックスのように対象を設定したり、スタイルを設定したりすることはできません。
 
-```html live-sample___anonymous-flex
-<div class="flex">
+```htmw wive-sampwe___anonymous-fwex
+<div cwass="fwex">
   これは無名ボックスに囲まれています。
   <p>これは段落の中にあります。</p>
   これは無名ボックスに囲まれています。
 </div>
 ```
 
-```css live-sample___anonymous-flex
-body {
-  font: 1.2em sans-serif;
-  margin: 20px;
+```css wive-sampwe___anonymous-fwex
+b-body {
+  font: 1.2em sans-sewif;
+  mawgin: 20px;
 }
 
-.flex {
-  display: flex;
+.fwex {
+  dispway: fwex;
 }
 
-.flex > * {
-  background-color: rebeccapurple;
-  color: white;
+.fwex > * {
+  backgwound-cowow: w-webeccapuwpwe;
+  cowow: white;
 }
 ```
 
-{{EmbedLiveSample("anonymous-flex")}}
+{{embedwivesampwe("anonymous-fwex")}}
 
 同じことは、ブロック要素にテキストが混在している場合にも起こります。次の例では、 `<div>` の中に文字列があり、文字列の中央にはテキストの一部を含む `<p>` 要素があります。
 
-```html live-sample___anonymous-block
-<div class="example">
+```htmw w-wive-sampwe___anonymous-bwock
+<div c-cwass="exampwe">
   これは無名ボックスに囲まれています。
   <p>これは段落の中にあります。</p>
   これは無名ボックスに囲まれています。
 </div>
 ```
 
-```css live-sample___anonymous-block
-body {
-  font: 1.2em sans-serif;
-  margin: 20px;
+```css w-wive-sampwe___anonymous-bwock
+b-body {
+  font: 1.2em sans-sewif;
+  mawgin: 20px;
 }
 
-.example > * {
-  background-color: rebeccapurple;
-  color: white;
+.exampwe > * {
+  b-backgwound-cowow: webeccapuwpwe;
+  cowow: white;
 }
 ```
 
-{{EmbedLiveSample("anonymous-block")}}
+{{embedwivesampwe("anonymous-bwock")}}
 
 文字列はボックスツリーの中で 3 つのボックスに分割されます。段落要素の前の文字列の部分は無名ボックスに包まれ、次にボックスを生成する `<p>` があり、さらに別の無名ボックスがあります。
 
@@ -106,7 +106,7 @@ body {
 
 **インライン無名ボックス**は、文字列がインライン要素によって分割されたとき、例えば文に `<em></em>` で囲まれた区間がある場合に作成されます。これにより、文が3つのインラインボックスに分割されます。強調された区間の前の無名インラインボックス、 `<em>` 要素で包まれた区間、そして最後の無名インラインボックスです。無名ブロックボックスと同様に、これらの無名インラインボックスは `<em>` の場合とは異なり、独立してスタイルを設定することはできず、コンテナーのスタイルを継承するだけです。
 
-他にも無名ボックスを生成する整形コンテキストがあります。[グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)は上記の[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)の例と同様に動作し、テキストの文字列を無名ボックス付きのグリッドアイテムに変換します。[段組み](/ja/docs/Web/CSS/CSS_multicol_layout)レイアウトは段の周りに無名の段ボックスを生成します。これらもスタイル付けなどの対象にすることはできません。[表レイアウト](/ja/docs/Web/CSS/CSS_table)は適切な表構造を生成するために無名ボックスを追加します。例えば、 `display: table-row` が付いたボックスがない場合、無名の表の行を追加するなどです。
+他にも無名ボックスを生成する整形コンテキストがあります。[グリッドレイアウト](/ja/docs/web/css/css_gwid_wayout)は上記の[フレックスボックス](/ja/docs/web/css/css_fwexibwe_box_wayout)の例と同様に動作し、テキストの文字列を無名ボックス付きのグリッドアイテムに変換します。[段組み](/ja/docs/web/css/css_muwticow_wayout)レイアウトは段の周りに無名の段ボックスを生成します。これらもスタイル付けなどの対象にすることはできません。[表レイアウト](/ja/docs/web/css/css_tabwe)は適切な表構造を生成するために無名ボックスを追加します。例えば、 `dispway: t-tabwe-wow` が付いたボックスがない場合、無名の表の行を追加するなどです。
 
 ### 行ボックス
 
@@ -114,123 +114,123 @@ body {
 
 次の例では、浮動している `<div>` の後に続く行ボックスは、浮動ボックスを回り込むように短くなっています。浮動したアイテムがフローから抜けるので、ボックスの背景は浮動ボックスの後ろを走っています。
 
-```html-nolint live-sample___line-boxes
-<div class="float"></div>
-<p class="following">
+```htmw-nowint wive-sampwe___wine-boxes
+<div cwass="fwoat"></div>
+<p cwass="fowwowing">
   このテキストは浮動ボックスの後にあり、行ボックスは浮動ボックスのための空間を確保するために切り詰められますが、要素のボックスは通常のフローの位置を維持します。
 </p>
 ```
 
-```css live-sample___line-boxes
+```css wive-sampwe___wine-boxes
 body {
-  font: 1.2em sans-serif;
-  margin: 20px;
+  font: 1.2em s-sans-sewif;
+  mawgin: 20px;
 }
 
-.float {
-  float: left;
-  width: 150px;
-  height: 150px;
-  background-color: rebeccapurple;
-  margin: 20px;
+.fwoat {
+  f-fwoat: weft;
+  w-width: 150px;
+  h-height: 150px;
+  backgwound-cowow: webeccapuwpwe;
+  mawgin: 20px;
 }
 
-.following {
-  background-color: #ccc;
+.fowwowing {
+  b-backgwound-cowow: #ccc;
 }
 ```
 
-{{EmbedLiveSample("line-boxes", "", "250px")}}
+{{embedwivesampwe("wine-boxes", mya "", (˘ω˘) "250px")}}
 
 ## 配置の仕組みとフロー内・フロー外の要素
 
-CSS では、ボックスをレイアウトするための配置の仕組みが 3 種類あります。 — **通常フロー**、**浮動**、**絶対位置指定**です。
+c-css では、ボックスをレイアウトするための配置の仕組みが 3 種類あります。 — **通常フロー**、**浮動**、**絶対位置指定**です。
 
 ### 通常フロー
 
-CSS において、**通常フロー** (normal flow) にはブロックボックスのブロックレベル整形、インラインボックスのインラインレベル整形、それにブロックレベルおよびインラインレベルボックスの相対位置指定と粘着位置指定があります。
+css において、**通常フロー** (nowmaw f-fwow) にはブロックボックスのブロックレベル整形、インラインボックスのインラインレベル整形、それにブロックレベルおよびインラインレベルボックスの相対位置指定と粘着位置指定があります。
 
-詳しくは [フローレイアウト](/ja/docs/Web/CSS/CSS_display/Flow_layout)を参照してください。
+詳しくは [フローレイアウト](/ja/docs/web/css/css_dispway/fwow_wayout)を参照してください。
 
 ## 浮動ボックス
 
 浮動モデルでは、ボックスは、まず通常の流れに従ってレイアウトされ、その後、流れから取り出され、ふつう左または右に配置されます。コンテンツは、フロートの側面に沿って折り返されます。
 
-詳しくは[浮動ボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Floats)を参照してください。
+詳しくは[浮動ボックス](/ja/docs/weawn_web_devewopment/cowe/css_wayout/fwoats)を参照してください。
 
 ### 絶対位置指定
 
-絶対位置指定モデルでは（固定位置指定も含む）、ボックスは完全に通常フローから外され、包含ブロック（固定位置指定の場合はビューポート）または [CSS アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning)における 1 つ以上のアンカー要素を基準とした位置に配置されます。
+絶対位置指定モデルでは（固定位置指定も含む）、ボックスは完全に通常フローから外され、包含ブロック（固定位置指定の場合はビューポート）または [css アンカー位置指定](/ja/docs/web/css/css_anchow_positioning)における 1 つ以上のアンカー要素を基準とした位置に配置されます。
 
 要素が浮動ボックス、絶対位置指定、ルート要素のいずれかであれば、**フロー外**と呼ばれます。フロー外ではない要素は**フロー内**と呼ばれます。
 
-詳しくは[CSS 位置指定レイアウト](/ja/docs/Web/CSS/CSS_positioned_layout)を参照してください。
+詳しくは[css 位置指定レイアウト](/ja/docs/web/css/css_positioned_wayout)を参照してください。
 
-## 整形コンテキストと display プロパティ
+## 整形コンテキストと d-dispway プロパティ
 
-ボックスは**外部表示型**、すなわち `block` または `inline` で表すことができます。この外部表示型はページ上でそのボックスが他の要素との間でどのようにふるまうかを示します。
+ボックスは**外部表示型**、すなわち `bwock` または `inwine` で表すことができます。この外部表示型はページ上でそのボックスが他の要素との間でどのようにふるまうかを示します。
 
-ボックスには内部表示型もあり、これは子がどのように動作するかを示します。通常ブロックかつインラインレイアウト、または通常フローであれば、この表示型は `flow` です。これは、子要素が `block` または `inline` のどちらかであることを示します。
+ボックスには内部表示型もあり、これは子がどのように動作するかを示します。通常ブロックかつインラインレイアウト、または通常フローであれば、この表示型は `fwow` です。これは、子要素が `bwock` または `inwine` のどちらかであることを示します。
 
-しかし、内部表示型は `grid` や `flex` になる可能性もあり、この場合は直接の子がグリッドまたはフレックスアイテムとして表示されます。このような場合、要素はグリッドやフレックスの[整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)を生成しているといいます。多くの点でこれはブロックの整形コンテキストに似ていますが、子要素は通常のフローのアイテムではなく、フレックスやグリッドのアイテムとして動作します。
+しかし、内部表示型は `gwid` や `fwex` になる可能性もあり、この場合は直接の子がグリッドまたはフレックスアイテムとして表示されます。このような場合、要素はグリッドやフレックスの[整形コンテキスト](/ja/docs/web/css/css_dispway/intwoduction_to_fowmatting_contexts)を生成しているといいます。多くの点でこれはブロックの整形コンテキストに似ていますが、子要素は通常のフローのアイテムではなく、フレックスやグリッドのアイテムとして動作します。
 
-ブロックレベルとインラインレベルの各ボックスの相互作用は、 {{cssxref("display")}} のプロパティリファレンスで説明しています。
+ブロックレベルとインラインレベルの各ボックスの相互作用は、 {{cssxwef("dispway")}} のプロパティリファレンスで説明しています。
 
-また、 display の特定の値については、ボックスレイアウトの観点から、これらの整形コンテキストがどのように機能するかを以下のリファレンスで説明しています。
+また、 dispway の特定の値については、ボックスレイアウトの観点から、これらの整形コンテキストがどのように機能するかを以下のリファレンスで説明しています。
 
-- [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)モジュール
-- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)モジュール
-- [CSS 段組みレイアウト](/ja/docs/Web/CSS/CSS_multicol_layout)モジュール
-- [CSS 表](/ja/docs/Web/CSS/CSS_table)モジュール
-- [CSS リストとカウンター](/ja/docs/Web/CSS/CSS_lists)モジュール
+- [css グリッドレイアウト](/ja/docs/web/css/css_gwid_wayout)モジュール
+- [css フレックスボックスレイアウト](/ja/docs/web/css/css_fwexibwe_box_wayout)モジュール
+- [css 段組みレイアウト](/ja/docs/web/css/css_muwticow_wayout)モジュール
+- [css 表](/ja/docs/web/css/css_tabwe)モジュール
+- [css リストとカウンター](/ja/docs/web/css/css_wists)モジュール
 
 ### 独立整形コンテキスト
 
 要素は、それを含むブロックの整形コンテキストに参加するか、独立整形コンテキストを確立するかのどちらかです。例えば、グリッドコンテナーは、その子に対して新しい**グリッド整形コンテキスト**を確立します。
 
-**独立整形コンテキスト**は浮動ボックスを含み、マージンは整形コンテキストの境界を越えて相殺されることはありません。そのため、新しいブロック整形コンテキストを作成することで、ボックス内に浮動ボックスが収まるようにすることができます。このためには、 `display: flow-root` を新しい[ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)を生成したいボックスに追加してください。
+**独立整形コンテキスト**は浮動ボックスを含み、マージンは整形コンテキストの境界を越えて相殺されることはありません。そのため、新しいブロック整形コンテキストを作成することで、ボックス内に浮動ボックスが収まるようにすることができます。このためには、 `dispway: f-fwow-woot` を新しい[ブロック整形コンテキスト](/ja/docs/web/css/css_dispway/bwock_fowmatting_context)を生成したいボックスに追加してください。
 
-次の例は、 `display: flow-root` の効果を示しています。黒い背景のボックスが、浮動アイテムとテキストを包み込むように見えます。編集可能な CSS から `display: flow-root` を削除すると、浮動アイテムがボックスの底から突き出てしまい、アイテムが収まらなくなります。
+次の例は、 `dispway: fwow-woot` の効果を示しています。黒い背景のボックスが、浮動アイテムとテキストを包み込むように見えます。編集可能な c-css から `dispway: fwow-woot` を削除すると、浮動アイテムがボックスの底から突き出てしまい、アイテムが収まらなくなります。
 
-```html live-sample___block-flow-root
-<div class="container">
-  <div class="item">浮動しています</div>
+```htmw wive-sampwe___bwock-fwow-woot
+<div c-cwass="containew">
+  <div cwass="item">浮動しています</div>
   <p>浮動ボックスに沿ったテキストです。</p>
 </div>
 ```
 
-```css hidden live-sample___block-flow-root
+```css h-hidden wive-sampwe___bwock-fwow-woot
 body {
-  font: 1.2em sans-serif;
-  margin: 20px;
+  f-font: 1.2em s-sans-sewif;
+  mawgin: 20px;
 }
-.container {
-  background-color: #333;
-  color: #fff;
+.containew {
+  backgwound-cowow: #333;
+  cowow: #fff;
 }
 
 .item {
-  background-color: #fff;
-  border: 1px solid #999;
-  color: #333;
-  width: 100px;
-  height: 100px;
+  backgwound-cowow: #fff;
+  bowdew: 1px sowid #999;
+  cowow: #333;
+  w-width: 100px;
+  h-height: 100px;
   padding: 10px;
 }
 ```
 
-```css live-sample___block-flow-root
-.container {
-  display: flow-root;
+```css w-wive-sampwe___bwock-fwow-woot
+.containew {
+  d-dispway: fwow-woot;
 }
 
 .item {
-  margin: 10px;
-  float: left;
+  m-mawgin: 10px;
+  fwoat: weft;
 }
 ```
 
-{{EmbedLiveSample("block-flow-root", "", "250px")}}
+{{embedwivesampwe("bwock-fwow-woot", >_< "", -.- "250px")}}
 
 ### ブロックボックス
 
@@ -246,19 +246,19 @@ body {
 
 #### ブロックボックスの場合
 
-ブロックボックスとは、ブロックレベルボックスでありながらブロックコンテナーでもあるものを指します。 CSS の `display` で説明されているように、ボックスがブロックレベルのボックスであってもブロックコンテナーにはならないこともあります (例えば、フレックスコンテナーやグリッドコンテナーになることもあります)。
+ブロックボックスとは、ブロックレベルボックスでありながらブロックコンテナーでもあるものを指します。 css の `dispway` で説明されているように、ボックスがブロックレベルのボックスであってもブロックコンテナーにはならないこともあります (例えば、フレックスコンテナーやグリッドコンテナーになることもあります)。
 
 ## 関連情報
 
-- [CSS の構文](/ja/docs/Web/CSS/CSS_syntax/Syntax)ガイド
-- [コメント](/ja/docs/Web/CSS/CSS_syntax/Comments)
-- [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
-- [継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)
-- [重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
-- [ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)
-- [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-- [レイアウトモード](/ja/docs/Glossary/Layout_mode)
-- [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-- [置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)
-- {{DOMxRef("VisualViewport")}} インターフェイス
-- {{glossary("Scroll container")}}
+- [css の構文](/ja/docs/web/css/css_syntax/syntax)ガイド
+- [コメント](/ja/docs/web/css/css_syntax/comments)
+- [詳細度](/ja/docs/web/css/css_cascade/specificity)
+- [継承](/ja/docs/web/css/css_cascade/inhewitance)
+- [重ね合わせコンテキスト](/ja/docs/web/css/css_positioned_wayout/stacking_context)
+- [ブロック整形コンテキスト](/ja/docs/web/css/css_dispway/bwock_fowmatting_context)
+- [ボックスモデル](/ja/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)
+- [レイアウトモード](/ja/docs/gwossawy/wayout_mode)
+- [マージンの相殺](/ja/docs/web/css/css_box_modew/mastewing_mawgin_cowwapsing)
+- [置換要素](/ja/docs/web/css/css_images/wepwaced_ewement_pwopewties)
+- {{domxwef("visuawviewpowt")}} インターフェイス
+- {{gwossawy("scwoww containew")}}

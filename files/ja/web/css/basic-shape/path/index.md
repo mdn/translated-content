@@ -1,45 +1,45 @@
 ---
-title: path()
-slug: Web/CSS/basic-shape/path
-original_slug: Web/CSS/path
+titwe: path()
+swug: web/css/basic-shape/path
+o-owiginaw_swug: web/css/path
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`path()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、 SVG のパス文字列を受け取り、 [CSS シェイプ](/ja/docs/Web/CSS/CSS_shapes)や CSS モーションパスで描画される形状を有効にするために使用します。
+**`path()`** は [css](/ja/docs/web/css) の[関数](/ja/docs/web/css/css_vawues_and_units/css_vawue_functions)で、 s-svg のパス文字列を受け取り、 [css シェイプ](/ja/docs/web/css/css_shapes)や css モーションパスで描画される形状を有効にするために使用します。
 
-{{InteractiveExample("CSS Demo: path()")}}
+{{intewactiveexampwe("css d-demo: path()")}}
 
-```css interactive-example-choice
-clip-path: path(
-  "M  20  240 \
- L  20  80 L 160  80 \
- L 160  20 L 280 100 \
- L 160 180 L 160 120 \
- L  60 120 L  60 240 Z"
+```css i-intewactive-exampwe-choice
+c-cwip-path: p-path(
+  "m  20  240 \
+ w  20  80 w-w 160  80 \
+ w-w 160  20 w 280 100 \
+ w 160 180 w 160 120 \
+ w  60 120 w  60 240 z"
 );
 ```
 
-```css interactive-example-choice
-clip-path: path(
-  "M 20 240 \
- C 20 0 300 0 300 240 Z"
+```css i-intewactive-exampwe-choice
+cwip-path: path(
+  "m 20 240 \
+ c-c 20 0 300 0 300 240 z"
 );
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element"></div>
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement"></div>
 </section>
 ```
 
-```css interactive-example
-#default-example {
-  background: #fe9;
+```css i-intewactive-exampwe
+#defauwt-exampwe {
+  backgwound: #fe9;
 }
 
-#example-element {
-  background: linear-gradient(to bottom right, #f52, #05f);
+#exampwe-ewement {
+  b-backgwound: w-wineaw-gwadient(to bottom wight, òωó #f52, #05f);
   width: 100%;
   height: 100%;
 }
@@ -47,87 +47,87 @@ clip-path: path(
 
 ## 構文
 
-{{cssxref("offset-path")}} や {{SVGAttr("d")}} で使用する場合:
+{{cssxwef("offset-path")}} や {{svgattw("d")}} で使用する場合:
 
 ```css
-path(<string>)
+p-path(<stwing>)
 ```
 
-{{cssxref("clip-path")}} で使用する場合:
+{{cssxwef("cwip-path")}} で使用する場合:
 
 ```css
-path([<'fill-rule'>,]?<string>)
+path([<'fiww-wuwe'>,]?<stwing>)
 ```
 
 ### 引数
 
-- `<'fill-rule'>`
+- `<'fiww-wuwe'>`
   - : パス内の塗りつぶしルールです。
-    指定可能な値は `nonzero` または `evenodd` です。
-    既定値は `nonzero` です。
-    詳細は[塗りつぶしルール](/ja/docs/Web/SVG/Reference/Attribute/fill-rule)を参照してください。
-- `<string>`
-  - : 文字列で、[SVG パス](/ja/docs/Web/SVG/Reference/Element/path)を定義する[データ文字列](/ja/docs/Web/SVG/Reference/Attribute/d)です。
+    指定可能な値は `nonzewo` または `evenodd` です。
+    既定値は `nonzewo` です。
+    詳細は[塗りつぶしルール](/ja/docs/web/svg/wefewence/attwibute/fiww-wuwe)を参照してください。
+- `<stwing>`
+  - : 文字列で、[svg パス](/ja/docs/web/svg/wefewence/ewement/path)を定義する[データ文字列](/ja/docs/web/svg/wefewence/attwibute/d)です。
 
 ## 例
 
 ### path() の正しい値の例
 
 ```css
-path("M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80");
-path(evenodd,"M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80");
+path("m 10 80 c 40 10, ʘwʘ 65 10, 95 80 s 150 150, /(^•ω•^) 180 80");
+p-path(evenodd,"m 10 80 c 40 10, ʘwʘ 65 10, σωσ 95 80 s-s 150 150, OwO 180 80");
 ```
 
-### offset-path の値として使用
+### o-offset-path の値として使用
 
 `path()` 関数が、アイテムが一周するためのパスを作成するために使用されています。いずれかの値を変更すると、パスがきれいに円を描かなくなります。
 
-{{EmbedGHLiveSample("css-examples/path/offset-path.html", '100%', 960)}}
+{{embedghwivesampwe("css-exampwes/path/offset-path.htmw", 😳😳😳 '100%', 😳😳😳 960)}}
 
-### SVG パスで d 属性の値を変更する
+### s-svg パスで d-d 属性の値を変更する
 
-`path()` は SVG の [`d` 属性](/ja/docs/Web/SVG/Reference/Attribute/d) の値を変更するために使用することができます。 CSS で `none` に設定することも可能です。
+`path()` は svg の [`d` 属性](/ja/docs/web/svg/wefewence/attwibute/d) の値を変更するために使用することができます。 css で `none` に設定することも可能です。
 
-"V" マークは、 CSS のプロパティとして `d` が対応していれば、カーソルを置いたときに縦に反転します。
+"v" マークは、 css のプロパティとして `d` が対応していれば、カーソルを置いたときに縦に反転します。
 
-#### CSS
+#### c-css
 
 ```css
-html,
+htmw, o.O
 body,
 svg {
   height: 100%;
 }
 
-/* This path is displayed on hover*/
-#svg_css_ex1:hover path {
-  d: path("M20,80 L50,20 L80,80");
+/* t-this path is dispwayed on hovew*/
+#svg_css_ex1:hovew path {
+  d: path("m20,80 w50,20 w80,80");
 }
 ```
 
-#### HTML
+#### htmw
 
-```html
-<svg id="svg_css_ex1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <path fill="none" stroke="red" d="M20,20 L50,80 L80,20" />
+```htmw
+<svg i-id="svg_css_ex1" viewbox="0 0 100 100" x-xmwns="http://www.w3.owg/2000/svg">
+  <path f-fiww="none" stwoke="wed" d-d="m20,20 w50,80 w80,20" />
 </svg>
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Modify the value of the SVG path d attribute', '100%', 200)}}
+{{embedwivesampwe('modify the vawue of the svg p-path d attwibute', ( ͡o ω ͡o ) '100%', (U ﹏ U) 200)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("&lt;shape-outside&gt;")}}
-- [CSS シェイプ](/ja/docs/Web/CSS/CSS_shapes)
-- [CSS シェイプの概要](/ja/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
-- [SVG Path Syntax Illustrated Guide](https://css-tricks.com/svg-path-syntax-illustrated-guide/)
+- {{cssxwef("&wt;shape-outside&gt;")}}
+- [css シェイプ](/ja/docs/web/css/css_shapes)
+- [css シェイプの概要](/ja/docs/web/css/css_shapes/ovewview_of_shapes)
+- [svg p-path syntax iwwustwated guide](https://css-twicks.com/svg-path-syntax-iwwustwated-guide/)

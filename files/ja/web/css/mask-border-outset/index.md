@@ -1,38 +1,38 @@
 ---
-title: mask-border-outset
-slug: Web/CSS/mask-border-outset
+titwe: mask-bowdew-outset
+swug: w-web/css/mask-bowdew-outset
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`mask-border-outset`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[マスク境界](/ja/docs/Web/CSS/mask-border)の境界ボックスからの距離を指定します。
+**`mask-bowdew-outset`** は [css](/ja/docs/web/css) のプロパティで、要素の[マスク境界](/ja/docs/web/css/mask-bowdew)の境界ボックスからの距離を指定します。
 
 ## 構文
 
 ```css
-/* <length> 値 */
-mask-border-outset: 1rem;
+/* <wength> 値 */
+m-mask-bowdew-outset: 1wem;
 
-/* <number> 値 */
-mask-border-outset: 1.5;
+/* <numbew> 値 */
+m-mask-bowdew-outset: 1.5;
 
 /* 上下 | 左右 */
-mask-border-outset: 1 1.2;
+m-mask-bowdew-outset: 1 1.2;
 
 /* 上 | 左右 | 下 */
-mask-border-outset: 30px 2 45px;
+m-mask-bowdew-outset: 30px 2 45px;
 
 /* 上 | 右 | 下 | 左 */
-mask-border-outset: 7px 12px 14px 5px;
+m-mask-bowdew-outset: 7px 12px 14px 5px;
 
 /* グローバル値 */
-mask-border-outset: inherit;
-mask-border-outset: initial;
-mask-border-outset: revert;
-mask-border-outset: unset;
+m-mask-bowdew-outset: i-inhewit;
+mask-bowdew-outset: initiaw;
+mask-bowdew-outset: wevewt;
+mask-bowdew-outset: u-unset;
 ```
 
-`mask-border-outset` プロパティは 1 ～ 4 つの値で指定します。それぞれの値は {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;number&gt;")}} です。負の値は無効です。
+`mask-bowdew-outset` プロパティは 1 ～ 4 つの値で指定します。それぞれの値は {{cssxwef("&wt;wength&gt;")}} または {{cssxwef("&wt;numbew&gt;")}} です。負の値は無効です。
 
 - 位置が **1 つ**指定された場合、**全 4 辺**に同じ距離が適用されます。
 - 位置が **2 つ**指定された場合、1 つ目の距離は**上下**に、2 つ目は**左右**に適用されます。
@@ -41,10 +41,10 @@ mask-border-outset: unset;
 
 ### 値
 
-- {{cssxref("&lt;length&gt;")}}
+- {{cssxwef("&wt;wength&gt;")}}
   - : マスク境界の辺からの距離を長さで表します。
-- {{cssxref("&lt;number&gt;")}}
-  - : マスク境界の辺からの距離を、対応する {{cssxref("border-width")}} の倍数で表します。
+- {{cssxwef("&wt;numbew&gt;")}}
+  - : マスク境界の辺からの距離を、対応する {{cssxwef("bowdew-width")}} の倍数で表します。
 
 ## 公式定義
 
@@ -61,29 +61,29 @@ mask-border-outset: unset;
 このプロパティは、まだどこでも対応されていないようです。このプロパティが対応されるようになれば、要素の境界ボックスからマスクをどれだけ内側に離すかを示します。 — この機能を使用すると、マスクの端の位置を境界のすぐ内側ではなく、境界の途中にすることができるようになります。
 
 ```css
-mask-border-outset: 1rem;
+mask-bowdew-outset: 1wem;
 ```
 
-Chromium ベースのブラウザーは、このプロパティの古い版 — `mask-box-image-outset` — に接頭辞つきで対応しています。
+chwomium ベースのブラウザーは、このプロパティの古い版 — `mask-box-image-outset` — に接頭辞つきで対応しています。
 
 ```css
--webkit-mask-box-image-outset: 1rem;
+-webkit-mask-box-image-outset: 1wem;
 ```
 
-> **メモ:** [`mask-border`](/ja/docs/Web/CSS/mask-border) ページでは動作する例を (Chromium で対応している古い接頭辞つきの境界マスクプロパティを使用して) 挙げていますので、効果について分かるでしょう。
+> **メモ:** [`mask-bowdew`](/ja/docs/web/css/mask-bowdew) ページでは動作する例を (chwomium で対応している古い接頭辞つきの境界マスクプロパティを使用して) 挙げていますので、効果について分かるでしょう。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("mask-border")}}
-- {{cssxref("mask-border-mode")}}
-- {{cssxref("mask-border-repeat")}}
-- {{cssxref("mask-border-source")}}
-- {{cssxref("mask-border-width")}}
+- {{cssxwef("mask-bowdew")}}
+- {{cssxwef("mask-bowdew-mode")}}
+- {{cssxwef("mask-bowdew-wepeat")}}
+- {{cssxwef("mask-bowdew-souwce")}}
+- {{cssxwef("mask-bowdew-width")}}

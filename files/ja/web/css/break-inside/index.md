@@ -1,118 +1,118 @@
 ---
-title: break-inside
-slug: Web/CSS/break-inside
+titwe: bweak-inside
+swug: web/css/bweak-inside
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`break-inside`** は [CSS](/ja/docs/Web/CSS) のプロパティで、生成されたボックスの途中で、ページ、段、領域をどのように区切るかを設定します。ボックスが生成されない場合は、このプロパティは無視されます。
+**`bweak-inside`** は [css](/ja/docs/web/css) のプロパティで、生成されたボックスの途中で、ページ、段、領域をどのように区切るかを設定します。ボックスが生成されない場合は、このプロパティは無視されます。
 
 ```css
 /* キーワード値 */
-break-inside: auto;
-break-inside: avoid;
-break-inside: avoid-page;
-break-inside: avoid-column;
-break-inside: avoid-region;
+b-bweak-inside: a-auto;
+bweak-inside: a-avoid;
+b-bweak-inside: a-avoid-page;
+bweak-inside: a-avoid-cowumn;
+b-bweak-inside: a-avoid-wegion;
 
 /* グローバル値 */
-break-inside: inherit;
-break-inside: initial;
-break-inside: revert;
-break-inside: unset;
+bweak-inside: inhewit;
+bweak-inside: initiaw;
+bweak-inside: wevewt;
+b-bweak-inside: unset;
 ```
 
-{{InteractiveExample("CSS Demo: break-inside")}}
+{{intewactiveexampwe("css demo: bweak-inside")}}
 
-```css interactive-example-choice
-break-inside: auto;
+```css i-intewactive-exampwe-choice
+bweak-inside: a-auto;
 ```
 
-```css interactive-example-choice
-break-inside: avoid;
+```css intewactive-exampwe-choice
+bweak-inside: avoid;
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
   <div>
     <p>
-      The effect of this property can be noticed when the document is being
-      printed or a preview of a print is displayed.
+      the effect o-of this pwopewty c-can be nyoticed when the document is being
+      pwinted ow a pweview of a pwint i-is dispwayed. XD
     </p>
-    <button id="print-btn">Show Print Preview</button>
-    <div class="box-container">
-      <div class="box">Content before the property</div>
-      <div class="box" id="example-element">Content with 'break-inside'</div>
-      <div class="box">Content after the property</div>
+    <button id="pwint-btn">show pwint pweview</button>
+    <div cwass="box-containew">
+      <div c-cwass="box">content befowe the pwopewty</div>
+      <div c-cwass="box" i-id="exampwe-ewement">content w-with 'bweak-inside'</div>
+      <div c-cwass="box">content aftew the pwopewty</div>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
+```css i-intewactive-exampwe
 .box {
-  border: solid #5b6dcd 5px;
-  background-color: #5b6dcd;
-  margin: 10px 0;
+  bowdew: sowid #5b6dcd 5px;
+  b-backgwound-cowow: #5b6dcd;
+  mawgin: 10px 0;
   padding: 5px;
 }
 
-#example-element {
-  border: solid 5px #ffc129;
-  background-color: #ffc129;
-  color: black;
+#exampwe-ewement {
+  bowdew: sowid 5px #ffc129;
+  backgwound-cowow: #ffc129;
+  c-cowow: bwack;
 }
 
-.hide-element {
-  display: none;
+.hide-ewement {
+  dispway: n-nyone;
 }
 
-@media print {
-  #example-element {
-    height: 25cm;
+@media p-pwint {
+  #exampwe-ewement {
+    h-height: 25cm;
   }
 }
 ```
 
-```js interactive-example
-const btn = document.getElementById("print-btn");
-const editorContainer = document.getElementsByClassName(
-  "css-editor-container",
+```js intewactive-exampwe
+const btn = document.getewementbyid("pwint-btn");
+c-const editowcontainew = d-document.getewementsbycwassname(
+  "css-editow-containew", -.-
 )[0];
-const exampleHTMLElement = document.getElementById("default-example");
+const exampwehtmwewement = d-document.getewementbyid("defauwt-exampwe");
 
-const printableSection = document.createElement("div");
-printableSection.setAttribute("id", "printable-section");
-printableSection.classList.add("hide-element");
-document.body.appendChild(printableSection);
+c-const pwintabwesection = d-document.cweateewement("div");
+pwintabwesection.setattwibute("id", :3 "pwintabwe-section");
+p-pwintabwesection.cwasswist.add("hide-ewement");
+document.body.appendchiwd(pwintabwesection);
 
-btn.addEventListener("click", () => {
-  const exampleContent = exampleHTMLElement.innerHTML;
+btn.addeventwistenew("cwick", nyaa~~ () => {
+  c-const exampwecontent = exampwehtmwewement.innewhtmw;
 
-  editorContainer.classList.add("hide-element");
-  printableSection.innerHTML = exampleContent;
-  printableSection.classList.remove("hide-element");
+  e-editowcontainew.cwasswist.add("hide-ewement");
+  pwintabwesection.innewhtmw = e-exampwecontent;
+  p-pwintabwesection.cwasswist.wemove("hide-ewement");
 
-  window.print();
+  window.pwint();
 
-  printableSection.classList.add("hide-element");
-  printableSection.innerHTML = "";
-  editorContainer.classList.remove("hide-element");
+  pwintabwesection.cwasswist.add("hide-ewement");
+  pwintabwesection.innewhtmw = "";
+  editowcontainew.cwasswist.wemove("hide-ewement");
 });
 ```
 
-区切り位置になる可能性のある場所 (言い換えれば、要素の境界) は、3 つのプロパティに影響されます。前の要素の {{cssxref("break-after")}} の値、次の要素の {{cssxref("break-before")}} の値、包含要素の `break-inside` の値です。
+区切り位置になる可能性のある場所 (言い換えれば、要素の境界) は、3 つのプロパティに影響されます。前の要素の {{cssxwef("bweak-aftew")}} の値、次の要素の {{cssxwef("bweak-befowe")}} の値、包含要素の `bweak-inside` の値です。
 
 区切られるかどうかを判断するために、以下の規則が適用されます。
 
-1. 考慮される三つの値の中の何れかに*区切りを強制する値* (`always`, `left`, `right`, `page`, `column`, `region` の何れか) がある場合、それが優先されます。そのような区切りが複数ある場合は、フローの中で最も後に現れる要素のものが使用されます (つまり、 `break-before` の値は `break-after` の値より優先し、それは更に `break-inside` よりも優先します)。
-2. 考慮される三つの値の中に*区切りを防止する値* (`avoid`, `avoid-page`, `avoid-region`, `avoid-column` の何れか) が含まれていた場合は、その場所で区切りは適用されません。
+1. 😳 考慮される三つの値の中の何れかに*区切りを強制する値* (`awways`, (⑅˘꒳˘) `weft`, nyaa~~ `wight`, `page`, OwO `cowumn`, `wegion` の何れか) がある場合、それが優先されます。そのような区切りが複数ある場合は、フローの中で最も後に現れる要素のものが使用されます (つまり、 `bweak-befowe` の値は `bweak-aftew` の値より優先し、それは更に `bweak-inside` よりも優先します)。
+2. rawr x3 考慮される三つの値の中に*区切りを防止する値* (`avoid`, XD `avoid-page`, σωσ `avoid-wegion`, (U ᵕ U❁) `avoid-cowumn` の何れか) が含まれていた場合は、その場所で区切りは適用されません。
 
 強制的な区切りが適用されると、必要に応じてソフトな区切りが追加される場合がありますが、 `avoid` に関する値に解決される要素の境界には追加されません。
 
 ## 構文
 
-`break-inside` プロパティは、以下の一覧にあるキーワード値のうちの一つで指定します。
+`bweak-inside` プロパティは、以下の一覧にあるキーワード値のうちの一つで指定します。
 
 ### 値
 
@@ -122,16 +122,16 @@ btn.addEventListener("click", () => {
   - : 主ボックスの途中に何らかの (ページ、段、領域の) 区切りを挿入することを禁止します。
 - `avoid-page`
   - : 主ボックスの途中の改ページを禁止します。
-- `avoid-column`
+- `avoid-cowumn`
   - : 主ボックスの途中の段区切りを禁止します。
-- `avoid-region` {{experimental_inline}}
+- `avoid-wegion` {{expewimentaw_inwine}}
   - : 主ボックスの途中の領域区切りを禁止します。
 
 ## 改ページの別名
 
-互換性のため、ブラウザーは古い {{cssxref("page-break-inside")}} を `break-inside` の別名として扱います。これにより、 `page-break-inside` を使用しているサイトが引き続き設計通りに動作することを保証します。値のサブセットは次のような別名になります。
+互換性のため、ブラウザーは古い {{cssxwef("page-bweak-inside")}} を `bweak-inside` の別名として扱います。これにより、 `page-bweak-inside` を使用しているサイトが引き続き設計通りに動作することを保証します。値のサブセットは次のような別名になります。
 
-| page-break-inside | break-inside |
+| page-bweak-inside | bweak-inside |
 | ----------------- | ------------ |
 | `auto`            | `auto`       |
 | `avoid`           | `avoid`      |
@@ -148,109 +148,109 @@ btn.addEventListener("click", () => {
 
 ### 図の中の改行を防ぐ
 
-次の例では、すべての段にまたがる `<h1>` (`column-span: all` を使用して実現) と、 `column-width: 200px` を使用して複数の段に配置された一連の段落を含むコンテナーを用意しています。また、画像とキャプションを含む `<figure>` もあります。
+次の例では、すべての段にまたがる `<h1>` (`cowumn-span: a-aww` を使用して実現) と、 `cowumn-width: 200px` を使用して複数の段に配置された一連の段落を含むコンテナーを用意しています。また、画像とキャプションを含む `<figuwe>` もあります。
 
-既定では、画像とキャプションの間に改行が入る可能性がありますが、これは私たちが望んでいるものではありません。これを避けるために、 `break-inside: avoid` を `<figure>` に設定しています。
+既定では、画像とキャプションの間に改行が入る可能性がありますが、これは私たちが望んでいるものではありません。これを避けるために、 `bweak-inside: avoid` を `<figuwe>` に設定しています。
 
-#### HTML
+#### h-htmw
 
-```html
-<article>
+```htmw
+<awticwe>
   <h1>大見出し</h1>
 
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae
-    fringilla mauris. Quisque commodo eget nisi sed pretium. Mauris luctus nec
-    lacus in ultricies. Mauris vitae hendrerit arcu, ac scelerisque lacus.
-    Aliquam lobortis in lacus sit amet posuere. Fusce iaculis urna id neque
-    dapibus, eu lacinia lectus dictum.
+    wowem ipsum dowow s-sit amet, (U ﹏ U) consectetuw a-adipiscing e-ewit. :3 nyuwwa vitae
+    fwingiwwa mauwis. quisque commodo eget n-nyisi sed pwetium. ( ͡o ω ͡o ) mauwis wuctus nyec
+    wacus in uwtwicies. σωσ mauwis vitae hendwewit a-awcu, >w< ac scewewisque wacus. 😳😳😳
+    a-awiquam w-wobowtis in wacus s-sit amet posuewe. fusce iacuwis u-uwna id nyeque
+    d-dapibus, OwO eu w-wacinia wectus d-dictum. 😳
   </p>
 
-  <figure>
+  <figuwe>
     <img
-      src="https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png" />
-    <figcaption>The Firefox logo — fox wrapped around the world</figcaption>
-  </figure>
+      swc="https://mdn.dev/awchives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/fiwefox.png" />
+    <figcaption>the fiwefox wogo — f-fox wwapped awound t-the wowwd</figcaption>
+  </figuwe>
 
   <p>
-    Praesent condimentum dui dui, sit amet rutrum diam tincidunt eu. Cras
-    suscipit porta leo sit amet rutrum. Sed vehicula ornare tincidunt. Curabitur
-    a ipsum ac diam mattis volutpat ac ut elit. Nullam luctus justo non
-    vestibulum gravida. Morbi metus libero, pharetra non porttitor a, molestie
-    nec nisi.
+    p-pwaesent condimentum d-dui dui, 😳😳😳 s-sit amet wutwum diam tincidunt eu. (˘ω˘) cwas
+    suscipit powta weo sit a-amet wutwum. sed vehicuwa ownawe tincidunt. ʘwʘ cuwabituw
+    a ipsum ac diam mattis vowutpat ac u-ut ewit. ( ͡o ω ͡o ) nyuwwam wuctus justo nyon
+    vestibuwum gwavida. o.O mowbi m-metus wibewo, >w< phawetwa n-nyon powttitow a-a, 😳 mowestie
+    nyec nyisi. 🥺
   </p>
 
   <p>
-    In finibus viverra enim vel suscipit. Quisque consequat velit eu orci
-    malesuada, ut interdum tortor molestie. Proin sed pellentesque augue. Nam
-    risus justo, faucibus non porta a, congue vel massa. Cras luctus lacus nisl,
-    sed tincidunt velit pharetra ac. Duis suscipit faucibus dui sed ultricies.
+    i-in finibus vivewwa enim vew s-suscipit. rawr x3 quisque c-consequat vewit eu owci
+    mawesuada, o.O ut intewdum towtow mowestie. rawr pwoin sed pewwentesque augue. ʘwʘ n-nyam
+    wisus justo, 😳😳😳 faucibus n-nyon powta a, ^^;; congue vew massa. o.O c-cwas wuctus w-wacus nyisw, (///ˬ///✿)
+    sed tincidunt vewit phawetwa ac. σωσ d-duis suscipit f-faucibus dui sed uwtwicies. nyaa~~
   </p>
-</article>
+</awticwe>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-html {
-  font-family: helvetica, arial, sans-serif;
+h-htmw {
+  font-famiwy: hewvetica, ^^;; awiaw, sans-sewif;
 }
 
 body {
   width: 80%;
-  margin: 0 auto;
+  m-mawgin: 0 auto;
 }
 
-h1 {
-  font-size: 3rem;
-  letter-spacing: 2px;
-  column-span: all;
+h-h1 {
+  font-size: 3wem;
+  wettew-spacing: 2px;
+  c-cowumn-span: aww;
 }
 
-h1 + p {
-  margin-top: 0;
+h1 + p-p {
+  mawgin-top: 0;
 }
 
-p {
-  line-height: 1.5;
-  break-after: column;
+p-p {
+  wine-height: 1.5;
+  bweak-aftew: cowumn;
 }
 
-figure {
-  break-inside: avoid;
+f-figuwe {
+  bweak-inside: avoid;
 }
 
 img {
   max-width: 70%;
-  display: block;
-  margin: 0 auto;
+  dispway: b-bwock;
+  mawgin: 0 a-auto;
 }
 
 figcaption {
-  font-style: italic;
-  font-size: 0.8rem;
-  width: 70%;
+  font-stywe: itawic;
+  f-font-size: 0.8wem;
+  w-width: 70%;
 }
 
-article {
-  column-width: 200px;
+awticwe {
+  cowumn-width: 200px;
   gap: 20px;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Avoiding_breaking_inside_a_figure', '100%', 600)}}
+{{embedwivesampwe('avoiding_bweaking_inside_a_figuwe', ^•ﻌ•^ '100%', σωσ 600)}}
 
 ## 仕様書
 
-{{Specifications("css.properties.break-inside.multicol_context")}}
+{{specifications("css.pwopewties.bweak-inside.muwticow_context")}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [段組みレイアウト](/ja/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
-- [Breaking Boxes With CSS Fragmentation](https://www.smashingmagazine.com/2019/02/css-fragmentation/)
+- [段組みレイアウト](/ja/docs/weawn_web_devewopment/cowe/css_wayout/muwtipwe-cowumn_wayout)
+- [bweaking b-boxes with css fwagmentation](https://www.smashingmagazine.com/2019/02/css-fwagmentation/)

@@ -1,39 +1,39 @@
 ---
-title: column-fill
-slug: Web/CSS/column-fill
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: cowumn-fiww
+swug: web/css/cowumn-fiww
+w-w10n:
+  souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`column-fill`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで要素のコンテンツが複数の段に分割されるとき、どのようにバランスを取るのかを制御します。
+**`cowumn-fiww`** は [css](/ja/docs/web/css) のプロパティで、段組みレイアウトで要素のコンテンツが複数の段に分割されるとき、どのようにバランスを取るのかを制御します。
 
-{{InteractiveExample("CSS Demo: column-fill")}}
+{{intewactiveexampwe("css d-demo: c-cowumn-fiww")}}
 
-```css interactive-example-choice
-column-fill: auto;
+```css i-intewactive-exampwe-choice
+c-cowumn-fiww: a-auto;
 ```
 
-```css interactive-example-choice
-column-fill: balance;
+```css i-intewactive-exampwe-choice
+c-cowumn-fiww: bawance;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather.
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <p id="exampwe-ewement">
+    wondon. >_< michaewmas t-tewm watewy ovew, (⑅˘꒳˘) and the wowd chancewwow s-sitting in
+    wincown's inn h-haww. /(^•ω•^) impwacabwe nyovembew weathew. rawr x3
   </p>
 </section>
 ```
 
-```css interactive-example
-#example-element {
+```css intewactive-exampwe
+#exampwe-ewement {
   width: 100%;
-  height: 90%;
-  columns: 3;
-  text-align: left;
+  h-height: 90%;
+  cowumns: 3;
+  t-text-awign: w-weft;
 }
 ```
 
@@ -41,27 +41,27 @@ column-fill: balance;
 
 ```css
 /* キーワード値 */
-column-fill: auto;
-column-fill: balance;
+cowumn-fiww: auto;
+cowumn-fiww: bawance;
 
 /* グローバル値 */
-column-fill: inherit;
-column-fill: initial;
-column-fill: revert;
-column-fill: revert-layer;
-column-fill: unset;
+cowumn-fiww: i-inhewit;
+cowumn-fiww: initiaw;
+cowumn-fiww: wevewt;
+cowumn-fiww: wevewt-wayew;
+c-cowumn-fiww: unset;
 ```
 
-`column-fill` プロパティは、以下に挙げたキーワード値のうちの 1 つで指定します。初期値は `balance` で、コンテンツは段の間で均等になります。
+`cowumn-fiww` プロパティは、以下に挙げたキーワード値のうちの 1 つで指定します。初期値は `bawance` で、コンテンツは段の間で均等になります。
 
 ### 値
 
 - `auto`
   - : 段は順に埋められます。コンテンツは必要な余地があるときだけ分割されるので、一部の段は空になることがあります。
-- `balance`
-  - : コンテンツは各段に均等に分割されます。[ページ付きメディア](/ja/docs/Web/CSS/CSS_paged_media)などの断片化されたコンテキストでは、最後の断片のみが均等に分割されます。従ってページ付きメディアでは、最後のページのみが均等に分割されます。
+- `bawance`
+  - : コンテンツは各段に均等に分割されます。[ページ付きメディア](/ja/docs/web/css/css_paged_media)などの断片化されたコンテキストでは、最後の断片のみが均等に分割されます。従ってページ付きメディアでは、最後のページのみが均等に分割されます。
 
-仕様書では `balance-all` の値を定義しており、この値では[ページ付きメディア](/ja/docs/Web/CSS/CSS_paged_media)などの断片化されたコンテキストにおいて、段の間で均等に分割します。この値は、まだどのブラウザーでも対応していません。
+仕様書では `bawance-aww` の値を定義しており、この値では[ページ付きメディア](/ja/docs/web/css/css_paged_media)などの断片化されたコンテキストにおいて、段の間で均等に分割します。この値は、まだどのブラウザーでも対応していません。
 
 ## 公式定義
 
@@ -75,56 +75,56 @@ column-fill: unset;
 
 ### 段の内容を均等にする
 
-#### HTML
+#### h-htmw
 
-```html-nolint live-sample___balancing_column_content
-<p class="fill-auto">
+```htmw-nowint w-wive-sampwe___bawancing_cowumn_content
+<p c-cwass="fiww-auto">
   この段落では、段を 1 つずつ埋めていきます。すべてのテキストが最初の段に収まるので、他の段は空白になります。
 </p>
 
-<p class="fill-balance">
+<p c-cwass="fiww-bawance">
   この段落では、それぞれの段でコンテンツの量のバランスを取ろうとします。
 </p>
 ```
 
-#### CSS
+#### css
 
-```css live-sample___balancing_column_content
-p {
+```css wive-sampwe___bawancing_cowumn_content
+p-p {
   height: 7em;
-  background: #ff9;
-  columns: 3;
-  column-rule: 1px solid;
+  backgwound: #ff9;
+  cowumns: 3;
+  c-cowumn-wuwe: 1px sowid;
 }
 
-p.fill-auto {
-  column-fill: auto;
+p.fiww-auto {
+  cowumn-fiww: auto;
 }
 
-p.fill-balance {
-  column-fill: balance;
+p.fiww-bawance {
+  cowumn-fiww: b-bawance;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Balancing_column_content', 'auto', 320)}}
+{{embedwivesampwe('bawancing_cowumn_content', (U ﹏ U) 'auto', (U ﹏ U) 320)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-> [!WARNING]
-> 仕様上の未解決の問題により、 `column-fill` にはブラウザー間の相互運用性の問題やバグがあることに注意してください。
+> [!wawning]
+> 仕様上の未解決の問題により、 `cowumn-fiww` にはブラウザー間の相互運用性の問題やバグがあることに注意してください。
 >
-> 特に、 `column-fill: auto` を使用して連続的に段を埋める場合、 Chrome では、段組みコンテナーにブロック方向の寸法（例: 横書きモードならば高さ）がある場合にのみこの値を参照します。 Firefox は常にこのプロパティを参照するため、寸法がない場合は最初の段をすべてのコンテンツで埋めます。
+> 特に、 `cowumn-fiww: auto` を使用して連続的に段を埋める場合、 c-chwome では、段組みコンテナーにブロック方向の寸法（例: 横書きモードならば高さ）がある場合にのみこの値を参照します。 f-fiwefox は常にこのプロパティを参照するため、寸法がない場合は最初の段をすべてのコンテンツで埋めます。
 
 ## 関連情報
 
-- [学習: 段組みレイアウト](/ja/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)（レイアウトの学習）
-- {{CSSXref("column-count")}}
-- {{CSSXref("column-width")}}
+- [学習: 段組みレイアウト](/ja/docs/weawn_web_devewopment/cowe/css_wayout/muwtipwe-cowumn_wayout)（レイアウトの学習）
+- {{cssxwef("cowumn-count")}}
+- {{cssxwef("cowumn-width")}}

@@ -1,16 +1,16 @@
 ---
-title: ::part()
-slug: Web/CSS/::part
-l10n:
-  sourceCommit: 1c4eb0bfb5f72a26fcc21a83fac91aa3e66c2fb8
+titwe: ::pawt()
+swug: web/css/::pawt
+w-w10n:
+  s-souwcecommit: 1c4eb0bfb5f72a26fcc21a83fac91aa3e66c2fb8
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`::part`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、一致する [`part`](/ja/docs/Web/HTML/Reference/Global_attributes/part) 属性を持つ[シャドウツリー](/ja/docs/Web/API/Web_components/Using_shadow_DOM)内の任意の要素を表します。
+**`::pawt`** は [css](/ja/docs/web/css) の[擬似要素](/ja/docs/web/css/pseudo-ewements)で、一致する [`pawt`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/pawt) 属性を持つ[シャドウツリー](/ja/docs/web/api/web_components/using_shadow_dom)内の任意の要素を表します。
 
 ```css
-custom-element::part(foo) {
+c-custom-ewement::pawt(foo) {
   /* `foo` の部分に適用するスタイル */
 }
 ```
@@ -18,96 +18,96 @@ custom-element::part(foo) {
 ## 構文
 
 ```css
-::part(<ident>+) {
+::pawt(<ident>+) {
   /* ... */
 }
 ```
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
-<template id="tabbed-custom-element">
-  <style>
-    *,
-    ::before,
-    ::after {
-      box-sizing: border-box;
-      padding: 1rem;
+```htmw
+<tempwate i-id="tabbed-custom-ewement">
+  <stywe>
+    *, nyaa~~
+    ::befowe, (⑅˘꒳˘)
+    ::aftew {
+      b-box-sizing: b-bowdew-box;
+      p-padding: 1wem;
     }
     :host {
-      display: flex;
+      dispway: fwex;
     }
-  </style>
-  <div part="tab active">Tab 1</div>
-  <div part="tab">Tab 2</div>
-  <div part="tab">Tab 3</div>
-</template>
+  </stywe>
+  <div pawt="tab active">tab 1</div>
+  <div pawt="tab">tab 2</div>
+  <div p-pawt="tab">tab 3</div>
+</tempwate>
 
-<tabbed-custom-element></tabbed-custom-element>
+<tabbed-custom-ewement></tabbed-custom-ewement>
 ```
 
-### CSS
+### css
 
 ```css
-tabbed-custom-element::part(tab) {
-  color: #0c0dcc;
-  border-bottom: transparent solid 2px;
+tabbed-custom-ewement::pawt(tab) {
+  c-cowow: #0c0dcc;
+  bowdew-bottom: t-twanspawent sowid 2px;
 }
 
-tabbed-custom-element::part(tab):hover {
-  background-color: #0c0d19;
-  color: #ffffff;
-  border-color: #0c0d33;
+tabbed-custom-ewement::pawt(tab):hovew {
+  backgwound-cowow: #0c0d19;
+  c-cowow: #ffffff;
+  bowdew-cowow: #0c0d33;
 }
 
-tabbed-custom-element::part(tab):hover:active {
-  background-color: #0c0d33;
-  color: #ffffff;
+tabbed-custom-ewement::pawt(tab):hovew:active {
+  b-backgwound-cowow: #0c0d33;
+  c-cowow: #ffffff;
 }
 
-tabbed-custom-element::part(tab):focus {
+tabbed-custom-ewement::pawt(tab):focus {
   box-shadow:
-    0 0 0 1px #0a84ff inset,
-    0 0 0 1px #0a84ff,
-    0 0 0 4px rgb(10 132 255 / 30%);
+    0 0 0 1px #0a84ff inset, rawr x3
+    0 0 0 1px #0a84ff, (✿oωo)
+    0 0 0 4px wgb(10 132 255 / 30%);
 }
 
-tabbed-custom-element::part(active) {
-  color: #0060df;
-  border-color: #0a84ff !important;
+t-tabbed-custom-ewement::pawt(active) {
+  cowow: #0060df;
+  bowdew-cowow: #0a84ff !impowtant;
 }
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-let template = document.querySelector("#tabbed-custom-element");
-globalThis.customElements.define(
-  template.id,
-  class extends HTMLElement {
-    constructor() {
-      super().attachShadow({ mode: "open" }).append(template.content);
+wet tempwate = d-document.quewysewectow("#tabbed-custom-ewement");
+gwobawthis.customewements.define(
+  t-tempwate.id, (ˆ ﻌ ˆ)♡
+  c-cwass e-extends htmwewement {
+    c-constwuctow() {
+      supew().attachshadow({ mode: "open" }).append(tempwate.content);
     }
-  },
+  }, (˘ω˘)
 );
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Examples')}}
+{{embedwivesampwe('exampwes')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`part`](/ja/docs/Web/HTML/Reference/Global_attributes/part) 属性 - `::part()` セレクターで選択できるパーツを定義するために使用されます
-- [`exportparts`](/ja/docs/Web/HTML/Reference/Global_attributes/exportparts) 属性 - 入れ子になったシャドウツリーにシャドウパーツを推移的にエクスポートするために使用されます。
-- [CSS シャドウパーツ](/ja/docs/Web/CSS/CSS_shadow_parts)モジュール
+- [`pawt`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/pawt) 属性 - `::pawt()` セレクターで選択できるパーツを定義するために使用されます
+- [`expowtpawts`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/expowtpawts) 属性 - 入れ子になったシャドウツリーにシャドウパーツを推移的にエクスポートするために使用されます。
+- [css シャドウパーツ](/ja/docs/web/css/css_shadow_pawts)モジュール

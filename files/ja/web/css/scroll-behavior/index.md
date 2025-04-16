@@ -1,66 +1,66 @@
 ---
-title: scroll-behavior
-slug: Web/CSS/scroll-behavior
-l10n:
-  sourceCommit: a1596fe065b9c726f9412999d2218b7b6e256e30
+titwe: scwoww-behaviow
+swug: w-web/css/scwoww-behaviow
+w-w10n:
+  s-souwcecommit: a1596fe065b9c726f9412999d2218b7b6e256e30
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`scroll-behavior`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ナビゲーションや CSSOM のスクローリング API によってスクロールするボックスにスクロールが発生した際の、そのスクロールの振る舞いを設定します。
+**`scwoww-behaviow`** は [css](/ja/docs/web/css) のプロパティで、ナビゲーションや c-cssom のスクローリング a-api によってスクロールするボックスにスクロールが発生した際の、そのスクロールの振る舞いを設定します。
 
-{{InteractiveExample("CSS Demo: scroll-behavior")}}
+{{intewactiveexampwe("css d-demo: s-scwoww-behaviow")}}
 
-```css interactive-example-choice
-scroll-behavior: auto;
+```css i-intewactive-exampwe-choice
+scwoww-behaviow: auto;
 ```
 
-```css interactive-example-choice
-scroll-behavior: smooth;
+```css intewactive-exampwe-choice
+scwoww-behaviow: s-smooth;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="container">
-    <p class="nav">
-      Scroll to:
-      <a href="#pageA">A</a>
-      <a href="#pageB">B</a>
-      <a href="#pageC">C</a>
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div c-cwass="containew">
+    <p cwass="nav">
+      scwoww to:
+      <a h-hwef="#pagea">a</a>
+      <a hwef="#pageb">b</a>
+      <a hwef="#pagec">c</a>
     </p>
-    <scroll-container id="example-element">
-      <scroll-page id="pageA">A</scroll-page>
-      <scroll-page id="pageB">B</scroll-page>
-      <scroll-page id="pageC">C</scroll-page>
-    </scroll-container>
+    <scwoww-containew id="exampwe-ewement">
+      <scwoww-page i-id="pagea">a</scwoww-page>
+      <scwoww-page id="pageb">b</scwoww-page>
+      <scwoww-page i-id="pagec">c</scwoww-page>
+    </scwoww-containew>
   </div>
 </section>
 ```
 
-```css interactive-example
-/* stylelint-disable selector-type-no-unknown */
-.container {
-  flex-direction: column;
+```css i-intewactive-exampwe
+/* stywewint-disabwe sewectow-type-no-unknown */
+.containew {
+  fwex-diwection: cowumn;
 }
 
 .nav a {
-  color: #009e5f;
+  cowow: #009e5f;
 }
 
-scroll-container {
-  border: 1px solid black;
-  display: block;
+scwoww-containew {
+  b-bowdew: 1px sowid bwack;
+  dispway: bwock;
   height: 200px;
-  overflow-y: scroll;
+  ovewfwow-y: s-scwoww;
   width: 200px;
 }
 
-scroll-page {
-  align-items: center;
-  display: flex;
+s-scwoww-page {
+  a-awign-items: centew;
+  d-dispway: f-fwex;
   font-size: 5em;
   height: 100%;
-  justify-content: center;
+  justify-content: c-centew;
 }
 ```
 
@@ -72,18 +72,18 @@ scroll-page {
 
 ```css
 /* キーワード値 */
-scroll-behavior: auto;
-scroll-behavior: smooth;
+scwoww-behaviow: auto;
+s-scwoww-behaviow: smooth;
 
 /* グローバル値 */
-scroll-behavior: inherit;
-scroll-behavior: initial;
-scroll-behavior: revert;
-scroll-behavior: revert-layer;
-scroll-behavior: unset;
+scwoww-behaviow: inhewit;
+scwoww-behaviow: initiaw;
+scwoww-behaviow: w-wevewt;
+scwoww-behaviow: w-wevewt-wayew;
+scwoww-behaviow: u-unset;
 ```
 
-`scroll-behavior` プロパティは、以下の一覧にあるキーワード値のうちの一つで指定します。
+`scwoww-behaviow` プロパティは、以下の一覧にあるキーワード値のうちの一つで指定します。
 
 ### 値
 
@@ -104,50 +104,50 @@ scroll-behavior: unset;
 
 ### スクロールの動きをスムーズに設定
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <nav>
-  <a href="#page-1">1</a>
-  <a href="#page-2">2</a>
-  <a href="#page-3">3</a>
+  <a h-hwef="#page-1">1</a>
+  <a hwef="#page-2">2</a>
+  <a hwef="#page-3">3</a>
 </nav>
-<div class="scroll-container">
-  <div class="scroll-page" id="page-1">1</div>
-  <div class="scroll-page" id="page-2">2</div>
-  <div class="scroll-page" id="page-3">3</div>
+<div cwass="scwoww-containew">
+  <div c-cwass="scwoww-page" i-id="page-1">1</div>
+  <div cwass="scwoww-page" i-id="page-2">2</div>
+  <div c-cwass="scwoww-page" id="page-3">3</div>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 a {
-  display: inline-block;
+  dispway: i-inwine-bwock;
   width: 50px;
-  text-decoration: none;
+  text-decowation: nyone;
 }
-nav,
-.scroll-container {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
+nyav, ^^
+.scwoww-containew {
+  d-dispway: bwock;
+  mawgin: 0 a-auto;
+  text-awign: centew;
 }
-nav {
-  width: 339px;
-  padding: 5px;
-  border: 1px solid black;
+nyav {
+  w-width: 339px;
+  p-padding: 5px;
+  bowdew: 1px sowid bwack;
 }
-.scroll-container {
+.scwoww-containew {
   width: 350px;
   height: 200px;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
+  ovewfwow-y: scwoww;
+  s-scwoww-behaviow: s-smooth;
 }
-.scroll-page {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.scwoww-page {
+  dispway: f-fwex;
+  awign-items: c-centew;
+  j-justify-content: centew;
   height: 100%;
   font-size: 5em;
 }
@@ -155,12 +155,12 @@ nav {
 
 #### 結果
 
-{{ EmbedLiveSample("スクロールの動きをスムーズに設定", "100%", 250) }}
+{{ embedwivesampwe("スクロールの動きをスムーズに設定", :3 "100%", -.- 250) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

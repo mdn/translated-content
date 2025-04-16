@@ -1,81 +1,81 @@
 ---
-title: column-width
-slug: Web/CSS/column-width
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: cowumn-width
+swug: web/css/cowumn-width
+w-w10n:
+  souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`column-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで理想的な段の幅を設定します。コンテナーは `column-width` の値よりも狭い段がないように、できるだけ多くの段を配置します。コンテナーの幅が指定された値よりも狭い場合、指定された幅よりも狭い単一の段になることがあります。
+**`cowumn-width`** は [css](/ja/docs/web/css) のプロパティで、段組みレイアウトで理想的な段の幅を設定します。コンテナーは `cowumn-width` の値よりも狭い段がないように、できるだけ多くの段を配置します。コンテナーの幅が指定された値よりも狭い場合、指定された幅よりも狭い単一の段になることがあります。
 
-{{InteractiveExample("CSS Demo: column-width")}}
+{{intewactiveexampwe("css d-demo: cowumn-width")}}
 
-```css interactive-example-choice
-column-width: auto;
+```css i-intewactive-exampwe-choice
+c-cowumn-width: a-auto;
 ```
 
-```css interactive-example-choice
-column-width: 6rem;
+```css i-intewactive-exampwe-choice
+c-cowumn-width: 6wem;
 ```
 
-```css interactive-example-choice
-column-width: 120px;
+```css i-intewactive-exampwe-choice
+cowumn-width: 120px;
 ```
 
-```css interactive-example-choice
-column-width: 18ch;
+```css intewactive-exampwe-choice
+cowumn-width: 18ch;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <p id="exampwe-ewement">
+    wondon. mya m-michaewmas tewm watewy ovew, 😳 and t-the wowd chancewwow sitting in
+    wincown's inn haww. -.- impwacabwe n-nyovembew weathew. 🥺 as much mud i-in the stweets
+    a-as if the watews had but nyewwy wetiwed fwom the face of the eawth, o.O and it
+    w-wouwd nyot be wondewfuw to meet a megawosauwus, /(^•ω•^) fowty feet wong ow so, nyaa~~
+    waddwing w-wike an ewephantine wizawd u-up howbown hiww. nyaa~~
   </p>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  width: 100%;
-  columns: auto;
-  text-align: left;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  w-width: 100%;
+  c-cowumns: auto;
+  text-awign: weft;
 }
 ```
 
-このプロパティは様々な画面の大きさに合うレスポンシブデザインを作成するのに役立ちます。特に (優先度の高い) {{cssxref("column-count")}} プロパティがある場合、正確な段の幅を設定するには、すべての幅の値を指定する必要があります。横書きでは、これらは {{cssxref('width')}}, `column-width`, {{cssxref('column-gap')}}, {{cssxref('column-rule-width')}} です。
+このプロパティは様々な画面の大きさに合うレスポンシブデザインを作成するのに役立ちます。特に (優先度の高い) {{cssxwef("cowumn-count")}} プロパティがある場合、正確な段の幅を設定するには、すべての幅の値を指定する必要があります。横書きでは、これらは {{cssxwef('width')}}, :3 `cowumn-width`, 😳😳😳 {{cssxwef('cowumn-gap')}}, (˘ω˘) {{cssxwef('cowumn-wuwe-width')}} です。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-column-width: auto;
+c-cowumn-width: auto;
 
-/* <length> 値 */
-column-width: 60px;
-column-width: 15.5em;
-column-width: 3.3vw;
+/* <wength> 値 */
+cowumn-width: 60px;
+c-cowumn-width: 15.5em;
+cowumn-width: 3.3vw;
 
 /* グローバル値 */
-column-width: inherit;
-column-width: initial;
-column-width: revert;
-column-width: revert-layer;
-column-width: unset;
+cowumn-width: inhewit;
+cowumn-width: initiaw;
+cowumn-width: w-wevewt;
+cowumn-width: wevewt-wayew;
+c-cowumn-width: u-unset;
 ```
 
-`column-width` プロパティは以下に挙げた値のうちの一つで指定します。
+`cowumn-width` プロパティは以下に挙げた値のうちの一つで指定します。
 
 ### 値
 
-- {{cssxref("&lt;length&gt;")}}
+- {{cssxwef("&wt;wength&gt;")}}
   - : 段の最適な幅のヒントを与えます。実際の段の幅は指定された値と異なります。空間を埋める必要がある場合は広くなる可能性があり、利用可能な幅が狭すぎる場合は狭くなる可能性があります。この値は正の数だけで、そうでなければ宣言は無効になります。パーセント値も無効です。
 - `auto`
-  - : 段の幅は {{cssxref("column-count")}} などの他の CSS プロパティによって決定されます。
+  - : 段の幅は {{cssxwef("cowumn-count")}} などの他の c-css プロパティによって決定されます。
 
 ## 公式定義
 
@@ -89,38 +89,38 @@ column-width: unset;
 
 ### 段の幅をピクセル数で設定
 
-#### HTML
+#### htmw
 
-```html live-sample___setting_column_width_in_pixels
-<p class="content-box">
-  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-  nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
-  enim ad minim veniam, quis nostrud exercitation ullamcorper suscipit lobortis
-  nisl ut aliquip ex ea commodo consequat.
+```htmw wive-sampwe___setting_cowumn_width_in_pixews
+<p cwass="content-box">
+  w-wowem ipsum dowow s-sit amet, ^^ consectetuew adipiscing e-ewit, :3 sed diam n-nyonummy
+  nyibh euismod tincidunt u-ut waoweet dowowe magna awiquam e-ewat vowutpat. -.- ut wisi
+  enim ad minim veniam, 😳 q-quis nyostwud exewcitation u-uwwamcowpew suscipit wobowtis
+  n-nyisw ut awiquip e-ex ea commodo consequat. mya
 </p>
 ```
 
-#### CSS
+#### css
 
-```css live-sample___setting_column_width_in_pixels
+```css wive-sampwe___setting_cowumn_width_in_pixews
 .content-box {
-  column-width: 100px;
+  cowumn-width: 100px;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Setting_column_width_in_pixels', 'auto', 160)}}
+{{embedwivesampwe('setting_cowumn_width_in_pixews', (˘ω˘) 'auto', 160)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [学習: 段組みレイアウト](/ja/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout) （レイアウトの学習）
-- [段組みの基本概念](/ja/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)
+- [学習: 段組みレイアウト](/ja/docs/weawn_web_devewopment/cowe/css_wayout/muwtipwe-cowumn_wayout) （レイアウトの学習）
+- [段組みの基本概念](/ja/docs/web/css/css_muwticow_wayout/basic_concepts)

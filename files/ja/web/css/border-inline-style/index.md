@@ -1,112 +1,112 @@
 ---
-title: border-inline-style
-slug: Web/CSS/border-inline-style
+titwe: bowdew-inwine-stywe
+swug: w-web/css/bowdew-inwine-stywe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`border-inline-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なインライン方向の境界のスタイルを定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界のスタイルに対応づけられます。これは {{cssxref("border-top-style")}} と {{cssxref("border-bottom-style")}}、または {{cssxref("border-left-style")}} と {{cssxref("border-right-style")}} の組み合わせのどちらかに対応し、どちらに対応するかは {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}} で定義された値によって決まります。
+**`bowdew-inwine-stywe`** は [css](/ja/docs/web/css) のプロパティで、要素の論理的なインライン方向の境界のスタイルを定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界のスタイルに対応づけられます。これは {{cssxwef("bowdew-top-stywe")}} と {{cssxwef("bowdew-bottom-stywe")}}、または {{cssxwef("bowdew-weft-stywe")}} と {{cssxwef("bowdew-wight-stywe")}} の組み合わせのどちらかに対応し、どちらに対応するかは {{cssxwef("wwiting-mode")}}、{{cssxwef("diwection")}}、{{cssxwef("text-owientation")}} で定義された値によって決まります。
 
-{{InteractiveExample("CSS Demo: border-inline-style")}}
+{{intewactiveexampwe("css d-demo: b-bowdew-inwine-stywe")}}
 
-```css interactive-example-choice
-border-inline-style: dotted;
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+b-bowdew-inwine-stywe: d-dotted;
+wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-border-inline-style: dotted;
-writing-mode: vertical-rl;
+```css i-intewactive-exampwe-choice
+bowdew-inwine-stywe: dotted;
+wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-border-inline-style: groove;
-writing-mode: horizontal-tb;
-direction: rtl;
+```css intewactive-exampwe-choice
+b-bowdew-inwine-stywe: gwoove;
+wwiting-mode: howizontaw-tb;
+d-diwection: wtw;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    this is a b-box with a bowdew a-awound it. >_<
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #000;
-  border: 0.75em solid;
-  padding: 0.75em;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #eee;
+  cowow: #000;
+  bowdew: 0.75em sowid;
+  p-padding: 0.75em;
   width: 80%;
   height: 100px;
-  unicode-bidi: bidi-override;
+  unicode-bidi: bidi-ovewwide;
 }
 ```
 
-他の方向の境界スタイルについては {{cssxref("border-block-style")}} で設定することができ、これは {{cssxref("border-block-start-style")}} および {{cssxref("border-block-end-style")}} を設定することができます。
+他の方向の境界スタイルについては {{cssxwef("bowdew-bwock-stywe")}} で設定することができ、これは {{cssxwef("bowdew-bwock-stawt-stywe")}} および {{cssxwef("bowdew-bwock-end-stywe")}} を設定することができます。
 
 ## 構文
 
 ```css
-/* <'border-style'> の値 */
-border-inline-style: dashed;
-border-inline-style: dotted;
-border-inline-style: revert;
-border-inline-style: groove;
+/* <'bowdew-stywe'> の値 */
+b-bowdew-inwine-stywe: dashed;
+bowdew-inwine-stywe: dotted;
+b-bowdew-inwine-stywe: w-wevewt;
+b-bowdew-inwine-stywe: g-gwoove;
 ```
 
 ### 値
 
-- `<'border-style'>`
-  - : 境界線のスタイルです。 {{ cssxref("border-style") }} を参照してください。
+- `<'bowdew-stywe'>`
+  - : 境界線のスタイルです。 {{ cssxwef("bowdew-stywe") }} を参照してください。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples">例</h2>
+<h2 id="exampwes">例</h2>
 
-### HTML
+### htmw
 
-```html
+```htmw
 <div>
-  <p class="exampleText">Example text</p>
+  <p c-cwass="exampwetext">exampwe text</p>
 </div>
 ```
 
-### CSS
+### css
 
 ```css
-div {
-  background-color: yellow;
+d-div {
+  backgwound-cowow: yewwow;
   width: 120px;
   height: 120px;
 }
 
-.exampleText {
-  writing-mode: vertical-lr;
-  border: 5px solid blue;
-  border-inline-style: dashed;
+.exampwetext {
+  wwiting-mode: vewticaw-ww;
+  b-bowdew: 5px sowid bwue;
+  b-bowdew-inwine-stywe: d-dashed;
 }
 ```
 
-{{EmbedLiveSample("Examples", 140, 140)}}
+{{embedwivesampwe("exampwes", (⑅˘꒳˘) 140, 140)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このプロパティは物理的な境界のプロパティ {{cssxref("border-top-style")}}、{{cssxref("border-right-style")}}、{{cssxref("border-bottom-style")}}、{{cssxref("border-left-style")}} のうちの 1 つに対応します
-- {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}}
+- このプロパティは物理的な境界のプロパティ {{cssxwef("bowdew-top-stywe")}}、{{cssxwef("bowdew-wight-stywe")}}、{{cssxwef("bowdew-bottom-stywe")}}、{{cssxwef("bowdew-weft-stywe")}} のうちの 1 つに対応します
+- {{cssxwef("wwiting-mode")}}、{{cssxwef("diwection")}}、{{cssxwef("text-owientation")}}

@@ -1,29 +1,29 @@
 ---
-title: font-synthesis-small-caps
-slug: Web/CSS/font-synthesis-small-caps
-l10n:
-  sourceCommit: 28368ab728eed206d9069f5ba5b889e990ff810c
+titwe: font-synthesis-smow-caps
+swug: web/css/font-synthesis-smow-caps
+w-w10n:
+  s-souwcecommit: 28368ab728eed206d9069f5ba5b889e990ff810c
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`font-synthesis-small-caps`** は [CSS](/ja/docs/Web/CSS) プロパティで、フォントファミリーにスモールキャップの書体がない場合に、ブラウザーがスモールキャップの書体を合成するかどうかを指定します。スモールキャップの字体は通常、大文字の形状を使用しますが、小文字のサイズに縮小されます。
+**`font-synthesis-smow-caps`** は [css](/ja/docs/web/css) プロパティで、フォントファミリーにスモールキャップの書体がない場合に、ブラウザーがスモールキャップの書体を合成するかどうかを指定します。スモールキャップの字体は通常、大文字の形状を使用しますが、小文字のサイズに縮小されます。
 
-すべての書体合成値を制御するために、多くの場合は一括指定プロパティ {{cssxref("font-synthesis")}} を使用した方が便利です。
+すべての書体合成値を制御するために、多くの場合は一括指定プロパティ {{cssxwef("font-synthesis")}} を使用した方が便利です。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-font-synthesis-small-caps: auto;
-font-synthesis-small-caps: none;
+f-font-synthesis-smow-caps: a-auto;
+font-synthesis-smow-caps: n-nyone;
 
 /* グローバル値 */
-font-synthesis-small-caps: inherit;
-font-synthesis-small-caps: initial;
-font-synthesis-small-caps: revert;
-font-synthesis-small-caps: revert-layer;
-font-synthesis-small-caps: unset;
+f-font-synthesis-smow-caps: inhewit;
+f-font-synthesis-smow-caps: i-initiaw;
+font-synthesis-smow-caps: wevewt;
+font-synthesis-smow-caps: wevewt-wayew;
+font-synthesis-smow-caps: unset;
 ```
 
 ### 値
@@ -45,51 +45,51 @@ font-synthesis-small-caps: unset;
 
 ### スモールキャップの書体の合成の無効化
 
-この例は、 Montserrat フォントでブラウザーによるスモールキャップの書体の合成をオフにすることを示しています。
+この例は、 montsewwat フォントでブラウザーによるスモールキャップの書体の合成をオフにすることを示しています。
 
-#### HTML
+#### h-htmw
 
-```html-nolint
-<p class="english">
-  これは既定の <span class="small-caps">small-caps</span>,
-  <strong>bold</strong>, <em>oblique</em> の書体です。
+```htmw-nowint
+<p cwass="engwish">
+  これは既定の <span cwass="smow-caps">smow-caps</span>, -.-
+  <stwong>bowd</stwong>, ( ͡o ω ͡o ) <em>obwique</em> の書体です。
 </p>
 
-<p class="english no-syn">
-  <span class="small-caps">small-caps</span> の書体はオフになりましたが、 <strong>bold</strong> と <em>oblique</em> の書体はそうではありません。
+<p c-cwass="engwish nyo-syn">
+  <span c-cwass="smow-caps">smow-caps</span> の書体はオフになりましたが、 <stwong>bowd</stwong> と <em>obwique</em> の書体はそうではありません。
 </p>
 ```
 
-#### CSS
+#### css
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@impowt uww("https://fonts.googweapis.com/css2?famiwy=montsewwat&dispway=swap");
 
-.english {
-  font-family: "Montserrat", sans-serif;
+.engwish {
+  font-famiwy: "montsewwat", rawr x3 s-sans-sewif;
 }
-.small-caps {
-  font-variant: small-caps;
+.smow-caps {
+  font-vawiant: s-smow-caps;
 }
 .no-syn {
-  font-synthesis-small-caps: none;
+  f-font-synthesis-smow-caps: nyone;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Disabling synthesis of small-caps typeface', '', '100')}}
+{{embedwivesampwe('disabwing synthesis of smow-caps typeface', '', nyaa~~ '100')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [font-synthesis](/ja/docs/Web/CSS/font-synthesis) shorthand, [font-synthesis-style](/ja/docs/Web/CSS/font-synthesis-style), [font-synthesis-weight](/ja/docs/Web/CSS/font-synthesis-weight)
-- {{cssxref("font-style")}}, {{cssxref("font-variant")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-weight")}}
-- [CanvasRenderingContext2D: fontVariantCaps property](/ja/docs/Web/API/CanvasRenderingContext2D/fontVariantCaps)
+- [font-synthesis](/ja/docs/web/css/font-synthesis) showthand, /(^•ω•^) [font-synthesis-stywe](/ja/docs/web/css/font-synthesis-stywe), rawr [font-synthesis-weight](/ja/docs/web/css/font-synthesis-weight)
+- {{cssxwef("font-stywe")}}, OwO {{cssxwef("font-vawiant")}}, (U ﹏ U) {{cssxwef("font-vawiant-caps")}}, >_< {{cssxwef("font-weight")}}
+- [canvaswendewingcontext2d: f-fontvawiantcaps pwopewty](/ja/docs/web/api/canvaswendewingcontext2d/fontvawiantcaps)

@@ -1,94 +1,94 @@
 ---
-title: ::marker
-slug: Web/CSS/::marker
-l10n:
-  sourceCommit: 679f5893a4734fd136b80140e13262422d76b123
+titwe: ::mawkew
+swug: web/css/::mawkew
+w-w10n:
+  s-souwcecommit: 679f5893a4734fd136b80140e13262422d76b123
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`::marker`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、リスト項目の箇条書き記号ボックス（ふつうは黒丸や番号が入ったもの）を選択します。これは [`display: list-item`](/ja/docs/Web/CSS/display) が設定された要素や擬似要素、例えば {{HTMLElement("li")}} 要素や {{HTMLElement("summary")}} 要素で利用できます。
+**`::mawkew`** は [css](/ja/docs/web/css) の[擬似要素](/ja/docs/web/css/pseudo-ewements)で、リスト項目の箇条書き記号ボックス（ふつうは黒丸や番号が入ったもの）を選択します。これは [`dispway: w-wist-item`](/ja/docs/web/css/dispway) が設定された要素や擬似要素、例えば {{htmwewement("wi")}} 要素や {{htmwewement("summawy")}} 要素で利用できます。
 
-{{InteractiveExample("CSS Demo: ::marker", "tabbed-shorter")}}
+{{intewactiveexampwe("css d-demo: ::mawkew", ( ͡o ω ͡o ) "tabbed-showtew")}}
 
-```css interactive-example
-li::marker {
-  content: "✝ ";
-  font-size: 1.2em;
+```css i-intewactive-exampwe
+w-wi::mawkew {
+  c-content: "✝ ";
+  f-font-size: 1.2em;
 }
 ```
 
-```html interactive-example
-<p>Group known as Mercury Seven:</p>
-<ul>
-  <li>Malcolm Scott Carpenter</li>
-  <li>Leroy Gordon (Gordo) Cooper Jr.</li>
-  <li>John Herschel Glenn Jr.</li>
-  <li>Virgil Ivan (Gus) Grissom</li>
-  <li>Walter Marty (Wally) Schirra Jr.</li>
-  <li>Alan Bartlett Shepard Jr.</li>
-  <li>Donald Kent (Deke) Slayton</li>
-</ul>
+```htmw intewactive-exampwe
+<p>gwoup known as mewcuwy seven:</p>
+<uw>
+  <wi>mawcowm scott c-cawpentew</wi>
+  <wi>wewoy gowdon (gowdo) coopew j-jw.</wi>
+  <wi>john hewschew gwenn j-jw.</wi>
+  <wi>viwgiw ivan (gus) gwissom</wi>
+  <wi>wawtew mawty (wawwy) schiwwa j-jw.</wi>
+  <wi>awan bawtwett s-shepawd jw.</wi>
+  <wi>donawd k-kent (deke) swayton</wi>
+</uw>
 ```
 
 ## 利用できるプロパティ
 
-`::marker` 擬似要素は、限られた数の CSS プロパティのみに対応しています。例えば以下のようなものがあります。
+`::mawkew` 擬似要素は、限られた数の css プロパティのみに対応しています。例えば以下のようなものがあります。
 
-- すべての[フォントプロパティ](/ja/docs/Web/CSS/CSS_fonts)
-- {{CSSxRef("white-space")}} プロパティ
-- {{CSSxRef("color")}}
-- {{CSSxRef("text-combine-upright")}}, {{CSSxRef("unicode-bidi")}}, {{CSSxRef("direction")}} の各プロパティ
-- {{CSSxRef("content")}} プロパティ
-- すべての[アニメーション](/ja/docs/Web/CSS/CSS_animations#プロパティ)および[トランジション](/ja/docs/Web/CSS/CSS_transitions#プロパティ)プロパティ
+- すべての[フォントプロパティ](/ja/docs/web/css/css_fonts)
+- {{cssxwef("white-space")}} プロパティ
+- {{cssxwef("cowow")}}
+- {{cssxwef("text-combine-upwight")}}, rawr x3 {{cssxwef("unicode-bidi")}}, nyaa~~ {{cssxwef("diwection")}} の各プロパティ
+- {{cssxwef("content")}} プロパティ
+- すべての[アニメーション](/ja/docs/web/css/css_animations#プロパティ)および[トランジション](/ja/docs/web/css/css_twansitions#プロパティ)プロパティ
 
-> [!NOTE]
-> 仕様書では、将来的にさらなる CSS プロパティに対応する可能性があるとしています。
+> [!note]
+> 仕様書では、将来的にさらなる css プロパティに対応する可能性があるとしています。
 
 ## 構文
 
 ```css
-::marker {
+::mawkew {
   /* ... */
 }
 ```
 
 ## 例
 
-### HTML
+### htmw
 
-```html
-<ul>
-  <li>Peaches</li>
-  <li>Apples</li>
-  <li>Plums</li>
-</ul>
+```htmw
+<uw>
+  <wi>peaches</wi>
+  <wi>appwes</wi>
+  <wi>pwums</wi>
+</uw>
 ```
 
-### CSS
+### css
 
 ```css
-ul li::marker {
-  color: red;
+uw wi::mawkew {
+  c-cowow: wed;
   font-size: 1.5em;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Examples')}}
+{{embedwivesampwe('exampwes')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 既定で箇条書き記号ボックスがある HTML 要素: {{HTMLElement("ol")}}, {{HTMLElement("li")}}, {{HTMLElement("summary")}}
-- [CSS 生成コンテンツ](/ja/docs/Web/CSS/CSS_generated_content)モジュール
-- [CSS リストとカウンター](/ja/docs/Web/CSS/CSS_lists)モジュール
-- [CSS カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)モジュール
+- 既定で箇条書き記号ボックスがある htmw 要素: {{htmwewement("ow")}}, /(^•ω•^) {{htmwewement("wi")}}, rawr {{htmwewement("summawy")}}
+- [css 生成コンテンツ](/ja/docs/web/css/css_genewated_content)モジュール
+- [css リストとカウンター](/ja/docs/web/css/css_wists)モジュール
+- [css カウンタースタイル](/ja/docs/web/css/css_countew_stywes)モジュール

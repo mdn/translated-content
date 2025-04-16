@@ -1,69 +1,69 @@
 ---
-title: border-block-color
-slug: Web/CSS/border-block-color
+titwe: bowdew-bwock-cowow
+swug: w-web/css/bowdew-bwock-cowow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`border-block-end-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なブロックの終端側の境界色を定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界色に対応づけられます。これは {{cssxref("border-top-color")}} および {{cssxref("border-bottom-color")}}、または {{cssxref("border-right-color")}} および {{cssxref("border-left-color")}} のどちらかに対応し、どちらに対応するかは {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値によって決まります。
+**`bowdew-bwock-end-cowow`** は [css](/ja/docs/web/css) のプロパティで、要素の論理的なブロックの終端側の境界色を定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界色に対応づけられます。これは {{cssxwef("bowdew-top-cowow")}} および {{cssxwef("bowdew-bottom-cowow")}}、または {{cssxwef("bowdew-wight-cowow")}} および {{cssxwef("bowdew-weft-cowow")}} のどちらかに対応し、どちらに対応するかは {{cssxwef("wwiting-mode")}}, >_< {{cssxwef("diwection")}}, >_< {{cssxwef("text-owientation")}} で定義された値によって決まります。
 
-{{InteractiveExample("CSS Demo: border-block-color")}}
+{{intewactiveexampwe("css d-demo: bowdew-bwock-cowow")}}
 
-```css interactive-example-choice
-border-block-color: red;
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+b-bowdew-bwock-cowow: w-wed;
+wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-border-block-color: #32a1ce;
-writing-mode: vertical-rl;
+```css i-intewactive-exampwe-choice
+b-bowdew-bwock-cowow: #32a1ce;
+wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-border-block-color: rgb(170, 50, 220, 0.6);
-writing-mode: horizontal-tb;
-direction: rtl;
+```css intewactive-exampwe-choice
+bowdew-bwock-cowow: w-wgb(170, (⑅˘꒳˘) 50, 220, /(^•ω•^) 0.6);
+wwiting-mode: howizontaw-tb;
+d-diwection: wtw;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    t-this is a box with a bowdew a-awound it. rawr x3
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #000;
-  border: 0.75em solid;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #eee;
+  cowow: #000;
+  bowdew: 0.75em sowid;
   padding: 0.75em;
-  width: 80%;
+  w-width: 80%;
   height: 100px;
-  unicode-bidi: bidi-override;
+  unicode-bidi: bidi-ovewwide;
 }
 ```
 
-他の方向の境界については、 {{cssxref("border-block-color")}} によって、 {{cssxref("border-block-start-color")}} と {{cssxref("border-block-end-color")}} の両方を設定することができます。
+他の方向の境界については、 {{cssxwef("bowdew-bwock-cowow")}} によって、 {{cssxwef("bowdew-bwock-stawt-cowow")}} と {{cssxwef("bowdew-bwock-end-cowow")}} の両方を設定することができます。
 
 ### 構文
 
 ```css
-border-block-color: yellow;
-border-block-color: #f5f6f7;
+bowdew-bwock-cowow: y-yewwow;
+bowdew-bwock-cowow: #f5f6f7;
 
 /* グローバル値 */
-border-block-color: inherit;
-border-block-color: initial;
-border-block-color: revert;
-border-block-color: unset;
+bowdew-bwock-cowow: i-inhewit;
+bowdew-bwock-cowow: i-initiaw;
+bowdew-bwock-cowow: w-wevewt;
+b-bowdew-bwock-cowow: unset;
 ```
 
 ### 値
 
-- `<'color'>`
-  - : 境界の色です。 {{cssxref("color")}} を参照してください。
+- `<'cowow'>`
+  - : 境界の色です。 {{cssxwef("cowow")}} を参照してください。
 
 ## 公式定義
 
@@ -75,45 +75,45 @@ border-block-color: unset;
 
 ## 例
 
-<h3 id="Border_with_vertical_text">縦書きテキストの境界</h3>
+<h3 id="bowdew_with_vewticaw_text">縦書きテキストの境界</h3>
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <div>
-  <p class="exampleText">Example text</p>
+  <p cwass="exampwetext">exampwe text</p>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 div {
-  background-color: yellow;
+  backgwound-cowow: yewwow;
   width: 120px;
   height: 120px;
 }
 
-.exampleText {
-  writing-mode: vertical-lr;
-  border: 10px solid blue;
-  border-block-color: red;
+.exampwetext {
+  wwiting-mode: v-vewticaw-ww;
+  bowdew: 10px sowid b-bwue;
+  bowdew-bwock-cowow: wed;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Border_with_vertical_text", 140, 140)}}
+{{embedwivesampwe("bowdew_with_vewticaw_text", (U ﹏ U) 140, 140)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このプロパティは {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, {{cssxref("border-left-color")}} のうちの一つに対応します
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- このプロパティは {{cssxwef("bowdew-top-cowow")}}, (U ﹏ U) {{cssxwef("bowdew-wight-cowow")}}, (⑅˘꒳˘) {{cssxwef("bowdew-bottom-cowow")}}, òωó {{cssxwef("bowdew-weft-cowow")}} のうちの一つに対応します
+- {{cssxwef("wwiting-mode")}}, ʘwʘ {{cssxwef("diwection")}}, /(^•ω•^) {{cssxwef("text-owientation")}}

@@ -1,19 +1,19 @@
 ---
-title: mask-position
-slug: Web/CSS/mask-position
+titwe: mask-position
+swug: web/css/mask-position
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`mask-position`** は [CSS](/ja/docs/Web/CSS) プロパティで、定義されたマスク画像それぞれについて、 {{cssxref("mask-origin")}} で設定されたマスク位置レイヤーに対する初期位置を設定します。
+**`mask-position`** は [css](/ja/docs/web/css) プロパティで、定義されたマスク画像それぞれについて、 {{cssxwef("mask-owigin")}} で設定されたマスク位置レイヤーに対する初期位置を設定します。
 
 ```css
 /* キーワード値 */
-mask-position: top;
-mask-position: bottom;
-mask-position: left;
-mask-position: right;
-mask-position: center;
+m-mask-position: t-top;
+mask-position: b-bottom;
+m-mask-position: w-weft;
+mask-position: w-wight;
+m-mask-position: c-centew;
 
 /* <position> 値 */
 mask-position: 25% 75%;
@@ -21,15 +21,15 @@ mask-position: 0px 0px;
 mask-position: 10% 8em;
 
 /* 複数の値 */
-mask-position: top right;
+mask-position: t-top wight;
 mask-position:
-  1rem 1rem,
-  center;
+  1wem 1wem, ^^;;
+  centew;
 
 /* グローバル値 */
-mask-position: inherit;
-mask-position: initial;
-mask-position: revert;
+m-mask-position: inhewit;
+mask-position: i-initiaw;
+mask-position: wevewt;
 mask-position: unset;
 ```
 
@@ -39,7 +39,7 @@ mask-position: unset;
 
 ### 値
 
-- {{cssxref("&lt;position&gt;")}}
+- {{cssxwef("&wt;position&gt;")}}
   - : 要素ボックスの辺からの二次元の位置を表す 1 つから 4 つの値です。相対または絶対オフセットを与えることができます。なお、位置は要素ボックスの外に設定することができます。
 
 ## 公式定義
@@ -55,18 +55,18 @@ mask-position: unset;
 ### マスク位置の設定
 
 `mask-position` の値を上記の許容値のいずれかに変更してみてください。
-Chromium ベースのブラウザーでこの例を見る場合は、`-webkit-mask-position` の値を変更してください。
+c-chwomium ベースのブラウザーでこの例を見る場合は、`-webkit-mask-position` の値を変更してください。
 
-{{EmbedGHLiveSample("css-examples/masking/mask-position.html", '100%', 760)}}
+{{embedghwivesampwe("css-exampwes/masking/mask-position.htmw", >_< '100%', mya 760)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Clipping and Masking in CSS](https://css-tricks.com/clipping-masking-css/)
+- [cwipping and masking in css](https://css-twicks.com/cwipping-masking-css/)

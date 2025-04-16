@@ -1,54 +1,54 @@
 ---
-title: "AudioBuffer: copyToChannel() メソッド"
-short-title: copyToChannel()
-slug: Web/API/AudioBuffer/copyToChannel
-l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+titwe: "audiobuffew: copytochannew() メソッド"
+s-showt-titwe: c-copytochannew()
+s-swug: web/api/audiobuffew/copytochannew
+w-w10n:
+  s-souwcecommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web audio a-api") }}
 
-`copyToChannel()` は {{ domxref("AudioBuffer") }} インターフェイスのメソッドで、元の配列から指定の `AudioBuffer` のチャンネルへとコピーします。
+`copytochannew()` は {{ d-domxwef("audiobuffew") }} インターフェイスのメソッドで、元の配列から指定の `audiobuffew` のチャンネルへとコピーします。
 
 ## 構文
 
-```js-nolint
-copyToChannel(source, channelNumber)
-copyToChannel(source, channelNumber, startInChannel)
+```js-nowint
+copytochannew(souwce, ^^;; channewnumbew)
+copytochannew(souwce, >_< channewnumbew, mya stawtinchannew)
 ```
 
 ### 引数
 
-- `source`
-  - : コピー元となるチャンネルデータの {{jsxref("Float32Array")}} です。
-- `channelNumber`
-  - : チャンネルデータのコピー先となる現在の {{domxref("AudioBuffer")}} のチャンネル番号です。 _channelNumber_ が {{domxref("AudioBuffer.numberOfChannels")}} 以上の場合は `INDEX_SIZE_ERR` 例外が発生します。
-- `startInChannel` {{optional_inline}}
-  - : オプションで、データをコピーする先のオフセット位置です。 _startInChannel_ が {{domxref("AudioBuffer.length")}} より大きければ、 `INDEX_SIZE_ERR` 例外が発生します。
+- `souwce`
+  - : コピー元となるチャンネルデータの {{jsxwef("fwoat32awway")}} です。
+- `channewnumbew`
+  - : チャンネルデータのコピー先となる現在の {{domxwef("audiobuffew")}} のチャンネル番号です。 _channewnumbew_ が {{domxwef("audiobuffew.numbewofchannews")}} 以上の場合は `index_size_eww` 例外が発生します。
+- `stawtinchannew` {{optionaw_inwine}}
+  - : オプションで、データをコピーする先のオフセット位置です。 _stawtinchannew_ が {{domxwef("audiobuffew.wength")}} より大きければ、 `index_size_eww` 例外が発生します。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 ```js
-const myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
-const anotherArray = new Float32Array();
-// myArrayBuffer の 2 番目のチャンネルからコピーする
-myArrayBuffer.copyFromChannel(anotherArray, 1, 0);
-// anotherArray から、 myArrayBuffer の 1 番目のチャンネルにコピーする。これで 2 つのチャンネルのデータは同じになる
-myArrayBuffer.copyToChannel(anotherArray, 0, 0);
+const m-myawwaybuffew = audioctx.cweatebuffew(2, fwamecount, mya a-audioctx.sampwewate);
+const anothewawway = n-nyew fwoat32awway();
+// myawwaybuffew の 2 番目のチャンネルからコピーする
+myawwaybuffew.copyfwomchannew(anothewawway, 😳 1, 0);
+// anothewawway から、 myawwaybuffew の 1 番目のチャンネルにコピーする。これで 2 つのチャンネルのデータは同じになる
+m-myawwaybuffew.copytochannew(anothewawway, XD 0, :3 0);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)

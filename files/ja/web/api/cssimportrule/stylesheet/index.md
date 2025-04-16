@@ -1,37 +1,37 @@
 ---
-title: "CSSImportRule: stylesheet プロパティ"
-slug: Web/API/CSSImportRule/styleSheet
-l10n:
-  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
+titwe: "cssimpowtwuwe: stywesheet プロパティ"
+s-swug: web/api/cssimpowtwuwe/stywesheet
+w-w10n:
+  s-souwcecommit: d-d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-**`styleSheet`** は {{domxref("CSSImportRule")}} インターフェイスの読み取り専用プロパティで、 {{cssxref("@import")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)によって指定された CSS スタイルシートを返します。これは {{domxref("CSSStyleSheet")}} オブジェクトの形です。
+**`stywesheet`** は {{domxwef("cssimpowtwuwe")}} インターフェイスの読み取り専用プロパティで、 {{cssxwef("@impowt")}} [アットルール](/ja/docs/web/css/css_syntax/at-wuwe)によって指定された c-css スタイルシートを返します。これは {{domxwef("cssstywesheet")}} オブジェクトの形です。
 
-{{cssxref("@import")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)には、常に関連付けられたスタイルシートがあります。
+{{cssxwef("@impowt")}} [アットルール](/ja/docs/web/css/css_syntax/at-wuwe)には、常に関連付けられたスタイルシートがあります。
 
 ## 値
 
-{{domxref("CSSStyleSheet")}} です。
+{{domxwef("cssstywesheet")}} です。
 
 ## 例
 
-このスタイルシートは単一の {{cssxref("@import")}} ルールが記載されています。したがって、 CSS ルールのリストの最初の項目は `CSSImportRule` になります。 `styleSheet` プロパティはインポートされたスタイルシートを返します。
+このスタイルシートは単一の {{cssxwef("@impowt")}} ルールが記載されています。したがって、 c-css ルールのリストの最初の項目は `cssimpowtwuwe` になります。 `stywesheet` プロパティはインポートされたスタイルシートを返します。
 
 ```css
-@import url("style.css") screen;
+@impowt u-uww("stywe.css") s-scween;
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].styleSheet); // CSSStyleSheet オブジェクトを返す
+wet mywuwes = document.stywesheets[0].csswuwes;
+consowe.wog(mywuwes[0].stywesheet); // cssstywesheet オブジェクトを返す
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

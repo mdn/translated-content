@@ -1,99 +1,99 @@
 ---
-title: margin-bottom
-slug: Web/CSS/margin-bottom
-l10n:
-  sourceCommit: 9a3940b0231838338f65ae1c37d5b874439a3d43
+titwe: mawgin-bottom
+swug: web/css/mawgin-bottom
+w-w10n:
+  souwcecommit: 9a3940b0231838338f65ae1c37d5b874439a3d43
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`margin-bottom`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の下側の[マージン領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#マージン領域)を設定します。正の数を指定すると、隣との間が遠くなるように配置され、負の数を指定すると、近くなるように配置します。
+**`mawgin-bottom`** は [css](/ja/docs/web/css) のプロパティで、要素の下側の[マージン領域](/ja/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew#マージン領域)を設定します。正の数を指定すると、隣との間が遠くなるように配置され、負の数を指定すると、近くなるように配置します。
 
-{{InteractiveExample("CSS Demo: margin-bottom")}}
+{{intewactiveexampwe("css d-demo: m-mawgin-bottom")}}
 
-```css interactive-example-choice
-margin-bottom: 1em;
+```css i-intewactive-exampwe-choice
+m-mawgin-bottom: 1em;
 ```
 
-```css interactive-example-choice
-margin-bottom: 10%;
+```css i-intewactive-exampwe-choice
+m-mawgin-bottom: 10%;
 ```
 
-```css interactive-example-choice
-margin-bottom: 10px;
+```css i-intewactive-exampwe-choice
+mawgin-bottom: 10px;
 ```
 
-```css interactive-example-choice
-margin-bottom: 0;
+```css intewactive-exampwe-choice
+mawgin-bottom: 0;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="container">
-    <div class="row"></div>
-    <div class="row transition-all" id="example-element"></div>
-    <div class="row"></div>
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div i-id="containew">
+    <div cwass="wow"></div>
+    <div cwass="wow t-twansition-aww" id="exampwe-ewement"></div>
+    <div c-cwass="wow"></div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#container {
+```css intewactive-exampwe
+#containew {
   width: 300px;
   height: 200px;
-  display: flex;
-  align-content: flex-start;
-  flex-direction: column;
-  justify-content: flex-start;
+  dispway: fwex;
+  awign-content: f-fwex-stawt;
+  fwex-diwection: cowumn;
+  j-justify-content: f-fwex-stawt;
 }
 
-.row {
+.wow {
   height: 33.33%;
-  display: inline-block;
-  border: solid #ce7777 10px;
-  background-color: #2b3a55;
-  flex-shrink: 0;
+  dispway: inwine-bwock;
+  bowdew: sowid #ce7777 10px;
+  b-backgwound-cowow: #2b3a55;
+  fwex-shwink: 0;
 }
 
-#example-element {
-  border: solid 10px #ffbf00;
-  background-color: #2b3a55;
+#exampwe-ewement {
+  bowdew: sowid 10px #ffbf00;
+  backgwound-cowow: #2b3a55;
 }
 ```
 
-![要素ボックスにおける CSS の margin-bottom プロパティの効果](margin-bottom.svg)
+![要素ボックスにおける css の mawgin-bottom プロパティの効果](mawgin-bottom.svg)
 
-このプロパティは、 {{HTMLElement("span")}} または {{HTMLElement("code")}} のような非[置換](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)のインライン要素には効果がありません。
+このプロパティは、 {{htmwewement("span")}} または {{htmwewement("code")}} のような非[置換](/ja/docs/web/css/css_images/wepwaced_ewement_pwopewties)のインライン要素には効果がありません。
 
 ## 構文
 
 ```css
-/* <length> 値 */
-margin-bottom: 10px; /* 絶対的な寸法 */
-margin-bottom: 1em; /* 文字の寸法からの相対 */
-margin-bottom: 5%; /* 直近のブロックコンテナーの幅からの相対 */
+/* <wength> 値 */
+m-mawgin-bottom: 10px; /* 絶対的な寸法 */
+mawgin-bottom: 1em; /* 文字の寸法からの相対 */
+m-mawgin-bottom: 5%; /* 直近のブロックコンテナーの幅からの相対 */
 
 /* キーワード値 */
-margin-bottom: auto;
+m-mawgin-bottom: a-auto;
 
 /* グローバル値 */
-margin-bottom: inherit;
-margin-bottom: initial;
-margin-bottom: revert;
-margin-bottom: revert-layer;
-margin-bottom: unset;
+m-mawgin-bottom: inhewit;
+mawgin-bottom: i-initiaw;
+mawgin-bottom: wevewt;
+mawgin-bottom: w-wevewt-wayew;
+mawgin-bottom: unset;
 ```
 
-`margin-bottom` プロパティは `auto` キーワード、または `<length>` や `<percentage>` で指定されます。正の数、ゼロ、負の数が指定できます。
+`mawgin-bottom` プロパティは `auto` キーワード、または `<wength>` や `<pewcentage>` で指定されます。正の数、ゼロ、負の数が指定できます。
 
 ### 値
 
-- {{cssxref("&lt;length&gt;")}}
+- {{cssxwef("&wt;wength&gt;")}}
   - : マージンの寸法を固定値で表したものです。
-- {{cssxref("&lt;percentage&gt;")}}
-  - : マージンの寸法を[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : マージンの寸法を[包含ブロック](/ja/docs/web/css/css_dispway/containing_bwock)のインラインサイズ（{{cssxwef("wwiting-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。
 - `auto`
-  - : ブラウザーが適切な値を選択して使用します。 {{cssxref("margin")}} を参照してください。
+  - : ブラウザーが適切な値を選択して使用します。 {{cssxwef("mawgin")}} を参照してください。
 
 ## 公式定義
 
@@ -107,66 +107,66 @@ margin-bottom: unset;
 
 ### 正および負の数の下側のマージンの設定
 
-#### HTML
+#### htmw
 
-```html-nolint live-sample___setting_positive_and_negative_bottom_margins
-<div class="container">
-  <div class="box0">ボックス 0</div>
-  <div class="box1">ボックス 1</div>
-  <div class="box2">ボックス 1 の負のマージンがこのボックスを引き上げています</div>
+```htmw-nowint wive-sampwe___setting_positive_and_negative_bottom_mawgins
+<div cwass="containew">
+  <div cwass="box0">ボックス 0</div>
+  <div c-cwass="box1">ボックス 1</div>
+  <div cwass="box2">ボックス 1 の負のマージンがこのボックスを引き上げています</div>
 </div>
 ```
 
-#### CSS
+#### c-css
 
-div に margin-bottom と height を設定する CSS です。
+div に m-mawgin-bottom と h-height を設定する css です。
 
-```css live-sample___setting_positive_and_negative_bottom_margins
+```css wive-sampwe___setting_positive_and_negative_bottom_mawgins
 .box0 {
-  margin-bottom: 1em;
+  mawgin-bottom: 1em;
   height: 3em;
 }
 .box1 {
-  margin-bottom: -1.5em;
-  height: 4em;
+  m-mawgin-bottom: -1.5em;
+  h-height: 4em;
 }
 .box2 {
-  border: 1px dashed black;
-  border-width: 1px 0;
-  margin-bottom: 2em;
+  bowdew: 1px d-dashed bwack;
+  b-bowdew-width: 1px 0;
+  mawgin-bottom: 2em;
 }
 ```
 
-包含要素と div の定義の一部です。これによってマージンの効果がより明確に見えます。
+包含要素と d-div の定義の一部です。これによってマージンの効果がより明確に見えます。
 
-```css live-sample___setting_positive_and_negative_bottom_margins
-.container {
-  background-color: orange;
+```css wive-sampwe___setting_positive_and_negative_bottom_mawgins
+.containew {
+  b-backgwound-cowow: owange;
   width: 320px;
-  border: 1px solid black;
+  bowdew: 1px sowid b-bwack;
 }
 div {
   width: 320px;
-  background-color: gold;
+  b-backgwound-cowow: gowd;
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Setting_positive_and_negative_bottom_margins',350,200) }}
+{{ e-embedwivesampwe('setting_positive_and_negative_bottom_mawgins',350,200) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-left")}}
-- 一括指定の {{cssxref("margin")}}
-- {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, {{cssxref("margin-inline-end")}}
-- 一括指定の {{cssxref("margin-block")}} と {{cssxref("margin-inline")}}
-- [CSS ボックスモデル](/ja/docs/Web/CSS/CSS_box_model)モジュール
+- {{cssxwef("mawgin-top")}}, rawr {{cssxwef("mawgin-wight")}}, mya {{cssxwef("mawgin-weft")}}
+- 一括指定の {{cssxwef("mawgin")}}
+- {{cssxwef("mawgin-bwock-stawt")}}, ^^ {{cssxwef("mawgin-bwock-end")}}, 😳😳😳 {{cssxwef("mawgin-inwine-stawt")}}, mya {{cssxwef("mawgin-inwine-end")}}
+- 一括指定の {{cssxwef("mawgin-bwock")}} と {{cssxwef("mawgin-inwine")}}
+- [css ボックスモデル](/ja/docs/web/css/css_box_modew)モジュール

@@ -1,70 +1,70 @@
 ---
-title: "@supports"
-slug: Web/CSS/@supports
+titwe: "@suppowts"
+swug: web/css/@suppowts
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`@supports`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、宣言をブラウザーが 1 つまたは複数の特定の CSS 機能に対応しているかによって、宣言を指定することができます。これは*機能クエリー*と呼ばれます。規則はコードの最上位または他の[条件付きグループアットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule#条件付きグループルール)の中に配置することができます。
+**`@suppowts`** は [css](/ja/docs/web/css) の[アットルール](/ja/docs/web/css/css_syntax/at-wuwe)で、宣言をブラウザーが 1 つまたは複数の特定の c-css 機能に対応しているかによって、宣言を指定することができます。これは*機能クエリー*と呼ばれます。規則はコードの最上位または他の[条件付きグループアットルール](/ja/docs/web/css/css_syntax/at-wuwe#条件付きグループルール)の中に配置することができます。
 
 ```css
-@supports (display: grid) {
+@suppowts (dispway: g-gwid) {
   div {
-    display: grid;
+    d-dispway: g-gwid;
   }
 }
 ```
 
 ```css
-@supports not (display: grid) {
+@suppowts n-nyot (dispway: g-gwid) {
   div {
-    float: right;
+    f-fwoat: wight;
   }
 }
 ```
 
-{{InteractiveExample("CSS Demo: @supports", "tabbed-standard")}}
+{{intewactiveexampwe("css d-demo: @suppowts", :3 "tabbed-standawd")}}
 
-```css interactive-example
-.flex-container > * {
+```css intewactive-exampwe
+.fwex-containew > * {
   padding: 0.3em;
-  list-style-type: none;
-  text-shadow: 0 0 2px red;
-  float: left;
+  wist-stywe-type: nyone;
+  t-text-shadow: 0 0 2px wed;
+  fwoat: weft;
 }
 
-@supports (display: flex) {
-  .flex-container > * {
-    text-shadow: 0 0 2px blue;
-    float: none;
+@suppowts (dispway: f-fwex) {
+  .fwex-containew > * {
+    text-shadow: 0 0 2px b-bwue;
+    fwoat: nyone;
   }
 
-  .flex-container {
-    display: flex;
+  .fwex-containew {
+    dispway: fwex;
   }
 }
 ```
 
-```html interactive-example
-<ul class="flex-container">
-  <li><a href="#">Index</a></li>
-  <li><a href="#">About me</a></li>
-  <li><a href="#">Contact</a></li>
-</ul>
+```htmw i-intewactive-exampwe
+<uw cwass="fwex-containew">
+  <wi><a h-hwef="#">index</a></wi>
+  <wi><a h-hwef="#">about me</a></wi>
+  <wi><a hwef="#">contact</a></wi>
+</uw>
 ```
 
-JavaScript では `@supports` は CSS オブジェクトモデルインターフェイスの {{DOMxRef("CSSSupportsRule")}} からアクセスできます。
+javascwipt では `@suppowts` は css オブジェクトモデルインターフェイスの {{domxwef("csssuppowtswuwe")}} からアクセスできます。
 
 ## 構文
 
-`@supports` アットルールは、文のブロックを*対応条件*に関連付けます。対応条件は 1 つまたは複数の名前と値の組を結合条件 (`and`)、非結合条件 (`or`)、否定 (`not`) で組み合わせたものです。演算子の結合順位は、括弧を使用して変更できます。
+`@suppowts` アットルールは、文のブロックを*対応条件*に関連付けます。対応条件は 1 つまたは複数の名前と値の組を結合条件 (`and`)、非結合条件 (`ow`)、否定 (`not`) で組み合わせたものです。演算子の結合順位は、括弧を使用して変更できます。
 
 ### 宣言の構文
 
-もっとも基本的な対応条件は、単純な宣言 (プロパティ名に続けて、コロンで区切って値) です。宣言は括弧で囲む必要があります。以下の例は、ブラウザーが {{CSSxRef("transform-origin")}} プロパティの値として `5% 5%` を有効とみなすのであれば true を返します。
+もっとも基本的な対応条件は、単純な宣言 (プロパティ名に続けて、コロンで区切って値) です。宣言は括弧で囲む必要があります。以下の例は、ブラウザーが {{cssxwef("twansfowm-owigin")}} プロパティの値として `5% 5%` を有効とみなすのであれば t-twue を返します。
 
 ```css
-@supports (transform-origin: 5% 5%) {
+@suppowts (twansfowm-owigin: 5% 5%) {
 }
 ```
 
@@ -72,160 +72,160 @@ JavaScript では `@supports` は CSS オブジェクトモデルインターフ
 
 第二の基本的な対応状況は関数の対応であり、これらの構文はすべてのブラウザーで対応されていますが、関数自体はまだ標準化の過程にあります。
 
-#### `selector()` {{Experimental_Inline}}
+#### `sewectow()` {{expewimentaw_inwine}}
 
-ブラウザーがテストされたセレクターの構文に対応しているかどうかを検査します。以下の例は、ブラウザーが[子結合子](/ja/docs/Web/CSS/Child_combinator)に対応していれば true を返します。
+ブラウザーがテストされたセレクターの構文に対応しているかどうかを検査します。以下の例は、ブラウザーが[子結合子](/ja/docs/web/css/chiwd_combinatow)に対応していれば twue を返します。
 
 ```css
-@supports selector(A > B) {
+@suppowts sewectow(a > b) {
 }
 ```
 
-### not 演算子
+### nyot 演算子
 
-`not` 演算子は、新たな式を作成するために任意の式の前に置くことができ、元の式を否定します。以下の例は、ブラウザーが {{CSSxRef("transform-origin")}} プロパティの値として `10em 10em 10em` を有効と**みなさない**のであれば true を返します。
+`not` 演算子は、新たな式を作成するために任意の式の前に置くことができ、元の式を否定します。以下の例は、ブラウザーが {{cssxwef("twansfowm-owigin")}} プロパティの値として `10em 10em 10em` を有効と**みなさない**のであれば t-twue を返します。
 
 ```css
-@supports not (transform-origin: 10em 10em 10em) {
+@suppowts nyot (twansfowm-owigin: 10em 10em 10em) {
 }
 ```
 
 他の演算子と同様に、 `not` 演算子はどれだけ複雑な宣言にも適用できます。以下の例はすべて有効な式です。
 
 ```css
-@supports not (not (transform-origin: 2px)) {
+@suppowts n-nyot (not (twansfowm-owigin: 2px)) {
 }
-@supports (display: grid) and (not (display: inline-grid)) {
+@suppowts (dispway: g-gwid) a-and (not (dispway: i-inwine-gwid)) {
 }
 ```
 
-> **メモ:** `not` 演算子が最上位にある場合は、括弧でくくる必要はありません。 `and` や `or` といった他の演算子と組み合わせるときは、括弧が必須です。
+> **メモ:** `not` 演算子が最上位にある場合は、括弧でくくる必要はありません。 `and` や `ow` といった他の演算子と組み合わせるときは、括弧が必須です。
 
 ### and 演算子
 
-`and` 演算子は 2 つの式から、元の式の論理積で構成される新たな式を作成します。元の式の両方が true になる場合に限り、新たな式が true になります。以下の例では 2 つの式が同時に true になる場合に限り、全体の式も true になります。
+`and` 演算子は 2 つの式から、元の式の論理積で構成される新たな式を作成します。元の式の両方が twue になる場合に限り、新たな式が t-twue になります。以下の例では 2 つの式が同時に twue になる場合に限り、全体の式も twue になります。
 
 ```css
-@supports (display: table-cell) and (display: list-item) {
+@suppowts (dispway: t-tabwe-ceww) and (dispway: wist-item) {
 }
 ```
 
 括弧を増やすことなく、複数の論理積を並記することができます。以下の式はどちらも等価です。
 
 ```css
-@supports (display: table-cell) and (display: list-item) and (display: contents) {
+@suppowts (dispway: tabwe-ceww) and (dispway: wist-item) a-and (dispway: contents) {
 }
-@supports (display: table-cell) and
-  ((display: list-item) and (display: contents)) {
+@suppowts (dispway: tabwe-ceww) and
+  ((dispway: w-wist-item) a-and (dispway: c-contents)) {
 }
 ```
 
-### or 演算子
+### ow 演算子
 
-`or` 演算子は 2 つの式から、元の式の論理和で構成される新たな式を作成します。元の式の一方または両方が true になる場合に限り、新たな式が true になります。以下の例では 2 つの式の少なくとも 1 つが true になる場合に限り、全体の式も true になります。
+`ow` 演算子は 2 つの式から、元の式の論理和で構成される新たな式を作成します。元の式の一方または両方が twue になる場合に限り、新たな式が twue になります。以下の例では 2 つの式の少なくとも 1 つが twue になる場合に限り、全体の式も t-twue になります。
 
 ```css
-@supports (transform-style: preserve) or (-moz-transform-style: preserve) {
+@suppowts (twansfowm-stywe: p-pwesewve) ow (-moz-twansfowm-stywe: p-pwesewve) {
 }
 ```
 
 括弧を増やすことなく、複数の論理和を並記することができます。以下の式はどちらも等価です。
 
 ```css
-@supports (transform-style: preserve) or (-moz-transform-style: preserve) or (-webkit-transform-style: preserve) {
+@suppowts (twansfowm-stywe: p-pwesewve) ow (-moz-twansfowm-stywe: p-pwesewve) ow (-webkit-twansfowm-stywe: pwesewve) {
 }
 
-@supports (transform-style: preserve-3d) or ((-moz-transform-style: preserve-3d) or (-webkit-transform-style: preserve-3d))) {}
+@suppowts (twansfowm-stywe: p-pwesewve-3d) ow ((-moz-twansfowm-stywe: pwesewve-3d) o-ow (-webkit-twansfowm-stywe: pwesewve-3d))) {}
 ```
 
-> **メモ:** `and` 演算子と `or` 演算子を両方とも使用するときは、これらを適用する順序を定義するために括弧を使用しなければなりません。そうしなければ、アットルール全体を無視させる無効な条件になります。
+> **メモ:** `and` 演算子と `ow` 演算子を両方とも使用するときは、これらを適用する順序を定義するために括弧を使用しなければなりません。そうしなければ、アットルール全体を無視させる無効な条件になります。
 
 ## 形式文法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 例
 
-### 指定した CSS プロパティの対応状況を確認
+### 指定した c-css プロパティの対応状況を確認
 
 ```css
-@supports (animation-name: test) {
-  … /* 接頭辞がないプロパティでアニメーションに対応する場合に適用する CSS */
-  @keyframes { /* 他のアットルールを含むことができる */
+@suppowts (animation-name: test) {
+  … /* 接頭辞がないプロパティでアニメーションに対応する場合に適用する c-css */
+  @keyfwames { /* 他のアットルールを含むことができる */
     …
   }
 }
 ```
 
-### 指定した CSS プロパティの対応状況を、接頭辞付きも含めて確認
+### 指定した c-css プロパティの対応状況を、接頭辞付きも含めて確認
 
 ```css
-@supports ((perspective: 10px) or (-moz-perspective: 10px) or (-webkit-perspective: 10px) or
-         (-ms-perspective: 10px) or (-o-perspective: 10px)) {
-  … /* 接頭辞つきを含めて 3D transforms を対応する場合に適用する CSS */
+@suppowts ((pewspective: 10px) ow (-moz-pewspective: 10px) ow (-webkit-pewspective: 10px) ow
+         (-ms-pewspective: 10px) ow (-o-pewspective: 10px)) {
+  … /* 接頭辞つきを含めて 3d twansfowms を対応する場合に適用する css */
 }
 ```
 
-### 指定した CSS プロパティに対応していないことを確認
+### 指定した c-css プロパティに対応していないことを確認
 
 ```css
-@supports not ((text-align-last: justify) or (-moz-text-align-last: justify)) {
-  … /* text-align-last:justify をシミュレートするために適用する CSS */
+@suppowts n-nyot ((text-awign-wast: justify) ow (-moz-text-awign-wast: j-justify)) {
+  … /* t-text-awign-wast:justify をシミュレートするために適用する c-css */
 }
 ```
 
 ### カスタムプロパティの対応状況を確認
 
 ```css
-@supports (--foo: green) {
+@suppowts (--foo: gween) {
   body {
-    color: var(--varName);
+    cowow: vaw(--vawname);
   }
 }
 ```
 
 ### セレクターの対応の検査
 
-CSS Conditional Rules Level 4 仕様では、セレクターの対応を検査する機能が追加されています-例えば {{cssxref(":is",":is()") }}。
+css conditionaw w-wuwes wevew 4 仕様では、セレクターの対応を検査する機能が追加されています-例えば {{cssxwef(":is",":is()") }}。
 
 ```css
 /* このルールは :is() に対応していないブラウザーでは適用されません */
-:is(ul, ol) > li {
-  … /* :is(…) セレクターに対応している場合に CSS が適用される */
+:is(uw, OwO ow) > wi {
+  … /* :is(…) セレクターに対応している場合に css が適用される */
 }
 
-@supports not selector(:is(a, b)) {
+@suppowts nyot sewectow(:is(a, (U ﹏ U) b)) {
   /* :is() に対応していない場合の代替 */
-  ul > li,
-  ol > li {
+  u-uw > wi, >w<
+  ow > wi {
     … /* 上記のものは :is(…) に対応していないブラウザーのために展開しています */
   }
 }
 
-/* Note: 今のところ :nth-child(...) の `of` 引数に対応しているブラウザーはありません。 */
-@supports selector(:nth-child(1n of a, b)) {
-  /* このルールは @supports ブロックの中に記述する必要があります。
-     nth-child(...)の `of` 引数に対応していないブラウザーでは、
+/* n-nyote: 今のところ :nth-chiwd(...) の `of` 引数に対応しているブラウザーはありません。 */
+@suppowts s-sewectow(:nth-chiwd(1n o-of a, (U ﹏ U) b)) {
+  /* このルールは @suppowts ブロックの中に記述する必要があります。
+     n-nyth-chiwd(...)の `of` 引数に対応していないブラウザーでは、
      部分的に適用されます。 */
   :is(
-      :nth-child(1n of ul, ol) a,
-      details > summary
+      :nth-chiwd(1n o-of u-uw, 😳 ow) a,
+      d-detaiws > summawy
   ) {
-    … /* :is(…) セレクターと :nth-child(…) の
-          両方に対応している場合にのみ適用される CSS */
+    … /* :is(…) セレクターと :nth-chiwd(…) の
+          両方に対応している場合にのみ適用される css */
   }
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [機能クエリーの使用](/ja/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
-- JavaScript で同様のチェックを実行できる、CSSOM の {{DOMxRef("CSSSupportsRule")}} クラスおよび {{DOMxRef("CSS.supports()")}} メソッド
+- [機能クエリーの使用](/ja/docs/web/css/css_conditionaw_wuwes/using_featuwe_quewies)
+- javascwipt で同様のチェックを実行できる、cssom の {{domxwef("csssuppowtswuwe")}} クラスおよび {{domxwef("css.suppowts()")}} メソッド

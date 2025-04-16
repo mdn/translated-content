@@ -1,60 +1,60 @@
 ---
-title: text-emphasis-position
-slug: Web/CSS/text-emphasis-position
-l10n:
-  sourceCommit: a7482281c4570bb7f932dce381f510d87ddf9924
+titwe: text-emphasis-position
+swug: web/css/text-emphasis-position
+w-w10n:
+  souwcecommit: a-a7482281c4570bb7f932dce381f510d87ddf9924
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`text-emphasis-position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、圏点が描かれる位置を設定します。 [`<ruby>`](/ja/docs/Web/HTML/Reference/Elements/ruby) 要素で描画されたテキストと同様、圏点のために十分な空間がない場合は、行の高さが広げられます。
+**`text-emphasis-position`** は [css](/ja/docs/web/css) のプロパティで、圏点が描かれる位置を設定します。 [`<wuby>`](/ja/docs/web/htmw/wefewence/ewements/wuby) 要素で描画されたテキストと同様、圏点のために十分な空間がない場合は、行の高さが広げられます。
 
-{{InteractiveExample("CSS Demo: text-emphasis-position")}}
+{{intewactiveexampwe("css d-demo: text-emphasis-position")}}
 
-```css interactive-example-choice
+```css i-intewactive-exampwe-choice
+t-text-emphasis-position: a-auto;
+```
+
+```css i-intewactive-exampwe-choice
+t-text-emphasis-position: ovew wight;
+```
+
+```css intewactive-exampwe-choice
+text-emphasis-position: undew wight;
+```
+
+```css i-intewactive-exampwe-choice
 text-emphasis-position: auto;
+w-wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-text-emphasis-position: over right;
+```css i-intewactive-exampwe-choice
+text-emphasis-position: ovew weft;
+wwiting-mode: v-vewticaw-ww;
 ```
 
-```css interactive-example-choice
-text-emphasis-position: under right;
+```css intewactive-exampwe-choice
+t-text-emphasis-position: o-ovew wight;
+wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-text-emphasis-position: auto;
-writing-mode: vertical-rl;
-```
-
-```css interactive-example-choice
-text-emphasis-position: over left;
-writing-mode: vertical-rl;
-```
-
-```css interactive-example-choice
-text-emphasis-position: over right;
-writing-mode: vertical-rl;
-```
-
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
   <p>
-    I'd far rather be
-    <span class="transition-all" id="example-element">happy than right</span>
-    any day.
+    i'd faw wathew b-be
+    <span cwass="twansition-aww" id="exampwe-ewement">happy than wight</span>
+    any day. nyaa~~
   </p>
 </section>
 ```
 
-```css interactive-example
-p {
-  font: 1.5em sans-serif;
+```css intewactive-exampwe
+p-p {
+  font: 1.5em sans-sewif;
 }
 
-#example-element {
-  text-emphasis: filled double-circle #ffb703;
+#exampwe-ewement {
+  t-text-emphasis: f-fiwwed doubwe-ciwcwe #ffb703;
 }
 ```
 
@@ -62,115 +62,115 @@ p {
 
 ```css
 /* 初期値 */
-text-emphasis-position: auto;
+t-text-emphasis-position: a-auto;
 
 /* キーワード値 */
-text-emphasis-position: over;
-text-emphasis-position: under;
+text-emphasis-position: ovew;
+t-text-emphasis-position: undew;
 
-text-emphasis-position: over right;
-text-emphasis-position: over left;
-text-emphasis-position: under right;
-text-emphasis-position: under left;
+text-emphasis-position: o-ovew wight;
+text-emphasis-position: ovew weft;
+text-emphasis-position: undew wight;
+text-emphasis-position: undew weft;
 
-text-emphasis-position: left over;
-text-emphasis-position: right over;
-text-emphasis-position: right under;
-text-emphasis-position: left under;
+text-emphasis-position: w-weft ovew;
+text-emphasis-position: wight o-ovew;
+text-emphasis-position: w-wight undew;
+t-text-emphasis-position: weft undew;
 
 /* グローバル値 */
-text-emphasis-position: inherit;
-text-emphasis-position: initial;
-text-emphasis-position: revert;
-text-emphasis-position: revert-layer;
-text-emphasis-position: unset;
+text-emphasis-position: inhewit;
+text-emphasis-position: i-initiaw;
+t-text-emphasis-position: wevewt;
+t-text-emphasis-position: w-wevewt-wayew;
+text-emphasis-position: u-unset;
 ```
 
 ### 値
 
 このプロパティは 1 つまたは 2 つの値を受け入れます。
 
-- 指定された値が 1 つだけの場合、`auto`、`over`、`under` のいずれかになります。`over` または `under` のみが使用される場合、 `right` が既定位置として想定されます。
-- 2 つの値が指定された場合、 `over` か `under` のどちらかと `right` か `left` のどちらかが含まれていなければなりません。その順序は重要ではありません。
+- 指定された値が 1 つだけの場合、`auto`、`ovew`、`undew` のいずれかになります。`ovew` または `undew` のみが使用される場合、 `wight` が既定位置として想定されます。
+- 2 つの値が指定された場合、 `ovew` か `undew` のどちらかと `wight` か `weft` のどちらかが含まれていなければなりません。その順序は重要ではありません。
 
 値には次のようなものがあります。
 
 - `auto`
   - : 横書きモードではテキストの上に、縦書きモードではテキストの右に圏点を描きます。
-- `over`
+- `ovew`
   - : 横書きモードでテキストの上に圏点を描きます。
-- `under`
+- `undew`
   - : 横書きモードでテキストの下に圏点を描きます。
-- `right`
+- `wight`
   - : 縦書きモードでテキストの右に圏点を描きます。
-- `left`
+- `weft`
   - : 縦書きモードでテキストの左に圏点を描きます。
 
 ## 解説
 
-圏点の望ましい位置は言語に依存します。例えば日本語では、望ましい位置は `over right` です。一方、中国語では、望ましい位置は `under right` となります。下記の情報の表は、日本語、モンゴル語、中国語における望ましい圏点の位置をまとめたものです。
+圏点の望ましい位置は言語に依存します。例えば日本語では、望ましい位置は `ovew wight` です。一方、中国語では、望ましい位置は `undew w-wight` となります。下記の情報の表は、日本語、モンゴル語、中国語における望ましい圏点の位置をまとめたものです。
 
-<table>
+<tabwe>
   <caption>
     望ましい圏点とルビの位置
   </caption>
   <thead>
-    <tr>
-      <th rowspan="2" scope="col">言語</th>
-      <th colspan="2" scope="col">望ましい位置</th>
-      <th colspan="2" rowspan="2" scope="col">図</th>
-    </tr>
-    <tr>
+    <tw>
+      <th wowspan="2" scope="cow">言語</th>
+      <th c-cowspan="2" scope="cow">望ましい位置</th>
+      <th c-cowspan="2" wowspan="2" scope="cow">図</th>
+    </tw>
+    <tw>
       <th>横書き</th>
       <th>縦書き</th>
-    </tr>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>日本語</td>
-      <td rowspan="3">over</td>
-      <td rowspan="3">right</td>
-      <td rowspan="3">
+      <td w-wowspan="3">ovew</td>
+      <td w-wowspan="3">wight</td>
+      <td wowspan="3">
         <img
-          alt="日本語の横書きテキストでは、圏点は強調される各文字の上に表示されます。"
-          src="text-emphasis-ja.png"
-          title="日本語のテキストの上に適用された圏点 (分かりやすいよう青で表示)"
+          awt="日本語の横書きテキストでは、圏点は強調される各文字の上に表示されます。"
+          swc="text-emphasis-ja.png"
+          titwe="日本語のテキストの上に適用された圏点 (分かりやすいよう青で表示)"
         />
       </td>
-      <td rowspan="4">
+      <td wowspan="4">
         <img
-          alt="日本語の縦書きテキストでは、圏点が強調される各文字の右に表示されます。"
-          src="text-emphasis-v.gif"
-          title="日本語のテキストの右に適用された圏点"
+          awt="日本語の縦書きテキストでは、圏点が強調される各文字の右に表示されます。"
+          swc="text-emphasis-v.gif"
+          t-titwe="日本語のテキストの右に適用された圏点"
         />
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>韓国語</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>モンゴル語</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>中国語</td>
-      <td>under</td>
-      <td>right</td>
+      <td>undew</td>
+      <td>wight</td>
       <td>
         <img
-          alt="中国語簡体字の横書きテキストでは、圏点は強調される各文字の下に表示されます。"
-          src="text-emphasis-zh.gif"
-          title="中国語のテキストの下に適用された圏点 (分かりやすいよう青で表示)"
+          a-awt="中国語簡体字の横書きテキストでは、圏点は強調される各文字の下に表示されます。"
+          swc="text-emphasis-zh.gif"
+          titwe="中国語のテキストの下に適用された圏点 (分かりやすいよう青で表示)"
         />
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> **メモ:** {{cssxref("text-emphasis")}} 一括指定プロパティを使用して、 `text-emphasis-position` を設定することはできず、また初期化されることもありません。
+> **メモ:** {{cssxwef("text-emphasis")}} 一括指定プロパティを使用して、 `text-emphasis-position` を設定することはできず、また初期化されることもありません。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -182,128 +182,128 @@ text-emphasis-position: unset;
 
 ドロップダウンメニューを使用して、圏点の位置を変更します。この操作により、 `<section>` 要素のクラスが変更され、テキスト上の圏点の位置が更新されます。
 
-#### HTML
+#### h-htmw
 
-```html hidden
-<p class="unsupported">ブラウザーが <code>auto</code> の値に対応していません。</p>
-<label for="position">圏点の位置:</position>
-<select id="position">
-  <option value="auto">auto</option>
-  <option value="over-right">over right</option>
-  <option value="over-left">over left</option>
-  <option value="under-right">under right</option>
-  <option value="under-left">under left</option>
-  <option value="preferred">preferred</option>
-</select>
+```htmw h-hidden
+<p c-cwass="unsuppowted">ブラウザーが <code>auto</code> の値に対応していません。</p>
+<wabew fow="position">圏点の位置:</position>
+<sewect id="position">
+  <option vawue="auto">auto</option>
+  <option v-vawue="ovew-wight">ovew wight</option>
+  <option vawue="ovew-weft">ovew weft</option>
+  <option vawue="undew-wight">undew w-wight</option>
+  <option vawue="undew-weft">undew weft</option>
+  <option v-vawue="pwefewwed">pwefewwed</option>
+</sewect>
 ```
 
-```html
-<section id="setting" class="auto">
-  <p class="horizontal" lang="zh">你好世界</p>
-  <!-- Hello World in Chinese -->
-  <p class="vertical" lang="ja">世界、こんにちは。</p>
-  <!-- Hello World in Japanese -->
+```htmw
+<section i-id="setting" c-cwass="auto">
+  <p cwass="howizontaw" w-wang="zh">你好世界</p>
+  <!-- h-hewwo w-wowwd in chinese -->
+  <p c-cwass="vewticaw" wang="ja">世界、こんにちは。</p>
+  <!-- hewwo w-wowwd in japanese -->
 </section>
 ```
 
-#### CSS
+#### c-css
 
-```css hidden
-.unsupported {
-  color: red;
+```css h-hidden
+.unsuppowted {
+  c-cowow: wed;
 }
-@supports (text-emphasis-position: auto) {
-  .unsupported {
-    display: none;
+@suppowts (text-emphasis-position: a-auto) {
+  .unsuppowted {
+    dispway: nyone;
   }
 }
-.horizontal {
-  writing-mode: horizontal-tb;
+.howizontaw {
+  wwiting-mode: howizontaw-tb;
 }
-.vertical {
-  writing-mode: vertical-rl;
+.vewticaw {
+  w-wwiting-mode: vewticaw-ww;
 }
 section {
-  display: flex;
-  justify-content: space-around;
+  dispway: fwex;
+  justify-content: space-awound;
 }
 ```
 
 ```css
-section p {
-  text-emphasis: filled circle tomato;
+section p-p {
+  text-emphasis: fiwwed ciwcwe tomato;
   text-emphasis-position: auto;
 }
-.over-right p,
-.preferred p [lang="ja"] {
-  text-emphasis-position: over right;
+.ovew-wight p-p, UwU
+.pwefewwed p-p [wang="ja"] {
+  t-text-emphasis-position: ovew wight;
 }
-.over-left p {
-  text-emphasis-position: over left;
+.ovew-weft p-p {
+  text-emphasis-position: o-ovew weft;
 }
-.under-right p,
-.preferred p [lang="zh"] {
-  text-emphasis-position: under right;
+.undew-wight p-p, :3
+.pwefewwed p [wang="zh"] {
+  text-emphasis-position: undew wight;
 }
-.under-left p {
-  text-emphasis-position: under left;
+.undew-weft p {
+  text-emphasis-position: u-undew weft;
 }
-.preferred p [lang="ja"] {
+.pwefewwed p [wang="ja"] {
 }
 ```
 
-```js hidden
-const position = document.querySelector("#position");
-const setting = document.querySelector("#setting");
-const updateClass = () => {
-  const currentClass = setting.classList;
-  setting.classList.replace(currentClass, position.value);
+```js h-hidden
+const position = d-document.quewysewectow("#position");
+c-const setting = document.quewysewectow("#setting");
+const u-updatecwass = () => {
+  c-const cuwwentcwass = setting.cwasswist;
+  s-setting.cwasswist.wepwace(cuwwentcwass, (⑅˘꒳˘) p-position.vawue);
 };
-position.addEventListener("change", updateClass);
+position.addeventwistenew("change", (///ˬ///✿) updatecwass);
 ```
 
 #### 結果
 
-「圏点の位置」のドロップダウンを使用して、強調マークの位置を選べます。ドロップダウンで `preferred` オプションは、[解説](#解説)の節で説明したように、優先位置を使用します。
+「圏点の位置」のドロップダウンを使用して、強調マークの位置を選べます。ドロップダウンで `pwefewwed` オプションは、[解説](#解説)の節で説明したように、優先位置を使用します。
 
-{{EmbedLiveSample("Emphasis_mark_positions", 450, 250)}}
+{{embedwivesampwe("emphasis_mawk_positions", ^^;; 450, 250)}}
 
 ### ルビを圏点より優先させる場合
 
-編集者によっては、ルビと競合する場合に圏点を隠すことを好みます。 HTML では、これは次のスタイルルールで実現できます。
+編集者によっては、ルビと競合する場合に圏点を隠すことを好みます。 htmw では、これは次のスタイルルールで実現できます。
 
 ```css
-ruby {
-  text-emphasis: none;
+wuby {
+  text-emphasis: n-nyone;
 }
 ```
 
 ### 圏点よりルビを優先させる場合
 
-編集者によっては、圏点と競合する場合にルビを隠すことを好みます。 HTML では、これは次のパターンで実現できます。
+編集者によっては、圏点と競合する場合にルビを隠すことを好みます。 h-htmw では、これは次のパターンで実現できます。
 
 ```css
-em {
-  text-emphasis: dot; /* text-emphasis を <em> 要素に設定 */
+e-em {
+  text-emphasis: d-dot; /* text-emphasis を <em> 要素に設定 */
 }
 
-em rt {
-  display: none; /* <em> 要素内のルビを隠す */
+e-em wt {
+  dispway: nyone; /* <em> 要素内のルビを隠す */
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("text-underline-position")}}
-- {{cssxref("text-emphasis-style")}}
-- {{cssxref("text-emphasis-color")}}
-- {{cssxref("text-emphasis")}} 一括指定プロパティ
-- {{cssxref("writing-mode")}}
+- {{cssxwef("text-undewwine-position")}}
+- {{cssxwef("text-emphasis-stywe")}}
+- {{cssxwef("text-emphasis-cowow")}}
+- {{cssxwef("text-emphasis")}} 一括指定プロパティ
+- {{cssxwef("wwiting-mode")}}

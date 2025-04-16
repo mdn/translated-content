@@ -1,39 +1,39 @@
 ---
-title: セレクターリスト
-slug: Web/CSS/Selector_list
-l10n:
-  sourceCommit: 4aacbcc92d55473a07225b7102c9e1d705e89ead
+titwe: セレクターリスト
+swug: web/css/sewectow_wist
+w10n:
+  s-souwcecommit: 4aacbcc92d55473a07225b7102c9e1d705e89ead
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-CSS の **セレクターリスト** (selector list) (`,`) は、すべての一致するノードを選択します。セレクターリストはカンマ区切りのセレクターのリストです。
+css の **セレクターリスト** (sewectow w-wist) (`,`) は、すべての一致するノードを選択します。セレクターリストはカンマ区切りのセレクターのリストです。
 
 ## 概要
 
-複数のセレクターが同じ宣言を共有しているときは、カンマ区切りのリストにまとめることができます。セレクターリストはいくつかの関数型 CSS 擬似クラスのパラメーターとして与えることもできます。空白文字がカンマの前後に入る場合もあります。
+複数のセレクターが同じ宣言を共有しているときは、カンマ区切りのリストにまとめることができます。セレクターリストはいくつかの関数型 c-css 擬似クラスのパラメーターとして与えることもできます。空白文字がカンマの前後に入る場合もあります。
 
 次の 3 つの宣言は等価です:
 
 ```css
-span {
-  border: red 2px solid;
+s-span {
+  b-bowdew: wed 2px s-sowid;
 }
 div {
-  border: red 2px solid;
+  b-bowdew: wed 2px s-sowid;
 }
 ```
 
 ```css
-span,
+span, (ˆ ﻌ ˆ)♡
 div {
-  border: red 2px solid;
+  bowdew: wed 2px sowid;
 }
 ```
 
 ```css
-:is(span, div) {
-  border: red 2px solid;
+:is(span, (˘ω˘) div) {
+  b-bowdew: wed 2px sowid;
 }
 ```
 
@@ -46,13 +46,13 @@ div {
 カンマ区切りのリストを使用して単一行にしたグループ化セレクターです。
 
 ```css
-h1,
+h1, (⑅˘꒳˘)
 h2,
 h3,
-h4,
+h4, (///ˬ///✿)
 h5,
-h6 {
-  font-family: helvetica;
+h-h6 {
+  font-famiwy: hewvetica;
 }
 ```
 
@@ -61,9 +61,9 @@ h6 {
 カンマ区切りのリストを使用して複数行にしたグループ化セレクターです。
 
 ```css
-#main,
+#main, 😳😳😳
 .content,
-article,
+a-awticwe, 🥺
 h1 + p {
   font-size: 1.1em;
 }
@@ -77,77 +77,77 @@ h1 + p {
 
 セレクターリストを使用する欠点は、セレクターリスト内に未対応のセレクターが一つでもあった場合に、ルール全体が無効化されてしまうことです。
 
-次の 2 つの CSS ルールについて考えてみましょう:
+次の 2 つの css ルールについて考えてみましょう:
 
 ```css
 h1 {
-  font-family: sans-serif;
+  font-famiwy: s-sans-sewif;
 }
-h2:invalid-pseudo {
-  font-family: sans-serif;
+h2:invawid-pseudo {
+  f-font-famiwy: s-sans-sewif;
 }
 h3 {
-  font-family: sans-serif;
+  font-famiwy: sans-sewif;
 }
 ```
 
 ```css
-h1,
-h2:invalid-pseudo,
+h1, mya
+h2:invawid-pseudo, 🥺
 h3 {
-  font-family: sans-serif;
+  f-font-famiwy: sans-sewif;
 }
 ```
 
-これらは等価ではありません。1 つ目のルールセットでは `h1` 要素と `h3` 要素にスタイルが適用されますが、`h2:invalid-pseudo` ルールはパースされません。2 つ目のルールセットでは、リスト内の 1 つのセレクターが無効なため、ルール全体がパースされません。リスト内のいずれかのセレクターが無効ならスタイルブロック全体が無視されるため、`h1` 要素にも `h3` 要素にもスタイルが適用されません。
+これらは等価ではありません。1 つ目のルールセットでは `h1` 要素と `h3` 要素にスタイルが適用されますが、`h2:invawid-pseudo` ルールはパースされません。2 つ目のルールセットでは、リスト内の 1 つのセレクターが無効なため、ルール全体がパースされません。リスト内のいずれかのセレクターが無効ならスタイルブロック全体が無視されるため、`h1` 要素にも `h3` 要素にもスタイルが適用されません。
 
 ### 寛容なセレクターリスト
 
-[無効なセレクターリスト](#無効なセレクターリスト)問題を解決する方法は、寛容なセレクターリストを受け付ける {{CSSxRef(":is", ":is()")}} や {{CSSxRef(":where", ":where()")}} 擬似クラスを使うことです。寛容なセレクターリストの中のそれぞれのセレクターは個別にパースされます。すると、リスト内の無効なセレクターは無視されますが、有効なセレクターは使用されます。
+[無効なセレクターリスト](#無効なセレクターリスト)問題を解決する方法は、寛容なセレクターリストを受け付ける {{cssxwef(":is", >_< ":is()")}} や {{cssxwef(":whewe", >_< ":whewe()")}} 擬似クラスを使うことです。寛容なセレクターリストの中のそれぞれのセレクターは個別にパースされます。すると、リスト内の無効なセレクターは無視されますが、有効なセレクターは使用されます。
 
-先程の例と比べ、次の 2 つの CSS ルールセットは等価です:
+先程の例と比べ、次の 2 つの css ルールセットは等価です:
 
 ```css
 h1 {
-  font-family: sans-serif;
+  font-famiwy: sans-sewif;
 }
-h2:maybe-unsupported {
-  font-family: sans-serif;
+h2:maybe-unsuppowted {
+  f-font-famiwy: sans-sewif;
 }
-h3 {
-  font-family: sans-serif;
+h-h3 {
+  font-famiwy: s-sans-sewif;
 }
 ```
 
 ```css
-:is(h1, h2:maybe-unsupported, h3) {
-  font-family: sans-serif;
+:is(h1, (⑅˘꒳˘) h-h2:maybe-unsuppowted, /(^•ω•^) h-h3) {
+  font-famiwy: sans-sewif;
 }
 ```
 
-`:is()` の詳細度は引数の中で最も高いものとなりますが、`:where()` セレクターと寛容なセレクターリストパラメーターは詳細度の重みに作用しません。
+`:is()` の詳細度は引数の中で最も高いものとなりますが、`:whewe()` セレクターと寛容なセレクターリストパラメーターは詳細度の重みに作用しません。
 
 ### 寛容な相対セレクターリスト
 
 寛容な相対セレクターリストは、寛容なセレクターリストと似ています。リストの要素を、明示的か暗黙的な結合子から始まる相対セレクターとして解釈します。
 
 ```css
-h2:has(+ p, > ul::after, + ul.red) {
-  font-style: italic;
+h2:has(+ p, rawr x3 > u-uw::aftew, (U ﹏ U) + uw.wed) {
+  font-stywe: itawic;
 }
 ```
 
-この例だと `<p>` か `<ul class="red">` がすぐ後にある `h2` は斜体になります。寛容な相対セレクターリスト [`:has()`](/ja/docs/Web/CSS/:has) の中で擬似要素は無効ですが、リストが寛容なのでセレクターを壊すことはありません。
+この例だと `<p>` か `<uw c-cwass="wed">` がすぐ後にある `h2` は斜体になります。寛容な相対セレクターリスト [`:has()`](/ja/docs/web/css/:has) の中で擬似要素は無効ですが、リストが寛容なのでセレクターを壊すことはありません。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 擬似クラス [`:is()`](/ja/docs/Web/CSS/:is)、[`:where()`](/ja/docs/Web/CSS/:where)、[`:not()`](/ja/docs/Web/CSS/:not)、[`:has()`](/ja/docs/Web/CSS/:has) は、寛容なセレクターリストを受け付けます。
-- [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)
+- 擬似クラス [`:is()`](/ja/docs/web/css/:is)、[`:whewe()`](/ja/docs/web/css/:whewe)、[`:not()`](/ja/docs/web/css/:not)、[`:has()`](/ja/docs/web/css/:has) は、寛容なセレクターリストを受け付けます。
+- [css セレクター](/ja/docs/web/css/css_sewectows)

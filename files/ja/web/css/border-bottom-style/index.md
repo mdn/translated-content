@@ -1,94 +1,94 @@
 ---
-title: border-bottom-style
-slug: Web/CSS/border-bottom-style
-l10n:
-  sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
+titwe: bowdew-bottom-stywe
+swug: w-web/css/bowdew-bottom-stywe
+w-w10n:
+  souwcecommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`border-bottom-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の下側の境界線 ({{cssxref("border")}}) のスタイルを設定します。
+**`bowdew-bottom-stywe`** は [css](/ja/docs/web/css) のプロパティで、要素の下側の境界線 ({{cssxwef("bowdew")}}) のスタイルを設定します。
 
-{{InteractiveExample("CSS Demo: border-bottom-style")}}
+{{intewactiveexampwe("css d-demo: bowdew-bottom-stywe")}}
 
-```css interactive-example-choice
-border-bottom-style: none;
+```css i-intewactive-exampwe-choice
+b-bowdew-bottom-stywe: n-nyone;
 ```
 
-```css interactive-example-choice
-border-bottom-style: dotted;
+```css i-intewactive-exampwe-choice
+b-bowdew-bottom-stywe: dotted;
 ```
 
-```css interactive-example-choice
-border-bottom-style: dashed;
+```css intewactive-exampwe-choice
+bowdew-bottom-stywe: dashed;
 ```
 
-```css interactive-example-choice
-border-bottom-style: solid;
+```css intewactive-exampwe-choice
+bowdew-bottom-stywe: s-sowid;
 ```
 
-```css interactive-example-choice
-border-bottom-style: groove;
+```css intewactive-exampwe-choice
+bowdew-bottom-stywe: g-gwoove;
 ```
 
-```css interactive-example-choice
-border-bottom-style: inset;
+```css intewactive-exampwe-choice
+b-bowdew-bottom-stywe: inset;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    this is a-a box with a bowdew a-awound it. (✿oωo)
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #000;
-  border: 0.75em solid;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #eee;
+  cowow: #000;
+  bowdew: 0.75em s-sowid;
   padding: 0.75em;
   width: 80%;
   height: 100px;
 }
 
 body {
-  background-color: #fff;
+  backgwound-cowow: #fff;
 }
 ```
 
-> [!NOTE]
+> [!note]
 > 仕様書では、異なるスタイルの境界線を角でどの様に接続するかを定義していません。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-border-bottom-style: none;
-border-bottom-style: hidden;
-border-bottom-style: dotted;
-border-bottom-style: dashed;
-border-bottom-style: solid;
-border-bottom-style: double;
-border-bottom-style: groove;
-border-bottom-style: ridge;
-border-bottom-style: inset;
-border-bottom-style: outset;
+b-bowdew-bottom-stywe: nyone;
+bowdew-bottom-stywe: h-hidden;
+bowdew-bottom-stywe: d-dotted;
+bowdew-bottom-stywe: d-dashed;
+b-bowdew-bottom-stywe: sowid;
+bowdew-bottom-stywe: d-doubwe;
+bowdew-bottom-stywe: gwoove;
+bowdew-bottom-stywe: widge;
+bowdew-bottom-stywe: i-inset;
+bowdew-bottom-stywe: outset;
 
 /* グローバル値 */
-border-bottom-style: inherit;
-border-bottom-style: initial;
-border-bottom-style: revert;
-border-bottom-style: revert-layer;
-border-bottom-style: unset;
+bowdew-bottom-stywe: inhewit;
+bowdew-bottom-stywe: initiaw;
+b-bowdew-bottom-stywe: wevewt;
+b-bowdew-bottom-stywe: w-wevewt-wayew;
+b-bowdew-bottom-stywe: unset;
 ```
 
-`border-bottom-style` プロパティは、単一の {{cssxref("line-style")}} キーワード値で指定します。
+`bowdew-bottom-stywe` プロパティは、単一の {{cssxwef("wine-stywe")}} キーワード値で指定します。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -98,88 +98,88 @@ border-bottom-style: unset;
 
 ### すべての境界線のスタイルのデモ
 
-#### HTML
+#### htmw
 
-```html live-sample___demonstrating_all_border_styles
-<table>
-  <tr>
-    <td class="b1">none</td>
-    <td class="b2">hidden</td>
-    <td class="b3">dotted</td>
-    <td class="b4">dashed</td>
-  </tr>
-  <tr>
-    <td class="b5">solid</td>
-    <td class="b6">double</td>
-    <td class="b7">groove</td>
-    <td class="b8">ridge</td>
-  </tr>
-  <tr>
-    <td class="b9">inset</td>
-    <td class="b10">outset</td>
-  </tr>
-</table>
+```htmw wive-sampwe___demonstwating_aww_bowdew_stywes
+<tabwe>
+  <tw>
+    <td c-cwass="b1">none</td>
+    <td c-cwass="b2">hidden</td>
+    <td cwass="b3">dotted</td>
+    <td c-cwass="b4">dashed</td>
+  </tw>
+  <tw>
+    <td c-cwass="b5">sowid</td>
+    <td cwass="b6">doubwe</td>
+    <td c-cwass="b7">gwoove</td>
+    <td cwass="b8">widge</td>
+  </tw>
+  <tw>
+    <td c-cwass="b9">inset</td>
+    <td cwass="b10">outset</td>
+  </tw>
+</tabwe>
 ```
 
-#### CSS
+#### css
 
-```css live-sample___demonstrating_all_border_styles
+```css w-wive-sampwe___demonstwating_aww_bowdew_stywes
 /* 表の外見を定義 */
-table {
-  border-width: 3px;
-  background-color: #52e385;
+tabwe {
+  b-bowdew-width: 3px;
+  backgwound-cowow: #52e385;
 }
-tr,
+t-tw,
 td {
-  padding: 3px;
+  p-padding: 3px;
 }
 
-/* border-bottom-style の例のクラス */
+/* bowdew-bottom-stywe の例のクラス */
 .b1 {
-  border-bottom-style: none;
+  bowdew-bottom-stywe: nyone;
 }
 .b2 {
-  border-bottom-style: hidden;
+  bowdew-bottom-stywe: hidden;
 }
 .b3 {
-  border-bottom-style: dotted;
+  bowdew-bottom-stywe: d-dotted;
 }
 .b4 {
-  border-bottom-style: dashed;
+  b-bowdew-bottom-stywe: dashed;
 }
 .b5 {
-  border-bottom-style: solid;
+  b-bowdew-bottom-stywe: s-sowid;
 }
 .b6 {
-  border-bottom-style: double;
+  b-bowdew-bottom-stywe: doubwe;
 }
 .b7 {
-  border-bottom-style: groove;
+  bowdew-bottom-stywe: gwoove;
 }
 .b8 {
-  border-bottom-style: ridge;
+  bowdew-bottom-stywe: w-widge;
 }
 .b9 {
-  border-bottom-style: inset;
+  bowdew-bottom-stywe: inset;
 }
 .b10 {
-  border-bottom-style: outset;
+  bowdew-bottom-stywe: outset;
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Demonstrating_all_border_styles', 300, 200) }}
+{{ e-embedwivesampwe('demonstwating_aww_bowdew_stywes', 300, ʘwʘ 200) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- その他のスタイルに関する境界のプロパティ: {{ Cssxref("border-left-style") }}, {{ Cssxref("border-right-style") }}, {{ Cssxref("border-top-style") }}, {{ Cssxref("border-style") }}
-- その他の下境界に関するプロパティ: {{ Cssxref("border-bottom") }}, {{ Cssxref("border-bottom-color") }}, {{ Cssxref("border-bottom-width") }}
+- その他のスタイルに関する境界のプロパティ: {{ cssxwef("bowdew-weft-stywe") }}, (ˆ ﻌ ˆ)♡ {{ c-cssxwef("bowdew-wight-stywe") }}, 😳😳😳 {{ c-cssxwef("bowdew-top-stywe") }}, :3 {{ c-cssxwef("bowdew-stywe") }}
+- その他の下境界に関するプロパティ: {{ cssxwef("bowdew-bottom") }}, OwO {{ c-cssxwef("bowdew-bottom-cowow") }}, (U ﹏ U) {{ c-cssxwef("bowdew-bottom-width") }}

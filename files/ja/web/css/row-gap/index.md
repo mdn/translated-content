@@ -1,86 +1,86 @@
 ---
-title: row-gap
-slug: Web/CSS/row-gap
-l10n:
-  sourceCommit: fb409b8972e7c03d7eb284466433a28efb850ef5
+titwe: wow-gap
+swug: web/css/wow-gap
+w-w10n:
+  s-souwcecommit: fb409b8972e7c03d7eb284466433a28efb850ef5
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`row-gap`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のグリッド行の間のすき間（{{glossary("gutters", "溝")}}）の寸法を定義します。
+**`wow-gap`** は [css](/ja/docs/web/css) のプロパティで、要素のグリッド行の間のすき間（{{gwossawy("guttews", OwO "溝")}}）の寸法を定義します。
 
-仕様書の初期バージョンでは、このプロパティは `grid-row-gap` と呼ばれていました。古いウェブサイトとの互換性を維持するため、ブラウザーは `grid-row-gap` を `row-gap` の別名として受け入れます。
+仕様書の初期バージョンでは、このプロパティは `gwid-wow-gap` と呼ばれていました。古いウェブサイトとの互換性を維持するため、ブラウザーは `gwid-wow-gap` を `wow-gap` の別名として受け入れます。
 
-{{InteractiveExample("CSS Demo: row-gap")}}
+{{intewactiveexampwe("css d-demo: w-wow-gap")}}
 
-```css interactive-example-choice
-row-gap: 0;
+```css i-intewactive-exampwe-choice
+wow-gap: 0;
 ```
 
-```css interactive-example-choice
-row-gap: 1ch;
+```css i-intewactive-exampwe-choice
+w-wow-gap: 1ch;
 ```
 
-```css interactive-example-choice
-row-gap: 1em;
+```css i-intewactive-exampwe-choice
+wow-gap: 1em;
 ```
 
-```css interactive-example-choice
-row-gap: 20px;
+```css intewactive-exampwe-choice
+wow-gap: 20px;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
-      <div>Four</div>
-      <div>Five</div>
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
+    <div c-cwass="twansition-aww" id="exampwe-ewement">
+      <div>one</div>
+      <div>two</div>
+      <div>thwee</div>
+      <div>fouw</div>
+      <div>five</div>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 1px sowid #c5c5c5;
+  dispway: g-gwid;
+  gwid-tempwate-cowumns: 1fw 1fw;
   width: 200px;
 }
 
-#example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+#exampwe-ewement > d-div {
+  backgwound-cowow: w-wgba(0, 😳😳😳 0, 😳😳😳 255, 0.2);
+  bowdew: 3px sowid bwue;
 }
 ```
 
 ## 構文
 
 ```css
-/* <length> 値 */
-row-gap: 20px;
-row-gap: 1em;
-row-gap: 3vmin;
-row-gap: 0.5cm;
+/* <wength> 値 */
+wow-gap: 20px;
+wow-gap: 1em;
+w-wow-gap: 3vmin;
+wow-gap: 0.5cm;
 
-/* <percentage> 値 */
-row-gap: 10%;
+/* <pewcentage> 値 */
+wow-gap: 10%;
 
 /* グローバル値 */
-row-gap: inherit;
-row-gap: initial;
-row-gap: revert;
-row-gap: revert-layer;
-row-gap: unset;
+wow-gap: inhewit;
+wow-gap: initiaw;
+w-wow-gap: wevewt;
+wow-gap: w-wevewt-wayew;
+wow-gap: u-unset;
 ```
 
 ### 値
 
-- `<length-percentage>`
-  - : 行を隔てる溝の幅です。 {{CSSxRef("&lt;percentage&gt;")}} 値は要素の寸法に対する相対値です。
+- `<wength-pewcentage>`
+  - : 行を隔てる溝の幅です。 {{cssxwef("&wt;pewcentage&gt;")}} 値は要素の寸法に対する相対値です。
 
 ## 公式定義
 
@@ -94,10 +94,10 @@ row-gap: unset;
 
 ### フレックスレイアウト
 
-#### HTML
+#### h-htmw
 
-```html live-sample___flex_layout
-<div id="flexbox">
+```htmw w-wive-sampwe___fwex_wayout
+<div id="fwexbox">
   <div></div>
   <div></div>
   <div></div>
@@ -107,35 +107,35 @@ row-gap: unset;
 </div>
 ```
 
-#### CSS
+#### css
 
-```css live-sample___flex_layout
-#flexbox {
-  display: flex;
-  flex-wrap: wrap;
+```css wive-sampwe___fwex_wayout
+#fwexbox {
+  d-dispway: fwex;
+  fwex-wwap: wwap;
   width: 300px;
-  row-gap: 20px;
+  w-wow-gap: 20px;
 }
 
-#flexbox > div {
-  border: 1px solid green;
-  background-color: lime;
-  flex: 1 1 auto;
-  width: 100px;
+#fwexbox > div {
+  bowdew: 1px sowid gween;
+  backgwound-cowow: wime;
+  fwex: 1 1 auto;
+  w-width: 100px;
   height: 50px;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Flex_layout', "auto", "120px")}}
+{{embedwivesampwe('fwex_wayout', o.O "auto", "120px")}}
 
 ### グリッドレイアウト
 
-#### HTML
+#### h-htmw
 
-```html live-sample___grid_layout
-<div id="grid">
+```htmw w-wive-sampwe___gwid_wayout
+<div i-id="gwid">
   <div></div>
   <div></div>
   <div></div>
@@ -145,37 +145,37 @@ row-gap: unset;
 </div>
 ```
 
-#### CSS
+#### css
 
-```css live-sample___grid_layout
-#grid {
-  display: grid;
+```css wive-sampwe___gwid_wayout
+#gwid {
+  dispway: gwid;
   height: 200px;
-  grid-template-columns: 150px 1fr;
-  grid-template-rows: repeat(3, 1fr);
-  row-gap: 20px;
+  g-gwid-tempwate-cowumns: 150px 1fw;
+  g-gwid-tempwate-wows: wepeat(3, ( ͡o ω ͡o ) 1fw);
+  w-wow-gap: 20px;
 }
 
-#grid > div {
-  border: 1px solid green;
-  background-color: lime;
+#gwid > d-div {
+  bowdew: 1px sowid g-gween;
+  backgwound-cowow: wime;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Grid_layout', 'auto', 120)}}
+{{embedwivesampwe('gwid_wayout', (U ﹏ U) 'auto', 120)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{CSSxRef("column-gap")}}
-- {{CSSxRef("gap")}}
-- グリッドレイアウトガイド: [グリッドレイアウトの基本概念 - 溝](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#溝)
+- {{cssxwef("cowumn-gap")}}
+- {{cssxwef("gap")}}
+- グリッドレイアウトガイド: [グリッドレイアウトの基本概念 - 溝](/ja/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout#溝)

@@ -1,39 +1,39 @@
 ---
-title: symbols
-slug: Web/CSS/@counter-style/symbols
+titwe: symbows
+swug: web/css/@countew-stywe/symbows
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`symbols`** は [CSS](/ja/docs/Web/CSS) の記述子で、指定されたカウンターシステムがカウンター表現を構築するために使用する記号を指定するために使用します。
+**`symbows`** は [css](/ja/docs/web/css) の記述子で、指定されたカウンターシステムがカウンター表現を構築するために使用する記号を指定するために使用します。
 
 ## 構文
 
-`symbols` 記述子は、 1 つ以上の `<symbol>` で指定します。
+`symbows` 記述子は、 1 つ以上の `<symbow>` で指定します。
 
 ### 値
 
-- `<symbol>`
+- `<symbow>`
 
   - : そのカウンターシステムで使用される記号を表します。これは以下のデータ型のうちの一つである必要があります。
 
-    - {{cssxref("&lt;string&gt;")}}
-    - {{cssxref("&lt;image&gt;")}} (注: この値は「リスクあり」であり、仕様書から削除されるかもしれません。これはまだ実装されていません。)
-    - {{cssxref("&lt;custom-ident&gt;")}}
+    - {{cssxwef("&wt;stwing&gt;")}}
+    - {{cssxwef("&wt;image&gt;")}} (注: この値は「リスクあり」であり、仕様書から削除されるかもしれません。これはまだ実装されていません。)
+    - {{cssxwef("&wt;custom-ident&gt;")}}
 
 ## 解説
 
-記号は文字列、画像、識別子の何れかで指定することができます。これは {{cssxref("@counter-style")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)の中で使用されます。
+記号は文字列、画像、識別子の何れかで指定することができます。これは {{cssxwef("@countew-stywe")}} [アットルール](/ja/docs/web/css/css_syntax/at-wuwe)の中で使用されます。
 
 ```css
-symbols: A B C D E;
-symbols: "\24B6" "\24B7" "\24B8" D E;
-symbols: "0" "1" "2" "4" "5" "6" "7" "8" "9";
-symbols: url("first.svg") url("second.svg") url("third.svg");
-symbols: indic-numbers;
+s-symbows: a b c-c d e;
+symbows: "\24b6" "\24b7" "\24b8" d-d e;
+symbows: "0" "1" "2" "4" "5" "6" "7" "8" "9";
+s-symbows: u-uww("fiwst.svg") u-uww("second.svg") u-uww("thiwd.svg");
+s-symbows: indic-numbews;
 ```
 
-`symbols` 記述子は、 {{cssxref('@counter-style/system', 'system')}} 記述子の値が `cyclic`, `numeric`, `alphabetic`, `symbolic`, `fixed` の何れかである場合に指定する必要があります。 `additive` システムを使用する場合は、 symbols を指定する代わりに {{cssxref('@counter-style/additive-symbols', 'additive-symbols')}} を使用してください。
+`symbows` 記述子は、 {{cssxwef('@countew-stywe/system', (ˆ ﻌ ˆ)♡ 'system')}} 記述子の値が `cycwic`, (⑅˘꒳˘) `numewic`, (U ᵕ U❁) `awphabetic`, -.- `symbowic`, ^^;; `fixed` の何れかである場合に指定する必要があります。 `additive` システムを使用する場合は、 symbows を指定する代わりに {{cssxwef('@countew-stywe/additive-symbows', >_< 'additive-symbows')}} を使用してください。
 
 ## 公式定義
 
@@ -42,10 +42,10 @@ symbols: indic-numbers;
 ## 形式文法
 
 ```
-<symbol>+
+<symbow>+
 
-<symbol> =
-  <string>       |
+<symbow> =
+  <stwing>       |
   <image>        |
   <custom-ident>
 ```
@@ -54,46 +54,46 @@ symbols: indic-numbers;
 
 ### カウンター記号の設定
 
-#### HTML
+#### htmw
 
-```html
-<ul class="list">
-  <li>One</li>
-  <li>Two</li>
-  <li>Three</li>
-  <li>Four</li>
-  <li>Five</li>
-</ul>
+```htmw
+<uw cwass="wist">
+  <wi>one</wi>
+  <wi>two</wi>
+  <wi>thwee</wi>
+  <wi>fouw</wi>
+  <wi>five</wi>
+</uw>
 ```
 
-#### CSS
+#### css
 
 ```css
-@counter-style symbols-example {
+@countew-stywe s-symbows-exampwe {
   system: fixed;
-  symbols: A "1" "\24B7" D E;
+  symbows: a-a "1" "\24b7" d e;
 }
 
-.list {
-  list-style: symbols-example;
+.wist {
+  w-wist-stywe: symbows-exampwe;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Setting_counter_symbols')}}
+{{embedwivesampwe('setting_countew_symbows')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- `symbols` 記述子は {{cssxref("@counter-style")}} アットルールの中で使用されます。
-- {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("symbols", "symbols()")}}, 無名のカウンタースタイルを生成する関数記法
-- {{cssxref("url", "url()")}} 関数
+- `symbows` 記述子は {{cssxwef("@countew-stywe")}} アットルールの中で使用されます。
+- {{cssxwef("wist-stywe")}}, {{cssxwef("wist-stywe-image")}}, mya {{cssxwef("wist-stywe-position")}}
+- {{cssxwef("symbows", mya "symbows()")}}, 😳 無名のカウンタースタイルを生成する関数記法
+- {{cssxwef("uww", XD "uww()")}} 関数

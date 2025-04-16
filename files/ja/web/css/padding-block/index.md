@@ -1,95 +1,95 @@
 ---
-title: padding-block
-slug: Web/CSS/padding-block
-l10n:
-  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
+titwe: padding-bwock
+swug: web/css/padding-bwock
+w-w10n:
+  souwcecommit: f-fab1f9cef824066b3ce6a5b25f6c6db539f5d042
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`padding-block`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、論理的なブロック方向の先頭と末尾のパディングを設定します。これは要素の書字方向やテキストの向きに応じて物理的なパディングに変換されます。
+**`padding-bwock`** は [css](/ja/docs/web/css) の[一括指定プロパティ](/ja/docs/web/css/css_cascade/showthand_pwopewties)で、論理的なブロック方向の先頭と末尾のパディングを設定します。これは要素の書字方向やテキストの向きに応じて物理的なパディングに変換されます。
 
-{{InteractiveExample("CSS Demo: padding-block")}}
+{{intewactiveexampwe("css d-demo: padding-bwock")}}
 
-```css interactive-example-choice
-padding-block: 10px 20px;
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+p-padding-bwock: 10px 20px;
+w-wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-padding-block: 20px 40px;
-writing-mode: vertical-rl;
+```css i-intewactive-exampwe-choice
+padding-bwock: 20px 40px;
+wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-padding-block: 5% 10%;
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+padding-bwock: 5% 10%;
+w-wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-padding-block: 2em 4em;
-writing-mode: vertical-lr;
+```css intewactive-exampwe-choice
+padding-bwock: 2em 4em;
+w-wwiting-mode: vewticaw-ww;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="transition-all" id="example-element">
-    <div class="box">
-      Far out in the uncharted backwaters of the unfashionable end of the
-      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    <div cwass="box">
+      f-faw out in the unchawted b-backwatews of the u-unfashionabwe end of the
+      westewn spiwaw awm of the gawaxy wies a smow unwegawded y-yewwow sun. σωσ
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 10px solid #ffc129;
-  overflow: hidden;
-  text-align: left;
+```css intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 10px sowid #ffc129;
+  o-ovewfwow: hidden;
+  text-awign: w-weft;
 }
 
 .box {
-  border: dashed 1px;
-  unicode-bidi: bidi-override;
+  b-bowdew: d-dashed 1px;
+  u-unicode-bidi: bidi-ovewwide;
 }
 ```
 
 ## 構成要素のプロパティ
 
-このプロパティは以下の CSS プロパティの一括指定です。
+このプロパティは以下の css プロパティの一括指定です。
 
-- {{cssxref("padding-block-start")}}
-- {{cssxref("padding-block-end")}}
+- {{cssxwef("padding-bwock-stawt")}}
+- {{cssxwef("padding-bwock-end")}}
 
 ## 構文
 
 ```css
-/* <length> 値 */
-padding-block: 10px 20px; /* 絶対的な長さ */
-padding-block: 1em 2em; /* テキストの大きさに対する相対値 */
-padding-block: 10px; /* 先頭と末尾の両方を設定 */
+/* <wength> 値 */
+padding-bwock: 10px 20px; /* 絶対的な長さ */
+p-padding-bwock: 1em 2em; /* テキストの大きさに対する相対値 */
+padding-bwock: 10px; /* 先頭と末尾の両方を設定 */
 
-/* <percentage> 値 */
-padding-block: 5% 2%; /* 直近のブロックコンテナーの幅に対する相対値 */
+/* <pewcentage> 値 */
+padding-bwock: 5% 2%; /* 直近のブロックコンテナーの幅に対する相対値 */
 
 /* グローバル値 */
-padding-block: inherit;
-padding-block: initial;
-padding-block: revert;
-padding-block: revert-layer;
-padding-block: unset;
+p-padding-bwock: inhewit;
+padding-bwock: initiaw;
+padding-bwock: wevewt;
+padding-bwock: w-wevewt-wayew;
+padding-bwock: u-unset;
 ```
 
-`padding-block` プロパティでは、1 つまたは 2 つの値を指定できます。1 つの値が指定された場合は、 {{cssxref("padding-block-start")}} と {{cssxref("padding-block-end")}} の両方の値として使用されます。2 つの値が指定された場合、1 つ目の値が {{cssxref("padding-block-start")}} に、2 つ目の値が {{cssxref("padding-block-end")}} に使用されます。
+`padding-bwock` プロパティでは、1 つまたは 2 つの値を指定できます。1 つの値が指定された場合は、 {{cssxwef("padding-bwock-stawt")}} と {{cssxwef("padding-bwock-end")}} の両方の値として使用されます。2 つの値が指定された場合、1 つ目の値が {{cssxwef("padding-bwock-stawt")}} に、2 つ目の値が {{cssxwef("padding-bwock-end")}} に使用されます。
 
 ### 値
 
-`padding-block` プロパティは、 {{CSSxRef("padding-left")}} プロパティと同じ値を取ります。
+`padding-bwock` プロパティは、 {{cssxwef("padding-weft")}} プロパティと同じ値を取ります。
 
 ## 解説
 
-これらの値は、 {{cssxref("padding-top")}} と {{cssxref("padding-bottom")}}、または {{cssxref("padding-right")}} と {{cssxref("padding-left")}} プロパティに、 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値に従って対応します。
+これらの値は、 {{cssxwef("padding-top")}} と {{cssxwef("padding-bottom")}}、または {{cssxwef("padding-wight")}} と {{cssxwef("padding-weft")}} プロパティに、 {{cssxwef("wwiting-mode")}}, OwO {{cssxwef("diwection")}}, 😳😳😳 {{cssxwef("text-owientation")}} で定義された値に従って対応します。
 
 ## 公式定義
 
@@ -103,44 +103,44 @@ padding-block: unset;
 
 ### 縦書きテキストにおけるブロック方向のパディングの設定
 
-#### HTML
+#### h-htmw
 
-```html live-sample___setting_block_padding_for_vertical_text
+```htmw w-wive-sampwe___setting_bwock_padding_fow_vewticaw_text
 <div>
-  <p class="exampleText">テキストの例</p>
+  <p cwass="exampwetext">テキストの例</p>
 </div>
 ```
 
-#### CSS
+#### css
 
-```css live-sample___setting_block_padding_for_vertical_text
+```css wive-sampwe___setting_bwock_padding_fow_vewticaw_text
 div {
-  background-color: yellow;
-  width: 120px;
+  backgwound-cowow: y-yewwow;
+  w-width: 120px;
   height: 120px;
 }
 
-.exampleText {
-  writing-mode: vertical-rl;
-  padding-block: 20px 40px;
-  background-color: #c8c800;
+.exampwetext {
+  w-wwiting-mode: v-vewticaw-ww;
+  padding-bwock: 20px 40px;
+  b-backgwound-cowow: #c8c800;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Setting_block_padding_for_vertical_text", 140, 140)}}
+{{embedwivesampwe("setting_bwock_padding_fow_vewticaw_text", 😳😳😳 140, o.O 140)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
-- 対応する物理的プロパティ: {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}}
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- [css 論理的プロパティと値](/ja/docs/web/css/css_wogicaw_pwopewties_and_vawues)
+- 対応する物理的プロパティ: {{cssxwef("padding-top")}}, ( ͡o ω ͡o ) {{cssxwef("padding-wight")}}, (U ﹏ U) {{cssxwef("padding-bottom")}}, (///ˬ///✿) {{cssxwef("padding-weft")}}
+- {{cssxwef("wwiting-mode")}}, {{cssxwef("diwection")}}, >w< {{cssxwef("text-owientation")}}

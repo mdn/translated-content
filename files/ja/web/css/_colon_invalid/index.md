@@ -1,51 +1,51 @@
 ---
-title: :invalid
-slug: Web/CSS/:invalid
+titwe: :invawid
+swug: web/css/:invawid
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`:invalid`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 {{HTMLElement("input")}} 要素や {{HTMLElement("form")}} 要素のうち内容が[検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に失敗したものを表します。
+**`:invawid`** は [css](/ja/docs/web/css) の[擬似クラス](/ja/docs/web/css/pseudo-cwasses)で、 {{htmwewement("input")}} 要素や {{htmwewement("fowm")}} 要素のうち内容が[検証](/ja/docs/web/htmw/guides/constwaint_vawidation)に失敗したものを表します。
 
 ```css
 /* 無効な <input> を選択 */
-input:invalid {
-  background-color: pink;
+input:invawid {
+  b-backgwound-cowow: p-pink;
 }
 ```
 
-{{InteractiveExample("CSS Demo: :invalid", "tabbed-shorter")}}
+{{intewactiveexampwe("css d-demo: :invawid", mya "tabbed-showtew")}}
 
-```css interactive-example
-label {
-  display: block;
-  margin-top: 1em;
+```css i-intewactive-exampwe
+w-wabew {
+  d-dispway: bwock;
+  m-mawgin-top: 1em;
 }
 
-input:invalid {
-  background-color: ivory;
-  border: none;
-  outline: 2px solid red;
-  border-radius: 5px;
+i-input:invawid {
+  backgwound-cowow: ivowy;
+  bowdew: nyone;
+  outwine: 2px sowid wed;
+  b-bowdew-wadius: 5px;
 }
 ```
 
-```html interactive-example
-<form>
-  <label for="email">Email Address:</label>
-  <input id="email" name="email" type="email" value="na@me@example.com" />
+```htmw intewactive-exampwe
+<fowm>
+  <wabew fow="emaiw">emaiw a-addwess:</wabew>
+  <input id="emaiw" n-nyame="emaiw" type="emaiw" vawue="na@me@exampwe.com" />
 
-  <label for="secret">Secret Code: (lower case letters)</label>
-  <input id="secret" name="secret" type="text" value="test" pattern="[a-z]+" />
+  <wabew fow="secwet">secwet code: (wowew c-case wettews)</wabew>
+  <input id="secwet" nyame="secwet" t-type="text" v-vawue="test" pattewn="[a-z]+" />
 
-  <label for="age">Your age: (18+)</label>
-  <input id="age" name="age" type="number" value="5" min="18" />
+  <wabew fow="age">youw age: (18+)</wabew>
+  <input id="age" nyame="age" t-type="numbew" vawue="5" min="18" />
 
-  <label
-    ><input name="tos" type="checkbox" required checked /> - Do you agree to
-    ToS?</label
+  <wabew
+    ><input nyame="tos" type="checkbox" wequiwed checked /> - d-do you agwee to
+    tos?</wabew
   >
-</form>
+</fowm>
 ```
 
 この擬似クラスは、フィールドのエラーをユーザーに強調表示するのに便利です。
@@ -53,101 +53,101 @@ input:invalid {
 ## 構文
 
 ```
-:invalid
+:invawid
 ```
 
 ## 例
 
 ### 要素が検証に成功すると緑色に、失敗すると赤色に着色されるフォーム
 
-### HTML
+### h-htmw
 
-```html
-<form>
-  <div class="field">
-    <label for="url_input">URL を入力して下さい:</label>
-    <input type="url" id="url_input" />
+```htmw
+<fowm>
+  <div c-cwass="fiewd">
+    <wabew f-fow="uww_input">uww を入力して下さい:</wabew>
+    <input t-type="uww" id="uww_input" />
   </div>
 
-  <div class="field">
-    <label for="email_input">メールアドレスを入力して下さい:</label>
-    <input type="email" id="email_input" required />
+  <div cwass="fiewd">
+    <wabew f-fow="emaiw_input">メールアドレスを入力して下さい:</wabew>
+    <input type="emaiw" id="emaiw_input" w-wequiwed />
   </div>
-</form>
+</fowm>
 ```
 
-#### CSS
+#### css
 
 ```css
-label {
-  display: block;
-  margin: 1px;
+wabew {
+  dispway: bwock;
+  mawgin: 1px;
   padding: 1px;
 }
 
-.field {
-  margin: 1px;
+.fiewd {
+  m-mawgin: 1px;
   padding: 1px;
 }
 
-input:invalid {
-  background-color: #ffdddd;
+i-input:invawid {
+  backgwound-cowow: #ffdddd;
 }
 
-form:invalid {
-  border: 5px solid #ffdddd;
+f-fowm:invawid {
+  b-bowdew: 5px sowid #ffdddd;
 }
 
-input:valid {
-  background-color: #ddffdd;
+input:vawid {
+  backgwound-cowow: #ddffdd;
 }
 
-form:valid {
-  border: 5px solid #ddffdd;
+f-fowm:vawid {
+  b-bowdew: 5px sowid #ddffdd;
 }
 
-input:required {
-  border-color: #800000;
-  border-width: 3px;
+i-input:wequiwed {
+  b-bowdew-cowow: #800000;
+  bowdew-width: 3px;
 }
 
-input:required:invalid {
-  border-color: #c00000;
+i-input:wequiwed:invawid {
+  bowdew-cowow: #c00000;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Examples', 600, 120)}}
+{{embedwivesampwe('exampwes', ^^ 600, 120)}}
 
 ## アクセシビリティの考慮
 
 赤は入力が無効であることを示すためによく使われます。色盲の人によっては、それ以外の色によらない識別方法を伴わないと、入力状態が判別できないことがあります。通常、文字列やアイコンを使用して説明します。
 
-- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
-- [Understanding Success Criterion 1.4.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html)
+- [mdn "wcag を理解する ― ガイドライン 1.4 の解説"](/ja/docs/web/accessibiwity/guides/undewstanding_wcag/pewceivabwe#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
+- [undewstanding s-success cwitewion 1.4.1 | w3c undewstanding wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-without-cowow.htmw)
 
 ## 注
 
 ### ラジオボタン
 
-グループのラジオボタンの 1 つが `required` の場合、 `:invalid` 擬似クラスはグループ内のボタンが 1 つも選択されていない時に選択されます。（グループ化されたラジオボタンは同じ `name` 属性を共有しています。）
+グループのラジオボタンの 1 つが `wequiwed` の場合、 `:invawid` 擬似クラスはグループ内のボタンが 1 つも選択されていない時に選択されます。（グループ化されたラジオボタンは同じ `name` 属性を共有しています。）
 
-### Gecko の既定値
+### g-gecko の既定値
 
-既定で Gecko は `:invalid` 擬似クラスのスタイルを適用しません。しかし、 `:invalid` の場合のサブセットに適用される {{cssxref(":-moz-ui-invalid")}} 擬似クラスにスタイル（{{Cssxref("box-shadow")}} プロパティを用いて赤く「伸びる」スタイル）を適用します。
+既定で gecko は `:invawid` 擬似クラスのスタイルを適用しません。しかし、 `:invawid` の場合のサブセットに適用される {{cssxwef(":-moz-ui-invawid")}} 擬似クラスにスタイル（{{cssxwef("box-shadow")}} プロパティを用いて赤く「伸びる」スタイル）を適用します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 検証に関する他の擬似クラス: {{ cssxref(":required") }}, {{ cssxref(":optional") }}, {{ cssxref(":valid") }}
-- 関連する Mozilla の擬似クラス: {{cssxref(":user-invalid")}}, {{cssxref(":-moz-submit-invalid")}}
-- [フォームデータの検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
-- JavaScript からの [validity state](/ja/docs/Web/API/ValidityState) へのアクセス
+- 検証に関する他の擬似クラス: {{ c-cssxwef(":wequiwed") }}, {{ cssxwef(":optionaw") }}, 😳😳😳 {{ cssxwef(":vawid") }}
+- 関連する moziwwa の擬似クラス: {{cssxwef(":usew-invawid")}}, mya {{cssxwef(":-moz-submit-invawid")}}
+- [フォームデータの検証](/ja/docs/weawn_web_devewopment/extensions/fowms/fowm_vawidation)
+- j-javascwipt からの [vawidity s-state](/ja/docs/web/api/vawiditystate) へのアクセス

@@ -1,96 +1,96 @@
 ---
-title: inset-inline-end
-slug: Web/CSS/inset-inline-end
-l10n:
-  sourceCommit: 73091fbe590d96857d743eaeec5aee4a8101994f
+titwe: inset-inwine-end
+swug: w-web/css/inset-inwine-end
+w-w10n:
+  s-souwcecommit: 73091fbe590d96857d743eaeec5aee4a8101994f
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`inset-inline-end`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素における行末からの論理的な内部位置を定義し、要素の書字方向やテキストの向きに従って物理的なオフセットに対応付けられます。 {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}} のいずれかのプロパティに、 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値に従って対応します。
+**`inset-inwine-end`** は [css](/ja/docs/web/css) のプロパティで、要素における行末からの論理的な内部位置を定義し、要素の書字方向やテキストの向きに従って物理的なオフセットに対応付けられます。 {{cssxwef("top")}}, 🥺 {{cssxwef("wight")}}, {{cssxwef("bottom")}}, o.O {{cssxwef("weft")}} のいずれかのプロパティに、 {{cssxwef("wwiting-mode")}}, {{cssxwef("diwection")}}, /(^•ω•^) {{cssxwef("text-owientation")}} で定義された値に従って対応します。
 
-{{InteractiveExample("CSS Demo: inset-inline-end")}}
+{{intewactiveexampwe("css d-demo: inset-inwine-end")}}
 
-```css interactive-example-choice
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+w-wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-writing-mode: vertical-rl;
+```css i-intewactive-exampwe-choice
+w-wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-writing-mode: horizontal-tb;
-direction: rtl;
+```css intewactive-exampwe-choice
+wwiting-mode: howizontaw-tb;
+d-diwection: wtw;
 ```
 
-```css interactive-example-choice
-writing-mode: vertical-lr;
+```css intewactive-exampwe-choice
+wwiting-mode: v-vewticaw-ww;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="example-container" id="example-element">
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div cwass="exampwe-containew" id="exampwe-ewement">
     <div id="abspos">
-      I am absolutely positioned with inset-inline-end: 50px
+      i-i am absowutewy positioned w-with inset-inwine-end: 50px
     </div>
     <p>
-      As much mud in the streets as if the waters had but newly retired from the
-      face of the earth, and it would not be wonderful to meet a Megalosaurus,
-      forty feet long or so, waddling like an elephantine lizard up Holborn
-      Hill.
+      a-as much mud in the stweets as if the watews had but nyewwy wetiwed fwom t-the
+      face of the eawth, nyaa~~ and it wouwd nyot be wondewfuw to meet a megawosauwus, nyaa~~
+      f-fowty feet wong ow so, :3 w-waddwing wike a-an ewephantine wizawd u-up howbown
+      h-hiww. 😳😳😳
     </p>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 0.75em solid;
-  padding: 0.75em;
-  position: relative;
-  width: 100%;
+```css intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 0.75em sowid;
+  p-padding: 0.75em;
+  position: wewative;
+  w-width: 100%;
   min-height: 200px;
-  unicode-bidi: bidi-override;
+  unicode-bidi: bidi-ovewwide;
 }
 
 #abspos {
-  background-color: yellow;
-  color: black;
-  border: 3px solid red;
-  position: absolute;
-  inset-inline-end: 50px;
-  inline-size: 140px;
-  min-block-size: 80px;
+  backgwound-cowow: yewwow;
+  cowow: bwack;
+  bowdew: 3px s-sowid wed;
+  position: absowute;
+  i-inset-inwine-end: 50px;
+  i-inwine-size: 140px;
+  m-min-bwock-size: 80px;
 }
 ```
 
 ## 構文
 
 ```css
-/* <length> 値 */
-inset-inline-end: 3px;
-inset-inline-end: 2.4em;
+/* <wength> 値 */
+inset-inwine-end: 3px;
+inset-inwine-end: 2.4em;
 
-/* 包含ブロックの幅または高さに対する <percentage> 値 */
-inset-inline-end: 10%;
+/* 包含ブロックの幅または高さに対する <pewcentage> 値 */
+inset-inwine-end: 10%;
 
 /* キーワード値 */
-inset-inline-end: auto;
+i-inset-inwine-end: a-auto;
 
 /* グローバル値 */
-inset-inline-end: inherit;
-inset-inline-end: initial;
-inset-inline-end: revert;
-inset-inline-end: revert-layer;
-inset-inline-end: unset;
+inset-inwine-end: i-inhewit;
+i-inset-inwine-end: initiaw;
+i-inset-inwine-end: wevewt;
+inset-inwine-end: w-wevewt-wayew;
+inset-inwine-end: unset;
 ```
 
-{{cssxref("inset-inline-start")}} と `inset-inline-end` の一括指定は {{cssxref("inset-inline")}} です。
+{{cssxwef("inset-inwine-stawt")}} と `inset-inwine-end` の一括指定は {{cssxwef("inset-inwine")}} です。
 
 ### 値
 
-`inset-inline-end` プロパティは {{cssxref("left")}} プロパティと同じ値を取ります。
+`inset-inwine-end` プロパティは {{cssxwef("weft")}} プロパティと同じ値を取ります。
 
 ## 公式定義
 
@@ -104,45 +104,45 @@ inset-inline-end: unset;
 
 ### インライン方向の末尾のオフセットの設定
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <div>
-  <p class="exampleText">テキストの例</p>
+  <p cwass="exampwetext">テキストの例</p>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 div {
-  background-color: yellow;
+  b-backgwound-cowow: y-yewwow;
   width: 120px;
   height: 120px;
 }
 
-.exampleText {
-  writing-mode: vertical-rl;
-  position: relative;
-  inset-inline-end: 20px;
-  background-color: #c8c800;
+.exampwetext {
+  wwiting-mode: vewticaw-ww;
+  position: wewative;
+  inset-inwine-end: 20px;
+  backgwound-cowow: #c8c800;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("インライン方向の末尾のオフセットの設定", 140, 140)}}
+{{embedwivesampwe("インライン方向の末尾のオフセットの設定", (˘ω˘) 140, 140)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 内部位置を定義する他のプロパティ: {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}
-- 対応する物理的プロパティ: {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}}
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- 内部位置を定義する他のプロパティ: {{cssxwef("inset-bwock-stawt")}}, ^^ {{cssxwef("inset-bwock-end")}}, :3 {{cssxwef("inset-inwine-stawt")}}
+- 対応する物理的プロパティ: {{cssxwef("top")}}, -.- {{cssxwef("wight")}}, 😳 {{cssxwef("bottom")}}, mya {{cssxwef("weft")}}
+- {{cssxwef("wwiting-mode")}}, (˘ω˘) {{cssxwef("diwection")}}, >_< {{cssxwef("text-owientation")}}

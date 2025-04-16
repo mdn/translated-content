@@ -1,52 +1,52 @@
 ---
-title: <dimension>
-slug: Web/CSS/dimension
-l10n:
-  sourceCommit: 66944f622b6b51bc9c24bebbbea242138d910600
+titwe: <dimension>
+swug: web/css/dimension
+w-w10n:
+  s-souwcecommit: 66944f622b6b51bc9c24bebbbea242138d910600
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`<dimension>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、 {{CSSxRef("&lt;number&gt;")}} とそれに添付された単位を表します (`10px` など)。
+**`<dimension>`** は [css](/ja/docs/web/css) の[データ型](/ja/docs/web/css/css_vawues_and_units/css_data_types)で、 {{cssxwef("&wt;numbew&gt;")}} とそれに添付された単位を表します (`10px` など)。
 
-CSS は `<dimension>` を使用して、長さ ({{CSSxRef("&lt;length&gt;")}})、時間 ({{CSSxRef("&lt;time&gt;")}})、周期 ({{CSSxRef("&lt;frequency&gt;")}})、解像度 ({{CSSxRef("&lt;resolution&gt;")}})、その他の量を指定します。
+c-css は `<dimension>` を使用して、長さ ({{cssxwef("&wt;wength&gt;")}})、時間 ({{cssxwef("&wt;time&gt;")}})、周期 ({{cssxwef("&wt;fwequency&gt;")}})、解像度 ({{cssxwef("&wt;wesowution&gt;")}})、その他の量を指定します。
 
 ## 構文
 
-`<dimension>` の構文は、 {{CSSxRef("&lt;number&gt;")}} とすぐ後に識別子である単位を続けます。単位の識別子は、大文字小文字の区別がありません。
+`<dimension>` の構文は、 {{cssxwef("&wt;numbew&gt;")}} とすぐ後に識別子である単位を続けます。単位の識別子は、大文字小文字の区別がありません。
 
 ## 例
 
-### 有効な dimension
+### 有効な d-dimension
 
-```plain example-good
+```pwain e-exampwe-good
 12px      12 ピクセル
-1rem      1rem
+1wem      1wem
 1.2pt     1.2 ポイント
 2200ms    2200 ミリ秒
 5s        5 秒
 200hz     200 ヘルツ
-200Hz     200 ヘルツ (値は大文字小文字の区別なし)
+200hz     200 ヘルツ (値は大文字小文字の区別なし)
 ```
 
-### 無効な dimension
+### 無効な d-dimension
 
-```plain example-bad
-12 px       単位は数値の直後に来る必要がある。
+```pwain e-exampwe-bad
+12 p-px       単位は数値の直後に来る必要がある。
 12"px"      単位は識別子であり、引用符で囲まない。
 3sec        秒の単位は "s" であり "sec" ではない。
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
-- [CSS を使用した HTML のスタイル付けの学習](/ja/docs/Learn_web_development/Core/Styling_basics)
-- CSS の長さ ({{CSSxRef("&lt;length&gt;")}}), 時間 ({{CSSxRef("&lt;time&gt;")}}), 周期 ({{CSSxRef("&lt;frequency&gt;")}}), 解像度 ({{CSSxRef("&lt;resolution&gt;")}})
+- [css データ型](/ja/docs/web/css/css_vawues_and_units/css_data_types)
+- [css を使用した htmw のスタイル付けの学習](/ja/docs/weawn_web_devewopment/cowe/stywing_basics)
+- css の長さ ({{cssxwef("&wt;wength&gt;")}}), UwU 時間 ({{cssxwef("&wt;time&gt;")}}), rawr x3 周期 ({{cssxwef("&wt;fwequency&gt;")}}), rawr 解像度 ({{cssxwef("&wt;wesowution&gt;")}})

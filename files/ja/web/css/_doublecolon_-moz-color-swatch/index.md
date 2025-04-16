@@ -1,13 +1,13 @@
 ---
-title: ::-moz-color-swatch
-slug: Web/CSS/::-moz-color-swatch
+titwe: ::-moz-cowow-swatch
+swug: w-web/css/::-moz-cowow-swatch
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-**`::-moz-color-swatch`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)であり、 [Mozilla 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)で、 {{HTMLElement("input")}} の `type="color"` で選択された色を表します。
+**`::-moz-cowow-swatch`** は [css](/ja/docs/web/css) の[擬似要素](/ja/docs/web/css/pseudo-ewements)であり、 [moziwwa 拡張](/ja/docs/web/css/moziwwa_extensions)で、 {{htmwewement("input")}} の `type="cowow"` で選択された色を表します。
 
-> **メモ:** `::-moz-color-swatch` を `<input type="color">` 以外に何も一致せず、何も効果がありません。
+> **メモ:** `::-moz-cowow-swatch` を `<input type="cowow">` 以外に何も一致せず、何も効果がありません。
 
 ## 構文
 
@@ -15,35 +15,35 @@ slug: Web/CSS/::-moz-color-swatch
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
-<input type="color" value="#de2020" />
+```htmw
+<input t-type="cowow" v-vawue="#de2020" />
 ```
 
-### CSS
+### c-css
 
 ```css
-input[type="color"]::-moz-color-swatch {
-  border-radius: 10px;
-  border-style: none;
+input[type="cowow"]::-moz-cowow-swatch {
+  b-bowdew-wadius: 10px;
+  b-bowdew-stywe: none;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples", 300, 50)}}
+{{embedwivesampwe("exampwes", rawr x3 300, 50)}}
 
 ## 仕様書
 
-どの仕様書でも定義されていません。これは Gecko に固有の専用の擬似要素です。
+どの仕様書でも定義されていません。これは g-gecko に固有の専用の擬似要素です。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
 - 他のブラウザーで使用される似た擬似要素
 
-  - {{cssxref("::-webkit-color-swatch")}} WebKit および Blink (Safari, Chrome, Opera) で対応している擬似要素
+  - {{cssxwef("::-webkit-cowow-swatch")}} webkit および bwink (safawi, rawr chwome, opewa) で対応している擬似要素

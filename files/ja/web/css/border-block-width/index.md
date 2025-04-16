@@ -1,70 +1,70 @@
 ---
-title: border-block-width
-slug: Web/CSS/border-block-width
+titwe: bowdew-bwock-width
+swug: w-web/css/bowdew-bwock-width
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`border-block-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なブロック方向の境界の幅を定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界の幅に対応づけられます。これは {{cssxref("border-top-width")}} と {{cssxref("border-bottom-width")}}、または {{cssxref("border-left-width")}} と {{cssxref("border-right-width")}} のどちらかに対応し、どちらに対応するかは {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値によって決まります。
+**`bowdew-bwock-width`** は [css](/ja/docs/web/css) のプロパティで、要素の論理的なブロック方向の境界の幅を定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界の幅に対応づけられます。これは {{cssxwef("bowdew-top-width")}} と {{cssxwef("bowdew-bottom-width")}}、または {{cssxwef("bowdew-weft-width")}} と {{cssxwef("bowdew-wight-width")}} のどちらかに対応し、どちらに対応するかは {{cssxwef("wwiting-mode")}}, 🥺 {{cssxwef("diwection")}}, >_< {{cssxwef("text-owientation")}} で定義された値によって決まります。
 
-{{InteractiveExample("CSS Demo: border-block-width")}}
+{{intewactiveexampwe("css d-demo: bowdew-bwock-width")}}
 
-```css interactive-example-choice
-border-block-width: thick;
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+b-bowdew-bwock-width: t-thick;
+wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-border-block-width: thick;
-writing-mode: vertical-rl;
+```css i-intewactive-exampwe-choice
+bowdew-bwock-width: t-thick;
+wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-border-block-width: 4px;
-writing-mode: horizontal-tb;
-direction: rtl;
+```css intewactive-exampwe-choice
+bowdew-bwock-width: 4px;
+wwiting-mode: h-howizontaw-tb;
+diwection: wtw;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    this is a box with a bowdew awound it. >_<
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: palegreen;
-  color: #000;
-  border: 0 solid crimson;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: p-pawegween;
+  c-cowow: #000;
+  bowdew: 0 sowid cwimson;
   padding: 0.75em;
   width: 80%;
   height: 100px;
-  unicode-bidi: bidi-override;
+  u-unicode-bidi: bidi-ovewwide;
 }
 ```
 
-他の方向の境界の幅は {{cssxref("border-inline-width")}} で設定でき、これは {{cssxref("border-inline-start-width")}} および {{cssxref("border-inline-end-width")}} を設定します。
+他の方向の境界の幅は {{cssxwef("bowdew-inwine-width")}} で設定でき、これは {{cssxwef("bowdew-inwine-stawt-width")}} および {{cssxwef("bowdew-inwine-end-width")}} を設定します。
 
 ## 構文
 
 ```css
-/* <'border-width'> 値 */
-border-block-width: 5px;
-border-block-width: thick;
+/* <'bowdew-width'> 値 */
+bowdew-bwock-width: 5px;
+bowdew-bwock-width: thick;
 
 /* グローバル値 */
-border-block-width: inherit;
-border-block-width: initial;
-border-block-width: revert;
-border-block-width: unset;
+b-bowdew-bwock-width: inhewit;
+bowdew-bwock-width: i-initiaw;
+b-bowdew-bwock-width: w-wevewt;
+b-bowdew-bwock-width: unset;
 ```
 
 ### 値
 
-- `<'border-width'>`
-  - : 境界の幅です。 {{cssxref("border-width")}} を参照してください。
+- `<'bowdew-width'>`
+  - : 境界の幅です。 {{cssxwef("bowdew-width")}} を参照してください。
 
 ## 公式定義
 
@@ -76,45 +76,45 @@ border-block-width: unset;
 
 ## 例
 
-<h3 id="Border_width_with_vertical_text">縦書きテキストの境界の幅</h3>
+<h3 id="bowdew_width_with_vewticaw_text">縦書きテキストの境界の幅</h3>
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <div>
-  <p class="exampleText">Example text</p>
+  <p cwass="exampwetext">exampwe text</p>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-div {
-  background-color: yellow;
+d-div {
+  backgwound-cowow: yewwow;
   width: 120px;
   height: 120px;
 }
 
-.exampleText {
-  writing-mode: vertical-lr;
-  border: 1px solid blue;
-  border-block-width: 5px;
+.exampwetext {
+  wwiting-mode: vewticaw-ww;
+  b-bowdew: 1px sowid bwue;
+  bowdew-bwock-width: 5px;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Border_width_with_vertical_text", 140, 140)}}
+{{embedwivesampwe("bowdew_width_with_vewticaw_text", (⑅˘꒳˘) 140, /(^•ω•^) 140)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このプロパティは {{cssxref("border-top-width")}}, {{cssxref("border-right-width")}}, {{cssxref("border-bottom-width")}}, {{cssxref("border-left-width")}} のうちの 1 つに対応します
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- このプロパティは {{cssxwef("bowdew-top-width")}}, rawr x3 {{cssxwef("bowdew-wight-width")}}, (U ﹏ U) {{cssxwef("bowdew-bottom-width")}}, (U ﹏ U) {{cssxwef("bowdew-weft-width")}} のうちの 1 つに対応します
+- {{cssxwef("wwiting-mode")}}, (⑅˘꒳˘) {{cssxwef("diwection")}}, òωó {{cssxwef("text-owientation")}}

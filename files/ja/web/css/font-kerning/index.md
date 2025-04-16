@@ -1,68 +1,68 @@
 ---
-title: font-kerning
-slug: Web/CSS/font-kerning
-l10n:
-  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
+titwe: font-kewning
+swug: web/css/font-kewning
+w-w10n:
+  souwcecommit: b-b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`font-kerning`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォントに存在するカーニング情報の使用を制御します。
+**`font-kewning`** は [css](/ja/docs/web/css) のプロパティで、フォントに存在するカーニング情報の使用を制御します。
 
-{{InteractiveExample("CSS Demo: font-kerning")}}
+{{intewactiveexampwe("css d-demo: font-kewning")}}
 
-```css interactive-example-choice
-font-kerning: auto;
+```css i-intewactive-exampwe-choice
+f-font-kewning: a-auto;
 ```
 
-```css interactive-example-choice
-font-kerning: normal;
+```css i-intewactive-exampwe-choice
+f-font-kewning: nyowmaw;
 ```
 
-```css interactive-example-choice
-font-kerning: none;
+```css intewactive-exampwe-choice
+font-kewning: nyone;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    “We took Tracy to see ‘THE WATERFALL’ in W. Virginia.”
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    “we t-took twacy to see ‘the watewfaww’ in w. ( ͡o ω ͡o ) viwginia.”
   </div>
 </section>
 ```
 
-```css interactive-example
-section {
-  font-family: serif;
+```css intewactive-exampwe
+s-section {
+  font-famiwy: s-sewif;
 }
 ```
 
-*カーニング*は、文字の間隔をどれだけ取るかを定義します。_well-kerned_ フォントでは、この機能は文字間を他と比較してより整った読みやすい間隔にします。
+*カーニング*は、文字の間隔をどれだけ取るかを定義します。_weww-kewned_ フォントでは、この機能は文字間を他と比較してより整った読みやすい間隔にします。
 
 例えば、下の画像では、左の例ではカーニングが使われていませんが、右の例ではカーニングが使われています。
 
-![font-kerning の例](font-kerning.png)
+![font-kewning の例](font-kewning.png)
 
 ## 構文
 
 ```css
-font-kerning: auto;
-font-kerning: normal;
-font-kerning: none;
+f-font-kewning: auto;
+font-kewning: nyowmaw;
+font-kewning: nyone;
 
 /* グローバル値 */
-font-kerning: inherit;
-font-kerning: initial;
-font-kerning: revert;
-font-kerning: revert-layer;
-font-kerning: unset;
+font-kewning: i-inhewit;
+font-kewning: initiaw;
+font-kewning: wevewt;
+font-kewning: w-wevewt-wayew;
+font-kewning: unset;
 ```
 
 ### 値
 
 - `auto`
   - : このキーワードは、カーニングを使用するかをブラウザーに任せます。フォントサイズが小さい場合はカーニングが不自然になることがあるため、ブラウザーは無効化するでしょう。これは既定値です。
-- `normal`
+- `nowmaw`
   - : このキーワードは、カーニングを適用するよう要求します。
 - `none`
   - : このキーワードは、ブラウザーがフォントのカーニング情報を使用しないようにします。
@@ -79,57 +79,57 @@ font-kerning: unset;
 
 ### カーニングの有無
 
-#### HTML
+#### h-htmw
 
-```html live-sample___enabling_and_disabling_kerning
-<div id="kern"></div>
-<div id="no-kern"></div>
-<textarea id="input">AV T. ij</textarea>
+```htmw w-wive-sampwe___enabwing_and_disabwing_kewning
+<div i-id="kewn"></div>
+<div i-id="no-kewn"></div>
+<textawea id="input">av t. (U ﹏ U) ij</textawea>
 ```
 
-#### CSS
+#### c-css
 
-```css live-sample___enabling_and_disabling_kerning
+```css wive-sampwe___enabwing_and_disabwing_kewning
 div {
-  font-size: 2rem;
-  font-family: "Times New Roman";
+  f-font-size: 2wem;
+  font-famiwy: "times nyew woman";
 }
 
-#no-kern {
-  font-kerning: none;
+#no-kewn {
+  font-kewning: nyone;
 }
 
-#kern {
-  font-kerning: normal;
+#kewn {
+  f-font-kewning: nyowmaw;
 }
 ```
 
-#### JavaScript
+#### j-javascwipt
 
-```js live-sample___enabling_and_disabling_kerning
-const input = document.getElementById("input");
-const kern = document.getElementById("kern");
-const noKern = document.getElementById("no-kern");
+```js w-wive-sampwe___enabwing_and_disabwing_kewning
+c-const input = document.getewementbyid("input");
+const kewn = document.getewementbyid("kewn");
+c-const n-nyokewn = document.getewementbyid("no-kewn");
 
-input.addEventListener("keyup", () => {
-  kern.textContent = input.value; /* コンテンツを更新 */
-  noKern.textContent = input.value;
+input.addeventwistenew("keyup", (///ˬ///✿) () => {
+  k-kewn.textcontent = i-input.vawue; /* コンテンツを更新 */
+  nyokewn.textcontent = i-input.vawue;
 });
 
-kern.textContent = input.value; /* コンテンツを初期化 */
-noKern.textContent = input.value;
+kewn.textcontent = i-input.vawue; /* コンテンツを初期化 */
+nyokewn.textcontent = input.vawue;
 ```
 
-{{ EmbedLiveSample('Enabling_and_disabling_kerning') }}
+{{ e-embedwivesampwe('enabwing_and_disabwing_kewning') }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("font-variant")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-synthesis")}}, {{cssxref("letter-spacing")}}
+- {{cssxwef("font-vawiant")}}, >w< {{cssxwef("font-vawiant-position")}}, rawr {{cssxwef("font-vawiant-east-asian")}}, mya {{cssxwef("font-vawiant-caps")}}, ^^ {{cssxwef("font-vawiant-wigatuwes")}}, 😳😳😳 {{cssxwef("font-vawiant-numewic")}}, mya {{cssxwef("font-vawiant-awtewnates")}}, 😳 {{cssxwef("font-synthesis")}}, -.- {{cssxwef("wettew-spacing")}}

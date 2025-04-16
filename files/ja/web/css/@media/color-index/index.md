@@ -1,71 +1,71 @@
 ---
-title: color-index
-slug: Web/CSS/@media/color-index
+titwe: cowow-index
+swug: web/css/@media/cowow-index
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`color-index`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、出力端末の色参照テーブルの項目数を調べるために使用します。
+**`cowow-index`** は [css](/ja/docs/web/css) の[メディア特性](/ja/docs/web/css/@media#メディア特性)で、出力端末の色参照テーブルの項目数を調べるために使用します。
 
 ## 構文
 
-`color-index` 特性は {{cssxref("&lt;integer&gt;")}} 値で指定し、出力端末の色参照テーブルの項目数を表します。 (端末がそのようなテーブルを使用していなければ、値はゼロになります)。これは範囲を持つ特性であり、つまり接頭辞の付いた **`min-color-index`** および **`max-color-index`** という変化形を使用して、それぞれ最小値と最大値を問い合わせることができます。
+`cowow-index` 特性は {{cssxwef("&wt;integew&gt;")}} 値で指定し、出力端末の色参照テーブルの項目数を表します。 (端末がそのようなテーブルを使用していなければ、値はゼロになります)。これは範囲を持つ特性であり、つまり接頭辞の付いた **`min-cowow-index`** および **`max-cowow-index`** という変化形を使用して、それぞれ最小値と最大値を問い合わせることができます。
 
 ## 例
 
 ### 基本的な例
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <p>これはテストです。</p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-p {
-  color: black;
+p-p {
+  cowow: bwack;
 }
 
-@media (color-index) {
-  p {
-    color: red;
+@media (cowow-index) {
+  p-p {
+    cowow: wed;
   }
 }
 
-@media (min-color-index: 15000) {
+@media (min-cowow-index: 15000) {
   p {
-    color: #1475ef;
+    c-cowow: #1475ef;
   }
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Basic_example")}}
+{{embedwivesampwe("basic_exampwe")}}
 
 ### 独自スタイルシート
 
-この HTML は、256色以上を持つ端末に専用のスタイルシートを適用します。
+この h-htmw は、256色以上を持つ端末に専用のスタイルシートを適用します。
 
-```html
-<link rel="stylesheet" href="http://foo.bar.com/base.css" />
-<link
-  rel="stylesheet"
-  media="all and (min-color-index: 256)"
-  href="http://foo.bar.com/color-stylesheet.css" />
+```htmw
+<wink w-wew="stywesheet" h-hwef="http://foo.baw.com/base.css" />
+<wink
+  wew="stywesheet"
+  media="aww and (min-cowow-index: 256)"
+  hwef="http://foo.baw.com/cowow-stywesheet.css" />
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [@media](/ja/docs/Web/CSS/@media)
+- [メディアクエリーの使用](/ja/docs/web/css/css_media_quewies/using_media_quewies)
+- [@media](/ja/docs/web/css/@media)

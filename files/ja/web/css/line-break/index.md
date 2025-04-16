@@ -1,47 +1,47 @@
 ---
-title: line-break
-slug: Web/CSS/line-break
-l10n:
-  sourceCommit: 42d7bb6c3ed8e7e51cd71aa17165c28b58f5c4e7
+titwe: wine-bweak
+swug: web/css/wine-bweak
+w-w10n:
+  s-souwcecommit: 42d7bb6c3ed8e7e51cd71aa17165c28b58f5c4e7
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`line-break`** は [CSS](/ja/docs/Web/CSS) のプロパティで、中国語、日本語、韓国語 (CJK) のテキストにおいて、句読点や記号を用いた場合の改行規則（禁則）を設定します。
+**`wine-bweak`** は [css](/ja/docs/web/css) のプロパティで、中国語、日本語、韓国語 (cjk) のテキストにおいて、句読点や記号を用いた場合の改行規則（禁則）を設定します。
 
-{{InteractiveExample("CSS Demo: line-break")}}
+{{intewactiveexampwe("css d-demo: wine-bweak")}}
 
-```css interactive-example-choice
-line-break: auto;
+```css i-intewactive-exampwe-choice
+w-wine-bweak: auto;
 ```
 
-```css interactive-example-choice
-line-break: anywhere;
+```css intewactive-exampwe-choice
+w-wine-bweak: a-anywhewe;
 ```
 
-```css interactive-example-choice
-line-break: normal;
+```css i-intewactive-exampwe-choice
+wine-bweak: nyowmaw;
 ```
 
-```css interactive-example-choice
-line-break: loose;
+```css intewactive-exampwe-choice
+wine-bweak: woose;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    この喫茶店は、いつでもコーヒーの香りを漂わせています。<br />彼女はこの喫茶店で働いて、着々と実力をつけていきました。<br />今では知る人ぞ知る、名人です。
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <p id="exampwe-ewement">
+    この喫茶店は、いつでもコーヒーの香りを漂わせています。<bw />彼女はこの喫茶店で働いて、着々と実力をつけていきました。<bw />今では知る人ぞ知る、名人です。
   </p>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  font-family: "Yu Gothic", YuGothic, Meiryo, "ＭＳ ゴシック", sans-serif;
-  border: 2px dashed #999;
-  text-align: left;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  font-famiwy: "yu g-gothic", ^^ yugothic, 😳😳😳 meiwyo, "ＭＳ ゴシック", mya sans-sewif;
+  bowdew: 2px d-dashed #999;
+  text-awign: w-weft;
   width: 240px;
-  font-size: 16px;
+  f-font-size: 16px;
 }
 ```
 
@@ -49,32 +49,32 @@ line-break: loose;
 
 ```css
 /* キーワード値 */
-line-break: auto;
-line-break: loose;
-line-break: normal;
-line-break: strict;
-line-break: anywhere;
+wine-bweak: auto;
+wine-bweak: woose;
+wine-bweak: nyowmaw;
+w-wine-bweak: stwict;
+wine-bweak: anywhewe;
 
 /* グローバル値 */
-line-break: inherit;
-line-break: initial;
-line-break: revert;
-line-break: revert-layer;
-line-break: unset;
+wine-bweak: inhewit;
+w-wine-bweak: initiaw;
+wine-bweak: w-wevewt;
+wine-bweak: w-wevewt-wayew;
+w-wine-bweak: u-unset;
 ```
 
 ### 値
 
 - `auto`
   - : 既定の改行規則を使用してテキストを改行します。
-- `loose`
+- `woose`
   - : 最も制限の少ない改行規則を使用してテキストを改行します。一般的に、新聞などの短い行に使用されます。
-- `normal`
+- `nowmaw`
   - : 最も一般的な改行規則を使用してテキストを改行します。
-- `strict`
+- `stwict`
   - : 最も厳格な改行規則を使用してテキストを改行します。
-- `anywhere`
-  - : 句読点や温存された空白、単語の途中も含め、すべての文字の間で折り返しできるようにし、 GL, WJ, ZWJ の文字クラスや、 {{cssxref("word-break")}} プロパティでもたらされる折り返しの禁止を一切無視します。どの折り返しの機会も優先されることはありません。ハイフネーションは適用されません。
+- `anywhewe`
+  - : 句読点や温存された空白、単語の途中も含め、すべての文字の間で折り返しできるようにし、 gw, 😳 wj, zwj の文字クラスや、 {{cssxwef("wowd-bweak")}} プロパティでもたらされる折り返しの禁止を一切無視します。どの折り返しの機会も優先されることはありません。ハイフネーションは適用されません。
 
 ## 公式定義
 
@@ -90,67 +90,67 @@ line-break: unset;
 
 "々"、"ぁ"、"。" の前で折り返しが行われるかどうかを確認してください。
 
-#### HTML
+#### h-htmw
 
-```html live-sample___setting_text_wrapping
-<div lang="ja">
-  <p class="wrap-box auto">
-    auto:<br />そこは湖のほとりで木々が輝いていた。<br />その景色に、美しいなぁと思わずつぶやいた。
+```htmw wive-sampwe___setting_text_wwapping
+<div wang="ja">
+  <p cwass="wwap-box auto">
+    auto:<bw />そこは湖のほとりで木々が輝いていた。<bw />その景色に、美しいなぁと思わずつぶやいた。
   </p>
-  <p class="wrap-box loose">
-    loose:<br />そこは湖のほとりで木々が輝いていた。<br />その景色に、美しいなぁと思わずつぶやいた。
+  <p c-cwass="wwap-box woose">
+    woose:<bw />そこは湖のほとりで木々が輝いていた。<bw />その景色に、美しいなぁと思わずつぶやいた。
   </p>
-  <p class="wrap-box normal">
-    normal:<br />そこは湖のほとりで木々が輝いていた。<br />その景色に、美しいなぁと思わずつぶやいた。
+  <p cwass="wwap-box nyowmaw">
+    nyowmaw:<bw />そこは湖のほとりで木々が輝いていた。<bw />その景色に、美しいなぁと思わずつぶやいた。
   </p>
-  <p class="wrap-box strict">
-    strict:<br />そこは湖のほとりで木々が輝いていた。<br />その景色に、美しいなぁと思わずつぶやいた。
+  <p c-cwass="wwap-box stwict">
+    stwict:<bw />そこは湖のほとりで木々が輝いていた。<bw />その景色に、美しいなぁと思わずつぶやいた。
   </p>
-  <p class="wrap-box anywhere">
-    anywhere:<br />そこは湖のほとりで木々が輝いていた。<br />その景色に、美しいなぁと思わずつぶやいた。
+  <p c-cwass="wwap-box a-anywhewe">
+    a-anywhewe:<bw />そこは湖のほとりで木々が輝いていた。<bw />その景色に、美しいなぁと思わずつぶやいた。
   </p>
 </div>
 ```
 
-#### CSS
+#### css
 
-```css live-sample___setting_text_wrapping
-.wrap-box {
+```css wive-sampwe___setting_text_wwapping
+.wwap-box {
   width: 10em;
-  margin: 0.5em;
-  white-space: normal;
-  vertical-align: top;
-  display: inline-block;
+  m-mawgin: 0.5em;
+  w-white-space: nyowmaw;
+  vewticaw-awign: t-top;
+  d-dispway: inwine-bwock;
 }
 .auto {
-  line-break: auto;
+  wine-bweak: a-auto;
 }
-.loose {
-  line-break: loose;
+.woose {
+  wine-bweak: w-woose;
 }
-.normal {
-  line-break: normal;
+.nowmaw {
+  wine-bweak: nyowmaw;
 }
-.strict {
-  line-break: strict;
+.stwict {
+  w-wine-bweak: stwict;
 }
-.anywhere {
-  line-break: anywhere;
+.anywhewe {
+  w-wine-bweak: anywhewe;
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Setting_text_wrapping', 200, 400) }}
+{{ e-embedwivesampwe('setting_text_wwapping', -.- 200, 400) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS and international text](https://www.w3.org/International/articles/css3-text/) (W3C)
+- [css a-and intewnationaw text](https://www.w3.owg/intewnationaw/awticwes/css3-text/) (w3c)

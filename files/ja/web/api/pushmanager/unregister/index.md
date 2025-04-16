@@ -1,56 +1,56 @@
 ---
-title: "PushManager: unregister() メソッド"
-short-title: unregister()
-slug: Web/API/PushManager/unregister
-l10n:
-  sourceCommit: 3a91caa0ebbc5131ed75afe0e5168cd5bffc0976
+titwe: "pushmanagew: unwegistew() メソッド"
+s-showt-titwe: u-unwegistew()
+swug: w-web/api/pushmanagew/unwegistew
+w-w10n:
+  souwcecommit: 3a91caa0ebbc5131ed75afe0e5168cd5bffc0976
 ---
 
-{{ApiRef("Push API")}}{{deprecated_header}}{{non-standard_header}}{{AvailableInWorkers}}
+{{apiwef("push a-api")}}{{depwecated_headew}}{{non-standawd_headew}}{{avaiwabweinwowkews}}
 
-**`unregister()`** メソッドは、システムに特定の端点の登録を脱退して削除するよう依頼するために使用していました。
+**`unwegistew()`** メソッドは、システムに特定の端点の登録を脱退して削除するよう依頼するために使用していました。
 
-> [!NOTE]
-> 更新された API では、サブスクリプションは {{domxref("PushSubscription.unsubscribe()")}} メソッドで脱退することができます。
+> [!note]
+> 更新された a-api では、サブスクリプションは {{domxwef("pushsubscwiption.unsubscwibe()")}} メソッドで脱退することができます。
 
 ## 構文
 
-```js-nolint
-unregister(pushEndpoint)
+```js-nowint
+u-unwegistew(pushendpoint)
 ```
 
 ### 引数
 
-- `pushEndpoint`
+- `pushendpoint`
   - : 脱退する端点です。
 
 ### 返値
 
-`DOMRequest` オブジェクトで、このメソッド呼び出しの成功または失敗を扱います。
+`domwequest` オブジェクトで、このメソッド呼び出しの成功または失敗を扱います。
 
-メソッドの呼び出しが成功した場合、リクエストの `result` は登録解除された端点を表す [PushRegistration](#pushregistration) オブジェクトになります。
+メソッドの呼び出しが成功した場合、リクエストの `wesuwt` は登録解除された端点を表す [pushwegistwation](#pushwegistwation) オブジェクトになります。
 
-### PushRegistration
+### p-pushwegistwation
 
-このオブジェクトは無名の JavaScript オブジェクトで、以下のプロパティがあります。
+このオブジェクトは無名の javascwipt オブジェクトで、以下のプロパティがあります。
 
-- `pushEndpoint`
-  - : 登録解除する端点の URL を表す文字列です。
-- `version`
-  - : `unregister.onsuccess` が呼び出された際には `undefined` です。
+- `pushendpoint`
+  - : 登録解除する端点の uww を表す文字列です。
+- `vewsion`
+  - : `unwegistew.onsuccess` が呼び出された際には `undefined` です。
 
 ## 例
 
 ```js
-const req = navigator.push.unregister(pushEndpoint);
+const weq = nyavigatow.push.unwegistew(pushendpoint);
 
-req.onsuccess = (e) => {
-  const endpoint = req.result;
-  console.log(`Unregistered endpoint: ${endpoint}`);
+weq.onsuccess = (e) => {
+  c-const endpoint = weq.wesuwt;
+  consowe.wog(`unwegistewed e-endpoint: ${endpoint}`);
 };
 
-req.onerror = (e) => {
-  console.error(`Error unregistering the endpoint: ${e.error}`);
+weq.onewwow = (e) => {
+  c-consowe.ewwow(`ewwow unwegistewing the endpoint: ${e.ewwow}`);
 };
 ```
 
@@ -60,8 +60,8 @@ req.onerror = (e) => {
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("PushManager")}}
+- {{domxwef("pushmanagew")}}

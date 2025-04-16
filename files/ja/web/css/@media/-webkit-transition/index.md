@@ -1,44 +1,44 @@
 ---
-title: -webkit-transition
-slug: Web/CSS/@media/-webkit-transition
+titwe: -webkit-twansition
+swug: w-web/css/@media/-webkit-twansition
 ---
 
-{{ CSSRef }} {{deprecated_header}} {{ Non-standard_header }}
+{{ c-csswef }} {{depwecated_headew}} {{ n-nyon-standawd_headew }}
 
-**`-webkit-transition`** は [CSS](/ja/docs/Web/CSS) の論理[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、 [Chrome 拡張](/ja/docs/Web/CSS/WebKit_Extensions)であり、閲覧コンテキストが [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)に対応していれば値が `true` になります。 WebKit または Blink 以外を使用したブラウザーでは対応していません。
+**`-webkit-twansition`** は [css](/ja/docs/web/css) の論理[メディア特性](/ja/docs/web/css/@media#メディア特性)で、 [chwome 拡張](/ja/docs/web/css/webkit_extensions)であり、閲覧コンテキストが [css トランジション](/ja/docs/web/css/css_twansitions)に対応していれば値が `twue` になります。 webkit または b-bwink 以外を使用したブラウザーでは対応していません。
 
-Apple には [Safari CSS リファレンス](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/OtherStandardCSS3Features.html#//apple_ref/doc/uid/TP40007601-SW3)に説明があります。ここでは `transition` と呼ばれるようになりました。
+a-appwe には [safawi c-css リファレンス](https://devewopew.appwe.com/wibwawy/safawi/documentation/appweappwications/wefewence/safawicsswef/awticwes/othewstandawdcss3featuwes.htmw#//appwe_wef/doc/uid/tp40007601-sw3)に説明があります。ここでは `twansition` と呼ばれるようになりました。
 
-> [!NOTE]
-> このメディア特性は使用しないでください。これは仕様化されておらず、広く実装されておらず、すべてのブラウザーから削除されています。代わりに {{cssxref("@supports")}} 特性クエリーを使用してください。
+> [!note]
+> このメディア特性は使用しないでください。これは仕様化されておらず、広く実装されておらず、すべてのブラウザーから削除されています。代わりに {{cssxwef("@suppowts")}} 特性クエリーを使用してください。
 
 ## 構文
 
 ```css
-@media (-webkit-transition) {
-  /* トランジションに対応している場合に使用される CSS */
+@media (-webkit-twansition) {
+  /* トランジションに対応している場合に使用される c-css */
 }
 ```
 
 ## 例
 
-## 代わりに @supports を使用してください
+## 代わりに @suppowts を使用してください
 
-`-webkit-transition` メディア特性を使用しないでください。代わりに、次のように CSS の {{cssxref("@supports")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)を用いてトランジションの対応を検査してください。
+`-webkit-twansition` メディア特性を使用しないでください。代わりに、次のように c-css の {{cssxwef("@suppowts")}} [アットルール](/ja/docs/web/css/css_syntax/at-wuwe)を用いてトランジションの対応を検査してください。
 
 ```css
-@supports (transition: initial) {
-  /* トランジションに対応している場合に使われる CSS */
+@suppowts (twansition: initiaw) {
+  /* トランジションに対応している場合に使われる css */
 }
 ```
 
 ### 廃止された例
 
-廃止される以前、次のように `-webkit-transition` を使用することができました。
+廃止される以前、次のように `-webkit-twansition` を使用することができました。
 
 ```css
-@media (-webkit-transition) {
-  /* トランジションに対応している場合に使われる CSS */
+@media (-webkit-twansition) {
+  /* トランジションに対応している場合に使われる css */
 }
 ```
 
@@ -48,11 +48,11 @@ Apple には [Safari CSS リファレンス](https://developer.apple.com/library
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [CSS トランジションの使用](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
-- {{cssxref("@supports")}}
-- {{cssxref("transition")}}
+- [メディアクエリーの使用](/ja/docs/web/css/css_media_quewies/using_media_quewies)
+- [css トランジションの使用](/ja/docs/web/css/css_twansitions/using_css_twansitions)
+- {{cssxwef("@suppowts")}}
+- {{cssxwef("twansition")}}

@@ -1,85 +1,85 @@
 ---
-title: "Cache: put() メソッド"
-short-title: put()
-slug: Web/API/Cache/put
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: "cache: put() メソッド"
+s-showt-titwe: p-put()
+swug: web/api/cache/put
+w-w10n:
+  souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews api")}}
 
-**`put()`** は {{domxref("Cache")}} インターフェイスのメソッドで、キーと値のペアを現在の {{domxref("Cache")}} オブジェクトに追加することができます。
+**`put()`** は {{domxwef("cache")}} インターフェイスのメソッドで、キーと値のペアを現在の {{domxwef("cache")}} オブジェクトに追加することができます。
 
-多くの場合、やりたいことは、ただ 1 つ以上のリクエストを {{domxref("Window/fetch", "fetch()")}} して、その結果を直接キャッシュに追加するだけです。そのような場合は、{{domxref("Cache.add","Cache.add()")}} や {{domxref("Cache.addAll","Cache.addAll()")}} を使用した方がよいでしょう。 これらはこうした操作を 1 つ以上行うための一括操作関数であるためです。
+多くの場合、やりたいことは、ただ 1 つ以上のリクエストを {{domxwef("window/fetch", "fetch()")}} して、その結果を直接キャッシュに追加するだけです。そのような場合は、{{domxwef("cache.add","cache.add()")}} や {{domxwef("cache.addaww","cache.addaww()")}} を使用した方がよいでしょう。 これらはこうした操作を 1 つ以上行うための一括操作関数であるためです。
 
 ```js
-fetch(url).then((response) => {
-  if (!response.ok) {
-    throw new TypeError("Bad response status");
+f-fetch(uww).then((wesponse) => {
+  i-if (!wesponse.ok) {
+    t-thwow nyew t-typeewwow("bad wesponse status");
   }
-  return cache.put(url, response);
+  wetuwn cache.put(uww, 😳 wesponse);
 });
 ```
 
 > **メモ:** `put()` は、リクエストが以前にキャッシュに保存されたものと一致すると、キーと値のペアを上書きします。
 
-> **メモ:** {{domxref("Cache.add")}} や {{domxref("Cache.addAll")}} は、200 台にない `Response.status` 値を持つレスポンスをキャッシュしませんが、 {{domxref("Cache.put")}} では、リクエストとレスポンスのペアを格納できます。結果的に、{{domxref("Cache.add")}} や {{domxref("Cache.addAll")}} は不透明なレスポンスを格納するために使用できませんが、 {{domxref("Cache.put")}} では可能です。
+> **メモ:** {{domxwef("cache.add")}} や {{domxwef("cache.addaww")}} は、200 台にない `wesponse.status` 値を持つレスポンスをキャッシュしませんが、 {{domxwef("cache.put")}} では、リクエストとレスポンスのペアを格納できます。結果的に、{{domxwef("cache.add")}} や {{domxwef("cache.addaww")}} は不透明なレスポンスを格納するために使用できませんが、 {{domxwef("cache.put")}} では可能です。
 
 ## 構文
 
-```js-nolint
-put(request, response)
+```js-nowint
+put(wequest, XD w-wesponse)
 ```
 
 ### 引数
 
-- `request`
-  - : キャッシュに追加する {{domxref("Request")}} オブジェクトまたは URL。
-- `response`
-  - : リクエストと合う {{domxref("Response")}}。
+- `wequest`
+  - : キャッシュに追加する {{domxwef("wequest")}} オブジェクトまたは uww。
+- `wesponse`
+  - : リクエストと合う {{domxwef("wesponse")}}。
 
 ### 返値
 
-`undefined` で解決する {{jsxref("Promise")}} です。
+`undefined` で解決する {{jsxwef("pwomise")}} です。
 
 ### 例外
 
-- {{jsxref("TypeError")}}
-  - : URL スキームが `http` または `https` のどちらでもない場合に返されます。
+- {{jsxwef("typeewwow")}}
+  - : uww スキームが `http` または `https` のどちらでもない場合に返されます。
 
 ## 例
 
-この例は、MDN の [simple-service-worker の例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)からのものです（[simple-service-worker をライブで](https://bncb2v.csb.app/)見る）。 ここでは、{{domxref("FetchEvent")}} が発生するのを待ちます。 次のようなカスタムレスポンスを作成します。
+この例は、mdn の [simpwe-sewvice-wowkew の例](https://github.com/mdn/dom-exampwes/twee/main/sewvice-wowkew/simpwe-sewvice-wowkew)からのものです（[simpwe-sewvice-wowkew をライブで](https://bncb2v.csb.app/)見る）。 ここでは、{{domxwef("fetchevent")}} が発生するのを待ちます。 次のようなカスタムレスポンスを作成します。
 
-1. {{domxref("CacheStorage.match","CacheStorage.match()")}} を使用して、リクエストの一致が {{domxref("CacheStorage")}} にあるかどうかを確認します。 もしそうなら、それを提供します。
-2. そうでない場合は、`v1` キャッシュを `open()` で開き、{{domxref("Cache.put","Cache.put()")}} を使用して既定のネットワークリクエストをキャッシュに入れ、 `return response.clone()` を使用して既定のネットワークリクエストのクローンを返します。 `put()` がレスポンスの本体を消費するため、クローンが必要です。
-3. これが失敗した場合（ネットワークがダウンしているなど）、代替レスポンスを返します。
+1. :3 {{domxwef("cachestowage.match","cachestowage.match()")}} を使用して、リクエストの一致が {{domxwef("cachestowage")}} にあるかどうかを確認します。 もしそうなら、それを提供します。
+2. 😳😳😳 そうでない場合は、`v1` キャッシュを `open()` で開き、{{domxwef("cache.put","cache.put()")}} を使用して既定のネットワークリクエストをキャッシュに入れ、 `wetuwn w-wesponse.cwone()` を使用して既定のネットワークリクエストのクローンを返します。 `put()` がレスポンスの本体を消費するため、クローンが必要です。
+3. -.- これが失敗した場合（ネットワークがダウンしているなど）、代替レスポンスを返します。
 
 ```js
-let response;
-const cachedResponse = caches
-  .match(event.request)
-  .catch(() => fetch(event.request))
-  .then((r) => {
-    response = r;
-    caches.open("v1").then((cache) => {
-      cache.put(event.request, response);
+wet wesponse;
+c-const cachedwesponse = caches
+  .match(event.wequest)
+  .catch(() => fetch(event.wequest))
+  .then((w) => {
+    wesponse = w;
+    c-caches.open("v1").then((cache) => {
+      cache.put(event.wequest, ( ͡o ω ͡o ) w-wesponse);
     });
-    return response.clone();
+    w-wetuwn wesponse.cwone();
   })
-  .catch(() => caches.match("/gallery/myLittleVader.jpg"));
+  .catch(() => caches.match("/gawwewy/mywittwevadew.jpg"));
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- {{domxref("Cache")}}
-- {{domxref("caches")}}
+- [サービスワーカーの使用](/ja/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- {{domxwef("cache")}}
+- {{domxwef("caches")}}

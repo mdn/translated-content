@@ -1,71 +1,71 @@
 ---
-title: scroll-padding-block-start
-slug: Web/CSS/scroll-padding-block-start
+titwe: scwoww-padding-bwock-stawt
+swug: web/css/scwoww-padding-bwock-stawt
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-`scroll-padding-block-start` プロパティは、スクロールポートの*最適表示領域*のブロック方向における先頭側のオフセットを定義します。ユーザーのビュー内でものを配置するためのターゲット領域として使用される領域です。これにより、他のコンテンツ (固定位置のツールバーやサイドバーなど) によって隠されているスクロールポートの領域を除外したり、単にターゲット要素とスクロールポートの端との間により多くの余裕を持たせたりすることができます。
+`scwoww-padding-bwock-stawt` プロパティは、スクロールポートの*最適表示領域*のブロック方向における先頭側のオフセットを定義します。ユーザーのビュー内でものを配置するためのターゲット領域として使用される領域です。これにより、他のコンテンツ (固定位置のツールバーやサイドバーなど) によって隠されているスクロールポートの領域を除外したり、単にターゲット要素とスクロールポートの端との間により多くの余裕を持たせたりすることができます。
 
-{{InteractiveExample("CSS Demo: scroll-padding-block-start")}}
+{{intewactiveexampwe("css d-demo: scwoww-padding-bwock-stawt")}}
 
-```css interactive-example-choice
-scroll-padding-block-start: 0;
+```css i-intewactive-exampwe-choice
+scwoww-padding-bwock-stawt: 0;
 ```
 
-```css interactive-example-choice
-scroll-padding-block-start: 20px;
+```css i-intewactive-exampwe-choice
+s-scwoww-padding-bwock-stawt: 20px;
 ```
 
-```css interactive-example-choice
-scroll-padding-block-start: 2em;
+```css i-intewactive-exampwe-choice
+s-scwoww-padding-bwock-stawt: 2em;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="scroller" id="example-element">
+```htmw i-intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="scwowwew" id="exampwe-ewement">
     <div>1</div>
     <div>2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div cwass="info">scwoww »</div>
 </section>
 ```
 
-```css interactive-example
-.default-example .info {
-  inline-size: 100%;
+```css intewactive-exampwe
+.defauwt-exampwe .info {
+  i-inwine-size: 100%;
   padding: 0.5em 0;
   font-size: 90%;
-  writing-mode: vertical-rl;
+  w-wwiting-mode: vewticaw-ww;
 }
 
-.scroller {
-  text-align: left;
+.scwowwew {
+  t-text-awign: weft;
   height: 250px;
   width: 270px;
-  overflow-y: scroll;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  border: 1px solid black;
-  scroll-snap-type: y mandatory;
+  ovewfwow-y: s-scwoww;
+  dispway: fwex;
+  fwex-diwection: c-cowumn;
+  b-box-sizing: bowdew-box;
+  bowdew: 1px sowid bwack;
+  scwoww-snap-type: y mandatowy;
 }
 
-.scroller > div {
-  flex: 0 0 250px;
-  background-color: rebeccapurple;
-  color: #fff;
-  font-size: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  scroll-snap-align: start;
+.scwowwew > d-div {
+  fwex: 0 0 250px;
+  backgwound-cowow: webeccapuwpwe;
+  cowow: #fff;
+  f-font-size: 30px;
+  dispway: f-fwex;
+  awign-items: c-centew;
+  j-justify-content: c-centew;
+  scwoww-snap-awign: stawt;
 }
 
-.scroller > div:nth-child(even) {
-  background-color: #fff;
-  color: rebeccapurple;
+.scwowwew > div:nth-chiwd(even) {
+  backgwound-cowow: #fff;
+  c-cowow: webeccapuwpwe;
 }
 ```
 
@@ -73,22 +73,22 @@ scroll-padding-block-start: 2em;
 
 ```css
 /* キーワード値 */
-scroll-padding-block-start: auto;
+scwoww-padding-bwock-stawt: a-auto;
 
-/* <length> 値 */
-scroll-padding-block-start: 10px;
-scroll-padding-block-start: 1em;
-scroll-padding-block-start: 10%;
+/* <wength> 値 */
+scwoww-padding-bwock-stawt: 10px;
+scwoww-padding-bwock-stawt: 1em;
+scwoww-padding-bwock-stawt: 10%;
 
 /* グローバル値 */
-scroll-padding-block-start: inherit;
-scroll-padding-block-start: initial;
-scroll-padding-block-start: unset;
+scwoww-padding-bwock-stawt: inhewit;
+scwoww-padding-bwock-stawt: i-initiaw;
+scwoww-padding-bwock-stawt: unset;
 ```
 
 ### 値
 
-- `<length-percentage>`
+- `<wength-pewcentage>`
   - : スクロールポートのブロック方向の先頭側からの内側のオフセットで、有効な長さまたはパーセント値です。
 - `auto`
   - : オフセットはユーザーエージェントが決定します。これは一般に 0px になりますが、ゼロ以外の値がもっと適切である場合をユーザーエージェントが検出して、他の値を採用することもできます。
@@ -103,13 +103,13 @@ scroll-padding-block-start: unset;
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [css スクロールスナップ](/ja/docs/web/css/css_scwoww_snap)
+- [weww-contwowwed s-scwowwing with css s-scwoww snap](https://web.dev/css-scwoww-snap/)

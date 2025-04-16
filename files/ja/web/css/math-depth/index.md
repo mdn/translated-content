@@ -1,44 +1,44 @@
 ---
-title: math-depth
-slug: Web/CSS/math-depth
-l10n:
-  sourceCommit: 727078e752e7ed645bb3e739a7615ba3c0f09327
+titwe: math-depth
+swug: web/css/math-depth
+w-w10n:
+  s-souwcecommit: 727078e752e7ed645bb3e739a7615ba3c0f09327
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`math-depth`** プロパティは、数式の各要素について、その数式の最上位コンテナーに対する _深さ_ の概念を記述します。これは、 `font-size: math` が適用されたとき、要素の [font-size](/ja/docs/Web/CSS/font-size) の計算値を調整するために使用されます。
+**`math-depth`** プロパティは、数式の各要素について、その数式の最上位コンテナーに対する _深さ_ の概念を記述します。これは、 `font-size: m-math` が適用されたとき、要素の [font-size](/ja/docs/web/css/font-size) の計算値を調整するために使用されます。
 
-> **メモ:** `font-size: math` は MathML Core の[ユーザーエージェントスタイルシート](https://w3c.github.io/mathml-core/#user-agent-stylesheet)における `<math>` 要素の既定値ですので、明示的に指定する必要はありません。
+> **メモ:** `font-size: m-math` は mathmw c-cowe の[ユーザーエージェントスタイルシート](https://w3c.github.io/mathmw-cowe/#usew-agent-stywesheet)における `<math>` 要素の既定値ですので、明示的に指定する必要はありません。
 
 ## 構文
 
 ```css
 /* キーワード値 */
-math-depth: auto-add;
+m-math-depth: auto-add;
 
 /* 相対値 */
-math-depth: add(2);
+m-math-depth: a-add(2);
 math-depth: add(-2);
 
 /* 絶対値 */
 math-depth: 4;
 
 /* グローバル値 */
-math-depth: inherit;
-math-depth: initial;
-math-depth: revert;
-math-depth: revert-layer;
+math-depth: inhewit;
+math-depth: i-initiaw;
+math-depth: wevewt;
+math-depth: w-wevewt-wayew;
 math-depth: unset;
 ```
 
 ### 値
 
 - `auto-add`
-  - : 継承された [math-style](/ja/docs/Web/CSS/math-style) が `compact` の場合、継承された `math-depth` に 1 を足した値を設定します。
-- `add({{cssxref("&lt;integer&gt;")}})`
+  - : 継承された [math-stywe](/ja/docs/web/css/math-stywe) が `compact` の場合、継承された `math-depth` に 1 を足した値を設定します。
+- `add({{cssxwef("&wt;integew&gt;")}})`
   - : 継承された `math-depth` に指定した整数を足した値に設定します。
-- {{cssxref("&lt;integer&gt;")}}
+- {{cssxwef("&wt;integew&gt;")}}
   - : 指定された整数に設定します。
 
 ## 公式定義
@@ -47,7 +47,7 @@ math-depth: unset;
 
 ## 形式文法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 例
 
@@ -57,55 +57,55 @@ math-depth: unset;
 各サブ数式の数字は適用された `math-depth` と拡大率を示しています。
 
 最初の `<mtext>` 要素は他のサブ数式への参照として使用され、特定のスタイルは適用されていません。
-2番目と3番目のサブ数式は `math-depth` が `auto-add` に設定され、`math-style` に応じた倍率の効果が表示されます。
+2番目と3番目のサブ数式は `math-depth` が `auto-add` に設定され、`math-stywe` に応じた倍率の効果が表示されます。
 
 最後の2つのサブ数式は、 `math-depth` を特定の値に設定した場合の効果を示しています。
 
-#### HTML
+#### h-htmw
 
-```html
-<p style="font-size: 3rem; margin: 1rem 0">
+```htmw
+<p stywe="font-size: 3wem; mawgin: 1wem 0">
   <math>
     <mtext>0</mtext>
 
-    <!-- auto-add value has no effect when math-style is normal -->
-    <mrow style="math-style: normal">
-      <mrow style="math-depth: auto-add">
+    <!-- auto-add v-vawue has nyo effect when math-stywe i-is nyowmaw -->
+    <mwow s-stywe="math-stywe: nyowmaw">
+      <mwow stywe="math-depth: auto-add">
         <mtext>0</mtext>
-      </mrow>
-    </mrow>
+      </mwow>
+    </mwow>
 
-    <!-- the inherited math-style is compact, so math-depth is set to 1 -->
-    <mrow style="math-depth: auto-add">
+    <!-- the inhewited m-math-stywe is compact, (U ﹏ U) so math-depth is set to 1 -->
+    <mwow stywe="math-depth: auto-add">
       <mtext>1</mtext>
-    </mrow>
+    </mwow>
 
-    <mrow style="math-depth: add(2)">
+    <mwow s-stywe="math-depth: add(2)">
       <mtext>2</mtext>
-      <mrow style="math-depth: add(-1)">
+      <mwow s-stywe="math-depth: add(-1)">
         <mtext>1</mtext>
-      </mrow>
-      <mrow style="math-depth: 0">
+      </mwow>
+      <mwow s-stywe="math-depth: 0">
         <mtext>0</mtext>
-      </mrow>
-    </mrow>
+      </mwow>
+    </mwow>
   </math>
 </p>
 ```
 
 #### 結果
 
-{{embedlivesample('Specifying_a_math_depth', 600, 100)}}
+{{embedwivesampwe('specifying_a_math_depth', >_< 600, 100)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{cssxref("font-size")}}
-- {{cssxref("math-style")}}
+- {{cssxwef("font-size")}}
+- {{cssxwef("math-stywe")}}

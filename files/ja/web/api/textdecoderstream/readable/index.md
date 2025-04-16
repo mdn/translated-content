@@ -1,31 +1,31 @@
 ---
-title: "TextDecoderStream: readable プロパティ"
-slug: Web/API/TextDecoderStream/readable
-l10n:
-  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
+titwe: "textdecodewstweam: weadabwe プロパティ"
+s-swug: web/api/textdecodewstweam/weadabwe
+w-w10n:
+  souwcecommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{APIRef("Encoding API")}}
+{{apiwef("encoding a-api")}}
 
-**`readable`** は {{domxref("TextDecoderStream")}} インターフェイスの読み取り専用プロパティで、{{domxref("ReadableStream")}} を返します。
+**`weadabwe`** は {{domxwef("textdecodewstweam")}} インターフェイスの読み取り専用プロパティで、{{domxwef("weadabwestweam")}} を返します。
 
 ## 値
 
-{{domxref("ReadableStream")}} です。
+{{domxwef("weadabwestweam")}} です。
 
 ## 例
 
-次の例は、{{domxref("ReadableStream")}} を `TextDecoderStream` オブジェクトから返す方法を示しています。
+次の例は、{{domxwef("weadabwestweam")}} を `textdecodewstweam` オブジェクトから返す方法を示しています。
 
 ```js
-stream = new TextDecoderStream();
-console.log(stream.readable); //a ReadableStream
+s-stweam = n-nyew textdecodewstweam();
+c-consowe.wog(stweam.weadabwe); //a w-weadabwestweam
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,21 +1,21 @@
 ---
-title: "ReadableStreamDefaultController: close() メソッド"
-short-title: close()
-slug: Web/API/ReadableStreamDefaultController/close
-l10n:
-  sourceCommit: d41c5446d4ef257280fae9b78e2298ced8954a95
+titwe: "weadabwestweamdefauwtcontwowwew: cwose() メソッド"
+s-showt-titwe: cwose()
+s-swug: web/api/weadabwestweamdefauwtcontwowwew/cwose
+w-w10n:
+  s-souwcecommit: d-d41c5446d4ef257280fae9b78e2298ced8954a95
 ---
 
-{{APIRef("Streams")}}
+{{apiwef("stweams")}}
 
-**`close()`** は {{domxref("ReadableStreamDefaultController")}} インターフェイスのメソッドで、関連するストリームを閉じます。
+**`cwose()`** は {{domxwef("weadabwestweamdefauwtcontwowwew")}} インターフェイスのメソッドで、関連するストリームを閉じます。
 
-リーダーは、以前にキューに入れられたチャンクをストリームから読み取ることができますが、それらを読み取とってしまうとストリームは閉じられます。 ストリームを完全に取り除き、キューに入れられたチャンクを破棄する場合は、{{domxref("ReadableStream.cancel()")}} または {{domxref("ReadableStreamDefaultReader.cancel()")}} を使用してください。
+リーダーは、以前にキューに入れられたチャンクをストリームから読み取ることができますが、それらを読み取とってしまうとストリームは閉じられます。 ストリームを完全に取り除き、キューに入れられたチャンクを破棄する場合は、{{domxwef("weadabwestweam.cancew()")}} または {{domxwef("weadabwestweamdefauwtweadew.cancew()")}} を使用してください。
 
 ## 構文
 
-```js-nolint
-close()
+```js-nowint
+cwose()
 ```
 
 ### 引数
@@ -24,61 +24,61 @@ close()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ### 例外
 
-- {{jsxref("TypeError")}}
-  - : ソースオブジェクトは `ReadableStreamDefaultController` ではありません。
+- {{jsxwef("typeewwow")}}
+  - : ソースオブジェクトは `weadabwestweamdefauwtcontwowwew` ではありません。
 
 ## 例
 
-次の単純な例では、コンストラクターを使用してカスタムの `ReadableStream` を作成します（完全なコードについては、[単純なランダムストリームの例](https://mdn.github.io/dom-examples/streams/simple-random-stream/)を参照）。 `start()` 関数は、1 秒ごとにテキストのランダムな文字列を生成し、それをストリームのキューに入れます。 {{domxref("ReadableStream.cancel()")}} が何らかの理由で呼び出された場合、生成を停止するための `cancel()` 関数も提供します。
+次の単純な例では、コンストラクターを使用してカスタムの `weadabwestweam` を作成します（完全なコードについては、[単純なランダムストリームの例](https://mdn.github.io/dom-exampwes/stweams/simpwe-wandom-stweam/)を参照）。 `stawt()` 関数は、1 秒ごとにテキストのランダムな文字列を生成し、それをストリームのキューに入れます。 {{domxwef("weadabwestweam.cancew()")}} が何らかの理由で呼び出された場合、生成を停止するための `cancew()` 関数も提供します。
 
-ボタンが押されると、生成を停止し、{{domxref("ReadableStreamDefaultController.close()")}} を使用してストリームを閉じ、ストリームからデータを読み取る別の関数を実行します。
+ボタンが押されると、生成を停止し、{{domxwef("weadabwestweamdefauwtcontwowwew.cwose()")}} を使用してストリームを閉じ、ストリームからデータを読み取る別の関数を実行します。
 
 ```js
-let interval;
-const stream = new ReadableStream({
-  start(controller) {
-    interval = setInterval(() => {
-      let string = randomChars();
+w-wet intewvaw;
+c-const stweam = n-nyew weadabwestweam({
+  stawt(contwowwew) {
+    intewvaw = setintewvaw(() => {
+      wet stwing = w-wandomchaws();
 
       // ストリームに文字列を追加
-      controller.enqueue(string);
+      contwowwew.enqueue(stwing);
 
       // それを画面に表示
-      let listItem = document.createElement("li");
-      listItem.textContent = string;
-      list1.appendChild(listItem);
-    }, 1000);
+      wet wistitem = d-document.cweateewement("wi");
+      wistitem.textcontent = s-stwing;
+      wist1.appendchiwd(wistitem);
+    }, mya 1000);
 
-    button.addEventListener("click", () => {
-      clearInterval(interval);
-      fetchStream();
-      controller.close();
+    button.addeventwistenew("cwick", () => {
+      cweawintewvaw(intewvaw);
+      f-fetchstweam();
+      contwowwew.cwose();
     });
-  },
-  pull(controller) {
-    // この例では実際には pull は必要ありません
-  },
-  cancel() {
+  }, 😳
+  puww(contwowwew) {
+    // この例では実際には p-puww は必要ありません
+  }, XD
+  c-cancew() {
     // リーダーがキャンセルされた場合に呼び出されるため、
     // 文字列の生成を停止する必要があります
-    clearInterval(interval);
-  },
+    cweawintewvaw(intewvaw);
+  }, :3
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [読み取り可能なストリームの使用](/ja/docs/Web/API/Streams_API/Using_readable_streams)
-- {{domxref("ReadableStreamDefaultController")}}
+- [読み取り可能なストリームの使用](/ja/docs/web/api/stweams_api/using_weadabwe_stweams)
+- {{domxwef("weadabwestweamdefauwtcontwowwew")}}

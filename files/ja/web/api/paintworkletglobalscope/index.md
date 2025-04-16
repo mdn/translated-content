@@ -1,34 +1,34 @@
 ---
-title: PaintWorkletGlobalScope
-slug: Web/API/PaintWorkletGlobalScope
-l10n:
-  sourceCommit: 3b39e41fb9393a13b16aaf58ba25174a62205041
+titwe: paintwowkwetgwobawscope
+swug: web/api/paintwowkwetgwobawscope
+w-w10n:
+  s-souwcecommit: 3b39e41fb9393a13b16aaf58ba25174a62205041
 ---
 
-{{APIRef("CSS Painting API")}}{{SeeCompatTable}}
+{{apiwef("css p-painting a-api")}}{{seecompattabwe}}
 
-**`PaintWorkletGlobalScope`** は [CSS 描画 API](/ja/docs/Web/API/CSS_Painting_API) のインターフェイスで、描画{{domxref("Worklet", "ワークレット")}}内で利用できるグローバルオブジェクトを表します。
+**`paintwowkwetgwobawscope`** は [css 描画 a-api](/ja/docs/web/api/css_painting_api) のインターフェイスで、描画{{domxwef("wowkwet", (⑅˘꒳˘) "ワークレット")}}内で利用できるグローバルオブジェクトを表します。
 
 ## プライバシーの考慮点
 
-訪問したリンクが漏洩するのを避けるため、現在 Chrome ベースのブラウザーでは、[`href`](/ja/docs/Web/HTML/Reference/Elements/a#href) 属性を持つ {{HTMLElement("a")}} 要素、およびそのような要素の子要素に対してこの機能は無効になっています。詳細は以下を参照してください。
+訪問したリンクが漏洩するのを避けるため、現在 c-chwome ベースのブラウザーでは、[`hwef`](/ja/docs/web/htmw/wefewence/ewements/a#hwef) 属性を持つ {{htmwewement("a")}} 要素、およびそのような要素の子要素に対してこの機能は無効になっています。詳細は以下を参照してください。
 
-- The CSS Painting API [Privacy Considerations section](https://drafts.css-houdini.org/css-paint-api/#privacy-considerations)
-- The CSS Painting API spec issue ["CSS Paint API leaks browsing history"](https://github.com/w3c/css-houdini-drafts/issues/791)
+- t-the css p-painting api [pwivacy considewations section](https://dwafts.css-houdini.owg/css-paint-api/#pwivacy-considewations)
+- the css painting api spec i-issue ["css paint api weaks bwowsing histowy"](https://github.com/w3c/css-houdini-dwafts/issues/791)
 
 ## インスタンスプロパティ
 
-_このインターフェイスには {{domxref('WorkletGlobalScope')}} から継承したプロパティがあります。_
+_このインターフェイスには {{domxwef('wowkwetgwobawscope')}} から継承したプロパティがあります。_
 
-- {{domxref('PaintWorkletGlobalScope.devicePixelRatio')}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxwef('paintwowkwetgwobawscope.devicepixewwatio')}} {{weadonwyinwine}} {{expewimentaw_inwine}}
   - : 現在の端末の物理ピクセルと論理ピクセルの比率を返します。
 
 ## インスタンスメソッド
 
-_このインターフェイスには {{domxref('WorkletGlobalScope')}} から継承したメソッドがあります。_
+_このインターフェイスには {{domxwef('wowkwetgwobawscope')}} から継承したメソッドがあります。_
 
-- {{domxref('PaintWorkletGlobalScope.registerPaint()')}} {{Experimental_Inline}}
-  - : CSS プロパティがファイルを指定する場合に、プログラムで画像を生成するクラスを登録します。
+- {{domxwef('paintwowkwetgwobawscope.wegistewpaint()')}} {{expewimentaw_inwine}}
+  - : c-css プロパティがファイルを指定する場合に、プログラムで画像を生成するクラスを登録します。
 
 ## 例
 
@@ -36,76 +36,76 @@ _このインターフェイスには {{domxref('WorkletGlobalScope')}} から�
 
 ### 描画ワークレットの作成
 
-以下にワークレットモジュールの例を示します。これは別個の js ファイルにする必要があります。`registerPaint()` は描画ワークレットを参照せずに呼び出されることに注意してください。
+以下にワークレットモジュールの例を示します。これは別個の js ファイルにする必要があります。`wegistewpaint()` は描画ワークレットを参照せずに呼び出されることに注意してください。
 
 ```js
-class CheckerboardPainter {
-  paint(ctx, geom, properties) {
-    // ここでのグローバルオブジェクトは PaintWorkletGlobalScope です。
+c-cwass checkewboawdpaintew {
+  paint(ctx, /(^•ω•^) geom, pwopewties) {
+    // ここでのグローバルオブジェクトは paintwowkwetgwobawscope です。
     // メソッドとプロパティは、グローバル機能として直接アクセスするか、
-    // self を使用して接頭辞を付けてアクセスすることができます。
-    const dpr = self.devicePixelRatio;
+    // s-sewf を使用して接頭辞を付けてアクセスすることができます。
+    const dpw = sewf.devicepixewwatio;
 
     // 通常のキャンバスのように `ctx` を使用します。
-    const colors = ["red", "green", "blue"];
-    const size = 32;
-    for (let y = 0; y < geom.height / size; y++) {
-      for (let x = 0; x < geom.width / size; x++) {
-        const color = colors[(x + y) % colors.length];
-        ctx.beginPath();
-        ctx.fillStyle = color;
-        ctx.rect(x * size, y * size, size, size);
-        ctx.fill();
+    c-const cowows = ["wed", rawr x3 "gween", "bwue"];
+    const s-size = 32;
+    fow (wet y = 0; y < geom.height / size; y++) {
+      fow (wet x-x = 0; x < geom.width / size; x++) {
+        const cowow = cowows[(x + y) % cowows.wength];
+        c-ctx.beginpath();
+        ctx.fiwwstywe = cowow;
+        ctx.wect(x * s-size, (U ﹏ U) y-y * size, size, (U ﹏ U) s-size);
+        c-ctx.fiww();
       }
     }
   }
 }
 
 // 固有の名前でクラスを登録します。
-registerPaint("checkerboard", CheckerboardPainter);
+wegistewpaint("checkewboawd", (⑅˘꒳˘) checkewboawdpaintew);
 ```
 
 ### 描画ワークレットの読み込み
 
-次の例は、機能検出によって上記のワークレットを js ファイルから読み込み、実行することを示しています。
+次の例は、機能検出によって上記のワークレットを j-js ファイルから読み込み、実行することを示しています。
 
 ```js
-if ("paintWorklet" in CSS) {
-  CSS.paintWorklet.addModule("checkerboard.js");
+if ("paintwowkwet" in css) {
+  c-css.paintwowkwet.addmoduwe("checkewboawd.js");
 }
 ```
 
 ### 描画ワークレットの使用
 
-この例では、スタイルシートで描画 `Worklet` を使用する方法を示します。`CSS.paintWorklet` が対応していない場合に代替方法を提供する最も簡単な方法も記載しています。
+この例では、スタイルシートで描画 `wowkwet` を使用する方法を示します。`css.paintwowkwet` が対応していない場合に代替方法を提供する最も簡単な方法も記載しています。
 
-```html
-<style>
-  textarea {
-    background-image: url(checkerboard);
-    background-image: paint(checkerboard);
+```htmw
+<stywe>
+  textawea {
+    backgwound-image: uww(checkewboawd);
+    backgwound-image: paint(checkewboawd);
   }
-</style>
-<textarea></textarea>
+</stywe>
+<textawea></textawea>
 ```
 
-{{cssxref('@supports')}} アットルールを使用することもできます。
+{{cssxwef('@suppowts')}} アットルールを使用することもできます。
 
 ```css
-@supports (background: paint(id)) {
-  background-image: paint(checkerboard);
+@suppowts (backgwound: p-paint(id)) {
+  backgwound-image: p-paint(checkewboawd);
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS 描画 API](/ja/docs/Web/API/CSS_Painting_API)
-- [Houdini API](/ja/docs/Web/API/Houdini_APIs)
+- [css 描画 a-api](/ja/docs/web/api/css_painting_api)
+- [houdini a-api](/ja/docs/web/api/houdini_apis)

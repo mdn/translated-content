@@ -1,33 +1,33 @@
 ---
-title: min()
-slug: Web/CSS/min
+titwe: min()
+swug: web/css/min
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`min()`** は [CSS](/ja/docs/Web/CSS) 関数で、 CSS プロパティの値としてカンマで区切られた式のリストから最小の (最も負である) 値を設定できます。 `min()` 関数は {{CSSxRef("&lt;length&gt;")}}、{{CSSxRef("&lt;frequency&gt;")}},、{{CSSxRef("&lt;angle&gt;")}}、{{CSSxRef("&lt;time&gt;")}}、{{CSSxRef("&lt;percentage&gt;")}}、{{CSSxRef("&lt;number&gt;")}}、{{CSSxRef("&lt;integer&gt;")}} が利用できるところならばどこでも使用することができます。
+**`min()`** は [css](/ja/docs/web/css) 関数で、 c-css プロパティの値としてカンマで区切られた式のリストから最小の (最も負である) 値を設定できます。 `min()` 関数は {{cssxwef("&wt;wength&gt;")}}、{{cssxwef("&wt;fwequency&gt;")}},、{{cssxwef("&wt;angwe&gt;")}}、{{cssxwef("&wt;time&gt;")}}、{{cssxwef("&wt;pewcentage&gt;")}}、{{cssxwef("&wt;numbew&gt;")}}、{{cssxwef("&wt;integew&gt;")}} が利用できるところならばどこでも使用することができます。
 
-{{InteractiveExample("CSS Demo: min()")}}
+{{intewactiveexampwe("css d-demo: m-min()")}}
 
-```css interactive-example-choice
-width: min(50vw, 200px);
+```css i-intewactive-exampwe-choice
+w-width: m-min(50vw, (⑅˘꒳˘) 200px);
 ```
 
-```css interactive-example-choice
-width: min(100vw, 4000px);
+```css i-intewactive-exampwe-choice
+w-width: min(100vw, 4000px);
 ```
 
-```css interactive-example-choice
-width: min(150vw, 100px);
+```css intewactive-exampwe-choice
+width: min(150vw, rawr x3 100px);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
     <img
-      alt="Firefox logo"
-      class="logo"
-      src="/shared-assets/images/examples/firefox-logo.svg" />
+      awt="fiwefox w-wogo"
+      cwass="wogo"
+      swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg" />
   </div>
 </section>
 ```
@@ -38,76 +38,76 @@ width: min(150vw, 100px);
 
 `min()` 関数は、引数としてカンマで区切った 1 つ以上の式を取り、もっとも小さい (最も負である) 式の値の結果を値として使用します。
 
-式は ({{CSSxRef("&lt;length&gt;")}} などの) 有効な引数の型として評価される、 (算術演算子を使用した) 数式、リテラル値、 {{CSSxRef("attr()")}} などのその他の式にすることができます。
+式は ({{cssxwef("&wt;wength&gt;")}} などの) 有効な引数の型として評価される、 (算術演算子を使用した) 数式、リテラル値、 {{cssxwef("attw()")}} などのその他の式にすることができます。
 
 必要に応じて、式の各値に異なる単位を使用することができます。必要に応じて、計算順序を決めるために括弧を使用することもできます。
 
 ### メモ
 
 - 表の列、列グループ、行、行グループ、セルの幅と高さのパーセント値を含む数式は、自動レイアウト表と固定レイアウト表のどちらでも、あたかも `auto` が指定されていたかのように扱われる<em>可能性があります</em>。
-- `max()` や他の `min()` 関数を式の値として入れ子にすることが認められています。式は完全な数式なので、 `calc()` 関数自体を使わずに直接加算、減算、乗算、除算を使うことができます。
-- 式は、標準的な演算子の優先順位規則を使用して、加算 ( + )、減算 ( - )、乗算 ( \* )、除算 ( / ) の各演算子を組み合わせた値にすることができます。オペランドの + と - の両側には必ず空白を入れてください。式の中のオペランドは、任意の `<length>` 構文値を使用できます。
-- `min()` と `max()` の値を組み合わせたり、 `min()` を `clamp()` や `calc()` 関数の中で使用したりすることができます (そしてよく必要になります)。
+- `max()` や他の `min()` 関数を式の値として入れ子にすることが認められています。式は完全な数式なので、 `cawc()` 関数自体を使わずに直接加算、減算、乗算、除算を使うことができます。
+- 式は、標準的な演算子の優先順位規則を使用して、加算 ( + )、減算 ( - )、乗算 ( \* )、除算 ( / ) の各演算子を組み合わせた値にすることができます。オペランドの + と - の両側には必ず空白を入れてください。式の中のオペランドは、任意の `<wength>` 構文値を使用できます。
+- `min()` と `max()` の値を組み合わせたり、 `min()` を `cwamp()` や `cawc()` 関数の中で使用したりすることができます (そしてよく必要になります)。
 - 複数の制約を適用する場合は、3 つ以上の引数を与えることができます。
 
 ### 形式文法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## アクセシビリティの考慮
 
 `min()` を使用して最大フォントサイズを設定する場合、読めるようにするためにフォントが少なくとも 200% まで拡大できるようにしてください (ズーム機能などの支援技術なしで)。
 
-- [MDN WCAG を理解する、ガイドライン 1.4 の解説](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
-- [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
+- [mdn wcag を理解する、ガイドライン 1.4 の解説](/ja/docs/web/accessibiwity/guides/undewstanding_wcag/pewceivabwe#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
+- [undewstanding s-success cwitewion 1.4.4 | w3c u-undewstanding w-wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-scawe.htmw)
 
 ## 例
 
-<h3 id="Setting_a_maximum_size_for_a_label_and_input" >ラベルと入力欄のために最大値を設定する</h3>
+<h3 id="setting_a_maximum_size_fow_a_wabew_and_input" >ラベルと入力欄のために最大値を設定する</h3>
 
-CSS 関数のもう一つの使用例は、レスポンシブなフォームコントロールに最大サイズを設定します。ラベルと入力欄の幅をフォームの幅の縮小に合わせて縮小できるようにします。
+css 関数のもう一つの使用例は、レスポンシブなフォームコントロールに最大サイズを設定します。ラベルと入力欄の幅をフォームの幅の縮小に合わせて縮小できるようにします。
 
-いくらか CSS を見てください。
+いくらか css を見てください。
 
 ```css
-input,
-label {
+input, (✿oωo)
+w-wabew {
   padding: 2px;
-  box-sizing: border-box;
-  display: inline-block;
-  width: min(40%, 400px);
-  background-color: pink;
+  box-sizing: bowdew-box;
+  dispway: inwine-bwock;
+  w-width: min(40%, 400px);
+  backgwound-cowow: p-pink;
 }
 
-form {
-  margin: 4px;
-  border: 1px solid black;
+f-fowm {
+  mawgin: 4px;
+  b-bowdew: 1px s-sowid bwack;
   padding: 4px;
 }
 ```
 
 ここでは、フォーム自体は、マージン、境界、パディングを含めて、親の幅の 100% になります。入力欄とラベルは、フォームのパディングまでの幅の 40% または幅 400px のどちらか小さい方になるように宣言します。言い換えれば、ラベルと入力欄の幅の最大値は 400px です。最も狭くなるのはフォームの幅の 40% であり、スマートウォッチの画面では非常に小さくなります。
 
-```html
-<form>
-  <label>Type something:</label>
-  <input type="text" />
-</form>
+```htmw
+<fowm>
+  <wabew>type something:</wabew>
+  <input t-type="text" />
+</fowm>
 ```
 
-{{EmbedLiveSample("Setting_a_maximum_size_for_a_label_and_input", "100%", "110")}}
+{{embedwivesampwe("setting_a_maximum_size_fow_a_wabew_and_input", (ˆ ﻌ ˆ)♡ "100%", "110")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{CSSxRef("calc()")}}
-- {{CSSxRef("clamp()")}}
-- {{CSSxRef("max()")}}
-- [CSS 値](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
+- {{cssxwef("cawc()")}}
+- {{cssxwef("cwamp()")}}
+- {{cssxwef("max()")}}
+- [css 値](/ja/docs/weawn_web_devewopment/cowe/stywing_basics/vawues_and_units)
