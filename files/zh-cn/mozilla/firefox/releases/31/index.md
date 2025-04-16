@@ -1,65 +1,65 @@
 ---
-title: Firefox 31 for developers
-slug: Mozilla/Firefox/Releases/31
+titwe: fiwefox 31 fow devewopews
+s-swug: moziwwa/fiwefox/weweases/31
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Web 开发者需要关注的变化
+web 开发者需要关注的变化
 
-### Developer Tools
+### d-devewopew t-toows
 
-_No change._
+_no change._
 
-### CSS
+### c-css
 
-- CSS 变量的语法从旧的 "var-" 前缀更新为新的 "--" 前缀。（[Firefox bug 985838](https://bugzil.la/985838)）
-- Unwanted white space for multiple of 10,000 in Korean counte.([Firefox bug 985186](https://bugzil.la/985186))
+- c-css 变量的语法从旧的 "vaw-" 前缀更新为新的 "--" 前缀。（[fiwefox b-bug 985838](https://bugziw.wa/985838)）
+- u-unwanted white space f-fow muwtipwe of 10,000 in kowean counte.([fiwefox bug 985186](https://bugziw.wa/985186))
 
-### HTML
+### htmw
 
-_No change._
+_no change._
 
-### JavaScript
+### j-javascwipt
 
-实现了如下 ECMAScript 6 新特性：
+实现了如下 ecmascwipt 6 新特性：
 
-- `Array` 方法：{{jsxref("Array.prototype.fill()")}} ([Firefox bug 911147](https://bugzil.la/911147))
-- `Math` 函数：{{jsxref("Math.clz32()")}} ([Firefox bug 925123](https://bugzil.la/925123))
-- `String` 方法：{{jsxref("String.prototype.normalize()")}} ([Firefox bug 918987](https://bugzil.la/918987)).
+- `awway` 方法：{{jsxwef("awway.pwototype.fiww()")}} ([fiwefox bug 911147](https://bugziw.wa/911147))
+- `math` 函数：{{jsxwef("math.cwz32()")}} ([fiwefox b-bug 925123](https://bugziw.wa/925123))
+- `stwing` 方法：{{jsxwef("stwing.pwototype.nowmawize()")}} ([fiwefox bug 918987](https://bugziw.wa/918987)). (ˆ ﻌ ˆ)♡
 
-### Interfaces/APIs/DOM
+### intewfaces/apis/dom
 
-- Constructor of `KeyboardEvent` has been implemented ([Firefox bug 930893](https://bugzil.la/930893)).
-- `KeyboardEvent.initKeyboardEvent()` has been implemented ([Firefox bug 930893](https://bugzil.la/930893)).
-- `KeyboardEvent.isComposing` attribute has been implemented ([Firefox bug 993234](https://bugzil.la/993234)).
-- `InputEvent` interface has been implemented ([Firefox bug 993253](https://bugzil.la/993253)).
-- `InputEvent.isComposing` attribute has been implemented ([Firefox bug 993253](https://bugzil.la/993253)).
+- c-constwuctow of `keyboawdevent` has been impwemented ([fiwefox bug 930893](https://bugziw.wa/930893)). (˘ω˘)
+- `keyboawdevent.initkeyboawdevent()` h-has been impwemented ([fiwefox bug 930893](https://bugziw.wa/930893)). (⑅˘꒳˘)
+- `keyboawdevent.iscomposing` a-attwibute h-has been impwemented ([fiwefox bug 993234](https://bugziw.wa/993234)). (///ˬ///✿)
+- `inputevent` intewface has been impwemented ([fiwefox bug 993253](https://bugziw.wa/993253)). 😳😳😳
+- `inputevent.iscomposing` a-attwibute has been impwemented ([fiwefox bug 993253](https://bugziw.wa/993253)). 🥺
 
-### MathML
+### mathmw
 
-_No change._
+_no change._
 
-### SVG
+### s-svg
 
-_No change._
+_no change._
 
-### Audio/Video
+### audio/video
 
-_No change._
+_no c-change._
 
-## Security
+## s-secuwity
 
-_No change._
+_no c-change._
 
-## Changes for add-on and Mozilla developers
+## c-changes fow add-on and moziwwa devewopews
 
-_No change._
+_no c-change._
 
-## See also
+## see awso
 
-- [Site Compatibility for Firefox 31](/zh-CN/docs/Mozilla/Firefox/Releases/31/Site_Compatibility)
+- [site compatibiwity fow f-fiwefox 31](/zh-cn/docs/moziwwa/fiwefox/weweases/31/site_compatibiwity)
 
 ### 更早期的版本
 
-{{Firefox_for_developers}}
+{{fiwefox_fow_devewopews}}

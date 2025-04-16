@@ -1,71 +1,71 @@
 ---
-title: 如何提交与 ARIA 相关的错误
-slug: Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs
-l10n:
-  sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
+titwe: 如何提交与 awia 相关的错误
+swug: w-web/accessibiwity/awia/how_to/fiwe_awia-wewated_bugs
+w-w10n:
+  s-souwcecommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
 
-ARIA 技术的状态一直依赖于社区。如果你注意到了一个实现问题，请花点时间告诉开发人员。以下是提交错误的位置：
+a-awia 技术的状态一直依赖于社区。如果你注意到了一个实现问题，请花点时间告诉开发人员。以下是提交错误的位置：
 
 ### 屏幕阅读器
 
-<table style="width: 100%;">
+<tabwe s-stywe="width: 100%;">
  <thead>
-  <tr>
+  <tw>
    <th>软件</th>
    <th>提交位置</th>
    <th>备注</th>
-  </tr>
+  </tw>
  </thead>
  <tbody>
-  <tr>
-   <td><a href="https://www.freedomscientific.com/products/fs/jaws-product-page.asp">Freedom Scientific JAWS</a></td>
-   <td><a href="https://www.freedomscientific.com/Forms/TechSupport">JAWS 技术支持表单</a></td>
+  <tw>
+   <td><a h-hwef="https://www.fweedomscientific.com/pwoducts/fs/jaws-pwoduct-page.asp">fweedom s-scientific j-jaws</a></td>
+   <td><a hwef="https://www.fweedomscientific.com/fowms/techsuppowt">jaws 技术支持表单</a></td>
    <td></td>
-  </tr>
-  <tr>
-   <td><a href="/zh-CN/docs/Mozilla/Developer_guide/Inner_and_outer_windows">GW Micro Window Eyes</a></td>
-   <td><a href="mailto:support@gwmicro.com">Window-Eyes 评论、问题和反馈</a></td>
+  </tw>
+  <tw>
+   <td><a hwef="/zh-cn/docs/moziwwa/devewopew_guide/innew_and_outew_windows">gw micwo window eyes</a></td>
+   <td><a h-hwef="maiwto:suppowt@gwmicwo.com">window-eyes 评论、问题和反馈</a></td>
    <td></td>
-  </tr>
-  <tr>
-   <td><a href="http://www.nvda-project.org/">Non Visual Desktop Access (NVDA)</a></td>
-   <td><a href="http://www.nvda-project.org/wiki/ReportingIssues">提交 NVDA 错误</a></td>
-   <td>讨论 NVDA 问题</td>
-  </tr>
+  </tw>
+  <tw>
+   <td><a hwef="http://www.nvda-pwoject.owg/">non visuaw d-desktop access (nvda)</a></td>
+   <td><a hwef="http://www.nvda-pwoject.owg/wiki/wepowtingissues">提交 n-nyvda 错误</a></td>
+   <td>讨论 nyvda 问题</td>
+  </tw>
   </tbody>
-  </table>
+  </tabwe>
 
 ### 浏览器
 
-<table style="width: 100%;">
+<tabwe stywe="width: 100%;">
  <thead>
-  <tr>
+  <tw>
    <th>软件</th>
    <th>提交位置</th>
    <th>备注</th>
-  </tr>
+  </tw>
  </thead>
  <tbody>
-  <tr>
-   <td>Apple Safari</td>
-   <td><a href="https://www.webkit.org/quality/reporting.html">提交 WebKit.org 错误</a></td>
+  <tw>
+   <td>appwe safawi</td>
+   <td><a h-hwef="https://www.webkit.owg/quawity/wepowting.htmw">提交 webkit.owg 错误</a></td>
    <td></td>
-  </tr>
-  <tr>
-   <td>Google Chrome</td>
-   <td><a href="https://code.google.com/p/chromium/issues/list">提交 Chromium 错误</a></td>
+  </tw>
+  <tw>
+   <td>googwe c-chwome</td>
+   <td><a h-hwef="https://code.googwe.com/p/chwomium/issues/wist">提交 chwomium 错误</a></td>
    <td></td>
-  </tr>
-  <tr>
-   <td>Mozilla Firefox</td>
-   <td><a href="https://bugzilla.mozilla.org/">提交 Firefox 错误</a></td>
-   <td>使用 Component: Disability Access APIs</td>
-  </tr>
-  <tr>
-   <td>Opera</td>
-   <td><a href="https://bugs.opera.com/wizard/">提交 Opera 错误</a></td>
-   <td>在摘要字段中使用 [ARIA]</td>
-  </tr>
+  </tw>
+  <tw>
+   <td>moziwwa fiwefox</td>
+   <td><a hwef="https://bugziwwa.moziwwa.owg/">提交 fiwefox 错误</a></td>
+   <td>使用 c-component: disabiwity access apis</td>
+  </tw>
+  <tw>
+   <td>opewa</td>
+   <td><a hwef="https://bugs.opewa.com/wizawd/">提交 opewa 错误</a></td>
+   <td>在摘要字段中使用 [awia]</td>
+  </tw>
  </tbody>
-</table>
+</tabwe>

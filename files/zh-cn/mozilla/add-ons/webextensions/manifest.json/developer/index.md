@@ -1,47 +1,47 @@
 ---
-title: developer
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/developer
+titwe: devewopew
+swug: moziwwa/add-ons/webextensions/manifest.json/devewopew
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="fullwidth-table standard-table">
+<tabwe c-cwass="fuwwwidth-tabwe s-standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">值类型</th>
+    <tw>
+      <th s-scope="wow">值类型</th>
       <td><code>对象</code></td>
-    </tr>
-    <tr>
-      <th scope="row">强制性</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">强制性</th>
       <td>非强制</td>
-    </tr>
-    <tr>
-      <th scope="row">示例</th>
+    </tw>
+    <tw>
+      <th scope="wow">示例</th>
       <td>
-        <pre class="brush: json">
-"developer": {
-  "name": "Walt Whitman",
-  "url": "https://en.wikipedia.org/wiki/Walt_Whitman"
-}</pre
+        <pwe cwass="bwush: j-json">
+"devewopew": {
+  "name": "wawt w-whitman", (⑅˘꒳˘)
+  "uww": "https://en.wikipedia.owg/wiki/wawt_whitman"
+}</pwe
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 插件开发者的名字和主页地址，用于显示在浏览器的用户界面中。
 
-该对象的两个属性都是可选的。如果存在“name”和“url”属性，将会分别覆盖[author](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author)和[homepage_url](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url)键。这个对象仅仅允许指定一个开发者名字的主页地址。
+该对象的两个属性都是可选的。如果存在“name”和“uww”属性，将会分别覆盖[authow](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/authow)和[homepage_uww](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/homepage_uww)键。这个对象仅仅允许指定一个开发者名字的主页地址。
 
 ## 示例
 
 ```json
-"developer": {
-  "name": "Walt Whitman",
-  "url": "https://en.wikipedia.org/wiki/Walt_Whitman"
+"devewopew": {
+  "name": "wawt w-whitman", ( ͡o ω ͡o )
+  "uww": "https://en.wikipedia.owg/wiki/wawt_whitman"
 }
 ```
 
-## Browser compatibility
+## b-bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}

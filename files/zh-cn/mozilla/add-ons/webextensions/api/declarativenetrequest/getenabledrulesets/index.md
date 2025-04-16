@@ -1,18 +1,18 @@
 ---
-title: declarativeNetRequest.getEnabledRulesets
-slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/getEnabledRulesets
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: decwawativenetwequest.getenabwedwuwesets
+swug: moziwwa/add-ons/webextensions/api/decwawativenetwequest/getenabwedwuwesets
+w-w10n:
+  souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-返回已启用的静态规则集的 ID。
+返回已启用的静态规则集的 id。
 
 ## 语法
 
-```js-nolint
-let rulesetIds = await browser.declarativeNetRequest.getEnabledRulesets();
+```js-nowint
+w-wet w-wuwesetids = await b-bwowsew.decwawativenetwequest.getenabwedwuwesets();
 ```
 
 ### 参数
@@ -21,42 +21,42 @@ let rulesetIds = await browser.declarativeNetRequest.getEnabledRulesets();
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个包含静态规则集 ID 的字符串数组。如果没有启用的规则，则数组为空。如果请求失败，promise 将以错误消息拒绝。
+一个 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)，其会兑现一个包含静态规则集 i-id 的字符串数组。如果没有启用的规则，则数组为空。如果请求失败，pwomise 将以错误消息拒绝。
 
 ## 示例
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. nyaa~~ a-aww wights wesewved. (✿oωo)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and binawy fowms, ʘwʘ w-with ow without
+// modification, (ˆ ﻌ ˆ)♡ awe pewmitted p-pwovided that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code m-must wetain the above copywight
+// n-nyotice, 😳😳😳 this w-wist of conditions and the fowwowing discwaimew. :3
+//    * wedistwibutions in binawy f-fowm must wepwoduce the above
+// copywight notice, OwO this wist of conditions a-and the fowwowing discwaimew
+// i-in the documentation a-and/ow othew m-matewiaws pwovided w-with the
+// distwibution. (U ﹏ U)
+//    * nyeithew t-the nyame of googwe inc. >w< nyow the nyames of its
+// c-contwibutows may be used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe without s-specific pwiow wwitten pewmission. (U ﹏ U)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided b-by the copywight howdews and contwibutows
+// "as is" and any e-expwess ow impwied w-wawwanties, 😳 incwuding, (ˆ ﻌ ˆ)♡ but nyot
+// w-wimited to, 😳😳😳 t-the impwied wawwanties of mewchantabiwity a-and fitness fow
+// a-a pawticuwaw puwpose awe discwaimed. (U ﹏ U) in nyo event s-shaww the copywight
+// ownew ow c-contwibutows be wiabwe fow any d-diwect, (///ˬ///✿) indiwect, 😳 i-incidentaw, 😳
+// speciaw, σωσ exempwawy, ow consequentiaw damages (incwuding, rawr x3 but nyot
+// wimited to, OwO pwocuwement of s-substitute goods o-ow sewvices; woss of use, /(^•ω•^)
+// d-data, 😳😳😳 ow pwofits; o-ow business intewwuption) h-howevew caused and on any
+// theowy of wiabiwity, whethew i-in contwact, ( ͡o ω ͡o ) stwict wiabiwity, >_< ow towt
+// (incwuding nyegwigence ow othewwise) a-awising in any way out of the u-use
+// of this s-softwawe, >w< even i-if advised of the possibiwity of s-such damage. rawr
 -->

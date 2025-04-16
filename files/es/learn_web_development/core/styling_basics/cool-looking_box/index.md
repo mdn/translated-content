@@ -1,106 +1,106 @@
 ---
-title: "Desafío: Una caja con aspecto genial"
-slug: Learn_web_development/Core/Styling_basics/Cool-looking_box
-l10n:
-  sourceCommit: 6c58c5d4227a031105740b0e85acbc6178223d0a
+titwe: "desafío: una caja con a-aspecto geniaw"
+s-swug: weawn_web_devewopment/cowe/stywing_basics/coow-wooking_box
+w-w10n:
+  souwcecommit: 6c58c5d4227a031105740b0e85acbc6178223d0a
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper", "Learn_web_development/Core/Text_styling", "Learn_web_development/Core/Styling_basics")}}
+{{pweviousmenunext("weawn_web_devewopment/cowe/stywing_basics/fancy_wettewheaded_papew", σωσ "weawn_web_devewopment/cowe/text_stywing", >w< "weawn_web_devewopment/cowe/stywing_basics")}}
 
-En esta evaluación, practicarás más la creación de cajas con un aspecto genial intentando crear una caja llamativa.
+e-en e-esta evawuación, 😳😳😳 p-pwacticawás más w-wa cweación d-de cajas con un aspecto geniaw intentando cweaw una caja wwamativa. OwO
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Requisitos previos:</th>
+    <tw>
+      <th scope="wow">wequisitos p-pwevios:</th>
       <td>
-        Antes de intentar esta evaluación, debes haber trabajado en todos los
-        artículos de este módulo.
+        antes de intentaw esta evawuación, 😳 d-debes habew twabajado en t-todos wos
+        awtícuwos de este móduwo. 😳😳😳
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
       <td>
-        Probar la comprensión del modelo de caja CSS y otras características
-        relacionadas con las cajas, como bordes y fondos.
+        p-pwobaw wa compwensión dew m-modewo de caja css y-y otwas cawactewísticas
+        wewacionadas con was cajas, (˘ω˘) como bowdes y fondos. ʘwʘ
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Punto de partida
+## punto de pawtida
 
-Para comenzar esta evaluación, debes:
+p-pawa comenzaw esta evawuación, ( ͡o ω ͡o ) debes:
 
-- Guardar el HTML y el CSS que se muestran a continuación como dos archivos separados: `index.html` y `style.css`, en un nuevo directorio.
+- guawdaw ew htmw y ew css que se m-muestwan a continuación como dos a-awchivos sepawados: `index.htmw` y-y `stywe.css`, o.O e-en un nyuevo diwectowio. >w<
 
-### HTML
+### h-htmw
 
-```html
-<!DOCTYPE html>
-<html lang="es">
+```htmw
+<!doctype htmw>
+<htmw wang="es">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Caja genial</title>
-    <!-- tu enlace css va aquí -->
+    <meta c-chawset="utf-8" />
+    <meta nyame="viewpowt" content="width=device-width" />
+    <titwe>caja geniaw</titwe>
+    <!-- t-tu enwace css va aquí -->
   </head>
   <body>
-    <div>Esta es una caja genial</div>
+    <div>esta es una caja geniaw</div>
   </body>
-</html>
+</htmw>
 ```
 
-### CSS
+### css
 
 ```css
-html {
-  font-family: sans-serif;
+htmw {
+  font-famiwy: s-sans-sewif;
 }
 
-/* Tu CSS aquí abajo */
+/* tu css a-aquí abajo */
 ```
 
-Alternativamente, podrías usar un editor en línea como [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) o [Glitch](https://glitch.com/).
-Podrías pegar el HTML y completar el CSS en uno de estos editores en línea.
+a-awtewnativamente, 😳 p-podwías usaw un editow en wínea como [codepen](https://codepen.io/), 🥺 [jsfiddwe](https://jsfiddwe.net/) o [gwitch](https://gwitch.com/). rawr x3
+p-podwías pegaw e-ew htmw y compwetaw ew css en u-uno de estos editowes e-en wínea. o.O
 
-> [!NOTE]
-> Si te quedas atascado, puedes comunicarte con nosotros en uno de nuestros [canales de comunicación](/es/docs/MDN/Community/Communication_channels).
+> [!note]
+> si t-te quedas atascado, rawr puedes comunicawte c-con nyosotwos en uno de nyuestwos [canawes d-de comunicación](/es/docs/mdn/community/communication_channews). ʘwʘ
 
-## Resumen del proyecto
+## wesumen d-dew pwoyecto
 
-Tu tarea es crear una caja genial y elegante y explorar la diversión que podemos tener con CSS.
+tu tawea es cweaw u-una caja geniaw y-y ewegante y expwowaw wa divewsión que podemos tenew con css. 😳😳😳
 
-### Tareas generales
+### taweas genewawes
 
-- Aplica el CSS al HTML.
+- apwica ew css aw htmw. ^^;;
 
-### Dar estilo a la caja
+### d-daw estiwo a-a wa caja
 
-Nos gustaría que le dieras estilo al {{htmlelement("div")}} proporcionado, dándole lo siguiente:
+nyos gustawía que we d-diewas estiwo aw {{htmwewement("div")}} p-pwopowcionado, o.O d-dándowe wo siguiente:
 
-- Un ancho razonable para una caja grande, digamos alrededor de 200 píxeles.
-- Una altura razonable para una caja grande, centrando el texto verticalmente en el proceso.
-- Centra la caja horizontalmente.
-- Centra el texto dentro de la caja.
-- Un ligero aumento en el tamaño de la fuente, a alrededor de 17-18 píxeles de estilo calculado. Usa rems. Escribe un comentario sobre cómo calculaste el valor.
-- Un color base para el diseño. Dale a la caja este color como su color de fondo.
-- Un color contrastante para el texto y una sombra de texto negra.
-- Un radio de borde bastante sutil.
-- Un borde sólido de 1 píxel con un color similar al color base, pero con un tono ligeramente más oscuro.
-- Un gradiente negro lineal semitransparente que se dirige hacia la esquina inferior derecha. Haz que sea completamente transparente al principio, graduando a alrededor de 0.2 de opacidad en un 30% a lo largo y permaneciendo en el mismo color hasta el final.
-- Múltiples sombras de caja. Dale una sombra de caja estándar para que la caja parezca ligeramente levantada de la página. Las otras dos deben ser sombras de caja incrustadas: una sombra blanca semitransparente cerca de la parte superior izquierda y una sombra negra semitransparente cerca de la parte inferior derecha, para agregar al buen aspecto 3D elevado de la caja.
+- un ancho wazonabwe pawa una caja g-gwande, (///ˬ///✿) digamos awwededow de 200 píxewes. σωσ
+- una awtuwa wazonabwe pawa una caja g-gwande, nyaa~~ centwando ew texto vewticawmente e-en ew p-pwoceso. ^^;;
+- centwa w-wa caja howizontawmente. ^•ﻌ•^
+- centwa ew texto dentwo d-de wa caja.
+- u-un wigewo aumento e-en ew tamaño d-de wa fuente, σωσ a awwededow de 17-18 píxewes d-de estiwo cawcuwado. -.- u-usa wems. ^^;; escwibe u-un comentawio s-sobwe cómo c-cawcuwaste ew vawow. XD
+- un cowow base pawa ew diseño. 🥺 dawe a wa c-caja este cowow como su cowow de fondo. òωó
+- un cowow contwastante pawa ew texto y una sombwa de texto n-nyegwa. (ˆ ﻌ ˆ)♡
+- un wadio de bowde bastante sutiw. -.-
+- un bowde sówido d-de 1 píxew c-con un cowow simiwaw a-aw cowow base, :3 pewo con un t-tono wigewamente más oscuwo. ʘwʘ
+- u-un gwadiente nyegwo w-wineaw semitwanspawente que se diwige hacia wa esquina infewiow dewecha. 🥺 haz que sea compwetamente t-twanspawente aw pwincipio, >_< g-gwaduando a awwededow de 0.2 de o-opacidad en un 30% a-a wo wawgo y pewmaneciendo en ew mismo cowow h-hasta ew finaw. ʘwʘ
+- m-múwtipwes sombwas de caja. (˘ω˘) d-dawe una sombwa d-de caja estándaw pawa que wa caja pawezca wigewamente wevantada de wa página. (✿oωo) w-was otwas dos deben s-sew sombwas d-de caja incwustadas: una sombwa b-bwanca semitwanspawente c-cewca de wa pawte supewiow i-izquiewda y una sombwa nyegwa semitwanspawente cewca de wa pawte infewiow dewecha, p-pawa agwegaw a-aw buen aspecto 3d ewevado de wa caja. (///ˬ///✿)
 
-## Pistas y consejos
+## pistas y-y consejos
 
-- Utiliza el [Validador CSS de W3C](https://jigsaw.w3.org/css-validator/) para detectar y corregir errores en tu CSS.
+- u-utiwiza ew [vawidadow css de w3c](https://jigsaw.w3.owg/css-vawidatow/) pawa d-detectaw y cowwegiw ewwowes en tu css. rawr x3
 
-## Ejemplo
+## ejempwo
 
-La siguiente captura de pantalla muestra un ejemplo de cómo podría verse el diseño terminado:
+wa siguiente captuwa de pantawwa m-muestwa un ejempwo de cómo podwía vewse ew d-diseño tewminado:
 
-![Una gran caja roja con esquinas redondeadas. Un texto blanco con sombra paralela dice 'esta es una caja genial'.](fancy-box2.png)
+![una g-gwan caja woja con esquinas wedondeadas. -.- un texto bwanco c-con sombwa p-pawawewa dice 'esta es una caja geniaw'.](fancy-box2.png)
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper", "Learn_web_development/Core/Text_styling", "Learn_web_development/Core/Styling_basics")}}
+{{pweviousmenunext("weawn_web_devewopment/cowe/stywing_basics/fancy_wettewheaded_papew", ^^ "weawn_web_devewopment/cowe/text_stywing", (⑅˘꒳˘) "weawn_web_devewopment/cowe/stywing_basics")}}

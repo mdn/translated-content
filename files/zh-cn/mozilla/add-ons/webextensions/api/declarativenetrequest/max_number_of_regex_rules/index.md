@@ -1,52 +1,52 @@
 ---
-title: declarativeNetRequest.MAX_NUMBER_OF_REGEX_RULES
-slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/MAX_NUMBER_OF_REGEX_RULES
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: decwawativenetwequest.max_numbew_of_wegex_wuwes
+swug: m-moziwwa/add-ons/webextensions/api/decwawativenetwequest/max_numbew_of_wegex_wuwes
+w-w10n:
+  souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 扩展可以添加的正则表达式规则的最大数量。
 
-在 Chrome 中，其值为 1000，此限制分别针对动态规则集和会话规则集以及在规则资源文件中指定的规则进行评估。
+在 c-chwome 中，其值为 1000，此限制分别针对动态规则集和会话规则集以及在规则资源文件中指定的规则进行评估。
 
-在 Firefox 中，此限制针对每个规则集单独进行评估。
+在 f-fiwefox 中，此限制针对每个规则集单独进行评估。
 
-在 Safari 中，没有关于 `regexFilter` 规则数量的单独限制。
+在 s-safawi 中，没有关于 `wegexfiwtew` 规则数量的单独限制。
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium a-authows. nyaa~~ aww wights wesewved. (✿oωo)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and binawy f-fowms, ʘwʘ with ow without
+// modification, (ˆ ﻌ ˆ)♡ awe pewmitted p-pwovided that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code m-must wetain the above copywight
+// n-nyotice, 😳😳😳 this w-wist of conditions and the fowwowing discwaimew. :3
+//    * wedistwibutions in b-binawy fowm must wepwoduce the above
+// copywight nyotice, OwO this wist of conditions a-and the fowwowing discwaimew
+// i-in the documentation a-and/ow othew m-matewiaws pwovided w-with the
+// distwibution. (U ﹏ U)
+//    * nyeithew t-the nyame of googwe inc. >w< nyow the nyames of its
+// c-contwibutows may be used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe without s-specific pwiow wwitten pewmission. (U ﹏ U)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this s-softwawe is pwovided b-by the copywight howdews and contwibutows
+// "as is" and a-any expwess ow impwied w-wawwanties, 😳 incwuding, (ˆ ﻌ ˆ)♡ but n-nyot
+// wimited t-to, 😳😳😳 the impwied wawwanties of m-mewchantabiwity and fitness fow
+// a-a pawticuwaw puwpose awe discwaimed. (U ﹏ U) in nyo event s-shaww the copywight
+// ownew o-ow contwibutows be wiabwe fow a-any diwect, (///ˬ///✿) indiwect, i-incidentaw, 😳
+// speciaw, 😳 exempwawy, σωσ ow consequentiaw damages (incwuding, rawr x3 but nyot
+// wimited to, OwO pwocuwement o-of substitute g-goods ow sewvices; woss of use, /(^•ω•^)
+// d-data, 😳😳😳 ow pwofits; o-ow business i-intewwuption) howevew caused and on any
+// theowy of wiabiwity, ( ͡o ω ͡o ) w-whethew in contwact, >_< stwict wiabiwity, >w< ow towt
+// (incwuding nyegwigence ow othewwise) a-awising in any way out of t-the use
+// of t-this softwawe, rawr even i-if advised of the possibiwity o-of such damage.
 -->

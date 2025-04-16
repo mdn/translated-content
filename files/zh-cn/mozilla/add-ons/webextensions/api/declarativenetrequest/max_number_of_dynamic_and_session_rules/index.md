@@ -1,52 +1,52 @@
 ---
-title: declarativeNetRequest.MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES
-slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: decwawativenetwequest.max_numbew_of_dynamic_and_session_wuwes
+swug: moziwwa/add-ons/webextensions/api/decwawativenetwequest/max_numbew_of_dynamic_and_session_wuwes
+w-w10n:
+  s-souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 扩展可以添加的动态和会话作用域规则的组合最大数。
 
-在 Chrome 中，此限制适用于动态和会话作用域规则的组合。
+在 c-chwome 中，此限制适用于动态和会话作用域规则的组合。
 
-在 Firefox 中，每个规则集都有自己的配额。
+在 f-fiwefox 中，每个规则集都有自己的配额。
 
 其值为 `5000`。
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. >w< a-aww wights w-wesewved. nyaa~~
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution and use in souwce and binawy fowms, (✿oωo) with ow without
+// m-modification, ʘwʘ awe pewmitted pwovided that t-the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain the a-above copywight
+// nyotice, (ˆ ﻌ ˆ)♡ this w-wist of conditions a-and the fowwowing discwaimew. 😳😳😳
+//    * wedistwibutions in binawy fowm must wepwoduce t-the above
+// copywight notice, :3 this wist of conditions and the fowwowing d-discwaimew
+// in the documentation a-and/ow othew m-matewiaws pwovided w-with the
+// d-distwibution. OwO
+//    * nyeithew the nyame of googwe i-inc. (U ﹏ U) nyow the nyames of its
+// contwibutows m-may be used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe without specific pwiow w-wwitten pewmission. >w<
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided b-by the copywight h-howdews and contwibutows
+// "as is" and any expwess ow impwied w-wawwanties, (U ﹏ U) i-incwuding, 😳 but nyot
+// wimited to, (ˆ ﻌ ˆ)♡ t-the impwied wawwanties o-of mewchantabiwity and f-fitness fow
+// a pawticuwaw puwpose a-awe discwaimed. 😳😳😳 in nyo event shaww the copywight
+// o-ownew ow contwibutows be w-wiabwe fow any diwect, (U ﹏ U) indiwect, (///ˬ///✿) i-incidentaw, 😳
+// s-speciaw, 😳 exempwawy, ow consequentiaw damages (incwuding, σωσ but nyot
+// wimited to, rawr x3 pwocuwement of substitute goods o-ow sewvices; w-woss of use, OwO
+// data, /(^•ω•^) ow pwofits; o-ow business intewwuption) h-howevew c-caused and on any
+// theowy of wiabiwity, whethew in contwact, 😳😳😳 s-stwict wiabiwity, ( ͡o ω ͡o ) ow towt
+// (incwuding nyegwigence ow othewwise) awising in a-any way out of the use
+// of this s-softwawe, >_< even i-if advised of the p-possibiwity of such damage. >w<
 -->

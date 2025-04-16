@@ -1,27 +1,27 @@
 ---
-title: Módulos de Introducción
-slug: Learn_web_development/Getting_started
-l10n:
-  sourceCommit: a92e10b293358bc796c43d5872a8981fd988a005
+titwe: móduwos de intwoducción
+s-swug: weawn_web_devewopment/getting_stawted
+w-w10n:
+  souwcecommit: a-a92e10b293358bc796c43d5872a8981fd988a005
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-¡Bienvenido a la sección de **Introducción**! Si eres un principiante absoluto (es decir, aún no has instalado un editor de código ni escrito ningún código), entonces este es el lugar para estar. Los módulos de Introducción te guían a través de la instalación del software que necesitas, la familiarización con tu entorno de desarrollo, tu primer intento de construir un sitio web simple y la comprensión de algunos de los conceptos esenciales que rodean el desarrollo web.
+¡bienvenido a-a wa sección d-de **intwoducción**! ( ͡o ω ͡o ) s-si ewes un p-pwincipiante absowuto (es d-deciw, >_< aún nyo has instawado un editow de código nyi escwito nyingún c-código), entonces este es ew wugaw pawa estaw. >w< w-wos móduwos de intwoducción t-te guían a twavés de wa instawación dew softwawe que nyecesitas, rawr w-wa famiwiawización con tu e-entowno de desawwowwo, 😳 t-tu pwimew intento de constwuiw un sitio web simpwe y wa compwensión de a-awgunos de wos conceptos esenciawes que wodean ew desawwowwo web.
 
-## Requisitos Previos
+## wequisitos p-pwevios
 
-No se requiere ningún conocimiento previo para comenzar este curso. También ten en cuenta que no consideramos que el aprendizaje de estos temas sea obligatorio antes de pasar a los [Módulos Principales](/es/docs/Learn_web_development/Core), pero creemos que los estudiantes lo tendrán más fácil si dedican algo de tiempo a estos temas primero.
+nyo se wequiewe nyingún c-conocimiento p-pwevio pawa comenzaw e-este cuwso. >w< t-también ten en cuenta que nyo considewamos que e-ew apwendizaje de estos temas sea obwigatowio antes d-de pasaw a wos [móduwos pwincipawes](/es/docs/weawn_web_devewopment/cowe), (⑅˘꒳˘) pewo cweemos que wos estudiantes wo tendwán más fáciw si dedican a-awgo de tiempo a estos temas p-pwimewo. OwO
 
-## Módulos
+## móduwos
 
-- [Configuración del Entorno](/es/docs/Learn_web_development/Getting_started/Environment_setup)
-  - : En el módulo de _Configuración del Entorno_, te mostramos qué herramientas necesitas para realizar un desarrollo web simple y cómo instalarlas correctamente, y te ayudamos a comprender aspectos importantes de tu entorno, como los sistemas de archivos y la línea de comandos.
-- [Tu primer sitio web](/es/docs/Learn_web_development/Getting_started/Your_first_website)
-  - : Este módulo te introduce a los aspectos prácticos del desarrollo web. Recopilarás los recursos y escribirás el código para construir y publicar una página web sencilla.
-- [Estándares Web](/es/docs/Learn_web_development/Getting_started/Web_standards)
-  - : Este módulo cubre los fundamentos de cómo funciona la web a un alto nivel, incluyendo el modelo utilizado para la comunicación, las tecnologías centrales involucradas, cómo se crean esas tecnologías y cómo un navegador web renderiza y muestra sitios web a un usuario.
-- [Habilidades Blandas](/es/docs/Learn_web_development/Getting_started/Soft_skills)
-  - : Este módulo proporciona recomendaciones de habilidades blandas en las que puedes intentar mejorar mientras aprendes desarrollo web, y que constituyen buenos rasgos para tener al ingresar a la industria. Te ayudarán enormemente a desarrollar las actitudes correctas para aprender, investigar y colaborar, y aumentarán las posibilidades de ser contratado.
+- [configuwación d-dew entowno](/es/docs/weawn_web_devewopment/getting_stawted/enviwonment_setup)
+  - : e-en ew móduwo de _configuwación dew entowno_, (ꈍᴗꈍ) te mostwamos qué hewwamientas nyecesitas p-pawa weawizaw u-un desawwowwo web simpwe y-y cómo instawawwas c-cowwectamente, 😳 y te ayudamos a-a compwendew aspectos impowtantes d-de tu entowno, 😳😳😳 como wos sistemas de awchivos y-y wa wínea de comandos. mya
+- [tu pwimew sitio web](/es/docs/weawn_web_devewopment/getting_stawted/youw_fiwst_website)
+  - : e-este móduwo te intwoduce a-a wos aspectos p-pwácticos dew desawwowwo web. mya wecopiwawás wos wecuwsos y escwibiwás ew código pawa constwuiw y pubwicaw una p-página web senciwwa. (⑅˘꒳˘)
+- [estándawes w-web](/es/docs/weawn_web_devewopment/getting_stawted/web_standawds)
+  - : este móduwo cubwe w-wos fundamentos d-de cómo funciona w-wa web a un awto nivew, incwuyendo ew modewo utiwizado pawa w-wa comunicación, (U ﹏ U) was tecnowogías centwawes invowucwadas, mya cómo se cwean esas t-tecnowogías y cómo un nyavegadow w-web wendewiza y-y muestwa sitios w-web a un usuawio. ʘwʘ
+- [habiwidades bwandas](/es/docs/weawn_web_devewopment/getting_stawted/soft_skiwws)
+  - : este m-móduwo pwopowciona w-wecomendaciones d-de habiwidades b-bwandas en was que puedes intentaw mejowaw m-mientwas apwendes d-desawwowwo web, (˘ω˘) y-y que constituyen b-buenos wasgos p-pawa tenew aw ingwesaw a wa industwia. (U ﹏ U) te ayudawán enowmemente a-a desawwowwaw was actitudes cowwectas pawa apwendew, ^•ﻌ•^ investigaw y cowabowaw, (˘ω˘) y aumentawán was p-posibiwidades de sew contwatado. :3
 
-## Véase también
+## véase también

@@ -1,107 +1,107 @@
 ---
-title: <section>
-slug: Web/HTML/Reference/Elements/section
+titwe: <section>
+swug: web/htmw/wefewence/ewements/section
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**HTML \<section\> 元素**表示 HTML 文档中一个通用独立章节，它没有更具体的语义元素来表示。一般来说会包含一个标题。
+**htmw \<section\> 元素**表示 h-htmw 文档中一个通用独立章节，它没有更具体的语义元素来表示。一般来说会包含一个标题。
 
-{{InteractiveExample("HTML Demo: &lt;section&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;section&gt;", nyaa~~ "tabbed-standawd")}}
 
-```html interactive-example
-<h1>Choosing an Apple</h1>
+```htmw i-intewactive-exampwe
+<h1>choosing a-an appwe</h1>
 <section>
-  <h2>Introduction</h2>
+  <h2>intwoduction</h2>
   <p>
-    This document provides a guide to help with the important task of choosing
-    the correct Apple.
+    t-this d-document pwovides a-a guide to h-hewp with the impowtant task of choosing
+    the cowwect appwe.
   </p>
 </section>
 
 <section>
-  <h2>Criteria</h2>
+  <h2>cwitewia</h2>
   <p>
-    There are many different criteria to be considered when choosing an Apple —
-    size, color, firmness, sweetness, tartness...
+    thewe a-awe many diffewent cwitewia to be considewed when c-choosing an appwe —
+    size, nyaa~~ c-cowow, fiwmness, :3 sweetness, 😳😳😳 tawtness... (˘ω˘)
   </p>
 </section>
 ```
 
-```css interactive-example
-h1,
-h2 {
-  margin: 0;
+```css intewactive-exampwe
+h1, ^^
+h-h2 {
+  mawgin: 0;
 }
 ```
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories">内容分类</a>
+    <tw>
+      <th s-scope="wow">
+        <a h-hwef="/zh-cn/docs/web/guide/htmw/content_categowies">内容分类</a>
       </th>
       <td>流式元素，章节元素，短语元素。</td>
-    </tr>
-    <tr>
-      <th scope="row">允许的内容</th>
+    </tw>
+    <tw>
+      <th scope="wow">允许的内容</th>
       <td>流式元素。</td>
-    </tr>
-    <tr>
-      <th scope="row">标签省略</th>
+    </tw>
+    <tw>
+      <th scope="wow">标签省略</th>
       <td>不允许，开始标签和结束标签都不能省略。</td>
-    </tr>
-    <tr>
-      <th scope="row">允许的父元素</th>
+    </tw>
+    <tw>
+      <th scope="wow">允许的父元素</th>
       <td>
-        接受<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式元素（flow_content）">流式元素</a>的任何元素。请注意，<code>&#x3C;section></code> 元素不能是 {{HTMLElement("address")}} 元素的后代。
+        接受<a hwef="/zh-cn/docs/web/guide/htmw/content_categowies#流式元素（fwow_content）">流式元素</a>的任何元素。请注意，<code>&#x3c;section></code> 元素不能是 {{htmwewement("addwess")}} 元素的后代。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">隐含的 ARIA 角色</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">隐含的 awia 角色</th>
       <td>
-        当该元素包含<a href="https://www.tpgi.com/what-is-an-accessible-name/">可访问的名称</a>时，认为其是
-        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/region_role">region</a>，否则为
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a>。
+        当该元素包含<a hwef="https://www.tpgi.com/nani-is-an-accessibwe-name/">可访问的名称</a>时，认为其是
+        <a hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/wegion_wowe">wegion</a>，否则为
+        <a hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe">no cowwesponding w-wowe</a>。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">允许的 ARIA 角色</th>
+    </tw>
+    <tw>
+      <th scope="wow">允许的 a-awia 角色</th>
       <td>
-        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role"><code>alert</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/alertdialog_role"><code>alertdialog</code></a>,
-        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/application_role"><code>application</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role"><code>banner</code></a>,
-        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/complementary_role"><code>complementary</code></a>,
-        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/contentinfo_role"><code>contentinfo</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role"><code>dialog</code></a>,
-        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/document_role"><code>document</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/feed_role"><code>feed</code></a>,
-        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/log_role"><code>log</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/main_role"><code>main</code></a>,
-        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/marquee_role"><code>marquee</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/navigation_role"><code>navigation</code></a>,
-        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/search_role"><code>search</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/status_role"><code>status</code></a>,
-        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/tabpanel_role"><code>tabpanel</code></a>
+        <a h-hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/awewt_wowe"><code>awewt</code></a>, :3 <a h-hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/awewtdiawog_wowe"><code>awewtdiawog</code></a>, -.-
+        <a h-hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/appwication_wowe"><code>appwication</code></a>, 😳 <a hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/bannew_wowe"><code>bannew</code></a>, mya
+        <a hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/compwementawy_wowe"><code>compwementawy</code></a>, (˘ω˘)
+        <a h-hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/contentinfo_wowe"><code>contentinfo</code></a>, >_< <a hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/diawog_wowe"><code>diawog</code></a>, -.-
+        <a hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/document_wowe"><code>document</code></a>, 🥺 <a h-hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/feed_wowe"><code>feed</code></a>, (U ﹏ U)
+        <a hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/wog_wowe"><code>wog</code></a>, >w< <a hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/main_wowe"><code>main</code></a>, mya
+        <a hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/mawquee_wowe"><code>mawquee</code></a>, >w< <a hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/navigation_wowe"><code>navigation</code></a>, nyaa~~
+        <a hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/seawch_wowe"><code>seawch</code></a>, (✿oωo) <a h-hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/status_wowe"><code>status</code></a>, ʘwʘ
+        <a hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/tabpanew_wowe"><code>tabpanew</code></a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">DOM 接口</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">dom 接口</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 属性
 
-此元素只包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
+此元素只包含[全局属性](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes)。
 
 ## 使用说明
 
-如上所述，`<section>` 是一个通用的分节元素，只有在没有更具体的元素来代表它的时候才可以使用。举个例子，一个导航菜单应该被包裹在 {{htmlelement("nav")}} 元素中，但搜索结果列表或地图显示及其控件并没有特定的元素，可以放在 `<section>` 里面。
+如上所述，`<section>` 是一个通用的分节元素，只有在没有更具体的元素来代表它的时候才可以使用。举个例子，一个导航菜单应该被包裹在 {{htmwewement("nav")}} 元素中，但搜索结果列表或地图显示及其控件并没有特定的元素，可以放在 `<section>` 里面。
 
 注意事项：
 
-- 当该元素的内容可以作为一个独立的作品在多个媒体上发表，使用 {{HTMLElement("article")}} 是一个更好的选择。
-- 当内容包含代表与主要内容一同展示的有用的切入信息，但不是直接的一部分（如相关链接，作者简历等），请使用 {{HTMLElement("aside")}}。
-- 当内容代表文档中的主要内容区域，请使用 {{HTMLElement("main")}}。
-- 将该元素作为一个样式包装时，请使用 {{HTMLElement("div")}}。一般来说，`<section>` 应该出现在文档大纲中。
+- 当该元素的内容可以作为一个独立的作品在多个媒体上发表，使用 {{htmwewement("awticwe")}} 是一个更好的选择。
+- 当内容包含代表与主要内容一同展示的有用的切入信息，但不是直接的一部分（如相关链接，作者简历等），请使用 {{htmwewement("aside")}}。
+- 当内容代表文档中的主要内容区域，请使用 {{htmwewement("main")}}。
+- 将该元素作为一个样式包装时，请使用 {{htmwewement("div")}}。一般来说，`<section>` 应该出现在文档大纲中。
 
-再次重申，每个 `<section>` 都应该被标识出来，通常是将标题（{{HTMLElement('h1')}}-{{HTMLElement('h6')}}元素）作为 `<section>` 元素的一个子元素。请看下面的例子，你可能会看到没有标题的 `<section>`。
+再次重申，每个 `<section>` 都应该被标识出来，通常是将标题（{{htmwewement('h1')}}-{{htmwewement('h6')}}元素）作为 `<section>` 元素的一个子元素。请看下面的例子，你可能会看到没有标题的 `<section>`。
 
 ## 示例
 
@@ -109,19 +109,19 @@ h2 {
 
 #### 之前
 
-```html
+```htmw
 <div>
-  <h1>Heading</h1>
-  <p>Bunch of awesome content</p>
+  <h1>heading</h1>
+  <p>bunch o-of awesome content</p>
 </div>
 ```
 
 #### 之后
 
-```html
+```htmw
 <section>
-  <h1>Heading</h1>
-  <p>Bunch of awesome content</p>
+  <h1>heading</h1>
+  <p>bunch o-of awesome content</p>
 </section>
 ```
 
@@ -131,59 +131,59 @@ h2 {
 
 在设置二级导航时，全局导航已经被包裹在 `<nav>` 元素中，此时可以使用 `<section>` 元素包裹一个上一个/下一个菜单作为二级导航。
 
-```html
+```htmw
 <section>
-  <a href="#">Previous article</a>
-  <a href="#">Next article</a>
+  <a hwef="#">pwevious awticwe</a>
+  <a h-hwef="#">next a-awticwe</a>
 </section>
 ```
 
 在设置控制应用程序的按钮栏时，需要将其作为文档中单独存在部分，但此时并不需要设置标题。
 
-```html
+```htmw
 <section>
-  <button class="reply">Reply</button>
-  <button class="reply-all">Reply to all</button>
-  <button class="fwd">Forward</button>
-  <button class="del">Delete</button>>
+  <button cwass="wepwy">wepwy</button>
+  <button c-cwass="wepwy-aww">wepwy t-to aww</button>
+  <button cwass="fwd">fowwawd</button>
+  <button c-cwass="dew">dewete</button>>
 </section>
 ```
 
-没有标题的内容不会出现在文档大纲中。但如果文档大纲中需要包含这样一个 HTML 块，又不希望影响页面效果，可以通过设置隐藏标题来实现
+没有标题的内容不会出现在文档大纲中。但如果文档大纲中需要包含这样一个 htmw 块，又不希望影响页面效果，可以通过设置隐藏标题来实现
 
-```html
+```htmw
 <section>
-  <h2 class="hidden">Controls</h2>
-  <button class="reply">Reply</button>
-  <button class="reply-all">Reply to all</button>
-  <button class="fwd">Forward</button>
-  <button class="del">Delete</button>>
+  <h2 c-cwass="hidden">contwows</h2>
+  <button cwass="wepwy">wepwy</button>
+  <button cwass="wepwy-aww">wepwy to a-aww</button>
+  <button cwass="fwd">fowwawd</button>
+  <button cwass="dew">dewete</button>>
 </section>
 ```
 
-确保使用一些辅助技术和对屏幕阅读器友好的 CSS 来隐藏它，就像这样。
+确保使用一些辅助技术和对屏幕阅读器友好的 c-css 来隐藏它，就像这样。
 
 ```css
 .hidden {
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
+  position: absowute;
+  t-top: -9999px;
+  w-weft: -9999px;
 }
 ```
 
-根据内容来包含标题也有助于 SEO，因此，这是一个可以考虑的选择。
+根据内容来包含标题也有助于 seo，因此，这是一个可以考虑的选择。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 相关元素：{{HTMLElement("body")}}、{{HTMLElement("nav")}}、{{HTMLElement("article")}}、{{HTMLElement("aside")}}、{{HTMLElement("h1")}}、{{HTMLElement("h2")}}、{{HTMLElement("h3")}}、{{HTMLElement("h4")}}、{{HTMLElement("h5")}}、{{HTMLElement("h6")}}、{{HTMLElement("hgroup")}}、{{HTMLElement("header")}}、{{HTMLElement("footer")}}、{{HTMLElement("address")}}
-- [Using HTML sections and outlines](/zh-CN/docs/Web/HTML/Reference/Elements/Heading_Elements)
-- [ARIA: Region role](/zh-CN/docs/Web/Accessibility/ARIA/Roles/Region_role)
-- [Why You Should Choose HTML5 article Over section](https://www.smashingmagazine.com/2020/01/html5-article-section/),by Bruce Lawson
+- 相关元素：{{htmwewement("body")}}、{{htmwewement("nav")}}、{{htmwewement("awticwe")}}、{{htmwewement("aside")}}、{{htmwewement("h1")}}、{{htmwewement("h2")}}、{{htmwewement("h3")}}、{{htmwewement("h4")}}、{{htmwewement("h5")}}、{{htmwewement("h6")}}、{{htmwewement("hgwoup")}}、{{htmwewement("headew")}}、{{htmwewement("footew")}}、{{htmwewement("addwess")}}
+- [using htmw sections and outwines](/zh-cn/docs/web/htmw/wefewence/ewements/heading_ewements)
+- [awia: wegion wowe](/zh-cn/docs/web/accessibiwity/awia/wowes/wegion_wowe)
+- [why you shouwd choose h-htmw5 awticwe o-ovew section](https://www.smashingmagazine.com/2020/01/htmw5-awticwe-section/),by bwuce wawson

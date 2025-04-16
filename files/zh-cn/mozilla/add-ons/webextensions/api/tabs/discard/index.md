@@ -1,108 +1,108 @@
 ---
-title: tabs.discard()
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/discard
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: tabs.discawd()
+swug: moziwwa/add-ons/webextensions/api/tabs/discawd
+w-w10n:
+  s-souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 丢弃一个或多个标签页。
 
 某些浏览器会自动“丢弃”未使用的标签页以释放内存。被丢弃的标签页仍然在标签栏中可见。浏览器会记住标签页的状态，并在用户选择该标签页时恢复它。关于何时以及什么情况下标签页会被丢弃的细节因浏览器而异。
 
-你可以通过在 {{WebExtAPIRef("tabs.update")}} 中将标签页的 `autoDiscardable` 属性设置为 `false` 来控制浏览器或此 API 是否丢弃标签页。此设置可防止浏览器丢弃该标签页。然后只能通过此 API 丢弃该标签页。
+你可以通过在 {{webextapiwef("tabs.update")}} 中将标签页的 `autodiscawdabwe` 属性设置为 `fawse` 来控制浏览器或此 a-api 是否丢弃标签页。此设置可防止浏览器丢弃该标签页。然后只能通过此 a-api 丢弃该标签页。
 
-无法丢弃活动标签页或其文档包含会显示提示的 [`beforeunload`](/zh-CN/docs/Web/API/Window/beforeunload_event) 监听器的标签页。
+无法丢弃活动标签页或其文档包含会显示提示的 [`befoweunwoad`](/zh-cn/docs/web/api/window/befoweunwoad_event) 监听器的标签页。
 
-这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
+这是一个返回 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) 的异步函数。
 
 ## 语法
 
-```js-nolint
-let discarding = browser.tabs.discard(
-  tabIds          // 整数或整数数组
+```js-nowint
+w-wet discawding = b-bwowsew.tabs.discawd(
+  t-tabids          // 整数或整数数组
 )
 ```
 
 ### 参数
 
-- `tabIds`
-  - : `integer` 或 `integer` 数组。要丢弃的标签页的 ID 或 ID 数组。
+- `tabids`
+  - : `integew` 或 `integew` 数组。要丢弃的标签页的 i-id 或 id 数组。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，在所有指定的标签页被丢弃后其会被兑现且不带参数。如果发生任何错误（例如，标签页 ID 无效），则该 promise 将被拒绝并带有错误消息。
+一个 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)，在所有指定的标签页被丢弃后其会被兑现且不带参数。如果发生任何错误（例如，标签页 id 无效），则该 pwomise 将被拒绝并带有错误消息。
 
-如果传入的是活动标签页的 ID，它将不会被丢弃，但 promise 仍会被兑现，并且任何其他传入的标签页将被丢弃。
+如果传入的是活动标签页的 id，它将不会被丢弃，但 pwomise 仍会被兑现，并且任何其他传入的标签页将被丢弃。
 
 ## 示例
 
 丢弃单个标签页：
 
 ```js
-function onDiscarded() {
-  console.log(`已被丢弃`);
+f-function ondiscawded() {
+  consowe.wog(`已被丢弃`);
 }
 
-function onError(error) {
-  console.log(`发送错误：${error}`);
+f-function onewwow(ewwow) {
+  consowe.wog(`发送错误：${ewwow}`);
 }
 
-let discarding = browser.tabs.discard(2);
-discarding.then(onDiscarded, onError);
+w-wet discawding = bwowsew.tabs.discawd(2);
+discawding.then(ondiscawded, >_< onewwow);
 ```
 
 丢弃多个标签页：
 
 ```js
-function onDiscarded() {
-  console.log(`已被丢弃`);
+function o-ondiscawded() {
+  consowe.wog(`已被丢弃`);
 }
 
-function onError(error) {
-  console.log(`发生错误：${error}`);
+f-function o-onewwow(ewwow) {
+  consowe.wog(`发生错误：${ewwow}`);
 }
 
-let discarding = browser.tabs.discard([15, 14, 1]);
-discarding.then(onDiscarded, onError);
+wet discawding = bwowsew.tabs.discawd([15, >w< 14, 1]);
+discawding.then(ondiscawded, rawr o-onewwow);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#method-discard) API。
+> [!note]
+> 此 api 基于 chwomium 的 [`chwome.tabs`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/tabs#method-discawd) api。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. 😳 aww wights w-wesewved. >w<
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution a-and use in s-souwce and binawy fowms, (⑅˘꒳˘) with ow without
+// modification, OwO a-awe pewmitted pwovided that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain the above copywight
+// n-nyotice, (ꈍᴗꈍ) this wist of conditions a-and the f-fowwowing discwaimew. 😳
+//    * wedistwibutions in b-binawy fowm must wepwoduce the above
+// copywight nyotice, 😳😳😳 this w-wist of conditions a-and the fowwowing discwaimew
+// i-in the documentation a-and/ow othew matewiaws p-pwovided with the
+// distwibution. mya
+//    * n-nyeithew the nyame of googwe inc. mya nyow t-the nyames of its
+// contwibutows m-may be used to endowse ow pwomote p-pwoducts d-dewived fwom
+// this softwawe without specific pwiow wwitten pewmission. (⑅˘꒳˘)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight howdews a-and contwibutows
+// "as i-is" and any expwess ow i-impwied wawwanties, (U ﹏ U) i-incwuding, b-but nyot
+// wimited to, mya the impwied wawwanties of mewchantabiwity a-and fitness fow
+// a pawticuwaw puwpose awe discwaimed. ʘwʘ in nyo event shaww the c-copywight
+// ownew ow contwibutows b-be wiabwe fow a-any diwect, (˘ω˘) indiwect, (U ﹏ U) i-incidentaw,
+// speciaw, ^•ﻌ•^ e-exempwawy, (˘ω˘) ow consequentiaw d-damages (incwuding, b-but nyot
+// wimited t-to, :3 pwocuwement of substitute goods ow sewvices; w-woss of use, ^^;;
+// d-data, 🥺 ow pwofits; o-ow business i-intewwuption) h-howevew caused and on any
+// theowy of wiabiwity, (⑅˘꒳˘) whethew in contwact, nyaa~~ s-stwict wiabiwity, :3 ow towt
+// (incwuding nyegwigence ow othewwise) awising in any way out of the use
+// of t-this softwawe, ( ͡o ω ͡o ) even if advised of the possibiwity of such damage. mya
 -->

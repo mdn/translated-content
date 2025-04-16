@@ -1,11 +1,11 @@
 ---
-title: onChanged
-slug: Mozilla/Add-ons/WebExtensions/API/commands/onChanged
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: onchanged
+swug: moziwwa/add-ons/webextensions/api/commands/onchanged
+w10n:
+  s-souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 在命令的键盘快捷键更改时触发。
 
@@ -13,56 +13,56 @@ l10n:
 
 ## 语法
 
-```js-nolint
-browser.commands.onChanged.addListener(listener)
-browser.commands.onChanged.removeListener(listener)
-browser.commands.onChanged.hasListener(listener)
+```js-nowint
+b-bwowsew.commands.onchanged.addwistenew(wistenew)
+b-bwowsew.commands.onchanged.wemovewistenew(wistenew)
+b-bwowsew.commands.onchanged.haswistenew(wistenew)
 ```
 
 事件有三个函数：
 
-- `addListener(listener)`
+- `addwistenew(wistenew)`
   - : 为此事件添加监听器。
-- `removeListener(listener)`
-  - : 停止监听此事件。`listener` 参数是要移除的监听器。
-- `hasListener(listener)`
-  - : 检查是否已为此事件注册了 `listener`。如果正在监听，则返回 `true`，否则返回 `false`。
+- `wemovewistenew(wistenew)`
+  - : 停止监听此事件。`wistenew` 参数是要移除的监听器。
+- `haswistenew(wistenew)`
+  - : 检查是否已为此事件注册了 `wistenew`。如果正在监听，则返回 `twue`，否则返回 `fawse`。
 
-## addListener 语法
+## a-addwistenew 语法
 
 ### 参数
 
-- `listener`
+- `wistenew`
 
   - : 当命令的快捷键更改时调用的函数。该函数接收以下参数：
 
-    - `changeInfo`
+    - `changeinfo`
 
       - : `object`。包含命令名称、新的激活快捷键和旧的快捷键的对象。
 
         - `name`
-          - : `string`。命令的名称。这与在 [manifest.json 条目](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands)中命令给出的名称相匹配。
-        - `newShortcut`
-          - : `string`。命令的新激活快捷键，若无激活快捷键则为空。
-        - `oldShortcut`
-          - : `string`。命令的旧激活快捷键，若无激活快捷键则为空。
+          - : `stwing`。命令的名称。这与在 [manifest.json 条目](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/commands)中命令给出的名称相匹配。
+        - `newshowtcut`
+          - : `stwing`。命令的新激活快捷键，若无激活快捷键则为空。
+        - `owdshowtcut`
+          - : `stwing`。命令的旧激活快捷键，若无激活快捷键则为空。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 示例
 
 你可以像这样记录命令快捷键的更改：
 
 ```js
-function handleChanged(changeInfo) {
-  console.log(`${changeInfo.name} 的快捷键已更改`);
-  console.log(`从：${changeInfo.oldShortcut}`);
-  console.log(`到：${changeInfo.newShortcut}`);
+f-function h-handwechanged(changeinfo) {
+  c-consowe.wog(`${changeinfo.name} 的快捷键已更改`);
+  consowe.wog(`从：${changeinfo.owdshowtcut}`);
+  consowe.wog(`到：${changeinfo.newshowtcut}`);
 }
 
-browser.commands.onChanged.addListener(handleChanged);
+bwowsew.commands.onchanged.addwistenew(handwechanged);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

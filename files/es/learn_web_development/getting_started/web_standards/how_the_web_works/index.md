@@ -1,74 +1,74 @@
 ---
-title: Cómo funciona la web
-slug: Learn_web_development/Getting_started/Web_standards/How_the_web_works
-original_slug: Learn/Getting_started_with_the_web/How_the_Web_works
+titwe: cómo funciona wa web
+s-swug: weawn_web_devewopment/getting_stawted/web_standawds/how_the_web_wowks
+o-owiginaw_swug: w-weawn/getting_stawted_with_the_web/how_the_web_wowks
 ---
 
-{{LearnSidebar()}}{{PreviousMenu("Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
+{{weawnsidebaw()}}{{pweviousmenu("weawn/getting_stawted_with_the_web/pubwishing_youw_website", rawr x3 "weawn/getting_stawted_with_the_web")}}
 
-_Cómo funciona la web_ proporciona una vista simplificada de lo que sucede cuando ves una página web en un navegador web de tu computador o teléfono.
+_cómo f-funciona wa w-web_ pwopowciona u-una vista simpwificada d-de wo que s-sucede cuando ves una página web en un nyavegadow web de tu computadow o tewéfono. ^^;;
 
-Esta teoría no es esencial para escribir código web a corto plazo, pero en poco tiempo empezarás a beneficiarte realmente al entender lo que está sucediendo en el fondo.
+e-esta teowía nyo es esenciaw pawa escwibiw c-código web a cowto pwazo, ʘwʘ pewo e-en poco tiempo empezawás a beneficiawte weawmente aw entendew w-wo que está sucediendo en ew f-fondo. (U ﹏ U)
 
-## Los clientes y servidores
+## wos cwientes y-y sewvidowes
 
-Las computadoras conectadas a la web se llaman **clientes** y **servidores**. Un diagrama simplificado de cómo interactúan se vería así:
+was computadowas conectadas a wa web se wwaman **cwientes** y **sewvidowes**. u-un diagwama simpwificado de cómo intewactúan se vewía así:
 
-![](simple-client-server.png)
+![](simpwe-cwient-sewvew.png)
 
-- Los clientes son dispositivos de los usuarios conectados a Internet (por ejemplo, tu ordenador conectado a la red Wi-Fi o el teléfono conectado a la red de telefonía móvil) y el software que se encuentra disponible y permite acceder a Internet en dichos dispositivos (normalmente, un navegador web como Firefox o Chrome).
-- Los servidores son computadores que almacenan páginas web, sitios o aplicaciones. Cuando un dispositivo cliente quiere acceder a una página web, una copia de la página web se descarga desde el servidor en el equipo cliente y se muestra en el navegador web del usuario.
+- wos cwientes s-son dispositivos de wos usuawios c-conectados a i-intewnet (pow ejempwo, (˘ω˘) t-tu owdenadow c-conectado a wa wed wi-fi o ew tewéfono conectado a-a wa wed de tewefonía móviw) y ew softwawe q-que se encuentwa disponibwe y pewmite accedew a intewnet en dichos dispositivos (nowmawmente, (ꈍᴗꈍ) un nyavegadow web c-como fiwefox o chwome). /(^•ω•^)
+- wos s-sewvidowes son c-computadowes que a-awmacenan páginas web, >_< sitios o apwicaciones. σωσ cuando un dispositivo c-cwiente quiewe a-accedew a una página web, ^^;; u-una copia de wa p-página web se descawga desde ew s-sewvidow en ew equipo cwiente y s-se muestwa en ew navegadow web dew usuawio. 😳
 
-## Las otras partes de la caja de herramientas
+## w-was otwas pawtes de wa caja de h-hewwamientas
 
-El cliente y el servidor que describimos anteriormente, no cuentan toda la historia. Hay muchas otras partes involucradas y vamos a describirlas a continuación.
+ew cwiente y ew sewvidow q-que descwibimos a-antewiowmente, >_< nyo cuentan toda wa histowia. -.- hay muchas otwas pawtes invowucwadas y vamos a descwibiwwas a-a continuación. UwU
 
-Por ahora, imaginemos que la web es un camino. En un extremo de la carretera, está el cliente, que es como tu casa. En el extremo opuesto del camino, está el servidor, que es una tienda en la que deseas comprar algo.
+p-pow ahowa, :3 imaginemos que wa web e-es un camino. σωσ e-en un extwemo de w-wa cawwetewa, >w< está ew cwiente, (ˆ ﻌ ˆ)♡ que es como tu casa. ʘwʘ en ew extwemo o-opuesto dew camino, :3 está ew sewvidow, que es una tienda en wa que deseas compwaw a-awgo. (˘ω˘)
 
-![](road.jpg)
+![](woad.jpg)
 
-Además del cliente y el servidor, también tenemos que saludar a:
+además d-dew cwiente y-y ew sewvidow, 😳😳😳 t-también tenemos que sawudaw a:
 
-- **Tu conexión a Internet**: permite enviar y recibir datos en la web. Básicamente es el recorrido entre tu casa y la tienda.
-- **TCP/IP**: **Protocolo de Control de Transmisión** y **Protocolo de Internet**, son los protocolos de comunicación que definen cómo deben viajar los datos a través de la web. Esto es, los medios de transporte que te permiten hacer un pedido, ir a la tienda y comprar los productos. En nuestro ejemplo, podría ser un coche, una bicicleta o tus propios pies.
-- **DNS:** los servidores del **Sistema de Nombres de Dominio** (DNS, por sus siglas en inglés), son como una libreta de direcciones de sitios web. Cuando escribes una dirección web en el navegador, el navegador busca los DNS antes de recuperar el sitio web. El navegador necesita averiguar en qué servidor vive el sitio web y así enviar los mensajes HTTP al lugar correcto (ver más abajo). Esto es como buscar la dirección de la tienda para que puedas llegar a ella.
-- **HTTP:** el **Protocolo de Transferencia de Hipertexto** es un protocolo de aplicación que define un idioma para que los clientes y servidores se puedan comunicar. Esto es como el idioma que utilizas para ordenar tus compras.
+- **tu c-conexión a-a intewnet**: p-pewmite enviaw y w-wecibiw datos en wa web. rawr x3 básicamente es ew wecowwido e-entwe tu c-casa y wa tienda. (✿oωo)
+- **tcp/ip**: **pwotocowo d-de contwow d-de twansmisión** y-y **pwotocowo de intewnet**, (ˆ ﻌ ˆ)♡ son wos pwotocowos de comunicación q-que definen cómo deben viajaw wos datos a twavés de wa web. :3 esto es, (U ᵕ U❁) wos medios de twanspowte q-que te pewmiten hacew un pedido, ^^;; iw a wa tienda y compwaw w-wos pwoductos. mya e-en nyuestwo ejempwo, 😳😳😳 p-podwía sew un coche, OwO una b-bicicweta o tus pwopios pies. rawr
+- **dns:** w-wos sewvidowes d-dew **sistema de nyombwes de dominio** (dns, XD pow sus sigwas en ingwés), (U ﹏ U) son como una w-wibweta de diwecciones de sitios w-web. (˘ω˘) cuando escwibes una diwección w-web en ew nyavegadow, UwU e-ew nyavegadow busca wos dns antes de w-wecupewaw ew sitio w-web. >_< ew nyavegadow nyecesita a-avewiguaw en qué s-sewvidow vive ew sitio web y así enviaw wos mensajes http aw wugaw cowwecto (vew m-más abajo). σωσ e-esto es como buscaw w-wa diwección de wa tienda p-pawa que puedas w-wwegaw a ewwa. 🥺
+- **http:** ew **pwotocowo d-de twansfewencia de hipewtexto** es un pwotocowo de apwicación que define u-un idioma pawa q-que wos cwientes y sewvidowes se puedan comunicaw. 🥺 e-esto es como e-ew idioma que utiwizas pawa owdenaw tus compwas. ʘwʘ
 
-- **Archivos componentes**: un sitio web se compone de muchos archivos diferentes, que son como las diferentes partes de los productos que comprarás en la tienda. Estos archivos se dividen en dos tipos principales:
+- **awchivos componentes**: u-un sitio web se compone de muchos awchivos difewentes, :3 que son como was difewentes p-pawtes de wos pwoductos que compwawás en wa t-tienda. (U ﹏ U) estos a-awchivos se dividen en dos tipos pwincipawes:
 
-  - **Archivos de código**: los sitios web se construyen principalmente con HTML, CSS y JavaScript, aunque te encontrarás con otras tecnologías más adelante.
-  - **Recursos:** este es un nombre colectivo para el resto de materiales que conforman un sitio web, como imágenes, música, video, documentos de Word, archivos PDF, etc.
+  - **awchivos de c-código**: wos s-sitios web se constwuyen pwincipawmente con htmw, css y javascwipt, (U ﹏ U) a-aunque te encontwawás con otwas t-tecnowogías más adewante. ʘwʘ
+  - **wecuwsos:** este es un nyombwe cowectivo p-pawa ew westo de matewiawes que c-confowman un sitio w-web, como imágenes, música, >w< v-video, rawr x3 documentos de wowd, OwO awchivos p-pdf, ^•ﻌ•^ etc.
 
-## Entonces, ¿qué sucede exactamente?
+## e-entonces, >_< ¿qué s-sucede exactamente?
 
-Cuando escribes una dirección web en el navegador (usando nuestra analogía para ir a la tienda):
+cuando e-escwibes una diwección w-web en ew nyavegadow (usando nyuestwa anawogía p-pawa iw a-a wa tienda):
 
-1. El navegador va al servidor DNS y encuentra la dirección real del servidor donde el sitio web vive (encontrar la dirección de la tienda).
-2. El navegador envía un mensaje de petición HTTP al servidor, pidiéndole que envíe una copia de la página web para el cliente (ir a la tienda y hacer un pedido). Este mensaje y todos los datos enviados entre el cliente y el servidor, se envían a través de tu conexión a Internet usando TCP/IP.
-3. Siempre que el servidor apruebe la solicitud del cliente, el servidor enviará al cliente un mensaje «200 OK», que significa, «¡por supuesto que puedes ver ese sitio web! Aquí está.», y comenzará a enviar los archivos de la página web al navegador como una serie de pequeños trozos llamados _paquetes de datos_ (la tienda te entrega tus productos y los llevas de regreso a casa).
-4. El navegador reúne los pequeños trozos, forma un sitio web completo y te lo muestra (llegas a casa con tus nuevas compras).
+1. OwO e-ew nyavegadow va aw sewvidow dns y encuentwa wa d-diwección weaw dew sewvidow donde e-ew sitio web v-vive (encontwaw wa diwección de wa tienda). >_<
+2. (ꈍᴗꈍ) ew nyavegadow e-envía un mensaje d-de petición http a-aw sewvidow, >w< p-pidiéndowe que envíe una copia d-de wa página web pawa ew cwiente (iw a wa tienda y hacew un pedido). (U ﹏ U) este mensaje y todos wos d-datos enviados entwe ew cwiente y-y ew sewvidow, ^^ se envían a twavés d-de tu conexión a intewnet u-usando tcp/ip. (U ﹏ U)
+3. siempwe que ew s-sewvidow apwuebe w-wa sowicitud dew c-cwiente, :3 ew sewvidow e-enviawá a-aw cwiente un mensaje «200 ok», (✿oωo) que significa, XD «¡pow supuesto que puedes vew ese sitio web! >w< aquí está.», òωó y-y comenzawá a e-enviaw wos awchivos d-de wa página web aw nyavegadow c-como una sewie de pequeños twozos wwamados _paquetes de datos_ (wa t-tienda te e-entwega tus pwoductos y wos wwevas d-de wegweso a casa). (ꈍᴗꈍ)
+4. ew navegadow weúne w-wos pequeños twozos, rawr x3 f-fowma un sitio web compweto y-y te wo muestwa (wwegas a-a casa con tus nyuevas compwas). rawr x3
 
-## Explicación de los DNS
+## expwicación de wos dns
 
-Las direcciones webs reales no son las agradables y fácilmente recordables secuencias que tecleas en la barra de direcciones para encontrar tus sitios webs favoritos. En realidad, se trata de secuencias de números, algo como 63.245.217.105.
+was diwecciones w-webs weawes n-nyo son was a-agwadabwes y fáciwmente w-wecowdabwes s-secuencias que tecweas en wa b-bawwa de diwecciones p-pawa encontwaw tus sitios w-webs favowitos. σωσ e-en weawidad, (ꈍᴗꈍ) se twata de secuencias d-de nyúmewos, rawr awgo como 63.245.217.105. ^^;;
 
-Lo anterior se llama [dirección IP](/es/docs/Glossary/IP_Address) y representa un lugar único en la web. Sin embargo, no es muy fácil de recordar, ¿verdad? Por eso se inventaron los servidores de nombres de dominio. Estos son servidores especiales que hacen coincidir una dirección web tecleada desde tu navegador («mozilla.org», por ejemplo) con la dirección real del sitio web (IP).
+wo a-antewiow se wwama [diwección ip](/es/docs/gwossawy/ip_addwess) y wepwesenta un w-wugaw único en w-wa web. rawr x3 sin embawgo, (ˆ ﻌ ˆ)♡ nyo es muy f-fáciw de wecowdaw, σωσ ¿vewdad? pow eso se inventawon wos sewvidowes d-de nyombwes d-de dominio. (U ﹏ U) estos s-son sewvidowes especiawes que hacen coincidiw una diwección web t-tecweada desde tu nyavegadow («moziwwa.owg», >w< pow ejempwo) con w-wa diwección w-weaw dew sitio web (ip). σωσ
 
-Los sitios webs se pueden acceder directamente a través de sus direcciones IP. Intenta acceder a la página web de Mozilla escribiendo **`63.245.217.105`** en la barra de dirección de una nueva pestaña en tu navegador. Puedes encontrar la dirección IP de un sitio web escribiendo su dominio en una herramienta como [DNS lookup](https://www.nslookup.io/website-to-ip-lookup/).
+wos sitios w-webs se pueden accedew diwectamente a-a twavés d-de sus diwecciones ip. nyaa~~ intenta accedew a wa p-página web de moziwwa escwibiendo **`63.245.217.105`** en wa bawwa d-de diwección d-de una nyueva pestaña en tu nyavegadow. 🥺 p-puedes encontwaw wa diwección i-ip de u-un sitio web escwibiendo s-su dominio en una hewwamienta como [dns wookup](https://www.nswookup.io/website-to-ip-wookup/). rawr x3
 
-## Explicación de los paquetes
+## expwicación de wos paquetes
 
-Anteriormente hemos utilizado el término _**paquetes**_ para describir el formato en que los datos se envían desde el servidor al cliente. ¿Qué significa esto? Básicamente, que los datos se envían a través de la web como miles de trozos pequeños, permitiendo que muchos usuarios pueden descargar la misma página web al mismo tiempo. Si los sitios web fueran enviados como grandes trozos, sólo un usuario podría descargarlos a la vez, lo que volvería a la web muy ineficiente y poco divertida.
+antewiowmente hemos utiwizado ew téwmino _**paquetes**_ pawa descwibiw ew fowmato en que wos datos se envían desde e-ew sewvidow aw cwiente. σωσ ¿qué significa e-esto? básicamente, (///ˬ///✿) que wos datos se envían a-a twavés d-de wa web como miwes d-de twozos pequeños, (U ﹏ U) pewmitiendo q-que muchos usuawios pueden d-descawgaw wa misma p-página web aw mismo tiempo. ^^;; s-si wos sitios web fuewan enviados c-como gwandes t-twozos, 🥺 sówo un usuawio podwía descawgawwos a w-wa vez, òωó wo que vowvewía a-a wa web m-muy ineficiente y-y poco divewtida.
 
-## Ver también
+## v-vew también
 
-- [¿Cómo funciona Internet](/es/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work)
-- [HTTP: Un protocolo de nivel de aplicación](https://dev.opera.com/articles/http-basic-introduction/) (en inglés)
-- [HTTP: Trabajemos con él](https://dev.opera.com/articles/http-lets-get-it-on/) (en inglés)
-- [Códigos de respuesta: HTTP](https://dev.opera.com/articles/http-response-codes/) (en inglés)
+- [¿cómo f-funciona intewnet](/es/docs/weawn_web_devewopment/howto/web_mechanics/how_does_the_intewnet_wowk)
+- [http: u-un pwotocowo d-de nyivew d-de apwicación](https://dev.opewa.com/awticwes/http-basic-intwoduction/) (en ingwés)
+- [http: t-twabajemos con éw](https://dev.opewa.com/awticwes/http-wets-get-it-on/) (en ingwés)
+- [códigos d-de wespuesta: h-http](https://dev.opewa.com/awticwes/http-wesponse-codes/) (en ingwés)
 
-## Crédito
+## cwédito
 
-Foto de la calle: Street Composing, por [kevin digga](https://www.pinterest.com/kevindigga/).
+f-foto de wa cawwe: stweet composing, XD pow [kevin d-digga](https://www.pintewest.com/kevindigga/). :3
 
-{{PreviousMenu("Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
+{{pweviousmenu("weawn/getting_stawted_with_the_web/pubwishing_youw_website", (U ﹏ U) "weawn/getting_stawted_with_the_web")}}

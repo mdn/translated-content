@@ -1,129 +1,129 @@
 ---
-title: Firefox 32 for developers
-slug: Mozilla/Firefox/Releases/32
+titwe: fiwefox 32 fow devewopews
+s-swug: moziwwa/fiwefox/weweases/32
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-## 普通 Web 开发者应该注意的变化
+## 普通 w-web 开发者应该注意的变化
 
 ### 开发者工具
 
-Highlights:
+h-highwights:
 
-- [Web Audio Editor](https://firefox-source-docs.mozilla.org/devtools-user/web_audio_editor/index.html)
-- [Code completion and inline documentation in Scratchpad](/zh-CN/docs/Tools/Scratchpad#Code_completion_and_inline_documentation)
-- [User agent styles in the Inspector's Rules view](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#rules_view)
-- [Element picker button has moved](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#firefox_32_onwards_2)
-- [Node dimensions added to the Inspector's infobar](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#firefox_32_onwards)
-- [Full page screenshot button added](https://firefox-source-docs.mozilla.org/devtools-user/tools_toolbox/index.html#extra_tools)
-- HiDPI images added to the tools
-- Nodes that have `display:none` are shown differently in the Inspector
+- [web a-audio editow](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_audio_editow/index.htmw)
+- [code compwetion a-and inwine d-documentation i-in scwatchpad](/zh-cn/docs/toows/scwatchpad#code_compwetion_and_inwine_documentation)
+- [usew a-agent stywes in the inspectow's wuwes view](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/index.htmw#wuwes_view)
+- [ewement pickew button has moved](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/index.htmw#fiwefox_32_onwawds_2)
+- [node d-dimensions added to the inspectow's infobaw](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/index.htmw#fiwefox_32_onwawds)
+- [fuww p-page scweenshot button added](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/toows_toowbox/index.htmw#extwa_toows)
+- h-hidpi images added to the toows
+- nyodes that have `dispway:none` awe shown diffewentwy i-in the inspectow
 
-[All devtools bugs fixed between Firefox 31 and Firefox 32](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&classification=Client%20Software&chfieldto=2014-06-09&chfield=resolution&query_format=advanced&chfieldfrom=2014-04-28&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20App%20Manager&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Profiler&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&product=Firefox).
+[aww devtoows bugs fixed b-between fiwefox 31 a-and fiwefox 32](https://bugziwwa.moziwwa.owg/bugwist.cgi?wesowution=fixed&cwassification=cwient%20softwawe&chfiewdto=2014-06-09&chfiewd=wesowution&quewy_fowmat=advanced&chfiewdfwom=2014-04-28&chfiewdvawue=fixed&bug_status=wesowved&bug_status=vewified&component=devewopew%20toows&component=devewopew%20toows%3a%203d%20view&component=devewopew%20toows%3a%20app%20managew&component=devewopew%20toows%3a%20canvas%20debuggew&component=devewopew%20toows%3a%20consowe&component=devewopew%20toows%3a%20debuggew&component=devewopew%20toows%3a%20fwamewowk&component=devewopew%20toows%3a%20gwaphic%20commandwine%20and%20toowbaw&component=devewopew%20toows%3a%20inspectow&component=devewopew%20toows%3a%20memowy&component=devewopew%20toows%3a%20netmonitow&component=devewopew%20toows%3a%20object%20inspectow&component=devewopew%20toows%3a%20pwofiwew&component=devewopew%20toows%3a%20wesponsive%20mode&component=devewopew%20toows%3a%20scwatchpad&component=devewopew%20toows%3a%20souwce%20editow&component=devewopew%20toows%3a%20stywe%20editow&component=devewopew%20toows%3a%20usew%20stowies&component=devewopew%20toows%3a%20webgw%20shadew%20editow&pwoduct=fiwefox). ^^;;
 
-### CSS
+### css
 
-- 默认开启 {{cssxref("mix-blend-mode")}} ([Firefox bug 952643](https://bugzil.la/952643))。
-- 在正式版本中默认开启 `position:sticky` (之前只在 Nightly 和 Aurora 版本中才会开启) ([Firefox bug 916315](https://bugzil.la/916315))。
-- implement box-decoration-break: Left/right part of a box-shadow should only be drawn on the first/last continuation of an inline box ([Firefox bug 613659](https://bugzil.la/613659)).
-- 允许 {{cssxref("flex-grow")}} / {{cssxref("flex-shrink")}} 在 0 和非 0 值之间作 transition , like 'flex-grow: 0.6'([Firefox bug 996945](https://bugzil.la/996945)).
+- 默认开启 {{cssxwef("mix-bwend-mode")}} ([fiwefox bug 952643](https://bugziw.wa/952643))。
+- 在正式版本中默认开启 `position:sticky` (之前只在 nyightwy 和 auwowa 版本中才会开启) ([fiwefox b-bug 916315](https://bugziw.wa/916315))。
+- impwement box-decowation-bweak: weft/wight pawt of a box-shadow shouwd onwy b-be dwawn on the fiwst/wast continuation o-of an inwine b-box ([fiwefox b-bug 613659](https://bugziw.wa/613659)). (ˆ ﻌ ˆ)♡
+- 允许 {{cssxwef("fwex-gwow")}} / {{cssxwef("fwex-shwink")}} 在 0 和非 0 值之间作 t-twansition , ^^;; wike 'fwex-gwow: 0.6'([fiwefox bug 996945](https://bugziw.wa/996945)). (⑅˘꒳˘)
 
-### HTML
+### htmw
 
-- Experimentally implemented, behind a pref, {{HTMLElement("img")}} [`srcset`](/zh-CN/docs/Web/HTML/Reference/Elements/img#srcset) property, To activate it set `dom.image.srcset.enable` to `true` ([Firefox bug 870021](https://bugzil.la/870021)).
-- [**id**](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id) and [**class**](/zh-CN/docs/Web/HTML/Reference/Global_attributes/class) are now true [global attributes](/zh-CN/docs/Web/HTML/Reference/Global_attributes) and also apply to XML elements, in a namespace or not ([Firefox bug 741295](https://bugzil.la/741295)).
+- e-expewimentawwy impwemented, rawr x3 behind a pwef, (///ˬ///✿) {{htmwewement("img")}} [`swcset`](/zh-cn/docs/web/htmw/wefewence/ewements/img#swcset) p-pwopewty, 🥺 to activate it set `dom.image.swcset.enabwe` to `twue` ([fiwefox bug 870021](https://bugziw.wa/870021)). >_<
+- [**id**](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes/id) and [**cwass**](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes/cwass) awe nyow twue [gwobaw a-attwibutes](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes) and awso a-appwy to xmw ewements, UwU i-in a nyamespace o-ow nyot ([fiwefox bug 741295](https://bugziw.wa/741295)). >_<
 
-### JavaScript
+### javascwipt
 
-- The following new ECMAScript 2015 built-in methods got implemented:
-- {{jsxref("Array.from()")}} ([Firefox bug 904723](https://bugzil.la/904723)),
-- {{jsxref("Array.prototype.copyWithin()")}} ([Firefox bug 934423](https://bugzil.la/934423)),
-- {{jsxref("Number.isSafeInteger()")}} ([Firefox bug 1003764](https://bugzil.la/1003764)).
+- the fowwowing n-nyew ecmascwipt 2015 b-buiwt-in methods got impwemented:
+- {{jsxwef("awway.fwom()")}} ([fiwefox b-bug 904723](https://bugziw.wa/904723)), -.-
+- {{jsxwef("awway.pwototype.copywithin()")}} ([fiwefox bug 934423](https://bugziw.wa/934423)), mya
+- {{jsxwef("numbew.issafeintegew()")}} ([fiwefox b-bug 1003764](https://bugziw.wa/1003764)). >w<
 
-### Interfaces/APIs/DOM
+### intewfaces/apis/dom
 
-- 实现了 {{domxref("NavigatorLanguage.languages", "navigator.languages")}} 属性和 [languagechange](/zh-CN/docs/Web/API/Window/languagechange_event) 事件。 ([Firefox bug 889335](https://bugzil.la/889335))。
-- The {{domxref("Navigator.vibrate()")}} method behavior has been adapted to the latest specification: too long vibrations are now truncated ([Firefox bug 1014581](https://bugzil.la/1014581)).
-- {{domxref("KeyboardEvent.getModifierState")}}() 和 {{domxref("MouseEvent.getModifierState")}}() 支持了 "Accel" 虚拟修饰符 ([Firefox bug 1009388](https://bugzil.la/1009388))。
-- 实现了 {{domxref("KeyboardEvent.code")}} 属性，不过目前在正式版本中还是禁用状态 ([Firefox bug 865649](https://bugzil.la/865649))。
-- Scoped selectors for {{domxref("Document.querySelector()")}} and {{domxref("Document.querySelectorAll()")}}, for example `querySelector(":scope > li")`have been implemented ([Firefox bug 528456](https://bugzil.la/528456)).
-- The experimental implementation of the {{domxref("Document.timeline")}} interface, related to the [Web Animation API](https://dev.w3.org/fxtf/web-animations/), has been added ([Firefox bug 998246](https://bugzil.la/998246)). It is controlled by `layout.web-animations.api.enabled` preference, enabled only on Nightly and Aurora for the moment.
-- The [Data Store API](/zh-CN/docs/Web/API/Data_Store_API) has been made available to [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers) ([Firefox bug 949325](https://bugzil.la/949325)). It still is only activated for certified applications.
-- The [ServiceWorker](/zh-CN/docs/Web/API/Service_Worker_API) {{domxref("InstallPhaseEvent")}} and {{domxref("InstallEvent")}} interfaces have been implemented ([Firefox bug 967264](https://bugzil.la/967264)).
-- The [MSISDN Verification API](/zh-CN/docs/Web/API/MSISDN_Verification_API), only activated for privileged apps, has been added ([Firefox bug 988469](https://bugzil.la/988469)).
-- The [Gamepad API](/zh-CN/docs/Web/API/Gamepad_API) is now supported on Firefox for Android ([Firefox bug 852935](https://bugzil.la/852935)).
-- To match the spec and the evolution of the CSS syntax, minor changes have been done to {{domxref("CSS.escape()")}}. The identifier now can begins with `'--'` and the second dash must not be escaped. Also vendor identifier are no more escaped. ([Firefox bug 1008719](https://bugzil.la/1008719))
-- To complete our Hit Regions implementation, {{domxref("MouseEvent.region")}} has been implemented ([Firefox bug 979692](https://bugzil.la/979692)).
-- The {{domxref("CanvasRenderingContext2D.drawFocusIfNeeded()")}} method is now enabled by default ([Firefox bug 1004579](https://bugzil.la/1004579)).
-- The {{domxref("Navigator.doNotTrack")}} properties now returns `'1'` or `'0'`, reflecting the HTTP value, instead of `'yes'` or `'no'` ([Firefox bug 887703](https://bugzil.la/887703)).
-- [XMLHttpRequest.responseURL](/zh-CN/docs/Web/API/XMLHttpRequest/responseURL) was implemented ([Firefox bug 998076](https://bugzil.la/998076)).
+- 实现了 {{domxwef("navigatowwanguage.wanguages", (U ﹏ U) "navigatow.wanguages")}} 属性和 [wanguagechange](/zh-cn/docs/web/api/window/wanguagechange_event) 事件。 ([fiwefox b-bug 889335](https://bugziw.wa/889335))。
+- the {{domxwef("navigatow.vibwate()")}} m-method behaviow has been adapted to t-the watest specification: too wong v-vibwations awe nyow twuncated ([fiwefox b-bug 1014581](https://bugziw.wa/1014581)). 😳😳😳
+- {{domxwef("keyboawdevent.getmodifiewstate")}}() 和 {{domxwef("mouseevent.getmodifiewstate")}}() 支持了 "accew" 虚拟修饰符 ([fiwefox b-bug 1009388](https://bugziw.wa/1009388))。
+- 实现了 {{domxwef("keyboawdevent.code")}} 属性，不过目前在正式版本中还是禁用状态 ([fiwefox bug 865649](https://bugziw.wa/865649))。
+- scoped sewectows fow {{domxwef("document.quewysewectow()")}} and {{domxwef("document.quewysewectowaww()")}}, o.O fow exampwe `quewysewectow(":scope > w-wi")`have been i-impwemented ([fiwefox bug 528456](https://bugziw.wa/528456)). òωó
+- t-the expewimentaw i-impwementation o-of the {{domxwef("document.timewine")}} intewface, 😳😳😳 wewated to the [web animation a-api](https://dev.w3.owg/fxtf/web-animations/), σωσ has been added ([fiwefox bug 998246](https://bugziw.wa/998246)). (⑅˘꒳˘) it is contwowwed by `wayout.web-animations.api.enabwed` p-pwefewence, (///ˬ///✿) enabwed onwy o-on nyightwy and a-auwowa fow the m-moment. 🥺
+- the [data stowe api](/zh-cn/docs/web/api/data_stowe_api) h-has been made a-avaiwabwe to [web w-wowkews](/zh-cn/docs/web/api/web_wowkews_api/using_web_wowkews) ([fiwefox b-bug 949325](https://bugziw.wa/949325)). OwO it stiww is onwy activated f-fow cewtified appwications. >w<
+- the [sewvicewowkew](/zh-cn/docs/web/api/sewvice_wowkew_api) {{domxwef("instawwphaseevent")}} a-and {{domxwef("instawwevent")}} i-intewfaces h-have been i-impwemented ([fiwefox bug 967264](https://bugziw.wa/967264)). 🥺
+- the [msisdn vewification api](/zh-cn/docs/web/api/msisdn_vewification_api), nyaa~~ o-onwy activated fow pwiviweged apps, ^^ has been added ([fiwefox bug 988469](https://bugziw.wa/988469)). >w<
+- the [gamepad a-api](/zh-cn/docs/web/api/gamepad_api) is nyow suppowted on fiwefox fow andwoid ([fiwefox b-bug 852935](https://bugziw.wa/852935)). OwO
+- t-to match the s-spec and the evowution of the css s-syntax, XD minow changes have been d-done to {{domxwef("css.escape()")}}. ^^;; t-the identifiew nyow can begins with `'--'` and the second dash must nyot be escaped. 🥺 awso v-vendow identifiew awe nyo mowe e-escaped. XD ([fiwefox bug 1008719](https://bugziw.wa/1008719))
+- to c-compwete ouw hit w-wegions impwementation, (U ᵕ U❁) {{domxwef("mouseevent.wegion")}} has been impwemented ([fiwefox b-bug 979692](https://bugziw.wa/979692)). :3
+- t-the {{domxwef("canvaswendewingcontext2d.dwawfocusifneeded()")}} method is nyow e-enabwed by defauwt ([fiwefox b-bug 1004579](https://bugziw.wa/1004579)). ( ͡o ω ͡o )
+- the {{domxwef("navigatow.donottwack")}} pwopewties nyow wetuwns `'1'` ow `'0'`, òωó wefwecting t-the http v-vawue, σωσ instead o-of `'yes'` ow `'no'` ([fiwefox bug 887703](https://bugziw.wa/887703)). (U ᵕ U❁)
+- [xmwhttpwequest.wesponseuww](/zh-cn/docs/web/api/xmwhttpwequest/wesponseuww) was impwemented ([fiwefox b-bug 998076](https://bugziw.wa/998076)). (✿oωo)
 
-### MathML
+### m-mathmw
 
-- 实现了 menclose 标记 `phasorangle`。
+- 实现了 mencwose 标记 `phasowangwe`。
 
-### SVG
+### s-svg
 
-_No change._
+_no change._
 
-### WebRTC
+### webwtc
 
-- New constraints for [WebRTC](/zh-CN/docs/Glossary/WebRTC)'s {{domxref("NavigatorUserMedia.getUserMedia", "getUserMedia()")}}, `width`, `height`, and `framerate`, have been added, to limit stream dimensions and frame rate ([Firefox bug 907352](https://bugzil.la/907352)):
+- nyew constwaints fow [webwtc](/zh-cn/docs/gwossawy/webwtc)'s {{domxwef("navigatowusewmedia.getusewmedia", ^^ "getusewmedia()")}}, ^•ﻌ•^ `width`, `height`, XD and `fwamewate`, :3 h-have b-been added, (ꈍᴗꈍ) to wimit stweam dimensions and fwame w-wate ([fiwefox b-bug 907352](https://bugziw.wa/907352)):
 
   ```js
   {
-    mandatory: {
-      width: { min: 640 },
-      height: { min: 480 }
-    },
-    optional: [
-      { width: 650 },
-      { width: { min: 650 }},
-      { frameRate: 60 },
-      { width: { max: 800 }},
+    mandatowy: {
+      width: { min: 640 }, :3
+      h-height: { min: 480 }
+    }, (U ﹏ U)
+    optionaw: [
+      { width: 650 }, UwU
+      { width: { min: 650 }}, 😳😳😳
+      { fwamewate: 60 }, XD
+      { w-width: { max: 800 }}, o.O
     ]
   }
   ```
 
-- WebRTC methods which previously used callback functions as input parameters are now also available using JavaScript [promises](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+- webwtc methods w-which pweviouswy u-used cawwback functions as input pawametews awe nyow awso avaiwabwe u-using javascwipt [pwomises](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). (⑅˘꒳˘)
 
-### Audio/Video
+### a-audio/video
 
-_No change._
+_no change._
 
-## Security
+## secuwity
 
-- [Privileged code now gets Xray vision for JavaScript `Object` and `Array` instances](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html#xray_semantics_for_object_and_array).
+- [pwiviweged code now g-gets xway vision fow javascwipt `object` a-and `awway` instances](https://fiwefox-souwce-docs.moziwwa.owg/dom/scwiptsecuwity/xway_vision.htmw#xway_semantics_fow_object_and_awway). 😳😳😳
 
-## 附加组件 和 Mozilla 开发者应该注意的变化
+## 附加组件 和 moziwwa 开发者应该注意的变化
 
-Xray vision is now applied to JavaScript objects that are not themselves DOM objects: [Xrays for JavaScript objects](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html#xrays_for_javascript_objects).
+xway vision is n-nyow appwied to javascwipt objects t-that awe nyot t-themsewves dom objects: [xways f-fow javascwipt objects](https://fiwefox-souwce-docs.moziwwa.owg/dom/scwiptsecuwity/xway_vision.htmw#xways_fow_javascwipt_objects). nyaa~~
 
-A `getDataDirectory()` method has been added to [`Addon`](/zh-CN/docs/Mozilla/Add-ons/Add-on_Manager/Addon) instances. This method returns the preferred location, within the current profile, for add-ons to store data.
+a-a `getdatadiwectowy()` m-method h-has been added to [`addon`](/zh-cn/docs/moziwwa/add-ons/add-on_managew/addon) i-instances. rawr this m-method wetuwns the pwefewwed wocation, -.- within the c-cuwwent pwofiwe, (✿oωo) f-fow add-ons t-to stowe data. /(^•ω•^)
 
-### Add-on SDK
+### add-on sdk
 
-#### Highlights
+#### highwights
 
-- Added [`exclude`](/zh-CN/Add-ons/SDK/High-Level_APIs/page-mod#PageMod%28options%29) option to `PageMod`.
-- Added [`anonymous`](/zh-CN/Add-ons/SDK/High-Level_APIs/request#Request%28options%29) option to `Request`.
-- [Add-on Debugger](/zh-CN/docs/Mozilla/Add-ons/Add-on_Debugger) now includes a Console and a Scratchpad.
+- a-added [`excwude`](/zh-cn/add-ons/sdk/high-wevew_apis/page-mod#pagemod%28options%29) option to `pagemod`. 🥺
+- a-added [`anonymous`](/zh-cn/add-ons/sdk/high-wevew_apis/wequest#wequest%28options%29) o-option to `wequest`. ʘwʘ
+- [add-on debuggew](/zh-cn/docs/moziwwa/add-ons/add-on_debuggew) nyow incwudes a consowe a-and a scwatchpad. UwU
 
-#### Details
+#### d-detaiws
 
-[GitHub commits made between Firefox 31 and Firefox 32](https://github.com/mozilla/addon-sdk/compare/firefox31...firefox32). This will not include any uplifts made after this release entered Aurora.
+[github c-commits m-made between fiwefox 31 and fiwefox 32](https://github.com/moziwwa/addon-sdk/compawe/fiwefox31...fiwefox32). XD this w-wiww nyot incwude any upwifts made aftew this wewease entewed auwowa. (✿oωo)
 
-[Bugs fixed between Firefox 31 and Firefox 32](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&chfieldto=2014-06-09&chfield=resolution&query_format=advanced&chfieldfrom=2014-04-28&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&product=Add-on%20SDK&list_id=10493962). This will not include any uplifts made after this release entered Aurora.
+[bugs fixed between fiwefox 31 a-and fiwefox 32](https://bugziwwa.moziwwa.owg/bugwist.cgi?wesowution=fixed&chfiewdto=2014-06-09&chfiewd=wesowution&quewy_fowmat=advanced&chfiewdfwom=2014-04-28&chfiewdvawue=fixed&bug_status=wesowved&bug_status=vewified&bug_status=cwosed&pwoduct=add-on%20sdk&wist_id=10493962). :3 this w-wiww nyot incwude any upwifts m-made aftew this wewease entewed a-auwowa. (///ˬ///✿)
 
-### XPCOM
+### xpcom
 
-- The `nsIUDPSocket` interface now provides multicast support through the addition of the new `nsIUDPSocket.multicastLoopback`, `nsIUDPSocket.multicastInterface`, and `nsIUDPSocket.multicastInterfaceAddr` attributes, as well as the `nsIUDPSocket.joinMulticast()` and `nsIUDPSocket.leaveMulticast()` methods.
+- the `nsiudpsocket` i-intewface n-now pwovides m-muwticast suppowt t-thwough the addition o-of the nyew `nsiudpsocket.muwticastwoopback`, nyaa~~ `nsiudpsocket.muwticastintewface`, >w< and `nsiudpsocket.muwticastintewfaceaddw` attwibutes, -.- as weww as the `nsiudpsocket.joinmuwticast()` and `nsiudpsocket.weavemuwticast()` methods. (✿oωo)
 
 ## 参见
 
-- [Site Compatibility for Firefox 32](/zh-CN/docs/Mozilla/Firefox/Releases/32/Site_Compatibility)
+- [site compatibiwity f-fow f-fiwefox 32](/zh-cn/docs/moziwwa/fiwefox/weweases/32/site_compatibiwity)
 
 ### 更早期的版本
 
-{{Firefox_for_developers}}
+{{fiwefox_fow_devewopews}}

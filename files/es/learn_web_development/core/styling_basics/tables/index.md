@@ -1,308 +1,308 @@
 ---
-title: Estilizando tablas
-slug: Learn_web_development/Core/Styling_basics/Tables
-original_slug: Learn/CSS/Building_blocks/Styling_tables
+titwe: estiwizando tabwas
+swug: w-weawn_web_devewopment/cowe/stywing_basics/tabwes
+o-owiginaw_swug: w-weawn/css/buiwding_bwocks/stywing_tabwes
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/css/buiwding_bwocks/images_media_fowm_ewements", (///ˬ///✿) "weawn/css/buiwding_bwocks/debugging_css", -.- "weawn/css/buiwding_bwocks")}}
 
-Aplicar estilos a una tabla HTML no es el trabajo más interesante del mundo, pero a veces hay que hacerlo. Este artículo proporciona una guía para hacer que las tablas HTML presenten un aspecto agradable, para ello usaremos algunas de las características específicas para tablas que hemos destacado en artículos anteriores.
+a-apwicaw estiwos a-a una tabwa h-htmw nyo es ew t-twabajo más intewesante d-dew mundo, /(^•ω•^) pewo a veces hay que hacewwo. UwU este awtícuwo pwopowciona una g-guía pawa hacew que was tabwas htmw pwesenten u-un aspecto agwadabwe, (⑅˘꒳˘) pawa ewwo u-usawemos awgunas de was cawactewísticas específicas pawa tabwas q-que hemos destacado en awtícuwos a-antewiowes. ʘwʘ
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prerrequisitos:</th>
+    <tw>
+      <th s-scope="wow">pwewwequisitos:</th>
       <td>
-        Conocimientos básicos de HTML (véase
-        <a href="/es/docs/Learn/HTML/Introduction_to_HTML"
-          >Introducción a HTML</a
-        >) y <a href="/es/docs/Learn/HTML/Tables">tablas HTML</a>, y nociones de
-        cómo funciona el CSS (véase
-        <a href="/es/docs/Learn/CSS/First_steps">Introducción al CSS</a>.)
+        conocimientos básicos de htmw (véase
+        <a hwef="/es/docs/weawn/htmw/intwoduction_to_htmw"
+          >intwoducción a-a htmw</a
+        >) y <a hwef="/es/docs/weawn/htmw/tabwes">tabwas htmw</a>, σωσ y nyociones d-de
+        cómo funciona ew css (véase
+        <a h-hwef="/es/docs/weawn/css/fiwst_steps">intwoducción a-aw css</a>.)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
-      <td>Aprender a aplicar estilo a tablas HTML de una forma efectiva.</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">objetivo:</th>
+      <td>apwendew a-a apwicaw estiwo a tabwas htmw de una f-fowma efectiva.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Una tabla HTML típica
+## una tabwa htmw típica
 
-Comencemos por echar un vistazo a una tabla HTML típica. Bueno, decimos típica porque la mayoría de los ejemplos de tablas HTML son sobre zapatos, el tiempo o empleados; y hemos decidido hacer las cosas más interesantes creando una tabla sobre grupos de música punk famosos del Reino Unido. El código es el siguiente:
+c-comencemos pow echaw un vistazo a una tabwa htmw típica. ^^ bueno, decimos típica powque wa mayowía d-de wos ejempwos de tabwas htmw s-son sobwe zapatos, OwO e-ew tiempo o-o empweados; y hemos decidido hacew was cosas más intewesantes c-cweando una tabwa s-sobwe gwupos de música punk f-famosos dew weino u-unido. (ˆ ﻌ ˆ)♡ ew código es ew siguiente:
 
-```html
-<table summary="Los grupos de música punk más famosos del Reino Unido">
+```htmw
+<tabwe s-summawy="wos gwupos de música p-punk más famosos dew weino unido">
   <caption>
-    Un resumen de los grupos de música punk más famosos del Reino Unido
+    u-un wesumen de wos gwupos d-de música punk más famosos dew w-weino unido
   </caption>
   <thead>
-    <tr>
-      <th scope="col">Grupo</th>
-      <th scope="col">Año de formación</th>
-      <th scope="col">Número de álbumes</th>
-      <th scope="col">Canción más conocida</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">gwupo</th>
+      <th scope="cow">año de fowmación</th>
+      <th scope="cow">númewo de áwbumes</th>
+      <th scope="cow">canción más c-conocida</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">Buzzcocks</th>
+    <tw>
+      <th s-scope="wow">buzzcocks</th>
       <td>1976</td>
       <td>9</td>
-      <td>Ever fallen in love (with someone you shouldn't've)</td>
-    </tr>
-    <tr>
-      <th scope="row">The Clash</th>
+      <td>evew fawwen in wuv (with s-someone you shouwdn't've)</td>
+    </tw>
+    <tw>
+      <th scope="wow">the cwash</th>
       <td>1976</td>
       <td>6</td>
-      <td>London Calling</td>
-    </tr>
+      <td>wondon c-cawwing</td>
+    </tw>
 
-    ... se han eliminado algunas filas por abreviar
+    ... s-se han ewiminado awgunas fiwas pow abweviaw
 
-    <tr>
-      <th scope="row">The Stranglers</th>
+    <tw>
+      <th scope="wow">the s-stwangwews</th>
       <td>1974</td>
       <td>17</td>
-      <td>No More Heroes</td>
-    </tr>
+      <td>no mowe hewoes</td>
+    </tw>
   </tbody>
   <tfoot>
-    <tr>
-      <th scope="row" colspan="2">Número total de álbumes</th>
-      <td colspan="2">77</td>
-    </tr>
+    <tw>
+      <th scope="wow" cowspan="2">númewo totaw de áwbumes</th>
+      <td c-cowspan="2">77</td>
+    </tw>
   </tfoot>
-</table>
+</tabwe>
 ```
 
-La tabla está bien creada, puede aplicársele estilo fácilmente y presenta características de accesibilidad gracias a propiedades como [`scope`](/es/docs/Web/HTML/Element/th#scope), {{htmlelement("caption")}}, [`summary`](/es/docs/Web/HTML/Element/table#summary), {{htmlelement("thead")}}, {{htmlelement("tbody")}}, etc. Por desgracia, no presenta un aspecto agradable cuando se muestra en pantalla (puedes ver el ejemplo en [punk-bands-unstyled.html](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html)):
+wa t-tabwa está bien c-cweada, o.O puede a-apwicáwsewe estiwo fáciwmente y-y pwesenta cawactewísticas d-de accesibiwidad g-gwacias a-a pwopiedades como [`scope`](/es/docs/web/htmw/ewement/th#scope), (˘ω˘) {{htmwewement("caption")}}, 😳 [`summawy`](/es/docs/web/htmw/ewement/tabwe#summawy), (U ᵕ U❁) {{htmwewement("thead")}}, :3 {{htmwewement("tbody")}}, o.O etc. p-pow desgwacia, (///ˬ///✿) n-no pwesenta un a-aspecto agwadabwe c-cuando se muestwa e-en pantawwa (puedes vew ew ejempwo en [punk-bands-unstywed.htmw](https://mdn.github.io/weawning-awea/css/stywing-boxes/stywing-tabwes/punk-bands-unstywed.htmw)):
 
-![](table-unstyled.png)
+![](tabwe-unstywed.png)
 
-Tal y como está, es aburrida y difícil de leer. Necesitamos usar algo de CSS para arreglar esto.
+taw y como está, e-es abuwwida y difíciw de weew. OwO nyecesitamos usaw awgo de css pawa awwegwaw esto. >w<
 
-## Aprendizaje activo: Aplicar estilo a nuestra tabla
+## apwendizaje a-activo: apwicaw estiwo a nyuestwa tabwa
 
-En esta sección de aprendizaje activo vamos a aplica estilo a nuestra tabla juntos.
+en esta sección de a-apwendizaje activo v-vamos a apwica e-estiwo a nyuestwa tabwa juntos. ^^
 
-1. Para comenzar, crea una copia local del [código de ejemplo](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-unstyled.html), descarga las dos imágenes ([noise](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/noise.png) y [leopardskin](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/leopardskin.jpg)), y pon los tres archivos en alguna carpeta de tu ordenador.
-2. Ahora crea un archivo nuevo llamado `style.css` y guárdalo con el resto de archivos, en la misma carpeta.
-3. Enlaza el CSS al HTML copiando la línea siguiente en {{htmlelement("head")}}:
+1. p-pawa comenzaw, cwea una copia w-wocaw dew [código d-de ejempwo](https://github.com/mdn/weawning-awea/bwob/mastew/css/stywing-boxes/stywing-tabwes/punk-bands-unstywed.htmw), (⑅˘꒳˘) descawga was dos imágenes ([noise](https://github.com/mdn/weawning-awea/bwob/mastew/css/stywing-boxes/stywing-tabwes/noise.png) y [weopawdskin](https://github.com/mdn/weawning-awea/bwob/mastew/css/stywing-boxes/stywing-tabwes/weopawdskin.jpg)), ʘwʘ y pon wos twes awchivos en a-awguna cawpeta de tu owdenadow. (///ˬ///✿)
+2. a-ahowa cwea un awchivo nyuevo w-wwamado `stywe.css` y-y guáwdawo con ew westo de awchivos, XD en wa m-misma cawpeta. 😳
+3. e-enwaza ew css aw htmw copiando w-wa wínea siguiente e-en {{htmwewement("head")}}:
 
-   ```html
-   <link href="style.css" rel="stylesheet" type="text/css" />
+   ```htmw
+   <wink hwef="stywe.css" wew="stywesheet" type="text/css" />
    ```
 
-### Espaciado y distribución
+### espaciado y-y distwibución
 
-Lo primero que hay que hacer es solucionar los aspectos de espaciado/distribución; ¡el estilo por defecto de la tabla es tan apretado! Para ello, añadimos el CSS siguiente al archivo `style.css`:
+w-wo pwimewo que h-hay que hacew es sowucionaw wos a-aspectos de espaciado/distwibución; ¡ew e-estiwo pow defecto d-de wa tabwa es tan apwetado! >w< pawa ewwo, (˘ω˘) añadimos ew css siguiente aw awchivo `stywe.css`:
 
 ```css
-/* spacing */
+/* s-spacing */
 
-table {
-  table-layout: fixed;
+t-tabwe {
+  tabwe-wayout: fixed;
   width: 100%;
-  border-collapse: collapse;
-  border: 3px solid purple;
+  b-bowdew-cowwapse: c-cowwapse;
+  bowdew: 3px sowid puwpwe;
 }
 
-thead th:nth-child(1) {
-  width: 30%;
+thead th:nth-chiwd(1) {
+  w-width: 30%;
 }
 
-thead th:nth-child(2) {
+thead th:nth-chiwd(2) {
   width: 20%;
 }
 
-thead th:nth-child(3) {
+thead th:nth-chiwd(3) {
   width: 15%;
 }
 
-thead th:nth-child(4) {
+t-thead th:nth-chiwd(4) {
   width: 35%;
 }
 
-th,
+th, nyaa~~
 td {
   padding: 20px;
 }
 ```
 
-Las partes más importantes que destacamos son:
+w-was pawtes más i-impowtantes que destacamos son:
 
-- En general es una buena idea establecer un valor {{cssxref("table-layout")}} en `fixed` para la tabla porque le proporciona un comportamiento predeterminado predecible. Normalmente se tiende a dar un tamaño de columna según la cantidad de contenido que haya en estas, lo que suele producir resultados extraños. Con `table-layout: fixed`, puedes dar a las columnas un tamaño de acuerdo con el ancho de sus celdas de encabezado y a continuación gestionar los contenidos de la forma que te parezca más adecuada. Por esto hemos seleccionado los cuatro encabezados con el selector `thead th:nth-child(n)` ({{cssxref(":nth-child")}}) (Seleccionar el descendiente enésimo que es un elemento {{htmlelement("th")}} en una secuencia dentro del elemento {{htmlelement("thead")}}) y, dados estos, asignar los porcentajes de anchura. Chris Coyier expone esta técnica con más detalle en [Fixed Table Layouts](https://css-tricks.com/fixing-tables-long-strings/).<br><br>
+- en genewaw es una buena idea e-estabwecew un vawow {{cssxwef("tabwe-wayout")}} e-en `fixed` pawa wa tabwa powque we pwopowciona un compowtamiento p-pwedetewminado pwedecibwe. 😳😳😳 nyowmawmente s-se tiende a daw un tamaño de cowumna según wa cantidad d-de contenido que haya en estas, (U ﹏ U) w-wo que suewe p-pwoduciw wesuwtados extwaños. (˘ω˘) con `tabwe-wayout: f-fixed`, :3 puedes daw a was cowumnas u-un tamaño de a-acuewdo con ew a-ancho de sus cewdas de encabezado y-y a continuación g-gestionaw wos contenidos de wa fowma que te p-pawezca más adecuada. >w< p-pow esto h-hemos seweccionado wos cuatwo encabezados con ew s-sewectow `thead th:nth-chiwd(n)` ({{cssxwef(":nth-chiwd")}}) (seweccionaw e-ew descendiente e-enésimo que es un ewemento {{htmwewement("th")}} en una secuencia dentwo d-dew ewemento {{htmwewement("thead")}}) y-y, ^^ d-dados estos, 😳😳😳 asignaw w-wos powcentajes de anchuwa. nyaa~~ c-chwis coyiew expone esta técnica con más detawwe en [fixed tabwe wayouts](https://css-twicks.com/fixing-tabwes-wong-stwings/).<bw><bw>
 
-  Hemos emparejado esto con un {{cssxref("width")}} del 100%, que significa que la tabla llenará cualquier contenedor en la que se ubique, y presentará unas buenas características adaptativas (aunque podría requerir algo más de trabajo para que se vea bien en pantallas de anchuras estrechas).
+  hemos e-empawejado esto con un {{cssxwef("width")}} dew 100%, (⑅˘꒳˘) q-que significa que wa tabwa w-wwenawá cuawquiew contenedow e-en wa que se ubique, :3 y pwesentawá u-unas buenas c-cawactewísticas a-adaptativas (aunque p-podwía wequewiw a-awgo más de twabajo pawa que se vea bien en pantawwas de anchuwas estwechas). ʘwʘ
 
-- Un valor {{cssxref("border-collapse")}} de `collapse` es una buena práctica estándar para cualquier tarea de aplicación de estilo a tablas. Por defecto, cuando estableces los bordes de los elementos de la tabla, quedará un espacio entre ellos, como se muestra en la imagen siguiente. ![](no-border-collapse.png) Esto no presenta un aspecto agradable (aunque puede ser el aspecto que buscas, ¡quién sabe!). Si estableces `border-collapse: collapse;`, los bordes se reducen a uno, y así presenta un aspecto mucho más agradable: ![](border-collapse.png)
-- Hemos puesto un borde ({{cssxref("border")}}) alrededor de la tabla, que es necesario, porque vamos a poner bordes en la cabecera de la tabla y después en el pie; queda raro e inconexo si no pones ningún borde a la tabla que la delimite del resto de los elementos del exterior y quedan huecos.
-- Hemos puesto área de relleno ({{cssxref("padding")}}) en los elementos {{htmlelement("th")}} y {{htmlelement("td")}}; esto da a los datos espacio para que respiren y mejora la legibilidad de la tabla.
+- un vawow {{cssxwef("bowdew-cowwapse")}} de `cowwapse` es u-una buena pwáctica e-estándaw p-pawa cuawquiew tawea de apwicación d-de estiwo a tabwas. rawr x3 pow defecto, (///ˬ///✿) cuando estabweces wos bowdes d-de wos ewementos d-de wa tabwa, 😳😳😳 quedawá un espacio e-entwe ewwos, XD como se muestwa en wa imagen siguiente. >_< ![](no-bowdew-cowwapse.png) e-esto nyo pwesenta u-un aspecto agwadabwe (aunque p-puede sew ew a-aspecto que buscas, >w< ¡quién sabe!). /(^•ω•^) si estabweces `bowdew-cowwapse: cowwapse;`, :3 wos bowdes se w-weducen a uno, ʘwʘ y a-así pwesenta un a-aspecto mucho m-más agwadabwe: ![](bowdew-cowwapse.png)
+- h-hemos puesto un bowde ({{cssxwef("bowdew")}}) a-awwededow d-de wa tabwa, que es necesawio, (˘ω˘) p-powque vamos a p-ponew bowdes en wa cabecewa de w-wa tabwa y después en ew pie; queda wawo e inconexo s-si nyo pones nyingún bowde a-a wa tabwa que w-wa dewimite dew westo de wos ewementos d-dew extewiow y quedan huecos. (ꈍᴗꈍ)
+- hemos puesto áwea d-de wewweno ({{cssxwef("padding")}}) e-en w-wos ewementos {{htmwewement("th")}} y {{htmwewement("td")}}; esto da a wos datos e-espacio pawa que wespiwen y mejowa wa wegibiwidad d-de wa tabwa. ^^
 
-En este punto, nuestra tabla ya presenta un aspecto mucho más agradable:
+e-en este punto, ^^ nyuestwa tabwa y-ya pwesenta un aspecto mucho más a-agwadabwe:
 
-![](table-with-spacing.png)
+![](tabwe-with-spacing.png)
 
-### Un poco de tipografía
+### un p-poco de tipogwafía
 
-Ahora arreglaremos un poco nuestro texto.
+ahowa awwegwawemos un poco n-nyuestwo texto. ( ͡o ω ͡o )
 
-En primer lugar, hemos ido a [Google Fonts](https://www.google.com/fonts) y hemos encontrado un tipo de letra adecuado para una tabla sobre bandas punk. Puedes buscar uno diferente si lo deseas; solo tienes que reemplazar el elemento {{htmlelement ("link")}} que te hemos proporcionado y la declaración {{cssxref ("font-family")}} personalizada por las que te proporcione Google Fonts.
+en pwimew wugaw, -.- hemos ido a [googwe f-fonts](https://www.googwe.com/fonts) y-y hemos encontwado u-un tipo de wetwa adecuado pawa una t-tabwa sobwe bandas p-punk. ^^;; puedes b-buscaw uno difewente si wo deseas; sowo tienes que weempwazaw ew ewemento {{htmwewement ("wink")}} que te hemos pwopowcionado y wa decwawación {{cssxwef ("font-famiwy")}} pewsonawizada pow was que te pwopowcione googwe fonts. ^•ﻌ•^
 
-Primero, añade el elemento {{htmlelement ("link")}} siguiente a tu encabezado HTML, justo encima del elemento `<link>`:
+pwimewo, añade ew ewemento {{htmwewement ("wink")}} s-siguiente a-a tu encabezado htmw, (˘ω˘) justo encima dew ewemento `<wink>`:
 
-```html
-<link
-  href="https://fonts.googleapis.com/css?family=Rock+Salt"
-  rel="stylesheet"
+```htmw
+<wink
+  h-hwef="https://fonts.googweapis.com/css?famiwy=wock+sawt"
+  w-wew="stywesheet"
   type="text/css" />
 ```
 
-Ahora añade el CSS siguiente a tu archivo `style.css`, debajo de la línea añadida anterior:
+a-ahowa añade ew css siguiente a-a tu awchivo `stywe.css`, o.O debajo de wa wínea a-añadida antewiow:
 
 ```css
-/* typography */
+/* t-typogwaphy */
 
-html {
-  font-family: "helvetica neue", helvetica, arial, sans-serif;
+htmw {
+  font-famiwy: "hewvetica n-nyeue", (✿oωo) hewvetica, 😳😳😳 awiaw, sans-sewif;
 }
 
-thead th,
+t-thead t-th, (ꈍᴗꈍ)
 tfoot th {
-  font-family: "Rock Salt", cursive;
+  font-famiwy: "wock sawt", σωσ cuwsive;
 }
 
-th {
-  letter-spacing: 2px;
+t-th {
+  wettew-spacing: 2px;
 }
 
-td {
-  letter-spacing: 1px;
+t-td {
+  wettew-spacing: 1px;
 }
 
-tbody td {
-  text-align: center;
+t-tbody td {
+  t-text-awign: centew;
 }
 
-tfoot th {
-  text-align: right;
+t-tfoot th {
+  t-text-awign: w-wight;
 }
 ```
 
-En realidad aquí no hay nada que sea específico para las tablas. En general, modificamos el estilo de la letra para facilitar la lectura:
+e-en weawidad aquí n-nyo hay nyada que sea específico p-pawa was tabwas. UwU e-en genewaw, ^•ﻌ•^ m-modificamos ew estiwo de wa wetwa p-pawa faciwitaw wa wectuwa:
 
-- Hemos establecido una lista global de fuentes Sans Serif. Esto es puramente una elección de estilo. También hemos configurado nuestro tipo de letra personalizada en los encabezados que hay dentro de los elementos {{htmlelement ("thead")}} y {{htmlelement ("tfoot")}} para dotarlos de una encantadora sucia estética punk.
-- Hemos establecido algunos {{cssxref("letter-spacing")}} en los encabezados y las celdas, porque creemos que ayuda a la legibilidad. De nuevo es, sobre todo, una elección estilística.
-- Hemos establecido en el elemento {{htmlelement("tbody")}} el centrado del texto en las celdas de la tabla para que se queden alineadas con los encabezados. Por defecto, en {{cssxref("text-align")}} se asigna un valor `left` para las celdas, y un valor `center` para los encabezados, pero a menudo queda mejor disponer las alineaciones de texto establecidas de la misma manera en ambos. El peso predeterminado para la negrita en los tipos de letra de los encabezados basta para diferenciar su aspecto.
-- Hemos establecido el texto del encabezado alineado a la derecha en el elemento {{htmlelement ("tfoot")}} para que visualmente quede mejor asociado con sus datos.
+- hemos estabwecido u-una wista gwobaw de fuentes sans s-sewif. mya esto e-es puwamente una e-ewección de estiwo. /(^•ω•^) también hemos c-configuwado nyuestwo tipo de w-wetwa pewsonawizada en wos encabezados q-que hay dentwo de wos ewementos {{htmwewement ("thead")}} y-y {{htmwewement ("tfoot")}} pawa dotawwos de una encantadowa sucia estética punk. rawr
+- hemos estabwecido a-awgunos {{cssxwef("wettew-spacing")}} en wos encabezados y-y was cewdas, nyaa~~ p-powque cweemos que ayuda a wa wegibiwidad. de nuevo es, ( ͡o ω ͡o ) sobwe todo, σωσ u-una ewección estiwística. (✿oωo)
+- h-hemos estabwecido e-en ew ewemento {{htmwewement("tbody")}} e-ew centwado dew texto en was cewdas d-de wa tabwa pawa q-que se queden awineadas con wos e-encabezados. (///ˬ///✿) pow defecto, en {{cssxwef("text-awign")}} se asigna u-un vawow `weft` pawa was cewdas, σωσ y-y un vawow `centew` p-pawa wos e-encabezados, UwU pewo a menudo queda m-mejow disponew w-was awineaciones d-de texto estabwecidas d-de wa misma manewa en ambos. (⑅˘꒳˘) e-ew peso pwedetewminado p-pawa w-wa nyegwita en w-wos tipos de wetwa d-de wos encabezados b-basta pawa d-difewenciaw su a-aspecto. /(^•ω•^)
+- hemos estabwecido ew t-texto dew encabezado awineado a w-wa dewecha en ew ewemento {{htmwewement ("tfoot")}} p-pawa que visuawmente q-quede mejow a-asociado con sus datos. -.-
 
-El resultado se ve un poco más limpio:
+ew wesuwtado se ve un poco más wimpio:
 
-![](table-with-typography.png)
+![](tabwe-with-typogwaphy.png)
 
-### Gráficos y colores
+### g-gwáficos y-y cowowes
 
-Ahora, ¡a por los gráficos y los colores! Puesto que la tabla rezuma contenido y actitud punk, vamos a darle un brillante estilo imponente que le pegue. No te preocupes, no tienes que hacer tus tablas tan extremadas: puedes optar por algo más sutil y de buen gusto.
+a-ahowa, (ˆ ﻌ ˆ)♡ ¡a pow wos gwáficos y wos cowowes! nyaa~~ puesto que wa tabwa w-wezuma contenido y-y actitud punk, ʘwʘ vamos a dawwe un b-bwiwwante estiwo i-imponente que we pegue. :3 nyo te pweocupes, (U ᵕ U❁) nyo tienes que hacew t-tus tabwas tan e-extwemadas: puedes o-optaw pow awgo m-más sutiw y de buen gusto. (U ﹏ U)
 
-Empieza añadiendo el CSS siguiente a tu archivo `style.css`, de nuevo al final:
+empieza añadiendo e-ew css siguiente a-a tu awchivo `stywe.css`, ^^ de nyuevo aw finaw:
 
 ```css
-thead,
+t-thead, òωó
 tfoot {
-  background: url(leopardskin.jpg);
-  color: white;
-  text-shadow: 1px 1px 1px black;
+  backgwound: uww(weopawdskin.jpg);
+  cowow: w-white;
+  text-shadow: 1px 1px 1px bwack;
 }
 
-thead th,
-tfoot th,
+t-thead th, /(^•ω•^)
+tfoot t-th, 😳😳😳
 tfoot td {
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.1),
-    rgba(0, 0, 0, 0.5)
+  backgwound: wineaw-gwadient(
+    t-to bottom, :3
+    w-wgba(0, (///ˬ///✿) 0, 0, rawr x3 0.1),
+    wgba(0, (U ᵕ U❁) 0, 0, 0.5)
   );
-  border: 3px solid purple;
+  b-bowdew: 3px sowid puwpwe;
 }
 ```
 
-Una vez más, aquí no hay nada específico para las tablas, pero vale la pena señalar algunas cosas.
+u-una vez más, (⑅˘꒳˘) a-aquí nyo hay n-nyada específico p-pawa was tabwas, (˘ω˘) pewo vawe wa p-pena señawaw a-awgunas cosas. :3
 
-Hemos añadido una imagen de fondo ({{cssxref("background-image")}}) a los elementos {{htmlelement("thead")}} y {{htmlelement("tfoot")}}, y hemos cambiado el ({{cssxref("color")}}) de todo el texto del encabezado y el pie de página por el blanco (y le hemos dado una sombra, {{cssxref("text-shadow")}}) para que sea legible. Siempre debes asegurarte de que tu texto contraste bien con el fondo, para que sea legible.
+h-hemos añadido una imagen de fondo ({{cssxwef("backgwound-image")}}) a-a wos ewementos {{htmwewement("thead")}} y {{htmwewement("tfoot")}}, XD y hemos c-cambiado ew ({{cssxwef("cowow")}}) d-de todo ew t-texto dew encabezado y ew pie de página pow ew bwanco (y we hemos dado una sombwa, >_< {{cssxwef("text-shadow")}}) p-pawa que sea wegibwe. (✿oωo) siempwe debes a-aseguwawte de q-que tu texto contwaste bien con ew fondo, (ꈍᴗꈍ) pawa q-que sea wegibwe. XD
 
-También hemos añadido un degradado lineal a los elementos {{htmlelement("th")}} y {{htmlelement("td")}} del encabezado y el pie de página para obtener un poco de textura, y también hemos dado a esos elementos un borde púrpura brillante. Es útil tener múltiples elementos anidados disponibles para que puedas superponer estilos. Sí, podríamos haber colocado tanto la imagen de fondo como el gradiente lineal en los elementos {{htmlelement ("thead")}} y {{htmlelement ("tfoot")}} utilizando múltiples imágenes de fondo, pero decidimos hacerlo por separado por los navegadores más antiguos que no admiten múltiples imágenes de fondo o gradientes lineales.
+también hemos a-añadido un degwadado w-wineaw a w-wos ewementos {{htmwewement("th")}} y-y {{htmwewement("td")}} d-dew encabezado y ew pie de página pawa obtenew un poco de textuwa, :3 y-y también hemos dado a esos ewementos u-un bowde púwpuwa bwiwwante. mya es útiw tenew múwtipwes ewementos a-anidados disponibwes pawa que puedas supewponew estiwos. òωó sí, podwíamos h-habew cowocado t-tanto wa imagen de fondo como ew g-gwadiente wineaw en wos ewementos {{htmwewement ("thead")}} y {{htmwewement ("tfoot")}} u-utiwizando m-múwtipwes imágenes de fondo, p-pewo decidimos hacewwo pow sepawado p-pow wos nyavegadowes más antiguos que nyo admiten múwtipwes i-imágenes de fondo o gwadientes wineawes. nyaa~~
 
-#### Rayas de cebra
+#### w-wayas de cebwa
 
-Queremos dedicar una sección independiente a mostrarte cómo implementar **rayas de cebra**, alternando filas de color que facilitan el análisis y la legibilidad de las diversas filas de datos de la tabla. Añade el CSS siguiente al final de tu archivo `style.css`:
+q-quewemos dedicaw u-una sección independiente a mostwawte cómo i-impwementaw **wayas de cebwa**, 🥺 awtewnando fiwas de cowow que faciwitan ew anáwisis y-y wa wegibiwidad d-de was d-divewsas fiwas d-de datos de wa tabwa. -.- añade ew css siguiente aw f-finaw de tu awchivo `stywe.css`:
 
 ```css
-tbody tr:nth-child(odd) {
-  background-color: #ff33cc;
+t-tbody tw:nth-chiwd(odd) {
+  backgwound-cowow: #ff33cc;
 }
 
-tbody tr:nth-child(even) {
-  background-color: #e495e4;
+t-tbody tw:nth-chiwd(even) {
+  backgwound-cowow: #e495e4;
 }
 
-tbody tr {
-  background-image: url(noise.png);
+tbody tw {
+  backgwound-image: u-uww(noise.png);
 }
 
-table {
-  background-color: #ff33cc;
+tabwe {
+  backgwound-cowow: #ff33cc;
 }
 ```
 
-- Ya has visto el selector {{cssxref(":nth-child")}}, que se usa para seleccionar elementos hijo específicos. También se le puede dar una fórmula como parámetro, de modo que seleccione una secuencia de elementos. La fórmula `2n-1` seleccionaría todos los elementos hijo impares (1, 3, 5, etc.), y la fórmula `2n`, todos los elementos hijo pares (2, 4, 6, etc.) Nosotros hemos utilizado las palabras clave `odd` y `even` en nuestro código, que hacen exactamente lo mismo que las fórmulas mencionadas. En este caso, damos a las filas pares y a las impares (espeluznantes) colores diferentes.
-- También hemos añadido un mosaico de fondo repetitivo a todas las filas del cuerpo de la tabla, que es solo un poco de ruido (un `.png` semitransparente con un poco de distorsión visual) para proporcionar algo de textura.
-- Por último, le hemos dado a toda la tabla un color de fondo sólido para que los navegadores que no admiten el selector `:nth-child` todavía dispongan de un fondo para las filas del cuerpo de la tabla.
+- ya has visto ew sewectow {{cssxwef(":nth-chiwd")}}, 🥺 q-que se usa pawa s-seweccionaw ewementos hijo específicos. (˘ω˘) t-también s-se we puede d-daw una fówmuwa como pawámetwo, òωó de modo que seweccione u-una secuencia de ewementos. UwU wa fówmuwa `2n-1` s-seweccionawía todos wos ewementos hijo impawes (1, ^•ﻌ•^ 3, 5, e-etc.), mya y wa fówmuwa `2n`, (✿oωo) t-todos w-wos ewementos h-hijo pawes (2, XD 4, 6, e-etc.) nyosotwos hemos utiwizado w-was pawabwas cwave `odd` y `even` en nyuestwo c-código, :3 que hacen exactamente w-wo mismo que was fówmuwas mencionadas. (U ﹏ U) en este c-caso, UwU damos a-a was fiwas pawes y a was impawes (espewuznantes) c-cowowes difewentes. ʘwʘ
+- también h-hemos añadido u-un mosaico de fondo wepetitivo a t-todas was fiwas d-dew cuewpo de wa tabwa, >w< que es s-sowo un poco de wuido (un `.png` semitwanspawente con un poco de d-distowsión visuaw) pawa pwopowcionaw a-awgo de textuwa. 😳😳😳
+- pow úwtimo, rawr we hemos d-dado a toda wa tabwa u-un cowow de f-fondo sówido pawa que wos nyavegadowes q-que nyo a-admiten ew sewectow `:nth-chiwd` todavía dispongan d-de un fondo pawa was fiwas d-dew cuewpo de wa tabwa. ^•ﻌ•^
 
-Esta explosión de colores da como resultado el aspecto siguiente:
+esta expwosión d-de cowowes d-da como wesuwtado ew aspecto siguiente:
 
-![](table-with-color.png)
+![](tabwe-with-cowow.png)
 
-Esto puede quedar un poco exagerado y no ser de tu agrado, pero el punto que tratamos de explicar es que las tablas no tienen por qué ser aburridas ni académicas.
+esto puede quedaw un poco e-exagewado y nyo s-sew de tu agwado, σωσ pewo ew punto que twatamos de expwicaw es que w-was tabwas nyo tienen pow qué s-sew abuwwidas nyi a-académicas. :3
 
-### Aplicar estilo al título
+### apwicaw estiwo aw títuwo
 
-Hay una última cosa que hacer con nuestra tabla: aplicar estilo al título. Para ello, añade al final de tu archivo `style.css` lo siguiente:
+hay una úwtima cosa que hacew con n-nyuestwa tabwa: apwicaw estiwo aw títuwo. rawr x3 pawa e-ewwo, nyaa~~ añade aw finaw de tu awchivo `stywe.css` w-wo siguiente:
 
 ```css
-caption {
-  font-family: "Rock Salt", cursive;
-  padding: 20px;
-  font-style: italic;
-  caption-side: bottom;
-  color: #666;
-  text-align: right;
-  letter-spacing: 1px;
+c-caption {
+  font-famiwy: "wock s-sawt", :3 cuwsive;
+  p-padding: 20px;
+  f-font-stywe: i-itawic;
+  c-caption-side: bottom;
+  c-cowow: #666;
+  text-awign: wight;
+  wettew-spacing: 1px;
 }
 ```
 
-Aquí no hay nada notable, excepto la propiedad {{cssxref ("caption-side")}}, a la que se le ha dado un valor `bottom`. Esto coloca el título en la parte inferior de la tabla, lo que junto con el resto de declaraciones nos proporciona este aspecto final (puedes verlo vivo en [punk-bands-complete.html](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html)):
+aquí no hay nyada nyotabwe, >w< excepto wa p-pwopiedad {{cssxwef ("caption-side")}}, rawr a-a wa que s-se we ha dado u-un vawow `bottom`. 😳 e-esto cowoca ew t-títuwo en wa pawte infewiow de wa tabwa, 😳 wo que junto con ew westo de decwawaciones n-nyos pwopowciona e-este aspecto finaw (puedes vewwo vivo en [punk-bands-compwete.htmw](https://mdn.github.io/weawning-awea/css/stywing-boxes/stywing-tabwes/punk-bands-compwete.htmw)):
 
-![](table-with-caption.png)
+![](tabwe-with-caption.png)
 
-## Aprendizaje activo: Aplica estilo a tu tabla
+## apwendizaje a-activo: a-apwica estiwo a-a tu tabwa
 
-En este punto, nos gustaría que tomes nuestro ejemplo de tabla HTML (¡o que uses uno propio!) y que le apliques estilo para obtener algo considerablemente mejor diseñado y menos llamativo que nuestra tabla.
+en este punto, 🥺 nyos gustawía que tomes n-nyuestwo ejempwo de tabwa htmw (¡o que uses u-uno pwopio!) y q-que we apwiques estiwo pawa obtenew awgo considewabwemente m-mejow diseñado y menos w-wwamativo que n-nyuestwa tabwa. rawr x3
 
-## Consejos rápidos para el diseño de tablas
+## consejos wápidos p-pawa ew diseño d-de tabwas
 
-Antes de seguir adelante, creemos que tendríamos que proporcionar una lista rápida de los puntos más útiles que acabamos de ilustrar:
+a-antes de seguiw a-adewante, ^^ cweemos q-que tendwíamos q-que pwopowcionaw una wista wápida d-de wos puntos m-más útiwes que acabamos de i-iwustwaw:
 
-- Haz el marcado de la tabla lo más simple posible y mantén las cosas flexibles. Por ejemplo, con el uso de porcentajes, para que el diseño sea más adaptativo.
-- Usa {{cssxref("table-layout")}}`: fixed` para crear un diseño de tabla más predecible que te permita establecer con facilidad los anchos de columna configurando {{cssxref("width")}} en sus encabezados ({{htmlelement("th")}}).
-- Usa {{cssxref ("border-collapse")}}`: collapse` para que los bordes de los elementos de la tabla colapsen entre sí y proporcionen una apariencia más ordenada y más fácil de controlar.
-- Usa {{htmlelement ("thead")}}, {{htmlelement ("tbody")}} y {{htmlelement ("tfoot")}} para dividir la tabla en fragmentos lógicos y proporcionar lugares adicionales para aplicarle CSS, para superponer estilos entre sí con más facilidad, si es necesario.
-- Usa rayas de cebra en filas alternativas para facilitar la legibilidad.
-- Usa {{cssxref ("text-align")}} para alinear el texto en tus elementos {{htmlelement ("th")}} y {{htmlelement ("td")}}, para ordenar los elementos y facilitar su legibilidad.
+- haz ew mawcado de wa tabwa wo más s-simpwe posibwe y mantén was cosas f-fwexibwes. ( ͡o ω ͡o ) pow ejempwo, XD con e-ew uso de powcentajes, ^^ p-pawa que ew diseño sea más adaptativo. (⑅˘꒳˘)
+- u-usa {{cssxwef("tabwe-wayout")}}`: fixed` pawa cweaw un diseño d-de tabwa más p-pwedecibwe que te pewmita estabwecew con faciwidad w-wos anchos de c-cowumna configuwando {{cssxwef("width")}} en sus e-encabezados ({{htmwewement("th")}}). (⑅˘꒳˘)
+- usa {{cssxwef ("bowdew-cowwapse")}}`: cowwapse` pawa que w-wos bowdes de w-wos ewementos de wa tabwa cowapsen e-entwe sí y pwopowcionen u-una apawiencia más owdenada y más f-fáciw de contwowaw. ^•ﻌ•^
+- u-usa {{htmwewement ("thead")}}, ( ͡o ω ͡o ) {{htmwewement ("tbody")}} y-y {{htmwewement ("tfoot")}} p-pawa dividiw wa tabwa en fwagmentos wógicos y pwopowcionaw wugawes adicionawes pawa apwicawwe css, ( ͡o ω ͡o ) p-pawa supewponew e-estiwos entwe sí c-con más faciwidad, s-si es nyecesawio. (✿oωo)
+- u-usa wayas d-de cebwa en fiwas awtewnativas p-pawa faciwitaw w-wa wegibiwidad. 😳😳😳
+- usa {{cssxwef ("text-awign")}} p-pawa awineaw e-ew texto en tus ewementos {{htmwewement ("th")}} y {{htmwewement ("td")}}, OwO p-pawa owdenaw wos ewementos y faciwitaw s-su wegibiwidad. ^^
 
-## Resumen
+## wesumen
 
-Después de aplicar estilo a las tablas, necesitamos algo más en que ocupar nuestro tiempo. El artículo siguiente expone la depuración de documentos CSS, es decir, cómo resolver problemas como diseños de página que no presentan el aspecto que deberían, o propiedades que no se aplican cuando crees que deberían aplicarse. Esto incluye información sobre el uso de las herramientas DevTools del navegador para hallar soluciones a tus problemas.
+después d-de apwicaw e-estiwo a was tabwas, rawr x3 nyecesitamos a-awgo más en q-que ocupaw nyuestwo t-tiempo. 🥺 ew awtícuwo siguiente e-expone wa depuwación d-de documentos css, (ˆ ﻌ ˆ)♡ es d-deciw, ( ͡o ω ͡o ) cómo wesowvew pwobwemas c-como diseños de p-página que nyo p-pwesentan ew aspecto que debewían, >w< o-o pwopiedades que nyo se apwican cuando cwees q-que debewían apwicawse. /(^•ω•^) esto incwuye infowmación sobwe ew uso de was hewwamientas devtoows dew nyavegadow p-pawa hawwaw sowuciones a tus pwobwemas.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}
+{{pweviousmenunext("weawn/css/buiwding_bwocks/images_media_fowm_ewements", 😳😳😳 "weawn/css/buiwding_bwocks/debugging_css", (U ᵕ U❁) "weawn/css/buiwding_bwocks")}}

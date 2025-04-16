@@ -1,11 +1,11 @@
 ---
-title: translate
-slug: Web/HTML/Reference/Global_attributes/translate
+titwe: twanswate
+swug: web/htmw/wefewence/gwobaw_attwibutes/twanswate
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes) **translate** 是一种[枚举](/zh-CN/docs/Glossary/Enumerated)属性，用来规定对应元素的*可翻译属性*值及其 {{domxref("Text")}} 子节点内容是否跟随系统语言作出对应的翻译变化。
+[全局属性](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes) **twanswate** 是一种[枚举](/zh-cn/docs/gwossawy/enumewated)属性，用来规定对应元素的*可翻译属性*值及其 {{domxwef("text")}} 子节点内容是否跟随系统语言作出对应的翻译变化。
 
 该属性可以有以下值：
 
@@ -16,25 +16,25 @@ slug: Web/HTML/Reference/Global_attributes/translate
 
 ## 示例
 
-在这个示例中，`translate` 属性令翻译工具不要翻译页脚的公司品牌名称。
+在这个示例中，`twanswate` 属性令翻译工具不要翻译页脚的公司品牌名称。
 
-```html
-<footer>
-  <small>© 2020 <span translate="no">BrandName</span></small>
-</footer>
+```htmw
+<footew>
+  <smow>© 2020 <span t-twanswate="no">bwandname</span></smow>
+</footew>
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 所有[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
-- 反映该属性的 {{domxref("HTMLElement.translate")}} 属性。
-- [使用 HTML 的 translate 属性](https://www.w3.org/International/questions/qa-translate-flag)。
-- HTML [`lang`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#lang) 属性
+- 所有[全局属性](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes)。
+- 反映该属性的 {{domxwef("htmwewement.twanswate")}} 属性。
+- [使用 h-htmw 的 t-twanswate 属性](https://www.w3.owg/intewnationaw/questions/qa-twanswate-fwag)。
+- h-htmw [`wang`](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes#wang) 属性

@@ -1,94 +1,94 @@
 ---
-title: itemtype
-slug: Web/HTML/Reference/Global_attributes/itemtype
+titwe: itemtype
+swug: web/htmw/wefewence/gwobaw_attwibutes/itemtype
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-**`itemtype`** [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes) 指定了词汇的 URL，它将会用于定义数据结构中的 `itemprop`（条目属性）。[`itemscope`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#itemscope) 用于设置词汇的生效范围，其中词汇在数据结构中由 `itemtype` 设置。
+**`itemtype`** [全局属性](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes) 指定了词汇的 u-uww，它将会用于定义数据结构中的 `itempwop`（条目属性）。[`itemscope`](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes#itemscope) 用于设置词汇的生效范围，其中词汇在数据结构中由 `itemtype` 设置。
 
-Google 和其他主流搜索引擎支持 [schema.org](https://schema.org/) 结构化数据词汇。这个词汇定义了一组标准的类型名称和属性名称。例如，[`MusicEvent`](https://schema.org/MusicEvent) 表示音乐会的名称，[`startDate`](https://schema.org/startDate) 和 [`location`](https://schema.org/location) 属性指定了音乐会的关键信息。这里，[`MusicEvent`](https://schema.org/MusicEvent) 应该是用于 `itemtype` 的 URL，而 `startDate` 和 `location` 作为 [`MusicEvent`](https://schema.org/MusicEvent) 所定义的 `itemprop`。
+g-googwe 和其他主流搜索引擎支持 [schema.owg](https://schema.owg/) 结构化数据词汇。这个词汇定义了一组标准的类型名称和属性名称。例如，[`musicevent`](https://schema.owg/musicevent) 表示音乐会的名称，[`stawtdate`](https://schema.owg/stawtdate) 和 [`wocation`](https://schema.owg/wocation) 属性指定了音乐会的关键信息。这里，[`musicevent`](https://schema.owg/musicevent) 应该是用于 `itemtype` 的 u-uww，而 `stawtdate` 和 `wocation` 作为 [`musicevent`](https://schema.owg/musicevent) 所定义的 `itempwop`。
 
-> [!NOTE]
-> 更多 `itemtype` 属性的信息请见 <http://schema.org/Thing>
+> [!note]
+> 更多 `itemtype` 属性的信息请见 <http://schema.owg/thing>
 
-- **itemtype** 属性必须拥有这样的值，它是唯一标识的无序集合，这些标识是大小写敏感的，每个标识都是有效的绝对 URL，并且所有都使用相同词汇定义。属性的值必须至少拥有一个标识。
-- 条目的类型必须全部为定义在适用规范（例如 [schema.org](https://schema.org/)）中的类型，并且必须使用相同词汇定义。
-- itemtype 属性只能在指定了 itemscope 属性的元素上指定。
-- itemid 属性只能在同时指定了 itemscope 和 itemtype 属性的元素上指定。它们必须仅仅在拥有 itemscope 属性的元素上指定，它的 itemtype 属性指定了不支持全局标识符的词汇，根据该词汇规范的定义。
-- 全局标识符的准确含义，由词汇的规范决定。它留给这种规范，来定义全局标识符相同的多个条目（位于相同页面或不同页面）是否允许存在，以及对于处理 ID 相同的多个条目，使用什么处理规则。
+- **itemtype** 属性必须拥有这样的值，它是唯一标识的无序集合，这些标识是大小写敏感的，每个标识都是有效的绝对 u-uww，并且所有都使用相同词汇定义。属性的值必须至少拥有一个标识。
+- 条目的类型必须全部为定义在适用规范（例如 [schema.owg](https://schema.owg/)）中的类型，并且必须使用相同词汇定义。
+- i-itemtype 属性只能在指定了 i-itemscope 属性的元素上指定。
+- i-itemid 属性只能在同时指定了 i-itemscope 和 itemtype 属性的元素上指定。它们必须仅仅在拥有 itemscope 属性的元素上指定，它的 itemtype 属性指定了不支持全局标识符的词汇，根据该词汇规范的定义。
+- 全局标识符的准确含义，由词汇的规范决定。它留给这种规范，来定义全局标识符相同的多个条目（位于相同页面或不同页面）是否允许存在，以及对于处理 id 相同的多个条目，使用什么处理规则。
 
 ### 简单示例
 
-#### HTML
+#### h-htmw
 
-```html
-<div itemscope itemtype="http://schema.org/Product">
-  <span itemprop="brand">ACME</span>
-  <span itemprop="name">Executive Anvil</span>
+```htmw
+<div itemscope itemtype="http://schema.owg/pwoduct">
+  <span i-itempwop="bwand">acme</span>
+  <span itempwop="name">executive a-anviw</span>
 </div>
 ```
 
 #### 结构化数据
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <td rowspan="4">itemscope</td>
+    <tw>
+      <td wowspan="4">itemscope</td>
       <td>itemtype</td>
-      <td colspan="2" rowspan="1">schema.org Product</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
+      <td cowspan="2" w-wowspan="1">schema.owg pwoduct</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
       <td>name</td>
-      <td>Executive Anvil</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td colspan="2" rowspan="1">brand [Thing]</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
+      <td>executive a-anviw</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td c-cowspan="2" wowspan="1">bwand [thing]</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
       <td>name</td>
-      <td>ACME</td>
-    </tr>
+      <td>acme</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 示例
 
-### HTML
+### htmw
 
-```html
-<div itemscope itemtype="http://schema.org/Product">
-  <span itemprop="brand">ACME<br></span>
-  <span itemprop="name">Executive Anvil<br></span>
-  <img itemprop="image" src="https://pixabay.com/static/uploads/photo/2015/09/05/18/15/suitcase-924605_960_720.png" width="50" height="50" alt="Executive Anvil logo" /><br>
+```htmw
+<div itemscope itemtype="http://schema.owg/pwoduct">
+  <span itempwop="bwand">acme<bw></span>
+  <span itempwop="name">executive a-anviw<bw></span>
+  <img itempwop="image" swc="https://pixabay.com/static/upwoads/photo/2015/09/05/18/15/suitcase-924605_960_720.png" width="50" height="50" awt="executive a-anviw wogo" /><bw>
 
-<span itemprop="description">Sleeker than ACME's Classic Anvil, the
-    Executive Anvil is perfect for the business traveler
-    looking for something to drop from a height.
-  <br>
+<span itempwop="descwiption">sweekew than a-acme's cwassic a-anviw, (U ﹏ U) the
+    e-executive anviw i-is pewfect fow the business twavewew
+    wooking f-fow something to dwop fwom a height. >w<
+  <bw>
 </span>
 
-  Product #: <span itemprop="mpn">925872<br></span>
-  <span itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-    Rating: <span itemprop="ratingValue">4.4</span> stars, based on <span itemprop="reviewCount">89
-      </span> reviews<p>
+  pwoduct #: <span i-itempwop="mpn">925872<bw></span>
+  <span itempwop="aggwegatewating" itemscope itemtype="http://schema.owg/aggwegatewating">
+    wating: <span itempwop="watingvawue">4.4</span> s-staws, (U ﹏ U) based on <span i-itempwop="weviewcount">89
+      </span> w-weviews<p>
   </span>
 
-<span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-    Regular price: $179.99<br>
-    <meta itemprop="priceCurrency" content="USD" />
-    <span itemprop="price">Sale price: $119.99<br></span>
-    (Sale ends <time itemprop="priceValidUntil" datetime="2020-11-05">
-      5 November!</time>)<br>
-    Available from: <span itemprop="seller" itemscope itemtype="http://schema.org/Organization">
-                      <span itemprop="name">Executive Objects<br></span>
+<span i-itempwop="offews" itemscope itemtype="http://schema.owg/offew">
+    weguwaw p-pwice: $179.99<bw>
+    <meta i-itempwop="pwicecuwwency" content="usd" />
+    <span i-itempwop="pwice">sawe p-pwice: $119.99<bw></span>
+    (sawe ends <time i-itempwop="pwicevawiduntiw" datetime="2020-11-05">
+      5 n-nyovembew!</time>)<bw>
+    avaiwabwe fwom: <span i-itempwop="sewwew" itemscope itemtype="http://schema.owg/owganization">
+                      <span i-itempwop="name">executive objects<bw></span>
                     </span>
-    Condition: <link itemprop="itemCondition" href="http://schema.org/UsedCondition"/>Previously owned,
-      in excellent condition<br>
-    <link itemprop="availability" href="http://schema.org/InStock"/>In stock! Order now!
+    c-condition: <wink i-itempwop="itemcondition" hwef="http://schema.owg/usedcondition"/>pweviouswy owned, 😳
+      in excewwent condition<bw>
+    <wink itempwop="avaiwabiwity" hwef="http://schema.owg/instock"/>in s-stock! (ˆ ﻌ ˆ)♡ o-owdew nyow! 😳😳😳
 </span>
 
   </span>
@@ -98,130 +98,130 @@ Google 和其他主流搜索引擎支持 [schema.org](https://schema.org/) 结�
 
 ### 结果
 
-{{EmbedLiveSample('示例', '300', '400')}}
+{{embedwivesampwe('示例', (U ﹏ U) '300', '400')}}
 
 #### 结构化数据
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <td colspan="1" rowspan="7">itemscope</td>
+    <tw>
+      <td c-cowspan="1" w-wowspan="7">itemscope</td>
       <td>itemtype</td>
-      <td colspan="2" rowspan="1">Product (http://schema.org/Product)</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
+      <td c-cowspan="2" wowspan="1">pwoduct (http://schema.owg/pwoduct)</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
       <td>name</td>
-      <td>Executive Anvil</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
+      <td>executive anviw</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
       <td>image</td>
       <td>
-        https://pixabay.com/static/uploads/photo/2015/09/05/18/15/suitcase-924605_960_720.png
+        https://pixabay.com/static/upwoads/photo/2015/09/05/18/15/suitcase-924605_960_720.png
       </td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>description</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>descwiption</td>
       <td>
-        Sleeker than ACME's Classic Anvil, the Executive Anvil is perfect for
-        the business traveler looking for something to drop from a height.
+        s-sweekew than acme's cwassic anviw, (///ˬ///✿) the executive anviw is pewfect fow
+        the b-business twavewew wooking fow s-something to dwop f-fwom a height. 😳
       </td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
       <td>mpn</td>
       <td>925872</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>brand [Thing]</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>bwand [thing]</td>
       <td></td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
       <td>name</td>
-      <td>ACME</td>
-    </tr>
-    <tr>
-      <td colspan="1" rowspan="9">itemscope</td>
-      <td>itemprop[itemtype]</td>
-      <td>aggregateRating[AggregateRating]</td>
+      <td>acme</td>
+    </tw>
+    <tw>
+      <td c-cowspan="1" wowspan="9">itemscope</td>
+      <td>itempwop[itemtype]</td>
+      <td>aggwegatewating[aggwegatewating]</td>
       <td></td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>ratingValue</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>watingvawue</td>
       <td>4.4</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>reviewCount</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>weviewcount</td>
       <td>89</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>offers [Offer]</td>
-      <td>http://schema.org/Offer</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>priceCurrency</td>
-      <td>USD</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>price</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>offews [offew]</td>
+      <td>http://schema.owg/offew</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>pwicecuwwency</td>
+      <td>usd</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>pwice</td>
       <td>119.99</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>priceValidUntil</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>pwicevawiduntiw</td>
       <td>2020-11-05</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>itemCondition</td>
-      <td>http://schema.org/UsedCondition</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>availability</td>
-      <td>http://schema.org/InStock</td>
-    </tr>
-    <tr>
-      <td colspan="1" rowspan="2">itemscope</td>
-      <td>itemprop[itemtype]</td>
-      <td>seller [Organization]</td>
-      <td>http://schema.org/Organization</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>itemcondition</td>
+      <td>http://schema.owg/usedcondition</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>avaiwabiwity</td>
+      <td>http://schema.owg/instock</td>
+    </tw>
+    <tw>
+      <td c-cowspan="1" w-wowspan="2">itemscope</td>
+      <td>itempwop[itemtype]</td>
+      <td>sewwew [owganization]</td>
+      <td>http://schema.owg/owganization</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
       <td>name</td>
-      <td>Executive Objects</td>
-    </tr>
+      <td>executive o-objects</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> 一个工具，用于从 HTML 提取 microdata 结构，是 Google 的[结构化数据测试工具](https://developers.google.cn/search/docs/appearance/structured-data)。在上面展示的 HTML 上尝试吧。
+> [!note]
+> 一个工具，用于从 h-htmw 提取 micwodata 结构，是 googwe 的[结构化数据测试工具](https://devewopews.googwe.cn/seawch/docs/appeawance/stwuctuwed-data)。在上面展示的 h-htmw 上尝试吧。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [其他不同的全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)
-- 其他 microdata 相关的全局属性
+- [其他不同的全局属性](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes)
+- 其他 m-micwodata 相关的全局属性
 
-  - [`itemid`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#itemid)
-  - [`itemprop`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#itemprop)
-  - [`itemref`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#itemref)
-  - [`itemscope`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#itemscope)
-  - [`itemtype`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#itemtype)
+  - [`itemid`](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes#itemid)
+  - [`itempwop`](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes#itempwop)
+  - [`itemwef`](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes#itemwef)
+  - [`itemscope`](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes#itemscope)
+  - [`itemtype`](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes#itemtype)

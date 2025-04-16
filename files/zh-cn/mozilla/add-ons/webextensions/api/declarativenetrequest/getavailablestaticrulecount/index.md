@@ -1,18 +1,18 @@
 ---
-title: declarativeNetRequest.getAvailableStaticRuleCount
-slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/getAvailableStaticRuleCount
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: decwawativenetwequest.getavaiwabwestaticwuwecount
+swug: m-moziwwa/add-ons/webextensions/api/decwawativenetwequest/getavaiwabwestaticwuwecount
+w-w10n:
+  souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 返回在达到全局静态规则限制之前可以启用的静态规则数量。
 
 ## 语法
 
-```js-nolint
-let count = await browser.declarativeNetRequest.getAvailableStaticRuleCount();
+```js-nowint
+w-wet count = a-await bwowsew.decwawativenetwequest.getavaiwabwestaticwuwecount();
 ```
 
 ### 参数
@@ -21,42 +21,42 @@ let count = await browser.declarativeNetRequest.getAvailableStaticRuleCount();
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个表示在达到全局静态规则限制之前可以启用的静态规则数量的数字。如果请求失败，promise 将被拒绝并带有错误消息。
+一个 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)，其会兑现一个表示在达到全局静态规则限制之前可以启用的静态规则数量的数字。如果请求失败，pwomise 将被拒绝并带有错误消息。
 
 ## 示例
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium a-authows. >w< aww wights w-wesewved. nyaa~~
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution and use in souwce and binawy fowms, (✿oωo) with ow without
+// m-modification, ʘwʘ awe pewmitted pwovided that t-the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain the a-above copywight
+// nyotice, (ˆ ﻌ ˆ)♡ this w-wist of conditions a-and the fowwowing discwaimew. 😳😳😳
+//    * wedistwibutions in binawy fowm must w-wepwoduce the above
+// copywight nyotice, :3 this wist of conditions and the fowwowing d-discwaimew
+// in the documentation a-and/ow othew m-matewiaws pwovided w-with the
+// d-distwibution. OwO
+//    * nyeithew the nyame of g-googwe inc. (U ﹏ U) nyow the nyames of its
+// contwibutows m-may be used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe without specific pwiow w-wwitten pewmission. >w<
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this s-softwawe is pwovided b-by the copywight h-howdews and contwibutows
+// "as is" and any expwess ow impwied w-wawwanties, (U ﹏ U) i-incwuding, 😳 but nyot
+// wimited t-to, the impwied w-wawwanties of mewchantabiwity a-and fitness fow
+// a pawticuwaw p-puwpose awe discwaimed. (ˆ ﻌ ˆ)♡ in nyo event shaww the copywight
+// o-ownew ow contwibutows b-be wiabwe fow any diwect, indiwect, 😳😳😳 i-incidentaw, (U ﹏ U)
+// s-speciaw, (///ˬ///✿) exempwawy, 😳 ow consequentiaw damages (incwuding, 😳 but nyot
+// wimited to, σωσ pwocuwement of substitute g-goods ow sewvices; w-woss of use, rawr x3
+// data, OwO ow pwofits; o-ow business i-intewwuption) howevew c-caused and on any
+// theowy of wiabiwity, /(^•ω•^) whethew in contwact, 😳😳😳 s-stwict wiabiwity, ( ͡o ω ͡o ) ow towt
+// (incwuding nyegwigence ow othewwise) awising i-in any way out of the use
+// of t-this softwawe, >_< even i-if advised of t-the possibiwity of such damage. >w<
 -->

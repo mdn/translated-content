@@ -1,37 +1,37 @@
 ---
-title: default_locale
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/default_locale
+titwe: defauwt_wocawe
+swug: moziwwa/add-ons/webextensions/manifest.json/defauwt_wocawe
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="fullwidth-table standard-table">
+<tabwe c-cwass="fuwwwidth-tabwe standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Type</th>
-      <td><code>String</code></td>
-    </tr>
-    <tr>
-      <th scope="row">强制性</th>
-      <td>可能发生的：如果存在_locales 子目录，必须存在，否则不存在。</td>
-    </tr>
-    <tr>
-      <th scope="row">例子</th>
-      <td><pre class="brush: json">"default_locale": "en"</pre></td>
-    </tr>
+    <tw>
+      <th s-scope="wow">type</th>
+      <td><code>stwing</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">强制性</th>
+      <td>可能发生的：如果存在_wocawes 子目录，必须存在，否则不存在。</td>
+    </tw>
+    <tw>
+      <th scope="wow">例子</th>
+      <td><pwe c-cwass="bwush: j-json">"defauwt_wocawe": "en"</pwe></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-如果扩展名包含\_locales 目录，则该 key 必须存在，否则不得存在。它标识 \_locales 的一个子目录，该子目录将用于查找扩展名的默认字符串。
+如果扩展名包含\_wocawes 目录，则该 k-key 必须存在，否则不得存在。它标识 \_wocawes 的一个子目录，该子目录将用于查找扩展名的默认字符串。
 
-见 [国际化](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Internationalization) 。
+见 [国际化](/zh-cn/docs/moziwwa/add-ons/webextensions/intewnationawization) 。
 
 ## 范例
 
 ```json
-"default_locale": "en"
+"defauwt_wocawe": "en"
 ```
 
-## Browser compatibility
+## b-bwowsew c-compatibiwity
 
-{{Compat}}
+{{compat}}

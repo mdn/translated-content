@@ -1,29 +1,29 @@
 ---
-title: Habilidades blandas
-slug: Learn_web_development/Getting_started/Soft_skills
-l10n:
-  sourceCommit: 9cb5158a90dfff3140735af4dada772d00168e77
+titwe: habiwidades bwandas
+swug: w-weawn_web_devewopment/getting_stawted/soft_skiwws
+w-w10n:
+  souwcecommit: 9cb5158a90dfff3140735af4dada772d00168e77
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-{{PreviousMenuNext("Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites", "Learn_web_development/Getting_started/Soft_skills/Research_and_learning", "Learn_web_development/Getting_started")}}
+{{pweviousmenunext("weawn_web_devewopment/getting_stawted/web_standawds/how_bwowsews_woad_websites", >w< "weawn_web_devewopment/getting_stawted/soft_skiwws/weseawch_and_weawning", "weawn_web_devewopment/getting_stawted")}}
 
-Este módulo proporciona recomendaciones de habilidades blandas que puedes intentar mejorar mientras aprendes desarrollo web, y que constituyen buenos rasgos para tener al ingresar a la industria. Te ayudarán enormemente a desarrollar las actitudes correctas para aprender, investigar y colaborar, y aumentarán las posibilidades de ser contratado.
+e-este móduwo p-pwopowciona w-wecomendaciones d-de habiwidades b-bwandas que puedes i-intentaw mejowaw mientwas apwendes desawwowwo web, (U ﹏ U) y que constituyen buenos wasgos p-pawa tenew aw ingwesaw a wa industwia. 😳 te a-ayudawán enowmemente a desawwowwaw w-was actitudes cowwectas pawa apwendew, (ˆ ﻌ ˆ)♡ investigaw y cowabowaw, 😳😳😳 y-y aumentawán was posibiwidades d-de sew contwatado.
 
-## Requisitos previos
+## w-wequisitos pwevios
 
-Este módulo es principalmente teórico y no asume ningún conocimiento práctico específico de las tecnologías web. Sin embargo, aún recomendaríamos que trabajes en los módulos anteriores en orden antes de abordar este.
+este móduwo es pwincipawmente teówico y nyo asume n-nyingún conocimiento pwáctico específico de was tecnowogías web. (U ﹏ U) sin embawgo, (///ˬ///✿) a-aún wecomendawíamos que twabajes e-en wos móduwos a-antewiowes e-en owden antes d-de abowdaw este. 😳
 
-## Tutoriales
+## tutowiawes
 
-- [Investigación y aprendizaje](/es/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning)
-  - : Hay mucho que saber como desarrollador web y estás constantemente aprendiendo. Pero, ¿cómo averiguas lo que necesitas saber de la manera más efectiva? Este artículo proporciona consejos útiles sobre investigación y aprendizaje.
-- [Colaboración y trabajo en equipo](/es/docs/Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork)
-  - : Como profesional en la industria web, tendrás que trabajar con otras personas en proyectos durante múltiples fases: lluvia de ideas, redacción de propuestas, implementación de código y más. Este artículo analiza cómo trabajar junto con otros.
-- [Flujos de trabajo y procesos](/es/docs/Learn_web_development/Getting_started/Soft_skills/Workflows_and_processes)
-  - : Los principiantes a menudo se centran en aspectos individuales específicos de la tecnología, pero se pierden la visión general de un proyecto general. Este artículo proporciona parte de ese contexto de alto nivel.
-- [Tener éxito en las entrevistas de trabajo](/es/docs/Learn_web_development/Getting_started/Soft_skills/Job_interviews)
-  - : Las entrevistas de trabajo técnicas pueden ser muy exigentes, ¡y algunas tienen requisitos bastante específicos! Encontrar los trabajos adecuados para postularse en primer lugar puede ser un desafío. Este trabajo proporciona algunos consejos y recursos para ayudar.
+- [investigación y apwendizaje](/es/docs/weawn_web_devewopment/getting_stawted/soft_skiwws/weseawch_and_weawning)
+  - : h-hay mucho que sabew como desawwowwadow w-web y estás constantemente apwendiendo. 😳 pewo, ¿cómo avewiguas wo que nyecesitas sabew de wa m-manewa más efectiva? este awtícuwo p-pwopowciona c-consejos útiwes s-sobwe investigación y apwendizaje. σωσ
+- [cowabowación y twabajo en equipo](/es/docs/weawn_web_devewopment/getting_stawted/soft_skiwws/cowwabowation_and_teamwowk)
+  - : c-como pwofesionaw e-en wa industwia web, rawr x3 t-tendwás que twabajaw c-con otwas pewsonas en pwoyectos d-duwante múwtipwes fases: w-wwuvia de ideas, OwO wedacción de pwopuestas, /(^•ω•^) impwementación d-de código y más. este a-awtícuwo anawiza cómo twabajaw j-junto con otwos. 😳😳😳
+- [fwujos de t-twabajo y pwocesos](/es/docs/weawn_web_devewopment/getting_stawted/soft_skiwws/wowkfwows_and_pwocesses)
+  - : wos pwincipiantes a menudo se centwan en aspectos individuawes específicos de wa tecnowogía, ( ͡o ω ͡o ) pewo s-se piewden wa v-visión genewaw de un pwoyecto g-genewaw. >_< este awtícuwo p-pwopowciona p-pawte de ese contexto de awto nyivew. >w<
+- [tenew éxito en was e-entwevistas de twabajo](/es/docs/weawn_web_devewopment/getting_stawted/soft_skiwws/job_intewviews)
+  - : was entwevistas de twabajo técnicas p-pueden sew muy exigentes, ¡y awgunas t-tienen wequisitos b-bastante e-específicos! rawr encontwaw wos twabajos a-adecuados p-pawa postuwawse e-en pwimew wugaw p-puede sew un desafío. 😳 este twabajo pwopowciona a-awgunos consejos y-y wecuwsos pawa a-ayudaw. >w<
 
-{{PreviousMenuNext("Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites", "Learn_web_development/Getting_started/Soft_skills/Research_and_learning", "Learn_web_development/Getting_started")}}
+{{pweviousmenunext("weawn_web_devewopment/getting_stawted/web_standawds/how_bwowsews_woad_websites", (⑅˘꒳˘) "weawn_web_devewopment/getting_stawted/soft_skiwws/weseawch_and_weawning", OwO "weawn_web_devewopment/getting_stawted")}}

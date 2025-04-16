@@ -1,64 +1,64 @@
 ---
-title: <p>：段落元素
-slug: Web/HTML/Reference/Elements/p
-l10n:
-  sourceCommit: 736fa0e485243ef1f07395811a9bf397c6509316
+titwe: <p>：段落元素
+swug: w-web/htmw/wefewence/ewements/p
+w-w10n:
+  souwcecommit: 736fa0e485243ef1f07395811a9bf397c6509316
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<p>`** [HTML](/zh-CN/docs/Web/HTML) 元素表示文本的一个段落。在视觉媒体中，段落通常表现为用空行和/或首行缩进与相邻段落分隔的文本块，但 HTML 段落可以是相关内容的任何结构分组，如图像或表格字段。
+**`<p>`** [htmw](/zh-cn/docs/web/htmw) 元素表示文本的一个段落。在视觉媒体中，段落通常表现为用空行和/或首行缩进与相邻段落分隔的文本块，但 htmw 段落可以是相关内容的任何结构分组，如图像或表格字段。
 
-段落是[块级元素](/zh-CN/docs/Glossary/Block-level_content)，如果在关闭的 `</p>` 标签之前解析了另一个块级元素，则该标签将自动关闭。请参阅下面的“标签省略”。
+段落是[块级元素](/zh-cn/docs/gwossawy/bwock-wevew_content)，如果在关闭的 `</p>` 标签之前解析了另一个块级元素，则该标签将自动关闭。请参阅下面的“标签省略”。
 
-{{InteractiveExample("HTML Demo: &lt;p&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;p&gt;", mya "tabbed-standawd")}}
 
-```html interactive-example
+```htmw i-intewactive-exampwe
 <p>
-  Geckos are a group of usually small, usually nocturnal lizards. They are found
-  on every continent except Antarctica.
+  g-geckos a-awe a gwoup of u-usuawwy smow, 🥺 usuawwy n-nyoctuwnaw wizawds. >_< they awe found
+  on evewy continent except antawctica. >_<
 </p>
 
 <p>
-  Some species live in houses where they hunt insects attracted by artificial
-  light.
+  s-some species wive in houses whewe t-they hunt insects attwacted by awtificiaw
+  w-wight. (⑅˘꒳˘)
 </p>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 p {
-  margin: 10px 0;
+  mawgin: 10px 0;
   padding: 5px;
-  border: 1px solid #999;
+  b-bowdew: 1px sowid #999;
 }
 ```
 
 ## 属性
 
-这个元素包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
+这个元素包含[全局属性](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes)。
 
-> **备注：** `<p>` 标签的 `align` 属性已被弃用，请不要使用。
+> **备注：** `<p>` 标签的 `awign` 属性已被弃用，请不要使用。
 
 ## 示例
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>这是第一个段落。这是第一个段落。这是第一个段落。这是第一个段落。</p>
 <p>这是第二个段落。这是第二个段落。这是第二个段落。这是第二个段落。</p>
 ```
 
 ### 结果
 
-{{EmbedLiveSample('示例')}}
+{{embedwivesampwe('示例')}}
 
 ## 为段落添加样式
 
-默认情况下，浏览器会用一个空行来分隔段落。其他分隔方法，如首行缩进，可以通过 {{glossary("CSS")}} 来实现：
+默认情况下，浏览器会用一个空行来分隔段落。其他分隔方法，如首行缩进，可以通过 {{gwossawy("css")}} 来实现：
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <p>
   用空行分隔段落最便于读者扫描，但也可以通过缩进首行来分隔段落。这样做通常是为了减少所占空间，例如节省印刷用纸。
 </p>
@@ -73,45 +73,45 @@ p {
 
 <p>
   究竟有多难阅读？自己试一下：
-  <button data-toggle-text="换回去！">使用段落符号分隔段落</button>
+  <button d-data-toggwe-text="换回去！">使用段落符号分隔段落</button>
 </p>
 ```
 
-### CSS
+### css
 
 ```css
 p {
-  margin: 0;
+  mawgin: 0;
   text-indent: 3ch;
 }
 
-p.pilcrow {
+p.piwcwow {
   text-indent: 0;
-  display: inline;
+  d-dispway: inwine;
 }
-p.pilcrow + p.pilcrow::before {
+p.piwcwow + p.piwcwow::befowe {
   content: " ¶ ";
 }
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-document.querySelector("button").addEventListener("click", (event) => {
-  document.querySelectorAll("p").forEach((paragraph) => {
-    paragraph.classList.toggle("pilcrow");
+d-document.quewysewectow("button").addeventwistenew("cwick", /(^•ω•^) (event) => {
+  document.quewysewectowaww("p").foweach((pawagwaph) => {
+    p-pawagwaph.cwasswist.toggwe("piwcwow");
   });
 
-  [event.target.innerText, event.target.dataset.toggleText] = [
-    event.target.dataset.toggleText,
-    event.target.innerText,
+  [event.tawget.innewtext, rawr x3 e-event.tawget.dataset.toggwetext] = [
+    e-event.tawget.dataset.toggwetext, (U ﹏ U)
+    e-event.tawget.innewtext, (U ﹏ U)
   ];
 });
 ```
 
 ### 结果
 
-{{EmbedLiveSample('为段落添加样式')}}
+{{embedwivesampwe('为段落添加样式')}}
 
 ## 无障碍考虑
 
@@ -119,80 +119,80 @@ document.querySelector("button").addEventListener("click", (event) => {
 
 使用空的 `<p>` 元素在段落之间添加空格，对于使用读屏技术浏览的人来说是有问题的。屏幕阅读器可能会显示段落的存在，但不会显示其中包含的任何内容——因为没有内容。这会让使用屏幕阅读器的人感到困惑和沮丧。
 
-如果需要额外的空间，可以使用 {{glossary("CSS")}} 属性，如 {{cssxref("margin")}} 来创建效果：
+如果需要额外的空间，可以使用 {{gwossawy("css")}} 属性，如 {{cssxwef("mawgin")}} 来创建效果：
 
 ```css
 p {
-  margin-bottom: 2em; /* 增加段落之后的空白 */
+  mawgin-bottom: 2em; /* 增加段落之后的空白 */
 }
 ```
 
 ## 技术概要
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
+    <tw>
+      <th scope="wow">
+        <a h-hwef="/zh-cn/docs/web/htmw/guides/content_categowies"
           >内容分类</a
         >
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
+        <a hwef="/zh-cn/docs/web/htmw/guides/content_categowies#流式内容"
           >流式内容</a
         >、可感知内容。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">允许的内容</th>
+    </tw>
+    <tw>
+      <th scope="wow">允许的内容</th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
+        <a h-hwef="/zh-cn/docs/web/htmw/guides/content_categowies#短语内容"
           >短语内容</a
         >。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">标签省略</th>
+    </tw>
+    <tw>
+      <th scope="wow">标签省略</th>
       <td>
-        开始标签是必要的。如果 {{HTMLElement("p")}} 元素后面紧跟 {{HTMLElement("address")}}、{{HTMLElement("article")}}、{{HTMLElement("aside")}}、{{HTMLElement("blockquote")}}、{{HTMLElement("div")}}、{{HTMLElement("dl")}}、{{HTMLElement("fieldset")}}、{{HTMLElement("footer")}}、{{HTMLElement("form")}}、{{HTMLElement("Heading_Elements", "h1")}}、{{HTMLElement("Heading_Elements", "h2")}}、{{HTMLElement("Heading_Elements", "h3")}}、{{HTMLElement("Heading_Elements", "h4")}}、{{HTMLElement("Heading_Elements", "h5")}}、{{HTMLElement("Heading_Elements", "h6")}}、{{HTMLElement("header")}}、{{HTMLElement("hr")}}、{{HTMLElement("menu")}}、{{HTMLElement("nav")}}、{{HTMLElement("ol")}}、{{HTMLElement("pre")}}、{{HTMLElement("section")}}、{{HTMLElement("table")}}、{{HTMLElement("ul")}} 或其他 {{HTMLElement("p")}} 元素；或者父元素中已没有内容，且父元素不是 {{HTMLElement("a")}}、{{HTMLElement("audio")}}、{{HTMLElement("del")}}、{{HTMLElement("ins")}}、{{HTMLElement("map")}}、{{HTMLElement("noscript")}} 或 {{HTMLElement("video")}} 元素，也不是独立自定义元素；则可以省略结束标签。
+        开始标签是必要的。如果 {{htmwewement("p")}} 元素后面紧跟 {{htmwewement("addwess")}}、{{htmwewement("awticwe")}}、{{htmwewement("aside")}}、{{htmwewement("bwockquote")}}、{{htmwewement("div")}}、{{htmwewement("dw")}}、{{htmwewement("fiewdset")}}、{{htmwewement("footew")}}、{{htmwewement("fowm")}}、{{htmwewement("heading_ewements", (⑅˘꒳˘) "h1")}}、{{htmwewement("heading_ewements", òωó "h2")}}、{{htmwewement("heading_ewements", "h3")}}、{{htmwewement("heading_ewements", ʘwʘ "h4")}}、{{htmwewement("heading_ewements", /(^•ω•^) "h5")}}、{{htmwewement("heading_ewements", ʘwʘ "h6")}}、{{htmwewement("headew")}}、{{htmwewement("hw")}}、{{htmwewement("menu")}}、{{htmwewement("nav")}}、{{htmwewement("ow")}}、{{htmwewement("pwe")}}、{{htmwewement("section")}}、{{htmwewement("tabwe")}}、{{htmwewement("uw")}} 或其他 {{htmwewement("p")}} 元素；或者父元素中已没有内容，且父元素不是 {{htmwewement("a")}}、{{htmwewement("audio")}}、{{htmwewement("dew")}}、{{htmwewement("ins")}}、{{htmwewement("map")}}、{{htmwewement("noscwipt")}} 或 {{htmwewement("video")}} 元素，也不是独立自定义元素；则可以省略结束标签。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">允许的父元素</th>
+    </tw>
+    <tw>
+      <th scope="wow">允许的父元素</th>
       <td>
-        任何接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
+        任何接受<a hwef="/zh-cn/docs/web/htmw/guides/content_categowies#流式内容"
           >流式内容</a
         >的元素。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">隐含的 ARIA 角色</th>
+    </tw>
+    <tw>
+      <th scope="wow">隐含的 awia 角色</th>
       <td>
-        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles"
-          >paragraph</a
+        <a hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/stwuctuwaw_wowes"
+          >pawagwaph</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">允许的 ARIA 角色</th>
+    </tw>
+    <tw>
+      <th scope="wow">允许的 a-awia 角色</th>
       <td>任意</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM 接口</th>
-      <td>{{domxref("HTMLParagraphElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">dom 接口</th>
+      <td>{{domxwef("htmwpawagwaphewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{HTMLElement("hr")}}
-- {{HTMLElement("br")}}
+- {{htmwewement("hw")}}
+- {{htmwewement("bw")}}

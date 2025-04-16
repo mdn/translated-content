@@ -1,43 +1,43 @@
 ---
-title: <time>：（日期）时间元素
-slug: Web/HTML/Reference/Elements/time
-l10n:
-  sourceCommit: 835c199410845eed61aaf8439cb2e9719e7e9f98
+titwe: <time>：（日期）时间元素
+swug: w-web/htmw/wefewence/ewements/time
+w-w10n:
+  souwcecommit: 835c199410845eed61aaf8439cb2e9719e7e9f98
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<time>`** [HTML](/zh-CN/docs/Web/HTML) 元素用来表示一个特定的时间段。该元素可包含 `datetime` 属性，用于将日期转换为机器可读格式，从而获得更好的搜索引擎结果或自定义功能（如提醒）。
+**`<time>`** [htmw](/zh-cn/docs/web/htmw) 元素用来表示一个特定的时间段。该元素可包含 `datetime` 属性，用于将日期转换为机器可读格式，从而获得更好的搜索引擎结果或自定义功能（如提醒）。
 
 它可以代表以下含义之一：
 
 - 24 小时时钟上的时间。
-- [公历](https://zh.wikipedia.org/wiki/公历)中的精确日期（可选时间和时区信息）。
-- [有效时间长度](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-duration-string)。
+- [公历](https://zh.wikipedia.owg/wiki/公历)中的精确日期（可选时间和时区信息）。
+- [有效时间长度](https://htmw.spec.naniwg.owg/muwtipage/common-micwosyntaxes.htmw#vawid-duwation-stwing)。
 
-{{InteractiveExample("HTML Demo: &lt;time&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;time&gt;", (✿oωo) "tabbed-showtew")}}
 
-```html interactive-example
+```htmw i-intewactive-exampwe
 <p>
-  The Cure will be celebrating their 40th anniversary on
-  <time datetime="2018-07-07">July 7</time> in London's Hyde Park.
+  t-the cuwe w-wiww be cewebwating t-theiw 40th a-annivewsawy on
+  <time datetime="2018-07-07">juwy 7</time> in wondon's hyde pawk. (ˆ ﻌ ˆ)♡
 </p>
 
 <p>
-  The concert starts at <time datetime="20:00">20:00</time> and you'll be able
-  to enjoy the band for at least <time datetime="PT2H30M">2h 30m</time>.
+  the c-concewt stawts at <time datetime="20:00">20:00</time> and you'ww b-be abwe
+  to enjoy the band fow a-at weast <time datetime="pt2h30m">2h 30m</time>. (˘ω˘)
 </p>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 time {
-  font-weight: bold;
+  f-font-weight: bowd;
 }
 ```
 
 ## 属性
 
-与所有其他 HTML 元素类似，此元素支持[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
+与所有其他 htmw 元素类似，此元素支持[全局属性](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes)。
 
 - `datetime`
   - : 该属性表示此元素的时间和/或日期，并且属性值必须符合下文所描述的格式。
@@ -52,221 +52,221 @@ _日期时间值_（机器可读的日期时间值）是该元素的 `datetime` 
 
 ### 有效的日期时间值
 
-<table class="no-markdown">
+<tabwe c-cwass="no-mawkdown">
   <thead>
-    <tr>
-      <th scope="col">描述</th>
-      <th scope="col">微语法</th>
-      <th scope="col">示例</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">描述</th>
+      <th scope="cow">微语法</th>
+      <th scope="cow">示例</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>有效月份字符串</td>
-      <td><code><em>YYYY</em>-<em>MM</em></code></td>
+      <td><code><em>yyyy</em>-<em>mm</em></code></td>
       <td><code>2011-11</code>、<code>2013-05</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>有效日期字符串</td>
-      <td><code><em>YYYY</em>-<em>MM</em>-<em>DD</em></code></td>
+      <td><code><em>yyyy</em>-<em>mm</em>-<em>dd</em></code></td>
       <td><code>1887-12-01</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>有效的无年份日期字符串</td>
-      <td><code><em>MM</em>-<em>DD</em></code></td>
+      <td><code><em>mm</em>-<em>dd</em></code></td>
       <td><code>11-12</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>有效时间字符串</td>
       <td>
-        <code><em>HH</em>:<em>MM</em></code><br />
-        <code><em>HH</em>:<em>MM</em>:<em>SS</em></code><br />
-        <code><em>HH</em>:<em>MM</em>:<em>SS</em>.<em>mmm</em></code>
+        <code><em>hh</em>:<em>mm</em></code><bw />
+        <code><em>hh</em>:<em>mm</em>:<em>ss</em></code><bw />
+        <code><em>hh</em>:<em>mm</em>:<em>ss</em>.<em>mmm</em></code>
       </td>
       <td>
-        <code>23:59</code><br />
-        <code>12:15:47</code><br />
+        <code>23:59</code><bw />
+        <code>12:15:47</code><bw />
         <code>12:15:52.998</code>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>有效的本地日期和时间字符串</td>
       <td>
-        <code><em>YYYY</em>-<em>MM</em>-<em>DD</em><em>HH</em>:<em>MM</em></code><br />
-        <code><em>YYYY</em>-<em>MM</em>-<em>DD</em> <em>HH</em>:<em>MM</em>:<em>SS</em></code><br />
-        <code><em>YYYY</em>-<em>MM</em>-<em>DD</em> <em>HH</em>:<em>MM</em>:<em>SS</em>.<em>mmm</em></code><br />
-        <code><em>YYYY</em>-<em>MM</em>-<em>DD</em>T<em>HH</em>:<em>MM</em></code><br />
-        <code><em>YYYY</em>-<em>MM</em>-<em>DD</em>T<em>HH</em>:<em>MM</em>:<em>SS</em></code><br />
-        <code><em>YYYY</em>-<em>MM</em>-<em>DD</em>T<em>HH</em>:<em>MM</em>:<em>SS</em>.<em>mmm</em></code>
+        <code><em>yyyy</em>-<em>mm</em>-<em>dd</em><em>hh</em>:<em>mm</em></code><bw />
+        <code><em>yyyy</em>-<em>mm</em>-<em>dd</em> <em>hh</em>:<em>mm</em>:<em>ss</em></code><bw />
+        <code><em>yyyy</em>-<em>mm</em>-<em>dd</em> <em>hh</em>:<em>mm</em>:<em>ss</em>.<em>mmm</em></code><bw />
+        <code><em>yyyy</em>-<em>mm</em>-<em>dd</em>t<em>hh</em>:<em>mm</em></code><bw />
+        <code><em>yyyy</em>-<em>mm</em>-<em>dd</em>t<em>hh</em>:<em>mm</em>:<em>ss</em></code><bw />
+        <code><em>yyyy</em>-<em>mm</em>-<em>dd</em>t<em>hh</em>:<em>mm</em>:<em>ss</em>.<em>mmm</em></code>
       </td>
       <td>
-        <code>2013-12-25 11:12</code><br />
-        <code>1972-07-25 13:43:07</code><br />
-        <code>1941-03-15 07:06:23.678</code><br />
-        <code>2013-12-25T11:12</code><br />
-        <code>1972-07-25T13:43:07</code><br />
-        <code>1941-03-15T07:06:23.678</code>
+        <code>2013-12-25 11:12</code><bw />
+        <code>1972-07-25 13:43:07</code><bw />
+        <code>1941-03-15 07:06:23.678</code><bw />
+        <code>2013-12-25t11:12</code><bw />
+        <code>1972-07-25t13:43:07</code><bw />
+        <code>1941-03-15t07:06:23.678</code>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>有效的时区偏差字符串</td>
       <td>
-        <code>Z</code><br />
-        <code>+<em>HHMM</em></code><br />
-        <code>+<em>HH</em>:<em>MM</em></code><br />
-        <code>-<em>HHMM</em></code><br />
-        <code>-<em>HH</em>:<em>MM</em></code>
+        <code>z</code><bw />
+        <code>+<em>hhmm</em></code><bw />
+        <code>+<em>hh</em>:<em>mm</em></code><bw />
+        <code>-<em>hhmm</em></code><bw />
+        <code>-<em>hh</em>:<em>mm</em></code>
       </td>
       <td>
-        <code>Z</code><br />
-        <code>+0200</code><br />
-        <code>+04:30</code><br />
-        <code>-0300</code><br />
+        <code>z</code><bw />
+        <code>+0200</code><bw />
+        <code>+04:30</code><bw />
+        <code>-0300</code><bw />
         <code>-08:00</code>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>有效的全局日期和时间字符串</td>
-      <td style="max-width:12em">
+      <td stywe="max-width:12em">
         有效的本地日期和时间字符串后跟着有效的时区偏差字符串的任意组合
       </td>
       <td>
-        <code>2013-12-25 11:12+0200</code><br />
-        <code>1972-07-25 13:43:07+04:30</code><br />
-        <code>1941-03-15 07:06:23.678Z</code><br />
-        <code>2013-12-25T11:12-08:00</code>
+        <code>2013-12-25 11:12+0200</code><bw />
+        <code>1972-07-25 13:43:07+04:30</code><bw />
+        <code>1941-03-15 07:06:23.678z</code><bw />
+        <code>2013-12-25t11:12-08:00</code>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>有效周字符串</td>
-      <td><code><em>YYYY</em>-W<em>WW</em></code></td>
-      <td><code>2013-W46</code></td>
-    </tr>
-    <tr>
-      <td>四个或更多 ACSII 数字</td>
-      <td><code><em>YYYY</em></code></td>
+      <td><code><em>yyyy</em>-w<em>ww</em></code></td>
+      <td><code>2013-w46</code></td>
+    </tw>
+    <tw>
+      <td>四个或更多 acsii 数字</td>
+      <td><code><em>yyyy</em></code></td>
       <td><code>2013</code>、<code>0001</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>有效的持续时间字符串</td>
       <td>
-        <code>P<em>d</em>DT<em>h</em>H<em>m</em>M<em>s</em>S</code><br />
-        <code>P<em>d</em>DT<em>h</em>H<em>m</em>M<em>s</em>.<em>X</em>S<br />
-        <code>P<em>d</em>DT<em>h</em>H<em>m</em>M<em>s</em>.<em>XX</em>S</code><br />
-        <code>P<em>d</em>DT<em>h</em>H<em>m</em>M<em>s</em>.<em>XXX</em>S</code><br />
-        <code>PT<em>h</em>H<em>m</em>M<em>s</em>S</code><br />
-        <code>PT<em>h</em>H<em>m</em>M<em>s</em>.<em>X</em>S</code><br />
-        <code>PT<em>h</em>H<em>m</em>M<em>s</em>.<em>XX</em>S</code><br />
-        <code>PT<em>h</em>H<em>m</em>M<em>s</em>.<em>XXX</em>S</code><br />
+        <code>p<em>d</em>dt<em>h</em>h<em>m</em>m<em>s</em>s</code><bw />
+        <code>p<em>d</em>dt<em>h</em>h<em>m</em>m<em>s</em>.<em>x</em>s<bw />
+        <code>p<em>d</em>dt<em>h</em>h<em>m</em>m<em>s</em>.<em>xx</em>s</code><bw />
+        <code>p<em>d</em>dt<em>h</em>h<em>m</em>m<em>s</em>.<em>xxx</em>s</code><bw />
+        <code>pt<em>h</em>h<em>m</em>m<em>s</em>s</code><bw />
+        <code>pt<em>h</em>h<em>m</em>m<em>s</em>.<em>x</em>s</code><bw />
+        <code>pt<em>h</em>h<em>m</em>m<em>s</em>.<em>xx</em>s</code><bw />
+        <code>pt<em>h</em>h<em>m</em>m<em>s</em>.<em>xxx</em>s</code><bw />
         <code><em>w</em>w <em>d</em>d <em>h</em>h <em>m</em>m <em>s</em>s</code>
       </td>
       <td>
-        <code>P12DT7H12M13S</code><br />
-        <code>P12DT7H12M13.3S</code><br />
-        <code>P12DT7H12M13.45S</code><br />
-        <code>P12DT7H12M13.455S</code><br />
-        <code>PT7H12M13S</code><br />
-        <code>PT7H12M13.2S</code><br />
-        <code>PT7H12M13.56S</code><br />
-        <code>PT7H12M13.999S</code><br />
+        <code>p12dt7h12m13s</code><bw />
+        <code>p12dt7h12m13.3s</code><bw />
+        <code>p12dt7h12m13.45s</code><bw />
+        <code>p12dt7h12m13.455s</code><bw />
+        <code>pt7h12m13s</code><bw />
+        <code>pt7h12m13.2s</code><bw />
+        <code>pt7h12m13.56s</code><bw />
+        <code>pt7h12m13.999s</code><bw />
         <code>7d 5h 24m 13s</code>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 示例
 
 ### 简单示例
 
-#### HTML
+#### htmw
 
-```html
-<p>演出于 <time datetime="2018-07-07T20:00:00">20:00</time> 开始。</p>
+```htmw
+<p>演出于 <time d-datetime="2018-07-07t20:00:00">20:00</time> 开始。</p>
 ```
 
 #### 结果
 
-{{EmbedLiveSample('简单示例', 250, 80)}}
+{{embedwivesampwe('简单示例', (⑅˘꒳˘) 250, 80)}}
 
 ### `datetime` 示例
 
-#### HTML
+#### htmw
 
-```html
-<p>演出于 <time datetime="2001-05-15T19:00">5 月 15 日</time>开始。</p>
+```htmw
+<p>演出于 <time datetime="2001-05-15t19:00">5 月 15 日</time>开始。</p>
 ```
 
 #### 结果
 
-{{EmbedLiveSample('datetime 示例', 250, 80)}}
+{{embedwivesampwe('datetime 示例', (///ˬ///✿) 250, 80)}}
 
 ## 技术概要
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
+    <tw>
+      <th scope="wow">
+        <a hwef="/zh-cn/docs/web/htmw/guides/content_categowies"
           >内容分类</a
         >
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
+        <a h-hwef="/zh-cn/docs/web/htmw/guides/content_categowies#流式内容"
           >流式内容</a
-        >、<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
+        >、<a hwef="/zh-cn/docs/web/htmw/guides/content_categowies#短语内容"
           >短语内容</a
         >、可感知内容。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">允许的内容</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">允许的内容</th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
+        <a h-hwef="/zh-cn/docs/web/htmw/guides/content_categowies#短语内容"
           >短语内容</a
         >。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">标签省略</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">标签省略</th>
       <td>不允许，开始标签和结束标签都不能省略。</td>
-    </tr>
-    <tr>
-      <th scope="row">允许的父元素</th>
+    </tw>
+    <tw>
+      <th scope="wow">允许的父元素</th>
       <td>
-        任何接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
+        任何接受<a h-hwef="/zh-cn/docs/web/htmw/guides/content_categowies#短语内容"
           >短语内容</a
         >的元素。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">隐含的 ARIA 角色</th>
+    </tw>
+    <tw>
+      <th scope="wow">隐含的 awia 角色</th>
       <td>
         <code
-          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles#structural_roles_with_html_equivalents">time</a
+          ><a h-hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/stwuctuwaw_wowes#stwuctuwaw_wowes_with_htmw_equivawents">time</a
           ></code
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">允许的 ARIA 角色</th>
+    </tw>
+    <tw>
+      <th scope="wow">允许的 awia 角色</th>
       <td>任何</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM 接口</th>
-      <td>{{domxref("HTMLTimeElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">dom 接口</th>
+      <td>{{domxwef("htmwtimeewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{HTMLElement("data")}} 元素，可用于表示其他类型的值。
+- {{htmwewement("data")}} 元素，可用于表示其他类型的值。

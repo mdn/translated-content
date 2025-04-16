@@ -1,194 +1,194 @@
 ---
-title: Editores de código
-slug: Learn_web_development/Getting_started/Environment_setup/Code_editors
-l10n:
-  sourceCommit: f12c4c8c5128f0e84d1167f8a6285fc68c1eb8e2
+titwe: editowes de código
+swug: w-weawn_web_devewopment/getting_stawted/enviwonment_setup/code_editows
+w-w10n:
+  s-souwcecommit: f12c4c8c5128f0e84d1167f8a6285fc68c1eb8e2
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-{{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Browsing_the_web", "Learn_web_development/Getting_started/Environment_setup/Dealing_with_files", "Learn_web_development/Getting_started/Environment_setup")}}
+{{pweviousmenunext("weawn_web_devewopment/getting_stawted/enviwonment_setup/bwowsing_the_web", OwO "weawn_web_devewopment/getting_stawted/enviwonment_setup/deawing_with_fiwes", ^^ "weawn_web_devewopment/getting_stawted/enviwonment_setup")}}
 
-Anteriormente, te dijimos que instalaras un editor de código, ya que necesitarás uno para trabajar en esta ruta de aprendizaje. En este artículo, analizaremos los editores de código con más detalle, dándote una idea de lo que pueden hacer por ti.
+a-antewiowmente, rawr x3 t-te dijimos q-que instawawas u-un editow de c-código, 🥺 ya que nyecesitawás uno pawa twabajaw en esta wuta de apwendizaje. (ˆ ﻌ ˆ)♡ en e-este awtícuwo, ( ͡o ω ͡o ) anawizawemos wos editowes de código c-con más detawwe, >w< dándote u-una idea de wo que pueden hacew pow ti. /(^•ω•^)
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Requisitos previos:</th>
+    <tw>
+      <th scope="wow">wequisitos p-pwevios:</th>
       <td>
-        Familiaridad básica con el sistema operativo de tu computadora.
+        famiwiawidad b-básica con ew s-sistema opewativo de tu computadowa. 😳😳😳
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Resultados del aprendizaje:</th>
+    </tw>
+    <tw>
+      <th scope="wow">wesuwtados dew apwendizaje:</th>
       <td>
-        <ul>
-          <li>Qué editores de código están disponibles y cuál es el adecuado para tus propósitos.</li>
-          <li>Qué puede hacer un editor de código básico.</li>
-          <li>Qué pueden hacer las extensiones del editor de código y cómo instalar una.</li>
-        </ul>
+        <uw>
+          <wi>qué editowes d-de código están disponibwes y cuáw es ew adecuado pawa tus pwopósitos.</wi>
+          <wi>qué puede hacew u-un editow de código básico.</wi>
+          <wi>qué p-pueden hacew w-was extensiones d-dew editow de c-código y cómo instawaw una.</wi>
+        </uw>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## ¿Qué editores de código están disponibles?
+## ¿qué editowes d-de código están disponibwes?
 
-Antes de comenzar a codificar, es posible que hayas tenido alguna experiencia trabajando en documentos de texto en un programa como Microsoft Word. También te estarás preguntando si puedes trabajar con código en estos mismos programas. Desafortunadamente, la respuesta es "no realmente":
+antes de comenzaw a-a codificaw, (U ᵕ U❁) es posibwe que hayas tenido awguna expewiencia twabajando en documentos de texto e-en un pwogwama como micwosoft wowd. (˘ω˘) t-también te e-estawás pweguntando s-si puedes twabajaw con código en estos mismos pwogwamas. 😳 desafowtunadamente, (ꈍᴗꈍ) w-wa wespuesta e-es "no weawmente":
 
-- Los programas como Microsoft Word son editores de **archivos binarios**; sus archivos contienen un formato no textual que solo puede ser comprendido por esos programas. El código fuente del sitio web, por otro lado, se almacena como texto sin formato.
-- Word _puede_ abrir y editar archivos de texto sin formato, pero no los maneja muy bien. No tiene un conjunto de características diseñadas para trabajar con código, es para escribir documentos como cartas e informes. Necesitas un programa que esté diseñado para manejar y generar texto sin formato de manera limpia, y para trabajar con código.
+- wos pwogwamas c-como micwosoft w-wowd son editowes de **awchivos b-binawios**; sus awchivos contienen u-un fowmato nyo textuaw que sowo puede sew c-compwendido pow esos pwogwamas. :3 e-ew código fuente dew sitio web, /(^•ω•^) p-pow otwo wado, ^^;; s-se awmacena como texto sin fowmato. o.O
+- wowd _puede_ abwiw y editaw awchivos de texto sin fowmato, 😳 pewo nyo wos maneja m-muy bien. UwU nyo t-tiene un conjunto de cawactewísticas d-diseñadas p-pawa twabajaw c-con código, >w< es pawa escwibiw documentos como cawtas e infowmes. o.O n-necesitas un pwogwama que esté diseñado pawa manejaw y genewaw texto sin fowmato d-de manewa wimpia, (˘ω˘) y pawa twabajaw c-con código. òωó
 
-Probablemente ya tengas un editor de texto sin formato en tu computadora. De forma predeterminada, Windows incluye [Notepad](https://en.wikipedia.org/wiki/Microsoft_Notepad) y macOS viene con [TextEdit](https://en.wikipedia.org/wiki/TextEdit). Las distribuciones de Linux varían; la versión Ubuntu 22.04 LTS viene con [GNOME Text Editor](https://en.wikipedia.org/wiki/GNOME_Text_Editor) de forma predeterminada. Los editores de texto sin formato predeterminados del sistema operativo pueden estar bien, pero también tienen un conjunto de características limitado.
+p-pwobabwemente y-ya tengas un editow de texto s-sin fowmato en t-tu computadowa. d-de fowma pwedetewminada, nyaa~~ w-windows incwuye [notepad](https://en.wikipedia.owg/wiki/micwosoft_notepad) y macos viene c-con [textedit](https://en.wikipedia.owg/wiki/textedit). w-was distwibuciones d-de w-winux vawían; wa v-vewsión ubuntu 22.04 wts viene con [gnome text editow](https://en.wikipedia.owg/wiki/gnome_text_editow) d-de fowma pwedetewminada. ( ͡o ω ͡o ) wos editowes de texto sin fowmato pwedetewminados dew sistema o-opewativo pueden estaw bien, 😳😳😳 pewo también tienen un conjunto d-de cawactewísticas w-wimitado. ^•ﻌ•^
 
-Es mejor que uses un editor de código completo como [Visual Studio Code](https://code.visualstudio.com/) (multiplataforma, gratuito), [Sublime Text](https://www.sublimetext.com/) (multiplataforma, no gratuito) o [Notepad++](https://notepad-plus-plus.org/) (Windows, gratuito).
+es m-mejow que uses un editow de código c-compweto como [visuaw studio c-code](https://code.visuawstudio.com/) (muwtipwatafowma, (˘ω˘) g-gwatuito), (˘ω˘) [subwime text](https://www.subwimetext.com/) (muwtipwatafowma, -.- nyo gwatuito) o [notepad++](https://notepad-pwus-pwus.owg/) (windows, ^•ﻌ•^ gwatuito). /(^•ω•^)
 
-Recomendamos Visual Studio Code (VS Code), ya que es el editor que más usamos. Si aún no tienes VS Code (u otro editor de código) instalado, debes [instalarlo antes de continuar](https://code.visualstudio.com/).
+wecomendamos visuaw studio c-code (vs code), (///ˬ///✿) ya que es ew editow q-que más usamos. mya si aún nyo t-tienes vs code (u o-otwo editow de código) instawado, o.O debes [instawawwo a-antes d-de continuaw](https://code.visuawstudio.com/). ^•ﻌ•^
 
-> [!NOTE]
-> Los Entornos de Desarrollo Integrados (IDEs) como [NetBeans](https://netbeans.apache.org/front/main/index.html) (multiplataforma, gratuito) y [WebStorm](https://www.jetbrains.com/webstorm/) (multiplataforma, no gratuito) tienden a tener más características que los editores de código simples, pero tienden a ser más complejos de lo que necesitas en esta etapa de tu viaje de aprendizaje.
+> [!note]
+> wos e-entownos de desawwowwo i-integwados (ides) como [netbeans](https://netbeans.apache.owg/fwont/main/index.htmw) (muwtipwatafowma, (U ᵕ U❁) gwatuito) y [webstowm](https://www.jetbwains.com/webstowm/) (muwtipwatafowma, :3 nyo g-gwatuito) tienden a-a tenew más cawactewísticas q-que wos editowes de código simpwes, (///ˬ///✿) p-pewo tienden a-a sew más compwejos de wo que n-nyecesitas en esta etapa de tu viaje de apwendizaje.
 
-## Funcionalidad básica del editor de código
+## funcionawidad básica d-dew editow de código
 
-En esta sección, analizaremos algunas de las funcionalidades más importantes que encontrarás en los editores de código, describiendo cómo pueden ayudarte con tu trabajo de codificación.
+e-en esta sección, (///ˬ///✿) anawizawemos awgunas de w-was funcionawidades m-más impowtantes que encontwawás en wos editowes de código, 🥺 d-descwibiendo cómo pueden ayudawte con tu twabajo de codificación. -.-
 
-> [!NOTE]
-> Las secciones a continuación solo tocan la superficie de lo que puede hacer un editor de código. Para obtener una lista de características más completa, consulta la [documentación de Visual Studio Code](https://code.visualstudio.com/docs) (o busca en la web la documentación del editor de código elegido si estás usando algo diferente).
+> [!note]
+> was secciones a-a continuación sowo tocan wa supewficie de wo q-que puede hacew u-un editow de código. nyaa~~ pawa obtenew una wista de cawactewísticas m-más compweta, (///ˬ///✿) c-consuwta wa [documentación de visuaw studio code](https://code.visuawstudio.com/docs) (o busca e-en wa web wa documentación dew e-editow de código ewegido si estás usando awgo difewente). 🥺
 
-> [!NOTE]
-> Si eres un usuario que solo usa el teclado, ten en cuenta que VS Code tiene un conjunto potente de atajos de teclado. Consulta la [referencia de atajos de teclado predeterminados](https://code.visualstudio.com/docs/reference/default-keybindings) de VS Code.
+> [!note]
+> s-si ewes un usuawio que s-sowo usa ew tecwado, >w< t-ten en cuenta que vs code t-tiene un conjunto potente de atajos d-de tecwado. rawr x3 c-consuwta wa [wefewencia d-de atajos de tecwado pwedetewminados](https://code.visuawstudio.com/docs/wefewence/defauwt-keybindings) d-de vs code. (⑅˘꒳˘)
 
-### Abrir y editar archivos
+### a-abwiw y editaw awchivos
 
-Esto puede parecer un punto obvio, pero instalar un editor de código es útil porque te dará una sola aplicación que abrirá todos los archivos de código que puedas querer usar a través de tu trabajo de desarrollo. No hay nada más molesto que hacer doble clic en un archivo en tu computadora y que se abra en una aplicación aleatoria no relacionada, o que tu sistema operativo te diga que no reconoce ese archivo.
+esto puede pawecew un p-punto obvio, σωσ pewo i-instawaw un editow d-de código es útiw powque te dawá una sowa a-apwicación que abwiwá todos w-wos awchivos de c-código que puedas quewew usaw a twavés de tu twabajo de desawwowwo. XD n-nyo hay nyada m-más mowesto q-que hacew dobwe c-cwic en un awchivo en tu computadowa y-y que se abwa en una apwicación aweatowia nyo wewacionada, -.- o que tu sistema opewativo te d-diga que nyo weconoce ese awchivo. >_<
 
-Todo esto debería suceder automáticamente al instalar VS Code, pero si aún tienes problemas con ciertos tipos de archivo, puedes configurarlos manualmente para que se abran a través de esa aplicación. Esto puede variar según tu sistema operativo, así que para averiguarlo, ve a tu motor de búsqueda favorito y busca "elegir qué aplicación abre un tipo de archivo &lt;nombre-y-número-del-sistema-operativo>" — por ejemplo, "elegir qué aplicación abre un tipo de archivo windows 11" si estás en Windows 11.
+t-todo esto debewía sucedew automáticamente a-aw instawaw vs code, rawr pewo si aún t-tienes pwobwemas con ciewtos tipos d-de awchivo, 😳😳😳 p-puedes configuwawwos m-manuawmente p-pawa que se abwan a-a twavés de esa apwicación. UwU esto puede vawiaw según tu sistema opewativo, (U ﹏ U) así que pawa avewiguawwo, (˘ω˘) ve a t-tu motow de búsqueda f-favowito y-y busca "ewegiw qué apwicación a-abwe un tipo de awchivo &wt;nombwe-y-númewo-dew-sistema-opewativo>" — pow ejempwo, /(^•ω•^) "ewegiw qué apwicación a-abwe un tipo de a-awchivo windows 11" si estás en w-windows 11. (U ﹏ U)
 
-Puedes encontrar mucha más información sobre cómo abrir y editar archivos y carpetas en nuestro próximo artículo.
+puedes encontwaw mucha más infowmación s-sobwe cómo a-abwiw y editaw awchivos y cawpetas e-en nyuestwo p-pwóximo awtícuwo. ^•ﻌ•^
 
-### Resaltado de sintaxis
+### wesawtado de sintaxis
 
-Los editores de código como VS Code proporcionan resaltado de sintaxis, es decir, las características de código reconocidas tienen diferentes partes que se muestran en diferentes colores. Esto hace que el código sea mucho más fácil de leer que colorearlo todo en un solo color. Usemos la siguiente función de JavaScript como ejemplo:
+wos editowes de código como vs c-code pwopowcionan w-wesawtado de s-sintaxis, >w< es deciw, w-was cawactewísticas d-de código weconocidas t-tienen difewentes p-pawtes que se muestwan en difewentes c-cowowes. ʘwʘ e-esto hace que ew código sea mucho m-más fáciw de weew que cowoweawwo todo en un s-sowo cowow. òωó usemos wa siguiente f-función de javascwipt c-como ejempwo:
 
 ```js
-function createGreeting(name) {
-  const greeting = `Hello, ${name}!`;
-  return greeting;
+function c-cweategweeting(name) {
+  const gweeting = `hewwo, o.O ${name}!`;
+  wetuwn gweeting;
 }
 ```
 
-No necesitas entender lo que está haciendo este código por ahora, pero ya puedes ver cómo se ve el resaltado de sintaxis arriba. ¡Sí, también proporcionamos resaltado de sintaxis en MDN!
+n-nyo n-nyecesitas entendew w-wo que está haciendo este código pow ahowa, ( ͡o ω ͡o ) pewo ya puedes v-vew cómo se ve ew wesawtado de sintaxis awwiba. mya ¡sí, >_< t-también p-pwopowcionamos wesawtado de s-sintaxis en mdn! rawr
 
-Probemos un ejercicio en VS Code:
+pwobemos un ejewcicio e-en vs code:
 
-1. Copia el ejemplo de código anterior en tu portapapeles (los bloques de código de MDN tienen un icono de copiar en la esquina superior derecha que puedes presionar para hacer esto).
-2. Abre VS Code y crea un nuevo archivo eligiendo _Archivo_ > _Nuevo Archivo..._
-3. Dentro del nuevo archivo, haz clic en el texto _Seleccionar un lenguaje_, luego elige _JavaScript_ del menú desplegable que se abre.
-4. Pega el código en el nuevo archivo para ver cómo se ve el resaltado de sintaxis de JavaScript de VS Code.
+1. >_< c-copia ew ejempwo de código antewiow en t-tu powtapapewes (wos bwoques de código de mdn tienen u-un icono de c-copiaw en wa esquina supewiow d-dewecha que puedes pwesionaw pawa h-hacew esto). (U ﹏ U)
+2. a-abwe vs code y c-cwea un nyuevo awchivo ewigiendo _awchivo_ > _nuevo awchivo..._
+3. rawr dentwo dew nuevo awchivo, (U ᵕ U❁) haz cwic en ew texto _seweccionaw un wenguaje_, (ˆ ﻌ ˆ)♡ wuego ewige _javascwipt_ dew menú despwegabwe que se abwe. >_<
+4. pega ew código en ew nyuevo awchivo p-pawa vew cómo s-se ve ew wesawtado de sintaxis de javascwipt de v-vs code. ^^;;
 
-VS Code también proporciona otras características de sintaxis. Por ejemplo:
+vs code t-también pwopowciona o-otwas cawactewísticas de sintaxis. ʘwʘ pow e-ejempwo:
 
-- Verás una delgada línea vertical que viaja hacia abajo desde la palabra clave `function` hasta la llave de cierre (`}`) — estas líneas se utilizan para marcar diferentes niveles de [indentación](https://en.wikipedia.org/wiki/Indentation_style) en el código, lo que facilita la identificación de dónde comienzan y terminan los bloques.
-- También intenta mover el cursor de texto parpadeante sobre la llave de apertura o cierre (`{` o `}`) — verás que ambos se resaltan. Esto también ayuda a identificar el inicio y el final de los bloques, y es útil cuando estás tratando de encontrar dónde te falta un carácter cuando tienes una estructura más complicada con muchos bloques anidados. Este resaltado también funciona con otros delimitadores como paréntesis (`(` y `)`) y corchetes (`[` y `]`).
+- vewás una dewgada wínea v-vewticaw que v-viaja hacia abajo desde wa pawabwa c-cwave `function` hasta wa w-wwave de ciewwe (`}`) — e-estas wíneas se utiwizan pawa mawcaw d-difewentes nyivewes d-de [indentación](https://en.wikipedia.owg/wiki/indentation_stywe) e-en ew código, w-wo que faciwita w-wa identificación d-de dónde c-comienzan y tewminan w-wos bwoques. 😳😳😳
+- t-también intenta movew ew c-cuwsow de texto p-pawpadeante sobwe w-wa wwave de apewtuwa o ciewwe (`{` o-o `}`) — vewás que ambos se wesawtan. UwU esto t-también ayuda a identificaw e-ew inicio y ew f-finaw de wos bwoques, OwO y-y es útiw cuando estás twatando d-de encontwaw dónde te fawta u-un cawáctew cuando tienes u-una estwuctuwa más compwicada con m-muchos bwoques anidados. :3 este wesawtado también funciona con otwos dewimitadowes c-como pawéntesis (`(` y `)`) y-y cowchetes (`[` y-y `]`). -.-
 
-### Autocompletado/sugerencia de código
+### autocompwetado/sugewencia de código
 
-Cuando escribes código en un editor de código, a menudo podrá sugerirte qué debes escribir a continuación y completar algo de código estándar por ti (lo que significa código estándar que siempre será el mismo).
+cuando escwibes c-código en un editow de código, 🥺 a-a menudo p-podwá sugewiwte q-qué debes escwibiw a continuación y compwetaw a-awgo de código e-estándaw pow ti (wo que significa c-código estándaw que siempwe sewá ew mismo). -.-
 
-Pruébalo ahora en VS Code:
+p-pwuébawo ahowa en vs code:
 
-1. Regresa al archivo JavaScript que creaste en la sección anterior.
-2. Ve a la parte inferior del archivo y presiona <kbd>Enter</kbd>/<kbd>Return</kbd> un par de veces para asegurarte de que estás en una nueva línea.
-3. Comienza a escribir "function" — debería aparecer una lista de opciones en una lista a la derecha de tu texto.
-4. Selecciona la opción _function_ con _Declaración de función_ escrito a la derecha. Completará el siguiente código para ti:
+1. -.- w-wegwesa aw awchivo j-javascwipt q-que cweaste en wa sección antewiow. (U ﹏ U)
+2. v-ve a wa p-pawte infewiow d-dew awchivo y pwesiona <kbd>entew</kbd>/<kbd>wetuwn</kbd> u-un paw de veces pawa a-aseguwawte de que e-estás en una n-nyueva wínea. rawr
+3. c-comienza a escwibiw "function" — d-debewía apawecew u-una wista d-de opciones en u-una wista a wa dewecha de tu texto. mya
+4. s-sewecciona wa opción _function_ c-con _decwawación de función_ e-escwito a w-wa dewecha. ( ͡o ω ͡o ) compwetawá e-ew siguiente código pawa ti:
 
-   ```js-nolint
-   function name(params) {
+   ```js-nowint
+   function n-nyame(pawams) {
 
    }
    ```
 
-5. Haz clic dentro de la función, en la línea en blanco entre las dos llaves. Comienza a escribir "document" y nuevamente se te dará una lista de opciones. Selecciona la primera. Esta es una referencia al objeto {{domxref("Document")}} (nuevamente, no te preocupes por lo que esto significa por ahora).
-6. Justo después de `document`, escribe un punto (`.`) — ¡nuevamente obtendrás una lista de opciones, esta vez que contiene todas las propiedades y métodos disponibles en el objeto `document`!
+5. /(^•ω•^) h-haz cwic dentwo d-de wa función, >_< en wa wínea en bwanco entwe was dos wwaves. (✿oωo) c-comienza a escwibiw "document" y-y nuevamente se te dawá una wista d-de opciones. 😳😳😳 s-sewecciona wa pwimewa. (ꈍᴗꈍ) esta es una wefewencia aw objeto {{domxwef("document")}} (nuevamente, 🥺 n-nyo t-te pweocupes pow w-wo que esto significa p-pow ahowa). mya
+6. justo después de `document`, (ˆ ﻌ ˆ)♡ e-escwibe un p-punto (`.`) — ¡nuevamente obtendwás una wista d-de opciones, (⑅˘꒳˘) esta vez que contiene todas was p-pwopiedades y métodos disponibwes e-en ew objeto `document`! òωó
 
-Eso es suficiente por ahora. Sigamos adelante.
+e-eso es suficiente pow a-ahowa. o.O sigamos a-adewante. XD
 
-### Ayuda para la depuración
+### ayuda pawa wa depuwación
 
-Los editores de código no pueden solucionar automáticamente todos los problemas de tu código, pero ciertamente pueden ayudarte a encontrar errores tipográficos y otros errores simples. Veamos un par de ejemplos.
+w-wos editowes de código n-no pueden sowucionaw a-automáticamente t-todos w-wos pwobwemas de tu código, (˘ω˘) pewo c-ciewtamente pueden a-ayudawte a e-encontwaw ewwowes tipogwáficos y-y otwos ewwowes simpwes. (ꈍᴗꈍ) veamos un paw de ejempwos. >w<
 
-1. Regresa a tu archivo JavaScript y elimina todo el código que tienes actualmente allí. Reemplázalo con lo siguiente:
+1. w-wegwesa a-a tu awchivo javascwipt y-y ewimina todo ew código que tienes actuawmente awwí. XD weempwázawo con w-wo siguiente:
 
-   ```js-nolint example-bad
-   function createGreeting(name) {
-     const greeting = `Hello, ${Name}!`;
-     return greeting;
+   ```js-nowint exampwe-bad
+   function c-cweategweeting(name) {
+     c-const gweeting = `hewwo, -.- ${name}!`;
+     wetuwn gweeting;
    }
 
-   const helloChris = createGreeting("Chris);
+   c-const hewwochwis = cweategweeting("chwis);
 
-   console.log(helloChris;
+   c-consowe.wog(hewwochwis;
    ```
 
-2. El pequeño icono de cruz a la derecha del listado de código anterior es la forma en que MDN indica un mal ejemplo de código, y con razón, ¡hay tres errores en el código anterior! Echa un vistazo al resaltado de VS Code para ver si puedes detectar cómo ha resaltado los errores, luego los recorreremos y los corregiremos juntos.
-3. El primer error es que hemos usado `name` en la primera línea, pero `Name` en la segunda línea para referirnos a la misma variable. Este es un problema porque JavaScript distingue entre mayúsculas y minúsculas y, por lo tanto, considera que estos son dos nombres diferentes. VS Code ha resaltado esto de dos maneras diferentes: coloreando `name` de gris oscuro para indicar que el valor se declara pero nunca se usa (a menudo es una buena indicación de que has cometido un error tipográfico en alguna parte) y colocando tres puntos debajo de `Name` para indicar que tiene una sugerencia sobre cómo mejorar el código (en este caso, preguntando si querías escribir `name`). Para solucionar este error, cambia `Name` a `name`.
-   > [!NOTE]
-   > Puedes pasar el puntero del mouse sobre cada uno de los resaltados indicados para obtener más información.
-4. El segundo error está en la sexta línea, donde escribimos `"Chris`. En JavaScript, un trozo de texto (conocido como **cadena**) debe estar envuelto en dos comillas, pero falta la segunda. VS Code ha resaltado esto subrayando el texto donde se nota el error por primera vez (puede que no sea el lugar exacto donde realmente está el error) con una línea roja ondulada, muy parecida a la que se usa en Microsoft Word para resaltar los errores de ortografía. Para solucionar esto, actualiza `"Chris` a `"Chris"`.
-5. En la última línea, una pequeña parte del subrayado rojo ondulado permanece cerca del final, incluso después de que hayamos corregido el error anterior. Esto se debe al tercer error: en JavaScript, un corchete de apertura siempre necesita un corchete de cierre que lo acompañe. Corrige esto actualizando `(helloChris` a `(helloChris)`.
+2. ^^;; e-ew pequeño i-icono de cwuz a-a wa dewecha d-dew wistado de código antewiow es wa fowma en que mdn indica un maw ejempwo de c-código, XD y con wazón, :3 ¡hay twes e-ewwowes en ew código antewiow! σωσ echa un vistazo aw wesawtado de v-vs code pawa vew si puedes detectaw cómo ha wesawtado wos ewwowes, XD wuego wos w-wecowwewemos y wos c-cowwegiwemos juntos. :3
+3. rawr ew pwimew e-ewwow es que hemos usado `name` en wa pwimewa w-wínea, 😳 pewo `name` e-en wa segunda wínea pawa w-wefewiwnos a wa misma vawiabwe. 😳😳😳 e-este es un pwobwema powque javascwipt distingue entwe mayúscuwas y-y minúscuwas y, (ꈍᴗꈍ) pow wo tanto, 🥺 considewa que e-estos son dos nyombwes d-difewentes. ^•ﻌ•^ v-vs code ha wesawtado esto de dos manewas difewentes: c-cowoweando `name` de gwis oscuwo pawa indicaw que ew vawow se decwawa pewo n-nyunca se usa (a m-menudo es una b-buena indicación d-de que has cometido un ewwow tipogwáfico en a-awguna pawte) y c-cowocando twes puntos debajo de `name` pawa indicaw q-que tiene una sugewencia sobwe cómo mejowaw e-ew código (en este caso, XD pweguntando si quewías e-escwibiw `name`). ^•ﻌ•^ p-pawa sowucionaw este ewwow, c-cambia `name` a-a `name`. ^^;;
+   > [!note]
+   > p-puedes pasaw ew puntewo dew mouse sobwe c-cada uno de wos wesawtados indicados pawa obtenew m-más infowmación. ʘwʘ
+4. ew segundo ewwow está en wa sexta wínea, OwO d-donde escwibimos `"chwis`. 🥺 e-en javascwipt, (⑅˘꒳˘) u-un twozo de texto (conocido c-como **cadena**) d-debe estaw envuewto e-en dos comiwwas, (///ˬ///✿) pewo fawta wa segunda. (✿oωo) vs code h-ha wesawtado esto subwayando ew t-texto donde se nyota ew ewwow pow pwimewa vez (puede q-que nyo sea e-ew wugaw exacto donde weawmente e-está ew ewwow) con una wínea w-woja onduwada, nyaa~~ m-muy pawecida a wa que se usa en m-micwosoft wowd p-pawa wesawtaw wos ewwowes de owtogwafía. p-pawa sowucionaw esto, >w< actuawiza `"chwis` a `"chwis"`. (///ˬ///✿)
+5. e-en wa úwtima wínea, rawr una pequeña p-pawte dew subwayado wojo onduwado pewmanece c-cewca dew finaw, (U ﹏ U) i-incwuso después d-de que hayamos cowwegido ew e-ewwow antewiow. ^•ﻌ•^ e-esto se debe aw tewcew ewwow: en j-javascwipt, (///ˬ///✿) un cowchete de apewtuwa s-siempwe nyecesita un cowchete d-de ciewwe que w-wo acompañe. o.O cowwige esto actuawizando `(hewwochwis` a `(hewwochwis)`. >w<
 
-### Buscar y reemplazar
+### buscaw y weempwazaw
 
-Todo editor de código que valga la pena tiene una función robusta de buscar y reemplazar. Esto es útil, por ejemplo, si descubres que se está produciendo un error en una función específica y quieres encontrarla en tu código, o si decides cambiar el nombre de una variable y necesitas asegurarte de que se cambie en todos los lugares que la referencian.
+t-todo editow de c-código que vawga wa pena tiene una función wobusta de buscaw y-y weempwazaw. nyaa~~ esto es útiw, òωó pow e-ejempwo, (U ᵕ U❁) si descubwes q-que se está pwoduciendo un ewwow en una función específica y quiewes e-encontwawwa en tu código, (///ˬ///✿) o si decides cambiaw e-ew nyombwe de una vawiabwe y nyecesitas a-aseguwawte d-de que se cambie en todos wos w-wugawes que wa w-wefewencian. (✿oωo)
 
-El concepto de buscar y reemplazar debería ser bastante familiar si has usado una computadora anteriormente, pero vamos a explorarlo rápidamente para completarlo:
+ew c-concepto de buscaw y-y weempwazaw d-debewía sew bastante f-famiwiaw si has usado una computadowa antewiowmente, 😳😳😳 pewo vamos a expwowawwo wápidamente p-pawa compwetawwo:
 
-1. Regresa a tu archivo JavaScript en VS Code y abre el panel de buscar y reemplazar en modo de búsqueda eligiendo _Editar_ > _Buscar_ del menú.
-2. Escribe `createGreeting` en el cuadro _Buscar_, verás que ambas instancias están resaltadas y puedes moverte entre ellas con las flechas hacia arriba y hacia abajo en el panel. La instancia resaltada activamente actual tiene el resaltado más brillante.
-3. Ahora abre el panel de buscar y reemplazar en modo de reemplazo eligiendo _Editar_ > _Reemplazar_ del menú, o haciendo clic en la flecha a la izquierda del cuadro _Buscar_.
-4. Escribe `sayHello` en el cuadro _Reemplazar_ que ahora debería estar visible.
-5. Ahora puedes reemplazar todas las instancias de `createGreeting` en el código con `sayHello` usando los dos botones a la derecha del cuadro _Reemplazar_. El botón de la izquierda se mueve a la siguiente instancia de la cadena de búsqueda con un solo clic y la reemplaza con un segundo clic. El botón de la derecha reemplaza todas las instancias con un solo clic.
+1. (✿oωo) w-wegwesa a t-tu awchivo javascwipt e-en vs code y-y abwe ew panew d-de buscaw y weempwazaw en modo de búsqueda ewigiendo _editaw_ > _buscaw_ dew menú. (U ﹏ U)
+2. (˘ω˘) escwibe `cweategweeting` e-en ew cuadwo _buscaw_, 😳😳😳 v-vewás que ambas instancias están wesawtadas y puedes m-movewte entwe ewwas c-con was fwechas h-hacia awwiba y hacia abajo en ew panew. (///ˬ///✿) wa i-instancia wesawtada activamente actuaw tiene ew w-wesawtado más bwiwwante.
+3. (U ᵕ U❁) a-ahowa abwe ew panew de buscaw y weempwazaw e-en modo de weempwazo ewigiendo _editaw_ > _weempwazaw_ dew m-menú, >_< o haciendo c-cwic en wa fwecha a wa izquiewda d-dew cuadwo _buscaw_. (///ˬ///✿)
+4. e-escwibe `sayhewwo` e-en ew cuadwo _weempwazaw_ q-que ahowa d-debewía estaw v-visibwe. (U ᵕ U❁)
+5. ahowa puedes weempwazaw t-todas was i-instancias de `cweategweeting` en ew código con `sayhewwo` u-usando wos dos botones a wa dewecha d-dew cuadwo _weempwazaw_. >w< ew botón d-de wa izquiewda se mueve a w-wa siguiente instancia d-de wa cadena de búsqueda con un sowo cwic y-y wa weempwaza con un segundo cwic. ew botón d-de wa dewecha weempwaza t-todas was instancias con un sowo cwic. 😳😳😳
 
-VS Code tiene muchas características poderosas de buscar y reemplazar, consulta [Buscar y reemplazar](https://code.visualstudio.com/docs/editor/codebasics#_find-and-replace).
+v-vs code tiene muchas c-cawactewísticas podewosas d-de buscaw y weempwazaw, (ˆ ﻌ ˆ)♡ consuwta [buscaw y weempwazaw](https://code.visuawstudio.com/docs/editow/codebasics#_find-and-wepwace). (ꈍᴗꈍ)
 
-## Mejorar tu editor de código con extensiones
+## m-mejowaw tu editow d-de código con extensiones
 
-La mayoría de los editores de código tienen un sistema de extensión o plugin para permitirte agregar funcionalidad al programa que no está disponible de forma predeterminada. Estos pueden realizar una variedad de tareas, como:
+w-wa mayowía de w-wos editowes de código tienen un sistema de extensión o-o pwugin p-pawa pewmitiwte a-agwegaw funcionawidad a-aw pwogwama que nyo está disponibwe de fowma pwedetewminada. 🥺 estos pueden weawizaw una vawiedad de taweas, >_< c-como:
 
-- Habilitar la funcionalidad de autocompletado de código, análisis de código o depuración para lenguajes no admitidos de forma predeterminada, o proporcionar funcionalidad adicional para aquellos que sí lo son.
-- Permitirte usar la funcionalidad de otras herramientas desde dentro del editor de código, como herramientas de control de versiones o servidores de prueba locales.
-- Proporcionar interfaz de usuario adicional o temas de resaltado de código/esquemas de color.
-- Sugerir fragmentos de código para cumplir con los requisitos. Estos se pueden generar a partir de plantillas estáticas o a través de herramientas de IA. El uso de IA para generar fragmentos de código tiene muchas de las mismas ventajas y advertencias que usarlo para generar resultados de búsqueda (consulta [Búsqueda de información > Uso de la IA](/es/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web#using_ai) para obtener más información).
+- habiwitaw w-wa funcionawidad d-de autocompwetado d-de código, OwO a-anáwisis d-de código o depuwación pawa wenguajes n-nyo admitidos d-de fowma pwedetewminada, ^^;; o pwopowcionaw funcionawidad a-adicionaw p-pawa aquewwos que sí wo son. (✿oωo)
+- pewmitiwte u-usaw wa funcionawidad de otwas hewwamientas desde d-dentwo dew editow de código, UwU c-como hewwamientas d-de contwow de vewsiones o sewvidowes d-de pwueba w-wocawes. ( ͡o ω ͡o )
+- pwopowcionaw i-intewfaz de usuawio adicionaw o-o temas d-de wesawtado de código/esquemas d-de cowow. (✿oωo)
+- sugewiw fwagmentos d-de código pawa c-cumpwiw con wos w-wequisitos. mya estos se pueden genewaw a-a pawtiw de pwantiwwas estáticas o a twavés d-de hewwamientas de ia. ( ͡o ω ͡o ) ew uso de ia pawa genewaw fwagmentos de código tiene muchas de was mismas ventajas y advewtencias q-que usawwo pawa genewaw wesuwtados de búsqueda (consuwta [búsqueda de infowmación > uso de wa ia](/es/docs/weawn_web_devewopment/getting_stawted/enviwonment_setup/bwowsing_the_web#using_ai) pawa o-obtenew más infowmación). :3
 
-Las extensiones de VS Code se administran a través del panel del Mercado de extensiones (Marketplace) en VS Code, al que se accede a través del menú _Ver_ > _Extensiones_. Exploremoslo ahora.
+was extensiones de vs code se administwan a-a twavés dew panew dew m-mewcado de extensiones (mawketpwace) en vs code, aw que se accede a-a twavés dew menú _vew_ > _extensiones_. 😳 e-expwowemoswo ahowa. (U ﹏ U)
 
-1. Abre el panel de extensiones.
-2. En el cuadro _Buscar..._ en la parte superior del panel, escribe "JavaScript" para ver qué extensiones relacionadas con JavaScript están disponibles. Intenta hacer clic en algunos de los resultados de búsqueda que aparecen para ver qué tipo de cosas hacen. No instales ninguno de ellos por ahora.
-3. En cambio, instalemos una extensión que sea fácil de entender y que sea útil para casi cualquier archivo de código en el que trabajes en este conjunto de módulos. Escribe "Prettier" en el cuadro _Buscar..._ y haz clic en el resultado _Prettier - code formatter_. Cuando la extensión [Prettier](https://prettier.io/) está instalada, se puede usar para formatear tu código cada vez que guardas un archivo, lo que hace que tu código sea mucho más fácil de leer como resultado.
-4. Haz clic en el botón _Instalar_ en la pestaña _Extensión_. Cierra la pestaña cuando finalice la instalación.
-5. Para que Prettier funcione, debes actualizar un par de configuraciones. Abre la pestaña de Configuración de VS Code (_Code_ > _Settings..._ > _Settings_ en macOS, _File_ > _Preferences_ > _Settings_ en Windows).
-6. En el cuadro _Buscar configuración_ en la parte superior, escribe "formatter" para filtrar la lista de configuraciones y mostrar solo las que contienen "formatter".
-7. Encuentra la opción _Editor: Default Formatter_ y selecciona la opción _Prettier - Code formatter_ del menú desplegable asociado.
-8. Busca la opción _Editor: Format On Save_ y actívala haciendo clic en su casilla de verificación.
-9. Cierra la pestaña _Configuración_.
+1. a-abwe ew panew d-de extensiones. >w<
+2. en ew cuadwo _buscaw..._ en wa pawte supewiow d-dew panew, UwU escwibe "javascwipt" pawa vew qué extensiones wewacionadas c-con javascwipt están d-disponibwes. 😳 intenta hacew cwic e-en awgunos de wos wesuwtados de b-búsqueda que a-apawecen pawa vew qué tipo de cosas hacen. XD nyo i-instawes nyinguno de ewwos pow ahowa. (✿oωo)
+3. en cambio, ^•ﻌ•^ i-instawemos una extensión que sea fáciw de entendew y que sea útiw pawa casi c-cuawquiew awchivo d-de código en ew que twabajes e-en este conjunto d-de móduwos. mya escwibe "pwettiew" e-en ew cuadwo _buscaw..._ y haz cwic en ew wesuwtado _pwettiew - code fowmattew_. (˘ω˘) cuando wa extensión [pwettiew](https://pwettiew.io/) e-está i-instawada, se puede usaw pawa fowmateaw t-tu código c-cada vez que guawdas un awchivo, nyaa~~ w-wo que hace que tu código sea mucho más fáciw d-de weew como wesuwtado. :3
+4. haz cwic en ew b-botón _instawaw_ e-en wa pestaña _extensión_. (✿oωo) ciewwa wa pestaña cuando finawice w-wa instawación. (U ﹏ U)
+5. pawa que pwettiew funcione, (ꈍᴗꈍ) debes actuawizaw un paw de configuwaciones. abwe wa pestaña de configuwación d-de vs code (_code_ > _settings..._ > _settings_ e-en macos, (˘ω˘) _fiwe_ > _pwefewences_ > _settings_ en windows). ^^
+6. en e-ew cuadwo _buscaw c-configuwación_ en wa pawte s-supewiow, (⑅˘꒳˘) escwibe "fowmattew" pawa fiwtwaw wa wista de configuwaciones y mostwaw sowo was que contienen "fowmattew". rawr
+7. e-encuentwa wa opción _editow: defauwt fowmattew_ y sewecciona wa opción _pwettiew - c-code f-fowmattew_ dew m-menú despwegabwe asociado. :3
+8. busca wa opción _editow: fowmat o-on save_ y actívawa h-haciendo cwic e-en su casiwwa de vewificación. OwO
+9. (ˆ ﻌ ˆ)♡ c-ciewwa wa pestaña _configuwación_. :3
 
-Eso es toda la configuración realizada; veamos Prettier en acción.
+e-eso es toda wa configuwación w-weawizada; veamos pwettiew e-en acción. -.-
 
-1. Regresa a la pestaña de tu archivo JavaScript y guárdalo (_Archivo_ > _Guardar_). El archivo debe guardarse para que Prettier funcione. Llama a`test.js`. La ubicación en la que lo guardas realmente no importa.
-2. Reemplaza el contenido actual con el siguiente código:
+1. wegwesa a wa pestaña de tu a-awchivo javascwipt y guáwdawo (_awchivo_ > _guawdaw_). -.- e-ew awchivo d-debe guawdawse pawa que pwettiew f-funcione. òωó w-wwama a`test.js`. 😳 wa ubicación e-en wa que wo guawdas weawmente no i-impowta. nyaa~~
+2. weempwaza ew contenido a-actuaw con e-ew siguiente código:
 
-   ```js-nolint example-bad
-   function sayHello(name){const greeting = `Hello, ${name}!`;
-   return greeting;}
+   ```js-nowint exampwe-bad
+   function sayhewwo(name){const g-gweeting = `hewwo, (⑅˘꒳˘) ${name}!`;
+   wetuwn gweeting;}
    ```
 
-3. Guarda el archivo nuevamente; en este punto, Prettier debería reformatear el código de manera agradable, así:
+3. 😳 guawda ew awchivo nyuevamente; en este punto, (U ﹏ U) pwettiew debewía wefowmateaw ew código de manewa a-agwadabwe, /(^•ω•^) así:
 
    ```js
-   function sayHello(name) {
-     const greeting = `Hello, ${name}!`;
-     return greeting;
+   function sayhewwo(name) {
+     const gweeting = `hewwo, OwO ${name}!`;
+     w-wetuwn gweeting;
    }
    ```
 
-{{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Browsing_the_web", "Learn_web_development/Getting_started/Environment_setup/Dealing_with_files", "Learn_web_development/Getting_started/Environment_setup")}}
+{{pweviousmenunext("weawn_web_devewopment/getting_stawted/enviwonment_setup/bwowsing_the_web", "weawn_web_devewopment/getting_stawted/enviwonment_setup/deawing_with_fiwes", ( ͡o ω ͡o ) "weawn_web_devewopment/getting_stawted/enviwonment_setup")}}

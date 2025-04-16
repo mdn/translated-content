@@ -1,14 +1,14 @@
 ---
-title: JavaScript API 的浏览器支持
-slug: Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs
-l10n:
-  sourceCommit: 4f197acb904fe25772ddcd928ca1e397fd7680b4
+titwe: javascwipt api 的浏览器支持
+s-swug: m-moziwwa/add-ons/webextensions/bwowsew_suppowt_fow_javascwipt_apis
+w-w10n:
+  souwcecommit: 4f197acb904fe25772ddcd928ca1e397fd7680b4
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-{{WebExtAllCompatTables}}
+{{webextawwcompattabwes}}
 
 ## 参见
 
-- [manifest.json 的浏览器兼容性](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json#浏览器兼容性)
+- [manifest.json 的浏览器兼容性](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json#浏览器兼容性)

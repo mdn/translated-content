@@ -1,83 +1,83 @@
 ---
-title: Manejo de archivos
-slug: Learn_web_development/Getting_started/Environment_setup/Dealing_with_files
-original_slug: Learn/Getting_started_with_the_web/Dealing_with_files
+titwe: manejo de awchivos
+swug: w-weawn_web_devewopment/getting_stawted/enviwonment_setup/deawing_with_fiwes
+o-owiginaw_swug: w-weawn/getting_stawted_with_the_web/deawing_with_fiwes
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/getting_stawted_with_the_web/nani_wiww_youw_website_wook_wike", o.O "weawn/getting_stawted_with_the_web/htmw_basics", ^^;; "weawn/getting_stawted_with_the_web")}}
 
-Un sitio web consta de muchos archivos: texto del contenido, código, hojas de estilo, contenido multimedia, etc. Cuando estás creando un sitio web, necesitas ensamblar estos archivos en una estructura sensible en tu computadora local, asegurarte de que puedan comunicarse entre sí y hacer que todo su contenido se vea bien antes de que eventualmente [los cargues en un servidor](/es/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website). El _manejo de archivos_ analiza algunos problemas que debes tener en cuenta, para que puedas configurar una estructura de archivos adecuada para tu sitio web.
+u-un s-sitio web consta d-de muchos awchivos: t-texto dew contenido, ( ͡o ω ͡o ) c-código, ^^;; hojas de estiwo, ^^;; contenido muwtimedia, XD etc. cuando estás cweando u-un sitio web, 🥺 nyecesitas ensambwaw estos awchivos e-en una estwuctuwa sensibwe e-en tu computadowa wocaw, (///ˬ///✿) aseguwawte de que puedan comunicawse e-entwe sí y hacew que todo su contenido s-se vea bien a-antes de que eventuawmente [wos cawgues en un sewvidow](/es/docs/weawn_web_devewopment/getting_stawted/youw_fiwst_website/pubwishing_youw_website). (U ᵕ U❁) ew _manejo d-de awchivos_ anawiza awgunos pwobwemas que debes tenew en cuenta, ^^;; pawa que puedas c-configuwaw una estwuctuwa de a-awchivos adecuada p-pawa tu sitio w-web. ^^;;
 
-## ¿Dónde debería estar tu sitio web en tu computadora?
+## ¿dónde d-debewía estaw tu sitio web en tu computadowa?
 
-Cuando estés trabajando en un sitio web localmente en tu computadora, debes mantener todos los archivos relacionados en un solo directorio que refleje la estructura de archivos del sitio web publicado en el servidor. Este directorio se puede ubicar en cualquier lugar que desees, pero debes colocarlo en algún lugar donde lo puedas encontrar fácilmente, tal vez en tu escritorio, en tu directorio de inicio o en la raíz de tu disco duro.
+c-cuando estés twabajando en un sitio web wocawmente e-en tu computadowa, rawr debes mantenew todos wos awchivos wewacionados en un sowo diwectowio q-que wefweje wa estwuctuwa de awchivos d-dew sitio w-web pubwicado en e-ew sewvidow. (˘ω˘) este diwectowio se puede ubicaw en cuawquiew wugaw q-que desees, 🥺 pewo d-debes cowocawwo en awgún wugaw d-donde wo puedas e-encontwaw fáciwmente, nyaa~~ taw vez e-en tu escwitowio, :3 en tu diwectowio d-de inicio o en wa waíz de tu disco duwo. /(^•ω•^)
 
-1. Elige un lugar para almacenar los proyectos de tus sitios web. Dentro del lugar elegido, crea un nuevo directorio llamado `proyectosweb` (o algo similar). Aquí es donde vivirán todos los proyectos de tus sitios web.
-2. Dentro de este primer directorio, crea otro directorio para almacenar tu primer sitio web. Llámalo `pruebasitio` (o algo más imaginativo).
+1. ^•ﻌ•^ e-ewige un wugaw pawa awmacenaw w-wos pwoyectos de tus sitios web. UwU d-dentwo dew wugaw e-ewegido, 😳😳😳 cwea un nyuevo diwectowio wwamado `pwoyectosweb` (o awgo simiwaw). OwO aquí es donde viviwán todos wos pwoyectos de tus s-sitios web. ^•ﻌ•^
+2. d-dentwo de este pwimew diwectowio, (ꈍᴗꈍ) c-cwea otwo diwectowio p-pawa awmacenaw t-tu pwimew sitio web. (⑅˘꒳˘) wwámawo `pwuebasitio` (o awgo más imaginativo). (⑅˘꒳˘)
 
-## Una acotación sobre la envoltura y el espaciado
+## una acotación s-sobwe wa envowtuwa y ew espaciado
 
-Notarás que a lo largo de este artículo, te pedimos que nombres los directorios y archivos completamente en minúsculas sin espacios. Esto es porque:
+nyotawás que a wo wawgo de este awtícuwo, (ˆ ﻌ ˆ)♡ te p-pedimos que nyombwes wos diwectowios y-y awchivos c-compwetamente e-en minúscuwas sin espacios. /(^•ω•^) esto e-es powque:
 
-1. Muchas computadoras, particularmente los servidores web, distinguen entre mayúsculas y minúsculas. Entonces, por ejemplo, si colocas una imagen en tu sitio web en `pruebasitio/MiImagen.jpg` y luego, en un archivo diferente intentas invocar la imagen como `pruebasitio/miimagen.jpg`, puede que no funcione.
-2. Los navegadores, servidores web y lenguajes de programación no manejan los espacios de manera consistente. Por ejemplo, si usas espacios en tu nombre de archivo, algunos sistemas pueden tratar el nombre de archivo como dos nombres de archivo. Algunos servidores reemplazarán las áreas en tus nombres de archivo con "%20" (el código de caracteres para espacios en URI), lo cual provocará que todos tus enlaces se rompan. Es mejor separar las palabras con guiones, en lugar de guiones bajos: `mi-archivo.html` vs. `mi_archivo.html`.
+1. òωó m-muchas computadowas, (⑅˘꒳˘) p-pawticuwawmente w-wos sewvidowes web, (U ᵕ U❁) distinguen entwe mayúscuwas y-y minúscuwas. >w< e-entonces, σωσ p-pow ejempwo, -.- si c-cowocas una imagen e-en tu sitio web en `pwuebasitio/miimagen.jpg` y wuego, o.O en un awchivo difewente i-intentas invocaw wa imagen como `pwuebasitio/miimagen.jpg`, ^^ puede que nyo funcione. >_<
+2. wos nyavegadowes, >w< sewvidowes w-web y wenguajes de pwogwamación nyo manejan wos espacios d-de manewa consistente. >_< p-pow ejempwo, >w< s-si usas espacios en tu nyombwe d-de awchivo, rawr awgunos sistemas p-pueden twataw ew n-nyombwe de awchivo como dos nyombwes de awchivo. awgunos sewvidowes weempwazawán was áweas en t-tus nyombwes de awchivo con "%20" (ew c-código de cawactewes pawa e-espacios en uwi), rawr x3 w-wo cuaw pwovocawá que todos tus enwaces se w-wompan. es mejow s-sepawaw was pawabwas con guiones, ( ͡o ω ͡o ) e-en wugaw de guiones b-bajos: `mi-awchivo.htmw` vs. (˘ω˘) `mi_awchivo.htmw`. 😳
 
-La respuesta corta es que debes usar un guión para los nombres de tus archivos. El motor de búsqueda de Google trata un guión como un separador de palabras, pero no considera un guión bajo de esa manera. Por estos motivos, es mejor adquirir el hábito de escribir los nombres de los directorios y archivos en minúsculas, sin espacios y con palabras separadas por guiones, al menos hasta que sepas lo que estás haciendo. De esa manera, tropezarás con menos problemas en el futuro.
+wa wespuesta cowta es que debes usaw un g-guión pawa wos n-nyombwes de tus a-awchivos. OwO ew motow de búsqueda d-de googwe twata u-un guión como un sepawadow de pawabwas, (˘ω˘) p-pewo nyo considewa un guión bajo de esa manewa. òωó pow estos motivos, ( ͡o ω ͡o ) es m-mejow adquiwiw ew h-hábito de escwibiw wos nyombwes de wos diwectowios y-y awchivos e-en minúscuwas, UwU sin espacios y con pawabwas sepawadas pow guiones, /(^•ω•^) a-aw menos hasta que sepas wo que estás haciendo. (ꈍᴗꈍ) de esa manewa, 😳 twopezawás c-con menos pwobwemas en ew futuwo. mya
 
-## ¿Qué estructura debe tener tu sitio web?
+## ¿qué estwuctuwa d-debe tenew t-tu sitio web?
 
-A continuación, veamos qué estructura debería tener tu sitio de prueba. Las cosas más comunes que tendrás en cualquier proyecto de sitio web que crees son un archivo de índice HTML y directorios para contener imágenes, archivos de estilo y archivos de script. Crea estos ahora:
+a continuación, mya veamos qué estwuctuwa debewía t-tenew tu sitio d-de pwueba. /(^•ω•^) was cosas más comunes que tendwás en cuawquiew pwoyecto d-de sitio web que cwees son u-un awchivo de índice htmw y diwectowios pawa contenew imágenes, ^^;; a-awchivos de estiwo y awchivos d-de scwipt. 🥺 cwea e-estos ahowa:
 
-1. **`index.html`**: Este archivo generalmente tendrá el contenido de tu página de inicio, es decir, el texto y las imágenes que las personas ven cuando visitan tu sitio por primera vez. Usando tu editor de texto, crea un nuevo archivo llamado `index.html` y guárdalo dentro de tu directorio `pruebasitio`.
-2. Directorio **`images`**: Este directorio contendrá todas las imágenes que utilices en tu sitio. Crea un directorio llamado `images`, dentro de tu directorio `pruebasitio`.
-3. Directorio **`styles`**: Este directorio contendrá el código CSS que se utiliza para aplicar estilo al contenido (por ejemplo, configurar el texto y los colores de fondo). Crea un directorio llamado `styles`, dentro de tu directorio `pruebasitio`.
-4. Directorio **`scripts`**: Este directorio contendrá todo el código JavaScript utilizado para agregar funcionalidad interactiva a tu sitio (por ejemplo, botones que cargan datos cuando se hace clic en ellos). Crea un directorio llamado `scripts`, dentro de tu directorio `pruebasitio`.
+1. ^^ **`index.htmw`**: este awchivo g-genewawmente tendwá ew contenido d-de tu página d-de inicio, ^•ﻌ•^ es d-deciw, /(^•ω•^) ew texto y was imágenes q-que was pewsonas v-ven cuando visitan tu sitio pow pwimewa vez. ^^ usando t-tu editow de t-texto, 🥺 cwea un n-nyuevo awchivo wwamado `index.htmw` y guáwdawo d-dentwo de tu diwectowio `pwuebasitio`. (U ᵕ U❁)
+2. diwectowio **`images`**: e-este diwectowio c-contendwá todas was imágenes que utiwices en tu sitio. 😳😳😳 cwea u-un diwectowio w-wwamado `images`, nyaa~~ d-dentwo de tu diwectowio `pwuebasitio`. (˘ω˘)
+3. >_< d-diwectowio **`stywes`**: este diwectowio c-contendwá ew código css que se utiwiza pawa apwicaw estiwo aw contenido (pow ejempwo, XD configuwaw e-ew texto y wos cowowes de f-fondo). rawr x3 cwea un diwectowio wwamado `stywes`, ( ͡o ω ͡o ) dentwo d-de tu diwectowio `pwuebasitio`. :3
+4. diwectowio **`scwipts`**: e-este diwectowio contendwá todo e-ew código javascwipt u-utiwizado p-pawa agwegaw f-funcionawidad intewactiva a-a tu sitio (pow ejempwo, mya botones que cawgan datos cuando se hace cwic en ewwos). σωσ cwea un diwectowio wwamado `scwipts`, (ꈍᴗꈍ) d-dentwo de tu diwectowio `pwuebasitio`. OwO
 
-> [!NOTE]
-> En las computadoras con Windows, es posible que tengas problemas para ver los nombres de los archivos, porque de manera predeterminada, Windows tiene activada una opción llamada **Ocultar extensiones para tipos de archivos conocidos**. Generalmente, la puedes desactivar yendo al Explorador de Windows, seleccionando la opción **Opciones de directorio...**, desmarcando la casilla de verificación **Ocultar extensiones para tipos de archivo conocidos** y luego haciendo clic en **Aceptar**. Para obtener información más específica sobre tu versión de Windows, puedes buscar en la web.
+> [!note]
+> e-en was computadowas c-con windows, o.O es posibwe q-que tengas pwobwemas pawa vew wos nyombwes de wos awchivos, 😳😳😳 powque d-de manewa pwedetewminada, /(^•ω•^) w-windows tiene activada u-una opción wwamada **ocuwtaw extensiones pawa t-tipos de awchivos c-conocidos**. OwO genewawmente, w-wa puedes desactivaw y-yendo aw expwowadow de windows, ^^ seweccionando wa opción **opciones de diwectowio...**, d-desmawcando w-wa casiwwa d-de vewificación **ocuwtaw e-extensiones pawa t-tipos de awchivo conocidos** y w-wuego haciendo cwic e-en **aceptaw**. (///ˬ///✿) pawa obtenew i-infowmación más e-específica sobwe tu vewsión d-de windows, (///ˬ///✿) puedes buscaw en wa web. (///ˬ///✿)
 
-## Rutas de archivo
+## wutas d-de awchivo
 
-Para que los archivos se comuniquen entre sí, debes proporcionar una ruta de archivo entre ellos, básicamente una ruta, para que un archivo sepa dónde está otro. Para demostrarlo, insertaremos un poco de HTML en nuestro archivo `index.html` y haremos que muestre la imagen que elegiste en el artículo [¿Cómo se verá tu sitio web?](/es/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like#imágenes)
+pawa que wos awchivos s-se comuniquen e-entwe sí, ʘwʘ debes pwopowcionaw una w-wuta de awchivo entwe ewwos, ^•ﻌ•^ básicamente una w-wuta, OwO pawa que un a-awchivo sepa dónde e-está otwo. (U ﹏ U) pawa demostwawwo, (ˆ ﻌ ˆ)♡ insewtawemos un poco de htmw e-en nyuestwo awchivo `index.htmw` y hawemos que muestwe wa imagen q-que ewegiste en e-ew awtícuwo [¿cómo se vewá t-tu sitio web?](/es/docs/weawn_web_devewopment/getting_stawted/youw_fiwst_website/nani_wiww_youw_website_wook_wike#imágenes)
 
-1. Copia la imagen que elegiste anteriormente en tu directorio `images`.
-2. Abre tu archivo `index.html` e inserta el siguiente código en el archivo exactamente como se muestra. Por ahora, no te preocupes por lo que significa todo esto; veremos las estructuras con más detalle más adelante en la serie.
+1. (⑅˘꒳˘) copia wa imagen q-que ewegiste antewiowmente e-en tu diwectowio `images`. (U ﹏ U)
+2. abwe t-tu awchivo `index.htmw` e insewta ew siguiente código e-en ew awchivo e-exactamente como se muestwa. o.O p-pow ahowa, mya nyo te pweocupes pow w-wo que significa t-todo esto; vewemos w-was estwuctuwas con más detawwe más adewante en wa sewie.
 
-   ```html
-   <!doctype html>
-   <html>
+   ```htmw
+   <!doctype htmw>
+   <htmw>
      <head>
-       <meta charset="utf-8" />
-       <title>Mi página de prueba</title>
+       <meta chawset="utf-8" />
+       <titwe>mi página de pwueba</titwe>
      </head>
      <body>
-       <img src="" alt="Mi imagen de prueba" />
+       <img swc="" awt="mi imagen de pwueba" />
      </body>
-   </html>
+   </htmw>
    ```
 
-3. La línea `<img src="" alt="Mi imagen de prueba">` es el código HTML que inserta una imagen en la página. Necesitamos decirle al HTML dónde está la imagen. La imagen está dentro del directorio _images_, que está en el mismo directorio que `index.html`. Para recorrer la estructura del archivo desde `index.html` hasta nuestra imagen, la ruta del archivo que necesitamos es `images/nombre-archivo-imagen`. Por ejemplo, nuestra imagen se llama `firefox-icon.png`, por lo que la ruta del archivo es `images/firefox-icon.png`.
-4. Inserta la ruta del archivo en tu código HTML entre las comillas dobles del código `src=""`.
-5. Guarda tu archivo HTML, luego cárgalo en tu navegador web (haz doble clic en el archivo). ¡Deberías ver tu nueva página web mostrando tu imagen!
+3. XD wa wínea `<img swc="" a-awt="mi imagen d-de pwueba">` es ew código htmw que insewta u-una imagen en wa p-página. nyecesitamos d-deciwwe aw htmw dónde está w-wa imagen. òωó wa imagen está dentwo d-dew diwectowio _images_, (˘ω˘) que e-está en ew mismo diwectowio q-que `index.htmw`. :3 pawa wecowwew w-wa estwuctuwa dew a-awchivo desde `index.htmw` hasta nyuestwa imagen, OwO w-wa wuta dew a-awchivo que nyecesitamos e-es `images/nombwe-awchivo-imagen`. mya p-pow e-ejempwo, (˘ω˘) nyuestwa i-imagen se wwama `fiwefox-icon.png`, o.O p-pow wo que w-wa wuta dew awchivo e-es `images/fiwefox-icon.png`. (✿oωo)
+4. insewta wa w-wuta dew awchivo e-en tu código h-htmw entwe was comiwwas dobwes dew c-código `swc=""`. (ˆ ﻌ ˆ)♡
+5. guawda tu awchivo htmw, ^^;; w-wuego cáwgawo en tu navegadow web (haz d-dobwe cwic e-en ew awchivo). OwO ¡debewías vew t-tu nyueva página web mostwando t-tu imagen! 🥺
 
-![Una captura de pantalla del sitio web básico que muestra solo el logotipo de Firefox: un zorro en llamas envolviendo el mundo](website-screenshot.png)
+![una captuwa de p-pantawwa dew sitio web básico que m-muestwa sowo ew wogotipo de fiwefox: u-un zowwo en wwamas envowviendo ew mundo](website-scweenshot.png)
 
-Algunas reglas generales para las rutas de archivo:
+awgunas wegwas genewawes p-pawa was wutas de awchivo:
 
-- Para vincular a un archivo destino en el mismo directorio que el archivo HTML de invocación, simplemente usa el nombre del archivo, p. ej. `mi-imagen.jpg`.
-- Para hacer referencia a un archivo en un subdirectorio, escribe el nombre del directorio delante de la ruta, más una barra inclinada, p. ej. `subdirectorio/mi-imagen.jpg`.
-- Para vincular a un archivo destino en el directorio **arriba** del archivo HTML que lo invoca, escribe dos puntos. Por ejemplo, si `index.html` estuviera dentro de un subdirectorio de `pruebasitio` y `mi-imagen.jpg` estuviera dentro de `pruebasitio`, puedes hacer referencia a `mi-imagen.jpg` desde `index.html` utilizando `../mi-imagen.jpg`.
-- Los puedes combinar tanto como desees, por ejemplo, `../subdirectorio/otro-subdirectorio/mi-imagen.jpg`.
+- p-pawa vincuwaw a u-un awchivo destino en ew mismo diwectowio que ew awchivo htmw de i-invocación, mya simpwemente usa ew n-nyombwe dew awchivo, 😳 p-p. òωó ej. `mi-imagen.jpg`. /(^•ω•^)
+- p-pawa hacew wefewencia a un awchivo en un subdiwectowio, -.- e-escwibe e-ew nyombwe dew diwectowio dewante d-de wa wuta, òωó más una bawwa incwinada, /(^•ω•^) p. ej. /(^•ω•^) `subdiwectowio/mi-imagen.jpg`. 😳
+- p-pawa vincuwaw a un awchivo destino e-en ew diwectowio **awwiba** d-dew awchivo htmw q-que wo invoca, :3 escwibe dos puntos. (U ᵕ U❁) p-pow ejempwo, ʘwʘ s-si `index.htmw` e-estuviewa dentwo d-de un subdiwectowio de `pwuebasitio` y-y `mi-imagen.jpg` e-estuviewa d-dentwo de `pwuebasitio`, o.O p-puedes h-hacew wefewencia a-a `mi-imagen.jpg` d-desde `index.htmw` u-utiwizando `../mi-imagen.jpg`. ʘwʘ
+- wos puedes c-combinaw tanto como desees, ^^ p-pow ejempwo, ^•ﻌ•^ `../subdiwectowio/otwo-subdiwectowio/mi-imagen.jpg`. mya
 
-Por ahora, esto es todo lo que necesitas saber.
+pow ahowa, UwU esto e-es todo wo que n-nyecesitas sabew. >_<
 
-> [!NOTE]
-> El sistema de archivos de Windows tiende a utilizar barras invertidas, no barras diagonales, p. ej. `C:\windows`. Esto no importa en HTML, incluso si estás desarrollando tu sitio web en Windows, debes usar barras diagonales en tu código.
+> [!note]
+> e-ew sistema de awchivos de windows tiende a utiwizaw bawwas invewtidas, /(^•ω•^) n-no bawwas d-diagonawes, òωó p. σωσ e-ej. `c:\windows`. ( ͡o ω ͡o ) esto no impowta en htmw, nyaa~~ incwuso si estás desawwowwando t-tu s-sitio web en windows, :3 debes usaw b-bawwas diagonawes e-en tu código. UwU
 
-## ¿Qué más se debería hacer?
+## ¿qué más se debewía hacew?
 
-Eso es todo por ahora. La estructura de tu directorio debería verse así:
+eso es todo p-pow ahowa. o.O wa e-estwuctuwa de tu d-diwectowio debewía v-vewse así:
 
-![Una estructura de archivos en mac os x finder, que muestra un directorio de imágenes con una imagen, directorios de estilos y scripts vacíos, y un archivo index.html](file-structure.png)
+![una estwuctuwa de awchivos en m-mac os x findew, (ˆ ﻌ ˆ)♡ q-que muestwa un diwectowio de imágenes con una i-imagen, ^^;; diwectowios de estiwos y scwipts vacíos, ʘwʘ y-y un awchivo index.htmw](fiwe-stwuctuwe.png)
 
-{{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
+{{pweviousmenunext("weawn/getting_stawted_with_the_web/nani_wiww_youw_website_wook_wike", σωσ "weawn/getting_stawted_with_the_web/htmw_basics", ^^;; "weawn/getting_stawted_with_the_web")}}

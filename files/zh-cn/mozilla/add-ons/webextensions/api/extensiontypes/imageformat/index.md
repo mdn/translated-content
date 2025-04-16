@@ -1,11 +1,11 @@
 ---
-title: extensionTypes.ImageFormat
-slug: Mozilla/Add-ons/WebExtensions/API/extensionTypes/ImageFormat
-l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+titwe: extensiontypes.imagefowmat
+swug: moziwwa/add-ons/webextensions/api/extensiontypes/imagefowmat
+w-w10n:
+  s-souwcecommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 图片的格式。
 
@@ -15,39 +15,39 @@ l10n:
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.extensionTypes`](https://developer.chrome.google.cn/docs/extensions/reference/api/extensionTypes#type-ImageFormat) API。该文档衍生自 Chromium 代码中的 [`extension_types.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json)。
+> [!note]
+> 此 api 基于 c-chwomium 的 [`chwome.extensiontypes`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/extensiontypes#type-imagefowmat) a-api。该文档衍生自 c-chwomium 代码中的 [`extension_types.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/extension_types.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium a-authows. aww wights wesewved. mya
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and b-binawy fowms, with ow without
+// modification, >w< awe p-pewmitted pwovided that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce c-code must wetain the above c-copywight
+// nyotice, t-this wist of conditions and the fowwowing discwaimew. nyaa~~
+//    * wedistwibutions i-in binawy fowm must wepwoduce the above
+// copywight nyotice, this wist of conditions a-and the fowwowing discwaimew
+// i-in the d-documentation and/ow o-othew matewiaws p-pwovided with the
+// distwibution. (✿oωo)
+//    * neithew the nyame o-of googwe inc. ʘwʘ now the nyames of its
+// contwibutows m-may be used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe without specific p-pwiow wwitten pewmission. (ˆ ﻌ ˆ)♡
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided by the c-copywight howdews and contwibutows
+// "as is" and any expwess o-ow impwied wawwanties, 😳😳😳 i-incwuding, :3 but nyot
+// wimited t-to, OwO the impwied w-wawwanties of mewchantabiwity a-and fitness fow
+// a pawticuwaw p-puwpose awe discwaimed. (U ﹏ U) in nyo event shaww t-the copywight
+// ownew ow contwibutows b-be wiabwe fow any diwect, >w< i-indiwect, (U ﹏ U) incidentaw,
+// s-speciaw, 😳 exempwawy, (ˆ ﻌ ˆ)♡ ow consequentiaw damages (incwuding, 😳😳😳 but nyot
+// wimited to, (U ﹏ U) pwocuwement of substitute goods ow sewvices; w-woss of u-use, (///ˬ///✿)
+// data, ow pwofits; ow business i-intewwuption) h-howevew caused a-and on any
+// theowy of wiabiwity, 😳 whethew in contwact, 😳 stwict w-wiabiwity, σωσ ow towt
+// (incwuding nyegwigence ow othewwise) awising in any way o-out of the use
+// of this softwawe, rawr x3 e-even if advised o-of the possibiwity o-of such damage. OwO
 -->

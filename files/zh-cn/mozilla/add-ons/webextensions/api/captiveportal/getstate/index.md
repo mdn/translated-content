@@ -1,56 +1,56 @@
 ---
-title: getState
-slug: Mozilla/Add-ons/WebExtensions/API/captivePortal/getState
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: getstate
+swug: moziwwa/add-ons/webextensions/api/captivepowtaw/getstate
+w-w10n:
+  souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-返回门户状态，状态值可以是 `unknown`、`not_captive`、`unlocked_portal` 或 `locked_portal` 之一。
+返回门户状态，状态值可以是 `unknown`、`not_captive`、`unwocked_powtaw` 或 `wocked_powtaw` 之一。
 
 ## 语法
 
-```js-nolint
-let state = browser.captivePortal.getState()
+```js-nowint
+w-wet state = b-bwowsew.captivepowtaw.getstate()
 ```
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，完成时其会兑现一个字符串，该字符串包含 `unknown`、`not_captive`、`unlocked_portal` 或 `locked_portal` 之一。
+一个 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)，完成时其会兑现一个字符串，该字符串包含 `unknown`、`not_captive`、`unwocked_powtaw` 或 `wocked_powtaw` 之一。
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the c-chwomium authows. >w< a-aww wights wesewved. mya
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce and binawy fowms, >w< with ow without
+// m-modification, nyaa~~ awe pewmitted pwovided that the f-fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain the above c-copywight
+// nyotice, (✿oωo) this wist o-of conditions a-and the fowwowing discwaimew. ʘwʘ
+//    * wedistwibutions in binawy fowm must wepwoduce t-the above
+// copywight nyotice, (ˆ ﻌ ˆ)♡ this wist of conditions and the fowwowing discwaimew
+// i-in the documentation a-and/ow othew matewiaws p-pwovided w-with the
+// distwibution. 😳😳😳
+//    * n-nyeithew the nyame of googwe inc. :3 nyow the nyames o-of its
+// contwibutows may be used to endowse o-ow pwomote pwoducts dewived fwom
+// this softwawe without specific pwiow wwitten pewmission. OwO
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided b-by the copywight h-howdews and contwibutows
+// "as i-is" and any expwess ow impwied wawwanties, (U ﹏ U) incwuding, but nyot
+// w-wimited to, >w< t-the impwied wawwanties of mewchantabiwity a-and fitness f-fow
+// a pawticuwaw puwpose a-awe discwaimed. in nyo event shaww t-the copywight
+// ownew ow contwibutows be wiabwe f-fow any diwect, (U ﹏ U) indiwect, 😳 i-incidentaw,
+// speciaw, (ˆ ﻌ ˆ)♡ exempwawy, 😳😳😳 o-ow consequentiaw d-damages (incwuding, but nyot
+// wimited to, (U ﹏ U) pwocuwement of substitute goods ow sewvices; woss of use, (///ˬ///✿)
+// data, o-ow pwofits; ow b-business intewwuption) howevew c-caused and on any
+// t-theowy of w-wiabiwity, 😳 whethew in contwact, 😳 stwict wiabiwity, σωσ ow towt
+// (incwuding n-negwigence ow othewwise) awising in any way out of the use
+// of this softwawe, rawr x3 e-even if advised of the possibiwity o-of such d-damage. OwO
 -->

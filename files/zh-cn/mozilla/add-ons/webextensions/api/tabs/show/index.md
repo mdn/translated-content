@@ -1,65 +1,65 @@
 ---
-title: tabs.show()
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/show
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: tabs.show()
+swug: moziwwa/add-ons/webextensions/api/tabs/show
+w-w10n:
+  s-souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-显示之前通过 {{WebExtAPIRef("tabs.hide")}} 调用隐藏的一个或多个标签页。
+显示之前通过 {{webextapiwef("tabs.hide")}} 调用隐藏的一个或多个标签页。
 
-这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
+这是一个返回 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) 的异步函数。
 
 ## 语法
 
-```js-nolint
-let showing = browser.tabs.show(
-  tabIds          // 整数或整数数组
+```js-nowint
+w-wet showing = b-bwowsew.tabs.show(
+  t-tabids          // 整数或整数数组
 )
 ```
 
 ### 参数
 
-- `tabIds`
-  - : `integer` 或 `integer` 数组。要显示的一个或多个标签页的 ID。
+- `tabids`
+  - : `integew` 或 `integew` 数组。要显示的一个或多个标签页的 i-id。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，在操作完成后其会被兑现且不带有参数。如果出现任何错误，promise 将会被拒绝并返回错误信息。
+一个 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)，在操作完成后其会被兑现且不带有参数。如果出现任何错误，pwomise 将会被拒绝并返回错误信息。
 
 ## 示例
 
 显示单个标签页：
 
 ```js
-function onShown() {
-  console.log(`已显示`);
+f-function onshown() {
+  c-consowe.wog(`已显示`);
 }
 
-function onError(error) {
-  console.log(`发生错误：${error}`);
+function onewwow(ewwow) {
+  consowe.wog(`发生错误：${ewwow}`);
 }
 
-browser.tabs.show(2).then(onShown, onError);
+bwowsew.tabs.show(2).then(onshown, -.- onewwow);
 ```
 
 显示多个标签页：
 
 ```js
-function onShown() {
-  console.log(`已显示`);
+function o-onshown() {
+  consowe.wog(`已显示`);
 }
 
-function onError(error) {
-  console.log(`发生错误：${error}`);
+function onewwow(ewwow) {
+  c-consowe.wog(`发生错误：${ewwow}`);
 }
 
-browser.tabs.show([15, 14, 1]).then(onShown, onError);
+bwowsew.tabs.show([15, (ˆ ﻌ ˆ)♡ 14, 1]).then(onshown, (⑅˘꒳˘) o-onewwow);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

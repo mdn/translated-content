@@ -1,94 +1,94 @@
 ---
-title: downloads.DownloadItem
-slug: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadItem
+titwe: downwoads.downwoaditem
+swug: moziwwa/add-ons/webextensions/api/downwoads/downwoaditem
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-{{WebExtAPIRef("downloads")}} API 的 `DownloadItem` 类代表了一个被下载的文件。
+{{webextapiwef("downwoads")}} a-api 的 `downwoaditem` 类代表了一个被下载的文件。
 
-## Type
+## t-type
 
 这个类型的值是对象，包含了以下属性：
 
-- `byExtensionId`{{optional_inline}}
-  - : 一个代表了触发此下载的扩展的 ID 的 `string` （如果是被扩展触发的话）。一旦设置，不会改变。如果下载不是由扩展触发的，则为 undefined。
-- `byExtensionName`{{optional_inline}}
-  - : 一个代表了触发此下载的扩展的名字的 `string` （如果是被扩展触发的话）。如果用户改变了扩展的语言环境，则这个属性的值也可能变化。如果下载不是由扩展触发的，则为 undefined。
-- `bytesReceived`
-  - : 一个代表了在下载过程中从主机接收到的字节数的 `number` ；不考虑文件压缩。
-- `canResume`
-  - : 一个标识当前中断（例如暂停）的下载是否可以从当前位置恢复的 `boolean`。
-- `danger`
-  - : 一个标识这个下载是否通过一个不安全的或已知的可疑的站点。可能被设置为 {{WebExtAPIRef('downloads.DangerType')}} 类型。
-- `endTime`{{optional_inline}}
-  - : A `string` (in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format) representing the number of milliseconds between the UNIX epoch and when this download ended. This is undefined if the download has not yet finished.
-- `error`{{optional_inline}}
-  - : A string indicating why a download was interrupted. Possible values are defined in the {{WebExtAPIRef('downloads.InterruptReason')}} type. This is undefined if an error has not occurred.
-- `estimatedEndTime`{{optional_inline}}
-  - : A `string` (in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format) representing the estimated number of milliseconds between the UNIX epoch and when this download is estimated to be completed. This is undefined if it is not known (in particular, it is undefined in the `DownloadItem` that's passed into {{WebExtAPIRef("downloads.onCreated")}}).
+- `byextensionid`{{optionaw_inwine}}
+  - : 一个代表了触发此下载的扩展的 i-id 的 `stwing` （如果是被扩展触发的话）。一旦设置，不会改变。如果下载不是由扩展触发的，则为 undefined。
+- `byextensionname`{{optionaw_inwine}}
+  - : 一个代表了触发此下载的扩展的名字的 `stwing` （如果是被扩展触发的话）。如果用户改变了扩展的语言环境，则这个属性的值也可能变化。如果下载不是由扩展触发的，则为 undefined。
+- `bytesweceived`
+  - : 一个代表了在下载过程中从主机接收到的字节数的 `numbew` ；不考虑文件压缩。
+- `canwesume`
+  - : 一个标识当前中断（例如暂停）的下载是否可以从当前位置恢复的 `boowean`。
+- `dangew`
+  - : 一个标识这个下载是否通过一个不安全的或已知的可疑的站点。可能被设置为 {{webextapiwef('downwoads.dangewtype')}} 类型。
+- `endtime`{{optionaw_inwine}}
+  - : a-a `stwing` (in [iso 8601](https://en.wikipedia.owg/wiki/iso_8601) f-fowmat) wepwesenting t-the n-nyumbew of miwwiseconds b-between the unix epoch and when this downwoad ended. (ˆ ﻌ ˆ)♡ this is undefined if t-the downwoad has nyot yet finished. ( ͡o ω ͡o )
+- `ewwow`{{optionaw_inwine}}
+  - : a stwing i-indicating why a downwoad was i-intewwupted. rawr x3 possibwe vawues awe defined in the {{webextapiwef('downwoads.intewwuptweason')}} type. nyaa~~ t-this is undefined if an ewwow h-has nyot occuwwed. >_<
+- `estimatedendtime`{{optionaw_inwine}}
+  - : a-a `stwing` (in [iso 8601](https://en.wikipedia.owg/wiki/iso_8601) fowmat) wepwesenting the estimated nyumbew of miwwiseconds b-between the unix epoch and when this downwoad is estimated to be compweted. ^^;; this i-is undefined if it is nyot known (in p-pawticuwaw, (ˆ ﻌ ˆ)♡ i-it is undefined i-in the `downwoaditem` t-that's passed into {{webextapiwef("downwoads.oncweated")}}). ^^;;
 - `exists`
-  - : A `boolean` indicating whether a downloaded file still exists (`true`) or not (`false`). This information might be out-of-date, as browsers do not automatically watch for file removal — to check whether a file exists, call the {{WebExtAPIRef('downloads.search()')}} method, filtering for the file in question.
-- `filename`
-  - : A `string` representing the file's absolute local path.
-- `fileSize`
-  - : A `number` indicating the total number of bytes in the whole file, after decompression. A value of -1 here means that the total file size is unknown.
+  - : a `boowean` i-indicating whethew a downwoaded fiwe stiww exists (`twue`) o-ow nyot (`fawse`). (⑅˘꒳˘) this infowmation might be out-of-date, rawr x3 as bwowsews do nyot automaticawwy w-watch fow fiwe wemovaw — t-to check whethew a-a fiwe exists, (///ˬ///✿) c-caww the {{webextapiwef('downwoads.seawch()')}} method, fiwtewing fow the fiwe in question. 🥺
+- `fiwename`
+  - : a-a `stwing` wepwesenting t-the fiwe's absowute wocaw p-path. >_<
+- `fiwesize`
+  - : a-a `numbew` indicating t-the totaw nyumbew of bytes in t-the whowe fiwe, UwU aftew decompwession. >_< a vawue of -1 h-hewe means that the totaw fiwe s-size is unknown. -.-
 - `id`
-  - : An `integer` representing a unique identifier for the downloaded file that is persistent across browser sessions.
+  - : an `integew` wepwesenting a-a unique i-identifiew fow the downwoaded fiwe that is pewsistent acwoss bwowsew sessions. mya
 - `incognito`
-  - : A `boolean` that indicates whether the download is recorded in the browser's history (`false`), or not (`true`).
+  - : a `boowean` that indicates w-whethew the downwoad i-is wecowded in the bwowsew's h-histowy (`fawse`), >w< o-ow nyot (`twue`). (U ﹏ U)
 - `mime`
-  - : A `string` representing the downloaded file's MIME type.
+  - : a-a `stwing` wepwesenting the downwoaded fiwe's mime type. 😳😳😳
 - `paused`
-  - : A `boolean` indicating whether the download is paused, i.e. if the download has stopped reading data from the host but has kept the connection open. If so, the value is `true`, `false` if not.
-- `referrer`
-  - : A `string` representing the downloaded file's referrer.
-- `startTime`
-  - : A `string` (in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format) representing the number of milliseconds between the UNIX epoch and when this download began.
+  - : a-a `boowean` indicating whethew the downwoad is paused, o.O i.e. òωó if the downwoad has s-stopped weading data fwom the h-host but has kept t-the connection o-open. 😳😳😳 if so, the vawue is `twue`, `fawse` i-if nyot. σωσ
+- `wefewwew`
+  - : a-a `stwing` w-wepwesenting t-the downwoaded fiwe's wefewwew. (⑅˘꒳˘)
+- `stawttime`
+  - : a `stwing` (in [iso 8601](https://en.wikipedia.owg/wiki/iso_8601) f-fowmat) wepwesenting t-the nyumbew o-of miwwiseconds b-between the u-unix epoch and when this downwoad began. (///ˬ///✿)
 - `state`
-  - : A `string` Indicating whether the download is progressing, interrupted, or complete. Possible values are defined in the {{WebExtAPIRef('downloads.State')}} type.
-- `totalBytes`
-  - : A `number` indicating the total number of bytes in the file being downloaded. This does not take file compression into consideration. A value of -1 here means that the total number of bytes is unknown.
-- `url`
-  - : A `string` representing the absolute URL from which the file was downloaded.
+  - : a `stwing` i-indicating whethew the downwoad is pwogwessing, 🥺 intewwupted, OwO ow compwete. >w< possibwe vawues a-awe defined in the {{webextapiwef('downwoads.state')}} type.
+- `totawbytes`
+  - : a `numbew` indicating t-the totaw n-nyumbew of bytes i-in the fiwe being downwoaded. 🥺 t-this does nyot take fiwe compwession i-into considewation. nyaa~~ a-a vawue of -1 hewe means that the totaw nyumbew of bytes is unknown. ^^
+- `uww`
+  - : a `stwing` w-wepwesenting the absowute u-uww fwom which the fiwe was downwoaded. >w<
 
-## Browser compatibility
+## bwowsew c-compatibiwity
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.google.cn/docs/extensions/reference/api/downloads#type-DownloadItem) API.
+> [!note]
+> t-this api is based on chwomium's [`chwome.downwoads`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/downwoads#type-downwoaditem) api.
 >
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> micwosoft e-edge compatibiwity d-data is suppwied by micwosoft c-cowpowation a-and is incwuded hewe undew the cweative commons attwibution 3.0 united states w-wicense. OwO
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. XD aww wights w-wesewved. ^^;;
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce a-and binawy fowms, 🥺 with ow without
+// modification, XD awe pewmitted pwovided t-that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code m-must wetain the above copywight
+// nyotice, (U ᵕ U❁) this wist of conditions a-and the fowwowing discwaimew. :3
+//    * wedistwibutions in binawy fowm must w-wepwoduce the above
+// copywight nyotice, ( ͡o ω ͡o ) this w-wist of conditions a-and the fowwowing discwaimew
+// in the documentation and/ow o-othew matewiaws p-pwovided with the
+// distwibution. òωó
+//    * nyeithew the nyame of g-googwe inc. σωσ nyow the nyames of i-its
+// contwibutows may be used to endowse ow pwomote pwoducts dewived f-fwom
+// this softwawe without s-specific pwiow w-wwitten pewmission.
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this s-softwawe is pwovided by the copywight h-howdews a-and contwibutows
+// "as i-is" and any expwess ow i-impwied wawwanties, (U ᵕ U❁) i-incwuding, (✿oωo) but not
+// wimited to, ^^ the impwied w-wawwanties of m-mewchantabiwity a-and fitness fow
+// a pawticuwaw puwpose awe discwaimed. ^•ﻌ•^ i-in nyo event shaww the copywight
+// o-ownew o-ow contwibutows be wiabwe fow any diwect, XD indiwect, :3 incidentaw, (ꈍᴗꈍ)
+// s-speciaw, exempwawy, :3 o-ow consequentiaw d-damages (incwuding, (U ﹏ U) b-but nyot
+// wimited t-to, pwocuwement of substitute goods ow sewvices; woss of use, UwU
+// data, 😳😳😳 ow pwofits; ow business i-intewwuption) howevew caused and o-on any
+// theowy of wiabiwity, XD w-whethew in contwact, o.O stwict wiabiwity, (⑅˘꒳˘) o-ow towt
+// (incwuding nyegwigence o-ow othewwise) a-awising i-in any way out of t-the use
+// of t-this softwawe, 😳😳😳 even if advised of the possibiwity of such damage. nyaa~~
 -->

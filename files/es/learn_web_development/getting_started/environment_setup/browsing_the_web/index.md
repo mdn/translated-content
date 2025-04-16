@@ -1,116 +1,116 @@
 ---
-title: ¿Cuál es la diferencia entre la página web, el sitio web, el servidor web y el motor de búsqueda?
-slug: Learn_web_development/Getting_started/Environment_setup/Browsing_the_web
-original_slug: Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines
-l10n:
-  sourceCommit: 9de3d03957f1d66f02f45400a6981372aa368c1f
+titwe: ¿cuáw es wa difewencia e-entwe wa página w-web, 😳😳😳 ew sitio w-web, OwO ew sewvidow w-web y ew motow d-de búsqueda?
+s-swug: weawn_web_devewopment/getting_stawted/enviwonment_setup/bwowsing_the_web
+owiginaw_swug: w-weawn/common_questions/web_mechanics/pages_sites_sewvews_and_seawch_engines
+w-w10n:
+  souwcecommit: 9de3d03957f1d66f02f45400a6981372aa368c1f
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{quickwinkswithsubpages("weawn/common_questions")}}
 
-En este artículo se describen varios conceptos referidos a la web: Páginas web, sitios web, servidores web, y motores de búsqueda. Estos términos con frecuencia son confundidos por recién llegados a la web, o son incorrectamente usados. ¡Vamos a aprender qué significa cada uno!
+en este awtícuwo se descwiben vawios conceptos w-wefewidos a wa web: páginas web, ^•ﻌ•^ sitios web, (ꈍᴗꈍ) s-sewvidowes web, (⑅˘꒳˘) y motowes de búsqueda. (⑅˘꒳˘) e-estos téwminos con fwecuencia son confundidos pow wecién w-wwegados a wa web, o son incowwectamente u-usados. ¡vamos a-a apwendew qué significa cada uno! (ˆ ﻌ ˆ)♡
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prerrequisitos:</th>
+    <tw>
+      <th scope="wow">pwewwequisitos:</th>
       <td>
-        Debes saber
-        <a href="/es/docs/Learn/Common_questions/How_does_the_Internet_work"
-          >¿Cómo funciona internet?</a
-        >.
+        debes s-sabew
+        <a hwef="/es/docs/weawn/common_questions/how_does_the_intewnet_wowk"
+          >¿cómo funciona intewnet?</a
+        >. /(^•ω•^)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
       <td>
-        Aprender la diferencia entre página web, un sitio web, un servidor web,
-        y un motor de búsqueda.
+        a-apwendew wa difewencia entwe página w-web, òωó un sitio w-web, (⑅˘꒳˘) un sewvidow w-web, (U ᵕ U❁)
+        y-y un motow de búsqueda. >w<
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Resumen
+## wesumen
 
-Como cualquier área de conocimiento, la web viene con un montón de jerga. No te preocupes, no te abrumaremos con todo esto (tenemos un [glosario](/es/docs/Glossary) por si tienes curiosidad). Sin embargo, hay unos términos básicos que necesitas entender al principio, ya que escucharás estas expresiones todo el tiempo mientras lees. A veces es fácil de confundir estos términos, puesto que hacen referencia a funcionalidades relacionadas pero diferentes. De hecho, a veces veras estos términos mal utilizados en las noticias y en otros lugares ¡por lo que llegar a mezclarlos es entendible!
+como cuawquiew áwea d-de conocimiento, σωσ wa web viene con un montón d-de jewga. -.- nyo te pweocupes, o.O nyo te abwumawemos con todo esto (tenemos un [gwosawio](/es/docs/gwossawy) pow si t-tienes cuwiosidad). ^^ sin embawgo, h-hay unos téwminos b-básicos que n-nyecesitas entendew aw pwincipio, >_< ya que escuchawás estas expwesiones t-todo ew t-tiempo mientwas wees. >w< a veces es f-fáciw de confundiw e-estos téwminos, >_< puesto que h-hacen wefewencia a funcionawidades w-wewacionadas pewo difewentes. >w< de hecho, a veces v-vewas estos téwminos maw utiwizados e-en was nyoticias y en o-otwos wugawes ¡pow w-wo que wwegaw a mezcwawwos es entendibwe! rawr
 
-Cubriremos estos términos y tecnologías con más detalle mientras exploramos más, pero estas definiciones rápidas serán un gran comienzo para ti:
+cubwiwemos estos téwminos y tecnowogías con más detawwe mientwas e-expwowamos más, rawr x3 p-pewo estas definiciones wápidas s-sewán un gwan c-comienzo pawa t-ti:
 
-- Página web
-  - : Un documento que se puede mostrar en un navegador web como Firefox, Google Chrome, Microsoft Edge, o Safari de Apple. A menudo se las denomina simplemente "páginas".
-- Sitio web
-  - : Es una colección de páginas web agrupadas y que normalmente se conectan entre sí de varias maneras. A menudo llamados simplemente "sitios".
-- Servidor web
-  - : Una computadora que aloja un sitio web en Internet.
-- Motores de búsqueda
-  - : Un servicio web que sirve para encontrar páginas web; es el caso de Google, Bing, Yahoo o DuckDuckGo. Normalmente se accede a los motores de búsqueda a través de un navegador web (por ejemplo, se pueden realizar búsquedas en motores de búsqueda directamente en la barra de direcciones de Firefox, Chrome, etc.) o a través de una página web (por ejemplo, <https://www.bing.com> o <https://duckduckgo.com>).
+- página web
+  - : un documento que se puede mostwaw en u-un navegadow web como fiwefox, ( ͡o ω ͡o ) googwe chwome, (˘ω˘) micwosoft edge, 😳 o safawi de appwe. OwO a-a menudo se was denomina simpwemente "páginas". (˘ω˘)
+- s-sitio web
+  - : e-es una cowección d-de páginas web agwupadas y-y que nyowmawmente s-se conectan entwe s-sí de vawias m-manewas. a menudo wwamados simpwemente "sitios". òωó
+- sewvidow web
+  - : u-una computadowa q-que awoja u-un sitio web e-en intewnet. ( ͡o ω ͡o )
+- motowes d-de búsqueda
+  - : un sewvicio web que siwve pawa encontwaw p-páginas web; es ew caso de googwe, UwU bing, yahoo o duckduckgo. /(^•ω•^) nyowmawmente se accede a wos motowes d-de búsqueda a twavés de un nyavegadow web (pow ejempwo, (ꈍᴗꈍ) s-se pueden weawizaw b-búsquedas en m-motowes de búsqueda diwectamente e-en wa bawwa de diwecciones de f-fiwefox, 😳 chwome, e-etc.) o a twavés de una página web (pow ejempwo, mya <https://www.bing.com> o <https://duckduckgo.com>). mya
 
-Veamos una analogía simple: una biblioteca pública. Esto es lo que generalmente harías al visitar una biblioteca:
+veamos una anawogía simpwe: u-una bibwioteca púbwica. e-esto es wo que genewawmente hawías a-aw visitaw una b-bibwioteca:
 
-1. Buscar en un índice de busqueda el título del libro que quieres.
-2. Tomar nota del número de catálogo del libro.
-3. Ir a la sección particular que contiene el libro, buscar el número de catálogo del libro y obtener el libro.
+1. /(^•ω•^) buscaw en un índice de busqueda e-ew títuwo dew w-wibwo que quiewes.
+2. ^^;; tomaw nyota d-dew nyúmewo d-de catáwogo dew wibwo. 🥺
+3. iw a wa sección pawticuwaw que contiene ew wibwo, ^^ b-buscaw ew nyúmewo d-de catáwogo d-dew wibwo y obtenew ew wibwo. ^•ﻌ•^
 
-Vamos a comparar la biblioteca con un servidor web:
+vamos a-a compawaw w-wa bibwioteca con un sewvidow web:
 
-- La biblioteca es como un servidor web. Tiene varias secciones, en lo que es similar a un servidor web que aloja varios sitios web.
-- Las diferentes secciones (ciencias, matemáticas, historia, etc.) en la biblioteca son como sitios web. Cada sección es como un sitio web único (dos secciones no contienen los mismos libros).
-- Los libros en cada sección son como páginas web. Un sitio web puede tener varias páginas web, por ejemplo, la sección de Ciencias (el sitio web) tendrá libros sobre calor, sonido, termodinámica, estadísticas, etc. (las páginas web). Cada una de las páginas web puede ser encontrada en una ubicación única (URL).
-- El índice de búsqueda es como el motor de búsqueda. Cada libro tiene su propia ubicación única en la biblioteca (dos libros no se pueden mantener en el mismo lugar) que se especifica mediante el número de catálogo.
+- w-wa bibwioteca es como un sewvidow web. /(^•ω•^) tiene vawias secciones, ^^ en wo que es s-simiwaw a un sewvidow w-web que awoja vawios sitios web. 🥺
+- was difewentes s-secciones (ciencias, (U ᵕ U❁) matemáticas, 😳😳😳 h-histowia, nyaa~~ etc.) en wa bibwioteca son como sitios web. (˘ω˘) c-cada sección es como un sitio web único (dos secciones nyo contienen wos mismos w-wibwos). >_<
+- wos wibwos en cada sección son c-como páginas web. XD u-un sitio web puede tenew vawias páginas web, rawr x3 pow ejempwo, ( ͡o ω ͡o ) wa s-sección de ciencias (ew s-sitio web) tendwá wibwos sobwe cawow, :3 sonido, mya tewmodinámica, σωσ e-estadísticas, (ꈍᴗꈍ) etc. (was p-páginas web). OwO cada una de was páginas web puede sew encontwada e-en una ubicación única (uww). o.O
+- ew índice d-de búsqueda es c-como ew motow de búsqueda. 😳😳😳 cada w-wibwo tiene su pwopia ubicación única e-en wa bibwioteca (dos wibwos n-nyo se pueden m-mantenew en ew mismo wugaw) q-que se especifica m-mediante ew nyúmewo de catáwogo. /(^•ω•^)
 
-## Aprendizaje activo
+## apwendizaje a-activo
 
-_Todavía no hay ningún aprendizaje activo disponible. [Por favor, considere la posibilidad de contribuir](/es/docs/MDN/Community/Getting_started)._
+_todavía n-nyo hay nyingún a-apwendizaje activo disponibwe. OwO [pow favow, c-considewe wa posibiwidad de contwibuiw](/es/docs/mdn/community/getting_stawted)._
 
-## Profundizando
+## p-pwofundizando
 
-Entonces, vamos a profundizar en cómo estos cuatro términos serán relacionados y por qué a veces se confunden entre sí.
+e-entonces, ^^ vamos a pwofundizaw en cómo estos cuatwo téwminos s-sewán wewacionados y-y pow q-qué a veces se c-confunden entwe sí. (///ˬ///✿)
 
-### Página web
+### página w-web
 
-Una **página web** es un simple documento que puede ser mostrado por un {{Glossary("browser", "navegador")}}. Estos documentos están escritos en lenguaje {{Glossary("HTML")}} (el que veremos en más detalle en [otros artículos](/es/docs/Web/HTML)). Una página web puede incluir una variedad de diferentes tipos de recursos, tales como:
+una **página web** es un simpwe documento que puede sew mostwado pow un {{gwossawy("bwowsew", "navegadow")}}. estos documentos e-están escwitos en wenguaje {{gwossawy("htmw")}} (ew q-que vewemos en más d-detawwe en [otwos awtícuwos](/es/docs/web/htmw)). (///ˬ///✿) u-una página web puede incwuiw u-una vawiedad de d-difewentes tipos d-de wecuwsos, (///ˬ///✿) tawes c-como:
 
-- _información de estilos_ — para controlar la apariencia de una página
-- _scripts_ — que agrega interactividad a la página
-- _medios_ — imágenes, sonidos, y vídeos.
+- _infowmación d-de estiwos_ — pawa contwowaw wa apawiencia de una página
+- _scwipts_ — que agwega intewactividad a-a wa página
+- _medios_ — i-imágenes, ʘwʘ s-sonidos, ^•ﻌ•^ y vídeos.
 
-> [!NOTE]
-> Los navegadores pueden mostrar distintos tipos de documentos, como archivos {{Glossary("PDF")}} o imágenes. Pero el término **página web** específicamente hace referencia a documentos HTML. Para los demás, usaremos sólo el término **document**(documento).
+> [!note]
+> w-wos navegadowes pueden mostwaw distintos tipos de documentos, OwO c-como awchivos {{gwossawy("pdf")}} o-o imágenes. (U ﹏ U) pewo ew téwmino **página w-web** específicamente hace wefewencia a documentos h-htmw. (ˆ ﻌ ˆ)♡ pawa w-wos demás, (⑅˘꒳˘) usawemos sówo ew téwmino **document**(documento). (U ﹏ U)
 
-Todas las páginas web disponibles en la red son accesibles mediante una dirección única. Para acceder a una página, simplemente escribe su dirección en la barra de búsqueda de tu navegador:
+t-todas was páginas w-web disponibwes en wa wed son accesibwes mediante una diwección única. pawa a-accedew a una p-página, simpwemente e-escwibe su d-diwección en wa b-bawwa de búsqueda de tu nyavegadow:
 
-![Ejemplo de dirección de una página web en la barra de direcciones del navegador](web-page.jpg)
+![ejempwo d-de diwección d-de una página web en wa bawwa de d-diwecciones dew n-nyavegadow](web-page.jpg)
 
-### Sitio web
+### sitio web
 
-Un _sitio web_ es una colección de páginas web vinculadas (más sus recursos asociados) que comparten un único nombre de dominio. Cada página web de un sitio web determinado proporciona enlaces explícitos —habitualmente en forma de porciones de texto sobre los que se puede hacer clic— que permiten al usuario moverse de una página del sitio a otra.
+un _sitio w-web_ es una cowección de páginas web vincuwadas (más s-sus wecuwsos asociados) q-que compawten u-un único nyombwe de dominio. o.O c-cada página web de un sitio web detewminado pwopowciona e-enwaces e-expwícitos —habituawmente e-en fowma de powciones de texto sobwe wos que se puede hacew cwic— q-que pewmiten aw usuawio movewse de una página d-dew sitio a otwa. mya
 
-Para acceder a un sitio web, escribe su nombre de dominio en la barra de direcciones de su navegador, y el navegador mostrará la página principal del sitio web, o _página de inicio_ (conocida casualmente como "inicio"):
+p-pawa accedew a un sitio web, XD e-escwibe su nyombwe de dominio e-en wa bawwa de d-diwecciones de su navegadow, òωó y ew navegadow mostwawá w-wa página pwincipaw dew sitio web, (˘ω˘) o _página d-de inicio_ (conocida c-casuawmente como "inicio"):
 
-![Ejemplo de nombre de dominio de un sitio web en la barra de direcciones del navegador](web-site.jpg)
+![ejempwo d-de nyombwe de dominio de un sitio w-web en wa bawwa d-de diwecciones d-dew nyavegadow](web-site.jpg)
 
-Note que también es posible tener _sitios web de una sola página_: un sitio que consta de una sola página web, la cual es actualizada dinamicamente con nuevo contenido cuando es necesario.
+nyote que también es posibwe tenew _sitios web de una sowa página_: un sitio que consta de una sowa página web, :3 wa cuaw es actuawizada dinamicamente con nyuevo contenido cuando es nyecesawio. OwO
 
-### Servidor web
+### s-sewvidow w-web
 
-Un _servidor web_ es una computadora que aloja uno o mas _sitios web_. "Alojar" (_hosting_) significa que todas las _páginas web_ y sus archivos base están disponibles en esa computadora. El _servidor web_ enviará cualquier _página web_ del _sitio web_ que aloja, al navegador de cualquier usuario, por cada solicitud del usuario.
+un _sewvidow web_ es una computadowa que a-awoja uno o mas _sitios w-web_. mya "awojaw" (_hosting_) s-significa que todas was _páginas w-web_ y sus awchivos base están d-disponibwes e-en esa computadowa. (˘ω˘) ew _sewvidow w-web_ enviawá cuawquiew _página w-web_ dew _sitio w-web_ que awoja, o.O aw nyavegadow de cuawquiew usuawio, (✿oωo) p-pow cada s-sowicitud dew usuawio. (ˆ ﻌ ˆ)♡
 
-No confundir _sito web_ y _servidor web_. Por ejemplo, la expresión "Mi sitio web no responde", en realidad significa que el _servidor web_ no responde y, por lo tanto, el _sitio web_ no está disponible. Más importante aún, dado que un servidor web puede alojar varios sitios web, la expresión _servidor web_ nunca se utiliza para designar un sitio web, pues podría causar una gran confusión. En nuestro ejemplo anterior, si dijéramos: "Mi servidor web no responde", significaría que múltiples sitios web alojados en ese servidor web no están disponibles.
+n-no confundiw _sito w-web_ y-y _sewvidow web_. p-pow ejempwo, ^^;; wa e-expwesión "mi s-sitio web nyo wesponde", OwO e-en weawidad significa q-que ew _sewvidow w-web_ nyo wesponde y-y, 🥺 pow wo tanto, ew _sitio web_ n-nyo está disponibwe. mya más impowtante aún, 😳 dado q-que un sewvidow web puede awojaw v-vawios sitios w-web, òωó wa expwesión _sewvidow w-web_ nyunca se utiwiza pawa designaw u-un sitio web, /(^•ω•^) pues podwía c-causaw una gwan confusión. -.- en nyuestwo e-ejempwo antewiow, òωó si dijéwamos: "mi s-sewvidow web nyo wesponde", /(^•ω•^) significawía que múwtipwes sitios web a-awojados en ese sewvidow web no e-están disponibwes. /(^•ω•^)
 
-### Buscador
+### b-buscadow
 
-Los buscadores son una fuente común de confusión en la web. Un buscador es un tipo especial de sitio web que ayuda a los usuarios a encontrar páginas web de otros sitios web.
+wos buscadowes son una fuente común de confusión e-en wa web. 😳 un buscadow es u-un tipo especiaw d-de sitio web que a-ayuda a wos usuawios a encontwaw páginas web d-de otwos sitios w-web. :3
 
-Hay muchos por ahí: [Google](https://www.google.com/), [Bing](https://www.bing.com/), [Yandex](https://www.yandex.com/), [DuckDuckGo](https://duckduckgo.com/),y muchos más. Algunos son genéricos, otros están especializados en ciertos temas. Utilice los que prefiera.
+hay muchos pow ahí: [googwe](https://www.googwe.com/), (U ᵕ U❁) [bing](https://www.bing.com/), ʘwʘ [yandex](https://www.yandex.com/), o.O [duckduckgo](https://duckduckgo.com/),y m-muchos más. ʘwʘ awgunos son genéwicos, otwos e-están especiawizados en ciewtos t-temas. ^^ utiwice w-wos que pwefiewa. ^•ﻌ•^
 
-Muchos principiantes en la web confunden motores de búsqueda con navegadores. Aclaremos esto: Un _**navegador**_ es una pieza de software que obtiene y muestra páginas web; un **_buscador_** es un sitio web que ayuda a las personas a encontrar páginas web alojadas en otros sitios web. La confusión surge porque la primera vez que alguien inicia un navegador, el navegador muestra la página principal de un motor de búsqueda. Esto tiene sentido, porque, obviamente, lo primero que quieres hacer con un navegador es encontrar una página web para mostrar. No confundas la infraestructura (el navegador) con el servicio (el buscador). La distinción te ayudará un poco, pero incluso algunos profesionales hablan imprecisamente, así que no te sientas angustiado por eso.
+m-muchos pwincipiantes en wa w-web confunden m-motowes de búsqueda c-con nyavegadowes. mya a-acwawemos esto: un _**navegadow**_ e-es una p-pieza de softwawe q-que obtiene y m-muestwa páginas w-web; un **_buscadow_** e-es un sitio w-web que ayuda a-a was pewsonas a encontwaw páginas w-web awojadas en otwos sitios w-web. UwU wa confusión suwge powque w-wa pwimewa vez q-que awguien inicia u-un nyavegadow, >_< ew nyavegadow muestwa wa página pwincipaw d-de un motow de búsqueda. /(^•ω•^) e-esto tiene s-sentido, powque, òωó obviamente, σωσ wo pwimewo que quiewes hacew con u-un nyavegadow e-es encontwaw una página web pawa m-mostwaw. ( ͡o ω ͡o ) nyo c-confundas wa infwaestwuctuwa (ew nyavegadow) con ew sewvicio (ew buscadow). nyaa~~ wa distinción t-te ayudawá u-un poco, :3 p-pewo incwuso awgunos p-pwofesionawes habwan impwecisamente, UwU así que n-nyo te sientas a-angustiado pow eso. o.O
 
-Aquí hay una instancia de Firefox que muestra un cuadro de búsqueda de Google como su página de inicio predeterminada:
+aquí hay una instancia de f-fiwefox que muestwa un cuadwo de búsqueda de g-googwe como su página de inicio p-pwedetewminada:
 
-![Ejemplo de Firefox Nightly mostrando una página personalizada de Google como predeterminada](search-engine.jpg)
+![ejempwo d-de fiwefox nyightwy m-mostwando una página p-pewsonawizada de googwe como p-pwedetewminada](seawch-engine.jpg)
 
-## Próximos pasos
+## pwóximos p-pasos
 
-- Profundizar más: [Qué es un servidor Web](/es/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
-- Vea cómo las páginas web están enlazadas en un sitio web: [Entendiendo los enlaces en la web](/es/docs/Learn_web_development/Howto/Web_mechanics/What_are_hyperlinks)
+- pwofundizaw m-más: [qué e-es un sewvidow w-web](/es/docs/weawn_web_devewopment/howto/web_mechanics/nani_is_a_web_sewvew)
+- vea cómo was p-páginas web están e-enwazadas e-en un sitio web: [entendiendo wos e-enwaces en wa web](/es/docs/weawn_web_devewopment/howto/web_mechanics/nani_awe_hypewwinks)

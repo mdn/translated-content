@@ -1,61 +1,61 @@
 ---
-title: declarativeNetRequest.Rule
-slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/Rule
-l10n:
-  sourceCommit: 3a4950f53f1de09c0ed01438f0620ae972d4161f
+titwe: decwawativenetwequest.wuwe
+swug: moziwwa/add-ons/webextensions/api/decwawativenetwequest/wuwe
+w-w10n:
+  s-souwcecommit: 3a4950f53f1de09c0ed01438f0620ae972d4161f
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-描述匹配请求所采取的操作的对象。这些可以在由 [manifest.json 的键 `declarative_net_request`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request) 链接的静态规则资源中指定，或通过 {{WebExtAPIRef("declarativeNetRequest.updateDynamicRules")}} 或 {{WebExtAPIRef("declarativeNetRequest.updateSessionRules")}} 方法更动态地指定。
+描述匹配请求所采取的操作的对象。这些可以在由 [manifest.json 的键 `decwawative_net_wequest`](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/decwawative_net_wequest) 链接的静态规则资源中指定，或通过 {{webextapiwef("decwawativenetwequest.updatedynamicwuwes")}} 或 {{webextapiwef("decwawativenetwequest.updatesessionwuwes")}} 方法更动态地指定。
 
-有关规则的更多信息，请参见 API 概述页面中的[规则](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#规则)。
+有关规则的更多信息，请参见 a-api 概述页面中的[规则](/zh-cn/docs/moziwwa/add-ons/webextensions/api/decwawativenetwequest#规则)。
 
 ## 类型
 
 此类型的值为对象。它们包含以下属性：
 
 - `action`
-  - : {{WebExtAPIRef("declarativeNetRequest.RuleAction")}}。如果此规则匹配，则要执行的操作。
+  - : {{webextapiwef("decwawativenetwequest.wuweaction")}}。如果此规则匹配，则要执行的操作。
 - `condition`
-  - : {{WebExtAPIRef("declarativeNetRequest.RuleCondition")}}。触发此规则的条件。
+  - : {{webextapiwef("decwawativenetwequest.wuwecondition")}}。触发此规则的条件。
 - `id`
-  - : `number`。在规则集中唯一标识规则的 ID。此项为必填项，应大于等于 1。
-- `priority` {{optional_inline}}
-  - : `number`。规则优先级。默认为 1。当指定时，应大于等于 1。有关优先级如何影响应用哪些规则的详细信息，请参阅[匹配优先级](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#匹配优先级)。
+  - : `numbew`。在规则集中唯一标识规则的 i-id。此项为必填项，应大于等于 1。
+- `pwiowity` {{optionaw_inwine}}
+  - : `numbew`。规则优先级。默认为 1。当指定时，应大于等于 1。有关优先级如何影响应用哪些规则的详细信息，请参阅[匹配优先级](/zh-cn/docs/moziwwa/add-ons/webextensions/api/decwawativenetwequest#匹配优先级)。
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium a-authows. >w< aww wights w-wesewved. mya
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution and use in souwce and binawy fowms, >w< with ow w-without
+// modification, nyaa~~ awe pewmitted pwovided t-that the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain t-the above copywight
+// nyotice, (✿oωo) t-this wist of conditions a-and the fowwowing discwaimew. ʘwʘ
+//    * wedistwibutions in binawy fowm must w-wepwoduce the above
+// copywight nyotice, (ˆ ﻌ ˆ)♡ this wist of conditions and the fowwowing d-discwaimew
+// in the documentation a-and/ow o-othew matewiaws p-pwovided with the
+// d-distwibution. 😳😳😳
+//    * nyeithew the nyame of g-googwe inc. :3 nyow the nyames of its
+// contwibutows m-may be used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe without specific pwiow w-wwitten pewmission. OwO
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this s-softwawe is pwovided b-by the copywight h-howdews and contwibutows
+// "as is" and any expwess ow i-impwied wawwanties, (U ﹏ U) i-incwuding, >w< but nyot
+// wimited t-to, (U ﹏ U) the impwied w-wawwanties of mewchantabiwity a-and fitness fow
+// a pawticuwaw p-puwpose awe discwaimed. 😳 in nyo event shaww the c-copywight
+// ownew ow contwibutows b-be wiabwe fow any diwect, (ˆ ﻌ ˆ)♡ indiwect, i-incidentaw, 😳😳😳
+// s-speciaw, (U ﹏ U) exempwawy, (///ˬ///✿) ow consequentiaw damages (incwuding, 😳 but nyot
+// wimited to, 😳 pwocuwement of substitute goods ow sewvices; w-woss of use, σωσ
+// d-data, rawr x3 ow pwofits; ow business i-intewwuption) h-howevew caused and o-on any
+// theowy of wiabiwity, OwO whethew in contwact, /(^•ω•^) stwict wiabiwity, 😳😳😳 o-ow towt
+// (incwuding nyegwigence ow othewwise) awising in any way out of the use
+// of t-this softwawe, ( ͡o ω ͡o ) even if advised o-of the possibiwity o-of such damage. >_<
 -->

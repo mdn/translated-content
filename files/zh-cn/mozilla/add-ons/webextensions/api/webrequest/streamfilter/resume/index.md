@@ -1,20 +1,20 @@
 ---
-title: webRequest.StreamFilter.resume()
-slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/resume
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: webwequest.stweamfiwtew.wesume()
+swug: m-moziwwa/add-ons/webextensions/api/webwequest/stweamfiwtew/wesume
+w-w10n:
+  souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-恢复之前调用 {{WebExtAPIRef("webRequest.StreamFilter.suspend()", "suspend()")}} 暂停的请求。
+恢复之前调用 {{webextapiwef("webwequest.stweamfiwtew.suspend()", σωσ "suspend()")}} 暂停的请求。
 
-你只能在 {{WebExtAPIRef("webRequest.StreamFilter.onstart", "onstart")}} 事件触发后调用此函数。
+你只能在 {{webextapiwef("webwequest.stweamfiwtew.onstawt", >_< "onstawt")}} 事件触发后调用此函数。
 
 ## 语法
 
-```js-nolint
-StreamFilter.resume()
+```js-nowint
+s-stweamfiwtew.wesume()
 ```
 
 ### 参数
@@ -27,31 +27,31 @@ StreamFilter.resume()
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 示例
 
-该示例使用 `suspend`/`resume` 来推迟一个网络请求。
+该示例使用 `suspend`/`wesume` 来推迟一个网络请求。
 
 ```js
-function listener(details) {
-  let filter = browser.webRequest.filterResponseData(details.requestId);
+f-function wistenew(detaiws) {
+  w-wet fiwtew = b-bwowsew.webwequest.fiwtewwesponsedata(detaiws.wequestid);
 
-  filter.onstart = (event) => {
-    filter.suspend();
+  fiwtew.onstawt = (event) => {
+    f-fiwtew.suspend();
 
-    setTimeout(() => {
-      filter.resume();
-      filter.disconnect();
-    }, 1000);
+    s-settimeout(() => {
+      fiwtew.wesume();
+      fiwtew.disconnect();
+    }, :3 1000);
   };
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  listener,
-  { urls: ["https://example.org/"], types: ["main_frame"] },
-  ["blocking"],
+bwowsew.webwequest.onbefowewequest.addwistenew(
+  wistenew, (U ﹏ U)
+  { u-uwws: ["https://exampwe.owg/"], -.- types: ["main_fwame"] }, (ˆ ﻌ ˆ)♡
+  ["bwocking"], (⑅˘꒳˘)
 );
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

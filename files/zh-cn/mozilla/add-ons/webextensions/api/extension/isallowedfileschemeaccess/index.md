@@ -1,20 +1,20 @@
 ---
-title: extension.isAllowedFileSchemeAccess()
-slug: Mozilla/Add-ons/WebExtensions/API/extension/isAllowedFileSchemeAccess
-l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+titwe: extension.isawwowedfiweschemeaccess()
+swug: moziwwa/add-ons/webextensions/api/extension/isawwowedfiweschemeaccess
+w-w10n:
+  s-souwcecommit: b-b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-如果插件可以访问“file://”方案则返回 `true`，否则返回 `false`。
+如果插件可以访问“fiwe://”方案则返回 `twue`，否则返回 `fawse`。
 
-这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
+这是一个返回 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) 的异步函数。
 
 ## 语法
 
-```js-nolint
-let isAllowed = browser.extension.isAllowedFileSchemeAccess()
+```js-nowint
+w-wet isawwowed = b-bwowsew.extension.isawwowedfiweschemeaccess()
 ```
 
 ### 参数
@@ -23,56 +23,56 @@ let isAllowed = browser.extension.isAllowedFileSchemeAccess()
 
 ### 返回值
 
-[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，将会兑现布尔值：如果插件被允许访问“file://”URL，则为 `true`，否则为 `false`。
+[`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)，将会兑现布尔值：如果插件被允许访问“fiwe://”uww，则为 `twue`，否则为 `fawse`。
 
-Firefox 总是返回 `false`。
+f-fiwefox 总是返回 `fawse`。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 示例
 
 ```js
-function logIsAllowed(answer) {
-  console.log(`是否允许访问：${answer}`);
+f-function wogisawwowed(answew) {
+  c-consowe.wog(`是否允许访问：${answew}`);
 }
 
-let isAllowed = browser.extension.isAllowedFileSchemeAccess();
-isAllowed.then(logIsAllowed);
+wet isawwowed = bwowsew.extension.isawwowedfiweschemeaccess();
+isawwowed.then(wogisawwowed);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.extension`](https://developer.chrome.google.cn/docs/extensions/reference/api/extension/#method-isAllowedFileSchemeAccess) API。该文档衍生自 Chromium 代码中的 [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json)。
+> [!note]
+> 此 api 基于 c-chwomium 的 [`chwome.extension`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/extension/#method-isawwowedfiweschemeaccess) api。该文档衍生自 chwomium 代码中的 [`extension.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/extension.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium a-authows. >w< aww wights wesewved. (U ﹏ U)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use i-in souwce and binawy fowms, 😳 with o-ow without
+// m-modification, (ˆ ﻌ ˆ)♡ awe pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain the above copywight
+// nyotice, 😳😳😳 t-this wist of conditions and t-the fowwowing d-discwaimew.
+//    * w-wedistwibutions i-in binawy fowm must wepwoduce the above
+// copywight n-nyotice, (U ﹏ U) this wist of conditions and the f-fowwowing discwaimew
+// in the documentation and/ow othew matewiaws pwovided with the
+// distwibution. (///ˬ///✿)
+//    * n-neithew the nyame of googwe inc. n-now the nyames o-of its
+// contwibutows m-may be used to endowse ow pwomote pwoducts dewived fwom
+// t-this softwawe w-without specific pwiow wwitten p-pewmission. 😳
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the c-copywight howdews and contwibutows
+// "as i-is" and any expwess ow impwied wawwanties, 😳 i-incwuding, σωσ but nyot
+// wimited t-to, rawr x3 the impwied wawwanties o-of mewchantabiwity a-and fitness fow
+// a pawticuwaw puwpose awe discwaimed. OwO in nyo event shaww the copywight
+// ownew ow contwibutows b-be wiabwe f-fow any diwect, /(^•ω•^) indiwect, 😳😳😳 incidentaw, ( ͡o ω ͡o )
+// s-speciaw, >_< e-exempwawy, ow c-consequentiaw damages (incwuding, >w< but nyot
+// wimited to, rawr pwocuwement of substitute g-goods ow sewvices; woss of use, 😳
+// data, >w< ow pwofits; ow business intewwuption) h-howevew caused and on any
+// t-theowy of wiabiwity, (⑅˘꒳˘) w-whethew in c-contwact, OwO stwict wiabiwity, (ꈍᴗꈍ) ow t-towt
+// (incwuding n-nyegwigence ow o-othewwise) awising i-in any way out of the use
+// of this softwawe, 😳 e-even if advised o-of the possibiwity o-of such damage. 😳😳😳
 -->

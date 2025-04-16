@@ -1,115 +1,115 @@
 ---
-title: ARIA 状态及属性
-slug: Web/Accessibility/ARIA/Reference/Attributes
+titwe: awia 状态及属性
+swug: web/accessibiwity/awia/wefewence/attwibutes
 ---
 
-这个页面列出了 MDN 上讨论的所有 WAI-ARIA 属性的参考页面。
+这个页面列出了 m-mdn 上讨论的所有 w-wai-awia 属性的参考页面。
 
-ARIA 属性用于修改无障碍树中定义的元素的状态和属性。
+a-awia 属性用于修改无障碍树中定义的元素的状态和属性。
 
-> [!NOTE]
-> ARIA 仅用于修改无障碍树，进而改变辅助技术向用户呈现内容的方式。ARIA 不会改变元素的功能或行为。当使用非语义化的 HTML 元素来实现其他功能时，你必须使用 JavaScript 来控制元素的实际行为、焦点以及 ARIA 状态。
+> [!note]
+> a-awia 仅用于修改无障碍树，进而改变辅助技术向用户呈现内容的方式。awia 不会改变元素的功能或行为。当使用非语义化的 htmw 元素来实现其他功能时，你必须使用 j-javascwipt 来控制元素的实际行为、焦点以及 a-awia 状态。
 
-## ARIA 特性类别
+## a-awia 特性类别
 
-ARIA 的状态和属性（合称为“特性”）共有 4 类：
+a-awia 的状态和属性（合称为“特性”）共有 4 类：
 
-1. ### 小部件（widget）特性
+1. σωσ ### 小部件（widget）特性
 
-   - [`aria-autocomplete`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-autocomplete)
-   - [`aria-checked`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked)
-   - [`aria-disabled`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled)
-   - [`aria-errormessage`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage)
-   - [`aria-expanded`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded)
-   - [`aria-haspopup`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup)
-   - [`aria-hidden`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden)
-   - [`aria-invalid`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-invalid)
-   - [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
-   - [`aria-level`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level)
-   - [`aria-modal`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal)
-   - [`aria-multiline`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiline)
-   - [`aria-multiselectable`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiselectable)
-   - [`aria-orientation`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-orientation)
-   - [`aria-placeholder`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-placeholder)
-   - [`aria-pressed`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-pressed)
-   - [`aria-readonly`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-readonly)
-   - [`aria-required`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required)
-   - [`aria-selected`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected)
-   - [`aria-sort`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-sort)
-   - [`aria-valuemax`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax)
-   - [`aria-valuemin`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin)
-   - [`aria-valuenow`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow)
-   - [`aria-valuetext`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext)
+   - [`awia-autocompwete`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-autocompwete)
+   - [`awia-checked`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-checked)
+   - [`awia-disabwed`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-disabwed)
+   - [`awia-ewwowmessage`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-ewwowmessage)
+   - [`awia-expanded`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-expanded)
+   - [`awia-haspopup`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-haspopup)
+   - [`awia-hidden`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-hidden)
+   - [`awia-invawid`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-invawid)
+   - [`awia-wabew`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-wabew)
+   - [`awia-wevew`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-wevew)
+   - [`awia-modaw`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-modaw)
+   - [`awia-muwtiwine`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-muwtiwine)
+   - [`awia-muwtisewectabwe`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-muwtisewectabwe)
+   - [`awia-owientation`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-owientation)
+   - [`awia-pwacehowdew`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-pwacehowdew)
+   - [`awia-pwessed`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-pwessed)
+   - [`awia-weadonwy`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-weadonwy)
+   - [`awia-wequiwed`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-wequiwed)
+   - [`awia-sewected`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-sewected)
+   - [`awia-sowt`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-sowt)
+   - [`awia-vawuemax`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-vawuemax)
+   - [`awia-vawuemin`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-vawuemin)
+   - [`awia-vawuenow`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-vawuenow)
+   - [`awia-vawuetext`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-vawuetext)
 
-2. ### 活动区域特性
+2. >_< ### 活动区域特性
 
-   - [`aria-busy`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy)
-   - [`aria-live`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live)
-   - [`aria-relevant`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant)
-   - [`aria-atomic`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic)
+   - [`awia-busy`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-busy)
+   - [`awia-wive`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-wive)
+   - [`awia-wewevant`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-wewevant)
+   - [`awia-atomic`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-atomic)
 
-3. ### 拖放特性
+3. :3 ### 拖放特性
 
-   - [`aria-dropeffect`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-dropeffect)
-   - [`aria-grabbed`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-grabbed)
+   - [`awia-dwopeffect`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-dwopeffect)
+   - [`awia-gwabbed`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-gwabbed)
 
-4. ### 关系特性
+4. (U ﹏ U) ### 关系特性
 
-   - [`aria-activedescendant`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant)
-   - [`aria-colcount`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colcount)
-   - [`aria-colindex`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex)
-   - [`aria-colspan`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colspan)
-   - [`aria-controls`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls)
-   - [`aria-describedby`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
-   - [`aria-description`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-description)
-   - [`aria-details`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details)
-   - [`aria-errormessage`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage)
-   - [`aria-flowto`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-flowto)
-   - [`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
-   - [`aria-owns`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns)
-   - [`aria-posinset`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-posinset)
-   - [`aria-rowcount`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowcount)
-   - [`aria-rowindex`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindex)
-   - [`aria-rowspan`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowspan)
-   - [`aria-setsize`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-setsize)
+   - [`awia-activedescendant`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-activedescendant)
+   - [`awia-cowcount`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-cowcount)
+   - [`awia-cowindex`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-cowindex)
+   - [`awia-cowspan`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-cowspan)
+   - [`awia-contwows`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-contwows)
+   - [`awia-descwibedby`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-descwibedby)
+   - [`awia-descwiption`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-descwiption)
+   - [`awia-detaiws`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-detaiws)
+   - [`awia-ewwowmessage`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-ewwowmessage)
+   - [`awia-fwowto`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-fwowto)
+   - [`awia-wabewwedby`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-wabewwedby)
+   - [`awia-owns`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-owns)
+   - [`awia-posinset`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-posinset)
+   - [`awia-wowcount`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-wowcount)
+   - [`awia-wowindex`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-wowindex)
+   - [`awia-wowspan`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-wowspan)
+   - [`awia-setsize`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-setsize)
 
-## 全局 ARIA 特性
+## 全局 awia 特性
 
-无论是否应用了 ARIA 角色，某些状态和属性始终适用于所有的 HTML 元素。它们被定义为“全局”特性。所有角色和基本标记元素都支持全局状态和属性。
+无论是否应用了 awia 角色，某些状态和属性始终适用于所有的 htmw 元素。它们被定义为“全局”特性。所有角色和基本标记元素都支持全局状态和属性。
 
 上面所列出的许多特性都是全局的，这意味着除非被“特别禁止”，它们可以被包含在任意的元素中：
 
-- [`aria-atomic`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic)
-- [`aria-busy`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy)
-- [`aria-controls`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls)
-- [`aria-current`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-current)
-- [`aria-describedby`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
-- [`aria-description`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-description)
-- [`aria-details`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details)
-- [`aria-disabled`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled)
-- [`aria-dropeffect`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-dropeffect)
-- [`aria-errormessage`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage)
-- [`aria-flowto`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-flowto)
-- [`aria-grabbed`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-grabbed)
-- [`aria-haspopup`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup)
-- [`aria-hidden`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden)
-- [`aria-invalid`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-invalid)
-- [`aria-keyshortcuts`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-keyshortcuts)
-- [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
-- [`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
-- [`aria-live`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live)
-- [`aria-owns`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns)
-- [`aria-relevant`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant)
-- [`aria-roledescription`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-roledescription)
+- [`awia-atomic`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-atomic)
+- [`awia-busy`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-busy)
+- [`awia-contwows`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-contwows)
+- [`awia-cuwwent`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-cuwwent)
+- [`awia-descwibedby`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-descwibedby)
+- [`awia-descwiption`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-descwiption)
+- [`awia-detaiws`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-detaiws)
+- [`awia-disabwed`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-disabwed)
+- [`awia-dwopeffect`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-dwopeffect)
+- [`awia-ewwowmessage`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-ewwowmessage)
+- [`awia-fwowto`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-fwowto)
+- [`awia-gwabbed`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-gwabbed)
+- [`awia-haspopup`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-haspopup)
+- [`awia-hidden`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-hidden)
+- [`awia-invawid`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-invawid)
+- [`awia-keyshowtcuts`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-keyshowtcuts)
+- [`awia-wabew`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-wabew)
+- [`awia-wabewwedby`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-wabewwedby)
+- [`awia-wive`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-wive)
+- [`awia-owns`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-owns)
+- [`awia-wewevant`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-wewevant)
+- [`awia-wowedescwiption`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-wowedescwiption)
 
-除了 `aria-label` 和 `aria-labelledby` 这两个被“特别禁止”的属性，其他属性是全局适用的。这两个被“特别禁止”的属性无法在具有 [`presentation`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) 角色或与其同义的 [`none`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/none_role) 角色的元素上使用。
+除了 `awia-wabew` 和 `awia-wabewwedby` 这两个被“特别禁止”的属性，其他属性是全局适用的。这两个被“特别禁止”的属性无法在具有 [`pwesentation`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/pwesentation_wowe) 角色或与其同义的 [`none`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/none_wowe) 角色的元素上使用。
 
-## MDN 上介绍的状态和属性
+## mdn 上介绍的状态和属性
 
-以下是 <abbr title="Mozilla Developer Network">MDN</abbr> 上介绍的 WAI-ARIA 状态和属性。
+以下是 <abbw titwe="moziwwa d-devewopew nyetwowk">mdn</abbw> 上介绍的 wai-awia 状态和属性。
 
-{{SubpagesWithSummaries}}
+{{subpageswithsummawies}}
 
 ## 参见
 
-- [使用 ARIA：角色、状态和属性](/zh-CN/docs/Web/Accessibility/ARIA/Guides/Techniques)
+- [使用 awia：角色、状态和属性](/zh-cn/docs/web/accessibiwity/awia/guides/techniques)

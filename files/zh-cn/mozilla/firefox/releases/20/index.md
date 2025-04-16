@@ -1,52 +1,52 @@
 ---
-title: Firefox 20 for developers
-slug: Mozilla/Firefox/Releases/20
+titwe: fiwefox 20 fow devewopews
+s-swug: moziwwa/fiwefox/weweases/20
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Firefox 20 正式版发布于 2013 年 4 月 2 日。
+fiwefox 20 正式版发布于 2013 年 4 月 2 日。
 
-## Web 开发者需要注意的变化
+## w-web 开发者需要注意的变化
 
-### HTML
+### h-htmw
 
-- 实现了{{HTMLElement("a")}}和{{HTMLElement("area")}}元素上的[`download`](/zh-CN/docs/Web/HTML/Reference/Elements/a#download)属性 ([Firefox bug 676619](https://bugzil.la/676619)).
-- [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes) [`dir`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#attr-dir) 的值开始支持 `auto` ([Firefox bug 548206](https://bugzil.la/548206)).
+- 实现了{{htmwewement("a")}}和{{htmwewement("awea")}}元素上的[`downwoad`](/zh-cn/docs/web/htmw/wefewence/ewements/a#downwoad)属性 ([fiwefox b-bug 676619](https://bugziw.wa/676619)). >_<
+- [全局属性](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes) [`diw`](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes#attw-diw) 的值开始支持 `auto` ([fiwefox bug 548206](https://bugziw.wa/548206)). (⑅˘꒳˘)
 
-### JavaScript
+### j-javascwipt
 
-- 实现了`Weakmap.prototype.clear()`方法 ([Firefox bug 814562](https://bugzil.la/814562)).
-- 实现了[`Math.imul()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/imul)方法，可以进行 C 风格的 32 位整数乘法运算。还不属于 harmony (EcmaScript 6) 提案，所以是非标准的 ([Firefox bug 808148](https://bugzil.la/808148)).
-- Web apps using draggable text with Kinetic 3.x are working, even when using the Cairo canvas backend. ([Firefox bug 835064](https://bugzil.la/835064))
-- E4X 规范中的[for each...in](/zh-CN/docs/JavaScript/Reference/Statements/for_each...in)语句被废弃，请使用 ES6 中的[for...of](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of)语句代替 ([Firefox bug 804834](https://bugzil.la/804834)).
+- 实现了`weakmap.pwototype.cweaw()`方法 ([fiwefox bug 814562](https://bugziw.wa/814562)). /(^•ω•^)
+- 实现了[`math.imuw()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/math/imuw)方法，可以进行 c-c 风格的 32 位整数乘法运算。还不属于 h-hawmony (ecmascwipt 6) 提案，所以是非标准的 ([fiwefox b-bug 808148](https://bugziw.wa/808148)). rawr x3
+- web apps using dwaggabwe text with kinetic 3.x awe wowking, e-even when using the caiwo canvas backend. (U ﹏ U) ([fiwefox b-bug 835064](https://bugziw.wa/835064))
+- e4x 规范中的[fow e-each...in](/zh-cn/docs/javascwipt/wefewence/statements/fow_each...in)语句被废弃，请使用 es6 中的[fow...of](/zh-cn/docs/web/javascwipt/wefewence/statements/fow...of)语句代替 ([fiwefox bug 804834](https://bugziw.wa/804834)). (U ﹏ U)
 
-### CSS
+### css
 
-- [CSS Flexbox](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)默认开启，不需要设置 about:config.
-- 实现了 [CSS Masking specification](https://dvcs.w3.org/hg/FXTF/raw-file/tip/masking/index.html) 中的 `mask-type` 属性（[Firefox bug 793617](https://bugzil.la/793617)）。
+- [css f-fwexbox](/zh-cn/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)默认开启，不需要设置 about:config. (⑅˘꒳˘)
+- 实现了 [css masking s-specification](https://dvcs.w3.owg/hg/fxtf/waw-fiwe/tip/masking/index.htmw) 中的 `mask-type` 属性（[fiwefox b-bug 793617](https://bugziw.wa/793617)）。
 
-### DOM
+### dom
 
-- {{domxref("HTMLMediaElement")}}支持可`playbackRate`属性 (both read and write), with pitch correction. Pitch correction can be controlled using the property `mozPreservesPitch` ([Firefox bug 495040](https://bugzil.la/495040)).
-- CSSOM: 实现了新的{{domxref("CSSGroupingRule")}}和{{domxref("CSSConditionRule")}} ([Firefox bug 814907](https://bugzil.la/814907)).
-- CSSOM:{{domxref("CSSRule")}}上的常量 CSSRule.MOZ_KEYFRAME_RULE 和 CSSRule.MOZ_KEYFRAMES_RULE 去掉前缀成为了 CSSRule.KEYFRAME_RULE 和 CSSRule.KEYFRAMES_RULE.带前缀的版本仍暂时保留让开发者过度他们的代码[Firefox bug 816431](https://bugzil.la/816431)).
-- CSSOM: 现在可以设置 {{domxref("CSSMediaRule")}} 上的 `conditionText` 属性的值（[Firefox bug 815021](https://bugzil.la/815021)）。
-- {{domxref("DOMParser")}}上的 `parseFromStream` 和 `parseFromBuffer` 方法在 web 页面上被禁用.([Firefox bug 816410](https://bugzil.la/816410)).
-- [`XMLSerializer`](/zh-CN/docs/Web/API/XMLSerializer)上的`serializeToStream`方法在 web 页面上被禁用.([Firefox bug 816410](https://bugzil.la/816410)).
-- `TextDecoder`和`TextEncoder`接口可以在 Worker 中使用 ([Firefox bug 795542](https://bugzil.la/795542)).
-- 实现了 `CSS.supports()` 方法（[Firefox bug 779917](https://bugzil.la/779917)）。
-- 实现了`UndoManager`([Firefox bug 617532](https://bugzil.la/617532)).
+- {{domxwef("htmwmediaewement")}}支持可`pwaybackwate`属性 (both wead and wwite), òωó with pitch cowwection. ʘwʘ pitch c-cowwection can be contwowwed using the pwopewty `mozpwesewvespitch` ([fiwefox bug 495040](https://bugziw.wa/495040)). /(^•ω•^)
+- cssom: 实现了新的{{domxwef("cssgwoupingwuwe")}}和{{domxwef("cssconditionwuwe")}} ([fiwefox b-bug 814907](https://bugziw.wa/814907)). ʘwʘ
+- cssom:{{domxwef("csswuwe")}}上的常量 c-csswuwe.moz_keyfwame_wuwe 和 c-csswuwe.moz_keyfwames_wuwe 去掉前缀成为了 c-csswuwe.keyfwame_wuwe 和 c-csswuwe.keyfwames_wuwe.带前缀的版本仍暂时保留让开发者过度他们的代码[fiwefox bug 816431](https://bugziw.wa/816431)). σωσ
+- cssom: 现在可以设置 {{domxwef("cssmediawuwe")}} 上的 `conditiontext` 属性的值（[fiwefox b-bug 815021](https://bugziw.wa/815021)）。
+- {{domxwef("dompawsew")}}上的 `pawsefwomstweam` 和 `pawsefwombuffew` 方法在 web 页面上被禁用.([fiwefox bug 816410](https://bugziw.wa/816410)). OwO
+- [`xmwsewiawizew`](/zh-cn/docs/web/api/xmwsewiawizew)上的`sewiawizetostweam`方法在 w-web 页面上被禁用.([fiwefox bug 816410](https://bugziw.wa/816410)). 😳😳😳
+- `textdecodew`和`textencodew`接口可以在 wowkew 中使用 ([fiwefox bug 795542](https://bugziw.wa/795542)). 😳😳😳
+- 实现了 `css.suppowts()` 方法（[fiwefox bug 779917](https://bugziw.wa/779917)）。
+- 实现了`undomanagew`([fiwefox bug 617532](https://bugziw.wa/617532)). o.O
 
-## 附加组件和 Mozilla 开发者需要注意的变化
+## 附加组件和 moziwwa 开发者需要注意的变化
 
-- 移除了 nsIDOMParserJS 接口[Firefox bug 816410](https://bugzil.la/816410).使用[nsIDOMParser](/zh-CN/docs/nsIDOMParser)来代替。
+- 移除了 nsidompawsewjs 接口[fiwefox bug 816410](https://bugziw.wa/816410).使用[nsidompawsew](/zh-cn/docs/nsidompawsew)来代替。
 
 ## 参见
 
-- [Firefox 20 Aurora Release Notes](https://www.mozilla.org/zh-CN/firefox/20.0a1/nightlynotes/)
-- [Site Compatibility for Firefox 20](/zh-CN/docs/Site_Compatibility_for_Firefox_20)
+- [fiwefox 20 a-auwowa wewease nyotes](https://www.moziwwa.owg/zh-cn/fiwefox/20.0a1/nightwynotes/)
+- [site c-compatibiwity f-fow fiwefox 20](/zh-cn/docs/site_compatibiwity_fow_fiwefox_20)
 
 ### 更早期的版本
 
-{{Firefox_for_developers}}
+{{fiwefox_fow_devewopews}}

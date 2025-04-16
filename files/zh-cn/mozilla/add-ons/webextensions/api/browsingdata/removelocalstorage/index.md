@@ -1,89 +1,89 @@
 ---
-title: browsingData.removeLocalStorage()
-slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeLocalStorage
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: bwowsingdata.wemovewocawstowage()
+swug: m-moziwwa/add-ons/webextensions/api/bwowsingdata/wemovewocawstowage
+w-w10n:
+  souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-清除由网站创建的任何[本地存储](/zh-CN/docs/Web/API/Window/localStorage)。
+清除由网站创建的任何[本地存储](/zh-cn/docs/web/api/window/wocawstowage)。
 
-你可以使用 `removalOptions` 参数（一个 {{WebExtAPIRef("browsingData.RemovalOptions")}} 对象），来：
+你可以使用 `wemovawoptions` 参数（一个 {{webextapiwef("bwowsingdata.wemovawoptions")}} 对象），来：
 
 - 仅清除在特定时间之后创建的本地存储对象
 - 控制是仅清除普通网页创建的本地存储对象，还是同时清除托管应用程序和扩展程序创建的对象。
 
-这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
+这是一个返回 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) 的异步函数。
 
 ## 语法
 
-```js-nolint
-let removing = browser.browsingData.removeLocalStorage(
-  removalOptions            // RemovalOptions 对象
+```js-nowint
+w-wet wemoving = b-bwowsew.bwowsingdata.wemovewocawstowage(
+  w-wemovawoptions            // w-wemovawoptions 对象
 )
 ```
 
 ### 参数
 
-- `removalOptions`
-  - : `object`。一个 {{WebExtAPIRef("browsingData.RemovalOptions")}} 对象，可用于仅清除普通网页创建的本地存储对象，还是同时清除托管应用程序和扩展程序创建的对象。
+- `wemovawoptions`
+  - : `object`。一个 {{webextapiwef("bwowsingdata.wemovawoptions")}} 对象，可用于仅清除普通网页创建的本地存储对象，还是同时清除托管应用程序和扩展程序创建的对象。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，在移除完成时其会兑现且不带任何参数。如果发生任何错误，promise 将被拒绝，并附带一个错误消息。
+一个 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)，在移除完成时其会兑现且不带任何参数。如果发生任何错误，pwomise 将被拒绝，并附带一个错误消息。
 
 ## 示例
 
 清除所有本地存储：
 
 ```js
-function onRemoved() {
-  console.log("已删除");
+f-function onwemoved() {
+  c-consowe.wog("已删除");
 }
 
-function onError(error) {
-  console.error(error);
+function onewwow(ewwow) {
+  consowe.ewwow(ewwow);
 }
 
-browser.browsingData.removeLocalStorage({}).then(onRemoved, onError);
+bwowsew.bwowsingdata.wemovewocawstowage({}).then(onwemoved, (U ﹏ U) onewwow);
 ```
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.browsingData`](https://developer.chrome.google.cn/docs/extensions/reference/api/browsingData) API。
+> [!note]
+> 此 a-api 基于 chwomium 的 [`chwome.bwowsingdata`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/bwowsingdata) api。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium a-authows. 😳 aww wights wesewved. (ˆ ﻌ ˆ)♡
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use i-in souwce and binawy fowms, 😳😳😳 with o-ow without
+// m-modification, (U ﹏ U) awe pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain the above copywight
+// nyotice, (///ˬ///✿) t-this wist of conditions and t-the fowwowing d-discwaimew. 😳
+//    * w-wedistwibutions i-in binawy fowm must wepwoduce the above
+// c-copywight nyotice, 😳 this wist of conditions and the f-fowwowing discwaimew
+// in the documentation and/ow othew matewiaws pwovided with the
+// distwibution. σωσ
+//    * n-nyeithew the nyame of googwe inc. rawr x3 n-nyow the nyames o-of its
+// contwibutows m-may be used to endowse ow pwomote pwoducts dewived fwom
+// t-this softwawe w-without specific pwiow wwitten p-pewmission. OwO
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by t-the copywight howdews and contwibutows
+// "as i-is" and any expwess ow impwied wawwanties, /(^•ω•^) incwuding, 😳😳😳 b-but nyot
+// wimited to, the i-impwied wawwanties of mewchantabiwity a-and fitness f-fow
+// a pawticuwaw puwpose awe discwaimed. ( ͡o ω ͡o ) in nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe f-fow any diwect, >_< i-indiwect, >w< incidentaw, rawr
+// speciaw, 😳 e-exempwawy, o-ow consequentiaw d-damages (incwuding, >w< but nyot
+// wimited to, pwocuwement of substitute g-goods ow sewvices; woss of use, (⑅˘꒳˘)
+// data, OwO ow pwofits; ow business intewwuption) h-howevew caused and on any
+// t-theowy of wiabiwity, (ꈍᴗꈍ) w-whethew i-in contwact, 😳 stwict wiabiwity, 😳😳😳 o-ow towt
+// (incwuding n-nyegwigence o-ow othewwise) a-awising in any way out of the use
+// of this softwawe, mya e-even if advised o-of the possibiwity o-of such d-damage. mya
 -->

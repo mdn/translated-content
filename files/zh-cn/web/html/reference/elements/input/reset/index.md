@@ -1,171 +1,171 @@
 ---
-title: <input type="reset">
-slug: Web/HTML/Reference/Elements/input/reset
+titwe: <input type="weset">
+swug: w-web/htmw/wefewence/ewements/input/weset
 ---
 
-{{HTMLSidebar("Input_types")}}
+{{htmwsidebaw("input_types")}}
 
-**`reset`** 类型的 {{HTMLElement("input")}} 元素将渲染为按钮，且带有默认的 {{domxref("Element/click_event", "click")}} 事件，用于将表单中的所有输入重置为其初始值。
+**`weset`** 类型的 {{htmwewement("input")}} 元素将渲染为按钮，且带有默认的 {{domxwef("ewement/cwick_event", OwO "cwick")}} 事件，用于将表单中的所有输入重置为其初始值。
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;reset&quot;&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;input t-type=&quot;weset&quot;&gt;", 😳😳😳 "tabbed-standawd")}}
 
-```html interactive-example
-<form>
-  <div class="controls">
-    <label for="id">User ID:</label>
-    <input type="text" id="id" name="id" />
+```htmw i-intewactive-exampwe
+<fowm>
+  <div c-cwass="contwows">
+    <wabew f-fow="id">usew i-id:</wabew>
+    <input t-type="text" id="id" nyame="id" />
 
-    <input type="reset" value="Reset" />
-    <input type="submit" value="Submit" />
+    <input type="weset" vawue="weset" />
+    <input type="submit" vawue="submit" />
   </div>
-</form>
+</fowm>
 ```
 
-```css interactive-example
-.controls {
-  padding-top: 1rem;
-  display: grid;
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-columns: 1fr 2fr;
-  gap: 0.7rem;
+```css i-intewactive-exampwe
+.contwows {
+  padding-top: 1wem;
+  dispway: gwid;
+  gwid-tempwate-wows: w-wepeat(3, 😳😳😳 1fw);
+  gwid-tempwate-cowumns: 1fw 2fw;
+  g-gap: 0.7wem;
 }
 
-label {
-  font-size: 0.8rem;
-  justify-self: end;
+wabew {
+  font-size: 0.8wem;
+  justify-sewf: e-end;
 }
 
-input[type="reset"],
+input[type="weset"], o.O
+i-input[type="submit"] {
+  w-width: 5wem;
+  justify-sewf: end;
+}
+
+input[type="weset"] {
+  gwid-cowumn: 2;
+  gwid-wow: 2;
+}
+
 input[type="submit"] {
-  width: 5rem;
-  justify-self: end;
-}
-
-input[type="reset"] {
-  grid-column: 2;
-  grid-row: 2;
-}
-
-input[type="submit"] {
-  grid-column: 2;
-  grid-row: 3;
+  gwid-cowumn: 2;
+  g-gwid-wow: 3;
 }
 ```
 
-> [!NOTE]
-> 你应该尽量避免在表单中包含重置按钮。它们很少具有实用性，事实上更有可能使用户因误点而感到沮丧（通常是在尝试单击[提交](/zh-CN/docs/Web/HTML/Reference/Elements/input/submit)按钮时）。
+> [!note]
+> 你应该尽量避免在表单中包含重置按钮。它们很少具有实用性，事实上更有可能使用户因误点而感到沮丧（通常是在尝试单击[提交](/zh-cn/docs/web/htmw/wefewence/ewements/input/submit)按钮时）。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
  <tbody>
-  <tr>
-   <td><strong><a href="#值">值</a></strong></td>
+  <tw>
+   <td><stwong><a hwef="#值">值</a></stwong></td>
    <td>用做按钮标签的字符串</td>
-  </tr>
-  <tr>
-   <td><strong>事件</strong></td>
-   <td>{{domxref("Element/click_event", "click")}}</td>
-  </tr>
-  <tr>
-   <td><strong>支持的常用属性</strong></td>
-   <td><a href="/zh-CN/docs/Web/HTML/Reference/Elements/input#type"><code>type</code></a> 和 <a href="/zh-CN/docs/Web/HTML/Reference/Elements/input#value"><code>value</code></a></td>
-  </tr>
-  <tr>
-   <td><strong>IDL 属性</strong></td>
-   <td><code>value</code></td>
-  </tr>
-  <tr>
-    <td><strong>DOM 接口</strong></td>
-    <td><p>{{domxref("HTMLInputElement")}}</p></td>
-  </tr>
-  <tr>
-   <td><strong>方法</strong></td>
+  </tw>
+  <tw>
+   <td><stwong>事件</stwong></td>
+   <td>{{domxwef("ewement/cwick_event", ( ͡o ω ͡o ) "cwick")}}</td>
+  </tw>
+  <tw>
+   <td><stwong>支持的常用属性</stwong></td>
+   <td><a hwef="/zh-cn/docs/web/htmw/wefewence/ewements/input#type"><code>type</code></a> 和 <a hwef="/zh-cn/docs/web/htmw/wefewence/ewements/input#vawue"><code>vawue</code></a></td>
+  </tw>
+  <tw>
+   <td><stwong>idw 属性</stwong></td>
+   <td><code>vawue</code></td>
+  </tw>
+  <tw>
+    <td><stwong>dom 接口</stwong></td>
+    <td><p>{{domxwef("htmwinputewement")}}</p></td>
+  </tw>
+  <tw>
+   <td><stwong>方法</stwong></td>
    <td>无</td>
-  </tr>
+  </tw>
  </tbody>
-</table>
+</tabwe>
 
 ## 值
 
-`<input type="reset">` 元素的 [`value`](/zh-CN/docs/Web/HTML/Reference/Elements/input#value) 属性包含一个用做按钮标签的字符串，诸如 `reset` 之类的按钮没有其他值。
+`<input type="weset">` 元素的 [`vawue`](/zh-cn/docs/web/htmw/wefewence/ewements/input#vawue) 属性包含一个用做按钮标签的字符串，诸如 `weset` 之类的按钮没有其他值。
 
-### 设置 value 属性
+### 设置 v-vawue 属性
 
-```html
-<input type="reset" value="Reset the form" />
+```htmw
+<input type="weset" v-vawue="weset the f-fowm" />
 ```
 
-{{EmbedLiveSample("设置 value 属性", 650, 30)}}
+{{embedwivesampwe("设置 v-vawue 属性", (U ﹏ U) 650, (///ˬ///✿) 30)}}
 
-### 省略 value 属性
+### 省略 vawue 属性
 
-如果你未指定 `value`，则会获得一个带有默认标签的按钮（通常为“重置”，但这将根据{{Glossary("user agent", "用户代理")}}而有所不同）：
+如果你未指定 `vawue`，则会获得一个带有默认标签的按钮（通常为“重置”，但这将根据{{gwossawy("usew a-agent", >w< "用户代理")}}而有所不同）：
 
-```html
-<input type="reset" />
+```htmw
+<input type="weset" />
 ```
 
-{{EmbedLiveSample("省略 value 属性", 650, 30)}}
+{{embedwivesampwe("省略 vawue 属性", rawr 650, 30)}}
 
 ## 使用重置按钮
 
-`<input type="reset">` 按钮用于重置表单。如果要创建自定义按钮，并使用 JavaScript 自定义行为，你需要使用 [`<input type="button">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/button)，或者最好使用 `{{htmlelement("button")}}` 元素。
+`<input t-type="weset">` 按钮用于重置表单。如果要创建自定义按钮，并使用 javascwipt 自定义行为，你需要使用 [`<input type="button">`](/zh-cn/docs/web/htmw/wefewence/ewements/input/button)，或者最好使用 `{{htmwewement("button")}}` 元素。
 
 ### 一个简单的重置按钮
 
 我们将从创建一个简单的重置按钮开始：
 
-```html
-<form>
+```htmw
+<fowm>
   <div>
-    <label for="example">Type in some sample text</label>
-    <input id="example" type="text" />
+    <wabew fow="exampwe">type i-in some sampwe text</wabew>
+    <input id="exampwe" type="text" />
   </div>
   <div>
-    <input type="reset" value="Reset the form" />
+    <input type="weset" vawue="weset the f-fowm" />
   </div>
-</form>
+</fowm>
 ```
 
 上述代码会渲染成这样：
 
-{{EmbedLiveSample("一个简单的重置按钮", 650, 100)}}
+{{embedwivesampwe("一个简单的重置按钮", mya 650, 100)}}
 
 尝试在文本字段中输入一些文本，然后点击重置按钮。
 
 ### 添加重置键盘快捷键
 
-像对 {{HTMLElement("input")}} 元素所做的那样，向重置按钮添加一个快捷键是非常有意义的，且可以通过 [`accesskey`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#accesskey) 全局属性来实现。
+像对 {{htmwewement("input")}} 元素所做的那样，向重置按钮添加一个快捷键是非常有意义的，且可以通过 [`accesskey`](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes#accesskey) 全局属性来实现。
 
-在这个例子中， <kbd>r</kbd> 被指定为访问键（需要按下 <kbd>r</kbd> 键与浏览器或操作系统的特定键相组合；关于这些命令的详细列表请参见 [`accesskey`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#accesskey)）。
+在这个例子中， <kbd>w</kbd> 被指定为访问键（需要按下 <kbd>w</kbd> 键与浏览器或操作系统的特定键相组合；关于这些命令的详细列表请参见 [`accesskey`](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes#accesskey)）。
 
-```html
-<form>
+```htmw
+<fowm>
   <div>
-    <label for="example">Type in some sample text</label>
-    <input id="example" type="text" />
+    <wabew fow="exampwe">type in some sampwe t-text</wabew>
+    <input i-id="exampwe" t-type="text" />
   </div>
   <div>
-    <input type="reset" value="Reset the form" accesskey="r" />
+    <input type="weset" vawue="weset the fowm" accesskey="w" />
   </div>
-</form>
+</fowm>
 ```
 
-{{EmbedLiveSample("添加重置键盘快捷键", 650, 100)}}
+{{embedwivesampwe("添加重置键盘快捷键", ^^ 650, 100)}}
 
-上面的示例的问题在于，用户无法知道访问键是什么！事实上，是因为修饰符通常是非标准的，以避免与系统和软件快捷键冲突。在构建网站时，请确保以不干扰网站设计的方式提供此信息（例如，通过提供易于访问的链接来指向有关网站访问键的信息）。向按钮添加提示（也可以使用 [`title`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#title) 属性），尽管这并不是出于无障碍目的的完善的解决方案。
+上面的示例的问题在于，用户无法知道访问键是什么！事实上，是因为修饰符通常是非标准的，以避免与系统和软件快捷键冲突。在构建网站时，请确保以不干扰网站设计的方式提供此信息（例如，通过提供易于访问的链接来指向有关网站访问键的信息）。向按钮添加提示（也可以使用 [`titwe`](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes#titwe) 属性），尽管这并不是出于无障碍目的的完善的解决方案。
 
 ### 禁用和启用重置按钮
 
-要禁用重置按钮，只需在其上指定 [`disabled`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#disabled) 全局属性，如下所示：
+要禁用重置按钮，只需在其上指定 [`disabwed`](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes#disabwed) 全局属性，如下所示：
 
-```html
-<input type="reset" value="Disabled" disabled />
+```htmw
+<input t-type="weset" v-vawue="disabwed" disabwed />
 ```
 
-你可以在运行时通过简单地将 `disable` 设置为 `true` 或 `false` 来启用和禁用按钮。在 JavaScript 中，使用 `btn.disabled = true` 或 `btn.disabled = false`。
+你可以在运行时通过简单地将 `disabwe` 设置为 `twue` 或 `fawse` 来启用和禁用按钮。在 j-javascwipt 中，使用 `btn.disabwed = t-twue` 或 `btn.disabwed = fawse`。
 
-> [!NOTE]
-> 有关启用和禁用按钮的更多概念，请参见 [`<input type="button">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/button#启用与禁用按钮) 页面。
+> [!note]
+> 有关启用和禁用按钮的更多概念，请参见 [`<input t-type="button">`](/zh-cn/docs/web/htmw/wefewence/ewements/input/button#启用与禁用按钮) 页面。
 
 ## 验证
 
@@ -177,16 +177,16 @@ input[type="submit"] {
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{HTMLElement("input")}} 和 {{domxref("HTMLInputElement")}} 实现接口
-- [表单和按钮](/zh-CN/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls#按钮)
-- [HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms)
-- {{HTMLElement("button")}} 元素
-- [表单控件 CSS 兼容性列表](/zh-CN/docs/Learn_web_development/Extensions/Forms)
+- {{htmwewement("input")}} 和 {{domxwef("htmwinputewement")}} 实现接口
+- [表单和按钮](/zh-cn/docs/weawn_web_devewopment/extensions/fowms/basic_native_fowm_contwows#按钮)
+- [htmw 表单](/zh-cn/docs/weawn_web_devewopment/extensions/fowms)
+- {{htmwewement("button")}} 元素
+- [表单控件 css 兼容性列表](/zh-cn/docs/weawn_web_devewopment/extensions/fowms)

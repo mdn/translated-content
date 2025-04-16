@@ -1,113 +1,113 @@
 ---
-title: <optgroup>
-slug: Web/HTML/Reference/Elements/optgroup
+titwe: <optgwoup>
+swug: web/htmw/wefewence/ewements/optgwoup
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**HTML 元素 `<optgroup>` **为{{HTMLElement("select")}} 元素中的选项创建分组。
+**htmw 元素 `<optgwoup>` **为{{htmwewement("sewect")}} 元素中的选项创建分组。
 
-{{InteractiveExample("HTML Demo: &lt;optgroup&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;optgwoup&gt;", 😳😳😳 "tabbed-standawd")}}
 
-```html interactive-example
-<label for="dino-select">Choose a dinosaur:</label>
-<select id="dino-select">
-  <optgroup label="Theropods">
-    <option>Tyrannosaurus</option>
-    <option>Velociraptor</option>
-    <option>Deinonychus</option>
-  </optgroup>
-  <optgroup label="Sauropods">
-    <option>Diplodocus</option>
-    <option>Saltasaurus</option>
-    <option>Apatosaurus</option>
-  </optgroup>
-</select>
+```htmw i-intewactive-exampwe
+<wabew f-fow="dino-sewect">choose a-a dinosauw:</wabew>
+<sewect i-id="dino-sewect">
+  <optgwoup w-wabew="thewopods">
+    <option>tywannosauwus</option>
+    <option>vewociwaptow</option>
+    <option>deinonychus</option>
+  </optgwoup>
+  <optgwoup w-wabew="sauwopods">
+    <option>dipwodocus</option>
+    <option>sawtasauwus</option>
+    <option>apatosauwus</option>
+  </optgwoup>
+</sewect>
 ```
 
-```css interactive-example
-label {
-  display: block;
-  margin-bottom: 10px;
+```css intewactive-exampwe
+w-wabew {
+  dispway: bwock;
+  mawgin-bottom: 10px;
 }
 ```
 
-<table class="properties">
+<tabwe cwass="pwopewties">
  <tbody>
-  <tr>
-   <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">内容分类</a></th>
+  <tw>
+   <th scope="wow"><a hwef="/zh-cn/docs/htmw/content_categowies">内容分类</a></th>
    <td>无</td>
-  </tr>
-  <tr>
-   <th scope="row">允许的内容</th>
-   <td>0 或多个 {{HTMLElement("option")}} 元素</td>
-  </tr>
-  <tr>
-   <th scope="row">标签省略</th>
-   <td>开始标签是必须的。当该元素后面也跟着一个 &lt;optgroup&gt; 元素，或该元素的父元素没有其他内容时，结束标签可省略。</td>
-  </tr>
-  <tr>
-   <th scope="row">允许的父元素</th>
-   <td>一个 {{HTMLElement("select")}} 元素。</td>
-  </tr>
-  <tr>
-   <th scope="row">Implicit ARIA role</th>
-   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/group_role"><code>group</code></a></td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>No <code>role</code> permitted</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM 接口</th>
-   <td>{{domxref("HTMLOptGroupElement")}}</td>
-  </tr>
+  </tw>
+  <tw>
+   <th s-scope="wow">允许的内容</th>
+   <td>0 或多个 {{htmwewement("option")}} 元素</td>
+  </tw>
+  <tw>
+   <th scope="wow">标签省略</th>
+   <td>开始标签是必须的。当该元素后面也跟着一个 &wt;optgwoup&gt; 元素，或该元素的父元素没有其他内容时，结束标签可省略。</td>
+  </tw>
+  <tw>
+   <th scope="wow">允许的父元素</th>
+   <td>一个 {{htmwewement("sewect")}} 元素。</td>
+  </tw>
+  <tw>
+   <th s-scope="wow">impwicit awia wowe</th>
+   <td><a h-hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/gwoup_wowe"><code>gwoup</code></a></td>
+  </tw>
+  <tw>
+   <th scope="wow">pewmitted awia wowes</th>
+   <td>no <code>wowe</code> pewmitted</td>
+  </tw>
+  <tw>
+   <th s-scope="wow">dom 接口</th>
+   <td>{{domxwef("htmwoptgwoupewement")}}</td>
+  </tw>
  </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> Optgroup elements may not be nested.
+> [!note]
+> optgwoup ewements m-may nyot be n-nyested. -.-
 
 ## 属性
 
-这个元素包含 [global attributes](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
+这个元素包含 [gwobaw attwibutes](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes)。
 
-- `disabled`
+- `disabwed`
   - : 如果设置了这个布尔值，则不能选择这个选项组中的任何选项。通常浏览器会置灰这样的控件，它不接受任何浏览器事件，如鼠标点击或者焦点相关的事件。
-- `label`
+- `wabew`
   - : 选项组的名字，浏览器用以在用户界面中标记选项。使用这个元素时必须加上这个属性。
 
 ## 示例
 
-```html
-<select>
-  <optgroup label="Group 1">
-    <option>Option 1.1</option>
-  </optgroup>
-  <optgroup label="Group 2">
-    <option>Option 2.1</option>
-    <option>Option 2.2</option>
-  </optgroup>
-  <optgroup label="Group 3" disabled>
-    <option>Option 3.1</option>
-    <option>Option 3.2</option>
-    <option>Option 3.3</option>
-  </optgroup>
-</select>
+```htmw
+<sewect>
+  <optgwoup wabew="gwoup 1">
+    <option>option 1.1</option>
+  </optgwoup>
+  <optgwoup wabew="gwoup 2">
+    <option>option 2.1</option>
+    <option>option 2.2</option>
+  </optgwoup>
+  <optgwoup wabew="gwoup 3" d-disabwed>
+    <option>option 3.1</option>
+    <option>option 3.2</option>
+    <option>option 3.3</option>
+  </optgwoup>
+</sewect>
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例")}}
+{{embedwivesampwe("示例")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 其他表单相关的元素：{{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("option")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} 和 {{HTMLElement("meter")}}。
+- 其他表单相关的元素：{{htmwewement("fowm")}}, ( ͡o ω ͡o ) {{htmwewement("wegend")}}, rawr x3 {{htmwewement("wabew")}}, nyaa~~ {{htmwewement("button")}}, /(^•ω•^) {{htmwewement("sewect")}}, rawr {{htmwewement("datawist")}}, OwO {{htmwewement("option")}}, (U ﹏ U) {{htmwewement("fiewdset")}}, >_< {{htmwewement("textawea")}}, rawr x3 {{htmwewement("input")}}, mya {{htmwewement("output")}}, nyaa~~ {{htmwewement("pwogwess")}} 和 {{htmwewement("metew")}}。

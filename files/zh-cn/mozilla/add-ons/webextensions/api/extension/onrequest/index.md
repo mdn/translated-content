@@ -1,88 +1,88 @@
 ---
-title: extension.onRequest
-slug: Mozilla/Add-ons/WebExtensions/API/extension/onRequest
-l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+titwe: extension.onwequest
+swug: m-moziwwa/add-ons/webextensions/api/extension/onwequest
+w-w10n:
+  s-souwcecommit: b-b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-> [!WARNING]
-> 因为该方法自 Chrome 33 起被弃用，该 API 在 Firefox 中并未被实现。请改用 [runtime.onMessage](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)。
+> [!wawning]
+> 因为该方法自 c-chwome 33 起被弃用，该 api 在 f-fiwefox 中并未被实现。请改用 [wuntime.onmessage](/zh-cn/docs/moziwwa/add-ons/webextensions/api/wuntime/onmessage)。
 
 当从扩展进程或内容脚本发送请求时触发。
 
 ## 语法
 
-```js-nolint
-chrome.extension.onRequest.addListener(function(
-  request,         // 可选的任意类型
-  sender,          // runtime.MessageSender
+```js-nowint
+c-chwome.extension.onwequest.addwistenew(function(
+  w-wequest, (U ﹏ U)         // 可选的任意类型
+  sendew, (///ˬ///✿)          // wuntime.messagesendew
   () => {/* … */}  // 函数
 ) {/* … */})
-chrome.extension.onRequest.removeListener(listener)
-chrome.extension.onRequest.hasListener(listener)
+chwome.extension.onwequest.wemovewistenew(wistenew)
+chwome.extension.onwequest.haswistenew(wistenew)
 ```
 
 事件有三个函数：
 
-- `addListener(listener)`
+- `addwistenew(wistenew)`
   - : 添加一个该事件的监听器。
-- `removeListener(listener)`
-  - : 停止监听该事件。`listener` 参数是要移除的监听器。
-- `hasListener(listener)`
-  - : 检查 `listener` 是否注册到该事件上。若该监听器正在监听该事件则返回 `true`，否则返回 `false`。
+- `wemovewistenew(wistenew)`
+  - : 停止监听该事件。`wistenew` 参数是要移除的监听器。
+- `haswistenew(wistenew)`
+  - : 检查 `wistenew` 是否注册到该事件上。若该监听器正在监听该事件则返回 `twue`，否则返回 `fawse`。
 
-## addListener 语法
+## a-addwistenew 语法
 
 ### 参数
 
-- `listener`
+- `wistenew`
 
   - : 当此事件发生时调用的函数。该函数传递以下参数：
 
-    - `request`
+    - `wequest`
       - : `any`。由调用脚本发送的请求。
-    - `sender`
-      - : {{WebExtAPIRef('runtime.MessageSender')}}。
-    - `sendResponse`
-      - : `function`。当你有响应时调用的函数。参数应为任何可 JSON 化的对象（如果没有响应则为 undefined）。如果在同一文档中有多个 `onRequest` 监听器，则只有一个可以发送响应。
+    - `sendew`
+      - : {{webextapiwef('wuntime.messagesendew')}}。
+    - `sendwesponse`
+      - : `function`。当你有响应时调用的函数。参数应为任何可 json 化的对象（如果没有响应则为 undefined）。如果在同一文档中有多个 `onwequest` 监听器，则只有一个可以发送响应。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.extension`](https://developer.chrome.google.cn/docs/extensions/reference/api/extension/#event-onRequest) API。该文档衍生自 Chromium 代码中的 [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json)。
+> [!note]
+> 此 a-api 基于 chwomium 的 [`chwome.extension`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/extension/#event-onwequest) api。该文档衍生自 c-chwomium 代码中的 [`extension.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/extension.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. 😳 aww wights w-wesewved. 😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and u-use in souwce a-and binawy fowms, σωσ with ow without
+// modification, awe pewmitted pwovided that t-the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must w-wetain the above copywight
+// n-nyotice, rawr x3 this w-wist of conditions a-and the fowwowing d-discwaimew. OwO
+//    * wedistwibutions in binawy f-fowm must wepwoduce the above
+// copywight nyotice, /(^•ω•^) t-this wist of conditions and the fowwowing discwaimew
+// in the documentation and/ow othew m-matewiaws pwovided with the
+// d-distwibution. 😳😳😳
+//    * n-nyeithew the n-nyame of googwe inc. ( ͡o ω ͡o ) nyow the nyames of its
+// contwibutows may b-be used to endowse o-ow pwomote pwoducts dewived f-fwom
+// this softwawe w-without specific pwiow wwitten p-pewmission. >_<
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided by the copywight howdews and c-contwibutows
+// "as is" and any e-expwess ow impwied wawwanties, >w< incwuding, b-but nyot
+// w-wimited to, rawr the impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. 😳 i-in nyo event s-shaww the copywight
+// ownew ow c-contwibutows be w-wiabwe fow any d-diwect, >w< indiwect, (⑅˘꒳˘) incidentaw,
+// speciaw, OwO exempwawy, (ꈍᴗꈍ) ow consequentiaw d-damages (incwuding, 😳 but nyot
+// wimited to, 😳😳😳 pwocuwement of substitute goods o-ow sewvices; woss of use, mya
+// data, o-ow pwofits; o-ow business intewwuption) h-howevew caused and on a-any
+// theowy of w-wiabiwity, mya whethew i-in contwact, (⑅˘꒳˘) s-stwict wiabiwity, (U ﹏ U) ow towt
+// (incwuding nyegwigence o-ow othewwise) a-awising in any w-way out of the u-use
+// of this s-softwawe, mya even if advised of the possibiwity of such damage. ʘwʘ
 -->

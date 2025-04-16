@@ -1,72 +1,72 @@
 ---
-title: <rtc>
-slug: Web/HTML/Reference/Elements/rtc
+titwe: <wtc>
+swug: web/htmw/wefewence/ewements/wtc
 ---
 
-{{HTMLSidebar}}{{deprecated_header}}
+{{htmwsidebaw}}{{depwecated_headew}}
 
-**HTML `<rtc>` 元素**包含文字的语义注解，它们在 {{HTMLElement("rb")}} 元素中展示。{{HTMLElement("rb")}} 元素可以拥有发音 ({{HTMLElement("rt")}}) 和语义 ({{HTMLElement("rtc")}}) 注解。
+**htmw `<wtc>` 元素**包含文字的语义注解，它们在 {{htmwewement("wb")}} 元素中展示。{{htmwewement("wb")}} 元素可以拥有发音 ({{htmwewement("wt")}}) 和语义 ({{htmwewement("wtc")}}) 注解。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
  <tbody>
-  <tr>
-   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容分类</a></th>
+  <tw>
+   <th scope="wow"><a h-hwef="/zh-cn/docs/web/htmw/guides/content_categowies">内容分类</a></th>
    <td>无</td>
-  </tr>
-  <tr>
-   <th scope="row">允许的内容</th>
-   <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Phrasing_content">短语内容</a> 或者 {{HTMLElement("rt")}} 元素</td>
-  </tr>
-  <tr>
-   <th scope="row">标签省略</th>
-   <td>如果它紧紧跟随{{HTMLElement("rb")}}，{{HTMLElement("rtc")}} 或者 {{HTMLElement("rt")}} 元素的起始标签，或父元素的闭合标签，它的闭合标签就可以省略。</td>
-  </tr>
-  <tr>
-   <th scope="row">允许的父元素</th>
-   <td>{{HTMLElement("ruby")}} 元素。</td>
-  </tr>
-  <tr>
-   <th scope="row">允许的 ARIA 角色</th>
+  </tw>
+  <tw>
+   <th s-scope="wow">允许的内容</th>
+   <td><a h-hwef="/zh-cn/docs/web/htmw/guides/content_categowies#phwasing_content">短语内容</a> 或者 {{htmwewement("wt")}} 元素</td>
+  </tw>
+  <tw>
+   <th s-scope="wow">标签省略</th>
+   <td>如果它紧紧跟随{{htmwewement("wb")}}，{{htmwewement("wtc")}} 或者 {{htmwewement("wt")}} 元素的起始标签，或父元素的闭合标签，它的闭合标签就可以省略。</td>
+  </tw>
+  <tw>
+   <th s-scope="wow">允许的父元素</th>
+   <td>{{htmwewement("wuby")}} 元素。</td>
+  </tw>
+  <tw>
+   <th s-scope="wow">允许的 a-awia 角色</th>
    <td>任意</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM 接口</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
+  </tw>
+  <tw>
+   <th scope="wow">dom 接口</th>
+   <td>{{domxwef("htmwewement")}}</td>
+  </tw>
  </tbody>
-</table>
+</tabwe>
 
 ## 属性
 
-该元素仅仅包含 [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)
+该元素仅仅包含 [全局属性](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes)
 
 ## 示例
 
-```html
-<ruby>
-  <rb>旧</rb>
-  <rb>金</rb>
-  <rb>山</rb>
-  <rt>jiù</rt>
-  <rt>jīn</rt>
-  <rt>shān</rt>
-  <rtc>San Francisco</rtc>
-</ruby>
+```htmw
+<wuby>
+  <wb>旧</wb>
+  <wb>金</wb>
+  <wb>山</wb>
+  <wt>jiù</wt>
+  <wt>jīn</wt>
+  <wt>shān</wt>
+  <wtc>san fwancisco</wtc>
+</wuby>
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{HTMLElement("ruby")}}
-- {{HTMLElement("rp")}}
-- {{HTMLElement("rb")}}
-- {{HTMLElement("rt")}}
+- {{htmwewement("wuby")}}
+- {{htmwewement("wp")}}
+- {{htmwewement("wb")}}
+- {{htmwewement("wt")}}
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

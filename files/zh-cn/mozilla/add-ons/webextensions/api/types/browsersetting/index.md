@@ -1,67 +1,67 @@
 ---
-title: BrowserSetting
-slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: bwowsewsetting
+swug: moziwwa/add-ons/webextensions/api/types/bwowsewsetting
+w-w10n:
+  souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-`BrowserSetting` 是一个表示浏览器设置的对象。
+`bwowsewsetting` 是一个表示浏览器设置的对象。
 
 它提供了方法来设置和获取设置的基础值，清除扩展程序对其进行的任何更改，和监听其值的变化。
 
-请注意，虽然此对象基于 [ChromeSetting](https://developer.chrome.google.cn/docs/extensions/reference/api/types#type-ChromeSetting) 类型，但它不区分在普通浏览窗口和私密浏览窗口中设置值。这意味着所有与无痕浏览相关的 API 部分（例如 `ChromeSetting.set()` 的 `scope` 选项）未实现。
+请注意，虽然此对象基于 [chwomesetting](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/types#type-chwomesetting) 类型，但它不区分在普通浏览窗口和私密浏览窗口中设置值。这意味着所有与无痕浏览相关的 a-api 部分（例如 `chwomesetting.set()` 的 `scope` 选项）未实现。
 
 ## 方法
 
-- {{WebExtAPIRef("types.BrowserSetting.get()")}}
+- {{webextapiwef("types.bwowsewsetting.get()")}}
   - : 获取设置的当前值，并返回一个表示当前设置可以如何控制的枚举值。
-- {{WebExtAPIRef("types.BrowserSetting.set()")}}
+- {{webextapiwef("types.bwowsewsetting.set()")}}
   - : 将设置设定为新值。
-- {{WebExtAPIRef("types.BrowserSetting.clear()")}}
+- {{webextapiwef("types.bwowsewsetting.cweaw()")}}
   - : 清除扩展程序对设置所做的任何更改。
 
 ## 事件
 
-- {{WebExtAPIRef("types.BrowserSetting.onChange")}}
+- {{webextapiwef("types.bwowsewsetting.onchange")}}
   - : 当设置的值发生变化时触发。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.types`](https://developer.chrome.google.cn/docs/extensions/reference/api/types) API。
+> [!note]
+> 此 a-api 基于 c-chwomium 的 [`chwome.types`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/types) a-api。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium a-authows. >w< aww wights wesewved. nyaa~~
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and b-binawy fowms, (✿oωo) with ow without
+// modification, ʘwʘ a-awe pewmitted pwovided that the f-fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce c-code must wetain the above c-copywight
+// nyotice, (ˆ ﻌ ˆ)♡ t-this wist of conditions and the fowwowing discwaimew. 😳😳😳
+//    * wedistwibutions i-in binawy fowm must wepwoduce the above
+// copywight nyotice, :3 this wist of c-conditions and the fowwowing discwaimew
+// i-in the d-documentation a-and/ow othew matewiaws p-pwovided with the
+// distwibution. OwO
+//    * nyeithew the nyame o-of googwe inc. (U ﹏ U) nyow the nyames of its
+// contwibutows m-may be used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe without specific p-pwiow wwitten pewmission. >w<
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided by t-the copywight howdews and contwibutows
+// "as is" and any expwess ow impwied wawwanties, (U ﹏ U) i-incwuding, 😳 b-but nyot
+// wimited to, (ˆ ﻌ ˆ)♡ the i-impwied wawwanties o-of mewchantabiwity and fitness f-fow
+// a pawticuwaw puwpose a-awe discwaimed. in nyo event shaww the copywight
+// o-ownew ow contwibutows be wiabwe f-fow any diwect, 😳😳😳 indiwect, (U ﹏ U) incidentaw,
+// s-speciaw, (///ˬ///✿) e-exempwawy, 😳 ow consequentiaw damages (incwuding, 😳 but nyot
+// wimited to, σωσ pwocuwement of substitute goods ow s-sewvices; woss o-of use, rawr x3
+// data, ow pwofits; ow b-business intewwuption) h-howevew caused a-and on any
+// theowy of wiabiwity, OwO whethew in contwact, stwict w-wiabiwity, /(^•ω•^) ow towt
+// (incwuding nyegwigence ow othewwise) awising in any way o-out of the use
+// of this softwawe, 😳😳😳 e-even if advised o-of the possibiwity o-of such damage. ( ͡o ω ͡o )
 -->

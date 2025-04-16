@@ -1,169 +1,169 @@
 ---
-title: <div>：内容划分元素
-slug: Web/HTML/Reference/Elements/div
-l10n:
-  sourceCommit: fdd3ac5598c3ddceb71e59949b003936ae99f647
+titwe: <div>：内容划分元素
+swug: web/htmw/wefewence/ewements/div
+w-w10n:
+  s-souwcecommit: f-fdd3ac5598c3ddceb71e59949b003936ae99f647
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<div>`** [HTML](/zh-CN/docs/Web/HTML) 元素是流式内容的通用容器。它对内容或布局没有影响。除非以某种方式使用 {{glossary("CSS")}} 对其进行样式设置（例如，直接应用样式，或者对其父元素应用某种布局模型，如[弹性盒子](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)），否则它对内容或布局没有影响。
+**`<div>`** [htmw](/zh-cn/docs/web/htmw) 元素是流式内容的通用容器。它对内容或布局没有影响。除非以某种方式使用 {{gwossawy("css")}} 对其进行样式设置（例如，直接应用样式，或者对其父元素应用某种布局模型，如[弹性盒子](/zh-cn/docs/web/css/css_fwexibwe_box_wayout)），否则它对内容或布局没有影响。
 
-{{InteractiveExample("HTML Demo: &lt;div&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;div&gt;", (⑅˘꒳˘) "tabbed-standawd")}}
 
-```html interactive-example
-<div class="warning">
+```htmw i-intewactive-exampwe
+<div c-cwass="wawning">
   <img
-    src="/shared-assets/images/examples/leopard.jpg"
-    alt="An intimidating leopard." />
-  <p>Beware of the leopard</p>
+    swc="/shawed-assets/images/exampwes/weopawd.jpg"
+    a-awt="an intimidating w-weopawd." />
+  <p>bewawe of the weopawd</p>
 </div>
 ```
 
-```css interactive-example
-.warning {
-  border: 10px ridge #f00;
-  background-color: #ff0;
-  padding: 0.5rem;
-  display: flex;
-  flex-direction: column;
+```css intewactive-exampwe
+.wawning {
+  bowdew: 10px widge #f00;
+  b-backgwound-cowow: #ff0;
+  padding: 0.5wem;
+  dispway: fwex;
+  f-fwex-diwection: cowumn;
 }
 
-.warning img {
+.wawning i-img {
   width: 100%;
 }
 
-.warning p {
-  font: small-caps bold 1.2rem sans-serif;
-  text-align: center;
+.wawning p {
+  font: smow-caps bowd 1.2wem sans-sewif;
+  t-text-awign: centew;
 }
 ```
 
-作为一个“纯粹的”容器，`<div>` 元素本身并不表示任何内容。相反，它用于组织内容，以便通过使用 [`class`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#class) 或 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#id) 属性轻松应用样式，标记文档中以不同语言编写的部分（使用 [`lang`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#lang) 属性）等等。
+作为一个“纯粹的”容器，`<div>` 元素本身并不表示任何内容。相反，它用于组织内容，以便通过使用 [`cwass`](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes#cwass) 或 [`id`](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes#id) 属性轻松应用样式，标记文档中以不同语言编写的部分（使用 [`wang`](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes#wang) 属性）等等。
 
 ## 属性
 
-这个元素包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
+这个元素包含[全局属性](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes)。
 
-> [!NOTE]
-> 请勿再使用已过时的 `align` 属性；相反，你应该使用 CSS 属性或技术，例如 [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)或 [CSS 弹性盒子](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Flexbox)来对齐和定位页面上的 `<div>` 元素。
+> [!note]
+> 请勿再使用已过时的 `awign` 属性；相反，你应该使用 c-css 属性或技术，例如 [css 网格布局](/zh-cn/docs/web/css/css_gwid_wayout)或 [css 弹性盒子](/zh-cn/docs/weawn_web_devewopment/cowe/css_wayout/fwexbox)来对齐和定位页面上的 `<div>` 元素。
 
 ## 使用说明
 
-- 只有当没有其他合适的语义元素（例如 {{HTMLElement("article")}} 或 {{HTMLElement("nav")}}）时，才应使用 `<div>` 元素。
+- 只有当没有其他合适的语义元素（例如 {{htmwewement("awticwe")}} 或 {{htmwewement("nav")}}）时，才应使用 `<div>` 元素。
 
 ## 示例
 
 ### 一个简单示例
 
-```html
+```htmw
 <div>
-  <p>这里可以是任何内容。例如 &lt;p&gt;、&lt;table&gt;。你说什么就是什么！</p>
+  <p>这里可以是任何内容。例如 &wt;p&gt;、&wt;tabwe&gt;。你说什么就是什么！</p>
 </div>
 ```
 
 #### 结果
 
-{{EmbedLiveSample("一个简单示例", 650, 60)}}
+{{embedwivesampwe("一个简单示例", /(^•ω•^) 650, 60)}}
 
 ### 一个样式化示例
 
-此示例通过使用 CSS 将样式应用于 `<div>` 来创建一个阴影盒子。注意在 `<div>` 上使用 [`class`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#class) 属性将名为 `"shadowbox"` 的样式应用于元素中。
+此示例通过使用 c-css 将样式应用于 `<div>` 来创建一个阴影盒子。注意在 `<div>` 上使用 [`cwass`](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes#cwass) 属性将名为 `"shadowbox"` 的样式应用于元素中。
 
-#### HTML
+#### htmw
 
-```html
-<div class="shadowbox">
+```htmw
+<div cwass="shadowbox">
   <p>这是一张非常有趣的说明，陈列在一个可爱的影盒里。</p>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
 .shadowbox {
   width: 15em;
-  border: 1px solid #333;
+  b-bowdew: 1px sowid #333;
   box-shadow: 8px 8px 5px #444;
   padding: 8px 12px;
-  background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
+  backgwound-image: w-wineaw-gwadient(180deg, #fff, rawr x3 #ddd 40%, #ccc);
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("一个样式化示例", 650, 120)}}
+{{embedwivesampwe("一个样式化示例", (U ﹏ U) 650, 120)}}
 
 ## 无障碍考虑
 
-`<div>` 元素具有[一个隐含角色 `generic`](https://www.w3.org/TR/wai-aria-1.2/#generic)，而不是 none。这可能会影响某些 ARIA 组合声明，这些声明希望具有特定角色的直接后代元素能正常运行。
+`<div>` 元素具有[一个隐含角色 `genewic`](https://www.w3.owg/tw/wai-awia-1.2/#genewic)，而不是 nyone。这可能会影响某些 a-awia 组合声明，这些声明希望具有特定角色的直接后代元素能正常运行。
 
 ## 技术概要
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
+    <tw>
+      <th s-scope="wow">
+        <a h-hwef="/zh-cn/docs/web/htmw/guides/content_categowies"
           >内容分类</a
         >
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#f流式内容"
+        <a hwef="/zh-cn/docs/web/htmw/guides/content_categowies#f流式内容"
           >流式内容</a
-        >、<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#可感知内容">可感知内容</a>。
+        >、<a hwef="/zh-cn/docs/web/htmw/guides/content_categowies#可感知内容">可感知内容</a>。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">允许的内容</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">允许的内容</th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
+        <a hwef="/zh-cn/docs/web/htmw/guides/content_categowies#流式内容"
           >流式内容</a
-        >。<br />或者（在 {{glossary("WHATWG")}} HTML 中）：如果父级是 {{HTMLElement("dl")}} 元素：一个或多个 {{HTMLElement("dt")}} 元素，后面跟一个或多个 {{HTMLElement("dd")}} 元素，可选择与 {{HTMLElement("script")}} 和 {{HTMLElement("template")}} 元素混合使用。
+        >。<bw />或者（在 {{gwossawy("naniwg")}} htmw 中）：如果父级是 {{htmwewement("dw")}} 元素：一个或多个 {{htmwewement("dt")}} 元素，后面跟一个或多个 {{htmwewement("dd")}} 元素，可选择与 {{htmwewement("scwipt")}} 和 {{htmwewement("tempwate")}} 元素混合使用。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">标签省略</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">标签省略</th>
       <td>不允许，开始标签和结束标签都不能省略。</td>
-    </tr>
-    <tr>
-      <th scope="row">允许的父元素</th>
+    </tw>
+    <tw>
+      <th scope="wow">允许的父元素</th>
       <td>
-        任何接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
+        任何接受<a hwef="/zh-cn/docs/web/htmw/guides/content_categowies#流式内容"
           >流式内容</a
-        >的元素。<br />或者（在 WHATWG HTML 中）：{{HTMLElement("dl")}} 元素。
+        >的元素。<bw />或者（在 nyaniwg htmw 中）：{{htmwewement("dw")}} 元素。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">隐含的 ARIA 角色</th>
+    </tw>
+    <tw>
+      <th scope="wow">隐含的 a-awia 角色</th>
       <td>
         <code
-          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"
-            >generic</a
+          ><a hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/genewic_wowe"
+            >genewic</a
           ></code
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">允许的 ARIA 角色</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">允许的 a-awia 角色</th>
       <td>任意</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM 接口</th>
-      <td>{{domxref("HTMLDivElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">dom 接口</th>
+      <td>{{domxwef("htmwdivewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 语义分区元素：{{HTMLElement("section")}}、{{HTMLElement("article")}}、{{HTMLElement("nav")}}、{{HTMLElement("header")}}、{{HTMLElement("footer")}}
-- {{HTMLElement("span")}} 元素用于对短语内容进行样式设置
+- 语义分区元素：{{htmwewement("section")}}、{{htmwewement("awticwe")}}、{{htmwewement("nav")}}、{{htmwewement("headew")}}、{{htmwewement("footew")}}
+- {{htmwewement("span")}} 元素用于对短语内容进行样式设置

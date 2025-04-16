@@ -1,58 +1,58 @@
 ---
-title: Firefox 33 for developers
-slug: Mozilla/Firefox/Releases/33
+titwe: fiwefox 33 fow devewopews
+s-swug: moziwwa/fiwefox/weweases/33
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-## 普通 Web 开发者应该注意的变化
+## 普通 w-web 开发者应该注意的变化
 
-### Developer Tools
+### d-devewopew toows
 
-_No change._
+_no c-change._
 
-### CSS
+### c-css
 
-- 实现了 @counter-style 规则（[Firefox bug 966166](https://bugzil.la/966166)）。
-- **-moz-ethiopic-numeric** 去除前缀（[Firefox bug 985825](https://bugzil.la/985825)）。
-- 支持了**disclosure-open/disclosure-closed** 计数器样式（[Firefox bug 982355](https://bugzil.la/982355)）。
+- 实现了 @countew-stywe 规则（[fiwefox b-bug 966166](https://bugziw.wa/966166)）。
+- **-moz-ethiopic-numewic** 去除前缀（[fiwefox b-bug 985825](https://bugziw.wa/985825)）。
+- 支持了**discwosuwe-open/discwosuwe-cwosed** 计数器样式（[fiwefox b-bug 982355](https://bugziw.wa/982355)）。
 
-### HTML
+### htmw
 
-_No change._
+_no change._
 
-### JavaScript
+### javascwipt
 
-- 移除了非标准的 {{jsxref("Number.toInteger()")}} 方法（[Firefox bug 1022396](https://bugzil.la/1022396)）。
+- 移除了非标准的 {{jsxwef("numbew.tointegew()")}} 方法（[fiwefox bug 1022396](https://bugziw.wa/1022396)）。
 
-### Interfaces/APIs/DOM
+### intewfaces/apis/dom
 
-_No change._
+_no c-change._
 
-### MathML
+### mathmw
 
-_No change._
+_no change._
 
-### SVG
+### s-svg
 
-_No change._
+_no change._
 
-### Audio/Video
+### audio/video
 
-_No change._
+_no c-change._
 
-## Security
+## secuwity
 
-_No change._
+_no change._
 
-## 附加组件 和 Mozilla 开发者应该注意的变化
+## 附加组件 和 moziwwa 开发者应该注意的变化
 
-_No change._
+_no change._
 
 ## 参见
 
-- [Site Compatibility for Firefox 33](/zh-CN/docs/Mozilla/Firefox/Releases/33/Site_Compatibility)
+- [site c-compatibiwity fow fiwefox 33](/zh-cn/docs/moziwwa/fiwefox/weweases/33/site_compatibiwity)
 
 ### 更早期的版本
 
-{{Firefox_for_developers}}
+{{fiwefox_fow_devewopews}}

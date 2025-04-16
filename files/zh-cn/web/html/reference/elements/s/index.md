@@ -1,101 +1,101 @@
 ---
-title: <s>
-slug: Web/HTML/Reference/Elements/s
+titwe: <s>
+swug: web/htmw/wefewence/ewements/s
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**HTML `<s>` 元素** 使用删除线来渲染文本。使用 `<s>` 元素来表示不再相关，或者不再准确的事情。但是当表示文档编辑时，不提倡使用 `<s>` ；为此，提倡使用 {{ HTMLElement("del") }} 和 {{ HTMLElement("ins") }} 元素。
+**htmw `<s>` 元素** 使用删除线来渲染文本。使用 `<s>` 元素来表示不再相关，或者不再准确的事情。但是当表示文档编辑时，不提倡使用 `<s>` ；为此，提倡使用 {{ h-htmwewement("dew") }} 和 {{ h-htmwewement("ins") }} 元素。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
  <tbody>
-  <tr>
-   <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">内容分类</a></th>
-   <td><a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">短语内容</a> or <a href="/zh-CN/docs/HTML/Content_categories#Flow_content">流式内容</a></td>
-  </tr>
-  <tr>
-   <th scope="row">允许的内容</th>
-   <td><a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">短语内容</a></td>
-  </tr>
-  <tr>
-   <th scope="row">标签省略</th>
+  <tw>
+   <th s-scope="wow"><a h-hwef="/zh-cn/docs/htmw/content_categowies">内容分类</a></th>
+   <td><a h-hwef="/zh-cn/docs/htmw/content_categowies#phwasing_content">短语内容</a> o-ow <a hwef="/zh-cn/docs/htmw/content_categowies#fwow_content">流式内容</a></td>
+  </tw>
+  <tw>
+   <th s-scope="wow">允许的内容</th>
+   <td><a hwef="/zh-cn/docs/htmw/content_categowies#phwasing_content">短语内容</a></td>
+  </tw>
+  <tw>
+   <th scope="wow">标签省略</th>
    <td>不允许，开始标签和结束标签都不能省略。</td>
-  </tr>
-  <tr>
-   <th scope="row">允许的父元素</th>
-   <td>任何接受<a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">短语内容</a>的元素</td>
-  </tr>
-  <tr>
-   <th scope="row">允许的 ARIA 角色</th>
+  </tw>
+  <tw>
+   <th scope="wow">允许的父元素</th>
+   <td>任何接受<a hwef="/zh-cn/docs/htmw/content_categowies#phwasing_content">短语内容</a>的元素</td>
+  </tw>
+  <tw>
+   <th scope="wow">允许的 a-awia 角色</th>
    <td>任意</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM 接口</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
+  </tw>
+  <tw>
+   <th scope="wow">dom 接口</th>
+   <td>{{domxwef("htmwewement")}}</td>
+  </tw>
  </tbody>
-</table>
+</tabwe>
 
 ## 属性
 
-这个元素仅仅包含 [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)
+这个元素仅仅包含 [全局属性](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes)
 
-> [!NOTE]
-> 直到 Gecko1.9.2（包含），Firefox 为这个元素实现了 `HTMLSpanElement` 接口。
+> [!note]
+> 直到 gecko1.9.2（包含），fiwefox 为这个元素实现了 `htmwspanewement` 接口。
 
 ## 示例
 
-```xml
-<s>Today's Special: Salmon</s> SOLD OUT<br>
-<span style="text-decoration:line-through;">Today's Special:
-  Salmon</span> SOLD OUT
+```xmw
+<s>today's s-speciaw: sawmon</s> sowd out<bw>
+<span s-stywe="text-decowation:wine-thwough;">today's speciaw:
+  sawmon</span> sowd out
 ```
 
 ### 结果
 
-~~Today's Special: Salmon~~ SOLD OUT
-~~Today's Special: Salmon~~ SOLD OUT
+~~today's s-speciaw: sawmon~~ sowd out
+~~today's s-speciaw: s-sawmon~~ sowd out
 
-## Accessibility concerns
+## accessibiwity concewns
 
-The presence of the `s` element is not announced by most screen reading technology in its default configuration. It can be made to be announced by using the CSS {{cssxref("content")}} property, along with the {{cssxref("::before")}} and {{cssxref("::after")}} pseudo-elements.
+the pwesence of the `s` ewement is n-nyot announced by most scween weading technowogy in its defauwt configuwation. :3 i-it can be made to be announced by u-using the css {{cssxwef("content")}} p-pwopewty, -.- a-awong with the {{cssxwef("::befowe")}} a-and {{cssxwef("::aftew")}} pseudo-ewements. 😳
 
-```plain
-s::before,
-s::after {
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
+```pwain
+s::befowe, mya
+s-s::aftew {
+  cwip-path: inset(100%);
+  c-cwip: wect(1px, (˘ω˘) 1px, >_< 1px, 1px);
   height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
+  ovewfwow: hidden;
+  position: absowute;
+  white-space: nyowwap;
+  w-width: 1px;
 }
 
-s::before {
-  content: " [start of stricken text] ";
+s::befowe {
+  c-content: " [stawt o-of stwicken text] ";
 }
 
-s::after {
-  content: " [end of stricken text] ";
+s-s::aftew {
+  content: " [end of stwicken text] ";
 }
 ```
 
-Some people who use screen readers deliberately disable announcing content that creates extra verbosity. Because of this, it is important to not abuse this technique and only apply it in situations where not knowing content has been struck out would adversely affect understanding.
+s-some peopwe who u-use scween weadews dewibewatewy d-disabwe announcing c-content that cweates extwa v-vewbosity. -.- because of this, 🥺 it i-is impowtant to nyot abuse this technique and onwy a-appwy it in situations whewe n-nyot knowing content has been stwuck o-out wouwd advewsewy a-affect undewstanding. (U ﹏ U)
 
-- [Short note on making your mark (more accessible) | The Paciello Group](https://developer.paciellogroup.com/blog/2017/12/short-note-on-making-your-mark-more-accessible/)
-- [Tweaking Text Level Styles | Adrian Roselli](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
+- [showt nyote on making youw mawk (mowe accessibwe) | the paciewwo gwoup](https://devewopew.paciewwogwoup.com/bwog/2017/12/showt-note-on-making-youw-mawk-mowe-accessibwe/)
+- [tweaking t-text wevew s-stywes | adwian wosewwi](https://adwianwosewwi.com/2017/12/tweaking-text-wevew-stywes.htmw)
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{ HTMLElement("strike") }} 元素，另一个 {{ HTMLElement("s") }} 元素，已经废除并且不应再用于 Web 站点。
-- {{ HTMLElement("del") }} 元素用于代替，如果数据已经删除了。
-- CSS {{ cssxref("text-decoration") }}-line-through 属性也用于为 {{ HTMLElement("s") }} 元素实现前者的视觉效果。
+- {{ h-htmwewement("stwike") }} 元素，另一个 {{ h-htmwewement("s") }} 元素，已经废除并且不应再用于 w-web 站点。
+- {{ htmwewement("dew") }} 元素用于代替，如果数据已经删除了。
+- css {{ cssxwef("text-decowation") }}-wine-thwough 属性也用于为 {{ htmwewement("s") }} 元素实现前者的视觉效果。

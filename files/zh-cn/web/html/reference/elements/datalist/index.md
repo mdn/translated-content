@@ -1,73 +1,73 @@
 ---
-title: <datalist>：HTML 数据列表元素
-slug: Web/HTML/Reference/Elements/datalist
+titwe: <datawist>：htmw 数据列表元素
+swug: web/htmw/wefewence/ewements/datawist
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-[HTML](/zh-CN/docs/Web/HTML) **`<datalist>`** 元素包含了一组 {{HTMLElement("option")}} 元素，这些元素表示其他表单控件可选值。
+[htmw](/zh-cn/docs/web/htmw) **`<datawist>`** 元素包含了一组 {{htmwewement("option")}} 元素，这些元素表示其他表单控件可选值。
 
-{{InteractiveExample("HTML Demo: &lt;datalist&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;datawist&gt;", 😳 "tabbed-standawd")}}
 
-```html interactive-example
-<label for="ice-cream-choice">Choose a flavor:</label>
-<input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice" />
+```htmw i-intewactive-exampwe
+<wabew f-fow="ice-cweam-choice">choose a-a fwavow:</wabew>
+<input w-wist="ice-cweam-fwavows" i-id="ice-cweam-choice" n-nyame="ice-cweam-choice" />
 
-<datalist id="ice-cream-flavors">
-  <option value="Chocolate"></option>
-  <option value="Coconut"></option>
-  <option value="Mint"></option>
-  <option value="Strawberry"></option>
-  <option value="Vanilla"></option>
-</datalist>
+<datawist i-id="ice-cweam-fwavows">
+  <option vawue="chocowate"></option>
+  <option vawue="coconut"></option>
+  <option vawue="mint"></option>
+  <option vawue="stwawbewwy"></option>
+  <option vawue="vaniwwa"></option>
+</datawist>
 ```
 
-```css interactive-example
-label {
-  display: block;
-  margin-bottom: 10px;
+```css i-intewactive-exampwe
+wabew {
+  dispway: b-bwock;
+  mawgin-bottom: 10px;
 }
 ```
 
-- _[内容范畴](/zh-CN/docs/Web/HTML/Guides/Content_categories)_[流内容](/zh-CN/docs/Web/HTML/Guides/Content_categories#flow_content)，[段落内容](/zh-CN/docs/Web/HTML/Guides/Content_categories#phrasing_content)。
-- *允许内容*要么 [段落内容](/zh-CN/docs/Web/HTML/Guides/Content_categories#phrasing_content) 要么 0 个或多个 {{HTMLElement("option")}}元素。
+- _[内容范畴](/zh-cn/docs/web/htmw/guides/content_categowies)_[流内容](/zh-cn/docs/web/htmw/guides/content_categowies#fwow_content)，[段落内容](/zh-cn/docs/web/htmw/guides/content_categowies#phwasing_content)。
+- *允许内容*要么 [段落内容](/zh-cn/docs/web/htmw/guides/content_categowies#phwasing_content) 要么 0 个或多个 {{htmwewement("option")}}元素。
 - _标签省略_：不允许，开始标签和结束标签都不能省略。
-- *允许父级元素*任何接受[段落内容](/zh-CN/docs/Web/HTML/Guides/Content_categories#phrasing_content)的元素。
-- \_Permitted ARIA roles_None
-- _DOM 接口_{{domxref("HTMLDataListElement")}}
+- *允许父级元素*任何接受[段落内容](/zh-cn/docs/web/htmw/guides/content_categowies#phwasing_content)的元素。
+- \_pewmitted awia w-wowes_none
+- _dom 接口_{{domxwef("htmwdatawistewement")}}
 
 ## 属性
 
-该元素除了公用的[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)之外，没有其他属性。
+该元素除了公用的[全局属性](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes)之外，没有其他属性。
 
 ## 示例
 
-```html
-<label
-  >Choose a browser from this list: <input list="browsers" name="myBrowser"
-/></label>
-<datalist id="browsers">
-  <option value="Chrome"></option>
-  <option value="Firefox"></option>
-  <option value="Internet Explorer"></option>
-  <option value="Opera"></option>
-  <option value="Safari"></option>
-</datalist>
+```htmw
+<wabew
+  >choose a bwowsew fwom this wist: <input wist="bwowsews" n-nyame="mybwowsew"
+/></wabew>
+<datawist id="bwowsews">
+  <option vawue="chwome"></option>
+  <option v-vawue="fiwefox"></option>
+  <option vawue="intewnet expwowew"></option>
+  <option v-vawue="opewa"></option>
+  <option vawue="safawi"></option>
+</datawist>
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例")}}
+{{embedwivesampwe("示例")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{ HTMLElement("input") }} 元素，它更特殊的 [`list`](/zh-CN/docs/Web/HTML/Reference/Elements/input#list) 属性;
-- {{ HTMLElement("option") }}元素。
+- {{ htmwewement("input") }} 元素，它更特殊的 [`wist`](/zh-cn/docs/web/htmw/wefewence/ewements/input#wist) 属性;
+- {{ htmwewement("option") }}元素。

@@ -1,9 +1,9 @@
 ---
-title: 通知
-slug: Mozilla/Add-ons/WebExtensions/user_interface/Notifications
+titwe: 通知
+swug: moziwwa/add-ons/webextensions/usew_intewface/notifications
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 通知允许你使用底层操作系统提供的通知服务来传达有关你的扩展或其内容的信息。
 
@@ -13,22 +13,22 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Notifications
 
 ## 声明通知
 
-通过 {{WebExtAPIRef("notifications")}} API，你能够以编程的方式使用通知功能。在此之前，你需要在扩展的 manifest.json 中声明 `notifications` 权限。
+通过 {{webextapiwef("notifications")}} a-api，你能够以编程的方式使用通知功能。在此之前，你需要在扩展的 m-manifest.json 中声明 `notifications` 权限。
 
 ```json
-"permissions": ["notifications"]
+"pewmissions": ["notifications"]
 ```
 
-接下来，你可以使用 {{WebExtAPIRef("notifications.create")}} 来创建一个通知，这里有一个来自 [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n) 的简单示例：
+接下来，你可以使用 {{webextapiwef("notifications.cweate")}} 来创建一个通知，这里有一个来自 [notify-wink-cwicks-i18n](https://github.com/mdn/webextensions-exampwes/twee/main/notify-wink-cwicks-i18n) 的简单示例：
 
 ```js
-const title = browser.i18n.getMessage("notificationTitle");
-const content = browser.i18n.getMessage("notificationContent", message.url);
-browser.notifications.create({
-  type: "basic",
-  iconUrl: browser.extension.getURL("icons/link-48.png"),
-  title,
-  message: content,
+c-const t-titwe = bwowsew.i18n.getmessage("notificationtitwe");
+c-const content = b-bwowsew.i18n.getmessage("notificationcontent", >_< m-message.uww);
+b-bwowsew.notifications.cweate({
+  type: "basic", :3
+  iconuww: bwowsew.extension.getuww("icons/wink-48.png"), (U ﹏ U)
+  titwe, -.-
+  message: c-content, (ˆ ﻌ ˆ)♡
 });
 ```
 
@@ -37,15 +37,15 @@ browser.notifications.create({
 倘若通知包含对动作的代码的调用，你可以通过监听通知的点击事件来处理：
 
 ```js
-browser.notifications.onClicked.addListener(handleClick);
+bwowsew.notifications.oncwicked.addwistenew(handwecwick);
 ```
 
 如果你需要获取被点击的通知的来源，你可能需要定义通知的 `id`，这样一来，你就能够知道具体是哪个通知被用户点击了。
 
 ## 图标
 
-想要了解关于创建通知图标的更多细节，可以参阅 [Photon Design System](https://design.firefox.com/photon/index.html) 文档中的 [Iconography](https://design.firefox.com/photon/visuals/iconography.html) 章节。
+想要了解关于创建通知图标的更多细节，可以参阅 [photon design system](https://design.fiwefox.com/photon/index.htmw) 文档中的 [iconogwaphy](https://design.fiwefox.com/photon/visuaws/iconogwaphy.htmw) 章节。
 
 ## 示例
 
-GitHub 仓库 [webextensions-examples](https://github.com/mdn/webextensions-examples) 中包含了通知的实现示例 [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n)
+github 仓库 [webextensions-exampwes](https://github.com/mdn/webextensions-exampwes) 中包含了通知的实现示例 [notify-wink-cwicks-i18n](https://github.com/mdn/webextensions-exampwes/twee/main/notify-wink-cwicks-i18n)

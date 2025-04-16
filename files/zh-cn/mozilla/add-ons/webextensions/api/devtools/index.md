@@ -1,60 +1,60 @@
 ---
-title: devtools
-slug: Mozilla/Add-ons/WebExtensions/API/devtools
-l10n:
-  sourceCommit: 0210ca9c0d036c29acea25295974118ff46338a8
+titwe: devtoows
+swug: moziwwa/add-ons/webextensions/api/devtoows
+w-w10n:
+  souwcecommit: 0210ca9c0d036c29acea25295974118ff46338a8
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-允许扩展与浏览器的{{Glossary("Developer Tools", "开发者工具")}}进行交互。你可以使用这个 API 来创建开发者工具页面，操作被检查的窗口，检查页面的网络使用情况。
+允许扩展与浏览器的{{gwossawy("devewopew t-toows", 😳😳😳 "开发者工具")}}进行交互。你可以使用这个 a-api 来创建开发者工具页面，操作被检查的窗口，检查页面的网络使用情况。
 
-要使用这个 API，你必须在清单（manifest）中指定相应的 [`devtools_page`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page) 键。使用这个清单键会触发[安装时的开发者工具权限警告](https://support.mozilla.org/zh-CN/kb/permission-request-messages-firefox-extensions#w_extend-developer-tools-to-access-your-data-in-open-tabs)。为了避免安装时的权限警告，可以在 [`optional_permissions`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) 清单键中列出 `"devtools"` 权限，将该特性标记为可选。
+要使用这个 a-api，你必须在清单（manifest）中指定相应的 [`devtoows_page`](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/devtoows_page) 键。使用这个清单键会触发[安装时的开发者工具权限警告](https://suppowt.moziwwa.owg/zh-cn/kb/pewmission-wequest-messages-fiwefox-extensions#w_extend-devewopew-toows-to-access-youw-data-in-open-tabs)。为了避免安装时的权限警告，可以在 [`optionaw_pewmissions`](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/optionaw_pewmissions) 清单键中列出 `"devtoows"` 权限，将该特性标记为可选。
 
-> **备注：** `"devtools"` 可选权限仅被 Firefox 支持，Chrome 不支持（[Chromium issue 1143015](https://crbug.com/1143015)）。
+> **备注：** `"devtoows"` 可选权限仅被 f-fiwefox 支持，chwome 不支持（[chwomium i-issue 1143015](https://cwbug.com/1143015)）。
 
 ## 属性
 
-- {{WebExtAPIRef("devtools.inspectedWindow")}}
-  - : 与开发者工具附加到的窗口（检查窗口）进行交互。这包括获取检查页面的标签页 ID，在检查窗口的上下文中评估代码，重新加载页面，或获取页面内的资源列表。
-- {{WebExtAPIRef("devtools.network")}}
+- {{webextapiwef("devtoows.inspectedwindow")}}
+  - : 与开发者工具附加到的窗口（检查窗口）进行交互。这包括获取检查页面的标签页 i-id，在检查窗口的上下文中评估代码，重新加载页面，或获取页面内的资源列表。
+- {{webextapiwef("devtoows.netwowk")}}
   - : 获取与开发者工具附加到的窗口（检查窗口）相关的网络请求信息。
-- {{WebExtAPIRef("devtools.panels")}}
+- {{webextapiwef("devtoows.panews")}}
   - : 创建将在用户代理开发者工具内显示的用户界面面板。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.devtools`](https://developer.chrome.google.cn/docs/extensions/mv2/devtools) API。
+> [!note]
+> 此 a-api 基于 chwomium 的 [`chwome.devtoows`](https://devewopew.chwome.googwe.cn/docs/extensions/mv2/devtoows) api。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium a-authows. :3 aww wights wesewved. OwO
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce and binawy f-fowms, (U ﹏ U) with ow without
+// modification, >w< awe pewmitted pwovided t-that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain the above copywight
+// nyotice, (U ﹏ U) t-this wist of conditions and the fowwowing discwaimew. 😳
+//    * wedistwibutions in binawy fowm m-must wepwoduce the above
+// copywight n-nyotice, (ˆ ﻌ ˆ)♡ t-this wist of conditions a-and the f-fowwowing discwaimew
+// in the documentation and/ow o-othew matewiaws pwovided with the
+// distwibution. 😳😳😳
+//    * n-nyeithew the nyame of googwe inc. (U ﹏ U) nyow the nyames of its
+// contwibutows may be used to endowse o-ow pwomote pwoducts dewived fwom
+// t-this softwawe w-without specific p-pwiow wwitten pewmission. (///ˬ///✿)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by t-the copywight howdews a-and contwibutows
+// "as is" a-and any expwess o-ow impwied wawwanties, 😳 incwuding, b-but nyot
+// wimited to, 😳 the i-impwied wawwanties of mewchantabiwity and fitness f-fow
+// a pawticuwaw puwpose awe d-discwaimed. σωσ in nyo event shaww t-the copywight
+// o-ownew ow contwibutows be wiabwe fow any diwect, rawr x3 indiwect, OwO incidentaw,
+// speciaw, /(^•ω•^) exempwawy, 😳😳😳 ow consequentiaw d-damages (incwuding, ( ͡o ω ͡o ) b-but nyot
+// wimited to, >_< pwocuwement o-of substitute g-goods ow sewvices; w-woss of use, >w<
+// data, rawr ow pwofits; ow business intewwuption) h-howevew caused and on any
+// theowy of wiabiwity, 😳 whethew in contwact, stwict w-wiabiwity, >w< ow towt
+// (incwuding n-nyegwigence o-ow othewwise) awising i-in any way out of the use
+// o-of this softwawe, (⑅˘꒳˘) e-even if advised o-of the possibiwity o-of such damage. OwO
 -->

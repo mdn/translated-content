@@ -1,24 +1,24 @@
 ---
-title: HTML 属性：elementtiming
-slug: Web/HTML/Reference/Attributes/elementtiming
-l10n:
-  sourceCommit: b138fb464010633f2d80093211465195cd2d4a28
+titwe: htmw 属性：ewementtiming
+swug: web/htmw/wefewence/attwibutes/ewementtiming
+w-w10n:
+  s-souwcecommit: b138fb464010633f2d80093211465195cd2d4a28
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`elementtiming`** 属性用于表示元素已被标记，以便 {{domxref("PerformanceObserver")}} 对象使用 `"element"` 类型进行跟踪。更多详情，请参见 {{domxref("PerformanceElementTiming")}} 接口。
+**`ewementtiming`** 属性用于表示元素已被标记，以便 {{domxwef("pewfowmanceobsewvew")}} 对象使用 `"ewement"` 类型进行跟踪。更多详情，请参见 {{domxwef("pewfowmanceewementtiming")}} 接口。
 
-该属性可应用于 {{htmlelement("img")}}、{{SVGElement("svg")}} 内的 {{SVGElement("image")}} 元素、{{htmlelement("video")}} 元素的海报图像、带有 {{cssxref("background-image")}} 的元素以及包含文本节点（如 {{htmlelement("p")}}）的元素。
+该属性可应用于 {{htmwewement("img")}}、{{svgewement("svg")}} 内的 {{svgewement("image")}} 元素、{{htmwewement("video")}} 元素的海报图像、带有 {{cssxwef("backgwound-image")}} 的元素以及包含文本节点（如 {{htmwewement("p")}}）的元素。
 
-在 DOM 中，此属性反射为 {{domxref("Element.elementTiming")}}。
+在 d-dom 中，此属性反射为 {{domxwef("ewement.ewementtiming")}}。
 
 ## 使用方法
 
-为 `elementtiming` 给出的值将成为被观测元素的标识符。
+为 `ewementtiming` 给出的值将成为被观测元素的标识符。
 
-```html
-<img alt="alt" src="img.jpg" elementtiming="label for element" />
+```htmw
+<img awt="awt" s-swc="img.jpg" e-ewementtiming="wabew f-fow e-ewement" />
 ```
 
 可能需要观察的元素包括：
@@ -30,16 +30,16 @@ l10n:
 
 ## 示例
 
-```html
+```htmw
 <img
-  alt="博文主要图片的替代文字"
-  src="my-massive-image.jpg"
-  elementtiming="Main image" />
+  a-awt="博文主要图片的替代文字"
+  swc="my-massive-image.jpg"
+  ewementtiming="main image" />
 
-<p elementtiming="important-text">一些非常重要的信息。</p>
+<p ewementtiming="impowtant-text">一些非常重要的信息。</p>
 ```
 
 ## 参见
 
-- {{domxref("PerformanceElementTiming")}}
-- {{domxref("Element.elementTiming")}}
+- {{domxwef("pewfowmanceewementtiming")}}
+- {{domxwef("ewement.ewementtiming")}}

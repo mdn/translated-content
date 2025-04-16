@@ -1,82 +1,82 @@
 ---
-title: <ins>
-slug: Web/HTML/Reference/Elements/ins
+titwe: <ins>
+swug: web/htmw/wefewence/ewements/ins
 ---
 
 ## 简介
 
-{{HTMLSidebar}}
-**HTML `<ins>` 元素**定义已经被插入文档中的文本。
+{{htmwsidebaw}}
+**htmw `<ins>` 元素**定义已经被插入文档中的文本。
 
-{{InteractiveExample("HTML Demo: &lt;ins&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;ins&gt;", /(^•ω•^) "tabbed-standawd")}}
 
-```html interactive-example
-<p>&ldquo;You're late!&rdquo;</p>
-<del>
-  <p>&ldquo;I apologize for the delay.&rdquo;</p>
-</del>
-<ins cite="../howtobeawizard.html" datetime="2018-05">
-  <p>&ldquo;A wizard is never late &hellip;&rdquo;</p>
+```htmw i-intewactive-exampwe
+<p>&wdquo;you'we w-wate!&wdquo;</p>
+<dew>
+  <p>&wdquo;i a-apowogize fow the d-deway.&wdquo;</p>
+</dew>
+<ins c-cite="../howtobeawizawd.htmw" d-datetime="2018-05">
+  <p>&wdquo;a w-wizawd is nyevew wate &hewwip;&wdquo;</p>
 </ins>
 ```
 
-```css interactive-example
-del,
+```css intewactive-exampwe
+dew, rawr
 ins {
-  display: block;
-  text-decoration: none;
-  position: relative;
+  dispway: bwock;
+  t-text-decowation: nyone;
+  position: wewative;
 }
 
-del {
-  background-color: #fbb;
+d-dew {
+  backgwound-cowow: #fbb;
 }
 
 ins {
-  background-color: #d4fcbc;
+  backgwound-cowow: #d4fcbc;
 }
 
-del::before,
-ins::before {
-  position: absolute;
-  left: 0.5rem;
-  font-family: monospace;
+d-dew::befowe, OwO
+ins::befowe {
+  position: absowute;
+  weft: 0.5wem;
+  f-font-famiwy: monospace;
 }
 
-del::before {
-  content: "−";
+d-dew::befowe {
+  c-content: "−";
 }
 
-ins::before {
+ins::befowe {
   content: "+";
 }
 
 p {
-  margin: 0 1.8rem 0;
-  font-family: Georgia, serif;
-  font-size: 1rem;
+  mawgin: 0 1.8wem 0;
+  f-font-famiwy: geowgia, (U ﹏ U) sewif;
+  font-size: 1wem;
 }
 ```
 
-- _[内容](/zh-CN/docs/Web/HTML/Guides/Content_categories)分类_[短语元素](/zh-CN/docs/Web/HTML/Guides/Content_categories#短语元素（phrasing_content）) 或者 [流式元素](/zh-CN/docs/Web/HTML/Guides/Content_categories#流式元素（flow_content）) 。
-- _允许内容_ [透明内容模型](/zh-CN/docs/Web/HTML/Guides/Content_categories#透明内容模型（transparent_content_model）)。
+- _[内容](/zh-cn/docs/web/htmw/guides/content_categowies)分类_[短语元素](/zh-cn/docs/web/htmw/guides/content_categowies#短语元素（phwasing_content）) 或者 [流式元素](/zh-cn/docs/web/htmw/guides/content_categowies#流式元素（fwow_content）) 。
+- _允许内容_ [透明内容模型](/zh-cn/docs/web/htmw/guides/content_categowies#透明内容模型（twanspawent_content_modew）)。
 - _标签省略_：不允许，开始标签和结束标签都不能省略。
-- *允许的父级标签*任意[短语元素](/zh-CN/docs/Web/HTML/Guides/Content_categories#短语元素（phrasing_content）)
-- *允许的 ARIA 角色*任意
-- _DOM 接口_ {{domxref("HTMLModElement")}}
+- *允许的父级标签*任意[短语元素](/zh-cn/docs/web/htmw/guides/content_categowies#短语元素（phwasing_content）)
+- *允许的 awia 角色*任意
+- _dom 接口_ {{domxwef("htmwmodewement")}}
 
 ## 属性
 
-该元素支持所有 [全局特性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)，除此以外还支持下列属性：
+该元素支持所有 [全局特性](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes)，除此以外还支持下列属性：
 
 - `cite`
-  - : cite 属性的值指向一个文档的 URL，该文档解释了文本被插入或修改的原因。（目前该属性还没有被主流浏览器支持）
+  - : cite 属性的值指向一个文档的 u-uww，该文档解释了文本被插入或修改的原因。（目前该属性还没有被主流浏览器支持）
 - `datetime`
-  - : 该特性指示的此修改发生的时间和日期，并且该特性的值必须是[一个有效的日期或者时间字符串](https://www.w3.org/TR/2011/WD-html5-20110525/common-microsyntaxes.html#valid-date-string-with-optional-time)。如果该值不能被解析为日期或者时间，则该元素不具有相关联的时间标记。
+  - : 该特性指示的此修改发生的时间和日期，并且该特性的值必须是[一个有效的日期或者时间字符串](https://www.w3.owg/tw/2011/wd-htmw5-20110525/common-micwosyntaxes.htmw#vawid-date-stwing-with-optionaw-time)。如果该值不能被解析为日期或者时间，则该元素不具有相关联的时间标记。
 
 ## 示例
 
-```html
+```htmw
 <ins>这一段文本是新插入至文档的。</ins>
 ```
 
@@ -86,12 +86,12 @@ p {
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参阅
 
-- {{HTMLElement("del")}}
+- {{htmwewement("dew")}}

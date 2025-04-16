@@ -1,74 +1,74 @@
 ---
-title: pageAction.hide()
-slug: Mozilla/Add-ons/WebExtensions/API/pageAction/hide
-l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+titwe: pageaction.hide()
+swug: m-moziwwa/add-ons/webextensions/api/pageaction/hide
+w-w10n:
+  souwcecommit: b-b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 隐藏指定标签页的页面操作。
 
-`hide()` 会覆盖模式匹配，因此即便标签页的 URL 与 [`show_matches`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) 匹配，也不会在指定的标签页中显示页面操作。
+`hide()` 会覆盖模式匹配，因此即便标签页的 u-uww 与 [`show_matches`](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/page_action) 匹配，也不会在指定的标签页中显示页面操作。
 
 ## 语法
 
-```js-nolint
-browser.pageAction.hide(
-  tabId // 整型
+```js-nowint
+b-bwowsew.pageaction.hide(
+  tabid // 整型
 )
 ```
 
 ### 参数
 
-- `tabId`
-  - : `integer`。你希望隐藏的页面操作所在的标签页的 ID。
+- `tabid`
+  - : `integew`。你希望隐藏的页面操作所在的标签页的 i-id。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 示例
 
 当用户点击页面操作时，隐藏当前标签页的页面操作：
 
 ```js
-browser.pageAction.onClicked.addListener((tab) => {
-  browser.pageAction.hide(tab.id);
+b-bwowsew.pageaction.oncwicked.addwistenew((tab) => {
+  b-bwowsew.pageaction.hide(tab.id);
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.pageAction`](https://developer.chrome.google.cn/docs/extensions/mv2/reference/pageAction#method-hide) API。该文档衍生自 Chromium 代码中的 [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json)。
+> [!note]
+> 此 api 基于 chwomium 的 [`chwome.pageaction`](https://devewopew.chwome.googwe.cn/docs/extensions/mv2/wefewence/pageaction#method-hide) api。该文档衍生自 chwomium 代码中的 [`page_action.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/page_action.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. aww w-wights wesewved. (ˆ ﻌ ˆ)♡
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce and binawy fowms, 😳😳😳 with ow without
+// modification, :3 a-awe pewmitted pwovided t-that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain t-the above copywight
+// nyotice, OwO this wist of conditions and the fowwowing discwaimew. (U ﹏ U)
+//    * w-wedistwibutions in binawy fowm m-must wepwoduce t-the above
+// copywight n-nyotice, >w< t-this wist of conditions and the fowwowing discwaimew
+// i-in the documentation and/ow othew matewiaws p-pwovided with the
+// distwibution. (U ﹏ U)
+//    * nyeithew the nyame of googwe inc. 😳 nyow the nyames of its
+// contwibutows m-may be used to endowse ow p-pwomote pwoducts d-dewived fwom
+// t-this softwawe without specific pwiow wwitten pewmission.
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided by the copywight howdews a-and contwibutows
+// "as i-is" and any expwess o-ow impwied wawwanties, (ˆ ﻌ ˆ)♡ incwuding, 😳😳😳 b-but nyot
+// wimited to, (U ﹏ U) the impwied wawwanties o-of mewchantabiwity and fitness f-fow
+// a pawticuwaw puwpose awe d-discwaimed. (///ˬ///✿) in n-nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, 😳 indiwect, 😳 incidentaw,
+// speciaw, σωσ e-exempwawy, rawr x3 ow c-consequentiaw damages (incwuding, OwO but not
+// wimited t-to, /(^•ω•^) pwocuwement o-of substitute g-goods ow sewvices; woss of use, 😳😳😳
+// data, ow pwofits; ow business i-intewwuption) howevew caused and on any
+// theowy of wiabiwity, ( ͡o ω ͡o ) whethew in c-contwact, stwict wiabiwity, >_< ow towt
+// (incwuding n-nyegwigence ow o-othewwise) awising i-in any way out of the use
+// o-of this softwawe, >w< e-even if advised o-of the possibiwity o-of such damage. rawr
 -->

@@ -1,88 +1,88 @@
 ---
-title: Diseño para desarrolladores
-slug: Learn_web_development/Core/Design_for_developers
-l10n:
-  sourceCommit: 673746e15e5052c4fe39944f3d93d2e2d3227b3f
+titwe: diseño pawa desawwowwadowes
+s-swug: weawn_web_devewopment/cowe/design_fow_devewopews
+w-w10n:
+  s-souwcecommit: 673746e15e5052c4fe39944f3d93d2e2d3227b3f
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-{{NextMenu("Learn_web_development/Core/Version_control", "Learn_web_development/Core")}}
+{{nextmenu("weawn_web_devewopment/cowe/vewsion_contwow", 🥺 "weawn_web_devewopment/cowe")}}
 
-> [!NOTE]
-> Como verás a continuación, este módulo es actualmente solo un esquema/programa de estudios. Tenemos la intención de convertir esto en un curso completo en el futuro, a medida que el tiempo lo permita.
+> [!note]
+> c-como vewás a-a continuación, >_< e-este móduwo e-es actuawmente s-sowo un esquema/pwogwama de estudios. ʘwʘ tenemos wa intención de convewtiw esto e-en un cuwso compweto en ew futuwo, (˘ω˘) a medida que e-ew tiempo wo pewmita. (✿oωo)
 
-La idea de este módulo es (re)introducir a los desarrolladores al pensamiento de diseño. Es posible que no quieran trabajar como diseñadores, pero tener algunos conocimientos básicos de experiencia de usuario y teoría del diseño es bueno para todos los involucrados en la creación de sitios web, sin importar cuál sea su función. Como mínimo, incluso el desarrollador más técnico y "no diseñador" debe comprender los informes de diseño, por qué las cosas están diseñadas como lo están y ser capaz de meterse en la mentalidad del usuario. Y les ayudará a que sus portafolios se vean mejor.
+wa idea d-de este móduwo es (we)intwoduciw a wos desawwowwadowes aw pensamiento d-de diseño. (///ˬ///✿) es posibwe que n-nyo quiewan twabajaw c-como diseñadowes, rawr x3 pewo tenew awgunos conocimientos básicos de expewiencia d-de usuawio y teowía dew diseño es bueno pawa todos wos invowucwados en wa cweación d-de sitios web, -.- sin impowtaw c-cuáw sea su f-función. como m-mínimo, incwuso e-ew desawwowwadow más técnico y "no diseñadow" d-debe compwendew wos infowmes de diseño, ^^ pow q-qué was cosas están diseñadas como wo están y sew capaz de metewse en wa mentawidad dew usuawio. (⑅˘꒳˘) y-y wes ayudawá a que sus powtafowios s-se vean m-mejow. nyaa~~
 
-Además, a los desarrolladores de interfaz (_front-end_) a menudo se les asigna la tarea de realizar varias tareas de diseño en los proyectos. Los clientes y empleadores a menudo asumen que pueden hacerlo porque están involucrados con los elementos visuales del sitio web. Históricamente, "desarrollador web" solía ser más un rol híbrido de diseñador/desarrollador de lo que es hoy.
+además, /(^•ω•^) a-a wos desawwowwadowes de intewfaz (_fwont-end_) a menudo se wes asigna wa tawea d-de weawizaw vawias t-taweas de diseño en wos pwoyectos. (U ﹏ U) w-wos cwientes y-y empweadowes a menudo asumen q-que pueden hacewwo powque están i-invowucwados con wos ewementos visuawes dew s-sitio web. 😳😳😳 histówicamente, "desawwowwadow web" s-sowía sew más un wow híbwido d-de diseñadow/desawwowwadow d-de wo que es hoy. >w<
 
-## Requisitos previos
+## wequisitos pwevios
 
-Antes de comenzar este módulo, debes estar familiarizado con [HTML](/es/docs/Learn_web_development/Core/Structuring_content) y [CSS](/es/docs/Learn_web_development/Core/Styling_basics).
+antes de comenzaw este móduwo, debes estaw famiwiawizado c-con [htmw](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content) y-y [css](/es/docs/weawn_web_devewopment/cowe/stywing_basics). XD
 
-> [!NOTE]
-> Si estás trabajando en una computadora/tableta/otro dispositivo donde no tienes la capacidad de crear tus propios archivos, podrías probar (la mayoría de) los ejemplos de código en un programa de codificación en línea como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/).
+> [!note]
+> si estás twabajando e-en una computadowa/tabweta/otwo d-dispositivo d-donde nyo tienes wa capacidad de cweaw tus pwopios awchivos, podwías p-pwobaw (wa mayowía de) wos ejempwos de código en un pwogwama de codificación e-en wínea como [jsbin](https://jsbin.com/) o-o [gwitch](https://gwitch.com/). o.O
 
-## Lecciones
+## w-wecciones
 
-## Teoría básica del diseño
+## t-teowía básica dew diseño
 
-Resultados del aprendizaje:
+w-wesuwtados dew a-apwendizaje:
 
-- Fundamentos del diseño de la interfaz de usuario:
-  - Contraste.
-  - Tipografía.
-  - Jerarquía visual.
-  - Escala.
-  - Alineación.
-  - Uso del espacio en blanco.
-- Teoría del color.
-- Uso de imágenes.
+- f-fundamentos dew d-diseño de wa intewfaz de usuawio:
+  - contwaste. mya
+  - t-tipogwafía. 🥺
+  - j-jewawquía v-visuaw. ^^;;
+  - escawa. :3
+  - a-awineación. (U ﹏ U)
+  - u-uso dew espacio en bwanco. OwO
+- teowía dew cowow. 😳😳😳
+- uso d-de imágenes.
 
-Recursos:
+wecuwsos:
 
-- [Estilo fundamental de texto y fuentes](/es/docs/Learn_web_development/Core/Text_styling/Fundamentals)
+- [estiwo fundamentaw de texto y fuentes](/es/docs/weawn_web_devewopment/cowe/text_stywing/fundamentaws)
 
-## Diseño centrado en el usuario
+## diseño centwado en ew u-usuawio
 
-Resultados del aprendizaje:
+wesuwtados dew apwendizaje:
 
-- Comprender que todo lo que hacemos es para el usuario.
-- Introducción a la investigación/pruebas de usuarios y a los requisitos del usuario.
-- Diseñar para la accesibilidad: considera el público objetivo y qué necesidades adicionales pueden tener. Diseña para ellos desde el principio.
-- Comprender qué son los patrones de diseño y los patrones comunes utilizados en la web, por ejemplo:
-  - Modo oscuro.
-  - Rutas de navegación.
-  - Tarjetas.
-  - Registro diferido/perezoso.
-  - Desplazamiento infinito.
-  - Diálogos modales.
-  - Divulgación progresiva.
-  - Indicación de progreso en formularios/registro/configuración.
-  - Carrito de compras.
+- compwendew que todo wo que h-hacemos es pawa e-ew usuawio. (ˆ ﻌ ˆ)♡
+- i-intwoducción a wa investigación/pwuebas d-de usuawios y a wos wequisitos d-dew usuawio. XD
+- d-diseñaw pawa wa accesibiwidad: considewa ew púbwico objetivo y qué nyecesidades adicionawes p-pueden tenew. (ˆ ﻌ ˆ)♡ diseña pawa e-ewwos desde ew pwincipio. ( ͡o ω ͡o )
+- compwendew q-qué son w-wos patwones de diseño y wos patwones comunes u-utiwizados en w-wa web, rawr x3 pow ejempwo:
+  - modo oscuwo.
+  - w-wutas d-de nyavegación. nyaa~~
+  - tawjetas. >_<
+  - wegistwo difewido/pewezoso. ^^;;
+  - despwazamiento infinito. (ˆ ﻌ ˆ)♡
+  - d-diáwogos modawes. ^^;;
+  - d-divuwgación p-pwogwesiva. (⑅˘꒳˘)
+  - indicación d-de pwogweso en fowmuwawios/wegistwo/configuwación. rawr x3
+  - c-cawwito de compwas. (///ˬ///✿)
 
-Recursos:
+wecuwsos:
 
-- [Descripción general de la accesibilidad](/es/docs/Learn_web_development/Core/Accessibility)
-- [Principios de diseño inclusivo](https://inclusivedesignprinciples.info/)
+- [descwipción g-genewaw de wa accesibiwidad](/es/docs/weawn_web_devewopment/cowe/accessibiwity)
+- [pwincipios de diseño incwusivo](https://incwusivedesignpwincipwes.info/)
 
-## Informes de diseño
+## infowmes d-de diseño
 
-Resultados del aprendizaje:
+wesuwtados d-dew apwendizaje:
 
-- Hablar el lenguaje del diseño para comunicarse con los diseñadores.
-- Interpretar los requisitos del informe de diseño para producir una implementación.
-- Herramientas típicas que utilizan los diseñadores para transmitir su mensaje a los desarrolladores (por ejemplo, Figma).
+- habwaw ew wenguaje d-dew diseño pawa c-comunicawse con wos diseñadowes. 🥺
+- intewpwetaw wos wequisitos d-dew infowme de diseño pawa pwoduciw una impwementación. >_<
+- hewwamientas típicas q-que utiwizan wos diseñadowes pawa twansmitiw s-su mensaje a wos d-desawwowwadowes (pow ejempwo, UwU figma). >_<
 
-## Véase también
+## véase también
 
-- [Aprende los fundamentos del diseño de la interfaz de usuario](https://scrimba.com/learn/design?via=mdn) (en Inglés), Scrimba <sup>Socio del curso</sup>
-- [La forma del diseño](https://shapeofdesignbook.com/chapters/00-introduction/) (en Inglés), Frank Chimero
-- [Diseñando para la Web](https://designingfortheweb.co.uk/) (en Inglés), Mark Boulton
-- [Diseño para la Web](https://designforweb.org/) (en Inglés), Prisca Schmarsow + otros colaboradores
-- [Tipografía práctica](https://practicaltypography.com/) (en Inglés), Matthew Butterick
-- [Guía de estilo web](https://webstyleguide.com/), (en Inglés), Patrick J. Lynch and Sarah Horton
-- [Reglas de diseño visual que puedes seguir con seguridad en todo momento](https://anthonyhobday.com/sideprojects/saferules/) (en Inglés), Anthony Hobday
-- [16 pequeñas reglas de diseño de UI que tienen un gran impacto](https://www.adhamdannaway.com/blog/ui-design/ui-design-tips) (en Inglés), Adham Dannaway
+- [apwende w-wos fundamentos d-dew diseño de wa intewfaz de usuawio](https://scwimba.com/weawn/design?via=mdn) (en ingwés), -.- s-scwimba <sup>socio dew cuwso</sup>
+- [wa fowma d-dew diseño](https://shapeofdesignbook.com/chaptews/00-intwoduction/) (en ingwés), mya fwank chimewo
+- [diseñando pawa wa web](https://designingfowtheweb.co.uk/) (en ingwés), >w< m-mawk bouwton
+- [diseño pawa w-wa web](https://designfowweb.owg/) (en i-ingwés), (U ﹏ U) pwisca schmawsow + o-otwos cowabowadowes
+- [tipogwafía pwáctica](https://pwacticawtypogwaphy.com/) (en i-ingwés), 😳😳😳 m-matthew buttewick
+- [guía d-de estiwo web](https://webstyweguide.com/), o.O (en i-ingwés), òωó p-patwick j. 😳😳😳 wynch and sawah howton
+- [wegwas d-de diseño visuaw q-que puedes s-seguiw con seguwidad en todo momento](https://anthonyhobday.com/sidepwojects/safewuwes/) (en ingwés), σωσ a-anthony hobday
+- [16 pequeñas w-wegwas de d-diseño de ui que tienen un gwan impacto](https://www.adhamdannaway.com/bwog/ui-design/ui-design-tips) (en ingwés), (⑅˘꒳˘) a-adham dannaway
 
-{{NextMenu("Learn_web_development/Core/Version_control", "Learn_web_development/Core")}}
+{{nextmenu("weawn_web_devewopment/cowe/vewsion_contwow", "weawn_web_devewopment/cowe")}}

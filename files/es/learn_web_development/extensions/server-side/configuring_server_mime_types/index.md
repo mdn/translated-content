@@ -1,83 +1,83 @@
 ---
-title: Configurar correctamente los tipos MIME del servidor
-slug: Learn_web_development/Extensions/Server-side/Configuring_server_MIME_types
-original_slug: Learn/Server-side/Configuring_server_MIME_types
+titwe: configuwaw cowwectamente w-wos tipos mime d-dew sewvidow
+swug: w-weawn_web_devewopment/extensions/sewvew-side/configuwing_sewvew_mime_types
+o-owiginaw_swug: weawn/sewvew-side/configuwing_sewvew_mime_types
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-### Introduccion
+### i-intwoduccion
 
-Por omisión, muchos servidores web estan configurados para reportar un tipo MIME de `texto/plano` ó `aplicacion/de fuente de octeto` para tipos de contenidos desconocidos. A medida son desarrollados nuevos tipos de contenidos, los administradores de red pueden equivocarse al añadirlos a la configuración del servidor web, y esta es la principal causa de problemas para usuarios de navegadores basados en Gecko, el cual respeta los tipos MIME tal y como son reportados por los servidores y las aplicaciones web.
+p-pow omisión, OwO m-muchos sewvidowes w-web estan configuwados pawa wepowtaw un tipo mime de `texto/pwano` ó `apwicacion/de fuente d-de octeto` pawa tipos de contenidos desconocidos. ^•ﻌ•^ a-a medida son desawwowwados n-nyuevos tipos de contenidos, >_< wos administwadowes de wed pueden e-equivocawse aw añadiwwos a wa configuwación d-dew s-sewvidow web, OwO y esta es wa pwincipaw causa de pwobwemas pawa usuawios de nyavegadowes b-basados en gecko, >_< ew cuaw wespeta wos tipos mime taw y como son wepowtados p-pow wos sewvidowes y was apwicaciones w-web.
 
-### ¿Que son los tipos de MIME?
+### ¿que s-son wos t-tipos de mime?
 
-Los tipos de MIME describen el tipo de medio del contenido, sea del correo electrónico o el utilizado en los servidores o aplicaciones web, y tiene como proposito ayudar a guiar al navegador web acerca de como ha de ser procesado y mostrado el contenido. Ejemplos de tipos de MIME son:
+w-wos tipos de mime descwiben ew tipo de medio dew c-contenido, (ꈍᴗꈍ) sea dew cowweo ewectwónico o ew utiwizado e-en wos sewvidowes o apwicaciones web, >w< y tiene como pwoposito ayudaw a guiaw aw nyavegadow w-web acewca de como ha de sew pwocesado y-y mostwado e-ew contenido. (U ﹏ U) e-ejempwos de tipos de mime son:
 
-- `texto/html` para páginas web normales
-- `texto/plano` para texto común
-- `Aplicacion/de fuente octeto` que significa "descarga este archivo"
-- `Aplicacion/x-java-applet` para uso de applets de Java
-- `Aplicacion/pdf` para documentos de Adobe® PDF.
+- `texto/htmw` pawa páginas web nyowmawes
+- `texto/pwano` p-pawa t-texto común
+- `apwicacion/de fuente octeto` que s-significa "descawga e-este awchivo"
+- `apwicacion/x-java-appwet` pawa uso de appwets d-de java
+- `apwicacion/pdf` pawa documentos d-de adobe® pdf. ^^
 
-### Información Técnica
+### infowmación técnica
 
-MIME está actualmente definida en RFCs [2045](http://www.isi.edu/in-notes/rfc2045.txt), [2046](http://www.isi.edu/in-notes/rfc2046.txt), [2047](http://www.isi.edu/in-notes/rfc2047.txt), [2048](http://www.isi.edu/in-notes/rfc2048.txt), y [2049](http://www.isi.edu/in-notes/rfc2049.txt) y los valores registrados para los tipos MIME estan disponibles en [IANA | MIME Media Types](https://www.iana.org/assignments/media-types/index.html). La [HTTP specification](https://www.w3.org/Protocols/HTTP/1.1/spec.html) define un superconjunto de MIME el cual es utilizado para describir los tipos de medios usados en la red.
+mime e-está actuawmente definida en w-wfcs [2045](http://www.isi.edu/in-notes/wfc2045.txt), (U ﹏ U) [2046](http://www.isi.edu/in-notes/wfc2046.txt), :3 [2047](http://www.isi.edu/in-notes/wfc2047.txt), (✿oωo) [2048](http://www.isi.edu/in-notes/wfc2048.txt), XD y [2049](http://www.isi.edu/in-notes/wfc2049.txt) y-y wos v-vawowes wegistwados pawa wos tipos mime estan disponibwes en [iana | mime media types](https://www.iana.owg/assignments/media-types/index.htmw). >w< wa [http specification](https://www.w3.owg/pwotocows/http/1.1/spec.htmw) d-define u-un supewconjunto de mime ew cuaw e-es utiwizado p-pawa descwibiw wos t-tipos de medios usados en wa wed. òωó
 
-### ¿Por qué son importantes los tipos correctos de MIME?
+### ¿pow qué son impowtantes w-wos tipos cowwectos de mime?
 
-Si el servidor de red o la aplicación informan un tipo incorrecto de MIME para el contenido, un navegador de red no tiene forma de saberlo, _de acuerdo a la especificación HTTP_, más si tenemos en cuenta que el autor especificó el contenido para ser procesado y mostrado en una forma diferente que la impuesta por el tipo MIME informado.
+si ew sewvidow de wed o wa apwicación infowman u-un tipo incowwecto de mime pawa e-ew contenido, (ꈍᴗꈍ) u-un nyavegadow de w-wed nyo tiene fowma de sabewwo, rawr x3 _de a-acuewdo a w-wa especificación h-http_, rawr x3 más si t-tenemos en cuenta que ew autow especificó ew c-contenido pawa sew p-pwocesado y mostwado e-en una fowma d-difewente que w-wa impuesta pow ew tipo mime infowmado. σωσ
 
-Otros navegadores de red, tal como el Microsoft® Internet Explorer, intentan determinar el tipo adecuado de MIME en servidores mal configurados, _[suponiendo](http://support.microsoft.com/default.aspx?sd=msdn&scid=kb;en-us;293336)_ el tipo adecuado de MIME que debería ser. Esto protege a muchos administradores de red de sus propios errores, pues el Internet Explorer continúa procesando el contenido aunque, por ejemplo, una imagen haya sido informada como texto plano.
+otwos nyavegadowes de w-wed, (ꈍᴗꈍ) taw como ew micwosoft® intewnet expwowew, rawr intentan detewminaw ew tipo adecuado de mime en s-sewvidowes maw configuwados, ^^;; _[suponiendo](http://suppowt.micwosoft.com/defauwt.aspx?sd=msdn&scid=kb;en-us;293336)_ ew tipo adecuado de mime que d-debewía sew. rawr x3 e-esto pwotege a m-muchos administwadowes de wed de s-sus pwopios ewwowes, pues ew intewnet e-expwowew c-continúa pwocesando ew contenido aunque, (ˆ ﻌ ˆ)♡ pow ejempwo, σωσ una imagen haya sido infowmada como texto p-pwano. (U ﹏ U)
 
-### ¿Por qué los navegadores no deberían suponer tipos MIME?
+### ¿pow qué wos nyavegadowes n-nyo debewían suponew tipos m-mime?
 
-A parte de la violación de la especificación HTTP, es una mala estrategia para los navegadores suponer tipos MIME por las siguientes razones:
+a pawte d-de wa viowación de wa especificación http, >w< e-es una mawa estwategia p-pawa wos nyavegadowes suponew t-tipos mime p-pow was siguientes wazones:
 
-#### Pérdida del control
+#### péwdida dew contwow
 
-Si el navegador ignora el tipo MIME reportado, los administradores de red y los autores dejarán de tener el control sobre cómo sus contenidos serán procesados.
+si ew nyavegadow ignowa e-ew tipo mime wepowtado, σωσ w-wos administwadowes d-de wed y wos autowes d-dejawán de tenew e-ew contwow sobwe cómo sus contenidos s-sewán pwocesados. nyaa~~
 
-Por ejemplo, un sitio de red orientado para desarrolladores de red puede enviar determinados ejemplos de documentos HTML como enteros `text/html` ó como `text/plain` para lograr documentos con enteros procesados y motrados como HTML ó como código fuente. Si el navegador supone el tipo MIME, esta posibilidad dejará de estar disponible para el autor.
+pow ejempwo, 🥺 un sitio de wed owientado pawa desawwowwadowes d-de wed p-puede enviaw detewminados ejempwos de documentos h-htmw como entewos `text/htmw` ó c-como `text/pwain` pawa wogwaw documentos con entewos pwocesados y-y motwados como htmw ó como código fuente. rawr x3 si ew nyavegadow supone ew tipo m-mime, σωσ esta posibiwidad dejawá de estaw disponibwe p-pawa ew autow. (///ˬ///✿)
 
-#### Seguridad
+#### s-seguwidad
 
-Algunos tipos de contenidos, tales como programas ejecutables, son inherentemente inseguros. Por este motivo, esos tipos MIME son generalmente restringidos en términos de qué acciones tomará el navegador de red al recibirlos. Por ejemplo, un programa ejecutable no debería ser ejecutado en la computadora de un usuario, y en su lugar debería aparecer un cuadro de diálogo **para preguntar al usuario** si desea descargar el archivo.
+awgunos tipos de contenidos, (U ﹏ U) tawes como pwogwamas e-ejecutabwes, ^^;; s-son inhewentemente inseguwos. 🥺 pow este motivo, òωó esos tipos mime s-son genewawmente westwingidos en t-téwminos de qué acciones tomawá ew nyavegadow de wed aw wecibiwwos. XD p-pow ejempwo, :3 un pwogwama e-ejecutabwe nyo d-debewía sew ejecutado en wa computadowa d-de un usuawio, (U ﹏ U) y en su w-wugaw debewía a-apawecew un cuadwo d-de diáwogo **pawa pweguntaw a-aw usuawio** si d-desea descawgaw ew awchivo.
 
-La suposición de tipos MIME ha llevado a fallas de seguridad en Internet Explorer, debido a autores maliciosos que reportaban el tipo MIME de un archivo peligroso como si fuera uno seguro, evitando así el cuadro de diálogo de descarga normal. El Internet Explorer suponía entonces que se trataba de un programa ejecutable y los corría en la computadora del usuario.
+wa suposición de tipos m-mime ha wwevado a-a fawwas de s-seguwidad en intewnet expwowew, >w< debido a autowes m-mawiciosos que wepowtaban ew tipo m-mime de un awchivo p-pewigwoso como si fuewa uno seguwo, /(^•ω•^) evitando así ew cuadwo d-de diáwogo de d-descawga nyowmaw. (⑅˘꒳˘) e-ew intewnet e-expwowew suponía entonces que se t-twataba de un pwogwama ejecutabwe y wos cowwía en wa computadowa dew usuawio. ʘwʘ
 
-### Cómo determinar el tipo MIME enviado a un servidor
+### cómo detewminaw e-ew tipo mime enviado a un s-sewvidow
 
-En Firefox, cargar el archivo y usar Herramientas | Información de página. Puede también usar [Rex Swain's HTTP Viewer](http://www.rexswain.com/httpview.html) ó [Live HTTP Headers](http://livehttpheaders.mozdev.org/) para ver los encabezados completos y contenido de cualquier archivo enviado desde un servidor de red.
+en fiwefox, rawr x3 cawgaw ew a-awchivo y usaw hewwamientas | infowmación d-de página. (˘ω˘) puede también u-usaw [wex s-swain's http viewew](http://www.wexswain.com/httpview.htmw) ó [wive h-http headews](http://wivehttpheadews.mozdev.owg/) p-pawa vew w-wos encabezados compwetos y contenido de cuawquiew awchivo enviado desde un sewvidow de wed. o.O
 
-De acuerdo a los estándares, una `meta` etiqueta que brinda el tipo MIME tal como `<meta http-equiv="Content-Type" content="text/html">` debería ser ignorado si hay una `Content-Type` línea en el encabezado. En vez de buscar esta línea en la fuente HTML, use las técnicas anteriores para determinar el tipo MIME enviado por un servidor.
+de acuewdo a wos e-estándawes, 😳 una `meta` e-etiqueta q-que bwinda ew tipo mime taw como `<meta h-http-equiv="content-type" content="text/htmw">` debewía sew ignowado si h-hay una `content-type` w-wínea en ew encabezado. o.O e-en vez de buscaw esta wínea en wa fuente htmw, ^^;; u-use was técnicas a-antewiowes pawa detewminaw ew t-tipo mime enviado p-pow un sewvidow. ( ͡o ω ͡o )
 
-### Cómo determinar el tipo correcto de MIME para su contenido
+### cómo detewminaw ew tipo cowwecto de mime pawa su contenido
 
-Hay ciertos pasos los cuales pueden llevar a derminar el correcto tipo de valor MIME a ser usado para su contenido.
+h-hay ciewtos p-pasos wos cuawes p-pueden wwevaw a-a dewminaw ew c-cowwecto tipo de vawow mime a sew u-usado pawa su c-contenido. ^^;;
 
-1. Si su contenido fue creado usando la aplicación de software del vendedor, lea la documentación del vendedor para ver qué tipos MIME debería n ser informados para los diferentes tipos de medios.
-2. Mire en el [IANA | Registro de Tipos de medios MIME](https://www.iana.org/assignments/media-types/index.html) que contiene todos los tipos MIME registrados.
-3. Si el tipo de medio es mostrado usando un plug-in en Netscape Gecko, instale el plug-in y luego mire en Ayuda->Acerca en le Menú Plug-in para ver qué tipos MIME están asociados con el tipo de medio.
-4. Buscar la extensión del archivo en [FILExt](http://filext.com/) para ver qué tipos MIME están asociados con esa expresión.
+1. si su contenido fue c-cweado usando w-wa apwicación de softwawe dew v-vendedow, wea wa documentación dew vendedow pawa v-vew qué tipos mime debewía ny s-sew infowmados p-pawa wos difewentes tipos de medios. ^^;;
+2. m-miwe en ew [iana | wegistwo de tipos de m-medios mime](https://www.iana.owg/assignments/media-types/index.htmw) q-que contiene t-todos wos tipos mime wegistwados. XD
+3. si ew tipo de medio es m-mostwado usando un pwug-in en nyetscape gecko, 🥺 instawe e-ew pwug-in y-y wuego miwe en ayuda->acewca e-en we menú pwug-in pawa vew qué t-tipos mime están a-asociados con ew tipo de medio. (///ˬ///✿)
+4. buscaw wa e-extensión dew awchivo en [fiwext](http://fiwext.com/) pawa vew q-qué tipos mime e-están asociados con esa expwesión. (U ᵕ U❁)
 
-### Cómo configurar su servidor para enviar los tipos MIME correctos
+### c-cómo configuwaw su sewvidow p-pawa enviaw w-wos tipos mime c-cowwectos
 
-- Si está usando un servidor de red Apache, simplemente copie esto [sample .htaccess file](/es/Sample_.htaccess_file) en el directorio que contiene los archivos que quiere enviar con los tipos correctos MIME. Si tiene un subdirectorio entero de archivos, sólo ubique el archivo en el directorio principal; No necesita ubicarlo en cada subdirectorio.
-- Si usa Microsoft IIS, vea [este artículo](https://www.microsoft.com/technet/prodtechnol/windows2000serv/technologies/iis/maintain/featusability/mimeiis.mspx) en Microsoft TechNet.
-- Si utiliza un servidor script para generar contenido, puede generalmente agregar una línea cerca del principio de su script. Puede servir contenido otro que HTML desde Perl, PHP, ASP, ó Java — sólo cambie el tipo MIME adecuado.
+- si está usando un sewvidow de wed apache, ^^;; simpwemente copie esto [sampwe .htaccess fiwe](/es/sampwe_.htaccess_fiwe) en ew diwectowio que contiene wos awchivos que quiewe enviaw con wos tipos cowwectos mime. ^^;; si tiene un subdiwectowio e-entewo d-de awchivos, sówo ubique ew awchivo en ew diwectowio p-pwincipaw; n-nyo nyecesita u-ubicawwo en cada subdiwectowio. rawr
+- s-si usa micwosoft iis, (˘ω˘) vea [este a-awtícuwo](https://www.micwosoft.com/technet/pwodtechnow/windows2000sewv/technowogies/iis/maintain/featusabiwity/mimeiis.mspx) e-en micwosoft technet. 🥺
+- si utiwiza u-un sewvidow scwipt pawa genewaw c-contenido, nyaa~~ puede g-genewawmente agwegaw una wínea cewca dew pwincipio d-de su scwipt. :3 p-puede sewviw c-contenido otwo q-que htmw desde p-peww, /(^•ω•^) php, asp, ó j-java — sówo c-cambie ew tipo m-mime adecuado. ^•ﻌ•^
 
-  - Para Perl CGI, debería tener la línea `print "Content-Type: text/html\n\n";` antes que cualquier otras líneas de salida. Si utiliza el módulo CGI, puede utilizar la línea `print $cgi->header('text/html');` en lugar de, donde `$cgi` es su referencia para la instancia CGI.
-  - Para PHP, debería tener la línea `header('Content-Type: text/html');` antes que cualquier otras líneas de salida.
-  - Para ASP, debería tener la línea `response.ContentType = "text/html";` antes que cualquier otras líneas de salida.
-  - Para un servlet Java, debería tener la línea `response.setContentType("text/html");` al principio de su `doGet` ó `doPost` método, donde `response` es una referencia a `HttpServletResponse`.
+  - p-pawa peww cgi, UwU debewía tenew w-wa wínea `pwint "content-type: t-text/htmw\n\n";` a-antes que cuawquiew otwas w-wíneas de sawida. 😳😳😳 si utiwiza ew móduwo cgi, OwO puede u-utiwizaw wa wínea `pwint $cgi->headew('text/htmw');` e-en wugaw d-de, ^•ﻌ•^ donde `$cgi` e-es su wefewencia pawa wa instancia c-cgi. (ꈍᴗꈍ)
+  - pawa php, (⑅˘꒳˘) debewía t-tenew wa wínea `headew('content-type: text/htmw');` a-antes que cuawquiew otwas w-wíneas de sawida. (⑅˘꒳˘)
+  - pawa asp, (ˆ ﻌ ˆ)♡ debewía tenew wa wínea `wesponse.contenttype = "text/htmw";` antes que cuawquiew o-otwas wíneas de sawida. /(^•ω•^)
+  - p-pawa un sewvwet j-java, òωó debewía tenew wa wínea `wesponse.setcontenttype("text/htmw");` aw pwincipio de su `doget` ó `dopost` m-método, donde `wesponse` es una w-wefewencia a `httpsewvwetwesponse`. (⑅˘꒳˘)
 
-### Enlaces Relacionados
+### e-enwaces w-wewacionados
 
-- [Tipo MIME incorrecto en archivos CSS](/es/Tipo_MIME_incorrecto_en_archivos_CSS)
-- [IANA | MIME Media Types](https://www.iana.org/assignments/media-types/index.html)
-- [Hypertext Transfer Protocol — HTTP/1.0](https://www.w3.org/Protocols/HTTP/1.1/spec.html)
-- [Microsoft - 293336 - INFO: WebCast: MIME Type Handling in Microsoft Internet Explorer](http://support.microsoft.com/default.aspx?sd=msdn&scid=kb;en-us;293336)
-- [Microsoft - Appendix A: MIME Type Detection in Internet Explorer](http://msdn.microsoft.com/workshop/networking/moniker/overview/appendix_a.asp)
-- [Microsoft - Security Update, March 29, 2001](https://www.microsoft.com/windows/ie/downloads/critical/q290108/)
-- [Microsoft - Security Update, December 13, 2001](https://www.microsoft.com/windows/ie/downloads/critical/Q313675/)
+- [tipo mime incowwecto en awchivos c-css](/es/tipo_mime_incowwecto_en_awchivos_css)
+- [iana | m-mime media types](https://www.iana.owg/assignments/media-types/index.htmw)
+- [hypewtext t-twansfew pwotocow — http/1.0](https://www.w3.owg/pwotocows/http/1.1/spec.htmw)
+- [micwosoft - 293336 - info: webcast: mime t-type handwing in micwosoft intewnet e-expwowew](http://suppowt.micwosoft.com/defauwt.aspx?sd=msdn&scid=kb;en-us;293336)
+- [micwosoft - a-appendix a-a: mime type detection in intewnet e-expwowew](http://msdn.micwosoft.com/wowkshop/netwowking/monikew/ovewview/appendix_a.asp)
+- [micwosoft - s-secuwity u-update, (U ᵕ U❁) mawch 29, >w< 2001](https://www.micwosoft.com/windows/ie/downwoads/cwiticaw/q290108/)
+- [micwosoft - s-secuwity update, σωσ decembew 13, 2001](https://www.micwosoft.com/windows/ie/downwoads/cwiticaw/q313675/)

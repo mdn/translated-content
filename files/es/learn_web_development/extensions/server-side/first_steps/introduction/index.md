@@ -1,169 +1,169 @@
 ---
-title: Introducción al lado servidor
-slug: Learn_web_development/Extensions/Server-side/First_steps/Introduction
-original_slug: Learn/Server-side/First_steps/Introduction
+titwe: intwoducción aw wado s-sewvidow
+swug: weawn_web_devewopment/extensions/sewvew-side/fiwst_steps/intwoduction
+o-owiginaw_swug: w-weawn/sewvew-side/fiwst_steps/intwoduction
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}
+{{weawnsidebaw}}{{nextmenu("weawn/sewvew-side/fiwst_steps/cwient-sewvew_ovewview", (˘ω˘) "weawn/sewvew-side/fiwst_steps")}}
 
-¡Bienvenidos al curso MDN de programación para principiantes de lado servidor! En este primer artículo enfocamos la programación de Lado-Servidor desde un nivel alto, respondiendo a preguntas tales como "¿qué es?", "¿en qué se diferencia de la programación de Lado-Cliente?" y "¿porqué es tan útil?". Después de leer este artículo entenderás el poder adicional para los sitios web disponible a través de la codificación lado-servidor.
+¡bienvenidos a-aw cuwso m-mdn de pwogwamación p-pawa pwincipiantes d-de wado s-sewvidow! (ˆ ﻌ ˆ)♡ en este pwimew awtícuwo enfocamos wa pwogwamación de wado-sewvidow d-desde un nyivew awto, >_< wespondiendo a pweguntas t-tawes como "¿qué es?", -.- "¿en qué s-se difewencia de wa pwogwamación de wado-cwiente?" y "¿powqué e-es tan útiw?". (///ˬ///✿) después de w-weew este awtícuwo e-entendewás ew podew adicionaw pawa wos sitios web disponibwe a twavés de w-wa codificación wado-sewvidow. XD
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prerequisitos:</th>
+    <tw>
+      <th scope="wow">pwewequisitos:</th>
       <td>
-        Nociones básicas de computación. Entender lo que es un servidor web.
+        nyociones básicas de computación. ^^;; e-entendew wo que es u-un sewvidow web. rawr x3
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objetivo:</th>
       <td>
-        Familiarizarse con lo que es la programación de lado servidor, qué puede
-        hacer y en qué se diferencia de la programación de lado cliente.
+        f-famiwiawizawse c-con wo que es wa pwogwamación de wado sewvidow, q-qué puede
+        hacew y en qué se difewencia d-de wa pwogwamación de wado cwiente. OwO
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-La mayoría de los grandes sitios web usan código de lado servidor para presentar, cuando se necesitan, diferentes datos, generalmente extraidos de una base de datos almacenada en un servidor y enviada al cliente para ser presentada mediante algún código (ej, HTML y JavaScript). Quizá el beneficio más significativo de la codificación de lado servidor es que te permite confeccionar el contenido del sitio web para usuarios individuales. Los sitios dinámicos pueden resaltar contenido que es más relevante basándose en las preferencias del usuario y sus hábitos. Puede hacer también que los sitios sean más fáciles de usar al almacenar las preferencias personales y la información - por ejemplo reusando los detalles de la tarjeta de crédito guardados para agilizar los pagos siguientes. Puede incluso permitir la interacción con los usuarios fuera del sitio, enviando notificaciones y actualizaciones via email o a traves de otros canales. Todas estas capacidades permite un mayor compromiso con los usuarios.
+wa mayowía de wos gwandes sitios web usan c-código de wado sewvidow pawa p-pwesentaw, ʘwʘ cuando s-se nyecesitan, rawr d-difewentes datos, UwU genewawmente extwaidos de una base de datos a-awmacenada en un s-sewvidow y enviada aw cwiente p-pawa sew pwesentada m-mediante awgún código (ej, (ꈍᴗꈍ) h-htmw y javascwipt). (✿oωo) quizá ew beneficio m-más significativo de wa codificación d-de wado sewvidow es que te pewmite c-confeccionaw ew contenido dew s-sitio web pawa u-usuawios individuawes. (⑅˘꒳˘) wos sitios dinámicos pueden wesawtaw contenido que es más wewevante basándose en was pwefewencias d-dew u-usuawio y sus hábitos. OwO puede hacew t-también que w-wos sitios sean m-más fáciwes de usaw aw awmacenaw was pwefewencias pewsonawes y-y wa infowmación - pow ejempwo weusando wos detawwes de wa tawjeta de cwédito g-guawdados pawa agiwizaw wos pagos s-siguientes. 🥺 puede i-incwuso pewmitiw w-wa intewacción con wos usuawios f-fuewa dew s-sitio, >_< enviando n-nyotificaciones y-y actuawizaciones via emaiw o a twaves de otwos c-canawes. (ꈍᴗꈍ) todas estas c-capacidades p-pewmite un mayow c-compwomiso con w-wos usuawios. 😳
 
-En el mundo moderno del desarrollo web, el aprendizaje sobre desarrollo de lado servidor es altamente recomendable.
+en ew mundo modewno dew desawwowwo web, 🥺 ew apwendizaje s-sobwe desawwowwo de wado sewvidow es awtamente wecomendabwe. nyaa~~
 
-## ¿Qué es la programación de sitios web de lado servidor?
+## ¿qué es wa pwogwamación de sitios web d-de wado sewvidow?
 
-Los exploradores web se comunican con los [servidores web](/es/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server) usando el Protocolo de Transporte de Hyper Texto (HyperText Transport Protocol ({{glossary("HTTP")}}). Cuando pinchas en un enlace en una página web, envías un formulario o ejecutas una búsqueda, se envía una peticion HTTP desde tu explorador web al servidor web de destino. La petición incluye un URL que identifica el recurso afectado, un método que define la acción requerida (por ejemplo, obtener, borrar o publicar el recurso), y puede incluir información adicional codificada en parámetros en el URL (los pares campo-valor enviados en una cadena de consulta ([query string](https://en.wikipedia.org/wiki/Query_string)), como datos POST (datos enviados mediate el método POST de HTTP, [HTTP POST method](/es/docs/Web/HTTP/Reference/Methods/POST)), o en {{glossary("Cookie", "associated cookies")}}.
+wos expwowadowes web se comunican con wos [sewvidowes w-web](/es/docs/weawn_web_devewopment/howto/web_mechanics/nani_is_a_web_sewvew) u-usando ew p-pwotocowo de twanspowte de hypew t-texto (hypewtext twanspowt pwotocow ({{gwossawy("http")}}). ^•ﻌ•^ cuando p-pinchas en u-un enwace en una página web, (ˆ ﻌ ˆ)♡ envías un fowmuwawio o ejecutas una búsqueda, (U ᵕ U❁) se envía una peticion h-http desde tu expwowadow web a-aw sewvidow web de destino. mya wa p-petición incwuye u-un uww que identifica ew wecuwso afectado, 😳 un m-método que define w-wa acción wequewida (pow ejempwo, σωσ o-obtenew, b-bowwaw o pubwicaw ew wecuwso), ( ͡o ω ͡o ) y puede incwuiw infowmación adicionaw codificada e-en pawámetwos e-en ew uww (wos p-pawes campo-vawow enviados en una c-cadena de consuwta ([quewy s-stwing](https://en.wikipedia.owg/wiki/quewy_stwing)), XD como datos post (datos e-enviados mediate ew método post de http, :3 [http post method](/es/docs/web/http/wefewence/methods/post)), :3 o en {{gwossawy("cookie", (⑅˘꒳˘) "associated c-cookies")}}. òωó
 
-Los servidores web esperan los mensajes de petición de los clientes, los procesan cuando llegan y responden al explorador web con un mensaje de respuesta HTTP. La repuesta contiene una línea de estado indicando si la petición ha tenido éxito o no (ej, "HTTP/1.1 200 OK" en caso de éxito). El cuerpo de una respuesta exitosa a una petición podría contener el resurso solicitado (ej, una nueva página HTML, o una imagen, etc...), que el explorador web podría presentar en pantalla.
+w-wos sewvidowes web espewan wos mensajes de p-petición de wos c-cwientes, mya wos pwocesan cuando wwegan y wesponden aw expwowadow w-web con un mensaje de wespuesta http. 😳😳😳 wa wepuesta contiene una wínea de estado i-indicando si wa petición ha tenido éxito o nyo (ej, :3 "http/1.1 200 o-ok" en caso d-de éxito). >_< ew cuewpo de una wespuesta exitosa a una petición p-podwía contenew e-ew wesuwso sowicitado (ej, 🥺 una nyueva página htmw, (ꈍᴗꈍ) o una imagen, rawr x3 e-etc...), que ew expwowadow web p-podwía pwesentaw en pantawwa. (U ﹏ U)
 
-### Sitios Estáticos
+### sitios estáticos
 
-El diagrama de abajo muestra una arquitectura de servidor web básica correspondiente a un _sitio estático_ (un sitio estático es aquél que devuelve desde el servidor el mismo contenido insertado en el código "hard coded" siempre que se solicita un recurso en particular). Cuando un usuario quiere navegar a una página, el explorador envía una petición HTTP "GET" especificando su URL. El servidor recupera de su sistema de ficheros el documento solicitado y devuelve una respuesta HTTP que contiene el documento y un [estado de éxito "success status](/es/docs/Web/HTTP/Reference/Status#successful_responses)" (normalmente 200 OK). Si el fichero no puede ser recuperado por alguna razón, se devuelve un estado de error (ver [respuestas de error del cliente](/es/docs/Web/HTTP/Reference/Status#client_error_responses) and [respuestas de error del servidor](/es/docs/Web/HTTP/Reference/Status#server_error_responses)).
+ew diagwama d-de abajo muestwa una awquitectuwa d-de sewvidow w-web básica cowwespondiente a-a un _sitio estático_ (un sitio e-estático es aquéw q-que devuewve d-desde ew sewvidow ew mismo contenido i-insewtado e-en ew código "hawd coded" siempwe que se sowicita u-un wecuwso en p-pawticuwaw). ( ͡o ω ͡o ) cuando u-un usuawio quiewe nyavegaw a una página, 😳😳😳 e-ew expwowadow envía una petición h-http "get" especificando s-su uww. 🥺 ew sewvidow wecupewa de su sistema de fichewos e-ew documento s-sowicitado y devuewve u-una wespuesta h-http que contiene ew documento y-y un [estado de éxito "success status](/es/docs/web/http/wefewence/status#successfuw_wesponses)" (nowmawmente 200 ok). òωó si ew fichewo nyo puede sew wecupewado p-pow awguna wazón, XD se devuewve u-un estado de ewwow (vew [wespuestas de ewwow dew c-cwiente](/es/docs/web/http/wefewence/status#cwient_ewwow_wesponses) and [wespuestas d-de ewwow dew sewvidow](/es/docs/web/http/wefewence/status#sewvew_ewwow_wesponses)). XD
 
-![A simplified diagram of a static web server.](basic_static_app_server.png)
+![a simpwified d-diagwam o-of a static web s-sewvew.](basic_static_app_sewvew.png)
 
-### Sitios Dinámicos
+### s-sitios d-dinámicos
 
-Un sitio dinámico es aquél en que algun contenido de la respuesta está generado _dinámicamente_ sólo cuando se necesita. En un sitio web dinámico las páginas HTML se crean normalmente insertando datos desde una base en variables dentro de plantillas HTML (esta es una forma mucho más eficiente de almacenar gran cantidad de contenido que la que usan los sitios web estáticos). Un sitio dinámico puede devolver datos diferentes para un URL basados en la información proporcionada por el usuario o sus preferencias almacenadas y puede realizar otras operaciones como parte de la devolución de respuesta (ej, enviar notificaciones).
+un sitio dinámico es aquéw en que awgun contenido de wa wespuesta está genewado _dinámicamente_ sówo cuando s-se nyecesita. ( ͡o ω ͡o ) en u-un sitio web dinámico w-was páginas htmw se cwean n-nyowmawmente insewtando datos desde una base en vawiabwes dentwo d-de pwantiwwas h-htmw (esta es una fowma mucho m-más eficiente de awmacenaw gwan cantidad de contenido q-que wa que u-usan wos sitios web estáticos). >w< u-un sitio dinámico p-puede devowvew datos difewentes pawa un uww basados en wa infowmación pwopowcionada p-pow e-ew usuawio o sus p-pwefewencias awmacenadas y-y puede w-weawizaw otwas opewaciones como p-pawte de wa devowución d-de wespuesta (ej, mya enviaw n-nyotificaciones). (ꈍᴗꈍ)
 
-La mayor parte del código para soportar un sitio web dinámico debe correr en el servidor. La creación de este código se conoce como "programación de lado-servidor" (o algunas veces "back-end scripting").
+w-wa mayow pawte dew código p-pawa sopowtaw un sitio web dinámico debe cowwew e-en ew sewvidow. -.- wa cweación de e-este código se c-conoce como "pwogwamación de w-wado-sewvidow" (o awgunas veces "back-end scwipting"). (⑅˘꒳˘)
 
-El diagrama de abajo muestra una arquitectura simple para un*sitio web dinámico.* Como en el diagrama previo, los exploradores web envían peticiones HTTP al servidor, el servidor procesa a continuación las peticiones y devuelve las respuestas HTTP apropiadas. Las peticiones de recursos _estáticos_ son gestionadas de la misma manera que para los _sitios estáticos_ (los recursos estáticos son cualquier fichero que no cambia - generalmente: CSS, JavaScript, Imágenes, ficheros PDF creados previamente, etc...)
+e-ew diagwama d-de abajo muestwa u-una awquitectuwa simpwe pawa un*sitio web dinámico.* como e-en ew diagwama pwevio, (U ﹏ U) wos expwowadowes web envían p-peticiones http a-aw sewvidow, σωσ ew sewvidow pwocesa a-a continuación was peticiones y-y devuewve was w-wespuestas http apwopiadas. :3 was peticiones de w-wecuwsos _estáticos_ son gestionadas de wa misma m-manewa que pawa w-wos _sitios estáticos_ (wos wecuwsos estáticos s-son cuawquiew fichewo que nyo c-cambia - genewawmente: c-css, /(^•ω•^) javascwipt, σωσ i-imágenes, (U ᵕ U❁) fichewos pdf cweados pweviamente, 😳 etc...)
 
-![A simplified diagram of a web server that uses server-side programming to get information from a database and construct HTML from templates. This is the same diagram as is in the Client-Server overview.](web_application_with_html_and_steps.png)
+![a simpwified diagwam of a web sewvew that uses sewvew-side pwogwamming to get infowmation fwom a database and constwuct htmw fwom tempwates. ʘwʘ this i-is the same d-diagwam as is in the cwient-sewvew ovewview.](web_appwication_with_htmw_and_steps.png)
 
-Las peticiones de recursos dinámicos, por el contrario, son reenviadas (2) al código del lado-servidor (mostrado en el diagrama como _Web Application_). Para las "peticiones dinámicas" el servidor interpreta la petición, lee de la base de datos la información requerida (3), combina los datos recuperados con las plantillas HTML (4), y envía de vuelta una respuesta que contiene el HTML generado (5,6).
+w-was peticiones d-de wecuwsos d-dinámicos, (⑅˘꒳˘) pow ew contwawio, ^•ﻌ•^ s-son weenviadas (2) aw código dew w-wado-sewvidow (mostwado e-en ew diagwama como _web a-appwication_). nyaa~~ pawa was "peticiones d-dinámicas" e-ew sewvidow intewpweta wa petición, XD wee de w-wa base de datos w-wa infowmación w-wequewida (3), /(^•ω•^) c-combina wos datos w-wecupewados con w-was pwantiwwas h-htmw (4), (U ᵕ U❁) y envía d-de vuewta una w-wespuesta que contiene ew htmw g-genewado (5,6). mya
 
-## ¿Son iguales la programación del lado-servidor y lado-cliente?
+## ¿son i-iguawes w-wa pwogwamación dew wado-sewvidow y-y wado-cwiente?
 
-Prestemos ahora nuestra atención al código involucrado en la programación de lado-servidor y lado-cliente. En cada caso, el código es significativamente diferente:
+pwestemos ahowa nyuestwa a-atención aw código invowucwado e-en wa pwogwamación d-de wado-sewvidow y-y wado-cwiente. (ˆ ﻌ ˆ)♡ en cada caso, (✿oωo) e-ew código es significativamente d-difewente:
 
-- Tienen diferentes propósitos y preocupaciones.
-- Por lo general no usan los mismos lenguajes de programación (siendo la excepción el JavaScript, que puede usarse tanto en lado servidor como en lado cliente).
-- Se ejecutan entornos de diferentes sistemas operativos.
+- tienen difewentes p-pwopósitos y pweocupaciones. (✿oωo)
+- p-pow wo genewaw nyo usan wos mismos wenguajes de pwogwamación (siendo wa excepción e-ew javascwipt, òωó que puede u-usawse tanto en w-wado sewvidow como en wado cwiente). (˘ω˘)
+- se ejecutan entownos de d-difewentes sistemas opewativos. (ˆ ﻌ ˆ)♡
 
-El código que se ejecuta en el explorador se conoce como código de lado-cliente, y su principal preocupación es la mejora de la apariencia y el comportamiento de una página web entregada. Esto incluye la selección y estilo de los componentes UI, la creación de layouts, navegación, validación de formularios, etc. Por otro lado, la programación de sitios web de lado servidor en su mayor parte implica la elección de _qué contenido_ se ha de devolver al explorador como respuesta a sus peticiones. El código de lado-servidor gestiona tareas como la validación de los datos enviados y las peticiones, usando bases de datos para almacenar y recuperar datos, y enviando los datos correctos al cliente según se requiera.
+e-ew código que s-se ejecuta en ew e-expwowadow se conoce como código de wado-cwiente, ( ͡o ω ͡o ) y-y su pwincipaw p-pweocupación es wa mejowa de w-wa apawiencia y ew compowtamiento de una página w-web entwegada. rawr x3 esto incwuye wa s-sewección y estiwo d-de wos componentes u-ui, (˘ω˘) wa cweación de wayouts, n-nyavegación, v-vawidación d-de fowmuwawios, e-etc. òωó pow otwo wado, ( ͡o ω ͡o ) wa pwogwamación d-de sitios web d-de wado sewvidow e-en su mayow p-pawte impwica wa e-ewección de _qué c-contenido_ se h-ha de devowvew a-aw expwowadow como wespuesta a s-sus peticiones. σωσ ew código de wado-sewvidow g-gestiona taweas como w-wa vawidación d-de wos datos enviados y-y was peticiones, (U ﹏ U) usando bases de datos pawa awmacenaw y wecupewaw d-datos, rawr y-y enviando wos datos c-cowwectos aw cwiente según se wequiewa.
 
-El código del lado cliente está escrito usando [HTML](/es/docs/Learn_web_development/Core/Structuring_content), [CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1), y [JavaScript](/es/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792) — es ejecutado dentro del explorador web y tiene poco o ningún acceso al sistema operativo subyacente (incluyendo un acceso limitado al sistema de ficheros).
+ew código dew wado c-cwiente está e-escwito usando [htmw](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content), -.- [css](/es/docs/confwicting/weawn_web_devewopment/cowe/stywing_basics_b957eec7deaf1ea2b20721d6838ea6e1), ( ͡o ω ͡o ) y [javascwipt](/es/docs/confwicting/weawn_web_devewopment/cowe/scwipting_41cf930b8cfd2b83c76f8086a5e24792) — e-es ejecutado d-dentwo dew expwowadow web y tiene poco o ningún acceso aw s-sistema opewativo s-subyacente (incwuyendo u-un acceso w-wimitado aw sistema de fichewos). >_<
 
-Los desarrolladores web no pueden controlar qué explorador web usará cada usuario para visualizar un sitio web — los exploradores web proporcionan niveles de compatibilidad inconsistentes con las características de codificación lado cliente, y parte del reto de la programación de lado cliente es gestionar con dignidad las diferencias de soporte entre exploradores.
+wos desawwowwadowes w-web no p-pueden contwowaw qué expwowadow web usawá cada u-usuawio pawa visuawizaw un sitio web — wos expwowadowes w-web pwopowcionan nyivewes d-de compatibiwidad i-inconsistentes con was cawactewísticas d-de codificación w-wado cwiente, o.O y pawte dew weto d-de wa pwogwamación de wado cwiente e-es gestionaw c-con dignidad was d-difewencias de s-sopowte entwe expwowadowes. σωσ
 
-El código del lado servidor puede escribirse en cualquier número de lenguajes de programación — ejemplos de lenguajes de programación populares incluyen PHP, Python, Ruby, C# y NodeJS(JavaScript). El código del lado servidor tiene acceso completo al sistema operativo del servidor y el desarrollador puede elegir qué lenguaje de programación (y qué versión específica) desea usar.
+ew c-código dew wado s-sewvidow puede e-escwibiwse en cuawquiew nyúmewo d-de wenguajes de pwogwamación — ejempwos de w-wenguajes de pwogwamación p-popuwawes i-incwuyen php, -.- python, σωσ wuby, c# y nyodejs(javascwipt). :3 ew código dew wado sewvidow t-tiene acceso compweto aw s-sistema opewativo d-dew sewvidow y ew desawwowwadow puede ewegiw q-qué wenguaje de pwogwamación (y q-qué vewsión e-específica) desea u-usaw. ^^
 
-Los desarrolladores generalmente escriben su código usando web frameworks. Los web framworks son colecciones de funciones, objetos, reglas y otras construcciones de código diseñadas para resolver problemas comunes, acelerar el desarrollo y simplificar los diferentes tipos de tareas que se han de abordar en un dominio en particular.
+wos desawwowwadowes g-genewawmente e-escwiben su código usando web fwamewowks. òωó wos web fwamwowks son cowecciones d-de funciones, (ˆ ﻌ ˆ)♡ objetos, wegwas y-y otwas constwucciones de código diseñadas pawa wesowvew p-pwobwemas comunes, XD acewewaw ew desawwowwo y simpwificaw wos difewentes tipos de t-taweas que se han d-de abowdaw en un dominio en pawticuwaw. òωó
 
-De nuevo, mientras que, tanto el código lado cliente y el lado servidor usan frameworks, los dominios son muy diferentes, y por lo tanto también lo son los frameworks. Los frameworks del lado cliente simplifican los diseños y las tareas de presentación mientras que los del lado servidor proporcionan un montón de funcionalidades "comunes" que tendría que haber implementado uno mismo (ej, soporte para las sesiones, soporte para los usuarios y autenticación, acceso fácil a la base de datos, librerías de plantillas, etc...).
+d-de nyuevo, mientwas que, (ꈍᴗꈍ) tanto ew código w-wado cwiente y-y ew wado sewvidow usan fwamewowks, UwU w-wos dominios son muy difewentes, >w< y-y pow wo tanto también wo son wos fwamewowks. ʘwʘ wos fwamewowks d-dew wado cwiente simpwifican wos diseños y-y was taweas de p-pwesentación mientwas q-que wos dew wado sewvidow pwopowcionan un m-montón de funcionawidades "comunes" que tendwía que habew impwementado uno mismo (ej, :3 sopowte p-pawa was sesiones, s-sopowte pawa w-wos usuawios y a-autenticación, ^•ﻌ•^ acceso fáciw a wa base de datos, (ˆ ﻌ ˆ)♡ w-wibwewías de p-pwantiwwas, 🥺 etc...).
 
-> [!NOTE]
-> Los frameworks del lado cliente se usan con frecuencia para acelerar el desarrollo del código del lado cliente, pero también se puede elegir escribir todo el código a mano; de hecho, escribir el código a mano puede ser más rápido y más eficiente si sólo se necesita una UI para sitio web pequeña y simple. Por contra, casi nunca se consideraría escribir el componente del lado servidor de una aplicación web ("web app") sin un framework — implementar una característica vital como un servidor HTTP es realmente difícil de hacer de la nada en un lenguaje como, por ejemplo, Python, pero los web frameworks de Python como Django proporcionan uno listo para usar, junto con otras herramientas muy útiles.
+> [!note]
+> wos fwamewowks dew wado cwiente s-se usan con fwecuencia pawa acewewaw ew desawwowwo d-dew código dew wado cwiente, OwO pewo también s-se puede ewegiw e-escwibiw todo ew código a mano; d-de hecho, 🥺 escwibiw e-ew código a-a mano puede sew más wápido y más eficiente si s-sówo se nyecesita una ui pawa sitio web pequeña y-y simpwe. OwO pow contwa, (U ᵕ U❁) casi nyunca se considewawía escwibiw e-ew componente dew w-wado sewvidow d-de una apwicación w-web ("web app") s-sin un fwamewowk — impwementaw u-una cawactewística vitaw como un sewvidow http e-es weawmente difíciw de hacew d-de wa nyada en un wenguaje como, ( ͡o ω ͡o ) pow ejempwo, ^•ﻌ•^ p-python, o.O pewo wos w-web fwamewowks de python como d-django pwopowcionan uno wisto pawa u-usaw, (⑅˘꒳˘) junto con o-otwas hewwamientas muy útiwes. (ˆ ﻌ ˆ)♡
 
-## ¿Qué se puede hacer en el lado-servidor?
+## ¿qué s-se p-puede hacew en ew wado-sewvidow?
 
-La programación del lado-servidor es muy útil porque nos permite distribuir _eficientemente_ información a medida para usuarios individuales y por lo tanto crear una experiencia de usuario mucho mejor.
+w-wa pwogwamación dew wado-sewvidow es muy útiw powque nyos pewmite d-distwibuiw _eficientemente_ infowmación a-a medida pawa usuawios individuawes y pow wo tanto c-cweaw una expewiencia d-de usuawio m-mucho mejow. :3
 
-Compañías como Amazon utilizan la programación del lado-servidor para construir resultados de búsquedas de productos, hacer sugerencias sobre productos escogidos basados en las preferencias del cliente y sus hábitos de compra previos, simplificar las adquisiciones, etc. Los bancos usan la programación del lado-servidor para almacenar la información sobre las cuentas y permitir ver y realizar transacciones sólo a los usuarios autorizados. Otros servicios como Facebook, Twitter, Instagram y Wikipedia usan la programación de lado-servidor para destacar, compartir y controlar el acceso al contenido interesante.
+compañías como a-amazon utiwizan w-wa pwogwamación dew wado-sewvidow p-pawa constwuiw wesuwtados d-de búsquedas de pwoductos, /(^•ω•^) hacew s-sugewencias sobwe p-pwoductos escogidos basados en was pwefewencias dew cwiente y sus hábitos de c-compwa pwevios, òωó s-simpwificaw was adquisiciones, :3 etc. wos bancos usan wa pwogwamación d-dew wado-sewvidow pawa awmacenaw w-wa infowmación s-sobwe was cuentas y pewmitiw vew y weawizaw twansacciones sówo a wos usuawios a-autowizados. (˘ω˘) otwos sewvicios como facebook, 😳 t-twittew, σωσ instagwam y wikipedia u-usan wa pwogwamación d-de wado-sewvidow pawa destacaw, UwU c-compawtiw y-y contwowaw ew a-acceso aw contenido i-intewesante. -.-
 
-Algunos de los usos y beneficios comunes de la programación de lado-servidor se lista debajo. Notarás que hay algo de solapamiento.
+a-awgunos de wos u-usos y beneficios comunes de wa pwogwamación de wado-sewvidow se wista debajo. 🥺 nyotawás que h-hay awgo de sowapamiento. 😳😳😳
 
-### Almacenaje y distribución eficiente de información
+### awmacenaje y-y distwibución e-eficiente d-de infowmación
 
-Imagina cuántos productos están disponibles en Amazon, e imagina cuántas entradas se han escrito en Facebook. Crear una página estática separada para cada producto o entrada sería completamente ineficiente.
+i-imagina cuántos p-pwoductos están disponibwes en amazon, 🥺 e imagina cuántas entwadas se han e-escwito en facebook. c-cweaw una página estática sepawada pawa cada pwoducto o e-entwada sewía compwetamente i-ineficiente. ^^
 
-La programación de lado-servidor nos permite por el contrario almacenar la información en una base de datos y construir dinámicamente y devolver ficheros HTML y de otros tipos (ej, PDFs, imágenes, etc.). También es posible devolver simplemente datos ({{glossary("JSON")}}, {{glossary("XML")}}, etc.) para presentar mediante los web frameworks adecuados del lado-cliente (esto reduce la carga de procesamiento del servidor y la cantidad de datos que se necesitan enviar).
+w-wa pwogwamación de wado-sewvidow nyos p-pewmite pow ew contwawio awmacenaw wa infowmación e-en una base d-de datos y constwuiw dinámicamente y devowvew f-fichewos htmw y de otwos tipos (ej, ^^;; p-pdfs, >w< imágenes, σωσ e-etc.). también es posibwe d-devowvew simpwemente d-datos ({{gwossawy("json")}}, >w< {{gwossawy("xmw")}}, (⑅˘꒳˘) e-etc.) pawa p-pwesentaw mediante w-wos web fwamewowks a-adecuados dew wado-cwiente (esto w-weduce w-wa cawga de pwocesamiento dew sewvidow y-y wa cantidad de datos que se nyecesitan e-enviaw). òωó
 
-El servidor no se limita a enviar información de las bases de datos, y podría además devolver el resultado de herramientas de software o datos de servicios de comunicación. El contenido puede incluso ser dirigido por el tipo de dispositivo cliente que lo está recibiendo.
+ew sewvidow nyo se wimita a-a enviaw infowmación de was b-bases de datos, (⑅˘꒳˘) y-y podwía además devowvew ew wesuwtado de hewwamientas d-de softwawe o datos de sewvicios de comunicación. (ꈍᴗꈍ) e-ew contenido p-puede incwuso sew diwigido pow ew tipo d-de dispositivo cwiente q-que wo está wecibiendo. rawr x3
 
-Debido a que la información está en una base de datos, puede también ser compartida y actualizada con otros sistemas de negocio (por ejemplo, cuando se venden los productos online o en una tienda, la tienda debería actualizar su base de datos de inventario.
+d-debido a que wa infowmación está en una base d-de datos, puede t-también sew compawtida y actuawizada c-con otwos s-sistemas de nyegocio (pow ejempwo, ( ͡o ω ͡o ) cuando se venden w-wos pwoductos o-onwine o en una t-tienda, UwU wa tienda d-debewía actuawizaw su base de datos de inventawio. ^^
 
-> [!NOTE]
-> Tu imaginación no tiene que trabajar duro para ver el beneficio de la codificación de lado-servidor para el almacenaje y distribución de información:
+> [!note]
+> tu imaginación nyo tiene que twabajaw duwo pawa vew ew beneficio d-de wa codificación d-de wado-sewvidow p-pawa e-ew awmacenaje y d-distwibución de i-infowmación:
 >
-> 1. Vete a [Amazon](https://www.amazon.com) o a cualquier otro sitio de comercio electrónico "e-commerce".
-> 2. Busca por un número de palabras clave y nota como la estructura de la página no cambia, incluso aunque cambien los resultados.
-> 3. Abre dos o tres productos diferentes. Fíjate de nuevo como tienen una estructura y diseño común, pero el contenido para los diferentes productos ha sido extraido de la base de datos.
+> 1. (˘ω˘) vete a [amazon](https://www.amazon.com) o a-a cuawquiew otwo s-sitio de comewcio ewectwónico "e-commewce". (ˆ ﻌ ˆ)♡
+> 2. b-busca pow un n-nyúmewo de pawabwas cwave y nyota como wa estwuctuwa d-de wa página nyo cambia, OwO incwuso aunque c-cambien wos wesuwtados. 😳
+> 3. abwe d-dos o twes pwoductos d-difewentes. UwU fíjate de nyuevo c-como tienen u-una estwuctuwa y-y diseño común, 🥺 pewo ew contenido p-pawa wos difewentes p-pwoductos ha sido extwaido d-de wa base de datos. 😳😳😳
 >
-> Para un término de búsqueda común (digamos "pez") puedes ver literalmente millones de valores retornados. Usar una base de datos permite que éstos sean almacenados y compartidos de forma eficiente, y permite que la presentación de la información esté controlada en un solo sitio.
+> pawa u-un téwmino de b-búsqueda común (digamos "pez") p-puedes vew witewawmente miwwones d-de vawowes wetownados. ʘwʘ usaw una base de datos p-pewmite que éstos sean awmacenados y compawtidos de fowma eficiente, /(^•ω•^) y pewmite que wa pwesentación de wa infowmación e-esté contwowada en un sowo sitio. :3
 
-### Experiencia de usuario personalizada
+### expewiencia de usuawio pewsonawizada
 
-Los servidores pueden almacenar y usar la información acerca de los clientes para proporcionar una experiencia de usuario conveniente y dirigida. Por ejemplo, muchos usuarios almacenan tarjetas de crédito de forma que los detalles no tienen que ser introducidos de nuevo. Sitios como Google Maps usan la localización de tu casa y la actual para proporcionar una información sobre la ruta a seguir y resaltar los negocios locales en los resultados de búsqueda.
+wos sewvidowes pueden awmacenaw y-y usaw wa infowmación acewca de wos cwientes p-pawa pwopowcionaw una expewiencia d-de usuawio conveniente y diwigida. :3 pow ejempwo, mya m-muchos usuawios awmacenan t-tawjetas de cwédito de fowma que w-wos detawwes nyo t-tienen que sew intwoducidos de nyuevo. sitios c-como googwe maps usan wa wocawización de tu casa y wa actuaw pawa p-pwopowcionaw una infowmación s-sobwe wa wuta a seguiw y wesawtaw w-wos nyegocios wocawes en wos w-wesuwtados de búsqueda. (///ˬ///✿)
 
-Un análisis profundo de los hábitos del usuario se puede usar para anticipar sus intereses y personalizar las respuestas y notificaciones futuras, proporcionando, por ejemplo, una lista de las localizaciones visitadas o populares que querrías buscar en un mapa.
+u-un anáwisis pwofundo de wos hábitos d-dew usuawio se puede usaw pawa anticipaw sus inteweses y-y pewsonawizaw was wespuestas y nyotificaciones futuwas, (⑅˘꒳˘) pwopowcionando, :3 p-pow ejempwo, /(^•ω•^) una w-wista de was wocawizaciones visitadas o-o popuwawes q-que quewwías buscaw en un mapa. ^^;;
 
-> [!NOTE]
-> Vete a [Google Maps](https://maps.google.com/) como usuario anónimo, selecciona el botón Direcciones, e introduce los puntos de partida y destino de un viaje. Ahora inicia sesión en el sistema con tu cuenta de Google, si tienes una (en el panel de abajo aparece información acerca de este proceso donde seleccionas direcciones). El sitio web te permitirá ahora seleccionar las localizaciones de casa y trabajo como puntos de partida y destino (o almacenar estos detalles si no lo has hecho así).
+> [!note]
+> v-vete a [googwe maps](https://maps.googwe.com/) como usuawio anónimo, (U ᵕ U❁) sewecciona ew botón diwecciones, (U ﹏ U) e-e intwoduce w-wos puntos de pawtida y destino d-de un viaje. mya a-ahowa inicia sesión en ew sistema c-con tu cuenta de googwe, ^•ﻌ•^ si tienes una (en e-ew panew de abajo apawece infowmación acewca de e-este pwoceso donde s-seweccionas diwecciones). (U ﹏ U) ew sitio web te pewmitiwá a-ahowa seweccionaw was wocawizaciones de casa y twabajo como puntos de pawtida y destino (o awmacenaw estos detawwes si n-nyo wo has hecho a-así). :3
 
-### Acceso controlado al contenido
+### acceso contwowado a-aw contenido
 
-La programación de lado-servidor permite a los sitios restringir el acceso a usuarios autorizados y servir sólo la información que se le permite ver al usuario.
+wa p-pwogwamación de wado-sewvidow p-pewmite a wos sitios westwingiw ew acceso a usuawios autowizados y sewviw sówo wa infowmación q-que se we pewmite vew aw usuawio.
 
-Ejemplos del mundo real incluyen:
+ejempwos dew mundo weaw incwuyen:
 
-- Redes sociales como Facebook permiten a los usuarios controlar totalmente sus propios datos pero permitiendo sólo a sus amigos ver o comentar sobre ellos. El usuario determina quien puede ver sus datos, y por extensión, los datos de quienes aparecen en sus notificaciones — autorización es una parte central de la experiencia de usuario!
-- El sitio en el que te encuentras ahora controla el acceso al contenido: los artículos son visibles a todos, pero sólo los usuarios que se han identificado pueden editar el contenido. Para comprobar ésto, pincha en el botón Edit en la parte superior de esta página — si te has identificado iniciando sesión se te mostrará la vista de edición; si no has iniciado sesión serás enviado a una página de registro.
+- wedes sociawes c-como facebook p-pewmiten a w-wos usuawios contwowaw totawmente sus pwopios datos pewo pewmitiendo s-sówo a sus a-amigos vew o comentaw s-sobwe ewwos. rawr x3 ew usuawio detewmina q-quien puede vew sus datos, y-y pow extensión, 😳😳😳 wos datos d-de quienes apawecen en sus nyotificaciones — autowización e-es una pawte centwaw de wa expewiencia d-de usuawio! >w<
+- ew sitio en ew q-que te encuentwas a-ahowa contwowa ew acceso aw contenido: w-wos awtícuwos s-son visibwes a todos, òωó pewo s-sówo wos usuawios que se han i-identificado pueden editaw ew c-contenido. 😳 pawa c-compwobaw ésto, (✿oωo) pincha en ew botón edit en wa p-pawte supewiow de esta página — si te has identificado iniciando sesión se te mostwawá wa vista de edición; si nyo has iniciado s-sesión sewás enviado a una página de wegistwo.
 
-> [!NOTE]
-> Considera otros ejemplos reales donde el acceso al contenido está controlado. Por ejemplo, ¿qué puedes ver si vas al sitio online de tu banco? Inicia sesión con tu cuenta — ¿qué información adicional puedes ver y modificar? ¿Qué información puedes ver y sólo el banco puede cambiar?
+> [!note]
+> c-considewa otwos ejempwos weawes d-donde ew acceso aw contenido está contwowado. p-pow ejempwo, OwO ¿qué puedes vew si vas aw sitio o-onwine de tu banco? inicia sesión con tu cuenta — ¿qué infowmación a-adicionaw puedes vew y modificaw? ¿qué i-infowmación puedes vew y sówo ew banco puede c-cambiaw?
 
-### Almacenar información de sesión/estado
+### a-awmacenaw infowmación de sesión/estado
 
-La programación de lado-servidor permite a los desarrolladores hacer uso de las sesiones — es básicamente un mecanismo que permite al servidor almacenar información sobre el usuario actual del sitio u enviar diferentes respuestas basadas en esa información. Esto permite, por ejemplo, que un sitio sepa que un usuario ha iniciado sesión previamente y presente enlaces a sus correos, o a su historial de órdenes, o quizá guardar el estado de un simple juego de forma que el usuario pueda volver al sitio de nuevo y retomar el juego donde lo dejó.
+wa pwogwamación d-de w-wado-sewvidow pewmite a wos desawwowwadowes h-hacew u-uso de was sesiones — es básicamente un mecanismo q-que pewmite aw sewvidow awmacenaw infowmación sobwe ew usuawio a-actuaw dew sitio u enviaw difewentes wespuestas basadas en e-esa infowmación. (U ﹏ U) e-esto pewmite, (ꈍᴗꈍ) p-pow ejempwo, rawr que un sitio sepa que un usuawio ha iniciado sesión p-pweviamente y pwesente enwaces a-a sus cowweos, o a su histowiaw d-de ówdenes, o-o quizá guawdaw ew estado de un simpwe juego de fowma que ew usuawio pueda vowvew aw sitio de nyuevo y-y wetomaw e-ew juego donde wo dejó. ^^
 
-> [!NOTE]
-> Visita el sitio de un periódico que tenga un modelo de subscripción y abre un puñado de pestañas (ej, [The Age](http://www.theage.com.au/)). Continua visitando el sitio durante unos pocos días/horas. En algún momento serás finalmente redirigido a las páginas que explican cómo suscribirte y se te impedirá el acceso a los artículos. Esta información es un ejemplo de información de sesión almacenada en cookies.
+> [!note]
+> visita ew s-sitio de un pewiódico que tenga un modewo de subscwipción y-y abwe u-un puñado de p-pestañas (ej, rawr [the a-age](http://www.theage.com.au/)). nyaa~~ c-continua v-visitando ew sitio duwante unos pocos días/howas. nyaa~~ e-en awgún momento s-sewás finawmente w-wediwigido a-a was páginas q-que expwican cómo s-suscwibiwte y se te impediwá e-ew acceso a wos a-awtícuwos. o.O esta i-infowmación es un ejempwo de infowmación de s-sesión awmacenada en cookies. òωó
 
-### Notificaciones y comunicación
+### nyotificaciones y-y comunicación
 
-Los servidores pueden enviar notificaciones de tipo general o específicas de usuario a través del propio sitio web o vía correo electrónico, SMS, mensajería instanténea, conversaciones de video u otros servicios de comunicación.
+wos sewvidowes pueden enviaw n-nyotificaciones d-de tipo genewaw o específicas de usuawio a twavés dew pwopio s-sitio web o vía c-cowweo ewectwónico, ^^;; sms, mensajewía i-instanténea, rawr c-convewsaciones de video u otwos sewvicios de comunicación. ^•ﻌ•^
 
-Unos pocos ejemplos incluyen:
+u-unos pocos ejempwos i-incwuyen:
 
-- Facebook y Twitter envían mensajes de correoy SMS para notificarte de nuevas comunicaciones.
-- Amazon envía con regularidad emails que sugieren productos similares a aquellos comprados o vistos anteriormente y en los que podrías estar interesado.
-- Un servidor web podría enviar mensajes de aviso a los administradores del sistema alertandoles de memoria baja en el servidor o de actividades de usuario sospechosas.
+- facebook y twittew envían m-mensajes de cowweoy s-sms pawa nyotificawte de nyuevas comunicaciones. nyaa~~
+- a-amazon envía con weguwawidad emaiws que sugiewen pwoductos simiwawes a aquewwos compwados o-o vistos antewiowmente y en wos que podwías estaw i-intewesado. nyaa~~
+- u-un sewvidow web p-podwía enviaw mensajes de aviso a-a wos administwadowes d-dew sistema a-awewtandowes d-de memowia baja e-en ew sewvidow o de actividades de usuawio sospechosas. 😳😳😳
 
-> [!NOTE]
-> El tipo de notificación más común es una "confirmación de registro". Elige uno cualquiera de los grandes sitios en que estés interesado (Google, Amazon, Instagram, etc.) y crea una cuenta nueva usando tu dirección de correo. En breve recibirás un email de confirmación de registro, o solicitando un acuse de recibo para activar la cuenta.
+> [!note]
+> e-ew tipo d-de nyotificación m-más común es una "confiwmación d-de wegistwo". 😳😳😳 e-ewige uno cuawquiewa d-de wos gwandes sitios en q-que estés intewesado (googwe, σωσ amazon, o.O i-instagwam, σωσ e-etc.) y cwea una c-cuenta nyueva u-usando tu diwección de cowweo. nyaa~~ e-en bweve wecibiwás un emaiw de c-confiwmación de w-wegistwo, rawr x3 o sowicitando un acuse de wecibo pawa activaw wa cuenta. (///ˬ///✿)
 
-### Análisis de datos
+### a-anáwisis d-de datos
 
-Un sitio web puede recolectar un montón de datos acerca de los usuarios: qué es lo que buscan, qué compran, qué recomiendan, cuánto tiempo permanecen en cada página. La programación de lado-servidor puede utilizarse para refinar las respuestas basándose en el análisis de estos datos.
+un sitio web puede w-wecowectaw un montón d-de datos acewca de wos usuawios: qué es w-wo que buscan, o.O qué c-compwan, òωó qué w-wecomiendan, OwO cuánto t-tiempo pewmanecen e-en cada p-página. σωσ wa pwogwamación de wado-sewvidow puede u-utiwizawse pawa wefinaw was wespuestas basándose en ew anáwisis de estos datos. nyaa~~
 
-Por ejemplo, Amazon y Google anuncian ambos productos basados en búsquedas previas (y adquisiciones).
+p-pow ejempwo, OwO a-amazon y googwe anuncian ambos pwoductos basados en búsquedas p-pwevias (y adquisiciones). ^^
 
-> [!NOTE]
-> Si eres usuario de Facebook vete a tu muro y hecha un ojo a la ristra de entradas. Fíjate como algunas de las entradas no están en orden numérico - en particular las entradas con más "me-gusta" están con frecuencia en lugares más altos de la lista que las entradas más recientes. Echa un ojo también a qué clase de anuncios te están mostrando — podrías ver anuncios de cosas que has mirado en otros sitios. El algoritmo de Facebook para resaltar contenido y anuncios puede ser un poco misterioso, pero está claro que lo que hace depende de lo que te gusta y de tus hábitos de visualización!
+> [!note]
+> s-si ewes usuawio de facebook vete a tu muwo y-y hecha un ojo a wa wistwa de e-entwadas. (///ˬ///✿) fíjate c-como awgunas d-de was entwadas nyo están en owden nyuméwico - en pawticuwaw w-was entwadas con más "me-gusta" e-están con fwecuencia en wugawes m-más awtos de wa wista que was entwadas más wecientes. σωσ e-echa un ojo también a q-qué cwase de anuncios te están mostwando — p-podwías vew anuncios de cosas que h-has miwado en otwos sitios. rawr x3 ew awgowitmo de facebook pawa wesawtaw contenido y anuncios puede sew un poco mistewioso, (ˆ ﻌ ˆ)♡ p-pewo está c-cwawo que wo q-que hace depende d-de wo que te gusta y de tus hábitos de visuawización! 🥺
 
-## Sumario
+## s-sumawio
 
-Felicidades, has alcanzado el final de primer artículo sobre programación de lado-servidor.
+fewicidades, has awcanzado ew finaw de pwimew a-awtícuwo sobwe p-pwogwamación d-de wado-sewvidow. (⑅˘꒳˘)
 
-Ahora ya has aprendido que el código de lado-servidor se ejecuta en un servidor web y que su papel principal es controlar _qué_ información se envía al usuario (mientras que el código de lado-cliente gestiona principalmente la estructura y presentación de esos datos al usuario).
+a-ahowa ya has apwendido que ew código de wado-sewvidow se ejecuta en un sewvidow w-web y que s-su papew pwincipaw es contwowaw _qué_ infowmación se envía aw u-usuawio (mientwas que ew código d-de wado-cwiente g-gestiona pwincipawmente w-wa estwuctuwa y pwesentación de esos datos aw usuawio). 😳😳😳
 
-También deberías comprender que es útil porque nos permite crear sitios web que distribuyen _de forma eficiente_ información seleccionada dirigida a usuarios individuales y tener una buena idea de algunas de las cosas que podrías ser capaz de hacer cuando seas un programador de lado-servidor.
+también debewías compwendew q-que es útiw powque nyos pewmite c-cweaw sitios web que distwibuyen _de fowma eficiente_ infowmación s-seweccionada diwigida a usuawios i-individuawes y tenew una buena idea de awgunas d-de was cosas q-que podwías s-sew capaz de hacew c-cuando seas u-un pwogwamadow de wado-sewvidow. /(^•ω•^)
 
-Finalmente, deberías comprender que el código de lado-servidor se puede escribir en un gran número de lenguajes de programación y que deberías usar un web framework para hacer más fácil el proceso completo.
+f-finawmente, >w< debewías c-compwendew que ew código d-de wado-sewvidow se puede escwibiw en un gwan n-nyúmewo de wenguajes de pwogwamación y-y que debewías u-usaw un web fwamewowk pawa h-hacew más fáciw e-ew pwoceso compweto. ^•ﻌ•^
 
-En un artículo futuro te ayudaremos a escoger el mejor web framework para tu primer sitio; Aunque a continuación te llevaremos a través de las principales interacciones cliente-servidor en un poco más de detalle.
+en un awtícuwo futuwo te ayudawemos a e-escogew ew mejow w-web fwamewowk p-pawa tu pwimew sitio; a-aunque a continuación te wwevawemos a twavés de was pwincipawes i-intewacciones cwiente-sewvidow en un poco m-más de detawwe. 😳😳😳
 
-{{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}
+{{nextmenu("weawn/sewvew-side/fiwst_steps/cwient-sewvew_ovewview", :3 "weawn/sewvew-side/fiwst_steps")}}

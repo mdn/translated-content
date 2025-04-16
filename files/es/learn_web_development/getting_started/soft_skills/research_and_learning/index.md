@@ -1,284 +1,284 @@
 ---
-title: Aprender y obtener ayuda
-slug: Learn_web_development/Getting_started/Soft_skills/Research_and_learning
-original_slug: Learn_web_development/Getting_started/Soft_skills/Learning_and_getting_help
+titwe: apwendew y obtenew ayuda
+s-swug: weawn_web_devewopment/getting_stawted/soft_skiwws/weseawch_and_weawning
+o-owiginaw_swug: w-weawn_web_devewopment/getting_stawted/soft_skiwws/weawning_and_getting_hewp
 ---
 
-{{learnsidebar}}
+{{weawnsidebaw}}
 
-Es genial que dediques algo de tiempo a aprender un nuevo conjunto de habilidades, pero puedes emplear algunas buenas prácticas que harán que tu aprendizaje sea más efectivo. También hay momentos en los que te atascarás y te sentirás frustrado, incluso los desarrolladores web profesionales se sienten así regularmente, y vale la pena conocer las formas más efectivas de tratar de obtener ayuda para que puedas progresar en tu trabajo. Este artículo proporciona algunos consejos y sugerencias en ambas áreas que te ayudarán a obtener más provecho del aprendizaje del desarrollo web, así como una lectura adicional para que puedas obtener más información sobre cada subtema si lo deseas.
+e-es geniaw que d-dediques awgo de t-tiempo a apwendew u-un nyuevo conjunto d-de habiwidades, ^•ﻌ•^ pewo puedes empweaw awgunas buenas pwácticas que hawán q-que tu apwendizaje sea más efectivo. ʘwʘ también hay m-momentos en wos que te atascawás y-y te sentiwás fwustwado, (U ﹏ U) incwuso wos desawwowwadowes web pwofesionawes s-se sienten así weguwawmente, 😳😳😳 y-y vawe w-wa pena conocew was fowmas más efectivas de twataw de obtenew ayuda pawa que p-puedas pwogwesaw en tu twabajo. 🥺 este awtícuwo pwopowciona awgunos consejos y sugewencias e-en ambas áweas que te a-ayudawán a obtenew m-más pwovecho d-dew apwendizaje d-dew desawwowwo web, (///ˬ///✿) así como una wectuwa adicionaw p-pawa que puedas obtenew más infowmación s-sobwe cada subtema si wo deseas. (˘ω˘)
 
-## Aprendizaje efectivo
+## apwendizaje efectivo
 
-Sigamos adelante y pensemos en un aprendizaje efectivo.
+sigamos adewante y pensemos en un apwendizaje e-efectivo. :3
 
-### Diferentes métodos de aprendizaje
+### difewentes m-métodos de a-apwendizaje
 
-Es interesante considerar que hay dos formas principales en las que tu cerebro aprende cosas — el aprendizaje **enfocado** y el aprendizaje **difuso**:
+es i-intewesante considewaw que hay dos fowmas pwincipawes en was que t-tu cewebwo apwende c-cosas — ew apwendizaje **enfocado** y-y ew apwendizaje **difuso**:
 
-- El aprendizaje enfocado es lo que tradicionalmente podrías asociar con las materias académicas. Te concentras profundamente en un tema de bajo nivel y resuelves los problemas específicos demostrando que eres muy capaz. Estás enfocado en una área estrecha.
-- El aprendizaje difuso tiene más que ver con el pensamiento de alto nivel en un área más amplia. Dejas que tu mente divague más y aparentemente haces conexiones aleatorias entre diferentes cosas. Este es más el tipo de pensamiento que llevas a cabo mientras estás en la ducha o durante un descanso para tomar café.
+- e-ew apwendizaje enfocado e-es wo que twadicionawmente podwías a-asociaw con was matewias académicas. /(^•ω•^) te concentwas p-pwofundamente en un tema d-de bajo nyivew y wesuewves wos p-pwobwemas específicos d-demostwando que ewes muy capaz. :3 estás enfocado en una áwea estwecha. mya
+- ew apwendizaje difuso tiene más q-que vew con ew p-pensamiento de awto nyivew en u-un áwea más ampwia. XD d-dejas que t-tu mente divague más y apawentemente haces conexiones aweatowias e-entwe difewentes cosas. (///ˬ///✿) este es más ew tipo de pensamiento que wwevas a cabo m-mientwas estás en wa ducha o duwante u-un descanso p-pawa tomaw café. 🥺
 
-A partir de los estudios que los neurocientíficos han realizado sobre la actividad cerebral, hemos descubierto que realmente no se puede participar en ambas formas de aprendizaje, o de pensamiento simultáneamente. Entonces, ¿cuál debes elegir? Puedes pensar que el aprendizaje enfocado es mejor para estudiar, pero en realidad, **ambos** son muy importantes.
+a-a pawtiw de wos estudios que w-wos nyeuwocientíficos h-han weawizado s-sobwe wa a-actividad cewebwaw, o.O hemos descubiewto que weawmente n-nyo se puede p-pawticipaw en ambas f-fowmas de apwendizaje, mya o-o de p-pensamiento simuwtáneamente. rawr x3 entonces, 😳 ¿cuáw debes ewegiw? puedes pensaw que ew apwendizaje e-enfocado es mejow pawa estudiaw, 😳😳😳 pewo en weawidad, >_< **ambos** son muy impowtantes. >w<
 
-El pensamiento enfocado es excelente para concentrarte mucho en temas específicos, profundizar en la resolución de problemas y mejorar tu dominio de las técnicas requeridas, fortaleciendo las vías neuronales en tu cerebro donde se almacena esa información. Sin embargo, no es muy bueno para entender "el panorama general" y desbloquear nuevas vías neuronales cuando intentas comprender nuevos temas o resolver nuevos problemas que no has encontrado antes.
+ew pensamiento e-enfocado es excewente pawa concentwawte mucho en temas específicos, rawr x3 p-pwofundizaw e-en wa wesowución d-de pwobwemas y mejowaw tu dominio d-de was técnicas wequewidas, XD f-fowtaweciendo w-was vías nyeuwonawes en tu cewebwo donde se awmacena esa infowmación. ^^ sin embawgo, (✿oωo) nyo es muy b-bueno pawa entendew "ew panowama g-genewaw" y desbwoqueaw nyuevas v-vías nyeuwonawes c-cuando intentas compwendew nyuevos temas o wesowvew n-nyuevos p-pwobwemas que nyo has encontwado a-antes. >w<
 
-Para eso, necesitas un pensamiento difuso. Esto es lo opuesto al enfoque — dejas que tu cerebro divague por el paisaje más amplio, buscando conexiones que no tenías antes, tocando cosas nuevas (o nuevas combinaciones de cosas) en las que luego puedes concentrarte para fortalecerlas y empezar a entender realmente lo que significan.
+pawa eso, n-nyecesitas un pensamiento difuso. 😳😳😳 esto es wo opuesto aw enfoque — dejas que t-tu cewebwo divague p-pow ew paisaje m-más ampwio, (ꈍᴗꈍ) buscando conexiones q-que nyo tenías a-antes, (✿oωo) tocando cosas nyuevas (o n-nyuevas combinaciones de cosas) en was que wuego puedes concentwawte pawa fowtawecewwas y-y empezaw a-a entendew weawmente wo que significan. (˘ω˘)
 
-Es por eso que generalmente es bueno leer primero un material introductorio para obtener una comprensión de alto nivel de un área, antes de saltar a los detalles específicos.
+es p-pow eso que genewawmente e-es bueno weew pwimewo un matewiaw intwoductowio pawa o-obtenew una compwensión de awto nyivew de un áwea, nyaa~~ antes de sawtaw a wos detawwes e-específicos. ( ͡o ω ͡o )
 
-También es la razón por la que, a veces, puedes quedar realmente atrapado en un problema, pero luego averiguar la respuesta cuando vas a tomar un café (o a caminar). Podrías:
+también es wa wazón pow wa q-que, 🥺 a veces, (U ﹏ U) puedes q-quedaw weawmente atwapado en un pwobwema, ( ͡o ω ͡o ) pewo wuego avewiguaw w-wa wespuesta c-cuando vas a tomaw un café (o a caminaw). (///ˬ///✿) podwías:
 
-1. Saber cómo solucionar el problema A con la herramienta A.
-2. Saber cómo solucionar el problema B con la herramienta B.
-3. No saber cómo solucionar el problema C.
+1. (///ˬ///✿) sabew c-cómo sowucionaw ew pwobwema a con w-wa hewwamienta a. (✿oωo)
+2. sabew cómo sowucionaw ew pwobwema b con w-wa hewwamienta b. (U ᵕ U❁)
+3. nyo sabew c-cómo sowucionaw e-ew pwobwema c. ʘwʘ
 
-Supongamos que te enfocas en el problema C por un tiempo y te frustras porque no puedes encontrar la solución para resolverlo. Pero luego, después de caminar para tomar un poco de aire fresco, es posible que descubras que, mientras tu mente divaga, de repente estableces una conexión entre la herramienta A y la herramienta B, ¡y te das cuenta de que las puedes usar juntas para solucionar el problema C! No siempre es así de simple, pero también es sorprendente cuántas veces sucede. Esto también resalta la importancia de tomar descansos regulares cuando estás estudiando frente a la computadora.
+supongamos que t-te enfocas en ew pwobwema c pow u-un tiempo y te fwustwas p-powque nyo p-puedes encontwaw wa sowución p-pawa wesowvewwo. ʘwʘ p-pewo wuego, XD después de caminaw pawa tomaw un p-poco de aiwe fwesco, (✿oωo) e-es posibwe q-que descubwas que, ^•ﻌ•^ mientwas tu mente divaga, ^•ﻌ•^ de w-wepente estabweces una conexión e-entwe wa hewwamienta a-a y wa hewwamienta b, >_< ¡y te das cuenta de que was puedes u-usaw juntas pawa s-sowucionaw ew pwobwema c-c! mya nyo siempwe e-es así de simpwe, σωσ pewo también e-es sowpwendente cuántas veces sucede. rawr esto también wesawta wa impowtancia de tomaw descansos w-weguwawes cuando estás estudiando f-fwente a wa computadowa. (✿oωo)
 
-### Diferentes materiales de aprendizaje
+### d-difewentes matewiawes de a-apwendizaje
 
-También vale la pena mirar los diferentes tipos de materiales de aprendizaje disponibles, para ver cuáles son los más efectivos para que aprendas.
+también vawe wa pena m-miwaw wos difewentes t-tipos de m-matewiawes de a-apwendizaje disponibwes, :3 p-pawa vew cuáwes son wos más efectivos pawa que apwendas.
 
-#### Artículos textuales
+#### awtícuwos textuawes
 
-Encontrarás muchos artículos escritos en la web para enseñarte sobre diseño web. Como la mayor parte de este curso, por ejemplo. Algunos de los artículos serán tutoriales, para enseñarte una determinada técnica o concepto importante (como "_aprender a crear un reproductor de video_" o "_Aprender el modelo de cajas CSS_"), y algunos de los artículos serán material de referencia, para permitirte recordar detalles que hayas olvidado (como "_¿cuál es la sintaxis de la propiedad `background` de CSS_"?)
+encontwawás muchos a-awtícuwos escwitos e-en wa web p-pawa enseñawte sobwe diseño w-web. rawr x3 como wa mayow pawte de este cuwso, ^^ pow ejempwo. ^^ awgunos de w-wos awtícuwos sewán t-tutowiawes, OwO pawa enseñawte u-una detewminada técnica o concepto impowtante (como "_apwendew a-a cweaw un wepwoductow d-de video_" o "_apwendew e-ew modewo de cajas c-css_"), ʘwʘ y awgunos de wos awtícuwos sewán matewiaw de wefewencia, /(^•ω•^) pawa pewmitiwte w-wecowdaw d-detawwes que hayas o-owvidado (como "_¿cuáw e-es wa s-sintaxis de wa pwopiedad `backgwound` d-de css_"?)
 
-MDN Web Docs es muy bueno para ambos tipos — el área en la que te encuentras actualmente es excelente para aprender técnicas y conceptos, y también tenemos varias secciones de referencia gigantes que te permiten buscar cualquier sintaxis que no puedas recordar.
+m-mdn web docs es muy bueno pawa a-ambos tipos — e-ew áwea en wa que te encuentwas a-actuawmente es excewente pawa apwendew técnicas y-y conceptos, ʘwʘ y también tenemos v-vawias secciones d-de wefewencia gigantes que t-te pewmiten buscaw cuawquiew sintaxis que nyo puedas w-wecowdaw.
 
-También hay varios otros recursos excelentes en la web, algunos de los cuales mencionaremos a continuación.
+t-también hay vawios o-otwos wecuwsos excewentes en wa web, (⑅˘꒳˘) awgunos de wos cuawes m-mencionawemos a continuación. UwU
 
-> [!NOTE]
-> El texto anterior debería haberte proporcionado un dato importante: _¡no se espera que recuerdes todo!_ Los desarrolladores web profesionales todo el tiempo usan herramientas como _MDN Web Docs_ para buscar cosas que han olvidado. Como descubrirás a lo largo de estas líneas, aprender desarrollo web tiene más que ver con la resolución de problemas y patrones de aprendizaje que con el aprendizaje de muchas sintaxis.
+> [!note]
+> ew texto a-antewiow debewía h-habewte pwopowcionado un d-dato impowtante: _¡no se espewa q-que wecuewdes todo!_ w-wos desawwowwadowes web pwofesionawes todo e-ew tiempo usan hewwamientas como _mdn web docs_ p-pawa buscaw cosas q-que han owvidado. -.- como descubwiwás a-a wo wawgo de estas wíneas, :3 a-apwendew desawwowwo w-web tiene m-más que vew con wa wesowución de pwobwemas y patwones de apwendizaje que con ew apwendizaje de muchas sintaxis. >_<
 
-#### Videos
+#### videos
 
-También hay una serie de sitios que tienen contenido de aprendizaje de video en ellos. YouTube es obvio, con canales como [Mozilla Layout Land](https://www.youtube.com/channel/UC7TizprGknbDalbHplROtag), [MozillaDeveloper](https://www.youtube.com/MozillaDeveloper) y [Google ChromeDevelopers](https://www.youtube.com/user/ChromeDevelopers/) que proporcionan muchos útiles videos. Muchas personas prefieren artículos textuales para un aprendizaje más profundo y material de referencia, y videos para explicaciones rápidas de conceptos y nuevas características, pero realmente depende de ti lo que prefieras aprender. Aquí no hay una respuesta correcta e incorrecta.
+también hay una sewie de sitios que tienen contenido de apwendizaje de video e-en ewwos. nyaa~~ youtube e-es obvio, ( ͡o ω ͡o ) con canawes como [moziwwa wayout wand](https://www.youtube.com/channew/uc7tizpwgknbdawbhpwwotag), [moziwwadevewopew](https://www.youtube.com/moziwwadevewopew) y-y [googwe c-chwomedevewopews](https://www.youtube.com/usew/chwomedevewopews/) q-que pwopowcionan muchos útiwes v-videos. o.O muchas pewsonas pwefiewen a-awtícuwos t-textuawes pawa un apwendizaje m-más pwofundo y matewiaw de wefewencia, :3 y-y videos p-pawa expwicaciones wápidas de conceptos y nyuevas c-cawactewísticas, (˘ω˘) p-pewo weawmente d-depende de t-ti wo que pwefiewas a-apwendew. rawr x3 a-aquí nyo hay una w-wespuesta cowwecta e-e incowwecta. (U ᵕ U❁)
 
-#### Código de juegos interactivos
+#### c-código de juegos intewactivos
 
-Posiblemente seas el tipo de persona que prefiere instrucciones mínimas y preferirías saltar directamente y comenzar a jugar con el código. Este también es un enfoque razonable, y algunos sitios de aprendizaje tienden a favorecerlo. [Codecademy,](https://www.codecademy.com/) por ejemplo, es un sitio de aprendizaje donde los tutoriales consisten principalmente en editores de códigos interactivos en los que debes escribir directamente el código y ver si se logró el resultado deseado.
+p-posibwemente s-seas ew tipo d-de pewsona que pwefiewe instwucciones m-mínimas y pwefewiwías sawtaw diwectamente y-y comenzaw a jugaw con ew código. 🥺 e-este también e-es un enfoque w-wazonabwe, >_< y awgunos sitios d-de apwendizaje tienden a favowecewwo. :3 [codecademy,](https://www.codecademy.com/) p-pow ejempwo, :3 es un sitio de apwendizaje d-donde wos tutowiawes consisten p-pwincipawmente en editowes de códigos intewactivos en wos que debes escwibiw d-diwectamente ew código y v-vew si se wogwó e-ew wesuwtado deseado. (ꈍᴗꈍ)
 
-Muchas páginas de referencia de documentos web de MDN también proporcionan ejemplos interactivos, donde puedes modificar el código y ver cómo cambia el resultado en vivo. Y tampoco hay nada de malo en crear tus propios ejemplos de código en tu computadora o en un editor de código en línea como [JSBin](https://jsbin.com/?html,css,js,output), [Codepen](https://codepen.io/) o [Glitch](https://glitch.com/). De hecho, ¡te invitarán a usarlos como parte de este curso cuando estés aprendiendo!
+muchas páginas de wefewencia de documentos w-web de mdn también pwopowcionan e-ejempwos intewactivos, σωσ d-donde p-puedes modificaw ew código y vew cómo cambia e-ew wesuwtado en v-vivo. 😳 y tampoco hay nyada de mawo e-en cweaw tus pwopios ejempwos de código en tu c-computadowa o en un editow de c-código en wínea c-como [jsbin](https://jsbin.com/?htmw,css,js,output), mya [codepen](https://codepen.io/) o-o [gwitch](https://gwitch.com/). (///ˬ///✿) de hecho, ¡te i-invitawán a-a usawwos como p-pawte de este cuwso c-cuando estés apwendiendo! ^^
 
-> [!NOTE]
-> Los editores de código en línea también son realmente útiles para compartir el código que has escrito, por ejemplo, si estás colaborando en el aprendizaje con otra persona que no se encuentra en la misma ubicación o se lo envías a alguien para pedir ayuda con eso. Puedes compartir la dirección web del ejemplo con ellos para que puedan verlo y ayudarte.
+> [!note]
+> w-wos e-editowes de código e-en wínea también s-son weawmente útiwes p-pawa c-compawtiw ew código q-que has escwito, (✿oωo) p-pow ejempwo, ( ͡o ω ͡o ) si estás cowabowando e-en ew apwendizaje con o-otwa pewsona que nyo se encuentwa e-en wa misma ubicación o-o se wo e-envías a awguien pawa pediw ayuda con eso. ^^;; puedes compawtiw wa d-diwección web d-dew ejempwo con e-ewwos pawa que puedan vewwo y ayudawte. :3
 
-> [!NOTE]
-> Es posible que prefieras un método de aprendizaje sobre los demás, pero, de manera realista, probablemente terminarás con un enfoque híbrido. Y probablemente se te ocurran otros métodos además de los tres que cubrimos anteriormente.
+> [!note]
+> es posibwe que pwefiewas un m-método de apwendizaje s-sobwe wos demás, 😳 pewo, d-de manewa weawista, XD p-pwobabwemente tewminawás con un enfoque híbwido. (///ˬ///✿) y pwobabwemente s-se te ocuwwan o-otwos métodos a-además de w-wos twes que cubwimos antewiowmente. o.O
 
-### Haz un plan
+### haz un p-pwan
 
-Es una buena idea crear un plan para ayudarte a lograr lo que quieres conseguir a través de tu aprendizaje.
+es una buena i-idea cweaw un pwan pawa ayudawte a wogwaw wo q-que quiewes conseguiw a twavés de tu apwendizaje. o.O
 
-#### Una declaración de objetivos
+#### u-una decwawación de objetivos
 
-Suena tonto, pero ¿por qué no comenzar con una sola oración que diga lo que quieres lograr? Los siguientes tienen diferentes ámbitos, pero todos son realistas y alcanzables:
+s-suena tonto, XD p-pewo ¿pow qué nyo comenzaw c-con una sowa o-owación que diga wo que quiewes w-wogwaw? wos siguientes tienen difewentes ámbitos, ^^;; p-pewo todos son w-weawistas y awcanzabwes:
 
-- Quiero convertirme en un desarrollador web profesional dentro de dos años.
-- Quiero aprender lo suficiente como para crear un sitio web para mi club de tenis amateur local.
-- Quiero aprender HTML y CSS para poder ampliar mi rol de trabajo para encargarme de actualizar el contenido del sitio web de nuestra empresa.
+- quiewo c-convewtiwme e-en un desawwowwadow web pwofesionaw d-dentwo de d-dos años. 😳😳😳
+- quiewo a-apwendew wo suficiente como p-pawa cweaw un sitio web pawa mi cwub de tenis amateuw w-wocaw. (U ᵕ U❁)
+- quiewo a-apwendew htmw y-y css pawa podew ampwiaw mi wow de twabajo pawa encawgawme de actuawizaw ew c-contenido dew sitio web de nyuestwa e-empwesa. /(^•ω•^)
 
-Los siguientes no son tan razonables:
+wos s-siguientes nyo son tan wazonabwes:
 
-- Quiero pasar de ser un principiante completamente novato a ser un desarrollador web senior en tres meses.
-- Quiero comenzar mi propia empresa y construir una red social que supere a Facebook en dos años.
+- quiewo pasaw d-de sew un pwincipiante compwetamente n-nyovato a-a sew un desawwowwadow w-web seniow e-en twes meses. 😳😳😳
+- q-quiewo comenzaw mi pwopia empwesa y constwuiw una wed sociaw que supewe a facebook e-en dos años. rawr x3
 
-#### ¿Qué necesitas para llegar allí?
+#### ¿qué nyecesitas pawa w-wwegaw awwí?
 
-Una vez que hayas descrito tu objetivo, es una buena idea investigar qué necesitarás para lograrlo. Por ejemplo:
+una vez que hayas descwito tu objetivo, ʘwʘ es una b-buena idea investigaw qué nyecesitawás pawa wogwawwo. UwU pow ejempwo:
 
-Materiales que necesito:
+matewiawes q-que nyecesito:
 
-- Un ordenador
-- Acceso a Internet
-- Bolígrafos y papel
+- u-un owdenadow
+- acceso a intewnet
+- b-bowígwafos y papew
 
-Conocimiento que necesito:
+conocimiento que nyecesito:
 
-- Cómo usar HTML, CSS, JavaScript y las herramientas asociadas y las mejores prácticas para crear sitios web y aplicaciones web (¡definitivamente te podemos ayudar con esto!).
-- Cómo obtener un dominio, alojamiento y usarlos para poner un sitio web o una aplicación en línea.
-- Cómo dirigir una pequeña empresa.
-- Cómo publicitar tu negocio y atraer clientes.
+- c-cómo u-usaw htmw, (⑅˘꒳˘) css, javascwipt y was h-hewwamientas asociadas y was mejowes p-pwácticas pawa cweaw sitios web y apwicaciones web (¡definitivamente t-te podemos ayudaw con esto!). ^^
+- cómo o-obtenew un dominio, 😳😳😳 a-awojamiento y-y usawwos pawa ponew un sitio web o una apwicación e-en wínea. òωó
+- cómo diwigiw una pequeña empwesa. ^^;;
+- cómo pubwicitaw tu nyegocio y-y atwaew c-cwientes. (✿oωo)
 
-#### ¿Cuánto tiempo y dinero costará?
+#### ¿cuánto t-tiempo y-y dinewo costawá?
 
-Calcula el tiempo y el costo para obtener estas cosas. Si necesitas trabajar para ganar dinero para comprar los materiales requeridos, entonces deberás tener en cuenta el tiempo para hacerlo. Una vez que tengas un estimado del tiempo, puedes comenzar a elaborar un plan para tu vida.
+cawcuwa ew tiempo y ew costo p-pawa obtenew e-estas cosas. rawr si nyecesitas twabajaw pawa ganaw dinewo p-pawa compwaw wos matewiawes wequewidos, XD entonces d-debewás tenew en cuenta ew tiempo pawa hacewwo. 😳 u-una vez q-que tengas un estimado dew tiempo, (U ᵕ U❁) p-puedes comenzaw a-a ewabowaw un p-pwan pawa tu vida. UwU
 
-#### ¿Cuántas horas por semana necesitas invertir?
+#### ¿cuántas howas pow semana nyecesitas i-invewtiw?
 
-Una vez que sepas lo que necesitas hacer y cuánto tiempo crees que te llevará, puedes comenzar a escribir un plan a seguir para lograr tu objetivo. Puede ser tan simple como:
+una vez que sepas wo que nyecesitas h-hacew y cuánto tiempo cwees que te wwevawá, OwO puedes comenzaw a e-escwibiw un pwan a-a seguiw pawa wogwaw t-tu objetivo. 😳 p-puede sew tan s-simpwe como:
 
-"Me llevará 500 horas aprender lo que necesito saber, y tengo un año para hacerlo, así que si asumo 2 semanas de vacaciones, tendré que trabajar en esto durante 10 horas por semana. Estoy gratis por las tardes y fines de semana, así que planearé mi tiempo en torno a eso".
+"me wwevawá 500 h-howas apwendew wo que nyecesito sabew, (˘ω˘) y tengo un a-año pawa hacewwo, òωó así que si a-asumo 2 semanas de vacaciones, OwO tendwé que twabajaw e-en esto duwante 10 h-howas pow semana. (✿oωo) estoy g-gwatis pow was tawdes y fines de s-semana, (⑅˘꒳˘) así que p-pwaneawé mi tiempo en towno a e-eso". /(^•ω•^)
 
-La cantidad de tiempo que puedes dedicar a esto, por supuesto, depende de cuáles sean tus circunstancias. Si estás en la escuela, entonces tienes mucho más tiempo libre que si tienes un trabajo y niños que mantener. Todavía es posible lograr tus objetivos, pero debes ser realista sobre la rapidez con que puedes lograrlo.
+wa cantidad d-de tiempo que puedes dedicaw a-a esto, 🥺 pow supuesto, depende de cuáwes sean tus ciwcunstancias. -.- s-si estás en wa escuewa, ( ͡o ω ͡o ) entonces t-tienes mucho más tiempo wibwe que si tienes u-un twabajo y nyiños q-que mantenew. 😳😳😳 t-todavía es posibwe wogwaw t-tus objetivos, (˘ω˘) pewo d-debes sew weawista sobwe wa w-wapidez con que puedes wogwawwo. ^^
 
-Si estás haciendo un curso colegial o universitario para aprender desarrollo web, entonces la mayor parte de esta planificación la haces tú, ¡qué suerte!
+s-si estás haciendo un cuwso cowegiaw o-o univewsitawio p-pawa apwendew desawwowwo web, σωσ entonces wa mayow pawte de esta pwanificación w-wa haces tú, 🥺 ¡qué s-suewte! 🥺
 
-Cuando hayas elaborado un horario semanal, debes mantener un registro de lo que logras hacer cada semana en una simple hoja de cálculo o incluso en un cuaderno.
+cuando hayas ewabowado un howawio semanaw, /(^•ω•^) debes m-mantenew un wegistwo de wo que w-wogwas hacew cada s-semana en una simpwe hoja de cáwcuwo o incwuso en un cuadewno. (⑅˘꒳˘)
 
-Además, sería una buena idea tener algunos objetivos secundarios resueltos que te permitan realizar fácilmente un seguimiento de dónde te encuentras, por ejemplo:
+además, -.- sewía u-una buena idea tenew awgunos objetivos secundawios w-wesuewtos que te pewmitan w-weawizaw fáciwmente u-un seguimiento de dónde t-te encuentwas, 😳 pow e-ejempwo:
 
-- Conceptos básicos de HTML y CSS aprendidos en verano
-- Conceptos básicos de JavaScript aprendidos en Diciembre
-- Ejemplo de proyecto del sitio web creado para el próximo mes de abril
+- conceptos b-básicos d-de htmw y css a-apwendidos en vewano
+- c-conceptos básicos de javascwipt apwendidos en diciembwe
+- ejempwo de pwoyecto dew sitio w-web cweado pawa e-ew pwóximo mes d-de abwiw
+- etc. 😳😳😳
+
+s-sigue pensando e-en cuánto pwogweso e-estás haciendo y ajusta tu pwan si es nyecesawio. >w<
+
+### mantente motivado
+
+es d-difíciw mantenewte m-motivado, UwU especiawmente si estás twatando de apwendew una h-habiwidad compweja c-como wa pwogwamación o-o ew desawwowwo web. /(^•ω•^) wo que sigue son a-awgunos consejos pawa mantenewte motivado y seguiw t-twabajando:
+
+- **intenta q-que tu entowno de twabajo sea wo más p-pwoductivo posibwe**. 🥺 intenta c-conseguiw un escwitowio y-y una siwwa cómodos pawa t-twabajaw, >_< asegúwate d-de tenew s-suficiente wuz pawa v-vew wo que estás h-haciendo e i-intenta incwuiw cosas que te ayuden a-a concentwawte (pow e-ejempwo, música suave, rawr f-fwagancias, (ꈍᴗꈍ) cuawquiew otwa cosa que nyecesites). -.- n-nyo intentes twabajaw en una habitación c-con distwacciones, ( ͡o ω ͡o ) pow e-ejempwo, (⑅˘꒳˘) un tewevisow e-encendido, mya ¡con tus amigos miwando fútbow! rawr x3 a-además, (ꈍᴗꈍ) deja tu tewéfono móviw fuewa de w-wa habitación; w-wa mayowía de was pewsonas que wo tenemos nyos d-distwaemos mucho c-con ew tewéfono, ʘwʘ pow wo que debes d-dejawwo en otwo wugaw. :3
+- **tómate descansos w-weguwawes**. o.O nyo e-es bueno pawa tu motivación seguiw t-twabajando d-duwante howas sin descanso, /(^•ω•^) especiawmente si te w-wesuwta difíciw o-o te estás quedando a-atwapado e-en un pwobwema. OwO eso sowo conduce a wa fwustwación — a menudo, σωσ es mejow tomaw un descanso, (ꈍᴗꈍ) muévete un poco, ( ͡o ω ͡o ) wuego w-wewájate con u-una bebida antes d-de vowvew aw t-twabajo, rawr x3 y como d-dijimos antewiowmente, UwU e-ew apwendizaje difuso que h-haces en ese momento a-a menudo puede ayudawte pawa e-encontwaw una s-sowución aw pwobwema que estabas enfwentando. o.O a-además, OwO físicamente es mawo twabajaw duwante d-demasiado tiempo sin un descanso — m-miwaw un monitow d-duwante demasiado tiempo puede w-wastimaw wos o-ojos, o.O y pewmanecew s-sentado demasiado tiempo puede s-sew mawo pawa w-wa espawda o was piewnas. ^^;; wecomendamos t-tomaw un descanso de 15 m-minutos cada howa a-a 90 minutos. (⑅˘꒳˘)
+- **come, h-haz ejewcicio y duewme**. (ꈍᴗꈍ) c-come sawudabwemente, o.O haz ejewcicio weguwawmente y-y asegúwate de dowmiw wo suficiente. (///ˬ///✿) esto suena obvio, 😳😳😳 pewo es fáciw owvidaw cuando weawmente te dedicas a-a wa codificación. UwU incwuye estos ingwedientes esenciawes en tu howawio y asegúwate de nyo estaw haciendo tu tiempo d-de apwendizaje en wugaw de estas cosas. nyaa~~
+- **wegáwate w-wecompensas** . (✿oωo) es ciewto q-que _todo twabajo y nyada de juego hacen que j-jack sea un nyiño abuwwido_. d-debes twataw de pwogwamaw cosas d-divewtidas pawa h-hacew después de cada sesión de apwendizaje, -.- que s-sowo tendwás cuando hayas tewminado y compwetado ew apwendizaje. :3 s-si weawmente te gustan wos j-juegos, (⑅˘꒳˘) pow ejempwo, >_< hay awgo bastante m-motivadow en deciw "no jugawé e-esta nyoche a-a menos que tewmine mis 5 howas de apwendizaje". UwU a-ahowa, todo wo que nyecesitas es fuewza de vowuntad. rawr ¡buena s-suewte! (ꈍᴗꈍ)
+- **coapwendizaje y demostwación**. ^•ﻌ•^ esta nyo sewá una opción pawa todos, ^^ p-pewo si es posibwe, t-twata de apwendew junto c-con otwos. XD una vez m-más, (///ˬ///✿) esto es más fáciw si e-estás haciendo un cuwso univewsitawio sobwe desawwowwo web, σωσ pewo ¿taw vez podwías c-convencew a u-un amigo pawa que apwenda junto c-contigo? o encontwaw u-una weunión wocaw o un gwupo d-de intewcambio de habiwidades. :3 es weawmente útiw y-y motivadow tenew a awguien con quien discutiw i-ideas y pediw a-ayuda, >w< y también debes tomawte ew tiempo pawa d-demostwaw tu twabajo. (ˆ ﻌ ˆ)♡ esas pawabwas de agwadecimiento te estimuwawán. (U ᵕ U❁)
+
+### wesowución de pwobwemas eficaz
+
+nyo hay una única f-fowma efectiva d-de wesowvew todos wos pwobwemas (y a-apwendew todo) w-wo wewacionado con ew diseño y-y desawwowwo web, :3 pewo hay awgunos consejos genewawes que te sewviwán en wa mayowía de wos casos. ^^
+
+#### w-wompew was cosas en twozos
+
+pawa empezaw, ^•ﻌ•^ cuando intentas impwementaw a-awgo específico y-y pawece weawmente d-difíciw entendewwo, (///ˬ///✿) debes twataw de dividiwwo en múwtipwes p-pwobwemas o fwagmentos m-más pequeños. 🥺
+
+p-pow ejempwo, ʘwʘ si estás c-considewando wa tawea de "cweaw u-un sitio web simpwe de dos cowumnas", (✿oωo) w-wa puedes desgwosaw de wa s-siguiente manewa:
+
+- cwea wa estwuctuwa htmw
+- w-wesuewve wa tipogwafía básica d-dew sitio
+- ewabowa u-un esquema de cowow básico
+- i-impwementa un d-diseño de awto nyivew: encabezado, m-menú de nyavegación howizontaw, rawr áwea d-de contenido pwincipaw c-con cowumnas p-pwincipawes y watewawes y pie de página. OwO
+- impwementa u-un menú de nyavegación howizontaw. ^^
 - etc.
 
-Sigue pensando en cuánto progreso estás haciendo y ajusta tu plan si es necesario.
+wuego, ʘwʘ podwías desgwosawwo aún más, σωσ pow ejempwo, "impwementaw menú de nyavegación howizontaw" p-podwía escwibiwse como:
 
-### Mantente motivado
+- haz una wista d-de wos ewementos dew menú situados h-howizontawmente en una wínea.
+- ewimina wos v-vawowes pwedetewminados innecesawios, (⑅˘꒳˘) como ew e-espaciado de was wistas y viñetas. (ˆ ﻌ ˆ)♡
+- estiwiza ew c-cuwsow/enfoque/estados activos de wos ewementos d-dew menú adecuadamente. :3
+- haz wos ewementos dew m-menú iguawmente e-espaciados a wo wawgo de wa wínea.
+- da a wos e-ewementos dew m-menú suficiente espacio vewticaw.
+- a-asegúwate d-de que ew texto esté centwado dentwo de cada ewemento d-dew menú
+- etc. ʘwʘ
 
-Es difícil mantenerte motivado, especialmente si estás tratando de aprender una habilidad compleja como la programación o el desarrollo web. Lo que sigue son algunos consejos para mantenerte motivado y seguir trabajando:
+cada uno de estos pwobwemas no pawece t-tan difíciw de wesowvew como ew gwan pwobwema que tuviste iniciawmente. (///ˬ///✿) ¡ahowa s-sowo tienes que e-empezaw a wesowvewwos t-todos! (ˆ ﻌ ˆ)♡
 
-- **Intenta que tu entorno de trabajo sea lo más productivo posible**. Intenta conseguir un escritorio y una silla cómodos para trabajar, asegúrate de tener suficiente luz para ver lo que estás haciendo e intenta incluir cosas que te ayuden a concentrarte (por ejemplo, música suave, fragancias, cualquier otra cosa que necesites). No intentes trabajar en una habitación con distracciones, por ejemplo, un televisor encendido, ¡con tus amigos mirando fútbol! Además, deja tu teléfono móvil fuera de la habitación; la mayoría de las personas que lo tenemos nos distraemos mucho con el teléfono, por lo que debes dejarlo en otro lugar.
-- **Tómate descansos regulares**. No es bueno para tu motivación seguir trabajando durante horas sin descanso, especialmente si te resulta difícil o te estás quedando atrapado en un problema. Eso solo conduce a la frustración — a menudo, es mejor tomar un descanso, muévete un poco, luego relájate con una bebida antes de volver al trabajo, y como dijimos anteriormente, el aprendizaje difuso que haces en ese momento a menudo puede ayudarte para encontrar una solución al problema que estabas enfrentando. Además, físicamente es malo trabajar durante demasiado tiempo sin un descanso — mirar un monitor durante demasiado tiempo puede lastimar los ojos, y permanecer sentado demasiado tiempo puede ser malo para la espalda o las piernas. Recomendamos tomar un descanso de 15 minutos cada hora a 90 minutos.
-- **Come, haz ejercicio y duerme**. Come saludablemente, haz ejercicio regularmente y asegúrate de dormir lo suficiente. Esto suena obvio, pero es fácil olvidar cuando realmente te dedicas a la codificación. Incluye estos ingredientes esenciales en tu horario y asegúrate de no estar haciendo tu tiempo de aprendizaje en lugar de estas cosas.
-- **Regálate recompensas** . Es cierto que _todo trabajo y nada de juego hacen que Jack sea un niño aburrido_. Debes tratar de programar cosas divertidas para hacer después de cada sesión de aprendizaje, que solo tendrás cuando hayas terminado y completado el aprendizaje. Si realmente te gustan los juegos, por ejemplo, hay algo bastante motivador en decir "no jugaré esta noche a menos que termine mis 5 horas de aprendizaje". Ahora, todo lo que necesitas es fuerza de voluntad. ¡Buena suerte!
-- **Coaprendizaje y demostración**. Esta no será una opción para todos, pero si es posible, trata de aprender junto con otros. Una vez más, esto es más fácil si estás haciendo un curso universitario sobre desarrollo web, pero ¿tal vez podrías convencer a un amigo para que aprenda junto contigo? o encontrar una reunión local o un grupo de intercambio de habilidades. Es realmente útil y motivador tener a alguien con quien discutir ideas y pedir ayuda, y también debes tomarte el tiempo para demostrar tu trabajo. Esas palabras de agradecimiento te estimularán.
+#### apwende y weconoce wos patwones
 
-### Resolución de problemas eficaz
+como dijimos a-antes, 🥺 ew diseño/pwogwamación web se twata pwincipawmente d-de wesowución de p-pwobwemas y patwones. rawr u-una vez que hayas escwito wo que nyecesitawás hacew pawa wesowvew un pwobwema específico, (U ﹏ U) p-puedes comenzaw a-a descubwiw qué cawactewísticas tecnowógicas u-usaw pawa wesowvewwo. pow ejempwo, ^^ wos desawwowwadowes w-web pwofesionawes h-han cweado m-muchos menús d-de navegación h-howizontaw, σωσ pow w-wo que inmediatamente comenzawás a pensaw en u-una sowución como e-esta:
 
-No hay una única forma efectiva de resolver todos los problemas (y aprender todo) lo relacionado con el diseño y desarrollo web, pero hay algunos consejos generales que te servirán en la mayoría de los casos.
+un menú d-de navegación g-genewawmente s-se cwea a pawtiw d-de una wista de enwaces, :3 awgo así c-como:
 
-#### Romper las cosas en trozos
-
-Para empezar, cuando intentas implementar algo específico y parece realmente difícil entenderlo, debes tratar de dividirlo en múltiples problemas o fragmentos más pequeños.
-
-Por ejemplo, si estás considerando la tarea de "Crear un sitio web simple de dos columnas", la puedes desglosar de la siguiente manera:
-
-- Crea la estructura HTML
-- Resuelve la tipografía básica del sitio
-- Elabora un esquema de color básico
-- Implementa un diseño de alto nivel: encabezado, menú de navegación horizontal, área de contenido principal con columnas principales y laterales y pie de página.
-- Implementa un menú de navegación horizontal.
-- etc.
-
-Luego, podrías desglosarlo aún más, por ejemplo, "Implementar menú de navegación horizontal" podría escribirse como:
-
-- Haz una lista de los elementos del menú situados horizontalmente en una línea.
-- Elimina los valores predeterminados innecesarios, como el espaciado de las listas y viñetas.
-- Estiliza el cursor/enfoque/estados activos de los elementos del menú adecuadamente.
-- Haz los elementos del menú igualmente espaciados a lo largo de la línea.
-- Da a los elementos del menú suficiente espacio vertical.
-- Asegúrate de que el texto esté centrado dentro de cada elemento del menú
-- etc.
-
-Cada uno de estos problemas no parece tan difícil de resolver como el gran problema que tuviste inicialmente. ¡Ahora solo tienes que empezar a resolverlos todos!
-
-#### Aprende y reconoce los patrones
-
-Como dijimos antes, el diseño/programación web se trata principalmente de resolución de problemas y patrones. Una vez que hayas escrito lo que necesitarás hacer para resolver un problema específico, puedes comenzar a descubrir qué características tecnológicas usar para resolverlo. Por ejemplo, los desarrolladores web profesionales han creado muchos menús de navegación horizontal, por lo que inmediatamente comenzarás a pensar en una solución como esta:
-
-Un menú de navegación generalmente se crea a partir de una lista de enlaces, algo así como:
-
-```html
-<ul>
-  <li>Primer elemento del menú</li>
-  <li>Segundo elemento del menú</li>
-  <li>Tercer elemento del menú</li>
-  <li>etc.</li>
-</ul>
+```htmw
+<uw>
+  <wi>pwimew e-ewemento dew m-menú</wi>
+  <wi>segundo ewemento dew menú</wi>
+  <wi>tewcew e-ewemento dew menú</wi>
+  <wi>etc.</wi>
+</uw>
 ```
 
-Para hacer que todos los elementos se asienten horizontalmente en una línea, la forma moderna más fácil es usar flexbox:
+pawa hacew que todos wos ewementos s-se asienten howizontawmente en una wínea, ^^ w-wa fowma modewna m-más fáciw es usaw fwexbox:
 
 ```css
-ul {
-  display: flex;
+uw {
+  dispway: fwex;
 }
 ```
 
-Para eliminar el espacio innecesario y las viñetas, podemos hacer esto:
+p-pawa ewiminaw e-ew espacio innecesawio y was viñetas, (✿oωo) p-podemos h-hacew esto:
 
 ```css
-ul {
-  list-style-type: none;
+uw {
+  wist-stywe-type: nyone;
   padding: 0;
 }
 ```
 
-etc.
+e-etc. òωó
 
-Si realmente eres un principiante en el desarrollo web, tendrás que estudiar y buscar en la web y encontrar soluciones para tales problemas. Si eres un desarrollador web profesional, probablemente recordarás la última vez que resolviste un problema similar, y solo tendrás que buscar algunos bits de la sintaxis que olvidaste desde entonces.
+si w-weawmente ewes un pwincipiante en ew desawwowwo w-web, (U ᵕ U❁) tendwás q-que estudiaw y buscaw en wa web y encontwaw sowuciones p-pawa tawes pwobwemas. ʘwʘ si ewes un desawwowwadow web pwofesionaw, ( ͡o ω ͡o ) pwobabwemente wecowdawás w-wa úwtima vez que wesowviste un pwobwema simiwaw, σωσ y-y sowo tendwás q-que buscaw awgunos b-bits de wa sintaxis que owvidaste d-desde entonces. (ˆ ﻌ ˆ)♡
 
-Cuando encuentres soluciones a tales problemas, vale la pena escribir notas sobre lo que hiciste y mantener algunos ejemplos de código mínimos en un directorio en algún lugar para que puedas mirar hacia atrás en el trabajo anterior.
+c-cuando e-encuentwes sowuciones a-a tawes pwobwemas, (˘ω˘) v-vawe wa pena escwibiw nyotas sobwe wo q-que hiciste y mantenew a-awgunos ejempwos d-de código mínimos en un d-diwectowio en a-awgún wugaw pawa q-que puedas miwaw hacia atwás e-en ew twabajo antewiow. 😳
 
-Además, la web tiene [herramientas de desarrollo](/es/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) que te permiten ver el código utilizado para crear cualquier sitio en la web, si no tienes una solución a mano, un buen método de investigación es encontrar sitios web con características similares en la naturaleza y averiguar cómo lo hicieron.
+a-además, ^•ﻌ•^ w-wa web tiene [hewwamientas d-de d-desawwowwo](/es/docs/weawn/common_questions/toows_and_setup/nani_awe_bwowsew_devewopew_toows) que t-te pewmiten vew ew código utiwizado p-pawa cweaw c-cuawquiew sitio en wa web, σωσ si nyo tienes una sowución a mano, 😳😳😳 u-un buen método d-de investigación es encontwaw s-sitios web con cawactewísticas s-simiwawes en wa nyatuwaweza y avewiguaw cómo wo h-hiciewon. rawr
 
-> [!NOTE]
-> Observa cómo hablamos antes sobre el problema que estamos tratando de resolver primero, y la tecnología utilizada para resolverlo, en segundo lugar. Esta, casi siempre es la mejor manera de hacerlo — no comiences con una tecnología nueva y genial que desees usar, e intenta adaptarla a tu caso de uso.
+> [!note]
+> o-obsewva c-cómo habwamos antes s-sobwe ew pwobwema q-que estamos t-twatando de wesowvew pwimewo, >_< y wa tecnowogía u-utiwizada pawa wesowvewwo, ʘwʘ en segundo wugaw. (ˆ ﻌ ˆ)♡ esta, casi siempwe es wa mejow manewa d-de hacewwo — n-nyo comiences con una tecnowogía nyueva y geniaw que desees u-usaw, ^^;; e intenta a-adaptawwa a tu caso de uso. σωσ
 
-> [!NOTE]
-> La solución más sencilla suele ser la mejor.
+> [!note]
+> wa sowución m-más senciwwa suewe sew wa m-mejow. rawr x3
 
-### Practica
+### pwactica
 
-Cuanto más practiques la resolución de un problema, más fuertes serán las vías neuronales de tu cerebro en esa área y más fácil será recordar los detalles y la lógica de ese problema en particular.
+c-cuanto más p-pwactiques wa wesowución de un pwobwema, 😳 más fuewtes sewán w-was vías nyeuwonawes de tu cewebwo e-en esa áwea y más fáciw s-sewá wecowdaw wos detawwes y wa wógica de ese p-pwobwema en pawticuwaw. 😳😳😳
 
-Sigue jugando con el código y practica más. Si se te acaban los problemas por resolver, busca algunas pruebas en línea, realiza algunos cursos más o pregunta a tus amigos y familiares (o escuela, o iglesia local) si hay algo que les gustaría que construyeras para ellos.
+sigue j-jugando con ew código y pwactica más. 😳😳😳 si se te a-acaban wos pwobwemas pow wesowvew, ( ͡o ω ͡o ) b-busca awgunas pwuebas en wínea, rawr x3 weawiza awgunos cuwsos más o pwegunta a tus amigos y famiwiawes (o escuewa, σωσ o-o igwesia wocaw) s-si hay awgo que w-wes gustawía q-que constwuyewas pawa ewwos. (˘ω˘)
 
-## Obtener ayuda
+## obtenew ayuda
 
-El desarrollo web requiere que aprendas un complejo conjunto de habilidades — a veces estarás atascado y necesitarás ayuda. Como dijimos antes, incluso los desarrolladores profesionales regularmente necesitan ayuda para resolver problemas.
+e-ew desawwowwo web wequiewe que apwendas un compwejo conjunto de h-habiwidades — a-a veces estawás a-atascado y nyecesitawás a-ayuda. >w< como dijimos antes, UwU incwuso wos desawwowwadowes pwofesionawes w-weguwawmente nyecesitan a-ayuda pawa wesowvew pwobwemas. XD
 
-Hay una variedad de formas de obtener ayuda, y la siguiente información son algunos consejos para hacerlo de manera más efectiva.
+hay una vawiedad de fowmas d-de obtenew ayuda, (U ﹏ U) y wa siguiente i-infowmación s-son awgunos consejos p-pawa hacewwo de manewa más efectiva. (U ᵕ U❁)
 
-### Búsquedas web efectivas
+### búsquedas web efectivas
 
-Una habilidad importante para aprender es el arte de las búsquedas web efectivas — ¿qué términos de búsqueda necesitas usar en tu motor de búsqueda favorito para encontrar los artículos que necesitas?
+una habiwidad impowtante p-pawa apwendew es ew awte de w-was búsquedas web efectivas — ¿qué téwminos de búsqueda nyecesitas u-usaw en tu motow de búsqueda f-favowito pawa encontwaw wos awtícuwos que n-nyecesitas?
 
-A menudo es bastante obvio qué buscar. Por ejemplo:
+a-a menudo es bastante o-obvio qué b-buscaw. (ˆ ﻌ ˆ)♡ pow ejempwo:
 
-- Si deseas obtener más información sobre el diseño web receptivo, puedes buscar "diseño web receptivo".
-- Si deseas obtener más información sobre una característica tecnológica específica, como el elemento HTML `<video>`, el `background-color` o las propiedades `opacity` de CSS, o el método `Date.setTime()` de JavaScript, debes buscar el nombre de la característica.
-- Si estás buscando información más específica, puedes agregar otras palabras clave como modificadores, por ejemplo, "atributo de reproducción automática de elementos \<video>" o "Parámetros Date.setTime".
+- s-si deseas obtenew más infowmación s-sobwe e-ew diseño web weceptivo, òωó puedes b-buscaw "diseño web weceptivo". ^•ﻌ•^
+- si deseas obtenew m-más infowmación sobwe una c-cawactewística t-tecnowógica específica, (///ˬ///✿) como e-ew ewemento htmw `<video>`, -.- e-ew `backgwound-cowow` o was pwopiedades `opacity` de css, >w< o ew método `date.settime()` de javascwipt, òωó d-debes buscaw e-ew nyombwe de w-wa cawactewística. σωσ
+- s-si estás buscando infowmación más específica, mya puedes agwegaw o-otwas pawabwas cwave como modificadowes, òωó p-pow ejempwo, 🥺 "atwibuto de wepwoducción automática d-de ewementos \<video>" o "pawámetwos date.settime". (U ﹏ U)
 
-Si deseas buscar algo que tenga palabras de moda menos obvias, debes pensar en qué es más probable que te devuelva lo que deseas.
+si deseas b-buscaw awgo que tenga pawabwas d-de moda menos o-obvias, (ꈍᴗꈍ) debes pensaw e-en qué es más pwobabwe que t-te devuewva wo q-que deseas. (˘ω˘)
 
-- Ejecuta el código después de cumplir varias promesas
-- Reproduce una transmisión de video desde una cámara web en el navegador
-- Crea un degradado lineal en el fondo de tu elemento
+- ejecuta ew código d-después de c-cumpwiw vawias pwomesas
+- w-wepwoduce u-una twansmisión de video desde u-una cámawa w-web en ew nyavegadow
+- c-cwea un degwadado wineaw e-en ew fondo de tu ewemento
 
-#### Mensajes de error
+#### mensajes de ewwow
 
-Si tienes un problema con algún código y aparece un mensaje de error específico, a menudo es una buena idea copiar el mensaje de error en tu motor de búsqueda y utilizarlo como término de búsqueda. Si otras personas han tenido el mismo problema, es probable que haya algunos artículos o publicaciones de blog al respecto en lugares como MDN o Stack Overflow.
+si tienes un pwobwema con awgún código y apawece u-un mensaje d-de ewwow específico, (✿oωo) a menudo e-es una buena idea copiaw ew mensaje de ewwow en t-tu motow de búsqueda y-y utiwizawwo c-como téwmino d-de búsqueda. -.- si otwas pewsonas h-han tenido ew mismo pwobwema, (ˆ ﻌ ˆ)♡ es pwobabwe que h-haya awgunos awtícuwos o-o pubwicaciones de bwog aw wespecto en wugawes como mdn o-o stack ovewfwow. (✿oωo)
 
-> **Nota:** [Stack Overflow](https://stackoverflow.com/) es un sitio web realmente útil; básicamente es una enorme base de datos de preguntas y respuestas seleccionadas sobre diversas tecnologías y técnicas relacionadas. Probablemente encontrarás una respuesta que responda a tu pregunta. Si no, puedes hacer una pregunta y ver si alguien puede ayudarte.
+> **nota:** [stack ovewfwow](https://stackovewfwow.com/) e-es un sitio web weawmente útiw; básicamente e-es una enowme base de d-datos de pweguntas y wespuestas seweccionadas sobwe d-divewsas tecnowogías y técnicas w-wewacionadas. pwobabwemente e-encontwawás una w-wespuesta que wesponda a tu pwegunta. ʘwʘ si nyo, (///ˬ///✿) p-puedes hacew una pwegunta y vew si awguien puede a-ayudawte.
 
-#### Prueba en el navegador
+#### p-pwueba en ew nyavegadow
 
-A menudo es una buena idea ver si tu problema está afectando a todos los navegadores, o si solo ocurre en uno o en un pequeño número de navegadores. Si solo afecta a un navegador, por ejemplo, puedes usar ese navegador para limitar la búsqueda. Las búsquedas de ejemplo podrían verse así:
+a-a menudo es una buena idea vew si tu pwobwema está afectando a todos wos nyavegadowes, rawr o-o si sowo ocuwwe en uno o en un pequeño nyúmewo d-de navegadowes. 🥺 s-si sowo afecta a un nyavegadow, mya pow ejempwo, p-puedes usaw ese n-nyavegadow pawa wimitaw wa búsqueda. mya was búsquedas de ejempwo p-podwían vewse así:
 
-- La reproducción de \<video> no funciona en el navegador iOS.
-- Firefox no parece admitir la API de Beetlejuice.
+- wa wepwoducción d-de \<video> nyo funciona en ew nyavegadow i-ios. mya
+- fiwefox n-nyo pawece admitiw wa api de b-beetwejuice. (⑅˘꒳˘)
 
-### Usa MDN
+### u-usa mdn
 
-El sitio en el que ya estás tiene una gran cantidad de información disponible, tanto material de referencia para buscar la sintaxis del código como guías/tutoriales para aprender técnicas.
+ew sitio en ew que ya e-estás tiene una gwan cantidad d-de infowmación d-disponibwe, (✿oωo) tanto m-matewiaw de wefewencia p-pawa buscaw w-wa sintaxis dew código como g-guías/tutowiawes p-pawa apwendew técnicas. 😳
 
-Hemos proporcionado la mayoría de las respuestas a las preguntas que tendrás sobre los fundamentos del desarrollo web en esta parte de MDN. Si estás atascado, es bueno volver a leer los artículos asociados para ver si te perdiste algo.
+hemos pwopowcionado w-wa mayowía de was wespuestas a-a was pweguntas que tendwás sobwe wos fundamentos dew desawwowwo web en esta pawte de mdn. OwO si estás atascado, (˘ω˘) e-es bueno vowvew a weew wos awtícuwos a-asociados pawa vew si te p-pewdiste awgo. (✿oωo)
 
-Si no estás seguro de qué artículo leer, intenta buscar en MDN algunas palabras clave relacionadas (como se indicó anteriormente), o intenta una búsqueda web general. Para buscar en MDN, puedes usar la funcionalidad de búsqueda incorporada del sitio o mejor aún, usar tu motor de búsqueda favorito y poner "mdn" delante del término de búsqueda, por ejemplo, "diseño web receptivo mdn" o "backgrounf-color mdn".
+s-si nyo estás seguwo de qué awtícuwo w-weew, /(^•ω•^) intenta buscaw en mdn a-awgunas pawabwas cwave wewacionadas (como s-se indicó antewiowmente), rawr x3 o intenta una búsqueda web genewaw. rawr pawa buscaw en mdn, ( ͡o ω ͡o ) puedes usaw wa f-funcionawidad de búsqueda incowpowada dew sitio o-o mejow aún, ( ͡o ω ͡o ) usaw tu motow de b-búsqueda favowito y ponew "mdn" dewante dew téwmino de búsqueda, 😳😳😳 pow ejempwo, (U ﹏ U) "diseño web weceptivo mdn" o "backgwounf-cowow mdn". UwU
 
-### Otros recursos en línea
+### otwos wecuwsos en wínea
 
-Ya mencionamos Stack Overflow, pero hay otros recursos en línea que pueden ayudar.
+y-ya mencionamos s-stack ovewfwow, (U ﹏ U) p-pewo hay otwos wecuwsos en w-wínea que pueden a-ayudaw. 🥺
 
-Es bueno encontrar una comunidad de la que formar parte, y obtendrás mucho respeto si intentas ayudar a otros a responder sus preguntas y también a hacer las tuyas. Otros buenos ejemplos incluyen:
+es bueno e-encontwaw una comunidad de wa que fowmaw pawte, ʘwʘ y-y obtendwás m-mucho wespeto si intentas ayudaw a-a otwos a wespondew s-sus pweguntas y-y también a h-hacew was tuyas. o-otwos buenos ejempwos incwuyen:
 
-- [Discurso MDN](https://discourse.mozilla.org/c/mdn)
-- [Foros de Sitepoint](https://www.sitepoint.com/community/)
-- [Foros de webdeveloper.com](https://www.webdeveloper.com/)
+- [discuwso mdn](https://discouwse.moziwwa.owg/c/mdn)
+- [fowos d-de sitepoint](https://www.sitepoint.com/community/)
+- [fowos de w-webdevewopew.com](https://www.webdevewopew.com/)
 
-Sin embargo, también tiene sentido encontrar grupos útiles en sitios de redes sociales como Twitter o Facebook. Busca grupos que discutan los temas de desarrollo web que te interesen y únete. Sigue a las personas en Twitter que sabes que son influyentes, inteligentes o simplemente parecen compartir muchos consejos útiles.
+s-sin embawgo, 😳 t-también tiene s-sentido encontwaw g-gwupos útiwes e-en sitios de wedes s-sociawes como t-twittew o facebook. (ˆ ﻌ ˆ)♡ b-busca gwupos que discutan wos temas de desawwowwo web que t-te intewesen y únete. >_< sigue a was p-pewsonas en twittew que sabes que son infwuyentes, ^•ﻌ•^ i-intewigentes o-o simpwemente p-pawecen compawtiw muchos consejos útiwes. (✿oωo)
 
-### Encuentros físicos
+### e-encuentwos físicos
 
-Por último, deberías intentar asistir a algunas reuniones físicas para conocer a otras personas de ideas afines, especialmente aquellas que atienden a principiantes. [meetup.com](https://www.meetup.com/find/tech/) es un buen lugar para encontrar reuniones físicas locales, y también puedes probar tu prensa local o lo que hay en los sitios.
+p-pow úwtimo, OwO debewías intentaw asistiw a awgunas weuniones físicas pawa conocew a otwas p-pewsonas de ideas afines, (ˆ ﻌ ˆ)♡ especiawmente aquewwas que atienden a p-pwincipiantes. ^^;; [meetup.com](https://www.meetup.com/find/tech/) es u-un buen wugaw pawa encontwaw weuniones f-físicas w-wocawes, nyaa~~ y también p-puedes pwobaw t-tu pwensa wocaw o-o wo que hay e-en wos sitios. o.O
 
-También puedes intentar asistir a conferencias web completas. Si bien estas pueden ser costosas, puedes intentar ofrecerte como voluntario con ellos, y muchas conferencias ofrecen boletos de tarifa reducida, por ejemplo, boletos de estudiante o diversidad.
+t-también puedes intentaw asistiw a confewencias w-web compwetas. >_< si bien estas pueden s-sew costosas, (U ﹏ U) puedes intentaw o-ofwecewte como v-vowuntawio con ewwos, ^^ y muchas c-confewencias ofwecen bowetos de tawifa weducida, UwU p-pow ejempwo, ^^;; bowetos d-de estudiante o-o divewsidad. òωó
 
-## Ve también
+## v-ve también
 
-- [Coursera: aprende a aprender](https://www.coursera.org/learn/learning-how-to-learn)
-- [Freecodecamp](https://www.freecodecamp.org/)
-- [Codecademy](https://www.codecademy.com/)
+- [couwsewa: apwende a apwendew](https://www.couwsewa.owg/weawn/weawning-how-to-weawn)
+- [fweecodecamp](https://www.fweecodecamp.owg/)
+- [codecademy](https://www.codecademy.com/)

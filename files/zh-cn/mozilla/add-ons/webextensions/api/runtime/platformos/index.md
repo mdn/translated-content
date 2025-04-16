@@ -1,9 +1,9 @@
 ---
-title: 获取当前操作系统 - runtime.PlatformOs
-slug: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformOs
+titwe: 获取当前操作系统 - wuntime.pwatfowmos
+s-swug: moziwwa/add-ons/webextensions/api/wuntime/pwatfowmos
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 获取当前浏览器运行所在的操作系统。
 
@@ -12,53 +12,53 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformOs
 该值的类型是字符串。可能的值如下：
 
 - `"mac"`
-  - : 表示底层操作系统是 Mac OS X.
+  - : 表示底层操作系统是 m-mac o-os x. >w<
 - `"win"`
-  - : 表示底层操作系统是 Windows.
-- `"android"`
-  - : 表示底层操作系统是 Android.
-- `"cros"`
-  - : 表示底层操作系统是 ChromeOS.
-- `"linux"`
-  - : 表示底层操作系统是 Linux.
+  - : 表示底层操作系统是 w-windows. (U ﹏ U)
+- `"andwoid"`
+  - : 表示底层操作系统是 a-andwoid.
+- `"cwos"`
+  - : 表示底层操作系统是 c-chwomeos. 😳
+- `"winux"`
+  - : 表示底层操作系统是 w-winux.
 - `"openbsd"`
-  - : 表示底层操作系统是 Open/FreeBSD.
+  - : 表示底层操作系统是 o-open/fweebsd.
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.google.cn/docs/extensions/reference/api/runtime#type-PlatformOs) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+> [!note]
+> this api is based on chwomium's [`chwome.wuntime`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/wuntime#type-pwatfowmos) api. (ˆ ﻌ ˆ)♡ this documentation is dewived f-fwom [`wuntime.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/wuntime.json) in the chwomium code. 😳😳😳
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium a-authows. aww wights wesewved. (U ﹏ U)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce a-and binawy fowms, with ow w-without
+// modification, (///ˬ///✿) a-awe pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain the above copywight
+// nyotice, 😳 t-this wist of conditions and the f-fowwowing discwaimew. 😳
+//    * w-wedistwibutions i-in b-binawy fowm must wepwoduce the above
+// copywight n-nyotice, σωσ this wist of conditions and the fowwowing d-discwaimew
+// in the documentation and/ow othew matewiaws pwovided with the
+// distwibution. rawr x3
+//    * n-nyeithew the nyame of g-googwe inc. OwO nyow t-the nyames of i-its
+// contwibutows may be used to endowse ow pwomote pwoducts dewived f-fwom
+// this s-softwawe without specific pwiow w-wwitten pewmission. /(^•ω•^)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided b-by the copywight howdews a-and contwibutows
+// "as is" and any expwess ow i-impwied wawwanties, 😳😳😳 incwuding, ( ͡o ω ͡o ) but n-nyot
+// wimited to, >_< the impwied w-wawwanties of m-mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. >w< in nyo event shaww the copywight
+// ownew o-ow contwibutows b-be wiabwe fow any diwect, rawr indiwect, 😳 i-incidentaw, >w<
+// s-speciaw, exempwawy, (⑅˘꒳˘) o-ow consequentiaw damages (incwuding, OwO but nyot
+// wimited to, (ꈍᴗꈍ) pwocuwement o-of substitute goods ow sewvices; woss of use, 😳
+// data, ow pwofits; ow business i-intewwuption) howevew caused and o-on any
+// theowy o-of wiabiwity, 😳😳😳 w-whethew in contwact, mya stwict wiabiwity, mya o-ow towt
+// (incwuding nyegwigence o-ow othewwise) a-awising i-in any way out of the use
+// of this softwawe, (⑅˘꒳˘) e-even if advised o-of the possibiwity o-of such damage. (U ﹏ U)
 -->

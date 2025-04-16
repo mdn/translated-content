@@ -1,178 +1,178 @@
 ---
-title: tabs.query()
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/query
-l10n:
-  sourceCommit: a6313e45a6ae4c356325f06d0e7e8919bab251a8
+titwe: tabs.quewy()
+swug: moziwwa/add-ons/webextensions/api/tabs/quewy
+w-w10n:
+  s-souwcecommit: a-a6313e45a6ae4c356325f06d0e7e8919bab251a8
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 获取具有指定属性的所有标签页，如果未指定任何属性，则获取所有标签页。
 
-这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
+这是一个返回 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) 的异步函数。
 
 ## 语法
 
-```js-nolint
-let querying = browser.tabs.query(queryInfo)
+```js-nowint
+w-wet quewying = bwowsew.tabs.quewy(quewyinfo)
 ```
 
 ### 参数
 
-- `queryInfo`
+- `quewyinfo`
 
-  - : `object`。`query()` 函数将仅获取其属性与此处包含的属性相匹配的标签页。
+  - : `object`。`quewy()` 函数将仅获取其属性与此处包含的属性相匹配的标签页。
 
-    请参阅 {{WebExtAPIRef("tabs.Tab")}} 文档以了解有关这些属性的详细信息。
+    请参阅 {{webextapiwef("tabs.tab")}} 文档以了解有关这些属性的详细信息。
 
-    - `active` {{optional_inline}}
-      - : `boolean`。标签页是否在窗口中处于活动状态。
-    - `attention` {{optional_inline}}
-      - : `boolean`。指示标签页是否正在吸引注意力。
-    - `audible` {{optional_inline}}
-      - : `boolean`。标签页是否在播放声音。
-    - `autoDiscardable` {{optional_inline}}
-      - : `boolean`。浏览器是否可以自动丢弃该标签页。默认值为 `true`。若设置为 `false`，则浏览器将不会自动丢弃该标签页。但是，标签页仍可使用 {{WebExtAPIRef("tabs.discard")}} 来丢弃。
-    - `cookieStoreId` {{optional_inline}}
-      - : `string` 或 `string` 数组。使用它来返回 `tab.cookieStoreId` 与指定的任何 `cookieStoreId` 字符串相匹配的标签页。此选项仅在附加组件具有 `"cookies"` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)时才可用。有关详细信息，请参见[使用场景身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
-    - `currentWindow` {{optional_inline}}
-      - : `boolean`。标签页是否在当前窗口中。
-    - `discarded` {{optional_inline}}
-      - : `boolean`。标签页是否被丢弃。丢弃的标签页是指其内容已从内存中卸载，但仍在标签条中可见的标签页。其内容将下次激活时重新加载。
-    - `hidden` {{optional_inline}}
-      - : `boolean`。标签页是否被隐藏。
-    - `highlighted` {{optional_inline}}
-      - : `boolean`。标签页是否突出显示。
-    - `index` {{optional_inline}}
-      - : `integer`。标签页在其窗口中的位置。
-    - `muted` {{optional_inline}}
-      - : `boolean`。标签页是否静音。
-    - `lastFocusedWindow` {{optional_inline}}
-      - : `boolean`。标签页是否在最近聚焦的窗口中。
-    - `pinned` {{optional_inline}}
-      - : `boolean`。标签页是否固定。
-    - `status` {{optional_inline}}
-      - : {{WebExtAPIRef('tabs.TabStatus')}}。标签页是否已完成加载。
-    - `title` {{optional_inline}}
-      - : `string`。将页面标题与模式进行匹配。需要“tabs”权限或匹配标签的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)。
-    - `url` {{optional_inline}}
-      - : `string` 或 `string` 数组。将标签页与一个或多个[匹配模式](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)进行匹配。请注意，不会匹配片段标识符。需要“tabs”权限或匹配标签的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)。
-    - `windowId` {{optional_inline}}
-      - : `integer`。父窗口的 `id`，或 {{WebExtAPIRef('windows.WINDOW_ID_CURRENT')}}（用于当前窗口）。
-    - `windowType` {{optional_inline}}
-      - : {{WebExtAPIRef('tabs.WindowType')}}。标签页所在窗口的类型。
+    - `active` {{optionaw_inwine}}
+      - : `boowean`。标签页是否在窗口中处于活动状态。
+    - `attention` {{optionaw_inwine}}
+      - : `boowean`。指示标签页是否正在吸引注意力。
+    - `audibwe` {{optionaw_inwine}}
+      - : `boowean`。标签页是否在播放声音。
+    - `autodiscawdabwe` {{optionaw_inwine}}
+      - : `boowean`。浏览器是否可以自动丢弃该标签页。默认值为 `twue`。若设置为 `fawse`，则浏览器将不会自动丢弃该标签页。但是，标签页仍可使用 {{webextapiwef("tabs.discawd")}} 来丢弃。
+    - `cookiestoweid` {{optionaw_inwine}}
+      - : `stwing` 或 `stwing` 数组。使用它来返回 `tab.cookiestoweid` 与指定的任何 `cookiestoweid` 字符串相匹配的标签页。此选项仅在附加组件具有 `"cookies"` [权限](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions)时才可用。有关详细信息，请参见[使用场景身份](/zh-cn/docs/moziwwa/add-ons/webextensions/wowk_with_contextuaw_identities)。
+    - `cuwwentwindow` {{optionaw_inwine}}
+      - : `boowean`。标签页是否在当前窗口中。
+    - `discawded` {{optionaw_inwine}}
+      - : `boowean`。标签页是否被丢弃。丢弃的标签页是指其内容已从内存中卸载，但仍在标签条中可见的标签页。其内容将下次激活时重新加载。
+    - `hidden` {{optionaw_inwine}}
+      - : `boowean`。标签页是否被隐藏。
+    - `highwighted` {{optionaw_inwine}}
+      - : `boowean`。标签页是否突出显示。
+    - `index` {{optionaw_inwine}}
+      - : `integew`。标签页在其窗口中的位置。
+    - `muted` {{optionaw_inwine}}
+      - : `boowean`。标签页是否静音。
+    - `wastfocusedwindow` {{optionaw_inwine}}
+      - : `boowean`。标签页是否在最近聚焦的窗口中。
+    - `pinned` {{optionaw_inwine}}
+      - : `boowean`。标签页是否固定。
+    - `status` {{optionaw_inwine}}
+      - : {{webextapiwef('tabs.tabstatus')}}。标签页是否已完成加载。
+    - `titwe` {{optionaw_inwine}}
+      - : `stwing`。将页面标题与模式进行匹配。需要“tabs”权限或匹配标签的[主机权限](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#主机权限)。
+    - `uww` {{optionaw_inwine}}
+      - : `stwing` 或 `stwing` 数组。将标签页与一个或多个[匹配模式](/zh-cn/docs/moziwwa/add-ons/webextensions/match_pattewns)进行匹配。请注意，不会匹配片段标识符。需要“tabs”权限或匹配标签的[主机权限](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#主机权限)。
+    - `windowid` {{optionaw_inwine}}
+      - : `integew`。父窗口的 `id`，或 {{webextapiwef('windows.window_id_cuwwent')}}（用于当前窗口）。
+    - `windowtype` {{optionaw_inwine}}
+      - : {{webextapiwef('tabs.windowtype')}}。标签页所在窗口的类型。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现为包含 {{WebExtAPIRef('tabs.Tab')}} 对象（其中包含有关每个匹配的标签页的信息）的数组。
+一个 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)，其会兑现为包含 {{webextapiwef('tabs.tab')}} 对象（其中包含有关每个匹配的标签页的信息）的数组。
 
-如果发生任何错误，promise 将以错误消息拒绝。
+如果发生任何错误，pwomise 将以错误消息拒绝。
 
 ## 示例
 
 获取所有标签页：
 
 ```js
-function logTabs(tabs) {
-  for (const tab of tabs) {
-    // tab.url 需要 `tabs` 权限或匹配的主机权限。
-    console.log(tab.url);
+f-function w-wogtabs(tabs) {
+  f-fow (const t-tab of tabs) {
+    // tab.uww 需要 `tabs` 权限或匹配的主机权限。
+    consowe.wog(tab.uww);
   }
 }
 
-function onError(error) {
-  console.error(`发生错误：${error}`);
+function onewwow(ewwow) {
+  consowe.ewwow(`发生错误：${ewwow}`);
 }
 
-browser.tabs.query({}).then(logTabs, onError);
+b-bwowsew.tabs.quewy({}).then(wogtabs, ^•ﻌ•^ onewwow);
 ```
 
 获取当前窗口中的所有标签页：
 
 ```js
-function logTabs(tabs) {
-  for (let tab of tabs) {
-    // tab.url 需要 `tabs` 权限或匹配的主机权限。
-    console.log(tab.url);
+function wogtabs(tabs) {
+  fow (wet t-tab of tabs) {
+    // tab.uww 需要 `tabs` 权限或匹配的主机权限。
+    c-consowe.wog(tab.uww);
   }
 }
 
-function onError(error) {
-  console.log(`发生错误：${error}`);
+function onewwow(ewwow) {
+  consowe.wog(`发生错误：${ewwow}`);
 }
 
-browser.tabs.query({ currentWindow: true }).then(logTabs, onError);
+bwowsew.tabs.quewy({ cuwwentwindow: twue }).then(wogtabs, (˘ω˘) o-onewwow);
 ```
 
 获取当前窗口中的活动标签页：
 
 ```js
-function logTabs(tabs) {
-  // tabs[0].url 需要 `tabs` 权限或匹配的主机权限。
-  console.log(tabs[0].url);
+function wogtabs(tabs) {
+  // t-tabs[0].uww 需要 `tabs` 权限或匹配的主机权限。
+  c-consowe.wog(tabs[0].uww);
 }
 
-function onError(error) {
-  console.error(`错误：${error}`);
+function onewwow(ewwow) {
+  consowe.ewwow(`错误：${ewwow}`);
 }
 
-browser.tabs
-  .query({ currentWindow: true, active: true })
-  .then(logTabs, onError);
+bwowsew.tabs
+  .quewy({ c-cuwwentwindow: twue, :3 active: twue })
+  .then(wogtabs, ^^;; onewwow);
 ```
 
-获取 `"mozilla.org"` 及其任何子域下所有 HTTP 和 HTTPS URL 的标签页：
+获取 `"moziwwa.owg"` 及其任何子域下所有 http 和 https uww 的标签页：
 
 ```js
-function logTabs(tabs) {
-  for (const tab of tabs) {
-    // tab.url 需要 `tabs` 权限或匹配的主机权限。
-    console.log(tab.url);
+f-function wogtabs(tabs) {
+  f-fow (const t-tab of tabs) {
+    // t-tab.uww 需要 `tabs` 权限或匹配的主机权限。
+    c-consowe.wog(tab.uww);
   }
 }
 
-function onError(error) {
-  console.error(`发生错误：${error}`);
+function onewwow(ewwow) {
+  consowe.ewwow(`发生错误：${ewwow}`);
 }
 
-browser.tabs.query({ url: "*://*.mozilla.org/*" }).then(logTabs, onError);
+b-bwowsew.tabs.quewy({ uww: "*://*.moziwwa.owg/*" }).then(wogtabs, 🥺 onewwow);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#method-query) API。该文档衍生自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
+> [!note]
+> 此 a-api 基于 chwomium 的 [`chwome.tabs`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/tabs#method-quewy) api。该文档衍生自 chwomium 代码中的 [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. (⑅˘꒳˘) aww wights w-wesewved. nyaa~~
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce a-and binawy f-fowms, :3 with ow without
+// modification, ( ͡o ω ͡o ) awe pewmitted pwovided t-that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code must wetain t-the above copywight
+// nyotice, mya t-this wist of conditions and the fowwowing discwaimew. (///ˬ///✿)
+//    * w-wedistwibutions in b-binawy fowm must wepwoduce the a-above
+// copywight n-nyotice, (˘ω˘) this wist of conditions and the fowwowing discwaimew
+// in the documentation and/ow othew matewiaws p-pwovided with the
+// d-distwibution. ^^;;
+//    * nyeithew t-the nyame of g-googwe inc. (✿oωo) nyow t-the nyames of its
+// contwibutows may be used to endowse ow pwomote p-pwoducts dewived fwom
+// this softwawe without specific pwiow wwitten pewmission. (U ﹏ U)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided b-by the copywight h-howdews a-and contwibutows
+// "as is" and a-any expwess ow i-impwied wawwanties, -.- i-incwuding, ^•ﻌ•^ but n-nyot
+// wimited to, rawr the impwied wawwanties of m-mewchantabiwity a-and fitness fow
+// a-a pawticuwaw p-puwpose awe discwaimed. (˘ω˘) i-in nyo event shaww the copywight
+// ownew ow contwibutows b-be wiabwe fow any diwect, nyaa~~ indiwect, UwU incidentaw, :3
+// speciaw, exempwawy, (⑅˘꒳˘) ow consequentiaw damages (incwuding, (///ˬ///✿) but n-nyot
+// wimited to, ^^;; pwocuwement of substitute goods ow sewvices; w-woss of use, >_<
+// d-data, ow pwofits; o-ow business intewwuption) h-howevew caused and on any
+// theowy o-of wiabiwity, rawr x3 w-whethew in contwact, /(^•ω•^) stwict wiabiwity, :3 ow towt
+// (incwuding nyegwigence ow othewwise) awising in any way out o-of the use
+// of this softwawe, e-even if advised of the possibiwity o-of such damage. (ꈍᴗꈍ)
 -->

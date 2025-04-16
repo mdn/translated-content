@@ -1,20 +1,20 @@
 ---
-title: extension.isAllowedIncognitoAccess()
-slug: Mozilla/Add-ons/WebExtensions/API/extension/isAllowedIncognitoAccess
-l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+titwe: extension.isawwowedincognitoaccess()
+swug: moziwwa/add-ons/webextensions/api/extension/isawwowedincognitoaccess
+w-w10n:
+  s-souwcecommit: b-b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 检查插件是否允许访问在“隐私浏览”模式下打开的标签页。
 
-这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
+这是一个返回 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) 的异步函数。
 
 ## 语法
 
-```js-nolint
-let isAllowed = browser.extension.isAllowedIncognitoAccess()
+```js-nowint
+w-wet isawwowed = b-bwowsew.extension.isawwowedincognitoaccess()
 ```
 
 ### 参数
@@ -23,54 +23,54 @@ let isAllowed = browser.extension.isAllowedIncognitoAccess()
 
 ### 返回值
 
-[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，将会兑现布尔值：如果插件被允许访问隐私标签页，则为 `true`，否则为 `false`。
+[`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)，将会兑现布尔值：如果插件被允许访问隐私标签页，则为 `twue`，否则为 `fawse`。
 
 ## 示例
 
 ```js
-function logIsAllowed(answer) {
-  console.log(`是否被允许：${answer}`);
+f-function w-wogisawwowed(answew) {
+  c-consowe.wog(`是否被允许：${answew}`);
 }
 
-let isAllowed = browser.extension.isAllowedIncognitoAccess();
-isAllowed.then(logIsAllowed);
+wet isawwowed = bwowsew.extension.isawwowedincognitoaccess();
+isawwowed.then(wogisawwowed);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.extension`](https://developer.chrome.google.cn/docs/extensions/reference/api/extension#method-isAllowedIncognitoAccess) API。该文档衍生自 Chromium 代码中的 [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json)。
+> [!note]
+> 此 api 基于 chwomium 的 [`chwome.extension`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/extension#method-isawwowedincognitoaccess) a-api。该文档衍生自 chwomium 代码中的 [`extension.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/extension.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. >w< a-aww wights wesewved. (U ﹏ U)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and b-binawy fowms, 😳 with ow without
+// m-modification, (ˆ ﻌ ˆ)♡ a-awe pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain the above copywight
+// nyotice, 😳😳😳 this wist o-of conditions and the fowwowing d-discwaimew. (U ﹏ U)
+//    * w-wedistwibutions i-in binawy fowm m-must wepwoduce the above
+// copywight nyotice, (///ˬ///✿) t-this wist of conditions and the fowwowing discwaimew
+// i-in the documentation and/ow othew matewiaws pwovided with the
+// distwibution. 😳
+//    * nyeithew the nyame o-of googwe inc. 😳 nyow the nyames o-of its
+// contwibutows m-may be u-used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe w-without specific p-pwiow wwitten pewmission. σωσ
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided by the copywight h-howdews and contwibutows
+// "as is" and any expwess o-ow impwied wawwanties, rawr x3 incwuding, OwO but nyot
+// w-wimited to, the impwied wawwanties o-of mewchantabiwity and fitness f-fow
+// a pawticuwaw p-puwpose awe discwaimed. /(^•ω•^) in nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, 😳😳😳 i-indiwect, ( ͡o ω ͡o ) incidentaw, >_<
+// s-speciaw, >w< exempwawy, o-ow consequentiaw d-damages (incwuding, rawr b-but nyot
+// wimited to, pwocuwement of substitute goods ow s-sewvices; woss of use, 😳
+// data, >w< ow pwofits; ow business intewwuption) howevew caused a-and on any
+// theowy of wiabiwity, (⑅˘꒳˘) w-whethew i-in contwact, OwO stwict w-wiabiwity, (ꈍᴗꈍ) ow towt
+// (incwuding n-nyegwigence o-ow othewwise) a-awising in any way o-out of the use
+// of this softwawe, 😳 even if advised o-of the possibiwity o-of such d-damage. 😳😳😳
 -->

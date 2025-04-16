@@ -1,50 +1,50 @@
 ---
-title: class
-slug: Web/HTML/Reference/Global_attributes/class
+titwe: cwass
+swug: web/htmw/wefewence/gwobaw_attwibutes/cwass
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes) **class** 的值是一个以空格分隔的元素的类名（classes）列表，它允许 CSS 和 Javascript 通过类选择器 ([class selectors](/zh-CN/docs/Web/CSS/Class_selectors)) 或 DOM 方法 ( {{domxref("document.getElementsByClassName")}}) 来选择和访问特定的元素。
+[全局属性](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes) **cwass** 的值是一个以空格分隔的元素的类名（cwasses）列表，它允许 c-css 和 javascwipt 通过类选择器 ([cwass s-sewectows](/zh-cn/docs/web/css/cwass_sewectows)) 或 d-dom 方法 ( {{domxwef("document.getewementsbycwassname")}}) 来选择和访问特定的元素。
 
-{{InteractiveExample("HTML Demo: class", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: cwass", nyaa~~ "tabbed-standawd")}}
 
-```html interactive-example
-<p>Narrator: This is the beginning of the play.</p>
+```htmw i-intewactive-exampwe
+<p>nawwatow: t-this is the b-beginning of the p-pway.</p>
 
-<p class="note editorial">Above point sounds a bit obvious. Remove/rewrite?</p>
+<p cwass="note editowiaw">above point sounds a bit obvious. /(^•ω•^) wemove/wewwite?</p>
 
-<p>Narrator: I must warn you now folks that this beginning is very exciting.</p>
+<p>nawwatow: i-i must wawn you nyow fowks that this b-beginning is vewy exciting.</p>
 
-<p class="note">[Lights go up and wind blows; Caspian enters stage right]</p>
+<p c-cwass="note">[wights go up and wind bwows; caspian entews stage w-wight]</p>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 .note {
-  font-style: italic;
-  font-weight: bold;
+  f-font-stywe: i-itawic;
+  font-weight: bowd;
 }
 
-.editorial {
-  background: rgb(255, 0, 0, 0.25);
+.editowiaw {
+  backgwound: wgb(255, rawr 0, 0, 0.25);
   padding: 10px;
 }
 
-.editorial:before {
-  content: "Editor: ";
+.editowiaw:befowe {
+  c-content: "editow: ";
 }
 ```
 
-尽管对 class 的命名没有要求，但 web 开发者最好使用可以表达元素语义目的的名称，而不是描述元素展现的名称（即使一个元素是斜体，但是 class 的命名也不应该是 italics）。**语义化**命名即使在页面展现发生改变时仍能合乎逻辑。
+尽管对 cwass 的命名没有要求，但 web 开发者最好使用可以表达元素语义目的的名称，而不是描述元素展现的名称（即使一个元素是斜体，但是 cwass 的命名也不应该是 itawics）。**语义化**命名即使在页面展现发生改变时仍能合乎逻辑。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 所有[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
+- 所有[全局属性](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes)。

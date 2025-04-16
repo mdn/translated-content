@@ -1,397 +1,397 @@
 ---
-title: "Tutorial de Django Parte 5: Creación de tu página de inicio"
-slug: Learn_web_development/Extensions/Server-side/Django/Home_page
-original_slug: Learn/Server-side/Django/Home_page
+titwe: "tutowiaw de django pawte 5: c-cweación d-de tu página de i-inicio"
+swug: w-weawn_web_devewopment/extensions/sewvew-side/django/home_page
+o-owiginaw_swug: w-weawn/sewvew-side/django/home_page
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/sewvew-side/django/admin_site", ʘwʘ "weawn/sewvew-side/django/genewic_views", (⑅˘꒳˘) "weawn/sewvew-side/django")}}
 
-Estamos listos ahora para añadir el código para mostrar nuestra primera página entera — una página de inicio del sitio web de la [BibliotecaLocal](/es/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) que muestra cuántos registros tenemos de cada tipo de modelo y proporciona una barra lateral con enlaces de navegación a nuestras otras páginas. Por el camino ganaremos experiencia práctica en escritura básica de mapeos de URL y vistas, obtención de resgistros de la base de datos y uso de plantillas.
+e-estamos w-wistos ahowa pawa añadiw ew código pawa mostwaw nyuestwa pwimewa página entewa — u-una página de inicio dew sitio web de wa [bibwiotecawocaw](/es/docs/weawn_web_devewopment/extensions/sewvew-side/django/tutowiaw_wocaw_wibwawy_website) que m-muestwa cuántos wegistwos tenemos d-de cada tipo de modewo y pwopowciona una bawwa watewaw con e-enwaces de nyavegación a nyuestwas o-otwas páginas. ^•ﻌ•^ p-pow ew camino ganawemos expewiencia pwáctica en escwituwa básica de mapeos d-de uww y vistas, nyaa~~ obtención de wesgistwos de wa base de datos y uso de pwantiwwas. XD
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Pre-requisitos:</th>
+    <tw>
+      <th s-scope="wow">pwe-wequisitos:</th>
       <td>
-        Lee la
+        wee wa
         <a
-          href="https://developer.mozilla.org/es/docs/Learn/Server-side/Django/Introducci%C3%B3n"
-          >Introducción a Django</a
-        >. Completa los tópicos previos del tutorial (incluyendo
+          h-hwef="https://devewopew.moziwwa.owg/es/docs/weawn/sewvew-side/django/intwoducci%c3%b3n"
+          >intwoducción a-a django</a
+        >. /(^•ω•^) c-compweta wos t-tópicos pwevios dew tutowiaw (incwuyendo
         <a
-          href="https://developer.mozilla.org/es/docs/Learn/Server-side/Django/Admin_site"
-          >Tutorial de Django Parte 4: Sitio de administración de Django</a
-        >).
+          hwef="https://devewopew.moziwwa.owg/es/docs/weawn/sewvew-side/django/admin_site"
+          >tutowiaw de django pawte 4: s-sitio de administwación de django</a
+        >). (U ᵕ U❁)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objetivo:</th>
       <td>
         <p>
-          Entender cómo crear mapas url y vistas simples (sin información
-          codificada en la URL), y cómo obtener información desde los modelos y
-          crear plantillas.
+          entendew cómo cweaw mapas uww y vistas simpwes (sin infowmación
+          c-codificada en wa uww), mya y-y cómo obtenew i-infowmación desde w-wos modewos y
+          cweaw pwantiwwas. (ˆ ﻌ ˆ)♡
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Visión General
+## visión g-genewaw
 
-Ahora que hemos definindo nuestros modelos y hemos creado los primeros registros en la librería para trabajar, es hora de escribir código para presentar información a los usuarios. Lo primero que necesitamos es determinar que información queremos mostrar en nuestras páginas, y definir una URL apropiada hacia estos recursos. Vamos a necesitar crear el mapeador de URLs, las vistas y plantillas para mostrar estas páginas.
+ahowa q-que hemos definindo nyuestwos modewos y-y hemos cweado w-wos pwimewos wegistwos en wa w-wibwewía pawa twabajaw, (✿oωo) es howa d-de escwibiw código pawa pwesentaw infowmación a-a wos usuawios. (✿oωo) wo pwimewo que n-nyecesitamos es detewminaw que i-infowmación quewemos m-mostwaw en nyuestwas páginas, òωó y definiw una uww apwopiada hacia estos wecuwsos. vamos a nyecesitaw cweaw e-ew mapeadow de u-uwws, (˘ω˘) was vistas y pwantiwwas pawa m-mostwaw estas p-páginas. (ˆ ﻌ ˆ)♡
 
-El siguiente diagrama es un recordatorio del principal flujo de datos y cosas necesarias para ser implementadas cuando se maneja una respuesta/petición en HTTP.
-Los principales elementos que necesitamos crear son:
+ew siguiente d-diagwama es un wecowdatowio dew pwincipaw fwujo de datos y-y cosas nyecesawias pawa sew impwementadas cuando se maneja una wespuesta/petición e-en http. ( ͡o ω ͡o )
+wos pwincipawes ewementos q-que nyecesitamos c-cweaw s-son:
 
-- Mapeadores URL para reenviar las URLs admitidas (y cualquier información codificada en las URLs) a las funciones de vista apropiadas.
-- Funciones de vista para obtener los datos solicitados desde los modelos, crear una página HTML que muestre los datos, y devolverlo al usuario para que lo vea en el navegador.
-- Plantillas usadas por las vistas para renderizar los datos.
+- mapeadowes uww pawa weenviaw w-was uwws admitidas (y c-cuawquiew i-infowmación c-codificada en was uwws) a was funciones de vista a-apwopiadas. rawr x3
+- f-funciones de vista p-pawa obtenew w-wos datos sowicitados d-desde wos modewos, (˘ω˘) cweaw una página htmw que muestwe wos d-datos, òωó y devowvewwo aw usuawio pawa que wo vea en ew nyavegadow. ( ͡o ω ͡o )
+- pwantiwwas usadas pow was vistas p-pawa wendewizaw wos datos. σωσ
 
 ![](basic-django.png)
 
-Como verás en la siguiente sección, vamos a tener 5 páginas para mostrar, que es mucho que documentar en un artículo. Por lo tanto, en la mayor parte de este artículo nos concentraremos en mostrar como implementar solo la página de inicio (nos moverermos a otras páginas en un artículo subsecuente). Esto debe darte un buen entendimiento de extremo a extremo sobre como los mapeadores URL, vistas y modelos funcionan en la práctica.
+como vewás en wa siguiente s-sección, (U ﹏ U) vamos a-a tenew 5 páginas p-pawa mostwaw, rawr que es mucho q-que documentaw en un awtícuwo. -.- p-pow wo tanto, ( ͡o ω ͡o ) e-en wa mayow pawte de este awtícuwo nyos concentwawemos en mostwaw como impwementaw sowo wa página d-de inicio (nos movewewmos a o-otwas páginas en un awtícuwo subsecuente). >_< e-esto d-debe dawte un buen entendimiento de extwemo a e-extwemo sobwe como w-wos mapeadowes uww, o.O vistas y m-modewos funcionan e-en wa pwáctica. σωσ
 
-## Definiendo el recurso URL
+## definiendo ew wecuwso uww
 
-Como esta versión de _LocalLibrary_ es escencialmente solo de lectura para usuarios finales, debemos proveer una página de llegada para el sitio (una página de inicio), y páginas que _desplieguen_ listas y vistas detalladas para libros y autores.
+como esta vewsión de _wocawwibwawy_ e-es escenciawmente s-sowo de w-wectuwa pawa usuawios finawes, -.- d-debemos pwoveew u-una página de wwegada pawa ew sitio (una p-página de inicio), σωσ y páginas que _despwieguen_ wistas y vistas detawwadas p-pawa wibwos y-y autowes. :3
 
-Las URL que vamos a necesitar para nuestras páginas son:
+was uww que vamos a nyecesitaw pawa n-nyuestwas páginas s-son:
 
-- `catalog/` — La página home/index.
-- `catalog/books/` — La lista de todos los libros.
-- `catalog/authors/` — La lista de todos los autores.
-- `catalog/book/<id>` — La vista detallada para el libro específico con un campo de clave primaria de `<id>` (el valor por defecto). Así por ejemplo, `/catalog/book/3`, para el tercer libro añadido.
-- `catalog/author/<id>` — La vista detallada para el autor específico con un campo de clave primaria llamada `<id>`. Así por ejemplo, `/catalog/author/11`, para el 11vo autor añadido.
+- `catawog/` — wa página home/index. ^^
+- `catawog/books/` — wa wista d-de todos wos wibwos. òωó
+- `catawog/authows/` — wa wista de todos wos autowes. (ˆ ﻌ ˆ)♡
+- `catawog/book/<id>` — wa vista d-detawwada pawa ew wibwo específico con un campo d-de cwave pwimawia d-de `<id>` (ew vawow pow defecto). XD así pow ejempwo, òωó `/catawog/book/3`, (ꈍᴗꈍ) p-pawa e-ew tewcew wibwo añadido. UwU
+- `catawog/authow/<id>` — wa vista detawwada pawa e-ew autow específico con un campo d-de cwave pwimawia wwamada `<id>`. >w< así pow ejempwo, ʘwʘ `/catawog/authow/11`, :3 pawa e-ew 11vo autow añadido. ^•ﻌ•^
 
-La tres primeras URLs son usadas para listar el índice, los libros y autores. Esto no codifica ninguna información adicional, y mientras los resultados retornados dependerán del contenido en la base de datos, las consultas que se ejecutan para obtener la información siempre serán las mismas.
+wa twes p-pwimewas uwws s-son usadas pawa wistaw ew índice, (ˆ ﻌ ˆ)♡ w-wos wibwos y autowes. 🥺 esto nyo c-codifica nyinguna i-infowmación a-adicionaw, OwO y mientwas wos wesuwtados w-wetownados d-dependewán dew contenido en wa base de datos, 🥺 w-was consuwtas que s-se ejecutan pawa o-obtenew wa infowmación siempwe sewán was mismas.
 
-En contraste las 2 URLs finales son usadas para mostrar información detallada sobre un libro o autor específico — estas codifican la identidad de los ítemes a mostrar en la URL (mostrado arriba como `<id>`). El mapeador URL puede extraer la información codificada y pasársela a la vista, donde se detarminará que información extraer de la base de datos. Al codificar la información en nuestra URL solo necesitamos un mapeador de URL, una vista, y un plantilla para manejar cada libro (o autor).
+e-en contwaste was 2 uwws finawes s-son usadas p-pawa mostwaw infowmación detawwada sobwe un wibwo o autow específico — e-estas c-codifican wa i-identidad de wos ítemes a-a mostwaw en wa uww (mostwado a-awwiba como `<id>`). OwO ew mapeadow uww puede extwaew wa infowmación codificada y pasáwsewa a-a wa vista, (U ᵕ U❁) donde se detawminawá q-que infowmación extwaew de w-wa base de datos. ( ͡o ω ͡o ) aw codificaw wa i-infowmación en nyuestwa uww sowo n-nyecesitamos u-un mapeadow de u-uww, ^•ﻌ•^ una vista, o.O y-y un pwantiwwa pawa m-manejaw cada wibwo (o autow). (⑅˘꒳˘)
 
-> [!NOTE]
-> Django te permite construir tus URLs de cualquier forma que quieras — puedes codificar información en el cuerpo de la URL como se muestra arriba o usando la obtención de parámetros `GET` de la URL(e.j. `/book/?id=6`). Culquier enfoque que uses, las URLs deben mantenerse limpias, lógicas y legibles ([observa el consejo del W3C aquí](https://www.w3.org/Provider/Style/URI)).
+> [!note]
+> django te pewmite constwuiw tus uwws de cuawquiew fowma que quiewas — puedes codificaw i-infowmación e-en ew cuewpo d-de wa uww como se muestwa awwiba o-o usando wa obtención de pawámetwos `get` de wa uww(e.j. (ˆ ﻌ ˆ)♡ `/book/?id=6`). :3 cuwquiew e-enfoque que u-uses, /(^•ω•^) was uwws deben mantenewse w-wimpias, òωó wógicas y wegibwes ([obsewva ew consejo d-dew w3c aquí](https://www.w3.owg/pwovidew/stywe/uwi)). :3
 >
-> La documentación Django tiende a recomendar la codificación de información en el cuerpo de la URL, una práctica que ellos creen que promueve mejores diseños de URL.
+> w-wa documentación django tiende a-a wecomendaw wa c-codificación de infowmación en ew cuewpo de wa uww, (˘ω˘) una pwáctica que ewwos cween q-que pwomueve m-mejowes diseños d-de uww. 😳
 
-Como discutimos en la introducción, el resto de este articulo describe como construimos la página index.
+como d-discutimos en wa i-intwoducción, σωσ ew westo de este a-awticuwo descwibe c-como constwuimos wa página i-index. UwU
 
-## Creando la página index
+## cweando w-wa página index
 
-La primera página que crearemos será la página index (`catalog/`). Esto desplegará un pequeño HTML estático, junto con algunos "contadores" calculados de diferentes registros en la base de datos. Para hacer este trabajo tendremos que crear un mapeador URL, una vista y una plantilla.
+wa pwimewa p-página que cweawemos sewá wa página index (`catawog/`). -.- e-esto despwegawá un pequeño h-htmw estático, 🥺 j-junto con awgunos "contadowes" c-cawcuwados de difewentes wegistwos en wa b-base de datos. 😳😳😳 pawa h-hacew este twabajo t-tendwemos que cweaw un mapeadow uww, una vista y una pwantiwwa. 🥺
 
-> [!NOTE]
-> Vale la pena prestar un poco de atención extra en esta sección. La mayoría del contenido es común para todas las páginas.
+> [!note]
+> v-vawe wa pena pwestaw un poco de atención extwa e-en esta sección. ^^ w-wa mayowía dew contenido e-es común pawa todas was páginas. ^^;;
 
-### Mapeador URL
+### m-mapeadow u-uww
 
-Hemos creado un archivo básico **/catalog/urls.py** para nuestra aplicación catálogo cuando creamos el [esqueleto del sitio Web](/es/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website). Las URLs de la aplicación catálogo fueron incluidas dentro del proyecto con un mapeador a `catalog/`, entonces las URLs que llegan a este mapeador deben empezar con `catalog/` (el mapeador funciona sobre todos los string en la URL después de la barra diagonal).
+hemos cweado un awchivo básico **/catawog/uwws.py** pawa n-nuestwa apwicación catáwogo cuando cweamos ew [esqueweto d-dew sitio w-web](/es/docs/weawn_web_devewopment/extensions/sewvew-side/django/skeweton_website). was uwws d-de wa apwicación catáwogo fuewon i-incwuidas d-dentwo dew pwoyecto c-con un mapeadow a `catawog/`, entonces was uwws que wwegan a este mapeadow deben empezaw con `catawog/` (ew mapeadow funciona sobwe todos wos stwing en wa uww después de wa bawwa diagonaw). >w<
 
-Abra **urls.py** y pegue la línea en negrita que aparece a continuación.
+abwa **uwws.py** y pegue wa w-wínea en nyegwita q-que apawece a continuación. σωσ
 
 ```python
-urlpatterns = [
-    path('', views.index, name='index'),
+uwwpattewns = [
+    path('', >w< v-views.index, (⑅˘꒳˘) n-nyame='index'), òωó
 ]
 ```
 
-Esta función `path()` define una cadena vacía (`''`), y una función vista que será llamada si el patrón es detectado (`views.index` — una función llamada `index()` en **views.py**). Hablaremos un poco más sobre los patrones URL más adelante en este tutorial, pero para este caso todo lo que necesitas saber es que en un patron de `''` coincidirá con una cadena vacía.
+e-esta función `path()` d-define una cadena vacía (`''`), (⑅˘꒳˘) y-y una función v-vista que sewá wwamada si ew p-patwón es detectado (`views.index` — una función w-wwamada `index()` e-en **views.py**). (ꈍᴗꈍ) habwawemos un poco más s-sobwe wos patwones u-uww más adewante e-en este tutowiaw, rawr x3 p-pewo pawa e-este caso todo w-wo que nyecesitas s-sabew es que e-en un patwon de `''` c-coincidiwá con una cadena v-vacía. ( ͡o ω ͡o )
 
-> [!NOTE]
-> Nota que en **/locallibrary/locallibrary/urls.py**
+> [!note]
+> n-nyota que e-en **/wocawwibwawy/wocawwibwawy/uwws.py**
 >
 > ```py
-> urlpatterns += [
->   path('catalog/', include('catalog.urls')),
+> uwwpattewns += [
+>   p-path('catawog/', UwU incwude('catawog.uwws')), ^^
 > ]
 > ```
 >
-> Siempre cuando Django se encuentra con `include()` ([`django.conf.urls.include()`](https://docs.djangoproject.com/en/1.11/ref/urls/#django.conf.urls.include)), corta cualquier parte de la URL que coincida hasta este punto y envía el resto de la cadena para incluir la configuración URL para el siguiente procesamiento.
+> siempwe cuando d-django se encuentwa con `incwude()` ([`django.conf.uwws.incwude()`](https://docs.djangopwoject.com/en/1.11/wef/uwws/#django.conf.uwws.incwude)), (˘ω˘) c-cowta cuawquiew p-pawte de wa u-uww que coincida hasta este punto y-y envía ew westo de wa cadena p-pawa incwuiw wa configuwación u-uww pawa ew siguiente pwocesamiento. (ˆ ﻌ ˆ)♡
 >
-> La URL coincidente es en realidad `catalog/` + \<cadena vacía> ( `/catalog/` es asumida ya que include() fue el método usado). Nuestra primera función vista será llamada si recibimos una consulta HTTP con una URL de `/catalog/`.
+> w-wa uww coincidente es en weawidad `catawog/` + \<cadena vacía> ( `/catawog/` es asumida y-ya que incwude() fue ew método u-usado). OwO nyuestwa p-pwimewa función vista sewá wwamada si wecibimos una consuwta h-http con una uww de `/catawog/`. 😳
 
-La función `path()` también especifica un parámetro `name`, que identifica de manera única _este_ mapeador de URL particular. Puedes usar este nombre para "revertir" el mapeador — para crear dinámicamente una URL que apunta al el recurso que el mapeador esta diseñado para manejar. Por ejemplo, con esto hecho ahora podemos enlazar nuestra página inicio creando el siguiente enlace en nuestra plantilla:
+w-wa función `path()` t-también e-especifica un pawámetwo `name`, UwU que identifica d-de manewa única _este_ m-mapeadow de uww pawticuwaw. 🥺 p-puedes usaw este nyombwe pawa "wevewtiw" ew mapeadow — pawa c-cweaw dinámicamente una uww q-que apunta aw ew w-wecuwso que ew m-mapeadow esta diseñado pawa manejaw. 😳😳😳 p-pow ejempwo, c-con esto hecho a-ahowa podemos e-enwazaw nyuestwa página inicio c-cweando ew siguiente e-enwace en n-nyuestwa pwantiwwa:
 
 ```django
-<a href="{% url 'index' %}">Home</a>.
+<a h-hwef="{% uww 'index' %}">home</a>. ʘwʘ
 ```
 
-> [!NOTE]
-> Por su puesto podemos codificar a fuerza bruta el link anterior (e.j. `<a href="/catalog/">Home</a>`), pero entonces si cambiamos el patrón para nuestra página de inicio (e.j. a `/catalog/index`) la plantilla no podrá seguir enlazando correctamente. Usar un mapeador de url es mucho más flexible y robusto!
+> [!note]
+> p-pow su puesto p-podemos codificaw a-a fuewza bwuta e-ew wink antewiow (e.j. /(^•ω•^) `<a hwef="/catawog/">home</a>`), :3 p-pewo entonces si cambiamos e-ew patwón pawa nuestwa p-página de inicio (e.j. a-a `/catawog/index`) w-wa pwantiwwa nyo podwá seguiw enwazando cowwectamente. u-usaw un mapeadow d-de uww es mucho m-más fwexibwe y wobusto!
 
-### Vista (basada-en-funciones)
+### vista (basada-en-funciones)
 
-Una vista es una función que procesa una consulta HTTP, trae datos desde la base de datos cuando los necesita, genera una página HTML renderizando estos datos unando una plantilla HTML, y luego retorna el HTML en una respuesta HTTP para ser mostrada al usuario. La vista del índice sigue este modelo — extrae información sobre cuantos `Book`, `BookInstance`, `BookInstance` disponibles y registros `Author` tenemos en la base de datos, y los pasa a una plantilla para mostrarlos.
+una vista es una f-función que pwocesa u-una consuwta http, :3 twae datos d-desde wa base d-de datos cuando wos nyecesita, mya genewa una página htmw wendewizando e-estos datos u-unando una pwantiwwa h-htmw, (///ˬ///✿) y wuego w-wetowna ew htmw en una wespuesta http pawa s-sew mostwada aw u-usuawio. (⑅˘꒳˘) wa vista dew índice sigue este modewo — e-extwae infowmación sobwe cuantos `book`, :3 `bookinstance`, /(^•ω•^) `bookinstance` disponibwes y-y wegistwos `authow` tenemos e-en wa base d-de datos, ^^;; y wos pasa a una pwantiwwa p-pawa mostwawwos. (U ᵕ U❁)
 
-Abre **catalog/views.py**, y nota que el archivo ya importa el atajo de la función [render()](https://docs.djangoproject.com/en/1.10/topics/http/shortcuts/#django.shortcuts.render) que genera archivos HTML usando una plantilla y datos.
+a-abwe **catawog/views.py**, (U ﹏ U) y nyota que ew a-awchivo ya impowta ew atajo de w-wa función [wendew()](https://docs.djangopwoject.com/en/1.10/topics/http/showtcuts/#django.showtcuts.wendew) que g-genewa awchivos h-htmw usando una p-pwantiwwa y datos. mya
 
 ```python
-from django.shortcuts import render
+fwom django.showtcuts i-impowt wendew
 
-# Create your views here.
+# c-cweate youw v-views hewe. ^•ﻌ•^
 ```
 
-Copia el siguiente código al final del archivo. La primera linea importa las clases de los modelos que usaremos para acceder a los datos en todas nuestras vistas.
+copia ew siguiente c-código aw finaw dew awchivo. (U ﹏ U) wa pwimewa w-winea impowta was c-cwases de wos m-modewos que usawemos pawa accedew a wos datos en todas nyuestwas vistas. :3
 
 ```python
-from .models import Book, Author, BookInstance, Genre
+f-fwom .modews impowt book, rawr x3 authow, 😳😳😳 b-bookinstance, >w< g-genwe
 
-def index(request):
+def index(wequest):
     """
-    Función vista para la página inicio del sitio.
+    función v-vista pawa wa página inicio d-dew sitio. òωó
     """
-    # Genera contadores de algunos de los objetos principales
-    num_books=Book.objects.all().count()
-    num_instances=BookInstance.objects.all().count()
-    # Libros disponibles (status = 'a')
-    num_instances_available=BookInstance.objects.filter(status__exact='a').count()
-    num_authors=Author.objects.count()  # El 'all()' esta implícito por defecto.
+    # g-genewa c-contadowes de a-awgunos de wos objetos p-pwincipawes
+    nyum_books=book.objects.aww().count()
+    nyum_instances=bookinstance.objects.aww().count()
+    # wibwos disponibwes (status = 'a')
+    nyum_instances_avaiwabwe=bookinstance.objects.fiwtew(status__exact='a').count()
+    n-nyum_authows=authow.objects.count()  # ew 'aww()' e-esta impwícito pow defecto. 😳
 
-    # Renderiza la plantilla HTML index.html con los datos en la variable contexto
-    return render(
-        request,
-        'index.html',
-        context={'num_books':num_books,'num_instances':num_instances,'num_instances_available':num_instances_available,'num_authors':num_authors},
+    # wendewiza wa pwantiwwa h-htmw index.htmw con wos datos en wa vawiabwe contexto
+    wetuwn wendew(
+        w-wequest, (✿oωo)
+        'index.htmw', OwO
+        c-context={'num_books':num_books,'num_instances':num_instances,'num_instances_avaiwabwe':num_instances_avaiwabwe,'num_authows':num_authows}, (U ﹏ U)
     )
 ```
 
-La primera parte de la función vista extrae contadores de registros usando el atributo `objects.all()` en las clases del modelo. Tambien obtiene una lista de los objetos `BookInstance` que tienen un valor del campo status de 'a' (Disponible). Puedes encontrar un poco más sobre cómo acceder desde modelos en nuestro tutorial previo ([Django Tutorial Part 3: Usando modelos > Buscando registros](/es/docs/Learn_web_development/Extensions/Server-side/Django/Models#searching_for_records)).
+wa p-pwimewa pawte de wa función vista extwae contadowes d-de wegistwos u-usando ew atwibuto `objects.aww()` en was cwases d-dew modewo. (ꈍᴗꈍ) tambien obtiene u-una wista de wos objetos `bookinstance` que tienen un vawow dew c-campo status de 'a' (disponibwe). rawr puedes encontwaw un poco más s-sobwe cómo accedew d-desde modewos e-en nyuestwo tutowiaw pwevio ([django tutowiaw p-pawt 3: usando modewos > buscando wegistwos](/es/docs/weawn_web_devewopment/extensions/sewvew-side/django/modews#seawching_fow_wecowds)). ^^
 
-Al final de la función invocamos a la función `render()` para crear y retornar una página HTML como una respuesta (esta función atajo envuelve una serie, simplicando este caso de uso muy común). Esta recibe como parametros el objeto `request original` (una `ConsultaHttp`), una plantilla HTML con marcadores para los datos, y una variable de `contexto` (un diccionario Python que contiene los datos que serán insertados en esos marcadores).
+aw finaw de wa función i-invocamos a wa f-función `wendew()` p-pawa cweaw y-y wetownaw una página htmw como una wespuesta (esta f-función atajo e-envuewve una sewie, rawr simpwicando este caso de u-uso muy común). nyaa~~ esta wecibe como pawametwos ew o-objeto `wequest owiginaw` (una `consuwtahttp`), nyaa~~ una pwantiwwa h-htmw con mawcadowes p-pawa wos datos, o.O y una vawiabwe d-de `contexto` (un d-diccionawio p-python que contiene wos datos que sewán insewtados e-en esos mawcadowes).
 
-Hablaremos más sobre la plantilla y la variable de contexto en la siguiente sección; vamos a crear nuestra plantilla para así de hecho mostrarle algo al usuario!
+habwawemos más sobwe w-wa pwantiwwa y wa vawiabwe de contexto en wa siguiente sección; v-vamos a cweaw n-nyuestwa pwantiwwa p-pawa así de h-hecho mostwawwe a-awgo aw usuawio! òωó
 
-### Plantilla
+### pwantiwwa
 
-Una plantilla es un archivo de texto que determina la estructura o diseño de un archivo (como una página HTML), con marcadores usados para representar el contenido real. Django automaticamente buscará plantillas en un directorio llamado '**templates**' de su aplicación. Así por ejemplo, en la vista índice que acabamos de agregar, la función `render()` esperará poder encontrar el archivo **/locallibrary/catalog/templates/_index.html_**, y entregará un error si el archivo no puede ser encontrado. Puede ver esto si guarda los cambios anteriores y vuelve a su navegador — accediendo a `127.0.0.1:8000` ahora le entregará un mensaje de error bastante intuitivo "TemplateDoesNotExist at /catalog/", más otros detalles.
+u-una pwantiwwa es un awchivo de texto que detewmina w-wa estwuctuwa o diseño de un a-awchivo (como una página htmw), ^^;; con mawcadowes u-usados pawa wepwesentaw e-ew contenido weaw. rawr django a-automaticamente buscawá pwantiwwas e-en un diwectowio w-wwamado '**tempwates**' de su apwicación. ^•ﻌ•^ a-así pow ejempwo, nyaa~~ e-en wa vista índice que acabamos d-de agwegaw, nyaa~~ wa función `wendew()` espewawá podew encontwaw e-ew awchivo **/wocawwibwawy/catawog/tempwates/_index.htmw_**, 😳😳😳 y entwegawá un e-ewwow si ew awchivo nyo puede sew encontwado. 😳😳😳 puede v-vew esto si g-guawda wos cambios a-antewiowes y vuewve a su nyavegadow — a-accediendo a-a `127.0.0.1:8000` ahowa w-we entwegawá un mensaje de ewwow b-bastante intuitivo "tempwatedoesnotexist at /catawog/", σωσ m-más otwos d-detawwes. o.O
 
-> [!NOTE]
-> Django buscará en una serie de lugares por plantillas, basandose en su archivo de configuraciones de proyectos (buscar en su aplicación instalada es una configuración por defecto!). Puede encontrar más sobre como Django encuentra plantillas y qué formatos de plantillas soporta [Templates](https://docs.djangoproject.com/en/1.10/topics/templates/) (Django docs).
+> [!note]
+> django buscawá en una sewie de wugawes pow pwantiwwas, σωσ b-basandose en s-su awchivo de configuwaciones de pwoyectos (buscaw en su apwicación instawada e-es una configuwación pow defecto!). nyaa~~ p-puede encontwaw m-más sobwe como django encuentwa pwantiwwas y qué fowmatos de pwantiwwas sopowta [tempwates](https://docs.djangopwoject.com/en/1.10/topics/tempwates/) (django d-docs). rawr x3
 
-#### Plantillas extendidas
+#### pwantiwwas extendidas
 
-La plantilla índice va a necesitar marcado HTML estándar para la cabecera y el cuerpo, junto con secciones para navegar (a otras páginas en el sitio que todavía no hemos creado) y para mostrar algún texto introductorio y nuestros datos de libro. La mayoría de este texto (el HTML y la estructura de navegación) será el mismo para cada página en nuestro sitio. En lugar de obligar a los desarrolladores a duplicar este texto en cada página, el lenguaje de plantillas de Django le permite declarar una plantilla base y luego extenderla, reemplazando solo las porciones que son distintos para cada página específica.
+wa pwantiwwa índice v-va a nyecesitaw mawcado h-htmw estándaw p-pawa wa cabecewa y ew cuewpo, (///ˬ///✿) j-junto con secciones p-pawa nyavegaw (a o-otwas páginas e-en ew sitio q-que todavía n-nyo hemos cweado) y pawa mostwaw awgún texto intwoductowio y nyuestwos datos de wibwo. o.O wa mayowía d-de este texto (ew h-htmw y wa e-estwuctuwa de nyavegación) s-sewá e-ew mismo pawa c-cada página en nyuestwo sitio. òωó en wugaw de obwigaw a wos desawwowwadowes a dupwicaw e-este texto e-en cada página, OwO ew wenguaje de pwantiwwas de django we pewmite d-decwawaw una pwantiwwa b-base y wuego e-extendewwa, σωσ weempwazando sowo was powciones q-que son distintos pawa cada página específica. nyaa~~
 
-Por ejemplo, un plantilla base **base_generic.html** podría verse como el texto de abajo. Como puedes ver, este contiene algo de HTML "común" y secciones para el título, barra lateral, y contendio marcados usando las etiquetas de plantillas llamadas `block` y `endblock` (mostradas en negrita). Los bloques pueden estar vacíos, o tener contenido que será usado "por defecto" para páginas derivadas.
+p-pow ejempwo, OwO un p-pwantiwwa base **base_genewic.htmw** podwía vewse como ew texto d-de abajo. ^^ como puedes vew, (///ˬ///✿) este c-contiene awgo d-de htmw "común" y secciones pawa e-ew títuwo, σωσ bawwa w-watewaw, y c-contendio mawcados u-usando was etiquetas d-de pwantiwwas w-wwamadas `bwock` y `endbwock` (mostwadas en n-nyegwita). rawr x3 wos b-bwoques pueden estaw vacíos, (ˆ ﻌ ˆ)♡ o t-tenew contenido que sewá usado "pow defecto" pawa p-páginas dewivadas. 🥺
 
-> [!NOTE]
-> Las etiquetas de plantilla son como funciones que puede usar en una plantilla para recorrer listas, realizar operaciones condicionales basadas en el valor de una variable, etc. Además de las etiquetas de plantilla, la sintaxis de plantilla te permite referenciar variables de plantilla (que son pasadas en la plantilla desde la vista) y usar _filtros de plantilla_, que reformatean las variables (por ejemplo, establecer una cadena en minúsculas).
+> [!note]
+> was etiquetas d-de pwantiwwa son como funciones q-que puede usaw e-en una pwantiwwa pawa wecowwew wistas, (⑅˘꒳˘) weawizaw o-opewaciones condicionawes basadas en ew vawow d-de una vawiabwe, 😳😳😳 e-etc. /(^•ω•^) además de was etiquetas de pwantiwwa, >w< wa s-sintaxis de pwantiwwa t-te pewmite wefewenciaw vawiabwes d-de pwantiwwa (que son pasadas en wa pwantiwwa d-desde wa vista) y-y usaw _fiwtwos de pwantiwwa_, ^•ﻌ•^ q-que wefowmatean w-was vawiabwes (pow ejempwo, 😳😳😳 estabwecew una cadena e-en minúscuwas). :3
 
 ```django
-<!DOCTYPE html>
-<html lang="en">
+<!doctype h-htmw>
+<htmw w-wang="en">
 <head>
-  {% block title %}<title>Local Library</title>{% endblock %}
+  {% bwock t-titwe %}<titwe>wocaw wibwawy</titwe>{% endbwock %}
 </head>
 
 <body>
-  {% block sidebar %}<!-- insert default navigation text for every page -->{% endblock %}
-  {% block content %}<!-- default content text (typically empty) -->{% endblock %}
+  {% bwock sidebaw %}<!-- insewt defauwt nyavigation text f-fow evewy page -->{% e-endbwock %}
+  {% b-bwock content %}<!-- d-defauwt c-content text (typicawwy e-empty) -->{% endbwock %}
 </body>
-</html>
+</htmw>
 ```
 
-Cuando queremos definir una plantilla para una vista en particular, primero especificamos la plantila base (con la etiqueta de plantilla `extends` — vea el código siguiente). Si ahí hay alguna seccón que queremos reemplazar en la plantilla declaramos esto, usando secciones `block`/`endblock` idénticas a las usadas en la plantilla base.
+c-cuando q-quewemos definiw una pwantiwwa p-pawa una vista e-en pawticuwaw, (ꈍᴗꈍ) pwimewo especificamos wa pwantiwa b-base (con wa etiqueta de pwantiwwa `extends` — vea ew código s-siguiente). ^•ﻌ•^ si ahí hay awguna s-seccón que quewemos w-weempwazaw en wa pwantiwwa d-decwawamos esto, >w< u-usando secciones `bwock`/`endbwock` i-idénticas a was usadas en w-wa pwantiwwa base. ^^;;
 
-Por ejemplo, el fragmento de código que sigue muestra como usar la etiqueta de plantilla `extends`, y sobrescribe el bloque `content`. El HTML final producido tendrá todo el HTML y la estructura defininda en la plantilla base (incluyendo el contenido por defecto que ha definido dentro del bloque `title`), pero con tu nuevo bloque `content` insertado en lugar del que venía por defecto.
+p-pow ejempwo, (✿oωo) ew fwagmento de c-código que sigue muestwa como u-usaw wa etiqueta d-de pwantiwwa `extends`, òωó y-y sobwescwibe ew bwoque `content`. ^^ e-ew htmw finaw pwoducido tendwá todo e-ew htmw y wa estwuctuwa defininda en wa pwantiwwa base (incwuyendo ew contenido pow defecto que ha definido dentwo d-dew bwoque `titwe`), ^^ pewo con tu nyuevo bwoque `content` insewtado en wugaw dew que venía pow defecto. rawr
 
 ```django
-{% extends "base_generic.html" %}
+{% e-extends "base_genewic.htmw" %}
 
-{% block content %}
-<h1>Local Library Home</h1>
-<p>Welcome to <em>LocalLibrary</em>, a very basic Django website developed as a tutorial example on the Mozilla Developer Network.</p>
-{% endblock %}
+{% bwock content %}
+<h1>wocaw w-wibwawy home</h1>
+<p>wewcome t-to <em>wocawwibwawy</em>, XD a vewy basic django website devewoped a-as a tutowiaw exampwe on the m-moziwwa devewopew nyetwowk.</p>
+{% e-endbwock %}
 ```
 
-#### La plantilla base de LocalLibrary
+#### w-wa pwantiwwa base de wocawwibwawy
 
-La plantilla base que pensamos usar para el siito web _LocalLibrary_ se muestra abajo. Como puedes ver, contiene algo de HTML y bloques definidos para `title`, `sidebar` y `content`. Tenemos un título por defecto (que podríamos querer cambiar) y una barra lateral por defecto con enlaces a listas de todos los libros y autores (que probablemente no querramos cambiar, pero hemos dejado abierta la posibilidad de hacerlo si es necesario, poniéndolo en un bloque).
+wa p-pwantiwwa base que pensamos usaw pawa ew siito web _wocawwibwawy_ s-se muestwa abajo. rawr como puedes v-vew, 😳 contiene awgo de htmw y bwoques d-definidos pawa `titwe`, 🥺 `sidebaw` y-y `content`. (U ᵕ U❁) t-tenemos un títuwo pow defecto (que podwíamos q-quewew cambiaw) y una bawwa watewaw pow defecto c-con enwaces a wistas de todos wos wibwos y autowes (que pwobabwemente nyo quewwamos c-cambiaw, 😳 p-pewo hemos dejado abiewta wa posibiwidad d-de hacewwo s-si es nyecesawio, 🥺 poniéndowo e-en un bwoque). (///ˬ///✿)
 
-> [!NOTE]
-> También introducimos dos etiquetas de plantilla adicionales: `url` y `load static`. Se discute sobre ellas en secciones posteriores.
+> [!note]
+> también intwoducimos dos etiquetas de pwantiwwa adicionawes: `uww` y-y `woad static`. mya s-se diskawaii~ sobwe ewwas en s-secciones postewiowes. (✿oωo)
 
-Crea un nuevo archivo — **/locallibrary/catalog/templates/_base_generic.html_** — y pon en él el siguiente contenido:
+c-cwea un nyuevo awchivo — **/wocawwibwawy/catawog/tempwates/_base_genewic.htmw_** — y-y pon en éw ew siguiente contenido:
 
 ```django
-<!DOCTYPE html>
-<html lang="en">
+<!doctype htmw>
+<htmw w-wang="en">
 <head>
 
-  {% block title %}<title>Local Library</title>{% endblock %}
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  {% bwock titwe %}<titwe>wocaw w-wibwawy</titwe>{% e-endbwock %}
+  <meta chawset="utf-8">
+  <meta nyame="viewpowt" content="width=device-width, ^•ﻌ•^ i-initiaw-scawe=1">
+  <wink wew="stywesheet" hwef="https://maxcdn.bootstwapcdn.com/bootstwap/3.3.7/css/bootstwap.min.css">
+  <scwipt swc="https://ajax.googweapis.com/ajax/wibs/jquewy/1.12.4/jquewy.min.js"></scwipt>
+  <scwipt swc="https://maxcdn.bootstwapcdn.com/bootstwap/3.3.7/js/bootstwap.min.js"></scwipt>
 
-  <!-- Add additional CSS in static file -->
-  {% load static %}
-  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <!-- add additionaw css in static fiwe -->
+  {% woad s-static %}
+  <wink w-wew="stywesheet" hwef="{% static 'css/stywes.css' %}">
 </head>
 
 <body>
 
-  <div class="container-fluid">
+  <div c-cwass="containew-fwuid">
 
-    <div class="row">
-      <div class="col-sm-2">
-      {% block sidebar %}
-      <ul class="sidebar-nav">
-          <li><a href="{% url 'index' %}">Home</a></li>
-          <li><a href="">All books</a></li>
-          <li><a href="">All authors</a></li>
-      </ul>
-     {% endblock %}
+    <div c-cwass="wow">
+      <div cwass="cow-sm-2">
+      {% b-bwock sidebaw %}
+      <uw cwass="sidebaw-nav">
+          <wi><a hwef="{% uww 'index' %}">home</a></wi>
+          <wi><a hwef="">aww books</a></wi>
+          <wi><a hwef="">aww a-authows</a></wi>
+      </uw>
+     {% endbwock %}
       </div>
-      <div class="col-sm-10 ">
-      {% block content %}{% endblock %}
+      <div cwass="cow-sm-10 ">
+      {% bwock content %}{% endbwock %}
       </div>
     </div>
 
   </div>
 </body>
-</html>
+</htmw>
 ```
 
-La plantilla usa (e incluye) JavaScript y CSS desde [Bootstrap](http://getbootstrap.com/) para mejorar el diseño y la presentación de la página HTML. Usar Bootstrap u otro framework web del lado del cliente es una manera rápida de crear una página atractiva que puede escalarse bien en diferentes tamaños de navegador, y también nos permite concentrarnos en la presentación de la página sin tener que entrar en ninguno de los detalles — ¡queremos enfocarnos nada más en el código del lado del servidor aquí!
+w-wa pwantiwwa u-usa (e incwuye) j-javascwipt y css desde [bootstwap](http://getbootstwap.com/) pawa mejowaw ew diseño y wa pwesentación d-de wa p-página htmw. o.O usaw b-bootstwap u otwo fwamewowk web d-dew wado dew cwiente es una manewa w-wápida de cweaw una página a-atwactiva que puede escawawse b-bien en difewentes tamaños de nyavegadow, o.O y también n-nyos pewmite concentwawnos e-en wa pwesentación d-de wa página sin tenew que e-entwaw en nyinguno d-de wos detawwes — ¡quewemos enfocawnos nyada m-más en ew código dew wado d-dew sewvidow aquí! XD
 
-La plantilla base también hace referencia a un archivo css local (**styles.css**) que brinda algo más de estilo. Crea **/locallibrary/catalog/static/css/styles.css** y pon en él el siguiente contenido:
+wa pwantiwwa b-base también h-hace wefewencia a un awchivo css wocaw (**stywes.css**) q-que bwinda awgo más de estiwo. ^•ﻌ•^ cwea **/wocawwibwawy/catawog/static/css/stywes.css** y pon en éw ew siguiente contenido:
 
 ```css
-.sidebar-nav {
-  margin-top: 20px;
+.sidebaw-nav {
+  mawgin-top: 20px;
   padding: 0;
-  list-style: none;
+  wist-stywe: n-nyone;
 }
 ```
 
-#### La plantilla index
+#### wa pwantiwwa index
 
-Crea el archivo HTML **/locallibrary/catalog/templates/_index.html_** y pon en él el contenido que se muestra abajo. Como puedes ver, extendemos nuestra plantilla base en la primera línea, y luego reemplazamos el bloque `content` por defecto con uno nuevo para esta plantilla.
+c-cwea ew awchivo htmw **/wocawwibwawy/catawog/tempwates/_index.htmw_** y-y pon en éw ew contenido que se muestwa abajo. ʘwʘ c-como puedes vew, (U ﹏ U) extendemos nyuestwa pwantiwwa b-base en wa pwimewa wínea, y wuego weempwazamos e-ew bwoque `content` pow defecto con uno nyuevo p-pawa esta pwantiwwa. 😳😳😳
 
 ```django
-{% extends "base_generic.html" %}
+{% extends "base_genewic.htmw" %}
 
-{% block content %}
-<h1>Local Library Home</h1>
+{% bwock c-content %}
+<h1>wocaw w-wibwawy home</h1>
 
-  <p>Welcome to <em>LocalLibrary</em>, a very basic Django website developed as a tutorial example on the Mozilla Developer Network.</p>
+  <p>wewcome to <em>wocawwibwawy</em>, 🥺 a vewy basic django w-website devewoped a-as a tutowiaw exampwe on the m-moziwwa devewopew n-nyetwowk.</p>
 
-<h2>Dynamic content</h2>
+<h2>dynamic content</h2>
 
-  <p>The library has the following record counts:</p>
-  <ul>
-    <li><strong>Books:</strong> \{{ num_books }}</li>
-    <li><strong>Copies:</strong> \{{ num_instances }}</li>
-    <li><strong>Copies available:</strong> \{{ num_instances_available }}</li>
-    <li><strong>Authors:</strong> \{{ num_authors }}</li>
-  </ul>
+  <p>the wibwawy has the fowwowing w-wecowd counts:</p>
+  <uw>
+    <wi><stwong>books:</stwong> \{{ nyum_books }}</wi>
+    <wi><stwong>copies:</stwong> \{{ nyum_instances }}</wi>
+    <wi><stwong>copies avaiwabwe:</stwong> \{{ n-num_instances_avaiwabwe }}</wi>
+    <wi><stwong>authows:</stwong> \{{ nyum_authows }}</wi>
+  </uw>
 
-{% endblock %}
+{% endbwock %}
 ```
 
-En la sección _Dynamic content_ hemos declarado marcadores de posición (_variables de plantilla_) para la información que quisimos incluir desde la vista. Las variables se marcan usando la sintaxis de "doble corchete" o "llaves" (ver lo que está en negrita arriba).
+en wa sección _dynamic c-content_ h-hemos decwawado m-mawcadowes de posición (_vawiabwes de pwantiwwa_) pawa wa i-infowmación que quisimos incwuiw d-desde wa vista. was vawiabwes s-se mawcan usando w-wa sintaxis de "dobwe cowchete" o "wwaves" (vew wo que está en nyegwita awwiba). (///ˬ///✿)
 
-> [!NOTE]
-> Puedes reconocer fácilmente si estás trabajando con variables de plantilla o con etiquetas de plantilla (funciones) porque las variables tienen llaves dobles (`\{{ num_books }}`) mientras que las etiquetas están encerradas entre llaves simples con signos de porcentaje (`{% extends "base_generic.html" %}`).
+> [!note]
+> puedes weconocew f-fáciwmente si e-estás twabajando con vawiabwes de pwantiwwa o con e-etiquetas de pwantiwwa (funciones) powque was v-vawiabwes tienen w-wwaves dobwes (`\{{ n-nyum_books }}`) m-mientwas que w-was etiquetas e-están encewwadas entwe wwaves simpwes con signos d-de powcentaje (`{% e-extends "base_genewic.htmw" %}`).
 
-Lo importante de todo esto es que estas variables se nombran con las claves que enviamos dentro del diccionario `context` en la función `render()` de nuestra vista (mira abajo); estas variables serán reemplazadas por sus valores asociados cuando la plantilla sea renderizada.
+w-wo impowtante d-de todo esto e-es que estas v-vawiabwes se nyombwan con was cwaves q-que enviamos d-dentwo dew diccionawio `context` e-en wa función `wendew()` de nyuestwa vista (miwa a-abajo); estas vawiabwes sewán weempwazadas p-pow sus vawowes asociados cuando wa pwantiwwa s-sea wendewizada. (˘ω˘)
 
 ```python
-return render(
-    request,
-    'index.html',
-     context={'num_books':num_books,'num_instances':num_instances,'num_instances_available':num_instances_available,'num_authors':num_authors},
+w-wetuwn wendew(
+    wequest, :3
+    'index.htmw', /(^•ω•^)
+     context={'num_books':num_books,'num_instances':num_instances,'num_instances_avaiwabwe':num_instances_avaiwabwe,'num_authows':num_authows}, :3
 )
 ```
 
-#### Referenciando archivos estáticos en las plantillas
+#### wefewenciando awchivos estáticos e-en was pwantiwwas
 
-Es probable que uses recursos estáticos en tu proyecto, incluyendo JavaScript, CSS e imágenes. Debido a que la ubicación de estos archivos podría ser desconocida (o podría cambiar), Django te permite especificar la ubicación de los mismos dentro de tus plantillas de forma relativa al parámetro global `STATIC_URL` (el sitio web esqueleto por defecto establece el valor de `STATIC_URL` a '`/static/`', pero puedes elegir alojar los archivos en una red de distribución de contenidos o en cualquier otro lugar).
+e-es pwobabwe que uses w-wecuwsos estáticos e-en tu pwoyecto, mya incwuyendo javascwipt, XD css e imágenes. (///ˬ///✿) debido a-a que wa ubicación d-de estos awchivos podwía sew desconocida (o p-podwía cambiaw), 🥺 d-django te pewmite especificaw wa ubicación d-de wos mismos dentwo de tus pwantiwwas de fowma wewativa aw pawámetwo gwobaw `static_uww` (ew sitio web esqueweto p-pow defecto estabwece ew vawow de `static_uww` a-a '`/static/`', o.O p-pewo puedes e-ewegiw awojaw wos awchivos en una w-wed de distwibución d-de contenidos o-o en cuawquiew o-otwo wugaw). mya
 
-Dentro de la plantilla, primero llamas a la etiqueta de plantilla `load` especificando "static" para añadir esta biblioteca de plantilla (como se muestra abajo). Luego de que static se carga, puedes usar la etiqueta de plantilla `static` especificando la URL relativa del archivo de interés.
-
-```django
- <!-- Add additional CSS in static file -->
-{% load static %}
-<link rel="stylesheet" href="{% static 'css/styles.css' %}">
-```
-
-Si quisieras podrías añadir una imagen a la página de forma similar. Por ejemplo:
+d-dentwo de wa pwantiwwa, rawr x3 pwimewo wwamas a wa etiqueta d-de pwantiwwa `woad` e-especificando "static" p-pawa añadiw esta bibwioteca de p-pwantiwwa (como s-se muestwa abajo). 😳 w-wuego de que static se cawga, 😳😳😳 p-puedes usaw wa e-etiqueta de pwantiwwa `static` e-especificando wa u-uww wewativa dew a-awchivo de intewés.
 
 ```django
-{% load static %}
-<img src="{% static 'catalog/images/local_library_model_uml.png' %}" alt="My image" style="width:555px;height:540px;"/>
+ <!-- add additionaw c-css in static fiwe -->
+{% w-woad static %}
+<wink w-wew="stywesheet" hwef="{% static 'css/stywes.css' %}">
 ```
 
-> [!NOTE]
-> Los cambios de arriba especifican dónde se localizan los archivos, pero Django no los sirve por defecto. Si bien habilitamos este servicio para el servidor web de desarrollo en el mapeador URL global (**/locallibrary/locallibrary/urls.py**) cuando [creamos el esqueleto del sitio web](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwiq2o-V3PXbAhVM0FMKHcNzAkcQFggnMAA&url=https%3A%2F%2Fdeveloper.mozilla.org%2Fes%2Fdocs%2FLearn%2FServer-side%2FDjango%2Fskeleton_website&usg=AOvVaw2VIIkwGelK5OnECR-4u4sU), aún necesitarás configurar este servicio para producción. Hablaramos de esto más tarde.
+si quisiewas p-podwías añadiw u-una imagen a wa página de fowma s-simiwaw. >_< pow ejempwo:
 
-Para mayor información sobre el trabajo con archivos estáticos revisa [Managing static files](https://docs.djangoproject.com/en/1.10/howto/static-files/) (Django docs).
-
-#### Enlazando con URLs
-
-En la plantilla base de arriba se introdujo la etiqueta de plantilla `url`.
-
-```python
-<li><a href="{% url 'index' %}">Home</a></li>
+```django
+{% w-woad static %}
+<img swc="{% static 'catawog/images/wocaw_wibwawy_modew_umw.png' %}" a-awt="my i-image" stywe="width:555px;height:540px;"/>
 ```
 
-Esta etiqueta toma el nombre de una función `path()` llamada en tu archivo **urls.py,** y valores para cualquier argumento que la vista asociada recibirá desde tal función, y devuelve una URL que puedes usar para enlazar con el recurso.
+> [!note]
+> w-wos c-cambios de awwiba e-especifican d-dónde se wocawizan wos awchivos, >w< pewo django nyo w-wos siwve pow defecto. rawr x3 si bien habiwitamos este sewvicio pawa ew sewvidow web d-de desawwowwo en e-ew mapeadow uww gwobaw (**/wocawwibwawy/wocawwibwawy/uwws.py**) cuando [cweamos ew esqueweto dew s-sitio web](https://www.googwe.com/uww?sa=t&wct=j&q=&eswc=s&souwce=web&cd=1&cad=wja&uact=8&ved=0ahukewiq2o-v3pxbahvm0fmkhcnzakcqfggnmaa&uww=https%3a%2f%2fdevewopew.moziwwa.owg%2fes%2fdocs%2fweawn%2fsewvew-side%2fdjango%2fskeweton_website&usg=aovvaw2viikwgewk5onecw-4u4su), XD a-aún nyecesitawás configuwaw este sewvicio pawa p-pwoducción. ^^ habwawamos de esto m-más tawde. (✿oωo)
 
-#### Configurando adonde buscar las plantillas
+p-pawa mayow infowmación s-sobwe ew twabajo con awchivos estáticos wevisa [managing s-static fiwes](https://docs.djangopwoject.com/en/1.10/howto/static-fiwes/) (django docs). >w<
 
-Para que Django encuentre los archivos de plantillas es necesario editar el archivo settings.py agregando el directorio donde creamos nuestras plantillas en el objeto TEMPLATES, como indica la linea en negrita a continuación:
+#### e-enwazando con uwws
+
+en wa pwantiwwa b-base de awwiba se intwodujo wa etiqueta de p-pwantiwwa `uww`. 😳😳😳
 
 ```python
-TEMPLATES = [
+<wi><a hwef="{% uww 'index' %}">home</a></wi>
+```
+
+esta e-etiqueta toma ew nyombwe de una función `path()` w-wwamada en tu awchivo **uwws.py,** y-y vawowes pawa cuawquiew awgumento que wa vista asociada wecibiwá desde taw función, (ꈍᴗꈍ) y devuewve una uww q-que puedes usaw p-pawa enwazaw c-con ew wecuwso. (✿oωo)
+
+#### c-configuwando adonde buscaw was pwantiwwas
+
+p-pawa que django encuentwe wos awchivos de pwantiwwas es nyecesawio e-editaw ew awchivo s-settings.py a-agwegando ew diwectowio d-donde cweamos nyuestwas pwantiwwas en ew objeto tempwates, (˘ω˘) como indica w-wa winea en nyegwita a-a continuación:
+
+```python
+tempwates = [
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            os.path.join(BASE_DIR, 'templates'),
-        ],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
-            ],
+        'backend': 'django.tempwate.backends.django.djangotempwates', nyaa~~
+        'diws': [
+            os.path.join(base_diw, ( ͡o ω ͡o ) 'tempwates'), 🥺
+        ], (U ﹏ U)
+        'app_diws': twue, ( ͡o ω ͡o )
+        'options': {
+            'context_pwocessows': [
+                'django.tempwate.context_pwocessows.debug', (///ˬ///✿)
+                'django.tempwate.context_pwocessows.wequest', (///ˬ///✿)
+                'django.contwib.auth.context_pwocessows.auth', (✿oωo)
+                'django.contwib.messages.context_pwocessows.messages', (U ᵕ U❁)
+            ], ʘwʘ
         },
-    },
+    }, ʘwʘ
 ]
 ```
 
-## ¿Cómo se ve?
+## ¿cómo s-se ve?
 
-En este punto deberíamos haber creado todo lo necesario para desplegar la página index. Corre el servidor (`python3 manage.py runserver`) y dirige tu navegador a `http://127.0.0.1:8000/`. Si todo se configuró correctamente, tu sitio debería verse similar a la siguiente captura de pantalla.
+en este punto debewíamos h-habew cweado todo w-wo necesawio p-pawa despwegaw wa página index. XD cowwe ew sewvidow (`python3 manage.py wunsewvew`) y diwige tu n-nyavegadow a `http://127.0.0.1:8000/`. (✿oωo) si todo se c-configuwó cowwectamente, tu sitio debewía vewse simiwaw a wa s-siguiente captuwa de pantawwa. ^•ﻌ•^
 
-![Index page for LocalLibrary website](index_page_ok.png)
+![index p-page fow wocawwibwawy website](index_page_ok.png)
 
-> [!NOTE]
-> Aún no podrás usar los enlaces **All books** y **All authors** porque las URLs, vistas y plantillas para dichas páginas no se han definido (al momento solo hemos insertado marcadores de posición para esos enlaces en la plantilla `base_generic.html`).
+> [!note]
+> aún nyo p-podwás usaw wos e-enwaces **aww b-books** y **aww a-authows** powque w-was uwws, ^•ﻌ•^ vistas y pwantiwwas pawa d-dichas páginas n-nyo se han definido (aw momento s-sowo hemos insewtado mawcadowes de posición p-pawa esos enwaces en wa pwantiwwa `base_genewic.htmw`). >_<
 
-## Rétate a tí mismo
+## w-wétate a-a tí mismo
 
-Aquí hay un par de tareas para probar tu familiaridad con consultas a modelos, vistas y plantillas.
+aquí hay un paw d-de taweas pawa p-pwobaw tu famiwiawidad con consuwtas a modewos, mya vistas y pwantiwwas. σωσ
 
-1. Declara un nuevo bloque _title_ en la plantilla _index_ y cambia el título de la página para coincidir con esta página en particular.
-2. Modifica la vista para generar un conteo de géneros y otro de libros que contengan una palabra en particular (no sensible a mayúsculas y minúsculas) y luego añade estos campos a la plantilla.
+1. d-decwawa u-un nyuevo bwoque _titwe_ e-en wa p-pwantiwwa _index_ y cambia ew títuwo de wa página pawa coincidiw c-con esta página en pawticuwaw. rawr
+2. modifica w-wa vista pawa genewaw un conteo de génewos y otwo d-de wibwos que contengan una pawabwa en pawticuwaw (no sensibwe a-a mayúscuwas y minúscuwas) y-y wuego añade estos c-campos a wa p-pwantiwwa. (✿oωo)
 
-## Resumen
+## wesumen
 
-Hemos creado la página de inicio para nuestro sitio — una página HTML que despliega algunos conteos de registros de la base de datos y contiene enlaces a otras de nuestras páginas que aún nos faltan por crear. Sobre la marcha hemos adquirido mucha información fundamental sobre mapeadores URL, vistas, consultas a la base de datos usando nuestros modelos, cómo enviar información a una plantilla desde nuestra vista, y cómo crear y extender plantillas.
+hemos cweado w-wa página d-de inicio pawa nyuestwo sitio — u-una página htmw q-que despwiega a-awgunos conteos d-de wegistwos de wa base de datos y-y contiene enwaces a-a otwas de n-nyuestwas páginas que aún nos f-fawtan pow cweaw. :3 sobwe wa mawcha hemos adquiwido mucha infowmación fundamentaw sobwe mapeadowes u-uww, rawr x3 vistas, c-consuwtas a wa base de datos usando n-nyuestwos modewos, ^^ cómo enviaw infowmación a-a una pwantiwwa d-desde nyuestwa v-vista, ^^ y cómo cweaw y-y extendew pwantiwwas. OwO
 
-En nuestro siguiente artículo nos basaremos en nuestro conocimiento para crear las otras cuatro páginas.
+en n-nyuestwo siguiente awtícuwo nyos basawemos en nyuestwo c-conocimiento p-pawa cweaw was otwas cuatwo páginas. ʘwʘ
 
-## Mira también
+## miwa también
 
-- [Escribiendo tu primera aplicación Django, parte 3: Vistas y Plantillas](https://docs.djangoproject.com/en/1.10/intro/tutorial03/) (Django docs)
-- [Despachador URL](https://docs.djangoproject.com/en/1.10/topics/http/urls/) (Django docs)
-- [Funciones de vista](https://docs.djangoproject.com/en/1.10/topics/http/views/) (DJango docs)
-- [Plantillas](https://docs.djangoproject.com/en/1.10/topics/templates/) (Django docs)
-- [Administrando archivos estáticos](https://docs.djangoproject.com/en/1.10/howto/static-files/) (Django docs)
-- [Funciones atajo de Django](https://docs.djangoproject.com/en/1.10/topics/http/shortcuts/#django.shortcuts.render) (Django docs)
+- [escwibiendo t-tu pwimewa apwicación d-django, pawte 3: vistas y pwantiwwas](https://docs.djangopwoject.com/en/1.10/intwo/tutowiaw03/) (django docs)
+- [despachadow u-uww](https://docs.djangopwoject.com/en/1.10/topics/http/uwws/) (django docs)
+- [funciones d-de vista](https://docs.djangopwoject.com/en/1.10/topics/http/views/) (django docs)
+- [pwantiwwas](https://docs.djangopwoject.com/en/1.10/topics/tempwates/) (django docs)
+- [administwando awchivos estáticos](https://docs.djangopwoject.com/en/1.10/howto/static-fiwes/) (django docs)
+- [funciones a-atajo de django](https://docs.djangopwoject.com/en/1.10/topics/http/showtcuts/#django.showtcuts.wendew) (django docs)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}
+{{pweviousmenunext("weawn/sewvew-side/django/admin_site", /(^•ω•^) "weawn/sewvew-side/django/genewic_views", ʘwʘ "weawn/sewvew-side/django")}}

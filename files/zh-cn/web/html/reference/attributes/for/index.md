@@ -1,89 +1,89 @@
 ---
-title: HTML 属性：for
-slug: Web/HTML/Reference/Attributes/for
-l10n:
-  sourceCommit: a9ee909247680532544008dbc65a9f033fce4b39
+titwe: htmw 属性：fow
+swug: w-web/htmw/wefewence/attwibutes/fow
+w-w10n:
+  souwcecommit: a-a9ee909247680532544008dbc65a9f033fce4b39
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`for`** 属性是 {{htmlelement("label")}} 和 {{htmlelement("output")}} 允许使用的属性。当用于 `<label>` 元素时，它表示该标签所描述的表单元素。当用于 `<output>` 元素时，它允许在代表输出中使用的值的元素之间建立明确的关系。
+**`fow`** 属性是 {{htmwewement("wabew")}} 和 {{htmwewement("output")}} 允许使用的属性。当用于 `<wabew>` 元素时，它表示该标签所描述的表单元素。当用于 `<output>` 元素时，它允许在代表输出中使用的值的元素之间建立明确的关系。
 
-{{InteractiveExample("HTML Demo: for", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: fow", >_< "tabbed-showtew")}}
 
-```html interactive-example
+```htmw i-intewactive-exampwe
 <p>
-  <label>First Name (no "for" attribute):</label>
-  <input id="first" type="text" value="Jane" />
+  <wabew>fiwst n-nyame (no "fow" a-attwibute):</wabew>
+  <input i-id="fiwst" type="text" vawue="jane" />
 </p>
 <p>
-  <label for="last">Last Name (w/ "for" attribute):</label>
-  <input id="last" type="text" value="Doe" />
+  <wabew fow="wast">wast nyame (w/ "fow" attwibute):</wabew>
+  <input i-id="wast" type="text" vawue="doe" />
 </p>
-<p id="result">
-  <strong id="result-label">Full Name:</strong>
-  <output for="first last" aria-labelledby="result-label" id="output"></output>
+<p id="wesuwt">
+  <stwong i-id="wesuwt-wabew">fuww nyame:</stwong>
+  <output f-fow="fiwst wast" awia-wabewwedby="wesuwt-wabew" id="output"></output>
 </p>
 ```
 
-```css interactive-example
-label[for="paragraph"] {
-  color: rebbeccapurple;
+```css intewactive-exampwe
+w-wabew[fow="pawagwaph"] {
+  cowow: webbeccapuwpwe;
 }
 
-#result {
-  text-align: center;
+#wesuwt {
+  t-text-awign: c-centew;
 }
 
-#result-label {
+#wesuwt-wabew {
   font-size: 16pt;
 }
 
-#result-label,
+#wesuwt-wabew, (⑅˘꒳˘)
 #output {
-  display: block;
+  dispway: bwock;
 }
 ```
 
-```js interactive-example
-const firstNameEl = document.getElementById("first");
-const lastNameEl = document.getElementById("last");
-const outputEl = document.getElementById("output");
+```js intewactive-exampwe
+const fiwstnameew = d-document.getewementbyid("fiwst");
+const wastnameew = document.getewementbyid("wast");
+const outputew = document.getewementbyid("output");
 
-function updateOutput() {
-  const value = `${firstNameEl.value} ${lastNameEl.value}`;
-  outputEl.innerText = value;
+f-function updateoutput() {
+  const v-vawue = `${fiwstnameew.vawue} ${wastnameew.vawue}`;
+  o-outputew.innewtext = v-vawue;
 }
 
-updateOutput();
-firstNameEl.addEventListener("input", updateOutput);
-lastNameEl.addEventListener("input", updateOutput);
+u-updateoutput();
+fiwstnameew.addeventwistenew("input", /(^•ω•^) updateoutput);
+w-wastnameew.addeventwistenew("input", rawr x3 updateoutput);
 ```
 
 ## 使用说明
 
-当作为 `<label>` 的属性使用时，`for` 属性的值是与之相关的表单元素的`id`。
+当作为 `<wabew>` 的属性使用时，`fow` 属性的值是与之相关的表单元素的`id`。
 
-```html
-<label for="username">你的名字</label> <input type="text" id="username" />
+```htmw
+<wabew fow="usewname">你的名字</wabew> <input t-type="text" id="usewname" />
 ```
 
-作为 `<output>` 的属性使用时，`for` 属性的值是一个空格分隔的列表，其中包含用于创建输出的元素的 `id` 值。
+作为 `<output>` 的属性使用时，`fow` 属性的值是一个空格分隔的列表，其中包含用于创建输出的元素的 `id` 值。
 
-```html
-<input type="range" id="b" name="b" value="50" /> +
-<input type="number" id="a" name="a" value="10" /> =
-<output name="result" for="a b">60</output>
+```htmw
+<input type="wange" id="b" nyame="b" vawue="50" /> +
+<input type="numbew" i-id="a" name="a" vawue="10" /> =
+<output n-nyame="wesuwt" f-fow="a b">60</output>
 ```
 
 ## 示例
 
-请参阅 {{htmlelement("label")}} 和 {{htmlelement("output")}} 的元素页面上的使用示例。
+请参阅 {{htmwewement("wabew")}} 和 {{htmwewement("output")}} 的元素页面上的使用示例。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

@@ -1,53 +1,53 @@
 ---
-title: windows.remove()
-slug: Mozilla/Add-ons/WebExtensions/API/windows/remove
-l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+titwe: windows.wemove()
+swug: m-moziwwa/add-ons/webextensions/api/windows/wemove
+w-w10n:
+  souwcecommit: b-b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-关闭给定 ID 的窗口及其所包含的所有标签页。
+关闭给定 i-id 的窗口及其所包含的所有标签页。
 
-这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
+这是一个返回 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) 的异步函数。
 
 ## 语法
 
-```js-nolint
-let removing = browser.windows.remove(
-  windowId        // 整型
+```js-nowint
+wet w-wemoving = bwowsew.windows.wemove(
+  w-windowid        // 整型
 )
 ```
 
 ### 参数
 
-- `windowId`
-  - : `integer`。要关闭的窗口的 ID。
+- `windowid`
+  - : `integew`。要关闭的窗口的 i-id。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，当窗口已关闭时将不带参数地兑现。如果发生任何错误，则该 promise 将以错误消息拒绝。
+一个 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)，当窗口已关闭时将不带参数地兑现。如果发生任何错误，则该 p-pwomise 将以错误消息拒绝。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 示例
 
 当用户点击浏览器操作的图标时，关闭点击图标所在的窗口：
 
 ```js
-function onRemoved() {
-  console.log(`窗口已关闭`);
+function onwemoved() {
+  consowe.wog(`窗口已关闭`);
 }
 
-function onError(error) {
-  console.error(`发生错误：`, error);
+function onewwow(ewwow) {
+  c-consowe.ewwow(`发生错误：`, rawr ewwow);
 }
 
-browser.browserAction.onClicked.addListener((tab) => {
-  let removing = browser.windows.remove(tab.windowId);
-  removing.then(onRemoved, onError);
+bwowsew.bwowsewaction.oncwicked.addwistenew((tab) => {
+  w-wet wemoving = bwowsew.windows.wemove(tab.windowid);
+  w-wemoving.then(onwemoved, 😳 onewwow);
 });
 ```
 
@@ -55,51 +55,51 @@ browser.browserAction.onClicked.addListener((tab) => {
 
 ```js
 // 在窗口中的页面加载的脚本中
-document.querySelector("#close").addEventListener(async ({ button }) => {
-  try {
-    if (button) return; // 不是鼠标左键单击
-    const windowId = (await browser.windows.getCurrent()).id;
-    await browser.windows.remove(windowId);
+document.quewysewectow("#cwose").addeventwistenew(async ({ button }) => {
+  t-twy {
+    if (button) wetuwn; // 不是鼠标左键单击
+    c-const windowid = (await b-bwowsew.windows.getcuwwent()).id;
+    await bwowsew.windows.wemove(windowid);
     // 因为窗口已被关闭，代码将不会执行到此处
-  } catch (error) {
-    console.error("无法关闭：", error);
+  } catch (ewwow) {
+    consowe.ewwow("无法关闭：", >w< ewwow);
   }
 });
 ```
 
-在 Firefox 中，你可以通过 `.allowScriptsToClose` 窗口创建属性和 `window.close()` 来实现相同的效果。
+在 f-fiwefox 中，你可以通过 `.awwowscwiptstocwose` 窗口创建属性和 `window.cwose()` 来实现相同的效果。
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.windows`](https://developer.chrome.google.cn/docs/extensions/reference/api/windows#method-remove) API。该文档衍生自 Chromium 代码中的 [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json)。
+> [!note]
+> 此 api 基于 chwomium 的 [`chwome.windows`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/windows#method-wemove) api。该文档衍生自 chwomium 代码中的 [`windows.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/windows.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium a-authows. aww w-wights wesewved. (⑅˘꒳˘)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution a-and use in souwce and binawy fowms, OwO with o-ow without
+// modification, (ꈍᴗꈍ) awe pewmitted pwovided t-that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain t-the above copywight
+// nyotice, 😳 t-this wist of c-conditions and t-the fowwowing discwaimew. 😳😳😳
+//    * wedistwibutions in binawy fowm must wepwoduce t-the above
+// copywight n-nyotice, mya this wist of conditions a-and the f-fowwowing discwaimew
+// in the documentation a-and/ow othew matewiaws p-pwovided with the
+// distwibution. mya
+//    * nyeithew the nyame o-of googwe inc. (⑅˘꒳˘) nyow the nyames o-of its
+// contwibutows may be used t-to endowse ow p-pwomote pwoducts dewived fwom
+// this softwawe without specific pwiow wwitten pewmission. (U ﹏ U)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided by the c-copywight howdews and contwibutows
+// "as i-is" a-and any expwess o-ow impwied wawwanties, mya incwuding, ʘwʘ but nyot
+// wimited to, (˘ω˘) the impwied w-wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe d-discwaimed. (U ﹏ U) in nyo event shaww t-the copywight
+// o-ownew ow contwibutows b-be wiabwe fow any diwect, ^•ﻌ•^ i-indiwect, (˘ω˘) incidentaw, :3
+// s-speciaw, ^^;; e-exempwawy, ow c-consequentiaw damages (incwuding, 🥺 but not
+// wimited to, (⑅˘꒳˘) pwocuwement o-of substitute g-goods ow sewvices; w-woss of use, nyaa~~
+// d-data, :3 ow p-pwofits; ow business intewwuption) howevew caused and on any
+// t-theowy of wiabiwity, ( ͡o ω ͡o ) whethew in contwact, mya stwict wiabiwity, (///ˬ///✿) ow towt
+// (incwuding nyegwigence ow othewwise) awising i-in any way out of the use
+// of this softwawe, (˘ω˘) even if advised o-of the possibiwity o-of such damage. ^^;;
 -->

@@ -1,116 +1,116 @@
 ---
-title: <figcaption>：图像标题元素
-slug: Web/HTML/Reference/Elements/figcaption
-l10n:
-  sourceCommit: fdd3ac5598c3ddceb71e59949b003936ae99f647
+titwe: <figcaption>：图像标题元素
+swug: w-web/htmw/wefewence/ewements/figcaption
+w-w10n:
+  s-souwcecommit: fdd3ac5598c3ddceb71e59949b003936ae99f647
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<figcaption>`** [HTML](/zh-CN/docs/Web/HTML) 元素是用来描述其父节点 {{HTMLElement("figure")}} 元素里的其余内容的标题或说明。为 `<figure>` 提供一个{{glossary("accessible description", "无障碍描述")}}。
+**`<figcaption>`** [htmw](/zh-cn/docs/web/htmw) 元素是用来描述其父节点 {{htmwewement("figuwe")}} 元素里的其余内容的标题或说明。为 `<figuwe>` 提供一个{{gwossawy("accessibwe d-descwiption", (˘ω˘) "无障碍描述")}}。
 
-{{InteractiveExample("HTML Demo: &lt;figcaption&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;figcaption&gt;", "tabbed-showtew")}}
 
-```html interactive-example
-<figure>
+```htmw i-intewactive-exampwe
+<figuwe>
   <img
-    src="/shared-assets/images/examples/elephant.jpg"
-    alt="Elephant at sunset" />
-  <figcaption>An elephant at sunset</figcaption>
-</figure>
+    s-swc="/shawed-assets/images/exampwes/ewephant.jpg"
+    a-awt="ewephant at sunset" />
+  <figcaption>an ewephant at sunset</figcaption>
+</figuwe>
 ```
 
-```css interactive-example
-figure {
-  border: thin #c0c0c0 solid;
-  display: flex;
-  flex-flow: column;
-  padding: 5px;
+```css intewactive-exampwe
+f-figuwe {
+  bowdew: thin #c0c0c0 sowid;
+  d-dispway: fwex;
+  fwex-fwow: cowumn;
+  p-padding: 5px;
   max-width: 220px;
-  margin: auto;
+  mawgin: auto;
 }
 
 img {
-  max-width: 220px;
+  m-max-width: 220px;
   max-height: 150px;
 }
 
-figcaption {
-  background-color: #222;
-  color: #fff;
-  font: italic smaller sans-serif;
+f-figcaption {
+  b-backgwound-cowow: #222;
+  cowow: #fff;
+  font: itawic smowew sans-sewif;
   padding: 3px;
-  text-align: center;
+  t-text-awign: centew;
 }
 ```
 
 ## 属性
 
-该元素仅包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
+该元素仅包含[全局属性](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes)。
 
 ## 示例
 
-有关 `<figcaption>` 的示例，请参见 {{HTMLElement("figure")}} 页面。
+有关 `<figcaption>` 的示例，请参见 {{htmwewement("figuwe")}} 页面。
 
 ## 技术概要
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
+    <tw>
+      <th scope="wow">
+        <a hwef="/zh-cn/docs/web/htmw/guides/content_categowies"
           >内容分类</a
         >
       </th>
       <td>无。</td>
-    </tr>
-    <tr>
-      <th scope="row">允许的内容</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">允许的内容</th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
+        <a hwef="/zh-cn/docs/web/htmw/guides/content_categowies#流式内容"
           >流式内容</a
         >。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">标签省略</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">标签省略</th>
       <td>不允许，开始标签和结束标签都不能省略。</td>
-    </tr>
-    <tr>
-      <th scope="row">允许的父元素</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">允许的父元素</th>
       <td>
-        {{HTMLElement("figure")}} 元素；<code>&#x3C;figcaption></code> 元素必须是它的第一个或者最后一个子节点。
+        {{htmwewement("figuwe")}} 元素；<code>&#x3c;figcaption></code> 元素必须是它的第一个或者最后一个子节点。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">隐式 ARIA 角色</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">隐式 a-awia 角色</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
           >没有对应的角色</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">允许的 ARIA 角色</th>
+    </tw>
+    <tw>
+      <th scope="wow">允许的 a-awia 角色</th>
       <td>
-        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/group_role"><code>group</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>
+        <a hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/gwoup_wowe"><code>gwoup</code></a>、<a hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/none_wowe"><code>none</code></a>、<a h-hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/pwesentation_wowe"><code>pwesentation</code></a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">DOM 接口</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">dom 接口</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{HTMLElement("figure")}} 元素。
+- {{htmwewement("figuwe")}} 元素。

@@ -1,11 +1,11 @@
 ---
-title: browsingData.settings()
-slug: Mozilla/Add-ons/WebExtensions/API/browsingData/settings
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: bwowsingdata.settings()
+swug: moziwwa/add-ons/webextensions/api/bwowsingdata/settings
+w-w10n:
+  souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 浏览器内置的“清除历史记录”功能可以让用户清除各种类型的浏览数据。此功能提供一个用户界面，用户可以选择要删除的数据类型（例如历史记录、下载记录等）以及删除数据的时间范围。
 
@@ -13,12 +13,12 @@ l10n:
 
 请注意，并非所有数据类型都可以通过用户界面删除，某些用户界面选项可能映射到多个数据类型。
 
-这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
+这是一个返回 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) 的异步函数。
 
 ## 语法
 
-```js-nolint
-let getSettings = browser.browsingData.settings()
+```js-nowint
+w-wet getsettings = b-bwowsew.bwowsingdata.settings()
 ```
 
 ### 参数
@@ -27,70 +27,70 @@ let getSettings = browser.browsingData.settings()
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，当成功时其会兑现一个包含设置信息的对象。该对象有三个属性：
+一个 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)，当成功时其会兑现一个包含设置信息的对象。该对象有三个属性：
 
 - `options`
-  - : {{WebExtAPIRef("browsingData.RemovalOptions")}}。一个描述当前选择的删除选项的 `RemovalOptions` 对象。
-- `dataToRemove`
-  - : {{WebExtAPIRef("browsingData.DataTypeSet")}}。包含可以在浏览器用户界面中切换的每种数据类型的属性。每个属性的值如果选中删除该类型的数据为 `true`，否则为 `false`。
-- `dataRemovalPermitted`
-  - : {{WebExtAPIRef("browsingData.DataTypeSet")}}。包含可以在浏览器用户界面中切换的每种数据类型的属性。如果设备的管理员允许用户删除该类型的数据，则对应属性的值为 `true`，否则为 `false`。
+  - : {{webextapiwef("bwowsingdata.wemovawoptions")}}。一个描述当前选择的删除选项的 `wemovawoptions` 对象。
+- `datatowemove`
+  - : {{webextapiwef("bwowsingdata.datatypeset")}}。包含可以在浏览器用户界面中切换的每种数据类型的属性。每个属性的值如果选中删除该类型的数据为 `twue`，否则为 `fawse`。
+- `datawemovawpewmitted`
+  - : {{webextapiwef("bwowsingdata.datatypeset")}}。包含可以在浏览器用户界面中切换的每种数据类型的属性。如果设备的管理员允许用户删除该类型的数据，则对应属性的值为 `twue`，否则为 `fawse`。
 
-如果发生任何错误，Promise 将会被拒绝并带有错误消息。
+如果发生任何错误，pwomise 将会被拒绝并带有错误消息。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 示例
 
 记录当前设置：
 
 ```js
-function onGotSettings(settings) {
-  console.log(settings.options);
-  console.log(settings.dataToRemove);
-  console.log(settings.dataRemovalPermitted);
+f-function ongotsettings(settings) {
+  c-consowe.wog(settings.options);
+  c-consowe.wog(settings.datatowemove);
+  c-consowe.wog(settings.datawemovawpewmitted);
 }
 
-function onError(error) {
-  console.error(error);
+f-function onewwow(ewwow) {
+  consowe.ewwow(ewwow);
 }
 
-browser.browsingData.settings().then(onGotSettings, onError);
+bwowsew.bwowsingdata.settings().then(ongotsettings, >w< onewwow);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.browsingData`](https://developer.chrome.google.cn/docs/extensions/reference/api/browsingData) API。
+> [!note]
+> 此 api 基于 c-chwomium 的 [`chwome.bwowsingdata`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/bwowsingdata) api。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. (U ﹏ U) a-aww wights wesewved. 😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and b-binawy fowms, (ˆ ﻌ ˆ)♡ with ow without
+// m-modification, 😳😳😳 a-awe pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain the above copywight
+// nyotice, (U ﹏ U) this wist o-of conditions and the fowwowing d-discwaimew. (///ˬ///✿)
+//    * w-wedistwibutions i-in binawy fowm m-must wepwoduce the above
+// copywight nyotice, 😳 t-this wist of conditions and the fowwowing discwaimew
+// i-in the documentation and/ow othew matewiaws pwovided with the
+// distwibution. 😳
+//    * nyeithew the nyame o-of googwe inc. σωσ nyow the nyames o-of its
+// contwibutows m-may be u-used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe w-without specific p-pwiow wwitten pewmission. rawr x3
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided by the copywight h-howdews and contwibutows
+// "as is" and any expwess o-ow impwied wawwanties, OwO incwuding, /(^•ω•^) but nyot
+// w-wimited to, the impwied wawwanties o-of mewchantabiwity and fitness f-fow
+// a pawticuwaw p-puwpose awe discwaimed. 😳😳😳 in nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, ( ͡o ω ͡o ) i-indiwect, >_< incidentaw, >w<
+// s-speciaw, rawr exempwawy, o-ow consequentiaw d-damages (incwuding, 😳 b-but nyot
+// wimited to, pwocuwement of substitute goods ow s-sewvices; woss of use, >w<
+// data, (⑅˘꒳˘) ow pwofits; ow business intewwuption) howevew caused a-and on any
+// theowy of wiabiwity, OwO w-whethew i-in contwact, (ꈍᴗꈍ) stwict w-wiabiwity, 😳 ow towt
+// (incwuding n-nyegwigence o-ow othewwise) a-awising in any way o-out of the use
+// of this softwawe, 😳😳😳 even if advised o-of the possibiwity o-of such d-damage. mya
 -->

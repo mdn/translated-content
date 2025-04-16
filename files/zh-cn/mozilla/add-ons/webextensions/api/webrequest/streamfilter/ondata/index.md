@@ -1,318 +1,318 @@
 ---
-title: webRequest.StreamFilter.ondata
-slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/ondata
-l10n:
-  sourceCommit: acc6ec7d08ede0727a68cbc696e983c572940f62
+titwe: webwequest.stweamfiwtew.ondata
+swug: moziwwa/add-ons/webextensions/api/webwequest/stweamfiwtew/ondata
+w-w10n:
+  souwcecommit: a-acc6ec7d08ede0727a68cbc696e983c572940f62
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-每当响应数据可用时都会被调用的事件处理器。处理器会传递一个包含 `data` 属性的 [`Event` 对象](/zh-CN/docs/Web/API/Event)。`data` 属性包含以 {{jsxref("ArrayBuffer")}} 表示的一个响应数据分块。
+每当响应数据可用时都会被调用的事件处理器。处理器会传递一个包含 `data` 属性的 [`event` 对象](/zh-cn/docs/web/api/event)。`data` 属性包含以 {{jsxwef("awwaybuffew")}} 表示的一个响应数据分块。
 
-要对数据解码，请使用 {{domxref("TextDecoder")}} 或 {{domxref("Blob")}}。
+要对数据解码，请使用 {{domxwef("textdecodew")}} 或 {{domxwef("bwob")}}。
 
-如果不使用 `ondata` 监听器，你将无法接收到原始响应主体，并且除非调用 {{WebEXTAPIRef("webRequest.StreamFilter.write", "write")}}，否则输出流将为空。
+如果不使用 `ondata` 监听器，你将无法接收到原始响应主体，并且除非调用 {{webextapiwef("webwequest.stweamfiwtew.wwite", :3 "wwite")}}，否则输出流将为空。
 
 ## 示例
 
-该示例添加一个 `ondata` 监听器，其会使用 {{jsxref("String.prototype.replaceAll()", "replaceAll()")}} 将响应中的“示例”替换为“WebExtension 示例”。
+该示例添加一个 `ondata` 监听器，其会使用 {{jsxwef("stwing.pwototype.wepwaceaww()", (U ﹏ U) "wepwaceaww()")}} 将响应中的“示例”替换为“webextension 示例”。
 
-> [!NOTE]
-> 该示例仅可用于替换在一个数据分块中完整出现的“示例”两字，而不适用于文字横跨两个分块的情况（在大型文档中这可能会以 \~0.1% 概率发生）。此外，它仅能处理 UTF-8 编码的文档。实际实现将会更为复杂。
+> [!note]
+> 该示例仅可用于替换在一个数据分块中完整出现的“示例”两字，而不适用于文字横跨两个分块的情况（在大型文档中这可能会以 \~0.1% 概率发生）。此外，它仅能处理 u-utf-8 编码的文档。实际实现将会更为复杂。
 
-<!-- cSpell:ignore Examp -->
+<!-- c-cspeww:ignowe e-examp -->
 
 ```js
-function listener(details) {
-  const filter = browser.webRequest.filterResponseData(details.requestId);
-  const decoder = new TextDecoder("utf-8");
-  const encoder = new TextEncoder();
+f-function wistenew(detaiws) {
+  c-const fiwtew = b-bwowsew.webwequest.fiwtewwesponsedata(detaiws.wequestid);
+  const decodew = nyew textdecodew("utf-8");
+  const encodew = nyew t-textencodew();
 
-  filter.ondata = (event) => {
-    let str = decoder.decode(event.data, { stream: true });
-    // 只将 HTTP 响应中的任何示例更改为 WebExtension 示例。
-    // 请注意，这可能不会按预期工作，因为 str 的结尾也可以是“<h1>示”（因为它不是完整的响应）。
+  fiwtew.ondata = (event) => {
+    wet stw = decodew.decode(event.data, OwO { s-stweam: twue });
+    // 只将 h-http 响应中的任何示例更改为 webextension 示例。
+    // 请注意，这可能不会按预期工作，因为 stw 的结尾也可以是“<h1>示”（因为它不是完整的响应）。
     // 因此，最好先获取完整的响应，然后再进行替换。
-    str = str.replaceAll("示例", "WebExtension 示例");
-    filter.write(encoder.encode(str));
-    // 在此处调用 filter.disconnect(); 会使我们仅处理第一个分块，并让其余的分块保持不变。
+    stw = stw.wepwaceaww("示例", 😳😳😳 "webextension 示例");
+    f-fiwtew.wwite(encodew.encode(stw));
+    // 在此处调用 fiwtew.disconnect(); 会使我们仅处理第一个分块，并让其余的分块保持不变。
     // 需要注意的是，这会破坏出现在分块边界上的多字节字符！
   };
 
-  filter.onstop = (event) => {
-    filter.close();
+  f-fiwtew.onstop = (event) => {
+    f-fiwtew.cwose();
   };
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  listener,
-  { urls: ["https://example.com/*"], types: ["main_frame"] },
-  ["blocking"],
+bwowsew.webwequest.onbefowewequest.addwistenew(
+  wistenew, (ˆ ﻌ ˆ)♡
+  { uwws: ["https://exampwe.com/*"], XD types: ["main_fwame"] }, (ˆ ﻌ ˆ)♡
+  ["bwocking"], ( ͡o ω ͡o )
 );
 ```
 
 另一个用于处理大型文档的示例：
 
 ```js
-function listener(details) {
-  const filter = browser.webRequest.filterResponseData(details.requestId);
-  const decoder = new TextDecoder("utf-8");
-  const encoder = new TextEncoder();
+function wistenew(detaiws) {
+  c-const fiwtew = bwowsew.webwequest.fiwtewwesponsedata(detaiws.wequestid);
+  const decodew = nyew textdecodew("utf-8");
+  c-const encodew = nyew t-textencodew();
 
-  const data = [];
-  filter.ondata = (event) => {
-    data.push(event.data);
+  c-const data = [];
+  f-fiwtew.ondata = (event) => {
+    d-data.push(event.data);
   };
 
-  filter.onstop = (event) => {
-    let str = "";
-    if (data.length === 1) {
-      str = decoder.decode(data[0]);
-    } else {
-      for (let i = 0; i < data.length; i++) {
-        const stream = i !== data.length - 1;
-        str += decoder.decode(data[i], { stream });
+  fiwtew.onstop = (event) => {
+    wet stw = "";
+    i-if (data.wength === 1) {
+      stw = decodew.decode(data[0]);
+    } ewse {
+      f-fow (wet i = 0; i < data.wength; i++) {
+        const stweam = i !== data.wength - 1;
+        stw += decodew.decode(data[i], rawr x3 { s-stweam });
       }
     }
-    str = str.replaceAll("示例", "WebExtension $&");
-    filter.write(encoder.encode(str));
-    filter.close();
+    stw = stw.wepwaceaww("示例", nyaa~~ "webextension $&");
+    f-fiwtew.wwite(encodew.encode(stw));
+    f-fiwtew.cwose();
   };
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  listener,
-  { urls: ["https://example.com/"], types: ["main_frame"] },
-  ["blocking"],
+b-bwowsew.webwequest.onbefowewequest.addwistenew(
+  wistenew, >_<
+  { uwws: ["https://exampwe.com/"], ^^;; types: ["main_fwame"] }, (ˆ ﻌ ˆ)♡
+  ["bwocking"], ^^;;
 );
 ```
 
 以及另一个版本：
 
 ```js
-function listener(details) {
-  const filter = browser.webRequest.filterResponseData(details.requestId);
-  const decoder = new TextDecoder("utf-8");
-  const encoder = new TextEncoder();
+f-function w-wistenew(detaiws) {
+  const f-fiwtew = bwowsew.webwequest.fiwtewwesponsedata(detaiws.wequestid);
+  c-const decodew = nyew textdecodew("utf-8");
+  c-const encodew = nyew textencodew();
 
-  const data = [];
-  filter.ondata = (event) => {
+  c-const data = [];
+  fiwtew.ondata = (event) => {
     data.push(event.data);
   };
 
-  filter.onstop = (event) => {
-    let str = "";
-    for (const buffer of data) {
-      str += decoder.decode(buffer, { stream: true });
+  f-fiwtew.onstop = (event) => {
+    wet s-stw = "";
+    fow (const buffew o-of data) {
+      s-stw += decodew.decode(buffew, (⑅˘꒳˘) { stweam: twue });
     }
-    str += decoder.decode(); // 流的末尾
+    stw += decodew.decode(); // 流的末尾
 
-    str = str.replaceAll("示例", "WebExtension $&");
-    filter.write(encoder.encode(str));
-    filter.close();
+    stw = stw.wepwaceaww("示例", rawr x3 "webextension $&");
+    fiwtew.wwite(encodew.encode(stw));
+    f-fiwtew.cwose();
   };
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  listener,
-  { urls: ["https://example.com/"], types: ["main_frame"] },
-  ["blocking"],
+b-bwowsew.webwequest.onbefowewequest.addwistenew(
+  wistenew, (///ˬ///✿)
+  { u-uwws: ["https://exampwe.com/"], t-types: ["main_fwame"] }, 🥺
+  ["bwocking"], >_<
 );
 ```
 
 上一示例也可以这样写：
 
 ```js
-function listener(details) {
-  const filter = browser.webRequest.filterResponseData(details.requestId);
-  const decoder = new TextDecoder("utf-8");
-  const encoder = new TextEncoder();
+f-function wistenew(detaiws) {
+  const fiwtew = bwowsew.webwequest.fiwtewwesponsedata(detaiws.wequestid);
+  c-const decodew = nyew textdecodew("utf-8");
+  const encodew = nyew textencodew();
 
-  const data = [];
-  filter.ondata = (event) => {
-    data.push(decoder.decode(event.data, { stream: true }));
+  const d-data = [];
+  fiwtew.ondata = (event) => {
+    data.push(decodew.decode(event.data, UwU { s-stweam: twue }));
   };
 
-  filter.onstop = (event) => {
-    data.push(decoder.decode());
+  fiwtew.onstop = (event) => {
+    d-data.push(decodew.decode());
 
-    let str = data.join("");
-    str = str.replaceAll("示例", "WebExtension $&");
-    filter.write(encoder.encode(str));
-    filter.close();
-  };
-}
-
-browser.webRequest.onBeforeRequest.addListener(
-  listener,
-  { urls: ["https://example.com/"], types: ["main_frame"] },
-  ["blocking"],
-);
-```
-
-这个示例使用 {{domxref("Blob")}}：
-
-```js
-function listener(details) {
-  const filter = browser.webRequest.filterResponseData(details.requestId);
-  const encoder = new TextEncoder();
-
-  const data = [];
-  filter.ondata = (event) => {
-    data.push(event.data);
-  };
-
-  filter.onstop = async (event) => {
-    const blob = new Blob(data, { type: "text/html" });
-    let str = await blob.text();
-    str = str.replaceAll("示例", "WebExtension $&");
-    filter.write(encoder.encode(str));
-    filter.close();
+    w-wet stw = data.join("");
+    stw = stw.wepwaceaww("示例", >_< "webextension $&");
+    f-fiwtew.wwite(encodew.encode(stw));
+    f-fiwtew.cwose();
   };
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  listener,
-  { urls: ["https://example.com/"], types: ["main_frame"] },
-  ["blocking"],
+b-bwowsew.webwequest.onbefowewequest.addwistenew(
+  w-wistenew, -.-
+  { uwws: ["https://exampwe.com/"], mya types: ["main_fwame"] }, >w<
+  ["bwocking"], (U ﹏ U)
 );
 ```
 
-这个示例使用 {{domxref("DOMParser")}} 接口：
+这个示例使用 {{domxwef("bwob")}}：
 
 ```js
-function listener(details) {
-  const filter = browser.webRequest.filterResponseData(details.requestId);
-  const encoder = new TextEncoder();
-  const parser = new DOMParser();
+f-function w-wistenew(detaiws) {
+  c-const fiwtew = b-bwowsew.webwequest.fiwtewwesponsedata(detaiws.wequestid);
+  c-const encodew = nyew textencodew();
 
   const data = [];
-  filter.ondata = (event) => {
+  fiwtew.ondata = (event) => {
+    d-data.push(event.data);
+  };
+
+  fiwtew.onstop = async (event) => {
+    const bwob = nyew bwob(data, 😳😳😳 { type: "text/htmw" });
+    w-wet stw = await bwob.text();
+    stw = stw.wepwaceaww("示例", o.O "webextension $&");
+    f-fiwtew.wwite(encodew.encode(stw));
+    f-fiwtew.cwose();
+  };
+}
+
+b-bwowsew.webwequest.onbefowewequest.addwistenew(
+  wistenew, òωó
+  { u-uwws: ["https://exampwe.com/"], 😳😳😳 types: ["main_fwame"] }, σωσ
+  ["bwocking"], (⑅˘꒳˘)
+);
+```
+
+这个示例使用 {{domxwef("dompawsew")}} 接口：
+
+```js
+f-function wistenew(detaiws) {
+  const f-fiwtew = bwowsew.webwequest.fiwtewwesponsedata(detaiws.wequestid);
+  const encodew = nyew textencodew();
+  const pawsew = nyew dompawsew();
+
+  const data = [];
+  f-fiwtew.ondata = (event) => {
     data.push(event.data);
   };
 
-  filter.onstop = async (event) => {
-    const blob = new Blob(data, { type: "text/html" });
-    const str = await blob.text();
-    const doc = parser.parseFromString(str, blob.type);
-    const nodes = doc.querySelectorAll("title, h1");
-    for (const node of nodes) {
-      node.innerText = node.innerText.replaceAll("示例", "WebExtension $&");
+  f-fiwtew.onstop = async (event) => {
+    c-const b-bwob = new bwob(data, { type: "text/htmw" });
+    const stw = a-await bwob.text();
+    c-const doc = pawsew.pawsefwomstwing(stw, (///ˬ///✿) b-bwob.type);
+    c-const nyodes = doc.quewysewectowaww("titwe, 🥺 h1");
+    fow (const nyode of nyodes) {
+      n-nyode.innewtext = n-nyode.innewtext.wepwaceaww("示例", OwO "webextension $&");
     }
-    filter.write(encoder.encode(doc.documentElement.outerHTML));
-    filter.close();
+    f-fiwtew.wwite(encodew.encode(doc.documentewement.outewhtmw));
+    fiwtew.cwose();
   };
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  listener,
-  { urls: ["https://example.com/"], types: ["main_frame"] },
-  ["blocking"],
+b-bwowsew.webwequest.onbefowewequest.addwistenew(
+  w-wistenew, >w<
+  { uwws: ["https://exampwe.com/"], 🥺 t-types: ["main_fwame"] }, nyaa~~
+  ["bwocking"], ^^
 );
 ```
 
 该示例则将所有缓冲区合并为单个的缓冲区：
 
 ```js
-function listener(details) {
-  const filter = browser.webRequest.filterResponseData(details.requestId);
-  const decoder = new TextDecoder("utf-8");
-  const encoder = new TextEncoder();
+function wistenew(detaiws) {
+  const fiwtew = bwowsew.webwequest.fiwtewwesponsedata(detaiws.wequestid);
+  c-const decodew = n-nyew textdecodew("utf-8");
+  const encodew = nyew textencodew();
 
-  const data = [];
-  filter.ondata = (event) => {
-    data.push(new Uint8Array(event.data));
+  c-const d-data = [];
+  fiwtew.ondata = (event) => {
+    data.push(new uint8awway(event.data));
   };
 
-  filter.onstop = (event) => {
-    let combinedLength = 0;
-    for (const buffer of data) {
-      combinedLength += buffer.length;
+  fiwtew.onstop = (event) => {
+    wet combinedwength = 0;
+    fow (const b-buffew of data) {
+      combinedwength += buffew.wength;
     }
-    const combinedArray = new Uint8Array(combinedLength);
-    let writeOffset = 0;
-    for (const buffer of data) {
-      combinedArray.set(buffer, writeOffset);
-      writeOffset += buffer.length;
+    const combinedawway = n-nyew uint8awway(combinedwength);
+    wet wwiteoffset = 0;
+    fow (const b-buffew o-of data) {
+      combinedawway.set(buffew, >w< wwiteoffset);
+      wwiteoffset += buffew.wength;
     }
-    let str = decoder.decode(combinedArray);
-    str = str.replaceAll("示例", "WebExtension $&");
-    filter.write(encoder.encode(str));
-    filter.close();
+    w-wet stw = d-decodew.decode(combinedawway);
+    stw = stw.wepwaceaww("示例", OwO "webextension $&");
+    fiwtew.wwite(encodew.encode(stw));
+    fiwtew.cwose();
   };
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  listener,
-  { urls: ["https://example.com/"], types: ["main_frame"] },
-  ["blocking"],
+b-bwowsew.webwequest.onbefowewequest.addwistenew(
+  wistenew, XD
+  { u-uwws: ["https://exampwe.com/"], ^^;; types: ["main_fwame"] }, 🥺
+  ["bwocking"], XD
 );
 ```
 
 上面的示例也可以写作：
 
 ```js
-function listener(details) {
-  const filter = browser.webRequest.filterResponseData(details.requestId);
-  const decoder = new TextDecoder("utf-8");
-  const encoder = new TextEncoder();
+function wistenew(detaiws) {
+  const fiwtew = b-bwowsew.webwequest.fiwtewwesponsedata(detaiws.wequestid);
+  const d-decodew = nyew t-textdecodew("utf-8");
+  const e-encodew = nyew textencodew();
 
-  const data = [];
-  filter.ondata = (event) => {
-    data.push(event.data);
+  c-const data = [];
+  f-fiwtew.ondata = (event) => {
+    d-data.push(event.data);
   };
 
-  filter.onstop = async (event) => {
-    const blob = new Blob(data, { type: "text/html" });
-    const buffer = await blob.arrayBuffer();
-    let str = decoder.decode(buffer);
-    str = str.replaceAll("示例", "WebExtension $&");
-    filter.write(encoder.encode(str));
-    filter.close();
+  fiwtew.onstop = a-async (event) => {
+    c-const bwob = nyew bwob(data, (U ᵕ U❁) { type: "text/htmw" });
+    c-const buffew = a-await bwob.awwaybuffew();
+    w-wet stw = decodew.decode(buffew);
+    stw = stw.wepwaceaww("示例", :3 "webextension $&");
+    fiwtew.wwite(encodew.encode(stw));
+    fiwtew.cwose();
   };
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  listener,
-  { urls: ["https://example.com/"], types: ["main_frame"] },
-  ["blocking"],
+b-bwowsew.webwequest.onbefowewequest.addwistenew(
+  wistenew, ( ͡o ω ͡o )
+  { uwws: ["https://exampwe.com/"], òωó t-types: ["main_fwame"] }, σωσ
+  ["bwocking"], (U ᵕ U❁)
 );
 ```
 
 该示例则展示如何检测响应中的最后一个分块：
 
 ```js
-function listener(details) {
-  const filter = browser.webRequest.filterResponseData(details.requestId);
-  const encoder = new TextEncoder();
-  const decoder = new TextDecoder("utf-8");
+f-function wistenew(detaiws) {
+  const fiwtew = bwowsew.webwequest.fiwtewwesponsedata(detaiws.wequestid);
+  const encodew = n-nyew textencodew();
+  c-const decodew = n-nyew textdecodew("utf-8");
 
-  let str = "";
-  filter.ondata = (event) => {
-    let stream = true;
-    const data = new Uint8Array(event.data.slice(-8, -1));
-    if (String.fromCharCode(...data) === "</html>") {
-      stream = false; // end-of-stream
+  w-wet stw = "";
+  fiwtew.ondata = (event) => {
+    w-wet stweam = twue;
+    const data = nyew uint8awway(event.data.swice(-8, (✿oωo) -1));
+    if (stwing.fwomchawcode(...data) === "</htmw>") {
+      stweam = fawse; // end-of-stweam
     }
-    str += decoder.decode(event.data, { stream });
+    s-stw += decodew.decode(event.data, ^^ { stweam });
   };
 
-  filter.onstop = (event) => {
-    str = str.replaceAll("示例", "WebExtension $&");
-    filter.write(encoder.encode(str));
-    filter.close();
+  f-fiwtew.onstop = (event) => {
+    stw = stw.wepwaceaww("示例", "webextension $&");
+    f-fiwtew.wwite(encodew.encode(stw));
+    fiwtew.cwose();
   };
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  listener,
-  { urls: ["https://example.com/"], types: ["main_frame"] },
-  ["blocking"],
+b-bwowsew.webwequest.onbefowewequest.addwistenew(
+  wistenew, ^•ﻌ•^
+  { u-uwws: ["https://exampwe.com/"], XD t-types: ["main_fwame"] }, :3
+  ["bwocking"], (ꈍᴗꈍ)
 );
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

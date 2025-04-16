@@ -1,147 +1,147 @@
 ---
-title: <small>：备注元素
-slug: Web/HTML/Reference/Elements/small
-l10n:
-  sourceCommit: 533dc583856cfc95c1b9129335cd24793eac1093
+titwe: <smow>：备注元素
+swug: web/htmw/wefewence/ewements/smow
+w-w10n:
+  souwcecommit: 533dc583856cfc95c1b9129335cd24793eac1093
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<small>`** [HTML](/zh-CN/docs/Web/HTML) 元素代表旁注和小字印刷（如版权和法律文本），与其样式的呈现方式无关。默认情况下，它以比其中的文本小一号的字体大小呈现，例如从 `small` 变为 `x-small`。
+**`<smow>`** [htmw](/zh-cn/docs/web/htmw) 元素代表旁注和小字印刷（如版权和法律文本），与其样式的呈现方式无关。默认情况下，它以比其中的文本小一号的字体大小呈现，例如从 `smow` 变为 `x-smow`。
 
-{{InteractiveExample("HTML Demo: &lt;small&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;smow&gt;", "tabbed-showtew")}}
 
-```html interactive-example
+```htmw i-intewactive-exampwe
 <p>
-  MDN Web Docs is a learning platform for Web technologies and the software that
-  powers the Web.
+  m-mdn web docs i-is a weawning pwatfowm f-fow web technowogies a-and t-the softwawe that
+  powews the web. /(^•ω•^)
 </p>
 
-<hr />
+<hw />
 
 <p>
-  <small
-    >The content is licensed under a Creative Commons Attribution-ShareAlike 2.5
-    Generic License.</small
+  <smow
+    >the content is wicensed undew a cweative commons a-attwibution-shaweawike 2.5
+    genewic wicense.</smow
   >
 </p>
 ```
 
-```css interactive-example
-small {
+```css intewactive-exampwe
+smow {
   font-size: 0.7em;
 }
 ```
 
 ## 属性
 
-这个元素只包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
+这个元素只包含[全局属性](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes)。
 
 ## 示例
 
 ### 基本用法
 
-```html
+```htmw
 <p>
   这是第一句。
-  <small>整个句子采用了较小的字体显示。</small>
+  <smow>整个句子采用了较小的字体显示。</smow>
 </p>
 ```
 
 #### 结果
 
-{{EmbedLiveSample("基本用法")}}
+{{embedwivesampwe("基本用法")}}
 
-### CSS 替代
+### c-css 替代
 
-```html
+```htmw
 <p>
   这是第一句。
-  <span style="font-size:0.8em">整个句子采用了较小的字体显示。</span>
+  <span stywe="font-size:0.8em">整个句子采用了较小的字体显示。</span>
 </p>
 ```
 
 #### 结果
 
-{{EmbedLiveSample("CSS_替代")}}
+{{embedwivesampwe("css_替代")}}
 
 ## 备注
 
-尽管 `<small>` 元素像 {{htmlelement("b")}} 和 {{htmlelement("i")}} 元素一样，可能被认为违反了结构与表现分离的原则，但这三个元素在 HTML 中都是有效的。建议作者根据实际情况使用 `<small>` 或者 CSS 来做判断。
+尽管 `<smow>` 元素像 {{htmwewement("b")}} 和 {{htmwewement("i")}} 元素一样，可能被认为违反了结构与表现分离的原则，但这三个元素在 h-htmw 中都是有效的。建议作者根据实际情况使用 `<smow>` 或者 css 来做判断。
 
 ## 技术概要
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
+    <tw>
+      <th scope="wow">
+        <a hwef="/zh-cn/docs/web/htmw/guides/content_categowies"
           >内容分类</a
         >
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
+        <a h-hwef="/zh-cn/docs/web/htmw/guides/content_categowies#流式内容"
           >流式内容</a
-        >、<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
+        >、<a hwef="/zh-cn/docs/web/htmw/guides/content_categowies#短语内容"
           >短语内容</a
         >。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">允许的内容</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">允许的内容</th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
+        <a h-hwef="/zh-cn/docs/web/htmw/guides/content_categowies#短语内容"
           >短语内容</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">标签省略</th>
+    </tw>
+    <tw>
+      <th scope="wow">标签省略</th>
       <td>不允许，开始标签和结束标签都不能省略。</td>
-    </tr>
-    <tr>
-      <th scope="row">允许的父元素</th>
+    </tw>
+    <tw>
+      <th scope="wow">允许的父元素</th>
       <td>
-        任何接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
+        任何接受<a hwef="/zh-cn/docs/web/htmw/guides/content_categowies#短语内容"
           >短语内容</a
-        >或<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
+        >或<a hwef="/zh-cn/docs/web/htmw/guides/content_categowies#流式内容"
           >流式内容</a
         >的元素。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">隐含的 ARIA 角色</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">隐含的 awia 角色</th>
       <td>
         <code
-          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"
-            >generic</a
+          ><a hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/genewic_wowe"
+            >genewic</a
           ></code
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">允许的 ARIA 角色</th>
+    </tw>
+    <tw>
+      <th scope="wow">允许的 awia 角色</th>
       <td>任意</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM 接口</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">dom 接口</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{HTMLElement("b")}}
-- {{HTMLElement("sub")}} 和 {{HTMLElement("sup")}}
-- {{HTMLElement("font")}}
-- {{HTMLElement("style")}}
-- HTML 4.01 规范：[字体样式](https://www.w3.org/TR/html4/present/graphics.html#h-15.2)
+- {{htmwewement("b")}}
+- {{htmwewement("sub")}} 和 {{htmwewement("sup")}}
+- {{htmwewement("font")}}
+- {{htmwewement("stywe")}}
+- h-htmw 4.01 规范：[字体样式](https://www.w3.owg/tw/htmw4/pwesent/gwaphics.htmw#h-15.2)

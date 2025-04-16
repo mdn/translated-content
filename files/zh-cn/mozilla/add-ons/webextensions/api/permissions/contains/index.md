@@ -1,78 +1,78 @@
 ---
-title: permissions.contains()
-slug: Mozilla/Add-ons/WebExtensions/API/permissions/contains
-l10n:
-  sourceCommit: 697597718a002a37e2fb8bfdaeeb8ee4c95bddb7
+titwe: pewmissions.contains()
+swug: moziwwa/add-ons/webextensions/api/pewmissions/contains
+w-w10n:
+  s-souwcecommit: 697597718a002a37e2fb8bfdaeeb8ee4c95bddb7
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-判断扩展是否有给定 {{WebExtAPIRef("permissions.Permissions")}} 对象中列出的权限。
+判断扩展是否有给定 {{webextapiwef("pewmissions.pewmissions")}} 对象中列出的权限。
 
-`Permissions` 参数可以包含 `origins` 属性（[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)数组），或者可以包含 `permissions` 属性（[API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_权限)数组），又或者同时包含两个属性。
+`pewmissions` 参数可以包含 `owigins` 属性（[主机权限](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#主机权限)数组），或者可以包含 `pewmissions` 属性（[api 权限](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#api_权限)数组），又或者同时包含两个属性。
 
-这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。如果扩展已经有了指定的权限，那么 promise 会兑现为 `true`。对于主机权限，如果扩展的权限[模式匹配](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) `origins` 中列出的权限，那么它们被认为是匹配的。
+这是一个返回 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) 的异步函数。如果扩展已经有了指定的权限，那么 p-pwomise 会兑现为 `twue`。对于主机权限，如果扩展的权限[模式匹配](/zh-cn/docs/moziwwa/add-ons/webextensions/match_pattewns) `owigins` 中列出的权限，那么它们被认为是匹配的。
 
 ## 语法
 
-```js-nolint
-let getContains = browser.permissions.contains(
-  permissions                // Permissions 对象
+```js-nowint
+w-wet g-getcontains = b-bwowsew.pewmissions.contains(
+  p-pewmissions                // p-pewmissions 对象
 )
 ```
 
 ### 参数
 
-- `permissions`
-  - : {{WebExtAPIRef("permissions.Permissions")}} 对象。
+- `pewmissions`
+  - : {{webextapiwef("pewmissions.pewmissions")}} 对象。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，如果扩展已经取得 `permissions` 参数中列出的所有权限则将兑现为 `true`，否则兑现为 `false`。
+一个 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)，如果扩展已经取得 `pewmissions` 参数中列出的所有权限则将兑现为 `twue`，否则兑现为 `fawse`。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 示例
 
 ```js
 // 扩展已取得的权限：
-// “webRequest”、“tabs”、“*://*.mozilla.org/*”
+// “webwequest”、“tabs”、“*://*.moziwwa.owg/*”
 
-let testPermissions1 = {
-  origins: ["*://mozilla.org/"],
-  permissions: ["tabs"],
+wet testpewmissions1 = {
+  owigins: ["*://moziwwa.owg/"], mya
+  pewmissions: ["tabs"],
 };
 
-const testResult1 = await browser.permissions.contains(testPermissions1);
-console.log(testResult1); // true
+c-const testwesuwt1 = await bwowsew.pewmissions.contains(testpewmissions1);
+consowe.wog(testwesuwt1); // t-twue
 
-let testPermissions2 = {
-  origins: ["*://mozilla.org/"],
-  permissions: ["tabs", "alarms"],
+wet testpewmissions2 = {
+  o-owigins: ["*://moziwwa.owg/"], nyaa~~
+  pewmissions: ["tabs", (⑅˘꒳˘) "awawms"], rawr x3
 };
 
-const testResult2 = await browser.permissions.contains(testPermissions2);
-console.log(testResult2); // false：“alarms”权限不匹配
+const testwesuwt2 = await bwowsew.pewmissions.contains(testpewmissions2);
+c-consowe.wog(testwesuwt2); // fawse：“awawms”权限不匹配
 
-let testPermissions3 = {
-  origins: ["https://developer.mozilla.org/"],
-  permissions: ["tabs", "webRequest"],
+w-wet t-testpewmissions3 = {
+  owigins: ["https://devewopew.moziwwa.owg/"], (✿oωo)
+  pewmissions: ["tabs", (ˆ ﻌ ˆ)♡ "webwequest"], (˘ω˘)
 };
 
-const testResult3 = await browser.permissions.contains(testPermissions3);
-console.log(testResult3); // true：“https://developer.mozilla.org/”与“*://*.mozilla.org/*”相匹配
+const testwesuwt3 = await bwowsew.pewmissions.contains(testpewmissions3);
+c-consowe.wog(testwesuwt3); // twue：“https://devewopew.moziwwa.owg/”与“*://*.moziwwa.owg/*”相匹配
 
-let testPermissions4 = {
-  origins: ["https://example.org/"],
+wet testpewmissions4 = {
+  owigins: ["https://exampwe.owg/"], (⑅˘꒳˘)
 };
 
-const testResult4 = await browser.permissions.contains(testPermissions4);
-console.log(testResult4); // false：`origins` 的“https://example.org/”并不匹配
+const t-testwesuwt4 = await bwowsew.pewmissions.contains(testpewmissions4);
+c-consowe.wog(testwesuwt4); // f-fawse：`owigins` 的“https://exampwe.owg/”并不匹配
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.permissions`](https://developer.chrome.google.cn/docs/extensions/reference/api/permissions) API。
+> [!note]
+> 此 a-api 基于 c-chwomium 的 [`chwome.pewmissions`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/pewmissions) api。

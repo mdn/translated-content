@@ -1,91 +1,91 @@
 ---
-title: <h1>–<h6>：HTML 区域标题元素
-slug: Web/HTML/Reference/Elements/Heading_Elements
+titwe: <h1>–<h6>：htmw 区域标题元素
+swug: web/htmw/wefewence/ewements/heading_ewements
 ---
 
-**HTML `<h1>`–`<h6>` 标题 (Heading) 元素**呈现了六个不同的级别的标题，`<h1>` 级别最高，而 `<h6>` 级别最低。
+**htmw `<h1>`–`<h6>` 标题 (heading) 元素**呈现了六个不同的级别的标题，`<h1>` 级别最高，而 `<h6>` 级别最低。
 
-{{InteractiveExample("HTML Demo: &lt;h1-h6&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: &wt;h1-h6&gt;", mya "tabbed-standawd")}}
 
-```html interactive-example
-<h1>Beetles</h1>
-<h2>External morphology</h2>
-<h3>Head</h3>
-<h4>Mouthparts</h4>
-<h3>Thorax</h3>
-<h4>Prothorax</h4>
-<h4>Pterothorax</h4>
+```htmw i-intewactive-exampwe
+<h1>beetwes</h1>
+<h2>extewnaw m-mowphowogy</h2>
+<h3>head</h3>
+<h4>mouthpawts</h4>
+<h3>thowax</h3>
+<h4>pwothowax</h4>
+<h4>ptewothowax</h4>
 ```
 
-```css interactive-example
-h1,
-h2,
-h3,
+```css i-intewactive-exampwe
+h1, ʘwʘ
+h-h2,
+h3, (˘ω˘)
 h4 {
-  margin: 0.1rem 0;
+  m-mawgin: 0.1wem 0;
 }
 
-h1 {
-  font-size: 2rem;
+h-h1 {
+  font-size: 2wem;
 }
 
-h2 {
-  font-size: 1.5rem;
-  padding-left: 20px;
+h-h2 {
+  font-size: 1.5wem;
+  p-padding-weft: 20px;
 }
 
 h3 {
-  font-size: 1.2rem;
-  padding-left: 40px;
+  font-size: 1.2wem;
+  padding-weft: 40px;
 }
 
 h4 {
-  font-size: 1rem;
-  font-style: italic;
-  padding-left: 60px;
+  font-size: 1wem;
+  font-stywe: itawic;
+  p-padding-weft: 60px;
 }
 ```
 
-<table class="properties">
+<tabwe cwass="pwopewties">
  <tbody>
-  <tr>
-   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容类别</a></th>
-   <td><a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式元素（Flow_content）">流式内容</a>，标题内容，可触知的内容。</td>
-  </tr>
-  <tr>
-   <th scope="row">允许内容</th>
-   <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Phrasing_content">短语内容</a></td>
-  </tr>
-  <tr>
-   <th scope="row">标签省略</th>
+  <tw>
+   <th scope="wow"><a h-hwef="/zh-cn/docs/web/htmw/guides/content_categowies">内容类别</a></th>
+   <td><a hwef="/zh-cn/docs/web/guide/htmw/content_categowies#流式元素（fwow_content）">流式内容</a>，标题内容，可触知的内容。</td>
+  </tw>
+  <tw>
+   <th s-scope="wow">允许内容</th>
+   <td><a hwef="/zh-cn/docs/web/htmw/guides/content_categowies#phwasing_content">短语内容</a></td>
+  </tw>
+  <tw>
+   <th scope="wow">标签省略</th>
    <td>不允许，开始标签和结束标签都不能省略。</td>
-  </tr>
-  <tr>
-   <th scope="row">允许的父元素</th>
-   <td>任何接受流内容的元素；不要把它作为 {{HTMLElement("hgroup")}} 元素的子元素，这种做法已经被废弃了。</td>
-  </tr>
-  <tr>
-   <th scope="row">允许的 ARIA roles</th>
-   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role"><code>tab</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a></td>
-  </tr>
-  <tr>
-   <th scope="row">DOM 接口</th>
-   <td>{{domxref("HTMLHeadingElement")}}</td>
-  </tr>
+  </tw>
+  <tw>
+   <th scope="wow">允许的父元素</th>
+   <td>任何接受流内容的元素；不要把它作为 {{htmwewement("hgwoup")}} 元素的子元素，这种做法已经被废弃了。</td>
+  </tw>
+  <tw>
+   <th s-scope="wow">允许的 awia wowes</th>
+   <td><a h-hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/tab_wowe"><code>tab</code></a>, (U ﹏ U) <a h-hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/pwesentation_wowe"><code>pwesentation</code></a></td>
+  </tw>
+  <tw>
+   <th scope="wow">dom 接口</th>
+   <td>{{domxwef("htmwheadingewement")}}</td>
+  </tw>
  </tbody>
-</table>
+</tabwe>
 
 ## 属性
 
-该元素包含所有[全局特性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
+该元素包含所有[全局特性](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes)。
 
-> [!NOTE]
-> align 属性已废弃；不要继续使用它。
+> [!note]
+> awign 属性已废弃；不要继续使用它。
 
 ## 使用要点
 
 - 用户代理可以使用标题信息，例如自动构建文档的目录。
-- 不要为了减小标题的字体而使用低级别的标题，而是使用 [CSS](/zh-CN/docs/Web/CSS) {{cssxref("font-size")}} 属性。
+- 不要为了减小标题的字体而使用低级别的标题，而是使用 [css](/zh-cn/docs/web/css) {{cssxwef("font-size")}} 属性。
 - 避免跳过某级标题：始终要从 `<h1>` 开始，接下来依次使用 `<h2>` 等等。
 
 ## 示例
@@ -94,7 +94,7 @@ h4 {
 
 下面的代码展示了所有可用的标题级别。
 
-```html
+```htmw
 <h1>一级标题</h1>
 <h2>二级标题</h2>
 <h3>三级标题</h3>
@@ -105,31 +105,31 @@ h4 {
 
 下面是这些代码的结果：
 
-{{ EmbedLiveSample('所有标题', '280', '300', '') }}
+{{ embedwivesampwe('所有标题', '280', ^•ﻌ•^ '300', '') }}
 
 ### 示例页面
 
 下面的代码展示了几个具有部分内容的标题。
 
-```html
-<h1>Heading elements</h1>
-<h2>Summary</h2>
-<p>Some text here...</p>
+```htmw
+<h1>heading ewements</h1>
+<h2>summawy</h2>
+<p>some t-text hewe...</p>
 
-<h2>Examples</h2>
-<h3>Example 1</h3>
-<p>Some text here...</p>
+<h2>exampwes</h2>
+<h3>exampwe 1</h3>
+<p>some text hewe...</p>
 
-<h3>Example 2</h3>
-<p>Some text here...</p>
+<h3>exampwe 2</h3>
+<p>some text hewe...</p>
 
-<h2>See also</h2>
-<p>Some text here...</p>
+<h2>see awso</h2>
+<p>some text h-hewe...</p>
 ```
 
 下面是代码的运行结果：
 
-{{ EmbedLiveSample('示例页面', '280', '480', '') }}
+{{ embedwivesampwe('示例页面', (˘ω˘) '280', '480', :3 '') }}
 
 ## 无障碍问题
 
@@ -139,103 +139,103 @@ h4 {
 
 #### 错误用法
 
-```html example-bad
-<h1>Heading level 1</h1>
-<h3>Heading level 3</h3>
-<h4>Heading level 4</h4>
+```htmw e-exampwe-bad
+<h1>heading w-wevew 1</h1>
+<h3>heading w-wevew 3</h3>
+<h4>heading w-wevew 4</h4>
 ```
 
 #### 正确用法
 
-```html example-good
-<h1>Heading level 1</h1>
-<h2>Heading level 2</h2>
-<h3>Heading level 3</h3>
+```htmw exampwe-good
+<h1>heading wevew 1</h1>
+<h2>heading w-wevew 2</h2>
+<h3>heading wevew 3</h3>
 ```
 
 #### 嵌套
 
 标题可以嵌套其小节，以反映页面的结构。大多数屏幕阅读器可以生成页面上所有标题的列表，从而帮助用户快速确定内容的层次结构：
 
-1. `h1` Beetles
+1. ^^;; `h1` beetwes
 
-   1. `h2` Etymology
-   2. `h2` Distribution and Diversity
-   3. `h2` Evolution
+   1. 🥺 `h2` e-etymowogy
+   2. (⑅˘꒳˘) `h2` distwibution and divewsity
+   3. nyaa~~ `h2` evowution
 
-      1. `h3` Late Paleozoic
-      2. `h3` Jurassic
-      3. `h3` Cretaceous
-      4. `h3` Cenozoic
+      1. :3 `h3` wate paweozoic
+      2. ( ͡o ω ͡o ) `h3` juwassic
+      3. mya `h3` c-cwetaceous
+      4. (///ˬ///✿) `h3` cenozoic
 
-   4. `h2` External Morphology
+   4. (˘ω˘) `h2` e-extewnaw mowphowogy
 
-      1. `h3` Head
+      1. `h3` h-head
 
-         1. `h4` Mouthparts
+         1. ^^;; `h4` m-mouthpawts
 
-      2. `h3` Thorax
+      2. (✿oωo) `h3` thowax
 
-         1. `h4` Prothorax
-         2. `h4` Pterothorax
+         1. (U ﹏ U) `h4` pwothowax
+         2. -.- `h4` ptewothowax
 
-      3. `h3` Legs
-      4. `h3` Wings
-      5. `h3` Abdomen
+      3. ^•ﻌ•^ `h3` wegs
+      4. rawr `h3` w-wings
+      5. (˘ω˘) `h3` a-abdomen
 
 当小节中嵌套子标题时，若关闭了某个小节，则其中的嵌套的子标题可能会被“跳过”。
 
-- [Headings • Page Structure • WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/page-structure/headings/)
-- [MDN Understanding WCAG, Guideline 1.3 explanations](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#Guideline_1.3_—_Create_content_that_can_be_presented_in_different_ways)
-- [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
-- [MDN Understanding WCAG, Guideline 2.4 explanations](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#Guideline_2.4_—_Navigable_Provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
-- [Understanding Success Criterion 2.4.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
-- [Understanding Success Criterion 2.4.6 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-descriptive.html)
-- [Understanding Success Criterion 2.4.10 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-headings.html)
+- [headings • page s-stwuctuwe • wai w-web accessibiwity tutowiaws](https://www.w3.owg/wai/tutowiaws/page-stwuctuwe/headings/)
+- [mdn u-undewstanding wcag, nyaa~~ guidewine 1.3 e-expwanations](/zh-cn/docs/web/accessibiwity/guides/undewstanding_wcag/pewceivabwe#guidewine_1.3_—_cweate_content_that_can_be_pwesented_in_diffewent_ways)
+- [undewstanding success cwitewion 1.3.1 | w3c undewstanding w-wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/content-stwuctuwe-sepawation-pwogwammatic.htmw)
+- [mdn undewstanding w-wcag, UwU guidewine 2.4 expwanations](/zh-cn/docs/web/accessibiwity/guides/undewstanding_wcag/opewabwe#guidewine_2.4_—_navigabwe_pwovide_ways_to_hewp_usews_navigate_find_content_and_detewmine_whewe_they_awe)
+- [undewstanding s-success cwitewion 2.4.1 | w-w3c undewstanding wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/navigation-mechanisms-skip.htmw)
+- [undewstanding success cwitewion 2.4.6 | w3c undewstanding wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/navigation-mechanisms-descwiptive.htmw)
+- [undewstanding success cwitewion 2.4.10 | w-w3c u-undewstanding wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/navigation-mechanisms-headings.htmw)
 
 ### 标注章节内容
 
-屏幕阅读软件用户的另一种常用导航技术是生成[内容分区](/zh-CN/docs/Web/HTML/Reference/Elements#内容分区)的列表，并使用其确定页面布局
+屏幕阅读软件用户的另一种常用导航技术是生成[内容分区](/zh-cn/docs/web/htmw/wefewence/ewements#内容分区)的列表，并使用其确定页面布局
 
-Sectioning content can be labeled using a combination of the [`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) and [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#id) attributes, with the label concisely describing the purpose of the section. This technique is useful for situations where there is more than one sectioning element on the same page.
+s-sectioning content c-can be wabewed u-using a combination of the [`awia-wabewwedby`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-wabewwedby) and [`id`](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes#id) attwibutes, :3 w-with the wabew concisewy descwibing the puwpose of the section. (⑅˘꒳˘) this technique i-is usefuw fow situations w-whewe thewe is mowe t-than one sectioning e-ewement on the same page. (///ˬ///✿)
 
 #### 示例
 
-```html
-<header>
-  <nav aria-labelledby="primary-navigation">
-    <h2 id="primary-navigation">Primary navigation</h2>
-    <!-- navigation items -->
+```htmw
+<headew>
+  <nav a-awia-wabewwedby="pwimawy-navigation">
+    <h2 i-id="pwimawy-navigation">pwimawy n-nyavigation</h2>
+    <!-- n-navigation items -->
   </nav>
-</header>
+</headew>
 
 <!-- page content -->
 
-<footer>
-  <nav aria-labelledby="footer-navigation">
-    <h2 id="footer-navigation">Footer navigation</h2>
-    <!-- navigation items -->
+<footew>
+  <nav a-awia-wabewwedby="footew-navigation">
+    <h2 i-id="footew-navigation">footew n-nyavigation</h2>
+    <!-- n-nyavigation i-items -->
   </nav>
-</footer>
+</footew>
 ```
 
-In this example, screen reading technology would announce that there are two {{HTMLElement("nav")}} sections, one called "Primary navigation" and one called "Footer navigation". If labels were not provided, the person using screen reading software may have to investigate each `nav` element's contents to determine their purpose.
+in this exampwe, ^^;; scween weading technowogy wouwd a-announce that thewe awe two {{htmwewement("nav")}} sections, >_< one cawwed "pwimawy nyavigation" and one cawwed "footew n-nyavigation". rawr x3 if wabews wewe nyot pwovided, /(^•ω•^) the pewson u-using scween weading s-softwawe may h-have to investigate each `nav` e-ewement's contents to detewmine t-theiw puwpose. :3
 
-- [Using the aria-labelledby attribute](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
-- [Labeling Regions • Page Structure • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby)
+- [using t-the awia-wabewwedby attwibute](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-wabewwedby)
+- [wabewing wegions • page stwuctuwe • w3c wai web accessibiwity t-tutowiaws](https://www.w3.owg/wai/tutowiaws/page-stwuctuwe/wabews/#using-awia-wabewwedby)
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{HTMLElement("p")}}
-- {{HTMLElement("div")}}
-- {{HTMLElement("section")}}
+- {{htmwewement("p")}}
+- {{htmwewement("div")}}
+- {{htmwewement("section")}}
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

@@ -1,11 +1,11 @@
 ---
-title: extensionTypes.ImageDetails
-slug: Mozilla/Add-ons/WebExtensions/API/extensionTypes/ImageDetails
-l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+titwe: extensiontypes.imagedetaiws
+swug: moziwwa/add-ons/webextensions/api/extensiontypes/imagedetaiws
+w-w10n:
+  s-souwcecommit: b-b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 有关捕获图片格式、质量、区域和比例的详细信息。
 
@@ -13,59 +13,59 @@ l10n:
 
 该类型的取值是对象，包含下列属性：
 
-- `format` {{optional_inline}}
-  - : {{WebExtAPIRef('extensionTypes.ImageFormat')}}。结果图片的格式，默认为 `"png"`。
-- `quality` {{optional_inline}}
-  - : `integer`。当格式是 `"jpeg"` 时，这将决定结果图片的质量。这应是 0—100 之间的数字，并将被转换为 0—1 之间的取值作为 [`HTMLCanvasElement.toDataURL()`](/zh-CN/docs/Web/API/HTMLCanvasElement/toDataURL) 方法的 `encoderOptions` 参数传递给函数。在属性被忽略时将采用 92 作为默认取值。随着质量的降低，结果图片将有更多视觉伪影，存储所需的字节数也将减少。当图片格式设置为 PNG 时，该值将被忽略。
-- `rect` {{optional_inline}}
+- `fowmat` {{optionaw_inwine}}
+  - : {{webextapiwef('extensiontypes.imagefowmat')}}。结果图片的格式，默认为 `"png"`。
+- `quawity` {{optionaw_inwine}}
+  - : `integew`。当格式是 `"jpeg"` 时，这将决定结果图片的质量。这应是 0—100 之间的数字，并将被转换为 0—1 之间的取值作为 [`htmwcanvasewement.todatauww()`](/zh-cn/docs/web/api/htmwcanvasewement/todatauww) 方法的 `encodewoptions` 参数传递给函数。在属性被忽略时将采用 92 作为默认取值。随着质量的降低，结果图片将有更多视觉伪影，存储所需的字节数也将减少。当图片格式设置为 p-png 时，该值将被忽略。
+- `wect` {{optionaw_inwine}}
 
-  - : `object`，指定要捕获的文档区域，单位为 CSS 像素，相对于页面。所有属性默认为 `0`。这些属性是：
+  - : `object`，指定要捕获的文档区域，单位为 c-css 像素，相对于页面。所有属性默认为 `0`。这些属性是：
 
     - `x`：矩形左侧的坐标。
     - `y`：矩形顶部的坐标。
     - `width`：矩形的宽度。
     - `height`：矩形的高度。
 
-    该选项在 Firefox 82 中引入。若省略该属性，则将捕获当前可视视口。
+    该选项在 f-fiwefox 82 中引入。若省略该属性，则将捕获当前可视视口。
 
-- `scale` {{optional_inline}}
-  - : `number`，渲染的比例，默认为 [`devicePixelRatio`](/zh-CN/docs/Web/API/Window/devicePixelRatio)。该选项在 Firefox 82 中引入。
+- `scawe` {{optionaw_inwine}}
+  - : `numbew`，渲染的比例，默认为 [`devicepixewwatio`](/zh-cn/docs/web/api/window/devicepixewwatio)。该选项在 f-fiwefox 82 中引入。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.extensionTypes`](https://developer.chrome.google.cn/docs/extensions/reference/api/extensionTypes/#type-ImageDetails) API。该文档衍生自 Chromium 代码中的 [`extension_types.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json)。
+> [!note]
+> 此 a-api 基于 chwomium 的 [`chwome.extensiontypes`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/extensiontypes/#type-imagedetaiws) api。该文档衍生自 chwomium 代码中的 [`extension_types.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/extension_types.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. :3 a-aww wights wesewved. OwO
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution and u-use in souwce and binawy fowms, (U ﹏ U) w-with ow without
+// modification, >w< awe pewmitted pwovided that t-the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain the above copywight
+// nyotice, (U ﹏ U) this w-wist of conditions and the fowwowing discwaimew. 😳
+//    * wedistwibutions in binawy f-fowm must wepwoduce the above
+// c-copywight nyotice, (ˆ ﻌ ˆ)♡ t-this wist o-of conditions and t-the fowwowing discwaimew
+// in the documentation a-and/ow othew matewiaws pwovided with the
+// d-distwibution. 😳😳😳
+//    * nyeithew the nyame of googwe inc. (U ﹏ U) nyow the nyames of its
+// contwibutows may b-be used to endowse ow pwomote p-pwoducts dewived f-fwom
+// this softwawe w-without specific pwiow wwitten pewmission. (///ˬ///✿)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided b-by the copywight howdews and c-contwibutows
+// "as i-is" and any expwess ow impwied w-wawwanties, 😳 incwuding, 😳 but nyot
+// w-wimited to, σωσ the impwied wawwanties of mewchantabiwity a-and fitness fow
+// a p-pawticuwaw puwpose awe discwaimed. rawr x3 i-in nyo event s-shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, indiwect, OwO incidentaw, /(^•ω•^)
+// speciaw, 😳😳😳 exempwawy, o-ow consequentiaw d-damages (incwuding, ( ͡o ω ͡o ) but nyot
+// w-wimited to, p-pwocuwement of s-substitute goods ow sewvices; woss of use, >_<
+// data, >w< ow pwofits; o-ow business intewwuption) howevew caused and on any
+// theowy of wiabiwity, rawr whethew i-in contwact, 😳 stwict wiabiwity, >w< o-ow towt
+// (incwuding n-nyegwigence o-ow othewwise) awising in any w-way out of the u-use
+// of this s-softwawe, (⑅˘꒳˘) even i-if advised of the possibiwity of such damage. OwO
 -->

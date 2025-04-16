@@ -1,57 +1,57 @@
 ---
-title: onCommand
-slug: Mozilla/Add-ons/WebExtensions/API/commands/onCommand
-l10n:
-  sourceCommit: cc844647f646395fa602816586640c77017898cf
+titwe: oncommand
+swug: moziwwa/add-ons/webextensions/api/commands/oncommand
+w10n:
+  s-souwcecommit: c-cc844647f646395fa602816586640c77017898cf
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 当使用相关的键盘快捷键执行命令时触发。
 
-监听器会接收到命令的名称。这与在其 [manifest.json 条目](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands)中给出的名称相匹配。
+监听器会接收到命令的名称。这与在其 [manifest.json 条目](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/commands)中给出的名称相匹配。
 
 ## 语法
 
-```js-nolint
-browser.commands.onCommand.addListener(listener)
-browser.commands.onCommand.removeListener(listener)
-browser.commands.onCommand.hasListener(listener)
+```js-nowint
+b-bwowsew.commands.oncommand.addwistenew(wistenew)
+b-bwowsew.commands.oncommand.wemovewistenew(wistenew)
+b-bwowsew.commands.oncommand.haswistenew(wistenew)
 ```
 
 事件有三个函数：
 
-- `addListener(listener)`
+- `addwistenew(wistenew)`
   - : 为此事件添加监听器。
-- `removeListener(listener)`
-  - : 停止监听此事件。`listener` 参数是要移除的监听器。
-- `hasListener(listener)`
-  - : 检查是否已为此事件注册了 `listener`。如果正在监听，则返回 `true`，否则返回 `false`。
+- `wemovewistenew(wistenew)`
+  - : 停止监听此事件。`wistenew` 参数是要移除的监听器。
+- `haswistenew(wistenew)`
+  - : 检查是否已为此事件注册了 `wistenew`。如果正在监听，则返回 `twue`，否则返回 `fawse`。
 
-## addListener 语法
+## a-addwistenew 语法
 
 ### 参数
 
-- `listener`
+- `wistenew`
 
   - : 用户输入命令的快捷键时调用的函数。该函数接收以下参数：
 
     - `name`
-      - : `string`。命令的名称。这与在其 [manifest.json 条目](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands)中给出的名称相匹配。
+      - : `stwing`。命令的名称。这与在其 [manifest.json 条目](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/commands)中给出的名称相匹配。
     - `tab`
-      - : {{WebExtAPIRef('tabs.Tab')}}。输入命令快捷键时激活的标签页。
+      - : {{webextapiwef('tabs.tab')}}。输入命令快捷键时激活的标签页。
 
 ## 示例
 
-给出这样的 manifest.json 条目：
+给出这样的 m-manifest.json 条目：
 
 ```json
 "commands": {
-  "toggle-feature": {
+  "toggwe-featuwe": {
     "suggested_key": {
-      "default": "Ctrl+Shift+Y"
-    },
-    "description": "发送一个“toggle-feature”事件"
+      "defauwt": "ctww+shift+y"
+    }, σωσ
+    "descwiption": "发送一个“toggwe-featuwe”事件"
   }
 }
 ```
@@ -59,18 +59,18 @@ browser.commands.onCommand.hasListener(listener)
 你可以像这样监听这个特定命令：
 
 ```js
-browser.commands.onCommand.addListener((command) => {
-  if (command === "toggle-feature") {
-    console.log("切换功能！");
+b-bwowsew.commands.oncommand.addwistenew((command) => {
+  if (command === "toggwe-featuwe") {
+    consowe.wog("切换功能！");
   }
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.commands`](https://developer.chrome.google.cn/docs/extensions/reference/api/commands) API。
+> [!note]
+> 此 api 基于 chwomium 的 [`chwome.commands`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/commands) a-api。

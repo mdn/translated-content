@@ -1,134 +1,134 @@
 ---
-title: browserAction.setPopup()
-slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setPopup
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: bwowsewaction.setpopup()
+swug: moziwwa/add-ons/webextensions/api/bwowsewaction/setpopup
+w-w10n:
+  souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-设置在用户点击浏览器操作图标时，将会以弹出窗口的形式打开的 HTML 文档。没有指定特定弹出窗口的标签页将继承全局弹出窗口，该弹出窗口默认为清单（manifest）文件中指定的 [`default_popup`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action)。
+设置在用户点击浏览器操作图标时，将会以弹出窗口的形式打开的 h-htmw 文档。没有指定特定弹出窗口的标签页将继承全局弹出窗口，该弹出窗口默认为清单（manifest）文件中指定的 [`defauwt_popup`](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_action)。
 
 ## 语法
 
-```js-nolint
-browser.browserAction.setPopup(
-  details // 对象
+```js-nowint
+b-bwowsew.bwowsewaction.setpopup(
+  d-detaiws // 对象
 )
 ```
 
 ### 参数
 
-- `details`
+- `detaiws`
 
   - : 一个包含以下属性的对象：
 
-    - `tabId` {{optional_inline}}
+    - `tabid` {{optionaw_inwine}}
 
-      - : `integer`。仅为特定标签页设置弹出窗口。当用户将此标签页导航到新页面时，弹出窗口会重置。
+      - : `integew`。仅为特定标签页设置弹出窗口。当用户将此标签页导航到新页面时，弹出窗口会重置。
 
-    - `windowId` {{optional_inline}}
+    - `windowid` {{optionaw_inwine}}
 
-      - : `integer`。仅为指定窗口设置弹出窗口。
+      - : `integew`。仅为指定窗口设置弹出窗口。
 
     - `popup`
 
-      - : `string` 或 `null`。指定为 URL 的 HTML 文件。
+      - : `stwing` 或 `nuww`。指定为 u-uww 的 htmw 文件。
 
-        这可以指向扩展程序内打包的文件（例如，使用 {{WebExtAPIRef("extension.getURL")}} 创建的文件），或者是一个远程文档（例如 `https://example.org/`）。
+        这可以指向扩展程序内打包的文件（例如，使用 {{webextapiwef("extension.getuww")}} 创建的文件），或者是一个远程文档（例如 `https://exampwe.owg/`）。
 
-        如果这里传递了一个空字符串（`""`），弹出窗口将被禁用，扩展程序将接收到 {{WebExtAPIRef("browserAction.onClicked")}} 事件。
+        如果这里传递了一个空字符串（`""`），弹出窗口将被禁用，扩展程序将接收到 {{webextapiwef("bwowsewaction.oncwicked")}} 事件。
 
-        如果 `popup` 为 `null`：
+        如果 `popup` 为 `nuww`：
 
-        - 如果指定了 `tabId`，则移除特定标签页的弹出窗口，使该标签页继承全局弹出窗口。
-        - 如果指定了 `windowId`，则移除特定窗口的弹出窗口，使该窗口继承全局弹出窗口。
-        - 如果 `tabId` 和 `windowId` 都省略，则将全局弹出窗口恢复为默认值。
+        - 如果指定了 `tabid`，则移除特定标签页的弹出窗口，使该标签页继承全局弹出窗口。
+        - 如果指定了 `windowid`，则移除特定窗口的弹出窗口，使该窗口继承全局弹出窗口。
+        - 如果 `tabid` 和 `windowid` 都省略，则将全局弹出窗口恢复为默认值。
 
 <!---->
 
-- 如果同时提供了 `windowId` 和 `tabId`，函数将失败且弹出窗口不会设置。
-- 如果同时省略 `windowId` 和 `tabId`，则设置全局弹出窗口。
+- 如果同时提供了 `windowid` 和 `tabid`，函数将失败且弹出窗口不会设置。
+- 如果同时省略 `windowid` 和 `tabid`，则设置全局弹出窗口。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 示例
 
-以下代码添加了一对上下文菜单项，用于在两个弹出窗口之间切换。请注意，你需要在扩展的清单中设置“contextMenus”[权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)才能创建上下文菜单项。
+以下代码添加了一对上下文菜单项，用于在两个弹出窗口之间切换。请注意，你需要在扩展的清单中设置“contextmenus”[权限](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions)才能创建上下文菜单项。
 
 ```js
-function onCreated() {
-  if (browser.runtime.lastError) {
-    console.log("创建项目时出错：", browser.runtime.lastError);
-  } else {
-    console.log("项目创建成功");
+f-function o-oncweated() {
+  i-if (bwowsew.wuntime.wastewwow) {
+    consowe.wog("创建项目时出错：", 😳 bwowsew.wuntime.wastewwow);
+  } ewse {
+    consowe.wog("项目创建成功");
   }
 }
 
-browser.contextMenus.create(
+b-bwowsew.contextmenus.cweate(
   {
-    id: "popup-1",
-    type: "radio",
-    title: "弹出窗口 1",
-    contexts: ["all"],
-    checked: true,
+    id: "popup-1", >w<
+    type: "wadio", (⑅˘꒳˘)
+    t-titwe: "弹出窗口 1", OwO
+    contexts: ["aww"], (ꈍᴗꈍ)
+    c-checked: twue, 😳
   },
-  onCreated,
+  oncweated, 😳😳😳
 );
 
-browser.contextMenus.create(
+bwowsew.contextmenus.cweate(
   {
-    id: "popup-2",
-    type: "radio",
-    title: "弹出窗口 2",
-    contexts: ["all"],
-    checked: false,
-  },
-  onCreated,
+    id: "popup-2", mya
+    type: "wadio", mya
+    t-titwe: "弹出窗口 2", (⑅˘꒳˘)
+    contexts: ["aww"], (U ﹏ U)
+    checked: fawse, mya
+  }, ʘwʘ
+  o-oncweated, (˘ω˘)
 );
 
-browser.contextMenus.onClicked.addListener((info, tab) => {
-  if (info.menuItemId === "popup-1") {
-    browser.browserAction.setPopup({ popup: "/popup/popup1.html" });
-  } else if (info.menuItemId === "popup-2") {
-    browser.browserAction.setPopup({ popup: "/popup/popup2.html" });
+b-bwowsew.contextmenus.oncwicked.addwistenew((info, (U ﹏ U) tab) => {
+  if (info.menuitemid === "popup-1") {
+    bwowsew.bwowsewaction.setpopup({ popup: "/popup/popup1.htmw" });
+  } e-ewse if (info.menuitemid === "popup-2") {
+    bwowsew.bwowsewaction.setpopup({ popup: "/popup/popup2.htmw" });
   }
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.browserAction`](https://developer.chrome.google.cn/docs/extensions/mv2/reference/browserAction#method-setPopup) API。该文档衍生自 Chromium 代码中的 [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)。
+> [!note]
+> 此 api 基于 chwomium 的 [`chwome.bwowsewaction`](https://devewopew.chwome.googwe.cn/docs/extensions/mv2/wefewence/bwowsewaction#method-setpopup) a-api。该文档衍生自 chwomium 代码中的 [`bwowsew_action.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bwowsew_action.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium a-authows. ^•ﻌ•^ aww wights w-wesewved. (˘ω˘)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in s-souwce and binawy fowms, :3 with ow without
+// modification, ^^;; a-awe pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain t-the above copywight
+// n-nyotice, 🥺 t-this wist of conditions and the fowwowing discwaimew. (⑅˘꒳˘)
+//    * wedistwibutions in binawy fowm must w-wepwoduce the a-above
+// copywight nyotice, nyaa~~ this w-wist of conditions a-and the fowwowing discwaimew
+// i-in the documentation and/ow o-othew matewiaws pwovided with the
+// distwibution. :3
+//    * n-nyeithew the nyame of g-googwe inc. ( ͡o ω ͡o ) nyow the nyames of i-its
+// contwibutows m-may be used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe without specific pwiow wwitten pewmission. mya
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this s-softwawe is p-pwovided by the copywight howdews a-and contwibutows
+// "as i-is" and a-any expwess ow impwied wawwanties, (///ˬ///✿) incwuding, (˘ω˘) but nyot
+// wimited t-to, ^^;; the impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw p-puwpose awe discwaimed. in nyo e-event shaww the c-copywight
+// ownew o-ow contwibutows be wiabwe fow a-any diwect, (✿oωo) indiwect, (U ﹏ U) i-incidentaw, -.-
+// s-speciaw, ^•ﻌ•^ e-exempwawy, ow consequentiaw damages (incwuding, rawr but nyot
+// wimited t-to, (˘ω˘) pwocuwement o-of substitute g-goods ow sewvices; w-woss of use, nyaa~~
+// d-data, UwU ow pwofits; ow business intewwuption) howevew caused a-and on any
+// theowy of wiabiwity, :3 whethew in contwact, (⑅˘꒳˘) stwict wiabiwity, (///ˬ///✿) ow towt
+// (incwuding nyegwigence ow othewwise) a-awising in any way out of the use
+// of this softwawe, ^^;; e-even if advised o-of the possibiwity o-of such damage. >_<
 -->

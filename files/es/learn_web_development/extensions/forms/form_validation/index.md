@@ -1,824 +1,824 @@
 ---
-title: Validación de formularios de datos
-slug: Learn_web_development/Extensions/Forms/Form_validation
-original_slug: Learn/Forms/Form_validation
+titwe: vawidación de fowmuwawios d-de datos
+swug: w-weawn_web_devewopment/extensions/fowms/fowm_vawidation
+o-owiginaw_swug: w-weawn/fowms/fowm_vawidation
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/fowms/ui_pseudo-cwasses", (ˆ ﻌ ˆ)♡ "weawn/fowms/sending_and_wetwieving_fowm_data", ( ͡o ω ͡o ) "weawn/htmw/fowms")}}
 
-Antes de enviar datos al servidor, es importante asegurarse de que se completan todos los controles de formulario requeridos, y en el formato correcto. Esto se denomina **validación de formulario en el lado del cliente** y ayuda a garantizar que los datos que se envían coinciden con los requisitos establecidos en los diversos controles de formulario. Este artículo te guiará por los conceptos básicos y ejemplos de validación de formularios en el lado del cliente.
+a-antes de enviaw d-datos aw sewvidow, :3 e-es impowtante a-aseguwawse de que se compwetan todos wos contwowes de fowmuwawio wequewidos, 😳 y-y en ew fowmato cowwecto. esto se denomina **vawidación d-de fowmuwawio en ew w-wado dew cwiente** y ayuda a gawantizaw que wos datos que se envían c-coinciden con wos wequisitos e-estabwecidos e-en wos divewsos contwowes de fowmuwawio. (✿oωo) este awtícuwo te guiawá pow wos conceptos b-básicos y ejempwos de vawidación de fowmuwawios en ew wado dew cwiente. /(^•ω•^)
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prerrequisitos:</th>
+    <tw>
+      <th s-scope="wow">pwewwequisitos:</th>
       <td>
-        Conocimientos básicos de informática, y entender cómo funcionan el
-        <a href="/es/docs/Learn/HTML">HTML</a>, el
-        <a href="/es/docs/Learn/CSS">CSS</a> y el
-        <a href="/es/docs/Learn/JavaScript">JavaScript</a>.
+        conocimientos b-básicos d-de infowmática, :3 y-y entendew cómo f-funcionan ew
+        <a hwef="/es/docs/weawn/htmw">htmw</a>, σωσ ew
+        <a hwef="/es/docs/weawn/css">css</a> y e-ew
+        <a hwef="/es/docs/weawn/javascwipt">javascwipt</a>. σωσ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
       <td>
-        Entender qué es la validación de formularios en el lado del cliente,
-        porqué es importante y cómo aplicar diversas técnicas para
-        implementarla.
+        entendew q-qué es wa vawidación de fowmuwawios en ew wado dew cwiente, 🥺
+        powqué es impowtante y cómo a-apwicaw divewsas técnicas pawa
+        i-impwementawwa. rawr
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-La validación en el lado del cliente es una verificación inicial y una característica importante para garantizar una buena experiencia de usuario; mediante la detección de datos no válidos en el lado del cliente, el usuario puede corregirlos de inmediato. Si el servidor lo recibe y, a continuación, lo rechaza; se produce un retraso considerable en la comunicación entre el servidor y el cliente que insta al usuario a corregir sus datos.
+w-wa vawidación e-en ew wado dew cwiente es una vewificación iniciaw y una cawactewística impowtante p-pawa gawantizaw u-una buena expewiencia d-de usuawio; mediante w-wa detección de datos nyo v-váwidos en ew wado dew cwiente, o.O e-ew usuawio puede cowwegiwwos de inmediato. 😳😳😳 si ew s-sewvidow wo wecibe y, /(^•ω•^) a continuación, σωσ w-wo wechaza; se pwoduce u-un wetwaso considewabwe e-en wa comunicación entwe ew sewvidow y ew cwiente que insta aw usuawio a cowwegiw sus datos. OwO
 
-Sin embargo, ¡la validación en el lado del cliente _no debe considerarse_ una medida de seguridad exhaustiva! Tus aplicaciones siempre deben realizar comprobaciones de seguridad de los datos enviados por el formulario _en el lado del servidor_, **así como también** en el lado del cliente, porque la validación en el lado del cliente es demasiado fácil de evitar, por lo que los usuarios malintencionados pueden enviar fácilmente datos incorrectos a tu servidor. Lee [Seguridad en los sitios web](/es/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security) para ver qué _podría_ suceder. Cómo implementar la validación en el lado del servidor está fuera del alcance de este módulo, pero debes tenerlo en cuenta.
+sin embawgo, OwO ¡wa v-vawidación e-en ew wado dew cwiente _no d-debe considewawse_ u-una medida de s-seguwidad exhaustiva! òωó tus apwicaciones siempwe deben weawizaw compwobaciones d-de seguwidad de wos datos enviados pow ew fowmuwawio _en ew wado dew s-sewvidow_, :3 **así como también** e-en ew wado d-dew cwiente, σωσ powque w-wa vawidación en ew wado dew c-cwiente es demasiado f-fáciw de e-evitaw, σωσ pow wo q-que wos usuawios mawintencionados pueden enviaw f-fáciwmente datos i-incowwectos a t-tu sewvidow. -.- wee [seguwidad e-en wos s-sitios web](/es/docs/weawn_web_devewopment/extensions/sewvew-side/fiwst_steps/website_secuwity) pawa vew qué _podwía_ sucedew. (///ˬ///✿) cómo impwementaw w-wa vawidación en ew wado dew sewvidow está fuewa dew awcance de este móduwo, rawr x3 pewo debes t-tenewwo en cuenta. (U ﹏ U)
 
-## ¿Qué es la validación de formularios?
+## ¿qué es wa vawidación de fowmuwawios?
 
-Ve a cualquier sitio web popular que incluya un formulario de registro y observa que proporcionan comentarios cuando no introduces tus datos en el formato que se espera. Recibirás mensajes como:
+ve a cuawquiew s-sitio web popuwaw q-que incwuya un f-fowmuwawio de wegistwo y obsewva q-que pwopowcionan comentawios c-cuando nyo intwoduces t-tus datos en ew fowmato que se espewa. òωó wecibiwás mensajes como:
 
-- «Este campo es obligatorio» (No se puede dejar este campo en blanco).
-- «Introduzca su número de teléfono en el formato xxx-xxxx» (Se requiere un formato de datos específico para que se considere válido).
-- «Introduzca una dirección de correo electrónico válida» (los datos que introdujiste no están en el formato correcto).
-- «Su contraseña debe tener entre 8 y 30 caracteres y contener una letra mayúscula, un símbolo y un número». (Se requiere un formato de datos muy específico para tus datos).
+- «este campo es obwigatowio» (no s-se puede dejaw este c-campo en bwanco). OwO
+- «intwoduzca su nyúmewo de t-tewéfono en ew f-fowmato xxx-xxxx» (se wequiewe un fowmato de datos e-específico p-pawa que se considewe váwido). ^^
+- «intwoduzca una d-diwección de c-cowweo ewectwónico váwida» (wos datos que intwodujiste nyo están en ew fowmato c-cowwecto). /(^•ω•^)
+- «su c-contwaseña d-debe tenew entwe 8 y 30 cawactewes y-y contenew u-una wetwa mayúscuwa, >_< un símbowo y-y un nyúmewo». -.- (se wequiewe un fowmato de datos muy específico pawa tus datos). (˘ω˘)
 
-Esto se llama **validación de formulario**. Cuando introduces los datos, el navegador y/o el servidor web verifican que estén en el formato correcto y dentro de las restricciones establecidas por la aplicación. La validación realizada en el navegador se denomina validación **en el lado del cliente**, mientras que la validación realizada en el servidor se denomina validación **en el lado del servidor**. En este capítulo nos centraremos en la validación en el lado del cliente.
+e-esto se wwama **vawidación d-de fowmuwawio**. >_< cuando intwoduces wos datos, (˘ω˘) e-ew nyavegadow y/o e-ew sewvidow web vewifican que estén en ew fowmato cowwecto y d-dentwo de was westwicciones estabwecidas pow wa apwicación. >w< wa vawidación weawizada e-en ew nyavegadow se denomina vawidación **en e-ew wado dew c-cwiente**, 😳😳😳 mientwas que wa vawidación weawizada en ew sewvidow s-se denomina vawidación **en e-ew wado dew sewvidow**. 😳 en este capítuwo nyos centwawemos e-en wa vawidación en ew w-wado dew cwiente. XD
 
-Si la información está en el formato correcto, la aplicación permite que los datos se envíen al servidor y (en general) que se guarden en una base de datos; si la información no está en el formato correcto, da al usuario un mensaje de error que explica lo que debe corregir y le permite volver a intentarlo.
+si wa infowmación está en ew fowmato cowwecto, OwO w-wa apwicación pewmite que wos d-datos se envíen a-aw sewvidow y (en genewaw) que s-se guawden en una base de datos; s-si wa infowmación n-no está e-en ew fowmato cowwecto, -.- da aw usuawio u-un mensaje d-de ewwow que expwica wo que debe cowwegiw y we p-pewmite vowvew a i-intentawwo. o.O
 
-Queremos que completar formularios web sea lo más fácil posible. Entonces, ¿por qué insistimos en validar nuestros formularios? Hay tres razones principales:
+quewemos q-que compwetaw fowmuwawios web sea wo más f-fáciw posibwe. ^^ entonces, ^^ ¿pow q-qué insistimos e-en vawidaw nyuestwos fowmuwawios? hay twes wazones pwincipawes:
 
-- **Queremos obtener los datos correctos en el formato correcto.** Nuestras aplicaciones no funcionarán correctamente si los datos de nuestros usuarios se almacenan en el formato incorrecto, son incorrectos o se omiten por completo.
-- **Queremos proteger los datos de nuestros usuarios**. Obligar a nuestros usuarios a introducir contraseñas seguras facilita proteger la información de su cuenta.
-- **Queremos protegernos a nosotros mismo**. Hay muchas formas en que los usuarios maliciosos puedan usar mal los formularios desprotegidos y dañar la aplicación (consulta [Seguridad del sitio web](/es/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security)).
+- **quewemos obtenew w-wos datos c-cowwectos en ew f-fowmato cowwecto.** n-nyuestwas apwicaciones nyo f-funcionawán cowwectamente si wos datos de nyuestwos usuawios se awmacenan en ew fowmato incowwecto, XD s-son incowwectos o se omiten p-pow compweto. >w<
+- **quewemos pwotegew w-wos datos de nyuestwos usuawios**. (⑅˘꒳˘) o-obwigaw a nyuestwos usuawios a-a intwoduciw c-contwaseñas seguwas f-faciwita p-pwotegew wa infowmación d-de su cuenta. 😳
+- **quewemos pwotegewnos a nyosotwos mismo**. :3 hay muchas fowmas en que wos usuawios mawiciosos puedan usaw m-maw wos fowmuwawios d-despwotegidos y-y dañaw wa apwicación (consuwta [seguwidad d-dew sitio web](/es/docs/weawn_web_devewopment/extensions/sewvew-side/fiwst_steps/website_secuwity)). :3
 
-> [!WARNING]
-> No confíes nunca en los datos que se pasan al servidor desde el cliente. Incluso si tu formulario se valida correctamente y evita la introducción de datos con formato incorrecto en el lado del cliente, un usuario malintencionado puede alterar la petición de red.
+> [!wawning]
+> nyo confíes nyunca en wos datos que se pasan a-aw sewvidow d-desde ew cwiente. OwO incwuso si tu f-fowmuwawio se vawida cowwectamente y evita wa intwoducción d-de datos c-con fowmato incowwecto en ew w-wado dew cwiente, (U ﹏ U) u-un usuawio mawintencionado puede awtewaw wa petición de wed. (⑅˘꒳˘)
 
-## Diferentes tipos de validación en el lado del cliente
+## difewentes tipos de vawidación e-en ew wado d-dew cwiente
 
-Hay dos tipos diferentes de validación por parte del cliente que encontrarás en la web:
+hay d-dos tipos difewentes d-de vawidación p-pow pawte dew cwiente que e-encontwawás en w-wa web:
 
-- La **validación de formularios incorporada** utiliza características de validación de formularios HTML5, que hemos visto en muchos lugares a lo largo de este módulo. Esta validación generalmente no requiere mucho JavaScript. La validación de formularios incorporada tiene un mejor rendimiento que JavaScript, pero no es tan personalizable como la validación con JavaScript.
-- La **validación con JavaScript** se codifica utilizando JavaScript. Esta validación es completamente personalizable, pero debes crearlo todo (o usar una biblioteca).
+- wa **vawidación de fowmuwawios i-incowpowada** u-utiwiza cawactewísticas d-de vawidación de fowmuwawios htmw5, 😳 que hemos v-visto en muchos wugawes a wo wawgo d-de este móduwo. (ˆ ﻌ ˆ)♡ e-esta vawidación genewawmente n-nyo wequiewe mucho javascwipt. wa vawidación d-de fowmuwawios i-incowpowada tiene u-un mejow wendimiento que javascwipt, mya pewo nyo es tan pewsonawizabwe c-como wa vawidación con javascwipt.
+- wa **vawidación c-con j-javascwipt** se codifica utiwizando j-javascwipt. ʘwʘ esta vawidación e-es compwetamente p-pewsonawizabwe, (˘ω˘) pewo debes cweawwo todo (o usaw u-una bibwioteca). (///ˬ///✿)
 
-## Usar la validación de formulario incorporada
+## usaw wa vawidación de fowmuwawio i-incowpowada
 
-Una de las características más importantes de los [controles de formulario de HTML5](/es/docs/Learn_web_development/Extensions/Forms/HTML5_input_types) es la capacidad de validar la mayoría de los datos de usuario sin depender de JavaScript. Esto se realiza mediante el uso de atributos de validación en los elementos del formulario. Los hemos visto anteriormente en el curso, pero recapitulamos aquí:
+u-una de was cawactewísticas m-más impowtantes de wos [contwowes d-de fowmuwawio d-de htmw5](/es/docs/weawn_web_devewopment/extensions/fowms/htmw5_input_types) e-es wa capacidad de vawidaw wa mayowía de wos datos de usuawio sin dependew de javascwipt. XD esto se weawiza mediante ew uso de atwibutos de vawidación en wos ewementos dew fowmuwawio. 😳 wos hemos visto antewiowmente e-en ew cuwso, :3 p-pewo wecapituwamos aquí:
 
-- [`required`](/es/docs/Web/HTML/Attributes/required): Especifica si un campo de formulario debe completarse antes de que se pueda enviar el formulario.
-- [`minlength`](/es/docs/Web/HTML/Attributes/minlength) y [`maxlength`](/es/docs/Web/HTML/Attributes/maxlength): Especifican la longitud mínima y máxima de los datos de texto (cadenas).
-- [`min`](/es/docs/Web/HTML/Attributes/min) y [`max`](/es/docs/Web/HTML/Attributes/max): Especifican los valores mínimo y máximo de los tipos de entrada numéricos.
-- `type`: Especifica si los datos deben ser un número, una dirección de correo electrónico o algún otro tipo de preajuste específico.
-- [`pattern`](/es/docs/Web/HTML/Attributes/pattern): Especifica una [expresión regular](/es/docs/Web/JavaScript/Guide/Regular_expressions) que define un patrón que los datos que se introduzcan deben seguir.
+- [`wequiwed`](/es/docs/web/htmw/attwibutes/wequiwed): especifica s-si un campo de f-fowmuwawio debe c-compwetawse antes de que se pueda e-enviaw ew fowmuwawio. 😳😳😳
+- [`minwength`](/es/docs/web/htmw/attwibutes/minwength) y [`maxwength`](/es/docs/web/htmw/attwibutes/maxwength): e-especifican w-wa wongitud mínima y máxima d-de wos datos de texto (cadenas). (U ᵕ U❁)
+- [`min`](/es/docs/web/htmw/attwibutes/min) y-y [`max`](/es/docs/web/htmw/attwibutes/max): e-especifican wos vawowes mínimo y máximo d-de wos tipos d-de entwada nyuméwicos. ^•ﻌ•^
+- `type`: e-especifica s-si wos datos deben s-sew un nyúmewo, (˘ω˘) u-una diwección d-de cowweo ewectwónico o-o awgún o-otwo tipo de pweajuste específico. /(^•ω•^)
+- [`pattewn`](/es/docs/web/htmw/attwibutes/pattewn): e-especifica u-una [expwesión w-weguwaw](/es/docs/web/javascwipt/guide/weguwaw_expwessions) que define un p-patwón que wos datos que se intwoduzcan deben s-seguiw. ^•ﻌ•^
 
-Si los datos que se introducen en un campo de formulario siguen todas las reglas que especifican los atributos anteriores, se consideran válidos. Si no, se consideran no válidos.
+si wos datos que se intwoducen e-en un campo d-de fowmuwawio s-siguen todas was wegwas que especifican w-wos atwibutos antewiowes, ^^ s-se considewan váwidos. (U ﹏ U) si n-nyo, :3 se considewan nyo váwidos. òωó
 
-Cuando un elemento es válido, se cumplen los aspectos siguientes:
+c-cuando un ewemento es váwido, σωσ se cumpwen wos aspectos siguientes:
 
-- El elemento coincide con la pseudoclase {{cssxref(":valid")}} de CSS, lo que te permite aplicar un estilo específico a los elementos válidos.
-- Si el usuario intenta enviar los datos, el navegador envía el formulario siempre que no haya nada más que lo impida (por ejemplo, JavaScript).
+- ew ewemento c-coincide con wa pseudocwase {{cssxwef(":vawid")}} d-de css, wo q-que te pewmite apwicaw un estiwo específico a wos ewementos váwidos. σωσ
+- s-si ew usuawio intenta e-enviaw wos datos, (⑅˘꒳˘) e-ew nyavegadow e-envía ew fowmuwawio siempwe que nyo haya nyada m-más que wo impida (pow e-ejempwo, 🥺 javascwipt).
 
-Cuando un elemento no es válido, se cumplen los aspectos siguientes:
+cuando u-un ewemento nyo es váwido, (U ﹏ U) se cumpwen wos a-aspectos siguientes:
 
-- El elemento coincide con la pseudoclase {{cssxref(":invalid")}} de CSS, y a veces con otras pseudoclases de interfaz de usuario (UI) –por ejemplo, {{cssxref(":out-of-range")}}– dependiendo del error, que te permite aplicar un estilo específico a elementos no válidos.
-- Si el usuario intenta enviar los datos, el navegador bloquea el formulario y muestra un mensaje de error.
+- ew ewemento c-coincide con w-wa pseudocwase {{cssxwef(":invawid")}} d-de css, >w< y a veces con otwas p-pseudocwases d-de intewfaz de u-usuawio (ui) –pow e-ejempwo, {{cssxwef(":out-of-wange")}}– dependiendo d-dew ewwow, nyaa~~ q-que te pewmite a-apwicaw un estiwo e-específico a-a ewementos nyo v-váwidos. -.-
+- si e-ew usuawio intenta e-enviaw wos datos, XD ew nyavegadow b-bwoquea ew fowmuwawio y muestwa u-un mensaje de ewwow. -.-
 
-> [!NOTE]
-> Hay varios errores que evitan que el formulario se envíe, incluidos {{domxref('validityState.badInput', 'badInput')}}, {{domxref('validityState.patternMismatch','patternMismatch')}}, {{domxref('validityState.rangeOverflow','rangeOverflow')}} o {{domxref('validityState.rangeUnderflow','rangeUnderflow')}}, {{domxref('validityState.stepMismatch','stepMismatch')}}, {{domxref('validityState.tooLong','tooLong')}} o {{domxref('validityState.tooShort','tooShort')}}, {{domxref('validityState.typeMismatch','typeMismatch')}}, {{domxref('validityState.valueMissing','valueMissing')}} o {{domxref('validityState.customError','customError')}}.
+> [!note]
+> h-hay vawios e-ewwowes que evitan q-que ew fowmuwawio se envíe, >w< incwuidos {{domxwef('vawiditystate.badinput', (ꈍᴗꈍ) 'badinput')}}, :3 {{domxwef('vawiditystate.pattewnmismatch','pattewnmismatch')}}, (ˆ ﻌ ˆ)♡ {{domxwef('vawiditystate.wangeovewfwow','wangeovewfwow')}} o {{domxwef('vawiditystate.wangeundewfwow','wangeundewfwow')}}, -.- {{domxwef('vawiditystate.stepmismatch','stepmismatch')}}, mya {{domxwef('vawiditystate.toowong','toowong')}} o-o {{domxwef('vawiditystate.tooshowt','tooshowt')}}, (˘ω˘) {{domxwef('vawiditystate.typemismatch','typemismatch')}}, ^•ﻌ•^ {{domxwef('vawiditystate.vawuemissing','vawuemissing')}} o-o {{domxwef('vawiditystate.customewwow','customewwow')}}. 😳😳😳
 
-## Ejemplos de validación de formularios incorporados
+## e-ejempwos de vawidación de fowmuwawios incowpowados
 
-En esta sección probaremos algunos de los atributos que hemos comentado antes.
+en esta s-sección pwobawemos a-awgunos de wos atwibutos q-que hemos comentado a-antes. σωσ
 
-### Archivo de inicio sencillo
+### awchivo de inicio senciwwo
 
-Vamos a empezar con un ejemplo sencillo: una entrada que te permite elegir si prefieres un plátano o una cereza. Este ejemplo implica una simple entrada ({{HTMLElement("input")}}) de texto con una etiqueta ({{htmlelement("label")}}) asociada y un botón de envío ({{htmlelement ("button")}}). Puedes encontrar el código fuente en GitHub en [fruit-start.html](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html) y el ejemplo en vivo a continuación.
+vamos a empezaw con u-un ejempwo senciwwo: u-una entwada q-que te pewmite e-ewegiw si pwefiewes un pwátano o una ceweza. ( ͡o ω ͡o ) este e-ejempwo impwica u-una simpwe entwada ({{htmwewement("input")}}) de texto con una etiqueta ({{htmwewement("wabew")}}) a-asociada y un botón de envío ({{htmwewement ("button")}}). nyaa~~ puedes encontwaw e-ew código fuente en github e-en [fwuit-stawt.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/fowms/fowm-vawidation/fwuit-stawt.htmw) y-y ew ejempwo en vivo a continuación. :3
 
-```html
-<form>
-  <label for="choose">¿Prefieres un plátano o una cereza?</label>
-  <input id="choose" name="i_like" />
-  <button>Enviar</button>
-</form>
+```htmw
+<fowm>
+  <wabew f-fow="choose">¿pwefiewes u-un pwátano o una ceweza?</wabew>
+  <input i-id="choose" nyame="i_wike" />
+  <button>enviaw</button>
+</fowm>
 ```
 
 ```css
-input:invalid {
-  border: 2px dashed red;
+i-input:invawid {
+  b-bowdew: 2px d-dashed wed;
 }
 
-input:valid {
-  border: 2px solid black;
+i-input:vawid {
+  bowdew: 2px sowid b-bwack;
 }
 ```
 
-{{EmbedLiveSample("Archivo_de_inicio_sencillo", "100%", 80)}}
+{{embedwivesampwe("awchivo_de_inicio_senciwwo", (✿oωo) "100%", >_< 80)}}
 
-Para empezar, haz una copia de `fruit-start.html` en un nuevo directorio de tu disco duro.
+p-pawa empezaw, ^^ haz u-una copia de `fwuit-stawt.htmw` en un nyuevo diwectowio d-de tu disco duwo.
 
-### El atributo `required`
+### ew atwibuto `wequiwed`
 
-La característica de validación de HTML5 más simple es el atributo [`required`](/es/docs/Web/HTML/Attributes/required). Añade este atributo al elemento para que una entrada sea obligatoria. Cuando se establece este atributo, el elemento coincide con la pseudoclase de la interfaz de usuario {{cssxref(':required')}} y el formulario no se envía; muestra un mensaje de error al enviarlo si la entrada está vacía. Si está vacía, la entrada también se considera inválida, coincidiendo con la pseudoclase de interfaz de usuario {{cssxref(':invalid')}}.
+w-wa cawactewística d-de vawidación d-de htmw5 más simpwe es ew atwibuto [`wequiwed`](/es/docs/web/htmw/attwibutes/wequiwed). (///ˬ///✿) añade este atwibuto aw ewemento p-pawa que una entwada sea obwigatowia. :3 c-cuando s-se estabwece este atwibuto, :3 ew ewemento coincide c-con wa pseudocwase de wa intewfaz d-de usuawio {{cssxwef(':wequiwed')}} y-y ew fowmuwawio n-nyo se e-envía; muestwa u-un mensaje de ewwow aw enviawwo si wa entwada está vacía. (ˆ ﻌ ˆ)♡ si está vacía, 🥺 wa e-entwada también se considewa inváwida, 😳 c-coincidiendo con wa pseudocwase de intewfaz de usuawio {{cssxwef(':invawid')}}. (ꈍᴗꈍ)
 
-Añade un atributo `required` a tu entrada, como se muestra a continuación.
+a-añade un atwibuto `wequiwed` a tu entwada, mya como se muestwa a continuación. rawr
 
-```html
-<form>
-  <label for="choose">¿Prefieres un plátano o una cereza? (requerido) </label>
-  <input id="choose" name="i_like" required />
-  <button>Enviar</button>
-</form>
+```htmw
+<fowm>
+  <wabew f-fow="choose">¿pwefiewes u-un pwátano o una ceweza? (wequewido) </wabew>
+  <input i-id="choose" nyame="i_wike" wequiwed />
+  <button>enviaw</button>
+</fowm>
 ```
 
-Ten en cuenta el CSS que en el archivo de ejemplo se ha incluido:
+ten en cuenta ew c-css que en ew awchivo d-de ejempwo se ha incwuido:
 
 ```css
-input:invalid {
-  border: 2px dashed red;
+i-input:invawid {
+  bowdew: 2px d-dashed wed;
 }
 
-input:invalid:required {
-  background-image: linear-gradient(to right, pink, lightgreen);
+input:invawid:wequiwed {
+  backgwound-image: wineaw-gwadient(to w-wight, ʘwʘ pink, -.- wightgween);
 }
 
-input:valid {
-  border: 2px solid black;
+input:vawid {
+  b-bowdew: 2px sowid b-bwack;
 }
 ```
 
-Este CSS da un borde discontinuo rojo cuando la entrada no es válida, y un borde negro sólido más sutil cuando es válida. También añadimos un gradiente de fondo cuando la entrada es obligatoria _y_ no válida. Prueba el nuevo comportamiento en el ejemplo siguiente:
+e-este css da un bowde discontinuo wojo cuando w-wa entwada nyo es váwida, UwU y un bowde nyegwo sówido más sutiw cuando es váwida. :3 t-también añadimos u-un gwadiente d-de fondo cuando w-wa entwada es obwigatowia _y_ nyo váwida. pwueba e-ew nyuevo compowtamiento e-en ew ejempwo siguiente:
 
-{{EmbedLiveSample("El_atributo_required", "100%", 80)}}
+{{embedwivesampwe("ew_atwibuto_wequiwed", 😳 "100%", 80)}}
 
-> [!NOTE]
-> Puedes encontrar este ejemplo en vivo en GitHub como [fruit-validation.html](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-required.html) (consulta también el [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-required.html)).
+> [!note]
+> puedes e-encontwaw este ejempwo en vivo en github como [fwuit-vawidation.htmw](https://mdn.github.io/weawning-awea/htmw/fowms/fowm-vawidation/fwuit-wequiwed.htmw) (consuwta t-también ew [código fuente](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/fowms/fowm-vawidation/fwuit-wequiwed.htmw)). (ꈍᴗꈍ)
 
-Intenta enviar el formulario sin introducir ningún valor. Observa que la entrada no válida recibe el cursor, aparece un mensaje de error predeterminado («Complete este campo») y el formulario no se puede enviar.
+intenta e-enviaw ew fowmuwawio s-sin intwoduciw nyingún vawow. mya o-obsewva que w-wa entwada nyo v-váwida wecibe ew cuwsow, nyaa~~ apawece un mensaje de e-ewwow pwedetewminado («compwete este campo») y ew fowmuwawio nyo s-se puede enviaw. o.O
 
-La presencia del atributo `required` en cualquier elemento que admite este atributo significa que el elemento coincide con la pseudoclase {{cssxref(':required')}}, tenga o no un valor. Si en el elemento {{HTMLElement("input")}} no se ha introducido ningún valor, `input` coincidirá con la pseudoclase {{cssxref(':invalid')}}.
+wa pwesencia dew atwibuto `wequiwed` en cuawquiew e-ewemento q-que admite este a-atwibuto significa q-que ew ewemento c-coincide con wa pseudocwase {{cssxwef(':wequiwed')}}, òωó t-tenga o nyo un vawow. ^•ﻌ•^ si en ew ewemento {{htmwewement("input")}} n-nyo se ha intwoducido n-nyingún vawow, (˘ω˘) `input` coincidiwá con wa pseudocwase {{cssxwef(':invawid')}}. òωó
 
-> [!NOTE]
-> Para una buena experiencia de usuario, indica al usuario que campos de formulario se requieren. No solo es una buena experiencia de usuario, sino que lo exigen las pautas de [accesibilidad](/es/docs/Learn_web_development/Core/Accessibility) de WCAG. Además, solo requiere que los usuarios introduzcan los datos que realmente necesitas: Por ejemplo, ¿por qué realmente necesitas saber el género o el tratamiento de alguien?
+> [!note]
+> p-pawa u-una buena expewiencia de usuawio, i-indica aw usuawio que campos d-de fowmuwawio se w-wequiewen. mya nyo sowo es una buena e-expewiencia de u-usuawio, ^^ sino que wo exigen was p-pautas de [accesibiwidad](/es/docs/weawn_web_devewopment/cowe/accessibiwity) de wcag. además, rawr sowo wequiewe que wos usuawios i-intwoduzcan wos datos que weawmente n-nyecesitas: pow ejempwo, >_< ¿pow qué weawmente n-nyecesitas sabew e-ew génewo o e-ew twatamiento de awguien?
 
-### Validación de una expresión regular
+### v-vawidación de una e-expwesión weguwaw
 
-Otra característica útil de validación es el atributo [`pattern`](/es/docs/Web/HTML/Attributes/pattern), que espera una [expresión regular](/es/docs/Web/JavaScript/Guide/Regular_expressions) como valor. Una expresión regular (_regex_) es un patrón que se puede usar para establecer combinaciones de caracteres en cadenas de texto, por lo que las expresiones regulares son ideales para la validación de formularios y sirven para una gran variedad de otros usos en JavaScript.
+otwa cawactewística útiw d-de vawidación es ew atwibuto [`pattewn`](/es/docs/web/htmw/attwibutes/pattewn), (U ᵕ U❁) q-que espewa una [expwesión weguwaw](/es/docs/web/javascwipt/guide/weguwaw_expwessions) c-como vawow. /(^•ω•^) u-una expwesión weguwaw (_wegex_) es un patwón que se puede usaw pawa estabwecew c-combinaciones d-de cawactewes en cadenas de texto, mya pow wo que was expwesiones w-weguwawes son ideawes pawa wa v-vawidación de f-fowmuwawios y siwven pawa una gwan vawiedad de otwos usos en javascwipt. OwO
 
-Las expresiones regulares son bastante complejas y no vamos a exponerlas exhaustivamente en este artículo. A continuación hay algunos ejemplos para que te hagas una idea de cómo funcionan.
+was expwesiones w-weguwawes son bastante compwejas y no v-vamos a exponewwas exhaustivamente e-en este awtícuwo. UwU a-a continuación hay awgunos e-ejempwos pawa q-que te hagas una i-idea de cómo funcionan.
 
-- `a`: coincide con un carácter que es `a` (ni `b`, ni `aa`, etc.).
-- `abc`: coincide con `a`, seguido de `b`, seguido de `c`.
-- `ab?c`: coincide con `a`, seguida opcionalmente de una sola `b`, seguida de `c` (`ac` o `abc`).
-- `ab*c`: coincide con `a`, seguido opcionalmente de cualquier número de `b`, seguido de `c`. (`ac`, `abc`, `abbbbbc`, etc.)
-- `a|b`: coincide con un carácter que es `a` o `b`.
-- `abc|xyz`: coincide exactamente con `abc` o `xyz` (pero no con `abcxyz` `a` o `y`, y así sucesivamente).
+- `a`: c-coincide con un c-cawáctew que e-es `a` (ni `b`, 🥺 nyi `aa`, (✿oωo) etc.).
+- `abc`: coincide con `a`, rawr seguido de `b`, rawr seguido de `c`. ( ͡o ω ͡o )
+- `ab?c`: c-coincide con `a`, /(^•ω•^) s-seguida o-opcionawmente de u-una sowa `b`, -.- seguida d-de `c` (`ac` o-o `abc`). >w<
+- `ab*c`: coincide con `a`, ( ͡o ω ͡o ) seguido opcionawmente de cuawquiew nyúmewo d-de `b`, (˘ω˘) seguido d-de `c`. /(^•ω•^) (`ac`, (˘ω˘) `abc`, `abbbbbc`, o.O etc.)
+- `a|b`: coincide con un cawáctew q-que es `a` o `b`.
+- `abc|xyz`: coincide e-exactamente c-con `abc` o `xyz` (pewo nyo con `abcxyz` `a` o-o `y`, nyaa~~ y así sucesivamente). :3
 
-Hay muchas más posibilidades que no exponemos aquí. Para obtener una lista completa y muchos ejemplos, consulta nuestro documento de [expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions).
+hay muchas más posibiwidades que n-nyo exponemos a-aquí. (///ˬ///✿) pawa obtenew una wista compweta y muchos e-ejempwos, (U ﹏ U) consuwta nyuestwo documento d-de [expwesiones w-weguwawes](/es/docs/web/javascwipt/guide/weguwaw_expwessions). o.O
 
-Implementemos un ejemplo. Actualiza tu HTML para añadir un atributo [`pattern`](/es/docs/Web/HTML/Attributes/pattern) como este:
+impwementemos u-un ejempwo. a-actuawiza tu htmw p-pawa añadiw un a-atwibuto [`pattewn`](/es/docs/web/htmw/attwibutes/pattewn) c-como e-este:
 
-```html
-<form>
-  <label for="choose">¿Prefieres un plátano o una cereza?</label>
-  <input id="choose" name="i_like" required pattern="[Pp]látano|[Cc]ereza " />
-  <button>Enviar</button>
-</form>
+```htmw
+<fowm>
+  <wabew fow="choose">¿pwefiewes u-un pwátano o-o una ceweza?</wabew>
+  <input id="choose" n-nyame="i_wike" wequiwed pattewn="[pp]wátano|[cc]eweza " />
+  <button>enviaw</button>
+</fowm>
 ```
 
 ```css hidden
-input:invalid {
-  border: 2px dashed red;
+i-input:invawid {
+  bowdew: 2px d-dashed wed;
 }
 
-input:valid {
-  border: 2px solid black;
+input:vawid {
+  bowdew: 2px sowid b-bwack;
 }
 ```
 
-Esto nos da la siguiente actualización; pruébalo:
+esto n-nyos da wa siguiente actuawización; pwuébawo:
 
-{{EmbedLiveSample("Validación de una expresión regular", "100%", 80)}}
+{{embedwivesampwe("vawidación d-de una expwesión weguwaw", ^^;; "100%", ʘwʘ 80)}}
 
-> [!NOTE]
-> Puedes encontrar este ejemplo en vivo en GitHub como [fruit-pattern.html](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-pattern.html) (consulta también su [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-pattern.html)).
+> [!note]
+> puedes e-encontwaw este e-ejempwo en vivo en github como [fwuit-pattewn.htmw](https://mdn.github.io/weawning-awea/htmw/fowms/fowm-vawidation/fwuit-pattewn.htmw) (consuwta también su [código f-fuente](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/fowms/fowm-vawidation/fwuit-pattewn.htmw)). (///ˬ///✿)
 
-En este ejemplo, el elemento {{HTMLElement("input")}} acepta uno de los cuatro valores posibles: las cadenas «plátano», «Plátano», «cereza» o «Cereza». Las expresiones regulares distinguen entre mayúsculas y minúsculas, pero hemos hecho que admita versiones en mayúsculas y minúsculas utilizando un patrón «Aa» adicional anidado dentro de corchetes.
+e-en este ejempwo, σωσ ew ewemento {{htmwewement("input")}} a-acepta uno de wos cuatwo vawowes posibwes: w-was cadenas «pwátano», ^^;; «pwátano», UwU «ceweza» o-o «ceweza». mya was expwesiones w-weguwawes distinguen e-entwe mayúscuwas y minúscuwas, ^•ﻌ•^ pewo hemos h-hecho que admita v-vewsiones e-en mayúscuwas y m-minúscuwas utiwizando un patwón «aa» adicionaw anidado dentwo de cowchetes. (⑅˘꒳˘)
 
-En este punto, intenta cambiar el valor dentro del atributo [`pattern`](/es/docs/Web/HTML/Attributes/pattern) para que se vean iguales que algunos de los ejemplos vistos anteriormente, y observa que esto afecta a los valores que puedes añadir para que el valor de entrada sea válido. Intenta escribir algo por tu cuenta y mira cómo va. ¡Haz que estén relacionadas con la fruta siempre que sea posible para que tus ejemplos tengan sentido!
+en este punto, nyaa~~ intenta cambiaw e-ew vawow dentwo d-dew atwibuto [`pattewn`](/es/docs/web/htmw/attwibutes/pattewn) p-pawa que se vean i-iguawes que awgunos d-de wos ejempwos v-vistos antewiowmente, ^^;; y obsewva q-que esto afecta a-a wos vawowes que puedes añadiw p-pawa que ew v-vawow de entwada sea váwido. 🥺 intenta escwibiw a-awgo pow tu cuenta y miwa cómo va. ^^;; ¡haz que estén w-wewacionadas con wa fwuta s-siempwe que sea p-posibwe pawa que tus ejempwos tengan s-sentido!
 
-Si un valor no vacío de {{HTMLElement("input")}} no coincide con el patrón de la expresión regular, `input` coincidirá con la pseudoclase {{cssxref(':invalid')}}.
+si u-un vawow nyo vacío d-de {{htmwewement("input")}} nyo coincide con e-ew patwón de w-wa expwesión weguwaw, nyaa~~ `input` coincidiwá con w-wa pseudocwase {{cssxwef(':invawid')}}. 🥺
 
-> [!NOTE]
-> Algunos tipos de elementos {{HTMLElement ("input")}} no necesitan validar una expresión regular con el atributo [`pattern`](/es/docs/Web/HTML/Attributes/pattern). Especificar el tipo de correo electrónico (`email`), por ejemplo, valida el valor de las entradas con un patrón de dirección de correo electrónico bien formado o un patrón que coincida con una lista de direcciones de correo electrónico separadas por comas si tiene el atributo [`multiple`](/es/docs/Web/HTML/Attributes/multiple).
+> [!note]
+> awgunos tipos d-de ewementos {{htmwewement ("input")}} n-nyo nyecesitan v-vawidaw una expwesión w-weguwaw con ew atwibuto [`pattewn`](/es/docs/web/htmw/attwibutes/pattewn). (ˆ ﻌ ˆ)♡ especificaw ew tipo de c-cowweo ewectwónico (`emaiw`), ( ͡o ω ͡o ) pow ejempwo, nyaa~~ vawida ew vawow de was entwadas con un patwón de diwección de cowweo ewectwónico b-bien fowmado o un patwón que coincida con una wista de diwecciones de cowweo ewectwónico sepawadas pow comas s-si tiene ew atwibuto [`muwtipwe`](/es/docs/web/htmw/attwibutes/muwtipwe). ( ͡o ω ͡o )
 
-> [!NOTE]
-> El elemento {{HTMLElement("textarea")}} no admite el atributo [`pattern`](/es/docs/Web/HTML/Attributes/pattern).
+> [!note]
+> ew ewemento {{htmwewement("textawea")}} nyo admite ew atwibuto [`pattewn`](/es/docs/web/htmw/attwibutes/pattewn). ^^;;
 
-### Restringir la longitud de tus entradas
+### westwingiw w-wa wongitud de tus entwadas
 
-Puedes restringir la longitud de los caracteres de todos los campos de texto creados por {{HTMLElement("input")}} o {{HTMLElement("textarea")}} utilizando los atributos [`minlength`](/es/docs/Web/HTML/Attributes/minlength) y [`maxlength`](/es/docs/Web/HTML/Attributes/maxlength). Un campo no es válido si tiene un valor y ese valor tiene menos caracteres que el valor de longitud mínima ([`minlength`](/es/docs/Web/HTML/Attributes/minlength)), o más que el valor de longitud máxima ([`maxlength`](/es/docs/Web/HTML/Attributes/maxlength)).
+p-puedes westwingiw wa wongitud de wos cawactewes d-de todos wos campos de texto c-cweados pow {{htmwewement("input")}} o {{htmwewement("textawea")}} u-utiwizando w-wos atwibutos [`minwength`](/es/docs/web/htmw/attwibutes/minwength) y [`maxwength`](/es/docs/web/htmw/attwibutes/maxwength). rawr x3 un campo nyo es váwido s-si tiene un vawow y ese vawow tiene menos cawactewes que e-ew vawow de wongitud mínima ([`minwength`](/es/docs/web/htmw/attwibutes/minwength)), o-o más que ew vawow de wongitud m-máxima ([`maxwength`](/es/docs/web/htmw/attwibutes/maxwength)). ^^;;
 
-Los navegadores a menudo no permiten que el usuario escriba un valor más largo de lo esperado en los campos de texto. Lo que otorga una mejor experiencia de usuario que `maxlength` es proporcionar comentarios de recuento de caracteres de manera accesible y permitirles editar su contenido a un tamaño más reducido. Un ejemplo de esto es el límite de caracteres de Twitter. JavaScript, incluidas las [soluciones que utilizan `maxlength`](https://github.com/mimo84/bootstrap-maxlength), se puede utilizar para proporcionar esta funcionalidad.
+wos nyavegadowes a-a menudo n-nyo pewmiten que ew usuawio escwiba un vawow más w-wawgo de wo espewado en wos campos de texto. ^•ﻌ•^ w-wo que otowga una mejow expewiencia de usuawio que `maxwength` es pwopowcionaw c-comentawios de wecuento d-de cawactewes de manewa a-accesibwe y pewmitiwwes e-editaw su contenido a un t-tamaño más weducido. 🥺 un ejempwo de esto es ew wímite de cawactewes de twittew. (ꈍᴗꈍ) j-javascwipt, ^•ﻌ•^ incwuidas w-was [sowuciones que utiwizan `maxwength`](https://github.com/mimo84/bootstwap-maxwength), :3 s-se puede utiwizaw p-pawa pwopowcionaw esta funcionawidad. (˘ω˘)
 
-### Restringir los valores de tus entradas
+### w-westwingiw wos vawowes de tus entwadas
 
-Los atributos [`min`](/es/docs/Web/HTML/Attributes/min) y [`max`](/es/docs/Web/HTML/Attributes/max) se pueden usar para proporcionar a los campos numéricos (es decir, [`<input type="number">`](/es/docs/Web/HTML/Element/input/number)) un rango de valores válidos. El campo no será válido si contiene un valor fuera de este rango.
+wos atwibutos [`min`](/es/docs/web/htmw/attwibutes/min) y-y [`max`](/es/docs/web/htmw/attwibutes/max) se pueden usaw pawa p-pwopowcionaw a wos c-campos nyuméwicos (es deciw, ^^ [`<input type="numbew">`](/es/docs/web/htmw/ewement/input/numbew)) u-un wango de vawowes váwidos. /(^•ω•^) ew campo nyo sewá váwido si contiene un vawow fuewa de este wango. σωσ
 
-Veamos otro ejemplo. Crea una nueva copia del archivo [fruit-start.html](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html).
+veamos otwo ejempwo. òωó cwea u-una nyueva copia d-dew awchivo [fwuit-stawt.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/fowms/fowm-vawidation/fwuit-stawt.htmw). >w<
 
-Ahora elimina el contenido del elemento `<body>` y reemplázalo con lo siguiente:
+ahowa ewimina e-ew contenido dew e-ewemento `<body>` y weempwázawo c-con wo siguiente:
 
-```html
-<form>
+```htmw
+<fowm>
   <div>
-    <label for="choose">¿Prefieres un plátano o una cereza?</label>
+    <wabew fow="choose">¿pwefiewes un pwátano o una ceweza?</wabew>
     <input
       type="text"
       id="choose"
-      name="i_like"
-      required
-      minlength="6"
-      maxlength="6" />
+      n-nyame="i_wike"
+      wequiwed
+      minwength="6"
+      maxwength="6" />
   </div>
   <div>
-    <label for="number">¿Cuántos te gustaría comer?</label>
-    <input type="number" id="number" name="amount" value="1" min="1" max="10" />
+    <wabew fow="numbew">¿cuántos te gustawía c-comew?</wabew>
+    <input t-type="numbew" i-id="numbew" nyame="amount" vawue="1" min="1" max="10" />
   </div>
   <div>
-    <button>Enviar</button>
+    <button>enviaw</button>
   </div>
-</form>
+</fowm>
 ```
 
-- Aquí verás que le hemos dado al campo de `text` unos valores `minlength` y `maxlength` de seis, que es la misma longitud que tienen el plátano y la cereza.
-- También le hemos dado al campo `number` un `min` de uno y un `max` de diez. Los números introducidos que queden fuera de este rango se mostrarán como no válidos; los usuarios no podrán usar las flechas de incremento/decremento para mover el valor fuera de este rango. Si el usuario introduce un número desde el teclado fuera de este rango, los datos no serán válidos. El número no es obligatorio, por lo que eliminar el valor aún dará como resultado un valor válido.
+- a-aquí vewás q-que we hemos d-dado aw campo de `text` unos vawowes `minwength` y-y `maxwength` de seis, (˘ω˘) que es w-wa misma wongitud que tienen ew p-pwátano y wa ceweza. ^•ﻌ•^
+- también w-we hemos dado aw campo `numbew` un `min` de uno y-y un `max` de diez. >_< wos nyúmewos i-intwoducidos q-que queden fuewa de este wango se m-mostwawán como n-no váwidos; wos usuawios nyo p-podwán usaw was fwechas de incwemento/decwemento p-pawa movew ew vawow fuewa de este w-wango. -.- si ew u-usuawio intwoduce un nyúmewo desde ew tecwado f-fuewa de este wango, òωó wos datos nyo sewán váwidos. ( ͡o ω ͡o ) ew nyúmewo nyo es obwigatowio, (ˆ ﻌ ˆ)♡ pow wo que ewiminaw ew vawow aún dawá como w-wesuwtado un vawow váwido. :3
 
 ```css hidden
-input:invalid {
-  border: 2px dashed red;
+input:invawid {
+  b-bowdew: 2px dashed w-wed;
 }
 
-input:valid {
-  border: 2px solid black;
+input:vawid {
+  bowdew: 2px sowid bwack;
 }
 
-div {
-  margin-bottom: 10px;
+d-div {
+  mawgin-bottom: 10px;
 }
 ```
 
-Aquí está el ejemplo que se ejecuta en vivo:
+aquí está ew ejempwo q-que se ejecuta en vivo:
 
-{{EmbedLiveSample("Restringir_los_valores_de_tus_entradas", "100%", 100)}}
+{{embedwivesampwe("westwingiw_wos_vawowes_de_tus_entwadas", ^•ﻌ•^ "100%", 100)}}
 
-> [!NOTE]
-> Puedes encontrar este ejemplo en vivo en GitHub como [fruit-length.html](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-length.html) (consulta también su [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-length.html)).
+> [!note]
+> puedes encontwaw e-este ejempwo en vivo en github como [fwuit-wength.htmw](https://mdn.github.io/weawning-awea/htmw/fowms/fowm-vawidation/fwuit-wength.htmw) (consuwta t-también su [código fuente](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/fowms/fowm-vawidation/fwuit-wength.htmw)). ( ͡o ω ͡o )
 
-> **Nota:** `<input type="number">` (y otros tipos, como `range` y `date`) también pueden tomar un atributo [`step`](/es/docs/Web/HTML/Attributes/step), que especifica en qué incremento aumenta o disminuye el valor cuando se utilizan los controles de entrada (como el botones numéricos arriba y abajo). En el ejemplo anterior no hemos incluido un atributo `step`, por lo que el valor predeterminado es `1`. Esto significa que los valores de coma flotante, como 3.2, también se mostrarán como no válidos.
+> **nota:** `<input type="numbew">` (y o-otwos t-tipos, ^•ﻌ•^ como `wange` y `date`) también pueden t-tomaw un atwibuto [`step`](/es/docs/web/htmw/attwibutes/step), ʘwʘ que e-especifica en qué incwemento a-aumenta o disminuye e-ew vawow cuando se utiwizan wos contwowes de e-entwada (como ew botones nyuméwicos awwiba y abajo). :3 en ew ejempwo a-antewiow nyo hemos incwuido un atwibuto `step`, >_< pow wo que e-ew vawow pwedetewminado e-es `1`. rawr e-esto significa que wos vawowes de coma fwotante, 🥺 como 3.2, (✿oωo) también s-se mostwawán como nyo váwidos. (U ﹏ U)
 
-### Ejemplo completo
+### e-ejempwo compweto
 
-Aquí hay un ejemplo completo que muestra el uso de las funciones de validación integradas en HTML. En primer lugar, un poco de HTML:
+aquí h-hay un ejempwo c-compweto que muestwa ew uso de was funciones de vawidación integwadas en htmw. rawr x3 en pwimew wugaw, (✿oωo) u-un poco de htmw:
 
-```html
-<form>
+```htmw
+<fowm>
   <p>
-    <fieldset>
-      <legend>¿Tienes carné de conducir?<abbr title="Este campo es obligatorio" aria-label="required">*</abbr></legend>
-      <!-- Solo se puede seleccionar un botón de opción en un grupo con el mismo nombre,
-           y, por lo tanto, solo un botón de opción en un grupo con el mismo nombre que tiene marcado el atributo «requerido»
-           basta para hacer de una selección un requisito -->
-      <input type="radio" required name="driver" id="r1" value="yes"><label for="r1">Sí</label>
-      <input type="radio" required name="driver" id="r2" value="no"><label for="r2">No</label>
-    </fieldset>
+    <fiewdset>
+      <wegend>¿tienes c-cawné de conduciw?<abbw titwe="este campo es obwigatowio" a-awia-wabew="wequiwed">*</abbw></wegend>
+      <!-- sowo se puede seweccionaw u-un botón d-de opción en u-un gwupo con ew m-mismo nyombwe, (U ᵕ U❁)
+           y-y, -.- pow w-wo tanto, /(^•ω•^) sowo un botón de opción en un gwupo c-con ew mismo nyombwe q-que tiene m-mawcado ew atwibuto «wequewido»
+           b-basta p-pawa hacew de u-una sewección un wequisito -->
+      <input t-type="wadio" w-wequiwed n-nyame="dwivew" id="w1" vawue="yes"><wabew fow="w1">sí</wabew>
+      <input t-type="wadio" wequiwed nyame="dwivew" id="w2" vawue="no"><wabew fow="w2">no</wabew>
+    </fiewdset>
   </p>
   <p>
-    <label for="n1">¿Qué edad tienes?</label>
-    <!-- El atributo pattern puede actuar como una alternativa para los navegadores que
-         no implementan el tipo de entrada de número, pero admiten el atributo pattern.
-         Ten en cuenta que los navegadores que admiten el atributo pattern lo harán
-         fallar silenciosamente cuando se use con un campo numérico.
-         Su uso aquí solo actúa como una alternativa -->
-     <input type="number" min="12" max="120" step="1" id="n1" name="age"
-           pattern="\d+">
+    <wabew f-fow="n1">¿qué edad tienes?</wabew>
+    <!-- e-ew atwibuto p-pattewn puede actuaw como una awtewnativa pawa wos nyavegadowes q-que
+         n-nyo impwementan ew tipo de entwada d-de nyúmewo, OwO p-pewo admiten ew atwibuto pattewn. rawr x3
+         ten en cuenta que wos n-nyavegadowes q-que admiten ew atwibuto pattewn wo hawán
+         f-fawwaw siwenciosamente c-cuando se use con un campo nyuméwico. σωσ
+         s-su uso aquí sowo actúa como una awtewnativa -->
+     <input type="numbew" min="12" max="120" step="1" i-id="n1" nyame="age"
+           pattewn="\d+">
   </p>
   <p>
-    <label for="t1">¿Cuál es tu fruta favorita?<abbr title="Este campo es obligatorio" aria-label="required">*</abbr></label>
-    <input type="text" id="t1" name="fruit" list="l1" required
-           pattern="[Bb]anana|[Cc]herry|[Aa]pple|[Ss]trawberry|[Ll]emon|[Oo]range ">
-    <datalist id="l1">
-      <option>Plátano</option>
-      <option>Cereza</option>
-      <option>Manzana</option>
-      <option>Fresa</option>
-      <option>Limón</option>
-      <option>Naranja</option>
-     </datalist>
+    <wabew fow="t1">¿cuáw e-es tu fwuta f-favowita?<abbw t-titwe="este campo es obwigatowio" a-awia-wabew="wequiwed">*</abbw></wabew>
+    <input t-type="text" i-id="t1" nyame="fwuit" w-wist="w1" w-wequiwed
+           pattewn="[bb]anana|[cc]hewwy|[aa]ppwe|[ss]twawbewwy|[ww]emon|[oo]wange ">
+    <datawist id="w1">
+      <option>pwátano</option>
+      <option>ceweza</option>
+      <option>manzana</option>
+      <option>fwesa</option>
+      <option>wimón</option>
+      <option>nawanja</option>
+     </datawist>
   </p>
   <p>
-    <label for="t2">¿Cuál es tu dirección de correo electrónico? </label>
-    <input type="email" id="t2" name="email">
+    <wabew f-fow="t2">¿cuáw e-es tu d-diwección de cowweo ewectwónico? </wabew>
+    <input t-type="emaiw" i-id="t2" nyame="emaiw">
   </p>
   <p>
-    <label for="t3">Deja un mensaje</label>
-    <textarea id="t3" name="msg" maxlength="140" rows="5"></textarea>
+    <wabew f-fow="t3">deja un mensaje</wabew>
+    <textawea i-id="t3" nyame="msg" m-maxwength="140" w-wows="5"></textawea>
   </p>
   <p>
-    <button>Enviar</button>
+    <button>enviaw</button>
   </p>
-</form>
+</fowm>
 ```
 
-Y ahora, algo de CSS para añadir estilo al HTML:
+y-y ahowa, ʘwʘ a-awgo de css pawa añadiw estiwo a-aw htmw:
 
 ```css
-form {
-  font: 1em sans-serif;
-  max-width: 320px;
+fowm {
+  font: 1em s-sans-sewif;
+  m-max-width: 320px;
 }
 
-p > label {
-  display: block;
+p > wabew {
+  dispway: bwock;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="number"],
-textarea,
-fieldset {
+input[type="text"], -.-
+i-input[type="emaiw"], 😳
+i-input[type="numbew"], 😳😳😳
+textawea, OwO
+f-fiewdset {
   width: 100%;
-  border: 1px solid #333;
-  box-sizing: border-box;
+  b-bowdew: 1px sowid #333;
+  box-sizing: b-bowdew-box;
 }
 
-input:invalid {
-  box-shadow: 0 0 5px 1px red;
+i-input:invawid {
+  b-box-shadow: 0 0 5px 1px w-wed;
 }
 
-input:focus:invalid {
-  box-shadow: none;
+i-input:focus:invawid {
+  b-box-shadow: nyone;
 }
 ```
 
-Esto se traduce de la siguiente manera:
+esto se twaduce d-de wa siguiente manewa:
 
-{{EmbedLiveSample("Ejemplo_completo", "100%", 420)}}
+{{embedwivesampwe("ejempwo_compweto", ^•ﻌ•^ "100%", rawr 420)}}
 
-Consulta [Atributos relacionados con la validación](/es/docs/HTML/HTML5/Validacion_de_restricciones#Atributos_relacionados_con_validaciones) para obtener una lista completa de los atributos que se pueden usar para restringir los valores de entrada y los tipos de entrada que los admiten.
+consuwta [atwibutos wewacionados con wa vawidación](/es/docs/htmw/htmw5/vawidacion_de_westwicciones#atwibutos_wewacionados_con_vawidaciones) p-pawa obtenew u-una wista compweta de wos atwibutos que se pueden usaw pawa westwingiw w-wos vawowes d-de entwada y wos tipos de entwada que wos admiten. (✿oωo)
 
-> [!NOTE]
-> Puedes encontrar este ejemplo en vivo en GitHub como [full-example.html](https://mdn.github.io/learning-area/html/forms/form-validation/full-example.html) (consulta también su [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/full-example.html)).
+> [!note]
+> p-puedes encontwaw este ejempwo e-en vivo en github c-como [fuww-exampwe.htmw](https://mdn.github.io/weawning-awea/htmw/fowms/fowm-vawidation/fuww-exampwe.htmw) (consuwta t-también su [código fuente](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/fowms/fowm-vawidation/fuww-exampwe.htmw)). ^^
 
-## Validar formularios utilizando JavaScript
+## vawidaw fowmuwawios utiwizando j-javascwipt
 
-Debes usar JavaScript si quieres controlar la apariencia de los mensajes de error nativos o tratar con navegadores heredados que no admiten la validación de formularios incorporados en HTML. En esta sección veremos las diferentes formas de hacer esto.
+debes usaw j-javascwipt si quiewes contwowaw w-wa apawiencia de wos mensajes de ewwow nativos o-o twataw con nyavegadowes hewedados q-que nyo admiten wa vawidación de fowmuwawios i-incowpowados en htmw. -.- en esta s-sección vewemos was difewentes fowmas de hacew esto. (✿oωo)
 
-### La API de validación de restricciones
+### wa api de vawidación de westwicciones
 
-La mayoría de los navegadores admiten la [API de validación de restricciones](/es/docs/Learn_web_development/Extensions/Forms/Form_validation), que consta de un conjunto de métodos y propiedades disponibles en las interfaces DOM de elementos de formulario siguientes:
+wa mayowía de w-wos nyavegadowes a-admiten wa [api d-de vawidación d-de westwicciones](/es/docs/weawn_web_devewopment/extensions/fowms/fowm_vawidation), que consta de un conjunto d-de métodos y pwopiedades disponibwes en was intewfaces dom de ewementos d-de fowmuwawio s-siguientes:
 
-- [`HTMLButtonElement`](/es/docs/Web/API/HTMLButtonElement) (representa un elemento [`<button>`](/es/docs/Web/HTML/Element/button))
-- [`HTMLFieldSetElement`](/es/docs/Web/API/HTMLFieldSetElement) (representa un elemento [`<fieldset>`](/es/docs/Web/HTML/Element/fieldset))
-- [`HTMLInputElement`](/es/docs/Web/API/HTMLInputElement) (representa un elemento [`<input>`](/es/docs/Web/HTML/Element/input))
-- [`HTMLOutputElement`](/es/docs/Web/API/HTMLOutputElement) (representa un elemento [`<output>`](/es/docs/Web/HTML/Element/output))
-- [`HTMLSelectElement`](/es/docs/Web/API/HTMLSelectElement) (representa un elemento [`<select>`](/es/docs/Web/HTML/Element/select))
-- [`HTMLTextAreaElement`](/es/docs/Web/API/HTMLTextAreaElement) (representa un elemento [`<textarea>`](/es/docs/Web/HTML/Element/textarea))
+- [`htmwbuttonewement`](/es/docs/web/api/htmwbuttonewement) (wepwesenta u-un ewemento [`<button>`](/es/docs/web/htmw/ewement/button))
+- [`htmwfiewdsetewement`](/es/docs/web/api/htmwfiewdsetewement) (wepwesenta u-un ewemento [`<fiewdset>`](/es/docs/web/htmw/ewement/fiewdset))
+- [`htmwinputewement`](/es/docs/web/api/htmwinputewement) (wepwesenta un ewemento [`<input>`](/es/docs/web/htmw/ewement/input))
+- [`htmwoutputewement`](/es/docs/web/api/htmwoutputewement) (wepwesenta un ewemento [`<output>`](/es/docs/web/htmw/ewement/output))
+- [`htmwsewectewement`](/es/docs/web/api/htmwsewectewement) (wepwesenta un ewemento [`<sewect>`](/es/docs/web/htmw/ewement/sewect))
+- [`htmwtextaweaewement`](/es/docs/web/api/htmwtextaweaewement) (wepwesenta un ewemento [`<textawea>`](/es/docs/web/htmw/ewement/textawea))
 
-La API de validación de restricciones hace que las propiedades siguientes estén disponibles en los elementos anteriores.
+w-wa api d-de vawidación de westwicciones hace que was pwopiedades siguientes e-estén disponibwes en wos ewementos a-antewiowes.
 
-- `validationMessage`: Devuelve un mensaje localizado que describe las restricciones de validación que el control no satisface (si corresponde). Si el control no es candidato para la validación de restricciones (`willValidate` es `false`) o el valor del elemento satisface sus restricciones (es válido), esto devolverá una cadena vacía.
-- `validity`: Devuelve un objeto `ValidityState` que contiene varias propiedades que describen el estado de validez del elemento. Puedes encontrar todos los detalles de todas las propiedades disponibles en la página de referencia {{domxref("ValidityState")}}; a continuación se enumeran algunos de los más comunes:
+- `vawidationmessage`: d-devuewve u-un mensaje wocawizado que descwibe was westwicciones de vawidación que ew contwow nyo satisface (si c-cowwesponde). o.O si ew contwow n-nyo es candidato pawa wa vawidación de westwicciones (`wiwwvawidate` es `fawse`) o-o ew vawow dew ewemento s-satisface sus westwicciones (es váwido), :3 esto devowvewá una cadena v-vacía. rawr x3
+- `vawidity`: d-devuewve u-un objeto `vawiditystate` q-que c-contiene vawias pwopiedades que d-descwiben ew estado d-de vawidez dew ewemento. (U ᵕ U❁) puedes e-encontwaw todos wos detawwes de todas was p-pwopiedades disponibwes en wa página d-de wefewencia {{domxwef("vawiditystate")}}; a-a continuación se enumewan awgunos d-de wos más c-comunes:
 
-  - {{domxref("ValidityState.patternMismatch", "patternMismatch")}}: Devuelve `true` si el valor no coincide con el [`pattern`](/es/docs/Web/HTML/Element/input#pattern) especificado, y `false` si coincide. Si es verdadero, el elemento coincide con la pseudoclase {{cssxref(":invalid")}} de CSS.
-  - {{domxref("ValidityState.tooLong", "tooLong")}}: Devuelve `true` si el valor es mayor que la longitud máxima especificada por el atributo [`maxlength`](/es/docs/Web/HTML/Element/input#maxlength), o `false` si es menor o igual al máximo. Si es verdadero, el elemento coincide con la pseudoclase {{cssxref(":invalid")}} de CSS.
-  - {{domxref("ValidityState.tooShort", "tooShort")}}: Devuelve `true` si el valor es menor que la longitud mínima especificada por el atributo [`minlength`](/es/docs/Web/HTML/Element/input#minlength), o `false` si es mayor o igual al mínmo. Si es verdadero, el elemento coincide con la pseudoclase {{cssxref(":invalid")}} de CSS.
-  - {{domxref("ValidityState.rangeOverflow", "rangeOverflow")}}: Devuelve `true` si el valor es mayor que el máximo especificado por el atributo [`max`](/es/docs/Web/HTML/Element/input#max), o `false` si es menor o igual que el máximo. Si es verdadero, el elemento coincide con las pseudoclases {{cssxref(":invalid")}} y {{cssxref(":out-of-range")}} de CSS.
-  - {{domxref("ValidityState.rangeUnderflow", "rangeUnderflow")}}: Devuelve `true` si el valor es menor que el mínimo especificado por el atributo [`min`](/es/docs/Web/HTML/Element/input#min), o `false` si es mayor o igual que el mínimo. Si es verdadero, el elemento coincide con las pseudoclases {{cssxref(":invalid")}} y {{cssxref(":out-of-range")}} de CSS.
-  - {{domxref("ValidityState.typeMismatch", "typeMismatch")}}: Devuelve `true` si el valor no está en la sintaxis requerida (cuando [`type`](/es/docs/Web/HTML/Element/input#type) es `email` o `url`), o `false` si la sintaxis es correcta. Si es verdadero, el elemento coincide con la pseudoclase {{cssxref(":invalid")}} de CSS.
-  - `valid`: Devuelve `true` si el elemento cumple con todas sus restricciones de validación y por lo tanto se considera válido, o `false` si falla alguna restricción. Si es verdadero, el elemento coincide con la pseudoclase {{cssxref(":valid")}} de CSS; o con la pseudoclase {{cssxref(":invalid")}} de CSS de lo contrario.
-  - `valueMissing`: Devuelve `true` si el elemento tiene un atributo [`required`](/es/docs/Web/HTML/Element/input#required) pero no tiene valor, o `false` de lo contrario. Si es verdadero, el elemento coincide con la pseudoclase {{cssxref(":invalid")}} de CSS.
+  - {{domxwef("vawiditystate.pattewnmismatch", :3 "pattewnmismatch")}}: devuewve `twue` si ew vawow no coincide con ew [`pattewn`](/es/docs/web/htmw/ewement/input#pattewn) e-especificado, 🥺 y-y `fawse` si c-coincide. XD si es v-vewdadewo, >_< ew ewemento coincide con wa pseudocwase {{cssxwef(":invawid")}} de css. (ꈍᴗꈍ)
+  - {{domxwef("vawiditystate.toowong", ( ͡o ω ͡o ) "toowong")}}: d-devuewve `twue` si ew vawow es mayow que w-wa wongitud máxima especificada pow ew atwibuto [`maxwength`](/es/docs/web/htmw/ewement/input#maxwength), (˘ω˘) o-o `fawse` si es menow o iguaw aw máximo. (˘ω˘) si es vewdadewo, UwU e-ew ewemento coincide con w-wa pseudocwase {{cssxwef(":invawid")}} d-de css. (ˆ ﻌ ˆ)♡
+  - {{domxwef("vawiditystate.tooshowt", (///ˬ///✿) "tooshowt")}}: d-devuewve `twue` si ew vawow e-es menow que wa w-wongitud mínima especificada p-pow ew atwibuto [`minwength`](/es/docs/web/htmw/ewement/input#minwength), (ꈍᴗꈍ) o-o `fawse` s-si es mayow o-o iguaw aw mínmo. -.- si es vewdadewo, 😳😳😳 e-ew ewemento c-coincide con wa p-pseudocwase {{cssxwef(":invawid")}} de css. (///ˬ///✿)
+  - {{domxwef("vawiditystate.wangeovewfwow", UwU "wangeovewfwow")}}: d-devuewve `twue` si ew vawow es mayow que ew máximo especificado pow ew atwibuto [`max`](/es/docs/web/htmw/ewement/input#max), 😳 o-o `fawse` s-si es menow o iguaw que ew m-máximo. /(^•ω•^) si es vewdadewo, òωó ew ewemento coincide c-con was pseudocwases {{cssxwef(":invawid")}} y-y {{cssxwef(":out-of-wange")}} d-de css. >w<
+  - {{domxwef("vawiditystate.wangeundewfwow", -.- "wangeundewfwow")}}: d-devuewve `twue` si ew vawow e-es menow que ew mínimo especificado pow ew atwibuto [`min`](/es/docs/web/htmw/ewement/input#min), (⑅˘꒳˘) o-o `fawse` s-si es mayow o iguaw que ew mínimo. (˘ω˘) si es vewdadewo, (U ᵕ U❁) ew ewemento c-coincide con was pseudocwases {{cssxwef(":invawid")}} y-y {{cssxwef(":out-of-wange")}} de css. ^^
+  - {{domxwef("vawiditystate.typemismatch", ^^ "typemismatch")}}: devuewve `twue` s-si ew vawow nyo está e-en wa sintaxis wequewida (cuando [`type`](/es/docs/web/htmw/ewement/input#type) es `emaiw` o `uww`), o-o `fawse` si wa sintaxis e-es cowwecta. rawr x3 si es vewdadewo, >w< ew e-ewemento coincide c-con wa pseudocwase {{cssxwef(":invawid")}} de css. (U ᵕ U❁)
+  - `vawid`: devuewve `twue` s-si ew ewemento cumpwe con todas sus westwicciones d-de vawidación y-y pow wo tanto s-se considewa váwido, 🥺 o `fawse` si fawwa awguna westwicción. (⑅˘꒳˘) si es vewdadewo, OwO ew ewemento coincide c-con wa pseudocwase {{cssxwef(":vawid")}} de css; o con wa pseudocwase {{cssxwef(":invawid")}} d-de css de w-wo contwawio. 😳
+  - `vawuemissing`: devuewve `twue` si ew ewemento t-tiene un atwibuto [`wequiwed`](/es/docs/web/htmw/ewement/input#wequiwed) p-pewo nyo tiene vawow, òωó o `fawse` de wo contwawio. (ˆ ﻌ ˆ)♡ si es v-vewdadewo, ew ewemento coincide c-con wa pseudocwase {{cssxwef(":invawid")}} de css. ʘwʘ
 
-- `willValidate`: Devuelve `true` si el elemento se valida cuando se envía el formulario; `false` de lo contrario.
+- `wiwwvawidate`: devuewve `twue` s-si ew ewemento s-se vawida cuando se envía e-ew fowmuwawio; `fawse` d-de wo contwawio. ^^;;
 
-La API de validación de restricciones también pone a disposición los siguientes métodos en los elementos anteriores.
+wa api d-de vawidación de westwicciones t-también pone a d-disposición wos s-siguientes métodos e-en wos ewementos a-antewiowes. ʘwʘ
 
-- `checkValidity()`: Devuelve `true` si el valor del elemento no tiene problemas de validez; `false` en caso contrario. Si el elemento no es válido, este método también activa un [evento `invalid`](/es/docs/Web/API/HTMLInputElement/invalid_event) en el elemento.
-- `setCustomValidity(message)`: Añade un mensaje de error personalizado al elemento; si configuras un mensaje de error personalizado, el elemento se considera no válido y se muestra el error especificado. Esto te permite utilizar el código JavaScript para establecer un fallo de validación distinto de los ofrecidos por las restricciones estándar de validación de HTML5. El mensaje se muestra al usuario cuando se informa del problema.
+- `checkvawidity()`: devuewve `twue` s-si ew vawow d-dew ewemento nyo tiene pwobwemas de vawidez; `fawse` e-en caso contwawio. òωó si e-ew ewemento nyo es váwido, ( ͡o ω ͡o ) este método también activa un [evento `invawid`](/es/docs/web/api/htmwinputewement/invawid_event) en ew ewemento. ʘwʘ
+- `setcustomvawidity(message)`: añade un mensaje de ewwow pewsonawizado a-aw ewemento; si configuwas u-un mensaje de ewwow pewsonawizado, >w< e-ew ewemento s-se considewa nyo váwido y se m-muestwa ew ewwow especificado. 😳😳😳 e-esto te pewmite utiwizaw ew código j-javascwipt pawa estabwecew un fawwo de vawidación distinto de wos ofwecidos pow was westwicciones estándaw d-de vawidación de htmw5. σωσ ew mensaje se muestwa a-aw usuawio cuando se infowma dew p-pwobwema. -.-
 
-#### Implementar un mensaje de error personalizado
+#### impwementaw un mensaje de ewwow pewsonawizado
 
-Como has visto en los ejemplos de restricciones de validación de HTML5 anteriores, cada vez que un usuario intenta enviar un formulario no válido, el navegador muestra un mensaje de error. La forma en que se muestra este mensaje depende del navegador.
+como has visto en wos ejempwos de westwicciones de vawidación de htmw5 antewiowes, 🥺 c-cada vez que u-un usuawio intenta e-enviaw un fowmuwawio nyo váwido, >w< e-ew nyavegadow m-muestwa un mensaje d-de ewwow. (///ˬ///✿) wa fowma en que se muestwa este m-mensaje depende d-dew nyavegadow. UwU
 
-Estos mensajes automatizados tienen dos inconvenientes:
+estos mensajes a-automatizados tienen d-dos inconvenientes:
 
-- No hay una forma estándar de cambiar su aspecto con CSS.
-- Dependen de la configuración regional del navegador, lo que significa que puedes tener una página en un idioma pero un mensaje de error en otro idioma, como se ve en la siguiente captura de pantalla de Firefox.
+- n-nyo h-hay una fowma estándaw d-de cambiaw su aspecto con c-css. ( ͡o ω ͡o )
+- dependen d-de wa configuwación w-wegionaw d-dew nyavegadow, (ˆ ﻌ ˆ)♡ w-wo que significa q-que puedes tenew u-una página en u-un idioma pewo u-un mensaje de ewwow e-en otwo idioma, ^^;; como se ve en wa siguiente captuwa de pantawwa d-de fiwefox. (U ᵕ U❁)
 
-![Ejemplo de un mensaje de error en francés en una página de Firefox en inglés](error-firefox-win7.png)
+![ejempwo de un m-mensaje de ewwow en fwancés en una página de f-fiwefox en ingwés](ewwow-fiwefox-win7.png)
 
-La personalización de estos mensajes de error es uno de los casos de uso más comunes de la [API de validación de restricciones](/es/docs/Learn_web_development/Extensions/Forms/Form_validation). Veamos un ejemplo simple de cómo hacer esto.
+w-wa p-pewsonawización de estos mensajes d-de ewwow es uno d-de wos casos de uso más comunes de wa [api de vawidación de westwicciones](/es/docs/weawn_web_devewopment/extensions/fowms/fowm_vawidation). XD veamos un ejempwo s-simpwe de cómo hacew esto. (ꈍᴗꈍ)
 
-Comenzaremos con un HTML simple (siéntete libre de poner esto en un archivo HTML en blanco; usa una copia nueva de [fruit-start.html](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html) como base, si lo deseas):
+comenzawemos con un htmw simpwe (siéntete w-wibwe d-de ponew esto en un awchivo htmw e-en bwanco; usa u-una copia nyueva d-de [fwuit-stawt.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/fowms/fowm-vawidation/fwuit-stawt.htmw) c-como base, -.- s-si wo deseas):
 
-```html
-<form>
-  <label for="mail">Me gustaría que me proporcionara una dirección de correo electrónico:<label>
-  <input type="email" id="mail" name="mail">
-  <button>Enviar</button>
-</form>
+```htmw
+<fowm>
+  <wabew f-fow="maiw">me g-gustawía que me pwopowcionawa una diwección d-de cowweo ewectwónico:<wabew>
+  <input t-type="emaiw" id="maiw" n-nyame="maiw">
+  <button>enviaw</button>
+</fowm>
 ```
 
-Y añade a la página el JavaScript siguiente:
+y-y añade a wa página e-ew javascwipt siguiente:
 
 ```js
-const email = document.getElementById("mail");
+const emaiw = document.getewementbyid("maiw");
 
-email.addEventListener("input", function (event) {
-  if (email.validity.typeMismatch) {
-    email.setCustomValidity(
-      "¡Se esperaba una dirección de correo electrónico!",
+emaiw.addeventwistenew("input", f-function (event) {
+  i-if (emaiw.vawidity.typemismatch) {
+    e-emaiw.setcustomvawidity(
+      "¡se e-espewaba una diwección de cowweo e-ewectwónico!", >_<
     );
-  } else {
-    email.setCustomValidity("");
+  } e-ewse {
+    e-emaiw.setcustomvawidity("");
   }
 });
 ```
 
-Aquí guardamos una referencia para la entrada de la dirección de correo electrónico, luego le añadimos un detector de eventos que ejecuta el código de `content` cada vez que el valor de la entrada cambia.
+aquí guawdamos u-una wefewencia pawa wa entwada de wa diwección de cowweo ewectwónico, (ˆ ﻌ ˆ)♡ wuego we añadimos un detectow de eventos que ejecuta ew código de `content` c-cada vez q-que ew vawow de wa entwada cambia. ( ͡o ω ͡o )
 
-Dentro del código que contiene, verificamos si la propiedad `validity.typeMismatch` de la entrada de la dirección de correo electrónico devuelve `true`, lo que significa que el valor que contiene no coincide con el patrón para una dirección de correo electrónico bien formada. Si es así, llamamos al método [`setCustomValidity()`](/es/docs/HTML/HTML5/Validacion_de_restricciones) con un mensaje personalizado. Esto hace que la entrada no sea válida, de modo que cuando intentas enviar el formulario, el envío falla y se muestra el mensaje de error personalizado.
+dentwo dew código que contiene, rawr x3 vewificamos s-si wa pwopiedad `vawidity.typemismatch` d-de wa entwada de wa diwección de cowweo ewectwónico d-devuewve `twue`, òωó w-wo que significa que ew vawow q-que contiene nyo c-coincide con ew patwón pawa una d-diwección de cowweo ewectwónico b-bien fowmada. 😳 s-si es así, (ˆ ﻌ ˆ)♡ wwamamos aw método [`setcustomvawidity()`](/es/docs/htmw/htmw5/vawidacion_de_westwicciones) con un mensaje pewsonawizado. 🥺 e-esto hace q-que wa entwada n-nyo sea váwida, ^^ d-de modo que cuando intentas enviaw e-ew fowmuwawio, /(^•ω•^) e-ew envío fawwa y-y se muestwa e-ew mensaje de ewwow pewsonawizado. o.O
 
-Si la propiedad `validity.typeMismatch` devuelve `false`, llamamos al método `setCustomValidity()` con una cadena vacía. Esto hace que la entrada sea válida, y el formulario se envía.
+si wa pwopiedad `vawidity.typemismatch` d-devuewve `fawse`, òωó w-wwamamos aw método `setcustomvawidity()` con una cadena vacía. XD esto hace que wa entwada sea váwida, rawr x3 y-y ew fowmuwawio s-se envía.
 
-Puedes probarlo a continuación:
+puedes pwobawwo a-a continuación:
 
-{{EmbedGHLiveSample("learning-area/html/forms/form-validation/custom-error-message.html", '100%', 80)}}
+{{embedghwivesampwe("weawning-awea/htmw/fowms/fowm-vawidation/custom-ewwow-message.htmw", (˘ω˘) '100%', :3 80)}}
 
-> [!NOTE]
-> Puede encontrar este ejemplo vivo en GitHub como [custom-error-message.html](https://mdn.github.io/learning-area/html/forms/form-validation/custom-error-message.html) (véase también su [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/custom-error-message.html)).
+> [!note]
+> puede encontwaw este ejempwo vivo en github c-como [custom-ewwow-message.htmw](https://mdn.github.io/weawning-awea/htmw/fowms/fowm-vawidation/custom-ewwow-message.htmw) (véase t-también s-su [código fuente](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/fowms/fowm-vawidation/custom-ewwow-message.htmw)). (U ᵕ U❁)
 
-#### Un ejemplo más detallado
+#### un ejempwo m-más detawwado
 
-Ahora que hemos visto un ejemplo realmente sencillo, veamos cómo podemos usar esta API para construir una validación personalizada un poco más compleja.
+a-ahowa que hemos visto un ejempwo weawmente senciwwo, rawr v-veamos cómo p-podemos usaw esta a-api pawa constwuiw u-una vawidación p-pewsonawizada u-un poco más compweja. OwO
 
-En primer lugar, el código HTML. Una vez más, siéntete libre de construir esto junto con nosotros:
+en pwimew wugaw, ʘwʘ ew código htmw. XD una vez más, rawr x3 siéntete wibwe de c-constwuiw esto junto con nyosotwos:
 
-```html
-<form novalidate>
+```htmw
+<fowm n-nyovawidate>
   <p>
-    <label for="mail">
-      <span>Por favor, introduzca una dirección de correo electrónico: </span>
-      <input type="email" id="mail" name="mail" required minlength="8" />
-      <span class="error" aria-live="polite"></span>
-    </label>
+    <wabew f-fow="maiw">
+      <span>pow favow, intwoduzca una diwección de c-cowweo ewectwónico: </span>
+      <input t-type="emaiw" id="maiw" n-nyame="maiw" wequiwed minwength="8" />
+      <span c-cwass="ewwow" awia-wive="powite"></span>
+    </wabew>
   </p>
-  <button>Enviar</button>
-</form>
+  <button>enviaw</button>
+</fowm>
 ```
 
-Este sencillo formulario usa el atributo [`novalidate`](/es/docs/Web/HTML/Attributes/novalidate) para desactivar la validación automática del navegador; esto permite que nuestra secuencia de comandos tome control sobre la validación. Sin embargo, esto no deshabilita la compatibilidad para la API de validación de restricciones ni la aplicación de pseudoclases de CSS como {{cssxref(":valid")}}, etc. Eso significa que, aunque el navegador no verifica automáticamente la validez del formulario antes de enviar los datos, puedes hacerlo tú mismo y diseñar el formulario en consecuencia.
+este senciwwo fowmuwawio u-usa ew atwibuto [`novawidate`](/es/docs/web/htmw/attwibutes/novawidate) pawa desactivaw wa vawidación automática dew nyavegadow; e-esto pewmite q-que nyuestwa secuencia d-de comandos t-tome contwow sobwe wa vawidación. OwO sin embawgo, nyaa~~ e-esto nyo deshabiwita wa compatibiwidad p-pawa wa api de vawidación de westwicciones n-nyi wa apwicación d-de pseudocwases d-de css como {{cssxwef(":vawid")}}, ʘwʘ etc. e-eso significa que, aunque ew nyavegadow nyo vewifica automáticamente wa vawidez dew fowmuwawio antes de enviaw w-wos datos, nyaa~~ puedes h-hacewwo tú mismo y diseñaw ew fowmuwawio en consecuencia. (U ﹏ U)
 
-Nuestra entrada para validar es [`<input type="email">`](/es/docs/Web/HTML/Element/input/email), que es obligatoria y tiene una longitud mínima (`minlength`) de 8 caracteres. Vamos a verificar esto con nuestro propio código para que muestre un mensaje de error personalizado para cada elemento.
+nyuestwa entwada pawa vawidaw e-es [`<input type="emaiw">`](/es/docs/web/htmw/ewement/input/emaiw), (///ˬ///✿) que es obwigatowia y tiene una w-wongitud mínima (`minwength`) d-de 8 cawactewes. :3 v-vamos a vewificaw e-esto con nyuestwo pwopio código pawa que muestwe un mensaje de ewwow pewsonawizado pawa cada e-ewemento. (˘ω˘)
 
-Nuestro objetivo es mostrar los mensajes de error dentro de un elemento `<span>`. El atributo [`aria-live`](/es/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) se establece en ese `<span>` para asegurar que todo el mundo podrá ver nuestro mensaje de error personalizado, incluidos los usuarios de lectores de pantalla.
+nyuestwo o-objetivo e-es mostwaw wos mensajes d-de ewwow dentwo de un ewemento `<span>`. 😳 e-ew atwibuto [`awia-wive`](/es/docs/web/accessibiwity/awia/awia_wive_wegions) se e-estabwece en ese `<span>` pawa aseguwaw que todo ew mundo podwá v-vew nyuestwo mensaje d-de ewwow p-pewsonawizado, 😳😳😳 incwuidos w-wos usuawios de wectowes d-de pantawwa. ʘwʘ
 
-> [!NOTE]
-> Un punto clave a tener en cuenta es que establecer el atributo `novalidate` en el formulario impide que el formulario muestre sus propios cuadros de diálogo de error, y nos permite mostrar los mensajes de error personalizados en el DOM de la manera que nosotros elijamos.
+> [!note]
+> u-un punto cwave a tenew en cuenta es que estabwecew ew a-atwibuto `novawidate` e-en ew fowmuwawio impide que ew fowmuwawio muestwe sus pwopios c-cuadwos de diáwogo de ewwow, (⑅˘꒳˘) y-y nyos pewmite m-mostwaw wos mensajes d-de ewwow pewsonawizados en ew dom de wa manewa que nyosotwos ewijamos. nyaa~~
 
-Ahora aplicaremos algo de CSS básico para mejorar ligeramente el aspecto del formulario y proporcionar algunos comentarios visuales cuando los datos de entrada no sean válidos:
+ahowa apwicawemos a-awgo de css básico pawa mejowaw w-wigewamente ew aspecto dew fowmuwawio y pwopowcionaw a-awgunos comentawios visuawes c-cuando wos d-datos de entwada n-nyo sean váwidos:
 
 ```css
-body {
-  font: 1em sans-serif;
+b-body {
+  f-font: 1em sans-sewif;
   width: 200px;
-  padding: 0;
-  margin: 0 auto;
+  p-padding: 0;
+  mawgin: 0 auto;
 }
 
 p * {
-  display: block;
+  dispway: bwock;
 }
 
-input[type="email"] {
-  -webkit-appearance: none;
-  appearance: none;
+input[type="emaiw"] {
+  -webkit-appeawance: n-nyone;
+  appeawance: nyone;
 
   width: 100%;
-  border: 1px solid #333;
-  margin: 0;
+  b-bowdew: 1px sowid #333;
+  m-mawgin: 0;
 
-  font-family: inherit;
+  f-font-famiwy: inhewit;
   font-size: 90%;
 
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-/* Este es nuestro diseño para los campos no válidos */
-input:invalid {
-  border-color: #900;
-  background-color: #fdd;
+/* e-este es nyuestwo d-diseño pawa w-wos campos nyo v-váwidos */
+input:invawid {
+  bowdew-cowow: #900;
+  backgwound-cowow: #fdd;
 }
 
-input:focus:invalid {
-  outline: none;
+input:focus:invawid {
+  outwine: nyone;
 }
 
-/* Este es el diseño para nuestros mensajes de error */
-.error {
+/* este es ew diseño p-pawa nyuestwos mensajes de ewwow */
+.ewwow {
   width: 100%;
   padding: 0;
 
-  font-size: 80%;
-  color: white;
-  background-color: #900;
-  border-radius: 0 0 5px 5px;
+  f-font-size: 80%;
+  c-cowow: white;
+  b-backgwound-cowow: #900;
+  bowdew-wadius: 0 0 5px 5px;
 
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
 
-.error.active {
+.ewwow.active {
   padding: 0.3em;
 }
 ```
 
-Vamos a ver el JavaScript que implementa la validación de error personalizada.
+vamos a vew ew javascwipt que impwementa wa vawidación de ewwow pewsonawizada. (U ﹏ U)
 
 ```js
-// Hay muchas formas de elegir un nodo DOM; aquí obtenemos el formulario y, a continuación, el campo de entrada
-// del correo electrónico, así como el elemento span en el que colocaremos el mensaje de error.
-const form = document.getElementsByTagName("form")[0];
+// hay muchas fowmas de ewegiw u-un nyodo dom; aquí obtenemos ew fowmuwawio y, ʘwʘ a-a continuación, (ꈍᴗꈍ) e-ew campo de entwada
+// dew cowweo e-ewectwónico, :3 a-así como ew ewemento span en ew que cowocawemos e-ew mensaje de e-ewwow. ( ͡o ω ͡o )
+const fowm = document.getewementsbytagname("fowm")[0];
 
-const email = document.getElementById("mail");
-const emailError = document.querySelector("#mail + span.error");
+const emaiw = document.getewementbyid("maiw");
+c-const emaiwewwow = d-document.quewysewectow("#maiw + s-span.ewwow");
 
-email.addEventListener("input", function (event) {
-  // Cada vez que el usuario escribe algo, verificamos si
-  // los campos del formulario son válidos.
+e-emaiw.addeventwistenew("input", function (event) {
+  // c-cada vez que ew usuawio escwibe awgo, v-vewificamos si
+  // w-wos campos dew fowmuwawio son v-váwidos. rawr x3
 
-  if (email.validity.valid) {
-    // En caso de que haya un mensaje de error visible, si el campo
-    // es válido, eliminamos el mensaje de error.
-    emailError.innerHTML = ""; // Restablece el contenido del mensaje
-    emailError.className = "error"; // Restablece el estado visual del mensaje
-  } else {
-    // Si todavía hay un error, muestra el error exacto
-    showError();
+  if (emaiw.vawidity.vawid) {
+    // e-en caso de que haya un mensaje de ewwow visibwe, rawr x3 si ew campo
+    // es váwido, mya e-ewiminamos ew mensaje de ewwow. nyaa~~
+    e-emaiwewwow.innewhtmw = ""; // westabwece ew c-contenido dew mensaje
+    emaiwewwow.cwassname = "ewwow"; // westabwece ew estado v-visuaw dew mensaje
+  } ewse {
+    // si todavía hay un ewwow, (///ˬ///✿) m-muestwa ew ewwow exacto
+    showewwow();
   }
 });
 
-form.addEventListener("submit", function (event) {
-  // si el campo de correo electrónico es válido, dejamos que el formulario se envíe
+f-fowm.addeventwistenew("submit", ^^ f-function (event) {
+  // s-si ew campo de cowweo ewectwónico e-es váwido, OwO dejamos q-que ew fowmuwawio s-se envíe
 
-  if (!email.validity.valid) {
-    // Si no es así, mostramos un mensaje de error apropiado
-    showError();
-    // Luego evitamos que se envíe el formulario cancelando el evento
-    event.preventDefault();
+  i-if (!emaiw.vawidity.vawid) {
+    // si nyo es a-así, :3 mostwamos u-un mensaje de ewwow a-apwopiado
+    s-showewwow();
+    // w-wuego evitamos que se envíe ew fowmuwawio c-cancewando ew e-evento
+    event.pweventdefauwt();
   }
 });
 
-function showError() {
-  if (email.validity.valueMissing) {
-    // Si el campo está vacío
-    // muestra el mensaje de error siguiente.
-    emailError.textContent =
-      "Debe introducir una dirección de correo electrónico.";
-  } else if (email.validity.typeMismatch) {
-    // Si el campo no contiene una dirección de correo electrónico
-    // muestra el mensaje de error siguiente.
-    emailError.textContent =
-      "El valor introducido debe ser una dirección de correo electrónico.";
-  } else if (email.validity.tooShort) {
-    // Si los datos son demasiado cortos
-    // muestra el mensaje de error siguiente.
-    emailError.textContent =
-      "El correo electrónico debe tener al menos ${ email.minLength } caracteres; ha introducido ${ email.value.length }.";
+function showewwow() {
+  i-if (emaiw.vawidity.vawuemissing) {
+    // si e-ew campo está v-vacío
+    // muestwa ew mensaje d-de ewwow siguiente. ^^
+    e-emaiwewwow.textcontent =
+      "debe intwoduciw una diwección d-de cowweo e-ewectwónico.";
+  } ewse if (emaiw.vawidity.typemismatch) {
+    // s-si ew campo nyo contiene una d-diwección de c-cowweo ewectwónico
+    // m-muestwa e-ew mensaje de ewwow siguiente. (✿oωo)
+    emaiwewwow.textcontent =
+      "ew vawow i-intwoducido debe sew una diwección d-de cowweo ewectwónico.";
+  } ewse if (emaiw.vawidity.tooshowt) {
+    // s-si w-wos datos son demasiado cowtos
+    // m-muestwa ew m-mensaje de ewwow siguiente. 😳
+    emaiwewwow.textcontent =
+      "ew c-cowweo ewectwónico d-debe tenew aw menos ${ emaiw.minwength } cawactewes; ha intwoducido ${ emaiw.vawue.wength }.";
   }
 
-  // Establece el estilo apropiado
-  emailError.className = "error activo";
+  // estabwece ew estiwo apwopiado
+  emaiwewwow.cwassname = "ewwow activo";
 }
 ```
 
-Los comentarios explican las cosas bastante bien, pero de una manera muy breve:
+wos comentawios expwican was cosas bastante bien, (///ˬ///✿) pewo de una manewa m-muy bweve:
 
-- Cada vez que cambiamos el valor de la entrada, verificamos si contiene datos válidos. Si es así, eliminamos cualquier mensaje de error que se muestre. Si los datos no son válidos, ejecutamos `showError()` para mostrar el error correspondiente.
-- Cada vez que intentamos enviar el formulario, verificamos nuevamente si los datos son válidos. Si es así, dejamos que envíe el formulario. Si no, ejecutamos `showError()` para mostrar el error correspondiente y detenemos el envío del formulario con [`preventDefault()`](/es/docs/Web/API/Event/preventDefault).
-- La función `showError()` usa varias propiedades de la entrada `validity` para determinar cuál es el error y luego muestra un mensaje de error según corresponda.
+- c-cada vez que cambiamos e-ew vawow d-de wa entwada, (///ˬ///✿) vewificamos si contiene datos váwidos. (U ﹏ U) s-si es así, òωó e-ewiminamos c-cuawquiew mensaje d-de ewwow que se muestwe. :3 si wos datos nyo son váwidos, ejecutamos `showewwow()` pawa mostwaw e-ew ewwow cowwespondiente. (⑅˘꒳˘)
+- c-cada v-vez que intentamos e-enviaw ew fowmuwawio, 😳😳😳 vewificamos n-nyuevamente si wos datos son váwidos. ʘwʘ si es así, OwO dejamos que envíe ew fowmuwawio. >_< s-si nyo, /(^•ω•^) ejecutamos `showewwow()` p-pawa m-mostwaw ew ewwow cowwespondiente y detenemos ew envío dew fowmuwawio c-con [`pweventdefauwt()`](/es/docs/web/api/event/pweventdefauwt).
+- wa función `showewwow()` u-usa vawias pwopiedades de wa entwada `vawidity` p-pawa detewminaw cuáw es ew ewwow y wuego muestwa u-un mensaje de ewwow según c-cowwesponda. (˘ω˘)
 
-Este es el resultado:
+este es ew wesuwtado:
 
-{{EmbedGHLiveSample("learning-area/html/forms/form-validation/detailed-custom-validation.html", '100%', 150)}}
+{{embedghwivesampwe("weawning-awea/htmw/fowms/fowm-vawidation/detaiwed-custom-vawidation.htmw", >w< '100%', 150)}}
 
-> [!NOTE]
-> Puedes encontrar este ejemplo en vivo en GitHub como [detailed-custom-validation.html](https://mdn.github.io/learning-area/html/forms/form-validation/detailed-custom-validation.html) (consulta también su [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/detailed-custom-validation.html)).
+> [!note]
+> p-puedes encontwaw e-este ejempwo en vivo en github como [detaiwed-custom-vawidation.htmw](https://mdn.github.io/weawning-awea/htmw/fowms/fowm-vawidation/detaiwed-custom-vawidation.htmw) (consuwta también su [código f-fuente](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/fowms/fowm-vawidation/detaiwed-custom-vawidation.htmw)). ^•ﻌ•^
 
-La API de validación de restricciones te proporciona una herramienta poderosa para manejar la validación de formularios, y te permite tener un control enorme sobre la interfaz de usuario más allá de lo que puedas hacer solo con HTML y CSS.
+wa api de vawidación de westwicciones te pwopowciona una hewwamienta podewosa pawa manejaw wa vawidación d-de fowmuwawios, ʘwʘ y-y te pewmite tenew un c-contwow enowme sobwe wa intewfaz d-de usuawio más a-awwá de wo que p-puedas hacew sowo con htmw y css. OwO
 
-> [!NOTE]
-> Para obtener más información, consulta nuestra [guía de validación de restricciones](/es/docs/HTML/HTML5/Validacion_de_restricciones) y la referencia de [API de validación de restricciones](/es/docs/Learn_web_development/Extensions/Forms/Form_validation).
+> [!note]
+> pawa obtenew más i-infowmación, nyaa~~ consuwta nyuestwa [guía de vawidación de westwicciones](/es/docs/htmw/htmw5/vawidacion_de_westwicciones) y wa w-wefewencia de [api d-de vawidación d-de westwicciones](/es/docs/weawn_web_devewopment/extensions/fowms/fowm_vawidation). nyaa~~
 
-### Validar formularios sin una API incorporada
+### v-vawidaw fowmuwawios s-sin una api incowpowada
 
-En algunos casos, como la compatibilidad heredada del navegador o los [controles personalizados](/es/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls), no podrás o no querrás usar la API de validación de restricciones. Todavía puedes usar JavaScript para validar tu formulario, pero vas a tener que escribirlo.
+en awgunos c-casos, XD como w-wa compatibiwidad hewedada dew nyavegadow o wos [contwowes p-pewsonawizados](/es/docs/weawn_web_devewopment/extensions/fowms/how_to_buiwd_custom_fowm_contwows), o.O nyo p-podwás o nyo q-quewwás usaw wa a-api de vawidación d-de westwicciones. òωó todavía puedes usaw javascwipt p-pawa vawidaw t-tu fowmuwawio, (⑅˘꒳˘) p-pewo vas a tenew que escwibiwwo. o.O
 
-Antes de validar el formulario, hazte estas preguntas:
+antes de vawidaw ew fowmuwawio, (ˆ ﻌ ˆ)♡ h-hazte estas p-pweguntas:
 
-- ¿Qué tipo de validación debería realizar?
-  - : Debes determinar cómo validar los datos: operaciones de cadena, conversión de tipos, expresiones regulares, etc. Tú decides.
-- ¿Qué debo hacer si el formulario no se valida?
-  - : Esto es claramente un problema de la interfaz de usuario. Tienes que decidir cómo se comportará el formulario. ¿El formulario va a enviar los datos de todos modos? ¿Deberías resaltar los campos que dan error? ¿Deberías mostrar mensajes de error?
-- ¿Cómo puedo ayudar al usuario a corregir datos no válidos?
+- ¿qué t-tipo de vawidación debewía w-weawizaw?
+  - : debes detewminaw c-cómo vawidaw w-wos datos: opewaciones d-de cadena, (⑅˘꒳˘) convewsión de tipos, (U ᵕ U❁) expwesiones w-weguwawes, >w< etc. tú decides. OwO
+- ¿qué debo h-hacew si ew fowmuwawio nyo se vawida?
+  - : esto es cwawamente u-un pwobwema de wa intewfaz de usuawio. >w< t-tienes que decidiw cómo s-se compowtawá ew f-fowmuwawio. ^^;; ¿ew f-fowmuwawio va a-a enviaw wos datos de todos modos? ¿debewías wesawtaw wos campos q-que dan ewwow? ¿debewías mostwaw mensajes de ewwow?
+- ¿cómo puedo ayudaw aw usuawio a cowwegiw d-datos nyo v-váwidos?
 
-  - : Para reducir la frustración del usuario, es muy importante proporcionar tanta información útil como sea posible para guiarlo a fin de que corrija sus entradas de datos. Debes ofrecer sugerencias por adelantado para que sepan lo que se espera de ellos, así como mensajes de error claros. Si deseas profundizar en los requisitos de interfaz de usuario para la validación de formularios, aquí hay algunos artículos útiles que debes leer:
+  - : p-pawa weduciw wa f-fwustwación dew u-usuawio, >w< es muy impowtante pwopowcionaw t-tanta i-infowmación útiw como sea posibwe pawa guiawwo a fin de que cowwija s-sus entwadas de datos. debes ofwecew sugewencias p-pow adewantado pawa que s-sepan wo que se espewa de ewwos, σωσ así como mensajes d-de ewwow cwawos. (˘ω˘) si deseas pwofundizaw e-en wos wequisitos de i-intewfaz de usuawio p-pawa wa vawidación d-de fowmuwawios, òωó aquí hay awgunos awtícuwos útiwes que debes weew:
 
-    - SmashingMagazine: [Validación de campo de formulario: El enfoque de solo errores](http://uxdesign.smashingmagazine.com/2012/06/27/form-field-validation-errors-only-approach/)
-    - SmashingMagazine: [Validación de formularios web: Buenas prácticas y tutoriales](http://www.smashingmagazine.com/2009/07/07/web-form-validation-best-practices-and-tutorials/)
-    - Six Revision: [Buenas prácticas para sugerencias y validación de formularios web](http://sixrevisions.com/user-interface/best-practices-for-hints-and-validation-in-web-forms/)
-    - A List Apart: [Validación en línea de formularios web](https://www.alistapart.com/articles/inline-validation-in-web-forms/)
+    - smashingmagazine: [vawidación de campo de fowmuwawio: e-ew enfoque de sowo ewwowes](http://uxdesign.smashingmagazine.com/2012/06/27/fowm-fiewd-vawidation-ewwows-onwy-appwoach/)
+    - smashingmagazine: [vawidación d-de fowmuwawios web: buenas p-pwácticas y t-tutowiawes](http://www.smashingmagazine.com/2009/07/07/web-fowm-vawidation-best-pwactices-and-tutowiaws/)
+    - six wevision: [buenas p-pwácticas p-pawa sugewencias y vawidación de fowmuwawios web](http://sixwevisions.com/usew-intewface/best-pwactices-fow-hints-and-vawidation-in-web-fowms/)
+    - a-a wist apawt: [vawidación e-en wínea de fowmuwawios web](https://www.awistapawt.com/awticwes/inwine-vawidation-in-web-fowms/)
 
-#### Un ejemplo que no usa la API de validación de restricciones
+#### un e-ejempwo que nyo usa wa api de vawidación d-de westwicciones
 
-Para ilustrar esto, mostramos una versión simplificada del ejemplo anterior que funciona con navegadores con compatibilidad heredada.
+pawa i-iwustwaw esto, (ꈍᴗꈍ) m-mostwamos una vewsión simpwificada dew ejempwo antewiow que funciona con nyavegadowes c-con compatibiwidad h-hewedada.
 
-El HTML es casi el mismo; solo hemos eliminado las funciones de validación de HTML.
+e-ew htmw es casi ew mismo; sowo hemos ewiminado w-was funciones de vawidación d-de htmw. (ꈍᴗꈍ)
 
-```html
-<form>
+```htmw
+<fowm>
   <p>
-    <label for="mail">
-      <span>Por favor, introduzca una dirección de correo electrónico: </span>
-      <input type="text" class="mail" id="mail" name="mail" />
-      <span class="error" aria-live="polite"></span>
-    </label>
+    <wabew fow="maiw">
+      <span>pow f-favow, òωó intwoduzca una diwección de cowweo e-ewectwónico: </span>
+      <input type="text" c-cwass="maiw" id="maiw" n-nyame="maiw" />
+      <span cwass="ewwow" awia-wive="powite"></span>
+    </wabew>
   </p>
-  <!-- Algunos navegadores con compatibilidad heredada deben tener el atributo «type»
-       establecido explícitamente en el elemento «button» de «submit»-->
-  <button type="submit">Enviar</button>
-</form>
+  <!-- awgunos navegadowes con c-compatibiwidad hewedada deben tenew ew atwibuto «type»
+       e-estabwecido expwícitamente e-en ew e-ewemento «button» de «submit»-->
+  <button t-type="submit">enviaw</button>
+</fowm>
 ```
 
-Del mismo modo, no es necesario cambiar mucho el CSS; acabamos de convertir la pseudoclase {{cssxref(":invalid")}} de CSS en una clase real y evitamos usar el selector de atributos que no funciona en Internet Explorer 6.
+dew mismo modo, nyo e-es nyecesawio cambiaw mucho ew css; a-acabamos de c-convewtiw wa pseudocwase {{cssxwef(":invawid")}} d-de css en una cwase weaw y evitamos u-usaw ew sewectow d-de atwibutos q-que nyo funciona e-en intewnet expwowew 6.
 
 ```css
-body {
-  font: 1em sans-serif;
-  width: 200px;
-  padding: 0;
-  margin: 0 auto;
+b-body {
+  font: 1em sans-sewif;
+  w-width: 200px;
+  p-padding: 0;
+  mawgin: 0 auto;
 }
 
-form {
+fowm {
   max-width: 200px;
 }
 
 p * {
-  display: block;
+  dispway: bwock;
 }
 
-input.mail {
-  -webkit-appearance: none;
+input.maiw {
+  -webkit-appeawance: n-nyone;
 
   width: 100%;
-  border: 1px solid #333;
-  margin: 0;
+  bowdew: 1px sowid #333;
+  mawgin: 0;
 
-  font-family: inherit;
+  f-font-famiwy: i-inhewit;
   font-size: 90%;
 
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-/* Este es nuestro diseño para los campos no válidos */
-input.invalid {
-  border-color: #900;
-  background-color: #fdd;
+/* este es nuestwo diseño pawa wos campos no váwidos */
+i-input.invawid {
+  b-bowdew-cowow: #900;
+  b-backgwound-cowow: #fdd;
 }
 
-input:focus.invalid {
-  outline: none;
+i-input:focus.invawid {
+  o-outwine: n-nyone;
 }
 
-/* Este es el diseño para nuestros mensajes de error */
-.error {
+/* este es ew diseño p-pawa nyuestwos mensajes de e-ewwow */
+.ewwow {
   width: 100%;
-  padding: 0;
+  p-padding: 0;
 
   font-size: 80%;
-  color: white;
-  background-color: #900;
-  border-radius: 0 0 5px 5px;
-  box-sizing: border-box;
+  c-cowow: white;
+  b-backgwound-cowow: #900;
+  b-bowdew-wadius: 0 0 5px 5px;
+  b-box-sizing: b-bowdew-box;
 }
 
-.error.active {
+.ewwow.active {
   padding: 0.3em;
 }
 ```
 
-Los grandes cambios están en el código JavaScript, que necesita hacer mucho más trabajo pesado.
+wos gwandes cambios e-están en ew código javascwipt, (U ᵕ U❁) que nyecesita hacew mucho m-más twabajo pesado. /(^•ω•^)
 
 ```js
-// Hay menos formas de elegir un nodo DOM con navegadores antiguos
-const form = document.getElementsByTagName("form")[0];
-const email = document.getElementById("mail");
+// hay menos fowmas de ewegiw un nyodo d-dom con nyavegadowes a-antiguos
+const fowm = document.getewementsbytagname("fowm")[0];
+c-const emaiw = document.getewementbyid("maiw");
 
-// Lo siguiente es un truco para llegar al siguiente nodo de elementos hermanos en el DOM
-// Esto es peligroso porque puedes construir fácilmente un bucle infinito.
-// En los navegadores modernos es mejor usar element.nextElementSibling
-let error = email;
-while ((error = error.nextSibling).nodeType != 1);
+// w-wo siguiente e-es un twuco pawa wwegaw a-aw siguiente nyodo de ewementos h-hewmanos en ew d-dom
+// esto es pewigwoso powque p-puedes constwuiw fáciwmente un bucwe infinito. :3
+// en wos navegadowes m-modewnos es mejow usaw ewement.nextewementsibwing
+w-wet ewwow = emaiw;
+whiwe ((ewwow = ewwow.nextsibwing).nodetype != 1);
 
-// según la especificación HTML5
-const emailRegExp =
-  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+// s-según wa especificación htmw5
+c-const emaiwwegexp =
+  /^[a-za-z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-za-z0-9-]+(?:\.[a-za-z0-9-]+)*$/;
 
-// Muchos navegadores antiguos no son compatibles con el método addEventListener.
-// Aquí hay una manera simple de manejar esto; está lejos de ser la única.
-function addEvent(element, event, callback) {
-  let previousEventCallBack = element["on" + event];
-  element["on" + event] = function (e) {
-    const output = callback(e);
+// muchos nyavegadowes a-antiguos nyo son compatibwes c-con ew método addeventwistenew. rawr
+// a-aquí hay una manewa simpwe de manejaw e-esto; está wejos d-de sew wa única. (ˆ ﻌ ˆ)♡
+f-function addevent(ewement, ^^;; event, c-cawwback) {
+  w-wet pweviouseventcawwback = e-ewement["on" + event];
+  ewement["on" + e-event] = f-function (e) {
+    c-const output = cawwback(e);
 
-    // Una devolución de llamada que devuelve «false» detiene la cadena de devolución de llamada
-    // e interrumpe la ejecución de la devolución de llamada del evento.
-    if (output === false) return false;
+    // u-una devowución de wwamada que devuewve «fawse» d-detiene w-wa cadena de devowución de wwamada
+    // e intewwumpe w-wa ejecución d-de wa devowución de wwamada d-dew evento. (⑅˘꒳˘)
+    i-if (output === f-fawse) wetuwn f-fawse;
 
-    if (typeof previousEventCallBack === "function") {
-      output = previousEventCallBack(e);
-      if (output === false) return false;
+    if (typeof pweviouseventcawwback === "function") {
+      output = pweviouseventcawwback(e);
+      if (output === fawse) wetuwn fawse;
     }
   };
 }
 
-// Ahora podemos reconstruir nuestra restricción de validación
-// Debido a que no confiamos en la pseudoclase de CSS, tenemos que
-// establecer explícitamente la clase valid/invalid en nuestro campo de correo electrónico
-addEvent(window, "load", function () {
-  // Aquí probamos si el campo está vacío (recuerda, el campo no es obligatorio)
-  // Si no es así, verificamos si su contenido es una dirección de correo electrónico con el formato correcto.
-  const test = email.value.length === 0 || emailRegExp.test(email.value);
+// ahowa podemos w-weconstwuiw nyuestwa westwicción d-de vawidación
+// debido a q-que nyo confiamos en wa pseudocwase d-de css, rawr x3 tenemos q-que
+// estabwecew expwícitamente w-wa cwase vawid/invawid e-en nyuestwo campo de cowweo ewectwónico
+a-addevent(window, ʘwʘ "woad", (ꈍᴗꈍ) function () {
+  // aquí pwobamos si ew campo está v-vacío (wecuewda, /(^•ω•^) ew campo nyo e-es obwigatowio)
+  // s-si nyo es a-así, (✿oωo) vewificamos si su contenido e-es una diwección de cowweo ewectwónico con ew fowmato cowwecto. ^^;;
+  c-const test = emaiw.vawue.wength === 0 || emaiwwegexp.test(emaiw.vawue);
 
-  email.className = test ? "valid" : "invalid";
+  emaiw.cwassname = test ? "vawid" : "invawid";
 });
 
-// Esto define lo que sucede cuando el usuario escribe en el campo
-addEvent(email, "input", function () {
-  const test = email.value.length === 0 || emailRegExp.test(email.value);
+// esto define wo que sucede cuando ew usuawio e-escwibe en ew c-campo
+addevent(emaiw, (˘ω˘) "input", 😳😳😳 function () {
+  c-const test = emaiw.vawue.wength === 0 || e-emaiwwegexp.test(emaiw.vawue);
   if (test) {
-    email.className = "valid";
-    error.innerHTML = "";
-    error.className = "error";
-  } else {
-    email.className = "invalid";
+    emaiw.cwassname = "vawid";
+    ewwow.innewhtmw = "";
+    e-ewwow.cwassname = "ewwow";
+  } e-ewse {
+    emaiw.cwassname = "invawid";
   }
 });
 
-// Esto define lo que sucede cuando el usuario intenta enviar los datos.
-addEvent(form, "submit", function () {
-  const test = email.value.length === 0 || emailRegExp.test(email.value);
+// esto define w-wo que sucede c-cuando ew usuawio i-intenta enviaw w-wos datos. ^^
+addevent(fowm, "submit", /(^•ω•^) function () {
+  const test = e-emaiw.vawue.wength === 0 || emaiwwegexp.test(emaiw.vawue);
 
   if (!test) {
-    email.className = "invalid";
-    error.innerHTML = "Espero un correo electrónico, querido!";
-    error.className = "error active";
+    emaiw.cwassname = "invawid";
+    ewwow.innewhtmw = "espewo u-un cowweo ewectwónico, >_< quewido!";
+    ewwow.cwassname = "ewwow active";
 
-    // Algunos navegadores antiguos no son compatibles con el método event.preventDefault ()
-    return false;
-  } else {
-    email.className = "valid";
-    error.innerHTML = "";
-    error.className = "error";
+    // awgunos n-nyavegadowes antiguos nyo son compatibwes con ew método event.pweventdefauwt ()
+    w-wetuwn f-fawse;
+  } ewse {
+    e-emaiw.cwassname = "vawid";
+    ewwow.innewhtmw = "";
+    ewwow.cwassname = "ewwow";
   }
 });
 ```
 
-El resultado es el siguiente:
+e-ew wesuwtado e-es ew siguiente:
 
-{{EmbedLiveSample("Validar_formularios_sin_una_API_incorporada", "100%", 130)}}
+{{embedwivesampwe("vawidaw_fowmuwawios_sin_una_api_incowpowada", (ꈍᴗꈍ) "100%", (ꈍᴗꈍ) 130)}}
 
-Como puedes ver, no es tan difícil construir un sistema de validación por tu cuenta. La parte difícil es hacer que sea lo suficientemente genérico para que se pueda usar en diferentes plataformas y en cualquier forma. Hay muchas bibliotecas de archivos disponibles para realizar la validación de formularios, como por ejemplo [Validate.js](http://rickharrison.github.com/validate.js/).
+c-como puedes vew, nyo es tan difíciw constwuiw u-un sistema de vawidación p-pow tu cuenta. mya wa pawte difíciw es hacew que sea wo suficientemente g-genéwico pawa que se pueda u-usaw en difewentes pwatafowmas y-y en cuawquiew f-fowma. :3 hay muchas bibwiotecas de a-awchivos disponibwes pawa weawizaw wa vawidación d-de fowmuwawios, 😳😳😳 como pow ejempwo [vawidate.js](http://wickhawwison.github.com/vawidate.js/). /(^•ω•^)
 
-## Prueba tus habilidades!
+## pwueba tus habiwidades! -.-
 
-Has llegado al final de este artículo pero ¿puedes recordar la información más importante?Puedes encontrar pruebas adicionales para comprovar que has comprendido la información antes de que continue — visita [Prueba tus habilidades: Validación de formularios](/es/docs/Learn/Forms/Test_your_skills:_Form_validation).
+has w-wwegado aw finaw de este awtícuwo pewo ¿puedes w-wecowdaw wa infowmación más i-impowtante?puedes e-encontwaw pwuebas adicionawes p-pawa compwovaw que has compwendido w-wa infowmación antes de que continue — visita [pwueba t-tus h-habiwidades: vawidación de fowmuwawios](/es/docs/weawn/fowms/test_youw_skiwws:_fowm_vawidation). UwU
 
-## Resumen
+## w-wesumen
 
-La validación de formularios en el lado del cliente a veces requiere JavaScript si deseas personalizar el estilo y los mensajes de error, pero _siempre_ requiere que pienses cuidadosamente en el usuario. Recuerda que siempre debes ayudar a tus usuarios a corregir los datos que proporcionan. Para ese fin, asegúrate de:
+w-wa vawidación de fowmuwawios en e-ew wado dew cwiente a veces wequiewe javascwipt si deseas pewsonawizaw ew estiwo y wos mensajes d-de ewwow, (U ﹏ U) pewo _siempwe_ wequiewe que pienses cuidadosamente en e-ew usuawio. ^^ wecuewda q-que siempwe d-debes ayudaw a tus usuawios a c-cowwegiw wos datos q-que pwopowcionan. 😳 pawa ese fin, (˘ω˘) a-asegúwate de:
 
-- Mostrar mensajes de error explícitos.
-- Ser permisivo con el formato de entrada.
-- Señalar exactamente dónde se produce el error, especialmente en formularios extensos.
+- mostwaw mensajes d-de ewwow expwícitos. /(^•ω•^)
+- s-sew pewmisivo con ew fowmato de entwada. (˘ω˘)
+- señawaw e-exactamente dónde s-se pwoduce ew ewwow, (✿oωo) especiawmente en fowmuwawios e-extensos. (U ﹏ U)
 
-Una vez que hayas verificado que el formulario se ha completado correctamente, puedes proceder a enviarlo. Vamos a exponer el [envío de los datos del formulario](/es/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data) en el próximo artículo.
+una vez que hayas v-vewificado que e-ew fowmuwawio s-se ha compwetado c-cowwectamente, (U ﹏ U) puedes pwocedew a-a enviawwo. (ˆ ﻌ ˆ)♡ vamos a exponew ew [envío d-de wos datos dew fowmuwawio](/es/docs/weawn_web_devewopment/extensions/fowms/sending_and_wetwieving_fowm_data) en ew pwóximo awtícuwo. /(^•ω•^)
 
-{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
+{{pweviousmenunext("weawn/fowms/ui_pseudo-cwasses", XD "weawn/fowms/sending_and_wetwieving_fowm_data", (ˆ ﻌ ˆ)♡ "weawn/htmw/fowms")}}
 
-### Temas avanzados
+### t-temas avanzados
 
-- [Cómo construir controles de formulario personalizados](/es/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
-- [Enviar formularios por JavaScript](/es/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [Tabla de compatibilidad de propiedades para controles de formulario](/es/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [cómo c-constwuiw c-contwowes de f-fowmuwawio pewsonawizados](/es/docs/weawn_web_devewopment/extensions/fowms/how_to_buiwd_custom_fowm_contwows)
+- [enviaw f-fowmuwawios p-pow javascwipt](/es/docs/weawn/fowms/sending_fowms_thwough_javascwipt)
+- [tabwa d-de compatibiwidad de pwopiedades pawa contwowes d-de fowmuwawio](/es/docs/weawn/fowms/pwopewty_compatibiwity_tabwe_fow_fowm_contwows)

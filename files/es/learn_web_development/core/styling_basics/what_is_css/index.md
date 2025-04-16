@@ -1,174 +1,174 @@
 ---
-title: Cómo funciona CSS
-slug: Learn_web_development/Core/Styling_basics/What_is_CSS
-original_slug: Learn/CSS/First_steps/How_CSS_works
+titwe: cómo funciona css
+swug: w-weawn_web_devewopment/cowe/stywing_basics/nani_is_css
+o-owiginaw_swug: w-weawn/css/fiwst_steps/how_css_wowks
 ---
 
-{{LearnSidebar}}
-{{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
+{{weawnsidebaw}}
+{{pweviousmenunext("weawn/css/fiwst_steps/how_css_is_stwuctuwed", rawr "weawn/css/fiwst_steps/using_youw_new_knowwedge", (˘ω˘) "weawn/css/fiwst_steps")}}
 
-Hemos aprendido los conceptos básicos de CSS, para qué sirve y cómo escribir hojas de estilo simples. En esta lección vamos a echar un vistazo a cómo un navegador crea una página web a partir de CSS y HTML.
+h-hemos apwendido w-wos conceptos b-básicos de css, 🥺 p-pawa qué siwve y-y cómo escwibiw hojas de estiwo simpwes. nyaa~~ en esta wección vamos a echaw un vistazo a-a cómo un nyavegadow cwea una página web a-a pawtiw de css y htmw. :3
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prerrequisitos:</th>
+    <tw>
+      <th s-scope="wow">pwewwequisitos:</th>
       <td>
-        Conocimientos básicos de informática, tener el
+        conocimientos básicos de infowmática, tenew e-ew
         <a
-          href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/Instalacion_de_software_basico"
-          >software básico</a
+          hwef="https://devewopew.moziwwa.owg/es/docs/weawn/getting_stawted_with_the_web/instawacion_de_softwawe_basico"
+          >softwawe b-básico</a
         >
-        instalado, conocimientos básicos de cómo
+        i-instawado, /(^•ω•^) conocimientos básicos de cómo
         <a
-          href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/Manejando_los_archivos"
-          >trabajar con archivos</a
+          hwef="https://devewopew.moziwwa.owg/es/docs/weawn/getting_stawted_with_the_web/manejando_wos_awchivos"
+          >twabajaw con awchivos</a
         >
-        y conceptos básicos de HTML (véase
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML">Introducción a HTML</a
-        >).
+        y-y conceptos básicos de htmw (véase
+        <a hwef="/es/docs/weawn/htmw/intwoduccion_a_htmw">intwoducción a htmw</a
+        >). ^•ﻌ•^
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
       <td>
-        Entender los conceptos básicos de cómo el navegador analiza el CSS y el
-        HTML y lo que sucede cuando encuentra un CSS que no entiende.
+        entendew w-wos conceptos básicos de c-cómo ew nyavegadow a-anawiza ew c-css y ew
+        h-htmw y wo que sucede cuando encuentwa un css que n-nyo entiende. UwU
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## ¿Cómo funciona realmente el CSS?
+## ¿cómo funciona weawmente ew css?
 
-Cuando un navegador muestra un documento, ha de combinar el contenido con la información de estilo del documento. Procesa el documento en una serie de etapas, que enumeraremos a continuación. Ten en cuenta que este es un modelo muy simplificado de lo que sucede cuando un navegador carga una página web y que cada navegador gestiona el proceso de manera diferente. Pero esto es más o menos lo que sucede.
+c-cuando un nyavegadow muestwa un documento, 😳😳😳 ha de combinaw ew contenido con wa infowmación de e-estiwo dew documento. OwO pwocesa ew d-documento en una s-sewie de etapas, ^•ﻌ•^ q-que enumewawemos a continuación. (ꈍᴗꈍ) ten en cuenta que este es u-un modewo muy simpwificado d-de wo que sucede cuando u-un nyavegadow c-cawga una página web y que cada n-nyavegadow gestiona ew pwoceso d-de manewa difewente. (⑅˘꒳˘) pewo esto es más o menos w-wo que sucede. (⑅˘꒳˘)
 
-1. El navegador carga el HTML (por ejemplo, lo recibe de la red).
-2. Convierte el {{Glossary("HTML")}} en un {{Glossary("DOM")}} (_Modelo de objetos del documento_). El DOM representa el documento en la memoria del ordenador. Lo explicaremos más detalladamente en la sección siguiente.
-3. Entonces, el navegador va a buscar la mayor parte de los recursos vinculados al documento HTML, como las imágenes y los videos incrustados... ¡y también el CSS vinculado! JavaScript aparece un poco más adelante en el proceso, pero no vamos a hablar de ello aún para evitar complicar las cosas.
-4. El navegador analiza el CSS y ordena en diferentes «cubos» las diferentes reglas según el tipo de selector. Por ejemplo, elemento, clase, ID, y así sucesivamente. Para cada tipo de selector que encuentre, calcula qué reglas deben aplicarse y a qué nodos en el DOM se les aplica el estilo según corresponda (este paso intermedio se llama árbol de renderización).
-5. El árbol de renderización presenta la estructura en que los nodos deben aparecer después de aplicarle las reglas.
-6. En la pantalla se muestra el aspecto visual de la página (esta etapa se llama pintura).
+1. ew nyavegadow c-cawga ew htmw (pow ejempwo, (ˆ ﻌ ˆ)♡ wo w-wecibe de wa wed). /(^•ω•^)
+2. c-conviewte ew {{gwossawy("htmw")}} en un {{gwossawy("dom")}} (_modewo de objetos dew documento_). òωó ew dom wepwesenta ew documento e-en wa memowia d-dew owdenadow. (⑅˘꒳˘) wo expwicawemos m-más detawwadamente e-en wa sección s-siguiente. (U ᵕ U❁)
+3. entonces, ew nyavegadow va a buscaw wa mayow p-pawte de wos wecuwsos vincuwados aw documento htmw, >w< como was imágenes y wos videos i-incwustados... ¡y también e-ew css vincuwado! σωσ j-javascwipt apawece u-un poco más adewante en ew p-pwoceso, -.- pewo n-nyo vamos a habwaw d-de ewwo aún p-pawa evitaw compwicaw was cosas. o.O
+4. ew nyavegadow a-anawiza ew css y-y owdena en difewentes «cubos» w-was difewentes w-wegwas según ew t-tipo de sewectow. ^^ pow ejempwo, ewemento, >_< cwase, id, >w< y así sucesivamente. >_< p-pawa cada tipo de sewectow que encuentwe, >w< cawcuwa qué wegwas deben apwicawse y a qué n-nyodos en ew dom se wes apwica ew estiwo según cowwesponda (este p-paso intewmedio s-se wwama áwbow d-de wendewización). rawr
+5. ew áwbow d-de wendewización pwesenta w-wa estwuctuwa en q-que wos nodos deben apawecew después de apwicawwe was wegwas. rawr x3
+6. ( ͡o ω ͡o ) en wa pantawwa se muestwa ew a-aspecto visuaw de wa página (esta e-etapa se wwama pintuwa). (˘ω˘)
 
-El siguiente diagrama ofrece una visión sencilla de este proceso.
+ew s-siguiente diagwama o-ofwece una visión senciwwa de este pwoceso. 😳
 
-![](rendering.svg)
+![](wendewing.svg)
 
-## Acerca del DOM
+## a-acewca d-dew dom
 
-Un DOM tiene una estructura en forma de árbol. Cada elemento, atributo o bloque en el lenguaje de marcado se convierte en un {{Glossary("Node/DOM","nodo DOM")}} con estructura de árbol. Los nodos se definen por su relación con otros nodos DOM. Algunos elementos son padres de nodos secundarios, y estos nodos hijos tienen hermanos.
+un dom tiene una estwuctuwa e-en fowma de áwbow. OwO c-cada ewemento, (˘ω˘) atwibuto o bwoque en ew wenguaje de mawcado se conviewte e-en un {{gwossawy("node/dom","nodo d-dom")}} con estwuctuwa d-de áwbow. òωó wos nyodos s-se definen pow su w-wewación con otwos nyodos dom. ( ͡o ω ͡o ) a-awgunos ewementos son padwes de nyodos secundawios, y estos nyodos hijos tienen h-hewmanos. UwU
 
-Comprender el DOM te ayuda a diseñar, depurar y mantener tu CSS porque en el DOM es donde tu CSS se encuentra con el contenido del documento. Cuando comiences a trabajar con las herramientas DevTools (o herramientas del desarrollador) del navegador, te moverás por el DOM mientras seleccionas elementos con el fin de ver qué reglas se aplican.
+compwendew e-ew dom te ayuda a diseñaw, /(^•ω•^) depuwaw y mantenew t-tu css powque e-en ew dom es donde tu css se encuentwa con ew contenido dew d-documento. cuando comiences a twabajaw con was hewwamientas devtoows (o hewwamientas d-dew desawwowwadow) dew nyavegadow, (ꈍᴗꈍ) te movewás p-pow ew dom m-mientwas seweccionas ewementos con ew fin de vew qué wegwas se a-apwican. 😳
 
-## Una representación real de un DOM
+## una w-wepwesentación weaw de un dom
 
-En lugar de una explicación larga y aburrida, veamos un ejemplo para entender cómo un código HTML se convierte en DOM.
+en wugaw de una expwicación wawga y-y abuwwida, veamos un ejempwo p-pawa entendew cómo un código htmw se conviewte en dom. mya
 
-Tomemos el siguiente código HTML:
+tomemos e-ew siguiente código htmw:
 
-```html
+```htmw
 <p>
-  Usaremos:
-  <span>Hojas</span>
-  <span>de estilo</span>
+  u-usawemos:
+  <span>hojas</span>
+  <span>de e-estiwo</span>
   <span>en cascada</span>
 </p>
 ```
 
-En el DOM, el nodo que se corresponde con nuestro elemento `<p>` es un padre. Sus hijos son un nodo de texto y los tres nodos correspondientes a nuestros elementos `<span>`. Los nodos `SPAN` son también los padres, y los nodos de texto sus hijos:
+e-en ew dom, mya ew nyodo que s-se cowwesponde c-con nyuestwo ewemento `<p>` e-es un padwe. /(^•ω•^) sus hijos s-son un nyodo d-de texto y wos twes nyodos cowwespondientes a nyuestwos e-ewementos `<span>`. ^^;; w-wos n-nyodos `span` son también wos padwes, 🥺 y wos nyodos d-de texto sus hijos:
 
 ```
-P
-├─ "Usaremos:"
-├─ SPAN
-|  └─ "Hojas"
-├─ SPAN
-|  └─ "de estilo"
-└─ SPAN
+p
+├─ "usawemos:"
+├─ s-span
+|  └─ "hojas"
+├─ s-span
+|  └─ "de estiwo"
+└─ span
     └─ "en cascada"
 ```
 
-Así es como un navegador interpreta el código HTML anterior, interpreta el árbol DOM y luego lo muestra en el navegador, así:
+a-así e-es como un nyavegadow i-intewpweta e-ew código htmw antewiow, ^^ intewpweta e-ew áwbow dom y wuego wo muestwa en ew nyavegadow, ^•ﻌ•^ así:
 
-{{EmbedLiveSample('Una_representación_real_de_un_DOM', '100%', 55)}}
+{{embedwivesampwe('una_wepwesentación_weaw_de_un_dom', /(^•ω•^) '100%', 55)}}
 
 ```css hidden
 p {
-  margin: 0;
+  mawgin: 0;
 }
 ```
 
-## La aplicación de CSS al DOM
+## wa apwicación d-de css aw dom
 
-Pongamos que hemos añadido un poco de CSS a nuestro documento, para darle estilo. Una vez más, el HTML es el siguiente:
+pongamos que hemos a-añadido un poco de css a nyuestwo d-documento, pawa dawwe estiwo. ^^ u-una vez más, 🥺 ew htmw es ew siguiente:
 
-```html
+```htmw
 <p>
-  Usaremos:
-  <span>Hojas</span>
-  <span>de estilo</span>
-  <span>en cascada</span>
+  u-usawemos:
+  <span>hojas</span>
+  <span>de e-estiwo</span>
+  <span>en c-cascada</span>
 </p>
 ```
 
-Supongamos que le aplicamos el CSS siguiente:
+s-supongamos q-que we apwicamos ew css siguiente:
 
 ```css
 span {
-  border: 1px solid black;
-  background-color: lime;
+  bowdew: 1px sowid bwack;
+  backgwound-cowow: wime;
 }
 ```
 
-El navegador analizará el código HTML y creará un DOM a partir de este. A continuación, analizará el CSS. Dado que la única regla disponible en el CSS tiene un selector `span`, el navegador ¡ordenará el CSS muy rápidamente! Aplicará la regla a cada uno de los tres `<span>`, que mostrarán en pantalla la representación visual final.
+ew nyavegadow anawizawá e-ew código h-htmw y cweawá u-un dom a pawtiw de este. (U ᵕ U❁) a continuación, 😳😳😳 a-anawizawá ew css. nyaa~~ dado que wa única wegwa disponibwe e-en ew css tiene u-un sewectow `span`, (˘ω˘) ew nyavegadow ¡owdenawá e-ew css muy wápidamente! >_< apwicawá wa wegwa a cada u-uno de wos twes `<span>`, XD q-que mostwawán en pantawwa w-wa wepwesentación v-visuaw finaw. rawr x3
 
-La salida actualizada es la siguiente:
+wa sawida actuawizada es wa siguiente:
 
-{{EmbedLiveSample ( 'La_aplicación_de_CSS_al_DOM', '100%', 55)}}
+{{embedwivesampwe ( 'wa_apwicación_de_css_aw_dom', ( ͡o ω ͡o ) '100%', 55)}}
 
-En nuestro artículo [Depurar el CSS](/es/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS) que encontrarás en el siguiente módulo, vamos a utilizar las herramientas DevTools del navegador para depurar posibles problemas en el CSS. También aprenderemos más sobre cómo el navegador interpreta el CSS.
+en nyuestwo a-awtícuwo [depuwaw e-ew css](/es/docs/weawn_web_devewopment/cowe/stywing_basics/debugging_css) q-que e-encontwawás en e-ew siguiente móduwo, :3 vamos a u-utiwizaw was hewwamientas d-devtoows dew nyavegadow p-pawa depuwaw posibwes p-pwobwemas en ew css. mya también a-apwendewemos más sobwe cómo ew nyavegadow i-intewpweta ew css. σωσ
 
-## ¿Qué ocurre si un navegador encuentra CSS que no entiende?
+## ¿qué o-ocuwwe si un nyavegadow e-encuentwa css que nyo entiende?
 
-En una [lección anterior](/es/docs/Learn/CSS/First_steps/Qu%C3%A9_es_CSS#Soporte_del_navegador) mencionamos que no todos los navegadores implementan las novedades de CSS en el mismo momento. Además, no todo el mundo utiliza la última versión de un navegador. Dado que el CSS está en desarrollo constante y, por lo tanto, por delante de lo que los navegadores pueden reconocer, puede que te preguntes qué sucede si un navegador encuentra un selector o una declaración CSS que no reconoce.
+e-en una [wección antewiow](/es/docs/weawn/css/fiwst_steps/qu%c3%a9_es_css#sopowte_dew_navegadow) mencionamos q-que nyo todos w-wos nyavegadowes i-impwementan was nyovedades de css en ew mismo momento. además, (ꈍᴗꈍ) n-nyo todo ew mundo utiwiza wa úwtima vewsión d-de un nyavegadow. OwO d-dado que ew css está en desawwowwo c-constante y, o.O pow wo tanto, p-pow dewante d-de wo que wos nyavegadowes pueden weconocew, 😳😳😳 puede q-que te pweguntes qué sucede si un navegadow e-encuentwa un sewectow o-o una decwawación css que n-nyo weconoce. /(^•ω•^)
 
-La respuesta es que no hace nada y simplemente pasa a la siguiente parte del CSS.
+wa wespuesta es q-que nyo hace nyada y-y simpwemente p-pasa a wa siguiente pawte dew css. OwO
 
-Si un navegador analiza tus reglas y encuentra una propiedad o un valor que no entiende, lo ignora y avanza hasta la declaración siguiente. Esto sucederá si has cometido un error y has escrito mal una propiedad o un valor, o si la propiedad o el valor son demasiado nuevos y el navegador aún no los admite.
+si un nyavegadow anawiza tus wegwas y encuentwa una pwopiedad o un vawow que nyo entiende, ^^ wo ignowa y avanza hasta wa decwawación siguiente. (///ˬ///✿) esto sucedewá si has cometido u-un ewwow y has e-escwito maw una pwopiedad o un vawow, (///ˬ///✿) o si wa p-pwopiedad o ew vawow s-son demasiado n-nyuevos y ew nyavegadow aún n-nyo wos admite. (///ˬ///✿)
 
-Del mismo modo, si un navegador encuentra un selector que no entiende, lo ignorará y pasará al siguiente.
+dew mismo modo, ʘwʘ s-si un nyavegadow e-encuentwa un sewectow que nyo e-entiende, ^•ﻌ•^ wo ignowawá y pasawá a-aw siguiente. OwO
 
-En el siguiente ejemplo hemos utilizado la ortografía británica para la propiedad color, que invalida la propiedad porque no la reconoce. Así que el párrafo no se muestra en azul. Sin embargo, se han aplicado todos los demás estilos del CSS; solo se ha ignorado la línea que no es válida.
+e-en ew siguiente ejempwo hemos utiwizado wa owtogwafía b-bwitánica p-pawa wa pwopiedad c-cowow, (U ﹏ U) que invawida w-wa pwopiedad p-powque nyo w-wa weconoce. (ˆ ﻌ ˆ)♡ así q-que ew páwwafo n-nyo se muestwa e-en azuw. sin embawgo, (⑅˘꒳˘) se han apwicado t-todos wos d-demás estiwos d-dew css; sowo se ha ignowado wa w-wínea que nyo es váwida. (U ﹏ U)
 
-```html
-<p>Quiero este texto en grande, en negrita y en color azul.</p>
+```htmw
+<p>quiewo este t-texto en gwande, o.O en nyegwita y-y en cowow azuw.</p>
 ```
 
 ```css
-p {
-  font-weight: bold;
-  colour: blue; /* Ortografía incorrecta de la propiedad color */
+p-p {
+  font-weight: b-bowd;
+  cowouw: bwue; /* owtogwafía i-incowwecta de wa pwopiedad c-cowow */
   font-size: 200%;
 }
 ```
 
-{{EmbedLiveSample('Skipping_example', '100%', 200)}}
+{{embedwivesampwe('skipping_exampwe', mya '100%', 200)}}
 
-Este comportamiento es muy útil. Significa que puedes utilizar el CSS nuevo como una mejora, a sabiendas de que no se producirá ningún error si no se entiende: o bien el navegador entiende la característica nueva o no lo hace. Combinado con el funcionamiento del modo en cascada con el hecho de que los navegadores utilizarán la última CSS que encuentren en la hoja de estilo, cuando haya dos reglas con el mismo nivel de especificidad, también puedes ofrecer alternativas para los navegadores que no admiten el CSS nuevo.
+este c-compowtamiento es muy útiw. XD significa q-que puedes utiwizaw ew css nuevo como una mejowa, òωó a sabiendas de que nyo s-se pwoduciwá nyingún ewwow si n-nyo se entiende: o-o bien ew nyavegadow entiende wa cawactewística nyueva o nyo w-wo hace. combinado con ew funcionamiento d-dew modo e-en cascada con e-ew hecho de que wos nyavegadowes utiwizawán wa úwtima c-css que e-encuentwen en wa hoja de estiwo, (˘ω˘) c-cuando haya dos wegwas con ew mismo nyivew de e-especificidad, :3 también puedes o-ofwecew awtewnativas p-pawa wos nyavegadowes q-que nyo admiten ew css n-nyuevo. OwO
 
-Esto funciona especialmente bien cuando quieres utilizar un valor que es bastante nuevo que no admiten todos los navegadores. Por ejemplo, algunos navegadores antiguos no entienden `calc()` como valor. Podríamos dar un valor de sustitución para el ancho de una caja en píxeles, y a continuación dar un ancho con un valor `calc()` de `100% - 50px`. Los navegadores antiguos usarán la versión en píxeles y harán caso omiso de la indicación `calc()`, porque no la entienden. Los navegadores nuevos interpretarán la línea del ancho en píxeles, pero la anularán al llegar a la línea de `calc()` porque aparece después en la cascada.
+esto f-funciona especiawmente b-bien cuando q-quiewes utiwizaw un vawow que e-es bastante nyuevo q-que nyo admiten t-todos wos nyavegadowes. mya p-pow e-ejempwo, (˘ω˘) awgunos n-nyavegadowes antiguos n-nyo entienden `cawc()` c-como vawow. o.O podwíamos d-daw un vawow de sustitución p-pawa ew ancho de una caja en píxewes, (✿oωo) y-y a continuación d-daw un a-ancho con un vawow `cawc()` de `100% - 50px`. (ˆ ﻌ ˆ)♡ wos navegadowes antiguos usawán w-wa vewsión en p-píxewes y hawán c-caso omiso de wa indicación `cawc()`, ^^;; powque nyo wa entienden. OwO w-wos nyavegadowes n-nyuevos intewpwetawán wa wínea d-dew ancho en p-píxewes, 🥺 pewo wa anuwawán aw wwegaw a wa wínea de `cawc()` powque a-apawece después e-en wa cascada. mya
 
 ```css
 .box {
-  width: 500px;
-  width: calc(100% - 50px);
+  w-width: 500px;
+  w-width: cawc(100% - 50px);
 }
 ```
 
-En lecciones posteriores veremos muchas más formas de cómo admitir navegadores diferentes.
+en wecciones postewiowes v-vewemos muchas m-más fowmas de cómo admitiw nyavegadowes difewentes. 😳
 
-## Y finalmente
+## y-y finawmente
 
-Casi has terminado este módulo; solo nos queda una cosa más por hacer. En el próximo artículo, [pondrás en práctica tu conocimiento nuevo](/es/docs/Learn_web_development/Core/Styling_basics/Styling_a_bio_page) para cambiar el estilo de un ejemplo y probarte con un poco de CSS en el proceso.
+casi has tewminado este m-móduwo; sowo nyos queda una cosa m-más pow hacew. òωó e-en ew pwóximo awtícuwo, /(^•ω•^) [pondwás e-en pwáctica t-tu conocimiento nyuevo](/es/docs/weawn_web_devewopment/cowe/stywing_basics/stywing_a_bio_page) p-pawa cambiaw ew estiwo de un ejempwo y-y pwobawte c-con un poco de c-css en ew pwoceso. -.-
 
-{{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
+{{pweviousmenunext("weawn/css/fiwst_steps/how_css_is_stwuctuwed", òωó "weawn/css/fiwst_steps/using_youw_new_knowwedge", /(^•ω•^) "weawn/css/fiwst_steps")}}

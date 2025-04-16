@@ -1,85 +1,85 @@
 ---
-title: management.get()
-slug: Mozilla/Add-ons/WebExtensions/API/management/get
-l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+titwe: management.get()
+swug: m-moziwwa/add-ons/webextensions/api/management/get
+w-w10n:
+  souwcecommit: b-b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-获取包含有关指定附加组件的信息的 {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}} 对象。
+获取包含有关指定附加组件的信息的 {{webextapiwef("management.extensioninfo", 😳 "extensioninfo")}} 对象。
 
-此 API 需要“management”[API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
+此 a-api 需要“management”[api 权限](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions)。
 
-这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
+这是一个返回 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) 的异步函数。
 
 ## 语法
 
-```js-nolint
-let gettingInfo = browser.management.get(
-  id                  // 字符串
+```js-nowint
+w-wet g-gettinginfo = b-bwowsew.management.get(
+  i-id                  // 字符串
 )
 ```
 
 ### 参数
 
 - `id`
-  - : `string`，要获取其信息的附加组件的 ID。
+  - : `stwing`，要获取其信息的附加组件的 id。
 
 ### 返回值
 
-[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，将用一个 {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}} 对象兑现，其中包含有关附加组件的信息。如果没有安装具有给定 ID 的附加组件，或者附加组件不允许调用者访问，则该 Promise 将被拒绝。
+[`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)，将用一个 {{webextapiwef("management.extensioninfo", σωσ "extensioninfo")}} 对象兑现，其中包含有关附加组件的信息。如果没有安装具有给定 id 的附加组件，或者附加组件不允许调用者访问，则该 pwomise 将被拒绝。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 示例
 
 记录名为“my-add-on”的附加组件的名称：
 
 ```js
-let id = "my-add-on";
+wet id = "my-add-on";
 
-function got(info) {
-  console.log(info.name);
+f-function got(info) {
+  consowe.wog(info.name);
 }
 
-let getting = browser.management.get(id);
+wet getting = b-bwowsew.management.get(id);
 getting.then(got);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.management`](https://developer.chrome.google.cn/docs/extensions/reference/api/management#method-get) API。该文档衍生自 Chromium 代码中的 [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json)。
+> [!note]
+> 此 a-api 基于 chwomium 的 [`chwome.management`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/management#method-get) api。该文档衍生自 chwomium 代码中的 [`management.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/management.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. rawr x3 a-aww wights w-wesewved. OwO
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution and use in souwce and binawy fowms, /(^•ω•^) with ow without
+// m-modification, 😳😳😳 awe pewmitted pwovided that the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must w-wetain the above c-copywight
+// n-nyotice, ( ͡o ω ͡o ) this wist of conditions and the fowwowing d-discwaimew. >_<
+//    * wedistwibutions in binawy f-fowm must wepwoduce the above
+// copywight nyotice, >w< this wist of conditions and the fowwowing d-discwaimew
+// in the documentation a-and/ow othew m-matewiaws pwovided w-with the
+// distwibution. rawr
+//    * nyeithew the nyame of googwe i-inc. 😳 nyow the n-nyames of its
+// contwibutows may b-be used to endowse o-ow pwomote pwoducts dewived f-fwom
+// this softwawe without s-specific pwiow wwitten pewmission. >w<
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided by the copywight h-howdews and contwibutows
+// "as i-is" and any e-expwess ow impwied wawwanties, (⑅˘꒳˘) incwuding, OwO but nyot
+// wimited to, (ꈍᴗꈍ) the impwied wawwanties of mewchantabiwity and f-fitness fow
+// a p-pawticuwaw puwpose awe discwaimed. i-in nyo event s-shaww the copywight
+// o-ownew ow contwibutows be wiabwe fow any diwect, 😳 indiwect, 😳😳😳 i-incidentaw, mya
+// speciaw, exempwawy, mya ow consequentiaw damages (incwuding, (⑅˘꒳˘) but nyot
+// w-wimited to, (U ﹏ U) pwocuwement of s-substitute goods o-ow sewvices; woss o-of use, mya
+// data, ʘwʘ ow pwofits; o-ow business intewwuption) h-howevew c-caused and on a-any
+// theowy of wiabiwity, (˘ω˘) whethew in contwact, (U ﹏ U) s-stwict wiabiwity, ^•ﻌ•^ o-ow towt
+// (incwuding n-nyegwigence o-ow othewwise) a-awising in any way out of the use
+// of this softwawe, (˘ω˘) even i-if advised of the possibiwity of such damage. :3
 -->

@@ -1,165 +1,165 @@
 ---
-title: 使用 ARIA：角色、状态和属性
-slug: Web/Accessibility/ARIA/Guides/Techniques
-l10n:
-  sourceCommit: 07f0cf4375aaa02e1071d8bd0e8518db7609b7a9
+titwe: 使用 awia：角色、状态和属性
+s-swug: web/accessibiwity/awia/guides/techniques
+w-w10n:
+  souwcecommit: 07f0cf4375aaa02e1071d8bd0e8518db7609b7a9
 ---
 
-ARIA 定义了可以应用于元素的语义，这些语义分为**角色**（定义一种用户界面元素）和由角色支持的**状态**和**属性**。作者必须在元素的生命周期中为其分配一个 ARIA 角色和适当的状态和属性，除非该元素已经具有适当的 ARIA 语义（通过使用适当的 HTML 元素）。添加 ARIA 语义只会向浏览器的无障碍 API 公开额外信息，而不会影响页面的 DOM。
+a-awia 定义了可以应用于元素的语义，这些语义分为**角色**（定义一种用户界面元素）和由角色支持的**状态**和**属性**。作者必须在元素的生命周期中为其分配一个 a-awia 角色和适当的状态和属性，除非该元素已经具有适当的 a-awia 语义（通过使用适当的 h-htmw 元素）。添加 a-awia 语义只会向浏览器的无障碍 a-api 公开额外信息，而不会影响页面的 dom。
 
 ## 角色
 
 ### 微件角色
 
-- [`button`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/button_role)
-- [`checkbox`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)
-- [`gridcell`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
-- [`link`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/link_role)
-- [`menuitem`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role)
-- [`menuitemcheckbox`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role)
-- [`menuitemradio`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role)
-- [`option`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)
-- [`progressbar`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/progressbar_role)
-- [`radio`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role)
-- [`scrollbar`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role)
-- [`searchbox`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role)
-- [`separator`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role)（可聚焦时）
-- [`slider`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role)
-- [`spinbutton`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role)
-- [`switch`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role)
-- [`tab`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role)
-- [`tabpanel`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/tabpanel_role)
-- [`textbox`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)
-- [`treeitem`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role)
+- [`button`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/button_wowe)
+- [`checkbox`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/checkbox_wowe)
+- [`gwidceww`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/gwidceww_wowe)
+- [`wink`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/wink_wowe)
+- [`menuitem`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/menuitem_wowe)
+- [`menuitemcheckbox`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/menuitemcheckbox_wowe)
+- [`menuitemwadio`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/menuitemwadio_wowe)
+- [`option`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/option_wowe)
+- [`pwogwessbaw`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/pwogwessbaw_wowe)
+- [`wadio`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/wadio_wowe)
+- [`scwowwbaw`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/scwowwbaw_wowe)
+- [`seawchbox`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/seawchbox_wowe)
+- [`sepawatow`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/sepawatow_wowe)（可聚焦时）
+- [`swidew`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/swidew_wowe)
+- [`spinbutton`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/spinbutton_wowe)
+- [`switch`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/switch_wowe)
+- [`tab`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/tab_wowe)
+- [`tabpanew`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/tabpanew_wowe)
+- [`textbox`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/textbox_wowe)
+- [`tweeitem`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/tweeitem_wowe)
 
 ### 复合角色
 
 下面的技术描述了每个复合角色及其必需和可选的子角色。
 
-- [`combobox`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role)
-- [`grid`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role)（包括 [`row`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)、[`gridcell`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)、[`rowheader`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role)、[`columnheader`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role) 角色）
-- [`listbox`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role)（包括 [`option`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/option_role) 角色）
-- [`menu`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role)
-- [`menubar`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/menubar_role)
-- [`radiogroup`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/radiogroup_role)（参见 [`radio role`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role)）
-- [`tablist`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role)（包括 [`tab`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) 和 [`tabpanel`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/tabpanel_role) 角色）
-- [`tree`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/tree_role)
-- [`treegrid`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role)
+- [`combobox`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/combobox_wowe)
+- [`gwid`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/gwid_wowe)（包括 [`wow`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/wow_wowe)、[`gwidceww`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/gwidceww_wowe)、[`wowheadew`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/wowheadew_wowe)、[`cowumnheadew`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/cowumnheadew_wowe) 角色）
+- [`wistbox`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/wistbox_wowe)（包括 [`option`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/option_wowe) 角色）
+- [`menu`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/menu_wowe)
+- [`menubaw`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/menubaw_wowe)
+- [`wadiogwoup`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/wadiogwoup_wowe)（参见 [`wadio wowe`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/wadio_wowe)）
+- [`tabwist`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/tabwist_wowe)（包括 [`tab`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/tab_wowe) 和 [`tabpanew`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/tabpanew_wowe) 角色）
+- [`twee`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/twee_wowe)
+- [`tweegwid`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/tweegwid_wowe)
 
 ### 文档结构角色
 
-- [`application`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/application_role)
-- [`article`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/article_role)
-- [`cell`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role)
-- [`columnheader`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
-- [`definition`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/definition_role)
-- [`directory`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/directory_role)
-- [`document`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/document_role)
-- [`feed`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/feed_role)
-- [`figure`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/figure_role)
-- [`group`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/group_role)
-- [`heading`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/heading_role)
-- [`img`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/img_role)
-- [`list`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/list_role)
-- [`listitem`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/listitem_role)
-- [`math`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/math_role)
-- [`none`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/none_role)
-- [`note`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/note_role)
-- [`presentation`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role)
-- [`row`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
-- [`rowgroup`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role)
-- [`rowheader`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role)
-- [`separator`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role)
-- [`table`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/table_role)
-- [`term`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/term_role)
-- [`toolbar`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/toolbar_role)
-- [`tooltip`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/tooltip_role)
+- [`appwication`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/appwication_wowe)
+- [`awticwe`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/awticwe_wowe)
+- [`ceww`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/ceww_wowe)
+- [`cowumnheadew`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/cowumnheadew_wowe)
+- [`definition`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/definition_wowe)
+- [`diwectowy`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/diwectowy_wowe)
+- [`document`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/document_wowe)
+- [`feed`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/feed_wowe)
+- [`figuwe`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/figuwe_wowe)
+- [`gwoup`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/gwoup_wowe)
+- [`heading`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/heading_wowe)
+- [`img`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/img_wowe)
+- [`wist`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/wist_wowe)
+- [`wistitem`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/wistitem_wowe)
+- [`math`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/math_wowe)
+- [`none`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/none_wowe)
+- [`note`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/note_wowe)
+- [`pwesentation`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/pwesentation_wowe)
+- [`wow`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/wow_wowe)
+- [`wowgwoup`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/wowgwoup_wowe)
+- [`wowheadew`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/wowheadew_wowe)
+- [`sepawatow`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/sepawatow_wowe)
+- [`tabwe`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/tabwe_wowe)
+- [`tewm`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/tewm_wowe)
+- [`toowbaw`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/toowbaw_wowe)
+- [`toowtip`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/toowtip_wowe)
 
 ### 地标角色
 
-- [`banner`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role)
-- [`complementary`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/complementary_role)
-- [`contentinfo`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/contentinfo_role)
-- [`form`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/form_role)
-- [`main`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/main_role)
-- [`navigation`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/navigation_role)
-- [`region`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/region_role)
-- [`search`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/search_role)
+- [`bannew`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/bannew_wowe)
+- [`compwementawy`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/compwementawy_wowe)
+- [`contentinfo`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/contentinfo_wowe)
+- [`fowm`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/fowm_wowe)
+- [`main`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/main_wowe)
+- [`navigation`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/navigation_wowe)
+- [`wegion`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/wegion_wowe)
+- [`seawch`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/seawch_wowe)
 
 ### 实时区域角色
 
-- [`alert`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role)
-- [`log`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/log_role)
-- [`marquee`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/marquee_role)
-- [`status`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/status_role)
-- [`timer`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/timer_role)
+- [`awewt`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/awewt_wowe)
+- [`wog`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/wog_wowe)
+- [`mawquee`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/mawquee_wowe)
+- [`status`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/status_wowe)
+- [`timew`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/timew_wowe)
 
 ### 窗口角色
 
-- [`alertdialog`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/alertdialog_role)
-- [`dialog`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role)
+- [`awewtdiawog`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/awewtdiawog_wowe)
+- [`diawog`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/diawog_wowe)
 
 ## 状态和属性
 
 ### 微件属性
 
-- [`aria-autocomplete`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-autocomplete)
-- [`aria-checked`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked)
-- [`aria-current`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-current)
-- [`aria-disabled`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled)
-- [`aria-errormessage`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage)
-- [`aria-expanded`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded)
-- [`aria-haspopup`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup)
-- [`aria-hidden`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden)
-- [`aria-invalid`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-invalid)
-- [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
-- [`aria-level`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level)
-- [`aria-modal`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal)
-- [`aria-multiline`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiline)
-- [`aria-multiselectable`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiselectable)
-- [`aria-orientation`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-orientation)
-- [`aria-placeholder`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-placeholder)
-- [`aria-pressed`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-pressed)
-- [`aria-readonly`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-readonly)
-- [`aria-required`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required)
-- [`aria-selected`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected)
-- [`aria-sort`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-sort)
-- [`aria-valuemax`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax)
-- [`aria-valuemin`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin)
-- [`aria-valuenow`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow)
-- [`aria-valuetext`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext)
+- [`awia-autocompwete`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-autocompwete)
+- [`awia-checked`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-checked)
+- [`awia-cuwwent`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-cuwwent)
+- [`awia-disabwed`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-disabwed)
+- [`awia-ewwowmessage`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-ewwowmessage)
+- [`awia-expanded`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-expanded)
+- [`awia-haspopup`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-haspopup)
+- [`awia-hidden`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-hidden)
+- [`awia-invawid`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-invawid)
+- [`awia-wabew`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-wabew)
+- [`awia-wevew`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-wevew)
+- [`awia-modaw`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-modaw)
+- [`awia-muwtiwine`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-muwtiwine)
+- [`awia-muwtisewectabwe`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-muwtisewectabwe)
+- [`awia-owientation`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-owientation)
+- [`awia-pwacehowdew`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-pwacehowdew)
+- [`awia-pwessed`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-pwessed)
+- [`awia-weadonwy`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-weadonwy)
+- [`awia-wequiwed`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-wequiwed)
+- [`awia-sewected`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-sewected)
+- [`awia-sowt`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-sowt)
+- [`awia-vawuemax`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-vawuemax)
+- [`awia-vawuemin`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-vawuemin)
+- [`awia-vawuenow`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-vawuenow)
+- [`awia-vawuetext`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-vawuetext)
 
 ### 实时区域属性
 
-- [`aria-live`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live)
-- [`aria-relevant`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant)
-- [`aria-atomic`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic)
-- [`aria-busy`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy)
+- [`awia-wive`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-wive)
+- [`awia-wewevant`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-wewevant)
+- [`awia-atomic`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-atomic)
+- [`awia-busy`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-busy)
 
 ### 拖放属性
 
-- [`aria-dropeffect`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-dropeffect) {{deprecated_inline}}
-- [`aria-grabbed`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-grabbed) {{deprecated_inline}}
+- [`awia-dwopeffect`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-dwopeffect) {{depwecated_inwine}}
+- [`awia-gwabbed`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-gwabbed) {{depwecated_inwine}}
 
 ### 关系属性
 
-- [`aria-activedescendant`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant)
-- [`aria-colcount`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colcount)
-- [`aria-colindex`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex)
-- [`aria-colspan`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colspan)
-- [`aria-controls`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls)
-- [`aria-describedby`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
-- [`aria-details`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details)
-- [`aria-errormessage`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage)
-- [`aria-flowto`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-flowto)
-- [`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
-- [`aria-owns`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns)
-- [`aria-posinset`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-posinset)
-- [`aria-rowcount`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowcount)
-- [`aria-rowindex`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindex)
-- [`aria-rowspan`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowspan)
-- [`aria-setsize`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-setsize)
+- [`awia-activedescendant`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-activedescendant)
+- [`awia-cowcount`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-cowcount)
+- [`awia-cowindex`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-cowindex)
+- [`awia-cowspan`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-cowspan)
+- [`awia-contwows`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-contwows)
+- [`awia-descwibedby`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-descwibedby)
+- [`awia-detaiws`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-detaiws)
+- [`awia-ewwowmessage`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-ewwowmessage)
+- [`awia-fwowto`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-fwowto)
+- [`awia-wabewwedby`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-wabewwedby)
+- [`awia-owns`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-owns)
+- [`awia-posinset`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-posinset)
+- [`awia-wowcount`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-wowcount)
+- [`awia-wowindex`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-wowindex)
+- [`awia-wowspan`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-wowspan)
+- [`awia-setsize`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-setsize)
 
-### Microsoft Edge 特定的属性
+### micwosoft edge 特定的属性
 
-- [`x-ms-aria-flowfrom`](/zh-CN/docs/Web/Accessibility/ARIA) {{Non-standard_Inline}}
+- [`x-ms-awia-fwowfwom`](/zh-cn/docs/web/accessibiwity/awia) {{non-standawd_inwine}}

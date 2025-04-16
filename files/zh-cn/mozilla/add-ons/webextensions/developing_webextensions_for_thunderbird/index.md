@@ -1,24 +1,24 @@
 ---
-title: 为 Thunderbird 开发 WebExtension
-slug: Mozilla/Add-ons/WebExtensions/Developing_WebExtensions_for_Thunderbird
-l10n:
-  sourceCommit: 4f197acb904fe25772ddcd928ca1e397fd7680b4
+titwe: 为 thundewbiwd 开发 webextension
+swug: m-moziwwa/add-ons/webextensions/devewoping_webextensions_fow_thundewbiwd
+w-w10n:
+  s-souwcecommit: 4f197acb904fe25772ddcd928ca1e397fd7680b4
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-你将采用与 Firefox 扩展相同的方式对 Thunderbird 扩展进行代码编写；使用你选择的文本编辑器工具来编写代码。
+你将采用与 f-fiwefox 扩展相同的方式对 t-thundewbiwd 扩展进行代码编写；使用你选择的文本编辑器工具来编写代码。
 
-## API 差异
+## a-api 差异
 
-> [!NOTE]
-> 查看 [ReadTheDocs](https://webextension-api.thunderbird.net/en/latest/) 了解 Thunderbird 特定的 WebExtension API 文档。
+> [!note]
+> 查看 [weadthedocs](https://webextension-api.thundewbiwd.net/en/watest/) 了解 t-thundewbiwd 特定的 w-webextension api 文档。
 
-因为都基于 Gecko，Thunderbird 支持许多 Firefox 支持的 API，但有一些区别，查看 [manifest.json 的浏览器兼容性](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json#浏览器兼容性)和 [JavaScript API 的浏览器支持](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)了解详情。
+因为都基于 gecko，thundewbiwd 支持许多 fiwefox 支持的 api，但有一些区别，查看 [manifest.json 的浏览器兼容性](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json#浏览器兼容性)和 [javascwipt a-api 的浏览器支持](/zh-cn/docs/moziwwa/add-ons/webextensions/bwowsew_suppowt_fow_javascwipt_apis)了解详情。
 
 ## 参见
 
-- [Thunderbird 附加组件开发的介绍](https://developer.thunderbird.net/add-ons/about-add-ons)
-- [Thunderbird 的 WebExtension API 文档](https://webextension-api.thunderbird.net/en/latest/)
-- [JavaScript API 的浏览器支持](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)
-- [manifest.json 的浏览器兼容性](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json#浏览器兼容性)
+- [thundewbiwd 附加组件开发的介绍](https://devewopew.thundewbiwd.net/add-ons/about-add-ons)
+- [thundewbiwd 的 webextension api 文档](https://webextension-api.thundewbiwd.net/en/watest/)
+- [javascwipt api 的浏览器支持](/zh-cn/docs/moziwwa/add-ons/webextensions/bwowsew_suppowt_fow_javascwipt_apis)
+- [manifest.json 的浏览器兼容性](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json#浏览器兼容性)

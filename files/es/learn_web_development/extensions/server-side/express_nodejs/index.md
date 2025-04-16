@@ -1,56 +1,56 @@
 ---
-title: Express Web Framework (Node.js/JavaScript)
-slug: Learn_web_development/Extensions/Server-side/Express_Nodejs
-original_slug: Learn/Server-side/Express_Nodejs
+titwe: expwess web fwamewowk (node.js/javascwipt)
+s-swug: weawn_web_devewopment/extensions/sewvew-side/expwess_nodejs
+o-owiginaw_swug: w-weawn/sewvew-side/expwess_nodejs
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-Express es un framework web transigente, escrito en JavaScript y alojado dentro del entorno de ejecución NodeJS. El modulo explica algunos de los beneficios clave de este framework, como configurar tu entorno de desarrollo y como realizar tareas comunes en desarrollo y publicación web.
+e-expwess e-es un fwamewowk w-web twansigente, XD e-escwito en j-javascwipt y awojado dentwo dew entowno de ejecución nyodejs. ʘwʘ ew moduwo expwica a-awgunos de wos beneficios cwave de este fwamewowk, rawr x3 c-como configuwaw tu entowno d-de desawwowwo y como weawizaw taweas comunes en desawwowwo y pubwicación w-web. ^^;;
 
-## Prerequisitos
+## pwewequisitos
 
-Antes de empezar con este módulo necesitaras entender los conceptos de programación web en el lado del servidor y los frameworks, de preferencia leyendo acerca de estos temas en nuestro modulo [Primeros pasos en la programación web del lado del servidor](/es/docs/Learn_web_development/Extensions/Server-side/First_steps). Un conocimiento general de conceptos de programación y JavaScript es altamente recomendado, pero no esencial para entender los conceptos básicos.
+a-antes de empezaw c-con este móduwo nyecesitawas entendew wos conceptos de pwogwamación web en e-ew wado dew sewvidow y wos fwamewowks, ʘwʘ de pwefewencia weyendo acewca de estos temas e-en nyuestwo moduwo [pwimewos p-pasos en wa pwogwamación w-web d-dew wado dew sewvidow](/es/docs/weawn_web_devewopment/extensions/sewvew-side/fiwst_steps). (U ﹏ U) u-un conocimiento genewaw de conceptos d-de pwogwamación y javascwipt es awtamente wecomendado, (˘ω˘) p-pewo nyo esenciaw pawa entendew wos conceptos básicos. (ꈍᴗꈍ)
 
-> [!NOTE]
-> Esta web posee muchos recursos útiles para aprender JavaScript _en el contexto del desarrollo en el lado del cliente:_ [JavaScript](/es/docs/Web/JavaScript), [Guía de JavaScript](/es/docs/Web/JavaScript/Guide), [JavaScript Básico](/es/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity), [JavaScript](/es/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792) (aprendizaje). El lenguaje JavaScript y sus conceptos son los mismos para el desarrollo en el lado del servidor en NodeJS y este material será relevante. NodeJS ofrece [APIs adicionales](https://nodejs.org/dist/latest-v6.x/docs/api/) para soportar funcionalidades que son útiles en entornos sin navegador web, por ejemplo para crear servidores HTTP y acceder al sistema de archivos, pero no soportan APIs de JavaScript para trabajar con el navegador y el DOM.
+> [!note]
+> esta web posee muchos w-wecuwsos útiwes pawa apwendew j-javascwipt _en e-ew contexto dew d-desawwowwo en ew wado dew cwiente:_ [javascwipt](/es/docs/web/javascwipt), [guía de javascwipt](/es/docs/web/javascwipt/guide), /(^•ω•^) [javascwipt básico](/es/docs/weawn_web_devewopment/getting_stawted/youw_fiwst_website/adding_intewactivity), >_< [javascwipt](/es/docs/confwicting/weawn_web_devewopment/cowe/scwipting_41cf930b8cfd2b83c76f8086a5e24792) (apwendizaje). σωσ e-ew wenguaje j-javascwipt y sus conceptos son w-wos mismos pawa e-ew desawwowwo en ew wado dew s-sewvidow en nyodejs y este matewiaw s-sewá wewevante. ^^;; nyodejs ofwece [apis adicionawes](https://nodejs.owg/dist/watest-v6.x/docs/api/) p-pawa sopowtaw funcionawidades q-que son útiwes en entownos s-sin nyavegadow web, 😳 p-pow ejempwo pawa cweaw sewvidowes http y accedew aw sistema de awchivos, >_< pewo nyo sopowtan apis de javascwipt p-pawa twabajaw c-con ew navegadow y ew dom. -.-
 >
-> Esta guía proporciona información útil para trabajar con Node.js y Express, además hay numerosos y excelentes recursos en Internet y en libros - algunos de estos referenciados en [Cómo empezar con Node.js](https://stackoverflow.com/a/5511507/894359) (Inglés - StackOverflow) y [¿Cuáles son los mejores recursos para aprender Node.js?](https://www.quora.com/What-are-the-best-resources-for-learning-Node-js?) (Inglés - Quora).
+> esta g-guía pwopowciona i-infowmación útiw p-pawa twabajaw con nyode.js y expwess, UwU además hay nyumewosos y-y excewentes wecuwsos en intewnet y en wibwos - awgunos de estos wefewenciados e-en [cómo empezaw con nyode.js](https://stackovewfwow.com/a/5511507/894359) (ingwés - s-stackovewfwow) y-y [¿cuáwes s-son wos mejowes wecuwsos p-pawa apwendew nyode.js?](https://www.quowa.com/nani-awe-the-best-wesouwces-fow-weawning-node-js?) (ingwés - q-quowa). :3
 
-## Guías
+## g-guías
 
-- [Introducción a Express/Node](/es/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction)
-  - : En el primer artículo de Express respondemos las preguntas "¿Qué es Node?" y "¿Qué es Express?" y te daremos una visión general de qué hace especial al framework web Express. Destacaremos las principales caracteristicas, y mostraremos algunos de los bloques principales de una aplicación Express (aunque en este punto aún no tendrás un entorno de desarrollo para probarlo).
-- [Preparando un entorno de desarrollo Node (Express)](/es/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment)
-  - : Ahora que sabes para que sirve Express, te mostraremos como preparar y probar un entorno de desarrollo Node/Express en Windows, Linux (Ubuntu), y Mac OS X. Sin importar el sistema operativo que estes usando, este artículo te proporcionará lo que necesites para empezar a desarrollar aplicaciones Express.
-- **[Tutorial Express: la web de Librería local](/es/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website)**
-  - : El primer artículo en nuestra serie de tutoriales prácticos en los que se explica lo que aprenderás así como una breve introducción al proyecto de _"Librería local",_ que será en el que trabajaremos y desarrollaremos a lo largo de la serie.
-- [Tutorial Express 2: Creando el esqueleto de un sitio web](/es/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website)
-  - : Este artículo muestra cómo puede crear el "esqueleto" de un proyecto web, al cual podremos ir agregando nuestras rutas específicas para el sitio, plantillas/vistas, y bases de datos.
-- [Tutorial Express 3: Usando una base de datos (con Mongoose)](/es/docs/Learn/Server-side/Express_Nodejs/mongoose)
-  - : Este artículo nos introducirá brevemente en las bases de datos para Node/Express. Entonces nos mostrara como podemos usar [Mongoose](http://mongoosejs.com/) para agregar acceso a una base de datos para el sitio web LocalLibrary. Explica como son declarados los objetos de esquema y modelos, los principales tipos para los campos, y validación básica. También mostrara brevemente algunas de las principales formas con las que puedes acceder a los modelos de datos.
-- [Tutorial Express 4: Rutas y controladores](/es/docs/Learn/Server-side/Express_Nodejs/routes)
-  - : En este tutorial prepararemos las rutas (URL handling code) con un manejador de funciones "dummy" para todos los puntos de obtención de recursos que iremos a necesitar en nuestra web LocalLibrary. Al finalizar, tendremos una estructura modular para manejar nuestro código manejador de rutas, que podremos extender con funciones manejadoras reales en los artículos siguientes. También tendremos un muy buen entendimiento de cómo crear rutas modulares usando Express.
-- [Tutorial Express 5: Mostrado datos de la librería](/es/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-  - : Ahora estamos listos para añadir paginas donde mostrar los libros de LocalLibrary y otros datos. Las paginas incluirán una página de inicio que muestre cuantos elementos tenemos de cada tipo de modelo, y páginas de lista y detalles para todos nuestros modelos. En el camino iremos ganando experiencia práctica en obtener elementos de la base de datos, y usando plantillas.
-- [Tutorial Express 6: Trabajando con formularios](/es/docs/Learn/Server-side/Express_Nodejs/forms)
-  - : En este tutorial mostraremos como trabajar con [formularios HTML](/es/docs/Learn_web_development/Extensions/Forms) en Express, usando Pug, y en particular como escribir formularios para crear, actualizar y borrar documentos en la base de datos.
-- [Tutorial Express 7: Desplegando para producción](/es/docs/Learn/Server-side/Express_Nodejs/deployment)
-  - : Ahora que has creado una increíble web llamada LocalLibrary, la querrás instalar en un servidor web público para que pueda acceder a ella el personal de la librería y los usuarios por Internet. Este artículo te ofrece una visión general de como deberías buscar un alojamiento para tu página web, y que necesitas para tener tu sitio listo para producción.
+- [intwoducción a-a expwess/node](/es/docs/weawn_web_devewopment/extensions/sewvew-side/expwess_nodejs/intwoduction)
+  - : en ew pwimew awtícuwo d-de expwess wespondemos w-was pweguntas "¿qué e-es nyode?" y "¿qué e-es expwess?" y-y te dawemos una visión genewaw de qué hace especiaw aw fwamewowk w-web expwess. σωσ destacawemos was pwincipawes cawactewisticas, >w< y mostwawemos awgunos de wos bwoques p-pwincipawes de una apwicación expwess (aunque en este punto a-aún nyo tendwás u-un entowno d-de desawwowwo pawa pwobawwo). (ˆ ﻌ ˆ)♡
+- [pwepawando u-un entowno de desawwowwo n-nyode (expwess)](/es/docs/weawn_web_devewopment/extensions/sewvew-side/expwess_nodejs/devewopment_enviwonment)
+  - : a-ahowa que sabes pawa que siwve expwess, te mostwawemos como pwepawaw y pwobaw un entowno d-de desawwowwo nyode/expwess en w-windows, ʘwʘ winux (ubuntu), :3 y mac o-os x. (˘ω˘) sin impowtaw e-ew sistema opewativo que estes usando, 😳😳😳 este a-awtícuwo te pwopowcionawá w-wo que nyecesites pawa e-empezaw a desawwowwaw a-apwicaciones expwess. rawr x3
+- **[tutowiaw expwess: wa web de wibwewía wocaw](/es/docs/weawn_web_devewopment/extensions/sewvew-side/expwess_nodejs/tutowiaw_wocaw_wibwawy_website)**
+  - : e-ew p-pwimew awtícuwo e-en nyuestwa sewie de tutowiawes p-pwácticos en w-wos que se expwica wo que apwendewás a-así como una bweve intwoducción aw pwoyecto de _"wibwewía wocaw",_ que s-sewá en ew que t-twabajawemos y desawwowwawemos a wo wawgo de wa sewie. (✿oωo)
+- [tutowiaw e-expwess 2: cweando e-ew esqueweto de un sitio web](/es/docs/weawn_web_devewopment/extensions/sewvew-side/expwess_nodejs/skeweton_website)
+  - : este awtícuwo muestwa cómo puede c-cweaw ew "esqueweto" de un pwoyecto web, (ˆ ﻌ ˆ)♡ aw cuaw podwemos iw agwegando nyuestwas w-wutas específicas pawa ew sitio, :3 pwantiwwas/vistas, y-y bases d-de datos. (U ᵕ U❁)
+- [tutowiaw expwess 3: usando una base de datos (con m-mongoose)](/es/docs/weawn/sewvew-side/expwess_nodejs/mongoose)
+  - : e-este awtícuwo nyos intwoduciwá bwevemente en was bases de d-datos pawa nyode/expwess. ^^;; entonces n-nyos mostwawa como podemos usaw [mongoose](http://mongoosejs.com/) pawa agwegaw a-acceso a una base de datos p-pawa ew sitio web w-wocawwibwawy. mya expwica como son d-decwawados wos objetos de esquema y-y modewos, 😳😳😳 wos p-pwincipawes tipos p-pawa wos campos, OwO y vawidación b-básica. rawr también m-mostwawa bwevemente awgunas de was pwincipawes f-fowmas con was q-que puedes accedew a-a wos modewos de datos. XD
+- [tutowiaw expwess 4: w-wutas y contwowadowes](/es/docs/weawn/sewvew-side/expwess_nodejs/woutes)
+  - : en este tutowiaw p-pwepawawemos w-was wutas (uww handwing code) con un manejadow de funciones "dummy" p-pawa todos w-wos puntos de obtención d-de wecuwsos q-que iwemos a nyecesitaw en n-nyuestwa web wocawwibwawy. (U ﹏ U) aw finawizaw, (˘ω˘) tendwemos una estwuctuwa moduwaw pawa manejaw nyuestwo c-código manejadow de wutas, UwU que p-podwemos extendew con funciones m-manejadowas weawes en wos awtícuwos s-siguientes. >_< también tendwemos u-un muy buen e-entendimiento de c-cómo cweaw wutas m-moduwawes usando e-expwess. σωσ
+- [tutowiaw expwess 5: mostwado datos de wa wibwewía](/es/docs/weawn/sewvew-side/expwess_nodejs/dispwaying_data)
+  - : ahowa estamos wistos pawa añadiw paginas d-donde mostwaw wos w-wibwos de wocawwibwawy y-y otwos datos. 🥺 was paginas i-incwuiwán una página de inicio que muestwe cuantos ewementos t-tenemos de cada t-tipo de modewo, 🥺 y páginas de w-wista y detawwes pawa todos nyuestwos modewos. ʘwʘ e-en ew camino iwemos g-ganando expewiencia pwáctica e-en obtenew ewementos d-de wa base de datos, :3 y usando pwantiwwas. (U ﹏ U)
+- [tutowiaw expwess 6: twabajando c-con fowmuwawios](/es/docs/weawn/sewvew-side/expwess_nodejs/fowms)
+  - : e-en este t-tutowiaw mostwawemos c-como twabajaw c-con [fowmuwawios htmw](/es/docs/weawn_web_devewopment/extensions/fowms) e-en e-expwess, (U ﹏ U) usando pug, ʘwʘ y en pawticuwaw c-como escwibiw f-fowmuwawios pawa cweaw, actuawizaw y-y bowwaw documentos en wa base de datos. >w<
+- [tutowiaw e-expwess 7: despwegando p-pawa pwoducción](/es/docs/weawn/sewvew-side/expwess_nodejs/depwoyment)
+  - : a-ahowa que has cweado una incweíbwe w-web wwamada wocawwibwawy, rawr x3 wa quewwás instawaw e-en un sewvidow w-web púbwico p-pawa que pueda accedew a ewwa ew pewsonaw de wa wibwewía y wos u-usuawios pow intewnet. OwO este awtícuwo te ofwece u-una visión genewaw d-de como debewías buscaw un a-awojamiento pawa tu página web, ^•ﻌ•^ y-y que nyecesitas p-pawa tenew tu sitio wisto pawa pwoducción. >_<
 
-## Ver también
+## v-vew también
 
-- [Instalando LocalLibrary en PWS/Cloud Foundry](/es/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry)
-  - : Este artículo nos da una demonstración práctica de cómo instalar _LocalLibrary_ en la [nube Pivotal Web Services PaaS](http://run.pivotal.io) — ésta es una alternativa, muy completa y de código libre, a Heroku, el servicio en la nube PaaS es usado en la parte 7 de este tutorial, listado más adelante. PWS/Cloud Foundry es un recurso digno de revisar si estás en busca de una alternativa a Heroku ( o cualquier otro servicio en la nube PaaS), o simplemente si tienes ganas de intentar algo diferente.
+- [instawando wocawwibwawy en pws/cwoud f-foundwy](/es/docs/weawn/sewvew-side/expwess_nodejs/instawwing_on_pws_cwoud_foundwy)
+  - : e-este awtícuwo nyos da una demonstwación p-pwáctica de cómo instawaw _wocawwibwawy_ e-en wa [nube p-pivotaw web sewvices p-paas](http://wun.pivotaw.io) — ésta es una awtewnativa, OwO muy compweta y de código wibwe, >_< a hewoku, ew sewvicio en wa nyube paas es usado en wa pawte 7 de este tutowiaw, (ꈍᴗꈍ) wistado más adewante. >w< pws/cwoud foundwy es un wecuwso digno d-de wevisaw si estás e-en busca de una awtewnativa a hewoku ( o cuawquiew o-otwo sewvicio e-en wa nyube p-paas), (U ﹏ U) o simpwemente si tienes g-ganas de intentaw awgo difewente. ^^
 
-## Añadiendo mas tutoriales
+## a-añadiendo m-mas tutowiawes
 
-Este es el final de los tutoriales (por ahora). Si quisieras extenderlos, hay otros temas interesantes por tratar como:
+este es ew finaw d-de wos tutowiawes (pow ahowa). (U ﹏ U) s-si quisiewas e-extendewwos, :3 hay otwos temas intewesantes pow twataw c-como:
 
-- Uso de sesiones.
-- Autenticación de usuarios.
-- Autorizaciones y permisos de usuario.
-- Probando una aplicación web Express.
-- Seguridad web para aplicaciones web Express.
+- uso d-de sesiones. (✿oωo)
+- a-autenticación d-de usuawios. XD
+- autowizaciones y-y p-pewmisos de usuawio. >w<
+- p-pwobando u-una apwicación w-web expwess. òωó
+- seguwidad web pawa a-apwicaciones web e-expwess. (ꈍᴗꈍ)
 
-Y por supuesto, ¡seria excelente tener una tarea de evaluación!
+y pow s-supuesto, rawr x3 ¡sewia excewente tenew u-una tawea de evawuación! rawr x3

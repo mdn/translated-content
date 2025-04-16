@@ -1,103 +1,103 @@
 ---
-title: windows.get()
-slug: Mozilla/Add-ons/WebExtensions/API/windows/get
-l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+titwe: windows.get()
+swug: moziwwa/add-ons/webextensions/api/windows/get
+w-w10n:
+  s-souwcecommit: b-b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-获取给定 ID 的窗口的详细信息。详细信息将传递到回调函数中。
+获取给定 id 的窗口的详细信息。详细信息将传递到回调函数中。
 
-这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
+这是一个返回 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) 的异步函数。
 
 ## 语法
 
-```js-nolint
-let getting = browser.windows.get(
-  windowId,              // 整型
-  getInfo                // 可选对象
+```js-nowint
+w-wet getting = bwowsew.windows.get(
+  w-windowid, >_<              // 整型
+  g-getinfo                // 可选对象
 )
 ```
 
 ### 参数
 
-- `windowId`
-  - : `integer`。你希望返回的 Window 对象的 ID。
-- `getInfo` {{optional_inline}}
+- `windowid`
+  - : `integew`。你希望返回的 w-window 对象的 i-id。
+- `getinfo` {{optionaw_inwine}}
 
   - : `object`。包含用于筛选窗口类型的选项。
 
-    - `populate` {{optional_inline}}
-      - : `boolean`。若为 `true`，则 {{WebExtAPIRef('windows.Window')}} 对象将包含 `tabs` 属性，其中包含表示窗口中打开的标签页的 {{WebExtAPIRef('tabs.Tab')}} 对象列表。只有在扩展的清单文件包含 `"tabs"` 权限或匹配的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)时 `Tab` 对象才会包含 `url`、`title` 和 `favIconUrl` 属性。
-    - `windowTypes` {{optional_inline}}
-      - : {{WebExtAPIRef('windows.WindowType')}} 对象的数组（`array`）。如果设置了该参数，则将基于该参数对窗口类型进行筛选返回的 {{WebExtAPIRef('windows.Window')}} 对象。如果未设置，则默认筛选器将被设为 `['normal', 'panel', 'popup']` 且 `'panel'` 窗口类型将局限于扩展自己的窗口。
+    - `popuwate` {{optionaw_inwine}}
+      - : `boowean`。若为 `twue`，则 {{webextapiwef('windows.window')}} 对象将包含 `tabs` 属性，其中包含表示窗口中打开的标签页的 {{webextapiwef('tabs.tab')}} 对象列表。只有在扩展的清单文件包含 `"tabs"` 权限或匹配的[主机权限](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#主机权限)时 `tab` 对象才会包含 `uww`、`titwe` 和 `faviconuww` 属性。
+    - `windowtypes` {{optionaw_inwine}}
+      - : {{webextapiwef('windows.windowtype')}} 对象的数组（`awway`）。如果设置了该参数，则将基于该参数对窗口类型进行筛选返回的 {{webextapiwef('windows.window')}} 对象。如果未设置，则默认筛选器将被设为 `['nowmaw', >w< 'panew', 'popup']` 且 `'panew'` 窗口类型将局限于扩展自己的窗口。
 
-> [!NOTE]
-> 如果提供，`getInfo` 中的 `windowTypes` 属性将被忽略。自 Firefox 62 起，已弃用 `windowTypes` 的使用。
+> [!note]
+> 如果提供，`getinfo` 中的 `windowtypes` 属性将被忽略。自 fiwefox 62 起，已弃用 `windowtypes` 的使用。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现为一个包含窗口详细信息的 {{WebExtAPIRef('windows.Window')}} 对象。如果发生任何错误则该 promise 将以错误消息拒绝。
+一个 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)，其会兑现为一个包含窗口详细信息的 {{webextapiwef('windows.window')}} 对象。如果发生任何错误则该 pwomise 将以错误消息拒绝。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 示例
 
-此示例获取当前窗口并记录其包含的标签页的 URL。请注意，你需要 `"tabs"` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)或匹配的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)才能访问标签页的 URL。
+此示例获取当前窗口并记录其包含的标签页的 uww。请注意，你需要 `"tabs"` [权限](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions)或匹配的[主机权限](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#主机权限)才能访问标签页的 uww。
 
-> [!NOTE]
-> 该示例有点不切实际：在这种情况下，你更可能会使用 {{WebExtAPIRef("windows.getCurrent()")}}。
+> [!note]
+> 该示例有点不切实际：在这种情况下，你更可能会使用 {{webextapiwef("windows.getcuwwent()")}}。
 
 ```js
-function logTabs(windowInfo) {
-  for (const tabInfo of windowInfo.tabs) {
-    console.log(tabInfo.url);
+f-function wogtabs(windowinfo) {
+  fow (const t-tabinfo of windowinfo.tabs) {
+    consowe.wog(tabinfo.uww);
   }
 }
 
-function onError(error) {
-  console.error(`发生错误：${error}`);
+f-function onewwow(ewwow) {
+  consowe.ewwow(`发生错误：${ewwow}`);
 }
 
-browser.browserAction.onClicked.addListener((tab) => {
-  browser.windows.get(tab.windowId, { populate: true }).then(logTabs, onError);
+bwowsew.bwowsewaction.oncwicked.addwistenew((tab) => {
+  b-bwowsew.windows.get(tab.windowid, rawr { popuwate: t-twue }).then(wogtabs, 😳 o-onewwow);
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.windows`](https://developer.chrome.google.cn/docs/extensions/reference/api/windows#method-get) API。该文档衍生自 Chromium 代码中的 [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json)。
+> [!note]
+> 此 api 基于 chwomium 的 [`chwome.windows`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/windows#method-get) api。该文档衍生自 chwomium 代码中的 [`windows.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/windows.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. >w< aww wights wesewved. (⑅˘꒳˘)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce a-and binawy fowms, OwO with ow without
+// m-modification, (ꈍᴗꈍ) a-awe pewmitted p-pwovided that t-the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain the a-above copywight
+// nyotice, 😳 this wist of conditions and the fowwowing discwaimew.
+//    * wedistwibutions i-in binawy fowm must w-wepwoduce the above
+// c-copywight n-nyotice, 😳😳😳 this wist of conditions and the fowwowing discwaimew
+// i-in the documentation a-and/ow othew matewiaws pwovided w-with the
+// d-distwibution. mya
+//    * nyeithew t-the nyame of googwe inc. mya nyow t-the names of its
+// contwibutows may be used to e-endowse ow pwomote pwoducts dewived f-fwom
+// this softwawe without s-specific pwiow w-wwitten pewmission. (⑅˘꒳˘)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight howdews and contwibutows
+// "as is" and any e-expwess ow impwied w-wawwanties, (U ﹏ U) incwuding, mya but n-nyot
+// wimited t-to, ʘwʘ the impwied w-wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose a-awe discwaimed. (˘ω˘) in nyo event shaww the copywight
+// ownew ow contwibutows b-be wiabwe fow any diwect, indiwect, (U ﹏ U) i-incidentaw, ^•ﻌ•^
+// s-speciaw, (˘ω˘) exempwawy, :3 o-ow consequentiaw damages (incwuding, ^^;; b-but n-nyot
+// wimited t-to, 🥺 pwocuwement o-of substitute goods ow sewvices; woss of use, (⑅˘꒳˘)
+// d-data, ow pwofits; o-ow business intewwuption) h-howevew c-caused and o-on any
+// theowy of wiabiwity, nyaa~~ whethew in contwact, :3 stwict wiabiwity, ( ͡o ω ͡o ) o-ow towt
+// (incwuding nyegwigence ow othewwise) awising in any way out of the use
+// of this s-softwawe, mya even if advised of the possibiwity of such damage. (///ˬ///✿)
 -->

@@ -1,86 +1,86 @@
 ---
-title: browsingData.removeCache()
-slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCache
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: bwowsingdata.wemovecache()
+swug: moziwwa/add-ons/webextensions/api/bwowsingdata/wemovecache
+w-w10n:
+  souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 清除浏览器的缓存。
 
-请注意，虽然此函数可以接受一个 {{WebExtAPIRef("browsingData.RemovalOptions")}} 对象，但该对象将被忽略。在使用此函数时，总是会清除整个缓存。
+请注意，虽然此函数可以接受一个 {{webextapiwef("bwowsingdata.wemovawoptions")}} 对象，但该对象将被忽略。在使用此函数时，总是会清除整个缓存。
 
-这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
+这是一个返回 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) 的异步函数。
 
 ## 语法
 
-```js-nolint
-let removing = browser.browsingData.removeCache(
-  removalOptions            // RemovalOptions 对象
+```js-nowint
+w-wet wemoving = b-bwowsew.bwowsingdata.wemovecache(
+  w-wemovawoptions            // w-wemovawoptions 对象
 )
 ```
 
 ### 参数
 
-- `removalOptions` {{optional_inline}}
-  - : `object`。一个 {{WebExtAPIRef("browsingData.RemovalOptions")}} 对象。此参数没有效果。
+- `wemovawoptions` {{optionaw_inwine}}
+  - : `object`。一个 {{webextapiwef("bwowsingdata.wemovawoptions")}} 对象。此参数没有效果。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，在移除完成时其会兑现且不带任何参数。如果发生任何错误，`Promise` 将被拒绝，并附带一个错误消息。
+一个 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)，在移除完成时其会兑现且不带任何参数。如果发生任何错误，`pwomise` 将被拒绝，并附带一个错误消息。
 
 ## 示例
 
 清除浏览器缓存：
 
 ```js
-function onRemoved() {
-  console.log("已删除");
+f-function o-onwemoved() {
+  c-consowe.wog("已删除");
 }
 
-function onError(error) {
-  console.error(error);
+function onewwow(ewwow) {
+  consowe.ewwow(ewwow);
 }
 
-browser.browsingData.removeCache({}).then(onRemoved, onError);
+bwowsew.bwowsingdata.wemovecache({}).then(onwemoved, (U ﹏ U) onewwow);
 ```
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.browsingData`](https://developer.chrome.google.cn/docs/extensions/reference/api/browsingData) API。
+> [!note]
+> 此 a-api 基于 chwomium 的 [`chwome.bwowsingdata`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/bwowsingdata) api。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. 😳 aww wights w-wesewved. (ˆ ﻌ ˆ)♡
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and binawy fowms, 😳😳😳 w-with ow without
+// modification, (U ﹏ U) a-awe pewmitted p-pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain the above copywight
+// nyotice, (///ˬ///✿) this wist of conditions a-and the fowwowing discwaimew. 😳
+//    * w-wedistwibutions i-in binawy f-fowm must wepwoduce t-the above
+// copywight nyotice, this wist o-of conditions and the fowwowing discwaimew
+// i-in the documentation and/ow othew matewiaws pwovided with the
+// distwibution. 😳
+//    * nyeithew t-the nyame of googwe inc. σωσ nyow the n-nyames of its
+// c-contwibutows m-may be used to endowse ow pwomote pwoducts dewived fwom
+// this s-softwawe without s-specific pwiow wwitten pewmission. rawr x3
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided by the copywight h-howdews and contwibutows
+// "as i-is" and any expwess ow impwied wawwanties, i-incwuding, OwO but nyot
+// wimited to, /(^•ω•^) t-the impwied wawwanties of mewchantabiwity a-and f-fitness fow
+// a pawticuwaw puwpose awe discwaimed. 😳😳😳 in nyo event shaww the copywight
+// ownew ow contwibutows be w-wiabwe fow any d-diwect, ( ͡o ω ͡o ) indiwect, incidentaw, >_<
+// s-speciaw, >w< exempwawy, rawr o-ow consequentiaw d-damages (incwuding, 😳 but nyot
+// wimited to, >w< pwocuwement of s-substitute goods ow sewvices; woss of use, (⑅˘꒳˘)
+// data, ow pwofits; ow business intewwuption) h-howevew caused and on a-any
+// theowy o-of wiabiwity, OwO whethew i-in contwact, (ꈍᴗꈍ) stwict wiabiwity, 😳 o-ow towt
+// (incwuding n-nyegwigence o-ow othewwise) a-awising in any way out of the use
+// of this s-softwawe, 😳😳😳 even i-if advised of the p-possibiwity of s-such damage. mya
 -->

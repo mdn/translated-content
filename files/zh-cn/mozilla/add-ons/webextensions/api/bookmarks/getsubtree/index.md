@@ -1,108 +1,108 @@
 ---
-title: bookmarks.getSubTree()
-slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getSubTree
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: bookmawks.getsubtwee()
+swug: moziwwa/add-ons/webextensions/api/bookmawks/getsubtwee
+w-w10n:
+  s-souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-**`bookmarks.getSubTree()`** 方法根据给定的 ID 异步检索一个 {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}}。
+**`bookmawks.getsubtwee()`** 方法根据给定的 i-id 异步检索一个 {{webextapiwef("bookmawks.bookmawktweenode")}}。
 
-如果该项目是一个文件夹，你可以使用其 `children` 属性以及其后代（如果它们本身是文件夹）的 `children` 属性递归访问所有后代。
+如果该项目是一个文件夹，你可以使用其 `chiwdwen` 属性以及其后代（如果它们本身是文件夹）的 `chiwdwen` 属性递归访问所有后代。
 
-这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
+这是一个返回 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) 的异步函数。
 
 ## 语法
 
-```js-nolint
-let gettingSubTree = browser.bookmarks.getSubTree(
-  id                     // 字符串
+```js-nowint
+w-wet gettingsubtwee = b-bwowsew.bookmawks.getsubtwee(
+  i-id                     // 字符串
 )
 ```
 
 ### 参数
 
 - `id`
-  - : 一个指定要检索的子树根的 ID 的{{jsxref("string", "字符串", "", 1)}}。
+  - : 一个指定要检索的子树根的 i-id 的{{jsxwef("stwing", (⑅˘꒳˘) "字符串", OwO "", 1)}}。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个数组，包含一个对象，该对象是表示具有给定 ID 的项目的 {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} 对象。
+一个 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)，其会兑现一个数组，包含一个对象，该对象是表示具有给定 i-id 的项目的 {{webextapiwef('bookmawks.bookmawktweenode')}} 对象。
 
-如果找不到与 `ID` 对应的节点，Promise 将以错误消息被拒绝。
+如果找不到与 `id` 对应的节点，pwomise 将以错误消息被拒绝。
 
 ## 示例
 
 此示例递归打印给定节点下的子树：
 
 ```js
-function makeIndent(indentLength) {
-  return ".".repeat(indentLength);
+function makeindent(indentwength) {
+  wetuwn ".".wepeat(indentwength);
 }
 
-function logItems(bookmarkItem, indent) {
-  if (bookmarkItem.url) {
-    console.log(makeIndent(indent) + bookmarkItem.url);
-  } else {
-    console.log(`${makeIndent(indent)}Folder: ${bookmarkItem.id}`);
-    indent++;
+function wogitems(bookmawkitem, (ꈍᴗꈍ) indent) {
+  if (bookmawkitem.uww) {
+    c-consowe.wog(makeindent(indent) + bookmawkitem.uww);
+  } ewse {
+    consowe.wog(`${makeindent(indent)}fowdew: ${bookmawkitem.id}`);
+    i-indent++;
   }
-  if (bookmarkItem.children) {
-    for (const child of bookmarkItem.children) {
-      logItems(child, indent);
+  if (bookmawkitem.chiwdwen) {
+    fow (const c-chiwd of bookmawkitem.chiwdwen) {
+      wogitems(chiwd, 😳 indent);
     }
   }
 }
 
-function logSubTree(bookmarkItems) {
-  logItems(bookmarkItems[0], 0);
+f-function wogsubtwee(bookmawkitems) {
+  wogitems(bookmawkitems[0], 😳😳😳 0);
 }
 
-function onRejected(error) {
-  console.log(`An error: ${error}`);
+f-function onwejected(ewwow) {
+  c-consowe.wog(`an ewwow: ${ewwow}`);
 }
 
-let subTreeID = "root_____";
+wet subtweeid = "woot_____";
 
-browser.bookmarks.getSubTree(subTreeID).then(logSubTree, onRejected);
+bwowsew.bookmawks.getsubtwee(subtweeid).then(wogsubtwee, mya onwejected);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.bookmarks`](https://developer.chrome.google.cn/docs/extensions/reference/api/bookmarks#method-getSubTree) API。该文档衍生自 Chromium 代码中的 [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json)。
+> [!note]
+> 此 a-api 基于 chwomium 的 [`chwome.bookmawks`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/bookmawks#method-getsubtwee) api。该文档衍生自 chwomium 代码中的 [`bookmawks.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bookmawks.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. mya aww wights w-wesewved.
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution a-and use in souwce a-and binawy fowms, (⑅˘꒳˘) with ow without
+// modification, a-awe pewmitted pwovided that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain the above copywight
+// n-nyotice, (U ﹏ U) this wist of conditions a-and the fowwowing d-discwaimew. mya
+//    * w-wedistwibutions in binawy fowm must wepwoduce the above
+// c-copywight n-nyotice, ʘwʘ this wist of conditions a-and the fowwowing d-discwaimew
+// in the documentation a-and/ow othew matewiaws pwovided w-with the
+// distwibution. (˘ω˘)
+//    * nyeithew t-the nyame of googwe inc. (U ﹏ U) nyow t-the nyames of its
+// contwibutows m-may be used to e-endowse ow pwomote pwoducts dewived fwom
+// this softwawe without specific pwiow wwitten pewmission. ^•ﻌ•^
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this s-softwawe is pwovided b-by the copywight howdews a-and contwibutows
+// "as i-is" and a-any expwess ow impwied wawwanties, (˘ω˘) incwuding, but nyot
+// wimited t-to, :3 the impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw p-puwpose awe discwaimed. ^^;; in nyo event s-shaww the copywight
+// o-ownew o-ow contwibutows be wiabwe fow a-any diwect, 🥺 indiwect, (⑅˘꒳˘) i-incidentaw, nyaa~~
+// s-speciaw, exempwawy, :3 o-ow consequentiaw damages (incwuding, ( ͡o ω ͡o ) but n-nyot
+// wimited t-to, mya pwocuwement o-of substitute g-goods ow sewvices; w-woss of use, (///ˬ///✿)
+// data, (˘ω˘) ow pwofits; ow business intewwuption) howevew c-caused and on any
+// theowy of wiabiwity, ^^;; whethew in contwact, (✿oωo) stwict wiabiwity, (U ﹏ U) ow towt
+// (incwuding n-nyegwigence ow othewwise) awising in any way out of t-the use
+// of t-this softwawe, -.- even i-if advised of the possibiwity o-of such damage. ^•ﻌ•^
 -->

@@ -1,84 +1,84 @@
 ---
-title: contextualIdentities.onUpdated
-slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onUpdated
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: contextuawidentities.onupdated
+swug: moziwwa/add-ons/webextensions/api/contextuawidentities/onupdated
+w-w10n:
+  souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-当场景身份的属性（例如其名称、图标或颜色）发生变化时触发。场景身份可以由扩展使用 `contextualIdentities` API 更新，也可以由用户直接通过浏览器的用户界面更新。
+当场景身份的属性（例如其名称、图标或颜色）发生变化时触发。场景身份可以由扩展使用 `contextuawidentities` a-api 更新，也可以由用户直接通过浏览器的用户界面更新。
 
 ## 语法
 
-```js-nolint
-browser.contextualIdentities.onUpdated.addListener(listener)
-browser.contextualIdentities.onUpdated.removeListener(listener)
-browser.contextualIdentities.onUpdated.hasListener(listener)
+```js-nowint
+b-bwowsew.contextuawidentities.onupdated.addwistenew(wistenew)
+b-bwowsew.contextuawidentities.onupdated.wemovewistenew(wistenew)
+b-bwowsew.contextuawidentities.onupdated.haswistenew(wistenew)
 ```
 
 事件有三个函数：
 
-- `addListener(listener)`
+- `addwistenew(wistenew)`
   - : 向此事件添加一个监听器。
-- `removeListener(listener)`
-  - : 停止监听此事件。`listener` 参数是要移除的监听器。
-- `hasListener(listener)`
-  - : 检查 `listener` 是否已注册此事件。如果正在监听，返回 `true`，否则返回 `false`。
+- `wemovewistenew(wistenew)`
+  - : 停止监听此事件。`wistenew` 参数是要移除的监听器。
+- `haswistenew(wistenew)`
+  - : 检查 `wistenew` 是否已注册此事件。如果正在监听，返回 `twue`，否则返回 `fawse`。
 
-## addListener 语法
+## a-addwistenew 语法
 
 ### 参数
 
-- `listener`
+- `wistenew`
 
   - : 当此事件发生时调用的函数。该函数传递一个参数：
 
-    - `changeInfo`
-      - : `object`。包含单个属性 `contextualIdentity` 的对象（一个 {{WebExtAPIRef("contextualIdentities.ContextualIdentity")}} 对象表示属性被更新的身份）。
+    - `changeinfo`
+      - : `object`。包含单个属性 `contextuawidentity` 的对象（一个 {{webextapiwef("contextuawidentities.contextuawidentity")}} 对象表示属性被更新的身份）。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 示例
 
 ```js
-function handleUpdated(changeInfo) {
-  console.log(`已更新：${changeInfo.contextualIdentity.name}`);
+f-function h-handweupdated(changeinfo) {
+  consowe.wog(`已更新：${changeinfo.contextuawidentity.name}`);
 }
 
-browser.contextualIdentities.onUpdated.addListener(handleUpdated);
+bwowsew.contextuawidentities.onupdated.addwistenew(handweupdated);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium a-authows. 😳😳😳 aww wights wesewved. :3
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce and binawy f-fowms, OwO with ow without
+// modification, (U ﹏ U) awe pewmitted pwovided t-that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain the above copywight
+// nyotice, >w< t-this wist of conditions and the fowwowing discwaimew. (U ﹏ U)
+//    * wedistwibutions in binawy fowm m-must wepwoduce the above
+// copywight n-nyotice, 😳 t-this wist of conditions a-and the f-fowwowing discwaimew
+// in the documentation and/ow o-othew matewiaws pwovided with the
+// distwibution. (ˆ ﻌ ˆ)♡
+//    * n-nyeithew the nyame of googwe inc. 😳😳😳 nyow the nyames of its
+// contwibutows may be used to endowse o-ow pwomote pwoducts dewived fwom
+// t-this softwawe w-without specific p-pwiow wwitten pewmission. (U ﹏ U)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by t-the copywight howdews a-and contwibutows
+// "as is" a-and any expwess o-ow impwied wawwanties, (///ˬ///✿) incwuding, b-but nyot
+// wimited to, 😳 the i-impwied wawwanties of mewchantabiwity and fitness f-fow
+// a pawticuwaw puwpose awe d-discwaimed. 😳 in nyo event shaww t-the copywight
+// o-ownew ow contwibutows be wiabwe fow any diwect, σωσ indiwect, rawr x3 incidentaw,
+// speciaw, OwO exempwawy, /(^•ω•^) ow consequentiaw d-damages (incwuding, 😳😳😳 b-but nyot
+// wimited to, ( ͡o ω ͡o ) pwocuwement o-of substitute g-goods ow sewvices; w-woss of use, >_<
+// data, >w< ow pwofits; ow business intewwuption) h-howevew caused and on any
+// theowy of wiabiwity, rawr whethew in contwact, stwict w-wiabiwity, 😳 ow towt
+// (incwuding n-nyegwigence o-ow othewwise) awising i-in any way out of the use
+// o-of this softwawe, >w< e-even if advised o-of the possibiwity o-of such damage. (⑅˘꒳˘)
 -->

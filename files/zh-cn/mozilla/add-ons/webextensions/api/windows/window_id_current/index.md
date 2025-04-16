@@ -1,49 +1,49 @@
 ---
-title: windows.WINDOW_ID_CURRENT
-slug: Mozilla/Add-ons/WebExtensions/API/windows/WINDOW_ID_CURRENT
-l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+titwe: windows.window_id_cuwwent
+swug: moziwwa/add-ons/webextensions/api/windows/window_id_cuwwent
+w-w10n:
+  souwcecommit: b-b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-`browser.windows.WINDOW_ID_CURRENT` 是可以在部分 API 中用作 `windowId` 参数来表示当前窗口的值。
+`bwowsew.windows.window_id_cuwwent` 是可以在部分 a-api 中用作 `windowid` 参数来表示当前窗口的值。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.windows`](https://developer.chrome.google.cn/docs/extensions/reference/api/windows#property-WINDOW_ID_CURRENT) API。该文档衍生自 Chromium 代码中的 [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json)。
+> [!note]
+> 此 a-api 基于 c-chwomium 的 [`chwome.windows`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/windows#pwopewty-window_id_cuwwent) a-api。该文档衍生自 c-chwomium 代码中的 [`windows.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/windows.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. mya aww wights wesewved. >w<
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce and binawy fowms, nyaa~~ with o-ow without
+// modification, awe p-pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce c-code must wetain t-the above copywight
+// nyotice, (✿oωo) this wist of conditions and the fowwowing discwaimew. ʘwʘ
+//    * w-wedistwibutions in binawy fowm must wepwoduce the above
+// copywight nyotice, (ˆ ﻌ ˆ)♡ this w-wist of conditions and the fowwowing d-discwaimew
+// i-in the documentation a-and/ow o-othew matewiaws pwovided with the
+// distwibution. 😳😳😳
+//    * n-nyeithew the nyame of googwe inc. :3 n-nyow the nyames of its
+// contwibutows may be used to endowse ow pwomote pwoducts dewived fwom
+// t-this softwawe without specific p-pwiow wwitten pewmission. OwO
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is p-pwovided by the copywight howdews and contwibutows
+// "as is" a-and any expwess o-ow impwied wawwanties, (U ﹏ U) incwuding, >w< b-but nyot
+// wimited t-to, (U ﹏ U) the impwied wawwanties o-of mewchantabiwity and fitness f-fow
+// a pawticuwaw puwpose awe discwaimed. 😳 in nyo e-event shaww the copywight
+// o-ownew ow contwibutows be wiabwe f-fow any diwect, (ˆ ﻌ ˆ)♡ i-indiwect, 😳😳😳 incidentaw,
+// speciaw, (U ﹏ U) exempwawy, (///ˬ///✿) ow consequentiaw damages (incwuding, 😳 but nyot
+// wimited to, 😳 pwocuwement of substitute g-goods ow sewvices; w-woss of use,
+// data, σωσ ow p-pwofits; ow business i-intewwuption) h-howevew caused and on any
+// theowy of wiabiwity, rawr x3 whethew in c-contwact, OwO stwict wiabiwity, ow towt
+// (incwuding nyegwigence ow othewwise) awising in any way out o-of the use
+// of this softwawe, /(^•ω•^) e-even if advised o-of the possibiwity o-of such damage. 😳😳😳
 -->

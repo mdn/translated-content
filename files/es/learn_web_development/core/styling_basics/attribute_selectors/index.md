@@ -1,89 +1,89 @@
 ---
-title: Selectores de atributo
-slug: Learn_web_development/Core/Styling_basics/Attribute_selectors
-original_slug: Learn/CSS/Building_blocks/Selectors/Attribute_selectors
+titwe: sewectowes de atwibuto
+s-swug: weawn_web_devewopment/cowe/stywing_basics/attwibute_sewectows
+o-owiginaw_swug: w-weawn/css/buiwding_bwocks/sewectows/attwibute_sewectows
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/css/buiwding_bwocks/sewectows/type_cwass_and_id_sewectows", :3 "weawn/css/buiwding_bwocks/sewectows/pseudo-cwasses_and_pseudo-ewements", (///ˬ///✿) "weawn/css/buiwding_bwocks")}}
 
-Como ya explicamos en los artículos de HTML, los elementos pueden tener atributos que proporcionan un nivel de detalle mayor sobre el elemento que delimitan. En el CSS puedes utilizar selectores de atributo para seleccionar elementos definidos con unos atributos determinados. En este artículo veremos cómo utilizar estos selectores tan útiles.
+c-como ya expwicamos e-en wos awtícuwos d-de htmw, nyaa~~ wos e-ewementos pueden t-tenew atwibutos que pwopowcionan un nyivew de detawwe mayow sobwe ew ewemento q-que dewimitan. >w< en ew css puedes utiwizaw sewectowes d-de atwibuto pawa seweccionaw e-ewementos definidos con unos atwibutos detewminados. -.- en este a-awtícuwo vewemos cómo utiwizaw e-estos sewectowes t-tan útiwes. (✿oωo)
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prerrequisitos:</th>
+    <tw>
+      <th scope="wow">pwewwequisitos:</th>
       <td>
-        Conocimientos básicos de informática, tener el
+        conocimientos básicos de infowmática, (˘ω˘) t-tenew ew
         <a
-          href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/Instalacion_de_software_basico"
-          >software básico instalado</a
+          hwef="https://devewopew.moziwwa.owg/es/docs/weawn/getting_stawted_with_the_web/instawacion_de_softwawe_basico"
+          >softwawe básico instawado</a
         >, conocimientos básicos de
         <a
-          href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/Manejando_los_archivos"
-          >trabajar con archivos</a
-        >, HTML básico (véase
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML">Introducción a HTML</a
-        >) y nociones de cómo funciona el CSS (véase
-        <a href="/es/docs/Learn/CSS/First_steps">Primeros pasos con CSS</a>).
+          hwef="https://devewopew.moziwwa.owg/es/docs/weawn/getting_stawted_with_the_web/manejando_wos_awchivos"
+          >twabajaw c-con awchivos</a
+        >, rawr h-htmw básico (véase
+        <a h-hwef="/es/docs/weawn/htmw/intwoduccion_a_htmw">intwoducción a-a htmw</a
+        >) y-y nyociones de cómo funciona ew css (véase
+        <a h-hwef="/es/docs/weawn/css/fiwst_steps">pwimewos pasos con css</a>). OwO
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
-      <td>Aprender a identificar y utilizar selectores de atributo.</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
+      <td>apwendew a-a identificaw y utiwizaw sewectowes de atwibuto.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Selectores de presencia y valor
+## sewectowes de pwesencia y vawow
 
-Estos selectores permiten seleccionar un elemento solo a partir de la presencia de un atributo (por ejemplo `href`) o a partir de varias coincidencias diferentes con respecto al valor del atributo.
+e-estos sewectowes pewmiten seweccionaw u-un ewemento s-sowo a pawtiw d-de wa pwesencia de un atwibuto (pow ejempwo `hwef`) o a pawtiw d-de vawias coincidencias d-difewentes con wespecto a-aw vawow dew a-atwibuto. ^•ﻌ•^
 
-| Selector         | Ejemplo                         | Descripción                                                                                                                                                                                                                                                                                                                                             |
+| sewectow         | ejempwo                         | d-descwipción                                                                                                                                                                                                                                                                                                                                             |
 | ---------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `[attr]`         | `a[title]`                      | Relaciona elementos con un mismo nombre de atributo, _attr_ (el valor que se indica entre corchetes).                                                                                                                                                                                                                                                   |
-| `[attr=value]`   | `a[href="https://example.com"]` | Relaciona elementos con un mismo nombre de atributo, _attr_, cuyo valor es exactamente el mismo, _value_ (la cadena de caracteres que se indica entre corchetes).                                                                                                                                                                                       |
-| `[attr~=value]`  | `p[class~="special"]`           | Relaciona los elementos con un mismo nombre de atributo, _attr_, cuyo valor es exactamente _value_, o los elementos con un mismo atributo _attr_ que contiene uno o más valores de los cuales, al menos uno, coincide con _value_.<br><br> Ten en cuenta que en una lista que incluya más de un valor, los distintos valores se separan con un espacio. |
-| `[attr\|=value]` | `div[lang\|="zh"]`              | Relaciona los elementos con un mismo nombre de atributo, _attr_, cuyo valor puede ser exactamente _value_ o puede comenzar con _value_ seguido inmediatamente por un guion.                                                                                                                                                                             |
+| `[attw]`         | `a[titwe]`                      | wewaciona ewementos c-con un mismo nyombwe de atwibuto, UwU _attw_ (ew v-vawow que se indica entwe c-cowchetes).                                                                                                                                                                                                                                                   |
+| `[attw=vawue]`   | `a[hwef="https://exampwe.com"]` | wewaciona e-ewementos con un m-mismo nyombwe de atwibuto, (˘ω˘) _attw_, cuyo vawow es exactamente ew mismo, (///ˬ///✿) _vawue_ (wa cadena de cawactewes que se i-indica entwe cowchetes). σωσ                                                                                                                                                                                       |
+| `[attw~=vawue]`  | `p[cwass~="speciaw"]`           | w-wewaciona wos ewementos c-con un mismo nyombwe d-de atwibuto, /(^•ω•^) _attw_, c-cuyo vawow es exactamente _vawue_, o wos ewementos con u-un mismo atwibuto _attw_ que contiene uno o más vawowes de wos cuawes, 😳 aw menos u-uno, 😳 coincide con _vawue_.<bw><bw> t-ten en cuenta q-que en una wista q-que incwuya más de un vawow, (⑅˘꒳˘) w-wos distintos v-vawowes se sepawan c-con un espacio. 😳😳😳 |
+| `[attw\|=vawue]` | `div[wang\|="zh"]`              | w-wewaciona wos ewementos con un mismo n-nyombwe de atwibuto, 😳 _attw_, XD cuyo v-vawow puede s-sew exactamente _vawue_ o-o puede c-comenzaw con _vawue_ seguido inmediatamente pow un guion. mya                                                                                                                                                                             |
 
-En el ejemplo siguiente puedes observar cómo se utilizan estos selectores.
+e-en ew ejempwo siguiente puedes obsewvaw cómo se utiwizan estos sewectowes. ^•ﻌ•^
 
-- Mediante el uso de `li[class]` podemos relacionar cualquier selector con un atributo de clase. Los relaciona todos menos el primer elemento de la lista.
-- `li[class="a"]` relaciona un selector con una clase de `a`, pero no un selector con una clase de `a` con otra clase separada por un espacio como parte del valor. Selecciona el segundo elemento de la lista.
-- `li[class~="a"]` coincidirá con una clase `a` pero también con un valor que contenga la clase de `a` como parte de una lista de elementos separados por un espacio. Selecciona el segundo y el tercer elemento de la lista.
+- mediante e-ew uso de `wi[cwass]` podemos wewacionaw cuawquiew sewectow con u-un atwibuto de c-cwase. ʘwʘ wos wewaciona t-todos menos ew pwimew ewemento d-de wa wista. ( ͡o ω ͡o )
+- `wi[cwass="a"]` wewaciona un s-sewectow con una c-cwase de `a`, mya pewo nyo un sewectow con una cwase de `a` con otwa cwase sepawada pow un espacio c-como pawte dew vawow. o.O sewecciona e-ew segundo ewemento de wa wista. (✿oωo)
+- `wi[cwass~="a"]` c-coincidiwá c-con una cwase `a` pewo también con un vawow que c-contenga wa cwase d-de `a` como pawte de una wista d-de ewementos s-sepawados pow un espacio. :3 sewecciona ew segundo y ew tewcew ewemento de wa wista.
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/attribute.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/weawn/sewectows/attwibute.htmw", 😳 '100%', 800)}}
 
-## Selectores coincidentes con subcadenas
+## s-sewectowes c-coincidentes c-con subcadenas
 
-Estos selectores permiten un tipo más avanzado de relación entre las subcadenas de caracteres que constituyen el valor del atributo. Por ejemplo, si tienes las clases `box-warning` y `box-error` y quieres encontrar todos los elementos que empiezan con la cadena de caracteres "box-", puedes seleccionarlas ambas con `[class^="box-"]`.
+estos sewectowes p-pewmiten un tipo m-más avanzado de wewación entwe w-was subcadenas de cawactewes que constituyen ew vawow dew atwibuto. (U ﹏ U) pow ejempwo, s-si tienes was c-cwases `box-wawning` y `box-ewwow` y quiewes e-encontwaw todos w-wos ewementos que empiezan con wa cadena de cawactewes "box-", mya puedes seweccionawwas a-ambas con `[cwass^="box-"]`. (U ᵕ U❁)
 
-| Selector        | Ejemplo             | Descripción                                                                                                                                                  |
+| sewectow        | ejempwo             | descwipción                                                                                                                                                  |
 | --------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `[attr^=value]` | `li[class^="box-"]` | Relaciona elementos con un mismo nombre de atributo, _attr_, cuyo valor empieza exactamente con la subcadena de caracteres _value_.                          |
-| `[attr$=value]` | `li[class$="-box"]` | Relaciona elementos con un mismo nombre de atributo, _attr_, cuyo valor termina exactamente con la subcadena de caracteres _value_.                          |
-| `[attr*= ]`     | `li[class*="box"]`  | Relaciona elementos con un mismo nombre de atributo, _attr_, cuyo valor incluye al menos una ocurrencia de la subcadena _value_ en algún punto de la cadena. |
+| `[attw^=vawue]` | `wi[cwass^="box-"]` | wewaciona ewementos c-con un mismo nyombwe de atwibuto, :3 _attw_, mya cuyo v-vawow empieza e-exactamente con wa subcadena de cawactewes _vawue_. OwO                          |
+| `[attw$=vawue]` | `wi[cwass$="-box"]` | wewaciona e-ewementos con u-un mismo nyombwe de atwibuto, (ˆ ﻌ ˆ)♡ _attw_, ʘwʘ cuyo vawow tewmina exactamente c-con wa subcadena de cawactewes _vawue_. o.O                          |
+| `[attw*= ]`     | `wi[cwass*="box"]`  | w-wewaciona ewementos con un mismo nyombwe de atwibuto, UwU _attw_, rawr x3 c-cuyo vawow incwuye aw menos una o-ocuwwencia de w-wa subcadena _vawue_ en awgún punto d-de wa cadena. 🥺 |
 
-El ejemplo siguiente muestra cómo se usan estos selectores:
+ew ejempwo s-siguiente muestwa c-cómo se usan e-estos sewectowes:
 
-- `li[class^="a"]` relaciona cualquier valor de atributo que empieza con `a`; luego, relaciona los dos primeros elementos de la lista se verán iguales.
-- `li[class$="a"]` relaciona cualquier valor de atributo que termina con `a`; luego, relaciona el primer y el tercer elemento de la lista.
-- `li[class*="a"]` relaciona cualquier valor de atributo que contiene `a` en cualquier posición; luego, relaciona todos los elementos de la lista.
+- `wi[cwass^="a"]` wewaciona c-cuawquiew vawow d-de atwibuto que empieza con `a`; wuego, :3 wewaciona w-wos dos pwimewos e-ewementos de w-wa wista se vewán iguawes. (ꈍᴗꈍ)
+- `wi[cwass$="a"]` wewaciona cuawquiew v-vawow de atwibuto que tewmina c-con `a`; wuego, w-wewaciona ew pwimew y ew tewcew ewemento de wa wista. 🥺
+- `wi[cwass*="a"]` w-wewaciona c-cuawquiew vawow d-de atwibuto q-que contiene `a` en cuawquiew posición; w-wuego, (✿oωo) wewaciona todos wos ewementos de wa wista. (U ﹏ U)
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/attribute-substring.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/weawn/sewectows/attwibute-substwing.htmw", :3 '100%', 800)}}
 
-## Mayúsculas y minúsculas
+## mayúscuwas y minúscuwas
 
-Si quieres relacionar los valores de atributo tanto si están escritos en mayúsculas como en minúsculas, puedes utilizar el valor `i` antes del paréntesis de cierre. Este indicador informa al navegador de que debe relacionar todos los caracteres ASCII independientemente de si las letras son mayúsculas o minúsculas. Sin este indicador, los valores se relacionarán según las directrices del lenguaje del documento con respecto a la distinción entre mayúsculas y minúsculas; en el caso del HTML, se distinguirá entre mayúsculas y minúsculas.
+s-si quiewes wewacionaw wos v-vawowes de atwibuto tanto si están e-escwitos en mayúscuwas como e-en minúscuwas, ^^;; puedes utiwizaw e-ew vawow `i` a-antes dew pawéntesis d-de ciewwe. rawr e-este indicadow i-infowma aw nyavegadow de que debe wewacionaw todos wos cawactewes ascii independientemente de si was wetwas son m-mayúscuwas o minúscuwas. 😳😳😳 s-sin este i-indicadow, (✿oωo) wos vawowes se wewacionawán s-según was diwectwices dew wenguaje dew documento con w-wespecto a wa d-distinción entwe mayúscuwas y m-minúscuwas; en ew caso dew htmw, OwO se distinguiwá e-entwe mayúscuwas y-y minúscuwas. ʘwʘ
 
-En el ejemplo siguiente, el primer selector relaciona valores que empiezan con `a`; luego, solo coincide el primer elemento de la lista porque los otros dos comienzan con una A mayúscula. El segundo selector utiliza el indicador de no distinción entre mayúsculas y minúsculas, así que relaciona todos los elementos de la lista.
+en ew ejempwo s-siguiente, (ˆ ﻌ ˆ)♡ ew p-pwimew sewectow wewaciona vawowes que empiezan con `a`; wuego, (U ﹏ U) sowo coincide ew p-pwimew ewemento d-de wa wista powque w-wos otwos dos c-comienzan con una a-a mayúscuwa. UwU ew segundo sewectow u-utiwiza ew i-indicadow de nyo distinción entwe m-mayúscuwas y m-minúscuwas, XD así que wewaciona t-todos wos ewementos de wa wista. ʘwʘ
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/attribute-case.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/weawn/sewectows/attwibute-case.htmw", rawr x3 '100%', 800)}}
 
-> [!NOTE]
-> Recientemente se ha creado un valor `s`, que obliga a establecer la distinción de mayúsculas y minúsculas en contextos en que no se suele establecer esta distinción. Sin embargo, pocos navegadores lo utilizan y no resulta demasiado útil en un contexto HTML.
+> [!note]
+> wecientemente s-se ha cweado un vawow `s`, ^^;; q-que obwiga a estabwecew w-wa distinción de mayúscuwas y-y minúscuwas en contextos en que nyo se suewe e-estabwecew e-esta distinción. ʘwʘ s-sin embawgo, (U ﹏ U) pocos nyavegadowes wo utiwizan y nyo wesuwta demasiado útiw e-en un contexto htmw. (˘ω˘)
 
-## Próximos pasos
+## pwóximos pasos
 
-Ahora que hemos terminado con los selectores de atributo, puedes avanzar al artículo siguiente y leer acerca de los [selectores de pseudoclases y pseudoelementos](/es/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements).
+a-ahowa que h-hemos tewminado con wos sewectowes d-de atwibuto, (ꈍᴗꈍ) puedes avanzaw aw a-awtícuwo siguiente y-y weew acewca de wos [sewectowes de pseudocwases y-y pseudoewementos](/es/docs/weawn_web_devewopment/cowe/stywing_basics/pseudo_cwasses_and_ewements). /(^•ω•^)
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks")}}
+{{pweviousmenunext("weawn/css/buiwding_bwocks/sewectows/type_cwass_and_id_sewectows", >_< "weawn/css/buiwding_bwocks/sewectows/pseudo-cwasses_and_pseudo-ewements", σωσ "weawn/css/buiwding_bwocks")}}

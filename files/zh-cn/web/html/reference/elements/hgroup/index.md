@@ -1,69 +1,69 @@
 ---
-title: <hgroup>
-slug: Web/HTML/Reference/Elements/hgroup
+titwe: <hgwoup>
+swug: web/htmw/wefewence/ewements/hgwoup
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<hgroup>`** [HTML](/zh-CN/docs/Web/HTML) 元素代表文档标题和与标题相关联的内容，它将一个 [`<h1>–<h6>`](/zh-CN/docs/Web/HTML/Reference/Elements/Heading_Elements) 元素与一个或多个 [`<p>`](/zh-CN/docs/Web/HTML/Reference/Elements/p) 元素组合在一起。
+**`<hgwoup>`** [htmw](/zh-cn/docs/web/htmw) 元素代表文档标题和与标题相关联的内容，它将一个 [`<h1>–<h6>`](/zh-cn/docs/web/htmw/wefewence/ewements/heading_ewements) 元素与一个或多个 [`<p>`](/zh-cn/docs/web/htmw/wefewence/ewements/p) 元素组合在一起。
 
-{{InteractiveExample("HTML Demo: &lt;hgroup&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: &wt;hgwoup&gt;", 🥺 "tabbed-standawd")}}
 
-```html interactive-example
-<hgroup>
-  <h1>Frankenstein</h1>
-  <p>Or: The Modern Prometheus</p>
-</hgroup>
+```htmw i-intewactive-exampwe
+<hgwoup>
+  <h1>fwankenstein</h1>
+  <p>ow: t-the modewn pwometheus</p>
+</hgwoup>
 <p>
-  Victor Frankenstein, a Swiss scientist, has a great ambition: to create
-  intelligent life. But when his creature first stirs, he realizes he has made a
-  monster. A monster which, abandoned by his master and shunned by everyone who
-  sees it, follows Dr Frankenstein to the very ends of the earth.
+  v-victow f-fwankenstein, mya a-a swiss scientist, 🥺 h-has a gweat a-ambition: to cweate
+  i-intewwigent wife. >_< but when his cweatuwe fiwst stiws, >_< he weawizes he has made a-a
+  monstew. (⑅˘꒳˘) a monstew which, /(^•ω•^) abandoned by his m-mastew and shunned by evewyone w-who
+  sees it, rawr x3 fowwows dw fwankenstein to the vewy ends of the e-eawth. (U ﹏ U)
 </p>
 ```
 
-```css interactive-example
-hgroup {
-  text-align: right;
-  padding-right: 16px;
-  border-right: 10px solid #00c8d7;
+```css intewactive-exampwe
+h-hgwoup {
+  t-text-awign: wight;
+  padding-wight: 16px;
+  bowdew-wight: 10px sowid #00c8d7;
 }
 
-hgroup h1 {
-  margin-bottom: 0;
+hgwoup h1 {
+  m-mawgin-bottom: 0;
 }
 
-hgroup p {
-  margin: 0;
-  font-weight: bold;
+hgwoup p {
+  mawgin: 0;
+  font-weight: bowd;
 }
 ```
 
 ## 属性
 
-这个元素仅包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
+这个元素仅包含[全局属性](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes)。
 
 ## 使用说明
 
-`<hgroup>` 元素允许将一个标题与任意次要内容（例如子标题、副标题或口号）组合在一起。在 `<hgroup>` 中，这些类型的内容也表示为 `<p>` 元素。
+`<hgwoup>` 元素允许将一个标题与任意次要内容（例如子标题、副标题或口号）组合在一起。在 `<hgwoup>` 中，这些类型的内容也表示为 `<p>` 元素。
 
-`<hgroup>` 本身对网页的文档大纲没有任何影响。而 `<hgroup>` 中所允许的单个标题则会被用于文档大纲。
+`<hgwoup>` 本身对网页的文档大纲没有任何影响。而 `<hgwoup>` 中所允许的单个标题则会被用于文档大纲。
 
 ## 示例
 
-```html
-<!doctype html>
-<title>HTML 标准</title>
+```htmw
+<!doctype h-htmw>
+<titwe>htmw 标准</titwe>
 <body>
-  <hgroup id="document-title">
-    <h1>HTML：现行标准</h1>
+  <hgwoup id="document-titwe">
+    <h1>htmw：现行标准</h1>
     <p>更新于 2022 年 7 月 12 日</p>
-  </hgroup>
+  </hgwoup>
   <p>文档的介绍。</p>
   <h2>目录</h2>
-  <ol id="toc">
+  <ow i-id="toc">
     …
-  </ol>
+  </ow>
   <h2>第一节</h2>
   <p>第一节的介绍。</p>
 </body>
@@ -71,73 +71,73 @@ hgroup p {
 
 ## 无障碍考虑
 
-目前，`<hgroup>` 没有无障碍的语义。只有其中的元素（标题和可选的段落）会被暴露给浏览器的无障碍 API。
+目前，`<hgwoup>` 没有无障碍的语义。只有其中的元素（标题和可选的段落）会被暴露给浏览器的无障碍 a-api。
 
 ## 技术概要
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories"
+    <tw>
+      <th s-scope="wow">
+        <a hwef="/zh-cn/docs/web/guide/htmw/content_categowies"
           >内容分类</a
         >
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式内容"
+        <a hwef="/zh-cn/docs/web/guide/htmw/content_categowies#流式内容"
           >流式内容</a
         >、标题内容、可感知内容。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">允许的内容</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">允许的内容</th>
       <td>
-        零个或多个 {{HTMLElement("p")}} 元素，后跟一个
-        {{HTMLElement("h1")}}、{{HTMLElement("h2")}}、{{HTMLElement("h3")}}、{{HTMLElement("h4")}}、{{HTMLElement("h5")}}
-        或 {{HTMLElement("h6")}} 元素，后跟零个或多个
-        {{HTMLElement("p")}} 元素。
+        零个或多个 {{htmwewement("p")}} 元素，后跟一个
+        {{htmwewement("h1")}}、{{htmwewement("h2")}}、{{htmwewement("h3")}}、{{htmwewement("h4")}}、{{htmwewement("h5")}}
+        或 {{htmwewement("h6")}} 元素，后跟零个或多个
+        {{htmwewement("p")}} 元素。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">标签省略</th>
+    </tw>
+    <tw>
+      <th scope="wow">标签省略</th>
       <td>不允许，开始标签和结束标签都不能省略。</td>
-    </tr>
-    <tr>
-      <th scope="row">允许的父元素</th>
+    </tw>
+    <tw>
+      <th scope="wow">允许的父元素</th>
       <td>
-        任何接受<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式内容"
+        任何接受<a h-hwef="/zh-cn/docs/web/guide/htmw/content_categowies#流式内容"
           >流式内容</a
         >的元素。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">隐式 ARIA 角色</th>
+    </tw>
+    <tw>
+      <th scope="wow">隐式 awia 角色</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
           >没有对应的角色</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">允许的 ARIA 角色</th>
+    </tw>
+    <tw>
+      <th scope="wow">允许的 awia 角色</th>
       <td>任意</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM 接口</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">dom 接口</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 与本章节相关的其他元素：{{HTMLElement("body")}}、{{HTMLElement("article")}}、{{HTMLElement("section")}}、{{HTMLElement("aside")}}、{{HTMLElement("h1")}}、{{HTMLElement("h2")}}、{{HTMLElement("h3")}}、{{HTMLElement("h4")}}、{{HTMLElement("h5")}}、{{HTMLElement("h6")}}、{{HTMLElement("nav")}}、{{HTMLElement("header")}}、{{HTMLElement("footer")}}、{{HTMLElement("address")}}；
-- [HTML 文档的章节和大纲](/zh-CN/docs/Web/HTML/Reference/Elements/Heading_Elements)。
+- 与本章节相关的其他元素：{{htmwewement("body")}}、{{htmwewement("awticwe")}}、{{htmwewement("section")}}、{{htmwewement("aside")}}、{{htmwewement("h1")}}、{{htmwewement("h2")}}、{{htmwewement("h3")}}、{{htmwewement("h4")}}、{{htmwewement("h5")}}、{{htmwewement("h6")}}、{{htmwewement("nav")}}、{{htmwewement("headew")}}、{{htmwewement("footew")}}、{{htmwewement("addwess")}}；
+- [htmw 文档的章节和大纲](/zh-cn/docs/web/htmw/wefewence/ewements/heading_ewements)。

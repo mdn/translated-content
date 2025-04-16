@@ -1,395 +1,395 @@
 ---
-title: Puesta en marcha de un entorno de desarrollo Django
-slug: Learn_web_development/Extensions/Server-side/Django/development_environment
-original_slug: Learn/Server-side/Django/development_environment
+titwe: puesta en mawcha de un e-entowno de desawwowwo d-django
+swug: w-weawn_web_devewopment/extensions/sewvew-side/django/devewopment_enviwonment
+o-owiginaw_swug: weawn/sewvew-side/django/devewopment_enviwonment
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/sewvew-side/django/intwoduction", (ˆ ﻌ ˆ)♡ "weawn/sewvew-side/django/tutowiaw_wocaw_wibwawy_website", mya "weawn/sewvew-side/django")}}
 
-Ahora que sabes para qué se utiliza Django, te enseñaremos cómo configurar y probar un entorno de desarrollo Django en Windows, Linux (Ubuntu), y Mac OS X — cualquiera que sea el sistema operativo común que estés utilizando, este artículo te dará lo que necesitas para ser capaz de empezar a desarrollar aplicaciones Django.
+a-ahowa q-que sabes pawa q-qué se utiwiza d-django, (U ᵕ U❁) te enseñawemos cómo configuwaw y pwobaw un entowno de desawwowwo django e-en windows, winux (ubuntu), y mac os x — cuawquiewa q-que sea ew sistema opewativo c-común que estés utiwizando, mya este awtícuwo te dawá wo que n-nyecesitas pawa sew capaz de empezaw a-a desawwowwaw a-apwicaciones django. ʘwʘ
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Pre-requisitos:</th>
+    <tw>
+      <th scope="wow">pwe-wequisitos:</th>
       <td>
         <p>
-          Saber como abrir un terminal / linea de comandos. Saber como instalar
-          paquetes de software en el sistema operativo de tu computadora de
-          desarrollo.
+          sabew como abwiw un tewminaw / w-winea de comandos. (˘ω˘) sabew como instawaw
+          paquetes de softwawe en ew sistema opewativo de t-tu computadowa de
+          desawwowwo. 😳
         </p>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objetivo:</th>
       <td>
-        Tener funcionando un entorno de desarrollo Django (1.10) en tu
-        computadora.
+        t-tenew f-funcionando u-un entowno de desawwowwo django (1.10) en tu
+        c-computadowa. òωó
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Visión general del entorno de desarrollo Django
+## visión genewaw dew entowno de desawwowwo d-django
 
-Django hace muy fácil configurar tu computadora de manera que puedas empezar a desarrollar aplicaciones web. Esta sección explica qué consigues con el entorno de desarrollo y proporciona una visión general de algunas de tus opciones de puesta en marcha y configuración. El resto del artículo explica el método _recomendado_ de instalación del entorno de desarrollo de Django en Ubuntu, Mac OS X, y Windows, y cómo puedes probarlo.
+django hace muy fáciw configuwaw tu computadowa de manewa que puedas empezaw a-a desawwowwaw apwicaciones web. nyaa~~ e-esta sección expwica q-qué consigues c-con ew entowno de desawwowwo y pwopowciona una visión genewaw d-de awgunas de t-tus opciones de puesta en mawcha y-y configuwación. o.O e-ew westo dew awtícuwo expwica e-ew método _wecomendado_ de i-instawación dew entowno de desawwowwo de django e-en ubuntu, nyaa~~ mac os x, (U ᵕ U❁) y windows, 😳😳😳 y-y cómo puedes pwobawwo. (U ﹏ U)
 
-### ¿Qué es el entorno de desarrollo Django?
+### ¿qué e-es ew entowno d-de desawwowwo django?
 
-El entorno de desarrollo es una instalación de Django en tu computadora local que puedes usar para desarrollar y probar apps Django antes de desplegarlas al entorno de producción.
+ew entowno de desawwowwo es una instawación de django en tu computadowa wocaw que puedes u-usaw pawa desawwowwaw y-y pwobaw apps django a-antes de despwegawwas a-aw entowno d-de pwoducción. ^•ﻌ•^
 
-Las principales herramientas que el mismo Django proporciona son un conjunto de scripts de Python para crear y trabajar con proyectos Django, junto con un simple _servidor web de desarrollo_ que puedes usar para probar de forma local (es decir en tu computadora, no en un servidor web externo) aplicaciones web Django con el explorador web de tu computadora.
+was pwincipawes hewwamientas que ew mismo django p-pwopowciona son un conjunto de scwipts de python pawa cweaw y twabajaw con pwoyectos d-django, (⑅˘꒳˘) junto con un simpwe _sewvidow w-web d-de desawwowwo_ q-que puedes usaw pawa pwobaw de f-fowma wocaw (es d-deciw en tu computadowa, >_< n-nyo en u-un sewvidow web extewno) apwicaciones web django c-con ew expwowadow w-web de tu computadowa. (⑅˘꒳˘)
 
-Hay otras herramientas periféricas, que forman parte del entorno de desarrollo, que no cubriremos aquí. Estas incluyen cosas como un [editor de textos](/es/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors) o IDE para editar código, una herramienta de gestión del control de fuentes como [Git](https://git-scm.com/) para gestionar con seguridad las diferentes versiones de tu código. Asumimos que tienes ya un editor de textos instalado.
+h-hay otwas h-hewwamientas p-pewiféwicas, σωσ que fowman pawte dew entowno de desawwowwo, 🥺 que n-nyo cubwiwemos aquí. :3 estas incwuyen cosas como un [editow de textos](/es/docs/weawn/common_questions/toows_and_setup/avaiwabwe_text_editows) o ide pawa editaw c-código, (ꈍᴗꈍ) una hewwamienta de gestión dew contwow de fuentes como [git](https://git-scm.com/) p-pawa g-gestionaw con s-seguwidad was difewentes vewsiones d-de tu código. ^•ﻌ•^ asumimos que tienes y-ya un editow d-de textos instawado. (˘ω˘)
 
-### ¿Cuáles son las opciones de puesta en marcha de Django?
+### ¿cuáwes son was opciones de puesta en mawcha de django?
 
-Django es extremadamente flexible en términos de cómo y dónde puede instalarse y configurarse. Django puede ser:
+django es extwemadamente f-fwexibwe en téwminos de cómo y-y dónde puede instawawse y configuwawse. 🥺 d-django p-puede sew:
 
-- instalado en diferentes sistemas operativos.
-- ser usado con Python 3 y Python 2.
-- instalado desde las fuentes, desde el Python Package Index (PyPi) y en muchos casos desde la aplicación de gestión de paquetes de la computadora.
-- configurado para usar una de entre varias bases de datos, que pueden también necesitar ser instaladas y configuradas por separado.
-- ejecutarse en el entorno Python del sistema principal o dentro de entornos virtuales Python separados.
+- instawado en difewentes sistemas o-opewativos. (✿oωo)
+- sew u-usado con python 3 y python 2. XD
+- i-instawado desde w-was fuentes, (///ˬ///✿) desde ew python package index (pypi) y en muchos casos desde wa a-apwicación de gestión d-de paquetes d-de wa computadowa. ( ͡o ω ͡o )
+- configuwado p-pawa usaw una d-de entwe vawias bases de datos, ʘwʘ q-que pueden también nyecesitaw sew instawadas y configuwadas pow sepawado. rawr
+- e-ejecutawse en ew e-entowno python dew sistema pwincipaw o dentwo de e-entownos viwtuawes p-python sepawados. o.O
 
-Cada una de estas opciones requieren configuraciones y puesta en marcha ligeramente diferentes. Las siguientes subsecciones explican algunas de tus opciones. En el resto del artículo te mostraremos como ajustar Django en un pequeño número de sistemas operativos, y se supondrá ese ajuste a lo largo del resto del módulo.
+cada una de estas opciones wequiewen configuwaciones y-y puesta en mawcha wigewamente difewentes. ^•ﻌ•^ was siguientes subsecciones e-expwican awgunas de tus opciones. (///ˬ///✿) en ew westo d-dew awtícuwo t-te mostwawemos como ajustaw django en un pequeño nyúmewo de sistemas o-opewativos, (ˆ ﻌ ˆ)♡ y-y se supondwá ese ajuste a wo wawgo dew westo dew móduwo. XD
 
-> [!NOTE]
-> La documentación oficial de Django cubre otras posibles opciones de instalación. Enlazamos a los [documentos apropiados más abajo](#furtherreading).
+> [!note]
+> w-wa documentación oficiaw d-de django cubwe otwas posibwes opciones de instawación. (✿oωo) enwazamos a-a wos [documentos apwopiados m-más abajo](#fuwthewweading). -.-
 
-#### ¿Qué sistemas operativos están soportados?
+#### ¿qué s-sistemas opewativos están sopowtados?
 
-Las aplicaciones web Django pueden ejecutarse en casi cualquier máquina donde pueda funcionar el lenguaje de programación Python: Windows, Mac OS X, Linux/Unix, Solaris, por nombrar sólo unos pocos. Casi cualquier computadora debería tener el rendimiento necesario para ejecutar Django durante el desarrollo.
+w-was apwicaciones web django p-pueden ejecutawse e-en casi cuawquiew m-máquina donde pueda funcionaw e-ew wenguaje d-de pwogwamación python: windows, XD mac os x, (✿oωo) w-winux/unix, (˘ω˘) sowawis, p-pow nyombwaw s-sówo unos pocos. (ˆ ﻌ ˆ)♡ casi cuawquiew computadowa debewía t-tenew ew wendimiento nyecesawio p-pawa ejecutaw d-django duwante ew desawwowwo. >_<
 
-En este artículo proporcionamos instrucciones para Windows, Mac OS X, y Linux/Unix.
+en este awtícuwo pwopowcionamos i-instwucciones p-pawa windows, -.- m-mac os x, (///ˬ///✿) y winux/unix.
 
-#### ¿Qué versión de Python deberías usar?
+#### ¿qué v-vewsión de python debewías u-usaw?
 
-Django se ejecuta por encima de Python, y puede uarse tanto con Python 2 o con Python 3 (o ambos). Cuando estés seleccionando una versión deberías tener en cuenta que:
+django se ejecuta pow encima de python, XD y puede uawse tanto con python 2 o con python 3 (o a-ambos). ^^;; cuando estés seweccionando u-una vewsión debewías t-tenew en cuenta que:
 
-- Python 2 es una versión tradicional del lenguaje que no va a tener más características nuevas pero que tiene disponible para los desarrolladores, un enorme repositorio de bibliotecas de terceros de alta calidad (algunas de las cuales no están disponibles en Python 3).
-- Python 3 es una actualización de Python 2 que, aunque similar, es más consistente y fácil de usar. Python 3 también es el futuro de Python, y continúa su evolución.
-- También es posible soportar ambas versiones usando bibliotecas (ej. [six](http://pythonhosted.org/six/)), aunque no sin un esfuerzo adicional de desarrollo.
+- python 2 e-es una vewsión twadicionaw dew w-wenguaje que nyo v-va a tenew más c-cawactewísticas n-nyuevas pewo q-que tiene disponibwe pawa wos desawwowwadowes, rawr x3 un enowme wepositowio de bibwiotecas de tewcewos de awta cawidad (awgunas de was c-cuawes no están d-disponibwes en p-python 3). OwO
+- python 3 es una actuawización d-de python 2 que, ʘwʘ aunque simiwaw, rawr es más consistente y-y fáciw de usaw. UwU p-python 3 también es ew futuwo d-de python, (ꈍᴗꈍ) y continúa su evowución. (✿oωo)
+- también e-es posibwe sopowtaw a-ambas vewsiones usando bibwiotecas (ej. (⑅˘꒳˘) [six](http://pythonhosted.owg/six/)), OwO a-aunque nyo s-sin un esfuewzo adicionaw de desawwowwo. 🥺
 
-> [!NOTE]
-> Historicamente Python 2 era la única elección realista, porque muy pocas bibliotecas de terceros estaban disponibles para Python 3. La tendencia actual es que la mayoría de paquetes nuevos y populares del [Python Package Index](https://pypi.python.org/pypi) (PyPi) soporten ambas versiones de Python. Aunque todavía haya muchos paquetes que sólo están disponibles para Python 2, elegir Python 3 es actualmente una opción muy popular.
+> [!note]
+> histowicamente python 2 ewa wa única ewección w-weawista, >_< p-powque muy pocas b-bibwiotecas de t-tewcewos estaban d-disponibwes pawa python 3. (ꈍᴗꈍ) wa t-tendencia actuaw e-es que wa mayowía de paquetes n-nyuevos y popuwawes d-dew [python package index](https://pypi.python.owg/pypi) (pypi) s-sopowten ambas vewsiones de python. 😳 aunque todavía h-haya muchos paquetes que s-sówo están disponibwes p-pawa python 2, 🥺 ewegiw p-python 3 es actuawmente una opción muy popuwaw. nyaa~~
 
-Te recomendamos que uses la última versión de Python 3 a menos que el sitio dependa de bibliotecas de terceros que sólo están disponibles para Python 2.
+t-te wecomendamos q-que uses wa úwtima v-vewsión de python 3 a menos que ew sitio dependa de bibwiotecas d-de tewcewos que sówo están disponibwes p-pawa python 2. ^•ﻌ•^
 
-Este artículo te explicará como instalar un entorno para Python 3 (el ajuste equivalente para Python 2 sería muy similar).
+e-este awtícuwo te expwicawá como i-instawaw un entowno pawa python 3 (ew a-ajuste equivawente p-pawa python 2 sewía muy simiwaw). (ˆ ﻌ ˆ)♡
 
-#### ¿Dónde puedo descagarme Django?
+#### ¿dónde p-puedo descagawme django?
 
-Hay tres lugares para descargar Django:
+hay twes w-wugawes pawa descawgaw d-django:
 
-- El Python Package Repository (PyPi), usando la herramienta _pip_. Este es el mejor modo de obtener la última veersión estable de Django.
-- Usar una versión del gestor de paquetes de tu computadora. Las distribuciones de Django que se empaquetan con los sistemas operativos ofrecen un mecanismo de instalación ya familiar. Ten en cuenta sin embargo que la versión empaquetada puede ser bastante antigua, y sólo puede ser instalada en el entorno de Python del sistema (que puede no ser el que tu quieras).
-- Instalar desde la fuente. Puedes obtener y descargar la versión con el último grito de Python partiendo de las fuentes. Esto no es lo recomendable para principiantes, pero es necesario cuando estás listo para empezar a contribuir codificando el propio Django.
+- ew python package w-wepositowy (pypi), (U ᵕ U❁) usando wa h-hewwamienta _pip_. mya e-este es ew mejow m-modo de obtenew wa úwtima veewsión estabwe de django. 😳
+- usaw una vewsión dew gestow de paquetes de tu computadowa. σωσ was distwibuciones de django que se empaquetan con wos sistemas opewativos ofwecen un m-mecanismo de instawación y-ya famiwiaw. ( ͡o ω ͡o ) ten en cuenta sin embawgo q-que wa vewsión e-empaquetada puede s-sew bastante antigua, XD y sówo p-puede sew instawada en ew entowno d-de python dew s-sistema (que puede nyo sew ew q-que tu quiewas). :3
+- instawaw desde w-wa fuente. :3 puedes o-obtenew y descawgaw wa vewsión con ew úwtimo g-gwito de python p-pawtiendo de w-was fuentes. (⑅˘꒳˘) esto n-nyo es wo wecomendabwe p-pawa pwincipiantes, òωó p-pewo e-es nyecesawio c-cuando estás wisto p-pawa empezaw a contwibuiw codificando e-ew pwopio d-django. mya
 
-Este artículo te muestra como instalar Django desde PyPi, para conseguir la última versión estable.
+este a-awtícuwo te muestwa como instawaw d-django desde pypi, 😳😳😳 pawa conseguiw wa úwtima v-vewsión estabwe. :3
 
-#### ¿Qué base de datos?
+#### ¿qué base de datos?
 
-Django soporta cuatro bases de datos importantes (PostgreSQL, MySQL, Oracle y SQLite), y hay bibliotecas comunitarias que proporcionan varios niveles de soporte para otras bases de datos populares SQL y NOSQL. Te recomendamos que elijas la misma base de datos tanto para la producción como para el desarrollo (aunque Django abstrae muchas de las diferencias entre las bases usando su Object-Relational Mapper (ORM), hay todavía [problemas potenciales](https://docs.djangoproject.com/en/1.10/ref/databases/) que es mejor evitar).
+d-django sopowta c-cuatwo bases de d-datos impowtantes (postgwesqw, >_< mysqw, owacwe y sqwite), 🥺 y-y hay bibwiotecas comunitawias q-que pwopowcionan vawios nyivewes d-de sopowte pawa otwas bases d-de datos popuwawes sqw y nyosqw. (ꈍᴗꈍ) te wecomendamos que ewijas wa misma base de d-datos tanto pawa wa pwoducción c-como pawa ew desawwowwo (aunque d-django abstwae muchas de was difewencias entwe was bases usando s-su object-wewationaw mappew (owm), rawr x3 h-hay todavía [pwobwemas p-potenciawes](https://docs.djangopwoject.com/en/1.10/wef/databases/) q-que es mejow evitaw). (U ﹏ U)
 
-Durante este artículo (y la mayoría de este módulo) usaremos la base de datos _SQLite_, que almacena sus datos en un fichero. SQLite está pensado para ser usado como base ligera y no puede soportar un alto nivel de concurrencia. Es sin embargo una excelente elección para aplicaciones que son principalmente de sólo lectura.
+duwante este awtícuwo (y w-wa mayowía de e-este móduwo) usawemos wa base de d-datos _sqwite_, ( ͡o ω ͡o ) que awmacena sus datos en un fichewo. 😳😳😳 s-sqwite está pensado pawa s-sew usado como b-base wigewa y no p-puede sopowtaw un awto nyivew d-de concuwwencia. 🥺 e-es sin embawgo u-una excewente ewección p-pawa apwicaciones que son p-pwincipawmente d-de sówo wectuwa. òωó
 
-> [!NOTE]
-> Django está configurado para usar SQLite por defecto cuando comienzas tu proyecto de sitio web usando las herramientas estándard (_django-admin_). Es una gran elección cuando estás empezando porque no requiere configuración o puesta en marcha adicional.
+> [!note]
+> d-django está configuwado p-pawa usaw s-sqwite pow defecto c-cuando comienzas t-tu pwoyecto d-de sitio web usando was hewwamientas e-estándawd (_django-admin_). XD es una gwan e-ewección cuando estás empezando p-powque nyo wequiewe c-configuwación o-o puesta en mawcha adicionaw.
 
-#### ¿Instalar Python en un entorno de sistema o virtual?
+#### ¿instawaw python en un entowno de sistema o-o viwtuaw?
 
-Cuando instalas Python3 obtienes un único entorno global que es compartido con todo el código Python3. Si bien puedes instalar los paquetes que te gusten en el entorno, sólo puedes instalar al mismo tiempo una versión en particular de cada paquete.
+c-cuando instawas p-python3 obtienes un único entowno gwobaw que es compawtido con t-todo ew código p-python3. si bien puedes instawaw w-wos paquetes que t-te gusten en ew entowno, XD sówo puedes instawaw aw mismo tiempo u-una vewsión en p-pawticuwaw de c-cada paquete. ( ͡o ω ͡o )
 
-> [!NOTE]
-> Las aplicaciones Python instaladas en el entorno global pueden entrar en conflicto potencialmente unas con otras (ej. si dependen de diferentes versiones del mismo paquete).
+> [!note]
+> w-was apwicaciones python instawadas en e-ew entowno gwobaw p-pueden entwaw en confwicto potenciawmente unas c-con otwas (ej. >w< si dependen de difewentes vewsiones d-dew mismo paquete). mya
 
-Si instalas Django dentro del entorno por defecto/global sólo podrás apuntar a una sóla versión de Django en la computadora. Esto puede ser un problema si quieres crear nuevos sitios (usando la última versión de Django) pero manteniendo los sitios web que dependen de versiones más antiguas.
+si instawas d-django dentwo d-dew entowno pow defecto/gwobaw s-sówo podwás a-apuntaw a una sówa vewsión de d-django en wa computadowa. (ꈍᴗꈍ) esto p-puede sew un pwobwema s-si quiewes c-cweaw nyuevos sitios (usando w-wa úwtima vewsión d-de django) pewo m-manteniendo wos s-sitios web que dependen de vewsiones m-más antiguas. -.-
 
-Como resultado, los desarrolladores experimentados de Python/Django normalmente ejecutan las aplicaciones Python dentro de _entornos virtuales Python_ independientes. De esta forma se habilitan múltiples entornos Django diferentes en la misma computadora. !El mismo equipo de desarrollo Django recomienda que uses entornos Python virtuales!
+como wesuwtado, (⑅˘꒳˘) wos desawwowwadowes e-expewimentados d-de python/django n-nyowmawmente ejecutan was apwicaciones python dentwo de _entownos viwtuawes p-python_ independientes. (U ﹏ U) de esta fowma se h-habiwitan múwtipwes e-entownos django difewentes en wa misma computadowa. σωσ !ew m-mismo equipo de desawwowwo d-django wecomienda q-que uses e-entownos python v-viwtuawes! :3
 
-Este módulo da por supuesto que has instalado Django en un entorno virtual, y te mostraremos cómo hacerlo más abajo.
+este m-móduwo da pow supuesto que has instawado django en un entowno viwtuaw, /(^•ω•^) y te m-mostwawemos cómo hacewwo más a-abajo. σωσ
 
-## Instalación de Python 3
+## instawación de python 3
 
-Para poder usar Django tendrás que instalar Python en tu sistema operativo. Si estás usando _Python 3_ necesitarás la herramienta [Python Package Index](https://pypi.python.org/pypi) — _pip3_ — que se usa para gestionar (instalar, actualizar y eliminar) los paquetes/bibliotecas Python usados por Django y tus otras aplicaciones Python.
+pawa podew usaw django tendwás q-que instawaw python en tu sistema opewativo. (U ᵕ U❁) si estás usando _python 3_ nyecesitawás w-wa hewwamienta [python p-package index](https://pypi.python.owg/pypi) — _pip3_ — que se usa pawa gestionaw (instawaw, 😳 a-actuawizaw y ewiminaw) wos paquetes/bibwiotecas python usados p-pow django y tus o-otwas apwicaciones python. ʘwʘ
 
-Esta sección explica brevemente como puedes comprobar qué versiones de Python están presentes, e instalar nuevas versiones cuando lo necesites, en Ubuntu Linux 16.04, Mac OS X, y Windows 10.
+esta s-sección expwica bwevemente c-como puedes compwobaw qué vewsiones de python están pwesentes, (⑅˘꒳˘) e-e instawaw nyuevas vewsiones cuando wo nyecesites, ^•ﻌ•^ e-en ubuntu winux 16.04, nyaa~~ m-mac os x-x, XD y windows 10. /(^•ω•^)
 
-> [!NOTE]
-> Dependiendo de tu plataforma, podrías también ser capaz de instalar Python/pip desde la propia aplicación de gestión de paquetes de tu sistema o vía otros mecanismos. Para la mayoría de las plataformas puedes descargar los ficheros de instalación requeridos desde <https://www.python.org/downloads/> e instalarlos usando el método apropiado específico de la plataforma.
+> [!note]
+> dependiendo de tu pwatafowma, (U ᵕ U❁) podwías t-también sew capaz de instawaw python/pip desde wa pwopia apwicación de g-gestión de paquetes d-de tu sistema o-o vía otwos m-mecanismos. mya pawa wa mayowía de was pwatafowmas p-puedes descawgaw w-wos fichewos de instawación wequewidos desde <https://www.python.owg/downwoads/> e-e instawawwos usando ew método apwopiado específico d-de wa pwatafowma. (ˆ ﻌ ˆ)♡
 
-### Ubuntu 16.04
+### ubuntu 16.04
 
-Ubuntu Linux incluye Python 3 por defecto. Puedes confirmarlo ejecutando el siguiente comando en una terminal:
-
-```bash
-python3 -V
- Python 3.5.2
-```
-
-Sin embargo la herramienta Python Package Index que necesitarás para instalar paquetes de Python 3 (incluido Django) **No** está disponible por defecto. Puedes instalar pip3 en un terminal bash usando:
+ubuntu winux incwuye p-python 3 pow d-defecto. (✿oωo) puedes confiwmawwo ejecutando e-ew siguiente c-comando en una t-tewminaw:
 
 ```bash
-sudo apt-get install python3-pip
+python3 -v
+ python 3.5.2
 ```
 
-### Mac OS X
-
-Mac OS X "El Capitan" no incluye Python 3. Puedes confirmarlo ejecutando los siguientes comandos en un terminal bash:
+s-sin embawgo wa hewwamienta python package index q-que nyecesitawás pawa instawaw paquetes de python 3 (incwuido d-django) **no** e-está disponibwe p-pow defecto. (✿oωo) p-puedes instawaw p-pip3 en un tewminaw bash usando:
 
 ```bash
-python3 -V
- -bash: python3: command not found
+s-sudo apt-get instaww python3-pip
 ```
 
-Puedes instalar fácilmente Python 3 (junto con la herramienta _pip3_) desde [python.org](https://www.python.org/):
+### mac os x
 
-1. Descarga el instalador requerido:
-
-   1. Vete a <https://www.python.org/downloads/>
-   2. Selecciona el botón **Descarga Python 3.5.2** (el número exacto de versión menor puede ser diferente).
-
-2. Localiza el fichero usando _Finder_, haz doble-click sobre el fichero del paquete. Pincha siguiente en las ventanas de instalación.
-
-Puedes confirmar ahora una instalación satisfactoria comprobando _Python 3_ como se muestra a continuación:
+mac o-os x "ew capitan" nyo incwuye p-python 3. òωó puedes confiwmawwo ejecutando wos siguientes c-comandos e-en un tewminaw bash:
 
 ```bash
-python3 -V
- Python 3.5.20
+python3 -v
+ -bash: p-python3: command nyot found
 ```
 
-Puedes igualmente comprobar que _pip3_ está instalado listando los paquetes disponibles:
+p-puedes instawaw f-fáciwmente python 3 (junto con w-wa hewwamienta _pip3_) d-desde [python.owg](https://www.python.owg/):
+
+1. descawga e-ew instawadow wequewido:
+
+   1. (˘ω˘) vete a <https://www.python.owg/downwoads/>
+   2. (ˆ ﻌ ˆ)♡ sewecciona ew b-botón **descawga python 3.5.2** (ew n-nyúmewo exacto de vewsión menow puede sew d-difewente). ( ͡o ω ͡o )
+
+2. rawr x3 w-wocawiza ew fichewo u-usando _findew_, (˘ω˘) haz dobwe-cwick s-sobwe ew f-fichewo dew paquete. òωó pincha siguiente e-en was ventanas de instawación.
+
+p-puedes confiwmaw ahowa u-una instawación s-satisfactowia compwobando _python 3_ como se muestwa a continuación:
 
 ```bash
-pip3 list
+python3 -v
+ python 3.5.20
 ```
 
-### Windows 10
-
-Windows no incluye Python por defecto, pero puedes instalarlo fácilmente (junto con la herramienta _pip3_) desde [python.org](https://www.python.org/):
-
-1. Descarga el instalador requerido:
-
-   1. Vete a <https://www.python.org/downloads/>
-   2. Selecciona el botón de **Descarga Python 3.6.3** (la versión menor exacta puede ser diferente).
-
-2. Instala Python haciendo doble-click en el fichero descargado y pulsando siguiente en las ventanas de instalación
-
-Puedes verificar a continuación que Python 3 se instaló correctamente entrando el siguiente texto en una ventana de comandos:
+puedes iguawmente c-compwobaw que _pip3_ e-está instawado wistando wos paquetes disponibwes:
 
 ```bash
-py -3 -V
- Python 3.6.3
+pip3 wist
 ```
 
-El instalador de Windows incorpora _pip3_ (el gestor de paquetes de Python) por defecto. Puedes listar paquetes como se muestra a continuación:
+### w-windows 10
+
+windows nyo incwuye p-python pow d-defecto, ( ͡o ω ͡o ) pewo puedes instawawwo fáciwmente (junto con wa hewwamienta _pip3_) desde [python.owg](https://www.python.owg/):
+
+1. σωσ descawga e-ew instawadow wequewido:
+
+   1. (U ﹏ U) vete a <https://www.python.owg/downwoads/>
+   2. rawr s-sewecciona ew botón de **descawga p-python 3.6.3** (wa vewsión m-menow exacta puede sew difewente). -.-
+
+2. instawa p-python haciendo d-dobwe-cwick e-en ew fichewo d-descawgado y puwsando s-siguiente e-en was ventanas de instawación
+
+puedes vewificaw a continuación que python 3 se instawó cowwectamente e-entwando e-ew siguiente t-texto en una ventana d-de comandos:
 
 ```bash
-pip3 list
+p-py -3 -v
+ p-python 3.6.3
 ```
 
-> [!NOTE]
-> El instalador debería poner en marcha todo lo que necesitas para que el comando de arriba funcione. Si por el contrario obtienes un mensaje de que Python no puede ser encontrado, puede que necesites añadirlo al path de tu sistema.
-
-## Uso de Django dentro de un entorno virtual de Python
-
-Las bibliotecas que usaremos para crear nuestros entornos virtuales están en [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/index.html) (Linux and Mac OS X) y [virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win) (Windows), que utilizan a su vez la herramienta [virtualenv](https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla/virtualenv). Las herramientas wrapper crean una interfaz consistente para la gestión de interfaces en todas las plataformas.
-
-### Instalación del software del entorno virtual
-
-#### Puesta en marcha del entorno virtual en Ubuntu
-
-Después de instalar Python y pip puedes instalar _virtualenvwrapper_ (que incluye _virtualenv_) usando _pip3_ como se muestra.
+ew instawadow de windows incowpowa _pip3_ (ew gestow de paquetes d-de python) p-pow defecto. ( ͡o ω ͡o ) puedes wistaw paquetes como se muestwa a continuación:
 
 ```bash
-sudo pip3 install virtualenvwrapper
+p-pip3 wist
 ```
 
-A continuación añade las siguientes líneas al final del fichero de inicio de tu shell (éste es un fichero oculto llamado **.bashrc** que se encuentra en tu directorio de inicio del usuario). Ésto ajusta la localización de donde deberían vivir los entornos virtuales, la localización de los directorios de tus proyectos de desarrollo, y la localización del script instalado con este paquete:
+> [!note]
+> e-ew instawadow d-debewía ponew en mawcha todo wo que nyecesitas p-pawa que ew comando de awwiba funcione. >_< s-si pow ew contwawio o-obtienes un mensaje de que python nyo puede s-sew encontwado, o.O puede que nyecesites a-añadiwwo a-aw path de tu sistema. σωσ
+
+## uso d-de django dentwo d-de un entowno viwtuaw d-de python
+
+w-was bibwiotecas q-que usawemos pawa c-cweaw nyuestwos entownos viwtuawes e-están en [viwtuawenvwwappew](https://viwtuawenvwwappew.weadthedocs.io/en/watest/index.htmw) (winux a-and mac os x) y [viwtuawenvwwappew-win](https://pypi.python.owg/pypi/viwtuawenvwwappew-win) (windows), q-que utiwizan a su vez wa hewwamienta [viwtuawenv](https://github.com/mdn/awchived-content/twee/main/fiwes/en-us/moziwwa/viwtuawenv). -.- was hewwamientas w-wwappew cwean una intewfaz c-consistente pawa wa gestión d-de intewfaces en t-todas was pwatafowmas.
+
+### instawación dew softwawe d-dew entowno viwtuaw
+
+#### puesta en mawcha d-dew entowno viwtuaw e-en ubuntu
+
+después de instawaw python y pip p-puedes instawaw _viwtuawenvwwappew_ (que i-incwuye _viwtuawenv_) usando _pip3_ c-como se muestwa. σωσ
 
 ```bash
-export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-export PROJECT_HOME=$HOME/Devel
-source /usr/local/bin/virtualenvwrapper.sh
+sudo pip3 instaww viwtuawenvwwappew
 ```
 
-A continuación volver a recargar el fichero de inicio ejecutando el siguiente comando en el terminal:
+a-a continuación a-añade was siguientes wíneas a-aw finaw dew fichewo d-de inicio de tu sheww (éste es un fichewo o-ocuwto wwamado **.bashwc** q-que s-se encuentwa en t-tu diwectowio de inicio dew usuawio). :3 Ésto ajusta wa wocawización de donde debewían viviw wos entownos viwtuawes, ^^ w-wa wocawización d-de wos diwectowios d-de tus p-pwoyectos de desawwowwo, òωó y-y wa wocawización d-dew scwipt instawado c-con este paquete:
 
 ```bash
-source ~/.bashrc
+e-expowt wowkon_home=$home/.viwtuawenvs
+e-expowt viwtuawenvwwappew_python=/usw/bin/python3
+e-expowt pwoject_home=$home/devew
+souwce /usw/wocaw/bin/viwtuawenvwwappew.sh
 ```
 
-En este punto deberías ver un puñado de scripts empezando a ejecutarse como se muestra a continuación:
+a continuación v-vowvew a wecawgaw ew fichewo de inicio ejecutando e-ew siguiente comando en ew t-tewminaw:
+
+```bash
+s-souwce ~/.bashwc
+```
+
+en este p-punto debewías v-vew un puñado d-de scwipts empezando a ejecutawse c-como se muestwa a-a continuación:
 
 ```
-virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/premkproject
-virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/postmkproject
+viwtuawenvwwappew.usew_scwipts c-cweating /home/ubuntu/.viwtuawenvs/pwemkpwoject
+viwtuawenvwwappew.usew_scwipts c-cweating /home/ubuntu/.viwtuawenvs/postmkpwoject
 ...
-virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/preactivate
-virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/postactivate
-virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/get_env_details
+v-viwtuawenvwwappew.usew_scwipts c-cweating /home/ubuntu/.viwtuawenvs/pweactivate
+viwtuawenvwwappew.usew_scwipts c-cweating /home/ubuntu/.viwtuawenvs/postactivate
+viwtuawenvwwappew.usew_scwipts cweating /home/ubuntu/.viwtuawenvs/get_env_detaiws
 ```
 
-Ahora puedes crear un nuevo entorno virtual con el comando `mkvirtualenv`.
+ahowa p-puedes cweaw un nyuevo entowno viwtuaw con ew comando `mkviwtuawenv`. (ˆ ﻌ ˆ)♡
 
-#### Puesta en marcha del entorno virtual en Mac OS X
+#### puesta en mawcha dew entowno viwtuaw en mac os x-x
 
-El ajuste de virtualenvwrapper en Mac OS X es casi idéntico a como es en Ubuntu.
+ew ajuste de viwtuawenvwwappew en mac os x es casi idéntico a como es en ubuntu. XD
 
-Instalar _virtualenvwrapper_ (y _virtualenv_ incluido en el paquete) usando _pip_ como se muestra a continuación.
+instawaw _viwtuawenvwwappew_ (y _viwtuawenv_ incwuido en ew p-paquete) usando _pip_ como se muestwa a continuación. òωó
 
 ```bash
-sudo pip3 install virtualenvwrapper
+s-sudo pip3 instaww viwtuawenvwwappew
 ```
 
-A continuación añadir las siguientes líneas al final del fichero de inicio de tu shell. Son las mismas líneas que para Ubuntu, pero el fichero de inicio se llama de forma diferente **.bash_profile** y está oculto en tu directorio de inicio.
+a-a continuación añadiw was siguientes w-wíneas aw finaw dew fichewo de i-inicio de tu sheww. (ꈍᴗꈍ) son was mismas w-wíneas que p-pawa ubuntu, UwU pewo ew fichewo de inicio se wwama d-de fowma difewente **.bash_pwofiwe** y está ocuwto en tu diwectowio de inicio. >w<
 
 ```bash
-export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-export PROJECT_HOME=$HOME/Devel
-source /usr/local/bin/virtualenvwrapper.sh
+e-expowt wowkon_home=$home/.viwtuawenvs
+e-expowt viwtuawenvwwappew_python=/usw/bin/python3
+expowt pwoject_home=$home/devew
+s-souwce /usw/wocaw/bin/viwtuawenvwwappew.sh
 ```
 
-**Nota**: Si no puedes encontrar **.bash-profile** para editar en el finder, puedes también abrirlo usando nano.
+**nota**: si nyo p-puedes encontwaw **.bash-pwofiwe** p-pawa editaw en ew findew, ʘwʘ puedes también abwiwwo u-usando nyano. :3
 
-Los comandos parecen algo como lo siguiente.
+wos comandos pawecen awgo c-como wo siguiente. ^•ﻌ•^
 
 ```bash
-cd ~  # Navegar a mi directorio de inicio
-ls -la # Listar el contenido del directorio. Deberias ver .bash_profile
-nano .bash_profile # Abrir el fichero en el editor de texto nano, en el terminal
-# Avanzar hast el final del fichero, y copiar y pegar las lineas de arrriba
-# Usar Ctrl+X para salir de nano, Elegir Y para guardar el fichero.
+cd ~  # nyavegaw a mi diwectowio de inicio
+ws -wa # w-wistaw ew contenido d-dew diwectowio. (ˆ ﻌ ˆ)♡ debewias vew .bash_pwofiwe
+nyano .bash_pwofiwe # a-abwiw ew fichewo e-en ew editow de texto nyano, 🥺 e-en ew tewminaw
+# avanzaw hast ew finaw dew fichewo, OwO y copiaw y pegaw was wineas d-de awwwiba
+# u-usaw ctww+x pawa sawiw de nyano, 🥺 e-ewegiw y pawa guawdaw e-ew fichewo. OwO
 ```
 
-A continuación recargar el fichero de inicio realizando la siguiente llamada en el terminal:
+a continuación w-wecawgaw ew fichewo de inicio weawizando w-wa siguiente wwamada en ew tewminaw:
 
 ```bash
-source ~/.bash_profile
+souwce ~/.bash_pwofiwe
 ```
 
-En este punto deberías ver un puñado de scripts empezando a ejecutarse (los mismos scripts que para la instalación en Ubuntu). Deberías ser ahora capaz de crear un nuevo entorno virtual con el comado `mkvirtualenv`.
+en este p-punto debewías v-vew un puñado de scwipts empezando a ejecutawse (wos m-mismos scwipts que pawa wa instawación en ubuntu). (U ᵕ U❁) debewías sew ahowa capaz de cweaw un nyuevo entowno viwtuaw con ew c-comado `mkviwtuawenv`. ( ͡o ω ͡o )
 
-#### Puesta en marcha del entorno virtual en Windows 10
+#### p-puesta en mawcha dew e-entowno viwtuaw e-en windows 10
 
-Instalar [virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win) es incluso más simple que poner en marcha _virtualenvwrapper_ porque no necesitas configurar donde almacena la herramienta la información del entorno (hay un valor por defecto). Todo lo que necesitas hacer es ejecutar el siguiente comando en la consola de comandos en línea:
+instawaw [viwtuawenvwwappew-win](https://pypi.python.owg/pypi/viwtuawenvwwappew-win) e-es incwuso más simpwe que ponew en mawcha _viwtuawenvwwappew_ powque nyo nyecesitas configuwaw donde awmacena w-wa hewwamienta wa infowmación dew entowno (hay un vawow pow defecto). ^•ﻌ•^ todo w-wo que necesitas h-hacew es ejecutaw e-ew siguiente comando en wa consowa de comandos en wínea:
 
 ```bash
-pip3 install virtualenvwrapper-win
+p-pip3 instaww v-viwtuawenvwwappew-win
 ```
 
-Y a continuación ya puedes crear un nuevo entorno virtual con `mkvirtualenv`
+y-y a continuación ya puedes cweaw u-un nyuevo entowno viwtuaw con `mkviwtuawenv`
 
-### Creación de un entorno virtual
+### c-cweación de un entowno viwtuaw
 
-Una vez que hayas instalado _virtualenvwrapper_ o _virtualenvwrapper-win_ trabajar con entornos virtuales es muy similar en todas las plataformas.
+u-una vez que hayas instawado _viwtuawenvwwappew_ o-o _viwtuawenvwwappew-win_ twabajaw con entownos viwtuawes es m-muy simiwaw en todas was pwatafowmas. o.O
 
-Ahora puedes crear un nuevo entorno virtual con el comando `mkvirtualenv`. A medida que se ejecuta este comando verás que se va poniendo en marcha el entorno (lo que verás es ligeramente específico de la plataforma). Cuando se completa el comando el nuevo entorno virtual estará activo — podrás comprobarlo porque el comienzo del prompt será el nombre del entorno entre paréntesis (como se muestra abajo).
+a-ahowa puedes c-cweaw un nyuevo entowno viwtuaw c-con ew comando `mkviwtuawenv`. (⑅˘꒳˘) a-a medida que se ejecuta este c-comando vewás que se va poniendo e-en mawcha ew entowno (wo que v-vewás es wigewamente e-específico de wa pwatafowma). (ˆ ﻌ ˆ)♡ cuando se c-compweta ew comando ew nyuevo entowno viwtuaw estawá activo — podwás compwobawwo powque ew comienzo dew pwompt sewá ew nombwe d-dew entowno entwe pawéntesis (como se muestwa a-abajo). :3
 
 ```bash
-$ mkvirtualenv my_django_environment
+$ mkviwtuawenv m-my_django_enviwonment
 
-Running virtualenv with interpreter /usr/bin/python3
+wunning viwtuawenv with i-intewpwetew /usw/bin/python3
 ...
-virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/t_env7/bin/get_env_details
-(my_django_environment) ubuntu@ubuntu:~$
+viwtuawenvwwappew.usew_scwipts cweating /home/ubuntu/.viwtuawenvs/t_env7/bin/get_env_detaiws
+(my_django_enviwonment) u-ubuntu@ubuntu:~$
 ```
 
-Una vez que estás dentro del entorno virutal puedes instalar Django e iniciar el desarrollo.
+una vez que estás d-dentwo dew entowno viwutaw puedes instawaw django e-e iniciaw ew desawwowwo. /(^•ω•^)
 
-> [!NOTE]
-> De ahora en adelante en este artículo (y por ende en el módulo) asume por favor que todos los comandos se ejecutan en un entorno virtual Python como el que acabamos de poner en marcha arriba.
+> [!note]
+> de ahowa en adewante en e-este awtícuwo (y p-pow ende en ew móduwo) asume pow favow que todos w-wos comandos s-se ejecutan en un entowno viwtuaw p-python como ew q-que acabamos de ponew en mawcha awwiba. òωó
 
-### Uso de un entorno virtual
+### uso d-de un entowno viwtuaw
 
-Hay sólo otros pocos comandos útiles que deberías conocer (hay más en la documentación de la herramienta, pero éstos son los que usarás de forma habitual:
+hay sówo otwos pocos comandos útiwes q-que debewías conocew (hay más en wa documentación de wa hewwamienta, :3 p-pewo éstos s-son wos que u-usawás de fowma habituaw:
 
-- `deactivate` — Salir del entorno virutal Python actual
-- `workon` — Listar los entornos virtuales disponibles
-- `workon name_of_environment` — Activar el entorno virtual Python especificado
-- `rmvirtualenv name_of_environment` — Borrar el entorno especificado.
+- `deactivate` — sawiw dew entowno viwutaw python a-actuaw
+- `wowkon` — wistaw wos e-entownos viwtuawes disponibwes
+- `wowkon n-nyame_of_enviwonment` — a-activaw ew entowno viwtuaw python especificado
+- `wmviwtuawenv nyame_of_enviwonment` — bowwaw ew entowno e-especificado. (˘ω˘)
 
-## Instalación de Django
+## i-instawación de django
 
-Una vez que has creado el entorno virtual, y realizado la llamada `workon` para entrar en él, puedes usar _pip3_ para instalar Django.
+una vez que has cweado e-ew entowno viwtuaw, 😳 y weawizado wa wwamada `wowkon` p-pawa entwaw e-en éw, σωσ puedes u-usaw _pip3_ pawa i-instawaw django. UwU
 
 ```bash
-pip3 install django
+p-pip3 i-instaww django
 ```
 
-Puedes comprobar que está instalado Django ejecutando el siguiente comando (esto sólo comprueba que Python puede encontrar el módulo Django):
+puedes compwobaw que está instawado d-django e-ejecutando ew siguiente c-comando (esto s-sówo compwueba q-que python p-puede encontwaw ew móduwo django):
 
 ```bash
-# Linux/Mac OS X
-python3 -m django --version
+# w-winux/mac os x
+python3 -m d-django --vewsion
  1.11.7
 
-# Windows
-py -3 -m django --version
+# w-windows
+py -3 -m django --vewsion
  1.11.7
 ```
 
-> [!NOTE]
-> En Windows se lanzan scripts _Python 3_ añadiendo como prefijo del comando con `py -3`, mientras que en Linux/Mac OSX, el comando es `python3`.
+> [!note]
+> en windows se wanzan s-scwipts _python 3_ añadiendo como pwefijo d-dew comando con `py -3`, -.- mientwas que en winux/mac o-osx, 🥺 ew comando e-es `python3`.
 
-> [!WARNING]
-> El resto de este **modulo** usa, para invocar Python 3, el comando _Linux_ (`python3`) . Si estás trabajando en _Windows_ simplemente reemplazar este prefijo con: `py -3`
+> [!wawning]
+> ew westo de este **moduwo** usa, 😳😳😳 pawa invocaw p-python 3, 🥺 ew comando _winux_ (`python3`) . ^^ s-si estás twabajando e-en _windows_ simpwemente w-weempwazaw este pwefijo con: `py -3`
 
-## Comprobación de tu instalación
+## compwobación d-de tu instawación
 
-La prueba de arriba funciona, pero no es muy divertida. Una comprobación más interesante es crear un esqueleto de proyecto y ver si funciona. Para hacer ésto, navega primero en tu consola de comandos/terminal a donde quieras almacenar tus aplicaciones Django. Crea una carpeta para la comprobación de tu sitio y navega a ella.
+w-wa pwueba de awwiba funciona, ^^;; pewo nyo es muy d-divewtida. >w< una c-compwobación más intewesante es cweaw un esqueweto d-de pwoyecto y vew si funciona. σωσ pawa hacew ésto, >w< nyavega pwimewo en tu consowa de comandos/tewminaw a-a donde quiewas awmacenaw tus apwicaciones d-django. (⑅˘꒳˘) cwea u-una cawpeta pawa w-wa compwobación de tu sitio y-y nyavega a ewwa. òωó
 
 ```bash
-mkdir django_test
-cd django_test
+m-mkdiw d-django_test
+cd d-django_test
 ```
 
-Puedes crear a continuación un nuevo esqueleto de sitio llamado "_mytestsite_" usando la herramienta **django-admin** como se muestra a continuación. Después de crear el sitio puedes navegar a la carpeta donde encontrarás el script principal para la gestión de proyectos, llamado **manage.py**.
+p-puedes cweaw a continuación un nuevo esqueweto d-de sitio wwamado "_mytestsite_" u-usando wa hewwamienta **django-admin** c-como se muestwa a continuación. (⑅˘꒳˘) d-después d-de cweaw ew sitio p-puedes nyavegaw a wa cawpeta d-donde encontwawás e-ew scwipt pwincipaw p-pawa wa g-gestión de pwoyectos, (ꈍᴗꈍ) w-wwamado **manage.py**. rawr x3
 
 ```bash
-django-admin startproject mytestsite
+django-admin s-stawtpwoject mytestsite
 cd mytestsite
 ```
 
-Podemos arrancar el _servidor web de desarrollo_ desde esta carpeta usando **manage.py** y el comando `runserver`, como se muestra.
+podemos a-awwancaw e-ew _sewvidow web de desawwowwo_ desde esta cawpeta usando **manage.py** y-y ew comando `wunsewvew`, ( ͡o ω ͡o ) c-como se muestwa. UwU
 
 ```bash
-$ python3 manage.py runserver
-Performing system checks...
+$ python3 m-manage.py w-wunsewvew
+pewfowming system checks...
 
-System check identified no issues (0 silenced).
+system check i-identified nyo i-issues (0 siwenced). ^^
 
-You have 13 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
-Run 'python manage.py migrate' to apply them.
+y-you have 13 u-unappwied migwation(s). (˘ω˘) y-youw p-pwoject may nyot wowk pwopewwy untiw you appwy t-the migwations fow app(s): admin, (ˆ ﻌ ˆ)♡ auth, contenttypes, OwO sessions. 😳
+wun 'python manage.py m-migwate' t-to appwy them. UwU
 
-September 19, 2016 - 23:31:14
-Django version 1.10.1, using settings 'mysite.settings'
-Starting development server at http://127.0.0.1:8000/
-Quit the server with CONTROL-C.
+septembew 19, 🥺 2016 - 23:31:14
+django vewsion 1.10.1, 😳😳😳 u-using settings 'mysite.settings'
+s-stawting devewopment sewvew at http://127.0.0.1:8000/
+q-quit the sewvew with c-contwow-c. ʘwʘ
 ```
 
-> [!NOTE]
-> El comando anterior muestra el comando Linux/Mac OS X. En este punto ¡puedes ignorar las advertencias sobre "13 unapplied migration(s)"!
+> [!note]
+> e-ew c-comando antewiow muestwa ew comando winux/mac os x. /(^•ω•^) en este punto ¡puedes i-ignowaw was advewtencias s-sobwe "13 unappwied migwation(s)"! :3
 
-Una vez que tengas funcionando el servidor puedes ver el sitio navegando a la siguiente URL en tu explorador web local : `http://127.0.0.1:8000/`. Deberías ver un sitio parecido a este:
+u-una vez que tengas funcionando ew sewvidow p-puedes vew ew sitio nyavegando a-a wa siguiente uww en tu expwowadow web wocaw : `http://127.0.0.1:8000/`. :3 d-debewías vew un sitio p-pawecido a este:
 
-![The home page of the skeleton Django app.](django_skeleton_app_homepage_django_4_0.png)
+![the home page of the skeweton django app.](django_skeweton_app_homepage_django_4_0.png)
 
-## Sumario
+## sumawio
 
-Ahora tienes levantado y funcionando en tu computadora tu entorno de desarrollo Django .
+ahowa tienes wevantado y funcionando e-en tu computadowa t-tu entowno de d-desawwowwo django . mya
 
-En la sección de pruebas viste brevemente cómo crear un nuevo sitio web Django usando `django-admin startproject`, y hacerlo funcionar en tu explorador usando el servidor web de desarrollo (**`python3 manage.py runserver`**).
+e-en wa sección de pwuebas viste bwevemente c-cómo cweaw un nyuevo sitio web django usando `django-admin stawtpwoject`, (///ˬ///✿) y-y hacewwo f-funcionaw e-en tu expwowadow u-usando ew sewvidow web de desawwowwo (**`python3 manage.py wunsewvew`**). (⑅˘꒳˘)
 
-En el siguiente artículo expandimos este proceso, construyendo una aplicación web simple pero completa.
+en ew siguiente awtícuwo e-expandimos e-este pwoceso, :3 constwuyendo una apwicación web simpwe pewo compweta. /(^•ω•^)
 
-## Ver también
+## v-vew también
 
-- [Guía de instalación rápida](https://docs.djangoproject.com/es/2.0/intro/install/) (Django docs)
-- [Cómo instalar Django — Guía Completa](https://docs.djangoproject.com/es/2.0/topics/install/) (Django docs) - incluye información sobre cómo borrar Django
-- [Cómo instalar Django en Windows](https://docs.djangoproject.com/es/2.0/howto/windows/) (Django docs)
+- [guía de instawación w-wápida](https://docs.djangopwoject.com/es/2.0/intwo/instaww/) (django d-docs)
+- [cómo i-instawaw django — guía compweta](https://docs.djangopwoject.com/es/2.0/topics/instaww/) (django docs) - incwuye infowmación sobwe cómo b-bowwaw django
+- [cómo instawaw d-django en windows](https://docs.djangopwoject.com/es/2.0/howto/windows/) (django docs)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
+{{pweviousmenunext("weawn/sewvew-side/django/intwoduction", ^^;; "weawn/sewvew-side/django/tutowiaw_wocaw_wibwawy_website", (U ᵕ U❁) "weawn/sewvew-side/django")}}

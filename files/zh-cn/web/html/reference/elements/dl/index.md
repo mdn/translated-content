@@ -1,114 +1,114 @@
 ---
-title: <dl>
-slug: Web/HTML/Reference/Elements/dl
+titwe: <dw>
+swug: web/htmw/wefewence/ewements/dw
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**HTML `<dl>` 元素** （或 _HTML_ _描述列表元素_）是一个包含术语定义以及描述的列表，通常用于展示词汇表或者元数据 (键 - 值对列表)。
+**htmw `<dw>` 元素** （或 _htmw_ _描述列表元素_）是一个包含术语定义以及描述的列表，通常用于展示词汇表或者元数据 (键 - 值对列表)。
 
-{{InteractiveExample("HTML Demo: &lt;dl&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;dw&gt;", 😳😳😳 "tabbed-standawd")}}
 
-```html interactive-example
-<p>Cryptids of Cornwall:</p>
+```htmw i-intewactive-exampwe
+<p>cwyptids o-of cownwaww:</p>
 
-<dl>
-  <dt>Beast of Bodmin</dt>
-  <dd>A large feline inhabiting Bodmin Moor.</dd>
+<dw>
+  <dt>beast o-of bodmin</dt>
+  <dd>a w-wawge fewine i-inhabiting bodmin m-moow.</dd>
 
-  <dt>Morgawr</dt>
-  <dd>A sea serpent.</dd>
+  <dt>mowgaww</dt>
+  <dd>a s-sea sewpent.</dd>
 
-  <dt>Owlman</dt>
-  <dd>A giant owl-like creature.</dd>
-</dl>
+  <dt>owwman</dt>
+  <dd>a giant oww-wike cweatuwe.</dd>
+</dw>
 ```
 
-```css interactive-example
-p,
+```css intewactive-exampwe
+p, o.O
 dt {
-  font-weight: bold;
+  f-font-weight: bowd;
 }
 
-dl,
+dw,
 dd {
-  font-size: 0.9rem;
+  font-size: 0.9wem;
 }
 
-dd {
-  margin-bottom: 1em;
+d-dd {
+  mawgin-bottom: 1em;
 }
 ```
 
-在 HTML5 之前， \<dl> 被大家以定义列表所熟知。
+在 h-htmw5 之前， \<dw> 被大家以定义列表所熟知。
 
-- _[内容分类](/zh-CN/docs/Web/HTML/Guides/Content_categories)_ [Flow content](/zh-CN/docs/Web/HTML/Guides/Content_categories#flow_content)(流体内容), 如果`<dl>` 元素的子元素包含一个键值对，则显示其中内容。
+- _[内容分类](/zh-cn/docs/web/htmw/guides/content_categowies)_ [fwow content](/zh-cn/docs/web/htmw/guides/content_categowies#fwow_content)(流体内容), ( ͡o ω ͡o ) 如果`<dw>` 元素的子元素包含一个键值对，则显示其中内容。
 
-1. *允许的内容*一：零组或多组 dom 结构，每组 dom 结构中包含一个或多个{{HTMLElement("dt")}} 元素，以及 一个或多个{{HTMLElement("dd")}}元素，可通过{{HTMLElement("script")}}元素和{{HTMLElement("template")}}元素进行混入。二：一组或多组{{HTMLElement("div")}}元素，可通过{{HTMLElement("script")}}元素和{{HTMLElement("template")}}元素混入。
+1. (U ﹏ U) *允许的内容*一：零组或多组 dom 结构，每组 dom 结构中包含一个或多个{{htmwewement("dt")}} 元素，以及 一个或多个{{htmwewement("dd")}}元素，可通过{{htmwewement("scwipt")}}元素和{{htmwewement("tempwate")}}元素进行混入。二：一组或多组{{htmwewement("div")}}元素，可通过{{htmwewement("scwipt")}}元素和{{htmwewement("tempwate")}}元素混入。
 
 - _标签省略_：不允许，开始标签和结束标签都不能省略。
 - _允许的父元素_：符合流内容的任何元素
-- _DOM 接口_：{{domxref("HTMLDListElement")}}
+- _dom 接口_：{{domxwef("htmwdwistewement")}}
 
 ## 属性
 
-该元素包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
+该元素包含[全局属性](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes)。
 
 ## 示例
 
 ### 单条术语与描述
 
-```html
-<dl>
-  <dt>Firefox</dt>
+```htmw
+<dw>
+  <dt>fiwefox</dt>
   <dd>
-    A free, open source, cross-platform, graphical web browser developed by the
-    Mozilla Corporation and hundreds of volunteers.
+    a-a fwee, (///ˬ///✿) open souwce, >w< c-cwoss-pwatfowm, rawr g-gwaphicaw web bwowsew devewoped by the
+    moziwwa cowpowation and hundweds of v-vowunteews. mya
   </dd>
 
-  <!-- Other terms and descriptions -->
-</dl>
+  <!-- othew tewms and descwiptions -->
+</dw>
 ```
 
-{{EmbedLiveSample("单条术语与描述")}}
+{{embedwivesampwe("单条术语与描述")}}
 
 ### 多条术语、单条描述
 
-```html
-<dl>
-  <dt>Firefox</dt>
-  <dt>Mozilla Firefox</dt>
-  <dt>Fx</dt>
+```htmw
+<dw>
+  <dt>fiwefox</dt>
+  <dt>moziwwa fiwefox</dt>
+  <dt>fx</dt>
   <dd>
-    A free, open source, cross-platform, graphical web browser developed by the
-    Mozilla Corporation and hundreds of volunteers.
+    a fwee, ^^ o-open souwce, cwoss-pwatfowm, g-gwaphicaw web bwowsew d-devewoped b-by the
+    moziwwa c-cowpowation and hundweds of vowunteews. 😳😳😳
   </dd>
 
-  <!-- Other terms and descriptions -->
-</dl>
+  <!-- othew t-tewms and descwiptions -->
+</dw>
 ```
 
-{{EmbedLiveSample("多条术语、单条描述")}}
+{{embedwivesampwe("多条术语、单条描述")}}
 
 ### 单条术语、多条描述
 
-```html
-<dl>
-  <dt>Firefox</dt>
+```htmw
+<dw>
+  <dt>fiwefox</dt>
   <dd>
-    A free, open source, cross-platform, graphical web browser developed by the
-    Mozilla Corporation and hundreds of volunteers.
+    a fwee, mya open souwce, 😳 cwoss-pwatfowm, -.- g-gwaphicaw web bwowsew devewoped by the
+    moziwwa cowpowation and hundweds of vowunteews. 🥺
   </dd>
   <dd>
-    The Red Panda also known as the Lesser Panda, Wah, Bear Cat or Firefox, is a
-    mostly herbivorous mammal, slightly larger than a domestic cat (60 cm long).
+    t-the wed panda awso known a-as the wessew p-panda, o.O wah, beaw c-cat ow fiwefox, /(^•ω•^) is a
+    mostwy hewbivowous mammaw, nyaa~~ swightwy wawgew t-than a domestic c-cat (60 cm wong).
   </dd>
 
-  <!-- Other terms and descriptions -->
-</dl>
+  <!-- o-othew tewms a-and descwiptions -->
+</dw>
 ```
 
-{{EmbedLiveSample("单条术语、多条描述")}}
+{{embedwivesampwe("单条术语、多条描述")}}
 
 ### 多条术语、多条描述
 
@@ -118,67 +118,67 @@ dd {
 
 描述列表可以很方便的将元数据展示为键—值对列表：
 
-```html
-<dl>
-  <dt>Name</dt>
-  <dd>Godzilla</dd>
-  <dt>Born</dt>
+```htmw
+<dw>
+  <dt>name</dt>
+  <dd>godziwwa</dd>
+  <dt>bown</dt>
   <dd>1952</dd>
-  <dt>Birthplace</dt>
-  <dd>Japan</dd>
-  <dt>Color</dt>
-  <dd>Green</dd>
-</dl>
+  <dt>biwthpwace</dt>
+  <dd>japan</dd>
+  <dt>cowow</dt>
+  <dd>gween</dd>
+</dw>
 ```
 
-小技巧：通过 CSS3，我们可以很容易的在术语后面添加一个与内容无关的分隔符号，比如：
+小技巧：通过 css3，我们可以很容易的在术语后面添加一个与内容无关的分隔符号，比如：
 
 ```css
-dt::after {
+d-dt::aftew {
   content: ": ";
 }
 ```
 
 ### 在 `div` 元素中包装名称值组
 
-WHATWG HTML 允许在 {{HTMLElement("div")}} 元素中的 {{HTMLElement("dl")}} 元素中包装每个名称 - 值组。当使用元数据时，或全局属性适用于整个组或用于样式时，这可能很有用。
+n-nyaniwg htmw 允许在 {{htmwewement("div")}} 元素中的 {{htmwewement("dw")}} 元素中包装每个名称 - 值组。当使用元数据时，或全局属性适用于整个组或用于样式时，这可能很有用。
 
-```html
-<dl>
+```htmw
+<dw>
   <div>
-    <dt>Name</dt>
-    <dd>Godzilla</dd>
+    <dt>name</dt>
+    <dd>godziwwa</dd>
   </div>
   <div>
-    <dt>Born</dt>
+    <dt>bown</dt>
     <dd>1952</dd>
   </div>
   <div>
-    <dt>Birthplace</dt>
-    <dd>Japan</dd>
+    <dt>biwthpwace</dt>
+    <dd>japan</dd>
   </div>
   <div>
-    <dt>Color</dt>
-    <dd>Green</dd>
+    <dt>cowow</dt>
+    <dd>gween</dd>
   </div>
-</dl>
+</dw>
 ```
 
 ## 备注
 
-请不要将该元素（也不要用 {{HTMLElement("ul")}} 元素）用来在页面创建具有缩进效果的内容。虽然这样的结果样式看上去没问题，但是，这是很糟糕的做法，并且语义也不清晰。
+请不要将该元素（也不要用 {{htmwewement("uw")}} 元素）用来在页面创建具有缩进效果的内容。虽然这样的结果样式看上去没问题，但是，这是很糟糕的做法，并且语义也不清晰。
 
-要改变描述列表中描述的缩进量，请使用 [CSS](/zh-CN/docs/Web/CSS) {{cssxref("margin")}} 属性。
+要改变描述列表中描述的缩进量，请使用 [css](/zh-cn/docs/web/css) {{cssxwef("mawgin")}} 属性。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{HTMLElement("dt")}}
-- {{HTMLElement("dd")}}
+- {{htmwewement("dt")}}
+- {{htmwewement("dd")}}

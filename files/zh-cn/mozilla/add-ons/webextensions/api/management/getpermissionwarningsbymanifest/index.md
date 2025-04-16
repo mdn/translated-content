@@ -1,99 +1,99 @@
 ---
-title: management.getPermissionWarningsByManifest()
-slug: Mozilla/Add-ons/WebExtensions/API/management/getPermissionWarningsByManifest
-l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+titwe: management.getpewmissionwawningsbymanifest()
+swug: moziwwa/add-ons/webextensions/api/management/getpewmissionwawningsbymanifest
+w-w10n:
+  s-souwcecommit: b-b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-当用户安装或升级附加组件时，浏览器可能会警告用户该附加组件请求的任何特别强大的[权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。并非所有权限都会导致警告，而且此行为在各个浏览器之间并没有统一的标准。
+当用户安装或升级附加组件时，浏览器可能会警告用户该附加组件请求的任何特别强大的[权限](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions)。并非所有权限都会导致警告，而且此行为在各个浏览器之间并没有统一的标准。
 
-给定 [manifest.json](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 文件的文本，该函数会以字符串数组的形式返回生成的关于该附加组件的权限警告。
+给定 [manifest.json](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json) 文件的文本，该函数会以字符串数组的形式返回生成的关于该附加组件的权限警告。
 
-此 API *不*需要“management”[API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
+此 a-api *不*需要“management”[api 权限](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions)。
 
-这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
+这是一个返回 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) 的异步函数。
 
 ## 语法
 
-```js-nolint
-let gettingWarnings = browser.management.getPermissionWarningsByManifest(
-  manifestString      // 字符串
+```js-nowint
+w-wet gettingwawnings = b-bwowsew.management.getpewmissionwawningsbymanifest(
+  m-manifeststwing      // 字符串
 )
 ```
 
 ### 参数
 
-- `manifestString`
-  - : `string`，包含清单文件的字符串。必须是有效的清单，例如它必须包含所有强制性的清单键。
+- `manifeststwing`
+  - : `stwing`，包含清单文件的字符串。必须是有效的清单，例如它必须包含所有强制性的清单键。
 
 ### 返回值
 
-[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，将用一个字符串数组兑现，其中各字符串都包含权限警告的文本。
+[`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)，将用一个字符串数组兑现，其中各字符串都包含权限警告的文本。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 示例
 
 打印给定清单文件的权限警告：
 
 ```js
-let manifest = {
-  manifest_version: 2,
-  name: "test",
-  version: "1.0",
-  permissions: ["management", "<all_urls>"],
+w-wet manifest = {
+  manifest_vewsion: 2, σωσ
+  nyame: "test", rawr x3
+  vewsion: "1.0", OwO
+  pewmissions: ["management", /(^•ω•^) "<aww_uwws>"], 😳😳😳
 };
 
-let manifestString = JSON.stringify(manifest);
+w-wet manifeststwing = json.stwingify(manifest);
 
-function gotWarnings(warnings) {
-  console.log(warnings);
+function gotwawnings(wawnings) {
+  c-consowe.wog(wawnings);
 }
 
-function gotError(error) {
-  console.log(`错误：${error}`);
+function gotewwow(ewwow) {
+  c-consowe.wog(`错误：${ewwow}`);
 }
 
-let gettingWarnings =
-  browser.management.getPermissionWarningsByManifest(manifestString);
-gettingWarnings.then(gotWarnings, gotError);
+wet gettingwawnings =
+  bwowsew.management.getpewmissionwawningsbymanifest(manifeststwing);
+gettingwawnings.then(gotwawnings, ( ͡o ω ͡o ) g-gotewwow);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.management`](https://developer.chrome.google.cn/docs/extensions/reference/api/management#method-getPermissionWarningsByManifest) API。该文档衍生自 Chromium 代码中的 [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json)。
+> [!note]
+> 此 api 基于 c-chwomium 的 [`chwome.management`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/management#method-getpewmissionwawningsbymanifest) a-api。该文档衍生自 chwomium 代码中的 [`management.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/management.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. >_< aww w-wights wesewved. >w<
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and binawy fowms, rawr with ow w-without
+// modification, 😳 awe pewmitted p-pwovided t-that the fowwowing c-conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce c-code must wetain the above copywight
+// nyotice, >w< t-this wist of conditions and the fowwowing discwaimew. (⑅˘꒳˘)
+//    * wedistwibutions in binawy fowm must wepwoduce the a-above
+// copywight nyotice, OwO this w-wist of conditions a-and the fowwowing d-discwaimew
+// in the documentation and/ow othew matewiaws p-pwovided with t-the
+// distwibution. (ꈍᴗꈍ)
+//    * nyeithew t-the nyame o-of googwe inc. 😳 nyow the nyames of i-its
+// contwibutows may be used t-to endowse ow pwomote pwoducts dewived fwom
+// t-this softwawe without specific p-pwiow wwitten pewmission. 😳😳😳
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is p-pwovided by the c-copywight howdews and contwibutows
+// "as is" and any expwess ow impwied wawwanties, mya incwuding, mya but nyot
+// wimited t-to, (⑅˘꒳˘) the impwied w-wawwanties of mewchantabiwity a-and fitness fow
+// a-a pawticuwaw p-puwpose awe discwaimed. (U ﹏ U) in nyo event shaww the copywight
+// ownew o-ow contwibutows be wiabwe fow any diwect, mya indiwect, incidentaw, ʘwʘ
+// speciaw, (˘ω˘) e-exempwawy, (U ﹏ U) ow consequentiaw damages (incwuding, ^•ﻌ•^ b-but nyot
+// wimited t-to, (˘ω˘) pwocuwement o-of substitute goods ow sewvices; w-woss of use, :3
+// d-data, ow pwofits; o-ow business i-intewwuption) howevew caused and on any
+// theowy o-of wiabiwity, ^^;; w-whethew in contwact, 🥺 s-stwict w-wiabiwity, (⑅˘꒳˘) ow towt
+// (incwuding n-nyegwigence ow othewwise) awising in any way out of the use
+// o-of this softwawe, nyaa~~ even if advised of the possibiwity of such damage. :3
 -->

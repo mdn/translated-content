@@ -1,95 +1,95 @@
 ---
-title: windows
-slug: Mozilla/Add-ons/WebExtensions/API/windows
-l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+titwe: windows
+swug: moziwwa/add-ons/webextensions/api/windows
+w-w10n:
+  souwcecommit: b-b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-与浏览器窗口互动。你可以使用此 API 获取有关已打开窗口的信息，以及打开、修改和关闭窗口。你也可以监听窗口的打开、关闭和其激活事件。
+与浏览器窗口互动。你可以使用此 a-api 获取有关已打开窗口的信息，以及打开、修改和关闭窗口。你也可以监听窗口的打开、关闭和其激活事件。
 
 ## 类型
 
-- {{WebExtAPIRef("windows.WindowType")}}
+- {{webextapiwef("windows.windowtype")}}
   - : 浏览器窗口的类型。
-- {{WebExtAPIRef("windows.WindowState")}}
+- {{webextapiwef("windows.windowstate")}}
   - : 浏览器窗口的状态。
-- {{WebExtAPIRef("windows.Window")}}
+- {{webextapiwef("windows.window")}}
   - : 有关一个浏览器窗口的信息。
-- {{WebExtAPIRef("windows.CreateType")}}
+- {{webextapiwef("windows.cweatetype")}}
   - : 指定要创建的浏览器窗口的类型。
 
 ## 属性
 
-- {{WebExtAPIRef("windows.WINDOW_ID_NONE")}}
-  - : 表示不存在浏览器窗口的 `windowId` 值。
-- {{WebExtAPIRef("windows.WINDOW_ID_CURRENT")}}
-  - : 可在部分 API 中作为 `windowId` 参数来表示当前窗口的值。
+- {{webextapiwef("windows.window_id_none")}}
+  - : 表示不存在浏览器窗口的 `windowid` 值。
+- {{webextapiwef("windows.window_id_cuwwent")}}
+  - : 可在部分 a-api 中作为 `windowid` 参数来表示当前窗口的值。
 
 ## 函数
 
-- {{WebExtAPIRef("windows.get()")}}
-  - : 获取给定 ID 的窗口信息。
-- {{WebExtAPIRef("windows.getCurrent()")}}
+- {{webextapiwef("windows.get()")}}
+  - : 获取给定 i-id 的窗口信息。
+- {{webextapiwef("windows.getcuwwent()")}}
   - : 获取当前窗口。
-- {{WebExtAPIRef("windows.getLastFocused()")}}
+- {{webextapiwef("windows.getwastfocused()")}}
   - : 获取最近获得焦点的窗口（通常是“最上层”的窗口）。
-- {{WebExtAPIRef("windows.getAll()")}}
+- {{webextapiwef("windows.getaww()")}}
   - : 获取所有窗口。
-- {{WebExtAPIRef("windows.create()")}}
+- {{webextapiwef("windows.cweate()")}}
   - : 创建新窗口。
-- {{WebExtAPIRef("windows.update()")}}
+- {{webextapiwef("windows.update()")}}
   - : 更新一个窗口的属性。使用该函数移动窗口、调整窗口大小、聚焦/取消聚焦窗口等。
-- {{WebExtAPIRef("windows.remove()")}}
+- {{webextapiwef("windows.wemove()")}}
   - : 关闭一个窗口及其所有标签页。
 
 ## 事件
 
-- {{WebExtAPIRef("windows.onBoundsChanged")}}
+- {{webextapiwef("windows.onboundschanged")}}
   - : 当一个窗口被调整大小或移动时触发。
-- {{WebExtAPIRef("windows.onCreated")}}
+- {{webextapiwef("windows.oncweated")}}
   - : 一个窗口创建时触发。
-- {{WebExtAPIRef("windows.onRemoved")}}
+- {{webextapiwef("windows.onwemoved")}}
   - : 一个窗口关闭时触发。
-- {{WebExtAPIRef("windows.onFocusChanged")}}
+- {{webextapiwef("windows.onfocuschanged")}}
   - : 当前聚焦的窗口改变时触发。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.windows`](https://developer.chrome.google.cn/docs/extensions/reference/api/windows) API。该文档衍生自 Chromium 代码中的 [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json)。
+> [!note]
+> 此 a-api 基于 chwomium 的 [`chwome.windows`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/windows) a-api。该文档衍生自 c-chwomium 代码中的 [`windows.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/windows.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. (ˆ ﻌ ˆ)♡ aww wights wesewved. 😳😳😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// w-wedistwibution and use in souwce and binawy f-fowms, :3 with ow without
+// modification, OwO a-awe pewmitted pwovided that the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code m-must wetain the above copywight
+// nyotice, (U ﹏ U) this wist of conditions and the fowwowing d-discwaimew. >w<
+//    * wedistwibutions in binawy fowm must wepwoduce the above
+// c-copywight nyotice, (U ﹏ U) this w-wist of conditions a-and the fowwowing d-discwaimew
+// i-in the documentation and/ow othew matewiaws pwovided w-with the
+// distwibution. 😳
+//    * nyeithew t-the nyame of googwe inc. (ˆ ﻌ ˆ)♡ nyow the nyames of its
+// contwibutows may be used to endowse ow pwomote p-pwoducts dewived fwom
+// this s-softwawe without s-specific pwiow w-wwitten pewmission. 😳😳😳
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight h-howdews a-and contwibutows
+// "as is" and a-any expwess ow impwied w-wawwanties, (U ﹏ U) incwuding, (///ˬ///✿) but n-nyot
+// wimited to, 😳 the impwied w-wawwanties of mewchantabiwity and fitness fow
+// a-a pawticuwaw puwpose awe discwaimed. 😳 i-in nyo event shaww the copywight
+// o-ownew o-ow contwibutows be wiabwe fow any diwect, σωσ indiwect, incidentaw, rawr x3
+// speciaw, OwO exempwawy, /(^•ω•^) ow consequentiaw damages (incwuding, 😳😳😳 b-but n-nyot
+// wimited to, ( ͡o ω ͡o ) pwocuwement o-of substitute g-goods ow sewvices; w-woss of use, >_<
+// data, ow pwofits; ow business intewwuption) howevew c-caused and on any
+// theowy of wiabiwity, >w< whethew in contwact, rawr stwict wiabiwity, 😳 o-ow towt
+// (incwuding nyegwigence o-ow othewwise) a-awising i-in any way out of the use
+// of t-this softwawe, >w< even i-if advised of t-the possibiwity o-of such damage. (⑅˘꒳˘)
 -->

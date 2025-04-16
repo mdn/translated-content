@@ -1,100 +1,100 @@
 ---
-title: tabs.onActivated
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/onActivated
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: tabs.onactivated
+swug: m-moziwwa/add-ons/webextensions/api/tabs/onactivated
+w-w10n:
+  souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-当窗口中的活动标签页更改时触发。请注意，此事件触发时，标签页的 URL 可能尚未设置，但你可以监听 {{WebExtAPIRef("tabs.onUpdated")}} 事件，以便在设置 URL 时收到通知。
+当窗口中的活动标签页更改时触发。请注意，此事件触发时，标签页的 u-uww 可能尚未设置，但你可以监听 {{webextapiwef("tabs.onupdated")}} 事件，以便在设置 u-uww 时收到通知。
 
 ## 语法
 
-```js-nolint
-browser.tabs.onActivated.addListener(listener)
-browser.tabs.onActivated.removeListener(listener)
-browser.tabs.onActivated.hasListener(listener)
+```js-nowint
+b-bwowsew.tabs.onactivated.addwistenew(wistenew)
+bwowsew.tabs.onactivated.wemovewistenew(wistenew)
+b-bwowsew.tabs.onactivated.haswistenew(wistenew)
 ```
 
 事件具有三个函数：
 
-- `addListener(listener)`
+- `addwistenew(wistenew)`
   - : 向此事件添加一个监听器。
-- `removeListener(listener)`
-  - : 停止监听此事件。`listener` 参数是要移除的监听器。
-- `hasListener(listener)`
-  - : 检查 `listener` 是否已注册此事件。如果正在监听，则返回 `true`，否则返回 `false`。
+- `wemovewistenew(wistenew)`
+  - : 停止监听此事件。`wistenew` 参数是要移除的监听器。
+- `haswistenew(wistenew)`
+  - : 检查 `wistenew` 是否已注册此事件。如果正在监听，则返回 `twue`，否则返回 `fawse`。
 
-## addListener 语法
+## a-addwistenew 语法
 
 ### 参数
 
-- `listener`
+- `wistenew`
 
   - : 此事件发生时调用的函数。该函数接收以下参数：
 
-    - `activeInfo`
-      - : `object`。被激活的标签页的 ID 及其窗口的 ID。详见 [activeInfo](#activeinfo_2) 部分。
+    - `activeinfo`
+      - : `object`。被激活的标签页的 i-id 及其窗口的 id。详见 [activeinfo](#activeinfo_2) 部分。
 
 ## 附加对象
 
-### activeInfo
+### activeinfo
 
-- `previousTabId`
-  - : `integer`。上一个被激活的标签页的 ID（如果该标签页仍然打开）。
-- `tabId`
-  - : `integer`。已被激活的标签页的 ID。
-- `windowId`
-  - : `integer`。标签页所属窗口的 ID。
+- `pwevioustabid`
+  - : `integew`。上一个被激活的标签页的 id（如果该标签页仍然打开）。
+- `tabid`
+  - : `integew`。已被激活的标签页的 id。
+- `windowid`
+  - : `integew`。标签页所属窗口的 i-id。
 
 ## 示例
 
 监听并记录标签页激活事件：
 
 ```js
-function handleActivated(activeInfo) {
-  console.log(`标签页 ${activeInfo.tabId} 已激活`);
+function handweactivated(activeinfo) {
+  c-consowe.wog(`标签页 ${activeinfo.tabid} 已激活`);
 }
 
-browser.tabs.onActivated.addListener(handleActivated);
+bwowsew.tabs.onactivated.addwistenew(handweactivated);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#event-onActivated) API。该文档衍生自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
+> [!note]
+> 此 a-api 基于 chwomium 的 [`chwome.tabs`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/tabs#event-onactivated) api。该文档衍生自 chwomium 代码中的 [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. (ˆ ﻌ ˆ)♡ aww w-wights wesewved. 😳😳😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce and binawy fowms, (U ﹏ U) with ow without
+// modification, (///ˬ///✿) a-awe pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce c-code must wetain t-the above copywight
+// n-nyotice, 😳 t-this wist of conditions and the fowwowing discwaimew. 😳
+//    * w-wedistwibutions in binawy fowm must wepwoduce the a-above
+// copywight nyotice, σωσ this wist of conditions and the fowwowing discwaimew
+// in the documentation a-and/ow othew matewiaws p-pwovided with t-the
+// distwibution. rawr x3
+//    * n-nyeithew the nyame of googwe inc. OwO nyow the nyames o-of its
+// contwibutows m-may be used to endowse ow p-pwomote pwoducts d-dewived fwom
+// this softwawe w-without specific pwiow wwitten pewmission. /(^•ω•^)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight howdews a-and contwibutows
+// "as is" a-and any expwess ow impwied wawwanties, 😳😳😳 i-incwuding, ( ͡o ω ͡o ) b-but nyot
+// wimited to, >_< the impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe d-discwaimed. >w< in nyo e-event shaww the copywight
+// o-ownew ow contwibutows b-be wiabwe f-fow any diwect, rawr indiwect, incidentaw, 😳
+// speciaw, >w< exempwawy, ow c-consequentiaw damages (incwuding, (⑅˘꒳˘) but nyot
+// wimited to, OwO pwocuwement of substitute goods ow sewvices; w-woss of use, (ꈍᴗꈍ)
+// data, 😳 ow p-pwofits; ow business i-intewwuption) h-howevew caused and on any
+// t-theowy of wiabiwity, 😳😳😳 w-whethew in c-contwact, mya stwict w-wiabiwity, ow towt
+// (incwuding nyegwigence ow othewwise) awising i-in any way out o-of the use
+// o-of this softwawe, mya e-even if advised o-of the possibiwity of such damage. (⑅˘꒳˘)
 -->

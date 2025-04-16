@@ -1,39 +1,39 @@
 ---
-title: webRequest.StreamFilter.onstart
-slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/onstart
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: webwequest.stweamfiwtew.onstawt
+swug: m-moziwwa/add-ons/webextensions/api/webwequest/stweamfiwtew/onstawt
+w-w10n:
+  souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-当流被打开且准备开始传递数据时调用的事件处理器。从这时起扩展就可以调用过滤器函数，例如 {{WebExtAPIRef("webRequest.StreamFilter.write()", "write()")}}、{{WebExtAPIRef("webRequest.StreamFilter.disconnect()", "disconnect()")}} 或 {{WebExtAPIRef("webRequest.StreamFilter.close()", "close()")}}。
+当流被打开且准备开始传递数据时调用的事件处理器。从这时起扩展就可以调用过滤器函数，例如 {{webextapiwef("webwequest.stweamfiwtew.wwite()", "wwite()")}}、{{webextapiwef("webwequest.stweamfiwtew.disconnect()", :3 "disconnect()")}} 或 {{webextapiwef("webwequest.stweamfiwtew.cwose()", (U ﹏ U) "cwose()")}}。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 示例
 
 该示例会将页面内容替换为“替换的文字”：
 
 ```js
-function listener(details) {
-  let filter = browser.webRequest.filterResponseData(details.requestId);
+f-function w-wistenew(detaiws) {
+  w-wet f-fiwtew = bwowsew.webwequest.fiwtewwesponsedata(detaiws.wequestid);
 
-  filter.onstart = (event) => {
-    console.log("开始接收数据");
-    let encoder = new TextEncoder();
-    filter.write(encoder.encode("替换的文字"));
-    filter.close();
+  f-fiwtew.onstawt = (event) => {
+    c-consowe.wog("开始接收数据");
+    wet encodew = nyew textencodew();
+    fiwtew.wwite(encodew.encode("替换的文字"));
+    fiwtew.cwose();
   };
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  listener,
-  { urls: ["https://example.org/"], types: ["main_frame"] },
-  ["blocking"],
+b-bwowsew.webwequest.onbefowewequest.addwistenew(
+  wistenew,
+  { uwws: ["https://exampwe.owg/"], -.- t-types: ["main_fwame"] }, (ˆ ﻌ ˆ)♡
+  ["bwocking"], (⑅˘꒳˘)
 );
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

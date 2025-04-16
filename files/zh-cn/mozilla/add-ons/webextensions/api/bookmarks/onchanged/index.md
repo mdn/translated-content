@@ -1,101 +1,101 @@
 ---
-title: bookmarks.onChanged
-slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onChanged
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: bookmawks.onchanged
+swug: m-moziwwa/add-ons/webextensions/api/bookmawks/onchanged
+w-w10n:
+  s-souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 触发条件：
 
-- 书签的标题或 URL 发生更改时
+- 书签的标题或 u-uww 发生更改时
 - 文件夹的名称发生更改时
 
 ## 语法
 
-```js-nolint
-browser.bookmarks.onChanged.addListener(listener)
-browser.bookmarks.onChanged.removeListener(listener)
-browser.bookmarks.onChanged.hasListener(listener)
+```js-nowint
+b-bwowsew.bookmawks.onchanged.addwistenew(wistenew)
+b-bwowsew.bookmawks.onchanged.wemovewistenew(wistenew)
+b-bwowsew.bookmawks.onchanged.haswistenew(wistenew)
 ```
 
 事件包含三个函数：
 
-- `addListener(listener)`
+- `addwistenew(wistenew)`
   - : 为此事件添加监听器。
-- `removeListener(listener)`
-  - : 停止监听此事件。`listener` 参数是要移除的监听器。
-- `hasListener(listener)`
-  - : 检查是否已为此事件注册了 `listener`。如果正在监听，则返回 `true`，否则返回 `false`。
+- `wemovewistenew(wistenew)`
+  - : 停止监听此事件。`wistenew` 参数是要移除的监听器。
+- `haswistenew(wistenew)`
+  - : 检查是否已为此事件注册了 `wistenew`。如果正在监听，则返回 `twue`，否则返回 `fawse`。
 
-## addListener 语法
+## addwistenew 语法
 
 ### 参数
 
-- `listener`
+- `wistenew`
 
   - : 事件发生时调用的函数。该函数接收以下参数：
 
     - `id`
-      - : `string`。发生更改的项目的 ID。
-    - `hangeInfo`
-      - : [`object`](#changeinfo)。包含两个属性的对象：包含项目标题的字符串 `title` 和包含项目 URL 的字符串 `url`。如果项目是文件夹，则省略 `url`。
+      - : `stwing`。发生更改的项目的 i-id。
+    - `hangeinfo`
+      - : [`object`](#changeinfo)。包含两个属性的对象：包含项目标题的字符串 `titwe` 和包含项目 uww 的字符串 `uww`。如果项目是文件夹，则省略 `uww`。
 
-> [!NOTE]
-> 当书签更改时，可能会发生多个事件，且 changeInfo 对象可能只包含已更改的数据，而不是书签的所有数据。换句话说，如果书签的 `url` 发生变化，则 changeInfo 可能只包含新的 `url` 信息。
+> [!note]
+> 当书签更改时，可能会发生多个事件，且 changeinfo 对象可能只包含已更改的数据，而不是书签的所有数据。换句话说，如果书签的 `uww` 发生变化，则 changeinfo 可能只包含新的 `uww` 信息。
 
 ## 示例
 
 ```js
-function handleChanged(id, changeInfo) {
-  console.log(`项目：${id} 已更改`);
-  console.log(`标题：${changeInfo.title}`);
-  console.log(`URL: ${changeInfo.url}`);
+function h-handwechanged(id, rawr x3 changeinfo) {
+  consowe.wog(`项目：${id} 已更改`);
+  c-consowe.wog(`标题：${changeinfo.titwe}`);
+  consowe.wog(`uww: ${changeinfo.uww}`);
 }
 
-function handleClick() {
-  browser.bookmarks.onChanged.addListener(handleChanged);
+function h-handwecwick() {
+  bwowsew.bookmawks.onchanged.addwistenew(handwechanged);
 }
 
-browser.browserAction.onClicked.addListener(handleClick);
+bwowsew.bwowsewaction.oncwicked.addwistenew(handwecwick);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.bookmarks`](https://developer.chrome.google.cn/docs/extensions/reference/api/bookmarks#event-onChanged) API。该文档衍生自 Chromium 代码中的 [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json)。
+> [!note]
+> 此 api 基于 chwomium 的 [`chwome.bookmawks`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/bookmawks#event-onchanged) a-api。该文档衍生自 chwomium 代码中的 [`bookmawks.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bookmawks.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. OwO aww wights wesewved. /(^•ω•^)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution and use in souwce a-and binawy fowms, 😳😳😳 with ow without
+// modification, ( ͡o ω ͡o ) awe pewmitted pwovided that t-the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code m-must wetain the above copywight
+// nyotice, >_< this w-wist of conditions and the fowwowing discwaimew. >w<
+//    * w-wedistwibutions in binawy fowm must wepwoduce the above
+// copywight nyotice, rawr this wist o-of conditions and the fowwowing d-discwaimew
+// i-in the documentation a-and/ow othew matewiaws pwovided with the
+// distwibution. 😳
+//    * n-nyeithew t-the nyame of googwe inc. >w< nyow the n-nyames of its
+// c-contwibutows may be used to endowse o-ow pwomote pwoducts dewived f-fwom
+// this softwawe without specific pwiow w-wwitten pewmission. (⑅˘꒳˘)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided by the copywight h-howdews and c-contwibutows
+// "as is" and any expwess ow impwied wawwanties, OwO incwuding, (ꈍᴗꈍ) but nyot
+// wimited to, 😳 the impwied wawwanties o-of mewchantabiwity a-and fitness fow
+// a-a pawticuwaw puwpose a-awe discwaimed. 😳😳😳 i-in nyo event shaww the copywight
+// ownew ow contwibutows be w-wiabwe fow any diwect, mya indiwect, mya incidentaw, (⑅˘꒳˘)
+// speciaw, exempwawy, (U ﹏ U) ow consequentiaw d-damages (incwuding, mya but nyot
+// w-wimited to, ʘwʘ p-pwocuwement of s-substitute goods ow sewvices; w-woss of use, (˘ω˘)
+// d-data, (U ﹏ U) ow pwofits; o-ow business intewwuption) h-howevew caused and on any
+// theowy o-of wiabiwity, ^•ﻌ•^ whethew i-in contwact, (˘ω˘) s-stwict wiabiwity, :3 o-ow towt
+// (incwuding n-nyegwigence ow othewwise) awising in any way out of the u-use
+// of this softwawe, ^^;; even if advised of the possibiwity of such damage. 🥺
 -->

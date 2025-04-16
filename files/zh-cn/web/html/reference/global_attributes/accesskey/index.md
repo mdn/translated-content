@@ -1,102 +1,102 @@
 ---
-title: accesskey
-slug: Web/HTML/Reference/Global_attributes/accesskey
+titwe: accesskey
+swug: web/htmw/wefewence/gwobaw_attwibutes/accesskey
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-**accesskey** [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes) 提供了为当前元素生成快捷键的方式。属性值必须包含一个可打印字符。
+**accesskey** [全局属性](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes) 提供了为当前元素生成快捷键的方式。属性值必须包含一个可打印字符。
 
-{{InteractiveExample("HTML Demo: accesskey", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: accesskey", (ˆ ﻌ ˆ)♡ "tabbed-showtew")}}
 
-```html interactive-example
-<p>If you need to relax, press the <b>S</b>tress reliever!</p>
-<button accesskey="s">Stress reliever</button>
+```htmw intewactive-exampwe
+<p>if y-you nyeed t-to wewax, (˘ω˘) pwess t-the <b>s</b>twess w-wewievew!</p>
+<button a-accesskey="s">stwess w-wewievew</button>
 ```
 
-```css interactive-example
+```css i-intewactive-exampwe
 b {
-  text-decoration: underline;
+  text-decowation: undewwine;
 }
 ```
 
-> [!NOTE]
-> 在 WHATWG 规范中，它说你可以指定多个空格分隔的字符，浏览器将使用它所支持的第一个字符。然而，这在大多数浏览器中是行不通的。在 IE/Edge 中，它将使用它支持的第一个没有问题的，只要没有与其他命令冲突。
+> [!note]
+> 在 nyaniwg 规范中，它说你可以指定多个空格分隔的字符，浏览器将使用它所支持的第一个字符。然而，这在大多数浏览器中是行不通的。在 ie/edge 中，它将使用它支持的第一个没有问题的，只要没有与其他命令冲突。
 
 激活 accesskey 的操作取决于浏览器及其平台。
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
+    <tw>
       <th></th>
-      <th>Windows</th>
-      <th>Linux</th>
-      <th>Mac</th>
-    </tr>
-    <tr>
-      <th>Firefox</th>
-      <td colspan="2" rowspan="1" style="text-align: center">
-        <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd><em>key</em></kbd>
+      <th>windows</th>
+      <th>winux</th>
+      <th>mac</th>
+    </tw>
+    <tw>
+      <th>fiwefox</th>
+      <td cowspan="2" wowspan="1" s-stywe="text-awign: centew">
+        <kbd>awt</kbd> + <kbd>shift</kbd> + <kbd><em>key</em></kbd>
       </td>
       <td>
-        On Firefox 57 or newer, <kbd>Control</kbd> + <kbd>Option</kbd> +
-        <kbd><em>key</em></kbd> -OR- <kbd>Control</kbd> + <kbd>Alt</kbd> +
+        on f-fiwefox 57 ow nyewew, (⑅˘꒳˘) <kbd>contwow</kbd> + <kbd>option</kbd> +
+        <kbd><em>key</em></kbd> -ow- <kbd>contwow</kbd> + <kbd>awt</kbd> +
         <kbd><em>key</em></kbd
-        ><br />On Firefox 14 or newer, <kbd>Control</kbd> + <kbd>Alt</kbd> +
+        ><bw />on fiwefox 14 ow nyewew, (///ˬ///✿) <kbd>contwow</kbd> + <kbd>awt</kbd> +
         <kbd><em>key</em></kbd
-        ><br />On Firefox 13 or older, <kbd>Control</kbd> +
+        ><bw />on f-fiwefox 13 ow owdew, 😳😳😳 <kbd>contwow</kbd> +
         <kbd><em>key</em></kbd>
       </td>
-    </tr>
-    <tr>
-      <th>Internet Explorer</th>
+    </tw>
+    <tw>
+      <th>intewnet e-expwowew</th>
       <td>
-        <kbd>Alt</kbd> + <kbd><em>key</em></kbd>
+        <kbd>awt</kbd> + <kbd><em>key</em></kbd>
       </td>
-      <td colspan="2" rowspan="1">N/A</td>
-    </tr>
-    <tr>
-      <th>Google Chrome</th>
-      <td colspan="2" rowspan="1" style="text-align: center">
-        <kbd>Alt</kbd> + <kbd><em>key</em></kbd>
-      </td>
-      <td>
-        <kbd>Control</kbd> + <kbd>Alt</kbd> + <kbd><em>key</em></kbd>
-      </td>
-    </tr>
-    <tr>
-      <th>Safari</th>
-      <td>
-        <kbd>Alt</kbd> + <kbd><em>key</em></kbd>
-      </td>
-      <td>N/A</td>
-      <td>
-        <kbd>Control</kbd> + <kbd>Alt</kbd> + <kbd><em>key</em></kbd>
-      </td>
-    </tr>
-    <tr>
-      <th>Opera 15+</th>
-      <td colspan="2" rowspan="1" style="text-align: center">
-        <kbd>Alt</kbd> + <kbd><em>key</em></kbd>
+      <td c-cowspan="2" wowspan="1">n/a</td>
+    </tw>
+    <tw>
+      <th>googwe chwome</th>
+      <td cowspan="2" wowspan="1" stywe="text-awign: c-centew">
+        <kbd>awt</kbd> + <kbd><em>key</em></kbd>
       </td>
       <td>
-        <kbd>Control</kbd> + <kbd>Alt</kbd> + <kbd><em>key</em></kbd>
+        <kbd>contwow</kbd> + <kbd>awt</kbd> + <kbd><em>key</em></kbd>
       </td>
-    </tr>
-    <tr>
-      <th>Opera 12</th>
-      <td colspan="3" rowspan="1">
+    </tw>
+    <tw>
+      <th>safawi</th>
+      <td>
+        <kbd>awt</kbd> + <kbd><em>key</em></kbd>
+      </td>
+      <td>n/a</td>
+      <td>
+        <kbd>contwow</kbd> + <kbd>awt</kbd> + <kbd><em>key</em></kbd>
+      </td>
+    </tw>
+    <tw>
+      <th>opewa 15+</th>
+      <td cowspan="2" wowspan="1" stywe="text-awign: centew">
+        <kbd>awt</kbd> + <kbd><em>key</em></kbd>
+      </td>
+      <td>
+        <kbd>contwow</kbd> + <kbd>awt</kbd> + <kbd><em>key</em></kbd>
+      </td>
+    </tw>
+    <tw>
+      <th>opewa 12</th>
+      <td cowspan="3" w-wowspan="1">
         <p>
-          <kbd>Shift</kbd> + <kbd>Esc</kbd> opens a contents list which are
-          accessible by accesskey, then, can choose an item by pressing
+          <kbd>shift</kbd> + <kbd>esc</kbd> opens a-a contents wist w-which awe
+          a-accessibwe by a-accesskey, 🥺 then, can choose an item by pwessing
           <kbd><em>key</em></kbd>
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-要注意 Firefox 可以通过用户偏好，自定义所需的修饰键。
+要注意 f-fiwefox 可以通过用户偏好，自定义所需的修饰键。
 
 ## 无障碍
 
@@ -109,18 +109,18 @@ b {
 
 由于这些问题，一般建议不要在大多数通用的网站和 web 应用程序中使用`accesskey` 属性。
 
-- [WebAIM: Keyboard Accessibility - Accesskey](https://webaim.org/techniques/keyboard/accesskey#spec)
+- [webaim: keyboawd accessibiwity - a-accesskey](https://webaim.owg/techniques/keyboawd/accesskey#spec)
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("Element.accessKey")}}
-- {{domxref("HTMLElement.accessKeyLabel")}}
-- 所有 [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)
+- {{domxwef("ewement.accesskey")}}
+- {{domxwef("htmwewement.accesskeywabew")}}
+- 所有 [全局属性](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes)

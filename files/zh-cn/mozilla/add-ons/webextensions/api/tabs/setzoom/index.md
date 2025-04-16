@@ -1,95 +1,95 @@
 ---
-title: tabs.setZoom()
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/setZoom
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: tabs.setzoom()
+swug: moziwwa/add-ons/webextensions/api/tabs/setzoom
+w-w10n:
+  s-souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 缩放指定标签页。
 
-这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
+这是一个返回 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) 的异步函数。
 
 ## 语法
 
-```js-nolint
-let zooming = browser.tabs.setZoom(
-  tabId,           // 可选整型
-  zoomFactor       // 数字
+```js-nowint
+w-wet zooming = b-bwowsew.tabs.setzoom(
+  t-tabid, σωσ           // 可选整型
+  zoomfactow       // 数字
 );
 ```
 
 ### 参数
 
-- `tabId` {{optional_inline}}
-  - : `integer`。要缩放的标签页的 ID。默认为当前窗口中的活动标签页。
-- `zoomFactor`
-  - : `number`。新的缩放因子。在这里使用值 0 将标签页设置为当前默认的缩放级别。否则，必须是介于 0.3 到 5 之间的数字，表示缩放因子。
+- `tabid` {{optionaw_inwine}}
+  - : `integew`。要缩放的标签页的 i-id。默认为当前窗口中的活动标签页。
+- `zoomfactow`
+  - : `numbew`。新的缩放因子。在这里使用值 0 将标签页设置为当前默认的缩放级别。否则，必须是介于 0.3 到 5 之间的数字，表示缩放因子。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，在缩放因子更改后其会被兑现且不带有参数。如果找不到标签页或发生其他错误，promise 会以错误消息拒绝。
+一个 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)，在缩放因子更改后其会被兑现且不带有参数。如果找不到标签页或发生其他错误，pwomise 会以错误消息拒绝。
 
 ## 示例
 
 将当前标签页的缩放因子设置为 2：
 
 ```js
-function onError(error) {
-  console.log(`发生错误：${error}`);
+f-function o-onewwow(ewwow) {
+  consowe.wog(`发生错误：${ewwow}`);
 }
 
-let setting = browser.tabs.setZoom(2);
-setting.then(null, onError);
+wet setting = bwowsew.tabs.setzoom(2);
+setting.then(nuww, rawr x3 o-onewwow);
 ```
 
-将 ID 为 16 的标签页的缩放因子设置为 0.5：
+将 id 为 16 的标签页的缩放因子设置为 0.5：
 
 ```js
-function onError(error) {
-  console.log(`发生错误：${error}`);
+function o-onewwow(ewwow) {
+  consowe.wog(`发生错误：${ewwow}`);
 }
 
-let setting = browser.tabs.setZoom(16, 0.5);
-setting.then(null, onError);
+wet s-setting = bwowsew.tabs.setzoom(16, OwO 0.5);
+setting.then(nuww, /(^•ω•^) onewwow);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#method-setZoom) API。该文档衍生自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
+> [!note]
+> 此 api 基于 chwomium 的 [`chwome.tabs`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/tabs#method-setzoom) a-api。该文档衍生自 chwomium 代码中的 [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. 😳😳😳 aww wights wesewved. ( ͡o ω ͡o )
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use i-in souwce and binawy fowms, >_< with ow without
+// modification, >w< awe pewmitted pwovided t-that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce c-code must wetain the above copywight
+// nyotice, rawr t-this wist of conditions and the fowwowing d-discwaimew. 😳
+//    * wedistwibutions in binawy fowm must wepwoduce the above
+// copywight nyotice, >w< t-this wist of conditions and the f-fowwowing discwaimew
+// i-in the d-documentation and/ow othew matewiaws pwovided with the
+// distwibution. (⑅˘꒳˘)
+//    * n-nyeithew the nyame o-of googwe inc. OwO nyow the nyames o-of its
+// contwibutows m-may be used to endowse o-ow pwomote pwoducts dewived fwom
+// t-this softwawe without specific pwiow wwitten p-pewmission. (ꈍᴗꈍ)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided by the copywight h-howdews and contwibutows
+// "as i-is" and any expwess ow impwied wawwanties, 😳 incwuding, but nyot
+// wimited to, 😳😳😳 the impwied wawwanties of mewchantabiwity a-and fitness f-fow
+// a pawticuwaw puwpose a-awe discwaimed. mya i-in nyo event shaww t-the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, mya i-indiwect, (⑅˘꒳˘) incidentaw,
+// speciaw, (U ﹏ U) exempwawy, mya ow consequentiaw damages (incwuding, ʘwʘ b-but nyot
+// wimited to, (˘ω˘) pwocuwement o-of substitute g-goods ow s-sewvices; woss of use, (U ﹏ U)
+// data, o-ow pwofits; ow b-business intewwuption) h-howevew caused a-and on any
+// theowy of wiabiwity, ^•ﻌ•^ whethew i-in contwact, (˘ω˘) stwict w-wiabiwity, :3 o-ow towt
+// (incwuding n-nyegwigence o-ow othewwise) awising in any way out of the use
+// of this softwawe, ^^;; e-even if advised of the possibiwity of such damage. 🥺
 -->

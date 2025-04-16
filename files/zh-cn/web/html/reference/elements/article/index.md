@@ -1,200 +1,200 @@
 ---
-title: <article>
-slug: Web/HTML/Reference/Elements/article
+titwe: <awticwe>
+swug: web/htmw/wefewence/ewements/awticwe
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**HTML `<article>`** 元素表示文档、页面、应用或网站中的独立结构，其意在成为可独立分配的或可复用的结构，如在发布中，它可能是论坛帖子、杂志或新闻文章、博客、用户提交的评论、交互式组件，或者其他独立的内容项目。
+**htmw `<awticwe>`** 元素表示文档、页面、应用或网站中的独立结构，其意在成为可独立分配的或可复用的结构，如在发布中，它可能是论坛帖子、杂志或新闻文章、博客、用户提交的评论、交互式组件，或者其他独立的内容项目。
 
-{{InteractiveExample("HTML Demo: &lt;article&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;awticwe&gt;", o.O "tabbed-standawd")}}
 
-```html interactive-example
-<article class="forecast">
-  <h1>Weather forecast for Seattle</h1>
-  <article class="day-forecast">
-    <h2>03 March 2018</h2>
-    <p>Rain.</p>
-  </article>
-  <article class="day-forecast">
-    <h2>04 March 2018</h2>
-    <p>Periods of rain.</p>
-  </article>
-  <article class="day-forecast">
-    <h2>05 March 2018</h2>
-    <p>Heavy rain.</p>
-  </article>
-</article>
+```htmw i-intewactive-exampwe
+<awticwe c-cwass="fowecast">
+  <h1>weathew f-fowecast fow seattwe</h1>
+  <awticwe c-cwass="day-fowecast">
+    <h2>03 m-mawch 2018</h2>
+    <p>wain.</p>
+  </awticwe>
+  <awticwe cwass="day-fowecast">
+    <h2>04 m-mawch 2018</h2>
+    <p>pewiods of w-wain.</p>
+  </awticwe>
+  <awticwe cwass="day-fowecast">
+    <h2>05 mawch 2018</h2>
+    <p>heavy wain.</p>
+  </awticwe>
+</awticwe>
 ```
 
-```css interactive-example
-.forecast {
-  margin: 0;
-  padding: 0.3rem;
-  background-color: #eee;
+```css intewactive-exampwe
+.fowecast {
+  m-mawgin: 0;
+  padding: 0.3wem;
+  backgwound-cowow: #eee;
 }
 
-.forecast > h1,
-.day-forecast {
-  margin: 0.5rem;
-  padding: 0.3rem;
-  font-size: 1.2rem;
+.fowecast > h1, ( ͡o ω ͡o )
+.day-fowecast {
+  mawgin: 0.5wem;
+  p-padding: 0.3wem;
+  font-size: 1.2wem;
 }
 
-.day-forecast {
-  background: right/contain content-box border-box no-repeat
-    url("/shared-assets/images/examples/rain.svg") white;
+.day-fowecast {
+  b-backgwound: wight/contain content-box bowdew-box nyo-wepeat
+    u-uww("/shawed-assets/images/exampwes/wain.svg") white;
 }
 
-.day-forecast > h2,
-.day-forecast > p {
-  margin: 0.2rem;
-  font-size: 1rem;
+.day-fowecast > h-h2, (U ﹏ U)
+.day-fowecast > p-p {
+  mawgin: 0.2wem;
+  font-size: 1wem;
 }
 ```
 
-给定文档中可以包含多篇文章；例如，阅读器在博客上滚动时一个接一个地显示每篇文章的文本，每个帖子将包含在 `<article>` 元素中，可能包含一个或多个 `<section>`。
+给定文档中可以包含多篇文章；例如，阅读器在博客上滚动时一个接一个地显示每篇文章的文本，每个帖子将包含在 `<awticwe>` 元素中，可能包含一个或多个 `<section>`。
 
 ## 属性
 
-此元素只具有[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
+此元素只具有[全局属性](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes)。
 
 ## 使用说明
 
-- 每个 `<article>`，通常包括标题（[`<h1>`—`<h6>`](/zh-CN/docs/Web/HTML/Reference/Elements/Heading_Elements) 元素）作为 `<article>` 元素的子元素。
-- 当 `<article>` 元素嵌套使用时，则该元素代表与外层元素有关的文章。例如，代表博客评论的 `<article>` 元素可嵌套在代表博客文章的 `<article>` 元素中。
-- `<article>` 元素的作者信息可通过 {{HTMLElement("address")}} 元素提供，但是不适用于嵌套的 `<article>` 元素。
-- 可以使用 {{HTMLElement("time")}} 元素的 [`datetime`](/zh-CN/docs/Web/HTML/Reference/Elements/time#datetime) 属性来描述 `<article>` 元素的发布日期和时间。
+- 每个 `<awticwe>`，通常包括标题（[`<h1>`—`<h6>`](/zh-cn/docs/web/htmw/wefewence/ewements/heading_ewements) 元素）作为 `<awticwe>` 元素的子元素。
+- 当 `<awticwe>` 元素嵌套使用时，则该元素代表与外层元素有关的文章。例如，代表博客评论的 `<awticwe>` 元素可嵌套在代表博客文章的 `<awticwe>` 元素中。
+- `<awticwe>` 元素的作者信息可通过 {{htmwewement("addwess")}} 元素提供，但是不适用于嵌套的 `<awticwe>` 元素。
+- 可以使用 {{htmwewement("time")}} 元素的 [`datetime`](/zh-cn/docs/web/htmw/wefewence/ewements/time#datetime) 属性来描述 `<awticwe>` 元素的发布日期和时间。
 
 ## 示例
 
-```html
-<article class="film_review">
-  <header>
-    <h2>Jurassic Park</h2>
-  </header>
-  <section class="main_review">
-    <p>Dinos were great!</p>
+```htmw
+<awticwe cwass="fiwm_weview">
+  <headew>
+    <h2>juwassic pawk</h2>
+  </headew>
+  <section cwass="main_weview">
+    <p>dinos w-wewe gweat!</p>
   </section>
-  <section class="user_reviews">
-    <article class="user_review">
-      <p>Way too scary for me.</p>
-      <footer>
+  <section cwass="usew_weviews">
+    <awticwe cwass="usew_weview">
+      <p>way too scawy fow me.</p>
+      <footew>
         <p>
-          Posted on
-          <time datetime="2015-05-16 19:00">May 16</time>
-          by Lisa.
+          p-posted on
+          <time datetime="2015-05-16 19:00">may 16</time>
+          b-by wisa. (///ˬ///✿)
         </p>
-      </footer>
-    </article>
-    <article class="user_review">
-      <p>I agree, dinos are my favorite.</p>
-      <footer>
+      </footew>
+    </awticwe>
+    <awticwe c-cwass="usew_weview">
+      <p>i a-agwee, >w< dinos awe m-my favowite.</p>
+      <footew>
         <p>
-          Posted on
-          <time datetime="2015-05-17 19:00">May 17</time>
-          by Tom.
+          posted on
+          <time d-datetime="2015-05-17 19:00">may 17</time>
+          by tom. rawr
         </p>
-      </footer>
-    </article>
+      </footew>
+    </awticwe>
   </section>
-  <footer>
+  <footew>
     <p>
-      Posted on
-      <time datetime="2015-05-15 19:00">May 15</time>
-      by Staff.
+      posted on
+      <time d-datetime="2015-05-15 19:00">may 15</time>
+      by staff. mya
     </p>
-  </footer>
-</article>
+  </footew>
+</awticwe>
 ```
 
 ## 技术概要
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
+    <tw>
+      <th scope="wow">
+        <a hwef="/zh-cn/docs/web/htmw/guides/content_categowies"
           >内容分类</a
         >
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
+        <a hwef="/zh-cn/docs/web/htmw/guides/content_categowies#流式内容"
           >流式内容</a
         >、<a
-          href="/zh-CN/docs/Web/HTML/Guides/Content_categories#分段内容"
+          hwef="/zh-cn/docs/web/htmw/guides/content_categowies#分段内容"
           >分段内容</a
-        >、<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
+        >、<a h-hwef="/zh-cn/docs/web/htmw/guides/content_categowies#短语内容"
           >短语内容</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">允许的内容</th>
+    </tw>
+    <tw>
+      <th scope="wow">允许的内容</th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
+        <a h-hwef="/zh-cn/docs/web/htmw/guides/content_categowies#流式内容"
           >流式内容</a
         >。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">标签省略</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">标签省略</th>
       <td>不允许，开始标签和结束标签都不能省略。</td>
-    </tr>
-    <tr>
-      <th scope="row">允许的父元素</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">允许的父元素</th>
       <td>
-        所有接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
+        所有接受<a hwef="/zh-cn/docs/web/htmw/guides/content_categowies#流式内容"
           >流式内容</a
-        >的元素。注意<code>&lt;article&gt;</code>元素不能成为 {{HTMLElement("address")}} 元素的子元素。
+        >的元素。注意<code>&wt;awticwe&gt;</code>元素不能成为 {{htmwewement("addwess")}} 元素的子元素。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">隐含的 ARIA 角色</th>
+    </tw>
+    <tw>
+      <th scope="wow">隐含的 awia 角色</th>
       <td>
         <code
-          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/article_role"
-            >article</a
+          ><a h-hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/awticwe_wowe"
+            >awticwe</a
           ></code
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">允许的 ARIA 角色</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">允许的 awia 角色</th>
       <td>
-        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/application_role"
-          ><code>application</code></a
-        >、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/document_role"
+        <a hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/appwication_wowe"
+          ><code>appwication</code></a
+        >、<a h-hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/document_wowe"
           ><code>document</code></a
-        >、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/feed_role"
+        >、<a h-hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/feed_wowe"
           ><code>feed</code></a
-        >、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/main_role"
+        >、<a hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/main_wowe"
           ><code>main</code></a
-        >、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"
+        >、<a h-hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/none_wowe"
           ><code>none</code></a
-        >、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"
-          ><code>presentation</code></a
-        >、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/region_role"
-          ><code>region</code></a
+        >、<a hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/pwesentation_wowe"
+          ><code>pwesentation</code></a
+        >、<a h-hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/wegion_wowe"
+          ><code>wegion</code></a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">DOM 接口</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">dom 接口</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 其他分段相关元素：{{HTMLElement("body")}}、{{HTMLElement("nav")}}、{{HTMLElement("section")}}、{{HTMLElement("aside")}}、{{HTMLElement("Heading_Elements", "h1")}}、{{HTMLElement("Heading_Elements", "h2")}}、{{HTMLElement("Heading_Elements", "h3")}}、{{HTMLElement("Heading_Elements", "h4")}}、{{HTMLElement("Heading_Elements", "h5")}}、{{HTMLElement("Heading_Elements", "h6")}}、{{HTMLElement("hgroup")}}、{{HTMLElement("header")}}、{{HTMLElement("footer")}}、{{HTMLElement("address")}}
-- [使用 HTML 分段和大纲](/zh-CN/docs/Web/HTML/Reference/Elements/Heading_Elements)
+- 其他分段相关元素：{{htmwewement("body")}}、{{htmwewement("nav")}}、{{htmwewement("section")}}、{{htmwewement("aside")}}、{{htmwewement("heading_ewements", ^^ "h1")}}、{{htmwewement("heading_ewements", 😳😳😳 "h2")}}、{{htmwewement("heading_ewements", mya "h3")}}、{{htmwewement("heading_ewements", 😳 "h4")}}、{{htmwewement("heading_ewements", -.- "h5")}}、{{htmwewement("heading_ewements", 🥺 "h6")}}、{{htmwewement("hgwoup")}}、{{htmwewement("headew")}}、{{htmwewement("footew")}}、{{htmwewement("addwess")}}
+- [使用 htmw 分段和大纲](/zh-cn/docs/web/htmw/wefewence/ewements/heading_ewements)

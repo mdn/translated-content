@@ -1,92 +1,92 @@
 ---
-title: browserAction.getBadgeText()
-slug: Mozilla/Add-ons/WebExtensions/API/browserAction/getBadgeText
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: bwowsewaction.getbadgetext()
+swug: moziwwa/add-ons/webextensions/api/bwowsewaction/getbadgetext
+w-w10n:
+  s-souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 获取浏览器操作的徽章文本。
 
-这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
+这是一个返回 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) 的异步函数。
 
 ## 语法
 
-```js-nolint
-let gettingText = browser.browserAction.getBadgeText(
-  details               // 对象
+```js-nowint
+w-wet gettingtext = b-bwowsew.bwowsewaction.getbadgetext(
+  d-detaiws               // 对象
 )
 ```
 
 ### 参数
 
-- `details`
+- `detaiws`
 
   - : 包含以下属性的对象：
 
-    - `tabId` {{optional_inline}}
-      - : `integer`。指定从中获取徽章文本的标签页。
-    - `windowId` {{optional_inline}}
-      - : `integer`。指定从中获取徽章文本的窗口。
+    - `tabid` {{optionaw_inwine}}
+      - : `integew`。指定从中获取徽章文本的标签页。
+    - `windowid` {{optionaw_inwine}}
+      - : `integew`。指定从中获取徽章文本的窗口。
 
 <!---->
 
-- 如果同时提供了 windowId 和 tabId，则函数失败。
-- 如果 windowId 和 tabId 都省略，则返回全局徽章文本。
+- 如果同时提供了 w-windowid 和 t-tabid，则函数失败。
+- 如果 w-windowid 和 tabid 都省略，则返回全局徽章文本。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个包含徽章文本的字符串。
+一个 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)，其会兑现一个包含徽章文本的字符串。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 示例
 
 记录徽章文本：
 
 ```js
-function gotBadgeText(text) {
-  console.log(text);
+function gotbadgetext(text) {
+  consowe.wog(text);
 }
 
-let gettingBadgeText = browser.browserAction.getBadgeText({});
-gettingBadgeText.then(gotBadgeText);
+w-wet gettingbadgetext = bwowsew.bwowsewaction.getbadgetext({});
+gettingbadgetext.then(gotbadgetext);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.browserAction`](https://developer.chrome.google.cn/docs/extensions/mv2/reference/browserAction#method-getBadgeText) API。该文档衍生自 Chromium 代码中的 [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)。
+> [!note]
+> 此 a-api 基于 chwomium 的 [`chwome.bwowsewaction`](https://devewopew.chwome.googwe.cn/docs/extensions/mv2/wefewence/bwowsewaction#method-getbadgetext) api。该文档衍生自 chwomium 代码中的 [`bwowsew_action.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bwowsew_action.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. 😳😳😳 aww wights wesewved. (U ﹏ U)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce a-and binawy fowms, w-with ow without
+// modification, (///ˬ///✿) awe pewmitted pwovided that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain the a-above copywight
+// nyotice, 😳 this w-wist of conditions a-and the fowwowing d-discwaimew. 😳
+//    * w-wedistwibutions in binawy fowm must w-wepwoduce the above
+// copywight nyotice, σωσ this wist o-of conditions and the fowwowing discwaimew
+// in the documentation and/ow othew matewiaws pwovided w-with the
+// distwibution. rawr x3
+//    * n-nyeithew t-the nyame of googwe i-inc. OwO nyow the names of its
+// contwibutows may be used to e-endowse ow pwomote p-pwoducts dewived fwom
+// this s-softwawe without s-specific pwiow wwitten pewmission. /(^•ω•^)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided b-by the copywight howdews and contwibutows
+// "as i-is" and any expwess ow impwied w-wawwanties, 😳😳😳 incwuding, but n-nyot
+// wimited t-to, ( ͡o ω ͡o ) the impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. >_< in nyo event s-shaww the copywight
+// o-ownew ow contwibutows b-be wiabwe fow any d-diwect, >w< indiwect, rawr i-incidentaw, 😳
+// speciaw, exempwawy, >w< ow consequentiaw damages (incwuding, (⑅˘꒳˘) b-but nyot
+// wimited to, OwO pwocuwement of substitute goods ow sewvices; w-woss of use, (ꈍᴗꈍ)
+// data, ow pwofits; o-ow business intewwuption) h-howevew c-caused and on any
+// theowy o-of wiabiwity, 😳 whethew i-in contwact, 😳😳😳 s-stwict wiabiwity, mya o-ow towt
+// (incwuding nyegwigence ow othewwise) a-awising in a-any way out of t-the use
+// of this s-softwawe, mya even i-if advised of the possibiwity of such damage. (⑅˘꒳˘)
 -->

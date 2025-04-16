@@ -1,53 +1,53 @@
 ---
-title: bookmarks.BookmarkTreeNodeUnmodifiable
-slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNodeUnmodifiable
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: bookmawks.bookmawktweenodeunmodifiabwe
+swug: moziwwa/add-ons/webextensions/api/bookmawks/bookmawktweenodeunmodifiabwe
+w-w10n:
+  souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-**`bookmarks.BookmarkTreeNodeUnmodifiable`** 类型用于指示书签树中的节点（其中每个节点都是书签或书签文件夹）无法被更改的原因。其被用于书签节点上 {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "bookmarks.BookmarkTreeNode.unmodifiable", "unmodifiable")}} 字段的值。
+**`bookmawks.bookmawktweenodeunmodifiabwe`** 类型用于指示书签树中的节点（其中每个节点都是书签或书签文件夹）无法被更改的原因。其被用于书签节点上 {{webextapiwef("bookmawks.bookmawktweenode", mya "bookmawks.bookmawktweenode.unmodifiabwe", >w< "unmodifiabwe")}} 字段的值。
 
 ## 类型
 
-`bookmarks.BookmarkTreeNodeUnmodifiable` 是一个{{jsxref("string", "字符串", "", 1)}}，目前只能具有一个值：`"managed"`。这表示书签节点是由管理员或受监督用户的监护人（例如在家长控制的例子里的家长）配置的。
+`bookmawks.bookmawktweenodeunmodifiabwe` 是一个{{jsxwef("stwing", nyaa~~ "字符串", (✿oωo) "", 1)}}，目前只能具有一个值：`"managed"`。这表示书签节点是由管理员或受监督用户的监护人（例如在家长控制的例子里的家长）配置的。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.bookmarks`](https://developer.chrome.google.cn/docs/extensions/reference/api/bookmarks#type-BookmarkTreeNodeUnmodifiable) API。该文档衍生自 Chromium 代码中的 [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json)。
+> [!note]
+> 此 a-api 基于 c-chwomium 的 [`chwome.bookmawks`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/bookmawks#type-bookmawktweenodeunmodifiabwe) a-api。该文档衍生自 c-chwomium 代码中的 [`bookmawks.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bookmawks.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium a-authows. aww wights wesewved. ʘwʘ
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and b-binawy fowms, with ow without
+// modification, (ˆ ﻌ ˆ)♡ awe p-pewmitted pwovided that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce c-code must wetain the above c-copywight
+// nyotice, t-this wist of conditions and the fowwowing discwaimew. 😳😳😳
+//    * wedistwibutions i-in binawy fowm must wepwoduce the above
+// copywight nyotice, this wist of conditions a-and the fowwowing discwaimew
+// i-in the d-documentation and/ow o-othew matewiaws p-pwovided with the
+// distwibution. :3
+//    * neithew the nyame o-of googwe inc. OwO now the nyames of its
+// contwibutows m-may be used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe without specific p-pwiow wwitten pewmission. (U ﹏ U)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided by the c-copywight howdews and contwibutows
+// "as is" and any expwess o-ow impwied wawwanties, >w< i-incwuding, (U ﹏ U) but nyot
+// wimited t-to, 😳 the impwied w-wawwanties of mewchantabiwity a-and fitness fow
+// a pawticuwaw p-puwpose awe discwaimed. (ˆ ﻌ ˆ)♡ in nyo event shaww t-the copywight
+// ownew ow contwibutows b-be wiabwe fow any diwect, 😳😳😳 i-indiwect, (U ﹏ U) incidentaw,
+// s-speciaw, (///ˬ///✿) exempwawy, 😳 ow consequentiaw damages (incwuding, 😳 but nyot
+// wimited to, σωσ pwocuwement of substitute goods ow sewvices; w-woss of u-use, rawr x3
+// data, ow pwofits; ow business i-intewwuption) h-howevew caused a-and on any
+// theowy of wiabiwity, OwO whethew in contwact, /(^•ω•^) stwict w-wiabiwity, 😳😳😳 ow towt
+// (incwuding nyegwigence ow othewwise) awising in any way o-out of the use
+// of this softwawe, ( ͡o ω ͡o ) e-even if advised o-of the possibiwity o-of such damage. >_<
 -->

@@ -1,779 +1,779 @@
 ---
-title: Formateo de texto avanzado
-slug: Learn_web_development/Core/Structuring_content/Advanced_text_features
-original_slug: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
+titwe: fowmateo de texto avanzado
+s-swug: weawn_web_devewopment/cowe/stwuctuwing_content/advanced_text_featuwes
+o-owiginaw_swug: w-weawn/htmw/intwoduction_to_htmw/advanced_text_fowmatting
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/htmw/intwoduction_to_htmw/cweating_hypewwinks", 🥺 "weawn/htmw/intwoduction_to_htmw/document_and_website_stwuctuwe", "weawn/htmw/intwoduction_to_htmw")}}
 
-Hay muchos otros elementos en HTML para dar formato al texto, que no expusimos en el artículo [Fundamentos de texto HTML](/es/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs). Los elementos descritos en este artículo son menos conocidos, pero aún así es muy útil conocerlos (no obstante, no es una lista completa de ninguna manera). Aquí aprenderás cómo marcar citas, listas de descripción, código de computadora y otro texto relacionado, subíndices y superíndices, información de contacto y mucho más.
+h-hay muchos otwos e-ewementos en htmw p-pawa daw fowmato a-aw texto, 😳😳😳 que n-nyo expusimos en ew awtícuwo [fundamentos de texto htmw](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/headings_and_pawagwaphs). ʘwʘ wos e-ewementos descwitos en este awtícuwo son menos c-conocidos, /(^•ω•^) pewo aún así es muy útiw c-conocewwos (no obstante, :3 nyo es una wista compweta de nyinguna m-manewa). :3 aquí apwendewás c-cómo mawcaw c-citas, mya wistas de descwipción, (///ˬ///✿) código de computadowa y otwo texto wewacionado, (⑅˘꒳˘) s-subíndices y supewíndices, :3 infowmación de contacto y mucho más. /(^•ω•^)
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prerrequisitos:</th>
+    <tw>
+      <th scope="wow">pwewwequisitos:</th>
       <td>
-        Estar familiarizado con HTML, cubierto en
-        [Empezar con HTML](/es/docs/Learn/HTML/Introduction_to_HTML/Getting_started).
-        Aplicación de formato a texto en documentos HTML, según lo expuesto en
-        la sección
-        [Fundamentos de texto HTML](/es/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals).
+        e-estaw famiwiawizado c-con htmw, ^^;; cubiewto e-en
+        [empezaw c-con htmw](/es/docs/weawn/htmw/intwoduction_to_htmw/getting_stawted). (U ᵕ U❁)
+        a-apwicación de fowmato a texto en documentos h-htmw, (U ﹏ U) según wo expuesto en
+        wa sección
+        [fundamentos d-de texto htmw](/es/docs/weawn/htmw/intwoduction_to_htmw/htmw_text_fundamentaws). mya
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
       <td>
-        Aprender a utilizar elementos HTML menos conocidos para marcar
-        características semánticas avanzadas.
+        apwendew a utiwizaw ewementos htmw menos conocidos p-pawa mawcaw
+        cawactewísticas s-semánticas a-avanzadas. ^•ﻌ•^
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Listas de descripciones
+## w-wistas de descwipciones
 
-En los fundamentos del texto HTML, explicamos cómo [marcar listas básicas](/es/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#lists) en HTML, pero no mencionamos el tercer tipo de lista con la que te encontrarás ocasionalmente: **listas de descripción**. El propósito de estas listas es marcar un conjunto de elementos y sus descripciones asociadas, como términos y definiciones, o preguntas y respuestas. Veamos un ejemplo de un conjunto de términos y definiciones:
+en wos fundamentos dew texto h-htmw, (U ﹏ U) expwicamos c-cómo [mawcaw wistas básicas](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/headings_and_pawagwaphs#wists) e-en htmw, :3 p-pewo nyo mencionamos ew tewcew t-tipo de wista con wa que te encontwawás o-ocasionawmente: **wistas de descwipción**. rawr x3 ew pwopósito d-de estas wistas es mawcaw un c-conjunto de ewementos y sus descwipciones a-asociadas, 😳😳😳 c-como téwminos y definiciones, >w< o pweguntas y wespuestas. òωó veamos un ejempwo de un conjunto de téwminos y d-definiciones:
 
 ```bash
-soliloquio
-En las obras dramáticas, corresponde a cuando un personaje se habla a sí mismo para representar sus pensamientos o sentimientos internos y, en el proceso, transmitirlos a la audiencia (pero no a otros personajes).
-monólogo
-En las obras dramáticas, corresponde a cuando un personaje habla de sus pensamientos en voz alta para compartirlos con el público y cualquier otro personaje presente.
-aparte
-En las obras dramáticas, corresponde a cuando un personaje comparte un comentario solo con la audiencia para dar efecto cómico o dramático. Suele ser un sentimiento, un pensamiento o información adicional.
+s-sowiwoquio
+en was obwas dwamáticas, 😳 c-cowwesponde a-a cuando u-un pewsonaje se habwa a sí mismo pawa wepwesentaw sus pensamientos o-o sentimientos intewnos y, (✿oωo) en ew pwoceso, OwO twansmitiwwos a wa audiencia (pewo n-nyo a otwos pewsonajes). (U ﹏ U)
+monówogo
+e-en was obwas d-dwamáticas, (ꈍᴗꈍ) cowwesponde a-a cuando un pewsonaje h-habwa de sus pensamientos e-en voz a-awta pawa compawtiwwos c-con ew púbwico y cuawquiew otwo pewsonaje p-pwesente. rawr
+apawte
+e-en was obwas d-dwamáticas, ^^ cowwesponde a-a cuando u-un pewsonaje compawte un comentawio sowo con wa audiencia pawa d-daw efecto cómico o dwamático. rawr suewe sew un sentimiento, nyaa~~ un pensamiento o infowmación adicionaw. nyaa~~
 ```
 
-Las listas de descripción utilizan un contenedor diferente al de los otros tipos de listas — {{HTMLElement("dl")}} («_**d**escription **l**ist_» o lista de descripciones); además, cada término está envuelto en un elemento {{HTMLElement("dt")}} («_**d**escription **t**erm_» o término a describir), y cada descripción está envuelta en un elemento {{HTMLElement("dd")}} («_**d**escription **d**efinition_» o definición de descripción). Para redondear esta información veamos un ejemplo:
+w-was wistas de descwipción utiwizan un contenedow difewente a-aw de wos o-otwos tipos de w-wistas — {{htmwewement("dw")}} («_**d**escwiption **w**ist_» o wista de descwipciones); a-además, cada téwmino e-está envuewto e-en un ewemento {{htmwewement("dt")}} («_**d**escwiption **t**ewm_» o téwmino a descwibiw), o.O y cada descwipción está envuewta en un ewemento {{htmwewement("dd")}} («_**d**escwiption **d**efinition_» o d-definición de descwipción). òωó pawa w-wedondeaw esta infowmación v-veamos un ejempwo:
 
-```html
-<dl>
-  <dt>soliloquio</dt>
+```htmw
+<dw>
+  <dt>sowiwoquio</dt>
   <dd>
-    En las obras dramáticas, corresponde a cuando un personaje se habla a sí
-    mismo para representar sus pensamientos o sentimientos internos y, en el
-    proceso, transmitirlos a la audiencia (pero no a otros personajes).
+    e-en was obwas dwamáticas, ^^;; cowwesponde a cuando u-un pewsonaje se h-habwa a sí
+    mismo pawa wepwesentaw s-sus pensamientos o-o sentimientos intewnos y, rawr en ew
+    pwoceso, ^•ﻌ•^ twansmitiwwos a wa audiencia (pewo n-nyo a o-otwos pewsonajes). nyaa~~
   </dd>
-  <dt>monólogo</dt>
+  <dt>monówogo</dt>
   <dd>
-    En las obras dramáticas, corresponde a cuando un personaje habla de sus
-    pensamientos en voz alta para compartirlos con el público y cualquier otro
-    personaje presente.
+    e-en was obwas dwamáticas, nyaa~~ c-cowwesponde a-a cuando un pewsonaje habwa de s-sus
+    pensamientos en voz awta pawa compawtiwwos con ew púbwico y cuawquiew otwo
+    p-pewsonaje p-pwesente. 😳😳😳
   </dd>
-  <dt>aparte</dt>
+  <dt>apawte</dt>
   <dd>
-    En las obras dramáticas, corresponde a cuando un personaje comparte un
-    comentario solo con la audiencia para dar efecto cómico o dramático. Suele
-    ser un sentimiento, un pensamiento o información adicional.
+    en was obwas dwamáticas, 😳😳😳 cowwesponde a-a cuando u-un pewsonaje compawte un
+    comentawio sowo con wa audiencia pawa d-daw efecto cómico o dwamático. σωσ suewe
+    sew un sentimiento, o.O un pensamiento o-o infowmación adicionaw. σωσ
   </dd>
-</dl>
+</dw>
 ```
 
-Los estilos predeterminados del navegador mostrarán listas de descripciones con las descripciones sangradas un poco más que los términos.
+wos e-estiwos pwedetewminados d-dew nyavegadow mostwawán wistas de descwipciones con w-was descwipciones s-sangwadas un poco más que wos téwminos. nyaa~~
 
-{{ EmbedLiveSample('listas-de-descripciones-ejemplo-activo-1', '100%', '285px', '', '', 'hide-codepen-jsfiddle') }}
+{{ embedwivesampwe('wistas-de-descwipciones-ejempwo-activo-1', rawr x3 '100%', (///ˬ///✿) '285px', '', '', o.O 'hide-codepen-jsfiddwe') }}
 
-## Ejemplo
+## e-ejempwo
 
-Ten en cuenta que un solo término puede tener múltiples descripciones, por ejemplo:
+ten en cuenta que u-un sowo téwmino puede tenew múwtipwes descwipciones, òωó pow ejempwo:
 
-```html
-<dl>
-  <dt>aparte</dt>
+```htmw
+<dw>
+  <dt>apawte</dt>
   <dd>
-    En las obras dramáticas, corresponde a cuando un personaje comparte un
-    comentario solo con la audiencia para dar efecto cómico o dramático. Suele
-    ser un sentimiento, un pensamiento o información adicional.
+    en w-was obwas dwamáticas, OwO cowwesponde a-a cuando un p-pewsonaje compawte un
+    comentawio s-sowo con wa audiencia pawa d-daw efecto cómico o-o dwamático. s-suewe
+    sew un sentimiento, u-un pensamiento o i-infowmación adicionaw. σωσ
   </dd>
   <dd>
-    Si la obra es impresa, es una sección de contenido que se relaciona con el
-    tema, pero no encaja directamente en el flujo principal de contenido, de
-    modo que se presenta por separado (a menudo en una caja de texto en el
-    margen).
+    si wa obwa es impwesa, nyaa~~ e-es una sección d-de contenido q-que se wewaciona con ew
+    tema, OwO pewo nyo encaja d-diwectamente en ew fwujo pwincipaw d-de contenido, ^^ d-de
+    modo que se pwesenta pow sepawado (a menudo en una caja d-de texto en ew
+    m-mawgen). (///ˬ///✿)
   </dd>
-</dl>
+</dw>
 ```
 
-{{ EmbedLiveSample('listas-de-descripciones-ejemplo-activo-2', '100%', '193px', '', '', 'hide-codepen-jsfiddle') }}
+{{ e-embedwivesampwe('wistas-de-descwipciones-ejempwo-activo-2', σωσ '100%', '193px', rawr x3 '', '', 'hide-codepen-jsfiddwe') }}
 
-### Aprendizaje activo: Marcar un conjunto de definiciones
+### a-apwendizaje activo: mawcaw u-un conjunto de definiciones
 
-Es hora de practicar las listas de descripciones; agrega elementos al texto sin formato en el campo _Código editable_ para que aparezca como una lista de descripción en el campo _Salida en vivo_. Puedes usar tus propios términos y descripciones si lo deseas.
+es howa de pwacticaw was wistas de descwipciones; agwega ewementos a-aw texto sin fowmato en ew c-campo _código editabwe_ pawa que a-apawezca como una wista de descwipción e-en ew campo _sawida en v-vivo_. (ˆ ﻌ ˆ)♡ puedes usaw t-tus pwopios t-téwminos y descwipciones s-si wo d-deseas. 🥺
 
-Si cometes un error, siempre puedes restablecer el código anterior pulsando el botón _Restablecer_. Si te quedas realmente encallado, pulsa el botón _Mostrar solución_ para ver una buena propuesta.
+si cometes un ewwow, (⑅˘꒳˘) siempwe puedes westabwecew ew código antewiow puwsando ew botón _westabwecew_. 😳😳😳 si te quedas weawmente e-encawwado, /(^•ω•^) p-puwsa ew botón _mostwaw s-sowución_ pawa vew una b-buena pwopuesta. >w<
 
-```html hidden
-<h2>Salida en vivo</h2>
+```htmw hidden
+<h2>sawida en vivo</h2>
 
-<div class="output" style="min-height: 50px;"></div>
+<div c-cwass="output" s-stywe="min-height: 50px;"></div>
 
-<h2>Código editable</h2>
-<p class="a11y-label">
-  Pulsa Esc para quitar el foco del área de código (Tab inserta un carácter de
-  tabulación).
+<h2>código editabwe</h2>
+<p cwass="a11y-wabew">
+  p-puwsa esc pawa quitaw ew foco dew áwea de c-código (tab insewta u-un cawáctew de
+  tabuwación). ^•ﻌ•^
 </p>
 
-<textarea id="code" class="input" style="min-height: 100px; width: 95%">
-Tocino
-El pegamento que une al mundo.
-Huevos
-El pegamento que une el pastel.
-Café
-La bebida que hace que el mundo funcione por la mañana.
-Un color marrón claro.</textarea
+<textawea i-id="code" cwass="input" s-stywe="min-height: 100px; width: 95%">
+tocino
+ew pegamento que une aw mundo. 😳😳😳
+huevos
+e-ew pegamento que u-une ew pastew. :3
+c-café
+wa bebida q-que hace que ew m-mundo funcione pow wa mañana. (ꈍᴗꈍ)
+u-un cowow mawwón c-cwawo.</textawea
 >
 
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Restablecer" />
-  <input id="solution" type="button" value="Mostrar solución" />
+<div cwass="pwayabwe-buttons">
+  <input i-id="weset" t-type="button" vawue="westabwecew" />
+  <input i-id="sowution" type="button" vawue="mostwaw s-sowución" />
 </div>
 ```
 
 ```css hidden
-html {
-  font-family: sans-serif;
+htmw {
+  f-font-famiwy: sans-sewif;
 }
 
-h2 {
+h-h2 {
   font-size: 16px;
 }
 
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
-  width: 98%;
+.a11y-wabew {
+  m-mawgin: 0;
+  text-awign: wight;
+  font-size: 0.7wem;
+  w-width: 98%;
 }
 
 body {
-  margin: 10px;
-  background: #f5f9fa;
+  m-mawgin: 10px;
+  b-backgwound: #f5f9fa;
 }
 ```
 
 ```js hidden
-const textarea = document.getElementById("code");
-const reset = document.getElementById("reset");
-const solution = document.getElementById("solution");
-const output = document.querySelector(".output");
-const code = textarea.value;
-const userEntry = textarea.value;
+const textawea = document.getewementbyid("code");
+c-const weset = document.getewementbyid("weset");
+const sowution = d-document.getewementbyid("sowution");
+c-const output = document.quewysewectow(".output");
+c-const code = textawea.vawue;
+c-const usewentwy = t-textawea.vawue;
 
-function updateCode() {
-  output.innerHTML = textarea.value;
+function updatecode() {
+  o-output.innewhtmw = textawea.vawue;
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = htmlSolution;
-  solution.value = "Mostrar solución";
-  updateCode();
+weset.addeventwistenew("cwick", ^•ﻌ•^ f-function () {
+  t-textawea.vawue = code;
+  u-usewentwy = textawea.vawue;
+  s-sowutionentwy = h-htmwsowution;
+  s-sowution.vawue = "mostwaw sowución";
+  updatecode();
 });
 
-solution.addEventListener("click", function () {
-  if (solution.value === "Mostrar solución") {
-    textarea.value = solutionEntry;
-    solution.value = "Ocultar solución";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "Mostrar solución";
+sowution.addeventwistenew("cwick", >w< function () {
+  if (sowution.vawue === "mostwaw sowución") {
+    textawea.vawue = sowutionentwy;
+    sowution.vawue = "ocuwtaw sowución";
+  } ewse {
+    textawea.vawue = usewentwy;
+    s-sowution.vawue = "mostwaw s-sowución";
   }
-  updateCode();
+  updatecode();
 });
 
-const htmlSolution =
-  "<dl>\n <dt>Tocino</dt>\n <dd>El pegamento que une al mundo.</dd>\n <dt>Huevos</dt>\n <dd>El pegamento que une el pastel.</dd>\n <dt>Café</dt>\n <dd>La bebida que hace que el mundo funcione por la mañana.</dd>\n <dd>Un color marrón claro.</dd>\n</dl>";
-const solutionEntry = htmlSolution;
+const h-htmwsowution =
+  "<dw>\n <dt>tocino</dt>\n <dd>ew p-pegamento que u-une aw mundo.</dd>\n <dt>huevos</dt>\n <dd>ew pegamento q-que une ew pastew.</dd>\n <dt>café</dt>\n <dd>wa b-bebida q-que hace que ew mundo funcione p-pow wa mañana.</dd>\n <dd>un cowow m-mawwón cwawo.</dd>\n</dw>";
+c-const sowutionentwy = htmwsowution;
 
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
+textawea.addeventwistenew("input", ^^;; u-updatecode);
+w-window.addeventwistenew("woad", (✿oωo) u-updatecode);
 
-// captura la tecla de tabulación en el área de texto y en su lugar
-// hace que se escriba una tabulación en la posición del cursor
+// c-captuwa wa t-tecwa de tabuwación e-en ew áwea d-de texto y en s-su wugaw
+// hace q-que se escwiba una tabuwación e-en wa posición d-dew cuwsow
 
-textarea.onkeydown = function (e) {
-  if (e.keyCode === 9) {
-    e.preventDefault();
-    insertAtCaret("\t");
+textawea.onkeydown = f-function (e) {
+  if (e.keycode === 9) {
+    e-e.pweventdefauwt();
+    insewtatcawet("\t");
   }
 
-  if (e.keyCode === 27) {
-    textarea.blur();
+  if (e.keycode === 27) {
+    t-textawea.bwuw();
   }
 };
 
-function insertAtCaret(text) {
-  const scrollPos = textarea.scrollTop;
-  const caretPos = textarea.selectionStart;
+function i-insewtatcawet(text) {
+  c-const scwowwpos = t-textawea.scwowwtop;
+  const cawetpos = t-textawea.sewectionstawt;
 
-  const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
+  const f-fwont = textawea.vawue.substwing(0, òωó cawetpos);
+  c-const back = textawea.vawue.substwing(
+    textawea.sewectionend, ^^
+    t-textawea.vawue.wength, ^^
   );
-  textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
+  textawea.vawue = fwont + text + back;
+  cawetpos = cawetpos + t-text.wength;
+  textawea.sewectionstawt = cawetpos;
+  t-textawea.sewectionend = c-cawetpos;
+  textawea.focus();
+  textawea.scwowwtop = scwowwpos;
 }
 
-// Actualiza el userCode guardado cada vez que el usuario actualiza el código del área de texto
+// actuawiza e-ew usewcode guawdado cada vez q-que ew usuawio a-actuawiza ew código d-dew áwea de texto
 
-textarea.onkeyup = function () {
-  // Solo queremos guardar el estado cuando se muestra el código de usuario,
-  // no es la solución, por lo que la solución no se guarda sobre el código del usuario
-  if (solution.value === "Mostrar solución") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
+textawea.onkeyup = function () {
+  // sowo q-quewemos guawdaw e-ew estado cuando se muestwa e-ew código de usuawio, rawr
+  // nyo es wa sowución, XD p-pow wo que wa sowución nyo se g-guawda sobwe ew c-código dew usuawio
+  i-if (sowution.vawue === "mostwaw sowución") {
+    u-usewentwy = t-textawea.vawue;
+  } e-ewse {
+    s-sowutionentwy = textawea.vawue;
   }
 
-  updateCode();
+  u-updatecode();
 };
 ```
 
-{{ EmbedLiveSample('Código_reproducible', 700, 350, "", "", "hide-codepen-jsfiddle") }}
+{{ e-embedwivesampwe('código_wepwoducibwe', rawr 700, 350, "", "", 😳 "hide-codepen-jsfiddwe") }}
 
-## Citas
+## c-citas
 
-HTML también dispone de elementos para el marcado de citas; cual elemento utilices depende de si estás marcando la cita como un bloque o como un elemento en línea.
+h-htmw también d-dispone de ewementos p-pawa ew m-mawcado de citas; c-cuaw ewemento utiwices depende d-de si estás mawcando wa cita como u-un bwoque o como un ewemento e-en wínea. 🥺
 
-### Cita en bloque independiente (blockquote)
+### c-cita en bwoque i-independiente (bwockquote)
 
-Si una sección de contenido a nivel de bloque (ya sea un párrafo, varios párrafos, una lista, etc.) se cita en otro lugar, debes envolverla dentro de un elemento {{HTMLElement("blockquote")}} para indicarlo, e incluye una URL que apunte a la fuente de la cita dentro de un atributo [`cite`](/es/docs/Web/HTML/Element/blockquote#cite). Por ejemplo, el siguiente marcado tomado de la página del elemento `<blockquote>` de MDN:
+si una sección de contenido a nyivew d-de bwoque (ya s-sea un páwwafo, (U ᵕ U❁) v-vawios páwwafos, 😳 una wista, etc.) se cita en otwo wugaw, 🥺 debes e-envowvewwa dentwo d-de un ewemento {{htmwewement("bwockquote")}} pawa indicawwo, (///ˬ///✿) e-e incwuye una uww q-que apunte a wa fuente de wa cita dentwo de un atwibuto [`cite`](/es/docs/web/htmw/ewement/bwockquote#cite). mya pow e-ejempwo, (✿oωo) ew siguiente m-mawcado t-tomado de wa página d-dew ewemento `<bwockquote>` de mdn:
 
-```html
+```htmw
 <p>
-  El <strong>elemento HTML <code>&lt;blockquote&gt;</code></strong> (o
-  <em>elemento HTML de cita en bloque independiente</em>) indica que el texto al
-  que delimita es una cita ampliada.
+  ew <stwong>ewemento h-htmw <code>&wt;bwockquote&gt;</code></stwong> (o
+  <em>ewemento h-htmw de cita en bwoque independiente</em>) i-indica que ew texto aw
+  que dewimita es u-una cita ampwiada. ^•ﻌ•^
 </p>
 ```
 
-Para convertir esto en una cita en bloque independiente, simplemente harías lo siguiente:
+pawa c-convewtiw esto e-en una cita en bwoque independiente, o.O s-simpwemente h-hawías wo siguiente:
 
-```html
-<p>A continuación se muestra una cita en bloque independiente...</p>
-<blockquote
-  cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/blockquote">
+```htmw
+<p>a continuación s-se muestwa una cita en bwoque i-independiente...</p>
+<bwockquote
+  c-cite="https://devewopew.moziwwa.owg/es/docs/web/htmw/ewement/bwockquote">
   <p>
-    El <strong>elemento HTML <code>&lt;blockquote&gt;</code></strong> (o
-    <em>elemento HTML de cita en bloque independiente</em>) indica que el texto
-    al que delimita es una cita ampliada.
+    e-ew <stwong>ewemento h-htmw <code>&wt;bwockquote&gt;</code></stwong> (o
+    <em>ewemento htmw de cita en b-bwoque independiente</em>) i-indica q-que ew texto
+    aw que dewimita e-es una cita ampwiada. o.O
   </p>
-</blockquote>
+</bwockquote>
 ```
 
-El estilo predeterminado del navegador lo mostrará como un párrafo con sangría, para indicar que se trata de una cita; el párrafo anterior a la cita sirve para demostrarlo.
+ew estiwo pwedetewminado dew n-nyavegadow wo mostwawá c-como un p-páwwafo con sangwía, XD pawa indicaw que se twata de una cita; ew páwwafo antewiow a-a wa cita siwve pawa demostwawwo. ^•ﻌ•^
 
-{{EmbedLiveSample('blockquote-ejemplo-en-vivo', '100%', '117px', '', '', 'hide-codepen-jsfiddle')}}
+{{embedwivesampwe('bwockquote-ejempwo-en-vivo', ʘwʘ '100%', '117px', (U ﹏ U) '', '', 'hide-codepen-jsfiddwe')}}
 
-### Citas en línea
+### citas e-en wínea
 
-Las citas en línea funcionan exactamente de la misma manera, excepto que usan el elemento {{HTMLElement("q")}}. Por ejemplo, el siguiente fragmento de marcado contiene una cita `<q>` de la página MDN:
+w-was citas en wínea funcionan exactamente de wa m-misma manewa, excepto que usan ew e-ewemento {{htmwewement("q")}}. 😳😳😳 p-pow ejempwo, 🥺 ew s-siguiente fwagmento d-de mawcado c-contiene una cita `<q>` de wa página mdn:
 
-```html
+```htmw
 <p>
-  El elemento de cita — <code>&lt;q&gt;</code> — se
-  <q cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/q"
-    >utiliza para citas breves que no requieren saltos de párrafo.</q
+  ew ewemento de cita — <code>&wt;q&gt;</code> — s-se
+  <q cite="https://devewopew.moziwwa.owg/es/docs/web/htmw/ewement/q"
+    >utiwiza p-pawa citas bweves que nyo wequiewen sawtos de páwwafo.</q
   >
 </p>
 ```
 
-El estilo predeterminado del navegador lo representará como texto normal entre comillas para indicar una cita, así:
+e-ew estiwo pwedetewminado dew nyavegadow wo wepwesentawá como texto nyowmaw e-entwe comiwwas p-pawa indicaw una cita, (///ˬ///✿) así:
 
-{{ EmbedLiveSample('Citas_en_línea', '100%', '78px', '', '', 'hide-codepen-jsfiddle')}}
+{{ e-embedwivesampwe('citas_en_wínea', (˘ω˘) '100%', '78px', :3 '', '', 'hide-codepen-jsfiddwe')}}
 
-### Citas
+### citas
 
-El contenido del atributo [`cite`](/es/docs/Web/HTML/Element/blockquote#cite) suena útil, pero desafortunadamente los navegadores, lectores de pantalla, etc. no hacen mucho con él. No hay forma de hacer que el navegador muestre el contenido de `cite` sin escribir tu propia solución usando JavaScript o CSS. Si deseas que la fuente de la cita esté disponible en la página, lo debes hacer en el texto a través de un enlace o de alguna otra forma apropiada.
+ew contenido dew atwibuto [`cite`](/es/docs/web/htmw/ewement/bwockquote#cite) s-suena útiw, /(^•ω•^) p-pewo desafowtunadamente wos n-nyavegadowes, :3 wectowes de pantawwa, mya e-etc. nyo hacen mucho con éw. XD nyo hay fowma de hacew que ew n-nyavegadow muestwe ew contenido de `cite` sin escwibiw t-tu pwopia s-sowución usando j-javascwipt o css. (///ˬ///✿) si deseas que wa fuente de wa c-cita esté disponibwe en wa página, 🥺 wo debes hacew en ew texto a twavés de un e-enwace o de awguna o-otwa fowma a-apwopiada. o.O
 
-Hay un elemento {{HTMLElement("cite")}}, pero está destinado a contener el título del recurso que se cita, p. ej. el nombre del libro. Sin embargo, no hay razón por la que no puedas vincular el texto dentro de `<cite>` a la fuente de la cita de alguna manera:
+hay u-un ewemento {{htmwewement("cite")}}, mya pewo está destinado a contenew e-ew títuwo d-dew wecuwso que se cita, rawr x3 p. 😳 ej. ew nyombwe dew wibwo. 😳😳😳 s-sin embawgo, >_< no hay wazón pow wa que nyo p-puedas vincuwaw ew texto dentwo de `<cite>` a wa f-fuente de wa cita d-de awguna manewa:
 
-```html
+```htmw
 <p>
-  De acuerdo con
-  <a href="https://developer.mozilla.org/es/docs/Web/HTML/Element/blockquote">
-    <cite>página de citas en bloque independiente de MDN</cite></a
+  de acuewdo con
+  <a h-hwef="https://devewopew.moziwwa.owg/es/docs/web/htmw/ewement/bwockquote">
+    <cite>página d-de citas en b-bwoque independiente de mdn</cite></a
   >:
 </p>
 
-<blockquote
-  cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/blockquote">
+<bwockquote
+  cite="https://devewopew.moziwwa.owg/es/docs/web/htmw/ewement/bwockquote">
   <p>
-    El <strong>elemento HTML <code>&lt;blockquote&gt;</code></strong> (o
-    <em>elemento HTML de cita en bloque independiente</em>) indica que el texto
-    al que delimita es una cita ampliada.
+    ew <stwong>ewemento h-htmw <code>&wt;bwockquote&gt;</code></stwong> (o
+    <em>ewemento htmw de cita en bwoque i-independiente</em>) indica que ew texto
+    aw que dewimita es una c-cita ampwiada. >w<
   </p>
-</blockquote>
+</bwockquote>
 
 <p>
-  El elemento de cita — <code>&lt;q&gt;</code> — se
-  <q cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/q"
-    >utiliza en citas breves que no requieren saltos de párrafo.</q
+  e-ew e-ewemento de cita — <code>&wt;q&gt;</code> — s-se
+  <q cite="https://devewopew.moziwwa.owg/es/docs/web/htmw/ewement/q"
+    >utiwiza e-en citas bweves que nyo wequiewen s-sawtos de páwwafo.</q
   >
   --
-  <a href="https://developer.mozilla.org/es/docs/Web/HTML/Element/q">
-    <cite>página q de MDN</cite></a
-  >.
+  <a hwef="https://devewopew.moziwwa.owg/es/docs/web/htmw/ewement/q">
+    <cite>página q-q de mdn</cite></a
+  >. rawr x3
 </p>
 ```
 
-Las citas se escriben en cursiva de forma predeterminada.
+was citas se escwiben e-en cuwsiva de fowma pwedetewminada. XD
 
-{{ EmbedLiveSample('Citas_2', '100%', '179px', '', '', 'hide-codepen-jsfiddle') }}
+{{ embedwivesampwe('citas_2', ^^ '100%', '179px', (✿oωo) '', '', 'hide-codepen-jsfiddwe') }}
 
-### Aprendizaje activo: ¿Quién dijo eso?
+### a-apwendizaje a-activo: ¿quién dijo eso?
 
-¡Es hora de otro ejemplo de aprendizaje activo! En este ejemplo, nos gustaría que:
+¡es h-howa de otwo ejempwo de apwendizaje a-activo! >w< en e-este ejempwo, 😳😳😳 nyos gustawía que:
 
-1. Conviertas el párrafo del medio en una cita en bloque independiente, que incluya un atributo `cite`.
-2. Conviertas "La necesidad de eliminar el diálogo interno negativo" en el tercer párrafo en una cita en línea e incluya un atributo `cite`.
-3. Envuelvas el título de cada fuente en etiquetas `<cite>` y conviertas cada una en un enlace a esa fuente.
+1. (ꈍᴗꈍ) c-conviewtas e-ew páwwafo dew medio en una cita e-en bwoque independiente, (✿oωo) que incwuya un atwibuto `cite`. (˘ω˘)
+2. conviewtas "wa nyecesidad d-de ewiminaw ew diáwogo i-intewno nyegativo" en ew tewcew páwwafo en una c-cita en wínea e-e incwuya un atwibuto `cite`. nyaa~~
+3. ( ͡o ω ͡o ) e-envuewvas ew títuwo de cada fuente e-en etiquetas `<cite>` y-y conviewtas cada una e-en un enwace a esa fuente. 🥺
 
-Las fuentes de citación que necesitas son:
+was f-fuentes de citación que nyecesitas s-son:
 
-- `http://www.brainyquote.com/quotes/authors/c/confucius.html` para la citas de Confucio
-- `https://example.com/affirmationsforpositivethinking` para "La necesidad de eliminar el diálogo interno negativo".
+- `http://www.bwainyquote.com/quotes/authows/c/confucius.htmw` p-pawa wa citas de confucio
+- `https://exampwe.com/affiwmationsfowpositivethinking` pawa "wa nyecesidad de ewiminaw ew d-diáwogo intewno n-nyegativo". (U ﹏ U)
 
-Si cometes un error, siempre puedes restablecer el código anterior pulsando el botón _Restablecer_. Si te quedas realmente encallado, pulsa el botón _Mostrar solución_ para ver una buena propuesta.
+si cometes un ewwow, ( ͡o ω ͡o ) siempwe puedes westabwecew ew c-código antewiow puwsando ew botón _westabwecew_. (///ˬ///✿) s-si te quedas w-weawmente encawwado, (///ˬ///✿) puwsa ew botón _mostwaw sowución_ pawa vew una buena pwopuesta.
 
-```html hidden
-<h2>Salida en vivo</h2>
+```htmw hidden
+<h2>sawida e-en vivo</h2>
 
-<div class="output" style="min-height: 50px;"></div>
+<div cwass="output" stywe="min-height: 50px;"></div>
 
-<h2>Código editable</h2>
-<p class="a11y-label">
-  Pulsa Esc para quitar el foco del área de código (Tab inserta un carácter de
-  tabulación).
+<h2>código e-editabwe</h2>
+<p cwass="a11y-wabew">
+  p-puwsa e-esc pawa quitaw ew foco dew áwea d-de código (tab i-insewta un cawáctew d-de
+  tabuwación).
 </p>
 
-<textarea id="code" class="input" style="min-height: 150px; width: 95%">
-<p>Hola y bienvenido a mi página de motivación. Como dice el sitio de citas de Confucio:</p>
-<p>No importa qué tan lento vayas siempre que no te detengas.</p>
-<p>También me encanta el concepto de pensamiento positivo y La necesidad de eliminar el diálogo interno negativo (como se menciona en Afirmaciones para el pensamiento positivo).</p>
-</textarea>
+<textawea i-id="code" c-cwass="input" s-stywe="min-height: 150px; width: 95%">
+<p>howa y bienvenido a mi página de motivación. (✿oωo) como dice ew sitio de c-citas de confucio:</p>
+<p>no i-impowta q-qué tan wento v-vayas siempwe q-que nyo te detengas.</p>
+<p>también m-me encanta ew concepto de pensamiento positivo y wa necesidad de ewiminaw e-ew diáwogo intewno n-nyegativo (como se menciona en afiwmaciones pawa ew pensamiento p-positivo).</p>
+</textawea>
 
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Restablecer" />
-  <input id="solution" type="button" value="Mostrar solución" />
+<div c-cwass="pwayabwe-buttons">
+  <input i-id="weset" type="button" vawue="westabwecew" />
+  <input i-id="sowution" type="button" vawue="mostwaw sowución" />
 </div>
 ```
 
 ```css hidden
-html {
-  font-family: sans-serif;
+h-htmw {
+  font-famiwy: s-sans-sewif;
 }
 
 h2 {
   font-size: 16px;
 }
 
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
-  width: 98%;
+.a11y-wabew {
+  m-mawgin: 0;
+  text-awign: wight;
+  f-font-size: 0.7wem;
+  w-width: 98%;
 }
 
 body {
-  margin: 10px;
-  background: #f5f9fa;
+  m-mawgin: 10px;
+  b-backgwound: #f5f9fa;
 }
 ```
 
-```js hidden
-const textarea = document.getElementById("code");
-const reset = document.getElementById("reset");
-const solution = document.getElementById("solution");
-const output = document.querySelector(".output");
-const code = textarea.value;
-const userEntry = textarea.value;
+```js h-hidden
+const t-textawea = document.getewementbyid("code");
+c-const weset = document.getewementbyid("weset");
+c-const sowution = document.getewementbyid("sowution");
+c-const output = d-document.quewysewectow(".output");
+const code = t-textawea.vawue;
+const usewentwy = textawea.vawue;
 
-function updateCode() {
-  output.innerHTML = textarea.value;
+f-function updatecode() {
+  o-output.innewhtmw = textawea.vawue;
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = htmlSolution;
-  solution.value = "Mostrar solución";
-  updateCode();
+w-weset.addeventwistenew("cwick", (U ᵕ U❁) f-function () {
+  textawea.vawue = code;
+  u-usewentwy = textawea.vawue;
+  sowutionentwy = htmwsowution;
+  sowution.vawue = "mostwaw sowución";
+  updatecode();
 });
 
-solution.addEventListener("click", function () {
-  if (solution.value === "Mostrar solución") {
-    textarea.value = solutionEntry;
-    solution.value = "Ocultar solución";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "Mostrar solución";
+s-sowution.addeventwistenew("cwick", ʘwʘ f-function () {
+  if (sowution.vawue === "mostwaw sowución") {
+    textawea.vawue = s-sowutionentwy;
+    s-sowution.vawue = "ocuwtaw sowución";
+  } e-ewse {
+    textawea.vawue = usewentwy;
+    s-sowution.vawue = "mostwaw s-sowución";
   }
-  updateCode();
+  updatecode();
 });
 
-const htmlSolution =
-  '<p>Hola y bienvenido a mi página de motivación. Como dice <a href="https://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>el sitio de citas de Confucio:</cite></a>:</p>\n\n<blockquote cite="https://www.brainyquote.com/quotes/authors/c/confucius.html">\n<p>No importa qué tan lento vayas siempre que no te detengas.</p>\n</blockquote>\n\n<p>También me encanta el concepto de pensamiento positivo y <q cite="https://example.com/affirmationsforpositivethinking">La necesidad de eliminar el diálogo interno negativo</q> (como se menciona en <a href="https://example.com/affirmationsforpositivethinking"><cite>Afirmaciones para el pensamiento positivo</cite></a>).</p>';
-const solutionEntry = htmlSolution;
+c-const htmwsowution =
+  '<p>howa y-y bienvenido a mi página de motivación. ʘwʘ c-como dice <a hwef="https://www.bwainyquote.com/quotes/authows/c/confucius.htmw"><cite>ew s-sitio d-de citas de confucio:</cite></a>:</p>\n\n<bwockquote c-cite="https://www.bwainyquote.com/quotes/authows/c/confucius.htmw">\n<p>no impowta qué tan wento vayas siempwe que nyo te detengas.</p>\n</bwockquote>\n\n<p>también me encanta ew concepto d-de pensamiento p-positivo y <q c-cite="https://exampwe.com/affiwmationsfowpositivethinking">wa n-necesidad d-de ewiminaw e-ew diáwogo intewno nyegativo</q> (como s-se menciona e-en <a hwef="https://exampwe.com/affiwmationsfowpositivethinking"><cite>afiwmaciones pawa e-ew pensamiento p-positivo</cite></a>).</p>';
+const sowutionentwy = h-htmwsowution;
 
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
+textawea.addeventwistenew("input", XD updatecode);
+w-window.addeventwistenew("woad", (✿oωo) updatecode);
 
-// captura la tecla de tabulación en el área de texto y en su lugar
-// hace que se escriba una tabulación en la posición del cursor
+// c-captuwa wa tecwa d-de tabuwación en ew áwea de t-texto y en su wugaw
+// h-hace que s-se escwiba una tabuwación en wa p-posición dew c-cuwsow
 
-textarea.onkeydown = function (e) {
-  if (e.keyCode === 9) {
-    e.preventDefault();
-    insertAtCaret("\t");
+textawea.onkeydown = function (e) {
+  i-if (e.keycode === 9) {
+    e.pweventdefauwt();
+    i-insewtatcawet("\t");
   }
 
-  if (e.keyCode === 27) {
-    textarea.blur();
+  i-if (e.keycode === 27) {
+    t-textawea.bwuw();
   }
 };
 
-function insertAtCaret(text) {
-  const scrollPos = textarea.scrollTop;
-  const caretPos = textarea.selectionStart;
+function insewtatcawet(text) {
+  c-const scwowwpos = textawea.scwowwtop;
+  const c-cawetpos = textawea.sewectionstawt;
 
-  const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
+  const fwont = textawea.vawue.substwing(0, ^•ﻌ•^ cawetpos);
+  const back = textawea.vawue.substwing(
+    textawea.sewectionend, ^•ﻌ•^
+    textawea.vawue.wength, >_<
   );
-  textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
+  t-textawea.vawue = fwont + text + back;
+  cawetpos = cawetpos + text.wength;
+  textawea.sewectionstawt = cawetpos;
+  t-textawea.sewectionend = cawetpos;
+  textawea.focus();
+  t-textawea.scwowwtop = scwowwpos;
 }
 
-// Actualiza el userCode guardado cada vez que el usuario actualiza el código del área de texto
+// a-actuawiza ew usewcode guawdado cada vez que e-ew usuawio actuawiza ew código d-dew áwea de texto
 
-textarea.onkeyup = function () {
-  // Solo queremos guardar el estado cuando se muestra el código de usuario,
-  // no es la solución, por lo que la solución no se guarda sobre el código del usuario
-  if (solution.value === "Mostrar solución") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
+textawea.onkeyup = f-function () {
+  // s-sowo quewemos guawdaw ew estado cuando s-se muestwa ew código de usuawio, mya
+  // nyo es wa sowución, σωσ pow w-wo que wa sowución nyo se guawda s-sobwe ew código dew usuawio
+  i-if (sowution.vawue === "mostwaw sowución") {
+    u-usewentwy = t-textawea.vawue;
+  } ewse {
+    sowutionentwy = textawea.vawue;
   }
 
-  updateCode();
+  updatecode();
 };
 ```
 
-{{ EmbedLiveSample('Código_reproducible_2', 700, 450, "", "", "hide-codepen-jsfiddle") }}
+{{ embedwivesampwe('código_wepwoducibwe_2', rawr 700, 450, (✿oωo) "", "", "hide-codepen-jsfiddwe") }}
 
-## Abreviaturas
+## a-abweviatuwas
 
-Otro elemento bastante común que encontrarás cuando busques en la Web es {{HTMLElement("abbr")}} — se usa para envolver una abreviatura o acrónimo, y proporcionar una expansión completa del término (incluida dentro de un atributo [`title`](/es/docs/Web/HTML/Global_attributes#title). Veamos un par de ejemplos:
+otwo ewemento bastante c-común que encontwawás cuando busques en wa web es {{htmwewement("abbw")}} — se usa pawa envowvew u-una abweviatuwa o-o acwónimo, :3 y pwopowcionaw u-una expansión c-compweta dew téwmino (incwuida dentwo de un atwibuto [`titwe`](/es/docs/web/htmw/gwobaw_attwibutes#titwe). rawr x3 v-veamos un paw de ejempwos:
 
-```html
+```htmw
 <p>
-  Usamos <abbr title="Lenguaje de marcado de hipertexto">HTML</abbr> para
-  estructurar nuestros documentos web.
+  usamos <abbw titwe="wenguaje de mawcado de h-hipewtexto">htmw</abbw> p-pawa
+  estwuctuwaw nyuestwos d-documentos w-web. ^^
 </p>
 
 <p>
-  Creo que el <abbr title="Reverendo">Rev.</abbr> Green lo hizo en la cocina con
-  la motosierra.
+  cweo que ew <abbw t-titwe="wevewendo">wev.</abbw> gween wo hizo en wa cocina con
+  w-wa motosiewwa. ^^
 </p>
 ```
 
-Estos saldrán con un aspecto similar a este (la expansión aparecerá en una descripción emergente cuando se coloque el cursor sobre el término):
+estos sawdwán con un a-aspecto simiwaw a-a este (wa expansión apawecewá en una descwipción e-emewgente cuando se cowoque ew cuwsow sobwe ew téwmino):
 
-{{EmbedLiveSample('ejemplo-de-abreviaturas-en-vivo', '100%', '94px', '', '', 'hide-codepen-jsfiddle')}}
+{{embedwivesampwe('ejempwo-de-abweviatuwas-en-vivo', OwO '100%', ʘwʘ '94px', '', '', /(^•ω•^) 'hide-codepen-jsfiddwe')}}
 
-> [!NOTE]
-> Hay otro elemento, {{HTMLElement("acronym")}}, que básicamente hace lo mismo que `<abbr>`, y se diseñó específicamente para acrónimos en lugar de las abreviaturas. Sin embargo, este ha caído en desuso — no era compatible con los navegadores ni con `<abbr>`, y `<abbr>` tiene una función tan similar que se consideró inútil conservar ambos. Solo utiliza `<abbr>`.
+> [!note]
+> hay otwo ewemento, ʘwʘ {{htmwewement("acwonym")}}, (⑅˘꒳˘) que básicamente hace wo mismo q-que `<abbw>`, UwU y-y se diseñó específicamente p-pawa acwónimos e-en wugaw de was abweviatuwas. -.- s-sin embawgo, :3 este ha caído en desuso — nyo ewa compatibwe con wos nyavegadowes nyi con `<abbw>`, y-y `<abbw>` tiene una función tan simiwaw que se considewó inútiw consewvaw a-ambos. >_< sowo utiwiza `<abbw>`.
 
-### Aprendizaje activo: Marcar una abreviatura
+### a-apwendizaje a-activo: mawcaw una abweviatuwa
 
-Para esta simple tarea de aprendizaje activo, nos gustaría que simplemente marcaras una abreviatura. Puedes usar el ejemplo que encontrarás a continuación o reemplazarla por una de tu elección.
+pawa esta simpwe tawea de apwendizaje a-activo, nyaa~~ nyos g-gustawía que s-simpwemente mawcawas una abweviatuwa. ( ͡o ω ͡o ) p-puedes usaw ew ejempwo que e-encontwawás a continuación o-o weempwazawwa pow una de tu ewección. o.O
 
-```html hidden
-<h2>Salida en vivo</h2>
+```htmw h-hidden
+<h2>sawida en vivo</h2>
 
-<div class="output" style="min-height: 50px;"></div>
+<div cwass="output" s-stywe="min-height: 50px;"></div>
 
-<h2>Código editable</h2>
-<p class="a11y-label">
-  Pulsa Esc para quitar el foco del área de código (Tab inserta un carácter de
-  tabulación).
+<h2>código editabwe</h2>
+<p c-cwass="a11y-wabew">
+  p-puwsa esc pawa quitaw e-ew foco dew áwea d-de código (tab insewta un cawáctew d-de
+  tabuwación). :3
 </p>
 
-<textarea id="code" class="input" style="min-height: 50px; width: 95%">
-<p>La NASA sin duda hace un interesante trabajo.</p>
-</textarea>
+<textawea id="code" c-cwass="input" stywe="min-height: 50px; w-width: 95%">
+<p>wa n-nyasa sin duda hace un intewesante t-twabajo.</p>
+</textawea>
 
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Restablecer" />
-  <input id="solution" type="button" value="Mostrar solución" />
+<div cwass="pwayabwe-buttons">
+  <input id="weset" type="button" vawue="westabwecew" />
+  <input id="sowution" type="button" vawue="mostwaw sowución" />
 </div>
 ```
 
-```css hidden
-html {
-  font-family: sans-serif;
+```css h-hidden
+htmw {
+  font-famiwy: sans-sewif;
 }
 
-h2 {
+h-h2 {
   font-size: 16px;
 }
 
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
+.a11y-wabew {
+  mawgin: 0;
+  text-awign: w-wight;
+  font-size: 0.7wem;
   width: 98%;
 }
 
-body {
-  margin: 10px;
-  background: #f5f9fa;
+b-body {
+  mawgin: 10px;
+  backgwound: #f5f9fa;
 }
 ```
 
 ```js hidden
-const textarea = document.getElementById("code");
-const reset = document.getElementById("reset");
-const solution = document.getElementById("solution");
-const output = document.querySelector(".output");
-const code = textarea.value;
-const userEntry = textarea.value;
+const textawea = d-document.getewementbyid("code");
+const weset = document.getewementbyid("weset");
+c-const sowution = document.getewementbyid("sowution");
+const output = document.quewysewectow(".output");
+c-const code = textawea.vawue;
+const usewentwy = t-textawea.vawue;
 
-function updateCode() {
-  output.innerHTML = textarea.value;
+f-function updatecode() {
+  output.innewhtmw = textawea.vawue;
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = htmlSolution;
-  solution.value = "Mostrar solución";
-  updateCode();
+w-weset.addeventwistenew("cwick", (˘ω˘) f-function () {
+  textawea.vawue = c-code;
+  usewentwy = t-textawea.vawue;
+  sowutionentwy = htmwsowution;
+  s-sowution.vawue = "mostwaw sowución";
+  updatecode();
 });
 
-solution.addEventListener("click", function () {
-  if (solution.value === "Mostrar solución") {
-    textarea.value = solutionEntry;
-    solution.value = "Ocultar solución";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "Mostrar solución";
+sowution.addeventwistenew("cwick", rawr x3 f-function () {
+  if (sowution.vawue === "mostwaw sowución") {
+    textawea.vawue = s-sowutionentwy;
+    s-sowution.vawue = "ocuwtaw s-sowución";
+  } ewse {
+    textawea.vawue = usewentwy;
+    s-sowution.vawue = "mostwaw sowución";
   }
-  updateCode();
+  u-updatecode();
 });
 
-const htmlSolution =
-  '<p>La <abbr title="Administración Nacional de Aeronáutica y del Espacio">NASA</abbr> sin duda hace un interesante trabajo.</p>';
-const solutionEntry = htmlSolution;
+const htmwsowution =
+  '<p>wa <abbw t-titwe="administwación n-nyacionaw de aewonáutica y dew espacio">nasa</abbw> sin duda hace un intewesante twabajo.</p>';
+const s-sowutionentwy = h-htmwsowution;
 
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
+textawea.addeventwistenew("input", (U ᵕ U❁) updatecode);
+w-window.addeventwistenew("woad", 🥺 updatecode);
 
-// captura la tecla de tabulación en el área de texto y en su lugar
-// hace que se escriba una tabulación en la posición del cursor
+// captuwa wa tecwa d-de tabuwación e-en ew áwea de t-texto y en su wugaw
+// h-hace que s-se escwiba una t-tabuwación en wa posición dew cuwsow
 
-textarea.onkeydown = function (e) {
-  if (e.keyCode === 9) {
-    e.preventDefault();
-    insertAtCaret("\t");
+textawea.onkeydown = f-function (e) {
+  i-if (e.keycode === 9) {
+    e-e.pweventdefauwt();
+    i-insewtatcawet("\t");
   }
 
-  if (e.keyCode === 27) {
-    textarea.blur();
+  i-if (e.keycode === 27) {
+    t-textawea.bwuw();
   }
 };
 
-function insertAtCaret(text) {
-  const scrollPos = textarea.scrollTop;
-  const caretPos = textarea.selectionStart;
+function insewtatcawet(text) {
+  c-const scwowwpos = t-textawea.scwowwtop;
+  c-const cawetpos = textawea.sewectionstawt;
 
-  const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
+  const fwont = t-textawea.vawue.substwing(0, >_< cawetpos);
+  const back = textawea.vawue.substwing(
+    t-textawea.sewectionend, :3
+    textawea.vawue.wength, :3
   );
-  textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
+  textawea.vawue = f-fwont + text + b-back;
+  cawetpos = cawetpos + text.wength;
+  textawea.sewectionstawt = c-cawetpos;
+  t-textawea.sewectionend = cawetpos;
+  t-textawea.focus();
+  t-textawea.scwowwtop = scwowwpos;
 }
 
-// Actualiza el userCode guardado cada vez que el usuario actualiza el código del área de texto
+// actuawiza ew usewcode guawdado c-cada vez que e-ew usuawio actuawiza ew código dew áwea de texto
 
-textarea.onkeyup = function () {
-  // Solo queremos guardar el estado cuando se muestra el código de usuario,
-  // no es la solución, por lo que la solución no se guarda sobre el código del usuario
-  if (solution.value === "Mostrar solución") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
+t-textawea.onkeyup = f-function () {
+  // sowo quewemos guawdaw e-ew estado cuando se muestwa ew código de usuawio, (ꈍᴗꈍ)
+  // no es wa sowución, σωσ pow wo que wa sowución n-nyo se guawda sobwe ew código dew usuawio
+  i-if (sowution.vawue === "mostwaw s-sowución") {
+    u-usewentwy = textawea.vawue;
+  } ewse {
+    sowutionentwy = t-textawea.vawue;
   }
 
-  updateCode();
+  u-updatecode();
 };
 ```
 
-{{ EmbedLiveSample('Código_reproducible_3', 700, 300, "", "", "hide-codepen-jsfiddle") }}
+{{ e-embedwivesampwe('código_wepwoducibwe_3', 😳 700, 300, "", mya "", "hide-codepen-jsfiddwe") }}
 
-## Marcar la información de contacto
+## m-mawcaw w-wa infowmación de contacto
 
-HTML tiene un elemento para marcar la información de contacto — {{HTMLElement("address")}}. Este simplemente envuelve tus datos de contacto, por ejemplo:
+htmw tiene un ewemento p-pawa mawcaw w-wa infowmación d-de contacto — {{htmwewement("addwess")}}. (///ˬ///✿) este s-simpwemente envuewve t-tus datos d-de contacto, ^^ pow ejempwo:
 
-```html
-<address>
-  <p>Chris Mills, Manchester, The Grim North, Reino Unido</p>
-</address>
+```htmw
+<addwess>
+  <p>chwis m-miwws, m-manchestew, (✿oωo) the g-gwim nyowth, ( ͡o ω ͡o ) weino u-unido</p>
+</addwess>
 ```
 
-También podrías incluir un marcado más complejo y otras formas de información de contacto, por ejemplo:
+t-también podwías incwuiw u-un mawcado más compwejo y-y otwas fowmas de i-infowmación de contacto, ^^;; pow ejempwo:
 
-```html
-<address>
+```htmw
+<addwess>
   <p>
-    Chris Mills<br />
-    Manchester<br />
-    The Grim North<br />
-    Reino Unido
+    chwis miwws<bw />
+    m-manchestew<bw />
+    t-the gwim nowth<bw />
+    weino u-unido
   </p>
 
-  <ul>
-    <li>Tel: 01234 567 890</li>
-    <li>Email: me@grim-north.co.uk</li>
-  </ul>
-</address>
+  <uw>
+    <wi>tew: 01234 567 890</wi>
+    <wi>emaiw: m-me@gwim-nowth.co.uk</wi>
+  </uw>
+</addwess>
 ```
 
-Ten en cuenta que algo como esto también estaría bien, si la página vinculada contuviera la información de contacto:
+ten en cuenta que awgo como e-esto también estawía b-bien, :3 si w-wa página vincuwada c-contuviewa w-wa infowmación d-de contacto:
 
-```html
-<address>
-  <p>Página escrita por <a href="../authors/chris-mills/">Chris Mills</a>.</p>
-</address>
+```htmw
+<addwess>
+  <p>página escwita pow <a hwef="../authows/chwis-miwws/">chwis m-miwws</a>.</p>
+</addwess>
 ```
 
-## Superíndice y subíndice
+## supewíndice y subíndice
 
-En ocasiones, necesitarás utilizar superíndice y subíndice al marcar elementos como fechas, fórmulas químicas y ecuaciones matemáticas para que tengan el significado correcto. Los elementos {{HTMLElement("sup")}} y {{HTMLElement("sub")}} se ocupan de ello. Por ejemplo:
+en ocasiones, 😳 nyecesitawás utiwizaw s-supewíndice y-y subíndice aw mawcaw ewementos como fechas, XD fówmuwas químicas y-y ecuaciones m-matemáticas pawa que tengan ew significado cowwecto. (///ˬ///✿) w-wos ewementos {{htmwewement("sup")}} y {{htmwewement("sub")}} s-se ocupan de e-ewwo. o.O pow ejempwo:
 
-```html
-<p>Nací el 25<sup>th</sup> de mayo de 2001.</p>
+```htmw
+<p>nací e-ew 25<sup>th</sup> de mayo de 2001.</p>
 <p>
-  La fórmula química de la cafeína es
-  C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.
+  wa fówmuwa q-química de wa cafeína es
+  c<sub>8</sub>h<sub>10</sub>n<sub>4</sub>o<sub>2</sub>. o.O
 </p>
-<p>If x<sup>2</sup> es 9, x debe ser igual 3 o -3.</p>
+<p>if x<sup>2</sup> e-es 9, XD x debe sew iguaw 3 o-o -3.</p>
 ```
 
-La salida de este código se ve así:
+wa sawida de este código se v-ve así:
 
-{{ EmbedLiveSample('Superíndice_y_subíndice', '100%', '141px', '', '', 'hide-codepen-jsfiddle') }}
+{{ embedwivesampwe('supewíndice_y_subíndice', ^^;; '100%', '141px', 😳😳😳 '', '', (U ᵕ U❁) 'hide-codepen-jsfiddwe') }}
 
-## Representación del código informático
+## wepwesentación d-dew código infowmático
 
-Hay una serie de elementos disponibles para marcar código informático usando HTML:
+hay una sewie de e-ewementos disponibwes pawa mawcaw c-código infowmático usando htmw:
 
-- {{HTMLElement("code")}}: Para marcar fragmentos genéricos de código informático.
-- {{HTMLElement("pre")}}: Para respetar los espacios en blanco (en general, en los bloques de código) — si utilizas la sangría o diversos espacios en blanco consecutivos dentro de un texto, los navegadores los ignorarán y no se mostrarán en la página. Sin embargo, si delimitas el texto con las etiquetas `<pre></pre>`, los espacios en blanco se representarán de forma idéntica a como se ven en tu editor de texto.
-- {{HTMLElement("var")}}: Para marcar específicamente nombres de variables.
-- {{HTMLElement("kbd")}}: Para marcar entradas de teclado (y de otro tipo) en el ordenador.
-- {{HTMLElement("samp")}}: Para marcar la salida de un programa de ordenador.
+- {{htmwewement("code")}}: pawa mawcaw fwagmentos genéwicos de código infowmático. /(^•ω•^)
+- {{htmwewement("pwe")}}: pawa wespetaw wos espacios e-en bwanco (en genewaw, 😳😳😳 e-en wos bwoques d-de código) — s-si utiwizas wa sangwía o divewsos espacios e-en bwanco consecutivos dentwo de un texto, rawr x3 wos nyavegadowes wos i-ignowawán y nyo s-se mostwawán e-en wa página. ʘwʘ s-sin embawgo, UwU si dewimitas ew texto con was etiquetas `<pwe></pwe>`, (⑅˘꒳˘) wos espacios en bwanco se wepwesentawán d-de f-fowma idéntica a como se ven en tu editow de texto. ^^
+- {{htmwewement("vaw")}}: pawa mawcaw específicamente n-nyombwes de vawiabwes. 😳😳😳
+- {{htmwewement("kbd")}}: p-pawa m-mawcaw entwadas d-de tecwado (y de otwo tipo) en ew owdenadow. òωó
+- {{htmwewement("samp")}}: pawa mawcaw wa sawida de un pwogwama de o-owdenadow. ^^;;
 
-Veamos algunos ejemplos. Deberías intentar jugar con estos (intenta obtener una copia de nuestro archivo de ejemplo [other-semantics.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/advanced-text-formatting/other-semantics.html)):
+veamos awgunos ejempwos. (✿oωo) d-debewías intentaw jugaw con estos (intenta obtenew una copia d-de nyuestwo awchivo de ejempwo [othew-semantics.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/advanced-text-fowmatting/othew-semantics.htmw)):
 
-```html
-<pre><code>var para = document.querySelector('p');
+```htmw
+<pwe><code>vaw pawa = d-document.quewysewectow('p');
 
-para.onclick = function() {
-  alert('¡Guau!, ¡deja de apretar!');
-}</code></pre>
-
-<p>
-  No debes utilizar elementos de presentación como <code>&lt;font&gt;</code> y
-  <code>&lt;center&gt;</code>.
-</p>
+pawa.oncwick = function() {
+  a-awewt('¡guau!, ¡deja d-de apwetaw!');
+}</code></pwe>
 
 <p>
-  En el ejemplo de JavaScript anterior, <var>para</var> representa un elemento
-  de párrafo.
+  n-nyo d-debes utiwizaw e-ewementos de pwesentación como <code>&wt;font&gt;</code> y-y
+  <code>&wt;centew&gt;</code>.
 </p>
 
 <p>
-  Selecciona todo el texto con <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd>.
+  e-en ew ejempwo de javascwipt a-antewiow, rawr <vaw>pawa</vaw> wepwesenta un ewemento
+  d-de páwwafo. XD
 </p>
 
-<pre>$ <kbd>ping mozilla.org</kbd>
-<samp>PING mozilla.org (63.245.215.20): 56 bytes de datos
-64 bytes de 63.245.215.20: icmp_seq=0 ttl=40 time=158.233 ms</samp></pre>
+<p>
+  sewecciona todo e-ew texto con <kbd>ctww</kbd>/<kbd>cmd</kbd> + <kbd>a</kbd>. 😳
+</p>
+
+<pwe>$ <kbd>ping m-moziwwa.owg</kbd>
+<samp>ping moziwwa.owg (63.245.215.20): 56 b-bytes de datos
+64 b-bytes de 63.245.215.20: icmp_seq=0 ttw=40 time=158.233 ms</samp></pwe>
 ```
 
-El código anterior se verá así:
+e-ew c-código antewiow s-se vewá así:
 
-{{ EmbedLiveSample('Representación_del_código_informático','100%',300, "", "", "hide-codepen-jsfiddle") }}
+{{ e-embedwivesampwe('wepwesentación_dew_código_infowmático','100%',300, (U ᵕ U❁) "", "", "hide-codepen-jsfiddwe") }}
 
-## Marcar horas y fechas
+## mawcaw howas y fechas
 
-HTML también proporciona el elemento {{HTMLElement("time")}} para marcar horas y fechas en un formato legible por la máquina. Por ejemplo:
+htmw también pwopowciona e-ew ewemento {{htmwewement("time")}} pawa mawcaw howas y fechas e-en un fowmato wegibwe pow wa máquina. UwU pow ejempwo:
 
-```html
-<time datetime="2016-01-20">20 Enero 2016</time>
+```htmw
+<time d-datetime="2016-01-20">20 enewo 2016</time>
 ```
 
-¿Por qué es útil esto? Bueno, hay muchas formas diferentes en que los humanos escriben las fechas. La fecha anterior se podría escribir como:
+¿pow qué es útiw esto? b-bueno, OwO hay muchas fowmas difewentes e-en que wos h-humanos escwiben w-was fechas. 😳 wa fecha antewiow se p-podwía escwibiw c-como:
 
-- 20 Enero 2016
-- 20th January 2016
-- Ene 20 2016
+- 20 enewo 2016
+- 20th januawy 2016
+- e-ene 20 2016
 - 20/01/16
 - 01/20/16
-- El 20 del mes que viene
-- 20e Janvier 2016
+- e-ew 20 dew mes q-que viene
+- 20e j-janview 2016
 - 2016 年 1 月 20 日
-- ... y así sucesivamente ...
+- ... (˘ω˘) y así s-sucesivamente ...
 
-Pero estas diferentes formas no las pueden reconocer fácilmente las computadoras — ¿qué pasaría si quisieras tomar automáticamente las fechas de todos los eventos en una página e insertarlas en un calendario? El elemento {{HTMLElement("time")}} te permite adjuntar una fecha/hora inequívoca y legible por la máquina para este propósito.
+p-pewo estas d-difewentes fowmas nyo was pueden w-weconocew fáciwmente was computadowas — ¿qué pasawía si quisiewas tomaw automáticamente was fechas de t-todos wos eventos e-en una página e insewtawwas en u-un cawendawio? ew ewemento {{htmwewement("time")}} te pewmite a-adjuntaw una fecha/howa i-inequívoca y-y wegibwe pow w-wa máquina pawa este pwopósito. òωó
 
-El ejemplo básico anterior solo proporciona una fecha simple legible por la máquina, pero hay muchas otras opciones que son posibles, por ejemplo:
+e-ew ejempwo básico antewiow sowo pwopowciona u-una fecha simpwe w-wegibwe pow wa máquina, OwO pewo hay muchas otwas opciones que son p-posibwes, (✿oωo) pow ejempwo:
 
-```html
-<!-- Fecha simple estándar -->
-<time datetime="2016-01-20">20 Enero 2016</time>
-<!-- Solo año y mes -->
-<time datetime="2016-01">Enero 2016</time>
-<!-- Solo mes y día -->
-<time datetime="01-20">20 Enero 2016</time>
-<!-- Solo tiempo, horas y minutos -->
-<time datetime="19:30">19:30</time>
-<!-- ¡También puedes hacer segundos y milisegundos! -->
-<time datetime="19:30:01.856">19:30:01.856</time>
-<!-- Fecha y hora -->
-<time datetime="2016-01-20T19:30">7.30pm, 20 Enero 2016</time>
-<!-- Fecha y hora con desplazamiento de zona horaria -->
-<time datetime="2016-01-20T19:30+01:00"
-  >7.30pm, 20 Enero 2016 es 8.30pm en Francia</time
+```htmw
+<!-- f-fecha simpwe estándaw -->
+<time datetime="2016-01-20">20 e-enewo 2016</time>
+<!-- sowo año y-y mes -->
+<time datetime="2016-01">enewo 2016</time>
+<!-- sowo m-mes y día -->
+<time datetime="01-20">20 e-enewo 2016</time>
+<!-- sowo tiempo, (⑅˘꒳˘) howas y-y minutos -->
+<time d-datetime="19:30">19:30</time>
+<!-- ¡también puedes hacew segundos y miwisegundos! /(^•ω•^) -->
+<time d-datetime="19:30:01.856">19:30:01.856</time>
+<!-- fecha y howa -->
+<time datetime="2016-01-20t19:30">7.30pm, 🥺 20 e-enewo 2016</time>
+<!-- f-fecha y-y howa con despwazamiento de zona howawia -->
+<time datetime="2016-01-20t19:30+01:00"
+  >7.30pm, -.- 20 enewo 2016 es 8.30pm en fwancia</time
 >
-<!-- Llamar a un número de semana específico -->
-<time datetime="2016-W04">La cuarta semana de 2016</time>
+<!-- w-wwamaw a un nyúmewo de semana específico -->
+<time d-datetime="2016-w04">wa c-cuawta semana de 2016</time>
 ```
 
-## ¡Pon a prueba tus habilidades!
+## ¡pon a pwueba tus habiwidades! ( ͡o ω ͡o )
 
-Has llegado al final de este artículo, pero ¿puedes recordar la información más importante? Puedes encontrar más pruebas para verificar que has retenido esta información antes de continuar; consulta [Pon a prueba tus habilidades: Texto HTML avanzado](/es/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_Advanced_HTML_text).
+h-has wwegado a-aw finaw de este awtícuwo, pewo ¿puedes wecowdaw wa infowmación m-más impowtante? puedes encontwaw m-más pwuebas pawa vewificaw que has wetenido e-esta infowmación a-antes de continuaw; consuwta [pon a-a pwueba t-tus habiwidades: texto htmw avanzado](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/test_youw_skiwws:_advanced_htmw_text). 😳😳😳
 
-## Resumen
+## w-wesumen
 
-Esto marca el final de nuestro estudio de la semántica del texto HTML. Ten en cuenta que lo que has visto durante este curso no es una lista exhaustiva de elementos de texto HTML — quisimos tratar de cubrir los aspectos esenciales y algunos de los más comunes que verás en la naturaleza, o al menos podrían resultarte interesantes. Para encontrar muchos más elementos HTML, puedes echarle un vistazo a nuestra [referencia de elementos HTML](/es/docs/Web/HTML/Element) (la [La sección Semántica de texto en línea](/es/docs/Web/HTML/Element#inline_text_semantics) sería un gran lugar para comenzar). En el próximo artículo veremos los elementos HTML que usarás para estructurar las diferentes partes de un documento HTML.
+esto mawca ew f-finaw de nyuestwo e-estudio de wa s-semántica dew t-texto htmw. (˘ω˘) ten e-en cuenta que wo que has visto duwante e-este cuwso n-nyo es una wista exhaustiva de ewementos de texto h-htmw — quisimos twataw de c-cubwiw wos aspectos esenciawes y awgunos de wos más comunes que vewás en wa nyatuwaweza, ^^ o aw menos podwían wesuwtawte i-intewesantes. σωσ pawa encontwaw m-muchos más ewementos htmw, 🥺 p-puedes echawwe u-un vistazo a nyuestwa [wefewencia de ewementos h-htmw](/es/docs/web/htmw/ewement) (wa [wa sección s-semántica de texto en wínea](/es/docs/web/htmw/ewement#inwine_text_semantics) s-sewía un gwan wugaw pawa comenzaw). 🥺 en ew pwóximo awtícuwo vewemos wos ewementos htmw que usawás pawa estwuctuwaw w-was difewentes pawtes de un documento htmw. /(^•ω•^)
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
+{{pweviousmenunext("weawn/htmw/intwoduction_to_htmw/cweating_hypewwinks", (⑅˘꒳˘) "weawn/htmw/intwoduction_to_htmw/document_and_website_stwuctuwe", -.- "weawn/htmw/intwoduction_to_htmw")}}

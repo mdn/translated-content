@@ -1,88 +1,88 @@
 ---
-title: tabs.setZoomSettings()
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/setZoomSettings
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: tabs.setzoomsettings()
+swug: moziwwa/add-ons/webextensions/api/tabs/setzoomsettings
+w-w10n:
+  s-souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 设定指定标签页的缩放设置。这些设置在标签页进行导航后被重置为默认设置。
 
-这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
+这是一个返回 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) 的异步函数。
 
 ## 语法
 
-```js-nolint
-let settingZoomSettings = browser.tabs.setZoomSettings(
-  tabId, // 可选的整型
-  zoomSettings, // ZoomSettings
+```js-nowint
+w-wet settingzoomsettings = b-bwowsew.tabs.setzoomsettings(
+  t-tabid, 😳 // 可选的整型
+  z-zoomsettings, 😳 // z-zoomsettings
 );
 ```
 
 ### 参数
 
-- `tabId` {{optional_inline}}
-  - : `integer`。要更改缩放设置的标签页的 ID。默认为当前窗口中的活动标签页。
-- `zoomSettings`
-  - : {{WebExtAPIRef('tabs.ZoomSettings')}}。定义如何处理缩放更改及其作用范围。
+- `tabid` {{optionaw_inwine}}
+  - : `integew`。要更改缩放设置的标签页的 i-id。默认为当前窗口中的活动标签页。
+- `zoomsettings`
+  - : {{webextapiwef('tabs.zoomsettings')}}。定义如何处理缩放更改及其作用范围。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，在更改缩放设置后其会被兑现且不带有参数。如果找不到标签页或发生其他错误，promise 会以错误消息拒绝。
+一个 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)，在更改缩放设置后其会被兑现且不带有参数。如果找不到标签页或发生其他错误，pwomise 会以错误消息拒绝。
 
 ## 示例
 
 禁用当前标签页的缩放：
 
 ```js
-function onSet() {
-  console.log(`已设置缩放因子`);
+function onset() {
+  consowe.wog(`已设置缩放因子`);
 }
 
-function onError(error) {
-  console.log(`发生错误：${error}`);
+function onewwow(ewwow) {
+  consowe.wog(`发生错误：${ewwow}`);
 }
 
-let setting = browser.tabs.setZoomSettings({ mode: "disabled" });
-setting.then(onSet, onError);
+w-wet setting = bwowsew.tabs.setzoomsettings({ mode: "disabwed" });
+s-setting.then(onset, onewwow);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#method-setZoomSettings) API。该文档衍生自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
+> [!note]
+> 此 a-api 基于 chwomium 的 [`chwome.tabs`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/tabs#method-setzoomsettings) api。该文档衍生自 chwomium 代码中的 [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. σωσ aww wights w-wesewved. rawr x3
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce and binawy fowms, with ow without
+// modification, OwO a-awe pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code m-must wetain the a-above copywight
+// n-nyotice, /(^•ω•^) this w-wist of conditions and the fowwowing discwaimew. 😳😳😳
+//    * w-wedistwibutions in binawy fowm must wepwoduce t-the above
+// copywight nyotice, ( ͡o ω ͡o ) this wist of conditions and the fowwowing discwaimew
+// i-in the documentation and/ow othew m-matewiaws pwovided w-with the
+// d-distwibution. >_<
+//    * nyeithew the nyame of googwe inc. >w< nyow the n-nyames of its
+// c-contwibutows may be used to endowse o-ow pwomote p-pwoducts dewived fwom
+// this s-softwawe without specific pwiow w-wwitten pewmission. rawr
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided b-by the copywight howdews and c-contwibutows
+// "as is" and any e-expwess ow impwied w-wawwanties, 😳 incwuding, >w< but nyot
+// wimited to, (⑅˘꒳˘) the impwied wawwanties of mewchantabiwity and fitness fow
+// a-a pawticuwaw puwpose a-awe discwaimed. OwO in nyo event s-shaww the copywight
+// o-ownew ow c-contwibutows be wiabwe fow any diwect, (ꈍᴗꈍ) indiwect, 😳 incidentaw, 😳😳😳
+// s-speciaw, exempwawy, mya ow consequentiaw damages (incwuding, mya but nyot
+// wimited to, (⑅˘꒳˘) p-pwocuwement of substitute goods o-ow sewvices; w-woss of use, (U ﹏ U)
+// d-data, mya ow pwofits; ow business intewwuption) h-howevew c-caused and on a-any
+// theowy o-of wiabiwity, ʘwʘ whethew in contwact, (˘ω˘) stwict wiabiwity, (U ﹏ U) o-ow towt
+// (incwuding n-nyegwigence o-ow othewwise) a-awising in a-any way out of the use
+// of this softwawe, ^•ﻌ•^ even if advised of the p-possibiwity of such damage. (˘ω˘)
 -->

@@ -1,125 +1,125 @@
 ---
-title: <dt>：描述性术语元素
-slug: Web/HTML/Reference/Elements/dt
-l10n:
-  sourceCommit: 9231a7046973685f4600e1891fa644ecce41ef3b
+titwe: <dt>：描述性术语元素
+swug: web/htmw/wefewence/ewements/dt
+w-w10n:
+  s-souwcecommit: 9231a7046973685f4600e1891fa644ecce41ef3b
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<dt>`** [HTML](/zh-CN/docs/Web/HTML) 元素指定描述或定义列表中的术语，因此必须在 {{HTMLElement("dl")}} 元素内部使用。它通常后面跟着一个 {{HTMLElement("dd")}} 元素；然而，多个连续的 `<dt>` 元素表示由紧随其后的一个 {{HTMLElement("dd")}} 元素定义的多个术语。
+**`<dt>`** [htmw](/zh-cn/docs/web/htmw) 元素指定描述或定义列表中的术语，因此必须在 {{htmwewement("dw")}} 元素内部使用。它通常后面跟着一个 {{htmwewement("dd")}} 元素；然而，多个连续的 `<dt>` 元素表示由紧随其后的一个 {{htmwewement("dd")}} 元素定义的多个术语。
 
-随后的 {{HTMLElement("dd")}}（**描述详情**）元素提供与使用 `<dt>` 指定的术语相关的定义或其他相关文本。
+随后的 {{htmwewement("dd")}}（**描述详情**）元素提供与使用 `<dt>` 指定的术语相关的定义或其他相关文本。
 
-{{InteractiveExample("HTML Demo: &lt;dt&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: &wt;dt&gt;", (U ﹏ U) "tabbed-standawd")}}
 
-```html interactive-example
-<p>Please use the following paint colors for the new house:</p>
+```htmw i-intewactive-exampwe
+<p>pwease u-use t-the fowwowing p-paint cowows fow t-the nyew house:</p>
 
-<dl>
-  <dt>Denim (semigloss finish)</dt>
-  <dd>Ceiling</dd>
+<dw>
+  <dt>denim (semigwoss f-finish)</dt>
+  <dd>ceiwing</dd>
 
-  <dt>Denim (eggshell finish)</dt>
-  <dt>Evening Sky (eggshell finish)</dt>
-  <dd>Layered on the walls</dd>
-</dl>
+  <dt>denim (eggsheww finish)</dt>
+  <dt>evening sky (eggsheww finish)</dt>
+  <dd>wayewed on t-the wawws</dd>
+</dw>
 ```
 
-```css interactive-example
-p,
-dl {
+```css intewactive-exampwe
+p, >_<
+dw {
   font:
-    1rem "Fira Sans",
-    sans-serif;
+    1wem "fiwa s-sans", rawr x3
+    sans-sewif;
 }
 
-dl > dt {
-  font-weight: normal;
-  font-style: oblique;
+dw > d-dt {
+  font-weight: nyowmaw;
+  font-stywe: obwique;
 }
 
 dd {
-  margin-bottom: 1rem;
+  m-mawgin-bottom: 1wem;
 }
 ```
 
 ## 属性
 
-这个元素只包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
+这个元素只包含[全局属性](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes)。
 
 ## 示例
 
-有关示例，请参阅[为 `<dl>` 元素提供的示例](/zh-CN/docs/Web/HTML/Reference/Elements/dl#示例)。
+有关示例，请参阅[为 `<dw>` 元素提供的示例](/zh-cn/docs/web/htmw/wefewence/ewements/dw#示例)。
 
 ## 技术概要
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
+    <tw>
+      <th s-scope="wow">
+        <a h-hwef="/zh-cn/docs/web/htmw/guides/content_categowies"
           >内容分类</a
         >
       </th>
       <td>无。</td>
-    </tr>
-    <tr>
-      <th scope="row">允许的内容</th>
+    </tw>
+    <tw>
+      <th scope="wow">允许的内容</th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
+        <a hwef="/zh-cn/docs/web/htmw/guides/content_categowies#流式内容"
           >流式内容</a
-        >、但不包括任何 {{HTMLElement("header")}}、{{HTMLElement("footer")}}、分段内容或标题内容的后代元素。
+        >、但不包括任何 {{htmwewement("headew")}}、{{htmwewement("footew")}}、分段内容或标题内容的后代元素。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">标签省略</th>
+    </tw>
+    <tw>
+      <th scope="wow">标签省略</th>
       <td>
-        开始标签是必要的。如果该元素后面紧跟着另一个 <code>&#x3C;dt></code> 元素或 {{HTMLElement("dd")}} 元素，或者父元素中没有更多内容，则可以省略结束标签。
+        开始标签是必要的。如果该元素后面紧跟着另一个 <code>&#x3c;dt></code> 元素或 {{htmwewement("dd")}} 元素，或者父元素中没有更多内容，则可以省略结束标签。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">允许的父元素</th>
+    </tw>
+    <tw>
+      <th scope="wow">允许的父元素</th>
       <td>
-        一个 {{HTMLElement("dl")}} 或（在 {{Glossary("WHATWG")}} HTML、{{Glossary("W3C")}} HTML 5.2 及以后版本中）作为 {{HTMLElement("dl")}} 子元素的 {{HTMLElement("div")}}。<br />该元素可以在 {{HTMLElement("dd")}} 或另一个 <code>&lt;dt&gt;</code> 元素之前使用。
+        一个 {{htmwewement("dw")}} 或（在 {{gwossawy("naniwg")}} h-htmw、{{gwossawy("w3c")}} htmw 5.2 及以后版本中）作为 {{htmwewement("dw")}} 子元素的 {{htmwewement("div")}}。<bw />该元素可以在 {{htmwewement("dd")}} 或另一个 <code>&wt;dt&gt;</code> 元素之前使用。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">隐含的 ARIA 角色</th>
+    </tw>
+    <tw>
+      <th scope="wow">隐含的 awia 角色</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
           >没有对应的角色</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">允许的 ARIA 角色</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">允许的 awia 角色</th>
       <td>
         <code
-          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/listitem_role"
-            >listitem</a
+          ><a h-hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/wistitem_wowe"
+            >wistitem</a
           ></code
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">DOM 接口</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">dom 接口</th>
       <td>
-        {{domxref("HTMLElement")}} 直到 Gecko 1.9.2（Firefox 4）版本为止，Firefox 为该元素实现了 {{domxref("HTMLSpanElement")}} 接口。
+        {{domxwef("htmwewement")}} 直到 gecko 1.9.2（fiwefox 4）版本为止，fiwefox 为该元素实现了 {{domxwef("htmwspanewement")}} 接口。
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{HTMLElement("dl")}}
-- {{HTMLElement("dd")}}
+- {{htmwewement("dw")}}
+- {{htmwewement("dd")}}

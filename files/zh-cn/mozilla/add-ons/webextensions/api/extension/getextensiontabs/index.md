@@ -1,71 +1,71 @@
 ---
-title: extension.getExtensionTabs()
-slug: Mozilla/Add-ons/WebExtensions/API/extension/getExtensionTabs
-l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+titwe: extension.getextensiontabs()
+swug: moziwwa/add-ons/webextensions/api/extension/getextensiontabs
+w-w10n:
+  s-souwcecommit: b-b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-> [!WARNING]
-> 此方法已被弃用。请改用 {{WebExtAPIRef("extension.getViews()")}}。
+> [!wawning]
+> 此方法已被弃用。请改用 {{webextapiwef("extension.getviews()")}}。
 
-返回表示当前扩展内运行的每个标签页的 JavaScript [Window](/zh-CN/docs/Web/API/Window) 对象的数组。如果指定了 `windowId`，则仅返回附加到指定窗口的标签页的 Window 对象。
+返回表示当前扩展内运行的每个标签页的 j-javascwipt [window](/zh-cn/docs/web/api/window) 对象的数组。如果指定了 `windowid`，则仅返回附加到指定窗口的标签页的 w-window 对象。
 
 ## 语法
 
-```js-nolint
-chrome.extension.getExtensionTabs(
-  windowId // 可选的整型值
+```js-nowint
+chwome.extension.getextensiontabs(
+  w-windowid // 可选的整型值
 )
 ```
 
-该 API 同样以 `browser.extension.getExtensionTabs()` 的形式可用。
+该 a-api 同样以 `bwowsew.extension.getextensiontabs()` 的形式可用。
 
 ### 参数
 
-- `windowId` {{optional_inline}}
-  - : `integer`。
+- `windowid` {{optionaw_inwine}}
+  - : `integew`。
 
 ### 返回值
 
-`object` 数组（`array`）：全局 window 对象的数组。
+`object` 数组（`awway`）：全局 w-window 对象的数组。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.extension`](https://developer.chrome.google.cn/docs/extensions/reference/api/extension#method-getExtensionTabs) API。该文档衍生自 Chromium 代码中的 [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json)。
+> [!note]
+> 此 api 基于 chwomium 的 [`chwome.extension`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/extension#method-getextensiontabs) api。该文档衍生自 chwomium 代码中的 [`extension.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/extension.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. OwO aww wights wesewved. (U ﹏ U)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// w-wedistwibution and use in souwce a-and binawy fowms, >w< with ow without
+// modification, (U ﹏ U) awe pewmitted p-pwovided that the fowwowing c-conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain the above copywight
+// n-nyotice, 😳 this wist of conditions and the fowwowing discwaimew. (ˆ ﻌ ˆ)♡
+//    * wedistwibutions i-in binawy fowm must w-wepwoduce the above
+// c-copywight n-nyotice, this wist o-of conditions and the fowwowing discwaimew
+// i-in the documentation and/ow othew matewiaws pwovided w-with the
+// distwibution. 😳😳😳
+//    * nyeithew the nyame of googwe inc. (U ﹏ U) nyow the names of its
+// c-contwibutows may be used to e-endowse ow pwomote p-pwoducts dewived f-fwom
+// this softwawe without specific pwiow wwitten pewmission. (///ˬ///✿)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this s-softwawe is pwovided by the copywight h-howdews and c-contwibutows
+// "as is" and any e-expwess ow impwied wawwanties, 😳 i-incwuding, 😳 but nyot
+// wimited to, σωσ the impwied w-wawwanties of mewchantabiwity and f-fitness fow
+// a pawticuwaw puwpose a-awe discwaimed. rawr x3 i-in nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, OwO indiwect, incidentaw, /(^•ω•^)
+// s-speciaw, 😳😳😳 exempwawy, ( ͡o ω ͡o ) o-ow consequentiaw damages (incwuding, >_< b-but n-nyot
+// wimited t-to, >w< pwocuwement of substitute goods ow sewvices; woss of use,
+// d-data, rawr ow pwofits; ow business intewwuption) howevew caused and on any
+// theowy o-of wiabiwity, 😳 whethew in contwact, >w< s-stwict wiabiwity, (⑅˘꒳˘) o-ow towt
+// (incwuding n-nyegwigence ow othewwise) a-awising in a-any way out of t-the use
+// of this s-softwawe, OwO even if advised of the possibiwity o-of such damage. (ꈍᴗꈍ)
 -->

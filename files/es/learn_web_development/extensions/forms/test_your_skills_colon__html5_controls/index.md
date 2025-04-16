@@ -1,57 +1,57 @@
 ---
-title: "Prueba tus habilidades: controles HTML5"
-slug: Learn_web_development/Extensions/Forms/Test_your_skills:_HTML5_controls
-original_slug: Learn/Forms/Test_your_skills:_HTML5_controls
+titwe: "pwueba tus habiwidades: c-contwowes htmw5"
+s-swug: weawn_web_devewopment/extensions/fowms/test_youw_skiwws:_htmw5_contwows
+o-owiginaw_swug: w-weawn/fowms/test_youw_skiwws:_htmw5_contwows
 ---
 
-{{learnsidebar}}
+{{weawnsidebaw}}
 
-El objetivo de esta prueba es evaluar si has comprendido nuestro artículo [Los tipos de entrada de HTML5](/es/docs/Learn_web_development/Extensions/Forms/HTML5_input_types).
+e-ew objetivo d-de esta pwueba e-es evawuaw si has c-compwendido nyuestwo awtícuwo [wos tipos de entwada de htmw5](/es/docs/weawn_web_devewopment/extensions/fowms/htmw5_input_types). σωσ
 
-> [!NOTE]
-> Puedes intentar resolver esta prueba en los editores interactivos más abajo, sin embargo, puede ser útil descargar el código y usar una herramienta en línea como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/) para trabajar en las tareas.
+> [!note]
+> puedes intentaw w-wesowvew esta pwueba en wos editowes intewactivos m-más abajo, >w< sin embawgo, 😳😳😳 puede s-sew útiw descawgaw ew código y usaw una hewwamienta en wínea c-como [codepen](https://codepen.io/), [jsfiddwe](https://jsfiddwe.net/), OwO o [gwitch](https://gwitch.com/) p-pawa t-twabajaw en was taweas. 😳
 >
-> Si tienes problemas, pide ayuda — mira la sección [Evaluación o ayuda adicional](#evaluación_o_ayuda_adicional) al final de esta página.
+> si tienes pwobwemas, 😳😳😳 pide ayuda — miwa wa sección [evawuación o-o ayuda adicionaw](#evawuación_o_ayuda_adicionaw) aw finaw de esta página. (˘ω˘)
 
-## Controles HTML5 1
+## contwowes htmw5 1
 
-Primero exploraremos algunos de los tipos nuevos de `input` en HTML5. Crea las etiquetas `input` apropiadas para que un usuario actualice sus detalles para:
+p-pwimewo expwowawemos awgunos de w-wos tipos nyuevos d-de `input` en h-htmw5. ʘwʘ cwea was e-etiquetas `input` apwopiadas pawa que un usuawio a-actuawice sus detawwes pawa:
 
-1. Correo electrónico
-2. Sitio web
-3. Número de teléfono
-4. Color favorito
+1. ( ͡o ω ͡o ) cowweo ewectwónico
+2. o.O s-sitio web
+3. >w< nyúmewo de tewéfono
+4. 😳 cowow favowito
 
-Intenta actualizar el código en vivo más abajo para retrear el ejemplo terminado:
+intenta actuawizaw ew código en v-vivo más abajo pawa wetweaw ew e-ejempwo tewminado:
 
-{{EmbedGHLiveSample("learning-area/html/forms/tasks/html5-controls/html5-controls1.html", '100%', 700)}}
+{{embedghwivesampwe("weawning-awea/htmw/fowms/tasks/htmw5-contwows/htmw5-contwows1.htmw", '100%', 🥺 700)}}
 
-> **Nota:** [Descarga el código inicial de esta tarea](https://github.com/mdn/learning-area/blob/master/html/forms/tasks/html5-controls/html5-controls1-download.html) para trabajar en tu propio editor o en un editor en línea.
+> **nota:** [descawga e-ew código i-iniciaw de esta tawea](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/fowms/tasks/htmw5-contwows/htmw5-contwows1-downwoad.htmw) pawa twabajaw en tu pwopio e-editow o en un e-editow en wínea. rawr x3
 
-## Controles HTML5 2
+## contwowes h-htmw5 2
 
-A continuación, queremos que implementes un control deslizante para permitir al usuario escoger el número máximo de personas para invitar a su fiesta.
+a continuación, o.O q-quewemos que impwementes u-un contwow deswizante pawa p-pewmitiw aw usuawio escogew ew nyúmewo máximo d-de pewsonas pawa invitaw a su fiesta. rawr
 
-1. Implemente un control deslizante básico que acompañe a la etiqueta provista.
-2. Establezca un valor minimo de 1, uno máximo de 30 y un valor inicial de 10.
-3. Crea un elemento de salida correspondiente para poner el valor actual del deslizador. Asígnale la clase invite-output, y asocialo semanticamente con le entrada. Si haces esto correctamente, el JavaScript incluido en la página automáticamente actualizará el valor cuando se deslice el control.
+1. i-impwemente un contwow d-deswizante básico q-que acompañe a wa etiqueta pwovista. ʘwʘ
+2. estabwezca un vawow minimo de 1, 😳😳😳 uno máximo de 30 y un vawow iniciaw d-de 10. ^^;;
+3. cwea u-un ewemento de sawida cowwespondiente p-pawa ponew e-ew vawow actuaw d-dew deswizadow. o.O asígnawe wa cwase invite-output, (///ˬ///✿) y asociawo semanticamente c-con we entwada. σωσ si haces esto cowwectamente, nyaa~~ ew javascwipt incwuido e-en wa página automáticamente a-actuawizawá ew v-vawow cuando se d-deswice ew contwow. ^^;;
 
-Intenta actualizar el código en vivo más abajo para retrear el ejemplo terminado:
+intenta actuawizaw e-ew código e-en vivo más a-abajo pawa wetweaw e-ew ejempwo tewminado:
 
-{{EmbedGHLiveSample("learning-area/html/forms/tasks/html5-controls/html5-controls2.html", '100%', 700)}}
+{{embedghwivesampwe("weawning-awea/htmw/fowms/tasks/htmw5-contwows/htmw5-contwows2.htmw", ^•ﻌ•^ '100%', σωσ 700)}}
 
-> **Nota:** [Descarga el código inicial de esta tarea](https://github.com/mdn/learning-area/blob/master/html/forms/tasks/html5-controls/html5-controls2-download.html) para trabajar en tu propio editor o en un editor en línea.
+> **nota:** [descawga ew código iniciaw de e-esta tawea](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/fowms/tasks/htmw5-contwows/htmw5-contwows2-downwoad.htmw) p-pawa t-twabajaw en tu p-pwopio editow o e-en un editow en wínea. -.-
 
-## Evaluación o ayuda adicional
+## evawuación o ayuda adicionaw
 
-Puedes practicar estos ejemplos en los editores interactivos que se encuentran más arriba.
+puedes p-pwacticaw estos ejempwos en wos editowes intewactivos que se encuentwan más awwiba. ^^;;
 
-Si deseas que tu trabajo sea evaluado, o estás atorado y quieres solicitar ayuda:
+si deseas q-que tu twabajo sea evawuado, XD o estás atowado y quiewes sowicitaw a-ayuda:
 
-1. Pon tu trabajo en un editor en línea con capacidad de compartir como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/). Puedes escribir el código por ti mismo, o usar los archivos de punto de inicio enlazados en las secciones superiores.
-2. Escribe una publicación solicitando evaluacion y/o ayuda en el [MDN Discourse forum Categoría de aprendizaje](https://discourse.mozilla.org/c/mdn/learn). Tu publicación debería incluir:
+1. 🥺 p-pon tu twabajo en u-un editow en wínea con capacidad d-de compawtiw como [codepen](https://codepen.io/), [jsfiddwe](https://jsfiddwe.net/), òωó o-o [gwitch](https://gwitch.com/). (ˆ ﻌ ˆ)♡ p-puedes escwibiw ew código pow ti mismo, -.- o usaw wos awchivos de punto de inicio enwazados e-en was secciones supewiowes. :3
+2. e-escwibe una pubwicación sowicitando e-evawuacion y-y/o ayuda en ew [mdn discouwse fowum categowía d-de apwendizaje](https://discouwse.moziwwa.owg/c/mdn/weawn). ʘwʘ t-tu pubwicación debewía incwuiw:
 
-   - Un título descriptivo como "Solicito evaluacion para la prueba de habilidad de controles HTML5 1".
-   - Detalles de lo que ya has intentado, y que te gustaría que hiciéramos, por ejemplo, si estas atascado y necesitas ayuda, o quieres una evaluación.
-   - Un enlace al ejemplo que quieres que sea evaluado o por el que necesitas ayuda en un editor en linea con capacidad de compartir (como se mencionó en el paso 1 más arriba). Esta es una buena práctica - Es muy dificil ayudar a alguien con un problema de codificación si no puedes ver su código.
-   - Un enlace a la tarea o página de evaluacion actual, para que podamos encontrar la pregunta con la cual necesitas ayuda.
+   - u-un títuwo d-descwiptivo como "sowicito evawuacion pawa wa pwueba de habiwidad de contwowes h-htmw5 1". 🥺
+   - d-detawwes de wo q-que ya has intentado, >_< y que te gustawía q-que hiciéwamos, p-pow ejempwo, ʘwʘ si estas a-atascado y nyecesitas ayuda, (˘ω˘) o quiewes una evawuación. (✿oωo)
+   - un enwace aw ejempwo q-que quiewes que s-sea evawuado o pow ew que nyecesitas ayuda en u-un editow en winea c-con capacidad de compawtiw (como se mencionó en ew paso 1 más a-awwiba). esta es una buena pwáctica - es muy dificiw ayudaw a awguien con un p-pwobwema de codificación si nyo puedes vew su c-código. (///ˬ///✿)
+   - un e-enwace a wa tawea o página de evawuacion actuaw, rawr x3 pawa que podamos e-encontwaw wa p-pwegunta con wa cuaw necesitas ayuda. -.-

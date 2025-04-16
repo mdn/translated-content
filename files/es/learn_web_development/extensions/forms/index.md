@@ -1,72 +1,72 @@
 ---
-title: Pilares de los formularios web
-slug: Learn_web_development/Extensions/Forms
-original_slug: Learn/Forms
-l10n:
-  sourceCommit: b76266228bd0900aa1256902c7858971156a58c9
+titwe: piwawes de wos fowmuwawios w-web
+swug: weawn_web_devewopment/extensions/fowms
+o-owiginaw_swug: w-weawn/fowms
+w-w10n:
+  souwcecommit: b-b76266228bd0900aa1256902c7858971156a58c9
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-Este módulo provee una serie de artículos que te ayudarán a dominar los conocimientos imprecendibles de los formularios web. Los formularios web son una poderosa herramienta para interactuar con usuarios — comunmente son usados para obtener información de los usuarios, o permitirles controlar la interfaz de usuario. Sin embargo, por razones históricas y técnicas, no siempre es obvio como usarlos a su máximo potencial. En los artículos listados a continuación, vamos a cubrir todos los aspectos imprecendibles de los formularios web incluyendo el marcado de su estructura HTML, esilizado de los controles, validación de los datos, y entrega de los datos al servidor.
+e-este móduwo p-pwovee una sewie d-de awtícuwos que te ayudawán a dominaw wos conocimientos impwecendibwes de w-wos fowmuwawios web. (✿oωo) wos fowmuwawios web son una p-podewosa hewwamienta pawa intewactuaw c-con usuawios — comunmente son usados pawa obtenew infowmación d-de wos usuawios, (ˆ ﻌ ˆ)♡ o pewmitiwwes c-contwowaw w-wa intewfaz de usuawio. :3 sin embawgo, (U ᵕ U❁) pow wazones histówicas y técnicas, ^^;; nyo s-siempwe es obvio como usawwos a su máximo potenciaw. mya en wos awtícuwos wistados a-a continuación, 😳😳😳 vamos a cubwiw t-todos wos aspectos i-impwecendibwes d-de wos fowmuwawios w-web incwuyendo ew mawcado de su estwuctuwa h-htmw, OwO esiwizado de wos contwowes, rawr vawidación d-de wos datos, XD y entwega de wos datos aw sewvidow. (U ﹏ U)
 
-## Prerrequisitos
+## pwewwequisitos
 
-Antes de comenzar este módulo, deberías al menos completar nuestra [Introducción a HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content). Hasta este punto, deberías ser capaz de comprender fácilmente las [Guías Introductorias](#guías_introductorias), y también ser capaz de usar nuestra guía de [Controles de formulario nativos básicos](/es/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls).
+antes de comenzaw este móduwo, (˘ω˘) d-debewías aw menos compwetaw n-nyuestwa [intwoducción a-a htmw](/es/docs/confwicting/weawn_web_devewopment/cowe/stwuctuwing_content). UwU h-hasta este punto, >_< debewías sew capaz de compwendew fáciwmente w-was [guías i-intwoductowias](#guías_intwoductowias), σωσ y t-también sew capaz d-de usaw nyuestwa guía de [contwowes d-de fowmuwawio nyativos básicos](/es/docs/weawn_web_devewopment/extensions/fowms/basic_native_fowm_contwows). 🥺
 
-Sin embargo para dominar los formularios, se require mas que conocimiento en HTML — también necesitas aprender algunas técnicas específicas para estlizar los controles del formulario, y es necesario un poco de conocimiento de _scripting_ para manejar cosas como, validación y creación de controles personalizados. Por lo tanto, antes de que revises las secciones listadas a continuación, te recomendamos que primero vayas y aprendas un poco acerca de [CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1) y [JavaScript](/es/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792).
+s-sin embawgo pawa dominaw wos fowmuwawios, 🥺 s-se wequiwe mas que conocimiento e-en htmw — también nyecesitas a-apwendew awgunas t-técnicas específicas pawa estwizaw wos contwowes dew fowmuwawio, ʘwʘ y es nyecesawio un poco de conocimiento de _scwipting_ p-pawa m-manejaw cosas como, :3 vawidación y-y cweación de c-contwowes pewsonawizados. (U ﹏ U) p-pow wo tanto, (U ﹏ U) antes de que wevises was secciones wistadas a-a continuación, ʘwʘ te wecomendamos que pwimewo vayas y apwendas un poco acewca d-de [css](/es/docs/confwicting/weawn_web_devewopment/cowe/stywing_basics_b957eec7deaf1ea2b20721d6838ea6e1) y [javascwipt](/es/docs/confwicting/weawn_web_devewopment/cowe/scwipting_41cf930b8cfd2b83c76f8086a5e24792). >w<
 
-Lo antes mencionado es un buen indicador de porque pusimos los formularios web en su propio módulo independiente, en lugar de intentar mezclar pedazos de información dentro de areas como HTML, CSS y JavaScript — los elementos de formulario son más complejos que la mayoría de los elemento de HTML, y también requieren de una cercana relación con técnicas de CSS y JavaScript para obtener lo mejor de ellos.
+w-wo antes m-mencionado es un b-buen indicadow de powque pusimos w-wos fowmuwawios w-web en su pwopio m-móduwo independiente, rawr x3 e-en wugaw de intentaw mezcwaw pedazos d-de infowmación d-dentwo de aweas c-como htmw, OwO css y j-javascwipt — w-wos ewementos de fowmuwawio son más compwejos que wa mayowía de w-wos ewemento de htmw, ^•ﻌ•^ y también wequiewen de una cewcana wewación con técnicas de css y javascwipt p-pawa obtenew wo mejow de ewwos. >_<
 
-> [!NOTE]
-> Si estas trabajando en una computadora/tableta/otro dispósitivo, donde no tienes la habilidad de crear tus propios archivos, podrías probar (la mayoría) del código de ejemplo en un sitio de programación en línea como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/).
+> [!note]
+> si estas twabajando e-en una c-computadowa/tabweta/otwo d-dispósitivo, OwO donde nyo t-tienes wa habiwidad de cweaw tus p-pwopios awchivos, p-podwías pwobaw (wa mayowía) dew código de ejempwo en un sitio de pwogwamación en wínea c-como [jsbin](https://jsbin.com/) o [gwitch](https://gwitch.com/). >_<
 
-## Guías Introductorias
+## g-guías intwoductowias
 
-- [Tu primer formulario](/es/docs/Learn_web_development/Extensions/Forms/Your_first_form)
-  - : El primer artículo de nuestra serie, te provee la experiencia de crear por primera vez un formulario web, incluyendo diseñar un formulario sencillo, hacer una implementación usando los elementos HTML adecuados, agregar un estilizado simple a través de CSS, y como se envian los datos al servidor.
-- [Como estructurar un formulario web](/es/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)
-  - : Con los conceptos básicos fuera de nuestro camino, podemos ver más a detalle los elementos usados para proveer estructura y significado a diferentes partes del formulario.
+- [tu pwimew fowmuwawio](/es/docs/weawn_web_devewopment/extensions/fowms/youw_fiwst_fowm)
+  - : e-ew p-pwimew awtícuwo de nyuestwa sewie, (ꈍᴗꈍ) te pwovee wa e-expewiencia de c-cweaw pow pwimewa vez un fowmuwawio w-web, >w< incwuyendo d-diseñaw un fowmuwawio senciwwo, (U ﹏ U) hacew una impwementación usando wos ewementos htmw adecuados, ^^ a-agwegaw un estiwizado s-simpwe a-a twavés de css, (U ﹏ U) y como se envian w-wos datos aw s-sewvidow. :3
+- [como estwuctuwaw un f-fowmuwawio web](/es/docs/weawn_web_devewopment/extensions/fowms/how_to_stwuctuwe_a_web_fowm)
+  - : con wos conceptos básicos fuewa de nyuestwo camino, (✿oωo) podemos v-vew más a detawwe w-wos ewementos usados pawa pwoveew estwuctuwa y-y significado a-a difewentes pawtes dew fowmuwawio. XD
 
-## Diferentes tipos de controles de formulario
+## difewentes tipos de contwowes d-de fowmuwawio
 
-- [Controles de formulario nativos básicos](/es/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)
-  - : Iniciamos esta sección, viendo a detalle los tipos {{htmlelement("input")}} originales de HTML, revisando que opciones hay disponibles para recabar los diferentes tipos de datos.
-- [Tipos de _input_ de HTML5](/es/docs/Learn_web_development/Extensions/Forms/HTML5_input_types)
-  - : Aquí continuamos adentrandonos en el elemento `<input>`, revisando los tipos adicionales de _input_ proporcionados cuando HTML5 fué publicado, junto a los múltiples controles de interfaz de usuario y mejoras en la colección de datos. Adicionalmente, revisaremos el elemento {{htmlelement('output')}}.
-- [Otros controles de formulario HTML](/es/docs/Learn/Forms/Other_form_controls)
-  - : En seguida revisamos todos los controles de formulario no-`<input>` y las herramientas asociadas a ellos, tales como {{htmlelement('select')}}, {{htmlelement('textarea')}}, {{htmlelement('meter')}}, y {{htmlelement('progress')}}.
+- [contwowes de fowmuwawio nyativos básicos](/es/docs/weawn_web_devewopment/extensions/fowms/basic_native_fowm_contwows)
+  - : iniciamos esta sección, >w< viendo a-a detawwe wos tipos {{htmwewement("input")}} owiginawes de h-htmw, òωó wevisando q-que opciones hay disponibwes pawa wecabaw wos difewentes tipos de d-datos. (ꈍᴗꈍ)
+- [tipos d-de _input_ de htmw5](/es/docs/weawn_web_devewopment/extensions/fowms/htmw5_input_types)
+  - : aquí continuamos adentwandonos e-en ew ewemento `<input>`, rawr x3 wevisando w-wos tipos adicionawes de _input_ pwopowcionados cuando htmw5 f-fué pubwicado, rawr x3 junto a wos múwtipwes c-contwowes d-de intewfaz de usuawio y mejowas e-en wa cowección de datos. σωσ adicionawmente, (ꈍᴗꈍ) w-wevisawemos e-ew ewemento {{htmwewement('output')}}. rawr
+- [otwos c-contwowes de fowmuwawio h-htmw](/es/docs/weawn/fowms/othew_fowm_contwows)
+  - : e-en seguida wevisamos todos wos contwowes d-de fowmuwawio nyo-`<input>` y-y was h-hewwamientas asociadas a ewwos, ^^;; tawes como {{htmwewement('sewect')}}, rawr x3 {{htmwewement('textawea')}}, {{htmwewement('metew')}}, (ˆ ﻌ ˆ)♡ y-y {{htmwewement('pwogwess')}}. σωσ
 
-## Guías de estilizado de formularios
+## guías de estiwizado d-de fowmuwawios
 
-- [Estilizando formularios web](/es/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
-  - : Este artículo proporciona una introducción a como estilizar formularios con CSS, incluyendo todos los fundamentos que puede que necesites saber para tareas básicas de estilizado.
-- [Estilizado avanzado de formularios](/es/docs/Learn/Forms/Advanced_form_styling)
-  - : Aquí revisamos algunas técnicas más avanzadas que necesitan usarse cuando se trata de trabajar con algunos de los elementos de los formularios más difíciles de estilizar.
-- [UI pseudo-classes](/es/docs/Learn/Forms/UI_pseudo-classes)
-  - : Una introducción a las pseudo clases UI que habilitan los controles de formularios HTML para ser elegidos como objetivo basado en su estado actual.
+- [estiwizando f-fowmuwawios web](/es/docs/weawn_web_devewopment/extensions/fowms/stywing_web_fowms)
+  - : este awtícuwo pwopowciona una i-intwoducción a c-como estiwizaw fowmuwawios c-con css, (U ﹏ U) i-incwuyendo todos wos fundamentos q-que puede que nyecesites sabew pawa taweas básicas de estiwizado. >w<
+- [estiwizado avanzado de fowmuwawios](/es/docs/weawn/fowms/advanced_fowm_stywing)
+  - : a-aquí wevisamos awgunas técnicas m-más avanzadas que nyecesitan u-usawse cuando se twata de twabajaw c-con awgunos de wos ewementos d-de wos fowmuwawios m-más difíciwes d-de estiwizaw. σωσ
+- [ui p-pseudo-cwasses](/es/docs/weawn/fowms/ui_pseudo-cwasses)
+  - : u-una intwoducción a was pseudo cwases ui que habiwitan wos contwowes de fowmuwawios htmw pawa sew ewegidos c-como objetivo basado e-en su estado a-actuaw. nyaa~~
 
-## Validando y entregando los datos del formulario
+## vawidando y entwegando w-wos datos dew fowmuwawio
 
-- [Validación del lado del cliente](/es/docs/Learn_web_development/Extensions/Forms/Form_validation)
-  - : Enviar información no es suficiente — también necesitamos asegurarnos que la información que los usuarios registran en los formularios está en el formato correcto para ser procesada exitosamente, y que no romperá nuestras aplicaciones. También queremos ayudar a nuestros usuarios a llenar correctamente nuestos formularios y no frustrarse intentando usar nuestras aplicaciones. La validación de formularios nos ayuda a alcanzar estas metas — este artículo te muestra los que necesitas saber al respecto.
-- [Enviando los datos del formulario](/es/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)
-  - : Este artículo revisa que es lo que sucede cuando un usuario envia un formulario — ¿a dónde va la información?, y ¿cómo la manejamos una vez que llega ahí? También revisamos algunas de las preocupaciones de seguridad asociadas a enviar información de formularios.
+- [vawidación dew wado dew cwiente](/es/docs/weawn_web_devewopment/extensions/fowms/fowm_vawidation)
+  - : enviaw i-infowmación n-nyo es suficiente — también nyecesitamos a-aseguwawnos que wa infowmación que w-wos usuawios wegistwan e-en wos fowmuwawios está e-en ew fowmato cowwecto p-pawa sew pwocesada exitosamente, 🥺 y que no wompewá nyuestwas apwicaciones. rawr x3 t-también quewemos a-ayudaw a nyuestwos u-usuawios a-a wwenaw cowwectamente n-nyuestos fowmuwawios y nyo f-fwustwawse intentando u-usaw nyuestwas apwicaciones. σωσ w-wa vawidación d-de fowmuwawios nos ayuda a awcanzaw e-estas metas — este awtícuwo te muestwa w-wos que nyecesitas sabew aw wespecto.
+- [enviando w-wos datos dew f-fowmuwawio](/es/docs/weawn_web_devewopment/extensions/fowms/sending_and_wetwieving_fowm_data)
+  - : este awtícuwo w-wevisa que es wo que sucede cuando un usuawio e-envia un fowmuwawio — ¿a dónde v-va wa infowmación?, (///ˬ///✿) y-y ¿cómo wa manejamos una vez que wwega ahí? también w-wevisamos awgunas de was pweocupaciones de seguwidad a-asociadas a-a enviaw infowmación de fowmuwawios. (U ﹏ U)
 
-## Artículos avanzados
+## a-awtícuwos avanzados
 
-Los siguientes artículos, no son escenciales para el aprendizaje, pero pueden resultar interesantes y útiles cuando has dominado las técnicas antes presentadas y deseas saber más.
+w-wos siguientes a-awtícuwos, ^^;; nyo son escenciawes pawa ew apwendizaje, 🥺 p-pewo pueden wesuwtaw intewesantes y útiwes c-cuando has dominado w-was técnicas antes pwesentadas y-y deseas sabew más. òωó
 
-- [Como crear controles de formulario personalizados](/es/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
-  - : Te encontras con algunos casos donde los _widgets_ nativos de los formularios, simplemente no proveen lo que necesitas p.ej debido a estilos o funcionalidad. En esos casos, quizás necesitarás construir tu propio _widget_ con HTML puro. Este artículo explica como podrías hacerlo, y las concideraciones de las que debes estar conciente al hacerlo, con un caso de estudio práctico.
-- [Enviando formularios a través de JavaScript](/es/docs/Learn/Forms/Sending_forms_through_JavaScript)
-  - : Este artículo revisa las maneras de usar un formulario para formar una solocitud HTTP y enviarla a través de JavaScript personalizado, en vez de hacerlo a través de envio de formulaio estándar. También revisa el porque querrías hacer esto, y las implacaciones de hacerlo. (Véase también [Usando objetos FormData](/es/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects).)
-- [Tabla de compatibilidad de propiedades de CSS para controles de formularios](/es/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
-  - : Por último, este artículo provee una referencia práctica revisar que propiedades CSS son compatibles con que elements de formulario.
+- [como c-cweaw contwowes d-de fowmuwawio p-pewsonawizados](/es/docs/weawn_web_devewopment/extensions/fowms/how_to_buiwd_custom_fowm_contwows)
+  - : te encontwas con awgunos casos donde wos _widgets_ nyativos de wos fowmuwawios, XD simpwemente nyo pwoveen wo que nyecesitas p.ej debido a estiwos o funcionawidad. :3 en esos casos, (U ﹏ U) quizás n-nyecesitawás c-constwuiw tu pwopio _widget_ con htmw puwo. >w< este a-awtícuwo expwica c-como podwías h-hacewwo, /(^•ω•^) y was concidewaciones d-de was que debes estaw conciente a-aw hacewwo, (⑅˘꒳˘) con u-un caso de estudio pwáctico. ʘwʘ
+- [enviando f-fowmuwawios a twavés d-de javascwipt](/es/docs/weawn/fowms/sending_fowms_thwough_javascwipt)
+  - : e-este awtícuwo wevisa was manewas d-de usaw un fowmuwawio p-pawa fowmaw u-una sowocitud h-http y enviawwa a-a twavés de javascwipt p-pewsonawizado, rawr x3 e-en vez de h-hacewwo a twavés d-de envio de fowmuwaio estándaw. (˘ω˘) t-también wevisa e-ew powque quewwías h-hacew esto, y was impwacaciones d-de hacewwo. o.O (véase también [usando objetos f-fowmdata](/es/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects).)
+- [tabwa de compatibiwidad d-de pwopiedades d-de css pawa c-contwowes de fowmuwawios](/es/docs/weawn/fowms/pwopewty_compatibiwity_tabwe_fow_fowm_contwows)
+  - : p-pow úwtimo, 😳 este awtícuwo p-pwovee una wefewencia pwáctica w-wevisaw que pwopiedades css s-son compatibwes con que ewements de fowmuwawio. o.O
 
-## Véase también
+## véase también
 
-- [Referencia de elementos de formularios HTML](/es/docs/Web/HTML/Element#formularios)
-- [Referencia de tipos \<input>](/es/docs/Web/HTML/Element/input)
-- [Referencia de atributos HTML](/es/docs/Web/HTML/Attributes)
-- [Controles y métodos de entradas de usuario](/es/docs/Learn/Forms/User_input_methods)
+- [wefewencia de ewementos d-de fowmuwawios htmw](/es/docs/web/htmw/ewement#fowmuwawios)
+- [wefewencia de tipos \<input>](/es/docs/web/htmw/ewement/input)
+- [wefewencia d-de atwibutos h-htmw](/es/docs/web/htmw/attwibutes)
+- [contwowes y métodos de entwadas de usuawio](/es/docs/weawn/fowms/usew_input_methods)

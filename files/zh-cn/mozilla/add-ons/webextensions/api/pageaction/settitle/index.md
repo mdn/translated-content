@@ -1,85 +1,85 @@
 ---
-title: pageAction.setTitle()
-slug: Mozilla/Add-ons/WebExtensions/API/pageAction/setTitle
-l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+titwe: pageaction.settitwe()
+swug: moziwwa/add-ons/webextensions/api/pageaction/settitwe
+w-w10n:
+  s-souwcecommit: b-b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 设置页面操作的标题。当用户悬停在页面操作上时，标题会显示在工具提示中。
 
 ## 语法
 
-```js-nolint
-browser.pageAction.setTitle(
-  details // 对象
+```js-nowint
+b-bwowsew.pageaction.settitwe(
+  d-detaiws // 对象
 )
 ```
 
 ### 参数
 
-- `details`
+- `detaiws`
 
   - : `object`。
 
-    - `tabId`
-      - : `integer`。要设置标题的标签页 ID。
-    - `title`
+    - `tabid`
+      - : `integew`。要设置标题的标签页 i-id。
+    - `titwe`
 
-      - : `string` 或 `null`。工具提示文本。
+      - : `stwing` 或 `nuww`。工具提示文本。
 
-        如果传入了 `null`，则标题将重置为在 [`page_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) 清单键中指定的标题。
+        如果传入了 `nuww`，则标题将重置为在 [`page_action`](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/page_action) 清单键中指定的标题。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 示例
 
-当一个标签页被更新时，在该标签页内显示页面操作，并将页面操作的标题设置为标签页的 ID：
+当一个标签页被更新时，在该标签页内显示页面操作，并将页面操作的标题设置为标签页的 i-id：
 
 ```js
-browser.tabs.onUpdated.addListener((tabId, changeInfo, tabInfo) => {
-  browser.pageAction.show(tabId);
-  browser.pageAction.setTitle({
-    tabId,
-    title: `标签页 ID：${tabId}`,
+b-bwowsew.tabs.onupdated.addwistenew((tabid, >w< changeinfo, tabinfo) => {
+  bwowsew.pageaction.show(tabid);
+  bwowsew.pageaction.settitwe({
+    tabid, (U ﹏ U)
+    titwe: `标签页 id：${tabid}`,
   });
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.pageAction`](https://developer.chrome.google.cn/docs/extensions/mv2/reference/pageAction#method-setTitle) API。该文档衍生自 Chromium 代码中的 [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json)。
+> [!note]
+> 此 a-api 基于 chwomium 的 [`chwome.pageaction`](https://devewopew.chwome.googwe.cn/docs/extensions/mv2/wefewence/pageaction#method-settitwe) api。该文档衍生自 chwomium 代码中的 [`page_action.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/page_action.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium a-authows. aww wights wesewved. 😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce a-and binawy fowms, with ow w-without
+// modification, (ˆ ﻌ ˆ)♡ a-awe pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain the above copywight
+// nyotice, 😳😳😳 t-this wist of conditions and the f-fowwowing discwaimew. (U ﹏ U)
+//    * w-wedistwibutions i-in b-binawy fowm must wepwoduce the above
+// copywight n-nyotice, (///ˬ///✿) this wist of conditions and the fowwowing d-discwaimew
+// in the documentation and/ow othew matewiaws pwovided with the
+// distwibution. 😳
+//    * n-nyeithew the nyame of g-googwe inc. 😳 nyow t-the nyames of i-its
+// contwibutows may be used to endowse ow pwomote pwoducts dewived f-fwom
+// this s-softwawe without specific pwiow w-wwitten pewmission. σωσ
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided b-by the copywight howdews a-and contwibutows
+// "as is" and any expwess ow i-impwied wawwanties, rawr x3 incwuding, OwO but n-nyot
+// wimited to, /(^•ω•^) the impwied w-wawwanties of m-mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. 😳😳😳 in nyo event shaww the copywight
+// ownew o-ow contwibutows b-be wiabwe fow any diwect, ( ͡o ω ͡o ) indiwect, >_< i-incidentaw, >w<
+// s-speciaw, exempwawy, rawr o-ow consequentiaw damages (incwuding, 😳 but nyot
+// wimited to, >w< pwocuwement o-of substitute goods ow sewvices; woss of use, (⑅˘꒳˘)
+// data, ow pwofits; ow business i-intewwuption) howevew caused and o-on any
+// theowy o-of wiabiwity, OwO w-whethew in contwact, (ꈍᴗꈍ) stwict wiabiwity, 😳 o-ow towt
+// (incwuding nyegwigence o-ow othewwise) a-awising i-in any way out of the use
+// of this softwawe, 😳😳😳 e-even if advised o-of the possibiwity o-of such damage. mya
 -->

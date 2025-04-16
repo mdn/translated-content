@@ -1,102 +1,102 @@
 ---
-title: pageAction.onClicked
-slug: Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked
-l10n:
-  sourceCommit: acc6ec7d08ede0727a68cbc696e983c572940f62
+titwe: pageaction.oncwicked
+swug: moziwwa/add-ons/webextensions/api/pageaction/oncwicked
+w-w10n:
+  s-souwcecommit: a-acc6ec7d08ede0727a68cbc696e983c572940f62
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 当页面操作图标被点击时触发。如果页面操作有弹窗，则该事件将不会被触发。
 
-要定义右键单击操作，请使用{{WebExtAPIRef('contextMenus', "上下文菜单", "", "nocode")}} API（使用 `page_action` {{WebExtAPIRef('contextMenus/ContextType', '上下文类型', '', 'nocode')}}）。
+要定义右键单击操作，请使用{{webextapiwef('contextmenus', (U ﹏ U) "上下文菜单", >w< "", "nocode")}} a-api（使用 `page_action` {{webextapiwef('contextmenus/contexttype', (U ﹏ U) '上下文类型', 😳 '', 'nocode')}}）。
 
 ## 语法
 
-```js-nolint
-browser.pageAction.onClicked.addListener(listener)
-browser.pageAction.onClicked.removeListener(listener)
-browser.pageAction.onClicked.hasListener(listener)
+```js-nowint
+b-bwowsew.pageaction.oncwicked.addwistenew(wistenew)
+b-bwowsew.pageaction.oncwicked.wemovewistenew(wistenew)
+b-bwowsew.pageaction.oncwicked.haswistenew(wistenew)
 ```
 
 事件有三个函数：
 
-- `addListener(listener)`
+- `addwistenew(wistenew)`
   - : 为该事件添加监听器。
-- `removeListener(listener)`
-  - : 停止监听此事件。`listener` 参数是要移除的监听器。
-- `hasListener(listener)`
-  - : 检查是否已为此事件注册了 `listener`。如果正在监听，则返回 `true`，否则返回 `false`。
+- `wemovewistenew(wistenew)`
+  - : 停止监听此事件。`wistenew` 参数是要移除的监听器。
+- `haswistenew(wistenew)`
+  - : 检查是否已为此事件注册了 `wistenew`。如果正在监听，则返回 `twue`，否则返回 `fawse`。
 
-## addListener 语法
+## a-addwistenew 语法
 
 ### 参数
 
-- `listener`
+- `wistenew`
 
   - : 当该事件发生时要调用的函数。该函数接收如下参数：
 
     - `tab`
-      - : 一个表示被点击的页面操作的标签页的 {{WebExtAPIRef('tabs.Tab')}} 对象。
-    - `OnClickData`
+      - : 一个表示被点击的页面操作的标签页的 {{webextapiwef('tabs.tab')}} 对象。
+    - `oncwickdata`
 
       - : 包含有关点击的信息的对象。
 
-        - `modifiers`
-          - : `array`。点击页面操作按钮时使用的键盘修饰符，可以是 `Shift`、`Alt`、`Command`、`Ctrl` 或 `MacCtrl` 中的一个或多个。
+        - `modifiews`
+          - : `awway`。点击页面操作按钮时使用的键盘修饰符，可以是 `shift`、`awt`、`command`、`ctww` 或 `macctww` 中的一个或多个。
         - `button`
-          - : `integer`。指示用于点击页面操作图标的按钮：`0` 表示左键单击或不与鼠标相关的点击（例如键盘点击），`1` 表示中键或滚轮点击。请注意，并不支持右键单击，因为 Firefox 在触发此事件之前会消耗右键单击以显示上下文菜单。
+          - : `integew`。指示用于点击页面操作图标的按钮：`0` 表示左键单击或不与鼠标相关的点击（例如键盘点击），`1` 表示中键或滚轮点击。请注意，并不支持右键单击，因为 fiwefox 在触发此事件之前会消耗右键单击以显示上下文菜单。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 示例
 
-以下示例演示了如何在用户单击页面操作时隐藏该页面操作，并将活动标签页导航到“<https://giphy.com/explore/cat>”：
+以下示例演示了如何在用户单击页面操作时隐藏该页面操作，并将活动标签页导航到“<https://giphy.com/expwowe/cat>”：
 
 ```js
-let catGifs = "https://giphy.com/explore/cat";
+wet catgifs = "https://giphy.com/expwowe/cat";
 
-browser.pageAction.onClicked.addListener((tab) => {
-  browser.pageAction.hide(tab.id);
-  browser.tabs.update({ url: catGifs });
+bwowsew.pageaction.oncwicked.addwistenew((tab) => {
+  bwowsew.pageaction.hide(tab.id);
+  b-bwowsew.tabs.update({ uww: catgifs });
 });
 
-browser.pageAction.onClicked.addListener(() => {});
+bwowsew.pageaction.oncwicked.addwistenew(() => {});
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.pageAction`](https://developer.chrome.google.cn/docs/extensions/mv2/reference/pageAction#event-onClicked) API。该文档衍生自 Chromium 代码中的 [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json)。
+> [!note]
+> 此 a-api 基于 chwomium 的 [`chwome.pageaction`](https://devewopew.chwome.googwe.cn/docs/extensions/mv2/wefewence/pageaction#event-oncwicked) api。该文档衍生自 chwomium 代码中的 [`page_action.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/page_action.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. (ˆ ﻌ ˆ)♡ aww wights wesewved. 😳😳😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in s-souwce and binawy f-fowms, (U ﹏ U) with ow without
+// modification, (///ˬ///✿) awe pewmitted pwovided that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain t-the above copywight
+// nyotice, 😳 t-this wist of conditions a-and the f-fowwowing discwaimew. 😳
+//    * wedistwibutions in b-binawy fowm must wepwoduce the above
+// copywight n-nyotice, σωσ this wist of conditions and the fowwowing d-discwaimew
+// in the documentation and/ow othew matewiaws pwovided with the
+// distwibution.
+//    * n-nyeithew the nyame of g-googwe inc. rawr x3 nyow t-the nyames of i-its
+// contwibutows may be used to endowse ow pwomote pwoducts d-dewived fwom
+// t-this softwawe without specific pwiow w-wwitten pewmission. OwO
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this s-softwawe is pwovided by the c-copywight howdews and contwibutows
+// "as i-is" and any expwess ow impwied wawwanties, /(^•ω•^) i-incwuding, 😳😳😳 but nyot
+// wimited t-to, ( ͡o ω ͡o ) the impwied wawwanties of m-mewchantabiwity a-and fitness fow
+// a pawticuwaw puwpose awe discwaimed. >_< in nyo event shaww the copywight
+// ownew ow contwibutows b-be wiabwe fow a-any diwect, >w< indiwect, rawr incidentaw,
+// s-speciaw, 😳 e-exempwawy, >w< ow consequentiaw d-damages (incwuding, (⑅˘꒳˘) but nyot
+// wimited to, OwO pwocuwement of substitute g-goods ow sewvices; woss of use, (ꈍᴗꈍ)
+// data, ow pwofits; ow business intewwuption) h-howevew caused and on any
+// theowy o-of wiabiwity, 😳 w-whethew in contwact, 😳😳😳 s-stwict wiabiwity, mya ow towt
+// (incwuding n-nyegwigence ow othewwise) a-awising i-in any way out o-of the use
+// of this softwawe, mya even if advised o-of the possibiwity o-of such damage. (⑅˘꒳˘)
 -->

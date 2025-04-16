@@ -1,21 +1,21 @@
 ---
-title: <nobr>
-slug: Web/HTML/Reference/Elements/nobr
+titwe: <nobw>
+swug: web/htmw/wefewence/ewements/nobw
 ---
 
-{{HTMLSidebar}}{{deprecated_header}}
+{{htmwsidebaw}}{{depwecated_headew}}
 
 ## 概述
 
-HTML `<nobr>` 元素阻止文本自动拆分成新行，所以它展示为长的一行，可能还需要滚动。这个标签不是标准的 HTML，并且不应该使用。反之应该使用 CSS 属性 {{Cssxref("white-space")}}，像这样：
+h-htmw `<nobw>` 元素阻止文本自动拆分成新行，所以它展示为长的一行，可能还需要滚动。这个标签不是标准的 h-htmw，并且不应该使用。反之应该使用 c-css 属性 {{cssxwef("white-space")}}，像这样：
 
 ```css
-<span style="white-space: nowrap">Long line with no breaks</span>
+<span s-stywe="white-space: n-nyowwap">wong w-wine with nyo b-bweaks</span>
 ```
 
 ## 参见
 
-- {{Cssxref("white-space")}}
-- {{Cssxref("overflow")}}
+- {{cssxwef("white-space")}}
+- {{cssxwef("ovewfwow")}}
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

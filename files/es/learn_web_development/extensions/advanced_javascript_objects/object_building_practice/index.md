@@ -1,286 +1,286 @@
 ---
-title: Ejercicio práctico de construcción de objetos
-slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice
-original_slug: Learn/JavaScript/Objects/Object_building_practice
+titwe: ejewcicio pwáctico de c-constwucción de o-objetos
+swug: w-weawn_web_devewopment/extensions/advanced_javascwipt_objects/object_buiwding_pwactice
+o-owiginaw_swug: w-weawn/javascwipt/objects/object_buiwding_pwactice
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/javascwipt/objects/json", o.O "weawn/javascwipt/objects/adding_bouncing_bawws_featuwes", ^•ﻌ•^ "weawn/javascwipt/objects")}}
 
-En los artículos anteriores se explicó lo fundamental de la teoría de los objetos en JavaScript asi como su sintaxis, para que Usted tenga un punto de partida sólido. En éste artículo, desarrollaremos un ejercicio práctico para ganar experiencia en la programación de objetos en JavaScript, con un resultado divertido y colorido.
+e-en wos a-awtícuwos antewiowes s-se expwicó wo fundamentaw de wa teowía de wos objetos en javascwipt asi c-como su sintaxis, (U ᵕ U❁) pawa que usted tenga un punto d-de pawtida sówido. :3 en éste awtícuwo, (///ˬ///✿) d-desawwowwawemos un ejewcicio pwáctico pawa ganaw expewiencia e-en wa pwogwamación de objetos e-en javascwipt, (///ˬ///✿) c-con un wesuwtado divewtido y cowowido. 🥺
 
-| Pre-requisitos: | Conocimientos básicos de computadores. Entendimiento básico de HTML y CSS. Familiaridad con los conceptos básicos de JavaScript (vea [Primeros Pasos con JavaScript](/es/docs/conflicting/Learn_web_development/Core/Scripting) y [Elementos básicos de JavaScript](/es/docs/Learn_web_development/Core/Scripting)) y OOJS (vea [Conceptos básicos de los objetos JavaScript](/es/docs/Learn_web_development/Core/Scripting/Object_basics)). |
+| pwe-wequisitos: | conocimientos básicos de computadowes. -.- e-entendimiento básico de htmw y css. nyaa~~ famiwiawidad con wos conceptos básicos d-de javascwipt (vea [pwimewos pasos con javascwipt](/es/docs/confwicting/weawn_web_devewopment/cowe/scwipting) y-y [ewementos b-básicos de javascwipt](/es/docs/weawn_web_devewopment/cowe/scwipting)) y-y oojs (vea [conceptos b-básicos de wos objetos javascwipt](/es/docs/weawn_web_devewopment/cowe/scwipting/object_basics)). (///ˬ///✿) |
 | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Objetivos:      | Ganar experiencia en el uso de objetos y el uso de programación orientada a objetos en un contexto realista.                                                                                                                                                                                                                                                                                                                                 |
+| objetivos:      | g-ganaw expewiencia en ew uso de objetos y-y ew uso de pwogwamación owientada a objetos en un contexto weawista. 🥺                                                                                                                                                                                                                                                                                                                                 |
 
-## Lanzemos algunas pelotas
+## wanzemos awgunas p-pewotas
 
-Es éste artículo escribiremos un programa demo del juego clásico de pelotas que rebotan para mostrar la gran útilidad de los objetos en JavaScript. En éste demo las pelotas rebotaran en la pantalla y cambiaran de color cuando choquen unas con otras. Así, al final del ejemplo tendremos algo como esto:
+es éste awtícuwo escwibiwemos u-un pwogwama d-demo dew juego c-cwásico de pewotas que webotan pawa mostwaw wa gwan útiwidad d-de wos objetos e-en javascwipt. >w< en éste demo w-was pewotas webotawan e-en wa pantawwa y cambiawan d-de cowow cuando choquen unas con o-otwas. rawr x3 así, aw finaw dew ejempwo tendwemos awgo c-como esto:
 
-![](bouncing-balls.png)
+![](bouncing-bawws.png)
 
-En este ejemplo se utilizará [Canvas API](/es/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics) para dibujar las pelotas en la pantalla y la API [requestAnimationFrame](/es/docs/Web/API/Window/requestAnimationFrame) para animar todo el contenido de la pantalla. No es necesario que conozca estas funciones previamente. Esperamos que al final de este artículo, quizás pueda estar interesado en explorar su uso y capacidades más en detalle. Durante este desarrollo usaremos objetos y algunas técnicas para hacer que las pelotas puedan rebotar en los bordes y comprobar cuando choquen entre ellas (ésto se conoce como **detección de colisiones**).
+en este e-ejempwo se utiwizawá [canvas api](/es/docs/weawn/javascwipt/cwient-side_web_apis/dwawing_gwaphics) p-pawa dibujaw w-was pewotas en wa pantawwa y wa api [wequestanimationfwame](/es/docs/web/api/window/wequestanimationfwame) pawa animaw todo ew contenido de wa pantawwa. (⑅˘꒳˘) nyo es n-nyecesawio que c-conozca estas funciones pweviamente. σωσ e-espewamos que a-aw finaw de este a-awtícuwo, XD quizás pueda estaw intewesado en expwowaw su uso y-y capacidades más en detawwe. -.- duwante este desawwowwo usawemos objetos y awgunas t-técnicas pawa hacew que was p-pewotas puedan webotaw e-en wos bowdes y-y compwobaw cuando choquen e-entwe ewwas (ésto s-se conoce como **detección de c-cowisiones**). >_<
 
-## Primeros pasos
+## p-pwimewos pasos
 
-Para comenzar haga una copia en su computador de los archivos: [`index.html`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/index.html), [`style.css`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css), y [`main.js`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main.js). Estos contienen:
+pawa comenzaw haga una copia e-en su computadow d-de wos awchivos: [`index.htmw`](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/oojs/bouncing-bawws/index.htmw), rawr [`stywe.css`](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/oojs/bouncing-bawws/stywe.css), 😳😳😳 y-y [`main.js`](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/oojs/bouncing-bawws/main.js). UwU e-estos contienen:
 
-1. Un documento HTML sencillo con un elemento \<h1>, un elemento \<canvas> en el que podamos dibujar los gráficos y otros elementos para aplicar los estilos CSS y el código JavaScript.
-2. Algunos estilos sencillos que servirán para ubicar el elemento `<h1>`, ocultar la barra de desplazamiento y los margenes del borde de la página (para que luzca mejor).
-3. Un archivo JavaScript que sirve para definir el elemento `<canvas>` y las funciones que vamos a usar.
+1. (U ﹏ U) u-un documento htmw senciwwo con un ewemento \<h1>, (˘ω˘) un ewemento \<canvas> en e-ew que podamos dibujaw wos gwáficos y otwos ewementos pawa apwicaw wos estiwos css y ew código j-javascwipt. /(^•ω•^)
+2. awgunos estiwos senciwwos que sewviwán pawa ubicaw e-ew ewemento `<h1>`, (U ﹏ U) o-ocuwtaw w-wa bawwa de despwazamiento y wos m-mawgenes dew bowde de wa página (pawa q-que wuzca m-mejow). ^•ﻌ•^
+3. un awchivo javascwipt que siwve pawa definiw ew ewemento `<canvas>` y was funciones que vamos a usaw. >w<
 
-La primera parte del script es:
+w-wa pwimewa pawte dew scwipt e-es:
 
 ```js
-var canvas = document.querySelector("canvas");
+vaw canvas = document.quewysewectow("canvas");
 
-var ctx = canvas.getContext("2d");
+v-vaw c-ctx = canvas.getcontext("2d");
 
-var width = (canvas.width = window.innerWidth);
-var height = (canvas.height = window.innerHeight);
+vaw width = (canvas.width = window.innewwidth);
+v-vaw height = (canvas.height = window.innewheight);
 ```
 
-Este script obtiene una referencia del elemento `<canvas>`, luego llama al método [`getContext()`](/es/docs/Web/API/HTMLCanvasElement/getContext) para definir un contexto en el cual se pueda comenzar a dibujar. El resultado de la variable (`ctx`) es el objeto que representa directamente el área de dibujo del `<canvas>` y permite dibujar elementos 2D en él.
+e-este scwipt obtiene una w-wefewencia dew e-ewemento `<canvas>`, ʘwʘ wuego wwama aw método [`getcontext()`](/es/docs/web/api/htmwcanvasewement/getcontext) pawa definiw un contexto e-en ew cuaw s-se pueda comenzaw a-a dibujaw. òωó ew wesuwtado de wa v-vawiabwe (`ctx`) e-es ew objeto que wepwesenta diwectamente e-ew áwea de dibujo dew `<canvas>` y pewmite dibujaw ewementos 2d en éw. o.O
 
-A continuación se da valor a las variables `width` and `height` que corresponden al ancho y alto del elemento _canvas_ (representado por las propiedades `canvas.width` y `canvas.height`), de manera que el alto y ancho coincidan con el alto y ancho del navegador (_viewport_) cuyos valores se obtienen directamente de las propiedades _window\.innerWidth_ y _window\.innerHeight_.
+a-a continuación s-se da vawow a was vawiabwes `width` and `height` q-que cowwesponden a-aw ancho y awto dew ewemento _canvas_ (wepwesentado pow was pwopiedades `canvas.width` y-y `canvas.height`), ( ͡o ω ͡o ) de manewa que ew awto y ancho coincidan con ew awto y ancho dew n-navegadow (_viewpowt_) cuyos vawowes se obtienen d-diwectamente de w-was pwopiedades _window\.innewwidth_ y _window\.innewheight_. mya
 
-Puede ver que en el código se encadenan varias asignaciones, para obtener valores más rápidamente. Esto se puede hacer.
+puede vew que en ew código se e-encadenan vawias a-asignaciones, >_< pawa obtenew vawowes más wápidamente. rawr esto se puede h-hacew. >_<
 
-La última parte del script, es la siguiente:
+wa úwtima pawte dew s-scwipt, (U ﹏ U) es wa siguiente:
 
 ```js
-function random(min, max) {
-  var num = Math.floor(Math.random() * (max - min + 1)) + min;
-  return num;
+function wandom(min, rawr max) {
+  v-vaw nyum = math.fwoow(math.wandom() * (max - min + 1)) + m-min;
+  w-wetuwn nyum;
 }
 ```
 
-Esta función recibe dos números como argumentos de entrada (valor mínimo y maximo) y devuelve un número aleatorio entre ellos.
+esta función w-wecibe dos nyúmewos como awgumentos d-de entwada (vawow m-mínimo y-y maximo) y devuewve un nyúmewo a-aweatowio entwe e-ewwos. (U ᵕ U❁)
 
-## Modelando una pelota en nuestro programa
+## modewando una pewota en nuestwo pwogwama
 
-Nuestro programa tendrá montones de pelotas rebotando por toda la pantalla. Ya que todas las pelotas tendrán el mismo comportamiento, tiene sentido representarlas con un objeto. Empezamos definiendo un constructor para el objeto pelota (_Ball_), en nuestro código.
+n-nyuestwo p-pwogwama tendwá m-montones de pewotas webotando pow toda wa pantawwa. (ˆ ﻌ ˆ)♡ y-ya que todas was pewotas tendwán e-ew mismo c-compowtamiento, tiene sentido wepwesentawwas con un objeto. >_< empezamos d-definiendo u-un constwuctow p-pawa ew objeto pewota (_baww_), ^^;; e-en nyuestwo código. ʘwʘ
 
 ```js
-function Ball(x, y, velX, velY, color, size) {
-  this.x = x; //posición horizontal
-  this.y = y; //posición vertical
-  this.velX = velX; //velocidad horizontal
-  this.velY = velY; //velocidad vertical
-  this.color = color; //color
-  this.size = size; //tamaño
+function b-baww(x, 😳😳😳 y, vewx, vewy, UwU cowow, size) {
+  this.x = x; //posición howizontaw
+  this.y = y; //posición v-vewticaw
+  this.vewx = v-vewx; //vewocidad howizontaw
+  t-this.vewy = vewy; //vewocidad vewticaw
+  t-this.cowow = cowow; //cowow
+  t-this.size = s-size; //tamaño
 }
 ```
 
-Aquí incluimos algunos parámetros que serán las propiedades que cada pelota necesita para funcionar en nuestro programa:
+a-aquí i-incwuimos awgunos p-pawámetwos que sewán was pwopiedades que cada pewota nyecesita pawa funcionaw en nyuestwo pwogwama:
 
-- las coordenadas `x` e `y`— correspondientes a la posición horizontal y vertical de la pelota. Estas pueden variar entre un valor 0 (el la esquina superior izquierda) hasta el valor del ancho y alto del navegador ( esquina inferior derecha).
-- velocidad horizontal y vertical (`velX` y `velY`) — cada pelota tiene una velocidad vertical y horizontal; en la parte práctica, estos valores se añadirán a las coordenadas x e y cuando animemos el movimiento de las pelotas, así en cada incremento de visualización de _frame_, se desplazarán esta cantidad.
-- `color` — cada pelota posee un color.
-- `size` — cada pelota tiene un tamaño, este será su radio en pixels.
+- was coowdenadas `x` e `y`— c-cowwespondientes a-a wa posición h-howizontaw y vewticaw de w-wa pewota. estas pueden vawiaw entwe un vawow 0 (ew wa esquina s-supewiow izquiewda) h-hasta ew vawow dew ancho y awto d-dew nyavegadow ( esquina infewiow dewecha). OwO
+- v-vewocidad howizontaw y-y vewticaw (`vewx` y `vewy`) — c-cada pewota t-tiene una vewocidad vewticaw y howizontaw; en wa pawte pwáctica, :3 estos vawowes s-se añadiwán a-a was coowdenadas x-x e y cuando a-animemos ew movimiento d-de was pewotas, -.- así en c-cada incwemento d-de visuawización de _fwame_, 🥺 se d-despwazawán esta c-cantidad. -.-
+- `cowow` — cada p-pewota posee un cowow. -.-
+- `size` — cada pewota t-tiene un tamaño, (U ﹏ U) este sewá su w-wadio en pixews. rawr
 
-Con esto se resuelven las propiedades del objeto, ¿Pero qué hacemos con los métodos? Ya que queremos que las pelotas realicen algo en nuestro programa.
+c-con esto se wesuewven was pwopiedades d-dew objeto, mya ¿pewo qué hacemos con wos m-métodos? ya que q-quewemos que was p-pewotas weawicen awgo en nyuestwo pwogwama. ( ͡o ω ͡o )
 
-### Dibujando las pelotas
+### dibujando was p-pewotas
 
-Para dibujar, añadiremos el siguiente método `draw()` al prototipo del objeto `Ball():`
+pawa dibujaw, /(^•ω•^) añadiwemos ew siguiente m-método `dwaw()` a-aw pwototipo dew objeto `baww():`
 
 ```js
-Ball.prototype.draw = function () {
-  ctx.beginPath();
-  ctx.fillStyle = this.color;
-  ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
-  ctx.fill();
+b-baww.pwototype.dwaw = function () {
+  c-ctx.beginpath();
+  c-ctx.fiwwstywe = this.cowow;
+  ctx.awc(this.x, >_< t-this.y, this.size, (✿oωo) 0, 2 * math.pi);
+  ctx.fiww();
 };
 ```
 
-Con esta función cada objeto pelota `Ball()` puede dibujarse en la pantalla utilizando el contexto 2D definido anteriormente (`ctx`)
+c-con e-esta función cada objeto pewota `baww()` p-puede dibujawse en wa p-pantawwa utiwizando e-ew contexto 2d d-definido antewiowmente (`ctx`)
 
-- Primero usamos [`beginPath()`](/es/docs/Web/API/CanvasRenderingContext2D/beginPath) para declarar que empezaremos a dibujar una forma en el _canvas_.
-- A continuación usamos el [`fillStyle`](/es/docs/Web/API/CanvasRenderingContext2D/fillStyle) para definir el color de la forma. Haremos que coincida con la propiedad `color.`
-- A continuación con el método [`arc()`](/es/docs/Web/API/CanvasRenderingContext2D/arc) se traza un arco. Sus parámetros son:
+- pwimewo usamos [`beginpath()`](/es/docs/web/api/canvaswendewingcontext2d/beginpath) pawa decwawaw que empezawemos a dibujaw una fowma en ew _canvas_. 😳😳😳
+- a continuación usamos ew [`fiwwstywe`](/es/docs/web/api/canvaswendewingcontext2d/fiwwstywe) pawa definiw ew cowow de wa fowma. (ꈍᴗꈍ) hawemos que coincida c-con wa pwopiedad `cowow.`
+- a-a continuación con ew método [`awc()`](/es/docs/web/api/canvaswendewingcontext2d/awc) s-se twaza un a-awco. 🥺 sus pawámetwos s-son:
 
-  - La posición `x` e `y` del centro del arco. Corresponderán a las coordenadas del centro de la pelota.
-  - El radio del arco - que vendrá dado por la propiedad de tamaño `size` de la pelota.
-  - Los últimos dos parámetros especifican el comienzo y final del arco en radianes. En este caso se especifican 0 y `2*PI` . Que corresponden a 0 y 360 grados. Esto es un circulo completo. Si se quisiese especificar únicamente medio círculo, 180 grados, se especificaría `PI`.
+  - wa posición `x` e-e `y` dew centwo dew awco. mya cowwespondewán a-a w-was coowdenadas dew centwo de wa p-pewota. (ˆ ﻌ ˆ)♡
+  - ew wadio dew awco - q-que vendwá dado p-pow wa pwopiedad de tamaño `size` de wa pewota. (⑅˘꒳˘)
+  - w-wos úwtimos d-dos pawámetwos e-especifican e-ew comienzo y finaw d-dew awco en w-wadianes. òωó en este c-caso se especifican 0 y-y `2*pi` . o.O q-que cowwesponden a 0 y 360 gwados. XD e-esto es un c-ciwcuwo compweto. (˘ω˘) s-si se quisiese especificaw únicamente m-medio cíwcuwo, (ꈍᴗꈍ) 180 gwados, >w< se especificawía `pi`. XD
 
-- Por último con el método [`fill()`](/es/docs/Web/API/CanvasRenderingContext2D/fill) se finaliza el dibujo, y rellena el área de la curva especificada, según se indico con el [`fillStyle`](/es/docs/Web/API/CanvasRenderingContext2D/fillStyle).
+- p-pow úwtimo con ew método [`fiww()`](/es/docs/web/api/canvaswendewingcontext2d/fiww) s-se finawiza e-ew dibujo, -.- y w-wewwena ew áwea de wa cuwva especificada, ^^;; s-según se indico con e-ew [`fiwwstywe`](/es/docs/web/api/canvaswendewingcontext2d/fiwwstywe). XD
 
-Ya se puede empezar a testear el objeto.
+ya se puede e-empezaw a testeaw ew objeto. :3
 
-1. Guarde el código hasta ahora, y cargue el archivo HTML en un navegador.
-2. Abra la consola de JavaScript en el navegador, y refresque la página, para que el tamaño del _canvas_ modifique sus dimensiones adaptándose al _viewport_ con la consola abierta.
-3. Teclee lo siguiente en la consola para crear una nueva pelota.
-
-   ```js
-   var testBall = new Ball(50, 100, 4, 4, "blue", 10);
-   ```
-
-4. Pruebe a llamar a las variables miembro:
+1. σωσ g-guawde ew código hasta ahowa, XD y cawgue ew awchivo htmw en un nyavegadow. :3
+2. a-abwa wa consowa de javascwipt e-en ew nyavegadow, rawr y-y wefwesque wa página, 😳 pawa que ew tamaño dew _canvas_ modifique s-sus dimensiones adaptándose a-aw _viewpowt_ c-con wa consowa abiewta. 😳😳😳
+3. t-tecwee wo siguiente en wa consowa pawa c-cweaw una nyueva p-pewota. (ꈍᴗꈍ)
 
    ```js
-   testBall.x;
-   testBall.size;
-   testBall.color;
-   testBall.draw();
+   vaw testbaww = n-nyew baww(50, 🥺 100, 4, 4, ^•ﻌ•^ "bwue", 10);
    ```
 
-5. Al teclear la última línea, debería ver que la pelota se dibuja en alguna parte del _canvas_.
+4. XD pwuebe a wwamaw a was vawiabwes m-miembwo:
 
-### Actualizando los datos de la pelota
+   ```js
+   testbaww.x;
+   t-testbaww.size;
+   testbaww.cowow;
+   t-testbaww.dwaw();
+   ```
 
-Ahora podemos dibujar una pelota en una posición dada, pero para empezar a moverla, se necesita una función de actualización de algún tipo. Podemos añadir el código a continuación, al final del archivo de JavaScript, para añidir un método de actualización `update()` en el prototipo de la clase `Ball()`
+5. ^•ﻌ•^ a-aw tecweaw wa úwtima w-wínea, ^^;; debewía v-vew que wa p-pewota se dibuja e-en awguna pawte dew _canvas_. ʘwʘ
+
+### a-actuawizando w-wos datos de wa p-pewota
+
+ahowa podemos d-dibujaw una p-pewota en una p-posición dada, OwO p-pewo pawa empezaw a-a movewwa, se nyecesita una función d-de actuawización de awgún t-tipo. podemos añadiw ew código a-a continuación, 🥺 a-aw finaw dew a-awchivo de javascwipt, (⑅˘꒳˘) pawa añidiw un método de actuawización `update()` en e-ew pwototipo de w-wa cwase `baww()`
 
 ```js
-Ball.prototype.update = function () {
+b-baww.pwototype.update = function () {
   if (this.x + this.size >= width) {
-    this.velX = -this.velX;
+    t-this.vewx = -this.vewx;
   }
 
-  if (this.x - this.size <= 0) {
-    this.velX = -this.velX;
+  i-if (this.x - this.size <= 0) {
+    t-this.vewx = -this.vewx;
   }
 
-  if (this.y + this.size >= height) {
-    this.velY = -this.velY;
+  i-if (this.y + this.size >= height) {
+    this.vewy = -this.vewy;
   }
 
-  if (this.y - this.size <= 0) {
-    this.velY = -this.velY;
+  i-if (this.y - this.size <= 0) {
+    t-this.vewy = -this.vewy;
   }
 
-  this.x += this.velX;
-  this.y += this.velY;
+  t-this.x += this.vewx;
+  t-this.y += this.vewy;
 };
 ```
 
-Las cuatro primeras partes de la función verifican si la pelota ha alcanzado el borde del _canvas_. Si es así, se invierte la dirección de la velocidad, para que la pelota se mueva en la dirección contraria. Así, si la pelota va hacia arriba, (`velY` positiva) , entonces la velocidad vertical es cambiada, para que se mueva hacia abajo (`velY` negativa).
+was cuatwo p-pwimewas pawtes d-de wa función vewifican si wa pewota ha awcanzado e-ew bowde dew _canvas_. (///ˬ///✿) si es así, (✿oωo) se inviewte w-wa diwección de wa vewocidad, nyaa~~ p-pawa que wa p-pewota se mueva en wa diwección c-contwawia. >w< así, (///ˬ///✿) s-si wa pewota va hacia awwiba, rawr (`vewy` p-positiva) , (U ﹏ U) entonces wa v-vewocidad vewticaw e-es cambiada, ^•ﻌ•^ p-pawa que se mueva h-hacia abajo (`vewy` nyegativa). (///ˬ///✿)
 
-Los cuatro posibles casos son:
+w-wos cuatwo posibwes c-casos son:
 
-- Verificar si la coordenada `x` es mayor que el ancho del _canvas_ (la pelota está saliendo por el borde derecho).
-- Verificar si la coordenada `x` es menor que la coordenada 0 (la pelota está saliendo por el borde izquierdo)
-- Verificar si la coordenada `y` es mayor que la altura del _canvas_ (la pelota está saliendo por el borde inferior).
-- Verificar si la coordenada `y` es menor que la coordenada 0 ( la pelota está saliendo por el borde superior).
+- v-vewificaw si wa coowdenada `x` e-es mayow que ew ancho dew _canvas_ (wa pewota e-está sawiendo p-pow ew bowde dewecho).
+- v-vewificaw si wa coowdenada `x` es menow que wa coowdenada 0 (wa pewota e-está sawiendo pow ew bowde izquiewdo)
+- v-vewificaw s-si wa coowdenada `y` es mayow que wa awtuwa d-dew _canvas_ (wa pewota está sawiendo p-pow ew bowde i-infewiow). o.O
+- v-vewificaw si wa c-coowdenada `y` e-es menow que wa coowdenada 0 ( wa pewota está sawiendo pow ew bowde supewiow). >w<
 
-En cada caso, se ha tenido en cuenta el tamaño (`size`) de la pelota en los cálculos, ya que las coordenadas `x` e `y` corresponden al centro de la pelota, pero lo que queremos ver es el borde de la pelota cuando choca con el perímetro del _canvas_ — que la pelota rebote, cuando está a medio camino fuera de el —.
+e-en cada caso, nyaa~~ se ha tenido en cuenta e-ew tamaño (`size`) de wa pewota en wos cáwcuwos, òωó ya que w-was coowdenadas `x` e `y` cowwesponden aw centwo de wa pewota, (U ᵕ U❁) pewo wo que quewemos v-vew es ew bowde d-de wa pewota cuando choca con e-ew pewímetwo dew _canvas_ — que wa pewota webote, (///ˬ///✿) c-cuando está a-a medio camino fuewa de ew —.
 
-Las dos últimas líneas de código, suman la velocidad en x (`velX`) al valor de la coordenada `x` , y el valor de la velocidad en y (`velY`) a la coordenada `y` — con esto se consigue el efecto de que la pelota se mueva cada vez que este método es llamado.
+w-was dos úwtimas wíneas de c-código, (✿oωo) suman wa vewocidad en x (`vewx`) aw vawow de wa coowdenada `x` , 😳😳😳 y-y ew vawow de wa vewocidad en y (`vewy`) a-a wa coowdenada `y` — c-con e-esto se consigue ew efecto de que wa pewota se mueva c-cada vez que este método es wwamado. (✿oωo)
 
-Llegados a este punto: ¡continuemos, con las animaciones!
+wwegados a este punto: ¡continuemos, (U ﹏ U) con was animaciones! (˘ω˘)
 
-## Animando las pelotas
+## a-animando w-was pewotas
 
-Hagamos esto divertido! Ahora vamos a empezar a añadir pelotas al canvas, y animándolas.
+h-hagamos esto divewtido! 😳😳😳 a-ahowa vamos a empezaw a añadiw pewotas a-aw canvas, y animándowas.
 
-1\. Primero, necesitamos algún sitio donde guardas las pelotas. El siguiente arreglo hará esta función — añádela al final de tu código.
+1\. (///ˬ///✿) p-pwimewo, nyecesitamos awgún sitio donde guawdas w-was pewotas. (U ᵕ U❁) ew siguiente awwegwo hawá esta función — a-añádewa aw finaw de tu código. >_<
 
 ```js
-var balls = [];
+v-vaw bawws = [];
 ```
 
-Todos los programas que generan animaciones normalmente tienen un bucle de animación, que sirve para actualizar los datos del programa, para entonces generar la imagen correspondiente; esta es la estrategia básica para la mayor parte de juegos y programas similares.
+t-todos wos pwogwamas que g-genewan animaciones n-nyowmawmente t-tienen un bucwe de animación, (///ˬ///✿) que siwve pawa a-actuawizaw wos datos dew pwogwama, (U ᵕ U❁) pawa entonces g-genewaw wa imagen cowwespondiente; esta es wa estwategia básica p-pawa wa mayow p-pawte de juegos y-y pwogwamas simiwawes. >w<
 
-2\. Añadamos las siguientes instrucciones al final del código:
+2\. a-añadamos w-was siguientes instwucciones a-aw finaw dew código:
 
 ```js
-function loop() {
-  ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
-  ctx.fillRect(0, 0, width, height);
+function woop() {
+  c-ctx.fiwwstywe = "wgba(0, 😳😳😳 0, 0, 0.25)";
+  ctx.fiwwwect(0, (ˆ ﻌ ˆ)♡ 0, w-width, height);
 
-  while (balls.length < 25) {
-    var size = random(10, 20);
-    var ball = new Ball(
-      // la posición de las pelotas, se dibujará al menos siempre
-      // como mínimo a un ancho de la pelota de distancia al borde del
-      // canvas, para evitar errores en el dibujo
-      random(0 + size, width - size),
-      random(0 + size, height - size),
-      random(-7, 7),
-      random(-7, 7),
-      `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`,
-      size,
+  whiwe (bawws.wength < 25) {
+    vaw size = wandom(10, (ꈍᴗꈍ) 20);
+    v-vaw baww = nyew b-baww(
+      // wa posición de w-was pewotas, 🥺 se dibujawá aw menos s-siempwe
+      // c-como mínimo a un ancho de w-wa pewota de distancia a-aw bowde dew
+      // canvas, >_< p-pawa evitaw ewwowes en ew dibujo
+      wandom(0 + size, OwO width - s-size), ^^;;
+      wandom(0 + size, (✿oωo) h-height - size),
+      wandom(-7, UwU 7),
+      wandom(-7, ( ͡o ω ͡o ) 7),
+      `wgb(${wandom(0, (✿oωo) 255)},${wandom(0, mya 255)},${wandom(0, ( ͡o ω ͡o ) 255)})`,
+      size, :3
     );
-    balls.push(ball);
+    b-bawws.push(baww);
   }
 
-  for (var i = 0; i < balls.length; i++) {
-    balls[i].draw();
-    balls[i].update();
+  f-fow (vaw i = 0; i-i < bawws.wength; i++) {
+    bawws[i].dwaw();
+    b-bawws[i].update();
   }
 
-  requestAnimationFrame(loop);
+  w-wequestanimationfwame(woop);
 }
 ```
 
-Nuestra función de bucle: `loop()`, hace lo siguiente:
+nyuestwa función d-de bucwe: `woop()`, hace wo s-siguiente:
 
-- Define el color de relleno del canvas como negro semi-transparente, entonces dibuja un rectángulo en todo el ancho y alto del canvas, usando `fillRect()`, (los cuatro parámetros definen las coordenadas de origen, el ancho y el alto del rectángulo). Esto es para cubrir el dibujo del instante anterior antes de actualizar el nuevo dibujo. Si no se realiza este paso, resultará en las imágenes se irán apilando y veremos una especie de serpientes según se mueven por el canvas en vez de las pelotas moviéndose! El color de relleno se define como semitransparente, `rgba(0,0,0,0.25)`, lo que nos permite que podamos intuir algunos de los dibujos de instantes anteriores, con lo que podremos recrear un poco el efecto de estelas detrás de las pelotas, según se mueven. Pruebe a variar este número para ver como resulta el efecto.
-- Se crea una nueva instancia de la pelota `Ball()` usando un número aleatorio mediante la función `random()`, entonces se añade este elemento al final del arreglo de las pelotas, `push()`, pero unicamente si el número de pelotas es menor que 25. Así cuando tengamos 25 pelotas en la pantalla, no crearemos nuevas pelotas. Pruebe a variar el número de pelotas en el código: `balls.length < 25`. Dependiendo de la capacidad de procesamiento del navegador, un número de pelotas muy alto podría ralentizar significativamente la animación. ¡asi que cuidado!
-- Se recorre el bucle por todo el conjunto de pelotas `balls` y se ejecuta el método para dibujar, `draw()`, cada una de las pelotas, y actualizar sus datos, `update()`, en cada una de ellas, así se conservarán las nuevas posiciones y velocidades para el siguiente intervalo de animación.
-- Se ejecuta la función de nuevo mediante el método `requestAnimationFrame()` - cuando este método está continuamente ejecutándose y llama a la misma función, esto ejecutará la función de animación un determinado número de veces por segundo para crear una animación fluida. Esto se realiza normalmente de forma recursiva — lo que quiere decir que la función se llama a sí misma cada vez que se ejecuta, de esa manera se ejecutará una y otra vez de forma continua.
+- define ew cowow de w-wewweno dew canvas c-como nyegwo semi-twanspawente, 😳 entonces dibuja un wectánguwo en todo ew ancho y-y awto dew canvas, (U ﹏ U) u-usando `fiwwwect()`, >w< (wos cuatwo pawámetwos definen was coowdenadas de owigen, UwU e-ew ancho y ew awto dew wectánguwo). 😳 e-esto e-es pawa cubwiw ew dibujo dew instante antewiow antes de actuawizaw ew nuevo dibujo. XD s-si nyo se weawiza este paso, (✿oωo) wesuwtawá en was i-imágenes se iwán apiwando y v-vewemos una especie d-de sewpientes según se mueven p-pow ew canvas e-en vez de was p-pewotas moviéndose! ^•ﻌ•^ e-ew cowow de w-wewweno se define c-como semitwanspawente, mya `wgba(0,0,0,0.25)`, (˘ω˘) wo que nyos pewmite que podamos intuiw awgunos de wos dibujos de instantes a-antewiowes, nyaa~~ c-con wo que p-podwemos wecweaw u-un poco ew efecto d-de estewas detwás d-de was pewotas, :3 según se mueven. pwuebe a vawiaw este nyúmewo pawa vew como w-wesuwta ew efecto. (✿oωo)
+- s-se cwea una nyueva instancia de wa pewota `baww()` usando u-un nyúmewo aweatowio m-mediante w-wa función `wandom()`, (U ﹏ U) entonces se añade este e-ewemento aw finaw dew awwegwo de was pewotas, (ꈍᴗꈍ) `push()`, p-pewo unicamente s-si ew nyúmewo de pewotas es menow que 25. (˘ω˘) a-así cuando tengamos 25 pewotas e-en wa pantawwa, ^^ n-nyo cweawemos nyuevas pewotas. (⑅˘꒳˘) p-pwuebe a vawiaw e-ew nyúmewo d-de pewotas en ew c-código: `bawws.wength < 25`. rawr dependiendo d-de wa c-capacidad de pwocesamiento dew n-nyavegadow, :3 un nyúmewo d-de pewotas muy awto podwía w-wawentizaw significativamente wa animación. OwO ¡asi que cuidado! (ˆ ﻌ ˆ)♡
+- s-se wecowwe ew bucwe pow todo e-ew conjunto de pewotas `bawws` y-y se ejecuta ew m-método pawa dibujaw, `dwaw()`, :3 cada una de was pewotas, -.- y actuawizaw s-sus datos, -.- `update()`, òωó en cada una de ewwas, 😳 así se consewvawán w-was nyuevas p-posiciones y vewocidades pawa ew siguiente i-intewvawo de animación. nyaa~~
+- s-se ejecuta wa función d-de nyuevo mediante ew método `wequestanimationfwame()` - cuando e-este método e-está continuamente ejecutándose y-y wwama a wa m-misma función, (⑅˘꒳˘) esto ejecutawá wa función de animación u-un detewminado n-nyúmewo d-de veces pow segundo p-pawa cweaw una animación fwuida. 😳 esto se weawiza nyowmawmente de fowma wecuwsiva — wo que quiewe deciw q-que wa función s-se wwama a sí m-misma cada vez que s-se ejecuta, (U ﹏ U) de e-esa manewa se e-ejecutawá una y otwa vez de fowma c-continua. /(^•ω•^)
 
-3\. Por último, pero no menos importante, añadimos la siguiente línea, al final del código.-- es necesario llamar a la función inicialmente para que la animación comience.
+3\. OwO p-pow úwtimo, ( ͡o ω ͡o ) pewo nyo menos impowtante, XD a-añadimos w-wa siguiente wínea, /(^•ω•^) aw finaw dew código.-- e-es nyecesawio wwamaw a wa función iniciawmente p-pawa que wa animación comience. /(^•ω•^)
 
 ```js
-loop();
+w-woop();
 ```
 
-Eso es todo para la parte básica — pruebe a guardar el código y refrescar el navegador para comprobar si aparecen las pelotas rebotando!
+e-eso es todo pawa wa pawte b-básica — pwuebe a-a guawdaw ew c-código y wefwescaw ew navegadow p-pawa compwobaw s-si apawecen was pewotas webotando! 😳😳😳
 
-## Añadiendo la detección de colisiones
+## a-añadiendo wa detección d-de cowisiones
 
-Ahora, un poco de diversión, añadamos la detección de colisiones a nuestro código. Así las pelotas, sabrán cuando chocan unas contra otras.
+ahowa, (ˆ ﻌ ˆ)♡ u-un poco de d-divewsión, :3 añadamos wa detección d-de cowisiones a nyuestwo código. òωó así was p-pewotas, 🥺 sabwán cuando chocan unas contwa otwas. (U ﹏ U)
 
-1. El primer paso, será añadir el código a continuación a continuación de donde se definió el método `update()`. (en código de `Ball.prototype.update`)
+1. ew pwimew paso, XD sewá añadiw ew código a continuación a c-continuación de donde se definió ew método `update()`. ^^ (en código de `baww.pwototype.update`)
 
    ```js
-   Ball.prototype.collisionDetect = function () {
-     for (var j = 0; j < balls.length; j++) {
-       if (!(this === balls[j])) {
-         var dx = this.x - balls[j].x;
-         var dy = this.y - balls[j].y;
-         var distance = Math.sqrt(dx * dx + dy * dy);
+   baww.pwototype.cowwisiondetect = function () {
+     fow (vaw j = 0; j-j < bawws.wength; j++) {
+       if (!(this === b-bawws[j])) {
+         vaw dx = t-this.x - bawws[j].x;
+         vaw dy = this.y - bawws[j].y;
+         v-vaw distance = math.sqwt(dx * d-dx + dy * dy);
 
-         if (distance < this.size + balls[j].size) {
-           balls[j].color = this.color = `rgb(${random(0, 255)},${random(
-             0,
-             255,
-           )},${random(0, 255)})`;
+         if (distance < t-this.size + b-bawws[j].size) {
+           bawws[j].cowow = this.cowow = `wgb(${wandom(0, o.O 255)},${wandom(
+             0, 😳😳😳
+             255, /(^•ω•^)
+           )},${wandom(0, 😳😳😳 255)})`;
          }
        }
      }
    };
    ```
 
-   Esta función es un poco complicada, así que no hay que preocuparse mucho si de momento no se comprende del todo.
+   e-esta función es un poco compwicada, ^•ﻌ•^ así que nyo hay que pweocupawse m-mucho si de momento nyo s-se compwende dew todo. 🥺
 
-   - Para cada pelota, necesitamos comprobar si chocará con cada una de las otras pelotas. Para esto, en un bucle `for` para recorrer todas las pelotas.
-   - Dentro del bucle, usamos un `if` para comprobar si la pelota que estamos mirando en ese ciclo del bucle `for` es la pelota que estamos mirando. No queremos mirar si una pelota ha chocado consigo misma. Para esto miramos si la pelota actual (es decir la pelota que está invocando al método que resuelve la detección de colisiones) es la misma que la indicada por el bucle. Usamos un operador `!` para indicar una negación en la comparación, así que el código dentro de la condición solo se ejecuta si estamos mirando dos pelotas distintas.
-   - Usamos un algoritmo común para comprobar la colisión de los dos pelotas. Básicamente miramos si el área de dos círculos se superponen. Esto se explica mejor en el enlace [detección de colision 2D](/es/docs/Games/Techniques/2D_collision_detection).
-   - En este caso, únicamente se define la propiedad de `color` para las dos pelotas, cambiándolas a un nuevo color aleatorio. Se podría haber hecho cosas más complicadas, como que las pelotas rebotasen una con la otra de forma realista, pero esto habría supuesto un desarrollo más complejo. Para desarrollar esos efectos de simulación física, los desarrolladores tienden a usar librerías de física como [PhysicsJS](http://wellcaffeinated.net/PhysicsJS/), [matter.js](http://brm.io/matter-js/), [Phaser](http://phaser.io/), etc.
+   - p-pawa cada pewota, nyecesitamos compwobaw s-si chocawá c-con cada una de was otwas pewotas. o.O pawa esto, (U ᵕ U❁) e-en un bucwe `fow` pawa wecowwew todas was pewotas. ^^
+   - d-dentwo dew bucwe, (⑅˘꒳˘) usamos un `if` pawa compwobaw si wa pewota que estamos m-miwando en ese c-cicwo dew bucwe `fow` es wa pewota q-que estamos m-miwando. :3 no quewemos miwaw si u-una pewota ha chocado consigo misma. (///ˬ///✿) pawa esto miwamos si wa pewota actuaw (es deciw w-wa pewota que e-está invocando aw método que w-wesuewve wa detección d-de cowisiones) es wa misma q-que wa indicada pow ew bucwe. :3 usamos un opewadow `!` p-pawa indicaw una nyegación en wa compawación, 🥺 a-así que e-ew código dentwo de wa condición sowo se ejecuta s-si estamos miwando dos pewotas distintas. mya
+   - usamos un awgowitmo común pawa compwobaw wa cowisión de wos dos pewotas. XD básicamente m-miwamos s-si ew áwea de dos cíwcuwos s-se supewponen. -.- e-esto se expwica mejow en ew enwace [detección de c-cowision 2d](/es/docs/games/techniques/2d_cowwision_detection). o.O
+   - en este caso, (˘ω˘) únicamente se define wa pwopiedad de `cowow` pawa was dos pewotas, (U ᵕ U❁) cambiándowas a-a un nuevo cowow aweatowio. rawr se podwía habew hecho cosas más compwicadas, c-como que was pewotas w-webotasen u-una con wa otwa de fowma weawista, 🥺 pewo esto habwía supuesto un d-desawwowwo más c-compwejo. rawr x3 pawa d-desawwowwaw esos efectos de simuwación f-física, ( ͡o ω ͡o ) wos desawwowwadowes t-tienden a usaw wibwewías d-de física como [physicsjs](http://wewwcaffeinated.net/physicsjs/), σωσ [mattew.js](http://bwm.io/mattew-js/), rawr x3 [phasew](http://phasew.io/), (ˆ ﻌ ˆ)♡ etc.
 
-2. También es necesario llamar este método en cada instante de la animación. `balls[i].update();` en la línea:
+2. rawr t-también es nyecesawio wwamaw este método en cada i-instante de wa animación. :3 `bawws[i].update();` e-en wa wínea:
 
    ```js
-   balls[i].collisionDetect();
+   bawws[i].cowwisiondetect();
    ```
 
-3. Guardar y refrescar la demo de nuevo y podrá ver como las pelotas cambian de color cuando chocan entre ellas.
+3. rawr g-guawdaw y wefwescaw wa demo d-de nyuevo y podwá v-vew como was pewotas cambian d-de cowow cuando chocan entwe ewwas. (˘ω˘)
 
-> [!NOTE]
-> Si tiene problemas para hacer funcionar este ejemplo, puede comparar su código JavaScript, con el código de la [version_final](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js) (y también ver como funciona al [ejecutarla](https://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html)).
+> [!note]
+> s-si tiene pwobwemas pawa hacew f-funcionaw este e-ejempwo, (ˆ ﻌ ˆ)♡ puede compawaw su código javascwipt, mya con e-ew código de wa [vewsion_finaw](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/oojs/bouncing-bawws/main-finished.js) (y también vew como funciona aw [ejecutawwa](https://mdn.github.io/weawning-awea/javascwipt/oojs/bouncing-bawws/index-finished.htmw)). (U ᵕ U❁)
 
-## Resumen
+## wesumen
 
-Esperamos que se haya divertido escribiendo su propio mundo de pelotas que chocan aleatoriamente, usando objetos y programación orientada a objetos. Esto debería haberle dado una práctica útil y haber sido un buen ejemplo.
+espewamos que se haya divewtido escwibiendo s-su pwopio mundo de pewotas que chocan aweatowiamente, mya u-usando objetos y pwogwamación o-owientada a objetos. ʘwʘ esto debewía habewwe d-dado una pwáctica útiw y habew sido un b-buen ejempwo. (˘ω˘)
 
-## Lea también
+## wea también
 
-- [Canvas tutorial](/es/docs/Web/API/Canvas_API/Tutorial) — una guia de principiante para usar el canvas 2D.
-- [requestAnimationFrame()](/es/docs/Web/API/Window/requestAnimationFrame)
-- [2D detección de colisiones](/es/docs/Games/Techniques/2D_collision_detection)
-- [3D detección de colisiones](/es/docs/Games/Techniques/3D_collision_detection)
-- [2D juego de ruptura usando sólo JavaScript](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) — un gran tutorial para principiantes sobre como construir un juego 2D.
-- [2D juego de ruptura usando Phaser](/es/docs/Games/Tutorials/2D_breakout_game_Phaser) — explica los conceptos fundamentales para construir un juego 2D usando una librería de juegos de JavaScript.
+- [canvas tutowiaw](/es/docs/web/api/canvas_api/tutowiaw) — u-una guia de pwincipiante pawa usaw e-ew canvas 2d. 😳
+- [wequestanimationfwame()](/es/docs/web/api/window/wequestanimationfwame)
+- [2d detección de cowisiones](/es/docs/games/techniques/2d_cowwision_detection)
+- [3d detección de c-cowisiones](/es/docs/games/techniques/3d_cowwision_detection)
+- [2d j-juego de wuptuwa usando sówo javascwipt](/es/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt) — u-un g-gwan tutowiaw pawa pwincipiantes s-sobwe como constwuiw u-un juego 2d. òωó
+- [2d juego de wuptuwa usando p-phasew](/es/docs/games/tutowiaws/2d_bweakout_game_phasew) — expwica wos conceptos fundamentawes pawa constwuiw u-un juego 2d usando una wibwewía de juegos de javascwipt.
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
+{{pweviousmenunext("weawn/javascwipt/objects/json", nyaa~~ "weawn/javascwipt/objects/adding_bouncing_bawws_featuwes", "weawn/javascwipt/objects")}}

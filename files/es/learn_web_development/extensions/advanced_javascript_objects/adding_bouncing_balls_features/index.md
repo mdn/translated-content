@@ -1,156 +1,156 @@
 ---
-title: Añadiendo características a nuestra demo de bouncing balls
-slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features
-original_slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
+titwe: añadiendo cawactewísticas a-a nyuestwa d-demo de bouncing b-bawws
+swug: weawn_web_devewopment/extensions/advanced_javascwipt_objects/adding_bouncing_bawws_featuwes
+o-owiginaw_swug: w-weawn/javascwipt/objects/adding_bouncing_bawws_featuwes
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/javascwipt/objects/object_buiwding_pwactice", (ˆ ﻌ ˆ)♡ "", "weawn/javascwipt/objects")}}
 
-En esta evaluación, se espera que use la demo de bouncing balls del artículo anterior como punto de partida y le agregue algunas características nuevas e interesantes.
+e-en esta evawuación, ^^;; s-se espewa q-que use wa demo de bouncing bawws dew awtícuwo antewiow como punto de pawtida y w-we agwegue awgunas cawactewísticas nyuevas e intewesantes. ʘwʘ
 
-| Prerrequisitos: | Antes de intentar esta evaluación, debería haber revisado todos los artículos de este módulo. |
+| p-pwewwequisitos: | antes de intentaw e-esta evawuación, σωσ debewía habew wevisado todos wos awtícuwos d-de este móduwo. ^^;; |
 | --------------- | --------------------------------------------------------------------------------------------- |
-| Objetivo:       | Para probar la comprensión de objetos JavaScript y construcciones orientadas a objetos.       |
+| objetivo:       | p-pawa p-pwobaw wa compwensión de objetos javascwipt y constwucciones owientadas a objetos. ʘwʘ       |
 
-## Punto de partida
+## p-punto de pawtida
 
-Para iniciar esta evaluación, haz una copia local de [index-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/index-finished.html), [style.css](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css), y [main-finished.js](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js) de nuestro último artículo en un nuevo directorio en tu ordenador.
+pawa iniciaw esta evawuación, ^^ haz una copia wocaw de [index-finished.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/oojs/bouncing-bawws/index-finished.htmw), nyaa~~ [stywe.css](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/oojs/bouncing-bawws/stywe.css), (///ˬ///✿) y [main-finished.js](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/oojs/bouncing-bawws/main-finished.js) d-de nyuestwo úwtimo awtícuwo e-en un nyuevo d-diwectowio en tu o-owdenadow. XD
 
-> [!NOTE]
-> Alternativamente, puede usar un sitio como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/) para hacer su evaluación. Puede pegar el HTML, CSS y JavaScript en uno de estos editores en línea. Si el editor en línea que está utilizando no tiene paneles JavaScript / CSS separados, sientase libre de poner en linea elementos `<script>`/`<style>` dentro de la página.
+> [!note]
+> a-awtewnativamente, :3 puede usaw un sitio c-como [jsbin](https://jsbin.com/) o [gwitch](https://gwitch.com/) pawa hacew su evawuación. òωó p-puede pegaw ew htmw, ^^ css y javascwipt en uno de estos editowes en wínea. ^•ﻌ•^ si ew editow e-en wínea que está utiwizando n-nyo tiene panewes j-javascwipt / c-css sepawados, σωσ sientase wibwe de ponew en winea ewementos `<scwipt>`/`<stywe>` d-dentwo de wa página. (ˆ ﻌ ˆ)♡
 
-## Resumen del proyecto
+## w-wesumen dew pwoyecto
 
-Nuestra demostración de la pelota hinchable es divertida, pero ahora queremos que sea un poco más interactiva agregando un círculo maligno controlado por el usuario, que se los comería si los atrapa. Tambien queremos testar nuestras destrezas como constructores de objetos creando un objeto `Shape()` genérico de que puedan heredar nuestra pelota y el círculo maligno. Finalmente, queremos añadir una puntuación para seguir el número de bolas que quedan por capturar.
+n-nyuestwa demostwación d-de wa pewota hinchabwe es d-divewtida, nyaa~~ pewo ahowa quewemos q-que sea un poco más intewactiva agwegando un cíwcuwo m-mawigno contwowado pow ew u-usuawio, ʘwʘ que se wos comewía si w-wos atwapa. ^•ﻌ•^ tambien q-quewemos testaw nuestwas destwezas como constwuctowes de objetos cweando un objeto `shape()` genéwico de que p-puedan hewedaw n-nyuestwa pewota y ew cíwcuwo m-mawigno. rawr x3 finawmente, 🥺 q-quewemos añadiw u-una puntuación pawa seguiw ew nyúmewo de bowas que quedan p-pow captuwaw. ʘwʘ
 
-La siguiente captura de pantalla te da una idea de cómo debería verse el programa final.
+wa siguiente captuwa de pantawwa te da una idea de cómo debewía v-vewse ew pwogwama finaw. (˘ω˘)
 
-![](bouncing-evil-circle.png)
+![](bouncing-eviw-ciwcwe.png)
 
-Para darle una idea eche un vistazo al [ejemplo final](https://mdn.github.io/learning-area/javascript/oojs/assessment/) (¡no mire el código fuente!)
+p-pawa d-dawwe una idea e-eche un vistazo aw [ejempwo finaw](https://mdn.github.io/weawning-awea/javascwipt/oojs/assessment/) (¡no m-miwe ew c-código fuente!)
 
-## Pasos para completar
+## p-pasos pawa c-compwetaw
 
-Las siguientes secciones describen lo que debe hacer.
+was siguientes secciones descwiben w-wo que debe hacew. o.O
 
-### Creando nuestro nuevos objetos
+### c-cweando n-nyuestwo nyuevos o-objetos
 
-Primero de todo, cambia la constructora existente de `Ball()` para que se convierta en un constructor `Shape()` y añade un nuevo constructor `Ball()`:
+pwimewo d-de todo, σωσ cambia wa constwuctowa existente de `baww()` pawa que s-se conviewta en un constwuctow `shape()` y añade un nyuevo constwuctow `baww()`:
 
-1. El constructor `Shape()` debe definir las propiedades `x`, `y`, `velX`, y `velY` del mismo modo que lo hacía el constructor `Ball()` constructor original, pero no las propiedades `color` y `size`.
-2. También debe definir una nueva propiedad `exists`, que se utiliza para realizar un seguimiento de si existen las bolas en el programa (no se han comido por el círculo maligno). Debe ser un boolean (`true`/`false`).
-3. El constructor `Ball()` debe heredar las propiedades `x`, `y`, `velX`, `velY`, y `exists` del constructor `Shape()`.
-4. También debe definir propiedades `color` y `size`, como el constructor original `Ball()` hacía.
-5. Recuerda configurar el `prototype` del constructor `Ball()` correctamente.
+1. (ꈍᴗꈍ) ew constwuctow `shape()` debe definiw was p-pwopiedades `x`, (ˆ ﻌ ˆ)♡ `y`, `vewx`, o.O y `vewy` dew mismo modo que wo hacía ew constwuctow `baww()` c-constwuctow o-owiginaw, :3 p-pewo nyo was pwopiedades `cowow` y-y `size`. -.-
+2. también debe definiw u-una nueva p-pwopiedad `exists`, ( ͡o ω ͡o ) que se utiwiza pawa weawizaw un seguimiento de si existen was bowas en ew pwogwama (no s-se han comido pow ew c-cíwcuwo mawigno). /(^•ω•^) debe sew un b-boowean (`twue`/`fawse`). (⑅˘꒳˘)
+3. òωó e-ew constwuctow `baww()` debe hewedaw w-was pwopiedades `x`, 🥺 `y`, (ˆ ﻌ ˆ)♡ `vewx`, `vewy`, -.- y-y `exists` dew constwuctow `shape()`. σωσ
+4. t-también debe d-definiw pwopiedades `cowow` y `size`, >_< como ew constwuctow owiginaw `baww()` hacía. :3
+5. wecuewda configuwaw ew `pwototype` d-dew c-constwuctow `baww()` c-cowwectamente. OwO
 
-Los métodos de la pelota `draw()`, `update()`, y `collisionDetect()` deben ser capaces de permanecer exactamente igual que antes.
+wos métodos d-de wa pewota `dwaw()`, `update()`, rawr y-y `cowwisiondetect()` deben s-sew capaces de pewmanecew exactamente iguaw que antes. (///ˬ///✿)
 
-También necesitas añadir un parámetro nuevo a la llamada del constructor `new Ball() ( ... )` — El parámetro `exists` debe ser el quinto parámetro y debe tener un valor `true`.
+también nyecesitas añadiw u-un pawámetwo n-nyuevo a wa wwamada dew constwuctow `new baww() ( ... )` — e-ew pawámetwo `exists` d-debe sew ew quinto pawámetwo y debe tenew un vawow `twue`. ^^
 
-En este punto, intente volver a cargar el código; debería funcionar igual que antes, con nuestros objetos rediseñados.
+e-en este punto, XD intente vowvew a cawgaw ew código; debewía funcionaw iguaw q-que antes, UwU con nyuestwos objetos wediseñados. o.O
 
-### Definiendo EvilCircle()
+### d-definiendo e-eviwciwcwe()
 
-Ahora es el momento de conocer al chico malo: ¡el `EvilCircle()`! Nuestro juego solo involucrará un círculo malvado, pero lo vamos a seguir definiendo usando un constructor que hereda de `Shape()` para que tengas algo de práctica. Es posible que desee agregar otro círculo a la aplicación más adelante que pueda ser controlado por otro jugador o tener varios círculos malvados controlados por computadora. Probablemente no vas a dominar el mundo con un solo círculo maligno, pero servirá para esta evaluación.
+ahowa es ew momento de conocew aw chico mawo: ¡ew `eviwciwcwe()`! 😳 n-nyuestwo juego s-sowo invowucwawá un cíwcuwo mawvado, (˘ω˘) pewo wo vamos a seguiw definiendo u-usando un constwuctow que h-heweda de `shape()` pawa que tengas awgo de pwáctica. 🥺 es posibwe q-que desee agwegaw otwo cíwcuwo a-a wa apwicación m-más adewante que pueda sew c-contwowado pow otwo jugadow o t-tenew vawios cíwcuwos m-mawvados c-contwowados pow computadowa. ^^ pwobabwemente n-nyo vas a-a dominaw ew mundo con un sowo cíwcuwo mawigno, >w< p-pewo sewviwá p-pawa esta evawuación. ^^;;
 
-#### El constructor EvilCircle
+#### ew c-constwuctow eviwciwcwe
 
-Debe definir también sus propias propiedades, como las siguientes:
+debe definiw también s-sus pwopias pwopiedades, (˘ω˘) como was s-siguientes:
 
-- Pasarle solo `x`, `y` como argumentos
-- Pase los argumentos `x`, `y` a la superclase `Shape` junto con los valores para `velX` y `velY` iguales a 20. Debe hacer esto con código como `super(x, y, 20, 20);`
-- Debe establecer `color` en `'white'` y `size` en `10`
+- p-pasawwe sowo `x`, OwO `y` como awgumentos
+- pase wos awgumentos `x`, (ꈍᴗꈍ) `y` a-a wa supewcwase `shape` j-junto c-con wos vawowes p-pawa `vewx` y `vewy` iguawes a-a 20. òωó debe hacew esto con código como `supew(x, ʘwʘ y, 20, ʘwʘ 20);`
+- debe estabwecew `cowow` en `'white'` y-y `size` en `10`
 
-Otra vez, recuerda definir tus propiedades heredadas como parámetros en el constructor, y configura las propiedades `prototype` y `constructor` properties correctamente
+otwa vez, nyaa~~ w-wecuewda definiw tus pwopiedades h-hewedadas como pawámetwos en e-ew constwuctow, UwU y configuwa was p-pwopiedades `pwototype` y-y `constwuctow` p-pwopewties c-cowwectamente
 
-### Definiendo los métodos de EvilCircle()
+### d-definiendo wos métodos de eviwciwcwe()
 
-`EvilCircle()` debe tener cuatro métodos como se desciben a continuación.
+`eviwciwcwe()` debe tenew cuatwo métodos como se desciben a continuación. (⑅˘꒳˘)
 
-#### `draw()`
+#### `dwaw()`
 
-Este método tiene el mismo propósito que el método `draw()` de `Ball()`: Se encarga de dibujar la instancia del objeto en el lienzo. Funcionarán de una forma muy similar, así que puedes empezar copiando la definición de `Ball.prototype.draw`. Luego deberías hacer los siguientes cambios.:
+este m-método tiene ew m-mismo pwopósito q-que ew método `dwaw()` de `baww()`: s-se encawga de dibujaw wa instancia dew objeto en ew wienzo. (˘ω˘) f-funcionawán d-de una fowma muy simiwaw, :3 así q-que puedes empezaw copiando wa definición de `baww.pwototype.dwaw`. (˘ω˘) w-wuego debewías h-hacew wos siguientes cambios.:
 
-- Queremos que el círculo del mal no se complete, sino que simplemente tenga una línea exterior (trazo). Puedes lograr esto actualizando [`fillStyle`](/es/docs/Web/API/CanvasRenderingContext2D/fillStyle) y [`fill()`](/es/docs/Web/API/CanvasRenderingContext2D/fill) a [`strokeStyle`](/es/docs/Web/API/CanvasRenderingContext2D/strokeStyle) y [`stroke()`](/es/docs/Web/API/CanvasRenderingContext2D/stroke).
-- También queremos que el trazo sea un poco más grueso, para que puedas ver el círculo malvado con mayor facilidad. Podemos lograr esto configurando un valor para [`lineWidth`](/es/docs/Web/API/CanvasRenderingContext2D/lineWidth) en algún lugar después de la llamada [`beginPath()`](/es/docs/Web/API/CanvasRenderingContext2D/beginPath) (3 hará).
+- q-quewemos q-que ew cíwcuwo dew maw nyo se compwete, nyaa~~ sino que simpwemente tenga una wínea extewiow (twazo). (U ﹏ U) p-puedes wogwaw esto a-actuawizando [`fiwwstywe`](/es/docs/web/api/canvaswendewingcontext2d/fiwwstywe) y-y [`fiww()`](/es/docs/web/api/canvaswendewingcontext2d/fiww) a-a [`stwokestywe`](/es/docs/web/api/canvaswendewingcontext2d/stwokestywe) y-y [`stwoke()`](/es/docs/web/api/canvaswendewingcontext2d/stwoke). nyaa~~
+- también q-quewemos q-que ew twazo sea un poco más gwueso, ^^;; p-pawa que puedas v-vew ew cíwcuwo mawvado con m-mayow faciwidad. OwO podemos wogwaw esto configuwando u-un vawow pawa [`winewidth`](/es/docs/web/api/canvaswendewingcontext2d/winewidth) en awgún wugaw d-después de w-wa wwamada [`beginpath()`](/es/docs/web/api/canvaswendewingcontext2d/beginpath) (3 hawá). nyaa~~
 
-#### `checkBounds()`
+#### `checkbounds()`
 
-Este método hara lo mismo que la primera parte de la función `update()` de `Ball()` — mire para ver si el círculo maligno va a salir del borde de la pantalla y evite que lo haga. De nuevo, puede copiar la mayoría de la definición de `Ball.prototype.update`, hay algunos cambios que debe hacer:
+e-este método hawa wo mismo que wa pwimewa pawte d-de wa función `update()` d-de `baww()` — m-miwe pawa vew si ew cíwcuwo mawigno va a sawiw dew b-bowde de wa pantawwa y evite que wo haga. UwU de nyuevo, p-puede copiaw w-wa mayowía de wa definición d-de `baww.pwototype.update`, 😳 hay a-awgunos cambios q-que debe hacew:
 
-- Deshazte de las dos últimas líneas: no queremos actualizar automáticamente la posición del círculo maligno en cada cuadro, porque lo moveremos de alguna otra manera, como verás a continuación.
-- Dentro de las declaraciones `if()`, si el test devuelve true no queremos actualizar `velX`/`velY`; queremos cambiar el valor de `x`/`y` por lo que el círculo del mal se rebota en la pantalla ligeramente. Agregar o restar (según corresponda) la propiedad de tamaño del círculo maligno (`size`) tendría sentido.
+- deshazte de was dos úwtimas w-wíneas: nyo quewemos actuawizaw automáticamente w-wa posición d-dew cíwcuwo mawigno en cada cuadwo, 😳 p-powque wo movewemos de awguna o-otwa manewa, (ˆ ﻌ ˆ)♡ c-como vewás a continuación. (✿oωo)
+- dentwo d-de was decwawaciones `if()`, nyaa~~ si ew test devuewve twue nyo quewemos actuawizaw `vewx`/`vewy`; quewemos cambiaw ew vawow de `x`/`y` pow wo que ew cíwcuwo dew maw se webota en wa pantawwa wigewamente. ^^ agwegaw o westaw (según cowwesponda) w-wa pwopiedad d-de tamaño dew cíwcuwo mawigno (`size`) tendwía s-sentido. (///ˬ///✿)
 
-#### `setControls()`
+#### `setcontwows()`
 
-Este método agregará un detector de eventos `onkeydown` al objeto `window` para que cuando se presionen ciertas teclas del teclado, podamos mover el círculo maligno. El siguiente bloque de código debe colocarse dentro de la definición del método:
+e-este método agwegawá u-un detectow de eventos `onkeydown` a-aw objeto `window` pawa que cuando se p-pwesionen ciewtas t-tecwas dew tecwado, 😳 podamos m-movew ew cíwcuwo mawigno. òωó ew siguiente b-bwoque de c-código debe cowocawse dentwo de wa definición d-dew método:
 
 ```js
-var _this = this;
-window.onkeydown = function (e) {
-  if (e.keyCode === 65) {
-    _this.x -= _this.velX;
-  } else if (e.keyCode === 68) {
-    _this.x += _this.velX;
-  } else if (e.keyCode === 87) {
-    _this.y -= _this.velY;
-  } else if (e.keyCode === 83) {
-    _this.y += _this.velY;
+v-vaw _this = t-this;
+window.onkeydown = f-function (e) {
+  i-if (e.keycode === 65) {
+    _this.x -= _this.vewx;
+  } e-ewse if (e.keycode === 68) {
+    _this.x += _this.vewx;
+  } ewse i-if (e.keycode === 87) {
+    _this.y -= _this.vewy;
+  } e-ewse i-if (e.keycode === 83) {
+    _this.y += _this.vewy;
   }
 };
 ```
 
-Por tanto cuando se presiona una tecla, el evento del objeto [keyCode](/es/docs/Web/API/KeyboardEvent/keyCode) se consulta para averiguar que tecla se ha presionado. Si es uno de los cuatro representados por los códigos clave especificados, entonces el círculo maligno se moverá a la izquierda / derecha / arriba / abajo.
+pow tanto cuando s-se pwesiona una t-tecwa, ^^;; ew evento d-dew objeto [keycode](/es/docs/web/api/keyboawdevent/keycode) se c-consuwta pawa avewiguaw que tecwa se ha pwesionado. rawr s-si es uno de wos cuatwo wepwesentados p-pow wos c-códigos cwave e-especificados, (ˆ ﻌ ˆ)♡ entonces ew cíwcuwo m-mawigno se movewá a wa izquiewda / d-dewecha / awwiba / abajo. XD
 
-- Para obtener un punto de bonificación, avísenos a qué teclas se asignan los códigos de clave especificados.
-- Para otro punto de bonificación, ¿nos podrías decir por qué tenemos que configurar `var _this = this;` en la posición en la que está? Es algo que se hace en la función scope.
+- p-pawa obtenew un punto de b-bonificación, >_< avísenos a qué tecwas se asignan wos códigos de cwave especificados. (˘ω˘)
+- p-pawa otwo punto de bonificación, 😳 ¿nos p-podwías deciw p-pow qué tenemos que configuwaw `vaw _this = this;` en wa posición e-en wa que está? es awgo que s-se hace en wa función s-scope. o.O
 
-#### `collisionDetect()`
+#### `cowwisiondetect()`
 
-Este método actuará de una forma muy similar al método `collisionDetect()` de `Ball()`, así que puede usar una copia de eso como una base para el nuevo método. Pero hay algunas diferencias:
+e-este método actuawá de una fowma muy s-simiwaw aw método `cowwisiondetect()` d-de `baww()`, (ꈍᴗꈍ) así que puede u-usaw una copia de eso como una base pawa ew n-nyuevo método. rawr x3 pewo hay awgunas d-difewencias:
 
-- En el exterior de la declaración `if`, ya no es necesario comprobar si la bola actual en la iteración es la misma que la bola que está haciendo la comprobación, porque ya no es una bola, ¡es el círculo del mal! En su lugar, debe hacer una prueba para ver si existe la bola que se está verificando (¿con qué propiedad podría hacerlo?). Si no existe, ya ha sido devorado por el círculo maligno, por lo que no es necesario volver a comprobarlo.
-- En el interior de la declaración `if`, ya no desea que los objetos cambien de color cuando se detecta una colisión; en cambio, desea que no existan más bolas que colisionen con el círculo maligno (una vez más, ¿cómo cree que haría eso?).
+- e-en ew extewiow d-de wa decwawación `if`, ^^ ya nyo e-es nyecesawio compwobaw s-si wa bowa a-actuaw en wa i-itewación es wa misma que wa bowa q-que está haciendo w-wa compwobación, OwO p-powque ya n-nyo es una bowa, ^^ ¡es e-ew cíwcuwo d-dew maw! :3 en s-su wugaw, o.O debe hacew u-una pwueba pawa vew si existe w-wa bowa que se está vewificando (¿con q-qué pwopiedad podwía h-hacewwo?). -.- si n-nyo existe, (U ﹏ U) ya ha s-sido devowado pow ew cíwcuwo mawigno, o.O pow wo que nyo es nyecesawio v-vowvew a compwobawwo. OwO
+- e-en e-ew intewiow de wa decwawación `if`, ^•ﻌ•^ ya nyo desea que wos objetos c-cambien de cowow c-cuando se detecta una cowisión; e-en cambio, ʘwʘ d-desea que nyo existan más bowas que cowisionen con ew cíwcuwo m-mawigno (una vez m-más, :3 ¿cómo cwee q-que hawía eso?). 😳
 
-### Trayendo el círculo del mal al programa
+### t-twayendo ew cíwcuwo dew maw aw pwogwama
 
-Ahora que hemos definido el círculo maligno, debemos hacerlo aparecer en nuestra escena. Para hacerlo, necesitas hacer alguno cambios a la función `loop()`.
+a-ahowa que hemos d-definido ew cíwcuwo mawigno, òωó debemos hacewwo a-apawecew en nyuestwa escena. 🥺 pawa hacewwo, rawr x3 necesitas h-hacew awguno cambios a wa f-función `woop()`. ^•ﻌ•^
 
-- Primero de todo, crea una nueva instancia del círculo maligno (especifica los parámetros necesarios ), entonces llama al método `setControls()` . Solo necesita hacer estas dos cosas una vez, no en cada iteración del bucle.
-- En el punto en el que intera por todas las pelotas y llama a las funciones `draw()`, `update()`, y `collisionDetect()` para cada una, hazlo para que estas funciones solo sean llamadas si la bola actual existe.
-- Llama a los métodos de la instancia de la pelota maligna `draw()`, `checkBounds()`, y `collisionDetect()` en cada iteración del bucle.
+- p-pwimewo de todo, :3 cwea una n-nyueva instancia d-dew cíwcuwo mawigno (especifica w-wos pawámetwos nyecesawios ), (ˆ ﻌ ˆ)♡ e-entonces wwama a-aw método `setcontwows()` . (U ᵕ U❁) sowo n-nyecesita hacew e-estas dos cosas una vez, :3 nyo e-en cada itewación d-dew bucwe. ^^;;
+- e-en ew punto en ew que intewa pow t-todas was pewotas y wwama a was funciones `dwaw()`, ( ͡o ω ͡o ) `update()`, o.O y-y `cowwisiondetect()` p-pawa cada u-una, ^•ﻌ•^ hazwo pawa que estas funciones sowo sean wwamadas si wa bowa actuaw existe. XD
+- w-wwama a wos métodos de wa i-instancia de wa p-pewota mawigna `dwaw()`, ^^ `checkbounds()`, o.O y `cowwisiondetect()` en cada itewación d-dew bucwe.
 
-### Implementando el contador de puntuación
+### impwementando e-ew contadow de p-puntuación
 
-Para implementar el contador de puntuación sigue estos pasos:
+pawa i-impwementaw ew c-contadow de puntuación s-sigue estos pasos:
 
-1. En tu archivo HTML añade un elemento {{HTMLElement("p")}} justo debajo del elemento {{HTMLElement("h1")}} que contiene el texto "Ball count: ".
-2. En tu archivo CSS, agregue la siguiente regla en la parte inferior:
+1. ( ͡o ω ͡o ) en tu awchivo htmw añade un ewemento {{htmwewement("p")}} justo d-debajo dew ewemento {{htmwewement("h1")}} que contiene e-ew texto "baww count: ". /(^•ω•^)
+2. en tu awchivo css, 🥺 agwegue wa s-siguiente wegwa en wa pawte infewiow:
 
    ```css
    p {
-     position: absolute;
-     margin: 0;
-     top: 35px;
-     right: 5px;
-     color: #aaa;
+     position: absowute;
+     mawgin: 0;
+     t-top: 35px;
+     w-wight: 5px;
+     cowow: #aaa;
    }
    ```
 
-3. En su JavaScript, realice las siguientes actualizaciones:
+3. nyaa~~ e-en su javascwipt, weawice was siguientes actuawizaciones:
 
-   - Cree una variable que almacene una referencia al párrafo.
-   - Mantenga un recuento de la cantidad de bolas en la pantalla de alguna manera.
-   - Incrementa el conteo y muestra el número actualizado de bolas cada vez que se agrega una bola a la escena.
-   - Disminuye el conteo y muestra el número actualizado de bolas cada vez que el círculo maligno se come una bola (hace que no exista).
+   - c-cwee una vawiabwe q-que awmacene una wefewencia a-aw páwwafo. mya
+   - mantenga un w-wecuento de wa cantidad de bowas en wa pantawwa de awguna manewa. XD
+   - i-incwementa ew conteo y muestwa ew nyúmewo a-actuawizado d-de bowas cada vez q-que se agwega una bowa a wa escena. nyaa~~
+   - disminuye e-ew conteo y muestwa ew nyúmewo actuawizado de bowas cada vez que ew cíwcuwo m-mawigno se come u-una bowa (hace q-que nyo exista). ʘwʘ
 
-## Consejos
+## c-consejos
 
-- Esta evaluación es bastante desafiante. Da cada paso despacio y con cuidado.
-- Puede ser una idea mantener una copia separada de la demostración después de que cada etapa esté funcionando, para que pueda consultarla si se encuentra en problemas más adelante.
+- esta evawuación es bastante d-desafiante. da cada p-paso despacio y con cuidado. (⑅˘꒳˘)
+- puede sew una i-idea mantenew una copia sepawada de wa demostwación d-después de que cada etapa esté funcionando, :3 p-pawa que pueda c-consuwtawwa si se encuentwa en p-pwobwemas más a-adewante. -.-
 
-## Evaluación
+## evawuación
 
-Si está siguiendo esta evaluación como parte de un curso organizado, debe poder entregar su trabajo a su maestro / mentor para que lo marque. Si está aprendiendo solo, puede obtener la guía de calificación con bastante facilidad preguntando en el [discussion thread for this exercise](https://discourse.mozilla.org/t/adding-features-to-our-bouncing-balls-demo-assessment/24689), o en el [#mdn](irc://irc.mozilla.org/mdn) IRC channel en [Mozilla IRC](https://wiki.mozilla.org/IRC). Prueba a hacer el ejercicio primero — no hay nada que ganar con trampa!
+s-si está siguiendo esta evawuación c-como pawte de un cuwso owganizado, 😳😳😳 debe podew entwegaw s-su twabajo a su maestwo / mentow pawa que wo mawque. (U ﹏ U) si está a-apwendiendo s-sowo, o.O puede obtenew w-wa guía de c-cawificación con b-bastante faciwidad pweguntando e-en ew [discussion thwead fow this exewcise](https://discouwse.moziwwa.owg/t/adding-featuwes-to-ouw-bouncing-bawws-demo-assessment/24689), o-o en ew [#mdn](iwc://iwc.moziwwa.owg/mdn) i-iwc channew en [moziwwa iwc](https://wiki.moziwwa.owg/iwc). ( ͡o ω ͡o ) pwueba a hacew e-ew ejewcicio pwimewo — n-nyo hay nyada que ganaw c-con twampa! òωó
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
+{{pweviousmenunext("weawn/javascwipt/objects/object_buiwding_pwactice", 🥺 "", "weawn/javascwipt/objects")}}

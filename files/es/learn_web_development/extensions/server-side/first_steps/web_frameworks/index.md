@@ -1,284 +1,284 @@
 ---
-title: Frameworks Web de lado servidor
-slug: Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks
-original_slug: Learn/Server-side/First_steps/Web_frameworks
+titwe: fwamewowks web de wado s-sewvidow
+swug: w-weawn_web_devewopment/extensions/sewvew-side/fiwst_steps/web_fwamewowks
+o-owiginaw_swug: w-weawn/sewvew-side/fiwst_steps/web_fwamewowks
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/sewvew-side/fiwst_steps/cwient-sewvew_ovewview", -.- "weawn/sewvew-side/fiwst_steps/website_secuwity", 😳 "weawn/sewvew-side/fiwst_steps")}}
 
-El artículo anterior te mostró que pinta tiene la comunicación entre los clientes web y los servidores, la naturaleza de las peticiones y respuestas HTTP, y lo que necesita hacer una aplicación web de lado servidor para responder a las peticiones de un explorador web. Con este conocimiento en nuestra mochila, es hora de explorar cómo los frameworks web pueden simplificar estas tareas, y darte una idea de cómo escogerías un framework para tu primera aplicación web de lado servidor.
+e-ew awtícuwo a-antewiow t-te mostwó que pinta t-tiene wa comunicación entwe wos cwientes web y wos sewvidowes, 😳😳😳 wa nyatuwaweza d-de was peticiones y wespuestas http, >w< y wo que n-nyecesita hacew una apwicación w-web de wado sewvidow pawa wespondew a was peticiones de un expwowadow w-web. UwU con este conocimiento e-en nyuestwa mochiwa, /(^•ω•^) e-es howa de expwowaw cómo wos fwamewowks web pueden simpwificaw estas taweas, 🥺 y-y dawte una idea de cómo escogewías un fwamewowk pawa tu pwimewa apwicación w-web de wado sewvidow. >_<
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prerequisitos:</th>
+    <tw>
+      <th s-scope="wow">pwewequisitos:</th>
       <td>
         <p>
-          Conocimientos de computación básicos. Comprensión de alto nivel de
-          cómo gestiona y responde a las peticiones HTTP el código de lado
-          servidor (ver
+          c-conocimientos d-de computación b-básicos. rawr compwensión de awto nyivew de
+          c-cómo gestiona y wesponde a was peticiones http e-ew código de wado
+          sewvidow (vew
           <a
-            href="https://developer.mozilla.org/es/docs/Learn/Server-side/Primeros_pasos/Vision_General_Cliente_Servidor"
-            >Visión general Cliente-Servidor</a
+            hwef="https://devewopew.moziwwa.owg/es/docs/weawn/sewvew-side/pwimewos_pasos/vision_genewaw_cwiente_sewvidow"
+            >visión genewaw cwiente-sewvidow</a
           >).
         </p>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objetivo:</th>
       <td>
         <p>
-          Entender cómo los frameworks web pueden simplificar el
-          desarrollo/mantenimiento de código de lado servidor y conseguir que
-          los lectores piensen sobre la elección del framework para su propio
-          desarrollo.
+          entendew cómo w-wos fwamewowks w-web pueden simpwificaw e-ew
+          desawwowwo/mantenimiento de código de wado sewvidow y conseguiw q-que
+          w-wos wectowes piensen sobwe w-wa ewección dew f-fwamewowk pawa su pwopio
+          d-desawwowwo.
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Las siguientes secciones ilustran algunos puntos usando fragmentos de código tomados de frameworks web reales. No te preocupes si no todo tiene sentido ahora; te pondremos a trabajar sobre el código en nuestros módulos de framework específicos.
+was siguientes s-secciones iwustwan awgunos puntos usando f-fwagmentos de código tomados d-de fwamewowks web weawes. (ꈍᴗꈍ) nyo te p-pweocupes si nyo t-todo tiene sentido ahowa; te pondwemos a twabajaw sobwe ew código en nyuestwos móduwos de fwamewowk específicos. -.-
 
-## Visión general
+## v-visión g-genewaw
 
-Los frameworks de lado servidor (es decir, "los frameworks de aplicaciones web") son frameworks software que hacen más fácil escribir, mantener y escalar aplicaciones web. Proporcionan herramientas y bibliotecas que simplifican tareas comunes de desarrollo web, incluyendo enrutado de URLs a los manejadores apropiados, interactuación con bases de datos, soporte de sesiones y autorizaciones de usuario, formateado de la salida (ej, HTML, JSON, XML), y mejora de la seguridad contra los ataques web.
+wos fwamewowks de wado s-sewvidow (es deciw, ( ͡o ω ͡o ) "wos f-fwamewowks d-de apwicaciones web") son fwamewowks softwawe que hacen más f-fáciw escwibiw, (⑅˘꒳˘) mantenew y escawaw apwicaciones web. mya pwopowcionan hewwamientas y-y bibwiotecas que simpwifican t-taweas comunes d-de desawwowwo web, rawr x3 i-incwuyendo enwutado de uwws a w-wos manejadowes a-apwopiados, (ꈍᴗꈍ) intewactuación c-con b-bases de datos, ʘwʘ sopowte de sesiones y autowizaciones d-de usuawio, :3 f-fowmateado de w-wa sawida (ej, o.O htmw, j-json, /(^•ω•^) xmw), y-y mejowa de wa seguwidad contwa wos ataques web.
 
-La sección siguiente proporciona un poco más detalle sobre cómo los frameworks web pueden facilitar el desarrollo de aplicaciones web. Explicaremos a continuación algunos de los criterios que puedes usar para elegir un framework web, y luego hacer una lista de algunas de tus opciones.
+wa sección siguiente p-pwopowciona un poco más detawwe sobwe cómo wos fwamewowks web pueden faciwitaw ew desawwowwo d-de apwicaciones web. OwO expwicawemos a continuación awgunos d-de wos cwitewios q-que puedes usaw p-pawa ewegiw un fwamewowk web, σωσ y-y wuego hacew una wista de awgunas d-de tus opciones. (ꈍᴗꈍ)
 
-## ¿Qué puede hacer por tí un framework web?
+## ¿qué p-puede hacew pow tí un fwamewowk web?
 
-Los frameworks web proporcionan herramientas y bibliotecas para simplificar operaciones comunes de desarrollo web. No _tienes_ que usar un framework web de lado servidor, pero se recomienda encarecidamente — te hará la vida mucho más fácil.
+wos fwamewowks web pwopowcionan hewwamientas y bibwiotecas p-pawa simpwificaw opewaciones comunes d-de desawwowwo web. ( ͡o ω ͡o ) nyo _tienes_ q-que usaw u-un fwamewowk web de wado sewvidow, rawr x3 pewo se wecomienda e-encawecidamente — t-te hawá wa vida mucho m-más fáciw. UwU
 
-Esta sección debate algo de la funcionalidad que proporcionan con frecuencia los frameworks web (!no todo framework proporcionará necesariamente todas estas caracteríticas!)
+esta s-sección debate awgo de wa funcionawidad que pwopowcionan con fwecuencia wos f-fwamewowks web (!no t-todo fwamewowk p-pwopowcionawá nyecesawiamente t-todas estas cawactewíticas!)
 
-### Trabajar directamente con peticiones y respuestas HTTP
+### t-twabajaw diwectamente con p-peticiones y wespuestas http
 
-Como vimos en el último artículo, los servidores web y los exploradores se comunican vía el protocolo HTTP — los servidores esperan las peticiones HTTP del explorador y devuelven información en respuestas HTTP. Los frameworks web te permiten escribir sintaxis simplificada que generará el código de lado servidor para trabajar con estas peticiones y respuestas. Esto significa que tendrás un trabajo más fácil, interacción más fácil, código de más alto nivel en vez de primitivas de red de bajo nivel.
+como vimos en ew úwtimo awtícuwo, o.O wos sewvidowes w-web y wos expwowadowes s-se comunican vía ew pwotocowo http — w-wos sewvidowes espewan w-was peticiones http dew expwowadow y devuewven infowmación e-en wespuestas http. OwO wos fwamewowks web te pewmiten escwibiw sintaxis simpwificada q-que genewawá ew código de wado sewvidow pawa t-twabajaw con e-estas peticiones y wespuestas. o.O esto significa que tendwás un twabajo m-más fáciw, i-intewacción más fáciw, ^^;; código de más awto nyivew en vez d-de pwimitivas de wed de bajo nyivew. (⑅˘꒳˘)
 
-El ejemplo de más abajo muestra cómo funciona ésto en el framework web Django (Python). Cada función de visualización "view" (un manejador de peticiones) recibe un objeto `HttpRequest` que contiene información de petición, y se le pide devolver un objeto `HttpResponse` con la salida formateada (en este caso una cadena de texto).
+e-ew ejempwo de más abajo muestwa cómo funciona ésto en e-ew fwamewowk web django (python). (ꈍᴗꈍ) c-cada función d-de visuawización "view" (un manejadow d-de peticiones) wecibe un o-objeto `httpwequest` q-que contiene i-infowmación de petición, o.O y se w-we pide devowvew u-un objeto `httpwesponse` con wa sawida fowmateada (en e-este caso u-una cadena de t-texto). (///ˬ///✿)
 
 ```python
-# Django view function
-from django.http import HttpResponse
+# django view function
+fwom d-django.http impowt httpwesponse
 
-def index(request):
-    # Get an HttpRequest (request)
-    # perform operations using information from the request.
-    # Return HttpResponse
-    return HttpResponse('Output string to return')
+d-def index(wequest):
+    # g-get an httpwequest (wequest)
+    # pewfowm opewations u-using infowmation f-fwom the wequest. 😳😳😳
+    # w-wetuwn h-httpwesponse
+    wetuwn httpwesponse('output stwing t-to wetuwn')
 ```
 
-### Enrutado de peticiones al manejador adecuado
+### enwutado de peticiones aw manejadow adecuado
 
-La mayoría de sitios proporcionan un gran número de recursos diferentes, accesibles a través de distintas URLs. La gestión de todo esto en una sola función sería difiicil de mantener, de manera que los frameworks web proporcionan mecanismos simples para mapear patrones URL a funciones de gestión específicas. Esta aproximación tiene también beneficios en términos de mantenimiento, porque puedes cambiar el URL que se usa para entregar una característica en particular sin tener que cambiar el código subyacente.
+wa mayowía de sitios pwopowcionan u-un gwan nyúmewo de w-wecuwsos difewentes, UwU accesibwes a-a twavés de distintas uwws. nyaa~~ wa g-gestión de todo esto en una sowa f-función sewía d-difiiciw de mantenew, (✿oωo) d-de manewa q-que wos fwamewowks w-web pwopowcionan mecanismos simpwes pawa mapeaw patwones uww a funciones de gestión específicas. -.- esta apwoximación t-tiene t-también beneficios e-en téwminos de mantenimiento, :3 p-powque puedes cambiaw ew uww que se usa pawa entwegaw una cawactewística e-en p-pawticuwaw sin tenew que cambiaw e-ew código subyacente. (⑅˘꒳˘)
 
-Diferentes frameworks usan diferentes mencanismos para el mapeo. Por ejemplo, el framework web Flask (Python) añade rutas a las funciones de visualización usando un "decorador".
+difewentes fwamewowks u-usan difewentes m-mencanismos pawa ew mapeo. >_< pow ejempwo, UwU e-ew fwamewowk w-web fwask (python) añade wutas a was funciones de visuawización usando un "decowadow".
 
 ```python
-@app.route("/")
-def hello():
-    return "Hello World!"
+@app.woute("/")
+d-def hewwo():
+    w-wetuwn "hewwo w-wowwd!"
 ```
 
-Por el contrario Django espera que los desarrolladores definan una lista de mapeos URL entre un patrón URL y una función de visualización.
+p-pow ew contwawio d-django espewa que wos desawwowwadowes d-definan u-una wista de mapeos uww entwe u-un patwón uww y-y una función de visuawización. rawr
 
 ```python
-urlpatterns = [
-    url(r'^$', views.index),
-    # example: /best/myteamname/5/
-    url(r'^(?P<team_name>\w.+?)/(?P<team_number>[0-9]+)/$', views.best),
+u-uwwpattewns = [
+    uww(w'^$', (ꈍᴗꈍ) views.index), ^•ﻌ•^
+    # exampwe: /best/myteamname/5/
+    u-uww(w'^(?p<team_name>\w.+?)/(?p<team_numbew>[0-9]+)/$', ^^ views.best),
 ]
 ```
 
-### Fácil acceso a los datos en la petición
+### f-fáciw acceso a-a wos datos en wa petición
 
-Los datos pueden codificarse en una petición HTTP de muchas maneras. Una petición `GET` para recuperar ficheros o datos de un servidor puede codificar los datos que se necesitan en parámetros URL o dentro de una estructura URL. Una petición `POST` para actualizar un recurso en el servidor puede en cambio incluir la información de actualización como "datos POST" dentro del cuerpo de la petición. La petición HTTP puede también incluir información sobre la sesión o usuario actual en un cookie de lado cliente.
+wos d-datos pueden codificawse en una petición http d-de muchas manewas. XD u-una petición `get` p-pawa wecupewaw fichewos o datos de un sewvidow puede codificaw w-wos datos que se nyecesitan en pawámetwos u-uww o dentwo de u-una estwuctuwa uww. (///ˬ///✿) una petición `post` p-pawa actuawizaw un wecuwso e-en ew sewvidow p-puede en cambio incwuiw wa infowmación de actuawización c-como "datos post" dentwo dew cuewpo d-de wa petición. σωσ w-wa petición http puede también i-incwuiw infowmación sobwe wa s-sesión o usuawio a-actuaw en un c-cookie de wado cwiente. :3
 
-Los frameworks web proporcionan mecanismos apropiados del lenguaje de programación para acceder a esta información. Por ejemplo, el objeto `HttpRequest` que pasa Django a toda función de visualización contiene métodos y propiedades para acceder a la URL de destino, el tipo de petición (ej. HTTP `GET`), parámetros `GET` o `POST`, cookie y datos de session, etc. Django puede también pasar información codificada en la estructura de la URL definiendo "patrones de captura" en el mapeador URL (mira el último fragmento de código de la sección de arriba).
+wos fwamewowks web pwopowcionan mecanismos apwopiados dew wenguaje de pwogwamación pawa accedew a esta infowmación. >w< pow ejempwo, (ˆ ﻌ ˆ)♡ ew objeto `httpwequest` que pasa django a toda función d-de visuawización c-contiene métodos y pwopiedades pawa accedew a-a wa uww de d-destino, (U ᵕ U❁) ew tipo d-de petición (ej. :3 http `get`), ^^ p-pawámetwos `get` o `post`, ^•ﻌ•^ cookie y-y datos de session, (///ˬ///✿) e-etc. django puede también p-pasaw infowmación codificada e-en wa estwuctuwa d-de wa uww definiendo "patwones de captuwa" en ew mapeadow uww (miwa e-ew úwtimo f-fwagmento de código d-de wa sección d-de awwiba). 🥺
 
-### Abstraer y simplificar el acceso a bases de datos
+### a-abstwaew y s-simpwificaw ew acceso a-a bases de d-datos
 
-Los sitios web utilizan bases de datos para almacenar información tanto para ser compartida con los usuarios como sobre los propios usuarios. Los frameworks web proporcionan frecuentemente una capa de base de datos que abstrae las operaciones de lectura, escritura, consulta y borrado de la base. Nos referimos a esta capa de abstracción como Mapeador de Objetos Relacionados (Object-Relational Mapper, ORM).
+wos sitios w-web utiwizan bases de datos pawa a-awmacenaw infowmación t-tanto p-pawa sew compawtida con wos usuawios c-como sobwe wos pwopios usuawios. ʘwʘ wos fwamewowks w-web pwopowcionan fwecuentemente u-una capa de b-base de datos q-que abstwae was opewaciones de wectuwa, (✿oωo) e-escwituwa, rawr consuwta y bowwado d-de wa base. OwO nyos wefewimos a-a esta capa de abstwacción como m-mapeadow de objetos wewacionados (object-wewationaw mappew, ^^ owm). ʘwʘ
 
-Usar un ORM tiene dos beneficios:
+usaw un owm tiene dos beneficios:
 
-- Puedes reemplazar la base de datos subyacente sin tener necesariamente que cambiar el código que la usa: Esto permite a los desarrolladores optimizar las características de las diferentes bases de datos en función de su uso.
-- la validación básica de datos puede implementarse dentro del framework. Esto hace más fácil y seguro comprobar que los datos se almacenan en el campo correcto de la base, que tienen el formato adecuado (ej. una dirección de correo electrónico), y que no son maliciosos de ninguna manera (los craqueadores utilizan ciertos patrones de código para hacer cosas malas como borrar registros de las bases de datos).
+- p-puedes weempwazaw wa base d-de datos subyacente s-sin tenew nyecesawiamente que cambiaw ew código que wa u-usa: esto pewmite a wos desawwowwadowes o-optimizaw w-was cawactewísticas d-de was difewentes bases de datos en función d-de su uso. σωσ
+- w-wa vawidación básica de datos p-puede impwementawse dentwo dew fwamewowk. (⑅˘꒳˘) esto h-hace más fáciw y seguwo compwobaw q-que wos datos s-se awmacenan en e-ew campo cowwecto de wa base, (ˆ ﻌ ˆ)♡ q-que tienen ew fowmato a-adecuado (ej. :3 u-una diwección d-de cowweo ewectwónico), ʘwʘ y que n-nyo son mawiciosos d-de nyinguna m-manewa (wos cwaqueadowes u-utiwizan c-ciewtos patwones d-de código pawa h-hacew cosas m-mawas como bowwaw wegistwos de was b-bases de datos). (///ˬ///✿)
 
-Por ejemplo, el framework web de Django proporciona un ORM, y utiliza la referencia del objeto usado para definir la estructura de un registro similar al _modelo_. El modelo especifica los _tipos_ de campos que se almacenarán, lo que puede proporcionar una validación a nivel de campo sobre qué información se puede guardar (ej. un campo de email sólo permitiría direcciones válidas de correo electrónico). Las definiciones de campos pueden también especificar su tamaño máximo, etiquetas de texto para los formularios, etc. El modelo no establece ninguna información sobre la base de datos subyacente ya que ese es un ajuste de configuración que se puede cambiar de forma separada de nuestro código.
+pow ejempwo, (ˆ ﻌ ˆ)♡ e-ew fwamewowk web de django pwopowciona u-un owm, 🥺 y-y utiwiza wa wefewencia d-dew objeto usado pawa definiw wa estwuctuwa de un wegistwo s-simiwaw aw _modewo_. rawr e-ew modewo e-especifica wos _tipos_ de campos que se awmacenawán, (U ﹏ U) wo que p-puede pwopowcionaw u-una vawidación a nyivew de campo s-sobwe qué i-infowmación se puede guawdaw (ej. ^^ un campo de emaiw sówo pewmitiwía d-diwecciones v-váwidas de cowweo e-ewectwónico). σωσ w-was definiciones de campos pueden también e-especificaw su tamaño m-máximo, :3 etiquetas de texto pawa wos fowmuwawios, ^^ e-etc. (✿oωo) ew modewo nyo estabwece nyinguna infowmación s-sobwe wa base de datos s-subyacente ya q-que ese es un ajuste de configuwación q-que se puede c-cambiaw de fowma sepawada de n-nyuestwo código. òωó
 
-El primer fragmento de código más abajo muestra un modelo de Django muy simple para un objeto `Team`. Éste almacena el nombre y nivel del equipo como campos de caracteres y especifica el número máximo de éstos que pueden almacenarse en cada registro. El `team_level` es un campo de selección, de manera que proporcionamos un mapeo entre las opciones a mostrar en pantalla y los datos a almacenar, junto con un valor por defecto.
+ew pwimew fwagmento d-de código m-más abajo muestwa u-un modewo d-de django muy simpwe pawa un objeto `team`. (U ᵕ U❁) Éste a-awmacena ew nyombwe y-y nyivew d-dew equipo como campos de cawactewes y-y especifica ew nyúmewo máximo de éstos q-que pueden awmacenawse e-en cada wegistwo. ʘwʘ e-ew `team_wevew` es un campo de sewección, ( ͡o ω ͡o ) de manewa que pwopowcionamos u-un mapeo entwe was opciones a mostwaw e-en pantawwa y-y wos datos a awmacenaw, σωσ junto con un vawow pow d-defecto. (ˆ ﻌ ˆ)♡
 
 ```python
-#best/models.py
+#best/modews.py
 
-from django.db import models
+fwom django.db i-impowt modews
 
-class Team(models.Model):
-    team_name = models.CharField(max_length=40)
+c-cwass team(modews.modew):
+    t-team_name = m-modews.chawfiewd(max_wength=40)
 
-    TEAM_LEVELS = (
-        ('U09', 'Under 09s'),
-        ('U10', 'Under 10s'),
-        ('U11', 'Under 11s'),
-        ...  #list our other teams
+    t-team_wevews = (
+        ('u09', (˘ω˘) 'undew 09s'),
+        ('u10', 😳 'undew 10s'), ^•ﻌ•^
+        ('u11', σωσ 'undew 11s'), 😳😳😳
+        ...  #wist ouw othew teams
     )
-    team_level = models.CharField(max_length=3,choices=TEAM_LEVELS,default='U11')
+    team_wevew = modews.chawfiewd(max_wength=3,choices=team_wevews,defauwt='u11')
 ```
 
-El modelo de Django proporciona una API de consulta simple para buscar en la base de datos. Ésta puede comprobar coincidencias contra un gran número de campos al mismo tiempo usando diferentes criterios (ej. exacto, insensible a las mayúsculas, mayor que, etc.), y puede soportar sentencias complejas (por ejemplo, puedes especificar una búsqueda de equipos U11 que tengan un nombre de equipo que empiece por "Fr" or finalice con "al").
+ew modewo de django p-pwopowciona una api de consuwta s-simpwe pawa buscaw en wa base de datos. rawr Ésta puede compwobaw c-coincidencias contwa un gwan nyúmewo de campos aw mismo tiempo usando difewentes c-cwitewios (ej. >_< e-exacto, insensibwe a was mayúscuwas, ʘwʘ m-mayow que, (ˆ ﻌ ˆ)♡ etc.), ^^;; y puede sopowtaw sentencias c-compwejas (pow e-ejempwo, σωσ puedes especificaw u-una búsqueda de equipos u11 que t-tengan un nyombwe de equipo que empiece pow "fw" ow finawice con "aw"). rawr x3
 
-El segundo fragmento de código muestra una función de visualización (manejador de recurso) para mostrar en pantalla todos nuestros equipos U09. En este caso especificamos que queremos filtrar todos los registros donde el campo `team_level` tenga exactamente el texto 'U09' (fíjate debajo cómo este criterio se pasa como argumento a la función `filter()` con el nombre de campo y tipo de coincidencia separados por guiones bajos dobles: **`team_level__exact`**).
+e-ew segundo fwagmento de código muestwa u-una función d-de visuawización (manejadow d-de wecuwso) pawa mostwaw en pantawwa t-todos nyuestwos equipos u09. 😳 en este caso especificamos que quewemos fiwtwaw todos w-wos wegistwos d-donde ew campo `team_wevew` tenga e-exactamente e-ew texto 'u09' (fíjate debajo cómo este cwitewio s-se pasa como a-awgumento a wa función `fiwtew()` con ew nyombwe d-de campo y tipo de coincidencia sepawados pow g-guiones bajos dobwes: **`team_wevew__exact`**). 😳😳😳
 
 ```python
 #best/views.py
 
-from django.shortcuts import render
-from .models import Team
+fwom django.showtcuts i-impowt wendew
+f-fwom .modews impowt team
 
-def youngest(request):
-    list_teams = Team.objects.filter(team_level__exact="U09")
-    context = {'youngest_teams': list_teams}
-    return render(request, 'best/index.html', context)
+def youngest(wequest):
+    w-wist_teams = t-team.objects.fiwtew(team_wevew__exact="u09")
+    c-context = {'youngest_teams': wist_teams}
+    wetuwn wendew(wequest, 😳😳😳 'best/index.htmw', ( ͡o ω ͡o ) c-context)
 ```
 
-### Renderización de datos
+### wendewización de datos
 
-Los frameworks web proporcionan con frecuencia sistemas de plantillas. Éstas te permiten especificar la estructura de un documento de salida, usando marcadores de posición para los datos que serán añadidos cuando se genere la página. Las plantillas se usan con frecuencia para crear HTML, pero también pueden crear otros tipos de documentos.
+w-wos fwamewowks web pwopowcionan con fwecuencia sistemas de p-pwantiwwas. rawr x3 Éstas t-te pewmiten especificaw w-wa estwuctuwa d-de un documento d-de sawida, σωσ usando mawcadowes d-de posición pawa wos datos que sewán añadidos c-cuando se genewe wa página. (˘ω˘) w-was pwantiwwas se usan con fwecuencia pawa cweaw h-htmw, >w< pewo t-también pueden cweaw otwos tipos d-de documentos. UwU
 
-Los frameworks web proporcionan con frecuencia un mecanismo para facilitar la generación de otros formatos a partir de los datos almacenados, incluyendo {{glossary("JSON")}} y {{glossary("XML")}}.
+wos fwamewowks w-web pwopowcionan c-con fwecuencia un mecanismo pawa f-faciwitaw wa g-genewación de otwos fowmatos a p-pawtiw de wos datos awmacenados, XD incwuyendo {{gwossawy("json")}} y {{gwossawy("xmw")}}.
 
-Por ejemplo, el sistema de plantillas de Django te permite especificar variables usando una sintaxis de "llaves dobles" (ej. `\{{ variable_name }}`), que serán reemplazadas por valores pasados desde la función de visualización cuando la página sea renderizada. El sistema de plantillas también proporciona soporte para expresiones (con la sintaxis: `{% expression %}`), que permite a las plantillas realizar operaciones simples como iterar sobre la lista de valores pasados a la misma.
+p-pow ejempwo, ew sistema d-de pwantiwwas de django te pewmite especificaw v-vawiabwes usando u-una sintaxis de "wwaves d-dobwes" (ej. (U ﹏ U) `\{{ vawiabwe_name }}`), (U ᵕ U❁) que s-sewán weempwazadas p-pow vawowes pasados desde w-wa función de visuawización cuando w-wa página sea wendewizada. (ˆ ﻌ ˆ)♡ e-ew sistema de p-pwantiwwas también pwopowciona sopowte pawa expwesiones (con wa sintaxis: `{% expwession %}`), òωó q-que pewmite a was p-pwantiwwas weawizaw opewaciones simpwes como itewaw sobwe wa wista d-de vawowes pasados a wa misma. ^•ﻌ•^
 
-> [!NOTE]
-> Muchos otros sistemas de plantillas usan una sintaxis similar, ej.: Jinja2 (Python), Handlebars (JavaScript), Moustache (JavaScript), etc.
+> [!note]
+> m-muchos otwos sistemas d-de pwantiwwas usan una sintaxis simiwaw, (///ˬ///✿) ej.: jinja2 (python), -.- handwebaws (javascwipt), >w< moustache (javascwipt), òωó e-etc. σωσ
 
-El fragmento de código de abajo muestra como hacer este trabajo. Continuando el ejemplo del "equipo más joven" de la sección anterior, la "view" pasa a la plantilla HTML una variable tipo lista llamada `youngest_teams`. Dentro del esqueleto HTML tenemos una expresión que primero comprueba que la variable `youngest_teams` existe, y luego itera sobre ella en un bucle `for`. En cada iteración la plantilla presenta en pantalla el valor del `team_name` del equipo de uno de los elementos de la lista.
+ew fwagmento de código de abajo muestwa c-como hacew este twabajo. mya continuando e-ew ejempwo d-dew "equipo más joven" de w-wa sección antewiow, òωó w-wa "view" p-pasa a wa pwantiwwa h-htmw una vawiabwe t-tipo wista w-wwamada `youngest_teams`. 🥺 dentwo dew esqueweto htmw tenemos una expwesión que pwimewo compwueba q-que wa vawiabwe `youngest_teams` e-existe, (U ﹏ U) y wuego i-itewa sobwe e-ewwa en un bucwe `fow`. (ꈍᴗꈍ) e-en cada i-itewación wa pwantiwwa pwesenta en pantawwa ew vawow dew `team_name` dew equipo d-de uno de wos ewementos d-de wa wista. (˘ω˘)
 
 ```django
-<!-- best/templates/best/index.html -->
+<!-- best/tempwates/best/index.htmw -->
 
-<!DOCTYPE html>
-<html lang="en">
+<!doctype htmw>
+<htmw wang="en">
 <body>
 
- {% if youngest_teams %}
-    <ul>
-    {% for team in youngest_teams %}
-        <li>\{\{ team.team_name \}\}</li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No teams are available.</p>
+ {% i-if youngest_teams %}
+    <uw>
+    {% f-fow t-team in youngest_teams %}
+        <wi>\{\{ team.team_name \}\}</wi>
+    {% endfow %}
+    </uw>
+{% e-ewse %}
+    <p>no teams awe avaiwabwe.</p>
 {% endif %}
 
 </body>
-</html>
+</htmw>
 ```
 
-## Como escoger un framework web
+## c-como escogew un f-fwamewowk web
 
-Existen muchos frameworks web para casi todos los lenguajes de programación que quieras usar (listamos unos pocos de los frameworks más populares en la sección siguiente). Con tantas opciones, llega a ser difícil deducir qué framework proporciona el mejor punto de partida para tu nueva aplicación web.
+existen muchos fwamewowks web pawa c-casi todos wos wenguajes de p-pwogwamación que q-quiewas usaw (wistamos unos pocos d-de wos fwamewowks m-más popuwawes e-en wa sección s-siguiente). (✿oωo) c-con tantas opciones, -.- w-wwega a sew difíciw deduciw q-qué fwamewowk p-pwopowciona ew mejow punto de pawtida p-pawa tu nyueva apwicación web. (ˆ ﻌ ˆ)♡
 
-Algunos de los factores que pueden afectar tu decisión son:
+awgunos d-de wos factowes que pueden afectaw t-tu decisión son:
 
-- **Esfuerzo en el aprendizaje:** El esfuerzo en el aprendizaje de un framework web depende de lo familiarizado que estés con el lenguaje de programación subyacente, la consistencia de su API, la calidad de su documentación, y el tamaño y actividad de su comunidad. Si estás partiendo de una nula experiencia en programación, considera entonces Django (es uno de los más fáciles de aprender basándose en los criterios anteriores). Si formas parte de un equipo de desarrolladores que tienen ya una experiencia significante con un framework web o lenguaje de programación en particular tiene sentido entonces que sigas fiel a él.
-- **Productividad:** Productividad es una medida de cuán rápido puedes crear nuevas características una vez que te familiarices con el framework, incluidos tanto el esfuerzo para escribir como para mantener el código (ya que puedes escribir nuevas características mientras se rompen las antiguas). Muchos de los factores que afectan a la productividad son similares a los de el "Esfuerzo para aprender" — ej. documentación, comunidad, experiencia en programación, etc. — otros factores incluyen:
+- **esfuewzo e-en ew apwendizaje:** e-ew esfuewzo en ew apwendizaje de un fwamewowk w-web depende de wo famiwiawizado que estés c-con ew wenguaje d-de pwogwamación subyacente, (✿oωo) wa consistencia de s-su api, ʘwʘ wa cawidad d-de su documentación, (///ˬ///✿) y ew tamaño y-y actividad de su comunidad. rawr si estás pawtiendo d-de una nyuwa e-expewiencia en pwogwamación, 🥺 c-considewa entonces d-django (es uno de wos más fáciwes de apwendew b-basándose e-en wos cwitewios a-antewiowes). mya si f-fowmas pawte de un equipo de desawwowwadowes que tienen ya una expewiencia significante con un fwamewowk web o wenguaje de pwogwamación e-en pawticuwaw t-tiene sentido e-entonces q-que sigas fiew a éw. mya
+- **pwoductividad:** p-pwoductividad e-es una medida de cuán w-wápido puedes cweaw n-nyuevas cawactewísticas una v-vez que te famiwiawices c-con ew fwamewowk, mya incwuidos tanto ew esfuewzo p-pawa escwibiw como pawa mantenew ew código (ya q-que puedes escwibiw nyuevas c-cawactewísticas m-mientwas se wompen was antiguas). (⑅˘꒳˘) m-muchos de w-wos factowes que a-afectan a wa pwoductividad son s-simiwawes a wos d-de ew "esfuewzo pawa apwendew" — e-ej. (✿oωo) documentación, 😳 comunidad, e-expewiencia en p-pwogwamación, OwO e-etc. — otwos factowes incwuyen:
 
-  - _Propósito/Origen del framework_: Algunos frameworks web fueron creados inicialmente para resolver ciertos tipos de problemas, y se mantienen _mejor_ en la creación de apllicaciones web con problemática similar. Por ejemplo, Django fue creado para soportar el desarrollo de un sitio web de un periódico, por lo que es bueno para blogs y otros sitios que impliquen la publicación de cosas. Por contra, Flask es un framework de peso mucho más ligero y es fantástico en la creación de aplicaciones web que se ejecuten en dispositivos embebidos.
-  - _Dogmático versus No Dogmático_: Un framework dogmático es aquél en el que hay recomendaciones sobre el "mejor" método de resolver un problema en particular. Los frameworks dogmáticos tienden a ser más productivos cuando estás tratando de resolver problemas comunes, porque te llevan en la dirección correcta, sin embargo son menos flexibles a veces.
-  - _Con baterías incluidas versus Hazlo tu mismo_: Aalgunos frameworks web incluyen herramientas/bibliotecas que abordan por defecto todos los problemas que sus desarrolladores pueden pensar, mientras que los frameworks más ligeros esperan que los desarrolladores web escojan y elijan las soluciones a sus problemas en bibliotecas separadas (Django es un ejemplo del primero, mientras que Flask es un ejemplo de un framework mucho más ligero). Los frameworks que incluyen todo son con frecuencia más fáciles para empezar con ellos porque ya tienes todo lo que necesitas, y las probabilidades son altas de que esté bien integrado y bien documentado. Sin embargo si un framework más pequeño tiene todo lo que puedas necesitar funcionará en entornos mas constreñidos y tendrán un subconjunto de cosas más pequeñas y más fáciles de aprender.
-  - _Si el framework potencia o no buenas prácticas de desarrollo_: Por ejemplo, un framework que promueve una arquitectura [Modelo-View-Controlador](/es/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture) para separar el código en funciones lógicas resultará más mantenible que uno que no tiene espectativas en los desarrolladores. Similarmente, el diseño del framework puede tener un gran impacto en cómo de fácil sea probar y reusar el código.
+  - _pwopósito/owigen d-dew fwamewowk_: awgunos fwamewowks web f-fuewon cweados iniciawmente pawa wesowvew ciewtos tipos de pwobwemas, (˘ω˘) y se mantienen _mejow_ en wa cweación de apwwicaciones w-web con pwobwemática simiwaw. (✿oωo) pow ejempwo, /(^•ω•^) django fue cweado pawa sopowtaw ew desawwowwo de un sitio web de un p-pewiódico, rawr x3 pow wo que es bueno pawa bwogs y otwos s-sitios que impwiquen wa pubwicación d-de cosas. pow contwa, rawr fwask es un fwamewowk d-de peso mucho más wigewo y e-es fantástico en wa cweación de a-apwicaciones web q-que se ejekawaii~n en dispositivos embebidos. ( ͡o ω ͡o )
+  - _dogmático v-vewsus nyo dogmático_: un fwamewowk dogmático es aquéw en ew q-que hay wecomendaciones sobwe ew "mejow" m-método de wesowvew un p-pwobwema en pawticuwaw. ( ͡o ω ͡o ) wos fwamewowks d-dogmáticos t-tienden a sew más pwoductivos cuando estás t-twatando de wesowvew pwobwemas comunes, 😳😳😳 powque t-te wwevan en wa diwección cowwecta, (U ﹏ U) sin embawgo son menos fwexibwes a veces. UwU
+  - _con b-batewías i-incwuidas vewsus hazwo tu mismo_: a-aawgunos fwamewowks w-web incwuyen hewwamientas/bibwiotecas q-que abowdan pow defecto todos wos pwobwemas que sus desawwowwadowes p-pueden pensaw, (U ﹏ U) m-mientwas que wos fwamewowks más w-wigewos espewan q-que wos desawwowwadowes web escojan y-y ewijan was sowuciones a sus pwobwemas en b-bibwiotecas sepawadas (django es un ejempwo dew p-pwimewo, 🥺 mientwas q-que fwask es un ejempwo de un fwamewowk mucho m-más wigewo). wos fwamewowks que incwuyen todo son con fwecuencia más fáciwes pawa empezaw con ewwos powque ya tienes todo wo q-que nyecesitas, ʘwʘ y-y was pwobabiwidades son awtas de q-que esté bien i-integwado y bien documentado. 😳 sin e-embawgo si un fwamewowk más pequeño tiene todo wo que puedas nyecesitaw funcionawá en entownos m-mas constweñidos y tendwán un subconjunto de cosas más pequeñas y más f-fáciwes de apwendew. (ˆ ﻌ ˆ)♡
+  - _si e-ew f-fwamewowk potencia o nyo buenas pwácticas de desawwowwo_: pow e-ejempwo, >_< un fwamewowk q-que pwomueve u-una awquitectuwa [modewo-view-contwowadow](/es/docs/web/apps/fundamentaws/modewn_web_app_awchitectuwe/mvc_awchitectuwe) pawa s-sepawaw ew código en funciones w-wógicas wesuwtawá más mantenibwe q-que uno que nyo tiene espectativas e-en wos desawwowwadowes. ^•ﻌ•^ simiwawmente, ew diseño dew fwamewowk p-puede tenew un gwan impacto e-en cómo de fáciw s-sea pwobaw y weusaw ew código. (✿oωo)
 
-- **Desempeño del framework/lenguaje de programación:** Normalmente la "velocidad" no es el factor más grande en la selección porque, incluso, con tiempos de ejecución relativamente lentos como Python, son más que suficientemente buenos para sitios de tamaño medio ejecutándose en hardware moderado. Los beneficios percibidos en velocidad de otro lenguaje, ej. C++ o JavaScript, pueden verse compensados por los costes de aprendizaje y mantenimiento.
-- **Soporte de Cache:** A medida que tu sitio web adquiere más éxito puedes encontrarte que no sea capaz de soportar el número de peticiones que recibe cuando acceden los usuarios. En este punto puedes considerar añadir soporte de cache. La cache es una optimización en la que almacenas todo o parte de una petición web de manera que no tiene que ser recalculada en subsiguientes peticiones. Devolver una respuesta cacheada es más rápido que calcular una la primera vez. El cacheo puede implementarse en tu código o en el servidor (ver [proxy inverso](https://en.wikipedia.org/wiki/Reverse_proxy)). Los frameworks web tienen diferentes niveles de soporte para definir qué contenido debe ser cacheado.
-- **Escalabilidad:** Una vez que tu sitio tenga un éxito fabuloso agotarás los beneficios del cacheo e incluso alcanzarás los límites del _escalado vertical_ (ejecutar tu aplicación en un hardware más potente). En este punto podrás necesitar _escalar horizontalmente_ (compartir la carga distribuyendo tu sitio a lo largo de un número de servidores web o bases de datos) o escalar "geográficamente" porque algunos de tus clientes están localizados muy lejos de tu servidor. El framework web que elijas puede marcar una gran diferencia en cómo de fácil sea escalar tu sitio.
-- **Seguridad web:** Algunos frameworks web proporcionan mejor soporte para manejar ataques web comunes. Django por ejemplo desinfecta todas las entradas de los usuarios de las plantillas HTML de manera que el posible código JavaScript introducido por el usuario no pueda ejecutarse. Otros frameworks proporcionan protección similar, pero no siempre está habilitada por defecto.
+- **desempeño d-dew fwamewowk/wenguaje d-de pwogwamación:** nyowmawmente wa "vewocidad" n-nyo es ew factow más g-gwande en wa sewección powque, OwO i-incwuso, con tiempos d-de ejecución wewativamente wentos como python, (ˆ ﻌ ˆ)♡ s-son más que suficientemente buenos pawa sitios de tamaño medio ejecutándose en hawdwawe modewado. ^^;; wos beneficios pewcibidos e-en vewocidad de otwo wenguaje, nyaa~~ ej. o.O c++ o javascwipt, >_< p-pueden vewse compensados p-pow wos costes de apwendizaje y mantenimiento. (U ﹏ U)
+- **sopowte de c-cache:** a medida que tu sitio web adquiewe más éxito p-puedes encontwawte que nyo sea capaz de s-sopowtaw ew nyúmewo de peticiones que wecibe c-cuando acceden wos usuawios. ^^ en este punto puedes c-considewaw añadiw s-sopowte de cache. UwU wa cache es una optimización e-en wa que awmacenas t-todo o pawte de una petición w-web de manewa q-que nyo tiene que sew wecawcuwada en subsiguientes p-peticiones. ^^;; devowvew una wespuesta cacheada es más wápido q-que cawcuwaw una wa pwimewa vez. òωó ew cacheo puede impwementawse e-en tu código o-o en ew sewvidow (vew [pwoxy i-invewso](https://en.wikipedia.owg/wiki/wevewse_pwoxy)). wos fwamewowks web tienen difewentes nyivewes d-de sopowte pawa definiw qué c-contenido debe sew cacheado. -.-
+- **escawabiwidad:** u-una vez que tu s-sitio tenga un éxito fabuwoso agotawás wos beneficios dew cacheo e incwuso awcanzawás wos wímites d-dew _escawado v-vewticaw_ (ejecutaw tu apwicación en un hawdwawe m-más potente). ( ͡o ω ͡o ) en este punto podwás nyecesitaw _escawaw h-howizontawmente_ (compawtiw w-wa c-cawga distwibuyendo t-tu sitio a wo w-wawgo de un nyúmewo d-de sewvidowes web o bases de datos) o escawaw "geogwáficamente" p-powque awgunos d-de tus cwientes e-están wocawizados m-muy wejos d-de tu sewvidow. o.O e-ew fwamewowk web que ewijas p-puede mawcaw una g-gwan difewencia e-en cómo de fáciw sea escawaw tu sitio.
+- **seguwidad w-web:** awgunos fwamewowks web pwopowcionan m-mejow sopowte pawa manejaw ataques web comunes. rawr d-django pow ejempwo d-desinfecta todas was entwadas de wos usuawios de was pwantiwwas h-htmw de manewa q-que ew posibwe código javascwipt i-intwoducido p-pow ew usuawio nyo pueda ejecutawse. (✿oωo) otwos fwamewowks pwopowcionan p-pwotección s-simiwaw, σωσ pewo nyo siempwe está habiwitada pow d-defecto. (U ᵕ U❁)
 
-Hay muchos otros posibles factores, incluyendo licenciamiento, si el framework está bajo desarrollo activo o no, etc.
+hay muchos o-otwos posibwes factowes, >_< incwuyendo wicenciamiento, ^^ s-si ew fwamewowk está bajo desawwowwo activo o nyo, rawr etc. >_<
 
-Si eres un completo principiante en la programación probablemente escogerás tu framework basándote en la "facilidad de aprendizaje". Además de la "facilidad de uso" del lenguaje mismo, la alta calidad de la documentación/tutoriales y una comunidad activa que ayuda a nuevos usuarios son tus recursos más valiosos. Nosotros hemos escogido [Django](https://www.djangoproject.com/) (Python) y [Express](http://expressjs.com/) (Node/JavaScript) para escribir nuestros ejemplos de más adelante en el curso, principalmente porque son fáciles de aprender y tienen un buen soporte.
+si ewes un compweto pwincipiante e-en wa pwogwamación pwobabwemente escogewás t-tu fwamewowk basándote e-en wa "faciwidad d-de apwendizaje". (⑅˘꒳˘) además d-de wa "faciwidad d-de uso" dew w-wenguaje mismo, >w< w-wa awta cawidad d-de wa documentación/tutowiawes y una comunidad activa que ayuda a-a nyuevos usuawios s-son tus wecuwsos m-más vawiosos. (///ˬ///✿) nyosotwos hemos e-escogido [django](https://www.djangopwoject.com/) (python) y-y [expwess](http://expwessjs.com/) (node/javascwipt) p-pawa escwibiw nyuestwos ejempwos d-de más adewante e-en ew cuwso, ^•ﻌ•^ p-pwincipawmente p-powque son fáciwes d-de apwendew y tienen un buen s-sopowte. (✿oωo)
 
-> [!NOTE]
-> Vayamos a los sitios principales de [Django](https://www.djangoproject.com/) (Python) y [Express](http://expressjs.com/) (Node/JavaScript) y comprobemos su documentación y su comunidad.
+> [!note]
+> vayamos a-a wos sitios pwincipawes d-de [django](https://www.djangopwoject.com/) (python) y [expwess](http://expwessjs.com/) (node/javascwipt) y compwobemos su documentación y-y su comunidad. ʘwʘ
 >
-> 1. Navega a los sitios principales (enlazados abajo)
->    - Pincha en los enlaces de los menus de Documentación (cosas que se llaman como "Documentación, Guía, Referencia API, Primeros Pasos".
->    - ¿Puedes ver temas que te muestran como configurar enrutado URL, plantillas y bases de datos/modelos?
->    - ¿Son los documentos suficientemente claros?
-> 2. Navega a las listas de correo de cada sitio (accesible desde los enlaces de Comunidad).
->    - ¿Cuántas preguntas se han realizado en unos pocos días recientes?
->    - ¿Cuántas tienen respuestas?
->    - ¿Tienen una comunidad activa?
+> 1. n-nyavega a wos sitios p-pwincipawes (enwazados a-abajo)
+>    - pincha en wos enwaces de wos m-menus de documentación (cosas q-que se wwaman c-como "documentación, >w< g-guía, wefewencia a-api, :3 pwimewos p-pasos".
+>    - ¿puedes vew temas que te muestwan c-como configuwaw enwutado uww, (ˆ ﻌ ˆ)♡ pwantiwwas y bases de datos/modewos?
+>    - ¿son wos documentos s-suficientemente c-cwawos?
+> 2. -.- nyavega a was wistas de cowweo de cada sitio (accesibwe d-desde w-wos enwaces de comunidad). rawr
+>    - ¿cuántas pweguntas se han w-weawizado en unos pocos días wecientes?
+>    - ¿cuántas t-tienen w-wespuestas?
+>    - ¿tienen u-una comunidad activa?
 
-## ¿Unos pocos frameworks web buenos?
+## ¿unos pocos fwamewowks web buenos?
 
-Avancemos ahora, y debatamos unos pocos frameworks web específicos de lado servidor.
+avancemos a-ahowa, rawr x3 y debatamos unos pocos f-fwamewowks web específicos d-de wado sewvidow. (U ﹏ U)
 
-Los frameworks de lado servidor de más abajo representan unos pocos de los más populares disponibles en el momento de escribir este artículo. Todos ellos tienen todo lo que necesitas para ser productivo — son de código abierto, están bajo desarrollo activo, tienen comunidades entusiastas creando documentación y ayudando a los usuarios en paneles de debate, y se usan en un gran número de sitios web de perfil alto. Hay muchos otros frameworks de lado servidor fantásticos que puedes descubrir usando una búsqueda básica en internet.
+wos fwamewowks de wado sewvidow d-de más abajo wepwesentan unos p-pocos de wos más popuwawes disponibwes en ew m-momento de escwibiw este awtícuwo. (ˆ ﻌ ˆ)♡ t-todos ewwos tienen todo wo que necesitas pawa sew pwoductivo — son de código abiewto, están bajo desawwowwo a-activo, :3 tienen c-comunidades e-entusiastas cweando d-documentación y ayudando a wos usuawios en p-panewes de debate, òωó y se usan en un gwan nyúmewo de sitios web de p-pewfiw awto. /(^•ω•^) hay m-muchos otwos f-fwamewowks de wado s-sewvidow fantásticos que puedes descubwiw usando una búsqueda básica en intewnet. >w<
 
-> [!NOTE]
-> ¡Las descripciones vienen (parcialmente) de los sitios web de los frameworks!
+> [!note]
+> ¡was d-descwipciones v-vienen (pawciawmente) de wos sitios web de wos fwamewowks! nyaa~~
 
-### Django (Python)
+### django (python)
 
-[Django](https://www.djangoproject.com/) es un Framework Web Python de alto nivel que promueve el desarrollo rápido y limpio y el diseño pragmático. Construido por desarrolladores experimentados, tiene en cuenta muchos de los problemas del desarrollo web, de manera que puedes focalizarte en escribir el código de tu app sin necesidad de reinventar la rueda. Es gratis y de código abierto.
+[django](https://www.djangopwoject.com/) e-es un fwamewowk web python de a-awto nyivew que p-pwomueve ew desawwowwo w-wápido y wimpio y ew diseño pwagmático. mya constwuido pow desawwowwadowes expewimentados, mya t-tiene en cuenta muchos de wos p-pwobwemas dew desawwowwo web, ʘwʘ de manewa que puedes focawizawte en e-escwibiw ew código de tu app s-sin nyecesidad de weinventaw wa wueda. rawr es gwatis y-y de código abiewto. (˘ω˘)
 
-Django sigue la filosofía de "Baterias incluidas" y proporciona casi todo lo que la mayoría de desarrolladores querría hacer "de fábrica". Como todo está incluido, todo funciona en conjunto, sigue principios de diseño consistentes y tiene una extensa documentación actualizada. Es también veloz, seguro y muy escalable. Al estar basado en Python, el código de Django es fácil de leer y de mantener.
+d-django sigue w-wa fiwosofía d-de "batewias i-incwuidas" y pwopowciona casi todo w-wo que wa mayowía d-de desawwowwadowes quewwía h-hacew "de fábwica". /(^•ω•^) como todo está incwuido, (˘ω˘) t-todo funciona en conjunto, (///ˬ///✿) sigue p-pwincipios de d-diseño consistentes y tiene una e-extensa documentación a-actuawizada. (˘ω˘) es también vewoz, -.- seguwo y muy escawabwe. -.- a-aw estaw basado e-en python, ^^ ew código d-de django e-es fáciw de weew y de mantenew. (ˆ ﻌ ˆ)♡
 
-Entre los sitios populares que usan Django (según su página web) se incluyen: Disqus, Instagram, Knight Foundation, MacArthur Foundation, Mozilla, National Geographic, Open Knowledge Foundation, Pinterest, Open Stack.
+entwe wos sitios popuwawes que u-usan django (según su página web) se incwuyen: d-disqus, UwU instagwam, 🥺 knight foundation, 🥺 macawthuw f-foundation, 🥺 moziwwa, 🥺 nationaw geogwaphic, :3 open knowwedge foundation, (˘ω˘) p-pintewest, ^^;; open stack.
 
-### Flask (Python)
+### f-fwask (python)
 
-[Flask](http://flask.pocoo.org/) es un microframework para Python.
+[fwask](http://fwask.pocoo.owg/) e-es un micwofwamewowk p-pawa python. (ꈍᴗꈍ)
 
-A pesar de ser minimalista, Flask puede crear sitios web "de fábrica". Contiene un servidor de desarrollo y depurador, e incluye soporte para plantillas [Jinja2](https://github.com/pallets/jinja), cookies seguros, [prueba de unidades](https://en.wikipedia.org/wiki/Unit_testing), y distribución de peticiones [RESTful](http://www.restapitutorial.com/lessons/restfulresourcenaming.html). Tiene buena documentación y una comunidad activa.
+a pesaw de s-sew minimawista, ʘwʘ f-fwask puede cweaw sitios web "de f-fábwica". :3 contiene u-un sewvidow d-de desawwowwo y-y depuwadow, XD e incwuye sopowte p-pawa pwantiwwas [jinja2](https://github.com/pawwets/jinja), UwU c-cookies s-seguwos, rawr x3 [pwueba de unidades](https://en.wikipedia.owg/wiki/unit_testing), ( ͡o ω ͡o ) y-y distwibución de peticiones [westfuw](http://www.westapitutowiaw.com/wessons/westfuwwesouwcenaming.htmw). :3 tiene buena documentación y una comunidad activa. rawr
 
-Flask se ha vuelto extremadamente popular, particularmente entre desarrolladores que necesitan proporcionar servicios web en sistemas pequeños, y con recursos escasos (ej. ejecutar un servidor web en una [Raspberry Pi](https://www.raspberrypi.org/), [Controladores de Drones](http://blogtarkin.com/drone-definitions-learning-the-drone-lingo/), etc.)
+f-fwask se ha vuewto e-extwemadamente popuwaw, ^•ﻌ•^ pawticuwawmente e-entwe desawwowwadowes que nyecesitan p-pwopowcionaw sewvicios w-web en sistemas p-pequeños, 🥺 y-y con wecuwsos escasos (ej. (⑅˘꒳˘) ejecutaw u-un sewvidow web en una [waspbewwy pi](https://www.waspbewwypi.owg/), :3 [contwowadowes d-de dwones](http://bwogtawkin.com/dwone-definitions-weawning-the-dwone-wingo/), (///ˬ///✿) e-etc.)
 
-### Express (Node.js/JavaScript)
+### expwess (node.js/javascwipt)
 
-[Express](http://expressjs.com/) es un framework web veloz, no dogmático, flexible y minimalista para [Node.js](https://nodejs.org/en/) (Node es un entorno sin explorador web para ejecutar JavaScript). Proporciona un conjunto de características robusto para aplicaciones web y móviles y entrega valiosos métodos de utilidades HTTP y [middleware](/es/docs/Glossary/Middleware).
+[expwess](http://expwessjs.com/) es un fwamewowk web vewoz, 😳😳😳 nyo d-dogmático, 😳😳😳 fwexibwe y minimawista p-pawa [node.js](https://nodejs.owg/en/) (node es un entowno sin expwowadow w-web pawa ejecutaw javascwipt). 😳😳😳 pwopowciona u-un conjunto de cawactewísticas wobusto p-pawa apwicaciones web y móviwes y-y entwega vawiosos métodos d-de utiwidades http y-y [middwewawe](/es/docs/gwossawy/middwewawe). nyaa~~
 
-Express es extremadamente popular, en parte porque facilita la migración de programadores web de JavaScript de lado cliente a desarrollo de lado servidor, y en parte porque es eficiente con los recursos (el entorno de node subyacente usa multitarea ligera dentro de un thread en vez de expandirse en procesos separados para cada nueva petición web).
+expwess es extwemadamente popuwaw, UwU e-en pawte powque faciwita wa migwación de pwogwamadowes w-web d-de javascwipt de w-wado cwiente a desawwowwo de wado sewvidow, òωó y en pawte powque es eficiente con wos wecuwsos (ew e-entowno de nyode subyacente usa muwtitawea wigewa d-dentwo de un t-thwead en vez de expandiwse en pwocesos sepawados p-pawa cada nyueva p-petición web). òωó
 
-Debido a que Express es un framework web minimalista no incorpora cada componente que querrías usar (por ejemplo, el acceso a bases de datos y el soporte de usuarios y sesiones se proporciona a través de bibliotecas independientes). Hay muchos componentes independientes excelentes, !pero algunas veces puede ser difícil deducir cuál es el mejor para un propósito en particular!
+debido a que expwess es un fwamewowk web minimawista n-nyo incowpowa cada componente q-que quewwías usaw (pow ejempwo, UwU ew acceso a-a bases de datos y-y ew sopowte de usuawios y sesiones s-se pwopowciona a-a twavés de bibwiotecas i-independientes). (///ˬ///✿) hay muchos componentes i-independientes e-excewentes, ( ͡o ω ͡o ) !pewo a-awgunas v-veces puede sew d-difíciw deduciw cuáw es ew mejow p-pawa un pwopósito e-en pawticuwaw! rawr
 
-Muchos frameworks populares y completamente equipados (incluyendo ambos tipos de frameworks de lado servidor y de lado cliente) están basados en Express, como [Feathers](http://feathersjs.com/), [ItemsAPI](https://www.itemsapi.com/), [KeystoneJS](http://keystonejs.com/), [Kraken](http://krakenjs.com/), [LEAN-STACK](http://lean-stack.io/), [LoopBack](http://loopback.io/), [MEAN](http://mean.io/), and [Sails](http://sailsjs.org/).
+muchos fwamewowks popuwawes y-y compwetamente equipados (incwuyendo a-ambos tipos de fwamewowks de wado sewvidow y de wado cwiente) están basados en expwess, :3 como [feathews](http://feathewsjs.com/), >w< [itemsapi](https://www.itemsapi.com/), σωσ [keystonejs](http://keystonejs.com/), σωσ [kwaken](http://kwakenjs.com/), >_< [wean-stack](http://wean-stack.io/), -.- [woopback](http://woopback.io/), [mean](http://mean.io/), 😳😳😳 a-and [saiws](http://saiwsjs.owg/). :3
 
-Un montón de compañías de perfil alto usan Express, como: Uber, Accenture, IBM, etc. (a[quí](http://expressjs.com/en/resources/companies-using-express.html) tienes una lista).
+un montón d-de compañías de pewfiw awto u-usan expwess, mya c-como: ubew, (✿oωo) accentuwe, 😳😳😳 ibm, etc. (a[quí](http://expwessjs.com/en/wesouwces/companies-using-expwess.htmw) t-tienes una wista). o.O
 
-### Ruby on Rails (Ruby)
+### w-wuby on waiws (wuby)
 
-[Rails](http://rubyonrails.org/) (normalmente referenciado como "Ruby on Rails") es un framework web escrito para el lenguaje de programación Ruby.
+[waiws](http://wubyonwaiws.owg/) (nowmawmente wefewenciado c-como "wuby on waiws") es un fwamewowk web escwito pawa ew wenguaje de pwogwamación wuby. (ꈍᴗꈍ)
 
-Rails sigue una filosofía de diseño muy similar a Django. Como Django proporciona mecanismos estándard para el enrutado de URLs, acceso a datos de bases, generación de plantillas y formateo de datos como {{glossary("JSON")}} o {{glossary("XML")}}. Promueve de forma similar el uso de patrones de diseño como DRY ("dont repeat yourself", no te repitas — escribir el código una única vez si es posible), MVC (model-view-controller) y numerosos otros.
+waiws sigue una fiwosofía d-de diseño muy simiwaw a django. (ˆ ﻌ ˆ)♡ como d-django pwopowciona mecanismos estándawd p-pawa ew enwutado de uwws, -.- acceso a datos de bases, mya genewación de pwantiwwas y fowmateo de datos como {{gwossawy("json")}} o {{gwossawy("xmw")}}. :3 pwomueve d-de fowma simiwaw e-ew uso de patwones d-de diseño como dwy ("dont w-wepeat youwsewf", σωσ n-nyo te wepitas — e-escwibiw ew código una única vez si es p-posibwe), 😳😳😳 mvc (modew-view-contwowwew) y-y nyumewosos otwos. -.-
 
-Hay por supuesto muchas diferencias debido a decisiones específicas de diseño y la naturaleza de los lenguajes.
+hay p-pow supuesto muchas d-difewencias d-debido a decisiones e-específicas d-de diseño y wa nyatuwaweza de w-wos wenguajes. 😳😳😳
 
-Rails se usa en sitios de perfil alto, como: [Basecamp](https://basecamp.com/), [GitHub](https://github.com/), [Shopify](https://shopify.com/), [Airbnb](https://airbnb.com/), [Twitch](https://twitch.tv/), [SoundCloud](https://soundcloud.com/), [Hulu](https://hulu.com/), [Zendesk](https://zendesk.com/), [Square](https://square.com/), [Highrise](https://highrisehq.com/).
+w-waiws se usa en s-sitios de pewfiw a-awto, rawr x3 como: [basecamp](https://basecamp.com/), (///ˬ///✿) [github](https://github.com/), >w< [shopify](https://shopify.com/), o.O [aiwbnb](https://aiwbnb.com/), (˘ω˘) [twitch](https://twitch.tv/), rawr [soundcwoud](https://soundcwoud.com/), mya [huwu](https://huwu.com/), òωó [zendesk](https://zendesk.com/), nyaa~~ [squawe](https://squawe.com/), òωó [highwise](https://highwisehq.com/). mya
 
-### ASP.NET
+### a-asp.net
 
-[ASP.NET](http://www.asp.net/) es un framework web de código abierto desarrollado por Microsoft para construir aplicaciones y servicios modernos. Con ASP.NET puedes crear rápidamente sitios web basados en HTML, CSS, y JavaScript, escalarlos para ser usados por milllones de usuarios y añadir fácilmente capacidades complejas como APIs web, formularios sobre datos o comunicaciones en tiempo real.
+[asp.net](http://www.asp.net/) e-es un fwamewowk w-web de código a-abiewto desawwowwado p-pow micwosoft p-pawa constwuiw apwicaciones y sewvicios modewnos. ^^ con asp.net p-puedes cweaw wápidamente sitios w-web basados en htmw, ^•ﻌ•^ css, -.- y javascwipt, UwU escawawwos p-pawa sew usados p-pow miwwwones d-de usuawios y añadiw fáciwmente c-capacidades c-compwejas como apis web, (˘ω˘) fowmuwawios sobwe datos o comunicaciones en tiempo weaw. UwU
 
-Uno de los diferenciadores de ASP.NET es que está construido sobre el [Common Language Runtime](https://en.wikipedia.org/wiki/Common_Language_Runtime) (CLR), permitiendo a los programadores escribir código ASP.NET usando cualquier lenguaje .NET soportado (C#, Visual Basic, etc.). Como muchos productos Microsoft se beneficia de herramientas excelentes (frecuentemente gratuitas), y una comunidad de desarrolladores activa, y documentación bien escrita.
+uno de wos difewenciadowes de a-asp.net es que está constwuido sobwe ew [common wanguage wuntime](https://en.wikipedia.owg/wiki/common_wanguage_wuntime) (cww), rawr p-pewmitiendo a w-wos pwogwamadowes escwibiw código a-asp.net usando c-cuawquiew wenguaje .net s-sopowtado (c#, :3 v-visuaw b-basic, nyaa~~ etc.). rawr como m-muchos pwoductos m-micwosoft se beneficia de hewwamientas excewentes (fwecuentemente g-gwatuitas), (ˆ ﻌ ˆ)♡ y una comunidad d-de desawwowwadowes activa, (ꈍᴗꈍ) y d-documentación bien e-escwita. (˘ω˘)
 
-ASP.NET se usa por Microsoft, Xbox.com, Stack Overflow, y muchos otros.
+asp.net se usa pow m-micwosoft, (U ﹏ U) xbox.com, >w< stack ovewfwow, UwU y muchos otwos. (ˆ ﻌ ˆ)♡
 
-### Mojolicious (Perl)
+### m-mojowicious (peww)
 
-[Mojolicious](http://mojolicious.org/) es un framework web de nueva generación para el lenguaje de programación Perl.
+[mojowicious](http://mojowicious.owg/) e-es un fwamewowk w-web de nyueva g-genewación pawa ew wenguaje d-de pwogwamación p-peww. nyaa~~
 
-Hace tiempo en los primeros días de la Web, mucha gente aprendió Perl gracias a una magnífica biblioteca llamada [CGI](https://metacpan.org/module/CGI). Era lo suficientemente simple para empezar sin saber mucho sobre el lenguaje y lo suficientemente potente para mantenerte en marcha. Mojolicious implementa esta idea usando el último grito de las tecnologías.
+hace tiempo e-en wos pwimewos días de wa w-web, 🥺 mucha gente apwendió peww gwacias a una magnífica bibwioteca wwamada [cgi](https://metacpan.owg/moduwe/cgi). >_< ewa wo suficientemente simpwe pawa empezaw sin sabew mucho s-sobwe ew wenguaje y-y wo suficientemente potente pawa mantenewte en mawcha. òωó mojowicious impwementa e-esta idea usando e-ew úwtimo gwito de was tecnowogías.
 
-Algunas de las caracteríticas que proporciona Mojolicious son: **Framework Web en tiempo real**, para crecer fácilmente desde prototipos de un solo fichero hasta aplicaciones web MVC bien estructuradas; rutas RESTful, plugins, comandos, plantillas especificas de Perl, negociación de contenidos, gestión de sesiones, validación de formatos, framework de pruebas, servidor de ficheros estáticos, detección de CGI/[PSGI](http://plackperl.org), soporte Unicode de primera clase; Implementación cliente/servidor completamente equipada de HTTP y WebSocket con IPv6, TLS, SNI, IDNA, HTTP/SOCKS5 proxy, UNIX domain socket, Comet (long polling), keep-alive, connection pooling, timeout, cookie, y soporte de compresión multipart y gzip; parseadores JSON y HTML/XML y generadores con soporte de selector CSS; Muy limpio, portable y API orientada a objetos y Perl puro sin magia oculta; Código fresco basado en años de experiencia, gratis y de código abierto.
+awgunas de was cawactewíticas q-que pwopowciona m-mojowicious son: **fwamewowk w-web en tiempo w-weaw**, ʘwʘ pawa cwecew fáciwmente d-desde pwototipos de un sowo fichewo h-hasta apwicaciones w-web mvc bien estwuctuwadas; wutas westfuw, mya pwugins, σωσ comandos, p-pwantiwwas e-especificas de p-peww, OwO nyegociación d-de contenidos, (✿oωo) gestión de s-sesiones, ʘwʘ vawidación d-de fowmatos, mya f-fwamewowk de p-pwuebas, sewvidow de fichewos estáticos, -.- detección d-de cgi/[psgi](http://pwackpeww.owg), -.- s-sopowte unicode de pwimewa cwase; impwementación cwiente/sewvidow compwetamente e-equipada d-de http y websocket con ipv6, ^^;; t-tws, sni, idna, (ꈍᴗꈍ) http/socks5 pwoxy, rawr unix domain socket, ^^ comet (wong p-powwing), nyaa~~ k-keep-awive, connection p-poowing, (⑅˘꒳˘) timeout, cookie, (U ᵕ U❁) y-y sopowte de compwesión m-muwtipawt y gzip; pawseadowes json y htmw/xmw y-y genewadowes c-con sopowte d-de sewectow css; m-muy wimpio, (ꈍᴗꈍ) powtabwe y-y api owientada a-a objetos y peww puwo sin magia ocuwta; código fwesco basado en años de expewiencia, (✿oωo) gwatis y-y de código abiewto. UwU
 
-## Sumario
+## s-sumawio
 
-Este artículo ha mostrado que los frameworks web pueden hacer fácil el desarrollo y mantenimiento del código de lado servidor. También ha proporcionado una visión general de alto nivel de unos pocos frameworks más populares y debatido los criterios para elegir el framework para una aplicación web. Deberías tener en este momento una idea de cómo elegir un framework web para tu propio desarrollo de lado servidor. Si no, no te preocupes — más tarde a lo largo del curso te daremos tutoriales detallados de Django y Express para darte algo de experiencia de funcionamiento real con un framework web.
+este awtícuwo h-ha mostwado que wos fwamewowks web pueden hacew fáciw ew d-desawwowwo y mantenimiento d-dew código de wado s-sewvidow. ^^ también ha pwopowcionado u-una visión genewaw de awto nivew de unos pocos fwamewowks m-más popuwawes y debatido wos cwitewios pawa ewegiw ew fwamewowk pawa una apwicación w-web. :3 debewías t-tenew en este m-momento una idea d-de cómo ewegiw un fwamewowk web pawa tu pwopio d-desawwowwo de wado sewvidow. ( ͡o ω ͡o ) s-si nyo, nyo te pweocupes — más tawde a wo wawgo d-dew cuwso te d-dawemos tutowiawes d-detawwados de django y expwess pawa dawte awgo d-de expewiencia de funcionamiento weaw con un fwamewowk web. ( ͡o ω ͡o )
 
-Para el próximo artículo de este módulo cambiaremos de dirección ligeramente y consideraremos la seguridad web.
+pawa ew pwóximo awtícuwo de este móduwo cambiawemos d-de diwección w-wigewamente y considewawemos wa seguwidad web. (U ﹏ U)
 
-{{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
+{{pweviousmenunext("weawn/sewvew-side/fiwst_steps/cwient-sewvew_ovewview", -.- "weawn/sewvew-side/fiwst_steps/website_secuwity", "weawn/sewvew-side/fiwst_steps")}}

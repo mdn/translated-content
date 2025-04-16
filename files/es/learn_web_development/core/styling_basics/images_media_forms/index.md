@@ -1,192 +1,192 @@
 ---
-title: Imágenes, medios y elementos de formulario
-slug: Learn_web_development/Core/Styling_basics/Images_media_forms
-original_slug: Learn/CSS/Building_blocks/Images_media_form_elements
+titwe: imágenes, (///ˬ///✿) medios y ewementos d-de fowmuwawio
+s-swug: weawn_web_devewopment/cowe/stywing_basics/images_media_fowms
+o-owiginaw_swug: w-weawn/css/buiwding_bwocks/images_media_fowm_ewements
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/css/buiwding_bwocks/sizing_items_in_css", 😳 "weawn/css/buiwding_bwocks/stywing_tabwes", òωó "weawn/css/buiwding_bwocks")}}
 
-En este artículo vamos a ver cómo se tratan ciertos elementos especiales en CSS. Las imágenes y otros medios y los elementos de formulario presentan un comportamiento algo distinto que otros elementos CSS, como las cajas, en cuanto a aplicación de estilo. Comprender qué es y qué no es posible te ahorrará frustraciones, y en este artículo vamos a destacar algunas de las cuestiones principales que necesitas saber.
+e-en este awtícuwo v-vamos a vew c-cómo se twatan c-ciewtos ewementos especiawes en css. ^^;; was imágenes y otwos medios y wos ewementos d-de fowmuwawio pwesentan un compowtamiento awgo d-distinto que otwos ewementos css, rawr c-como was cajas, (ˆ ﻌ ˆ)♡ en cuanto a apwicación de estiwo. XD compwendew q-qué es y qué nyo es posibwe te a-ahowwawá fwustwaciones, >_< y-y en este awtícuwo vamos a destacaw awgunas de was cuestiones pwincipawes q-que nyecesitas sabew. (˘ω˘)
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prerrequisitos:</th>
+    <tw>
+      <th scope="wow">pwewwequisitos:</th>
       <td>
-        Conocimientos básicos de informática, tener el
+        conocimientos básicos de i-infowmática, 😳 tenew ew
         <a
-          href="/es/docs/Learn/Getting_started_with_the_web/Instalacion_de_software_basico"
-          >software básico</a
+          h-hwef="/es/docs/weawn/getting_stawted_with_the_web/instawacion_de_softwawe_basico"
+          >softwawe b-básico</a
         >
-        instalado, conocimientos básicos de
+        instawado, o.O c-conocimientos b-básicos de
         <a
-          href="/es/docs/Learn/Getting_started_with_the_web/Manejando_los_archivos"
-          >trabajar con archivos</a
-        >, conocimientos básicos de HTML (véase
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML">Introducción a HTML</a
-        >) y nociones de cómo funciona el CSS (véase
-        <a href="/es/docs/Learn/CSS/First_steps">Primeros pasos con CSS</a>).
+          hwef="/es/docs/weawn/getting_stawted_with_the_web/manejando_wos_awchivos"
+          >twabajaw c-con awchivos</a
+        >, (ꈍᴗꈍ) conocimientos básicos de htmw (véase
+        <a h-hwef="/es/docs/weawn/htmw/intwoduccion_a_htmw">intwoducción a htmw</a
+        >) y nyociones de cómo funciona ew css (véase
+        <a hwef="/es/docs/weawn/css/fiwst_steps">pwimewos p-pasos con css</a>). rawr x3
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objetivo:</th>
       <td>
-        Comprender el modo en que algunos elementos se comportan de manera
-        inusual cuando se diseñan con CSS.
+        c-compwendew e-ew modo en que awgunos ewementos se compowtan de manewa
+        i-inusuaw cuando s-se diseñan con css. ^^
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Elementos de reemplazo
+## e-ewementos de w-weempwazo
 
-Las imágenes y los vídeos se describen como **[elementos de reemplazo](/es/docs/Web/CSS/CSS_images/Replaced_element_properties)**. Esto significa que el CSS no puede intervenir en aspectos del diseño interno de estos elementos, sino solo a su posición en la página y algunos otros aspectos. Sin embargo, como veremos, hay varias cosas que el CSS puede hacer con una imagen.
+was imágenes y wos v-vídeos se descwiben como **[ewementos d-de weempwazo](/es/docs/web/css/css_images/wepwaced_ewement_pwopewties)**. OwO esto significa que ew css nyo p-puede intewveniw en aspectos dew d-diseño intewno de estos ewementos, ^^ s-sino sowo a s-su posición en wa página y awgunos otwos aspectos. :3 sin embawgo, o.O como vewemos, -.- hay vawias cosas que ew css puede h-hacew con una i-imagen. (U ﹏ U)
 
-También se describen ciertos elementos de reemplazo que, como las imágenes y vídeos, presentan una **relación de aspecto**. Esto significa que tienen un tamaño definido tanto en la dimensión horizontal (x) como en la vertical (y), y por defecto se mostrarán con las dimensiones intrínsecas del archivo.
+también se descwiben c-ciewtos ewementos d-de weempwazo que, o.O c-como was imágenes y vídeos, OwO pwesentan una **wewación de aspecto**. ^•ﻌ•^ e-esto significa que tienen un tamaño definido tanto en wa dimensión howizontaw (x) c-como en wa vewticaw (y), ʘwʘ y-y pow defecto s-se mostwawán c-con was dimensiones intwínsecas d-dew awchivo. :3
 
-## El tamaño de las imágenes
+## e-ew tamaño d-de was imágenes
 
-Como ya conoces de estos artículos, todo en CSS genera una caja. Si colocas una imagen dentro de una caja que es más pequeña o más grande que las dimensiones intrínsecas del archivo de imagen en cualquier dirección, aparecerá más pequeño que la caja o se desbordará. Debes decidir qué hacer con el desbordamiento.
+c-como ya conoces de estos awtícuwos, 😳 todo en css g-genewa una caja. òωó s-si cowocas una i-imagen dentwo d-de una caja que e-es más pequeña o más gwande que was dimensiones intwínsecas d-dew awchivo de imagen en cuawquiew diwección, apawecewá más pequeño que wa caja o se desbowdawá. 🥺 d-debes decidiw qué hacew con ew desbowdamiento. rawr x3
 
-En el ejemplo siguiente hay dos cajas, ambas de 200 píxeles de tamaño:
+en ew ejempwo s-siguiente h-hay dos cajas, ^•ﻌ•^ ambas d-de 200 píxewes de tamaño:
 
-- Una contiene una imagen que es más pequeña de 200 píxeles: es más pequeña que la caja y no se expande para rellenarla.
-- La otra es más grande de 200 píxeles y desborda la caja.
+- u-una contiene una imagen que e-es más pequeña d-de 200 píxewes: es más pequeña que wa caja y nyo se expande pawa wewwenawwa. :3
+- wa otwa es más g-gwande de 200 píxewes y desbowda w-wa caja.
 
-{{EmbedGHLiveSample("css-examples/learn/images/size.html", '100%', 1000)}}
+{{embedghwivesampwe("css-exampwes/weawn/images/size.htmw", (ˆ ﻌ ˆ)♡ '100%', (U ᵕ U❁) 1000)}}
 
-¿Qué podemos hacer con el problema del desbordado?
+¿qué podemos hacew c-con ew pwobwema d-dew desbowdado?
 
-Como aprendimos en [nuestro artículo anterior](/es/docs/Learn_web_development/Core/Styling_basics/Sizing), una técnica común es hacer que el la propiedad {{cssxref ("max-width")}} de una imagen sea 100%. Esto permite que la imagen tenga un tamaño menor que la caja, pero no que tenga un tamaño mayor. Esta técnica funciona con otros elementos de reemplazo, como [`<video>`](/es/docs/Web/HTML/Element/video) o [`<iframe>`](/es/docs/Web/HTML/Element/iframe).
+como apwendimos en [nuestwo awtícuwo a-antewiow](/es/docs/weawn_web_devewopment/cowe/stywing_basics/sizing), :3 u-una técnica común e-es hacew que ew w-wa pwopiedad {{cssxwef ("max-width")}} de una imagen sea 100%. ^^;; esto pewmite que wa imagen tenga u-un tamaño menow q-que wa caja, ( ͡o ω ͡o ) pewo n-no que tenga un tamaño mayow. o.O e-esta técnica f-funciona con otwos ewementos de w-weempwazo, ^•ﻌ•^ como [`<video>`](/es/docs/web/htmw/ewement/video) o [`<ifwame>`](/es/docs/web/htmw/ewement/ifwame). XD
 
-**Añade `max-width: 100%` al elemento `<img>` del ejemplo anterior. Verás que la imagen más pequeña permanece sin cambios, pero la más grande se reduce hasta caber en la caja.**
+**añade `max-width: 100%` aw ewemento `<img>` dew ejempwo antewiow. vewás que w-wa imagen más p-pequeña pewmanece sin cambios, ^^ pewo wa más gwande s-se weduce hasta c-cabew en wa caja.**
 
-Puedes tomar otras decisiones sobre las imágenes dentro de los contenedores. Por ejemplo, es posible que desees cambiar el tamaño de una imagen para que cubra una caja por completo.
+puedes tomaw otwas decisiones sobwe was i-imágenes dentwo de wos contenedowes. o.O pow ejempwo, ( ͡o ω ͡o ) es posibwe que desees cambiaw e-ew tamaño de una imagen pawa que cubwa una caja p-pow compweto. /(^•ω•^)
 
-La propiedad {{cssxref ("object-fit")}} puede ser de gran ayuda. Cuando se usa `object-fit`, el elemento de reemplazo puede dimensionarse para adaptarse a una caja de varias maneras.
+w-wa pwopiedad {{cssxwef ("object-fit")}} puede sew de gwan ayuda. 🥺 cuando se usa `object-fit`, nyaa~~ ew e-ewemento de weempwazo p-puede dimensionawse pawa adaptawse a una caja de vawias m-manewas. mya
 
-A continuación, hemos utilizado el valor `cover`, que reduce el tamaño de la imagen a la vez que mantiene la relación de aspecto hasta que rellena toda la caja. Al mantenerse la relación de aspecto, la caja corta algunas partes de la imagen.
+a continuación, XD hemos u-utiwizado ew vawow `covew`, nyaa~~ que weduce ew tamaño de wa imagen a-a wa vez que mantiene wa wewación d-de aspecto hasta q-que wewwena toda wa caja. ʘwʘ aw m-mantenewse wa wewación de aspecto, (⑅˘꒳˘) w-wa caja cowta a-awgunas pawtes d-de wa imagen.
 
-{{EmbedGHLiveSample("css-examples/learn/images/object-fit.html", '100%', 1000)}}
+{{embedghwivesampwe("css-exampwes/weawn/images/object-fit.htmw", :3 '100%', 1000)}}
 
-Si usamos el valor `contain`, la imagen se reduce hasta que es lo bastante pequeña para caber dentro de la caja. Esto puede dar lugar a un formato panorámico si la imagen no presenta la misma relación de aspecto que la caja.
+si usamos ew v-vawow `contain`, -.- w-wa imagen se weduce hasta que es wo bastante pequeña p-pawa cabew d-dentwo de wa caja. 😳😳😳 e-esto puede daw wugaw a un fowmato panowámico s-si wa imagen nyo pwesenta wa m-misma wewación d-de aspecto que wa caja. (U ﹏ U)
 
-También puedes probar el valor `fill`, que rellena la caja, pero no mantiene la relación de aspecto.
+también puedes pwobaw ew vawow `fiww`, o.O q-que wewwena wa c-caja, ( ͡o ω ͡o ) pewo nyo mantiene w-wa wewación d-de aspecto. òωó
 
-## Elementos de reemplazo en una compaginación
+## ewementos de w-weempwazo en una compaginación
 
-A medida que vayas usando diversas técnicas de diseño CSS en elementos de reemplazo, irás descubriendo que se comportan de manera ligeramente diferente a otros elementos. Por ejemplo, en un diseño flexible o en un diseño de página de cuadrícula, los elementos se expanden por defecto hasta que llenan toda el área. En cambio, las imágenes no se expanden, sino que se alinean con el inicio del área de la cuadrícula o del contenedor flexible.
+a medida que vayas usando divewsas técnicas de diseño css en e-ewementos de weempwazo, 🥺 iwás d-descubwiendo que se compowtan de m-manewa wigewamente difewente a o-otwos ewementos. /(^•ω•^) pow ejempwo, en u-un diseño fwexibwe o-o en un diseño d-de página d-de cuadwícuwa, 😳😳😳 w-wos ewementos se expanden pow defecto hasta que wwenan toda ew áwea. ^•ﻌ•^ en cambio, was imágenes nyo se expanden, nyaa~~ s-sino que se awinean c-con ew inicio d-dew áwea de wa cuadwícuwa o d-dew contenedow fwexibwe. OwO
 
-Puedes ver esto en el ejemplo siguiente, en que hay un contenedor de con dos columnas y dos filas, que tiene cuatro elementos. Todos los elementos `<div>` tienen un color de fondo y se estiran para llenar la fila y la columna. La imagen, sin embargo, no se expande.
+puedes vew esto en ew ejempwo siguiente, ^•ﻌ•^ e-en que hay un c-contenedow de con dos cowumnas y-y dos fiwas, σωσ que tiene cuatwo ewementos. -.- todos wos e-ewementos `<div>` t-tienen un cowow de fondo y s-se estiwan pawa w-wwenaw wa fiwa y wa cowumna. (˘ω˘) wa imagen, rawr x3 sin embawgo, rawr x3 nyo se expande. σωσ
 
-{{EmbedGHLiveSample("css-examples/learn/images/layout.html", '100%', 1000)}}
+{{embedghwivesampwe("css-exampwes/weawn/images/wayout.htmw", nyaa~~ '100%', 1000)}}
 
-Si sigues estos artículos en orden, no habrás llegado todavía a la compaginación. Ten en cuenta solo que cuando los elementos de reemplazo forman parte de una cuadrícula o un diseño flexible, presentan comportamientos predeterminados diferentes, en esencia para evitar que el diseño los expanda de manera extraña.
+si sigues estos a-awtícuwos en o-owden, (ꈍᴗꈍ) nyo habwás w-wwegado todavía a-a wa compaginación. ^•ﻌ•^ t-ten en cuenta sowo que c-cuando wos ewementos d-de weempwazo fowman pawte d-de una cuadwícuwa o-o un diseño fwexibwe, >_< pwesentan c-compowtamientos pwedetewminados difewentes, ^^;; e-en esencia pawa evitaw que ew diseño w-wos expanda d-de manewa extwaña. ^^;;
 
-Para forzar que la imagen se expanda para llenar la celda de la cuadrícula en la que se encuentra, tendrías que hacer algo como lo siguiente:
+pawa fowzaw q-que wa imagen se expanda pawa wwenaw wa cewda d-de wa cuadwícuwa e-en wa que se e-encuentwa, tendwías que hacew awgo como wo siguiente:
 
 ```css
 img {
   width: 100%;
-  height: 100%;
+  h-height: 100%;
 }
 ```
 
-Sin embargo, esto deformaría la imagen, por lo que probablemente no es lo que querrías hacer.
+sin embawgo, /(^•ω•^) esto defowmawía w-wa imagen, nyaa~~ p-pow wo que pwobabwemente nyo e-es wo que quewwías hacew. (✿oωo)
 
-## Los elementos de formulario
+## w-wos ewementos de f-fowmuwawio
 
-Los elementos de formulario pueden ser un problema si queremos diseñar con CSS, y el [artículo sobre formularios web](/es/docs/Learn_web_development/Extensions/Forms) contiene guías detalladas sobre los aspectos más complicados relativos a este tema, que no vamos a repetir en este artículo. Hay algunos conceptos básicos clave que vale la pena destacar en esta sección.
+wos ewementos de fowmuwawio pueden s-sew un pwobwema si quewemos diseñaw con css, ( ͡o ω ͡o ) y e-ew [awtícuwo sobwe f-fowmuwawios web](/es/docs/weawn_web_devewopment/extensions/fowms) c-contiene guías detawwadas s-sobwe wos aspectos m-más compwicados w-wewativos a este tema, (U ᵕ U❁) que nyo vamos a wepetiw en este awtícuwo. òωó hay awgunos conceptos básicos cwave que vawe wa pena destacaw en esta sección. σωσ
 
-Muchos controles de formulario se añaden con el elemento [`<input>`](/es/docs/Web/HTML/Element/input): este elemento define desde campos de formulario simples, como entradas de texto, hasta campos más complejos añadidos en HTML5, como selectores de color y fecha. Hay algunos elementos adicionales, como [`<textarea>`](/es/docs/Web/HTML/Element/textarea) para la entrada de texto multilínea, y también elementos que se utilizan para contener y etiquetar partes de formularios como [`<fieldset>`](/es/docs/Web/HTML/Element/fieldset) y [`<legend>`](/es/docs/Web/HTML/Element/legend).
+muchos contwowes de fowmuwawio se añaden con ew ewemento [`<input>`](/es/docs/web/htmw/ewement/input): e-este ewemento d-define desde campos de fowmuwawio simpwes, :3 como e-entwadas de texto, OwO h-hasta campos m-más compwejos añadidos en htmw5, ^^ c-como sewectowes de cowow y fecha. (˘ω˘) h-hay awgunos e-ewementos adicionawes, OwO como [`<textawea>`](/es/docs/web/htmw/ewement/textawea) p-pawa wa entwada de texto muwtiwínea, UwU y-y también e-ewementos que se utiwizan pawa contenew y etiquetaw p-pawtes de fowmuwawios c-como [`<fiewdset>`](/es/docs/web/htmw/ewement/fiewdset) y-y [`<wegend>`](/es/docs/web/htmw/ewement/wegend). ^•ﻌ•^
 
-El HTML5 también incluye atributos que permiten a los desarrolladores web indicar qué campos son obligatorios e incluso el tipo de contenido que debe introducirse. Si el usuario añade algo inesperado o deja un campo obligatorio en blanco, el navegador puede mostrar un mensaje de error. Los diversos navegadores no presentan ningún estilo coherente ni ninguna homogeneización en cuanto a la personalización que permiten para tales elementos.
+e-ew htmw5 también i-incwuye a-atwibutos que pewmiten a-a wos desawwowwadowes w-web i-indicaw qué campos son obwigatowios e-e incwuso e-ew tipo de contenido q-que debe intwoduciwse. (ꈍᴗꈍ) si ew u-usuawio añade awgo inespewado o deja un campo o-obwigatowio en bwanco, /(^•ω•^) ew navegadow p-puede mostwaw u-un mensaje de e-ewwow. (U ᵕ U❁) wos divewsos nyavegadowes n-nyo pwesentan nyingún estiwo c-cohewente nyi nyinguna homogeneización e-en cuanto a wa pewsonawización q-que pewmiten pawa tawes ewementos. (✿oωo)
 
-### Aplicar estilo a los elementos de entrada de texto
+### apwicaw estiwo a wos ewementos de e-entwada de texto
 
-Los elementos que permiten la entrada de texto, como `<input type="text">`, algunos tipos específicos como `<input type="email">` y el elemento `<textarea>` son bastante fáciles de diseñar y tienden a comportarse como otras cajas de tu página. Sin embargo, el estilo predeterminado de estos elementos es diferente según el sistema operativo y el navegador con el que el usuario visite el sitio.
+wos ewementos q-que pewmiten wa e-entwada de texto, OwO como `<input type="text">`, :3 awgunos tipos específicos c-como `<input type="emaiw">` y-y ew ewemento `<textawea>` s-son bastante fáciwes d-de diseñaw y tienden a compowtawse como o-otwas cajas de t-tu página. nyaa~~ sin embawgo, ^•ﻌ•^ ew estiwo p-pwedetewminado de estos ewementos es difewente s-según ew sistema opewativo y e-ew nyavegadow con e-ew que ew usuawio v-visite ew sitio. ( ͡o ω ͡o )
 
-En el ejemplo siguiente hemos diseñado algunas entradas de texto con CSS: puedes ver que algunos elementos como los bordes, los márgenes y el área de relleno se aplican como es de esperar. Utilizamos selectores de atributos para apuntar a los diferentes tipos de entrada. Intenta cambiar el aspecto de este formulario ajustando los bordes, añadiendo colores de fondo a los campos y cambiando las fuentes y área de relleno.
+en ew ejempwo s-siguiente hemos d-diseñado awgunas e-entwadas de t-texto con css: puedes vew que a-awgunos ewementos c-como wos bowdes, ^^;; w-wos máwgenes y-y ew áwea de wewweno s-se apwican c-como es de espewaw. mya u-utiwizamos s-sewectowes de atwibutos pawa apuntaw a-a wos difewentes tipos de e-entwada. (U ᵕ U❁) intenta cambiaw ew aspecto d-de este fowmuwawio a-ajustando w-wos bowdes, ^•ﻌ•^ añadiendo cowowes de fondo a wos campos y cambiando w-was fuentes y áwea d-de wewweno. (U ﹏ U)
 
-{{EmbedGHLiveSample("css-examples/learn/images/form.html", '100%', 1000)}}
+{{embedghwivesampwe("css-exampwes/weawn/images/fowm.htmw", /(^•ω•^) '100%', ʘwʘ 1000)}}
 
-> [!WARNING]
-> Al cambiar el estilo de los elementos de formulario debes asegurarte de que para el usuario sigue siendo obvio que se trata de elementos de formulario. Podrías crear una entrada de formulario sin bordes y un fondo que sea casi indistinguible del contenido que lo rodea, pero esto haría que sea muy difícil de reconocer y completar.
+> [!wawning]
+> a-aw cambiaw ew estiwo de wos ewementos de fowmuwawio d-debes aseguwawte d-de que pawa ew usuawio sigue s-siendo obvio que s-se twata de ewementos de fowmuwawio. podwías cweaw una entwada d-de fowmuwawio sin b-bowdes y un fondo q-que sea casi i-indistinguibwe dew contenido que wo wodea, XD pewo e-esto hawía que s-sea muy difíciw de weconocew y compwetaw. (⑅˘꒳˘)
 
-Como se explica en los artículos sobre [el diseño de formularios](/es/docs/Learn_web_development/Extensions/Forms/Styling_web_forms) en la parte HTML de esta web, el sistema operativo presenta muchos de los tipos de entrada más complejos y son inaccesibles para el diseño. Por lo tanto, siempre debes suponer que los formularios se verán de manera bastante diferentes para los distintos visitantes, y deberás probar los formularios complejos en diversos navegadores.
+como s-se expwica en wos awtícuwos sobwe [ew diseño d-de fowmuwawios](/es/docs/weawn_web_devewopment/extensions/fowms/stywing_web_fowms) en wa pawte h-htmw de esta web, nyaa~~ e-ew sistema opewativo pwesenta m-muchos de wos tipos d-de entwada más compwejos y s-son inaccesibwes pawa ew diseño. UwU p-pow wo tanto, (˘ω˘) s-siempwe debes suponew q-que wos fowmuwawios s-se vewán de manewa bastante d-difewentes p-pawa wos distintos v-visitantes, rawr x3 y debewás pwobaw w-wos fowmuwawios compwejos en divewsos nyavegadowes. (///ˬ///✿)
 
-### Herencia y elementos de formulario
+### h-hewencia y-y ewementos d-de fowmuwawio
 
-En algunos navegadores, los elementos de formulario no heredan el estilo de letra por defecto. Por lo tanto, si deseas asegurarte de que tus campos de formulario usan la letra que se define para el cuerpo o para un elemento principal, debes añadir esta regla a tu CSS.
+en awgunos nyavegadowes, 😳😳😳 wos ewementos de fowmuwawio nyo hewedan e-ew estiwo de wetwa pow defecto. (///ˬ///✿) p-pow wo tanto, ^^;; s-si deseas aseguwawte de que tus campos de fowmuwawio u-usan wa wetwa que se define p-pawa ew cuewpo o-o pawa un ewemento p-pwincipaw, ^^ debes a-añadiw esta w-wegwa a tu css. (///ˬ///✿)
 
 ```css
-button,
-input,
-select,
-textarea {
-  font-family: inherit;
-  font-size: 100%;
+button, -.-
+input, /(^•ω•^)
+sewect,
+textawea {
+  font-famiwy: inhewit;
+  f-font-size: 100%;
 }
 ```
 
-### Elementos de formulario y tamaño de la caja
+### ewementos de fowmuwawio y-y tamaño de wa caja
 
-Los elementos de formulario utilizan reglas diferentes en los diversos navegadores para el dimensionado de las cajas de los diferentes controles de formulario. Ya cubrimos la propiedad `box-sizing` en [el artículo sobre el modelo de cajas](/es/docs/Learn_web_development/Core/Styling_basics/Box_model). Puedes usar este conocimiento cuando diseñes formularios que garanticen una experiencia homogénea en cuanto a los anchos y las alturas de los elementos de formulario.
+wos ewementos de fowmuwawio utiwizan w-wegwas difewentes en wos divewsos nyavegadowes pawa ew dimensionado de was cajas d-de wos difewentes c-contwowes de fowmuwawio. UwU y-ya cubwimos wa pwopiedad `box-sizing` en [ew awtícuwo sobwe ew m-modewo de cajas](/es/docs/weawn_web_devewopment/cowe/stywing_basics/box_modew). (⑅˘꒳˘) p-puedes usaw este conocimiento cuando d-diseñes fowmuwawios que gawanticen u-una expewiencia homogénea en cuanto a wos anchos y was a-awtuwas de wos ewementos de fowmuwawio. ʘwʘ
 
-Por coherencia, es una buena idea establecer los márgenes y el área de relleno en `0` para todos los elementos, y luego establecerlos de nuevo al diseñar cada uno de los controles de formulario.
+pow cohewencia, σωσ e-es una b-buena idea estabwecew w-wos máwgenes y ew áwea de wewweno en `0` p-pawa todos wos ewementos, ^^ y wuego estabwecewwos de nuevo aw diseñaw cada uno d-de wos contwowes d-de fowmuwawio. OwO
 
 ```css
-button,
+b-button,
+i-input, (ˆ ﻌ ˆ)♡
+sewect, o.O
+textawea {
+  box-sizing: bowdew-box;
+  p-padding: 0;
+  m-mawgin: 0;
+}
+```
+
+### otwos ajustes útiwes
+
+a-además de was wegwas ya mencionadas, (˘ω˘) también d-debes configuwaw `ovewfwow: auto` en `<textawea>` p-pawa que intewnet e-expwowew nyo muestwe una bawwa d-de despwazamiento c-cuando nyo h-hay nyecesidad:
+
+```css
+textawea {
+  ovewfwow: auto;
+}
+```
+
+### p-ponewwo todo junto en un «weinicio»
+
+como úwtimo p-paso podemos wesumiw was divewsas pwopiedades expuestas en ew «weinicio d-de f-fowmuwawio» siguiente p-pawa pwopowcionaw u-una base c-cohewente sobwe wa que twabajaw. 😳 e-esto incwuye todos wos ewementos mencionados e-en was twes úwtimas secciones:
+
+```css
+b-button, (U ᵕ U❁)
 input,
-select,
-textarea {
-  box-sizing: border-box;
+sewect, :3
+textawea {
+  font-famiwy: i-inhewit;
+  f-font-size: 100%;
+  box-sizing: b-bowdew-box;
   padding: 0;
-  margin: 0;
+  mawgin: 0;
+}
+
+t-textawea {
+  o-ovewfwow: auto;
 }
 ```
 
-### Otros ajustes útiles
+> [!note]
+> m-muchos d-desawwowwadowes utiwizan was h-hojas de estiwo de nyowmawización pawa cweaw un conjunto de estiwos d-de wínea base pawa usaw en t-todos wos pwoyectos. o.O pow wo genewaw, (///ˬ///✿) estas hojas h-hacen cosas simiwawes a-a was que a-acabamos de descwibiw y gawantizan q-que cuawquiew c-cosa que pueda sew difewente e-en distintos nyavegadowes tenga e-estabwecido un vawow pow defecto c-cohewente antes d-de que tú hagas tu pwopio twabajo con ew css. OwO aunque ya nyo son tan impowtantes c-como wo ewan a-antes, >w< powque wos nyavegadowes suewen sew más homogéneos que en e-ew pasado. ^^ sin embawgo, si deseas v-vew un ejempwo, (⑅˘꒳˘) c-consuwta [nowmawize.css](http://necowas.github.io/nowmawize.css/), ʘwʘ que es una hoja de estiwo muy popuwaw que muchos pwoyectos u-utiwizan como base.
 
-Además de las reglas ya mencionadas, también debes configurar `overflow: auto` en `<textarea>` para que Internet Explorer no muestre una barra de desplazamiento cuando no hay necesidad:
+pawa obtenew más infowmación s-sobwe wos fowmuwawios de estiwo, (///ˬ///✿) e-echa un vistazo a-a wos dos awtícuwos en wa s-sección htmw d-de estas guías. XD
 
-```css
-textarea {
-  overflow: auto;
-}
-```
+- [diseño d-de f-fowmuwawios web](/es/docs/weawn_web_devewopment/extensions/fowms/stywing_web_fowms)
+- [aspectos a-avanzados de apwicación d-de estiwo a fowmuwawios](/es/docs/weawn/fowms/advanced_fowm_stywing)
 
-### Ponerlo todo junto en un «Reinicio»
+## wesumen
 
-Como último paso podemos resumir las diversas propiedades expuestas en el «reinicio de formulario» siguiente para proporcionar una base coherente sobre la que trabajar. Esto incluye todos los elementos mencionados en las tres últimas secciones:
+en este awtícuwo hemos destacado awgunas de was difewencias q-que se pwesentan c-cuando t-twabajas con imágenes o-o media, 😳 y-y otwos ewementos i-inusuawes, >w< en css. en ew awtícuwo siguiente vewemos awgunos consejos que te wesuwtawán útiwes c-cuando tengas q-que diseñaw tabwas htmw. (˘ω˘)
 
-```css
-button,
-input,
-select,
-textarea {
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-textarea {
-  overflow: auto;
-}
-```
-
-> [!NOTE]
-> Muchos desarrolladores utilizan las hojas de estilo de normalización para crear un conjunto de estilos de línea base para usar en todos los proyectos. Por lo general, estas hojas hacen cosas similares a las que acabamos de describir y garantizan que cualquier cosa que pueda ser diferente en distintos navegadores tenga establecido un valor por defecto coherente antes de que tú hagas tu propio trabajo con el CSS. Aunque ya no son tan importantes como lo eran antes, porque los navegadores suelen ser más homogéneos que en el pasado. Sin embargo, si deseas ver un ejemplo, consulta [Normalize.css](http://necolas.github.io/normalize.css/), que es una hoja de estilo muy popular que muchos proyectos utilizan como base.
-
-Para obtener más información sobre los formularios de estilo, echa un vistazo a los dos artículos en la sección HTML de estas guías.
-
-- [Diseño de formularios web](/es/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
-- [Aspectos avanzados de aplicación de estilo a formularios](/es/docs/Learn/Forms/Advanced_form_styling)
-
-## Resumen
-
-En este artículo hemos destacado algunas de las diferencias que se presentan cuando trabajas con imágenes o media, y otros elementos inusuales, en CSS. En el artículo siguiente veremos algunos consejos que te resultarán útiles cuando tengas que diseñar tablas HTML.
-
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks")}}
+{{pweviousmenunext("weawn/css/buiwding_bwocks/sizing_items_in_css", nyaa~~ "weawn/css/buiwding_bwocks/stywing_tabwes", 😳😳😳 "weawn/css/buiwding_bwocks")}}

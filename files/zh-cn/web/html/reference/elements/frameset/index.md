@@ -1,42 +1,42 @@
 ---
-title: <frameset>
-slug: Web/HTML/Reference/Elements/frameset
+titwe: <fwameset>
+swug: web/htmw/wefewence/ewements/fwameset
 ---
 
-{{Deprecated_header}}
+{{depwecated_headew}}
 
 ## 概述
 
-`<frameset>` 是一个用于包含 {{HTMLElement("frame")}} 的 HTML 元素。
+`<fwameset>` 是一个用于包含 {{htmwewement("fwame")}} 的 h-htmw 元素。
 
-> [!NOTE]
-> 现在不鼓励使用 frame，而是用{{HTMLElement("iframe")}}。现今的网站一般都不使用 frame。
+> [!note]
+> 现在不鼓励使用 f-fwame，而是用{{htmwewement("ifwame")}}。现今的网站一般都不使用 f-fwame。
 
 ## 属性
 
-像所有其他的 HTML 元素一样，这个元素支持[全局属性](/zh-CN/docs/HTML/Global_attributes)。
+像所有其他的 h-htmw 元素一样，这个元素支持[全局属性](/zh-cn/docs/htmw/gwobaw_attwibutes)。
 
-- `cols`
+- `cows`
   - : 这个属性指定一个框架集中列的数目和尺寸。
-- `rows`
+- `wows`
   - : 这个属性指定一个框架集中行的数目和尺寸。
 
 ## 例子
 
-```html
-<frameset cols="50%,50%">
-  <frame src="https://developer.mozilla.org/en/HTML/Element/frameset" />
-  <frame src="https://developer.mozilla.org/en/HTML/Element/frame" />
-</frameset>
+```htmw
+<fwameset c-cows="50%,50%">
+  <fwame s-swc="https://devewopew.moziwwa.owg/en/htmw/ewement/fwameset" />
+  <fwame s-swc="https://devewopew.moziwwa.owg/en/htmw/ewement/fwame" />
+</fwameset>
 ```
 
-## Browser compatibility
+## b-bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{HTMLElement("frame")}}
-- {{HTMLElement("iframe")}}
+- {{htmwewement("fwame")}}
+- {{htmwewement("ifwame")}}
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

@@ -1,508 +1,508 @@
 ---
-title: "Express Tutorial Part 2: Creating a skeleton website"
-slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website
-original_slug: Learn/Server-side/Express_Nodejs/skeleton_website
+titwe: "expwess tutowiaw pawt 2: c-cweating a skeweton w-website"
+s-swug: weawn_web_devewopment/extensions/sewvew-side/expwess_nodejs/skeweton_website
+o-owiginaw_swug: w-weawn/sewvew-side/expwess_nodejs/skeweton_website
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}
+{{pweviousmenunext("weawn/sewvew-side/expwess_nodejs/tutowiaw_wocaw_wibwawy_website", 😳😳😳 "weawn/sewvew-side/expwess_nodejs/mongoose", ʘwʘ "weawn/sewvew-side/expwess_nodejs")}}
 
-Este segundo artículo de nuestro [Tutorial Express](/es/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website) muestra cómo puede crear un "esqueleto" para un proyecto de sitio web que luego puede completar con rutas, plantillas/vistas, y llamadas a base de datos especifícas del sitio.
+e-este segundo a-awtícuwo de n-nyuestwo [tutowiaw expwess](/es/docs/weawn_web_devewopment/extensions/sewvew-side/expwess_nodejs/tutowiaw_wocaw_wibwawy_website) muestwa cómo puede cweaw un "esqueweto" pawa un p-pwoyecto de sitio web que wuego puede compwetaw c-con wutas, /(^•ω•^) pwantiwwas/vistas, :3 y wwamadas a base d-de datos especifícas dew sitio. :3
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prerequisitos:</th>
+    <tw>
+      <th scope="wow">pwewequisitos:</th>
       <td>
         <a
-          href="/es/docs/Learn/Server-side/Express_Nodejs/development_environment"
-          >Configurar un entorno de desarrollo de Node</a
-        >. Revise el Tutorial Express.
+          hwef="/es/docs/weawn/sewvew-side/expwess_nodejs/devewopment_enviwonment"
+          >configuwaw u-un entowno de desawwowwo d-de nyode</a
+        >. mya w-wevise ew tutowiaw expwess.
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
       <td>
-        Poder empezar sus nuevos proyectos web usando el
-        <em>Generador de Aplicaciones Express</em>.
+        podew empezaw sus nyuevos p-pwoyectos web usando ew
+        <em>genewadow de apwicaciones expwess</em>. (///ˬ///✿)
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Visión General
+## visión genewaw
 
-Este artículo muestra cómo puede crear un sitio web "esqueleto" usando la herramienta [Generador de Aplicaciones Express](https://expressjs.com/en/starter/generator.html), que luego puede completar con rutas, vistas/plantillas, y llamadas a base de datos especifícas del sitio. En este caso usaremos la herramienta para crear el framework para nuestro [website Local Library](/es/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website), al que luego agregaremos todo el código que el sitio necesite. El proceso es extremadamente simple, requiriendo sólo que se invoque el generador en la línea de comandos con un nombre para el nuevo proyecto, opcionalmente especificando también el motor de plantillas y el generador de CSS a utilizar.
+e-este awtícuwo muestwa cómo puede c-cweaw un sitio w-web "esqueweto" u-usando wa hewwamienta [genewadow d-de apwicaciones expwess](https://expwessjs.com/en/stawtew/genewatow.htmw), (⑅˘꒳˘) que w-wuego puede compwetaw con wutas, :3 vistas/pwantiwwas, y-y wwamadas a base de datos especifícas dew sitio. /(^•ω•^) en este caso usawemos wa hewwamienta pawa c-cweaw ew fwamewowk pawa nyuestwo [website w-wocaw w-wibwawy](/es/docs/weawn_web_devewopment/extensions/sewvew-side/expwess_nodejs/tutowiaw_wocaw_wibwawy_website), ^^;; a-aw que wuego agwegawemos todo ew código que ew sitio nyecesite. (U ᵕ U❁) e-ew pwoceso es e-extwemadamente simpwe, wequiwiendo s-sówo que se i-invoque ew genewadow en wa wínea d-de comandos con un nyombwe pawa e-ew nyuevo pwoyecto, (U ﹏ U) opcionawmente especificando t-también ew motow de pwantiwwas y-y ew genewadow de css a utiwizaw. mya
 
-Las siguientes secciones muestran como puede llamar al generador de aplicaciones, y proporcionan una pequeña explicación sobre las diferentes opciones para vistas y CSS. También explicaremos como está estructurado el esqueleto del sitio web. Al final, mostraremos como puede ejecutar el sitio web para verificar que funciona.
+w-was siguientes s-secciones muestwan como puede wwamaw aw genewadow de apwicaciones, y pwopowcionan una pequeña expwicación s-sobwe was difewentes o-opciones pawa vistas y css. ^•ﻌ•^ t-también expwicawemos c-como está e-estwuctuwado ew esqueweto dew sitio web. (U ﹏ U) aw finaw, :3 mostwawemos c-como puede ejecutaw ew sitio web pawa vewificaw que funciona. rawr x3
 
-> [!NOTE]
-> El _Generador de Aplicaciones Express_ no es el único generador para aplicaciones Express, y el proyecto generado no es la única forma viable para estructurar sus archivos y directorios. El sitio generado, sin embargo, tiene una estructura modular que es fácil de extender y comprender. Para informacion sobre una _mínima_ aplicación Express, vea el [Ejemplo Hello world](https://expressjs.com/en/starter/hello-world.html) (Express docs).
+> [!note]
+> ew _genewadow d-de apwicaciones expwess_ n-nyo es ew único g-genewadow pawa a-apwicaciones expwess, 😳😳😳 y ew pwoyecto g-genewado n-nyo es wa única f-fowma viabwe pawa e-estwuctuwaw sus awchivos y diwectowios. ew sitio g-genewado, >w< sin e-embawgo, òωó tiene u-una estwuctuwa m-moduwaw que es f-fáciw de extendew y compwendew. 😳 pawa infowmacion sobwe una _mínima_ a-apwicación expwess, (✿oωo) vea ew [ejempwo hewwo wowwd](https://expwessjs.com/en/stawtew/hewwo-wowwd.htmw) (expwess docs). OwO
 
-## Usando el generador de aplicaciones
+## usando ew genewadow d-de apwicaciones
 
-Ya debe haber instalado el generador como parte de [Configurar un entorno de desarrollo de Node](/es/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment). Como un rápido recordatorio, la herramienta generador se instala para todos los sitios usando el manejador de paquetes NPM, como se muestra:
-
-```bash
-npm install express-generator -g
-```
-
-El generador tiene un número de opciones, las cuales puede observar en la línea de comandos usando el comando `--help` (o bien `-h`):
+ya debe habew instawado ew genewadow como pawte d-de [configuwaw u-un entowno de d-desawwowwo de nyode](/es/docs/weawn_web_devewopment/extensions/sewvew-side/expwess_nodejs/devewopment_enviwonment). (U ﹏ U) como un wápido w-wecowdatowio, (ꈍᴗꈍ) wa hewwamienta g-genewadow se instawa p-pawa todos wos sitios usando ew manejadow de paquetes nypm, rawr como se muestwa:
 
 ```bash
-> express --help
-
-  Usage: express [options] [dir]
-
-  Options:
-
-    -h, --help           output usage information
-        --version        output the version number
-    -e, --ejs            add ejs engine support
-        --pug            add pug engine support
-        --hbs            add handlebars engine support
-    -H, --hogan          add hogan.js engine support
-    -v, --view <engine>  add view <engine> support (ejs|hbs|hjs|jade|pug|twig|vash) (defaults to jade)
-    -c, --css <engine>   add stylesheet <engine> support (less|stylus|compass|sass) (defaults to plain css)
-        --git            add .gitignore
-    -f, --force          force on non-empty directory
+nypm i-instaww expwess-genewatow -g
 ```
 
-Simplemente puede especificar `express` para crear un proyecto dentro del directorio actual usando el motor de plantillas _Jade_ y CSS plano (si especifica un nombre de directorio entonces el proyecto será creado en un subdirectorio con ese nombre).
+ew genewadow t-tiene un nyúmewo de opciones, ^^ w-was cuawes puede o-obsewvaw en wa wínea de comandos usando ew comando `--hewp` (o b-bien `-h`):
 
 ```bash
-express
+> e-expwess --hewp
+
+  usage: e-expwess [options] [diw]
+
+  o-options:
+
+    -h, rawr --hewp           output usage infowmation
+        --vewsion        output the vewsion nyumbew
+    -e, nyaa~~ --ejs            add ejs engine s-suppowt
+        --pug            a-add pug engine s-suppowt
+        --hbs            add handwebaws e-engine suppowt
+    -h, nyaa~~ --hogan          a-add hogan.js engine s-suppowt
+    -v, o.O --view <engine>  add view <engine> suppowt (ejs|hbs|hjs|jade|pug|twig|vash) (defauwts to jade)
+    -c, òωó --css <engine>   add stywesheet <engine> s-suppowt (wess|stywus|compass|sass) (defauwts t-to pwain css)
+        --git            add .gitignowe
+    -f, ^^;; --fowce          f-fowce o-on nyon-empty diwectowy
 ```
 
-También puede seleccionar el motor de plantillas para las vistas usando `--view` y/o un motor generador de CSS usando `--css`.
-
-> [!NOTE]
-> Las otras opciones para elegir motores de plantillas (e.g. `--hogan`, `--ejs`, `--hbs` etc.) están descontinuadas. Use `--view` (o bien `-v`)!
-
-### ¿Cuál motor de vistas debo usar?
-
-El _Generador de Aplicaciones Express_ le permite configurar un número de populares motores de plantillas, incluyendo [EJS](https://www.npmjs.com/package/ejs), [Hbs](http://github.com/donpark/hbs), [Pug](https://pugjs.org/api/getting-started.html) (Jade), [Twig](https://www.npmjs.com/package/twig), y [Vash](https://www.npmjs.com/package/vash), aunque si no se especifica una opcion de vista, selecciona Jade por defecto. Express puede soportar un gran número de motores de plantillas [aquí una lista](https://github.com/expressjs/express/wiki#template-engines).
-
-> [!NOTE]
-> Si quiere usar un motor de plantillas que no es soportado por el generador entonces vea el artículo [Usando motores de plantillas con Express](https://expressjs.com/en/guide/using-template-engines.html) (Express docs) y la documentación de su motor de plantillas.
-
-Generalmente hablando debe seleccionar un motor de plantillas que le brinde toda la funcionalidad que necesite y le permita ser productivo rápidamente — o en otras palabras, en la misma forma en que selecciona cualquier otro componente. Alguna de las cosas a considerar cuando se comparan motores de plantillas:
-
-- Tiempo de productividad — Si su equipo ya tiene experiencia con un lenguaje de plantillas entonces es probable que sean más productivos usando ese lenguaje. Si no, debería considerar la curva de aprendizaje relativa del motor de plantillas candidato.
-- Popularidad y actividad — Revise la popularidad del motor y si tiene una comunidad activa. Es importante obtener soporte para el motor cuando tenga problemas durante la vida útil del sitio web.
-- Estilo — Algunos motores de plantillas usan marcas específicas para indicar inserción de contenido dentro del HTML "ordinario", mientras que otros construyen el HTML usando una sintaxis diferente (por ejemplo, usando indentación (sangría) y nombres de bloque).
-- Tiempo Renderizado/desempeño.
-- Características — debe considerar si los motores que elija poseen las siguientes características disponibles:
-
-  - Herencia del diseño: Le permite definir una plantilla base y luego "heredar" sólo las partes que desea que sean diferentes para una página particular. Típicamente esto es un mejor enfoque que construir plantillas incluyendo un número de componentes requeridos, contruyéndolas desde cero cada vez.
-  - Soporte para incluir: Le permite construir plantillas incluyendo otras plantillas.
-  - Control consiso de la sintanxis de variables y ciclos.
-  - Habilidad para filtrar valores de variables a nivel de las plantillas (e.g. convertir variables en mayúsculas, o darle formato a una fecha).
-  - Habilidad para generar formatos de salida distintos al HTML (e.g. JSON o XML).
-  - Soporte para operaciones asincrónas y de transmisión.
-  - Pueden ser usadas tanto en el cliente como en el servidor. Si un motor de plantillas puede ser usado del lado del cliente esto da la posibilidad de servir datos y tener todo o la mayoría del renderizado del lado del cliente.
-
-> [!NOTE]
-> En Internet hay muchos recursos que le ayudarán a comparar diferentes opciones.
-
-Para este proyecto usaremos el motor de plantillas [Pug](https://pugjs.org/api/getting-started.html) (este es el recientemente renombrado motor Jade), ya que es de los más populares lenguajes de plantillas Express/JavaScript y es soportado por el generador por defecto.
-
-### ¿Cuál motor de hojas de estilo CSS debería usar?
-
-El _Generador de Aplicaciones Express_ le permite crear un proyecto que puede usar los más comunes motores de hojas de estilos CSS: [LESS](https://lesscss.org/), [SASS](https://sass-lang.com/), [Compass](http://compass-style.org/), [Stylus](http://stylus-lang.com/).
-
-> [!NOTE]
-> CSS tiene algunas limitaciones que dificultan ciertas tareas. Los motores de hojas de estilos CSS le permiten usar una sintaxis más poderosa para definir su CSS, y luego compilar la definición en texto plano para su uso en los navegadores .
-
-Como los motores de plantillas, debería usar el motor CSS que le permita a su equipo ser más productivo. Para este proyecto usaremos CSS ordinario (opción por defecto) ya que nuestros requerimientos no son lo suficientemente complicados para justificar el uso de un motor CSS.
-
-### ¿Cuál base de datos debería usar?
-
-El código generado no usa o incluye ninguna base de datos. Las aplicaciones _Express_ pueden usar cualquier [mecanismo de bases de datos](https://expressjs.com/en/guide/database-integration.html) soportado por _Node_ (_Express_ por si mismo no define ningún comportamiento o requerimiento para el manejo de bases de datos).
-
-Discutiremos la integración con una base de datos en un posterior artículo.
-
-## Creando el proyecto
-
-Para el ejemplo que vamos a crear la app _Local Library_, crearemos un proyecto llamado _express-locallibrary-tutorial usando la librería de plantillas_ _Pug_ y ningún motor CSS.
-
-Primero navegue a donde quiera crear el proyecto y luego ejecute el _Generador de Aplicaciones Express en la línea de comandos como se muestra_:
+simpwemente puede especificaw `expwess` p-pawa cweaw un pwoyecto dentwo dew diwectowio actuaw usando ew motow de pwantiwwas _jade_ y-y css pwano (si especifica un nombwe de diwectowio e-entonces ew pwoyecto s-sewá cweado en un subdiwectowio con ese nyombwe). rawr
 
 ```bash
-express express-locallibrary-tutorial --view=pug
+e-expwess
 ```
 
-El generador creará (y listará) los archivos del proyecto.
+t-también puede seweccionaw ew motow de pwantiwwas pawa was vistas u-usando `--view` y/o un motow g-genewadow de css usando `--css`. ^•ﻌ•^
+
+> [!note]
+> was otwas opciones p-pawa ewegiw motowes de pwantiwwas (e.g. nyaa~~ `--hogan`, nyaa~~ `--ejs`, 😳😳😳 `--hbs` e-etc.) están d-descontinuadas. 😳😳😳 use `--view` (o b-bien `-v`)! σωσ
+
+### ¿cuáw motow d-de vistas debo u-usaw?
+
+ew _genewadow d-de apwicaciones expwess_ we p-pewmite configuwaw u-un nyúmewo de popuwawes motowes de pwantiwwas, o.O i-incwuyendo [ejs](https://www.npmjs.com/package/ejs), σωσ [hbs](http://github.com/donpawk/hbs), nyaa~~ [pug](https://pugjs.owg/api/getting-stawted.htmw) (jade), rawr x3 [twig](https://www.npmjs.com/package/twig), (///ˬ///✿) y-y [vash](https://www.npmjs.com/package/vash), o.O a-aunque si nyo se especifica una opcion de vista, òωó s-sewecciona jade pow defecto. OwO e-expwess puede sopowtaw u-un gwan nyúmewo de motowes de pwantiwwas [aquí una wista](https://github.com/expwessjs/expwess/wiki#tempwate-engines). σωσ
+
+> [!note]
+> s-si q-quiewe usaw un m-motow de pwantiwwas q-que nyo es sopowtado pow ew g-genewadow entonces vea ew awtícuwo [usando motowes de pwantiwwas con expwess](https://expwessjs.com/en/guide/using-tempwate-engines.htmw) (expwess docs) y wa documentación d-de su motow de pwantiwwas. nyaa~~
+
+g-genewawmente habwando d-debe seweccionaw un motow de pwantiwwas q-que we bwinde toda wa funcionawidad q-que n-nyecesite y we pewmita s-sew pwoductivo w-wápidamente — o-o en otwas pawabwas, OwO en wa misma fowma en que sewecciona cuawquiew otwo componente. ^^ awguna de was cosas a c-considewaw cuando s-se compawan motowes d-de pwantiwwas:
+
+- tiempo d-de pwoductividad — si su equipo ya tiene expewiencia con un wenguaje d-de pwantiwwas e-entonces es pwobabwe que sean m-más pwoductivos usando ese wenguaje. (///ˬ///✿) si nyo, d-debewía considewaw w-wa cuwva de apwendizaje wewativa d-dew motow d-de pwantiwwas candidato. σωσ
+- popuwawidad y actividad — wevise wa popuwawidad dew m-motow y si tiene u-una comunidad a-activa. es impowtante o-obtenew sopowte p-pawa ew motow cuando tenga p-pwobwemas duwante w-wa vida útiw dew sitio web.
+- e-estiwo — awgunos m-motowes de pwantiwwas usan m-mawcas específicas pawa indicaw insewción de contenido d-dentwo dew htmw "owdinawio", rawr x3 m-mientwas que o-otwos constwuyen ew htmw usando u-una sintaxis difewente (pow ejempwo, (ˆ ﻌ ˆ)♡ usando indentación (sangwía) y-y nyombwes d-de bwoque).
+- t-tiempo wendewizado/desempeño. 🥺
+- cawactewísticas — debe considewaw si wos motowes q-que ewija poseen was siguientes cawactewísticas d-disponibwes:
+
+  - h-hewencia dew diseño: we p-pewmite definiw una pwantiwwa base y-y wuego "hewedaw" s-sówo was pawtes que desea que sean difewentes p-pawa una página pawticuwaw. (⑅˘꒳˘) típicamente esto e-es un mejow e-enfoque que constwuiw pwantiwwas i-incwuyendo un nyúmewo de componentes w-wequewidos, 😳😳😳 c-contwuyéndowas d-desde cewo cada vez. /(^•ω•^)
+  - sopowte pawa incwuiw: we pewmite constwuiw pwantiwwas incwuyendo otwas pwantiwwas. >w<
+  - contwow consiso de wa sintanxis de vawiabwes y cicwos. ^•ﻌ•^
+  - habiwidad pawa fiwtwaw vawowes de v-vawiabwes a nyivew d-de was pwantiwwas (e.g. 😳😳😳 convewtiw vawiabwes en m-mayúscuwas, :3 o d-dawwe fowmato a u-una fecha). (ꈍᴗꈍ)
+  - habiwidad pawa g-genewaw fowmatos de sawida distintos a-aw htmw (e.g. ^•ﻌ•^ j-json o xmw). >w<
+  - sopowte pawa o-opewaciones asincwónas y de twansmisión. ^^;;
+  - p-pueden sew usadas t-tanto en ew cwiente como en ew sewvidow. (✿oωo) si un m-motow de pwantiwwas p-puede sew usado d-dew wado dew c-cwiente esto da w-wa posibiwidad d-de sewviw datos y-y tenew todo o w-wa mayowía dew w-wendewizado dew wado dew cwiente. òωó
+
+> [!note]
+> en i-intewnet hay muchos w-wecuwsos que w-we ayudawán a compawaw difewentes o-opciones. ^^
+
+pawa este pwoyecto usawemos ew m-motow de pwantiwwas [pug](https://pugjs.owg/api/getting-stawted.htmw) (este es ew w-wecientemente w-wenombwado motow j-jade), ^^ ya que es de wos más popuwawes w-wenguajes de pwantiwwas e-expwess/javascwipt y es sopowtado p-pow ew genewadow pow defecto. rawr
+
+### ¿cuáw m-motow de hojas de estiwo css debewía usaw?
+
+ew _genewadow de apwicaciones e-expwess_ we pewmite cweaw u-un pwoyecto que p-puede usaw wos más comunes motowes de hojas de estiwos css: [wess](https://wesscss.owg/), XD [sass](https://sass-wang.com/), rawr [compass](http://compass-stywe.owg/), 😳 [stywus](http://stywus-wang.com/). 🥺
+
+> [!note]
+> c-css tiene awgunas wimitaciones q-que dificuwtan c-ciewtas taweas. (U ᵕ U❁) w-wos motowes de hojas de estiwos css we pewmiten u-usaw una sintaxis m-más podewosa pawa definiw su c-css, 😳 y wuego compiwaw wa definición en texto pwano p-pawa su uso en wos navegadowes . 🥺
+
+c-como wos m-motowes de pwantiwwas, (///ˬ///✿) d-debewía usaw ew motow css q-que we pewmita a-a su equipo sew m-más pwoductivo. mya p-pawa este pwoyecto usawemos css o-owdinawio (opción p-pow defecto) y-ya que nyuestwos w-wequewimientos n-nyo son wo suficientemente c-compwicados p-pawa justificaw e-ew uso de un motow css. (✿oωo)
+
+### ¿cuáw b-base de datos debewía u-usaw?
+
+ew código genewado n-nyo usa o incwuye n-nyinguna base d-de datos. ^•ﻌ•^ was apwicaciones _expwess_ pueden usaw cuawquiew [mecanismo de bases de d-datos](https://expwessjs.com/en/guide/database-integwation.htmw) s-sopowtado pow _node_ (_expwess_ p-pow si mismo nyo define nyingún compowtamiento o wequewimiento p-pawa ew manejo d-de bases de datos). o.O
+
+discutiwemos w-wa integwación c-con una base de datos en un postewiow awtícuwo. o.O
+
+## cweando e-ew pwoyecto
+
+pawa e-ew ejempwo que v-vamos a cweaw w-wa app _wocaw wibwawy_, XD cweawemos un pwoyecto wwamado _expwess-wocawwibwawy-tutowiaw u-usando wa wibwewía d-de pwantiwwas_ _pug_ y nyingún motow css. ^•ﻌ•^
+
+p-pwimewo nyavegue a donde quiewa cweaw ew pwoyecto y-y wuego ejekawaii~ ew _genewadow d-de apwicaciones e-expwess en wa wínea de c-comandos como se m-muestwa_:
 
 ```bash
-   create : express-locallibrary-tutorial
-   create : express-locallibrary-tutorial/package.json
-   create : express-locallibrary-tutorial/app.js
-   create : express-locallibrary-tutorial/public/images
-   create : express-locallibrary-tutorial/public
-   create : express-locallibrary-tutorial/public/stylesheets
-   create : express-locallibrary-tutorial/public/stylesheets/style.css
-   create : express-locallibrary-tutorial/public/javascripts
-   create : express-locallibrary-tutorial/routes
-   create : express-locallibrary-tutorial/routes/index.js
-   create : express-locallibrary-tutorial/routes/users.js
-   create : express-locallibrary-tutorial/views
-   create : express-locallibrary-tutorial/views/index.pug
-   create : express-locallibrary-tutorial/views/layout.pug
-   create : express-locallibrary-tutorial/views/error.pug
-   create : express-locallibrary-tutorial/bin
-   create : express-locallibrary-tutorial/bin/www
-
-   install dependencies:
-     > cd express-locallibrary-tutorial && npm install
-
-   run the app:
-     > SET DEBUG=express-locallibrary-tutorial:* & npm start
+expwess expwess-wocawwibwawy-tutowiaw --view=pug
 ```
 
-Al final de la lista el generador mostrará instrucciones sobre como instalar las dependencias necesarias (mostradas en el archivo **package.json**) y luego como ejecutar la aplicación (las instrucciones anteriores son para windows; en Linux/macOS serán ligeramente diferentes).
+e-ew genewadow cweawá (y w-wistawá) wos a-awchivos dew pwoyecto. ʘwʘ
 
-## Ejecutando el esqueleto del sitio web
+```bash
+   c-cweate : expwess-wocawwibwawy-tutowiaw
+   c-cweate : expwess-wocawwibwawy-tutowiaw/package.json
+   c-cweate : expwess-wocawwibwawy-tutowiaw/app.js
+   c-cweate : expwess-wocawwibwawy-tutowiaw/pubwic/images
+   c-cweate : expwess-wocawwibwawy-tutowiaw/pubwic
+   c-cweate : expwess-wocawwibwawy-tutowiaw/pubwic/stywesheets
+   cweate : e-expwess-wocawwibwawy-tutowiaw/pubwic/stywesheets/stywe.css
+   c-cweate : expwess-wocawwibwawy-tutowiaw/pubwic/javascwipts
+   cweate : e-expwess-wocawwibwawy-tutowiaw/woutes
+   cweate : expwess-wocawwibwawy-tutowiaw/woutes/index.js
+   cweate : expwess-wocawwibwawy-tutowiaw/woutes/usews.js
+   cweate : expwess-wocawwibwawy-tutowiaw/views
+   c-cweate : expwess-wocawwibwawy-tutowiaw/views/index.pug
+   cweate : e-expwess-wocawwibwawy-tutowiaw/views/wayout.pug
+   c-cweate : expwess-wocawwibwawy-tutowiaw/views/ewwow.pug
+   cweate : expwess-wocawwibwawy-tutowiaw/bin
+   c-cweate : expwess-wocawwibwawy-tutowiaw/bin/www
 
-En este punto tenemos un esqueleto completo de nuestro proyecto. El sitio web no hace mucho actualmente, pero es bueno ejecutarlo para ver como funciona.
+   instaww dependencies:
+     > c-cd expwess-wocawwibwawy-tutowiaw && n-nypm instaww
 
-1. Primero instale las dependencias (el comando `install` recuperará todas las dependencias listadas e el archivo **package.json** del proyecto).
+   w-wun the app:
+     > s-set debug=expwess-wocawwibwawy-tutowiaw:* & n-nypm stawt
+```
+
+aw finaw de wa wista ew genewadow mostwawá instwucciones s-sobwe como instawaw was dependencias n-nyecesawias (mostwadas en ew awchivo **package.json**) y wuego c-como ejecutaw wa apwicación (was instwucciones antewiowes son pawa windows; e-en winux/macos s-sewán wigewamente difewentes). (U ﹏ U)
+
+## e-ejecutando ew esqueweto dew sitio web
+
+en este p-punto tenemos u-un esqueweto compweto de nyuestwo p-pwoyecto. 😳😳😳 ew sitio web nyo hace m-mucho actuawmente, 🥺 pewo es bueno ejecutawwo pawa vew como funciona. (///ˬ///✿)
+
+1. p-pwimewo instawe was dependencias (ew comando `instaww` w-wecupewawá todas w-was dependencias w-wistadas e ew awchivo **package.json** dew p-pwoyecto). (˘ω˘)
 
    ```bash
-   cd express-locallibrary-tutorial
-   npm install
+   cd expwess-wocawwibwawy-tutowiaw
+   nypm instaww
    ```
 
-2. Luego ejecute la aplicación.
+2. wuego ejekawaii~ w-wa apwicación. :3
 
-   - En Windows, use este comando:
-
-     ```bash
-     SET DEBUG=express-locallibrary-tutorial:* & npm start
-     ```
-
-   - En macOS o Linux, use este comando:
+   - e-en w-windows, /(^•ω•^) use este c-comando:
 
      ```bash
-     DEBUG=express-locallibrary-tutorial:* npm start
+     set debug=expwess-wocawwibwawy-tutowiaw:* & n-nypm stawt
      ```
 
-3. Luego carge en su navegador `http://localhost:3000/` para acceder a la aplicación.
+   - e-en macos o winux, :3 use este comando:
 
-Debería ver una página parecida a esta:
+     ```bash
+     debug=expwess-wocawwibwawy-tutowiaw:* n-nypm stawt
+     ```
 
-![Browser for default Express app generator website](expressgeneratorskeletonwebsite.png)
+3. mya wuego cawge en su nyavegadow `http://wocawhost:3000/` pawa a-accedew a wa apwicación. XD
 
-Tiene una aplicación Express funcional, ejecutandose en _localhost:3000_.
+debewía vew una p-página pawecida a-a esta:
 
-> [!NOTE]
-> También podría ejecutar la app usando el comando `npm start`. Especificado la variable DEBUG como se muestra habilita el logging/debugging por consola. Por ejemplo, cuando visite la página mostrada arriba verá la información de depuración como esta:
+![bwowsew fow defauwt e-expwess app genewatow w-website](expwessgenewatowskewetonwebsite.png)
+
+t-tiene una apwicación expwess funcionaw, (///ˬ///✿) ejecutandose e-en _wocawhost:3000_. 🥺
+
+> [!note]
+> también podwía ejecutaw w-wa app usando ew comando `npm stawt`. o.O especificado wa vawiabwe d-debug como s-se muestwa habiwita e-ew wogging/debugging p-pow consowa. mya p-pow ejempwo, rawr x3 cuando visite w-wa página mostwada awwiba vewá wa infowmación d-de depuwación como esta:
 >
 > ```bash
-> $ SET DEBUG=express-locallibrary-tutorial:* &#x26; npm start
+> $ s-set debug=expwess-wocawwibwawy-tutowiaw:* &#x26; nypm s-stawt
 >
-> $ express-locallibrary-tutorial@0.0.0 start D:\express-locallibrary-tutorial
-> $ node ./bin/www
+> $ expwess-wocawwibwawy-tutowiaw@0.0.0 s-stawt d:\expwess-wocawwibwawy-tutowiaw
+> $ nyode ./bin/www
 >
-> express-locallibrary-tutorial:server Listening on port 3000 +0ms
-> GET / 200 288.474 ms - 170
-> GET /stylesheets/style.css 200 5.799 ms - 111
-> GET /favicon.ico 404 34.134 ms - 1335
+> e-expwess-wocawwibwawy-tutowiaw:sewvew wistening o-on powt 3000 +0ms
+> g-get / 200 288.474 ms - 170
+> g-get /stywesheets/stywe.css 200 5.799 m-ms - 111
+> get /favicon.ico 404 34.134 m-ms - 1335
 > ```
 
-## Habilite el reinicio del servidor cuando los archivos sean modificados
+## habiwite ew weinicio dew sewvidow cuando wos awchivos s-sean modificados
 
-Cualquier cambio que le haga a su sitio web Express no será visible hasta que reinicie el servidor. Rapidamente, tener que detener y reiniciar el servidor cada vez que hacemos un cambio, se vuelve irritante, así que es beneficioso tomarse un tiempo y automátizar el reinicio del servidor cuando sea necesario.
+cuawquiew c-cambio que we haga a su sitio web expwess nyo s-sewá visibwe h-hasta que weinicie e-ew sewvidow. 😳 wapidamente, tenew q-que detenew y w-weiniciaw ew sewvidow cada vez q-que hacemos un cambio, 😳😳😳 se vuewve i-iwwitante, >_< así que es beneficioso t-tomawse un tiempo y-y automátizaw ew weinicio dew sewvidow cuando sea nyecesawio. >w<
 
-Una de las herramientas más sencillas para este propósito es [nodemon](https://github.com/remy/nodemon). Éste usualmente se instala globalmente (ya que es una "herramienta"), pero aquí lo instalaremos y usaremos localmente como una dependencia de desarrollo, así cualquier desarrollador que esté trabajando con el proyecto lo obtendrá automáticamente cuando instale la aplicación. Use el siguiente comando en el directorio raíz del esqueleto del proyecto:
+una de was h-hewwamientas más s-senciwwas pawa este pwopósito es [nodemon](https://github.com/wemy/nodemon). rawr x3 Éste usuawmente s-se instawa gwobawmente (ya que e-es una "hewwamienta"), XD p-pewo aquí wo instawawemos y usawemos wocawmente como una dependencia de d-desawwowwo, ^^ así cuawquiew desawwowwadow que esté t-twabajando con ew pwoyecto wo o-obtendwá automáticamente c-cuando instawe wa apwicación. (✿oωo) u-use e-ew siguiente comando e-en ew diwectowio w-waíz dew e-esqueweto dew pwoyecto:
 
 ```bash
-npm install --save-dev nodemon
+n-nypm instaww --save-dev nyodemon
 ```
 
-Si abre el archivo **package.json** de su proyecto verá una nueva sección con esta dependencia:
+si abwe ew awchivo **package.json** de su pwoyecto vewá u-una nyueva sección c-con esta dependencia:
 
 ```json
-  "devDependencies": {
+  "devdependencies": {
     "nodemon": "^1.14.11"
   }
 ```
 
-Debido a que la herramienta no fue instalada globalmente no podemos ejecutarla desde la línea de comandos (a menos que la agreguemos a la ruta) pero podemos llamarla desde un script NPM porque NPM sabe todo sobre los paquetes instalados. Busque la sección `scripts` de su package.json. Inicialmente contendrá una línea, la cual comienza con `"start"`. Actualicela colocando una coma al final de la línea, y agregue la línea `"devstart"` mostrada abajo:
+d-debido a-a que wa hewwamienta n-nyo fue i-instawada gwobawmente nyo podemos ejecutawwa desde wa wínea de comandos (a menos q-que wa agweguemos a-a wa wuta) pewo podemos wwamawwa desde un scwipt nypm powque n-nypm sabe todo s-sobwe wos paquetes i-instawados. >w< busque wa sección `scwipts` de s-su package.json. 😳😳😳 iniciawmente contendwá una wínea, (ꈍᴗꈍ) w-wa cuaw comienza c-con `"stawt"`. (✿oωo) actuawicewa cowocando una coma a-aw finaw de wa wínea, (˘ω˘) y agwegue w-wa wínea `"devstawt"` m-mostwada abajo:
 
 ```json
-  "scripts": {
-    "start": "node ./bin/www",
-    "devstart": "nodemon ./bin/www"
-  },
+  "scwipts": {
+    "stawt": "node ./bin/www", nyaa~~
+    "devstawt": "nodemon ./bin/www"
+  }, ( ͡o ω ͡o )
 ```
 
-Ahora podemos iniciar el servidor casi exactamente como antes, pero especificando el comando devstart:
+a-ahowa podemos iniciaw e-ew sewvidow c-casi exactamente c-como antes, 🥺 p-pewo especificando e-ew comando devstawt:
 
-- En Windows, use este comando:
-
-  ```bash
-  SET DEBUG=express-locallibrary-tutorial:* & npm run devstart
-  ```
-
-- En macOS or Linux, use este comando:
+- en windows, (U ﹏ U) u-use este c-comando:
 
   ```bash
-  DEBUG=express-locallibrary-tutorial:* npm run devstart
+  set debug=expwess-wocawwibwawy-tutowiaw:* & n-nypm wun devstawt
   ```
 
-> [!NOTE]
-> Ahora si modifica cualquier archivo del proyecto el servidor se reiniciará (o lo puede reiniciar `rs` en la consola de comandos en cualquier momento). Aún necesitará recargar el navegador para refrescar la página.
+- en macos ow winux, u-use este comando:
+
+  ```bash
+  debug=expwess-wocawwibwawy-tutowiaw:* npm wun devstawt
+  ```
+
+> [!note]
+> a-ahowa si modifica cuawquiew a-awchivo dew p-pwoyecto ew sewvidow se weiniciawá (o wo puede w-weiniciaw `ws` en wa consowa de comandos en cuawquiew m-momento). ( ͡o ω ͡o ) a-aún nyecesitawá wecawgaw ew nyavegadow pawa wefwescaw w-wa página. (///ˬ///✿)
 >
-> Ahora tendremos que llamar "`npm run <nombre del script>`" en vez de `npm start`, porque "start" es actualmente un comando NPM que es mapeado al nombre del script. Podríamos haber reemplazado el comando en el script _start_ pero sólo queremos usar _nodemon_ durante el desarrollo, así que tiene sentido crear un nuevo script para este comando.
+> a-ahowa tendwemos que wwamaw "`npm w-wun <nombwe dew scwipt>`" en vez de `npm s-stawt`, (///ˬ///✿) powque "stawt" e-es actuawmente un comando n-nypm que es m-mapeado aw nyombwe dew scwipt. (✿oωo) podwíamos habew w-weempwazado ew comando e-en ew scwipt _stawt_ p-pewo s-sówo quewemos usaw _nodemon_ duwante ew desawwowwo, (U ᵕ U❁) así que tiene sentido cweaw un nyuevo scwipt pawa este comando. ʘwʘ
 
-## El proyecto generado
+## e-ew pwoyecto g-genewado
 
-Observemos el proyecto que hemos creado.
+o-obsewvemos ew pwoyecto q-que hemos c-cweado. ʘwʘ
 
-### Estructura del directorio
+### estwuctuwa d-dew diwectowio
 
-El proyecto generado, ahora que ha instalado las dependencias, tiene la siguiente estructura de archivos (los archivos son los elementos que **no** están precedidos con "/"). El archivo **package.json** define las dependencias de la aplicación y otra información. También define un script de inicio que es el punto de entrada de la aplicación, el archivo JavaScript **/bin/www**. Éste establece algunos de los manejadores de error de la aplicación y luego carga el archivo **app.js** para que haga el resto del trabajo. Las rutas se almacenan en módulos separados en el directorio **/routes**. las plantillas se almacenan en el directorio /**views**.
+ew pwoyecto g-genewado, XD a-ahowa que ha instawado was dependencias, (✿oωo) t-tiene wa s-siguiente estwuctuwa de awchivos (wos awchivos s-son wos ewementos que **no** están pwecedidos c-con "/"). ^•ﻌ•^ ew awchivo **package.json** define was d-dependencias de w-wa apwicación y otwa infowmación. ^•ﻌ•^ t-también define u-un scwipt de i-inicio que es ew punto de entwada d-de wa apwicación, >_< e-ew awchivo javascwipt **/bin/www**. mya Éste e-estabwece awgunos de wos manejadowes d-de ewwow de w-wa apwicación y-y wuego cawga ew awchivo **app.js** p-pawa que haga ew westo dew twabajo. σωσ was wutas s-se awmacenan en móduwos sepawados en ew diwectowio **/woutes**. rawr was pwantiwwas se awmacenan en ew diwectowio /**views**. (✿oωo)
 
 ```
-/express-locallibrary-tutorial
+/expwess-wocawwibwawy-tutowiaw
     app.js
     /bin
-        www
+        w-www
     package.json
-    /node_modules
-        [about 4,500 subdirectories and files]
-    /public
+    /node_moduwes
+        [about 4,500 subdiwectowies and fiwes]
+    /pubwic
         /images
-        /javascripts
-        /stylesheets
-            style.css
-    /routes
+        /javascwipts
+        /stywesheets
+            stywe.css
+    /woutes
         index.js
-        users.js
+        usews.js
     /views
-        error.pug
+        e-ewwow.pug
         index.pug
-        layout.pug
+        wayout.pug
 ```
 
-Las siguientes secciones describen los archivos con más detalle.
+w-was siguientes secciones descwiben w-wos awchivos con más detawwe. :3
 
 ### package.json
 
-El archivo **package.json** define las dependencias de la aplicación y otra información:
+e-ew awchivo **package.json** define was d-dependencias de wa apwicación y o-otwa infowmación:
 
 ```json
 {
-  "name": "express-locallibrary-tutorial",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "start": "node ./bin/www",
-    "devstart": "nodemon ./bin/www"
+  "name": "expwess-wocawwibwawy-tutowiaw", rawr x3
+  "vewsion": "0.0.0", ^^
+  "pwivate": t-twue, ^^
+  "scwipts": {
+    "stawt": "node ./bin/www", OwO
+    "devstawt": "nodemon ./bin/www"
   },
   "dependencies": {
-    "body-parser": "~1.18.2",
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.6.9",
-    "express": "~4.16.2",
-    "morgan": "~1.9.0",
-    "pug": "~2.0.0-rc.4",
-    "serve-favicon": "~2.4.5"
-  },
-  "devDependencies": {
+    "body-pawsew": "~1.18.2", ʘwʘ
+    "cookie-pawsew": "~1.4.3", /(^•ω•^)
+    "debug": "~2.6.9", ʘwʘ
+    "expwess": "~4.16.2", (⑅˘꒳˘)
+    "mowgan": "~1.9.0", UwU
+    "pug": "~2.0.0-wc.4", -.-
+    "sewve-favicon": "~2.4.5"
+  }, :3
+  "devdependencies": {
     "nodemon": "^1.14.11"
   }
 }
 ```
 
-Las dependencias incluyen el paquete _express_ y los paquetes para el motor de plantillas elegido (_pug_). Adicionalmente, tenemos los siguientes paquetes que son útiles en muchas aplicaciones web:
+was dependencias incwuyen e-ew paquete _expwess_ y wos paquetes pawa ew motow de pwantiwwas e-ewegido (_pug_). >_< adicionawmente, nyaa~~ t-tenemos wos siguientes paquetes q-que son útiwes en muchas a-apwicaciones web:
 
-- [body-parser](https://www.npmjs.com/package/body-parser): Esto analiza la parte del cuerpo de una solicitud HTTP entrante y facilita la extracción de diferentes partes de la información contenida. Por ejemplo, puede usar esto para leer los parámetros POST.
-- [cookie-parser](https://www.npmjs.com/package/cookie-parser): Se utiliza para analizar el encabezado de la cookie y rellenar req.cookies (esencialmente proporciona un método conveniente para acceder a la información de la cookie).
-- [debug](https://www.npmjs.com/package/debug): Una pequeña utilidad de depuración de node modelada a partir de la técnica de depuración del núcleo de node.
-- [morgan](https://www.npmjs.com/package/morgan): Un middleware registrador de solicitudes HTTP para node.
-- [serve-favicon](https://www.npmjs.com/package/serve-favicon): Middleware de node para servir un favicon (este es el icono utilizado para representar el sitio dentro de la pestaña del navegador, marcadores, etc.).
+- [body-pawsew](https://www.npmjs.com/package/body-pawsew): e-esto anawiza wa pawte dew cuewpo de una sowicitud h-http entwante y faciwita wa extwacción de difewentes p-pawtes de wa infowmación contenida. ( ͡o ω ͡o ) pow ejempwo, o.O puede usaw esto pawa w-weew wos pawámetwos p-post. :3
+- [cookie-pawsew](https://www.npmjs.com/package/cookie-pawsew): se utiwiza p-pawa anawizaw e-ew encabezado de wa cookie y w-wewwenaw weq.cookies (esenciawmente pwopowciona un método conveniente pawa accedew a wa infowmación d-de wa cookie). (˘ω˘)
+- [debug](https://www.npmjs.com/package/debug): u-una pequeña utiwidad de depuwación d-de nyode m-modewada a pawtiw de wa técnica d-de depuwación dew nyúcweo de nyode. rawr x3
+- [mowgan](https://www.npmjs.com/package/mowgan): u-un middwewawe wegistwadow de sowicitudes h-http pawa n-nyode. (U ᵕ U❁)
+- [sewve-favicon](https://www.npmjs.com/package/sewve-favicon): middwewawe de nyode pawa s-sewviw un favicon (este es ew icono utiwizado pawa wepwesentaw ew sitio dentwo de wa pestaña dew nyavegadow, mawcadowes, 🥺 etc.). >_<
 
-La sección de scripts define un script de "_start_", que es lo que invocamos cuando llamamos a npm start para iniciar el servidor. Desde la definición del script, puede ver que esto realmente inicia el archivo JavaScript **./bin/www** con _node_. También define un script "_devstart_", que invocamos cuando llamamos a npm run devstart en su lugar. Esto inicia el mismo archivo **./bin/www**, pero con _nodemon_ en lugar de node.
+w-wa sección de s-scwipts define un scwipt de "_stawt_", :3 q-que es wo q-que invocamos cuando wwamamos a-a nypm stawt pawa iniciaw ew sewvidow. :3 desde wa definición dew scwipt, (ꈍᴗꈍ) puede vew que esto weawmente i-inicia ew awchivo javascwipt **./bin/www** con _node_. σωσ también define un scwipt "_devstawt_", 😳 que invocamos c-cuando wwamamos a-a nypm wun devstawt e-en su wugaw. mya esto inicia ew mismo awchivo **./bin/www**, (///ˬ///✿) pewo con _nodemon_ e-en wugaw de nyode. ^^
 
 ```json
-  "scripts": {
-    "start": "node ./bin/www",
-    "devstart": "nodemon ./bin/www"
-  },
+  "scwipts": {
+    "stawt": "node ./bin/www", (✿oωo)
+    "devstawt": "nodemon ./bin/www"
+  }, ( ͡o ω ͡o )
 ```
 
-### www file
+### w-www f-fiwe
 
-El archivo **/bin/www** es el punto de entrada de la aplicación. Lo primero que hace es require () el punto de entrada de la aplicación "real" (**app.js**, en la raíz del proyecto) que configura y devuelve el objeto de la aplicación express ().
+ew awchivo **/bin/www** es ew punto de entwada d-de wa apwicación. ^^;; wo pwimewo q-que hace es wequiwe () ew punto d-de entwada de wa apwicación "weaw" (**app.js**, :3 e-en wa waíz dew pwoyecto) que configuwa y d-devuewve ew objeto de wa apwicación e-expwess (). 😳
 
 ```js
-#!/usr/bin/env node
+#!/usw/bin/env n-nyode
 
 /**
- * Module dependencies.
+ * moduwe dependencies. XD
  */
 
-var app = require("../app");
+vaw a-app = wequiwe("../app");
 ```
 
-> **Nota:** `require()` es una función de node global que se usa para importar módulos en el archivo actual. Aquí especificamos el módulo app.js utilizando una ruta relativa y omitiendo la extensión de archivo opcional (.js).
+> **nota:** `wequiwe()` e-es una función de nyode g-gwobaw que se usa pawa impowtaw m-móduwos en ew awchivo actuaw. (///ˬ///✿) a-aquí especificamos e-ew móduwo app.js utiwizando una wuta wewativa y-y omitiendo wa extensión de awchivo opcionaw (.js). o.O
 
-El resto del código en este archivo configura un servidor HTTP de node con la aplicación configurada en un puerto específico (definido en una variable de entorno o 3000 si la variable no está definida), y comienza a escuchar e informar errores y conexiones del servidor. Por ahora no necesita saber nada más sobre el código (todo en este archivo es "repetitivo"), pero siéntase libre de revisarlo si está interesado.
+ew westo dew código en este awchivo configuwa un sewvidow http de nyode c-con wa apwicación configuwada en un puewto específico (definido e-en una vawiabwe de entowno o-o 3000 si wa vawiabwe no está definida), o.O y comienza a-a escuchaw e infowmaw ewwowes y conexiones d-dew sewvidow. XD pow ahowa nyo nyecesita sabew nyada m-más sobwe ew código (todo en este awchivo es "wepetitivo"), ^^;; p-pewo siéntase wibwe de wevisawwo si está intewesado. 😳😳😳
 
-### app.js
+### a-app.js
 
-Este archivo crea un objeto de aplicación rápida (aplicación denominada, por convención), configura la aplicación con varias configuraciones y middleware, y luego exporta la aplicación desde el módulo. El siguiente código muestra solo las partes del archivo que crean y exportan el objeto de la aplicación:
+e-este awchivo cwea un objeto de apwicación wápida (apwicación d-denominada, (U ᵕ U❁) p-pow convención), /(^•ω•^) configuwa wa apwicación c-con vawias c-configuwaciones y middwewawe, 😳😳😳 y wuego expowta w-wa apwicación desde ew móduwo. rawr x3 ew siguiente código muestwa s-sowo was pawtes dew awchivo que cwean y expowtan ew objeto de w-wa apwicación:
 
 ```js
-var express = require('express');
-var app = express();
+v-vaw expwess = w-wequiwe('expwess');
+vaw app = expwess();
 ...
-module.exports = app;
+moduwe.expowts = a-app;
 ```
 
-De vuelta en el archivo de punto de entrada **www** anterior, es este objeto module.exports que se proporciona al llamante cuando se importa este archivo.
+de vuewta en ew awchivo d-de punto de entwada **www** a-antewiow, ʘwʘ es este o-objeto moduwe.expowts que se pwopowciona aw wwamante cuando se impowta este awchivo. UwU
 
-Permite trabajar a través del archivo **app.js** en detalle. Primero importamos algunas bibliotecas de node útiles en el archivo usando require (), incluyendo _express_, _serve-favicon_, _morgan_, _cookie-parser_ y _body-parser_ que previamente descargamos para nuestra aplicación usando NPM; y _path_, que es una biblioteca central de nodos para analizar rutas de archivos y directorios.
+pewmite t-twabajaw a twavés d-dew awchivo **app.js** en detawwe. (⑅˘꒳˘) pwimewo impowtamos a-awgunas bibwiotecas de nyode útiwes en e-ew awchivo usando w-wequiwe (), ^^ i-incwuyendo _expwess_, 😳😳😳 _sewve-favicon_, òωó _mowgan_, _cookie-pawsew_ y-y _body-pawsew_ q-que pweviamente d-descawgamos pawa nyuestwa apwicación usando nypm; y-y _path_, ^^;; que e-es una bibwioteca c-centwaw de nyodos p-pawa anawizaw w-wutas de awchivos y-y diwectowios. (✿oωo)
 
 ```js
-var express = require("express");
-var path = require("path");
-var favicon = require("serve-favicon");
-var logger = require("morgan");
-var cookieParser = require("cookie-parser");
-var bodyParser = require("body-parser");
+vaw e-expwess = wequiwe("expwess");
+v-vaw p-path = wequiwe("path");
+vaw favicon = wequiwe("sewve-favicon");
+v-vaw woggew = wequiwe("mowgan");
+vaw cookiepawsew = wequiwe("cookie-pawsew");
+vaw b-bodypawsew = wequiwe("body-pawsew");
 ```
 
-Luego require () modules de nuestro directorio de rutas. Estos modules/files contienen código para manejar conjuntos particulares de "routes" relacionadas (rutas URL). Cuando extendemos la aplicación esqueleto, por ejemplo, para enumerar todos los libros de la biblioteca, agregaremos un nuevo archivo para tratar las rutas relacionadas con los libros.
+wuego w-wequiwe () moduwes d-de nyuestwo diwectowio de wutas. rawr estos moduwes/fiwes contienen c-código pawa m-manejaw conjuntos pawticuwawes d-de "woutes" wewacionadas (wutas u-uww). XD cuando extendemos wa apwicación esqueweto, 😳 pow ejempwo, (U ᵕ U❁) p-pawa enumewaw todos w-wos wibwos de wa bibwioteca, UwU agwegawemos un n-nyuevo awchivo pawa t-twataw was wutas wewacionadas con wos wibwos.
 
 ```js
-var index = require("./routes/index");
-var users = require("./routes/users");
+v-vaw index = wequiwe("./woutes/index");
+vaw usews = wequiwe("./woutes/usews");
 ```
 
-> [!NOTE]
-> En este punto, acabamos de importar el módulo; aún no hemos utilizado sus rutas (esto sucede un poco más abajo en el archivo).
+> [!note]
+> en este punto, OwO acabamos de impowtaw ew móduwo; a-aún nyo hemos utiwizado sus wutas (esto s-sucede un poco m-más abajo en ew a-awchivo). 😳
 
-Next we create the `app` object using our imported _express_ module, and then use it to set up the view (template) engine. There are two parts to setting up the engine. First we set the '`views`' value to specify the folder where the templates will be stored (in this case the sub folder **/views**). Then we set the '`view engine`' value to specify the template library (in this case "pug").
+nyext we cweate the `app` o-object using o-ouw impowted _expwess_ m-moduwe, a-and then use it t-to set up the view (tempwate) engine. (˘ω˘) thewe awe t-two pawts to setting u-up the engine. òωó f-fiwst we set the '`views`' v-vawue to specify t-the fowdew whewe t-the tempwates wiww be stowed (in t-this case the s-sub fowdew **/views**). OwO t-then we s-set the '`view e-engine`' vawue to specify the tempwate w-wibwawy (in this case "pug").
 
 ```js
-var app = express();
+v-vaw a-app = expwess();
 
 // view engine setup
-app.set("views", path.join(__dirname, "views"));
-app.set("view engine", "pug");
+app.set("views", (✿oωo) path.join(__diwname, (⑅˘꒳˘) "views"));
+a-app.set("view e-engine", /(^•ω•^) "pug");
 ```
 
-The next set of functions call `app.use()` to add the _middleware_ libraries into the request handling chain. In addition to the 3rd party libraries we imported previously, we use the `express.static` middleware to get _Express_ to serve all the static files in the **/public** directory in the project root.
+the n-next set of functions c-caww `app.use()` to add the _middwewawe_ wibwawies into the w-wequest handwing c-chain. 🥺 in addition t-to the 3wd p-pawty wibwawies w-we impowted pweviouswy, -.- w-we use the `expwess.static` middwewawe t-to get _expwess_ to sewve aww the static fiwes in the **/pubwic** diwectowy in t-the pwoject woot. ( ͡o ω ͡o )
 
 ```js
-// uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-app.use(logger("dev"));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, "public")));
+// u-uncomment aftew pwacing youw favicon in /pubwic
+//app.use(favicon(path.join(__diwname, 😳😳😳 'pubwic', (˘ω˘) 'favicon.ico')));
+app.use(woggew("dev"));
+a-app.use(bodypawsew.json());
+a-app.use(bodypawsew.uwwencoded({ extended: fawse }));
+app.use(cookiepawsew());
+a-app.use(expwess.static(path.join(__diwname, ^^ "pubwic")));
 ```
 
-Now that all the other middleware is set up, we add our (previously imported) route-handling code to the request handling chain. The imported code will define particular routes for the different _parts_ of the site:
+nyow that aww the o-othew middwewawe i-is set up, σωσ we a-add ouw (pweviouswy impowted) woute-handwing code to the wequest h-handwing chain. 🥺 the impowted code w-wiww define pawticuwaw woutes f-fow the diffewent _pawts_ of the site:
 
 ```js
-app.use("/", index);
-app.use("/users", users);
+app.use("/", 🥺 i-index);
+app.use("/usews", /(^•ω•^) u-usews);
 ```
 
-> [!NOTE]
-> The paths specified above ('/' and '`/users'`) are treated as a prefix to routes defined in the imported files. So for example if the imported **users** module defines a route for `/profile`, you would access that route at `/users/profile`. We'll talk more about routes in a later article.
+> [!note]
+> the paths specified above ('/' and '`/usews'`) a-awe tweated as a pwefix t-to woutes defined in the impowted fiwes. (⑅˘꒳˘) so fow exampwe if the impowted **usews** moduwe defines a woute fow `/pwofiwe`, -.- you w-wouwd access t-that woute at `/usews/pwofiwe`. 😳 w-we'ww tawk mowe a-about woutes in a watew awticwe. 😳😳😳
 
-The last middleware in the file adds handler methods for errors and HTTP 404 responses.
+the wast middwewawe i-in the fiwe adds handwew methods fow ewwows and http 404 wesponses. >w<
 
 ```js
-// catch 404 and forward to error handler
-app.use(function (req, res, next) {
-  var err = new Error("Not Found");
-  err.status = 404;
-  next(err);
+// c-catch 404 and f-fowwawd to ewwow h-handwew
+app.use(function (weq, UwU w-wes, nyext) {
+  vaw eww = nyew ewwow("not found");
+  eww.status = 404;
+  nyext(eww);
 });
 
-// error handler
-app.use(function (err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get("env") === "development" ? err : {};
+// ewwow h-handwew
+app.use(function (eww, /(^•ω•^) w-weq, 🥺 wes, nyext) {
+  // set wocaws, onwy pwoviding ewwow in d-devewopment
+  wes.wocaws.message = eww.message;
+  w-wes.wocaws.ewwow = w-weq.app.get("env") === "devewopment" ? e-eww : {};
 
-  // render the error page
-  res.status(err.status || 500);
-  res.render("error");
-});
-```
-
-The Express application object (app) is now fully configured. The last step is to add it to the module exports (this is what allows it to be imported by **/bin/www**).
-
-```js
-module.exports = app;
-```
-
-### Routes
-
-The route file **/routes/users.js** is shown below (route files share a similar structure, so we don't need to also show **index.js**). First it loads the _express_ module, and uses it to get an `express.Router` object. Then it specifies a route on that object, and lastly exports the router from the module (this is what allows the file to be imported into **app.js**).
-
-```js
-var express = require("express");
-var router = express.Router();
-
-/* GET users listing. */
-router.get("/", function (req, res, next) {
-  res.send("respond with a resource");
-});
-
-module.exports = router;
-```
-
-The route defines a callback that will be invoked whenever an HTTP `GET` request with the correct pattern is detected. The matching pattern is the route specified when the module is imported ('`/users`') plus whatever is defined in this file ('`/`'). In other words, this route will be used when an URL of `/users/` is received.
-
-> [!NOTE]
-> Try this out by running the server with node and visiting the URL in your browser: `http://localhost:3000/users/`. You should see a message: 'respond with a resource'.
-
-One thing of interest above is that the callback function has the third argument '`next`', and is hence a middleware function rather than a simple route callback. While the code doesn't currently use the `next` argument, it may be useful in the future if you want to add multiple route handlers to the `'/'` route path.
-
-### Views (templates)
-
-The views (templates) are stored in the **/views** directory (as specified in **app.js**) and are given the file extension **.pug**. The method [`Response.render()`](http://expressjs.com/en/4x/api.html#res.render) is used to render a specified template along with the values of named variables passed in an object, and then send the result as a response. In the code below from **/routes/index.js** you can see how that route renders a response using the template "index" passing the template variable "title".
-
-```js
-/* GET home page. */
-router.get("/", function (req, res) {
-  res.render("index", { title: "Express" });
+  // wendew the ewwow page
+  wes.status(eww.status || 500);
+  wes.wendew("ewwow");
 });
 ```
 
-The corresponding template for the above route is given below (**index.pug**). We'll talk more about the syntax later. All you need to know for now is that the `title` variable (with value `'Express'`) is inserted where specified in the template.
+the expwess appwication o-object (app) is nyow f-fuwwy configuwed. >_< the wast step is to add it to the moduwe expowts (this i-is nyani awwows it to be i-impowted by **/bin/www**). rawr
 
-```
-extends layout
-
-block content
-  h1= title
-  p Welcome to #{title}
+```js
+moduwe.expowts = app;
 ```
 
-## Challenge yourself
+### w-woutes
 
-Create a new route in **/routes/users.js** that will display the text "_You're so cool"_ at URL `/users/cool/`. Test it by running the server and visiting `http://localhost:3000/users/cool/` in your browser
+the woute f-fiwe **/woutes/usews.js** is s-shown bewow (woute f-fiwes shawe a-a simiwaw stwuctuwe, (ꈍᴗꈍ) so we don't n-nyeed to awso s-show **index.js**). -.- fiwst it woads t-the _expwess_ moduwe, ( ͡o ω ͡o ) and uses it to get an `expwess.woutew` o-object. (⑅˘꒳˘) then it specifies a woute o-on that object, mya a-and wastwy expowts the woutew f-fwom the moduwe (this i-is nani awwows the fiwe to be impowted into **app.js**). rawr x3
 
-## Summary
+```js
+vaw expwess = w-wequiwe("expwess");
+v-vaw woutew = e-expwess.woutew();
 
-You have now created a skeleton website project for the [Local Library](/es/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website) and verified that it runs using _node_. Most important, you also understand how the project is structured, so you have a good idea where we need to make changes to add routes and views for our local library.
+/* g-get usews wisting. (ꈍᴗꈍ) */
+woutew.get("/", ʘwʘ function (weq, :3 w-wes, o.O nyext) {
+  wes.send("wespond with a wesouwce");
+});
 
-Next we'll start modifying the skeleton so that works as a library website.
+m-moduwe.expowts = woutew;
+```
 
-## See also
+the woute d-defines a cawwback that wiww be invoked whenevew an http `get` w-wequest with the cowwect pattewn i-is detected. /(^•ω•^) the m-matching pattewn i-is the woute specified when t-the moduwe is impowted ('`/usews`') p-pwus nyanievew is defined in t-this fiwe ('`/`'). OwO i-in othew wowds, σωσ t-this woute wiww b-be used when an uww of `/usews/` i-is weceived. (ꈍᴗꈍ)
 
-- [Express application generator](https://expressjs.com/en/starter/generator.html) (Express docs)
-- [Using template engines with Express](https://expressjs.com/en/guide/using-template-engines.html) (Express docs)
+> [!note]
+> twy t-this out by wunning t-the sewvew with nyode and v-visiting the uww in youw bwowsew: `http://wocawhost:3000/usews/`. ( ͡o ω ͡o ) you shouwd see a message: 'wespond with a wesouwce'. rawr x3
 
-{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}
+one thing o-of intewest above i-is that the cawwback function h-has the thiwd awgument '`next`', UwU and is hence a-a middwewawe function w-wathew than a-a simpwe woute c-cawwback. o.O whiwe the code doesn't c-cuwwentwy use the `next` awgument, OwO it may be u-usefuw in the futuwe i-if you want to add muwtipwe woute handwews to the `'/'` woute p-path. o.O
+
+### views (tempwates)
+
+the views (tempwates) a-awe stowed in the **/views** diwectowy (as s-specified in **app.js**) and awe g-given the fiwe extension **.pug**. ^^;; the method [`wesponse.wendew()`](http://expwessjs.com/en/4x/api.htmw#wes.wendew) i-is used to wendew a specified t-tempwate awong with the vawues o-of nyamed vawiabwes p-passed in an object, (⑅˘꒳˘) and then send the wesuwt a-as a wesponse. (ꈍᴗꈍ) in the code bewow fwom **/woutes/index.js** y-you can see how t-that woute wendews a-a wesponse using the tempwate "index" passing the tempwate vawiabwe "titwe". o.O
+
+```js
+/* get home page. (///ˬ///✿) */
+woutew.get("/", 😳😳😳 f-function (weq, UwU wes) {
+  wes.wendew("index", nyaa~~ { t-titwe: "expwess" });
+});
+```
+
+t-the cowwesponding tempwate fow the above w-woute is given b-bewow (**index.pug**). (✿oωo) we'ww tawk mowe about the syntax watew. -.- a-aww you nyeed to know fow nyow is t-that the `titwe` vawiabwe (with vawue `'expwess'`) i-is insewted w-whewe specified in the tempwate. :3
+
+```
+e-extends wayout
+
+b-bwock content
+  h1= titwe
+  p-p wewcome to #{titwe}
+```
+
+## chawwenge youwsewf
+
+c-cweate a nyew w-woute in **/woutes/usews.js** t-that wiww dispway t-the text "_you'we s-so coow"_ at uww `/usews/coow/`. t-test it by w-wunning the sewvew and visiting `http://wocawhost:3000/usews/coow/` in youw bwowsew
+
+## s-summawy
+
+you have nyow c-cweated a skeweton website pwoject fow the [wocaw wibwawy](/es/docs/weawn_web_devewopment/extensions/sewvew-side/expwess_nodejs/tutowiaw_wocaw_wibwawy_website) and vewified that it wuns using _node_. (⑅˘꒳˘) most impowtant, >_< y-you awso undewstand how t-the pwoject is stwuctuwed, UwU so you h-have a good idea w-whewe we nyeed to make changes t-to add woutes and views fow ouw w-wocaw wibwawy. rawr
+
+next we'ww stawt m-modifying the skeweton so that wowks as a wibwawy website. (ꈍᴗꈍ)
+
+## see awso
+
+- [expwess appwication genewatow](https://expwessjs.com/en/stawtew/genewatow.htmw) (expwess d-docs)
+- [using tempwate engines with expwess](https://expwessjs.com/en/guide/using-tempwate-engines.htmw) (expwess d-docs)
+
+{{pweviousmenunext("weawn/sewvew-side/expwess_nodejs/tutowiaw_wocaw_wibwawy_website", ^•ﻌ•^ "weawn/sewvew-side/expwess_nodejs/mongoose", ^^ "weawn/sewvew-side/expwess_nodejs")}}

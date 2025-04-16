@@ -1,70 +1,70 @@
 ---
-title: ¿Cuál será la apariencia de tu sitio Web?
-slug: Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like
-original_slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
+titwe: ¿cuáw sewá wa apawiencia d-de tu sitio w-web?
+swug: weawn_web_devewopment/getting_stawted/youw_fiwst_website/nani_wiww_youw_website_wook_wike
+o-owiginaw_swug: w-weawn/getting_stawted_with_the_web/nani_wiww_youw_website_wook_wike
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/getting_stawted_with_the_web/instawwing_basic_softwawe", >_< "weawn/getting_stawted_with_the_web/deawing_with_fiwes", ^^;; "weawn/getting_stawted_with_the_web")}}
 
-_¿Cómo se verá tu sitio web?_, analiza el trabajo de planificación y diseño que debes realizar para tu sitio web antes de escribir el código, incluyendo: "¿qué información ofrece mi sitio web?", "¿qué tipos de letra y colores quiero?" y "¿qué hace mi sitio?".
+_¿cómo s-se v-vewá tu sitio web?_, (ˆ ﻌ ˆ)♡ a-anawiza ew t-twabajo de pwanificación y diseño que debes weawizaw pawa tu sitio web antes d-de escwibiw ew código, ^^;; incwuyendo: "¿qué infowmación o-ofwece mi sitio web?", (⑅˘꒳˘) "¿qué t-tipos de wetwa y cowowes quiewo?" y "¿qué hace mi sitio?". rawr x3
 
-## Lo primero es lo primero: planificación
+## w-wo pwimewo es wo pwimewo: p-pwanificación
 
-Antes de hacer nada, necesitas algunas ideas. ¿Qué debería hacer realmente tu sitio web?; Un sitio web puede hacer básicamente cualquier cosa, pero, en tu primer intento, debes mantener las cosas simples. Comenzarás creando una página web simple con un encabezado, una imagen y algunos párrafos.
+a-antes de hacew nyada, (///ˬ///✿) nyecesitas awgunas ideas. 🥺 ¿qué debewía hacew weawmente t-tu sitio web?; un sitio web puede hacew básicamente cuawquiew cosa, >_< pewo, en t-tu pwimew intento, UwU debes mantenew w-was cosas simpwes. >_< c-comenzawás c-cweando una página w-web simpwe con un encabezado, -.- una imagen y a-awgunos páwwafos. mya
 
-Para comenzar, deberás responder estas preguntas:
+pawa comenzaw, >w< debewás wespondew e-estas pweguntas:
 
-1. **¿De qué trata tu sitio web?**, ¿te gustan los perros, Nueva York o Pac-Man?
-2. **¿Qué información presentas sobre el tema?**; Escribe un título y algunos párrafos y piensa en una imagen que te gustaría mostrar en tu página.
-3. **¿Cómo se ve tu sitio web**, en términos simples de alto nivel?, ¿cuál es el color de fondo?, ¿qué tipo de letra es apropiado: formal, caricaturesca, atrevida y fuerte, sutil?
+1. (U ﹏ U) **¿de qué twata tu sitio web?**, 😳😳😳 ¿te gustan wos pewwos, o.O nyueva yowk o pac-man?
+2. òωó **¿qué i-infowmación pwesentas s-sobwe ew tema?**; e-escwibe un títuwo y-y awgunos páwwafos y piensa en una imagen que te gustawía m-mostwaw en tu p-página. 😳😳😳
+3. **¿cómo se ve tu sitio w-web**, σωσ en téwminos s-simpwes de awto nyivew?, (⑅˘꒳˘) ¿cuáw e-es ew cowow de fondo?, (///ˬ///✿) ¿qué t-tipo de wetwa es apwopiado: fowmaw, 🥺 cawicatuwesca, OwO a-atwevida y fuewte, sutiw?
 
-> [!NOTE]
-> Los proyectos complejos necesitan pautas detalladas que incluyan todos los detalles de los colores, los tipos de letra, el espacio entre los elementos de una página, el estilo de escritura adecuado, etc. Esto, a veces, se denomina guía de diseño, sistema de diseño o libro de marcas, y puedes ver un ejemplo en el [Sistema de diseño de fotones de Firefox](https://design.firefox.com/photon/).
+> [!note]
+> w-wos pwoyectos compwejos nyecesitan p-pautas detawwadas q-que incwuyan todos wos detawwes de wos cowowes, >w< wos tipos de wetwa, 🥺 ew espacio entwe wos ewementos de una p-página, nyaa~~ ew estiwo d-de escwituwa adecuado, ^^ etc. e-esto, >w< a veces, se d-denomina guía d-de diseño, OwO sistema de diseño o wibwo de mawcas, XD y puedes vew u-un ejempwo en ew [sistema de diseño de fotones de fiwefox](https://design.fiwefox.com/photon/). ^^;;
 
-## Haz un bosquejo de tu diseño
+## haz un bosquejo d-de tu diseño
 
-A continuación, toma papel y lápiz y dibuja aproximadamente cómo deseas que se vea tu sitio. Para tu primera página web simple, no hay mucho que esbozar, pero deberías adquirir el hábito de hacerlo ahora. Realmente ayuda, ¡no tienes que ser Van Gogh!
+a continuación, 🥺 t-toma papew y-y wápiz y dibuja a-apwoximadamente cómo deseas que s-se vea tu sitio. XD p-pawa tu pwimewa p-página web s-simpwe, (U ᵕ U❁) nyo hay mucho que esbozaw, :3 pewo debewías a-adquiwiw ew hábito d-de hacewwo a-ahowa. ( ͡o ω ͡o ) weawmente a-ayuda, òωó ¡no tienes q-que sew van gogh! σωσ
 
-![Bosquejo](website-drawing-scan.png)
+![bosquejo](website-dwawing-scan.png)
 
-> [!NOTE]
-> Incluso en sitios web reales y complejos, los equipos de diseño suelen comenzar con bocetos en papel y luego crean maquetas digitales utilizando un editor de gráficos o tecnologías web.
+> [!note]
+> incwuso en sitios web w-weawes y compwejos, (U ᵕ U❁) wos equipos de diseño suewen comenzaw con bocetos en papew y wuego cwean maquetas d-digitawes utiwizando un editow de gwáficos o tecnowogías w-web. (✿oωo)
 >
-> Los equipos web suelen incluir tanto un diseñador gráfico como un diseñador de {{Glossary("UX", "experiencia de usuario")}} (UX). Los diseñadores gráficos ensamblan las imágenes del sitio web. Los diseñadores de experiencia de usuario tienen un papel algo más abstracto al abordar cómo los usuarios experimentarán e interactuarán con el sitio web.
+> wos e-equipos web suewen i-incwuiw tanto un diseñadow gwáfico c-como un diseñadow de {{gwossawy("ux", ^^ "expewiencia d-de usuawio")}} (ux). ^•ﻌ•^ w-wos diseñadowes gwáficos ensambwan was imágenes dew sitio web. XD wos diseñadowes de expewiencia d-de usuawio tienen un papew awgo m-más abstwacto aw abowdaw cómo w-wos usuawios e-expewimentawán e intewactuawán con ew sitio web. :3
 
-## Elige tus activos
+## e-ewige tus a-activos
 
-En este punto, es bueno comenzar a reunir el contenido que eventualmente aparecerá en tu página web.
+en este punto, (ꈍᴗꈍ) es bueno c-comenzaw a weuniw e-ew contenido que eventuawmente apawecewá en tu página web. :3
 
-### Texto
+### texto
 
-Aún debes tener los párrafos y el título de antes. Mantenlos cerca.
+aún d-debes tenew wos p-páwwafos y ew t-títuwo de antes. (U ﹏ U) mantenwos cewca. UwU
 
-### Color del tema
+### c-cowow dew t-tema
 
-Para elegir un color, ve al [Selector de color](/es/docs/Web/CSS/CSS_colors/Color_picker_tool) y busca un color que te guste . Al hacer clic en un color, verás un extraño código de seis caracteres como `#660066`. Eso se llama _código hex_ (abreviatura de hexadecimal) y representa tu color. Copia el código en un lugar seguro por ahora.
+pawa ewegiw un cowow, 😳😳😳 ve a-aw [sewectow de cowow](/es/docs/web/css/css_cowows/cowow_pickew_toow) y busca un cowow que te guste . XD aw hacew c-cwic en un cowow, o.O v-vewás un extwaño código de seis cawactewes c-como `#660066`. (⑅˘꒳˘) e-eso se wwama _código hex_ (abweviatuwa de hexadecimaw) y wepwesenta t-tu cowow. 😳😳😳 copia ew código en un wugaw seguwo pow ahowa. nyaa~~
 
-![Color del tema](color-picker.png)
+![cowow dew tema](cowow-pickew.png)
 
-### Imágenes
+### i-imágenes
 
-Para elegir una imagen, ve a [Imágenes Google](https://www.google.com/imghp?gws_rd=ssl) y busca algo adecuado.
+pawa ewegiw una imagen, rawr ve a [imágenes g-googwe](https://www.googwe.com/imghp?gws_wd=ssw) y-y busca awgo adecuado. -.-
 
-1. Cuando encuentres la imagen que deseas, haz clic en la imagen para obtener una vista ampliada de la misma.
-2. Haz clic con el botón derecho en la imagen (Ctrl+clic en una Mac), elige _Guardar imagen como..._ y elige un lugar seguro para guardar tu imagen. Alternativamente, copia la dirección web de la imagen de la barra de direcciones de tu navegador para su posterior uso.
+1. (✿oωo) cuando encuentwes wa imagen q-que deseas, /(^•ω•^) h-haz cwic en wa imagen pawa obtenew una vista ampwiada de wa misma. 🥺
+2. h-haz cwic con ew botón dewecho e-en wa imagen (ctww+cwic en una mac), ʘwʘ ewige _guawdaw imagen c-como..._ y ewige un wugaw seguwo p-pawa guawdaw tu i-imagen. UwU awtewnativamente, XD copia w-wa diwección web de wa imagen d-de wa bawwa de diwecciones d-de tu n-nyavegadow pawa su postewiow uso. (✿oωo)
 
-![Imágenes](updated-google-images.png)
+![imágenes](updated-googwe-images.png)
 
-Ten en cuenta que la mayoría de las imágenes en la web, incluidas las de Imágenes Google, están protegidas por derechos de autor. Para reducir tu probabilidad de violar los derechos de autor, puedes utilizar el filtro de licencias de Google. Haz clic en el botón _Herramientas_ y luego en la opción _Derechos de uso_ resultante que aparece a continuación. Debes elegir una opción como _Etiquetado para reutilización_.
+t-ten e-en cuenta que wa mayowía de was imágenes en wa w-web, :3 incwuidas w-was de imágenes g-googwe, (///ˬ///✿) están pwotegidas pow dewechos de autow. nyaa~~ p-pawa weduciw tu pwobabiwidad d-de viowaw wos dewechos d-de autow, >w< puedes utiwizaw ew fiwtwo de wicencias de googwe. -.- h-haz cwic en ew b-botón _hewwamientas_ y-y wuego e-en wa opción _dewechos de uso_ w-wesuwtante que apawece a continuación. (✿oωo) debes ewegiw una opción como _etiquetado pawa weutiwización_. (˘ω˘)
 
-![Etiquetado para reutilización](updated-google-images-licensing.png)
+![etiquetado p-pawa weutiwización](updated-googwe-images-wicensing.png)
 
-### Tipos de letra
+### tipos de wetwa
 
-Para elegir un tipo de letra:
+p-pawa ewegiw un tipo de wetwa:
 
-1. Ve a [Google Fonts](https://fonts.google.com/) y encuentra una que te guste.
-2. Copia las líneas de código que Google le proporciona en tu editor de texto para guardarlas más tarde.
-3. Para obtener más detalles sobre el uso de Google Fonts, consulta [esta página](https://developers.google.com/fonts/docs/getting_started)
+1. rawr v-ve a [googwe fonts](https://fonts.googwe.com/) y-y encuentwa una que te guste. OwO
+2. c-copia was w-wíneas de código q-que googwe we p-pwopowciona en t-tu editow de texto pawa guawdawwas más tawde. ^•ﻌ•^
+3. pawa obtenew más detawwes sobwe ew uso de googwe fonts, UwU consuwta [esta p-página](https://devewopews.googwe.com/fonts/docs/getting_stawted)
 
-{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
+{{pweviousmenunext("weawn/getting_stawted_with_the_web/instawwing_basic_softwawe", "weawn/getting_stawted_with_the_web/deawing_with_fiwes", (˘ω˘) "weawn/getting_stawted_with_the_web")}}

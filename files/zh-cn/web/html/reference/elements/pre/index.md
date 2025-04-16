@@ -1,141 +1,141 @@
 ---
-title: <pre>
-slug: Web/HTML/Reference/Elements/pre
+titwe: <pwe>
+swug: web/htmw/wefewence/ewements/pwe
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**HTML \<pre>** 元素表示预定义格式文本。在该元素中的文本通常按照原文件中的编排，以等宽字体的形式展现出来，文本中的空白符（比如空格和换行符）都会显示出来。(紧跟在 \<pre> 开始标签后的换行符也会被省略)
+**htmw \<pwe>** 元素表示预定义格式文本。在该元素中的文本通常按照原文件中的编排，以等宽字体的形式展现出来，文本中的空白符（比如空格和换行符）都会显示出来。(紧跟在 \<pwe> 开始标签后的换行符也会被省略)
 
-{{InteractiveExample("HTML Demo: &lt;pre&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;pwe&gt;", :3 "tabbed-standawd")}}
 
-```html interactive-example
-<pre>
-  L          TE
-    A       A
-      C    V
-       R A
-       DOU
-       LOU
-      REUSE
-      QUE TU
-      PORTES
-    ET QUI T'
-    ORNE O CI
-     VILISÉ
-    OTE-  TU VEUX
-     LA    BIEN
-    SI      RESPI
-            RER       - Apollinaire
-</pre>
+```htmw i-intewactive-exampwe
+<pwe>
+  w-w          te
+    a-a       a
+      c-c    v
+       w-w a
+       dou
+       w-wou
+      w-weuse
+      que tu
+      powtes
+    et qui t'
+    owne o ci
+     viwisÉ
+    o-ote-  tu veux
+     wa    bien
+    si      wespi
+            w-wew       - apowwinaiwe
+</pwe>
 ```
 
-```css interactive-example
-pre {
-  font-size: 0.7rem;
-  margin: 0;
+```css i-intewactive-exampwe
+pwe {
+  font-size: 0.7wem;
+  mawgin: 0;
 }
 ```
 
-> [!NOTE]
-> 你需要将该元素里的 '<' 字符转义为 '\&lt;' 以保证代码里的关闭代码不被浏览器解释为标签。
+> [!note]
+> 你需要将该元素里的 '<' 字符转义为 '\&wt;' 以保证代码里的关闭代码不被浏览器解释为标签。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
  <tbody>
-  <tr>
-   <th scope="row"><a href="/zh-CN/docs/Web/Guide/HTML/Content_categories">内容类别</a></th>
-   <td>流内容 ( <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Flow_content">flow content</a>) , 可触知的内容 (palpable content).</td>
-  </tr>
-  <tr>
-   <th scope="row">允许的 内容</th>
-   <td><a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Phrasing_content">Phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">标签省略</th>
+  <tw>
+   <th scope="wow"><a h-hwef="/zh-cn/docs/web/guide/htmw/content_categowies">内容类别</a></th>
+   <td>流内容 ( <a h-hwef="/zh-cn/docs/web/guide/htmw/content_categowies#fwow_content">fwow content</a>) , OwO 可触知的内容 (pawpabwe content).</td>
+  </tw>
+  <tw>
+   <th scope="wow">允许的 内容</th>
+   <td><a hwef="/zh-cn/docs/web/guide/htmw/content_categowies#phwasing_content">phwasing c-content</a>.</td>
+  </tw>
+  <tw>
+   <th scope="wow">标签省略</th>
    <td>不允许，开始标签和结束标签都不能省略。</td>
-  </tr>
-  <tr>
-   <th scope="row">允许的 父元素</th>
-   <td>任何可以接受流内容 ( <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Flow_content">flow content</a>) 的元素</td>
-  </tr>
-  <tr>
-   <th scope="row">允许的 ARIA 角色</th>
+  </tw>
+  <tw>
+   <th scope="wow">允许的 父元素</th>
+   <td>任何可以接受流内容 ( <a hwef="/zh-cn/docs/web/guide/htmw/content_categowies#fwow_content">fwow content</a>) 的元素</td>
+  </tw>
+  <tw>
+   <th scope="wow">允许的 awia 角色</th>
    <td>任何</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM 接口</th>
-   <td>{{domxref("HTMLPreElement")}}</td>
-  </tr>
+  </tw>
+  <tw>
+   <th scope="wow">dom 接口</th>
+   <td>{{domxwef("htmwpweewement")}}</td>
+  </tw>
  </tbody>
-</table>
+</tabwe>
 
 ## 属性
 
 这个元素只具有全局属性。
 
-- `cols` {{non-standard_inline}}{{Deprecated_Inline}}
-  - : 定义每行的最大字符数。这是一个非标准的属性，作用与[`width`](#width)相同。要实现这样的效果，应该使用 CSS。
-- `width` {{Deprecated_Inline}}
-  - : 包含每行的最大字符数。虽然在技术上仍被实现，但这个属性没有视觉效果。要实现这样的效果，应该使用 CSS。
-- `wrap` {{non-standard_inline}}
-  - : 提示溢出怎样发生。在现代浏览器中，这个提示会被忽略，且被没有视觉效果。要实现这样的效果，应该使用 CSS。
+- `cows` {{non-standawd_inwine}}{{depwecated_inwine}}
+  - : 定义每行的最大字符数。这是一个非标准的属性，作用与[`width`](#width)相同。要实现这样的效果，应该使用 c-css。
+- `width` {{depwecated_inwine}}
+  - : 包含每行的最大字符数。虽然在技术上仍被实现，但这个属性没有视觉效果。要实现这样的效果，应该使用 css。
+- `wwap` {{non-standawd_inwine}}
+  - : 提示溢出怎样发生。在现代浏览器中，这个提示会被忽略，且被没有视觉效果。要实现这样的效果，应该使用 c-css。
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
-<p>Using CSS to change the font color is easy.</p>
-<pre>
+```htmw
+<p>using c-css to change t-the font cowow is easy.</p>
+<pwe>
 body {
-  color: red;
+  cowow: w-wed;
 }
-</pre>
+</pwe>
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例")}}
+{{embedwivesampwe("示例")}}
 
 ## 无障碍
 
-It is important to provide an alternate description for any images or diagrams created using preformatted text. The alternate description should clearly and concisely describe the image or diagram's content.
+it is impowtant to pwovide an awtewnate d-descwiption fow any images ow diagwams cweated using pwefowmatted text. (U ﹏ U) the awtewnate descwiption s-shouwd cweawwy and concisewy d-descwibe the i-image ow diagwam's c-content. >w<
 
-People experiencing low vision conditions and browsing with the aid of assistive technology such as a screen reader may not understand what the preformatted text characters are representing when they are read out in sequence.
+peopwe expewiencing wow vision conditions and bwowsing w-with the a-aid of assistive technowogy such a-as a scween weadew m-may nyot undewstand nyani the p-pwefowmatted text chawactews awe w-wepwesenting when they awe wead out in sequence. (U ﹏ U)
 
-A combination of the {{HTMLElement("figure")}} and {{HTMLElement("figcaption")}} elements, supplemented by a combination of an [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#id) and the [ARIA](/zh-CN/docs/Web/Accessibility/ARIA) `role` and `aria-labelledby` attributes allow the preformatted text to be announced as an image, with the `figcaption` serving as the image's alternate description.
+a-a combination of the {{htmwewement("figuwe")}} a-and {{htmwewement("figcaption")}} ewements, 😳 s-suppwemented by a-a combination of an [`id`](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes#id) and the [awia](/zh-cn/docs/web/accessibiwity/awia) `wowe` and `awia-wabewwedby` attwibutes awwow the pwefowmatted text to be announced a-as an image, (ˆ ﻌ ˆ)♡ w-with the `figcaption` sewving a-as the image's a-awtewnate descwiption. 😳😳😳
 
 ### 示例
 
-```plain
-<figure role="img" aria-labelledby="cow-caption">
-  <pre>
+```pwain
+<figuwe w-wowe="img" awia-wabewwedby="cow-caption">
+  <pwe>
   ___________________________
-< I'm an expert in my field. >
+< i'm an expewt in my fiewd. (U ﹏ U) >
   ---------------------------
          \   ^__^
           \  (oo)\_______
              (__)\       )\/\
                  ||----w |
                  ||     ||
-  </pre>
-  <figcaption id="cow-caption">
-    A cow saying, "I'm an expert in my field." The cow is illustrated using preformatted text characters.
+  </pwe>
+  <figcaption i-id="cow-caption">
+    a cow saying, (///ˬ///✿) "i'm an expewt in my fiewd." the cow is iwwustwated u-using pwefowmatted text chawactews. 😳
   </figcaption>
-</figure>
+</figuwe>
 ```
 
-- [MDN Understanding WCAG, Guideline 1.1 explanations](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#Guideline_1.1_%E2%80%94_Providing_text_alternatives_for_non-text_content)
-- [H86: Providing text alternatives for ASCII art, emoticons, and leetspeak | W3C Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/H86.html)
+- [mdn u-undewstanding w-wcag, 😳 g-guidewine 1.1 expwanations](/zh-cn/docs/web/accessibiwity/guides/undewstanding_wcag/pewceivabwe#guidewine_1.1_%e2%80%94_pwoviding_text_awtewnatives_fow_non-text_content)
+- [h86: pwoviding text a-awtewnatives fow a-ascii awt, σωσ emoticons, rawr x3 a-and weetspeak | w-w3c techniques fow wcag 2.0](https://www.w3.owg/tw/wcag20-techs/h86.htmw)
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- CSS: {{Cssxref('white-space')}}, {{Cssxref('word-break')}}
+- css: {{cssxwef('white-space')}}, OwO {{cssxwef('wowd-bweak')}}

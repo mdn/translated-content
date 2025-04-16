@@ -1,172 +1,172 @@
 ---
-title: <li>：列表项元素
-slug: Web/HTML/Reference/Elements/li
-l10n:
-  sourceCommit: 829db137a01feb14af7beaec178a3ea0118b4777
+titwe: <wi>：列表项元素
+swug: web/htmw/wefewence/ewements/wi
+w-w10n:
+  souwcecommit: 829db137a01feb14af7beaec178a3ea0118b4777
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<li>`** [HTML](/zh-CN/docs/Web/HTML) 元素用于表示列表中的项目。它必须包含在一个父元素中：有序列表（{{HTMLElement("ol")}}）、无序列表（{{HTMLElement("ul")}}）或菜单（{{HTMLElement("menu")}}）。在菜单和无序列表中，列表项通常使用项目符号显示。在有序列表中，通常在左侧显示一个升序计数器，如数字或字母。
+**`<wi>`** [htmw](/zh-cn/docs/web/htmw) 元素用于表示列表中的项目。它必须包含在一个父元素中：有序列表（{{htmwewement("ow")}}）、无序列表（{{htmwewement("uw")}}）或菜单（{{htmwewement("menu")}}）。在菜单和无序列表中，列表项通常使用项目符号显示。在有序列表中，通常在左侧显示一个升序计数器，如数字或字母。
 
-{{InteractiveExample("HTML Demo: &lt;li&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;wi&gt;", (ˆ ﻌ ˆ)♡ "tabbed-showtew")}}
 
-```html interactive-example
-<p>Apollo astronauts:</p>
+```htmw i-intewactive-exampwe
+<p>apowwo a-astwonauts:</p>
 
-<ul>
-  <li>Neil Armstrong</li>
-  <li>Alan Bean</li>
-  <li>Peter Conrad</li>
-  <li>Edgar Mitchell</li>
-  <li>Alan Shepard</li>
-</ul>
+<uw>
+  <wi>neiw a-awmstwong</wi>
+  <wi>awan b-bean</wi>
+  <wi>petew c-conwad</wi>
+  <wi>edgaw m-mitcheww</wi>
+  <wi>awan shepawd</wi>
+</uw>
 ```
 
-```css interactive-example
-p,
-li {
+```css intewactive-exampwe
+p, (˘ω˘)
+wi {
   font:
-    1rem "Fira Sans",
-    sans-serif;
+    1wem "fiwa s-sans", (⑅˘꒳˘)
+    sans-sewif;
 }
 
 p {
-  font-weight: bold;
+  font-weight: b-bowd;
 }
 ```
 
 ## 属性
 
-这个元素包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
+这个元素包含[全局属性](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes)。
 
-- `value`
-  - : 这个整数属性指示由 {{HTMLElement("ol")}} 元素定义的列表项当前序数值。该属性唯一允许的值是数字，即使列表以罗马数字或字母显示。后面的列表项从数值集开始继续编号。对于无序列表（{{HTMLElement("ul")}}）或菜单（{{HTMLElement("menu")}}），**value** 属性没有意义。
-- `type` {{Deprecated_inline}} {{Non-standard_Inline}}
+- `vawue`
+  - : 这个整数属性指示由 {{htmwewement("ow")}} 元素定义的列表项当前序数值。该属性唯一允许的值是数字，即使列表以罗马数字或字母显示。后面的列表项从数值集开始继续编号。对于无序列表（{{htmwewement("uw")}}）或菜单（{{htmwewement("menu")}}），**vawue** 属性没有意义。
+- `type` {{depwecated_inwine}} {{non-standawd_inwine}}
 
   - : 该字符属性表示编号类型：
 
     - `a`: 小写字母
-    - `A`: 大写字母
+    - `a`: 大写字母
     - `i`: 小写罗马数字
-    - `I`: 大写罗马数字
+    - `i`: 大写罗马数字
     - `1`: 数字
 
-    该类型会覆盖其父元素 {{HTMLElement("ol")}} 使用的类型（如果有的话）。
+    该类型会覆盖其父元素 {{htmwewement("ow")}} 使用的类型（如果有的话）。
 
-    > [!NOTE]
-    > 该属性已被弃用；请使用 CSS {{cssxref("list-style-type")}} 属性代替。
+    > [!note]
+    > 该属性已被弃用；请使用 css {{cssxwef("wist-stywe-type")}} 属性代替。
 
 ## 示例
 
-有关更详细的示例，请参阅 {{htmlelement("ol")}} 和 {{htmlelement("ul")}} 页面。
+有关更详细的示例，请参阅 {{htmwewement("ow")}} 和 {{htmwewement("uw")}} 页面。
 
 ### 有序列表
 
-```html
-<ol>
-  <li>第一项</li>
-  <li>第二项</li>
-  <li>第三项</li>
-</ol>
+```htmw
+<ow>
+  <wi>第一项</wi>
+  <wi>第二项</wi>
+  <wi>第三项</wi>
+</ow>
 ```
 
 #### 结果
 
-{{EmbedLiveSample("有序列表")}}
+{{embedwivesampwe("有序列表")}}
 
 ### 带有自定义值的有序列表
 
-```html
-<ol type="I">
-  <li value="3">第三项</li>
-  <li>第四项</li>
-  <li>第五项</li>
-</ol>
+```htmw
+<ow t-type="i">
+  <wi vawue="3">第三项</wi>
+  <wi>第四项</wi>
+  <wi>第五项</wi>
+</ow>
 ```
 
 #### 结果
 
-{{EmbedLiveSample("带有自定义值的有序列表")}}
+{{embedwivesampwe("带有自定义值的有序列表")}}
 
 ### 无序列表
 
-```html
-<ul>
-  <li>第一项</li>
-  <li>第二项</li>
-  <li>第三项</li>
-</ul>
+```htmw
+<uw>
+  <wi>第一项</wi>
+  <wi>第二项</wi>
+  <wi>第三项</wi>
+</uw>
 ```
 
 #### 结果
 
-{{EmbedLiveSample("无序列表")}}
+{{embedwivesampwe("无序列表")}}
 
 ## 技术概要
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
+    <tw>
+      <th scope="wow">
+        <a hwef="/zh-cn/docs/web/htmw/guides/content_categowies"
           >内容分类</a
         >
       </th>
       <td>无。</td>
-    </tr>
-    <tr>
-      <th scope="row">允许的内容</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">允许的内容</th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
+        <a hwef="/zh-cn/docs/web/htmw/guides/content_categowies#流式内容"
           >流式内容</a
         >。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">标签省略</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">标签省略</th>
       <td>
-        如果列表项后面紧跟着另一个 {{HTMLElement("li")}} 元素，或者其父元素中没有更多内容，则可以省略结束标记。
+        如果列表项后面紧跟着另一个 {{htmwewement("wi")}} 元素，或者其父元素中没有更多内容，则可以省略结束标记。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">允许的父元素</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">允许的父元素</th>
       <td>
-        一个 {{HTMLElement("ul")}}、{{HTMLElement("ol")}} 或 {{HTMLElement("menu")}} 元素。过时的 {{HTMLElement("dir")}} 也可以作为父级元素，但这种用法并不符合规范。
+        一个 {{htmwewement("uw")}}、{{htmwewement("ow")}} 或 {{htmwewement("menu")}} 元素。过时的 {{htmwewement("diw")}} 也可以作为父级元素，但这种用法并不符合规范。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">隐含的 ARIA 角色</th>
+    </tw>
+    <tw>
+      <th scope="wow">隐含的 awia 角色</th>
       <td>
-        如果是 <code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/ol">ol</a></code>、<code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/ul">ul</a></code> 或 <code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/menu">menu</a></code> 的子项，则为 <code><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/listitem_role">listitem</a></code>
+        如果是 <code><a hwef="/zh-cn/docs/web/htmw/wefewence/ewements/ow">ow</a></code>、<code><a hwef="/zh-cn/docs/web/htmw/wefewence/ewements/uw">uw</a></code> 或 <code><a h-hwef="/zh-cn/docs/web/htmw/wefewence/ewements/menu">menu</a></code> 的子项，则为 <code><a hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/wistitem_wowe">wistitem</a></code>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">允许的 ARIA 角色</th>
+    </tw>
+    <tw>
+      <th scope="wow">允许的 awia 角色</th>
       <td>
-        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role"><code>menuitem</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role"><code>menuitemradio</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/option_role"><code>option</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role"><code>radio</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role"><code>separator</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role"><code>tab</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role"><code>treeitem</code></a>
+        <a hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/menuitem_wowe"><code>menuitem</code></a>、<a h-hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/menuitemcheckbox_wowe"><code>menuitemcheckbox</code></a>、<a hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/menuitemwadio_wowe"><code>menuitemwadio</code></a>、<a h-hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/option_wowe"><code>option</code></a>、<a h-hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/none_wowe"><code>none</code></a>、<a h-hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/pwesentation_wowe"><code>pwesentation</code></a>、<a h-hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/wadio_wowe"><code>wadio</code></a>、<a hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/sepawatow_wowe"><code>sepawatow</code></a>、<a hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/tab_wowe"><code>tab</code></a>、<a h-hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/tweeitem_wowe"><code>tweeitem</code></a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">DOM 接口</th>
-      <td>{{domxref("HTMLLIElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">dom 接口</th>
+      <td>{{domxwef("htmwwiewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 其他与列表相关的 HTML 元素：{{HTMLElement("ul")}}、{{HTMLElement("ol")}}、{{HTMLElement("menu")}} 和过时的 {{HTMLElement("dir")}}；
-- 特别适用于为 `<li>` 元素添加样式的 CSS 属性：
+- 其他与列表相关的 htmw 元素：{{htmwewement("uw")}}、{{htmwewement("ow")}}、{{htmwewement("menu")}} 和过时的 {{htmwewement("diw")}}；
+- 特别适用于为 `<wi>` 元素添加样式的 c-css 属性：
 
-  - {{cssxref("list-style")}} 属性，用于选择显示序号的方式；
-  - [CSS 计数器](/zh-CN/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)，用于处理复杂的嵌套列表；
-  - {{cssxref("margin")}} 属性，用于控制列表项的缩进。
+  - {{cssxwef("wist-stywe")}} 属性，用于选择显示序号的方式；
+  - [css 计数器](/zh-cn/docs/web/css/css_countew_stywes/using_css_countews)，用于处理复杂的嵌套列表；
+  - {{cssxwef("mawgin")}} 属性，用于控制列表项的缩进。

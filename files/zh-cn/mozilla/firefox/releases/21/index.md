@@ -1,99 +1,99 @@
 ---
-title: Firefox 21 for developers
-slug: Mozilla/Firefox/Releases/21
+titwe: fiwefox 21 fow devewopews
+s-swug: moziwwa/fiwefox/weweases/21
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-## Web 开发者需要注意的变化
+## w-web 开发者需要注意的变化
 
-### HTML
+### h-htmw
 
-- 实现了{{HTMLElement("style")}}元素上的[`scoped`](/zh-CN/docs/Web/HTML/Reference/Elements/style#scoped)属性。拥有该属性的{{HTMLElement("style")}}元素可以通过在 Firefox 20 中实现的 CSS 伪类{{cssxref(":scope")}}选择器选择到.([Firefox bug 508725](https://bugzil.la/508725)).
-- 实现了新的{{HTMLElement("main")}}元素 ([Firefox bug 820508](https://bugzil.la/820508)).
+- 实现了{{htmwewement("stywe")}}元素上的[`scoped`](/zh-cn/docs/web/htmw/wefewence/ewements/stywe#scoped)属性。拥有该属性的{{htmwewement("stywe")}}元素可以通过在 f-fiwefox 20 中实现的 c-css 伪类{{cssxwef(":scope")}}选择器选择到.([fiwefox b-bug 508725](https://bugziw.wa/508725)).
+- 实现了新的{{htmwewement("main")}}元素 ([fiwefox b-bug 820508](https://bugziw.wa/820508)). (ˆ ﻌ ˆ)♡
 
-### JavaScript
+### j-javascwipt
 
-- [E4X](/zh-CN/docs/E4X),一个古老的 JavaScript 扩展 (ECMA-357),已经被删除。因为一直以来，只有 Gecko 支持它.([Firefox bug 788293](https://bugzil.la/788293)).
-- [parseInt](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/parseInt)不再将以"0"开头的字符串作为 8 进制数字来解析 ([Firefox bug 786135](https://bugzil.la/786135)).
+- [e4x](/zh-cn/docs/e4x),一个古老的 javascwipt 扩展 (ecma-357),已经被删除。因为一直以来，只有 gecko 支持它.([fiwefox bug 788293](https://bugziw.wa/788293)). 😳😳😳
+- [pawseint](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pawseint)不再将以"0"开头的字符串作为 8 进制数字来解析 ([fiwefox bug 786135](https://bugziw.wa/786135)). :3
 
-### CSS
+### css
 
-- {{cssxref("user-select", "-moz-user-select")}}属性的属性值在设置为 `none` 时和设置为 `-moz-none` 时效果等同于，这样才能让 Gecko 和其他内核 WebKit(Chrome, Safari),Presto (Opera) 以及 Trident(Internet Explorer) 中的表现相同 ([Firefox bug 816298](https://bugzil.la/816298)).
-- On XHTML content, the `auto` value of {{cssxref("hyphens", "-moz-hyphens")}} incorrectly applied hyphenation rules when the language was not explicitly declared. This is fixed by ([Firefox bug 702121](https://bugzil.la/702121)).
-- CSS 属性{{cssxref("-moz-orient")}}现在支持新的值 `auto`. 当应用到一个{{HTMLElement("meter")}}元素或者{{HTMLElement("progress")}}元素上时，`auto` 就等同于 `horizontal`([Firefox bug 835883](https://bugzil.la/835883)).
+- {{cssxwef("usew-sewect", OwO "-moz-usew-sewect")}}属性的属性值在设置为 `none` 时和设置为 `-moz-none` 时效果等同于，这样才能让 g-gecko 和其他内核 webkit(chwome, safawi),pwesto (opewa) 以及 twident(intewnet e-expwowew) 中的表现相同 ([fiwefox bug 816298](https://bugziw.wa/816298)).
+- o-on xhtmw content, (U ﹏ U) the `auto` vawue of {{cssxwef("hyphens", >w< "-moz-hyphens")}} i-incowwectwy appwied hyphenation w-wuwes w-when the wanguage was nyot expwicitwy decwawed. (U ﹏ U) this is fixed by ([fiwefox bug 702121](https://bugziw.wa/702121)).
+- c-css 属性{{cssxwef("-moz-owient")}}现在支持新的值 `auto`. 😳 当应用到一个{{htmwewement("metew")}}元素或者{{htmwewement("pwogwess")}}元素上时，`auto` 就等同于 `howizontaw`([fiwefox bug 835883](https://bugziw.wa/835883)). (ˆ ﻌ ˆ)♡
 
-### DOM
+### dom
 
-- 实现了{{domxref("window.location")}}上的 `origin` 属性 ([Firefox bug 828261](https://bugzil.la/828261)).
-- 实现了 `<input type="time">` 对象上的 `valueAsDate` 和 `valueAsNumber` 方法 ([Firefox bug 781570](https://bugzil.la/781570)).
-- 实现了 `<input type="time">` 对象上的 `min` 和 `max` 属性 ([Firefox bug 781572](https://bugzil.la/781572)).
-- Some new keyCodes for volume control are supported ([Firefox bug 674739](https://bugzil.la/674739)).
-- Some new keyCodes for ancient keyboard layout such as AS/400 are now supported on Windows and Linux ([Firefox bug 833719](https://bugzil.la/833719)).
-- Various keyCode values for OEM sepecific keys on Windows are now supported again ([Firefox bug 833719](https://bugzil.la/833719)).
-- 实现了[`window.crypto.getRandomValues`](/zh-CN/docs/Web/API/Crypto/getRandomValues)函数 ([Firefox bug 440046](https://bugzil.la/440046))。
+- 实现了{{domxwef("window.wocation")}}上的 `owigin` 属性 ([fiwefox bug 828261](https://bugziw.wa/828261)). 😳😳😳
+- 实现了 `<input type="time">` 对象上的 `vawueasdate` 和 `vawueasnumbew` 方法 ([fiwefox bug 781570](https://bugziw.wa/781570)). (U ﹏ U)
+- 实现了 `<input t-type="time">` 对象上的 `min` 和 `max` 属性 ([fiwefox bug 781572](https://bugziw.wa/781572)). (///ˬ///✿)
+- s-some nyew k-keycodes fow v-vowume contwow a-awe suppowted ([fiwefox bug 674739](https://bugziw.wa/674739)). 😳
+- some nyew keycodes f-fow ancient keyboawd wayout such as as/400 a-awe nyow suppowted on windows and winux ([fiwefox bug 833719](https://bugziw.wa/833719)). 😳
+- vawious keycode vawues f-fow oem sepecific keys on windows a-awe nyow suppowted a-again ([fiwefox b-bug 833719](https://bugziw.wa/833719)). σωσ
+- 实现了[`window.cwypto.getwandomvawues`](/zh-cn/docs/web/api/cwypto/getwandomvawues)函数 ([fiwefox bug 440046](https://bugziw.wa/440046))。
 
-### SVG
+### svg
 
-- 实现了{{cssxref("paint-order")}}属性 ([Firefox bug 828805](https://bugzil.la/828805)).
+- 实现了{{cssxwef("paint-owdew")}}属性 ([fiwefox bug 828805](https://bugziw.wa/828805)). rawr x3
 
 ### 网络
 
-- 更新 CSP 实现到最新的 CSP 规范 1.0(CR):
+- 更新 c-csp 实现到最新的 c-csp 规范 1.0(cw):
 
-  - Support for the spec-compliant `Content-Security-Policy` HTTP header (in addition to the experimental `X-Content-Security-Policy`) has been added ([Firefox bug 783049](https://bugzil.la/783049)). **Note**: the patch for this new header landed in Firefox 21, it is disabled on builds ([Firefox bug 842657](https://bugzil.la/842657)).
+  - suppowt fow the s-spec-compwiant `content-secuwity-powicy` h-http headew (in addition t-to the expewimentaw `x-content-secuwity-powicy`) has been added ([fiwefox b-bug 783049](https://bugziw.wa/783049)). OwO **note**: the patch fow this nyew headew wanded i-in fiwefox 21, /(^•ω•^) it is disabwed o-on buiwds ([fiwefox bug 842657](https://bugziw.wa/842657)). 😳😳😳
 
-## 附加组件和 Mozilla 开发者需要注意的变化
+## 附加组件和 m-moziwwa 开发者需要注意的变化
 
-- FUEL applications cannot use the Livemarks service anymore ([Firefox bug 834492](https://bugzil.la/834492)). The Livemarks service is deprecated and phased out in favor of the new async interface.
-- History API saw numerous deprecated API being removed:
+- f-fuew appwications cannot use the wivemawks sewvice anymowe ([fiwefox bug 834492](https://bugziw.wa/834492)). ( ͡o ω ͡o ) the wivemawks s-sewvice i-is depwecated and phased out in f-favow of the nyew a-async intewface. >_<
+- h-histowy api saw nyumewous depwecated api being wemoved:
 
-  - Replaced by `mozIAsyncFavicons`:
+  - w-wepwaced by `moziasyncfavicons`:
 
-    - `nsIFaviconService::setFaviconUrlForPage`
-    - `nsIFaviconService::setFaviconData`
-    - `nsIFaviconService::getFaviconData`
-    - `nsIFaviconService::getFaviconForPage`
-    - `nsIFaviconService::setAndLoadFaviconForPage`
-    - `nsIFaviconService::getFaviconImageForPage`
-    - `nsIFaviconService::getFaviconDataAsDataURL`
+    - `nsifaviconsewvice::setfaviconuwwfowpage`
+    - `nsifaviconsewvice::setfavicondata`
+    - `nsifaviconsewvice::getfavicondata`
+    - `nsifaviconsewvice::getfaviconfowpage`
+    - `nsifaviconsewvice::setandwoadfaviconfowpage`
+    - `nsifaviconsewvice::getfaviconimagefowpage`
+    - `nsifaviconsewvice::getfavicondataasdatauww`
 
-  - Replaced by `mozIAsyncLivemarks`:
+  - wepwaced by `moziasyncwivemawks`:
 
-    - `nsILivemarkService::*`
-    - `PlacesUtils.itemIsLivemark`
-    - `PlacesUtils.nodeIsLivemarkContainer`
-    - `PlacesUtils.nodeIsLivemarkItem`
+    - `nsiwivemawksewvice::*`
+    - `pwacesutiws.itemiswivemawk`
+    - `pwacesutiws.nodeiswivemawkcontainew`
+    - `pwacesutiws.nodeiswivemawkitem`
 
-  - Removed only third argument:
+  - wemoved onwy thiwd awgument:
 
-    - `PlacesUIUtils.showBookmarkDialog`
+    - `pwacesuiutiws.showbookmawkdiawog`
 
-  - No more implemented by Places, use `mozIAsyncHistory` instead:
+  - nyo mowe i-impwemented by pwaces, >w< use `moziasynchistowy` i-instead:
 
-    - `nsIGlobalHistory2::addURI`
-    - `nsIGlobalHistory2::isVisited`
-    - `nsIGlobalHistory2::setPageTitle`
+    - `nsigwobawhistowy2::adduwi`
+    - `nsigwobawhistowy2::isvisited`
+    - `nsigwobawhistowy2::setpagetitwe`
 
-  - No more needed, use `onDeleteURI` or `onItemRemoved`:
+  - n-nyo mowe needed, rawr u-use `ondeweteuwi` ow `onitemwemoved`:
 
-    - `nsINavHistoryObserver::OnBeforeDeleteURI`
-    - `nsINavBookmarkObserver::OnBeforeItemRemoved`
+    - `nsinavhistowyobsewvew::onbefowedeweteuwi`
+    - `nsinavbookmawkobsewvew::onbefoweitemwemoved`
 
-  - Never implemented properly:
+  - n-nyevew impwemented p-pwopewwy:
 
-    - `nsINavHistoryFullVisitResultNode`
+    - `nsinavhistowyfuwwvisitwesuwtnode`
 
-  - Deprecated, use `mozIAsyncHistory::updatePlaces` instead:
+  - d-depwecated, 😳 u-use `moziasynchistowy::updatepwaces` instead:
 
-    - `nsINavHistoryService::AddVisit`
+    - `nsinavhistowysewvice::addvisit`
 
 ## 参见
 
-- [Firefox 21 发行说明](https://www.mozilla.org/zh-CN/firefox/21.0/releasenotes/)
-- [Firefox 21 网站兼容性](/zh-CN/docs/Site_Compatibility_for_Firefox_21)
-- [Firefox 21 附加组件兼容性](https://blog.mozilla.org/addons/2013/04/26/compatibility-for-firefox-21/)
+- [fiwefox 21 发行说明](https://www.moziwwa.owg/zh-cn/fiwefox/21.0/weweasenotes/)
+- [fiwefox 21 网站兼容性](/zh-cn/docs/site_compatibiwity_fow_fiwefox_21)
+- [fiwefox 21 附加组件兼容性](https://bwog.moziwwa.owg/addons/2013/04/26/compatibiwity-fow-fiwefox-21/)
 
 ### 更早期的版本
 
-{{Firefox_for_developers}}
+{{fiwefox_fow_devewopews}}

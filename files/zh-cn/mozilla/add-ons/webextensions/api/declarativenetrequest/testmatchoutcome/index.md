@@ -1,88 +1,88 @@
 ---
-title: declarativeNetRequest.testMatchOutcome
-slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/testMatchOutcome
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: decwawativenetwequest.testmatchoutcome
+swug: moziwwa/add-ons/webextensions/api/decwawativenetwequest/testmatchoutcome
+w-w10n:
+  souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-检查扩展的任何 `declarativeNetRequest` 规则是否与假设请求匹配。仅在测试期间可用，因为这是用于扩展开发的。有关如何在每个浏览器中启用测试的详细信息，请参见[测试](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#测试)。
+检查扩展的任何 `decwawativenetwequest` 规则是否与假设请求匹配。仅在测试期间可用，因为这是用于扩展开发的。有关如何在每个浏览器中启用测试的详细信息，请参见[测试](/zh-cn/docs/moziwwa/add-ons/webextensions/api/decwawativenetwequest#测试)。
 
 ## 语法
 
-```js-nolint
-let result = await browser.declarativeNetRequest.testMatchOutcome(
-    request,                // 对象
-    options                 // 可选的对象
+```js-nowint
+w-wet wesuwt = await b-bwowsew.decwawativenetwequest.testmatchoutcome(
+    w-wequest, (ˆ ﻌ ˆ)♡                // 对象
+    o-options                 // 可选的对象
 );
 ```
 
 ### 参数
 
-- `request`
+- `wequest`
 
   - : 要测试的请求的详细信息。
-    - `initiator` {{optional_inline}}
-      - : `string`。假设请求的发起者 URL（如果有）。
-    - `method` {{optional_inline}}
-      - : `string`。假设请求的标准 HTTP 方法（小写）。默认为 HTTP 请求的 `"get"`，对于非 HTTP 请求，则忽略此项。
-    - `tabId` {{optional_inline}}
-      - : `number`。发生假设请求的标签页的 ID。不需要对应实际标签页的 ID。默认为 `-1`，表示请求与标签页无关。
+    - `initiatow` {{optionaw_inwine}}
+      - : `stwing`。假设请求的发起者 u-uww（如果有）。
+    - `method` {{optionaw_inwine}}
+      - : `stwing`。假设请求的标准 h-http 方法（小写）。默认为 h-http 请求的 `"get"`，对于非 http 请求，则忽略此项。
+    - `tabid` {{optionaw_inwine}}
+      - : `numbew`。发生假设请求的标签页的 id。不需要对应实际标签页的 id。默认为 `-1`，表示请求与标签页无关。
     - `type`
-      - : {{WebExtAPIRef("declarativeNetRequest.ResourceType")}}。假设请求的资源类型。
-    - `url`
-      - : `string`。假设请求的 URL。
+      - : {{webextapiwef("decwawativenetwequest.wesouwcetype")}}。假设请求的资源类型。
+    - `uww`
+      - : `stwing`。假设请求的 uww。
 
-- `options` {{optional_inline}}
+- `options` {{optionaw_inwine}}
 
   - : 请求选项的详细信息。
-    - `includeOtherExtensions` {{optional_inline}}
-      - : `boolean`。表示是否在 `matchedRules` 中包含其他扩展的匹配规则。当其他扩展的规则匹配时，生成的 `matchedRule` 将具有 `extensionId` 属性。默认为 `false`。
+    - `incwudeothewextensions` {{optionaw_inwine}}
+      - : `boowean`。表示是否在 `matchedwuwes` 中包含其他扩展的匹配规则。当其他扩展的规则匹配时，生成的 `matchedwuwe` 将具有 `extensionid` 属性。默认为 `fawse`。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个具有以下属性的对象：
+一个 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)，其会兑现一个具有以下属性的对象：
 
-- `matchedRules`
-  - : {{WebExtAPIRef("declarativeNetRequest.MatchedRule")}}。与假设请求匹配的规则的详细信息（如果有）。
+- `matchedwuwes`
+  - : {{webextapiwef("decwawativenetwequest.matchedwuwe")}}。与假设请求匹配的规则的详细信息（如果有）。
 
-如果没有规则匹配，则 `matchedRules` 数组为空。如果请求失败，promise 将被拒绝并带有错误消息。
+如果没有规则匹配，则 `matchedwuwes` 数组为空。如果请求失败，pwomise 将被拒绝并带有错误消息。
 
 ## 示例
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. aww w-wights wesewved. 😳😳😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce and binawy fowms, :3 with ow without
+// modification, OwO a-awe pewmitted pwovided t-that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain t-the above copywight
+// nyotice, (U ﹏ U) this wist of conditions and the fowwowing discwaimew. >w<
+//    * w-wedistwibutions in binawy fowm m-must wepwoduce t-the above
+// copywight n-nyotice, (U ﹏ U) t-this wist of conditions and the fowwowing discwaimew
+// i-in the documentation and/ow othew matewiaws p-pwovided with the
+// distwibution. 😳
+//    * nyeithew the nyame of googwe inc. (ˆ ﻌ ˆ)♡ nyow the nyames of its
+// contwibutows m-may be used to endowse ow p-pwomote pwoducts d-dewived fwom
+// t-this softwawe without specific pwiow wwitten pewmission.
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided by the copywight howdews a-and contwibutows
+// "as i-is" and any expwess o-ow impwied wawwanties, 😳😳😳 incwuding, (U ﹏ U) b-but nyot
+// wimited to, (///ˬ///✿) the impwied wawwanties o-of mewchantabiwity and fitness f-fow
+// a pawticuwaw puwpose awe d-discwaimed. 😳 in n-nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, 😳 indiwect, σωσ incidentaw,
+// speciaw, rawr x3 e-exempwawy, OwO ow c-consequentiaw damages (incwuding, /(^•ω•^) but not
+// wimited t-to, 😳😳😳 pwocuwement o-of substitute g-goods ow sewvices; woss of use, ( ͡o ω ͡o )
+// data, ow pwofits; ow business i-intewwuption) howevew caused and on any
+// theowy of wiabiwity, >_< whethew in c-contwact, stwict wiabiwity, >w< ow towt
+// (incwuding n-nyegwigence ow o-othewwise) awising i-in any way out of the use
+// o-of this softwawe, rawr e-even if advised o-of the possibiwity o-of such damage. 😳
 -->

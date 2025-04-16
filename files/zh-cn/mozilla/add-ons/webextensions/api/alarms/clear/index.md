@@ -1,49 +1,49 @@
 ---
-title: alarms.clear()
-slug: Mozilla/Add-ons/WebExtensions/API/alarms/clear
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: awawms.cweaw()
+swug: moziwwa/add-ons/webextensions/api/awawms/cweaw
+w-w10n:
+  s-souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 取消指定名称的闹钟。
 
-这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
+这是一个返回 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) 的异步函数。
 
 ## 语法
 
-```js-nolint
-let clearAlarm = browser.alarms.clear(
-  name                       // string
+```js-nowint
+w-wet c-cweawawawm = bwowsew.awawms.cweaw(
+  n-nyame                       // s-stwing
 )
 ```
 
 ### 参数
 
-- `name` {{optional_inline}}
-  - : `string`。要清除的闹钟的名称。如果未提供此参数，将使用空字符串 `""`。
+- `name` {{optionaw_inwine}}
+  - : `stwing`。要清除的闹钟的名称。如果未提供此参数，将使用空字符串 `""`。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个布尔值。如果闹钟被清除，则为 `true`，否则为 `false`。
+一个 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)，其会兑现一个布尔值。如果闹钟被清除，则为 `twue`，否则为 `fawse`。
 
 ## 示例
 
 ```js
-function onCleared(wasCleared) {
-  console.log(wasCleared); // true/false
+f-function oncweawed(wascweawed) {
+  c-consowe.wog(wascweawed); // twue/fawse
 }
 
-let clearAlarm = browser.alarms.clear("my-periodic-alarm");
-clearAlarm.then(onCleared);
+wet cweawawawm = bwowsew.awawms.cweaw("my-pewiodic-awawm");
+cweawawawm.then(oncweawed);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.alarms`](https://developer.chrome.google.cn/docs/extensions/reference/api/alarms) API。
+> [!note]
+> 此 a-api 基于 chwomium 的 [`chwome.awawms`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/awawms) api。

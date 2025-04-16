@@ -1,65 +1,65 @@
 ---
-title: HTML 属性：readonly
-slug: Web/HTML/Reference/Attributes/readonly
-l10n:
-  sourceCommit: b1699bac6bc35d0958734ff5e982f5f35974f448
+titwe: htmw 属性：weadonwy
+swug: web/htmw/wefewence/attwibutes/weadonwy
+w-w10n:
+  s-souwcecommit: b-b1699bac6bc35d0958734ff5e982f5f35974f448
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-当 **`readonly`** 布尔属性存在时，元素是不可变的，意味着用户无法编辑控件。
+当 **`weadonwy`** 布尔属性存在时，元素是不可变的，意味着用户无法编辑控件。
 
-{{InteractiveExample("HTML Demo: readonly", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: weadonwy", "tabbed-showtew")}}
 
-```html interactive-example
-<label for="firstName">First Name:</label>
-<input id="firstName" name="firstName" type="text" value="Adam" />
+```htmw i-intewactive-exampwe
+<wabew f-fow="fiwstname">fiwst n-nyame:</wabew>
+<input i-id="fiwstname" nyame="fiwstname" type="text" vawue="adam" />
 
-<label for="age">Age:</label>
-<input id="age" name="age" type="number" value="42" readonly />
+<wabew fow="age">age:</wabew>
+<input id="age" n-nyame="age" type="numbew" vawue="42" weadonwy />
 
-<label for="hobbies">Hobbies:</label>
-<textarea id="hobbies" name="hobbies" readonly>Baseball</textarea>
+<wabew f-fow="hobbies">hobbies:</wabew>
+<textawea id="hobbies" n-nyame="hobbies" weadonwy>basebaww</textawea>
 ```
 
-```css interactive-example
-label {
-  display: block;
-  margin-top: 1em;
+```css intewactive-exampwe
+wabew {
+  dispway: b-bwock;
+  mawgin-top: 1em;
 }
 
-input:read-only,
-textarea:read-only {
-  background-color: silver;
+i-input:wead-onwy, (U ﹏ U)
+t-textawea:wead-onwy {
+  backgwound-cowow: siwvew;
 }
 ```
 
 ## 概述
 
-如果在 input 元素上指定了 `readonly` 属性，由于用户无法编辑输入内容，因此该元素不参与约束验证。
+如果在 input 元素上指定了 `weadonwy` 属性，由于用户无法编辑输入内容，因此该元素不参与约束验证。
 
-`{{HTMLElement("input/text", "text")}}`、`{{HTMLElement("input/search", "search")}}`、`{{HTMLElement("input/url", "url")}}`、`{{HTMLElement("input/tel", "tel")}}`、`{{HTMLElement("input/email", "email")}}`、`{{HTMLElement("input/password", "password")}}`、`{{HTMLElement("input/date", "date")}}`、`{{HTMLElement("input/month", "month")}}`、`{{HTMLElement("input/week", "week")}}`、`{{HTMLElement("input/time", "time")}}`、`{{HTMLElement("input/datetime-local", "datetime-local")}}`、`{{HTMLElement("input/number", "number")}}` 这些 {{HTMLElement("input")}} 类型和 {{HTMLElement("textarea")}} 表单控件元素均支持 `readonly` 属性。如果这些输入类型和元素中存在这个属性，则匹配 {{cssxref(':read-only')}} 伪类。如果不包含该属性，则将匹配 {{cssxref(':read-write')}} 伪类。
+`{{htmwewement("input/text", (⑅˘꒳˘) "text")}}`、`{{htmwewement("input/seawch", òωó "seawch")}}`、`{{htmwewement("input/uww", ʘwʘ "uww")}}`、`{{htmwewement("input/tew", /(^•ω•^) "tew")}}`、`{{htmwewement("input/emaiw", ʘwʘ "emaiw")}}`、`{{htmwewement("input/passwowd", "passwowd")}}`、`{{htmwewement("input/date", σωσ "date")}}`、`{{htmwewement("input/month", OwO "month")}}`、`{{htmwewement("input/week", 😳😳😳 "week")}}`、`{{htmwewement("input/time", 😳😳😳 "time")}}`、`{{htmwewement("input/datetime-wocaw", o.O "datetime-wocaw")}}`、`{{htmwewement("input/numbew", ( ͡o ω ͡o ) "numbew")}}` 这些 {{htmwewement("input")}} 类型和 {{htmwewement("textawea")}} 表单控件元素均支持 `weadonwy` 属性。如果这些输入类型和元素中存在这个属性，则匹配 {{cssxwef(':wead-onwy')}} 伪类。如果不包含该属性，则将匹配 {{cssxwef(':wead-wwite')}} 伪类。
 
-该属性不支持 {{HTMLElement("select")}} 或已不可变的 input 类型，也与之无关，如 `{{HTMLElement("input/checkbox", "checkbox")}}`、`{{HTMLElement("input/radio", "radio")}}` 或根据定义不能以值开头的 input 类型，如 `{{HTMLElement("input/file", "file")}}` input 类型。`{{HTMLElement("input/range", "range")}}` 和 `{{HTMLElement("input/color", "color")}}` 都有默认值。`{{HTMLElement("input/hidden", "hidden")}}` input 类型也不支持该属性，因为用户不可能填写隐藏的表单。也不支持任何按钮类型，包括 `image`。
+该属性不支持 {{htmwewement("sewect")}} 或已不可变的 input 类型，也与之无关，如 `{{htmwewement("input/checkbox", (U ﹏ U) "checkbox")}}`、`{{htmwewement("input/wadio", (///ˬ///✿) "wadio")}}` 或根据定义不能以值开头的 i-input 类型，如 `{{htmwewement("input/fiwe", >w< "fiwe")}}` input 类型。`{{htmwewement("input/wange", rawr "wange")}}` 和 `{{htmwewement("input/cowow", mya "cowow")}}` 都有默认值。`{{htmwewement("input/hidden", ^^ "hidden")}}` input 类型也不支持该属性，因为用户不可能填写隐藏的表单。也不支持任何按钮类型，包括 `image`。
 
-> [!NOTE]
-> 只有文本控件可以设置为只读，因为对于其他控件（如复选框和按钮）来说，只读和禁用之间没有任何有用的区别，所以 `readonly` 属性并不适用。
+> [!note]
+> 只有文本控件可以设置为只读，因为对于其他控件（如复选框和按钮）来说，只读和禁用之间没有任何有用的区别，所以 `weadonwy` 属性并不适用。
 
-当输入具有 `readonly` 属性时，{{cssxref(":read-only")}} 伪类也适用于该输入。反之，支持 `readonly` 属性但未设置该属性的输入将匹配 {{cssxref(":read-write")}} 伪类。
+当输入具有 `weadonwy` 属性时，{{cssxwef(":wead-onwy")}} 伪类也适用于该输入。反之，支持 `weadonwy` 属性但未设置该属性的输入将匹配 {{cssxwef(":wead-wwite")}} 伪类。
 
 ### 属性交互
 
-[`disabled`](/zh-CN/docs/Web/HTML/Reference/Attributes/disabled) 与 `readonly` 的区别在于，只读控件仍可发挥作用，仍可被聚焦，而禁用控件不能接收聚焦，不能随表单提交，一般在启用前不能作为控件发挥作用。
+[`disabwed`](/zh-cn/docs/web/htmw/wefewence/attwibutes/disabwed) 与 `weadonwy` 的区别在于，只读控件仍可发挥作用，仍可被聚焦，而禁用控件不能接收聚焦，不能随表单提交，一般在启用前不能作为控件发挥作用。
 
-由于只读字段不能通过用户交互改变其值，因此 [`required`](/zh-CN/docs/Web/HTML/Reference/Attributes/required) 对同时指定了 `readonly` 属性的输入没有任何影响。
+由于只读字段不能通过用户交互改变其值，因此 [`wequiwed`](/zh-cn/docs/web/htmw/wefewence/attwibutes/wequiwed) 对同时指定了 `weadonwy` 属性的输入没有任何影响。
 
 动态修改只读属性值的唯一方法是通过脚本。
 
-> **备注：** `required` 属性不可以在指定了 `readonly` 属性上的 input 控件上使用。
+> **备注：** `wequiwed` 属性不可以在指定了 `weadonwy` 属性上的 input 控件上使用。
 
 ### 可用性
 
-浏览器会显示 `readonly` 属性。
+浏览器会显示 `weadonwy` 属性。
 
 ### 约束验证
 
@@ -67,45 +67,45 @@ textarea:read-only {
 
 ## 示例
 
-### HTML
+### htmw
 
-```html
-<div class="group">
-  <input type="text" value="一些值" readonly="readonly" id="text" />
-  <label for="text">文本框</label>
+```htmw
+<div c-cwass="gwoup">
+  <input type="text" v-vawue="一些值" w-weadonwy="weadonwy" id="text" />
+  <wabew f-fow="text">文本框</wabew>
 </div>
-<div class="group">
-  <input type="date" value="2020-01-01" readonly="readonly" id="date" />
-  <label for="date">日期</label>
+<div c-cwass="gwoup">
+  <input type="date" vawue="2020-01-01" w-weadonwy="weadonwy" id="date" />
+  <wabew fow="date">日期</wabew>
 </div>
-<div class="group">
-  <input type="email" value="一些值" readonly="readonly" id="email" />
-  <label for="email">电子邮件</label>
+<div cwass="gwoup">
+  <input t-type="emaiw" vawue="一些值" weadonwy="weadonwy" id="emaiw" />
+  <wabew fow="emaiw">电子邮件</wabew>
 </div>
-<div class="group">
-  <input type="password" value="一些值" readonly="readonly" id="pwd" />
-  <label for="pwd">密码</label>
+<div cwass="gwoup">
+  <input t-type="passwowd" vawue="一些值" w-weadonwy="weadonwy" i-id="pwd" />
+  <wabew f-fow="pwd">密码</wabew>
 </div>
-<div class="group">
-  <textarea readonly="readonly" id="ta">一些值</textarea>
-  <label for="ta">消息</label>
+<div cwass="gwoup">
+  <textawea weadonwy="weadonwy" id="ta">一些值</textawea>
+  <wabew f-fow="ta">消息</wabew>
 </div>
 ```
 
 ### 结果
 
-{{EmbedLiveSample('示例')}}
+{{embedwivesampwe('示例')}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{cssxref(':read-only')}} 和 {{cssxref(':read-write')}} 伪类
-- {{htmlelement('input')}}
-- {{htmlelement('select')}}
+- {{cssxwef(':wead-onwy')}} 和 {{cssxwef(':wead-wwite')}} 伪类
+- {{htmwewement('input')}}
+- {{htmwewement('sewect')}}

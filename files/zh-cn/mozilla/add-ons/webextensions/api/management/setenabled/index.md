@@ -1,94 +1,94 @@
 ---
-title: management.setEnabled()
-slug: Mozilla/Add-ons/WebExtensions/API/management/setEnabled
-l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+titwe: management.setenabwed()
+swug: moziwwa/add-ons/webextensions/api/management/setenabwed
+w-w10n:
+  souwcecommit: b-b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 启用或禁用给定的附加组件。
 
 该函数通常必须在用户操作的上下文中调用，例如按钮的点击处理器。浏览器可能还会要求用户确认更改。
 
-此 API 需要“management”[API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
+此 a-api 需要“management”[api 权限](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions)。
 
-这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
+这是一个返回 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) 的异步函数。
 
-该函数支持启用或禁用主题附加组件，但如果用于启用或禁用其它类型的 Web 扩展，将会返回错误。
+该函数支持启用或禁用主题附加组件，但如果用于启用或禁用其它类型的 w-web 扩展，将会返回错误。
 
 ## 语法
 
-```js-nolint
-let settingEnabled = browser.management.setEnabled(
-  id,              // 字符串
-  enabled         // 布尔值
+```js-nowint
+wet s-settingenabwed = b-bwowsew.management.setenabwed(
+  i-id, (U ﹏ U)              // 字符串
+  e-enabwed         // 布尔值
 )
 ```
 
 ### 参数
 
 - `id`
-  - : `string`，要启用/禁用的附加组件的 ID。
-- `enabled`
-  - : `boolean`，要启用还是禁用。
+  - : `stwing`，要启用/禁用的附加组件的 id。
+- `enabwed`
+  - : `boowean`，要启用还是禁用。
 
 ### 返回值
 
-[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，当附加组件已被禁用或启用时将不带参数地兑现。
+[`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)，当附加组件已被禁用或启用时将不带参数地兑现。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 示例
 
-切换 ID 为“my-add-on”的附加组件的启用/禁用状态：
+切换 id 为“my-add-on”的附加组件的启用/禁用状态：
 
 ```js
-let id = "my-add-on";
+wet id = "my-add-on";
 
-function toggleEnabled(id) {
-  let getting = browser.management.get(id);
-  getting.then((info) => {
-    browser.management.setEnabled(id, !info.enabled);
+function t-toggweenabwed(id) {
+  wet getting = bwowsew.management.get(id);
+  g-getting.then((info) => {
+    bwowsew.management.setenabwed(id, (///ˬ///✿) !info.enabwed);
   });
 }
 
-toggleEnabled(id);
+t-toggweenabwed(id);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.management`](https://developer.chrome.google.cn/docs/extensions/reference/api/management#method-setEnabled) API。该文档衍生自 Chromium 代码中的 [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json)。
+> [!note]
+> 此 api 基于 chwomium 的 [`chwome.management`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/management#method-setenabwed) api。该文档衍生自 c-chwomium 代码中的 [`management.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/management.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium a-authows. 😳 aww wights wesewved. 😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and binawy f-fowms, σωσ with ow without
+// modification, rawr x3 awe pewmitted pwovided that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce c-code must wetain t-the above copywight
+// nyotice, OwO this wist of conditions a-and the fowwowing discwaimew. /(^•ω•^)
+//    * wedistwibutions i-in binawy fowm must wepwoduce the above
+// copywight nyotice, 😳😳😳 this wist of conditions and the fowwowing d-discwaimew
+// in the documentation a-and/ow o-othew matewiaws p-pwovided with the
+// distwibution. ( ͡o ω ͡o )
+//    * nyeithew the nyame o-of googwe inc. >_< nyow t-the nyames of its
+// contwibutows m-may be used t-to endowse ow pwomote pwoducts d-dewived fwom
+// this softwawe without s-specific pwiow wwitten pewmission. >w<
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is p-pwovided by the copywight howdews a-and contwibutows
+// "as is" and a-any expwess ow i-impwied wawwanties, rawr incwuding, 😳 but not
+// wimited to, the impwied wawwanties of mewchantabiwity and fitness fow
+// a-a pawticuwaw p-puwpose awe discwaimed. >w< in nyo e-event shaww the c-copywight
+// ownew o-ow contwibutows be wiabwe fow any diwect, indiwect, (⑅˘꒳˘) incidentaw, OwO
+// s-speciaw, (ꈍᴗꈍ) exempwawy, ow consequentiaw damages (incwuding, 😳 but nyot
+// wimited to, 😳😳😳 pwocuwement o-of substitute goods ow sewvices; w-woss of use, mya
+// d-data, mya ow pwofits; o-ow business intewwuption) h-howevew caused a-and on any
+// theowy o-of wiabiwity, (⑅˘꒳˘) w-whethew in contwact, (U ﹏ U) stwict wiabiwity, mya ow towt
+// (incwuding n-nyegwigence ow othewwise) a-awising i-in any way out o-of the use
+// of t-this softwawe, ʘwʘ even if advised of the possibiwity of such damage. (˘ω˘)
 -->

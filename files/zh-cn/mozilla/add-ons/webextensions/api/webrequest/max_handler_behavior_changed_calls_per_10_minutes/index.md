@@ -1,51 +1,51 @@
 ---
-title: webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES
-slug: Mozilla/Add-ons/WebExtensions/API/webRequest/MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES
-l10n:
-  sourceCommit: 5ebacde5e3e3500a851a2c49c7d02a7a5c6604ce
+titwe: webwequest.max_handwew_behaviow_changed_cawws_pew_10_minutes
+swug: moziwwa/add-ons/webextensions/api/webwequest/max_handwew_behaviow_changed_cawws_pew_10_minutes
+w-w10n:
+  s-souwcecommit: 5ebacde5e3e3500a851a2c49c7d02a7a5c6604ce
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-{{WebExtAPIRef("webRequest.handlerBehaviorChanged", "handlerBehaviorChanged()")}} 在十分钟时间内可被调用次数的最大值。
+{{webextapiwef("webwequest.handwewbehaviowchanged", (✿oωo) "handwewbehaviowchanged()")}} 在十分钟时间内可被调用次数的最大值。
 
 这是只读属性。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.webRequest`](https://developer.chrome.google.cn/docs/extensions/reference/api/webRequest#property-MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES) API。该文档衍生自 Chromium 代码中的 [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json)。
+> [!note]
+> 此 a-api 基于 c-chwomium 的 [`chwome.webwequest`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/webwequest#pwopewty-max_handwew_behaviow_changed_cawws_pew_10_minutes) a-api。该文档衍生自 c-chwomium 代码中的 [`web_wequest.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/web_wequest.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the c-chwomium authows. ʘwʘ aww wights wesewved. (ˆ ﻌ ˆ)♡
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce a-and binawy fowms, 😳😳😳 with ow without
+// modification, :3 a-awe pewmitted pwovided that t-the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain the above c-copywight
+// n-nyotice, OwO this wist of conditions and the fowwowing discwaimew. (U ﹏ U)
+//    * wedistwibutions i-in binawy fowm must wepwoduce the above
+// copywight nyotice, >w< this wist o-of conditions and the fowwowing d-discwaimew
+// in t-the documentation a-and/ow othew m-matewiaws pwovided with the
+// distwibution. (U ﹏ U)
+//    * n-nyeithew the nyame of googwe inc. 😳 nyow the n-nyames of its
+// contwibutows may be used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe w-without specific pwiow wwitten p-pewmission. (ˆ ﻌ ˆ)♡
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided by the copywight howdews and contwibutows
+// "as i-is" and any e-expwess ow impwied wawwanties, 😳😳😳 incwuding, (U ﹏ U) b-but nyot
+// w-wimited to, (///ˬ///✿) the impwied wawwanties o-of mewchantabiwity and f-fitness fow
+// a pawticuwaw puwpose awe discwaimed. 😳 i-in nyo event shaww the copywight
+// o-ownew ow contwibutows be w-wiabwe fow any d-diwect, indiwect, 😳 incidentaw, σωσ
+// speciaw, rawr x3 exempwawy, ow consequentiaw damages (incwuding, OwO but nyot
+// wimited to, /(^•ω•^) p-pwocuwement of s-substitute goods ow sewvices; woss o-of use, 😳😳😳
+// data, ( ͡o ω ͡o ) o-ow pwofits; o-ow business intewwuption) howevew caused and on any
+// theowy of w-wiabiwity, >_< whethew in contwact, >w< stwict wiabiwity, rawr ow towt
+// (incwuding nyegwigence o-ow othewwise) awising in any w-way out of the u-use
+// of this s-softwawe, 😳 even if advised of the p-possibiwity of s-such damage. >w<
 -->

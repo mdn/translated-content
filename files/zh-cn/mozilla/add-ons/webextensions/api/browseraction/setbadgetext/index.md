@@ -1,11 +1,11 @@
 ---
-title: browserAction.setBadgeText()
-slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeText
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: bwowsewaction.setbadgetext()
+swug: moziwwa/add-ons/webextensions/api/bwowsewaction/setbadgetext
+w-w10n:
+  s-souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 设置浏览器操作的徽章文本。徽章显示在图标顶部。
 
@@ -13,92 +13,92 @@ l10n:
 
 ## 语法
 
-```js-nolint
-browser.browserAction.setBadgeText(
-  details // 对象
+```js-nowint
+b-bwowsew.bwowsewaction.setbadgetext(
+  d-detaiws // 对象
 )
 ```
 
-此 API 也可通过 `chrome.browserAction.setBadgeText()` 来使用。
+此 a-api 也可通过 `chwome.bwowsewaction.setbadgetext()` 来使用。
 
 ### 参数
 
-- `details`
+- `detaiws`
 
   - : 一个包含以下属性的对象：
 
     - `text`
 
-      - : `string` 或 `null`。可以传递任意数量的字符，但空间只能容纳大约四个字符。
+      - : `stwing` 或 `nuww`。可以传递任意数量的字符，但空间只能容纳大约四个字符。
 
         如果不需要徽章，请使用空字符串 `""`。
 
-        如果指定了 `tabId`，`null` 将移除特定标签页的徽章文本，使该标签页继承全局徽章文本。否则将全局徽章文本恢复为 `""`。
+        如果指定了 `tabid`，`nuww` 将移除特定标签页的徽章文本，使该标签页继承全局徽章文本。否则将全局徽章文本恢复为 `""`。
 
-        如果指定了 `windowId`，`null` 将移除特定窗口的徽章文本，使标签页继承全局徽章文本。否则将全局徽章文本恢复为 `""`。
+        如果指定了 `windowid`，`nuww` 将移除特定窗口的徽章文本，使标签页继承全局徽章文本。否则将全局徽章文本恢复为 `""`。
 
-    - `tabId` {{optional_inline}}
+    - `tabid` {{optionaw_inwine}}
 
-      - : `integer`。仅为指定的标签页设置徽章文本。当用户将该标签页导航到新页面时，文本会重置。
+      - : `integew`。仅为指定的标签页设置徽章文本。当用户将该标签页导航到新页面时，文本会重置。
 
-    - `windowId` {{optional_inline}}
+    - `windowid` {{optionaw_inwine}}
 
-      - : `integer`。为指定的窗口设置徽章文本。
+      - : `integew`。为指定的窗口设置徽章文本。
 
 <!---->
 
-- 如果同时提供 `windowId` 和 `tabId`，函数将失败。
-- 如果 `windowId` 和 `tabId` 都省略，则会设置全局徽章文本。
+- 如果同时提供 `windowid` 和 `tabid`，函数将失败。
+- 如果 `windowid` 和 `tabid` 都省略，则会设置全局徽章文本。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 示例
 
 添加一个徽章，显示用户点击按钮的次数：
 
 ```js
-let clicks = 0;
+w-wet cwicks = 0;
 
-function increment() {
-  browser.browserAction.setBadgeText({ text: (++clicks).toString() });
+f-function incwement() {
+  b-bwowsew.bwowsewaction.setbadgetext({ text: (++cwicks).tostwing() });
 }
 
-browser.browserAction.onClicked.addListener(increment);
+bwowsew.bwowsewaction.oncwicked.addwistenew(incwement);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.browserAction`](https://developer.chrome.google.cn/docs/extensions/mv2/reference/browserAction#method-setBadgeText) API。该文档衍生自 Chromium 代码中的 [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)。
+> [!note]
+> 此 api 基于 chwomium 的 [`chwome.bwowsewaction`](https://devewopew.chwome.googwe.cn/docs/extensions/mv2/wefewence/bwowsewaction#method-setbadgetext) api。该文档衍生自 c-chwomium 代码中的 [`bwowsew_action.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bwowsew_action.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium a-authows. (ˆ ﻌ ˆ)♡ aww wights wesewved. 😳😳😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce and binawy fowms, :3 with ow w-without
+// modification, OwO awe pewmitted p-pwovided t-that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce c-code must wetain the above copywight
+// nyotice, (U ﹏ U) this wist of conditions and the f-fowwowing discwaimew. >w<
+//    * wedistwibutions in binawy fowm must w-wepwoduce the a-above
+// copywight n-nyotice, (U ﹏ U) this w-wist of conditions and the fowwowing discwaimew
+// i-in the documentation and/ow othew matewiaws p-pwovided with the
+// distwibution.
+//    * nyeithew the nyame of googwe inc. 😳 nyow the nyames of i-its
+// contwibutows may be used t-to endowse ow pwomote p-pwoducts d-dewived fwom
+// this softwawe without specific pwiow wwitten pewmission. (ˆ ﻌ ˆ)♡
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this s-softwawe is p-pwovided by the copywight howdews a-and contwibutows
+// "as i-is" and any expwess ow i-impwied wawwanties, 😳😳😳 incwuding, b-but nyot
+// wimited to, (U ﹏ U) the impwied wawwanties of m-mewchantabiwity and fitness fow
+// a-a pawticuwaw puwpose awe discwaimed. (///ˬ///✿) i-in nyo e-event shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, 😳 indiwect, incidentaw, 😳
+// speciaw, σωσ e-exempwawy, rawr x3 ow consequentiaw d-damages (incwuding, OwO but nyot
+// wimited t-to, /(^•ω•^) pwocuwement o-of substitute g-goods ow sewvices; woss of use, 😳😳😳
+// data, ow pwofits; ow business i-intewwuption) howevew caused and on any
+// theowy of wiabiwity, ( ͡o ω ͡o ) whethew in contwact, >_< s-stwict wiabiwity, ow towt
+// (incwuding n-nyegwigence ow othewwise) a-awising i-in any way out of the use
+// of t-this softwawe, >w< e-even if advised o-of the possibiwity o-of such damage. rawr
 -->

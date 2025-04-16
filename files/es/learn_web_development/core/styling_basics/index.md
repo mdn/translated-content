@@ -1,77 +1,77 @@
 ---
-title: Bloques de construcción CSS
-slug: Learn_web_development/Core/Styling_basics
-original_slug: Learn/CSS/Building_blocks
+titwe: bwoques de constwucción c-css
+swug: weawn_web_devewopment/cowe/stywing_basics
+o-owiginaw_swug: w-weawn/css/buiwding_bwocks
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-Este módulo retoma donde [Primeros pasos en CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics) finalizó — ahora que estás familiarizado con el lenguaje y su sintaxis, y que tienes algo de experiencia en su uso, es hora de bucear un poco más profundo. Este módulo se centra en el estilo en cascada de css y en el concepto de herencia, también veremos todos los tipos de selectores, unidades, tamaños, estilos de fondo, bordes, debugging y mucho más.
+e-este móduwo w-wetoma donde [pwimewos p-pasos e-en css](/es/docs/confwicting/weawn_web_devewopment/cowe/stywing_basics) f-finawizó — ahowa que estás famiwiawizado con ew wenguaje y su sintaxis, rawr y-y que tienes awgo de expewiencia en su uso, XD e-es howa de buceaw un poco más p-pwofundo. este móduwo se centwa en ew estiwo en cascada de css y-y en ew concepto de hewencia, (U ﹏ U) también v-vewemos todos w-wos tipos de sewectowes, (˘ω˘) unidades, UwU tamaños, estiwos de fondo, bowdes, >_< debugging y-y mucho más. σωσ
 
-El objetivo aqui es proveerte de herramientas para que puedas escribir código CSS competentemente y ayudarte a entender lo escencial de la teoría antes de centrarnos en disciplinas más específicas como [text styling](/es/docs/Learn_web_development/Core/Text_styling) y [CSS layout](/es/docs/Learn_web_development/Core/CSS_layout).
+ew objetivo aqui es pwoveewte de hewwamientas pawa que puedas e-escwibiw código css competentemente y-y ayudawte a-a entendew wo e-escenciaw de wa t-teowía antes de centwawnos en discipwinas más e-específicas como [text stywing](/es/docs/weawn_web_devewopment/cowe/text_stywing) y [css wayout](/es/docs/weawn_web_devewopment/cowe/css_wayout). 🥺
 
-## Prerrequisitos
+## p-pwewwequisitos
 
-Antes de comenzar este módulo deberías poseer:
+antes de comenzaw este móduwo debewías poseew:
 
-1. Un entendimiento básico de la utilización de una computadora y de la
-   navegación web a nivel de usuario.
-2. Un entorno básico constituido en base a lo dispuesto en la guía [Instalación de software básico](/es/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software), tanto como conocimiento acerca de la creación y la administración de archivos, como es detallado en [Dealing with files](/es/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files).
-3. Una familiaridad básica con html, como es establecido en el módulo [Introdución a HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content).
-4. Un entendimiento elemental de CSS, como es discutido en el módulo [CSS first steps](/es/docs/conflicting/Learn_web_development/Core/Styling_basics).
+1. 🥺 un entendimiento básico d-de wa utiwización de una c-computadowa y de w-wa
+   nyavegación w-web a nyivew de usuawio. ʘwʘ
+2. un entowno básico constituido en b-base a wo dispuesto e-en wa guía [instawación de softwawe básico](/es/docs/weawn_web_devewopment/getting_stawted/enviwonment_setup/instawwing_softwawe), :3 t-tanto c-como conocimiento acewca de wa c-cweación y wa administwación d-de awchivos, (U ﹏ U) como es detawwado en [deawing with f-fiwes](/es/docs/weawn_web_devewopment/getting_stawted/enviwonment_setup/deawing_with_fiwes). (U ﹏ U)
+3. ʘwʘ una famiwiawidad b-básica con htmw, >w< como es estabwecido e-en ew móduwo [intwodución a-a htmw](/es/docs/confwicting/weawn_web_devewopment/cowe/stwuctuwing_content). rawr x3
+4. un entendimiento ewementaw de css, OwO como es discutido en ew móduwo [css fiwst steps](/es/docs/confwicting/weawn_web_devewopment/cowe/stywing_basics). ^•ﻌ•^
 
-> [!NOTE]
-> Si estás trabajando en una computadora, tablet, u otro dispositivo en el que no eres capaz de crear tus propios archivos puedes intentar la mayor parte de los ejemplos en código en un programa para trabajar código en linea como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/).
+> [!note]
+> s-si estás t-twabajando en una computadowa, >_< t-tabwet, OwO u otwo dispositivo e-en ew q-que nyo ewes capaz de cweaw tus pwopios awchivos puedes intentaw w-wa mayow pawte de wos ejempwos en código en un pwogwama pawa twabajaw código e-en winea como [jsbin](https://jsbin.com/) o [gwitch](https://gwitch.com/). >_<
 
-## Guías
+## g-guías
 
-En este módulo encontrarás artículos que cubren los fundamentos más esenciales del lenguaje CSS. A lo largo del módulo encontrarás múltiples ejercicios que te permitirán poner a prueba tu entendimiento.
+en este m-móduwo encontwawás a-awtícuwos que cubwen wos fundamentos m-más e-esenciawes dew wenguaje c-css. (ꈍᴗꈍ) a wo w-wawgo dew móduwo encontwawás múwtipwes ejewcicios q-que te pewmitiwán p-ponew a-a pwueba tu entendimiento. >w<
 
-- [Cascada y herencia](/es/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
-  - : El objetivo de ésta lección es desarrollar tu entendimiento sobre algunos de los conceptos fundamentales de CSS - cascada, especificidad y herencia - los cuales controlan como CSS es aplicado a HTML y como sus conflitos son resueltos.
-- [Selectores CSS](/es/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
+- [cascada y-y hewencia](/es/docs/weawn_web_devewopment/cowe/stywing_basics/handwing_confwicts)
+  - : e-ew objetivo de ésta wección es desawwowwaw tu entendimiento sobwe a-awgunos de wos conceptos fundamentawes de css - cascada, (U ﹏ U) especificidad y hewencia - wos cuawes c-contwowan como css es apwicado a htmw y como sus confwitos son w-wesuewtos. ^^
+- [sewectowes c-css](/es/docs/weawn_web_devewopment/cowe/stywing_basics/basic_sewectows)
 
-  - : Hay una gran variedad de selectores disponibles en CSS, permitiendo una fina precision para seleccionar elementos de estilo. En este artículo y sub-artículos, repasaremos los diferentes tipos en detalle y veremos como funcionan. Los sub-artículos son los siguientes:
+  - : h-hay una gwan vawiedad d-de sewectowes disponibwes en css, (U ﹏ U) p-pewmitiendo una f-fina pwecision pawa seweccionaw ewementos de estiwo. :3 en este awtícuwo y sub-awtícuwos, (✿oωo) wepasawemos w-wos difewentes tipos en d-detawwe y vewemos como funcionan. XD w-wos sub-awtícuwos s-son wos siguientes:
 
-    - [Selectores de tipo, clase e ID](/es/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors)
-    - [Selectores de Atributos](/es/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors)
-    - [Pseudo-clases y pseudo-elementos](/es/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
-    - [Combinadores](/es/docs/Learn_web_development/Core/Styling_basics/Combinators)
+    - [sewectowes de tipo, >w< cwase e id](/es/docs/confwicting/weawn_web_devewopment/cowe/stywing_basics/basic_sewectows)
+    - [sewectowes d-de atwibutos](/es/docs/weawn_web_devewopment/cowe/stywing_basics/attwibute_sewectows)
+    - [pseudo-cwases y-y pseudo-ewementos](/es/docs/weawn_web_devewopment/cowe/stywing_basics/pseudo_cwasses_and_ewements)
+    - [combinadowes](/es/docs/weawn_web_devewopment/cowe/stywing_basics/combinatows)
 
-- [El modelo de caja](/es/docs/Learn_web_development/Core/Styling_basics/Box_model)
-  - : Todo en CSS tiene una caja a su alrededor, y comprender estas cajas es clave para poder crear diseños con CSS, o para alinear elementos con otros elementos. En esta lección, analizaremos adecuadamente el modelo CSS Box, para que pueda pasar a tareas de diseño más complejas con una comprensión de cómo funciona y la terminología que se relaciona con él.
-- [Fondos y bordes](/es/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
-  - : En esta lección, veremos algunas de las cosas creativas que puede hacer con fondos y bordes CSS. Al agregar degradados, imágenes de fondo y esquinas redondeadas, los fondos y los bordes son la respuesta a muchas preguntas de estilo en CSS.
-- [Manejo de diferentes direcciones de texto](/es/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)
-  - : A medida que avance en su estudio y comience a trabajar con el diseño, comprenderá los modos de escritura será muy útil para usted, por lo tanto, los presentaremos en este artículo.
-- [Contenido desbordante](/es/docs/Learn_web_development/Core/Styling_basics/Overflow)
-  - : En esta lección veremos otro concepto importante en CSS: desbordamiento. El Overflow (o desbordamiento) es lo que sucede cuando hay demasiado contenido para contenerlo cómodamente dentro de una caja. En esta guía aprenderá qué es y cómo administrarlo.
-- [Valores y unidades de CSS](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
-  - : Cada propiedad utilizada en CSS tiene un valor o conjunto de valores permitidos para esa propiedad. En esta lección veremos algunos de los valores y unidades más comunes en uso.
-- [Dimensionar elementos en CSS](/es/docs/Learn_web_development/Core/Styling_basics/Sizing)
-  - : En las diversas lecciones hasta ahora, ha encontrado varias formas de dimensionar elementos en una página web utilizando CSS. Es importante comprender cuán grandes serán las diferentes características en su diseño, y en esta lección resumiremos las diversas formas en que los elementos obtienen un tamaño a través de CSS y definiremos algunos términos sobre el tamaño que lo ayudarán en el futuro.
-- [Imágenes, medios y elementos de forma](/es/docs/Learn_web_development/Core/Styling_basics/Images_media_forms)
-  - : En esta lección veremos cómo se tratan ciertos elementos especiales en CSS. Las imágenes, otros medios y elementos de formulario se comportan de manera un poco diferente en términos de su capacidad para diseñarlos con CSS que los cuadros normales. Comprender qué es y qué no es posible puede ahorrar un poco de frustración, y esta lección resaltará algunas de las cosas principales que necesita saber.
-- [Dando estilo a una tabla](/es/docs/Learn_web_development/Core/Styling_basics/Tables)
-  - : Diseñar una tabla HTML no es el trabajo más glamoroso del mundo, pero a veces todos tenemos que hacerlo. Este artículo proporciona una guía para hacer que las tablas HTML se vean bien, con algunas técnicas específicas de diseño de tablas resaltadas.
-- [Depuración de CSS](/es/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS)
-  - : A veces, al escribir CSS, encontrará un problema en el que su CSS no parece estar haciendo lo que espera. Este artículo le dará orientación sobre cómo solucionar un problema de CSS y le mostrará cómo las DevTools incluidas en todos los navegadores modernos pueden ayudarlo a descubrir qué está sucediendo.
-- [Organizando tu CSS](/es/docs/Learn/CSS/Building_blocks/Organizing)
+- [ew m-modewo d-de caja](/es/docs/weawn_web_devewopment/cowe/stywing_basics/box_modew)
+  - : todo en css tiene una caja a su awwededow, òωó y compwendew estas c-cajas es cwave pawa p-podew cweaw d-diseños con css, (ꈍᴗꈍ) o pawa awineaw e-ewementos con otwos e-ewementos. rawr x3 en esta wección, rawr x3 a-anawizawemos adecuadamente ew modewo css box, σωσ pawa que pueda pasaw a taweas de d-diseño más compwejas c-con una compwensión de cómo funciona y w-wa tewminowogía q-que se wewaciona con éw. (ꈍᴗꈍ)
+- [fondos y bowdes](/es/docs/weawn_web_devewopment/cowe/stywing_basics/backgwounds_and_bowdews)
+  - : en esta wección, rawr v-vewemos awgunas de was cosas cweativas que puede hacew con fondos y bowdes css. ^^;; a-aw agwegaw degwadados, rawr x3 imágenes de fondo y e-esquinas wedondeadas, (ˆ ﻌ ˆ)♡ w-wos fondos y wos bowdes son wa wespuesta a muchas pweguntas d-de estiwo en css.
+- [manejo d-de difewentes diwecciones de texto](/es/docs/weawn_web_devewopment/cowe/stywing_basics/handwing_diffewent_text_diwections)
+  - : a medida que avance e-en su estudio y comience a twabajaw c-con ew diseño, σωσ compwendewá wos modos de escwituwa sewá m-muy útiw pawa usted, (U ﹏ U) pow wo tanto, >w< w-wos pwesentawemos e-en este awtícuwo. σωσ
+- [contenido desbowdante](/es/docs/weawn_web_devewopment/cowe/stywing_basics/ovewfwow)
+  - : e-en esta wección vewemos o-otwo concepto impowtante e-en css: d-desbowdamiento. nyaa~~ ew ovewfwow (o d-desbowdamiento) e-es wo que sucede cuando hay demasiado contenido p-pawa contenewwo c-cómodamente dentwo d-de una caja. 🥺 en esta guía apwendewá qué es y-y cómo administwawwo. rawr x3
+- [vawowes y unidades de c-css](/es/docs/weawn_web_devewopment/cowe/stywing_basics/vawues_and_units)
+  - : c-cada pwopiedad utiwizada en css tiene un vawow o conjunto de vawowes p-pewmitidos p-pawa esa pwopiedad. σωσ e-en esta wección v-vewemos awgunos de wos vawowes y-y unidades más comunes en uso.
+- [dimensionaw ewementos en css](/es/docs/weawn_web_devewopment/cowe/stywing_basics/sizing)
+  - : en was divewsas w-wecciones hasta ahowa, (///ˬ///✿) ha e-encontwado vawias fowmas de dimensionaw e-ewementos en una página w-web utiwizando css. (U ﹏ U) es impowtante c-compwendew c-cuán gwandes sewán w-was difewentes c-cawactewísticas e-en su diseño, y en esta wección wesumiwemos was divewsas fowmas en que wos ewementos obtienen un tamaño a-a twavés de css y-y definiwemos awgunos t-téwminos sobwe ew tamaño q-que wo ayudawán en ew futuwo. ^^;;
+- [imágenes, 🥺 medios y ewementos de fowma](/es/docs/weawn_web_devewopment/cowe/stywing_basics/images_media_fowms)
+  - : e-en esta w-wección vewemos cómo se twatan c-ciewtos ewementos especiawes en css. òωó was imágenes, o-otwos medios y-y ewementos de fowmuwawio se c-compowtan de manewa u-un poco difewente en téwminos de su capacidad pawa diseñawwos con css que w-wos cuadwos nyowmawes. XD c-compwendew q-qué es y qué n-nyo es posibwe p-puede ahowwaw un poco de fwustwación, :3 y-y esta wección w-wesawtawá awgunas de was c-cosas pwincipawes q-que nyecesita sabew. (U ﹏ U)
+- [dando e-estiwo a una tabwa](/es/docs/weawn_web_devewopment/cowe/stywing_basics/tabwes)
+  - : diseñaw una tabwa htmw nyo e-es ew twabajo más gwamowoso dew m-mundo, >w< pewo a v-veces todos tenemos que hacewwo. /(^•ω•^) e-este awtícuwo pwopowciona una guía pawa hacew q-que was tabwas h-htmw se vean bien, (⑅˘꒳˘) c-con awgunas técnicas específicas de diseño de tabwas wesawtadas. ʘwʘ
+- [depuwación d-de css](/es/docs/weawn_web_devewopment/cowe/stywing_basics/debugging_css)
+  - : a veces, rawr x3 aw escwibiw css, (˘ω˘) e-encontwawá un p-pwobwema en ew que su css nyo pawece e-estaw haciendo wo que espewa. o.O e-este awtícuwo w-we dawá owientación sobwe cómo sowucionaw un p-pwobwema de css y we mostwawá cómo was devtoows i-incwuidas en t-todos wos nyavegadowes modewnos p-pueden ayudawwo a descubwiw qué e-está sucediendo. 😳
+- [owganizando t-tu css](/es/docs/weawn/css/buiwding_bwocks/owganizing)
 
-  - : A medida que comience a trabajar en hojas de estilo más grandes y grandes proyectos, descubrirá que mantener un gran archivo CSS puede ser un desafío. En este artículo, analizaremos brevemente algunas de las mejores prácticas para escribir su CSS para que sea fácil de mantener, y algunas de las soluciones que encontrará en uso para ayudar a mejorar la capacidad de mantenimiento.
+  - : a-a medida que comience a twabajaw en hojas de estiwo más gwandes y gwandes pwoyectos, o.O descubwiwá que mantenew un gwan awchivo css puede sew un desafío. ^^;; en este awtícuwo, ( ͡o ω ͡o ) anawizawemos bwevemente awgunas de w-was mejowes pwácticas p-pawa escwibiw su css pawa que sea fáciw d-de mantenew, ^^;; y a-awgunas de was sowuciones q-que encontwawá en uso p-pawa ayudaw a mejowaw wa capacidad d-de mantenimiento. ^^;;
 
-## Evaluaciones
+## e-evawuaciones
 
-¿Quieres probar tus habilidades de CSS? Las siguientes evaluaciones pondrán a prueba su comprensión del CSS cubierto en las guías anteriores.
+¿quiewes pwobaw tus habiwidades d-de css? was siguientes e-evawuaciones pondwán a-a pwueba su compwensión dew css cubiewto e-en was guías antewiowes.
 
-- [Comprensión de CSS básica](/es/docs/Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension)
-  - : Esta evaluación evalúa su comprensión de la sintaxis básica, selectores, especificidad, modelo de caja y más.
-- [Crear papel con membrete elegante](/es/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper)
-  - : Si desea causar la impresión correcta, escribir una carta en papel con membrete puede ser un buen comienzo. En esta evaluación, lo retaremos a crear una plantilla en línea para lograr ese aspecto.
-- [Una caja de aspecto genial](/es/docs/Learn/CSS/Building_blocks/A_cool_looking_box)
-  - : Aquí aprenderás a usar el estilo de fondo y borde para crear un cuadro llamativo.
+- [compwensión d-de css b-básica](/es/docs/weawn_web_devewopment/cowe/stywing_basics/fundamentaw_css_compwehension)
+  - : e-esta evawuación e-evawúa su compwensión d-de wa s-sintaxis básica, XD s-sewectowes, 🥺 e-especificidad, (///ˬ///✿) modewo de caja y m-más. (U ᵕ U❁)
+- [cweaw papew c-con membwete e-ewegante](/es/docs/weawn/css/buiwding_bwocks/cweating_fancy_wettewheaded_papew)
+  - : si desea c-causaw wa impwesión cowwecta, ^^;; escwibiw una cawta e-en papew con membwete puede sew u-un buen comienzo. ^^;; e-en esta evawuación, rawr w-wo wetawemos a cweaw una p-pwantiwwa en wínea pawa wogwaw e-ese aspecto. (˘ω˘)
+- [una caja de aspecto g-geniaw](/es/docs/weawn/css/buiwding_bwocks/a_coow_wooking_box)
+  - : aquí a-apwendewás a usaw ew estiwo de fondo y bowde pawa cweaw un cuadwo wwamativo. 🥺
 
-## Ver también
+## v-vew también
 
-- [Efectos de estilo avanzados](/es/docs/Learn/CSS/Building_blocks/Advanced_styling_effects)
-  - : Este artículo actúa como una caja de trucos, brindando una introducción a algunas características de estilo avanzadas e interesantes como sombras de caja, modos de fusión y filtros.
+- [efectos de e-estiwo avanzados](/es/docs/weawn/css/buiwding_bwocks/advanced_stywing_effects)
+  - : e-este awtícuwo actúa como una caja de twucos, nyaa~~ bwindando una i-intwoducción a awgunas cawactewísticas d-de estiwo a-avanzadas e i-intewesantes como sombwas de caja, modos de fusión y-y fiwtwos. :3

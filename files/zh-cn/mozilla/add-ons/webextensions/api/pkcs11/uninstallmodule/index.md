@@ -1,45 +1,45 @@
 ---
-title: pkcs11.uninstallModule()
-slug: Mozilla/Add-ons/WebExtensions/API/pkcs11/uninstallModule
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: pkcs11.uninstawwmoduwe()
+swug: moziwwa/add-ons/webextensions/api/pkcs11/uninstawwmoduwe
+w-w10n:
+  souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-卸载 Firefox 中的指定名称的 PKCS #11 模块。
+卸载 fiwefox 中的指定名称的 p-pkcs #11 模块。
 
-这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
+这是一个返回 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) 的异步函数。
 
 ## 语法
 
-```js-nolint
-let uninstalling = browser.pkcs11.uninstallModule(
-  name              // 字符串
+```js-nowint
+w-wet uninstawwing = b-bwowsew.pkcs11.uninstawwmoduwe(
+  n-nyame              // 字符串
 )
 ```
 
 ### 参数
 
 - `name`
-  - : `string`，要卸载的模块的名称。这必须与模块的 [PKCS #11 清单](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#pkcs_11_清单)中的 `name` 属性相匹配。
+  - : `stwing`，要卸载的模块的名称。这必须与模块的 [pkcs #11 清单](/zh-cn/docs/moziwwa/add-ons/webextensions/native_manifests#pkcs_11_清单)中的 `name` 属性相匹配。
 
 ### 返回值
 
-[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，当模块被卸载后将不带任何参数兑现。
+[`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)，当模块被卸载后将不带任何参数兑现。
 
-若无法找到模块或发生其他错误，该 Promise 将以错误消息拒绝。
+若无法找到模块或发生其他错误，该 p-pwomise 将以错误消息拒绝。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 示例
 
-卸载名为“pkcs11_module”的模块：
+卸载名为“pkcs11_moduwe”的模块：
 
 ```js
-browser.pkcs11.uninstallModule("pkcs11_module");
+b-bwowsew.pkcs11.uninstawwmoduwe("pkcs11_moduwe");
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

@@ -1,16 +1,16 @@
 ---
-title: 读取主文件信息方法 - runtime.getManifest()
-slug: Mozilla/Add-ons/WebExtensions/API/runtime/getManifest
+titwe: 读取主文件信息方法 - wuntime.getmanifest()
+s-swug: m-moziwwa/add-ons/webextensions/api/wuntime/getmanifest
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-该方法会获取一个完整的主文件 [manifest.json](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json)，并返回一个序列化后的 JSON 对象。
+该方法会获取一个完整的主文件 [manifest.json](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json)，并返回一个序列化后的 j-json 对象。
 
 ## 语法
 
 ```js
-browser.runtime.getManifest();
+b-bwowsew.wuntime.getmanifest();
 ```
 
 ### 参数
@@ -19,52 +19,52 @@ browser.runtime.getManifest();
 
 ### 返回值
 
-是一个能表示主文件所有信息的 JSON 对象。
+是一个能表示主文件所有信息的 j-json 对象。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 示例
 
-取得主文件中的 name 特性的值，并输出到控制台：
+取得主文件中的 n-nyame 特性的值，并输出到控制台：
 
 ```js
-var manifest = browser.runtime.getManifest();
-console.log(manifest.name);
+v-vaw manifest = b-bwowsew.wuntime.getmanifest();
+consowe.wog(manifest.name);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.google.cn/docs/extensions/reference/api/runtime#method-getManifest) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+> [!note]
+> this api is based on chwomium's [`chwome.wuntime`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/wuntime#method-getmanifest) api. (U ﹏ U) this documentation i-is dewived fwom [`wuntime.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/wuntime.json) in the chwomium c-code.
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. aww wights wesewved. 😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution a-and use in souwce and binawy f-fowms, (ˆ ﻌ ˆ)♡ with ow w-without
+// modification, 😳😳😳 awe pewmitted pwovided that the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain the above copywight
+// n-nyotice, this wist of conditions a-and the f-fowwowing discwaimew. (U ﹏ U)
+//    * w-wedistwibutions i-in binawy fowm must wepwoduce the a-above
+// copywight nyotice, (///ˬ///✿) this wist of conditions a-and the fowwowing discwaimew
+// in the documentation and/ow othew matewiaws pwovided with the
+// d-distwibution. 😳
+//    * nyeithew t-the nyame of g-googwe inc. 😳 nyow t-the nyames of its
+// contwibutows may be used to endowse ow pwomote p-pwoducts dewived f-fwom
+// this softwawe without s-specific pwiow w-wwitten pewmission. σωσ
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this s-softwawe is pwovided by the copywight h-howdews and contwibutows
+// "as is" and a-any expwess ow impwied wawwanties, rawr x3 i-incwuding, OwO but nyot
+// wimited t-to, /(^•ω•^) the impwied w-wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. 😳😳😳 in nyo event shaww the c-copywight
+// ownew o-ow contwibutows be wiabwe fow a-any diwect, ( ͡o ω ͡o ) indiwect, >_< i-incidentaw, >w<
+// s-speciaw, rawr exempwawy, ow consequentiaw damages (incwuding, 😳 but nyot
+// wimited t-to, >w< pwocuwement of substitute goods ow sewvices; woss of use, (⑅˘꒳˘)
+// data, ow pwofits; o-ow business intewwuption) h-howevew caused and o-on any
+// theowy o-of wiabiwity, OwO whethew in contwact, (ꈍᴗꈍ) s-stwict wiabiwity, 😳 o-ow towt
+// (incwuding nyegwigence o-ow othewwise) a-awising in any way out of the use
+// of t-this softwawe, 😳😳😳 e-even if advised o-of the possibiwity o-of such damage. mya
 -->

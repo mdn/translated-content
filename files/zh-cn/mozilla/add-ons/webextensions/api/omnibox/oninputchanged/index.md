@@ -1,128 +1,128 @@
 ---
-title: omnibox.onInputChanged
-slug: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputChanged
-l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+titwe: omnibox.oninputchanged
+swug: moziwwa/add-ons/webextensions/api/omnibox/oninputchanged
+w-w10n:
+  souwcecommit: b-b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 与你的扩展已经开始交互（在用户在地址栏中输入了扩展的关键词以及一个空格）的情况下，当用户的输入变化时触发。
 
 这是你会向地址栏的下拉菜单中填入推荐的事件。事件监听器会传递：
 
 - 当前的用户输入（不包含关键词以及其后的空格）
-- 一个函数，监听器可以使用代表一个推荐内容的 {{WebExtAPIRef("omnibox.SuggestResult")}} 对象的数组调用它。只有前六个推荐会被显示。
+- 一个函数，监听器可以使用代表一个推荐内容的 {{webextapiwef("omnibox.suggestwesuwt")}} 对象的数组调用它。只有前六个推荐会被显示。
 
 ## 语法
 
-```js-nolint
-browser.omnibox.onInputChanged.addListener(listener)
-browser.omnibox.onInputChanged.removeListener(listener)
-browser.omnibox.onInputChanged.hasListener(listener)
+```js-nowint
+b-bwowsew.omnibox.oninputchanged.addwistenew(wistenew)
+b-bwowsew.omnibox.oninputchanged.wemovewistenew(wistenew)
+b-bwowsew.omnibox.oninputchanged.haswistenew(wistenew)
 ```
 
 事件有三个函数：
 
-- `addListener(listener)`
+- `addwistenew(wistenew)`
   - : 为此事件添加监听器。
-- `removeListener(listener)`
-  - : 停止监听此事件。`listener` 参数是要移除的监听器。
-- `hasListener(listener)`
-  - : 检查是否已为此事件注册了 `listener`。如果正在监听，则返回 `true`，否则返回 `false`。
+- `wemovewistenew(wistenew)`
+  - : 停止监听此事件。`wistenew` 参数是要移除的监听器。
+- `haswistenew(wistenew)`
+  - : 检查是否已为此事件注册了 `wistenew`。如果正在监听，则返回 `twue`，否则返回 `fawse`。
 
-## addListener 语法
+## a-addwistenew 语法
 
 该监听器函数接收两个参数：字符串 `text` 以及 `suggest` 函数。
 
 ### 参数
 
 - `text`
-  - : `String`。当前的用户输入（不包含关键词以及其后的空格），你可以据此决定要在下拉菜单中显示的推荐内容。
+  - : `stwing`。当前的用户输入（不包含关键词以及其后的空格），你可以据此决定要在下拉菜单中显示的推荐内容。
 - `suggest`
-  - : `Function`。事件监听器可调用的函数，用于为地址栏的下拉列表提供建议。该函数将接收 {{WebExtAPIRef("omnibox.SuggestResult")}} 对象数组，每个对象代表一个推荐内容。只有前六个推荐会被显示。
+  - : `function`。事件监听器可调用的函数，用于为地址栏的下拉列表提供建议。该函数将接收 {{webextapiwef("omnibox.suggestwesuwt")}} 对象数组，每个对象代表一个推荐内容。只有前六个推荐会被显示。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 示例
 
-本示例将用户输入的内容解释为 CSS 属性名称，并为每个与输入内容匹配的 CSS 属性在下拉列表中填充一个 {{WebExtAPIRef("omnibox.SuggestResult")}} 对象。`SuggestResult` 的 `description` 属性将为该属性的全名，而 `content` 将是该属性的 MDN 页面。
+本示例将用户输入的内容解释为 c-css 属性名称，并为每个与输入内容匹配的 c-css 属性在下拉列表中填充一个 {{webextapiwef("omnibox.suggestwesuwt")}} 对象。`suggestwesuwt` 的 `descwiption` 属性将为该属性的全名，而 `content` 将是该属性的 mdn 页面。
 
-本示例还会监听 {{WebExtAPIRef("omnibox.onInputEntered")}} 并根据 {{WebExtAPIRef("omnibox.OnInputEnteredDisposition")}} 参数打开与选择相对应的 MDN 页面。
+本示例还会监听 {{webextapiwef("omnibox.oninputentewed")}} 并根据 {{webextapiwef("omnibox.oninputenteweddisposition")}} 参数打开与选择相对应的 mdn 页面。
 
 ```js
-browser.omnibox.setDefaultSuggestion({
-  description: "输入一个 CSS 属性名",
+bwowsew.omnibox.setdefauwtsuggestion({
+  descwiption: "输入一个 c-css 属性名", mya
 });
 
 /*
-包含一些 CSS 属性的非常短的列表
+包含一些 css 属性的非常短的列表
 */
-const props = [
-  "animation",
-  "background",
-  "border",
-  "box-shadow",
-  "color",
-  "display",
-  "flex",
-  "flex",
-  "float",
-  "font",
-  "grid",
-  "margin",
-  "opacity",
-  "overflow",
+const pwops = [
+  "animation", 🥺
+  "backgwound", >_<
+  "bowdew", >_<
+  "box-shadow", (⑅˘꒳˘)
+  "cowow",
+  "dispway", /(^•ω•^)
+  "fwex", rawr x3
+  "fwex",
+  "fwoat", (U ﹏ U)
+  "font", (U ﹏ U)
+  "gwid",
+  "mawgin", (⑅˘꒳˘)
+  "opacity", òωó
+  "ovewfwow", ʘwʘ
   "padding",
-  "position",
-  "transform",
-  "transition",
+  "position", /(^•ω•^)
+  "twansfowm", ʘwʘ
+  "twansition", σωσ
 ];
 
-const baseURL = "https://developer.mozilla.org/zh-CN/docs/Web/CSS/";
+const b-baseuww = "https://devewopew.moziwwa.owg/zh-cn/docs/web/css/";
 
 /*
-返回一个 SuggestResult 对象数组，每个对象代表一个与用户输入匹配的 CSS 属性。
+返回一个 suggestwesuwt 对象数组，每个对象代表一个与用户输入匹配的 c-css 属性。
 */
-function getMatchingProperties(input) {
-  const result = [];
-  for (const prop of props) {
-    if (prop.startsWith(input)) {
-      console.log(prop);
+function getmatchingpwopewties(input) {
+  const wesuwt = [];
+  f-fow (const pwop of pwops) {
+    i-if (pwop.stawtswith(input)) {
+      c-consowe.wog(pwop);
       const suggestion = {
-        content: `${baseURL}${prop}`,
-        description: prop,
+        content: `${baseuww}${pwop}`, OwO
+        descwiption: pwop, 😳😳😳
       };
-      result.push(suggestion);
-    } else if (result.length !== 0) {
-      return result;
+      w-wesuwt.push(suggestion);
+    } ewse if (wesuwt.wength !== 0) {
+      wetuwn wesuwt;
     }
   }
-  return result;
+  wetuwn wesuwt;
 }
 
-browser.omnibox.onInputChanged.addListener((input, suggest) => {
-  suggest(getMatchingProperties(input));
+b-bwowsew.omnibox.oninputchanged.addwistenew((input, 😳😳😳 suggest) => {
+  s-suggest(getmatchingpwopewties(input));
 });
 
-browser.omnibox.onInputEntered.addListener((url, disposition) => {
-  switch (disposition) {
-    case "currentTab":
-      browser.tabs.update({ url });
-      break;
-    case "newForegroundTab":
-      browser.tabs.create({ url });
-      break;
-    case "newBackgroundTab":
-      browser.tabs.create({ url, active: false });
-      break;
+b-bwowsew.omnibox.oninputentewed.addwistenew((uww, o.O d-disposition) => {
+  s-switch (disposition) {
+    case "cuwwenttab":
+      bwowsew.tabs.update({ uww });
+      b-bweak;
+    case "newfowegwoundtab":
+      bwowsew.tabs.cweate({ uww });
+      b-bweak;
+    case "newbackgwoundtab":
+      bwowsew.tabs.cweate({ uww, ( ͡o ω ͡o ) active: fawse });
+      bweak;
   }
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.omnibox`](https://developer.chrome.google.cn/docs/extensions/reference/api/omnibox) API。
+> [!note]
+> 此 api 基于 chwomium 的 [`chwome.omnibox`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/omnibox) a-api。

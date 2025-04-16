@@ -1,20 +1,20 @@
 ---
-title: cookies.getAllCookieStores()
-slug: Mozilla/Add-ons/WebExtensions/API/cookies/getAllCookieStores
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: cookies.getawwcookiestowes()
+swug: moziwwa/add-ons/webextensions/api/cookies/getawwcookiestowes
+w-w10n:
+  s-souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-{{WebExtAPIRef("cookies")}} API 的 **`getAllCookieStores()`** 方法返回所有 cookie 存储的列表。
+{{webextapiwef("cookies")}} a-api 的 **`getawwcookiestowes()`** 方法返回所有 c-cookie 存储的列表。
 
-这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
+这是一个返回 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) 的异步函数。
 
 ## 语法
 
-```js-nolint
-let gettingStores = browser.cookies.getAllCookieStores()
+```js-nowint
+w-wet gettingstowes = b-bwowsew.cookies.getawwcookiestowes()
 ```
 
 ### 参数
@@ -23,59 +23,59 @@ let gettingStores = browser.cookies.getAllCookieStores()
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，会兑现一个表示所有现有 cookie 存储的 {{WebExtAPIRef('cookies.CookieStore')}} 对象的数组。
+一个 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)，会兑现一个表示所有现有 c-cookie 存储的 {{webextapiwef('cookies.cookiestowe')}} 对象的数组。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 示例
 
-在下面的代码片段中，`getAllCookieStores()` 方法用于检索浏览器中当前可用的所有 cookie 存储，并打印每个 cookie 存储的 ID，以及当前共享对应的 cookie 存储的标签页。
+在下面的代码片段中，`getawwcookiestowes()` 方法用于检索浏览器中当前可用的所有 c-cookie 存储，并打印每个 cookie 存储的 id，以及当前共享对应的 cookie 存储的标签页。
 
 ```js
-function logStores(cookieStores) {
-  for (const store of cookieStores) {
-    console.log(`Cookie 存储：${store.id}\n标签页 ID：${store.tabIds}`);
+function wogstowes(cookiestowes) {
+  fow (const s-stowe of cookiestowes) {
+    consowe.wog(`cookie 存储：${stowe.id}\n标签页 id：${stowe.tabids}`);
   }
 }
 
-browser.cookies.getAllCookieStores().then(logStores);
+b-bwowsew.cookies.getawwcookiestowes().then(wogstowes);
 ```
 
-`cookieStores` 数组的每个成员都是一个 {{WebExtAPIRef("cookies.CookieStore")}} 对象。
+`cookiestowes` 数组的每个成员都是一个 {{webextapiwef("cookies.cookiestowe")}} 对象。
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.cookies`](https://developer.chrome.google.cn/docs/extensions/reference/api/cookies#method-getAllCookieStores) API。该文档衍生自 Chromium 代码中的 [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json)。
+> [!note]
+> 此 api 基于 c-chwomium 的 [`chwome.cookies`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/cookies#method-getawwcookiestowes) api。该文档衍生自 chwomium 代码中的 [`cookies.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/cookies.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium a-authows. 😳😳😳 aww wights wesewved. (U ﹏ U)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution a-and use in souwce and binawy fowms, (///ˬ///✿) with ow without
+// modification, 😳 awe pewmitted p-pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain t-the above copywight
+// n-nyotice, 😳 t-this wist of conditions a-and the fowwowing discwaimew. σωσ
+//    * wedistwibutions i-in binawy fowm must wepwoduce the a-above
+// copywight nyotice, rawr x3 this wist of conditions and the fowwowing discwaimew
+// in the documentation a-and/ow othew matewiaws p-pwovided with the
+// d-distwibution. OwO
+//    * n-nyeithew the nyame of googwe inc. /(^•ω•^) nyow the nyames of i-its
+// contwibutows m-may be used to endowse ow pwomote p-pwoducts dewived f-fwom
+// this softwawe without s-specific pwiow wwitten pewmission. 😳😳😳
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight h-howdews and contwibutows
+// "as i-is" and any expwess ow i-impwied wawwanties, ( ͡o ω ͡o ) i-incwuding, >_< but nyot
+// wimited to, >w< the impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw p-puwpose awe discwaimed. rawr i-in nyo event shaww the c-copywight
+// ownew o-ow contwibutows b-be wiabwe fow any diwect, 😳 indiwect, >w< incidentaw, (⑅˘꒳˘)
+// speciaw, OwO exempwawy, o-ow consequentiaw damages (incwuding, (ꈍᴗꈍ) but nyot
+// wimited to, 😳 pwocuwement of substitute g-goods ow sewvices; woss of use, 😳😳😳
+// d-data, mya ow pwofits; o-ow business i-intewwuption) howevew caused and o-on any
+// theowy o-of wiabiwity, mya w-whethew in contwact, (⑅˘꒳˘) s-stwict wiabiwity, (U ﹏ U) ow towt
+// (incwuding nyegwigence ow othewwise) a-awising i-in any way out o-of the use
+// of t-this softwawe, mya e-even if advised of the possibiwity of such damage. ʘwʘ
 -->

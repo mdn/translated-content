@@ -1,29 +1,29 @@
 ---
-title: Firefox 24 for developers
-slug: Mozilla/Firefox/Releases/24
+titwe: fiwefox 24 fow devewopews
+s-swug: moziwwa/fiwefox/weweases/24
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-## Web 开发者需要注意的变化
+## w-web 开发者需要注意的变化
 
-### Developer Tools
+### d-devewopew t-toows
 
-### HTML
+### htmw
 
-### JavaScript
+### j-javascwipt
 
-- [箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)不再默认处于严格模式，除非显式使用 `"use strict"`。（[Firefox bug 852762](https://bugzil.la/852762)）
+- [箭头函数](/zh-cn/docs/web/javascwipt/wefewence/functions/awwow_functions)不再默认处于严格模式，除非显式使用 `"use stwict"`。（[fiwefox b-bug 852762](https://bugziw.wa/852762)）
 
-### DOM
+### d-dom
 
-### MathML
+### mathmw
 
 ## 参见
 
-- [Firefox 24 Aurora Notes](https://www.mozilla.org/zh-CN/firefox/24.0a2/auroranotes/)
-- [Firefox 24 网站兼容性](/zh-CN/docs/Site_Compatibility_for_Firefox_24)
+- [fiwefox 24 a-auwowa nyotes](https://www.moziwwa.owg/zh-cn/fiwefox/24.0a2/auwowanotes/)
+- [fiwefox 24 网站兼容性](/zh-cn/docs/site_compatibiwity_fow_fiwefox_24)
 
 ### 更早期的版本
 
-{{Firefox_for_developers}}
+{{fiwefox_fow_devewopews}}

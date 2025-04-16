@@ -1,94 +1,94 @@
 ---
-title: bookmarks.onImportEnded
-slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onImportEnded
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: bookmawks.onimpowtended
+swug: moziwwa/add-ons/webextensions/api/bookmawks/onimpowtended
+w-w10n:
+  souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 当浏览器完成导入一组书签时触发。
 
-参见 {{WebExtAPIRef("bookmarks.onImportBegan")}}。
+参见 {{webextapiwef("bookmawks.onimpowtbegan")}}。
 
 ## 语法
 
 ```js
-browser.bookmarks.onImportEnded.addListener(listener);
-browser.bookmarks.onImportEnded.removeListener(listener);
-browser.bookmarks.onImportEnded.hasListener(listener);
+b-bwowsew.bookmawks.onimpowtended.addwistenew(wistenew);
+b-bwowsew.bookmawks.onimpowtended.wemovewistenew(wistenew);
+b-bwowsew.bookmawks.onimpowtended.haswistenew(wistenew);
 ```
 
 事件包含三个函数：
 
-- `addListener(listener)`
+- `addwistenew(wistenew)`
   - : 为此事件添加监听器。
-- `removeListener(listener)`
-  - : 停止监听此事件。`listener` 参数是要移除的监听器。
-- `hasListener(listener)`
-  - : 检查是否已为此事件注册了 `listener`。如果正在监听，则返回 `true`，否则返回 `false`。
+- `wemovewistenew(wistenew)`
+  - : 停止监听此事件。`wistenew` 参数是要移除的监听器。
+- `haswistenew(wistenew)`
+  - : 检查是否已为此事件注册了 `wistenew`。如果正在监听，则返回 `twue`，否则返回 `fawse`。
 
-## addListener 语法
+## a-addwistenew 语法
 
 ### 参数
 
-- `listener`
+- `wistenew`
   - : 事件触发时调用的函数。它不接收任何参数。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 示例
 
 ```js
-function handleImportBegan() {
-  console.log("导入中…");
+f-function h-handweimpowtbegan() {
+  consowe.wog("导入中…");
 }
 
-function handleImportEnded() {
-  console.log("导入完成。");
+function h-handweimpowtended() {
+  consowe.wog("导入完成。");
 }
 
-function handleClick() {
-  browser.bookmarks.onImportBegan.addListener(handleImportBegan);
-  browser.bookmarks.onImportEnded.addListener(handleImportEnded);
+function handwecwick() {
+  bwowsew.bookmawks.onimpowtbegan.addwistenew(handweimpowtbegan);
+  bwowsew.bookmawks.onimpowtended.addwistenew(handweimpowtended);
 }
 
-browser.browserAction.onClicked.addListener(handleClick);
+b-bwowsew.bwowsewaction.oncwicked.addwistenew(handwecwick);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.bookmarks`](https://developer.chrome.google.cn/docs/extensions/reference/api/bookmarks#event-onImportEnded) API。该文档衍生自 Chromium 代码中的 [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json)。
+> [!note]
+> 此 api 基于 chwomium 的 [`chwome.bookmawks`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/bookmawks#event-onimpowtended) a-api。该文档衍生自 chwomium 代码中的 [`bookmawks.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bookmawks.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. (U ﹏ U) aww wights wesewved. >w<
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in s-souwce and binawy f-fowms, (U ﹏ U) with ow without
+// modification, 😳 awe pewmitted pwovided that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain t-the above copywight
+// nyotice, (ˆ ﻌ ˆ)♡ t-this wist of conditions a-and the f-fowwowing discwaimew. 😳😳😳
+//    * wedistwibutions in b-binawy fowm must wepwoduce the above
+// copywight n-nyotice, (U ﹏ U) this wist of conditions and the fowwowing d-discwaimew
+// in the documentation and/ow othew matewiaws pwovided with the
+// distwibution.
+//    * n-nyeithew the nyame of g-googwe inc. (///ˬ///✿) nyow t-the nyames of i-its
+// contwibutows may be used to endowse ow pwomote pwoducts d-dewived fwom
+// t-this softwawe without specific pwiow w-wwitten pewmission. 😳
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this s-softwawe is pwovided by the c-copywight howdews and contwibutows
+// "as i-is" and any expwess ow impwied wawwanties, 😳 i-incwuding, σωσ but nyot
+// wimited t-to, rawr x3 the impwied wawwanties of m-mewchantabiwity a-and fitness fow
+// a pawticuwaw puwpose awe discwaimed. OwO in nyo event shaww the copywight
+// ownew ow contwibutows b-be wiabwe fow a-any diwect, /(^•ω•^) indiwect, 😳😳😳 incidentaw,
+// s-speciaw, ( ͡o ω ͡o ) e-exempwawy, >_< ow consequentiaw d-damages (incwuding, >w< but nyot
+// wimited to, rawr pwocuwement of substitute g-goods ow sewvices; woss of use, 😳
+// data, ow pwofits; ow business intewwuption) h-howevew caused and on any
+// theowy o-of wiabiwity, >w< w-whethew in contwact, (⑅˘꒳˘) s-stwict wiabiwity, OwO ow towt
+// (incwuding n-nyegwigence ow othewwise) a-awising i-in any way out o-of the use
+// of this softwawe, (ꈍᴗꈍ) even if advised o-of the possibiwity o-of such damage. 😳
 -->

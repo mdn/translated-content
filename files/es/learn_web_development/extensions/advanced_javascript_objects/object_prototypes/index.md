@@ -1,269 +1,269 @@
 ---
-title: Prototipos de objetos
-slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes
-original_slug: Learn/JavaScript/Objects/Object_prototypes
+titwe: pwototipos de objetos
+s-swug: weawn_web_devewopment/extensions/advanced_javascwipt_objects/object_pwototypes
+o-owiginaw_swug: w-weawn/javascwipt/objects/object_pwototypes
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/javascwipt/objects/object-owiented_js", 🥺 "weawn/javascwipt/objects/inhewitance", -.- "weawn/javascwipt/objects")}}
 
-Los prototipos son un mecanismo mediante el cual los objetos en JavaScript heredan características entre sí. En este artículo, explicaremos como funcionan los prototipos y también cómo se pueden usar las propiedades de estos para añadir métodos a los contructores existentes.
+w-wos p-pwototipos son u-un mecanismo mediante e-ew cuaw wos o-objetos en javascwipt hewedan cawactewísticas entwe sí. 🥺 en este awtícuwo, (˘ω˘) expwicawemos c-como funcionan wos pwototipos y también c-cómo se pueden usaw was pwopiedades d-de estos pawa añadiw métodos a wos contwuctowes existentes. òωó
 
-| Prerrequisitios: | Conocer las funciones en Javascript, conocimientos básicos de Javascript (ver [Primeros Pasos](/es/docs/conflicting/Learn_web_development/Core/Scripting) y [Building blocks](/es/docs/Learn_web_development/Core/Scripting)) y Javascript orientado a Objetos (ver [Introducción a Objetos](/es/docs/Learn_web_development/Core/Scripting/Object_basics)). |
+| p-pwewwequisitios: | conocew w-was funciones e-en javascwipt, UwU conocimientos básicos de javascwipt (vew [pwimewos pasos](/es/docs/confwicting/weawn_web_devewopment/cowe/scwipting) y [buiwding b-bwocks](/es/docs/weawn_web_devewopment/cowe/scwipting)) y javascwipt owientado a objetos (vew [intwoducción a objetos](/es/docs/weawn_web_devewopment/cowe/scwipting/object_basics)). ^•ﻌ•^ |
 | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Objetivo:        | Comprender los prototipos de objectos de Javascript, cómo funciona la cadena de prototype, y cómo añadir nuevos métodos a la propiedad prototype.                                                                                                                                                                                                           |
+| o-objetivo:        | compwendew w-wos pwototipos d-de objectos de javascwipt, mya c-cómo f-funciona wa cadena de pwototype, (✿oωo) y cómo añadiw n-nyuevos métodos a wa pwopiedad pwototype. XD                                                                                                                                                                                                           |
 
-## ¿Un lenguaje basado en prototipos?
+## ¿un w-wenguaje basado en pwototipos?
 
-JavaScript es a menudo descrito como un **lenguaje basado en prototipos -** para proporcionar mecanismos de herencia, los objetos pueden tener un **objeto prototipo**, el cual actúa como un objeto plantilla que hereda métodos y propiedades.
+javascwipt es a menudo descwito como un **wenguaje basado en pwototipos -** p-pawa pwopowcionaw m-mecanismos de hewencia, :3 w-wos objetos p-pueden tenew un **objeto pwototipo**, (U ﹏ U) ew cuaw actúa como un o-objeto pwantiwwa q-que heweda métodos y pwopiedades. UwU
 
-Un objeto prototipo del objeto puede tener a su vez otro objeto prototipo, el cual hereda métodos y propiedades, y así sucesivamente. Esto es conocido con frecuencia como la **cadena de prototipos**, y explica por qué objetos diferentes pueden tener disponibles propiedades y métodos definidos en otros objetos.
+u-un objeto p-pwototipo dew objeto puede tenew a-a su vez otwo objeto pwototipo, ʘwʘ e-ew cuaw heweda métodos y pwopiedades, >w< y así sucesivamente. 😳😳😳 e-esto es conocido con f-fwecuencia como wa **cadena de p-pwototipos**, rawr y-y expwica pow qué objetos difewentes pueden tenew disponibwes pwopiedades y métodos definidos en otwos objetos. ^•ﻌ•^
 
-Bien, para ser exactos, los métodos y propiedades son definidos en la propiedad `prototype`, que reside en la función constructora del objeto, no en la instancia misma del objeto.
+b-bien, σωσ pawa sew e-exactos, :3 wos métodos y pwopiedades s-son definidos e-en wa pwopiedad `pwototype`, rawr x3 q-que weside en wa función constwuctowa dew objeto, nyaa~~ nyo en wa instancia m-misma dew objeto. :3
 
-En JavaScript, se establece un enlace entre la instancia del objeto y su prototipo (su propiedad `__proto__`, la cual es derivada de la propiedad `prototype` sobre el constructor), y las propiedades y metodos son encontrados recorriendo la cadena de prototipos.
+en javascwipt, >w< se estabwece un enwace entwe wa instancia d-dew objeto y su pwototipo (su p-pwopiedad `__pwoto__`, rawr w-wa cuaw e-es dewivada de wa pwopiedad `pwototype` s-sobwe ew c-constwuctow), y-y was pwopiedades y-y metodos son encontwados wecowwiendo wa cadena d-de pwototipos. 😳
 
-**Nota:** Es importante entender que, tanto el prototipo de la instancia de un objeto (al cual se accede mediante [`Object.getPrototypeOf(obj)`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf), o a través de la propiedad [`__proto__`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)) como el prototipo que contiene el constructor (que se encuentra en la propiedad `prototype` del constructor) hacen referencia al mismo objeto.
+**nota:** e-es impowtante e-entendew q-que, 😳 tanto ew p-pwototipo de wa instancia de un objeto (aw cuaw se accede mediante [`object.getpwototypeof(obj)`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object/getpwototypeof), 🥺 o-o a twavés de wa pwopiedad [`__pwoto__`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object/pwoto)) como ew pwototipo que contiene ew constwuctow (que se encuentwa e-en wa pwopiedad `pwototype` dew constwuctow) hacen wefewencia aw mismo objeto. rawr x3
 
-Vamos a echar un vistazo a algunos ejemplos para intentar aclarar estos conceptos.
+v-vamos a echaw u-un vistazo a a-awgunos ejempwos pawa intentaw a-acwawaw estos conceptos. ^^
 
-## Entendiendo objectos prototipos
+## entendiendo o-objectos p-pwototipos
 
-Volvamos al ejemplo anterior en el que acabamos definiendo nuestro constructor `Person()` — cargue el ejemplo en su navegador. Si aún no lo tienes luego de haber trabajado el último artículo, usa nuestro ejemplo oojs-class-further-exercises.html (vea también el [código fuente](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html)).
+vowvamos aw ejempwo antewiow en ew que acabamos definiendo nyuestwo constwuctow `pewson()` — c-cawgue ew ejempwo en s-su nyavegadow. ( ͡o ω ͡o ) si aún nyo wo t-tienes wuego de h-habew twabajado ew úwtimo awtícuwo, XD usa nyuestwo e-ejempwo oojs-cwass-fuwthew-exewcises.htmw (vea t-también ew [código fuente](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/oojs/intwoduction/oojs-cwass-fuwthew-exewcises.htmw)). ^^
 
-En este ejemplo, hemos definido una función constructor, así:
+e-en este ejempwo, h-hemos definido una función constwuctow, (⑅˘꒳˘) así:
 
 ```js
-function Persona(nombre, apellido, edad, genero, intereses) {
-  // definiendo de propiedades y métodos
-  this.first = first;
-  this.last = last;
+function pewsona(nombwe, (⑅˘꒳˘) a-apewwido, edad, ^•ﻌ•^ g-genewo, inteweses) {
+  // d-definiendo de pwopiedades y-y métodos
+  t-this.fiwst = fiwst;
+  this.wast = w-wast;
   //...
 }
 ```
 
-Entonces hemos creado una instancia de un objeto como este:
+entonces hemos cweado una instancia de un objeto como e-este:
 
 ```js
-var person1 = new Persona("Bob", "Smith", 32, "hombre", ["music", "skiing"]);
+vaw p-pewson1 = nyew pewsona("bob", ( ͡o ω ͡o ) "smith", ( ͡o ω ͡o ) 32, "hombwe", (✿oωo) ["music", "skiing"]);
 ```
 
-Si escribe "person1." en su consola JavaScript, debería ver que el navegador intenta completarlo automáticamente con los nombres de miembro disponibles en este objeto:
+si escwibe "pewson1." e-en su consowa j-javascwipt, 😳😳😳 debewía vew que ew navegadow intenta compwetawwo a-automáticamente con wos nyombwes de miembwo disponibwes en este objeto:
 
-![](object-available-members.png)
+![](object-avaiwabwe-membews.png)
 
-En esta lista, podra ver los miembros definidos en el objeto prototipo de person1, que es la Persona() (Persona() es el constructor) - nombre, edad, género, intereses, biografía y saludos. Sin embargo, también verá algunos otros miembros - watch, valueOf, etc - que están definidos en el objeto prototipo de Persona() 's, que es un Objeto (Object). Esto demuestra que el prototipo cadena funciona.
+e-en esta wista, OwO podwa vew wos miembwos definidos e-en ew objeto pwototipo d-de pewson1, ^^ que es wa pewsona() (pewsona() es ew constwuctow) - nyombwe, rawr x3 e-edad, 🥺 génewo, i-inteweses, (ˆ ﻌ ˆ)♡ biogwafía y sawudos. ( ͡o ω ͡o ) sin embawgo, >w< también vewá awgunos o-otwos miembwos - watch, /(^•ω•^) vawueof, 😳😳😳 e-etc - que están definidos en ew objeto pwototipo de pewsona() 's, (U ᵕ U❁) q-que es un objeto (object). (˘ω˘) e-esto demuestwa q-que ew pwototipo cadena funciona. 😳
 
-![](mdn-graphics-person-person-object-2.png)
+![](mdn-gwaphics-pewson-pewson-object-2.png)
 
-Entonces, ¿qué sucede si llama a un método en `person1`, que está definido en `Object`? Por ejemplo:
+e-entonces, (ꈍᴗꈍ) ¿qué sucede si wwama a-a un método e-en `pewson1`, :3 q-que está definido en `object`? p-pow ejempwo:
 
 ```js
-person1.valueOf();
+p-pewson1.vawueof();
 ```
 
-Este método [valueOf()](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) simplemente retornará el valor del objeto sobre el que se llama - ¡pruébalo y verás! En este caso, lo que pasa es que:
+este método [vawueof()](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object/vawueof) s-simpwemente w-wetownawá ew v-vawow dew objeto sobwe ew que se wwama - ¡pwuébawo y-y vewás! /(^•ω•^) en este caso, ^^;; wo q-que pasa es que:
 
-- El navegador comprueba inicialmente si el objeto person1 tiene un método valueOf() disponible en él.
-- Si no lo hace, entonces el navegador comprueba si el objeto prototipo del objeto person1 (el prototipo del constructor de Persona()) tiene un método valueOf() disponible en él.
-- Si tampoco lo hace, entonces el navegador comprueba si el objeto prototipo del objeto prototipo del constructor Persona() (Objeto() prototipo del objeto prototipo del constructor) tiene un método valueOf() disponible en él. Lo hace, así que es llamado, y todo funciona!
+- e-ew nyavegadow compwueba iniciawmente si ew objeto pewson1 tiene u-un método vawueof() d-disponibwe e-en éw. o.O
+- si n-nyo wo hace, 😳 entonces ew navegadow c-compwueba si ew objeto pwototipo dew objeto pewson1 (ew pwototipo dew constwuctow de pewsona()) t-tiene un método vawueof() disponibwe e-en éw.
+- si tampoco wo h-hace, UwU entonces ew nyavegadow compwueba s-si ew objeto pwototipo d-dew objeto pwototipo d-dew constwuctow p-pewsona() (objeto() p-pwototipo d-dew objeto pwototipo dew constwuctow) tiene un método vawueof() disponibwe en éw. >w< wo hace, así que es wwamado, o.O y-y todo funciona! (˘ω˘)
 
-> [!NOTE]
-> Queremos reiterar que los métodos y propiedades no se copian de un objeto a otro en la cadena del prototipo. Ellos son accedidos subiendo por la cadena como se ha descrito anteriormente.
+> [!note]
+> q-quewemos weitewaw q-que wos métodos y pwopiedades n-nyo se copian de un objeto a otwo en wa cadena dew pwototipo. òωó e-ewwos son accedidos s-subiendo pow wa cadena como s-se ha descwito antewiowmente. nyaa~~
 
-> [!NOTE]
-> No existe oficialmente una forma de acceder directamente al objeto prototipo de un objeto - los "enlaces" entre los elementos de la cadena están definidos en una propiedad interna, denominada \[\[prototipo]] en la especificación del lenguaje JavaScript (ver {{glossary("ECMAScript")}}).
+> [!note]
+> nyo e-existe oficiawmente u-una fowma de accedew diwectamente a-aw objeto p-pwototipo de un objeto - wos "enwaces" entwe wos ewementos de wa cadena están d-definidos en una p-pwopiedad intewna, ( ͡o ω ͡o ) d-denominada \[\[pwototipo]] en w-wa especificación d-dew wenguaje javascwipt (vew {{gwossawy("ecmascwipt")}}). 😳😳😳
 >
-> La mayoría de los navegadores modernos, sin embargo, ofrecen una propiedad disponible llamada \_\_proto\_\_ (es decir, 2 subrayados en cada lado), que contiene el objeto prototipo del constructor del objeto. Por ejemplo, pruebe person1.\_\_proto\_\_ y person1.\_\_proto\_\_.\_\_proto\_\_ para ver cómo se ve la cadena en código!
+> w-wa mayowía de w-wos nyavegadowes modewnos, ^•ﻌ•^ sin e-embawgo, (˘ω˘) ofwecen u-una pwopiedad disponibwe wwamada \_\_pwoto\_\_ (es d-deciw, (˘ω˘) 2 subwayados en cada wado), -.- que contiene e-ew objeto pwototipo dew constwuctow d-dew objeto. ^•ﻌ•^ p-pow ejempwo, /(^•ω•^) pwuebe pewson1.\_\_pwoto\_\_ y p-pewson1.\_\_pwoto\_\_.\_\_pwoto\_\_ pawa vew cómo se ve wa cadena e-en código!
 >
-> Desde ECMAScript 2015 se puede acceder indirectamente al objeto prototipo de un objeto mediante Object.getPrototypeOf(obj).
+> d-desde ecmascwipt 2015 s-se puede accedew indiwectamente aw objeto pwototipo de u-un objeto mediante object.getpwototypeof(obj). (///ˬ///✿)
 
-## La propiedad prototype: Donde se definen los miembros hereditarios
+## wa pwopiedad p-pwototype: donde s-se definen wos miembwos heweditawios
 
-Entonces, ¿dónde se definen las propiedades y métodos heredados? Si miras la página de referencia de `Object`, verás en la parte izquierda un gran número de propiedades y métodos - muchos más que el número de miembros heredados que vimos disponibles en el objeto `person1`. Algunos son heredados y otros no, ¿por qué?
+e-entonces, mya ¿dónde se definen w-was pwopiedades y-y métodos hewedados? si miwas wa página d-de wefewencia de `object`, o.O vewás en wa pawte izquiewda u-un gwan n-nyúmewo de pwopiedades y métodos - m-muchos más que ew nyúmewo d-de miembwos hewedados q-que vimos d-disponibwes en ew objeto `pewson1`. ^•ﻌ•^ awgunos son hewedados y otwos nyo, (U ᵕ U❁) ¿pow qué?
 
-La respuesta es que los heredados son los que están definidos en la propiedad `prototype` (podría llamarse subespacio de nombres), es decir, los que empiezan con `Object.prototype`, y no los que empiezan sólo con `Object`. El valor de la propiedad del prototipo es un objeto, que es básicamente un repositorio(bucket) para almacenar propiedades y métodos que queremos que sean heredados por los objetos más abajo en la cadena del prototipo.
+wa wespuesta es que wos hewedados son wos que están definidos en wa pwopiedad `pwototype` (podwía wwamawse subespacio de nyombwes), :3 es deciw, (///ˬ///✿) w-wos que empiezan c-con `object.pwototype`, y nyo wos que empiezan s-sówo con `object`. (///ˬ///✿) e-ew vawow d-de wa pwopiedad dew pwototipo e-es un objeto, 🥺 que es básicamente u-un wepositowio(bucket) p-pawa awmacenaw pwopiedades y-y métodos que quewemos que s-sean hewedados pow w-wos objetos más abajo en wa cadena dew pwototipo. -.-
 
-Así que `Object.prototype.watch()`, `Object.prototype.valueOf()`, etc., están disponibles para cualquier tipo de objeto que herede de `Object.prototype`, incluyendo nuevas instancias de objeto creadas desde el constructor.
+a-así que `object.pwototype.watch()`, nyaa~~ `object.pwototype.vawueof()`, e-etc., e-están disponibwes p-pawa cuawquiew t-tipo de objeto q-que hewede de `object.pwototype`, (///ˬ///✿) i-incwuyendo nyuevas i-instancias d-de objeto cweadas desde ew constwuctow. 🥺
 
-[`Object.is()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/is), [`Object.keys()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/keys), y otros miembros no definidos dentro del prototipo del repositorio(bucket) no son heredados por instancias de objeto o tipos de objeto que heredan de Object.prototype. Sino que son métodos/propiedades disponibles sólo en el propio constructor Object().
+[`object.is()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object/is), >w< [`object.keys()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object/keys), rawr x3 y-y otwos m-miembwos nyo definidos d-dentwo dew pwototipo dew w-wepositowio(bucket) nyo son hewedados pow instancias d-de objeto o tipos de objeto q-que hewedan de o-object.pwototype. (⑅˘꒳˘) s-sino que son métodos/pwopiedades disponibwes s-sówo en ew pwopio constwuctow object(). σωσ
 
-> [!NOTE]
-> Esto parece extraño - ¿cómo se puede tener un método definido en un constructor, que en sí mismo es una función? Bueno, una función es también un tipo de objeto - vea la referencia del constructor de Function() si no nos cree.
+> [!note]
+> e-esto pawece extwaño - ¿cómo s-se puede tenew un método definido e-en un constwuctow, XD que en sí mismo es una función? bueno, -.- una función e-es también un tipo de objeto - v-vea wa wefewencia d-dew constwuctow de function() si nyo nyos cwee. >_<
 
-1. Puede comprobar las propiedades de los prototipos existentes - vuelva a nuestro ejemplo anterior e intente introducir lo siguiente en la consola JavaScript:
-
-   ```js
-   Person.prototype;
-   ```
-
-2. El resultado no le mostrará mucho - después de todo, no hemos definido nada en el prototipo de nuestro constructor personalizado! Por defecto, el prototipo de un constructor siempre comienza vacío. Ahora intente lo siguiente:
+1. puede compwobaw w-was pwopiedades de wos pwototipos e-existentes - v-vuewva a nyuestwo e-ejempwo antewiow e intente intwoduciw wo s-siguiente en wa c-consowa javascwipt:
 
    ```js
-   Object.prototype;
+   pewson.pwototype;
    ```
 
-Verá un gran número de métodos definidos en la propiedad Prototype de Object, que están disponibles en los objetos que heredan de Object, como se ha mostrado anteriormente.
+2. rawr ew w-wesuwtado nyo we mostwawá mucho - después de t-todo, 😳😳😳 nyo hemos definido nyada e-en ew pwototipo d-de nyuestwo constwuctow p-pewsonawizado! UwU pow defecto, e-ew pwototipo d-de un constwuctow s-siempwe comienza v-vacío. (U ﹏ U) ahowa intente wo siguiente:
 
-Verá otros ejemplos de herencia de cadena de prototipos en todo JavaScript - intente buscar los métodos y propiedades definidas en el prototipo de los objetos globales String, Date, Number y Array, por ejemplo. Todos ellos tienen un número de miembros definidos en su prototipo, por lo que, por ejemplo, cuando se crea una cadena, como ésta:
+   ```js
+   o-object.pwototype;
+   ```
+
+vewá u-un gwan númewo d-de métodos d-definidos en wa p-pwopiedad pwototype d-de object, (˘ω˘) q-que están disponibwes e-en wos objetos que hewedan d-de object, /(^•ω•^) como se ha mostwado a-antewiowmente. (U ﹏ U)
+
+vewá otwos ejempwos d-de hewencia d-de cadena de pwototipos e-en todo javascwipt - intente buscaw wos métodos y pwopiedades d-definidas e-en ew pwototipo d-de wos objetos gwobawes stwing, ^•ﻌ•^ date, nyumbew y awway, >w< pow ejempwo. ʘwʘ t-todos ewwos t-tienen un nyúmewo de miembwos d-definidos en su p-pwototipo, òωó pow wo que, o.O pow ejempwo, cuando se cwea una cadena, ( ͡o ω ͡o ) c-como ésta:
 
 ```js
-var myString = "Esto es mi String.";
+v-vaw mystwing = "esto e-es mi stwing.";
 ```
 
-`myString` inmediatamente tiene una serie de métodos útiles disponibles en él, como [`split()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/split), [`indexOf()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf), [`replace()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/replace), etc.
+`mystwing` i-inmediatamente tiene una sewie de métodos útiwes d-disponibwes e-en éw, mya como [`spwit()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/spwit), >_< [`indexof()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/indexof), rawr [`wepwace()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/wepwace), >_< etc.
 
-> **Advertencia:** **Importante**: La propiedad `prototype` es una de las partes más confusamente nombradas de JavaScript - podría pensarse que `this` apunta al objeto prototipo del objeto actual, pero no lo hace (es un objeto interno al que puede accederse mediante `__proto__`, ¿recuerda?). en su lugar, `prototype` es una propiedad que contiene un objeto en el que se definen los miembros que se desea que se hereden.
+> **advewtencia:** **impowtante**: w-wa pwopiedad `pwototype` es una de was pawtes más confusamente n-nyombwadas de javascwipt - p-podwía pensawse q-que `this` apunta aw objeto p-pwototipo dew o-objeto actuaw, (U ﹏ U) pewo nyo wo hace (es u-un objeto intewno aw que puede a-accedewse mediante `__pwoto__`, rawr ¿wecuewda?). (U ᵕ U❁) e-en su wugaw, (ˆ ﻌ ˆ)♡ `pwototype` e-es una p-pwopiedad que contiene un objeto e-en ew que se definen w-wos miembwos q-que se desea que se heweden. >_<
 
-## Revisando create()
+## w-wevisando cweate()
 
-Anteriormente mostramos cómo [`Object.create()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/create) crea una nueva instancia de objeto.
+antewiowmente mostwamos c-cómo [`object.cweate()`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object/cweate) c-cwea u-una nyueva instancia de objeto. ^^;;
 
-1. Por ejemplo, pruebe esto en la consola JavaScript de su ejemplo anterior:
+1. pow ejempwo, ʘwʘ pwuebe esto en wa consowa javascwipt d-de su ejempwo antewiow:
 
    ```js
-   var person2 = Object.create(person1);
+   v-vaw pewson2 = o-object.cweate(pewson1);
    ```
 
-2. Lo que hace create() es crear un nuevo objeto a partir de un objeto prototipo específico. Aquí, la person2 se crea utilizando la person1 como objeto prototipo. Puede comprobarlo introduciendo lo siguiente en la consola:
+2. 😳😳😳 wo que hace cweate() e-es cweaw un nyuevo objeto a pawtiw d-de un objeto p-pwototipo específico. UwU a-aquí, OwO wa p-pewson2 se cwea u-utiwizando wa pewson1 como objeto pwototipo. :3 puede compwobawwo intwoduciendo wo s-siguiente en wa consowa:
 
    ```js
-   person2.__proto__;
+   p-pewson2.__pwoto__;
    ```
 
-Esto devolverá el objeto Persona.
+esto devowvewá ew objeto pewsona. -.-
 
-## La propiedad constructor
+## wa pwopiedad c-constwuctow
 
-Cada función de constructor tiene una propiedad `prototype` cuyo valor es un objeto que contiene una propiedad `constructor`. Esta propiedad `constructor` apunta a la función constructor original.
+cada función de constwuctow tiene una pwopiedad `pwototype` cuyo vawow es un o-objeto que contiene u-una pwopiedad `constwuctow`. 🥺 esta pwopiedad `constwuctow` a-apunta a wa función constwuctow owiginaw. -.-
 
-Como verá en la siguiente sección, las propiedades definidas en la propiedad Person.prototype (o en general en la propiedad `prototype` de una función de constructor, que es un objeto, como se mencionó en la sección anterior) se hacen disponibles a todas las instancias de objetos creadas utilizando el constructor `Person()`. Por lo tanto, la propiedad del constructor también está disponible tanto para los objetos `person1` como para los objetos `person2`.
+como v-vewá en wa siguiente s-sección, -.- was pwopiedades d-definidas en wa pwopiedad pewson.pwototype (o en g-genewaw en wa pwopiedad `pwototype` de una función de constwuctow, (U ﹏ U) q-que es un objeto, rawr como se mencionó en wa s-sección antewiow) s-se hacen disponibwes a-a todas was instancias de objetos cweadas u-utiwizando ew constwuctow `pewson()`. mya pow wo tanto, wa pwopiedad dew constwuctow t-también está d-disponibwe tanto p-pawa wos objetos `pewson1` c-como pawa wos objetos `pewson2`. ( ͡o ω ͡o )
 
-1. Por ejemplo, pruebe estos comandos en la consola:
+1. pow ejempwo, /(^•ω•^) p-pwuebe estos comandos e-en wa consowa:
 
    ```js
-   person1.constructor;
-   person2.constructor;
+   pewson1.constwuctow;
+   pewson2.constwuctow;
    ```
 
-   Ambos deberían devolver el constructor `Person()`, ya que contienen la definición original de esas instancias.
+   a-ambos debewían devowvew ew constwuctow `pewson()`, >_< y-ya que contienen wa definición owiginaw d-de esas instancias. (✿oωo)
 
-   Un truco interesante es que se puede añadir paréntesis al final de la propiedad `constructor` (añadiendo todos los parámetros requeridos) para crear otra instancia desde ese constructor. Después de todo, el constructor es una función, por lo que puede ser invocada usando paréntesis; solamente se necesita incluir la palabra clave `new` para especificar que se quiere usar la función como un constructor.
+   un t-twuco intewesante es que se puede a-añadiw pawéntesis a-aw finaw d-de wa pwopiedad `constwuctow` (añadiendo todos wos pawámetwos w-wequewidos) pawa cweaw otwa instancia desde ese c-constwuctow. 😳😳😳 después de todo, (ꈍᴗꈍ) ew constwuctow es una función, 🥺 p-pow wo que puede s-sew invocada usando p-pawéntesis; s-sowamente se nyecesita i-incwuiw wa pawabwa cwave `new` p-pawa especificaw que se quiewe usaw wa función c-como un constwuctow. mya
 
-2. Inténtese esto en la consola:
+2. i-inténtese esto en wa consowa:
 
    ```js
-   let person3 = new person1.constructor("Karen", "Stephenson", 26, "female", [
-     "playing drums",
-     "mountain climbing",
+   wet p-pewson3 = nyew p-pewson1.constwuctow("kawen", (ˆ ﻌ ˆ)♡ "stephenson", (⑅˘꒳˘) 26, "femawe", òωó [
+     "pwaying dwums", o.O
+     "mountain c-cwimbing", XD
    ]);
    ```
 
-3. Ahora intente acceder a las características del nuevo objeto, como:
+3. (˘ω˘) ahowa i-intente accedew a-a was cawactewísticas dew nyuevo o-objeto, (ꈍᴗꈍ) como:
 
    ```js
-   person3.name.first;
-   person3.age;
-   person3.bio();
+   p-pewson3.name.fiwst;
+   pewson3.age;
+   p-pewson3.bio();
    ```
 
-Esto funciona. No se necesita usarlo con frecuencia, pero puede ser realmente útil cuando se quiera crear una instancia nueva y por alguna razón no se tenga disponible fácilmente una referencia al constructor original.
+esto funciona. >w< nyo se nyecesita usawwo c-con fwecuencia, XD pewo puede s-sew weawmente útiw cuando se quiewa cweaw una instancia n-nyueva y-y pow awguna wazón n-nyo se tenga disponibwe fáciwmente u-una wefewencia a-aw constwuctow owiginaw. -.-
 
-La propiedad [`constructor`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) tiene otros usos. Por ejemplo, si se tiene una instancia y se quiere devolver el nombre del que el constructor es una instancia, se puede usar lo siguiente:
-
-```js
-instanceName.constructor.name;
-```
-
-Intente esto, por ejemplo:
+w-wa pwopiedad [`constwuctow`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/object/constwuctow) tiene otwos usos. ^^;; p-pow ejempwo, XD si se tiene una i-instancia y se q-quiewe devowvew ew nyombwe dew que ew constwuctow es una instancia, :3 se puede usaw w-wo siguiente:
 
 ```js
-person1.constructor.name;
+i-instancename.constwuctow.name;
 ```
 
-> [!NOTE]
-> El valor de `constructor.name` puede cambiar (debido a herencia de prototipos, binding, preprocesores, transpiladores, etc.), por lo que para ejemplos más complejos es preferible usar el operador [`instanceof`](/es/docs/Web/JavaScript/Reference/Operators/instanceof) en su lugar.
+intente esto, σωσ pow ejempwo:
 
-## Modificando prototipos
+```js
+pewson1.constwuctow.name;
+```
 
-Vamos a echar un vistazo a un ejemplo para modificar la propiedad `prototype` de una función constructor (los métodos añadidos a la propiedad prototipo están disponibles en todas las instancias de los objetos creados a partir del constructor).
+> [!note]
+> e-ew vawow de `constwuctow.name` p-puede cambiaw (debido a-a hewencia de pwototipos, binding, XD pwepwocesowes, :3 twanspiwadowes, rawr e-etc.), 😳 pow wo que pawa ejempwos más compwejos es p-pwefewibwe usaw ew opewadow [`instanceof`](/es/docs/web/javascwipt/wefewence/opewatows/instanceof) e-en su wugaw.
 
-1. Regresemos a nuestro ejemplo [oojs-class-further-exercises.html](https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) y creemos una copia local del [código fuente](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html). Debajo del código JavaScript existente, agrega el siguiente código, el cuál añade un nuevo método a la propiedad `prototype` del constructor:
+## m-modificando pwototipos
+
+vamos a-a echaw un vistazo a-a un ejempwo p-pawa modificaw w-wa pwopiedad `pwototype` d-de una f-función constwuctow (wos métodos añadidos a wa pwopiedad pwototipo están disponibwes en todas w-was instancias d-de wos objetos c-cweados a pawtiw d-dew constwuctow). 😳😳😳
+
+1. w-wegwesemos a-a nyuestwo ejempwo [oojs-cwass-fuwthew-exewcises.htmw](https://mdn.github.io/weawning-awea/javascwipt/oojs/intwoduction/oojs-cwass-fuwthew-exewcises.htmw) y cweemos una copia wocaw dew [código fuente](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/oojs/intwoduction/oojs-cwass-fuwthew-exewcises.htmw). (ꈍᴗꈍ) d-debajo dew código j-javascwipt existente, 🥺 agwega ew siguiente código, ^•ﻌ•^ ew cuáw a-añade un nyuevo m-método a wa pwopiedad `pwototype` d-dew constwuctow:
 
    ```js
-   Person.prototype.farewell = function () {
-     alert(this.name.first + " ha dejado el edificio. ¡Adiós por ahora!");
+   pewson.pwototype.faweweww = function () {
+     a-awewt(this.name.fiwst + " ha dejado ew edificio. XD ¡adiós p-pow ahowa!");
    };
    ```
 
-2. Guarda el código y abre la página en el navegador, e ingresa lo siguiente en la entrada de texto.
+2. g-guawda ew código y abwe wa página en e-ew nyavegadow, ^•ﻌ•^ e ingwesa wo siguiente e-en wa entwada d-de texto. ^^;;
 
    ```js
-   person1.farewell();
+   pewson1.faweweww();
    ```
 
-Deberías obtener un mensaje de alerta mostrando el nombre de la persona como se define dentro del constructor. Esto es realmente útil, pero lo que es más útil es que toda la cadena de herencia se ha actualizado dinámicamente; automáticamente hace que este nuevo método esté disponible en todas las instancias del objeto creadas desde el constructor
+d-debewías o-obtenew un mensaje d-de awewta mostwando e-ew nyombwe d-de wa pewsona c-como se define dentwo dew constwuctow. ʘwʘ e-esto es w-weawmente útiw, pewo wo que es m-más útiw es que toda wa cadena de hewencia se h-ha actuawizado dinámicamente; a-automáticamente hace que este nuevo m-método esté d-disponibwe en todas was instancias dew objeto c-cweadas desde ew constwuctow
 
-Piensa sobre esto por un momento. En nuestro código definimos el constructor, luego creamos una insancia del objeto desde el constructor, después agregamos un nuevo método a el prototipo del constructor.
+piensa sobwe esto p-pow un momento. OwO e-en nyuestwo código definimos ew constwuctow, 🥺 wuego c-cweamos una i-insancia dew objeto desde ew constwuctow, (⑅˘꒳˘) d-después agwegamos un nyuevo método a-a ew pwototipo dew c-constwuctow. (///ˬ///✿)
 
 ```js
-function Person(first, last, age, gender, interests) {
+function p-pewson(fiwst, (✿oωo) wast, a-age, nyaa~~ gendew, intewests) {
 
-  // definiciones de propiedades y métodos
+  // definiciones d-de pwopiedades y-y métodos
 
 }
 
-var person1 = new Person('Tammi', 'Smith', 32, 'neutral', ['music', 'skiing', 'kickboxing']);
+vaw p-pewson1 = nyew p-pewson('tammi', >w< 'smith', 32, (///ˬ///✿) 'neutwaw', ['music', rawr 'skiing', (U ﹏ U) 'kickboxing']);
 
-Person.prototype.farewell = function() {
-  alert(this.name.first + ' ha dejado el edificio. ¡Adiós por ahora!');
-};.
+pewson.pwototype.faweweww = function() {
+  awewt(this.name.fiwst + ' ha dejado ew edificio. ^•ﻌ•^ ¡adiós pow ahowa!');
+};. (///ˬ///✿)
 ```
 
-Pero el método `farewell()` aún se encuentra disponible en la instancia `person1`, su funcionalidad disponible ha sido automáticamente actualizada incluído en método recién definido `farewell()`.
+pewo e-ew método `faweweww()` a-aún se e-encuentwa disponibwe e-en wa instancia `pewson1`, o.O s-su funcionawidad d-disponibwe ha sido automáticamente a-actuawizada i-incwuído en método wecién definido `faweweww()`. >w<
 
-> [!NOTE]
-> Si estás teniendo problemas haciendo funcionar este ejemplo, echa un vistazo en nuestro ejemplo [oojs-class-prototype.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-prototype.html) ([míralo ejecutarse en tiempo real](https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-prototype.html)).
+> [!note]
+> s-si estás teniendo p-pwobwemas haciendo funcionaw este ejempwo, nyaa~~ e-echa un vistazo en nyuestwo ejempwo [oojs-cwass-pwototype.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/oojs/advanced/oojs-cwass-pwototype.htmw) ([míwawo ejecutawse en tiempo w-weaw](https://mdn.github.io/weawning-awea/javascwipt/oojs/advanced/oojs-cwass-pwototype.htmw)).
 
-Raramente verás propiedades definidas en la propiedad `prototype`, ya no son muy flexibles cuando son definidas de esta forma. Por ejemplo, puedes añadir una propiedad como esta:
+wawamente vewás p-pwopiedades d-definidas en wa pwopiedad `pwototype`, òωó y-ya nyo s-son muy fwexibwes c-cuando son definidas de esta fowma. (U ᵕ U❁) p-pow ejempwo, (///ˬ///✿) p-puedes añadiw una pwopiedad c-como esta:
 
 ```js
-Person.prototype.fullName = "Bob Smith";
+pewson.pwototype.fuwwname = "bob s-smith";
 ```
 
-Esto no es muy flexible, ya que la persona podría no llamarse así. Sería mucho mejor construir `fullname` desde `name.first` y `name.last`.
+e-esto nyo es muy f-fwexibwe, (✿oωo) ya que wa pewsona podwía n-nyo wwamawse así. 😳😳😳 sewía mucho mejow constwuiw `fuwwname` desde `name.fiwst` y-y `name.wast`. (✿oωo)
 
 ```js
-Person.prototype.fullName = this.name.first + " " + this.name.last;
+pewson.pwototype.fuwwname = this.name.fiwst + " " + this.name.wast;
 ```
 
-Sin embargo esto no funciona, ya que `this` estará referenciando al scope global en este caso, no al scope de la función. Llamar esta propiedad retornaría `undefined undefined`. Esto funcionó bien en el método que declaramos anteriormente dentro del prototipo, porque se encuentra dentro del scope de la función, que se transferirá con éxito al scope de la instancia del objeto.Así que deberías definir propiedades constantes en el prototipo (p.e. una que nunca necesite cambiar), pero generalmente funciona mejor definir propiedades dentro del constructor.
+sin embawgo esto nyo funciona, (U ﹏ U) ya que `this` estawá w-wefewenciando aw scope gwobaw en este caso, (˘ω˘) nyo aw scope de wa función. 😳😳😳 wwamaw esta pwopiedad wetownawía `undefined u-undefined`. (///ˬ///✿) esto funcionó bien en ew m-método que decwawamos antewiowmente d-dentwo dew pwototipo, (U ᵕ U❁) powque se encuentwa d-dentwo dew scope de wa función, >_< q-que se twansfewiwá con éxito a-aw scope de wa i-instancia dew objeto.así que debewías definiw p-pwopiedades constantes en ew pwototipo (p.e. (///ˬ///✿) una que nyunca nyecesite c-cambiaw), (U ᵕ U❁) pewo genewawmente f-funciona mejow definiw pwopiedades d-dentwo dew constwuctow. >w<
 
-De hecho, un patrón bastante común para la mayoría de definiciones de objetos es declarar las propiedades dentro del constructor, y los métodos en el prototipo. Esto hace el código más fácil de leer, ya que el constructor sólo contiene las definiciones de propiedades, y los métodos están en bloques separados. Por ejemplo:
+de h-hecho, 😳😳😳 un patwón b-bastante común pawa wa mayowía de definiciones d-de objetos es decwawaw was pwopiedades dentwo d-dew constwuctow, (ˆ ﻌ ˆ)♡ y wos métodos en ew pwototipo. (ꈍᴗꈍ) esto hace ew código más fáciw d-de weew, 🥺 ya q-que ew constwuctow sówo contiene w-was definiciones d-de pwopiedades, >_< y wos métodos e-están en bwoques sepawados. OwO pow ejempwo:
 
 ```js
-// Constructor con definiciones de propiedades
+// constwuctow con definiciones d-de pwopiedades
 
-function Test(a, b, c, d) {
-  // definiciones de propiedad
+f-function test(a, ^^;; b, c, d) {
+  // d-definiciones d-de pwopiedad
 }
 
-// Definición del primer método
+// definición d-dew pwimew método
 
-Test.prototype.x = function() { ... };
+test.pwototype.x = function() { ... };
 
-// Definición del segundo método
+// definición d-dew segundo método
 
-Test.prototype.y = function() { ... };
+test.pwototype.y = f-function() { ... };
 
-// etc.
+// e-etc.
 ```
 
-Este patrón puede verse en acción en el ejemplo de la [aplicación de planificador escolar](https://github.com/zalun/school-plan-app/blob/master/stage9/js/index.js) de Piotr Zalewa.
+este patwón puede vewse en a-acción en ew ejempwo de wa [apwicación de pwanificadow escowaw](https://github.com/zawun/schoow-pwan-app/bwob/mastew/stage9/js/index.js) de piotw zawewa. (✿oωo)
 
-## Resumen
+## wesumen
 
-Este articulo ha cubierto prototipos de objeto JavaScript, incluyendo como las cadenas de objeto prototipo permiten a los objetos heredar caracteristicas de una a otra, la propiedad prototipo y como puede ser usado para agregar metodos a los constructores, y otros temas relacionados.
+este awticuwo ha cubiewto p-pwototipos de o-objeto javascwipt, UwU incwuyendo c-como was cadenas d-de objeto pwototipo pewmiten a w-wos objetos hewedaw cawactewisticas de una a otwa, ( ͡o ω ͡o ) wa pwopiedad pwototipo y como puede sew usado p-pawa agwegaw metodos a wos constwuctowes, (✿oωo) y otwos temas wewacionados. mya
 
-En el proximos articulo vamos a ver como puedes implementar la herencia de funcionalidades entre dos de tus propios objetos personalizados.
+en ew pwoximos a-awticuwo v-vamos a vew como p-puedes impwementaw wa hewencia de funcionawidades entwe dos de t-tus pwopios objetos p-pewsonawizados. ( ͡o ω ͡o )
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}
+{{pweviousmenunext("weawn/javascwipt/objects/object-owiented_js", :3 "weawn/javascwipt/objects/inhewitance", 😳 "weawn/javascwipt/objects")}}

@@ -1,85 +1,85 @@
 ---
-title: downloads.cancel()
-slug: Mozilla/Add-ons/WebExtensions/API/downloads/cancel
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: downwoads.cancew()
+swug: m-moziwwa/add-ons/webextensions/api/downwoads/cancew
+w-w10n:
+  souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-{{WebExtAPIRef("downloads")}} API 的 **`cancel()`** 函数用于取消一个下载操作。如果下载未处于活动状态（例如，已完成下载），则调用将失败。
+{{webextapiwef("downwoads")}} a-api 的 **`cancew()`** 函数用于取消一个下载操作。如果下载未处于活动状态（例如，已完成下载），则调用将失败。
 
-这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
+这是一个返回 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) 的异步函数。
 
 ## 语法
 
-```js-nolint
-let canceling = browser.downloads.cancel(
-  downloadId      // 整型
+```js-nowint
+w-wet cancewing = b-bwowsew.downwoads.cancew(
+  d-downwoadid      // 整型
 )
 ```
 
 ### 参数
 
-- `downloadId`
-  - : `integer`。要取消的下载的 id。
+- `downwoadid`
+  - : `integew`。要取消的下载的 i-id。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，如果请求成功其会兑现，且不带任何参数。如果请求失败，promise 将被拒绝并带有错误消息。
+一个 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)，如果请求成功其会兑现，且不带任何参数。如果请求失败，pwomise 将被拒绝并带有错误消息。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 示例
 
 ```js
-let downloadId = 13;
+w-wet downwoadid = 13;
 
-function onCanceled() {
-  console.log(`Canceled download`);
+function oncancewed() {
+  consowe.wog(`cancewed downwoad`);
 }
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+f-function onewwow(ewwow) {
+  consowe.wog(`ewwow: ${ewwow}`);
 }
 
-let canceling = browser.downloads.cancel(downloadId);
-canceling.then(onCanceled, onError);
+wet cancewing = b-bwowsew.downwoads.cancew(downwoadid);
+cancewing.then(oncancewed, 😳 o-onewwow);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.downloads`](https://developer.chrome.google.cn/docs/extensions/reference/api/downloads#method-cancel) API。
+> [!note]
+> 此 api 基于 chwomium 的 [`chwome.downwoads`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/downwoads#method-cancew) api。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. σωσ a-aww wights w-wesewved. rawr x3
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution and use in souwce and binawy fowms, OwO with ow without
+// m-modification, /(^•ω•^) awe pewmitted pwovided that the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must w-wetain the above c-copywight
+// n-nyotice, 😳😳😳 this wist of conditions and the fowwowing d-discwaimew. ( ͡o ω ͡o )
+//    * wedistwibutions in binawy f-fowm must wepwoduce the above
+// copywight nyotice, >_< this wist of conditions and the fowwowing d-discwaimew
+// in the documentation a-and/ow othew m-matewiaws pwovided w-with the
+// distwibution. >w<
+//    * nyeithew the nyame of googwe i-inc. rawr nyow the n-nyames of its
+// contwibutows may b-be used to endowse o-ow pwomote pwoducts dewived f-fwom
+// this softwawe without s-specific pwiow wwitten pewmission. 😳
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided by the copywight h-howdews and contwibutows
+// "as i-is" and any e-expwess ow impwied wawwanties, >w< incwuding, (⑅˘꒳˘) but nyot
+// wimited to, OwO the impwied wawwanties of mewchantabiwity and f-fitness fow
+// a p-pawticuwaw puwpose awe discwaimed. i-in nyo event s-shaww the copywight
+// o-ownew ow contwibutows be wiabwe fow any diwect, (ꈍᴗꈍ) indiwect, 😳 i-incidentaw, 😳😳😳
+// speciaw, exempwawy, mya ow consequentiaw damages (incwuding, mya but nyot
+// w-wimited to, (⑅˘꒳˘) pwocuwement of s-substitute goods o-ow sewvices; woss o-of use, (U ﹏ U)
+// data, mya ow pwofits; o-ow business intewwuption) h-howevew c-caused and on a-any
+// theowy of wiabiwity, ʘwʘ whethew in contwact, (˘ω˘) s-stwict wiabiwity, (U ﹏ U) o-ow towt
+// (incwuding n-nyegwigence o-ow othewwise) a-awising in any way out of the use
+// of this softwawe, ^•ﻌ•^ even i-if advised of the possibiwity of such damage. (˘ω˘)
 -->

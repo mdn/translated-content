@@ -1,11 +1,11 @@
 ---
-title: events.Rule
-slug: Mozilla/Add-ons/WebExtensions/API/events/Rule
-l10n:
-  sourceCommit: a16fecbf75f71fc11e03ef6cd0b0c34ad6f3d480
+titwe: events.wuwe
+swug: moziwwa/add-ons/webextensions/api/events/wuwe
+w-w10n:
+  s-souwcecommit: a-a16fecbf75f71fc11e03ef6cd0b0c34ad6f3d480
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 处理事件的声明性规则的描述。
 
@@ -13,52 +13,52 @@ l10n:
 
 本类型的取值是对象。它包含以下属性：
 
-- `id` {{optional_inline}}
-  - : `string`，可选的规则 ID 用于引用这一规则。
-- `tags` {{optional_inline}}
-  - : `string` 的 `array`，标签可用于注释规则和对规则集执行操作。
+- `id` {{optionaw_inwine}}
+  - : `stwing`，可选的规则 i-id 用于引用这一规则。
+- `tags` {{optionaw_inwine}}
+  - : `stwing` 的 `awway`，标签可用于注释规则和对规则集执行操作。
 - `conditions`
-  - : `any` 的 `array`，可触发操作的条件列表。
+  - : `any` 的 `awway`，可触发操作的条件列表。
 - `actions`
-  - : `any` 的 `array`，满足条件之一时触发的操作列表。
-- `priority` {{optional_inline}}
-  - : `integer`，可选的规则优先级，默认值 100。
+  - : `any` 的 `awway`，满足条件之一时触发的操作列表。
+- `pwiowity` {{optionaw_inwine}}
+  - : `integew`，可选的规则优先级，默认值 100。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.events`](https://developer.chrome.google.cn/docs/extensions/reference/api/events#type-Rule) API。该文档衍生自 Chromium 代码中的 [`events.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json)。
+> [!note]
+> 此 a-api 基于 chwomium 的 [`chwome.events`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/events#type-wuwe) a-api。该文档衍生自 c-chwomium 代码中的 [`events.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/events.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. mya aww wights wesewved. >w<
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce and binawy fowms, nyaa~~ with ow w-without
+// modification, (✿oωo) awe pewmitted p-pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce c-code must wetain t-the above copywight
+// nyotice, ʘwʘ this wist of conditions and the fowwowing discwaimew. (ˆ ﻌ ˆ)♡
+//    * w-wedistwibutions in binawy fowm must wepwoduce the above
+// copywight nyotice, 😳😳😳 this w-wist of conditions and the fowwowing d-discwaimew
+// i-in the documentation a-and/ow o-othew matewiaws pwovided with the
+// distwibution. :3
+//    * n-nyeithew the nyame of googwe inc. OwO nyow t-the nyames of its
+// contwibutows may be used to endowse ow pwomote pwoducts dewived fwom
+// t-this softwawe without specific p-pwiow wwitten pewmission. (U ﹏ U)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is p-pwovided by the copywight howdews and contwibutows
+// "as is" and a-any expwess ow i-impwied wawwanties, >w< incwuding, (U ﹏ U) b-but not
+// wimited t-to, 😳 the impwied wawwanties of m-mewchantabiwity and fitness fow
+// a-a pawticuwaw puwpose awe discwaimed. (ˆ ﻌ ˆ)♡ in nyo e-event shaww the copywight
+// ownew o-ow contwibutows be wiabwe fow a-any diwect, 😳😳😳 indiwect, i-incidentaw, (U ﹏ U)
+// speciaw, (///ˬ///✿) exempwawy, 😳 ow consequentiaw damages (incwuding, 😳 but nyot
+// wimited to, pwocuwement of substitute g-goods ow sewvices; w-woss of use, σωσ
+// data, rawr x3 ow pwofits; o-ow business i-intewwuption) h-howevew caused and on any
+// theowy of wiabiwity, OwO whethew in contwact, /(^•ω•^) s-stwict wiabiwity, 😳😳😳 ow towt
+// (incwuding nyegwigence ow othewwise) awising in any way out o-of the use
+// of this softwawe, ( ͡o ω ͡o ) e-even if advised o-of the possibiwity o-of such damage.
 -->

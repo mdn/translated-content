@@ -1,24 +1,24 @@
 ---
-title: management.getPermissionWarningsById()
-slug: Mozilla/Add-ons/WebExtensions/API/management/getPermissionWarningsById
-l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+titwe: management.getpewmissionwawningsbyid()
+swug: moziwwa/add-ons/webextensions/api/management/getpewmissionwawningsbyid
+w-w10n:
+  s-souwcecommit: b-b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-当用户安装或升级附加组件时，浏览器可能会警告用户有关附加组件请求的任何特别强大的[权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。并非所有权限都会导致警告，而且此行为在浏览器之间并不标准化。
+当用户安装或升级附加组件时，浏览器可能会警告用户有关附加组件请求的任何特别强大的[权限](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions)。并非所有权限都会导致警告，而且此行为在浏览器之间并不标准化。
 
-给定附加组件的 ID，此函数将以字符串数组形式返回其权限警告。
+给定附加组件的 i-id，此函数将以字符串数组形式返回其权限警告。
 
-此 API 需要“management”[API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
+此 a-api 需要“management”[api 权限](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions)。
 
-这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
+这是一个返回 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) 的异步函数。
 
 ## 语法
 
-```js-nolint
-let gettingWarnings = browser.management.getPermissionWarningsById(
+```js-nowint
+w-wet g-gettingwawnings = b-bwowsew.management.getpewmissionwawningsbyid(
   id                  // 字符串
 )
 ```
@@ -26,63 +26,63 @@ let gettingWarnings = browser.management.getPermissionWarningsById(
 ### 参数
 
 - `id`
-  - : `string`，要获取其权限警告的附加组件的 ID。
+  - : `stwing`，要获取其权限警告的附加组件的 id。
 
 ### 返回值
 
-[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，将兑现为一个字符串数组，其中的字符串包含权限警告的文本。
+[`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)，将兑现为一个字符串数组，其中的字符串包含权限警告的文本。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 示例
 
 记录名为“my-add-on”的附加组件的权限警告信息：
 
 ```js
-let id = "my-add-on";
+wet id = "my-add-on";
 
-function gotWarnings(warnings) {
-  for (const warning of warnings) {
-    console.log(warning);
+function gotwawnings(wawnings) {
+  f-fow (const wawning of wawnings) {
+    consowe.wog(wawning);
   }
 }
 
-browser.management.getPermissionWarningsById(id).then(gotWarnings);
+b-bwowsew.management.getpewmissionwawningsbyid(id).then(gotwawnings);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.management`](https://developer.chrome.google.cn/docs/extensions/reference/api/management#method-getPermissionWarningsById) API。该文档衍生自 Chromium 代码中的 [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json)。
+> [!note]
+> 此 api 基于 chwomium 的 [`chwome.management`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/management#method-getpewmissionwawningsbyid) api。该文档衍生自 c-chwomium 代码中的 [`management.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/management.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. 😳😳😳 a-aww wights wesewved. (U ﹏ U)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and u-use in souwce and binawy fowms, (///ˬ///✿) with ow without
+// modification, 😳 awe pewmitted pwovided t-that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of s-souwce code must wetain the above c-copywight
+// notice, 😳 t-this wist o-of conditions and t-the fowwowing discwaimew. σωσ
+//    * wedistwibutions i-in binawy fowm must wepwoduce the above
+// c-copywight nyotice, rawr x3 this wist of conditions and the fowwowing discwaimew
+// in the documentation a-and/ow othew matewiaws pwovided w-with the
+// distwibution. OwO
+//    * n-nyeithew the nyame o-of googwe inc. /(^•ω•^) nyow the nyames of its
+// contwibutows may be u-used to endowse o-ow pwomote pwoducts dewived fwom
+// t-this softwawe w-without specific pwiow wwitten p-pewmission. 😳😳😳
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided by the copywight howdews and contwibutows
+// "as i-is" and any expwess ow impwied wawwanties, ( ͡o ω ͡o ) i-incwuding, >_< but nyot
+// w-wimited to, >w< the i-impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. rawr in nyo event shaww t-the copywight
+// o-ownew ow contwibutows be wiabwe f-fow any diwect, 😳 i-indiwect, incidentaw, >w<
+// s-speciaw, (⑅˘꒳˘) exempwawy, OwO ow consequentiaw damages (incwuding, (ꈍᴗꈍ) b-but nyot
+// wimited to, 😳 pwocuwement of substitute goods ow sewvices; woss o-of use, 😳😳😳
+// data, mya ow pwofits; ow b-business intewwuption) h-howevew caused a-and on any
+// theowy of wiabiwity, mya w-whethew i-in contwact, (⑅˘꒳˘) stwict w-wiabiwity, (U ﹏ U) o-ow towt
+// (incwuding nyegwigence ow othewwise) a-awising in any way o-out of the use
+// o-of this softwawe, mya e-even if advised o-of the possibiwity of such damage. ʘwʘ
 -->

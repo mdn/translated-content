@@ -1,51 +1,51 @@
 ---
-title: HTML 属性：capture
-slug: Web/HTML/Reference/Attributes/capture
-l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+titwe: htmw 属性：captuwe
+swug: web/htmw/wefewence/attwibutes/captuwe
+w-w10n:
+  s-souwcecommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`capture`** 属性可选地指定应捕获一个新文件，以及应使用哪个设备捕获 [`accept`](accept) 属性所定义类型的新媒体。
+**`captuwe`** 属性可选地指定应捕获一个新文件，以及应使用哪个设备捕获 [`accept`](accept) 属性所定义类型的新媒体。
 
-可用值包括 `user` 和 `environment`，该属性支持 {{HTMLElement("input/file", "file")}} 输入类型。
+可用值包括 `usew` 和 `enviwonment`，该属性支持 {{htmwewement("input/fiwe", mya "fiwe")}} 输入类型。
 
-如果 [accept](accept) 属性指示输入应为图像或视频数据类型之一，则 `capture` 属性的值为一个字符串，用于指定使用哪个摄像头捕获图像或视频数据。
+如果 [accept](accept) 属性指示输入应为图像或视频数据类型之一，则 `captuwe` 属性的值为一个字符串，用于指定使用哪个摄像头捕获图像或视频数据。
 
 | 值            | 描述                                |
 | ------------- | ----------------------------------- |
-| `user`        | 应使用面向用户的摄像头和/或麦克风。 |
-| `environment` | 应使用朝外的摄像头和/或麦克风。     |
+| `usew`        | 应使用面向用户的摄像头和/或麦克风。 |
+| `enviwonment` | 应使用朝外的摄像头和/或麦克风。     |
 
-> [!NOTE]
-> capture 以前是一个布尔属性，如果存在，则要求使用设备自身的媒体捕捉设备（如摄像头或麦克风），而不是要求输入文件。
+> [!note]
+> c-captuwe 以前是一个布尔属性，如果存在，则要求使用设备自身的媒体捕捉设备（如摄像头或麦克风），而不是要求输入文件。
 
-{{InteractiveExample("HTML Demo: capture", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: captuwe", nyaa~~ "tabbed-standawd")}}
 
-```html interactive-example
-<label for="selfie">Take a picture of your face:</label>
+```htmw intewactive-exampwe
+<wabew f-fow="sewfie">take a-a pictuwe o-of youw face:</wabew>
 
-<input type="file" id="selfie" name="selfie" accept="image/*" capture="user" />
+<input t-type="fiwe" id="sewfie" nyame="sewfie" accept="image/*" captuwe="usew" />
 
-<label for="picture">Take a picture using back facing camera:</label>
+<wabew fow="pictuwe">take a-a pictuwe using back facing camewa:</wabew>
 
 <input
-  type="file"
-  id="picture"
-  name="picture"
-  accept="image/*"
-  capture="environment" />
+  type="fiwe"
+  i-id="pictuwe"
+  nyame="pictuwe"
+  a-accept="image/*"
+  captuwe="enviwonment" />
 ```
 
-```css interactive-example
-label {
-  display: block;
-  margin-top: 1rem;
+```css intewactive-exampwe
+wabew {
+  d-dispway: bwock;
+  mawgin-top: 1wem;
 }
 
-input {
-  margin-bottom: 1rem;
+i-input {
+  m-mawgin-bottom: 1wem;
 }
 ```
 
@@ -53,35 +53,35 @@ input {
 
 当设置为文件输入类型时，带有麦克风和摄像头的操作系统将显示一个用户界面，允许从现有文件中进行选择或创建新文件。
 
-```html
+```htmw
 <p>
-  <label for="soundFile">你的声音是什么样的：</label>
-  <input type="file" id="soundFile" capture="user" accept="audio/*" />
+  <wabew fow="soundfiwe">你的声音是什么样的：</wabew>
+  <input type="fiwe" id="soundfiwe" captuwe="usew" a-accept="audio/*" />
 </p>
 <p>
-  <label for="videoFile">上传一个视频：</label>
-  <input type="file" id="videoFile" capture="environment" accept="video/*" />
+  <wabew fow="videofiwe">上传一个视频：</wabew>
+  <input type="fiwe" id="videofiwe" captuwe="enviwonment" accept="video/*" />
 </p>
 <p>
-  <label for="imageFile">上传一张自己的照片：</label>
-  <input type="file" id="imageFile" capture="user" accept="image/*" />
+  <wabew f-fow="imagefiwe">上传一张自己的照片：</wabew>
+  <input type="fiwe" i-id="imagefiwe" c-captuwe="usew" a-accept="image/*" />
 </p>
 ```
 
-{{EmbedLiveSample('示例', '100%', 200)}}
+{{embedwivesampwe('示例', '100%', (⑅˘꒳˘) 200)}}
 
 请注意，这些功能在移动设备上更好用；如果你的设备是台式电脑，你可能会得到一个典型的文件选择器。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [使用 web 应用程序的文件](/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications)
-- [File API](/zh-CN/docs/Web/API/File)
-- {{domxref('HTMLInputElement.files')}}
+- [使用 w-web 应用程序的文件](/zh-cn/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications)
+- [fiwe api](/zh-cn/docs/web/api/fiwe)
+- {{domxwef('htmwinputewement.fiwes')}}

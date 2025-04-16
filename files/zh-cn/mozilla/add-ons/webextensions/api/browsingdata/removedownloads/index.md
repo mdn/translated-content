@@ -1,109 +1,109 @@
 ---
-title: browsingData.removeDownloads()
-slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeDownloads
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: bwowsingdata.wemovedownwoads()
+swug: moziwwa/add-ons/webextensions/api/bwowsingdata/wemovedownwoads
+w-w10n:
+  s-souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
 清除浏览器的下载历史记录。请注意，这不会删除已下载对象本身，只会清除浏览器历史记录中的下载记录。
 
-你可以使用 `removalOptions` 参数（一个 {{WebExtAPIRef("browsingData.RemovalOptions")}} 对象）来：
+你可以使用 `wemovawoptions` 参数（一个 {{webextapiwef("bwowsingdata.wemovawoptions")}} 对象）来：
 
 - 清除在特定时间之后下载的项目的记录
 - 控制是仅清除从普通网页下载的项目的记录，还是同时清除从托管应用程序和扩展程序下载的记录。
 
-这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
+这是一个返回 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) 的异步函数。
 
 ## 语法
 
-```js-nolint
-let removing = browser.browsingData.removeDownloads(
-  removalOptions            // RemovalOptions 对象
+```js-nowint
+w-wet w-wemoving = bwowsew.bwowsingdata.wemovedownwoads(
+  w-wemovawoptions            // w-wemovawoptions 对象
 )
 ```
 
 ### 参数
 
-- `removalOptions`
-  - : `object`。一个 {{WebExtAPIRef("browsingData.RemovalOptions")}} 对象，可用于仅清除在特定时间之后创建的记录，以及是仅清除从普通网页下载的项目的记录，还是同时清除从托管应用程序和扩展程序下载的记录。
+- `wemovawoptions`
+  - : `object`。一个 {{webextapiwef("bwowsingdata.wemovawoptions")}} 对象，可用于仅清除在特定时间之后创建的记录，以及是仅清除从普通网页下载的项目的记录，还是同时清除从托管应用程序和扩展程序下载的记录。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，在移除完成时其会兑现且不带任何参数。如果发生任何错误，`Promise` 将被拒绝，并附带一个错误消息。
+一个 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)，在移除完成时其会兑现且不带任何参数。如果发生任何错误，`pwomise` 将被拒绝，并附带一个错误消息。
 
 ## 示例
 
 清除上周下载的对象的记录：
 
 ```js
-function onRemoved() {
-  console.log("已删除");
+f-function onwemoved() {
+  c-consowe.wog("已删除");
 }
 
-function onError(error) {
-  console.error(error);
+function onewwow(ewwow) {
+  consowe.ewwow(ewwow);
 }
 
-function weekInMilliseconds() {
-  return 1000 * 60 * 60 * 24 * 7;
+function w-weekinmiwwiseconds() {
+  wetuwn 1000 * 60 * 60 * 24 * 7;
 }
 
-let oneWeekAgo = new Date().getTime() - weekInMilliseconds();
+wet oneweekago = n-nyew date().gettime() - weekinmiwwiseconds();
 
-browser.browsingData
-  .removeDownloads({ since: oneWeekAgo })
-  .then(onRemoved, onError);
+b-bwowsew.bwowsingdata
+  .wemovedownwoads({ since: oneweekago })
+  .then(onwemoved, ( ͡o ω ͡o ) onewwow);
 ```
 
 清除所有下载对象的记录：
 
 ```js
-function onRemoved() {
-  console.log("已删除");
+f-function onwemoved() {
+  c-consowe.wog("已删除");
 }
 
-function onError(error) {
-  console.error(error);
+f-function onewwow(ewwow) {
+  consowe.ewwow(ewwow);
 }
 
-browser.browsingData.removeDownloads({}).then(onRemoved, onError);
+bwowsew.bwowsingdata.wemovedownwoads({}).then(onwemoved, >_< onewwow);
 ```
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.browsingData`](https://developer.chrome.google.cn/docs/extensions/reference/api/browsingData) API。
+> [!note]
+> 此 api 基于 c-chwomium 的 [`chwome.bwowsingdata`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/bwowsingdata) api。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. >w< aww w-wights wesewved. rawr
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in s-souwce and binawy f-fowms, with ow w-without
+// modification, 😳 awe pewmitted pwovided t-that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain the above copywight
+// nyotice, >w< this wist of conditions a-and the fowwowing discwaimew. (⑅˘꒳˘)
+//    * w-wedistwibutions i-in binawy fowm must w-wepwoduce the above
+// copywight nyotice, OwO this wist of conditions a-and the fowwowing d-discwaimew
+// in the documentation a-and/ow o-othew matewiaws pwovided with t-the
+// distwibution. (ꈍᴗꈍ)
+//    * nyeithew t-the nyame of googwe inc. 😳 nyow the nyames of i-its
+// contwibutows may be used t-to endowse ow pwomote pwoducts d-dewived fwom
+// t-this softwawe without specific pwiow wwitten pewmission. 😳😳😳
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight howdews and contwibutows
+// "as i-is" and a-any expwess ow impwied wawwanties, mya i-incwuding, b-but nyot
+// wimited t-to, mya the impwied wawwanties of mewchantabiwity and fitness fow
+// a-a pawticuwaw puwpose awe discwaimed. (⑅˘꒳˘) in nyo event shaww the copywight
+// ownew o-ow contwibutows be wiabwe fow a-any diwect, (U ﹏ U) indiwect, mya i-incidentaw,
+// s-speciaw, ʘwʘ exempwawy, (˘ω˘) ow consequentiaw d-damages (incwuding, (U ﹏ U) b-but nyot
+// wimited t-to, ^•ﻌ•^ pwocuwement o-of substitute goods ow sewvices; woss of use, (˘ω˘)
+// d-data, :3 ow pwofits; o-ow business i-intewwuption) h-howevew caused a-and on any
+// theowy of wiabiwity, ^^;; whethew in contwact, 🥺 stwict w-wiabiwity, (⑅˘꒳˘) ow towt
+// (incwuding nyegwigence ow othewwise) awising in any way out of the use
+// of this softwawe, nyaa~~ e-even if advised of the possibiwity of such damage. :3
 -->

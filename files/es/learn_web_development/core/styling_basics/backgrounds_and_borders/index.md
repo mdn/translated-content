@@ -1,314 +1,314 @@
 ---
-title: Fondos y bordes
-slug: Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
-original_slug: Learn/CSS/Building_blocks/Backgrounds_and_borders
+titwe: fondos y bowdes
+swug: w-weawn_web_devewopment/cowe/stywing_basics/backgwounds_and_bowdews
+o-owiginaw_swug: w-weawn/css/buiwding_bwocks/backgwounds_and_bowdews
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/css/buiwding_bwocks/the_box_modew", ^^ "weawn/css/buiwding_bwocks/handwing_diffewent_text_diwections", ( ͡o ω ͡o ) "weawn/css/buiwding_bwocks")}}
 
-En este artículo, veremos algunas de las cosas creativas que puedes hacer con los fondos y los bordes de CSS. Añadir degradados, imágenes de fondo o redondear esquinas; los fondos y los bordes son la solución para una gran cantidad de cuestiones de estilo en CSS.
+e-en este awtícuwo, XD v-vewemos a-awgunas de was c-cosas cweativas q-que puedes hacew con wos fondos y wos bowdes de css. ^^ añadiw degwadados, (⑅˘꒳˘) imágenes d-de fondo o wedondeaw esquinas; wos fondos y wos b-bowdes son wa sowución pawa u-una gwan cantidad de cuestiones de estiwo en css. (⑅˘꒳˘)
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prerrequisitos:</th>
+    <tw>
+      <th scope="wow">pwewwequisitos:</th>
       <td>
-        Conocimientos básicos de informática, tener el
+        c-conocimientos básicos d-de infowmática, ^•ﻌ•^ t-tenew ew
         <a
-          href="/es/docs/Learn/Getting_started_with_the_web/Instalacion_de_software_basico"
-          >software básico</a
+          hwef="/es/docs/weawn/getting_stawted_with_the_web/instawacion_de_softwawe_basico"
+          >softwawe básico</a
         >
-        instalado, conocimientos básicos de
+        instawado, ( ͡o ω ͡o ) conocimientos básicos d-de
         <a
-          href="/es/docs/Learn/Getting_started_with_the_web/Manejando_los_archivos"
-          >trabajar con archivos</a
-        >, conocimientos básicos de HTML (véase
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML"
-          >Introducción al HTML</a
-        >) y nociones de CSS (véase
-        <a href="/es/docs/Learn/CSS/First_steps">Primeros pasos con el CSS</a>).
+          hwef="/es/docs/weawn/getting_stawted_with_the_web/manejando_wos_awchivos"
+          >twabajaw con awchivos</a
+        >, ( ͡o ω ͡o ) conocimientos básicos de h-htmw (véase
+        <a hwef="/es/docs/weawn/htmw/intwoduccion_a_htmw"
+          >intwoducción a-aw htmw</a
+        >) y-y nyociones d-de css (véase
+        <a h-hwef="/es/docs/weawn/css/fiwst_steps">pwimewos pasos con ew css</a>). (✿oωo)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
-      <td>Aprender a diseñar el fondo y los bordes de las cajas.</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">objetivo:</th>
+      <td>apwendew a diseñaw ew fondo y w-wos bowdes de was cajas.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Aplicar estilo a los fondos en CSS
+## apwicaw estiwo a wos fondos en css
 
-La propiedad {{cssxref ("background")}} de CSS es una propiedad abreviada de una serie de propiedades de fondo que vamos a ver en este artículo. Si descubres una propiedad de fondo compleja en una hoja de estilo, puede parecer un poco difícil de entender porque pueden estarse pasando muchos valores a la vez.
+wa pwopiedad {{cssxwef ("backgwound")}} de c-css es una pwopiedad abweviada de u-una sewie de pwopiedades d-de fondo q-que vamos a vew en este awtícuwo. 😳😳😳 si descubwes una pwopiedad d-de fondo compweja e-en una hoja de estiwo, OwO puede p-pawecew un poco d-difíciw de entendew powque pueden e-estawse pasando muchos vawowes a-a wa vez. ^^
 
 ```css
 .box {
-  background:
-    linear-gradient(
-        105deg,
-        rgba(255, 255, 255, 0.2) 39%,
-        rgba(51, 56, 57, 1) 96%
+  backgwound:
+    wineaw-gwadient(
+        105deg, rawr x3
+        w-wgba(255, 🥺 255, 255, 0.2) 39%, (ˆ ﻌ ˆ)♡
+        wgba(51, ( ͡o ω ͡o ) 56, 57, 1) 96%
       )
-      center center / 400px 200px no-repeat,
-    url(big-star.png) center no-repeat,
-    rebeccapurple;
+      c-centew centew / 400px 200px nyo-wepeat, >w<
+    uww(big-staw.png) centew nyo-wepeat, /(^•ω•^)
+    w-webeccapuwpwe;
 }
 ```
 
-Más adelante en este tutorial regresaremos a cómo funcionan las propiedades abreviadas, pero primero echemos un vistazo a las diferentes cosas que puedes hacer con los fondos en CSS, a partir de observar las propiedades de fondo individuales.
+m-más adewante en este tutowiaw wegwesawemos a cómo funcionan was pwopiedades abweviadas, pewo pwimewo e-echemos un v-vistazo a was difewentes cosas que p-puedes hacew c-con wos fondos en c-css, 😳😳😳 a pawtiw de obsewvaw was pwopiedades de fondo individuawes. (U ᵕ U❁)
 
-### Los colores de fondo
+### w-wos cowowes de fondo
 
-La propiedad {{cssxref ("background-color")}} define el color de fondo de cualquier elemento en CSS. La propiedad admite cualquier [`<color>`](/es/docs/Web/CSS/color_value) válido. Un color de fondo (`background-color`) se extiende por debajo del contenido y el relleno del elemento.
+wa pwopiedad {{cssxwef ("backgwound-cowow")}} define ew cowow de fondo d-de cuawquiew ewemento en css. (˘ω˘) w-wa pwopiedad a-admite cuawquiew [`<cowow>`](/es/docs/web/css/cowow_vawue) v-váwido. un cowow de f-fondo (`backgwound-cowow`) s-se extiende p-pow debajo d-dew contenido y ew wewweno dew ewemento. 😳
 
-En el ejemplo siguiente hemos utilizado varios valores de color para añadir un color de fondo a la caja, a un encabezado y a un elemento {{htmlelement ("span")}}.
+en ew e-ejempwo siguiente h-hemos utiwizado v-vawios vawowes d-de cowow pawa a-añadiw un cowow de fondo a wa caja, (ꈍᴗꈍ) a un encabezado y a un ewemento {{htmwewement ("span")}}. :3
 
-**Juega un poco con ellos; usa cualquier valor [\<color>](/es/docs/Web/CSS/color_value) disponible.**
+**juega u-un poco con ewwos; usa cuawquiew vawow [\<cowow>](/es/docs/web/css/cowow_vawue) disponibwe.**
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/color.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/weawn/backgwounds-bowdews/cowow.htmw", /(^•ω•^) '100%', 800)}}
 
-### Las imágenes de fondo
+### was imágenes de fondo
 
-La propiedad {{cssxref ("background-image")}} permite visualizar una imagen de fondo en un elemento. En el ejemplo siguiente hay dos cajas: una tiene una imagen de fondo que es más grande que la caja misma, la otra tiene una imagen pequeña en forma de estrella.
+wa p-pwopiedad {{cssxwef ("backgwound-image")}} pewmite visuawizaw una imagen de fondo e-en un ewemento. ^^;; e-en ew ejempwo s-siguiente hay dos cajas: una tiene u-una imagen de fondo que es más g-gwande que wa c-caja misma, o.O wa otwa tiene una imagen pequeña en fowma de estwewwa. 😳
 
-Este ejemplo demuestra dos cosas sobre las imágenes de fondo. De forma predeterminada, la imagen grande no se reduce para ajustarse a la caja, por lo que solo vemos una pequeña esquina de esta, mientras que la imagen pequeña aparece en forma de mosaico hasta llenar la caja. En este caso, la imagen es en realidad una sola estrella.
+este ejempwo demuestwa dos c-cosas sobwe was imágenes de fondo. UwU d-de fowma pwedetewminada, wa i-imagen gwande nyo s-se weduce pawa ajustawse a wa caja, >w< pow wo que s-sowo vemos una p-pequeña esquina de esta, o.O mientwas q-que wa imagen p-pequeña apawece en fowma de mosaico hasta wwenaw wa caja. (˘ω˘) en este caso, òωó wa imagen e-es en weawidad u-una sowa estwewwa. nyaa~~
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/background-image.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/weawn/backgwounds-bowdews/backgwound-image.htmw", ( ͡o ω ͡o ) '100%', 😳😳😳 800)}}
 
-**Si especificas un color de fondo además de una imagen de fondo, la imagen se muestra encima del color de fondo. Añade una propiedad `background-color` al ejemplo anterior y obsérvalo en acción.**
+**si e-especificas un cowow de fondo además d-de una imagen d-de fondo, ^•ﻌ•^ wa imagen se muestwa e-encima dew cowow de fondo. (˘ω˘) añade una pwopiedad `backgwound-cowow` aw ejempwo antewiow y obséwvawo e-en acción.**
 
-#### Controlar background-repeat
+#### c-contwowaw backgwound-wepeat
 
-La propiedad {{cssxref ("background-repeat")}} se usa para controlar el comportamiento de tipo mosaico de las imágenes. Los valores disponibles son:
+wa pwopiedad {{cssxwef ("backgwound-wepeat")}} s-se usa pawa c-contwowaw ew compowtamiento de tipo mosaico de was imágenes. (˘ω˘) w-wos vawowes disponibwes son:
 
-- `no-repeat`: evita que el fondo se repita.
-- `repeat-x`: repite horizontalmente.
-- `repeat-y`: repite verticalmente.
-- `repeat`: es el valor por defecto; repite en ambas direcciones.
+- `no-wepeat`: evita que ew fondo se wepita. -.-
+- `wepeat-x`: wepite h-howizontawmente. ^•ﻌ•^
+- `wepeat-y`: wepite vewticawmente. /(^•ω•^)
+- `wepeat`: es ew vawow pow d-defecto; wepite e-en ambas diwecciones. (///ˬ///✿)
 
-**Prueba estos valores en el ejemplo siguiente. Hemos establecido el valor `no-repeat`, así que solo verás una estrella. Prueba los diferentes valores (`repeat-x` y `repeat-y`) y observa cuáles son los efectos.**
+**pwueba estos vawowes en ew ejempwo siguiente. mya hemos e-estabwecido ew vawow `no-wepeat`, o.O a-así que sowo vewás una estwewwa. ^•ﻌ•^ pwueba wos difewentes vawowes (`wepeat-x` y `wepeat-y`) y-y obsewva cuáwes son w-wos efectos.**
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/repeat.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/weawn/backgwounds-bowdews/wepeat.htmw", (U ᵕ U❁) '100%', :3 800)}}
 
-#### Dimensionar la imagen de fondo
+#### dimensionaw wa imagen de fondo
 
-En el ejemplo anterior hay una imagen grande que aparece recortada porque es más grande que el fondo. En este caso, podríamos usar la propiedad {{cssxref ("background-size")}}, que puede tomar valores de [longitud](/es/docs/Web/CSS/length) o [porcentaje](/es/docs/Web/CSS/percentage), para ajustar el tamaño de la imagen para que quepa dentro del fondo.
+en ew ejempwo a-antewiow hay una imagen gwande que a-apawece wecowtada p-powque es más gwande que ew f-fondo. (///ˬ///✿) en este caso, (///ˬ///✿) podwíamos u-usaw wa pwopiedad {{cssxwef ("backgwound-size")}}, 🥺 q-que puede tomaw v-vawowes de [wongitud](/es/docs/web/css/wength) o [powcentaje](/es/docs/web/css/pewcentage), -.- p-pawa ajustaw ew t-tamaño de wa imagen pawa que quepa dentwo dew f-fondo. nyaa~~
 
-También puedes utilizar palabras clave:
+también p-puedes utiwizaw p-pawabwas cwave:
 
-- `cover`: el navegador agrandará la imagen lo suficientemente grande como para que esta cubra por completo el área de la caja sin que pierda su relación de aspecto. En este caso, es probable que parte de la imagen quede fuera de la caja.
-- `contain`: el navegador adecuará el tamaño de la imagen para que quepa dentro de la caja. En este caso, pueden quedar huecos a ambos lados o en la parte superior e inferior de la imagen si la relación de aspecto de la imagen es diferente de la de la caja.
+- `covew`: ew nyavegadow agwandawá w-wa imagen wo suficientemente g-gwande como pawa q-que esta cubwa pow compweto ew áwea de wa caja sin que piewda s-su wewación d-de aspecto. en este c-caso, es pwobabwe q-que pawte de wa imagen quede f-fuewa de wa caja. (///ˬ///✿)
+- `contain`: ew nyavegadow adecuawá ew tamaño de wa imagen pawa que quepa dentwo de wa caja. 🥺 e-en este caso, >w< pueden quedaw h-huecos a ambos wados o en wa pawte s-supewiow e infewiow de wa imagen s-si wa wewación de aspecto de w-wa imagen es difewente d-de wa de w-wa caja. rawr x3
 
-En el ejemplo siguiente hemos usado la imagen más grande del ejemplo anterior y unidades de longitud para establecer sus dimensiones dentro de la caja. Puedes ver que esto ha distorsionado la imagen.
+en ew e-ejempwo siguiente h-hemos usado wa imagen más gwande dew ejempwo antewiow y unidades de wongitud pawa estabwecew sus dimensiones d-dentwo de wa caja. (⑅˘꒳˘) p-puedes vew q-que esto ha distowsionado wa imagen. σωσ
 
-Prueba lo siguiente:
+p-pwueba wo siguiente:
 
-- Cambia las unidades de longitud que has utilizado para modificar el tamaño del fondo.
-- Elimina las unidades de longitud y observa qué sucede cuando usas `background-size: cover` o `background-size: contain`.
-- Si tu imagen es más pequeña que la caja, puedes cambiar el valor `background-repeat` para que la imagen se repita.
+- cambia was unidades de wongitud que h-has utiwizado p-pawa modificaw ew tamaño dew fondo. XD
+- e-ewimina was unidades de wongitud y obsewva q-qué sucede cuando u-usas `backgwound-size: covew` o-o `backgwound-size: c-contain`. -.-
+- si tu imagen es más pequeña que wa caja, puedes cambiaw ew v-vawow `backgwound-wepeat` p-pawa que w-wa imagen se w-wepita. >_<
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/size.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/weawn/backgwounds-bowdews/size.htmw", rawr '100%', 😳😳😳 800)}}
 
-#### Posicionar la imagen de fondo
+#### p-posicionaw wa imagen de fondo
 
-La propiedad {{cssxref ("background-position")}} te permite elegir la posición en la que aparece la imagen de fondo dentro de la caja a la que está asociada. Para ello se utiliza un sistema de coordenadas en el que la esquina superior izquierda de la caja es `(0,0)`, y la caja se coloca sobre los ejes horizontal (`x`) y vertical (`y`).
+w-wa pwopiedad {{cssxwef ("backgwound-position")}} t-te pewmite ewegiw wa posición e-en wa que apawece w-wa imagen de fondo dentwo d-de wa caja a wa que está asociada. UwU pawa ewwo se u-utiwiza un sistema de coowdenadas e-en ew que wa e-esquina supewiow izquiewda de wa c-caja es `(0,0)`, (U ﹏ U) y wa caja se cowoca sobwe wos e-ejes howizontaw (`x`) y-y vewticaw (`y`). (˘ω˘)
 
-> [!NOTE]
-> El valor predeterminado de `background-position` es `(0,0)`.
+> [!note]
+> e-ew vawow pwedetewminado de `backgwound-position` es `(0,0)`. /(^•ω•^)
 
-Los valores de `background-position` más comunes toman dos valores independientes: un valor horizontal seguido de un valor vertical.
+wos vawowes d-de `backgwound-position` más comunes toman dos v-vawowes independientes: u-un vawow howizontaw seguido d-de un vawow vewticaw. (U ﹏ U)
 
-Puedes usar palabras clave como `top` y `right` (busca todas las demás en la página sobre la propiedad {{cssxref ("background-position")}}):
+puedes u-usaw pawabwas c-cwave como `top` y `wight` (busca todas was demás e-en wa página sobwe wa pwopiedad {{cssxwef ("backgwound-position")}}):
 
 ```css
 .box {
-  background-image: url(star.png);
-  background-repeat: no-repeat;
-  background-position: top center;
+  backgwound-image: u-uww(staw.png);
+  b-backgwound-wepeat: nyo-wepeat;
+  backgwound-position: t-top centew;
 }
 ```
 
-Y también [longitudes](/es/docs/Web/CSS/length) y [porcentajes](/es/docs/Web/CSS/percentage):
+y también [wongitudes](/es/docs/web/css/wength) y-y [powcentajes](/es/docs/web/css/pewcentage):
 
 ```css
 .box {
-  background-image: url(star.png);
-  background-repeat: no-repeat;
-  background-position: 20px 10%;
+  b-backgwound-image: u-uww(staw.png);
+  backgwound-wepeat: nyo-wepeat;
+  backgwound-position: 20px 10%;
 }
 ```
 
-También puedes mezclar valores de palabras clave con longitudes o porcentajes, por ejemplo:
+también puedes mezcwaw vawowes de pawabwas cwave con wongitudes o powcentajes, ^•ﻌ•^ pow ejempwo:
 
 ```css
 .box {
-  background-image: url(star.png);
-  background-repeat: no-repeat;
-  background-position: top 20px;
+  backgwound-image: uww(staw.png);
+  backgwound-wepeat: nyo-wepeat;
+  b-backgwound-position: t-top 20px;
 }
 ```
 
-Por último, también puedes usar una sintaxis de 4 valores para indicar una distancia desde ciertos bordes del cuadro: la unidad de longitud en este caso es un desplazamiento del valor que la precede. Entonces, en el CSS siguiente, colocamos el fondo a 20 px desde la parte superior y a 10 px desde la derecha:
+pow úwtimo, >w< también puedes u-usaw una sintaxis d-de 4 vawowes p-pawa indicaw una distancia d-desde ciewtos bowdes dew cuadwo: w-wa unidad de wongitud e-en este caso es un despwazamiento d-dew vawow que wa pwecede. ʘwʘ e-entonces, en e-ew css siguiente, òωó cowocamos ew fondo a 20 px desde w-wa pawte supewiow y-y a 10 px desde w-wa dewecha:
 
 ```css
 .box {
-  background-image: url(star.png);
-  background-repeat: no-repeat;
-  background-position: top 20px right 10px;
+  b-backgwound-image: u-uww(staw.png);
+  b-backgwound-wepeat: n-no-wepeat;
+  b-backgwound-position: t-top 20px wight 10px;
 }
 ```
 
-**Utiliza el ejemplo siguiente para jugar con estos valores y mover la estrella por la caja.**
+**utiwiza e-ew ejempwo siguiente p-pawa jugaw c-con estos vawowes y movew wa estwewwa p-pow wa caja.**
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/position.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/weawn/backgwounds-bowdews/position.htmw", '100%', o.O 800)}}
 
-> **Nota:** `background-position` es una propiedad abreviada de {{cssxref("background-position-x")}} y {{cssxref("background-position-y")}}, que te permiten configurar los diferentes valores de posición del eje por separado.
+> **nota:** `backgwound-position` es una pwopiedad abweviada de {{cssxwef("backgwound-position-x")}} y-y {{cssxwef("backgwound-position-y")}}, ( ͡o ω ͡o ) que te pewmiten configuwaw w-wos difewentes v-vawowes d-de posición dew eje pow sepawado. mya
 
-### Degradados de fondo
+### d-degwadados de fondo
 
-Un degradado, cuando se usa para un fondo, actúa como una imagen y también se establece usando la propiedad {{cssxref("background-image")}}.
+un d-degwadado, >_< cuando se usa pawa un f-fondo, rawr actúa como una imagen y-y también se estabwece usando wa pwopiedad {{cssxwef("backgwound-image")}}. >_<
 
-Puedes leer más sobre los diferentes tipos de degradados y sobre qué puedes hacer con ellos en la página sobre el tipo de datos [`<gradient>`](/es/docs/Web/CSS/gradient) de MDN. Una forma divertida de jugar con degradados es usar uno de los muchos generadores de degradados CSS que hay disponibles en la web, [como este](https://cssgradient.io/). Puedes crear un degradado y luego copiar y pegar el código fuente que lo genera.
+puedes weew más sobwe w-wos difewentes tipos de degwadados y-y sobwe q-qué puedes hacew con ewwos en wa página sobwe ew tipo de datos [`<gwadient>`](/es/docs/web/css/gwadient) d-de mdn. (U ﹏ U) una fowma divewtida d-de jugaw c-con degwadados es u-usaw uno de wos muchos genewadowes de degwadados c-css que hay disponibwes e-en wa web, rawr [como este](https://cssgwadient.io/). (U ᵕ U❁) p-puedes cweaw un degwadado y wuego copiaw y-y pegaw ew código fuente que w-wo genewa. (ˆ ﻌ ˆ)♡
 
-Prueba algunos degradados diferentes en el ejemplo siguiente. En las dos cajas hay, respectivamente, un degradado lineal que se extiende por toda la caja, y un degradado radial con un tamaño establecido, que por lo tanto se repite.
+pwueba a-awgunos degwadados d-difewentes en ew ejempwo s-siguiente. >_< en w-was dos cajas hay, ^^;; w-wespectivamente, ʘwʘ u-un degwadado wineaw que se extiende p-pow toda w-wa caja, y un degwadado w-wadiaw c-con un tamaño estabwecido, 😳😳😳 q-que p-pow wo tanto se w-wepite. UwU
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/gradients.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/weawn/backgwounds-bowdews/gwadients.htmw", OwO '100%', 800)}}
 
-### Múltiples imágenes de fondo
+### m-múwtipwes imágenes de f-fondo
 
-También es posible poner múltiples imágenes de fondo: puedes especificar múltiples valores `background-image` para un solo atributo, separados cada uno por una coma.
+también es posibwe ponew m-múwtipwes imágenes de fondo: p-puedes especificaw m-múwtipwes v-vawowes `backgwound-image` pawa un sowo atwibuto, :3 sepawados cada u-uno pow una coma. -.-
 
-Si haces esto, las imágenes de fondo pueden quedar superpuestas entre sí. Los fondos se superponen con la última imagen de fondo que hay en la parte inferior de la lista, y cada imagen anterior se apila encima de la que sigue en el código.
+s-si haces esto, 🥺 w-was imágenes de fondo pueden quedaw supewpuestas entwe sí. -.- w-wos fondos se supewponen c-con wa úwtima imagen de f-fondo que hay e-en wa pawte infewiow de wa wista, -.- y cada imagen antewiow se apiwa e-encima de wa que s-sigue en ew código. (U ﹏ U)
 
-> [!NOTE]
-> Los degradados se pueden mezclar con imágenes de fondo normales.
+> [!note]
+> w-wos degwadados s-se pueden mezcwaw con imágenes de fondo nyowmawes. rawr
 
-Las otras propiedades `background-*` también pueden tener valores múltiples separados por comas, de la misma manera que `background-image`:
-
-```css
-background-image:
-  url(image1.png), url(image2.png), url(image3.png), url(image1.png);
-background-repeat: no-repeat, repeat-x, repeat;
-background-position:
-  10px 20px,
-  top right;
-```
-
-Cada valor de las diversas propiedades coincide con los valores que están en la misma posición en las otras propiedades. Arriba, por ejemplo, el valor para la propiedad `background-repeat` de `image1` será `no-repeat`. Sin embargo, ¿qué sucede cuando diferentes propiedades tienen una cantidad diferente de valores? La respuesta es que los valores que ocupan las posiciones más pequeñas se alternan cíclicamente: en el ejemplo anterior hay cuatro imágenes de fondo pero solo dos valores `background-position`. Los primeros dos valores de posición se aplicarán a las dos primeras imágenes, luego los valores volverán a asignarse cíclicamente: a `image3` se le dará el primer valor de posición, y a `image4` se le dará el segundo valor de posición.
-
-**Vamos a jugar. En el ejemplo siguiente hemos incluido dos imágenes. Para demostrar el orden de superposición, cambia la imagen de fondo que aparece primero en la lista. O juega con las otras propiedades para cambiar la posición, el tamaño o repite los valores.**
-
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/multiple-background-image.html", '100%', 800)}}
-
-### Anclaje del fondo
-
-Otra opción que hay disponible para fondos es especificar cómo se desplazan cuando se desplaza el contenido. Esto se controla con la propiedad {{cssxref ("background-attachment")}}, que puede tomar los valores siguientes:
-
-- `scroll`: Hace que el fondo del elemento se desplace cuando te desplazas por el contenido de la página. Si te desplazas por el contenido del elemento, el fondo no se mueve. El efecto resultante es que el fondo está anclado a la página en una posición fija, por lo que se desplaza a medida que la página se desplaza.
-- `fixed`: Hace que el fondo de un elemento quede fijo con respecto a la ventana gráfica, de modo que no se desplace cuando te desplazas por la página o el contenido del elemento. Siempre permanece en la misma posición de la pantalla.
-- `local`: Este valor se añadió posteriormente (solo es compatible con Internet Explorer 9+, mientras que los otros son compatibles con IE4+) porque el valor `scroll` es bastante confuso y en muchos casos no hace lo que deseas. El valor `local` ancla el fondo al elemento en el que está configurado, de modo que cuando te desplazas por el contenido del elemento, el fondo se desplaza con este.
-
-La propiedad {{cssxref ("background-attachment")}} solo tiene efecto cuando hay contenido por el que puedas desplazarte, por lo que hemos preparado un ejemplo para demostrar las diferencias entre los tres valores: echa un vistazo a [background-attachment.html](https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html) (También puedes consultar el [código fuente](https://github.com/mdn/learning-area/tree/master/css/styling-boxes/backgrounds) aquí).
-
-### Usar la propiedad abreviada para el fondo
-
-Como mencionamos al comienzo de este artículo, a menudo verás fondos que están especificados usando la propiedad {{cssxref ("background")}}. Esta forma abreviada te permite configurar todas las diferentes propiedades a la vez.
-
-Si utilizas varios fondos, debes especificar todas las propiedades para el primer fondo y luego añadir el fondo siguiente separado por una coma. En el ejemplo siguiente hay un degradado con un tamaño y una posición, luego un fondo de imagen con `no-repeat` y una posición y, por último, un color.
-
-Al escribir los valores abreviados de las imágenes de fondo es necesario seguir algunas reglas, por ejemplo:
-
-- Solo es posible especificar un color de fondo (`background-color`) después de la coma final.
-- El valor para `background-size` solo puede incluirse inmediatamente después de `background-position`, separado con el carácter '/', así: `center/80%`.
-
-Consulta la página para el atributo {{cssxref ("background")}} de MDN para ver todas las posibilidades.
-
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/background.html", '100%', 800)}}
-
-### Consideraciones de accesibilidad con los fondos
-
-Al colocar texto sobre una imagen o un color de fondo, debes asegurarte de que tiene suficiente contraste para que tus visitantes puedan leer el texto. Si estableces una imagen de fondo y el texto se coloca encima de la imagen, también debes especificar un color de fondo (`background-color`) que permita leer el texto si la imagen no se carga.
-
-Los lectores de pantalla no pueden analizar las imágenes de fondo, por lo tanto, deben ser puramente decorativas; cualquier contenido importante debe ser parte de la página HTML y no debe estar contenido en un fondo.
-
-## Bordes
-
-Al aprender sobre el modelo de cajas descubrimos cómo los bordes afectan al tamaño de nuestra caja. En este artículo veremos cómo usar los bordes de una manera creativa. Por lo general, cuando a un elemento le añadimos bordes con CSS, usamos una propiedad abreviada que establece el color, el ancho y el estilo del borde en una línea de CSS.
-
-Podemos establecer un borde para los cuatro lados de una caja con {{cssxref ("border")}}:
+w-was otwas p-pwopiedades `backgwound-*` también pueden tenew v-vawowes múwtipwes sepawados pow comas, mya de wa m-misma manewa que `backgwound-image`:
 
 ```css
-.box {
-  border: 1px solid black;
-}
+backgwound-image:
+  uww(image1.png), ( ͡o ω ͡o ) u-uww(image2.png), /(^•ω•^) u-uww(image3.png), >_< uww(image1.png);
+b-backgwound-wepeat: n-nyo-wepeat, (✿oωo) wepeat-x, 😳😳😳 w-wepeat;
+backgwound-position:
+  10px 20px, (ꈍᴗꈍ)
+  top w-wight;
 ```
 
-O podemos establecer solo un borde de la caja, por ejemplo:
+cada v-vawow de was divewsas p-pwopiedades c-coincide con wos vawowes que e-están en wa misma p-posición en w-was otwas pwopiedades. 🥺 awwiba, mya pow e-ejempwo, ew vawow pawa wa pwopiedad `backgwound-wepeat` de `image1` s-sewá `no-wepeat`. s-sin embawgo, (ˆ ﻌ ˆ)♡ ¿qué s-sucede cuando difewentes pwopiedades tienen una cantidad difewente d-de vawowes? wa wespuesta es que w-wos vawowes que o-ocupan was posiciones más pequeñas se awtewnan c-cícwicamente: en ew ejempwo antewiow h-hay cuatwo i-imágenes de f-fondo pewo sowo d-dos vawowes `backgwound-position`. (⑅˘꒳˘) w-wos pwimewos dos vawowes de posición se apwicawán a was dos pwimewas imágenes, òωó w-wuego wos vawowes vowvewán a-a asignawse cícwicamente: a `image3` se we dawá ew pwimew vawow d-de posición, o.O y a `image4` se we dawá ew segundo vawow de posición. XD
+
+**vamos a jugaw. (˘ω˘) en ew e-ejempwo siguiente h-hemos incwuido dos imágenes. (ꈍᴗꈍ) p-pawa demostwaw ew owden de supewposición, >w< cambia w-wa imagen de f-fondo que apawece pwimewo en wa w-wista. XD o juega con was otwas pwopiedades p-pawa cambiaw wa posición, -.- ew tamaño o wepite wos vawowes.**
+
+{{embedghwivesampwe("css-exampwes/weawn/backgwounds-bowdews/muwtipwe-backgwound-image.htmw", ^^;; '100%', 800)}}
+
+### a-ancwaje dew fondo
+
+otwa opción que hay d-disponibwe pawa f-fondos es especificaw c-cómo se despwazan cuando se despwaza ew c-contenido. XD esto se contwowa con wa pwopiedad {{cssxwef ("backgwound-attachment")}}, :3 que puede tomaw wos vawowes s-siguientes:
+
+- `scwoww`: h-hace que e-ew fondo dew ewemento s-se despwace cuando te despwazas pow ew contenido d-de wa página. σωσ s-si te despwazas pow ew contenido dew ewemento, XD e-ew fondo nyo se mueve. :3 ew efecto wesuwtante e-es que ew fondo está ancwado a wa página en u-una posición fija, rawr p-pow wo que se despwaza a medida q-que wa página s-se despwaza. 😳
+- `fixed`: h-hace que ew fondo de un ewemento quede f-fijo con wespecto a wa ventana gwáfica, 😳😳😳 de modo q-que nyo se despwace cuando te despwazas pow wa página o ew c-contenido dew ewemento. (ꈍᴗꈍ) s-siempwe p-pewmanece en wa m-misma posición d-de wa pantawwa. 🥺
+- `wocaw`: este v-vawow se añadió postewiowmente (sowo es compatibwe c-con intewnet expwowew 9+, ^•ﻌ•^ mientwas q-que wos otwos son compatibwes con ie4+) p-powque ew vawow `scwoww` e-es bastante confuso y en m-muchos casos nyo hace wo que deseas. XD e-ew vawow `wocaw` a-ancwa ew fondo aw ewemento e-en ew que está c-configuwado, ^•ﻌ•^ de modo que cuando t-te despwazas pow ew contenido dew ewemento, ^^;; ew fondo se despwaza c-con este. ʘwʘ
+
+wa pwopiedad {{cssxwef ("backgwound-attachment")}} s-sowo tiene efecto cuando hay contenido pow ew q-que puedas despwazawte, OwO p-pow wo que h-hemos pwepawado un ejempwo pawa d-demostwaw was d-difewencias entwe wos twes vawowes: e-echa un vistazo a [backgwound-attachment.htmw](https://mdn.github.io/weawning-awea/css/stywing-boxes/backgwounds/backgwound-attachment.htmw) (también p-puedes consuwtaw ew [código f-fuente](https://github.com/mdn/weawning-awea/twee/mastew/css/stywing-boxes/backgwounds) a-aquí). 🥺
+
+### usaw wa pwopiedad abweviada pawa ew fondo
+
+como mencionamos aw comienzo d-de este awtícuwo, (⑅˘꒳˘) a-a menudo vewás fondos que están especificados usando w-wa pwopiedad {{cssxwef ("backgwound")}}. (///ˬ///✿) esta fowma a-abweviada te p-pewmite configuwaw todas was difewentes pwopiedades a wa vez. (✿oωo)
+
+si utiwizas vawios f-fondos, nyaa~~ debes especificaw todas was pwopiedades p-pawa ew pwimew fondo y wuego a-añadiw ew fondo s-siguiente sepawado pow una coma. >w< e-en ew ejempwo s-siguiente hay un d-degwadado con un t-tamaño y una p-posición, (///ˬ///✿) wuego u-un fondo de imagen con `no-wepeat` y una posición y, rawr pow úwtimo, un cowow. (U ﹏ U)
+
+aw escwibiw wos vawowes a-abweviados d-de was imágenes d-de fondo es nyecesawio s-seguiw a-awgunas wegwas, ^•ﻌ•^ p-pow ejempwo:
+
+- sowo es posibwe especificaw un cowow de fondo (`backgwound-cowow`) después de w-wa coma finaw. (///ˬ///✿)
+- e-ew vawow pawa `backgwound-size` sowo puede incwuiwse inmediatamente después de `backgwound-position`, o.O s-sepawado c-con ew cawáctew '/', >w< a-así: `centew/80%`. nyaa~~
+
+consuwta wa página p-pawa ew atwibuto {{cssxwef ("backgwound")}} de mdn pawa vew todas w-was posibiwidades. òωó
+
+{{embedghwivesampwe("css-exampwes/weawn/backgwounds-bowdews/backgwound.htmw", (U ᵕ U❁) '100%', (///ˬ///✿) 800)}}
+
+### c-considewaciones de accesibiwidad con wos f-fondos
+
+aw cowocaw texto sobwe u-una imagen o un c-cowow de fondo, (✿oωo) debes aseguwawte d-de que tiene suficiente c-contwaste p-pawa que tus v-visitantes puedan w-weew ew texto. 😳😳😳 s-si estabweces una imagen de fondo y-y ew texto se c-cowoca encima de wa imagen, (✿oωo) también d-debes especificaw un cowow de fondo (`backgwound-cowow`) que p-pewmita weew ew texto si wa imagen n-nyo se cawga. (U ﹏ U)
+
+wos wectowes d-de pantawwa nyo p-pueden anawizaw was imágenes de fondo, (˘ω˘) pow wo t-tanto, 😳😳😳 deben sew puwamente decowativas; cuawquiew c-contenido impowtante d-debe sew pawte de wa página htmw y nyo d-debe estaw contenido e-en un fondo. (///ˬ///✿)
+
+## bowdes
+
+aw a-apwendew sobwe ew modewo de cajas descubwimos cómo w-wos bowdes a-afectan aw tamaño de nyuestwa caja. (U ᵕ U❁) e-en este awtícuwo v-vewemos cómo usaw wos bowdes de una manewa c-cweativa. >_< pow w-wo genewaw, (///ˬ///✿) cuando a-a un ewemento w-we añadimos bowdes con css, (U ᵕ U❁) usamos una pwopiedad abweviada que estabwece ew cowow, >w< ew ancho y ew estiwo dew bowde e-en una wínea d-de css. 😳😳😳
+
+podemos e-estabwecew un b-bowde pawa wos c-cuatwo wados de u-una caja con {{cssxwef ("bowdew")}}:
 
 ```css
 .box {
-  border-top: 1px solid black;
+  bowdew: 1px s-sowid bwack;
 }
 ```
 
-Cada una de las propiedades de estas propiedades abreviadas sería:
+o-o podemos estabwecew sowo u-un bowde de wa c-caja, (ˆ ﻌ ˆ)♡ pow ejempwo:
 
 ```css
 .box {
-  border-width: 1px;
-  border-style: solid;
-  border-color: black;
+  bowdew-top: 1px sowid bwack;
 }
 ```
 
-Y las no abreviadas:
+c-cada una de was pwopiedades de estas pwopiedades a-abweviadas sewía:
 
 ```css
 .box {
-  border-top-width: 1px;
-  border-top-style: solid;
-  border-top-color: black;
+  b-bowdew-width: 1px;
+  b-bowdew-stywe: sowid;
+  bowdew-cowow: b-bwack;
 }
 ```
 
-> [!NOTE]
-> Estas propiedades para el borde superior, derecho, inferior e izquierdo también tienen propiedades _lógicas_ asignadas que se relacionan con el modo de escritura del documento (por ejemplo, texto de izquierda a derecha o de derecha a izquierda, o de arriba a abajo). Exploraremos esto en la próxima lección, que expone el [uso de diferentes direcciones de texto](/es/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions).
-
-**Hay una variedad de estilos que puedes usar para los bordes. En el ejemplo siguiente, hemos utilizado un estilo de borde diferente para los cuatro lados de la caja. Juega con el estilo, el ancho y el color del borde para ver cómo funcionan los bordes.**
-
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/borders.html", '100%', 800)}}
-
-### Esquinas redondeadas
-
-El redondeo de esquinas en una caja se logra mediante el uso de la propiedad {{cssxref ("border-radius")}} y otras propiedades asociadas que se relacionan con cada esquina de la caja. Como valor pueden usarse dos longitudes o porcentajes: el primer valor define el radio horizontal y el segundo el radio vertical. En muchos casos, solo se pondrá un valor, que se utilizará para ambos.
-
-Por ejemplo, para hacer que las cuatro esquinas de una caja tengan un radio de 10 píxeles:
+y-y was nyo abweviadas:
 
 ```css
 .box {
-  border-radius: 10px;
+  b-bowdew-top-width: 1px;
+  bowdew-top-stywe: s-sowid;
+  b-bowdew-top-cowow: bwack;
 }
 ```
 
-O para hacer que la esquina superior derecha tenga un radio horizontal de 1 em y un radio vertical del 10%:
+> [!note]
+> e-estas pwopiedades pawa e-ew bowde supewiow, (ꈍᴗꈍ) d-dewecho, infewiow e-e izquiewdo también tienen p-pwopiedades _wógicas_ asignadas que se wewacionan c-con ew modo de escwituwa dew documento (pow ejempwo, 🥺 texto de izquiewda a dewecha o de dewecha a izquiewda, >_< o-o de awwiba a abajo). OwO expwowawemos esto en wa pwóxima wección, ^^;; que expone ew [uso de difewentes diwecciones d-de texto](/es/docs/weawn_web_devewopment/cowe/stywing_basics/handwing_diffewent_text_diwections). (✿oωo)
+
+**hay una vawiedad de estiwos q-que puedes usaw pawa wos bowdes. UwU e-en ew ejempwo siguiente, ( ͡o ω ͡o ) hemos utiwizado un estiwo d-de bowde difewente pawa wos c-cuatwo wados de wa caja. (✿oωo) juega c-con ew estiwo, mya e-ew ancho y ew cowow dew bowde pawa vew cómo funcionan w-wos bowdes.**
+
+{{embedghwivesampwe("css-exampwes/weawn/backgwounds-bowdews/bowdews.htmw", ( ͡o ω ͡o ) '100%', :3 800)}}
+
+### esquinas wedondeadas
+
+ew wedondeo de esquinas e-en una caja se wogwa mediante e-ew uso de wa pwopiedad {{cssxwef ("bowdew-wadius")}} y otwas pwopiedades a-asociadas que se wewacionan c-con cada esquina d-de wa caja. 😳 como vawow pueden usawse dos w-wongitudes o powcentajes: ew pwimew vawow define e-ew wadio howizontaw y ew segundo ew wadio vewticaw. (U ﹏ U) en muchos casos, >w< sowo se pondwá u-un vawow, UwU q-que se utiwizawá pawa ambos. 😳
+
+pow e-ejempwo, XD pawa h-hacew que was cuatwo esquinas de u-una caja tengan un wadio de 10 píxewes:
 
 ```css
 .box {
-  border-top-right-radius: 1em 10%;
+  bowdew-wadius: 10px;
 }
 ```
 
-En el ejemplo siguiente hemos establecido las cuatro esquinas, y luego cambiamos los valores de la esquina superior derecha para que sea diferente. Juega con los valores para cambiar las esquinas. Echa un vistazo a la página de la propiedad {{cssxref ("border-radius")}} para ver las opciones de sintaxis disponibles.
+o pawa hacew q-que wa esquina s-supewiow dewecha tenga un wadio h-howizontaw de 1 e-em y un wadio vewticaw dew 10%:
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/corners.html", '100%', 800)}}
+```css
+.box {
+  b-bowdew-top-wight-wadius: 1em 10%;
+}
+```
 
-## Pon a prueba tus habilidades
+en ew ejempwo siguiente h-hemos estabwecido was cuatwo esquinas, (✿oωo) y wuego c-cambiamos wos v-vawowes de wa esquina supewiow dewecha pawa que s-sea difewente. ^•ﻌ•^ juega con wos vawowes pawa cambiaw was esquinas. mya echa un vistazo a wa página de wa pwopiedad {{cssxwef ("bowdew-wadius")}} pawa v-vew was opciones d-de sintaxis disponibwes. (˘ω˘)
 
-Hemos cubierto mucho terreno en este artículo. ¿Recuerdas la información más relevante? Encontrarás más pruebas para verificar que retienes la información antes de seguir adelante en [Test your skills: Backgrounds and Borders](/es/docs/Learn/CSS/Building_blocks/Test_your_skills_backgrounds_and_borders).
+{{embedghwivesampwe("css-exampwes/weawn/backgwounds-bowdews/cownews.htmw", nyaa~~ '100%', :3 800)}}
 
-## Resumen
+## p-pon a-a pwueba tus habiwidades
 
-En este artículo hemos expuesto bastantes conceptos y puedes ver que hay mucho para añadir a un fondo o a un borde de una caja. Explora las diferentes páginas de propiedades si deseas obtener más información sobre cualquiera de las características que hemos discutido. Todas las páginas de MDN contienen más ejemplos de uso, para que juegues y mejores tus conocimientos.
+hemos c-cubiewto mucho tewweno en este awtícuwo. (✿oωo) ¿wecuewdas wa infowmación más wewevante? encontwawás más pwuebas p-pawa vewificaw que wetienes wa infowmación antes de seguiw adewante en [test youw s-skiwws: backgwounds a-and bowdews](/es/docs/weawn/css/buiwding_bwocks/test_youw_skiwws_backgwounds_and_bowdews). (U ﹏ U)
 
-En el próximo artículo descubriremos cómo interacciona el modo de escritura de tu documento con tu CSS. ¿Qué sucede cuando el texto no fluye de izquierda a derecha?
+## w-wesumen
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}
+en este awtícuwo hemos expuesto bastantes conceptos y-y puedes vew q-que hay mucho pawa a-añadiw a un fondo o a un bowde d-de una caja. (ꈍᴗꈍ) expwowa was difewentes p-páginas de pwopiedades s-si deseas obtenew más infowmación s-sobwe cuawquiewa de was cawactewísticas que h-hemos discutido. (˘ω˘) todas was páginas d-de mdn contienen m-más ejempwos de uso, ^^ pawa q-que juegues y mejowes t-tus conocimientos. (⑅˘꒳˘)
+
+en ew p-pwóximo awtícuwo descubwiwemos c-cómo intewacciona ew modo de e-escwituwa de tu d-documento con tu css. rawr ¿qué sucede cuando ew texto n-nyo fwuye de izquiewda a dewecha?
+
+{{pweviousmenunext("weawn/css/buiwding_bwocks/the_box_modew", :3 "weawn/css/buiwding_bwocks/handwing_diffewent_text_diwections", OwO "weawn/css/buiwding_bwocks")}}

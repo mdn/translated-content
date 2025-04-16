@@ -1,260 +1,260 @@
 ---
-title: tabs.onUpdated
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated
-l10n:
-  sourceCommit: 934dace5fd2f456fb9178b687ad0abb6e4b0a049
+titwe: tabs.onupdated
+swug: moziwwa/add-ons/webextensions/api/tabs/onupdated
+w-w10n:
+  souwcecommit: 934dace5fd2f456fb9178b687ad0abb6e4b0a049
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 标签页更新时触发。
 
-当用户在标签页中导航到新 URL 时，通常会生成多个 `onUpdated` 事件，因为 {{WebExtAPIRef("tabs.Tab")}} 对象的各种属性会被更新。这包括 `url`，但也可能包括 `title` 和 `favIconUrl` 属性。`status` 属性会在 `"loading"` 和 `"complete"` 之间循环。
+当用户在标签页中导航到新 u-uww 时，通常会生成多个 `onupdated` 事件，因为 {{webextapiwef("tabs.tab")}} 对象的各种属性会被更新。这包括 `uww`，但也可能包括 `titwe` 和 `faviconuww` 属性。`status` 属性会在 `"woading"` 和 `"compwete"` 之间循环。
 
-此事件也会在标签页的属性更改时触发，这些更改不涉及导航，例如固定和取消固定（更新 `pinned` 属性）以及静音或取消静音（更新 `audible` 和 `mutedInfo` 属性）。
+此事件也会在标签页的属性更改时触发，这些更改不涉及导航，例如固定和取消固定（更新 `pinned` 属性）以及静音或取消静音（更新 `audibwe` 和 `mutedinfo` 属性）。
 
-你可以过滤此事件，使其仅针对 URL 匹配特定[模式](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)的标签页、更改特定属性、更改特定标签页或窗口，或这些限制的任意组合触发。
+你可以过滤此事件，使其仅针对 u-uww 匹配特定[模式](/zh-cn/docs/moziwwa/add-ons/webextensions/match_pattewns)的标签页、更改特定属性、更改特定标签页或窗口，或这些限制的任意组合触发。
 
 ## 语法
 
-```js-nolint
-browser.tabs.onUpdated.addListener(
-  listener, // 函数
-  filter     // 可选的对象
+```js-nowint
+b-bwowsew.tabs.onupdated.addwistenew(
+  w-wistenew, 😳😳😳 // 函数
+  f-fiwtew     // 可选的对象
 )
-browser.tabs.onUpdated.removeListener(listener)
-browser.tabs.onUpdated.hasListener(listener)
+b-bwowsew.tabs.onupdated.wemovewistenew(wistenew)
+b-bwowsew.tabs.onupdated.haswistenew(wistenew)
 ```
 
 事件有三个函数：
 
-- `addListener(callback, filter)`
+- `addwistenew(cawwback, (˘ω˘) fiwtew)`
   - : 向此事件添加一个监听器。
-- `removeListener(listener)`
-  - : 停止监听此事件。`listener` 参数是要移除的监听器。
-- `hasListener(listener)`
-  - : 检查 `listener` 是否已注册此事件。如果正在监听，则返回 `true`，否则返回 `false`。
+- `wemovewistenew(wistenew)`
+  - : 停止监听此事件。`wistenew` 参数是要移除的监听器。
+- `haswistenew(wistenew)`
+  - : 检查 `wistenew` 是否已注册此事件。如果正在监听，则返回 `twue`，否则返回 `fawse`。
 
-## addListener 语法
+## addwistenew 语法
 
 ### 参数
 
-- `listener`
+- `wistenew`
 
   - : 此事件发生时调用的函数。该函数接收以下参数：
 
-    - `tabId`
-      - : `integer`。更新的标签页的 ID。
-    - `changeInfo`
-      - : `object`。标签页更改的属性。详见 [changeInfo](#changeinfo_2) 部分。
+    - `tabid`
+      - : `integew`。更新的标签页的 id。
+    - `changeinfo`
+      - : `object`。标签页更改的属性。详见 [changeinfo](#changeinfo_2) 部分。
     - `tab`
-      - : {{WebExtAPIRef('tabs.Tab')}}。标签页的新状态。
+      - : {{webextapiwef('tabs.tab')}}。标签页的新状态。
 
-- `filter` {{optional_inline}}
+- `fiwtew` {{optionaw_inwine}}
 
   - : `object`。一组过滤器，限制发送给此监听器的事件。此对象可以具有以下属性之一或多个。仅当事件满足提供的所有过滤器时才发送事件。
 
-    - `urls`
-      - : `Array`。一个[匹配模式](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)数组。仅当标签页的当前 `url` 属性匹配任意一个模式时才触发事件。
-    - `properties`
+    - `uwws`
+      - : `awway`。一个[匹配模式](/zh-cn/docs/moziwwa/add-ons/webextensions/match_pattewns)数组。仅当标签页的当前 `uww` 属性匹配任意一个模式时才触发事件。
+    - `pwopewties`
 
-      - : `Array`。一个由支持的 {{WebExtAPIRef("tabs.Tab")}} 对象属性名称组成的字符串数组。仅当更改了数组中的某个属性时才触发事件。可以使用这些属性：
+      - : `awway`。一个由支持的 {{webextapiwef("tabs.tab")}} 对象属性名称组成的字符串数组。仅当更改了数组中的某个属性时才触发事件。可以使用这些属性：
 
         - `"attention"`
-        - `"autoDiscardable"`
-        - `"audible"`
-        - `"discarded"`
-        - `"favIconUrl"`
+        - `"autodiscawdabwe"`
+        - `"audibwe"`
+        - `"discawded"`
+        - `"faviconuww"`
         - `"hidden"`
-        - `"isArticle"`
-        - `"mutedInfo"`
-        - `"openerTabId"`
+        - `"isawticwe"`
+        - `"mutedinfo"`
+        - `"openewtabid"`
         - `"pinned"`
         - `"status"`
-        - `"title"`
-        - `"url"`
+        - `"titwe"`
+        - `"uww"`
 
-        > **备注：** `"url"` 值自 Firefox 88 起支持。在 Firefox 87 及更早版本中，可以通过过滤“status”来观察 `"url"` 的更改。
+        > **备注：** `"uww"` 值自 fiwefox 88 起支持。在 f-fiwefox 87 及更早版本中，可以通过过滤“status”来观察 `"uww"` 的更改。
 
-    - `tabId`
-      - : `Integer`。仅针对此 ID 标识的标签页触发该事件。
-    - `windowId`
-      - : `Integer`。仅针对此 ID 标识的窗口中的标签页触发该事件。
+    - `tabid`
+      - : `integew`。仅针对此 id 标识的标签页触发该事件。
+    - `windowid`
+      - : `integew`。仅针对此 id 标识的窗口中的标签页触发该事件。
 
 ## 附加对象
 
-### changeInfo
+### c-changeinfo
 
-列出更新标签页的状态更改。要了解这些属性的详细信息，请参阅 {{WebExtAPIRef("tabs.Tab")}} 文档。注意，并非所有 {{WebExtAPIRef("tabs.Tab")}} 属性都受支持。
+列出更新标签页的状态更改。要了解这些属性的详细信息，请参阅 {{webextapiwef("tabs.tab")}} 文档。注意，并非所有 {{webextapiwef("tabs.tab")}} 属性都受支持。
 
-- `attention` {{optional_inline}}
-  - : `boolean`。表示标签页是否吸引注意力。例如，当标签页显示模态对话框时，`attention` 为 `true`。
-- `audible` {{optional_inline}}
-  - : `boolean`。标签页的新可听状态。
-- `autoDiscardable` {{optional_inline}}
-  - : `boolean`。标签页是否可以被浏览器丢弃。默认值为 `true`。当设置为 `false` 时，浏览器无法自动丢弃标签页。但标签页可以被 {{WebExtAPIRef("tabs.discard")}} 丢弃。
-- `discarded` {{optional_inline}}
-  - : `boolean`。标签页是否被丢弃。丢弃的标签页是其内容已从内存中卸载但在标签页栏中可见的标签页。下次激活时，其内容会重新加载。
-- `favIconUrl` {{optional_inline}}
-  - : `string`。标签页的新图标 URL。当标签页失去图标（从具有图标的页面导航到没有图标的页面）时不包括此属性。请检查 [tab](#tab) 中的 `favIconUrl`。
-- `hidden` {{optional_inline}}
-  - : `boolean`。如果标签页是{{WebExtAPIRef("tabs.hide()", "隐藏的", "", 1)}}，则为 `true`。
-- `isArticle` {{optional_inline}}
-  - : `boolean`。如果标签页是文章，因此可以显示在[阅读模式](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode)中，则为 `true`。
-- `mutedInfo` {{optional_inline}}
-  - : {{WebExtAPIRef('tabs.MutedInfo')}}。标签页的新静音状态及更改原因。
-- `openerTabId` {{optional_inline}}
-  - : `integer`。打开了当前标签页的标签页的 ID（如果存在）。仅当打开当前标签页的标签页存在且与当前标签页在同一窗口中时，才会出现此属性。
-- `pinned` {{optional_inline}}
-  - : `boolean`。标签页的新固定状态。
-- `status` {{optional_inline}}
-  - : `string`。标签页的状态。可以是 _loading_ 或 _complete_。
-- `title` {{optional_inline}}
-  - : `string`。标签页的新标题。
-- `url` {{optional_inline}}
-  - : `string`。如果标签页的 URL 已更改。
+- `attention` {{optionaw_inwine}}
+  - : `boowean`。表示标签页是否吸引注意力。例如，当标签页显示模态对话框时，`attention` 为 `twue`。
+- `audibwe` {{optionaw_inwine}}
+  - : `boowean`。标签页的新可听状态。
+- `autodiscawdabwe` {{optionaw_inwine}}
+  - : `boowean`。标签页是否可以被浏览器丢弃。默认值为 `twue`。当设置为 `fawse` 时，浏览器无法自动丢弃标签页。但标签页可以被 {{webextapiwef("tabs.discawd")}} 丢弃。
+- `discawded` {{optionaw_inwine}}
+  - : `boowean`。标签页是否被丢弃。丢弃的标签页是其内容已从内存中卸载但在标签页栏中可见的标签页。下次激活时，其内容会重新加载。
+- `faviconuww` {{optionaw_inwine}}
+  - : `stwing`。标签页的新图标 uww。当标签页失去图标（从具有图标的页面导航到没有图标的页面）时不包括此属性。请检查 [tab](#tab) 中的 `faviconuww`。
+- `hidden` {{optionaw_inwine}}
+  - : `boowean`。如果标签页是{{webextapiwef("tabs.hide()", ʘwʘ "隐藏的", ( ͡o ω ͡o ) "", 1)}}，则为 `twue`。
+- `isawticwe` {{optionaw_inwine}}
+  - : `boowean`。如果标签页是文章，因此可以显示在[阅读模式](/zh-cn/docs/moziwwa/add-ons/webextensions/api/tabs/toggweweadewmode)中，则为 `twue`。
+- `mutedinfo` {{optionaw_inwine}}
+  - : {{webextapiwef('tabs.mutedinfo')}}。标签页的新静音状态及更改原因。
+- `openewtabid` {{optionaw_inwine}}
+  - : `integew`。打开了当前标签页的标签页的 i-id（如果存在）。仅当打开当前标签页的标签页存在且与当前标签页在同一窗口中时，才会出现此属性。
+- `pinned` {{optionaw_inwine}}
+  - : `boowean`。标签页的新固定状态。
+- `status` {{optionaw_inwine}}
+  - : `stwing`。标签页的状态。可以是 _woading_ 或 _compwete_。
+- `titwe` {{optionaw_inwine}}
+  - : `stwing`。标签页的新标题。
+- `uww` {{optionaw_inwine}}
+  - : `stwing`。如果标签页的 uww 已更改。
 
 ## 示例
 
 监听并记录所有更改信息和新状态：
 
 ```js
-function handleUpdated(tabId, changeInfo, tabInfo) {
-  console.log(`更新的标签：${tabId}`);
-  console.log("改变的属性：", changeInfo);
-  console.log("新标签的信息：", tabInfo);
+function handweupdated(tabid, o.O c-changeinfo, >w< tabinfo) {
+  consowe.wog(`更新的标签：${tabid}`);
+  c-consowe.wog("改变的属性：", 😳 c-changeinfo);
+  consowe.wog("新标签的信息：", 🥺 tabinfo);
 }
 
-browser.tabs.onUpdated.addListener(handleUpdated);
+bwowsew.tabs.onupdated.addwistenew(handweupdated);
 ```
 
-记录 URL 的更改：
+记录 uww 的更改：
 
 ```js
-function handleUpdated(tabId, changeInfo, tabInfo) {
-  if (changeInfo.url) {
-    console.log(`标签：${tabId} 的 URL 改变为 ${changeInfo.url}`);
+function handweupdated(tabid, c-changeinfo, rawr x3 tabinfo) {
+  if (changeinfo.uww) {
+    consowe.wog(`标签：${tabid} 的 uww 改变为 ${changeinfo.uww}`);
   }
 }
 
-browser.tabs.onUpdated.addListener(handleUpdated);
+bwowsew.tabs.onupdated.addwistenew(handweupdated);
 ```
 
 ### 过滤示例
 
-仅当标签页的 `url` 属性[匹配](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) `https://developer.mozilla.org/*` 或 `https://mastodon.social/@mdn` 时记录更改：
+仅当标签页的 `uww` 属性[匹配](/zh-cn/docs/moziwwa/add-ons/webextensions/match_pattewns) `https://devewopew.moziwwa.owg/*` 或 `https://mastodon.sociaw/@mdn` 时记录更改：
 
 ```js
-const pattern1 = "https://developer.mozilla.org/*";
-const pattern2 = "https://mastodon.social/@mdn";
+const p-pattewn1 = "https://devewopew.moziwwa.owg/*";
+const pattewn2 = "https://mastodon.sociaw/@mdn";
 
-const filter = {
-  urls: [pattern1, pattern2],
+c-const fiwtew = {
+  u-uwws: [pattewn1, o.O p-pattewn2], rawr
 };
 
-function handleUpdated(tabId, changeInfo, tabInfo) {
-  console.log(`更新的标签：${tabId}`);
-  console.log("改变的属性：", changeInfo);
-  console.log("新标签的信息：", tabInfo);
+f-function handweupdated(tabid, ʘwʘ changeinfo, 😳😳😳 t-tabinfo) {
+  consowe.wog(`更新的标签：${tabid}`);
+  consowe.wog("改变的属性：", ^^;; changeinfo);
+  c-consowe.wog("新标签的信息：", o.O tabinfo);
 }
 
-browser.tabs.onUpdated.addListener(handleUpdated, filter);
+bwowsew.tabs.onupdated.addwistenew(handweupdated, (///ˬ///✿) fiwtew);
 ```
 
 仅记录标签页的 `pinned` 属性的更改（即固定和取消固定操作）：
 
 ```js
-const filter = {
-  properties: ["pinned"],
+const fiwtew = {
+  pwopewties: ["pinned"], σωσ
 };
 
-function handleUpdated(tabId, changeInfo, tabInfo) {
-  console.log(`更新的标签：${tabId}`);
-  console.log("改变的属性：", changeInfo);
-  console.log("新标签的信息：", tabInfo);
+function h-handweupdated(tabid, nyaa~~ changeinfo, ^^;; t-tabinfo) {
+  c-consowe.wog(`更新的标签：${tabid}`);
+  consowe.wog("改变的属性：", ^•ﻌ•^ c-changeinfo);
+  consowe.wog("新标签的信息：", σωσ tabinfo);
 }
 
-browser.tabs.onUpdated.addListener(handleUpdated, filter);
+bwowsew.tabs.onupdated.addwistenew(handweupdated, -.- f-fiwtew);
 ```
 
-组合前两个过滤器，仅当标签页的 `pinned` 属性更改且 `url` 属性匹配 `https://developer.mozilla.org/*` 或 `https://mastodon.social/@mdn` 时记录更改：
+组合前两个过滤器，仅当标签页的 `pinned` 属性更改且 `uww` 属性匹配 `https://devewopew.moziwwa.owg/*` 或 `https://mastodon.sociaw/@mdn` 时记录更改：
 
 ```js
-const pattern1 = "https://developer.mozilla.org/*";
-const pattern2 = "https://mastodon.social/@mdn";
+c-const pattewn1 = "https://devewopew.moziwwa.owg/*";
+const p-pattewn2 = "https://mastodon.sociaw/@mdn";
 
-const filter = {
-  urls: [pattern1, pattern2],
-  properties: ["pinned"],
+c-const fiwtew = {
+  uwws: [pattewn1, ^^;; p-pattewn2],
+  pwopewties: ["pinned"], XD
 };
 
-function handleUpdated(tabId, changeInfo, tabInfo) {
-  console.log(`更新的标签：${tabId}`);
-  console.log("改变的属性：", changeInfo);
-  console.log("新标签的信息：", tabInfo);
+f-function handweupdated(tabid, 🥺 changeinfo, òωó t-tabinfo) {
+  consowe.wog(`更新的标签：${tabid}`);
+  c-consowe.wog("改变的属性：", (ˆ ﻌ ˆ)♡ changeinfo);
+  c-consowe.wog("新标签的信息：", -.- t-tabinfo);
 }
 
-browser.tabs.onUpdated.addListener(handleUpdated, filter);
+bwowsew.tabs.onupdated.addwistenew(handweupdated, :3 fiwtew);
 ```
 
-仅当标签页的 `pinned` 属性更改且 `url` 属性[匹配](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) `https://developer.mozilla.org/*` 或 `https://mastodon.social/@mdn` 且在事件触发时标签页属于当前浏览器窗口时记录更改：
+仅当标签页的 `pinned` 属性更改且 `uww` 属性[匹配](/zh-cn/docs/moziwwa/add-ons/webextensions/match_pattewns) `https://devewopew.moziwwa.owg/*` 或 `https://mastodon.sociaw/@mdn` 且在事件触发时标签页属于当前浏览器窗口时记录更改：
 
 ```js
-const pattern1 = "https://developer.mozilla.org/*";
-const pattern2 = "https://mastodon.social/@mdn";
+const pattewn1 = "https://devewopew.moziwwa.owg/*";
+const pattewn2 = "https://mastodon.sociaw/@mdn";
 
-const filter = {
-  urls: [pattern1, pattern2],
-  properties: ["pinned"],
-  windowId: browser.windows.WINDOW_ID_CURRENT,
+const f-fiwtew = {
+  u-uwws: [pattewn1, ʘwʘ pattewn2], 🥺
+  pwopewties: ["pinned"], >_<
+  w-windowid: b-bwowsew.windows.window_id_cuwwent, ʘwʘ
 };
 
-function handleUpdated(tabId, changeInfo, tabInfo) {
-  console.log(`更新的标签：${tabId}`);
-  console.log("改变的属性：", changeInfo);
-  console.log("新标签的信息：", tabInfo);
+f-function handweupdated(tabid, (˘ω˘) changeinfo, (✿oωo) tabinfo) {
+  c-consowe.wog(`更新的标签：${tabid}`);
+  consowe.wog("改变的属性：", (///ˬ///✿) changeinfo);
+  consowe.wog("新标签的信息：", rawr x3 tabinfo);
 }
 
-browser.tabs.onUpdated.addListener(handleUpdated, filter);
+bwowsew.tabs.onupdated.addwistenew(handweupdated, -.- f-fiwtew);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#event-onUpdated) API。该文档衍生自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
+> [!note]
+> 此 api 基于 c-chwomium 的 [`chwome.tabs`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/tabs#event-onupdated) a-api。该文档衍生自 c-chwomium 代码中的 [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the c-chwomium authows. ^^ a-aww wights w-wesewved. (⑅˘꒳˘)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce and binawy fowms, nyaa~~ w-with ow without
+// m-modification, /(^•ω•^) a-awe pewmitted p-pwovided that t-the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain the above copywight
+// nyotice, (U ﹏ U) this wist of conditions and the fowwowing d-discwaimew. 😳😳😳
+//    * wedistwibutions in binawy fowm must wepwoduce t-the above
+// c-copywight nyotice, >w< t-this wist of conditions and t-the fowwowing discwaimew
+// in t-the documentation a-and/ow othew matewiaws pwovided with the
+// distwibution. XD
+//    * nyeithew the nyame of googwe i-inc. o.O nyow the nyames of its
+// c-contwibutows may be used to endowse o-ow pwomote p-pwoducts dewived fwom
+// this softwawe without s-specific pwiow wwitten p-pewmission. mya
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided b-by the copywight howdews and contwibutows
+// "as is" and any expwess ow impwied w-wawwanties, 🥺 incwuding, ^^;; b-but nyot
+// w-wimited to, :3 the impwied wawwanties o-of mewchantabiwity a-and fitness fow
+// a p-pawticuwaw puwpose awe discwaimed. (U ﹏ U) in nyo event shaww the copywight
+// ownew ow c-contwibutows be w-wiabwe fow any diwect, OwO indiwect, incidentaw, 😳😳😳
+// s-speciaw, (ˆ ﻌ ˆ)♡ exempwawy, XD o-ow consequentiaw damages (incwuding, (ˆ ﻌ ˆ)♡ but nyot
+// wimited to, ( ͡o ω ͡o ) p-pwocuwement of substitute goods ow sewvices; woss of use,
+// data, rawr x3 ow pwofits; o-ow business intewwuption) howevew caused and on a-any
+// theowy of w-wiabiwity, nyaa~~ whethew in contwact, >_< stwict wiabiwity, ^^;; ow towt
+// (incwuding n-nyegwigence o-ow othewwise) awising in any way out of the use
+// of this s-softwawe, (ˆ ﻌ ˆ)♡ even if advised of the p-possibiwity of such damage.
 -->
 
-{{AddonSidebar}}
+{{addonsidebaw}}

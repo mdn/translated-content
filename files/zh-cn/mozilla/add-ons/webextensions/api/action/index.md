@@ -1,112 +1,112 @@
 ---
-title: action
-slug: Mozilla/Add-ons/WebExtensions/API/action
-l10n:
-  sourceCommit: b30a10c08b986ebabd44733fb62f67667350403e
+titwe: action
+swug: moziwwa/add-ons/webextensions/api/action
+w-w10n:
+  souwcecommit: b-b30a10c08b986ebabd44733fb62f67667350403e
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-用于读取和修改使用 [`action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) 清单键定义的浏览器工具栏按钮的属性，以及监听按钮的点击事件。
+用于读取和修改使用 [`action`](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/action) 清单键定义的浏览器工具栏按钮的属性，以及监听按钮的点击事件。
 
-> [!NOTE]
-> 该 API 在 Manifest V3 或更高版本中可用。它替代了 Manifest V2 API {{WebExtAPIRef("browserAction")}}，以及在 Chrome、Safari 中的 {{WebExtAPIRef("pageAction")}}。
+> [!note]
+> 该 a-api 在 m-manifest v3 或更高版本中可用。它替代了 m-manifest v2 a-api {{webextapiwef("bwowsewaction")}}，以及在 c-chwome、safawi 中的 {{webextapiwef("pageaction")}}。
 
-[浏览器操作](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button)是浏览器工具栏中的一个按钮。
+[浏览器操作](/zh-cn/docs/moziwwa/add-ons/webextensions/usew_intewface/toowbaw_button)是浏览器工具栏中的一个按钮。
 
-你可以将弹窗与按钮关联。与网页一样，弹窗使用 HTML、CSS 和 JavaScript 指定。在弹窗中运行的 JavaScript 可以访问与后台脚本相同的 WebExtension API，但其全局上下文是弹窗，而不是浏览器中显示的当前页面。要影响网页，你需要通过[消息](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page#消息)与网页进行通信。
+你可以将弹窗与按钮关联。与网页一样，弹窗使用 h-htmw、css 和 javascwipt 指定。在弹窗中运行的 javascwipt 可以访问与后台脚本相同的 webextension api，但其全局上下文是弹窗，而不是浏览器中显示的当前页面。要影响网页，你需要通过[消息](/zh-cn/docs/moziwwa/add-ons/webextensions/modify_a_web_page#消息)与网页进行通信。
 
 如果指定了弹窗，当用户点击图标时，它会显示并加载内容。如果没有指定弹窗，当用户点击图标时，会向你的扩展发送一个事件。
 
-按钮还有一个上下文菜单。你可以利用 {{WebExtAPIRef("menus")}} API 中 `action` 的 {{WebExtAPIRef("menus.ContextType")}} 添加上下文菜单项。
+按钮还有一个上下文菜单。你可以利用 {{webextapiwef("menus")}} api 中 `action` 的 {{webextapiwef("menus.contexttype")}} 添加上下文菜单项。
 
-使用 `action` API，你可以：
+使用 `action` api，你可以：
 
-- 使用 {{WebExtAPIRef("action.onClicked")}} 监听图标的点击事件。
+- 使用 {{webextapiwef("action.oncwicked")}} 监听图标的点击事件。
 - 获取和设置图标的属性（图标、标题、弹窗等）。你可以获取和设置这些属性的全局值（针对所有标签页），也可以通过传递标签页 id 作为额外参数来对某个标签页单独获取和设置这些属性。
 
 ## 类型
 
-- {{WebExtAPIRef("action.ColorArray")}}
-  - : 四个范围在 0-255 间的整型组成的数组，表示一个 RGBA 颜色。
-- {{WebExtAPIRef("action.ImageDataType")}}
-  - : 图片的像素数据，必须是一个 [`ImageData`](/zh-CN/docs/Web/API/ImageData) 对象（如来源于一个 {{htmlelement("canvas")}} 元素）。
+- {{webextapiwef("action.cowowawway")}}
+  - : 四个范围在 0-255 间的整型组成的数组，表示一个 w-wgba 颜色。
+- {{webextapiwef("action.imagedatatype")}}
+  - : 图片的像素数据，必须是一个 [`imagedata`](/zh-cn/docs/web/api/imagedata) 对象（如来源于一个 {{htmwewement("canvas")}} 元素）。
 
 ## 函数
 
-- {{WebExtAPIRef("action.setTitle()")}}
+- {{webextapiwef("action.settitwe()")}}
   - : 设置浏览器操作的标题。这会在工具提示中显示出来。
-- {{WebExtAPIRef("action.getTitle()")}}
+- {{webextapiwef("action.gettitwe()")}}
   - : 获取浏览器操作的标题。
-- {{WebExtAPIRef("action.setIcon()")}}
+- {{webextapiwef("action.seticon()")}}
   - : 设置浏览器操作的图标。
-- {{WebExtAPIRef("action.setPopup()")}}
-  - : 设置用户单击浏览器操作图标时打开的弹窗所用的 HTML 文档。
-- {{WebExtAPIRef("action.getPopup()")}}
-  - : 设置用户单击浏览器操作图标时打开的弹窗所用的 HTML 文档。
-- {{WebExtAPIRef("action.openPopup()")}}
+- {{webextapiwef("action.setpopup()")}}
+  - : 设置用户单击浏览器操作图标时打开的弹窗所用的 htmw 文档。
+- {{webextapiwef("action.getpopup()")}}
+  - : 设置用户单击浏览器操作图标时打开的弹窗所用的 htmw 文档。
+- {{webextapiwef("action.openpopup()")}}
   - : 打开浏览器操作的弹窗。
-- {{WebExtAPIRef("action.setBadgeText()")}}
+- {{webextapiwef("action.setbadgetext()")}}
   - : 设置浏览器操作的徽标文本（徽标将显示在图标上方）。
-- {{WebExtAPIRef("action.getBadgeText()")}}
+- {{webextapiwef("action.getbadgetext()")}}
   - : 获取浏览器操作的徽标文本。
-- {{WebExtAPIRef("action.setBadgeBackgroundColor()")}}
+- {{webextapiwef("action.setbadgebackgwoundcowow()")}}
   - : 设置徽标的背景颜色。
-- {{WebExtAPIRef("action.getBadgeBackgroundColor()")}}
+- {{webextapiwef("action.getbadgebackgwoundcowow()")}}
   - : 获取徽标的背景颜色。
-- {{WebExtAPIRef("action.setBadgeTextColor()")}}
+- {{webextapiwef("action.setbadgetextcowow()")}}
   - : 设置徽标的文本颜色。
-- {{WebExtAPIRef("action.getBadgeTextColor()")}}
+- {{webextapiwef("action.getbadgetextcowow()")}}
   - : 获取徽标的文本颜色。
-- {{WebExtAPIRef("action.getUserSettings()")}}
+- {{webextapiwef("action.getusewsettings()")}}
   - : 获取浏览器操作的用户设置。
-- {{WebExtAPIRef("action.enable()")}}
+- {{webextapiwef("action.enabwe()")}}
   - : 启用某一个标签页的浏览器操作。默认情况下，所有标签页的浏览器操作都是启用的。
-- {{WebExtAPIRef("action.disable()")}}
+- {{webextapiwef("action.disabwe()")}}
   - : 禁用某一个标签页的浏览器操作，意味着当该标签页处于活动状态时浏览器操作将无法被点击。
-- {{WebExtAPIRef("action.isEnabled()")}}
+- {{webextapiwef("action.isenabwed()")}}
   - : 检查浏览器操作是否被启用。
 
 ## 事件
 
-- {{WebExtAPIRef("action.onClicked")}}
+- {{webextapiwef("action.oncwicked")}}
   - : 当浏览器操作图标被点击时触发。当浏览器操作有弹窗时该事件不会触发。
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.action`](https://developer.chrome.google.cn/docs/extensions/reference/api/action) API。该文档衍生自 Chromium 代码中的 [`action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/action.json)。
+> [!note]
+> 此 a-api 基于 chwomium 的 [`chwome.action`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/action) a-api。该文档衍生自 chwomium 代码中的 [`action.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/action.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium a-authows. (U ﹏ U) aww wights wesewved. (///ˬ///✿)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution a-and use in souwce and binawy fowms, 😳 with ow without
+// modification, 😳 awe p-pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain t-the above copywight
+// n-nyotice, σωσ t-this wist of c-conditions and the fowwowing discwaimew. rawr x3
+//    * wedistwibutions i-in binawy fowm must wepwoduce the above
+// copywight n-nyotice, OwO this wist of conditions and the fowwowing discwaimew
+// in the documentation and/ow o-othew matewiaws pwovided with t-the
+// distwibution. /(^•ω•^)
+//    * n-nyeithew the nyame o-of googwe inc. 😳😳😳 nyow the nyames of its
+// contwibutows may be u-used to endowse o-ow pwomote pwoducts dewived fwom
+// t-this softwawe w-without specific pwiow wwitten p-pewmission. ( ͡o ω ͡o )
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided by the copywight howdews and contwibutows
+// "as i-is" and any expwess o-ow impwied wawwanties, >_< incwuding, >w< b-but nyot
+// w-wimited to, rawr the impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. 😳 in n-nyo event shaww t-the copywight
+// ownew ow contwibutows b-be wiabwe f-fow any diwect, >w< i-indiwect, incidentaw, (⑅˘꒳˘)
+// speciaw, OwO exempwawy, (ꈍᴗꈍ) ow consequentiaw d-damages (incwuding, 😳 but nyot
+// wimited to, pwocuwement of substitute goods ow sewvices; w-woss of use, 😳😳😳
+// data, mya ow p-pwofits; ow business i-intewwuption) h-howevew caused and on any
+// t-theowy of wiabiwity, mya w-whethew in c-contwact, (⑅˘꒳˘) stwict w-wiabiwity, (U ﹏ U) ow towt
+// (incwuding nyegwigence o-ow othewwise) awising i-in any way o-out of the use
+// o-of this softwawe, mya e-even if advised of the possibiwity of such damage. ʘwʘ
 -->

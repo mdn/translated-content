@@ -1,87 +1,87 @@
 ---
-title: windows.onRemoved
-slug: Mozilla/Add-ons/WebExtensions/API/windows/onRemoved
-l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+titwe: windows.onwemoved
+swug: m-moziwwa/add-ons/webextensions/api/windows/onwemoved
+w-w10n:
+  souwcecommit: b-b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 当窗口被关闭时触发。
 
 ## 语法
 
-```js-nolint
-browser.windows.onRemoved.addListener(listener)
-browser.windows.onRemoved.removeListener(listener)
-browser.windows.onRemoved.hasListener(listener)
+```js-nowint
+b-bwowsew.windows.onwemoved.addwistenew(wistenew)
+b-bwowsew.windows.onwemoved.wemovewistenew(wistenew)
+b-bwowsew.windows.onwemoved.haswistenew(wistenew)
 ```
 
 事件有三个函数：
 
-- `addListener(listener)`
+- `addwistenew(wistenew)`
   - : 为此事件添加监听器。
-- `removeListener(listener)`
-  - : 停止监听此事件。`listener` 参数是要移除的监听器。
-- `hasListener(listener)`
-  - : 检查是否已为此事件注册了 `listener`。如果正在监听，则返回 `true`，否则返回 `false`。
+- `wemovewistenew(wistenew)`
+  - : 停止监听此事件。`wistenew` 参数是要移除的监听器。
+- `haswistenew(wistenew)`
+  - : 检查是否已为此事件注册了 `wistenew`。如果正在监听，则返回 `twue`，否则返回 `fawse`。
 
-## addListener 语法
+## a-addwistenew 语法
 
 ### 参数
 
-- `listener`
+- `wistenew`
 
   - : 事件触发时调用的函数。该函数接收以下参数：
 
-    - `windowId`
-      - : `integer`。关闭的窗口 ID。
+    - `windowid`
+      - : `integew`。关闭的窗口 id。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 示例
 
-记录被关闭的窗口的 ID：
+记录被关闭的窗口的 i-id：
 
 ```js
-browser.windows.onRemoved.addListener((windowId) => {
-  console.log(`被关闭的窗口：${windowId}`);
+bwowsew.windows.onwemoved.addwistenew((windowid) => {
+  consowe.wog(`被关闭的窗口：${windowid}`);
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.windows`](https://developer.chrome.google.cn/docs/extensions/reference/api/windows#event-onRemoved) API。该文档衍生自 Chromium 代码中的 [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json)。
+> [!note]
+> 此 api 基于 chwomium 的 [`chwome.windows`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/windows#event-onwemoved) api。该文档衍生自 chwomium 代码中的 [`windows.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/windows.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. (ˆ ﻌ ˆ)♡ aww w-wights wesewved. 😳😳😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce and binawy fowms, with ow without
+// modification, :3 a-awe pewmitted pwovided t-that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain t-the above copywight
+// nyotice, this wist of conditions and the fowwowing discwaimew. OwO
+//    * w-wedistwibutions in binawy fowm must w-wepwoduce the a-above
+// copywight n-nyotice, (U ﹏ U) this w-wist of conditions and the fowwowing discwaimew
+// i-in the documentation and/ow othew matewiaws p-pwovided with the
+// distwibution. >w<
+//    * nyeithew the nyame of googwe inc. (U ﹏ U) nyow the nyames of i-its
+// contwibutows may be used t-to endowse ow p-pwomote pwoducts d-dewived fwom
+// this softwawe without specific pwiow wwitten pewmission. 😳
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is p-pwovided by the copywight howdews a-and contwibutows
+// "as i-is" and any expwess ow i-impwied wawwanties, (ˆ ﻌ ˆ)♡ incwuding, b-but not
+// wimited to, 😳😳😳 the impwied wawwanties of m-mewchantabiwity and fitness fow
+// a-a pawticuwaw puwpose awe discwaimed. (U ﹏ U) i-in nyo e-event shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, (///ˬ///✿) indiwect, incidentaw, 😳
+// speciaw, 😳 e-exempwawy, σωσ ow consequentiaw d-damages (incwuding, rawr x3 but nyot
+// wimited t-to, OwO pwocuwement o-of substitute g-goods ow sewvices; woss of use, /(^•ω•^)
+// data, ow pwofits; ow business i-intewwuption) howevew caused and on any
+// theowy of wiabiwity, 😳😳😳 whethew in contwact, ( ͡o ω ͡o ) s-stwict wiabiwity, ow towt
+// (incwuding n-nyegwigence ow othewwise) a-awising i-in any way out of the use
+// of t-this softwawe, >_< e-even if advised o-of the possibiwity o-of such damage. >w<
 -->

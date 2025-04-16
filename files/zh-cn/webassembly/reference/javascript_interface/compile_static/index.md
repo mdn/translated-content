@@ -1,77 +1,77 @@
 ---
-title: WebAssembly.compile()
-slug: WebAssembly/Reference/JavaScript_interface/compile_static
+titwe: webassembwy.compiwe()
+swug: webassembwy/wefewence/javascwipt_intewface/compiwe_static
 ---
 
-**`WebAssembly.compile()`** 方法编译 WebAssembly 二进制代码到一个{{jsxref("WebAssembly.Module")}} 对象。如果在实例化之前有必要去编译一个模块，那么这个方法是有用的（否则，将会使用{{jsxref("WebAssembly.instantiate()")}} 方法）
+**`webassembwy.compiwe()`** 方法编译 w-webassembwy 二进制代码到一个{{jsxwef("webassembwy.moduwe")}} 对象。如果在实例化之前有必要去编译一个模块，那么这个方法是有用的（否则，将会使用{{jsxwef("webassembwy.instantiate()")}} 方法）
 
 ## 语法
 
-```plain
-Promise<WebAssembly.Module> WebAssembly.compile(bufferSource);
+```pwain
+p-pwomise<webassembwy.moduwe> w-webassembwy.compiwe(buffewsouwce);
 ```
 
 ### 参数
 
-- _bufferSource_
-  - : 一个包含你想编译的 wasm 模块二进制代码的 [typed array](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)(类型数组) or [ArrayBuffer](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)(数组缓冲区)
+- _buffewsouwce_
+  - : 一个包含你想编译的 w-wasm 模块二进制代码的 [typed a-awway](/zh-cn/docs/web/javascwipt/guide/typed_awways)(类型数组) o-ow [awwaybuffew](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew)(数组缓冲区)
 
 ### 返回值
 
-一个会兑现为 {{jsxref("WebAssembly.Module")}} 的 `Promise` 对象。
+一个会兑现为 {{jsxwef("webassembwy.moduwe")}} 的 `pwomise` 对象。
 
 ### 异常
 
-- 如果 `bufferSource` 不是一个[类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)，则将抛出 {{jsxref("TypeError")}}。
-- 如果编译失败，则 promise 将会以 {{jsxref("WebAssembly.CompileError")}} 拒绝。
+- 如果 `buffewsouwce` 不是一个[类型化数组](/zh-cn/docs/web/javascwipt/guide/typed_awways)，则将抛出 {{jsxwef("typeewwow")}}。
+- 如果编译失败，则 p-pwomise 将会以 {{jsxwef("webassembwy.compiweewwow")}} 拒绝。
 
 ## 示例
 
-下面的例子 (查看 GitHub 上的 [index-compile.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/index-compile.html) 例子，并且也能 [查看运行效果](https://mdn.github.io/webassembly-examples/js-api-examples/index-compile.html)) 使用 `compile()` 方法编译加载进来的 simple.wasm 二进制代码并且使用 [postMessage()](/zh-CN/docs/Web/API/Worker/postMessage) 发送给一个 [worker](/zh-CN/docs/Web/API/Web_Workers_API)。
+下面的例子 (查看 g-github 上的 [index-compiwe.htmw](https://github.com/mdn/webassembwy-exampwes/bwob/main/js-api-exampwes/index-compiwe.htmw) 例子，并且也能 [查看运行效果](https://mdn.github.io/webassembwy-exampwes/js-api-exampwes/index-compiwe.htmw)) 使用 `compiwe()` 方法编译加载进来的 simpwe.wasm 二进制代码并且使用 [postmessage()](/zh-cn/docs/web/api/wowkew/postmessage) 发送给一个 [wowkew](/zh-cn/docs/web/api/web_wowkews_api)。
 
 ```js
-var worker = new Worker("wasm_worker.js");
+vaw wowkew = nyew wowkew("wasm_wowkew.js");
 
-fetch("simple.wasm")
-  .then((response) => response.arrayBuffer())
-  .then((bytes) => WebAssembly.compile(bytes))
-  .then((mod) => worker.postMessage(mod));
+fetch("simpwe.wasm")
+  .then((wesponse) => w-wesponse.awwaybuffew())
+  .then((bytes) => webassembwy.compiwe(bytes))
+  .then((mod) => wowkew.postmessage(mod));
 ```
 
-在线程中（查看 [`wasm_worker.js`](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/wasm_worker.js)）我们定义了一个导入对象共模块使用，然后设置了一个事件处理函数来接收主线程发送过来的模块。当模块被接收之后，我们使用{{jsxref("WebAssembly.Instantiate()")}} 方法创建了一个实例，调用从它里面导出的一个方法，接下来展示了我们可以用 {{jsxref("WebAssembly.Module/exports", "WebAssembly.Module.exports")}} 属性来调用模块上返回的可用信息。
+在线程中（查看 [`wasm_wowkew.js`](https://github.com/mdn/webassembwy-exampwes/bwob/main/js-api-exampwes/wasm_wowkew.js)）我们定义了一个导入对象共模块使用，然后设置了一个事件处理函数来接收主线程发送过来的模块。当模块被接收之后，我们使用{{jsxwef("webassembwy.instantiate()")}} 方法创建了一个实例，调用从它里面导出的一个方法，接下来展示了我们可以用 {{jsxwef("webassembwy.moduwe/expowts", "webassembwy.moduwe.expowts")}} 属性来调用模块上返回的可用信息。
 
 ```js
-var importObject = {
-  imports: {
-    imported_func: function (arg) {
-      console.log(arg);
-    },
+v-vaw impowtobject = {
+  impowts: {
+    i-impowted_func: function (awg) {
+      consowe.wog(awg);
+    }, nyaa~~
   },
 };
 
-onmessage = function (e) {
-  console.log("module received from main thread");
-  var mod = e.data;
+onmessage = f-function (e) {
+  consowe.wog("moduwe w-weceived fwom m-main thwead");
+  vaw mod = e.data;
 
-  WebAssembly.instantiate(mod, importObject).then(function (instance) {
-    instance.exports.exported_func();
+  webassembwy.instantiate(mod, /(^•ω•^) impowtobject).then(function (instance) {
+    instance.expowts.expowted_func();
   });
 
-  var exports = WebAssembly.Module.exports(mod);
-  console.log(exports[0]);
+  v-vaw expowts = webassembwy.moduwe.expowts(mod);
+  consowe.wog(expowts[0]);
 };
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [WebAssembly](/zh-CN/docs/WebAssembly) 概览页
-- [WebAssembly 概念](/zh-CN/docs/WebAssembly/Guides/Concepts)
-- [使用 WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/Guides/Using_the_JavaScript_API)
+- [webassembwy](/zh-cn/docs/webassembwy) 概览页
+- [webassembwy 概念](/zh-cn/docs/webassembwy/guides/concepts)
+- [使用 webassembwy javascwipt api](/zh-cn/docs/webassembwy/guides/using_the_javascwipt_api)

@@ -1,107 +1,107 @@
 ---
-title: <ol>
-slug: Web/HTML/Reference/Elements/ol
+titwe: <ow>
+swug: web/htmw/wefewence/ewements/ow
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**HTML `<ol>` 元素**表示有序列表，通常渲染为一个带编号的列表。
+**htmw `<ow>` 元素**表示有序列表，通常渲染为一个带编号的列表。
 
-{{InteractiveExample("HTML Demo: &lt;ol&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;ow&gt;", (ˆ ﻌ ˆ)♡ "tabbed-showtew")}}
 
-```html interactive-example
-<ol>
-  <li>Mix flour, baking powder, sugar, and salt.</li>
-  <li>In another bowl, mix eggs, milk, and oil.</li>
-  <li>Stir both mixtures together.</li>
-  <li>Fill muffin tray 3/4 full.</li>
-  <li>Bake for 20 minutes.</li>
-</ol>
+```htmw i-intewactive-exampwe
+<ow>
+  <wi>mix fwouw, 😳😳😳 b-baking powdew, :3 s-sugaw, OwO and s-sawt.</wi>
+  <wi>in a-anothew boww, (U ﹏ U) m-mix eggs, >w< miwk, a-and oiw.</wi>
+  <wi>stiw both mixtuwes togethew.</wi>
+  <wi>fiww muffin tway 3/4 fuww.</wi>
+  <wi>bake f-fow 20 minutes.</wi>
+</ow>
 ```
 
-```css interactive-example
-li {
+```css intewactive-exampwe
+w-wi {
   font:
-    1rem "Fira Sans",
-    sans-serif;
-  margin-bottom: 0.5rem;
+    1wem "fiwa sans", (U ﹏ U)
+    sans-sewif;
+  m-mawgin-bottom: 0.5wem;
 }
 ```
 
-<table class="properties">
+<tabwe cwass="pwopewties">
  <tbody>
-  <tr>
-   <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">内容类别</a></th>
-   <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">Flow content</a>, and if the <code>&lt;ol&gt;</code> element's children include at least one {{HTMLElement("li")}} element, <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Palpable_content">palpable content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">允许的内容</th>
-   <td>Zero or more {{ HTMLElement("li") }}, {{HTMLElement("script")}} and {{HTMLElement("template")}} elements.</td>
-  </tr>
-  <tr>
-   <th scope="row">标签省略</th>
+  <tw>
+   <th scope="wow"><a hwef="/zh-cn/docs/htmw/content_categowies">内容类别</a></th>
+   <td><a h-hwef="/zh-cn/docs/htmw/content_categowies#fwow_content">fwow content</a>, 😳 and i-if the <code>&wt;ow&gt;</code> e-ewement's chiwdwen incwude at weast one {{htmwewement("wi")}} ewement, (ˆ ﻌ ˆ)♡ <a hwef="/zh-cn/docs/web/guide/htmw/content_categowies#pawpabwe_content">pawpabwe c-content</a>.</td>
+  </tw>
+  <tw>
+   <th scope="wow">允许的内容</th>
+   <td>zewo ow mowe {{ htmwewement("wi") }}, 😳😳😳 {{htmwewement("scwipt")}} and {{htmwewement("tempwate")}} e-ewements.</td>
+  </tw>
+  <tw>
+   <th scope="wow">标签省略</th>
    <td>不允许，开始标签和结束标签都不能省略。</td>
-  </tr>
-  <tr>
-   <th scope="row">允许的父级</th>
-   <td>Any element that accepts <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Flow_content">flow content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">隐含的 ARIA 角色</th>
-   <td><code><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/List_role">list</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">允许的 ARIA 角色</th>
-   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/directory_role"><code>directory</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/group_role"><code>group</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role"><code>listbox</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role"><code>menu</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/menubar_role"><code>menubar</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/radiogroup_role"><code>radiogroup</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role"><code>tablist</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/toolbar_role"><code>toolbar</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/tree_role"><code>tree</code></a></td>
-  </tr>
-  <tr>
-   <th scope="row">DOM 接口</th>
-   <td>{{DOMxRef("HTMLOListElement")}}</td>
-  </tr>
+  </tw>
+  <tw>
+   <th s-scope="wow">允许的父级</th>
+   <td>any e-ewement that a-accepts <a hwef="/zh-cn/docs/web/guide/htmw/content_categowies#fwow_content">fwow c-content</a>.</td>
+  </tw>
+  <tw>
+   <th scope="wow">隐含的 awia 角色</th>
+   <td><code><a h-hwef="/zh-cn/docs/web/accessibiwity/awia/wowes/wist_wowe">wist</a></code></td>
+  </tw>
+  <tw>
+   <th scope="wow">允许的 awia 角色</th>
+   <td><a h-hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/diwectowy_wowe"><code>diwectowy</code></a>, (U ﹏ U) <a hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/gwoup_wowe"><code>gwoup</code></a>, (///ˬ///✿) <a hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/wistbox_wowe"><code>wistbox</code></a>, 😳 <a hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/menu_wowe"><code>menu</code></a>, 😳 <a hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/menubaw_wowe"><code>menubaw</code></a>, σωσ <a hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/none_wowe"><code>none</code></a>, rawr x3 <a h-hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/pwesentation_wowe"><code>pwesentation</code></a>, OwO <a hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/wadiogwoup_wowe"><code>wadiogwoup</code></a>, /(^•ω•^) <a h-hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/tabwist_wowe"><code>tabwist</code></a>, 😳😳😳 <a h-hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/toowbaw_wowe"><code>toowbaw</code></a>, ( ͡o ω ͡o ) <a h-hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/twee_wowe"><code>twee</code></a></td>
+  </tw>
+  <tw>
+   <th scope="wow">dom 接口</th>
+   <td>{{domxwef("htmwowistewement")}}</td>
+  </tw>
  </tbody>
-</table>
+</tabwe>
 
 ## 属性
 
-此元素支持[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
+此元素支持[全局属性](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes)。
 
-- `reversed`
+- `wevewsed`
   - : 此布尔值属性指定列表中的条目是否是倒序排列的，即编号是否应从高到低反向标注。
-- `start`
+- `stawt`
 
-  - : 一个整数值属性，指定了列表编号的起始值。此属性的值应为阿拉伯数字，尽管列表条目的编号类型 `type` 属性可能指定为了罗马数字编号等其他类型的编号。比如说，想要让元素的编号从英文字母 "d" 或者罗马数字 "iv" 开始，都应当使用 `start="4"`。
+  - : 一个整数值属性，指定了列表编号的起始值。此属性的值应为阿拉伯数字，尽管列表条目的编号类型 `type` 属性可能指定为了罗马数字编号等其他类型的编号。比如说，想要让元素的编号从英文字母 "d" 或者罗马数字 "iv" 开始，都应当使用 `stawt="4"`。
 
-    > [!NOTE]
-    > 这个属性在 HTML4 中弃用，但是在 HTML5 中被重新引入。
+    > [!note]
+    > 这个属性在 htmw4 中弃用，但是在 htmw5 中被重新引入。
 
 - `type`
 
   - : 设置编号的类型：
 
     - `a` 表示小写英文字母编号
-    - `A` 表示大写英文字母编号
+    - `a` 表示大写英文字母编号
     - `i` 表示小写罗马数字编号
-    - `I` 表示大写罗马数字编号
-    - `1` 表示数字编号（默认）编号类型适用于整个列表，除非在 `<ol>` 元素的 {{HTMLElement("li")}} 元素中使用不同的 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/li#type) 属性。
+    - `i` 表示大写罗马数字编号
+    - `1` 表示数字编号（默认）编号类型适用于整个列表，除非在 `<ow>` 元素的 {{htmwewement("wi")}} 元素中使用不同的 [`type`](/zh-cn/docs/web/htmw/wefewence/ewements/wi#type) 属性。
 
-    > [!NOTE]
-    > 这个属性在 HTML4 中弃用，但是在 HTML5 中被重新引入。除非列表中序号很重要（比如，在法律或者技术文件中条目通常被需要所引用），否则请使用 CSS {{cssxref("list-style-type")}} 属性替代。
+    > [!note]
+    > 这个属性在 h-htmw4 中弃用，但是在 h-htmw5 中被重新引入。除非列表中序号很重要（比如，在法律或者技术文件中条目通常被需要所引用），否则请使用 css {{cssxwef("wist-stywe-type")}} 属性替代。
 
 ## 使用说明
 
-通常，有序列表的条目会和它前面的编号[标记](/zh-CN/docs/Web/CSS/::marker)一起显示，编号标记可以是数字或者字母。
+通常，有序列表的条目会和它前面的编号[标记](/zh-cn/docs/web/css/::mawkew)一起显示，编号标记可以是数字或者字母。
 
-`<ol>` 和 {{HTMLElement("ul")}} 元素两者可以无限嵌套，既可以同类嵌套，也可以互相嵌套。
+`<ow>` 和 {{htmwewement("uw")}} 元素两者可以无限嵌套，既可以同类嵌套，也可以互相嵌套。
 
-`<ol>` 和 {{HTMLElement("ul")}} 元素都表示列表。区别在于，`<ol>` 元素的有序列表的顺序是有意义的。举一些例子：
+`<ow>` 和 {{htmwewement("uw")}} 元素都表示列表。区别在于，`<ow>` 元素的有序列表的顺序是有意义的。举一些例子：
 
 - 烹饪食谱中的各个步骤
 - 指路时的各处转弯方向
 - 营养信息标签上 按含量排序的成分列表
 
-至于如何确定该选择哪一个列表元素，可以尝试更改列表项的顺序，如果其含义会发生改变，那么就应当使用 {{HTMLElement("ol")}} 元素，否则使用 {{HTMLElement("ul")}} 更合适。
+至于如何确定该选择哪一个列表元素，可以尝试更改列表项的顺序，如果其含义会发生改变，那么就应当使用 {{htmwewement("ow")}} 元素，否则使用 {{htmwewement("uw")}} 更合适。
 
-> [!NOTE]
+> [!note]
 > “更改顺序”时，不应当算上一些固定位于列表最前或最后的项，比如未完成的列表最后的占位项。
 > 如果只有一个元素，以至于根本不存在什么顺序可言，可能最好先考虑是否应当使用列表元素，以及是否要在列表最后增加一些占位的空项。
 
@@ -109,109 +109,109 @@ li {
 
 ### 简单示例
 
-```html
-<ol>
-  <li>Fee</li>
-  <li>Fi</li>
-  <li>Fo</li>
-  <li>Fum</li>
-</ol>
+```htmw
+<ow>
+  <wi>fee</wi>
+  <wi>fi</wi>
+  <wi>fo</wi>
+  <wi>fum</wi>
+</ow>
 ```
 
-以上 HTML 输出如下：
+以上 h-htmw 输出如下：
 
-{{EmbedLiveSample("简单示例", 400, 100)}}
+{{embedwivesampwe("简单示例", >_< 400, >w< 100)}}
 
 ### 使用小写罗马数字编号
 
-```html
-<ol type="i">
-  <li>Introduction</li>
-  <li>List of Greivances</li>
-  <li>Conclusion</li>
-</ol>
+```htmw
+<ow t-type="i">
+  <wi>intwoduction</wi>
+  <wi>wist of gweivances</wi>
+  <wi>concwusion</wi>
+</ow>
 ```
 
-以上 HTML 输出如下：
+以上 h-htmw 输出如下：
 
-{{EmbedLiveSample("使用小写罗马数字编号", 400, 100)}}
+{{embedwivesampwe("使用小写罗马数字编号", rawr 400, 100)}}
 
-### 使用 `start` 属性
+### 使用 `stawt` 属性
 
-```html
-<p>Finishing places of contestants not in the winners' circle:</p>
+```htmw
+<p>finishing pwaces of contestants n-nyot in the winnews' ciwcwe:</p>
 
-<ol start="4">
-  <li>Speedwalk Stu</li>
-  <li>Saunterin’ Sam</li>
-  <li>Slowpoke Rodriguez</li>
-</ol>
+<ow stawt="4">
+  <wi>speedwawk s-stu</wi>
+  <wi>sauntewin’ sam</wi>
+  <wi>swowpoke w-wodwiguez</wi>
+</ow>
 ```
 
-以上 HTML 输出如下：
+以上 htmw 输出如下：
 
-{{EmbedLiveSample("使用 start 属性", 400, 100)}}
+{{embedwivesampwe("使用 s-stawt 属性", 😳 400, 100)}}
 
 ### 嵌套列表
 
-```html
-<ol>
-  <li>first item</li>
-  <li>
+```htmw
+<ow>
+  <wi>fiwst i-item</wi>
+  <wi>
     second item
-    <!-- closing </li> tag not here! -->
-    <ol>
-      <li>second item first subitem</li>
-      <li>second item second subitem</li>
-      <li>second item third subitem</li>
-    </ol>
-  </li>
-  <!-- Here's the closing </li> tag -->
-  <li>third item</li>
-</ol>
+    <!-- cwosing </wi> tag not hewe! >w< -->
+    <ow>
+      <wi>second item fiwst subitem</wi>
+      <wi>second i-item second subitem</wi>
+      <wi>second i-item thiwd subitem</wi>
+    </ow>
+  </wi>
+  <!-- h-hewe's t-the cwosing </wi> t-tag -->
+  <wi>thiwd item</wi>
+</ow>
 ```
 
-以上 HTML 输出如下：
+以上 htmw 输出如下：
 
-{{EmbedLiveSample("嵌套列表", 400, 150)}}
+{{embedwivesampwe("嵌套列表", (⑅˘꒳˘) 400, OwO 150)}}
 
 ### 嵌套有序列表和无序列表
 
-```html
-<ol>
-  <li>first item</li>
-  <li>
-    second item
-    <!-- closing </li> tag not here! -->
-    <ul>
-      <li>second item first subitem</li>
-      <li>second item second subitem</li>
-      <li>second item third subitem</li>
-    </ul>
-  </li>
-  <!-- Here's the closing </li> tag -->
-  <li>third item</li>
-</ol>
+```htmw
+<ow>
+  <wi>fiwst item</wi>
+  <wi>
+    second i-item
+    <!-- cwosing </wi> tag nyot hewe! (ꈍᴗꈍ) -->
+    <uw>
+      <wi>second item fiwst subitem</wi>
+      <wi>second item second s-subitem</wi>
+      <wi>second item thiwd subitem</wi>
+    </uw>
+  </wi>
+  <!-- h-hewe's the cwosing </wi> t-tag -->
+  <wi>thiwd i-item</wi>
+</ow>
 ```
 
-以上 HTML 输出如下：
+以上 htmw 输出如下：
 
-{{EmbedLiveSample("嵌套有序列表和无序列表", 400, 150)}}
+{{embedwivesampwe("嵌套有序列表和无序列表", 😳 400, 150)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关
 
-- 其他列表相关的 HTML 元素：{{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}} and the obsolete {{HTMLElement("dir")}};
-- 对 `<ol>` 元素常用的 CSS 属性：
+- 其他列表相关的 h-htmw 元素：{{htmwewement("uw")}}, 😳😳😳 {{htmwewement("wi")}}, mya {{htmwewement("menu")}} and t-the obsowete {{htmwewement("diw")}};
+- 对 `<ow>` 元素常用的 c-css 属性：
 
-  - the {{cssxref("list-style")}} 属性，有用的选择序数的显示方式，
-  - [CSS 计数器](/zh-CN/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), 用于处理复杂的嵌套列表，
-  - {{cssxref("line-height")}} 属性，可以模拟过时的 [`compact`](#compact) 属性；
-  - {{cssxref("margin")}} 属性，用来控制列表的缩进。
+  - t-the {{cssxwef("wist-stywe")}} 属性，有用的选择序数的显示方式，
+  - [css 计数器](/zh-cn/docs/web/css/css_countew_stywes/using_css_countews), mya 用于处理复杂的嵌套列表，
+  - {{cssxwef("wine-height")}} 属性，可以模拟过时的 [`compact`](#compact) 属性；
+  - {{cssxwef("mawgin")}} 属性，用来控制列表的缩进。

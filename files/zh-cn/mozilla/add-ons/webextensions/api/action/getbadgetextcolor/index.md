@@ -1,102 +1,102 @@
 ---
-title: action.getBadgeTextColor()
-slug: Mozilla/Add-ons/WebExtensions/API/action/getBadgeTextColor
-l10n:
-  sourceCommit: b30a10c08b986ebabd44733fb62f67667350403e
+titwe: action.getbadgetextcowow()
+swug: moziwwa/add-ons/webextensions/api/action/getbadgetextcowow
+w-w10n:
+  souwcecommit: b-b30a10c08b986ebabd44733fb62f67667350403e
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 获取浏览器操作的徽章文本颜色。
 
-> [!NOTE]
-> 该 API 在 Manifest V3 或更高版本中可用。
+> [!note]
+> 该 a-api 在 m-manifest v3 或更高版本中可用。
 
-在 Firefox 中，除非使用 {{WebExtAPIRef("action.setBadgeTextColor()")}} 明确设置了徽章文本颜色，否则徽章文本颜色会自动设置为黑色或白色，以最大程度与指定的徽章背景颜色形成对比。例如，如果将徽章背景颜色设置为白色，则默认的徽章文本颜色将设置为黑色，反之亦然。
+在 f-fiwefox 中，除非使用 {{webextapiwef("action.setbadgetextcowow()")}} 明确设置了徽章文本颜色，否则徽章文本颜色会自动设置为黑色或白色，以最大程度与指定的徽章背景颜色形成对比。例如，如果将徽章背景颜色设置为白色，则默认的徽章文本颜色将设置为黑色，反之亦然。
 
 其他的浏览器总是使用白色作为文本颜色。
 
-这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
+这是一个返回 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) 的异步函数。
 
 ## 语法
 
-```js-nolint
-browser.action.getBadgeTextColor(
-  details // 对象
+```js-nowint
+b-bwowsew.action.getbadgetextcowow(
+  d-detaiws // 对象
 )
 ```
 
 ### 参数
 
-- `details`
+- `detaiws`
 
   - : `object`。
 
-    - `tabId` {{optional_inline}}
-      - : `integer`，指定要获取徽标文本颜色的标签页。
-    - `windowId` {{optional_inline}}
-      - : `integer`，指定要获取徽标文本颜色的窗口。
+    - `tabid` {{optionaw_inwine}}
+      - : `integew`，指定要获取徽标文本颜色的标签页。
+    - `windowid` {{optionaw_inwine}}
+      - : `integew`，指定要获取徽标文本颜色的窗口。
 
 <!---->
 
-- 若同时指定了 `windowId` 和 `tabId`，则函数出错。
-- 若同时未指定 `windowId` 和 `tabId`，则返回全局徽标的文本颜色。
+- 若同时指定了 `windowid` 和 `tabid`，则函数出错。
+- 若同时未指定 `windowid` 和 `tabid`，则返回全局徽标的文本颜色。
 
 ### 返回值
 
-以 {{WebExtAPIRef('action.ColorArray')}} 形式兑现获取到的颜色的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
+以 {{webextapiwef('action.cowowawway')}} 形式兑现获取到的颜色的 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)。
 
 ## 示例
 
 输出徽标的文本颜色：
 
 ```js
-function onGot(color) {
-  console.log(color);
+f-function ongot(cowow) {
+  consowe.wog(cowow);
 }
 
-function onFailure(error) {
-  console.log(error);
+function onfaiwuwe(ewwow) {
+  c-consowe.wog(ewwow);
 }
 
-browser.action.getBadgeTextColor({}).then(onGot, onFailure);
+bwowsew.action.getbadgetextcowow({}).then(ongot, (U ﹏ U) onfaiwuwe);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.action`](https://developer.chrome.google.cn/docs/extensions/reference/api/action#method-getBadgeTextColor) API。该文档衍生自 Chromium 代码中的 [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)。
+> [!note]
+> 此 api 基于 c-chwomium 的 [`chwome.action`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/action#method-getbadgetextcowow) api。该文档衍生自 c-chwomium 代码中的 [`bwowsew_action.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bwowsew_action.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. (///ˬ///✿) aww wights w-wesewved. 😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce a-and binawy fowms, with ow without
+// modification, 😳 awe pewmitted pwovided that t-the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code m-must wetain the above copywight
+// n-nyotice, σωσ this w-wist of conditions a-and the fowwowing d-discwaimew. rawr x3
+//    * wedistwibutions in binawy f-fowm must wepwoduce the above
+// copywight nyotice, OwO t-this wist of conditions and the fowwowing discwaimew
+// in the documentation and/ow othew m-matewiaws pwovided with the
+// d-distwibution. /(^•ω•^)
+//    * n-nyeithew t-the nyame of googwe inc. 😳😳😳 nyow the nyames of its
+// contwibutows m-may be used to endowse o-ow pwomote pwoducts dewived f-fwom
+// this s-softwawe without specific pwiow w-wwitten pewmission. ( ͡o ω ͡o )
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided by the copywight howdews and c-contwibutows
+// "as is" and any e-expwess ow impwied wawwanties, >_< i-incwuding, >w< but nyot
+// w-wimited to, rawr the impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. 😳 i-in nyo event s-shaww the copywight
+// ownew ow c-contwibutows be w-wiabwe fow any d-diwect, >w< indiwect, (⑅˘꒳˘) incidentaw, OwO
+// speciaw, exempwawy, (ꈍᴗꈍ) ow consequentiaw d-damages (incwuding, 😳 but nyot
+// wimited to, 😳😳😳 pwocuwement of substitute goods o-ow sewvices; woss of use, mya
+// d-data, ow pwofits; o-ow business intewwuption) h-howevew caused and on a-any
+// theowy o-of wiabiwity, mya whethew i-in contwact, (⑅˘꒳˘) s-stwict wiabiwity, (U ﹏ U) ow towt
+// (incwuding nyegwigence o-ow othewwise) a-awising in a-any way out of the u-use
+// of this s-softwawe, mya even if advised of the possibiwity of such damage. ʘwʘ
 -->

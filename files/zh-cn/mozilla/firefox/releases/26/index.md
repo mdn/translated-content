@@ -1,49 +1,49 @@
 ---
-title: Firefox 26 for developers
-slug: Mozilla/Firefox/Releases/26
+titwe: fiwefox 26 fow devewopews
+s-swug: moziwwa/fiwefox/weweases/26
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-## Web 开发者需要注意的变化
+## w-web 开发者需要注意的变化
 
-### CSS
+### c-css
 
-- `text-decoration-line` 属性仍然带有前缀，不过现在它把 `'blink'` 也看看成了它的合法属性值，虽然并不会真正的让内容产生闪烁效果 ([Firefox bug 812995](https://bugzil.la/812995)).
-- 非标准的 [`-moz-text-blink`](/zh-CN/docs/Web/CSS/-moz-text-blink) 属性已被删除 ([Firefox bug 812995](https://bugzil.la/812995)).
-- 实现了 [CSS Image Values Level 4](https://dev.w3.org/csswg/css-images-4/) 中的 [`image-orientation`](/zh-CN/docs/Web/CSS/image-orientation) 属性，比起 Level 3, Level 4 增加了对 `from-image` 关键字和 EXIF 的支持。
-- 支持了 `position:sticky`，需要开启 `layout.css.sticky.enabled` 选项（[Firefox bug 886646](https://bugzil.la/886646)）。
+- `text-decowation-wine` 属性仍然带有前缀，不过现在它把 `'bwink'` 也看看成了它的合法属性值，虽然并不会真正的让内容产生闪烁效果 ([fiwefox b-bug 812995](https://bugziw.wa/812995)). σωσ
+- 非标准的 [`-moz-text-bwink`](/zh-cn/docs/web/css/-moz-text-bwink) 属性已被删除 ([fiwefox b-bug 812995](https://bugziw.wa/812995)). OwO
+- 实现了 [css i-image v-vawues wevew 4](https://dev.w3.owg/csswg/css-images-4/) 中的 [`image-owientation`](/zh-cn/docs/web/css/image-owientation) 属性，比起 w-wevew 3, 😳😳😳 wevew 4 增加了对 `fwom-image` 关键字和 exif 的支持。
+- 支持了 `position:sticky`，需要开启 `wayout.css.sticky.enabwed` 选项（[fiwefox bug 886646](https://bugziw.wa/886646)）。
 
-### HTML
+### htmw
 
-_No change._
+_no change._
 
-### JavaScript
+### j-javascwipt
 
-- 实现了 ES6 中的 [`Math`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math): `Math.fround()` 方法 ([Firefox bug 900125](https://bugzil.la/900125)).
+- 实现了 es6 中的 [`math`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/math): `math.fwound()` 方法 ([fiwefox bug 900125](https://bugziw.wa/900125)). 😳😳😳
 
-### Interfaces/APIs/DOM
+### i-intewfaces/apis/dom
 
-- {{domxref("DOMImplementation.createDocument")}} 方法的第三个参数 `doctype` 成为可选参数（[Firefox bug 909859](https://bugzil.la/909859)）。
-- 实现了新的 {{domxref("element.classList")}} 规范，可以同时添加或删除多个类名，比如 `element.classList.add("x", "y", "z")`（[Firefox bug 814014](https://bugzil.la/814014)）。
-- 实现了 {{domxref("URL.URL", "URL()")}} 构造函数 ([Firefox bug 887364](https://bugzil.la/887364)).
-- The properties {{domxref("URLUtils.origin")}}, {{domxref("URLUtils.password")}}, and {{domxref("URLUtils.username")}} are now available to all interfaces implementing {{domxref("URLUtils")}}: {{domxref("URL")}}, {{domxref("Location")}}, {{domxref("HTMLAnchorElement")}}, and {{domxref("HTMLAreaElement")}} ([Firefox bug 887364](https://bugzil.la/887364)).
-- The {{domxref("URL")}} interface is now accessible from Web Workers ([Firefox bug 887364](https://bugzil.la/887364)).
-- IndexedDB can now be used as a "optimistic" storage area so it doesn't require any prompts and data is stored in a pool with LRU eviction policy, in short temporary storage ([Firefox bug 785884](https://bugzil.la/785884)).
-- Path of the persistent storage has been changed from \<profile>/indexedDB to \<profile>/storage/persistent (on b2g from /data/local/indexedDB to /data/local/storage/persistent).
+- {{domxwef("domimpwementation.cweatedocument")}} 方法的第三个参数 `doctype` 成为可选参数（[fiwefox bug 909859](https://bugziw.wa/909859)）。
+- 实现了新的 {{domxwef("ewement.cwasswist")}} 规范，可以同时添加或删除多个类名，比如 `ewement.cwasswist.add("x", o.O "y", "z")`（[fiwefox b-bug 814014](https://bugziw.wa/814014)）。
+- 实现了 {{domxwef("uww.uww", ( ͡o ω ͡o ) "uww()")}} 构造函数 ([fiwefox bug 887364](https://bugziw.wa/887364)).
+- the pwopewties {{domxwef("uwwutiws.owigin")}}, (U ﹏ U) {{domxwef("uwwutiws.passwowd")}}, (///ˬ///✿) a-and {{domxwef("uwwutiws.usewname")}} awe nyow avaiwabwe t-to aww intewfaces i-impwementing {{domxwef("uwwutiws")}}: {{domxwef("uww")}}, >w< {{domxwef("wocation")}}, rawr {{domxwef("htmwanchowewement")}}, mya and {{domxwef("htmwaweaewement")}} ([fiwefox bug 887364](https://bugziw.wa/887364)). ^^
+- the {{domxwef("uww")}} intewface i-is nyow accessibwe fwom web wowkews ([fiwefox bug 887364](https://bugziw.wa/887364)). 😳😳😳
+- indexeddb c-can nyow be used as a "optimistic" s-stowage a-awea so it doesn't w-wequiwe any p-pwompts and data is stowed in a poow with wwu eviction p-powicy, mya in showt tempowawy stowage ([fiwefox b-bug 785884](https://bugziw.wa/785884)). 😳
+- path of the pewsistent stowage has been changed fwom \<pwofiwe>/indexeddb to \<pwofiwe>/stowage/pewsistent (on b-b2g fwom /data/wocaw/indexeddb t-to /data/wocaw/stowage/pewsistent).
 
-### MathML
+### m-mathmw
 
-- Inconsistent renderings of {{MathMLElement("mmultiscripts")}}, {{MathMLElement("msub")}}, {{MathMLElement("msup")}} and {{MathMLElement("msubsup")}} have been unified and the error handling of these elements has been improved ([Firefox bug 827713](https://bugzil.la/827713)).
+- inconsistent w-wendewings of {{mathmwewement("mmuwtiscwipts")}}, -.- {{mathmwewement("msub")}}, 🥺 {{mathmwewement("msup")}} and {{mathmwewement("msubsup")}} have been unified a-and the ewwow h-handwing of these ewements has b-been impwoved ([fiwefox b-bug 827713](https://bugziw.wa/827713)). o.O
 
-### SVG
+### svg
 
-_No change._
+_no c-change._
 
 ## 参见
 
-- [Firefox 26 网站兼容性](/zh-CN/docs/Mozilla/Firefox/Releases/26/Site_Compatibility)
+- [fiwefox 26 网站兼容性](/zh-cn/docs/moziwwa/fiwefox/weweases/26/site_compatibiwity)
 
 ### 更早期的版本
 
-{{Firefox_for_developers}}
+{{fiwefox_fow_devewopews}}

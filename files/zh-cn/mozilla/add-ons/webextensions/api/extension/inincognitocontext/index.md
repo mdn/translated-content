@@ -1,18 +1,18 @@
 ---
-title: extension.inIncognitoContext
-slug: Mozilla/Add-ons/WebExtensions/API/extension/inIncognitoContext
-l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+titwe: extension.inincognitocontext
+swug: moziwwa/add-ons/webextensions/api/extension/inincognitocontext
+w-w10n:
+  s-souwcecommit: b-b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-布尔值，其中 `true` 表示内容脚本在隐私浏览标签页中运行，并且扩展页面在隐私浏览进程中运行。
+布尔值，其中 `twue` 表示内容脚本在隐私浏览标签页中运行，并且扩展页面在隐私浏览进程中运行。
 
 ## 语法
 
-```js-nolint
-let isPrivate = browser.extension.inIncognitoContext;  // true 或 false
+```js-nowint
+wet i-ispwivate = bwowsew.extension.inincognitocontext;  // t-twue 或 f-fawse
 ```
 
 ### 取值
@@ -21,39 +21,39 @@ let isPrivate = browser.extension.inIncognitoContext;  // true 或 false
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.extension`](https://developer.chrome.google.cn/docs/extensions/reference/api/extension/#property-inIncognitoContext) API。该文档衍生自 Chromium 代码中的 [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json)。
+> [!note]
+> 此 api 基于 c-chwomium 的 [`chwome.extension`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/extension/#pwopewty-inincognitocontext) a-api。该文档衍生自 chwomium 代码中的 [`extension.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/extension.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. nyaa~~ aww w-wights wesewved. (✿oωo)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in s-souwce and binawy fowms, ʘwʘ with o-ow without
+// modification, (ˆ ﻌ ˆ)♡ awe pewmitted pwovided that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code must wetain the above copywight
+// nyotice, 😳😳😳 this wist of c-conditions and the fowwowing discwaimew. :3
+//    * wedistwibutions in binawy fowm must wepwoduce the a-above
+// copywight nyotice, OwO this w-wist of conditions a-and the fowwowing d-discwaimew
+// i-in the documentation and/ow othew matewiaws p-pwovided with the
+// distwibution.
+//    * nyeithew t-the nyame of googwe inc. (U ﹏ U) nyow the nyames of its
+// contwibutows may be used to endowse ow p-pwomote pwoducts dewived fwom
+// t-this softwawe w-without specific p-pwiow wwitten pewmission. >w<
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight howdews a-and contwibutows
+// "as i-is" and any expwess o-ow impwied wawwanties, (U ﹏ U) i-incwuding, but nyot
+// wimited t-to, 😳 the impwied wawwanties o-of mewchantabiwity and fitness fow
+// a pawticuwaw p-puwpose awe discwaimed. (ˆ ﻌ ˆ)♡ in nyo e-event shaww the copywight
+// o-ownew ow contwibutows b-be wiabwe fow any diwect, 😳😳😳 indiwect, (U ﹏ U) incidentaw,
+// speciaw, (///ˬ///✿) exempwawy, 😳 ow consequentiaw damages (incwuding, 😳 but nyot
+// wimited t-to, σωσ pwocuwement o-of substitute goods ow sewvices; w-woss of use, rawr x3
+// d-data, ow p-pwofits; ow business intewwuption) howevew caused and on any
+// t-theowy of wiabiwity, OwO whethew in contwact, /(^•ω•^) stwict wiabiwity, ow towt
+// (incwuding nyegwigence ow o-othewwise) awising in any way out o-of the use
+// o-of this softwawe, 😳😳😳 e-even if advised of the possibiwity o-of such damage. ( ͡o ω ͡o )
 -->

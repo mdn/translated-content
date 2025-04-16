@@ -1,87 +1,87 @@
 ---
-title: action.disable()
-slug: Mozilla/Add-ons/WebExtensions/API/action/disable
-l10n:
-  sourceCommit: b30a10c08b986ebabd44733fb62f67667350403e
+titwe: action.disabwe()
+swug: m-moziwwa/add-ons/webextensions/api/action/disabwe
+w-w10n:
+  souwcecommit: b-b30a10c08b986ebabd44733fb62f67667350403e
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 禁用某一标签页的浏览器操作——意味着当该标签页处于活动状态时，无法单击该按钮。
 
-> [!NOTE]
-> 该 API 在 Manifest V3 或更高版本中可用。
+> [!note]
+> 该 api 在 m-manifest v-v3 或更高版本中可用。
 
 ## 语法
 
-```js-nolint
-browser.action.disable(
-  tabId // 可选的整型值
+```js-nowint
+b-bwowsew.action.disabwe(
+  t-tabid // 可选的整型值
 )
 ```
 
 ### 参数
 
-- `tabId` {{optional_inline}}
-  - : `integer`，你希望禁用浏览器操作的标签页的 id。
+- `tabid` {{optionaw_inwine}}
+  - : `integew`，你希望禁用浏览器操作的标签页的 id。
 
 ## 示例
 
 当点击后，禁用浏览器操作，并在每次打开新标签页时重新启用它：
 
 ```js
-browser.tabs.onCreated.addListener(() => {
-  browser.action.enable();
+b-bwowsew.tabs.oncweated.addwistenew(() => {
+  bwowsew.action.enabwe();
 });
 
-browser.action.onClicked.addListener(() => {
-  browser.action.disable();
+bwowsew.action.oncwicked.addwistenew(() => {
+  bwowsew.action.disabwe();
 });
 ```
 
 仅对活动标签页禁用浏览器操作：
 
 ```js
-browser.action.onClicked.addListener((tab) => {
-  browser.action.disable(tab.id);
+bwowsew.action.oncwicked.addwistenew((tab) => {
+  b-bwowsew.action.disabwe(tab.id);
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.action`](https://developer.chrome.google.cn/docs/extensions/reference/api/action#method-disable) API。该文档衍生自 Chromium 代码中的 [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)。
+> [!note]
+> 此 api 基于 chwomium 的 [`chwome.action`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/action#method-disabwe) a-api。该文档衍生自 chwomium 代码中的 [`bwowsew_action.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bwowsew_action.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. (U ﹏ U) aww wights wesewved. >w<
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in s-souwce and binawy f-fowms, (U ﹏ U) with ow without
+// modification, 😳 awe pewmitted pwovided that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain t-the above copywight
+// nyotice, (ˆ ﻌ ˆ)♡ t-this wist of conditions a-and the f-fowwowing discwaimew. 😳😳😳
+//    * wedistwibutions in b-binawy fowm must wepwoduce the above
+// copywight n-nyotice, (U ﹏ U) this wist of conditions and the fowwowing d-discwaimew
+// in the documentation and/ow othew matewiaws pwovided with the
+// distwibution.
+//    * n-nyeithew the nyame of g-googwe inc. (///ˬ///✿) nyow t-the nyames of i-its
+// contwibutows may be used to endowse ow pwomote pwoducts d-dewived fwom
+// t-this softwawe without specific pwiow w-wwitten pewmission. 😳
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this s-softwawe is pwovided by the c-copywight howdews and contwibutows
+// "as i-is" and any expwess ow impwied wawwanties, 😳 i-incwuding, σωσ but nyot
+// wimited t-to, rawr x3 the impwied wawwanties of m-mewchantabiwity a-and fitness fow
+// a pawticuwaw puwpose awe discwaimed. OwO in nyo event shaww the copywight
+// ownew ow contwibutows b-be wiabwe fow a-any diwect, /(^•ω•^) indiwect, 😳😳😳 incidentaw,
+// s-speciaw, ( ͡o ω ͡o ) e-exempwawy, >_< ow consequentiaw d-damages (incwuding, >w< but nyot
+// wimited to, rawr pwocuwement of substitute g-goods ow sewvices; woss of use, 😳
+// data, ow pwofits; ow business intewwuption) h-howevew caused and on any
+// theowy o-of wiabiwity, >w< w-whethew in contwact, (⑅˘꒳˘) s-stwict wiabiwity, OwO ow towt
+// (incwuding n-nyegwigence ow othewwise) a-awising i-in any way out o-of the use
+// of this softwawe, (ꈍᴗꈍ) even if advised o-of the possibiwity o-of such damage. 😳
 -->

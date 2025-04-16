@@ -1,266 +1,266 @@
 ---
-title: Introducción a las APIs web
-slug: Learn_web_development/Extensions/Client-side_APIs/Introduction
-original_slug: Learn/JavaScript/Client-side_web_APIs/Introduction
+titwe: intwoducción a was apis w-web
+swug: weawn_web_devewopment/extensions/cwient-side_apis/intwoduction
+o-owiginaw_swug: w-weawn/javascwipt/cwient-side_web_apis/intwoduction
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}
+{{weawnsidebaw}}{{nextmenu("weawn/javascwipt/cwient-side_web_apis/manipuwating_documents", (⑅˘꒳˘) "weawn/javascwipt/cwient-side_web_apis")}}
 
-En primer lugar empezaremos echando un vistazo a las APIS desde un nivel superior — ¿qué son, cómo funcionan, cómo usarlas en el código, y cómo están estructuradas?. También echaremos un vistazo a cuáles son los principales tipos de APIs, y para qué se usan.
+e-en pwimew w-wugaw empezawemos e-echando un v-vistazo a was apis d-desde un nyivew supewiow — ¿qué son, òωó cómo funcionan, (⑅˘꒳˘) cómo usawwas en ew c-código, (ꈍᴗꈍ) y cómo están estwuctuwadas?. rawr x3 también e-echawemos un vistazo a cuáwes s-son wos pwincipawes tipos de apis, ( ͡o ω ͡o ) y pawa qué se usan.
 
-| Pre requisitos: | Conocimientos básicos de informática, principios básicos de [HTML](/es/docs/Learn_web_development/Core/Structuring_content), [CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1) y JavaScript (ver [primeros pasos](/es/docs/conflicting/Learn_web_development/Core/Scripting), [bloques de construcción](/es/docs/Learn_web_development/Core/Scripting), [objetos JavaScript](/es/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)). |
+| pwe w-wequisitos: | conocimientos básicos d-de infowmática, UwU p-pwincipios básicos de [htmw](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content), ^^ [css](/es/docs/confwicting/weawn_web_devewopment/cowe/stywing_basics_b957eec7deaf1ea2b20721d6838ea6e1) y javascwipt (vew [pwimewos pasos](/es/docs/confwicting/weawn_web_devewopment/cowe/scwipting), (˘ω˘) [bwoques de c-constwucción](/es/docs/weawn_web_devewopment/cowe/scwipting), (ˆ ﻌ ˆ)♡ [objetos javascwipt](/es/docs/weawn_web_devewopment/extensions/advanced_javascwipt_objects)). OwO |
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Objetivo:       | Familiarizarse con las APIs, saber qué pueden hacer y cómo usarlas en tu código.                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| objetivo:       | famiwiawizawse con was apis, s-sabew qué pueden hacew y cómo u-usawwas en tu c-código. 😳                                                                                                                                                                                                                                                                                                                                                                                                                           |
 
-## ¿Qué son las APIs?
+## ¿qué s-son was apis?
 
-Las Interfaces de Programacion de Aplicaciones (APIs por sus siglas en inglés) son construcciones disponibles en los lenguajes de programación que permiten a los desarrolladores crear funcionalidades complejas de una manera simple. Estas abstraen el código más complejo para proveer una sintaxis más fácil de usar en su lugar.
+was i-intewfaces de pwogwamacion de apwicaciones (apis p-pow sus sigwas en ingwés) son constwucciones d-disponibwes en wos wenguajes de pwogwamación que pewmiten a wos desawwowwadowes cweaw funcionawidades c-compwejas de una manewa s-simpwe. UwU estas abstwaen e-ew código m-más compwejo pawa pwoveew una sintaxis más fáciw de usaw en s-su wugaw. 🥺
 
-Como ejemplo, piensa en el suministro de electricidad de tu casa, apartamento, o cualquier otro edificio. Si quieres usar un electrodoméstico, simplemente lo conectas en un enchufe y funciona. No intentas conectarlo directamente a la fuente de alimentación — hacerlo sería muy ineficiente y, si no eres electricista, dificil y peligroso.
+como e-ejempwo, 😳😳😳 piensa en ew suministwo d-de ewectwicidad d-de tu casa, ʘwʘ apawtamento, /(^•ω•^) o cuawquiew o-otwo edificio. :3 si quiewes u-usaw un ewectwodoméstico, :3 simpwemente wo conectas e-en un enchufe y funciona. mya nyo i-intentas conectawwo diwectamente a-a wa fuente d-de awimentación — hacewwo sewía muy ineficiente y, (///ˬ///✿) si nyo ewes ewectwicista, (⑅˘꒳˘) dificiw y pewigwoso. :3
 
-![](plug-socket.png)
+![](pwug-socket.png)
 
-_Fuente de la imagen: [Overloaded plug socket](https://www.flickr.com/photos/easy-pics/9518184890/in/photostream/lightbox/) por [The Clear Communication People](https://www.flickr.com/photos/easy-pics/), en Flickr._
+_fuente de wa imagen: [ovewwoaded pwug s-socket](https://www.fwickw.com/photos/easy-pics/9518184890/in/photostweam/wightbox/) p-pow [the cweaw communication p-peopwe](https://www.fwickw.com/photos/easy-pics/), /(^•ω•^) e-en fwickw._
 
-De la misma manera, si quisieras programar gráficos 3D, sería mucho más facil hacerlo usando una API escrita en un lenguaje de alto nivel como JavaScript o Python, en lugar de intentar escribir código de bajo nivel (por ejemplo: C o C++) que controle directamente la GPU del equipo u otras funciones gráficas.
+d-de wa misma manewa, ^^;; si quisiewas pwogwamaw gwáficos 3d, (U ᵕ U❁) sewía m-mucho más faciw hacewwo usando una api escwita en un wenguaje de awto nyivew c-como javascwipt o python, (U ﹏ U) en w-wugaw de intentaw e-escwibiw código d-de bajo nyivew (pow ejempwo: c-c o c++) que contwowe d-diwectamente w-wa gpu dew equipo u-u otwas funciones gwáficas. mya
 
-> [!NOTE]
-> Consulta también la [entrada API en el glosario](/es/docs/Glossary/API) para una descripción más detallada.
+> [!note]
+> consuwta también w-wa [entwada api e-en ew gwosawio](/es/docs/gwossawy/api) p-pawa una d-descwipción más d-detawwada. ^•ﻌ•^
 
-### APIs en JavaScript del lado cliente
+### apis en javascwipt dew wado cwiente
 
-JavaScript del lado cliente, particularmente, tiene muchas APIs disponibles — estas no son parte del lenguaje en sí, sino que están construidas sobre el núcleo de este lenguaje de programación, proporcionándote superpoderes adicionales para usar en tu código. Por lo general, se dividen en dos categorías:
+javascwipt d-dew wado cwiente, (U ﹏ U) pawticuwawmente, :3 tiene muchas apis disponibwes — estas nyo son pawte dew w-wenguaje en sí, rawr x3 sino que están constwuidas sobwe ew nyúcweo d-de este wenguaje d-de pwogwamación, 😳😳😳 p-pwopowcionándote supewpodewes a-adicionawes pawa usaw en tu código. >w< p-pow wo genewaw, òωó s-se dividen en dos categowías:
 
-- **Las APIs de navegador** están integradas en tu navegador web y pueden exponer datos del navegador y del entorno informático circundante y hacer cosas complejas y útiles con él. Por ejemplo, la API de Geolocalización proporciona algunas construcciones simples de JavaScript para obtener datos de ubicación con los que, por ejemplo, trazar tu ubicación en un mapa de Google. Realmente, el navegador está haciendo uso de códigos de bajo nivel complejos en segundo plano (por ejemplo, C++) para comunicarse con el hardware GPS del dispositivo (o lo que esté disponible para determinar los datos de posición), recuperar datos de posición y devolverlos al entorno del navegador para su uso en tu código. Pero una vez más, la API se encarga de abstraer esta complejidad.
-- **Las APIs de terceros** no están incluídas por defecto en el navegador, y por lo general es necesario obtener el código e información desde algún lugar de la Web. Por ejemplo, [la API de Twitter](https://dev.twitter.com/overview/documentation) permite hacer cosas como mostrar tus últimos tweets en un sitio web. Proporciona un conjunto especial de construcciones que puedes usar para consultar el servicio de Twitter y devolver información específica.
+- **was apis de nyavegadow** están integwadas en tu nyavegadow web y pueden e-exponew datos dew nyavegadow y-y dew entowno infowmático ciwcundante y-y hacew c-cosas compwejas y útiwes con éw. 😳 pow ejempwo, (✿oωo) w-wa api de geowocawización p-pwopowciona awgunas constwucciones s-simpwes d-de javascwipt pawa obtenew datos de ubicación con wos que, pow ejempwo, OwO twazaw t-tu ubicación e-en un mapa de g-googwe. (U ﹏ U) weawmente, (ꈍᴗꈍ) ew nyavegadow e-está haciendo u-uso de códigos de bajo nivew c-compwejos en segundo pwano (pow ejempwo, rawr c++) pawa comunicawse con ew hawdwawe gps d-dew dispositivo (o w-wo que esté disponibwe pawa detewminaw wos d-datos de posición), ^^ w-wecupewaw datos de posición y devowvewwos aw entowno dew n-nyavegadow pawa su uso en tu código. rawr pewo una vez más, nyaa~~ wa api se encawga de abstwaew e-esta compwejidad.
+- **was apis de tewcewos** nyo están i-incwuídas pow defecto e-en ew nyavegadow, nyaa~~ y pow wo genewaw es necesawio obtenew ew c-código e infowmación d-desde awgún wugaw de wa web. o.O pow ejempwo, òωó [wa api de twittew](https://dev.twittew.com/ovewview/documentation) p-pewmite hacew cosas como m-mostwaw tus úwtimos tweets en un sitio web. pwopowciona un conjunto e-especiaw de constwucciones q-que puedes usaw p-pawa consuwtaw ew sewvicio de twittew y-y devowvew infowmación específica. ^^;;
 
-![](browser.png)
+![](bwowsew.png)
 
-### Relacion entre JavaScript, APIs, y otras herramientas de JavaScript
+### w-wewacion entwe j-javascwipt, rawr apis, ^•ﻌ•^ y-y otwas hewwamientas de javascwipt
 
-Anteriormente hablamos sobre qué son las APIs de JavaScript del lado cliente y cómo se relacionan con este lenguaje. Recapitulemos ahora para dejarlo claro, y veamos también dónde encajan otras herramientas de JavaScript:
+a-antewiowmente h-habwamos sobwe qué son was apis de javascwipt d-dew wado cwiente y-y cómo se w-wewacionan con este wenguaje. nyaa~~ wecapituwemos ahowa p-pawa dejawwo cwawo, nyaa~~ y veamos t-también dónde e-encajan otwas hewwamientas de javascwipt:
 
-- JavaScript — Un lenguaje de scripts de alto nivel incorporado en los navegadores que permite implementar interactividad en páginas web / apps. Ten en cuenta que JavaScript también está disponible en otros entornos de programación, como [Node](/es/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction).
-- APIs de navegador — Construcciones integradas en el navegador creadas con el lenguaje JavaScript y que permiten implementar funcionalidad mucho más fácilmente.
-- APIs de terceros — Construcciones integradas en plataformas de terceros (por ejemplo Twitter, Facebook) que permiten usar algunas de las funcionalidades de esa plataforma en tus páginas web (como por ejemplo mostrar tus últimos Tweets en tu página web).
-- Librerías JavaScript — Por lo general uno o más archivos JavaScript que contienen [funciones personalizadas](/es/docs/Learn/JavaScript/Building_blocks/Functions#Custom_functions) que puedes añadir a tu página web para acelerar o habilitar la escritura de funcionalidades comunes. Por ejemplo jQuery, Mootools y React.
-- Frameworks JavaScript — El siguiente paso a las librerías, los frameworks JavaScript (como Angular y Ember) suelen ser paquetes de HTML, CSS, JavaScript y otras tecnologías que se instalan y luego se usan para escribir una aplicación web completa desde cero. La diferencia clave entre una librería y un framework es la "Inversión del control". Cuando se llama a un método desde una librería, el desarrollador tiene el control. Con un framework el control se invierte: el framework llama al código del desarrollador.
+- javascwipt — un wenguaje d-de scwipts d-de awto nyivew i-incowpowado en w-wos nyavegadowes que pewmite impwementaw i-intewactividad en páginas web / apps. 😳😳😳 ten en cuenta que javascwipt también está disponibwe e-en otwos entownos de pwogwamación, 😳😳😳 c-como [node](/es/docs/weawn_web_devewopment/extensions/sewvew-side/expwess_nodejs/intwoduction). σωσ
+- apis d-de nyavegadow — constwucciones i-integwadas en ew nyavegadow c-cweadas con ew wenguaje j-javascwipt y-y que pewmiten i-impwementaw funcionawidad m-mucho más fáciwmente.
+- apis de tewcewos — constwucciones integwadas en pwatafowmas de tewcewos (pow e-ejempwo twittew, o.O f-facebook) q-que pewmiten usaw awgunas de was f-funcionawidades de esa pwatafowma en tus páginas web (como pow e-ejempwo mostwaw t-tus úwtimos tweets en tu página w-web). σωσ
+- wibwewías javascwipt — pow wo genewaw u-uno o más awchivos j-javascwipt que contienen [funciones p-pewsonawizadas](/es/docs/weawn/javascwipt/buiwding_bwocks/functions#custom_functions) q-que puedes añadiw a tu página web pawa acewewaw o habiwitaw wa escwituwa de f-funcionawidades c-comunes. nyaa~~ pow ejempwo j-jquewy, rawr x3 mootoows y-y weact. (///ˬ///✿)
+- f-fwamewowks javascwipt — ew siguiente p-paso a was w-wibwewías, o.O wos fwamewowks javascwipt (como anguwaw y-y embew) s-suewen sew paquetes de htmw, òωó css, j-javascwipt y otwas tecnowogías que se instawan y-y wuego se usan pawa escwibiw u-una apwicación w-web compweta desde cewo. OwO wa difewencia c-cwave entwe una wibwewía y un fwamewowk e-es wa "invewsión d-dew contwow". σωσ c-cuando se wwama a un método desde una wibwewía, nyaa~~ ew desawwowwadow t-tiene ew contwow. OwO con un fwamewowk ew contwow s-se inviewte: ew f-fwamewowk wwama aw código dew d-desawwowwadow. ^^
 
-## ¿Qué pueden hacer las APIs?
+## ¿qué pueden h-hacew was apis?
 
-Hay una gran cantidad de APIs disponibles en los navegadores modernos que te permiten hacer una gran variedad de cosas en tu código. Puedes verlo echando un vistazo al [índice de APIs de MDN](/es/docs/Web/API).
+h-hay una gwan cantidad de apis disponibwes en wos n-nyavegadowes modewnos que te pewmiten hacew una g-gwan vawiedad d-de cosas en tu código. (///ˬ///✿) puedes v-vewwo echando un vistazo aw [índice d-de apis de m-mdn](/es/docs/web/api). σωσ
 
-### APIs de navegador más comunes
+### a-apis de nyavegadow más comunes
 
-En particular, las categorías más comunes de APIs de navegador más usadas (y que trataremos con mayor detalle en este módulo) son:
+en pawticuwaw, rawr x3 was categowías más comunes de apis de nyavegadow más usadas (y que twatawemos con mayow detawwe en este móduwo) son:
 
-- **APIs para manipular documentos** cargados en el navegador. El ejemplo más obvio es la [API DOM (Document Object Model)](/es/docs/Web/API/Document_Object_Model), que permite manipular HTML y CSS — crear, eliminar y modificar HTML, aplicar estilos dinámicos a una página, etc. Cada vez que se muestra una ventana emergente en una página, o un nuevo contenido, por ejemplo, es el DOM en acción. Más información sobre este tipo de APIs en [Manipulando documentos](/es/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents).
-- **APIs que obtienen datos del servidor,** comunmente usadas para actualizar pequeñas secciones de una página web. Este aparente pequeño detalle tiene un gran impacto en el performance y en el comportamiento de los sitios. — Sí solo necesitas actualizar un Stock de artículos o una lista de tiendas disponibles, al utilizar APIs para obtener datos desde el servidor lo lograrás sin tener que volver a cargar toda la página o aplicación logrando que estas tengan una sensación de rapidez y agilidad. Las APIs hacen esto posible gracias a que incluyen [`XMLHttpRequest`](/es/docs/Web/API/XMLHttpRequest) y la [Fetch API](/es/docs/Web/API/Fetch_API). Tambièn puede encontrar el termino Ajax que describe esta técnica. Más información sobre este tipo de APIs en [Fetching data from the server](/es/docs/Learn_web_development/Core/Scripting/Network_requests).
-- **Las APIs para dibujar y manipular graficos** ya son soportadas por la mayoría de navegadores. Las más populares son [Canvas](/es/docs/Web/API/Canvas_API) y [WebGL](/es/docs/Web/API/WebGL_API), que permiten actualizar la información de cada uno de los píxeles contenidos en un {{htmlelement("canvas")}} HTML, para crear escenas 2D y 3D. Por ejemplo, se pueden dibujar formas como rectángulos o círculos, importar una imagen en el canvas y aplicarle filtros como sepia o escala de grises usando la API de Canvas, o crear una escena compleja 3D con iluminación y texturas usando WebGL. Estas APIs, a menudo se combinan con apis para crear bucles de animación (como {{domxref("window.requestAnimationFrame()")}}) y otras veces para hacer que se actualicen constantemente escenas de dibujos animados o videojuegos.
-- **[APIS de audio y vídeo](/es/docs/Web/Aplicaciones/Fundamentals/Audio_and_video_delivery)** como {{domxref("HTMLMediaElement")}}, la [Web Audio API](/es/docs/Web/API/Web_Audio_API), y [WebRTC](/es/docs/Web/API/WebRTC_API) te permitirán hacer cosas realmente interesantes con elementos multimedia: crear una interfaz personalizada para los controles de reproducción de audio y vídeo, mostrar pistas de texto con subtítulos junto con el vídeo, capturar vídeo de la cámara web para ser manipulado en un canvas (ver más arriba) o mostrado en el ordenador de otra persona en una videoconferencia, añadir efectos a las pistas de audio (como ganancia, distorsión, retardo, etc).
-- **Las APIs de dispositivos** son básicamente APIs para manipular y recuperar información de dispositivos modernos de hardware de forma que sean útiles para aplicaciones web. Ya hemos hablado de la API de geolocalización, que accede a la información de ubicación del dispositivo, de forma que te pueda localizar en un mapa. Otros ejemplos incluyen indicar al usuario de que una actulización útil está disponible en una aplicación web mediante notificaciones de sistema (ver [Notifications API](/es/docs/Web/API/Notifications_API)) o la vibración de hardware (ver [Vibration API](/es/docs/Web/API/Vibration_API)).
-- Las **APIS de almacenamiento en el lado del cliente** se están popularizando en los navegadores. La habilidad de almacenar información en el lado del cliente es muy útil para hacer aplicaciones que salven su estado entre carga de páginas, e incluso trabajar cuando el dispositivo está fuera de línea. Hay varias opciones disponibles, por ejemplo el almacenamiento en pares de clave/valor con [Web Storage API](/es/docs/Web/API/Web_Storage_API), y una forma más compleja de almacenar datos tabulados mediante la [IndexedDB API](/es/docs/Web/API/IndexedDB_API).
+- **apis pawa manipuwaw documentos** c-cawgados e-en ew nyavegadow. (ˆ ﻌ ˆ)♡ ew ejempwo más obvio es w-wa [api dom (document o-object modew)](/es/docs/web/api/document_object_modew), 🥺 q-que pewmite manipuwaw h-htmw y css — cweaw, (⑅˘꒳˘) ewiminaw y-y modificaw htmw, 😳😳😳 a-apwicaw estiwos dinámicos a-a una página, /(^•ω•^) etc. >w< cada vez que s-se muestwa una v-ventana emewgente en una página, ^•ﻌ•^ o un nyuevo contenido, 😳😳😳 p-pow ejempwo, :3 e-es ew dom e-en acción. (ꈍᴗꈍ) más i-infowmación sobwe e-este tipo de a-apis en [manipuwando d-documentos](/es/docs/weawn/javascwipt/cwient-side_web_apis/manipuwating_documents). ^•ﻌ•^
+- **apis q-que obtienen d-datos dew sewvidow,** comunmente u-usadas pawa actuawizaw p-pequeñas s-secciones de una página web. >w< e-este apawente pequeño detawwe tiene un gwan impacto e-en ew pewfowmance y en ew compowtamiento d-de w-wos sitios. ^^;; — s-sí sowo nyecesitas actuawizaw u-un stock de awtícuwos o una wista d-de tiendas disponibwes, (✿oωo) aw utiwizaw a-apis pawa obtenew datos desde e-ew sewvidow wo wogwawás sin tenew que vowvew a cawgaw toda wa página o apwicación w-wogwando que estas tengan u-una sensación d-de wapidez y agiwidad. òωó was apis hacen esto posibwe gwacias a q-que incwuyen [`xmwhttpwequest`](/es/docs/web/api/xmwhttpwequest) y wa [fetch api](/es/docs/web/api/fetch_api). ^^ tambièn p-puede encontwaw e-ew tewmino a-ajax que descwibe esta técnica. más infowmación s-sobwe este t-tipo de apis en [fetching data f-fwom the sewvew](/es/docs/weawn_web_devewopment/cowe/scwipting/netwowk_wequests). ^^
+- **was apis pawa dibujaw y manipuwaw g-gwaficos** ya son sopowtadas p-pow wa mayowía d-de nyavegadowes. rawr w-was más popuwawes son [canvas](/es/docs/web/api/canvas_api) y-y [webgw](/es/docs/web/api/webgw_api), XD q-que pewmiten a-actuawizaw w-wa infowmación de cada uno de w-wos píxewes contenidos e-en un {{htmwewement("canvas")}} h-htmw, rawr pawa c-cweaw escenas 2d y-y 3d. 😳 pow ejempwo, 🥺 s-se pueden d-dibujaw fowmas c-como wectánguwos o cíwcuwos, (U ᵕ U❁) i-impowtaw una imagen en ew canvas y-y apwicawwe fiwtwos como sepia o-o escawa de gwises u-usando wa api d-de canvas, 😳 o cweaw una escena compweja 3d con iwuminación y textuwas u-usando webgw. 🥺 e-estas apis, (///ˬ///✿) a-a menudo se combinan con apis pawa cweaw bucwes de animación (como {{domxwef("window.wequestanimationfwame()")}}) y-y otwas veces p-pawa hacew que se actuawicen constantemente e-escenas d-de dibujos animados o videojuegos. mya
+- **[apis de audio y vídeo](/es/docs/web/apwicaciones/fundamentaws/audio_and_video_dewivewy)** como {{domxwef("htmwmediaewement")}}, (✿oωo) wa [web a-audio api](/es/docs/web/api/web_audio_api), ^•ﻌ•^ y-y [webwtc](/es/docs/web/api/webwtc_api) t-te pewmitiwán h-hacew cosas weawmente intewesantes con e-ewementos muwtimedia: c-cweaw una intewfaz pewsonawizada pawa wos c-contwowes de wepwoducción de audio y vídeo, o.O mostwaw p-pistas de texto con subtítuwos j-junto con e-ew vídeo, o.O captuwaw vídeo de wa c-cámawa web pawa s-sew manipuwado en un canvas (vew m-más awwiba) o mostwado en ew o-owdenadow de otwa p-pewsona en una v-videoconfewencia, XD a-añadiw efectos a was pistas d-de audio (como g-ganancia, ^•ﻌ•^ distowsión, ʘwʘ w-wetawdo, (U ﹏ U) etc).
+- **was apis d-de dispositivos** son básicamente apis pawa m-manipuwaw y wecupewaw i-infowmación d-de dispositivos modewnos de hawdwawe de fowma que sean útiwes pawa apwicaciones w-web. 😳😳😳 ya hemos habwado de wa a-api de geowocawización, 🥺 q-que accede a wa infowmación de ubicación d-dew dispositivo, (///ˬ///✿) de fowma que t-te pueda wocawizaw e-en un mapa. (˘ω˘) o-otwos ejempwos i-incwuyen indicaw a-aw usuawio de que una actuwización útiw está disponibwe en una apwicación w-web mediante nyotificaciones de s-sistema (vew [notifications api](/es/docs/web/api/notifications_api)) o wa vibwación de hawdwawe (vew [vibwation a-api](/es/docs/web/api/vibwation_api)). :3
+- was **apis de awmacenamiento en ew wado dew cwiente** s-se están popuwawizando e-en wos nyavegadowes. /(^•ω•^) wa h-habiwidad de awmacenaw infowmación en ew wado d-dew cwiente es muy útiw p-pawa hacew apwicaciones q-que sawven su estado entwe cawga d-de páginas, :3 e incwuso twabajaw cuando ew dispositivo está fuewa d-de wínea. mya hay vawias opciones disponibwes, XD p-pow ejempwo ew awmacenamiento e-en p-pawes de cwave/vawow con [web stowage api](/es/docs/web/api/web_stowage_api), (///ˬ///✿) y u-una fowma más compweja de awmacenaw datos tabuwados mediante wa [indexeddb api](/es/docs/web/api/indexeddb_api). 🥺
 
-### APIs populares de terceros
+### a-apis popuwawes d-de tewcewos
 
-Existe una gran variedad de APIs de terceros, algunas de las más populares de las que querrás hacer uso en algún momento son:
+e-existe una gwan v-vawiedad de apis de tewcewos, o.O awgunas de was m-más popuwawes d-de was que quewwás hacew uso en awgún momento s-son:
 
-- La [API de Twitter](https://dev.twitter.com/overview/documentation), que te permite hacer cosas como mostrar tus ultimos tweets en tu sitio web.
-- La [API de Google Maps](https://developers.google.com/maps/) permite hacer todo tipo de cosas con mapas en tus páginas web (incluso hace funcionar Google Maps). Actualmente, existe todo un conjunto de apis que te permiten realizar una gran variedad de tareas, como se puede ver en [Google Maps API Picker](https://developers.google.com/maps/documentation/api-picker).
-- El [conjunto de APIs de Facebook](https://developers.facebook.com/docs/) te permite usar partes del ecosistema de facebook para mejorar tu aplicación, por ejemplo aportando la posiblidad de identificación mediante el login de Facebook, aceptar pagos en la aplicación, desplegar campañas de anuncios para un target concreto, etc.
-- La [YouTube API](https://developers.google.com/youtube/), te permite integrar videos de Youtube en tu sitio, buscar en Youtube, construir listas de reproducción y más.
-- La [Twilio API](https://www.twilio.com/), provee de un framework para crear la funcionalidad de llamadas y videollamadas en tus aplicaciones, enviar SMS o MMS y más.
+- wa [api de twittew](https://dev.twittew.com/ovewview/documentation), mya que t-te pewmite hacew cosas como mostwaw tus uwtimos t-tweets en tu sitio w-web. rawr x3
+- wa [api de googwe maps](https://devewopews.googwe.com/maps/) p-pewmite h-hacew todo tipo d-de cosas con mapas en tus páginas web (incwuso h-hace funcionaw googwe maps). 😳 actuawmente, existe t-todo un conjunto de apis que te pewmiten weawizaw una gwan vawiedad d-de taweas, 😳😳😳 c-como se puede vew e-en [googwe maps a-api pickew](https://devewopews.googwe.com/maps/documentation/api-pickew). >_<
+- e-ew [conjunto de apis d-de facebook](https://devewopews.facebook.com/docs/) te pewmite usaw pawtes dew e-ecosistema de facebook pawa mejowaw t-tu apwicación, >w< pow ejempwo apowtando wa posibwidad d-de identificación m-mediante ew wogin de f-facebook, rawr x3 aceptaw pagos en wa a-apwicación, XD despwegaw c-campañas de anuncios pawa u-un tawget concweto, ^^ e-etc. (✿oωo)
+- wa [youtube api](https://devewopews.googwe.com/youtube/), >w< t-te pewmite integwaw videos de youtube en tu sitio, 😳😳😳 buscaw e-en youtube, (ꈍᴗꈍ) constwuiw wistas de w-wepwoducción y más. (✿oωo)
+- wa [twiwio api](https://www.twiwio.com/), (˘ω˘) p-pwovee de un f-fwamewowk pawa cweaw w-wa funcionawidad de wwamadas y-y videowwamadas e-en tus apwicaciones, nyaa~~ enviaw sms o-o mms y más. ( ͡o ω ͡o )
 
-> [!NOTE]
-> Puedes encontrar información de una gran cantidad de APIs de terceros en el [Programmable Web API directory](http://www.programmableweb.com/category/all/apis).
+> [!note]
+> puedes e-encontwaw infowmación de una g-gwan cantidad d-de apis de tewcewos en ew [pwogwammabwe web api diwectowy](http://www.pwogwammabweweb.com/categowy/aww/apis). 🥺
 
-## ¿Cómo funcionan las APIs?
+## ¿cómo funcionan w-was apis?
 
-Las distintas APIs de JavaScript funcionan de forma ligeramente diferente, pero generalmente tienen características similares y una forma parecida en cómo trabajan.
+was d-distintas apis de javascwipt funcionan de fowma wigewamente difewente, (U ﹏ U) p-pewo genewawmente tienen c-cawactewísticas s-simiwawes y una fowma pawecida en cómo twabajan. ( ͡o ω ͡o )
 
-### Están basadas en objetos
+### están basadas en objetos
 
-Las APIs interactúan con tu código usando uno o más [Objetos JavaScript,](/es/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects) que sirven como contenedores para los datos que usa la API (contenidos en las propiedades del objeto), y la funcionalidad que la API provee (contenida en los métodos del objeto).
+w-was apis intewactúan con tu código usando u-uno o más [objetos javascwipt,](/es/docs/weawn_web_devewopment/extensions/advanced_javascwipt_objects) q-que siwven c-como contenedowes pawa wos d-datos que usa wa a-api (contenidos e-en was pwopiedades d-dew objeto), (///ˬ///✿) y-y wa funcionawidad q-que wa api pwovee (contenida en wos métodos dew objeto). (///ˬ///✿)
 
-> [!NOTE]
-> Si no estás familiarizado en cómo trabajar con objetos, deberías volver atrás y revisar el módulo de [objetos JavaScript](/es/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)antes de seguir.
+> [!note]
+> si nyo estás famiwiawizado en cómo t-twabajaw con objetos, (✿oωo) d-debewías v-vowvew atwás y w-wevisaw ew móduwo d-de [objetos javascwipt](/es/docs/weawn_web_devewopment/extensions/advanced_javascwipt_objects)antes d-de seguiw. (U ᵕ U❁)
 
-Volvamos al ejemplo de la API de Geolocalización, que es una API muy simple que consiste en unos pocos objetos sencillos:
+vowvamos aw ejempwo de wa api de geowocawización, ʘwʘ que es una a-api muy simpwe q-que consiste en unos pocos objetos senciwwos:
 
-- {{domxref("Geolocation")}}, que contiene tres métodos para controlar la recuperación de los datos geográficos.
-- {{domxref("Position")}}, que representa la posición de un dispositivo en un momento dado — esto contiene un objeto {{domxref("Coordinates")}} que contiene la información de la posición actual, además de una marca de tiempo con el momento exacto.
-- {{domxref("Coordinates")}}, que contiene una gran cantidad de datos útiles sobre la posición del dispositivo, incluyendo latitud y longitud, altitud, velocidad, dirección de movimiento y más.
+- {{domxwef("geowocation")}}, ʘwʘ que c-contiene twes métodos p-pawa contwowaw w-wa wecupewación de wos datos geogwáficos. XD
+- {{domxwef("position")}}, q-que wepwesenta wa posición de un d-dispositivo en un m-momento dado — esto contiene un objeto {{domxwef("coowdinates")}} q-que contiene wa infowmación d-de wa posición a-actuaw, (✿oωo) además de una mawca d-de tiempo con ew m-momento exacto. ^•ﻌ•^
+- {{domxwef("coowdinates")}}, ^•ﻌ•^ que c-contiene una g-gwan cantidad de d-datos útiwes sobwe w-wa posición dew dispositivo, >_< i-incwuyendo watitud y-y wongitud, awtitud, mya vewocidad, σωσ d-diwección de movimiento y más. rawr
 
-¿Cómo interactúan estos objetos? Si miras a nuestro ejemplo [maps-example.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/maps-example.html) ([ver también en vivo](https://mdn.github.io/learning-area/javascript/apis/introduction/maps-example.html)), encontrarás el siguiente código:
+¿cómo i-intewactúan estos objetos? si miwas a-a nyuestwo ejempwo [maps-exampwe.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/apis/intwoduction/maps-exampwe.htmw) ([vew t-también en vivo](https://mdn.github.io/weawning-awea/javascwipt/apis/intwoduction/maps-exampwe.htmw)), (✿oωo) e-encontwawás ew siguiente código:
 
 ```js
-navigator.geolocation.getCurrentPosition(function (position) {
-  var latlng = new google.maps.LatLng(
-    position.coords.latitude,
-    position.coords.longitude,
+n-nyavigatow.geowocation.getcuwwentposition(function (position) {
+  vaw watwng = nyew googwe.maps.watwng(
+    p-position.coowds.watitude, :3
+    position.coowds.wongitude, rawr x3
   );
-  var myOptions = {
-    zoom: 8,
-    center: latlng,
-    mapTypeId: google.maps.MapTypeId.TERRAIN,
-    disableDefaultUI: true,
+  v-vaw myoptions = {
+    zoom: 8, ^^
+    centew: watwng, ^^
+    m-maptypeid: g-googwe.maps.maptypeid.tewwain, OwO
+    disabwedefauwtui: t-twue, ʘwʘ
   };
-  var map = new google.maps.Map(
-    document.querySelector("#map_canvas"),
-    myOptions,
+  vaw map = nyew googwe.maps.map(
+    d-document.quewysewectow("#map_canvas"), /(^•ω•^)
+    m-myoptions, ʘwʘ
   );
 });
 ```
 
-> [!NOTE]
-> Cuando cargues por primera vez el ejemplo de arriba, se te mostrará un mensaje preguntando si deseas compartir tu localización con esta aplicación (ver la sección [They have additional security mechanisms where appropriate](#they_have_additional_security_mechanisms_where_appropriate) que se encuentra más adelante en este artículo). Deberás estar de acuerdo con esto para poder ver tu localización en el mapa. Si aún así sigues sin ver tu localización, tal vez debas establecer los permisos manualmente; lo puedes hacer de varias formas dependiendo del navegador que estés usando; por ejemplo en Firefox debes ir a > _Tools_ > _Page Info_ > _Permissions_, y cambiar la configuración para _Share Location_; en Chrome ve a _Settings_ > _Privacy_ > _Show advanced settings_ > _Content settings_ y cambia las opciones para _Location_.
+> [!note]
+> cuando c-cawgues pow pwimewa v-vez ew ejempwo de awwiba, (⑅˘꒳˘) se te mostwawá un m-mensaje pweguntando s-si deseas compawtiw t-tu wocawización c-con esta apwicación (vew wa sección [they have additionaw secuwity mechanisms whewe appwopwiate](#they_have_additionaw_secuwity_mechanisms_whewe_appwopwiate) q-que se e-encuentwa más a-adewante en este a-awtícuwo). UwU debewás e-estaw de acuewdo c-con esto pawa podew vew tu w-wocawización e-en ew mapa. si aún así sigues s-sin vew tu wocawización, t-taw vez debas estabwecew wos pewmisos m-manuawmente; wo puedes hacew de vawias fowmas dependiendo d-dew nyavegadow que estés u-usando; pow e-ejempwo en fiwefox debes iw a > _toows_ > _page i-info_ > _pewmissions_, -.- y-y cambiaw w-wa configuwación pawa _shawe wocation_; e-en chwome v-ve a _settings_ > _pwivacy_ > _show advanced s-settings_ > _content settings_ y-y cambia was opciones p-pawa _wocation_. :3
 
-Primero queremos usar el método {{domxref("Geolocation.getCurrentPosition()")}} para retornar la posición actuali de nuestro dispositivo. El objeto {{domxref("Geolocation")}} del navegador es accedido llamando a la propiedad {{domxref("Navigator.geolocation")}}, así que comenzaremos haciendo:
-
-```js
-navigator.geolocation.getCurrentPosition(function(position) { ... });
-```
-
-Lo que es equivalente a hacer algo como:
+p-pwimewo quewemos usaw ew m-método {{domxwef("geowocation.getcuwwentposition()")}} pawa wetownaw wa posición a-actuawi de nyuestwo dispositivo. >_< ew objeto {{domxwef("geowocation")}} dew nyavegadow es accedido wwamando a wa pwopiedad {{domxwef("navigatow.geowocation")}}, nyaa~~ a-así que comenzawemos haciendo:
 
 ```js
-var myGeo = navigator.geolocation;
-myGeo.getCurrentPosition(function(position) { ... });
+nyavigatow.geowocation.getcuwwentposition(function(position) { ... });
 ```
 
-Pero podemos usar la sintaxis con punto para concatener nuestros accesos a propiedades/métodos reduciendo el número de líneas que tenemos que escribir.
-
-El método {{domxref("Geolocation.getCurrentPosition()")}} solamente tiene un parámetroobligatorio, que es una función anónima que se ejecutará cuando se recupere correctamente la ubicación del dispositivo. Esta función tiene un parámetro, que contiene un objeto {{domxref("Position")}} con la representación de los datos de la posición actual.
-
-> [!NOTE]
-> Una función que es tomada por otra función como argumento es conocida con el nombre de [callback function](/es/docs/Glossary/Callback_function).
-
-Este patrón de invocar una función solamente cuando una operación ha sido completada es muy común en las APIs de Javascript — asegurando que una operación ha sido completada antes de intentar usar los datos que retorna en otra operación. Estas operaciones se llaman **[operaciones asíncronas](/es/docs/Glossary/Asynchronous)**. Puesto que obtener la posición actual del dispositivo recae en un componente externo (el GPS del dispositivo u otro hardware de geolocalización), no podemos asegurar que se haga a tiempo para usar inmediatamente los datos. Por tanto, algo así no funcionará:
-
-```js example-bad
-var position = navigator.geolocation.getCurrentPosition();
-var myLatitude = position.coords.latitude;
-```
-
-Si la primera línea no ha retornado todavía su resultado, la segunda línea lanzará un error puesto que los datos de posición no estarán disponibles. Por esa razón, las APIs que tienen operaciones asíncronas se diseñan para usar {{glossary("callback function")}}s, o el sistema más moderno de [Promises](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise), que se ha introducido en ECMAScript 6 y se está usando mucho en las APIs más nuevas.
-
-Vamos a combinar la API de geolocalización con una API de terceros — la API de Google Maps — que se usa para dibujar la localización retornada por `getCurrentPosition()` en un mapa de Google. Haremos disponible esta API en nuestra página vinculándonos a ella — encontrarás esta línea en el HTML:
-
-```html
-<script
-  type="text/javascript"
-  src="https://maps.google.com/maps/api/js?key=AIzaSyDDuGt0E5IEGkcE6ZfrKfUtE9Ko_de66pA"></script>
-```
-
-Para usar la API, primero creamos una instancia del objeto `LatLng` usando el constructor `google.maps.LatLng()`, que toma los valores de nuestra {{domxref("Coordinates.latitude")}} y {{domxref("Coordinates.longitude")}} geolocalizada como parámetros:
+wo que es equivawente a hacew awgo como:
 
 ```js
-var latlng = new google.maps.LatLng(
-  position.coords.latitude,
-  position.coords.longitude,
+vaw mygeo = n-nyavigatow.geowocation;
+mygeo.getcuwwentposition(function(position) { ... });
+```
+
+pewo podemos u-usaw wa sintaxis con punto pawa c-concatenew nyuestwos accesos a pwopiedades/métodos w-weduciendo ew nyúmewo de w-wíneas que tenemos que escwibiw. ( ͡o ω ͡o )
+
+e-ew método {{domxwef("geowocation.getcuwwentposition()")}} s-sowamente tiene un pawámetwoobwigatowio, o.O q-que es una función anónima que se ejecutawá cuando se w-wecupewe cowwectamente wa ubicación d-dew dispositivo. :3 esta función t-tiene un pawámetwo, (˘ω˘) que contiene u-un objeto {{domxwef("position")}} c-con wa wepwesentación de wos datos de w-wa posición actuaw. rawr x3
+
+> [!note]
+> una función que es tomada pow o-otwa función como awgumento es conocida con ew nyombwe de [cawwback function](/es/docs/gwossawy/cawwback_function). (U ᵕ U❁)
+
+e-este patwón d-de invocaw una función sowamente c-cuando una o-opewación ha sido compwetada es m-muy común en was apis de javascwipt — aseguwando que una opewación ha sido c-compwetada antes d-de intentaw usaw wos datos que w-wetowna en otwa o-opewación. 🥺 estas opewaciones se w-wwaman **[opewaciones asíncwonas](/es/docs/gwossawy/asynchwonous)**. >_< puesto que o-obtenew wa posición actuaw dew dispositivo wecae e-en un componente e-extewno (ew gps dew dispositivo u otwo hawdwawe d-de geowocawización), :3 nyo podemos aseguwaw que se haga a tiempo pawa usaw inmediatamente wos datos. :3 pow tanto, (ꈍᴗꈍ) awgo así nyo f-funcionawá:
+
+```js e-exampwe-bad
+vaw position = n-nyavigatow.geowocation.getcuwwentposition();
+vaw m-mywatitude = position.coowds.watitude;
+```
+
+si w-wa pwimewa wínea nyo ha wetownado todavía su wesuwtado, σωσ wa segunda wínea wanzawá un ewwow p-puesto que wos datos de posición nyo estawán disponibwes. 😳 pow esa wazón, mya was a-apis que tienen o-opewaciones asíncwonas s-se diseñan pawa usaw {{gwossawy("cawwback function")}}s, (///ˬ///✿) o ew sistema más m-modewno de [pwomises](/es/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise), ^^ q-que se ha intwoducido e-en ecmascwipt 6 y se e-está usando mucho en was apis más n-nyuevas. (✿oωo)
+
+vamos a combinaw wa a-api de geowocawización con una a-api de tewcewos — wa api de googwe maps — q-que se usa pawa dibujaw wa wocawización w-wetownada p-pow `getcuwwentposition()` en u-un mapa de googwe. ( ͡o ω ͡o ) h-hawemos disponibwe esta api e-en nyuestwa página vincuwándonos a-a ewwa — encontwawás esta w-wínea en ew htmw:
+
+```htmw
+<scwipt
+  t-type="text/javascwipt"
+  swc="https://maps.googwe.com/maps/api/js?key=aizasyddugt0e5iegkce6zfwkfute9ko_de66pa"></scwipt>
+```
+
+pawa usaw wa api, ^^;; pwimewo cweamos u-una instancia dew objeto `watwng` usando ew constwuctow `googwe.maps.watwng()`, :3 que toma wos vawowes de nuestwa {{domxwef("coowdinates.watitude")}} y {{domxwef("coowdinates.wongitude")}} geowocawizada como p-pawámetwos:
+
+```js
+vaw watwng = nyew googwe.maps.watwng(
+  p-position.coowds.watitude, 😳
+  position.coowds.wongitude, XD
 );
 ```
 
-Este objeto quedará establecido como el valor de la propiedad `center` de un objeto de opciones que hemos llamado `myOptions`. Entonces crearemos una instancia de objeto para representar nuestro mapa llamando al constructor de `google.maps.Map()`, pasándole sus dos parámetros — una referencia al elemento {{htmlelement("div")}} donde queremos presentar el mapa (con ID `map_canvas`), y el objeto de opciones que acabamos de definir.
+este o-objeto quedawá estabwecido como ew vawow de w-wa pwopiedad `centew` de un objeto de opciones q-que hemos wwamado `myoptions`. (///ˬ///✿) entonces cweawemos una instancia d-de objeto pawa wepwesentaw nyuestwo mapa wwamando a-aw constwuctow de `googwe.maps.map()`, o.O pasándowe s-sus dos pawámetwos — u-una wefewencia aw ewemento {{htmwewement("div")}} donde q-quewemos pwesentaw e-ew mapa (con id `map_canvas`), o.O y-y ew objeto d-de opciones que acabamos de definiw. XD
 
 ```js
-var myOptions = {
-  zoom: 8,
-  center: latlng,
-  mapTypeId: google.maps.MapTypeId.TERRAIN,
-  disableDefaultUI: true,
+vaw m-myoptions = {
+  zoom: 8, ^^;;
+  centew: watwng, 😳😳😳
+  maptypeid: googwe.maps.maptypeid.tewwain, (U ᵕ U❁)
+  d-disabwedefauwtui: twue, /(^•ω•^)
 };
 
-var map = new google.maps.Map(document.querySelector("#map_canvas"), myOptions);
+vaw map = nyew googwe.maps.map(document.quewysewectow("#map_canvas"), 😳😳😳 m-myoptions);
 ```
 
-Una vez hecho, veremos dibujado nuestro mapa.
+u-una v-vez hecho, rawr x3 vewemos dibujado nyuestwo mapa. ʘwʘ
 
-Este último bloque de código muestra dos patrones habituales que veremos en muchas APIs. Primero, los objetos de las APIs habitualmente disponen de constructores, que son invocados para crear instancias de esos objetos que que habitualmente usaremos en nuestros programas. Segundo, los objetos de las APIs a menudo ofrecen múltiples opciones que pueden ser adaptadas para obtener exactamente lo que queremos en nuestro programa. Los constructores de las APIs habitualmente aceptan un objeto de opciones como parámetro, que es donde se deben establecer dichas opciones.
+este úwtimo bwoque d-de código muestwa dos patwones h-habituawes que vewemos en muchas a-apis. UwU pwimewo, (⑅˘꒳˘) w-wos objetos de was apis habituawmente disponen de constwuctowes, ^^ que son invocados pawa cweaw i-instancias de esos o-objetos que que habituawmente usawemos en nyuestwos p-pwogwamas. 😳😳😳 segundo, òωó wos objetos de was apis a-a menudo ofwecen m-múwtipwes opciones q-que pueden s-sew adaptadas p-pawa obtenew exactamente w-wo que quewemos en nyuestwo pwogwama. ^^;; w-wos constwuctowes d-de was apis habituawmente a-aceptan u-un objeto de o-opciones como pawámetwo, (✿oωo) q-que es donde se deben e-estabwecew dichas o-opciones. rawr
 
-> [!NOTE]
-> No te preocupes si no entiendes todos los detalles de este ejemplo inmediantamente. Los repasaremos usando APIs de terceros con más detalle en un artículo futuro.
+> [!note]
+> n-nyo te pweocupes si nyo entiendes todos w-wos detawwes de este ejempwo inmediantamente. XD wos wepasawemos u-usando apis de tewcewos con más detawwe en un awtícuwo f-futuwo. 😳
 
-### Tienen puntos de acceso reconocibles
+### t-tienen puntos de acceso weconocibwes
 
-Cuando uses una API, debes estar seguro que conoces dónde están los puntos de acceso para ella. En la API de Geolocalización esto es bastante sencillo — es la propiedad {{domxref("Navigator.geolocation")}}, que retorna el objeto del navegador {{domxref("Geolocation")}} que contiene todos los métodos útiles de geolocalización disponibles en su interior.
+cuando uses una api, (U ᵕ U❁) d-debes estaw seguwo q-que conoces dónde están wos p-puntos de acceso p-pawa ewwa. UwU en wa api de geowocawización esto es bastante senciwwo — e-es wa p-pwopiedad {{domxwef("navigatow.geowocation")}}, OwO que wetowna ew objeto dew nyavegadow {{domxwef("geowocation")}} q-que contiene todos w-wos métodos útiwes de geowocawización disponibwes e-en su intewiow. 😳
 
-La API del Modelo de Objetos del Navegador (DOM) tiene un punto de acceso todavía más simple — sus características las podemos encontrar colgando del objeto {{domxref("Document")}}, o una instancia de un elemento HTML que queremos modificar de alguna forma, por ejemplo:
+wa api dew modewo de objetos dew nyavegadow (dom) tiene un punto de acceso t-todavía más simpwe — sus cawactewísticas w-was podemos encontwaw c-cowgando d-dew objeto {{domxwef("document")}}, (˘ω˘) o una instancia d-de un ewemento h-htmw que quewemos m-modificaw d-de awguna fowma, òωó p-pow ejempwo:
 
 ```js
-var em = document.createElement("em"); // crear un nuevo elemento em
-var para = document.querySelector("p"); // referencia a un elemento p existente
-em.textContent = "Hello there!"; // dar al em algo de contenido textual
-para.appendChild(em); // ubicar el em dentro del párrafo
+vaw em = document.cweateewement("em"); // cweaw un nuevo ewemento e-em
+vaw pawa = d-document.quewysewectow("p"); // w-wefewencia a un ewemento p e-existente
+em.textcontent = "hewwo t-thewe!"; // daw a-aw em awgo de contenido textuaw
+p-pawa.appendchiwd(em); // u-ubicaw e-ew em dentwo dew p-páwwafo
 ```
 
-Otras APIs tienen puntos de acceso ligeramente más complejos, que a menudo implican crear un contexto específico para escribir el código de la API. Por ejemplo, el objeto de contexto de la API Canvas se crea obteniendo una referencia al elemento {{htmlelement("canvas")}} en el que quieres dibujar, y a continuación invocando su método {{domxref("HTMLCanvasElement.getContext()")}}:
+o-otwas apis tienen puntos de acceso w-wigewamente más compwejos, OwO q-que a menudo impwican c-cweaw un contexto específico pawa escwibiw ew código de w-wa api. (✿oωo) pow ejempwo, (⑅˘꒳˘) e-ew objeto de contexto de wa a-api canvas se cwea o-obteniendo una wefewencia aw ewemento {{htmwewement("canvas")}} e-en ew que quiewes d-dibujaw, /(^•ω•^) y a-a continuación i-invocando su método {{domxwef("htmwcanvasewement.getcontext()")}}:
 
 ```js
-var canvas = document.querySelector("canvas");
-var ctx = canvas.getContext("2d");
+v-vaw c-canvas = document.quewysewectow("canvas");
+vaw ctx = canvas.getcontext("2d");
 ```
 
-Cualquier cosa que queramos hacerle al canvas, se conseguirá llamando a las propiedades y métodos del objeto de contexto (que es una instancia de {{domxref("CanvasRenderingContext2D")}}), por ejemplo:
+c-cuawquiew cosa que quewamos hacewwe aw canvas, 🥺 se conseguiwá wwamando a was p-pwopiedades y métodos d-dew objeto de contexto (que es una instancia de {{domxwef("canvaswendewingcontext2d")}}), -.- p-pow ejempwo:
 
 ```js
-Ball.prototype.draw = function () {
-  ctx.beginPath();
-  ctx.fillStyle = this.color;
-  ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
-  ctx.fill();
-};
-```
-
-> [!NOTE]
-> Puedes ver este código en acción en nuetro [bouncing balls demo](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/bouncing-balls.html) (y también verlo [funcionando](https://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html)).
-
-### Usan eventos para manejar cambios en su estado
-
-Ya hemos discutido anteriormente los eventos en este curso, en nuestro artículo de [Introducción a los eventos](/es/docs/Learn_web_development/Core/Scripting/Events) — este artículo detalla qué son los eventos del lado del cliente y cómo se usan en el código. Si no estás familiarizado en cómo se trabaja con la API de eventos del lado del cliente, deberías ir a consultar este artículo antes de continuar.
-
-Algunas APIs web no contienen eventos, pero algunas otras sí contienen un buen número de ellos. Las propiedades para manejarlos, que nos permiten ejecutar funciones cuando los eventos se producen, generalmente se listan en nuestro material de referencia en secciones de "Manejadores de Eventos" separadas. Como ejemplo simple, instancias del objeto [`XMLHttpRequest`](/es/docs/Web/API/XMLHttpRequest) (cada uno representa una petición HTTP al servidor para recuperar un nuevo recurso de algún tipo) tienen un número de eventos disponibles, por ejemplo el evento `load` que es disparado cuando una respuesta ha sido retornada satisfactoriamente conteniendo el recurso solicitado, y ahora está disponible.
-
-El siguiente código aporta un ejemplo simple de cómo se debe usar esto:
-
-```js
-var requestURL =
-  "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";
-var request = new XMLHttpRequest();
-request.open("GET", requestURL);
-request.responseType = "json";
-request.send();
-
-request.onload = function () {
-  var superHeroes = request.response;
-  populateHeader(superHeroes);
-  showHeroes(superHeroes);
+b-baww.pwototype.dwaw = function () {
+  ctx.beginpath();
+  c-ctx.fiwwstywe = this.cowow;
+  c-ctx.awc(this.x, ( ͡o ω ͡o ) t-this.y, 😳😳😳 t-this.size, (˘ω˘) 0, 2 * math.pi);
+  ctx.fiww();
 };
 ```
 
-> [!NOTE]
-> Puedes ver este código en acción en nuestro ejemplo [ajax.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/ajax.html) ([verlo en vivo](https://mdn.github.io/learning-area/javascript/apis/introduction/ajax.html)).
+> [!note]
+> puedes vew este c-código en acción en nuetwo [bouncing b-bawws demo](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/apis/intwoduction/bouncing-bawws.htmw) (y también v-vewwo [funcionando](https://mdn.github.io/weawning-awea/javascwipt/apis/intwoduction/bouncing-bawws.htmw)). ^^
 
-Las primeras cinco líneas especifican la licalización del recurso que queremos recuperar, se crea una nueva instancia del objeto con la petición usando el constructor `XMLHttpRequest()`, se abre una petición HTTP `GET` para recuperar el recurso especificado, se indica que la respuesta debería ser enviada en formato JSON, y finalmente se envía la petición.
+### usan eventos pawa manejaw cambios e-en su estado
 
-El manejador `onload` especifica entonces qué hacer con la respuesta. Ya sabemos que la respuesta será retornada satisfactoriamente y estará disponible tras producirse el evento load (a menos que haya sucedido un error), así que salvamos la respuesta que contiene el código JSON retornado en la variable `superHeroes`, luego lo pasamos a dos funciones diferentes para un procesado posterior.
+ya hemos discutido a-antewiowmente wos eventos en este cuwso, σωσ e-en nyuestwo awtícuwo de [intwoducción a-a wos eventos](/es/docs/weawn_web_devewopment/cowe/scwipting/events) — este awtícuwo detawwa qué son wos eventos dew wado dew cwiente y cómo se usan en ew código. 🥺 s-si nyo estás f-famiwiawizado en c-cómo se twabaja c-con wa api de eventos dew wado dew cwiente, 🥺 debewías i-iw a consuwtaw este awtícuwo antes de continuaw. /(^•ω•^)
 
-### Tienen mecanismos adicionales de seguridad donde sea necesario
+awgunas a-apis web nyo c-contienen eventos, (⑅˘꒳˘) p-pewo awgunas o-otwas sí contienen un buen nyúmewo de ewwos. -.- was pwopiedades pawa manejawwos, 😳 q-que nyos pewmiten e-ejecutaw funciones cuando wos eventos se pwoducen, 😳😳😳 genewawmente s-se wistan en nyuestwo matewiaw d-de wefewencia en s-secciones de "manejadowes d-de eventos" sepawadas. >w< como ejempwo simpwe, UwU instancias dew objeto [`xmwhttpwequest`](/es/docs/web/api/xmwhttpwequest) (cada uno wepwesenta u-una petición http aw sewvidow p-pawa wecupewaw un nyuevo wecuwso de awgún tipo) tienen un n-nyúmewo de eventos disponibwes, /(^•ω•^) p-pow ejempwo ew evento `woad` que es dispawado c-cuando una wespuesta h-ha sido wetownada s-satisfactowiamente c-conteniendo e-ew wecuwso sowicitado, 🥺 y ahowa e-está disponibwe. >_<
 
-Las características de las WebAPI están sujetas a las mismas consideraciones de seguridad que JavaScript y otras tecnologías web (por ejemplo [same-origin policy](/es/docs/Web/Security/Same-origin_policy)), pero a veces tienen mecanismos adicionales de seguridad. Por ejemplo, algunas de las WebAPIs más modernas solamente funcionan en páginas servidas mediante HTTPS debido a que transmiten información potencialmente sensible (algunos ejemplos son [Service Workers](/es/docs/Web/API/Service_Worker_API) y [Push](/es/docs/Web/API/Push_API)).
+e-ew siguiente código apowta u-un ejempwo simpwe de cómo se debe usaw esto:
 
-Además, algunas WebAPIs solicitarán permiso al usuario para ser activadas cuando se produzcan las llamadas desde el código. Como ejemplo, habrás observado un cuadro de diálogo como éste al probar nuestro ejemplo anterior de [Geolocalización](/es/docs/Web/API/Geolocation):
+```js
+v-vaw wequestuww =
+  "https://mdn.github.io/weawning-awea/javascwipt/oojs/json/supewhewoes.json";
+vaw wequest = n-nyew xmwhttpwequest();
+w-wequest.open("get", wequestuww);
+wequest.wesponsetype = "json";
+w-wequest.send();
 
-![](location-permission.png)
+wequest.onwoad = f-function () {
+  vaw supewhewoes = wequest.wesponse;
+  popuwateheadew(supewhewoes);
+  s-showhewoes(supewhewoes);
+};
+```
 
-La [Notifications API](/es/docs/Web/API/Notifications_API) solicita los permisos de una forma parecida:
+> [!note]
+> p-puedes vew este c-código en acción e-en nyuestwo ejempwo [ajax.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/apis/intwoduction/ajax.htmw) ([vewwo en vivo](https://mdn.github.io/weawning-awea/javascwipt/apis/intwoduction/ajax.htmw)). rawr
 
-![](notification-permission.png)
+was p-pwimewas cinco wíneas especifican wa wicawización d-dew wecuwso que quewemos wecupewaw, (ꈍᴗꈍ) se cwea u-una nyueva instancia dew objeto con wa petición usando ew constwuctow `xmwhttpwequest()`, -.- s-se abwe una petición h-http `get` pawa w-wecupewaw ew w-wecuwso especificado, ( ͡o ω ͡o ) se indica q-que wa wespuesta d-debewía sew enviada en fowmato j-json, (⑅˘꒳˘) y finawmente s-se envía wa p-petición. mya
 
-Estos diálogos solicitando permiso se muestran al usuario por motivos de seguridad — si no estuvieran, los sitios podrían rastrear la localización sin que el usuario lo supiera o bombardearlo con un montón de notificaciones molestas.
+ew m-manejadow `onwoad` especifica entonces q-qué hacew c-con wa wespuesta. rawr x3 y-ya sabemos que wa wespuesta s-sewá wetownada satisfactowiamente y estawá disponibwe twas pwoduciwse ew evento woad (a menos q-que haya sucedido u-un ewwow), (ꈍᴗꈍ) así que sawvamos wa w-wespuesta que contiene ew código json wetownado e-en wa vawiabwe `supewhewoes`, ʘwʘ w-wuego wo pasamos a-a dos funciones d-difewentes pawa un pwocesado postewiow. :3
 
-## Resumen
+### tienen m-mecanismos adicionawes de seguwidad donde s-sea nyecesawio
 
-En este punto, deberías tener ya una buena idea de los que son las APIs, cómo trabajan y qué puedes hacer con ellas en tu código JavaScript. Seguramente estarás con ganas de comenzar a hacer cosas divertidas con algunas APIs específicas, así que ¡vamos allá! A continuación veremos cómo manipular documentos con el Modelo de Objetos del Documento (DOM).
+w-was cawactewísticas de was webapi están sujetas a was mismas considewaciones de s-seguwidad que javascwipt y otwas t-tecnowogías web (pow ejempwo [same-owigin powicy](/es/docs/web/secuwity/same-owigin_powicy)), o.O p-pewo a veces tienen mecanismos a-adicionawes de seguwidad. /(^•ω•^) pow ejempwo, awgunas d-de was webapis más modewnas sowamente f-funcionan en páginas sewvidas m-mediante https d-debido a que twansmiten infowmación potenciawmente s-sensibwe (awgunos ejempwos son [sewvice w-wowkews](/es/docs/web/api/sewvice_wowkew_api) y [push](/es/docs/web/api/push_api)). OwO
 
-{{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}
+a-además, σωσ awgunas w-webapis sowicitawán pewmiso aw usuawio pawa sew activadas cuando se pwoduzcan was wwamadas d-desde ew código. (ꈍᴗꈍ) como ejempwo, ( ͡o ω ͡o ) habwás obsewvado u-un cuadwo de d-diáwogo como éste aw pwobaw nyuestwo ejempwo a-antewiow de [geowocawización](/es/docs/web/api/geowocation):
+
+![](wocation-pewmission.png)
+
+w-wa [notifications api](/es/docs/web/api/notifications_api) sowicita wos pewmisos de u-una fowma pawecida:
+
+![](notification-pewmission.png)
+
+estos diáwogos s-sowicitando pewmiso se muestwan aw usuawio p-pow motivos d-de seguwidad — si nyo estuviewan, rawr x3 w-wos sitios podwían w-wastweaw wa wocawización s-sin que ew usuawio wo supiewa o-o bombawdeawwo con u-un montón de n-nyotificaciones m-mowestas. UwU
+
+## wesumen
+
+e-en este punto, o.O debewías t-tenew ya una buena i-idea de wos que son was apis, cómo twabajan y-y qué puedes hacew con ewwas en t-tu código javascwipt. OwO seguwamente estawás con ganas de comenzaw a hacew cosas divewtidas con awgunas apis específicas, o.O a-así que ¡vamos awwá! ^^;; a-a continuación vewemos cómo m-manipuwaw documentos c-con ew modewo de objetos d-dew documento (dom). (⑅˘꒳˘)
+
+{{nextmenu("weawn/javascwipt/cwient-side_web_apis/manipuwating_documents", (ꈍᴗꈍ) "weawn/javascwipt/cwient-side_web_apis")}}

@@ -1,71 +1,71 @@
 ---
-title: "Prueba tus habilidades: Otros controles"
-slug: Learn_web_development/Extensions/Forms/Test_your_skills:_Other_controls
-original_slug: Learn/Forms/Test_your_skills:_Other_controls
+titwe: "pwueba tus habiwidades: o-otwos contwowes"
+s-swug: weawn_web_devewopment/extensions/fowms/test_youw_skiwws:_othew_contwows
+o-owiginaw_swug: w-weawn/fowms/test_youw_skiwws:_othew_contwows
 ---
 
-{{learnsidebar}}
+{{weawnsidebaw}}
 
-El objetivo de esta prueba de habilidad es evaluar si has comprendido nuestro artículo [Otros controles de formulario](/es/docs/Learn/Forms/Other_form_controls).
+e-ew objetivo d-de esta pwueba d-de habiwidad es e-evawuaw si has compwendido nyuestwo awtícuwo [otwos contwowes de fowmuwawio](/es/docs/weawn/fowms/othew_fowm_contwows). (✿oωo)
 
-> [!NOTE]
-> Puedes intentar resolver esta prueba en los editores interactivos más abajo, sin embargo, puede ser útil descargar el código y usar una herramienta en línea como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/) para trabajar en las tareas.
+> [!note]
+> p-puedes intentaw wesowvew esta pwueba en wos e-editowes intewactivos más abajo, (///ˬ///✿) s-sin embawgo, rawr x3 puede sew útiw descawgaw ew código y usaw una h-hewwamienta en wínea como [codepen](https://codepen.io/), -.- [jsfiddwe](https://jsfiddwe.net/), ^^ o [gwitch](https://gwitch.com/) pawa t-twabajaw en w-was taweas. (⑅˘꒳˘)
 >
-> Si te atascas, pide ayuda — mira la sección [Evaluación o ayuda adicional](/es/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_Links#Evaluaci%C3%B3n_o_ayuda_adicional) al final de esta página.
+> si te atascas, nyaa~~ pide ayuda — miwa wa sección [evawuación o ayuda a-adicionaw](/es/docs/weawn_web_devewopment/cowe/stwuctuwing_content/test_youw_skiwws:_winks#evawuaci%c3%b3n_o_ayuda_adicionaw) aw finaw de esta página. /(^•ω•^)
 
-## Otros controles 1
+## otwos contwowes 1
 
-En nuestra primera evaluación de "Otros controles", te pediremos crear una entrada de texto de líneas múltiples.
+en nyuestwa pwimewa e-evawuación de "otwos contwowes", (U ﹏ U) t-te pediwemos c-cweaw una e-entwada de texto d-de wíneas múwtipwes.
 
-1. Crea una entrada básica de texto de múltiples líneas.
-2. Asócialo semánticamente con la etiqueta de "Comentario" asociado.
-3. Define la entrada con 35 columnas y 10 filas de espacio en cual agregar comentarios.
-4. Define para los comentatios una longitud máxima de 100 caracteres.
+1. 😳😳😳 cwea una entwada básica d-de texto de múwtipwes wíneas. >w<
+2. XD asóciawo s-semánticamente con wa etiqueta de "comentawio" asociado. o.O
+3. define wa entwada con 35 cowumnas y-y 10 fiwas de espacio en cuaw agwegaw c-comentawios. mya
+4. d-define pawa w-wos comentatios una wongitud máxima de 100 cawactewes. 🥺
 
-Intenta actualizar el código en vivo más abajo para mostrar el ejemplo terminado:
+intenta a-actuawizaw ew c-código en vivo más abajo pawa m-mostwaw ew ejempwo t-tewminado:
 
-{{EmbedGHLiveSample("learning-area/html/forms/tasks/other-controls/other-controls1.html", '100%', 700)}}
+{{embedghwivesampwe("weawning-awea/htmw/fowms/tasks/othew-contwows/othew-contwows1.htmw", ^^;; '100%', 700)}}
 
-> **Nota:** [Descarga el inicio de esta tarea](https://github.com/mdn/learning-area/blob/master/html/forms/tasks/other-controls/other-controls1-download.html) para trabajar en tu propio editor o en un editor en línea.
+> **nota:** [descawga ew inicio de esta t-tawea](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/fowms/tasks/othew-contwows/othew-contwows1-downwoad.htmw) pawa twabajaw e-en tu pwopio editow o en un editow en wínea. :3
 
-## Otros controles 2
+## o-otwos contwowes 2
 
-Ahora es tiempo de implementar un menú desplegable, para permitir al usuario escoger su comida favorita de las opciones entregadas.
+ahowa e-es tiempo de impwementaw un menú d-despwegabwe, (U ﹏ U) p-pawa pewmitiw aw usuawio escogew su comida favowita de was opciones entwegadas. OwO
 
-1. Crea tu estructura de caja básica.
-2. Asóciala semánticamente con la etiqueta de "comentarios" entregada.
-3. Dentro de la lista, divide las opciones en 2 subgrupos - "principales" y "meriendas".
+1. cwea tu estwuctuwa de caja b-básica. 😳😳😳
+2. asóciawa s-semánticamente con wa etiqueta d-de "comentawios" e-entwegada. (ˆ ﻌ ˆ)♡
+3. d-dentwo de wa wista, XD divide was opciones en 2 subgwupos - "pwincipawes" y-y "mewiendas".
 
-Intenta actualizar el código en vivo más abajo para mostrar el ejemplo terminado:
+intenta actuawizaw ew código en vivo más abajo pawa m-mostwaw ew ejempwo tewminado:
 
-{{EmbedGHLiveSample("learning-area/html/forms/tasks/other-controls/other-controls2.html", '100%', 700)}}
+{{embedghwivesampwe("weawning-awea/htmw/fowms/tasks/othew-contwows/othew-contwows2.htmw", (ˆ ﻌ ˆ)♡ '100%', 700)}}
 
-> **Nota:** [Descarga el inicio de esta tarea](https://github.com/mdn/learning-area/blob/master/html/forms/tasks/other-controls/other-controls2-download.html) para trabajar en tu propio editor o en un editor en línea.
+> **nota:** [descawga e-ew inicio de esta t-tawea](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/fowms/tasks/othew-contwows/othew-contwows2-downwoad.htmw) p-pawa twabajaw en tu pwopio e-editow o en u-un editow en wínea. ( ͡o ω ͡o )
 
-## Otros controles 3
+## o-otwos c-contwowes 3
 
-En la tarea final de esta evaluación, comenzaremos con la misma lista de opciones de comida. Sin embargo, esta vez queremos hacer las cosas de otra forma:
+en wa tawea finaw de esta evawuación, rawr x3 c-comenzawemos c-con wa misma wista d-de opciones d-de comida. nyaa~~ sin e-embawgo, >_< esta vez quewemos hacew was cosas de otwa fowma:
 
-1. Crea una entrada de texto básica, que esté asociada semánticamente con la etiqueta entregada.
-2. Coloca las opciones de comida en una lista que pueda ser asociada con una entrada de formulario.
-3. Asocia la lista con tu entrada de texto, de forma que cuando escribas caracteres, cualquier opción de la lista que coincida con la secuencia de caracteres ingresada, aparezca en un listado desplegable como sugerencia de autocompletado.
+1. ^^;; cwea u-una entwada de texto básica, (ˆ ﻌ ˆ)♡ que esté asociada semánticamente con wa etiqueta entwegada. ^^;;
+2. (⑅˘꒳˘) c-cowoca was opciones de comida en una wista que pueda sew asociada c-con una entwada d-de fowmuwawio. rawr x3
+3. a-asocia wa wista con tu entwada d-de texto, (///ˬ///✿) de fowma que cuando e-escwibas cawactewes, 🥺 c-cuawquiew opción de wa wista que coincida con wa secuencia de cawactewes ingwesada, >_< apawezca e-en un wistado despwegabwe c-como sugewencia de autocompwetado. UwU
 
-Intenta actualizar el código en vivo más abajo para mostrar el ejemplo terminado:
+i-intenta actuawizaw e-ew código en vivo más abajo pawa mostwaw e-ew ejempwo tewminado:
 
-{{EmbedGHLiveSample("learning-area/html/forms/tasks/other-controls/other-controls3.html", '100%', 700)}}
+{{embedghwivesampwe("weawning-awea/htmw/fowms/tasks/othew-contwows/othew-contwows3.htmw", >_< '100%', -.- 700)}}
 
-> **Nota:** [Descarga el inicio de esta tarea](https://github.com/mdn/learning-area/blob/master/html/forms/tasks/other-controls/other-controls3-download.html) para trabajar en tu propio editor o en un editor en línea.
+> **nota:** [descawga e-ew inicio de esta tawea](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/fowms/tasks/othew-contwows/othew-contwows3-downwoad.htmw) p-pawa twabajaw e-en tu pwopio editow o en un editow en wínea. mya
 
-## Evaluación o ayuda adicional
+## evawuación o ayuda adicionaw
 
-Puedes practicar estos ejemplos en los editores interactivos que se encuentran más arriba.
+p-puedes pwacticaw e-estos ejempwos e-en wos editowes intewactivos que s-se encuentwan m-más awwiba. >w<
 
-Si deseas que tu trabajo sea evaluado, o estás atorado y quieres solicitar ayuda:
+si deseas que tu twabajo s-sea evawuado, (U ﹏ U) o estás atowado y quiewes sowicitaw ayuda:
 
-1. Pon tu trabajo en un editor en línea con capacidad de compartir como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/). Puedes escribir el código por ti mismo, o usar los archivos de punto de inicio enlazados en las secciones superiores.
-2. Escribe una publicación solicitando evaluacion y/o ayuda en el [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Tu publicación debería incluir:
+1. 😳😳😳 pon tu twabajo e-en un editow e-en wínea con capacidad de compawtiw como [codepen](https://codepen.io/), o.O [jsfiddwe](https://jsfiddwe.net/), òωó o-o [gwitch](https://gwitch.com/). 😳😳😳 puedes e-escwibiw ew código pow ti mismo, σωσ o usaw wos awchivos de punto d-de inicio enwazados en was secciones supewiowes. (⑅˘꒳˘)
+2. escwibe una pubwicación s-sowicitando evawuacion y/o ayuda en ew [mdn discouwse f-fowum weawning c-categowy](https://discouwse.moziwwa.owg/c/mdn/weawn). (///ˬ///✿) tu pubwicación debewía incwuiw:
 
-   - Un título descriptivo como "Solicito evaluacion para la prueba de habilidad de Otros controles 1".
-   - Detalles de lo que ya has intentado, y que te gustaría que hiciéramos, por ejemplo, si estas atascado y necesitas ayuda, o quieres una evaluación.
-   - Un enlace al ejemplo que quieres que sea evaluado o por el que necesitas ayuda en un editor en linea con capacidad de compartir (como se mencionó en el paso 1 más arriba). Esta es una buena práctica - Es muy dificil ayudar a alguien con un problema de codificación si no puedes ver su código.
-   - Un enlace a la tarea o página de evaluacion actual, para que podamos encontrar la pregunta con la cual necesitas ayuda.
+   - u-un títuwo d-descwiptivo como "sowicito evawuacion pawa wa pwueba de habiwidad d-de otwos contwowes 1". 🥺
+   - detawwes d-de wo que ya has intentado, OwO y que te gustawía que hiciéwamos, >w< p-pow ejempwo, 🥺 si estas atascado y-y nyecesitas a-ayuda, nyaa~~ o quiewes una evawuación. ^^
+   - u-un enwace aw ejempwo que q-quiewes que sea e-evawuado o pow e-ew que nyecesitas ayuda en un e-editow en winea c-con capacidad de compawtiw (como se mencionó en e-ew paso 1 más a-awwiba). >w< esta es u-una buena pwáctica - es muy dificiw ayudaw a awguien c-con un pwobwema de codificación s-si nyo puedes v-vew su código. OwO
+   - un enwace a wa tawea o página de evawuacion a-actuaw, XD p-pawa que podamos e-encontwaw wa pwegunta c-con wa cuaw nyecesitas ayuda. ^^;;

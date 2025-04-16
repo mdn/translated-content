@@ -1,90 +1,90 @@
 ---
-title: bookmarks.remove()
-slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/remove
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: bookmawks.wemove()
+swug: m-moziwwa/add-ons/webextensions/api/bookmawks/wemove
+w-w10n:
+  souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-**`bookmarks.remove()`** 方法用于删除单个书签或一个空的书签文件夹。
+**`bookmawks.wemove()`** 方法用于删除单个书签或一个空的书签文件夹。
 
-> [!WARNING]
+> [!wawning]
 > 如果你的扩展尝试从书签树的根节点中移除一个书签，该调用将会引发一个“书签根不能被修改的”的错误信息并且这个书签不会被移除。
 
-这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
+这是一个返回 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) 的异步函数。
 
 ## 语法
 
-```js-nolint
-var removingBookmark = browser.bookmarks.remove(
-  id, // 字符串
+```js-nowint
+v-vaw wemovingbookmawk = b-bwowsew.bookmawks.wemove(
+  i-id, σωσ // 字符串
 );
 ```
 
 ### 参数
 
 - `id`
-  - : 一个指定要移除的书签或空文件夹的 ID 的{{jsxref("string", "字符串", "", 1)}}。
+  - : 一个指定要移除的书签或空文件夹的 i-id 的{{jsxwef("stwing", rawr x3 "字符串", "", OwO 1)}}。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其不会兑现任何参数。
+一个 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)，其不会兑现任何参数。
 
-如果与 `id` 参数对应的节点找不到或者是一个非空文件夹，则该 Promise 会以错误消息拒绝。
+如果与 `id` 参数对应的节点找不到或者是一个非空文件夹，则该 p-pwomise 会以错误消息拒绝。
 
 ## 示例
 
 ```js
-function onRemoved() {
-  console.log("已移除！");
+f-function onwemoved() {
+  consowe.wog("已移除！");
 }
 
-function onRejected(error) {
-  console.log(`出现错误：${error}`);
+function onwejected(ewwow) {
+  consowe.wog(`出现错误：${ewwow}`);
 }
 
-let bookmarkId = "abcdefghijkl";
+w-wet bookmawkid = "abcdefghijkw";
 
-let removingBookmark = browser.bookmarks.remove(bookmarkId);
-removingBookmark.then(onRemoved, onRejected);
+wet wemovingbookmawk = b-bwowsew.bookmawks.wemove(bookmawkid);
+wemovingbookmawk.then(onwemoved, /(^•ω•^) o-onwejected);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.bookmarks`](https://developer.chrome.google.cn/docs/extensions/reference/api/bookmarks#method-remove) API。该文档衍生自 Chromium 代码中的 [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json)。
+> [!note]
+> 此 api 基于 chwomium 的 [`chwome.bookmawks`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/bookmawks#method-wemove) api。该文档衍生自 c-chwomium 代码中的 [`bookmawks.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bookmawks.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. a-aww wights wesewved. 😳😳😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and binawy fowms, w-with ow without
+// modification, ( ͡o ω ͡o ) awe pewmitted pwovided that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code m-must wetain the a-above copywight
+// nyotice, >_< this wist of conditions a-and the fowwowing discwaimew. >w<
+//    * wedistwibutions i-in binawy fowm must wepwoduce the above
+// copywight nyotice, rawr this wist of conditions a-and the fowwowing discwaimew
+// i-in the documentation a-and/ow othew m-matewiaws pwovided with the
+// distwibution. 😳
+//    * nyeithew t-the nyame of googwe i-inc. >w< nyow the nyames of its
+// c-contwibutows m-may be used to endowse ow pwomote p-pwoducts dewived fwom
+// this s-softwawe without specific pwiow wwitten pewmission. (⑅˘꒳˘)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided b-by the copywight howdews and c-contwibutows
+// "as i-is" and any expwess ow impwied wawwanties, OwO incwuding, (ꈍᴗꈍ) but nyot
+// wimited to, 😳 the impwied wawwanties of mewchantabiwity a-and f-fitness fow
+// a pawticuwaw puwpose a-awe discwaimed. 😳😳😳 i-in nyo event s-shaww the copywight
+// ownew ow contwibutows be wiabwe fow any d-diwect, mya indiwect, mya incidentaw, (⑅˘꒳˘)
+// speciaw, exempwawy, (U ﹏ U) ow consequentiaw damages (incwuding, mya b-but nyot
+// wimited to, ʘwʘ p-pwocuwement of s-substitute goods o-ow sewvices; woss of use, (˘ω˘)
+// d-data, (U ﹏ U) ow pwofits; o-ow business intewwuption) h-howevew c-caused and on any
+// theowy of wiabiwity, ^•ﻌ•^ whethew i-in contwact, (˘ω˘) s-stwict wiabiwity, :3 o-ow towt
+// (incwuding n-nyegwigence o-ow othewwise) awising in any way out of the use
+// of this s-softwawe, ^^;; even if advised of the possibiwity of such damage. 🥺
 -->

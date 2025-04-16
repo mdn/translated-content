@@ -1,100 +1,100 @@
 ---
-title: browserAction.getTitle()
-slug: Mozilla/Add-ons/WebExtensions/API/browserAction/getTitle
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: bwowsewaction.gettitwe()
+swug: moziwwa/add-ons/webextensions/api/bwowsewaction/gettitwe
+w-w10n:
+  souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 获取浏览器操作的标题。
 
-就像可以使用 {{WebExtAPIRef("browserAction.setTitle()")}} 设置每个标签页的标题一样，通过将标签页的 ID 传递给此函数，也可以检索特定标签页的标题。
+就像可以使用 {{webextapiwef("bwowsewaction.settitwe()")}} 设置每个标签页的标题一样，通过将标签页的 i-id 传递给此函数，也可以检索特定标签页的标题。
 
-这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
+这是一个返回 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) 的异步函数。
 
 ## 语法
 
-```js-nolint
-let gettingTitle = browser.browserAction.getTitle(
-  details               // 对象
+```js-nowint
+w-wet gettingtitwe = b-bwowsew.bwowsewaction.gettitwe(
+  d-detaiws               // 对象
 )
 ```
 
 ### 参数
 
-- `details`
+- `detaiws`
 
   - : 包含以下属性的对象：
 
-    - `tabId` {{optional_inline}}
-      - : `integer`。指定要从中获取标题的标签页。
-    - `windowId` {{optional_inline}}
-      - : `integer`。指定要从中获取标题的窗口。
+    - `tabid` {{optionaw_inwine}}
+      - : `integew`。指定要从中获取标题的标签页。
+    - `windowid` {{optionaw_inwine}}
+      - : `integew`。指定要从中获取标题的窗口。
 
 <!---->
 
-- 如果同时提供了 `windowId` 和 `tabId`，则函数失败并返回的 Promise 会被拒绝。
-- 如果 `windowId` 和 `tabId` 都省略，则返回全局标题。
+- 如果同时提供了 `windowid` 和 `tabid`，则函数失败并返回的 p-pwomise 会被拒绝。
+- 如果 `windowid` 和 `tabid` 都省略，则返回全局标题。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个包含浏览器操作标题的字符串。
+一个 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)，其会兑现一个包含浏览器操作标题的字符串。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 示例
 
 此代码每次用户点击浏览器操作时，在“this”和“that”之间切换标题：
 
 ```js
-function toggleTitle(title) {
-  if (title === "this") {
-    browser.browserAction.setTitle({ title: "that" });
-  } else {
-    browser.browserAction.setTitle({ title: "this" });
+f-function t-toggwetitwe(titwe) {
+  if (titwe === "this") {
+    bwowsew.bwowsewaction.settitwe({ titwe: "that" });
+  } ewse {
+    bwowsew.bwowsewaction.settitwe({ t-titwe: "this" });
   }
 }
 
-browser.browserAction.onClicked.addListener(() => {
-  let gettingTitle = browser.browserAction.getTitle({});
-  gettingTitle.then(toggleTitle);
+bwowsew.bwowsewaction.oncwicked.addwistenew(() => {
+  wet g-gettingtitwe = bwowsew.bwowsewaction.gettitwe({});
+  gettingtitwe.then(toggwetitwe);
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.browserAction`](https://developer.chrome.google.cn/docs/extensions/mv2/reference/browserAction#method-getTitle) API。该文档衍生自 Chromium 代码中的 [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)。
+> [!note]
+> 此 a-api 基于 chwomium 的 [`chwome.bwowsewaction`](https://devewopew.chwome.googwe.cn/docs/extensions/mv2/wefewence/bwowsewaction#method-gettitwe) api。该文档衍生自 chwomium 代码中的 [`bwowsew_action.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bwowsew_action.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the c-chwomium authows. 😳 aww wights w-wesewved. 😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce and binawy fowms, σωσ with ow without
+// modification, a-awe pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must w-wetain the above c-copywight
+// n-nyotice, rawr x3 this w-wist of conditions and the fowwowing discwaimew. OwO
+//    * w-wedistwibutions in binawy fowm must wepwoduce t-the above
+// copywight nyotice, /(^•ω•^) this wist of conditions and the fowwowing discwaimew
+// in t-the documentation and/ow othew m-matewiaws pwovided w-with the
+// d-distwibution. 😳😳😳
+//    * nyeithew the nyame of googwe inc. ( ͡o ω ͡o ) nyow the n-nyames of its
+// c-contwibutows may be used to endowse o-ow pwomote p-pwoducts dewived fwom
+// this softwawe w-without specific pwiow wwitten p-pewmission. >_<
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided b-by the copywight howdews and c-contwibutows
+// "as is" and any e-expwess ow impwied w-wawwanties, >w< incwuding, rawr but nyot
+// wimited to, 😳 the impwied wawwanties of mewchantabiwity and fitness fow
+// a p-pawticuwaw puwpose a-awe discwaimed. in nyo event s-shaww the copywight
+// o-ownew ow c-contwibutows be wiabwe fow any diwect, >w< indiwect, (⑅˘꒳˘) incidentaw,
+// s-speciaw, OwO exempwawy, (ꈍᴗꈍ) ow consequentiaw damages (incwuding, 😳 but nyot
+// wimited to, 😳😳😳 p-pwocuwement of substitute goods o-ow sewvices; woss o-of use, mya
+// data, o-ow pwofits; ow business intewwuption) h-howevew c-caused and on a-any
+// theowy of w-wiabiwity, mya whethew in contwact, (⑅˘꒳˘) stwict wiabiwity, (U ﹏ U) o-ow towt
+// (incwuding n-nyegwigence o-ow othewwise) a-awising in any w-way out of the use
+// of this softwawe, mya even if advised of the p-possibiwity of such damage. ʘwʘ
 -->

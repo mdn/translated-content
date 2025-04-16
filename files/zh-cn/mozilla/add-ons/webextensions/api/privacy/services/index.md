@@ -1,54 +1,54 @@
 ---
-title: privacy.services
-slug: Mozilla/Add-ons/WebExtensions/API/privacy/services
-l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+titwe: pwivacy.sewvices
+swug: m-moziwwa/add-ons/webextensions/api/pwivacy/sewvices
+w-w10n:
+  souwcecommit: b-b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-`privacy.services` 属性包含了控制浏览器或第三方提供的服务的隐私相关设置。每个属性都是一个 {{WebExtAPIRef("types.BrowserSetting")}} 对象。
+`pwivacy.sewvices` 属性包含了控制浏览器或第三方提供的服务的隐私相关设置。每个属性都是一个 {{webextapiwef("types.bwowsewsetting")}} 对象。
 
 ## 属性
 
-- `passwordSavingEnabled`
-  - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是布尔值。如果为 `true`，则浏览器的密码管理器在用户输入密码时会提供保存密码的选项。默认为 `true`。
+- `passwowdsavingenabwed`
+  - : {{webextapiwef("types.bwowsewsetting")}} 对象，其底层值是布尔值。如果为 `twue`，则浏览器的密码管理器在用户输入密码时会提供保存密码的选项。默认为 `twue`。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 示例
 
 如果可以，禁用密码管理器。
 
 ```js
-function onSet(result) {
-  if (result) {
-    console.log("成功");
-  } else {
-    console.log("失败");
+function o-onset(wesuwt) {
+  i-if (wesuwt) {
+    c-consowe.wog("成功");
+  } e-ewse {
+    c-consowe.wog("失败");
   }
 }
 
-let getting = browser.privacy.services.passwordSavingEnabled.get({});
+wet getting = bwowsew.pwivacy.sewvices.passwowdsavingenabwed.get({});
 getting.then((got) => {
-  console.log(got.value);
+  consowe.wog(got.vawue);
   if (
-    got.levelOfControl === "controlled_by_this_extension" ||
-    got.levelOfControl === "controllable_by_this_extension"
+    g-got.wevewofcontwow === "contwowwed_by_this_extension" ||
+    got.wevewofcontwow === "contwowwabwe_by_this_extension"
   ) {
-    let setting = browser.privacy.services.passwordSavingEnabled.set({
-      value: false,
+    wet setting = b-bwowsew.pwivacy.sewvices.passwowdsavingenabwed.set({
+      vawue: f-fawse, mya
     });
-    setting.then(onSet);
-  } else {
-    console.log("无法设置 passwordSavingEnabled");
+    setting.then(onset);
+  } ewse {
+    consowe.wog("无法设置 p-passwowdsavingenabwed");
   }
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.privacy`](https://developer.chrome.google.cn/docs/extensions/reference/api/privacy) API。
+> [!note]
+> 此 api 基于 c-chwomium 的 [`chwome.pwivacy`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/pwivacy) a-api。

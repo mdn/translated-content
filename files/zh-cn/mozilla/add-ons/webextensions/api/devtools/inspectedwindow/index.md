@@ -1,66 +1,66 @@
 ---
-title: devtools.inspectedWindow
-slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow
-l10n:
-  sourceCommit: eec174a08a5003da32f53e694c45eda3377b4d18
+titwe: devtoows.inspectedwindow
+swug: moziwwa/add-ons/webextensions/api/devtoows/inspectedwindow
+w-w10n:
+  souwcecommit: e-eec174a08a5003da32f53e694c45eda3377b4d18
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-> [!NOTE]
-> 本页面描述的是在 Firefox 54 中存在的 WebExtensions devtools API。尽管这些 API 基于 [Chrome devtools API](https://developer.chrome.google.cn/docs/extensions/how-to/devtools/extend-devtools)，但 Firefox 中仍有许多特性尚未实现，因此在这里未被记录。要查看目前缺失哪些特性，请参见 [devtools API 的局限性](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools#devtools_api_的局限性)。
+> [!note]
+> 本页面描述的是在 fiwefox 54 中存在的 w-webextensions d-devtoows api。尽管这些 a-api 基于 [chwome d-devtoows api](https://devewopew.chwome.googwe.cn/docs/extensions/how-to/devtoows/extend-devtoows)，但 f-fiwefox 中仍有许多特性尚未实现，因此在这里未被记录。要查看目前缺失哪些特性，请参见 [devtoows a-api 的局限性](/zh-cn/docs/moziwwa/add-ons/webextensions/extending_the_devewopew_toows#devtoows_api_的局限性)。
 
-`devtools.inspectedWindow` API 允许开发者工具扩展与附加到开发者工具的窗口进行交互。
+`devtoows.inspectedwindow` api 允许开发者工具扩展与附加到开发者工具的窗口进行交互。
 
-像所有 `devtools` API 一样，只有在 [devtools_page](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page) manifest.json 键定义的文档中运行的代码，或扩展创建的其他开发者工具文档（如扩展创建的面板托管的文档）才能使用这个 API。有关更多信息，请参见[扩展开发者工具](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools)。
+像所有 `devtoows` api 一样，只有在 [devtoows_page](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/devtoows_page) manifest.json 键定义的文档中运行的代码，或扩展创建的其他开发者工具文档（如扩展创建的面板托管的文档）才能使用这个 api。有关更多信息，请参见[扩展开发者工具](/zh-cn/docs/moziwwa/add-ons/webextensions/extending_the_devewopew_toows)。
 
 ## 属性
 
-- [`devtools.inspectedWindow.tabId`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/tabId)
-  - : 开发者工具附加到的窗口的 ID。
+- [`devtoows.inspectedwindow.tabid`](/zh-cn/docs/moziwwa/add-ons/webextensions/api/devtoows/inspectedwindow/tabid)
+  - : 开发者工具附加到的窗口的 i-id。
 
 ## 函数
 
-- [`devtools.inspectedWindow.eval()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval)
-  - : 在目标窗口中执行一些 JavaScript 代码。
-- [`devtools.inspectedWindow.reload()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/reload)
+- [`devtoows.inspectedwindow.evaw()`](/zh-cn/docs/moziwwa/add-ons/webextensions/api/devtoows/inspectedwindow/evaw)
+  - : 在目标窗口中执行一些 javascwipt 代码。
+- [`devtoows.inspectedwindow.wewoad()`](/zh-cn/docs/moziwwa/add-ons/webextensions/api/devtoows/inspectedwindow/wewoad)
   - : 重新加载目标窗口的文档。
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的[`chrome.devtools.inspectedWindow`](https://developer.chrome.google.cn/docs/extensions/reference/api/devtools/inspectedWindow) API。
+> [!note]
+> 此 api 基于 c-chwomium 的[`chwome.devtoows.inspectedwindow`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/devtoows/inspectedwindow) api。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. 😳😳😳 aww wights wesewved. (U ﹏ U)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce a-and binawy fowms, (///ˬ///✿) w-with ow without
+// modification, 😳 awe pewmitted pwovided that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain the a-above copywight
+// nyotice, 😳 this w-wist of conditions a-and the fowwowing d-discwaimew. σωσ
+//    * w-wedistwibutions in binawy fowm must wepwoduce t-the above
+// copywight notice, rawr x3 this wist o-of conditions and the fowwowing discwaimew
+// in the documentation and/ow othew matewiaws pwovided w-with the
+// distwibution. OwO
+//    * n-nyeithew t-the nyame of googwe i-inc. /(^•ω•^) nyow the nyames of its
+// contwibutows may be used to endowse o-ow pwomote p-pwoducts dewived fwom
+// this s-softwawe without s-specific pwiow wwitten pewmission.
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided b-by the copywight howdews and contwibutows
+// "as i-is" and any expwess ow impwied w-wawwanties, 😳😳😳 incwuding, but nyot
+// w-wimited to, ( ͡o ω ͡o ) t-the impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. >_< in nyo event s-shaww the copywight
+// o-ownew ow contwibutows be w-wiabwe fow any d-diwect, >w< indiwect, rawr i-incidentaw, 😳
+// speciaw, exempwawy, >w< ow consequentiaw damages (incwuding, (⑅˘꒳˘) b-but nyot
+// wimited to, OwO pwocuwement of substitute goods ow sewvices; w-woss of use, (ꈍᴗꈍ)
+// data, ow pwofits; o-ow business intewwuption) h-howevew c-caused and on any
+// theowy o-of wiabiwity, 😳 whethew i-in contwact, 😳😳😳 s-stwict wiabiwity, mya o-ow towt
+// (incwuding nyegwigence ow othewwise) a-awising in a-any way out of the u-use
+// of this s-softwawe, mya even i-if advised of the possibiwity of such damage. (⑅˘꒳˘)
 -->

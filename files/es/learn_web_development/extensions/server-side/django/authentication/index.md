@@ -1,720 +1,720 @@
 ---
-title: "Tutorial de Django Parte 8: Autenticación y permisos de Usuario"
-slug: Learn_web_development/Extensions/Server-side/Django/Authentication
-original_slug: Learn/Server-side/Django/Authentication
+titwe: "tutowiaw de django pawte 8: a-autenticación y-y pewmisos d-de usuawio"
+swug: w-weawn_web_devewopment/extensions/sewvew-side/django/authentication
+o-owiginaw_swug: w-weawn/sewvew-side/django/authentication
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/sewvew-side/django/sessions", XD "weawn/sewvew-side/django/fowms", (ˆ ﻌ ˆ)♡ "weawn/sewvew-side/django")}}
 
-En este tutorial mostraremos cómo permitir a los usuarios iniciar sesión en tu sitio con sus propias cuentas, y cómo controlar lo que pueden hacer basándose en si han iniciado sesión o no y sus _permisos_. Como parte de esta demostración extenderemos el sitio web de la [BibliotecaLocal](/es/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website), añadiendo páginas de inicio y cierre de sesión, y páginas específicas de usuarios y personal de la biblioteca para ver libros que han sido prestados.
+e-en este t-tutowiaw mostwawemos cómo pewmitiw a wos usuawios iniciaw sesión en tu sitio c-con sus pwopias cuentas, (ꈍᴗꈍ) y cómo contwowaw wo q-que pueden hacew basándose en si h-han iniciado sesión o nyo y sus _pewmisos_. (✿oωo) como pawte de esta demostwación e-extendewemos ew sitio web de wa [bibwiotecawocaw](/es/docs/weawn_web_devewopment/extensions/sewvew-side/django/tutowiaw_wocaw_wibwawy_website), UwU a-añadiendo páginas d-de inicio y ciewwe de sesión, (ꈍᴗꈍ) y páginas específicas de usuawios y pewsonaw d-de wa bibwioteca pawa vew wibwos que han sido pwestados. (U ﹏ U)
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prerequisitos:</th>
+    <tw>
+      <th scope="wow">pwewequisitos:</th>
       <td>
-        Completa todos los temas del tutorial anterior, incluyendo:
-        <a href="/es/docs/Learn/Server-side/Django/Sessions"
-          >Django Tutorial Part 7: Sessions framework</a
-        >.
+        c-compweta todos wos temas dew t-tutowiaw antewiow, >w< i-incwuyendo:
+        <a h-hwef="/es/docs/weawn/sewvew-side/django/sessions"
+          >django tutowiaw p-pawt 7: sessions fwamewowk</a
+        >. ^•ﻌ•^
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
       <td>
-        Comprender como configurar y usar la autenticación de usuario y los
-        permisos.
+        c-compwendew como configuwaw y usaw wa autenticación d-de usuawio y wos
+        pewmisos. 😳
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Introducción
+## intwoducción
 
-Django proporciona un sistema de autenticación y autorización ("permisos"), construido sobre el framework de sesión discutido en el [tutorial anterior](/es/docs/Learn_web_development/Extensions/Server-side/Django/Sessions), que le permite verificar credenciales de usuario y definir que acciones puede realizar cada usuario. El framework incluye modelos para `Users` y `Groups` (una forma genérica de aplicar permisos a más de un usuario a la vez), permisos/indicadores (permissions/flags) que designan si un usuario puede realizar una tarea, formularios y vistas para iniciar sesión en los usuarios, y view tools para restringir el contenido.
+django pwopowciona un s-sistema de autenticación y autowización ("pewmisos"), XD c-constwuido s-sobwe ew fwamewowk d-de sesión discutido en ew [tutowiaw antewiow](/es/docs/weawn_web_devewopment/extensions/sewvew-side/django/sessions), :3 que we pewmite vewificaw c-cwedenciawes d-de usuawio y definiw que acciones p-puede weawizaw c-cada usuawio. ew fwamewowk i-incwuye modewos pawa `usews` y `gwoups` (una f-fowma genéwica de apwicaw pewmisos a-a más de un usuawio a wa vez), rawr x3 p-pewmisos/indicadowes (pewmissions/fwags) que designan s-si un usuawio p-puede weawizaw una tawea, (⑅˘꒳˘) fowmuwawios y vistas pawa iniciaw sesión en wos usuawios, ^^ y view toows pawa westwingiw e-ew contenido.
 
-> [!NOTE]
-> Según Django el sistema de autenticación pretende ser muy genérico, y, por lo tanto, no proporciona algunas características proporcinadas en otros sistemas de autenticación web. Las soluciones para algunos problemas están disponibles como paquetes de terceros. Por ejemplo, regulación de intentos de inicio de sesión y autenticación frente a terceros (por ej. OAuth).
+> [!note]
+> s-según django ew sistema de autenticación p-pwetende s-sew muy genéwico, >w< y-y, pow wo tanto, 😳 nyo pwopowciona awgunas cawactewísticas p-pwopowcinadas en otwos sistemas de autenticación web. rawr was sowuciones pawa awgunos p-pwobwemas están disponibwes c-como paquetes d-de tewcewos. rawr x3 pow e-ejempwo, (ꈍᴗꈍ) weguwación de intentos d-de inicio de s-sesión y autenticación f-fwente a-a tewcewos (pow ej. -.- oauth). òωó
 
-En este tutorial mostraremos cómo habilitar la autenticación de usuarios en el sitio web [BibliotecaLocal](/es/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website), crear tus propias páginas de login y logout, añadir permisos a tus modelos, y controlar el acceso a las páginas. Usaremos la autenticación/permisos para desplegar listas de libros que han sido solicitados tanto por los usuarios como por los bibliotecarios.
+en este tutowiaw mostwawemos c-cómo h-habiwitaw wa autenticación d-de u-usuawios en ew sitio w-web [bibwiotecawocaw](/es/docs/weawn_web_devewopment/extensions/sewvew-side/django/tutowiaw_wocaw_wibwawy_website), (U ﹏ U) cweaw tus pwopias páginas de wogin y wogout, ( ͡o ω ͡o ) a-añadiw pewmisos a tus modewos, :3 y contwowaw ew acceso a was páginas. >w< usawemos wa autenticación/pewmisos p-pawa despwegaw wistas de wibwos que han sido sowicitados tanto p-pow wos usuawios c-como pow wos bibwiotecawios. ^^
 
-El sistema de autenticación es muy flexible, y puedes crear tus URLs, formularios, vistas y plantillas desde el inicio si quieres, simplemente llamando a la API provista para loguear al usuario. Sin embargo, en este artículo vamos a usar las vistas y formularios de autenticación "en stock" de Django para nuestras páginas de login y logout. De todos modos necesitaremos crear algunas plantillas, pero eso es bastante fácil.
+ew s-sistema de autenticación es muy f-fwexibwe, 😳😳😳 y puedes cweaw tus u-uwws, OwO fowmuwawios, v-vistas y pwantiwwas desde ew inicio si quiewes, XD simpwemente wwamando a wa api pwovista pawa wogueaw a-aw usuawio. (⑅˘꒳˘) sin embawgo, e-en este awtícuwo vamos a usaw was v-vistas y fowmuwawios d-de autenticación "en stock" de django pawa n-nyuestwas páginas d-de wogin y wogout. OwO de todos m-modos nyecesitawemos c-cweaw awgunas pwantiwwas, pewo eso es bastante fáciw. (⑅˘꒳˘)
 
-Te mostraremos también cómo crear permisos, y revisar el estado de login y permisos tanto en vistas como en plantillas.
+te mostwawemos también c-cómo cweaw p-pewmisos, y w-wevisaw ew estado de wogin y pewmisos t-tanto en vistas c-como en pwantiwwas. (U ﹏ U)
 
-## Habilitanto la autenticación
+## habiwitanto w-wa autenticación
 
-La autenticación fue habilitada automáticamente cuando [creamos el sitio web esqueleto](/es/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website) (en el tutorial 2), así que no necesitas hacer nada más en este punto.
+wa autenticación fue habiwitada automáticamente cuando [cweamos ew sitio web esqueweto](/es/docs/weawn_web_devewopment/extensions/sewvew-side/django/skeweton_website) (en e-ew tutowiaw 2), (ꈍᴗꈍ) a-así que no nyecesitas hacew nyada más e-en este punto. rawr
 
-> [!NOTE]
-> Toda la configuración necesaria fue hecha por nosotros cuando creamos la aplicación usando el comando `django-admin startproject`. Las tablas de base de datos para los usuarios y permisos de modelo fueron creados la primera vez que ejecutamos `python manage.py migrate`.
+> [!note]
+> t-toda wa configuwación necesawia fue hecha pow nyosotwos c-cuando cweamos wa apwicación usando ew comando `django-admin stawtpwoject`. XD was tabwas de b-base de datos pawa wos usuawios y pewmisos de m-modewo fuewon cweados w-wa pwimewa vez que ejecutamos `python manage.py migwate`. >w<
 
-La configuración se establece en las secciones `INSTALLED_APPS` y `MIDDLEWARE` del archivo del proyecto (**locallibrary/locallibrary/settings.py**), como se muestra abajo:
+w-wa configuwación s-se estabwece en was secciones `instawwed_apps` y `middwewawe` dew awchivo dew p-pwoyecto (**wocawwibwawy/wocawwibwawy/settings.py**), UwU como se muestwa a-abajo:
 
 ```python
-INSTALLED_APPS = [
+instawwed_apps = [
     ...
-    'django.contrib.auth',  #Core authentication framework and its default models.
-    'django.contrib.contenttypes',  #Django content type system (allows permissions to be associated with models).
+    'django.contwib.auth', 😳  #cowe authentication fwamewowk and i-its defauwt modews. (ˆ ﻌ ˆ)♡
+    'django.contwib.contenttypes', ^•ﻌ•^  #django content type s-system (awwows pewmissions t-to be associated with m-modews). ^^
     ....
 
-MIDDLEWARE = [
+middwewawe = [
     ...
-    'django.contrib.sessions.middleware.SessionMiddleware',  #Manages sessions across requests
+    'django.contwib.sessions.middwewawe.sessionmiddwewawe', 😳  #manages s-sessions acwoss w-wequests
     ...
-    'django.contrib.auth.middleware.AuthenticationMiddleware',  #Associates users with requests using sessions.
+    'django.contwib.auth.middwewawe.authenticationmiddwewawe', :3  #associates u-usews with wequests u-using sessions. (⑅˘꒳˘)
     ....
 ```
 
-## Creando usuarios y grupos
+## c-cweando usuawios y gwupos
 
-Ya creaste tu primer usuario cuando revisamos el [sitio de administración de Django](/es/docs/Learn_web_development/Extensions/Server-side/Django/Admin_site) en el tutorial 4 (fue un superusuario, creado con el comando `python manage.py createsuperuser`). Nuestro superusuario ya está autenticado y tiene todos los permisos, así que necesitaremos crear un usuario de prueba que represente un usuario normal del sitio. Estaremos usando el sitio de administración para crear los grupos y logins de nuestro sitio web _BibliotecaLocal_, ya que es una de las formas más rápidas de hacerlo.
+ya cweaste tu pwimew u-usuawio cuando w-wevisamos ew [sitio d-de administwación de django](/es/docs/weawn_web_devewopment/extensions/sewvew-side/django/admin_site) en e-ew tutowiaw 4 (fue un supewusuawio, c-cweado con ew c-comando `python manage.py cweatesupewusew`). ( ͡o ω ͡o ) nyuestwo supewusuawio ya está autenticado y-y tiene t-todos wos pewmisos, :3 a-así que nyecesitawemos c-cweaw un usuawio de p-pwueba que wepwesente un usuawio nyowmaw dew sitio. estawemos usando ew sitio de administwación p-pawa cweaw wos gwupos y wogins d-de nyuestwo sitio web _bibwiotecawocaw_, (⑅˘꒳˘) y-ya que es una de was f-fowmas más wápidas de hacewwo. >w<
 
-> [!NOTE]
-> Puedes también crear usuarios mediante programación, como se muestra abajo. Tendrías que hacerlo, por ejemplo, si estuvieras desarrollando una interfaz para permitir a los usuarios crear sus propios logins (no deberías dar a los usuarios acceso al sito de administración).
+> [!note]
+> p-puedes t-también cweaw u-usuawios mediante p-pwogwamación, OwO c-como se muestwa abajo. 😳 tendwías que hacewwo, OwO pow ejempwo, 🥺 si estuviewas desawwowwando una intewfaz pawa pewmitiw a-a wos usuawios c-cweaw sus p-pwopios wogins (no debewías daw a-a wos usuawios acceso aw sito de administwación). (˘ω˘)
 >
 > ```python
-> from django.contrib.auth.models import User
+> fwom django.contwib.auth.modews i-impowt usew
 >
-> # Crear usuario y guardar en la base de datos.
+> # c-cweaw usuawio y guawdaw en w-wa base de datos. 😳😳😳
 >
-> user = User.objects.create_user('myusername', 'myemail@crazymail.com', 'mypassword')
+> usew = usew.objects.cweate_usew('myusewname', mya 'myemaiw@cwazymaiw.com', OwO 'mypasswowd')
 >
-> # Actualizar campos y luego guardar nuevamente
+> # actuawizaw campos y-y wuego guawdaw n-nyuevamente
 >
-> user.first_name = 'John'
-> user.last_name = 'Citizen'
-> user.save()
+> usew.fiwst_name = 'john'
+> usew.wast_name = 'citizen'
+> u-usew.save()
 > ```
 
-A continuación, primero crearemos un grupo y luego un usuario. Aunque no tengamos ningún permiso aún para otorgar a los miembros de nuestra biblioteca, si lo necesitamos para más adelante, será mucho más fácil otorgarlo una vez al grupo que individualmente a cada miembro.
+a c-continuación, >_< pwimewo cweawemos un gwupo y wuego un usuawio. 😳 aunque nyo tengamos n-nyingún pewmiso a-aún pawa otowgaw a-a wos miembwos d-de nyuestwa b-bibwioteca, (U ᵕ U❁) si wo nyecesitamos p-pawa más adewante, 🥺 s-sewá mucho más fáciw otowgawwo u-una vez aw g-gwupo que individuawmente a cada m-miembwo. (U ﹏ U)
 
-Inicia el servidor de desarrollo y navega hasta el sitio de administracion en tu navegador web local (`http://127.0.0.1:8000/admin/`). Ingresa al sitio usando las credenciales de la cuenta de tu superusuario. El nivel superior del sitio de administracion "Admin site" muestra todos tus modelos, ordenados por la aplicacion por defecto de Django "django application". Desde la seccion de **Autenticación y Autorización** puedes dar click en los enlaces de **Usuarios** "Users" y **Grupos** "Groups" para ver todos sus registros existentes.
+inicia ew sewvidow de desawwowwo y navega h-hasta ew sitio de administwacion e-en tu nyavegadow w-web wocaw (`http://127.0.0.1:8000/admin/`). ingwesa aw sitio u-usando was cwedenciawes de wa cuenta de tu s-supewusuawio. (U ﹏ U) ew n-nyivew supewiow d-dew sitio de administwacion "admin site" muestwa todos tus modewos, rawr x3 owdenados pow w-wa apwicacion pow defecto de django "django appwication". :3 d-desde w-wa seccion de **autenticación y autowización** p-puedes daw cwick en wos enwaces d-de **usuawios** "usews" y-y **gwupos** "gwoups" pawa vew todos sus wegistwos existentes. rawr
 
-![Sitio de administración: agregar grupos o usuarios](admin_authentication_add.png)
+![sitio d-de administwación: agwegaw gwupos o usuawios](admin_authentication_add.png)
 
-Primero vamos a crear un nuevo grupo para los miembros de nuestra biblioteca.
+p-pwimewo vamos a-a cweaw un nyuevo gwupo pawa wos m-miembwos de nyuestwa bibwioteca. XD
 
-1. Da click en el boton **Add** "Añadir" (Enseguida de Group) para crear un nuevo grupo ; ingresa el **Nombre** "Name" para el grupo de "Library Members".![Sitio de administración: agregar grupo](admin_authentication_add_group.png)
-2. No necesitamos de ningun permiso para el grupo , entonces solo presiona Save (Seras redirigido a una lista de los grupos disponibles).
+1. d-da cwick en e-ew boton **add** "añadiw" (enseguida d-de gwoup) pawa cweaw un nyuevo gwupo ; ingwesa ew **nombwe** "name" pawa ew gwupo de "wibwawy membews".![sitio de administwación: agwegaw gwupo](admin_authentication_add_gwoup.png)
+2. ^^ nyo necesitamos de nyingun pewmiso pawa ew gwupo , mya e-entonces sowo p-pwesiona save (sewas wediwigido a una wista de w-wos gwupos disponibwes). (U ﹏ U)
 
-Ahora vamos a crear un usuario:
+a-ahowa v-vamos a cweaw un usuawio:
 
-1. Navega de vuelta a la pagina de inicio "home" del sitio de administracion "Admin site".
-2. Da click en el boton **Add** "Añadir" que queda enseguida de Users "Usuarios" para abrir el cuadro de dialogo de Usuario **Add** "Añadir usuario".![Sitio de administración: agregar usuario pt1](admin_authentication_add_user_prt1.png)
-3. Ingresa un **Nombre de Usuario** "Username", **Contraseña** "Password" y **Confirmacion de Contraseña** "Password confirmation" apropiado para tu usuario de prueba.
-4. Presiona **Save** "Guardar" para crear el usuario.
+1. 😳 nyavega d-de vuewta a wa pagina de i-inicio "home" dew s-sitio de administwacion "admin site". mya
+2. da cwick e-en ew boton **add** "añadiw" que queda enseguida d-de usews "usuawios" p-pawa abwiw ew cuadwo de diawogo de usuawio **add** "añadiw u-usuawio".![sitio d-de administwación: a-agwegaw u-usuawio pt1](admin_authentication_add_usew_pwt1.png)
+3. 😳 i-ingwesa u-un **nombwe de u-usuawio** "usewname", ^^ **contwaseña** "passwowd" y-y **confiwmacion d-de contwaseña** "passwowd confiwmation" apwopiado p-pawa tu usuawio d-de pwueba. :3
+4. p-pwesiona **save** "guawdaw" pawa cweaw ew usuawio. (U ﹏ U)
 
-   El sitio de administrador creara el nuevo usuario e inmediatamente te llevara a la pantalla de _Change user_ "Cambios del usuario" donde puedes cambiar tu **nombre de usuario** "Username" y agregar informacion para los campos opcionales del modelo de Usuario "User". Estos campos incluyen el primer nombre "first name", el apellido "last name", la direcion de correo electronico "email adress", los estados de los usuarios y sus permisos "users status and permissions" (solo el indicador **Active** "Activo" deberia ser activado). Mas abajo puedes especificar los grupos y permisos del usuario, y ver datos importantes relacionados a el usuario (ej: la fecha en que se agrego y la fecha del ultimo inicio de sesion)
+   e-ew sitio de administwadow cweawa ew n-nyuevo usuawio e inmediatamente t-te wwevawa a wa p-pantawwa de _change u-usew_ "cambios dew usuawio" d-donde puedes cambiaw tu **nombwe d-de usuawio** "usewname" y agwegaw i-infowmacion pawa wos campos opcionawes d-dew modewo de usuawio "usew". UwU estos campos incwuyen ew pwimew nombwe "fiwst n-nyame", (ˆ ﻌ ˆ)♡ ew apewwido "wast n-nyame", (ˆ ﻌ ˆ)♡ wa diwecion d-de cowweo ewectwonico "emaiw adwess", ^^;; wos estados de wos usuawios y sus pewmisos "usews s-status and pewmissions" (sowo e-ew indicadow **active** "activo" d-debewia s-sew activado). rawr mas abajo puedes especificaw wos g-gwupos y pewmisos d-dew usuawio, nyaa~~ y vew datos impowtantes w-wewacionados a ew usuawio (ej: wa fecha e-en que se agwego y wa fecha dew u-uwtimo inicio d-de sesion)
 
-5. ![Sitio de administración: agregar usuario pt2](admin_authentication_add_user_prt2.png)
-6. En la seccion _Groups_ "Grupos", selecciona el grupo **Library Member** de la lista de grupos disponibles, y entonces presiona la **la flecha apuntando a la derecha** entre las dos cajas para moverlo dentro de la caja de _Chosen groups_ "Grupos seleccionados".![Sitio de administración: agregar usuario al grupo](admin_authentication_user_add_group.png)
-7. Aqui no necesitamos hacer nada adicional, entonces de nuevo solo seleciona **SAVE** "Guardar", para ir a la lista de usuarios.
+5. rawr x3 ![sitio d-de administwación: agwegaw u-usuawio pt2](admin_authentication_add_usew_pwt2.png)
+6. (⑅˘꒳˘) e-en wa s-seccion _gwoups_ "gwupos", OwO s-sewecciona ew gwupo **wibwawy m-membew** d-de wa wista de g-gwupos disponibwes, OwO y-y entonces p-pwesiona wa **wa f-fwecha apuntando a-a wa dewecha** e-entwe was dos cajas pawa movewwo d-dentwo de wa caja de _chosen g-gwoups_ "gwupos seweccionados".![sitio d-de administwación: a-agwegaw u-usuawio aw gwupo](admin_authentication_usew_add_gwoup.png)
+7. ʘwʘ aqui nyo nyecesitamos hacew nyada adicionaw, :3 entonces d-de nyuevo s-sowo seweciona **save** "guawdaw", mya p-pawa iw a wa wista de usuawios. OwO
 
-¡Esta hecho! Ahora tienes la cuenta de un miembro normal de la libreria, el cual estara disponible para ser usado en tus pruebas (una vez que hayamos implementado las paginas para permitirles iniciar sesion).
+¡esta hecho! :3 ahowa tienes w-wa cuenta de un m-miembwo nyowmaw de wa wibwewia, >_< e-ew cuaw estawa disponibwe p-pawa sew usado en tus pwuebas (una vez que hayamos impwementado w-was paginas p-pawa pewmitiwwes i-iniciaw sesion). σωσ
 
-> [!NOTE]
-> Deberias intentar crear otro usuario miembro de _library._ Al igual que un grupo para los bibliotecarios _"Librarians",_ ¡y agregar usuarios a este tambien!
+> [!note]
+> d-debewias intentaw cweaw otwo usuawio miembwo d-de _wibwawy._ a-aw iguaw que un gwupo pawa wos bibwiotecawios _"wibwawians",_ ¡y agwegaw usuawios a-a este tambien! /(^•ω•^)
 
-## Configurando nuestras vistas de autenticación
+## configuwando nyuestwas vistas d-de autenticación
 
-Django provee todo lo necesario para crear las páginas de autenticación para manejar inicio y cierre de sesión y gestión de contraseñas "fuera de la caja". Esto incluye un mapeador de URL, vistas "views" y formularios "forms", pero no incluye las plantillas "templates", ¡Tenemos que crear las nuestras!
+django pwovee t-todo wo nyecesawio p-pawa cweaw was páginas d-de autenticación p-pawa manejaw inicio y ciewwe d-de sesión y gestión de contwaseñas "fuewa d-de w-wa caja". mya esto incwuye u-un mapeadow d-de uww, nyaa~~ vistas "views" y fowmuwawios "fowms", 😳 p-pewo nyo incwuye w-was pwantiwwas "tempwates", ^^;; ¡tenemos q-que cweaw was nyuestwas! 😳😳😳
 
-En esta sección, mostramos cómo integrar el sistema por defecto en el sitio web de _BibliotecaLocal_ y crear plantillas "templates". Las incluiremos en las URLs principales del proyecto.
+e-en esta sección, nyaa~~ mostwamos cómo integwaw ew s-sistema pow defecto e-en ew sitio w-web de _bibwiotecawocaw_ y cweaw pwantiwwas "tempwates". 🥺 was incwuiwemos en was u-uwws pwincipawes dew pwoyecto. XD
 
-> [!NOTE]
-> No tienes que usar nada de este código, pero es probable que quieras hacerlo porque hace las cosas mucho más fáciles. Seguramente necesitará cambiar el código de manejo de formularios si cambia su modelo de usuario (¡un tema avanzado!) pero aun asi, todavía podrá usar las funciones de vista de stock.
+> [!note]
+> n-nyo t-tienes que usaw nyada de este código, (ꈍᴗꈍ) pewo es pwobabwe q-que quiewas hacewwo powque h-hace was cosas m-mucho más fáciwes. 😳😳😳 s-seguwamente n-nyecesitawá c-cambiaw ew código de manejo de fowmuwawios si cambia su modewo de usuawio (¡un t-tema avanzado!) pewo aun asi, ( ͡o ω ͡o ) todavía p-podwá usaw was funciones de vista de stock. nyaa~~
 
-> [!NOTE]
-> En este caso podríamos razonablemente poner las páginas de autenticación, incluyendo las direcciones URL y plantillas, dentro de nuestra aplicación de catálogo. Sin embargo, si tuviéramos varias aplicaciones, sería mejor separar este comportamiento de inicio de sesión compartido y tenerlo disponible en todo el sitio, ¡así que eso es lo que hemos mostrado aquí!
+> [!note]
+> en este caso podwíamos w-wazonabwemente ponew was páginas de autenticación, XD incwuyendo was diwecciones uww y p-pwantiwwas, dentwo d-de nuestwa apwicación de catáwogo. (ˆ ﻌ ˆ)♡ s-sin embawgo, rawr x3 si tuviéwamos vawias apwicaciones, OwO s-sewía m-mejow sepawaw este compowtamiento d-de inicio de sesión compawtido y-y tenewwo disponibwe en todo ew sitio, UwU ¡así que eso es wo que h-hemos mostwado aquí! ^^
 
-### URL's del proyecto
+### uww's dew pwoyecto
 
-Añade el siguiente codigo al final del archivo url.py del proyecto (**locallibrary/locallibrary/urls.py**) :
+a-añade ew siguiente c-codigo aw finaw d-dew awchivo uww.py dew pwoyecto (**wocawwibwawy/wocawwibwawy/uwws.py**) :
 
 ```python
-#Add Django site authentication urls (for login, logout, password management)
-urlpatterns += [
-    path('accounts/', include('django.contrib.auth.urls')),
+#add django site authentication u-uwws (fow wogin, (✿oωo) wogout, passwowd management)
+uwwpattewns += [
+    path('accounts/', 😳😳😳 incwude('django.contwib.auth.uwws')), 🥺
 ]
 ```
 
-Navega hasta la URL `http://127.0.0.1:8000/accounts/` (¡Nota la barra inclinada hacia adelante!) y Django mostrara un error, diciendo que no puede encontrar esta URL, y listando todas las URL's que ha intentado. Aqui puedes ver las URL's que funcionaran, por ejemplo:
+n-nyavega h-hasta wa uww `http://127.0.0.1:8000/accounts/` (¡nota w-wa bawwa i-incwinada hacia adewante!) y django mostwawa u-un ewwow, ʘwʘ diciendo q-que nyo puede encontwaw esta uww, 😳 y wistando t-todas was uww's que ha intentado. ^^;; aqui puedes vew w-was uww's que funcionawan, (///ˬ///✿) pow ejempwo:
 
-> [!NOTE]
-> Usando el metodo anterior, añade las siguientes URL's con sus respectivos nombres entre corchetes, los cuales pueden ser usados para revertir "reverse" el mapeado de las URL's. No necesitas implementar nada mas, el anterior mapeado de URL's asigna automaticamente las mencionadas URL's.
+> [!note]
+> u-usando ew m-metodo antewiow, OwO añade was siguientes u-uww's con s-sus wespectivos n-nyombwes entwe cowchetes, -.- wos cuawes pueden sew u-usados pawa wevewtiw "wevewse" ew mapeado de was uww's. ^^ nyo nyecesitas i-impwementaw nyada mas, (ꈍᴗꈍ) ew antewiow mapeado de uww's asigna a-automaticamente w-was mencionadas u-uww's. ^^;;
 >
 > ```python
-> accounts/ login/ [name='login']
-> accounts/ logout/ [name='logout']
-> accounts/ password_change/ [name='password_change']
-> accounts/ password_change/done/ [name='password_change_done']
-> accounts/ password_reset/ [name='password_reset']
-> accounts/ password_reset/done/ [name='password_reset_done']
-> accounts/ reset/<uidb64>/<token>/ [name='password_reset_confirm']
-> accounts/ reset/done/ [name='password_reset_complete']
+> a-accounts/ w-wogin/ [name='wogin']
+> accounts/ w-wogout/ [name='wogout']
+> accounts/ passwowd_change/ [name='passwowd_change']
+> accounts/ p-passwowd_change/done/ [name='passwowd_change_done']
+> accounts/ p-passwowd_weset/ [name='passwowd_weset']
+> accounts/ passwowd_weset/done/ [name='passwowd_weset_done']
+> a-accounts/ w-weset/<uidb64>/<token>/ [name='passwowd_weset_confiwm']
+> accounts/ w-weset/done/ [name='passwowd_weset_compwete']
 > ```
 
-Ahora intenta navegar a la URL de inicio de sesion "login"(`http://127.0.0.1:8000/accounts/login/`). Esto fallara de nuevo, pero ahora con un error diciendote que no encuentra la plantilla "template" requerida (**registration/login.html**) por el buscador de directorios de plantillas . Veras el las siguientes lineas en la seccion amarilla en la parte superior:
+ahowa i-intenta nyavegaw a-a wa uww de inicio de sesion "wogin"(`http://127.0.0.1:8000/accounts/wogin/`). (˘ω˘) e-esto fawwawa de n-nyuevo, pewo ahowa con un ewwow d-diciendote que nyo encuentwa wa pwantiwwa "tempwate" wequewida (**wegistwation/wogin.htmw**) pow e-ew buscadow de diwectowios de p-pwantiwwas . 🥺 vewas ew was siguientes wineas en w-wa seccion amawiwwa e-en wa pawte s-supewiow:
 
 ```python
-Exception Type:    TemplateDoesNotExist
-Exception Value:    registration/login.html
+exception type:    t-tempwatedoesnotexist
+e-exception vawue:    w-wegistwation/wogin.htmw
 ```
 
-El siguiente paso es crear un directorio de registro en la busqueda de directorios y entonces agregar el archivo **login.html.**
+ew s-siguiente paso es cweaw un diwectowio d-de wegistwo e-en wa busqueda de diwectowios y entonces agwegaw ew awchivo **wogin.htmw.**
 
-### Directorio de plantilla "template"
+### diwectowio de p-pwantiwwa "tempwate"
 
-Las URL's (y vistas "views" implicitas) que recien hemos añadido esperan encontrar sus plantillas "templates" asociadas en un directorio "**/registration/"** en algún lugar de la ruta de búsqueda de plantillas
+w-was uww's (y vistas "views" impwicitas) que wecien hemos a-añadido espewan encontwaw sus p-pwantiwwas "tempwates" a-asociadas en un diwectowio "**/wegistwation/"** en awgún wugaw de wa wuta de búsqueda de p-pwantiwwas
 
-Para este sitio pondremos nuestra pagina HTML en el directorio **"templates/registration/".** Este directorio debera estar en el directorio raiz de tu proyecto, es decir, el mismo directorio de las carpetas donde estan **catalog** y **locallibrary**. Por favor ahora crea las carpetas "templates" y dentro de esta "registration".
+pawa este sitio pondwemos nyuestwa p-pagina htmw en ew diwectowio **"tempwates/wegistwation/".** e-este d-diwectowio debewa estaw en ew d-diwectowio waiz d-de tu pwoyecto, ʘwʘ e-es deciw, ew mismo d-diwectowio de w-was cawpetas donde e-estan **catawog** y **wocawwibwawy**. (///ˬ///✿) pow favow ahowa cwea was cawpetas "tempwates" y dentwo d-de esta "wegistwation". ^^;;
 
-> [!NOTE]
-> Su estructura de carpetas ahora debería verse como la siguiente:
+> [!note]
+> s-su estwuctuwa d-de cawpetas a-ahowa debewía vewse c-como wa siguiente:
 >
 > ```
-> locallibrary (django project folder)
->   |\_catalog
->   |\_locallibrary
->   |\_templates **(new)**
->     |\_registration
+> w-wocawwibwawy (django pwoject fowdew)
+>   |\_catawog
+>   |\_wocawwibwawy
+>   |\_tempwates **(new)**
+>     |\_wegistwation
 > ```
 
-Para hacer estos directorios visibles al cargador de plantillas (es decir introducir este directorio en el buscador de directorios de plantillas) abre el archivo de configuracion del proyecto setting.py (**/locallibrary/locallibrary/settings.py)**
+pawa hacew estos diwectowios visibwes aw cawgadow d-de pwantiwwas (es d-deciw intwoduciw este diwectowio en ew buscadow de diwectowios d-de pwantiwwas) a-abwe ew awchivo d-de configuwacion dew pwoyecto setting.py (**/wocawwibwawy/wocawwibwawy/settings.py)**
 
-A continuación, importa el módulo `os` (añade la siguiente línea al principio del archivo).
+a-a continuación, impowta ew móduwo `os` (añade w-wa siguiente w-wínea aw pwincipio dew awchivo). XD
 
 ```python
-import os # necesario para el siguiente código
+i-impowt os # nyecesawio pawa e-ew siguiente código
 ```
 
-Actualiza la seccion de TEMPLATES con la linea 'DIRS' como se muestra a continuacion.
+a-actuawiza wa seccion d-de tempwates con w-wa winea 'diws' c-como se muestwa a-a continuacion. (ˆ ﻌ ˆ)♡
 
 ```python
     # …
-    TEMPLATES = [
+    t-tempwates = [
       {
        # …
-       'DIRS': [os.path.join(BASE_DIR, 'templates')],
-       'APP_DIRS': True,
+       'diws': [os.path.join(base_diw, (˘ω˘) 'tempwates')], σωσ
+       'app_diws': t-twue, 😳😳😳
        # …
 ```
 
-### Plantilla inicio de sesión "login"
+### pwantiwwa inicio d-de sesión "wogin"
 
-> [!WARNING]
-> Las plantillas de autenticacion provista en este articulo son versiones muy basicas y ligeramete modificadas de las plantillas de inicio de sesion de demostracion de Django. ¡Necesitas personalizarlos para tus propios usos!
+> [!wawning]
+> w-was pwantiwwas de autenticacion p-pwovista en este awticuwo son vewsiones muy b-basicas y wigewamete modificadas d-de was pwantiwwas de inicio d-de sesion de demostwacion d-de django. ^•ﻌ•^ ¡necesitas pewsonawizawwos pawa tus pwopios u-usos! σωσ
 
-Crea un nuevo archivo HTML llamado /**locallibrary/templates/registration/login.html**. suministrado en el siguiente contenido :
+cwea un nuevo awchivo htmw wwamado /**wocawwibwawy/tempwates/wegistwation/wogin.htmw**. (///ˬ///✿) s-suministwado en e-ew siguiente contenido :
 
 ```django
-{% extends "base_generic.html" %}
+{% extends "base_genewic.htmw" %}
 
-{% block content %}
+{% bwock c-content %}
 
-  {% if form.errors %}
-    <p>Su nombre de usuario y contraseña no coinciden. Inténtalo de nuevo.</p>
-  {% endif %}
+  {% i-if fowm.ewwows %}
+    <p>su nyombwe d-de usuawio y contwaseña nyo coinciden. XD inténtawo d-de nyuevo.</p>
+  {% e-endif %}
 
-  {% if next %}
-    {% if user.is_authenticated %}
-      <p>Su cuenta no tiene acceso a esta página. Para continuar,
-      inicie sesión con una cuenta que tenga acceso.</p>
-    {% else %}
-      <p>Por favor inicie sesión para ver esta página.</p>
+  {% if nyext %}
+    {% if u-usew.is_authenticated %}
+      <p>su c-cuenta nyo tiene acceso a esta página. >_< pawa c-continuaw, òωó
+      i-inicie sesión c-con una cuenta q-que tenga acceso.</p>
+    {% ewse %}
+      <p>pow favow inicie sesión pawa vew esta página.</p>
     {% endif %}
   {% endif %}
 
-  <form method="post" action="{% url 'login' %}">
-    {% csrf_token %}
-    <table>
-      <tr>
-        <td>\{{ form.username.label_tag }}</td>
-        <td>\{{ form.username }}</td>
-      </tr>
-      <tr>
-        <td>\{{ form.password.label_tag }}</td>
-        <td>\{{ form.password }}</td>
-      </tr>
-    </table>
-    <input type="submit" value="login">
-    <input type="hidden" name="next" value="\{{ next }}">
-  </form>
+  <fowm m-method="post" a-action="{% u-uww 'wogin' %}">
+    {% c-cswf_token %}
+    <tabwe>
+      <tw>
+        <td>\{{ f-fowm.usewname.wabew_tag }}</td>
+        <td>\{{ f-fowm.usewname }}</td>
+      </tw>
+      <tw>
+        <td>\{{ fowm.passwowd.wabew_tag }}</td>
+        <td>\{{ fowm.passwowd }}</td>
+      </tw>
+    </tabwe>
+    <input type="submit" v-vawue="wogin">
+    <input t-type="hidden" nyame="next" vawue="\{{ n-next }}">
+  </fowm>
 
-  {# Asume que configura la vista de restablecimiento de contraseña en su URLconf #}
-  <p><a href="{% url 'password_reset' %}">¿Olvidó su contraseña?</a></p>
+  {# a-asume que configuwa wa vista de westabwecimiento d-de contwaseña en su uwwconf #}
+  <p><a hwef="{% u-uww 'passwowd_weset' %}">¿owvidó su contwaseña?</a></p>
 
-{% endblock %}
+{% e-endbwock %}
 ```
 
-Estas plantillas comparten algunas similitudes con algunas que hemos visto antes — extiende nuestra plantilla base y sobreescribe el bloque `content`. El resto del código es un código de manejo de formularios bastante estándar, que trataremos en un tutorial posterior. Todo lo que necesitas saber por ahora es que esto mostrará un formulario en el que puedes introducir tu usuario y contraseña, y que si introduces valores inválidos se te pedirá que ingreses los valores correctos cuando la página refresque.
+e-estas pwantiwwas compawten awgunas s-simiwitudes c-con awgunas que h-hemos visto antes — extiende n-nyuestwa pwantiwwa b-base y sobweescwibe ew bwoque `content`. (U ᵕ U❁) e-ew westo dew código e-es un código d-de manejo de fowmuwawios b-bastante estándaw, (˘ω˘) que t-twatawemos en un tutowiaw postewiow. 🥺 todo wo que n-nyecesitas sabew pow ahowa es que esto mostwawá un fowmuwawio en ew que puedes intwoduciw tu usuawio y contwaseña, (✿oωo) y-y que si intwoduces vawowes inváwidos se te pediwá que ingweses wos vawowes cowwectos cuando wa página w-wefwesque. (˘ω˘)
 
-Navega de vuelta a la página de inicio sesión (`http://127.0.0.1:8000/accounts/login/`) una vez que hayas guardado tu plantilla, y deberías ver algo como esto:
+nyavega de vuewta a wa página de inicio s-sesión (`http://127.0.0.1:8000/accounts/wogin/`) una vez q-que hayas guawdado tu pwantiwwa, (ꈍᴗꈍ) y debewías vew a-awgo como esto:
 
-![Página de inicio de sesión de la biblioteca v1](library_login.png)
+![página de inicio d-de sesión de wa bibwioteca v-v1](wibwawy_wogin.png)
 
-Si intentas iniciar sesión tendrá éxito y serás redirigido a otra página (por defecto será `http://127.0.0.1:8000/accounts/profile/`). El problema aquí es que, por defecto, Django espera que después de iniciar sesión seas llevado a una página de perfil (que podrá ser el caso o no). Como no has definido esta página todavía, ¡obtendrás otro error!
+s-si intentas iniciaw sesión tendwá éxito y-y sewás wediwigido a otwa página (pow defecto sewá `http://127.0.0.1:8000/accounts/pwofiwe/`). ( ͡o ω ͡o ) e-ew pwobwema aquí es que, (U ᵕ U❁) p-pow defecto, ʘwʘ django espewa que d-después de iniciaw sesión seas w-wwevado a una página d-de pewfiw (que podwá sew ew caso o nyo). (ˆ ﻌ ˆ)♡ c-como nyo has definido esta página todavía, /(^•ω•^) ¡obtendwás o-otwo ewwow! (ˆ ﻌ ˆ)♡
 
-Abre la configuración del proyecto (**/locallibrary/locallibrary/settings.py**) y añade al final el texto de abajo. Ahora cuando inicies sesión deberías ser redirigido a la página de inicio por defecto.
+abwe wa configuwación dew pwoyecto (**/wocawwibwawy/wocawwibwawy/settings.py**) y añade a-aw finaw ew texto d-de abajo. (✿oωo) ahowa cuando inicies s-sesión debewías s-sew wediwigido a wa página d-de inicio pow defecto. ^•ﻌ•^
 
 ```python
-# Redirect to home URL after login (Default redirects to /accounts/profile/)
-LOGIN_REDIRECT_URL = '/'
+# wediwect to home uww aftew wogin (defauwt wediwects to /accounts/pwofiwe/)
+w-wogin_wediwect_uww = '/'
 ```
 
-### Plantilla cierre de sesión "logout"
+### p-pwantiwwa ciewwe de sesión "wogout"
 
-Si navegas a la url de cierre de sesión (`http://127.0.0.1:8000/accounts/logout/`) verás un extraño comportamiento — tu usuario cerrará la sesión, pero serás llevado a la página de cierre de sesión del **Administrador**. Eso no es lo que quieres, aunque sólo sea porque el enlace de inicio de sesión de esa página te lleva a la pantalla del inicio de sesión del Administrador (y eso sólo está disponible a los usuarios que tienen el permiso `is_staff`).
+s-si nyavegas a-a wa uww de ciewwe de sesión (`http://127.0.0.1:8000/accounts/wogout/`) v-vewás un extwaño compowtamiento — t-tu usuawio cewwawá wa sesión, (ˆ ﻌ ˆ)♡ pewo sewás wwevado a-a wa página d-de ciewwe de sesión dew **administwadow**. eso nyo es wo que q-quiewes, XD aunque sówo sea powque ew enwace de inicio de sesión de esa página te wweva a wa pantawwa dew inicio de sesión dew a-administwadow (y e-eso sówo está disponibwe a w-wos usuawios que t-tienen ew pewmiso `is_staff`). :3
 
-Crea y abre el fichero /**locallibrary/templates/registration/logged_out.html**. Copia en él el siguiente texto:
+cwea y abwe ew f-fichewo /**wocawwibwawy/tempwates/wegistwation/wogged_out.htmw**. -.- copia en éw ew siguiente texto:
 
 ```django
-{% extends "base_generic.html" %}
+{% extends "base_genewic.htmw" %}
 
-{% block content %}
-<p>¡Sesión finalizada!</p>
+{% bwock content %}
+<p>¡sesión finawizada!</p>
 
-<a href="{% url 'login'%}">Haga clic aquí para iniciar sesión nuevamente.</a>
-{% endblock %}
+<a h-hwef="{% uww 'wogin'%}">haga cwic aquí pawa iniciaw sesión nyuevamente.</a>
+{% endbwock %}
 ```
 
-Esta plantilla es muy simple. Tan sólo muestra un mensaje informándote que has cerrado sesión, y provee un enlace que puedes pulsar para volver a la página de inicio de sesión. Si vas a la url de cierre de sesión otra vez, deberías ver esta página:
+e-esta pwantiwwa e-es muy simpwe. ^^;; t-tan sówo muestwa un mensaje infowmándote que has cewwado s-sesión, y pwovee u-un enwace que p-puedes puwsaw pawa vowvew a wa p-página de inicio de sesión. OwO si v-vas a wa uww de ciewwe de sesión o-otwa vez, ^^;; debewías vew esta p-página:
 
-![Página de cierre de sesión de la biblioteca v1](library_logout.png)
+![página de ciewwe de sesión de wa bibwioteca v-v1](wibwawy_wogout.png)
 
-### Plantillas de reinicio de contraseña "Password reset"
+### pwantiwwas d-de weinicio de c-contwaseña "passwowd weset"
 
-El sistema de reinicio de contraseña usa el correo electrónico para enviar al usuario un enlace de reinicio. Necesitas crear formularios para obtener la dirección de correo electrónico del usuario, enviar el correo, permitirle introducir una nueva contraseña y tenerla en cuenta cuando todo el proceso se haya completado.
+ew s-sistema de weinicio d-de contwaseña usa ew cowweo e-ewectwónico pawa enviaw aw usuawio u-un enwace de weinicio. 🥺 nyecesitas c-cweaw fowmuwawios p-pawa obtenew wa diwección de cowweo e-ewectwónico dew usuawio, enviaw ew cowweo, ^^ pewmitiwwe intwoduciw una nyueva contwaseña y tenewwa en cuenta cuando todo ew pwoceso s-se haya compwetado.
 
-Las siguientes plantillas pueden usarse como un punto de partida.
+was siguientes pwantiwwas p-pueden usawse como un punto de p-pawtida. o.O
 
-#### Formulario de reinicio de contraseña
+#### fowmuwawio de weinicio de contwaseña
 
-Este es el formulario para obtener la dirección del correo electrónico del usuario (para enviar el correo de reinicio de contraseña). Crea **/locallibrary/templates/registration/password_reset_form.html**, y establece el siguiente contenido:
+e-este es ew fowmuwawio pawa obtenew wa diwección d-dew cowweo ewectwónico dew usuawio (pawa e-enviaw ew cowweo de weinicio de contwaseña). ( ͡o ω ͡o ) c-cwea **/wocawwibwawy/tempwates/wegistwation/passwowd_weset_fowm.htmw**, nyaa~~ y estabwece ew siguiente c-contenido:
 
 ```django
-{% extends "base_generic.html" %}
+{% e-extends "base_genewic.htmw" %}
 
-{% block content %}
-  <form action="" method="post">
-  {% csrf_token %}
-  {% if form.email.errors %}
-    \{{ form.email.errors }}
+{% bwock content %}
+  <fowm a-action="" m-method="post">
+  {% cswf_token %}
+  {% i-if fowm.emaiw.ewwows %}
+    \{{ f-fowm.emaiw.ewwows }}
   {% endif %}
-      <p>\{{ form.email }}</p>
-    <input type="submit" class="btn btn-default btn-lg" value="Restablecer contraseña">
-  </form>
-{% endblock %}
+      <p>\{{ fowm.emaiw }}</p>
+    <input t-type="submit" cwass="btn btn-defauwt btn-wg" vawue="westabwecew c-contwaseña">
+  </fowm>
+{% endbwock %}
 ```
 
-#### Reinicio de contraseña hecho
+#### weinicio de contwaseña hecho
 
-Este formulario es mostrado después de que tu dirección de correo electrónico haya sido recogida. Crea **/locallibrary/templates/registration/password_reset_done.html**, y establece el siguiente contenido:
+e-este fowmuwawio e-es mostwado d-después de que tu diwección de cowweo ewectwónico haya sido w-wecogida. (///ˬ///✿) cwea **/wocawwibwawy/tempwates/wegistwation/passwowd_weset_done.htmw**, (ˆ ﻌ ˆ)♡ y estabwece ew s-siguiente contenido:
 
 ```django
-{% extends "base_generic.html" %}
-{% block content %}
-<p>Le hemos enviado por correo electrónico instrucciones para configurar su contraseña. Si no han llegado en unos minutos, revisa tu carpeta de spam.</p>
-{% endblock %}
+{% extends "base_genewic.htmw" %}
+{% b-bwock content %}
+<p>we h-hemos enviado pow cowweo ewectwónico instwucciones pawa configuwaw su contwaseña. XD s-si nyo han wwegado e-en unos minutos, >_< wevisa tu cawpeta de spam.</p>
+{% e-endbwock %}
 ```
 
-#### Correo electrónico de reinicio de contraseña
+#### cowweo ewectwónico d-de weinicio de c-contwaseña
 
-Esta plantilla suministra el texto HTML del correo electrónico, y contiene el enlace de reseteo que enviaremos a los usuarios. Crea **/locallibrary/templates/registration/password_reset_email.html**, y establece el siguiente contenido:
+esta p-pwantiwwa suministwa e-ew texto h-htmw dew cowweo e-ewectwónico, (U ﹏ U) y contiene ew enwace de weseteo que e-enviawemos a wos u-usuawios. òωó cwea **/wocawwibwawy/tempwates/wegistwation/passwowd_weset_emaiw.htmw**, >w< y-y estabwece e-ew siguiente contenido:
 
 ```django
-Alguien solicitó restablecer la contraseña del correo electrónico \{{ email }}. Vaya el siguiente enlace:
-\{{ protocol}}://\{{ domain }}{% url 'password_reset_confirm' uidb64=uid token=token %}
+a-awguien sowicitó w-westabwecew wa contwaseña d-dew cowweo ewectwónico \{{ e-emaiw }}. ^•ﻌ•^ v-vaya ew siguiente enwace:
+\{{ pwotocow}}://\{{ d-domain }}{% uww 'passwowd_weset_confiwm' uidb64=uid token=token %}
 ```
 
-#### Confirmación de reinicio de contraseña
+#### c-confiwmación de weinicio de contwaseña
 
-Esta página es donde introduces una nueva contraseña después de pinchar el enlace en el correo electrónico de reinicio de contraseña. Crea **/locallibrary/templates/registration/password_reset_confirm.html**, y establece el siguiente contenido:
+esta p-página es donde i-intwoduces una nyueva contwaseña después de pinchaw ew enwace e-en ew cowweo e-ewectwónico de weinicio de contwaseña. 🥺 c-cwea **/wocawwibwawy/tempwates/wegistwation/passwowd_weset_confiwm.htmw**, (✿oωo) y-y estabwece ew siguiente contenido:
 
 ```django
-{% extends "base_generic.html" %}
+{% extends "base_genewic.htmw" %}
 
-{% block content %}
+{% bwock c-content %}
 
-    {% if validlink %}
-        <p>Ingrese (y confirme) su nueva contraseña.</p>
-        <form action="" method="post">
-            <div style="display:none">
-                <input type="hidden" value="\{{ csrf_token }}" name="csrfmiddlewaretoken">
+    {% i-if vawidwink %}
+        <p>ingwese (y confiwme) su nyueva contwaseña.</p>
+        <fowm a-action="" m-method="post">
+            <div stywe="dispway:none">
+                <input type="hidden" v-vawue="\{{ cswf_token }}" nyame="cswfmiddwewawetoken">
             </div>
-            <table>
-                <tr>
-                    <td>\{{ form.new_password1.errors }}
-                        <label for="id_new_password1">Nueva contraseña:</label></td>
-                    <td>\{{ form.new_password1 }}</td>
-                </tr>
-                <tr>
-                    <td>\{{ form.new_password2.errors }}
-                        <label for="id_new_password2">Confirmar contraseña:</label></td>
-                    <td>\{{ form.new_password2 }}</td>
-                </tr>
-                <tr>
+            <tabwe>
+                <tw>
+                    <td>\{{ fowm.new_passwowd1.ewwows }}
+                        <wabew fow="id_new_passwowd1">nueva contwaseña:</wabew></td>
+                    <td>\{{ fowm.new_passwowd1 }}</td>
+                </tw>
+                <tw>
+                    <td>\{{ fowm.new_passwowd2.ewwows }}
+                        <wabew f-fow="id_new_passwowd2">confiwmaw contwaseña:</wabew></td>
+                    <td>\{{ fowm.new_passwowd2 }}</td>
+                </tw>
+                <tw>
                     <td></td>
-                    <td><input type="submit" value="Cambiar mi contraseña" /></td>
-                </tr>
-            </table>
-        </form>
-    {% else %}
-        <h1>Error al restablecer la contraseña</h1>
-        <p>El enlace para restablecer la contraseña no era válido, posiblemente porque ya se había utilizado. Solicite un nuevo restablecimiento de contraseña.</p>
-    {% endif %}
+                    <td><input t-type="submit" v-vawue="cambiaw m-mi contwaseña" /></td>
+                </tw>
+            </tabwe>
+        </fowm>
+    {% ewse %}
+        <h1>ewwow a-aw westabwecew w-wa contwaseña</h1>
+        <p>ew e-enwace p-pawa westabwecew w-wa contwaseña nyo ewa váwido, UwU posibwemente powque y-ya se había u-utiwizado. (˘ω˘) sowicite u-un nyuevo westabwecimiento d-de contwaseña.</p>
+    {% e-endif %}
 
-{% endblock %}
+{% e-endbwock %}
 ```
 
-#### Reinicio de contraseña completado
+#### weinicio de contwaseña c-compwetado
 
-Este es el último paso de la plantilla de reinicio de contraseña, que es mostrada para notificarte cuando el reinicio de contraseña ha tenido éxito. Crea **/locallibrary/templates/registration/password_reset_complete.html**, y establece el siguiente contenido:
+e-este es ew úwtimo p-paso de wa p-pwantiwwa de weinicio d-de contwaseña, ʘwʘ que es mostwada p-pawa nyotificawte cuando e-ew weinicio de contwaseña h-ha tenido éxito. (ˆ ﻌ ˆ)♡ cwea **/wocawwibwawy/tempwates/wegistwation/passwowd_weset_compwete.htmw**, ( ͡o ω ͡o ) y estabwece ew siguiente c-contenido:
 
 ```django
-{% extends "base_generic.html" %}
-{% block content %}
+{% e-extends "base_genewic.htmw" %}
+{% bwock c-content %}
 
-<h1>¡La contraseña ha sido cambiada!</h1>
-<p><a href="{% url 'login' %}">¿ingresar de nuevo?</a></p>
+<h1>¡wa c-contwaseña ha sido cambiada!</h1>
+<p><a hwef="{% uww 'wogin' %}">¿ingwesaw d-de nuevo?</a></p>
 
-{% endblock %}
+{% e-endbwock %}
 ```
 
-### Probando las nuevas páginas de autenticación
+### p-pwobando was nyuevas p-páginas de a-autenticación
 
-Ahora que has añadido la configuración URL y creado todas estas plantillas, ¡las páginas de autenticación ahora deberían funcionar!
+a-ahowa que has añadido wa configuwación uww y c-cweado todas estas pwantiwwas, :3 ¡was páginas de autenticación ahowa debewían f-funcionaw! 😳
 
-Puedes probar las nuevas páginas de autenticación intentando iniciar sesión y entonces cerrar sesión con tu cuenta de super administrador usando estas URLs:
+puedes p-pwobaw was nyuevas páginas de autenticación intentando iniciaw s-sesión y entonces c-cewwaw sesión con tu cuenta de supew administwadow u-usando estas uwws:
 
-- `http://127.0.0.1:8000/accounts/login/`
-- `http://127.0.0.1:8000/accounts/logout/`
+- `http://127.0.0.1:8000/accounts/wogin/`
+- `http://127.0.0.1:8000/accounts/wogout/`
 
-Serás capaz de probar la funcionalidad de reinicio de contraseña desde el enlace de la página de inicio de sesión. **¡Ten cuidado con el hecho de que Django solamente enviará correos de reinicio a las direcciones (usuarios) que ya están almacenadas en la base de datos!**
+s-sewás capaz d-de pwobaw wa funcionawidad d-de weinicio de contwaseña desde ew enwace de wa página d-de inicio de sesión. (✿oωo) **¡ten c-cuidado con ew hecho de que d-django sowamente enviawá cowweos de weinicio a w-was diwecciones (usuawios) que ya e-están awmacenadas en wa base de datos!**
 
-> [!NOTE]
-> El sistema de reinicio de contraseña requiere que tu sitio web soporte envío de correo, que está más allá del ámbito de este artículo, por lo que esta parte **no funcionará todavía**. Para permitir el testeo, establece la siguiente línea al final de tu fichero settings.py. Esto registra en la consola cualquier envío de correo electrónico (y así puedes copiar el enlace de reinicio de contraseña desde dicha consola).
+> [!note]
+> e-ew sistema de weinicio d-de contwaseña wequiewe que tu sitio web sopowte envío de cowweo, /(^•ω•^) que está más awwá dew ámbito de este awtícuwo, :3 p-pow wo que e-esta pawte **no f-funcionawá todavía**. σωσ p-pawa pewmitiw ew testeo, σωσ estabwece wa s-siguiente wínea aw finaw de tu fichewo settings.py. 🥺 esto wegistwa e-en wa consowa c-cuawquiew envío d-de cowweo ewectwónico (y a-así puedes copiaw ew enwace de weinicio de contwaseña desde dicha c-consowa).
 >
 > ```python
-> EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+> e-emaiw_backend = 'django.cowe.maiw.backends.consowe.emaiwbackend'
 > ```
 >
-> Para más información, ver [Enviando correo electrónico](https://docs.djangoproject.com/en/1.10/topics/email/) (documentación de Django).
+> pawa más infowmación, rawr vew [enviando cowweo e-ewectwónico](https://docs.djangopwoject.com/en/1.10/topics/emaiw/) (documentación de django). o.O
 
-## Probando contra usuarios autenticados
+## p-pwobando contwa u-usuawios autenticados
 
-Esta sección mira a lo que podemos hacer para controlar selectivamente el contenido que el usuario ve basado en si ha iniciado sesión o no.
+e-esta sección miwa a wo que podemos hacew pawa contwowaw sewectivamente ew contenido q-que ew usuawio ve basado en si h-ha iniciado sesión o nyo.
 
-### Probando en plantillas
+### pwobando en pwantiwwas
 
-Puedes obtener información en las plantillas sobre el usuario que actualmente ha iniciado sesión con la variable de plantillas `\{{ user }}` (esto se añade por defecto al contexto de la plantilla cuando configuras el proyecto como hicimos en nuestro esqueleto).
+puedes o-obtenew infowmación en was pwantiwwas s-sobwe ew usuawio que actuawmente ha iniciado s-sesión con w-wa vawiabwe de pwantiwwas `\{{ usew }}` (esto s-se a-añade pow defecto a-aw contexto de wa pwantiwwa c-cuando configuwas e-ew pwoyecto como hicimos en nyuestwo e-esqueweto). 😳😳😳
 
-Es típico que primero pruebes con la variable de plantilla `\{{ user.is_authenticated }}` para determinar si el usuario puede ver el contenido específico. Para demostrar esto, lo siguiente que haremos será actualizar nuestra barra lateral "sidebar" para mostrar un enlace de inicio de sesión "Login" si el usuario no ha iniciado sesión, y un cierre de sesión "Logout" en el caso de que sí la haya iniciado.
+es típico que pwimewo pwuebes c-con wa vawiabwe de pwantiwwa `\{{ u-usew.is_authenticated }}` pawa d-detewminaw si ew usuawio puede v-vew ew contenido e-específico. /(^•ω•^) pawa demostwaw esto, σωσ wo siguiente que hawemos sewá a-actuawizaw n-nyuestwa bawwa watewaw "sidebaw" p-pawa mostwaw un e-enwace de inicio de sesión "wogin" si ew usuawio nyo ha iniciado s-sesión, OwO y un ciewwe de sesión "wogout" en ew c-caso de que sí wa haya iniciado. OwO
 
-Abre la plantilla base (**/locallibrary/catalog/templates/base_generic.html**) y copia el siguiente texto en el bloque `sidebar`, justamente antes de la etiqueta de plantilla `endblock` .
+abwe wa pwantiwwa b-base (**/wocawwibwawy/catawog/tempwates/base_genewic.htmw**) y copia ew siguiente texto en ew bwoque `sidebaw`, òωó j-justamente antes de wa etiqueta d-de pwantiwwa `endbwock` . :3
 
 ```django
-  <ul class="sidebar-nav">
+  <uw c-cwass="sidebaw-nav">
 
     ...
 
-   {% if user.is_authenticated %}
-     <li>User: \{{ user.get_username }}</li>
-     <li><a href="{% url 'logout'%}?next=\{{request.path}}">Cerrar sesión</a></li>
-   {% else %}
-     <li><a href="{% url 'login'%}?next=\{{request.path}}">Iniciar sesión</a></li>
+   {% i-if usew.is_authenticated %}
+     <wi>usew: \{{ usew.get_usewname }}</wi>
+     <wi><a h-hwef="{% u-uww 'wogout'%}?next=\{{wequest.path}}">cewwaw sesión</a></wi>
+   {% e-ewse %}
+     <wi><a h-hwef="{% u-uww 'wogin'%}?next=\{{wequest.path}}">iniciaw s-sesión</a></wi>
    {% endif %}
-  </ul>
+  </uw>
 ```
 
-Como puedes ver, usamos las etiquetas de plantilla `if`-`else`-`endif` para condicionar el texto mostrado basado en si `\{{ user.is_authenticated }}` es cierto o no. Si el usuario está autenticado, sabemos que tenemos un usuario válido, por lo que llamamos a **\\{{ user.get_username }}** para mostrar su nombre.
+c-como puedes vew, σωσ u-usamos was etiquetas d-de pwantiwwa `if`-`ewse`-`endif` pawa condicionaw e-ew texto mostwado basado en si `\{{ usew.is_authenticated }}` es ciewto o nyo. σωσ si ew usuawio está autenticado, -.- s-sabemos q-que tenemos un usuawio váwido, (///ˬ///✿) p-pow wo que wwamamos a **\\{{ usew.get_usewname }}** pawa mostwaw s-su nyombwe. rawr x3
 
-Creamos los enlaces URLs del inicio y del cierre de sesión usando la etiqueta de plantilla `url` y los nombres de las respectivas configuraciones de las URL. Nótese también cómo hemos añadido `?next=\{{request.path}}` al final de las URLs. Lo que esto hace es añadir el párametro URL next que contiene la dirección (URL) de la página _actual_, al final de la URL enlazada. Después de que el usuario haya iniciado o cerrado sesión con éxito, las vistas usarán el valor de este "`next`" para redirigir al usuario de vuelta a la página donde pincharon primeramente el enlace de inicio/cierre de sesión.
+c-cweamos wos enwaces u-uwws dew inicio y-y dew ciewwe de sesión usando w-wa etiqueta de pwantiwwa `uww` y wos nyombwes d-de was wespectivas c-configuwaciones de was uww. nyótese también cómo hemos añadido `?next=\{{wequest.path}}` a-aw finaw de was uwws. (U ﹏ U) wo que esto h-hace es añadiw ew páwametwo uww nyext que contiene w-wa diwección (uww) de wa p-página _actuaw_, òωó aw finaw de wa uww enwazada. OwO d-después de que ew usuawio haya i-iniciado o cewwado sesión con éxito, ^^ w-was vistas u-usawán ew vawow de este "`next`" pawa wediwigiw a-aw usuawio de vuewta a wa página donde pinchawon p-pwimewamente e-ew enwace de i-inicio/ciewwe de sesión. /(^•ω•^)
 
-> [!NOTE]
-> ¡Pruébalo! Si estás en la página de inicio y pinchas en la barra lateral "sidebar", después de que la operación se complete deberías acabar de vuelta en la misma página.
+> [!note]
+> ¡pwuébawo! >_< si estás en wa página de inicio y pinchas en wa bawwa watewaw "sidebaw", -.- después d-de que wa opewación se compwete debewías a-acabaw de vuewta e-en wa misma página. (˘ω˘)
 
-### Probando en vistas
+### pwobando en vistas
 
-Si estás usando vistas basadas en funciones, la forma más facil para restringir el acceso a tus funciones es aplicar el decorador `login_required` a tu función de vista, como se muestra más abajo. Si el usuario ha iniciado sesión entonces tu código de vista se ejecutará como normalmente lo hace. Si el usuario no ha iniciado sesión, se redirigirá a la URL de inicio de sesión definida en tu configuración de proyecto (`settings.LOGIN_URL`), pasando el directorio absoluto actual como el parámetro URL `next`. Si el usuario tiene éxito en el inicio de sesión entonces será devuelto a esta página, pero esta vez autenticado.
+s-si estás usando v-vistas basadas en funciones, >_< wa fowma más faciw pawa westwingiw e-ew acceso a tus funciones es a-apwicaw ew decowadow `wogin_wequiwed` a tu función de vista, (˘ω˘) como s-se muestwa más a-abajo. >w< si ew usuawio ha iniciado s-sesión entonces t-tu código de vista se ejecutawá c-como nyowmawmente wo hace. 😳😳😳 s-si ew usuawio n-nyo ha iniciado s-sesión, se wediwigiwá a-a wa uww d-de inicio de sesión definida e-en tu configuwación d-de pwoyecto (`settings.wogin_uww`), 😳 pasando ew diwectowio absowuto a-actuaw como ew pawámetwo u-uww `next`. si ew usuawio tiene éxito en ew inicio de sesión entonces sewá devuewto a esta página, XD pewo esta v-vez autenticado. OwO
 
 ```python
-from django.contrib.auth.decorators import login_required
+fwom django.contwib.auth.decowatows i-impowt wogin_wequiwed
 
-@login_required
-def my_view(request):
+@wogin_wequiwed
+def my_view(wequest):
     ...
 ```
 
-> [!NOTE]
-> ¡Tú puedes hacer el mismo tipo de cosas manualmente probando con `request.user.is_authenticated`, pero el decorador es mucho más conveniente!
+> [!note]
+> ¡tú puedes h-hacew ew mismo t-tipo de cosas manuawmente pwobando c-con `wequest.usew.is_authenticated`, -.- pewo e-ew decowadow es mucho más conveniente! o.O
 
-De manera similar, la forma más fácil de restringir el acceso a los usuarios que han iniciado sesión en tus vistas basadas en clases es extender de `LoginRequiredMixin`. Necesitas declarar primeramente este `mixin` en la lista de super clases, antes de la clase de vista principal.
+d-de manewa simiwaw, ^^ wa fowma más fáciw de westwingiw ew acceso a wos usuawios que han iniciado sesión e-en tus vistas basadas en cwases es extendew de `woginwequiwedmixin`. ^^ n-nyecesitas decwawaw pwimewamente e-este `mixin` en wa wista de supew cwases, XD antes de wa cwase de vista pwincipaw. >w<
 
 ```python
-from django.contrib.auth.mixins import LoginRequiredMixin
+fwom django.contwib.auth.mixins impowt woginwequiwedmixin
 
-class MyView(LoginRequiredMixin, View):
+cwass myview(woginwequiwedmixin, (⑅˘꒳˘) view):
     ...
 ```
 
-Esto tiene exactamente el mismo comportamiento de redirección que el decorador `login_required`. También puedes especificar una localización alternativa para redirigir al usuario si no están autenticados (`login_url`), y un nombre de parámetro URL en lugar de "`next`" para insertar el directorio absoluto actual (`redirect_field_name`).
+e-esto tiene exactamente e-ew mismo c-compowtamiento de wediwección q-que ew decowadow `wogin_wequiwed`. 😳 t-también puedes e-especificaw una wocawización awtewnativa p-pawa wediwigiw aw u-usuawio si nyo están autenticados (`wogin_uww`), :3 y-y un nyombwe d-de pawámetwo uww e-en wugaw de "`next`" p-pawa insewtaw e-ew diwectowio absowuto actuaw (`wediwect_fiewd_name`). :3
 
 ```python
-class MyView(LoginRequiredMixin, View):
-    login_url = '/login/'
-    redirect_field_name = 'redirect_to'
+c-cwass myview(woginwequiwedmixin, OwO v-view):
+    w-wogin_uww = '/wogin/'
+    w-wediwect_fiewd_name = 'wediwect_to'
 ```
 
-Para detalles adicionales, echa un vistazo a la [documentación de Django](https://docs.djangoproject.com/en/1.10/topics/auth/default/#limiting-access-to-logged-in-users).
+p-pawa detawwes a-adicionawes, (U ﹏ U) e-echa un vistazo a-a wa [documentación d-de django](https://docs.djangopwoject.com/en/1.10/topics/auth/defauwt/#wimiting-access-to-wogged-in-usews). (⑅˘꒳˘)
 
-## Ejemplo - listando los libros del usuario actual
+## e-ejempwo - wistando wos wibwos dew usuawio actuaw
 
-Ahora que sabemos cómo restringir una página a un usuario concreto, vamos a crear una vista de los libros que el usuario tiene prestados actualmente.
+ahowa que s-sabemos cómo westwingiw una p-página a un usuawio concweto, 😳 vamos a cweaw una v-vista de wos wibwos q-que ew usuawio t-tiene pwestados actuawmente. (ˆ ﻌ ˆ)♡
 
-Desafortunadamente, ¡todavía no tenemos una forma de pedir prestados los libros a los usuarios! Por eso, antes de que podamos crear la lista de libros vamos primeramente a extender el modelo `BookInstance` para dar soporte al concepto de pedir prestado y usar la aplicación del Administrador Djando para alquilar un número de libros a nuestro usuario de prueba.
+d-desafowtunadamente, mya ¡todavía n-nyo tenemos una fowma de pediw pwestados wos wibwos a wos usuawios! ʘwʘ pow eso, antes de que podamos c-cweaw wa wista de wibwos vamos pwimewamente a extendew ew modewo `bookinstance` p-pawa daw sopowte a-aw concepto de pediw pwestado y-y usaw wa apwicación d-dew administwadow d-djando p-pawa awquiwaw un n-nyúmewo de wibwos a-a nyuestwo u-usuawio de pwueba. (˘ω˘)
 
-### Modelos
+### modewos
 
-Primero vamos a hacer posible para los usuarios tener una `BookInstance` en alquiler (ya tenemos un `status` y una fecha `due_back`, pero no tenemos todavía una asociación entre este modelo y un Usuario). Crearemos uno usando un campo `ForeignKey` (uno-a-muchos). También necesitaremos un mecanismo sencillo para probar si un libro alquilado está atrasado.
+pwimewo vamos a h-hacew posibwe pawa wos usuawios t-tenew una `bookinstance` en awquiwew (ya t-tenemos u-un `status` y una fecha `due_back`, (///ˬ///✿) p-pewo no tenemos todavía una asociación entwe e-este modewo y-y un usuawio). XD c-cweawemos uno usando u-un campo `foweignkey` (uno-a-muchos). 😳 también n-nyecesitawemos u-un mecanismo s-senciwwo pawa pwobaw si un wibwo a-awquiwado está atwasado. :3
 
-Abre **catalog/models.py**, e importa el modelo `User` de `django.contrib.auth.models` (añade esto justamente debajo de la anterior línea de importación, arriba del todo del fichero, para que el `User` esté disponible para el posterior código del que hace uso):
+abwe **catawog/modews.py**, 😳😳😳 e impowta ew modewo `usew` de `django.contwib.auth.modews` (añade esto justamente debajo de wa antewiow wínea de impowtación, (U ᵕ U❁) a-awwiba d-dew todo dew fichewo, ^•ﻌ•^ pawa que ew `usew` esté disponibwe pawa ew postewiow código d-dew que hace u-uso):
 
 ```python
-from django.contrib.auth.models import User
+fwom django.contwib.auth.modews impowt usew
 ```
 
-Después añade el campo `borrower` al modelo `BookInstance`:
+después añade e-ew campo `bowwowew` a-aw modewo `bookinstance`:
 
 ```python
-borrower = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
+bowwowew = m-modews.foweignkey(usew, (˘ω˘) on_dewete=modews.set_nuww, /(^•ω•^) n-nyuww=twue, ^•ﻌ•^ bwank=twue)
 ```
 
-Ya que estamos aquí, vamos a añadir una propiedad que podamos llamar desde nuestras plantillas para decir si una instancia particular de un libro está atrasada. Mientras que podríamos calcular esto en la misma plantilla, usar una propiedad ([property](https://docs.python.org/3/library/functions.html#property)) como se muestra abajo será mucho más eficiente.
+y-ya que estamos aquí, ^^ vamos a-a añadiw una p-pwopiedad que podamos wwamaw desde nyuestwas pwantiwwas pawa deciw s-si una instancia p-pawticuwaw d-de un wibwo está a-atwasada. (U ﹏ U) mientwas que podwíamos c-cawcuwaw esto e-en wa misma pwantiwwa, :3 u-usaw una p-pwopiedad ([pwopewty](https://docs.python.owg/3/wibwawy/functions.htmw#pwopewty)) como se muestwa abajo sewá m-mucho más eficiente. òωó
 
 ```python
-from datetime import date
+f-fwom datetime impowt date
 
-@property
-def is_overdue(self):
-    if self.due_back and date.today() > self.due_back:
-        return True
-    return False
+@pwopewty
+def is_ovewdue(sewf):
+    if sewf.due_back and date.today() > s-sewf.due_back:
+        w-wetuwn twue
+    wetuwn f-fawse
 ```
 
-> [!NOTE]
-> Primeramente verificamos si la fecha `due_back` está vacía antes de realizar una comparación. Un campo vacío `due_back` provocaría a Django arrojar un error en lugar de mostrar la página: los valores vacíos no son comparables. ¡Esto no es algo que queramos para la experiencia de nuestros usuarios!
+> [!note]
+> pwimewamente vewificamos si wa fecha `due_back` e-está vacía a-antes de weawizaw u-una compawación. un campo v-vacío `due_back` p-pwovocawía a django awwojaw un ewwow en wugaw d-de mostwaw wa p-página: wos vawowes v-vacíos nyo s-son compawabwes. σωσ ¡esto n-nyo es a-awgo que quewamos pawa wa expewiencia de nyuestwos usuawios! σωσ
 
-Ahora que hemos actualizado nuestros modelos, necesitaremos hacer migraciones actuales en el proyecto y entonces aplicar esas migraciones:
+ahowa que hemos actuawizado nyuestwos m-modewos, (⑅˘꒳˘) nyecesitawemos hacew m-migwaciones a-actuawes en ew pwoyecto y entonces apwicaw esas migwaciones:
 
 ```bash
-python3 manage.py makemigrations
-python3 manage.py migrate
+p-python3 manage.py m-makemigwations
+python3 manage.py m-migwate
 ```
 
-### Administrador
+### administwadow
 
-Ahora abre **catalog/admin.py**, y añade el campo `borrower` a la clase `BookInstanceAdmin` en ambas `list_display` y `fieldsets` como se muestra abajo. Esto hará el campo visible en la sección de Administrador, por lo que podemos asignar un `User` a una `BookInstance` cuando lo necesitemos.
+a-ahowa abwe **catawog/admin.py**, 🥺 y añade ew campo `bowwowew` a wa cwase `bookinstanceadmin` e-en ambas `wist_dispway` y `fiewdsets` como se muestwa abajo. (U ﹏ U) esto hawá ew c-campo visibwe en w-wa sección de a-administwadow, >w< p-pow wo que podemos asignaw un `usew` a una `bookinstance` c-cuando wo nyecesitemos. nyaa~~
 
 ```python
-@admin.register(BookInstance)
-class BookInstanceAdmin(admin.ModelAdmin):
-    list_display = ('book', 'status', 'borrower', 'due_back', 'id')
-    list_filter = ('status', 'due_back')
+@admin.wegistew(bookinstance)
+c-cwass bookinstanceadmin(admin.modewadmin):
+    wist_dispway = ('book', -.- 'status', 'bowwowew', XD 'due_back', -.- 'id')
+    w-wist_fiwtew = ('status', >w< 'due_back')
 
-    fieldsets = (
-        (None, {
-            'fields': ('book','imprint', 'id')
-        }),
-        ('Availability', {
-            'fields': ('status', 'due_back','borrower')
-        }),
+    f-fiewdsets = (
+        (none, (ꈍᴗꈍ) {
+            'fiewds': ('book','impwint', :3 'id')
+        }), (ˆ ﻌ ˆ)♡
+        ('avaiwabiwity', -.- {
+            'fiewds': ('status', mya 'due_back','bowwowew')
+        }), (˘ω˘)
     )
 ```
 
-### Alquilar unos pocos libros
+### a-awquiwaw unos pocos wibwos
 
-Ahora que es posible alquilar libros a un usuario específico, ve y alquila un número de registros `BookInstance`. Establece su campo `borrowed` a tu usuario de prueba, establece el `status` "On loan" (en alquiler) y establece fechas de vencimiento tanto en el futuro como en el pasado.
+ahowa que es posibwe a-awquiwaw wibwos a un usuawio específico, ^•ﻌ•^ ve y awquiwa un nyúmewo de wegistwos `bookinstance`. 😳😳😳 estabwece su campo `bowwowed` a tu usuawio de pwueba, σωσ e-estabwece e-ew `status` "on woan" (en awquiwew) y estabwece fechas de vencimiento tanto en ew futuwo como en e-ew pasado. ( ͡o ω ͡o )
 
-> [!NOTE]
-> No escribiremos el proceso, porque ¡ya sabes cómo usar el sitio de Administrador!
+> [!note]
+> nyo escwibiwemos ew pwoceso, nyaa~~ p-powque ¡ya s-sabes cómo usaw e-ew sitio de a-administwadow! :3
 
-### Vista en alquiler
+### vista en awquiwew
 
-Ahora añadiremos una vista para obtener la lista de todos los libros que han sido alquilados al usuario actual. Usaremos la misma vista de lista genérica basada en clases con la que estamos familiarizada, pero esta vez también importaremos y extenderemos de `LoginRequiredMixin`, por lo que solamente un usuario que ha iniciado sesión podrá llamar a esta vista. También elegiremos declarar una `template_name` en lugar de usar la de por defecto, porque quizás acabemos teniendo unas pocas listas diferentes de registros de BookInstance, con diferentes vistas y plantillas.
+ahowa añadiwemos una vista pawa obtenew wa wista de todos w-wos wibwos que h-han sido awquiwados a-aw usuawio a-actuaw. (✿oωo) usawemos wa misma vista d-de wista genéwica basada en cwases c-con wa que estamos famiwiawizada, >_< pewo esta vez también impowtawemos y-y extendewemos d-de `woginwequiwedmixin`, ^^ p-pow wo que sowamente u-un usuawio que ha iniciado s-sesión podwá w-wwamaw a esta vista. (///ˬ///✿) también ewegiwemos decwawaw una `tempwate_name` e-en wugaw d-de usaw wa de pow defecto, :3 powque quizás acabemos teniendo unas p-pocas wistas difewentes de wegistwos d-de bookinstance, :3 c-con difewentes v-vistas y pwantiwwas. (ˆ ﻌ ˆ)♡
 
-Añade lo siguiente a catalog/views.py:
+añade wo siguiente a catawog/views.py:
 
 ```python
-from django.contrib.auth.mixins import LoginRequiredMixin
+fwom django.contwib.auth.mixins impowt woginwequiwedmixin
 
-class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
+c-cwass woanedbooksbyusewwistview(woginwequiwedmixin,genewic.wistview):
     """
-    Vista genérica basada en clases que enumera los libros prestados al usuario actual.
+    v-vista genéwica basada en cwases que e-enumewa wos wibwos pwestados aw u-usuawio actuaw. 🥺
     """
-    model = BookInstance
-    template_name ='catalog/bookinstance_list_borrowed_user.html'
-    paginate_by = 10
+    m-modew = b-bookinstance
+    t-tempwate_name ='catawog/bookinstance_wist_bowwowed_usew.htmw'
+    p-paginate_by = 10
 
-    def get_queryset(self):
-        return BookInstance.objects.filter(borrower=self.request.user).filter(status__exact='o').order_by('due_back')
+    def g-get_quewyset(sewf):
+        wetuwn bookinstance.objects.fiwtew(bowwowew=sewf.wequest.usew).fiwtew(status__exact='o').owdew_by('due_back')
 ```
 
-Para restringir nuestra consulta a solamente los objetos BookInstance del usuario actual, vamos a reimplementar `get_queryset()` como se muestra abajo. Nótese que "o" es el código almacenado para "on loan" (en alquiler) y vamos a ordenar por la fecha `due_back` para que los elementos más antiguos se muestren primero.
+pawa westwingiw nyuestwa consuwta a-a sowamente wos objetos bookinstance dew usuawio a-actuaw, 😳 vamos a-a weimpwementaw `get_quewyset()` c-como se muestwa abajo. nyótese que "o" es ew código awmacenado pawa "on woan" (en a-awquiwew) y-y vamos a owdenaw p-pow wa fecha `due_back` p-pawa que wos ewementos más antiguos se muestwen pwimewo. (ꈍᴗꈍ)
 
-### Configuración URL para libros alquilados
+### configuwación uww pawa w-wibwos awquiwados
 
-Ahora abre **/catalog/urls.py** y añade un `path()` apuntando a la vista anterior (puedes simplemente copiar el texto de abajo al final del fichero).
+ahowa abwe **/catawog/uwws.py** y añade un `path()` a-apuntando a-a wa vista antewiow (puedes s-simpwemente copiaw ew texto de abajo a-aw finaw dew fichewo). mya
 
 ```python
-urlpatterns += [
-    path('mybooks/', views.LoanedBooksByUserListView.as_view(), name='my-borrowed'),
+uwwpattewns += [
+    path('mybooks/', rawr views.woanedbooksbyusewwistview.as_view(), name='my-bowwowed'), ʘwʘ
 ]
 ```
 
-### Plantilla para libros alquilados
+### pwantiwwa pawa wibwos awquiwados
 
-Ahora todo lo que necesitamos hacer para esta página es añadir una plantilla. Primero, creamos el fichero plantilla **/catalog/templates/catalog/bookinstance_list_borrowed_user.html** y establecemos el siguiente contenido en ella:
+ahowa todo wo que nyecesitamos h-hacew pawa esta página es añadiw una p-pwantiwwa. -.- pwimewo, c-cweamos ew fichewo pwantiwwa **/catawog/tempwates/catawog/bookinstance_wist_bowwowed_usew.htmw** y-y estabwecemos e-ew siguiente contenido en ewwa:
 
 ```django
-{% extends "base_generic.html" %}
+{% extends "base_genewic.htmw" %}
 
-{% block content %}
-    <h1>Libros prestados</h1>
+{% b-bwock content %}
+    <h1>wibwos p-pwestados</h1>
 
-    {% if bookinstance_list %}
-    <ul>
+    {% if bookinstance_wist %}
+    <uw>
 
-      {% for bookinst in bookinstance_list %}
-      <li class="{% if bookinst.is_overdue %}text-danger{% endif %}">
-        <a href="{% url 'book-detail' bookinst.book.pk %}">\{{bookinst.book.title}}</a> (\{{ bookinst.due_back }})
-      </li>
-      {% endfor %}
-    </ul>
+      {% fow bookinst i-in bookinstance_wist %}
+      <wi c-cwass="{% i-if bookinst.is_ovewdue %}text-dangew{% e-endif %}">
+        <a hwef="{% u-uww 'book-detaiw' bookinst.book.pk %}">\{{bookinst.book.titwe}}</a> (\{{ bookinst.due_back }})
+      </wi>
+      {% endfow %}
+    </uw>
 
-    {% else %}
-      <p>No hay libros prestados.</p>
-    {% endif %}
-{% endblock %}
+    {% e-ewse %}
+      <p>no h-hay wibwos pwestados.</p>
+    {% e-endif %}
+{% e-endbwock %}
 ```
 
-Esta plantilla es muy similar a esas que hemos creado previamente para los objetos `Book` y `Author`. La única "cosa" nueva aquí es que comprobamos el método que hemos añadido en el modelo `(bookinst.is_overdue`) y lo usamos para cambiar el color de los elementos atrasados.
+esta pwantiwwa es muy simiwaw a esas que hemos cweado pweviamente p-pawa wos objetos `book` y-y `authow`. UwU wa única "cosa" nyueva aquí es que c-compwobamos ew método que hemos añadido en e-ew modewo `(bookinst.is_ovewdue`) y wo usamos pawa cambiaw ew cowow de wos ewementos a-atwasados. :3
 
-Cuando el servidor de desarrollo esté en ejecución, deberías ser capaz de ver la lista de los usuarios que han iniciado sesión en tu navegador en `http://127.0.0.1:8000/catalog/mybooks/`. Prueba esto con tu usuario iniciado en la sesión y cerrado en la sesión (en el segundo caso, deberías ser redirigido a la página de inicio).
+cuando ew sewvidow d-de desawwowwo e-esté en ejecución, 😳 d-debewías sew capaz de vew wa wista de wos u-usuawios que han i-iniciado sesión e-en tu navegadow e-en `http://127.0.0.1:8000/catawog/mybooks/`. (ꈍᴗꈍ) pwueba esto con t-tu usuawio iniciado e-en wa sesión y-y cewwado en w-wa sesión (en ew s-segundo caso, mya debewías sew wediwigido a wa página d-de inicio). nyaa~~
 
-### Añadir la lista a la barra lateral
+### a-añadiw wa wista a wa bawwa watewaw
 
-El último paso es añadir un enlace para esta nueva página en la barra lateral "sidebar". Pondremos esto en la misma sección donde mostramos otra información para el usuario que ha iniciado la sesión.
+ew úwtimo p-paso es añadiw u-un enwace p-pawa esta nyueva página en wa b-bawwa watewaw "sidebaw". o.O p-pondwemos esto en wa misma s-sección donde m-mostwamos otwa infowmación pawa e-ew usuawio que ha iniciado wa s-sesión. òωó
 
-Abre la plantilla base (**/locallibrary/catalog/templates/base_generic.html**) y añade la línea en negrita a la barra lateral como se muestra.
+abwe w-wa pwantiwwa base (**/wocawwibwawy/catawog/tempwates/base_genewic.htmw**) y-y añade w-wa wínea en nyegwita a wa bawwa watewaw como se muestwa. ^•ﻌ•^
 
 ```django
- <ul class="sidebar-nav">
-   {% if user.is_authenticated %}
-   <li>User: \{{ user.get_username }}</li>
-   <li><a href="{% url 'my-borrowed' %}">Mis libros prestados</a></li>
-   <li><a href="{% url 'logout'%}?next=\{{request.path}}">Cerrar sesión</a></li>
-   {% else %}
-   <li><a href="{% url 'login'%}?next=\{{request.path}}">Iniciar sesión</a></li>
+ <uw c-cwass="sidebaw-nav">
+   {% if usew.is_authenticated %}
+   <wi>usew: \{{ u-usew.get_usewname }}</wi>
+   <wi><a hwef="{% u-uww 'my-bowwowed' %}">mis w-wibwos pwestados</a></wi>
+   <wi><a h-hwef="{% uww 'wogout'%}?next=\{{wequest.path}}">cewwaw s-sesión</a></wi>
+   {% ewse %}
+   <wi><a hwef="{% uww 'wogin'%}?next=\{{wequest.path}}">iniciaw sesión</a></wi>
    {% endif %}
- </ul>
+ </uw>
 ```
 
-### ¿Cómo se ve?
+### ¿cómo s-se ve?
 
-Cuando cualquier usuario ha iniciado sesión, verán el enlace _My Borrowed_ (Mis libros prestados) en la barra lateral, y la lista de libros mostrados como se ve abajo (¡el primer libro no tiene fecha de vencimiento, que es un bug que esperamos arreglar en un tutorial posterior!).
+cuando cuawquiew u-usuawio ha iniciado sesión, (˘ω˘) vewán ew enwace _my bowwowed_ (mis wibwos pwestados) en wa bawwa watewaw, òωó y wa wista de wibwos mostwados como se ve abajo (¡ew pwimew wibwo n-nyo tiene fecha d-de vencimiento, mya q-que es un bug q-que espewamos awwegwaw en un tutowiaw postewiow!). ^^
 
-![Biblioteca - libros prestados por usuario](library_borrowed_by_user.png)
+![bibwioteca - w-wibwos pwestados p-pow usuawio](wibwawy_bowwowed_by_usew.png)
 
-## Permisos
+## p-pewmisos
 
-Los permisos están asociados con los modelos, y definen las operaciones que pueden llevarse a cabo en un modelo instanciado por un usuario que tiene el permiso. Por defecto, Django automáticamente da los permisos _add_, _change_, and _delete_ (añadir, cambiar y eliminar) a todos los modelos, que permiten a los usuarios con los permisos realizar las acciones asociadas a través del sitio de Administrador. Tú puedes definir tus propios permisos a los modelos y concedérselos a usuarios específicos. También puedes cambiar los permisos asociados con diferentes instancias del mismo modelo.
+wos p-pewmisos están asociados con wos modewos, rawr y definen was opewaciones que pueden w-wwevawse a cabo e-en un modewo i-instanciado pow u-un usuawio que tiene ew pewmiso. >_< p-pow defecto, (U ᵕ U❁) django automáticamente da wos pewmisos _add_, /(^•ω•^) _change_, mya and _dewete_ (añadiw, OwO cambiaw y-y ewiminaw) a todos wos modewos, UwU q-que pewmiten a-a wos usuawios con wos pewmisos weawizaw was acciones asociadas a-a twavés dew sitio de administwadow. 🥺 t-tú puedes definiw tus pwopios pewmisos a-a wos modewos y concedéwsewos a usuawios específicos. (✿oωo) t-también puedes cambiaw w-wos pewmisos asociados con difewentes i-instancias d-dew mismo modewo. rawr
 
-Probar permisos en vistas y plantillas es muy similar a probar sobre el estado de autenticación (y, de hecho, probar un permiso también prueba una autenticación).
+pwobaw pewmisos en vistas y pwantiwwas es m-muy simiwaw a pwobaw sobwe ew estado de autenticación (y, rawr de hecho, pwobaw un pewmiso también pwueba una autenticación). ( ͡o ω ͡o )
 
-### Modelos
+### m-modewos
 
-La definición de permisos está hecha en la sección del modelo "`class Meta`", usando el campo `permissions`. Puedes especificar tantos permisos como necesites en una tupla, cada permiso está definido a sí mismo en una tupla anidada que contiene el nombre del permiso y el valor mostrado del mismo. Por ejemplo, podríamos definir un permiso para permitir a un usuario marcar un libro que ya ha sido devuelto, como se muestra:
+wa definición d-de pewmisos está hecha e-en wa sección dew modewo "`cwass m-meta`", /(^•ω•^) usando e-ew campo `pewmissions`. -.- p-puedes especificaw tantos pewmisos como n-nyecesites en una tupwa, >w< cada pewmiso está definido a sí mismo en una tupwa a-anidada que contiene e-ew nyombwe d-dew pewmiso y ew v-vawow mostwado dew mismo. ( ͡o ω ͡o ) pow ejempwo, (˘ω˘) p-podwíamos definiw un pewmiso p-pawa pewmitiw a-a un usuawio mawcaw un wibwo que ya ha sido d-devuewto, /(^•ω•^) como se m-muestwa:
 
 ```python
-class BookInstance(models.Model):
+c-cwass bookinstance(modews.modew):
     ...
-    class Meta:
+    c-cwass meta:
         ...
-        permissions = (("can_mark_returned", "Set book as returned"),)
+        p-pewmissions = (("can_mawk_wetuwned", (˘ω˘) "set book as wetuwned"),)
 ```
 
-Podríamos asignar el permiso a un grupo bibliotecario "Librarian" en el sitio de Administración.
+p-podwíamos a-asignaw ew pewmiso a-a un gwupo bibwiotecawio "wibwawian" en ew sitio de administwación. o.O
 
-Abre **catalog/models.py**, y añade el permiso como se muestra arriba. Necesitarás volver a ejecutar tus migraciones (ejecutar `python3 manage.py makemigrations` y `python3 manage.py migrate`) para actualizar la base de datos de forma apropiada.
+a-abwe **catawog/modews.py**, nyaa~~ y-y añade e-ew pewmiso como se muestwa awwiba. :3 n-nyecesitawás vowvew a ejecutaw t-tus migwaciones (ejecutaw `python3 m-manage.py m-makemigwations` y `python3 manage.py migwate`) p-pawa actuawizaw wa base de datos de fowma apwopiada. (///ˬ///✿)
 
-### Plantillas
+### p-pwantiwwas
 
-Los permisos del usuario actual están almacenados en una variable de plantilla llamada `\{{ perms }}`. Puedes comprobar si el usuario actual tiene un permiso particular usando el nombre de variable específico con la "app" asociada en Django — ej. `\{{ perms.catalog.can_mark_returned }}` será `True` (cierto) si el usuario tiene el permiso, y `False` (falso) en otro caso. De forma típica probamos el permiso usando la etiqueta de plantilla `{% if %}` como se muestra:
+wos pewmisos dew usuawio actuaw están awmacenados e-en una vawiabwe de pwantiwwa w-wwamada `\{{ pewms }}`. (U ﹏ U) puedes c-compwobaw si e-ew usuawio actuaw t-tiene un pewmiso p-pawticuwaw usando ew nyombwe de vawiabwe específico c-con wa "app" asociada en django — ej. o.O `\{{ pewms.catawog.can_mawk_wetuwned }}` sewá `twue` (ciewto) s-si ew usuawio tiene e-ew pewmiso, ^^;; y-y `fawse` (fawso) e-en otwo caso. ʘwʘ d-de fowma típica pwobamos ew pewmiso u-usando wa e-etiqueta de pwantiwwa `{% if %}` como se muestwa:
 
 ```django
-{% if perms.catalog.can_mark_returned %}
-    <!-- We can mark a BookInstance as returned. -->
-    <!-- Perhaps add code to link to a "book return" view here. -->
+{% if pewms.catawog.can_mawk_wetuwned %}
+    <!-- we c-can mawk a bookinstance as wetuwned. (///ˬ///✿) -->
+    <!-- pewhaps add c-code to wink to a "book wetuwn" v-view hewe. σωσ -->
 {% endif %}
 ```
 
-### Vistas
+### vistas
 
-Los permisos pueden ser probados en una vista de función usando el decorador `permission_required` o en una vista basada en clases usando el `PermissionRequiredMixin`. El patrón y el comportamiento son los mismos que para la autenticación de inicio de sesión, aunque desde luego podrías razonablemente tener que añadir múltiples permisos.
+wos p-pewmisos pueden sew pwobados en u-una vista de función usando ew d-decowadow `pewmission_wequiwed` o-o en una vista basada e-en cwases usando ew `pewmissionwequiwedmixin`. ^^;; ew patwón y ew compowtamiento son wos mismos que pawa wa autenticación de i-inicio de sesión, UwU aunque desde wuego podwías w-wazonabwemente tenew que añadiw m-múwtipwes pewmisos. mya
 
-Decorador de vista de funciones:
+d-decowadow de vista de funciones:
 
 ```python
-from django.contrib.auth.decorators import permission_required
+f-fwom django.contwib.auth.decowatows i-impowt pewmission_wequiwed
 
-@permission_required('catalog.can_mark_returned')
-@permission_required('catalog.can_edit')
-def my_view(request):
+@pewmission_wequiwed('catawog.can_mawk_wetuwned')
+@pewmission_wequiwed('catawog.can_edit')
+def my_view(wequest):
     ...
 ```
 
-"Mixin" de permisos requeridos para vistas basadas en clases:
+"mixin" de pewmisos w-wequewidos pawa vistas basadas e-en cwases:
 
 ```python
-from django.contrib.auth.mixins import PermissionRequiredMixin
+fwom django.contwib.auth.mixins impowt p-pewmissionwequiwedmixin
 
-class MyView(PermissionRequiredMixin, View):
-    permission_required = 'catalog.can_mark_returned'
-    # O múltiples permisos
-    permission_required = ('catalog.can_mark_returned', 'catalog.can_edit')
-    # Tenga en cuenta que 'catalog.can_edit' es solo un ejemplo:
-    # ¡la aplicación de catálogo no tiene dicho permiso!
+cwass m-myview(pewmissionwequiwedmixin, ^•ﻌ•^ view):
+    pewmission_wequiwed = 'catawog.can_mawk_wetuwned'
+    # o-o múwtipwes p-pewmisos
+    pewmission_wequiwed = ('catawog.can_mawk_wetuwned', (⑅˘꒳˘) 'catawog.can_edit')
+    # tenga en cuenta que 'catawog.can_edit' es sowo un ejempwo:
+    # ¡wa apwicación de c-catáwogo nyo tiene d-dicho pewmiso! nyaa~~
 ```
 
-### Ejemplo
+### e-ejempwo
 
-Nosotros no actualizaremos la _LocalLibrary_ aquí; ¡quizás en el siguiente tutorial!
+nyosotwos nyo actuawizawemos w-wa _wocawwibwawy_ aquí; ¡quizás e-en ew siguiente tutowiaw! ^^;;
 
-## Desafíate a ti mismo
+## d-desafíate a ti mismo
 
-Anteriormente en este artículo te mostramos cómo crear una página para el usuario actual para listar los libros que había pedido prestado. El desafío ahora es crear una página similar que solamente sea visible para los bibliotecarios, que muestre todos los libros que hayan sido prestados, y que incluya el nombre de cada prestatario.
+antewiowmente en este a-awtícuwo te mostwamos cómo cweaw u-una página pawa e-ew usuawio actuaw pawa wistaw wos wibwos que había pedido pwestado. 🥺 ew desafío a-ahowa es cweaw una página simiwaw que sowamente s-sea visibwe p-pawa wos bibwiotecawios, ^^;; q-que muestwe todos wos w-wibwos que hayan sido pwestados, nyaa~~ y que incwuya e-ew nyombwe de cada pwestatawio. 🥺
 
-Deberías ser capaz de seguir el mismo patrón que el de la otra vista. La principal diferencia es que necesitarás restringir la vista a solamente los bibliotecarios. Podrías hacer esto basándote en si es un miembro de los empleados (decorador de función: `staff_member_required`, variable de plantilla: `user.is_staff`) pero nosotros te recomendamos que en su lugar uses el permiso `can_mark_returned` y `PermissionRequiredMixin`, como se describe en la sección anterior.
+d-debewías sew capaz d-de seguiw ew m-mismo patwón que ew de wa otwa v-vista. (ˆ ﻌ ˆ)♡ wa pwincipaw d-difewencia e-es que nyecesitawás w-westwingiw wa vista a sowamente w-wos bibwiotecawios. podwías h-hacew esto basándote e-en si es un miembwo de wos empweados (decowadow de función: `staff_membew_wequiwed`, ( ͡o ω ͡o ) vawiabwe de pwantiwwa: `usew.is_staff`) p-pewo nyosotwos te wecomendamos que en su wugaw uses ew pewmiso `can_mawk_wetuwned` y-y `pewmissionwequiwedmixin`, nyaa~~ c-como se descwibe en wa sección antewiow. ( ͡o ω ͡o )
 
-> [!WARNING]
-> Recuerda no usar tu súper usuario para pruebas basadas en permisos (la comprobación de permisos siempre devuelve cierto para súper usuarios, ¡incluso si un permiso no ha sido definido todavía!). En su lugar, crea un usuario bibliotecario, y añade entonces la capacidad requerida.
+> [!wawning]
+> wecuewda nyo usaw tu súpew usuawio pawa pwuebas basadas en pewmisos (wa c-compwobación d-de pewmisos s-siempwe devuewve c-ciewto pawa s-súpew usuawios, ^^;; ¡incwuso s-si un pewmiso nyo ha s-sido definido todavía!). rawr x3 en su w-wugaw, ^^;; cwea un usuawio bibwiotecawio, ^•ﻌ•^ y-y añade entonces wa capacidad w-wequewida. 🥺
 
-Cuando hayas terminado, tu página debería verse algo parecida a la captura de pantalla de abajo.
+c-cuando hayas tewminado, t-tu página d-debewía vewse a-awgo pawecida a wa captuwa de pantawwa de abajo. (ꈍᴗꈍ)
 
-![Todos los libros prestados, restringidos al bibliotecario.](library_borrowed_all.png)
+![todos w-wos wibwos pwestados, ^•ﻌ•^ westwingidos aw bibwiotecawio.](wibwawy_bowwowed_aww.png)
 
-## Resumen
+## w-wesumen
 
-Excelente trabajo — has creado un sitio web para que los miembros de la biblioteca puedan iniciar sesión y ver su propio contenido, y los bibliotecarios (con el permiso correcto) puedan usarlo para ver todos los libros alquilados y sus prestatarios. En este momento estamos todavía simplemente viendo contenido, pero los mismos principios y técnicas son usados cuando empiezas a modificar y añadir datos.
+excewente twabajo — has cweado un sitio w-web pawa que w-wos miembwos de wa bibwioteca p-puedan iniciaw sesión y vew su p-pwopio contenido, :3 y-y wos bibwiotecawios (con ew pewmiso c-cowwecto) puedan usawwo pawa v-vew todos wos w-wibwos awquiwados y sus pwestatawios. (˘ω˘) e-en este momento estamos todavía simpwemente viendo contenido, ^^ p-pewo wos mismos pwincipios y-y técnicas son usados cuando empiezas a modificaw y-y añadiw datos. /(^•ω•^)
 
-En nuestro siguiente artículo observaremos cómo puedes usar los formularios de Django para recoger la entrada de datos del usuario, y entonces empezar a modificar algunos de nuestros datos almacenados.
+en nyuestwo s-siguiente awtícuwo obsewvawemos c-cómo puedes usaw wos fowmuwawios d-de django pawa wecogew wa e-entwada de datos dew usuawio, σωσ y entonces empezaw a-a modificaw awgunos d-de nyuestwos d-datos awmacenados. òωó
 
-## Ver también
+## v-vew también
 
-- [Autenticación de Usuario en Django](https://docs.djangoproject.com/en/1.10/topics/auth/) (documentación de Django)
-- [Usando el sistema por defecto de Autenticación de Django](https://docs.djangoproject.com/en/1.10/topics/auth/default//) (documentación de Django)
-- [Introducción a clases basadas en vistas > Decoradores](https://docs.djangoproject.com/en/1.10/topics/class-based-views/intro/#decorating-class-based-views) (documentación de Django)
+- [autenticación d-de usuawio e-en django](https://docs.djangopwoject.com/en/1.10/topics/auth/) (documentación de django)
+- [usando e-ew sistema p-pow defecto d-de autenticación de django](https://docs.djangopwoject.com/en/1.10/topics/auth/defauwt//) (documentación d-de django)
+- [intwoducción a cwases basadas en vistas > d-decowadowes](https://docs.djangopwoject.com/en/1.10/topics/cwass-based-views/intwo/#decowating-cwass-based-views) (documentación d-de django)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}
+{{pweviousmenunext("weawn/sewvew-side/django/sessions", >w< "weawn/sewvew-side/django/fowms", (˘ω˘) "weawn/sewvew-side/django")}}

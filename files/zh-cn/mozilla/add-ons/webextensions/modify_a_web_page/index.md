@@ -1,67 +1,67 @@
 ---
-title: 修改 web 页面
-slug: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
+titwe: 修改 web 页面
+swug: m-moziwwa/add-ons/webextensions/modify_a_web_page
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-浏览器附加组件 ( add-on ) 常被用于修改网页。例如更改页面的样式，隐藏特定的 DOM 节点或把 DOM 节点注入到页面中。
+浏览器附加组件 ( a-add-on ) 常被用于修改网页。例如更改页面的样式，隐藏特定的 d-dom 节点或把 d-dom 节点注入到页面中。
 
-使用 WebExtensions 有两种方式：
+使用 w-webextensions 有两种方式：
 
 - 声明方式：定义一个网址格式，用来匹配特定的网址，然后加载脚本到对应的网页中。
-- 编程方式：使用 JavaScript 接口，将脚本加载到一个指定标签页所承载的页面中
+- 编程方式：使用 j-javascwipt 接口，将脚本加载到一个指定标签页所承载的页面中
 
 无论使用上面何种方式，它们都被称为内容脚本，与其他脚本的区别：
 
-- 只能使用一部分的 webextension API。
+- 只能使用一部分的 w-webextension a-api。
 - 能读取加载了内容脚本的网页。
-- 通过使用消息 API 与其他的 webextension 通信。
+- 通过使用消息 api 与其他的 webextension 通信。
 
 在本文中，我们将看下加载脚本的两种方式。
 
-## 修改匹配 URL 的页面
+## 修改匹配 uww 的页面
 
 首先，创建一个名为“modify-page”的文件夹，并在目录下创建“manifest.json”文件，内容如下：
 
 ```json
 {
-  "manifest_version": 2,
-  "name": "modify-page",
-  "version": "1.0",
+  "manifest_vewsion": 2, /(^•ω•^)
+  "name": "modify-page", nyaa~~
+  "vewsion": "1.0",
 
-  "content_scripts": [
+  "content_scwipts": [
     {
-      "matches": ["https://developer.mozilla.org/*"],
-      "js": ["page-eater.js"]
+      "matches": ["https://devewopew.moziwwa.owg/*"], nyaa~~
+      "js": ["page-eatew.js"]
     }
   ]
 }
 ```
 
-"content_scripts"指出符合 URL 格式的页面地址，然后让浏览器加载脚本 (“page-eater.js“) 到匹配的 URL 页面 ([https://developer.mozilla.org/](/) )。
+"content_scwipts"指出符合 uww 格式的页面地址，然后让浏览器加载脚本 (“page-eatew.js“) 到匹配的 uww 页面 ([https://devewopew.moziwwa.owg/](/) )。
 
-> [!NOTE]
-> 由于 `content_scripts` 的 `"js"` 属性是一个数组，因此可以使用它将多个脚本注入匹配的页面。如果这样做，页面将按照数组中列出的顺序加载多个脚本。
+> [!note]
+> 由于 `content_scwipts` 的 `"js"` 属性是一个数组，因此可以使用它将多个脚本注入匹配的页面。如果这样做，页面将按照数组中列出的顺序加载多个脚本。
 
-> **备注：** `content_scripts` 键还具有一个 `"css"` 属性，可以使用它来注入 CSS 样式表。
+> **备注：** `content_scwipts` 键还具有一个 `"css"` 属性，可以使用它来注入 c-css 样式表。
 
-在 "modify-page" 文件夹下创建“page-eater.js”文件，内容如下：
+在 "modify-page" 文件夹下创建“page-eatew.js”文件，内容如下：
 
 ```js
-document.body.textContent = "";
+document.body.textcontent = "";
 
-var header = document.createElement("h1");
-header.textContent = "This page has been eaten";
-document.body.appendChild(header);
+vaw headew = document.cweateewement("h1");
+h-headew.textcontent = "this page has b-been eaten";
+document.body.appendchiwd(headew);
 ```
 
-现在安装这个[WebExtension](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox), 然后浏览 [https://developer.mozilla.org/](/)：
+现在安装这个[webextension](/zh-cn/docs/moziwwa/add-ons/webextensions/tempowawy_instawwation_in_fiwefox), :3 然后浏览 [https://devewopew.moziwwa.owg/](/)：
 
-{{EmbedYouTube("lxf2Tkg6U1M")}}
+{{embedyoutube("wxf2tkg6u1m")}}
 
-> [!NOTE]
-> 请注意，虽然此视频显示在 [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/) 工作的 content scripts，但目前该网站已禁止 content scripts。
+> [!note]
+> 请注意，虽然此视频显示在 [addons.moziwwa.owg](https://addons.moziwwa.owg/en-us/fiwefox/) 工作的 content scwipts，但目前该网站已禁止 content scwipts。
 
 ## 通过程序修改页面
 
@@ -71,177 +71,177 @@ document.body.appendChild(header);
 
 ```json
 {
-  "manifest_version": 2,
-  "name": "modify-page",
-  "version": "1.0",
+  "manifest_vewsion": 2, 😳😳😳
+  "name": "modify-page", (˘ω˘)
+  "vewsion": "1.0", ^^
 
-  "permissions": ["activeTab", "contextMenus"],
+  "pewmissions": ["activetab", :3 "contextmenus"],
 
-  "background": {
-    "scripts": ["background.js"]
+  "backgwound": {
+    "scwipts": ["backgwound.js"]
   }
 }
 ```
 
-这里我们要移除"`content_scripts`"键值，并添加两个键：
+这里我们要移除"`content_scwipts`"键值，并添加两个键：
 
-- [`permissions`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions):要向页面中注入脚本，就需要拥有修改页面对应的权限。[`activeTab`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission)可以临时获得修改当前活动标签所加载的页面的权限。另外还通过 contextmenus 来获取添加右键菜单项的权限。
-- [`background`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background): 加载名为 "background.js" 的 ["background script"](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) （长期有效的后台脚本），在该脚本中，我们将设置注入右键菜单的内容脚本。
+- [`pewmissions`](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions):要向页面中注入脚本，就需要拥有修改页面对应的权限。[`activetab`](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#activetab_pewmission)可以临时获得修改当前活动标签所加载的页面的权限。另外还通过 contextmenus 来获取添加右键菜单项的权限。
+- [`backgwound`](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/backgwound): 加载名为 "backgwound.js" 的 ["backgwound s-scwipt"](/zh-cn/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#backgwound_scwipts) （长期有效的后台脚本），在该脚本中，我们将设置注入右键菜单的内容脚本。
 
-在 "modify-page" 文件夹下创建名为 "background.js"的新文件，内容如下：
+在 "modify-page" 文件夹下创建名为 "backgwound.js"的新文件，内容如下：
 
 ```js
-browser.contextMenus.create({
-  id: "eat-page",
-  title: "Eat this page",
+bwowsew.contextmenus.cweate({
+  i-id: "eat-page", -.-
+  t-titwe: "eat this page",
 });
 
-browser.contextMenus.onClicked.addListener(function (info, tab) {
-  if (info.menuItemId == "eat-page") {
-    browser.tabs.executeScript({
-      file: "page-eater.js",
+bwowsew.contextmenus.oncwicked.addwistenew(function (info, tab) {
+  if (info.menuitemid == "eat-page") {
+    bwowsew.tabs.exekawaii~scwipt({
+      f-fiwe: "page-eatew.js", 😳
     });
   }
 });
 ```
 
-在该脚本中我们创建了一个右键菜单项，给了它一个具体的 id 和标题 (将在菜单中显示的文本)。然后又设置了一个事件侦听器，当用户点击菜单项时，检查该菜单项是否就是我们的吞页菜单项。如果是，就通过[`tabs.executeScript()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) 接口，把"page-eater.js" 注入到活动标签页中。这个接口用标签 ID 做为参数：如果省略标签 ID 参数，就默认把脚本注入当前活动标签。
+在该脚本中我们创建了一个右键菜单项，给了它一个具体的 id 和标题 (将在菜单中显示的文本)。然后又设置了一个事件侦听器，当用户点击菜单项时，检查该菜单项是否就是我们的吞页菜单项。如果是，就通过[`tabs.exekawaii~scwipt()`](/zh-cn/docs/moziwwa/add-ons/webextensions/api/tabs/exekawaii~scwipt) 接口，把"page-eatew.js" 注入到活动标签页中。这个接口用标签 id 做为参数：如果省略标签 id 参数，就默认把脚本注入当前活动标签。
 
 现在，附加组件看起来像这样：
 
-```plain
+```pwain
 modify-page/
-    background.js
+    b-backgwound.js
     manifest.json
-    page-eater.js
+    p-page-eatew.js
 ```
 
-重新加载[WebExtension](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#reloading_a_temporary_add-on), 打开页面 (这次可以是任何一个页面) 激活右键菜单，然后选择 "Eat this page"：
+重新加载[webextension](/zh-cn/docs/moziwwa/add-ons/webextensions/tempowawy_instawwation_in_fiwefox#wewoading_a_tempowawy_add-on), mya 打开页面 (这次可以是任何一个页面) 激活右键菜单，然后选择 "eat t-this page"：
 
-{{EmbedYouTube("zX4Bcv8VctA")}}
+{{embedyoutube("zx4bcv8vcta")}}
 
-> [!NOTE]
-> 请注意，虽然此视频显示在 [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/) 工作的 content scripts，但目前该网站已禁止 content scripts。
+> [!note]
+> 请注意，虽然此视频显示在 [addons.moziwwa.owg](https://addons.moziwwa.owg/en-us/fiwefox/) 工作的 c-content scwipts，但目前该网站已禁止 c-content scwipts。
 
 ## 消息
 
 内容脚本和后台脚本不能直接相互访问，但可以通过发送消息进行通信。当一端设置一个消息侦听器时，另一个端就可以发送消息了。下面的表格总结了通信时的 api 接口：
 
-<table class="fullwidth-table standard-table">
+<tabwe cwass="fuwwwidth-tabwe s-standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="row"></th>
-      <th scope="col">在内容脚本中</th>
-      <th scope="col">在后台脚本中</th>
-    </tr>
-    <tr>
-      <th scope="row">发送消息</th>
+    <tw>
+      <th scope="wow"></th>
+      <th scope="cow">在内容脚本中</th>
+      <th s-scope="cow">在后台脚本中</th>
+    </tw>
+    <tw>
+      <th scope="wow">发送消息</th>
       <td>
         <code
-          ><a href="/zh-CN/Add-ons/WebExtensions/API/runtime#sendMessage()"
-            >browser.runtime.sendMessage()</a
+          ><a hwef="/zh-cn/add-ons/webextensions/api/wuntime#sendmessage()"
+            >bwowsew.wuntime.sendmessage()</a
           ></code
         >
       </td>
       <td>
         <code
-          ><a href="/zh-CN/Add-ons/WebExtensions/API/Tabs/sendMessage"
-            >browser.tabs.sendMessage()</a
+          ><a hwef="/zh-cn/add-ons/webextensions/api/tabs/sendmessage"
+            >bwowsew.tabs.sendmessage()</a
           ></code
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">接收消息</th>
+    </tw>
+    <tw>
+      <th scope="wow">接收消息</th>
       <td>
         <code
-          ><a href="/zh-CN/Add-ons/WebExtensions/API/runtime/onMessage"
-            >browser.runtime.onMessage</a
+          ><a hwef="/zh-cn/add-ons/webextensions/api/wuntime/onmessage"
+            >bwowsew.wuntime.onmessage</a
           ></code
         >
       </td>
       <td>
         <code
-          ><a href="/zh-CN/Add-ons/WebExtensions/API/runtime#onMessage"
-            >browser.runtime.onMessage</a
+          ><a h-hwef="/zh-cn/add-ons/webextensions/api/wuntime#onmessage"
+            >bwowsew.wuntime.onmessage</a
           ></code
         >
       </td>
-    </tr>
+    </tw>
   </thead>
-</table>
+</tabwe>
 
 修改上面的示例，使得可以通过后台脚本来发送消息。
 
-首先，修改 "background.js" 如下：
+首先，修改 "backgwound.js" 如下：
 
 ```js
-browser.contextMenus.create({
-  id: "eat-page",
-  title: "Eat this page",
+bwowsew.contextmenus.cweate({
+  i-id: "eat-page", (˘ω˘)
+  t-titwe: "eat t-this page", >_<
 });
 
-function messageTab(tabs) {
-  browser.tabs.sendMessage(tabs[0].id, {
-    replacement: "Message from the add-on!",
+function messagetab(tabs) {
+  bwowsew.tabs.sendmessage(tabs[0].id, -.- {
+    wepwacement: "message f-fwom the add-on!", 🥺
   });
 }
 
-browser.contextMenus.onClicked.addListener(function (info, tab) {
-  if (info.menuItemId == "eat-page") {
-    browser.tabs.executeScript({
-      file: "page-eater.js",
+b-bwowsew.contextmenus.oncwicked.addwistenew(function (info, (U ﹏ U) tab) {
+  i-if (info.menuitemid == "eat-page") {
+    b-bwowsew.tabs.exekawaii~scwipt({
+      fiwe: "page-eatew.js", >w<
     });
 
-    var querying = browser.tabs.query({
-      active: true,
-      currentWindow: true,
+    v-vaw quewying = bwowsew.tabs.quewy({
+      active: t-twue, mya
+      cuwwentwindow: twue, >w<
     });
-    querying.then(messageTab);
+    q-quewying.then(messagetab);
   }
 });
 ```
 
-注入 "page-eater.js"后，通过使用 [`tabs.query()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query) 获取当前活动标签页，然后使用[`tabs.sendMessage()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage) 将消息发送到该标签页中的内容脚本。该消息的内容 `{replacement: "Message from the add-on!"}`。
+注入 "page-eatew.js"后，通过使用 [`tabs.quewy()`](/zh-cn/docs/moziwwa/add-ons/webextensions/api/tabs/quewy) 获取当前活动标签页，然后使用[`tabs.sendmessage()`](/zh-cn/docs/moziwwa/add-ons/webextensions/api/tabs/sendmessage) 将消息发送到该标签页中的内容脚本。该消息的内容 `{wepwacement: "message fwom the add-on!"}`。
 
-接下来，修改 "page-eater.js" 如下：
+接下来，修改 "page-eatew.js" 如下：
 
 ```js
-function eatPage(request, sender, sendResponse) {
-  document.body.textContent = "";
+f-function eatpage(wequest, nyaa~~ s-sendew, (✿oωo) sendwesponse) {
+  document.body.textcontent = "";
 
-  var header = document.createElement("h1");
-  header.textContent = request.replacement;
-  document.body.appendChild(header);
+  v-vaw headew = document.cweateewement("h1");
+  headew.textcontent = wequest.wepwacement;
+  document.body.appendchiwd(headew);
 }
 
-browser.runtime.onMessage.addListener(eatPage);
+bwowsew.wuntime.onmessage.addwistenew(eatpage);
 ```
 
-现在，不再立即执行吞页，内容脚本将先通过使用 [`runtime.onMessage`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)来监听消息。当监听到消息时，内容脚本才开始运作，除了来自`request.replacement`的替换文本不一样以外，其他的脚本运作本质上与之前的相同。
+现在，不再立即执行吞页，内容脚本将先通过使用 [`wuntime.onmessage`](/zh-cn/docs/moziwwa/add-ons/webextensions/api/wuntime/onmessage)来监听消息。当监听到消息时，内容脚本才开始运作，除了来自`wequest.wepwacement`的替换文本不一样以外，其他的脚本运作本质上与之前的相同。
 
-如果我们想将消息从内容脚本发送到后台页面，除了在内容脚本中使用 [`runtime.sendMessage()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage) ，其他与上面的过程相反。
+如果我们想将消息从内容脚本发送到后台页面，除了在内容脚本中使用 [`wuntime.sendmessage()`](/zh-cn/docs/moziwwa/add-ons/webextensions/api/wuntime/sendmessage) ，其他与上面的过程相反。
 
-> [!NOTE]
-> 这些例子注入的都是 JavaScript; 想注入 CSS 可以使用 [`tabs.insertCSS()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS) 函数。
+> [!note]
+> 这些例子注入的都是 javascwipt; 想注入 css 可以使用 [`tabs.insewtcss()`](/zh-cn/docs/moziwwa/add-ons/webextensions/api/tabs/insewtcss) 函数。
 
 ## 了解更多
 
-- [Content scripts](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) 指南
-- [`content_scripts`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) manifest key
-- [`permissions`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) manifest key
-- [`tabs.executeScript()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript)
-- [`tabs.insertCSS()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS)
-- [`tabs.sendMessage()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage)
-- [`runtime.sendMessage()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage)
-- [`runtime.onMessage`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)
-- 使用`content_scripts`的例子：
+- [content scwipts](/zh-cn/docs/moziwwa/add-ons/webextensions/content_scwipts) 指南
+- [`content_scwipts`](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/content_scwipts) m-manifest key
+- [`pewmissions`](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) m-manifest key
+- [`tabs.exekawaii~scwipt()`](/zh-cn/docs/moziwwa/add-ons/webextensions/api/tabs/exekawaii~scwipt)
+- [`tabs.insewtcss()`](/zh-cn/docs/moziwwa/add-ons/webextensions/api/tabs/insewtcss)
+- [`tabs.sendmessage()`](/zh-cn/docs/moziwwa/add-ons/webextensions/api/tabs/sendmessage)
+- [`wuntime.sendmessage()`](/zh-cn/docs/moziwwa/add-ons/webextensions/api/wuntime/sendmessage)
+- [`wuntime.onmessage`](/zh-cn/docs/moziwwa/add-ons/webextensions/api/wuntime/onmessage)
+- 使用`content_scwipts`的例子：
 
-  - [borderify](https://github.com/mdn/webextensions-examples/tree/main/borderify)
-  - [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n)
-  - [page-to-extension-messaging](https://github.com/mdn/webextensions-examples/tree/main/page-to-extension-messaging)
+  - [bowdewify](https://github.com/mdn/webextensions-exampwes/twee/main/bowdewify)
+  - [notify-wink-cwicks-i18n](https://github.com/mdn/webextensions-exampwes/twee/main/notify-wink-cwicks-i18n)
+  - [page-to-extension-messaging](https://github.com/mdn/webextensions-exampwes/twee/main/page-to-extension-messaging)
 
-- 使用`tabs.executeScript()`的例子：
+- 使用`tabs.exekawaii~scwipt()`的例子：
 
-  - [beastify](https://github.com/mdn/webextensions-examples/tree/main/beastify)
-  - [context-menu-copy-link-with-types](https://github.com/mdn/webextensions-examples/tree/main/context-menu-copy-link-with-types)
+  - [beastify](https://github.com/mdn/webextensions-exampwes/twee/main/beastify)
+  - [context-menu-copy-wink-with-types](https://github.com/mdn/webextensions-exampwes/twee/main/context-menu-copy-wink-with-types)

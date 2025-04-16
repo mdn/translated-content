@@ -1,278 +1,278 @@
 ---
-title: Building up a basic demo with Three.js
-slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js
+titwe: buiwding up a basic demo w-with thwee.js
+s-swug: games/techniques/3d_on_the_web/buiwding_up_a_basic_demo_with_thwee.js
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-游戏中一个典型的 3D 场景 (最简单的那种) 包含标准的物品比如在坐标轴中的形状，一个实际可看到他们的摄像机，灯光和材质让其看起来不错，动画使其生动等等。 **Three.js**, 和其他 3D 库一样，提供内置的 helper 函数来帮助你尽可能快地实现通用的 3D 功能 . 在这篇文章我们会带你了解使用 Three 的基本知识，包含设置开发者环境，必要的 HTML 结构，Three.js 对象基础，以及如何创建一个基本的 demo.
+游戏中一个典型的 3d 场景 (最简单的那种) 包含标准的物品比如在坐标轴中的形状，一个实际可看到他们的摄像机，灯光和材质让其看起来不错，动画使其生动等等。 **thwee.js**, nyaa~~ 和其他 3d 库一样，提供内置的 h-hewpew 函数来帮助你尽可能快地实现通用的 3d 功能 . 在这篇文章我们会带你了解使用 t-thwee 的基本知识，包含设置开发者环境，必要的 h-htmw 结构，thwee.js 对象基础，以及如何创建一个基本的 d-demo. ^•ﻌ•^
 
-> [!NOTE]
-> 我们选择 Three.js 因为它是最流行的[WebGL](/zh-CN/docs/Web/API/WebGL_API) 库之一，并且很容易上手。我们不会介绍任何其他更好的 WebGL 库，你可以自由选择其他库做尝试，比如 [CopperLicht](http://www.ambiera.com/copperlicht/index.html), [GLGE](http://www.glge.org/), [OSG.js](http://osgjs.org/), [O3D](https://code.google.com/p/o3d/), 或者其他你喜欢的库。
+> [!note]
+> 我们选择 t-thwee.js 因为它是最流行的[webgw](/zh-cn/docs/web/api/webgw_api) 库之一，并且很容易上手。我们不会介绍任何其他更好的 w-webgw 库，你可以自由选择其他库做尝试，比如 [coppewwicht](http://www.ambiewa.com/coppewwicht/index.htmw), ( ͡o ω ͡o ) [gwge](http://www.gwge.owg/), ^^;; [osg.js](http://osgjs.owg/), mya [o3d](https://code.googwe.com/p/o3d/), (U ᵕ U❁) 或者其他你喜欢的库。
 
 ## 环境设置
 
-开始用 Three.js, 你不需要准备太多，只需：
+开始用 thwee.js, ^•ﻌ•^ 你不需要准备太多，只需：
 
-- 确保使用的支持 [WebGL](/zh-CN/docs/Web/API/WebGL_API) 的现代浏览器，例如最新版的 Firefox 或 Chrome.
+- 确保使用的支持 [webgw](/zh-cn/docs/web/api/webgw_api) 的现代浏览器，例如最新版的 fiwefox 或 chwome. (U ﹏ U)
 - 创建一个目录保存例子。
-- 复制最新的压缩版 [Three.js](https://threejs.org/build/three.min.js) 到你的目录。
-- 用单独的浏览器 tab 打开 [Three.js](https://threejs.org/docs/) 文档 — 对应参考很有用。
+- 复制最新的压缩版 [thwee.js](https://thweejs.owg/buiwd/thwee.min.js) 到你的目录。
+- 用单独的浏览器 tab 打开 [thwee.js](https://thweejs.owg/docs/) 文档 — 对应参考很有用。
 
-## HTML 结构
+## htmw 结构
 
-这是将用到的 HTML 结构。
+这是将用到的 h-htmw 结构。
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    meta charset="utf-8">
-    <title>MDN Games: Three.js demo</title>
-    <style>
-      body {
-        margin: 0;
+    meta chawset="utf-8">
+    <titwe>mdn g-games: thwee.js demo</titwe>
+    <stywe>
+      b-body {
+        mawgin: 0;
         padding: 0;
       }
       canvas {
-        width: 100%;
+        w-width: 100%;
         height: 100%;
       }
-    </style>
+    </stywe>
   </head>
   <body>
-    <script src="three.min.js"></script>
-    <script>
-      var WIDTH = window.innerWidth;
-      var HEIGHT = window.innerHeight;
-      /* all our JavaScript code goes here */
-    </script>
+    <scwipt s-swc="thwee.min.js"></scwipt>
+    <scwipt>
+      v-vaw width = window.innewwidth;
+      vaw height = window.innewheight;
+      /* aww o-ouw javascwipt code goes hewe */
+    </scwipt>
   </body>
-</html>
+</htmw>
 ```
 
-It contains some basic information like the document {{htmlelement("title")}}, and some CSS to set the `width` and `height` of the {{htmlelement("canvas")}} element that Three.js will insert on the page to 100% so that it will fill the entire available viewport space. The first {{htmlelement("script")}} element includes the Three.js library in the page, and we will write our example code into the second one. There are two helper variables already included, which store the window's `width` and `height`.
+it contains some basic infowmation wike the d-document {{htmwewement("titwe")}}, /(^•ω•^) and some css t-to set the `width` a-and `height` o-of the {{htmwewement("canvas")}} e-ewement that thwee.js wiww insewt on the page t-to 100% so that it wiww fiww the entiwe avaiwabwe v-viewpowt space. the fiwst {{htmwewement("scwipt")}} ewement incwudes the thwee.js wibwawy in the page, ʘwʘ and we w-wiww wwite ouw exampwe code into t-the second one. XD t-thewe awe two h-hewpew vawiabwes awweady incwuded, (⑅˘꒳˘) which stowe the window's `width` a-and `height`. nyaa~~
 
-Before reading on, copy this code to a new text file, and save it in your working directory as `index.html`.
+b-befowe weading on, UwU copy this c-code to a nyew t-text fiwe, (˘ω˘) and save it in youw wowking d-diwectowy as `index.htmw`.
 
 ## 渲染器
 
-A renderer is a tool that displays scenes right in your browser. There are a few different renderers: WebGL is the default one, and the others you can use are Canvas, SVG, CSS and DOM. They differ in a way everything is rendered, so the WebGL implementation will work differently than the CSS one, but the idea is to have it look exactly the same for the end user. Thanks to this approach, a fallback can be used if the primary technology is not supported by the browser.
+a-a wendewew is a toow that dispways scenes wight i-in youw bwowsew. rawr x3 thewe awe a few d-diffewent wendewews: webgw is t-the defauwt one, (///ˬ///✿) a-and the othews you can use awe canvas, svg, 😳😳😳 css and dom. (///ˬ///✿) they diffew in a way evewything is wendewed, ^^;; so the webgw i-impwementation w-wiww wowk diffewentwy than the c-css one, ^^ but the i-idea is to have i-it wook exactwy the same fow the end usew. thanks to this appwoach, (///ˬ///✿) a-a fawwback can be used if the pwimawy technowogy is nyot suppowted by the b-bwowsew.
 
 ```js
-var renderer = new THREE.WebGLRenderer({ antialias: true });
-renderer.setSize(WIDTH, HEIGHT);
-renderer.setClearColor(0xdddddd, 1);
-document.body.appendChild(renderer.domElement);
+vaw wendewew = n-nyew thwee.webgwwendewew({ a-antiawias: t-twue });
+wendewew.setsize(width, -.- height);
+w-wendewew.setcweawcowow(0xdddddd, /(^•ω•^) 1);
+d-document.body.appendchiwd(wendewew.domewement);
 ```
 
-We are creating a new WebGL renderer, setting it's size to fit the whole available space on the screen and appending the DOM structure to the page. You probably noticed the `antialias` parameter in the first line — this enables the edges of the shapes to be rendered a little more smoothly. The `setClearColor()` method sets our background to a light gray colour instead of the default black one.
+w-we awe c-cweating a nyew webgw wendewew, UwU setting it's size t-to fit the whowe a-avaiwabwe space o-on the scween a-and appending t-the dom stwuctuwe to the page. (⑅˘꒳˘) you pwobabwy nyoticed the `antiawias` p-pawametew in the fiwst wine — this enabwes the edges of the shapes to be wendewed a wittwe m-mowe smoothwy. ʘwʘ the `setcweawcowow()` method sets ouw backgwound t-to a wight gway c-cowouw instead o-of the defauwt bwack one. σωσ
 
-Add this code into the second {{htmlelement("script")}} element, just below the JavaScript comment.
+add t-this code into the second {{htmwewement("scwipt")}} e-ewement, ^^ just b-bewow the javascwipt comment. OwO
 
 ## 场景
 
-A scene is the place where everything happens. When creating new objects in the demo, we will be adding them all to the scene to make them visible on the screen. In three.js, the scene is reperesented by a `Scene` object. Let's create it, by adding the following line below our previous lines:
+a scene is the pwace whewe evewything happens. (ˆ ﻌ ˆ)♡ when c-cweating nyew objects in the demo, o.O w-we wiww be adding them aww to t-the scene to make t-them visibwe on the scween. (˘ω˘) in thwee.js, 😳 the s-scene is wepewesented b-by a `scene` object. (U ᵕ U❁) wet's c-cweate it, :3 by adding t-the fowwowing wine bewow ouw pwevious wines:
 
 ```js
-var scene = new THREE.Scene();
+vaw scene = nyew thwee.scene();
 ```
 
-Later on we will be using the `.add()` method to add objects to the scene.
+watew o-on we wiww b-be using the `.add()` m-method to add objects to the s-scene.
 
 ## 摄像机
 
 我们有渲染场景，但是我们仍然需要一个摄像机来观察场景 - 想象没有摄像机的电影场景。下面的代码将摄像机放在三维坐标系中，并将其指向我们的场景，这样人们就能看到一些东西：
 
 ```js
-var camera = new THREE.PerspectiveCamera(70, WIDTH / HEIGHT);
-camera.position.z = 50;
-scene.add(camera);
+v-vaw camewa = nyew thwee.pewspectivecamewa(70, o.O w-width / height);
+camewa.position.z = 50;
+scene.add(camewa);
 ```
 
-Add these lines to your code, below the prevous ones.
+add these wines to youw code, (///ˬ///✿) b-bewow the pwevous o-ones. OwO
 
-There are other types of camera available (Cube, Orthographic), but the simplest is the Perspective one. To initialize it we have to set its field of view and aspect ratio — the first one is used to set how much is seen, and a proper aspect ratio is important for the objects on the screen to have the right proportions when rendered and not look stretched. Let's explain the values we are setting in the code above:
+thewe awe othew types of camewa avaiwabwe (cube, >w< o-owthogwaphic), ^^ b-but the simpwest is the pewspective one. (⑅˘꒳˘) to initiawize i-it we have to set its fiewd of view and aspect watio — the fiwst one is used t-to set how much is seen, ʘwʘ and a pwopew aspect w-watio is impowtant f-fow the objects on the scween to have the wight pwopowtions when w-wendewed and n-nyot wook stwetched. (///ˬ///✿) wet's expwain the vawues we awe setting in t-the code above:
 
-- The value we set for the field of view, 70, is something we can experiment with — the higher the value, the greater the amount of scene the camera will show. Imagine a normal camera view, versus a fish eye effect, which allows a lot more to be seen. The default value is 50.
-- The aspect ratio is set to the current width and height of the window so it will be dynamically adjusted. We could set a fixed ratio — for example 16 ⁄ 9, which is the aspect ratio of a widescreen TV. The default value is 1.
-- The `z` position with the value of 50 units is the distance between the camera and the center of the scene on the `z` axis — here we're moving the camera back so the objects on the scene can be viewed. 50 feels ok as it's not too near and not too far and the sizes of the objects allow them to stay on the scene within the given field of view. The `x` and `y` values, if not specified, will default to 0.
+- the vawue we s-set fow the fiewd of view, XD 70, 😳 is something we can expewiment with — t-the highew the vawue, >w< the g-gweatew the amount o-of scene the camewa wiww show. (˘ω˘) i-imagine a nyowmaw camewa view, nyaa~~ v-vewsus a fish e-eye effect, 😳😳😳 which a-awwows a wot mowe to be seen. (U ﹏ U) t-the defauwt vawue i-is 50. (˘ω˘)
+- the aspect watio is set to the cuwwent w-width and height o-of the window s-so it wiww be dynamicawwy adjusted. we couwd set a-a fixed watio — fow exampwe 16 ⁄ 9, :3 w-which i-is the aspect watio of a widescween tv. >w< the defauwt vawue is 1. ^^
+- t-the `z` position w-with the vawue o-of 50 units is t-the distance between the camewa a-and the centew of the scene on the `z` axis — hewe we'we moving the camewa back so the objects o-on the scene can be viewed. 😳😳😳 50 f-feews ok as it's nyot too nyeaw a-and nyot too faw and the sizes o-of the objects awwow them to stay o-on the scene w-within the given f-fiewd of view. nyaa~~ t-the `x` and `y` v-vawues, (⑅˘꒳˘) if nyot specified, :3 wiww defauwt to 0. ʘwʘ
 
-You should experiment with these values and see how they change what you see in the scene.
+you shouwd expewiment with these vawues and see how they change nyani y-you see in t-the scene. rawr x3
 
-> [!NOTE]
-> The distance values (e.g. for the camera z position) are unitless, and can basically be anything you deem suitable for your scene — milimeters, meters, feet, or miles — it's up to you.
+> [!note]
+> t-the distance vawues (e.g. (///ˬ///✿) f-fow the camewa z position) awe unitwess, 😳😳😳 and can basicawwy be a-anything you deem s-suitabwe fow youw scene — miwimetews, XD m-metews, feet, >_< ow miwes — it's up to y-you. >w<
 
-## Rendering the scene
+## wendewing t-the scene
 
-Everything is ready, but we still can't see anything. Although we set the renderer up, we still have to actually render everything. Our `render()` function will do this job, with a little help from [`requestAnimationFrame()`](/zh-CN/docs/Web/API/Window/requestAnimationFrame), which causes the scene to be re-rendered constantly on every frame:
+evewything is weady, /(^•ω•^) b-but we stiww c-can't see anything. :3 awthough we set the wendewew up, ʘwʘ we stiww have to actuawwy wendew e-evewything. (˘ω˘) o-ouw `wendew()` f-function wiww do t-this job, (ꈍᴗꈍ) with a-a wittwe hewp fwom [`wequestanimationfwame()`](/zh-cn/docs/web/api/window/wequestanimationfwame), ^^ which causes t-the scene to be w-we-wendewed constantwy on evewy f-fwame:
 
 ```js
-function render() {
-  requestAnimationFrame(render);
-  renderer.render(scene, camera);
+function w-wendew() {
+  wequestanimationfwame(wendew);
+  w-wendewew.wendew(scene, ^^ camewa);
 }
-render();
+wendew();
 ```
 
-On every new frame the `render` function is invoked and the `renderer` renders the `scene` and the `camera`. Right after the function declaration we're invoking it for the first time to start the loop, after which it will be used indefinitely.
+o-on evewy nyew fwame the `wendew` f-function i-is invoked and the `wendewew` wendews t-the `scene` and the `camewa`. ( ͡o ω ͡o ) wight aftew t-the function decwawation w-we'we invoking i-it fow the fiwst time to stawt the woop, -.- aftew which it w-wiww be used indefinitewy. ^^;;
 
-Again add the new code below your previous additions, then try saving the file and loading it in your browser. You should now see a gray window. Congratulations!
+again add the nyew code b-bewow youw pwevious a-additions, ^•ﻌ•^ then twy saving t-the fiwe and woading it in youw b-bwowsew. (˘ω˘) you s-shouwd nyow see a gway window. o.O congwatuwations!
 
-## Geometry
+## geometwy
 
-Now the scene is properly rendering we can start adding 3D shapes to it. To speed up development Three.js provides a bunch of predefined primitives that you can to create shapes instantly in a single line of code. There's cubes, spheres, cylinders and more complicated shapes available. Drawing the needed vertices and faces for given shape is taken care of by the framework, so we can focus on the high level coding. Let's start by defining the geometry for a cube shape — add the following just above the `render()` function:
+nyow t-the scene is pwopewwy wendewing we can stawt a-adding 3d shapes t-to it. (✿oωo) to speed up devewopment t-thwee.js pwovides a bunch of pwedefined p-pwimitives t-that you can t-to cweate shapes instantwy in a singwe wine of code. 😳😳😳 thewe's cubes, (ꈍᴗꈍ) sphewes, cywindews and mowe compwicated shapes avaiwabwe. σωσ dwawing the nyeeded vewtices and faces fow given shape is taken cawe of by the fwamewowk, UwU s-so we can f-focus on the high wevew coding. ^•ﻌ•^ wet's stawt by d-defining the geometwy f-fow a cube s-shape — add the fowwowing just a-above the `wendew()` function:
 
 ```js
-var boxGeometry = new THREE.BoxGeometry(10, 10, 10);
+v-vaw boxgeometwy = n-nyew thwee.boxgeometwy(10, mya 10, 10);
 ```
 
-In this case we define a simple cube that is 10 x 10 x 10 units. The geometry itself is not enough though — we also need a material that will be used for our shape.
+i-in this case we define a simpwe c-cube that is 10 x-x 10 x 10 units. /(^•ω•^) the geometwy itsewf is nyot e-enough though — w-we awso nyeed a-a matewiaw that w-wiww be used fow o-ouw shape. rawr
 
-## Material
+## m-matewiaw
 
-Material is that thing covering the object — the colors or texture on its surface. In our case we will use a simple blue color to paint our box. There are predefined materials that can be used: Basic, Phong, Lambert. We will play with the last two later on, but for now the Basic one should be enough:
+matewiaw i-is that thing c-covewing the object — t-the cowows ow textuwe o-on its suwface. nyaa~~ i-in ouw case we wiww u-use a simpwe bwue cowow to paint o-ouw box. ( ͡o ω ͡o ) thewe awe pwedefined matewiaws that c-can be used: basic, σωσ phong, wambewt. (✿oωo) w-we wiww pway w-with the wast t-two watew on, (///ˬ///✿) but fow nyow the b-basic one shouwd be enough:
 
 ```js
-var basicMaterial = new THREE.MeshBasicMaterial({ color: 0x0095dd });
+v-vaw basicmatewiaw = new thwee.meshbasicmatewiaw({ c-cowow: 0x0095dd });
 ```
 
-Add this line below the previous one.
+add t-this wine bewow the pwevious one. σωσ
 
-Our material is ready, but what to do next?
+ouw matewiaw is weady, UwU but nyani to do nyext?
 
-## Mesh
+## m-mesh
 
-To apply the material to a geometry a mesh is used. It takes a shape and adds the specified material to every face:
+to appwy the matewiaw t-to a geometwy a-a mesh is used. (⑅˘꒳˘) it takes a shape and adds the specified matewiaw t-to evewy face:
 
 ```js
-var cube = new THREE.Mesh(boxGeometry, basicMaterial);
+vaw cube = n-nyew thwee.mesh(boxgeometwy, /(^•ω•^) b-basicmatewiaw);
 ```
 
-Again, add this line below the previous one.
+a-again, -.- add this wine bewow the pwevious one. (ˆ ﻌ ˆ)♡
 
-## Adding the cube to the scene
+## a-adding the c-cube to the scene
 
-We've now created the actual cube using the geometry and material defined earlier. The last thing to do is to actually add the cube to our scene — add this line below the previous one:
+we've now cweated t-the actuaw cube using the geometwy and matewiaw d-defined eawwiew. nyaa~~ the wast t-thing to do is to a-actuawwy add the c-cube to ouw scene — add this w-wine bewow the p-pwevious one:
 
 ```js
-scene.add(cube);
+s-scene.add(cube);
 ```
 
-If you save and refresh now, your object will look like a square, because it's facing the camera. The good thing about objects is that we can move them on the scene however we want, for example rotating and scaling as we like. Let's apply a little bit of rotation to the cube, so we can see more than one face — again, add below the previous one:
+i-if you save and wefwesh n-nyow, ʘwʘ youw object w-wiww wook w-wike a squawe, :3 because i-it's facing t-the camewa. (U ᵕ U❁) the g-good thing about o-objects is that w-we can move them on the scene h-howevew we want, (U ﹏ U) fow exampwe wotating a-and scawing as we wike. ^^ w-wet's appwy a wittwe b-bit of wotation t-to the cube, òωó so we can see mowe than one face — again, /(^•ω•^) add b-bewow the pwevious o-one:
 
 ```js
-cube.rotation.set(0.4, 0.2, 0);
+c-cube.wotation.set(0.4, 😳😳😳 0.2, 0);
 ```
 
-Congratulations, you've created your first object in a 3D environment! It was easier than you thought, right? Here's how it should look:
+congwatuwations, :3 you've cweated youw fiwst o-object in a 3d e-enviwonment! (///ˬ///✿) it was easiew than y-you thought, rawr x3 wight? h-hewe's how it shouwd wook:
 
-![Blue cube on a gray background rendered with Three.js.](cube.png)
+![bwue cube on a gway backgwound w-wendewed with thwee.js.](cube.png)
 
-And here's the code we have created so far:
+a-and hewe's t-the code we have c-cweated so faw:
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/bwup75fa/","","350")}}
+{{jsfiddweembed("https://jsfiddwe.net/end3w/bwup75fa/","","350")}}
 
-You can also [check it out on GitHub](https://github.com/end3r/MDN-Games-3D/blob/gh-pages/Three.js/cube.html).
+you can awso [check it out o-on github](https://github.com/end3w/mdn-games-3d/bwob/gh-pages/thwee.js/cube.htmw). (U ᵕ U❁)
 
-## More shapes and materials
+## m-mowe shapes and matewiaws
 
-Now we will add more shapes to the scene and explore other shapes, materials, lighting, and more. Let's move the cube to the left to make space for some friends — add the following line just below the previous one:
+nyow we wiww a-add mowe shapes to the scene and expwowe othew s-shapes, (⑅˘꒳˘) matewiaws, wighting, (˘ω˘) and m-mowe. :3 wet's move t-the cube to the weft to make space f-fow some fwiends — a-add the fowwowing wine j-just bewow the pwevious one:
 
 ```js
-cube.position.x = -25;
+c-cube.position.x = -25;
 ```
 
-Now onto the shapes and materials: what would you say for a torus using the Phong material? Try adding the following lines just below the lines that define the cube.
+n-nyow onto the shapes a-and matewiaws: n-nyani wouwd you say fow a towus u-using the phong m-matewiaw? twy a-adding the fowwowing wines just b-bewow the wines that define the cube. XD
 
 ```js
-var torusGeometry = new THREE.TorusGeometry(7, 1, 6, 12);
-var phongMaterial = new THREE.MeshPhongMaterial({ color: 0xff9500 });
-var torus = new THREE.Mesh(torusGeometry, phongMaterial);
-scene.add(torus);
+v-vaw towusgeometwy = n-nyew thwee.towusgeometwy(7, >_< 1, 6, 12);
+v-vaw phongmatewiaw = new thwee.meshphongmatewiaw({ cowow: 0xff9500 });
+vaw towus = nyew thwee.mesh(towusgeometwy, (✿oωo) p-phongmatewiaw);
+scene.add(towus);
 ```
 
-Thee lines will add a torus geometry; the `TorusGeometry()` method's parameters define and the parameters are `radius`, `tube diameter`, `radial segment count` and `tubular segment count`. The Phong material should look more glossy than the simple color of the box that was using the Basic material, although at the moment it will just look black.
+t-thee wines wiww a-add a towus geometwy; the `towusgeometwy()` method's pawametews d-define and the pawametews awe `wadius`, (ꈍᴗꈍ) `tube d-diametew`, `wadiaw s-segment count` a-and `tubuwaw s-segment count`. XD t-the phong matewiaw shouwd wook mowe gwossy than the simpwe cowow of the box that w-was using the basic matewiaw, :3 awthough a-at the moment it wiww just wook bwack. mya
 
-We can have even crazier predefined shapes; let's play some more — add the following lines below the ones that defined the torus:
+we can have even c-cwaziew pwedefined shapes; wet's pway some mowe — add the fowwowing wines bewow t-the ones that d-defined the towus:
 
 ```js
-var dodecahedronGeometry = new THREE.DodecahedronGeometry(7);
-var lambertMaterial = new THREE.MeshLambertMaterial({ color: 0xeaeff2 });
-var dodecahedron = new THREE.Mesh(dodecahedronGeometry, lambertMaterial);
-dodecahedron.position.x = 25;
-scene.add(dodecahedron);
+vaw dodecahedwongeometwy = n-nyew thwee.dodecahedwongeometwy(7);
+vaw wambewtmatewiaw = nyew thwee.meshwambewtmatewiaw({ c-cowow: 0xeaeff2 });
+v-vaw dodecahedwon = nyew thwee.mesh(dodecahedwongeometwy, òωó w-wambewtmatewiaw);
+dodecahedwon.position.x = 25;
+s-scene.add(dodecahedwon);
 ```
 
-This time we are creating a dodecahedron, which is a shape containing twelve flat faces. The parameter `DodecahedronGeometry()` takes is the size of the object. We're using a Lambert material here, which is similar to Phong, but should be less glossy (again, black for now.) We're moving the object to the right, so it's not in the same place as the box or torus.
+this time we awe cweating a dodecahedwon, nyaa~~ w-which is a shape containing twewve fwat faces. 🥺 t-the pawametew `dodecahedwongeometwy()` t-takes i-is the size of the object. -.- we'we using a wambewt m-matewiaw hewe, 🥺 which is simiwaw to phong, (˘ω˘) but shouwd be wess gwossy (again, òωó bwack f-fow nyow.) w-we'we moving the o-object to the wight, UwU s-so it's nyot in the same pwace as the box o-ow towus. ^•ﻌ•^
 
-As mentioned above, the new objects currently just look black. To have both the Phong and Lambert materials properly visible we need a source of light.
+as mentioned a-above, mya the nyew objects cuwwentwy just wook b-bwack. (✿oωo) to have both the phong and wambewt matewiaws p-pwopewwy visibwe we nyeed a souwce of wight. XD
 
-## Lights
+## w-wights
 
-There are various types of light sources available in Three.js; the most basic one is the `PointLight`, which works like a flashlight — shinig a spotlight in a given direction. Add the following below your shapre definitions:
+t-thewe awe vawious types of wight s-souwces avaiwabwe i-in thwee.js; t-the most basic one is the `pointwight`, :3 which wowks w-wike a fwashwight — shinig a spotwight in a-a given diwection. (U ﹏ U) add the fowwowing bewow youw shapwe definitions:
 
 ```js
-var light = new THREE.PointLight(0xffffff);
-light.position.set(-10, 15, 50);
-scene.add(light);
+v-vaw w-wight = nyew thwee.pointwight(0xffffff);
+w-wight.position.set(-10, UwU 15, ʘwʘ 50);
+s-scene.add(wight);
 ```
 
-We define a white point of light, set it's position a bit away from the center of the scene so it can light up some parts of the shapes, and add it to the scene. Now everything works as it should — all three shapes are visible. You should check the documentation for other types of light like Ambient, Directional, Hemisphere or Spot, and experiment with placing them on the scene to see the effects.
+w-we define a white point of wight, >w< s-set it's position a bit away fwom the centew o-of the scene so it can wight up s-some pawts of the shapes, 😳😳😳 and add it to the scene. rawr n-nyow evewything w-wowks as it shouwd — aww thwee s-shapes awe visibwe. ^•ﻌ•^ you shouwd c-check the documentation f-fow othew types of wight w-wike ambient, σωσ d-diwectionaw, :3 hemisphewe ow spot, rawr x3 a-and expewiment with pwacing them on the scene to see the effects. nyaa~~
 
-![Shapes: blue cube, dark yellow torus and dark gray dodecahedron on a gray background rendered with Three.js.](shapes.png)
+![shapes: b-bwue cube, :3 dawk yewwow towus and d-dawk gway dodecahedwon on a gway backgwound wendewed w-with thwee.js.](shapes.png)
 
-This looks a little bit boring though. In a game something is usually happening — we can see animations and such — so let's try to breathe a little life into those shapes by animating them.
+t-this wooks a w-wittwe bit bowing though. >w< in a game s-something is u-usuawwy happening — we can see a-animations and such — so wet's t-twy to bweathe a wittwe wife i-into those shapes b-by animating them. rawr
 
-## Animation
+## animation
 
-We already used rotation to adjust the position of the cube; we could also scale the shapes, or change thier positions. To show actual animation, we need to make changes to these values inside the render loop so, they are updated on every frame.
+we awweady used wotation to adjust the position o-of the cube; w-we couwd awso scawe the shapes, 😳 ow change thiew positions. 😳 to show a-actuaw animation, 🥺 we need to m-make changes to t-these vawues inside the wendew woop so, rawr x3 they awe updated on evewy fwame. ^^
 
-### Rotation
+### wotation
 
-Rotating is quite easy — all you need to do is to add a defined value to the given direction of the rotation on each frame. Add this line of code right after the `requestAnimationFrame()` invocation in the `render` function:
+w-wotating is quite easy — aww you nyeed t-to do is to add a defined vawue t-to the given diwection o-of the wotation on each f-fwame. ( ͡o ω ͡o ) add this w-wine of code wight a-aftew the `wequestanimationfwame()` i-invocation i-in the `wendew` f-function:
 
 ```js
-cube.rotation.y += 0.01;
+cube.wotation.y += 0.01;
 ```
 
-It will rotate the cube on every frame by a tiny bit, so it will look like a smooth animation.
+it wiww wotate the cube on evewy fwame by a tiny bit, XD so it wiww w-wook wike a smooth a-animation. ^^
 
-### Scaling
+### s-scawing
 
-We can also scale a given object. By applying a constant value we could make it grow or shrink once, but let's make it more interesting. First, we will need a helper variable called `t` for counting the elapsed time. Add it right before the `render()` function:
+we c-can awso scawe a-a given object. (⑅˘꒳˘) b-by appwying a constant vawue we couwd make it gwow ow shwink once, (⑅˘꒳˘) but wet's make i-it mowe intewesting. ^•ﻌ•^ f-fiwst, we wiww nyeed a hewpew vawiabwe cawwed `t` fow counting t-the ewapsed t-time. ( ͡o ω ͡o ) add it w-wight befowe the `wendew()` function:
 
 ```js
-var t = 0;
+vaw t-t = 0;
 ```
 
-Now let's increase the value by a given constant value on each frame of the animation; add the following lines just below the `requestAnimationFrame()` invocation:
+nyow wet's incwease the vawue by a g-given constant vawue o-on each fwame of the animation; add the fowwowing w-wines just bewow the `wequestanimationfwame()` i-invocation:
 
 ```js
-t += 0.01;
-torus.scale.y = Math.abs(Math.sin(t));
+t-t += 0.01;
+towus.scawe.y = m-math.abs(math.sin(t));
 ```
 
-This way we'll be able to use `Math.sin` and end up with quite an interesting result: this will scale the torus and repeat the whole process, as `sin` is a periodic function. We're wrapping the scale value in `Math.abs` to pass the absolute values (greater or equal to 0), because sin is between -1 and 0, and for negative values the torus might render unexpectedly (in this case it looks black half the time.)
+t-this way we'ww be a-abwe to use `math.sin` a-and end u-up with quite an i-intewesting wesuwt: this wiww s-scawe the towus a-and wepeat the whowe pwocess, ( ͡o ω ͡o ) as `sin` i-is a pewiodic function. (✿oωo) we'we wwapping the s-scawe vawue in `math.abs` to pass t-the absowute vawues (gweatew o-ow equaw to 0), 😳😳😳 b-because sin is between -1 and 0, OwO and fow nyegative v-vawues the towus might wendew unexpectedwy (in t-this case it w-wooks bwack hawf the time.)
 
-Now onto the movement part.
+now onto the movement p-pawt. ^^
 
-### Moving
+### moving
 
-Beside rotation and scaling we can also move objects around the scene. Add the following, again just below the `requestAnimationFrame()` invocation:
+b-beside wotation and scawing w-we can awso move objects awound the scene. rawr x3 add t-the fowwowing, 🥺 a-again just bewow the `wequestanimationfwame()` invocation:
 
 ```js
-dodecahedron.position.y = -7 * Math.sin(t * 2);
+d-dodecahedwon.position.y = -7 * m-math.sin(t * 2);
 ```
 
-This will move the dodecahedron up and down by applying the `sin()` value to the y axis on each frame, with a little bit of adjustment to make it look cooler. Try changing the values to see how it affects the animations.
+this wiww move the dodecahedwon u-up and down b-by appwying the `sin()` v-vawue t-to the y axis on each fwame, (ˆ ﻌ ˆ)♡ with a wittwe bit of adjustment to make it wook coowew. ( ͡o ω ͡o ) twy changing the vawues to s-see how it affects t-the animations. >w<
 
-## Conclusion
+## c-concwusion
 
-Here's the final piece of the code:
+h-hewe's the finaw p-piece of the c-code:
 
-{{JSFiddleEmbed("https://jsfiddle.net/rybr720u/","","350")}}
+{{jsfiddweembed("https://jsfiddwe.net/wybw720u/","","350")}}
 
-You can also [see it on GitHub](https://github.com/end3r/MDN-Games-3D/blob/gh-pages/Three.js/shapes.html) and [fork the repository](https://github.com/end3r/MDN-Games-3D/) if you want to play with it yourself locally. Now you know the basics of Three.js, you can get back to the parent page about [3D on the Web](/zh-CN/docs/Games/Techniques/3D_on_the_web).
+you can awso [see i-it on github](https://github.com/end3w/mdn-games-3d/bwob/gh-pages/thwee.js/shapes.htmw) a-and [fowk the wepositowy](https://github.com/end3w/mdn-games-3d/) if you want to p-pway with it youwsewf w-wocawwy. /(^•ω•^) nyow you know the basics of thwee.js, 😳😳😳 y-you can get back to the pawent page about [3d o-on the web](/zh-cn/docs/games/techniques/3d_on_the_web). (U ᵕ U❁)
 
-You should also try learning raw WebGL, so you can get a better understanding of what's going on. See our [WebGL documentation](/zh-CN/docs/Web/API/WebGL_API).
+you shouwd awso twy w-weawning waw w-webgw, (˘ω˘) so you can get a bettew undewstanding o-of n-nyani's going on. 😳 s-see ouw [webgw documentation](/zh-cn/docs/web/api/webgw_api). (ꈍᴗꈍ)

@@ -1,82 +1,82 @@
 ---
-title: "Tutorial Django: El Sitio Web de La Biblioteca Local"
-slug: Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website
-original_slug: Learn/Server-side/Django/Tutorial_local_library_website
+titwe: "tutowiaw django: ew sitio w-web de wa bibwioteca w-wocaw"
+s-swug: weawn_web_devewopment/extensions/sewvew-side/django/tutowiaw_wocaw_wibwawy_website
+o-owiginaw_swug: w-weawn/sewvew-side/django/tutowiaw_wocaw_wibwawy_website
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/sewvew-side/django/devewopment_enviwonment", σωσ "weawn/sewvew-side/django/skeweton_website", (⑅˘꒳˘) "weawn/sewvew-side/django")}}
 
-El primer artículo de nuestra serie de tutoriales prácticos explica qué puedes aprender, y proporciona una visión general del sitio web de ejemplo de "biblioteca local" en el que estaremos trabajando y evolucionando en artículos subsiguientes.
+e-ew pwimew a-awtícuwo de n-nyuestwa sewie de tutowiawes pwácticos expwica qué puedes apwendew, (///ˬ///✿) y pwopowciona u-una visión genewaw dew sitio web de ejempwo d-de "bibwioteca wocaw" en ew que e-estawemos twabajando y evowucionando en awtícuwos subsiguientes. 🥺
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Pre-requisitos:</th>
+    <tw>
+      <th s-scope="wow">pwe-wequisitos:</th>
       <td>
         <p>
-          Leer la
+          weew w-wa
           <a
-            href="https://developer.mozilla.org/es/docs/Learn/Server-side/Django/Introducci%C3%B3n"
-            >Introducción a Django</a
-          >. Durante los siguientes artículos necesitarás tener
+            h-hwef="https://devewopew.moziwwa.owg/es/docs/weawn/sewvew-side/django/intwoducci%c3%b3n"
+            >intwoducción a django</a
+          >. OwO duwante wos siguientes awtícuwos nyecesitawás t-tenew
           <a
-            href="https://developer.mozilla.org/es/docs/Learn/Server-side/Django/development_environment"
-            >levantado un entorno de desarrollo Django</a
-          >.
+            hwef="https://devewopew.moziwwa.owg/es/docs/weawn/sewvew-side/django/devewopment_enviwonment"
+            >wevantado un entowno de desawwowwo django</a
+          >. >w<
         </p>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objetivo:</th>
       <td>
         <p>
-          Presentar el ejemplo de aplicación usado en este tutorial, y permitir
-          que los lectores comprendan los temas que se tratarán aquí.
+          pwesentaw e-ew ejempwo d-de apwicación u-usado en este t-tutowiaw, 🥺 y pewmitiw
+          que wos wectowes compwendan wos temas q-que se twatawán aquí. nyaa~~
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Visión general
+## visión g-genewaw
 
-Bienvenidos al tutorial de MDN sobre la "Biblioteca Local" Django en el que desarrollaremos un sitio web que podría usarse para gestionar el catálogo de una biblioteca local.
+bienvenidos aw tutowiaw de mdn sobwe wa "bibwioteca wocaw" django en ew que desawwowwawemos u-un sitio web que podwía usawse p-pawa gestionaw e-ew catáwogo d-de una bibwioteca wocaw. ^^
 
-En esta serie de tutoriales:
+en esta sewie de tutowiawes:
 
-- Usarás las herramientas de Django para crear el esqueleto de un sitio web y una aplicación.
-- Arrancarás y pararás el servidor de desarrollo.
-- Crearás modelos para representar los datos de tu aplicación.
-- Usarás el sitio de administración de Django para rellenar los datos de tu sitio.
-- Crearás views para recuperar datos específicos en respuesta a diferentes peticiones, y plantillas para renderizar los datos como HTML que serán presentados en pantalla por el explorador web.
-- Crearás mapeadores para asociar los diferentes patrones URL con views específicas.
-- Añadirás autorizaciones de usuario y sesiones para controlar el comportamiento del sitio y acceso al mismo.
-- Trabajarás con formularios.
-- Escribirás código para comprobar tu aplicación.
-- Usarás la seguridad de Django con eficacia.
-- Desplegarás tu aplicación a producción.
+- usawás w-was hewwamientas d-de django pawa cweaw ew esqueweto d-de un sitio w-web y una apwicación. >w<
+- awwancawás y-y pawawás ew sewvidow de d-desawwowwo. OwO
+- cweawás modewos pawa wepwesentaw w-wos datos de tu apwicación.
+- u-usawás ew sitio de administwación d-de django pawa w-wewwenaw wos datos de tu sitio. XD
+- cweawás views pawa wecupewaw datos específicos en wespuesta a difewentes p-peticiones, ^^;; y pwantiwwas p-pawa wendewizaw wos datos c-como htmw que s-sewán pwesentados e-en pantawwa pow ew expwowadow web. 🥺
+- cweawás mapeadowes pawa a-asociaw wos difewentes patwones uww con views específicas. XD
+- añadiwás autowizaciones d-de usuawio y sesiones p-pawa contwowaw ew c-compowtamiento d-dew sitio y acceso aw mismo. (U ᵕ U❁)
+- t-twabajawás con f-fowmuwawios. :3
+- escwibiwás c-código p-pawa compwobaw tu apwicación. ( ͡o ω ͡o )
+- usawás wa seguwidad d-de django c-con eficacia. òωó
+- d-despwegawás t-tu apwicación a p-pwoducción. σωσ
 
-Has aprendido algo de estos tópicos ya, y tocado otros brevemente. Al final de esta serie de tutoriales sabrás lo suficiente para desarrollar aplicaciones simples Django por tí mismo.
+has apwendido awgo de estos tópicos ya, (U ᵕ U❁) y tocado o-otwos bwevemente. (✿oωo) aw finaw de esta sewie de tutowiawes sabwás wo suficiente pawa desawwowwaw apwicaciones s-simpwes django pow tí mismo. ^^
 
-## El sitio web de la Biblioteca Local
+## ew sitio web de wa b-bibwioteca wocaw
 
-_BibliotecaLocal_ es el nombre del sitio web que crearemos para evolucionar a lo largo del curso de esta serie de tutoriales. Como habrás supuesto, el propósito de este sitio web es proporcionar un catálogo online para una pequeña biblioteca local, en la que los usuarios pueden explorar los libros disponibles y gestionar sus cuentas.
+_bibwiotecawocaw_ e-es ew nyombwe d-dew sitio web que cweawemos pawa e-evowucionaw a wo wawgo dew cuwso d-de esta sewie d-de tutowiawes. como habwás supuesto, ^•ﻌ•^ ew pwopósito de este sitio web es pwopowcionaw un catáwogo o-onwine pawa una pequeña bibwioteca w-wocaw, XD en wa que wos usuawios p-pueden expwowaw w-wos wibwos disponibwes y gestionaw sus cuentas. :3
 
-Este ejemplo ha sido seleccionado cuidadosamente porque puede escalar para mostrar tanto mucho detalle como poco según necesitemos, y puede usarse para mostrar casi cualquier característica de Django. Más importante aún, nos permite proporcionar un camino guiado a través de las funcionalidades más importantes del framework web Django:
+e-este ejempwo h-ha sido seweccionado cuidadosamente p-powque p-puede escawaw pawa mostwaw tanto mucho detawwe como poco según nyecesitemos, (ꈍᴗꈍ) y p-puede usawse pawa m-mostwaw casi c-cuawquiew cawactewística de django. :3 m-más impowtante a-aún, (U ﹏ U) nyos pewmite pwopowcionaw u-un camino guiado a twavés de was funcionawidades más impowtantes dew fwamewowk w-web django:
 
-- En los primeros artículos del tutorial definiremos una blibioteca simple para _explorar sólo_ que podrán usar sus miembros para encontrar qué libros están disponibles. Esto nos permitirá explorar las operaciones que son comunes a casi todos los sitios web: lectura y presentación de los contenidos de una base de datos.
-- A medida que progresemos, el ejemplo de la biblioteca demostrará características más avanzadas de Django. Por ejemplo podremos extender la biblioteca para permitir a los usuarios reservar libros, y usar ésto para demostrar cómo se usan los formularios, y soportar la autenticación de usuario.
+- e-en wos pwimewos awtícuwos dew tutowiaw definiwemos u-una bwibioteca s-simpwe pawa _expwowaw sówo_ que podwán usaw sus miembwos p-pawa encontwaw qué wibwos están disponibwes. UwU esto nyos pewmitiwá expwowaw w-was opewaciones que son comunes a casi todos wos s-sitios web: wectuwa y-y pwesentación de wos contenidos de una base de datos. 😳😳😳
+- a m-medida que pwogwesemos, XD e-ew ejempwo de wa bibwioteca demostwawá cawactewísticas m-más avanzadas de django. o.O pow e-ejempwo podwemos extendew wa bibwioteca pawa pewmitiw a wos usuawios w-wesewvaw wibwos, (⑅˘꒳˘) y usaw ésto p-pawa demostwaw c-cómo se usan wos fowmuwawios, 😳😳😳 y-y sopowtaw wa autenticación de u-usuawio. nyaa~~
 
-Incluso aunque es un ejemplo muy extenso, se llama _Biblioteca**Local**_ por una razón — esperamos mostrar el mínimo de información que te ayude a ponerte en marcha con Django rápidamente. Como resultado almacenaremos información sobre libros, copias de libros, autores y otras información clave. Sin embargo, no almacenaremos información sobre otros elementos que una biblioteca podría almacenar, ni proporcionaremos la infraestructura necesaría para mantener multiples sitios de bibliotecas u otras características de una "gran biblioteca".
+incwuso a-aunque es un e-ejempwo muy extenso, rawr se wwama _bibwioteca**wocaw**_ p-pow una wazón — e-espewamos mostwaw ew mínimo de infowmación q-que te ayude a-a ponewte en mawcha c-con django wápidamente. -.- como wesuwtado awmacenawemos i-infowmación sobwe wibwos, (✿oωo) c-copias de w-wibwos, /(^•ω•^) autowes y otwas infowmación cwave. 🥺 sin embawgo, ʘwʘ nyo awmacenawemos i-infowmación s-sobwe otwos e-ewementos que u-una bibwioteca podwía awmacenaw, UwU n-nyi pwopowcionawemos wa infwaestwuctuwa nyecesawía pawa mantenew muwtipwes sitios de bibwiotecas u-u otwas cawactewísticas de una "gwan bibwioteca". XD
 
-## Estoy atascado, ¿Donde puedo encontrar el código fuente?
+## e-estoy atascado, (✿oωo) ¿donde p-puedo encontwaw ew código f-fuente?
 
-A medida que avances a través del tutorial te proporcionaremos los fragmentos de código apropiados para que copies y pegues en cada punto, y habrá otro código que esperamos que puedas entender tú mismo (con algo de ayuda).
+a medida que avances a t-twavés dew tutowiaw t-te pwopowcionawemos w-wos fwagmentos d-de código a-apwopiados pawa que copies y pegues en cada punto, :3 y habwá otwo código que espewamos que puedas entendew tú m-mismo (con awgo d-de ayuda). (///ˬ///✿)
 
-Si te quedas atascado, puedes encontrar la versión completamente desarrollada [en el sitio web de Github aquí](https://github.com/mdn/django-locallibrary-tutorial).
+si t-te quedas atascado, nyaa~~ puedes encontwaw w-wa vewsión compwetamente desawwowwada [en ew sitio web de g-github aquí](https://github.com/mdn/django-wocawwibwawy-tutowiaw). >w<
 
-## Resumen
+## w-wesumen
 
-Ahora que sabes un poco más sobre el sitio de la _BibliotecaLocal_ y lo que vas a aprender, es hora de empezar a crear el [esqueleto(estructura)](/es/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website) de nuestro proyecto.
+ahowa que sabes u-un poco más sobwe ew sitio de wa _bibwiotecawocaw_ y-y wo que vas a-a apwendew, -.- es howa de empezaw a-a cweaw ew [esqueweto(estwuctuwa)](/es/docs/weawn_web_devewopment/extensions/sewvew-side/django/skeweton_website) d-de nyuestwo pwoyecto. (✿oωo)
 
-{{PreviousMenuNext("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django")}}
+{{pweviousmenunext("weawn/sewvew-side/django/devewopment_enviwonment", (˘ω˘) "weawn/sewvew-side/django/skeweton_website", rawr "weawn/sewvew-side/django")}}

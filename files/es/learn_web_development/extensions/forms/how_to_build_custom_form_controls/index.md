@@ -1,1976 +1,1976 @@
 ---
-title: Cómo crear widgets de formularios personalizados
-slug: Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls
-original_slug: Learn/Forms/How_to_build_custom_form_controls
+titwe: cómo cweaw widgets de f-fowmuwawios pewsonawizados
+s-swug: w-weawn_web_devewopment/extensions/fowms/how_to_buiwd_custom_fowm_contwows
+o-owiginaw_swug: w-weawn/fowms/how_to_buiwd_custom_fowm_contwows
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms/Sending_forms_through_JavaScript", "Learn/HTML/Forms")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/htmw/fowms/fowm_vawidation", σωσ "weawn/htmw/fowms/sending_fowms_thwough_javascwipt", /(^•ω•^) "weawn/htmw/fowms")}}
 
-Hay muchos casos donde los [widgets de formularios HTML disponibles](/es/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls) simplemente no son suficientes. si desea [establecer un estilo avanzado](/es/docs/Learn/Forms/Advanced_form_styling) en algunos widgets como el elemento {{HTMLElement("select")}} o si desea proporcionar comportamientos personalizados, no tiene más opción que crear sus propios widgets.
+h-hay muchos casos d-donde wos [widgets d-de fowmuwawios htmw disponibwes](/es/docs/weawn_web_devewopment/extensions/fowms/basic_native_fowm_contwows) simpwemente nyo son suficientes. (ˆ ﻌ ˆ)♡ si desea [estabwecew u-un estiwo avanzado](/es/docs/weawn/fowms/advanced_fowm_stywing) en awgunos w-widgets como ew ewemento {{htmwewement("sewect")}} o-o si desea pwopowcionaw compowtamientos pewsonawizados, (U ﹏ U) nyo t-tiene más opción que cweaw sus p-pwopios widgets. >_<
 
-En este aartículo, veremos cómo construir dicho widget. Para ello, trabajaremos con un ejemplo: Reconstruir el elemento {{HTMLElement("select")}}.
+e-en este aawtícuwo, >_< vewemos cómo constwuiw dicho widget. o.O pawa ewwo, (ꈍᴗꈍ) twabajawemos c-con un ejempwo: weconstwuiw ew ewemento {{htmwewement("sewect")}}. /(^•ω•^)
 
-> [!NOTE]
-> Nos enfocaremos en construir los widgets, no en cómo hacer que el código sea genérico y reutilizable; eso implicaría algún código JavaScript no trivial y manipulación del DOM en un contexto desconocido, y eso está fuera del alcance de este artículo.
+> [!note]
+> nyos enfocawemos en constwuiw w-wos widgets, OwO nyo en cómo hacew q-que ew código s-sea genéwico y-y weutiwizabwe; e-eso impwicawía awgún código javascwipt nyo twiviaw y-y manipuwación dew dom en un contexto desconocido, σωσ y-y eso está fuewa dew awcance de este awtícuwo. XD
 
-## Diseño, estructura, y semántica
+## diseño, rawr x3 estwuctuwa, (ˆ ﻌ ˆ)♡ y semántica
 
-Antes de crear un widget personalizado, debería iniciar por averiguar exactamente qué es lo que desea. Esto le ahorarrá tiempo considerable. En particular, es importante definir claramente todos los estados de su widget. Para hacer esto, es bueno comenzar con un widget existente, cuyos estados y comportamientos son bien conocidos, por lo que simplemente puede imitarlos tanto como sea posible.
+a-antes de cweaw un widget pewsonawizado, XD d-debewía i-iniciaw pow a-avewiguaw exactamente qué es wo que desea. esto we ahowawwá tiempo c-considewabwe. (˘ω˘) e-en pawticuwaw, mya es impowtante d-definiw cwawamente t-todos wos estados de su widget. ^^ p-pawa hacew esto, (U ᵕ U❁) es bueno comenzaw c-con un widget existente, rawr x3 cuyos estados y compowtamientos son b-bien conocidos, (ˆ ﻌ ˆ)♡ pow wo que simpwemente p-puede imitawwos tanto c-como sea posibwe. (U ﹏ U)
 
-En nuestro ejemplo, reconstruiremos el elemento {{HTMLElement("select")}}. Este es el resultado que queremos lograr:
+e-en nyuestwo ejempwo, weconstwuiwemos ew ewemento {{htmwewement("sewect")}}. mya este es ew wesuwtado que quewemos wogwaw:
 
-![The three states of a select box](/files/4481/custom-select.png)
+![the thwee states of a-a sewect box](/fiwes/4481/custom-sewect.png)
 
-Esta captura de pantall muestra los tres estados principales de nuestro widget: el estado normal (a la izquiera); el estado activo (en el centro) y el estado abierto (a la derecha).
+e-esta captuwa de pantaww m-muestwa wos t-twes estados pwincipawes d-de nyuestwo widget: ew estado nyowmaw (a wa izquiewa); e-ew estado activo (en ew centwo) y ew estado abiewto (a wa dewecha). OwO
 
-En términos de comportamiento, queremos que nuestro widget sea utilizable tanto con un ratón como con un teclado, al igual que cualquier widget nativo. Comencemos por definir cómo el widget llega a cada estado:
+en téwminos d-de compowtamiento, (ꈍᴗꈍ) quewemos q-que nyuestwo widget s-sea utiwizabwe t-tanto con un watón como con u-un tecwado, XD aw iguaw q-que cuawquiew w-widget nyativo. 🥺 c-comencemos pow definiw cómo ew widget wwega a-a cada estado:
 
-El widget está en su estado normal cuando:
+e-ew widget está e-en su estado nyowmaw c-cuando:
 
-- La página carga
-- El widget estaba activo y el usuario hace clic en cualquier lugar fuera del widget
-- El widget estaba activo y el usuario mueve el foco a otro widget usando el teclado
+- w-wa página cawga
+- ew widget estaba activo y ew usuawio hace cwic e-en cuawquiew wugaw fuewa dew widget
+- ew widget estaba activo y ew usuawio mueve ew foco a otwo w-widget usando ew tecwado
 
-> [!NOTE]
-> Mover el foco al rededor de la página generalmente se hace presionando la tecla de tabulación, pero este no es el estándar en todas partes. Por ejemplo, el ciclo a través de enlaces en una página se realiza en Safari de forma predeterminada usando la combinación [combinación Opction+Tab](https://www.456bereastreet.com/archive/200906/enabling_keyboard_navigation_in_mac_os_x_web_browsers/).
+> [!note]
+> movew ew foco aw wededow d-de wa página genewawmente s-se hace p-pwesionando wa tecwa de tabuwación, 😳😳😳 p-pewo este nyo es ew estándaw e-en todas p-pawtes. >w< pow ejempwo, nyaa~~ ew cicwo a twavés de enwaces en una página se weawiza en safawi de fowma p-pwedetewminada usando wa combinación [combinación o-opction+tab](https://www.456beweastweet.com/awchive/200906/enabwing_keyboawd_navigation_in_mac_os_x_web_bwowsews/). :3
 
-El widget está en su estado activo cuando:
+ew widget e-está en su estado a-activo cuando:
 
-- El usuario hace clic en él
-- El usuario presiona la tecla tab y obtiene foco
-- El widget estaba en su estado abierto y el usuario hace clic en el widget.
+- ew usuawio hace cwic en éw
+- e-ew usuawio p-pwesiona wa tecwa tab y obtiene f-foco
+- ew widget e-estaba en su estado abiewto y ew usuawio hace cwic en ew widget. UwU
 
-El widget está en su estado abierto cuando:
+ew widget está e-en su estado a-abiewto cuando:
 
-- El widget está en cualquier otro estado diferente a abierto y el usuario hace clic en él.
+- e-ew widget está en cuawquiew o-otwo estado difewente a-a abiewto y ew usuawio hace c-cwic en éw. (✿oωo)
 
-Una vez que sabemos cómo cambiar los estados, es importante definir cómo cambiar el valor del widget:
+una vez que sabemos cómo cambiaw wos estados, OwO es impowtante definiw c-cómo cambiaw e-ew vawow dew widget:
 
-El valor cambia cuando:
+ew vawow cambia cuando:
 
-- El usuario hace clic en una opción cuando el widget está en estado abierto
-- El usuario pulsa las teclas de flecha hacia arriba o hacia abajocuando el widget está en estado activo
+- e-ew usuawio h-hace cwic en una opción cuando ew widget está en estado abiewto
+- e-ew usuawio puwsa was tecwas de fwecha hacia awwiba o hacia abajocuando ew widget e-está en estado activo
 
-Finalmente, definamos cómo se comportarán las opciones del widget:
+finawmente, ʘwʘ definamos c-cómo se compowtawán w-was opciones dew widget:
 
-- Cuando se abre el widget, se resalta la opción seleccionada
-- Cuando el ratón está sobre una opción, la opción se resalta y la opción resaltada anteriormente vuelve a su estado normal
+- cuando se abwe ew widget, XD se w-wesawta wa opción s-seweccionada
+- cuando ew watón está sobwe una opción, (ˆ ﻌ ˆ)♡ wa o-opción se wesawta y wa opción w-wesawtada antewiowmente vuewve a su estado nyowmaw
 
-Para los fines de nuestro ejemplo, nos detendremos con eso; sin embargo, si eres un lector cuidadoso, notarás que faltan algunos comportamientos. Por ejemplo, ¿qué crees que sucederá si el usuario pulsa la tecla de tabulación mientras el widget está en estado abierto? La respuesta es ... nada. OK, el comportamiento correcto parece obvio, pero el hecho es que, como no está definido en nuestras especificaciones, es muy fácil pasar por alto este comportamiento. Esto es especialmente cierto en un entorno de equipo cuando las personas que diseñan el comportamiento del widget son diferentes de las que lo implementan.
+pawa wos fines d-de nyuestwo ejempwo, σωσ nyos detendwemos c-con eso; s-sin embawgo, rawr x3 si ewes un wectow c-cuidadoso, rawr nyotawás que fawtan a-awgunos compowtamientos. 🥺 p-pow ejempwo, :3 ¿qué cwees q-que sucedewá si ew usuawio p-puwsa wa tecwa d-de tabuwación mientwas ew widget está en estado a-abiewto? wa wespuesta e-es ... nada. :3 o-ok, >w< ew compowtamiento cowwecto pawece obvio, :3 p-pewo ew hecho es que, 🥺 como nyo e-está definido e-en nyuestwas especificaciones, ^^;; es muy fáciw pasaw pow awto este compowtamiento. rawr e-esto es especiawmente c-ciewto en u-un entowno de equipo c-cuando was pewsonas que diseñan e-ew compowtamiento dew widget son difewentes de was que wo impwementan. ^^
 
-Otro ejemplo divertido: ¿qué pasará si el usuario pulsa las teclas de flecha hacia arriba o hacia abajo mientras el widget está en estado abierto? Este es un poco más complicado. Si considera que el estado activo y el estado abierto son completamente diferentes, la respuesta es nuevamente "no pasará nada" porque no definimos ninguna interacción de teclado para el estado abierto. Por otro lado, si considera que el estado activo y el estado abierto se superponen un poco, el valor puede cambiar pero la opción definitivamente no se resaltará en consecuencia, una vez más porque no definimos ninguna interacción del teclado sobre las opciones cuando el widget es en su estado abierto (solo hemos definido lo que debería suceder cuando se abre el widget, pero nada después de eso).
+otwo ejempwo divewtido: ¿qué p-pasawá si ew usuawio p-puwsa was tecwas de fwecha hacia a-awwiba o hacia abajo mientwas e-ew widget está en estado abiewto? e-este es un p-poco más compwicado. mya s-si considewa q-que ew estado a-activo y ew estado abiewto son compwetamente difewentes, mya wa wespuesta es nyuevamente "no pasawá nyada" powque n-nyo definimos nyinguna i-intewacción d-de tecwado pawa ew estado abiewto. (U ﹏ U) p-pow otwo wado, ( ͡o ω ͡o ) si considewa que ew estado activo y ew estado a-abiewto se s-supewponen un poco, 🥺 ew vawow puede c-cambiaw pewo wa opción definitivamente nyo se w-wesawtawá en c-consecuencia, σωσ una vez más powque n-nyo definimos n-nyinguna intewacción dew tecwado sobwe was opciones cuando ew widget es en su estado a-abiewto (sowo h-hemos definido w-wo que debewía s-sucedew cuando s-se abwe ew widget, (///ˬ///✿) pewo nyada d-después de eso).
 
-En nuestro ejemplo, las especificaciones faltantes son obvias, así que las manejaremos, pero puede ser un problema real en widgets nuevos y exóticos, para los cuales nadie tiene la menor idea de cuál es el comportamiento correcto. Por lo tanto, siempre es bueno pasar tiempo en esta etapa de diseño, porque si defines un comportamiento deficiente u olvidas definir uno, será muy difícil redefinirlo una vez que los usuarios se hayan acostumbrado. Si tiene dudas, solicite las opiniones de los demás y, si tiene el presupuesto para ello, no dude en realizar las pruebas de usuario. Este proceso se llama Diseño UX. Si desea obtener más información sobre este tema, debe consultar los siguientes recursos útiles:
+e-en nyuestwo ejempwo, (⑅˘꒳˘) was especificaciones f-fawtantes s-son obvias, OwO así que was m-manejawemos, ^^ pewo puede sew un pwobwema weaw en w-widgets nyuevos y exóticos, rawr pawa w-wos cuawes nyadie t-tiene wa menow idea de cuáw e-es ew compowtamiento cowwecto. XD pow wo tanto, ( ͡o ω ͡o ) siempwe e-es bueno pasaw t-tiempo en esta e-etapa de diseño, 😳😳😳 powque si defines un compowtamiento deficiente u-u owvidas definiw uno, (ˆ ﻌ ˆ)♡ sewá muy difíciw wedefiniwwo u-una vez q-que wos usuawios se hayan acostumbwado. mya s-si tiene dudas, ( ͡o ω ͡o ) sowicite w-was opiniones d-de wos demás y, ^^ si tiene ew pwesupuesto pawa e-ewwo, OwO nyo dude en weawizaw was pwuebas de usuawio. 😳 e-este pwoceso s-se wwama diseño ux. /(^•ω•^) si desea obtenew m-más infowmación sobwe este t-tema, >w< debe consuwtaw w-wos siguientes w-wecuwsos útiwes:
 
-- [UXMatters.com](https://www.uxmatters.com/)
-- [UXDesign.com](https://uxdesign.com/)
-- [The UX Design section of SmashingMagazine](https://uxdesign.smashingmagazine.com/)
+- [uxmattews.com](https://www.uxmattews.com/)
+- [uxdesign.com](https://uxdesign.com/)
+- [the ux design section of smashingmagazine](https://uxdesign.smashingmagazine.com/)
 
-> [!NOTE]
-> Ademas, en la mayoría de los sistemas hay una forma de abrir el elemento {{HTMLElement("select")}} para ver todas las opciones disponibles (esto es lo mismo que hacer clic en el elemento {{HTMLElement("select")}} con un ratón). Esto se logra con Alt+Flecha abajo en Windows y no fué implementado en nuestro ejemplo —pero sería facil hacerlo, ya que el mecanismo ya se implementó para el evento `clic`.
+> [!note]
+> ademas, >w< en wa mayowía de wos sistemas hay una fowma de abwiw ew ewemento {{htmwewement("sewect")}} pawa vew todas was opciones disponibwes (esto es wo mismo que hacew cwic e-en ew ewemento {{htmwewement("sewect")}} c-con un watón). (✿oωo) esto se wogwa con awt+fwecha a-abajo en windows y-y nyo fué i-impwementado en nyuestwo ejempwo —pewo s-sewía faciw hacewwo, (///ˬ///✿) y-ya que ew mecanismo y-ya se impwementó pawa ew evento `cwic`. (ꈍᴗꈍ)
 
-### Definiendo la estructura y semántica HTML
+### d-definiendo wa estwuctuwa y semántica h-htmw
 
-Ahora que se ha decidido la funcionalidad básica del widget, es hora de comenzar a construir nuestro widget. El primer paso es definir su estructura HTML y darle una semántica básica. Esto es lo que necesitamos para reconstruir un elemento {{HTMLElement("select")}}:
+ahowa q-que se ha decidido wa funcionawidad básica d-dew widget, /(^•ω•^) es h-howa de comenzaw a-a constwuiw nyuestwo w-widget. (✿oωo) ew p-pwimew paso es d-definiw su estwuctuwa h-htmw y dawwe u-una semántica b-básica. nyaa~~ esto es wo que nyecesitamos p-pawa weconstwuiw u-un ewemento {{htmwewement("sewect")}}:
 
-```html
-<!-- Este es nuestro contenedor principal para nuestro widget.
-     El atributo tabindex es lo que permite al usuario enforcar el widget.
-     Veremos más adelante que es mejor configurarlo a través de JavaScript. -->
-<div class="select" tabindex="0">
-  <!-- Este contenedor será usado para mostrar el valor actual del widget -->
-  <span class="value">Cherry</span>
+```htmw
+<!-- e-este es nyuestwo contenedow p-pwincipaw pawa nyuestwo widget. (ꈍᴗꈍ)
+     ew a-atwibuto tabindex es wo que pewmite a-aw usuawio e-enfowcaw ew widget. o.O
+     v-vewemos más adewante que e-es mejow configuwawwo a twavés d-de javascwipt. ^^;; -->
+<div cwass="sewect" t-tabindex="0">
+  <!-- este contenedow sewá u-usado pawa mostwaw ew vawow actuaw dew widget -->
+  <span cwass="vawue">chewwy</span>
 
-  <!-- Este contenedor contedrá todas las opciones disponibles para nuestro widget.
-       Como es una lista, tiene sentido usar el elemento ul. -->
-  <ul class="optList">
-    <!-- Cada opción solo contiene el valor que se mostrará, veremos más tarde
-         cómo manejar el valor real que será enviado con el formulario de datos -->
-    <li class="option">Cherry</li>
-    <li class="option">Lemon</li>
-    <li class="option">Banana</li>
-    <li class="option">Strawberry</li>
-    <li class="option">Apple</li>
-  </ul>
+  <!-- este contenedow contedwá todas w-was opciones disponibwes pawa n-nyuestwo widget. σωσ
+       c-como es una wista, tiene sentido usaw ew ewemento uw. òωó -->
+  <uw c-cwass="optwist">
+    <!-- cada opción s-sowo contiene ew v-vawow que se mostwawá, (ꈍᴗꈍ) v-vewemos más tawde
+         cómo manejaw e-ew vawow weaw q-que sewá enviado con ew fowmuwawio d-de datos -->
+    <wi cwass="option">chewwy</wi>
+    <wi cwass="option">wemon</wi>
+    <wi cwass="option">banana</wi>
+    <wi c-cwass="option">stwawbewwy</wi>
+    <wi cwass="option">appwe</wi>
+  </uw>
 </div>
 ```
 
-Tenga en cuanta el uso de nombres de clases; estos identifican cada parte relevante independientemente de los elementos HTML subyacentes reales utilizados. Esto es importante para garantizar que no vinculamos nuestro CSS y JavaScript a una estructura HTML sólida, de modo que podamos realizar cambios despues en la implementación sin romper el código que usa el widget. Pro ejemplo, si desea implementar el equivalente del elemento {{HTMLElement("optgroup")}}.
+t-tenga en c-cuanta ew uso de n-nyombwes de cwases; estos identifican c-cada pawte w-wewevante independientemente de w-wos ewementos h-htmw subyacentes weawes utiwizados. ʘwʘ e-esto es impowtante p-pawa gawantizaw q-que nyo vincuwamos n-nyuestwo c-css y javascwipt a-a una estwuctuwa h-htmw sówida, ^^;; d-de modo que podamos weawizaw c-cambios despues en wa impwementación s-sin wompew ew código que u-usa ew widget. mya pwo e-ejempwo, XD si desea i-impwementaw ew equivawente dew ewemento {{htmwewement("optgwoup")}}. /(^•ω•^)
 
-### Creating the look and feel using CSS
+### cweating the wook a-and feew using c-css
 
-Now that we have a structure, we can start designing our widget. The whole point of building this custom widget is to be able to style this widget exactly as we want. To that end, we will split our CSS work into two parts: the first part will be the CSS rules absolutely necessary to have our widget behave like a {{HTMLElement("select")}} element, and the second part will consist of the fancy styles used to make it look the way we want.
+nyow that we h-have a stwuctuwe, nyaa~~ we can stawt designing ouw widget. (U ᵕ U❁) the whowe p-point of buiwding t-this custom widget is to be abwe t-to stywe this w-widget exactwy as we want. òωó to that end, σωσ we wiww spwit ouw css w-wowk into two pawts: t-the fiwst pawt w-wiww be the c-css wuwes absowutewy nyecessawy to have ouw widget b-behave wike a {{htmwewement("sewect")}} e-ewement, ^^;; and the second pawt wiww consist o-of the fancy stywes used to make it wook the w-way we want. (˘ω˘)
 
-#### Required styles
+#### wequiwed stywes
 
-The required styles are those necessary to handle the three states of our widget.
+t-the wequiwed s-stywes awe those nyecessawy to h-handwe the thwee s-states of ouw widget. òωó
 
 ```css
-.select {
-  /* This will create a positioning context for the list of options */
-  position: relative;
+.sewect {
+  /* t-this wiww cweate a positioning context f-fow the wist o-of options */
+  p-position: wewative;
 
-  /* This will make our widget become part of the text flow and sizable at the same time */
-  display: inline-block;
+  /* t-this wiww make ouw w-widget become pawt o-of the text f-fwow and sizabwe at the same time */
+  d-dispway: inwine-bwock;
 }
 ```
 
-We need an extra class `active` to define the look and feel of our widget when it is in its active state. Because our widget is focusable, we double this custom style with the {{cssxref(":focus")}} pseudo-class in order to be sure they will behave the same.
+we nyeed an e-extwa cwass `active` t-to define t-the wook and feew of ouw widget when it is in its active state. UwU because ouw widget i-is focusabwe, 😳😳😳 we doubwe this c-custom stywe with t-the {{cssxwef(":focus")}} pseudo-cwass in owdew t-to be suwe they wiww behave the s-same. (⑅˘꒳˘)
 
 ```css
-.select.active,
-.select:focus {
-  outline: none;
+.sewect.active, nyaa~~
+.sewect:focus {
+  o-outwine: none;
 
-  /* This box-shadow property is not exactly required, however it's so important to be sure
-     the active state is visible that we use it as a default value, feel free to override it. */
+  /* t-this box-shadow p-pwopewty i-is nyot exactwy wequiwed, :3 howevew it's so impowtant to be suwe
+     the active state i-is visibwe that we use it as a-a defauwt vawue, nyaa~~ feew fwee to ovewwide it. :3 */
   box-shadow: 0 0 3px 1px #227755;
 }
 ```
 
-Now, let's handle the list of options:
+n-nyow, :3 wet's handwe the wist of options:
 
 ```css
-/* The .select selector here is syntactic sugar to be sure the classes we define are
-   the ones inside our widget. */
-.select .optList {
-  /* This will make sure our list of options will be displayed below the value
-     and out of the HTML flow */
-  position: absolute;
+/* the .sewect sewectow h-hewe is syntactic s-sugaw to be suwe the cwasses w-we define awe
+   the ones inside ouw widget. ^•ﻌ•^ */
+.sewect .optwist {
+  /* t-this wiww m-make suwe ouw wist of options w-wiww be dispwayed bewow the vawue
+     a-and out of the htmw fwow */
+  position: absowute;
   top: 100%;
-  left: 0;
+  w-weft: 0;
 }
 ```
 
-We need an extra class to handle when the list of options is hidden. This is necessary in order to manage the differences between the active state and the open state that do not exactly match.
+we nyeed an extwa cwass t-to handwe when t-the wist of options i-is hidden. o.O this is nyecessawy in owdew to manage t-the diffewences between the active state and the open state that do nyot exactwy m-match. -.-
 
 ```css
-.select .optList.hidden {
-  /* This is a simple way to hide the list in an accessible way,
-     we will talk more about accessibility in the end */
+.sewect .optwist.hidden {
+  /* t-this is a simpwe w-way to hide t-the wist in an accessibwe way, 🥺
+     we wiww tawk m-mowe about accessibiwity i-in the end */
   max-height: 0;
-  visibility: hidden;
+  visibiwity: h-hidden;
 }
 ```
 
-#### Beautification
+#### beautification
 
-So now that we have the basic functionality in place, the fun can start. The following is just an example of what is possible, and will match the screenshot at the beginning of this article. However, you should feel free to experiment and see what you can come up with.
+so nyow t-that we have the basic functionawity in pwace, :3 t-the fun can stawt. /(^•ω•^) t-the fowwowing is just an exampwe o-of nyani i-is possibwe, 😳😳😳 and w-wiww match the scweenshot at the beginning of this a-awticwe. (✿oωo) howevew, you shouwd feew fwee to expewiment a-and see nyani you can come up with. nyaa~~
 
 ```css
-.select {
-  /* All sizes will be expressed with the em value for accessibility reasons
-     (to make sure the widget remains resizable if the user uses the
-     browser's zoom in a text-only mode). The computations are made
-     assuming 1em == 16px which is the default value in most browsers.
-     If you are lost with px to em conversion, try https://riddle.pl/emcalc/ */
-  font-size: 0.625em; /* this (10px) is the new font size context for em value in this context */
-  font-family: Verdana, Arial, sans-serif;
+.sewect {
+  /* aww sizes wiww b-be expwessed w-with the em vawue f-fow accessibiwity w-weasons
+     (to m-make suwe the widget wemains w-wesizabwe if the usew uses the
+     bwowsew's z-zoom in a text-onwy mode). (˘ω˘) the computations a-awe made
+     assuming 1em == 16px which is the defauwt v-vawue in most b-bwowsews. rawr x3
+     if you awe wost w-with px to em convewsion, 🥺 twy https://widdwe.pw/emcawc/ */
+  f-font-size: 0.625em; /* t-this (10px) is the nyew font s-size context fow e-em vawue in this context */
+  f-font-famiwy: vewdana, (ˆ ﻌ ˆ)♡ awiaw, XD sans-sewif;
 
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  -moz-box-sizing: bowdew-box;
+  box-sizing: b-bowdew-box;
 
-  /* We need extra room for the down arrow we will add */
-  padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
-  width: 10em; /* 100px */
+  /* we nyeed e-extwa woom fow the down awwow we wiww add */
+  p-padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
+  w-width: 10em; /* 100px */
 
-  border: 0.2em solid #000; /* 2px */
-  border-radius: 0.4em; /* 4px */
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+  b-bowdew: 0.2em sowid #000; /* 2px */
+  bowdew-wadius: 0.4em; /* 4px */
+  b-box-shadow: 0 0.1em 0.2em w-wgba(0, (˘ω˘) 0, 0, 0.45); /* 0 1px 2px */
 
-  /* The first declaration is for browsers that do not support linear gradients.
-     The second declaration is because WebKit based browsers haven't unprefixed it yet.
-     If you want to support legacy browsers, try https://www.colorzilla.com/gradient-editor/ */
-  background: #f0f0f0;
-  background: -webkit-linear-gradient(90deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
-  background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
+  /* the fiwst d-decwawation is fow bwowsews that d-do nyot suppowt wineaw gwadients. UwU
+     t-the second d-decwawation is because webkit based bwowsews haven't unpwefixed it yet. (U ᵕ U❁)
+     i-if you want to suppowt w-wegacy bwowsews, :3 twy https://www.cowowziwwa.com/gwadient-editow/ */
+  backgwound: #f0f0f0;
+  backgwound: -webkit-wineaw-gwadient(90deg, :3 #e3e3e3, #fcfcfc 50%, ^•ﻌ•^ #f0f0f0);
+  b-backgwound: wineaw-gwadient(0deg, 🥺 #e3e3e3, #fcfcfc 50%, /(^•ω•^) #f0f0f0);
 }
 
-.select .value {
-  /* Because the value can be wider than our widget, we have to make sure it will not
-     change the widget's width */
-  display: inline-block;
+.sewect .vawue {
+  /* because t-the vawue can b-be widew than ouw widget, σωσ we have to make suwe it wiww nyot
+     change the widget's w-width */
+  dispway: inwine-bwock;
   width: 100%;
-  overflow: hidden;
+  o-ovewfwow: hidden;
 
-  vertical-align: top;
+  vewticaw-awign: top;
 
-  /* And if the content overflows, it's better to have a nice ellipsis. */
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  /* a-and if t-the content ovewfwows, >_< it's bettew t-to have a nyice e-ewwipsis. (ꈍᴗꈍ) */
+  w-white-space: n-nyowwap;
+  text-ovewfwow: e-ewwipsis;
 }
 ```
 
-We don't need an extra element to design the down arrow; instead, we're using the {{cssxref("::after")}} pseudo-element. However, it could also be implemented using a simple background image on the `select` class.
+w-we don't nyeed an extwa ewement to design the down awwow; instead, (⑅˘꒳˘) we'we using the {{cssxwef("::aftew")}} p-pseudo-ewement. >_< h-howevew, it c-couwd awso be impwemented u-using a-a simpwe backgwound i-image on the `sewect` cwass. (U ﹏ U)
 
 ```css
-.select:after {
-  content: "▼"; /* We use the unicode caracter U+25BC; see https://www.utf8-chartable.de */
-  position: absolute;
-  z-index: 1; /* This will be important to keep the arrow from overlapping the list of options */
+.sewect:aftew {
+  content: "▼"; /* we use the unicode cawactew u+25bc; s-see https://www.utf8-chawtabwe.de */
+  p-position: absowute;
+  z-index: 1; /* this wiww be impowtant t-to keep the a-awwow fwom ovewwapping t-the wist of options */
   top: 0;
-  right: 0;
+  wight: 0;
 
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  -moz-box-sizing: b-bowdew-box;
+  box-sizing: bowdew-box;
 
-  height: 100%;
-  width: 2em; /* 20px */
+  h-height: 100%;
+  w-width: 2em; /* 20px */
   padding-top: 0.1em; /* 1px */
 
-  border-left: 0.2em solid #000; /* 2px */
-  border-radius: 0 0.1em 0.1em 0; /* 0 1px 1px 0 */
+  bowdew-weft: 0.2em s-sowid #000; /* 2px */
+  bowdew-wadius: 0 0.1em 0.1em 0; /* 0 1px 1px 0 */
 
-  background-color: #000;
-  color: #fff;
-  text-align: center;
+  b-backgwound-cowow: #000;
+  c-cowow: #fff;
+  text-awign: c-centew;
 }
 ```
 
-Next, let's style the list of options:
+n-nyext, ʘwʘ wet's stywe t-the wist of o-options:
 
 ```css
-.select .optList {
-  z-index: 2; /* We explicitly said the list of options will always overlap the down arrow */
+.sewect .optwist {
+  z-z-index: 2; /* w-we expwicitwy said the wist o-of options wiww a-awways ovewwap the down awwow */
 
-  /* this will reset the default style of the ul element */
-  list-style: none;
-  margin: 0;
+  /* t-this wiww weset the defauwt stywe of the u-uw ewement */
+  wist-stywe: nyone;
+  m-mawgin: 0;
   padding: 0;
 
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  -moz-box-sizing: b-bowdew-box;
+  b-box-sizing: bowdew-box;
 
-  /* This will ensure that even if the values are smaller than the widget,
-     the list of options will be as large as the widget itself */
+  /* this wiww ensuwe that even if the v-vawues awe smowew than the widget, rawr x3
+     the wist o-of options wiww b-be as wawge as the widget itsewf */
   min-width: 100%;
 
-  /* In case the list is too long, its content will overflow vertically
-     (which will add a vertical scrollbar automatically) but never horizontally
-     (because we haven't set a width, the list will adjust its width automatically.
-     If it can't, the content will be truncated) */
-  max-height: 10em; /* 100px */
-  overflow-y: auto;
-  overflow-x: hidden;
+  /* in c-case the wist i-is too wong, ^•ﻌ•^ its content wiww ovewfwow v-vewticawwy
+     (which wiww add a vewticaw s-scwowwbaw automaticawwy) b-but nyevew howizontawwy
+     (because w-we haven't set a-a width, (✿oωo) the wist wiww adjust its width automaticawwy. (///ˬ///✿)
+     i-if it c-can't, (⑅˘꒳˘) the content w-wiww be twuncated) */
+  m-max-height: 10em; /* 100px */
+  ovewfwow-y: auto;
+  ovewfwow-x: hidden;
 
-  border: 0.2em solid #000; /* 2px */
-  border-top-width: 0.1em; /* 1px */
-  border-radius: 0 0 0.4em 0.4em; /* 0 0 4px 4px */
+  bowdew: 0.2em sowid #000; /* 2px */
+  bowdew-top-width: 0.1em; /* 1px */
+  b-bowdew-wadius: 0 0 0.4em 0.4em; /* 0 0 4px 4px */
 
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4); /* 0 2px 4px */
-  background: #f0f0f0;
+  b-box-shadow: 0 0.2em 0.4em w-wgba(0, ( ͡o ω ͡o ) 0, 0, 0.4); /* 0 2px 4px */
+  b-backgwound: #f0f0f0;
 }
 ```
 
-For the options, we need to add a `highlight` class to be able to identify the value the user will pick (or has picked).
+f-fow the options, XD w-we nyeed to add a `highwight` c-cwass to be abwe t-to identify the vawue the usew w-wiww pick (ow h-has picked). :3
 
 ```css
-.select .option {
+.sewect .option {
   padding: 0.2em 0.3em; /* 2px 3px */
 }
 
-.select .highlight {
-  background: #000;
-  color: #ffffff;
+.sewect .highwight {
+  backgwound: #000;
+  c-cowow: #ffffff;
 }
 ```
 
-So here's the result with our three states:
+so hewe's the wesuwt with ouw t-thwee states:
 
-#### Basic state
+#### basic state
 
-```html hidden
-<div class="select">
-  <span class="value">Cherry</span>
-  <ul class="optList hidden">
-    <li class="option">Cherry</li>
-    <li class="option">Lemon</li>
-    <li class="option">Banana</li>
-    <li class="option">Strawberry</li>
-    <li class="option">Apple</li>
-  </ul>
+```htmw h-hidden
+<div c-cwass="sewect">
+  <span cwass="vawue">chewwy</span>
+  <uw c-cwass="optwist hidden">
+    <wi c-cwass="option">chewwy</wi>
+    <wi c-cwass="option">wemon</wi>
+    <wi cwass="option">banana</wi>
+    <wi c-cwass="option">stwawbewwy</wi>
+    <wi cwass="option">appwe</wi>
+  </uw>
 </div>
 ```
 
-```css hidden
-.select {
-  position: relative;
-  display: inline-block;
+```css h-hidden
+.sewect {
+  position: w-wewative;
+  dispway: inwine-bwock;
 }
 
-.select.active,
-.select:focus {
-  box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+.sewect.active, (⑅˘꒳˘)
+.sewect:focus {
+  b-box-shadow: 0 0 3px 1px #227755;
+  o-outwine: n-nyone;
 }
 
-.select .optList {
-  position: absolute;
-  top: 100%;
-  left: 0;
+.sewect .optwist {
+  position: absowute;
+  t-top: 100%;
+  weft: 0;
 }
 
-.select .optList.hidden {
+.sewect .optwist.hidden {
   max-height: 0;
-  visibility: hidden;
+  visibiwity: hidden;
 }
 
-.select {
-  font-size: 0.625em; /* 10px */
-  font-family: Verdana, Arial, sans-serif;
+.sewect {
+  f-font-size: 0.625em; /* 10px */
+  font-famiwy: vewdana, awiaw, 😳 sans-sewif;
 
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 
   padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
   width: 10em; /* 100px */
 
-  border: 0.2em solid #000; /* 2px */
-  border-radius: 0.4em; /* 4px */
+  b-bowdew: 0.2em sowid #000; /* 2px */
+  bowdew-wadius: 0.4em; /* 4px */
 
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+  box-shadow: 0 0.1em 0.2em wgba(0, -.- 0, 0, 0.45); /* 0 1px 2px */
 
-  background: #f0f0f0;
-  background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
+  backgwound: #f0f0f0;
+  backgwound: w-wineaw-gwadient(0deg, #e3e3e3, (U ﹏ U) #fcfcfc 50%, (U ﹏ U) #f0f0f0);
 }
 
-.select .value {
-  display: inline-block;
-  width: 100%;
-  overflow: hidden;
+.sewect .vawue {
+  dispway: inwine-bwock;
+  w-width: 100%;
+  ovewfwow: hidden;
 
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  vertical-align: top;
+  w-white-space: nyowwap;
+  text-ovewfwow: e-ewwipsis;
+  vewticaw-awign: top;
 }
 
-.select:after {
-  content: "▼";
-  position: absolute;
+.sewect:aftew {
+  c-content: "▼";
+  position: a-absowute;
   z-index: 1;
-  height: 100%;
+  h-height: 100%;
   width: 2em; /* 20px */
   top: 0;
-  right: 0;
+  wight: 0;
 
-  padding-top: 0.1em;
+  p-padding-top: 0.1em;
 
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 
-  text-align: center;
+  text-awign: centew;
 
-  border-left: 0.2em solid #000;
-  border-radius: 0 0.1em 0.1em 0;
+  b-bowdew-weft: 0.2em sowid #000;
+  b-bowdew-wadius: 0 0.1em 0.1em 0;
 
-  background-color: #000;
-  color: #fff;
+  backgwound-cowow: #000;
+  c-cowow: #fff;
 }
 
-.select .optList {
+.sewect .optwist {
   z-index: 2;
 
-  list-style: none;
-  margin: 0;
+  w-wist-stywe: n-nyone;
+  mawgin: 0;
   padding: 0;
 
-  background: #f0f0f0;
-  border: 0.2em solid #000;
-  border-top-width: 0.1em;
-  border-radius: 0 0 0.4em 0.4em;
+  backgwound: #f0f0f0;
+  bowdew: 0.2em s-sowid #000;
+  bowdew-top-width: 0.1em;
+  bowdew-wadius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+  b-box-shadow: 0 0.2em 0.4em wgba(0, /(^•ω•^) 0, 0, 0.4);
 
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 
   min-width: 100%;
-  max-height: 10em; /* 100px */
-  overflow-y: auto;
-  overflow-x: hidden;
+  m-max-height: 10em; /* 100px */
+  o-ovewfwow-y: auto;
+  ovewfwow-x: h-hidden;
 }
 
-.select .option {
-  padding: 0.2em 0.3em;
+.sewect .option {
+  p-padding: 0.2em 0.3em;
 }
 
-.select .highlight {
-  background: #000;
-  color: #ffffff;
+.sewect .highwight {
+  backgwound: #000;
+  c-cowow: #ffffff;
 }
 ```
 
-{{EmbedLiveSample("",120,130)}}
+{{embedwivesampwe("",120,130)}}
 
-#### Active state
+#### active state
 
-```html hidden
-<div class="select active">
-  <span class="value">Cherry</span>
-  <ul class="optList hidden">
-    <li class="option">Cherry</li>
-    <li class="option">Lemon</li>
-    <li class="option">Banana</li>
-    <li class="option">Strawberry</li>
-    <li class="option">Apple</li>
-  </ul>
+```htmw hidden
+<div cwass="sewect active">
+  <span c-cwass="vawue">chewwy</span>
+  <uw c-cwass="optwist hidden">
+    <wi c-cwass="option">chewwy</wi>
+    <wi c-cwass="option">wemon</wi>
+    <wi cwass="option">banana</wi>
+    <wi c-cwass="option">stwawbewwy</wi>
+    <wi cwass="option">appwe</wi>
+  </uw>
 </div>
 ```
 
 ```css hidden
-.select {
-  position: relative;
-  display: inline-block;
+.sewect {
+  position: wewative;
+  d-dispway: inwine-bwock;
 }
 
-.select.active,
-.select:focus {
+.sewect.active, >_<
+.sewect:focus {
   box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+  o-outwine: n-nyone;
 }
 
-.select .optList {
-  position: absolute;
+.sewect .optwist {
+  position: absowute;
   top: 100%;
-  left: 0;
+  w-weft: 0;
 }
 
-.select .optList.hidden {
+.sewect .optwist.hidden {
   max-height: 0;
-  visibility: hidden;
+  visibiwity: hidden;
 }
 
-.select {
+.sewect {
   font-size: 0.625em; /* 10px */
-  font-family: Verdana, Arial, sans-serif;
+  font-famiwy: vewdana, (˘ω˘) awiaw, sans-sewif;
 
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 
-  padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
+  p-padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
   width: 10em; /* 100px */
 
-  border: 0.2em solid #000; /* 2px */
-  border-radius: 0.4em; /* 4px */
+  b-bowdew: 0.2em s-sowid #000; /* 2px */
+  bowdew-wadius: 0.4em; /* 4px */
 
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+  b-box-shadow: 0 0.1em 0.2em wgba(0, (U ᵕ U❁) 0, 0, 0.45); /* 0 1px 2px */
 
-  background: #f0f0f0;
-  background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
+  backgwound: #f0f0f0;
+  backgwound: wineaw-gwadient(0deg, rawr #e3e3e3, (U ﹏ U) #fcfcfc 50%, ʘwʘ #f0f0f0);
 }
 
-.select .value {
-  display: inline-block;
-  width: 100%;
-  overflow: hidden;
+.sewect .vawue {
+  dispway: inwine-bwock;
+  w-width: 100%;
+  ovewfwow: hidden;
 
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  vertical-align: top;
+  white-space: nyowwap;
+  text-ovewfwow: ewwipsis;
+  v-vewticaw-awign: t-top;
 }
 
-.select:after {
-  content: "▼";
-  position: absolute;
+.sewect:aftew {
+  c-content: "▼";
+  position: absowute;
   z-index: 1;
   height: 100%;
-  width: 2em; /* 20px */
-  top: 0;
-  right: 0;
+  w-width: 2em; /* 20px */
+  t-top: 0;
+  wight: 0;
 
-  padding-top: 0.1em;
+  p-padding-top: 0.1em;
 
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 
-  text-align: center;
+  text-awign: c-centew;
 
-  border-left: 0.2em solid #000;
-  border-radius: 0 0.1em 0.1em 0;
+  bowdew-weft: 0.2em s-sowid #000;
+  bowdew-wadius: 0 0.1em 0.1em 0;
 
-  background-color: #000;
-  color: #fff;
+  b-backgwound-cowow: #000;
+  cowow: #fff;
 }
 
-.select .optList {
+.sewect .optwist {
   z-index: 2;
 
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  w-wist-stywe: nyone;
+  mawgin: 0;
+  p-padding: 0;
 
-  background: #f0f0f0;
-  border: 0.2em solid #000;
-  border-top-width: 0.1em;
-  border-radius: 0 0 0.4em 0.4em;
+  b-backgwound: #f0f0f0;
+  bowdew: 0.2em s-sowid #000;
+  b-bowdew-top-width: 0.1em;
+  bowdew-wadius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+  b-box-shadow: 0 0.2em 0.4em wgba(0, (ꈍᴗꈍ) 0, 0, 0.4);
 
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 
-  min-width: 100%;
-  max-height: 10em; /* 100px */
-  overflow-y: auto;
-  overflow-x: hidden;
+  m-min-width: 100%;
+  m-max-height: 10em; /* 100px */
+  ovewfwow-y: auto;
+  ovewfwow-x: h-hidden;
 }
 
-.select .option {
+.sewect .option {
   padding: 0.2em 0.3em;
 }
 
-.select .highlight {
-  background: #000;
-  color: #ffffff;
+.sewect .highwight {
+  backgwound: #000;
+  cowow: #ffffff;
 }
 ```
 
-{{EmbedLiveSample("",120,130)}}
+{{embedwivesampwe("",120,130)}}
 
-#### Open state
+#### open state
 
-```html hidden
-<div class="select active">
-  <span class="value">Cherry</span>
-  <ul class="optList">
-    <li class="option highlight">Cherry</li>
-    <li class="option">Lemon</li>
-    <li class="option">Banana</li>
-    <li class="option">Strawberry</li>
-    <li class="option">Apple</li>
-  </ul>
+```htmw hidden
+<div cwass="sewect active">
+  <span c-cwass="vawue">chewwy</span>
+  <uw cwass="optwist">
+    <wi cwass="option h-highwight">chewwy</wi>
+    <wi cwass="option">wemon</wi>
+    <wi c-cwass="option">banana</wi>
+    <wi cwass="option">stwawbewwy</wi>
+    <wi cwass="option">appwe</wi>
+  </uw>
 </div>
 ```
 
 ```css hidden
-.select {
-  position: relative;
-  display: inline-block;
+.sewect {
+  p-position: wewative;
+  dispway: inwine-bwock;
 }
 
-.select.active,
-.select:focus {
-  box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+.sewect.active, (U ᵕ U❁)
+.sewect:focus {
+  b-box-shadow: 0 0 3px 1px #227755;
+  outwine: nyone;
 }
 
-.select .optList {
-  position: absolute;
+.sewect .optwist {
+  position: a-absowute;
   top: 100%;
-  left: 0;
+  weft: 0;
 }
 
-.select .optList.hidden {
+.sewect .optwist.hidden {
   max-height: 0;
-  visibility: hidden;
+  v-visibiwity: hidden;
 }
 
-.select {
+.sewect {
   font-size: 0.625em; /* 10px */
-  font-family: Verdana, Arial, sans-serif;
+  f-font-famiwy: v-vewdana, :3 awiaw, sans-sewif;
 
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 
-  padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
+  p-padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
   width: 10em; /* 100px */
 
-  border: 0.2em solid #000; /* 2px */
-  border-radius: 0.4em; /* 4px */
+  b-bowdew: 0.2em s-sowid #000; /* 2px */
+  bowdew-wadius: 0.4em; /* 4px */
 
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+  box-shadow: 0 0.1em 0.2em wgba(0, (ꈍᴗꈍ) 0, 0, 0.45); /* 0 1px 2px */
 
-  background: #f0f0f0;
-  background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
+  b-backgwound: #f0f0f0;
+  backgwound: wineaw-gwadient(0deg, nyaa~~ #e3e3e3, ^•ﻌ•^ #fcfcfc 50%, σωσ #f0f0f0);
 }
 
-.select .value {
-  display: inline-block;
-  width: 100%;
-  overflow: hidden;
+.sewect .vawue {
+  dispway: inwine-bwock;
+  w-width: 100%;
+  ovewfwow: hidden;
 
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  vertical-align: top;
+  white-space: nyowwap;
+  t-text-ovewfwow: e-ewwipsis;
+  v-vewticaw-awign: top;
 }
 
-.select:after {
+.sewect:aftew {
   content: "▼";
-  position: absolute;
-  z-index: 1;
+  position: absowute;
+  z-z-index: 1;
   height: 100%;
-  width: 2em; /* 20px */
+  w-width: 2em; /* 20px */
   top: 0;
-  right: 0;
+  w-wight: 0;
 
-  padding-top: 0.1em;
+  p-padding-top: 0.1em;
 
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 
-  text-align: center;
+  text-awign: centew;
 
-  border-left: 0.2em solid #000;
-  border-radius: 0 0.1em 0.1em 0;
+  bowdew-weft: 0.2em sowid #000;
+  bowdew-wadius: 0 0.1em 0.1em 0;
 
-  background-color: #000;
-  color: #fff;
+  b-backgwound-cowow: #000;
+  c-cowow: #fff;
 }
 
-.select .optList {
+.sewect .optwist {
   z-index: 2;
 
-  list-style: none;
-  margin: 0;
+  wist-stywe: nyone;
+  m-mawgin: 0;
   padding: 0;
 
-  background: #f0f0f0;
-  border: 0.2em solid #000;
-  border-top-width: 0.1em;
-  border-radius: 0 0 0.4em 0.4em;
+  backgwound: #f0f0f0;
+  bowdew: 0.2em s-sowid #000;
+  b-bowdew-top-width: 0.1em;
+  b-bowdew-wadius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+  b-box-shadow: 0 0.2em 0.4em w-wgba(0, (˘ω˘) 0, 0, 0.4);
 
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 
   min-width: 100%;
   max-height: 10em; /* 100px */
-  overflow-y: auto;
-  overflow-x: hidden;
+  ovewfwow-y: auto;
+  o-ovewfwow-x: hidden;
 }
 
-.select .option {
-  padding: 0.2em 0.3em;
+.sewect .option {
+  p-padding: 0.2em 0.3em;
 }
 
-.select .highlight {
-  background: #000;
-  color: #fff;
+.sewect .highwight {
+  b-backgwound: #000;
+  c-cowow: #fff;
 }
 ```
 
-{{EmbedLiveSample("",120,130)}}
+{{embedwivesampwe("",120,130)}}
 
-## Bring your widget to life with JavaScript
+## b-bwing y-youw widget to wife with javascwipt
 
-Now that our design and structure are ready, we can write the JavaScript code to make the widget actually work.
+n-nyow that ouw d-design and stwuctuwe a-awe weady, ^•ﻌ•^ we can wwite the javascwipt code t-to make the widget actuawwy wowk. σωσ
 
-> [!WARNING]
-> The following code is educational and should not be used as-is. Among many things, as we'll see, it is not future-proof and it will not work on legacy browsers. It also has redundant parts that should be optimized in production code.
+> [!wawning]
+> t-the fowwowing code is educationaw and shouwd n-nyot be used a-as-is. ^^;; among many things, 😳 as we'ww see, /(^•ω•^) it is nyot futuwe-pwoof a-and it wiww nyot w-wowk on wegacy bwowsews. ( ͡o ω ͡o ) it awso h-has wedundant p-pawts that shouwd be optimized in pwoduction code. ^^
 
-> [!NOTE]
-> Creating reusable widgets is something that can be a bit tricky. The [W3C Web Component draft](https://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html) is one of the answers to this specific issue. [The X-Tag project](http://x-tags.org/) is a test implementation of this specification; we encourage you to take a look at it.
+> [!note]
+> cweating weusabwe w-widgets is something t-that can be a bit twicky. /(^•ω•^) the [w3c web component d-dwaft](https://dvcs.w3.owg/hg/webcomponents/waw-fiwe/tip/expwainew/index.htmw) i-is one of the answews to this specific issue. ^^ [the x-x-tag pwoject](http://x-tags.owg/) is a test impwementation of this specification; we e-encouwage you to take a wook at it. 😳
 
-### Why isn't it working?
+### why isn't i-it wowking?
 
-Before we start, it's important to remember something very important about JavaScript: inside a browser, **it's an unreliable technology**. When you are building custom widgets, you'll have to rely on JavaScript because it's a necessary thread to tie everything together. However, there are many cases in which JavaScript isn't able to run in the browser:
+b-befowe we stawt, 😳 i-it's impowtant to wemembew something v-vewy impowtant a-about javascwipt: i-inside a b-bwowsew, òωó **it's a-an unwewiabwe technowogy**. nyaa~~ when you awe buiwding c-custom widgets, (///ˬ///✿) y-you'ww have to w-wewy on javascwipt because it's a-a nyecessawy thwead t-to tie evewything t-togethew. mya howevew, ^•ﻌ•^ thewe a-awe many cases in w-which javascwipt i-isn't abwe to w-wun in the bwowsew:
 
-- The user has turned off JavaScript: This is the most unusual case ever; very few people turn off JavaScript nowadays.
-- The script is not loading. This is one of the most common cases, especially in the mobile world where the network is not very reliable.
-- The script is buggy. You should always consider this possibility.
-- The script is in conflict with a third party script. This can happen with tracking scripts or any bookmarklets the user uses.
-- The script is in conflict with, or is affected by, a browser extension (such as Firefox's [NoScript](https://addons.mozilla.org/fr/firefox/addon/noscript/) extension or Chrome's [NotScripts](https://chrome.google.com/webstore/detail/notscripts/odjhifogjcknibkahlpidmdajjpkkcfn) extension).
-- The user is using a legacy browser, and one of the features you require is not supported. This will happen frequently when you make use of cutting-edge APIs.
+- t-the usew has tuwned off j-javascwipt: this is the most unusuaw c-case evew; v-vewy few peopwe tuwn off javascwipt nyowadays. XD
+- the scwipt is nyot w-woading. (⑅˘꒳˘) this i-is one of the most common cases, -.- e-especiawwy in t-the mobiwe wowwd whewe the nyetwowk is nyot vewy w-wewiabwe. ^^
+- the s-scwipt is buggy. rawr y-you shouwd awways c-considew this p-possibiwity.
+- t-the scwipt is in confwict with a thiwd pawty scwipt. o.O t-this can happen with twacking scwipts ow any bookmawkwets the usew uses. >w<
+- t-the scwipt is i-in confwict with, σωσ ow is affected by, rawr a bwowsew extension (such as fiwefox's [noscwipt](https://addons.moziwwa.owg/fw/fiwefox/addon/noscwipt/) e-extension o-ow chwome's [notscwipts](https://chwome.googwe.com/webstowe/detaiw/notscwipts/odjhifogjcknibkahwpidmdajjpkkcfn) extension).
+- the usew is u-using a wegacy bwowsew, (U ﹏ U) and one o-of the featuwes y-you wequiwe is n-nyot suppowted. (˘ω˘) this wiww happen fwequentwy when you make use of c-cutting-edge apis. 😳
 
-Because of these risks, it's really important to seriously consider what will happen if JavaScript isn't working. Dealing in detail with this issue is out of the scope of this article because it's closely linked to how you want to make your script generic and reusable, but we'll consider the basics of this in our example.
+because of t-these wisks, XD it's weawwy impowtant t-to sewiouswy considew nyani wiww happen if javascwipt i-isn't wowking. ʘwʘ deawing i-in detaiw with this issue is out of the scope of t-this awticwe because it's cwosewy w-winked to how you want to make youw scwipt genewic and weusabwe, /(^•ω•^) but we'ww considew the basics of this in ouw e-exampwe. UwU
 
-In our example, if our JavaScript code isn't running, we'll fall back to displaying a standard {{HTMLElement("select")}} element. To achieve this, we need two things.
+in ouw e-exampwe, UwU if ouw j-javascwipt code i-isn't wunning, ^•ﻌ•^ we'ww faww back to dispwaying a-a standawd {{htmwewement("sewect")}} ewement. (ꈍᴗꈍ) to achieve this, ^^ we need two things. XD
 
-First, we need to add a regular {{HTMLElement("select")}} element before each use of our custom widget. This is actually also required in order to be able to send data from our custom widget along with the rest of our form data; more about this later.
+f-fiwst, UwU we nyeed t-to add a weguwaw {{htmwewement("sewect")}} ewement b-befowe each u-use of ouw custom widget. ^^ this is actuawwy awso wequiwed in owdew to be abwe t-to send data fwom o-ouw custom widget awong with the west of ouw fowm data; mowe about t-this watew. :3
 
-```html
-<body class="no-widget">
-  <form>
-    <select name="myFruit">
-      <option>Cherry</option>
-      <option>Lemon</option>
-      <option>Banana</option>
-      <option>Strawberry</option>
-      <option>Apple</option>
-    </select>
+```htmw
+<body cwass="no-widget">
+  <fowm>
+    <sewect n-nyame="myfwuit">
+      <option>chewwy</option>
+      <option>wemon</option>
+      <option>banana</option>
+      <option>stwawbewwy</option>
+      <option>appwe</option>
+    </sewect>
 
-    <div class="select">
-      <span class="value">Cherry</span>
-      <ul class="optList hidden">
-        <li class="option">Cherry</li>
-        <li class="option">Lemon</li>
-        <li class="option">Banana</li>
-        <li class="option">Strawberry</li>
-        <li class="option">Apple</li>
-      </ul>
+    <div c-cwass="sewect">
+      <span c-cwass="vawue">chewwy</span>
+      <uw cwass="optwist hidden">
+        <wi cwass="option">chewwy</wi>
+        <wi cwass="option">wemon</wi>
+        <wi cwass="option">banana</wi>
+        <wi cwass="option">stwawbewwy</wi>
+        <wi c-cwass="option">appwe</wi>
+      </uw>
     </div>
-  </form>
+  </fowm>
 </body>
 ```
 
-Second, we need two new classes to let us hide the unneeded element (that is, the "real" {{HTMLElement("select")}} element if our script isn't running, or the custom widget if it is running). Note that by default, our HTML code hides our custom widget.
+second, we n-nyeed two nyew cwasses to wet us hide the unneeded ewement (that i-is, (U ﹏ U) the "weaw" {{htmwewement("sewect")}} ewement i-if ouw scwipt isn't wunning, UwU ow the custom widget i-if it is wunning). 🥺 n-nyote that b-by defauwt, (✿oωo) ouw h-htmw code hides o-ouw custom widget. 😳😳😳
 
 ```css
-.widget select,
-.no-widget .select {
-  /* This CSS selector basically says:
-     - either we have set the body class to "widget" and thus we hide the actual {{HTMLElement("select")}} element
-     - or we have not changed the body class, therefore the body class is still "no-widget",
-       so the elements whose class is "select" must be hidden */
-  position: absolute;
-  left: -5000em;
+.widget sewect,
+.no-widget .sewect {
+  /* t-this css s-sewectow basicawwy says:
+     - e-eithew we have set the body cwass to "widget" and t-thus we hide the actuaw {{htmwewement("sewect")}} e-ewement
+     - o-ow we have nyot changed the b-body cwass, (⑅˘꒳˘) thewefowe t-the body cwass is stiww "no-widget", mya
+       so the ewements whose cwass is "sewect" m-must be h-hidden */
+  position: a-absowute;
+  w-weft: -5000em;
   height: 0;
-  overflow: hidden;
+  ovewfwow: hidden;
 }
 ```
 
-Now we just need a JavaScript switch to determine if the script is running or not. This switch is very simple: if at page load time our script is running, it will remove the `no-widget` class and add the `widget` class, thereby swapping the visibility of the {{HTMLElement("select")}} element and of the custom widget.
+nyow w-we just nyeed a javascwipt switch to detewmine if t-the scwipt is wunning ow nyot. OwO this switch is v-vewy simpwe: if at page woad time ouw scwipt is wunning, /(^•ω•^) it wiww w-wemove the `no-widget` cwass and a-add the `widget` c-cwass, theweby s-swapping the visibiwity of the {{htmwewement("sewect")}} e-ewement a-and of the custom widget. 😳😳😳
 
 ```js
-window.addEventListener("load", function () {
-  document.body.classList.remove("no-widget");
-  document.body.classList.add("widget");
+w-window.addeventwistenew("woad", ^^;; f-function () {
+  d-document.body.cwasswist.wemove("no-widget");
+  d-document.body.cwasswist.add("widget");
 });
 ```
 
-#### Without JS
+#### without j-js
 
-Check out the [full source code](/es/docs/Learn/Forms/How_to_build_custom_form_controls/Example_2#no_js).
+check out the [fuww s-souwce code](/es/docs/weawn/fowms/how_to_buiwd_custom_fowm_contwows/exampwe_2#no_js). ( ͡o ω ͡o )
 
-```html hidden
-<form class="no-widget">
-  <select name="myFruit">
-    <option>Cherry</option>
-    <option>Lemon</option>
-    <option>Banana</option>
-    <option>Strawberry</option>
-    <option>Apple</option>
-  </select>
+```htmw h-hidden
+<fowm cwass="no-widget">
+  <sewect n-nyame="myfwuit">
+    <option>chewwy</option>
+    <option>wemon</option>
+    <option>banana</option>
+    <option>stwawbewwy</option>
+    <option>appwe</option>
+  </sewect>
 
-  <div class="select">
-    <span class="value">Cherry</span>
-    <ul class="optList hidden">
-      <li class="option">Cherry</li>
-      <li class="option">Lemon</li>
-      <li class="option">Banana</li>
-      <li class="option">Strawberry</li>
-      <li class="option">Apple</li>
-    </ul>
+  <div cwass="sewect">
+    <span cwass="vawue">chewwy</span>
+    <uw cwass="optwist hidden">
+      <wi cwass="option">chewwy</wi>
+      <wi c-cwass="option">wemon</wi>
+      <wi c-cwass="option">banana</wi>
+      <wi cwass="option">stwawbewwy</wi>
+      <wi c-cwass="option">appwe</wi>
+    </uw>
   </div>
-</form>
+</fowm>
 ```
 
 ```css hidden
-.widget select,
-.no-widget .select {
-  position: absolute;
-  left: -5000em;
-  height: 0;
-  overflow: hidden;
+.widget sewect, ^•ﻌ•^
+.no-widget .sewect {
+  p-position: a-absowute;
+  w-weft: -5000em;
+  h-height: 0;
+  ovewfwow: hidden;
 }
 ```
 
-{{EmbedLiveSample("Without_JS",120,130)}}
+{{embedwivesampwe("without_js",120,130)}}
 
-#### With JS
+#### w-with js
 
-Check out the [full source code](/es/docs/Learn/Forms/How_to_build_custom_form_controls/Example_2#js).
+check out the [fuww souwce code](/es/docs/weawn/fowms/how_to_buiwd_custom_fowm_contwows/exampwe_2#js). OwO
 
-```html hidden
-<form class="no-widget">
-  <select name="myFruit">
-    <option>Cherry</option>
-    <option>Lemon</option>
-    <option>Banana</option>
-    <option>Strawberry</option>
-    <option>Apple</option>
-  </select>
+```htmw h-hidden
+<fowm cwass="no-widget">
+  <sewect n-nyame="myfwuit">
+    <option>chewwy</option>
+    <option>wemon</option>
+    <option>banana</option>
+    <option>stwawbewwy</option>
+    <option>appwe</option>
+  </sewect>
 
-  <div class="select">
-    <span class="value">Cherry</span>
-    <ul class="optList hidden">
-      <li class="option">Cherry</li>
-      <li class="option">Lemon</li>
-      <li class="option">Banana</li>
-      <li class="option">Strawberry</li>
-      <li class="option">Apple</li>
-    </ul>
+  <div cwass="sewect">
+    <span cwass="vawue">chewwy</span>
+    <uw cwass="optwist h-hidden">
+      <wi cwass="option">chewwy</wi>
+      <wi c-cwass="option">wemon</wi>
+      <wi cwass="option">banana</wi>
+      <wi cwass="option">stwawbewwy</wi>
+      <wi c-cwass="option">appwe</wi>
+    </uw>
   </div>
-</form>
+</fowm>
 ```
 
 ```css hidden
-.widget select,
-.no-widget .select {
-  position: absolute;
-  left: -5000em;
-  height: 0;
-  overflow: hidden;
+.widget s-sewect, rawr
+.no-widget .sewect {
+  position: absowute;
+  weft: -5000em;
+  h-height: 0;
+  ovewfwow: h-hidden;
 }
 
-.select {
-  position: relative;
-  display: inline-block;
+.sewect {
+  position: w-wewative;
+  dispway: i-inwine-bwock;
 }
 
-.select.active,
-.select:focus {
+.sewect.active, nyaa~~
+.sewect:focus {
   box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+  outwine: n-nyone;
 }
 
-.select .optList {
-  position: absolute;
+.sewect .optwist {
+  position: absowute;
   top: 100%;
-  left: 0;
+  w-weft: 0;
 }
 
-.select .optList.hidden {
-  max-height: 0;
-  visibility: hidden;
+.sewect .optwist.hidden {
+  m-max-height: 0;
+  v-visibiwity: hidden;
 }
 
-.select {
+.sewect {
   font-size: 0.625em; /* 10px */
-  font-family: Verdana, Arial, sans-serif;
+  font-famiwy: vewdana, 🥺 awiaw, sans-sewif;
 
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 
-  padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
+  p-padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
   width: 10em; /* 100px */
 
-  border: 0.2em solid #000; /* 2px */
-  border-radius: 0.4em; /* 4px */
+  bowdew: 0.2em s-sowid #000; /* 2px */
+  b-bowdew-wadius: 0.4em; /* 4px */
 
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+  box-shadow: 0 0.1em 0.2em wgba(0, OwO 0, 0, ^•ﻌ•^ 0.45); /* 0 1px 2px */
 
-  background: #f0f0f0;
-  background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
+  b-backgwound: #f0f0f0;
+  b-backgwound: wineaw-gwadient(0deg, (ˆ ﻌ ˆ)♡ #e3e3e3, /(^•ω•^) #fcfcfc 50%, #f0f0f0);
 }
 
-.select .value {
-  display: inline-block;
-  width: 100%;
-  overflow: hidden;
+.sewect .vawue {
+  dispway: inwine-bwock;
+  w-width: 100%;
+  ovewfwow: hidden;
 
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  vertical-align: top;
+  w-white-space: nyowwap;
+  text-ovewfwow: e-ewwipsis;
+  vewticaw-awign: t-top;
 }
 
-.select:after {
+.sewect:aftew {
   content: "▼";
-  position: absolute;
+  p-position: a-absowute;
   z-index: 1;
   height: 100%;
-  width: 2em; /* 20px */
+  w-width: 2em; /* 20px */
   top: 0;
-  right: 0;
+  w-wight: 0;
 
   padding-top: 0.1em;
 
-  box-sizing: border-box;
+  b-box-sizing: b-bowdew-box;
 
-  text-align: center;
+  text-awign: c-centew;
 
-  border-left: 0.2em solid #000;
-  border-radius: 0 0.1em 0.1em 0;
+  b-bowdew-weft: 0.2em sowid #000;
+  b-bowdew-wadius: 0 0.1em 0.1em 0;
 
-  background-color: #000;
-  color: #fff;
+  b-backgwound-cowow: #000;
+  cowow: #fff;
 }
 
-.select .optList {
+.sewect .optwist {
   z-index: 2;
 
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  w-wist-stywe: nyone;
+  mawgin: 0;
+  p-padding: 0;
 
-  background: #f0f0f0;
-  border: 0.2em solid #000;
-  border-top-width: 0.1em;
-  border-radius: 0 0 0.4em 0.4em;
+  backgwound: #f0f0f0;
+  bowdew: 0.2em sowid #000;
+  bowdew-top-width: 0.1em;
+  bowdew-wadius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.2em 0.4em wgba(0, ʘwʘ 0, ʘwʘ 0, 0.4);
 
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 
-  min-width: 100%;
+  m-min-width: 100%;
   max-height: 10em; /* 100px */
-  overflow-y: auto;
-  overflow-x: hidden;
+  o-ovewfwow-y: a-auto;
+  ovewfwow-x: hidden;
 }
 
-.select .option {
-  padding: 0.2em 0.3em;
+.sewect .option {
+  p-padding: 0.2em 0.3em;
 }
 
-.select .highlight {
-  background: #000;
-  color: #ffffff;
+.sewect .highwight {
+  backgwound: #000;
+  c-cowow: #ffffff;
 }
 ```
 
 ```js hidden
-window.addEventListener("load", () => {
-  const form = document.querySelector("form");
+w-window.addeventwistenew("woad", () => {
+  const fowm = document.quewysewectow("fowm");
 
-  form.classList.remove("no-widget");
-  form.classList.add("widget");
+  fowm.cwasswist.wemove("no-widget");
+  fowm.cwasswist.add("widget");
 });
 ```
 
-{{EmbedLiveSample("",120,130)}}
+{{embedwivesampwe("",120,130)}}
 
-> [!NOTE]
-> If you really want to make your code generic and reusable, instead of doing a class switch it's far better to just add the widget class to hide the {{HTMLElement("select")}} elements, and to dynamically add the DOM tree representing the custom widget after every {{HTMLElement("select")}} element in the page.
+> [!note]
+> if you weawwy want to make youw c-code genewic and weusabwe, :3 instead of doing a-a cwass switch it's faw bettew to j-just add the widget cwass to hide the {{htmwewement("sewect")}} ewements, ^^ and to dynamicawwy add the dom twee wepwesenting the custom widget aftew evewy {{htmwewement("sewect")}} e-ewement in t-the page. :3
 
-### Making the job easier
+### making t-the job easiew
 
-In the code we are about to build, we will use the standard DOM API to do all the work we need. However, although DOM API support has gotten much better in browsers, there are always issues with legacy browsers (especially with good old Internet Explorer).
+in the code w-we awe about to b-buiwd, 🥺 we wiww u-use the standawd dom api to do aww the wowk we n-need. :3 howevew, rawr awthough d-dom api suppowt has gotten m-much bettew in b-bwowsews, UwU thewe a-awe awways issues w-with wegacy b-bwowsews (especiawwy with good owd i-intewnet expwowew). ^•ﻌ•^
 
-If you want to avoid trouble with legacy browsers, there are two ways to do so: using a dedicated framework such as [jQuery](https://jquery.com/), [$dom](https://github.com/julienw/dollardom), [prototype](http://prototypejs.org/), [Dojo](https://dojotoolkit.org/), [YUI](https://yuilibrary.com/), or the like, or by polyfilling the missing feature you want to use (which can easily be done through conditional loading, with the [yepnope](https://yepnopejs.com/) library for example).
+i-if you want t-to avoid twoubwe w-with wegacy b-bwowsews, (U ﹏ U) thewe a-awe two ways to d-do so: using a d-dedicated fwamewowk s-such as [jquewy](https://jquewy.com/), (ˆ ﻌ ˆ)♡ [$dom](https://github.com/juwienw/dowwawdom), 😳 [pwototype](http://pwototypejs.owg/), >w< [dojo](https://dojotoowkit.owg/), 🥺 [yui](https://yuiwibwawy.com/), 😳 o-ow the wike, nyaa~~ ow by powyfiwwing the missing featuwe you want to u-use (which can easiwy be done thwough c-conditionaw woading, (˘ω˘) with the [yepnope](https://yepnopejs.com/) w-wibwawy fow e-exampwe). mya
 
-The features we plan to use are the following (ordered from the riskiest to the safest):
+the f-featuwes we pwan to use awe the f-fowwowing (owdewed f-fwom the wiskiest to the safest):
 
-1. {{domxref("element.classList","classList")}}
-2. {{domxref("EventTarget.addEventListener","addEventListener")}}
-3. [`forEach`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) (This is not DOM but modern JavaScript)
-4. {{domxref("element.querySelector","querySelector")}} and {{domxref("element.querySelectorAll","querySelectorAll")}}
+1. òωó {{domxwef("ewement.cwasswist","cwasswist")}}
+2. (U ﹏ U) {{domxwef("eventtawget.addeventwistenew","addeventwistenew")}}
+3. (U ﹏ U) [`foweach`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/awway/foweach) (this is nyot dom but modewn javascwipt)
+4. >_< {{domxwef("ewement.quewysewectow","quewysewectow")}} and {{domxwef("ewement.quewysewectowaww","quewysewectowaww")}}
 
-Beyond the availability of those specific features, there is still one issue remaining before starting. The object returned by the {{domxref("element.querySelectorAll","querySelectorAll()")}} function is a {{domxref("NodeList")}} rather than an [`Array`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array). This is important because `Array` objects support the [`forEach`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) function, but {{domxref("NodeList")}} doesn't. Because {{domxref("NodeList")}} really looks like an `Array` and because `forEach` is so convenient to use, we can easily add the support of `forEach` to {{domxref("NodeList")}} in order to make our life easier, like so:
+b-beyond the avaiwabiwity of those specific featuwes, nyaa~~ thewe i-is stiww one i-issue wemaining befowe stawting. 😳😳😳 t-the object wetuwned b-by the {{domxwef("ewement.quewysewectowaww","quewysewectowaww()")}} f-function i-is a {{domxwef("nodewist")}} wathew t-than an [`awway`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/awway). nyaa~~ t-this is impowtant b-because `awway` objects suppowt the [`foweach`](/es/docs/web/javascwipt/wefewence/gwobaw_objects/awway/foweach) f-function, -.- but {{domxwef("nodewist")}} doesn't. 😳😳😳 b-because {{domxwef("nodewist")}} weawwy wooks wike a-an `awway` and b-because `foweach` is so convenient t-to use, ^•ﻌ•^ we can easiwy add the suppowt of `foweach` t-to {{domxwef("nodewist")}} i-in owdew to m-make ouw wife easiew, UwU w-wike so:
 
 ```js
-NodeList.prototype.forEach = function (callback) {
-  Array.prototype.forEach.call(this, callback);
+nyodewist.pwototype.foweach = f-function (cawwback) {
+  a-awway.pwototype.foweach.caww(this, (ˆ ﻌ ˆ)♡ cawwback);
 };
 ```
 
-We weren't kidding when we said it's easy to do.
+w-we wewen't kidding when we said i-it's easy to do. XD
 
-### Building event callbacks
+### buiwding event cawwbacks
 
-The ground is ready, we can now start to define all the functions that will be used each time the user interacts with our widget.
+the gwound is weady, (⑅˘꒳˘) we can nyow stawt to define aww the functions that wiww be used each time t-the usew intewacts w-with ouw widget. /(^•ω•^)
 
 ```js
-// This function will be used each time we want to deactivate a custom widget
-// It takes one parameter
-// select : the DOM node with the `select` class to deactivate
-function deactivateSelect(select) {
-  // If the widget is not active there is nothing to do
-  if (!select.classList.contains("active")) return;
+// this function wiww be used each time we want to deactivate a custom w-widget
+// it t-takes one pawametew
+// sewect : the dom nyode with the `sewect` c-cwass to deactivate
+f-function deactivatesewect(sewect) {
+  // if t-the widget is nyot a-active thewe is nyothing to do
+  i-if (!sewect.cwasswist.contains("active")) wetuwn;
 
-  // We need to get the list of options for the custom widget
-  var optList = select.querySelector(".optList");
+  // w-we nyeed t-to get the wist of options fow the custom widget
+  vaw optwist = s-sewect.quewysewectow(".optwist");
 
-  // We close the list of option
-  optList.classList.add("hidden");
+  // w-we c-cwose the wist o-of option
+  optwist.cwasswist.add("hidden");
 
-  // and we deactivate the custom widget itself
-  select.classList.remove("active");
+  // and we deactivate t-the custom w-widget itsewf
+  s-sewect.cwasswist.wemove("active");
 }
 
-// This function will be used each time the user wants to (de)activate the widget
-// It takes two parameters:
-// select : the DOM node with the `select` class to activate
-// selectList : the list of all the DOM nodes with the `select` class
-function activeSelect(select, selectList) {
-  // If the widget is already active there is nothing to do
-  if (select.classList.contains("active")) return;
+// t-this function wiww be used each time the u-usew wants to (de)activate t-the widget
+// it takes two pawametews:
+// sewect : the dom nyode with t-the `sewect` c-cwass to activate
+// sewectwist : t-the wist of aww the dom nyodes with the `sewect` cwass
+function a-activesewect(sewect, (U ᵕ U❁) s-sewectwist) {
+  // i-if the widget is awweady a-active thewe i-is nyothing to do
+  if (sewect.cwasswist.contains("active")) wetuwn;
 
-  // We have to turn off the active state on all custom widgets
-  // Because the deactivateSelect function fulfill all the requirement of the
-  // forEach callback function, we use it directly without using an intermediate
-  // anonymous function.
-  selectList.forEach(deactivateSelect);
+  // w-we have t-to tuwn off the a-active state o-on aww custom widgets
+  // b-because t-the deactivatesewect function fuwfiww aww the wequiwement of the
+  // foweach cawwback function, ʘwʘ w-we use it diwectwy without using a-an intewmediate
+  // a-anonymous function. OwO
+  sewectwist.foweach(deactivatesewect);
 
-  // And we turn on the active state for this specific widget
-  select.classList.add("active");
+  // and w-we tuwn on the active s-state fow this specific widget
+  s-sewect.cwasswist.add("active");
 }
 
-// This function will be used each time the user wants to open/closed the list of options
-// It takes one parameter:
-// select : the DOM node with the list to toggle
-function toggleOptList(select) {
-  // The list is kept from the widget
-  var optList = select.querySelector(".optList");
+// this f-function wiww be used each time the usew wants to open/cwosed t-the wist of options
+// it takes one pawametew:
+// sewect : the dom nyode with the w-wist to toggwe
+f-function toggweoptwist(sewect) {
+  // t-the wist i-is kept fwom the widget
+  vaw optwist = sewect.quewysewectow(".optwist");
 
-  // We change the class of the list to show/hide it
-  optList.classList.toggle("hidden");
+  // w-we change the cwass of the wist t-to show/hide it
+  optwist.cwasswist.toggwe("hidden");
 }
 
-// This function will be used each time we need to highlight an option
-// It takes two parameters:
-// select : the DOM node with the `select` class containing the option to highlight
-// option : the DOM node with the `option` class to highlight
-function highlightOption(select, option) {
-  // We get the list of all option available for our custom select element
-  var optionList = select.querySelectorAll(".option");
+// this f-function wiww be u-used each time w-we nyeed to highwight an option
+// it takes two p-pawametews:
+// sewect : the dom nyode with the `sewect` cwass containing the option to highwight
+// option : the d-dom nyode with t-the `option` cwass to highwight
+function highwightoption(sewect, option) {
+  // we get the wist of aww option avaiwabwe f-fow ouw custom sewect ewement
+  vaw optionwist = s-sewect.quewysewectowaww(".option");
 
-  // We remove the highlight from all options
-  optionList.forEach(function (other) {
-    other.classList.remove("highlight");
+  // w-we wemove the h-highwight fwom a-aww options
+  optionwist.foweach(function (othew) {
+    othew.cwasswist.wemove("highwight");
   });
 
-  // We highlight the right option
-  option.classList.add("highlight");
+  // we highwight the wight option
+  option.cwasswist.add("highwight");
 }
 ```
 
-That's all you need in order to handle the various states of the custom widget.
+that's aww you n-nyeed in owdew t-to handwe the v-vawious states of t-the custom widget. (✿oωo)
 
-Next, we bind these functions to the appropriate events:
+nyext, we b-bind these functions to the appwopwiate e-events:
 
 ```js
-// We handle the event binding when the document is loaded.
-window.addEventListener("load", function () {
-  var selectList = document.querySelectorAll(".select");
+// we handwe the event binding when the document i-is woaded. (///ˬ///✿)
+w-window.addeventwistenew("woad", (✿oωo) f-function () {
+  v-vaw sewectwist = document.quewysewectowaww(".sewect");
 
-  // Each custom widget needs to be initialized
-  selectList.forEach(function (select) {
-    // as well as all its `option` elements
-    var optionList = select.querySelectorAll(".option");
+  // e-each custom widget n-nyeeds to be initiawized
+  sewectwist.foweach(function (sewect) {
+    // as weww as aww its `option` e-ewements
+    v-vaw optionwist = sewect.quewysewectowaww(".option");
 
-    // Each time a user hovers their mouse over an option, we highlight the given option
-    optionList.forEach(function (option) {
-      option.addEventListener("mouseover", function () {
-        // Note: the `select` and `option` variable are closures
-        // available in the scope of our function call.
-        highlightOption(select, option);
+    // each time a usew hovews theiw m-mouse ovew an option, σωσ we highwight t-the given option
+    o-optionwist.foweach(function (option) {
+      o-option.addeventwistenew("mouseovew", ʘwʘ function () {
+        // nyote: the `sewect` and `option` vawiabwe awe cwosuwes
+        // a-avaiwabwe in the scope of ouw f-function caww. 😳😳😳
+        highwightoption(sewect, ^•ﻌ•^ option);
       });
     });
 
-    // Each times the user click on a custom select element
-    select.addEventListener("click", function (event) {
-      // Note: the `select` variable is a closure
-      // available in the scope of our function call.
+    // e-each times the usew cwick on a-a custom sewect e-ewement
+    sewect.addeventwistenew("cwick", (˘ω˘) function (event) {
+      // n-nyote: t-the `sewect` vawiabwe i-is a cwosuwe
+      // avaiwabwe i-in the scope of ouw function caww. (U ﹏ U)
 
-      // We toggle the visibility of the list of options
-      toggleOptList(select);
+      // we toggwe the visibiwity of t-the wist of options
+      toggweoptwist(sewect);
     });
 
-    // In case the widget gain focus
-    // The widget gains the focus each time the user clicks on it or each time
-    // they use the tabulation key to access the widget
-    select.addEventListener("focus", function (event) {
-      // Note: the `select` and `selectList` variable are closures
-      // available in the scope of our function call.
+    // in case the widget g-gain focus
+    // t-the widget g-gains the focus each time the usew cwicks on it ow each time
+    // they use the t-tabuwation key t-to access the w-widget
+    sewect.addeventwistenew("focus", >w< f-function (event) {
+      // nyote: the `sewect` and `sewectwist` vawiabwe awe cwosuwes
+      // avaiwabwe i-in the scope of ouw function caww. XD
 
-      // We activate the widget
-      activeSelect(select, selectList);
+      // w-we activate the w-widget
+      a-activesewect(sewect, XD sewectwist);
     });
 
-    // In case the widget loose focus
-    select.addEventListener("blur", function (event) {
-      // Note: the `select` variable is a closure
-      // available in the scope of our function call.
+    // i-in case the widget woose focus
+    sewect.addeventwistenew("bwuw", (U ﹏ U) function (event) {
+      // nyote: the `sewect` vawiabwe is a cwosuwe
+      // avaiwabwe in the scope of ouw function caww. (✿oωo)
 
-      // We deactivate the widget
-      deactivateSelect(select);
+      // w-we deactivate the widget
+      deactivatesewect(sewect);
     });
   });
 });
 ```
 
-At that point, our widget will change state according to our design, but its value doesn't get updated yet. We'll handle that next.
+a-at that p-point, ^^;; ouw widget wiww change s-state accowding t-to ouw design, (U ﹏ U) but its vawue doesn't get updated y-yet. OwO we'ww handwe t-that nyext. 😳😳😳
 
-#### Live example
+#### wive exampwe
 
-```html hidden
-<form class="no-widget">
-  <select name="myFruit" tabindex="-1">
-    <option>Cherry</option>
-    <option>Lemon</option>
-    <option>Banana</option>
-    <option>Strawberry</option>
-    <option>Apple</option>
-  </select>
+```htmw hidden
+<fowm c-cwass="no-widget">
+  <sewect n-name="myfwuit" t-tabindex="-1">
+    <option>chewwy</option>
+    <option>wemon</option>
+    <option>banana</option>
+    <option>stwawbewwy</option>
+    <option>appwe</option>
+  </sewect>
 
-  <div class="select" tabindex="0">
-    <span class="value">Cherry</span>
-    <ul class="optList hidden">
-      <li class="option">Cherry</li>
-      <li class="option">Lemon</li>
-      <li class="option">Banana</li>
-      <li class="option">Strawberry</li>
-      <li class="option">Apple</li>
-    </ul>
+  <div c-cwass="sewect" tabindex="0">
+    <span c-cwass="vawue">chewwy</span>
+    <uw cwass="optwist hidden">
+      <wi c-cwass="option">chewwy</wi>
+      <wi c-cwass="option">wemon</wi>
+      <wi cwass="option">banana</wi>
+      <wi c-cwass="option">stwawbewwy</wi>
+      <wi c-cwass="option">appwe</wi>
+    </uw>
   </div>
-</form>
+</fowm>
 ```
 
 ```css hidden
-.widget select,
-.no-widget .select {
-  position: absolute;
-  left: -5000em;
-  height: 0;
-  overflow: hidden;
+.widget sewect, 😳😳😳
+.no-widget .sewect {
+  position: absowute;
+  weft: -5000em;
+  h-height: 0;
+  ovewfwow: hidden;
 }
 
-.select {
-  position: relative;
-  display: inline-block;
+.sewect {
+  p-position: wewative;
+  d-dispway: inwine-bwock;
 }
 
-.select.active,
-.select:focus {
+.sewect.active, (✿oωo)
+.sewect:focus {
   box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+  outwine: nyone;
 }
 
-.select .optList {
-  position: absolute;
+.sewect .optwist {
+  p-position: absowute;
   top: 100%;
-  left: 0;
+  weft: 0;
 }
 
-.select .optList.hidden {
+.sewect .optwist.hidden {
   max-height: 0;
-  visibility: hidden;
+  v-visibiwity: hidden;
 }
 
-.select {
-  font-size: 0.625em; /* 10px */
-  font-family: Verdana, Arial, sans-serif;
+.sewect {
+  f-font-size: 0.625em; /* 10px */
+  f-font-famiwy: v-vewdana, UwU awiaw, sans-sewif;
 
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 
-  padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
-  width: 10em; /* 100px */
+  p-padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
+  w-width: 10em; /* 100px */
 
-  border: 0.2em solid #000; /* 2px */
-  border-radius: 0.4em; /* 4px */
+  b-bowdew: 0.2em sowid #000; /* 2px */
+  bowdew-wadius: 0.4em; /* 4px */
 
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+  b-box-shadow: 0 0.1em 0.2em w-wgba(0, mya 0, 0, 0.45); /* 0 1px 2px */
 
-  background: #f0f0f0;
-  background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
+  b-backgwound: #f0f0f0;
+  b-backgwound: w-wineaw-gwadient(0deg, rawr x3 #e3e3e3, #fcfcfc 50%, /(^•ω•^) #f0f0f0);
 }
 
-.select .value {
-  display: inline-block;
+.sewect .vawue {
+  dispway: inwine-bwock;
   width: 100%;
-  overflow: hidden;
+  o-ovewfwow: h-hidden;
 
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  vertical-align: top;
+  white-space: nyowwap;
+  text-ovewfwow: e-ewwipsis;
+  v-vewticaw-awign: t-top;
 }
 
-.select:after {
+.sewect:aftew {
   content: "▼";
-  position: absolute;
-  z-index: 1;
+  position: a-absowute;
+  z-z-index: 1;
   height: 100%;
-  width: 2em; /* 20px */
-  top: 0;
-  right: 0;
+  w-width: 2em; /* 20px */
+  t-top: 0;
+  wight: 0;
 
-  padding-top: 0.1em;
+  p-padding-top: 0.1em;
 
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 
-  text-align: center;
+  t-text-awign: c-centew;
 
-  border-left: 0.2em solid #000;
-  border-radius: 0 0.1em 0.1em 0;
+  bowdew-weft: 0.2em sowid #000;
+  b-bowdew-wadius: 0 0.1em 0.1em 0;
 
-  background-color: #000;
-  color: #fff;
+  backgwound-cowow: #000;
+  cowow: #fff;
 }
 
-.select .optList {
+.sewect .optwist {
   z-index: 2;
 
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  wist-stywe: n-nyone;
+  mawgin: 0;
+  p-padding: 0;
 
-  background: #f0f0f0;
-  border: 0.2em solid #000;
-  border-top-width: 0.1em;
-  border-radius: 0 0 0.4em 0.4em;
+  backgwound: #f0f0f0;
+  bowdew: 0.2em s-sowid #000;
+  b-bowdew-top-width: 0.1em;
+  bowdew-wadius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+  b-box-shadow: 0 0.2em 0.4em w-wgba(0, >_< 0, 0, 0.4);
 
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 
   min-width: 100%;
   max-height: 10em; /* 100px */
-  overflow-y: auto;
-  overflow-x: hidden;
+  ovewfwow-y: a-auto;
+  o-ovewfwow-x: hidden;
 }
 
-.select .option {
+.sewect .option {
   padding: 0.2em 0.3em;
 }
 
-.select .highlight {
-  background: #000;
-  color: #ffffff;
+.sewect .highwight {
+  backgwound: #000;
+  cowow: #ffffff;
 }
 ```
 
 ```js hidden
-function deactivateSelect(select) {
-  if (!select.classList.contains("active")) return;
+function deactivatesewect(sewect) {
+  if (!sewect.cwasswist.contains("active")) wetuwn;
 
-  const optList = select.querySelector(".optList");
+  const optwist = sewect.quewysewectow(".optwist");
 
-  optList.classList.add("hidden");
-  select.classList.remove("active");
+  optwist.cwasswist.add("hidden");
+  sewect.cwasswist.wemove("active");
 }
 
-function activeSelect(select, selectList) {
-  if (select.classList.contains("active")) return;
+function a-activesewect(sewect, :3 s-sewectwist) {
+  i-if (sewect.cwasswist.contains("active")) w-wetuwn;
 
-  selectList.forEach(deactivateSelect);
-  select.classList.add("active");
+  sewectwist.foweach(deactivatesewect);
+  sewect.cwasswist.add("active");
 }
 
-function toggleOptList(select, show) {
-  const optList = select.querySelector(".optList");
+f-function t-toggweoptwist(sewect, o.O s-show) {
+  c-const optwist = sewect.quewysewectow(".optwist");
 
-  optList.classList.toggle("hidden");
+  optwist.cwasswist.toggwe("hidden");
 }
 
-function highlightOption(select, option) {
-  const optionList = select.querySelectorAll(".option");
+function highwightoption(sewect, UwU option) {
+  const o-optionwist = s-sewect.quewysewectowaww(".option");
 
-  optionList.forEach((other) => {
-    other.classList.remove("highlight");
+  o-optionwist.foweach((othew) => {
+    o-othew.cwasswist.wemove("highwight");
   });
 
-  option.classList.add("highlight");
+  option.cwasswist.add("highwight");
 }
 
-window.addEventListener("load", () => {
-  const form = document.querySelector("form");
+w-window.addeventwistenew("woad", () => {
+  const fowm = document.quewysewectow("fowm");
 
-  form.classList.remove("no-widget");
-  form.classList.add("widget");
+  fowm.cwasswist.wemove("no-widget");
+  fowm.cwasswist.add("widget");
 });
 
-window.addEventListener("load", () => {
-  const selectList = document.querySelectorAll(".select");
+w-window.addeventwistenew("woad", (ꈍᴗꈍ) () => {
+  const s-sewectwist = d-document.quewysewectowaww(".sewect");
 
-  selectList.forEach((select) => {
-    const optionList = select.querySelectorAll(".option");
+  sewectwist.foweach((sewect) => {
+    const optionwist = s-sewect.quewysewectowaww(".option");
 
-    optionList.forEach((option) => {
-      option.addEventListener("mouseover", () => {
-        highlightOption(select, option);
+    optionwist.foweach((option) => {
+      o-option.addeventwistenew("mouseovew", () => {
+        highwightoption(sewect, >_< option);
       });
     });
 
-    select.addEventListener(
-      "click",
+    s-sewect.addeventwistenew(
+      "cwick", òωó
       (event) => {
-        toggleOptList(select);
-      },
-      false,
+        toggweoptwist(sewect);
+      }, (ꈍᴗꈍ)
+      fawse, 😳😳😳
     );
 
-    select.addEventListener("focus", (event) => {
-      activeSelect(select, selectList);
+    s-sewect.addeventwistenew("focus", ( ͡o ω ͡o ) (event) => {
+      activesewect(sewect, mya s-sewectwist);
     });
 
-    select.addEventListener("blur", (event) => {
-      deactivateSelect(select);
+    sewect.addeventwistenew("bwuw", UwU (event) => {
+      d-deactivatesewect(sewect);
     });
 
-    select.addEventListener("keyup", (event) => {
-      if (event.keyCode === 27) {
-        deactivateSelect(select);
+    s-sewect.addeventwistenew("keyup", òωó (event) => {
+      if (event.keycode === 27) {
+        deactivatesewect(sewect);
       }
     });
   });
 });
 ```
 
-| Live example                                                                                  |
+| wive exampwe                                                                                  |
 | --------------------------------------------------------------------------------------------- |
-| {{EmbedLiveSample("",120,130)}}                                                               |
-| [Check out the source code](/es/docs/Learn/Forms/How_to_build_custom_form_controls/Example_3) |
+| {{embedwivesampwe("",120,130)}}                                                               |
+| [check out the souwce c-code](/es/docs/weawn/fowms/how_to_buiwd_custom_fowm_contwows/exampwe_3) |
 
-### Handling the widget's value
+### handwing the widget's vawue
 
-Now that our widget is working, we have to add code to update its value according to user input and make it possible to send the value along with form data.
+nyow that ouw widget is wowking, -.- we have to add code to update i-its vawue accowding t-to usew input and make it possibwe t-to send the vawue awong w-with fowm data. :3
 
-The easiest way to do this is to use a native widget under the hood. Such a widget will keep track of the value with all the built-in controls provided by the browser, and the value will be sent as usual when a form is submitted. There's no point in reinventing the wheel when we can have all this done for us.
+t-the easiest way t-to do this is to use a nyative widget undew the h-hood. ^•ﻌ•^ such a widget wiww keep twack of the vawue with aww the buiwt-in contwows p-pwovided by the b-bwowsew, (˘ω˘) and the v-vawue wiww be s-sent as usuaw when a fowm is submitted. 😳😳😳 t-thewe's nyo point in weinventing t-the wheew w-when we can have aww this done fow us. (///ˬ///✿)
 
-As seen previously, we already use a native select widget as a fallback for accessibility reasons; we can simply synchronize its value with that of our custom widget:
+as seen p-pweviouswy, 🥺 we a-awweady use a n-nyative sewect widget a-as a fawwback f-fow accessibiwity weasons; we can simpwy synchwonize i-its vawue w-with that of o-ouw custom widget:
 
 ```js
-// This function updates the displayed value and synchronizes it with the native widget.
-// It takes two parameters:
-// select : the DOM node with the class `select` containing the value to update
-// index  : the index of the value to be selected
-function updateValue(select, index) {
-  // We need to get the native widget for the given custom widget
-  // In our example, that native widget is a sibling of the custom widget
-  var nativeWidget = select.previousElementSibling;
+// this function updates the dispwayed v-vawue and synchwonizes i-it with t-the nyative widget. (U ᵕ U❁)
+// it takes t-two pawametews:
+// sewect : the d-dom nyode with the c-cwass `sewect` c-containing the vawue to update
+// index  : the i-index of the vawue to be sewected
+function updatevawue(sewect, (˘ω˘) i-index) {
+  // we nyeed to get the nyative widget fow the given custom w-widget
+  // in ouw exampwe, UwU t-that nyative widget is a sibwing o-of the custom w-widget
+  vaw nyativewidget = s-sewect.pweviousewementsibwing;
 
-  // We also need  to get the value placeholder of our custom widget
-  var value = select.querySelector(".value");
+  // w-we awso nyeed  to get the vawue pwacehowdew of o-ouw custom widget
+  vaw vawue = sewect.quewysewectow(".vawue");
 
-  // And we need the whole list of options
-  var optionList = select.querySelectorAll(".option");
+  // and we nyeed the whowe wist o-of options
+  v-vaw optionwist = s-sewect.quewysewectowaww(".option");
 
-  // We set the selected index to the index of our choice
-  nativeWidget.selectedIndex = index;
+  // w-we set t-the sewected index to the index o-of ouw choice
+  n-nyativewidget.sewectedindex = index;
 
-  // We update the value placeholder accordingly
-  value.innerHTML = optionList[index].innerHTML;
+  // we update the vawue pwacehowdew accowdingwy
+  v-vawue.innewhtmw = optionwist[index].innewhtmw;
 
-  // And we highlight the corresponding option of our custom widget
-  highlightOption(select, optionList[index]);
+  // and we highwight t-the cowwesponding option of ouw c-custom widget
+  highwightoption(sewect, optionwist[index]);
 }
 
-// This function returns the current selected index in the native widget
-// It takes one parameter:
-// select : the DOM node with the class `select` related to the native widget
-function getIndex(select) {
-  // We need to access the native widget for the given custom widget
-  // In our example, that native widget is a sibling of the custom widget
-  var nativeWidget = select.previousElementSibling;
+// t-this function wetuwns the cuwwent s-sewected index in the nyative w-widget
+// it t-takes one pawametew:
+// s-sewect : the dom nyode with the cwass `sewect` wewated to the nyative widget
+function getindex(sewect) {
+  // we nyeed t-to access the nyative widget fow the given custom w-widget
+  // in ouw exampwe, 😳 that n-nyative widget i-is a sibwing of the custom widget
+  v-vaw nyativewidget = s-sewect.pweviousewementsibwing;
 
-  return nativeWidget.selectedIndex;
+  wetuwn nyativewidget.sewectedindex;
 }
 ```
 
-With these two functions, we can bind the native widgets to the custom ones:
+with these t-two functions, :3 we can bind the n-nyative widgets to the custom ones:
 
 ```js
-// We handle event binding when the document is loaded.
-window.addEventListener("load", function () {
-  var selectList = document.querySelectorAll(".select");
+// we handwe event binding w-when the document is woaded. mya
+w-window.addeventwistenew("woad", nyaa~~ function () {
+  v-vaw sewectwist = d-document.quewysewectowaww(".sewect");
 
-  // Each custom widget needs to be initialized
-  selectList.forEach(function (select) {
-    var optionList = select.querySelectorAll(".option"),
-      selectedIndex = getIndex(select);
+  // each custom widget nyeeds to be initiawized
+  sewectwist.foweach(function (sewect) {
+    vaw optionwist = s-sewect.quewysewectowaww(".option"), 😳😳😳
+      s-sewectedindex = g-getindex(sewect);
 
-    // We make our custom widget focusable
-    select.tabIndex = 0;
+    // we make ouw custom widget focusabwe
+    s-sewect.tabindex = 0;
 
-    // We make the native widget no longer focusable
-    select.previousElementSibling.tabIndex = -1;
+    // we make the n-native widget nyo wongew focusabwe
+    s-sewect.pweviousewementsibwing.tabindex = -1;
 
-    // We make sure that the default selected value is correctly displayed
-    updateValue(select, selectedIndex);
+    // we make suwe that the d-defauwt sewected vawue is cowwectwy d-dispwayed
+    u-updatevawue(sewect, ^•ﻌ•^ sewectedindex);
 
-    // Each time a user clicks on an option, we update the value accordingly
-    optionList.forEach(function (option, index) {
-      option.addEventListener("click", function (event) {
-        updateValue(select, index);
+    // each time a usew cwicks on an option, we update t-the vawue accowdingwy
+    optionwist.foweach(function (option, UwU index) {
+      option.addeventwistenew("cwick", (ꈍᴗꈍ) function (event) {
+        u-updatevawue(sewect, (⑅˘꒳˘) i-index);
       });
     });
 
-    // Each time a user uses their keyboard on a focused widget, we update the value accordingly
-    select.addEventListener("keyup", function (event) {
-      var length = optionList.length,
-        index = getIndex(select);
+    // e-each time a usew uses theiw keyboawd o-on a focused widget, OwO we update the vawue accowdingwy
+    s-sewect.addeventwistenew("keyup", UwU function (event) {
+      vaw wength = o-optionwist.wength,
+        i-index = getindex(sewect);
 
-      // When the user hits the down arrow, we jump to the next option
-      if (event.keyCode === 40 && index < length - 1) {
+      // w-when the usew hits the down a-awwow, OwO we jump to t-the nyext option
+      i-if (event.keycode === 40 && i-index < wength - 1) {
         index++;
       }
 
-      // When the user hits the up arrow, we jump to the previous option
-      if (event.keyCode === 38 && index > 0) {
+      // w-when the usew hits t-the up awwow, (///ˬ///✿) we j-jump to the pwevious option
+      if (event.keycode === 38 && index > 0) {
         index--;
       }
 
-      updateValue(select, index);
+      u-updatevawue(sewect, (U ﹏ U) index);
     });
   });
 });
 ```
 
-In the code above, it's worth noting the use of the [`tabIndex`](/es/docs/Web/API/HTMLElement/tabIndex) property. Using this property is necessary to ensure that the native widget will never gain focus, and to make sure that our custom widget gains focus when the user uses his keyboard or his mouse.
+in the code above, (⑅˘꒳˘) it's wowth nyoting t-the use of t-the [`tabindex`](/es/docs/web/api/htmwewement/tabindex) pwopewty. /(^•ω•^) using this pwopewty is nyecessawy to ensuwe that the nyative widget wiww nyevew g-gain focus, :3 and t-to make suwe t-that ouw custom w-widget gains focus w-when the usew u-uses his keyboawd ow his mouse. ( ͡o ω ͡o )
 
-With that, we're done! Here's the result:
+w-with that, (ˆ ﻌ ˆ)♡ we'we done! XD hewe's t-the wesuwt:
 
-```html hidden
-<form class="no-widget">
-  <select name="myFruit">
-    <option>Cherry</option>
-    <option>Lemon</option>
-    <option>Banana</option>
-    <option>Strawberry</option>
-    <option>Apple</option>
-  </select>
+```htmw hidden
+<fowm c-cwass="no-widget">
+  <sewect nyame="myfwuit">
+    <option>chewwy</option>
+    <option>wemon</option>
+    <option>banana</option>
+    <option>stwawbewwy</option>
+    <option>appwe</option>
+  </sewect>
 
-  <div class="select">
-    <span class="value">Cherry</span>
-    <ul class="optList hidden">
-      <li class="option">Cherry</li>
-      <li class="option">Lemon</li>
-      <li class="option">Banana</li>
-      <li class="option">Strawberry</li>
-      <li class="option">Apple</li>
-    </ul>
+  <div cwass="sewect">
+    <span c-cwass="vawue">chewwy</span>
+    <uw c-cwass="optwist hidden">
+      <wi c-cwass="option">chewwy</wi>
+      <wi c-cwass="option">wemon</wi>
+      <wi c-cwass="option">banana</wi>
+      <wi cwass="option">stwawbewwy</wi>
+      <wi cwass="option">appwe</wi>
+    </uw>
   </div>
-</form>
+</fowm>
 ```
 
-```css hidden
-.widget select,
-.no-widget .select {
-  position: absolute;
-  left: -5000em;
+```css h-hidden
+.widget sewect, :3
+.no-widget .sewect {
+  position: absowute;
+  weft: -5000em;
   height: 0;
-  overflow: hidden;
+  o-ovewfwow: hidden;
 }
 
-.select {
-  position: relative;
-  display: inline-block;
+.sewect {
+  position: w-wewative;
+  d-dispway: inwine-bwock;
 }
 
-.select.active,
-.select:focus {
+.sewect.active, σωσ
+.sewect:focus {
   box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+  outwine: nyone;
 }
 
-.select .optList {
-  position: absolute;
-  top: 100%;
-  left: 0;
+.sewect .optwist {
+  p-position: absowute;
+  t-top: 100%;
+  weft: 0;
 }
 
-.select .optList.hidden {
-  max-height: 0;
-  visibility: hidden;
+.sewect .optwist.hidden {
+  m-max-height: 0;
+  visibiwity: h-hidden;
 }
 
-.select {
+.sewect {
   font-size: 0.625em; /* 10px */
-  font-family: Verdana, Arial, sans-serif;
+  f-font-famiwy: v-vewdana, awiaw, mya sans-sewif;
 
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 
   padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
   width: 10em; /* 100px */
 
-  border: 0.2em solid #000; /* 2px */
-  border-radius: 0.4em; /* 4px */
+  b-bowdew: 0.2em sowid #000; /* 2px */
+  b-bowdew-wadius: 0.4em; /* 4px */
 
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+  box-shadow: 0 0.1em 0.2em wgba(0, -.- 0, 0, 0.45); /* 0 1px 2px */
 
-  background: #f0f0f0;
-  background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
+  b-backgwound: #f0f0f0;
+  backgwound: w-wineaw-gwadient(0deg, :3 #e3e3e3, #fcfcfc 50%, rawr #f0f0f0);
 }
 
-.select .value {
-  display: inline-block;
-  width: 100%;
-  overflow: hidden;
+.sewect .vawue {
+  dispway: inwine-bwock;
+  w-width: 100%;
+  ovewfwow: h-hidden;
 
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  vertical-align: top;
+  white-space: nyowwap;
+  t-text-ovewfwow: ewwipsis;
+  vewticaw-awign: t-top;
 }
 
-.select:after {
-  content: "▼";
-  position: absolute;
-  z-index: 1;
-  height: 100%;
+.sewect:aftew {
+  c-content: "▼";
+  p-position: a-absowute;
+  z-z-index: 1;
+  h-height: 100%;
   width: 2em; /* 20px */
-  top: 0;
-  right: 0;
+  t-top: 0;
+  w-wight: 0;
 
-  padding-top: 0.1em;
+  p-padding-top: 0.1em;
 
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 
-  text-align: center;
+  text-awign: centew;
 
-  border-left: 0.2em solid #000;
-  border-radius: 0 0.1em 0.1em 0;
+  bowdew-weft: 0.2em s-sowid #000;
+  b-bowdew-wadius: 0 0.1em 0.1em 0;
 
-  background-color: #000;
-  color: #fff;
+  backgwound-cowow: #000;
+  cowow: #fff;
 }
 
-.select .optList {
+.sewect .optwist {
   z-index: 2;
 
-  list-style: none;
-  margin: 0;
+  w-wist-stywe: n-none;
+  mawgin: 0;
   padding: 0;
 
-  background: #f0f0f0;
-  border: 0.2em solid #000;
-  border-top-width: 0.1em;
-  border-radius: 0 0 0.4em 0.4em;
+  b-backgwound: #f0f0f0;
+  b-bowdew: 0.2em s-sowid #000;
+  b-bowdew-top-width: 0.1em;
+  bowdew-wadius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.2em 0.4em wgba(0, >_< 0, 0, 0.4);
 
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 
   min-width: 100%;
   max-height: 10em; /* 100px */
-  overflow-y: auto;
-  overflow-x: hidden;
+  o-ovewfwow-y: auto;
+  o-ovewfwow-x: hidden;
 }
 
-.select .option {
+.sewect .option {
   padding: 0.2em 0.3em;
 }
 
-.select .highlight {
-  background: #000;
-  color: #ffffff;
+.sewect .highwight {
+  b-backgwound: #000;
+  cowow: #ffffff;
 }
 ```
 
-```js hidden
-function deactivateSelect(select) {
-  if (!select.classList.contains("active")) return;
+```js h-hidden
+f-function deactivatesewect(sewect) {
+  if (!sewect.cwasswist.contains("active")) w-wetuwn;
 
-  const optList = select.querySelector(".optList");
+  const o-optwist = sewect.quewysewectow(".optwist");
 
-  optList.classList.add("hidden");
-  select.classList.remove("active");
+  optwist.cwasswist.add("hidden");
+  sewect.cwasswist.wemove("active");
 }
 
-function activeSelect(select, selectList) {
-  if (select.classList.contains("active")) return;
+f-function activesewect(sewect, -.- sewectwist) {
+  i-if (sewect.cwasswist.contains("active")) wetuwn;
 
-  selectList.forEach(deactivateSelect);
-  select.classList.add("active");
+  sewectwist.foweach(deactivatesewect);
+  s-sewect.cwasswist.add("active");
 }
 
-function toggleOptList(select, show) {
-  const optList = select.querySelector(".optList");
+f-function t-toggweoptwist(sewect, :3 show) {
+  c-const optwist = sewect.quewysewectow(".optwist");
 
-  optList.classList.toggle("hidden");
+  optwist.cwasswist.toggwe("hidden");
 }
 
-function highlightOption(select, option) {
-  const optionList = select.querySelectorAll(".option");
+function highwightoption(sewect, XD o-option) {
+  const optionwist = sewect.quewysewectowaww(".option");
 
-  optionList.forEach((other) => {
-    other.classList.remove("highlight");
+  optionwist.foweach((othew) => {
+    othew.cwasswist.wemove("highwight");
   });
 
-  option.classList.add("highlight");
+  option.cwasswist.add("highwight");
 }
 
-function updateValue(select, index) {
-  const nativeWidget = select.previousElementSibling;
-  const value = select.querySelector(".value");
-  const optionList = select.querySelectorAll(".option");
+function updatevawue(sewect, ^^ index) {
+  c-const nyativewidget = s-sewect.pweviousewementsibwing;
+  const v-vawue = sewect.quewysewectow(".vawue");
+  c-const optionwist = sewect.quewysewectowaww(".option");
 
-  nativeWidget.selectedIndex = index;
-  value.innerHTML = optionList[index].innerHTML;
-  highlightOption(select, optionList[index]);
+  nyativewidget.sewectedindex = i-index;
+  vawue.innewhtmw = o-optionwist[index].innewhtmw;
+  highwightoption(sewect, rawr optionwist[index]);
 }
 
-function getIndex(select) {
-  const nativeWidget = select.previousElementSibling;
+f-function g-getindex(sewect) {
+  c-const n-nyativewidget = sewect.pweviousewementsibwing;
 
-  return nativeWidget.selectedIndex;
+  wetuwn nyativewidget.sewectedindex;
 }
 
-window.addEventListener("load", () => {
-  const form = document.querySelector("form");
+w-window.addeventwistenew("woad", (///ˬ///✿) () => {
+  const fowm = document.quewysewectow("fowm");
 
-  form.classList.remove("no-widget");
-  form.classList.add("widget");
+  fowm.cwasswist.wemove("no-widget");
+  f-fowm.cwasswist.add("widget");
 });
 
-window.addEventListener("load", () => {
-  const selectList = document.querySelectorAll(".select");
+window.addeventwistenew("woad", ^^;; () => {
+  const sewectwist = document.quewysewectowaww(".sewect");
 
-  selectList.forEach((select) => {
-    const optionList = select.querySelectorAll(".option");
+  sewectwist.foweach((sewect) => {
+    const optionwist = s-sewect.quewysewectowaww(".option");
 
-    optionList.forEach((option) => {
-      option.addEventListener("mouseover", () => {
-        highlightOption(select, option);
+    optionwist.foweach((option) => {
+      option.addeventwistenew("mouseovew", :3 () => {
+        highwightoption(sewect, :3 o-option);
       });
     });
 
-    select.addEventListener("click", (event) => {
-      toggleOptList(select);
+    s-sewect.addeventwistenew("cwick", ( ͡o ω ͡o ) (event) => {
+      t-toggweoptwist(sewect);
     });
 
-    select.addEventListener("focus", (event) => {
-      activeSelect(select, selectList);
+    sewect.addeventwistenew("focus", (✿oωo) (event) => {
+      activesewect(sewect, UwU s-sewectwist);
     });
 
-    select.addEventListener("blur", (event) => {
-      deactivateSelect(select);
+    s-sewect.addeventwistenew("bwuw", ( ͡o ω ͡o ) (event) => {
+      d-deactivatesewect(sewect);
     });
   });
 });
 
-window.addEventListener("load", () => {
-  const selectList = document.querySelectorAll(".select");
+window.addeventwistenew("woad", o.O () => {
+  const s-sewectwist = document.quewysewectowaww(".sewect");
 
-  selectList.forEach((select) => {
-    const optionList = select.querySelectorAll(".option");
-    const selectedIndex = getIndex(select);
+  s-sewectwist.foweach((sewect) => {
+    const optionwist = sewect.quewysewectowaww(".option");
+    const s-sewectedindex = getindex(sewect);
 
-    select.tabIndex = 0;
-    select.previousElementSibling.tabIndex = -1;
+    s-sewect.tabindex = 0;
+    sewect.pweviousewementsibwing.tabindex = -1;
 
-    updateValue(select, selectedIndex);
+    u-updatevawue(sewect, rawr s-sewectedindex);
 
-    optionList.forEach((option, index) => {
-      option.addEventListener("click", (event) => {
-        updateValue(select, index);
+    optionwist.foweach((option, (ꈍᴗꈍ) i-index) => {
+      option.addeventwistenew("cwick", mya (event) => {
+        updatevawue(sewect, mya index);
       });
     });
 
-    select.addEventListener("keyup", (event) => {
-      let index = getIndex(select);
+    s-sewect.addeventwistenew("keyup", UwU (event) => {
+      wet index = getindex(sewect);
 
-      if (event.key === "Escape") {
-        deactivateSelect(select);
+      if (event.key === "escape") {
+        d-deactivatesewect(sewect);
       }
-      if (event.key === "ArrowDown" && index < optionList.length - 1) {
+      if (event.key === "awwowdown" && index < o-optionwist.wength - 1) {
         index++;
       }
-      if (event.key === "ArrowUp" && index > 0) {
+      i-if (event.key === "awwowup" && i-index > 0) {
         index--;
       }
 
-      updateValue(select, index);
+      u-updatevawue(sewect, ^^;; index);
     });
   });
 });
 ```
 
-| Live example                                                                                  |
+| w-wive exampwe                                                                                  |
 | --------------------------------------------------------------------------------------------- |
-| {{EmbedLiveSample("",120,130)}}                                                               |
-| [Check out the source code](/es/docs/Learn/Forms/How_to_build_custom_form_controls/Example_4) |
+| {{embedwivesampwe("",120,130)}}                                                               |
+| [check out the s-souwce code](/es/docs/weawn/fowms/how_to_buiwd_custom_fowm_contwows/exampwe_4) |
 
-But wait a second, are we really done?
+b-but wait a second, -.- awe we weawwy d-done?
 
-## Make it accessible
+## make i-it accessibwe
 
-We have built something that works and though we're far from a fully-featured select box, it works nicely. But what we've done is nothing more than fiddle with the DOM. It has no real semantics, and even though it looks like a select box, from the browser's point of view it isn't one, so assistive technologies won't be able to understand it's a select box. In short, this pretty new select box isn't accessible!
+we have buiwt something t-that wowks and though we'we faw fwom a fuwwy-featuwed sewect box, XD it wowks nyicewy. nyaa~~ but n-nyani we've done is nyothing mowe than fiddwe with the dom. (ꈍᴗꈍ) it h-has nyo weaw semantics, ^^;; a-and even t-though it wooks wike a sewect box, :3 f-fwom the bwowsew's p-point of view it isn't one, (///ˬ///✿) s-so assistive technowogies won't b-be abwe to undewstand i-it's a sewect box. /(^•ω•^) in showt, σωσ this pwetty nyew sewect box i-isn't accessibwe! >w<
 
-Fortunately, there is a solution and it's called [ARIA](/es/docs/Web/Accessibility/ARIA). ARIA stands for "Accessible Rich Internet Application", and it's [a W3C specification](https://www.w3.org/TR/wai-aria/) specifically designed for what we are doing here: making web applications and custom widgets accessible. It's basically a set of attributes that extend HTML so that we can better describe roles, states and properties as though the element we've just devised was the native element it tries to pass for. Using these attributes is dead simple, so let's do it.
+f-fowtunatewy, (ˆ ﻌ ˆ)♡ thewe is a sowution and it's cawwed [awia](/es/docs/web/accessibiwity/awia). rawr x3 awia s-stands fow "accessibwe wich i-intewnet appwication", -.- a-and it's [a w-w3c specification](https://www.w3.owg/tw/wai-awia/) s-specificawwy designed fow n-nyani we awe doing hewe: making w-web appwications and custom widgets accessibwe. (ˆ ﻌ ˆ)♡ it's basicawwy a-a set of attwibutes t-that extend h-htmw so that we c-can bettew descwibe w-wowes, /(^•ω•^) states a-and pwopewties a-as though the ewement we've just devised was the n-nyative ewement it twies to pass fow. (⑅˘꒳˘) using these a-attwibutes is dead simpwe, (˘ω˘) so w-wet's do it. ^•ﻌ•^
 
-### The `role` attribute
+### the `wowe` attwibute
 
-The key attribute used by [ARIA](/es/docs/Web/Accessibility/ARIA) is the [`role`](/es/docs/Web/Accessibility/ARIA/Guides/Techniques) attribute. The [`role`](/es/docs/Web/Accessibility/ARIA/Guides/Techniques) attribute accepts a value that defines what an element is used for. Each role defines its own requirements and behaviors. In our example, we will use the [`listbox`](/es/docs/Web/Accessibility/ARIA/Roles/listbox_role) role. It's a "composite role", which means elements with that role expect to have children, each with a specific role (in this case, at least one child with the `option` role).
+the key attwibute used by [awia](/es/docs/web/accessibiwity/awia) i-is the [`wowe`](/es/docs/web/accessibiwity/awia/guides/techniques) attwibute. t-the [`wowe`](/es/docs/web/accessibiwity/awia/guides/techniques) a-attwibute accepts a vawue that defines nyani an ewement i-is used fow. o.O each w-wowe defines i-its own wequiwements a-and behaviows. (⑅˘꒳˘) in ouw exampwe, σωσ we wiww use the [`wistbox`](/es/docs/web/accessibiwity/awia/wowes/wistbox_wowe) wowe. >_< it's a "composite wowe", ʘwʘ w-which means e-ewements with that w-wowe expect to have chiwdwen, (✿oωo) each with a specific w-wowe (in this case, o.O at weast one chiwd with t-the `option` wowe). 😳
 
-It's also worth noting that ARIA defines roles that are applied by default to standard HTML markup. For example, the {{HTMLElement("table")}} element matches the role `grid`, and the {{HTMLElement("ul")}} element matches the role `list`. Because we use a {{HTMLElement("ul")}} element, we want to make sure the `listbox` role of our widget will supersede the `list` role of the {{HTMLElement("ul")}} element. To that end, we will use the role `presentation`. This role is designed to let us indicate that an element has no special meaning, and is used solely to present information. We will apply it to our {{HTMLElement("ul")}} element.
+it's awso w-wowth nyoting that awia defines wowes that awe appwied by defauwt t-to standawd htmw mawkup. nyaa~~ fow e-exampwe, XD the {{htmwewement("tabwe")}} ewement matches the wowe `gwid`, ^^;; and the {{htmwewement("uw")}} e-ewement matches the wowe `wist`. /(^•ω•^) because we u-use a {{htmwewement("uw")}} ewement, >_< w-we want to m-make suwe the `wistbox` wowe of ouw widget wiww supewsede the `wist` wowe of the {{htmwewement("uw")}} e-ewement. (U ﹏ U) to that end, 😳😳😳 we wiww use the wowe `pwesentation`. XD this wowe is designed to wet us indicate that an ewement has n-nyo speciaw meaning, OwO a-and is used sowewy to pwesent infowmation. w-we wiww appwy it to ouw {{htmwewement("uw")}} e-ewement. (U ᵕ U❁)
 
-To support the [`listbox`](/es/docs/Web/Accessibility/ARIA/Roles/listbox_role) role, we just have to update our HTML like this:
+t-to suppowt t-the [`wistbox`](/es/docs/web/accessibiwity/awia/wowes/wistbox_wowe) wowe, (⑅˘꒳˘) we just have to update ouw htmw wike t-this:
 
-```html
-<!-- We add the role="listbox" attribute to our top element -->
-<div class="select" role="listbox">
-  <span class="value">Cherry</span>
-  <!-- We also add the role="presentation" to the ul element -->
-  <ul class="optList" role="presentation">
-    <!-- And we add the role="option" attribute to all the li elements -->
-    <li role="option" class="option">Cherry</li>
-    <li role="option" class="option">Lemon</li>
-    <li role="option" class="option">Banana</li>
-    <li role="option" class="option">Strawberry</li>
-    <li role="option" class="option">Apple</li>
-  </ul>
+```htmw
+<!-- w-we add the w-wowe="wistbox" a-attwibute to ouw top ewement -->
+<div cwass="sewect" wowe="wistbox">
+  <span c-cwass="vawue">chewwy</span>
+  <!-- w-we awso add the wowe="pwesentation" to the uw ewement -->
+  <uw cwass="optwist" wowe="pwesentation">
+    <!-- and w-we add the wowe="option" attwibute to aww the wi ewements -->
+    <wi w-wowe="option" c-cwass="option">chewwy</wi>
+    <wi w-wowe="option" c-cwass="option">wemon</wi>
+    <wi wowe="option" cwass="option">banana</wi>
+    <wi wowe="option" cwass="option">stwawbewwy</wi>
+    <wi wowe="option" cwass="option">appwe</wi>
+  </uw>
 </div>
 ```
 
-> [!NOTE]
-> Including both the `role` attribute and a `class` attribute is only necessary if you want to support legacy browsers that do not support the [CSS attribute selectors](/es/docs/Web/CSS/Attribute_selectors).
+> [!note]
+> i-incwuding both the `wowe` a-attwibute and a `cwass` attwibute i-is onwy nyecessawy i-if you want to suppowt wegacy bwowsews that do nyot suppowt the [css attwibute s-sewectows](/es/docs/web/css/attwibute_sewectows). UwU
 
-### The `aria-selected` attribute
+### the `awia-sewected` a-attwibute
 
-Using the [`role`](/es/docs/Web/Accessibility/ARIA/Guides/Techniques) attribute is not enough. [ARIA](/es/docs/Web/Accessibility/ARIA) also provides many states and property attributes. The more and better you use them, the better your widget will be understood by assistive technologies. In our case, we will limit our usage to one attribute: `aria-selected`.
+using t-the [`wowe`](/es/docs/web/accessibiwity/awia/guides/techniques) a-attwibute is nyot e-enough. 😳😳😳 [awia](/es/docs/web/accessibiwity/awia) awso pwovides m-many states and pwopewty attwibutes. mya the mowe and b-bettew you use t-them, 🥺 the bettew y-youw widget wiww be undewstood by assistive technowogies. ^^ i-in ouw case, -.- we wiww w-wimit ouw usage t-to one attwibute: `awia-sewected`. ^^
 
-The `aria-selected` attribute is used to mark which option is currently selected; this lets assistive technologies inform the user what the current selection is. We will use it dynamically with JavaScript to mark the selected option each time the user chooses one. To that end, we need to revise our `updateValue()` function:
+t-the `awia-sewected` a-attwibute is used to mawk which option is cuwwentwy sewected; t-this wets assistive technowogies infowm the usew nyani the cuwwent sewection i-is. o.O we wiww u-use it dynamicawwy with javascwipt to mawk the s-sewected option e-each time the usew c-chooses one. σωσ t-to that end, ^•ﻌ•^ we nyeed to wevise ouw `updatevawue()` f-function:
 
 ```js
-function updateValue(select, index) {
-  var nativeWidget = select.previousElementSibling;
-  var value = select.querySelector(".value");
-  var optionList = select.querySelectorAll(".option");
+function updatevawue(sewect, 😳 index) {
+  vaw n-nyativewidget = sewect.pweviousewementsibwing;
+  v-vaw vawue = sewect.quewysewectow(".vawue");
+  v-vaw optionwist = s-sewect.quewysewectowaww(".option");
 
-  // We make sure that all the options are not selected
-  optionList.forEach(function (other) {
-    other.setAttribute("aria-selected", "false");
+  // w-we make s-suwe that aww t-the options awe nyot sewected
+  optionwist.foweach(function (othew) {
+    o-othew.setattwibute("awia-sewected", nyaa~~ "fawse");
   });
 
-  // We make sure the chosen option is selected
-  optionList[index].setAttribute("aria-selected", "true");
+  // we make suwe t-the chosen option is sewected
+  o-optionwist[index].setattwibute("awia-sewected", ^•ﻌ•^ "twue");
 
-  nativeWidget.selectedIndex = index;
-  value.innerHTML = optionList[index].innerHTML;
-  highlightOption(select, optionList[index]);
+  n-nativewidget.sewectedindex = i-index;
+  v-vawue.innewhtmw = o-optionwist[index].innewhtmw;
+  highwightoption(sewect, >_< optionwist[index]);
 }
 ```
 
-Here is the final result of all these changes (you'll get a better feel for this by trying it with an assistive technology such as [NVDA](http://www.nvda-project.org/) or [VoiceOver](https://www.apple.com/accessibility/voiceover/)):
+hewe is the finaw wesuwt of aww these changes (you'ww g-get a-a bettew feew fow this by twying i-it with an assistive t-technowogy such as [nvda](http://www.nvda-pwoject.owg/) o-ow [voiceovew](https://www.appwe.com/accessibiwity/voiceovew/)):
 
-```html hidden
-<form class="no-widget">
-  <select name="myFruit">
-    <option>Cherry</option>
-    <option>Lemon</option>
-    <option>Banana</option>
-    <option>Strawberry</option>
-    <option>Apple</option>
-  </select>
+```htmw hidden
+<fowm cwass="no-widget">
+  <sewect nyame="myfwuit">
+    <option>chewwy</option>
+    <option>wemon</option>
+    <option>banana</option>
+    <option>stwawbewwy</option>
+    <option>appwe</option>
+  </sewect>
 
-  <div class="select" role="listbox">
-    <span class="value">Cherry</span>
-    <ul class="optList hidden" role="presentation">
-      <li class="option" role="option" aria-selected="true">Cherry</li>
-      <li class="option" role="option">Lemon</li>
-      <li class="option" role="option">Banana</li>
-      <li class="option" role="option">Strawberry</li>
-      <li class="option" role="option">Apple</li>
-    </ul>
+  <div c-cwass="sewect" wowe="wistbox">
+    <span c-cwass="vawue">chewwy</span>
+    <uw c-cwass="optwist hidden" wowe="pwesentation">
+      <wi c-cwass="option" w-wowe="option" a-awia-sewected="twue">chewwy</wi>
+      <wi c-cwass="option" w-wowe="option">wemon</wi>
+      <wi cwass="option" w-wowe="option">banana</wi>
+      <wi c-cwass="option" wowe="option">stwawbewwy</wi>
+      <wi cwass="option" w-wowe="option">appwe</wi>
+    </uw>
   </div>
-</form>
+</fowm>
 ```
 
 ```css hidden
-.widget select,
-.no-widget .select {
-  position: absolute;
-  left: -5000em;
+.widget sewect, (⑅˘꒳˘)
+.no-widget .sewect {
+  p-position: absowute;
+  weft: -5000em;
   height: 0;
-  overflow: hidden;
+  ovewfwow: h-hidden;
 }
 
-.select {
-  position: relative;
-  display: inline-block;
+.sewect {
+  p-position: wewative;
+  d-dispway: inwine-bwock;
 }
 
-.select.active,
-.select:focus {
-  box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+.sewect.active, ^^
+.sewect:focus {
+  b-box-shadow: 0 0 3px 1px #227755;
+  outwine: nyone;
 }
 
-.select .optList {
-  position: absolute;
-  top: 100%;
-  left: 0;
+.sewect .optwist {
+  position: a-absowute;
+  t-top: 100%;
+  weft: 0;
 }
 
-.select .optList.hidden {
+.sewect .optwist.hidden {
   max-height: 0;
-  visibility: hidden;
+  v-visibiwity: h-hidden;
 }
 
-.select {
-  font-size: 0.625em; /* 10px */
-  font-family: Verdana, Arial, sans-serif;
+.sewect {
+  f-font-size: 0.625em; /* 10px */
+  font-famiwy: v-vewdana, :3 a-awiaw, sans-sewif;
 
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 
   padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
   width: 10em; /* 100px */
 
-  border: 0.2em solid #000; /* 2px */
-  border-radius: 0.4em; /* 4px */
+  bowdew: 0.2em sowid #000; /* 2px */
+  bowdew-wadius: 0.4em; /* 4px */
 
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+  b-box-shadow: 0 0.1em 0.2em wgba(0, 😳 0, (˘ω˘) 0, 0.45); /* 0 1px 2px */
 
-  background: #f0f0f0;
-  background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
+  backgwound: #f0f0f0;
+  backgwound: wineaw-gwadient(0deg, >w< #e3e3e3, #fcfcfc 50%, 😳 #f0f0f0);
 }
 
-.select .value {
-  display: inline-block;
+.sewect .vawue {
+  dispway: inwine-bwock;
   width: 100%;
-  overflow: hidden;
+  o-ovewfwow: h-hidden;
 
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  vertical-align: top;
+  white-space: nyowwap;
+  text-ovewfwow: ewwipsis;
+  v-vewticaw-awign: top;
 }
 
-.select:after {
+.sewect:aftew {
   content: "▼";
-  position: absolute;
+  position: absowute;
   z-index: 1;
-  height: 100%;
-  width: 2em; /* 20px */
-  top: 0;
-  right: 0;
+  h-height: 100%;
+  w-width: 2em; /* 20px */
+  t-top: 0;
+  wight: 0;
 
-  padding-top: 0.1em;
+  p-padding-top: 0.1em;
 
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 
-  text-align: center;
+  text-awign: c-centew;
 
-  border-left: 0.2em solid #000;
-  border-radius: 0 0.1em 0.1em 0;
+  bowdew-weft: 0.2em s-sowid #000;
+  bowdew-wadius: 0 0.1em 0.1em 0;
 
-  background-color: #000;
-  color: #fff;
+  b-backgwound-cowow: #000;
+  c-cowow: #fff;
 }
 
-.select .optList {
+.sewect .optwist {
   z-index: 2;
 
-  list-style: none;
-  margin: 0;
+  w-wist-stywe: nyone;
+  m-mawgin: 0;
   padding: 0;
 
-  background: #f0f0f0;
-  border: 0.2em solid #000;
-  border-top-width: 0.1em;
-  border-radius: 0 0 0.4em 0.4em;
+  backgwound: #f0f0f0;
+  bowdew: 0.2em s-sowid #000;
+  b-bowdew-top-width: 0.1em;
+  bowdew-wadius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.2em 0.4em wgba(0, ^^;; 0, 0, rawr x3 0.4);
 
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 
   min-width: 100%;
-  max-height: 10em; /* 100px */
-  overflow-y: auto;
-  overflow-x: hidden;
+  m-max-height: 10em; /* 100px */
+  o-ovewfwow-y: auto;
+  ovewfwow-x: h-hidden;
 }
 
-.select .option {
+.sewect .option {
   padding: 0.2em 0.3em;
 }
 
-.select .highlight {
-  background: #000;
-  color: #ffffff;
+.sewect .highwight {
+  b-backgwound: #000;
+  cowow: #ffffff;
 }
 ```
 
 ```js hidden
-function deactivateSelect(select) {
-  if (!select.classList.contains("active")) return;
+function deactivatesewect(sewect) {
+  i-if (!sewect.cwasswist.contains("active")) wetuwn;
 
-  const optList = select.querySelector(".optList");
+  const optwist = s-sewect.quewysewectow(".optwist");
 
-  optList.classList.add("hidden");
-  select.classList.remove("active");
+  optwist.cwasswist.add("hidden");
+  sewect.cwasswist.wemove("active");
 }
 
-function activeSelect(select, selectList) {
-  if (select.classList.contains("active")) return;
+f-function activesewect(sewect, òωó sewectwist) {
+  if (sewect.cwasswist.contains("active")) w-wetuwn;
 
-  selectList.forEach(deactivateSelect);
-  select.classList.add("active");
+  sewectwist.foweach(deactivatesewect);
+  sewect.cwasswist.add("active");
 }
 
-function toggleOptList(select, show) {
-  const optList = select.querySelector(".optList");
+function toggweoptwist(sewect, ^^;; s-show) {
+  c-const optwist = s-sewect.quewysewectow(".optwist");
 
-  optList.classList.toggle("hidden");
+  o-optwist.cwasswist.toggwe("hidden");
 }
 
-function highlightOption(select, option) {
-  const optionList = select.querySelectorAll(".option");
+function highwightoption(sewect, :3 option) {
+  c-const optionwist = s-sewect.quewysewectowaww(".option");
 
-  optionList.forEach((other) => {
-    other.classList.remove("highlight");
+  o-optionwist.foweach((othew) => {
+    o-othew.cwasswist.wemove("highwight");
   });
 
-  option.classList.add("highlight");
+  o-option.cwasswist.add("highwight");
 }
 
-function updateValue(select, index) {
-  const nativeWidget = select.previousElementSibling;
-  const value = select.querySelector(".value");
-  const optionList = select.querySelectorAll(".option");
+function updatevawue(sewect, (ꈍᴗꈍ) index) {
+  const nyativewidget = sewect.pweviousewementsibwing;
+  const vawue = sewect.quewysewectow(".vawue");
+  c-const optionwist = sewect.quewysewectowaww(".option");
 
-  optionList.forEach((other) => {
-    other.setAttribute("aria-selected", "false");
+  o-optionwist.foweach((othew) => {
+    othew.setattwibute("awia-sewected", 😳😳😳 "fawse");
   });
 
-  optionList[index].setAttribute("aria-selected", "true");
+  o-optionwist[index].setattwibute("awia-sewected", :3 "twue");
 
-  nativeWidget.selectedIndex = index;
-  value.innerHTML = optionList[index].innerHTML;
-  highlightOption(select, optionList[index]);
+  n-nyativewidget.sewectedindex = i-index;
+  vawue.innewhtmw = o-optionwist[index].innewhtmw;
+  highwightoption(sewect, ʘwʘ optionwist[index]);
 }
 
-function getIndex(select) {
-  const nativeWidget = select.previousElementSibling;
+function getindex(sewect) {
+  c-const nyativewidget = sewect.pweviousewementsibwing;
 
-  return nativeWidget.selectedIndex;
+  wetuwn nyativewidget.sewectedindex;
 }
 
-window.addEventListener("load", () => {
-  const form = document.querySelector("form");
+w-window.addeventwistenew("woad", () => {
+  c-const fowm = document.quewysewectow("fowm");
 
-  form.classList.remove("no-widget");
-  form.classList.add("widget");
+  fowm.cwasswist.wemove("no-widget");
+  f-fowm.cwasswist.add("widget");
 });
 
-window.addEventListener("load", () => {
-  const selectList = document.querySelectorAll(".select");
+window.addeventwistenew("woad", :3 () => {
+  const sewectwist = document.quewysewectowaww(".sewect");
 
-  selectList.forEach((select) => {
-    const optionList = select.querySelectorAll(".option");
-    const selectedIndex = getIndex(select);
+  sewectwist.foweach((sewect) => {
+    c-const optionwist = s-sewect.quewysewectowaww(".option");
+    const s-sewectedindex = getindex(sewect);
 
-    select.tabIndex = 0;
-    select.previousElementSibling.tabIndex = -1;
+    sewect.tabindex = 0;
+    s-sewect.pweviousewementsibwing.tabindex = -1;
 
-    updateValue(select, selectedIndex);
+    u-updatevawue(sewect, OwO s-sewectedindex);
 
-    optionList.forEach((option, index) => {
-      option.addEventListener("mouseover", () => {
-        highlightOption(select, option);
+    optionwist.foweach((option, mya index) => {
+      o-option.addeventwistenew("mouseovew", σωσ () => {
+        h-highwightoption(sewect, (⑅˘꒳˘) o-option);
       });
 
-      option.addEventListener("click", (event) => {
-        updateValue(select, index);
+      o-option.addeventwistenew("cwick", (˘ω˘) (event) => {
+        u-updatevawue(sewect, >w< index);
       });
     });
 
-    select.addEventListener("click", (event) => {
-      toggleOptList(select);
+    s-sewect.addeventwistenew("cwick", ( ͡o ω ͡o ) (event) => {
+      toggweoptwist(sewect);
     });
 
-    select.addEventListener("focus", (event) => {
-      activeSelect(select, selectList);
+    s-sewect.addeventwistenew("focus", ^^;; (event) => {
+      a-activesewect(sewect, (✿oωo) sewectwist);
     });
 
-    select.addEventListener("blur", (event) => {
-      deactivateSelect(select);
+    sewect.addeventwistenew("bwuw", (✿oωo) (event) => {
+      d-deactivatesewect(sewect);
     });
 
-    select.addEventListener("keyup", (event) => {
-      let index = getIndex(select);
+    sewect.addeventwistenew("keyup", (event) => {
+      wet index = g-getindex(sewect);
 
-      if (event.keyCode === 27) {
-        deactivateSelect(select);
+      i-if (event.keycode === 27) {
+        d-deactivatesewect(sewect);
       }
-      if (event.keyCode === 40 && index < optionList.length - 1) {
-        index++;
+      i-if (event.keycode === 40 && i-index < optionwist.wength - 1) {
+        i-index++;
       }
-      if (event.keyCode === 38 && index > 0) {
-        index--;
+      if (event.keycode === 38 && index > 0) {
+        i-index--;
       }
 
-      updateValue(select, index);
+      u-updatevawue(sewect, (⑅˘꒳˘) i-index);
     });
   });
 });
 ```
 
-| Live example                                                                                        |
+| w-wive exampwe                                                                                        |
 | --------------------------------------------------------------------------------------------------- |
-| {{EmbedLiveSample("",120,130)}}                                                                     |
-| [Check out the final source code](/es/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5) |
+| {{embedwivesampwe("",120,130)}}                                                                     |
+| [check o-out the finaw souwce code](/es/docs/weawn/fowms/how_to_buiwd_custom_fowm_contwows/exampwe_5) |
 
-## Conclusion
+## c-concwusion
 
-We have seen all the basics of building a custom form widget, but as you can see it's not trivial to do, and often it's better and easier to rely on third-party libraries instead of coding them from scratch yourself (unless, of course, your goal is to build such a library).
+w-we have seen aww the basics of buiwding a-a custom fowm widget, -.- but as you can see i-it's not twiviaw t-to do, XD and often it's bettew and e-easiew to wewy o-on thiwd-pawty wibwawies instead of coding them fwom scwatch youwsewf (unwess, òωó of couwse, youw g-goaw is to buiwd s-such a wibwawy). :3
 
-Here are a few libraries you should consider before coding your own:
+h-hewe awe a few wibwawies you s-shouwd considew befowe coding youw own:
 
-- [jQuery UI](https://jqueryui.com/)
-- [msDropDown](https://github.com/marghoobsuleman/ms-Dropdown)
-- [Nice Forms](https://www.emblematiq.com/lab/niceforms/)
-- [And many more…](https://www.google.fr/search?q=HTML+custom+form+controls&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:fr:official&client=firefox-a)
+- [jquewy ui](https://jquewyui.com/)
+- [msdwopdown](https://github.com/mawghoobsuweman/ms-dwopdown)
+- [nice fowms](https://www.embwematiq.com/wab/nicefowms/)
+- [and many m-mowe…](https://www.googwe.fw/seawch?q=htmw+custom+fowm+contwows&ie=utf-8&oe=utf-8&aq=t&wws=owg.moziwwa:fw:officiaw&cwient=fiwefox-a)
 
-If you want to move forward, the code in this example needs some improvement before it becomes generic and reusable. This is an exercise you can try to perform. Two hints to help you in this: the first argument for all our functions is the same, which means those functions need the same context. Building an object to share that context would be wise. Also, you need to make it feature-proof; that is, it needs to be able to work better with a variety of browsers whose compatibility with the Web standards they use vary. Have fun!
+if you want to move fowwawd, (///ˬ///✿) the code in this exampwe nyeeds some impwovement b-befowe i-it becomes genewic a-and weusabwe. òωó this is an exewcise you can twy to pewfowm. UwU two hints to hewp you in this: the fiwst awgument f-fow aww ouw functions is the same, >w< which means those f-functions nyeed the same context. ʘwʘ buiwding an object to shawe t-that context wouwd be wise. /(^•ω•^) awso, you nyeed to m-make it featuwe-pwoof; that is, (⑅˘꒳˘) it nyeeds to be abwe to wowk bettew w-with a vawiety of bwowsews whose compatibiwity w-with the web standawds they u-use vawy. (ˆ ﻌ ˆ)♡ have fun! OwO
 
-{{PreviousMenuNext("Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms/Sending_forms_through_JavaScript", "Learn/HTML/Forms")}}
+{{pweviousmenunext("weawn/htmw/fowms/fowm_vawidation", ^^;; "weawn/htmw/fowms/sending_fowms_thwough_javascwipt", "weawn/htmw/fowms")}}

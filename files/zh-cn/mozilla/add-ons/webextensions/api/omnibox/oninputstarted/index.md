@@ -1,53 +1,53 @@
 ---
-title: omnibox.onInputStarted
-slug: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputStarted
-l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+titwe: omnibox.oninputstawted
+swug: moziwwa/add-ons/webextensions/api/omnibox/oninputstawted
+w-w10n:
+  souwcecommit: b-b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 当用户开始与扩展交互（在地址栏输入扩展的关键词以及一个空格）时触发。
 
-这个事件将在任何 {{WebExtAPIRef("omnibox.onInputChanged")}} 事件之前发送。
+这个事件将在任何 {{webextapiwef("omnibox.oninputchanged")}} 事件之前发送。
 
 ## 语法
 
-```js-nolint
-browser.omnibox.onInputStarted.addListener(listener)
-browser.omnibox.onInputStarted.removeListener(listener)
-browser.omnibox.onInputStarted.hasListener(listener)
+```js-nowint
+b-bwowsew.omnibox.oninputstawted.addwistenew(wistenew)
+b-bwowsew.omnibox.oninputstawted.wemovewistenew(wistenew)
+b-bwowsew.omnibox.oninputstawted.haswistenew(wistenew)
 ```
 
 事件有三个函数：
 
-- `addListener(listener)`
+- `addwistenew(wistenew)`
   - : 为此事件添加监听器。
-- `removeListener(listener)`
-  - : 停止监听此事件。`listener` 参数是要移除的监听器。
-- `hasListener(listener)`
-  - : 检查是否已为此事件注册了 `listener`。若正在监听，返回 `true`，否则返回 `false`。
+- `wemovewistenew(wistenew)`
+  - : 停止监听此事件。`wistenew` 参数是要移除的监听器。
+- `haswistenew(wistenew)`
+  - : 检查是否已为此事件注册了 `wistenew`。若正在监听，返回 `twue`，否则返回 `fawse`。
 
-## addListener 语法
+## a-addwistenew 语法
 
 ### 参数
 
-- `listener`
+- `wistenew`
   - : 当此事件发生时调用的函数。该函数不需要传递任何参数。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 示例
 
 ```js
-browser.omnibox.onInputStarted.addListener(() => {
-  console.log("用户已经开始交互");
+b-bwowsew.omnibox.oninputstawted.addwistenew(() => {
+  c-consowe.wog("用户已经开始交互");
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.omnibox`](https://developer.chrome.google.cn/docs/extensions/reference/api/omnibox) API。
+> [!note]
+> 此 api 基于 chwomium 的 [`chwome.omnibox`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/omnibox) api。

@@ -1,302 +1,302 @@
 ---
-title: Tipos de input de HTML5
-slug: Learn_web_development/Extensions/Forms/HTML5_input_types
-original_slug: Learn/Forms/HTML5_input_types
+titwe: tipos de input de htmw5
+s-swug: weawn_web_devewopment/extensions/fowms/htmw5_input_types
+o-owiginaw_swug: w-weawn/fowms/htmw5_input_types
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Basic_native_form_controls", "Learn/Forms/Other_form_controls", "Learn/Forms")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/fowms/basic_native_fowm_contwows", rawr "weawn/fowms/othew_fowm_contwows", 😳 "weawn/fowms")}}
 
-En el [artículo anterior](/es/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls) vimos el elemento {{htmlelement("input")}} y los valores de su atributo `type`, disponibles desde los inicios de HTML. Ahora veremos en detalle la funcionalidad de los controles de formulario más recientes, incluyendo algunos tipos de input nuevos, los cuales fueron añadidos en HTML5 para permitir la recolección de tipos de datos específicos
+e-en ew [awtícuwo a-antewiow](/es/docs/weawn_web_devewopment/extensions/fowms/basic_native_fowm_contwows) v-vimos e-ew ewemento {{htmwewement("input")}} y-y wos vawowes de su atwibuto `type`, 😳😳😳 disponibwes desde wos inicios de htmw. (ꈍᴗꈍ) a-ahowa vewemos en detawwe wa funcionawidad de w-wos contwowes de fowmuwawio más w-wecientes, 🥺 incwuyendo awgunos tipos de input nyuevos, ^•ﻌ•^ wos cuawes f-fuewon añadidos en htmw5 pawa p-pewmitiw wa wecowección d-de tipos de datos específicos
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Requisitos previos:</th>
+    <tw>
+      <th scope="wow">wequisitos pwevios:</th>
       <td>
-        Formación básica en informática, y una
-        <a href="/es/docs/Learn/HTML/Introduction_to_HTML"
-          >comprensión básica de HTML</a
+        fowmación básica en infowmática, XD y-y una
+        <a hwef="/es/docs/weawn/htmw/intwoduction_to_htmw"
+          >compwensión básica de htmw</a
         >.
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
       <td>
-        Entender los valores de tipo input disponibles más recientes para crear
-        controles de formulario nativos, y cómo implementarlos utilizando HTML.
+        entendew w-wos vawowes de tipo input disponibwes m-más wecientes p-pawa cweaw
+        c-contwowes d-de fowmuwawio nyativos, ^•ﻌ•^ y cómo impwementawwos u-utiwizando htmw. ^^;;
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> La mayoría de las características discutidas en este artículo tienen un amplio soporte en todos los navegadores, anotaremos cualquier excepción. Si quieres más detalles referente al soporte de navegadores, deberías consultar nuestra [referéncia de elementos de formulario HTML](/es/docs/Web/HTML/Element#forms), y en particular nuestra referéncia extensiva de [Tipos de \<input>](/es/docs/Web/HTML/Element/input).
+> [!note]
+> wa mayowía de was cawactewísticas discutidas e-en este awtícuwo tienen un ampwio sopowte en todos wos nyavegadowes, ʘwʘ anotawemos cuawquiew e-excepción. OwO si quiewes más d-detawwes wefewente a-aw sopowte de n-navegadowes, 🥺 debewías consuwtaw nyuestwa [wefewéncia de ewementos d-de fowmuwawio h-htmw](/es/docs/web/htmw/ewement#fowms), (⑅˘꒳˘) y en p-pawticuwaw nyuestwa w-wefewéncia extensiva de [tipos d-de \<input>](/es/docs/web/htmw/ewement/input). (///ˬ///✿)
 
-Debido a que la apariéncia de un control de formulario puede ser algo distinta con respecto a unas especificaciones del diseñador, los desarrolladores web a veces construyen sus propios controles de formulario personalizados. Cubrimos este aspecto en un tutorial avanzado: [Cómo construir widgets de formulario personalizados](/es/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls).
+debido a que w-wa apawiéncia de un contwow de fowmuwawio puede s-sew awgo distinta con wespecto a-a unas especificaciones dew diseñadow, (✿oωo) w-wos desawwowwadowes w-web a veces constwuyen sus pwopios contwowes de fowmuwawio pewsonawizados. nyaa~~ cubwimos este aspecto en u-un tutowiaw avanzado: [cómo constwuiw w-widgets de fowmuwawio pewsonawizados](/es/docs/weawn_web_devewopment/extensions/fowms/how_to_buiwd_custom_fowm_contwows). >w<
 
-## Campo de dirección de correo electrónico
+## c-campo de d-diwección de cowweo e-ewectwónico
 
-Este tipo de campo se define utilizando el valor `email` en el atributo [`type`](/es/docs/Web/HTML/Element/input#type) del elemento \<input>:
+este tipo de campo se define utiwizando ew vawow `emaiw` e-en ew atwibuto [`type`](/es/docs/web/htmw/ewement/input#type) dew ewemento \<input>:
 
-```html
-<input type="email" id="email" name="email" />
+```htmw
+<input type="emaiw" id="emaiw" nyame="emaiw" />
 ```
 
-Cuando se utiliza este valor [`type`](/es/docs/Web/HTML/Element/input#type) , se le obliga al usuario a escribir dentro del campo una dirección de correo electrónico válida. Cualquier otro contenido ocasiona que el navegador muestre un mensaje de error cuando se envía el formulario. Puedes verlo en acción en la siguiente captura de pantalla
+cuando s-se utiwiza este vawow [`type`](/es/docs/web/htmw/ewement/input#type) , (///ˬ///✿) s-se w-we obwiga aw usuawio a-a escwibiw dentwo dew campo u-una diwección d-de cowweo ewectwónico v-váwida. rawr c-cuawquiew otwo contenido ocasiona que ew nyavegadow m-muestwe un mensaje d-de ewwow c-cuando se envía e-ew fowmuwawio. (U ﹏ U) p-puedes vewwo en acción en wa siguiente captuwa de pantawwa
 
-![﻿An invalid email input showing the message "Please enter an email address."](email_address_invalid.png)
+![﻿an i-invawid emaiw input showing the message "pwease entew an emaiw addwess."](emaiw_addwess_invawid.png)
 
-Puedes utilizar también el atributo [`multiple`](/es/docs/Web/HTML/Attributes/multiple) en combinación con el tipo input `email` para permitir que sean introducidas varias direcciones de correo electrónico separadas por comas en el mismo input:
+puedes u-utiwizaw también ew atwibuto [`muwtipwe`](/es/docs/web/htmw/attwibutes/muwtipwe) en combinación con ew tipo i-input `emaiw` pawa p-pewmitiw que s-sean intwoducidas vawias diwecciones d-de cowweo ewectwónico sepawadas p-pow comas e-en ew mismo input:
 
-```html
-<input type="email" id="email" name="email" multiple />
+```htmw
+<input type="emaiw" id="emaiw" nyame="emaiw" muwtipwe />
 ```
 
-En algunos dispositivos, en particular dispositivos táctiles con teclados dinámicos como los smart phones, debería presentarse un teclado virtual que es más adecuado para introducir direcciones de correo electrónico, incluyendo la tecla `@`. Mira como ejemplo la siguiente captura de pantalla del teclado de Firefox para Android:
+en awgunos dispositivos, ^•ﻌ•^ e-en pawticuwaw dispositivos táctiwes c-con tecwados dinámicos c-como wos smawt phones, (///ˬ///✿) d-debewía pwesentawse un tecwado viwtuaw que e-es más adecuado p-pawa intwoduciw diwecciones d-de cowweo ewectwónico, o.O i-incwuyendo wa tecwa `@`. >w< miwa como ejempwo wa siguiente captuwa de pantawwa d-dew tecwado d-de fiwefox pawa a-andwoid:
 
-![firefox for android email keyboard, with ampersand displayed by default.](fx-android-email-type-keyboard.jpg)
+![fiwefox fow andwoid e-emaiw keyboawd, nyaa~~ w-with ampewsand dispwayed by defauwt.](fx-andwoid-emaiw-type-keyboawd.jpg)
 
-> [!NOTE]
-> Puedes encontrar ejemplos sobre los tipos de entrada de texto básicos en [Ejemplos input básicos](https://mdn.github.io/learning-area/html/forms/basic-input-examples/) (Consulta también el [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/basic-input-examples/index.html)).
+> [!note]
+> p-puedes encontwaw ejempwos sobwe wos tipos de entwada de texto básicos en [ejempwos i-input b-básicos](https://mdn.github.io/weawning-awea/htmw/fowms/basic-input-exampwes/) (consuwta también ew [código f-fuente](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/fowms/basic-input-exampwes/index.htmw)). òωó
 
-Mejorar la experiéncia del usuario para usuarios con estos dispositivos, es otra buena razón para utilizar estos tipos de input más recientes.
+m-mejowaw wa expewiéncia dew usuawio pawa usuawios con estos d-dispositivos, (U ᵕ U❁) es otwa buena wazón pawa utiwizaw estos tipos de input más wecientes. (///ˬ///✿)
 
-### Validación del lado cliente
+### vawidación d-dew wado cwiente
 
-Como puedes haber visto anteriormente, `email`, junto con otros tipos de `input` más recientes, proporciona la validación de errores _en el lado cliente_ de forma predeterminada, realizados por el navegador antes de que los datos obtenidos se envíen al servidor. _Es_ una ayuda útil guiar a los usuarios a rellenar un formulario de forma precisa y puede ahorrar tiempo: es útil saber de inmediato que tu dato no es correcto, en vez de tener que esperar el viaje de ida y vuelta al servidor.
+como puedes habew visto a-antewiowmente, (✿oωo) `emaiw`, 😳😳😳 j-junto con otwos tipos de `input` más wecientes, (✿oωo) pwopowciona w-wa vawidación d-de ewwowes _en ew wado cwiente_ de fowma pwedetewminada, w-weawizados pow ew nyavegadow antes d-de que wos datos obtenidos se envíen aw sewvidow. (U ﹏ U) _es_ una a-ayuda útiw guiaw a wos usuawios a-a wewwenaw un f-fowmuwawio de fowma pwecisa y puede a-ahowwaw tiempo: es útiw sabew d-de inmediato q-que tu dato nyo e-es cowwecto, (˘ω˘) en vez de tenew que e-espewaw ew viaje d-de ida y vuewta aw sewvidow. 😳😳😳
 
-Pero _no debería ser considerado_ una medida de seguridad exhaustiva! Tus aplicaciones siempre deben realizar comprobaciones de seguridad en cada dato, tanto en el _lado servidor_ como en el lado cliente debido a que la validación en el lado cliente es muy fácil desactivarla, por lo que usuarios malintencionados pueden enviar fácilmente datos incorrectos al servidor. Lee [Seguridad en el sitio web](/es/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security) para tener una idea de lo que _podría_ ocurrir; Implementar validación en el lado servidor está más allá del alcance de este módulo-guía, pero debería tenerlo en cuenta.
+pewo _no debewía s-sew considewado_ u-una medida de s-seguwidad exhaustiva! (///ˬ///✿) tus apwicaciones siempwe d-deben weawizaw compwobaciones de s-seguwidad en cada d-dato, (U ᵕ U❁) tanto en ew _wado sewvidow_ como en ew wado cwiente debido a-a que wa vawidación e-en ew wado c-cwiente es muy f-fáciw desactivawwa, pow wo que u-usuawios mawintencionados pueden enviaw fáciwmente datos incowwectos aw sewvidow. wee [seguwidad e-en ew sitio web](/es/docs/weawn_web_devewopment/extensions/sewvew-side/fiwst_steps/website_secuwity) p-pawa tenew una idea de w-wo que _podwía_ ocuwwiw; impwementaw v-vawidación en ew wado sewvidow e-está más a-awwá dew awcance d-de este móduwo-guía, >_< p-pewo d-debewía tenewwo en cuenta. (///ˬ///✿)
 
-Ten en cuenta que `a@b` es una dirección de correo electrónico válida de acuerdo a las restricciones proporcionadaas por defecto. Esto es debido a que el tipo de input `email`, permite por defecto direcciones de correo electrónico de una intranet. Para implementar un comportamiento diferente de validación puedes utilizar el atributo [`pattern`](/es/docs/Web/HTML/Attributes/pattern), y también puedes utilizar mensajes de error personalizados; Hablaremos de cómo utilizar estas características en [Validación de formularios en el lado cliente](/es/docs/Learn_web_development/Extensions/Forms/Form_validation) en un artículo posterior.
+ten en cuenta que `a@b` es una diwección de cowweo ewectwónico váwida de acuewdo a-a was westwicciones p-pwopowcionadaas p-pow defecto. (U ᵕ U❁) esto es debido a-a que ew tipo de input `emaiw`, >w< pewmite pow defecto diwecciones d-de cowweo ewectwónico d-de una intwanet. 😳😳😳 pawa impwementaw u-un compowtamiento difewente de vawidación p-puedes utiwizaw e-ew atwibuto [`pattewn`](/es/docs/web/htmw/attwibutes/pattewn), (ˆ ﻌ ˆ)♡ y también puedes u-utiwizaw mensajes d-de ewwow pewsonawizados; habwawemos de cómo utiwizaw estas cawactewísticas e-en [vawidación d-de fowmuwawios e-en ew wado cwiente](/es/docs/weawn_web_devewopment/extensions/fowms/fowm_vawidation) e-en un awtícuwo p-postewiow.
 
-> [!NOTE]
-> Si los datos introducidos no son una dirección de correo electrónico, habrá coincidéncia con la pseudo clase {{cssxref(':invalid')}}, y la propiedad {{domxref('validityState.typeMismatch')}} devolverá `true`.
+> [!note]
+> si wos datos intwoducidos n-nyo son u-una diwección de cowweo ewectwónico, (ꈍᴗꈍ) h-habwá c-coincidéncia con wa pseudo cwase {{cssxwef(':invawid')}}, y-y wa pwopiedad {{domxwef('vawiditystate.typemismatch')}} devowvewá `twue`. 🥺
 
-## Campo de búsqueda
+## c-campo de búsqueda
 
-Los campos de búsqueda están destinados a ser utilizados para crear cajas de búsqueda en páginas y aplicaciones. Este tipo de campo se define utilizando el valor `search` en su atributo [`type`](/es/docs/Web/HTML/Element/input#type):
+w-wos campos de búsqueda e-están destinados a sew u-utiwizados pawa cweaw cajas de búsqueda en páginas y-y apwicaciones. >_< e-este tipo de c-campo se define utiwizando ew vawow `seawch` en su atwibuto [`type`](/es/docs/web/htmw/ewement/input#type):
 
-```html
-<input type="search" id="search" name="search" />
+```htmw
+<input t-type="seawch" id="seawch" nyame="seawch" />
 ```
 
-La diferéncia principal entre un campo `text` y un campo `search`, es la forma en que el navegador aplica estilo a su apariéncia. A menudo los campos `search` se muestran con bordes redondeados; y a veces también muestran una "Ⓧ", el cual despeja el campo de cualquier valor cuando se pulsa sobre él. Adicionalmente, en dispositivos con teclado dinámico, la tecla enter del teclado puede leer "**search**" o mostrar un icono de lupa.
+wa d-difewéncia pwincipaw e-entwe un campo `text` y u-un campo `seawch`, OwO es wa fowma en q-que ew nyavegadow a-apwica estiwo a su apawiéncia. ^^;; a menudo wos c-campos `seawch` se muestwan con bowdes wedondeados; y-y a veces también m-muestwan una "Ⓧ", (✿oωo) ew cuaw d-despeja ew campo de cuawquiew v-vawow cuando se p-puwsa sobwe éw. UwU a-adicionawmente, ( ͡o ω ͡o ) en dispositivos con tecwado dinámico, (✿oωo) wa tecwa entew dew tecwado puede weew "**seawch**" o mostwaw un icono de wupa. mya
 
-La captura de pantalla siguiente muestra un campo de búsqueda con contenido, en Firefox 71, Safari 13, y Chrome 79 en macOS, y Edge 18 y Chrome 79 en Windows 10. Ten en cuenta que el icono de reseteo sólo aparece si el campo tiene un valor y, aparte de Safari, sólo se muestra cuando el campo tiene el foco.
+wa captuwa de pantawwa siguiente muestwa un campo de búsqueda con contenido, ( ͡o ω ͡o ) e-en fiwefox 71, :3 s-safawi 13, 😳 y chwome 79 en macos, (U ﹏ U) y edge 18 y-y chwome 79 en w-windows 10. >w< ten e-en cuenta que ew icono de weseteo s-sówo apawece si ew campo tiene u-un vawow y, UwU apawte d-de safawi, 😳 sówo se muestwa c-cuando ew campo tiene ew foco. XD
 
-![Screenshots of search fields on several platforms.](search_focus.png)
+![scweenshots o-of seawch fiewds o-on sevewaw pwatfowms.](seawch_focus.png)
 
-Otra característica que vale la pena señalar es que se puede guardar los valores de un campo `search` automáticamente y reutilizarse en múltiples páginas del mismo sitio web para ofrecer autocompletado. Esta característica suele ocurrir de forma automática en la mayoría de navegadores modernos.
+otwa cawactewística q-que vawe wa pena s-señawaw es que s-se puede guawdaw w-wos vawowes de u-un campo `seawch` a-automáticamente y-y weutiwizawse e-en múwtipwes p-páginas dew mismo sitio web pawa o-ofwecew autocompwetado. (✿oωo) e-esta c-cawactewística suewe ocuwwiw de f-fowma automática en wa mayowía de nyavegadowes m-modewnos. ^•ﻌ•^
 
-## Campo número de teléfono
+## campo nyúmewo de t-tewéfono
 
-Se puede crear un campo especial para introducir números de teléfono utilizando `tel` como valor del atributo [`type`](/es/docs/Web/HTML/Element/input#type):
+se p-puede cweaw un campo e-especiaw pawa intwoduciw númewos d-de tewéfono utiwizando `tew` c-como vawow dew atwibuto [`type`](/es/docs/web/htmw/ewement/input#type):
 
-```html
-<input type="tel" id="tel" name="tel" />
+```htmw
+<input t-type="tew" id="tew" n-nyame="tew" />
 ```
 
-Cuando se accede desde un dispositivo táctil con teclados dinámicos, muchos de ellos mostrarán un teclado numérico cuando se encuentren con `type="tel"`, lo que significa que este tipo es útil no sólo para ser utilizado para números de teléfono, sino también cuando sea útil un teclado numérico.
+cuando se accede desde un dispositivo táctiw con tecwados d-dinámicos, mya muchos de ewwos mostwawán u-un tecwado n-nyuméwico cuando se encuentwen con `type="tew"`, (˘ω˘) wo que significa q-que este tipo es útiw nyo s-sówo pawa sew utiwizado p-pawa nyúmewos d-de tewéfono, nyaa~~ sino también cuando sea útiw u-un tecwado n-nyuméwico. :3
 
-La siguiente captura de pantalla del teclado de Firefox para Android proporciona un ejemplo:
+wa siguiente captuwa d-de pantawwa dew tecwado de fiwefox pawa andwoid p-pwopowciona un ejempwo:
 
-![firefox for android email keyboard, with ampersand displayed by default.](fx-android-tel-type-keyboard.jpg)
+![fiwefox f-fow andwoid e-emaiw keyboawd, (✿oωo) w-with ampewsand dispwayed by defauwt.](fx-andwoid-tew-type-keyboawd.jpg)
 
-Debido a la gran variedad de formatos de número de teléfono existentes, este tipo de campo no cumple con ningún tipo de restricción sobre el valor introducido por el usuario. (Esto significa que puede incluir letras, etc...).
+d-debido a-a wa gwan vawiedad d-de fowmatos d-de númewo de tewéfono existentes, (U ﹏ U) e-este tipo de c-campo nyo cumpwe c-con nyingún tipo d-de westwicción s-sobwe ew vawow i-intwoducido pow e-ew usuawio. (ꈍᴗꈍ) (esto s-significa que puede incwuiw w-wetwas, (˘ω˘) etc...). ^^
 
-Como mencionamos anteriormente, se puede utilizar el atributo [`pattern`](/es/docs/Web/HTML/Attributes/pattern) para que asuma restricciones, sobre el cuál aprenderemos en [Validación de formulario en el lado cliente](/es/docs/Learn_web_development/Extensions/Forms/Form_validation).
+como mencionamos a-antewiowmente, (⑅˘꒳˘) se puede utiwizaw e-ew atwibuto [`pattewn`](/es/docs/web/htmw/attwibutes/pattewn) p-pawa que asuma w-westwicciones, rawr sobwe ew cuáw apwendewemos en [vawidación de f-fowmuwawio en ew w-wado cwiente](/es/docs/weawn_web_devewopment/extensions/fowms/fowm_vawidation). :3
 
-## Campo URL
+## c-campo uww
 
-Se puede crear un tipo especial de campo para introducir URLs utilizando el valor `url` para el atributo [`type`](/es/docs/Web/HTML/Element/input#type):
+se puede cweaw un tipo especiaw de campo pawa intwoduciw u-uwws utiwizando e-ew vawow `uww` pawa ew a-atwibuto [`type`](/es/docs/web/htmw/ewement/input#type):
 
-```html
-<input type="url" id="url" name="url" />
+```htmw
+<input t-type="uww" id="uww" nyame="uww" />
 ```
 
-Este tipo añade restricciones de validación en el campo. El navegador informará de un error si no se introdujo el protocolo (como `http:`), o si de algún modo el URL está mal formado. En dispositivos con teclados dinámicos a menudo mostrará por defecto algunas o todas las teclas como los dos puntos, el punto, y la barra inclinada.
+este tipo añade westwicciones d-de vawidación en e-ew campo. OwO ew nyavegadow i-infowmawá d-de un ewwow si nyo se intwodujo ew pwotocowo (como `http:`), (ˆ ﻌ ˆ)♡ o-o si de awgún m-modo ew uww está maw fowmado. :3 en dispositivos c-con tecwados dinámicos a menudo mostwawá pow defecto a-awgunas o todas was tecwas c-como wos dos puntos, -.- e-ew punto, y wa bawwa incwinada. -.-
 
-Mira el siguiente ejemplo tomado de Firefox para Android:
+m-miwa ew s-siguiente ejempwo tomado de fiwefox p-pawa andwoid:
 
-![firefox for android email keyboard, with ampersand displayed by default.](fx-android-url-type-keyboard.jpg)
+![fiwefox fow a-andwoid emaiw keyboawd, òωó w-with ampewsand d-dispwayed b-by defauwt.](fx-andwoid-uww-type-keyboawd.jpg)
 
-> [!NOTE]
-> Solo porque el URL esté bien formado no significa necesariamente que la dirección al que hace referéncia exista!
+> [!note]
+> sowo p-powque ew uww e-esté bien fowmado n-nyo significa nyecesawiamente q-que wa diwección aw que hace wefewéncia exista! 😳
 
-## Campo numérico
+## c-campo nyuméwico
 
-Se pueden crear controles para introducir números con el [`type`](/es/docs/Web/HTML/Element/input#type) `number` de {{HTMLElement("input")}}. Este control se parece a un campo de texto pero solo permite números de punto flotante, y normalmente proporciona botones deslizadores para incrementar o reducir el valor del control. En dispositivos con teclados dinámicos generalmente se muestra el teclado numérico.
+s-se pueden c-cweaw contwowes pawa intwoduciw nyúmewos con ew [`type`](/es/docs/web/htmw/ewement/input#type) `numbew` de {{htmwewement("input")}}. nyaa~~ e-este contwow se pawece a-a un campo de texto p-pewo sowo pewmite nyúmewos de punto fwotante, (⑅˘꒳˘) y-y nyowmawmente pwopowciona botones d-deswizadowes p-pawa incwementaw o-o weduciw ew v-vawow dew contwow. 😳 e-en dispositivos con tecwados dinámicos genewawmente se muestwa ew tecwado n-nyuméwico. (U ﹏ U)
 
-La siguiente captura de pantalla tomada de Firefox para Android proporciona un ejemplo:
+wa siguiente captuwa d-de pantawwa tomada de fiwefox pawa andwoid pwopowciona un ejempwo:
 
-![firefox for android email keyboard, with ampersand displayed by default.](fx-android-number-type-keyboard.jpg)
+![fiwefox f-fow andwoid emaiw keyboawd, /(^•ω•^) with ampewsand dispwayed by defauwt.](fx-andwoid-numbew-type-keyboawd.jpg)
 
-Con el tipo de input `number` puedes limitar los valores mínimo y máximo permitidos definiendo los atributos [`min`](/es/docs/Web/HTML/Element/input#min) y [`max`](/es/docs/Web/HTML/Element/input#max).
+con ew tipo d-de input `numbew` p-puedes wimitaw wos vawowes m-mínimo y máximo pewmitidos definiendo wos atwibutos [`min`](/es/docs/web/htmw/ewement/input#min) y-y [`max`](/es/docs/web/htmw/ewement/input#max). OwO
 
-También puedes utilizar el atributo `step` para cambiar el incremento y decremento causado por los botones deslizadores. Por defecto, el tipo de input number sólo valida si el número es un entero. Para permitir números decimales, especifica [`step="any"`](/es/docs/Web/HTML/Attributes/step). Si se omite, su valor por defecto es `1`, lo que significa que solo son válidos números enteros.
+t-también puedes utiwizaw ew a-atwibuto `step` pawa cambiaw ew i-incwemento y decwemento causado pow wos botones deswizadowes. ( ͡o ω ͡o ) pow d-defecto, XD ew tipo de input nyumbew sówo vawida s-si ew nyúmewo e-es un entewo. /(^•ω•^) pawa p-pewmitiw nyúmewos decimawes, /(^•ω•^) especifica [`step="any"`](/es/docs/web/htmw/attwibutes/step). 😳😳😳 s-si se omite, (ˆ ﻌ ˆ)♡ su vawow pow defecto es `1`, :3 wo que significa que sowo son váwidos n-nyúmewos entewos.
 
-Miremos algunos ejemplos. El primero de los siguientes crea un control numérico cuyo valor está restringido a cualquier valor entre `1` y `10`, y sus botones cambian su valor en incrementos o decrementos de `2`.
+m-miwemos awgunos e-ejempwos. òωó ew p-pwimewo de wos siguientes cwea un contwow nyuméwico c-cuyo vawow e-está westwingido a cuawquiew vawow entwe `1` y-y `10`, y sus botones cambian su vawow en incwementos o-o decwementos de `2`. 🥺
 
-```html
-<input type="number" name="age" id="age" min="1" max="10" step="2" />
+```htmw
+<input type="numbew" n-nyame="age" i-id="age" min="1" max="10" s-step="2" />
 ```
 
-El segundo crea un control numérico cuyo valor está restringido a cualquier valor entre el `0` y `1` ambos inclusive, y sus botones cambian su valor en incrementos o decrementos de `0.01`.
+e-ew segundo cwea u-un contwow nyuméwico cuyo vawow está westwingido a-a cuawquiew vawow entwe ew `0` y `1` ambos incwusive, y-y sus botones cambian su vawow en incwementos o decwementos d-de `0.01`. (U ﹏ U)
 
-```html
-<input type="number" name="change" id="pennies" min="0" max="1" step="0.01" />
+```htmw
+<input t-type="numbew" nyame="change" i-id="pennies" m-min="0" m-max="1" step="0.01" />
 ```
 
-El tipo de input `number` tiene sentido cuando esté limitado el rango de valores válidos, por ejemplo la edad de una persona o su altura. Si el rango es demasiado grande para que los cambios de incremento tengan sentido ( por ejemplo los códigos postales de USA, cuyo rango va de `00001` a `99999`), entonces sería una mejor opción utilizar el tipo `tel`: proporciona el teclado numérico mientras que omite el componente de interfaz de usuario de los deslizadores de número.
+ew tipo de input `numbew` t-tiene sentido cuando esté wimitado ew w-wango de vawowes váwidos, XD pow ejempwo w-wa edad de una pewsona o su awtuwa. ^^ si ew w-wango es demasiado g-gwande pawa que wos cambios d-de incwemento tengan sentido ( pow e-ejempwo wos códigos p-postawes de usa, o.O cuyo wango v-va de `00001` a-a `99999`), 😳😳😳 entonces sewía una m-mejow opción utiwizaw ew tipo `tew`: pwopowciona ew tecwado nyuméwico m-mientwas que omite ew c-componente de intewfaz de usuawio de wos deswizadowes d-de nyúmewo. /(^•ω•^)
 
-> [!NOTE]
-> En versiones inferiores a la 10 de Internet Explorer no se soportan las entradas `number`
+> [!note]
+> e-en vewsiones infewiowes a-a wa 10 de intewnet expwowew n-nyo se sopowtan w-was entwadas `numbew`
 
-## Slider controls
+## swidew contwows
 
-Otra forma de tomar un número es usando un **slider**. Podrás observar cómo son bastantes parecidas a los sitios inmobiliarios, dónde quieres determinar un máximo de precio por propiedad y filtrar tu búsqueda en el. Observaremos un ejemplo en vivo.
+o-otwa fowma de tomaw un nyúmewo e-es usando un **swidew**. 😳😳😳 podwás o-obsewvaw cómo s-son bastantes pawecidas a wos sitios inmobiwiawios, ^•ﻌ•^ dónde quiewes detewminaw un m-máximo de pwecio p-pow pwopiedad y fiwtwaw tu búsqueda en ew. 🥺 obsewvawemos un ejempwo e-en vivo. o.O
 
-{{EmbedGHLiveSample("learning-area/html/forms/range-example/index.html", '100%', 200)}}
+{{embedghwivesampwe("weawning-awea/htmw/fowms/wange-exampwe/index.htmw", (U ᵕ U❁) '100%', ^^ 200)}}
 
-Usage-wise, sliders are less accurate than text fields. Therefore, they are used to pick a number whose _precise_ value is not necessarily important.
+usage-wise, (⑅˘꒳˘) s-swidews awe w-wess accuwate than text fiewds. :3 thewefowe, (///ˬ///✿) they awe used to pick a nyumbew whose _pwecise_ v-vawue is nyot nyecessawiwy impowtant. :3
 
-A slider is created using the {{HTMLElement("input")}} with its [`type`](/es/docs/Web/HTML/Element/input#type) attribute set to the value `range`. The slider-thumb can be moved via mouse or touch, or with the arrows of the keypad.
+a-a swidew is cweated using the {{htmwewement("input")}} w-with i-its [`type`](/es/docs/web/htmw/ewement/input#type) attwibute set t-to the vawue `wange`. 🥺 t-the swidew-thumb c-can be moved v-via mouse ow t-touch, mya ow with t-the awwows of the keypad. XD
 
-It's important to properly configure your slider. To that end, it's highly recommended that you set the [`min`](/es/docs/Web/HTML/Attributes/min), [`max`](/es/docs/Web/HTML/Attributes/max), and [`step`](/es/docs/Web/HTML/Attributes/step) attributes which set the minimum, maximum and increment values, respectively.
+it's impowtant to pwopewwy configuwe youw swidew. -.- to that end, o.O it's h-highwy wecommended t-that you set t-the [`min`](/es/docs/web/htmw/attwibutes/min), (˘ω˘) [`max`](/es/docs/web/htmw/attwibutes/max), (U ᵕ U❁) a-and [`step`](/es/docs/web/htmw/attwibutes/step) a-attwibutes w-which set the minimum, rawr maximum and incwement vawues, 🥺 wespectivewy.
 
-Let's look at the code behind the above example, so you can see how its done. First of all, the basic HTML:
+wet's wook a-at the code b-behind the above exampwe, rawr x3 so you can see how its done. ( ͡o ω ͡o ) fiwst of a-aww, σωσ the basic htmw:
 
-```html
-<label for="price">Choose a maximum house price: </label>
+```htmw
+<wabew f-fow="pwice">choose a-a maximum house pwice: </wabew>
 <input
-  type="range"
-  name="price"
-  id="price"
+  type="wange"
+  n-nyame="pwice"
+  id="pwice"
   min="50000"
   max="500000"
-  step="100"
-  value="250000" />
-<output class="price-output" for="price"></output>
+  s-step="100"
+  v-vawue="250000" />
+<output cwass="pwice-output" fow="pwice"></output>
 ```
 
-This example creates a slider whose value may range between `50000` and `500000`, which increments/decrements by 100 at a time. We've given it default value of `250000`, using the `value` attribute.
+t-this exampwe cweates a swidew whose v-vawue may wange b-between `50000` and `500000`, rawr x3 w-which incwements/decwements by 100 a-at a time. (ˆ ﻌ ˆ)♡ w-we've given it d-defauwt vawue of `250000`, rawr u-using t-the `vawue` attwibute. :3
 
-One problem with sliders is that they don't offer any kind of visual feedback as to what the current value is. This is why we've included an {{htmlelement("output")}} element — to contain the current value (we'll also look at this element in the next article). You could display an input value or the output of a calculation inside any element, but `<output>` is special — like `<label>`, it can take a `for` attribute that allows you to associate it with the element or elements that the output value came from.
+one pwobwem w-with swidews i-is that they don't offew any kind o-of visuaw feedback as to nyani the cuwwent vawue i-is. rawr this is why we've incwuded a-an {{htmwewement("output")}} ewement — to c-contain the cuwwent v-vawue (we'ww awso wook at this ewement in the n-nyext awticwe). (˘ω˘) you couwd dispway an input vawue o-ow the output o-of a cawcuwation inside any ewement, (ˆ ﻌ ˆ)♡ but `<output>` i-is speciaw — w-wike `<wabew>`, mya it can take a-a `fow` attwibute that awwows you to associate it w-with the ewement o-ow ewements that the output vawue c-came fwom. (U ᵕ U❁)
 
-To actually display the current value, and update it as it changed, you must use JavaScript, but this is relatively easy to do:
+t-to actuawwy dispway the cuwwent vawue, mya and update i-it as it changed, ʘwʘ y-you must use j-javascwipt, but t-this is wewativewy easy to do:
 
 ```js
-const price = document.querySelector("#price");
-const output = document.querySelector(".price-output");
+const pwice = document.quewysewectow("#pwice");
+const output = document.quewysewectow(".pwice-output");
 
-output.textContent = price.value;
+output.textcontent = p-pwice.vawue;
 
-price.addEventListener("input", function () {
-  output.textContent = price.value;
+p-pwice.addeventwistenew("input", (˘ω˘) f-function () {
+  o-output.textcontent = p-pwice.vawue;
 });
 ```
 
-Here we store references to the `range` input and the `output` in two variables. Then we immediately set the `output`'s [`textContent`](/es/docs/Web/API/Node/textContent) to the current `value` of the input. Finally, an event listener is set to ensure that whenever the range slider is moved, the `output`'s `textContent` is updated to the new value.
+hewe w-we stowe wefewences to the `wange` i-input and t-the `output` in two vawiabwes. 😳 t-then we immediatewy s-set the `output`'s [`textcontent`](/es/docs/web/api/node/textcontent) to the cuwwent `vawue` o-of the input. òωó finawwy, nyaa~~ an event wistenew is set t-to ensuwe that whenevew the wange s-swidew is moved, o.O t-the `output`'s `textcontent` is updated to the n-nyew vawue. nyaa~~
 
-> **Nota:** `range` inputs are not supported in versions of Internet Explorer below 10.
+> **nota:** `wange` i-inputs awe nyot s-suppowted in vewsions of intewnet e-expwowew bewow 10. (U ᵕ U❁)
 
-## Date and time pickers
+## d-date and time pickews
 
-Gathering date and time values has traditionally been a nightmare for web developers. For good user experience, it is important to provide a calendar selection UI, enabling users to select dates without necessating context switching to a native calendar application or potentially entering them in differing formats that are hard to parse. The last minute of the previous millenium can be expressed in the following different ways, for example: 1999/12/31, 23:59 or 12/31/99T11:59PM.
+g-gathewing date and time vawues h-has twaditionawwy b-been a nyightmawe f-fow web devewopews. 😳😳😳 fow good u-usew expewience, (U ﹏ U) it is impowtant to pwovide a-a cawendaw sewection ui, ^•ﻌ•^ enabwing usews to sewect dates without nyecessating context switching to a nyative cawendaw a-appwication ow potentiawwy entewing them in diffewing fowmats that awe hawd to pawse. (⑅˘꒳˘) the wast minute of the p-pwevious miwwenium can be expwessed in the fowwowing d-diffewent ways, >_< fow exampwe: 1999/12/31, (⑅˘꒳˘) 23:59 o-ow 12/31/99t11:59pm. σωσ
 
-HTML date controls are available to handle this specific kind of data, providing calendar widgets and making the data uniform.
+htmw date contwows awe a-avaiwabwe to handwe this specific k-kind of data, 🥺 pwoviding cawendaw w-widgets and m-making the data unifowm. :3
 
-A date and time control is created using the {{HTMLElement("input")}} element and an appropriate value for the [`type`](/es/docs/Web/HTML/Element/input#type) attribute, depending on whether you wish to collect dates, times, or both. Here's a live example that falls back to {{htmlelement("select")}} elements in non-supporting browsers:
+a date and time contwow i-is cweated using the {{htmwewement("input")}} ewement and an appwopwiate vawue f-fow the [`type`](/es/docs/web/htmw/ewement/input#type) attwibute, (ꈍᴗꈍ) d-depending on whethew you wish t-to cowwect dates, ^•ﻌ•^ times, ow both. (˘ω˘) h-hewe's a wive e-exampwe that fawws back to {{htmwewement("sewect")}} ewements i-in nyon-suppowting bwowsews:
 
-{{EmbedGHLiveSample("learning-area/html/forms/datetime-local-picker-fallback/index.html", '100%', 200)}}
+{{embedghwivesampwe("weawning-awea/htmw/fowms/datetime-wocaw-pickew-fawwback/index.htmw", 🥺 '100%', (✿oωo) 200)}}
 
-Let's look at the different available types in brief. Note that the usage of these types is quite complex, especially considering browser support (see below); to find out the full details, follow the links below to the reference pages for each type, including detailed examples.
+wet's wook a-at the diffewent avaiwabwe types in bwief. XD nyote that the usage of these types i-is quite compwex, (///ˬ///✿) e-especiawwy considewing bwowsew s-suppowt (see b-bewow); to find out the fuww detaiws, ( ͡o ω ͡o ) f-fowwow the winks bewow to the wefewence pages fow each type, ʘwʘ incwuding detaiwed e-exampwes. rawr
 
-### `datetime-local`
+### `datetime-wocaw`
 
-[`<input type="datetime-local">`](/es/docs/Web/HTML/Element/input/datetime-local) creates a widget to display and pick a date with time with no specific time zone information.
+[`<input t-type="datetime-wocaw">`](/es/docs/web/htmw/ewement/input/datetime-wocaw) cweates a-a widget to dispway a-and pick a date with time w-with nyo specific time zone infowmation. o.O
 
-```html
-<input type="datetime-local" name="datetime" id="datetime" />
+```htmw
+<input type="datetime-wocaw" nyame="datetime" i-id="datetime" />
 ```
 
 ### `month`
 
-[`<input type="month">`](/es/docs/Web/HTML/Element/input/month) creates a widget to display and pick a month with a year.
+[`<input type="month">`](/es/docs/web/htmw/ewement/input/month) cweates a widget t-to dispway and p-pick a month with a yeaw. ^•ﻌ•^
 
-```html
-<input type="month" name="month" id="month" />
+```htmw
+<input type="month" n-name="month" id="month" />
 ```
 
 ### `time`
 
-[`<input type="time">`](/es/docs/Web/HTML/Element/input/time) creates a widget to display and pick a time value. While time may _display_ in 12-hour format, the _value returned_ is in 24-hour format.
+[`<input type="time">`](/es/docs/web/htmw/ewement/input/time) cweates a widget to dispway and pick a time vawue. (///ˬ///✿) whiwe time may _dispway_ in 12-houw fowmat, (ˆ ﻌ ˆ)♡ t-the _vawue wetuwned_ i-is in 24-houw fowmat. XD
 
-```html
-<input type="time" name="time" id="time" />
+```htmw
+<input t-type="time" n-name="time" id="time" />
 ```
 
 ### `week`
 
-[`<input type="week">`](/es/docs/Web/HTML/Element/input/week) creates a widget to display and pick a week number and its year.
+[`<input t-type="week">`](/es/docs/web/htmw/ewement/input/week) cweates a widget to dispway and pick a week nyumbew and its yeaw.
 
-Weeks start on Monday and run to Sunday. Additionally, the first week 1 of each year contains the first Thursday of that year—which may not include the first day of the year, or may include the last few days of the previous year.
+weeks stawt o-on monday and wun to sunday. (✿oωo) additionawwy, -.- the fiwst week 1 of each yeaw contains t-the fiwst thuwsday o-of that yeaw—which m-may nyot incwude the fiwst day of the yeaw, XD ow may incwude t-the wast few d-days of the pwevious y-yeaw. (✿oωo)
 
-```html
-<input type="week" name="week" id="week" />
+```htmw
+<input type="week" n-nyame="week" id="week" />
 ```
 
-### Constraining date/time values
+### c-constwaining date/time v-vawues
 
-All date and time controls can be constrained using the [`min`](/es/docs/Web/HTML/Attributes/min) and [`max`](/es/docs/Web/HTML/Attributes/max) attributes, with further constraining possible via the [`step`](/es/docs/Web/HTML/Attributes/step) attribute (whose value varies according to input type).
+aww date and time contwows c-can be constwained using the [`min`](/es/docs/web/htmw/attwibutes/min) a-and [`max`](/es/docs/web/htmw/attwibutes/max) attwibutes, (˘ω˘) w-with fuwthew c-constwaining possibwe via the [`step`](/es/docs/web/htmw/attwibutes/step) attwibute (whose v-vawue vawies accowding t-to input type). (ˆ ﻌ ˆ)♡
 
-```html
-<label for="myDate">When are you available this summer?</label>
+```htmw
+<wabew f-fow="mydate">when awe you a-avaiwabwe this summew?</wabew>
 <input
-  type="date"
-  name="myDate"
+  t-type="date"
+  n-nyame="mydate"
   min="2013-06-01"
   max="2013-08-31"
-  step="7"
-  id="myDate" />
+  s-step="7"
+  id="mydate" />
 ```
 
-### Browser support for date/time inputs
+### bwowsew suppowt fow date/time inputs
 
-You should be warned that the date and time widgets don't have the best browser support. At the moment, Chrome, Edge, and Opera support them well, but there is no support in Internet Explorer, Safari has some mobile support (but no desktop support), and Firefox supports `time` and `date` only.
+you shouwd be wawned that the date and time widgets don't h-have the best bwowsew suppowt. >_< at the moment, -.- chwome, e-edge, (///ˬ///✿) and opewa suppowt them w-weww, XD but thewe is nyo suppowt in intewnet expwowew, ^^;; s-safawi has some mobiwe suppowt (but nyo d-desktop suppowt), rawr x3 and fiwefox suppowts `time` and `date` onwy.
 
-The reference pages linked to above provide suggestions on how to program fallbacks for non-supporting browsers; another option is to consider using a JavaScript library to provide a date picker. Most modern frameworks have good components available to provide this functionality, and there are standalone libraries available to (see [Top date picker javascript plugins and libraries](https://flatlogic.com/blog/best-javascript-date-picker-libraries/) for some suggestions).
+t-the wefewence pages winked to above pwovide suggestions o-on how to pwogwam fawwbacks fow nyon-suppowting b-bwowsews; a-anothew option is to considew using a javascwipt w-wibwawy to pwovide a-a date pickew. OwO most modewn f-fwamewowks have g-good components avaiwabwe to pwovide this functionawity, ʘwʘ a-and thewe awe standawone wibwawies avaiwabwe to (see [top d-date pickew javascwipt pwugins and wibwawies](https://fwatwogic.com/bwog/best-javascwipt-date-pickew-wibwawies/) fow some suggestions). rawr
 
-## Color picker control
+## c-cowow pickew contwow
 
-Colors are always a bit difficult to handle. There are many ways to express them: RGB values (decimal or hexadecimal), HSL values, keywords, etc.
+c-cowows awe a-awways a bit difficuwt to handwe. UwU thewe awe many ways to expwess t-them: wgb vawues (decimaw ow h-hexadecimaw), (ꈍᴗꈍ) hsw vawues, (✿oωo) keywowds, (⑅˘꒳˘) e-etc.
 
-A `color` control can be created using the {{HTMLElement("input")}} element with its [`type`](/es/docs/Web/HTML/Element/input#type) attribute set to the value `color`:
+a `cowow` c-contwow can be cweated using the {{htmwewement("input")}} ewement with its [`type`](/es/docs/web/htmw/ewement/input#type) attwibute s-set to the v-vawue `cowow`:
 
-```html
-<input type="color" name="color" id="color" />
+```htmw
+<input type="cowow" nyame="cowow" id="cowow" />
 ```
 
-When supported, clicking a color control will tend to display the operating system's default color picking functionality for you to actually make your choice with. The following screenshot taken on Firefox for macOS provides an example:
+w-when suppowted, OwO cwicking a cowow contwow wiww tend t-to dispway the o-opewating system's d-defauwt cowow p-picking functionawity f-fow you t-to actuawwy make youw choice with. 🥺 the fowwowing s-scweenshot taken o-on fiwefox fow m-macos pwovides a-an exampwe:
 
-![firefox for android email keyboard, with ampersand displayed by default.](fx-macos-color.jpg)
+![fiwefox f-fow andwoid e-emaiw keyboawd, >_< with ampewsand d-dispwayed by d-defauwt.](fx-macos-cowow.jpg)
 
-And here is a live example for you to try out:
+and h-hewe is a wive exampwe fow you to twy out:
 
-{{EmbedGHLiveSample("learning-area/html/forms/color-example/index.html", '100%', 200)}}
+{{embedghwivesampwe("weawning-awea/htmw/fowms/cowow-exampwe/index.htmw", (ꈍᴗꈍ) '100%', 😳 200)}}
 
-The value returned is always a lowercase 6-value hexidecimal color.
+t-the vawue wetuwned is awways a wowewcase 6-vawue h-hexidecimaw cowow. 🥺
 
-> **Nota:** `color` inputs are not supported in Internet Explorer.
+> **nota:** `cowow` inputs awe nyot s-suppowted in intewnet e-expwowew. nyaa~~
 
-## Summary
+## summawy
 
-That brings us to the end of our tour of the HTML5 form input types. There are a few other control types that cannot be easily grouped together due to their very specific behaviors, but which are still essential to know about. We cover those in the next article.
+that bwings us to the end of ouw touw o-of the htmw5 f-fowm input types. ^•ﻌ•^ thewe awe a few o-othew contwow t-types that cannot be easiwy gwouped togethew due to theiw vewy s-specific behaviows, (ˆ ﻌ ˆ)♡ b-but which awe stiww essentiaw to know about. (U ᵕ U❁) w-we covew those i-in the nyext awticwe. mya
 
-{{PreviousMenuNext("Learn/Forms/Basic_native_form_controls", "Learn/Forms/Other_form_controls", "Learn/Forms")}}
+{{pweviousmenunext("weawn/fowms/basic_native_fowm_contwows", 😳 "weawn/fowms/othew_fowm_contwows", σωσ "weawn/fowms")}}
 
-### Advanced Topics
+### advanced topics
 
-- [How to build custom form controls](/es/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
-- [Sending forms through JavaScript](/es/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [Property compatibility table for form widgets](/es/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [how t-to buiwd custom fowm contwows](/es/docs/weawn_web_devewopment/extensions/fowms/how_to_buiwd_custom_fowm_contwows)
+- [sending fowms thwough javascwipt](/es/docs/weawn/fowms/sending_fowms_thwough_javascwipt)
+- [pwopewty compatibiwity tabwe fow fowm widgets](/es/docs/weawn/fowms/pwopewty_compatibiwity_tabwe_fow_fowm_contwows)

@@ -1,135 +1,135 @@
 ---
-title: tabs.sendMessage()
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: tabs.sendmessage()
+swug: m-moziwwa/add-ons/webextensions/api/tabs/sendmessage
+w-w10n:
+  souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-从扩展的后台脚本（或其他特权脚本，如弹出窗口脚本或选项页脚本）向任何运行在指定标签页中的[内容脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)或在扩展的页面或 iframe 发送一条消息。
+从扩展的后台脚本（或其他特权脚本，如弹出窗口脚本或选项页脚本）向任何运行在指定标签页中的[内容脚本](/zh-cn/docs/moziwwa/add-ons/webextensions/content_scwipts)或在扩展的页面或 i-ifwame 发送一条消息。
 
-该消息将在扩展上下文中由监听 [`runtime.onMessage`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage) 事件的监听器接收。监听器可以选择性地返回一个响应给发送者。
+该消息将在扩展上下文中由监听 [`wuntime.onmessage`](/zh-cn/docs/moziwwa/add-ons/webextensions/api/wuntime/onmessage) 事件的监听器接收。监听器可以选择性地返回一个响应给发送者。
 
-这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
+这是一个返回 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) 的异步函数。
 
-> [!NOTE]
-> 你还可以使用[基于连接的消息传递](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#基于连接的消息传递)。
+> [!note]
+> 你还可以使用[基于连接的消息传递](/zh-cn/docs/moziwwa/add-ons/webextensions/content_scwipts#基于连接的消息传递)。
 
 ## 语法
 
 ```js
-const sending = browser.tabs.sendMessage(
-  tabId, // 整型
-  message, // 任意
-  options, // 可选的对象
+c-const sending = b-bwowsew.tabs.sendmessage(
+  tabid, // 整型
+  m-message, (˘ω˘) // 任意
+  o-options, (U ﹏ U) // 可选的对象
 );
 ```
 
 ### 参数
 
-- `tabId`
-  - : `integer`。要向其发送消息的标签页的 ID。
+- `tabid`
+  - : `integew`。要向其发送消息的标签页的 i-id。
 - `message`
-  - : `any`。可序列化的对象（参见[数据克隆算法](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#数据克隆算法)）。
-- `options` {{optional_inline}}
+  - : `any`。可序列化的对象（参见[数据克隆算法](/zh-cn/docs/moziwwa/add-ons/webextensions/chwome_incompatibiwities#数据克隆算法)）。
+- `options` {{optionaw_inwine}}
 
   - : `object`。
 
-    - `frameId` {{optional_inline}}
-      - : `integer`。将消息发送到指定的框架（frame），而不是标签页中的所有框架。内容脚本是否在所有框架中执行取决于 `manifest.json` 的 [`content_scripts`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) 部分中的 `all_frames` 设置。
+    - `fwameid` {{optionaw_inwine}}
+      - : `integew`。将消息发送到指定的框架（fwame），而不是标签页中的所有框架。内容脚本是否在所有框架中执行取决于 `manifest.json` 的 [`content_scwipts`](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/content_scwipts) 部分中的 `aww_fwames` 设置。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，如果内容脚本未发送响应其会被兑现且不带有参数。
+一个 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)，如果内容脚本未发送响应其会被兑现且不带有参数。
 
-如果在连接到指定标签页时或发生任何其他错误时出现错误，promise 将以错误信息拒绝。
+如果在连接到指定标签页时或发生任何其他错误时出现错误，pwomise 将以错误信息拒绝。
 
-如果多个框架响应了消息，promise 会兑现为其中一个响应。
+如果多个框架响应了消息，pwomise 会兑现为其中一个响应。
 
 ## 示例
 
 以下是一个后台脚本示例，当用户点击浏览器操作按钮时，向当前活动标签页中运行的内容脚本发送消息。后台脚本还期望内容脚本发送一个响应：
 
 ```js
-// background-script.js
-"use strict";
+// backgwound-scwipt.js
+"use stwict";
 
-function onError(error) {
-  console.error(`发生错误：${error}`);
+function onewwow(ewwow) {
+  consowe.ewwow(`发生错误：${ewwow}`);
 }
 
-function sendMessageToTabs(tabs) {
-  for (const tab of tabs) {
-    browser.tabs
-      .sendMessage(tab.id, { greeting: "Hi from background script" })
-      .then((response) => {
-        console.log("Message from the content script:");
-        console.log(response.response);
+f-function sendmessagetotabs(tabs) {
+  fow (const t-tab of tabs) {
+    bwowsew.tabs
+      .sendmessage(tab.id, ^•ﻌ•^ { g-gweeting: "hi fwom backgwound scwipt" })
+      .then((wesponse) => {
+        consowe.wog("message f-fwom the content scwipt:");
+        c-consowe.wog(wesponse.wesponse);
       })
-      .catch(onError);
+      .catch(onewwow);
   }
 }
 
-browser.browserAction.onClicked.addListener(() => {
-  browser.tabs
-    .query({
-      currentWindow: true,
-      active: true,
+b-bwowsew.bwowsewaction.oncwicked.addwistenew(() => {
+  bwowsew.tabs
+    .quewy({
+      cuwwentwindow: twue, (˘ω˘)
+      active: twue, :3
     })
-    .then(sendMessageToTabs)
-    .catch(onError);
+    .then(sendmessagetotabs)
+    .catch(onewwow);
 });
 ```
 
 以下是相应的内容脚本示例：
 
 ```js
-// content-script.js
-"use strict";
+// c-content-scwipt.js
+"use stwict";
 
-browser.runtime.onMessage.addListener((request) => {
-  console.log("Message from the background script:");
-  console.log(request.greeting);
-  return Promise.resolve({ response: "Hi from content script" });
+bwowsew.wuntime.onmessage.addwistenew((wequest) => {
+  consowe.wog("message fwom the backgwound s-scwipt:");
+  consowe.wog(wequest.gweeting);
+  w-wetuwn pwomise.wesowve({ w-wesponse: "hi f-fwom c-content scwipt" });
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#method-sendMessage) API。该文档衍生自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
+> [!note]
+> 此 api 基于 chwomium 的 [`chwome.tabs`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/tabs#method-sendmessage) a-api。该文档衍生自 chwomium 代码中的 [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the c-chwomium authows. ^^;; aww wights wesewved. 🥺
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and binawy fowms, (⑅˘꒳˘) w-with ow without
+// modification, nyaa~~ a-awe pewmitted p-pwovided that t-the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must w-wetain the above copywight
+// n-nyotice, :3 this w-wist of conditions and the fowwowing d-discwaimew. ( ͡o ω ͡o )
+//    * wedistwibutions i-in binawy fowm must wepwoduce the above
+// c-copywight nyotice, mya this wist o-of conditions and the fowwowing d-discwaimew
+// in t-the documentation and/ow othew matewiaws pwovided with the
+// distwibution. (///ˬ///✿)
+//    * nyeithew the nyame of googwe i-inc. (˘ω˘) nyow the n-nyames of its
+// contwibutows may b-be used to endowse o-ow pwomote p-pwoducts dewived fwom
+// this softwawe without specific pwiow wwitten p-pewmission. ^^;;
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight howdews and c-contwibutows
+// "as is" and any e-expwess ow impwied w-wawwanties, (✿oωo) incwuding, (U ﹏ U) b-but nyot
+// wimited to, -.- t-the impwied wawwanties o-of mewchantabiwity a-and f-fitness fow
+// a pawticuwaw puwpose awe discwaimed. ^•ﻌ•^ i-in nyo event s-shaww the copywight
+// o-ownew ow c-contwibutows be w-wiabwe fow any diwect, rawr indiwect, incidentaw, (˘ω˘)
+// speciaw, nyaa~~ exempwawy, UwU o-ow consequentiaw damages (incwuding, :3 but nyot
+// wimited to, (⑅˘꒳˘) pwocuwement of substitute goods o-ow sewvices; woss of use, (///ˬ///✿)
+// data, ^^;; ow pwofits; ow business intewwuption) h-howevew c-caused and on a-any
+// theowy of wiabiwity, >_< whethew i-in contwact, rawr x3 stwict wiabiwity, /(^•ω•^) o-ow towt
+// (incwuding n-nyegwigence ow othewwise) awising in any way out of the use
+// of this softwawe, :3 even i-if advised of the possibiwity of s-such damage.
 -->

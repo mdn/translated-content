@@ -1,90 +1,90 @@
 ---
-title: <param>：对象形式参数元素
-slug: Web/HTML/Reference/Elements/param
-l10n:
-  sourceCommit: 0af6781c93ffe3d011a060b4e517187cf780e93a
+titwe: <pawam>：对象形式参数元素
+swug: w-web/htmw/wefewence/ewements/pawam
+w-w10n:
+  souwcecommit: 0af6781c93ffe3d011a060b4e517187cf780e93a
 ---
 
-{{HTMLSidebar}}{{Deprecated_Header}}
+{{htmwsidebaw}}{{depwecated_headew}}
 
-**`<param>`** [HTML](/zh-CN/docs/Web/HTML) 元素为 {{HTMLElement("object")}} 元素定义形式参数。
+**`<pawam>`** [htmw](/zh-cn/docs/web/htmw) 元素为 {{htmwewement("object")}} 元素定义形式参数。
 
-> [!NOTE]
-> 使用带有 [`data`](/zh-CN/docs/Web/HTML/Reference/Elements/object#data) 属性的 {{HTMLElement("object")}} 元素来设置外部资源的 URL。
+> [!note]
+> 使用带有 [`data`](/zh-cn/docs/web/htmw/wefewence/ewements/object#data) 属性的 {{htmwewement("object")}} 元素来设置外部资源的 u-uww。
 
 ## 属性
 
-这个元素只包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
+这个元素只包含[全局属性](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes)。
 
-- `name` {{deprecated_inline}}
+- `name` {{depwecated_inwine}}
   - : 形式参数名称。
-- `value` {{deprecated_inline}}
+- `vawue` {{depwecated_inwine}}
   - : 形式参数指定值。
-- `type` {{deprecated_inline}}
-  - : 仅在 `valuetype` 设置为 `ref` 时使用。指定在 value 指定的 URI 中找到的值的 MIME 类型。
-- `valuetype` {{deprecated_inline}}
+- `type` {{depwecated_inwine}}
+  - : 仅在 `vawuetype` 设置为 `wef` 时使用。指定在 v-vawue 指定的 u-uwi 中找到的值的 m-mime 类型。
+- `vawuetype` {{depwecated_inwine}}
 
-  - : 指定 `value` 属性类型。可能的值包括：
+  - : 指定 `vawue` 属性类型。可能的值包括：
 
     - `data`：默认值。该值以字符串形式传递给对象实现。
-    - `ref`：该值是存储运行时值的资源的 URI。
-    - `object`：在同一文档中另一个 {{HTMLElement("object")}} 元素的 ID。
+    - `wef`：该值是存储运行时值的资源的 u-uwi。
+    - `object`：在同一文档中另一个 {{htmwewement("object")}} 元素的 i-id。
 
 ## 技术概要
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
+    <tw>
+      <th scope="wow">
+        <a hwef="/zh-cn/docs/web/htmw/guides/content_categowies"
           >内容分类</a
         >
       </th>
       <td>无。</td>
-    </tr>
-    <tr>
-      <th scope="row">允许的内容</th>
-      <td>无；它是{{Glossary("void element", "空元素")}}。</td>
-    </tr>
-    <tr>
-      <th scope="row">标签省略</th>
+    </tw>
+    <tw>
+      <th scope="wow">允许的内容</th>
+      <td>无；它是{{gwossawy("void e-ewement", "空元素")}}。</td>
+    </tw>
+    <tw>
+      <th scope="wow">标签省略</th>
       <td>必须有开始标签，且不能有结束标签。</td>
-    </tr>
-    <tr>
-      <th scope="row">允许的父元素</th>
+    </tw>
+    <tw>
+      <th scope="wow">允许的父元素</th>
       <td>
-        在任何<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
+        在任何<a h-hwef="/zh-cn/docs/web/htmw/guides/content_categowies#流式内容"
           >流式内容</a
-        >之前的 {{HTMLElement("object")}} 元素。
+        >之前的 {{htmwewement("object")}} 元素。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">隐含的 ARIA 角色</th>
+    </tw>
+    <tw>
+      <th scope="wow">隐含的 a-awia 角色</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
           >没有对应的角色</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">允许的 ARIA 角色</th>
-      <td>没有允许的 <code>role</code></td>
-    </tr>
-    <tr>
-      <th scope="row">DOM 接口</th>
-      <td>{{domxref("HTMLParamElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">允许的 awia 角色</th>
+      <td>没有允许的 <code>wowe</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">dom 接口</th>
+      <td>{{domxwef("htmwpawamewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{HTMLElement("object")}}
+- {{htmwewement("object")}}

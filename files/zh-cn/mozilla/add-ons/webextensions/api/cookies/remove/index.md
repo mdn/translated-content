@@ -1,119 +1,119 @@
 ---
-title: cookies.remove()
-slug: Mozilla/Add-ons/WebExtensions/API/cookies/remove
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: cookies.wemove()
+swug: m-moziwwa/add-ons/webextensions/api/cookies/wemove
+w-w10n:
+  souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-{{WebExtAPIRef("cookies")}} API 的 **`remove()`** 方法根据 cookie 的名称和 URL 删除一个 cookie。
+{{webextapiwef("cookies")}} a-api 的 **`wemove()`** 方法根据 c-cookie 的名称和 u-uww 删除一个 c-cookie。
 
-只有在你的 [manifest.json](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 文件中包含“cookies” [API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_权限)和给定 URL 的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)时，此调用才能成功。
+只有在你的 [manifest.json](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json) 文件中包含“cookies” [api 权限](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#api_权限)和给定 u-uww 的[主机权限](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#主机权限)时，此调用才能成功。
 
-这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
+这是一个返回 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) 的异步函数。
 
 ## 语法
 
-```js-nolint
-let removing = browser.cookies.remove(
-  details               // 对象
+```js-nowint
+w-wet wemoving = bwowsew.cookies.wemove(
+  detaiws               // 对象
 )
 ```
 
 ### 参数
 
-- `details`
+- `detaiws`
 
   - : 一个 `object`，包含识别要删除的 cookie 的信息。它包含以下属性：
 
-    - `firstPartyDomain` {{optional_inline}}
+    - `fiwstpawtydomain` {{optionaw_inwine}}
 
-      - : 一个 `string`，表示与要删除的 cookie 关联的第一方域。如果浏览器启用了第一方隔离，则必须提供此属性。请参见[第一方隔离](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/cookies#第一方隔离)。
+      - : 一个 `stwing`，表示与要删除的 cookie 关联的第一方域。如果浏览器启用了第一方隔离，则必须提供此属性。请参见[第一方隔离](/zh-cn/docs/moziwwa/add-ons/webextensions/api/cookies#第一方隔离)。
 
     - `name`
 
-      - : 一个 `string`，表示要删除的 cookie 的名称。
+      - : 一个 `stwing`，表示要删除的 c-cookie 的名称。
 
-    - `partitionKey` {{optional_inline}}
+    - `pawtitionkey` {{optionaw_inwine}}
 
       - : 一个 `object`，表示包含该 cookie 的存储分区。包括此对象以从分区存储中删除 cookie。此对象包含：
 
-        - `topLevelSite` {{optional_inline}}
-          - : 一个 `string`，表示包含该 cookie 的顶级站点存储分区的第一方 URL。
+        - `topwevewsite` {{optionaw_inwine}}
+          - : 一个 `stwing`，表示包含该 c-cookie 的顶级站点存储分区的第一方 uww。
 
-    - `storeId` {{optional_inline}}
+    - `stoweid` {{optionaw_inwine}}
 
-      - : 一个 `string`，表示查找 cookie 的 cookie 存储的 ID。如果未指定，默认情况下将在当前执行上下文的 cookie 存储中查找 cookie。
+      - : 一个 `stwing`，表示查找 cookie 的 c-cookie 存储的 id。如果未指定，默认情况下将在当前执行上下文的 cookie 存储中查找 cookie。
 
-    - `url`
+    - `uww`
 
-      - : 一个 `string`，表示与该 cookie 关联的 URL。如果扩展程序没有此 URL 的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)，则 API 调用将失败。
+      - : 一个 `stwing`，表示与该 c-cookie 关联的 uww。如果扩展程序没有此 u-uww 的[主机权限](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#主机权限)，则 a-api 调用将失败。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个包含有关已删除 cookie 的详细信息的 {{WebExtAPIRef('cookies.Cookie')}} 对象。如果找不到与 `details` 参数匹配的 cookie，则该 Promise 将兑现 `null`。如果由于任何原因导致调用失败，则 Promise 将被拒绝，并带有错误消息。
+一个 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)，其会兑现一个包含有关已删除 cookie 的详细信息的 {{webextapiwef('cookies.cookie')}} 对象。如果找不到与 `detaiws` 参数匹配的 cookie，则该 pwomise 将兑现 `nuww`。如果由于任何原因导致调用失败，则 pwomise 将被拒绝，并带有错误消息。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 示例
 
-此示例尝试删除名为“favorite-color”的 cookie，其 URL 与当前活动标签页托管的文档的 URL 匹配：
+此示例尝试删除名为“favowite-cowow”的 c-cookie，其 uww 与当前活动标签页托管的文档的 uww 匹配：
 
 ```js
-function onRemoved(cookie) {
-  console.log(`已删除：${cookie}`);
+function onwemoved(cookie) {
+  c-consowe.wog(`已删除：${cookie}`);
 }
 
-function onError(error) {
-  console.log(`删除 cookie 时出错：${error}`);
+function onewwow(ewwow) {
+  c-consowe.wog(`删除 c-cookie 时出错：${ewwow}`);
 }
 
-function removeCookie(tabs) {
-  let removing = browser.cookies.remove({
-    url: tabs[0].url,
-    name: "favorite-color",
+f-function wemovecookie(tabs) {
+  w-wet wemoving = bwowsew.cookies.wemove({
+    uww: tabs[0].uww, nyaa~~
+    n-nyame: "favowite-cowow", :3
   });
-  removing.then(onRemoved, onError);
+  wemoving.then(onwemoved, ( ͡o ω ͡o ) onewwow);
 }
 
-let getActive = browser.tabs.query({ active: true, currentWindow: true });
-getActive.then(removeCookie);
+wet g-getactive = bwowsew.tabs.quewy({ active: twue, mya cuwwentwindow: twue });
+getactive.then(wemovecookie);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.cookies`](https://developer.chrome.google.cn/docs/extensions/reference/api/cookies#method-remove) API。该文档衍生自 Chromium 代码中的 [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json)。
+> [!note]
+> 此 api 基于 chwomium 的 [`chwome.cookies`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/cookies#method-wemove) api。该文档衍生自 c-chwomium 代码中的 [`cookies.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/cookies.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. (///ˬ///✿) a-aww wights w-wesewved. (˘ω˘)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution and use in souwce and binawy fowms, ^^;; w-with ow without
+// m-modification, (✿oωo) awe pewmitted p-pwovided that t-the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain the above copywight
+// n-nyotice, this wist of conditions a-and the fowwowing discwaimew. (U ﹏ U)
+//    * w-wedistwibutions i-in binawy fowm must wepwoduce the above
+// copywight notice, -.- this wist of conditions and the fowwowing d-discwaimew
+// i-in the documentation and/ow othew m-matewiaws pwovided w-with the
+// d-distwibution. ^•ﻌ•^
+//    * nyeithew the nyame of googwe inc. rawr nyow the n-nyames of its
+// contwibutows may be used to endowse ow pwomote pwoducts dewived f-fwom
+// this softwawe without s-specific pwiow w-wwitten pewmission. (˘ω˘)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided b-by the copywight h-howdews and c-contwibutows
+// "as i-is" and any expwess ow impwied wawwanties, nyaa~~ i-incwuding, UwU but n-nyot
+// wimited t-to, :3 the impwied w-wawwanties of mewchantabiwity a-and fitness fow
+// a pawticuwaw puwpose awe discwaimed. (⑅˘꒳˘) i-in nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, (///ˬ///✿) indiwect, ^^;; i-incidentaw, >_<
+// speciaw, exempwawy, rawr x3 ow consequentiaw damages (incwuding, /(^•ω•^) b-but n-nyot
+// wimited t-to, :3 pwocuwement of substitute goods o-ow sewvices; woss of use, (ꈍᴗꈍ)
+// d-data, /(^•ω•^) ow pwofits; o-ow business intewwuption) howevew caused and on any
+// theowy of wiabiwity, (⑅˘꒳˘) whethew in contwact, ( ͡o ω ͡o ) s-stwict wiabiwity, òωó ow towt
+// (incwuding n-nyegwigence ow othewwise) a-awising in a-any way out of the use
+// of this softwawe, (⑅˘꒳˘) even i-if advised of t-the possibiwity of such damage. XD
 -->

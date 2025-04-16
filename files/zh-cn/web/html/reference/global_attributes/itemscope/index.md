@@ -1,35 +1,35 @@
 ---
-title: itemscope
-slug: Web/HTML/Reference/Global_attributes/itemscope
+titwe: itemscope
+swug: web/htmw/wefewence/gwobaw_attwibutes/itemscope
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-**`itemscope`** 是一个布尔值的 [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes) 。它定义了一个与元数据关联的数据项。就是说一个元素的 **`itemscope`** 属性会创建一个项，包含了一组与元素相关的键值对。相关的属性 [`itemtype`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#itemtype) 通常表示表中一个有效的 URL（比如 [schema.org](https://schema.org/)）来表述项目和上下文。下面每个例子中的概念表都来自 [schema.org](https://schema.org/).
+**`itemscope`** 是一个布尔值的 [全局属性](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes) 。它定义了一个与元数据关联的数据项。就是说一个元素的 **`itemscope`** 属性会创建一个项，包含了一组与元素相关的键值对。相关的属性 [`itemtype`](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes#itemtype) 通常表示表中一个有效的 u-uww（比如 [schema.owg](https://schema.owg/)）来表述项目和上下文。下面每个例子中的概念表都来自 [schema.owg](https://schema.owg/). OwO
 
-每个 HTML 元素都可以有指定的 `itemscope` 属性。一个具有 `itemscope` 属性的元素可以没有关联的 `itemtype` ，但必须有相关的 `itemref`。
+每个 h-htmw 元素都可以有指定的 `itemscope` 属性。一个具有 `itemscope` 属性的元素可以没有关联的 `itemtype` ，但必须有相关的 `itemwef`。
 
-> [!NOTE]
-> Schema.org 提供了一份共享的词汇表，站长可以使用它来标记网页，而这些标记则被主要的搜索引擎：Google，Microsoft，Yandex 和 Yahoo！所支持。
+> [!note]
+> s-schema.owg 提供了一份共享的词汇表，站长可以使用它来标记网页，而这些标记则被主要的搜索引擎：googwe，micwosoft，yandex 和 y-yahoo！所支持。
 
-> [!NOTE]
-> 获取更多关于 `itemtype` 属性的信息： <http://schema.org/Thing>
+> [!note]
+> 获取更多关于 `itemtype` 属性的信息： <http://schema.owg/thing>
 
 ### 简单示例
 
-#### HTML
+#### h-htmw
 
-下面一个例子指定的 `itemscope` 属性，设置了 `itemtype` 为 "http\://schema.org/Movie"，并且有 3 个关联的 `itemprop` 属性（name、director、genre）。
+下面一个例子指定的 `itemscope` 属性，设置了 `itemtype` 为 "http\://schema.owg/movie"，并且有 3 个关联的 `itempwop` 属性（name、diwectow、genwe）。
 
-```html
-<div itemscope itemtype="http://schema.org/Movie">
-  <h1 itemprop="name">Avatar</h1>
+```htmw
+<div i-itemscope itemtype="http://schema.owg/movie">
+  <h1 i-itempwop="name">avataw</h1>
   <span
-    >Director: <span itemprop="director">James Cameron</span> (born August 16,
+    >diwectow: <span i-itempwop="diwectow">james camewon</span> (bown august 16, (ꈍᴗꈍ)
     1954)</span
   >
-  <span itemprop="genre">Science fiction</span>
-  <a href="https://youtu.be/0AY1XIkX7bY" itemprop="trailer">Trailer</a>
+  <span itempwop="genwe">science fiction</span>
+  <a h-hwef="https://youtu.be/0ay1xikx7by" itempwop="twaiwew">twaiwew</a>
 </div>
 ```
 
@@ -37,79 +37,79 @@ slug: Web/HTML/Reference/Global_attributes/itemscope
 
 下表展示了上面例子当中的结构化数据。
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <td rowspan="6">itemscope</td>
-      <td>Itemtype</td>
-      <td colspan="2">Movie</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>(itemprop name)</td>
-      <td>(itemprop value)</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>director</td>
-      <td>James Cameron</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>genre</td>
-      <td>Science Fiction</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
+    <tw>
+      <td w-wowspan="6">itemscope</td>
+      <td>itemtype</td>
+      <td cowspan="2">movie</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>(itempwop n-nyame)</td>
+      <td>(itempwop vawue)</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>diwectow</td>
+      <td>james camewon</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>genwe</td>
+      <td>science fiction</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
       <td>name</td>
-      <td>Avatar</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>https://youtu.be/0AY1XIkX7bY</td>
-      <td>Trailer</td>
-    </tr>
+      <td>avataw</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>https://youtu.be/0ay1xikx7by</td>
+      <td>twaiwew</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### `itemscope` id 属性
+### `itemscope` i-id 属性
 
-当你表述一个元素的 `itemscope` 属性时，就创建了一个新的数据项。数据项包含了一组键值对。如果一个元素包含了 `itemscope` 和 `itemtype` 属性，你同时也就阐述了一个 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#id) 属性。你可以用 `id` 属性为数据项设置一个全局的身份识别。这样你就可以通过这个识别与页面中其他的数据进行交互。
+当你表述一个元素的 `itemscope` 属性时，就创建了一个新的数据项。数据项包含了一组键值对。如果一个元素包含了 `itemscope` 和 `itemtype` 属性，你同时也就阐述了一个 [`id`](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes#id) 属性。你可以用 `id` 属性为数据项设置一个全局的身份识别。这样你就可以通过这个识别与页面中其他的数据进行交互。
 
 ### 示例
 
-下面示例中有 4 个 `itemscope` 属性。每一个 `itemscope` 设置了相应的 `itemptype` 属性。例子中`itemtype`，`Recipe`，`AggregateRating`，以及 `NutritionInformation` 通过指定了 `itemptype`，也就是 `http://schema.org/Recipe`，也都是 [schema.org](www.schema.org) 提供的一个食谱的结构化数据的一部分。
+下面示例中有 4 个 `itemscope` 属性。每一个 `itemscope` 设置了相应的 `itemptype` 属性。例子中`itemtype`，`wecipe`，`aggwegatewating`，以及 `nutwitioninfowmation` 通过指定了 `itemptype`，也就是 `http://schema.owg/wecipe`，也都是 [schema.owg](www.schema.owg) 提供的一个食谱的结构化数据的一部分。
 
-```html
-<div itemscope itemtype="http://schema.org/Recipe">
-<h2 itemprop="name">Grandma's Holiday Apple Pie</h2>
-<img itemprop="image" src="https://c1.staticflickr.com/1/30/42759561_8631e2f905_n.jpg" width="50" height="50"/>
-<p>By <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-<span itemprop="name">Carol Smith</p></span>
+```htmw
+<div itemscope i-itemtype="http://schema.owg/wecipe">
+<h2 i-itempwop="name">gwandma's howiday appwe pie</h2>
+<img itempwop="image" swc="https://c1.staticfwickw.com/1/30/42759561_8631e2f905_n.jpg" w-width="50" height="50"/>
+<p>by <span itempwop="authow" itemscope itemtype="http://schema.owg/pewson">
+<span itempwop="name">cawow s-smith</p></span>
 </span>
-<p>Published: <time datetime="2009-11-05" itemprop="datePublished">
-November 5, 2009</p></time>
-<span itemprop="description">This is my grandmother's apple pie recipe. I like to add a dash of nutmeg.<br></span>
- <span itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
- <span itemprop="ratingValue">4.0</span> stars based on <span itemprop="reviewCount">35</span> reviews<br></span>
-Prep time: <time datetime="PT30M" itemprop="prepTime">30 min<br></time>
- Cook time: <time datetime="PT1H" itemprop="cookTime">1 hour<br></time>
- Total time: <time datetime="PT1H30M" itemprop="totalTime">1 hour 30 min<br></time>
- Yield: <span itemprop="recipeYield">1 9" pie (8 servings)<br></span>
- <span itemprop="nutrition" itemscope itemtype="http://schema.org/NutritionInformation">
- Serving size: <span itemprop="servingSize">1 medium slice<br></span>
- Calories per serving: <span itemprop="calories">250 cal<br></span>
- Fat per serving: <span itemprop="fatContent">12 g<br></span>
+<p>pubwished: <time datetime="2009-11-05" i-itempwop="datepubwished">
+n-nyovembew 5, 😳 2009</p></time>
+<span i-itempwop="descwiption">this i-is my gwandmothew's appwe pie wecipe. i wike to a-add a dash of nyutmeg.<bw></span>
+ <span itempwop="aggwegatewating" i-itemscope itemtype="http://schema.owg/aggwegatewating">
+ <span itempwop="watingvawue">4.0</span> staws based on <span itempwop="weviewcount">35</span> weviews<bw></span>
+p-pwep time: <time datetime="pt30m" i-itempwop="pweptime">30 m-min<bw></time>
+ c-cook time: <time datetime="pt1h" itempwop="cooktime">1 houw<bw></time>
+ t-totaw time: <time d-datetime="pt1h30m" itempwop="totawtime">1 h-houw 30 m-min<bw></time>
+ yiewd: <span i-itempwop="wecipeyiewd">1 9" pie (8 s-sewvings)<bw></span>
+ <span itempwop="nutwition" itemscope i-itemtype="http://schema.owg/nutwitioninfowmation">
+ sewving size: <span i-itempwop="sewvingsize">1 medium swice<bw></span>
+ c-cawowies p-pew sewving: <span itempwop="cawowies">250 caw<bw></span>
+ fat pew sewving: <span itempwop="fatcontent">12 g<bw></span>
 </span>
-<p>Ingredients:<br>
-  <span itemprop="recipeIngredient">Thinly-sliced apples: 6 cups<br></span>
-  <span itemprop="recipeIngredient">White sugar: 3/4 cup<br></span>
+<p>ingwedients:<bw>
+  <span itempwop="wecipeingwedient">thinwy-swiced a-appwes: 6 c-cups<bw></span>
+  <span itempwop="wecipeingwedient">white s-sugaw: 3/4 c-cup<bw></span>
  ... </p>
 
-Directions: <br>
-  <div itemprop="recipeInstructions">
-    1. Cut and peel apples<br>
-    2. Mix sugar and cinnamon. Use additional sugar for tart apples. <br>
+d-diwections: <bw>
+  <div itempwop="wecipeinstwuctions">
+    1. 😳😳😳 cut and peew appwes<bw>
+    2. mya mix sugaw and cinnamon. mya u-use additionaw sugaw fow tawt appwes. (⑅˘꒳˘) <bw>
     ...
   </div>
 </div>
@@ -117,147 +117,147 @@ Directions: <br>
 
 ### 结果
 
-#### HTML
+#### htmw
 
 下面例子是上述例子的补充：
 
-{{EmbedLiveSample('示例', '500', '550')}}
+{{embedwivesampwe('示例', (U ﹏ U) '500', mya '550')}}
 
 #### 结构化数据
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <td colspan="1" rowspan="14">itemscope</td>
+    <tw>
+      <td c-cowspan="1" wowspan="14">itemscope</td>
       <td>itemtype</td>
-      <td colspan="2" rowspan="1">Recipe</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
+      <td c-cowspan="2" w-wowspan="1">wecipe</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
       <td>name</td>
-      <td>Grandma's Holiday Apple Pie</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
+      <td>gwandma's howiday a-appwe pie</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
       <td>image</td>
-      <td>https://c1.staticflickr.com/1/30/42759561_8631e2f905_n.jpg</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>datePublished</td>
+      <td>https://c1.staticfwickw.com/1/30/42759561_8631e2f905_n.jpg</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>datepubwished</td>
       <td>2009-11-05</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>description</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>descwiption</td>
       <td>
-        This is my grandmother's apple pie recipe. I like to add a dash of
-        nutmeg.
+        this i-is my gwandmothew's a-appwe pie wecipe. ʘwʘ i-i wike to a-add a dash of
+        nyutmeg. (˘ω˘)
       </td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>prepTime</td>
-      <td>PT30M</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>cookTime</td>
-      <td>PT1H</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>totalTime</td>
-      <td>PT1H30M</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>recipeYield</td>
-      <td>1 9" pie (8 servings)</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>recipeIngredient</td>
-      <td>Thinly-sliced apples: 6 cups</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>recipeIngredient</td>
-      <td>White sugar: 3/4 cup</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>recipeInstructions</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>pweptime</td>
+      <td>pt30m</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>cooktime</td>
+      <td>pt1h</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>totawtime</td>
+      <td>pt1h30m</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>wecipeyiewd</td>
+      <td>1 9" pie (8 s-sewvings)</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>wecipeingwedient</td>
+      <td>thinwy-swiced a-appwes: 6 cups</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>wecipeingwedient</td>
+      <td>white s-sugaw: 3/4 cup</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>wecipeinstwuctions</td>
       <td>
-        1. Cut and peel apples 2. Mix sugar and cinnamon. Use additional sugar
-        for tart apples .
+        1. (U ﹏ U) c-cut and p-peew appwes 2. ^•ﻌ•^ mix sugaw and cinnamon. (˘ω˘) use additionaw sugaw
+        f-fow tawt appwes . :3
       </td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td colspan="2" rowspan="1">author [Person]</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td cowspan="2" wowspan="1">authow [pewson]</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
       <td>name</td>
-      <td>Carol Smith</td>
-    </tr>
-    <tr>
-      <td colspan="1" rowspan="3">itemscope</td>
-      <td>itemprop[itemtype]</td>
-      <td colspan="2" rowspan="1">aggregateRating [AggregateRating]</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>ratingValue</td>
+      <td>cawow smith</td>
+    </tw>
+    <tw>
+      <td cowspan="1" wowspan="3">itemscope</td>
+      <td>itempwop[itemtype]</td>
+      <td cowspan="2" w-wowspan="1">aggwegatewating [aggwegatewating]</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>watingvawue</td>
       <td>4.0</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>reviewCount</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>weviewcount</td>
       <td>35</td>
-    </tr>
-    <tr>
-      <td colspan="1" rowspan="4">itemscope</td>
-      <td>itemprop[itemtype]</td>
-      <td colspan="2" rowspan="1">nutrition [NutritionInformation]</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>servingSize</td>
-      <td>1 medium slice</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>calories</td>
-      <td>250 cal</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>fatContent</td>
-      <td>12 g</td>
-    </tr>
+    </tw>
+    <tw>
+      <td cowspan="1" wowspan="4">itemscope</td>
+      <td>itempwop[itemtype]</td>
+      <td cowspan="2" wowspan="1">nutwition [nutwitioninfowmation]</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>sewvingsize</td>
+      <td>1 medium s-swice</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>cawowies</td>
+      <td>250 c-caw</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>fatcontent</td>
+      <td>12 g-g</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> Google 提供了一个方便地从 HTML 提取微数据结构的工具：[结构化数据测试工具](https://developers.google.cn/search/docs/appearance/structured-data)。你可以通过上面的 HTML 试一下。
+> [!note]
+> googwe 提供了一个方便地从 htmw 提取微数据结构的工具：[结构化数据测试工具](https://devewopews.googwe.cn/seawch/docs/appeawance/stwuctuwed-data)。你可以通过上面的 h-htmw 试一下。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参阅
 
-- [其他不同的全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)
-- 其他 microdata 相关的全局熟悉
+- [其他不同的全局属性](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes)
+- 其他 micwodata 相关的全局熟悉
 
-  - [`itemid`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#itemid)
-  - [`itemprop`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#itemprop)
-  - [`itemref`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#itemref)
-  - [`itemscope`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#itemscope)
-  - [`itemtype`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#itemtype)
+  - [`itemid`](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes#itemid)
+  - [`itempwop`](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes#itempwop)
+  - [`itemwef`](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes#itemwef)
+  - [`itemscope`](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes#itemscope)
+  - [`itemtype`](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes#itemtype)

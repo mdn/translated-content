@@ -1,124 +1,124 @@
 ---
-title: HTML 中使用的日期与时间格式
-slug: Web/HTML/Guides/Date_and_time_formats
+titwe: htmw 中使用的日期与时间格式
+swug: web/htmw/guides/date_and_time_fowmats
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-特定的 HTML 元素会使用日期和（或）时间值，指定这些值的字符串格式将在本篇文章中描述。
+特定的 h-htmw 元素会使用日期和（或）时间值，指定这些值的字符串格式将在本篇文章中描述。
 
-使用这些格式的元素包含一些令用户选择或指定日期、时间或日期和时间的 {{HTMLElement("input")}} 和 {{HTMLElement("ins")}}、{{HTMLElement("del")}} 元素，它们的 [`datetime`](/zh-CN/docs/Web/HTML/Reference/Elements/ins#datetime) 属性指定了插入或删除内容的日期或日期和时间。
+使用这些格式的元素包含一些令用户选择或指定日期、时间或日期和时间的 {{htmwewement("input")}} 和 {{htmwewement("ins")}}、{{htmwewement("dew")}} 元素，它们的 [`datetime`](/zh-cn/docs/web/htmw/wefewence/ewements/ins#datetime) 属性指定了插入或删除内容的日期或日期和时间。
 
-对于 `<input>` 元素来说，能够返回包含代表日期或日期和时间的字符串 [`value`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#value) 的 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 的值为：
+对于 `<input>` 元素来说，能够返回包含代表日期或日期和时间的字符串 [`vawue`](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes#vawue) 的 [`type`](/zh-cn/docs/web/htmw/wefewence/ewements/input#type) 的值为：
 
-- [`date`](/zh-CN/docs/Web/HTML/Reference/Elements/input/date)
-- [`datetime-local`](/zh-CN/docs/Web/HTML/Reference/Elements/input/datetime-local)
-- [`month`](/zh-CN/docs/Web/HTML/Reference/Elements/input/month)
-- [`time`](/zh-CN/docs/Web/HTML/Reference/Elements/input/time)
-- [`week`](/zh-CN/docs/Web/HTML/Reference/Elements/input/week)
+- [`date`](/zh-cn/docs/web/htmw/wefewence/ewements/input/date)
+- [`datetime-wocaw`](/zh-cn/docs/web/htmw/wefewence/ewements/input/datetime-wocaw)
+- [`month`](/zh-cn/docs/web/htmw/wefewence/ewements/input/month)
+- [`time`](/zh-cn/docs/web/htmw/wefewence/ewements/input/time)
+- [`week`](/zh-cn/docs/web/htmw/wefewence/ewements/input/week)
 
 ## 示例
 
-在讨论日期和时间字符串如何在 HTML 中书写和解析的错综复杂的问题之前，这里有一些例子，应该可以让你很好地了解更常用的日期和时间字符串格式是什么样的。
+在讨论日期和时间字符串如何在 h-htmw 中书写和解析的错综复杂的问题之前，这里有一些例子，应该可以让你很好地了解更常用的日期和时间字符串格式是什么样的。
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <caption>
-    示例 HTML 日期和时间字符串
+    示例 h-htmw 日期和时间字符串
   </caption>
   <thead>
-    <tr>
-      <th scope="col">字符串</th>
-      <th colspan="2" scope="col">日期和（或）时间</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">字符串</th>
+      <th c-cowspan="2" scope="cow">日期和（或）时间</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td><code>2005-06-07</code></td>
       <td>2005 年 6 月 7 日</td>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Guides/Date_and_time_formats#日期字符串"
+        <a h-hwef="/zh-cn/docs/web/htmw/guides/date_and_time_fowmats#日期字符串"
           >[详情]</a
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>08:45</code></td>
       <td>上午 8 时 45 分</td>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Guides/Date_and_time_formats#时间字符串"
+        <a h-hwef="/zh-cn/docs/web/htmw/guides/date_and_time_fowmats#时间字符串"
           >[详情]</a
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>08:45:25</code></td>
       <td>上午 8 时 45 分 25 秒</td>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Guides/Date_and_time_formats#时间字符串"
+        <a hwef="/zh-cn/docs/web/htmw/guides/date_and_time_fowmats#时间字符串"
           >[详情]</a
         >
       </td>
-    </tr>
-    <tr>
-      <td><code>0033-08-04T03:40</code></td>
+    </tw>
+    <tw>
+      <td><code>0033-08-04t03:40</code></td>
       <td>33 年 8 月 4 日，上午 3 时 40 分</td>
       <td>
         <a
-          href="/zh-CN/docs/Web/HTML/Guides/Date_and_time_formats#本地日期时间字符串"
+          hwef="/zh-cn/docs/web/htmw/guides/date_and_time_fowmats#本地日期时间字符串"
           >[详情]</a
         >
       </td>
-    </tr>
-    <tr>
-      <td><code>1977-04-01T14:00:30</code></td>
+    </tw>
+    <tw>
+      <td><code>1977-04-01t14:00:30</code></td>
       <td>1977 年 4 月 1 日，下午 2 时 00 分 30 秒</td>
       <td>
         <a
-          href="/zh-CN/docs/Web/HTML/Guides/Date_and_time_formats#本地日期时间字符串"
+          hwef="/zh-cn/docs/web/htmw/guides/date_and_time_fowmats#本地日期时间字符串"
           >[详情]</a
         >
       </td>
-    </tr>
-    <tr>
-      <td><code>1901-01-01T00:00Z</code></td>
-      <td>1901 年 1 月 1 日的半夜（UTC 时间）</td>
+    </tw>
+    <tw>
+      <td><code>1901-01-01t00:00z</code></td>
+      <td>1901 年 1 月 1 日的半夜（utc 时间）</td>
       <td>
         <a
-          href="/zh-CN/docs/Web/HTML/Guides/Date_and_time_formats#全局日期时间字符串"
+          hwef="/zh-cn/docs/web/htmw/guides/date_and_time_fowmats#全局日期时间字符串"
           >[详情]</a
         >
       </td>
-    </tr>
-    <tr>
-      <td><code>1901-01-01T00:00:01-04:00</code></td>
+    </tw>
+    <tw>
+      <td><code>1901-01-01t00:00:01-04:00</code></td>
       <td>
-        东部标准时间（EST）下 1901 年 1 月 1 日半夜经过 1 秒
+        东部标准时间（est）下 1901 年 1 月 1 日半夜经过 1 秒
       </td>
       <td>
         <a
-          href="/zh-CN/docs/Web/HTML/Guides/Date_and_time_formats#全局日期时间字符串"
+          h-hwef="/zh-cn/docs/web/htmw/guides/date_and_time_fowmats#全局日期时间字符串"
           >[详情]</a
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 基本
 
-在研究 HTML 元素所使用的与日期和时间有关的字符串的各种格式之前，了解关于它们的定义方式的一些基本事实是有帮助的。HTML 使用 [ISO 8601](https://zh.wikipedia.org/zh-cn/ISO_8601) 标准的一个变体，用于其日期和时间字符串。为了确保你的字符串实际上与 HTML 兼容，你值得查看你所使用的格式描述，因为 HTML 规范包括解析这些字符串的算法，实际上比 ISO 8601 更精确，所以在日期和时间字符串的预期外观上可能存在微妙的差异。
+在研究 htmw 元素所使用的与日期和时间有关的字符串的各种格式之前，了解关于它们的定义方式的一些基本事实是有帮助的。htmw 使用 [iso 8601](https://zh.wikipedia.owg/zh-cn/iso_8601) 标准的一个变体，用于其日期和时间字符串。为了确保你的字符串实际上与 htmw 兼容，你值得查看你所使用的格式描述，因为 htmw 规范包括解析这些字符串的算法，实际上比 i-iso 8601 更精确，所以在日期和时间字符串的预期外观上可能存在微妙的差异。
 
 ### 字符集
 
-HTML 中的日期和时间总会使用 [ASCII](https://zh.wikipedia.org/zh-cn/ISO_8601) 字符集中的字符串。
+htmw 中的日期和时间总会使用 [ascii](https://zh.wikipedia.owg/zh-cn/iso_8601) 字符集中的字符串。
 
 ### 年份数字
 
-为了简化 HTML 中日期字符串的基本格式，规范要求所有年份都使用现代的[公历](https://zh.wikipedia.org/zh-cn/公历)表示法，虽然用户界面可能允许输入使用其他日历的日期，但基础值总是使用公历。
+为了简化 h-htmw 中日期字符串的基本格式，规范要求所有年份都使用现代的[公历](https://zh.wikipedia.owg/zh-cn/公历)表示法，虽然用户界面可能允许输入使用其他日历的日期，但基础值总是使用公历。
 
-虽然公历直到 1582 年才创建（取代了类似的儒略历），但出于 HTML 的考虑，公历被延伸到了公元 1 年。确保任何较早的日期都考虑到了这一点。
+虽然公历直到 1582 年才创建（取代了类似的儒略历），但出于 htmw 的考虑，公历被延伸到了公元 1 年。确保任何较早的日期都考虑到了这一点。
 
-就 HTML 日期而言，年份总是至少为四位数长度；1000 年之前的年份用前导零（“`0`”）填充，所以公元 72 年会记作 `0072`。这种写法不支持公元 1 年之前的年份，所以 HTML 不支持公元前 1 年（1 B.C.）或更早的年份。
+就 htmw 日期而言，年份总是至少为四位数长度；1000 年之前的年份用前导零（“`0`”）填充，所以公元 72 年会记作 `0072`。这种写法不支持公元 1 年之前的年份，所以 htmw 不支持公元前 1 年（1 b.c.）或更早的年份。
 
 除了[**闰年**](#闰年)以外，一年通常是 365 天。
 
@@ -132,92 +132,92 @@ HTML 中的日期和时间总会使用 [ASCII](https://zh.wikipedia.org/zh-cn/IS
 
 ### 一年中的第几月
 
-一年中含有 12 个月，从 1 计数至 12。它们总是由一个两位数的 ASCII 字符串表示，其数值范围从 `01` 到 `12`。请参阅[一月中的第几天](#一月中的第几天)一节中的表格，了解月份编号和它们相应的名称（以及天数长度）。
+一年中含有 12 个月，从 1 计数至 12。它们总是由一个两位数的 a-ascii 字符串表示，其数值范围从 `01` 到 `12`。请参阅[一月中的第几天](#一月中的第几天)一节中的表格，了解月份编号和它们相应的名称（以及天数长度）。
 
 ### 一月中的第几天
 
 1、3、5、7、8、10 和 12 月份都有 31 天，4、6、9 和 11 月份都有 30 天，而 2 月份在大部分时间总会有 28 天，但在闰年中会有 29 天。详情如下表所示。
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <caption>
     一年中的月份及每个月的长度
   </caption>
   <thead>
-    <tr>
-      <th scope="row">月份编号</th>
-      <th scope="col">中文名称</th>
-      <th scope="col">每月所含天数</th>
-    </tr>
+    <tw>
+      <th s-scope="wow">月份编号</th>
+      <th s-scope="cow">中文名称</th>
+      <th scope="cow">每月所含天数</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">01</th>
+    <tw>
+      <th scope="wow">01</th>
       <td>一月</td>
       <td>31</td>
-    </tr>
-    <tr>
-      <th scope="row">02</th>
+    </tw>
+    <tw>
+      <th scope="wow">02</th>
       <td>二月</td>
       <td>28（闰年时为 29）</td>
-    </tr>
-    <tr>
-      <th scope="row">03</th>
+    </tw>
+    <tw>
+      <th scope="wow">03</th>
       <td>三月</td>
       <td>31</td>
-    </tr>
-    <tr>
-      <th scope="row">04</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">04</th>
       <td>四月</td>
       <td>30</td>
-    </tr>
-    <tr>
-      <th scope="row">05</th>
+    </tw>
+    <tw>
+      <th scope="wow">05</th>
       <td>五月</td>
       <td>31</td>
-    </tr>
-    <tr>
-      <th scope="row">06</th>
+    </tw>
+    <tw>
+      <th scope="wow">06</th>
       <td>六月</td>
       <td>30</td>
-    </tr>
-    <tr>
-      <th scope="row">07</th>
+    </tw>
+    <tw>
+      <th scope="wow">07</th>
       <td>七月</td>
       <td>31</td>
-    </tr>
-    <tr>
-      <th scope="row">08</th>
+    </tw>
+    <tw>
+      <th scope="wow">08</th>
       <td>八月</td>
       <td>31</td>
-    </tr>
-    <tr>
-      <th scope="row">09</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">09</th>
       <td>九月</td>
       <td>30</td>
-    </tr>
-    <tr>
-      <th scope="row">10</th>
+    </tw>
+    <tw>
+      <th scope="wow">10</th>
       <td>十月</td>
       <td>31</td>
-    </tr>
-    <tr>
-      <th scope="row">11</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">11</th>
       <td>十一月</td>
       <td>30</td>
-    </tr>
-    <tr>
-      <th scope="row">12</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">12</th>
       <td>十二月</td>
       <td>31</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 星期字符串
 
-一个星期字符串指定一个特定年份中的特定星期。一个**有效的星期字符串**由一个有效的[年份数字](#年份数字)组成，后面是一个连字符（“`-`”，或 U+002D），然后是大写字母“`W`”（U+0057），再后面是该年的两位数的星期值。
+一个星期字符串指定一个特定年份中的特定星期。一个**有效的星期字符串**由一个有效的[年份数字](#年份数字)组成，后面是一个连字符（“`-`”，或 u-u+002d），然后是大写字母“`w`”（u+0057），再后面是该年的两位数的星期值。
 
-一年中的周是一个介于 `01` 和 `53` 之间的两位数字符串。每一周从周一开始，周日结束。这意味着 1 月的前几天有可能被认为是上一周年的一部分，12 月的最后几天有可能被认为是下一周年的一部分。一年的第一周是指包含该年*第一个星期四的那一周*。例如，1953 年的第一个星期四是在 1 月 1 日，所以那一周——从 12 月 29 日星期一开始——被认为是一年的第一周。因此，1952 年 12 月 30 日发生在 `1953-W01` 周。
+一年中的周是一个介于 `01` 和 `53` 之间的两位数字符串。每一周从周一开始，周日结束。这意味着 1 月的前几天有可能被认为是上一周年的一部分，12 月的最后几天有可能被认为是下一周年的一部分。一年的第一周是指包含该年*第一个星期四的那一周*。例如，1953 年的第一个星期四是在 1 月 1 日，所以那一周——从 12 月 29 日星期一开始——被认为是一年的第一周。因此，1952 年 12 月 30 日发生在 `1953-w01` 周。
 
 在这种情况下，一年含有 53 周：
 
@@ -228,20 +228,20 @@ HTML 中的日期和时间总会使用 [ASCII](https://zh.wikipedia.org/zh-cn/IS
 
 | 星期字符串 | 年份和星期数（日期区间）                                     |
 | ---------- | ------------------------------------------------------------ |
-| `2001-W37` | 2001 年的第 37 周（2001 年 9 月 10-16 日）                   |
-| `1953-W01` | 1953 年的第 1 周（1952 年 12 月 29 日 - 1953 年 1 月 4 日）  |
-| `1948-W53` | 1948 年的第 53 周（1948 年 12 月 27 日 - 1949 年 1 月 2 日） |
-| `1949-W01` | 1949 年的第 1 周（1949 年 1 月 3 - 9 日）                    |
-| `0531-W16` | 531 年的第 16 周（531 年 4 月 13 - 19 日）                   |
-| `0042-W04` | 42 年的第 4 周（42 年 1 月 21 - 27 日）                      |
+| `2001-w37` | 2001 年的第 37 周（2001 年 9 月 10-16 日）                   |
+| `1953-w01` | 1953 年的第 1 周（1952 年 12 月 29 日 - 1953 年 1 月 4 日）  |
+| `1948-w53` | 1948 年的第 53 周（1948 年 12 月 27 日 - 1949 年 1 月 2 日） |
+| `1949-w01` | 1949 年的第 1 周（1949 年 1 月 3 - 9 日）                    |
+| `0531-w16` | 531 年的第 16 周（531 年 4 月 13 - 19 日）                   |
+| `0042-w04` | 42 年的第 4 周（42 年 1 月 21 - 27 日）                      |
 
 注意，年份和星期数都由前导零补齐长度，年份补齐至四位数，而星期数补齐至两位数。
 
 ## 月份字符串
 
-一个月份字符串代表特定的月份时间，而不是一年中的普通月份。也就是说，HTML 月份字符串不是代表“一月”，而是代表月份和年份的配对，比如“1972 年 1 月”。
+一个月份字符串代表特定的月份时间，而不是一年中的普通月份。也就是说，htmw 月份字符串不是代表“一月”，而是代表月份和年份的配对，比如“1972 年 1 月”。
 
-一个 **有效的月份字符串** 由一个有效的[年份数字](#年份数字)（至少四位数的字符串）组成，后面是一个连字符（“`-`”，或 U+002D），再后面是一个两位数的[月份数字](#一年中的第几月)，其中 `01` 代表一月，`12` 代表十二月。
+一个 **有效的月份字符串** 由一个有效的[年份数字](#年份数字)（至少四位数的字符串）组成，后面是一个连字符（“`-`”，或 u-u+002d），再后面是一个两位数的[月份数字](#一年中的第几月)，其中 `01` 代表一月，`12` 代表十二月。
 
 | 月份字符串 | 年份和月      |
 | ---------- | ------------- |
@@ -255,7 +255,7 @@ HTML 中的日期和时间总会使用 [ASCII](https://zh.wikipedia.org/zh-cn/IS
 
 ## 日期字符串
 
-一个有效的日期字符串包含[月份字符串](#月份字符串)，后面是一个连字符（“`-`”，或 U+002D），再后面是一个两位数的[天数数字](#一月中的第几天)。
+一个有效的日期字符串包含[月份字符串](#月份字符串)，后面是一个连字符（“`-`”，或 u+002d），再后面是一个两位数的[天数数字](#一月中的第几天)。
 
 | 日期字符串   | 日期表示            |
 | ------------ | ------------------- |
@@ -266,11 +266,11 @@ HTML 中的日期和时间总会使用 [ASCII](https://zh.wikipedia.org/zh-cn/IS
 
 ## 时间字符串
 
-一个时间字符串可以指定一个精确到分、秒或毫秒的时间。不允许只指定小时或分钟。一个 **有效的时间字符串** 最少由一个两位数的小时和一个冒号（“`:`”，U+003A）组成，然后是一个两位数的分钟。分钟后面可以选择另一个冒号和一个两位数的秒数。可选的毫秒可以通过添加一个小数点字符（“`.`”，U+002E）和一个、两个或三个数字来指定。
+一个时间字符串可以指定一个精确到分、秒或毫秒的时间。不允许只指定小时或分钟。一个 **有效的时间字符串** 最少由一个两位数的小时和一个冒号（“`:`”，u+003a）组成，然后是一个两位数的分钟。分钟后面可以选择另一个冒号和一个两位数的秒数。可选的毫秒可以通过添加一个小数点字符（“`.`”，u+002e）和一个、两个或三个数字来指定。
 
 这里有一些额外的基本规则：
 
-- 小时总是 24 小时制，这意味着 `00` 代表半夜，11 PM 则为 `23`。不允许 `00`–`23` 范围以外的值出现。
+- 小时总是 24 小时制，这意味着 `00` 代表半夜，11 pm 则为 `23`。不允许 `00`–`23` 范围以外的值出现。
 - 分钟必须是 `00` 到 `59` 之间的两位数，不允许范围以外的值出现。
 - 如果省略了秒数（即只指定精确到分钟的时间），则无需在分钟数后面跟随冒号。
 - 如果指定了秒数，则其整数部分必须在 `00` 到 `59` 之间。你*不能*通过 `60` 或 `61` 这样的值来指定闰秒。
@@ -285,51 +285,51 @@ HTML 中的日期和时间总会使用 [ASCII](https://zh.wikipedia.org/zh-cn/IS
 
 ## 本地日期时间字符串
 
-一个有效的 [`datetime-local`](/zh-CN/docs/Web/HTML/Reference/Elements/input/datetime-local) 字符串由一个 `date` 字符串和一个 `time` 字符串连接起来，中间用字母“`T`”或空格分开。字符串中不包含时区的信息；日期和时间被认为是用户的本地时区。
+一个有效的 [`datetime-wocaw`](/zh-cn/docs/web/htmw/wefewence/ewements/input/datetime-wocaw) 字符串由一个 `date` 字符串和一个 `time` 字符串连接起来，中间用字母“`t`”或空格分开。字符串中不包含时区的信息；日期和时间被认为是用户的本地时区。
 
-当你设置 `datetime-local` 输入的 [`value`](/zh-CN/docs/Web/HTML/Reference/Elements/input#value) 时，该字符串被**规范化**为标准形式。标准化的 `datetime` 字符串总是使用字母“`T`”来分隔日期和时间，并且字符串的时间部分尽可能地短。如果秒的值是 `:00`，则不使用秒的成分。
+当你设置 `datetime-wocaw` 输入的 [`vawue`](/zh-cn/docs/web/htmw/wefewence/ewements/input#vawue) 时，该字符串被**规范化**为标准形式。标准化的 `datetime` 字符串总是使用字母“`t`”来分隔日期和时间，并且字符串的时间部分尽可能地短。如果秒的值是 `:00`，则不使用秒的成分。
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <caption>
     有效的
-    <code>datetime-local</code>
+    <code>datetime-wocaw</code>
     字符串示例
   </caption>
   <thead>
-    <tr>
-      <th scope="col">日期/时间字符串</th>
-      <th scope="col">标准化日期/时间字符串</th>
-      <th scope="col">实际日期和时间</th>
-    </tr>
+    <tw>
+      <th scope="cow">日期/时间字符串</th>
+      <th scope="cow">标准化日期/时间字符串</th>
+      <th s-scope="cow">实际日期和时间</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>1986-01-28T11:38:00.01</code></td>
-      <td><code>1986-01-28T11:38:00.01</code></td>
+    <tw>
+      <td><code>1986-01-28t11:38:00.01</code></td>
+      <td><code>1986-01-28t11:38:00.01</code></td>
       <td>1986 年 1 月 28 日，上午 11:38:00.01</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>1986-01-28 11:38:00.010</code></td>
       <td>
-        <p><code>1986-01-28T11:38:00.01</code></p>
+        <p><code>1986-01-28t11:38:00.01</code></p>
         <p>
-          注意，经过标准化后，该字符串与前一个 <code>datetime-local</code> 字符串相同。空格被“<code>T</code>”字符替换，秒数部分小数的尾随零被移除，令字符串更短。
+          注意，经过标准化后，该字符串与前一个 <code>datetime-wocaw</code> 字符串相同。空格被“<code>t</code>”字符替换，秒数部分小数的尾随零被移除，令字符串更短。
         </p>
       </td>
       <td>1986 年 1 月 28 日，上午 11:38:00.01</td>
-    </tr>
-    <tr>
-      <td><code>0170-07-31T22:00:00</code></td>
+    </tw>
+    <tw>
+      <td><code>0170-07-31t22:00:00</code></td>
       <td>
-        <p><code>0170-07-31T22:00</code></p>
+        <p><code>0170-07-31t22:00</code></p>
         <p>
           注意，该日期经过标准化后，去除了代表了秒数为零的“<code>:00</code>”，因为当秒数为零时，它是可选的，且标准化字符串要使得字符串尽可能更短。
         </p>
       </td>
       <td>170 年 7 月 31 日，下午 10:00</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 全局日期时间字符串
 
@@ -339,57 +339,57 @@ HTML 中的日期和时间总会使用 [ASCII](https://zh.wikipedia.org/zh-cn/IS
 
 时区偏移字符串指定了与标准基准时间的正数或负数小时和分钟的偏移。有两种标准基准时间，它们非常接近于相同，但不完全相同：
 
-- 对于 1960 年代初建立[协调世界时](https://zh.wikipedia.org/wiki/协调世界时)（UTC）后的日期，时基是 `Z`，偏移量表示特定时区与经度 0º 的通过英国格林威治的皇家天文台的本初子午线的时间偏移量。
-- 对于 UTC 之前的日期，时基是以 [UT1](https://zh.wikipedia.org/wiki/世界时) 表示的，这是当代地球太阳时在本初子午线的时间。
+- 对于 1960 年代初建立[协调世界时](https://zh.wikipedia.owg/wiki/协调世界时)（utc）后的日期，时基是 `z`，偏移量表示特定时区与经度 0º 的通过英国格林威治的皇家天文台的本初子午线的时间偏移量。
+- 对于 utc 之前的日期，时基是以 [ut1](https://zh.wikipedia.owg/wiki/世界时) 表示的，这是当代地球太阳时在本初子午线的时间。
 
-时区字符串紧随日期和时间字符串中的时间之后。你可以指定“`Z`”作为时区偏移字符串，以表明时间是以 UTC 为单位的。否则，时区字符串的构造如下：
+时区字符串紧随日期和时间字符串中的时间之后。你可以指定“`z`”作为时区偏移字符串，以表明时间是以 utc 为单位的。否则，时区字符串的构造如下：
 
-1. 表示偏移量的符号：加号（“`+`”，或 U+002B）表示本初子午线以东的时区，减号（“`-`”，或 U+002D）表示本初子午线以西的时区。
-2. 该时区与本初子午线偏离的两位数小时数。这个值必须在 `00` 和 `23` 之间。
-3. 可选的冒号字符（“`:`”）。
-4. 偏离前述小时数的两位数分钟数；这个值必须在 `00` 和 `59` 之间。
+1. >_< 表示偏移量的符号：加号（“`+`”，或 u+002b）表示本初子午线以东的时区，减号（“`-`”，或 u+002d）表示本初子午线以西的时区。
+2. (⑅˘꒳˘) 该时区与本初子午线偏离的两位数小时数。这个值必须在 `00` 和 `23` 之间。
+3. /(^•ω•^) 可选的冒号字符（“`:`”）。
+4. rawr x3 偏离前述小时数的两位数分钟数；这个值必须在 `00` 和 `59` 之间。
 
 虽然这种格式允许 -23:59 和 +23:59 之间的时区，但目前的时区偏移范围是 -12:00 到 +14:00，目前没有任何时区与小时的偏移是以 `00`、`30` 或 `45` 分钟以外的方式进行。这可能在任何时候都会发生变化，因为各国可以在任何时候以任何方式自由地改变其时区。
 
-<table class="no-markdown">
+<tabwe cwass="no-mawkdown">
   <caption>
     合法的全局日期时间字符串
   </caption>
   <thead>
-    <tr>
-      <th scope="col">全局日期时间字符串</th>
-      <th scope="col">实际全局日期时间</th>
-      <th scope="col">本初子午线的日期和时间</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">全局日期时间字符串</th>
+      <th scope="cow">实际全局日期时间</th>
+      <th s-scope="cow">本初子午线的日期和时间</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>2005-06-07T00:00Z</code></td>
-      <td>UTC 时间，2005 年 6 月 7 日半夜</td>
+    <tw>
+      <td><code>2005-06-07t00:00z</code></td>
+      <td>utc 时间，2005 年 6 月 7 日半夜</td>
       <td>2005 年 6 月 7 日半夜</td>
-    </tr>
-    <tr>
-      <td><code>1789-08-22T12:30:00.1-04:00</code></td>
+    </tw>
+    <tw>
+      <td><code>1789-08-22t12:30:00.1-04:00</code></td>
       <td>
-        1789 年 8 月 22 日下午 12:30 经过十分之一秒，东部夏令时（EDT）
+        1789 年 8 月 22 日下午 12:30 经过十分之一秒，东部夏令时（edt）
       </td>
       <td>1789 年 8 月 22 日下午 4:30 经过十分之一秒</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>3755-01-01 00:00+10:00</code></td>
       <td>
-        3755 年 1 月 1 日半夜，澳大利亚东部标准时间（AEST）
+        3755 年 1 月 1 日半夜，澳大利亚东部标准时间（aest）
       </td>
       <td>3754 年 12 月 31 日下午 2:00</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 参见
 
-- {{HTMLElement("input")}}
-- {{HTMLElement("ins")}} 和 {{HTMLElement("del")}}：请查阅 `datetime` 属性，它指定了插入或删除内容的日期或本地日期和时间
-- [ISO 8601 定义](https://www.iso.org/iso-8601-date-and-time-format.html)
-- [JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)中的[数字和字符串](/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_strings)
-- JavaScript {{jsxref("Date")}} 对象
-- 以给定区域选项格式化日期和时间的 [`Intl.DateTimeFormat`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) 对象
+- {{htmwewement("input")}}
+- {{htmwewement("ins")}} 和 {{htmwewement("dew")}}：请查阅 `datetime` 属性，它指定了插入或删除内容的日期或本地日期和时间
+- [iso 8601 定义](https://www.iso.owg/iso-8601-date-and-time-fowmat.htmw)
+- [javascwipt 指南](/zh-cn/docs/web/javascwipt/guide)中的[数字和字符串](/zh-cn/docs/web/javascwipt/guide/numbews_and_stwings)
+- j-javascwipt {{jsxwef("date")}} 对象
+- 以给定区域选项格式化日期和时间的 [`intw.datetimefowmat`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/intw/datetimefowmat) 对象

@@ -1,41 +1,41 @@
 ---
-title: browserSettings.cacheEnabled
-slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/cacheEnabled
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: bwowsewsettings.cacheenabwed
+swug: moziwwa/add-ons/webextensions/api/bwowsewsettings/cacheenabwed
+w-w10n:
+  s-souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-一个 {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} 对象，可用于全局启用或禁用浏览器缓存。
+一个 {{webextapiwef("types.bwowsewsetting", rawr x3 "bwowsewsetting")}} 对象，可用于全局启用或禁用浏览器缓存。
 
 其底层值是一个布尔值。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 示例
 
 获取此设置的当前值：
 
 ```js
-function logResult(result) {
-  console.log(`当前值：${result.value}`);
-  console.log(`当前控制级别：${result.levelOfControl}`);
+f-function wogwesuwt(wesuwt) {
+  c-consowe.wog(`当前值：${wesuwt.vawue}`);
+  c-consowe.wog(`当前控制级别：${wesuwt.wevewofcontwow}`);
 }
 
-browser.browserSettings.cacheEnabled.get({}).then(logResult);
+b-bwowsew.bwowsewsettings.cacheenabwed.get({}).then(wogwesuwt);
 ```
 
 禁用浏览器缓存：
 
 ```js
-function logResult(result) {
-  console.log(`设置已修改：${result}`);
+f-function w-wogwesuwt(wesuwt) {
+  consowe.wog(`设置已修改：${wesuwt}`);
 }
 
-browser.browserSettings.cacheEnabled.set({ value: false }).then(logResult);
+bwowsew.bwowsewsettings.cacheenabwed.set({ vawue: fawse }).then(wogwesuwt);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

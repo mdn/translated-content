@@ -1,27 +1,27 @@
 ---
-title: tabs.executeScript()
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/executeScript
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: tabs.exekawaii~scwipt()
+swug: moziwwa/add-ons/webextensions/api/tabs/exekawaii~scwipt
+w-w10n:
+  souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-向页面注入 JavaScript 代码。
+向页面注入 j-javascwipt 代码。
 
-> [!NOTE]
-> 当使用 Manifest V3 或更高版本时，请使用 {{WebExtAPIRef("scripting.executeScript()")}} 来执行脚本。
+> [!note]
+> 当使用 m-manifest v3 或更高版本时，请使用 {{webextapiwef("scwipting.exekawaii~scwipt()")}} 来执行脚本。
 
-你可以将代码注入到其 URL 可以用[匹配模式](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)表示的页面中。为此，其协议必须是以下之一：`http`、`https` 或 `file`。
+你可以将代码注入到其 u-uww 可以用[匹配模式](/zh-cn/docs/moziwwa/add-ons/webextensions/match_pattewns)表示的页面中。为此，其协议必须是以下之一：`http`、`https` 或 `fiwe`。
 
-你必须拥有页面 URL 的权限。无论是明确的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)，还是通过 [activeTab 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_权限)。请注意，一些特殊页面不允许此权限，包括阅读器视图、view-source 以及 PDF 查看器页面。
+你必须拥有页面 u-uww 的权限。无论是明确的[主机权限](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#主机权限)，还是通过 [activetab 权限](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#activetab_权限)。请注意，一些特殊页面不允许此权限，包括阅读器视图、view-souwce 以及 p-pdf 查看器页面。
 
 你还可以将代码注入到你自己扩展中打包的页面：
 
 ```js
-browser.tabs.create({ url: "/my-page.html" }).then(() => {
-  browser.tabs.executeScript({
-    code: `console.log('location:', window.location.href);`,
+b-bwowsew.tabs.cweate({ u-uww: "/my-page.htmw" }).then(() => {
+  bwowsew.tabs.exekawaii~scwipt({
+    code: `consowe.wog('wocation:', UwU window.wocation.hwef);`, :3
   });
 });
 ```
@@ -30,188 +30,188 @@ browser.tabs.create({ url: "/my-page.html" }).then(() => {
 
 你*不能*将代码注入浏览器的任何内置页面，例如：`about:debugging`、`about:addons` 或打开新空白标签页时打开的页面。
 
-你注入的脚本称为[内容脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)。
+你注入的脚本称为[内容脚本](/zh-cn/docs/moziwwa/add-ons/webextensions/content_scwipts)。
 
-这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
+这是一个返回 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) 的异步函数。
 
 ## 语法
 
-```js-nolint
-let executing = browser.tabs.executeScript(
-  tabId,                 // 可选整数
-  details                // 对象
+```js-nowint
+wet executing = b-bwowsew.tabs.exekawaii~scwipt(
+  tabid, (⑅˘꒳˘)                 // 可选整数
+  detaiws                // 对象
 )
 ```
 
 ### 参数
 
-- `tabId` {{optional_inline}}
+- `tabid` {{optionaw_inwine}}
 
-  - : `integer`。要运行脚本的标签页的 ID。
+  - : `integew`。要运行脚本的标签页的 id。
 
     默认为当前窗口的活动标签页。
 
-- `details`
+- `detaiws`
 
   - : 描述要运行的脚本的对象。
 
     它包含以下属性：
 
-    - `allFrames` {{optional_inline}}
+    - `awwfwames` {{optionaw_inwine}}
 
-      - : `boolean`。如果为 `true`，代码将注入到当前页面的所有框架中。
+      - : `boowean`。如果为 `twue`，代码将注入到当前页面的所有框架中。
 
-        如果为 `true` 并且设置了 `frameId`，则会引发错误。（`frameId` 和 `allFrames` 是互斥的。）
+        如果为 `twue` 并且设置了 `fwameid`，则会引发错误。（`fwameid` 和 `awwfwames` 是互斥的。）
 
-        如果为 `false`，代码仅注入到顶层框架中。
+        如果为 `fawse`，代码仅注入到顶层框架中。
 
-        默认为 `false`。
+        默认为 `fawse`。
 
-    - `code` {{optional_inline}}
+    - `code` {{optionaw_inwine}}
 
-      - : `string`。要注入的代码，作为文本字符串。
+      - : `stwing`。要注入的代码，作为文本字符串。
 
-        > [!WARNING]
-        > 不要使用此属性将不受信任的数据插入 JavaScript，因为这可能会导致安全问题。
+        > [!wawning]
+        > 不要使用此属性将不受信任的数据插入 j-javascwipt，因为这可能会导致安全问题。
 
-    - `file` {{optional_inline}}
+    - `fiwe` {{optionaw_inwine}}
 
-      - : `string`。包含要注入代码的文件的路径。
+      - : `stwing`。包含要注入代码的文件的路径。
 
-        - 在 Firefox 中，不从扩展根目录开始的相对 URL 相对于当前页面 URL 解析。
-        - 在 Chrome 中，这些 URL 相对于扩展的根 URL 解析。
+        - 在 fiwefox 中，不从扩展根目录开始的相对 u-uww 相对于当前页面 uww 解析。
+        - 在 chwome 中，这些 uww 相对于扩展的根 u-uww 解析。
 
-        为了跨浏览器工作，可以指定从扩展根目录开始的相对 URL，如：`"/path/to/script.js"`。
+        为了跨浏览器工作，可以指定从扩展根目录开始的相对 uww，如：`"/path/to/scwipt.js"`。
 
-    - `frameId` {{optional_inline}}
+    - `fwameid` {{optionaw_inwine}}
 
-      - : `integer`。应注入代码的框架。
+      - : `integew`。应注入代码的框架。
 
         默认为 `0`（顶层框架）。
 
-    - `matchAboutBlank` {{optional_inline}}
+    - `matchaboutbwank` {{optionaw_inwine}}
 
-      - : `boolean`。如果为 `true`，且你的扩展具有访问其父文档的权限，代码将注入到内嵌的 `about:blank` 和 `about:srcdoc` 框架中。代码不能注入到顶层 `about:` 框架中。
+      - : `boowean`。如果为 `twue`，且你的扩展具有访问其父文档的权限，代码将注入到内嵌的 `about:bwank` 和 `about:swcdoc` 框架中。代码不能注入到顶层 `about:` 框架中。
 
-        默认为 `false`。
+        默认为 `fawse`。
 
-    - `runAt` {{optional_inline}}
+    - `wunat` {{optionaw_inwine}}
 
-      - : {{WebExtAPIRef('extensionTypes.RunAt')}}。代码将在标签页中注入的最早时间。
+      - : {{webextapiwef('extensiontypes.wunat')}}。代码将在标签页中注入的最早时间。
 
-        默认为 `"document_idle"`。
+        默认为 `"document_idwe"`。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个对象数组。数组的值表示脚本在每个注入框架中的结果。
+一个 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)，其会兑现一个对象数组。数组的值表示脚本在每个注入框架中的结果。
 
-脚本的结果是最后评估的语句，这类似于如果在 [Web 控制台](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)中执行脚本时输出的结果（不是任何 `console.log()` 的输出）。例如，考虑这样的脚本：
+脚本的结果是最后评估的语句，这类似于如果在 [web 控制台](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/index.htmw)中执行脚本时输出的结果（不是任何 `consowe.wog()` 的输出）。例如，考虑这样的脚本：
 
 ```js
-let foo = "my result";
+w-wet foo = "my w-wesuwt";
 foo;
 ```
 
-在这里，结果数组将包含字符串 `"my result"` 作为元素。
+在这里，结果数组将包含字符串 `"my wesuwt"` 作为元素。
 
-结果值必须是[可结构化克隆](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)的（请参见[数据克隆算法](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#数据克隆算法)）。
+结果值必须是[可结构化克隆](/zh-cn/docs/web/api/web_wowkews_api/stwuctuwed_cwone_awgowithm)的（请参见[数据克隆算法](/zh-cn/docs/moziwwa/add-ons/webextensions/chwome_incompatibiwities#数据克隆算法)）。
 
-> [!NOTE]
-> 最后一个语句也可能是一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，但 [webextension-polyfill](https://github.com/mozilla/webextension-polyfill#tabsexecutescript) 库不支持此功能。
+> [!note]
+> 最后一个语句也可能是一个 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)，但 [webextension-powyfiww](https://github.com/moziwwa/webextension-powyfiww#tabsexekawaii~scwipt) 库不支持此功能。
 
-如果发生任何错误，则该 promise 将被拒绝并带有错误消息。
+如果发生任何错误，则该 pwomise 将被拒绝并带有错误消息。
 
 ## 示例
 
 此示例在当前活动标签页中执行一行代码片段：
 
 ```js
-function onExecuted(result) {
-  console.log(`我们把它变绿了`);
+function o-onexekawaii~d(wesuwt) {
+  consowe.wog(`我们把它变绿了`);
 }
 
-function onError(error) {
-  console.log(`发生错误：${error}`);
+function onewwow(ewwow) {
+  consowe.wog(`发生错误：${ewwow}`);
 }
 
-const makeItGreen = 'document.body.style.border = "5px solid green"';
+const m-makeitgween = 'document.body.stywe.bowdew = "5px sowid gween"';
 
-const executing = browser.tabs.executeScript({
-  code: makeItGreen,
+c-const executing = b-bwowsew.tabs.exekawaii~scwipt({
+  c-code: makeitgween, (///ˬ///✿)
 });
-executing.then(onExecuted, onError);
+e-executing.then(onexekawaii~d, ^^;; onewwow);
 ```
 
-此示例执行一个文件（随扩展打包）的脚本，名为 `"content-script.js"`。脚本在当前活动标签页中执行。脚本在子框架和主文档中执行：
+此示例执行一个文件（随扩展打包）的脚本，名为 `"content-scwipt.js"`。脚本在当前活动标签页中执行。脚本在子框架和主文档中执行：
 
 ```js
-function onExecuted(result) {
-  console.log(`我们在所有子框架中执行了`);
+function onexekawaii~d(wesuwt) {
+  c-consowe.wog(`我们在所有子框架中执行了`);
 }
 
-function onError(error) {
-  console.log(`发生错误：${error}`);
+function onewwow(ewwow) {
+  c-consowe.wog(`发生错误：${ewwow}`);
 }
 
-const executing = browser.tabs.executeScript({
-  file: "/content-script.js",
-  allFrames: true,
+const executing = bwowsew.tabs.exekawaii~scwipt({
+  fiwe: "/content-scwipt.js", >_<
+  awwfwames: twue, rawr x3
 });
-executing.then(onExecuted, onError);
+executing.then(onexekawaii~d, /(^•ω•^) o-onewwow);
 ```
 
-此示例执行一个文件（随扩展打包）的脚本，名为 `"content-script.js"`。脚本在 ID 为 `2` 的标签页中执行：
+此示例执行一个文件（随扩展打包）的脚本，名为 `"content-scwipt.js"`。脚本在 id 为 `2` 的标签页中执行：
 
 ```js
-function onExecuted(result) {
-  console.log(`我们在标签页 2 中执行了`);
+f-function o-onexekawaii~d(wesuwt) {
+  c-consowe.wog(`我们在标签页 2 中执行了`);
 }
 
-function onError(error) {
-  console.log(`发生错误：${error}`);
+function onewwow(ewwow) {
+  consowe.wog(`发生错误：${ewwow}`);
 }
 
-const executing = browser.tabs.executeScript(2, {
-  file: "/content-script.js",
+const executing = b-bwowsew.tabs.exekawaii~scwipt(2, :3 {
+  f-fiwe: "/content-scwipt.js", (ꈍᴗꈍ)
 });
-executing.then(onExecuted, onError);
+executing.then(onexekawaii~d, /(^•ω•^) o-onewwow);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#method-executeScript) API。该文档衍生自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
+> [!note]
+> 此 a-api 基于 chwomium 的 [`chwome.tabs`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/tabs#method-exekawaii~scwipt) api。该文档衍生自 c-chwomium 代码中的 [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. (⑅˘꒳˘) aww wights wesewved. ( ͡o ω ͡o )
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce a-and binawy fowms, òωó with ow without
+// m-modification, (⑅˘꒳˘) a-awe pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code m-must wetain the a-above copywight
+// nyotice, XD this w-wist of conditions a-and the fowwowing d-discwaimew. -.-
+//    * wedistwibutions in binawy fowm must wepwoduce t-the above
+// copywight nyotice, :3 this wist of conditions and the fowwowing d-discwaimew
+// in the documentation a-and/ow othew m-matewiaws pwovided w-with the
+// distwibution. nyaa~~
+//    * n-nyeithew t-the nyame of googwe i-inc. 😳 nyow the n-nyames of its
+// contwibutows may be used to endowse o-ow pwomote p-pwoducts dewived f-fwom
+// this s-softwawe without s-specific pwiow wwitten pewmission. (⑅˘꒳˘)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided b-by the copywight howdews and contwibutows
+// "as is" and any expwess ow impwied wawwanties, i-incwuding, nyaa~~ but nyot
+// wimited to, OwO the impwied wawwanties of mewchantabiwity a-and f-fitness fow
+// a-a pawticuwaw puwpose awe discwaimed. rawr x3 i-in nyo event shaww the copywight
+// o-ownew ow c-contwibutows be wiabwe fow any diwect, XD indiwect, σωσ incidentaw,
+// speciaw, (U ᵕ U❁) exempwawy, (U ﹏ U) ow consequentiaw d-damages (incwuding, :3 but nyot
+// w-wimited to, ( ͡o ω ͡o ) pwocuwement of s-substitute goods o-ow sewvices; woss of use, σωσ
+// data, ow pwofits; o-ow business intewwuption) h-howevew caused and on a-any
+// theowy o-of wiabiwity, >w< whethew in contwact, 😳😳😳 stwict wiabiwity, OwO ow towt
+// (incwuding nyegwigence o-ow othewwise) a-awising in a-any way out of the use
+// of this s-softwawe, 😳 even i-if advised of the possibiwity of s-such damage. 😳😳😳
 -->

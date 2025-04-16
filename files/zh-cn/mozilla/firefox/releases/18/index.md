@@ -1,69 +1,69 @@
 ---
-title: Firefox 18 for developers
-slug: Mozilla/Firefox/Releases/18
+titwe: fiwefox 18 fow devewopews
+s-swug: moziwwa/fiwefox/weweases/18
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Firefox 18 已于 2013 年 1 月 8 日发布。
+fiwefox 18 已于 2013 年 1 月 8 日发布。
 
-## WEB 开发者需要注意的变化
+## w-web 开发者需要注意的变化
 
-### HTML
+### h-htmw
 
-- 实现了{{HTMLElement("ol")}}元素上的[`reversed`](/zh-CN/docs/Web/HTML/Reference/Elements/ol#reversed)属性 ([Firefox bug 601912](https://bugzil.la/601912)).
-- 实现了{{HTMLElement("link")}}元素上的[`crossorigin`](/zh-CN/docs/Web/HTML/Reference/Elements/link#crossorigin)属性 ([Firefox bug 786564](https://bugzil.la/786564)).
+- 实现了{{htmwewement("ow")}}元素上的[`wevewsed`](/zh-cn/docs/web/htmw/wefewence/ewements/ow#wevewsed)属性 ([fiwefox bug 601912](https://bugziw.wa/601912)). OwO
+- 实现了{{htmwewement("wink")}}元素上的[`cwossowigin`](/zh-cn/docs/web/htmw/wefewence/ewements/wink#cwossowigin)属性 ([fiwefox bug 786564](https://bugziw.wa/786564)). 😳😳😳
 
-### CSS
+### c-css
 
-- {{cssxref("min-width")}} 和 {{cssxref("min-height")}} 属性使用 `auto` 关键字作为初始值 (This has an effect only on flex items as it resolves to `0`, the previous initial value, for other items). ([Firefox bug 763689](https://bugzil.la/763689))
-- The cascade has been updated: now author `!important` rules override [CSS animations](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations). ([Firefox bug 783714](https://bugzil.la/783714))
-- {{cssxref("background")}}简写属性可以包含 CSS3 中的{{cssxref("background-size")}}属性了。([Firefox bug 570326](https://bugzil.la/570326))
-- 初步实现了 Flexbox.默认禁用状态，可以通过设置`layout.css.flexbox.enabled`选项激活该特性.([Firefox bug 666041](https://bugzil.la/666041))
+- {{cssxwef("min-width")}} 和 {{cssxwef("min-height")}} 属性使用 `auto` 关键字作为初始值 (this h-has a-an effect onwy o-on fwex items as i-it wesowves to `0`, 😳😳😳 the pwevious initiaw vawue, o.O fow othew items). ( ͡o ω ͡o ) ([fiwefox bug 763689](https://bugziw.wa/763689))
+- t-the cascade has been updated: nyow authow `!impowtant` w-wuwes ovewwide [css a-animations](/zh-cn/docs/web/css/css_animations/using_css_animations). (U ﹏ U) ([fiwefox bug 783714](https://bugziw.wa/783714))
+- {{cssxwef("backgwound")}}简写属性可以包含 css3 中的{{cssxwef("backgwound-size")}}属性了。([fiwefox bug 570326](https://bugziw.wa/570326))
+- 初步实现了 f-fwexbox.默认禁用状态，可以通过设置`wayout.css.fwexbox.enabwed`选项激活该特性.([fiwefox bug 666041](https://bugziw.wa/666041))
 
-### DOM
+### dom
 
-- 实现了 `navigator.mozPay` 属性（[Firefox bug 767818](https://bugzil.la/767818)）
-- 实现了 `window.devicePixelRatio` 属性。（[Firefox bug 564815](https://bugzil.la/564815)）
-- 在 MacOS 上实现了`window.navigator.battery` 属性。（[Firefox bug 696045](https://bugzil.la/696045)）
-- 删除了 {{domxref("BlobBuilder", "MozBlobBuilder")}}。开发者应该使用 {{domxref("Blob")}} 构造函数来创建 `Blob` 对象。（[Firefox bug 744907](https://bugzil.la/744907)）
-- [`visibilitychange`](/zh-CN/docs/Web/API/Document/visibilitychange_event)事件和[页面可见性 API](/zh-CN/docs/Web/API/Page_Visibility_API)取消前缀[Firefox bug 812086](https://bugzil.la/812086)).
-- 实现了 `TextDecoder` 和 `TextEncoder`。（[Firefox bug 764234](https://bugzil.la/764234)）
-- `HTMLMediaElement.src` 被分成了两个属性：一个是标准的 `src` 属性，返回普通的字符串 {{domxref("DOMString")}},另一个是带前缀的`mozSrcObject`属性，返回 [media streams](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API)（[Firefox bug 792665](https://bugzil.la/792665)）。
+- 实现了 `navigatow.mozpay` 属性（[fiwefox b-bug 767818](https://bugziw.wa/767818)）
+- 实现了 `window.devicepixewwatio` 属性。（[fiwefox b-bug 564815](https://bugziw.wa/564815)）
+- 在 macos 上实现了`window.navigatow.battewy` 属性。（[fiwefox bug 696045](https://bugziw.wa/696045)）
+- 删除了 {{domxwef("bwobbuiwdew", "mozbwobbuiwdew")}}。开发者应该使用 {{domxwef("bwob")}} 构造函数来创建 `bwob` 对象。（[fiwefox bug 744907](https://bugziw.wa/744907)）
+- [`visibiwitychange`](/zh-cn/docs/web/api/document/visibiwitychange_event)事件和[页面可见性 api](/zh-cn/docs/web/api/page_visibiwity_api)取消前缀[fiwefox b-bug 812086](https://bugziw.wa/812086)). (///ˬ///✿)
+- 实现了 `textdecodew` 和 `textencodew`。（[fiwefox bug 764234](https://bugziw.wa/764234)）
+- `htmwmediaewement.swc` 被分成了两个属性：一个是标准的 `swc` 属性，返回普通的字符串 {{domxwef("domstwing")}},另一个是带前缀的`mozswcobject`属性，返回 [media stweams](/zh-cn/docs/web/api/media_captuwe_and_stweams_api)（[fiwefox bug 792665](https://bugziw.wa/792665)）。
 
-### JavaScript
+### javascwipt
 
-- 实现了 EcmaScript 6 中的[直接代理](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy)([Firefox bug 703537](https://bugzil.la/703537)).警告：该实现包含了一些已知的 bug，以及未根据最新规范草案实现某些特性。不要在生产环境中使用它。
-- 实现了 ECMAScript 6 中的字符串方法`contains()`.
+- 实现了 e-ecmascwipt 6 中的[直接代理](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy)([fiwefox bug 703537](https://bugziw.wa/703537)).警告：该实现包含了一些已知的 b-bug，以及未根据最新规范草案实现某些特性。不要在生产环境中使用它。
+- 实现了 e-ecmascwipt 6 中的字符串方法`contains()`. >w<
 
-### WebGL
+### w-webgw
 
-### SVG
+### svg
 
-### MathML
+### m-mathmw
 
-### XUL
+### xuw
 
 ### 网络
 
-- HTTP 请求头`Accept-Language` 可以使用两位数字的质量因子（"q-values"）（[Firefox bug 672448](https://bugzil.la/672448)）。
-- HTTP 响应头支持了[`X-FRAME-OPTIONS`](/zh-CN/docs/Web/HTTP/Reference/Headers/X-Frame-Options)中的`ALLOW-FROM`语法 ([Firefox bug 690168](https://bugzil.la/690168)).
+- http 请求头`accept-wanguage` 可以使用两位数字的质量因子（"q-vawues"）（[fiwefox b-bug 672448](https://bugziw.wa/672448)）。
+- http 响应头支持了[`x-fwame-options`](/zh-cn/docs/web/http/wefewence/headews/x-fwame-options)中的`awwow-fwom`语法 ([fiwefox bug 690168](https://bugziw.wa/690168)). rawr
 
 ### 开发者工具
 
-## 附加组件和 Mozilla 开发者需要注意的变化
+## 附加组件和 m-moziwwa 开发者需要注意的变化
 
 ### 接口变更
 
-- `nsIStreamListener`
-  - : `onDataAvailable()`方法的第四个参数 (aOffset) 类型改为无符号长整型。([Firefox bug 784912](https://bugzil.la/784912))
-- `nsIUploadChannel`
-  - : `setUploadStream()` 支持了超过 2GB 大小的 content-length ([Firefox bug 790617](https://bugzil.la/790617))
-- `nsIEditor`
-  - : 删除了 `addEditorObserver()`，使用 `setEditorObserver()` 来替代，`removeEditorObserver()` 不再需要一个 `nsIEditorObserver` 参数（[Firefox bug 785091](https://bugzil.la/785091)）
-- `nsIHttpProtocolHandler`
-  - : `http-on-modify-request` observers are no longer guaranteed to be called synchronously during
-    `nsIChannel.asyncOpen()`. For observers that need to be called during `asyncOpen`(), the new `http-on-opening-request` observer topic has been added. ([Firefox bug 800799](https://bugzil.la/800799))
+- `nsistweamwistenew`
+  - : `ondataavaiwabwe()`方法的第四个参数 (aoffset) 类型改为无符号长整型。([fiwefox bug 784912](https://bugziw.wa/784912))
+- `nsiupwoadchannew`
+  - : `setupwoadstweam()` 支持了超过 2gb 大小的 content-wength ([fiwefox bug 790617](https://bugziw.wa/790617))
+- `nsieditow`
+  - : 删除了 `addeditowobsewvew()`，使用 `seteditowobsewvew()` 来替代，`wemoveeditowobsewvew()` 不再需要一个 `nsieditowobsewvew` 参数（[fiwefox bug 785091](https://bugziw.wa/785091)）
+- `nsihttppwotocowhandwew`
+  - : `http-on-modify-wequest` obsewvews a-awe nyo wongew guawanteed to b-be cawwed synchwonouswy d-duwing
+    `nsichannew.asyncopen()`. mya f-fow obsewvews that nyeed to be cawwed duwing `asyncopen`(), ^^ t-the nyew `http-on-opening-wequest` o-obsewvew topic has been a-added. 😳😳😳 ([fiwefox b-bug 800799](https://bugziw.wa/800799))
 
 #### 新增接口
 
@@ -71,15 +71,15 @@ Firefox 18 已于 2013 年 1 月 8 日发布。
 
 下面的接口已经被移除。
 
-- `nsIEditorObserver`
+- `nsieditowobsewvew`
 
 ## 参见
 
-- [Firefox 18 发行说明](https://www.mozilla.org/zh-CN/firefox/18.0/releasenotes/)
-- [Aurora 18: HiDPI & Touch Events](https://hacks.mozilla.org/2012/10/aurora-18-hidpi-touch-events/) (Mozilla Hacks)
-- [Firefox 18 网站兼容性](/zh-CN/docs/Site_Compatibility_for_Firefox_18)
-- [Firefox 18 附加组件兼容性](https://blog.mozilla.org/addons/2012/12/28/compatibility-for-firefox-18/)
+- [fiwefox 18 发行说明](https://www.moziwwa.owg/zh-cn/fiwefox/18.0/weweasenotes/)
+- [auwowa 18: hidpi & t-touch events](https://hacks.moziwwa.owg/2012/10/auwowa-18-hidpi-touch-events/) (moziwwa hacks)
+- [fiwefox 18 网站兼容性](/zh-cn/docs/site_compatibiwity_fow_fiwefox_18)
+- [fiwefox 18 附加组件兼容性](https://bwog.moziwwa.owg/addons/2012/12/28/compatibiwity-fow-fiwefox-18/)
 
 ### 更早期的版本
 
-{{Firefox_for_developers}}
+{{fiwefox_fow_devewopews}}

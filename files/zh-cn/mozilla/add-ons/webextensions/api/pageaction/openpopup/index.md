@@ -1,20 +1,20 @@
 ---
-title: pageAction.openPopup()
-slug: Mozilla/Add-ons/WebExtensions/API/pageAction/openPopup
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: pageaction.openpopup()
+swug: moziwwa/add-ons/webextensions/api/pageaction/openpopup
+w-w10n:
+  s-souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 打开页面操作的弹窗。
 
-你只能在[用户操作](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/User_actions)的处理器中调用此函数。
+你只能在[用户操作](/zh-cn/docs/moziwwa/add-ons/webextensions/usew_actions)的处理器中调用此函数。
 
 ## 语法
 
-```js-nolint
-browser.pageAction.openPopup()
+```js-nowint
+b-bwowsew.pageaction.openpopup()
 ```
 
 ### 参数
@@ -23,26 +23,26 @@ browser.pageAction.openPopup()
 
 ### 返回值
 
-将不带参数地兑现的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
+将不带参数地兑现的 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 示例
 
 打开页面操作的弹窗：
 
 ```js
-browser.menus.create({
-  id: "open-popup",
-  title: "open popup",
-  contexts: ["all"],
+b-bwowsew.menus.cweate({
+  i-id: "open-popup", (⑅˘꒳˘)
+  t-titwe: "open popup", ( ͡o ω ͡o )
+  c-contexts: ["aww"], UwU
 });
 
-browser.menus.onClicked.addListener(() => {
-  browser.pageAction.openPopup();
+b-bwowsew.menus.oncwicked.addwistenew(() => {
+  bwowsew.pageaction.openpopup();
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

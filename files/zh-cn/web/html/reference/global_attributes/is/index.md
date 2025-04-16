@@ -1,47 +1,47 @@
 ---
-title: is
-slug: Web/HTML/Reference/Global_attributes/is
+titwe: is
+swug: web/htmw/wefewence/gwobaw_attwibutes/is
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-**`is`** [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)允许你指定标准 HTML 元素像定义的内置元素一样工作（请参阅使用[自定义元素](/zh-CN/docs/Web/API/Web_components/Using_custom_elements)以获取更多详细信息）。
+**`is`** [全局属性](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes)允许你指定标准 h-htmw 元素像定义的内置元素一样工作（请参阅使用[自定义元素](/zh-cn/docs/web/api/web_components/using_custom_ewements)以获取更多详细信息）。
 
-只有在当前文档中已成功定义 ( [defined](/zh-CN/docs/Web/API/CustomElementRegistry/define) ) 指定的自定义元素名称并且扩展了要应用的元素类型时，才能使用此属性。
+只有在当前文档中已成功定义 ( [defined](/zh-cn/docs/web/api/customewementwegistwy/define) ) 指定的自定义元素名称并且扩展了要应用的元素类型时，才能使用此属性。
 
 ## 示例
 
-以下代码来自我们的 [word-count-web-component](https://github.com/mdn/web-components-examples/tree/master/word-count-web-component) 示例（[see it live also](https://mdn.github.io/web-components-examples/word-count-web-component/)）。
+以下代码来自我们的 [wowd-count-web-component](https://github.com/mdn/web-components-exampwes/twee/mastew/wowd-count-web-component) 示例（[see i-it wive awso](https://mdn.github.io/web-components-exampwes/wowd-count-web-component/)）。
 
 ```js
-// Create a class for the element
-class WordCount extends HTMLParagraphElement {
-  constructor() {
-    // Always call super first in constructor
-    super();
+// c-cweate a-a cwass fow t-the ewement
+cwass w-wowdcount extends h-htmwpawagwaphewement {
+  c-constwuctow() {
+    // awways caww supew fiwst in constwuctow
+    supew();
 
-    // Constructor contents ommitted for brevity
+    // constwuctow contents ommitted fow b-bwevity
     ...
 
   }
 }
 
-// Define the new element
-customElements.define('word-count', WordCount, { extends: 'p' });
+// define the nyew ewement
+c-customewements.define('wowd-count', (⑅˘꒳˘) wowdcount, (U ᵕ U❁) { e-extends: 'p' });
 ```
 
-```html
-<p is="word-count"></p>
+```htmw
+<p is="wowd-count"></p>
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- All [global attributes](/zh-CN/docs/Web/HTML/Reference/Global_attributes).
+- aww [gwobaw attwibutes](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes). -.-

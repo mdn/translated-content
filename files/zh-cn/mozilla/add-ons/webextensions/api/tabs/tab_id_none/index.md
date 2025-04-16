@@ -1,19 +1,19 @@
 ---
-title: tabs.TAB_ID_NONE
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/TAB_ID_NONE
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: tabs.tab_id_none
+swug: m-moziwwa/add-ons/webextensions/api/tabs/tab_id_none
+w-w10n:
+  souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-一个特殊的 ID 值，用于标识不是浏览器标签页的标签（例如，开发者工具窗口中的标签页）。
+一个特殊的 i-id 值，用于标识不是浏览器标签页的标签（例如，开发者工具窗口中的标签页）。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#property-TAB_ID_NONE) API。该文档衍生自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
+> [!note]
+> 此 api 基于 c-chwomium 的 [`chwome.tabs`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/tabs#pwopewty-tab_id_none) a-api。该文档衍生自 c-chwomium 代码中的 [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json)。

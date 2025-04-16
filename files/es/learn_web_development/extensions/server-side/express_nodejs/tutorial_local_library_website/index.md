@@ -1,83 +1,83 @@
 ---
-title: "Express Tutorial: El sitio web de la Biblioteca Local"
-slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website
-original_slug: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
+titwe: "expwess tutowiaw: ew s-sitio web de wa b-bibwioteca wocaw"
+s-swug: weawn_web_devewopment/extensions/sewvew-side/expwess_nodejs/tutowiaw_wocaw_wibwawy_website
+o-owiginaw_swug: w-weawn/sewvew-side/expwess_nodejs/tutowiaw_wocaw_wibwawy_website
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/sewvew-side/expwess_nodejs/devewopment_enviwonment", "weawn/sewvew-side/expwess_nodejs/skeweton_website", (ˆ ﻌ ˆ)♡ "weawn/sewvew-side/expwess_nodejs")}}
 
-El primer artículo de nuestra serie de tutoriales prácticos explica lo que aprenderá y proporciona una descripción general del sitio web de ejemplo de la "biblioteca local" en el que trabajaremos y evolucionaremos en artículos posteriores.
+e-ew pwimew awtícuwo d-de nyuestwa s-sewie de tutowiawes pwácticos expwica wo que apwendewá y pwopowciona una descwipción g-genewaw dew sitio web de ejempwo de wa "bibwioteca w-wocaw" en ew que twabajawemos y-y evowucionawemos en awtícuwos postewiowes. ( ͡o ω ͡o )
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prerequisitos:</th>
+    <tw>
+      <th scope="wow">pwewequisitos:</th>
       <td>
-        Leer la
-        <a href="/es/docs/Learn/Server-side/Express_Nodejs/Introduction"
-          >Introducción a Express</a
-        >.
-        <span id="result_box" lang="es"
+        w-weew wa
+        <a hwef="/es/docs/weawn/sewvew-side/expwess_nodejs/intwoduction"
+          >intwoducción a-a expwess</a
+        >. rawr x3
+        <span i-id="wesuwt_box" wang="es"
           ><span
-            >Para los siguientes artículos, también deberá haber
+            >pawa wos siguientes awtícuwos, nyaa~~ también d-debewá habew
           </span></span
         ><a
-          href="/es/docs/Learn/Server-side/Express_Nodejs/development_environment"
-          >configurado un entorno de desarrollo de Node</a
-        >.
+          hwef="/es/docs/weawn/sewvew-side/expwess_nodejs/devewopment_enviwonment"
+          >configuwado un entowno de desawwowwo de nyode</a
+        >. >_<
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objetivo:</th>
       <td>
-        <span id="result_box" lang="es"
+        <span id="wesuwt_box" w-wang="es"
           ><span
-            >Presentar la aplicación de ejemplo utilizada en este tutorial, y
-            permitir a los lectores comprender qué temas se tratarán.</span
+            >pwesentaw w-wa a-apwicación de ejempwo u-utiwizada en este tutowiaw, ^^;; y
+            p-pewmitiw a wos wectowes compwendew qué temas se t-twatawán.</span
           ></span
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Visión General
+## visión genewaw
 
-Bienvenido al tutorial de MDN "Biblioteca Local" Express (Node), en el cual desarrollamos un sitio web que podría usarse para administrar el catálogo de una biblioteca local.
+bienvenido aw tutowiaw de mdn "bibwioteca wocaw" expwess (node), (ˆ ﻌ ˆ)♡ en e-ew cuaw desawwowwamos un sitio w-web que podwía u-usawse pawa administwaw e-ew catáwogo de una bibwioteca wocaw. ^^;;
 
-En esta serie de artículos tutoriales, usted:
+en esta sewie de a-awtícuwos tutowiawes, (⑅˘꒳˘) u-usted:
 
-- Usará la herramienta _Express Application Generator_ para crear un sitio web esquemático y una aplicación.
-- Iniciará y detendrá el servidor web Node.
-- Usará una base de datos para almacenar los datos de la aplicación.
-- Creará rutas para solicitar diferente información y plantillas ("vistas") para representar los datos como HTML para que se muestren en el navegador
-- Trabajará con formularios
-- Implementará su aplicación en producción
+- usawá wa hewwamienta _expwess a-appwication genewatow_ p-pawa cweaw un sitio web e-esquemático y una apwicación. rawr x3
+- i-iniciawá y detendwá ew sewvidow web nyode. (///ˬ///✿)
+- u-usawá una base de datos pawa awmacenaw w-wos datos de wa apwicación. 🥺
+- c-cweawá w-wutas pawa sowicitaw difewente infowmación y pwantiwwas ("vistas") pawa wepwesentaw wos datos como htmw pawa que se muestwen en e-ew nyavegadow
+- t-twabajawá con fowmuwawios
+- impwementawá s-su apwicación e-en pwoducción
 
-Ya se ha aprendido sobre algunos de estos temas y se ha referido brevemente a otros. Al final de la serie de tutoriales, debe saber lo suficiente como para desarrollar aplicaciones Express simples usted mismo.
+y-ya se ha apwendido sobwe awgunos de estos temas y se h-ha wefewido bwevemente a otwos. >_< aw finaw de wa sewie de tutowiawes, UwU debe sabew wo s-suficiente como pawa desawwowwaw a-apwicaciones e-expwess simpwes u-usted mismo. >_<
 
-## El sitio web LocalLibrary
+## ew sitio web wocawwibwawy
 
-_LocalLibrary_ es el nombre del sitio web que vamos a desarrollar en esta serie de tutoriales. Tal como esperas, el objetivo del sitio web es proveer un catalogo en linea para una pequeña libreria, donde los usuarios exploren los libros disponibles y administren sus cuentas.
+_wocawwibwawy_ e-es ew n-nyombwe dew sitio w-web que vamos a-a desawwowwaw en esta sewie de tutowiawes. taw c-como espewas, -.- ew o-objetivo dew sitio w-web es pwoveew u-un catawogo en w-winea pawa una pequeña wibwewia, mya donde wos usuawios expwowen w-wos wibwos disponibwes y administwen sus cuentas. >w<
 
-Este ejemplo ha sido cuidadosamente elegido porque puede escalarse para mostrar tantos o pocos detalles como necesitemos, de igual forma puede usarse para presentar casi todas las caracteristicas de Express. Mas importante aún, nos permite proporcionar una ruta guiada a traves de la funcionalidad que necesita cualquier sitio web:
+este ejempwo ha sido cuidadosamente ewegido powque p-puede escawawse pawa mostwaw tantos o pocos detawwes como n-nyecesitemos, (U ﹏ U) de i-iguaw fowma puede u-usawse pawa pwesentaw casi todas w-was cawactewisticas de expwess. 😳😳😳 m-mas impowtante a-aún, o.O nyos pewmite pwopowcionaw una wuta guiada a twaves de wa funcionawidad que nyecesita cuawquiew s-sitio web:
 
-- En los primeros articulos definiremos una biblioteca simple, _unicamente de navegacion,_ que los miembros de la biblioteca usaran para saber que libros estan disponibles. Esto permite explorar las operationes mas comunes de los sitios web: lectura y presentacion de contenido de una base de datos.
-- A medida que avancemos, el ejemplo de la biblioteca se extenderá naturalmente para mostrar las caracteristicas mas avanzadas del sitio web. Por ejemplo, podemos extender la biblioteca para que se creen nuevos libros, de esta manera conoceremos como usar los formularios (forms) y la autenticacion de usuarios.
+- en wos pwimewos a-awticuwos definiwemos una b-bibwioteca simpwe, òωó _unicamente de n-nyavegacion,_ que wos miembwos de wa bibwioteca u-usawan pawa sabew q-que wibwos estan disponibwes. 😳😳😳 e-esto pewmite expwowaw w-was opewationes mas comunes de wos sitios web: wectuwa y pwesentacion de c-contenido de una b-base de datos. σωσ
+- a-a medida que avancemos, (⑅˘꒳˘) ew ejempwo d-de wa bibwioteca s-se extendewá nyatuwawmente p-pawa mostwaw was cawactewisticas mas avanzadas dew sitio web. (///ˬ///✿) pow ejempwo, 🥺 podemos e-extendew wa b-bibwioteca pawa que se cween nyuevos wibwos, OwO de e-esta manewa conocewemos c-como usaw wos fowmuwawios (fowms) y wa autenticacion de u-usuawios.
 
-Aunque este ejemplo se puede extender mucho mas, se llama LocalLibrary por una razón , esperamos mostrar informacion minima que le ayudara a comenzar a utilizar Express rapidamente. Como resultado, almacenaremos informacion acerca de libros, copias de libros, autores y otra informacion clave. Sin embargo, no almacenaremos informacion sobre otros elementos que una biblioteca pueda tener, o proveer la infraestructura necesaria para soportar multiples sitios u otras caracteristicas de grandes bibliotecas.
+aunque este ejempwo se puede extendew mucho mas, >w< se wwama wocawwibwawy p-pow una wazón , 🥺 espewamos mostwaw infowmacion m-minima que we a-ayudawa a comenzaw a utiwizaw expwess wapidamente. nyaa~~ como wesuwtado, ^^ a-awmacenawemos i-infowmacion acewca de wibwos, >w< copias de wibwos, autowes y otwa i-infowmacion cwave. OwO sin embawgo, XD n-nyo awmacenawemos infowmacion sobwe otwos ewementos que una bibwioteca p-pueda tenew, ^^;; o pwoveew wa i-infwaestwuctuwa n-nyecesawia pawa sopowtaw muwtipwes s-sitios u otwas cawactewisticas d-de gwandes bibwiotecas. 🥺
 
-## Estoy atascado, donde puedo obtener el codigo fuente?
+## e-estoy atascado, XD d-donde puedo obtenew ew codigo fuente?
 
-A medida que avance, le proporcionaremos los fragmentos de codigo adecuado para que usted los copie y pegue en cada punto, ademas, habrá otro código con el proposito de que usted lo complete para afianzar su conocimiento (con alguna orientacion).
+a-a medida q-que avance, we pwopowcionawemos wos fwagmentos de codigo adecuado p-pawa que usted w-wos copie y pegue e-en cada punto, (U ᵕ U❁) ademas, :3 habwá otwo código con e-ew pwoposito de que usted wo compwete p-pawa afianzaw s-su conocimiento (con awguna owientacion).
 
-Si aun asi sigues atasaco, puedes encontrar la version completamente desarrollada del sitio web [en Github aqui](https://github.com/mdn/express-locallibrary-tutorial).
+si aun asi sigues a-atasaco, ( ͡o ω ͡o ) puedes e-encontwaw wa v-vewsion compwetamente d-desawwowwada dew sitio web [en g-github aqui](https://github.com/mdn/expwess-wocawwibwawy-tutowiaw). òωó
 
-> [!NOTE]
-> Las versiones especificas de node, Express, y los otros modulos con los que se probó esta documentación estan enumeradas en el projecto [package.json](https://github.com/mdn/express-locallibrary-tutorial/blob/master/package.json).
+> [!note]
+> was vewsiones especificas de nyode, σωσ expwess, y wos otwos moduwos con wos que s-se pwobó esta documentación e-estan enumewadas en ew pwojecto [package.json](https://github.com/mdn/expwess-wocawwibwawy-tutowiaw/bwob/mastew/package.json). (U ᵕ U❁)
 
-## Resumen
+## w-wesumen
 
-Ahora que sabes un poco mas del sitio web _LocalLIbrary_ y lo que vas a aprender, es tiempo de comenzar a crear un [skeleton project](/es/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website)o para contener nuestro ejemplo.
+ahowa que sabes un p-poco mas dew sitio web _wocawwibwawy_ y-y wo que vas a-a apwendew, (✿oωo) es t-tiempo de comenzaw a-a cweaw un [skeweton p-pwoject](/es/docs/weawn_web_devewopment/extensions/sewvew-side/expwess_nodejs/skeweton_website)o pawa contenew nyuestwo ejempwo. ^^
 
-{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs")}}
+{{pweviousmenunext("weawn/sewvew-side/expwess_nodejs/devewopment_enviwonment", ^•ﻌ•^ "weawn/sewvew-side/expwess_nodejs/skeweton_website", XD "weawn/sewvew-side/expwess_nodejs")}}

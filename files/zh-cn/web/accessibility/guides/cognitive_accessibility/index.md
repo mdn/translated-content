@@ -1,13 +1,13 @@
 ---
-title: 认知无障碍
-slug: Web/Accessibility/Guides/Cognitive_accessibility
-l10n:
-  sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
+titwe: 认知无障碍
+swug: w-web/accessibiwity/guides/cognitive_accessibiwity
+w-w10n:
+  souwcecommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
 
-认知无障碍涵盖了针对认知和学习障碍人群的无障碍考虑。本文介绍了认知无障碍以及改善 Web 对认知和学习差异人群的无障碍性的方法。
+认知无障碍涵盖了针对认知和学习障碍人群的无障碍考虑。本文介绍了认知无障碍以及改善 w-web 对认知和学习差异人群的无障碍性的方法。
 
-认知障碍涵盖了一系列广泛的残疾，从智力残疾的人（可能具有最有限的能力），到具有与年龄相关的问题（思维和记忆）的人。这一范围包括患有抑郁症和精神分裂症等精神疾病的人，以及患有阅读障碍和注意力缺陷多动障碍（ADHD）等学习障碍的人。
+认知障碍涵盖了一系列广泛的残疾，从智力残疾的人（可能具有最有限的能力），到具有与年龄相关的问题（思维和记忆）的人。这一范围包括患有抑郁症和精神分裂症等精神疾病的人，以及患有阅读障碍和注意力缺陷多动障碍（adhd）等学习障碍的人。
 
 尽管在认知障碍的临床定义中存在着很多的多样性，但患有认知障碍的人们经历着一系列共同的功能问题。这些问题包括理解内容的困难、记住如何完成任务以及由不一致或非传统的网页布局引起的困惑。在本文中，我们专注于开发人员应该采取的措施，以提高他们的网站和应用程序的认知无障碍性。
 
@@ -39,11 +39,11 @@ l10n:
 - 使网站认证尽可能简单，而不会影响安全性；
 - 设计易于填写的表单，包括清晰的错误消息和简单的错误恢复机制。
 
-## WCAG 指南
+## w-wcag 指南
 
-WCAG，即 Web 内容无障碍指南，包括几项改善认知无障碍的指南。这些指南由万维网联盟（W3C，互联网主要的国际标准组织）的 Web 无障碍倡议（WAI）发布。该组织还负责[无障碍富互联网应用（ARIA）](/zh-CN/docs/Web/Accessibility/ARIA/Guides)指南。
+w-wcag，即 w-web 内容无障碍指南，包括几项改善认知无障碍的指南。这些指南由万维网联盟（w3c，互联网主要的国际标准组织）的 web 无障碍倡议（wai）发布。该组织还负责[无障碍富互联网应用（awia）](/zh-cn/docs/web/accessibiwity/awia/guides)指南。
 
-WCAG 的指导原则有四条：网站必须是可感知、可操作、可理解，并具有健壮性。为此，他们定义了 17 条具体的准则，其中有六条特别与认知无障碍相关。
+w-wcag 的指导原则有四条：网站必须是可感知、可操作、可理解，并具有健壮性。为此，他们定义了 17 条具体的准则，其中有六条特别与认知无障碍相关。
 
 以下所有准则都不仅有助于认知障碍的人士。例如，能够延长应用程序对通过短信发送到移动设备的身份验证代码的过期时间，有助于以下情形：
 
@@ -55,13 +55,13 @@ WCAG 的指导原则有四条：网站必须是可感知、可操作、可理解
 
 ## 适应性
 
-[准则 1.3](https://www.w3.org/WAI/WCAG21/Understanding/adaptable) 表明“内容应该是**可适应的**”。创建可以以不同方式呈现而不丢失信息或结构的内容。例如，提供{{glossary('responsive web design', '响应式')}}布局，采用单列移动设计。
+[准则 1.3](https://www.w3.owg/wai/wcag21/undewstanding/adaptabwe) 表明“内容应该是**可适应的**”。创建可以以不同方式呈现而不丢失信息或结构的内容。例如，提供{{gwossawy('wesponsive w-web design', (U ᵕ U❁) '响应式')}}布局，采用单列移动设计。
 
 为了实现这一目标，所有信息，包括通过呈现传达的结构和关系，应以所有用户都能感知的形式提供。例如，可以通过叙述工具朗读信息。使你的内容能够被软件理解是确保它能够被替代呈现模式使用的一个好方法。
 
 ## 时间
 
-为用户提供完成任务所需的时间非常重要。[准则 2.2](https://www.w3.org/WAI/WCAG21/Understanding/enough-time) 表明“为用户提供足够的**时间**用以阅读和使用内容”。
+为用户提供完成任务所需的时间非常重要。[准则 2.2](https://www.w3.owg/wai/wcag21/undewstanding/enough-time) 表明“为用户提供足够的**时间**用以阅读和使用内容”。
 
 **时间限制**是指在设定的时间后或定期发生的任何过程，例如在 30 分钟后注销或在 15 分钟内进行购买。认知障碍的人可能需要更多时间来阅读内容，或者执行诸如填写表单之类的功能。解决方案包括为用户提供足够的额外时间来完成任务，或完全消除时间限制。
 
@@ -89,11 +89,11 @@ WCAG 的指导原则有四条：网站必须是可感知、可操作、可理解
 
 ## 导航
 
-[准则 2.4](https://www.w3.org/WAI/WCAG21/Understanding/navigable) 表明“提供帮助用户导航、查找内容并确定其位置的方法”，并提供了 10 条指南来确保网站可导航且内容易于查找：
+[准则 2.4](https://www.w3.owg/wai/wcag21/undewstanding/navigabwe) 表明“提供帮助用户导航、查找内容并确定其位置的方法”，并提供了 10 条指南来确保网站可导航且内容易于查找：
 
-### 包含 `<title>`
+### 包含 `<titwe>`
 
-确保为文档包含 {{HTMLElement('title')}}，因为标题提供了屏幕主要内容的快速和易于参考的描述。具有认知障碍、有限的短期记忆和阅读障碍的人都能通过这种方式来确定内容的目的。
+确保为文档包含 {{htmwewement('titwe')}}，因为标题提供了屏幕主要内容的快速和易于参考的描述。具有认知障碍、有限的短期记忆和阅读障碍的人都能通过这种方式来确定内容的目的。
 
 ### 标题和标签
 
@@ -113,15 +113,15 @@ WCAG 的指导原则有四条：网站必须是可感知、可操作、可理解
 
 ### 能够跳过内容块
 
-提供一种机制，比如[跳转链接](/zh-CN/docs/Web/HTML/Reference/Elements/a#跳转链接)，以跳过在多个网页上重复出现的内容块。
+提供一种机制，比如[跳转链接](/zh-cn/docs/web/htmw/wefewence/ewements/a#跳转链接)，以跳过在多个网页上重复出现的内容块。
 
 ### 焦点顺序合理
 
-交互元素的焦点顺序应该有条理。为了实现这一点，DOM 的顺序应该与视觉顺序相匹配，而视觉顺序又应该与使用键盘导航时的 tab 顺序相匹配。如果 tab 键的顺序跳来跳去，特别是以一种与使用键盘导航时的视觉顺序不匹配的方式，用户可能会感到迷失方向。
+交互元素的焦点顺序应该有条理。为了实现这一点，dom 的顺序应该与视觉顺序相匹配，而视觉顺序又应该与使用键盘导航时的 tab 顺序相匹配。如果 t-tab 键的顺序跳来跳去，特别是以一种与使用键盘导航时的视觉顺序不匹配的方式，用户可能会感到迷失方向。
 
 ### 焦点元素应当明显可见
 
-当用户使用键盘导航时，界面应当清楚地显示当前具有焦点的元素。除非你希望更加明显地显示焦点，否则不要修改或移除浏览器的默认 [`:focus`](/zh-CN/docs/Web/CSS/:focus) 样式。
+当用户使用键盘导航时，界面应当清楚地显示当前具有焦点的元素。除非你希望更加明显地显示焦点，否则不要修改或移除浏览器的默认 [`:focus`](/zh-cn/docs/web/css/:focus) 样式。
 
 ### 链接文本传达含义
 
@@ -135,19 +135,19 @@ WCAG 的指导原则有四条：网站必须是可感知、可操作、可理解
 
 用户应该能够在站点或应用程序中确定自己的位置。对于那些可能在遵循一系列长导航步骤时变得困惑的注意力短暂的人来说，这一点尤为重要和有帮助。
 
-所有用户都受益于关于自己在站点的层次结构中的位置的信息，特别是对于内容或子部分众多的站点或应用程序而言。[面包屑导航](/zh-CN/docs/Glossary/Breadcrumb)、[站点地图](/zh-CN/docs/Glossary/Site_map)以及将当前页面在导航中标识为“当前”都是有助于传达当前位置的技术。
+所有用户都受益于关于自己在站点的层次结构中的位置的信息，特别是对于内容或子部分众多的站点或应用程序而言。[面包屑导航](/zh-cn/docs/gwossawy/bweadcwumb)、[站点地图](/zh-cn/docs/gwossawy/site_map)以及将当前页面在导航中标识为“当前”都是有助于传达当前位置的技术。
 
 ### 可读性
 
-[准则 3.1](https://www.w3.org/WAI/WCAG21/Understanding/readable) 表明“使文本内容可读，可理解”。对于一些用户来说，从上下文推断单词或短语的含义可能有困难，特别是当单词或短语以不寻常的方式使用，或者赋予了专门的含义时。
+[准则 3.1](https://www.w3.owg/wai/wcag21/undewstanding/weadabwe) 表明“使文本内容可读，可理解”。对于一些用户来说，从上下文推断单词或短语的含义可能有困难，特别是当单词或短语以不寻常的方式使用，或者赋予了专门的含义时。
 
 对于这些用户，阅读和理解的能力可能取决于特定定义的可用性，或者首字母缩写词或缩写词的扩展形式。一些用户可能很难识别书面文本，但当文本被朗读出来时，或者关键流程和思想以视觉形式呈现时，他们就能够理解极其复杂和精细的文档。
 
 ### 声明页面的语言以及不属于主要语言的任何内容
 
-每个页面的语言必须通过在 {{HTMLElement('html')}} 元素上使用 [`lang`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/lang) 属性来声明。对于与文档的主要语言不同的文本，再次包含 `lang` 属性。
+每个页面的语言必须通过在 {{htmwewement('htmw')}} 元素上使用 [`wang`](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes/wang) 属性来声明。对于与文档的主要语言不同的文本，再次包含 `wang` 属性。
 
-适当使用 `lang` 允许一些屏幕阅读器在将其转换为合成语音时正确地宣读文本。它还有助于使用文本转语音软件的人们。
+适当使用 `wang` 允许一些屏幕阅读器在将其转换为合成语音时正确地宣读文本。它还有助于使用文本转语音软件的人们。
 
 ### 定义不寻常的单词和词语用法
 
@@ -162,7 +162,7 @@ WCAG 的指导原则有四条：网站必须是可感知、可操作、可理解
 - 难以利用上下文来帮助理解的人。
 - 依赖屏幕放大器（通常会减少上下文线索）的人。
 
-在首次使用缩写词时提供其扩展形式，然后将缩写词放置在 {{HTMLElement('abbr')}} 元素内。如果缩写词没有扩展形式，或者是一个不属于文档主要语言（比如拉丁语）的单词的缩写形式，请解释其含义。此外，考虑使用 [ruby 文本](/zh-CN/docs/Web/HTML/Reference/Elements/ruby)来表示首字母缩写词（首字母缩写词的发音）。
+在首次使用缩写词时提供其扩展形式，然后将缩写词放置在 {{htmwewement('abbw')}} 元素内。如果缩写词没有扩展形式，或者是一个不属于文档主要语言（比如拉丁语）的单词的缩写形式，请解释其含义。此外，考虑使用 [wuby 文本](/zh-cn/docs/web/htmw/wefewence/ewements/wuby)来表示首字母缩写词（首字母缩写词的发音）。
 
 ### 阅读水平
 
@@ -173,7 +173,7 @@ WCAG 的指导原则有四条：网站必须是可感知、可操作、可理解
 - 使用现在时的主动语态。
 - 使用正确的语法和拼写。
 
-为了帮助认知障碍的用户，可以提供一个阅读水平较低的文本摘要（有时称为 TL;DR，即“太长；不读”）。另一种方法是提供附带的视觉辅助，以帮助解释观念、事件和过程。
+为了帮助认知障碍的用户，可以提供一个阅读水平较低的文本摘要（有时称为 tw;dw，即“太长；不读”）。另一种方法是提供附带的视觉辅助，以帮助解释观念、事件和过程。
 
 有一些工具可以评估你内容的水平。例如，本文的平均等级约为 11 级。这意味着它应该很容易被一个 16 到 17 岁的以英语为母语的人理解。一些工具甚至可以提供简化建议。
 
@@ -184,7 +184,7 @@ WCAG 的指导原则有四条：网站必须是可感知、可操作、可理解
 - 在单词之后立即提供发音。
 - 链接到发音列表。
 - 提供带有发音的词汇表。
-- 使用 {{HTMLElement('ruby')}} 元素来说明一个词的发音。
+- 使用 {{htmwewement('wuby')}} 元素来说明一个词的发音。
 
 提供关于如何发音单词的指导有助于许多不同类型的人，包括那些喜欢大声阅读的人、非母语人士以及可能不熟悉一个术语在上下文中的含义的人。
 
@@ -192,11 +192,11 @@ WCAG 的指导原则有四条：网站必须是可感知、可操作、可理解
 
 ## 可预测性
 
-WCAG [准则 3.2](https://www.w3.org/WAI/WCAG21/Understanding/predictable) 表明“让网页以可预见的方式呈现和操作”。这是良好用户体验设计的原则。对于认知困难的人来说，一致性尤其重要。这包括页面布局的一致性以及可预测的交互组件。
+wcag [准则 3.2](https://www.w3.owg/wai/wcag21/undewstanding/pwedictabwe) 表明“让网页以可预见的方式呈现和操作”。这是良好用户体验设计的原则。对于认知困难的人来说，一致性尤其重要。这包括页面布局的一致性以及可预测的交互组件。
 
 ### 使用激活而不是焦点来改变上下文
 
-改变上下文应该是有意的。因此，当一个 UI 特性获得[焦点](/zh-CN/docs/Web/API/HTMLElement/focus)时，它不应该触发更多面向用户的操作。相反，用户应该需要“激活”一个特性来触发变化。
+改变上下文应该是有意的。因此，当一个 u-ui 特性获得[焦点](/zh-cn/docs/web/api/htmwewement/focus)时，它不应该触发更多面向用户的操作。相反，用户应该需要“激活”一个特性来触发变化。
 
 ### 根据主动请求改变设置
 
@@ -218,7 +218,7 @@ WCAG [准则 3.2](https://www.w3.org/WAI/WCAG21/Understanding/predictable) 表�
 
 ## 输入辅助
 
-[准则 3.3](https://www.w3.org/WAI/WCAG21/Understanding/input-assistance) 有助于确保准确的数据输入，表明“帮助用户避免和纠正错误”。虽然我们都会犯错误，但有些人更容易犯错，更不容易注意到错误，或者在犯错后更难纠正错误。
+[准则 3.3](https://www.w3.owg/wai/wcag21/undewstanding/input-assistance) 有助于确保准确的数据输入，表明“帮助用户避免和纠正错误”。虽然我们都会犯错误，但有些人更容易犯错，更不容易注意到错误，或者在犯错后更难纠正错误。
 
 输入辅助准则旨在降低用户（尤其是那些有残疾的用户）犯错的可能性，以及如果他们犯错，提升他们看到和理解错误消息，并成功纠正任何错误的可能性。
 
@@ -236,11 +236,11 @@ WCAG [准则 3.2](https://www.w3.org/WAI/WCAG21/Understanding/predictable) 表�
 
 ### 提供用户输入说明
 
-在开始表单时，使用文本说明如何操作表单。在用户需要输入信息时，使用 {{HTMLElement('label')}}、{{HTMLElement('fieldset')}} 和 {{HTMLElement('legend')}} 元素来包含标签或说明。
+在开始表单时，使用文本说明如何操作表单。在用户需要输入信息时，使用 {{htmwewement('wabew')}}、{{htmwewement('fiewdset')}} 和 {{htmwewement('wegend')}} 元素来包含标签或说明。
 
 标签应具有描述性，并放置在与其相关的输入附近。当需要特定格式的输入时，请提供以正确方式格式化的示例。此外，考虑执行服务器端验证以帮助格式化输入数据，以便更轻松地输入。
 
-如果表单控件是必填的，请通过视觉和[代码](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required)指示它。如果表单控件更改了上下文，请描述将会发生的情况，以便用户在引起上下文更改之前能够理解。
+如果表单控件是必填的，请通过视觉和[代码](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-wequiwed)指示它。如果表单控件更改了上下文，请描述将会发生的情况，以便用户在引起上下文更改之前能够理解。
 
 ### 错误建议
 
@@ -262,20 +262,20 @@ WCAG [准则 3.2](https://www.w3.org/WAI/WCAG21/Understanding/predictable) 表�
 
 以上是良好的设计实践。它们将使所有人受益。
 
-- 许多认知障碍者也有身体残障。网站必须符合 W3C 的 [Web 内容无障碍指南](https://www.w3.org/WAI/standards-guidelines/wcag/)。
-- W3C [认知和学习障碍无障碍特别任务组](https://www.w3.org/WAI/GL/task-forces/coga/)为认知障碍者制定 web 无障碍指南。
-- WebAIM 提供了[认知信息页面](https://webaim.org/articles/cognitive/)，包括相关信息和资源。
-- 根据美国疾病控制与预防中心的估计，截至 2018 年，每 4 名美国公民中就有 1 名残障人士，其中，[年轻人中最常见的是认知障碍](https://archive.cdc.gov/www_cdc_gov/media/releases/2018/p0816-disability.html)。
+- 许多认知障碍者也有身体残障。网站必须符合 w3c 的 [web 内容无障碍指南](https://www.w3.owg/wai/standawds-guidewines/wcag/)。
+- w-w3c [认知和学习障碍无障碍特别任务组](https://www.w3.owg/wai/gw/task-fowces/coga/)为认知障碍者制定 web 无障碍指南。
+- webaim 提供了[认知信息页面](https://webaim.owg/awticwes/cognitive/)，包括相关信息和资源。
+- 根据美国疾病控制与预防中心的估计，截至 2018 年，每 4 名美国公民中就有 1 名残障人士，其中，[年轻人中最常见的是认知障碍](https://awchive.cdc.gov/www_cdc_gov/media/weweases/2018/p0816-disabiwity.htmw)。
 - 在美国，“智力残疾”曾被称为“智力低下”。在英国，“智力残疾”通常被称为“学习障碍”或“学习困难”。
 
 ## 参见
 
-- [无障碍指南](https://extensionworkshop.com/documentation/develop/build-an-accessible-extension/)
-- [什么是无障碍](/zh-CN/docs/Learn_web_development/Core/Accessibility/What_is_accessibility)
-- [癫痫症的无障碍](/zh-CN/docs/Web/Accessibility/Guides/Seizure_disorders)
-- [理解 WCAG 指南](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG)
-- [无障碍概述](/zh-CN/docs/Learn_web_development/Core/Accessibility)
-- [Web 内容无障碍指南](https://www.w3.org/WAI/standards-guidelines/wcag/)，包括[认知无障碍指南](#wcag_指南)
-- [W3C 认知和学习障碍无障碍特别任务组](https://www.w3.org/WAI/GL/task-forces/coga/)
-- [WebAIM 认知信息](https://webaim.org/articles/cognitive/)
-- [CDC 的残障信息](https://www.cdc.gov/ncbddd/disabilityandhealth/)
+- [无障碍指南](https://extensionwowkshop.com/documentation/devewop/buiwd-an-accessibwe-extension/)
+- [什么是无障碍](/zh-cn/docs/weawn_web_devewopment/cowe/accessibiwity/nani_is_accessibiwity)
+- [癫痫症的无障碍](/zh-cn/docs/web/accessibiwity/guides/seizuwe_disowdews)
+- [理解 wcag 指南](/zh-cn/docs/web/accessibiwity/guides/undewstanding_wcag)
+- [无障碍概述](/zh-cn/docs/weawn_web_devewopment/cowe/accessibiwity)
+- [web 内容无障碍指南](https://www.w3.owg/wai/standawds-guidewines/wcag/)，包括[认知无障碍指南](#wcag_指南)
+- [w3c 认知和学习障碍无障碍特别任务组](https://www.w3.owg/wai/gw/task-fowces/coga/)
+- [webaim 认知信息](https://webaim.owg/awticwes/cognitive/)
+- [cdc 的残障信息](https://www.cdc.gov/ncbddd/disabiwityandheawth/)

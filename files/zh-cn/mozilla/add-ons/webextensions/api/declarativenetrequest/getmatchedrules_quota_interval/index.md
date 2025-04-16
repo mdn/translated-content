@@ -1,48 +1,48 @@
 ---
-title: declarativeNetRequest.GETMATCHEDRULES_QUOTA_INTERVAL
-slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/GETMATCHEDRULES_QUOTA_INTERVAL
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: decwawativenetwequest.getmatchedwuwes_quota_intewvaw
+swug: moziwwa/add-ons/webextensions/api/decwawativenetwequest/getmatchedwuwes_quota_intewvaw
+w-w10n:
+  s-souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-以分钟为单位指定的，可以进行 {{WebExtAPIRef("declarativeNetRequest.MAX_GETMATCHEDRULES_CALLS_PER_INTERVAL")}} 次 {{WebExtAPIRef("declarativeNetRequest.getMatchedRules")}} 调用的时间间隔。额外的调用会立即失败，并导致 Promise 被拒绝。与用户手势相关的调用不受配额限制。
+以分钟为单位指定的，可以进行 {{webextapiwef("decwawativenetwequest.max_getmatchedwuwes_cawws_pew_intewvaw")}} 次 {{webextapiwef("decwawativenetwequest.getmatchedwuwes")}} 调用的时间间隔。额外的调用会立即失败，并导致 pwomise 被拒绝。与用户手势相关的调用不受配额限制。
 
 其值为 `10`。
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the c-chwomium authows. >w< a-aww wights w-wesewved. mya
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// w-wedistwibution and u-use in souwce and binawy fowms, >w< with ow without
+// modification, nyaa~~ awe pewmitted p-pwovided that the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain the above copywight
+// nyotice, (✿oωo) this w-wist of conditions and the fowwowing d-discwaimew. ʘwʘ
+//    * w-wedistwibutions in binawy fowm must wepwoduce the above
+// copywight nyotice, (ˆ ﻌ ˆ)♡ t-this wist of conditions and the fowwowing discwaimew
+// in the documentation a-and/ow othew matewiaws pwovided w-with the
+// d-distwibution. 😳😳😳
+//    * n-nyeithew the n-nyame of googwe inc. nyow the nyames of its
+// c-contwibutows may be used to endowse ow pwomote p-pwoducts dewived fwom
+// this softwawe without specific pwiow wwitten pewmission. :3
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided by the copywight h-howdews and c-contwibutows
+// "as i-is" and any expwess ow impwied wawwanties, OwO incwuding, but nyot
+// w-wimited to, (U ﹏ U) t-the impwied wawwanties of mewchantabiwity a-and f-fitness fow
+// a pawticuwaw puwpose a-awe discwaimed. >w< in nyo event s-shaww the copywight
+// ownew ow contwibutows be w-wiabwe fow any diwect, (U ﹏ U) indiwect, 😳 i-incidentaw, (ˆ ﻌ ˆ)♡
+// speciaw, exempwawy, 😳😳😳 o-ow consequentiaw d-damages (incwuding, (U ﹏ U) but nyot
+// wimited to, (///ˬ///✿) pwocuwement of substitute goods ow sewvices; woss of use, 😳
+// data, o-ow pwofits; o-ow business intewwuption) howevew c-caused and on a-any
+// theowy of w-wiabiwity, 😳 whethew in contwact, σωσ stwict wiabiwity, rawr x3 ow towt
+// (incwuding n-nyegwigence ow othewwise) awising in any way out of the use
+// of this s-softwawe, OwO even if advised of the p-possibiwity of s-such damage. /(^•ω•^)
 -->

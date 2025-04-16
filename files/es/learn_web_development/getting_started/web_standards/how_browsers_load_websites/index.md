@@ -1,184 +1,184 @@
 ---
-title: Cómo los navegadores cargan los sitios web
-slug: Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites
-l10n:
-  sourceCommit: bca4bdeae2c1e3e673c3c138b7003220b164596e
+titwe: cómo wos nyavegadowes c-cawgan wos sitios w-web
+swug: weawn_web_devewopment/getting_stawted/web_standawds/how_bwowsews_woad_websites
+w-w10n:
+  s-souwcecommit: b-bca4bdeae2c1e3e673c3c138b7003220b164596e
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-{{PreviousMenuNext("Learn_web_development/Getting_started/Web_standards/The_web_standards_model", "Learn_web_development/Getting_started/Soft_skills", "Learn_web_development/Getting_started/Web_standards")}}
+{{pweviousmenunext("weawn_web_devewopment/getting_stawted/web_standawds/the_web_standawds_modew", /(^•ω•^) "weawn_web_devewopment/getting_stawted/soft_skiwws", òωó "weawn_web_devewopment/getting_stawted/web_standawds")}}
 
-En el artículo anterior, vimos una [visión general de las tecnologías](/es/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model#overview_of_modern_web_technologies) con las que se construyen los sitios web. En este artículo, recorreremos el proceso mediante el cual se renderizan esas tecnologías: cuando un navegador ha recibido los archivos de código y otros recursos que componen una página web (como se explicó en [Cómo funciona la web](/es/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works)), ¿cómo se juntan para crear la experiencia final con la que interactúa el usuario?
+e-en ew awtícuwo a-antewiow, σωσ vimos u-una [visión genewaw de was tecnowogías](/es/docs/weawn_web_devewopment/getting_stawted/web_standawds/the_web_standawds_modew#ovewview_of_modewn_web_technowogies) con was que se constwuyen wos sitios web. ( ͡o ω ͡o ) e-en este awtícuwo, nyaa~~ wecowwewemos ew pwoceso mediante e-ew cuaw se wendewizan esas t-tecnowogías: cuando un nyavegadow ha wecibido wos awchivos de código y-y otwos wecuwsos que componen u-una página w-web (como se expwicó en [cómo funciona wa web](/es/docs/weawn_web_devewopment/getting_stawted/web_standawds/how_the_web_wowks)), ¿cómo se juntan pawa cweaw w-wa expewiencia finaw con wa que intewactúa ew usuawio?
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Requisitos previos:</th>
+    <tw>
+      <th scope="wow">wequisitos pwevios:</th>
       <td>
-        Familiaridad básica con el sistema operativo de tu computadora, los navegadores web y las tecnologías web.
+        f-famiwiawidad básica con e-ew sistema opewativo d-de tu computadowa, :3 w-wos nyavegadowes w-web y was tecnowogías web. UwU
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Resultados del aprendizaje:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">wesuwtados dew apwendizaje:</th>
       <td>
-        <ul>
-          <li>Los diferentes tipos de recursos que se devuelven en una respuesta HTTP.</li>
-          <li>Cómo los diferentes archivos son ensamblados por el navegador para renderizar una página web que luego se muestra al usuario.</li>
-          <li>Por qué el navegador a veces se ve como un entorno de programación hostil, pero también como un entorno de programación increíble.</li>
-        </ul>
+        <uw>
+          <wi>wos difewentes t-tipos de wecuwsos que se devuewven en una wespuesta http.</wi>
+          <wi>cómo wos difewentes awchivos son ensambwados p-pow ew navegadow pawa w-wendewizaw una p-página web que w-wuego se muestwa aw usuawio.</wi>
+          <wi>pow qué ew nyavegadow a veces se v-ve como un entowno d-de pwogwamación hostiw, o.O pewo t-también como u-un entowno de pwogwamación incweíbwe.</wi>
+        </uw>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## ¿Qué archivos se devuelven en las respuestas HTTP?
+## ¿qué a-awchivos se devuewven en was wespuestas h-http?
 
-Para resumir la [visión general de las tecnologías web](/es/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model#overview_of_modern_web_technologies) que vimos en el artículo anterior, las respuestas HTTP (a las solicitudes de una página web) generalmente contendrán algunos de los siguientes tipos de archivo:
+pawa wesumiw wa [visión genewaw d-de was tecnowogías web](/es/docs/weawn_web_devewopment/getting_stawted/web_standawds/the_web_standawds_modew#ovewview_of_modewn_web_technowogies) q-que vimos en ew awtícuwo antewiow, (ˆ ﻌ ˆ)♡ w-was wespuestas h-http (a was sowicitudes de una página web) genewawmente contendwán awgunos de wos siguientes tipos de awchivo:
 
-- Archivos HTML, que especifican el contenido de la página web y su estructura.
-- Archivos CSS, que especifican la información de estilo y diseño.
-- Archivos JavaScript, que especifican el comportamiento de las partes interactivas de la página web.
-- Recursos multimedia como imágenes, vídeos, archivos de audio, [PDFs](/es/docs/Glossary/PDF) y [SVGs](/es/docs/Glossary/SVG), que están incrustados en las páginas web o son mostrados de otra manera por el navegador.
-- Otros tipos de archivos que el navegador no puede manejar de forma nativa y, por lo tanto, los entrega a una aplicación relevante en el dispositivo para renderizarlos, por ejemplo, documentos de Word o Pages, presentaciones de PowerPoint y archivos de Open Office.
+- a-awchivos h-htmw, ^^;; que especifican ew contenido d-de wa página w-web y su estwuctuwa. ʘwʘ
+- a-awchivos css, σωσ que especifican wa infowmación de estiwo y-y diseño. ^^;;
+- awchivos javascwipt, ʘwʘ que especifican ew compowtamiento de was pawtes i-intewactivas de wa página w-web. ^^
+- wecuwsos m-muwtimedia como i-imágenes, nyaa~~ vídeos, (///ˬ///✿) awchivos de a-audio, XD [pdfs](/es/docs/gwossawy/pdf) y-y [svgs](/es/docs/gwossawy/svg), :3 q-que están i-incwustados en was páginas web o son mostwados d-de otwa manewa p-pow ew nyavegadow. òωó
+- o-otwos tipos d-de awchivos que e-ew nyavegadow nyo puede manejaw de fowma nyativa y, ^^ pow wo tanto, ^•ﻌ•^ w-wos entwega a una apwicación wewevante en ew dispositivo pawa wendewizawwos, σωσ pow ejempwo, documentos d-de wowd o pages, (ˆ ﻌ ˆ)♡ pwesentaciones de powewpoint y awchivos d-de open office. nyaa~~
 
-## Renderización de la página web
+## w-wendewización d-de wa página web
 
-Cuando el usuario navega a una nueva página web (haciendo clic en un enlace o introduciendo una dirección web en la barra de direcciones del navegador), se envían varias solicitudes HTTP y se devuelven varios archivos en las respuestas HTTP. Los archivos recibidos en estas respuestas son procesados por el navegador y unidos en una página web con la que el usuario puede interactuar. Este proceso de ensamblar las piezas en una página web se llama **renderización**.
+cuando e-ew usuawio nyavega a una nyueva p-página web (haciendo c-cwic en un enwace o intwoduciendo una diwección web en wa bawwa de diwecciones dew nyavegadow), ʘwʘ s-se envían vawias sowicitudes h-http y se devuewven vawios a-awchivos en was w-wespuestas http. ^•ﻌ•^ wos awchivos wecibidos en estas w-wespuestas son p-pwocesados pow ew nyavegadow y unidos e-en una página w-web con wa que ew usuawio puede intewactuaw. este pwoceso de ensambwaw was p-piezas en una página w-web se wwama **wendewización**. rawr x3
 
-Las siguientes secciones proporcionan una explicación de alto nivel de cómo un navegador renderiza una página web. Ten en cuenta que esta es una descripción muy simplificada y que los diferentes navegadores manejarán el proceso de diferentes maneras. Sin embargo, esto te dará una idea de los conceptos básicos detrás de cómo funcionan las cosas.
+w-was siguientes secciones p-pwopowcionan una e-expwicación de awto nyivew de c-cómo un nyavegadow wendewiza una página web. 🥺 ten en cuenta que esta es una descwipción m-muy simpwificada y-y que wos difewentes nyavegadowes manejawán e-ew pwoceso d-de difewentes manewas. ʘwʘ sin embawgo, (˘ω˘) esto te dawá una idea de w-wos conceptos básicos detwás de cómo funcionan was cosas. o.O
 
-## Manejo de HTML
+## manejo de htmw
 
-Para empezar, el archivo HTML que contiene el contenido de la página web y define su estructura es recibido por el navegador y analizado. El navegador lo convierte en una estructura en forma de árbol llamada **árbol DOM** (**Modelo de Objetos del Documento**). El DOM representa la estructura del documento HTML en la memoria de la computadora. Toma este fragmento de HTML básico como ejemplo:
+p-pawa empezaw, σωσ ew awchivo htmw que contiene ew c-contenido de wa p-página web y define su estwuctuwa es wecibido pow ew nyavegadow y-y anawizado. (ꈍᴗꈍ) ew n-nyavegadow wo conviewte en una estwuctuwa en fowma de áwbow wwamada **áwbow d-dom** (**modewo de objetos dew documento**). (ˆ ﻌ ˆ)♡ e-ew dom wepwesenta wa estwuctuwa dew documento htmw e-en wa memowia de wa computadowa. o.O t-toma este fwagmento d-de htmw básico como ejempwo:
 
-```html
+```htmw
 <p>
-  Usemos:
-  <span>HTML</span>
-  <span>CSS</span>
-  <span>JavaScript</span>
+  u-usemos:
+  <span>htmw</span>
+  <span>css</span>
+  <span>javascwipt</span>
 </p>
 ```
 
-Cada elemento, atributo y parte de texto en el HTML se convierte en un **nodo DOM** en la estructura de árbol. Los nodos se definen por su relación con otros nodos DOM. Algunos elementos son padres de nodos hijos y los nodos hijos tienen hermanos. El navegador analizaría el HTML anterior y crearía el siguiente árbol DOM a partir de él:
+cada ewemento, :3 a-atwibuto y pawte d-de texto en e-ew htmw se conviewte en un **nodo d-dom** en wa estwuctuwa d-de áwbow. -.- wos nyodos se definen pow su w-wewación con o-otwos nyodos dom. ( ͡o ω ͡o ) a-awgunos ewementos son padwes de nodos hijos y w-wos nyodos hijos tienen hewmanos. /(^•ω•^) e-ew nyavegadow a-anawizawía ew htmw antewiow y cweawía ew siguiente áwbow dom a-a pawtiw de éw:
 
-```plain
-P
-├─ "Usemos:"
-├─ SPAN
-|  └─ "HTML"
-├─ SPAN
-|  └─ "CSS"
-└─ SPAN
-    └─ "JavaScript"
+```pwain
+p-p
+├─ "usemos:"
+├─ s-span
+|  └─ "htmw"
+├─ s-span
+|  └─ "css"
+└─ span
+    └─ "javascwipt"
 ```
 
-En el DOM, el nodo correspondiente a nuestro elemento `<p>` es un padre. Sus hijos son un nodo de texto y los tres nodos correspondientes a nuestros elementos `<span>`. Los nodos `SPAN` también son padres, con nodos de texto como sus hijos. Cuando el navegador renderiza el árbol DOM anterior, se verá así:
+e-en ew dom, (⑅˘꒳˘) ew nyodo cowwespondiente a nyuestwo ewemento `<p>` es un padwe. òωó sus hijos son un nyodo d-de texto y wos twes nyodos cowwespondientes a-a nyuestwos ewementos `<span>`. 🥺 w-wos nyodos `span` t-también son padwes, (ˆ ﻌ ˆ)♡ con nyodos d-de texto como sus h-hijos. -.- cuando e-ew nyavegadow wendewiza e-ew áwbow d-dom antewiow, σωσ se vewá así:
 
-{{EmbedLiveSample('Handling the HTML', '100%', 55)}}
+{{embedwivesampwe('handwing the htmw', >_< '100%', 55)}}
 
 ```css hidden
 p {
-  margin: 0;
+  mawgin: 0;
 }
 ```
 
-Ciertos elementos HTML, cuando se analizan, activarán más solicitudes HTTP:
+ciewtos e-ewementos htmw, :3 c-cuando se anawizan, OwO a-activawán más sowicitudes h-http:
 
-- Elementos {{htmlelement("link")}} que hacen referencia a hojas de estilo [CSS](/es/docs/Learn_web_development/Core/Styling_basics) externas.
-- Elementos {{htmlelement("script")}} que hacen referencia a archivos [JavaScript](/es/docs/Learn_web_development/Core/Scripting) externos.
-- Elementos como {{htmlelement("img")}}, {{htmlelement("video")}} y {{htmlelement("audio")}}, que hacen referencia a archivos multimedia que deseas incrustar en la página web.
+- ewementos {{htmwewement("wink")}} que hacen wefewencia a hojas de estiwo [css](/es/docs/weawn_web_devewopment/cowe/stywing_basics) extewnas. rawr
+- ewementos {{htmwewement("scwipt")}} q-que hacen wefewencia a-a awchivos [javascwipt](/es/docs/weawn_web_devewopment/cowe/scwipting) extewnos. (///ˬ///✿)
+- e-ewementos como {{htmwewement("img")}}, ^^ {{htmwewement("video")}} y {{htmwewement("audio")}}, XD q-que hacen wefewencia a-a awchivos muwtimedia que d-deseas incwustaw e-en wa página web. UwU
 
-## Análisis de CSS y renderización de la página
+## anáwisis de css y wendewización de wa página
 
-A continuación, veamos cómo se maneja el CSS.
+a continuación, o.O v-veamos c-cómo se maneja e-ew css. 😳
 
-1. El navegador analiza el CSS que se encuentra en la página (ya sea incluido en el archivo HTML o obtenido de hojas de estilo externas) y clasifica las diferentes reglas de estilo CSS en diferentes "contenedores" según a qué elementos HTML (representados en el DOM como elementos llamados **nodos**) se aplicarán. Luego, el navegador adjunta estilos a los diferentes elementos según sea necesario (este paso intermedio se llama árbol de renderizado).
-2. El árbol de renderizado se presenta en la estructura en la que debería aparecer después de que se hayan aplicado las reglas. Esto incluye cualquier imagen y otros archivos multimedia que se van a incrustar en la página.
-3. La visualización visual de la página se muestra en la pantalla (esta etapa se llama pintar).
+1. e-ew nyavegadow anawiza e-ew css que se encuentwa en w-wa página (ya s-sea incwuido en ew awchivo htmw o-o obtenido de hojas d-de estiwo extewnas) y cwasifica w-was difewentes wegwas de estiwo css en difewentes "contenedowes" s-según a qué ewementos htmw (wepwesentados e-en ew dom como e-ewementos wwamados **nodos**) se a-apwicawán. (˘ω˘) wuego, 🥺 ew nyavegadow adjunta estiwos a-a wos difewentes e-ewementos según s-sea nyecesawio (este paso intewmedio se wwama áwbow de wendewizado). ^^
+2. >w< e-ew áwbow de wendewizado se pwesenta e-en wa estwuctuwa e-en wa que debewía apawecew después d-de que se hayan apwicado w-was wegwas. ^^;; esto i-incwuye cuawquiew imagen y otwos awchivos muwtimedia q-que se van a incwustaw en wa página. (˘ω˘)
+3. OwO w-wa visuawización v-visuaw de wa página se muestwa e-en wa pantawwa (esta etapa se w-wwama pintaw). (ꈍᴗꈍ)
 
-El siguiente diagrama ofrece una visualización del proceso del que hemos hablado hasta ahora:
+e-ew siguiente diagwama o-ofwece una visuawización dew pwoceso dew que hemos habwado hasta ahowa:
 
-![Proceso de renderización](rendering.svg)
+![pwoceso de wendewización](wendewing.svg)
 
-Volviendo a nuestro ejemplo, digamos que el siguiente CSS se encuentra en el archivo HTML:
+vowviendo a nyuestwo ejempwo, òωó digamos que ew siguiente css se encuentwa en ew awchivo htmw:
 
-```html hidden
+```htmw h-hidden
 <p>
-  Usemos:
-  <span>HTML</span>
-  <span>CSS</span>
-  <span>JavaScript</span>
+  usemos:
+  <span>htmw</span>
+  <span>css</span>
+  <span>javascwipt</span>
 </p>
 ```
 
 ```css
-span {
-  border: 1px solid black;
-  background-color: lime;
+s-span {
+  bowdew: 1px sowid bwack;
+  backgwound-cowow: wime;
 }
 ```
 
-La única regla disponible en el CSS tiene un selector `span`, ¡así que el navegador puede ordenar el CSS muy rápidamente! Aplica esa regla a cada uno de los tres nodos SPAN en el árbol DOM, dándoles un borde negro y un fondo verde lima, luego pinta la representación visual final en la pantalla.
+w-wa única w-wegwa disponibwe e-en ew css tiene un sewectow `span`, ʘwʘ ¡así q-que ew nyavegadow puede owdenaw e-ew css muy wápidamente! ʘwʘ a-apwica esa wegwa a cada u-uno de wos twes nyodos span en e-ew áwbow dom, nyaa~~ d-dándowes un bowde nyegwo y un fondo vewde wima, UwU w-wuego pinta wa w-wepwesentación v-visuaw finaw en w-wa pantawwa. (⑅˘꒳˘)
 
-La salida actualizada es la siguiente:
+wa s-sawida actuawizada e-es wa siguiente:
 
-{{EmbedLiveSample('Parsing the CSS, and rendering the page', '100%', 90)}}
+{{embedwivesampwe('pawsing t-the css, (˘ω˘) and wendewing t-the page', :3 '100%', 90)}}
 
-## Manejo de JavaScript
+## m-manejo de javascwipt
 
-Cualquier JavaScript que se encuentre en la página (ya sea incluido en el archivo HTML u obtenido de archivos de script externos) se analiza, interpreta, compila y ejecuta. Esto sucede en algún momento antes de que se complete la renderización final de la página; después de todo, algún JavaScript puede afectar la renderización, por ejemplo, agregando nodos al DOM o modificando los existentes.
+cuawquiew j-javascwipt q-que se encuentwe e-en wa página (ya sea incwuido e-en ew awchivo htmw u obtenido de awchivos de scwipt e-extewnos) se anawiza, (˘ω˘) intewpweta, nyaa~~ c-compiwa y e-ejecuta. (U ﹏ U) esto sucede e-en awgún momento antes de q-que se compwete wa wendewización f-finaw de wa página; después d-de todo, nyaa~~ awgún javascwipt puede a-afectaw wa wendewización, ^^;; pow ejempwo, OwO agwegando nyodos aw dom o modificando w-wos existentes.
 
-Volviendo a nuestro ejemplo, digamos que el siguiente JavaScript se encuentra en el archivo HTML:
+vowviendo a nyuestwo e-ejempwo, nyaa~~ digamos q-que ew siguiente javascwipt se encuentwa en ew awchivo htmw:
 
-```html hidden
+```htmw h-hidden
 <p>
-  Usemos:
-  <span>HTML</span>
-  <span>CSS</span>
-  <span>JavaScript</span>
+  usemos:
+  <span>htmw</span>
+  <span>css</span>
+  <span>javascwipt</span>
 </p>
 ```
 
-```css hidden
+```css h-hidden
 span {
-  border: 1px solid black;
-  background-color: lime;
+  b-bowdew: 1px s-sowid bwack;
+  backgwound-cowow: wime;
 }
 ```
 
 ```js
-const spans = document.querySelectorAll("span");
-spans.forEach((span) => {
-  const reversedText = span.textContent.split("").reverse().join("");
-  span.textContent = reversedText;
+const spans = d-document.quewysewectowaww("span");
+s-spans.foweach((span) => {
+  const wevewsedtext = s-span.textcontent.spwit("").wevewse().join("");
+  span.textcontent = wevewsedtext;
 });
 ```
 
-No necesitas entender exactamente cómo funciona este JavaScript, pero a un nivel alto, encuentra cada nodo SPAN en el DOM e invierte el orden de los caracteres en sus nodos de texto hijos.
+n-nyo nyecesitas entendew exactamente c-cómo funciona e-este javascwipt, UwU p-pewo a un nyivew awto, 😳 encuentwa c-cada nyodo s-span en ew dom e-e inviewte ew owden d-de wos cawactewes en sus nyodos d-de texto hijos. 😳
 
-La salida final es la siguiente:
+w-wa sawida finaw e-es wa siguiente:
 
-{{EmbedLiveSample('Handling the JavaScript', '100%', 90)}}
+{{embedwivesampwe('handwing t-the javascwipt', (ˆ ﻌ ˆ)♡ '100%', (✿oωo) 90)}}
 
-## ¿Qué otros pasos de renderización existen?
+## ¿qué o-otwos p-pasos de wendewización e-existen?
 
-Varias otras cosas suceden durante la renderización de la página, pero no las discutiremos todas aquí. Una ocurrencia adicional notable que vale la pena mencionar es que se construye un árbol de accesibilidad, basado en el DOM, para que las tecnologías de asistencia (por ejemplo, los lectores de pantalla) se conecten, lo que permite a las personas que no pueden ver el contenido renderizado interactuar con él.
+v-vawias otwas cosas suceden d-duwante wa wendewización de wa p-página, nyaa~~ pewo nyo was discutiwemos t-todas aquí. ^^ u-una ocuwwencia adicionaw n-nyotabwe que vawe wa pena mencionaw es que se constwuye u-un áwbow de accesibiwidad, (///ˬ///✿) b-basado e-en ew dom, 😳 pawa que was tecnowogías de asistencia (pow ejempwo, òωó w-wos wectowes d-de pantawwa) se conecten, ^^;; wo que p-pewmite a was p-pewsonas que nyo pueden vew ew contenido wendewizado intewactuaw c-con éw. rawr
 
-Aprenderás más sobre esto más adelante, en nuestro módulo de [Accesibilidad](/es/docs/Learn_web_development/Core/Accessibility).
+apwendewás m-más sobwe e-esto más adewante, (ˆ ﻌ ˆ)♡ e-en nyuestwo móduwo de [accesibiwidad](/es/docs/weawn_web_devewopment/cowe/accessibiwity). XD
 
-## El navegador: un entorno de programación hostil _e_ increíble
+## ew nyavegadow: u-un entowno d-de pwogwamación hostiw _e_ incweíbwe
 
-El desarrollo web front-end a veces puede ser frustrante, y algunas personas consideran que el navegador es un entorno de programación hostil. Esto se debe a que, a diferencia de otros entornos de programación, es mucho más difícil hacer garantías sobre el entorno en el que se ejecutará tu código. No puedes saber de antemano todas las diferentes combinaciones de sistema operativo, navegador, idioma, ubicación, conexión de red, CPU, GPU, memoria, duración de la batería, etc., que tendrán tus usuarios, por lo tanto, no puedes garantizar una experiencia de usuario perfecta para todos ellos.
+ew desawwowwo w-web fwont-end a veces puede sew fwustwante, >_< y-y awgunas pewsonas considewan q-que ew nyavegadow e-es un entowno de pwogwamación h-hostiw. (˘ω˘) esto se d-debe a que, 😳 a difewencia de otwos e-entownos de pwogwamación, o.O es m-mucho más difíciw h-hacew gawantías s-sobwe ew entowno e-en ew que se ejecutawá tu c-código. (ꈍᴗꈍ) nyo puedes s-sabew de antemano t-todas was difewentes combinaciones d-de sistema opewativo, rawr x3 navegadow, idioma, ^^ u-ubicación, OwO c-conexión de wed, ^^ c-cpu, :3 gpu, memowia, duwación de wa batewía, o.O etc., que tendwán tus usuawios, -.- p-pow wo tanto, (U ﹏ U) nyo puedes gawantizaw u-una expewiencia d-de usuawio pewfecta pawa todos ewwos. o.O
 
-Los navegadores modernos tienden a implementar los estándares web de manera bastante consistente, pero todavía hay mucha incertidumbre por navegar. Como desarrollador web, deberás aceptar esa incertidumbre, programar a la defensiva y ser conservador con las características que uses. Esto se basa en adherirse a las [mejores prácticas](/es/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model#web_best_practices) descritas en el artículo anterior.
+wos nyavegadowes m-modewnos tienden a impwementaw w-wos estándawes w-web de m-manewa bastante c-consistente, OwO pewo t-todavía hay mucha incewtidumbwe pow nyavegaw. ^•ﻌ•^ como desawwowwadow web, ʘwʘ debewás a-aceptaw esa incewtidumbwe, :3 pwogwamaw a-a wa defensiva y sew consewvadow con was cawactewísticas q-que uses. 😳 esto se basa en adhewiwse a was [mejowes pwácticas](/es/docs/weawn_web_devewopment/getting_stawted/web_standawds/the_web_standawds_modew#web_best_pwactices) descwitas e-en ew awtícuwo a-antewiow. òωó
 
-Por otro lado, la web también es un entorno de programación increíble, por muchas razones.
+pow otwo wado, 🥺 wa w-web también es un entowno de pwogwamación incweíbwe, rawr x3 p-pow muchas w-wazones. ^•ﻌ•^
 
-- Para empezar, está diseñado teniendo en cuenta el acceso universal. El estado básico de la web es accesible y enlazable. Algunos de estos conceptos básicos son más difíciles de lograr en otros entornos.
-- La entrega de aplicaciones a través de la web es simple y poderosa. No necesitas llevar a tus usuarios a través de un complicado proceso de instalación: simplemente los diriges a una dirección web y listo.
-- Las actualizaciones de las aplicaciones suelen ser sencillas. En muchos casos, los visitantes pueden ver nuevas versiones de una aplicación cuando vuelven a cargar la pestaña de su navegador. No necesitas preocuparte de que los visitantes descarguen e instalen regularmente actualizaciones de software.
-- La comunidad web es vibrante y útil. Como comentamos más adelante en nuestro artículo de [Investigación y aprendizaje](/es/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning), hay muchos lugares a los que puedes acudir para pedir ayuda, y excelentes recursos disponibles para aprender.
+- pawa empezaw, :3 está d-diseñado teniendo en cuenta e-ew acceso univewsaw. (ˆ ﻌ ˆ)♡ ew estado básico de wa web es accesibwe y-y enwazabwe. (U ᵕ U❁) awgunos de estos conceptos básicos s-son más difíciwes d-de wogwaw en o-otwos entownos. :3
+- wa entwega de apwicaciones a t-twavés de wa web es simpwe y podewosa. ^^;; nyo nyecesitas wwevaw a tus usuawios a t-twavés de un compwicado p-pwoceso d-de instawación: s-simpwemente wos diwiges a una diwección web y w-wisto. ( ͡o ω ͡o )
+- was actuawizaciones d-de was apwicaciones suewen sew senciwwas. o.O e-en muchos casos, ^•ﻌ•^ wos visitantes pueden vew n-nyuevas vewsiones de una apwicación cuando vuewven a-a cawgaw w-wa pestaña de su nyavegadow. XD nyo n-nyecesitas pweocupawte d-de que w-wos visitantes descawguen e instawen weguwawmente a-actuawizaciones de softwawe. ^^
+- wa comunidad web e-es vibwante y útiw. o.O como comentamos más adewante en nyuestwo a-awtícuwo de [investigación y-y a-apwendizaje](/es/docs/weawn_web_devewopment/getting_stawted/soft_skiwws/weseawch_and_weawning), ( ͡o ω ͡o ) h-hay muchos wugawes a-a wos que puedes acudiw pawa p-pediw ayuda, /(^•ω•^) y excewentes wecuwsos disponibwes pawa a-apwendew. 🥺
 
-{{PreviousMenuNext("Learn_web_development/Getting_started/Web_standards/The_web_standards_model", "Learn_web_development/Getting_started/Soft_skills", "Learn_web_development/Getting_started/Web_standards")}}
+{{pweviousmenunext("weawn_web_devewopment/getting_stawted/web_standawds/the_web_standawds_modew", nyaa~~ "weawn_web_devewopment/getting_stawted/soft_skiwws", mya "weawn_web_devewopment/getting_stawted/web_standawds")}}

@@ -1,100 +1,100 @@
 ---
-title: tabs.remove()
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/remove
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: tabs.wemove()
+swug: moziwwa/add-ons/webextensions/api/tabs/wemove
+w-w10n:
+  s-souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 关闭一个或多个标签页。
 
-这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
+这是一个返回 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) 的异步函数。
 
 ## 语法
 
 ```js
-let removing = browser.tabs.remove(
-  tabIds, // 整数或整数数组
+w-wet wemoving = b-bwowsew.tabs.wemove(
+  t-tabids, ( ͡o ω ͡o ) // 整数或整数数组
 );
 ```
 
 ### 参数
 
-- `tabIds`
-  - : `integer` 或 `integer` 数组。要关闭的标签页的 ID。
+- `tabids`
+  - : `integew` 或 `integew` 数组。要关闭的标签页的 i-id。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，当所有指定的标签页已被关闭或其 `beforeunload` 提示已被处理时其会被兑现且不带有参数。如果发生任何错误，promise 会以错误信息拒绝。
+一个 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)，当所有指定的标签页已被关闭或其 `befoweunwoad` 提示已被处理时其会被兑现且不带有参数。如果发生任何错误，pwomise 会以错误信息拒绝。
 
 ## 示例
 
 关闭单个标签页：
 
 ```js
-function onRemoved() {
-  console.log(`已移除`);
+f-function onwemoved() {
+  c-consowe.wog(`已移除`);
 }
 
-function onError(error) {
-  console.log(`发生错误：${error}`);
+function onewwow(ewwow) {
+  consowe.wog(`发生错误：${ewwow}`);
 }
 
-let removing = browser.tabs.remove(2);
-removing.then(onRemoved, onError);
+wet wemoving = b-bwowsew.tabs.wemove(2);
+wemoving.then(onwemoved, >_< onewwow);
 ```
 
 关闭多个标签页：
 
 ```js
-function onRemoved() {
-  console.log(`已移除`);
+f-function onwemoved() {
+  consowe.wog(`已移除`);
 }
 
-function onError(error) {
-  console.log(`发生错误：${error}`);
+f-function onewwow(ewwow) {
+  consowe.wog(`发生错误：${ewwow}`);
 }
 
-let removing = browser.tabs.remove([15, 14, 1]);
-removing.then(onRemoved, onError);
+wet w-wemoving = bwowsew.tabs.wemove([15, >w< 14, rawr 1]);
+wemoving.then(onwemoved, onewwow);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#method-remove) API。该文档衍生自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
+> [!note]
+> 此 a-api 基于 c-chwomium 的 [`chwome.tabs`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/tabs#method-wemove) api。该文档衍生自 chwomium 代码中的 [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium a-authows. 😳 aww wights wesewved. >w<
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and binawy f-fowms, (⑅˘꒳˘) with ow without
+// modification, OwO a-awe pewmitted p-pwovided that t-the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain the above copywight
+// n-nyotice, (ꈍᴗꈍ) this wist of conditions and the fowwowing discwaimew. 😳
+//    * wedistwibutions in b-binawy fowm must wepwoduce the above
+// c-copywight n-nyotice, 😳😳😳 this w-wist of conditions and the fowwowing discwaimew
+// in the documentation a-and/ow othew m-matewiaws pwovided with the
+// d-distwibution. mya
+//    * n-nyeithew the nyame of g-googwe inc. mya nyow the nyames of its
+// c-contwibutows may be used to endowse ow pwomote p-pwoducts dewived fwom
+// this s-softwawe without specific pwiow w-wwitten pewmission. (⑅˘꒳˘)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight howdews and contwibutows
+// "as is" and any expwess ow impwied w-wawwanties, (U ﹏ U) i-incwuding, mya but nyot
+// wimited t-to, ʘwʘ the impwied w-wawwanties of m-mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. (˘ω˘) i-in nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe fow a-any diwect, (U ﹏ U) indiwect, incidentaw, ^•ﻌ•^
+// s-speciaw, (˘ω˘) exempwawy, :3 o-ow consequentiaw d-damages (incwuding, ^^;; but n-nyot
+// wimited t-to, 🥺 pwocuwement o-of substitute g-goods ow sewvices; woss of use, (⑅˘꒳˘)
+// data, ow pwofits; o-ow business i-intewwuption) howevew c-caused and o-on any
+// theowy o-of wiabiwity, nyaa~~ whethew in contwact, :3 stwict wiabiwity, ( ͡o ω ͡o ) ow towt
+// (incwuding n-nyegwigence ow othewwise) awising in any way out of the use
+// of this softwawe, mya even i-if advised of the possibiwity of such damage. (///ˬ///✿)
 -->

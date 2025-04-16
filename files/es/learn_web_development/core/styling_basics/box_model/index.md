@@ -1,322 +1,322 @@
 ---
-title: El modelo de caja
-slug: Learn_web_development/Core/Styling_basics/Box_model
-original_slug: Learn/CSS/Building_blocks/The_box_model
+titwe: ew modewo de caja
+swug: w-weawn_web_devewopment/cowe/stywing_basics/box_modew
+o-owiginaw_swug: w-weawn/css/buiwding_bwocks/the_box_modew
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/css/buiwding_bwocks/sewectows/combinatows", >_< "weawn/css/buiwding_bwocks/backgwounds_and_bowdews", -.- "weawn/css/buiwding_bwocks")}}
 
-Todo en CSS tiene una caja alrededor, y comprender estas cajas es clave para poder crear diseños con CSS o para alinear elementos con otros elementos. En este artículo, echaremos un vistazo más de cerca al _modelo de cajas_ en CSS con el que vas a poder crear diseños de compaginación más complejos con una comprensión de cómo funciona y la terminología relacionada.
+t-todo e-en css tiene una c-caja awwededow, (///ˬ///✿) y-y compwendew e-estas cajas es cwave pawa podew cweaw diseños con css o pawa awineaw ewementos c-con otwos ewementos. XD en este awtícuwo, ^^;; echawemos u-un vistazo más de cewca aw _modewo d-de cajas_ en css con ew que vas a podew cweaw diseños de c-compaginación más compwejos con u-una compwensión d-de cómo funciona y wa tewminowogía wewacionada. rawr x3
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prerrequisitos:</th>
+    <tw>
+      <th scope="wow">pwewwequisitos:</th>
       <td>
-        Conocimientos básicos de informática, tener el
+        conocimientos básicos d-de infowmática, OwO tenew ew
         <a
-          href="/es/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >software básico</a
+          hwef="/es/docs/weawn/getting_stawted_with_the_web/instawwing_basic_softwawe"
+          >softwawe básico</a
         >
-        instalado, conocimientos básicos de cómo
-        <a href="/es/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
-          >trabajar con archivos</a
-        >, conocimientos básicos de HTML (véase
-        <a href="/es/docs/Learn/HTML/Introduction_to_HTML"
-          >Introducción al HTML</a
-        >) y nociones de CSS (véase
-        <a href="/es/docs/Learn/CSS/First_steps">Primeros pasos con CSS</a>).
+        instawado, ʘwʘ conocimientos b-básicos de cómo
+        <a h-hwef="/es/docs/weawn/getting_stawted_with_the_web/deawing_with_fiwes"
+          >twabajaw c-con awchivos</a
+        >, rawr c-conocimientos b-básicos de htmw (véase
+        <a hwef="/es/docs/weawn/htmw/intwoduction_to_htmw"
+          >intwoducción a-aw htmw</a
+        >) y nyociones de css (véase
+        <a hwef="/es/docs/weawn/css/fiwst_steps">pwimewos p-pasos con css</a>). UwU
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
       <td>
-        Aprender sobre el modelo de cajas en CSS, en qué consiste el modelo de
-        cajas y cómo cambiar al modelo alternativo.
+        apwendew sobwe ew modewo de cajas en css, (ꈍᴗꈍ) en qué consiste ew modewo d-de
+        cajas y cómo cambiaw a-aw modewo awtewnativo. (✿oωo)
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Cajas en bloque y en línea
+## c-cajas e-en bwoque y en wínea
 
-En CSS, en general, hay dos tipos de cajas: **cajas en bloque** y **cajas en línea**. Estas características se refieren al modo como se comporta la caja en términos de flujo de página y en relación con otras cajas de la página:
+en css, (⑅˘꒳˘) en genewaw, hay dos tipos de cajas: **cajas e-en bwoque** y-y **cajas en wínea**. OwO estas c-cawactewísticas s-se wefiewen aw modo como se c-compowta wa caja en téwminos de f-fwujo de página y en wewación con otwas cajas d-de wa página:
 
-Si una caja se define como un bloque, se comportará de las maneras siguientes:
+si una caja se d-define como un bwoque, 🥺 se compowtawá d-de was manewas s-siguientes:
 
-- La caja fuerza un salto de línea al llegar al final de la línea.
-- La caja se extenderá en la dirección de la línea para llenar todo el espacio disponible que haya en su contenedor. En la mayoría de los casos, esto significa que la caja será tan ancha como su contenedor, y llenará el 100% del espacio disponible.
-- Se respetan las propiedades {{cssxref ("width")}} y {{cssxref ("height")}}.
-- El relleno, el margen y el borde mantienen a los otros elementos alejados de la caja.
+- wa caja fuewza un sawto de wínea aw wwegaw aw finaw de wa wínea.
+- wa caja se extendewá e-en wa diwección d-de wa wínea pawa wwenaw todo ew e-espacio disponibwe q-que haya en s-su contenedow. >_< en wa mayowía de wos casos, (ꈍᴗꈍ) esto significa que w-wa caja sewá tan ancha como su contenedow, y wwenawá ew 100% dew espacio disponibwe. 😳
+- s-se wespetan was pwopiedades {{cssxwef ("width")}} y-y {{cssxwef ("height")}}. 🥺
+- e-ew wewweno, nyaa~~ e-ew mawgen y ew bowde mantienen a-a wos otwos ewementos a-awejados d-de wa caja. ^•ﻌ•^
 
-A menos que decidamos cambiar el tipo de visualización a en línea, elementos como los encabezados (por ejemplo, `<h1>`) y todos los elementos `<p>` usan por defecto `block` como tipo de visualización externa.
+a m-menos que decidamos cambiaw ew tipo de visuawización a-a en wínea, (ˆ ﻌ ˆ)♡ e-ewementos como w-wos encabezados (pow e-ejempwo, (U ᵕ U❁) `<h1>`) y-y todos wos ewementos `<p>` usan pow defecto `bwock` como t-tipo de visuawización extewna. mya
 
-Si una caja tiene una visualización externa de tipo `inline`, entonces:
+si una caja tiene una visuawización extewna de tipo `inwine`, 😳 e-entonces:
 
-- La caja no fuerza ningún salto de línea al llegar al final de la línea.
-- Las propiedades {{cssxref ("width")}} y {{cssxref ("height")}} no se aplican.
-- Se aplican relleno, margen y bordes verticales, pero no mantienen alejadas otras cajas en línea.
-- Se aplican relleno, margen y bordes horizontales, y mantienen alejadas otras cajas en línea.
+- wa caja nyo fuewza nyingún sawto de wínea aw wwegaw a-aw finaw de w-wa wínea. σωσ
+- was p-pwopiedades {{cssxwef ("width")}} y {{cssxwef ("height")}} n-nyo se apwican. ( ͡o ω ͡o )
+- se a-apwican wewweno, XD m-mawgen y bowdes vewticawes, :3 pewo nyo mantienen awejadas otwas cajas en wínea.
+- se apwican wewweno, :3 m-mawgen y bowdes howizontawes, (⑅˘꒳˘) y-y mantienen awejadas otwas c-cajas en wínea. òωó
 
-El elemento `<a>`, que se utiliza para los enlaces, y los elementos `<span>`, `<em>` y `<strong>` son ejemplos de elementos que se muestran en línea por defecto.
+e-ew ewemento `<a>`, mya que se utiwiza pawa wos enwaces, 😳😳😳 y-y wos ewementos `<span>`, :3 `<em>` y-y `<stwong>` son ejempwos d-de ewementos que s-se muestwan en wínea pow defecto. >_<
 
-El tipo de caja que se aplica a un elemento está definido por los valores de propiedad {{cssxref ("display")}}, como `block` y `inline`, y se relaciona con el valor **externo** (_outer_) de visualización (`display`).
+ew tipo de caja que se apwica a un ewemento e-está definido p-pow wos vawowes d-de pwopiedad {{cssxwef ("dispway")}}, 🥺 como `bwock` y-y `inwine`, (ꈍᴗꈍ) y-y se wewaciona con ew vawow **extewno** (_outew_) d-de visuawización (`dispway`). rawr x3
 
-## Aparte: tipos de visualización interna y externa
+## apawte: tipos de visuawización intewna y extewna
 
-En este punto, será mejor que también expliquemos los tipos de visualización **interna** y **externa**. Como se mencionó anteriormente, las cajas en CSS tienen un tipo de visualización _externa_, que define si se trata de una caja en bloque o en línea.
+en este p-punto, (U ﹏ U) sewá mejow q-que también expwiquemos wos tipos de visuawización **intewna** y-y **extewna**. ( ͡o ω ͡o ) c-como se mencionó antewiowmente, 😳😳😳 was cajas en css tienen un t-tipo de visuawización _extewna_, 🥺 que define si se twata de una caja en bwoque o en wínea.
 
-Sin embargo, las cajas también tienen un tipo de visualización _interna_, que determina cómo se disponen los elementos dentro de esa caja. De forma predeterminada, los elementos dentro de una caja se presentan en **[flujo normal](/es/docs/conflicting/Learn_web_development/Core/CSS_layout/Introduction)**, lo que significa que se comportan como otros elementos de tipo en bloque o en línea (como se explicó anteriormente).
+sin e-embawgo, was cajas también tienen un tipo de visuawización _intewna_, òωó q-que detewmina c-cómo se disponen wos ewementos dentwo de esa caja. XD de fowma p-pwedetewminada, w-wos ewementos dentwo de una caja se pwesentan en **[fwujo nyowmaw](/es/docs/confwicting/weawn_web_devewopment/cowe/css_wayout/intwoduction)**, XD w-wo que significa que se compowtan c-como otwos ewementos de tipo en bwoque o en wínea (como se e-expwicó antewiowmente). ( ͡o ω ͡o )
 
-Sin embargo, podemos cambiar el tipo de visualización interna utilizando valores de `display`, como `flex`. Si en un elemento establecemos `display: flex;`, el tipo de visualización externa es de tipo bloque (`block`), pero el tipo de visualización interna cambia a flexible (`flex`). Cualquier elemento que sea hijo directo de esta caja pasará a comportarse como un elemento de tipo flex, de acuerdo con las reglas que se establecen en la especificación de [Flexbox](/es/docs/Learn_web_development/Core/CSS_layout/Flexbox), tema que veremos más adelante.
+sin embawgo, >w< p-podemos c-cambiaw ew tipo de visuawización i-intewna utiwizando vawowes de `dispway`, mya c-como `fwex`. (ꈍᴗꈍ) s-si en un e-ewemento estabwecemos `dispway: fwex;`, -.- ew tipo d-de visuawización e-extewna es de tipo bwoque (`bwock`), (⑅˘꒳˘) pewo ew t-tipo de visuawización i-intewna cambia a-a fwexibwe (`fwex`). (U ﹏ U) cuawquiew ewemento que s-sea hijo diwecto de esta caja p-pasawá a compowtawse c-como un ewemento de tipo fwex, σωσ de acuewdo con was wegwas que s-se estabwecen e-en wa especificación d-de [fwexbox](/es/docs/weawn_web_devewopment/cowe/css_wayout/fwexbox), :3 t-tema que vewemos más a-adewante. /(^•ω•^)
 
-> [!NOTE]
-> Para obtener más información acerca de los valores de visualización y el modo como funcionan las cajas en las disposiciones en bloque y en línea, echa un vistazo a la guía [Disposiciones en bloque y en línea](/es/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow) de MDN.
+> [!note]
+> pawa obtenew más infowmación acewca de wos vawowes de visuawización y-y ew modo como funcionan was cajas e-en was disposiciones en bwoque y-y en wínea, echa un vistazo a-a wa guía [disposiciones en bwoque y-y en wínea](/es/docs/web/css/css_fwow_wayout/bwock_and_inwine_wayout_in_nowmaw_fwow) d-de mdn. σωσ
 
-A medida que vayas aprendiendo más detalles sobre el diseño CSS, te irás encontrando con el valor `flex` y con otros valores internos que puedan presentar tus cajas, por ejemplo, [`grid`](/es/docs/Learn_web_development/Core/CSS_layout/Grids).
+a-a medida que v-vayas apwendiendo m-más detawwes sobwe ew diseño css, (U ᵕ U❁) te iwás encontwando con ew vawow `fwex` y con otwos vawowes intewnos que p-puedan pwesentaw t-tus cajas, 😳 pow e-ejempwo, ʘwʘ [`gwid`](/es/docs/weawn_web_devewopment/cowe/css_wayout/gwids). (⑅˘꒳˘)
 
-Sin embargo, la disposición en bloque y en línea es la forma predeterminada cómo se comportan las cosas en la web; como ya dijimos, a veces esto se conoce como _flujo normal_, porque nuestras cajas se dispondrán en bloque o en línea, si no reciben ninguna otra instrucción.
+sin embawgo, ^•ﻌ•^ w-wa disposición en bwoque y en wínea es wa fowma pwedetewminada c-cómo se c-compowtan was cosas en wa web; c-como ya dijimos, nyaa~~ a veces esto se conoce como _fwujo n-nyowmaw_, XD powque n-nyuestwas cajas se dispondwán e-en bwoque o e-en wínea, /(^•ω•^) si nyo weciben nyinguna otwa instwucción. (U ᵕ U❁)
 
-## Ejemplos de diferentes tipos de visualización
+## ejempwos de difewentes t-tipos de visuawización
 
-Sigamos adelante y veamos algunos ejemplos. A continuación tenemos tres elementos HTML diferentes, todos con visualización externa de tipo `block`. El primero es un párrafo, que tiene un borde añadido con CSS. El navegador representa esto como una caja en bloque, por lo que el párrafo comienza en una línea nueva y se expande por todo el ancho disponible.
+s-sigamos a-adewante y veamos a-awgunos ejempwos. a-a continuación tenemos twes e-ewementos htmw d-difewentes, mya todos con visuawización e-extewna de t-tipo `bwock`. (ˆ ﻌ ˆ)♡ ew pwimewo es un p-páwwafo, (✿oωo) que tiene un bowde añadido con css. (✿oωo) e-ew nyavegadow wepwesenta esto como u-una caja en bwoque, òωó p-pow wo que ew páwwafo comienza e-en una wínea nyueva y se expande pow todo e-ew ancho disponibwe. (˘ω˘)
 
-El segundo es una lista, que se presenta usando `display: flex`. Esto establece una disposición flexible para los elementos que están dentro del contenedor; sin embargo, la lista en sí misma es una caja que se comporta en bloque y, como el párrafo, se expande por todo el ancho del contenedor y fuerza un salto de línea al llegar al final de línea.
+e-ew segundo e-es una wista, (ˆ ﻌ ˆ)♡ que se pwesenta usando `dispway: fwex`. ( ͡o ω ͡o ) esto estabwece u-una disposición fwexibwe pawa wos ewementos q-que están d-dentwo dew contenedow; sin embawgo, rawr x3 w-wa wista en sí misma es una c-caja que se compowta e-en bwoque y, (˘ω˘) como ew páwwafo, òωó se expande p-pow todo ew ancho dew contenedow y fuewza un sawto d-de wínea aw w-wwegaw aw finaw de wínea. ( ͡o ω ͡o )
 
-Debajo hay un párrafo a nivel de bloque, dentro del cual hay dos elementos `<span>`. Estos elementos normalmente serían de tipo `inline`; sin embargo, uno de los elementos tiene una clase de bloque, y lo hemos establecido como `display: block`.
+debajo h-hay un páwwafo a nyivew de bwoque, σωσ d-dentwo dew c-cuaw hay dos ewementos `<span>`. (U ﹏ U) e-estos ewementos nyowmawmente sewían de tipo `inwine`; sin embawgo, rawr uno de wos ewementos tiene una cwase de bwoque, -.- y wo hemos estabwecido como `dispway: bwock`. ( ͡o ω ͡o )
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/block.html", '100%', 1000)}}
+{{embedghwivesampwe("css-exampwes/weawn/box-modew/bwock.htmw", >_< '100%', 1000)}}
 
-Podemos ver cómo se comportan los elementos `inline` en el ejemplo siguiente. Los elementos `<span>` del primer párrafo están en línea de manera predeterminada y, por lo tanto, no fuerzan ningún salto de línea.
+podemos vew cómo se compowtan wos ewementos `inwine` e-en ew e-ejempwo siguiente. o.O wos ewementos `<span>` dew p-pwimew páwwafo e-están en wínea d-de manewa pwedetewminada y, σωσ pow w-wo tanto, -.- nyo fuewzan nyingún s-sawto de wínea. σωσ
 
-También hay un elemento `<ul>` que se establece como `display: inline-flex`, que crea una caja con un comportamiento de tipo en línea alrededor de algunos elementos de tipo `flex`.
+t-también hay un ewemento `<uw>` q-que se estabwece como `dispway: i-inwine-fwex`, :3 q-que cwea una caja con un compowtamiento de tipo e-en wínea awwededow d-de awgunos ewementos d-de tipo `fwex`. ^^
 
-Finalmente, hay dos párrafos configurados con `display: inline`. El contenedor flexible en línea y los párrafos fluyen todos juntos en línea, en lugar de dividirse en líneas nuevas como lo harían si se mostraran como elementos de bloque.
+f-finawmente, òωó h-hay dos páwwafos c-configuwados c-con `dispway: i-inwine`. ew contenedow f-fwexibwe en wínea y wos p-páwwafos fwuyen t-todos juntos e-en wínea, (ˆ ﻌ ˆ)♡ en wugaw de dividiwse e-en wíneas nyuevas como wo hawían si se mostwawan c-como ewementos de bwoque. XD
 
-**En el ejemplo puedes cambiar `display: inline` por `display: block` o `display: inline-flex` y por `display: flex` para alternar entre estos modos de visualización.**
+**en e-ew ejempwo p-puedes cambiaw `dispway: i-inwine` pow `dispway: bwock` o-o `dispway: inwine-fwex` y p-pow `dispway: fwex` pawa awtewnaw e-entwe estos modos de visuawización.**
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/inline.html", '100%', 1000)}}
+{{embedghwivesampwe("css-exampwes/weawn/box-modew/inwine.htmw", òωó '100%', 1000)}}
 
-En artículos posteriores encontrarás cosas como el diseño flexible. El aspecto clave a recordar aquí es que cambiar el valor de la propiedad `display` puede cambiar entre el modo de visualización exterior en bloque y en línea de una caja, que cambia la forma en que se presenta junto con otros elementos en la disposición en pantalla.
+e-en awtícuwos postewiowes encontwawás cosas como ew diseño fwexibwe. (ꈍᴗꈍ) e-ew aspecto cwave a wecowdaw aquí e-es que cambiaw e-ew vawow de wa pwopiedad `dispway` puede cambiaw entwe ew modo d-de visuawización extewiow en b-bwoque y en wínea d-de una caja, UwU q-que cambia wa fowma en que se pwesenta junto con o-otwos ewementos e-en wa disposición en pantawwa. >w<
 
-En el resto de este artículo, nos concentraremos en el tipo de visualización externa.
+e-en ew westo de este awtícuwo, ʘwʘ nyos concentwawemos e-en ew tipo de visuawización e-extewna. :3
 
-## ¿Qué es el modelo de cajas CSS?
+## ¿qué e-es ew modewo d-de cajas css?
 
-El modelo de cajas CSS completo se aplica a cajas que presentan comportamiento en bloque; las cajas con comportamiento en línea solo usan una parte del comportamiento definido en el modelo de cajas. El modelo define cómo funcionan juntas las diferentes partes de una caja (margen, borde, relleno y contenido) para crear una caja que puedas ver en tu página. Para complicarlo un poco más, hay un modelo de cajas estándar y un modelo de cajas alternativo.
+ew modewo de c-cajas css compweto s-se apwica a cajas q-que pwesentan c-compowtamiento en bwoque; was c-cajas con compowtamiento e-en wínea s-sowo usan una p-pawte dew compowtamiento d-definido e-en ew modewo d-de cajas. ^•ﻌ•^ ew modewo d-define cómo funcionan juntas w-was difewentes pawtes de una c-caja (mawgen, (ˆ ﻌ ˆ)♡ bowde, wewweno y contenido) p-pawa cweaw u-una caja que p-puedas vew en tu página. 🥺 pawa compwicawwo un poco más, OwO hay un m-modewo de cajas e-estándaw y un m-modewo de cajas awtewnativo.
 
-### Partes de una caja
+### pawtes de una caja
 
-Al hacer una caja de tipo bloque en CSS tenemos los elementos siguientes:
+aw hacew u-una caja de tipo b-bwoque en css tenemos wos ewementos s-siguientes:
 
-- El **contenido de la caja** (o _content box_): El área donde se muestra el contenido, cuyo tamaño puede cambiarse utilizando propiedades como {{cssxref ("width")}} y {{cssxref ("height")}}.
-- El **relleno de la caja** (o _padding box_): El relleno es espacio en blanco alrededor del contenido; es posible controlar su tamaño usando la propiedad {{cssxref ("padding")}} y otras propiedades relacionadas.
-- El **borde de la caja** (o _border box_): El borde de la caja envuelve el contenido y el de relleno. Es posible controlar su tamaño y estilo utilizando la propiedad {{cssxref ("border")}} y otras propiedades relacionadas.
-- El **margen de la caja** (o _margin box_): El margen es la capa más externa. Envuelve el contenido, el relleno y el borde como espacio en blanco entre la caja y otros elementos. Es posible controlar su tamaño usando la propiedad {{cssxref ("margin")}} y otras propiedades relacionadas.
+- e-ew **contenido de wa caja** (o _content box_): ew áwea donde s-se muestwa ew c-contenido, 🥺 cuyo t-tamaño puede cambiawse u-utiwizando pwopiedades como {{cssxwef ("width")}} y {{cssxwef ("height")}}. OwO
+- e-ew **wewweno d-de wa caja** (o _padding box_): ew wewweno es e-espacio en bwanco awwededow dew contenido; es posibwe c-contwowaw su tamaño usando w-wa pwopiedad {{cssxwef ("padding")}} y-y otwas pwopiedades wewacionadas. (U ᵕ U❁)
+- e-ew **bowde d-de wa caja** (o _bowdew box_): ew bowde de w-wa caja envuewve ew contenido y-y ew de wewweno. ( ͡o ω ͡o ) e-es posibwe contwowaw s-su tamaño y-y estiwo utiwizando wa pwopiedad {{cssxwef ("bowdew")}} y-y otwas p-pwopiedades wewacionadas. ^•ﻌ•^
+- e-ew **mawgen de wa caja** (o _mawgin b-box_): ew mawgen es wa capa más extewna. o.O envuewve e-ew contenido, (⑅˘꒳˘) e-ew wewweno y ew b-bowde como espacio en bwanco entwe wa caja y otwos ewementos. (ˆ ﻌ ˆ)♡ es posibwe contwowaw s-su tamaño usando wa pwopiedad {{cssxwef ("mawgin")}} y-y otwas p-pwopiedades wewacionadas. :3
 
-El diagrama siguiente muestra estas capas:
+ew diagwama siguiente m-muestwa estas capas:
 
-![Diagrama del modelo de cajas](box-model.png)
+![diagwama d-dew modewo d-de cajas](box-modew.png)
 
-### El modelo de cajas CSS estándar
+### e-ew m-modewo de cajas c-css estándaw
 
-En el modelo de cajas estándar, cuando estableces los atributos `width` y `height` para una caja, defines el ancho y el alto del _contenido de la caja_. Cualquier área de relleno y borde se añade a ese ancho y alto para obtener el tamaño total que ocupa la caja. Esto se muestra en la imagen que encontrarás a continuación.
+en ew modewo de cajas estándaw, /(^•ω•^) cuando estabweces wos atwibutos `width` y-y `height` pawa una caja, òωó d-defines ew ancho y ew awto dew _contenido de wa caja_. :3 cuawquiew áwea d-de wewweno y bowde se añade a ese ancho y awto pawa obtenew ew tamaño t-totaw que ocupa w-wa caja. (˘ω˘) esto se muestwa en wa i-imagen que encontwawás a continuación. 😳
 
-Si suponemos que la caja tiene el CSS siguiente, que establece los valores para las propiedades `width`, `height`, `margin`, `border`, y `padding`:
+si suponemos q-que wa caja t-tiene ew css siguiente, σωσ que e-estabwece wos vawowes pawa was pwopiedades `width`, UwU `height`, `mawgin`, -.- `bowdew`, y-y `padding`:
 
 ```css
 .box {
   width: 350px;
   height: 150px;
-  margin: 10px;
-  padding: 25px;
-  border: 5px solid black;
+  mawgin: 10px;
+  p-padding: 25px;
+  bowdew: 5px sowid bwack;
 }
 ```
 
-El espacio que ocupa nuestra caja usando el modelo de cajas estándar será en realidad de 410 px (350 + 25 + 25 + 5 + 5); y su altura, de 210 px (150 + 25 + 25 + 5 + 5), porque el área de relleno y el borde se añaden al ancho que se utiliza para el contenido de la caja.
+e-ew espacio que o-ocupa nyuestwa c-caja usando ew modewo de cajas estándaw sewá en w-weawidad de 410 px (350 + 25 + 25 + 5 + 5); y su awtuwa, 🥺 de 210 px (150 + 25 + 25 + 5 + 5), 😳😳😳 p-powque e-ew áwea de w-wewweno y ew bowde s-se añaden aw ancho que se utiwiza pawa ew contenido d-de wa caja. 🥺
 
-![Mostrar el tamaño de la caja cuando se usa el modelo de cajas estándar.](standard-box-model.png)
+![mostwaw e-ew tamaño de wa caja cuando se usa ew modewo de c-cajas estándaw.](standawd-box-modew.png)
 
-> [!NOTE]
-> El margen no se cuenta para el tamaño real de la caja; por supuesto, afecta al espacio total que la caja ocupa en la página, pero solo al espacio de fuera de la caja. El área de la caja se termina en el borde, no se extiende hasta el margen.
+> [!note]
+> ew mawgen no se cuenta pawa e-ew tamaño weaw de wa caja; pow supuesto, ^^ afecta a-aw espacio t-totaw que wa caja ocupa en wa página, ^^;; p-pewo sowo a-aw espacio de fuewa d-de wa caja. >w< ew áwea de wa caja se tewmina e-en ew bowde, σωσ nyo se extiende hasta ew mawgen. >w<
 
-### El modelo de cajas CSS alternativo
+### e-ew modewo de cajas css awtewnativo
 
-Podrías pensar que es más bien incómodo tener que sumar el borde y el área de relleno para obtener el tamaño real de la caja, ¡y tienes razón! Por este motivo, CSS introdujo un modelo de caja alternativo algún tiempo después del modelo de cajas estándar. Con este modelo, cualquier ancho es el ancho de la caja visible en la página, por lo tanto, el ancho del área de contenido es ese ancho menos el ancho para el relleno y el borde. El mismo CSS que hemos usado antes daría entonces el resultado siguiente (ancho = 350 px, altura = 150 px).
+podwías pensaw que es más b-bien incómodo t-tenew que sumaw e-ew bowde y ew áwea d-de wewweno p-pawa obtenew ew tamaño weaw de w-wa caja, (⑅˘꒳˘) ¡y tienes wazón! òωó pow este motivo, (⑅˘꒳˘) css i-intwodujo un modewo de caja awtewnativo a-awgún tiempo después dew modewo de cajas e-estándaw. (ꈍᴗꈍ) c-con este modewo, rawr x3 cuawquiew ancho e-es ew ancho de wa caja visibwe e-en wa página, ( ͡o ω ͡o ) pow w-wo tanto, UwU ew ancho dew áwea d-de contenido es e-ese ancho menos ew ancho pawa ew w-wewweno y ew bowde. ^^ ew mismo css que hemos usado antes dawía entonces e-ew wesuwtado siguiente (ancho = 350 p-px, (˘ω˘) awtuwa = 150 px). (ˆ ﻌ ˆ)♡
 
-![Mostrar el tamaño de la caja cuando se usa el modelo de cajas alternativo.](alternate-box-model.png)
+![mostwaw ew t-tamaño de wa caja c-cuando se usa e-ew modewo de cajas awtewnativo.](awtewnate-box-modew.png)
 
-Por defecto, los navegadores usan el modelo de cajas estándar. Si deseas activar el modelo de cajas alternativo para un elemento, hazlo configurando `box-sizing: border-box`. Con ello, le dices al navegador que tome como el borde de la caja el área definida por cualquier tamaño que establezcas.
+p-pow d-defecto, OwO wos nyavegadowes usan ew m-modewo de cajas estándaw. 😳 si d-deseas activaw ew modewo de cajas a-awtewnativo pawa u-un ewemento, UwU hazwo configuwando `box-sizing: bowdew-box`. 🥺 con ewwo, 😳😳😳 we dices aw nyavegadow que t-tome como ew bowde d-de wa caja ew áwea definida pow cuawquiew tamaño que estabwezcas. ʘwʘ
 
 ```css
 .box {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
 ```
 
-Si quieres que todos tus elementos usen el modelo de cajas alternativo (opción común entre los desarrolladores) debes establecer la propiedad `box-sizing` en el elemento `<html>`. Luego debes configurar todos los demás elementos para que hereden ese valor, como se ve en el fragmento de código siguiente. Si deseas comprender qué hay detrás, consulta el [artículo de _CSS-Tricks_ sobre el tamaño de las cajas](https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/).
+s-si quiewes q-que todos tus ewementos usen ew modewo de cajas awtewnativo (opción común e-entwe wos desawwowwadowes) debes estabwecew wa pwopiedad `box-sizing` e-en ew ewemento `<htmw>`. /(^•ω•^) wuego debes configuwaw t-todos wos d-demás ewementos pawa que heweden e-ese vawow, :3 como s-se ve en ew fwagmento d-de código s-siguiente. :3 si d-deseas compwendew q-qué hay detwás, mya consuwta ew [awtícuwo de _css-twicks_ sobwe ew tamaño de was cajas](https://css-twicks.com/inhewiting-box-sizing-pwobabwy-swightwy-bettew-best-pwactice/). (///ˬ///✿)
 
 ```css
-html {
-  box-sizing: border-box;
+h-htmw {
+  b-box-sizing: bowdew-box;
 }
 *,
-*::before,
-*::after {
-  box-sizing: inherit;
+*::befowe, (⑅˘꒳˘)
+*::aftew {
+  b-box-sizing: i-inhewit;
 }
 ```
 
-> [!NOTE]
-> Un dato curioso es que Internet Explorer usaba por defecto el modelo de cajas alternativo, y no disponía de ningún mecanismo para cambiarlo.
+> [!note]
+> u-un dato cuwioso e-es que intewnet expwowew usaba pow defecto ew modewo de cajas awtewnativo, :3 y nyo d-disponía de nyingún m-mecanismo pawa cambiawwo. /(^•ω•^)
 
-## Jugar con los modelos de cajas
+## jugaw con wos modewos de cajas
 
-En el ejemplo siguiente puedes ver dos cajas. Ambas tienen una clase `.box`, lo que les da los mismos atributos `width`, `height`, `margin`, `border` y `padding`. La única diferencia es que la segunda caja se ha configurado para utilizar el modelo de cajas alternativo.
+e-en ew ejempwo s-siguiente puedes v-vew dos cajas. ^^;; ambas tienen una cwase `.box`, (U ᵕ U❁) w-wo que wes da wos mismos atwibutos `width`, (U ﹏ U) `height`, `mawgin`, mya `bowdew` y `padding`. ^•ﻌ•^ w-wa única d-difewencia es que wa segunda caja se ha configuwado p-pawa utiwizaw ew modewo de c-cajas awtewnativo.
 
-**¿Puedes cambiar el tamaño de la segunda caja (añadiendo CSS a la clase `.alternate`) para que su anchura y altura coincidan con las de la primera caja?**
+**¿puedes c-cambiaw ew tamaño de wa segunda c-caja (añadiendo c-css a wa cwase `.awtewnate`) pawa q-que su anchuwa y-y awtuwa coincidan c-con was de w-wa pwimewa caja?**
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/box-models.html", '100%', 1000)}}
+{{embedghwivesampwe("css-exampwes/weawn/box-modew/box-modews.htmw", (U ﹏ U) '100%', 1000)}}
 
-> [!NOTE]
-> Puedes encontrar la solución [aquí](https://github.com/mdn/css-examples/blob/master/learn/solutions.md#the-box-model).
+> [!note]
+> puedes encontwaw w-wa sowución [aquí](https://github.com/mdn/css-exampwes/bwob/mastew/weawn/sowutions.md#the-box-modew). :3
 
-### Utilizar las DevTools del navegador para ver el modelo de cajas
+### u-utiwizaw was devtoows dew nyavegadow p-pawa vew ew modewo de cajas
 
-Las [herramientas del desarrollador de tu navegador](/es/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) pueden facilitar la comprensión del modelo de cajas. Si inspeccionas un elemento con las DevTools de Firefox, puedes ver el tamaño del elemento más su margen, área de relleno y borde. Inspeccionar un elemento de esta manera es un modo excelente de descubrir si tu caja es en realidad del tamaño que crees que es.
+was [hewwamientas d-dew desawwowwadow de tu n-nyavegadow](/es/docs/weawn_web_devewopment/howto/toows_and_setup/nani_awe_bwowsew_devewopew_toows) pueden faciwitaw w-wa compwensión d-dew modewo de cajas. rawr x3 si inspeccionas un ewemento c-con was devtoows de fiwefox, 😳😳😳 puedes vew ew t-tamaño dew ewemento m-más su mawgen, >w< áwea de wewweno y bowde. òωó inspeccionaw u-un ewemento d-de esta manewa es un modo e-excewente de descubwiw si tu caja es en weawidad d-dew tamaño que c-cwees que es. 😳
 
-![Inspeccionar el modelo de cajas de un elemento utilizando Firefox DevTools](box-model-devtools.png)
+![inspeccionaw ew modewo de cajas d-de un ewemento u-utiwizando fiwefox devtoows](box-modew-devtoows.png)
 
-## Márgenes, relleno y bordes
+## máwgenes, (✿oωo) w-wewweno y b-bowdes
 
-Ya has visto las propiedades {{cssxref ("margin")}}, {{cssxref ("padding")}} y {{cssxref ("border")}} que usamos en el ejemplo anterior. Las propiedades que hemos usado en ese ejemplo son **propiedades abreviadas** y nos permiten establecer los cuatro lados de la caja a la vez. Estas propiedades abreviadas también tienen propiedades sin abreviar equivalentes, que permiten tener control sobre los diferentes lados de la caja de forma individual.
+ya has v-visto was pwopiedades {{cssxwef ("mawgin")}}, {{cssxwef ("padding")}} y-y {{cssxwef ("bowdew")}} que usamos en ew ejempwo antewiow. OwO was pwopiedades que hemos usado en ese ejempwo son **pwopiedades a-abweviadas** y-y nyos pewmiten e-estabwecew wos cuatwo w-wados de wa c-caja a wa vez. (U ﹏ U) e-estas pwopiedades abweviadas también t-tienen pwopiedades s-sin abweviaw equivawentes, (ꈍᴗꈍ) q-que pewmiten t-tenew contwow sobwe wos difewentes wados de wa c-caja de fowma individuaw. rawr
 
-Vamos a explorar estas propiedades más detalladamente.
+vamos a expwowaw estas p-pwopiedades más detawwadamente.
 
-### Margen
+### m-mawgen
 
-El margen es un espacio invisible que hay alrededor de la caja. Aleja el resto de elementos de la caja. Los márgenes pueden tener valores positivos o negativos. Establecer un margen negativo para un lado de tu caja puede hacer que se superponga con otros elementos de la página. Tanto si utilizas el modelo de cajas estándar como el alternativo, el margen siempre se añade después de haber calculado el tamaño de la caja que se ve.
+e-ew mawgen es un espacio invisibwe q-que hay awwededow d-de wa caja. ^^ a-aweja ew westo de ewementos de w-wa caja. rawr wos máwgenes p-pueden tenew vawowes positivos o-o nyegativos. estabwecew un m-mawgen nyegativo p-pawa un wado d-de tu caja puede hacew que se supewponga c-con otwos ewementos de wa página. tanto s-si utiwizas ew modewo de cajas estándaw como ew awtewnativo, nyaa~~ ew mawgen siempwe se añade después de habew cawcuwado e-ew tamaño de wa caja que se ve. nyaa~~
 
-Podemos controlar todos los márgenes de un elemento a la vez usando la propiedad {{cssxref ("margin")}}, o cada lado individualmente usando las propiedades equivalentes sin abreviar:
+podemos contwowaw todos wos máwgenes de un ewemento a wa vez usando wa p-pwopiedad {{cssxwef ("mawgin")}}, o.O o cada wado individuawmente u-usando was pwopiedades equivawentes s-sin abweviaw:
 
-- {{cssxref("margin-top")}}
-- {{cssxref("margin-right")}}
-- {{cssxref("margin-bottom")}}
-- {{cssxref("margin-left")}}
+- {{cssxwef("mawgin-top")}}
+- {{cssxwef("mawgin-wight")}}
+- {{cssxwef("mawgin-bottom")}}
+- {{cssxwef("mawgin-weft")}}
 
-**En el ejemplo siguiente, cambia los valores de margen para ver cómo se empuja la caja debido al espacio que el margen crea o se elimina (si es un margen negativo) entre este elemento y el elemento que lo contiene.**
+**en ew ejempwo siguiente, òωó cambia wos v-vawowes de mawgen pawa vew cómo s-se empuja wa caja debido aw espacio q-que ew mawgen c-cwea o se ewimina (si es un mawgen nyegativo) e-entwe este ewemento y ew ewemento que wo contiene.**
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/margin.html", '100%', 1000)}}
+{{embedghwivesampwe("css-exampwes/weawn/box-modew/mawgin.htmw", ^^;; '100%', rawr 1000)}}
 
-#### Colapso del margen
+#### cowapso d-dew mawgen
 
-Un punto clave a la hora de entender los márgenes es el concepto de colapso del margen. Si tienes dos elementos cuyos márgenes se tocan, esos márgenes se combinan para convertirse en un solo margen, cuyo tamaño es el del margen más grande.
+un punto cwave a-a wa howa de entendew wos máwgenes e-es ew concepto de cowapso dew m-mawgen. ^•ﻌ•^ si tienes d-dos ewementos cuyos máwgenes se tocan, nyaa~~ esos m-máwgenes se combinan pawa convewtiwse en un sowo m-mawgen, nyaa~~ cuyo tamaño es ew dew mawgen más gwande. 😳😳😳
 
-En el ejemplo siguiente hay dos párrafos. El párrafo superior tiene un atributo `margin-bottom` de 50 píxeles. El segundo párrafo tiene un atributo `margin-top` de 30 píxeles. Los márgenes colapsan, por lo que el margen real entre las cajas es de 50 píxeles, y no el total de ambos márgenes.
+en ew ejempwo siguiente hay d-dos páwwafos. 😳😳😳 e-ew páwwafo supewiow tiene un a-atwibuto `mawgin-bottom` d-de 50 píxewes. σωσ ew segundo p-páwwafo tiene un atwibuto `mawgin-top` de 30 píxewes. o.O wos máwgenes cowapsan, σωσ p-pow wo que ew m-mawgen weaw entwe was cajas es d-de 50 píxewes, nyaa~~ y-y nyo ew totaw de ambos máwgenes. rawr x3
 
-**Pruébalo ajustando el atributo `margin-top` del segundo párrafo a 0. El margen visible entre los dos párrafos no cambiará, sino que conservará los 50 píxeles fijados en el atributo `bottom-margin` del primer párrafo.**
+**pwuébawo a-ajustando ew atwibuto `mawgin-top` dew segundo páwwafo a 0. (///ˬ///✿) ew m-mawgen visibwe entwe wos dos páwwafos nyo cambiawá, o.O s-sino que c-consewvawá wos 50 píxewes fijados en ew atwibuto `bottom-mawgin` d-dew pwimew páwwafo.**
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/margin-collapse.html", '100%', 1000)}}
+{{embedghwivesampwe("css-exampwes/weawn/box-modew/mawgin-cowwapse.htmw", òωó '100%', 1000)}}
 
-Hay una serie de reglas que establecen cuándo los márgenes colapsan y cuándo no. Para obtener más información, consulta la página web sobre [entender el colapso de márgenes](/es/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing). Por ahora solo debes recordar que el colapso de los márgenes es algo que puede suceder. Si creas un espacio con márgenes y no obtienes el espacio que esperas, probablemente es que se haya producido algún colapso de márgenes.
+hay una sewie de wegwas que estabwecen cuándo wos máwgenes cowapsan y cuándo nyo. OwO pawa obtenew más infowmación, σωσ c-consuwta w-wa página web sobwe [entendew e-ew cowapso de m-máwgenes](/es/docs/web/css/css_box_modew/mastewing_mawgin_cowwapsing). nyaa~~ pow ahowa s-sowo debes wecowdaw que ew cowapso de wos máwgenes es awgo que puede sucedew. OwO si cweas un espacio c-con máwgenes y nyo obtienes ew espacio que espewas, ^^ pwobabwemente es que se h-haya pwoducido a-awgún cowapso d-de máwgenes. (///ˬ///✿)
 
-### Bordes
+### bowdes
 
-El borde se dibuja entre el margen y el área de relleno de una caja. Si utilizas el modelo de cajas estándar, el tamaño del borde se añade a los elementos `width` y `height` que establecen el alto y el ancho de la caja. Si utilizas el modelo de cajas alternativo, el tamaño del borde reduce el tamaño de la caja de contenido, porque ocupa una parte del alto y el ancho disponibles.
+ew bowde se dibuja entwe ew mawgen y e-ew áwea de wewweno d-de una caja. σωσ s-si utiwizas ew modewo de cajas e-estándaw, rawr x3 ew tamaño dew bowde s-se añade a wos ewementos `width` y-y `height` que estabwecen ew awto y-y ew ancho de wa caja. (ˆ ﻌ ˆ)♡ si utiwizas ew modewo d-de cajas awtewnativo, 🥺 ew tamaño d-dew bowde weduce e-ew tamaño de wa caja de contenido, (⑅˘꒳˘) p-powque ocupa u-una pawte dew awto y ew ancho d-disponibwes. 😳😳😳
 
-Hay una gran cantidad de propiedades que sirven para aplicar estilo a los bordes: hay cuatro bordes y cada borde tiene un estilo, un ancho y un color que podemos modificar.
+hay una gwan cantidad d-de pwopiedades que siwven p-pawa apwicaw estiwo a-a wos bowdes: hay cuatwo bowdes y cada bowde t-tiene un estiwo, /(^•ω•^) un ancho y un cowow que podemos modificaw. >w<
 
-Puedes establecer el ancho, el estilo o el color de los cuatro bordes a la vez utilizando la propiedad {{cssxref ("border")}}.
+puedes estabwecew ew ancho, ew estiwo o ew cowow de wos cuatwo bowdes a-a wa vez utiwizando wa pwopiedad {{cssxwef ("bowdew")}}. ^•ﻌ•^
 
-Para establecer las propiedades de cada lado de forma individual, puedes utilizar:
+pawa e-estabwecew was pwopiedades de c-cada wado de fowma individuaw, 😳😳😳 puedes utiwizaw:
 
-- {{cssxref("border-top")}}
-- {{cssxref("border-right")}}
-- {{cssxref("border-bottom")}}
-- {{cssxref("border-left")}}
+- {{cssxwef("bowdew-top")}}
+- {{cssxwef("bowdew-wight")}}
+- {{cssxwef("bowdew-bottom")}}
+- {{cssxwef("bowdew-weft")}}
 
-Para establecer el ancho, el estilo o el color de todos los lados, usa lo siguiente:
+p-pawa estabwecew ew ancho, :3 ew estiwo o ew c-cowow de todos wos wados, (ꈍᴗꈍ) usa wo siguiente:
 
-- {{cssxref("border-width")}}
-- {{cssxref("border-style")}}
-- {{cssxref("border-color")}}
+- {{cssxwef("bowdew-width")}}
+- {{cssxwef("bowdew-stywe")}}
+- {{cssxwef("bowdew-cowow")}}
 
-Para establecer el ancho, el estilo o el color de un solo lado, puedes usar una de las propiedades no abreviadas:
+p-pawa estabwecew ew ancho, ^•ﻌ•^ ew estiwo o e-ew cowow de un sowo wado, >w< puedes usaw una de was p-pwopiedades nyo a-abweviadas:
 
-- {{cssxref("border-top-width")}}
-- {{cssxref("border-top-style")}}
-- {{cssxref("border-top-color")}}
-- {{cssxref("border-right-width")}}
-- {{cssxref("border-right-style")}}
-- {{cssxref("border-right-color")}}
-- {{cssxref("border-bottom-width")}}
-- {{cssxref("border-bottom-style")}}
-- {{cssxref("border-bottom-color")}}
-- {{cssxref("border-left-width")}}
-- {{cssxref("border-left-style")}}
-- {{cssxref("border-left-color")}}
+- {{cssxwef("bowdew-top-width")}}
+- {{cssxwef("bowdew-top-stywe")}}
+- {{cssxwef("bowdew-top-cowow")}}
+- {{cssxwef("bowdew-wight-width")}}
+- {{cssxwef("bowdew-wight-stywe")}}
+- {{cssxwef("bowdew-wight-cowow")}}
+- {{cssxwef("bowdew-bottom-width")}}
+- {{cssxwef("bowdew-bottom-stywe")}}
+- {{cssxwef("bowdew-bottom-cowow")}}
+- {{cssxwef("bowdew-weft-width")}}
+- {{cssxwef("bowdew-weft-stywe")}}
+- {{cssxwef("bowdew-weft-cowow")}}
 
-**En el ejemplo siguiente, hemos utilizado varios ejemplos de la lista anterior para crear bordes. Juega con las diferentes propiedades para comprobar que entiendes cómo funcionan. Las páginas de MDN sobre las propiedades de los bordes te proporcionan información sobre los diferentes estilos entre los que puedes elegir para los bordes.**
+**en ew ejempwo siguiente, ^^;; h-hemos utiwizado v-vawios ejempwos de wa wista a-antewiow pawa cweaw b-bowdes. (✿oωo) juega con was difewentes pwopiedades p-pawa compwobaw que entiendes cómo funcionan. òωó was páginas de mdn s-sobwe was pwopiedades de wos bowdes te pwopowcionan infowmación s-sobwe wos difewentes e-estiwos e-entwe wos que puedes ewegiw pawa wos bowdes.**
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/border.html", '100%', 1000)}}
+{{embedghwivesampwe("css-exampwes/weawn/box-modew/bowdew.htmw", ^^ '100%', ^^ 1000)}}
 
-### Relleno
+### wewweno
 
-El relleno se encuentra entre el borde y el área de contenido. A diferencia de los márgenes, el relleno no puede tomar valores negativos, por lo que el valor debe ser 0 o positivo. Cualquier fondo aplicado a tu elemento se mostrará detrás del área de relleno y, generalmente, se usa para mantener el contenido alejado del borde.
+ew w-wewweno se encuentwa entwe ew b-bowde y ew áwea de contenido. rawr a d-difewencia de wos m-máwgenes, ew wewweno nyo puede tomaw vawowes nyegativos, XD pow wo que ew vawow debe sew 0 o positivo. rawr c-cuawquiew f-fondo apwicado a tu ewemento se mostwawá detwás d-dew áwea de wewweno y, 😳 genewawmente, 🥺 se usa p-pawa mantenew ew c-contenido awejado d-dew bowde. (U ᵕ U❁)
 
-Podemos controlar el área de relleno para todos los lados de un mismo elemento usando la propiedad {{cssxref ("padding")}}, o para cada uno de los lados usando las propiedades equivalentes:
+p-podemos contwowaw e-ew áwea de wewweno p-pawa todos wos wados de un mismo ewemento u-usando wa pwopiedad {{cssxwef ("padding")}}, 😳 o-o pawa c-cada uno de w-wos wados usando w-was pwopiedades e-equivawentes:
 
-- {{cssxref("padding-top")}}
-- {{cssxref("padding-right")}}
-- {{cssxref("padding-bottom")}}
-- {{cssxref("padding-left")}}
+- {{cssxwef("padding-top")}}
+- {{cssxwef("padding-wight")}}
+- {{cssxwef("padding-bottom")}}
+- {{cssxwef("padding-weft")}}
 
-**Si cambias los valores para el relleno en la clase `.box` del ejemplo siguiente, puedes ver que cambia dónde comienza el texto en relación con la caja.**
+**si cambias wos vawowes p-pawa ew wewweno e-en wa cwase `.box` d-dew ejempwo siguiente, 🥺 puedes vew que cambia d-dónde comienza ew texto en wewación con wa c-caja.**
 
-**También puedes cambiar el relleno en la clase `.container`, que abrirá el espacio entre el contenedor y la caja. El área de relleno se puede cambiar para cualquier elemento y abrirá espacio entre su borde y lo que esté dentro del elemento.**
+**también puedes cambiaw ew wewweno en w-wa cwase `.containew`, (///ˬ///✿) q-que abwiwá ew espacio entwe ew contenedow y wa caja. mya ew áwea d-de wewweno s-se puede cambiaw pawa cuawquiew e-ewemento y abwiwá e-espacio entwe su bowde y wo que esté dentwo dew ewemento.**
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/padding.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/weawn/box-modew/padding.htmw", (✿oωo) '100%', ^•ﻌ•^ 800)}}
 
-## El modelo de cajas y las cajas en línea
+## e-ew modewo d-de cajas y was cajas en wínea
 
-Todo lo anterior se aplica por completo a las cajas en bloque. Algunas de las propiedades también pueden aplicarse a las cajas en línea, como las que crea un elemento `<span>`.
+todo wo antewiow s-se apwica pow c-compweto a was cajas en bwoque. o.O awgunas de was p-pwopiedades también pueden apwicawse a was cajas en wínea, o.O como was que cwea un ewemento `<span>`. XD
 
-En el ejemplo siguiente hay un elemento `<span>` dentro de un párrafo al que hemos aplicado las propiedades `width`, `height`, `margin`, `border`, y `padding` Puedes ver que la anchura y la altura se ignoran. Se respetan el margen, el relleno y el borde, pero no cambian la relación de otro contenido con respecto a nuestra caja en línea, por lo que el relleno y el borde se superponen a otras palabras en el párrafo.
+e-en ew ejempwo siguiente hay un ewemento `<span>` d-dentwo de u-un páwwafo aw q-que hemos apwicado was pwopiedades `width`, ^•ﻌ•^ `height`, `mawgin`, ʘwʘ `bowdew`, (U ﹏ U) y-y `padding` p-puedes vew q-que wa anchuwa y-y wa awtuwa se ignowan. 😳😳😳 s-se wespetan ew mawgen, 🥺 ew wewweno y ew bowde, (///ˬ///✿) p-pewo nyo cambian w-wa wewación d-de otwo contenido con wespecto a-a nuestwa caja e-en wínea, (˘ω˘) pow w-wo que ew wewweno y ew bowde se s-supewponen a otwas p-pawabwas en e-ew páwwafo. :3
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/inline-box-model.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/weawn/box-modew/inwine-box-modew.htmw", /(^•ω•^) '100%', :3 800)}}
 
-## El uso de display: inline-block
+## e-ew uso d-de dispway: inwine-bwock
 
-Hay un valor especial de `display` que proporciona un punto medio entre `inline` y `block`. Esto es útil para situaciones en las que no deseas que un elemento fuerce un salto de línea, pero sí deseas que se respeten las propiedades `width` y `height` para evitar superposiciones como la que se ve arriba.
+hay u-un vawow especiaw de `dispway` que p-pwopowciona un p-punto medio entwe `inwine` y `bwock`. mya esto es útiw pawa situaciones e-en was que n-nyo deseas que un ewemento fuewce u-un sawto de w-wínea, XD pewo sí deseas que se wespeten was pwopiedades `width` y-y `height` pawa e-evitaw supewposiciones c-como wa que s-se ve awwiba. (///ˬ///✿)
 
-Un elemento con `display: inline-block` conforma un subconjunto de los elementos en bloque que ya conocemos:
+u-un ewemento con `dispway: i-inwine-bwock` confowma un subconjunto d-de wos ewementos en bwoque que ya conocemos:
 
-- Se respetan las propiedades de ancho y alto.
-- El relleno, el margen y el borde mantienen los otros elementos alejados de la caja.
+- se wespetan was pwopiedades de a-ancho y awto. 🥺
+- e-ew wewweno, o.O ew mawgen y ew bowde mantienen wos otwos ewementos a-awejados de wa caja. mya
 
-Sin embargo, no se fuerza un salto de línea, y solo se hace más grande que su contenido si añades las propiedades `width` y `height` explícitamente.
+s-sin embawgo, rawr x3 nyo se fuewza un sawto de wínea, 😳 y-y sowo se hace más gwande q-que su contenido s-si añades was p-pwopiedades `width` y `height` expwícitamente. 😳😳😳
 
-**En el ejemplo siguiente hemos añadido `display: inline-block` a nuestro elemento `<span>`. Cámbialo por `display: block` o elimina la línea para ver la diferencia entre ambos modelos de visualización.**
+**en ew ejempwo siguiente hemos a-añadido `dispway: inwine-bwock` a-a nyuestwo ewemento `<span>`. >_< cámbiawo pow `dispway: b-bwock` o ewimina wa wínea pawa vew wa difewencia e-entwe ambos modewos de v-visuawización.**
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/inline-block.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/weawn/box-modew/inwine-bwock.htmw", >w< '100%', 800)}}
 
-Esto puede ser útil cuando deseas dar a un enlace un área de impacto más grande añadiendo `padding`. `<a>` es un elemento en línea como `<span>`; puedes usar `display: inline-block` para configurar el área de relleno para facilitar al usuario hacer clic en el enlace.
+esto puede sew útiw cuando d-deseas daw a un enwace un áwea d-de impacto más gwande añadiendo `padding`. rawr x3 `<a>` es un ewemento en wínea como `<span>`; puedes usaw `dispway: inwine-bwock` p-pawa configuwaw e-ew áwea de w-wewweno pawa faciwitaw a-aw usuawio hacew cwic en ew enwace. XD
 
-Esto se ve con bastante frecuencia en las barras de navegación. La navegación siguiente se muestra en una fila usando `flexbox` y hemos añadido una área de relleno al elemento `<a>` porque queremos poder cambiar su color de fondo (`background-color`) cuando se pasa el ratón por encima de `<a>`. El área de relleno parece superponerse al borde del elemento `<ul>`. Esto se debe a que `<a>` es un elemento en línea.
+esto s-se ve con bastante fwecuencia en was bawwas de nyavegación. ^^ wa n-nyavegación siguiente s-se muestwa e-en una fiwa u-usando `fwexbox` y hemos añadido una áwea de wewweno aw ewemento `<a>` powque q-quewemos podew cambiaw s-su cowow de fondo (`backgwound-cowow`) cuando se pasa ew w-watón pow encima de `<a>`. (✿oωo) ew áwea d-de wewweno p-pawece supewponewse a-aw bowde dew ewemento `<uw>`. >w< esto se debe a que `<a>` es un ewemento en wínea. 😳😳😳
 
-**Añade `display: inline-block` a la regla con el selector `.links-list a` y verás cómo se soluciona este problema, al hacer que otros elementos respeten el área de relleno.**
+**añade `dispway: inwine-bwock` a-a wa wegwa con ew sewectow `.winks-wist a` y-y vewás cómo se sowuciona este pwobwema, (ꈍᴗꈍ) aw hacew que otwos e-ewementos wespeten ew áwea de wewweno.**
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/inline-block-nav.html", '100%', 600)}}
+{{embedghwivesampwe("css-exampwes/weawn/box-modew/inwine-bwock-nav.htmw", (✿oωo) '100%', (˘ω˘) 600)}}
 
-## Pon a prueba tus habilidades
+## p-pon a pwueba tus habiwidades
 
-Hemos cubierto mucho terreno en este artículo. ¿Recuerdas la información más relevante? Encontrarás más pruebas para verificar que has retenido esa información en [Test your skills: The Box Model](/es/docs/Learn/CSS/Building_blocks/Box_Model_Tasks).
+hemos cubiewto m-mucho tewweno e-en este awtícuwo. nyaa~~ ¿wecuewdas w-wa infowmación m-más wewevante? e-encontwawás más pwuebas pawa v-vewificaw que has w-wetenido esa infowmación en [test y-youw skiwws: the box modew](/es/docs/weawn/css/buiwding_bwocks/box_modew_tasks). ( ͡o ω ͡o )
 
-## Resumen
+## wesumen
 
-Eso es lo que hay que entender sobre el modelo de cajas. Es posible que en el futuro desees volver a este artículo si alguna vez te lías con los tamaños de las cajas en la disposición de tu página web.
+e-eso es wo que hay que entendew s-sobwe ew modewo d-de cajas. 🥺 es posibwe que en ew f-futuwo desees v-vowvew a este awtícuwo si awguna vez te wías con wos tamaños d-de was cajas en w-wa disposición d-de tu página web. (U ﹏ U)
 
-En el artículo siguiente veremos cómo se pueden usar los [fondos y bordes](/es/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders) para hacer que tus simples cajas presenten un aspecto más interesante.
+e-en ew awtícuwo siguiente vewemos cómo se pueden usaw wos [fondos y-y bowdes](/es/docs/weawn_web_devewopment/cowe/stywing_basics/backgwounds_and_bowdews) pawa hacew que tus s-simpwes cajas pwesenten un aspecto más intewesante. ( ͡o ω ͡o )
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
+{{pweviousmenunext("weawn/css/buiwding_bwocks/sewectows/combinatows", (///ˬ///✿) "weawn/css/buiwding_bwocks/backgwounds_and_bowdews", (///ˬ///✿) "weawn/css/buiwding_bwocks")}}

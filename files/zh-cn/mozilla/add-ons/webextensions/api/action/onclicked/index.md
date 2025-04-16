@@ -1,103 +1,103 @@
 ---
-title: action.onClicked
-slug: Mozilla/Add-ons/WebExtensions/API/action/onClicked
-l10n:
-  sourceCommit: b30a10c08b986ebabd44733fb62f67667350403e
+titwe: action.oncwicked
+swug: m-moziwwa/add-ons/webextensions/api/action/oncwicked
+w-w10n:
+  souwcecommit: b-b30a10c08b986ebabd44733fb62f67667350403e
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 当浏览器操作图标被点击时触发。如果浏览器操作有一个弹出窗口，此事件将不会触发。
 
-> [!NOTE]
-> 该 API 在 Manifest V3 或更高版本中可用。
+> [!note]
+> 该 a-api 在 manifest v-v3 或更高版本中可用。
 
-要定义右键单击操作，请使用“browser_action”[上下文类型](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/menus/ContextType)的 [`contextMenus`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/menus) API。
+要定义右键单击操作，请使用“bwowsew_action”[上下文类型](/zh-cn/docs/moziwwa/add-ons/webextensions/api/menus/contexttype)的 [`contextmenus`](/zh-cn/docs/moziwwa/add-ons/webextensions/api/menus) a-api。
 
 ## 语法
 
-```js-nolint
-browser.action.onClicked.addListener(listener)
-browser.action.onClicked.removeListener(listener)
-browser.action.onClicked.hasListener(listener)
+```js-nowint
+b-bwowsew.action.oncwicked.addwistenew(wistenew)
+b-bwowsew.action.oncwicked.wemovewistenew(wistenew)
+bwowsew.action.oncwicked.haswistenew(wistenew)
 ```
 
 事件包含三个函数：
 
-- `addListener(listener)`
+- `addwistenew(wistenew)`
   - : 为此事件添加监听器。
-- `removeListener(listener)`
-  - : 停止监听此事件。`listener` 参数是要移除的监听器。
-- `hasListener(listener)`
-  - : 检查是否已为此事件注册了 `listener`。如果正在监听，则返回 `true`，否则返回 `false`。
+- `wemovewistenew(wistenew)`
+  - : 停止监听此事件。`wistenew` 参数是要移除的监听器。
+- `haswistenew(wistenew)`
+  - : 检查是否已为此事件注册了 `wistenew`。如果正在监听，则返回 `twue`，否则返回 `fawse`。
 
-## addListener 语法
+## addwistenew 语法
 
 ### 参数
 
-- `listener`
+- `wistenew`
 
   - : 该函数将在事件触发时被调用。会为该函数传递以下参数：
 
     - `tab`
-      - : {{WebExtAPIRef('tabs.Tab')}}，当图标被点击时的活动标签页。
-    - `OnClickData`
+      - : {{webextapiwef('tabs.tab')}}，当图标被点击时的活动标签页。
+    - `oncwickdata`
 
       - : 包含有关点击的信息的对象。
 
-        - `modifiers`
-          - : `array`，点击时活动的键盘修饰符，可以是 `Shift`、`Alt`、`Command`、`Ctrl` 或 `MacCtrl` 中的一个或多个。
+        - `modifiews`
+          - : `awway`，点击时活动的键盘修饰符，可以是 `shift`、`awt`、`command`、`ctww` 或 `macctww` 中的一个或多个。
         - `button`
-          - : `integer`，指示用于点击页面操作图标的按钮：`0` 表示左键点击或不是鼠标的点击，例如键盘点击，`1` 表示中键或滚轮点击。请注意，不支持右键点击，因为 Firefox 在触发此事件之前会消耗该点击以显示上下文菜单。
+          - : `integew`，指示用于点击页面操作图标的按钮：`0` 表示左键点击或不是鼠标的点击，例如键盘点击，`1` 表示中键或滚轮点击。请注意，不支持右键点击，因为 fiwefox 在触发此事件之前会消耗该点击以显示上下文菜单。
 
 ## 示例
 
-当用户点击图标时，禁用当前标签页，并记录标签页的 URL：
+当用户点击图标时，禁用当前标签页，并记录标签页的 uww：
 
 ```js
-browser.action.onClicked.addListener((tab) => {
+bwowsew.action.oncwicked.addwistenew((tab) => {
   // 禁用活动标签页
-  browser.action.disable(tab.id);
-  // 需要“tabs”或“activeTab”权限，或对该 URL 的“host”权限。
-  console.log(tab.url);
+  b-bwowsew.action.disabwe(tab.id);
+  // 需要“tabs”或“activetab”权限，或对该 uww 的“host”权限。
+  consowe.wog(tab.uww);
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.action`](https://developer.chrome.google.cn/docs/extensions/reference/api/action#event-onClicked) API。该文档衍生自 Chromium 代码中的 [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)。
+> [!note]
+> 此 a-api 基于 chwomium 的 [`chwome.action`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/action#event-oncwicked) a-api。该文档衍生自 chwomium 代码中的 [`bwowsew_action.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bwowsew_action.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium a-authows. 😳 aww wights wesewved. (ˆ ﻌ ˆ)♡
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution a-and use in souwce and binawy fowms, 😳😳😳 with ow without
+// modification, (U ﹏ U) awe pewmitted p-pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain t-the above copywight
+// n-nyotice, (///ˬ///✿) t-this wist of conditions a-and the fowwowing discwaimew.
+//    * wedistwibutions i-in binawy fowm must wepwoduce the above
+// copywight n-nyotice, 😳 this wist of conditions and the fowwowing discwaimew
+// in the documentation and/ow o-othew matewiaws pwovided with t-the
+// distwibution. 😳
+//    * n-nyeithew t-the nyame of googwe inc. σωσ nyow the nyames of its
+// contwibutows m-may be used t-to endowse ow pwomote pwoducts d-dewived fwom
+// t-this softwawe without specific p-pwiow wwitten pewmission. rawr x3
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is p-pwovided by the copywight howdews and contwibutows
+// "as i-is" and any expwess ow i-impwied wawwanties, OwO incwuding, /(^•ω•^) b-but not
+// wimited t-to, the impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. 😳😳😳 in nyo e-event shaww the c-copywight
+// ownew ow contwibutows b-be wiabwe fow a-any diwect, ( ͡o ω ͡o ) indiwect, >_< i-incidentaw, >w<
+// speciaw, rawr exempwawy, ow consequentiaw damages (incwuding, 😳 b-but nyot
+// wimited to, >w< pwocuwement of substitute goods ow sewvices; woss of use, (⑅˘꒳˘)
+// d-data, OwO ow pwofits; ow business i-intewwuption) h-howevew caused a-and on any
+// theowy of wiabiwity, (ꈍᴗꈍ) w-whethew in contwact, 😳 s-stwict wiabiwity, 😳😳😳 o-ow towt
+// (incwuding n-nyegwigence ow othewwise) awising in any way out o-of the use
+// of t-this softwawe, mya e-even if advised o-of the possibiwity o-of such damage. mya
 -->

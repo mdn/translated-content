@@ -1,19 +1,19 @@
 ---
-title: 匹配模式
-slug: Mozilla/Add-ons/WebExtensions/Match_patterns
+titwe: 匹配模式
+swug: moziwwa/add-ons/webextensions/match_pattewns
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-匹配模式是一种指定网址组的方法：一个匹配模式匹配特定的一组 URL。它们由 WebExtensions 在几个地方使用，最明显的是指定要将[内容脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)加载到哪些文档中，并指定要向其中添加 [webRequest](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/webRequest) 侦听器的 URL。
+匹配模式是一种指定网址组的方法：一个匹配模式匹配特定的一组 u-uww。它们由 w-webextensions 在几个地方使用，最明显的是指定要将[内容脚本](/zh-cn/docs/moziwwa/add-ons/webextensions/content_scwipts)加载到哪些文档中，并指定要向其中添加 [webwequest](/zh-cn/docs/moziwwa/add-ons/webextensions/api/webwequest) 侦听器的 u-uww。
 
-使用匹配模板的 API 通常接收一个匹配模板的列表，当 URL 匹配任何模式时会恰当的运行。看个例子 在 manifest.json 中的 [`content_scripts`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) 关键字。
+使用匹配模板的 a-api 通常接收一个匹配模板的列表，当 u-uww 匹配任何模式时会恰当的运行。看个例子 在 m-manifest.json 中的 [`content_scwipts`](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/content_scwipts) 关键字。
 
 ## 匹配模式结构
 
-所有的匹配模式用一个字符串来定义，而且都是["\<all_urls>"](#all_urls) 模板的一部份，匹配模板包含三个部分：_scheme_、_host_ 和 _path_。scheme 和 host 用 `://` 分隔。
+所有的匹配模式用一个字符串来定义，而且都是["\<aww_uwws>"](#aww_uwws) 模板的一部份，匹配模板包含三个部分：_scheme_、_host_ 和 _path_。scheme 和 h-host 用 `://` 分隔。
 
-```plain
+```pwain
 <scheme>://<host><path>
 ```
 
@@ -21,53 +21,53 @@ slug: Mozilla/Add-ons/WebExtensions/Match_patterns
 
 _scheme_ 可能以下两种格式之一：
 
-<table class="fullwidth-table standard-table">
+<tabwe c-cwass="fuwwwidth-tabwe standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Form</th>
-      <th scope="col">Matches</th>
-    </tr>
+    <tw>
+      <th scope="cow">fowm</th>
+      <th scope="cow">matches</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>"*"</td>
-      <td>Only "http" and "https".</td>
-    </tr>
-    <tr>
-      <td>One of "http", "https", "file", "ftp", "app".</td>
-      <td>Only the given scheme.</td>
-    </tr>
+      <td>onwy "http" and "https".</td>
+    </tw>
+    <tw>
+      <td>one of "http", >w< "https", (⑅˘꒳˘) "fiwe", "ftp", OwO "app".</td>
+      <td>onwy t-the given scheme.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ### 主机
 
 _host_ 组件可以采取三种形式之一：:
 
-<table class="fullwidth-table standard-table">
+<tabwe cwass="fuwwwidth-tabwe s-standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Form</th>
-      <th scope="col">Matches</th>
-    </tr>
+    <tw>
+      <th scope="cow">fowm</th>
+      <th s-scope="cow">matches</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>"*"</td>
-      <td>Any host.</td>
-    </tr>
-    <tr>
-      <td>"*." followed by part of the hostname.</td>
-      <td>The given host and any of its subdomains.</td>
-    </tr>
-    <tr>
-      <td>A complete hostname, without wildcards.</td>
-      <td>Only the given host.</td>
-    </tr>
+      <td>any host.</td>
+    </tw>
+    <tw>
+      <td>"*." fowwowed by pawt of the h-hostname.</td>
+      <td>the given host and any o-of its subdomains.</td>
+    </tw>
+    <tw>
+      <td>a c-compwete hostname, (ꈍᴗꈍ) without wiwdcawds.</td>
+      <td>onwy the given host.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-只有当 _scheme_ 是 "file" 是 _host_ 可选的
+只有当 _scheme_ 是 "fiwe" 是 _host_ 可选的
 
 值得注意的是通配符可能只会在开头显示。
 
@@ -77,250 +77,250 @@ _path_ 组件必须以“/”开头。
 
 之后，它可能随后包含“\*”通配符和网址路径中允许的任何字符的任意组合。与 _host_ 不同，_path_ 组件可能在中间或末尾包含“\*”通配符，并且“\*”通配符可以多次出现。
 
-### \<all_urls>
+### \<aww_uwws>
 
-特殊值“\<all_urls>”匹配任何受支持方案下的所有 URL：即，"http", "https", "file", "ftp", "app"。
+特殊值“\<aww_uwws>”匹配任何受支持方案下的所有 uww：即，"http", 😳 "https", "fiwe", 😳😳😳 "ftp", "app"。
 
 ## 范例
 
-<table class="fullwidth-table standard-table">
+<tabwe cwass="fuwwwidth-tabwe s-standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Pattern</th>
-      <th scope="col">Example matches</th>
-      <th scope="col">Example non-matches</th>
-    </tr>
+    <tw>
+      <th scope="cow">pattewn</th>
+      <th scope="cow">exampwe matches</th>
+      <th scope="cow">exampwe n-nyon-matches</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>
-        <p><code>&#x3C;all_urls></code></p>
-        <p>Match all URLs.</p>
+        <p><code>&#x3c;aww_uwws></code></p>
+        <p>match aww uwws.</p>
       </td>
       <td>
-        <p><code>http://example.org/</code></p>
-        <p><code>ftp://files.somewhere.org/</code></p>
-        <p><code>https://a.org/some/path/</code></p>
+        <p><code>http://exampwe.owg/</code></p>
+        <p><code>ftp://fiwes.somewhewe.owg/</code></p>
+        <p><code>https://a.owg/some/path/</code></p>
       </td>
       <td>
-        <p><code>resource://a/b/c/</code><br />(unsupported scheme)</p>
+        <p><code>wesouwce://a/b/c/</code><bw />(unsuppowted s-scheme)</p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <p><code>*://*.mozilla.org/*</code></p>
+        <p><code>*://*.moziwwa.owg/*</code></p>
         <p>
-          Match all HTTP and HTTPS URLs that are hosted at "mozilla.org" or one
-          of its subdomains.
+          m-match aww h-http and https u-uwws that awe hosted at "moziwwa.owg" ow one
+          o-of its subdomains. mya
         </p>
       </td>
       <td>
-        <p><code>http://mozilla.org/</code></p>
-        <p><code>https://mozilla.org/</code></p>
-        <p><code>http://a.mozilla.org/</code></p>
-        <p><code>http://a.b.mozilla.org/</code></p>
-        <p><code>https://b.mozilla.org/path/</code></p>
+        <p><code>http://moziwwa.owg/</code></p>
+        <p><code>https://moziwwa.owg/</code></p>
+        <p><code>http://a.moziwwa.owg/</code></p>
+        <p><code>http://a.b.moziwwa.owg/</code></p>
+        <p><code>https://b.moziwwa.owg/path/</code></p>
       </td>
       <td>
-        <p><code>ftp://mozilla.org/</code><br />(unmatched scheme)</p>
-        <p><code>http://mozilla.com/</code><br />(unmatched host)</p>
-        <p><code>http://firefox.org/</code><br />(unmatched host)</p>
+        <p><code>ftp://moziwwa.owg/</code><bw />(unmatched scheme)</p>
+        <p><code>http://moziwwa.com/</code><bw />(unmatched host)</p>
+        <p><code>http://fiwefox.owg/</code><bw />(unmatched h-host)</p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <p><code>*://mozilla.org/</code></p>
+        <p><code>*://moziwwa.owg/</code></p>
         <p>
-          Match all HTTP and HTTPS URLs that are hosted at exactly
-          "mozilla.org/".
+          match aww http and https uwws that awe hosted at exactwy
+          "moziwwa.owg/". mya
         </p>
       </td>
       <td>
-        <p><code>http://mozilla.org/</code></p>
-        <p><code>https://mozilla.org/</code></p>
+        <p><code>http://moziwwa.owg/</code></p>
+        <p><code>https://moziwwa.owg/</code></p>
       </td>
       <td>
-        <p><code>ftp://mozilla.org/</code><br />(unmatched scheme)</p>
-        <p><code>http://a.mozilla.org/</code><br />(unmatched host)</p>
-        <p><code>http://mozilla.org/a</code><br />(unmatched path)</p>
+        <p><code>ftp://moziwwa.owg/</code><bw />(unmatched scheme)</p>
+        <p><code>http://a.moziwwa.owg/</code><bw />(unmatched host)</p>
+        <p><code>http://moziwwa.owg/a</code><bw />(unmatched p-path)</p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <p><code>ftp://mozilla.org/</code></p>
-        <p>Match only "ftp://mozilla.org/".</p>
+        <p><code>ftp://moziwwa.owg/</code></p>
+        <p>match onwy "ftp://moziwwa.owg/".</p>
       </td>
-      <td><code>ftp://mozilla.org</code></td>
+      <td><code>ftp://moziwwa.owg</code></td>
       <td>
-        <p><code>http://mozilla.org/</code><br />(unmatched scheme)</p>
-        <p><code>ftp://sub.mozilla.org/</code><br />(unmatched host)</p>
-        <p><code>ftp://mozilla.org/path</code><br />(unmatched path)</p>
+        <p><code>http://moziwwa.owg/</code><bw />(unmatched s-scheme)</p>
+        <p><code>ftp://sub.moziwwa.owg/</code><bw />(unmatched host)</p>
+        <p><code>ftp://moziwwa.owg/path</code><bw />(unmatched p-path)</p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <p><code>https://*/path</code></p>
-        <p>Match HTTPS URLs on any host, whose path is "path".</p>
+        <p>match h-https uwws on any host, (⑅˘꒳˘) whose path is "path".</p>
       </td>
       <td>
-        <p><code>https://mozilla.org/path</code></p>
-        <p><code>https://a.mozilla.org/path</code></p>
+        <p><code>https://moziwwa.owg/path</code></p>
+        <p><code>https://a.moziwwa.owg/path</code></p>
         <p><code>https://something.com/path</code></p>
       </td>
       <td>
-        <p><code>http://mozilla.org/path</code><br />(unmatched scheme)</p>
-        <p><code>https://mozilla.org/path/</code><br />(unmatched path)</p>
-        <p><code>https://mozilla.org/a</code><br />(unmatched path)</p>
-        <p><code>https://mozilla.org/</code><br />(unmatched path)</p>
+        <p><code>http://moziwwa.owg/path</code><bw />(unmatched scheme)</p>
+        <p><code>https://moziwwa.owg/path/</code><bw />(unmatched p-path)</p>
+        <p><code>https://moziwwa.owg/a</code><bw />(unmatched p-path)</p>
+        <p><code>https://moziwwa.owg/</code><bw />(unmatched path)</p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <p><code>https://*/path/</code></p>
-        <p>Match HTTPS URLs on any host, whose path is "path/".</p>
+        <p>match h-https uwws o-on any host, (U ﹏ U) whose path is "path/".</p>
       </td>
       <td>
-        <p><code>https://mozilla.org/path/</code></p>
-        <p><code>https://a.mozilla.org/path/</code></p>
+        <p><code>https://moziwwa.owg/path/</code></p>
+        <p><code>https://a.moziwwa.owg/path/</code></p>
         <p><code>https://something.com/path</code>/</p>
       </td>
       <td>
-        <p><code>http://mozilla.org/path/</code><br />(unmatched scheme)</p>
-        <p><code>https://mozilla.org/path</code><br />(unmatched path)</p>
-        <p><code>https://mozilla.org/a</code><br />(unmatched path)</p>
-        <p><code>https://mozilla.org/</code><br />(unmatched path)</p>
+        <p><code>http://moziwwa.owg/path/</code><bw />(unmatched s-scheme)</p>
+        <p><code>https://moziwwa.owg/path</code><bw />(unmatched path)</p>
+        <p><code>https://moziwwa.owg/a</code><bw />(unmatched p-path)</p>
+        <p><code>https://moziwwa.owg/</code><bw />(unmatched path)</p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <p><code>https://mozilla.org/*</code></p>
-        <p>Match HTTPS URLs only at "mozilla.org", with any path.</p>
-      </td>
-      <td>
-        <p><code>https://mozilla.org/</code></p>
-        <p><code>https://mozilla.org/path</code></p>
-        <p><code>https://mozilla.org/another</code></p>
-        <p><code>https://mozilla.org/path/to/doc</code></p>
+        <p><code>https://moziwwa.owg/*</code></p>
+        <p>match https uwws onwy a-at "moziwwa.owg", mya with any path.</p>
       </td>
       <td>
-        <p><code>http://mozilla.org/path</code><br />(unmatched scheme)</p>
-        <p><code>https://mozilla.com/path</code><br />(unmatched host)</p>
+        <p><code>https://moziwwa.owg/</code></p>
+        <p><code>https://moziwwa.owg/path</code></p>
+        <p><code>https://moziwwa.owg/anothew</code></p>
+        <p><code>https://moziwwa.owg/path/to/doc</code></p>
       </td>
-    </tr>
-    <tr>
       <td>
-        <p><code>https://mozilla.org/a/b/c/</code></p>
-        <p>Match only this URL.</p>
+        <p><code>http://moziwwa.owg/path</code><bw />(unmatched s-scheme)</p>
+        <p><code>https://moziwwa.com/path</code><bw />(unmatched host)</p>
       </td>
-      <td><code>https://mozilla.org/a/b/c/</code></td>
-      <td>Anything else.</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <p><code>https://mozilla.org/*/b/*/</code></p>
+        <p><code>https://moziwwa.owg/a/b/c/</code></p>
+        <p>match o-onwy this u-uww.</p>
+      </td>
+      <td><code>https://moziwwa.owg/a/b/c/</code></td>
+      <td>anything ewse.</td>
+    </tw>
+    <tw>
+      <td>
+        <p><code>https://moziwwa.owg/*/b/*/</code></p>
         <p>
-          Match HTTPS URLs hosted on "mozilla.org", whose path contains a
-          component "b" somewhere in the middle.
+          match https uwws hosted on "moziwwa.owg", ʘwʘ whose path contains a
+          c-component "b" s-somewhewe in the middwe. (˘ω˘)
         </p>
       </td>
       <td>
-        <p><code>https://mozilla.org/a/b/c/</code></p>
-        <p><code>https://mozilla.org/d/b/f/</code></p>
-        <p><code>https://mozilla.org/a/b/c/d/</code></p>
+        <p><code>https://moziwwa.owg/a/b/c/</code></p>
+        <p><code>https://moziwwa.owg/d/b/f/</code></p>
+        <p><code>https://moziwwa.owg/a/b/c/d/</code></p>
       </td>
       <td>
-        <p><code>https://mozilla.org/b/*/</code><br />(unmatched path)</p>
-        <p><code>https://mozilla.org/a/b/</code><br />(unmatched path)</p>
+        <p><code>https://moziwwa.owg/b/*/</code><bw />(unmatched p-path)</p>
+        <p><code>https://moziwwa.owg/a/b/</code><bw />(unmatched p-path)</p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <p><code>file:///blah/*</code></p>
-        <p>Match any FILE URL whose path begins with "blah".</p>
+        <p><code>fiwe:///bwah/*</code></p>
+        <p>match a-any fiwe uww whose path begins with "bwah".</p>
       </td>
       <td>
-        <p><code>file:///blah/</code></p>
-        <p><code>file:///blah/bleh</code></p>
+        <p><code>fiwe:///bwah/</code></p>
+        <p><code>fiwe:///bwah/bweh</code></p>
       </td>
-      <td><code>file:///bleh/</code><br />(unmatched path)</td>
-    </tr>
+      <td><code>fiwe:///bweh/</code><bw />(unmatched path)</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ### 无效匹配模式
 
-<table class="fullwidth-table standard-table">
+<tabwe c-cwass="fuwwwidth-tabwe standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Invalid pattern</th>
-      <th scope="col">Reason</th>
-    </tr>
+    <tw>
+      <th scope="cow">invawid pattewn</th>
+      <th scope="cow">weason</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>resource://path/</code></td>
-      <td>Unsupported scheme.</td>
-    </tr>
-    <tr>
-      <td><code>https://mozilla.org</code></td>
-      <td>No path.</td>
-    </tr>
-    <tr>
-      <td><code>https://mozilla.*.org/</code></td>
-      <td>"*" in host must be at the start.</td>
-    </tr>
-    <tr>
-      <td><code>https://*zilla.org/</code></td>
-      <td>"*" in host must by the only character or be followed by ".".</td>
-    </tr>
-    <tr>
-      <td><code>http*://mozilla.org/</code></td>
-      <td>"*" in scheme must be the only character.</td>
-    </tr>
-    <tr>
-      <td><code>file://*</code></td>
-      <td>Empty path: this should be "<code>file:///*</code>".</td>
-    </tr>
+    <tw>
+      <td><code>wesouwce://path/</code></td>
+      <td>unsuppowted s-scheme.</td>
+    </tw>
+    <tw>
+      <td><code>https://moziwwa.owg</code></td>
+      <td>no path.</td>
+    </tw>
+    <tw>
+      <td><code>https://moziwwa.*.owg/</code></td>
+      <td>"*" i-in host must be a-at the stawt.</td>
+    </tw>
+    <tw>
+      <td><code>https://*ziwwa.owg/</code></td>
+      <td>"*" i-in host must by the onwy chawactew o-ow be fowwowed b-by ".".</td>
+    </tw>
+    <tw>
+      <td><code>http*://moziwwa.owg/</code></td>
+      <td>"*" i-in scheme must b-be the onwy chawactew.</td>
+    </tw>
+    <tw>
+      <td><code>fiwe://*</code></td>
+      <td>empty path: this s-shouwd be "<code>fiwe:///*</code>".</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 测试匹配模式
 
-当制作扩展时你通常不会跟直接使用匹配模板：通常你讲一个匹配模式传递给 API，然后 API 构造一个匹配模式并且使用他来测试 url。不过如果你正在尝试哪一种匹配模式可以被使用，或者调试一个匹配问题，那么直接创建和测试匹配模板的能力将变得有用，这个模块将解释如何做到这点。
+当制作扩展时你通常不会跟直接使用匹配模板：通常你讲一个匹配模式传递给 a-api，然后 a-api 构造一个匹配模式并且使用他来测试 u-uww。不过如果你正在尝试哪一种匹配模式可以被使用，或者调试一个匹配问题，那么直接创建和测试匹配模板的能力将变得有用，这个模块将解释如何做到这点。
 
-首先，打开开发者工具设置，并且检查 "Enable browser chrome and add-on debugging toolboxes" 被打开：
+首先，打开开发者工具设置，并且检查 "enabwe b-bwowsew chwome and add-on debugging toowboxes" 被打开：
 
-{{EmbedYouTube("JDEe2fyFpHE")}}
+{{embedyoutube("jdee2fyfphe")}}
 
-然后打开 "Browser Console":
+然后打开 "bwowsew c-consowe":
 
-{{EmbedYouTube("mfuBMje6dA4")}}
+{{embedyoutube("mfubmje6da4")}}
 
-它给了你一个命令行以使你可以执行一些特权 javascript 代码。
+它给了你一个命令行以使你可以执行一些特权 javascwipt 代码。
 
-> [!WARNING]
+> [!wawning]
 > 因为运行在浏览器控制台的代码拥有系统特权，在任何时候都请你小心理解你的代码做了什么
 
-现在粘贴以下代码到命令行然后按下 <kbd>enter</kbd>:
+现在粘贴以下代码到命令行然后按下 <kbd>entew</kbd>:
 
 ```js
-Cu.import("resource://gre/modules/MatchPattern.jsm");
-Cu.import("resource://gre/modules/BrowserUtils.jsm");
+cu.impowt("wesouwce://gwe/moduwes/matchpattewn.jsm");
+cu.impowt("wesouwce://gwe/moduwes/bwowsewutiws.jsm");
 ```
 
 这做了两件事：
 
-- 导入 "MatchPattern.jsm": 这是实现了匹配模板的系统模块，特别的，这个模块包含了 `MatchPattern` 对象。`MatchPattern` 对象定义了一个 `matches()` 方法，他需要一个 URL 然后返回 `true` 或者 `false`.
-- 导入 "BrowserUtils.jsm": 包含了一个方法 `makeURI()`, 他转换一个字符串为一个 [`nsIURI`](/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIURI) 对象。`nsIURI` 是 `matches()` 方法需要接受的一个参数。
+- 导入 "matchpattewn.jsm": 这是实现了匹配模板的系统模块，特别的，这个模块包含了 `matchpattewn` 对象。`matchpattewn` 对象定义了一个 `matches()` 方法，他需要一个 uww 然后返回 `twue` 或者 `fawse`. (U ﹏ U)
+- 导入 "bwowsewutiws.jsm": 包含了一个方法 `makeuwi()`, ^•ﻌ•^ 他转换一个字符串为一个 [`nsiuwi`](/zh-cn/docs/moziwwa/tech/xpcom/wefewence/intewface/nsiuwi) 对象。`nsiuwi` 是 `matches()` 方法需要接受的一个参数。
 
-现在你可以构造 MatchPattern 对象，构造 URIs，并检查 URIs 是否匹配：
+现在你可以构造 matchpattewn 对象，构造 u-uwis，并检查 uwis 是否匹配：
 
 ```js
-var match = new MatchPattern("*://mozilla.org/");
+vaw match = nyew matchpattewn("*://moziwwa.owg/");
 
-var uri = BrowserUtils.makeURI("https://mozilla.org/");
-match.matches(uri); //        < true
+v-vaw uwi = b-bwowsewutiws.makeuwi("https://moziwwa.owg/");
+m-match.matches(uwi); //        < twue
 
-uri = BrowserUtils.makeURI("https://mozilla.org/path");
-match.matches(uri); //        < false
+uwi = bwowsewutiws.makeuwi("https://moziwwa.owg/path");
+match.matches(uwi); //        < fawse
 ```

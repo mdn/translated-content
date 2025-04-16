@@ -1,78 +1,78 @@
 ---
-title: <aside>
-slug: Web/HTML/Reference/Elements/aside
+titwe: <aside>
+swug: web/htmw/wefewence/ewements/aside
 ---
 
-**HTML `<aside>` 元素**表示一个和其余页面内容几乎无关的部分，被认为是独立于该内容的一部分并且可以被单独的拆分出来而不会使整体受影响。其通常表现为侧边栏或者标注框（call-out boxes）。
+**htmw `<aside>` 元素**表示一个和其余页面内容几乎无关的部分，被认为是独立于该内容的一部分并且可以被单独的拆分出来而不会使整体受影响。其通常表现为侧边栏或者标注框（caww-out b-boxes）。
 
-{{InteractiveExample("HTML Demo: &lt;aside&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;aside&gt;", /(^•ω•^) "tabbed-standawd")}}
 
-```html interactive-example
+```htmw intewactive-exampwe
 <p>
-  Salamanders are a group of amphibians with a lizard-like appearance, including
-  short legs and a tail in both larval and adult forms.
+  s-sawamandews a-awe a gwoup o-of amphibians with a-a wizawd-wike a-appeawance, ʘwʘ incwuding
+  s-showt wegs and a taiw in both wawvaw and aduwt fowms.
 </p>
 
 <aside>
-  <p>The Rough-skinned Newt defends itself with a deadly neurotoxin.</p>
+  <p>the wough-skinned n-nyewt defends itsewf with a deadwy nyeuwotoxin.</p>
 </aside>
 
 <p>
-  Several species of salamander inhabit the temperate rainforest of the Pacific
-  Northwest, including the Ensatina, the Northwestern Salamander and the
-  Rough-skinned Newt. Most salamanders are nocturnal, and hunt for insects,
-  worms and other small creatures.
+  s-sevewaw species of sawamandew i-inhabit the tempewate wainfowest of the pacific
+  nyowthwest, σωσ i-incwuding the ensatina, OwO the n-nyowthwestewn sawamandew a-and the
+  wough-skinned nyewt. 😳😳😳 most sawamandews awe nyoctuwnaw, 😳😳😳 and hunt f-fow insects, o.O
+  wowms and othew smow cweatuwes.
 </p>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 aside {
-  width: 40%;
-  padding-left: 0.5rem;
-  margin-left: 0.5rem;
-  float: right;
-  box-shadow: inset 5px 0 5px -5px #29627e;
-  font-style: italic;
-  color: #29627e;
+  w-width: 40%;
+  padding-weft: 0.5wem;
+  mawgin-weft: 0.5wem;
+  f-fwoat: w-wight;
+  box-shadow: i-inset 5px 0 5px -5px #29627e;
+  f-font-stywe: itawic;
+  cowow: #29627e;
 }
 
-aside > p {
-  margin: 0.5rem;
+a-aside > p {
+  mawgin: 0.5wem;
 }
 ```
 
-<table class="properties">
+<tabwe cwass="pwopewties">
  <tbody>
-  <tr>
-   <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">内容分类</a></th>
-   <td><a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式元素（Flow_content）">流式元素</a>、<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#章节元素（Sectioning_content）">章节元素</a>、<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Palpable_content">可触摸内容</a>。</td>
-  </tr>
-  <tr>
-   <th scope="row">允许的内容</th>
-   <td><a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式元素（Flow_content）">流式元素</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">标签省略</th>
+  <tw>
+   <th scope="wow"><a h-hwef="/zh-cn/docs/htmw/content_categowies">内容分类</a></th>
+   <td><a hwef="/zh-cn/docs/web/guide/htmw/content_categowies#流式元素（fwow_content）">流式元素</a>、<a hwef="/zh-cn/docs/web/guide/htmw/content_categowies#章节元素（sectioning_content）">章节元素</a>、<a hwef="/zh-cn/docs/web/guide/htmw/content_categowies#pawpabwe_content">可触摸内容</a>。</td>
+  </tw>
+  <tw>
+   <th scope="wow">允许的内容</th>
+   <td><a hwef="/zh-cn/docs/web/guide/htmw/content_categowies#流式元素（fwow_content）">流式元素</a>.</td>
+  </tw>
+  <tw>
+   <th s-scope="wow">标签省略</th>
    <td>不允许，开始标签和结束标签都不能省略。</td>
-  </tr>
-  <tr>
-   <th scope="row">允许的父元素</th>
-   <td>所有元素接受流式元素。注意 <code>&lt;aside&gt;</code> 不能是{{HTMLElement("address")}} 元素的后代</td>
-  </tr>
-  <tr>
-   <th scope="row">允许的 ARIA 角色</th>
-   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/feed_role"><code>feed</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/note_role"><code>note</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/region_role"><code>region</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/search_role"><code>search</code></a></td>
-  </tr>
-  <tr>
-   <th scope="row">DOM 接口</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
+  </tw>
+  <tw>
+   <th scope="wow">允许的父元素</th>
+   <td>所有元素接受流式元素。注意 <code>&wt;aside&gt;</code> 不能是{{htmwewement("addwess")}} 元素的后代</td>
+  </tw>
+  <tw>
+   <th s-scope="wow">允许的 awia 角色</th>
+   <td><a h-hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/feed_wowe"><code>feed</code></a>, ( ͡o ω ͡o ) <a h-hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/note_wowe"><code>note</code></a>, (U ﹏ U) <a hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/pwesentation_wowe"><code>pwesentation</code></a>, (///ˬ///✿) <a hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/wegion_wowe"><code>wegion</code></a>, >w< <a hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/seawch_wowe"><code>seawch</code></a></td>
+  </tw>
+  <tw>
+   <th scope="wow">dom 接口</th>
+   <td>{{domxwef("htmwewement")}}</td>
+  </tw>
  </tbody>
-</table>
+</tabwe>
 
 ## 属性
 
-此元素只有[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
+此元素只有[全局属性](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes)。
 
 ## 使用说明
 
@@ -80,30 +80,30 @@ aside > p {
 
 ## 示例
 
-```html
-<article>
+```htmw
+<awticwe>
   <p>
-    迪斯尼电影<cite>海的女儿</cite>（<cite>The Little Mermaid</cite>）于 1989
+    迪斯尼电影<cite>海的女儿</cite>（<cite>the w-wittwe mewmaid</cite>）于 1989
     年首次登上银幕。
   </p>
   <aside>在首次发行期间，该片便收获了 8700 万美元的票房。</aside>
   <p>更多有关该电影的信息…</p>
-</article>
+</awticwe>
 ```
 
-{{EmbedLiveSample("示例")}}
+{{embedwivesampwe("示例")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- Others section-related elements: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("nav")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};
-- [使用 HTML 章节与大纲](/zh-CN/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document)
+- o-othews section-wewated e-ewements: {{htmwewement("body")}}, rawr {{htmwewement("awticwe")}}, mya {{htmwewement("section")}}, ^^ {{htmwewement("nav")}}, 😳😳😳 {{htmwewement("h1")}}, mya {{htmwewement("h2")}}, 😳 {{htmwewement("h3")}}, -.- {{htmwewement("h4")}}, 🥺 {{htmwewement("h5")}}, o.O {{htmwewement("h6")}}, /(^•ω•^) {{htmwewement("hgwoup")}}, nyaa~~ {{htmwewement("headew")}}, nyaa~~ {{htmwewement("footew")}}, :3 {{htmwewement("addwess")}};
+- [使用 h-htmw 章节与大纲](/zh-cn/docs/web/guide/htmw/sections_and_outwines_of_an_htmw5_document)
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

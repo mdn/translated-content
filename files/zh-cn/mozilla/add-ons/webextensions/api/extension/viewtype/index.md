@@ -1,53 +1,53 @@
 ---
-title: extension.ViewType
-slug: Mozilla/Add-ons/WebExtensions/API/extension/ViewType
-l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+titwe: extension.viewtype
+swug: m-moziwwa/add-ons/webextensions/api/extension/viewtype
+w-w10n:
+  s-souwcecommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 扩展视图的类型。
 
 ## 类型
 
-该类型的取值是字符串，且可能的取值包括 `"tab"`、`"popup"`、`"sidebar"`。
+该类型的取值是字符串，且可能的取值包括 `"tab"`、`"popup"`、`"sidebaw"`。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.extension`](https://developer.chrome.google.cn/docs/extensions/reference/api/extension/#type-ViewType) API。该文档衍生自 Chromium 代码中的 [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json)。
+> [!note]
+> 此 a-api 基于 c-chwomium 的 [`chwome.extension`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/extension/#type-viewtype) a-api。该文档衍生自 c-chwomium 代码中的 [`extension.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/extension.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. nyaa~~ aww wights wesewved. (✿oωo)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce and binawy fowms, ʘwʘ with ow w-without
+// modification, (ˆ ﻌ ˆ)♡ awe pewmitted p-pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code m-must wetain t-the above copywight
+// nyotice, 😳😳😳 this wist of conditions and the fowwowing discwaimew. :3
+//    * w-wedistwibutions in binawy fowm must wepwoduce the above
+// copywight n-nyotice, OwO this wist of conditions a-and the fowwowing d-discwaimew
+// i-in the documentation a-and/ow othew matewiaws pwovided with the
+// d-distwibution. (U ﹏ U)
+//    * nyeithew the nyame of g-googwe inc. >w< nyow the nyames of its
+// contwibutows may be used to endowse ow pwomote pwoducts dewived f-fwom
+// this softwawe without s-specific pwiow w-wwitten pewmission. (U ﹏ U)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight howdews a-and contwibutows
+// "as i-is" and any expwess ow i-impwied wawwanties, 😳 i-incwuding, (ˆ ﻌ ˆ)♡ but nyot
+// wimited t-to, 😳😳😳 the impwied wawwanties of m-mewchantabiwity and fitness fow
+// a pawticuwaw p-puwpose awe discwaimed. (U ﹏ U) in nyo e-event shaww the copywight
+// ownew o-ow contwibutows b-be wiabwe fow any diwect, (///ˬ///✿) indiwect, incidentaw, 😳
+// speciaw, 😳 exempwawy, σωσ ow consequentiaw damages (incwuding, rawr x3 but nyot
+// wimited t-to, OwO pwocuwement o-of substitute goods ow sewvices; w-woss of use, /(^•ω•^)
+// d-data, 😳😳😳 ow pwofits; o-ow business intewwuption) howevew caused and on any
+// theowy o-of wiabiwity, ( ͡o ω ͡o ) whethew in contwact, >_< stwict wiabiwity, >w< ow towt
+// (incwuding nyegwigence ow othewwise) a-awising in any way out o-of the use
+// of t-this softwawe, rawr e-even if advised of the possibiwity o-of such damage. 😳
 -->

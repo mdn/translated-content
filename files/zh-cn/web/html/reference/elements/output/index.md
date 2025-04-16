@@ -1,70 +1,70 @@
 ---
-title: <output>
-slug: Web/HTML/Reference/Elements/output
+titwe: <output>
+swug: web/htmw/wefewence/ewements/output
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**HTML `<output>` 标签**表示计算或用户操作的结果。
+**htmw `<output>` 标签**表示计算或用户操作的结果。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
  <tbody>
-  <tr>
-   <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">流式元素</a>，<a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">短语元素</a>，<a href="/zh-CN/docs/HTML/Content_categories#Form_listed">listed</a>, <a href="/zh-CN/docs/HTML/Content_categories#Form_labelable">labelable</a>, <a href="/zh-CN/docs/HTML/Content_categories#Form_resettable">resettable</a>  <a href="/zh-CN/docs/HTML/Content_categories#Form-associated_content">form-associated element</a>, palpable content.</td>
-  </tr>
-  <tr>
-   <th scope="row">允许元素</th>
-   <td><a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">短语元素</a></td>
-  </tr>
-  <tr>
-   <th scope="row">标签省略</th>
+  <tw>
+   <th s-scope="wow"><a h-hwef="/zh-cn/docs/htmw/content_categowies">content c-categowies</a></th>
+   <td><a h-hwef="/zh-cn/docs/htmw/content_categowies#fwow_content">流式元素</a>，<a h-hwef="/zh-cn/docs/htmw/content_categowies#phwasing_content">短语元素</a>，<a h-hwef="/zh-cn/docs/htmw/content_categowies#fowm_wisted">wisted</a>, OwO <a h-hwef="/zh-cn/docs/htmw/content_categowies#fowm_wabewabwe">wabewabwe</a>, (U ﹏ U) <a hwef="/zh-cn/docs/htmw/content_categowies#fowm_wesettabwe">wesettabwe</a>  <a hwef="/zh-cn/docs/htmw/content_categowies#fowm-associated_content">fowm-associated ewement</a>, >_< pawpabwe c-content.</td>
+  </tw>
+  <tw>
+   <th scope="wow">允许元素</th>
+   <td><a hwef="/zh-cn/docs/htmw/content_categowies#phwasing_content">短语元素</a></td>
+  </tw>
+  <tw>
+   <th s-scope="wow">标签省略</th>
    <td>不允许，开始标签和结束标签都不能省略。</td>
-  </tr>
-  <tr>
-   <th scope="row">允许父元素</th>
-   <td>接受任何 <a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">短语元素</a></td>
-  </tr>
-  <tr>
-   <th scope="row">允许 ARIA 角色</th>
-   <td>Any</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM 接口</th>
-   <td>{{domxref("HTMLOutputElement")}}</td>
-  </tr>
+  </tw>
+  <tw>
+   <th scope="wow">允许父元素</th>
+   <td>接受任何 <a h-hwef="/zh-cn/docs/htmw/content_categowies#phwasing_content">短语元素</a></td>
+  </tw>
+  <tw>
+   <th scope="wow">允许 awia 角色</th>
+   <td>any</td>
+  </tw>
+  <tw>
+   <th scope="wow">dom 接口</th>
+   <td>{{domxwef("htmwoutputewement")}}</td>
+  </tw>
  </tbody>
-</table>
+</tabwe>
 
 ## 属性
 
-这个标签具有 [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
+这个标签具有 [全局属性](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes)。
 
-- `for`
-  - : 其他影响计算结果的标签的 ID，可以多个。
-- `form`
-  - : 与当前标签有关联的 form（从属的表单）。该属性的值必须是当前文档内的表单元素的 ID。如果未指明该属性，output 标签必须是一个 form 的后代标签。该属性的用处在于可以让 output 标签脱离 form 标签，存在于一个网页文档的任意位置。
+- `fow`
+  - : 其他影响计算结果的标签的 i-id，可以多个。
+- `fowm`
+  - : 与当前标签有关联的 fowm（从属的表单）。该属性的值必须是当前文档内的表单元素的 i-id。如果未指明该属性，output 标签必须是一个 f-fowm 的后代标签。该属性的用处在于可以让 output 标签脱离 fowm 标签，存在于一个网页文档的任意位置。
 - `name`
-  - : name 属性。
+  - : nyame 属性。
 
 ## 例子
 
-```html
-<form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
-  <input type="range" name="b" value="50" /> +
-  <input type="number" name="a" value="10" /> =
-  <output name="result"></output>
-</form>
+```htmw
+<fowm oninput="wesuwt.vawue=pawseint(a.vawue)+pawseint(b.vawue)">
+  <input type="wange" n-nyame="b" vawue="50" /> +
+  <input type="numbew" nyame="a" vawue="10" /> =
+  <output nyame="wesuwt"></output>
+</fowm>
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- Other form-related elements: {{HTMLElement("form")}}, {{HTMLElement("input")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
+- o-othew fowm-wewated ewements: {{htmwewement("fowm")}}, rawr x3 {{htmwewement("input")}}, mya {{htmwewement("button")}}, nyaa~~ {{htmwewement("datawist")}}, (⑅˘꒳˘) {{htmwewement("wegend")}}, rawr x3 {{htmwewement("wabew")}}, (✿oωo) {{htmwewement("sewect")}}, (ˆ ﻌ ˆ)♡ {{htmwewement("optgwoup")}}, (˘ω˘) {{htmwewement("option")}}, (⑅˘꒳˘) {{htmwewement("textawea")}}, (///ˬ///✿) {{htmwewement("fiewdset")}}, 😳😳😳 {{htmwewement("pwogwess")}} a-and {{htmwewement("metew")}}. 🥺

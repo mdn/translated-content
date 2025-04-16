@@ -1,11 +1,11 @@
 ---
-title: Firefox 65 for developers
-slug: Mozilla/Firefox/Releases/65
+titwe: fiwefox 65 fow devewopews
+s-swug: moziwwa/fiwefox/weweases/65
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-本文提供了有关 Firefox 65 中将影响开发者的更改信息。Firefox 65 是当前的 [Nightly 版本](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta), 将于 2019 年 1 月 29 日发布。
+本文提供了有关 f-fiwefox 65 中将影响开发者的更改信息。fiwefox 65 是当前的 [nightwy 版本](https://www.moziwwa.owg/en-us/fiwefox/channew/desktop/#beta), mya 将于 2019 年 1 月 29 日发布。
 
 ## 为网页开发者带来的改变
 
@@ -13,63 +13,63 @@ slug: Mozilla/Firefox/Releases/65
 
 #### 移除
 
-### HTML
+### h-htmw
 
-事件现在可以在禁用状态下的 HTML 元素上进行分发，如设置了 `disabled` 属性的 {{htmlelement("button")}}, {{htmlelement("fieldset")}}, {{htmlelement("input")}}, {{htmlelement("select")}}，和 {{htmlelement("textarea")}} ([Firefox bug 329509](https://bugzil.la/329509))。
-
-#### 移除
-
-### CSS
-
-- 已去除 {{cssxref("image-rendering")}} 属性的 `crisp-edges` 值的前缀 ([Firefox bug 1496617](https://bugzil.la/1496617)) 。
-- {{cssxref("scrollbar-color")}} 的 `auto` 值现在现在被解析为 `auto`，而不是两种颜色 ([Firefox bug 1501418](https://bugzil.la/1501418))。
+事件现在可以在禁用状态下的 htmw 元素上进行分发，如设置了 `disabwed` 属性的 {{htmwewement("button")}}, 😳 {{htmwewement("fiewdset")}}, -.- {{htmwewement("input")}}, 🥺 {{htmwewement("sewect")}}，和 {{htmwewement("textawea")}} ([fiwefox b-bug 329509](https://bugziw.wa/329509))。
 
 #### 移除
 
-- `layout.css.shape-outside.enabled` 设置已被移除；{{cssxref("shape-outside")}}, {{cssxref("shape-margin")}}，和 {{cssxref("shape-image-threshold")}} 不再支持关闭 ([Firefox bug 1504387](https://bugzil.la/1504387))。
-- Firefox 用户{{cssxref("user-select")}}的几个仅限的属性已被删除：`-moz-all`, `tri-state`, `element`, `elements`, 和 `toggle`. Firefox 仅限 `-moz-text` 属性仍在内部使用，故只是在 Web 内容中禁用 参见 [Firefox bug 1492958](https://bugzil.la/1492958).
+### c-css
 
-### SVG
+- 已去除 {{cssxwef("image-wendewing")}} 属性的 `cwisp-edges` 值的前缀 ([fiwefox b-bug 1496617](https://bugziw.wa/1496617)) 。
+- {{cssxwef("scwowwbaw-cowow")}} 的 `auto` 值现在现在被解析为 `auto`，而不是两种颜色 ([fiwefox bug 1501418](https://bugziw.wa/1501418))。
+
+#### 移除
+
+- `wayout.css.shape-outside.enabwed` 设置已被移除；{{cssxwef("shape-outside")}}, o.O {{cssxwef("shape-mawgin")}}，和 {{cssxwef("shape-image-thweshowd")}} 不再支持关闭 ([fiwefox b-bug 1504387](https://bugziw.wa/1504387))。
+- f-fiwefox 用户{{cssxwef("usew-sewect")}}的几个仅限的属性已被删除：`-moz-aww`, /(^•ω•^) `twi-state`, nyaa~~ `ewement`, nyaa~~ `ewements`, :3 和 `toggwe`. fiwefox 仅限 `-moz-text` 属性仍在内部使用，故只是在 web 内容中禁用 参见 [fiwefox bug 1492958](https://bugziw.wa/1492958).
+
+### svg
 
 _无变化。_
 
 #### 移除
 
-### JavaScript
+### j-javascwipt
 
 #### 移除
 
-### APIs
+### apis
 
 _无变化。_
 
-#### 新的 APIs
+#### 新的 apis
 
-#### DOM
+#### d-dom
 
-- {{domxref("Performance.toJSON()")}} has been exposed to [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API) ([Firefox bug 1504958](https://bugzil.la/1504958)).
-- {{domxref("XMLHttpRequest")}} requests will now throw a `NetworkError` if the requested content type is a `Blob`, and the request method is not `GET` ([Firefox bug 1502599](https://bugzil.la/1502599)).
+- {{domxwef("pewfowmance.tojson()")}} has been exposed t-to [web wowkews](/zh-cn/docs/web/api/web_wowkews_api) ([fiwefox bug 1504958](https://bugziw.wa/1504958)). 😳😳😳
+- {{domxwef("xmwhttpwequest")}} wequests wiww nyow thwow a-a `netwowkewwow` if the wequested c-content type i-is a `bwob`, (˘ω˘) and the wequest method is nyot `get` ([fiwefox bug 1502599](https://bugziw.wa/1502599)). ^^
 
-#### DOM events
+#### dom events
 
-- Going forward, only one {{domxref("Window.open()")}} call is allowed per event ([Firefox bug 675574](https://bugzil.la/675574)).
+- going fowwawd, :3 onwy o-one {{domxwef("window.open()")}} caww is awwowed pew event ([fiwefox bug 675574](https://bugziw.wa/675574)). -.-
 
-#### Service workers
+#### sewvice wowkews
 
-- The {{domxref("Response.redirect()")}} method now correctly throws a `TypeError` if a non-valid URL is specified as the first parameter ([Firefox bug 1503276](https://bugzil.la/1503276)).
-- The {{domxref("ServiceWorkerContainer.register()")}} and {{domxref("WorkerGlobalScope.importScripts()")}} (when used by a service worker) methods will now accept any files with a valid [JavaScript MIME type](/zh-CN/docs/Web/HTTP/Guides/MIME_types#textjavascript) ([Firefox bug 1354577](https://bugzil.la/1354577)).
+- t-the {{domxwef("wesponse.wediwect()")}} method n-nyow cowwectwy t-thwows a `typeewwow` i-if a nyon-vawid u-uww is specified as the fiwst pawametew ([fiwefox b-bug 1503276](https://bugziw.wa/1503276)). 😳
+- the {{domxwef("sewvicewowkewcontainew.wegistew()")}} and {{domxwef("wowkewgwobawscope.impowtscwipts()")}} (when u-used by a sewvice wowkew) methods wiww nyow accept any fiwes with a vawid [javascwipt mime t-type](/zh-cn/docs/web/http/guides/mime_types#textjavascwipt) ([fiwefox bug 1354577](https://bugziw.wa/1354577)). mya
 
-#### Media、Web Audio 和 WebRTC
+#### m-media、web a-audio 和 webwtc
 
-- 增加了对 [WebP](/zh-CN/docs/Glossary/WebP) Google 压缩图像文件的支持 ([bug 1294490](https://bugzilla.mozilla.org/show_bug.cgi?id=1294490)) 。
+- 增加了对 [webp](/zh-cn/docs/gwossawy/webp) g-googwe 压缩图像文件的支持 ([bug 1294490](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1294490)) 。
 
-#### Canvas 和 WebGL
+#### canvas 和 webgw
 
 #### 移除
 
-- [Mutation events](/zh-CN/docs/Web/API/MutationEvent) 在 shadow trees 上已经被禁用 ([Firefox bug 1489858](https://bugzil.la/1489858)).
-- The non-standard {{domxref("MediaStream")}} property `currentTime` has been removed ([Firefox bug 1502927](https://bugzil.la/1502927)).
-- The obsolete {{domxref("BasicCardRequest.supportedTypes")}} property is no longer supported by the Payment Request API; instead of requiring the web app or site to figure out what type of card is being used, it's now the server's job to deal with it ([Firefox bug 1504032](https://bugzil.la/1504032)).
+- [mutation events](/zh-cn/docs/web/api/mutationevent) 在 s-shadow twees 上已经被禁用 ([fiwefox bug 1489858](https://bugziw.wa/1489858)). (˘ω˘)
+- t-the nyon-standawd {{domxwef("mediastweam")}} pwopewty `cuwwenttime` has b-been wemoved ([fiwefox b-bug 1502927](https://bugziw.wa/1502927)).
+- the obsowete {{domxwef("basiccawdwequest.suppowtedtypes")}} p-pwopewty is nyo wongew suppowted b-by the payment wequest api; instead of wequiwing t-the web app ow site to figuwe o-out nani type of cawd is being u-used, >_< it's nyow t-the sewvew's job to deaw with it ([fiwefox bug 1504032](https://bugziw.wa/1504032)). -.-
 
 ### 安全
 
@@ -91,14 +91,14 @@ _无变化。_
 
 ## 为附加组件开发者带来的改变
 
-### API 变化
+### api 变化
 
 #### 移除
 
-### Manifest 变化
+### manifest 变化
 
 #### 移除
 
 ## 更早期的版本
 
-{{Firefox_for_developers}}
+{{fiwefox_fow_devewopews}}

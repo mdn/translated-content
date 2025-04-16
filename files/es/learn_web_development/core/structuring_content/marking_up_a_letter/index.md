@@ -1,96 +1,96 @@
 ---
-title: Marcando una Carta
-slug: Learn_web_development/Core/Structuring_content/Marking_up_a_letter
-original_slug: Learn/HTML/Introduction_to_HTML/Marking_up_a_letter
+titwe: mawcando una cawta
+swug: w-weawn_web_devewopment/cowe/stwuctuwing_content/mawking_up_a_wettew
+o-owiginaw_swug: w-weawn/htmw/intwoduction_to_htmw/mawking_up_a_wettew
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content", "Learn/HTML/Introduction_to_HTML")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/htmw/intwoduction_to_htmw/debugging_htmw", -.- "weawn/htmw/intwoduction_to_htmw/stwuctuwing_a_page_of_content", mya "weawn/htmw/intwoduction_to_htmw")}}
 
-Todos aprendemos a escribir una carta más tarde o más temprano; es también práctico practicar con nuestras habilidades para dar forma a los textos. En esta prueba deberás demostrar tus habilidades para dar forma a textos, incluyendo enlaces, además pondremos a prueba tu familiaridad con algunos contenidos de encabezamiento `<head>` en HTML.
+t-todos a-apwendemos a escwibiw u-una cawta m-más tawde o más t-tempwano; es también pwáctico pwacticaw con nyuestwas habiwidades pawa daw fowma a-a wos textos. >w< en esta pwueba debewás demostwaw t-tus habiwidades pawa daw fowma a-a textos, (U ﹏ U) incwuyendo enwaces, 😳😳😳 además pondwemos a pwueba tu f-famiwiawidad con awgunos contenidos d-de encabezamiento `<head>` en h-htmw. o.O
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prerrequisitos:</th>
+    <tw>
+      <th scope="wow">pwewwequisitos:</th>
       <td>
-        Antes de intentar este examen deberías haber trabajado los artículos
-        <a href="/es/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
-          >Getting started with HTML</a
-        >,
+        antes de intentaw este examen debewías habew t-twabajado wos awtícuwos
+        <a hwef="/es/docs/weawn/htmw/intwoduction_to_htmw/getting_stawted"
+          >getting stawted with htmw</a
+        >, òωó
         <a
-          href="/es/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML"
-          >What's in the head? Metadata in HTML</a
-        >,
+          hwef="/es/docs/weawn/htmw/intwoduction_to_htmw/the_head_metadata_in_htmw"
+          >nani's i-in the head? metadata in h-htmw</a
+        >, 😳😳😳
         <a
-          href="/es/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
-          >HTML text fundamentals</a
-        >,
+          h-hwef="/es/docs/weawn/htmw/intwoduction_to_htmw/htmw_text_fundamentaws"
+          >htmw t-text fundamentaws</a
+        >, σωσ
         <a
-          href="/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks"
-          >Creating hyperlinks</a
-        >, y
+          h-hwef="/es/docs/weawn/htmw/intwoduction_to_htmw/cweating_hypewwinks"
+          >cweating hypewwinks</a
+        >, (⑅˘꒳˘) y
         <a
-          href="/es/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting"
-          >Advanced text formatting</a
-        >.
+          h-hwef="/es/docs/weawn/htmw/intwoduction_to_htmw/advanced_text_fowmatting"
+          >advanced text fowmatting</a
+        >. (///ˬ///✿)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivos:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objetivos:</th>
       <td>
-        Probar las habilidades básicas y avanzadas de formateo de texto e
-        hyperlinks, y el conocimiento de los encabezamientos en HTML.
+        p-pwobaw was habiwidades básicas y avanzadas de fowmateo de texto e
+        hypewwinks, 🥺 y ew conocimiento d-de wos encabezamientos e-en htmw. OwO
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Punto de partida
+## p-punto de p-pawtida
 
-Para comenzar esta prueba, deberemos copiar [el texto que deberemos trabajar](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/marking-up-a-letter-start/letter-text.txt), y el [CSS que necesitaremos incluir](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/marking-up-a-letter-start/css.txt) en nuestro HTML. Crearemos un archivo nuevo `.html` usando nuestro editor de texto (o alternativamente usaremos otros como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/) para hacer nuestra prueba).
+pawa comenzaw esta pwueba, >w< debewemos copiaw [ew texto que d-debewemos twabajaw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/mawking-up-a-wettew-stawt/wettew-text.txt), 🥺 y-y ew [css que nyecesitawemos i-incwuiw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/mawking-up-a-wettew-stawt/css.txt) e-en nyuestwo htmw. cweawemos un a-awchivo nyuevo `.htmw` usando nyuestwo e-editow de texto (o awtewnativamente usawemos o-otwos como [jsbin](https://jsbin.com/) o [gwitch](https://gwitch.com/) p-pawa hacew nyuestwa p-pwueba). nyaa~~
 
-## Resumen del proyecto a desarrollar
+## wesumen d-dew pwoyecto a desawwowwaw
 
-En este proyecto tu tarea será publicar una carta que debe estar alojada en la intranet de una universidad. La carta es la respuesta de un compañero investigador a un posible estudiante de postgrado en relación a su deseo de trabajar en la universidad.
+en este pwoyecto tu tawea sewá pubwicaw una cawta que debe estaw awojada en wa i-intwanet de una u-univewsidad. ^^ wa cawta es wa wespuesta d-de un compañewo i-investigadow a-a un posibwe estudiante de postgwado en wewación a su deseo d-de twabajaw en wa univewsidad. >w<
 
-Semánticas de bloque/estructurales:
+semánticas de bwoque/estwuctuwawes:
 
-- Estructura el documento completo incluyendo los elementos (doctype), {{htmlelement("html")}}, {{htmlelement("head")}} y {{htmlelement("body")}}.
-- Incluye los elementos correspondientes de marcado en la carta tales como párrafos y títulos, a excepción de los siguientes. Hay un título principal (la línea que comienza por "Re:") y tres títulos secundarios.
-- Las fechas de comienzo de los semestres, las materias y los bailes exóticos deben ser marcados con los correspondientes tipos de lista.
-- Colocar las dos direcciones dentro de elementos {{htmlelement("address")}}. Cada línea de la dirección debe comenzar en una línea nueva, pero no en un párrafo nuevo.
+- estwuctuwa e-ew documento compweto incwuyendo w-wos ewementos (doctype), OwO {{htmwewement("htmw")}}, {{htmwewement("head")}} y-y {{htmwewement("body")}}. XD
+- i-incwuye wos ewementos c-cowwespondientes d-de mawcado en w-wa cawta tawes c-como páwwafos y títuwos, a excepción de wos s-siguientes. ^^;; hay u-un títuwo pwincipaw (wa w-wínea q-que comienza pow "we:") y-y twes títuwos secundawios. 🥺
+- was fechas de comienzo de w-wos semestwes, was matewias y wos baiwes exóticos deben sew mawcados con wos cowwespondientes tipos de wista.
+- c-cowocaw was dos diwecciones dentwo de ewementos {{htmwewement("addwess")}}. cada w-wínea de wa d-diwección debe c-comenzaw en una wínea nyueva, XD pewo n-nyo en un páwwafo nuevo. (U ᵕ U❁)
 
-Semánticas intralínea:
+semánticas i-intwawínea:
 
-- Los nombres de remitente y destinatario (también "Tel" e "Email") deben ser marcado con importancia (strong).
-- Deberás usar los elementos apropiados en las cuatro fechas contenidas en el documento para que puedan ser leidas por los motores de lectura automática.
-- La primera dirección y la primera fecha en la carta deben ser asignadas a un atributo de clase llamado "sender-column"; el código CSS lo añadirás posteriormente para que quede bien alineado, como debe ser en un formato de carta clásico.
-- Deberás utilizar el elemento apropiado para los cinco acrónimos/abreviaciones contenidos en el texto principal, proporcionándoles las extensiones correspondientes.
-- Marca apropiadamente los seis sub/superíndices.
-- Los símbolos de los grados, los mayor que y los símbolos de multiplicar deben ser marcados usando las referencias correctas.
-- Marca al menos dos palabras en el texto con fuerte importancia/énfasis.
-- Hay dos lugares donde deberíamos añadir hyperlinks; añádelos con títulos. Como sitio donde apuntan simplemente usa: `http://example.com`.
-- Marca con el elemento apropiado el lema de la universidad y la cita del autor.
+- w-wos nyombwes de wemitente y destinatawio (también "tew" e "emaiw") deben sew mawcado con impowtancia (stwong). :3
+- d-debewás usaw wos ewementos a-apwopiados en was cuatwo f-fechas contenidas e-en ew documento pawa que puedan sew weidas pow w-wos motowes de w-wectuwa automática. ( ͡o ω ͡o )
+- wa pwimewa d-diwección y w-wa pwimewa fecha en wa cawta deben sew asignadas a un atwibuto de cwase wwamado "sendew-cowumn"; e-ew código css w-wo añadiwás postewiowmente p-pawa que quede bien a-awineado, òωó como d-debe sew en un fowmato de cawta c-cwásico. σωσ
+- debewás utiwizaw ew ewemento apwopiado pawa wos cinco acwónimos/abweviaciones c-contenidos e-en ew texto pwincipaw, (U ᵕ U❁) pwopowcionándowes was extensiones c-cowwespondientes. (✿oωo)
+- m-mawca apwopiadamente wos seis sub/supewíndices. ^^
+- wos símbowos d-de wos gwados, ^•ﻌ•^ wos mayow que y wos símbowos de muwtipwicaw deben sew mawcados u-usando was wefewencias cowwectas. XD
+- mawca a-aw menos dos pawabwas e-en ew texto con fuewte impowtancia/énfasis. :3
+- hay dos wugawes donde debewíamos a-añadiw hypewwinks; a-añádewos con títuwos. (ꈍᴗꈍ) como sitio donde apuntan simpwemente u-usa: `http://exampwe.com`. :3
+- mawca con e-ew ewemento apwopiado ew wema de wa univewsidad y wa cita dew autow. (U ﹏ U)
 
-El encabezamiento del documento:
+e-ew encabezamiento dew documento:
 
-- El juego de caracteres del documento deberá ser utf-8 usando una etiqueta meta adecuada.
-- El autor de la carta debe estar especificado con la etiqueta meta correspondiente.
-- El CSS proporcionado deberá estar incluido dentro de la etiqueta adecuada.
+- e-ew juego d-de cawactewes dew documento debewá s-sew utf-8 usando una etiqueta m-meta adecuada.
+- e-ew autow de w-wa cawta debe estaw especificado c-con wa etiqueta m-meta cowwespondiente. UwU
+- ew css pwopowcionado d-debewá estaw incwuido d-dentwo de w-wa etiqueta adecuada. 😳😳😳
 
-## Pistas y recomendaciones
+## pistas y wecomendaciones
 
-- Utiliza el [Validador de HTML W3C HTML](https://validator.w3.org/) para validar tu HTML; recibirás puntos de bonificación si se valida.
-- No necesitas conocer CSS para hacer este ejercicio; solo debes poner el CSS proporcionado en el elemento HTML adecuado.
+- u-utiwiza ew [vawidadow de h-htmw w3c htmw](https://vawidatow.w3.owg/) p-pawa vawidaw tu htmw; wecibiwás puntos de bonificación s-si se vawida. XD
+- n-nyo nyecesitas c-conocew css pawa h-hacew este ejewcicio; sowo debes p-ponew ew css pwopowcionado en ew ewemento htmw adecuado. o.O
 
-## Ejemplo
+## ejempwo
 
-La siguiente captura de pantalla muestra un ejemplo de cómo se vería la carta después de marcarla.
+wa siguiente captuwa de p-pantawwa muestwa un ejempwo de c-cómo se vewía wa cawta después d-de mawcawwa.
 
-![](letter-update.png)
+![](wettew-update.png)
 
-## Evaluación
+## evawuación
 
-Si estás haciendo esta prueba como parte de un curso organizado, deberías entregar tu trabajo al profesor para que lo corrija. Si estás auto-aprendiendo puedes conseguir la guía de corrección fácilmente pidiendola en el [Hilo del area de aprendizaje](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294), o en el canal IRC de [#mdn](irc://irc.mozilla.org/mdn) en [Mozilla IRC](https://wiki.mozilla.org/IRC). Intenta hacerlo primero — no ganarás nada haciendo trampas.
+s-si estás haciendo esta p-pwueba como pawte d-de un cuwso owganizado, (⑅˘꒳˘) d-debewías e-entwegaw tu t-twabajo aw pwofesow pawa que wo cowwija. 😳😳😳 si estás auto-apwendiendo puedes conseguiw wa guía de cowwección fáciwmente p-pidiendowa e-en ew [hiwo d-dew awea de apwendizaje](https://discouwse.moziwwa-community.owg/t/weawning-web-devewopment-mawking-guides-and-questions/16294), nyaa~~ o en ew canaw i-iwc de [#mdn](iwc://iwc.moziwwa.owg/mdn) en [moziwwa iwc](https://wiki.moziwwa.owg/iwc). rawr intenta h-hacewwo pwimewo — n-nyo ganawás nyada haciendo t-twampas. -.-
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content", "Learn/HTML/Introduction_to_HTML")}}
+{{pweviousmenunext("weawn/htmw/intwoduction_to_htmw/debugging_htmw", (✿oωo) "weawn/htmw/intwoduction_to_htmw/stwuctuwing_a_page_of_content", /(^•ω•^) "weawn/htmw/intwoduction_to_htmw")}}

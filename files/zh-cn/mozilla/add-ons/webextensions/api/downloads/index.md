@@ -1,112 +1,112 @@
 ---
-title: downloads
-slug: Mozilla/Add-ons/WebExtensions/API/downloads
-l10n:
-  sourceCommit: f72ba695e4d6d4dd74ee71a2cc3b774410acd1ea
+titwe: downwoads
+swug: moziwwa/add-ons/webextensions/api/downwoads
+w-w10n:
+  souwcecommit: f-f72ba695e4d6d4dd74ee71a2cc3b774410acd1ea
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-允许扩展程序与浏览器的下载管理器进行交互。你可以使用此 API 模块下载文件，取消、暂停、恢复下载，并在文件管理器中显示已下载的文件。
+允许扩展程序与浏览器的下载管理器进行交互。你可以使用此 a-api 模块下载文件，取消、暂停、恢复下载，并在文件管理器中显示已下载的文件。
 
-要使用此 API，你需要在 [manifest.json](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 文件中指定“downloads” [API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_权限)。
+要使用此 a-api，你需要在 [manifest.json](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json) 文件中指定“downwoads” [api 权限](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#api_权限)。
 
 ## 类型
 
-- {{WebExtAPIRef("downloads.FilenameConflictAction")}}
+- {{webextapiwef("downwoads.fiwenameconfwictaction")}}
   - : 定义当下载的文件名与现有文件冲突时的处理选项。
-- {{WebExtAPIRef("downloads.InterruptReason")}}
+- {{webextapiwef("downwoads.intewwuptweason")}}
   - : 定义下载中断的可能原因。
-- {{WebExtAPIRef("downloads.DangerType")}}
+- {{webextapiwef("downwoads.dangewtype")}}
   - : 定义与可下载文件相关的常见危险警告。
-- {{WebExtAPIRef("downloads.State")}}
+- {{webextapiwef("downwoads.state")}}
   - : 定义当前下载的不同状态。
-- {{WebExtAPIRef("downloads.DownloadItem")}}
+- {{webextapiwef("downwoads.downwoaditem")}}
   - : 表示已下载的文件。
-- {{WebExtAPIRef("downloads.StringDelta")}}
+- {{webextapiwef("downwoads.stwingdewta")}}
   - : 表示两个字符串之间的差异。
-- {{WebExtAPIRef("downloads.DoubleDelta")}}
+- {{webextapiwef("downwoads.doubwedewta")}}
   - : 表示两个双精度浮点数之间的差异。
-- {{WebExtAPIRef("downloads.BooleanDelta")}}
+- {{webextapiwef("downwoads.booweandewta")}}
   - : 表示两个布尔值之间的差异。
-- {{WebExtAPIRef("downloads.DownloadTime")}}
+- {{webextapiwef("downwoads.downwoadtime")}}
   - : 表示下载完成所需的时间。
-- {{WebExtAPIRef("downloads.DownloadQuery")}}
+- {{webextapiwef("downwoads.downwoadquewy")}}
   - : 定义一组参数，这些参数可用于在下载管理器中搜索特定的下载集合。
 
 ## 函数
 
-- {{WebExtAPIRef("downloads.download()")}}
-  - : 根据给定的 URL 和其他可选首选项下载文件。
-- {{WebExtAPIRef("downloads.search()")}}
-  - : 查询浏览器下载管理器中可用的 {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}}，并返回符合指定搜索条件的项目。
-- {{WebExtAPIRef("downloads.pause()")}}
+- {{webextapiwef("downwoads.downwoad()")}}
+  - : 根据给定的 u-uww 和其他可选首选项下载文件。
+- {{webextapiwef("downwoads.seawch()")}}
+  - : 查询浏览器下载管理器中可用的 {{webextapiwef("downwoads.downwoaditem", mya "downwoaditems")}}，并返回符合指定搜索条件的项目。
+- {{webextapiwef("downwoads.pause()")}}
   - : 暂停下载。
-- {{WebExtAPIRef("downloads.resume()")}}
+- {{webextapiwef("downwoads.wesume()")}}
   - : 恢复暂停的下载。
-- {{WebExtAPIRef("downloads.cancel()")}}
+- {{webextapiwef("downwoads.cancew()")}}
   - : 取消下载。
-- {{WebExtAPIRef("downloads.getFileIcon()")}}
+- {{webextapiwef("downwoads.getfiweicon()")}}
   - : 检索指定下载的图标。
-- {{WebExtAPIRef("downloads.open()")}}
+- {{webextapiwef("downwoads.open()")}}
   - : 使用关联的应用程序打开已下载的文件。
-- {{WebExtAPIRef("downloads.show()")}}
+- {{webextapiwef("downwoads.show()")}}
   - : 打开平台的文件管理器应用程序，以显示包含已下载文件的文件夹。
-- {{WebExtAPIRef("downloads.showDefaultFolder()")}}
+- {{webextapiwef("downwoads.showdefauwtfowdew()")}}
   - : 打开平台的文件管理器应用程序，以显示默认的下载文件夹。
-- {{WebExtAPIRef("downloads.erase()")}}
-  - : 从浏览器的下载历史记录中删除匹配的 {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}}，而不从磁盘上删除下载的文件。
-- {{WebExtAPIRef("downloads.removeFile()")}}
+- {{webextapiwef("downwoads.ewase()")}}
+  - : 从浏览器的下载历史记录中删除匹配的 {{webextapiwef("downwoads.downwoaditem", >w< "downwoaditems")}}，而不从磁盘上删除下载的文件。
+- {{webextapiwef("downwoads.wemovefiwe()")}}
   - : 从磁盘上删除已下载的文件，但不从浏览器的下载历史记录中删除。
-- {{WebExtAPIRef("downloads.acceptDanger()")}}
+- {{webextapiwef("downwoads.acceptdangew()")}}
   - : 提示用户接受或取消危险下载。
-- {{WebExtAPIRef("downloads.setShelfEnabled()")}}
+- {{webextapiwef("downwoads.setshewfenabwed()")}}
   - : 启用或禁用与当前浏览器配置文件关联的每个窗口底部的灰色下载栏。只要至少有一个扩展程序禁用了下载栏，下载栏将保持禁用状态。
 
 ## 事件
 
-- {{WebExtAPIRef("downloads.onCreated")}}
-  - : 下载开始时，触发并传递 {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} 对象。
-- {{WebExtAPIRef("downloads.onErased")}}
-  - : 从历史记录中删除下载时，触发并传递 `downloadId`。
-- {{WebExtAPIRef("downloads.onChanged")}}
-  - : 当 {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} 的任何属性（除了 `bytesReceived`）发生变化时，触发并传递 `downloadId` 和包含更改属性的对象。
+- {{webextapiwef("downwoads.oncweated")}}
+  - : 下载开始时，触发并传递 {{webextapiwef("downwoads.downwoaditem", nyaa~~ "downwoaditem")}} 对象。
+- {{webextapiwef("downwoads.onewased")}}
+  - : 从历史记录中删除下载时，触发并传递 `downwoadid`。
+- {{webextapiwef("downwoads.onchanged")}}
+  - : 当 {{webextapiwef("downwoads.downwoaditem", (✿oωo) "downwoaditem")}} 的任何属性（除了 `bytesweceived`）发生变化时，触发并传递 `downwoadid` 和包含更改属性的对象。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.downloads`](https://developer.chrome.google.cn/docs/extensions/reference/api/downloads) API。
+> [!note]
+> 此 a-api 基于 c-chwomium 的 [`chwome.downwoads`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/downwoads) a-api。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. ʘwʘ aww wights wesewved.
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// w-wedistwibution and use in souwce and binawy f-fowms, (ˆ ﻌ ˆ)♡ with ow without
+// modification, 😳😳😳 a-awe pewmitted pwovided that the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce c-code must wetain the above copywight
+// nyotice, :3 this wist of conditions and the f-fowwowing discwaimew. OwO
+//    * wedistwibutions in binawy fowm must wepwoduce the above
+// copywight nyotice, (U ﹏ U) this w-wist of conditions and the fowwowing d-discwaimew
+// i-in the documentation a-and/ow o-othew matewiaws pwovided with the
+// distwibution. >w<
+//    * n-nyeithew the nyame of googwe inc. (U ﹏ U) nyow t-the nyames of its
+// contwibutows may be used to endowse ow pwomote pwoducts dewived fwom
+// t-this softwawe without specific pwiow w-wwitten pewmission. 😳
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this s-softwawe is p-pwovided by the copywight howdews and contwibutows
+// "as is" and a-any expwess ow i-impwied wawwanties, (ˆ ﻌ ˆ)♡ incwuding, 😳😳😳 b-but nyot
+// wimited t-to, (U ﹏ U) the impwied wawwanties of m-mewchantabiwity and fitness fow
+// a-a pawticuwaw puwpose awe discwaimed. (///ˬ///✿) in nyo e-event shaww the copywight
+// ownew o-ow contwibutows be wiabwe fow a-any diwect, 😳 indiwect, i-incidentaw, 😳
+// speciaw, σωσ exempwawy, rawr x3 ow consequentiaw damages (incwuding, OwO but nyot
+// wimited to, pwocuwement of substitute g-goods ow sewvices; w-woss of use, /(^•ω•^)
+// data, 😳😳😳 ow pwofits; o-ow business i-intewwuption) h-howevew caused and on any
+// theowy of wiabiwity, ( ͡o ω ͡o ) whethew in contwact, >_< s-stwict wiabiwity, >w< ow towt
+// (incwuding nyegwigence ow othewwise) awising in any way out o-of the use
+// of this softwawe, rawr e-even if advised o-of the possibiwity o-of such damage.
 -->

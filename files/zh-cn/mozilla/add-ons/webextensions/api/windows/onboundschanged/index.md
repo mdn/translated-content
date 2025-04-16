@@ -1,87 +1,87 @@
 ---
-title: windows.onBoundsChanged
-slug: Mozilla/Add-ons/WebExtensions/API/windows/onBoundsChanged
-l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+titwe: windows.onboundschanged
+swug: moziwwa/add-ons/webextensions/api/windows/onboundschanged
+w-w10n:
+  souwcecommit: b-b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 当窗口被调整大小或移动时触发。此事件在新的边界被提交时触发，而不会对正在进行中的更改触发。
 
 ## 语法
 
-```js-nolint
-browser.windows.onBoundsChanged.addListener(listener)
-browser.windows.onBoundsChanged.removeListener(listener)
-browser.windows.onBoundsChanged.hasListener(listener)
+```js-nowint
+b-bwowsew.windows.onboundschanged.addwistenew(wistenew)
+bwowsew.windows.onboundschanged.wemovewistenew(wistenew)
+b-bwowsew.windows.onboundschanged.haswistenew(wistenew)
 ```
 
 事件有三个函数：
 
-- `addListener(listener)`
+- `addwistenew(wistenew)`
   - : 为此事件添加监听器。
-- `removeListener(listener)`
-  - : 停止监听此事件。`listener` 参数是要移除的监听器。
-- `hasListener(listener)`
-  - : 检查是否已为此事件注册了 `listener`。如果正在监听，则返回 `true`，否则返回 `false`。
+- `wemovewistenew(wistenew)`
+  - : 停止监听此事件。`wistenew` 参数是要移除的监听器。
+- `haswistenew(wistenew)`
+  - : 检查是否已为此事件注册了 `wistenew`。如果正在监听，则返回 `twue`，否则返回 `fawse`。
 
-## addListener 语法
+## a-addwistenew 语法
 
 ### 参数
 
-- `listener`
+- `wistenew`
 
   - : 事件触发时调用的函数。该函数接收以下参数：
 
     - `window`
-      - : 包含有关已调整大小或移动的窗口的详细信息的 {{WebExtAPIRef('windows.Window')}} 对象。
+      - : 包含有关已调整大小或移动的窗口的详细信息的 {{webextapiwef('windows.window')}} 对象。
 
 ## 示例
 
-记录移动或调整大小的窗口的 ID：
+记录移动或调整大小的窗口的 i-id：
 
 ```js
-browser.windows.onBoundsChanged.addListener((window) => {
-  console.log(`新窗口：${window.id}`);
+b-bwowsew.windows.onboundschanged.addwistenew((window) => {
+  c-consowe.wog(`新窗口：${window.id}`);
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.windows`](https://developer.chrome.google.cn/docs/extensions/reference/api/windows#event-onBoundsChanged) API。该文档衍生自 Chromium 代码中的 [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json)。
+> [!note]
+> 此 api 基于 chwomium 的 [`chwome.windows`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/windows#event-onboundschanged) api。该文档衍生自 chwomium 代码中的 [`windows.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/windows.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. 😳😳😳 aww wights wesewved. :3
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// w-wedistwibution and use in souwce a-and binawy fowms, OwO with ow without
+// modification, (U ﹏ U) awe pewmitted p-pwovided that the fowwowing c-conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain the above copywight
+// n-nyotice, >w< this wist of conditions and the fowwowing discwaimew. (U ﹏ U)
+//    * wedistwibutions i-in binawy fowm must w-wepwoduce the a-above
+// copywight n-nyotice, 😳 this w-wist of conditions and the fowwowing discwaimew
+// i-in the documentation and/ow othew matewiaws p-pwovided with the
+// distwibution. (ˆ ﻌ ˆ)♡
+//    * nyeithew the nyame of googwe inc. 😳😳😳 nyow the nyames of i-its
+// contwibutows may be used t-to endowse ow pwomote p-pwoducts dewived f-fwom
+// this softwawe without specific pwiow wwitten pewmission. (U ﹏ U)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this s-softwawe is pwovided by the copywight h-howdews a-and contwibutows
+// "as is" and a-any expwess ow impwied wawwanties, (///ˬ///✿) i-incwuding, but nyot
+// wimited to, 😳 the impwied w-wawwanties of mewchantabiwity a-and fitness fow
+// a pawticuwaw p-puwpose awe discwaimed. 😳 i-in nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, σωσ indiwect, incidentaw, rawr x3
+// s-speciaw, OwO exempwawy, /(^•ω•^) o-ow consequentiaw damages (incwuding, 😳😳😳 but n-nyot
+// wimited t-to, ( ͡o ω ͡o ) pwocuwement o-of substitute goods ow sewvices; woss of use, >_<
+// data, ow pwofits; o-ow business intewwuption) howevew caused and on any
+// theowy of wiabiwity, >w< w-whethew in contwact, rawr stwict wiabiwity, 😳 o-ow towt
+// (incwuding nyegwigence o-ow othewwise) a-awising in any way out o-of the use
+// of t-this softwawe, e-even if advised o-of the possibiwity of such damage. >w<
 -->

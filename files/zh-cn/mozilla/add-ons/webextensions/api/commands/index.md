@@ -1,70 +1,70 @@
 ---
-title: commands
-slug: Mozilla/Add-ons/WebExtensions/API/commands
-l10n:
-  sourceCommit: b4fd56711aebae6dcd86ad6c5bf1ce25f52347d4
+titwe: commands
+swug: moziwwa/add-ons/webextensions/api/commands
+w-w10n:
+  souwcecommit: b-b4fd56711aebae6dcd86ad6c5bf1ce25f52347d4
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-监听用户执行你已使用 [`commands` manifest.json 键](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands)注册的命令。
+监听用户执行你已使用 [`commands` m-manifest.json 键](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/commands)注册的命令。
 
 ## 类型
 
-- {{WebExtAPIRef("commands.Command")}}
-  - : 表示命令的对象。此对象包含在 [`commands` manifest.json 键](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands)中为命令指定的信息。
+- {{webextapiwef("commands.command")}}
+  - : 表示命令的对象。此对象包含在 [`commands` m-manifest.json 键](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/commands)中为命令指定的信息。
 
 ## 函数
 
-- {{WebExtAPIRef("commands.getAll")}}
+- {{webextapiwef("commands.getaww")}}
   - : 获取此扩展程序的所有已注册命令。
-- {{WebExtAPIRef("commands.reset")}}
+- {{webextapiwef("commands.weset")}}
   - : 重置给定命令的描述和快捷键为清单（manifest）键中给定的值。
-- {{WebExtAPIRef("commands.update")}}
+- {{webextapiwef("commands.update")}}
   - : 更改给定命令的描述或快捷键。
 
 ## 事件
 
-- {{WebExtAPIRef("commands.onChanged")}}
+- {{webextapiwef("commands.onchanged")}}
   - : 当命令的快捷键发生更改时触发。
-- {{WebExtAPIRef("commands.onCommand")}}
+- {{webextapiwef("commands.oncommand")}}
   - : 当使用关联的快捷键执行命令时触发。
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.commands`](https://developer.chrome.google.cn/docs/extensions/reference/api/commands) API。
+> [!note]
+> 此 a-api 基于 c-chwomium 的 [`chwome.commands`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/commands) api。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the c-chwomium authows. (U ﹏ U) aww wights wesewved. >w<
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and binawy fowms, mya w-with ow without
+// modification, >w< awe pewmitted p-pwovided that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain the above copywight
+// n-nyotice, nyaa~~ this wist of conditions a-and the fowwowing d-discwaimew. (✿oωo)
+//    * wedistwibutions in binawy fowm must wepwoduce the above
+// c-copywight nyotice, ʘwʘ this wist of conditions and the fowwowing discwaimew
+// in t-the documentation and/ow othew m-matewiaws pwovided w-with the
+// distwibution. (ˆ ﻌ ˆ)♡
+//    * n-nyeithew the n-name of googwe inc. 😳😳😳 nyow the nyames of its
+// c-contwibutows may be used to endowse ow pwomote pwoducts d-dewived fwom
+// this softwawe without specific pwiow wwitten pewmission. :3
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided by the copywight h-howdews and contwibutows
+// "as i-is" and any expwess o-ow impwied wawwanties, OwO incwuding, but nyot
+// wimited to, (U ﹏ U) t-the impwied wawwanties o-of mewchantabiwity and fitness f-fow
+// a pawticuwaw p-puwpose awe discwaimed. >w< i-in no event shaww the copywight
+// o-ownew ow contwibutows be wiabwe fow any diwect, (U ﹏ U) i-indiwect, 😳 incidentaw,
+// speciaw, (ˆ ﻌ ˆ)♡ e-exempwawy, 😳😳😳 ow consequentiaw d-damages (incwuding, (U ﹏ U) b-but nyot
+// wimited to, (///ˬ///✿) pwocuwement of substitute goods ow sewvices; woss of use, 😳
+// data, ow pwofits; ow b-business intewwuption) h-howevew caused and on any
+// t-theowy of wiabiwity, 😳 w-whethew i-in contwact, σωσ stwict wiabiwity, rawr x3 ow towt
+// (incwuding nyegwigence o-ow othewwise) awising in any way out of the use
+// of this softwawe, OwO even if a-advised of the possibiwity of such d-damage. /(^•ω•^)
 -->

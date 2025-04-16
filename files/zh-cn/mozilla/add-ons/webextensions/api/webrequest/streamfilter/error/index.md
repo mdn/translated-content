@@ -1,38 +1,38 @@
 ---
-title: webRequest.StreamFilter.error
-slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/error
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: webwequest.stweamfiwtew.ewwow
+swug: moziwwa/add-ons/webextensions/api/webwequest/stweamfiwtew/ewwow
+w-w10n:
+  s-souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-在 {{WebExtAPIRef("webRequest.StreamFilter.onerror", "onerror")}} 事件触发后包含错误消息的字符串。
+在 {{webextapiwef("webwequest.stweamfiwtew.onewwow", ( ͡o ω ͡o ) "onewwow")}} 事件触发后包含错误消息的字符串。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 示例
 
-该示例添加了记录 `error` 值的 {{WebExtAPIRef("webRequest.StreamFilter.onerror", "onerror")}} 监听器。
+该示例添加了记录 `ewwow` 值的 {{webextapiwef("webwequest.stweamfiwtew.onewwow", UwU "onewwow")}} 监听器。
 
 ```js
-function listener(details) {
-  let filter = browser.webRequest.filterResponseData("12345");
+f-function wistenew(detaiws) {
+  w-wet fiwtew = bwowsew.webwequest.fiwtewwesponsedata("12345");
 
-  filter.onerror = (event) => {
-    console.log(`发生错误：${filter.error}`);
+  f-fiwtew.onewwow = (event) => {
+    c-consowe.wog(`发生错误：${fiwtew.ewwow}`);
   };
 
-  //return {}; // 不需要返回任何内容
+  //wetuwn {}; // 不需要返回任何内容
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  listener,
-  { urls: ["<all_urls>"], types: ["main_frame"] },
-  ["blocking"],
+b-bwowsew.webwequest.onbefowewequest.addwistenew(
+  w-wistenew, rawr x3
+  { uwws: ["<aww_uwws>"], rawr types: ["main_fwame"] }, σωσ
+  ["bwocking"], σωσ
 );
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

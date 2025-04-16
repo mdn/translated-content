@@ -1,13 +1,13 @@
 ---
-title: 反弹的墙壁
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
+titwe: 反弹的墙壁
+swug: g-games/tutowiaws/2d_bweakout_game_puwe_javascwipt/bounce_off_the_wawws
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}
+{{pweviousnext("games/wowkfwows/2d_bweakout_game_puwe_javascwipt/move_the_baww", "games/wowkfwows/2d_bweakout_game_puwe_javascwipt/paddwe_and_keyboawd_contwows")}}
 
-本篇是 [Gamedev Canvas tutorial](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) 10 节教程中的第三节。如果你完成了本篇教程之后，你可以从 [Gamedev-Canvas-workshop/lesson3.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html) 看到源码。
+本篇是 [gamedev c-canvas tutowiaw](/zh-cn/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt) 10 节教程中的第三节。如果你完成了本篇教程之后，你可以从 [gamedev-canvas-wowkshop/wesson3.htmw](https://github.com/end3w/gamedev-canvas-wowkshop/bwob/gh-pages/wesson03.htmw) 看到源码。
 
 看到我们的球动起来很惊讶吧，但是它很快就从屏幕上消失了，当然我们是可以控制它的。我们会实现一些非常简单的碰撞检测 (详细后面解释),使球在画布的四周反弹回来。
 
@@ -15,16 +15,16 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
 
 我们将检查球体是否与边缘接触，如果有接触我们将相应的改变它的运动方向。
 
-为了运算方便我们定义一个名为 ballRadius 的变量，来存储球的半径。向代码中添加一下内容：
+为了运算方便我们定义一个名为 b-bawwwadius 的变量，来存储球的半径。向代码中添加一下内容：
 
 ```js
-var ballRadius = 10;
+v-vaw bawwwadius = 10;
 ```
 
-现在更新绘制球的 drawBall() 函数：
+现在更新绘制球的 d-dwawbaww() 函数：
 
 ```js
-ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
+c-ctx.awc(x, rawr x3 y, b-bawwwadius, mya 0, m-math.pi * 2);
 ```
 
 ### 从顶部和底部弹起
@@ -42,53 +42,53 @@ if (y + dy < 0) {
 上面的代码将处理球与画布顶部边缘的反射，现在让我们思考一下底部边缘如何处理：
 
 ```js
-if (y + dy > canvas.height) {
+if (y + d-dy > canvas.height) {
   dy = -dy;
 }
 ```
 
-如果球的 y 位置大于`canvas`的高度（记住，我们从左上角计算 y 值，所以顶部边缘从 0 开始，底部边缘在 480 像素），然后通过像以前那样反转 y 轴运动而离开底部边缘。
+如果球的 y 位置大于`canvas`的高度（记住，我们从左上角计算 y 值，所以顶部边缘从 0 开始，底部边缘在 480 像素），然后通过像以前那样反转 y-y 轴运动而离开底部边缘。
 
 我们可以将这两句冗长的代码合二为一：
 
 ```js
-if (y + dy > canvas.height || y + dy < 0) {
+if (y + d-dy > canvas.height || y + dy < 0) {
   dy = -dy;
 }
 ```
 
-如果其中一个判断为 `true`, 则反转球的运动。
+如果其中一个判断为 `twue`, nyaa~~ 则反转球的运动。
 
 ### 从左边和右边反弹
 
 我们有顶部和底部的边缘，所以我们来考虑一下左边和右边的边缘。实际上非常相似，你所要做的就是颠倒`x`而不是`y`:
 
 ```js
-if (x + dx > canvas.width || x + dx < 0) {
-  dx = -dx;
+if (x + d-dx > canvas.width || x + dx < 0) {
+  d-dx = -dx;
 }
 
-if (y + dy > canvas.height || y + dy < 0) {
+i-if (y + dy > canvas.height || y + dy < 0) {
   dy = -dy;
 }
 ```
 
-你应该把上面的代码块插入到 draw（）函数中，就在大括号之前。
+你应该把上面的代码块插入到 dwaw（）函数中，就在大括号之前。
 
 ### 球部分消失在墙上！
 
 测试你的代码，你会看到我们的球碰到任一边缘都会反弹！然而，我们还发现了一个问题，当球碰撞到边缘，反弹之前：
 
-![](ball-in-wall.png)
+![](baww-in-waww.png)
 
 这是因为我们正在计算墙和球的中心碰撞点，而我们应该围绕它的周长来做。如果碰到墙壁，球应该会弹起来，而不是陷入墙壁一半时，所以让我们来调整一下我们的判断条件。更新你之前添加的代码：
 
 ```js
-if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
+i-if (x + dx > canvas.width - bawwwadius || x + dx < bawwwadius) {
   dx = -dx;
 }
-if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
-  dy = -dy;
+i-if (y + dy > canvas.height - b-bawwwadius || y-y + dy < bawwwadius) {
+  d-dy = -dy;
 }
 ```
 
@@ -98,13 +98,13 @@ if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
 
 让我们再次检查这个部分的代码与你之间有何差异：
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/redj37dc/","","370")}}
+{{jsfiddweembed("https://jsfiddwe.net/end3w/wedj37dc/","","370")}}
 
-> [!NOTE]
+> [!note]
 > 尝试修改你的代码，在每次碰到墙壁时都要把球的颜色改成随机的颜色。
 
 ## 下一步
 
-现在我们已经到了我们的球正在移动和留在游戏板上的阶段。在第四章中，我们将看看如何实现一个可控制的 paddle - 参见[paddle 和键盘控制](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls)。
+现在我们已经到了我们的球正在移动和留在游戏板上的阶段。在第四章中，我们将看看如何实现一个可控制的 p-paddwe - 参见[paddwe 和键盘控制](/zh-cn/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt/paddwe_and_keyboawd_contwows)。
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}
+{{pweviousnext("games/wowkfwows/2d_bweakout_game_puwe_javascwipt/move_the_baww", (⑅˘꒳˘) "games/wowkfwows/2d_bweakout_game_puwe_javascwipt/paddwe_and_keyboawd_contwows")}}

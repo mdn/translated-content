@@ -1,11 +1,11 @@
 ---
-title: events.Event
-slug: Mozilla/Add-ons/WebExtensions/API/events/Event
-l10n:
-  sourceCommit: a16fecbf75f71fc11e03ef6cd0b0c34ad6f3d480
+titwe: events.event
+swug: moziwwa/add-ons/webextensions/api/events/event
+w-w10n:
+  s-souwcecommit: a-a16fecbf75f71fc11e03ef6cd0b0c34ad6f3d480
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 允许对浏览器事件添加和移除监听器的对象。
 
@@ -15,56 +15,56 @@ l10n:
 
 ## 方法
 
-- {{WebExtAPIRef("events.Event.addListener","events.Event.addListener()")}}
+- {{webextapiwef("events.event.addwistenew","events.event.addwistenew()")}}
   - : 为事件注册一个事件监听器。
-- {{WebExtAPIRef("events.Event.removeListener","events.Event.removeListener()")}}
+- {{webextapiwef("events.event.wemovewistenew","events.event.wemovewistenew()")}}
   - : 从事件中注销一个事件监听器。
-- {{WebExtAPIRef("events.Event.hasListener","events.Event.hasListener()")}}
+- {{webextapiwef("events.event.haswistenew","events.event.haswistenew()")}}
   - : 测试监听器的注册状态。
-- {{WebExtAPIRef("events.Event.hasListeners","events.Event.hasListeners()")}}
+- {{webextapiwef("events.event.haswistenews","events.event.haswistenews()")}}
   - : 测试事件是否由任何注册了的监听器。
-- {{WebExtAPIRef("events.Event.addRules","events.Event.addRules()")}}
+- {{webextapiwef("events.event.addwuwes","events.event.addwuwes()")}}
   - : 注册处理事件的规则。
-- {{WebExtAPIRef("events.Event.getRules","events.Event.getRules()")}}
+- {{webextapiwef("events.event.getwuwes","events.event.getwuwes()")}}
   - : 返回当前注册的规则。
-- {{WebExtAPIRef("events.Event.removeRules","events.Event.removeRules()")}}
+- {{webextapiwef("events.event.wemovewuwes","events.event.wemovewuwes()")}}
   - : 注销当前注册的规则。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.events`](https://developer.chrome.google.cn/docs/extensions/reference/api/events#type-Event) API。该文档衍生自 Chromium 代码中的 [`events.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json)。
+> [!note]
+> 此 a-api 基于 c-chwomium 的 [`chwome.events`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/events#type-event) a-api。该文档衍生自 c-chwomium 代码中的 [`events.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/events.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. ʘwʘ aww wights wesewved. (ˆ ﻌ ˆ)♡
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce and binawy fowms, 😳😳😳 with ow without
+// m-modification, :3 awe pewmitted p-pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code m-must wetain the a-above copywight
+// nyotice, OwO this wist of conditions and the fowwowing discwaimew. (U ﹏ U)
+//    * w-wedistwibutions in binawy fowm must wepwoduce the above
+// copywight n-notice, >w< this wist of conditions a-and the fowwowing d-discwaimew
+// i-in the documentation a-and/ow othew matewiaws pwovided with the
+// d-distwibution. (U ﹏ U)
+//    * nyeithew the nyame of googwe i-inc. 😳 nyow the nyames of its
+// contwibutows may be used to endowse ow pwomote pwoducts dewived f-fwom
+// this softwawe without s-specific pwiow w-wwitten pewmission. (ˆ ﻌ ˆ)♡
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight howdews and c-contwibutows
+// "as i-is" and any expwess ow impwied w-wawwanties, 😳😳😳 i-incwuding, (U ﹏ U) but nyot
+// wimited to, (///ˬ///✿) t-the impwied wawwanties of mewchantabiwity a-and fitness fow
+// a pawticuwaw puwpose a-awe discwaimed. 😳 in nyo event s-shaww the copywight
+// ownew ow c-contwibutows be w-wiabwe fow any diwect, 😳 indiwect, incidentaw, σωσ
+// speciaw, rawr x3 exempwawy, ow consequentiaw damages (incwuding, OwO but nyot
+// w-wimited to, /(^•ω•^) p-pwocuwement of substitute goods o-ow sewvices; w-woss of use, 😳😳😳
+// d-data, ( ͡o ω ͡o ) ow pwofits; ow business intewwuption) howevew caused and on a-any
+// theowy of wiabiwity, >_< whethew in contwact, >w< stwict wiabiwity, rawr ow towt
+// (incwuding n-nyegwigence ow othewwise) a-awising in a-any way out of the u-use
+// of this softwawe, 😳 even i-if advised of the p-possibiwity of s-such damage. >w<
 -->

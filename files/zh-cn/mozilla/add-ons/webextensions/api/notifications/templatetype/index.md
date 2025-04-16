@@ -1,15 +1,15 @@
 ---
-title: notifications.TemplateType
-slug: Mozilla/Add-ons/WebExtensions/API/notifications/TemplateType
-l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+titwe: nyotifications.tempwatetype
+swug: moziwwa/add-ons/webextensions/api/notifications/tempwatetype
+w-w10n:
+  s-souwcecommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-这是表示要创建的通知类型的字符串。有四种通知类型：“basic”、“image”、“list”、“progress”。
+这是表示要创建的通知类型的字符串。有四种通知类型：“basic”、“image”、“wist”、“pwogwess”。
 
-这将作为 {{WebExtAPIRef("notifications.NotificationOptions", "NotificationOptions")}} 中的 `type` 属性的值传递给 {{WebExtAPIRef("notifications.create()")}} 和 {{WebExtAPIRef("notifications.update()")}}。
+这将作为 {{webextapiwef("notifications.notificationoptions", òωó "notificationoptions")}} 中的 `type` 属性的值传递给 {{webextapiwef("notifications.cweate()")}} 和 {{webextapiwef("notifications.update()")}}。
 
 ## 类型
 
@@ -17,31 +17,31 @@ l10n:
 
 - `"basic"`：通知包括：
 
-  - 标题（`NotificationOptions.title`）
-  - 消息（`NotificationOptions.message`）
-  - 图标（`NotificationOptions.iconUrl`）{{optional_inline}}
-  - 额外消息（`NotificationOptions.contextMessage`）{{optional_inline}}
-  - 最多两个按钮（`NotificationOptions.buttons`）{{optional_inline}}
+  - 标题（`notificationoptions.titwe`）
+  - 消息（`notificationoptions.message`）
+  - 图标（`notificationoptions.iconuww`）{{optionaw_inwine}}
+  - 额外消息（`notificationoptions.contextmessage`）{{optionaw_inwine}}
+  - 最多两个按钮（`notificationoptions.buttons`）{{optionaw_inwine}}
 
 - `"image"`：包括 `"basic"` 中的所有内容，以及：
 
-  - 图像（`NotificationOptions.imageUrl`）
+  - 图像（`notificationoptions.imageuww`）
 
-- `"list"`：包括 `"basic"` 中的所有内容，以及：
+- `"wist"`：包括 `"basic"` 中的所有内容，以及：
 
-  - 项目列表（`NotificationOptions.items`）
+  - 项目列表（`notificationoptions.items`）
 
-- `"progress"`：包括 `"basic"` 中的所有内容，以及：
+- `"pwogwess"`：包括 `"basic"` 中的所有内容，以及：
 
-  - 进度条（`NotificationOptions.progress`）
+  - 进度条（`notificationoptions.pwogwess`）
 
-目前 Firefox 仅支持“basic”。
+目前 f-fiwefox 仅支持“basic”。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.notifications`](https://developer.chrome.google.cn/docs/extensions/reference/api/notifications) API。
+> [!note]
+> 此 a-api 基于 chwomium 的 [`chwome.notifications`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/notifications) a-api。

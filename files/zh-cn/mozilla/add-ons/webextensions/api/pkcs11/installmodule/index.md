@@ -1,63 +1,63 @@
 ---
-title: pkcs11.installModule()
-slug: Mozilla/Add-ons/WebExtensions/API/pkcs11/installModule
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: pkcs11.instawwmoduwe()
+swug: moziwwa/add-ons/webextensions/api/pkcs11/instawwmoduwe
+w-w10n:
+  s-souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-安装指定的 PKCS #11 模块，使其可用于 Firefox。
+安装指定的 p-pkcs #11 模块，使其可用于 f-fiwefox。
 
-这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
+这是一个返回 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) 的异步函数。
 
 ## 语法
 
-```js-nolint
-let installing = browser.pkcs11.installModule(
-  name,              // 字符串
-  flags              // 整型
+```js-nowint
+w-wet instawwing = b-bwowsew.pkcs11.instawwmoduwe(
+  n-nyame,              // 字符串
+  f-fwags              // 整型
 )
 ```
 
 ### 参数
 
 - `name`
-  - : `string`，要安装的模块名称。这需要与模块的 [PKCS #11 清单](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#pkcs_11_清单)中的 `name` 属性相匹配。
-- `flags` {{optional_inline}}
-  - : `integer`，传递给模块的标志位。
+  - : `stwing`，要安装的模块名称。这需要与模块的 [pkcs #11 清单](/zh-cn/docs/moziwwa/add-ons/webextensions/native_manifests#pkcs_11_清单)中的 `name` 属性相匹配。
+- `fwags` {{optionaw_inwine}}
+  - : `integew`，传递给模块的标志位。
 
 ### 返回值
 
-当模块安装完成后，会返回一个不以任何参数兑现的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
+当模块安装完成后，会返回一个不以任何参数兑现的 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)。
 
-若无法找到模块或发生其他错误，该 Promise 将以一个错误消息拒绝。
+若无法找到模块或发生其他错误，该 pwomise 将以一个错误消息拒绝。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 示例
 
 安装一个模块并列出其插槽及其包含的令牌：
 
 ```js
-function onInstalled() {
-  return browser.pkcs11.getModuleSlots("my_module");
+function oninstawwed() {
+  wetuwn bwowsew.pkcs11.getmoduweswots("my_moduwe");
 }
 
-function onGotSlots(slots) {
-  for (const slot of slots) {
-    console.log(`插槽：${slot.name}`);
-    if (slot.token) {
-      console.log(`包含令牌：${slot.token.name}`);
-    } else {
-      console.log("为空");
+function o-ongotswots(swots) {
+  fow (const swot of swots) {
+    c-consowe.wog(`插槽：${swot.name}`);
+    if (swot.token) {
+      c-consowe.wog(`包含令牌：${swot.token.name}`);
+    } ewse {
+      consowe.wog("为空");
     }
   }
 }
 
-browser.pkcs11.installModule("my_module").then(onInstalled).then(onGotSlots);
+bwowsew.pkcs11.instawwmoduwe("my_moduwe").then(oninstawwed).then(ongotswots);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

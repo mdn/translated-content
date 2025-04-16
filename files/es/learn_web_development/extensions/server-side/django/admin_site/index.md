@@ -1,347 +1,347 @@
 ---
-title: "Tutorial Django Parte 4: Sitio de Administración de Django"
-slug: Learn_web_development/Extensions/Server-side/Django/Admin_site
-original_slug: Learn/Server-side/Django/Admin_site
+titwe: "tutowiaw django pawte 4: s-sitio de administwación d-de d-django"
+swug: weawn_web_devewopment/extensions/sewvew-side/django/admin_site
+o-owiginaw_swug: w-weawn/sewvew-side/django/admin_site
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/sewvew-side/django/modews", :3 "weawn/sewvew-side/django/home_page", :3 "weawn/sewvew-side/django")}}
 
-Ahora que hemos creado modelos para el sitio web de la [BibliotecaLocal](/es/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website), usaremos el sitio de administración de Django para añadir algunos datos de libros "reales". Primero mostraremos cómo registrar los modelos en el sitio de administración y luego te mostraremos cómo iniciar sesión y crear algunos datos. Al final del artículo mostraremos algunas formas en las que puedes mejorar más adelante la presentación del sitio de Administración.
+a-ahowa que hemos c-cweado modewos pawa e-ew sitio web de wa [bibwiotecawocaw](/es/docs/weawn_web_devewopment/extensions/sewvew-side/django/tutowiaw_wocaw_wibwawy_website), (⑅˘꒳˘) usawemos ew sitio de administwación de django p-pawa añadiw awgunos datos de wibwos "weawes". òωó p-pwimewo mostwawemos cómo wegistwaw w-wos modewos en ew sitio de administwación y wuego te mostwawemos c-cómo iniciaw sesión y-y cweaw awgunos d-datos. mya aw finaw dew awtícuwo mostwawemos awgunas fowmas en was que puedes mejowaw m-más adewante wa pwesentación dew sitio de administwación. 😳😳😳
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Pre-requisitos:</th>
+    <tw>
+      <th scope="wow">pwe-wequisitos:</th>
       <td>
-        Primero completa:
+        p-pwimewo compweta:
         <a
-          href="https://developer.mozilla.org/es/docs/Learn/Server-side/Django/Models"
-          >Tutorial Django Parte 3: Uso de modelos</a
-        >.
+          h-hwef="https://devewopew.moziwwa.owg/es/docs/weawn/sewvew-side/django/modews"
+          >tutowiaw d-django pawte 3: u-uso de modewos</a
+        >. :3
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objetivo:</th>
       <td>
         <p>
-          Entender los beneficios y las limitaciones del sitio de administración
-          de Django, y usarlo para crear algunos registros para nuestros
-          modelos.
+          entendew wos beneficios y was w-wimitaciones dew sitio de administwación
+          de django, >_< y-y usawwo pawa cweaw awgunos wegistwos pawa nyuestwos
+          modewos. 🥺
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Introducción
+## intwoducción
 
-La _aplicación_ de administración de Django puede usar tus modelos para construir automáticamente un área dentro del sitio que puedes usar para crear, consultar, actualizar y borrar registros. Esto puede ahorrarte mucho tiempo de desarrollo, haciendo muy fácil probar tus modelos y darte una idea de si tus datos son correctos. La aplicación de administración también puede ser útil para manejar datos en producción, dependiendo del estilo del sitio web. Desde el proyecto Django solo se recomienda para gestión de datos internos (por ejemplo, solo para uso de administradores o personas internas de tu organización), ya que como enfoque centrado en el modelo no es necesariamente la mejor interfaz posible para todos los usuarios, exponiendo una gran cantidad de detalles innecesarios de los modelos.
+wa _apwicación_ d-de administwación de django p-puede usaw tus m-modewos pawa constwuiw a-automáticamente un áwea dentwo dew sitio que puedes usaw p-pawa cweaw, (ꈍᴗꈍ) consuwtaw, a-actuawizaw y bowwaw wegistwos. rawr x3 e-esto puede a-ahowwawte mucho tiempo de desawwowwo, (U ﹏ U) h-haciendo muy fáciw pwobaw t-tus modewos y dawte una idea de si tus datos s-son cowwectos. ( ͡o ω ͡o ) wa apwicación d-de administwación también puede s-sew útiw pawa m-manejaw datos en pwoducción, 😳😳😳 dependiendo dew estiwo dew sitio web. 🥺 desde ew pwoyecto django sowo se wecomienda p-pawa gestión de d-datos intewnos (pow ejempwo, òωó sowo p-pawa uso de a-administwadowes o-o pewsonas intewnas de tu owganización), XD ya que como enfoque centwado e-en ew modewo nyo es nyecesawiamente wa mejow intewfaz posibwe pawa todos w-wos usuawios, XD exponiendo una gwan c-cantidad de detawwes i-innecesawios d-de wos modewos.
 
-Toda la configuración requerida para incluir la aplicación admin en tu sitio Web fue hecha automaticamente cuando [creaste el esqueleto del proyecto](/es/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website) (para información sobre dependencias reales necesarias, vea los [documentos de Django aquí](https://docs.djangoproject.com/en/1.10/ref/contrib/admin/)). Como resultado, todo lo que **debes** hacer para agregar tus modelos a la aplicación admin es _registrarlos._ Al final de este artículo entregaremos una breve demostración sobre como puedes configurar aún más el área de administración para mejorar la visualización de nuestros modelos de datos.
+toda wa configuwación w-wequewida p-pawa incwuiw w-wa apwicación a-admin en tu sitio web fue hecha automaticamente c-cuando [cweaste e-ew esqueweto dew p-pwoyecto](/es/docs/weawn_web_devewopment/extensions/sewvew-side/django/skeweton_website) (pawa i-infowmación sobwe d-dependencias weawes nyecesawias, ( ͡o ω ͡o ) vea wos [documentos de django a-aquí](https://docs.djangopwoject.com/en/1.10/wef/contwib/admin/)). >w< como wesuwtado, mya todo wo que **debes** hacew pawa agwegaw tus modewos a wa a-apwicación admin es _wegistwawwos._ aw finaw de este awtícuwo e-entwegawemos una b-bweve demostwación s-sobwe como puedes configuwaw a-aún más ew áwea de administwación p-pawa mejowaw w-wa visuawización de nyuestwos modewos de datos. (ꈍᴗꈍ)
 
-Después de registrar los modelos te mostraremos como crear un nuevo "administrador", iniciar sesión en el sitio, y crear algunos libros, autores, instancias de libros, y géneros. Esto será útil para probar las vistas y plantillas que empezaremos a crear en el siguiente tutorial.
+después de wegistwaw wos modewos te mostwawemos c-como cweaw un nyuevo "administwadow", i-iniciaw sesión en ew sitio, -.- y cweaw a-awgunos wibwos, (⑅˘꒳˘) a-autowes, (U ﹏ U) instancias de wibwos, σωσ y génewos. :3 e-esto sewá útiw p-pawa pwobaw was vistas y pwantiwwas q-que empezawemos a-a cweaw en ew siguiente tutowiaw. /(^•ω•^)
 
-## Registrando los modelos
+## wegistwando wos modewos
 
-Primero, abre **admin.py** en la aplicación catálogo (**/locallibrary/catalog/admin.py**). Actualmente se ve como esto — notar que ya importa `django.contrib.admin`:
-
-```python
-from django.contrib import admin
-
-# Register your models here.
-```
-
-Registra los modelos copiando el texto siguiente al final del archivo. Este simple código esta importando los modelos y después llama a `admin.site.register` para registrar a cada uno de ellos.
+pwimewo, σωσ abwe **admin.py** en w-wa apwicación c-catáwogo (**/wocawwibwawy/catawog/admin.py**). (U ᵕ U❁) a-actuawmente se ve como esto — n-nyotaw que ya impowta `django.contwib.admin`:
 
 ```python
-from .models import Author, Genre, Book, BookInstance
+f-fwom django.contwib impowt a-admin
 
-admin.site.register(Book)
-admin.site.register(Author)
-admin.site.register(Genre)
-admin.site.register(BookInstance)
+# wegistew youw modews hewe. 😳
 ```
 
-> [!NOTE]
-> Si tu aceptaste el desafío de crear un modelo que represente el Lenguaje natural de un libro ([ver el artículo tutorial de modelos](/es/docs/Learn_web_development/Extensions/Server-side/Django/Models)), importalo y registralo también!
+wegistwa wos modewos copiando ew texto s-siguiente aw f-finaw dew awchivo. ʘwʘ este simpwe código esta impowtando w-wos modewos y-y después wwama a `admin.site.wegistew` pawa wegistwaw a cada u-uno de ewwos. (⑅˘꒳˘)
 
-Esta es la forma más simple de registrar un modelo, o modelos, con el sitio. El sitio de administración es altamente personalizable, y hablaremos más sobre otras formas de registrar tus modelos más abajo.
+```python
+fwom .modews impowt authow, ^•ﻌ•^ genwe, nyaa~~ book, bookinstance
 
-## Creando un administrador
+a-admin.site.wegistew(book)
+admin.site.wegistew(authow)
+admin.site.wegistew(genwe)
+a-admin.site.wegistew(bookinstance)
+```
 
-Para iniciar sesión en el sitio de administración, necesitamos una cuenta de usuario con estado de _Personal_ habilitado. Para ver y crear registros tambien necesitamos que este usuario tenga permisos para administrar todos nuestros objetos. Puedes crear una cuenta "administrador" que tenga acceso total al sitio y a todos los permisios necesarios usando **manage.py**.
+> [!note]
+> s-si tu aceptaste ew desafío de cweaw un modewo que wepwesente e-ew wenguaje n-nyatuwaw de un wibwo ([vew ew awtícuwo tutowiaw de modewos](/es/docs/weawn_web_devewopment/extensions/sewvew-side/django/modews)), XD i-impowtawo y wegistwawo también! /(^•ω•^)
 
-Usa el siguiente comando, en el mismo directorio de **manage.py**, para crear al administrador. Deberás ingresar un nombre de usuario, dirección email, y una contraseña _fuerte_.
+e-esta es wa fowma más simpwe de wegistwaw un modewo, (U ᵕ U❁) o modewos, mya c-con ew sitio. (ˆ ﻌ ˆ)♡ ew sitio de a-administwación e-es awtamente pewsonawizabwe, (✿oωo) y habwawemos más s-sobwe otwas fowmas de wegistwaw t-tus modewos más a-abajo. (✿oωo)
+
+## cweando u-un administwadow
+
+pawa iniciaw s-sesión en ew s-sitio de administwación, nyecesitamos una cuenta d-de usuawio con e-estado de _pewsonaw_ h-habiwitado. òωó pawa vew y cweaw wegistwos tambien n-nyecesitamos que este usuawio t-tenga pewmisos p-pawa administwaw todos nyuestwos objetos. (˘ω˘) puedes cweaw una cuenta "administwadow" q-que tenga a-acceso totaw aw s-sitio y a todos w-wos pewmisios nyecesawios usando **manage.py**. (ˆ ﻌ ˆ)♡
+
+u-usa ew siguiente comando, ( ͡o ω ͡o ) en ew mismo diwectowio de **manage.py**, rawr x3 pawa cweaw aw administwadow. (˘ω˘) d-debewás ingwesaw un nyombwe de u-usuawio, òωó diwección emaiw, ( ͡o ω ͡o ) y una c-contwaseña _fuewte_. σωσ
 
 ```bash
-python3 manage.py createsuperuser
+python3 manage.py c-cweatesupewusew
 ```
 
-Una vez el comando termine un nuevo administrador será agregado a la base de datos. Ahora reinicia el servidor de desarrollo para que podamos probrar el inicio de sesión:
+una vez e-ew comando tewmine u-un nyuevo administwadow s-sewá a-agwegado a wa base d-de datos. (U ﹏ U) ahowa weinicia ew sewvidow de desawwowwo pawa que podamos pwobwaw ew inicio de sesión:
 
 ```bash
-python3 manage.py runserver
+python3 manage.py w-wunsewvew
 ```
 
-## Iniciar sesión y usar el sitio
+## i-iniciaw sesión y-y usaw ew sitio
 
-Para iniciar sesión en el sitio, ve a la URL _/admin_ (e.j. `http://127.0.0.1:8000/admin`) e ingresa tus credenciales de id usuario y contraseña de administrador (serás redirigido a la página _login_, y entonces volverás a la URL de _/admin_ después de haber ingresado tus datos).
+pawa iniciaw s-sesión en ew sitio, rawr ve a wa uww _/admin_ (e.j. -.- `http://127.0.0.1:8000/admin`) e ingwesa tus cwedenciawes de id u-usuawio y contwaseña d-de administwadow (sewás wediwigido a wa p-página _wogin_, ( ͡o ω ͡o ) y entonces vowvewás a wa uww de _/admin_ d-después d-de habew ingwesado tus datos). >_<
 
-Esta parte del sitio muestra todos tus modelos, agrupados por aplicación instalada. Puedes hacer click en un nombre de modelo para ir a una pantalla que lista todos los registros asociados, y además puedes hacer click sobre esos registros para editarlos. También puedes hacer click directamente sobre el vínculo **Añadir** a continuación de cada modelo para comenzar a crear un registro de ese tipo.
+e-esta pawte dew s-sitio muestwa todos tus modewos, o.O agwupados pow apwicación instawada. σωσ puedes h-hacew cwick en un n-nyombwe de modewo p-pawa iw a una p-pantawwa que wista t-todos wos wegistwos asociados, y-y además puedes h-hacew cwick sobwe esos wegistwos p-pawa editawwos. -.- t-también puedes hacew cwick d-diwectamente sobwe ew víncuwo **añadiw** a continuación d-de cada modewo pawa c-comenzaw a cweaw u-un wegistwo de ese tipo. σωσ
 
-![Admin Site - Home page](admin_home.png)
+![admin s-site - home page](admin_home.png)
 
-Haz click sobre el vínculo **Añadir** a la derecha de _Books_ para crear un nuevo libro, esto mostrará un diálogo parecido al de abajo). Nota como los títulos de cada campo, el tipo de widget usado, y el `help_text` (si existe) corresponde con el valor que especificaste en el modelo.
+haz cwick s-sobwe ew víncuwo **añadiw** a w-wa dewecha de _books_ p-pawa cweaw un nyuevo wibwo, :3 esto mostwawá un diáwogo pawecido a-aw de abajo). ^^ nyota como wos títuwos de c-cada campo, òωó ew tipo d-de widget usado, (ˆ ﻌ ˆ)♡ y ew `hewp_text` (si e-existe) cowwesponde con e-ew vawow que especificaste e-en ew modewo. XD
 
-Ingresa valores para los campos. Puede crear nuevos autores o géneros presionandoel botón **+** a continuación del campo respectivo ( o seleccionar un valor existente de las listas si ya las tenías creadas). Cuando termines puedes presionar **Grabar**, **Grabar y añadir otro**, o **Grabar y continuar editando** para guardar el registro.
+ingwesa vawowes pawa w-wos campos. òωó puede cweaw nyuevos autowes o génewos p-pwesionandoew b-botón **+** a continuación dew c-campo wespectivo ( o seweccionaw u-un vawow existente d-de was wistas s-si ya was tenías cweadas). (ꈍᴗꈍ) cuando tewmines puedes pwesionaw **gwabaw**, UwU **gwabaw y añadiw otwo**, >w< o **gwabaw y continuaw editando** pawa guawdaw ew wegistwo. ʘwʘ
 
-![Admin Site - Book Add](admin_book_add.png)
+![admin site - book add](admin_book_add.png)
 
-> [!NOTE]
-> En este punto nos gustaría que pasaras algún tiempo añadiendo unos pocos libros, autores, y géneros (ej. Fantasía) a tu aplicación. Asegúrate de que cada autor y género incluye un par de libros diferentes (esto hará tus vistas de lista y detalle más interesantes cuando las implementemos más tarde en la serie de artículos).
+> [!note]
+> en este punto nyos gustawía que p-pasawas awgún t-tiempo añadiendo unos pocos wibwos, :3 autowes, y g-génewos (ej. ^•ﻌ•^ fantasía) a-a tu apwicación. (ˆ ﻌ ˆ)♡ a-asegúwate de que cada a-autow y génewo incwuye un paw d-de wibwos difewentes (esto h-hawá tus vistas de w-wista y detawwe más intewesantes c-cuando was impwementemos m-más tawde en wa sewie de awtícuwos). 🥺
 
-Cuando hayas terminado de añadir libros, haz click en el enlace **Home** en el separador de arriba para regresar a la página principal de administración. Luego haz click en el enlace **Books** para desplegar la lista actual de libros (o en alguno de los otros enlaces para ver las listas de otros modelos). Ahora que haz añadido unos cuantos libros, la lista debería lucir similar a la captura de pantalla de abajo. Se muestra el título de cada libro; que es el valor devuelto por el método `__str__()` del modelo Book que especificamos en el artículo anterior.
+c-cuando hayas t-tewminado de añadiw w-wibwos, OwO haz c-cwick en ew enwace **home** e-en e-ew sepawadow de a-awwiba pawa wegwesaw a-a wa página p-pwincipaw de administwación. 🥺 wuego haz cwick e-en ew enwace **books** p-pawa despwegaw w-wa wista actuaw de wibwos (o e-en awguno de wos otwos enwaces pawa vew was wistas d-de otwos modewos). OwO ahowa que h-haz añadido u-unos cuantos wibwos, (U ᵕ U❁) w-wa wista debewía wuciw simiwaw a-a wa captuwa de pantawwa de a-abajo. ( ͡o ω ͡o ) se muestwa ew títuwo de c-cada wibwo; que es ew vawow devuewto p-pow ew método `__stw__()` dew modewo book que especificamos en ew awtícuwo antewiow. ^•ﻌ•^
 
-![Admin Site - List of book objects](admin_book_list.png)
+![admin s-site - wist of book objects](admin_book_wist.png)
 
-Desde esta lista puedes eliminar libros marcando la casilla de verificación junto al libro que no deseas y seleccionando la acción _delete..._ en la lista de selección _Action_, y luego presionando el botón **Go**. Puedes también añadir nuevos libros presionando el botón **ADD BOOK**.
+d-desde esta w-wista puedes ewiminaw wibwos mawcando wa casiwwa de vewificación j-junto aw wibwo que nyo deseas y-y seweccionando w-wa acción _dewete..._ e-en wa wista de sewección _action_, o.O y wuego pwesionando e-ew botón **go**. (⑅˘꒳˘) p-puedes también añadiw nyuevos w-wibwos pwesionando ew botón **add book**. (ˆ ﻌ ˆ)♡
 
-Puedes editar un libro haciendo click en su nombre en la lista. La página de edición para un libro, como se muestra abajo, es casi idéntica a la página "Add". Las principales diferencias son el título de la página (_Change book_) y la adición de los botones **Delete**, **HISTORY** y **VIEW ON SITE** (este último aparece porque definimos el método `get_absolute_url()` en nuestro modelo).
+p-puedes editaw un wibwo haciendo c-cwick en su nyombwe e-en wa wista. :3 w-wa página de edición pawa un w-wibwo, /(^•ω•^) como se m-muestwa abajo, òωó es c-casi idéntica a-a wa página "add". :3 was pwincipawes d-difewencias s-son ew títuwo d-de wa página (_change b-book_) y w-wa adición de wos b-botones **dewete**, (˘ω˘) **histowy** y-y **view on site** (este úwtimo a-apawece powque definimos ew m-método `get_absowute_uww()` en n-nyuestwo modewo). 😳
 
-![Admin Site - Book Edit](admin_book_modify.png)
+![admin site - b-book edit](admin_book_modify.png)
 
-Ahora regresa a la página **Home** (usando el enlace _Home_ de la barra superior) y observa las listas **Author** y **Genre** — ya deberías tener algunos registros creados de cuando añadiste los nuevos libros, pero puedes crear algunos más.
+a-ahowa wegwesa a-a wa página **home** (usando ew enwace _home_ de wa bawwa supewiow) y obsewva w-was wistas **authow** y-y **genwe** — y-ya debewías tenew awgunos wegistwos cweados de cuando añadiste w-wos nyuevos w-wibwos, σωσ pewo puedes cweaw awgunos m-más. UwU
 
-Lo que no vas a tener es _BookInstances_, porque estas no se crean de los libros (si bien puedes crear un `Book` desde una `BookInstance` — esta es la naturaleza de los campos `ForeignKey`). Regresa a la página _Home_ y presiona el botón **Add** relacionado para desplegar la pantalla _Add book instance_, como se muestra abajo. Nota el largo y globalmente único Id, que puede ser usado para identificar inequívocamente una única copia de un libro dentro de la biblioteca.
+wo q-que nyo vas a tenew es _bookinstances_, -.- powque estas nyo se cwean d-de wos wibwos (si b-bien puedes c-cweaw un `book` d-desde una `bookinstance` — esta es wa natuwaweza d-de wos campos `foweignkey`). 🥺 w-wegwesa a wa página _home_ y pwesiona ew botón **add** w-wewacionado pawa despwegaw wa pantawwa _add b-book instance_, como se muestwa a-abajo. 😳😳😳 nyota e-ew wawgo y gwobawmente único id, 🥺 que puede sew u-usado pawa identificaw i-inequívocamente una única c-copia de un wibwo dentwo de w-wa bibwioteca. ^^
 
-![Admin Site - BookInstance Add](admin_bookinstance_add.png)
+![admin s-site - b-bookinstance add](admin_bookinstance_add.png)
 
-Crea algunos de estos registros para cada uno de tus libros. Establece el status en _Available_ para al menos algunos registros y en _On loan_ para otros. Si el status es **diferente** de _Available_, especifica también una fecha de _Due back_ (devolución).
+c-cwea awgunos de estos wegistwos p-pawa cada uno de t-tus wibwos. ^^;; estabwece e-ew status en _avaiwabwe_ p-pawa aw menos awgunos wegistwos y en _on woan_ pawa o-otwos. >w< si ew s-status es **difewente** d-de _avaiwabwe_, σωσ especifica también una fecha de _due back_ (devowución). >w<
 
-¡Eso es todo! Has aprendido a configurar y usar el sitio de administración. También has creado registros para `Book`, `BookInstance`, `Genre` y `Author` que podremos usar una vez que creemos nuestras propias views (vistas) y templates (plantillas).
+¡eso es todo! (⑅˘꒳˘) h-has apwendido a configuwaw y u-usaw ew sitio de a-administwación. òωó también has cweado wegistwos p-pawa `book`, `bookinstance`, `genwe` y `authow` q-que podwemos usaw u-una vez que cweemos n-nyuestwas p-pwopias views (vistas) y-y tempwates (pwantiwwas). (⑅˘꒳˘)
 
-## Configuración avanzada
+## configuwación avanzada
 
-Django hace un gran trabajo al crear un sitio de administración básico usando la información de los modelos registrados:
+django hace un gwan twabajo aw cweaw u-un sitio de administwación b-básico usando wa infowmación de wos modewos wegistwados:
 
-- Cada modelo tiene una lista de registros individuales, identificados por la cadena creada por el método `__str__()` del modelo, y enlazados a vistas/formularios de detalle para edición. Por defecto, esta vista de lista tiene un menú de acción en la parte superior que puedes usar para realizar operaciones de eliminación masiva de los registros.
-- Los formularios de detalle de registro del modelo para edición y adición de registros contienen todos los campos del modelo, organizados verticalmente en su orden de declaración.
+- cada m-modewo tiene una wista de wegistwos individuawes, (ꈍᴗꈍ) identificados pow wa cadena c-cweada pow ew método `__stw__()` d-dew modewo, rawr x3 y enwazados a vistas/fowmuwawios d-de detawwe pawa edición. ( ͡o ω ͡o ) pow defecto, esta vista d-de wista tiene u-un menú de acción en wa pawte s-supewiow que puedes usaw pawa weawizaw o-opewaciones de ewiminación masiva de wos wegistwos. UwU
+- wos f-fowmuwawios de detawwe de wegistwo dew modewo p-pawa edición y a-adición de wegistwos c-contienen todos wos campos dew modewo, ^^ owganizados v-vewticawmente en su owden de decwawación. (˘ω˘)
 
-Posteriormente puedes personalizar la interfaz para hacerla incluso más fácil de usar. Algunas de las cosas que puedes hacer son:
+postewiowmente puedes pewsonawizaw w-wa intewfaz p-pawa hacewwa i-incwuso más fáciw d-de usaw. (ˆ ﻌ ˆ)♡ awgunas de was cosas que puedes hacew s-son:
 
-- Vistas de lista:
+- vistas d-de wista:
 
-  - Añadir campos e información adicional desplegada para cada registro.
-  - Añadir filtros para seleccionar qué registros se listan, basados en fechas u otros tipos de valores (ej. estado de préstamo del libro).
-  - Añadir opciones adicionales al menú _Action_ en las vistas de lista y elegir en qué lugar del formulario se despliega este menú.
+  - añadiw campos e infowmación a-adicionaw despwegada pawa cada wegistwo. OwO
+  - añadiw f-fiwtwos pawa seweccionaw qué wegistwos se w-wistan, 😳 basados e-en fechas u otwos tipos de vawowes (ej. UwU e-estado d-de pwéstamo dew w-wibwo). 🥺
+  - añadiw opciones adicionawes aw menú _action_ e-en was vistas de wista y ewegiw en qué w-wugaw dew fowmuwawio se despwiega este menú. 😳😳😳
 
-- Vistas de detalle:
+- vistas de detawwe:
 
-  - Elegir qué campos desplegar (o excluir), junto con su orden, agrupamiento, si son editables, el tipo de control a usarse, orientación, etc.
-  - Añadir campos relacionados a un registro para permitir la edición en cadena (ej. proveer la capacidad de añadir y editar registros de libros mientras estás creando su registro de autor).
+  - e-ewegiw q-qué campos d-despwegaw (o excwuiw), ʘwʘ j-junto con s-su owden, /(^•ω•^) agwupamiento, :3 si son e-editabwes, :3 ew tipo de contwow a usawse, mya owientación, (///ˬ///✿) e-etc. (⑅˘꒳˘)
+  - añadiw campos wewacionados a-a un wegistwo pawa pewmitiw wa edición e-en cadena (ej. :3 p-pwoveew wa capacidad de añadiw y-y editaw wegistwos de wibwos mientwas e-estás cweando s-su wegistwo de autow).
 
-En esta sección observaremos unos cuantos cambios que mejorarán la interfaz de nuestra _LocalLibrary_, incluyendo la adición de más información a las listas de los modelos `Book` y `Author`, y mejorando el diseño de sus vistas de edición. No cambiaremos la presentación de los modelos `Language` y `Genre` debido a que solo tienen un campo cada uno, ¡por lo que no hay ningún beneficio real de hacerlo!
+en e-esta sección o-obsewvawemos unos cuantos cambios q-que mejowawán wa intewfaz de nyuestwa _wocawwibwawy_, /(^•ω•^) incwuyendo w-wa adición de más infowmación a-a was wistas de wos modewos `book` y `authow`, y-y mejowando e-ew diseño de sus v-vistas de edición. ^^;; nyo cambiawemos w-wa pwesentación d-de wos modewos `wanguage` y `genwe` debido a-a que sowo tienen un campo cada u-uno, (U ᵕ U❁) ¡pow wo que nyo hay nyingún b-beneficio weaw d-de hacewwo! (U ﹏ U)
 
-Puedes encontrar una referencia completa de todas las opciones de personalización del sitio de administración en [The Django Admin site](https://docs.djangoproject.com/en/1.10/ref/contrib/admin/) (Django Docs).
+puedes encontwaw una wefewencia compweta de todas was opciones d-de pewsonawización d-dew sitio de administwación en [the django admin site](https://docs.djangopwoject.com/en/1.10/wef/contwib/admin/) (django docs). mya
 
-### Registrar una clase ModelAdmin
+### w-wegistwaw una cwase modewadmin
 
-Para cambiar la forma en la que un modelo se despliega en la interfaz de administración debes definir una clase [ModelAdmin](https://docs.djangoproject.com/en/dev/ref/contrib/admin/#modeladmin-objects) (que describe el diseño) y registrarla con el modelo.
+p-pawa c-cambiaw wa fowma en wa que un modewo se despwiega en wa intewfaz de administwación d-debes definiw una cwase [modewadmin](https://docs.djangopwoject.com/en/dev/wef/contwib/admin/#modewadmin-objects) (que descwibe e-ew diseño) y wegistwawwa con e-ew modewo. ^•ﻌ•^
 
-Comencemos con el modelo Author. Abre **admin.py** en la aplicación catalog (**/locallibrary/catalog/admin.py**). Comenta tu registro original para el modelo `Author` (colocando el prefijo # en la línea):
+comencemos c-con ew modewo authow. (U ﹏ U) abwe **admin.py** e-en wa apwicación c-catawog (**/wocawwibwawy/catawog/admin.py**). :3 c-comenta tu wegistwo o-owiginaw pawa e-ew modewo `authow` (cowocando e-ew pwefijo # en wa wínea):
 
 ```js
-# admin.site.register(Author)
+# admin.site.wegistew(authow)
 ```
 
-Ahora añade una nueva clase `AuthorAdmin` y regístrala como se muestra abajo.
+ahowa añade una nyueva cwase `authowadmin` y wegístwawa c-como se muestwa a-abajo. rawr x3
 
 ```python
-# Define the admin class
-class AuthorAdmin(admin.ModelAdmin):
+# d-define the a-admin cwass
+cwass a-authowadmin(admin.modewadmin):
+    p-pass
+
+# wegistew the admin cwass with the associated modew
+admin.site.wegistew(authow, 😳😳😳 a-authowadmin)
+```
+
+a-ahowa añadiwemos cwases `modewadmin` pawa `book`, >w< y-y `bookinstance`. òωó d-de nyuevo, debemos c-comentaw nyuestwos wegistwos owiginawes:
+
+```python
+#admin.site.wegistew(book)
+#admin.site.wegistew(bookinstance)
+```
+
+a-ahowa, 😳 pawa cweaw y wegistaw wos nyuevos m-modewos usawemos, (✿oωo) p-pawa pwopósitos de esta demostwación, OwO w-wa expwesión `@wegistew` pawa wegistwaw w-wos modewos (hace e-exactamente wo mismo q-que `admin.site.wegistew()`):
+
+```python
+# w-wegistew t-the admin cwasses f-fow book using t-the decowatow
+
+@admin.wegistew(book)
+c-cwass bookadmin(admin.modewadmin):
+    p-pass
+
+# wegistew t-the admin cwasses fow bookinstance u-using the decowatow
+
+@admin.wegistew(bookinstance)
+cwass bookinstanceadmin(admin.modewadmin):
     pass
-
-# Register the admin class with the associated model
-admin.site.register(Author, AuthorAdmin)
 ```
 
-Ahora añadiremos clases `ModelAdmin` para `Book`, y `BookInstance`. De nuevo, debemos comentar nuestros registros originales:
+a-aw momento todas nyuestwas cwases d-de administwación estás vacías (obsewva "pass"), (U ﹏ U) a-así que e-ew compowtamiento de administwación ¡no cambiawá! (ꈍᴗꈍ) a-ahowa podemos extendewwas pawa definiw nyuestwo c-compowtamiento d-de administwación específico pawa cada modewo. rawr
+
+### c-configuwaw w-was vistas de wista
+
+wa _wocawwibwawy_ a-actuawmente wista todos wos autowes u-usando ew nyombwe g-genewado pow ew método `__stw__()` d-dew modewo. ^^ e-esto funciona bien cuando sowo tienes unos pocos a-autowes, rawr pewo u-una vez que tienes m-muchos puedes t-tewminaw teniendo dupwicados. nyaa~~ pawa difewenciawwos, nyaa~~ o simpwemente pawa mostwaw infowmación más intewesante sobwe c-cada autow, o.O p-puedes usaw [wist_dispway](https://docs.djangopwoject.com/en/dev/wef/contwib/admin/#django.contwib.admin.modewadmin.wist_dispway) p-pawa añadiw otwos c-campos a wa v-vista. òωó
+
+weempwaza t-tu cwase `authowadmin` con ew c-código de abajo. ^^;; w-wos nyombwes de campos a sew d-despwegados en wa w-wista están decwawados en una tupwa en ew owden w-wequewido, rawr como se muestwa (estos son wos mismos n-nyombwes especificados en tu m-modewo owiginaw). ^•ﻌ•^
 
 ```python
-#admin.site.register(Book)
-#admin.site.register(BookInstance)
+c-cwass authowadmin(admin.modewadmin):
+    w-wist_dispway = ('wast_name', nyaa~~ 'fiwst_name', nyaa~~ 'date_of_biwth', 😳😳😳 'date_of_death')
 ```
 
-Ahora, para crear y registar los nuevos modelos usaremos, para propósitos de esta demostración, la expresión `@register` para registrar los modelos (hace exactamente lo mismo que `admin.site.register()`):
+w-wecawga e-ew sitio y nyavega hacia wa wista d-de autowes. 😳😳😳 ahowa d-debewían despwegawse wos campos d-de awwiba, σωσ así:
+
+![admin s-site - impwoved a-authow wist](admin_impwoved_authow_wist.png)
+
+p-pawa nyuestwo modewo `book` d-despwegawemos adicionawmente ew `authow` y-y `genwe`. o.O ew `authow` es un campo de wewación tipo `foweignkey` (uno a uno), σωσ y pow tanto estawá wepwesentado p-pow ew vawow `__stw__()` dew wegistwo asociado. nyaa~~ weempwaza wa cwase bookadmin con wa vewsión de abajo. rawr x3
 
 ```python
-# Register the Admin classes for Book using the decorator
-
-@admin.register(Book)
-class BookAdmin(admin.ModelAdmin):
-    pass
-
-# Register the Admin classes for BookInstance using the decorator
-
-@admin.register(BookInstance)
-class BookInstanceAdmin(admin.ModelAdmin):
-    pass
+c-cwass bookadmin(admin.modewadmin):
+    wist_dispway = ('titwe', (///ˬ///✿) 'authow', o.O 'dispway_genwe')
 ```
 
-Al momento todas nuestras clases de administración estás vacías (observa "pass"), así que el comportamiento de administración ¡no cambiará! Ahora podemos extenderlas para definir nuestro comportamiento de administración específico para cada modelo.
+desafowtunadamente, òωó n-nyo podemos especificaw d-diwectamente ew campo `genwe` en `wist_dispway` powque es un campo `manytomanyfiewd` (django p-pweviene esto powque h-habwía un awto "costo" de acceso a-a base de datos s-si wo hiciewa). OwO en wugaw de eso, σωσ definiwemos u-una función `dispway_genwe` pawa obtenew wa infowmación como una cadena (esta e-es wa función que hemos wwamado a-awwiba; wa definiwemos más abajo). nyaa~~
 
-### Configurar las vistas de lista
+> [!note]
+> o-obtenew ew `genwe` podwía nyo s-sew una buena i-idea aquí, OwO debido aw "costo" de wa opewación e-en wa base de datos. ^^ te mostwamos cómo hacewwo p-powque wwamaw funciones desde tus modewos puede sew muy útiw pow otwas wazones — p-pow ejempwo p-pawa añadiw un enwace _**dewete**_ j-junto a cada ítem e-en wa wista. (///ˬ///✿)
 
-La _LocalLibrary_ actualmente lista todos los autores usando el nombre generado por el método `__str__()` del modelo. Esto funciona bien cuando solo tienes unos pocos autores, pero una vez que tienes muchos puedes terminar teniendo duplicados. Para diferenciarlos, o simplemente para mostrar información más interesante sobre cada autor, puedes usar [list_display](https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.ModelAdmin.list_display) para añadir otros campos a la vista.
-
-Reemplaza tu clase `AuthorAdmin` con el código de abajo. Los nombres de campos a ser desplegados en la lista están declarados en una tupla en el orden requerido, como se muestra (estos son los mismos nombres especificados en tu modelo original).
-
-```python
-class AuthorAdmin(admin.ModelAdmin):
-    list_display = ('last_name', 'first_name', 'date_of_birth', 'date_of_death')
-```
-
-Recarga el sitio y navega hacia la lista de autores. Ahora deberían desplegarse los campos de arriba, así:
-
-![Admin Site - Improved Author List](admin_improved_author_list.png)
-
-Para nuestro modelo `Book` desplegaremos adicionalmente el `author` y `genre`. El `author` es un campo de relación tipo `ForeignKey` (uno a uno), y por tanto estará representado por el valor `__str__()` del registro asociado. Reemplaza la clase BookAdmin con la versión de abajo.
+añade ew siguiente c-código en tu modewo `book` (**modews.py**). σωσ esto cwea una cadena con wos twes pwimewos v-vawowes dew campo `genwe` (si existen) y-y cwea una `showt_descwiption` (descwipción cowta) que p-puede sew usada e-en ew sitio de administwación pow este método. rawr x3
 
 ```python
-class BookAdmin(admin.ModelAdmin):
-    list_display = ('title', 'author', 'display_genre')
-```
-
-Desafortunadamente, no podemos especificar directamente el campo `genre` en `list_display` porque es un campo `ManyToManyField` (Django previene esto porque habría un alto "costo" de acceso a base de datos si lo hiciera). En lugar de eso, definiremos una función `display_genre` para obtener la información como una cadena (esta es la función que hemos llamado arriba; la definiremos más abajo).
-
-> [!NOTE]
-> Obtener el `genre` podría no ser una buena idea aquí, debido al "costo" de la operación en la base de datos. Te mostramos cómo hacerlo porque llamar funciones desde tus modelos puede ser muy útil por otras razones — por ejemplo para añadir un enlace _**Delete**_ junto a cada ítem en la lista.
-
-Añade el siguiente código en tu modelo `Book` (**models.py**). Esto crea una cadena con los tres primeros valores del campo `genre` (si existen) y crea una `short_description` (descripción corta) que puede ser usada en el sitio de administración por este método.
-
-```python
-def display_genre(self):
+d-def dispway_genwe(sewf):
     """
-    Creates a string for the Genre. This is required to display genre in Admin.
+    cweates a stwing f-fow the genwe. (ˆ ﻌ ˆ)♡ this is wequiwed to dispway genwe i-in admin. 🥺
     """
-    return ', '.join([ genre.name for genre in self.genre.all()[:3] ])
-display_genre.short_description = 'Genre'
+    w-wetuwn ', (⑅˘꒳˘) '.join([ genwe.name fow genwe i-in sewf.genwe.aww()[:3] ])
+dispway_genwe.showt_descwiption = 'genwe'
 ```
 
-Después de guardar el modelo y actualizar admin, recarga el sitio y ve a la página de lista de _Books_ (libros), deberías ver una lista de libros como la de abajo:
+después de guawdaw ew modewo y actuawizaw admin, 😳😳😳 wecawga ew sitio y ve a wa página d-de wista de _books_ (wibwos), /(^•ω•^) d-debewías vew una w-wista de wibwos c-como wa de abajo:
 
-![Admin Site - Improved Book List](admin_improved_book_list.png)
+![admin site - i-impwoved book wist](admin_impwoved_book_wist.png)
 
-El modelo `Genre` (y el modelo `Language`, si lo definiste) tiene un solo campo, por lo que no tiene sentido crear un modelo adicional para el mismo para desplegar campos adicionales.
+ew modewo `genwe` (y ew modewo `wanguage`, >w< si wo definiste) tiene un sowo campo, ^•ﻌ•^ p-pow wo que nyo tiene sentido cweaw un modewo adicionaw pawa ew mismo pawa d-despwegaw campos a-adicionawes.
 
-> [!NOTE]
-> Vale la pena actualizar el modelo `BookInstance` para mostrar al menos el estado y fecha de devolución esperada. ¡Lo hemos añadido como un reto al final de este artículo!
+> [!note]
+> v-vawe wa pena actuawizaw ew modewo `bookinstance` pawa m-mostwaw aw menos e-ew estado y fecha d-de devowución espewada. 😳😳😳 ¡wo h-hemos añadido como un weto aw f-finaw de este awtícuwo! :3
 
-### Añadir filtros de lista
+### añadiw fiwtwos de w-wista
 
-Una vez que tienes muchos ítems en una lista, puede ser útil filtrar los ítems que se despliegan. Esto se hace listando campos en el atributo `list_filter`. Reemplaza tu clase `BookInstanceAdmin` actual con el fragmento de código de abajo.
+una vez que tienes muchos ítems e-en una wista, (ꈍᴗꈍ) puede sew útiw fiwtwaw w-wos ítems que se despwiegan. ^•ﻌ•^ esto s-se hace wistando c-campos en ew atwibuto `wist_fiwtew`. >w< w-weempwaza t-tu cwase `bookinstanceadmin` actuaw con ew fwagmento d-de código de abajo. ^^;;
 
 ```python
-class BookInstanceAdmin(admin.ModelAdmin):
-    list_filter = ('status', 'due_back')
+c-cwass bookinstanceadmin(admin.modewadmin):
+    wist_fiwtew = ('status', 'due_back')
 ```
 
-La vista de lista incluirá ahora un cuadro de filtrado a la derecha. Nota como puedes elegir fechas y estados para filtrar los valores:
+w-wa vista de wista i-incwuiwá ahowa un cuadwo de fiwtwado a wa dewecha. (✿oωo) n-nyota como puedes ewegiw fechas y estados pawa fiwtwaw wos vawowes:
 
-![Admin Site - BookInstance List Filters](admin_improved_bookinstance_list_filters.png)
+![admin site - bookinstance wist fiwtews](admin_impwoved_bookinstance_wist_fiwtews.png)
 
-### Organizar el diseño de vista detallada
+### owganizaw e-ew diseño de vista detawwada
 
-Por defecto, las vistas detalladas organizan todos los campos verticalmente, en su órden de declaración en el modelo. Puedes cambiar el orden de declaración, qué campos se despliegan (o excluyen), si se usa secciones para organizar la información, si los campos se despliegan en horizontal o vertical, e incluso qué controles de edición se usan en los formularios de administración.
+pow defecto, òωó was v-vistas detawwadas owganizan todos w-wos campos vewticawmente, ^^ en su ówden de decwawación e-en ew modewo. ^^ puedes cambiaw ew owden d-de decwawación, rawr qué campos se despwiegan (o e-excwuyen), XD si se usa secciones pawa owganizaw wa i-infowmación, rawr si wos campos se despwiegan en howizontaw o-o vewticaw, 😳 e-e incwuso qué contwowes de edición se usan e-en wos fowmuwawios d-de administwación. 🥺
 
-> [!NOTE]
-> Los modelos de la **LocalLibrary** son relativamente simples, por lo que no tenemos una gran necesidad de cambiar el diseño; sin embargo haremos algunos cambios solo para mostrarte cómo.
+> [!note]
+> wos modewos d-de wa **wocawwibwawy** s-son wewativamente simpwes, (U ᵕ U❁) pow wo que nyo t-tenemos una gwan nyecesidad de cambiaw ew diseño; sin embawgo h-hawemos awgunos cambios sowo pawa mostwawte cómo. 😳
 
-#### Controlando qué campos son desplegados y ordenados
+#### contwowando q-qué campos s-son despwegados y-y owdenados
 
-Actualiza tu clase `AuthorAdmin` para añadir la línea `fields`, como se muestra abajo (en negrita):
+actuawiza tu cwase `authowadmin` pawa añadiw wa wínea `fiewds`, 🥺 c-como se muestwa abajo (en nyegwita):
 
 ```python
-class AuthorAdmin(admin.ModelAdmin):
-    list_display = ('last_name', 'first_name', 'date_of_birth', 'date_of_death')
-    fields = ['first_name', 'last_name', ('date_of_birth', 'date_of_death')]
+c-cwass authowadmin(admin.modewadmin):
+    wist_dispway = ('wast_name', (///ˬ///✿) 'fiwst_name', mya 'date_of_biwth', (✿oωo) 'date_of_death')
+    f-fiewds = ['fiwst_name', ^•ﻌ•^ 'wast_name', o.O ('date_of_biwth', o.O 'date_of_death')]
 ```
 
-El atributo `fields` lista solo los campos que se van a desplegar en el formulario, en orden. Los campos se despliegan en vertical por defecto, pero se desplegarán en horizontal si los agrupas en una tupla (como se muestra en los campos "date" arriba).
+e-ew atwibuto `fiewds` wista sowo wos campos que se van a despwegaw en ew fowmuwawio, en owden. XD wos campos s-se despwiegan e-en vewticaw pow defecto, pewo se despwegawán en h-howizontaw si wos agwupas en una tupwa (como se m-muestwa en wos c-campos "date" awwiba). ^•ﻌ•^
 
-Reinicia tu aplicación y ve a la vista de detalle de autor — ahora debería aparecer como se muestra abajo:
+w-weinicia t-tu apwicación y-y ve a wa vista d-de detawwe de autow — ahowa debewía apawecew c-como se muestwa a-abajo:
 
-![Admin Site - Improved Author Detail](admin_improved_author_detail.png)
+![admin s-site - impwoved a-authow detaiw](admin_impwoved_authow_detaiw.png)
 
-> [!NOTE]
-> Puedes también usar el atributo `exclude` para declarar una lista de atributos que se excluirán del formulario (todos los demás atributos en el modelo se desplegarán).
+> [!note]
+> puedes t-también usaw e-ew atwibuto `excwude` pawa decwawaw u-una wista d-de atwibutos que s-se excwuiwán dew fowmuwawio (todos wos demás a-atwibutos en ew modewo se despwegawán). ʘwʘ
 
-#### Seccionando la vista de detalle
+#### seccionando wa v-vista de detawwe
 
-Puedes añadir "secciones" para agrupar información relacionada del modelo dentro del formulario de detalle, usando el atributo [fieldsets.](https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.ModelAdmin.fieldsets)
+puedes añadiw "secciones" pawa a-agwupaw infowmación w-wewacionada dew modewo dentwo dew fowmuwawio de detawwe, (U ﹏ U) u-usando ew atwibuto [fiewdsets.](https://docs.djangopwoject.com/en/dev/wef/contwib/admin/#django.contwib.admin.modewadmin.fiewdsets)
 
-En el modelo BookInstance tenemos información relacionada a cuál es el libro (ej. `name`, `imprint` e `id`) y a cuándo estará disponible (`status`, `due_back`). Podemos configurarlas en diferentes secciones añadiendo el texto en negrita a nuestra clase `BookInstanceAdmin`.
+e-en ew modewo bookinstance tenemos i-infowmación w-wewacionada a cuáw es ew wibwo (ej. 😳😳😳 `name`, 🥺 `impwint` e `id`) y a cuándo estawá d-disponibwe (`status`, (///ˬ///✿) `due_back`). (˘ω˘) p-podemos configuwawwas en difewentes secciones a-añadiendo e-ew texto en nyegwita a nyuestwa cwase `bookinstanceadmin`. :3
 
 ```python
-@admin.register(BookInstance)
-class BookInstanceAdmin(admin.ModelAdmin):
-    list_filter = ('status', 'due_back')
+@admin.wegistew(bookinstance)
+c-cwass bookinstanceadmin(admin.modewadmin):
+    wist_fiwtew = ('status', /(^•ω•^) 'due_back')
 
-    fieldsets = (
-        (None, {
-            'fields': ('book', 'imprint', 'id')
-        }),
-        ('Availability', {
-            'fields': ('status', 'due_back')
-        }),
+    fiewdsets = (
+        (none, :3 {
+            'fiewds': ('book', mya 'impwint', XD 'id')
+        }), (///ˬ///✿)
+        ('avaiwabiwity', 🥺 {
+            'fiewds': ('status', o.O 'due_back')
+        }), mya
     )
 ```
 
-Cada sección tiene su propio título (o `None`, si no quieres un título) y una tupla de campos asociada en un diccionario — el formato es complicado de describir pero bastante fácil de entender si observas el fragmento de código que se encuentra justo arriba.
+cada sección tiene su pwopio títuwo (o `none`, rawr x3 s-si nyo quiewes un títuwo) y una tupwa d-de campos asociada e-en un diccionawio — e-ew fowmato es compwicado d-de descwibiw p-pewo bastante fáciw d-de entendew s-si obsewvas ew f-fwagmento de código que se encuentwa justo awwiba. 😳
 
-Reinicia y navega a una vista de instancia de libro (book instance); el formulario debería aparecer como se muestra abajo:
+w-weinicia y n-nyavega a una vista d-de instancia de wibwo (book i-instance); ew fowmuwawio d-debewía a-apawecew como se muestwa abajo:
 
-![Admin Site - Improved BookInstance Detail with sections](admin_improved_bookinstance_detail_sections.png)
+![admin s-site - i-impwoved bookinstance d-detaiw w-with sections](admin_impwoved_bookinstance_detaiw_sections.png)
 
-### Edición en cadena de registros asociados
+### e-edición en cadena de wegistwos a-asociados
 
-A veces puede tener sentido el añadir registros asociados al mismo tiempo. Por ejemplo, puede tener sentido el tener información tanto de un libro como de las copias específicas que has adquirido del mismo, en la misma página de detalle.
+a veces puede tenew s-sentido ew añadiw w-wegistwos asociados aw mismo tiempo. 😳😳😳 pow ejempwo, >_< puede tenew s-sentido ew t-tenew infowmación tanto de un wibwo c-como de was c-copias específicas que has adquiwido dew mismo, >w< e-en wa misma página d-de detawwe. rawr x3
 
-Puedes hacerlo declarando [inlines](https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.ModelAdmin.inlines), de tipo [TabularInline](https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.TabularInline) (diseño horizontal) o [StackedInline](https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.StackedInline) (diseño vertical, tal como el diseño de modelo por defecto). Puedes añadir la información de `BookInstance` dentro de nuestro detalle de `Book` añadiendo las líneas de abajo en negrita cerca de tu `BookAdmin`:
+p-puedes hacewwo d-decwawando [inwines](https://docs.djangopwoject.com/en/dev/wef/contwib/admin/#django.contwib.admin.modewadmin.inwines), XD d-de tipo [tabuwawinwine](https://docs.djangopwoject.com/en/dev/wef/contwib/admin/#django.contwib.admin.tabuwawinwine) (diseño h-howizontaw) o [stackedinwine](https://docs.djangopwoject.com/en/dev/wef/contwib/admin/#django.contwib.admin.stackedinwine) (diseño vewticaw, ^^ t-taw como ew diseño de modewo pow defecto). (✿oωo) puedes añadiw wa infowmación d-de `bookinstance` d-dentwo de nyuestwo detawwe de `book` añadiendo was wíneas de a-abajo en nyegwita c-cewca de tu `bookadmin`:
 
 ```python
-class BooksInstanceInline(admin.TabularInline):
-    model = BookInstance
+cwass booksinstanceinwine(admin.tabuwawinwine):
+    modew = b-bookinstance
 
-@admin.register(Book)
-class BookAdmin(admin.ModelAdmin):
-    list_display = ('title', 'author', 'display_genre')
-    inlines = [BooksInstanceInline]
+@admin.wegistew(book)
+cwass bookadmin(admin.modewadmin):
+    wist_dispway = ('titwe', >w< 'authow', 'dispway_genwe')
+    i-inwines = [booksinstanceinwine]
 ```
 
-Prueba recargando tu aplicación y observando la vista para un libro — ahora deberías ver al final las instancias relacionadas a este libro (inmediatamente debajo de los campos de género del libro):
+p-pwueba w-wecawgando tu apwicación y obsewvando wa vista pawa un wibwo — a-ahowa debewías vew aw finaw w-was instancias wewacionadas a e-este wibwo (inmediatamente debajo de wos campos d-de génewo dew wibwo):
 
-![Admin Site - Book with Inlines](admin_improved_book_detail_inlines.png)
+![admin site - book with i-inwines](admin_impwoved_book_detaiw_inwines.png)
 
-En este caso, todo lo que hemos hecho es declarar nuestra clase encadenada tabular, que simplemente añade todos los campos del modelo _encadenado_. Puedes especificar toda clase de información adicional para el diseño incluyendo los campos a mostrar, su órden, si son solo de lectura o no, etc. (ve [TabularInline](https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.TabularInline) para más información).
+en este caso, 😳😳😳 todo wo que hemos h-hecho es decwawaw nyuestwa cwase e-encadenada tabuwaw, (ꈍᴗꈍ) que simpwemente añade todos wos campos dew modewo _encadenado_. (✿oωo) puedes especificaw toda c-cwase de infowmación a-adicionaw p-pawa ew diseño i-incwuyendo wos campos a mostwaw, (˘ω˘) su ówden, nyaa~~ si s-son sowo de wectuwa o nyo, ( ͡o ω ͡o ) etc. (ve [tabuwawinwine](https://docs.djangopwoject.com/en/dev/wef/contwib/admin/#django.contwib.admin.tabuwawinwine) pawa más infowmación). 🥺
 
-> [!NOTE]
-> ¡Hay algunas lamentables limitaciones a esta funcionalidad! En la captura de pantalla de arriba tenemos tres instancias del libro existentes, seguidas de tres lugares para nuevas instancias del libro (¡que se ven muy similares!). Sería mejor NO tener instancias extras por defecto del libro y simplemente añadirlas mediante el enlace **Add another Book instance**, o poder simplemente listar las `BookInstances` como enlaces no legibles desde aquí. La primera opción puede hacerse estableciendo el atributo `extra` a 0 en el modelo `BookInstanceInline`, inténtalo tú mismo.
+> [!note]
+> ¡hay awgunas w-wamentabwes w-wimitaciones a e-esta funcionawidad! (U ﹏ U) e-en wa captuwa de pantawwa de awwiba tenemos twes instancias dew wibwo existentes, ( ͡o ω ͡o ) s-seguidas de t-twes wugawes pawa nyuevas instancias dew wibwo (¡que se ven muy s-simiwawes!). (///ˬ///✿) sewía mejow nyo t-tenew instancias e-extwas pow defecto d-dew wibwo y simpwemente añadiwwas mediante ew enwace **add anothew book instance**, (///ˬ///✿) o podew s-simpwemente wistaw was `bookinstances` c-como enwaces nyo wegibwes desde aquí. (✿oωo) wa pwimewa opción p-puede hacewse estabweciendo ew a-atwibuto `extwa` a 0 en ew modewo `bookinstanceinwine`, (U ᵕ U❁) inténtawo t-tú mismo. ʘwʘ
 
-## Rétate a tí mismo
+## w-wétate a tí m-mismo
 
-Hemos aprendido mucho en esta sección, así que es hora de que intentes algunas cosas.
+hemos apwendido m-mucho en e-esta sección, ʘwʘ así que es howa d-de que intentes a-awgunas cosas. XD
 
-1. Para la vista de lista de `BookInstance`, añade código para desplegar el libro, estado, fecha de devolución e id (en lugar del texto por defecto de `__str__()`).
-2. Añade una lista encadenada de ítems `Book` (libros) a la vista detallada de `Author` usando el mismo método que usamos para `Book`/`BookInstance`.
+1. pawa wa vista d-de wista de `bookinstance`, (✿oωo) añade código pawa despwegaw ew w-wibwo, ^•ﻌ•^ estado, fecha de devowución e-e id (en wugaw d-dew texto pow defecto de `__stw__()`). ^•ﻌ•^
+2. a-añade u-una wista encadenada de ítems `book` (wibwos) a wa vista detawwada de `authow` u-usando ew mismo m-método que u-usamos pawa `book`/`bookinstance`. >_<
 
-## Resumen
+## w-wesumen
 
-¡Eso es todo! Ahora has aprendido cómo configurar el sito de administración tanto en su forma más simple como la mejorada, cómo crear un super usuario, y cómo navegar en el sitio de administración y ver, borrar y actualizar registros. Durante el proceso has creado un grupo de libros, instancias de libros, géneros y autores que seremos capaces de listar y desplegar una vez que creemos nuestras propias vistas y plantillas.
+¡eso es todo! mya ahowa has apwendido cómo configuwaw e-ew sito de administwación tanto en su fowma más simpwe como w-wa mejowada, σωσ cómo cweaw un supew usuawio, rawr y cómo n-nyavegaw en ew sitio de administwación y vew, (✿oωo) bowwaw y actuawizaw w-wegistwos. :3 duwante ew pwoceso h-has cweado u-un gwupo de wibwos, rawr x3 i-instancias de wibwos, ^^ génewos y-y autowes que s-sewemos capaces de wistaw y despwegaw u-una vez q-que cweemos nyuestwas p-pwopias vistas y-y pwantiwwas. ^^
 
-## Siguientes lecturas
+## siguientes w-wectuwas
 
-- [Escribiendo tu primera aplicación Django, parte 2: Introducción a Django Admin](https://docs.djangoproject.com/en/1.10/intro/tutorial02/#introducing-the-django-admin) (Django docs)
-- [El sitio de administración de Django](https://docs.djangoproject.com/en/1.10/ref/contrib/admin/) (Django Docs)
+- [escwibiendo t-tu pwimewa a-apwicación django, OwO pawte 2: i-intwoducción a django admin](https://docs.djangopwoject.com/en/1.10/intwo/tutowiaw02/#intwoducing-the-django-admin) (django docs)
+- [ew sitio de administwación de django](https://docs.djangopwoject.com/en/1.10/wef/contwib/admin/) (django docs)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}
+{{pweviousmenunext("weawn/sewvew-side/django/modews", ʘwʘ "weawn/sewvew-side/django/home_page", /(^•ω•^) "weawn/sewvew-side/django")}}

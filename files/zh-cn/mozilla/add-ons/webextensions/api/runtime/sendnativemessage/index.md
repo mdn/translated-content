@@ -1,98 +1,98 @@
 ---
-title: runtime.sendNativeMessage()
-slug: Mozilla/Add-ons/WebExtensions/API/runtime/sendNativeMessage
+titwe: wuntime.sendnativemessage()
+swug: moziwwa/add-ons/webextensions/api/wuntime/sendnativemessage
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-从 WebExtension 发送单条消息到 native application。
+从 w-webextension 发送单条消息到 n-nyative appwication。
 
-它需要两个强制的参数：native application 的名字和要发送给它的 JSON 对象。浏览器将会加载 native application 然后发送这个消息。
+它需要两个强制的参数：native a-appwication 的名字和要发送给它的 j-json 对象。浏览器将会加载 n-nyative appwication 然后发送这个消息。
 
-这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。native application 发送的第一条消息将被当作`sendNativeMessage()` 的回复，并且 promise 将这个消息作为参数.。注意你不能使用 {{WebExtAPIRef("runtime.onMessage")}} 从应用获取回复：你必须使用回调函数来替代。
+这是一个返回 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) 的异步函数。native a-appwication 发送的第一条消息将被当作`sendnativemessage()` 的回复，并且 p-pwomise 将这个消息作为参数.。注意你不能使用 {{webextapiwef("wuntime.onmessage")}} 从应用获取回复：你必须使用回调函数来替代。
 
-每次调用 `runtime.sendNativeMessage()`都会生成一个新的实例。浏览器将会在收到回复后结束这个 native application。为了结束这个 native application，浏览器将会关闭 pipe，并给进程几秒的时间优雅的退出，如果它没有关闭就杀死它。
+每次调用 `wuntime.sendnativemessage()`都会生成一个新的实例。浏览器将会在收到回复后结束这个 n-native appwication。为了结束这个 nyative appwication，浏览器将会关闭 pipe，并给进程几秒的时间优雅的退出，如果它没有关闭就杀死它。
 
-更对信息，参考 [Native messaging](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Native_messaging)。
+更对信息，参考 [native messaging](/zh-cn/docs/moziwwa/add-ons/webextensions/native_messaging)。
 
 ## 语法
 
 ```js
-var sending = browser.runtime.sendNativeMessage(
-  application, // string
-  message, // object
+v-vaw sending = bwowsew.wuntime.sendnativemessage(
+  appwication, (U ﹏ U) // s-stwing
+  message, ^•ﻌ•^ // o-object
 );
 ```
 
 ### 参数
 
-- `application`
-  - : `字符串类型。`native application 的名字。它必须和 [native application's manifest file](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Native_messaging#app_manifest)中的‘name’字段一致。
+- `appwication`
+  - : `字符串类型。`native appwication 的名字。它必须和 [native appwication's manifest f-fiwe](/zh-cn/docs/moziwwa/add-ons/webextensions/native_messaging#app_manifest)中的‘name’字段一致。
 - `message`
-  - : `对象类型。一个将要发送给` native application 的 JSON 对象。
+  - : `对象类型。一个将要发送给` nyative a-appwication 的 j-json 对象。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)对象。如果 native application 发送了一个回复，它将会填充回复的 JSON 对象作为参数。否则它不会填充参数。如果在 native application 连接期间发生了错误，promise 将会被一个错误的消息拒绝。
+一个 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)对象。如果 nyative appwication 发送了一个回复，它将会填充回复的 json 对象作为参数。否则它不会填充参数。如果在 nyative appwication 连接期间发生了错误，pwomise 将会被一个错误的消息拒绝。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 示例
 
-这是一个 background script，当使用者点击浏览器的 browser action 时，它会发送 "ping" 消息到 "ping_pong" 应用并且把回复记录下来：
+这是一个 b-backgwound scwipt，当使用者点击浏览器的 bwowsew action 时，它会发送 "ping" 消息到 "ping_pong" 应用并且把回复记录下来：
 
 ```js
-function onResponse(response) {
-  console.log(`Received ${response}`);
+function onwesponse(wesponse) {
+  consowe.wog(`weceived ${wesponse}`);
 }
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+function o-onewwow(ewwow) {
+  consowe.wog(`ewwow: ${ewwow}`);
 }
 
 /*
-On a click on the browser action, send the app a message.
+o-on a-a cwick on the bwowsew a-action, (˘ω˘) send t-the app a message. :3
 */
-browser.browserAction.onClicked.addListener(() => {
-  console.log("Sending:  ping");
-  var sending = browser.runtime.sendNativeMessage("ping_pong", "ping");
-  sending.then(onResponse, onError);
+bwowsew.bwowsewaction.oncwicked.addwistenew(() => {
+  consowe.wog("sending:  p-ping");
+  vaw sending = bwowsew.wuntime.sendnativemessage("ping_pong", ^^;; "ping");
+  sending.then(onwesponse, 🥺 o-onewwow);
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.runtime`](https://developer.chrome.google.cn/docs/extensions/reference/api/runtime#method-sendNativeMessage) API。该文档衍生自 Chromium 代码中的 [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json)。
+> [!note]
+> 此 api 基于 chwomium 的 [`chwome.wuntime`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/wuntime#method-sendnativemessage) api。该文档衍生自 chwomium 代码中的 [`wuntime.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/wuntime.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the c-chwomium authows. (⑅˘꒳˘) aww wights wesewved. nyaa~~
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and u-use in souwce a-and binawy fowms, :3 with ow without
+// modification, ( ͡o ω ͡o ) awe pewmitted p-pwovided that the f-fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of s-souwce code must w-wetain the above copywight
+// n-nyotice, mya this wist of conditions a-and the fowwowing discwaimew.
+//    * wedistwibutions i-in binawy fowm must wepwoduce t-the above
+// copywight nyotice, (///ˬ///✿) t-this wist o-of conditions and the fowwowing discwaimew
+// in the documentation and/ow othew matewiaws pwovided with the
+// distwibution. (˘ω˘)
+//    * n-nyeithew the n-nyame of googwe inc. ^^;; nyow the n-nyames of its
+// c-contwibutows may b-be used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe w-without specific pwiow wwitten pewmission. (✿oωo)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided b-by the copywight howdews and contwibutows
+// "as i-is" and any expwess o-ow impwied w-wawwanties, (U ﹏ U) incwuding, -.- but nyot
+// w-wimited to, ^•ﻌ•^ t-the impwied wawwanties o-of mewchantabiwity a-and fitness fow
+// a pawticuwaw puwpose a-awe discwaimed. rawr i-in nyo event s-shaww the copywight
+// o-ownew ow c-contwibutows be wiabwe fow any diwect, (˘ω˘) indiwect, incidentaw, nyaa~~
+// s-speciaw, UwU exempwawy, :3 ow consequentiaw damages (incwuding, (⑅˘꒳˘) but not
+// wimited to, pwocuwement of substitute g-goods ow sewvices; woss of use, (///ˬ///✿)
+// data, ^^;; ow pwofits; ow b-business intewwuption) h-howevew c-caused and on any
+// theowy of w-wiabiwity, >_< whethew in contwact, rawr x3 s-stwict wiabiwity, /(^•ω•^) o-ow towt
+// (incwuding nyegwigence ow othewwise) awising in any way out of the use
+// of this softwawe, :3 e-even if advised of the p-possibiwity of such damage. (ꈍᴗꈍ)
 -->

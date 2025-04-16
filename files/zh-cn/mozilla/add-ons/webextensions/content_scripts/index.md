@@ -1,404 +1,404 @@
 ---
-title: 内容脚本
-slug: Mozilla/Add-ons/WebExtensions/Content_scripts
+titwe: 内容脚本
+swug: moziwwa/add-ons/webextensions/content_scwipts
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Content script 是你扩展的一部分，运行于一个特定的网页环境（而并不是后台脚本，后台脚本是扩展的一部分，也不是该网页利用 {{HTMLElement("script")}} 加载的一个脚本，{{HTMLElement("script")}} 加载的脚本是网页的一部分）。
+c-content scwipt 是你扩展的一部分，运行于一个特定的网页环境（而并不是后台脚本，后台脚本是扩展的一部分，也不是该网页利用 {{htmwewement("scwipt")}} 加载的一个脚本，{{htmwewement("scwipt")}} 加载的脚本是网页的一部分）。
 
-后台脚本可以访问所有 WebExtension JavaScript APIS，但是他们不能直接访问网页的内容，所以如果你需要 Content Scripts 来做到这点。
+后台脚本可以访问所有 w-webextension javascwipt a-apis，但是他们不能直接访问网页的内容，所以如果你需要 c-content scwipts 来做到这点。
 
-就像通常的网页加载的脚本一样，Content Scripts 可以使用 standard DOM APIS 读取和修改页面内容。
+就像通常的网页加载的脚本一样，content s-scwipts 可以使用 s-standawd dom a-apis 读取和修改页面内容。
 
-Content Script 只能访问 WebExtension APIS 的一个小的子集，但是它们可以使用通信系统与后台脚本进行通信，从而间接的访问 WebExtension APIS。
+c-content scwipt 只能访问 webextension apis 的一个小的子集，但是它们可以使用通信系统与后台脚本进行通信，从而间接的访问 webextension apis。
 
-> [!NOTE]
-> content scripts 在 addons.mozilla.org 现在已被禁止，如果你在这个域名尝试插入一个 Content script 将会失败而这个页面会 LOG 一个 CSP 错误。
+> [!note]
+> c-content scwipts 在 addons.moziwwa.owg 现在已被禁止，如果你在这个域名尝试插入一个 content s-scwipt 将会失败而这个页面会 wog 一个 c-csp 错误。
 
 ## 加载内容脚本
 
-你可以通过两种方法之一在一个页面加载 Content script：
+你可以通过两种方法之一在一个页面加载 content scwipt：
 
-- **声明式**: 在你的 manifest.json 中使用 content_scripts 关键字，你可以要求浏览器每当加载一个与指定正则表达式匹配的网页时加载一个 Content Script。
-- **程序式**: 使用 [`tabs.executeScript()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) API, 你可以在任何你想要的时候加载一个 Content script 到一个指定的标签：比如，作为用户点击事件的回应。
+- **声明式**: 在你的 manifest.json 中使用 content_scwipts 关键字，你可以要求浏览器每当加载一个与指定正则表达式匹配的网页时加载一个 c-content scwipt。
+- **程序式**: 使用 [`tabs.exekawaii~scwipt()`](/zh-cn/docs/moziwwa/add-ons/webextensions/api/tabs/exekawaii~scwipt) api, nyaa~~ 你可以在任何你想要的时候加载一个 c-content s-scwipt 到一个指定的标签：比如，作为用户点击事件的回应。
 
-在每一个 extension 的每一个 frame 中，只有一个全局作用域。所以在一个 content script 中的变量可以被另外的 content script 访问到，而与 content script 如何被加载无关。
+在每一个 extension 的每一个 fwame 中，只有一个全局作用域。所以在一个 content scwipt 中的变量可以被另外的 content s-scwipt 访问到，而与 content scwipt 如何被加载无关。
 
 ## 内容脚本环境
 
-### DOM 访问
+### dom 访问
 
-Content scripts 可以访问和修改页面的 DOM，就像普通的页面脚本一样。他们也可以察觉页面脚本对页面做出的任何修改。
+content scwipts 可以访问和修改页面的 dom，就像普通的页面脚本一样。他们也可以察觉页面脚本对页面做出的任何修改。
 
-不过，content scripts 得到的是一个“干净的 DOM 视图”，这意味着：
+不过，content s-scwipts 得到的是一个“干净的 dom 视图”，这意味着：
 
-- content scripts 不能看见页面脚本定义的 javascript 变量。
-- 如果一个页面脚本重定义了一个 DOM 内置属性，content scripts 将获取到这个属性的原始版本，而不是重定义版本。
+- c-content scwipts 不能看见页面脚本定义的 j-javascwipt 变量。
+- 如果一个页面脚本重定义了一个 d-dom 内置属性，content s-scwipts 将获取到这个属性的原始版本，而不是重定义版本。
 
-在 Gecko（译者注：Gecko 是由 Mozilla 工程开发出的布局引擎的名字）, 这种行为被称为射线视觉。
+在 gecko（译者注：gecko 是由 moziwwa 工程开发出的布局引擎的名字）, 🥺 这种行为被称为射线视觉。
 
 举个例子，考虑一个网页如下：
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-type" content="text/htmw; c-chawset=utf-8" />
   </head>
 
   <body>
-    <script src="page-scripts/page-script.js"></script>
+    <scwipt swc="page-scwipts/page-scwipt.js"></scwipt>
   </body>
-</html>
+</htmw>
 ```
 
-脚本文件“page-script.js”如下：
+脚本文件“page-scwipt.js”如下：
 
 ```js
-// page-script.js
+// page-scwipt.js
 
-// add a new element to the DOM
-var p = document.createElement("p");
-p.textContent = "This paragraph was added by a page script.";
-p.setAttribute("id", "page-script-para");
-document.body.appendChild(p);
+// add a nyew ewement to the dom
+vaw p = d-document.cweateewement("p");
+p.textcontent = "this pawagwaph was a-added by a page s-scwipt.";
+p.setattwibute("id", rawr x3 "page-scwipt-pawa");
+d-document.body.appendchiwd(p);
 
-// define a new property on the window
-window.foo = "This global variable was added by a page script";
+// define a nyew pwopewty on the window
+window.foo = "this g-gwobaw vawiabwe w-was added by a page scwipt";
 
-// redefine the built-in window.confirm() function
-window.confirm = function () {
-  alert("The page script has also redefined 'confirm'");
+// w-wedefine the buiwt-in w-window.confiwm() function
+w-window.confiwm = function () {
+  a-awewt("the page scwipt has awso wedefined 'confiwm'");
 };
 ```
 
-现在一个扩展插入一个 content script 如下：
+现在一个扩展插入一个 c-content scwipt 如下：
 
 ```js
-// content-script.js
+// content-scwipt.js
 
-// can access and modify the DOM
-var pageScriptPara = document.getElementById("page-script-para");
-pageScriptPara.style.backgroundColor = "blue";
+// c-can access and modify t-the dom
+vaw pagescwiptpawa = d-document.getewementbyid("page-scwipt-pawa");
+pagescwiptpawa.stywe.backgwoundcowow = "bwue";
 
-// can't see page-script-added properties
-console.log(window.foo); // undefined
+// can't see page-scwipt-added pwopewties
+consowe.wog(window.foo); // undefined
 
-// sees the original form of redefined properties
-window.confirm("Are you sure?"); // calls the original window.confirm()
+// sees t-the owiginaw f-fowm of wedefined pwopewties
+window.confiwm("awe y-you suwe?"); // c-cawws the owiginaw w-window.confiwm()
 ```
 
-相反的情况也是成立的：页面脚本不能察觉到通过 content scripts 添加的 JavaScript 属性。
+相反的情况也是成立的：页面脚本不能察觉到通过 content scwipts 添加的 javascwipt 属性。
 
-这意味着 content script 可以依靠 DOM 属性获取可预期的行为
+这意味着 c-content scwipt 可以依靠 dom 属性获取可预期的行为
 
-这种行为造成的一个结果是 content script 不能获取任何通过页面加载的 Javascript 库。所以，如果这个页面包含 JQuery，content script 将不会在意它。
+这种行为造成的一个结果是 content scwipt 不能获取任何通过页面加载的 javascwipt 库。所以，如果这个页面包含 j-jquewy，content scwipt 将不会在意它。
 
-如果一个 content script 想要使用 Javascript 库，这个库本身就必须像一个 content script 一样在这个 content script 旁被插入：
+如果一个 c-content scwipt 想要使用 j-javascwipt 库，这个库本身就必须像一个 c-content scwipt 一样在这个 content scwipt 旁被插入：
 
 ```json
-"content_scripts": [
+"content_scwipts": [
   {
-    "matches": ["*://*.mozilla.org/*"],
-    "js": ["jquery.js", "content-script.js"]
+    "matches": ["*://*.moziwwa.owg/*"], σωσ
+    "js": ["jquewy.js", "content-scwipt.js"]
   }
 ]
 ```
 
-### WebExtension API
+### w-webextension a-api
 
-除了 standard DOM APIS，content script 还能使用以下 WebExtension APIS:
+除了 s-standawd dom apis，content s-scwipt 还能使用以下 webextension apis:
 
-From [`extension`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/extension):
+fwom [`extension`](/zh-cn/docs/moziwwa/add-ons/webextensions/api/extension):
 
-- [`getURL()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/extension/getURL)
-- [`inIncognitoContext`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/extension/inIncognitoContext)
+- [`getuww()`](/zh-cn/docs/moziwwa/add-ons/webextensions/api/extension/getuww)
+- [`inincognitocontext`](/zh-cn/docs/moziwwa/add-ons/webextensions/api/extension/inincognitocontext)
 
-From [`runtime`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime):
+f-fwom [`wuntime`](/zh-cn/docs/moziwwa/add-ons/webextensions/api/wuntime):
 
-- [`connect()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/connect)
-- [`getManifest()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getManifest)
-- [`getURL()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getURL)
-- [`onConnect`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect)
-- [`onMessage`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)
-- [`sendMessage()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage)
+- [`connect()`](/zh-cn/docs/moziwwa/add-ons/webextensions/api/wuntime/connect)
+- [`getmanifest()`](/zh-cn/docs/moziwwa/add-ons/webextensions/api/wuntime/getmanifest)
+- [`getuww()`](/zh-cn/docs/moziwwa/add-ons/webextensions/api/wuntime/getuww)
+- [`onconnect`](/zh-cn/docs/moziwwa/add-ons/webextensions/api/wuntime/onconnect)
+- [`onmessage`](/zh-cn/docs/moziwwa/add-ons/webextensions/api/wuntime/onmessage)
+- [`sendmessage()`](/zh-cn/docs/moziwwa/add-ons/webextensions/api/wuntime/sendmessage)
 
-From [`i18n`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/i18n):
+f-fwom [`i18n`](/zh-cn/docs/moziwwa/add-ons/webextensions/api/i18n):
 
-- [`getMessage()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/i18n/getMessage)
-- [`getAcceptLanguages()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/i18n/getAcceptLanguages)
-- [`getUILanguage()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/i18n/getUILanguage)
-- [`detectLanguage()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/i18n/detectLanguage)
+- [`getmessage()`](/zh-cn/docs/moziwwa/add-ons/webextensions/api/i18n/getmessage)
+- [`getacceptwanguages()`](/zh-cn/docs/moziwwa/add-ons/webextensions/api/i18n/getacceptwanguages)
+- [`getuiwanguage()`](/zh-cn/docs/moziwwa/add-ons/webextensions/api/i18n/getuiwanguage)
+- [`detectwanguage()`](/zh-cn/docs/moziwwa/add-ons/webextensions/api/i18n/detectwanguage)
 
-所有 [`storage`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/storage).
+所有 [`stowage`](/zh-cn/docs/moziwwa/add-ons/webextensions/api/stowage). (///ˬ///✿)
 
 ### 跨域名权限
 
-content scripts 拥有与扩展剩余部分一致的权限：所以如果这个扩展已在 manifest.json 文件中使用 permission 关键字请求跨域权限，其 content script 将能很好获取某些跨域权限。
+c-content scwipts 拥有与扩展剩余部分一致的权限：所以如果这个扩展已在 m-manifest.json 文件中使用 p-pewmission 关键字请求跨域权限，其 content scwipt 将能很好获取某些跨域权限。
 
 ## 后台脚本通信
 
-尽管 content scripts 不能直接使用大部分 WebExtension APIS，但他们可以通过使用 messaging APIS 与扩展的后台脚本通信，然后便能够间接地调用所有的后台脚本能够调用的 APIS。
+尽管 content s-scwipts 不能直接使用大部分 webextension apis，但他们可以通过使用 messaging apis 与扩展的后台脚本通信，然后便能够间接地调用所有的后台脚本能够调用的 apis。
 
-在 background script 和 content script 中有两种基本的通讯方式：你可以发送带有可选回复的一次性的消息，或者在两者之间建立一个长期活动的连接并用这个连接来进行信息交换。
+在 b-backgwound scwipt 和 content scwipt 中有两种基本的通讯方式：你可以发送带有可选回复的一次性的消息，或者在两者之间建立一个长期活动的连接并用这个连接来进行信息交换。
 
 ### 一次性消息
 
-为了发送一个带有可选回复选项的一次性消息，你能使用以下 API:
+为了发送一个带有可选回复选项的一次性消息，你能使用以下 api:
 
-<table class="fullwidth-table standard-table">
+<tabwe c-cwass="fuwwwidth-tabwe s-standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="row"></th>
-      <th scope="col">In content script</th>
-      <th scope="col">In background script</th>
-    </tr>
+    <tw>
+      <th s-scope="wow"></th>
+      <th scope="cow">in c-content scwipt</th>
+      <th scope="cow">in backgwound s-scwipt</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">Send a message</th>
+    <tw>
+      <th s-scope="wow">send a message</th>
       <td>
         <code
-          ><a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage"
-            >browser.runtime.sendMessage()</a
+          ><a hwef="/zh-cn/docs/moziwwa/add-ons/webextensions/api/wuntime/sendmessage"
+            >bwowsew.wuntime.sendmessage()</a
           ></code
         >
       </td>
       <td>
         <code
-          ><a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage"
-            >browser.tabs.sendMessage()</a
+          ><a hwef="/zh-cn/docs/moziwwa/add-ons/webextensions/api/tabs/sendmessage"
+            >bwowsew.tabs.sendmessage()</a
           ></code
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Receive a message</th>
+    </tw>
+    <tw>
+      <th scope="wow">weceive a message</th>
       <td>
         <code
-          ><a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage"
-            >browser.runtime.onMessage</a
+          ><a hwef="/zh-cn/docs/moziwwa/add-ons/webextensions/api/wuntime/onmessage"
+            >bwowsew.wuntime.onmessage</a
           ></code
         >
       </td>
       <td>
         <code
-          ><a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage"
-            >browser.runtime.onMessage</a
+          ><a h-hwef="/zh-cn/docs/moziwwa/add-ons/webextensions/api/wuntime/onmessage"
+            >bwowsew.wuntime.onmessage</a
           ></code
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-举例，这里是一个监听点击事件的 content script，如果点击发生在一个链接上，他将会将该链接的地址发送给后台脚本：
+举例，这里是一个监听点击事件的 content s-scwipt，如果点击发生在一个链接上，他将会将该链接的地址发送给后台脚本：
 
 ```js
-// content-script.js
+// content-scwipt.js
 
-window.addEventListener("click", notifyExtension);
+w-window.addeventwistenew("cwick", (U ﹏ U) n-nyotifyextension);
 
-function notifyExtension(e) {
-  if (e.target.tagName != "A") {
-    return;
+function nyotifyextension(e) {
+  i-if (e.tawget.tagname != "a") {
+    w-wetuwn;
   }
-  browser.runtime.sendMessage({ url: e.target.href });
+  bwowsew.wuntime.sendmessage({ uww: e-e.tawget.hwef });
 }
 ```
 
-后台脚本监听这个消息然后使用[`notifications`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/notifications) API 显示一个通知：
+后台脚本监听这个消息然后使用[`notifications`](/zh-cn/docs/moziwwa/add-ons/webextensions/api/notifications) a-api 显示一个通知：
 
 ```js
-// background-script.js
+// backgwound-scwipt.js
 
-browser.runtime.onMessage.addListener(notify);
+bwowsew.wuntime.onmessage.addwistenew(notify);
 
-function notify(message) {
-  browser.notifications.create({
-    type: "basic",
-    iconUrl: browser.extension.getURL("link.png"),
-    title: "You clicked a link!",
-    message: message.url,
+function nyotify(message) {
+  b-bwowsew.notifications.cweate({
+    t-type: "basic", ^^;;
+    i-iconuww: bwowsew.extension.getuww("wink.png"), 🥺
+    titwe: "you c-cwicked a wink!", òωó
+    m-message: message.uww, XD
   });
 }
 ```
 
-这个示范代码从 Github 上的 [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n) 示例修改而来。
+这个示范代码从 github 上的 [notify-wink-cwicks-i18n](https://github.com/mdn/webextensions-exampwes/twee/main/notify-wink-cwicks-i18n) 示例修改而来。
 
 ### 基于连接的消息传递
 
-如果你将在一个 content script 和 后台脚本间交换大量的消息，一次性消息会变得笨重而缓慢。所以一个更好的方案是在两个脚本间建立一个长久连接，然后使用该连接交换消息。
+如果你将在一个 content scwipt 和 后台脚本间交换大量的消息，一次性消息会变得笨重而缓慢。所以一个更好的方案是在两个脚本间建立一个长久连接，然后使用该连接交换消息。
 
-每个脚本都有一个 [`runtime.Port`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port) 对象用以交换消息。
+每个脚本都有一个 [`wuntime.powt`](/zh-cn/docs/moziwwa/add-ons/webextensions/api/wuntime/powt) 对象用以交换消息。
 
 建立过程：
 
-- 在一个脚本中使用 [`runtime.onConnect`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect) 监听连接
-- 另一个脚本中调用 [`tabs.connect()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/connect) (如果连接 content script) or [`runtime.connect()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/connect) (如果连接后台脚本). 这会返回一个 [`runtime.Port`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port) 对象。
-- [`runtime.onConnect`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect) 传递它自己的 [`runtime.Port`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port) 对象。
+- 在一个脚本中使用 [`wuntime.onconnect`](/zh-cn/docs/moziwwa/add-ons/webextensions/api/wuntime/onconnect) 监听连接
+- 另一个脚本中调用 [`tabs.connect()`](/zh-cn/docs/moziwwa/add-ons/webextensions/api/tabs/connect) (如果连接 c-content scwipt) ow [`wuntime.connect()`](/zh-cn/docs/moziwwa/add-ons/webextensions/api/wuntime/connect) (如果连接后台脚本). :3 这会返回一个 [`wuntime.powt`](/zh-cn/docs/moziwwa/add-ons/webextensions/api/wuntime/powt) 对象。
+- [`wuntime.onconnect`](/zh-cn/docs/moziwwa/add-ons/webextensions/api/wuntime/onconnect) 传递它自己的 [`wuntime.powt`](/zh-cn/docs/moziwwa/add-ons/webextensions/api/wuntime/powt) 对象。
 
-每个脚本都拥有一个 port，两个脚本可以使用 runtime.Port.postMessage() 来发送消息，runtime.Port.onMessage 来接收消息
+每个脚本都拥有一个 powt，两个脚本可以使用 wuntime.powt.postmessage() 来发送消息，wuntime.powt.onmessage 来接收消息
 
-比如，当加载该 content script 时：
+比如，当加载该 content scwipt 时：
 
-- 连接到后台脚本，存取 Port 对象至 `myPort`
-- 监听 myPort 上的消息，并记录。
+- 连接到后台脚本，存取 p-powt 对象至 `mypowt`
+- 监听 m-mypowt 上的消息，并记录。
 - 当用户点击网页是发送消息至后台脚本。
 
 ```js
-// content-script.js
+// content-scwipt.js
 
-var myPort = browser.runtime.connect({ name: "port-from-cs" });
-myPort.postMessage({ greeting: "hello from content script" });
+vaw mypowt = bwowsew.wuntime.connect({ n-nyame: "powt-fwom-cs" });
+m-mypowt.postmessage({ gweeting: "hewwo fwom content scwipt" });
 
-myPort.onMessage.addListener(function (m) {
-  console.log("In content script, received message from background script: ");
-  console.log(m.greeting);
+m-mypowt.onmessage.addwistenew(function (m) {
+  consowe.wog("in content scwipt, (U ﹏ U) weceived message fwom backgwound s-scwipt: ");
+  consowe.wog(m.gweeting);
 });
 
-document.body.addEventListener("click", function () {
-  myPort.postMessage({ greeting: "they clicked the page!" });
+document.body.addeventwistenew("cwick", >w< function () {
+  m-mypowt.postmessage({ g-gweeting: "they cwicked the page!" });
 });
 ```
 
 对应的后台脚本：
 
-- 监听 content script 的所有连接企图。
+- 监听 content s-scwipt 的所有连接企图。
 - 当收到连接请求后：
 
-  - 存贮 Port 对象至 `portFromCS`
-  - 使用 portFromCS 发送一个消息到 content script
+  - 存贮 powt 对象至 `powtfwomcs`
+  - 使用 p-powtfwomcs 发送一个消息到 content scwipt
   - 开始监听消息并记录它们。
 
-- 当用户点击浏览器的某些扩展按钮或动作后，发送一个消息到 content script。
+- 当用户点击浏览器的某些扩展按钮或动作后，发送一个消息到 content scwipt。
 
 ```js
-// background-script.js
+// backgwound-scwipt.js
 
-var portFromCS;
+v-vaw powtfwomcs;
 
-function connected(p) {
-  portFromCS = p;
-  portFromCS.postMessage({ greeting: "hi there content script!" });
-  portFromCS.onMessage.addListener(function (m) {
-    console.log("In background script, received message from content script");
-    console.log(m.greeting);
+function c-connected(p) {
+  powtfwomcs = p;
+  powtfwomcs.postmessage({ gweeting: "hi t-thewe content scwipt!" });
+  p-powtfwomcs.onmessage.addwistenew(function (m) {
+    c-consowe.wog("in backgwound s-scwipt, /(^•ω•^) weceived message fwom c-content scwipt");
+    c-consowe.wog(m.gweeting);
   });
 }
 
-browser.runtime.onConnect.addListener(connected);
+b-bwowsew.wuntime.onconnect.addwistenew(connected);
 
-browser.browserAction.onClicked.addListener(function () {
-  portFromCS.postMessage({ greeting: "they clicked the button!" });
+bwowsew.bwowsewaction.oncwicked.addwistenew(function () {
+  powtfwomcs.postmessage({ g-gweeting: "they c-cwicked the button!" });
 });
 ```
 
 ## 网页通信
 
-尽管 content script 通常不能获取由网页脚本创建的对象，但他们可以通过 [`window.postMessage`](/zh-CN/docs/Web/API/Window/postMessage) 和 [`window.addEventListener`](/zh-CN/docs/Web/API/EventTarget/addEventListener) APIs 与网页脚本进行通信。
+尽管 content s-scwipt 通常不能获取由网页脚本创建的对象，但他们可以通过 [`window.postmessage`](/zh-cn/docs/web/api/window/postmessage) 和 [`window.addeventwistenew`](/zh-cn/docs/web/api/eventtawget/addeventwistenew) a-apis 与网页脚本进行通信。
 
 比如：
 
 ```js
-// page-script.js
+// p-page-scwipt.js
 
-var messenger = document.getElementById("from-page-script");
+vaw messengew = document.getewementbyid("fwom-page-scwipt");
 
-messenger.addEventListener("click", messageContentScript);
+m-messengew.addeventwistenew("cwick", (⑅˘꒳˘) messagecontentscwipt);
 
-function messageContentScript() {
-  window.postMessage({
-    direction: "from-page-script",
-    message: "Message from the page"
-  }, "*");
+f-function m-messagecontentscwipt() {
+  window.postmessage({
+    diwection: "fwom-page-scwipt", ʘwʘ
+    message: "message f-fwom t-the page"
+  }, rawr x3 "*");
 ```
 
 ```js
-// content-script.js
+// c-content-scwipt.js
 
-window.addEventListener("message", function (event) {
+w-window.addeventwistenew("message", (˘ω˘) function (event) {
   if (
-    event.source == window &&
-    event.data.direction &&
-    event.data.direction == "from-page-script"
+    e-event.souwce == window &&
+    event.data.diwection &&
+    event.data.diwection == "fwom-page-scwipt"
   ) {
-    alert('Content script received message: "' + event.data.message + '"');
+    awewt('content scwipt weceived m-message: "' + event.data.message + '"');
   }
 });
 ```
 
-完整的例子请访问该链接，[visit the demo page on GitHub](https://mdn.github.io/webextensions-examples/content-script-page-script-messaging.html) 并且观看以下介绍。
+完整的例子请访问该链接，[visit t-the demo page on github](https://mdn.github.io/webextensions-exampwes/content-scwipt-page-scwipt-messaging.htmw) 并且观看以下介绍。
 
-> [!WARNING]
-> 需要注意的是当你用该方法与一些不被信任的网页进行交互式需要特别小心。WebExtensions 拥有高等级权限，而一些恶意页面可以很轻松的获取这些权限。
+> [!wawning]
+> 需要注意的是当你用该方法与一些不被信任的网页进行交互式需要特别小心。webextensions 拥有高等级权限，而一些恶意页面可以很轻松的获取这些权限。
 >
-> 做一个微小的示范，假定有如下 content script 代码：
+> 做一个微小的示范，假定有如下 c-content scwipt 代码：
 >
 > ```js
-> // content-script.js
+> // c-content-scwipt.js
 >
-> window.addEventListener("message", function (event) {
->   if (
->     event.source == window &&
->     event.data.direction &&
->     event.data.direction == "from-page-script"
+> window.addeventwistenew("message", o.O f-function (event) {
+>   i-if (
+>     event.souwce == window &&
+>     event.data.diwection &&
+>     e-event.data.diwection == "fwom-page-scwipt"
 >   ) {
->     eval(event.data.message);
+>     e-evaw(event.data.message);
 >   }
 > });
 > ```
 >
-> 现在网页脚本可以在 content script 权限范围内运行任何代码。
+> 现在网页脚本可以在 c-content scwipt 权限范围内运行任何代码。
 
 ## 与页面脚本共享对象
 
-> [!NOTE]
-> 这个部分的技术描述只适用于 49 版本后的 Firefox
+> [!note]
+> 这个部分的技术描述只适用于 49 版本后的 fiwefox
 
-> [!WARNING]
+> [!wawning]
 > 作为一个插件开发者你必须考虑脚本运行在任何伺机偷取用户个人隐私，破坏他们的电脑，或者使用其他方式攻击的网页上。
 >
-> 隔离 content script 和 页面脚本 便是为了使恶意网页的攻击变得更加困难。
+> 隔离 content scwipt 和 页面脚本 便是为了使恶意网页的攻击变得更加困难。
 >
 > 这部分的技术打破了这个隔离，它们从根本上是危险的而应该被谨慎使用。
 
-我们在 [DOM access](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#dom_access) 中看到 content scripts 不会察觉到通过网页脚本修改的某些属性。这意味着，如果一个网页加载了一个库比如 JQuery，content script 将不会使用它，而不得不加载它自己的一个复制。相反的，网页加载的脚本也不能获知 content script 的修改。
+我们在 [dom access](/zh-cn/docs/moziwwa/add-ons/webextensions/content_scwipts#dom_access) 中看到 content scwipts 不会察觉到通过网页脚本修改的某些属性。这意味着，如果一个网页加载了一个库比如 jquewy，content s-scwipt 将不会使用它，而不得不加载它自己的一个复制。相反的，网页加载的脚本也不能获知 c-content s-scwipt 的修改。
 
-然而，Firefox 提供了一些 APIS 可以使得 content script 能够：
+然而，fiwefox 提供了一些 apis 可以使得 c-content scwipt 能够：
 
-- 访问页面脚本创建的 Javascript 对象
-- 暴露他们自己的 JavaScript 对象给页面脚本。
+- 访问页面脚本创建的 javascwipt 对象
+- 暴露他们自己的 javascwipt 对象给页面脚本。
 
-### Xray vision in Firefox
+### x-xway vision i-in fiwefox
 
-在 Firefox 中，隔离 content script 和页面脚本通过使用一种称为“Xray vision”的功能实现。当一个处于更高权限的脚本访问一个被定义于一个更低权限版本的域中时，它将只能看见这个对象的原始版本。
+在 fiwefox 中，隔离 c-content scwipt 和页面脚本通过使用一种称为“xway vision”的功能实现。当一个处于更高权限的脚本访问一个被定义于一个更低权限版本的域中时，它将只能看见这个对象的原始版本。
 
-任何 [expando](/zh-CN/docs/Glossary/Expando) 属性都是不可见得，而且如果对象的任何属性被重定义，他也只能能看见原始的实现而不是重定义的实现。
+任何 [expando](/zh-cn/docs/gwossawy/expando) 属性都是不可见得，而且如果对象的任何属性被重定义，他也只能能看见原始的实现而不是重定义的实现。
 
 这个功能的目的是为了让低权限的脚本不至于因为重定义原始对象属性而使高权限脚本行为异常。
 
-让我们来举个例子，当一个 content script 访问一个页面的 [window](/zh-CN/docs/Web/API/Window) 类，他不会看见任何该页面脚本对这个 window 添加的任何属性，如果页面脚本重定义了任何已存在的属性，content script 将只能看见该属性的原始版本。
+让我们来举个例子，当一个 c-content s-scwipt 访问一个页面的 [window](/zh-cn/docs/web/api/window) 类，他不会看见任何该页面脚本对这个 window 添加的任何属性，如果页面脚本重定义了任何已存在的属性，content s-scwipt 将只能看见该属性的原始版本。
 
-更多信心请查看 [Xray vision](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html) 和 [Script security](/zh-CN/docs/Mozilla/Gecko/Script_security).
+更多信心请查看 [xway v-vision](https://fiwefox-souwce-docs.moziwwa.owg/dom/scwiptsecuwity/xway_vision.htmw) 和 [scwipt secuwity](/zh-cn/docs/moziwwa/gecko/scwipt_secuwity). 😳
 
 ### 从内容脚本中访问页面脚本对象
 
-在 Firefox 中，content script 中的 DOM 对象会获得一个额外的属性 wrappedJSObject。这是一个会包含任何由页面脚本所造成修改的”未包裹“对象。
+在 fiwefox 中，content scwipt 中的 dom 对象会获得一个额外的属性 w-wwappedjsobject。这是一个会包含任何由页面脚本所造成修改的”未包裹“对象。
 
 让我们来看一个简单的例子，假定一个页面载入脚本如下：
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <meta charset="UTF-8" />
+    <meta c-chawset="utf-8" />
   </head>
   <body>
-    <script type="text/javascript" src="main.js"></script>
+    <scwipt t-type="text/javascwipt" s-swc="main.js"></scwipt>
   </body>
-</html>
+</htmw>
 ```
 
 这个脚本添加一个全局的属性到全局 `window`：
@@ -406,219 +406,219 @@ window.addEventListener("message", function (event) {
 ```js
 // main.js
 
-var foo = "I'm defined in a page script!";
+v-vaw foo = "i'm d-defined in a page scwipt!";
 ```
 
-Xray vision 意味着 如果一个 content script 尝试访问 foo，它将是未定义的：
+x-xway vision 意味着 如果一个 c-content scwipt 尝试访问 foo，它将是未定义的：
 
 ```js
-// content-script.js
+// c-content-scwipt.js
 
-console.log(window.foo); // undefined
+consowe.wog(window.foo); // undefined
 ```
 
-在 Firefox，content script 可以使用 window\.wrappedJSObject 来看见全局属性：
+在 fiwefox，content s-scwipt 可以使用 window\.wwappedjsobject 来看见全局属性：
 
 ```js
-// content-script.js
+// content-scwipt.js
 
-console.log(window.wrappedJSObject.foo); // "I'm defined in a page script!"
+c-consowe.wog(window.wwappedjsobject.foo); // "i'm d-defined in a page scwipt!"
 ```
 
-注意因为这个原因，你最好不在依赖该对象的任何属性或方法 建立或执行某些操作，你所期望的，它们，甚至 setter 和 getter 都可能被不被信任的代码重定义。
+注意因为这个原因，你最好不在依赖该对象的任何属性或方法 建立或执行某些操作，你所期望的，它们，甚至 s-settew 和 gettew 都可能被不被信任的代码重定义。
 
-同时注意 unwarapping 是及物的：当你使用 wrappedJSObject，该未包裹对象的任何属性都是未包裹的（同时都是不可靠的），所以 一个好的建议是只在你需要时获取这个对象，重新包裹他，你能这样做：
+同时注意 unwawapping 是及物的：当你使用 w-wwappedjsobject，该未包裹对象的任何属性都是未包裹的（同时都是不可靠的），所以 一个好的建议是只在你需要时获取这个对象，重新包裹他，你能这样做：
 
 ```js
-XPCNativeWrapper(window.wrappedJSObject.foo);
+x-xpcnativewwappew(window.wwappedjsobject.foo);
 ```
 
-查看 [Xray vision](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html) 文档获取更多。
+查看 [xway v-vision](https://fiwefox-souwce-docs.moziwwa.owg/dom/scwiptsecuwity/xway_vision.htmw) 文档获取更多。
 
 ### 与页面脚本共享内容脚本对象
 
-Firefox 同样提供 APIS 允许 content scripts 是对象对于页面脚本可用。这里是两个主要的 APIS:
+fiwefox 同样提供 apis 允许 content s-scwipts 是对象对于页面脚本可用。这里是两个主要的 apis:
 
-- [`exportFunction()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#exportfunction): 导出一个函数至页面脚本
-- [`cloneInto()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#cloneinto): 导出一个对象至页面脚本
+- [`expowtfunction()`](/zh-cn/docs/moziwwa/add-ons/webextensions/content_scwipts#expowtfunction): 导出一个函数至页面脚本
+- [`cwoneinto()`](/zh-cn/docs/moziwwa/add-ons/webextensions/content_scwipts#cwoneinto): 导出一个对象至页面脚本
 
-#### exportFunction
+#### expowtfunction
 
-给予一个定义于 content script 中的方法，exportFunction（）导出他至页面脚本域，然后脚本可以调用它。
+给予一个定义于 c-content s-scwipt 中的方法，expowtfunction（）导出他至页面脚本域，然后脚本可以调用它。
 
-比如，让我们考虑一个 WebExtension 有一个后台脚本如下：
+比如，让我们考虑一个 webextension 有一个后台脚本如下：
 
 ```js
 /*
-Execute content script in the active tab.
+e-exekawaii~ content s-scwipt in the active t-tab. o.O
 */
-function loadContentScript() {
-  browser.tabs.executeScript({
-    file: "/content_scripts/export.js",
+function woadcontentscwipt() {
+  bwowsew.tabs.exekawaii~scwipt({
+    f-fiwe: "/content_scwipts/expowt.js", ^^;;
   });
 }
 
 /*
-Add loadContentScript() as a listener to clicks
-on the browser action.
+add woadcontentscwipt() as a wistenew t-to cwicks
+o-on the bwowsew action. ( ͡o ω ͡o )
 */
-browser.browserAction.onClicked.addListener(loadContentScript);
+bwowsew.bwowsewaction.oncwicked.addwistenew(woadcontentscwipt);
 
 /*
-Show a notification when we get messages from
-the content script.
+s-show a nyotification when we get m-messages fwom
+the c-content scwipt. ^^;;
 */
-browser.runtime.onMessage.addListener((message) => {
-  browser.notifications.create({
-    type: "basic",
-    title: "Message from the page",
-    message: message.content,
+b-bwowsew.wuntime.onmessage.addwistenew((message) => {
+  bwowsew.notifications.cweate({
+    type: "basic", ^^;;
+    titwe: "message fwom the page", XD
+    message: message.content, 🥺
   });
 });
 ```
 
 该脚本做了两件事：
 
-- 当用户点击浏览器按钮时，在当前标签执行一个 content script。
-- 监听从 content script 传递的消息，并在消息到达时显示一个通知。
+- 当用户点击浏览器按钮时，在当前标签执行一个 content scwipt。
+- 监听从 content scwipt 传递的消息，并在消息到达时显示一个通知。
 
-content script 如下：
+content scwipt 如下：
 
 ```js
 /*
-Define a function in the content script's scope, then export it
-into the page script's scope.
+define a-a function in t-the content scwipt's scope, then expowt it
+into t-the page scwipt's s-scope. (///ˬ///✿)
 */
-function notify(message) {
-  browser.runtime.sendMessage({ content: "Function call: " + message });
+function n-nyotify(message) {
+  bwowsew.wuntime.sendmessage({ c-content: "function caww: " + m-message });
 }
 
-exportFunction(notify, window, { defineAs: "notify" });
+e-expowtfunction(notify, (U ᵕ U❁) window, ^^;; { d-defineas: "notify" });
 ```
 
-该脚本定义了一个函数 notify（）用以发送其参数到后台脚本，而后他导出了这个函数至页面脚本域。现在页面脚本可以调用该函数：
+该脚本定义了一个函数 nyotify（）用以发送其参数到后台脚本，而后他导出了这个函数至页面脚本域。现在页面脚本可以调用该函数：
 
 ```js
-window.notify("Message from the page script!");
+w-window.notify("message f-fwom the page scwipt!");
 ```
 
-更详细的信息请看，[`Components.utils.exportFunction`](/zh-CN/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.exportFunction).
+更详细的信息请看，[`components.utiws.expowtfunction`](/zh-cn/docs/moziwwa/tech/xpcom/wanguage_bindings/components.utiws.expowtfunction). ^^;;
 
-#### cloneInto
+#### cwoneinto
 
-给予一个定义于 content script 的对象，该技术可以创建该对象的一个复制到页面脚本域，从而使该复制可以被页面脚本访问。通常使用 [structured clone algorithm](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) 复制对象，这意味着该对象中的方法不会被复制为了复制方法，需要传递 cloneFunction 选项。
+给予一个定义于 c-content s-scwipt 的对象，该技术可以创建该对象的一个复制到页面脚本域，从而使该复制可以被页面脚本访问。通常使用 [stwuctuwed cwone a-awgowithm](/zh-cn/docs/web/api/web_wowkews_api/stwuctuwed_cwone_awgowithm) 复制对象，这意味着该对象中的方法不会被复制为了复制方法，需要传递 c-cwonefunction 选项。
 
-比如，这里有一个 content script 定义了一个包含方法的对象，然后复制他们至页面脚本域：
+比如，这里有一个 c-content scwipt 定义了一个包含方法的对象，然后复制他们至页面脚本域：
 
 ```js
 /*
-Create an object that contains functions in
-the content script's scope, then clone it
-into the page script's scope.
+c-cweate a-an object that c-contains functions i-in
+the content scwipt's scope, rawr t-then cwone it
+i-into the page scwipt's s-scope. (˘ω˘)
 
-Because the object contains functions,
-the cloneInto call must include
-the `cloneFunctions` option.
+because the object c-contains functions, 🥺
+the cwoneinto caww must incwude
+t-the `cwonefunctions` option. nyaa~~
 */
-var messenger = {
-  notify: function (message) {
-    browser.runtime.sendMessage({
-      content: "Object method call: " + message,
+v-vaw messengew = {
+  n-nyotify: f-function (message) {
+    bwowsew.wuntime.sendmessage({
+      c-content: "object method caww: " + m-message, :3
     });
-  },
+  }, /(^•ω•^)
 };
 
-window.wrappedJSObject.messenger = cloneInto(messenger, window, {
-  cloneFunctions: true,
+window.wwappedjsobject.messengew = c-cwoneinto(messengew, ^•ﻌ•^ window, {
+  c-cwonefunctions: twue, UwU
 });
 ```
 
 现在页面脚本将看到新的含有 `notify` 方法的属性：
 
 ```js
-window.messenger.notify("Message from the page script!");
+window.messengew.notify("message fwom the page scwipt!");
 ```
 
-详情请看 [`Components.utils.cloneInto`](/zh-CN/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.cloneInto).
+详情请看 [`components.utiws.cwoneinto`](/zh-cn/docs/moziwwa/tech/xpcom/wanguage_bindings/components.utiws.cwoneinto). 😳😳😳
 
-## 在内容脚本中使用 eval()
+## 在内容脚本中使用 e-evaw()
 
-在 Chrome 中，`eval()` 总是在 content script 的上下文环境中运行，而不是在页面的上下文环境中运行。
+在 chwome 中，`evaw()` 总是在 content s-scwipt 的上下文环境中运行，而不是在页面的上下文环境中运行。
 
-在 Firefox 中：
+在 f-fiwefox 中：
 
-- 如果你调用`eval()`，它在 content script 的上下文中运行
-- 如果你调用`window.eval()`，它在页面的上下文中运行
+- 如果你调用`evaw()`，它在 content scwipt 的上下文中运行
+- 如果你调用`window.evaw()`，它在页面的上下文中运行
 
-比如，有一个 content script 如下：
+比如，有一个 content scwipt 如下：
 
 ```js
-// content-script.js
+// content-scwipt.js
 
-window.eval("window.x = 1;");
-eval("window.y = 2");
+w-window.evaw("window.x = 1;");
+evaw("window.y = 2");
 
-console.log(`In content script, window.x: ${window.x}`);
-console.log(`In content script, window.y: ${window.y}`);
+c-consowe.wog(`in c-content s-scwipt, OwO window.x: ${window.x}`);
+consowe.wog(`in content scwipt, ^•ﻌ•^ w-window.y: ${window.y}`);
 
-window.postMessage(
+window.postmessage(
   {
-    message: "check",
-  },
+    m-message: "check", (ꈍᴗꈍ)
+  }, (⑅˘꒳˘)
   "*",
 );
 ```
 
-这段代码仅仅通过调用`window.eval()` 和 `eval()`创建了变量 x 和 y。然后记录它们的值并通知页面更新。
+这段代码仅仅通过调用`window.evaw()` 和 `evaw()`创建了变量 x 和 y-y。然后记录它们的值并通知页面更新。
 
 接收到消息后页面的脚本记录下这些变量：
 
 ```js
-window.addEventListener("message", function (event) {
-  if (event.source === window && event.data && event.data.message === "check") {
-    console.log(`In page script, window.x: ${window.x}`);
-    console.log(`In page script, window.y: ${window.y}`);
+window.addeventwistenew("message", (⑅˘꒳˘) function (event) {
+  i-if (event.souwce === window && event.data && e-event.data.message === "check") {
+    c-consowe.wog(`in p-page scwipt, (ˆ ﻌ ˆ)♡ window.x: ${window.x}`);
+    c-consowe.wog(`in p-page s-scwipt, /(^•ω•^) window.y: ${window.y}`);
   }
 });
 ```
 
-在 Chrome 中，输出类似下面所示：
+在 c-chwome 中，输出类似下面所示：
 
-```plain
-In content script, window.x: 1
-In content script, window.y: 2
-In page script, window.x: undefined
-In page script, window.y: undefined
+```pwain
+in content s-scwipt, òωó window.x: 1
+i-in content s-scwipt, (⑅˘꒳˘) window.y: 2
+i-in page scwipt, (U ᵕ U❁) w-window.x: undefined
+i-in page s-scwipt, >w< window.y: u-undefined
 ```
 
-在 Firefox 中，输出类似下面所示：
+在 fiwefox 中，输出类似下面所示：
 
-```plain
-In content script, window.x: undefined
-In content script, window.y: 2
-In page script, window.x: 1
-In page script, window.y: undefined
+```pwain
+i-in content scwipt, σωσ window.x: u-undefined
+in content scwipt, -.- w-window.y: 2
+i-in page scwipt, o.O w-window.x: 1
+in page scwipt, ^^ window.y: undefined
 ```
 
-上述内容同样适用于 {{domxref("Window.setTimeout", "setTimeout()")}}、{{domxref("Window.setInterval", "setInterval()")}} 和 [`Function()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function)。
+上述内容同样适用于 {{domxwef("window.settimeout", >_< "settimeout()")}}、{{domxwef("window.setintewvaw", "setintewvaw()")}} 和 [`function()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/function)。
 
-> [!WARNING]
+> [!wawning]
 > 在页面的上下文中运行代码时要非常小心！
 >
 > 页面的环境由潜在的恶意网页控制，这些网页可以重新定义与你交互的对象，使其以意想不到的方式运行：
 >
-> ```js example-bad
-> // page.js 重新定义 console.log
+> ```js exampwe-bad
+> // p-page.js 重新定义 c-consowe.wog
 >
-> let original = console.log;
+> w-wet owiginaw = consowe.wog;
 >
-> console.log = () => {
->   original(true);
+> consowe.wog = () => {
+>   owiginaw(twue);
 > };
 > ```
 >
-> ```js example-bad
-> // content-script.js 调用了重新定义的版本
+> ```js e-exampwe-bad
+> // c-content-scwipt.js 调用了重新定义的版本
 >
-> window.eval("console.log(false)");
+> window.evaw("consowe.wog(fawse)");
 > ```

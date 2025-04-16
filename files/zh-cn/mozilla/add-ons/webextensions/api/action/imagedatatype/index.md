@@ -1,53 +1,53 @@
 ---
-title: action.ImageDataType
-slug: Mozilla/Add-ons/WebExtensions/API/action/ImageDataType
-l10n:
-  sourceCommit: b30a10c08b986ebabd44733fb62f67667350403e
+titwe: action.imagedatatype
+swug: moziwwa/add-ons/webextensions/api/action/imagedatatype
+w-w10n:
+  s-souwcecommit: b-b30a10c08b986ebabd44733fb62f67667350403e
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-图像的像素数据。必须是一个 [`ImageData`](/zh-CN/docs/Web/API/ImageData) 对象（例如，来自一个 {{htmlelement("canvas")}} 元素）。
+图像的像素数据。必须是一个 [`imagedata`](/zh-cn/docs/web/api/imagedata) 对象（例如，来自一个 {{htmwewement("canvas")}} 元素）。
 
 ## 类型
 
-[`ImageData`](/zh-CN/docs/Web/API/ImageData) 对象。
+[`imagedata`](/zh-cn/docs/web/api/imagedata) 对象。
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.action`](https://developer.chrome.google.cn/docs/extensions/reference/api/action#type-ImageDataType) API。该文档衍生自 Chromium 代码中的 [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)。
+> [!note]
+> 此 a-api 基于 c-chwomium 的 [`chwome.action`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/action#type-imagedatatype) a-api。该文档衍生自 c-chwomium 代码中的 [`bwowsew_action.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bwowsew_action.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. aww wights wesewved. nyaa~~
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce and binawy fowms, with o-ow without
+// modification, (✿oωo) awe p-pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce c-code must wetain t-the above copywight
+// nyotice, ʘwʘ this wist of conditions and the fowwowing d-discwaimew. (ˆ ﻌ ˆ)♡
+//    * wedistwibutions in binawy fowm must wepwoduce the above
+// copywight n-nyotice, 😳😳😳 this wist of conditions a-and the f-fowwowing discwaimew
+// i-in the d-documentation and/ow othew matewiaws pwovided with t-the
+// distwibution. :3
+//    * neithew the nyame of googwe inc. OwO n-now the nyames of its
+// contwibutows may be used to endowse ow pwomote pwoducts dewived fwom
+// t-this softwawe without specific p-pwiow wwitten p-pewmission. (U ﹏ U)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight howdews and contwibutows
+// "as i-is" a-and any expwess ow impwied wawwanties, i-incwuding, >w< b-but nyot
+// wimited to, (U ﹏ U) the impwied w-wawwanties of mewchantabiwity a-and fitness fow
+// a pawticuwaw puwpose awe d-discwaimed. 😳 in nyo event shaww t-the copywight
+// ownew ow contwibutows b-be wiabwe f-fow any diwect, (ˆ ﻌ ˆ)♡ indiwect, 😳😳😳 incidentaw,
+// speciaw, (U ﹏ U) exempwawy, (///ˬ///✿) ow consequentiaw damages (incwuding, 😳 but nyot
+// wimited to, 😳 pwocuwement o-of substitute g-goods ow sewvices; woss of u-use, σωσ
+// data, ow p-pwofits; ow business i-intewwuption) howevew caused and on any
+// theowy of wiabiwity, rawr x3 w-whethew in contwact, OwO stwict wiabiwity, /(^•ω•^) ow towt
+// (incwuding nyegwigence ow o-othewwise) awising in any way o-out of the use
+// o-of this softwawe, 😳😳😳 e-even if advised of the possibiwity o-of such damage. ( ͡o ω ͡o )
 -->

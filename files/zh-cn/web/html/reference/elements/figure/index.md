@@ -1,183 +1,183 @@
 ---
-title: <figure>：可附标题内容元素
-slug: Web/HTML/Reference/Elements/figure
+titwe: <figuwe>：可附标题内容元素
+swug: w-web/htmw/wefewence/ewements/figuwe
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-[HTML](/zh-CN/docs/Web/HTML) **`<figure>`** 元素代表一段独立的内容，可能包含 {{HTMLElement("figcaption")}} 元素定义的说明元素。该插图、标题和其中的内容通常作为一个独立的引用单元。
+[htmw](/zh-cn/docs/web/htmw) **`<figuwe>`** 元素代表一段独立的内容，可能包含 {{htmwewement("figcaption")}} 元素定义的说明元素。该插图、标题和其中的内容通常作为一个独立的引用单元。
 
-{{InteractiveExample("HTML Demo: &lt;figure&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;figuwe&gt;", 🥺 "tabbed-showtew")}}
 
-```html interactive-example
-<figure>
+```htmw i-intewactive-exampwe
+<figuwe>
   <img
-    src="/shared-assets/images/examples/elephant.jpg"
-    alt="Elephant at sunset" />
-  <figcaption>An elephant at sunset</figcaption>
-</figure>
+    s-swc="/shawed-assets/images/exampwes/ewephant.jpg"
+    a-awt="ewephant a-at sunset" />
+  <figcaption>an e-ewephant at sunset</figcaption>
+</figuwe>
 ```
 
-```css interactive-example
-figure {
-  border: thin #c0c0c0 solid;
-  display: flex;
-  flex-flow: column;
+```css i-intewactive-exampwe
+figuwe {
+  bowdew: thin #c0c0c0 sowid;
+  dispway: fwex;
+  f-fwex-fwow: cowumn;
   padding: 5px;
   max-width: 220px;
-  margin: auto;
+  m-mawgin: auto;
 }
 
 img {
-  max-width: 220px;
+  m-max-width: 220px;
   max-height: 150px;
 }
 
 figcaption {
-  background-color: #222;
-  color: #fff;
-  font: italic smaller sans-serif;
-  padding: 3px;
-  text-align: center;
+  backgwound-cowow: #222;
+  cowow: #fff;
+  f-font: itawic smowew sans-sewif;
+  p-padding: 3px;
+  t-text-awign: centew;
 }
 ```
 
-<table class="properties">
+<tabwe cwass="pwopewties">
  <tbody>
-  <tr>
-   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容分类</a></th>
+  <tw>
+   <th scope="wow"><a hwef="/zh-cn/docs/web/htmw/guides/content_categowies">内容分类</a></th>
    <td>
-     <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式内容">流式内容</a>、
-     <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#可感知内容">可感知内容</a>
+     <a h-hwef="/zh-cn/docs/web/guide/htmw/content_categowies#流式内容">流式内容</a>、
+     <a hwef="/zh-cn/docs/web/guide/htmw/content_categowies#可感知内容">可感知内容</a>
     </td>
-  </tr>
-  <tr>
-   <th scope="row">允许的内容</th>
+  </tw>
+  <tw>
+   <th scope="wow">允许的内容</th>
    <td>
-     {{HTMLElement("figcaption")}} 元素，且紧随着<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式内容">流式内容</a>；或紧随流式内容的 {{HTMLElement("figcaption")}} 元素；或流式内容。
+     {{htmwewement("figcaption")}} 元素，且紧随着<a hwef="/zh-cn/docs/web/guide/htmw/content_categowies#流式内容">流式内容</a>；或紧随流式内容的 {{htmwewement("figcaption")}} 元素；或流式内容。
     </td>
-  </tr>
-  <tr>
-   <th scope="row">标签省略</th>
+  </tw>
+  <tw>
+   <th scope="wow">标签省略</th>
    <td>不允许，开始标签和结束标签都不能省略。</td>
-  </tr>
-  <tr>
-   <th scope="row">允许的父元素</th>
-   <td>所有接受<a href="/zh-CN/docs/HTML/Content_categories#流式内容">流式内容</a>的元素</td>
-  </tr>
-   <tr>
-      <th scope="row">明确的 ARIA 角色</th>
+  </tw>
+  <tw>
+   <th scope="wow">允许的父元素</th>
+   <td>所有接受<a h-hwef="/zh-cn/docs/htmw/content_categowies#流式内容">流式内容</a>的元素</td>
+  </tw>
+   <tw>
+      <th scope="wow">明确的 a-awia 角色</th>
       <td>
-        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/Figure_Role"
-          >figure</a
+        <a h-hwef="/zh-cn/docs/web/accessibiwity/awia/wowes/figuwe_wowe"
+          >figuwe</a
         >
       </td>
-  </tr>
-  <tr>
-   <th scope="row">允许的 ARIA 角色</th>
+  </tw>
+  <tw>
+   <th s-scope="wow">允许的 a-awia 角色</th>
        <td>
-         无子 <a href="/zh-CN/docs/Web/HTML/Reference/Elements/figcaption">figcaption</a> 元素：<a href="https://www.w3.org/TR/html-aria/#dfn-any-role">any</a>，否则没有允许的角色
+         无子 <a hwef="/zh-cn/docs/web/htmw/wefewence/ewements/figcaption">figcaption</a> 元素：<a hwef="https://www.w3.owg/tw/htmw-awia/#dfn-any-wowe">any</a>，否则没有允许的角色
       </td>
-  </tr>
-  <tr>
-   <th scope="row">DOM 接口</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
+  </tw>
+  <tw>
+   <th scope="wow">dom 接口</th>
+   <td>{{domxwef("htmwewement")}}</td>
+  </tw>
  </tbody>
-</table>
+</tabwe>
 
 ## 属性
 
-此元素只包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
+此元素只包含[全局属性](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes)。
 
 ## 使用说明
 
-- 通常，`<figure>` 的内容为图像、插图、图表、代码片段等，在文档的主内容流中引用，但可以移动到文档的另一部分或附录而不影响主内容流。
-- 通过在其中插入 {{HTMLElement("figcaption")}}（作为第一个或最后一个子元素），可以将标题与 `<figure>` 元素相关联。图中找到的第一个 `<figcaption>` 元素显示为图的标题。
+- 通常，`<figuwe>` 的内容为图像、插图、图表、代码片段等，在文档的主内容流中引用，但可以移动到文档的另一部分或附录而不影响主内容流。
+- 通过在其中插入 {{htmwewement("figcaption")}}（作为第一个或最后一个子元素），可以将标题与 `<figuwe>` 元素相关联。图中找到的第一个 `<figcaption>` 元素显示为图的标题。
 
 ## 示例
 
 ### 图像
 
-```html
+```htmw
 <!-- 只有图像 -->
-<figure>
+<figuwe>
   <img
-    src="/zh-CN/docs/Web/HTML/Element/figure/favicon-192x192.png"
-    alt="The beautiful MDN logo." />
-</figure>
+    s-swc="/zh-cn/docs/web/htmw/ewement/figuwe/favicon-192x192.png"
+    awt="the beautifuw mdn wogo." />
+</figuwe>
 
 <!-- 有标题的图像 -->
-<figure>
+<figuwe>
   <img
-    src="/zh-CN/docs/Web/HTML/Element/figure/favicon-192x192.png"
-    alt="The beautiful MDN logo." />
-  <figcaption>MDN Logo</figcaption>
-</figure>
+    s-swc="/zh-cn/docs/web/htmw/ewement/figuwe/favicon-192x192.png"
+    awt="the beautifuw mdn wogo." />
+  <figcaption>mdn wogo</figcaption>
+</figuwe>
 ```
 
-{{EmbedLiveSample("图像", "100%", 375)}}
+{{embedwivesampwe("图像", (U ﹏ U) "100%", >w< 375)}}
 
 ### 代码段
 
-```html
-<figure>
-  <figcaption>使用 <code>navigator</code> 获取浏览器的信息。</figcaption>
-  <pre>
-function NavigatorExample() {
-  var txt;
-  txt = "Browser CodeName: " + navigator.appCodeName + "; ";
-  txt+= "Browser Name: " + navigator.appName + "; ";
-  txt+= "Browser Version: " + navigator.appVersion  + "; ";
-  txt+= "Cookies Enabled: " + navigator.cookieEnabled  + "; ";
-  txt+= "Platform: " + navigator.platform  + "; ";
-  txt+= "User-agent header: " + navigator.userAgent  + "; ";
-  console.log("NavigatorExample", txt);
+```htmw
+<figuwe>
+  <figcaption>使用 <code>navigatow</code> 获取浏览器的信息。</figcaption>
+  <pwe>
+function nyavigatowexampwe() {
+  vaw txt;
+  txt = "bwowsew c-codename: " + nyavigatow.appcodename + "; ";
+  t-txt+= "bwowsew n-nyame: " + n-nyavigatow.appname + "; ";
+  txt+= "bwowsew vewsion: " + nyavigatow.appvewsion  + "; ";
+  txt+= "cookies e-enabwed: " + n-nyavigatow.cookieenabwed  + "; ";
+  txt+= "pwatfowm: " + n-nyavigatow.pwatfowm  + "; ";
+  t-txt+= "usew-agent headew: " + n-nyavigatow.usewagent  + "; ";
+  consowe.wog("navigatowexampwe", mya t-txt);
 }
-  </pre>
-</figure>
+  </pwe>
+</figuwe>
 ```
 
-{{EmbedLiveSample("代码段", "100%", 250)}}
+{{embedwivesampwe("代码段", >w< "100%", nyaa~~ 250)}}
 
 ### 引用
 
-```html
-<figure>
-  <figcaption><b>Edsger Dijkstra:</b></figcaption>
-  <blockquote>
-    If debugging is the process of removing software bugs, then programming must
-    be the process of putting them in.
-  </blockquote>
-</figure>
+```htmw
+<figuwe>
+  <figcaption><b>edsgew dijkstwa:</b></figcaption>
+  <bwockquote>
+    if debugging is t-the pwocess of wemoving softwawe b-bugs, (✿oωo) then pwogwamming must
+    b-be the pwocess o-of putting them in. ʘwʘ
+  </bwockquote>
+</figuwe>
 ```
 
-{{EmbedLiveSample("引用")}}
+{{embedwivesampwe("引用")}}
 
 ### 诗歌
 
-```html
-<figure>
-  <p style="white-space:pre">
-    Bid me discourse, I will enchant thine ear, Or like a fairy trip upon the
-    green, Or, like a nymph, with long dishevelled hair, Dance on the sands, and
-    yet no footing seen: Love is a spirit all compact of fire, Not gross to
-    sink, but light, and will aspire.
+```htmw
+<figuwe>
+  <p stywe="white-space:pwe">
+    bid me discouwse, (ˆ ﻌ ˆ)♡ i wiww enchant thine eaw, 😳😳😳 ow wike a faiwy twip u-upon the
+    g-gween, :3 ow, wike a nyymph, OwO with w-wong dishevewwed h-haiw, (U ﹏ U) dance on t-the sands, >w< and
+    yet nyo footing seen: wuv is a spiwit aww compact o-of fiwe, (U ﹏ U) nyot gwoss to
+    sink, 😳 but wight, (ˆ ﻌ ˆ)♡ and wiww aspiwe. 😳😳😳
   </p>
-  <figcaption><cite>Venus and Adonis</cite>, by William Shakespeare</figcaption>
-</figure>
+  <figcaption><cite>venus and adonis</cite>, (U ﹏ U) b-by wiwwiam shakespeawe</figcaption>
+</figuwe>
 ```
 
-{{EmbedLiveSample("诗歌", "100%", 250)}}
+{{embedwivesampwe("诗歌", (///ˬ///✿) "100%", 😳 250)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{HTMLElement("figcaption")}} 元素
+- {{htmwewement("figcaption")}} 元素

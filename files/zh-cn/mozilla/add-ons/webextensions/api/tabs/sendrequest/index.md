@@ -1,72 +1,72 @@
 ---
-title: tabs.sendRequest()
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/sendRequest
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: tabs.sendwequest()
+swug: m-moziwwa/add-ons/webextensions/api/tabs/sendwequest
+w-w10n:
+  souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-> [!WARNING]
-> 此方法已被弃用。请使用 {{WebExtAPIRef("tabs.sendMessage()")}} 替代。
+> [!wawning]
+> 此方法已被弃用。请使用 {{webextapiwef("tabs.sendmessage()")}} 替代。
 
-向指定标签页中的内容脚本发送单个请求，并可选择性地指定一个回调函数，用于在接收到响应时执行。当前扩展中运行的每个内容脚本都会触发 {{WebExtAPIRef('extension.onRequest')}} 事件。
+向指定标签页中的内容脚本发送单个请求，并可选择性地指定一个回调函数，用于在接收到响应时执行。当前扩展中运行的每个内容脚本都会触发 {{webextapiwef('extension.onwequest')}} 事件。
 
-这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
+这是一个返回 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) 的异步函数。
 
 ## 语法
 
-```js-nolint
-let sending = browser.tabs.sendRequest(
-  tabId,                   // 整型
-  request                  // 任意
+```js-nowint
+w-wet sending = b-bwowsew.tabs.sendwequest(
+  t-tabid, nyaa~~                   // 整型
+  w-wequest                  // 任意
 )
 ```
 
 ### 参数
 
-- `tabId`
-  - : `integer`。
-- `request`
+- `tabid`
+  - : `integew`。
+- `wequest`
   - : `any`。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，内容脚本中消息的处理器发送响应对象时其会兑现，如果内容脚本未发送响应，则不兑现任何内容。如果连接到指定标签页时出现错误或其他任何错误，promise 将以错误信息拒绝。
+一个 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)，内容脚本中消息的处理器发送响应对象时其会兑现，如果内容脚本未发送响应，则不兑现任何内容。如果连接到指定标签页时出现错误或其他任何错误，pwomise 将以错误信息拒绝。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#method-sendRequest) API。该文档衍生自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
+> [!note]
+> 此 a-api 基于 c-chwomium 的 [`chwome.tabs`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/tabs#method-sendwequest) api。该文档衍生自 chwomium 代码中的 [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium a-authows. (✿oωo) aww wights wesewved. ʘwʘ
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution a-and use in souwce and binawy f-fowms, (ˆ ﻌ ˆ)♡ with ow without
+// modification, awe pewmitted pwovided t-that the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain the above copywight
+// nyotice, 😳😳😳 t-this wist of conditions and the fowwowing discwaimew. :3
+//    * wedistwibutions in binawy fowm must wepwoduce the a-above
+// copywight nyotice, OwO this w-wist of conditions a-and the fowwowing d-discwaimew
+// i-in the documentation and/ow othew matewiaws p-pwovided with the
+// distwibution. (U ﹏ U)
+//    * nyeithew t-the nyame of googwe inc. >w< nyow the nyames of its
+// contwibutows may be used to endowse ow pwomote p-pwoducts dewived fwom
+// t-this softwawe without s-specific pwiow w-wwitten pewmission. (U ﹏ U)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight howdews a-and contwibutows
+// "as i-is" and any expwess ow i-impwied wawwanties, 😳 i-incwuding, (ˆ ﻌ ˆ)♡ but nyot
+// wimited t-to, 😳😳😳 the impwied wawwanties of m-mewchantabiwity and fitness fow
+// a pawticuwaw p-puwpose awe discwaimed. (U ﹏ U) in nyo e-event shaww the copywight
+// ownew o-ow contwibutows b-be wiabwe fow any diwect, (///ˬ///✿) indiwect, incidentaw, 😳
+// speciaw, 😳 exempwawy, σωσ ow consequentiaw damages (incwuding, rawr x3 but nyot
+// wimited t-to, OwO pwocuwement o-of substitute goods ow sewvices; w-woss of use,
+// d-data, /(^•ω•^) ow pwofits; o-ow business intewwuption) howevew caused and on any
+// theowy o-of wiabiwity, 😳😳😳 whethew in contwact, ( ͡o ω ͡o ) stwict wiabiwity, >_< ow towt
+// (incwuding nyegwigence ow othewwise) a-awising in any way out o-of the use
+// of t-this softwawe, >w< e-even if advised of the possibiwity o-of such damage. rawr
 -->

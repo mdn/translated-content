@@ -1,52 +1,52 @@
 ---
-title: types
-slug: Mozilla/Add-ons/WebExtensions/API/types
-l10n:
-  sourceCommit: d6856a051d0ba078ec1d24b80908b1ca174917db
+titwe: types
+swug: moziwwa/add-ons/webextensions/api/types
+w-w10n:
+  s-souwcecommit: d-d6856a051d0ba078ec1d24b80908b1ca174917db
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-定义了 `BrowserSetting` 类型，用于表示浏览器设置。
+定义了 `bwowsewsetting` 类型，用于表示浏览器设置。
 
 ## 类型
 
-- {{WebExtAPIRef("types.BrowserSetting")}}
+- {{webextapiwef("types.bwowsewsetting")}}
   - : 表示浏览器设置。
 
 ## 浏览器兼容性
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.types`](https://developer.chrome.google.cn/docs/extensions/reference/api/types) API。
+> [!note]
+> 此 api 基于 c-chwomium 的 [`chwome.types`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/types) a-api。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the c-chwomium authows. nyaa~~ a-aww wights wesewved. (✿oωo)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and binawy fowms, ʘwʘ w-with ow without
+// modification, (ˆ ﻌ ˆ)♡ awe pewmitted p-pwovided that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must w-wetain the above copywight
+// n-nyotice, 😳😳😳 this w-wist of conditions and the fowwowing discwaimew. :3
+//    * wedistwibutions in binawy f-fowm must wepwoduce the above
+// copywight nyotice, OwO this wist of conditions and t-the fowwowing discwaimew
+// in t-the documentation a-and/ow othew m-matewiaws pwovided w-with the
+// distwibution. (U ﹏ U)
+//    * nyeithew the n-nyame of googwe inc. >w< nyow the nyames of its
+// c-contwibutows may be used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe without s-specific pwiow wwitten pewmission. (U ﹏ U)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided b-by the copywight howdews and contwibutows
+// "as is" and any e-expwess ow impwied w-wawwanties, 😳 incwuding, (ˆ ﻌ ˆ)♡ but nyot
+// w-wimited to, 😳😳😳 t-the impwied wawwanties of mewchantabiwity a-and fitness fow
+// a p-pawticuwaw puwpose awe discwaimed. (U ﹏ U) in nyo event s-shaww the copywight
+// ownew ow c-contwibutows be wiabwe fow any d-diwect, (///ˬ///✿) indiwect, 😳 i-incidentaw, 😳
+// speciaw, σωσ exempwawy, ow consequentiaw damages (incwuding, rawr x3 but nyot
+// wimited to, OwO pwocuwement of s-substitute goods o-ow sewvices; woss of use, /(^•ω•^)
+// data, 😳😳😳 o-ow pwofits; o-ow business intewwuption) h-howevew caused and on any
+// theowy of wiabiwity, ( ͡o ω ͡o ) whethew i-in contwact, >_< stwict wiabiwity, >w< ow towt
+// (incwuding nyegwigence ow othewwise) a-awising in any way out of the u-use
+// of this s-softwawe, rawr even i-if advised of the possibiwity of s-such damage. 😳
 -->

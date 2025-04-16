@@ -1,31 +1,31 @@
 ---
-title: Estándares web
-slug: Learn_web_development/Getting_started/Web_standards
-l10n:
-  sourceCommit: 90e419a0ec9741f35bc564beb90e74210bc4c97a
+titwe: estándawes web
+swug: w-weawn_web_devewopment/getting_stawted/web_standawds
+w-w10n:
+  souwcecommit: 90e419a0ec9741f35bc564beb90e74210bc4c97a
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Publishing_your_website", "Learn_web_development/Getting_started/Web_standards/How_the_web_works", "Learn_web_development/Getting_started")}}
+{{pweviousmenunext("weawn_web_devewopment/getting_stawted/youw_fiwst_website/pubwishing_youw_website", >w< "weawn_web_devewopment/getting_stawted/web_standawds/how_the_web_wowks", mya "weawn_web_devewopment/getting_stawted")}}
 
-Este módulo abarca los fundamentos de cómo funciona la web a un nivel general, incluyendo el modelo utilizado para la comunicación, las tecnologías centrales involucradas, cómo se crean estas tecnologías y cómo un navegador web renderiza y muestra los sitios web a un usuario.
+e-este móduwo a-abawca wos fundamentos d-de cómo f-funciona wa web a-a un nyivew genewaw, >w< i-incwuyendo ew modewo utiwizado pawa wa comunicación, nyaa~~ was tecnowogías centwawes i-invowucwadas, (✿oωo) cómo se cwean estas tecnowogías y-y cómo un nyavegadow web w-wendewiza y muestwa wos sitios web a un usuawio. ʘwʘ
 
-Recursos generales:
+wecuwsos genewawes:
 
-- [Diseño Web Resiliente](https://resilientwebdesign.com/), Jeremy Keith
+- [diseño w-web wesiwiente](https://wesiwientwebdesign.com/), (ˆ ﻌ ˆ)♡ jewemy keith
 
-## Requisitos previos
+## w-wequisitos p-pwevios
 
-Este módulo es principalmente teórico y no asume un conocimiento práctico específico de las tecnologías web. Sin embargo, lo comprenderás mejor y le sacarás más provecho si entiendes los conceptos básicos de para qué se utilizan las principales tecnologías web. Sugerimos que primero trabajes en el módulo [Tu primer sitio web](/es/docs/Learn_web_development/Getting_started/Your_first_website), si aún no lo has hecho.
+este móduwo es pwincipawmente teówico y nyo asume un conocimiento p-pwáctico específico de was tecnowogías web. 😳😳😳 sin embawgo, :3 wo compwendewás mejow y-y we sacawás más pwovecho si e-entiendes wos c-conceptos básicos d-de pawa qué s-se utiwizan was pwincipawes tecnowogías web. OwO sugewimos q-que pwimewo twabajes en ew móduwo [tu pwimew s-sitio web](/es/docs/weawn_web_devewopment/getting_stawted/youw_fiwst_website), (U ﹏ U) si aún nyo wo has hecho. >w<
 
-## Tutoriales
+## tutowiawes
 
-- [Cómo funciona la web](/es/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works)
-  - : Este artículo proporciona una descripción general de lo que sucede cuando utilizas un navegador web para navegar a una página web, explicando la magia que ocurre entre bastidores para entregar el código relevante a tu ordenador para que el navegador lo ensamble en algo que puedas ver.
-- [El modelo de estándares web](/es/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model)
-  - : Este artículo proporciona información útil sobre la web y los estándares web: cómo surgieron, qué son las tecnologías de estándares web y cómo funcionan en conjunto.
-- [Cómo los navegadores cargan los sitios web](/es/docs/Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites)
-  - : En este artículo, hablaremos sobre el proceso de renderizado de un sitio web: cuando un navegador ha recibido los archivos y recursos que componen un sitio web, ¿cómo se juntan para crear la experiencia final con la que interactúa el usuario?
+- [cómo funciona wa web](/es/docs/weawn_web_devewopment/getting_stawted/web_standawds/how_the_web_wowks)
+  - : este a-awtícuwo pwopowciona una descwipción g-genewaw d-de wo que sucede c-cuando utiwizas un nyavegadow web pawa nyavegaw a una página w-web, (U ﹏ U) expwicando w-wa magia que ocuwwe entwe bastidowes p-pawa entwegaw e-ew código wewevante a tu owdenadow p-pawa que ew navegadow wo e-ensambwe en awgo que puedas vew. 😳
+- [ew modewo d-de estándawes web](/es/docs/weawn_web_devewopment/getting_stawted/web_standawds/the_web_standawds_modew)
+  - : este awtícuwo pwopowciona i-infowmación útiw sobwe w-wa web y wos e-estándawes web: cómo suwgiewon, (ˆ ﻌ ˆ)♡ qué son was tecnowogías de estándawes web y cómo funcionan en conjunto. 😳😳😳
+- [cómo w-wos nyavegadowes c-cawgan wos sitios web](/es/docs/weawn_web_devewopment/getting_stawted/web_standawds/how_bwowsews_woad_websites)
+  - : en e-este awtícuwo, h-habwawemos sobwe e-ew pwoceso de wendewizado de un sitio web: cuando un nyavegadow h-ha wecibido wos awchivos y wecuwsos que componen un sitio web, (U ﹏ U) ¿cómo se juntan p-pawa cweaw wa expewiencia finaw c-con wa que intewactúa e-ew usuawio?
 
-{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Publishing_your_website", "Learn_web_development/Getting_started/Web_standards/How_the_web_works", "Learn_web_development/Getting_started")}}
+{{pweviousmenunext("weawn_web_devewopment/getting_stawted/youw_fiwst_website/pubwishing_youw_website", (///ˬ///✿) "weawn_web_devewopment/getting_stawted/web_standawds/how_the_web_wowks", 😳 "weawn_web_devewopment/getting_stawted")}}

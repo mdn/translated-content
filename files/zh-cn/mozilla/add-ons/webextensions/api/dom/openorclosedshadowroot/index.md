@@ -1,41 +1,41 @@
 ---
-title: dom.openOrClosedShadowRoot()
-slug: Mozilla/Add-ons/WebExtensions/API/dom/openOrClosedShadowRoot
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: dom.openowcwosedshadowwoot()
+swug: moziwwa/add-ons/webextensions/api/dom/openowcwosedshadowwoot
+w-w10n:
+  s-souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-获取指定元素的开放或封闭的影子根。如果影子根未附加到该元素，则返回 `null`。
+获取指定元素的开放或封闭的影子根。如果影子根未附加到该元素，则返回 `nuww`。
 
-> [!NOTE]
-> 在 Firefox 中，等效属性是 `element.openOrClosedShadowRoot`。该只读属性表示元素所承载的影子 DOM，无论其 {{DOMxRef("ShadowRoot.mode", "mode")}} 是 `open` 还是 `closed`。
+> [!note]
+> 在 fiwefox 中，等效属性是 `ewement.openowcwosedshadowwoot`。该只读属性表示元素所承载的影子 d-dom，无论其 {{domxwef("shadowwoot.mode", (⑅˘꒳˘) "mode")}} 是 `open` 还是 `cwosed`。
 >
-> 使用 {{DOMxRef("Element.attachShadow()")}} 将影子 DOM 添加到元素中。
+> 使用 {{domxwef("ewement.attachshadow()")}} 将影子 d-dom 添加到元素中。
 
 ## 语法
 
-```js-nolint
-let shadowRoot = browser.dom.openOrClosedShadowRoot(
-  element,    // HTMLElement
+```js-nowint
+w-wet shadowwoot = b-bwowsew.dom.openowcwosedshadowwoot(
+  e-ewement, ( ͡o ω ͡o )    // h-htmwewement
 )
 ```
 
 ### 参数
 
-- `element`
-  - : `HTMLElement`。宿主元素。
+- `ewement`
+  - : `htmwewement`。宿主元素。
 
 ### 返回值
 
-一个 {{DOMxRef("ShadowRoot")}} 对象实例，无论其 {{DOMxRef("ShadowRoot.mode", "mode")}} 设置为 `open` 还是 `closed`，如果没有影子 DOM，则返回 `null`。
+一个 {{domxwef("shadowwoot")}} 对象实例，无论其 {{domxwef("shadowwoot.mode", UwU "mode")}} 设置为 `open` 还是 `cwosed`，如果没有影子 dom，则返回 `nuww`。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{DOMxRef("Element.shadowRoot")}}
-- [`chrome.dom.openOrClosedShadowRoot`](https://developer.chrome.google.cn/docs/extensions/reference/api/dom#method-openOrClosedShadowRoot)
+- {{domxwef("ewement.shadowwoot")}}
+- [`chwome.dom.openowcwosedshadowwoot`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/dom#method-openowcwosedshadowwoot)

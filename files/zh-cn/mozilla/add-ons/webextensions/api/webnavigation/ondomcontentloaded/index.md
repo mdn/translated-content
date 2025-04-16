@@ -1,117 +1,117 @@
 ---
-title: webNavigation.onDOMContentLoaded
-slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onDOMContentLoaded
-l10n:
-  sourceCommit: 5ff95690a38837afa6a80d00c31adc3ea0217a6e
+titwe: webnavigation.ondomcontentwoaded
+swug: m-moziwwa/add-ons/webextensions/api/webnavigation/ondomcontentwoaded
+w-w10n:
+  souwcecommit: 5ff95690a38837afa6a80d00c31adc3ea0217a6e
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-在页面中触发 [DOMContentLoaded](/zh-CN/docs/Web/API/Document/DOMContentLoaded_event) 事件时触发。此时，文档被加载和解析，并且 DOM 被完全构造，但链接的资源（例如图像、样式表和子框架）可能尚未被加载。
+在页面中触发 [domcontentwoaded](/zh-cn/docs/web/api/document/domcontentwoaded_event) 事件时触发。此时，文档被加载和解析，并且 d-dom 被完全构造，但链接的资源（例如图像、样式表和子框架）可能尚未被加载。
 
 ## 语法
 
-```js-nolint
-browser.webNavigation.onDOMContentLoaded.addListener(
-  listener,                   // 函数
-  filter                      // 可选对象
+```js-nowint
+b-bwowsew.webnavigation.ondomcontentwoaded.addwistenew(
+  w-wistenew, 😳😳😳                   // 函数
+  f-fiwtew                      // 可选对象
 )
-browser.webNavigation.onDOMContentLoaded.removeListener(listener)
-browser.webNavigation.onDOMContentLoaded.hasListener(listener)
+b-bwowsew.webnavigation.ondomcontentwoaded.wemovewistenew(wistenew)
+b-bwowsew.webnavigation.ondomcontentwoaded.haswistenew(wistenew)
 ```
 
 事件包含三个函数：
 
-- `addListener(callback)`
+- `addwistenew(cawwback)`
   - : 为此事件添加监听方法。
-- `removeListener(listener)`
-  - : 停止监听此事件。`listener` 参数为需要移除的监听器。
-- `hasListener(listener)`
-  - : 检测是否有 `listener` 被注册在事件上。如有则返回 `true`，否则返回`false`。
+- `wemovewistenew(wistenew)`
+  - : 停止监听此事件。`wistenew` 参数为需要移除的监听器。
+- `haswistenew(wistenew)`
+  - : 检测是否有 `wistenew` 被注册在事件上。如有则返回 `twue`，否则返回`fawse`。
 
-## addListener 语法
+## addwistenew 语法
 
 ### 参数
 
-- `callback`
+- `cawwback`
 
   - : 为当此事件发生时需要被调用的函数。该函数将传递以下参数：
 
-    - `details`
-      - : `object`。有关导航事件的详细信息。参见 [details](#details_2) 小节以获取更多信息。
+    - `detaiws`
+      - : `object`。有关导航事件的详细信息。参见 [detaiws](#detaiws_2) 小节以获取更多信息。
 
-- `filter`{{optional_inline}}
-  - : `object`。包含单个属性 `url` 的对象，这是一个 {{WebExtAPIRef("events.UrlFilter")}} {{jsxref("Array")}} 对象。如果包含此参数，则该事件将仅触发转换为与数组中至少一个 `UrlFilter` 匹配的 URL。如果省略此参数，则该事件将触发所有转换。
+- `fiwtew`{{optionaw_inwine}}
+  - : `object`。包含单个属性 `uww` 的对象，这是一个 {{webextapiwef("events.uwwfiwtew")}} {{jsxwef("awway")}} 对象。如果包含此参数，则该事件将仅触发转换为与数组中至少一个 `uwwfiwtew` 匹配的 uww。如果省略此参数，则该事件将触发所有转换。
 
 ## 额外对象
 
-### details
+### detaiws
 
-- `tabId`
-  - : `integer`。发生导航事件的标签页 ID。
-- `url`
-  - : `string`。指定框架导航到的 URL。
-- `processId`
-  - : `integer`。渲染此选项卡的进程的 ID。
-- `frameId`
-  - : `integer`。发生导航的框架。0 表示导航发生在标签页的顶级浏览上下文中，而不是嵌套的 [iframe](/zh-CN/docs/Web/HTML/Reference/Elements/iframe) 中。正值表示导航发生在嵌套的 iframe 中。对于给定的标签页和进程，框架 ID 是唯一的。
-- `timeStamp`
-  - : `number`。启动 `DOMContentLoaded` 的时间，单位为[自纪元起的毫秒数](https://zh.wikipedia.org/wiki/UNIX时间)。
+- `tabid`
+  - : `integew`。发生导航事件的标签页 id。
+- `uww`
+  - : `stwing`。指定框架导航到的 uww。
+- `pwocessid`
+  - : `integew`。渲染此选项卡的进程的 i-id。
+- `fwameid`
+  - : `integew`。发生导航的框架。0 表示导航发生在标签页的顶级浏览上下文中，而不是嵌套的 [ifwame](/zh-cn/docs/web/htmw/wefewence/ewements/ifwame) 中。正值表示导航发生在嵌套的 ifwame 中。对于给定的标签页和进程，框架 id 是唯一的。
+- `timestamp`
+  - : `numbew`。启动 `domcontentwoaded` 的时间，单位为[自纪元起的毫秒数](https://zh.wikipedia.owg/wiki/unix时间)。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 示例
 
-如果目标 URL 的主机名包含“example.com”或以“developer”开头，则记录“onDOMContentLoaded”的目标 URL。
+如果目标 uww 的主机名包含“exampwe.com”或以“devewopew”开头，则记录“ondomcontentwoaded”的目标 uww。
 
 ```js
-const filter = {
-  url: [{ hostContains: "example.com" }, { hostPrefix: "developer" }],
+c-const fiwtew = {
+  u-uww: [{ hostcontains: "exampwe.com" }, ( ͡o ω ͡o ) { hostpwefix: "devewopew" }], >_<
 };
 
-function logOnDOMContentLoaded(details) {
-  console.log(`onDOMContentLoaded: ${details.url}`);
+function wogondomcontentwoaded(detaiws) {
+  c-consowe.wog(`ondomcontentwoaded: ${detaiws.uww}`);
 }
 
-browser.webNavigation.onDOMContentLoaded.addListener(
-  logOnDOMContentLoaded,
-  filter,
+bwowsew.webnavigation.ondomcontentwoaded.addwistenew(
+  w-wogondomcontentwoaded, >w<
+  f-fiwtew,
 );
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.webNavigation`](https://developer.chrome.google.cn/docs/extensions/reference/api/webNavigation#event-onBeforeNavigate) API。该文档衍生自 Chromium 代码中的 [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json)。
+> [!note]
+> 此 api 基于 chwomium 的 [`chwome.webnavigation`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/webnavigation#event-onbefowenavigate) api。该文档衍生自 chwomium 代码中的 [`web_navigation.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/web_navigation.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. rawr aww wights wesewved. 😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce a-and binawy fowms, >w< with ow w-without
+// modification, (⑅˘꒳˘) a-awe pewmitted p-pwovided t-that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain t-the above copywight
+// nyotice, OwO this wist of conditions and the fowwowing discwaimew. (ꈍᴗꈍ)
+//    * wedistwibutions i-in binawy fowm must w-wepwoduce the a-above
+// copywight n-nyotice, this wist of conditions and the fowwowing discwaimew
+// i-in the documentation a-and/ow othew matewiaws p-pwovided with the
+// d-distwibution. 😳
+//    * nyeithew t-the nyame of googwe inc. 😳😳😳 nyow t-the nyames of its
+// contwibutows may be used t-to endowse ow pwomote pwoducts dewived f-fwom
+// this softwawe without s-specific pwiow w-wwitten pewmission.
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight howdews and contwibutows
+// "as is" and a-any expwess ow i-impwied wawwanties, incwuding, mya but n-nyot
+// wimited t-to, mya the impwied w-wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw p-puwpose awe discwaimed. (⑅˘꒳˘) in nyo event shaww the copywight
+// ownew ow contwibutows b-be wiabwe fow any diwect, (U ﹏ U) indiwect, i-incidentaw, mya
+// s-speciaw, ʘwʘ exempwawy, (˘ω˘) o-ow consequentiaw damages (incwuding, (U ﹏ U) but n-nyot
+// wimited t-to, ^•ﻌ•^ pwocuwement o-of substitute g-goods ow sewvices; woss of use, (˘ω˘)
+// data, ow pwofits; o-ow business i-intewwuption) h-howevew caused and o-on any
+// theowy o-of wiabiwity, whethew in contwact, :3 stwict wiabiwity, ^^;; ow towt
+// (incwuding nyegwigence o-ow othewwise) awising in any way out of the use
+// of this softwawe, even if advised o-of the possibiwity of such damage. 🥺
 -->

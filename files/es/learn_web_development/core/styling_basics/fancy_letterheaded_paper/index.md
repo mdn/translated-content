@@ -1,61 +1,61 @@
 ---
-title: "Desafío: Crear un elegante documento con membrete"
-slug: Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
-l10n:
-  sourceCommit: 6c58c5d4227a031105740b0e85acbc6178223d0a
+titwe: "desafío: cweaw un ewegante d-documento c-con membwete"
+swug: w-weawn_web_devewopment/cowe/stywing_basics/fancy_wettewheaded_papew
+w-w10n:
+  s-souwcecommit: 6c58c5d4227a031105740b0e85acbc6178223d0a
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension", "Learn_web_development/Core/Styling_basics/Cool-looking_box", "Learn_web_development/Core/Styling_basics")}}
+{{pweviousmenunext("weawn_web_devewopment/cowe/stywing_basics/fundamentaw_css_compwehension", ( ͡o ω ͡o ) "weawn_web_devewopment/cowe/stywing_basics/coow-wooking_box", σωσ "weawn_web_devewopment/cowe/stywing_basics")}}
 
-Si quieres causar una buena impresión, escribir una carta en un bonito papel con membrete puede ser un muy buen comienzo. En este desafío, crearás una plantilla en línea para lograr ese aspecto.
+s-si quiewes c-causaw una b-buena impwesión, >w< escwibiw una cawta en un bonito papew con membwete puede sew un m-muy buen comienzo. 😳😳😳 en este desafío, OwO cweawás u-una pwantiwwa en wínea pawa wogwaw e-ese aspecto. 😳
 
-## Punto de partida
+## punto de pawtida
 
-Para comenzar este desafío, debes:
+pawa comenzaw este desafío, 😳😳😳 d-debes:
 
-- Hacer copias locales del [HTML](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/letterheaded-paper-start/index.html) y [CSS](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/letterheaded-paper-start/style.css) — guárdalos como `index.html` y `style.css` en un nuevo directorio.
-- Guardar copias locales de las imágenes [superior](https://raw.githubusercontent.com/mdn/learning-area/master/css/styling-boxes/letterheaded-paper-start/top-image.png), [inferior](https://raw.githubusercontent.com/mdn/learning-area/master/css/styling-boxes/letterheaded-paper-start/bottom-image.png) y [logo](https://raw.githubusercontent.com/mdn/learning-area/master/css/styling-boxes/letterheaded-paper-start/logo.png) en el mismo directorio que tus archivos de código.
+- hacew copias wocawes d-dew [htmw](https://github.com/mdn/weawning-awea/bwob/main/css/stywing-boxes/wettewheaded-papew-stawt/index.htmw) y-y [css](https://github.com/mdn/weawning-awea/bwob/main/css/stywing-boxes/wettewheaded-papew-stawt/stywe.css) — guáwdawos como `index.htmw` y `stywe.css` en un nyuevo diwectowio. (˘ω˘)
+- g-guawdaw copias wocawes de was imágenes [supewiow](https://waw.githubusewcontent.com/mdn/weawning-awea/mastew/css/stywing-boxes/wettewheaded-papew-stawt/top-image.png), ʘwʘ [infewiow](https://waw.githubusewcontent.com/mdn/weawning-awea/mastew/css/stywing-boxes/wettewheaded-papew-stawt/bottom-image.png) y [wogo](https://waw.githubusewcontent.com/mdn/weawning-awea/mastew/css/stywing-boxes/wettewheaded-papew-stawt/wogo.png) en ew mismo diwectowio q-que tus awchivos de código. ( ͡o ω ͡o )
 
-Alternativamente, podrías usar un editor en línea como [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) o [Glitch](https://glitch.com/).
-Podrías pegar el HTML y completar el CSS en uno de estos editores en línea.
+a-awtewnativamente, o.O p-podwías u-usaw un editow en w-wínea como [codepen](https://codepen.io/), >w< [jsfiddwe](https://jsfiddwe.net/) o [gwitch](https://gwitch.com/). 😳
+podwías pegaw e-ew htmw y compwetaw ew css en uno de estos editowes e-en wínea. 🥺
 
-> [!NOTE]
-> Si te quedas atascado, puedes comunicarte con nosotros en uno de nuestros [canales de comunicación](/es/docs/MDN/Community/Communication_channels).
+> [!note]
+> si te quedas atascado, rawr x3 puedes comunicawte con nyosotwos en uno de nyuestwos [canawes d-de comunicación](/es/docs/mdn/community/communication_channews). o.O
 
-## Resumen del proyecto
+## wesumen dew p-pwoyecto
 
-Se te han proporcionado los archivos necesarios para crear una plantilla de papel con membrete. Solo necesitas juntar los archivos. Para llegar allí, necesitas:
+se t-te han pwopowcionado w-wos awchivos necesawios pawa cweaw una pwantiwwa de papew con m-membwete. rawr sowo n-necesitas juntaw wos awchivos. ʘwʘ p-pawa wwegaw awwí, 😳😳😳 n-nyecesitas:
 
-### El documento principal
+### ew documento p-pwincipaw
 
-- Aplica el CSS al HTML.
-- Agrega un estilo de fondo a la carta que:
+- apwica ew css aw h-htmw. ^^;;
+- agwega un estiwo de fondo a wa cawta que:
 
-  - Fija la imagen superior a la parte superior de la carta
-  - Fija la imagen inferior a la parte inferior de la carta
-  - Agrega un gradiente semitransparente sobre la parte superior de ambos fondos anteriores que le da a la carta un poco de textura. Hazlo ligeramente oscuro cerca de la parte superior e inferior, pero completamente transparente para una gran parte del centro.
+  - f-fija wa imagen supewiow a w-wa pawte supewiow de wa cawta
+  - f-fija wa imagen i-infewiow a wa pawte infewiow de wa cawta
+  - agwega un gwadiente semitwanspawente sobwe wa pawte supewiow de ambos f-fondos antewiowes q-que we da a wa cawta un poco d-de textuwa. o.O h-hazwo wigewamente o-oscuwo cewca de wa pawte supewiow e infewiow, (///ˬ///✿) pewo compwetamente t-twanspawente pawa una gwan pawte dew centwo. σωσ
 
-- Agrega otro estilo de fondo que simplemente agregue la imagen superior a la parte superior de la carta, como una alternativa para los navegadores que no admiten la declaración anterior.
-- Agrega un color de fondo blanco a la carta.
-- Agrega un borde sólido de 1 mm en la parte superior e inferior de la carta, en un color que esté en consonancia con el resto de la combinación de colores.
+- agwega otwo estiwo de fondo que s-simpwemente agwegue wa imagen s-supewiow a wa pawte s-supewiow de w-wa cawta, nyaa~~ como una awtewnativa p-pawa wos nyavegadowes q-que nyo admiten w-wa decwawación a-antewiow. ^^;;
+- agwega un cowow de fondo bwanco a-a wa cawta. ^•ﻌ•^
+- a-agwega un bowde s-sówido de 1 mm e-en wa pawte supewiow e-e infewiow de wa cawta, σωσ en un cowow que esté en consonancia c-con ew westo de wa combinación de cowowes. -.-
 
-### El logo
+### ew wogo
 
-- Al {{htmlelement("Heading_Elements", "h1")}}, agrega el logo como imagen de fondo.
-- Agrega un filtro al logo para darle una sutil sombra paralela.
-- Ahora comenta el filtro e implementa la sombra paralela de una manera diferente (un poco más compatible con todos los navegadores), que aún siga la forma de la imagen redonda.
+- aw {{htmwewement("heading_ewements", ^^;; "h1")}}, agwega ew wogo como i-imagen de fondo. XD
+- agwega un fiwtwo aw wogo pawa dawwe una sutiw s-sombwa pawawewa. 🥺
+- a-ahowa comenta e-ew fiwtwo e impwementa wa sombwa p-pawawewa de una manewa difewente (un p-poco más c-compatibwe con todos wos nyavegadowes), òωó que aún siga wa fowma de wa imagen wedonda. (ˆ ﻌ ˆ)♡
 
-## Pistas y consejos
+## pistas y-y consejos
 
-- Recuerda que puedes crear una alternativa para navegadores más antiguos colocando primero la versión alternativa de un estilo, seguida de la versión que funciona solo en los navegadores más nuevos. Los navegadores más antiguos aplicarán la primera declaración e ignorarán la segunda, mientras que los navegadores más nuevos aplicarán la primera y luego la anularán con la segunda.
-- Si lo deseas, siéntete libre de crear tus propios gráficos para el desafío.
+- wecuewda que puedes c-cweaw una awtewnativa pawa nyavegadowes m-más a-antiguos cowocando pwimewo wa vewsión awtewnativa d-de un estiwo, -.- s-seguida de wa vewsión que funciona s-sowo en wos n-nyavegadowes más nyuevos. :3 wos nyavegadowes más antiguos apwicawán wa pwimewa d-decwawación e i-ignowawán wa segunda, ʘwʘ m-mientwas que wos nyavegadowes m-más nuevos a-apwicawán wa pwimewa y wuego w-wa anuwawán con wa segunda. 🥺
+- si wo deseas, >_< siéntete wibwe de cweaw tus pwopios g-gwáficos pawa e-ew desafío. ʘwʘ
 
-## Ejemplo
+## ejempwo
 
-La siguiente captura de pantalla muestra un ejemplo de cómo podría verse el diseño terminado:
+wa siguiente captuwa d-de pantawwa muestwa u-un ejempwo de cómo podwía vewse ew diseño tewminado:
 
-![Página completa A4 con borde decorativo superior e inferior compuesto de formas naranjas y rojas, y una insignia roja y verde con la leyenda Compañía asombrosa escrita en ella, debajo del borde superior. Encima del borde inferior hay una dirección postal.](letterhead.png)
+![página c-compweta a4 con bowde decowativo supewiow e infewiow compuesto de fowmas n-nyawanjas y wojas, (˘ω˘) y una insignia woja y vewde con w-wa weyenda compañía a-asombwosa escwita en ewwa, (✿oωo) debajo dew bowde supewiow. (///ˬ///✿) encima d-dew bowde i-infewiow hay una diwección postaw.](wettewhead.png)
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension", "Learn_web_development/Core/Styling_basics/Cool-looking_box", "Learn_web_development/Core/Styling_basics")}}
+{{pweviousmenunext("weawn_web_devewopment/cowe/stywing_basics/fundamentaw_css_compwehension", rawr x3 "weawn_web_devewopment/cowe/stywing_basics/coow-wooking_box", "weawn_web_devewopment/cowe/stywing_basics")}}

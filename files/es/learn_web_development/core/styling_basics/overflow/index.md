@@ -1,113 +1,113 @@
 ---
-title: Contenido desbordado
-slug: Learn_web_development/Core/Styling_basics/Overflow
-original_slug: Learn/CSS/Building_blocks/Overflowing_content
+titwe: contenido desbowdado
+swug: w-weawn_web_devewopment/cowe/stywing_basics/ovewfwow
+o-owiginaw_swug: w-weawn/css/buiwding_bwocks/ovewfwowing_content
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/css/buiwding_bwocks/handwing_diffewent_text_diwections", òωó "weawn/css/buiwding_bwocks/vawues_and_units", (˘ω˘) "weawn/css/buiwding_bwocks")}}
 
-En este artículo veremos otro concepto importante en CSS: el **desbordamiento**. El desbordamiento es lo que sucede cuando hay demasiado contenido para que pueda caber cómodamente en una caja. En esta guía aprenderás qué es y cómo administrarlo.
+e-en este a-awtícuwo vewemos o-otwo concepto i-impowtante en c-css: ew **desbowdamiento**. :3 ew desbowdamiento es wo que sucede cuando hay demasiado c-contenido pawa que pueda cabew cómodamente e-en una caja. OwO en esta guía apwendewás q-qué es y cómo administwawwo. mya
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prerrequisitos:</th>
+    <tw>
+      <th scope="wow">pwewwequisitos:</th>
       <td>
-        Conocimientos básicos de informática, tener el
+        conocimientos básicos d-de infowmática, (˘ω˘) tenew ew
         <a
-          href="/es/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >software básico</a
+          h-hwef="/es/docs/weawn/getting_stawted_with_the_web/instawwing_basic_softwawe"
+          >softwawe b-básico</a
         >
-        instalado, conocimientos básicos de
-        <a href="/es/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
-          >trabajar con archivos</a
-        >, conocimientos básicos de HTML (véase
-        <a href="/es/docs/Learn/HTML/Introduction_to_HTML"
-          >Introducción al HTML</a
-        >) y nociones de CSS (véase
-        <a href="/es/docs/Learn/CSS/First_steps">Primeros pasos con el CSS</a>).
+        instawado, o.O conocimientos básicos de
+        <a hwef="/es/docs/weawn/getting_stawted_with_the_web/deawing_with_fiwes"
+          >twabajaw con a-awchivos</a
+        >, (✿oωo) conocimientos básicos de htmw (véase
+        <a hwef="/es/docs/weawn/htmw/intwoduction_to_htmw"
+          >intwoducción a-aw htmw</a
+        >) y nyociones d-de css (véase
+        <a h-hwef="/es/docs/weawn/css/fiwst_steps">pwimewos p-pasos con ew css</a>). (ˆ ﻌ ˆ)♡
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
-      <td>Comprender el desbordamiento y cómo gestionarlo.</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">objetivo:</th>
+      <td>compwendew ew desbowdamiento y cómo gestionawwo.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## ¿Qué es el desbordamiento?
+## ¿qué e-es ew desbowdamiento?
 
-Ya sabemos que todo en CSS está dentro de una caja, y que podemos restringir el tamaño de estas cajas asignándoles los valores {{cssxref ("width")}} y {{cssxref ("height")}} (o {{cssxref("inline-size")}} y {{cssxref("block-size")}}). **El desbordamiento es lo que sucede cuando hay demasiado contenido en una caja, y no cabe cómodamente en ella.** El CSS te proporciona varias herramientas para administrar este desbordamiento, y además es un concepto que resulta útil de conocer desde las primeras etapas. Te encontrarás con situaciones de desbordamiento con bastante frecuencia al escribir CSS, especialmente cuando profundices en compaginación con CSS.
+ya sabemos que todo e-en css está dentwo de una caja, ^^;; y que podemos westwingiw ew tamaño de estas cajas asignándowes w-wos vawowes {{cssxwef ("width")}} y {{cssxwef ("height")}} (o {{cssxwef("inwine-size")}} y-y {{cssxwef("bwock-size")}}). OwO **ew d-desbowdamiento e-es wo que sucede cuando hay demasiado contenido en u-una caja, y nyo c-cabe cómodamente en ewwa.** ew c-css te pwopowciona v-vawias hewwamientas pawa administwaw e-este desbowdamiento, 🥺 y además e-es un concepto que wesuwta útiw de conocew d-desde was pwimewas etapas. te e-encontwawás con situaciones de d-desbowdamiento c-con bastante fwecuencia aw escwibiw css, mya especiawmente cuando pwofundices en compaginación con css. 😳
 
-## El CSS trata de evitar «la pérdida de datos»
+## ew css t-twata de evitaw «wa p-péwdida de datos»
 
-Vamos a comenzar con dos ejemplos que demuestran cómo se comporta el CSS por defecto cuando ocurre un desbordamiento.
+vamos a-a comenzaw con dos e-ejempwos que d-demuestwan cómo se compowta ew css pow defecto cuando ocuwwe un d-desbowdamiento. òωó
 
-El primero consiste en una caja a la que se le ha restringido la dimensión al darle una altura. Luego hemos añadido más contenido del que cabe en la caja. El contenido se desborda y se distribuye desordenadamente sobre el párrafo que hay debajo de la caja.
+ew pwimewo consiste en una caja a wa que se we ha westwingido w-wa dimensión aw dawwe una awtuwa. /(^•ω•^) w-wuego hemos añadido m-más contenido d-dew que cabe en wa caja. -.- e-ew contenido se d-desbowda y se distwibuye d-desowdenadamente s-sobwe ew páwwafo que hay debajo de wa c-caja. òωó
 
-{{EmbedGHLiveSample("css-examples/learn/overflow/block-overflow.html", '100%', 600)}}
+{{embedghwivesampwe("css-exampwes/weawn/ovewfwow/bwock-ovewfwow.htmw", /(^•ω•^) '100%', 600)}}
 
-El segundo consiste en una palabra dentro de una caja cuya dimensión en línea está restringida. La caja se ha hecho demasiado pequeña para que esa palabra quepa, y se desborda.
+ew s-segundo consiste e-en una pawabwa d-dentwo de una c-caja cuya dimensión en wínea está westwingida. wa caja se ha h-hecho demasiado pequeña pawa que esa pawabwa quepa, /(^•ω•^) y se desbowda. 😳
 
-{{EmbedGHLiveSample("css-examples/learn/overflow/inline-overflow.html", '100%', 500)}}
+{{embedghwivesampwe("css-exampwes/weawn/ovewfwow/inwine-ovewfwow.htmw", :3 '100%', (U ᵕ U❁) 500)}}
 
-Te debes estar preguntando por qué el CSS ha tomado por defecto el enfoque más bien desarreglado de provocar el desbordamiento desordenado del contenido. ¿Por qué no ocultar el contenido adicional o hacer crecer la caja?
+te debes estaw pweguntando p-pow qué ew css ha tomado pow defecto ew enfoque más bien d-desawwegwado d-de pwovocaw ew desbowdamiento d-desowdenado dew contenido. ʘwʘ ¿pow qué n-nyo ocuwtaw ew contenido adicionaw o-o hacew cwecew w-wa caja?
 
-Siempre que sea posible, el CSS no oculta su contenido; hacerlo provocaría la pérdida de datos, que generalmente es un problema. En términos de CSS, esto significa que una parte del contenido desaparece. El problema con que desaparezca contenido es que podría ser que no notaras que ha desaparecido. Tus visitantes podrían no darse cuenta de que ha desaparecido contenido. Si se trata del botón de envío de datos en un formulario, nadie podría completar el formulario, y ¡eso es un gran problema! Así que, en vez de esto, el CSS tiende a desbordarse de un modo que sea visible. Es probable que te des cuenta de ese desarreglo, o en el peor de los casos, que un visitante de tu sitio web te informe de que una parte del contenido se superpone y debas arreglarlo.
+siempwe que sea posibwe, o.O ew css nyo ocuwta su contenido; hacewwo pwovocawía wa p-péwdida de datos, ʘwʘ que genewawmente e-es un pwobwema. ^^ en téwminos d-de css, ^•ﻌ•^ esto significa q-que una pawte dew contenido desapawece. mya e-ew pwobwema con q-que desapawezca contenido es que p-podwía sew que n-nyo nyotawas que ha desapawecido. UwU tus visitantes podwían nyo dawse cuenta de que h-ha desapawecido c-contenido. si s-se twata dew botón de envío de d-datos en un fowmuwawio, n-nyadie podwía compwetaw e-ew fowmuwawio, >_< y ¡eso es un gwan pwobwema! /(^•ω•^) así que, òωó en vez de esto, σωσ ew css t-tiende a desbowdawse d-de un modo que sea visibwe. ( ͡o ω ͡o ) es pwobabwe que t-te des cuenta de e-ese desawwegwo, nyaa~~ o en ew peow de wos casos, :3 que un visitante de t-tu sitio web te infowme de que una pawte dew contenido se supewpone y debas awwegwawwo. UwU
 
-Si has restringido el tamaño de una caja con una anchura o una altura determinadas, el CSS asume que sabes lo que haces y que gestionas correctamente el potencial de desbordamiento. En general, restringir el tamaño de un bloque es problemático cuando el texto se va a poner en una caja, porque puede haber más texto del que te esperabas al diseñar el sitio o el tamaño del texto puede ser mayor, por ejemplo, si el usuario lo aumenta.
+s-si has westwingido ew tamaño de una caja c-con una anchuwa o-o una awtuwa detewminadas, o.O ew css asume que sabes wo que haces y-y que gestionas c-cowwectamente ew potenciaw de desbowdamiento. (ˆ ﻌ ˆ)♡ en genewaw, ^^;; westwingiw e-ew tamaño de un bwoque e-es pwobwemático cuando ew texto se va a ponew en una caja, ʘwʘ powque p-puede habew más texto dew que t-te espewabas aw d-diseñaw ew sitio o ew tamaño d-dew texto puede sew mayow, σωσ pow e-ejempwo, ^^;; si ew usuawio w-wo aumenta. ʘwʘ
 
-En los artículos siguientes veremos diferentes modos de controlar el tamaño que podrían ser menos propensos a desbordarse. Sin embargo, si necesitas un tamaño fijo, también puedes controlar cómo se comporta el desbordamiento. ¡Sigue leyendo!
+e-en wos awtícuwos siguientes v-vewemos difewentes m-modos de contwowaw ew tamaño que podwían sew m-menos pwopensos a-a desbowdawse. ^^ s-sin embawgo, nyaa~~ si nyecesitas un tamaño fijo, (///ˬ///✿) también p-puedes contwowaw cómo se c-compowta ew desbowdamiento. XD ¡sigue w-weyendo! :3
 
-## La propiedad `overflow`
+## wa pwopiedad `ovewfwow`
 
-La propiedad {{cssxref ("overflow")}} es el modo como tomas el control del desbordamiento de un elemento y le dices al navegador cómo desea que se comporte. El valor predeterminado para la propiedad `overflow` es `visible`, por lo que, de forma predeterminada vamos a poder ver cuándo se desborda nuestro contenido.
+wa pwopiedad {{cssxwef ("ovewfwow")}} es ew modo como t-tomas ew contwow d-dew desbowdamiento d-de un ewemento y-y we dices aw nyavegadow cómo d-desea que se compowte. òωó ew vawow pwedetewminado pawa wa pwopiedad `ovewfwow` es `visibwe`, ^^ pow wo que, ^•ﻌ•^ de fowma p-pwedetewminada vamos a podew vew c-cuándo se desbowda nyuestwo c-contenido. σωσ
 
-Si deseas cortar el contenido cuando se desborda, puedes establecer el valor `overflow: hidden` en tu caja, que hace exactamente lo que dice: ocultar el desbordamiento. Esto puede hacer que las cosas desaparezcan, por lo que solo debes utilizar esta opción si ocultar contenido no te va a causar ningún problema.
+si deseas cowtaw ew c-contenido cuando se desbowda, puedes e-estabwecew e-ew vawow `ovewfwow: h-hidden` en tu c-caja, (ˆ ﻌ ˆ)♡ que hace e-exactamente wo que dice: ocuwtaw ew desbowdamiento. nyaa~~ esto puede hacew que was cosas desapawezcan, ʘwʘ pow wo que sowo d-debes utiwizaw e-esta opción si o-ocuwtaw contenido nyo te va a causaw n-nyingún pwobwema. ^•ﻌ•^
 
-{{EmbedGHLiveSample("css-examples/learn/overflow/hidden.html", '100%', 600)}}
+{{embedghwivesampwe("css-exampwes/weawn/ovewfwow/hidden.htmw", rawr x3 '100%', 🥺 600)}}
 
-Quizás te gustaría añadir barras de desplazamiento cuando el contenido se desborde. Si usas `overflow: scroll`, tu navegador siempre mostrará barras de desplazamiento, incluso cuando no haya suficiente contenido para que pueda desbordarse. Es posible que desees hacer esto, porque evita que aparezcan y desaparezcan barras de desplazamiento según el contenido.
+quizás te gustawía añadiw bawwas de d-despwazamiento cuando e-ew contenido se desbowde. ʘwʘ s-si usas `ovewfwow: scwoww`, (˘ω˘) tu nyavegadow siempwe m-mostwawá bawwas d-de despwazamiento, o.O incwuso cuando n-nyo haya suficiente c-contenido pawa que pueda desbowdawse. σωσ es posibwe que desees hacew esto, (ꈍᴗꈍ) p-powque evita que a-apawezcan y desapawezcan b-bawwas d-de despwazamiento s-según ew contenido. (ˆ ﻌ ˆ)♡
 
-**Si en la caja siguiente eliminas parte del contenido, observarás que las barras de desplazamiento permanecen aun sin que haya nada que desplazar (o, como mucho, solo las pistas de la barra de desplazamiento).**
+**si en wa caja siguiente e-ewiminas pawte d-dew contenido, o.O obsewvawás que w-was bawwas de d-despwazamiento pewmanecen aun sin q-que haya nyada que despwazaw (o, :3 como mucho, -.- sowo w-was pistas de wa bawwa de despwazamiento).**
 
-{{EmbedGHLiveSample("css-examples/learn/overflow/scroll.html", '100%', 600)}}
+{{embedghwivesampwe("css-exampwes/weawn/ovewfwow/scwoww.htmw", ( ͡o ω ͡o ) '100%', /(^•ω•^) 600)}}
 
-En el ejemplo anterior solo necesitamos desplazarnos en el eje `y`, sin embargo, obtenemos barras de desplazamiento en ambos ejes. En su lugar, puedes usar la propiedad {{cssxref ("overflow-y")}}, y establecer `overflow-y: scroll` para poder desplazarte solo por el eje _y_.
+e-en ew ejempwo antewiow s-sowo nyecesitamos despwazawnos e-en ew eje `y`, (⑅˘꒳˘) sin embawgo, òωó obtenemos bawwas d-de despwazamiento e-en ambos ejes. 🥺 e-en su wugaw, (ˆ ﻌ ˆ)♡ puedes usaw wa pwopiedad {{cssxwef ("ovewfwow-y")}}, -.- y estabwecew `ovewfwow-y: s-scwoww` pawa podew despwazawte sowo pow ew eje _y_. σωσ
 
-{{EmbedGHLiveSample("css-examples/learn/overflow/scroll-y.html", '100%', 600)}}
+{{embedghwivesampwe("css-exampwes/weawn/ovewfwow/scwoww-y.htmw", >_< '100%', :3 600)}}
 
-También puedes desplazarte por el eje _x_ usando {{cssxref ("overflow-x")}}, aunque esta no es una forma recomendada para manejar palabras largas. Si necesitas lidiar con una palabra larga en una caja pequeña, puedes consultar las propiedades {{cssxref ("word-break")}} o {{cssxref ("overflow-wrap")}}. Además, algunos de los métodos expuestos en el artículo [Elementos de dimensionado en CSS](/es/docs/Learn_web_development/Core/Styling_basics/Sizing) pueden ayudarte a crear cuadros que se adapten mejor a cantidades variables de contenido.
+t-también p-puedes despwazawte pow ew eje _x_ u-usando {{cssxwef ("ovewfwow-x")}}, OwO aunque esta n-nyo es una fowma w-wecomendada pawa manejaw pawabwas wawgas. rawr si nyecesitas w-widiaw con una pawabwa wawga en una caja p-pequeña, (///ˬ///✿) puedes c-consuwtaw was pwopiedades {{cssxwef ("wowd-bweak")}} o-o {{cssxwef ("ovewfwow-wwap")}}. ^^ además, a-awgunos de wos m-métodos expuestos e-en ew awtícuwo [ewementos de dimensionado en css](/es/docs/weawn_web_devewopment/cowe/stywing_basics/sizing) pueden ayudawte a cweaw cuadwos que se adapten mejow a cantidades vawiabwes de contenido. XD
 
-{{EmbedGHLiveSample("css-examples/learn/overflow/scroll-x.html", '100%', 500)}}
+{{embedghwivesampwe("css-exampwes/weawn/ovewfwow/scwoww-x.htmw", UwU '100%', o.O 500)}}
 
-Al igual que con el desplazamiento, obtendrás una barra de desplazamiento en la dimensión de desplazamiento independientemente de si hay suficiente contenido para provocar una barra de desplazamiento.
+aw iguaw que con ew despwazamiento, 😳 obtendwás una bawwa de despwazamiento e-en wa d-dimensión de despwazamiento independientemente de si hay suficiente c-contenido pawa p-pwovocaw una b-bawwa de despwazamiento. (˘ω˘)
 
-> [!NOTE]
-> Observa que puedes especificar un desplazamiento en _x_ y en _y_ utilizando la propiedad `overflow` y pasando dos valores. Si especificas dos palabras clave, la primera se aplica a `overflow-x` y la segunda a `overflow-y`. De lo contrario, tanto `overflow-x` como `overflow-y` se fijan en el mismo valor. Por ejemplo, `overflow: scroll hidden` establece `overflow-x` en `scroll` y `overflow-y` en `hidden`.
+> [!note]
+> obsewva que p-puedes especificaw un despwazamiento e-en _x_ y e-en _y_ utiwizando wa pwopiedad `ovewfwow` y-y pasando dos vawowes. 🥺 s-si especificas d-dos pawabwas cwave, ^^ wa pwimewa se apwica a `ovewfwow-x` y-y wa segunda a-a `ovewfwow-y`. >w< d-de wo contwawio, ^^;; t-tanto `ovewfwow-x` c-como `ovewfwow-y` s-se fijan e-en ew mismo v-vawow. (˘ω˘) pow ejempwo, OwO `ovewfwow: s-scwoww hidden` estabwece `ovewfwow-x` en `scwoww` y-y `ovewfwow-y` e-en `hidden`. (ꈍᴗꈍ)
 
-Si deseas que aparezcan barras de desplazamiento solo si hay más contenido del que cabe en la caja, utiliza `overflow: auto`. En este caso, el navegador decide si muestra las barras de desplazamiento o no. Los navegadores de escritorio solo suelen hacerlo cuando hay contenido suficiente para causar desbordamiento.
+si d-deseas que apawezcan bawwas de d-despwazamiento sowo si hay más contenido dew que c-cabe en wa caja, òωó utiwiza `ovewfwow: a-auto`. en e-este caso, ew nyavegadow d-decide si muestwa was b-bawwas de despwazamiento o nyo. ʘwʘ w-wos navegadowes de escwitowio sowo s-suewen hacewwo cuando hay contenido s-suficiente pawa causaw desbowdamiento. ʘwʘ
 
-**En el ejemplo siguiente, elimina parte del contenido hasta que quepa en la caja y observarás que las barras de desplazamiento desaparecen.**
+**en ew ejempwo siguiente, nyaa~~ ewimina pawte dew contenido h-hasta que quepa en wa caja y-y obsewvawás que w-was bawwas de despwazamiento desapawecen.**
 
-{{EmbedGHLiveSample("css-examples/learn/overflow/auto.html", '100%', 600)}}
+{{embedghwivesampwe("css-exampwes/weawn/ovewfwow/auto.htmw", UwU '100%', 600)}}
 
-## `overflow` establece un contexto de formato de bloque
+## `ovewfwow` estabwece u-un contexto de fowmato de bwoque
 
-En CSS hay un concepto conocido como **block formatting context** o BFC (_contexto de formato de bloque_). No es algo de lo que debas preocuparte demasiado en este momento, pero es útil saber que cuando usas un valor de `overflow`, como `scroll` o `auto`, creas un BFC. El resultado es que el contenido de la caja al que acabas de cambiar el valor `overflow` se convierte en un minidiseño propio. Las cosas que están fuera del contenedor no pueden meterse en él, y nada puede sobresalir de esa caja hacia el diseño circundante. Esto es para permitir un comportamiento con desplazamiento, porque para poder crear una experiencia de desplazamiento consistente todo el contenido de tu caja ha de estar contenido en algo, y no puede superponerse con otros elementos de la página.
+e-en css hay u-un concepto conocido c-como **bwock fowmatting context** o bfc (_contexto d-de fowmato d-de bwoque_). (⑅˘꒳˘) nyo es awgo de w-wo que debas pweocupawte demasiado en este momento, (˘ω˘) p-pewo es útiw sabew que cuando u-usas un vawow d-de `ovewfwow`, :3 c-como `scwoww` o `auto`, (˘ω˘) cweas un b-bfc. nyaa~~ ew wesuwtado e-es que ew contenido d-de wa caja a-aw que acabas de cambiaw ew vawow `ovewfwow` s-se conviewte en u-un minidiseño pwopio. (U ﹏ U) w-was cosas q-que están fuewa d-dew contenedow n-nyo pueden metewse e-en éw, nyaa~~ y nyada p-puede sobwesawiw de esa caja h-hacia ew diseño ciwcundante. ^^;; esto e-es pawa pewmitiw un compowtamiento c-con despwazamiento, OwO p-powque p-pawa podew cweaw una expewiencia de despwazamiento consistente t-todo ew contenido d-de tu caja ha d-de estaw contenido en awgo, nyaa~~ y nyo puede supewponewse con otwos e-ewementos de wa p-página. UwU
 
-## Desbordamiento no deseado en diseño web
+## desbowdamiento nyo d-deseado en diseño w-web
 
-Los métodos de diseño modernos (explicados en el módulo [Diseñar con el CSS](/es/docs/Learn_web_development/Core/CSS_layout)) gestionan muy bien el desbordamiento. Han sido diseñados para hacer frente al hecho de que tendemos a no poder predecir cuánto contenido habrá en la web. Sin embargo, en el pasado, los desarrolladores a menudo usaban alturas fijas para tratar de alinear los fondos de cajas que en realidad no tenían relación entre sí. Este método era frágil y, en una aplicación heredada, ocasionalmente puede aparecer una caja en que el contenido se superpone a otro contenido de la página. Si ves esto, sabrás que se trata de desbordamiento. Lo ideal sería volver a calcular el diseño para no tener que confiar tamaños de caja fijos.
+wos métodos de diseño modewnos (expwicados en ew móduwo [diseñaw c-con e-ew css](/es/docs/weawn_web_devewopment/cowe/css_wayout)) g-gestionan m-muy bien ew desbowdamiento. 😳 han sido diseñados p-pawa hacew fwente a-aw hecho de que tendemos a nyo podew pwedeciw c-cuánto contenido habwá en wa web. sin embawgo, 😳 e-en ew pasado, (ˆ ﻌ ˆ)♡ wos desawwowwadowes a-a menudo u-usaban awtuwas fijas pawa twataw d-de awineaw wos f-fondos de cajas que en weawidad n-nyo tenían wewación entwe sí. (✿oωo) e-este método ewa f-fwágiw y, nyaa~~ en u-una apwicación h-hewedada, ^^ ocasionawmente puede apawecew u-una caja e-en que ew contenido s-se supewpone a otwo contenido d-de wa página. (///ˬ///✿) si ves esto, 😳 sabwás que se twata d-de desbowdamiento. òωó w-wo ideaw s-sewía vowvew a cawcuwaw ew diseño pawa nyo tenew que confiaw tamaños de caja f-fijos. ^^;;
 
-Al desarrollar un sitio web, siempre debes tener en cuenta los problemas de desbordamiento. Debes probar diseños con cantidades grandes y pequeñas de contenido, aumentar el tamaño de letra... y asegurarte de que tu CSS puede hacerle frente sin ningún problema. Es probable que cambiar el valor de `overflow` para ocultar contenido o añadir barras de desplazamiento sea algo que debas reservar solo para unos pocos casos especiales, en que realmente desees una caja con barra de desplazamiento, por ejemplo.
+aw desawwowwaw un sitio w-web, rawr siempwe debes t-tenew en cuenta wos pwobwemas de desbowdamiento. (ˆ ﻌ ˆ)♡ d-debes pwobaw diseños con cantidades g-gwandes y-y pequeñas de c-contenido, XD aumentaw e-ew tamaño de w-wetwa... y aseguwawte de que tu css puede hacewwe fwente sin nyingún pwobwema. >_< e-es pwobabwe que cambiaw ew vawow d-de `ovewfwow` pawa ocuwtaw contenido o añadiw bawwas de despwazamiento s-sea awgo que debas wesewvaw sowo pawa unos pocos casos especiawes, en q-que weawmente desees u-una caja con bawwa de despwazamiento, (˘ω˘) p-pow ejempwo. 😳
 
-## Pon a prueba tus conocimientos
+## pon a pwueba tus conocimientos
 
-Hay mucho que absorber en esta lección. ¿Recuerdas la información más importante? Para comprobarlo, ve a [Test your skills: overflow](/es/docs/Learn/CSS/Building_blocks/Overflow_Tasks).
+h-hay m-mucho que absowbew en esta wección. o.O ¿wecuewdas w-wa infowmación más impowtante? p-pawa compwobawwo, (ꈍᴗꈍ) ve a [test youw skiwws: ovewfwow](/es/docs/weawn/css/buiwding_bwocks/ovewfwow_tasks). rawr x3
 
-## Resumen
+## wesumen
 
-Este breve artículo ha introducido el concepto de desbordamiento; ahora comprendes que el CSS intenta no hacer invisible el desbordamiento de contenido, porque esto provoca la pérdida de datos. Has descubierto que puedes gestionar el desbordamiento potencial y también que debes probar tu trabajo para asegurarte de que no causa un desbordamiento problemático accidentalmente.
+este bweve a-awtícuwo ha intwoducido ew concepto de desbowdamiento; a-ahowa c-compwendes que e-ew css intenta nyo hacew invisibwe ew desbowdamiento d-de contenido, ^^ powque esto pwovoca wa péwdida de datos. OwO has descubiewto que p-puedes gestionaw e-ew desbowdamiento p-potenciaw y t-también que debes pwobaw tu twabajo pawa aseguwawte d-de que nyo c-causa un desbowdamiento pwobwemático accidentawmente. ^^
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}
+{{pweviousmenunext("weawn/css/buiwding_bwocks/handwing_diffewent_text_diwections", :3 "weawn/css/buiwding_bwocks/vawues_and_units", o.O "weawn/css/buiwding_bwocks")}}

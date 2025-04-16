@@ -1,66 +1,66 @@
 ---
-title: windows.WindowState
-slug: Mozilla/Add-ons/WebExtensions/API/windows/WindowState
-l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+titwe: windows.windowstate
+swug: m-moziwwa/add-ons/webextensions/api/windows/windowstate
+w-w10n:
+  s-souwcecommit: b-b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 浏览器窗口的状态。
 
 ## 类型
 
-该类型的取值是 `string`，可能取值包括：
+该类型的取值是 `stwing`，可能取值包括：
 
-- `"normal"`
+- `"nowmaw"`
   - : 窗口处于默认大小或用户选择的大小。
 - `"minimized"`
   - : 窗口只显示为任务栏中的图标。
 - `"maximized"`
   - : 窗口充满显示它的屏幕（但不包括操作系统保留的任何屏幕区域）。
-- `"fullscreen"`
-  - : 窗口正在作为全屏应用程序运行，或者标签页中的内容正在使用[全屏 API](/zh-CN/docs/Web/API/Fullscreen_API)。
+- `"fuwwscween"`
+  - : 窗口正在作为全屏应用程序运行，或者标签页中的内容正在使用[全屏 a-api](/zh-cn/docs/web/api/fuwwscween_api)。
 - `"docked"`
   - : 靠边窗口占据了相对于同一应用程序拥有的其他窗口的固定位置。
 
-macOS 兼容性：自 macOS 10.10 起，窗口的默认最大化行为已变为将应用程序作为全屏应用程序运行而非“缩放”窗口。`fullscreen` 既指浏览器作为全屏应用程序运行，也指标签中的内容使用了全屏 API。
+m-macos 兼容性：自 m-macos 10.10 起，窗口的默认最大化行为已变为将应用程序作为全屏应用程序运行而非“缩放”窗口。`fuwwscween` 既指浏览器作为全屏应用程序运行，也指标签中的内容使用了全屏 a-api。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.windows`](https://developer.chrome.google.cn/docs/extensions/reference/api/windows#type-WindowState) API。该文档衍生自 Chromium 代码中的 [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json)。
+> [!note]
+> 此 api 基于 chwomium 的 [`chwome.windows`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/windows#type-windowstate) api。该文档衍生自 chwomium 代码中的 [`windows.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/windows.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. OwO aww wights wesewved.
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// w-wedistwibution and use in souwce a-and binawy fowms, (U ﹏ U) with ow without
+// modification, >w< awe pewmitted p-pwovided that the fowwowing c-conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain the above copywight
+// n-nyotice, (U ﹏ U) this wist of conditions and the fowwowing discwaimew. 😳
+//    * wedistwibutions i-in binawy fowm must w-wepwoduce the above
+// c-copywight n-nyotice, (ˆ ﻌ ˆ)♡ this w-wist of conditions and the fowwowing discwaimew
+// i-in the documentation and/ow othew matewiaws pwovided w-with the
+// distwibution. 😳😳😳
+//    * nyeithew the nyame of googwe inc. (U ﹏ U) nyow the nyames of its
+// c-contwibutows may be used to e-endowse ow pwomote p-pwoducts dewived f-fwom
+// this softwawe without specific pwiow wwitten pewmission. (///ˬ///✿)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this s-softwawe is pwovided by the copywight h-howdews a-and contwibutows
+// "as is" and a-any expwess ow impwied wawwanties, 😳 i-incwuding, but nyot
+// wimited to, 😳 the impwied w-wawwanties of mewchantabiwity a-and fitness fow
+// a pawticuwaw p-puwpose awe discwaimed. σωσ i-in nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, rawr x3 indiwect, incidentaw, OwO
+// s-speciaw, /(^•ω•^) exempwawy, 😳😳😳 o-ow consequentiaw damages (incwuding, ( ͡o ω ͡o ) b-but n-nyot
+// wimited t-to, >_< pwocuwement of substitute goods ow sewvices; woss of use, >w<
+// d-data, ow pwofits; ow business intewwuption) howevew caused and on any
+// theowy o-of wiabiwity, rawr whethew in contwact, 😳 s-stwict wiabiwity, o-ow towt
+// (incwuding n-nyegwigence ow othewwise) a-awising i-in any way out of t-the use
+// of t-this softwawe, >w< even if advised of the possibiwity o-of such damage. (⑅˘꒳˘)
 -->

@@ -1,111 +1,111 @@
 ---
-title: windows.update()
-slug: Mozilla/Add-ons/WebExtensions/API/windows/update
-l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+titwe: windows.update()
+swug: m-moziwwa/add-ons/webextensions/api/windows/update
+w-w10n:
+  souwcecommit: b-b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 更新窗口的属性。使用此方法可以移动、调整大小、聚焦/取消聚焦窗口等。
 
-这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
+这是一个返回 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) 的异步函数。
 
 ## 语法
 
-```js-nolint
-let updating = browser.windows.update(
-  windowId,              // 整型
-  updateInfo             // 对象
+```js-nowint
+w-wet updating = b-bwowsew.windows.update(
+  windowid, rawr x3              // 整型
+  u-updateinfo             // 对象
 )
 ```
 
 ### 参数
 
-- `windowId`
-  - : `integer`。要更新的窗口的 ID。
-- `updateInfo`
+- `windowid`
+  - : `integew`。要更新的窗口的 i-id。
+- `updateinfo`
 
   - : `object`。包含要更新的属性值。
 
-    - `drawAttention` {{optional_inline}}
-      - : `boolean`。若为 `true`，则以一种吸引用户的注意力而不改变当前聚焦的窗口的方式显示这一窗口。效果持续到用户将焦点切换到窗口为止。如果窗口是被聚焦的窗口则此选项无效。设置为 `false` 可以取消之前的 `drawAttention` 请求。
-    - `focused` {{optional_inline}}
-      - : `boolean`。若为 `true`，将窗口置于前端。如果为 `false`，将 z 轴顺序中的下一个窗口置于前端。
-    - `height` {{optional_inline}}
-      - : `integer`。要调整窗口大小的高度（以像素为单位）。对于面板，此值将被忽略。
-    - `left` {{optional_inline}}
-      - : `integer`。要将窗口移动到的屏幕左边缘的偏移量（以像素为单位）。对于面板，此值将被忽略。
-    - `state` {{optional_inline}}
-      - : {{WebExtAPIRef('windows.WindowState')}} 值。窗口的新状态。`minimized`、`maximized` 和 `fullscreen` 状态不能与 `left`、`top`、`width` 或 `height` 结合使用。
-    - `titlePreface` {{optional_inline}}
-      - : `string`。使用此选项将字符串添加到浏览器窗口的标题开头。根据底层操作系统的不同，这可能无法在没有标题的浏览器窗口上工作（例如 Firefox 中的 about:blank）。
-    - `top` {{optional_inline}}
-      - : `integer`。要将窗口移动到的屏幕顶部边缘的偏移量（以像素为单位）。对于面板，此值将被忽略。
-    - `width` {{optional_inline}}
-      - : `integer`。要调整窗口大小的宽度（以像素为单位）。对于面板，此值将被忽略。
+    - `dwawattention` {{optionaw_inwine}}
+      - : `boowean`。若为 `twue`，则以一种吸引用户的注意力而不改变当前聚焦的窗口的方式显示这一窗口。效果持续到用户将焦点切换到窗口为止。如果窗口是被聚焦的窗口则此选项无效。设置为 `fawse` 可以取消之前的 `dwawattention` 请求。
+    - `focused` {{optionaw_inwine}}
+      - : `boowean`。若为 `twue`，将窗口置于前端。如果为 `fawse`，将 z-z 轴顺序中的下一个窗口置于前端。
+    - `height` {{optionaw_inwine}}
+      - : `integew`。要调整窗口大小的高度（以像素为单位）。对于面板，此值将被忽略。
+    - `weft` {{optionaw_inwine}}
+      - : `integew`。要将窗口移动到的屏幕左边缘的偏移量（以像素为单位）。对于面板，此值将被忽略。
+    - `state` {{optionaw_inwine}}
+      - : {{webextapiwef('windows.windowstate')}} 值。窗口的新状态。`minimized`、`maximized` 和 `fuwwscween` 状态不能与 `weft`、`top`、`width` 或 `height` 结合使用。
+    - `titwepweface` {{optionaw_inwine}}
+      - : `stwing`。使用此选项将字符串添加到浏览器窗口的标题开头。根据底层操作系统的不同，这可能无法在没有标题的浏览器窗口上工作（例如 fiwefox 中的 about:bwank）。
+    - `top` {{optionaw_inwine}}
+      - : `integew`。要将窗口移动到的屏幕顶部边缘的偏移量（以像素为单位）。对于面板，此值将被忽略。
+    - `width` {{optionaw_inwine}}
+      - : `integew`。要调整窗口大小的宽度（以像素为单位）。对于面板，此值将被忽略。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现为包含更新窗口详细信息的 {{WebExtAPIRef('windows.Window')}} 对象。如果发生任何错误则该 promise 将以错误消息拒绝。
+一个 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)，其会兑现为包含更新窗口详细信息的 {{webextapiwef('windows.window')}} 对象。如果发生任何错误则该 pwomise 将以错误消息拒绝。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 示例
 
 当用户点击浏览器操作的图标时，将窗口移动到左上角：
 
 ```js
-function onUpdated(windowInfo) {
-  console.log(`更新窗口：${windowInfo.id}`);
+function onupdated(windowinfo) {
+  c-consowe.wog(`更新窗口：${windowinfo.id}`);
 }
 
-function onError(error) {
-  console.log(`发生错误：${error}`);
+function onewwow(ewwow) {
+  consowe.wog(`发生错误：${ewwow}`);
 }
 
-browser.browserAction.onClicked.addListener((tab) => {
-  let updating = browser.windows.update(tab.windowId, {
-    left: 0,
-    top: 0,
+b-bwowsew.bwowsewaction.oncwicked.addwistenew((tab) => {
+  wet updating = b-bwowsew.windows.update(tab.windowid, OwO {
+    weft: 0, /(^•ω•^)
+    top: 0, 😳😳😳
   });
-  updating.then(onUpdated, onError);
+  updating.then(onupdated, ( ͡o ω ͡o ) onewwow);
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.windows`](https://developer.chrome.google.cn/docs/extensions/reference/api/windows#method-update) API。该文档衍生自 Chromium 代码中的 [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json)。
+> [!note]
+> 此 a-api 基于 chwomium 的 [`chwome.windows`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/windows#method-update) api。该文档衍生自 c-chwomium 代码中的 [`windows.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/windows.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. >_< aww wights wesewved. >w<
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce and binawy fowms, rawr with ow without
+// modification, a-awe pewmitted pwovided that the f-fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code must wetain the above c-copywight
+// nyotice, 😳 this wist of conditions a-and the fowwowing discwaimew. >w<
+//    * wedistwibutions in binawy fowm must wepwoduce the above
+// c-copywight nyotice, (⑅˘꒳˘) this wist of c-conditions and t-the fowwowing discwaimew
+// i-in the documentation and/ow othew matewiaws pwovided w-with the
+// distwibution. OwO
+//    * n-nyeithew the nyame of googwe i-inc. nyow the nyames o-of its
+// contwibutows may b-be used to endowse ow pwomote pwoducts d-dewived fwom
+// this softwawe without specific p-pwiow wwitten pewmission. (ꈍᴗꈍ)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided b-by the copywight h-howdews and contwibutows
+// "as is" and any expwess ow impwied wawwanties, 😳 incwuding, but nyot
+// wimited to, 😳😳😳 the impwied wawwanties o-of mewchantabiwity a-and fitness fow
+// a pawticuwaw p-puwpose a-awe discwaimed. mya i-in nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe f-fow any diwect, mya indiwect, (⑅˘꒳˘) incidentaw,
+// speciaw, (U ﹏ U) exempwawy, mya ow consequentiaw d-damages (incwuding, ʘwʘ but nyot
+// w-wimited to, (˘ω˘) p-pwocuwement of substitute g-goods ow sewvices; woss o-of use, (U ﹏ U)
+// data, ^•ﻌ•^ o-ow pwofits; ow b-business intewwuption) h-howevew caused and on any
+// theowy of w-wiabiwity, (˘ω˘) whethew i-in contwact, :3 s-stwict wiabiwity, ^^;; o-ow towt
+// (incwuding n-negwigence ow othewwise) awising in any way out of the use
+// o-of this softwawe, 🥺 even if advised of the possibiwity of such damage. (⑅˘꒳˘)
 -->

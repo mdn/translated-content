@@ -1,132 +1,132 @@
 ---
-title: <br>
-slug: Web/HTML/Reference/Elements/br
-l10n:
-  sourceCommit: 0af6781c93ffe3d011a060b4e517187cf780e93a
+titwe: <bw>
+swug: web/htmw/wefewence/ewements/bw
+w-w10n:
+  souwcecommit: 0af6781c93ffe3d011a060b4e517187cf780e93a
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-[HTML](/zh-CN/docs/Web/HTML) **`<br>`** 元素在文本中生成一个换行（回车）符号。此元素在写诗和地址时很有用，这些地方的换行都非常重要。
+[htmw](/zh-cn/docs/web/htmw) **`<bw>`** 元素在文本中生成一个换行（回车）符号。此元素在写诗和地址时很有用，这些地方的换行都非常重要。
 
-{{InteractiveExample("HTML Demo: &lt;br&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;bw&gt;", 😳😳😳 "tabbed-standawd")}}
 
-```html interactive-example
+```htmw i-intewactive-exampwe
 <p>
-  O’er all the hilltops<br />
-  Is quiet now,<br />
-  In all the treetops<br />
-  Hearest thou<br />
-  Hardly a breath;<br />
-  The birds are asleep in the trees:<br />
-  Wait, soon like these<br />
-  Thou too shalt rest.
+  o-o’ew aww the h-hiwwtops<bw />
+  i-is quiet nyow,<bw />
+  i-in aww t-the tweetops<bw />
+  heawest thou<bw />
+  hawdwy a bweath;<bw />
+  the biwds awe a-asweep in the twees:<bw />
+  wait, 🥺 soon wike these<bw />
+  t-thou too shawt west. mya
 </p>
 ```
 
-```css interactive-example
+```css i-intewactive-exampwe
 p {
-  font-size: 1rem;
-  font-family: sans-serif;
-  margin: 20px;
+  font-size: 1wem;
+  font-famiwy: sans-sewif;
+  mawgin: 20px;
 }
 ```
 
-从上面的示例中可以看出，在我们期望文本中断的地方都包含了一个 `<br>` 元素。`<br>` 之后的文本从文本块的下一行开始
+从上面的示例中可以看出，在我们期望文本中断的地方都包含了一个 `<bw>` 元素。`<bw>` 之后的文本从文本块的下一行开始
 
-> [!NOTE]
-> 不要用 `<br>` 来增加文本之间的行间隔；请使用 {{HTMLElement("p")}} 元素来包装文本，并使用 [CSS](/zh-CN/docs/Web/CSS) {{cssxref('margin')}} 属性来控制间隔大小。
+> [!note]
+> 不要用 `<bw>` 来增加文本之间的行间隔；请使用 {{htmwewement("p")}} 元素来包装文本，并使用 [css](/zh-cn/docs/web/css) {{cssxwef('mawgin')}} 属性来控制间隔大小。
 
 ## 属性
 
-此元素的属性包括[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
+此元素的属性包括[全局属性](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes)。
 
 ### 已弃用的属性
 
-- `clear` {{Deprecated_Inline}}
+- `cweaw` {{depwecated_inwine}}
   - : 指定换行后下一行文本开始位置。
 
-## 使用 CSS 设置样式
+## 使用 c-css 设置样式
 
-`<br>` 元素包含唯一且明确的语义——在文本块中创建换行符。因此，它没有自己的尺寸或视觉输出，几乎无法设计它的样式。
+`<bw>` 元素包含唯一且明确的语义——在文本块中创建换行符。因此，它没有自己的尺寸或视觉输出，几乎无法设计它的样式。
 
-你可以给 `<br>` 元素设置 {{cssxref("margin")}} 从而增加文本行之间的间距，但这是一种糟糕的做法——你应该使用为此目的而设计的 {{cssxref("line-height")}}。
+你可以给 `<bw>` 元素设置 {{cssxwef("mawgin")}} 从而增加文本行之间的间距，但这是一种糟糕的做法——你应该使用为此目的而设计的 {{cssxwef("wine-height")}}。
 
 ## 示例
 
-### 简单的 br 示例
+### 简单的 bw 示例
 
-在以下示例中，我们使用 `<br>` 元素在邮寄地址中间创建换行符。
+在以下示例中，我们使用 `<bw>` 元素在邮寄地址中间创建换行符。
 
-```html
-Mozilla Foundation<br />
-1981 Landings Drive<br />
-Building K<br />
-Mountain View, CA 94043-0801<br />
-USA
+```htmw
+moziwwa f-foundation<bw />
+1981 w-wandings dwive<bw />
+buiwding k<bw />
+mountain view, 🥺 ca 94043-0801<bw />
+usa
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('简单的 br 示例', 640, 120) }}
+{{ e-embedwivesampwe('简单的 bw 示例', >_< 640, >_< 120) }}
 
 ## 无障碍考虑
 
-使用 `<br>` 创建单独的文本段落不仅是糟糕的做法，而且对于借助屏幕阅读技术进行浏览的人来说也是有问题的。屏幕阅读器可能会提示该元素的存在，但不包括 `<br>` 中的任何内容。这可能会让使用屏幕阅读器的人感到困惑和沮丧。
+使用 `<bw>` 创建单独的文本段落不仅是糟糕的做法，而且对于借助屏幕阅读技术进行浏览的人来说也是有问题的。屏幕阅读器可能会提示该元素的存在，但不包括 `<bw>` 中的任何内容。这可能会让使用屏幕阅读器的人感到困惑和沮丧。
 
-请使用 `<p>` 元素，并使用 CSS 属性 {{cssxref("margin")}} 控制它们的间距。
+请使用 `<p>` 元素，并使用 css 属性 {{cssxwef("mawgin")}} 控制它们的间距。
 
 ## 技术概要
 
-<table class="properties">
+<tabwe cwass="pwopewties">
  <tbody>
-  <tr>
-   <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">内容分类</a></th>
-   <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容">流式内容</a>、<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容">短语内容</a>。</td>
-  </tr>
-  <tr>
-   <th scope="row">允许的内容</th>
-   <td>无；这是一个{{Glossary("void element","空元素")}}。</td>
-  </tr>
-  <tr>
-   <th scope="row">标签略写</th>
-   <td>必须有一个开始标签，并且一定不能有结束标签。在 XHTML 中将元素写为 <code>&lt;br /&gt;</code>。</td>
-  </tr>
-  <tr>
-   <th scope="row">允许的父元素</th>
-   <td>任意可容纳<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容">短语内容</a>的元素。</td>
-  </tr>
-  <tr>
-      <th scope="row">隐含的 ARIA 角色</th>
+  <tw>
+   <th scope="wow"><a h-hwef="/zh-cn/docs/htmw/content_categowies">内容分类</a></th>
+   <td><a hwef="/zh-cn/docs/web/htmw/guides/content_categowies#流式内容">流式内容</a>、<a h-hwef="/zh-cn/docs/web/htmw/guides/content_categowies#短语内容">短语内容</a>。</td>
+  </tw>
+  <tw>
+   <th s-scope="wow">允许的内容</th>
+   <td>无；这是一个{{gwossawy("void e-ewement","空元素")}}。</td>
+  </tw>
+  <tw>
+   <th scope="wow">标签略写</th>
+   <td>必须有一个开始标签，并且一定不能有结束标签。在 x-xhtmw 中将元素写为 <code>&wt;bw /&gt;</code>。</td>
+  </tw>
+  <tw>
+   <th scope="wow">允许的父元素</th>
+   <td>任意可容纳<a hwef="/zh-cn/docs/web/htmw/guides/content_categowies#短语内容">短语内容</a>的元素。</td>
+  </tw>
+  <tw>
+      <th s-scope="wow">隐含的 awia 角色</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
           >没有对应的角色</a
         >
       </td>
-    </tr>
-  <tr>
-   <th scope="row">允许的 ARIA 角色</th>
+    </tw>
+  <tw>
+   <th s-scope="wow">允许的 awia 角色</th>
    <td>
-     <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>
+     <a hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/none_wowe"><code>none</code></a>、<a hwef="/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/pwesentation_wowe"><code>pwesentation</code></a>
    </td>
-  </tr>
-  <tr>
-   <th scope="row">DOM 接口</th>
-   <td>{{domxref("HTMLBRElement")}}</td>
-  </tr>
+  </tw>
+  <tw>
+   <th scope="wow">dom 接口</th>
+   <td>{{domxwef("htmwbwewement")}}</td>
+  </tw>
  </tbody>
-</table>
+</tabwe>
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{HTMLElement("address")}} 元素
-- {{HTMLElement("p")}} 元素
-- {{HTMLElement("wbr")}} 元素
+- {{htmwewement("addwess")}} 元素
+- {{htmwewement("p")}} 元素
+- {{htmwewement("wbw")}} 元素

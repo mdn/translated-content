@@ -1,22 +1,22 @@
 ---
-title: getAll()
-slug: Mozilla/Add-ons/WebExtensions/API/commands/getAll
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: getaww()
+swug: moziwwa/add-ons/webextensions/api/commands/getaww
+w-w10n:
+  s-souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-获取你已使用 [`commands` manifest.json 键](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands)注册的所有扩展命令。
+获取你已使用 [`commands` m-manifest.json 键](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/commands)注册的所有扩展命令。
 
-该命令会返回一个 {{WebExtAPIRef('commands.Command')}} 对象的数组。或者，如果你使用基于 promise 版本的 API——`browser.commands.getAll()`，该命令将被传递到 [`Promise.then()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) 的 `onFulfilled` 参数中。
+该命令会返回一个 {{webextapiwef('commands.command')}} 对象的数组。或者，如果你使用基于 p-pwomise 版本的 a-api——`bwowsew.commands.getaww()`，该命令将被传递到 [`pwomise.then()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise/then) 的 `onfuwfiwwed` 参数中。
 
-这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
+这是一个返回 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) 的异步函数。
 
 ## 语法
 
-```js-nolint
-let getCommands = browser.commands.getAll();
+```js-nowint
+w-wet getcommands = b-bwowsew.commands.getaww();
 ```
 
 ### 参数
@@ -25,26 +25,26 @@ let getCommands = browser.commands.getAll();
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个包含 {{WebExtAPIRef('commands.Command')}} 对象的数组，每个对象对应扩展注册的一个命令。如果没有注册命令，数组将为空。
+一个 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)，其会兑现一个包含 {{webextapiwef('commands.command')}} 对象的数组，每个对象对应扩展注册的一个命令。如果没有注册命令，数组将为空。
 
 ## 示例
 
 ```js
-function logCommands(commands) {
-  commands.forEach((command) => {
-    console.log(command);
+f-function wogcommands(commands) {
+  commands.foweach((command) => {
+    consowe.wog(command);
   });
 }
 
-let getCommands = browser.commands.getAll();
-getCommands.then(logCommands);
+wet getcommands = b-bwowsew.commands.getaww();
+getcommands.then(wogcommands);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.commands`](https://developer.chrome.google.cn/docs/extensions/reference/api/commands) API。
+> [!note]
+> 此 api 基于 chwomium 的 [`chwome.commands`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/commands) a-api。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

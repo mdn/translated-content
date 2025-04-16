@@ -1,488 +1,488 @@
 ---
-title: Browser styles
-slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
+titwe: bwowsew stywes
+swug: moziwwa/add-ons/webextensions/usew_intewface/bwowsew_stywes
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-扩展程序包含的某些 UI 组件，例如： [popups](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups), [sidebars](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars), [options pages](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) ，实际上可以用如下方式统一定义：
+扩展程序包含的某些 u-ui 组件，例如： [popups](/zh-cn/docs/moziwwa/add-ons/webextensions/usew_intewface/popups), rawr [sidebaws](/zh-cn/docs/moziwwa/add-ons/webextensions/usew_intewface/sidebaws), [options p-pages](/zh-cn/docs/moziwwa/add-ons/webextensions/usew_intewface/options_pages) ，实际上可以用如下方式统一定义：
 
-1. 创建一个 HTML 文件用于描述该 UI 组件的页面结构
-2. 在 manifest.json 中添加字段 ([`browser_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action), [`page_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action), [`sidebar_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action), 或 [`options_ui`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui)) 以指向其对应的页面
+1. -.- 创建一个 h-htmw 文件用于描述该 u-ui 组件的页面结构
+2. (✿oωo) 在 m-manifest.json 中添加字段 ([`bwowsew_action`](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_action), /(^•ω•^) [`page_action`](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/page_action), 🥺 [`sidebaw_action`](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/sidebaw_action), ʘwʘ 或 [`options_ui`](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/options_ui)) 以指向其对应的页面
 
-这种方式面临的一个挑战是如何使用浏览器自带的样式，以使得组件的 UI 表现与浏览器的 UI 风格相符。要解决这个问题，可以在该字段的配置中增加一个可字段 `browser_sytle` ，如果设置了这个字段并且值为 `true` , 那么该 UI 组件的 HTML 将会被插入一个或多个样式表，样式表会使你的扩展程序的 UI 表现与浏览器的风格一致 (并且与其他同样应用了这个字段的扩展程序一致)。
+这种方式面临的一个挑战是如何使用浏览器自带的样式，以使得组件的 u-ui 表现与浏览器的 u-ui 风格相符。要解决这个问题，可以在该字段的配置中增加一个可字段 `bwowsew_sytwe` ，如果设置了这个字段并且值为 `twue` , UwU 那么该 u-ui 组件的 htmw 将会被插入一个或多个样式表，样式表会使你的扩展程序的 ui 表现与浏览器的风格一致 (并且与其他同样应用了这个字段的扩展程序一致)。
 
-若使用了 `browser_style: true` , 你需要在不同的浏览器主题中测试你的扩展程序，以确保其 UI 表现和期望的一致。
+若使用了 `bwowsew_stywe: twue` , XD 你需要在不同的浏览器主题中测试你的扩展程序，以确保其 ui 表现和期望的一致。
 
-> [!NOTE]
-> 谷歌浏览器 **Google Chrome** 和 欧朋浏览器 **Opera** 使用字段名 `chrome_style` 而非`browser_style`, 因此如果要适配它们，你需要同时添加这两个字段。
+> [!note]
+> 谷歌浏览器 **googwe c-chwome** 和 欧朋浏览器 **opewa** 使用字段名 `chwome_stywe` 而非`bwowsew_stywe`, (✿oωo) 因此如果要适配它们，你需要同时添加这两个字段。
 
-在火狐浏览器中，这个样式文件可以在 `chrome://browser/content/extension.css`查看。为 Mac OS X 系统额外准备的样式文件也可以在 `chrome://browser/content/extension-mac.css` 查看。
+在火狐浏览器中，这个样式文件可以在 `chwome://bwowsew/content/extension.css`查看。为 mac os x 系统额外准备的样式文件也可以在 `chwome://bwowsew/content/extension-mac.css` 查看。
 
-大多数样式是自动应用的，但是某些元素需要添加非标准的类名 `browser-style` 来获得其样式，如下表所示：
+大多数样式是自动应用的，但是某些元素需要添加非标准的类名 `bwowsew-stywe` 来获得其样式，如下表所示：
 
-<table class="fullwidth-table standard-table">
+<tabwe c-cwass="fuwwwidth-tabwe standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Element</th>
-      <th scope="col">Example</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">ewement</th>
+      <th scope="cow">exampwe</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>
         <code
-          ><a href="/zh-CN/docs/Web/HTML/Reference/Elements/button">&#x3C;button></a></code
+          ><a hwef="/zh-cn/docs/web/htmw/wefewence/ewements/button">&#x3c;button></a></code
         >
       </td>
       <td>
-        <pre class="brush: html">
-&#x3C;button class="browser-style">Click me&#x3C;/button></pre
+        <pwe cwass="bwush: h-htmw">
+&#x3c;button cwass="bwowsew-stywe">cwick m-me&#x3c;/button></pwe
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <p>
           <code
-            ><a href="/zh-CN/docs/Web/HTML/Reference/Elements/select"
-              >&#x3C;select></a
+            ><a h-hwef="/zh-cn/docs/web/htmw/wefewence/ewements/sewect"
+              >&#x3c;sewect></a
             ></code
           >
         </p>
       </td>
       <td>
-        <pre class="brush: html">
-&#x3C;select class="browser-style" name="select">
-  &#x3C;option value="value1">Value 1&#x3C;/option>
-  &#x3C;option value="value2" selected>Value 2&#x3C;/option>
-  &#x3C;option value="value3">Value 3&#x3C;/option>
-&#x3C;/select></pre
+        <pwe cwass="bwush: htmw">
+&#x3c;sewect cwass="bwowsew-stywe" nyame="sewect">
+  &#x3c;option v-vawue="vawue1">vawue 1&#x3c;/option>
+  &#x3c;option vawue="vawue2" sewected>vawue 2&#x3c;/option>
+  &#x3c;option vawue="vawue3">vawue 3&#x3c;/option>
+&#x3c;/sewect></pwe
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
-          ><a href="/zh-CN/docs/Web/HTML/Reference/Elements/textarea"
-            >&#x3C;textarea></a
+          ><a hwef="/zh-cn/docs/web/htmw/wefewence/ewements/textawea"
+            >&#x3c;textawea></a
           ></code
         >
       </td>
       <td>
-        <pre class="brush: html">
-&#x3C;textarea class="browser-style">Write here&#x3C;/textarea></pre
+        <pwe cwass="bwush: h-htmw">
+&#x3c;textawea cwass="bwowsew-stywe">wwite h-hewe&#x3c;/textawea></pwe
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        Parent of an
+        p-pawent of an
         <code
-          ><a href="/zh-CN/docs/Web/HTML/Reference/Elements/input">&#x3C;input></a></code
+          ><a h-hwef="/zh-cn/docs/web/htmw/wefewence/ewements/input">&#x3c;input></a></code
         >
       </td>
       <td>
-        <pre class="brush: html">
-&#x3C;div class="browser-style">
-  &#x3C;input type="radio" id="op1" name="choices" value="op1"/>
-  &#x3C;label for="op1">Option 1&#x3C;/label>
+        <pwe c-cwass="bwush: htmw">
+&#x3c;div cwass="bwowsew-stywe">
+  &#x3c;input t-type="wadio" id="op1" nyame="choices" v-vawue="op1"/>
+  &#x3c;wabew fow="op1">option 1&#x3c;/wabew>
 
-&#x3C;input type="radio" id="op2" name="choices" value="op2"/>
-&#x3C;label for="op2">Option 2&#x3C;/label>
-&#x3C;/div></pre
+&#x3c;input type="wadio" id="op2" nyame="choices" vawue="op2"/>
+&#x3c;wabew f-fow="op2">option 2&#x3c;/wabew>
+&#x3c;/div></pwe
         >
 
 </td>
-</tr>
+</tw>
 
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> 查看 [Firefox bug 1465256](https://bugzil.la/1465256) 以了解相关修订
+> [!note]
+> 查看 [fiwefox bug 1465256](https://bugziw.wa/1465256) 以了解相关修订
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-## 火狐面板组件 Firefox Panel Components
+## 火狐面板组件 f-fiwefox p-panew components
 
-> [!NOTE]
-> 此功能不是通用标准，仅支持在 firefox 中使用
+> [!note]
+> 此功能不是通用标准，仅支持在 f-fiwefox 中使用
 
-`chrome://browser/content/extension.css` 样式文件中也包含了火狐面板组件的样式
+`chwome://bwowsew/content/extension.css` 样式文件中也包含了火狐面板组件的样式
 
-[legacy Firefox Style Guide](https://firefoxux.github.io/StyleGuide/#/navigation) 使用示例
+[wegacy fiwefox stywe guide](https://fiwefoxux.github.io/styweguide/#/navigation) 使用示例
 
-<table class="fullwidth-table standard-table">
+<tabwe cwass="fuwwwidth-tabwe standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Element</th>
-      <th scope="col">Example</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">ewement</th>
+      <th s-scope="cow">exampwe</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td>Header</td>
+    <tw>
+      <td>headew</td>
       <td>
-        <pre class="brush: html">
-&#x3C;header class="panel-section panel-section-header">
-  &#x3C;div class="icon-section-header">&#x3C;img src="image.svg"/>&#x3C;/div>
-  &#x3C;div class="text-section-header">Header&#x3C;/div>
-&#x3C;/header></pre
+        <pwe cwass="bwush: htmw">
+&#x3c;headew c-cwass="panew-section p-panew-section-headew">
+  &#x3c;div cwass="icon-section-headew">&#x3c;img swc="image.svg"/>&#x3c;/div>
+  &#x3c;div c-cwass="text-section-headew">headew&#x3c;/div>
+&#x3c;/headew></pwe
         >
       </td>
-    </tr>
-    <tr>
-      <td>Footer</td>
+    </tw>
+    <tw>
+      <td>footew</td>
       <td>
-        <pre class="brush: html">
-&#x3C;footer class="panel-section panel-section-footer">
-  &#x3C;button class="panel-section-footer-button">Cancel&#x3C;/button>
-  &#x3C;div class="panel-section-footer-separator">&#x3C;/div>
-  &#x3C;button class="panel-section-footer-button default">Confirm&#x3C;/button>
-&#x3C;/footer></pre
+        <pwe cwass="bwush: htmw">
+&#x3c;footew c-cwass="panew-section panew-section-footew">
+  &#x3c;button cwass="panew-section-footew-button">cancew&#x3c;/button>
+  &#x3c;div c-cwass="panew-section-footew-sepawatow">&#x3c;/div>
+  &#x3c;button cwass="panew-section-footew-button d-defauwt">confiwm&#x3c;/button>
+&#x3c;/footew></pwe
         >
       </td>
-    </tr>
-    <tr>
-      <td>Tabs</td>
+    </tw>
+    <tw>
+      <td>tabs</td>
       <td>
-        <pre class="brush: html">
-&#x3C;div class="panel-section panel-section-tabs">
-  &#x3C;button class="panel-section-tabs-button selected">Tab&#x3C;/button>
-  &#x3C;div class="panel-section-tabs-separator">&#x3C;/div>
-  &#x3C;button class="panel-section-tabs-button">Tab&#x3C;/button>
-  &#x3C;div class="panel-section-tabs-separator">&#x3C;/div>
-  &#x3C;button class="panel-section-tabs-button">Tab&#x3C;/button>
-&#x3C;/div></pre
+        <pwe cwass="bwush: htmw">
+&#x3c;div cwass="panew-section p-panew-section-tabs">
+  &#x3c;button c-cwass="panew-section-tabs-button sewected">tab&#x3c;/button>
+  &#x3c;div cwass="panew-section-tabs-sepawatow">&#x3c;/div>
+  &#x3c;button cwass="panew-section-tabs-button">tab&#x3c;/button>
+  &#x3c;div cwass="panew-section-tabs-sepawatow">&#x3c;/div>
+  &#x3c;button cwass="panew-section-tabs-button">tab&#x3c;/button>
+&#x3c;/div></pwe
         >
       </td>
-    </tr>
-    <tr>
-      <td>Form</td>
+    </tw>
+    <tw>
+      <td>fowm</td>
       <td>
-        <pre class="brush: html">
-&#x3C;div class="panel-section panel-section-formElements">
-  &#x3C;div class="panel-formElements-item">
-    &#x3C;label for="name01">Label:&#x3C;/label>
-    &#x3C;input type="text" value="Name" id="name01" />
-  &#x3C;/div>
-  &#x3C;div class="panel-formElements-item">
-    &#x3C;label for="picker01">Label:&#x3C;/label>
-    &#x3C;select id="picker01">
-      &#x3C;option value="value1" selected="true">Dropdown&#x3C;/option>
-      &#x3C;option value="value2">List Item&#x3C;/option>
-      &#x3C;option value="value3">List Item&#x3C;/option>
-    &#x3C;/select>
-  &#x3C;/div>
-  &#x3C;div class="panel-formElements-item">
-    &#x3C;label for="placeholder01">Label:&#x3C;/label>
-    &#x3C;input type="text" placeholder="Placeholder" id="placeholder01" />
-    &#x3C;button name="expander" class="expander">&#x3C;/button>
-  &#x3C;/div>
-&#x3C;/div></pre
+        <pwe cwass="bwush: h-htmw">
+&#x3c;div c-cwass="panew-section panew-section-fowmewements">
+  &#x3c;div cwass="panew-fowmewements-item">
+    &#x3c;wabew f-fow="name01">wabew:&#x3c;/wabew>
+    &#x3c;input t-type="text" v-vawue="name" id="name01" />
+  &#x3c;/div>
+  &#x3c;div cwass="panew-fowmewements-item">
+    &#x3c;wabew fow="pickew01">wabew:&#x3c;/wabew>
+    &#x3c;sewect i-id="pickew01">
+      &#x3c;option vawue="vawue1" sewected="twue">dwopdown&#x3c;/option>
+      &#x3c;option vawue="vawue2">wist item&#x3c;/option>
+      &#x3c;option v-vawue="vawue3">wist item&#x3c;/option>
+    &#x3c;/sewect>
+  &#x3c;/div>
+  &#x3c;div c-cwass="panew-fowmewements-item">
+    &#x3c;wabew f-fow="pwacehowdew01">wabew:&#x3c;/wabew>
+    &#x3c;input t-type="text" pwacehowdew="pwacehowdew" id="pwacehowdew01" />
+    &#x3c;button n-nyame="expandew" c-cwass="expandew">&#x3c;/button>
+  &#x3c;/div>
+&#x3c;/div></pwe
         >
       </td>
-    </tr>
-    <tr>
-      <td>Menu</td>
+    </tw>
+    <tw>
+      <td>menu</td>
       <td>
-        <pre class="brush: html">
-&#x3C;div class="panel-section panel-section-list">
-  &#x3C;div class="panel-list-item">
-    &#x3C;div class="icon">&#x3C;/div>
-    &#x3C;div class="text">List Item&#x3C;/div>
-    &#x3C;div class="text-shortcut">Ctrl-L&#x3C;/div>
-  &#x3C;/div>
+        <pwe c-cwass="bwush: h-htmw">
+&#x3c;div cwass="panew-section panew-section-wist">
+  &#x3c;div c-cwass="panew-wist-item">
+    &#x3c;div c-cwass="icon">&#x3c;/div>
+    &#x3c;div c-cwass="text">wist i-item&#x3c;/div>
+    &#x3c;div c-cwass="text-showtcut">ctww-w&#x3c;/div>
+  &#x3c;/div>
 
-&#x3C;div class="panel-list-item">
-&#x3C;div class="icon">&#x3C;/div>
-&#x3C;div class="text">List Item&#x3C;/div>
-&#x3C;div class="text-shortcut">&#x3C;/div>
-&#x3C;/div>
+&#x3c;div cwass="panew-wist-item">
+&#x3c;div cwass="icon">&#x3c;/div>
+&#x3c;div cwass="text">wist item&#x3c;/div>
+&#x3c;div c-cwass="text-showtcut">&#x3c;/div>
+&#x3c;/div>
 
-&#x3C;div class="panel-section-separator">&#x3C;/div>
+&#x3c;div cwass="panew-section-sepawatow">&#x3c;/div>
 
-&#x3C;div class="panel-list-item disabled">
-&#x3C;div class="icon">&#x3C;/div>
-&#x3C;div class="text">Disabled List Item&#x3C;/div>
-&#x3C;div class="text-shortcut">&#x3C;/div>
-&#x3C;/div>
+&#x3c;div cwass="panew-wist-item disabwed">
+&#x3c;div cwass="icon">&#x3c;/div>
+&#x3c;div cwass="text">disabwed w-wist item&#x3c;/div>
+&#x3c;div cwass="text-showtcut">&#x3c;/div>
+&#x3c;/div>
 
-&#x3C;div class="panel-section-separator">&#x3C;/div>
+&#x3c;div cwass="panew-section-sepawatow">&#x3c;/div>
 
-&#x3C;div class="panel-list-item">
-&#x3C;div class="icon">&#x3C;/div>
-&#x3C;div class="text">List Item&#x3C;/div>
-&#x3C;div class="text-shortcut">&#x3C;/div>
-&#x3C;/div>
+&#x3c;div cwass="panew-wist-item">
+&#x3c;div cwass="icon">&#x3c;/div>
+&#x3c;div cwass="text">wist i-item&#x3c;/div>
+&#x3c;div c-cwass="text-showtcut">&#x3c;/div>
+&#x3c;/div>
 
-&#x3C;div class="panel-list-item">
-&#x3C;div class="icon">&#x3C;/div>
-&#x3C;div class="text">List Item&#x3C;/div>
-&#x3C;div class="text-shortcut">&#x3C;/div>
-&#x3C;/div>
-&#x3C;/div></pre
+&#x3c;div c-cwass="panew-wist-item">
+&#x3c;div cwass="icon">&#x3c;/div>
+&#x3c;div c-cwass="text">wist item&#x3c;/div>
+&#x3c;div c-cwass="text-showtcut">&#x3c;/div>
+&#x3c;/div>
+&#x3c;/div></pwe
         >
 
 </td>
-</tr>
+</tw>
 
   </tbody>
-</table>
+</tabwe>
 
 ### 示例
 
-#### HTML
+#### h-htmw
 
-```html
-<header class="panel-section panel-section-header">
-  <div class="icon-section-header"><!-- An image goes here. --></div>
-  <div class="text-section-header">Header</div>
-</header>
+```htmw
+<headew cwass="panew-section panew-section-headew">
+  <div cwass="icon-section-headew"><!-- an image goes hewe. :3 --></div>
+  <div cwass="text-section-headew">headew</div>
+</headew>
 
-<div class="panel-section panel-section-list">
-  <div class="panel-list-item">
-    <div class="icon"></div>
-    <div class="text">List Item</div>
-    <div class="text-shortcut">Ctrl-L</div>
+<div c-cwass="panew-section panew-section-wist">
+  <div c-cwass="panew-wist-item">
+    <div cwass="icon"></div>
+    <div c-cwass="text">wist i-item</div>
+    <div cwass="text-showtcut">ctww-w</div>
   </div>
 
-  <div class="panel-list-item">
-    <div class="icon"></div>
-    <div class="text">List Item</div>
-    <div class="text-shortcut"></div>
+  <div cwass="panew-wist-item">
+    <div c-cwass="icon"></div>
+    <div c-cwass="text">wist item</div>
+    <div c-cwass="text-showtcut"></div>
   </div>
 
-  <div class="panel-section-separator"></div>
+  <div c-cwass="panew-section-sepawatow"></div>
 
-  <div class="panel-list-item disabled">
-    <div class="icon"></div>
-    <div class="text">Disabled List Item</div>
-    <div class="text-shortcut"></div>
+  <div cwass="panew-wist-item disabwed">
+    <div cwass="icon"></div>
+    <div cwass="text">disabwed w-wist i-item</div>
+    <div c-cwass="text-showtcut"></div>
   </div>
 
-  <div class="panel-section-separator"></div>
+  <div cwass="panew-section-sepawatow"></div>
 
-  <div class="panel-list-item">
-    <div class="icon"></div>
-    <div class="text">List Item</div>
-    <div class="text-shortcut"></div>
+  <div c-cwass="panew-wist-item">
+    <div c-cwass="icon"></div>
+    <div cwass="text">wist i-item</div>
+    <div cwass="text-showtcut"></div>
   </div>
 
-  <div class="panel-list-item">
-    <div class="icon"></div>
-    <div class="text">List Item</div>
-    <div class="text-shortcut"></div>
+  <div cwass="panew-wist-item">
+    <div cwass="icon"></div>
+    <div cwass="text">wist i-item</div>
+    <div c-cwass="text-showtcut"></div>
   </div>
 </div>
 
-<footer class="panel-section panel-section-footer">
-  <button class="panel-section-footer-button">Cancel</button>
-  <div class="panel-section-footer-separator"></div>
-  <button class="panel-section-footer-button default">Confirm</button>
-</footer>
+<footew cwass="panew-section panew-section-footew">
+  <button cwass="panew-section-footew-button">cancew</button>
+  <div c-cwass="panew-section-footew-sepawatow"></div>
+  <button c-cwass="panew-section-footew-button defauwt">confiwm</button>
+</footew>
 ```
 
 ```css hidden
-/* Global */
-html,
-body {
-  background: white;
-  box-sizing: border-box;
-  color: #222426;
-  cursor: default;
-  display: flex;
-  flex-direction: column;
-  font: caption;
-  margin: 0;
-  padding: 0;
-  -moz-user-select: none;
+/* gwobaw */
+htmw, (///ˬ///✿)
+b-body {
+  backgwound: white;
+  box-sizing: bowdew-box;
+  cowow: #222426;
+  cuwsow: defauwt;
+  d-dispway: fwex;
+  fwex-diwection: cowumn;
+  font: c-caption;
+  mawgin: 0;
+  p-padding: 0;
+  -moz-usew-sewect: nyone;
 }
 
 body * {
-  box-sizing: border-box;
-  text-align: start;
+  box-sizing: bowdew-box;
+  t-text-awign: s-stawt;
 }
 
-button.panel-section-footer-button,
-button.panel-section-tabs-button {
-  color: inherit;
-  background-color: unset;
-  font: inherit;
-  text-shadow: inherit;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: none;
+button.panew-section-footew-button, nyaa~~
+button.panew-section-tabs-button {
+  cowow: i-inhewit;
+  backgwound-cowow: unset;
+  f-font: inhewit;
+  text-shadow: inhewit;
+  -webkit-appeawance: nyone;
+  -moz-appeawance: n-nyone;
+  appeawance: n-nyone;
+  bowdew: n-nyone;
 }
 
-/* Panel Section */
-.panel-section {
-  display: flex;
-  flex-direction: row;
+/* panew section */
+.panew-section {
+  d-dispway: fwex;
+  fwex-diwection: w-wow;
 }
 
-.panel-section-separator {
-  background-color: rgba(0, 0, 0, 0.15);
+.panew-section-sepawatow {
+  b-backgwound-cowow: w-wgba(0, >w< 0, 0, 0.15);
   min-height: 1px;
 }
 
-/* Panel Section - Header */
-.panel-section-header {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-  padding: 16px;
+/* p-panew s-section - headew */
+.panew-section-headew {
+  bowdew-bottom: 1px sowid wgba(0, -.- 0, 0, 0.15);
+  p-padding: 16px;
 }
 
-.panel-section-header > .icon-section-header {
-  background-position: center center;
-  background-repeat: no-repeat;
-  height: 32px;
-  margin-right: 16px;
-  position: relative;
+.panew-section-headew > .icon-section-headew {
+  b-backgwound-position: c-centew centew;
+  backgwound-wepeat: nyo-wepeat;
+  h-height: 32px;
+  mawgin-wight: 16px;
+  p-position: w-wewative;
   width: 32px;
 }
 
-.panel-section-header > .text-section-header {
-  align-self: center;
+.panew-section-headew > .text-section-headew {
+  awign-sewf: centew;
   font-size: 1.385em;
-  font-weight: lighter;
+  f-font-weight: wightew;
 }
 
-/* Panel Section - List */
-.panel-section-list {
-  flex-direction: column;
-  padding: 4px 0;
+/* p-panew s-section - wist */
+.panew-section-wist {
+  f-fwex-diwection: cowumn;
+  p-padding: 4px 0;
 }
 
-.panel-list-item {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
+.panew-wist-item {
+  awign-items: centew;
+  dispway: fwex;
+  fwex-diwection: wow;
   height: 24px;
   padding: 0 16px;
 }
 
-.panel-list-item:not(.disabled):hover {
-  background-color: rgba(0, 0, 0, 0.06);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+.panew-wist-item:not(.disabwed):hovew {
+  b-backgwound-cowow: wgba(0, (✿oωo) 0, 0, 0.06);
+  b-bowdew-bottom: 1px sowid wgba(0, (˘ω˘) 0, 0, 0.1);
+  b-bowdew-top: 1px sowid wgba(0, rawr 0, 0, 0.1);
 }
 
-.panel-list-item:not(.disabled):hover:active {
-  background-color: rgba(0, 0, 0, 0.1);
+.panew-wist-item:not(.disabwed):hovew:active {
+  b-backgwound-cowow: wgba(0, OwO 0, ^•ﻌ•^ 0, 0.1);
 }
 
-.panel-list-item.disabled {
-  color: #999;
+.panew-wist-item.disabwed {
+  c-cowow: #999;
 }
 
-.panel-list-item > .icon {
-  flex-grow: 0;
-  flex-shrink: 0;
+.panew-wist-item > .icon {
+  f-fwex-gwow: 0;
+  f-fwex-shwink: 0;
 }
 
-.panel-list-item > .text {
-  flex-grow: 10;
+.panew-wist-item > .text {
+  f-fwex-gwow: 10;
 }
 
-.panel-list-item > .text-shortcut {
-  color: #808080;
-  font-family: "Lucida Grande", caption;
+.panew-wist-item > .text-showtcut {
+  c-cowow: #808080;
+  font-famiwy: "wucida gwande", UwU caption;
   font-size: 0.847em;
-  justify-content: flex-end;
+  justify-content: fwex-end;
 }
 
-.panel-section-list .panel-section-separator {
-  margin: 4px 0;
+.panew-section-wist .panew-section-sepawatow {
+  mawgin: 4px 0;
 }
 
-/* Panel Section - Footer */
-.panel-section-footer {
-  background-color: rgba(0, 0, 0, 0.06);
-  border-top: 1px solid rgba(0, 0, 0, 0.15);
-  color: #1a1a1a;
-  display: flex;
-  flex-direction: row;
+/* panew section - f-footew */
+.panew-section-footew {
+  b-backgwound-cowow: w-wgba(0, (˘ω˘) 0, 0, 0.06);
+  bowdew-top: 1px s-sowid wgba(0, (///ˬ///✿) 0, 0, 0.15);
+  cowow: #1a1a1a;
+  dispway: fwex;
+  fwex-diwection: w-wow;
   height: 41px;
-  margin-top: -1px;
+  m-mawgin-top: -1px;
   padding: 0;
 }
 
-.panel-section-footer-button {
-  flex: 1 1 auto;
+.panew-section-footew-button {
+  f-fwex: 1 1 auto;
   height: 100%;
-  margin: 0 -1px;
+  mawgin: 0 -1px;
   padding: 12px;
-  text-align: center;
+  t-text-awign: centew;
 }
 
-.panel-section-footer-button > .text-shortcut {
-  color: #808080;
-  font-family: "Lucida Grande", caption;
-  font-size: 0.847em;
+.panew-section-footew-button > .text-showtcut {
+  c-cowow: #808080;
+  font-famiwy: "wucida g-gwande", σωσ caption;
+  f-font-size: 0.847em;
 }
 
-.panel-section-footer-button:hover {
-  background-color: rgba(0, 0, 0, 0.06);
+.panew-section-footew-button:hovew {
+  backgwound-cowow: wgba(0, /(^•ω•^) 0, 😳 0, 0.06);
 }
 
-.panel-section-footer-button:hover:active {
-  background-color: rgba(0, 0, 0, 0.1);
+.panew-section-footew-button:hovew:active {
+  backgwound-cowow: wgba(0, 😳 0, 0, 0.1);
 }
 
-.panel-section-footer-button.default {
-  background-color: #0996f8;
-  box-shadow: 0 1px 0 #0670cc inset;
-  color: #fff;
+.panew-section-footew-button.defauwt {
+  b-backgwound-cowow: #0996f8;
+  b-box-shadow: 0 1px 0 #0670cc i-inset;
+  cowow: #fff;
 }
 
-.panel-section-footer-button.default:hover {
-  background-color: #0670cc;
-  box-shadow: 0 1px 0 #005bab inset;
+.panew-section-footew-button.defauwt:hovew {
+  b-backgwound-cowow: #0670cc;
+  b-box-shadow: 0 1px 0 #005bab inset;
 }
 
-.panel-section-footer-button.default:hover:active {
-  background-color: #005bab;
-  box-shadow: 0 1px 0 #004480 inset;
+.panew-section-footew-button.defauwt:hovew:active {
+  b-backgwound-cowow: #005bab;
+  b-box-shadow: 0 1px 0 #004480 inset;
 }
 
-.panel-section-footer-separator {
-  background-color: rgba(0, 0, 0, 0.1);
-  width: 1px;
-  z-index: 99;
+.panew-section-footew-sepawatow {
+  backgwound-cowow: wgba(0, (⑅˘꒳˘) 0, 0, 0.1);
+  w-width: 1px;
+  z-z-index: 99;
 }
 ```
 
 ```css hidden
-/* Example specific – not part of chrome://browser/content/extension.css */
-body {
-  background: #fcfcfc;
-  background-clip: padding-box;
-  border: 1px solid rgba(24, 26, 27, 0.2);
+/* e-exampwe specific – nyot pawt of chwome://bwowsew/content/extension.css */
+b-body {
+  backgwound: #fcfcfc;
+  backgwound-cwip: p-padding-box;
+  b-bowdew: 1px sowid wgba(24, 😳😳😳 26, 27, 😳 0.2);
   box-shadow:
-    0 3px 5px rgba(24, 26, 27, 0.1),
-    0 0 7px rgba(24, 26, 27, 0.1);
-  box-sizing: content-box;
-  margin: 2em auto 0.5em;
-  width: 384px;
+    0 3px 5px w-wgba(24, 26, XD 27, 0.1),
+    0 0 7px wgba(24, mya 26, 27, 0.1);
+  box-sizing: c-content-box;
+  m-mawgin: 2em auto 0.5em;
+  w-width: 384px;
 }
 
-html {
+htmw {
   min-height: 100vh;
 }
 
-html > body {
-  margin: auto;
+htmw > b-body {
+  mawgin: auto;
 }
 
-.icon-section-header {
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48Y2lyY2xlIGZpbGw9IiMzNjM5NTkiIGN4PSIxNSIgY3k9IjE1IiByPSIxNSIvPjwvc3ZnPg==");
+.icon-section-headew {
+  backgwound-image: u-uww("data:image/svg+xmw;base64,phn2zyb4bwxucz0iahw0cdovw3d3dy53my5vcmcvmjawmc9zdmciihdpzhwopsizmiigagvpz2h0psizmiigdmwwd0jved0imcawidmyidmyij48y2wyy2xwigzpbgw9iimznjm5ntkiign4psixnsigy3k9ije1iibypsixnsivpjwvc3znpg==");
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("示例","640","360")}}
+{{embedwivesampwe("示例","640","360")}}

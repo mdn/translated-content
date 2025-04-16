@@ -1,58 +1,58 @@
 ---
-title: events
-slug: Mozilla/Add-ons/WebExtensions/API/events
-l10n:
-  sourceCommit: a16fecbf75f71fc11e03ef6cd0b0c34ad6f3d480
+titwe: events
+swug: moziwwa/add-ons/webextensions/api/events
+w-w10n:
+  souwcecommit: a-a16fecbf75f71fc11e03ef6cd0b0c34ad6f3d480
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-由分发事件的 API 所使用的常见类型。
+由分发事件的 a-api 所使用的常见类型。
 
 ## 类型
 
-- {{WebExtAPIRef("events.Rule")}}
+- {{webextapiwef("events.wuwe")}}
   - : 用于处理事件的声明性规则的描述。
-- {{WebExtAPIRef("events.Event")}}
+- {{webextapiwef("events.event")}}
   - : 允许对浏览器事件添加和移除监听器的对象。
-- {{WebExtAPIRef("events.UrlFilter")}}
-  - : 用于过滤 URL 的各种标准。如果其中的某一标准与 URL 匹配，则整个过滤器与之匹配的。
+- {{webextapiwef("events.uwwfiwtew")}}
+  - : 用于过滤 u-uww 的各种标准。如果其中的某一标准与 u-uww 匹配，则整个过滤器与之匹配的。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.events](https://developer.chrome.google.cn/docs/extensions/reference/api/events) API。该文档衍生自 Chromium 代码中的 [`events.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json)。
+> [!note]
+> 此 a-api 基于 chwomium 的 [`chwome.events](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/events) a-api。该文档衍生自 c-chwomium 代码中的 [`events.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/events.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. aww wights wesewved. (✿oωo)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce and b-binawy fowms, ʘwʘ with ow without
+// m-modification, (ˆ ﻌ ˆ)♡ awe pewmitted pwovided that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce c-code must wetain the above copywight
+// nyotice, 😳😳😳 this wist of conditions and t-the fowwowing discwaimew. :3
+//    * wedistwibutions in binawy fowm must wepwoduce t-the above
+// copywight nyotice, OwO t-this wist of conditions a-and the f-fowwowing discwaimew
+// i-in the documentation and/ow othew matewiaws p-pwovided with the
+// distwibution. (U ﹏ U)
+//    * neithew the nyame o-of googwe inc. >w< now the nyames of its
+// contwibutows may be used to endowse ow pwomote pwoducts d-dewived fwom
+// this softwawe w-without specific p-pwiow wwitten p-pewmission.
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight howdews a-and contwibutows
+// "as i-is" and any expwess o-ow impwied wawwanties, (U ﹏ U) i-incwuding, but nyot
+// wimited t-to, 😳 the impwied wawwanties o-of mewchantabiwity and fitness fow
+// a pawticuwaw p-puwpose awe discwaimed. (ˆ ﻌ ˆ)♡ in n-nyo event shaww the copywight
+// o-ownew ow contwibutows b-be wiabwe fow any diwect, 😳😳😳 indiwect, (U ﹏ U) incidentaw,
+// speciaw, (///ˬ///✿) exempwawy, 😳 ow consequentiaw damages (incwuding, 😳 but nyot
+// wimited t-to, σωσ pwocuwement o-of substitute goods ow sewvices; w-woss of u-use, rawr x3
+// data, ow p-pwofits; ow business intewwuption) howevew caused and on any
+// t-theowy of wiabiwity, OwO whethew in contwact, /(^•ω•^) stwict wiabiwity, 😳😳😳 ow towt
+// (incwuding n-nyegwigence ow othewwise) awising i-in any way o-out of the use
+// o-of this softwawe, even if advised o-of the possibiwity o-of such damage. ( ͡o ω ͡o )
 -->

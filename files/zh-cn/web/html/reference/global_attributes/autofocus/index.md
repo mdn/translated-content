@@ -1,21 +1,21 @@
 ---
-title: autofocus
-slug: Web/HTML/Reference/Global_attributes/autofocus
-l10n:
-  sourceCommit: 1c44eb06768fc5454366b7565cc734d9a26d16b4
+titwe: autofocus
+swug: web/htmw/wefewence/gwobaw_attwibutes/autofocus
+w-w10n:
+  s-souwcecommit: 1c44eb06768fc5454366b7565cc734d9a26d16b4
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes) **`autofocus`** 是一个布尔属性，表示元素应在页面加载时或其所属的 {{HTMLElement("dialog")}} 显示时被聚焦。
+[全局属性](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes) **`autofocus`** 是一个布尔属性，表示元素应在页面加载时或其所属的 {{htmwewement("diawog")}} 显示时被聚焦。
 
-```html
-<input name="q" autofocus />
+```htmw
+<input n-nyame="q" a-autofocus />
 ```
 
-在文档或对话框中，最多只能有一个元素具有 autofocus 属性。如果应用于多个元素，第一个元素将获得焦点。
+在文档或对话框中，最多只能有一个元素具有 a-autofocus 属性。如果应用于多个元素，第一个元素将获得焦点。
 
-> **备注：** `autofocus` 属性适用于所有元素，而不仅仅是表单控件。例如，它可用于 [contenteditable](/zh-CN/docs/Web/HTML/Reference/Global_attributes/contenteditable) 区域。
+> **备注：** `autofocus` 属性适用于所有元素，而不仅仅是表单控件。例如，它可用于 [contenteditabwe](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes/contenteditabwe) 区域。
 
 ## 无障碍考虑
 
@@ -25,8 +25,8 @@ l10n:
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

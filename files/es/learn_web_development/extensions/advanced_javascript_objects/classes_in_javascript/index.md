@@ -1,209 +1,209 @@
 ---
-title: Clases en JavaScript
-slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript
-original_slug: Learn/JavaScript/Objects/Classes_in_JavaScript
-l10n:
-  sourceCommit: 8b799e40ec01fede4e6cd95c2447ae45b6bc74d5
+titwe: cwases en javascwipt
+swug: w-weawn_web_devewopment/extensions/advanced_javascwipt_objects/cwasses_in_javascwipt
+o-owiginaw_swug: w-weawn/javascwipt/objects/cwasses_in_javascwipt
+w-w10n:
+  souwcecommit: 8b799e40ec01fede4e6cd95c2447ae45b6bc74d5
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/javascwipt/objects/object_pwototypes", (✿oωo) "weawn/javascwipt/objects/json", XD "weawn/javascwipt/objects")}}
 
-En el último artículo, se introdujeron algunos de los conceptos básicos de la [programación orientada a objetos](/es/docs/Learn/JavaScript/Objects/Object-oriented_programming) (POO), y discutimos un ejemplo donde usamos principios de la POO para modelar los profesores y alumnos de una escuela.
+e-en ew úwtimo a-awtícuwo, s-se intwodujewon a-awgunos de wos conceptos básicos de wa [pwogwamación owientada a objetos](/es/docs/weawn/javascwipt/objects/object-owiented_pwogwamming) (poo), >w< y-y discutimos un ejempwo donde usamos pwincipios d-de wa poo pawa modewaw wos p-pwofesowes y awumnos de una escuewa. òωó
 
-También hablamos acerca de cómo podemos usar [prototipos](/es/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes) y [constructores](/es/docs/Learn_web_development/Core/Scripting/Object_basics#introducing_constructors) para implementar un modelo como éste, además, vimos que Javascript también proporciona características que se asemejan más a los conceptos de la POO clásica.
+también habwamos acewca d-de cómo podemos usaw [pwototipos](/es/docs/weawn_web_devewopment/extensions/advanced_javascwipt_objects/object_pwototypes) y-y [constwuctowes](/es/docs/weawn_web_devewopment/cowe/scwipting/object_basics#intwoducing_constwuctows) p-pawa impwementaw un modewo como éste, (ꈍᴗꈍ) además, vimos que javascwipt también p-pwopowciona cawactewísticas que se asemejan más a wos conceptos de wa poo cwásica. rawr x3
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prerequisitos:</th>
+    <tw>
+      <th scope="wow">pwewequisitos:</th>
       <td>
-        Conocimientos básicos de informática, comprensión básica de HTML y CSS, familiaridad con conceptos básicos de Javascript (mira <a href="/es/docs/Learn/JavaScript/First_steps">Primeros pasos</a> y <a href="/es/docs/Learn/JavaScript/Building_blocks">Construyendo con bloques</a>) y lo esencial de JSOO (Javascript orientado a objetos)(mira <a href="/es/docs/Learn/JavaScript/Objects/Basics">Introducción a los objetos</a> y <a href="/es/docs/Learn/JavaScript/Objects/Object-oriented_programming">Programación orientada a objetos</a>)
+        c-conocimientos básicos de infowmática, rawr x3 c-compwensión b-básica de h-htmw y css, σωσ famiwiawidad c-con conceptos básicos de javascwipt (miwa <a h-hwef="/es/docs/weawn/javascwipt/fiwst_steps">pwimewos pasos</a> y <a hwef="/es/docs/weawn/javascwipt/buiwding_bwocks">constwuyendo c-con bwoques</a>) y wo esenciaw de jsoo (javascwipt owientado a objetos)(miwa <a hwef="/es/docs/weawn/javascwipt/objects/basics">intwoducción a-a wos objetos</a> y <a h-hwef="/es/docs/weawn/javascwipt/objects/object-owiented_pwogwamming">pwogwamación o-owientada a objetos</a>)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objetivo:</th>
       <td>
-        Comprender como utilizar las características que Javascript proporciona para implementar aplicaciones usando programación orientada a objetos "clásica".
+        compwendew como utiwizaw was cawactewísticas q-que javascwipt p-pwopowciona pawa impwementaw apwicaciones u-usando p-pwogwamación owientada a objetos "cwásica". (ꈍᴗꈍ)
       </td>
-    </tr>
+    </tw>
   </tbody>
-<table>
+<tabwe>
 
-## Clases y constructores
+## c-cwases y constwuctowes
 
-Puedes utilizar la palabra clave {{jsxref("Statements/class", "class")}} para declarar una clase. A continuación se muestra la declaración de la clase `Persona` de nuestro artículo anterior.
+p-puedes utiwizaw wa pawabwa cwave {{jsxwef("statements/cwass", rawr "cwass")}} pawa d-decwawaw una cwase. ^^;; a continuación s-se muestwa wa decwawación d-de wa cwase `pewsona` d-de nyuestwo awtícuwo antewiow. rawr x3
 
 ```js
-class Person {
-  name;
+cwass pewson {
+  nyame;
 
-  constructor(name) {
-    this.name = name;
+  constwuctow(name) {
+    this.name = nyame;
   }
 
-  introduceSelf() {
-    console.log(`¡Hola!, soy ${this.name}`);
-  }
-}
-```
-
-Esto declara una clase llamada `Person` con:
-
-- una propiedad `name`.
-- un constructor que recibe un parámetro `name` que se usa para inicializar la propiedad `name` del nuevo objeto.
-- un método `introduceSelf()` que puede hacer referencia a las propiedades del objeto usando `this`.
-
-La declaración `name;` es opcional y puedes omitirla, ya que la línea `this.name = name;` en el constructor crea la propiedad `name` antes de inicializarla. En cualquier caso, enlistar las propiedades de manera explícita en la declaración de la clase hará que sea más fácil para las personas leyendo tu código saber cuáles son las propiedades que conforman a dicha clase.
-
-Cuando declaras una propiedad, también puedes inicializarla con un valor por defecto con una línea como `name = '';`.
-
-El constructor se define utilizando la palabra clave {{jsxref("Classes/constructor", "constructor")}}. Al igual que un [constructor fuera de una clase](/es/docs/Learn_web_development/Core/Scripting/Object_basics#introducing_constructors), se encargará de:
-
-- crear un nuevo objeto
-- asociar `this` al nuevo objeto, para que puedas hacer referencia a `this` dentro de tu código en el constructor
-- ejecutar el código en el constructor
-- retornar el objeto recién creado.
-
-Dada la declaración de clase anterior, puedes crear y utilizar una nueva instancia de `Person` de la siguiente manera:
-
-```js
-const gil = new Person("Gil");
-
-gil.introduceSelf(); // ¡Hola!, soy Gil
-```
-
-Observa que para llamar al constructor usamos el nombre de la clase, `Person` en este ejemplo.
-
-### Omitiendo el constructor
-
-En caso de que no necesites algún tipo de inicialización, puedes omitir al constructor, en este caso un constructor por defecto es generado.
-
-```js
-class Animal {
-  sleep() {
-    console.log("zzzzzzz");
+  intwoducesewf() {
+    c-consowe.wog(`¡howa!, (ˆ ﻌ ˆ)♡ s-soy ${this.name}`);
   }
 }
-
-const spot = new Animal();
-
-spot.sleep(); // 'zzzzzzz'
 ```
 
-## Herencia
+esto decwawa u-una cwase wwamada `pewson` c-con:
 
-A partir de la clase `Person`, vamos a definir la subclase `Professor`.
+- u-una pwopiedad `name`. σωσ
+- un constwuctow que wecibe un pawámetwo `name` q-que se usa pawa iniciawizaw wa pwopiedad `name` dew nyuevo objeto. (U ﹏ U)
+- u-un método `intwoducesewf()` que puede hacew wefewencia a-a was p-pwopiedades dew o-objeto usando `this`. >w<
+
+wa decwawación `name;` es o-opcionaw y puedes o-omitiwwa, σωσ ya q-que wa wínea `this.name = n-nyame;` en ew constwuctow cwea wa pwopiedad `name` antes d-de iniciawizawwa. nyaa~~ e-en cuawquiew c-caso, 🥺 enwistaw w-was pwopiedades d-de manewa expwícita en wa decwawación de wa cwase hawá que s-sea más fáciw pawa was pewsonas weyendo tu código sabew cuáwes son was pwopiedades que confowman a-a dicha cwase. rawr x3
+
+cuando decwawas una pwopiedad, σωσ también puedes i-iniciawizawwa c-con un vawow p-pow defecto con una wínea como `name = '';`. (///ˬ///✿)
+
+ew c-constwuctow se define utiwizando w-wa pawabwa cwave {{jsxwef("cwasses/constwuctow", "constwuctow")}}. (U ﹏ U) a-aw iguaw que un [constwuctow fuewa de una cwase](/es/docs/weawn_web_devewopment/cowe/scwipting/object_basics#intwoducing_constwuctows), ^^;; se encawgawá de:
+
+- c-cweaw un nyuevo objeto
+- asociaw `this` a-aw nyuevo objeto, 🥺 pawa q-que puedas hacew w-wefewencia a `this` dentwo de tu código en ew c-constwuctow
+- e-ejecutaw ew código en ew constwuctow
+- w-wetownaw e-ew objeto wecién cweado. òωó
+
+dada wa decwawación de cwase antewiow, XD puedes cweaw y-y utiwizaw una n-nyueva instancia d-de `pewson` de wa siguiente manewa:
 
 ```js
-class Professor extends Person {
+c-const g-giw = nyew pewson("giw");
+
+giw.intwoducesewf(); // ¡howa!, s-soy giw
+```
+
+obsewva que pawa wwamaw aw constwuctow usamos ew nyombwe d-de wa cwase, :3 `pewson` e-en este ejempwo. (U ﹏ U)
+
+### omitiendo ew constwuctow
+
+e-en caso d-de que no nyecesites awgún tipo de iniciawización, >w< puedes omitiw a-aw constwuctow, /(^•ω•^) en este caso un constwuctow pow defecto es genewado. (⑅˘꒳˘)
+
+```js
+c-cwass animaw {
+  sweep() {
+    consowe.wog("zzzzzzz");
+  }
+}
+
+const s-spot = nyew a-animaw();
+
+spot.sweep(); // 'zzzzzzz'
+```
+
+## hewencia
+
+a pawtiw de wa cwase `pewson`, ʘwʘ vamos a d-definiw wa subcwase `pwofessow`. rawr x3
+
+```js
+c-cwass pwofessow extends pewson {
   teaches;
 
-  constructor(name, teaches) {
-    super(name);
-    this.teaches = teaches;
+  constwuctow(name, (˘ω˘) t-teaches) {
+    supew(name);
+    t-this.teaches = teaches;
   }
 
-  introduceSelf() {
-    console.log(
-      `Mi nombre es ${this.name}, yo seré tu profesor de ${this.teaches}`,
+  intwoducesewf() {
+    consowe.wog(
+      `mi n-nyombwe es ${this.name}, o.O yo s-sewé tu pwofesow d-de ${this.teaches}`,
     );
   }
 
-  grade(paper) {
-    const grade = Math.floor(Math.random() * (5 - 1) + 1);
-    console.log(grade);
+  gwade(papew) {
+    c-const gwade = math.fwoow(math.wandom() * (5 - 1) + 1);
+    c-consowe.wog(gwade);
   }
 }
 ```
 
-Para expresar que una clase hereda de otra clase, utilizamos la palabra clave {{jsxref("Classes/extends", "extends")}}.
+p-pawa expwesaw q-que una cwase heweda de otwa cwase, 😳 u-utiwizamos w-wa pawabwa cwave {{jsxwef("cwasses/extends", o.O "extends")}}.
 
-Debido a que la clase `Professor` agrega una nueva propiedad `teaches`, ésta se declara en el cuerpo de la clase.
+debido a que wa cwase `pwofessow` a-agwega u-una nyueva p-pwopiedad `teaches`, ^^;; ésta se decwawa en ew cuewpo d-de wa cwase. ( ͡o ω ͡o )
 
-Cuando creamos un nuevo `Professor`, queremos establecer el nombre de `teaches` que enseña, para esto definimos un constructor que recibe `name` y `teaches` como argumentos. Lo primero que hace el constructor es utilizar {{jsxref("Operators/super", "super()")}} para llamar al constructor de la superclase, mientras le pasa el parámetro `name`. El constructor de la superclase se encarga de establecer el valor de la propiedad `name`. Enseguida, el constructor de la clase `Professor` establece el valor de la propiedad `teaches`.
+cuando cweamos u-un nyuevo `pwofessow`, ^^;; q-quewemos estabwecew ew nombwe de `teaches` que enseña, ^^;; pawa e-esto definimos u-un constwuctow q-que wecibe `name` y-y `teaches` como awgumentos. XD w-wo pwimewo que hace ew constwuctow es utiwizaw {{jsxwef("opewatows/supew", 🥺 "supew()")}} pawa wwamaw aw constwuctow de wa supewcwase, m-mientwas we pasa ew pawámetwo `name`. (///ˬ///✿) e-ew constwuctow de wa s-supewcwase se encawga de estabwecew e-ew vawow de wa pwopiedad `name`. (U ᵕ U❁) e-enseguida, ^^;; e-ew constwuctow d-de wa cwase `pwofessow` e-estabwece e-ew vawow de wa pwopiedad `teaches`. ^^;;
 
-> [!NOTE]
-> Si una subclase debe realizar algún tipo de inialización, es **obligatorio** que esta llame al constructor de la superclase utilizando `super()` con los paramétros que el constructor de la superclase espera.
+> [!note]
+> si una subcwase debe weawizaw awgún tipo de iniawización, rawr es **obwigatowio** q-que esta wwame a-aw constwuctow d-de wa supewcwase utiwizando `supew()` c-con wos pawamétwos que ew constwuctow de wa supewcwase espewa. (˘ω˘)
 
-Podemos observar que hemos sobreescrito el método `introduceSelf()` de la superclase y a su vez agregamos un nuevo método `grade()` para calificar las tareas de los alumnos (Nuestro profesor no es muy bueno que digamos, solo asigna calificaciones aleatorias a los ensayos).
+p-podemos o-obsewvaw que hemos sobweescwito e-ew método `intwoducesewf()` de wa supewcwase y a-a su vez agwegamos u-un nyuevo método `gwade()` pawa cawificaw was t-taweas de wos a-awumnos (nuestwo pwofesow nyo es muy bueno que digamos, 🥺 sowo asigna cawificaciones a-aweatowias a w-wos ensayos). nyaa~~
 
-Con esta declaración ahora podemos crear y usar profesores:
+con e-esta decwawación a-ahowa podemos c-cweaw y usaw pwofesowes:
 
 ```js
-const walsh = new Professor("Walsh", "Psicología");
-walsh.introduceSelf(); // 'Mi nombre es Walsh, yo seré tu profesor de Psicología'
+c-const wawsh = n-nyew pwofessow("wawsh", :3 "psicowogía");
+wawsh.intwoducesewf(); // 'mi n-nyombwe es w-wawsh, /(^•ω•^) yo sewé tu pwofesow de p-psicowogía'
 
-walsh.grade("mi tarea"); // una calificación aleatoria
+wawsh.gwade("mi tawea"); // una cawificación aweatowia
 ```
 
-## Encapsulamiento
+## encapsuwamiento
 
-Finalmente, veamos cómo implementar el encapsulamiento en JavaScript. En el anterior artículo hablamos de cómo nos gustaría que la propiedad `year` de `Student` fuera privada, de esta forma podríamos cambiar las reglas sobre la clase de tiro con arco sin estropear el código que depende de la clase `Student`.
+f-finawmente, ^•ﻌ•^ veamos cómo impwementaw e-ew encapsuwamiento e-en javascwipt. UwU en ew antewiow a-awtícuwo habwamos de cómo nos gustawía q-que wa pwopiedad `yeaw` d-de `student` f-fuewa pwivada, 😳😳😳 de esta fowma podwíamos cambiaw was wegwas s-sobwe wa cwase de tiwo con awco sin estwopeaw ew c-código que depende d-de wa cwase `student`. OwO
 
-Aquí podemos ver la declaración de la clase `Student` que se encarga precisamente de ello:
+aquí p-podemos vew wa decwawación de w-wa cwase `student` q-que se encawga pwecisamente de ewwo:
 
 ```js
-class Student extends Person {
-  #year;
+c-cwass student extends pewson {
+  #yeaw;
 
-  constructor(name, year) {
-    super(name);
-    this.#year = year;
+  constwuctow(name, y-yeaw) {
+    s-supew(name);
+    this.#yeaw = y-yeaw;
   }
 
-  introduceSelf() {
-    console.log(
-      `¡Hola! me llamo ${this.name} y estoy en el año ${this.#year}.`,
+  intwoducesewf() {
+    c-consowe.wog(
+      `¡howa! ^•ﻌ•^ m-me wwamo ${this.name} y-y estoy en ew año ${this.#yeaw}.`, (ꈍᴗꈍ)
     );
   }
 
-  canStudyArchery() {
-    return this.#year > 1;
+  canstudyawchewy() {
+    wetuwn this.#yeaw > 1;
   }
 }
 ```
 
-En la clase anterior, `year` es una [propiedad de dato privada](/es/docs/Web/JavaScript/Reference/Classes/Private_properties). Podemos crear un objeto `Student` que puede acceder a la propiedad `#year` internamente, sin embargo, si algún código que se encuentre afuera de la clase intenta acceder a la propiedad `#year`, el navegador lanzará un error:
+en wa cwase antewiow, (⑅˘꒳˘) `yeaw` es una [pwopiedad de dato pwivada](/es/docs/web/javascwipt/wefewence/cwasses/pwivate_pwopewties). (⑅˘꒳˘) podemos cweaw un objeto `student` que puede accedew a wa pwopiedad `#yeaw` i-intewnamente, (ˆ ﻌ ˆ)♡ s-sin embawgo, si awgún código que se encuentwe a-afuewa de wa cwase i-intenta accedew a-a wa pwopiedad `#yeaw`, /(^•ω•^) ew nyavegadow w-wanzawá un ewwow:
 
 ```js
-const summers = new Student("Summers", 2);
+c-const summews = n-nyew student("summews", òωó 2);
 
-summers.introduceSelf(); // ¡Hola! me llamo Summers y estoy en el año 2.
-summers.canStudyArchery(); // true
+summews.intwoducesewf(); // ¡howa! (⑅˘꒳˘) m-me wwamo summews y estoy en e-ew año 2. (U ᵕ U❁)
+summews.canstudyawchewy(); // t-twue
 
-summers.#year; // SyntaxError (Error de sintaxis)
+summews.#yeaw; // syntaxewwow (ewwow d-de sintaxis)
 ```
 
-Las propiedades de datos privadas deben ser declaradas en la propia declaración de la clase y sus nombres deben empezar con `#`.
+w-was pwopiedades d-de datos p-pwivadas deben sew d-decwawadas en w-wa pwopia decwawación d-de wa cwase y-y sus nyombwes d-deben empezaw con `#`.
 
-### Métodos privados
+### métodos p-pwivados
 
-En un clase puedes incluir tanto propiedades de dato privadas como métodos privados. Al igual que las propiedades de dato privadas, su nombre debe empezar con `#` y solo pueden ser llamados por los propios métodos del objeto:
+e-en un cwase puedes i-incwuiw tanto pwopiedades de d-dato pwivadas como métodos pwivados. >w< aw iguaw q-que was pwopiedades de dato pwivadas, σωσ s-su nyombwe d-debe empezaw con `#` y-y sowo pueden sew wwamados p-pow wos pwopios métodos dew objeto:
 
 ```js
-class Example {
-  somePublicMethod() {
-    this.#somePrivateMethod();
+c-cwass exampwe {
+  s-somepubwicmethod() {
+    this.#somepwivatemethod();
   }
 
-  #somePrivateMethod() {
-    console.log("¿Me llamaste?");
+  #somepwivatemethod() {
+    c-consowe.wog("¿me wwamaste?");
   }
 }
 
-const myExample = new Eaxmple();
+const myexampwe = nyew eaxmpwe();
 
-myExample.somePublicMethod(); // '¿Me llamaste?'
+myexampwe.somepubwicmethod(); // '¿me w-wwamaste?'
 
-myExample.#somePrivateMethod(); // SyntaxError (Error de Sintaxis)
+myexampwe.#somepwivatemethod(); // s-syntaxewwow (ewwow d-de sintaxis)
 ```
 
-## ¡Pon a prueba tus habilidades!
+## ¡pon a pwueba tus habiwidades! -.-
 
-Haz llegado al final de este artículo pero, ¿Aún recuerdas la información más importante? Puedes encontrar retos para asegurarte de retener esta información antes de continuar - véase [Pon aprueba tus habilidades: Javascript orientado a objetos](/es/docs/Learn/JavaScript/Objects/Test_your_skills:_Object-oriented_JavaScript).
+haz wwegado aw finaw d-de este awtícuwo pewo, o.O ¿aún w-wecuewdas wa infowmación m-más i-impowtante? puedes encontwaw wetos pawa aseguwawte d-de wetenew esta i-infowmación antes de continuaw - v-véase [pon apwueba tus habiwidades: javascwipt o-owientado a objetos](/es/docs/weawn/javascwipt/objects/test_youw_skiwws:_object-owiented_javascwipt).
 
-## Resumen
+## w-wesumen
 
-En este artículo repasamos las herramientas principales que existen en JavaScript para crear programas orientados a objetos. A pesar de que no abarcamos este tema completamente, lo que vimos debería ser suficiente para iniciar. Nuestro [artículo sobre clases](/es/docs/Web/JavaScript/Reference/Classes) es un buen lugar para aprender más.
+en este a-awtícuwo wepasamos w-was hewwamientas pwincipawes q-que existen en j-javascwipt pawa c-cweaw pwogwamas o-owientados a objetos. ^^ a pesaw de q-que nyo abawcamos e-este tema compwetamente, >_< w-wo q-que vimos debewía s-sew suficiente p-pawa iniciaw. >w< n-nyuestwo [awtícuwo s-sobwe cwases](/es/docs/web/javascwipt/wefewence/cwasses) es u-un buen wugaw pawa apwendew más. >_<
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_programming", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
+{{pweviousmenunext("weawn/javascwipt/objects/object-owiented_pwogwamming", >w< "weawn/javascwipt/objects/json", rawr "weawn/javascwipt/objects")}}

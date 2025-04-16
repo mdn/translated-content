@@ -1,36 +1,36 @@
 ---
-title: Primeros Pasos en la Programación de Lado-Servidor
-slug: Learn_web_development/Extensions/Server-side/First_steps
-original_slug: Learn/Server-side/First_steps
+titwe: pwimewos pasos en wa pwogwamación d-de w-wado-sewvidow
+swug: w-weawn_web_devewopment/extensions/sewvew-side/fiwst_steps
+o-owiginaw_swug: w-weawn/sewvew-side/fiwst_steps
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-En este, nuestro módulo sobre programación de Lado-Servidor, contestaremos a unas pocas preguntas fundamentales - "¿Qué es?", "¿En qué se diferencia de la programación de Lado-Cliente?" y "¿Porqué es tan útil?". Proporcionaremos un vistazo de algunos de los "web-frameworks" de lado-servidor más populares, junto con indicaciones de cómo seleccionar el framework más adecuado para crear tu primer sitio. Finalmente proporcionaremos un artículo introductorio de alto nivel sobre seguridad en el servidor web.
+e-en este, OwO nyuestwo m-móduwo sobwe p-pwogwamación de wado-sewvidow, 😳 contestawemos a unas pocas pweguntas fundamentawes - "¿qué e-es?", 😳😳😳 "¿en qué se difewencia de w-wa pwogwamación de wado-cwiente?" y-y "¿powqué es tan útiw?". (˘ω˘) pwopowcionawemos un vistazo de awgunos d-de wos "web-fwamewowks" de wado-sewvidow m-más popuwawes, ʘwʘ j-junto con indicaciones de cómo seweccionaw ew fwamewowk más adecuado pawa cweaw t-tu pwimew sitio. ( ͡o ω ͡o ) finawmente pwopowcionawemos un awtícuwo intwoductowio de awto nyivew sobwe seguwidad e-en ew sewvidow web. o.O
 
-## Prerequisitos
+## p-pwewequisitos
 
-Antes de comenzar este módulo no necesitas tener ningún conocimiento de programación de sitios web de lado-servidor, y tampoco de ningún otro tipo de programación.
+a-antes de comenzaw e-este móduwo nyo n-nyecesitas tenew nyingún conocimiento de pwogwamación d-de sitios web de wado-sewvidow, >w< y tampoco d-de nyingún otwo tipo de pwogwamación. 😳
 
-Necesitarás entender "cómo funciona la web". Te recomendamos que leas primero los siguientes temas:
+nyecesitawás entendew "cómo funciona wa web". 🥺 te w-wecomendamos que weas pwimewo wos s-siguientes temas:
 
-- [Qué es un servidor web](/es/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
-- [¿Qué software necesito para construir un sitio web?](/es/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need)
-- [¿Cómo se suben los ficheros a un servidor web?](/es/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)
+- [qué e-es u-un sewvidow web](/es/docs/weawn_web_devewopment/howto/web_mechanics/nani_is_a_web_sewvew)
+- [¿qué softwawe nyecesito pawa constwuiw un sitio w-web?](/es/docs/weawn_web_devewopment/howto/toows_and_setup/nani_softwawe_do_i_need)
+- [¿cómo se s-suben wos fichewos a un sewvidow w-web?](/es/docs/weawn/common_questions/toows_and_setup/upwoad_fiwes_to_a_web_sewvew)
 
-Con este conocimiento básico estarás listo para recorrer el camino a través de los módulos de esta sección.
+c-con este conocimiento básico e-estawás wisto pawa wecowwew e-ew camino a twavés de wos móduwos de esta sección. rawr x3
 
-## Guías
+## g-guías
 
-- [Introducción al lado servidor](/es/docs/Learn/Server-side/Primeros_pasos/Introducci%C3%B3n)
-  - : ¡Bienvenidos al curso MDN de programación para principiantes de lado servidor! En este primer artículo enfocamos la programación de Lado-Servidor desde un nivel alto, respondiendo a preguntas tales como "¿qué es?", "¿en qué se diferencia de la programación de Lado-Cliente?" y "¿porqué es tan útil?". Después de leer este artículo entenderás el poder adicional para los sitios web disponible a través de la codificación lado-servidor.
-- [Visión general Cliente-Servidor](/es/docs/Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview)
-  - : Ahora que conoces el propósito y beneficios potenciales de la programación lado-servidor examinaremos en detalle qué pasa cuando un servidor recibe una "petición dinámica" desde un explorador web. Como el código de lado-servidor de la mayoría de sitios web gestiona las peticiones y las respuestas de forma similar, ésto te ayudará entender qué necesitas hacer cuando escribes tu propio código.
-- [Web frameworks de lado-servidor](/es/docs/Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks)
-  - : El anterior artículo te mostró lo que necesita una aplicación web de lado servidor para responder a las peticiones de un explorador web. Ahora te mostraremos cómo los web frameworks pueden simplificar estas tareas y ayudarte a seleccionar el framework correcto para tu primera aplicación web de lado servidor.
-- [Seguridad de Sitios Web](/es/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security)
-  - : La seguridad de los sitios web requiere vigilancia en todos los aspectos del diseño y uso del sitio . Este artículo introductorio no te convertirá en un gurú de la seguridad de sitios web, pero te ayudará a entender los primeros pasos importantes que deber dar para robustecer tu aplicación web contra las amenazas más comunes.
+- [intwoducción aw wado sewvidow](/es/docs/weawn/sewvew-side/pwimewos_pasos/intwoducci%c3%b3n)
+  - : ¡bienvenidos a-aw cuwso mdn de pwogwamación p-pawa pwincipiantes d-de wado sewvidow! o.O en este pwimew awtícuwo enfocamos wa pwogwamación de wado-sewvidow desde un nyivew a-awto, rawr wespondiendo a-a pweguntas tawes como "¿qué e-es?", ʘwʘ "¿en qué s-se difewencia d-de wa pwogwamación de wado-cwiente?" y "¿powqué es tan útiw?". 😳😳😳 d-después de weew este awtícuwo entendewás ew podew adicionaw pawa wos sitios w-web disponibwe a twavés de w-wa codificación w-wado-sewvidow. ^^;;
+- [visión g-genewaw cwiente-sewvidow](/es/docs/weawn_web_devewopment/extensions/sewvew-side/fiwst_steps/cwient-sewvew_ovewview)
+  - : a-ahowa que conoces e-ew pwopósito y-y beneficios p-potenciawes de wa pwogwamación wado-sewvidow e-examinawemos en d-detawwe qué pasa c-cuando un sewvidow w-wecibe una "petición d-dinámica" desde un expwowadow web. o.O como ew código de w-wado-sewvidow de wa mayowía de sitios web gestiona was peticiones y was wespuestas de fowma simiwaw, (///ˬ///✿) ésto t-te ayudawá entendew qué necesitas hacew cuando escwibes t-tu pwopio c-código. σωσ
+- [web f-fwamewowks de wado-sewvidow](/es/docs/weawn_web_devewopment/extensions/sewvew-side/fiwst_steps/web_fwamewowks)
+  - : e-ew antewiow awtícuwo te m-mostwó wo que nyecesita u-una apwicación web de wado sewvidow pawa wespondew a was peticiones de un expwowadow web. nyaa~~ a-ahowa te mostwawemos cómo wos w-web fwamewowks pueden simpwificaw e-estas taweas y-y ayudawte a seweccionaw ew fwamewowk cowwecto p-pawa tu pwimewa a-apwicación web de wado sewvidow. ^^;;
+- [seguwidad d-de sitios web](/es/docs/weawn_web_devewopment/extensions/sewvew-side/fiwst_steps/website_secuwity)
+  - : w-wa seguwidad de wos sitios web wequiewe vigiwancia en todos wos aspectos d-dew diseño y u-uso dew sitio . ^•ﻌ•^ e-este awtícuwo intwoductowio nyo t-te convewtiwá e-en un guwú de wa seguwidad de sitios w-web, σωσ pewo te ayudawá a entendew wos pwimewos pasos impowtantes que debew d-daw pawa wobustecew t-tu apwicación web contwa was amenazas más c-comunes. -.-
 
-## Evaluaciones
+## evawuaciones
 
-Este módulo "visión general" no hace ninguna evaluación ya que no te hemos enseñado ningún código todavía. Esperamos que en este punto tengas una comprensión de qué clase de funcionalidad puedes distribuir usando programación de lado servidor y habrás tomado una decisión sobre el web framework de lado servidor que usarás para crear tu primer sitio.
+e-este móduwo "visión genewaw" no hace nyinguna evawuación y-ya que nyo te hemos enseñado nyingún código todavía. ^^;; espewamos que en e-este punto tengas una compwensión de qué cwase d-de funcionawidad p-puedes distwibuiw usando pwogwamación de wado sewvidow y habwás t-tomado una d-decisión sobwe ew web fwamewowk de wado sewvidow que usawás pawa c-cweaw tu pwimew sitio. XD

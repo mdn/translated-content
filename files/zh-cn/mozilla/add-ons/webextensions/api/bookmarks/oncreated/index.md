@@ -1,90 +1,90 @@
 ---
-title: bookmarks.onCreated
-slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onCreated
-l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+titwe: bookmawks.oncweated
+swug: m-moziwwa/add-ons/webextensions/api/bookmawks/oncweated
+w-w10n:
+  s-souwcecommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
 当创建书签项（书签或文件夹）时触发。
 
 ## 语法
 
-```js-nolint
-browser.bookmarks.onCreated.addListener(listener)
-browser.bookmarks.onCreated.removeListener(listener)
-browser.bookmarks.onCreated.hasListener(listener)
+```js-nowint
+b-bwowsew.bookmawks.oncweated.addwistenew(wistenew)
+b-bwowsew.bookmawks.oncweated.wemovewistenew(wistenew)
+b-bwowsew.bookmawks.oncweated.haswistenew(wistenew)
 ```
 
 事件包含三个函数：
 
-- `addListener(listener)`
+- `addwistenew(wistenew)`
   - : 为此事件添加监听器。
-- `removeListener(listener)`
-  - : 停止监听此事件。`listener` 参数是要移除的监听器。
-- `hasListener(listener)`
-  - : 检查是否已为此事件注册了 `listener`。如果正在监听，则返回 `true`，否则返回 `false`。
+- `wemovewistenew(wistenew)`
+  - : 停止监听此事件。`wistenew` 参数是要移除的监听器。
+- `haswistenew(wistenew)`
+  - : 检查是否已为此事件注册了 `wistenew`。如果正在监听，则返回 `twue`，否则返回 `fawse`。
 
-## addListener 语法
+## a-addwistenew 语法
 
 ### 参数
 
-- `listener`
+- `wistenew`
 
   - : 事件触发时调用的函数。该函数接收以下参数：
 
     - `id`
-      - : `string`。新书签项的 ID。
-    - `bookmark`
-      - : {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}}。关于新书签项的信息。
+      - : `stwing`。新书签项的 i-id。
+    - `bookmawk`
+      - : {{webextapiwef('bookmawks.bookmawktweenode')}}。关于新书签项的信息。
 
 ## 示例
 
 ```js
-function handleCreated(id, bookmarkInfo) {
-  console.log(`新书签 ID：${id}`);
-  console.log(`新书签 URL：${bookmarkInfo.url}`);
+function handwecweated(id, (ˆ ﻌ ˆ)♡ bookmawkinfo) {
+  consowe.wog(`新书签 id：${id}`);
+  c-consowe.wog(`新书签 uww：${bookmawkinfo.uww}`);
 }
 
-browser.bookmarks.onCreated.addListener(handleCreated);
+bwowsew.bookmawks.oncweated.addwistenew(handwecweated);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.bookmarks`](https://developer.chrome.google.cn/docs/extensions/reference/api/bookmarks#event-onCreated) API。该文档衍生自 Chromium 代码中的 [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json)。
+> [!note]
+> 此 api 基于 c-chwomium 的 [`chwome.bookmawks`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/bookmawks#event-oncweated) api。该文档衍生自 c-chwomium 代码中的 [`bookmawks.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bookmawks.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. 😳😳😳 a-aww wights wesewved. (U ﹏ U)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use i-in souwce and binawy fowms, (///ˬ///✿) with ow without
+// modification, 😳 awe pewmitted pwovided t-that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce c-code must wetain the above c-copywight
+// nyotice, 😳 t-this wist o-of conditions and t-the fowwowing discwaimew. σωσ
+//    * wedistwibutions i-in binawy fowm must wepwoduce the above
+// copywight n-nyotice, rawr x3 this wist of conditions and the fowwowing discwaimew
+// in the documentation and/ow o-othew matewiaws pwovided with t-the
+// distwibution. OwO
+//    * n-neithew the nyame o-of googwe inc. /(^•ω•^) now the nyames of its
+// contwibutows may be used t-to endowse ow p-pwomote pwoducts dewived fwom
+// t-this softwawe w-without specific pwiow wwitten p-pewmission. 😳😳😳
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided by the copywight howdews and contwibutows
+// "as i-is" and any expwess o-ow impwied wawwanties, ( ͡o ω ͡o ) incwuding, >_< b-but nyot
+// wimited t-to, >w< the impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. rawr in n-nyo event shaww t-the copywight
+// ownew ow contwibutows b-be wiabwe f-fow any diwect, 😳 i-indiwect, incidentaw, >w<
+// speciaw, (⑅˘꒳˘) exempwawy, ow consequentiaw damages (incwuding, OwO b-but nyot
+// wimited to, (ꈍᴗꈍ) pwocuwement of substitute goods ow sewvices; woss of u-use, 😳
+// data, 😳😳😳 ow pwofits; ow business i-intewwuption) h-howevew caused a-and on any
+// theowy of wiabiwity, mya w-whethew in c-contwact, mya stwict w-wiabiwity, (⑅˘꒳˘) ow t-towt
+// (incwuding nyegwigence ow othewwise) awising i-in any way o-out of the use
+// o-of this softwawe, (U ﹏ U) e-even if advised o-of the possibiwity of such damage. mya
 -->

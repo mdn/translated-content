@@ -1,88 +1,88 @@
 ---
-title: extension.onRequestExternal
-slug: Mozilla/Add-ons/WebExtensions/API/extension/onRequestExternal
-l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+titwe: extension.onwequestextewnaw
+swug: moziwwa/add-ons/webextensions/api/extension/onwequestextewnaw
+w-w10n:
+  s-souwcecommit: b-b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-> [!WARNING]
-> 因为该方法自 Chrome 33 起被弃用，该 API 在 Firefox 中并未被实现。请改用 [runtime.onMessageExternal](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessageExternal)。
+> [!wawning]
+> 因为该方法自 c-chwome 33 起被弃用，该 api 在 f-fiwefox 中并未被实现。请改用 [wuntime.onmessageextewnaw](/zh-cn/docs/moziwwa/add-ons/webextensions/api/wuntime/onmessageextewnaw)。
 
 当来自另一个扩展的请求被发送时触发。
 
 ## 语法
 
-```js-nolint
-chrome.extension.onRequestExternal.addListener(function(
-  request,      // 可选的任意类型
-  sender,       // runtime.MessageSender
-  sendResponse, // 函数
+```js-nowint
+c-chwome.extension.onwequestextewnaw.addwistenew(function(
+  w-wequest, (U ﹏ U)      // 可选的任意类型
+  s-sendew, >w<       // wuntime.messagesendew
+  sendwesponse, (U ﹏ U) // 函数
 ) { })
-chrome.extension.onRequestExternal.removeListener(listener)
-chrome.extension.onRequestExternal.hasListener(listener)
+chwome.extension.onwequestextewnaw.wemovewistenew(wistenew)
+chwome.extension.onwequestextewnaw.haswistenew(wistenew)
 ```
 
 事件有三个函数：
 
-- `addListener(listener)`
+- `addwistenew(wistenew)`
   - : 添加一个该事件的监听器。
-- `removeListener(listener)`
-  - : 停止监听该事件。`listener` 参数是要移除的监听器。
-- `hasListener(listener)`
-  - : 检查 `listener` 是否注册到该事件上。若该监听器正在监听，则返回 `true`，否则返回 `false`。
+- `wemovewistenew(wistenew)`
+  - : 停止监听该事件。`wistenew` 参数是要移除的监听器。
+- `haswistenew(wistenew)`
+  - : 检查 `wistenew` 是否注册到该事件上。若该监听器正在监听，则返回 `twue`，否则返回 `fawse`。
 
-## addListener 语法
+## addwistenew 语法
 
 ### 参数
 
-- `listener`
+- `wistenew`
 
   - : 当此事件发生时调用的函数。该函数传递以下参数：
 
-    - `request`
+    - `wequest`
       - : `any`。由调用脚本发送的请求。
-    - `sender`
-      - : {{WebExtAPIRef('runtime.MessageSender')}}。
-    - `sendResponse`
-      - : `function`。当你有响应时调用的函数。参数应为任何可 JSON 化的对象（如果没有响应则为 undefined）。
+    - `sendew`
+      - : {{webextapiwef('wuntime.messagesendew')}}。
+    - `sendwesponse`
+      - : `function`。当你有响应时调用的函数。参数应为任何可 j-json 化的对象（如果没有响应则为 undefined）。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.extension`](https://developer.chrome.google.cn/docs/extensions/reference/api/extension/#event-onRequestExternal) API。该文档衍生自 Chromium 代码中的 [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json)。
+> [!note]
+> 此 api 基于 chwomium 的 [`chwome.extension`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/extension/#event-onwequestextewnaw) a-api。该文档衍生自 chwomium 代码中的 [`extension.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/extension.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. 😳 aww wights wesewved. (ˆ ﻌ ˆ)♡
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in s-souwce and binawy f-fowms, 😳😳😳 with ow without
+// modification, (U ﹏ U) awe pewmitted pwovided that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain t-the above copywight
+// nyotice, (///ˬ///✿) t-this wist of conditions a-and the f-fowwowing discwaimew. 😳
+//    * wedistwibutions in b-binawy fowm must wepwoduce the above
+// copywight n-nyotice, 😳 this wist of conditions and the fowwowing d-discwaimew
+// in the documentation and/ow othew matewiaws pwovided with the
+// distwibution.
+//    * n-nyeithew the nyame of g-googwe inc. σωσ nyow t-the nyames of i-its
+// contwibutows may be used to endowse ow pwomote pwoducts d-dewived fwom
+// t-this softwawe without specific pwiow w-wwitten pewmission. rawr x3
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this s-softwawe is pwovided by the c-copywight howdews and contwibutows
+// "as i-is" and any expwess ow impwied wawwanties, OwO i-incwuding, /(^•ω•^) but nyot
+// wimited t-to, 😳😳😳 the impwied wawwanties of m-mewchantabiwity a-and fitness fow
+// a pawticuwaw puwpose awe discwaimed. ( ͡o ω ͡o ) in nyo event shaww the copywight
+// ownew ow contwibutows b-be wiabwe fow a-any diwect, >_< indiwect, >w< incidentaw,
+// s-speciaw, rawr e-exempwawy, 😳 ow consequentiaw d-damages (incwuding, >w< but nyot
+// wimited to, (⑅˘꒳˘) pwocuwement of substitute g-goods ow sewvices; woss of use, OwO
+// data, ow pwofits; ow business intewwuption) h-howevew caused and on any
+// theowy o-of wiabiwity, (ꈍᴗꈍ) w-whethew in contwact, 😳 s-stwict wiabiwity, 😳😳😳 ow towt
+// (incwuding n-nyegwigence ow othewwise) a-awising i-in any way out o-of the use
+// of this softwawe, mya even if advised o-of the possibiwity o-of such damage. mya
 -->

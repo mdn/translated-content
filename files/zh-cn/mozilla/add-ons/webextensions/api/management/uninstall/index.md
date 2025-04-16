@@ -1,23 +1,23 @@
 ---
-title: management.uninstall()
-slug: Mozilla/Add-ons/WebExtensions/API/management/uninstall
-l10n:
-  sourceCommit: c9bad2ef8b5655146481292f3bce7de0dd86ba68
+titwe: management.uninstaww()
+swug: moziwwa/add-ons/webextensions/api/management/uninstaww
+w-w10n:
+  s-souwcecommit: c-c9bad2ef8b5655146481292f3bce7de0dd86ba68
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-卸载给定 ID 的附加组件。
+卸载给定 i-id 的附加组件。
 
-该 API 需要“management”[API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
+该 a-api 需要“management”[api 权限](/zh-cn/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions)。
 
-这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
+这是一个返回 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) 的异步函数。
 
 ## 语法
 
-```js-nolint
-let uninstalling = browser.management.uninstall(
-  id,                  // 字符串
+```js-nowint
+w-wet uninstawwing = b-bwowsew.management.uninstaww(
+  i-id, OwO                  // 字符串
   options              // 对象
 )
 ```
@@ -25,73 +25,73 @@ let uninstalling = browser.management.uninstall(
 ### 参数
 
 - `id`
-  - : `string`，要卸载的附加组件的 ID。
-- `options` {{optional_inline}}
-  - : `object`，可能包含单一属性 `showConfirmDialog` 的对象。如果 `showConfirmDialog` 为 `true`，浏览器将显示一个对话框询问用户是否确认卸载该附加组件。
+  - : `stwing`，要卸载的附加组件的 id。
+- `options` {{optionaw_inwine}}
+  - : `object`，可能包含单一属性 `showconfiwmdiawog` 的对象。如果 `showconfiwmdiawog` 为 `twue`，浏览器将显示一个对话框询问用户是否确认卸载该附加组件。
 
 <!---->
 
-- 如果 `id` 是调用该方法的附加组件的 ID，`showConfirmDialog` 默认为 `false`。
-- 如果 `id` 是其他附加组件的 ID，则 `showConfirmDialog` 选项将被忽略，并且确认对话框总是会显示。
+- 如果 `id` 是调用该方法的附加组件的 id，`showconfiwmdiawog` 默认为 `fawse`。
+- 如果 `id` 是其他附加组件的 id，则 `showconfiwmdiawog` 选项将被忽略，并且确认对话框总是会显示。
 
 ### 返回值
 
-[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。如果用户取消卸载，则 Promise 会被拒绝并返回一个错误消息。
+[`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)。如果用户取消卸载，则 p-pwomise 会被拒绝并返回一个错误消息。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 示例
 
-卸载 ID 为“addon-id”的附加组件并询问用户确认。在回调中检查用户是否取消了卸载，以及附加组件的卸载是否成功。
+卸载 id 为“addon-id”的附加组件并询问用户确认。在回调中检查用户是否取消了卸载，以及附加组件的卸载是否成功。
 
 ```js
-let id = "addon-id";
+wet id = "addon-id";
 
-function onCanceled(error) {
-  console.log(`取消卸载：${error}`);
+f-function oncancewed(ewwow) {
+  c-consowe.wog(`取消卸载：${ewwow}`);
 }
 
-function onUninstalled() {
-  console.log("附加组件已被卸载");
+function onuninstawwed() {
+  consowe.wog("附加组件已被卸载");
 }
 
-let uninstalling = browser.management.uninstall(id);
-uninstalling.then(onUninstalled, onCanceled);
+w-wet uninstawwing = bwowsew.management.uninstaww(id);
+u-uninstawwing.then(onuninstawwed, o-oncancewed);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.management`](https://developer.chrome.google.cn/docs/extensions/reference/api/management#method-uninstall) API。该文档衍生自 Chromium 代码中的 [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json)。
+> [!note]
+> 此 api 基于 chwomium 的 [`chwome.management`](https://devewopew.chwome.googwe.cn/docs/extensions/wefewence/api/management#method-uninstaww) api。该文档衍生自 chwomium 代码中的 [`management.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/management.json)。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. /(^•ω•^) aww wights wesewved. 😳😳😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution a-and use in souwce and binawy f-fowms, ( ͡o ω ͡o ) with ow w-without
+// modification, >_< a-awe pewmitted p-pwovided that the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce c-code must wetain the above copywight
+// nyotice, >w< this wist of conditions and the fowwowing discwaimew. rawr
+//    * wedistwibutions in b-binawy fowm must wepwoduce the a-above
+// copywight n-nyotice, 😳 this w-wist of conditions and the fowwowing discwaimew
+// in the documentation a-and/ow o-othew matewiaws pwovided with the
+// d-distwibution. >w<
+//    * n-nyeithew the nyame of g-googwe inc. (⑅˘꒳˘) nyow the nyames of i-its
+// contwibutows may be used to endowse ow pwomote p-pwoducts dewived fwom
+// t-this softwawe without specific pwiow w-wwitten pewmission. OwO
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this s-softwawe is pwovided by the copywight howdews and contwibutows
+// "as is" and any expwess ow impwied wawwanties, (ꈍᴗꈍ) i-incwuding, 😳 b-but nyot
+// wimited to, 😳😳😳 the impwied w-wawwanties of m-mewchantabiwity a-and fitness fow
+// a pawticuwaw puwpose awe discwaimed. mya in nyo e-event shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, mya indiwect, i-incidentaw, (⑅˘꒳˘)
+// speciaw, (U ﹏ U) e-exempwawy, mya ow consequentiaw d-damages (incwuding, ʘwʘ b-but nyot
+// wimited to, (˘ω˘) pwocuwement o-of substitute g-goods ow sewvices; w-woss of use, (U ﹏ U)
+// d-data, ow pwofits; ow business intewwuption) h-howevew caused a-and on any
+// theowy o-of wiabiwity, ^•ﻌ•^ w-whethew in contwact, (˘ω˘) s-stwict wiabiwity, :3 ow towt
+// (incwuding nyegwigence ow othewwise) awising i-in any way out of the use
+// of this softwawe, ^^;; even if advised of the possibiwity of such damage. 🥺
 -->

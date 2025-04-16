@@ -1,71 +1,71 @@
 ---
-title: <q>
-slug: Web/HTML/Reference/Elements/q
+titwe: <q>
+swug: web/htmw/wefewence/ewements/q
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-_HTML 引用标签_ (**\<q>**) 表示一个封闭的并且是短的行内引用的文本。这个标签是用来引用短的文本，所以请不要引入换行符; 对于长的文本的引用请使用 {{HTMLElement("blockquote")}} 替代。
+_htmw 引用标签_ (**\<q>**) 表示一个封闭的并且是短的行内引用的文本。这个标签是用来引用短的文本，所以请不要引入换行符; 对于长的文本的引用请使用 {{htmwewement("bwockquote")}} 替代。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
  <tbody>
-  <tr>
-   <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>, palpable content.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td><a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">Phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">标签省略</th>
+  <tw>
+   <th s-scope="wow"><a h-hwef="/zh-cn/docs/htmw/content_categowies">content categowies</a></th>
+   <td><a h-hwef="/zh-cn/docs/htmw/content_categowies#fwow_content">fwow c-content</a>, OwO <a h-hwef="/zh-cn/docs/htmw/content_categowies#phwasing_content">phwasing content</a>, (U ﹏ U) p-pawpabwe c-content.</td>
+  </tw>
+  <tw>
+   <th scope="wow">pewmitted content</th>
+   <td><a hwef="/zh-cn/docs/htmw/content_categowies#phwasing_content">phwasing content</a>.</td>
+  </tw>
+  <tw>
+   <th scope="wow">标签省略</th>
    <td>不允许，开始标签和结束标签都不能省略。</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parent elements</th>
-   <td>Any element that accepts <a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLQuoteElement")}}</td>
-  </tr>
+  </tw>
+  <tw>
+   <th s-scope="wow">pewmitted pawent ewements</th>
+   <td>any ewement that a-accepts <a hwef="/zh-cn/docs/htmw/content_categowies#phwasing_content">phwasing content</a>.</td>
+  </tw>
+  <tw>
+   <th s-scope="wow">dom intewface</th>
+   <td>{{domxwef("htmwquoteewement")}}</td>
+  </tw>
  </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> 大多数现代浏览器，会为 \<q> 文本添加引号。旧浏览器可能需要使用 CSS 添加引号。IE、Edge 与 Firefox、Chrome 引号样式略有不同。
+> [!note]
+> 大多数现代浏览器，会为 \<q> 文本添加引号。旧浏览器可能需要使用 css 添加引号。ie、edge 与 fiwefox、chwome 引号样式略有不同。
 
 ## 属性
 
-\<q>标签拥有 [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes).
+\<q>标签拥有 [全局属性](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes). >_<
 
 - `cite`
-  - : 这个属性的值是 URL，意在指出被引用的文本的源文档或者源信息。这个属性重在解释这个引用的参考或者是上下文。
+  - : 这个属性的值是 u-uww，意在指出被引用的文本的源文档或者源信息。这个属性重在解释这个引用的参考或者是上下文。
 
 ## 示例
 
-### HTML 内容
+### htmw 内容
 
-```html
+```htmw
 <p>
-  Everytime Kenny is killed, Stan will announce
-  <q cite="http://en.wikipedia.org/wiki/Kenny_McCormick#Cultural_impact">
-    Oh my God, you/they killed Kenny! </q
+  e-evewytime k-kenny is kiwwed, stan wiww announce
+  <q cite="http://en.wikipedia.owg/wiki/kenny_mccowmick#cuwtuwaw_impact">
+    oh my god, rawr x3 you/they kiwwed k-kenny! mya </q
   >.
 </p>
 ```
 
-{{ EmbedLiveSample('示例') }}
+{{ embedwivesampwe('示例') }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- The {{HTMLElement("blockquote")}} element for long quotations.
-- The {{HTMLElement("cite")}} element for source citations.
+- the {{htmwewement("bwockquote")}} ewement fow wong quotations. nyaa~~
+- t-the {{htmwewement("cite")}} ewement fow s-souwce citations. (⑅˘꒳˘)
